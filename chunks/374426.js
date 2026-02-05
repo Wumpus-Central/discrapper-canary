@@ -1,25 +1,22 @@
-r.d(t, {
-    A: () => b,
-});
-var n = r(627968);
-r(64700);
-var o = r(311907),
-    l = r(397927),
-    i = r(997509),
-    c = r(931991),
-    a = r(71393),
-    u = r(652215),
-    s = r(985018);
-
-function b(e, t) {
-    let r = (0, o.bG)([a.A], () => (null != e ? a.A.getGuild(e) : null)),
-        { canCreateExpressions: b, canManageAllExpressions: p } = (0, c.nr)(r);
-    return null != e && b && p
-        ? (0, n.jsx)(l.Drp, {
-              id: s.intl.string(s.t["154/bL"]),
-              label: s.intl.string(s.t["154/bL"]),
+l.d(t, { A: () => d });
+var r = l(627968);
+l(64700);
+var a = l(311907),
+    e = l(397927),
+    i = l(997509),
+    s = l(931991),
+    u = l(71393),
+    o = l(652215),
+    c = l(985018);
+function d(n, t) {
+    let l = (0, a.bG)([u.A], () => (null != n ? u.A.getGuild(n) : null)),
+        { canCreateExpressions: d, canManageAllExpressions: A } = (0, s.nr)(l);
+    return null != n && d && A
+        ? (0, r.jsx)(e.Drp, {
+              id: c.intl.string(c.t["154/bL"]),
+              label: c.intl.string(c.t["154/bL"]),
               action: () => {
-                  i.A.open(e, u.BEX.SOUNDBOARD), null == t || t();
+                  i.A.open(n, o.BEX.SOUNDBOARD), t?.();
               },
           })
         : null;

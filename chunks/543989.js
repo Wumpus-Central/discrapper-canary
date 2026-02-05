@@ -7241,60 +7241,29 @@ e.exports = function (e) {
         s = n.either(n.concat(r, i), a),
         o = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
         l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
-        c = n.either(o, l),
-        u = /\*\^[+-]?\d+/,
-        d = {
-            className: "number",
-            relevance: 0,
-            begin: n.concat(s, n.optional(c), n.optional(u)),
-        },
-        f = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        p = new Set(t),
-        _ = {
+        u = n.either(o, l),
+        c = /\*\^[+-]?\d+/,
+        d = { className: "number", relevance: 0, begin: n.concat(s, n.optional(u), n.optional(c)) },
+        _ = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        f = new Set(t),
+        p = {
             variants: [
                 {
                     className: "builtin-symbol",
-                    begin: f,
+                    begin: _,
                     "on:begin": (e, t) => {
-                        p.has(e[0]) || t.ignoreMatch();
+                        f.has(e[0]) || t.ignoreMatch();
                     },
                 },
-                {
-                    className: "symbol",
-                    relevance: 0,
-                    begin: f,
-                },
+                { className: "symbol", relevance: 0, begin: _ },
             ],
         },
-        h = {
-            className: "named-character",
-            begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/,
-        },
-        m = {
-            className: "operator",
-            relevance: 0,
-            begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/,
-        },
-        g = {
-            className: "pattern",
-            relevance: 0,
-            begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/,
-        },
-        E = {
-            className: "slot",
-            relevance: 0,
-            begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/,
-        },
-        b = {
-            className: "brace",
-            relevance: 0,
-            begin: /[[\](){}]/,
-        },
-        y = {
-            className: "message-name",
-            relevance: 0,
-            begin: n.concat("::", f),
-        };
+        h = { className: "named-character", begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/ },
+        m = { className: "operator", relevance: 0, begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/ },
+        g = { className: "pattern", relevance: 0, begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/ },
+        E = { className: "slot", relevance: 0, begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/ },
+        A = { className: "brace", relevance: 0, begin: /[[\](){}]/ },
+        I = { className: "message-name", relevance: 0, begin: n.concat("::", _) };
     return {
         name: "Mathematica",
         aliases: ["mma", "wl"],
@@ -7307,19 +7276,6 @@ e.exports = function (e) {
             "builtin-symbol": "built_in",
             "message-name": "string",
         },
-        contains: [
-            e.COMMENT(/\(\*/, /\*\)/, {
-                contains: ["self"],
-            }),
-            g,
-            E,
-            y,
-            _,
-            h,
-            e.QUOTE_STRING_MODE,
-            d,
-            m,
-            b,
-        ],
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ["self"] }), g, E, I, p, h, e.QUOTE_STRING_MODE, d, m, A],
     };
 };

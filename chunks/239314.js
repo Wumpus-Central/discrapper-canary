@@ -1,7 +1,5 @@
-n.d(t, {
-    Y: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Y: () => r });
 var r = (function (e) {
     return (
         (e[(e.LIST = 1)] = "LIST"),

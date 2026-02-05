@@ -1,123 +1,106 @@
-r.d(t, {
-    default: () => v,
-}),
-    r(896048);
-var l = r(627968),
-    n = r(64700),
-    s = r(503698),
-    o = r.n(s),
-    a = r(284009),
-    c = r.n(a),
-    i = r(397927),
+"use strict";
+r.d(t, { default: () => b });
+var s = r(627968),
+    a = r(64700),
+    o = r(503698),
+    n = r.n(o),
+    i = r(284009),
+    l = r.n(i),
+    c = r(397927),
     d = r(964486),
-    f = r(414121),
-    u = r(954571),
-    p = r(10005),
-    b = r(945276),
+    u = r(414121),
+    p = r(954571),
+    f = r(10005),
+    C = r(438732),
     x = r(834981),
-    m = r(191627),
-    y = r(652215),
-    C = r(842130),
-    g = r(985018),
-    h = r(482064),
-    j = r(473169);
-let v = (e) => {
+    _ = r(191627),
+    h = r(652215),
+    m = r(842130),
+    y = r(985018),
+    v = r(482064),
+    g = r(473169);
+let b = (e) => {
     let { transitionState: t, onClose: r } = e,
-        s = (0, b.A)(),
-        [a, v] = n.useState(!1),
-        { getLinkCode: O, isGetLinkCodeLoading: _ } = (0, p.A)({}),
+        o = (0, C.A)(),
+        [i, b] = a.useState(!1),
+        { getLinkCode: T, isGetLinkCodeLoading: j } = (0, f.A)({}),
         E = (0, x.VE)(),
-        N = (0, x.VT)(),
-        w = n.useRef(N);
-    c()(!s, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let z = () => {
-        v(
+        O = (0, x.VT)(),
+        z = a.useRef(O);
+    l()(!o, "FamilyCenterQRCodeModal should only be rendered for teens.");
+    let N = () => {
+        b(
             (e) => (
-                u.default.track(y.HAw.FAMILY_CENTER_ACTION, {
-                    action: a ? m.qb.HideQRCode : m.qb.RevealQRCode,
-                }),
-                !e
+                p.default.track(h.HAw.FAMILY_CENTER_ACTION, { action: i ? _.qb.HideQRCode : _.qb.RevealQRCode }), !e
             ),
         ),
-            a ||
+            i ||
                 setTimeout(() => {
                     r();
-                }, m.nz);
+                }, _.nz);
     };
     (0, d.Ay)(() => {
-        O();
+        T();
     }),
-        n.useEffect(() => {
-            N > w.current && r();
-        }, [w, N, r]);
-    let S = a && !_ && null != E;
-    return (0, l.jsxs)(i.dWK, {
+        a.useEffect(() => {
+            O > z.current && r();
+        }, [z, O, r]);
+    let q = i && !j && null != E;
+    return (0, s.jsxs)(c.dWK, {
         transitionState: t,
         onClose: r,
         children: [
-            (0, l.jsxs)(i.$Td, {
-                className: h.lm,
-                color: i.Hv$.WARNING,
-                children: [
-                    (0, l.jsx)(i.mir, {
-                        size: "sm",
-                        color: "currentColor",
-                    }),
-                    g.intl.string(C.default.iHYMAz),
-                ],
+            (0, s.jsxs)(c.$Td, {
+                className: v.lm,
+                color: c.Hv$.WARNING,
+                children: [(0, s.jsx)(c.mir, { size: "sm", color: "currentColor" }), y.intl.string(m.default.iHYMAz)],
             }),
-            (0, l.jsxs)(i.cwr, {
+            (0, s.jsxs)(c.cwr, {
                 children: [
-                    (0, l.jsx)(i.Text, {
-                        className: j.QB,
+                    (0, s.jsx)(c.Text, {
+                        className: g.QB,
                         variant: "text-lg/bold",
                         color: "text-strong",
-                        children: g.intl.string(C.default.AVTZaN),
+                        children: y.intl.string(m.default.AVTZaN),
                     }),
-                    (0, l.jsx)(i.Text, {
-                        className: j.SX,
+                    (0, s.jsx)(c.Text, {
+                        className: g.SX,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: g.intl.format(C.default.LyyCsE, {
+                        children: y.intl.format(m.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
-                    (0, l.jsx)("div", {
-                        className: h.Ac,
-                        children: (0, l.jsx)(i.DUT, {
-                            className: o()(h.u3, {
-                                [h.RK]: S,
-                            }),
-                            onClick: z,
-                            children: (0, l.jsx)(f.Lx, {
+                    (0, s.jsx)("div", {
+                        className: v.Ac,
+                        children: (0, s.jsx)(c.DUT, {
+                            className: n()(v.u3, { [v.RK]: q }),
+                            onClick: N,
+                            children: (0, s.jsx)(u.Lx, {
                                 size: 272,
-                                text: S ? E : m.EC,
-                                overlaySize: f.Zs.SIZE_60,
-                                className: h.R6,
+                                text: q ? E : _.EC,
+                                overlaySize: u.Zs.SIZE_60,
+                                className: v.R6,
                             }),
                         }),
                     }),
-                    (0, l.jsx)(i.Text, {
-                        className: h.z_,
+                    (0, s.jsx)(c.Text, {
+                        className: v.z_,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: g.intl.string(C.default.goDyoe),
+                        children: y.intl.string(m.default.goDyoe),
                     }),
                 ],
             }),
-            (0, l.jsx)(i.H7u, {
+            (0, s.jsx)(c.H7u, {
                 actionsFullWidth: !0,
                 actions: [
-                    {
-                        variant: "secondary",
-                        text: g.intl.string(g.t.cpT0Cq),
-                        onClick: r,
-                    },
+                    { variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: r },
                     {
                         variant: "primary",
-                        text: a ? g.intl.string(C.default.wg2xwQ) : g.intl.string(C.default["10dX6U"]),
-                        onClick: z,
-                        loading: a && _,
+                        text: i ? y.intl.string(m.default.wg2xwQ) : y.intl.string(m.default["10dX6U"]),
+                        onClick: N,
+                        loading: i && j,
                     },
                 ],
             }),

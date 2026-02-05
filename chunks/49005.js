@@ -1,75 +1,55 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(183875);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(436857),
     s = n(9578),
     o = n(380610),
     l = n(348056),
-    c = n(307600),
-    u = n(637557);
+    u = n(307600),
+    c = n(637557);
 let d = 1024;
-
-function f(e) {
+function _(e) {
     return {
-        react(t, n, f) {
+        react(t, n, _) {
             if (e.enableBuildOverrides && (0, o.vS)(t.target))
-                return (0, r.jsx)(
-                    i.Fragment,
-                    {
-                        children: (0, r.jsx)(
-                            l.A,
-                            {
-                                url: t.target,
-                            },
-                            t.target,
-                        ),
-                    },
-                    f.key,
-                );
-            let p = n(t.content, f),
-                _ = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.$)(t.content),
-                h = () => (0, u.m)(t),
-                m = (null == e ? void 0 : e.mustConfirmExternalLink)
+                return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.A, { url: t.target }, t.target) }, _.key);
+            let f = n(t.content, _),
+                p = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.$)(t.content),
+                h = () => (0, c.m)(t),
+                m = e?.mustConfirmExternalLink
                     ? (e) => (
-                          null == e || e.stopPropagation(),
-                          null == e || e.preventDefault(),
-                          (0, c.h)({
+                          e?.stopPropagation(),
+                          e?.preventDefault(),
+                          (0, u.h)({
                               href: t.target,
                               shouldConfirm: !0,
-                              messageId: f.messageId,
-                              channelId: f.channelId,
+                              messageId: _.messageId,
+                              channelId: _.channelId,
                           }),
                           null
                       )
                     : void 0;
-            if (f.previewLinkTarget && !(0, u.m)(t)) {
-                let e = "\n\n(".concat(t.target, ")");
-                _.length + e.length > d && ((e = "..." + e), (_ = (_ = _.substr(0, d - e.length)).trimEnd())), (_ += e);
+            if (_.previewLinkTarget && !(0, c.m)(t)) {
+                let e = `
+
+(${t.target})`;
+                p.length + e.length > d && ((e = "..." + e), (p = (p = p.substr(0, d - e.length)).trimEnd())), (p += e);
             }
-            return f.noStyleAndInteraction
-                ? (0, r.jsx)(
-                      "span",
-                      {
-                          title: _,
-                          children: p,
-                      },
-                      f.key,
-                  )
+            return _.noStyleAndInteraction
+                ? (0, r.jsx)("span", { title: p, children: f }, _.key)
                 : (0, r.jsx)(
                       s.A,
                       {
-                          title: _,
+                          title: p,
                           href: t.target,
                           trusted: h,
                           onClick: m,
-                          messageId: f.messageId,
-                          channelId: f.channelId,
-                          children: p,
+                          messageId: _.messageId,
+                          channelId: _.channelId,
+                          children: f,
                       },
-                      f.key,
+                      _.key,
                   );
         },
     };

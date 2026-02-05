@@ -1,3 +1,4 @@
+"use strict";
 n(682071), n(650774);
 var r = n(834647),
     a = n(308227),
@@ -124,14 +125,7 @@ var r = n(834647),
         return n;
     },
     eu = /[!'()~]|%20/g,
-    ed = {
-        "!": "%21",
-        "'": "%27",
-        "(": "%28",
-        ")": "%29",
-        "~": "%7E",
-        "%20": "+",
-    },
+    ed = { "!": "%21", "'": "%27", "(": "%28", ")": "%29", "~": "%7E", "%20": "+" },
     ep = function (e) {
         return ed[e];
     },
@@ -140,12 +134,7 @@ var r = n(834647),
     },
     ef = m(
         function (e, t) {
-            B(this, {
-                type: T,
-                target: D(e).entries,
-                index: 0,
-                kind: t,
-            });
+            B(this, { type: T, target: D(e).entries, index: 0, kind: t });
         },
         M,
         function () {
@@ -191,27 +180,14 @@ em.prototype = {
             for (n = (t = x(e, u)).next; !(r = s(n, t)).done; ) {
                 if ((i = s((o = (a = x(k(r.value))).next), a)).done || (l = s(o, a)).done || !s(o, a).done)
                     throw new H("Expected sequence with length 2");
-                Z(c, {
-                    key: w(i.value),
-                    value: w(l.value),
-                });
+                Z(c, { key: w(i.value), value: w(l.value) });
             }
-        else
-            for (var d in e)
-                b(e, d) &&
-                    Z(c, {
-                        key: d,
-                        value: w(e[d]),
-                    });
+        else for (var d in e) b(e, d) && Z(c, { key: d, value: w(e[d]) });
     },
     parseQuery: function (e) {
         if (e)
             for (var t, n, r = this.entries, a = et(e, "&"), o = 0; o < a.length; )
-                (t = a[o++]).length &&
-                    Z(r, {
-                        key: ec(X((n = et(t, "=")))),
-                        value: ec(Q(n, "=")),
-                    });
+                (t = a[o++]).length && Z(r, { key: ec(X((n = et(t, "=")))), value: ec(Q(n, "=")) });
     },
     serialize: function () {
         for (var e, t = this.entries, n = [], r = 0; r < t.length; ) Z(n, eh((e = t[r++]).key) + "=" + eh(e.value));
@@ -237,13 +213,7 @@ if (
         {
             append: function (e, t) {
                 var n = D(this);
-                F(arguments.length, 2),
-                    Z(n.entries, {
-                        key: w(e),
-                        value: w(t),
-                    }),
-                    !c && this.length++,
-                    n.updateURL();
+                F(arguments.length, 2), Z(n.entries, { key: w(e), value: w(t) }), !c && this.length++, n.updateURL();
             },
             delete: function (e) {
                 for (
@@ -296,13 +266,7 @@ if (
                 F(arguments.length, 1);
                 for (var a = r.entries, o = !1, i = w(e), s = w(t), l = 0; l < a.length; l++)
                     (n = a[l]).key === i && (o ? ee(a, l--, 1) : ((o = !0), (n.value = s)));
-                o ||
-                    Z(a, {
-                        key: i,
-                        value: s,
-                    }),
-                    c || (this.size = a.length),
-                    r.updateURL();
+                o || Z(a, { key: i, value: s }), c || (this.size = a.length), r.updateURL();
             },
             sort: function () {
                 var e = D(this);
@@ -328,22 +292,16 @@ if (
                 return new ef(this, "entries");
             },
         },
-        {
-            enumerable: !0,
-        },
+        { enumerable: !0 },
     ),
-    d(ev, I, ev.entries, {
-        name: "entries",
-    }),
+    d(ev, I, ev.entries, { name: "entries" }),
     d(
         ev,
         "toString",
         function () {
             return D(this).serialize();
         },
-        {
-            enumerable: !0,
-        },
+        { enumerable: !0 },
     ),
     c &&
         p(ev, "size", {
@@ -354,16 +312,7 @@ if (
             enumerable: !0,
         }),
     f(ey, M),
-    r(
-        {
-            global: !0,
-            constructor: !0,
-            forced: !u,
-        },
-        {
-            URLSearchParams: ey,
-        },
-    ),
+    r({ global: !0, constructor: !0, forced: !u }, { URLSearchParams: ey }),
     !u && g(U))
 ) {
     var eg = l(K.has),
@@ -376,10 +325,7 @@ if (
                     return (
                         eg((t = e.headers ? new U(e.headers) : new U()), "content-type") ||
                             eb(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"),
-                        S(e, {
-                            body: N(0, w(n)),
-                            headers: N(0, t),
-                        })
+                        S(e, { body: N(0, w(n)), headers: N(0, t) })
                     );
             }
             return e;
@@ -387,12 +333,7 @@ if (
     if (
         (g(V) &&
             r(
-                {
-                    global: !0,
-                    enumerable: !0,
-                    dontCallGetSet: !0,
-                    forced: !0,
-                },
+                { global: !0, enumerable: !0, dontCallGetSet: !0, forced: !0 },
                 {
                     fetch: function (e) {
                         return V(e, arguments.length > 1 ? eA(arguments[1]) : {});
@@ -406,20 +347,7 @@ if (
         };
         (q.constructor = e_),
             (e_.prototype = q),
-            r(
-                {
-                    global: !0,
-                    constructor: !0,
-                    dontCallGetSet: !0,
-                    forced: !0,
-                },
-                {
-                    Request: e_,
-                },
-            );
+            r({ global: !0, constructor: !0, dontCallGetSet: !0, forced: !0 }, { Request: e_ });
     }
 }
-e.exports = {
-    URLSearchParams: ey,
-    getState: D,
-};
+e.exports = { URLSearchParams: ey, getState: D };

@@ -1,50 +1,45 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
-var r = n(451988),
-    i = n(73153),
-    l = n(956793),
-    a = n(272355),
+n.d(t, { A: () => E });
+var i = n(451988),
+    r = n(73153),
+    a = n(956793),
+    l = n(272355),
     s = n(616356),
     o = n(734057),
-    c = n(71393),
-    u = n(885576),
-    d = n(383501),
-    p = n(927813),
+    d = n(71393),
+    c = n(885576),
+    u = n(383501),
+    A = n(927813),
     h = n(723702),
-    g = n(652215);
-let f = new r.Ep(),
-    m = new r.Ep();
-class A extends a.A {
+    _ = n(652215);
+let m = new i.Ep(),
+    p = new i.Ep();
+class g extends l.A {
     _initialize() {
-        i.h.subscribe("IDLE", this.handleIdleUpdate);
+        r.h.subscribe("IDLE", this.handleIdleUpdate);
     }
     _terminate() {
-        f.stop(), m.stop(), i.h.unsubscribe("IDLE", this.handleIdleUpdate);
+        m.stop(), p.stop(), r.h.unsubscribe("IDLE", this.handleIdleUpdate);
     }
     handleIdleUpdate() {
-        let e = u.A.getIdleSince();
+        let e = c.A.getIdleSince();
         if (!h.isPlatformEmbedded) return;
-        for (let e of (f.stop(), m.stop(), s.A.getAllActiveStreams())) if (e.state !== g.XYD.ENDED) return;
+        for (let e of (m.stop(), p.stop(), s.A.getAllActiveStreams())) if (e.state !== _.XYD.ENDED) return;
         if (null == e) return;
-        let t = d.A.getChannelId();
+        let t = u.A.getChannelId();
         if (null == t) return;
-        m.start(18e6, () => {
-            l.default.selectVoiceChannel(null);
+        p.start(18e6, () => {
+            a.default.selectVoiceChannel(null);
         });
-        let n = c.A.getGuild(d.A.getGuildId());
+        let n = d.A.getGuild(u.A.getGuildId());
         if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afkTimeout) return;
-        let r = o.A.getChannel(t);
-        null == r ||
-            r.isGuildStageVoice() ||
-            f.start(e + n.afkTimeout * p.A.Millis.SECOND - Date.now(), () => {
-                null != (n = c.A.getGuild(d.A.getGuildId())) &&
+        let i = o.A.getChannel(t);
+        null == i ||
+            i.isGuildStageVoice() ||
+            m.start(e + n.afkTimeout * A.A.Millis.SECOND - Date.now(), () => {
+                null != (n = d.A.getGuild(u.A.getGuildId())) &&
                     null != n.afkChannelId &&
-                    l.default.selectVoiceChannel(n.afkChannelId, !1, !1, {
-                        bypassIdleUpdate: !0,
-                    });
+                    a.default.selectVoiceChannel(n.afkChannelId, !1, !1, { bypassIdleUpdate: !0 });
             });
     }
 }
-let _ = new A();
+let E = new g();

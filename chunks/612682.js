@@ -59,9 +59,6 @@
                     return e + (1 === e ? "re" : "e");
             }
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

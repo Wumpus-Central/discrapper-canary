@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__63ed3",
     Od: "bot__63ed3",

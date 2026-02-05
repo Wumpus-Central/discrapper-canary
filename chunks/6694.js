@@ -1,4 +1,1 @@
-e.exports = {
-    Y: "effectsWrapper__78936",
-    z: "effects__78936",
-};
+e.exports = { Y: "effectsWrapper__78936", z: "effects__78936" };

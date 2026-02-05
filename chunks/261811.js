@@ -1,24 +1,14 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(173618),
     i = n(952335),
     a = n(461213);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o extends r.A {
+class s extends r.A {
+    socket;
+    switchingAccounts = !1;
+    constructor(e) {
+        super(!1), (this.socket = e);
+    }
     getInitialState() {
         return a.A.getLocalPresence();
     }
@@ -28,6 +18,7 @@ class o extends r.A {
     shouldCommit() {
         return this.socket.isSessionEstablished();
     }
+    didCommit = (0, i.A)(5, 2e4, this.emitPresenceUpdate.bind(this));
     emitPresenceUpdate(e) {
         let { status: t, since: n, activities: r, afk: i } = e;
         this.socket.presenceUpdate(t, n, r, i);
@@ -38,14 +29,5 @@ class o extends r.A {
     }
     handleAccountSwitch() {
         (this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
-    }
-    constructor(e) {
-        super(!1),
-            s(this, "socket", void 0),
-            s(this, "switchingAccounts", void 0),
-            s(this, "didCommit", void 0),
-            (this.socket = e),
-            (this.switchingAccounts = !1),
-            (this.didCommit = (0, i.A)(5, 2e4, this.emitPresenceUpdate.bind(this)));
     }
 }

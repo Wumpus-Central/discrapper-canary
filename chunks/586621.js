@@ -1,49 +1,41 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var s = n(397927),
     l = n(196827),
-    s = n(580630),
+    r = n(580630),
     a = n(18743),
-    c = n(233089),
-    o = n(652215),
-    d = n(985018),
+    o = n(233089),
+    d = n(652215),
+    c = n(985018),
     u = n(796416);
-
-function f(e) {
+function m(e) {
     let {
         children: t,
         revenue: n,
-        revenueTrend: f,
+        revenueTrend: m,
         summaryMetricLabel: g,
-        summaryMetricValue: b,
-        summaryMetricTrend: m,
-        summaryMetricTrendIsPercent: p,
+        summaryMetricValue: x,
+        summaryMetricTrend: h,
+        summaryMetricTrendIsPercent: _,
     } = e;
-    return (0, r.jsx)(i.nVY, {
-        label: d.intl.string(d.t.ofmOzb),
-        children: (0, r.jsxs)("div", {
+    return (0, i.jsx)(s.nVY, {
+        label: c.intl.string(c.t.ofmOzb),
+        children: (0, i.jsxs)("div", {
             className: u.E7,
             children: [
-                (0, r.jsxs)(c.t, {
+                (0, i.jsxs)(o.t, {
                     children: [
-                        (0, r.jsx)(a.A, {
-                            label: d.intl.string(d.t.iY1jW3),
-                            value: (0, s.$g)(null != n ? n : 0, o.Yri.USD),
-                            additionalContent: (0, r.jsx)(l.u, {
-                                value: f,
-                                isPercent: !0,
-                            }),
+                        (0, i.jsx)(a.A, {
+                            label: c.intl.string(c.t.iY1jW3),
+                            value: (0, r.$g)(n ?? 0, d.Yri.USD),
+                            additionalContent: (0, i.jsx)(l.u, { value: m, isPercent: !0 }),
                         }),
-                        (0, r.jsx)(a.A, {
+                        (0, i.jsx)(a.A, {
                             label: g,
-                            value: b,
-                            additionalContent: (0, r.jsx)(l.u, {
-                                value: m,
-                                isPercent: p,
-                            }),
+                            value: x,
+                            additionalContent: (0, i.jsx)(l.u, { value: h, isPercent: _ }),
                         }),
                     ],
                 }),

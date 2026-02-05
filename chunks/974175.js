@@ -1,18 +1,11 @@
-n.d(t, {
-    R: () => b,
-    q7: () => R,
-}),
-    n(896048),
-    n(321073),
-    n(134528),
-    n(947204);
-var r = n(627968),
-    a = n(64700),
-    i = n(796873),
-    l = n.n(i),
-    s = n(412780),
-    o = n(229659),
-    d = n(522278);
+r.d(t, { R: () => C, q7: () => R }), r(321073), r(134528), r(947204);
+var n = r(627968),
+    a = r(64700),
+    i = r(796873),
+    s = r.n(i),
+    l = r(412780),
+    o = r(229659),
+    d = r(522278);
 let c = {
     accelerateRate: "Accelerate Rate",
     audioDetected: "Audio Detected",
@@ -138,44 +131,35 @@ let c = {
     videohookBackend: "Videohook Backend",
     videohookFrames: "Videohook Frames",
 };
-
 function u(e) {
-    return "".concat((e / 1e3).toFixed(2), " Kbps");
+    return `${(e / 1e3).toFixed(2)} Kbps`;
 }
-
 function m(e) {
-    return l().filesize(e);
+    return s().filesize(e);
 }
-
 function p(e) {
     return e;
 }
-
 function y(e) {
-    return "".concat(e, " ms");
+    return `${e} ms`;
 }
-
 function h(e) {
-    return "".concat(e.toFixed(0), "%");
+    return `${e.toFixed(0)}%`;
 }
-
-function g(e) {
+function A(e) {
     return e ? "Yes" : "No";
 }
-
-function A(e) {
+function g(e) {
     return 20 * Math.log(e);
 }
-
 function f(e) {
     let { last: t } = e;
-    return "".concat(t, " ms");
+    return `${t} ms`;
 }
-
 function v(e) {
     return e.toFixed(2);
 }
-let b = {
+let C = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -205,38 +189,35 @@ let b = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0,
     },
-    C = {
+    x = {
         accelerateRate: h,
-        audioDetected: g,
+        audioDetected: A,
         audioLevel: function (e) {
-            return e <= 0 ? "-∞ dB" : "".concat(A(e).toFixed(2), " dB");
+            return e <= 0 ? "-∞ dB" : `${g(e).toFixed(2)} dB`;
         },
         availableOutgoingBitrate: u,
         averageDecodeTime: y,
         averageEncodeTime: y,
-        bandwidthLimitedFrameRate: g,
-        bandwidthLimitedResolution: g,
+        bandwidthLimitedFrameRate: A,
+        bandwidthLimitedResolution: A,
         bitrate: u,
         bitrateTarget: u,
         bytesReceived: m,
         bytesSent: m,
         codec: function (e) {
-            let { id: t, name: n } = e;
-            return (
-                (n = null != (n = "" === n ? "unknown" : n) ? n : "unknown"),
-                "".concat(n[0].toUpperCase()).concat(n.slice(1), " (").concat(t, ")")
-            );
+            let { id: t, name: r } = e;
+            return (r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`;
         },
-        cpuLimitedResolution: g,
+        cpuLimitedResolution: A,
         currentSampleRate: function (e) {
-            return e % 100 == 0 ? "".concat(e / 1e3, " kHz") : "".concat(e, " Hz");
+            return e % 100 == 0 ? `${e / 1e3} kHz` : `${e} Hz`;
         },
         currentDelay: y,
         decoderImplementationName: p,
         delayEstimate: y,
         encoderImplementationName: p,
         encoderQualityPsnr: function (e) {
-            return "".concat(Math.max(e, 0).toFixed(2), " dB");
+            return `${Math.max(e, 0).toFixed(2)} dB`;
         },
         encoderQualityVmaf: v,
         encodeUsage: h,
@@ -258,13 +239,13 @@ let b = {
         relativeReceptionDelay: f,
         renderDelay: y,
         resolution: (e) => {
-            let { width: t, height: n } = e;
-            return "".concat(t, "x").concat(n);
+            let { width: t, height: r } = e;
+            return `${t}x${r}`;
         },
         sampleRateMismatchPercent: h,
         secondaryDecodedRate: h,
         secureFramesProtocolVersion: function (e) {
-            return e > 0 ? "Version ".concat(e) : "Disabled";
+            return e > 0 ? `Version ${e}` : "Disabled";
         },
         speechExpandRate: h,
         targetDelay: y,
@@ -276,55 +257,29 @@ let b = {
     },
     E = {
         audioLevel: function (e) {
-            return Math.max(A(e), -100) + 100;
+            return Math.max(g(e), -100) + 100;
         },
     },
-    x = (e) => e,
-    D = (e) => {
+    D = (e) => e,
+    b = (e) => {
         let [t] = a.useState([]);
         return (
-            t.push({
-                value: e.value,
-                time: Date.now(),
-            }),
+            t.push({ value: e.value, time: Date.now() }),
             t.length > 600 && t.shift(),
-            (0, r.jsx)(o.A, {
-                converter: e.converter,
-                dataPoints: t,
-                width: e.width,
-                height: e.height,
-            })
+            (0, n.jsx)(o.A, { converter: e.converter, dataPoints: t, width: e.width, height: e.height })
         );
     };
-
 function R(e) {
-    var t, n, a;
-    let { label: i, value: l, section: u } = e,
-        m = null != (t = C[i]) ? t : x,
-        p = E[i],
-        y =
-            s.iA[i] &&
-            (Array.isArray(l) && l.length > 0 && "number" == typeof l[0].value
-                ? (0, r.jsx)(o.A, {
-                      converter: p,
-                      dataPoints: l,
-                      width: 300,
-                      height: 100,
-                  })
-                : "number" == typeof l
-                  ? (0, r.jsx)(D, {
-                        converter: p,
-                        value: l,
-                        width: 300,
-                        height: 100,
-                    })
+    let { label: t, value: r, section: a } = e,
+        i = x[t] ?? D,
+        s = E[t],
+        u =
+            l.iA[t] &&
+            (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
+                ? (0, n.jsx)(o.A, { converter: s, dataPoints: r, width: 300, height: 100 })
+                : "number" == typeof r
+                  ? (0, n.jsx)(b, { converter: s, value: r, width: 300, height: 100 })
                   : void 0),
-        h = Array.isArray(l) ? (null == (a = l.at(-1)) ? void 0 : a.value) : l;
-    return (0, r.jsx)(d.A, {
-        label: i,
-        valueRendered: m(h),
-        section: u,
-        renderGraph: y,
-        children: null != (n = c[i]) ? n : i,
-    });
+        m = Array.isArray(r) ? r.at(-1)?.value : r;
+    return (0, n.jsx)(d.A, { label: t, valueRendered: i(m), section: a, renderGraph: u, children: c[t] ?? t });
 }

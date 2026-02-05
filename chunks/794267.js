@@ -1,6 +1,4 @@
-n.d(e, {
-    default: () => p,
-});
+n.d(e, { default: () => p });
 var i = n(627968),
     s = n(64700),
     a = n(158954),
@@ -10,7 +8,6 @@ var i = n(627968),
     l = n(137207),
     r = n(652215),
     C = n(985018);
-
 function p(t) {
     let { automodDecision: e, transitionState: n, onClose: p } = t,
         k = s.useCallback(() => {
@@ -29,15 +26,8 @@ function p(t) {
         title: C.intl.string(C.t["7bdzNo"]),
         subtitle: C.intl.string(C.t.Lbpk6m),
         actions: [
-            {
-                text: C.intl.string(C.t["ETE/oC"]),
-                onClick: p,
-                variant: "secondary",
-            },
-            {
-                text: C.intl.string(C.t.p89ACt),
-                onClick: k,
-            },
+            { text: C.intl.string(C.t["ETE/oC"]), onClick: p, variant: "secondary" },
+            { text: C.intl.string(C.t.p89ACt), onClick: k },
         ],
     });
 }

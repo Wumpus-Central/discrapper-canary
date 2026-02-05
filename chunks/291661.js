@@ -1,81 +1,44 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(854627),
     s = n(837921),
     o = n(985018);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let u = s.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF,
-    d = (e) => {
+let l = s.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF,
+    u = (e) => {
         let {
                 user: t,
                 guildId: n,
                 avatarDecorationOverride: s,
-                status: l,
-                avatarSize: d = i._3J.SIZE_120,
-                "aria-hidden": f = !1,
-                className: p,
-                animateOnHover: _ = !1,
-                questPreviewRewardAssetUrl: h = null,
+                status: u,
+                avatarSize: c = i._3J.SIZE_120,
+                "aria-hidden": d = !1,
+                className: _,
+                animateOnHover: f = !1,
+                questPreviewRewardAssetUrl: p = null,
             } = e,
             {
-                avatarDecorationSrc: m,
-                avatarSrc: g,
-                eventHandlers: E,
+                avatarDecorationSrc: h,
+                avatarSrc: m,
+                eventHandlers: g,
             } = (0, a.A)({
                 userId: t.id,
                 guildId: n,
-                size: d,
+                size: c,
                 showPending: !0,
                 avatarDecorationOverride: s,
-                animateOnHover: _,
+                animateOnHover: f,
             });
-        return (0, r.jsx)(
-            u,
-            c(
-                {
-                    avatarDecoration: null != m ? m : h,
-                    src: g,
-                    size: d,
-                    status: l,
-                    "aria-label": f ? void 0 : o.intl.string(o.t.lqaIxI),
-                    "aria-hidden": f,
-                    className: p,
-                },
-                E,
-            ),
-        );
+        return (0, r.jsx)(l, {
+            avatarDecoration: h ?? p,
+            src: m,
+            size: c,
+            status: u,
+            "aria-label": d ? void 0 : o.intl.string(o.t.lqaIxI),
+            "aria-hidden": d,
+            className: _,
+            ...g,
+        });
     };

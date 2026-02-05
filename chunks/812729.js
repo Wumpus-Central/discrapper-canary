@@ -8,17 +8,15 @@ var r = Array.prototype.slice,
                 (e instanceof Date && t instanceof Date
                     ? e.getTime() === t.getTime()
                     : e && t && ("object" == typeof e || "object" == typeof t)
-                      ? c(e, t, n)
+                      ? u(e, t, n)
                       : n.strict
                         ? e === t
                         : e == t)
         );
     });
-
 function o(e) {
     return null == e;
 }
-
 function l(e) {
     return (
         !!e &&
@@ -29,24 +27,23 @@ function l(e) {
         (!(e.length > 0) || "number" == typeof e[0])
     );
 }
-
-function c(e, t, n) {
-    var c, u;
+function u(e, t, n) {
+    var u, c;
     if (o(e) || o(t) || e.prototype !== t.prototype) return !1;
     if (a(e)) return !!a(t) && s((e = r.call(e)), (t = r.call(t)), n);
     if (l(e)) {
         if (!l(t) || e.length !== t.length) return !1;
-        for (c = 0; c < e.length; c++) if (e[c] !== t[c]) return !1;
+        for (u = 0; u < e.length; u++) if (e[u] !== t[u]) return !1;
         return !0;
     }
     try {
         var d = i(e),
-            f = i(t);
+            _ = i(t);
     } catch (e) {
         return !1;
     }
-    if (d.length != f.length) return !1;
-    for (d.sort(), f.sort(), c = d.length - 1; c >= 0; c--) if (d[c] != f[c]) return !1;
-    for (c = d.length - 1; c >= 0; c--) if (!s(e[(u = d[c])], t[u], n)) return !1;
+    if (d.length != _.length) return !1;
+    for (d.sort(), _.sort(), u = d.length - 1; u >= 0; u--) if (d[u] != _[u]) return !1;
+    for (u = d.length - 1; u >= 0; u--) if (!s(e[(c = d[u])], t[c], n)) return !1;
     return typeof e == typeof t;
 }

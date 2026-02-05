@@ -522,37 +522,13 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            {
-                begin: /^=/,
-                end: /[^=]/,
-                returnEnd: !0,
-                illegal: /=/,
-                relevance: 10,
-            },
-            {
-                className: "symbol",
-                begin: /\b[A-Z]{1,2}\d+\b/,
-                end: /[^\d]/,
-                excludeEnd: !0,
-                relevance: 0,
-            },
-            {
-                className: "symbol",
-                begin: /[A-Z]{0,2}\d*:[A-Z]{0,2}\d*/,
-                relevance: 0,
-            },
+            { begin: /^=/, end: /[^=]/, returnEnd: !0, illegal: /=/, relevance: 10 },
+            { className: "symbol", begin: /\b[A-Z]{1,2}\d+\b/, end: /[^\d]/, excludeEnd: !0, relevance: 0 },
+            { className: "symbol", begin: /[A-Z]{0,2}\d*:[A-Z]{0,2}\d*/, relevance: 0 },
             e.BACKSLASH_ESCAPE,
             e.QUOTE_STRING_MODE,
-            {
-                className: "number",
-                begin: e.NUMBER_RE + "(%)?",
-                relevance: 0,
-            },
-            e.COMMENT(/\bN\(/, /\)/, {
-                excludeBegin: !0,
-                excludeEnd: !0,
-                illegal: /\n/,
-            }),
+            { className: "number", begin: e.NUMBER_RE + "(%)?", relevance: 0 },
+            e.COMMENT(/\bN\(/, /\)/, { excludeBegin: !0, excludeEnd: !0, illegal: /\n/ }),
         ],
     };
 };

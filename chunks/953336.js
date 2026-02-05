@@ -1,14 +1,7 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
-n(64700);
-var i = n(990078),
-    a = n(611371),
-    s = n(985018);
-let o = () =>
-    (0, r.jsx)(i.m, {
-        asContainer: !0,
-        text: s.intl.string(s.t["/fgfWh"]),
-        children: (0, r.jsx)(a.A, {}),
-    });
+i.d(e, { A: () => a });
+var n = i(627968);
+i(64700);
+var l = i(990078),
+    s = i(611371),
+    r = i(985018);
+let a = () => (0, n.jsx)(l.m, { asContainer: !0, text: r.intl.string(r.t["/fgfWh"]), children: (0, n.jsx)(s.A, {}) });

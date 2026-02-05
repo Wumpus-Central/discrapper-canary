@@ -1,20 +1,18 @@
-n.d(t, {
-    A: () => b,
-});
+"use strict";
+n.d(t, { A: () => A });
 var r = n(136601),
     i = n(44134),
     a = n(216803),
     s = n(655909),
     o = n(564804),
     l = n(544195),
-    c = n(792828),
-    u = "midnight",
+    u = n(792828),
+    c = "midnight",
     d = "noon",
-    f = "morning",
-    p = "afternoon",
-    _ = "evening",
+    _ = "morning",
+    f = "afternoon",
+    p = "evening",
     h = "night";
-
 function m(e, t) {
     var n = e > 0 ? "-" : "+",
         r = Math.abs(e),
@@ -24,46 +22,36 @@ function m(e, t) {
     var s = t || "";
     return n + String(i) + s + (0, l.A)(a, 2);
 }
-
 function g(e, t) {
     return e % 60 == 0 ? (e > 0 ? "-" : "+") + (0, l.A)(Math.abs(e) / 60, 2) : E(e, t);
 }
-
 function E(e, t) {
     var n = t || "",
         r = e > 0 ? "-" : "+",
         i = Math.abs(e);
     return r + (0, l.A)(Math.floor(i / 60), 2) + n + (0, l.A)(i % 60, 2);
 }
-let b = {
+let A = {
     G: function (e, t, n) {
         var r = +(e.getUTCFullYear() > 0);
         switch (t) {
             case "G":
             case "GG":
             case "GGG":
-                return n.era(r, {
-                    width: "abbreviated",
-                });
+                return n.era(r, { width: "abbreviated" });
             case "GGGGG":
-                return n.era(r, {
-                    width: "narrow",
-                });
+                return n.era(r, { width: "narrow" });
             default:
-                return n.era(r, {
-                    width: "wide",
-                });
+                return n.era(r, { width: "wide" });
         }
     },
     y: function (e, t, n) {
         if ("yo" === t) {
             var r = e.getUTCFullYear(),
                 i = r > 0 ? r : 1 - r;
-            return n.ordinalNumber(i, {
-                unit: "year",
-            });
+            return n.ordinalNumber(i, { unit: "year" });
         }
-        return c.A.y(e, t);
+        return u.A.y(e, t);
     },
     Y: function (e, t, n, r) {
         var i = (0, o.A)(e, r),
@@ -72,11 +60,7 @@ let b = {
             var s = a % 100;
             return (0, l.A)(s, 2);
         }
-        return "Yo" === t
-            ? n.ordinalNumber(a, {
-                  unit: "year",
-              })
-            : (0, l.A)(a, t.length);
+        return "Yo" === t ? n.ordinalNumber(a, { unit: "year" }) : (0, l.A)(a, t.length);
     },
     R: function (e, t) {
         var n = (0, a.A)(e);
@@ -94,24 +78,13 @@ let b = {
             case "QQ":
                 return (0, l.A)(r, 2);
             case "Qo":
-                return n.ordinalNumber(r, {
-                    unit: "quarter",
-                });
+                return n.ordinalNumber(r, { unit: "quarter" });
             case "QQQ":
-                return n.quarter(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.quarter(r, { width: "abbreviated", context: "formatting" });
             case "QQQQQ":
-                return n.quarter(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.quarter(r, { width: "narrow", context: "formatting" });
             default:
-                return n.quarter(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.quarter(r, { width: "wide", context: "formatting" });
         }
     },
     q: function (e, t, n) {
@@ -122,24 +95,13 @@ let b = {
             case "qq":
                 return (0, l.A)(r, 2);
             case "qo":
-                return n.ordinalNumber(r, {
-                    unit: "quarter",
-                });
+                return n.ordinalNumber(r, { unit: "quarter" });
             case "qqq":
-                return n.quarter(r, {
-                    width: "abbreviated",
-                    context: "standalone",
-                });
+                return n.quarter(r, { width: "abbreviated", context: "standalone" });
             case "qqqqq":
-                return n.quarter(r, {
-                    width: "narrow",
-                    context: "standalone",
-                });
+                return n.quarter(r, { width: "narrow", context: "standalone" });
             default:
-                return n.quarter(r, {
-                    width: "wide",
-                    context: "standalone",
-                });
+                return n.quarter(r, { width: "wide", context: "standalone" });
         }
     },
     M: function (e, t, n) {
@@ -147,26 +109,15 @@ let b = {
         switch (t) {
             case "M":
             case "MM":
-                return c.A.M(e, t);
+                return u.A.M(e, t);
             case "Mo":
-                return n.ordinalNumber(r + 1, {
-                    unit: "month",
-                });
+                return n.ordinalNumber(r + 1, { unit: "month" });
             case "MMM":
-                return n.month(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.month(r, { width: "abbreviated", context: "formatting" });
             case "MMMMM":
-                return n.month(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.month(r, { width: "narrow", context: "formatting" });
             default:
-                return n.month(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.month(r, { width: "wide", context: "formatting" });
         }
     },
     L: function (e, t, n) {
@@ -177,56 +128,29 @@ let b = {
             case "LL":
                 return (0, l.A)(r + 1, 2);
             case "Lo":
-                return n.ordinalNumber(r + 1, {
-                    unit: "month",
-                });
+                return n.ordinalNumber(r + 1, { unit: "month" });
             case "LLL":
-                return n.month(r, {
-                    width: "abbreviated",
-                    context: "standalone",
-                });
+                return n.month(r, { width: "abbreviated", context: "standalone" });
             case "LLLLL":
-                return n.month(r, {
-                    width: "narrow",
-                    context: "standalone",
-                });
+                return n.month(r, { width: "narrow", context: "standalone" });
             default:
-                return n.month(r, {
-                    width: "wide",
-                    context: "standalone",
-                });
+                return n.month(r, { width: "wide", context: "standalone" });
         }
     },
     w: function (e, t, n, r) {
         var i = (0, s.A)(e, r);
-        return "wo" === t
-            ? n.ordinalNumber(i, {
-                  unit: "week",
-              })
-            : (0, l.A)(i, t.length);
+        return "wo" === t ? n.ordinalNumber(i, { unit: "week" }) : (0, l.A)(i, t.length);
     },
     I: function (e, t, n) {
         var r = (0, i.A)(e);
-        return "Io" === t
-            ? n.ordinalNumber(r, {
-                  unit: "week",
-              })
-            : (0, l.A)(r, t.length);
+        return "Io" === t ? n.ordinalNumber(r, { unit: "week" }) : (0, l.A)(r, t.length);
     },
     d: function (e, t, n) {
-        return "do" === t
-            ? n.ordinalNumber(e.getUTCDate(), {
-                  unit: "date",
-              })
-            : c.A.d(e, t);
+        return "do" === t ? n.ordinalNumber(e.getUTCDate(), { unit: "date" }) : u.A.d(e, t);
     },
     D: function (e, t, n) {
         var i = (0, r.A)(e);
-        return "Do" === t
-            ? n.ordinalNumber(i, {
-                  unit: "dayOfYear",
-              })
-            : (0, l.A)(i, t.length);
+        return "Do" === t ? n.ordinalNumber(i, { unit: "dayOfYear" }) : (0, l.A)(i, t.length);
     },
     E: function (e, t, n) {
         var r = e.getUTCDay();
@@ -234,25 +158,13 @@ let b = {
             case "E":
             case "EE":
             case "EEE":
-                return n.day(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "abbreviated", context: "formatting" });
             case "EEEEE":
-                return n.day(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "narrow", context: "formatting" });
             case "EEEEEE":
-                return n.day(r, {
-                    width: "short",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "short", context: "formatting" });
             default:
-                return n.day(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "wide", context: "formatting" });
         }
     },
     e: function (e, t, n, r) {
@@ -264,29 +176,15 @@ let b = {
             case "ee":
                 return (0, l.A)(a, 2);
             case "eo":
-                return n.ordinalNumber(a, {
-                    unit: "day",
-                });
+                return n.ordinalNumber(a, { unit: "day" });
             case "eee":
-                return n.day(i, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.day(i, { width: "abbreviated", context: "formatting" });
             case "eeeee":
-                return n.day(i, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.day(i, { width: "narrow", context: "formatting" });
             case "eeeeee":
-                return n.day(i, {
-                    width: "short",
-                    context: "formatting",
-                });
+                return n.day(i, { width: "short", context: "formatting" });
             default:
-                return n.day(i, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.day(i, { width: "wide", context: "formatting" });
         }
     },
     c: function (e, t, n, r) {
@@ -298,29 +196,15 @@ let b = {
             case "cc":
                 return (0, l.A)(a, t.length);
             case "co":
-                return n.ordinalNumber(a, {
-                    unit: "day",
-                });
+                return n.ordinalNumber(a, { unit: "day" });
             case "ccc":
-                return n.day(i, {
-                    width: "abbreviated",
-                    context: "standalone",
-                });
+                return n.day(i, { width: "abbreviated", context: "standalone" });
             case "ccccc":
-                return n.day(i, {
-                    width: "narrow",
-                    context: "standalone",
-                });
+                return n.day(i, { width: "narrow", context: "standalone" });
             case "cccccc":
-                return n.day(i, {
-                    width: "short",
-                    context: "standalone",
-                });
+                return n.day(i, { width: "short", context: "standalone" });
             default:
-                return n.day(i, {
-                    width: "wide",
-                    context: "standalone",
-                });
+                return n.day(i, { width: "wide", context: "standalone" });
         }
     },
     i: function (e, t, n) {
@@ -332,29 +216,15 @@ let b = {
             case "ii":
                 return (0, l.A)(i, t.length);
             case "io":
-                return n.ordinalNumber(i, {
-                    unit: "day",
-                });
+                return n.ordinalNumber(i, { unit: "day" });
             case "iii":
-                return n.day(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "abbreviated", context: "formatting" });
             case "iiiii":
-                return n.day(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "narrow", context: "formatting" });
             case "iiiiii":
-                return n.day(r, {
-                    width: "short",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "short", context: "formatting" });
             default:
-                return n.day(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.day(r, { width: "wide", context: "formatting" });
         }
     },
     a: function (e, t, n) {
@@ -362,132 +232,70 @@ let b = {
         switch (t) {
             case "a":
             case "aa":
-                return n.dayPeriod(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "abbreviated", context: "formatting" });
             case "aaa":
-                return n
-                    .dayPeriod(r, {
-                        width: "abbreviated",
-                        context: "formatting",
-                    })
-                    .toLowerCase();
+                return n.dayPeriod(r, { width: "abbreviated", context: "formatting" }).toLowerCase();
             case "aaaaa":
-                return n.dayPeriod(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "narrow", context: "formatting" });
             default:
-                return n.dayPeriod(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "wide", context: "formatting" });
         }
     },
     b: function (e, t, n) {
         var r,
             i = e.getUTCHours();
-        switch (((r = 12 === i ? d : 0 === i ? u : i / 12 >= 1 ? "pm" : "am"), t)) {
+        switch (((r = 12 === i ? d : 0 === i ? c : i / 12 >= 1 ? "pm" : "am"), t)) {
             case "b":
             case "bb":
-                return n.dayPeriod(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "abbreviated", context: "formatting" });
             case "bbb":
-                return n
-                    .dayPeriod(r, {
-                        width: "abbreviated",
-                        context: "formatting",
-                    })
-                    .toLowerCase();
+                return n.dayPeriod(r, { width: "abbreviated", context: "formatting" }).toLowerCase();
             case "bbbbb":
-                return n.dayPeriod(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "narrow", context: "formatting" });
             default:
-                return n.dayPeriod(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "wide", context: "formatting" });
         }
     },
     B: function (e, t, n) {
         var r,
             i = e.getUTCHours();
-        switch (((r = i >= 17 ? _ : i >= 12 ? p : i >= 4 ? f : h), t)) {
+        switch (((r = i >= 17 ? p : i >= 12 ? f : i >= 4 ? _ : h), t)) {
             case "B":
             case "BB":
             case "BBB":
-                return n.dayPeriod(r, {
-                    width: "abbreviated",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "abbreviated", context: "formatting" });
             case "BBBBB":
-                return n.dayPeriod(r, {
-                    width: "narrow",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "narrow", context: "formatting" });
             default:
-                return n.dayPeriod(r, {
-                    width: "wide",
-                    context: "formatting",
-                });
+                return n.dayPeriod(r, { width: "wide", context: "formatting" });
         }
     },
     h: function (e, t, n) {
         if ("ho" === t) {
             var r = e.getUTCHours() % 12;
-            return (
-                0 === r && (r = 12),
-                n.ordinalNumber(r, {
-                    unit: "hour",
-                })
-            );
+            return 0 === r && (r = 12), n.ordinalNumber(r, { unit: "hour" });
         }
-        return c.A.h(e, t);
+        return u.A.h(e, t);
     },
     H: function (e, t, n) {
-        return "Ho" === t
-            ? n.ordinalNumber(e.getUTCHours(), {
-                  unit: "hour",
-              })
-            : c.A.H(e, t);
+        return "Ho" === t ? n.ordinalNumber(e.getUTCHours(), { unit: "hour" }) : u.A.H(e, t);
     },
     K: function (e, t, n) {
         var r = e.getUTCHours() % 12;
-        return "Ko" === t
-            ? n.ordinalNumber(r, {
-                  unit: "hour",
-              })
-            : (0, l.A)(r, t.length);
+        return "Ko" === t ? n.ordinalNumber(r, { unit: "hour" }) : (0, l.A)(r, t.length);
     },
     k: function (e, t, n) {
         var r = e.getUTCHours();
-        return (0 === r && (r = 24), "ko" === t)
-            ? n.ordinalNumber(r, {
-                  unit: "hour",
-              })
-            : (0, l.A)(r, t.length);
+        return (0 === r && (r = 24), "ko" === t) ? n.ordinalNumber(r, { unit: "hour" }) : (0, l.A)(r, t.length);
     },
     m: function (e, t, n) {
-        return "mo" === t
-            ? n.ordinalNumber(e.getUTCMinutes(), {
-                  unit: "minute",
-              })
-            : c.A.m(e, t);
+        return "mo" === t ? n.ordinalNumber(e.getUTCMinutes(), { unit: "minute" }) : u.A.m(e, t);
     },
     s: function (e, t, n) {
-        return "so" === t
-            ? n.ordinalNumber(e.getUTCSeconds(), {
-                  unit: "second",
-              })
-            : c.A.s(e, t);
+        return "so" === t ? n.ordinalNumber(e.getUTCSeconds(), { unit: "second" }) : u.A.s(e, t);
     },
     S: function (e, t) {
-        return c.A.S(e, t);
+        return u.A.S(e, t);
     },
     X: function (e, t, n, r) {
         var i = (r._originalDate || e).getTimezoneOffset();

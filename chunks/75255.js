@@ -1,54 +1,30 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(562465),
-    i = n(73153),
-    a = n(198982),
-    s = n(739508),
-    o = n(652215);
-let l = Object.freeze({}),
-    c = {
+l.d(t, { A: () => d });
+var n = l(562465),
+    r = l(73153),
+    i = l(198982),
+    s = l(739508),
+    o = l(652215);
+let a = Object.freeze({}),
+    d = {
         redeemGiftCode: async function (e) {
-            let { code: t, options: n = l, onRedeemed: c, onError: u } = e,
-                { channelId: d = null, paymentSource: f = null } = n;
-            i.h.dispatch({
-                type: "GIFT_CODE_REDEEM",
-                code: t,
-            });
+            let { code: t, options: l = a, onRedeemed: d, onError: c } = e,
+                { channelId: u = null, paymentSource: E = null } = l;
+            r.h.dispatch({ type: "GIFT_CODE_REDEEM", code: t });
             try {
-                let e = await r.Bo.post({
+                let e = await n.Bo.post({
                     url: o.Rsh.GIFT_CODE_REDEEM(t),
-                    body: {
-                        channel_id: d,
-                        payment_source_id: null == f ? void 0 : f.id,
-                        gateway_checkout_context: await (0, s.ob)(f),
-                    },
+                    body: { channel_id: u, payment_source_id: E?.id, gateway_checkout_context: await (0, s.ob)(E) },
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
                 return (
-                    i.h.dispatch({
-                        type: "GIFT_CODE_REDEEM_SUCCESS",
-                        code: t,
-                        entitlement: e.body,
-                    }),
-                    null == c || c(),
-                    {
-                        code: t,
-                        entitlement: e,
-                    }
+                    r.h.dispatch({ type: "GIFT_CODE_REDEEM_SUCCESS", code: t, entitlement: e.body }),
+                    d?.(),
+                    { code: t, entitlement: e }
                 );
-            } catch (n) {
-                let e = new a.Ey(n);
-                throw (
-                    (i.h.dispatch({
-                        type: "GIFT_CODE_REDEEM_FAILURE",
-                        code: t,
-                        error: e,
-                    }),
-                    null == u || u(e),
-                    e)
-                );
+            } catch (l) {
+                let e = new i.Ey(l);
+                throw (r.h.dispatch({ type: "GIFT_CODE_REDEEM_FAILURE", code: t, error: e }), c?.(e), e);
             }
         },
     };

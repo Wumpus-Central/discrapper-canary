@@ -1,32 +1,20 @@
-n.d(t, {
-    QL: () => o,
-    mW: () => s,
-});
+"use strict";
+n.d(t, { QL: () => o, mW: () => s });
 var r = n(652215);
-
 function i(e) {
     return "Klipy" === e;
 }
-
 function a(e) {
     return i(e);
 }
-
 function s(e) {
-    var t, n;
     if (!a(e.providerName)) return;
-    let { thumbnail: r } = e;
-    if (null != r) return null != (t = null != (n = r.proxyURL) ? n : r.url) ? t : r.uri;
+    let { thumbnail: t } = e;
+    if (null != t) return t.proxyURL ?? t.url ?? t.uri;
 }
-
 function o(e, t, n) {
-    let i =
-            null != t
-                ? {
-                      [t]: 1,
-                  }
-                : {},
-        { offset: a, limit: s, results: o, totalResults: l } = null != n ? n : {};
+    let i = null != t ? { [t]: 1 } : {},
+        { offset: a, limit: s, results: o, totalResults: l } = n ?? {};
     return {
         search_type: r.I4_.GIF,
         load_id: e,

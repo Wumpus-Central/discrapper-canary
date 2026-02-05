@@ -1,6 +1,4 @@
-n.d(i, {
-    A: () => t,
-});
+n.d(i, { A: () => t });
 var o = n(303527);
 let t = {
     ordinalNumber: (0, n(722023).A)({
@@ -17,9 +15,7 @@ let t = {
             wide: /^(przed\s*nasz(ą|a)\s*er(ą|a)|naszej\s*ery)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^p/i, /^n/i],
-        },
+        parsePatterns: { any: [/^p/i, /^n/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, o.A)({
@@ -29,10 +25,7 @@ let t = {
             wide: /^(I|II|III|IV)\s*kwarta(ł|l)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            narrow: [/1/i, /2/i, /3/i, /4/i],
-            any: [/^I kw/i, /^II kw/i, /^III kw/i, /^IV kw/i],
-        },
+        parsePatterns: { narrow: [/1/i, /2/i, /3/i, /4/i], any: [/^I kw/i, /^II kw/i, /^III kw/i, /^IV kw/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;

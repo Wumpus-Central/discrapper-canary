@@ -1,20 +1,16 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { A: () => _ }), n(321073);
 var r = n(64700),
     i = n(735438),
     a = n.n(i),
     s = n(311907),
     o = n(21119),
     l = n(570287),
-    c = n(994500),
-    u = n(287809);
+    u = n(994500),
+    c = n(287809);
 let d = 0.1;
-
-function f() {
-    let e = (0, s.yK)([c.A], () => c.A.getFriendIDs()),
+function _() {
+    let e = (0, s.yK)([u.A], () => u.A.getFriendIDs()),
         t = (0, s.yK)([o.A], () =>
             o.A.getUserAffinities()
                 .filter((e) => {
@@ -30,10 +26,10 @@ function f() {
         ),
         n = r.useMemo(() => a().uniq([...e, ...t]), [e, t]);
     return (0, s.yK)(
-        [u.default],
+        [c.default],
         () =>
             n.reduce((e, t) => {
-                let n = u.default.getUser(t);
+                let n = c.default.getUser(t);
                 return null == n || n.bot || e.push(n), e;
             }, []),
         [n],

@@ -1,36 +1,17 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(652215);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = 0;
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153),
+    a = n(652215);
+let s = 0;
+function o(e) {
     let { port: t } = e;
-    l = s.xEi - t;
+    s = a.xEi - t;
 }
-class u extends (r = i.Ay.Store) {
+class l extends r.Ay.Store {
+    static displayName = "InstanceIdStore";
     getId() {
-        return l;
+        return s;
     }
 }
-o(u, "displayName", "InstanceIdStore");
-let d = new u(a.h, {
-    RPC_SERVER_READY: c,
-});
+let u = new l(i.h, { RPC_SERVER_READY: o });

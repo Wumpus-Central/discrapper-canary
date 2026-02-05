@@ -1,30 +1,22 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => r });
+var i = n(627968),
     l = n(64700),
-    i = n(761929),
+    s = n(761929),
     a = n(423765);
-
-function s(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: s, minHeight: o, maxHeight: c } = e,
-        [u, d] = l.useState(null);
+function r(e) {
+    let { resizableNode: t, onResize: n, onResizeEnd: r, minHeight: o, maxHeight: d } = e,
+        [c, u] = l.useState(null);
     l.useEffect(() => {
-        var e, n;
-        d(null != (e = null == (n = t.current) ? void 0 : n.offsetHeight) ? e : null);
+        u(t.current?.offsetHeight ?? null);
     }, [t]);
-    let f = (0, i.A)({
-        initialElementDimension: u,
+    let h = (0, s.A)({
+        initialElementDimension: c,
         minDimension: o,
-        maxDimension: c,
+        maxDimension: d,
         resizableDomNodeRef: t,
         onElementResize: n,
-        onElementResizeEnd: s,
-        orientation: i.R.VERTICAL_BOTTOM,
+        onElementResizeEnd: r,
+        orientation: s.R.VERTICAL_BOTTOM,
     });
-    return (0, r.jsx)("div", {
-        onMouseDown: f,
-        className: a.D,
-    });
+    return (0, i.jsx)("div", { onMouseDown: h, className: a.D });
 }

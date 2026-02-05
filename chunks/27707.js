@@ -1,3 +1,4 @@
+"use strict";
 (t.__esModule = !0),
     (t.default = {
         scheme: "brewer",

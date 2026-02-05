@@ -1,113 +1,78 @@
-n.d(t, {
-    A: () => C,
-    k: () => f,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(284009),
-    a = n.n(l),
-    o = n(417597),
-    s = n(554146),
-    c = n(58149),
-    u = n(826673),
-    E = n(599941),
+n.d(t, { A: () => U, k: () => m }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    r = n(284009),
+    s = n.n(r),
+    a = n(417597),
+    o = n(554146),
+    E = n(58149),
+    c = n(826673),
+    _ = n(599941),
     d = n(960253),
-    _ = n(164956),
-    A = n(976860),
+    A = n(164956),
+    u = n(976860),
     T = n(808728),
     I = n(71393),
-    O = n(954571),
-    N = n(491026),
-    p = n(486418),
-    R = n(920814),
-    S = n(284683),
+    N = n(954571),
+    R = n(491026),
+    S = n(486418),
+    O = n(920814),
+    C = n(284683),
     P = n(634654),
-    y = n(652215);
-let m = i.createContext(void 0);
-
-function f() {
-    let e = i.useContext(m);
-    return a()(null != e, "must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider"), e;
+    D = n(652215);
+let p = l.createContext(void 0);
+function m() {
+    let e = l.useContext(p);
+    return s()(null != e, "must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider"), e;
 }
-
-function C(e) {
-    var t;
-    let { children: n, initialTab: l, guildId: a } = e,
-        f = (0, o.bG)([I.A], () => I.A.getGuild(a)),
-        C = (0, o.bG)([_.A], () => _.A.isViewingServerShop(a)),
-        g = (0, p.P)(f, "guild_shop_page"),
-        D = (0, N.YZ)(a, "guild_shop_page"),
-        h = (null == f ? void 0 : f.features.has(y.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
-        b = (0, d.Oh)(null == f ? void 0 : f.id),
-        U = null == (t = (0, E.Tq)(a)) ? void 0 : t.server_shop_tab_order,
-        M = [],
-        j = R.B.GUILD_SHOP_FULL_PREVIEW;
-    C || (h && b)
-        ? (M.push(U === S.HA.PRODUCTS_FIRST ? R.B.GUILD_PRODUCTS : R.B.GUILD_ROLE_SUBSCRIPTIONS),
-          M.push(U === S.HA.PRODUCTS_FIRST ? R.B.GUILD_ROLE_SUBSCRIPTIONS : R.B.GUILD_PRODUCTS),
-          (j = M[0]))
-        : h && !b
-          ? (M.push(R.B.GUILD_PRODUCTS), (j = R.B.GUILD_PRODUCTS))
+function U(e) {
+    let { children: t, initialTab: n, guildId: r } = e,
+        s = (0, a.bG)([I.A], () => I.A.getGuild(r)),
+        m = (0, a.bG)([A.A], () => A.A.isViewingServerShop(r)),
+        U = (0, S.P)(s, "guild_shop_page"),
+        M = (0, R.YZ)(r, "guild_shop_page"),
+        h = s?.features.has(D.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) === !0,
+        g = (0, d.Oh)(s?.id),
+        y = (0, _.Tq)(r)?.server_shop_tab_order,
+        L = [],
+        k = O.B.GUILD_SHOP_FULL_PREVIEW;
+    m || (h && g)
+        ? (L.push(y === C.HA.PRODUCTS_FIRST ? O.B.GUILD_PRODUCTS : O.B.GUILD_ROLE_SUBSCRIPTIONS),
+          L.push(y === C.HA.PRODUCTS_FIRST ? O.B.GUILD_ROLE_SUBSCRIPTIONS : O.B.GUILD_PRODUCTS),
+          (k = L[0]))
+        : h && !g
+          ? (L.push(O.B.GUILD_PRODUCTS), (k = O.B.GUILD_PRODUCTS))
           : !h &&
-            b &&
-            (M.push(R.B.GUILD_ROLE_SUBSCRIPTIONS),
-            (j = R.B.GUILD_ROLE_SUBSCRIPTIONS),
-            g && M.push(R.B.GUILD_PRODUCTS_PREVIEW)),
-        (l = null != l ? l : j);
-    let [v, k] = i.useState(l),
-        L = (g && !(b && D)) || v === R.B.GUILD_PRODUCTS_PREVIEW;
+            g &&
+            (L.push(O.B.GUILD_ROLE_SUBSCRIPTIONS),
+            (k = O.B.GUILD_ROLE_SUBSCRIPTIONS),
+            U && L.push(O.B.GUILD_PRODUCTS_PREVIEW)),
+        (n = n ?? k);
+    let [f, x] = l.useState(n),
+        G = (U && !(g && M)) || f === O.B.GUILD_PRODUCTS_PREVIEW;
     return (
-        i.useEffect(() => {
-            k(l);
-        }, [l]),
-        (0, r.jsx)(m.Provider, {
+        l.useEffect(() => {
+            x(n);
+        }, [n]),
+        (0, i.jsx)(p.Provider, {
             value: {
-                selectedTab: v,
-                setSelectedTab: k,
-                categoryTabs: M,
-                isPhantomPreview: L,
+                selectedTab: f,
+                setSelectedTab: x,
+                categoryTabs: L,
+                isPhantomPreview: G,
                 handlePreviewDismiss: (e) => {
-                    (0, u.Dr)(s.M.SERVER_SHOP_PHANTOM_PREVIEW);
-                    let t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, (0, c.H$)(a));
-                    if (v === R.B.GUILD_PRODUCTS_PREVIEW)
-                        e.stopPropagation(),
-                            k(R.B.GUILD_ROLE_SUBSCRIPTIONS),
-                            (t.action_taken = P.hN.DISMISS_TAB_PREVIEW);
-                    else {
-                        var n;
-                        (0, A.bG)(y.BVt.CHANNEL(a, null == (n = T.Ay.getDefaultChannel(a)) ? void 0 : n.id)),
-                            (t.action_taken = P.hN.DISMISS_FULL_PREVIEW);
-                    }
-                    O.default.track(y.HAw.GUILD_SHOP_PREVIEW_CLICK, t);
+                    (0, c.Dr)(o.M.SERVER_SHOP_PHANTOM_PREVIEW);
+                    let t = { ...(0, E.H$)(r) };
+                    f === O.B.GUILD_PRODUCTS_PREVIEW
+                        ? (e.stopPropagation(),
+                          x(O.B.GUILD_ROLE_SUBSCRIPTIONS),
+                          (t.action_taken = P.hN.DISMISS_TAB_PREVIEW))
+                        : ((0, u.bG)(D.BVt.CHANNEL(r, T.Ay.getDefaultChannel(r)?.id)),
+                          (t.action_taken = P.hN.DISMISS_FULL_PREVIEW)),
+                        N.default.track(D.HAw.GUILD_SHOP_PREVIEW_CLICK, t);
                 },
             },
-            children: n,
+            children: t,
         })
     );
 }

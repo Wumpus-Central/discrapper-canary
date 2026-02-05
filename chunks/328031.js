@@ -1,93 +1,71 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(114821),
-    n(339614),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(92674),
     o = n(827734),
-    c = n(397927),
-    d = n(147925),
+    d = n(397927),
+    c = n(147925),
     u = n(2242),
-    g = n(985018),
-    m = n(106467);
-
-function p(e) {
+    m = n(985018),
+    g = n(106467);
+function x(e) {
     let { checked: t, children: n } = e;
-    return (0, r.jsxs)("div", {
-        className: m.nM,
+    return (0, i.jsxs)("div", {
+        className: g.nM,
         children: [
-            (0, r.jsx)(c.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: "text-md/normal",
                 color: "interactive-text-active",
-                className: m.qg,
+                className: g.qg,
                 children: n,
             }),
             t
-                ? (0, r.jsx)(c.yr3, {
+                ? (0, i.jsx)(d.yr3, {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.A.unsafe_rawColors.WHITE.css,
-                      className: s()(m.aL, m.xp),
+                      className: r()(g.aL, g.xp),
                   })
-                : (0, r.jsx)("div", {
-                      className: s()(m.aL, m.VL),
-                  }),
+                : (0, i.jsx)("div", { className: r()(g.aL, g.VL) }),
         ],
     });
 }
-
-function f(e) {
+function h(e) {
     let { children: t } = e,
-        [n, l] = i.useState(!1),
-        s = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = s.filter((e) => e).length / s.length,
-        f = 1 === o,
-        h = (0, c.zhh)({
-            width: "".concat(100 * o, "%"),
-        }),
-        b = [
-            g.intl.format(g.t.wtQtXs, {
-                promoPageGuideUrl: u.P7.PROMO_PAGE_GUIDE,
-            }),
-            g.intl.format(g.t["0Fo0wf"], {
-                caseStudiesUrl: u.P7.CASE_STUDIES,
-            }),
-            g.intl.format(g.t["7JdzjA"], {
-                subscriptionOfferingGuideUrl: u.P7.SUBSCRIPTION_OFFERING_GUIDE,
-            }),
-            g.intl.format(g.t.zkXN6I, {
-                tierStructureGuideUrl: u.P7.TIER_STRUCTURE_GUIDE,
-            }),
+        [n, l] = s.useState(!1),
+        r = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = r.filter((e) => e).length / r.length,
+        h = 1 === o,
+        _ = (0, d.zhh)({ width: `${100 * o}%` }),
+        A = [
+            m.intl.format(m.t.wtQtXs, { promoPageGuideUrl: u.P7.PROMO_PAGE_GUIDE }),
+            m.intl.format(m.t["0Fo0wf"], { caseStudiesUrl: u.P7.CASE_STUDIES }),
+            m.intl.format(m.t["7JdzjA"], { subscriptionOfferingGuideUrl: u.P7.SUBSCRIPTION_OFFERING_GUIDE }),
+            m.intl.format(m.t.zkXN6I, { tierStructureGuideUrl: u.P7.TIER_STRUCTURE_GUIDE }),
         ],
-        x = n
+        p = n
             ? null
-            : (0, r.jsxs)(c.nVY, {
+            : (0, i.jsxs)(d.nVY, {
                   children: [
-                      !f &&
+                      !h &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
-                              return (0, r.jsxs)(
-                                  i.Fragment,
+                              return (0, i.jsxs)(
+                                  s.Fragment,
                                   {
                                       children: [
-                                          t > 0 && (0, r.jsx)(c.cGx, {}),
-                                          (0, r.jsx)(c.D0$, {
+                                          t > 0 && (0, i.jsx)(d.cGx, {}),
+                                          (0, i.jsx)(d.D0$, {
                                               label: n,
-                                              children: (0, r.jsx)(c.BJc, {
+                                              children: (0, i.jsx)(d.BJc, {
                                                   gap: 8,
                                                   children: l.map((e, t) =>
-                                                      (0, r.jsx)(
-                                                          p,
-                                                          {
-                                                              children: e.description,
-                                                              checked: e.completed,
-                                                          },
+                                                      (0, i.jsx)(
+                                                          x,
+                                                          { children: e.description, checked: e.completed },
                                                           t,
                                                       ),
                                                   ),
@@ -98,20 +76,17 @@ function f(e) {
                                   t,
                               );
                           }),
-                      (0, r.jsx)(c.cGx, {}),
-                      (0, r.jsx)(c.D0$, {
-                          label: g.intl.string(g.t.FO0AIS),
-                          children: (0, r.jsx)(c.BJc, {
+                      (0, i.jsx)(d.cGx, {}),
+                      (0, i.jsx)(d.D0$, {
+                          label: m.intl.string(m.t.FO0AIS),
+                          children: (0, i.jsx)(d.BJc, {
                               gap: 8,
-                              children: b.map((e, t) =>
-                                  (0, r.jsx)(
+                              children: A.map((e, t) =>
+                                  (0, i.jsx)(
                                       "div",
                                       {
-                                          className: m.nM,
-                                          children: (0, r.jsx)(c.Text, {
-                                              variant: "text-md/normal",
-                                              children: e,
-                                          }),
+                                          className: g.nM,
+                                          children: (0, i.jsx)(d.Text, { variant: "text-md/normal", children: e }),
                                       },
                                       t,
                                   ),
@@ -120,37 +95,31 @@ function f(e) {
                       }),
                   ],
               });
-    return (0, r.jsx)("div", {
-        className: m.D4,
-        children: (0, r.jsx)("div", {
-            className: m.kL,
-            children: (0, r.jsxs)(c.BJc, {
+    return (0, i.jsx)("div", {
+        className: g.D4,
+        children: (0, i.jsx)("div", {
+            className: g.kL,
+            children: (0, i.jsxs)(d.BJc, {
                 gap: 16,
                 children: [
-                    (0, r.jsxs)(c.DUT, {
-                        className: m.jr,
+                    (0, i.jsxs)(d.DUT, {
+                        className: g.jr,
                         onClick: () => l((e) => !e),
                         children: [
-                            (0, r.jsx)(c.Heading, {
+                            (0, i.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
-                                className: m.TK,
-                                children: g.intl.string(g.t["2Xbd/G"]),
+                                className: g.TK,
+                                children: m.intl.string(m.t["2Xbd/G"]),
                             }),
-                            (0, r.jsx)(d.A, {
-                                direction: n ? d.A.Directions.DOWN : d.A.Directions.UP,
-                                className: m.D,
-                            }),
+                            (0, i.jsx)(c.A, { direction: n ? c.A.Directions.DOWN : c.A.Directions.UP, className: g.D }),
                         ],
                     }),
-                    !f &&
-                        (0, r.jsx)("div", {
-                            className: m.ux,
-                            children: (0, r.jsx)(a.animated.div, {
-                                className: m.zZ,
-                                style: h,
-                            }),
+                    !h &&
+                        (0, i.jsx)("div", {
+                            className: g.ux,
+                            children: (0, i.jsx)(a.animated.div, { className: g.zZ, style: _ }),
                         }),
-                    x,
+                    p,
                 ],
             }),
         }),

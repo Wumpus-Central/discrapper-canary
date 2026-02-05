@@ -1,9 +1,5 @@
-n.d(t, {
-    C: () => i,
-    Q: () => r,
-}),
-    n(896048),
-    n(747238);
+"use strict";
+n.d(t, { C: () => i, Q: () => r });
 let r = new Set([
     "1c",
     "4d",
@@ -392,7 +388,6 @@ let r = new Set([
     "zephir",
     "zep",
 ]);
-
 function i(e) {
     return r.has(e.split(".").slice(-1)[0]);
 }

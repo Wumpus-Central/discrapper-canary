@@ -1,43 +1,16 @@
 e.exports = function (e) {
-    let t = {
-            className: "keyword",
-            begin: "\\$(f[asn]|t|vp[rtd]|children)",
-        },
-        n = {
-            className: "literal",
-            begin: "false|true|PI|undef",
-        },
-        r = {
-            className: "number",
-            begin: "\\b\\d+(\\.\\d+)?(e-?\\d+)?",
-            relevance: 0,
-        },
-        i = e.inherit(e.QUOTE_STRING_MODE, {
-            illegal: null,
-        }),
-        a = {
-            className: "meta",
-            keywords: {
-                keyword: "include use",
-            },
-            begin: "include|use <",
-            end: ">",
-        },
-        s = {
-            begin: "[*!#%]",
-            relevance: 0,
-        },
+    let t = { className: "keyword", begin: "\\$(f[asn]|t|vp[rtd]|children)" },
+        n = { className: "literal", begin: "false|true|PI|undef" },
+        r = { className: "number", begin: "\\b\\d+(\\.\\d+)?(e-?\\d+)?", relevance: 0 },
+        i = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        a = { className: "meta", keywords: { keyword: "include use" }, begin: "include|use <", end: ">" },
+        s = { begin: "[*!#%]", relevance: 0 },
         o = {
             className: "function",
             beginKeywords: "module function",
             end: /=|\{/,
             contains: [
-                {
-                    className: "params",
-                    begin: "\\(",
-                    end: "\\)",
-                    contains: ["self", r, i, t, n],
-                },
+                { className: "params", begin: "\\(", end: "\\)", contains: ["self", r, i, t, n] },
                 e.UNDERSCORE_TITLE_MODE,
             ],
         };

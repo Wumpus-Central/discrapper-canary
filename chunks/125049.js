@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     H: "soundButtonWrapper__9be63",
     aG: "soundButton__9be63",

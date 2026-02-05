@@ -1,44 +1,28 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(321073),
-    n(896048);
-var r = n(64700);
-
-function i(e) {
-    let { autocompletes: t, mode: n } = e;
-    return r.useCallback(
+r.d(t, { A: () => n }), r(321073);
+var s = r(64700);
+function n(e) {
+    let { autocompletes: t, mode: r } = e;
+    return s.useCallback(
         (e) => {
-            let { filterFn: r, getAutocompleteRowItem: i, getAutocompleteGroupItem: a } = e,
-                s = 0,
-                o = [],
-                l = [];
+            let { filterFn: s, getAutocompleteRowItem: n, getAutocompleteGroupItem: l } = e,
+                a = 0,
+                i = [],
+                o = [];
             for (let e of t) {
                 let t = [],
-                    { group: c, results: u } = e;
-                if (r(e)) {
-                    for (let e of u) {
-                        let r = i({
-                            result: e,
-                            modeType: n.type,
-                            group: c,
-                        });
-                        t.push(r);
+                    { group: u, results: c } = e;
+                if (s(e)) {
+                    for (let e of c) {
+                        let s = n({ result: e, modeType: r.type, group: u });
+                        t.push(s);
                     }
-                    s += u.length;
-                    let e = a({
-                        group: c,
-                        rows: t,
-                    });
-                    o.push(e), l.push(...t);
+                    a += c.length;
+                    let e = l({ group: u, rows: t });
+                    i.push(e), o.push(...t);
                 }
             }
-            return {
-                autocompleteCount: s,
-                autocompleteGroups: o,
-                allAutocompleteRows: l,
-            };
+            return { autocompleteCount: a, autocompleteGroups: i, allAutocompleteRows: o };
         },
-        [t, n.type],
+        [t, r.type],
     );
 }

@@ -1,46 +1,27 @@
-n.d(t, {
-    A: () => d,
-});
+n.d(t, { A: () => c });
 var a = n(627968),
-    l = n(311907),
+    s = n(311907),
     i = n(397927),
-    r = n(576470),
-    s = n(99753),
+    l = n(576470),
+    r = n(99753),
     o = n(693879),
-    c = n(424994);
-
-function d() {
-    let e = (0, l.bG)([s.A], () => {
-            var e;
-            return (null == (e = s.A.getFeed(c.X1.GLOBAL_FEED)) ? void 0 : e.refresh_stale_inbox_after_ms) != null;
-        }),
-        { loading: t, nextFetchDate: n } = (0, l.cf)([s.A], () => {
-            var e;
-            return null != (e = s.A.getFeedState(c.X1.GLOBAL_FEED))
-                ? e
-                : {
-                      loading: !1,
-                  };
-        }),
-        d = (0, l.bG)([s.A], () => s.A.getLastFeedFetchDate(c.X1.GLOBAL_FEED));
+    d = n(424994);
+function c() {
+    let e = (0, s.bG)([r.A], () => r.A.getFeed(d.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
+        { loading: t, nextFetchDate: n } = (0, s.cf)(
+            [r.A],
+            () => r.A.getFeedState(d.X1.GLOBAL_FEED) ?? { loading: !1 },
+        ),
+        c = (0, s.bG)([r.A], () => r.A.getLastFeedFetchDate(d.X1.GLOBAL_FEED));
     return (0, a.jsxs)("div", {
         children: [
             t
-                ? (0, a.jsx)(i.Text, {
-                      variant: "text-md/normal",
-                      children: "(fetching)",
-                  })
+                ? (0, a.jsx)(i.Text, { variant: "text-md/normal", children: "(fetching)" })
                 : (0, a.jsxs)(i.Text, {
                       variant: "text-md/normal",
                       children: [
                           "Next fetch: ",
-                          null != n
-                              ? (0, a.jsx)(r.A, {
-                                    deadline: n,
-                                })
-                              : e
-                                ? "(awaiting push)"
-                                : "(unscheduled)",
+                          null != n ? (0, a.jsx)(l.A, { deadline: n }) : e ? "(awaiting push)" : "(unscheduled)",
                       ],
                   }),
             (0, a.jsxs)(i.Text, {
@@ -48,14 +29,7 @@ function d() {
                 children: [
                     "Last fetch:",
                     " ",
-                    null != d
-                        ? (0, a.jsx)(o.z, {
-                              inline: !0,
-                              entry: {
-                                  start: d.getTime(),
-                              },
-                          })
-                        : "(never)",
+                    null != c ? (0, a.jsx)(o.z, { inline: !0, entry: { start: c.getTime() } }) : "(never)",
                 ],
             }),
         ],

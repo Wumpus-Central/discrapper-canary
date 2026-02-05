@@ -1,13 +1,6 @@
-r.d(t, {
-    b: () => a,
-});
-var n = r(311907),
-    l = r(218727);
-
-function a() {
-    return (0, n.cf)([l.A], () => ({
-        avatars: l.A.getAvatars(),
-        loading: l.A.isFetching,
-        error: l.A.fetchError,
-    }));
+a.d(t, { b: () => l });
+var n = a(311907),
+    s = a(218727);
+function l() {
+    return (0, n.cf)([s.A], () => ({ avatars: s.A.getAvatars(), loading: s.A.isFetching, error: s.A.fetchError }));
 }

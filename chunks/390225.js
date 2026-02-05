@@ -1,35 +1,23 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(142703),
-    n(896048),
-    n(65821),
-    n(423034);
+"use strict";
+n.d(t, { A: () => u }), n(142703), n(423034);
 var r = n(118356),
     i = n(39304);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = new r.Vy("Flux"),
-    o = 100,
-    l = (e) => e();
-class c {
+let a = new r.Vy("Flux"),
+    s = 100,
+    o = (e) => e();
+class l {
+    changedStores = new Set();
+    reactChangedStores = new Set();
+    changeSentinel = 0;
+    isBatchEmitting = !1;
+    isDispatching = !1;
+    isPaused = !1;
+    pauseTimer = null;
     destroy() {
-        this.changedStores.clear(), this.reactChangedStores.clear(), (l = (e) => e());
+        this.changedStores.clear(), this.reactChangedStores.clear(), (o = (e) => e());
     }
     injectBatchEmitChanges(e) {
-        l = e;
+        o = e;
     }
     pause() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
@@ -58,7 +46,7 @@ class c {
     emit() {
         this.isBatchEmitting ||
             this.isPaused ||
-            l(() => {
+            o(() => {
                 try {
                     (this.isBatchEmitting = !0), this.changeSentinel++;
                     let e = 0,
@@ -66,13 +54,13 @@ class c {
                         n = new Set();
                     for (; this.changedStores.size > 0; ) {
                         if (++e > 100)
-                            throw (s.error("LastFewActions", i.lK()), Error("change emit loop detected, aborting"));
+                            throw (a.error("LastFewActions", i.lK()), Error("change emit loop detected, aborting"));
                         this.emitNonReactOnce(t, n);
                     }
                     for (; this.reactChangedStores.size > 0; ) {
                         if (++e > 100)
                             throw (
-                                (s.error("LastFewActions", i.lK()), Error("react change emit loop detected, aborting"))
+                                (a.error("LastFewActions", i.lK()), Error("react change emit loop detected, aborting"))
                             );
                         this.emitReactOnce();
                     }
@@ -105,8 +93,8 @@ class c {
                     e.has(r) || (e.add(r), !1 === r() || t.has(i) || (t.add(i), this.markChanged(i)));
                 });
             });
-        let a = Date.now();
-        a - n > o && s.verbose("Slow batch emitChanges took ".concat(a - n, "ms recentActions:"), i.lK());
+        let o = Date.now();
+        o - n > s && a.verbose(`Slow batch emitChanges took ${o - n}ms recentActions:`, i.lK());
     }
     emitReactOnce() {
         let e = Date.now(),
@@ -116,16 +104,7 @@ class c {
                 e._reactChangeCallbacks.invokeAll(), this.reactChangedStores.delete(e);
             });
         let n = Date.now();
-        n - e > o && s.verbose("Slow batch emitReactChanges took ".concat(n - e, "ms recentActions:"), i.lK());
-    }
-    constructor() {
-        a(this, "changedStores", new Set()),
-            a(this, "reactChangedStores", new Set()),
-            a(this, "changeSentinel", 0),
-            a(this, "isBatchEmitting", !1),
-            a(this, "isDispatching", !1),
-            a(this, "isPaused", !1),
-            a(this, "pauseTimer", null);
+        n - e > s && a.verbose(`Slow batch emitReactChanges took ${n - e}ms recentActions:`, i.lK());
     }
 }
-let u = new c();
+let u = new l();

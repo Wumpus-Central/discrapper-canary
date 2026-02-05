@@ -1,16 +1,13 @@
-r.d(t, {
-    A: () => o,
-});
-var n = r(985018);
-
-function o(e, t, r, o) {
-    return o
-        ? n.intl.string(n.t["2Ne/Y1"])
-        : r
-          ? n.intl.string(n.t.FJSZVM)
+n.d(t, { A: () => a });
+var r = n(985018);
+function a(e, t, n, a) {
+    return a
+        ? r.intl.string(r.t["2Ne/Y1"])
+        : n
+          ? r.intl.string(r.t.FJSZVM)
           : t
-            ? n.intl.string(n.t["+JQCa/"])
+            ? r.intl.string(r.t["+JQCa/"])
             : e
-              ? n.intl.string(n.t.YqAjXy)
-              : n.intl.string(n.t.w4m945);
+              ? r.intl.string(r.t.YqAjXy)
+              : r.intl.string(r.t.w4m945);
 }

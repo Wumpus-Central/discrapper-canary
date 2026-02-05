@@ -1,135 +1,69 @@
-n.d(t, {
-    A: () => x,
-});
-var r = n(627968),
-    l = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(442433),
-    i = n(964486),
-    c = n(104171),
-    u = n(734057),
-    d = n(256587),
-    h = n(287809),
-    g = n(802958),
-    m = n(190772),
-    f = n(37411),
-    j = n(106259);
-let x = l.memo(function (e) {
-    let { threadId: t, goToThread: l, showChannelName: i } = e,
-        c = (0, a.bG)([u.A], () => u.A.getChannel(t)),
-        d = (0, a.bG)([u.A], () => u.A.getChannel(c.parent_id));
-    return (0, r.jsxs)(s.DUT, {
-        className: j.kL,
-        onClick: (e) => l(c, e.shiftKey),
+s.d(t, { A: () => f });
+var l = s(627968),
+    n = s(64700),
+    a = s(311907),
+    r = s(397927),
+    i = s(442433),
+    o = s(964486),
+    d = s(104171),
+    c = s(734057),
+    u = s(256587),
+    h = s(287809),
+    g = s(802958),
+    m = s(190772),
+    x = s(37411),
+    A = s(106259);
+let f = n.memo(function (e) {
+    let { threadId: t, goToThread: n, showChannelName: o } = e,
+        d = (0, a.bG)([c.A], () => c.A.getChannel(t)),
+        u = (0, a.bG)([c.A], () => c.A.getChannel(d.parent_id));
+    return (0, l.jsxs)(r.DUT, {
+        className: A.kL,
+        onClick: (e) => n(d, e.shiftKey),
         onContextMenu: (e) =>
-            (0, o.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("86901")]).then(
-                    n.bind(n, 44536),
+            (0, i.L3)(e, async () => {
+                let { default: e } = await Promise.all([s.e("99011"), s.e("78441"), s.e("55266")]).then(
+                    s.bind(s, 44536),
                 );
-                return (t) => {
-                    var n, l;
-                    return (0, r.jsx)(
-                        e,
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, t)),
-                        (l = l =
-                            {
-                                channel: c,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                              }),
-                        n),
-                    );
-                };
+                return (t) => (0, l.jsx)(e, { ...t, channel: d });
             }),
         children: [
-            (0, r.jsxs)("div", {
-                className: j.kb,
+            (0, l.jsxs)("div", {
+                className: A.kb,
                 children: [
-                    (0, r.jsxs)(s.Heading, {
-                        className: j.OG,
+                    (0, l.jsxs)(r.Heading, {
+                        className: A.OG,
                         variant: "heading-md/semibold",
                         children: [
-                            (0, r.jsx)("span", {
-                                className: j.CB,
-                                children: c.name,
-                            }),
-                            i && null != d
-                                ? (0, r.jsx)("span", {
-                                      className: j.Ot,
-                                      children: "#".concat(d.name),
-                                  })
-                                : null,
+                            (0, l.jsx)("span", { className: A.CB, children: d.name }),
+                            o && null != u ? (0, l.jsx)("span", { className: A.Ot, children: `#${u.name}` }) : null,
                         ],
                     }),
-                    (0, m.A)(c),
+                    (0, m.A)(d),
                 ],
             }),
-            (0, r.jsx)(v, {
-                channel: c,
-            }),
+            (0, l.jsx)(j, { channel: d }),
         ],
     });
 });
-
-function v(e) {
+function j(e) {
     let { channel: t } = e,
-        n = (0, a.bG)([g.A], () => {
-            var e;
-            return null != (e = g.A.getMemberIdsPreview(t.id)) ? e : [];
-        }),
-        l = (0, a.bG)([g.A], () => {
-            var e;
-            return null != (e = g.A.getMemberCount(t.id)) ? e : 0;
-        }),
-        s = (0, a.yK)([h.default], () => n.map((e) => h.default.getUser(e)));
-    return ((0, i.Ay)(() => {
-        n.filter((e, t) => null == s[t]).forEach((e) => {
-            d.A.requestMember(t.guild_id, e);
+        s = (0, a.bG)([g.A], () => g.A.getMemberIdsPreview(t.id) ?? []),
+        n = (0, a.bG)([g.A], () => g.A.getMemberCount(t.id) ?? 0),
+        r = (0, a.yK)([h.default], () => s.map((e) => h.default.getUser(e)));
+    return ((0, o.Ay)(() => {
+        s.filter((e, t) => null == r[t]).forEach((e) => {
+            u.A.requestMember(t.guild_id, e);
         });
     }),
-    0 === n.length)
+    0 === s.length)
         ? null
-        : (0, r.jsx)(c.Ay, {
-              className: j.WM,
+        : (0, l.jsx)(d.Ay, {
+              className: A.WM,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,
-              users: s,
-              count: l,
-              max: f.Td,
+              users: r,
+              count: n,
+              max: x.Td,
           });
 }

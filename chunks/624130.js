@@ -1,30 +1,23 @@
-r.d(t, {
-    A: () => c,
-}),
-    r(896048);
-var n = r(64700),
-    l = r(66455),
-    s = r(311907),
-    i = r(997630),
-    a = r(571044);
-
-function c(e, t) {
-    let { lastPickerAction: r, lastPickerError: c } = (0, s.bG)([a.Ay], () => a.Ay.getPickerState()),
-        [o, d] = n.useState(!1),
-        f = (0, l.A)(e),
-        u = (0, l.A)(t);
+s.d(t, { A: () => o });
+var r = s(64700),
+    i = s(66455),
+    n = s(311907),
+    l = s(997630),
+    a = s(571044);
+function o(e, t) {
+    let { lastPickerAction: s, lastPickerError: o } = (0, n.bG)([a.Ay], () => a.Ay.getPickerState()),
+        [c, d] = r.useState(!1),
+        u = (0, i.A)(e),
+        f = (0, i.A)(t);
     return (
         (0, a.XA)(),
-        n.useEffect(() => {
-            o
-                ? r === a.JA.Update
-                    ? f.current()
-                    : r === a.JA.Cancel && ((0, i.E)(), u.current())
-                : (null == r || r === a.JA.Present) && d(!0);
-        }, [o, r, f, u]),
-        {
-            lastPickerAction: r,
-            lastPickerError: c,
-        }
+        r.useEffect(() => {
+            c
+                ? s === a.JA.Update
+                    ? u.current()
+                    : s === a.JA.Cancel && ((0, l.E)(), f.current())
+                : (null == s || s === a.JA.Present) && d(!0);
+        }, [c, s, u, f]),
+        { lastPickerAction: s, lastPickerError: o }
     );
 }

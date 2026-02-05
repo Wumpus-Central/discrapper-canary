@@ -1,81 +1,51 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048),
-    n(446912);
-var a,
-    l = n(311907),
-    i = n(73153),
-    r = n(427157);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+n.d(t, { A: () => d });
+var a = n(311907),
+    s = n(73153),
+    i = n(427157);
+let l = { pools: null, users: null };
+function r(e) {
+    null == l.users && (l.users = new Map()), l.users.set(e.id, new i.A(e));
 }
-let o = {
-    pools: null,
-    users: null,
-};
-
-function c(e) {
-    null == o.users && (o.users = new Map()), o.users.set(e.id, new r.A(e));
-}
-class d extends (a = l.Ay.PersistedStore) {
+class o extends a.Ay.PersistedStore {
+    static displayName = "GeneratedTestUsersStore";
+    static persistKey = "GeneratedTestUsersStore";
     initialize(e) {
         null != e &&
-            (null != e.pools && (o.pools = new Map(Object.entries(e.pools))),
-            null != e.users && (o.users = new Map(Object.entries(e.users))));
+            (null != e.pools && (l.pools = new Map(Object.entries(e.pools))),
+            null != e.users && (l.users = new Map(Object.entries(e.users))));
     }
     getState() {
         return {
-            pools: null != o.pools ? Object.fromEntries(o.pools) : null,
-            users: null != o.users ? Object.fromEntries(o.users) : null,
+            pools: null != l.pools ? Object.fromEntries(l.pools) : null,
+            users: null != l.users ? Object.fromEntries(l.users) : null,
         };
     }
     getUsersForPool(e) {
-        var t, n;
-        return Array.from(null != (t = null == (n = o.users) ? void 0 : n.values()) ? t : []).filter((t) => {
-            var n, a;
-            return null == (a = o.pools) || null == (n = a.get(e)) ? void 0 : n.userIds.includes(t.id);
-        });
+        return Array.from(l.users?.values() ?? []).filter((t) => l.pools?.get(e)?.userIds.includes(t.id));
     }
     getPool(e) {
-        var t, n;
-        return null != (t = null == (n = o.pools) ? void 0 : n.get(e)) ? t : null;
+        return l.pools?.get(e) ?? null;
     }
     getUser(e) {
-        var t, n;
-        return null != (t = null == (n = o.users) ? void 0 : n.get(e)) ? t : null;
+        return l.users?.get(e) ?? null;
     }
     getPools() {
-        return null === o.pools ? null : Array.from(o.pools.values());
+        return null === l.pools ? null : Array.from(l.pools.values());
     }
 }
-s(d, "displayName", "GeneratedTestUsersStore"), s(d, "persistKey", "GeneratedTestUsersStore");
-let u = new d(i.h, {
+let d = new o(s.h, {
     GENERATED_POOL_BY_ID_FETCH_SUCCESS: function (e) {
         let { pool: t, users: n } = e;
-        null == o.pools && (o.pools = new Map()), o.pools.set(t.id, t), n.forEach(c);
+        null == l.pools && (l.pools = new Map()), l.pools.set(t.id, t), n.forEach(r);
     },
     GENERATED_POOL_REMOVE_FROM_LIST: function (e) {
-        var t, n;
-        let { poolId: a } = e,
-            l = null == (t = o.pools) ? void 0 : t.get(a);
-        if (null == l) return !1;
-        l.userIds.length > 0 &&
-            l.userIds.forEach((e) => {
-                var t;
-                null == (t = o.users) || t.delete(e);
+        let { poolId: t } = e,
+            n = l.pools?.get(t);
+        if (null == n) return !1;
+        n.userIds.length > 0 &&
+            n.userIds.forEach((e) => {
+                l.users?.delete(e);
             }),
-            null == (n = o.pools) || n.delete(a);
+            l.pools?.delete(t);
     },
 });

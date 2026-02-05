@@ -1,109 +1,94 @@
-n.d(t, {
-    A: () => v,
-});
-var r = n(627968);
+n.d(t, { A: () => S });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(692617),
-    a = n(397927),
+var r = n(311907),
+    a = n(692617),
+    l = n(397927),
     s = n(297413),
     o = n(775602),
-    c = n(29160),
-    u = n(854378),
-    d = n(954921),
-    p = n(278539),
-    f = n(571694),
-    h = n(994500),
-    A = n(427262),
-    g = n(837921),
-    m = n(800583),
-    b = n(999068),
-    _ = n(122943),
-    E = n(985018),
-    O = n(518962);
-let y = (e) => {
+    d = n(29160),
+    c = n(854378),
+    u = n(954921),
+    A = n(278539),
+    h = n(571694),
+    _ = n(994500),
+    m = n(427262),
+    p = n(837921),
+    g = n(800583),
+    E = n(999068),
+    f = n(122943),
+    I = n(985018),
+    C = n(518962);
+let N = (e) => {
         let { userId: t } = e,
-            n = (0, b.y)(t);
+            n = (0, E.y)(t);
         return null == n || 0 === n.length
-            ? (0, r.jsx)(a.Text, {
-                  className: O.tE,
+            ? (0, i.jsx)(l.Text, {
+                  className: C.tE,
                   variant: "text-sm/normal",
                   color: "text-muted",
-                  children: E.intl.string(E.t.jpY0X5),
+                  children: I.intl.string(I.t.jpY0X5),
               })
-            : (0, r.jsxs)("div", {
-                  className: O.I9,
+            : (0, i.jsxs)("div", {
+                  className: C.I9,
                   children: [
-                      (0, r.jsx)(l.A, {
-                          guilds: n,
-                          maxGuilds: 3,
-                          size: u.$v.Sizes.SMOL,
-                          hideOverflowCount: !0,
-                      }),
-                      (0, r.jsx)(a.Text, {
-                          className: O.tE,
+                      (0, i.jsx)(a.A, { guilds: n, maxGuilds: 3, size: c.$v.Sizes.SMOL, hideOverflowCount: !0 }),
+                      (0, i.jsx)(l.Text, {
+                          className: C.tE,
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: E.intl.format(E.t.eE3oep, {
-                              count: n.length,
-                          }),
+                          children: I.intl.format(I.t.eE3oep, { count: n.length }),
                       }),
                   ],
               });
     },
-    I = g.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
-
-function v(e) {
-    var t;
-    let { channel: n, otherUser: l, active: u } = e,
-        g = (0, i.bG)([o.A], () => o.A.useReducedMotion),
-        b = (0, i.bG)([h.A], () => (null == l ? null : h.A.getNickname(l.id))),
-        v = !g && u,
-        S = (0, m.j)(n),
-        { avatarDecorationSrc: C } = (0, p.A)({
-            user: l,
-            size: (0, d.Te)(a._3J.SIZE_40),
+    T = p.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
+function S(e) {
+    let { channel: t, otherUser: n, active: a } = e,
+        c = (0, r.bG)([o.A], () => o.A.useReducedMotion),
+        p = (0, r.bG)([_.A], () => (null == n ? null : _.A.getNickname(n.id))),
+        E = !c && a,
+        S = (0, g.j)(t),
+        { avatarDecorationSrc: x } = (0, A.A)({
+            user: n,
+            size: (0, u.Te)(l._3J.SIZE_40),
             onlyAnimateOnHoverOrFocus: !0,
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(I, {
-                className: O.my,
-                src: (0, f.Y)(n, 40, v),
-                avatarDecoration: C,
-                size: a._3J.SIZE_40,
-                "aria-label": null != (t = null == l ? void 0 : l.username) ? t : E.intl.string(E.t["30mdIx"]),
+            (0, i.jsx)(T, {
+                className: C.my,
+                src: (0, h.Y)(t, 40, E),
+                avatarDecoration: x,
+                size: l._3J.SIZE_40,
+                "aria-label": n?.username ?? I.intl.string(I.t["30mdIx"]),
             }),
-            (0, r.jsxs)("div", {
-                className: O.yt,
+            (0, i.jsxs)("div", {
+                className: C.yt,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: O.rU,
+                    (0, i.jsxs)("div", {
+                        className: C.rU,
                         children: [
-                            (0, r.jsx)(s.A, {
-                                nick: b,
-                                user: l,
+                            (0, i.jsx)(s.A, {
+                                nick: p,
+                                user: n,
                                 showAccountIdentifier: !0,
-                                className: O.I8,
-                                usernameClass: O.Xh,
-                                discriminatorClass: null != A.Ay.getGlobalName(l) ? O.vl : O.D2,
+                                className: C.I8,
+                                usernameClass: C.Xh,
+                                discriminatorClass: null != m.Ay.getGlobalName(n) ? C.vl : C.D2,
                             }),
-                            (0, r.jsx)(a.Text, {
-                                className: O.L7,
+                            (0, i.jsx)(l.Text, {
+                                className: C.L7,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: S,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(c.A, {
-                        hoverText: (0, r.jsx)(_.A, {
-                            channel: n,
-                        }),
-                        forceHover: u,
-                        children: (0, r.jsx)(y, {
-                            userId: l.id,
-                        }),
+                    (0, i.jsx)(d.A, {
+                        hoverText: (0, i.jsx)(f.A, { channel: t }),
+                        forceHover: a,
+                        children: (0, i.jsx)(N, { userId: n.id }),
                     }),
                 ],
             }),

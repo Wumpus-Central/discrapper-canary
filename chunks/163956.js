@@ -1,186 +1,97 @@
-n.d(t, {
-    A: () => k,
-}),
-    n(321073),
-    n(896048);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(635377),
-    o = n.n(s),
-    l = n(311907),
-    c = n(73153),
+"use strict";
+n.d(t, { A: () => D }), n(321073);
+var r = n(735438),
+    i = n.n(r),
+    a = n(635377),
+    s = n.n(a),
+    o = n(311907),
+    l = n(73153),
     u = n(283047),
-    d = n(617617),
-    f = n(287809),
-    p = n(477851),
-    _ = n(209932),
-    h = n(807348),
-    m = n(766864),
-    g = n(980504),
-    E = n(355097);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function O(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function A(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let v = [],
-    S = new (o())({
-        max: g.E7,
-    }),
-    I = new u.A({
+    c = n(617617),
+    d = n(287809),
+    _ = n(477851),
+    f = n(209932),
+    p = n(807348);
+n(980504);
+var h = n(355097);
+let m = [],
+    g = new (s())({ max: 6 }),
+    E = new u.A({
         computeBonus: () => 100,
-        lookupKey: (e) => _.A.getSoundById(e),
+        lookupKey: (e) => f.A.getSoundById(e),
         afterCompute: () => {},
-        numFrequentlyItems: g.SC,
+        numFrequentlyItems: 100,
     });
-
-function T(e) {
+function A(e) {
     let { sound: t, trigger: n } = e;
-    if (!j()) return;
+    if (!R()) return;
     let r = t.soundId.toString();
-    n === h.Zm.SOUNDBOARD && R(r);
+    n === p.Zm.SOUNDBOARD && y(r);
 }
-
-function C(e) {
-    var t;
-    let { soundId: n, userId: r } = e;
-    if (!L()) return;
-    let i = n.toString();
-    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && w(i) && N(i);
+function I(e) {
+    let { soundId: t, userId: n } = e;
+    if (!N()) return;
+    let r = t.toString();
+    n !== d.default.getCurrentUser()?.id && S(r) && T(r);
 }
-
-function N(e) {
-    S.set(e, e);
+function T(e) {
+    g.set(e, e);
 }
-
-function R(e) {
-    I.track(e),
-        v.push({
-            key: e,
-            timestamp: Date.now(),
-        }),
-        I.compute();
+function y(e) {
+    E.track(e), m.push({ key: e, timestamp: Date.now() }), E.compute();
 }
-
-function w(e) {
-    for (let t of _.A.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
+function S(e) {
+    for (let t of f.A.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-
-function P(e) {
-    return a().mapValues(e, (e) =>
-        A(y({}, e), {
-            recentUses: e.recentUses.map(Number).filter((e) => e > 0),
-        }),
-    );
+function v(e) {
+    return i().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
 }
-
-function D() {
-    var e;
-    if (!j()) return;
-    let t = null == (e = d.A.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
-    I.overwriteHistory(P(null != t ? t : {}), v);
+function C() {
+    if (!R()) return;
+    let e = c.A.frecencyWithoutFetchingLatest.playedSoundFrecency?.playedSounds;
+    E.overwriteHistory(v(e ?? {}), m);
 }
-
-function x(e) {
+function b(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    j() && t === E.oD.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
+    R() && t === h.oD.FRECENCY_AND_FAVORITES_SETTINGS && n && (m = []);
 }
-
-function L() {
-    return (0, p._)({
-        location: "soundboard_event_store",
-        autoTrackExposure: !1,
-    }).canSeeRecentlyHeard;
+function N() {
+    return (0, _._)({ location: "soundboard_event_store", autoTrackExposure: !1 }).canSeeRecentlyHeard;
 }
-
-function j() {
-    return (0, m.YK)("soundboard_event_store");
+function R() {
+    return (0, _._)({ location: "soundboard_event_store", autoTrackExposure: !1 }).canSeeFrequentlyPlayed;
 }
-class M extends (r = l.Ay.PersistedStore) {
+class O extends o.Ay.PersistedStore {
+    static displayName = "SoundboardEventStore";
+    static persistKey = "SoundboardEventStore";
     initialize(e) {
-        this.waitFor(_.A, d.A, f.default),
-            (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache),
-            (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush),
-            this.syncWith([d.A], D);
+        this.waitFor(f.A, c.A, d.default),
+            e?.recentlyHeardCache != null && g.load(e.recentlyHeardCache),
+            e?.playedEventsPendingFlush != null && (m = e.playedEventsPendingFlush),
+            this.syncWith([c.A], C);
     }
     getState() {
-        return {
-            recentlyHeardCache: S.dump(),
-            playedEventsPendingFlush: v,
-        };
+        return { recentlyHeardCache: g.dump(), playedEventsPendingFlush: m };
     }
     hasPendingUsage() {
-        return v.length > 0;
+        return m.length > 0;
     }
     get playedSoundHistory() {
-        return I.usageHistory;
+        return E.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return S.values();
+        return g.values();
     }
     get frecentlyPlayedSounds() {
-        return I.frequently;
+        return E.frequently;
     }
 }
-b(M, "displayName", "SoundboardEventStore"), b(M, "persistKey", "SoundboardEventStore");
-let k = new M(c.h, {
-    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: T,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
-    USER_SETTINGS_PROTO_UPDATE: x,
+let D = new O(l.h, {
+    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: I,
+    USER_SETTINGS_PROTO_UPDATE: b,
 });

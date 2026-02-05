@@ -1,5 +1,4 @@
 var r = n(105953).RBTree;
-
 function i(e, t, n) {
     (this.discrete = !1 === e),
         (this.delta = e || 0.01),
@@ -9,20 +8,16 @@ function i(e, t, n) {
         (this.nreset = 0),
         this.reset();
 }
-
 function a(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
-
 function s(e, t) {
     return e.mean_cumn - t.mean_cumn;
 }
-
 function o(e) {
     var t = Math.floor(Math.random() * e.length);
     return e.splice(t, 1)[0];
 }
-
 function l(e) {
     (this.config = e || {}),
         (this.mode = this.config.mode || "auto"),
@@ -46,10 +41,7 @@ function l(e) {
                       t.push(e);
                   }))
                 : this.centroids.each(function (e) {
-                      t.push({
-                          mean: e.mean,
-                          n: e.n,
-                      });
+                      t.push({ mean: e.mean, n: e.n });
                   }),
             t
         );
@@ -84,20 +76,14 @@ function l(e) {
     }),
     (i.prototype.find_nearest = function (e) {
         if (0 === this.size()) return null;
-        var t = this.centroids.lowerBound({
-                mean: e,
-            }),
+        var t = this.centroids.lowerBound({ mean: e }),
             n = null === t.data() ? t.prev() : t.data();
         if (n.mean === e || this.discrete) return n;
         var r = t.prev();
         return r && Math.abs(r.mean - e) < Math.abs(n.mean - e) ? r : n;
     }),
     (i.prototype._new_centroid = function (e, t, n) {
-        var r = {
-            mean: e,
-            n: t,
-            cumn: n,
-        };
+        var r = { mean: e, n: t, cumn: n };
         return this.centroids.insert(r), (this.n += t), r;
     }),
     (i.prototype._addweight = function (e, t, n) {
@@ -124,9 +110,7 @@ function l(e) {
         this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
     }),
     (i.prototype.bound_mean = function (e) {
-        var t = this.centroids.upperBound({
-                mean: e,
-            }),
+        var t = this.centroids.upperBound({ mean: e }),
             n = t.prev(),
             r = n.mean === e ? n : t.next();
         return [n, r];
@@ -150,9 +134,7 @@ function l(e) {
     }),
     (i.prototype.bound_mean_cumn = function (e) {
         this.centroids._comparator = s;
-        var t = this.centroids.upperBound({
-            mean_cumn: e,
-        });
+        var t = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = a;
         var n = t.prev(),
             r = n && n.mean_cumn === e ? n : t.next();
@@ -205,7 +187,4 @@ function l(e) {
             ((this.mode = "cont"), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0)
         );
     }),
-    (e.exports = {
-        TDigest: i,
-        Digest: l,
-    });
+    (e.exports = { TDigest: i, Digest: l });

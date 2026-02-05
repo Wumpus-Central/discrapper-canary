@@ -1,240 +1,129 @@
-n.d(t, {
-    Gs: () => h,
-    N3: () => p,
-    eE: () => m,
-}),
-    n(896048);
+n.d(t, { Gs: () => m, N3: () => u, eE: () => c });
 var a = n(627968),
-    l = n(64700),
-    r = n(934551),
-    i = n(397927),
-    s = n(993401),
+    s = n(64700),
+    i = n(934551),
+    l = n(397927),
+    r = n(993401),
     o = n(985018),
-    c = n(423648);
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function m(e) {
+    d = n(423648);
+function c(e) {
     return (0, a.jsx)("div", {
-        className: c.wE,
-        children: (0, a.jsx)(
-            i.W1t,
-            d(
-                {
-                    "data-menu-migrated": !0,
-                    variant: "fixed",
-                    hideScroller: !0,
-                    onSelect: void 0,
-                },
-                e,
-            ),
-        ),
+        className: d.wE,
+        children: (0, a.jsx)(l.W1t, {
+            "data-menu-migrated": !0,
+            variant: "fixed",
+            hideScroller: !0,
+            onSelect: void 0,
+            ...e,
+        }),
     });
 }
-
-function p(e) {
-    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: g, ref: f } = e,
-        b = null != n,
-        v = (0, s.rE)({
-            action: t,
-            onClick: n,
-        }),
-        [j, _] = l.useState(!1),
-        y = l.useRef(null),
-        A = null != f ? f : y,
-        C = null != g,
-        S = C && b,
-        O = {
-            offset: {
-                top: -8,
-                left: -8,
-                right: -8,
-                bottom: -8,
-            },
-        },
-        T = l.useCallback(() => {
-            _(!0);
+function u(e) {
+    let { action: t, onClick: n, icon: c, label: u, sublabel: m, trailing: h, renderSubmenu: x, ref: p } = e,
+        g = null != n,
+        _ = (0, r.rE)({ action: t, onClick: n }),
+        [f, v] = s.useState(!1),
+        b = s.useRef(null),
+        j = p ?? b,
+        A = null != x,
+        C = A && g,
+        S = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
+        T = s.useCallback(() => {
+            v(!0);
         }, []),
-        E = l.useCallback(() => {
-            _(!1);
+        y = s.useCallback(() => {
+            v(!1);
         }, []),
         N = () =>
             (0, a.jsxs)(a.Fragment, {
                 children: [
                     (0, a.jsx)("div", {
-                        className: c.iA,
-                        children: (0, a.jsx)(m, {
-                            size: "xs",
-                            color: "currentColor",
-                        }),
+                        className: d.iA,
+                        children: (0, a.jsx)(c, { size: "xs", color: "currentColor" }),
                     }),
                     (0, a.jsxs)("div", {
-                        className: c.$H,
+                        className: d.$H,
                         children: [
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
-                                        className: c.W1,
-                                        children: p,
+                                        className: d.W1,
+                                        children: u,
                                     }),
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         color: "currentColor",
                                         variant: "text-xs/medium",
-                                        children: h,
+                                        children: m,
                                     }),
                                 ],
                             }),
-                            x,
+                            h,
                         ],
                     }),
                 ],
             }),
-        w = (e) => {
+        E = (e) => {
             let t;
             return (
-                (t = S
+                (t = C
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, a.jsx)(i.DUT, {
-                                  className: c.ef,
-                                  onClick: v,
-                                  focusProps: {
-                                      offset: u(d({}, O.offset), {
-                                          right: 0,
-                                      }),
-                                  },
+                              (0, a.jsx)(l.DUT, {
+                                  className: d.ef,
+                                  onClick: _,
+                                  focusProps: { offset: { ...S.offset, right: 0 } },
                                   children: N(),
                               }),
-                              (0, a.jsx)(
-                                  i.DUT,
-                                  u(
-                                      d(
-                                          {
-                                              className: c.ap,
-                                              "aria-label": o.intl.string(o.t.PdRCRg),
-                                          },
-                                          e,
-                                      ),
-                                      {
-                                          onClick: T,
-                                          focusProps: O,
-                                          children: (0, a.jsx)(r.ChevronSmallRightIcon, {
-                                              size: "xs",
-                                              color: "currentColor",
-                                          }),
-                                      },
-                                  ),
-                              ),
+                              (0, a.jsx)(l.DUT, {
+                                  className: d.ap,
+                                  "aria-label": o.intl.string(o.t.PdRCRg),
+                                  ...e,
+                                  onClick: T,
+                                  focusProps: S,
+                                  children: (0, a.jsx)(i.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
+                              }),
                           ],
                       })
-                    : C
-                      ? (0, a.jsxs)(
-                            i.DUT,
-                            u(
-                                d(
-                                    {
-                                        className: c.ef,
-                                    },
-                                    e,
-                                ),
-                                {
-                                    onClick: T,
-                                    focusProps: O,
-                                    children: [
-                                        N(),
-                                        (0, a.jsx)("div", {
-                                            className: c.ap,
-                                            children: (0, a.jsx)(r.ChevronSmallRightIcon, {
-                                                size: "xs",
-                                                color: "currentColor",
-                                            }),
-                                        }),
-                                    ],
-                                },
-                            ),
-                        )
-                      : (0, a.jsx)(i.DUT, {
-                            className: c.ef,
-                            onClick: v,
-                            focusProps: O,
-                            children: N(),
-                        })),
-                (0, a.jsx)("div", {
-                    ref: A,
-                    className: c.jG,
-                    children: t,
-                })
+                    : A
+                      ? (0, a.jsxs)(l.DUT, {
+                            className: d.ef,
+                            ...e,
+                            onClick: T,
+                            focusProps: S,
+                            children: [
+                                N(),
+                                (0, a.jsx)("div", {
+                                    className: d.ap,
+                                    children: (0, a.jsx)(i.ChevronSmallRightIcon, {
+                                        size: "xs",
+                                        color: "currentColor",
+                                    }),
+                                }),
+                            ],
+                        })
+                      : (0, a.jsx)(l.DUT, { className: d.ef, onClick: _, focusProps: S, children: N() })),
+                (0, a.jsx)("div", { ref: j, className: d.jG, children: t })
             );
         };
-    return C
+    return A
         ? (0, a.jsx)("li", {
-              className: c.j$,
+              className: d.j$,
               onMouseEnter: T,
-              onMouseLeave: E,
-              children: (0, a.jsx)(i.YNO, {
-                  targetElementRef: A,
+              onMouseLeave: y,
+              children: (0, a.jsx)(l.YNO, {
+                  targetElementRef: j,
                   spacing: 0,
-                  renderPopout: g,
-                  shouldShow: j,
-                  onRequestClose: E,
-                  children: w,
+                  renderPopout: x,
+                  shouldShow: f,
+                  onRequestClose: y,
+                  children: E,
               }),
           })
-        : (0, a.jsx)("li", {
-              className: c.j$,
-              children: w(),
-          });
+        : (0, a.jsx)("li", { className: d.j$, children: E() });
 }
-
-function h(e) {
+function m(e) {
     let { children: t, "aria-label": n } = e;
-    return (0, a.jsx)("ul", {
-        "aria-label": n,
-        children: t,
-    });
+    return (0, a.jsx)("ul", { "aria-label": n, children: t });
 }

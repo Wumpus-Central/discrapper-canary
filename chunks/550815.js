@@ -1,3 +1,4 @@
+"use strict";
 var r = n(968613).PROPER,
     a = n(486816),
     o = n(564399),

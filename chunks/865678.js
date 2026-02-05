@@ -1,46 +1,42 @@
-n.d(t, {
-    A: () => eC,
-    w: () => ey,
-}),
-    n(938796),
-    n(667532);
+"use strict";
+n.d(t, { A: () => ej, w: () => ep }), n(938796), n(667532);
 var l = n(627968),
     i = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    a = n(989349),
-    o = n.n(a),
-    c = n(371444),
-    u = n(392421),
-    d = n(602137),
+    s = n(503698),
+    a = n.n(s),
+    r = n(989349),
+    o = n.n(r),
+    d = n(371444),
+    c = n(392421),
+    u = n(602137),
     h = n(665260),
     g = n(311907),
     m = n(36525),
-    p = n(582754),
-    f = n(397927),
-    b = n(435183),
-    x = n(534963),
-    j = n(820284),
-    A = n(213464),
-    y = n(432371),
-    v = n(323073),
-    O = n(47167),
-    C = n(355622),
-    N = n(408018),
-    S = n(133343),
-    E = n(235986),
-    _ = n(915089),
-    T = n(375499),
-    w = n(937773),
-    M = n(770335),
-    R = n(7584),
-    I = n(422844),
-    L = n(856220),
-    P = n(235640),
-    D = n(268761),
-    k = n(406704),
-    G = n(474078),
-    B = n(71397),
+    x = n(582754),
+    A = n(397927),
+    f = n(435183),
+    p = n(534963),
+    b = n(820284),
+    C = n(213464),
+    j = n(432371),
+    N = n(323073),
+    v = n(47167),
+    _ = n(355622),
+    E = n(408018),
+    y = n(133343),
+    S = n(235986),
+    T = n(915089),
+    M = n(375499),
+    R = n(937773),
+    I = n(770335),
+    L = n(7584),
+    w = n(422844),
+    O = n(856220),
+    G = n(235640),
+    k = n(268761),
+    D = n(406704),
+    B = n(474078),
+    P = n(71397),
     U = n(544028),
     V = n(95701),
     H = n(260509),
@@ -53,77 +49,24 @@ var l = n(627968),
     Q = n(147036),
     X = n(405269),
     q = n(927813),
-    K = n(975571),
-    $ = n(879631),
+    $ = n(975571),
+    K = n(879631),
     ee = n(532277),
     et = n(592739),
     en = n(436387),
     el = n(652215),
     ei = n(746080),
-    er = n(307731);
+    es = n(307731);
 n(253913);
-var es = n(37411),
-    ea = n(985018),
+var ea = n(37411),
+    er = n(985018),
     eo = n(935456),
-    ec = n(473169);
-
-function eu(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function ed(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                eu(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function eh(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let eg = (0, _.Ld)(),
-    em = (0, _.Ld)(),
-    ep = (0, _.Ld)(),
-    ef = (0, V.createChannelRecord)({
-        id: "1",
-        type: el.rbe.DM,
-    }),
-    eb = {
+    ed = n(473169);
+let ec = (0, T.Ld)(),
+    eu = (0, T.Ld)(),
+    eh = (0, T.Ld)(),
+    eg = (0, V.createChannelRecord)({ id: "1", type: el.rbe.DM }),
+    em = {
         popoutLocation: {
             page: el.liQ.CHANNEL_SETTINGS,
             section: el.JJy.CHANNEL_DEFAULT_REACTION,
@@ -137,18 +80,15 @@ let eg = (0, _.Ld)(),
             object: el.ZSU.EMOJI_PICKER_BUTTON,
         },
     },
-    ej = "AUTOMATIC_RTC_REGION",
-    eA = {
-        breakingChangeDate: (0, X.i$)(o()(el.X30), "LL"),
-        helpCenterLink: K.A.getArticleURL(el.MVz.SLOWMODE),
-    },
-    ey = g.Ay.connectStores([W.A], () => {
+    eA = "AUTOMATIC_RTC_REGION",
+    ef = { breakingChangeDate: (0, X.i$)(o()(el.X30), "LL"), helpCenterLink: $.A.getArticleURL(el.MVz.SLOWMODE) },
+    ep = g.Ay.connectStores([W.A], () => {
         let { channel: e, submitting: t } = W.A.getProps();
         return {
             channel: e,
             submitting: t,
             onReset() {
-                null != e && (0, b.Ts)(e.id);
+                null != e && (0, f.Ts)(e.id);
             },
             onSave() {
                 if (null == e) return;
@@ -157,261 +97,246 @@ let eg = (0, _.Ld)(),
                     type: n,
                     topic: l,
                     bitrate: i,
-                    userLimit: r,
-                    nsfw: s,
-                    flags: a,
+                    userLimit: s,
+                    nsfw: a,
+                    flags: r,
                     rateLimitPerUser: o,
-                    defaultThreadRateLimitPerUser: c,
-                    threadMetadata: u,
-                    defaultAutoArchiveDuration: d,
+                    defaultThreadRateLimitPerUser: d,
+                    threadMetadata: c,
+                    defaultAutoArchiveDuration: u,
                     template: h,
                     rtcRegion: g,
                     videoQualityMode: m,
-                    defaultReactionEmoji: p,
-                    availableTags: f,
-                    defaultSortOrder: x,
-                    defaultForumLayout: j,
-                    defaultTagSetting: A,
+                    defaultReactionEmoji: x,
+                    availableTags: A,
+                    defaultSortOrder: p,
+                    defaultForumLayout: b,
+                    defaultTagSetting: C,
                 } = e;
-                e.isThread() && (t = (0, G.A)(t, !0)),
-                    (0, b.RT)(e.id, {
+                e.isThread() && (t = (0, B.A)(t, !0)),
+                    (0, f.RT)(e.id, {
                         name: t,
                         type: n,
                         topic: l,
                         bitrate: i,
-                        userLimit: r,
-                        nsfw: s,
-                        flags: a,
+                        userLimit: s,
+                        nsfw: a,
+                        flags: r,
                         rateLimitPerUser: o,
-                        defaultThreadRateLimitPerUser: c,
-                        autoArchiveDuration: null == u ? void 0 : u.autoArchiveDuration,
-                        locked: null == u ? void 0 : u.locked,
-                        invitable: null == u ? void 0 : u.invitable,
-                        defaultAutoArchiveDuration: d,
+                        defaultThreadRateLimitPerUser: d,
+                        autoArchiveDuration: c?.autoArchiveDuration,
+                        locked: c?.locked,
+                        invitable: c?.invitable,
+                        defaultAutoArchiveDuration: u,
                         template: h,
                         rtcRegion: g,
                         videoQualityMode: m,
-                        defaultReactionEmoji: p,
-                        availableTags: f,
-                        defaultSortOrder: x,
-                        defaultForumLayout: j,
-                        defaultTagSetting: A,
+                        defaultReactionEmoji: x,
+                        availableTags: A,
+                        defaultSortOrder: p,
+                        defaultForumLayout: b,
+                        defaultTagSetting: C,
                     });
             },
         };
     })(m.A);
-
-function ev(e) {
-    let { onEmojiPicked: t, channel: n, guildId: r } = e,
-        s = i.useRef(null),
-        a = i.useCallback(
+function eb(e) {
+    let { onEmojiPicked: t, channel: n, guildId: s } = e,
+        a = i.useRef(null),
+        r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(w.A, {
+                return (0, l.jsx)(R.A, {
                     channel: n,
-                    guildId: r,
-                    pickerIntention: er.b_.CHANNEL_NAME,
+                    guildId: s,
+                    pickerIntention: es.b_.CHANNEL_NAME,
                     closePopout: i,
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: l } = e;
-                        null != n && n.type === M.i.UNICODE && t(n.surrogates), l && i();
+                        null != n && n.type === I.i.UNICODE && t(n.surrogates), l && i();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: ex,
                 });
             },
-            [n, r, t],
+            [n, s, t],
         );
-    return (0, l.jsx)(f.YNO, {
-        targetElementRef: s,
-        renderPopout: a,
-        animation: f.YNO.Animation.NONE,
+    return (0, l.jsx)(A.YNO, {
+        targetElementRef: a,
+        renderPopout: r,
+        animation: A.YNO.Animation.NONE,
         position: "bottom",
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, l.jsx)(
-                T.A,
-                eh(ed({}, e), {
-                    ref: s,
-                    active: n,
-                    className: eo.Z8,
-                    tabIndex: 0,
-                    focusProps: {
-                        offset: {
-                            top: 10,
-                            bottom: 10,
-                            left: -4,
-                            right: 10,
-                        },
-                    },
-                }),
-            );
+            return (0, l.jsx)(M.A, {
+                ...e,
+                ref: a,
+                active: n,
+                className: eo.Z8,
+                tabIndex: 0,
+                focusProps: { offset: { top: 10, bottom: 10, left: -4, right: 10 } },
+            });
         },
     });
 }
-class eO extends i.PureComponent {
+class eC extends i.PureComponent {
+    defaultReactionButtonRef = i.createRef();
+    nameInputRef = i.createRef();
+    cursorPosition = 0;
+    constructor(e) {
+        super(e);
+        const t = this.props.channel?.topic ?? "";
+        this.state = {
+            textTopicValue: t,
+            richTopicValue: (0, E.x7)(t),
+            topicFocused: !1,
+            updateNameInputCursorPosition: !1,
+        };
+    }
     componentDidMount() {
-        null == this.props.regions && null != this.props.guild && x.A.fetchRegions(this.props.guild.id);
+        null == this.props.regions && null != this.props.guild && p.A.fetchRegions(this.props.guild.id);
     }
     componentDidUpdate(e) {
-        var t, n, l, i;
-        let r = null != (t = null == (l = this.props.channel) ? void 0 : l.topic) ? t : "";
-        (null != (n = null == (i = e.channel) ? void 0 : i.topic) ? n : "") !== r &&
-            r !== this.state.textTopicValue &&
-            this.setState({
-                textTopicValue: r,
-                richTopicValue: (0, N.x7)(r),
-            });
+        let t = this.props.channel?.topic ?? "";
+        (e.channel?.topic ?? "") !== t &&
+            t !== this.state.textTopicValue &&
+            this.setState({ textTopicValue: t, richTopicValue: (0, E.x7)(t) });
     }
     getError(e) {
         let { errors: t } = this.props;
-        return null == t ? void 0 : t[e];
+        return t?.[e];
     }
     getSlowmodeHelpText() {
         let { channel: e } = this.props;
-        return (null == e ? void 0 : e.isForumLikeChannel())
-            ? ea.intl.format(ea.t.EIQq9v, eA)
-            : (null == e ? void 0 : e.isThread())
-              ? ea.intl.format(ea.t["8sTC8t"], eA)
-              : ea.intl.format(ea.t.wW2MWu, eA);
+        return e?.isForumLikeChannel()
+            ? er.intl.format(er.t.EIQq9v, ef)
+            : e?.isThread()
+              ? er.intl.format(er.t["8sTC8t"], ef)
+              : er.intl.format(er.t.wW2MWu, ef);
     }
     getCooldownSliderMarker(e) {
-        return (0, $.$)(e, !0);
+        return (0, K.$)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, $.$)(e * q.A.Seconds.MINUTE, !0);
+        return (0, K.$)(e * q.A.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
-        var n, i, r, a, o, h;
-        let g,
-            m,
+        let n,
+            i,
             {
-                canManageChannels: p,
-                canSendMessages: b,
-                isThreadModerator: x,
-                canManageThread: A,
-                guild: y,
-                isForumPost: O,
-                isOwner: N,
-                showAdvancedSlowModeSetting: E,
+                canManageChannels: s,
+                canSendMessages: r,
+                isThreadModerator: o,
+                canManageThread: h,
+                guild: g,
+                isForumPost: m,
+                isOwner: x,
+                showAdvancedSlowModeSetting: f,
             } = this.props,
-            _ = V.Le.has(e.type),
-            T = e.isForumLikeChannel(),
-            w = T && (null == (o = e.availableTags) ? void 0 : o.every((e) => e.moderated)),
-            M = (null == (h = z.default.getCurrentUser()) ? void 0 : h.isStaff()) === !0,
-            I = V.IY.has(e.type)
-                ? (0, l.jsx)(f.D0$, {
-                      label: T ? ea.intl.string(ea.t.yR6HwZ) : ea.intl.string(ea.t.X8jMDh),
-                      children: (0, l.jsx)(S.Ay, {
-                          className: s()(eo.zm, {
-                              [eo.r9]: !p,
-                          }),
-                          innerClassName: s()(eo.At, {
-                              [eo.r9]: !p,
-                          }),
+            p = V.Le.has(e.type),
+            C = e.isForumLikeChannel(),
+            j = C && e.availableTags?.every((e) => e.moderated),
+            v = z.default.getCurrentUser()?.isStaff() === !0,
+            E = V.IY.has(e.type)
+                ? (0, l.jsx)(A.D0$, {
+                      label: C ? er.intl.string(er.t.yR6HwZ) : er.intl.string(er.t.X8jMDh),
+                      children: (0, l.jsx)(y.Ay, {
+                          className: a()(eo.zm, { [eo.r9]: !s }),
+                          innerClassName: a()(eo.At, { [eo.r9]: !s }),
                           characterCountClassName: eo.IQ,
-                          maxCharacterCount: T ? ei.U9 : ei.s4,
+                          maxCharacterCount: C ? 4096 : 1024,
                           onChange: this.handleChangeRichTopic,
-                          placeholder: ea.intl.string(ea.t["71fbmh"]),
-                          channel: ef,
+                          placeholder: er.intl.string(er.t["71fbmh"]),
+                          channel: eg,
                           textValue: this.state.textTopicValue,
                           richValue: this.state.richTopicValue,
-                          type: T ? C.oU.FORUM_CHANNEL_GUIDELINES : C.oU.CHANNEL_TOPIC,
+                          type: C ? _.oU.FORUM_CHANNEL_GUIDELINES : _.oU.CHANNEL_TOPIC,
                           onFocus: () => {
-                              this.setState({
-                                  topicFocused: !0,
-                              });
+                              this.setState({ topicFocused: !0 });
                           },
                           onBlur: () => {
-                              this.setState({
-                                  topicFocused: !1,
-                              });
+                              this.setState({ topicFocused: !1 });
                           },
                           focused: this.state.topicFocused,
                           onSubmit: this.handleSubmit,
                           disableThemedBackground: !0,
                           error: this.getError("topic"),
-                          disabled: !p,
+                          disabled: !s,
                           showValueWhenDisabled: !0,
                       }),
                   })
                 : null,
-            k =
-                T && M
-                    ? (0, l.jsx)(f.fs1, {
-                          label: ea.intl.string(ea.t.qk2jdY),
-                          placeholder: ea.intl.string(ea.t.DDjD1H),
-                          value: R.Ay.translateSurrogatesToInlineEmoji(null != (n = e.template) ? n : ""),
+            S =
+                C && v
+                    ? (0, l.jsx)(A.fs1, {
+                          label: er.intl.string(er.t.qk2jdY),
+                          placeholder: er.intl.string(er.t.DDjD1H),
+                          value: L.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
                           onChange: this.handleChangeTemplate,
                           error: this.getError("template"),
                           maxLength: 256,
-                          disabled: !p,
+                          disabled: !s,
                           autosize: !0,
                           showCharacterCount: !0,
                       })
                     : null,
-            G = e.isForumLikeChannel()
+            T = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(f.cGx, {}),
-                          (0, l.jsx)(f.D0$, {
-                              label: ea.intl.string(ea.t["P/y+sj"]),
-                              description: ea.intl.string(ea.t["/oQQ3y"]),
+                          (0, l.jsx)(A.cGx, {}),
+                          (0, l.jsx)(A.D0$, {
+                              label: er.intl.string(er.t["P/y+sj"]),
+                              description: er.intl.string(er.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              id: eg,
-                              children: (0, l.jsx)(L.A, {
-                                  channel: e,
-                              }),
+                              id: ec,
+                              children: (0, l.jsx)(O.A, { channel: e }),
                           }),
-                          (0, l.jsx)(f.Checkbox, {
-                              disabled: !p || w,
+                          (0, l.jsx)(A.Checkbox, {
+                              disabled: !s || j,
                               checked: e.hasFlag(ei.lx.REQUIRE_TAG),
                               onChange: (e) => this.handleRequireTagChanged(e),
-                              label: ea.intl.string(ea.t["9g2Zyv"]),
+                              label: er.intl.string(er.t["9g2Zyv"]),
                           }),
                       ],
                   })
                 : null,
-            U = e.isForumLikeChannel()
+            M = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(f.cGx, {}),
-                          (0, l.jsx)(f.D0$, {
-                              label: ea.intl.string(ea.t["8ao1+E"]),
-                              description: ea.intl.string(ea.t.SdbF0q),
+                          (0, l.jsx)(A.cGx, {}),
+                          (0, l.jsx)(A.D0$, {
+                              label: er.intl.string(er.t["8ao1+E"]),
+                              description: er.intl.string(er.t.SdbF0q),
                               children: (0, l.jsxs)("div", {
                                   className: eo.OZ,
                                   children: [
                                       (0, l.jsx)("div", {
-                                          className: s()(eo.t0, eo._h),
-                                          children: (0, l.jsxs)(f.ButtonGroup, {
+                                          className: a()(eo.t0, eo._h),
+                                          children: (0, l.jsxs)(A.ButtonGroup, {
                                               align: "center",
                                               children: [
-                                                  (0, l.jsx)(f.YNO, {
+                                                  (0, l.jsx)(A.YNO, {
                                                       targetElementRef: this.defaultReactionButtonRef,
                                                       renderPopout: this.renderEmojiPicker,
                                                       position: "right",
-                                                      animation: f.YNO.Animation.NONE,
+                                                      animation: A.YNO.Animation.NONE,
                                                       align: "center",
                                                       children: (e) =>
-                                                          (0, l.jsx)(
-                                                              f.Button,
-                                                              eh(ed({}, e), {
-                                                                  buttonRef: this.defaultReactionButtonRef,
-                                                                  text: ea.intl.string(ea.t["59QgaD"]),
-                                                                  disabled: !p,
-                                                                  onClick: (t) => {
-                                                                      var n;
-                                                                      null == (n = e.onClick) || n.call(e, t);
-                                                                  },
-                                                              }),
-                                                          ),
+                                                          (0, l.jsx)(A.Button, {
+                                                              ...e,
+                                                              buttonRef: this.defaultReactionButtonRef,
+                                                              text: er.intl.string(er.t["59QgaD"]),
+                                                              disabled: !s,
+                                                              onClick: (t) => {
+                                                                  e.onClick?.(t);
+                                                              },
+                                                          }),
                                                   }),
                                                   null != e.defaultReactionEmoji
-                                                      ? (0, l.jsx)(f.QWc, {
-                                                            text: ea.intl.string(ea.t.N86XcP),
+                                                      ? (0, l.jsx)(A.QWc, {
+                                                            text: er.intl.string(er.t.N86XcP),
                                                             onClick: () => this.handleChangeDefaultReactionEmoji(null),
                                                             variant: "critical",
                                                         })
@@ -419,325 +344,283 @@ class eO extends i.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, l.jsx)(P.A, {
-                                          reactionEmoji: e.defaultReactionEmoji,
-                                      }),
+                                      (0, l.jsx)(G.A, { reactionEmoji: e.defaultReactionEmoji }),
                                   ],
                               }),
                           }),
                       ],
                   })
                 : null,
-            F = e.isForumChannel()
+            R = e.isForumChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(f.cGx, {}),
+                          (0, l.jsx)(A.cGx, {}),
                           (0, l.jsxs)("div", {
                               className: eo.OZ,
                               children: [
                                   (0, l.jsx)("div", {
-                                      className: s()(eo.t0, eo.WC),
-                                      children: (0, l.jsx)(f.l6P, {
+                                      className: a()(eo.t0, eo.WC),
+                                      children: (0, l.jsx)(A.l6P, {
                                           selectionMode: "single",
-                                          label: ea.intl.string(ea.t["kQvoC/"]),
-                                          description: ea.intl.string(ea.t.mOSViT),
+                                          label: er.intl.string(er.t["kQvoC/"]),
+                                          description: er.intl.string(er.t.mOSViT),
                                           options: [
-                                              {
-                                                  id: "list",
-                                                  label: ea.intl.string(ea.t["4HXEZG"]),
-                                                  value: c.C.LIST,
-                                              },
-                                              {
-                                                  id: "grid",
-                                                  label: ea.intl.string(ea.t["8RswJG"]),
-                                                  value: c.C.GRID,
-                                              },
+                                              { id: "list", label: er.intl.string(er.t["4HXEZG"]), value: d.C.LIST },
+                                              { id: "grid", label: er.intl.string(er.t["8RswJG"]), value: d.C.GRID },
                                           ],
-                                          value: null != (i = e.defaultForumLayout) ? i : c.C.LIST,
+                                          value: e.defaultForumLayout ?? d.C.LIST,
                                           onSelectionChange: this.handleChangeDefaultForumLayout,
                                       }),
                                   }),
-                                  e.defaultForumLayout === c.C.GRID
-                                      ? (0, l.jsx)(et.A, {
-                                            className: eo.Kf,
-                                        })
-                                      : (0, l.jsx)(en.A, {
-                                            className: eo.Kf,
-                                        }),
+                                  e.defaultForumLayout === d.C.GRID
+                                      ? (0, l.jsx)(et.A, { className: eo.Kf })
+                                      : (0, l.jsx)(en.A, { className: eo.Kf }),
                               ],
                           }),
-                          (0, l.jsx)(f.cGx, {}),
+                          (0, l.jsx)(A.cGx, {}),
                       ],
                   })
                 : null,
-            W = e.isForumLikeChannel()
-                ? (0, l.jsx)(f.l6P, {
+            I = e.isForumLikeChannel()
+                ? (0, l.jsx)(A.l6P, {
                       selectionMode: "single",
-                      label: ea.intl.string(ea.t.gePre2),
-                      description: ea.intl.string(ea.t["165cVX"]),
+                      label: er.intl.string(er.t.gePre2),
+                      description: er.intl.string(er.t["165cVX"]),
                       options: [
-                          {
-                              id: "activity",
-                              label: ea.intl.string(ea.t.ElZtzj),
-                              value: d.T.LATEST_ACTIVITY,
-                          },
-                          {
-                              id: "creation",
-                              label: ea.intl.string(ea.t.w28f3F),
-                              value: d.T.CREATION_DATE,
-                          },
+                          { id: "activity", label: er.intl.string(er.t.ElZtzj), value: u.T.LATEST_ACTIVITY },
+                          { id: "creation", label: er.intl.string(er.t.w28f3F), value: u.T.CREATION_DATE },
                       ],
                       value: e.getDefaultSortOrder(),
                       onSelectionChange: this.handleChangeDefaultSortOrder,
                   })
                 : null,
-            Y = e.isForumLikeChannel()
-                ? (0, l.jsx)(f.l6P, {
+            w = e.isForumLikeChannel()
+                ? (0, l.jsx)(A.l6P, {
                       selectionMode: "single",
-                      label: ea.intl.string(ea.t.Paxaug),
-                      description: ea.intl.string(ea.t.DqOl8J),
+                      label: er.intl.string(er.t.Paxaug),
+                      description: er.intl.string(er.t.DqOl8J),
                       options: [
-                          {
-                              id: "some",
-                              label: ea.intl.string(ea.t.rQ0ctQ),
-                              value: u.n.MATCH_SOME,
-                          },
-                          {
-                              id: "all",
-                              label: ea.intl.string(ea.t.FCXUu0),
-                              value: u.n.MATCH_ALL,
-                          },
+                          { id: "some", label: er.intl.string(er.t.rQ0ctQ), value: c.n.MATCH_SOME },
+                          { id: "all", label: er.intl.string(er.t.FCXUu0), value: c.n.MATCH_ALL },
                       ],
                       value: e.getDefaultTagSetting(),
                       onSelectionChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
-            Z = _ ? x : p,
-            J =
-                !0 === E
+            D = p ? o : s,
+            B =
+                !0 === f
                     ? (0, l.jsx)(ee.A, {
-                          label: ea.intl.string(ea.t.tTHx98),
+                          label: er.intl.string(er.t.tTHx98),
                           helperText: this.getSlowmodeHelpText(),
                           channel: e,
                           onChange: this.handleChangeSlowmode,
                       })
-                    : (0, l.jsx)(f.Apm, {
-                          label: ea.intl.string(ea.t.tTHx98),
+                    : (0, l.jsx)(A.Apm, {
+                          label: er.intl.string(er.t.tTHx98),
                           helperText: this.getSlowmodeHelpText(),
                           initialValue: e.rateLimitPerUser,
                           markers: el.s_7,
                           stickToMarkers: !0,
                           onValueChange: this.handleChangeSlowmode,
                           onMarkerRender: this.getCooldownSliderMarker,
-                          disabled: !Z,
+                          disabled: !D,
                           equidistant: !0,
-                          "aria-labelledby": em,
-                          "aria-describedby": ep,
+                          "aria-labelledby": eu,
+                          "aria-describedby": eh,
                       }),
-            Q = V.nb.has(e.type)
-                ? T
+            U = V.nb.has(e.type)
+                ? C
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(f.cGx, {}),
-                              (0, l.jsxs)(f.nVY, {
-                                  label: ea.intl.string(ea.t.O1c02q),
+                              (0, l.jsx)(A.cGx, {}),
+                              (0, l.jsxs)(A.nVY, {
+                                  label: er.intl.string(er.t.O1c02q),
                                   children: [
-                                      J,
-                                      (0, l.jsx)(f.Apm, {
-                                          label: ea.intl.string(ea.t["fkY5+l"]),
-                                          helperText: ea.intl.format(ea.t.nZSuEj, eA),
-                                          initialValue: null != (r = e.defaultThreadRateLimitPerUser) ? r : 0,
+                                      B,
+                                      (0, l.jsx)(A.Apm, {
+                                          label: er.intl.string(er.t["fkY5+l"]),
+                                          helperText: er.intl.format(er.t.nZSuEj, ef),
+                                          initialValue: e.defaultThreadRateLimitPerUser ?? 0,
                                           markers: el.s_7,
                                           stickToMarkers: !0,
                                           onValueChange: this.handleChangeThreadMessageSlowmode,
                                           onMarkerRender: this.getCooldownSliderMarker,
-                                          disabled: !Z,
+                                          disabled: !D,
                                           equidistant: !0,
-                                          "aria-labelledby": em,
-                                          "aria-describedby": ep,
+                                          "aria-labelledby": eu,
+                                          "aria-describedby": eh,
                                       }),
                                   ],
                               }),
-                              (0, l.jsx)(f.cGx, {}),
+                              (0, l.jsx)(A.cGx, {}),
                           ],
                       })
-                    : J
+                    : B
                 : null,
-            X =
-                _ && null != e.threadMetadata
-                    ? (0, l.jsx)(j.A, {
+            F =
+                p && null != e.threadMetadata
+                    ? (0, l.jsx)(b.A, {
                           page: el.liQ.CHANNEL_SETTINGS,
-                          children: (0, l.jsx)(B.A, {
-                              isDisabled: !A,
-                              autoArchiveDuration: null != (a = e.threadMetadata.autoArchiveDuration) ? a : es.cM,
+                          children: (0, l.jsx)(P.A, {
+                              isDisabled: !h,
+                              autoArchiveDuration: e.threadMetadata.autoArchiveDuration ?? ea.cM,
                               onChange: this.handleAutoArchiveDurationChanged,
-                              helperText: O ? ea.intl.string(ea.t["3aJN9M"]) : ea.intl.string(ea.t.YUXr4Z),
+                              helperText: m ? er.intl.string(er.t["3aJN9M"]) : er.intl.string(er.t.YUXr4Z),
                           }),
                       })
                     : null,
-            q =
+            W =
                 e.type === el.rbe.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, l.jsx)("div", {
-                          children: (0, l.jsx)(f.dOG, {
-                              label: ea.intl.string(ea.t.s2rpNf),
-                              description: ea.intl.string(ea.t.cSyXJk),
+                          children: (0, l.jsx)(A.dOG, {
+                              label: er.intl.string(er.t.s2rpNf),
+                              description: er.intl.string(er.t.cSyXJk),
                               checked: e.threadMetadata.invitable,
                               onChange: this.handleInvitableChanged,
-                              disabled: !A,
+                              disabled: !h,
                           }),
                       })
                     : null,
-            $ = null != y && (0, H.wh)(y),
-            er = V.LE.has(e.type)
+            Y = null != g && (0, H.wh)(g),
+            Z = V.LE.has(e.type)
                 ? (0, l.jsxs)("div", {
                       children: [
-                          (0, l.jsx)(f.dOG, {
-                              label: ea.intl.string(ea.t.Es25Yf),
-                              description: ea.intl.string(ea.t["9eUgwR"]),
+                          (0, l.jsx)(A.dOG, {
+                              label: er.intl.string(er.t.Es25Yf),
+                              description: er.intl.string(er.t["9eUgwR"]),
                               onChange: this.handleNSFWChange,
-                              checked: (0, v.Gc)(e),
-                              disabled: !p || null != e.linkedLobby || $,
+                              checked: (0, N.Gc)(e),
+                              disabled: !s || null != e.linkedLobby || Y,
                           }),
                           null != e.linkedLobby
-                              ? (0, l.jsx)(f.po8, {
-                                    messageType: f.YCn.WARNING,
-                                    children: ea.intl.string(ea.t.l6uSVa),
-                                })
+                              ? (0, l.jsx)(A.po8, { messageType: A.YCn.WARNING, children: er.intl.string(er.t.l6uSVa) })
                               : null,
                       ],
                   })
                 : null,
-            ec =
+            J =
                 V.xR.has(e.type) &&
-                null != y &&
-                y.features.has(el.GuildFeatures.NEWS) &&
-                e.id !== (null == y ? void 0 : y.rulesChannelId) &&
-                e.id !== (null == y ? void 0 : y.publicUpdatesChannelId)
-                    ? (0, l.jsxs)(f.BJc, {
+                null != g &&
+                g.features.has(el.GuildFeatures.NEWS) &&
+                e.id !== g?.rulesChannelId &&
+                e.id !== g?.publicUpdatesChannelId
+                    ? (0, l.jsxs)(A.BJc, {
                           gap: 4,
                           children: [
-                              (0, l.jsx)(f.dOG, {
-                                  label: ea.intl.string(ea.t.Au2b7m),
-                                  description: ea.intl.format(ea.t.tI7KNX, {
-                                      documentationLink: K.A.getArticleURL(el.MVz.ANNOUNCEMENT_CHANNELS),
+                              (0, l.jsx)(A.dOG, {
+                                  label: er.intl.string(er.t.Au2b7m),
+                                  description: er.intl.format(er.t.tI7KNX, {
+                                      documentationLink: $.A.getArticleURL(el.MVz.ANNOUNCEMENT_CHANNELS),
                                   }),
                                   onChange: this.handleNewsChange,
                                   checked: e.type === el.rbe.GUILD_ANNOUNCEMENT,
-                                  disabled: !p,
+                                  disabled: !s,
                               }),
-                              (0, l.jsx)(f.po8, {
-                                  messageType: f.YCn.INFO,
-                                  children: ea.intl.string(ea.t["2Ab4Id"]),
-                              }),
+                              (0, l.jsx)(A.po8, { messageType: A.YCn.INFO, children: er.intl.string(er.t["2Ab4Id"]) }),
                           ],
                       })
                     : null,
-            eu = V.wE.has(e.type)
-                ? (0, l.jsx)(j.A, {
+            Q = V.wE.has(e.type)
+                ? (0, l.jsx)(b.A, {
                       page: el.liQ.CHANNEL_SETTINGS,
-                      children: (0, l.jsx)(B.A, {
-                          isDisabled: !p,
-                          autoArchiveDuration: (0, D.Gl)(e, null),
+                      children: (0, l.jsx)(P.A, {
+                          isDisabled: !s,
+                          autoArchiveDuration: (0, k.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
-                              ? ea.intl.string(ea.t.fyXclY)
-                              : ea.intl.string(ea.t.W3Noi9),
+                              ? er.intl.string(er.t.fyXclY)
+                              : er.intl.string(er.t.W3Noi9),
                       }),
                   })
                 : null,
-            eb = this.props.showChannelSummariesSettings
-                ? (0, l.jsx)(f.dOG, {
-                      label: ea.intl.string(ea.t.id3ozj),
-                      description: ea.intl.format(ea.t.feJW1z, {
-                          helpdeskArticle: K.A.getArticleURL(el.MVz.CONVERSATION_SUMMARIES),
+            X = this.props.showChannelSummariesSettings
+                ? (0, l.jsx)(A.dOG, {
+                      label: er.intl.string(er.t.id3ozj),
+                      description: er.intl.format(er.t.feJW1z, {
+                          helpdeskArticle: $.A.getArticleURL(el.MVz.CONVERSATION_SUMMARIES),
                       }),
                       badge: "beta",
                       onChange: this.handleChannelSummariesToggled,
                       checked:
                           !e.hasFlag(ei.lx.SUMMARIES_DISABLED) &&
-                          (null == y ? void 0 : y.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
-                      disabled:
-                          !p || !(null == y ? void 0 : y.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
+                          g?.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
+                      disabled: !s || !g?.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
                   })
                 : null,
-            ex = e.isMediaChannel()
-                ? (0, l.jsx)(f.dOG, {
-                      label: ea.intl.string(ea.t.u8LZOt),
-                      description: ea.intl.string(ea.t.J4wCc7),
+            q = e.isMediaChannel()
+                ? (0, l.jsx)(A.dOG, {
+                      label: er.intl.string(er.t.u8LZOt),
+                      description: er.intl.string(er.t.J4wCc7),
                       checked: !e.hasFlag(ei.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS),
                       onChange: this.handleShowMediaOptionsToggled,
-                      disabled: !p,
+                      disabled: !s,
                   })
                 : null;
         e.type === el.rbe.GUILD_CATEGORY
-            ? ((m = ea.intl.string(ea.t.OCAkGP)), (g = "category-name"))
+            ? ((i = er.intl.string(er.t.OCAkGP)), (n = "category-name"))
             : e.isForumPost()
-              ? ((m = ea.intl.string(ea.t.uyVrTN)), (g = "post-title"))
-              : _
-                ? ((m = ea.intl.string(ea.t.j3XWjD)), (g = "thread-name"))
-                : ((m = ea.intl.string(ea.t.PVbHDl)), (g = "channel-name"));
-        let ej = N ? b : p;
-        return (0, l.jsxs)(f.BJc, {
+              ? ((i = er.intl.string(er.t.uyVrTN)), (n = "post-title"))
+              : p
+                ? ((i = er.intl.string(er.t.j3XWjD)), (n = "thread-name"))
+                : ((i = er.intl.string(er.t.PVbHDl)), (n = "channel-name"));
+        let K = x ? r : s;
+        return (0, l.jsxs)(A.BJc, {
             gap: 24,
             children: [
-                (0, l.jsx)(f.ksK, {
-                    label: m,
+                (0, l.jsx)(A.ksK, {
+                    label: i,
                     fullWidth: !0,
                     inputRef: this.nameInputRef,
                     value: t,
                     onChange: this.handleChangeName,
                     onBlur: this.handleBlurName,
                     error: this.getError("name"),
-                    name: g,
+                    name: n,
                     autoFocus: !0,
-                    disabled: !ej,
+                    disabled: !K,
                     maxLength: el.Ign,
-                    trailing: ej
+                    trailing: K
                         ? {
                               type: "emoji",
-                              button: (0, l.jsx)(ev, {
+                              button: (0, l.jsx)(eb, {
                                   onEmojiPicked: this.insertEmojiAtPosition,
                                   channel: e,
-                                  guildId: null == e ? void 0 : e.guild_id,
+                                  guildId: e?.guild_id,
                               }),
                           }
                         : void 0,
                 }),
-                I,
-                k,
-                G,
+                E,
+                S,
+                T,
+                M,
                 U,
-                Q,
-                X,
                 F,
+                R,
+                I,
+                w,
                 W,
-                Y,
+                Z,
+                J,
+                X,
+                Q,
                 q,
-                er,
-                ec,
-                eb,
-                eu,
-                ex,
             ],
         });
     }
     renderBitrate(e) {
-        return "".concat(Math.round(e / 1e3), "kbps");
+        return `${Math.round(e / 1e3)}kbps`;
     }
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
         let i = (0, Q.Jz)(t, e),
-            r = this.getError("bitrate");
-        return (0, l.jsx)(f.Apm, {
-            label: ea.intl.string(ea.t.w2d0vU),
-            errorMessage: "" !== r ? r : void 0,
-            helperText:
-                i > el.gp3
-                    ? ea.intl.format(ea.t.SbQJk5, {
-                          bitrate: el.gp3 / 1e3,
-                      })
-                    : void 0,
+            s = this.getError("bitrate");
+        return (0, l.jsx)(A.Apm, {
+            label: er.intl.string(er.t.w2d0vU),
+            errorMessage: "" !== s ? s : void 0,
+            helperText: i > el.gp3 ? er.intl.format(er.t.SbQJk5, { bitrate: el.gp3 / 1e3 }) : void 0,
             initialValue: Math.min(e.bitrate, i),
             onValueChange: this.handleChangeBitrate,
             onValueRender: this.renderBitrate,
@@ -755,52 +638,39 @@ class eO extends i.PureComponent {
             null != e &&
             null != e.guild_id &&
             V.k.has(e.type) &&
-            (e.isGuildVocal() ||
-                k.io.getCurrentConfig({
-                    guildId: e.guild_id,
-                    location: "9b50bd_1",
-                }).enabled)
+            (e.isGuildVocal() || D.io.getCurrentConfig({ guildId: e.guild_id, location: "9b50bd_1" }).enabled)
         );
     }
     renderVideoQualityMode(e) {
-        var t;
-        let { canManageChannels: n } = this.props;
+        let { canManageChannels: t } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let i = [
-            {
-                value: el.K3c.AUTO,
-                name: ea.intl.string(ea.t.jjKYpu),
-            },
-            {
-                value: el.K3c.FULL,
-                name: ea.intl.string(ea.t["7jOoJE"]),
-            },
+        let n = [
+            { value: el.K3c.AUTO, name: er.intl.string(er.t.jjKYpu) },
+            { value: el.K3c.FULL, name: er.intl.string(er.t["7jOoJE"]) },
         ];
-        return (0, l.jsx)(f.z6M, {
-            label: ea.intl.string(ea.t.jhJEJs),
-            helperText: ea.intl.format(ea.t.c5W7Ss, {}),
+        return (0, l.jsx)(A.z6M, {
+            label: er.intl.string(er.t.jhJEJs),
+            helperText: er.intl.format(er.t.c5W7Ss, {}),
             onChange: (e) => this.handleVideoQualityModeChange(e),
-            options: i,
-            value: null != (t = e.videoQualityMode) ? t : el.K3c.AUTO,
-            disabled: !n,
+            options: n,
+            value: e.videoQualityMode ?? el.K3c.AUTO,
+            disabled: !t,
         });
     }
     onRenderUserLimit(e) {
         return 0 === (e = Math.round(e))
-            ? ea.intl.string(ea.t.XX5ciX)
-            : ea.intl.formatToPlainString(ea.t["3uHFUR"], {
-                  num: e,
-              });
+            ? er.intl.string(er.t.XX5ciX)
+            : er.intl.formatToPlainString(er.t["3uHFUR"], { num: e });
     }
     renderUserLimit(e) {
         let { canManageChannels: t } = this.props;
         if (!this.showVoiceSettings()) return null;
         let n = this.getError("user_limit"),
             i = e.isGuildStageVoice() ? el.RCc : el.cSc;
-        return (0, l.jsx)(f.Apm, {
-            label: ea.intl.string(ea.t["/AoSGN"]),
+        return (0, l.jsx)(A.Apm, {
+            label: er.intl.string(er.t["/AoSGN"]),
             errorMessage: "" !== n ? n : void 0,
-            helperText: ea.intl.format(e.isGuildStageVoice() ? ea.t.OqZI8D : ea.t["8yb3JT"], {}),
+            helperText: er.intl.format(e.isGuildStageVoice() ? er.t.OqZI8D : er.t["8yb3JT"], {}),
             initialValue: Math.min(e.userLimit, i),
             onValueChange: this.handleUserLimitChange,
             onValueRender: this.onRenderUserLimit,
@@ -812,31 +682,26 @@ class eO extends i.PureComponent {
         });
     }
     renderRegionOverride(e) {
-        var t;
-        let { regions: n, canManageChannels: i, guild: r } = this.props;
-        if (null == r || !this.showVoiceSettings() || e.isGuildStageVoice()) return null;
+        let { regions: t, canManageChannels: n, guild: i } = this.props;
+        if (null == i || !this.showVoiceSettings() || e.isGuildStageVoice()) return null;
         let s = [];
-        null != n &&
-            (s = n
+        null != t &&
+            (s = t
                 .filter((e) => !e.deprecated && !e.hidden)
-                .map((e) => ({
-                    id: e.id,
-                    label: e.name,
-                    value: e.id,
-                }))).unshift({
+                .map((e) => ({ id: e.id, label: e.name, value: e.id }))).unshift({
                 id: "auto",
-                label: ea.intl.string(ea.t.JEmsap),
-                value: ej,
+                label: er.intl.string(er.t.JEmsap),
+                value: eA,
             });
-        let a = null != (t = e.rtcRegion) ? t : ej;
-        return (0, l.jsx)(f.l6P, {
+        let a = e.rtcRegion ?? eA;
+        return (0, l.jsx)(A.l6P, {
             selectionMode: "single",
-            label: ea.intl.string(ea.t["Ms8bX+"]),
-            description: ea.intl.string(ea.t["dbTs+z"]),
+            label: er.intl.string(er.t["Ms8bX+"]),
+            description: er.intl.string(er.t["dbTs+z"]),
             options: s,
             value: a,
             onSelectionChange: this.handleRegionChange,
-            disabled: !i,
+            disabled: !n,
         });
     }
     renderJuiceImage(e) {
@@ -845,21 +710,16 @@ class eO extends i.PureComponent {
         return (
             (t =
                 e.type === el.rbe.GUILD_CATEGORY
-                    ? (0, p.Mw)(i)
+                    ? (0, x.Mw)(i)
                         ? n(477777)
                         : n(517649)
-                    : (0, p.Mw)(i)
+                    : (0, x.Mw)(i)
                       ? n(241306)
                       : n(16474)),
-            (0, l.jsx)(E.A, {
-                justify: E.A.Justify.CENTER,
-                className: ec.o9,
-                children: (0, l.jsx)("img", {
-                    alt: "",
-                    width: 280,
-                    height: 165,
-                    src: t,
-                }),
+            (0, l.jsx)(S.A, {
+                justify: S.A.Justify.CENTER,
+                className: ed.o9,
+                children: (0, l.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })
         );
     }
@@ -867,15 +727,11 @@ class eO extends i.PureComponent {
         let { channel: e, channelName: t, guild: n } = this.props;
         return null == e || null == t || null == n
             ? null
-            : (0, l.jsxs)(f.nVY, {
-                  label: ea.intl.string(ea.t["/dp6yY"]),
+            : (0, l.jsxs)(A.nVY, {
+                  label: er.intl.string(er.t["/dp6yY"]),
                   children: [
                       this.renderChannelInfo(e, t),
-                      this.showVoiceSettings()
-                          ? (0, l.jsx)(f.cGx, {
-                                gap: 24,
-                            })
-                          : null,
+                      this.showVoiceSettings() ? (0, l.jsx)(A.cGx, { gap: 24 }) : null,
                       this.renderVoiceBitrate(e, n),
                       this.renderVideoQualityMode(e),
                       this.renderUserLimit(e),
@@ -884,273 +740,186 @@ class eO extends i.PureComponent {
                   ],
               });
     }
+    renderEmojiPicker = (e) => {
+        let { closePopout: t } = e,
+            { channel: n } = this.props;
+        return (0, l.jsx)(R.A, {
+            guildId: n?.guild_id,
+            closePopout: t,
+            onSelectEmoji: (e) => {
+                let { emoji: n, willClose: l } = e;
+                this.handleChangeDefaultReactionEmoji(n), l && t();
+            },
+            pickerIntention: es.b_.COMMUNITY_CONTENT,
+            channel: n,
+            analyticsOverride: em,
+        });
+    };
+    handleRequireTagChanged = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        let n = (0, h.lA)(t.flags, ei.lx.REQUIRE_TAG, e);
+        (0, f.fy)({ flags: n });
+    };
+    handleChangeName = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return;
+        t.isThread() ? (e = (0, B.A)(e, !1)) : el.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, Q.an)(e));
+        let n = this.nameInputRef.current?.selectionStart ?? 0;
+        (0, f.fy)({ name: e }),
+            setTimeout(() => {
+                this.nameInputRef.current?.setSelectionRange(n, n);
+            }, 0);
+    };
+    handleBlurName = () => {
+        let { channel: e, channelName: t } = this.props;
+        if (e?.isThread() && null != t) {
+            let e = (0, B.A)(t, !0);
+            e !== t && (0, f.fy)({ name: e });
+        }
+    };
+    insertEmojiAtPosition = (e) => {
+        let t = this.nameInputRef.current,
+            n = t?.selectionStart ?? 0,
+            l = t?.selectionEnd ?? 0,
+            i = this.props.channelName,
+            s = i?.substring(0, n) + e + i?.substring(l);
+        (0, f.fy)({ name: s }),
+            setTimeout(() => {
+                let l = n + e.length;
+                t?.focus(), t?.setSelectionRange(l, l);
+            }, 0);
+    };
+    handleChangeTopic = (e) => {
+        (0, f.fy)({ topic: L.Ay.translateInlineEmojiToSurrogates(e) });
+    };
+    handleChangeRichTopic = (e, t, n) => {
+        this.setState({ textTopicValue: t, richTopicValue: n }), this.handleChangeTopic(t);
+    };
     handleSubmit() {
         return new Promise((e) => {
-            e({
-                shouldClear: !1,
-                shouldRefocus: !0,
-            });
+            e({ shouldClear: !1, shouldRefocus: !0 });
         });
     }
-    constructor(e) {
-        var t, n;
-        super(e),
-            eu(this, "defaultReactionButtonRef", i.createRef()),
-            eu(this, "nameInputRef", i.createRef()),
-            eu(this, "cursorPosition", 0),
-            eu(this, "renderEmojiPicker", (e) => {
-                let { closePopout: t } = e,
-                    { channel: n } = this.props;
-                return (0, l.jsx)(w.A, {
-                    guildId: null == n ? void 0 : n.guild_id,
-                    closePopout: t,
-                    onSelectEmoji: (e) => {
-                        let { emoji: n, willClose: l } = e;
-                        this.handleChangeDefaultReactionEmoji(n), l && t();
-                    },
-                    pickerIntention: er.b_.COMMUNITY_CONTENT,
-                    channel: n,
-                    analyticsOverride: eb,
-                });
-            }),
-            eu(this, "handleRequireTagChanged", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                let n = (0, h.lA)(t.flags, ei.lx.REQUIRE_TAG, e);
-                (0, b.fy)({
-                    flags: n,
-                });
-            }),
-            eu(this, "handleChangeName", (e) => {
-                var t, n;
-                let { channel: l } = this.props;
-                if (null == l) return;
-                l.isThread() ? (e = (0, G.A)(e, !1)) : el.kvI.LIMITED_CHANNEL_NAME.has(l.type) && (e = (0, Q.an)(e));
-                let i = null != (t = null == (n = this.nameInputRef.current) ? void 0 : n.selectionStart) ? t : 0;
-                (0, b.fy)({
-                    name: e,
-                }),
-                    setTimeout(() => {
-                        var e;
-                        null == (e = this.nameInputRef.current) || e.setSelectionRange(i, i);
-                    }, 0);
-            }),
-            eu(this, "handleBlurName", () => {
-                let { channel: e, channelName: t } = this.props;
-                if ((null == e ? void 0 : e.isThread()) && null != t) {
-                    let e = (0, G.A)(t, !0);
-                    e !== t &&
-                        (0, b.fy)({
-                            name: e,
-                        });
-                }
-            }),
-            eu(this, "insertEmojiAtPosition", (e) => {
-                var t, n;
-                let l = this.nameInputRef.current,
-                    i = null != (t = null == l ? void 0 : l.selectionStart) ? t : 0,
-                    r = null != (n = null == l ? void 0 : l.selectionEnd) ? n : 0,
-                    s = this.props.channelName,
-                    a = (null == s ? void 0 : s.substring(0, i)) + e + (null == s ? void 0 : s.substring(r));
-                (0, b.fy)({
-                    name: a,
-                }),
-                    setTimeout(() => {
-                        let t = i + e.length;
-                        null == l || l.focus(), null == l || l.setSelectionRange(t, t);
-                    }, 0);
-            }),
-            eu(this, "handleChangeTopic", (e) => {
-                (0, b.fy)({
-                    topic: R.Ay.translateInlineEmojiToSurrogates(e),
-                });
-            }),
-            eu(this, "handleChangeRichTopic", (e, t, n) => {
-                this.setState({
-                    textTopicValue: t,
-                    richTopicValue: n,
-                }),
-                    this.handleChangeTopic(t);
-            }),
-            eu(this, "handleChangeTemplate", (e) => {
-                (0, b.fy)({
-                    template: R.Ay.translateInlineEmojiToSurrogates(e),
-                });
-            }),
-            eu(this, "handleChangeDefaultReactionEmoji", (e) => {
-                let t =
-                    null == e
-                        ? null
-                        : (null == e ? void 0 : e.id) != null
-                          ? {
-                                emojiId: e.id,
-                                emojiName: void 0,
-                            }
-                          : {
-                                emojiId: void 0,
-                                emojiName: e.optionallyDiverseSequence,
-                            };
-                (0, b.fy)({
-                    defaultReactionEmoji: t,
-                });
-            }),
-            eu(this, "handleChangeDefaultForumLayout", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                (0, b.fy)({
-                    defaultForumLayout: e,
-                }),
-                    this.props.handleSetDefaultLayout(e);
-            }),
-            eu(this, "handleChangeDefaultSortOrder", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                (0, b.fy)({
-                    defaultSortOrder: e,
-                });
-            }),
-            eu(this, "handleChangeDefaultTagSetting", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                (0, b.fy)({
-                    defaultTagSetting: e,
-                });
-            }),
-            eu(this, "handleChangeBitrate", (e) => {
-                (0, b.fy)({
-                    bitrate: 1e3 * Math.round(e / 1e3),
-                });
-            }),
-            eu(this, "handleUserLimitChange", (e) => {
-                (0, b.fy)({
-                    userLimit: Math.round(e),
-                });
-            }),
-            eu(this, "handleNSFWChange", (e) => {
-                (0, b.fy)({
-                    nsfw: e,
-                });
-            }),
-            eu(this, "handleActiveChannelsRemovedChange", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                let n = (0, h.lA)(t.flags, ei.lx.ACTIVE_CHANNELS_REMOVED, !e);
-                (0, b.fy)({
-                    flags: n,
-                });
-            }),
-            eu(this, "handleNewsChange", (e) => {
-                (0, b.fy)({
-                    type: e ? el.rbe.GUILD_ANNOUNCEMENT : el.rbe.GUILD_TEXT,
-                });
-            }),
-            eu(this, "handleChangeSlowmode", (e) => {
-                (0, b.fy)({
-                    rateLimitPerUser: e,
-                });
-            }),
-            eu(this, "handleChangeThreadMessageSlowmode", (e) => {
-                (0, b.fy)({
-                    defaultThreadRateLimitPerUser: e,
-                });
-            }),
-            eu(this, "handleChangeDefaultAutoArchiveDuration", (e) => {
-                (0, b.fy)({
-                    defaultAutoArchiveDuration: e,
-                });
-            }),
-            eu(this, "handleRegionChange", (e) => {
-                (0, b.fy)({
-                    rtcRegion: e === ej ? null : e,
-                });
-            }),
-            eu(this, "handleVideoQualityModeChange", (e) => {
-                (0, b.fy)({
-                    videoQualityMode: e,
-                });
-            }),
-            eu(this, "handleAutoArchiveDurationChanged", (e) => {
-                (0, b.fy)({
-                    autoArchiveDuration: e,
-                });
-            }),
-            eu(this, "handleInvitableChanged", (e) => {
-                (0, b.fy)({
-                    invitable: e,
-                });
-            }),
-            eu(this, "handleChannelSummariesToggled", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                let n = (0, h.lA)(t.flags, ei.lx.SUMMARIES_DISABLED, !e);
-                (0, b.fy)({
-                    flags: n,
-                });
-            }),
-            eu(this, "handleShowMediaOptionsToggled", (e) => {
-                let { channel: t } = this.props;
-                if (null == t) return null;
-                let n = (0, h.lA)(t.flags, ei.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
-                (0, b.fy)({
-                    flags: n,
-                });
-            });
-        const r = null != (t = null == (n = this.props.channel) ? void 0 : n.topic) ? t : "";
-        this.state = {
-            textTopicValue: r,
-            richTopicValue: (0, N.x7)(r),
-            topicFocused: !1,
-            updateNameInputCursorPosition: !1,
-        };
-    }
+    handleChangeTemplate = (e) => {
+        (0, f.fy)({ template: L.Ay.translateInlineEmojiToSurrogates(e) });
+    };
+    handleChangeDefaultReactionEmoji = (e) => {
+        let t =
+            null == e
+                ? null
+                : e?.id != null
+                  ? { emojiId: e.id, emojiName: void 0 }
+                  : { emojiId: void 0, emojiName: e.optionallyDiverseSequence };
+        (0, f.fy)({ defaultReactionEmoji: t });
+    };
+    handleChangeDefaultForumLayout = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        (0, f.fy)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
+    };
+    handleChangeDefaultSortOrder = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        (0, f.fy)({ defaultSortOrder: e });
+    };
+    handleChangeDefaultTagSetting = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        (0, f.fy)({ defaultTagSetting: e });
+    };
+    handleChangeBitrate = (e) => {
+        (0, f.fy)({ bitrate: 1e3 * Math.round(e / 1e3) });
+    };
+    handleUserLimitChange = (e) => {
+        (0, f.fy)({ userLimit: Math.round(e) });
+    };
+    handleNSFWChange = (e) => {
+        (0, f.fy)({ nsfw: e });
+    };
+    handleActiveChannelsRemovedChange = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        let n = (0, h.lA)(t.flags, ei.lx.ACTIVE_CHANNELS_REMOVED, !e);
+        (0, f.fy)({ flags: n });
+    };
+    handleNewsChange = (e) => {
+        (0, f.fy)({ type: e ? el.rbe.GUILD_ANNOUNCEMENT : el.rbe.GUILD_TEXT });
+    };
+    handleChangeSlowmode = (e) => {
+        (0, f.fy)({ rateLimitPerUser: e });
+    };
+    handleChangeThreadMessageSlowmode = (e) => {
+        (0, f.fy)({ defaultThreadRateLimitPerUser: e });
+    };
+    handleChangeDefaultAutoArchiveDuration = (e) => {
+        (0, f.fy)({ defaultAutoArchiveDuration: e });
+    };
+    handleRegionChange = (e) => {
+        (0, f.fy)({ rtcRegion: e === eA ? null : e });
+    };
+    handleVideoQualityModeChange = (e) => {
+        (0, f.fy)({ videoQualityMode: e });
+    };
+    handleAutoArchiveDurationChanged = (e) => {
+        (0, f.fy)({ autoArchiveDuration: e });
+    };
+    handleInvitableChanged = (e) => {
+        (0, f.fy)({ invitable: e });
+    };
+    handleChannelSummariesToggled = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        let n = (0, h.lA)(t.flags, ei.lx.SUMMARIES_DISABLED, !e);
+        (0, f.fy)({ flags: n });
+    };
+    handleShowMediaOptionsToggled = (e) => {
+        let { channel: t } = this.props;
+        if (null == t) return null;
+        let n = (0, h.lA)(t.flags, ei.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
+        (0, f.fy)({ flags: n });
+    };
 }
-
-function eC() {
-    let { errors: e, channel: t, submitting: n, subsection: r } = (0, g.cf)([W.A], () => W.A.getProps()),
-        s = (0, g.bG)([J.A], () => {
-            var e;
-            return J.A.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
-        }),
-        a = (0, g.bG)([U.A], () => U.A.theme),
-        o = (0, g.bG)([Y.A], () => Y.A.getGuild(null == t ? void 0 : t.getGuildId())),
-        c = (0, k.NI)(t),
-        u = (0, k.H_)(t),
-        { canManageChannels: d, canSendMessages: h } = (0, g.cf)([Z.A], () => ({
+function ej() {
+    let { errors: e, channel: t, submitting: n, subsection: s } = (0, g.cf)([W.A], () => W.A.getProps()),
+        a = (0, g.bG)([J.A], () => J.A.getRegions(t?.getGuildId() ?? null)),
+        r = (0, g.bG)([U.A], () => U.A.theme),
+        o = (0, g.bG)([Y.A], () => Y.A.getGuild(t?.getGuildId())),
+        d = (0, D.NI)(t),
+        c = (0, D.H_)(t),
+        { canManageChannels: u, canSendMessages: h } = (0, g.cf)([Z.A], () => ({
             canManageChannels: Z.A.can(el.xBc.MANAGE_CHANNELS, t),
             canSendMessages: Z.A.can(el.xBc.SEND_MESSAGES, t),
         })),
-        m = (0, O.Ay)(t),
-        p = F.default.getId(),
-        f = (0, I.p)(),
-        b = null == t ? void 0 : t.id,
-        x = (0, y.cI)(t, !1, !0),
-        j = A.A.useExperiment({
-            guildId: null == t ? void 0 : t.guild_id,
-            location: "ChannelSettingsOverview",
-        }).enabled,
-        v = i.useCallback(
+        m = (0, v.Ay)(t),
+        x = F.default.getId(),
+        A = (0, w.p)(),
+        f = t?.id,
+        p = (0, j.cI)(t, !1, !0),
+        b = C.A.useExperiment({ guildId: t?.guild_id, location: "ChannelSettingsOverview" }).enabled,
+        N = i.useCallback(
             (e) => {
-                null != b && f.getState().setLayoutType(b, e);
+                null != f && A.getState().setLayoutType(f, e);
             },
-            [b, f],
+            [f, A],
         );
-    return (0, l.jsx)(eO, {
+    return (0, l.jsx)(eC, {
         errors: e,
         channel: t,
         channelName: m,
         submitting: n,
-        regions: s,
-        theme: a,
+        regions: a,
+        theme: r,
         guild: o,
-        canManageChannels: (null == t ? void 0 : t.isThread()) ? c : d,
+        canManageChannels: t?.isThread() ? d : u,
         canSendMessages: h,
-        isThreadModerator: u,
-        canManageThread: c,
-        subsection: r,
+        isThreadModerator: c,
+        canManageThread: d,
+        subsection: s,
         isForumPost: null != t && t.isForumPost(),
-        isOwner: null == t ? void 0 : t.isOwner(p),
-        handleSetDefaultLayout: v,
-        showChannelSummariesSettings: x,
-        showAdvancedSlowModeSetting: j,
+        isOwner: t?.isOwner(x),
+        handleSetDefaultLayout: N,
+        showChannelSummariesSettings: p,
+        showAdvancedSlowModeSetting: b,
     });
 }

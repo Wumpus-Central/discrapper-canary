@@ -1,26 +1,30 @@
-n.d(t, {
-    b: () => o,
-    u: () => a,
-}),
-    n(638769);
+"use strict";
+n.d(t, { jV: () => s, uN: () => o, ud: () => u });
 var r = n(64700),
-    i = n(735438);
-let a = (e) =>
-        e.sort((e, t) => {
-            var n, r;
-            return (null != (n = e.zIndex) ? n : 0) - (null != (r = t.zIndex) ? r : 0);
-        }),
-    s = (e, t) => Math.floor(Math.random() * (t - e + 1) + e),
-    o = (e) =>
+    i = n(735438),
+    a = n(575593);
+let s = (e) => {
+        let t = e?.collectibles?.find((e) => {
+            let { type: t } = e;
+            return t === a.R.PROFILE_EFFECT;
+        });
+        if (null != t)
+            return {
+                skuId: t.sku_id,
+                expiresAt: null != t.expires_at ? Math.floor(new Date(t.expires_at).getTime() / 1e3) : void 0,
+            };
+    },
+    o = (e) => e.sort((e, t) => (e.zIndex ?? 0) - (t.zIndex ?? 0)),
+    l = (e, t) => Math.floor(Math.random() * (t - e + 1) + e),
+    u = (e) =>
         r.useMemo(() => {
             if (null == e) return e;
             let t = (0, i.cloneDeep)(e),
-                n = s(
+                n = l(
                     0,
                     t.effects.reduce((e, t) => {
-                        var n, r;
-                        let i = null != (n = null == (r = t.randomizedSources) ? void 0 : r.length) ? n : 0;
-                        return i > 0 && (e = 0 === e ? i : Math.min(e, i)), e;
+                        let n = t.randomizedSources?.length ?? 0;
+                        return n > 0 && (e = 0 === e ? n : Math.min(e, n)), e;
                     }, 0) - 1,
                 );
             return (

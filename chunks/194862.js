@@ -1,23 +1,17 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(583613);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+class i {
+    version = 0;
+    data = new Map();
+    cachedValues;
+    cachedKeys;
+    cachedEntries;
+    constructor() {
+        (this.cachedValues = (0, r.L_)((e) => Array.from(this.data.values()))),
+            (this.cachedKeys = (0, r.L_)((e) => Array.from(this.data.keys()))),
+            (this.cachedEntries = (0, r.L_)((e) => Array.from(this.data.entries())));
+    }
     keys() {
         return this.cachedKeys(this.version);
     }
@@ -42,15 +36,5 @@ class a {
     }
     clear() {
         0 !== this.data.size && (this.data.clear(), this.version++);
-    }
-    constructor() {
-        i(this, "version", 0),
-            i(this, "data", new Map()),
-            i(this, "cachedValues", void 0),
-            i(this, "cachedKeys", void 0),
-            i(this, "cachedEntries", void 0),
-            (this.cachedValues = (0, r.L_)((e) => Array.from(this.data.values()))),
-            (this.cachedKeys = (0, r.L_)((e) => Array.from(this.data.keys()))),
-            (this.cachedEntries = (0, r.L_)((e) => Array.from(this.data.entries())));
     }
 }

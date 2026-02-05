@@ -1,136 +1,58 @@
-n.d(t, {
-    ZK: () => y,
-    pF: () => b,
-    wu: () => E,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(321073);
-var r,
-    i = n(64700),
-    a = n(942381),
-    s = n(265690),
-    o = n(121894),
-    l = n(506774),
-    c = n(397927),
+"use strict";
+n.d(t, { ZK: () => h, pF: () => p, wu: () => f }), n(323874), n(14289), n(35956), n(321073);
+var r = n(64700),
+    i = n(942381),
+    a = n(265690),
+    s = n(121894),
+    o = n(506774),
+    l = n(397927),
     u = n(14752);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = "__DEBUG_PROFILE_EFFECTS_STORE",
-    m = {
-        profileEffects: null != (r = l.w.get(h)) ? r : {},
-    },
-    g = (e) => {
+let c = "__DEBUG_PROFILE_EFFECTS_STORE",
+    d = { profileEffects: o.w.get(c) ?? {} },
+    _ = (e) => {
         try {
-            l.w.set(h, e.profileEffects);
+            o.w.set(c, e.profileEffects);
         } catch (e) {
             console.error(e),
-                (0, c.showToast)(
-                    (0, c.createToast)(
+                (0, l.showToast)(
+                    (0, l.createToast)(
                         "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
-                        c.ToastType.FAILURE,
+                        l.ToastType.FAILURE,
                     ),
                 );
         }
     },
-    E = (0, s.h)((e) =>
-        _(f({}, m), {
-            upsertConfig: (t) =>
-                (0, o.r)(() => {
-                    e((e) => {
-                        let n = f({}, e);
-                        return (n.profileEffects[t.skuId] = t), g(n), n;
-                    });
-                }),
-            deleteConfig: (t) =>
-                (0, o.r)(() => {
-                    e((e) => {
-                        let n = f({}, e);
-                        return delete n.profileEffects[t], g(n), n;
-                    });
-                }),
-            clearAll: () =>
-                (0, o.r)(() => {
-                    e(
-                        () => (
-                            l.w.remove(h),
-                            {
-                                profileEffects: {},
-                            }
-                        ),
-                    );
-                }),
-        }),
-    ),
-    b = () =>
-        E((e) => {
+    f = (0, a.h)((e) => ({
+        ...d,
+        upsertConfig: (t) =>
+            (0, s.r)(() => {
+                e((e) => {
+                    let n = { ...e };
+                    return (n.profileEffects[t.skuId] = t), _(n), n;
+                });
+            }),
+        deleteConfig: (t) =>
+            (0, s.r)(() => {
+                e((e) => {
+                    let n = { ...e };
+                    return delete n.profileEffects[t], _(n), n;
+                });
+            }),
+        clearAll: () =>
+            (0, s.r)(() => {
+                e(() => (o.w.remove(c), { profileEffects: {} }));
+            }),
+    })),
+    p = () =>
+        f((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, a.x),
-    y = (e) => {
-        let t = E((t) => (null != e ? t.profileEffects[e] : null)),
-            n = i.useRef([]);
+        }, i.x),
+    h = (e) => {
+        let t = f((t) => (null != e ? t.profileEffects[e] : null)),
+            n = r.useRef([]);
         return (
-            i.useEffect(
+            r.useEffect(
                 () => () => {
                     n.current.forEach((e) => {
                         URL.revokeObjectURL(e);
@@ -139,26 +61,19 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                 },
                 [],
             ),
-            i.useMemo(() => {
+            r.useMemo(() => {
                 if (null == t) return null;
                 let e = (e) => {
                         let t = (0, u.fB)(e);
                         return n.current.push(t), t;
                     },
                     r = t.config.stillFrames,
-                    i = null != r ? f({}, r) : {};
+                    i = null != r ? { ...r } : {};
                 for (let t in i) {
                     let n = i[t];
-                    null != n &&
-                        (i[t] = _(f({}, n), {
-                            src: e(n.base64),
-                        }));
+                    null != n && (i[t] = { ...n, src: e(n.base64) });
                 }
-                return _(f({}, t), {
-                    config: _(f({}, t.config), {
-                        stillFrames: i,
-                    }),
-                });
+                return { ...t, config: { ...t.config, stillFrames: i } };
             }, [t])
         );
     };

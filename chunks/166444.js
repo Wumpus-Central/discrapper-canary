@@ -1,441 +1,291 @@
-n.d(t, {
-    Ay: () => B,
-    IC: () => G,
-    Pk: () => H,
-    gm: () => U,
-});
+n.d(t, { Ay: () => B, IC: () => P, Pk: () => H, gm: () => U });
 var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i);
-if (21552 == n.j) var o = n(837381);
-var s = n(311907),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a);
+if (21552 == n.j) var r = n(837381);
+var o = n(311907),
     u = n(3026),
     c = n(990078),
     d = n(397927),
     h = n(25639),
-    f = n(186369),
-    g = n(571694),
-    p = n(148719),
-    b = n(47167),
-    m = n(970812),
-    y = n(713654),
-    v = n(945096),
-    O = n(922301),
-    j = n(750112),
-    E = n(584682),
-    N = n(255266),
-    A = n(95035),
-    S = n(71393),
-    x = n(290863),
-    T = n(741961),
+    g = n(186369),
+    f = n(571694),
+    m = n(148719),
+    p = n(47167),
+    N = n(970812),
+    A = n(713654),
+    E = n(945096),
+    x = n(922301),
+    T = n(750112),
+    v = n(584682),
+    b = n(255266),
+    S = n(95035),
+    R = n(71393),
+    y = n(290863),
+    C = n(741961),
     D = n(287809),
-    w = n(977997),
-    P = n(837921),
-    R = n(652215),
-    C = n(790782),
-    M = n(728444),
-    I = n(811094);
-let _ = {
-    SELECTED: I.J1,
-    CONNECTED: I.d4,
-    UNREAD_IMPORTANT: I.V2,
-    UNREAD_LESS_IMPORTANT: I.modeUnreadLessImportant,
-    MUTED: I.F4,
-    LOCKED: I.yg,
+    M = n(977997),
+    j = n(837921),
+    I = n(652215),
+    _ = n(790782),
+    L = n(728444),
+    w = n(811094);
+let k = {
+    SELECTED: w.J1,
+    CONNECTED: w.d4,
+    UNREAD_IMPORTANT: w.V2,
+    UNREAD_LESS_IMPORTANT: w.modeUnreadLessImportant,
+    MUTED: w.F4,
+    LOCKED: w.yg,
 };
-
-function L(e) {
+function G(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let k = P.Ay.getEnableHardwareAcceleration() ? d.JsQ : d.euF;
-
-function G(e) {
+let O = j.Ay.getEnableHardwareAcceleration() ? d.JsQ : d.euF;
+function P(e) {
     let { channel: t, size: n = d._3J.SIZE_20 } = e;
-    return (0, l.jsx)(k, {
-        src: (0, g.Y)(t),
-        "aria-hidden": !0,
-        size: n,
-    });
+    return (0, l.jsx)(O, { src: (0, f.Y)(t), "aria-hidden": !0, size: n });
 }
-
 function H(e) {
     let { channel: t, size: n = d._3J.SIZE_20 } = e,
-        r = (0, s.bG)([D.default], () => D.default.getUser(null == t ? void 0 : t.recipients[0])),
-        i = (0, s.bG)(
-            [T.A],
-            () =>
-                !(null == r || null == t || t.isMultiUserDM()) &&
-                null != T.A.getTypingUsers(null == t ? void 0 : t.id)[null == r ? void 0 : r.id],
+        i = (0, o.bG)([D.default], () => D.default.getUser(t?.recipients[0])),
+        a = (0, o.bG)(
+            [C.A],
+            () => !(null == i || null == t || t.isMultiUserDM()) && null != C.A.getTypingUsers(t?.id)[i?.id],
         ),
         {
-            status: a,
-            isMobile: o,
+            status: s,
+            isMobile: r,
             isVR: u,
-        } = (0, s.cf)([x.A], () =>
-            null == r || null == t || t.isMultiUserDM()
-                ? {
-                      status: null,
-                      isMobile: !1,
-                      isVR: !1,
-                  }
-                : {
-                      status: x.A.getStatus(r.id),
-                      isMobile: x.A.isMobileOnline(r.id),
-                      isVR: x.A.isVROnline(r.id),
-                  },
+        } = (0, o.cf)([y.A], () =>
+            null == i || null == t || t.isMultiUserDM()
+                ? { status: null, isMobile: !1, isVR: !1 }
+                : { status: y.A.getStatus(i.id), isMobile: y.A.isMobileOnline(i.id), isVR: y.A.isVROnline(i.id) },
         );
-    return (0, l.jsx)(k, {
+    return (0, l.jsx)(O, {
         size: n,
-        src: null == r ? void 0 : r.getAvatarURL(void 0, 40),
-        status: a,
-        isMobile: o,
+        src: i?.getAvatarURL(void 0, 40),
+        status: s,
+        isMobile: r,
         isVR: u,
-        isTyping: i,
-        "aria-label": null == r ? void 0 : r.username,
+        isTyping: a,
+        "aria-label": i?.username,
         statusTooltip: !0,
     });
 }
-let U = r.memo(function (e) {
+let U = i.memo(function (e) {
         let {
                 className: t,
                 containerClassName: n,
-                channel: r,
-                locked: i,
-                hasActiveThreads: o,
+                channel: i,
+                locked: a,
+                hasActiveThreads: r,
                 hasUsersInVoiceChannel: u,
                 withGuildIcon: d,
             } = e,
-            g = (0, s.bG)([S.A], () => S.A.getGuild(r.guild_id), [r.guild_id]),
-            b = r.type === R.rbe.DM || r.type === R.rbe.GROUP_DM,
-            { enableWaveformIcon: v } = (0, f.b)(r.guild_id, "ChannelItemIcon"),
-            O = (0, s.bG)([h.A], () => h.A.getAnimationStyle(r.id), [r.id]),
-            j = r.type === R.rbe.GUILD_VOICE,
-            E = v && j && !i && u,
-            A = null;
-        if (d && null != g && !b)
-            A = (0, l.jsx)(N.A, {
-                size: N.q.SMALL_32,
-                className: I.h5,
-                iconClassName: I.Is,
-                channel: r,
-                guild: g,
-                locked: i,
-                hasActiveThreads: o,
+            f = (0, o.bG)([R.A], () => R.A.getGuild(i.guild_id), [i.guild_id]),
+            p = i.type === I.rbe.DM || i.type === I.rbe.GROUP_DM,
+            { enableWaveformIcon: E } = (0, g.b)(i.guild_id, "ChannelItemIcon"),
+            x = (0, o.bG)([h.A], () => h.A.getAnimationStyle(i.id), [i.id]),
+            T = i.type === I.rbe.GUILD_VOICE,
+            v = E && T && !a && u,
+            S = null;
+        if (d && null != f && !p)
+            S = (0, l.jsx)(b.A, {
+                size: b.q.SMALL_32,
+                className: w.h5,
+                iconClassName: w.Is,
+                channel: i,
+                guild: f,
+                locked: a,
+                hasActiveThreads: r,
             });
-        else if (E)
-            A = (0, l.jsx)(m.A, {
+        else if (v)
+            S = (0, l.jsx)(N.A, {
                 color: "currentColor",
-                className: a()(I.Kk, t),
-                animationStyle: O,
-                locked: (0, p.A)(r),
+                className: s()(w.Kk, t),
+                animationStyle: x,
+                locked: (0, m.A)(i),
             });
         else {
             let e = (function (e, t, n) {
                 switch (e.type) {
-                    case R.rbe.DM:
+                    case I.rbe.DM:
                         return function () {
-                            return (0, l.jsx)(H, {
-                                channel: e,
-                            });
+                            return (0, l.jsx)(H, { channel: e });
                         };
-                    case R.rbe.GROUP_DM:
+                    case I.rbe.GROUP_DM:
                         return function () {
-                            return (0, l.jsx)(G, {
-                                channel: e,
-                            });
+                            return (0, l.jsx)(P, { channel: e });
                         };
                     default:
-                        return (0, y.gU)(e, t, n);
+                        return (0, A.gU)(e, t, n);
                 }
-            })(r, g, {
-                locked: i,
-                hasActiveThreads: o,
-            });
+            })(i, f, { locked: a, hasActiveThreads: r });
             if (null == e) return null;
-            A = (0, l.jsx)(e, {
-                color: "currentColor",
-                className: a()(I.Kk, t),
-            });
+            S = (0, l.jsx)(e, { color: "currentColor", className: s()(w.Kk, t) });
         }
-        let x = d ? (null == g ? void 0 : g.name) : (0, y.Bq)(r, g, i, o),
-            T = d && null != g ? "".concat(g.name, " - ").concat(x, " icon") : "".concat(x, " icon");
+        let y = d ? f?.name : (0, A.Bq)(i, f, a, r),
+            C = d && null != f ? `${f.name} - ${y} icon` : `${y} icon`;
         return (0, l.jsx)(c.m, {
-            text: x,
+            text: y,
             delay: 500,
-            children: (0, l.jsx)("div", {
-                role: "img",
-                "aria-label": T,
-                className: a()(I.zc, n),
-                children: A,
-            }),
+            children: (0, l.jsx)("div", { role: "img", "aria-label": C, className: s()(w.zc, n), children: S }),
         });
     }),
     B =
         21552 == n.j
-            ? r.forwardRef(function (e, t) {
-                  var n, i, c;
+            ? i.forwardRef(function (e, t) {
                   let {
-                          channel: h,
-                          name: f,
-                          muted: g,
-                          selected: p,
-                          connected: m,
-                          unread: y,
-                          locked: v,
-                          hasActiveThreads: O,
-                          onClick: j,
-                          onMouseDown: N,
-                          onMouseUp: S,
-                          onContextMenu: x,
-                          connectDragPreview: T,
-                          className: D,
-                          iconClassName: P,
-                          subtitle: k,
-                          subtitleColor: G,
-                          channel: { type: H },
-                          onMouseEnter: B,
-                          onMouseLeave: F,
-                          "aria-label": V,
-                          children: K,
-                          guild: W,
-                          channelTypeOverride: q,
-                          forceInteractable: Z,
-                          mentionCount: Y,
-                          resolvedUnreadSetting: J,
-                          isFavoriteSuggestion: X,
-                          withGuildIcon: Q,
-                          hasActiveEvent: $ = !1,
+                          channel: n,
+                          name: a,
+                          muted: c,
+                          selected: h,
+                          connected: g,
+                          unread: f,
+                          locked: m,
+                          hasActiveThreads: N,
+                          onClick: A,
+                          onMouseDown: E,
+                          onMouseUp: x,
+                          onContextMenu: T,
+                          connectDragPreview: b,
+                          className: R,
+                          iconClassName: y,
+                          subtitle: C,
+                          subtitleColor: D,
+                          channel: { type: j },
+                          onMouseEnter: O,
+                          onMouseLeave: P,
+                          "aria-label": H,
+                          children: B,
+                          guild: F,
+                          channelTypeOverride: V,
+                          forceInteractable: K,
+                          mentionCount: W,
+                          resolvedUnreadSetting: q,
+                          isFavoriteSuggestion: $,
+                          withGuildIcon: Z,
+                          hasActiveEvent: Y = !1,
                       } = e,
-                      ee = J === C.e.ALL_MESSAGES || (null != Y && Y > 0),
-                      et = (0, s.bG)([w.A], () => Object.values(w.A.getVoiceStatesForChannel(h.id)).length > 0, [h.id]),
-                      en = (0, o.rm)(h.id),
-                      { role: el } = en,
-                      er = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                              l,
-                              r,
-                              i = {};
-                          if ("u" > typeof Reflect && Reflect.ownKeys) {
-                              for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                                  (l = n[r]),
-                                      !(t.indexOf(l) >= 0) &&
-                                          Object.prototype.propertyIsEnumerable.call(e, l) &&
-                                          (i[l] = e[l]);
-                              return i;
-                          }
-                          if (
-                              ((i = (function (e, t) {
-                                  if (null == e) return {};
-                                  var n,
-                                      l,
-                                      r = {},
-                                      i = Object.getOwnPropertyNames(e);
-                                  for (l = 0; l < i.length; l++)
-                                      (n = i[l]),
-                                          !(t.indexOf(n) >= 0) &&
-                                              Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                              (r[n] = e[n]);
-                                  return r;
-                              })(e, t)),
-                              Object.getOwnPropertySymbols)
-                          )
-                              for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                                  (l = n[r]),
-                                      !(t.indexOf(l) >= 0) &&
-                                          Object.prototype.propertyIsEnumerable.call(e, l) &&
-                                          (i[l] = e[l]);
-                          return i;
-                      })(en, ["role"]),
-                      ei = r.useRef(null),
-                      ea = r.useRef(null),
-                      eo = (0, E.A)(h),
-                      es = R.BVt.CHANNEL(eo, h.id),
-                      eu = (0, b.Ay)(h),
-                      ec = h.isGuildVocal(),
-                      ed = (0, l.jsx)("div", {
-                          className: a()({
-                              [I.ow]: X,
-                          }),
-                          ref: ea,
-                          children: (0, l.jsxs)(
-                              A.A,
-                              ((i = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          l = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (l = l.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          l.forEach(function (t) {
-                                              var l;
-                                              (l = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: l,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = l);
-                                          });
-                                  }
-                                  return e;
-                              })(
-                                  {
-                                      role: ec && !m ? "button" : "link",
-                                      href: ec ? void 0 : es,
-                                      target: "_blank",
-                                      ref: ei,
-                                      className: I.nf,
-                                      onClick: () => (null == j ? void 0 : j(h)),
-                                  },
-                                  er,
-                              )),
-                              (c = c =
-                                  {
-                                      "aria-label": V,
-                                      focusProps: {
-                                          enabled: !1,
-                                      },
+                      J = q === _.e.ALL_MESSAGES || (null != W && W > 0),
+                      X = (0, o.bG)([M.A], () => Object.values(M.A.getVoiceStatesForChannel(n.id)).length > 0, [n.id]),
+                      { role: Q, ...ee } = (0, r.rm)(n.id),
+                      et = i.useRef(null),
+                      en = i.useRef(null),
+                      el = (0, v.A)(n),
+                      ei = I.BVt.CHANNEL(el, n.id),
+                      ea = (0, p.Ay)(n),
+                      es = n.isGuildVocal(),
+                      er = null != A || null != x || null != E || K,
+                      eo = (0, l.jsx)("div", {
+                          className: s()({ [w.ow]: $ }),
+                          ref: en,
+                          children: (0, l.jsxs)(S.A, {
+                              role: es && !g ? "button" : "link",
+                              href: es ? void 0 : ei,
+                              target: "_blank",
+                              ref: et,
+                              className: w.nf,
+                              onClick: () => A?.(n),
+                              ...ee,
+                              "aria-label": H,
+                              focusProps: { enabled: !1 },
+                              children: [
+                                  (0, l.jsxs)("div", {
+                                      className: w.Y5,
                                       children: [
-                                          (0, l.jsxs)("div", {
-                                              className: I.Y5,
-                                              children: [
-                                                  (0, l.jsx)(U, {
-                                                      className: P,
-                                                      channel: h,
-                                                      guild: W,
-                                                      hasUsersInVoiceChannel: et,
-                                                      hasActiveThreads: O,
-                                                      locked: v,
-                                                      withGuildIcon: Q,
-                                                  }),
-                                                  (0, l.jsx)(u.A, {
-                                                      className: a()(I.UU, {
-                                                          [I.NW]: $,
-                                                      }),
-                                                      "aria-hidden": !0,
-                                                      children: (0, l.jsx)(z, {
-                                                          channel: h,
-                                                          name: null != f ? f : eu,
-                                                      }),
-                                                  }),
-                                                  r.Children.count(K) > 0
-                                                      ? (0, l.jsx)("div", {
-                                                            onClick: L,
-                                                            className: I.Y_,
-                                                            children: K,
-                                                        })
-                                                      : null,
-                                              ],
+                                          (0, l.jsx)(U, {
+                                              className: y,
+                                              channel: n,
+                                              guild: F,
+                                              hasUsersInVoiceChannel: X,
+                                              hasActiveThreads: N,
+                                              locked: m,
+                                              withGuildIcon: Z,
                                           }),
-                                          null != k
-                                              ? (0, l.jsx)("div", {
-                                                    className: a()(I.MA, {
-                                                        [I.lY]: Q,
-                                                    }),
-                                                    children: (0, l.jsx)(d.Text, {
-                                                        color: null != G ? G : "text-muted",
-                                                        variant: "text-xs/medium",
-                                                        className: I.VA,
-                                                        children: k,
-                                                    }),
-                                                })
+                                          (0, l.jsx)(u.A, {
+                                              className: s()(w.UU, { [w.NW]: Y }),
+                                              "aria-hidden": !0,
+                                              children: (0, l.jsx)(z, { channel: n, name: null != a ? a : ea }),
+                                          }),
+                                          i.Children.count(B) > 0
+                                              ? (0, l.jsx)("div", { onClick: G, className: w.Y_, children: B })
                                               : null,
                                       ],
                                   }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(c))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var l = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, l);
-                                        }
-                                        return n;
-                                    })(Object(c)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(c, e));
-                                    }),
-                              i),
-                          ),
+                                  null != C
+                                      ? (0, l.jsx)("div", {
+                                            className: s()(w.MA, { [w.lY]: Z }),
+                                            children: (0, l.jsx)(d.Text, {
+                                                color: D ?? "text-muted",
+                                                variant: "text-xs/medium",
+                                                className: w.VA,
+                                                children: C,
+                                            }),
+                                        })
+                                      : null,
+                              ],
+                          }),
                       });
                   return (0, l.jsx)(d.vN3, {
-                      focusTarget: ei,
-                      ringTarget: ea,
-                      offset: {
-                          top: 2,
-                          bottom: 2,
-                          right: 4,
-                      },
+                      focusTarget: et,
+                      ringTarget: en,
+                      offset: { top: 2, bottom: 2, right: 4 },
                       children: (0, l.jsxs)("div", {
                           ref: t,
-                          className: a()(
-                              D,
-                              null != j || null != S || null != N || Z ? I.iE : I.IA,
+                          className: s()(
+                              R,
+                              er ? w.iE : w.IA,
                               (() => {
-                                  if (p) return a()(M.rM, _.SELECTED);
-                                  if (m) return a()(M.rM, _.CONNECTED);
-                                  if (v) return _.LOCKED;
-                                  if (g) return _.MUTED;
-                                  if (y)
-                                      if (ee) return _.UNREAD_IMPORTANT;
-                                      else return _.UNREAD_LESS_IMPORTANT;
+                                  if (h) return s()(L.rM, k.SELECTED);
+                                  if (g) return s()(L.rM, k.CONNECTED);
+                                  if (m) return k.LOCKED;
+                                  if (c) return k.MUTED;
+                                  if (f)
+                                      if (J) return k.UNREAD_IMPORTANT;
+                                      else return k.UNREAD_LESS_IMPORTANT;
                                   return null;
                               })(),
                               (function (e) {
                                   switch (e) {
-                                      case R.rbe.GUILD_STAGE_VOICE:
-                                      case R.rbe.GUILD_VOICE:
-                                          return I.typeVoice;
-                                      case R.rbe.ANNOUNCEMENT_THREAD:
-                                      case R.rbe.PUBLIC_THREAD:
-                                      case R.rbe.PRIVATE_THREAD:
-                                          return I.ZS;
-                                      case R.rbe.GUILD_ANNOUNCEMENT:
-                                      case R.rbe.GUILD_TEXT:
-                                      case R.rbe.GUILD_STORE:
-                                      case R.rbe.GUILD_FORUM:
-                                      case R.rbe.GUILD_MEDIA:
+                                      case I.rbe.GUILD_STAGE_VOICE:
+                                      case I.rbe.GUILD_VOICE:
+                                          return w.typeVoice;
+                                      case I.rbe.ANNOUNCEMENT_THREAD:
+                                      case I.rbe.PUBLIC_THREAD:
+                                      case I.rbe.PRIVATE_THREAD:
+                                          return w.ZS;
+                                      case I.rbe.GUILD_ANNOUNCEMENT:
+                                      case I.rbe.GUILD_TEXT:
+                                      case I.rbe.GUILD_STORE:
+                                      case I.rbe.GUILD_FORUM:
+                                      case I.rbe.GUILD_MEDIA:
                                       default:
-                                          return I.typeDefault;
+                                          return w.typeDefault;
                                   }
-                              })(null != q ? q : H),
+                              })(V ?? j),
                           ),
-                          onMouseUp: (e) => (null == S ? void 0 : S(e, h)),
-                          onMouseDown: (e) => (null == N ? void 0 : N(e, h)),
-                          onContextMenu: (e) => (null == x ? void 0 : x(e, h)),
-                          onMouseEnter: B,
-                          onMouseLeave: F,
+                          onMouseUp: (e) => x?.(e, n),
+                          onMouseDown: (e) => E?.(e, n),
+                          onContextMenu: (e) => T?.(e, n),
+                          onMouseEnter: O,
+                          onMouseLeave: P,
                           children: [
-                              g || !y
-                                  ? null
-                                  : (0, l.jsx)("div", {
-                                        className: a()(I.gy, ee ? I.WS : void 0),
-                                    }),
-                              null != (n = null == T ? void 0 : T(ed)) ? n : ed,
+                              c || !f ? null : (0, l.jsx)("div", { className: s()(w.gy, J ? w.WS : void 0) }),
+                              b?.(eo) ?? eo,
                           ],
                       }),
                   });
               })
             : null;
-
 function z(e) {
-    var t, n, i;
-    let { channel: a, name: o } = e,
-        s = a.isPrivate() && 1 === (null != (t = a.rawRecipients) ? t : []).length,
-        u = null == (i = a.rawRecipients) || null == (n = i[0]) ? void 0 : n.display_name_styles,
-        c = r.useMemo(() => (s ? (0, v.mT)(u) : null), [s, u]);
-    return null != c
-        ? (0, l.jsx)(j.A, {
-              userName: o,
-              displayNameStyles: c,
-              effectDisplayType: O.G.PLAIN,
-              boldFontOpacity: 0.9,
-          })
-        : o;
+    let { channel: t, name: n } = e,
+        a = t.isPrivate() && 1 === (t.rawRecipients ?? []).length,
+        s = t.rawRecipients?.[0]?.display_name_styles,
+        r = i.useMemo(() => (a ? (0, E.mT)(s) : null), [a, s]);
+    return null != r
+        ? (0, l.jsx)(T.A, { userName: n, displayNameStyles: r, effectDisplayType: x.G.PLAIN, boldFontOpacity: 0.9 })
+        : n;
 }

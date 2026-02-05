@@ -1,3 +1,4 @@
+"use strict";
 var n,
     o =
         Object.assign ||
@@ -8,12 +9,7 @@ var n,
             }
             return e;
         },
-    a =
-        (n = r(64700)) && n.__esModule
-            ? n
-            : {
-                  default: n,
-              };
+    a = (n = r(64700)) && n.__esModule ? n : { default: n };
 t.default = function (e) {
     var t = e.fill,
         r = e.width,
@@ -40,8 +36,6 @@ t.default = function (e) {
             },
             l,
         ),
-        a.default.createElement("path", {
-            d: "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z",
-        }),
+        a.default.createElement("path", { d: "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" }),
     );
 };

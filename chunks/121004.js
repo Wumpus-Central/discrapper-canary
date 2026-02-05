@@ -1,46 +1,42 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048),
-    n(321073);
-var l = n(64700),
-    i = n(311907),
-    s = n(964486),
-    a = n(71393),
-    r = n(576705),
-    c = n(711014),
-    d = n(208882),
-    o = n(519480),
-    u = n(652215);
+l.d(t, { A: () => x }), l(321073);
+var i = l(64700),
+    s = l(311907),
+    a = l(964486),
+    n = l(71393),
+    r = l(576705),
+    c = l(711014),
+    d = l(208882),
+    o = l(519480),
+    u = l(652215);
 let x = (e, t) => {
-    let [n, x] = l.useState(!1),
-        m = (0, i.bG)([o.A], () => o.A.getAdminGuildEntryIds(t)),
-        g = (0, i.yK)([c.Ay, a.A, r.A], () => {
+    let [l, x] = i.useState(!1),
+        m = (0, s.bG)([o.A], () => o.A.getAdminGuildEntryIds(t)),
+        C = (0, s.yK)([c.Ay, n.A, r.A], () => {
             let t = c.Ay.getFlattenedGuildIds(),
-                n = [];
+                l = [];
             return (
                 t.forEach((t) => {
-                    let l = a.A.getGuild(t);
-                    null != l && r.A.can(u.xBc.ADMINISTRATOR, l) && l.id !== e && n.push(l);
+                    let i = n.A.getGuild(t);
+                    null != i && r.A.can(u.xBc.ADMINISTRATOR, i) && i.id !== e && l.push(i);
                 }),
-                n
+                l
             );
         }, [e]);
     return (
-        (0, s.Ay)(() => {
+        (0, a.Ay)(() => {
             (async () => {
                 x(!0),
                     await d.LH(
                         t,
-                        g.map((e) => e.id),
+                        C.map((e) => e.id),
                     ),
                     x(!1);
             })();
         }),
         {
-            availableGuilds: l.useMemo(() => g.filter((e) => !(null == m ? void 0 : m.has(e.id))), [g, m]),
-            addedGuilds: l.useMemo(() => g.filter((e) => (null == m ? void 0 : m.has(e.id))), [g, m]),
-            loading: n,
+            availableGuilds: i.useMemo(() => C.filter((e) => !m?.has(e.id)), [C, m]),
+            addedGuilds: i.useMemo(() => C.filter((e) => m?.has(e.id)), [C, m]),
+            loading: l,
         }
     );
 };

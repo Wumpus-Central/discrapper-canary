@@ -1,3 +1,2 @@
-e.exports = {
-    y: "emptyStateContainer_cce1d3",
-};
+"use strict";
+e.exports = { y: "emptyStateContainer_cce1d3" };

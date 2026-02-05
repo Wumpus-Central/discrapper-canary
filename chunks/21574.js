@@ -1,59 +1,52 @@
-n.d(t, {
-    h: () => l,
-}),
-    n(896048),
-    n(747238),
-    n(321073);
-let r = 0,
+r.d(t, { h: () => l }), r(321073);
+let n = 0,
     a = null;
-
 function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     try {
-        let n = (function (e) {
-            if (2 === r) return null;
-            0 === r &&
+        let r = (function (e) {
+            if (2 === n) return null;
+            0 === n &&
                 (function (e) {
                     let t = e;
                     for (; null != t && t !== document.body; ) {
                         for (let t of Object.keys(e))
                             if (t.startsWith("__reactFiber$")) {
-                                (a = t), (r = 1);
+                                (a = t), (n = 1);
                                 return;
                             }
                         t = t.parentElement;
                     }
-                    null == a && (r = 2);
+                    null == a && (n = 2);
                 })(e);
             let t = a,
-                n = e;
-            for (; null != n && n !== document.body; ) {
-                if (t in n) return n[t];
-                n = n.parentElement;
+                r = e;
+            for (; null != r && r !== document.body; ) {
+                if (t in r) return r[t];
+                r = r.parentElement;
             }
             return null;
         })(e);
-        if (null != n)
+        if (null != r)
             return (function (e, t) {
-                let n = [],
-                    r = e;
-                for (; null != r; ) {
-                    var a, l;
-                    let e = null == r || null == (a = r._debugSource) ? void 0 : a.fileName,
-                        o = null == r || null == (l = r._debugSource) ? void 0 : l.lineNumber;
-                    if (null != e && null != o) {
-                        let r = "".concat(e, ":").concat(o);
+                let r = [],
+                    n = e;
+                for (; null != n; ) {
+                    let e = n?._debugSource?.fileName,
+                        a = n?._debugSource?.lineNumber;
+                    if (null != e && null != a) {
+                        let n = `${e}:${a}`;
                         if (t) {
-                            let e = r.split("/discord/");
-                            0 !== e.length && n.push(e[e.length - 1]);
-                        } else n.push(r);
+                            let e = n.split("/discord/");
+                            0 !== e.length && r.push(e[e.length - 1]);
+                        } else r.push(n);
                     }
-                    r = null == r ? void 0 : r._debugOwner;
+                    n = n?._debugOwner;
                 }
-                return n;
-            })(n, t);
+                return r;
+            })(r, t);
         return null;
-    } catch (e) {
+    } catch {
         return null;
     }
 }

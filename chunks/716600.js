@@ -1,114 +1,85 @@
-n.d(t, {
-    t: () => A,
-});
-var r = n(627968);
+n.d(t, { t: () => m });
+var i = n(627968);
 n(64700);
-var i = n(934551),
-    l = n(232582),
-    a = n(732955),
+var r = n(934551),
+    a = n(232582),
+    l = n(732955),
     s = n(397927),
     o = n(954571),
-    c = n(975571),
-    u = n(795269),
-    d = n(498470),
-    p = n(652215),
-    f = n(985018),
-    h = n(787076);
-
-function A(e) {
-    var t, n, A, g;
+    d = n(975571),
+    c = n(795269),
+    u = n(498470),
+    A = n(652215),
+    h = n(985018),
+    _ = n(787076);
+function m(e) {
     let {
-            componentId: m,
-            promotionId: b,
-            content: _,
-            renderModalProps: E,
-            analyticsLocations: O,
-            analyticsLocation: y,
-            isLightTheme: I,
+            componentId: t,
+            promotionId: n,
+            content: m,
+            renderModalProps: p,
+            analyticsLocations: g,
+            analyticsLocation: E,
+            isLightTheme: f,
         } = e,
-        v = "AnnouncementModalVariant1_".concat(m),
-        { onClose: S } = E,
-        C = null != (t = null == (n = _.button) ? void 0 : n.copy) ? t : f.intl.string(f.t.YScQSF),
-        N =
-            (null == (A = _.button) ? void 0 : A.buttonAction) === l.dz.OPEN_MARKETING_PAGE
-                ? "jump_to_mkt_button"
-                : "get_nitro_button",
-        T = (0, d.h)({
-            buttonAction: null == (g = _.button) ? void 0 : g.buttonAction,
-            analyticsLocations: O,
-            analyticsLocation: y,
-            onClose: S,
-        }),
-        j =
-            "" !== _.helpArticleId
+        I = `AnnouncementModalVariant1_${t}`,
+        { onClose: C } = p,
+        N = m.button?.copy ?? h.intl.string(h.t.YScQSF),
+        T = m.button?.buttonAction === a.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
+        S = (0, u.h)({ buttonAction: m.button?.buttonAction, analyticsLocations: g, analyticsLocation: E, onClose: C }),
+        x =
+            "" !== m.helpArticleId
                 ? () =>
-                      (0, r.jsxs)(r.Fragment, {
+                      (0, i.jsxs)(i.Fragment, {
                           children: [
                               "\xa0",
-                              (0, r.jsx)(s.MzZ, {
-                                  className: h.$T,
-                                  href: c.A.getArticleURL(_.helpArticleId),
-                                  children: f.intl.string(f.t["sBp+u0"]),
+                              (0, i.jsx)(s.MzZ, {
+                                  className: _.$T,
+                                  href: d.A.getArticleURL(m.helpArticleId),
+                                  children: h.intl.string(h.t["sBp+u0"]),
                               }),
                           ],
                       })
                 : void 0,
-        x = {
-            type: "video",
-            src: I ? _.heroArtVideoLinkLightTheme : _.videoLink,
-        };
-    null != _.heroArtVideoSubtitles &&
-        (x.subtitles = _.heroArtVideoSubtitles.map((e) => ({
-            locale: e.locale,
-            src: e.link,
-            isDefault: !1,
-        }))),
-        ("" !== _.heroArtImageLinkDarkTheme || "" !== _.heroArtImageLinkLightTheme) &&
-            (x = {
-                type: "image",
-                src: I ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme,
-            });
-    let P =
-        "" !== _.modalTopPill
-            ? () =>
-                  (0, r.jsx)(u.R, {
-                      text: _.modalTopPill,
-                      className: h.ON,
-                  })
-            : void 0;
+        v = { type: "video", src: f ? m.heroArtVideoLinkLightTheme : m.videoLink };
+    null != m.heroArtVideoSubtitles &&
+        (v.subtitles = m.heroArtVideoSubtitles.map((e) => ({ locale: e.locale, src: e.link, isDefault: !1 }))),
+        ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) &&
+            (v = { type: "image", src: f ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme });
+    let b = "" !== m.modalTopPill ? () => (0, i.jsx)(c.R, { text: m.modalTopPill, className: _.ON }) : void 0;
     return {
-        componentId: m,
-        promotionId: b,
-        renderModalProps: E,
-        header: _.header,
-        modalTopExtra: P,
-        subHeader: _.subheader,
-        subHeaderExtra: j,
-        body: _.body,
-        heroArt: x,
-        featureCards: _.featureCards.map((e) => ({
+        componentId: t,
+        promotionId: n,
+        renderModalProps: p,
+        header: m.header,
+        modalTopExtra: b,
+        subHeader: m.subheader,
+        subHeaderExtra: x,
+        body: m.body,
+        heroArt: v,
+        featureCards: m.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: I ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: v,
+        changeLogId: I,
         button: () => {
             let e = Date.now();
-            return (0, r.jsx)(a.$nd, {
+            return (0, i.jsx)(l.$nd, {
                 variant: "expressive",
                 size: "md",
                 onClick: () => {
-                    o.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: v,
-                        cta_type: N,
+                    o.default.track(A.HAw.CHANGE_LOG_CTA_CLICKED, {
+                        change_log_id: I,
+                        cta_type: T,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        target: v,
+                        target: I,
                     }),
-                        T();
+                        S();
                 },
-                text: C,
-                icon: i.NitroWheelIcon,
+                text: N,
+                icon: r.NitroWheelIcon,
             });
         },
     };

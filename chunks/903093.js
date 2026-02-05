@@ -1,94 +1,78 @@
 n.d(t, {
-    $5: () => f,
-    P$: () => u,
-    Qm: () => d,
-    _J: () => h,
-    di: () => m,
-    fi: () => _,
-    k$: () => c,
-    mR: () => p,
-    ql: () => E,
-    r2: () => g,
-    yc: () => l,
+    $5: () => m,
+    P$: () => c,
+    Qm: () => u,
+    _J: () => p,
+    di: () => g,
+    fi: () => h,
+    k$: () => d,
+    mR: () => _,
+    ql: () => f,
+    r2: () => A,
+    yc: () => o,
 }),
     n(321073);
-var r = n(989349),
-    i = n.n(r),
+var i = n(989349),
+    l = n.n(i),
     a = n(834409),
-    s = n(218113),
-    o = n(985018);
-let l = {
-    month: "numeric",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-};
-
-function c(e) {
+    r = n(218113),
+    s = n(985018);
+let o = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };
+function d(e) {
     return (
-        (null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.Qs, "hours") > i()()) ||
-        (null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.Qs, "hours") > i()())
+        (null != e.dmSpamDetectedAt && l()(e.dmSpamDetectedAt).add(r.Qs, "hours") > l()()) ||
+        (null != e.raidDetectedAt && l()(e.raidDetectedAt).add(r.Qs, "hours") > l()())
     );
 }
-
+function c(e) {
+    return null != e.raidDetectedAt && l()(e.raidDetectedAt).add(r.Qs, "hours") > l()();
+}
 function u(e) {
-    return null != e.raidDetectedAt && i()(e.raidDetectedAt).add(s.Qs, "hours") > i()();
+    return null != e.dmSpamDetectedAt && l()(e.dmSpamDetectedAt).add(r.Qs, "hours") > l()();
 }
-
-function d(e) {
-    return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.Qs, "hours") > i()();
+function m(e) {
+    return null == e ? void 0 : c(e) ? a.V.JOIN_RAID : a.V.DM_RAID;
 }
-
-function f(e) {
-    return null == e ? void 0 : u(e) ? a.V.JOIN_RAID : a.V.DM_RAID;
-}
-
-function p(e, t) {
+function _(e, t) {
     let n = [];
     return e && n.push(a.ZE.INVITES_DISABLED), t && n.push(a.ZE.DMS_DISABLED), n;
 }
-
-function _(e, t) {
+function h(e, t) {
     let n = [];
     return e || n.push(a.ZE.INVITES_DISABLED), t || n.push(a.ZE.DMS_DISABLED), n;
 }
-
-function h(e) {
+function p(e) {
     return (
         (null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date()) ||
         (null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date())
     );
 }
-
-function m(e) {
-    return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date();
-}
-
 function g(e) {
-    return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date();
+    return e?.dmsDisabledUntil != null && new Date(e.dmsDisabledUntil) > new Date();
 }
-
-function E(e, t) {
-    var n;
-    let r = null != (n = e.dmsDisabledUntil) ? n : e.invitesDisabledUntil;
-    if (null == r) return "";
+function A(e) {
+    return e?.invitesDisabledUntil != null && new Date(e.invitesDisabledUntil) > new Date();
+}
+function f(e, t) {
+    let n = e.dmsDisabledUntil ?? e.invitesDisabledUntil;
+    if (null == n) return "";
     let i = null != e.dmsDisabledUntil,
-        a = null != e.invitesDisabledUntil;
+        l = null != e.invitesDisabledUntil;
     switch (!0) {
-        case i && a:
-            return o.intl.formatToPlainString(o.t.hCZitf, {
+        case i && l:
+            return s.intl.formatToPlainString(s.t.hCZitf, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.intl.currentLocale, l),
+                time: new Date(n).toLocaleString(s.intl.currentLocale, o),
             });
         case i:
-            return o.intl.formatToPlainString(o.t["HNKxf+"], {
+            return s.intl.formatToPlainString(s.t["HNKxf+"], {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.intl.currentLocale, l),
+                time: new Date(n).toLocaleString(s.intl.currentLocale, o),
             });
-        case a:
-            return o.intl.formatToPlainString(o.t.M3iSyL, {
+        case l:
+            return s.intl.formatToPlainString(s.t.M3iSyL, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.intl.currentLocale, l),
+                time: new Date(n).toLocaleString(s.intl.currentLocale, o),
             });
         default:
             return "";

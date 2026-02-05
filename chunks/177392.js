@@ -1,74 +1,50 @@
-n.d(t, {
-    H: () => h,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(92674),
-    a = n(311907),
-    s = n(397927),
+n.d(t, { H: () => h });
+var i = n(627968),
+    l = n(64700),
+    a = n(92674),
+    s = n(311907),
+    r = n(397927),
     o = n(971778),
     c = n(652215),
-    u = n(985018),
-    d = n(144958);
-
+    d = n(985018),
+    u = n(144958);
 function h() {
-    let e = (0, a.bG)([o.A], () => o.A.getError());
-    return e
-        ? (0, l.jsx)(p, {
-              error: e,
-          })
-        : null;
+    let e = (0, s.bG)([o.A], () => o.A.getError());
+    return e ? (0, i.jsx)(m, { error: e }) : null;
 }
-let p = (e) => {
+let m = (e) => {
     let { error: t } = e,
-        [n, a] = (0, r.useState)(!1),
-        h = (0, s.pnh)(
+        [n, s] = (0, l.useState)(!1),
+        h = (0, r.pnh)(
             !n,
             {
-                from: {
-                    opacity: 0,
-                    translateY: 20,
-                },
-                enter: {
-                    opacity: 1,
-                    translateY: 0,
-                },
-                leave: {
-                    opacity: 0,
-                    translateY: 80,
-                },
+                from: { opacity: 0, translateY: 20 },
+                enter: { opacity: 1, translateY: 0 },
+                leave: { opacity: 0, translateY: 80 },
             },
             "respect-motion-settings",
         ),
-        p = (() => {
+        m = (() => {
             switch (t) {
                 case o.L.ERROR_DOWNLOADING_DEPENDENCY:
-                    return u.intl.string(u.t.D9neaH);
+                    return d.intl.string(d.t.D9neaH);
                 case o.L.ERROR_ACTIVATING_VOICE_FILTER:
-                    return u.intl.string(u.t.mNMZZg);
+                    return d.intl.string(d.t.mNMZZg);
                 default:
-                    return u.intl.string(u.t.F8FvUy);
+                    return d.intl.string(d.t.F8FvUy);
             }
         })();
     return h((e) =>
         n
             ? null
-            : (0, l.jsx)(i.animated.div, {
+            : (0, i.jsx)(a.animated.div, {
                   style: e,
-                  className: d.z,
-                  children: (0, l.jsxs)("div", {
-                      className: d.A,
+                  className: u.z,
+                  children: (0, i.jsxs)("div", {
+                      className: u.A,
                       children: [
-                          (0, l.jsx)(s.Text, {
-                              variant: "text-sm/semibold",
-                              color: "always-white",
-                              children: p,
-                          }),
-                          (0, l.jsx)(s.PMB, {
-                              noticeType: c.kqX.VOICE_FILTERS_ERROR,
-                              onClick: () => a(!0),
-                          }),
+                          (0, i.jsx)(r.Text, { variant: "text-sm/semibold", color: "always-white", children: m }),
+                          (0, i.jsx)(r.PMB, { noticeType: c.kqX.VOICE_FILTERS_ERROR, onClick: () => s(!0) }),
                       ],
                   }),
               }),

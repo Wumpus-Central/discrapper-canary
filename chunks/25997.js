@@ -1,29 +1,23 @@
-n.d(i, {
-    default: () => c,
-});
-var a = n(627968);
+n.d(e, { default: () => o });
+var i = n(627968);
 n(64700);
-var r = n(158954),
-    s = n(956793),
-    e = n(849736),
-    l = n(985018);
-let c = (t) => {
-    let { channel: i, transitionState: n, onClose: c } = t;
-    return (0, a.jsx)(r.Modal, {
+var l = n(158954),
+    r = n(956793),
+    a = n(849736),
+    s = n(985018);
+let o = (t) => {
+    let { channel: e, transitionState: n, onClose: o } = t;
+    return (0, i.jsx)(l.Modal, {
         transitionState: n,
-        title: l.intl.string(l.t.xrYNBI),
-        subtitle: l.intl.string(l.t.TP1D8l),
-        onClose: c,
+        title: s.intl.string(s.t.xrYNBI),
+        subtitle: s.intl.string(s.t.TP1D8l),
+        onClose: o,
         actions: [
+            { text: s.intl.string(s.t["ETE/oC"]), onClick: o, variant: "secondary" },
             {
-                text: l.intl.string(l.t["ETE/oC"]),
-                onClick: c,
-                variant: "secondary",
-            },
-            {
-                text: l.intl.string(l.t.saZaRb),
+                text: s.intl.string(s.t.saZaRb),
                 onClick: () => {
-                    (0, e.OE)(i), s.default.disconnect(), c();
+                    (0, a.OE)(e), r.default.disconnect(), o();
                 },
                 variant: "critical-primary",
             },

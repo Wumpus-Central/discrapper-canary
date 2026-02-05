@@ -1,46 +1,35 @@
-l.d(t, {
-    A: () => u,
-});
-var n,
-    i,
-    r = l(311907),
-    o = l(73153);
-let a = null,
+l.d(e, { A: () => c });
+var i = l(311907),
+    n = l(73153);
+let r = null,
     s = null,
-    c = !1;
-class d extends (i = r.Ay.Store) {
-    getAllowedApplicationIds(e) {
-        return a === e ? s : null;
+    o = !1;
+class a extends i.Ay.Store {
+    static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
+    getAllowedApplicationIds(t) {
+        return r === t ? s : null;
     }
-    isFetching(e) {
-        return a === e && c;
+    isFetching(t) {
+        return r === t && o;
     }
-    hasCachedData(e) {
-        return a === e && null !== s;
+    hasCachedData(t) {
+        return r === t && null !== s;
     }
 }
-(n = "displayName") in d
-    ? Object.defineProperty(d, n, {
-          value: "GuildSettingsOnboardingAllowedApplicationsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[n] = "GuildSettingsOnboardingAllowedApplicationsStore");
-let u = new d(o.h, {
-    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (e) {
-        let { guildId: t } = e;
-        (a = t), (c = !0), (s = []);
+let c = new a(n.h, {
+    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
+        let { guildId: e } = t;
+        (r = e), (o = !0), (s = []);
     },
-    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (e) {
-        let { guildId: t, applicationIds: l } = e;
-        a === t && ((s = l), (c = !1));
+    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
+        let { guildId: e, applicationIds: l } = t;
+        r === e && ((s = l), (o = !1));
     },
-    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (e) {
-        let { guildId: t } = e;
-        a === t && ((s = []), (c = !1));
+    GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
+        let { guildId: e } = t;
+        r === e && ((s = []), (o = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (a = null), (s = null), (c = !1);
+        (r = null), (s = null), (o = !1);
     },
 });

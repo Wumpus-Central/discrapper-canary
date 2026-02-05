@@ -1,14 +1,11 @@
-r.d(t, {
-    f: () => i,
-});
-var n = r(311907),
-    o = r(430452),
-    u = r(28075);
-
+n.d(t, { f: () => i });
+var r = n(311907),
+    a = n(430452),
+    l = n(28075);
 function i() {
-    return (0, n.cf)([o.A, u.A], () => ({
-        activeVoice: o.A.getActiveVoiceFilter(),
-        mostRecentlyRequestedVoiceId: o.A.getMostRecentlyRequestedVoiceFilter(),
-        lastInitAttemptMayHaveCrashed: u.A.getLastInitAttemptMayHaveCrashed(),
+    return (0, r.cf)([a.A, l.A], () => ({
+        activeVoice: a.A.getActiveVoiceFilter(),
+        mostRecentlyRequestedVoiceId: a.A.getMostRecentlyRequestedVoiceFilter(),
+        lastInitAttemptMayHaveCrashed: l.A.getLastInitAttemptMayHaveCrashed(),
     }));
 }

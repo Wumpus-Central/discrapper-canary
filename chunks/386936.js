@@ -1,15 +1,9 @@
-n.d(t, {
-    $: () => a,
-    s: () => s,
-});
+"use strict";
+n.d(t, { $: () => a, s: () => s });
 var r = n(954571),
     i = n(652215);
-
 function a(e, t) {
-    r.default.track(i.HAw.DM_SETTINGS_UPSELL_ACTION, {
-        action: e,
-        guild_id: t,
-    });
+    r.default.track(i.HAw.DM_SETTINGS_UPSELL_ACTION, { action: e, guild_id: t });
 }
 var s = (function (e) {
     return (

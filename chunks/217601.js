@@ -4,21 +4,8 @@ e.exports = function (e) {
         contains: [
             {
                 className: "meta.prompt",
-                starts: {
-                    end: / |$/,
-                    starts: {
-                        end: "$",
-                        subLanguage: "python",
-                    },
-                },
-                variants: [
-                    {
-                        begin: /^>>>(?=[ ]|$)/,
-                    },
-                    {
-                        begin: /^\.\.\.(?=[ ]|$)/,
-                    },
-                ],
+                starts: { end: / |$/, starts: { end: "$", subLanguage: "python" } },
+                variants: [{ begin: /^>>>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }],
             },
         ],
     };

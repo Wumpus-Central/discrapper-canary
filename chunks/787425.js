@@ -1,3 +1,4 @@
+"use strict";
 var a = r(251796),
     n = Array.prototype.concat,
     s = Array.prototype.slice,

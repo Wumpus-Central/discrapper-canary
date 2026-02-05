@@ -1,59 +1,36 @@
-n.d(t, {
-    A: () => g,
-    g: () => h,
-});
-var r,
-    i,
-    l,
-    a,
-    s = n(627968),
-    o = n(64700),
-    c = n(311907),
-    u = n(73153),
-    d = n(830382),
-    p = n(79387),
-    f = n(985018),
-    h = (((r = {}).SHORT = "SHORT"), (r.LONG = "LONG"), r);
-class A extends (a = o.PureComponent) {
+n.d(t, { A: () => h, g: () => u });
+var i,
+    r = n(627968),
+    a = n(64700),
+    l = n(311907),
+    s = n(73153),
+    o = n(830382),
+    d = n(79387),
+    c = n(985018),
+    u = (((i = {}).SHORT = "SHORT"), (i.LONG = "LONG"), i);
+class A extends a.PureComponent {
+    static defaultProps = { messageStyle: "LONG" };
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
                 case "SHORT":
-                    return f.intl.string(f.t.T15lqn);
+                    return c.intl.string(c.t.T15lqn);
                 case "LONG":
-                    return f.intl.string(f.t.XFShdK);
+                    return c.intl.string(c.t.XFShdK);
             }
         switch (t) {
             case "SHORT":
-                return f.intl.string(f.t["+XstB0"]);
+                return c.intl.string(c.t["+XstB0"]);
             case "LONG":
-                return f.intl.string(f.t.epyCuh);
+                return c.intl.string(c.t.epyCuh);
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && u.h.wait(() => d.T3());
+        null != this.props.purchaseError && s.h.wait(() => o.T3());
     }
     render() {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
-        return null == t
-            ? null
-            : (0, s.jsx)("div", {
-                  className: e,
-                  children: this.getText(t, n),
-              });
+        return null == t ? null : (0, r.jsx)("div", { className: e, children: this.getText(t, n) });
     }
 }
-(l = {
-    messageStyle: "LONG",
-}),
-    (i = "defaultProps") in A
-        ? Object.defineProperty(A, i, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0,
-          })
-        : (A[i] = l);
-let g = c.Ay.connectStores([p.A], () => ({
-    purchaseError: p.A.error,
-}))(A);
+let h = l.Ay.connectStores([d.A], () => ({ purchaseError: d.A.error }))(A);

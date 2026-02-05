@@ -1,21 +1,13 @@
-n.d(t, {
-    Ir: () => p,
-    ZC: () => f,
-    l_: () => d,
-    ou: () => _,
-    pn: () => u,
-    zT: () => h,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { Ir: () => f, ZC: () => _, l_: () => d, ou: () => p, pn: () => c, zT: () => h });
 var r = n(64700),
     i = n(198982),
     a = n(626584),
     s = n(739508),
     o = n(566980),
     l = n(985018);
-let c = new a.A("PaymentSteps");
-var u = (function (e) {
+let u = new a.A("PaymentSteps");
+var c = (function (e) {
     return (
         (e.PAYMENT_TYPE = "payment_type"),
         (e.PAYMENT_ELEMENT = "payment_element"),
@@ -59,7 +51,7 @@ let d = new Set([
         "awaiting_browser_checkout_google_pay",
         "awaiting_browser_checkout_apple_pay",
     ]),
-    f = new Set([
+    _ = new Set([
         "credit_card_information",
         "payment_request_information",
         "paypal_information",
@@ -71,8 +63,7 @@ let d = new Set([
         "premium_upsell",
         "przelewy24_information",
     ]);
-
-function p(e) {
+function f(e) {
     switch (e) {
         case "plan_select":
             return l.intl.string(l.t["r+SebU"]);
@@ -101,18 +92,16 @@ function p(e) {
         case "gift_customization":
             return l.intl.string(l.t.R0vK0N);
     }
-    throw Error("Unexpected step: ".concat(e));
+    throw Error(`Unexpected step: ${e}`);
 }
-
-function _(e) {
+function p(e) {
     if (null != e) {
-        if (!(e instanceof i.Ey)) throw (c.error(e), (0, s.pM)(e), Error("Unexpected error type"));
+        if (!(e instanceof i.Ey)) throw (u.error(e), (0, s.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }
     return null;
 }
-
 function h(e, t, n) {
     r.useEffect(() => {
         null != e && "review" !== e && t !== o.h.WAITING && t !== o.h.COMPLETED && n(o.h.WAITING);

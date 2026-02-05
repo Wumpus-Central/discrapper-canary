@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     av: "lockedPickerItem__5b8f4",
     n2: "guildBadge__5b8f4",

@@ -1,36 +1,33 @@
-n.d(t, {
-    u: () => j,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { u: () => f });
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(974544),
-    c = n(840120),
-    o = n(351906),
-    d = n(975571),
+    o = n(840120),
+    d = n(351906),
+    c = n(975571),
     u = n(665346),
-    f = n(310527),
+    m = n(310527),
     g = n(737331),
-    b = n(627011),
-    m = n(911144),
-    p = n(652215),
-    x = n(985018),
-    h = n(182452);
-
-function j(e) {
+    x = n(627011),
+    h = n(911144),
+    _ = n(652215),
+    A = n(985018),
+    p = n(182452);
+function f(e) {
     let { guild: t } = e,
-        n = i.useRef(null),
-        j = (0, c.M5)(t.id, "GuildSettingsBoostPerks"),
-        O = (0, l.bG)([o.A], () => o.A.hideInstantInvites);
-    (0, u.A)(n, p.nd0.BOOST_PERKS_VANITY_URL);
+        n = s.useRef(null),
+        f = (0, o.M5)(t.id, "GuildSettingsBoostPerks"),
+        j = (0, l.bG)([d.A], () => d.A.hideInstantInvites);
+    (0, u.A)(n, _.nd0.BOOST_PERKS_VANITY_URL);
     let {
-            vanityURLCode: y,
-            vanityURLUses: v,
-            originalVanityURLCode: A,
-            errorDetails: E,
-            fetched: N,
+            vanityURLCode: N,
+            vanityURLUses: E,
+            originalVanityURLCode: b,
+            errorDetails: T,
+            fetched: C,
         } = (0, l.cf)([g.A], () => ({
             vanityURLCode: g.A.vanityURLCode,
             vanityURLUses: g.A.vanityURLUses,
@@ -38,46 +35,41 @@ function j(e) {
             errorDetails: g.A.errorDetails,
             fetched: g.A.fetchedVanityURL,
         })),
-        _ = null == t ? void 0 : t.id;
-    return (i.useEffect(() => {
-        null == _ || N || (0, f.Je)(_);
-    }, [N, _]),
+        I = t?.id;
+    return (s.useEffect(() => {
+        null == I || C || (0, m.Je)(I);
+    }, [C, I]),
     null == t)
         ? null
-        : O
-          ? (0, r.jsx)(a.A, {})
-          : (0, r.jsxs)("div", {
+        : j
+          ? (0, i.jsx)(a.A, {})
+          : (0, i.jsxs)("div", {
                 ref: n,
                 children: [
-                    (0, r.jsxs)(s.Heading, {
+                    (0, i.jsxs)(r.Heading, {
                         variant: "heading-md/medium",
                         color: "text-strong",
-                        className: h.D,
-                        children: [
-                            x.intl.string(x.t["5XZKy/"]),
-                            (0, r.jsx)(b.rV, {
-                                guild: t,
-                            }),
-                        ],
+                        className: p.D,
+                        children: [A.intl.string(A.t["5XZKy/"]), (0, i.jsx)(x.rV, { guild: t })],
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        className: h.h,
-                        children: j
-                            ? x.intl.format(x.t["J/v84B"], {
-                                  helpCenterArticle: d.A.getArticleURL(p.MVz.GUILD_VANITY_URL),
+                        className: p.h,
+                        children: f
+                            ? A.intl.format(A.t["J/v84B"], {
+                                  helpCenterArticle: c.A.getArticleURL(_.MVz.GUILD_VANITY_URL),
                               })
-                            : x.intl.format(x.t.koklFG, {
-                                  helpCenterArticle: d.A.getArticleURL(p.MVz.GUILD_VANITY_URL),
+                            : A.intl.format(A.t.koklFG, {
+                                  helpCenterArticle: c.A.getArticleURL(_.MVz.GUILD_VANITY_URL),
                               }),
                     }),
-                    (0, r.jsx)(m.C, {
+                    (0, i.jsx)(h.C, {
                         guild: t,
-                        vanityURLCode: y,
-                        vanityURLUses: v,
-                        originalVanityURLCode: A,
-                        errorDetails: E,
+                        vanityURLCode: N,
+                        vanityURLUses: E,
+                        originalVanityURLCode: b,
+                        errorDetails: T,
                     }),
                 ],
             });

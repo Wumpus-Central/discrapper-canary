@@ -1,68 +1,63 @@
-n.d(t, {
-    A: () => s,
-    J: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => r, J: () => s });
+var i = n(627968);
 n(64700);
-var i = n(21878),
+var l = n(21878),
     a = n(756369);
-
-function s(e) {
+function r(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: s = !1 },
-        hasSpoilerEmbeds: o,
-        hasBailedAst: l,
-        handleContextMenu: c,
-        isInteracting: u,
-        isAutomodBlockedMessage: d,
-        isMessageSnapshot: f,
-        renderThreadAccessory: p,
-        renderSuppressEmbeds: _,
-        renderReactions: h,
-        forceAddReactions: m,
-        disableComponentInteractivity: g,
-        className: E,
+        channelMessageProps: { message: t, channel: n, compact: r = !1 },
+        hasSpoilerEmbeds: s,
+        hasBailedAst: o,
+        handleContextMenu: d,
+        isInteracting: c,
+        isAutomodBlockedMessage: u,
+        isMessageSnapshot: m,
+        renderThreadAccessory: _,
+        renderSuppressEmbeds: h,
+        renderReactions: p,
+        forceAddReactions: g,
+        disableComponentInteractivity: A,
+        className: f,
     } = e;
-    return d
+    return u
         ? null
-        : (0, r.jsx)(i.A, {
+        : (0, i.jsx)(l.A, {
               message: t,
-              children: (0, r.jsx)(a.Ay, {
-                  className: E,
-                  isInteracting: u,
+              children: (0, i.jsx)(a.Ay, {
+                  className: f,
+                  isInteracting: c,
                   message: t,
                   channel: n,
-                  compact: s,
-                  hasSpoilerEmbeds: o,
-                  hasBailedAst: l,
-                  isMessageSnapshot: f,
-                  onMediaItemContextMenu: c,
-                  renderThreadAccessory: p,
-                  disableComponentInteractivity: g,
-                  renderSuppressEmbeds: _,
-                  forceAddReactions: m,
-                  renderReactions: h,
+                  compact: r,
+                  hasSpoilerEmbeds: s,
+                  hasBailedAst: o,
+                  isMessageSnapshot: m,
+                  onMediaItemContextMenu: d,
+                  renderThreadAccessory: _,
+                  disableComponentInteractivity: A,
+                  renderSuppressEmbeds: h,
+                  forceAddReactions: g,
+                  renderReactions: p,
               }),
           });
 }
-
-function o(e, t, n) {
+function s(e, t, n) {
     let {
-        message: i,
-        channel: s,
-        compact: o = !1,
-        renderThreadAccessory: l,
-        disableReactionCreates: c,
-        disableReactionUpdates: u,
+        message: l,
+        channel: r,
+        compact: s = !1,
+        renderThreadAccessory: o,
+        disableReactionCreates: d,
+        disableReactionUpdates: c,
     } = e;
-    return (0, r.jsx)(a.OC, {
-        message: i,
-        channel: s,
-        compact: o,
+    return (0, i.jsx)(a.OC, {
+        message: l,
+        channel: r,
+        compact: s,
         hasSpoilerEmbeds: t,
         hasBailedAst: n,
-        renderThreadAccessory: l,
-        disableReactionCreates: c,
-        disableReactionUpdates: u,
+        renderThreadAccessory: o,
+        disableReactionCreates: d,
+        disableReactionUpdates: c,
     });
 }

@@ -1,29 +1,12 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    o = n(826469);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = null,
-    c = null,
-    u = [];
-
-function d(e) {
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(73153),
+    a = n(826469);
+let s = null,
+    o = null,
+    l = [];
+function u(e) {
     if (
         null == e.price ||
         null == e.price.checkout_context ||
@@ -31,25 +14,20 @@ function d(e) {
         null == e.checkoutSessionId
     )
         return !1;
-    (l = e.price.checkout_context),
-        (c = e.checkoutSessionId),
-        (u = l.payment_sources.map(o.A.createFromCheckoutContext));
+    (s = e.price.checkout_context),
+        (o = e.checkoutSessionId),
+        (l = s.payment_sources.map(a.A.createFromCheckoutContext));
 }
-
-function f() {
-    (l = null), (c = null), (u = []);
+function c() {
+    (s = null), (o = null), (l = []);
 }
-class p extends (r = i.Ay.Store) {
+class d extends r.Ay.Store {
+    static displayName = "CheckoutContextStore";
     hasCheckoutContextForSession(e) {
-        return null != l && c === e;
+        return null != s && o === e;
     }
     getPaymentSourceRecords() {
-        return u;
+        return l;
     }
 }
-s(p, "displayName", "CheckoutContextStore");
-let _ = new p(a.h, {
-    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: d,
-    SKU_PURCHASE_MODAL_CLOSE: f,
-    LOGOUT: f,
-});
+let _ = new d(i.h, { SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: u, SKU_PURCHASE_MODAL_CLOSE: c, LOGOUT: c });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yl: "modal__4b2e7",
     wx: "header__4b2e7",

@@ -1,74 +1,50 @@
-t.d(n, {
-    N: () => m,
-}),
-    t(896048);
-var r = t(627968),
-    l = t(64700),
-    c = t(503698),
-    a = t.n(c),
+t.d(n, { N: () => m });
+var l = t(627968),
+    r = t(64700),
+    a = t(503698),
+    s = t.n(a),
     i = t(397927),
-    s = t(268218),
-    o = t(957565),
+    c = t(268218),
+    d = t(957565),
     u = t(206314),
-    d = t(829681);
-
+    o = t(829681);
 function h(e) {
     let { text: n } = e,
-        [t, c] = l.useState(!1);
-    return (0, r.jsx)(i.DUT, {
+        [t, a] = r.useState(!1);
+    return (0, l.jsx)(i.DUT, {
         onClick: () => {
-            (0, o.C)(
+            (0, d.C)(
                 n,
-                () => c(!0),
-                () => c(!1),
+                () => a(!0),
+                () => a(!1),
             );
         },
         children: t
-            ? (0, r.jsx)(i.A9s, {
-                  size: "xs",
-                  color: "currentColor",
-              })
-            : (0, r.jsx)(i.TdU, {
-                  size: "xs",
-                  color: "currentColor",
-              }),
+            ? (0, l.jsx)(i.A9s, { size: "xs", color: "currentColor" })
+            : (0, l.jsx)(i.TdU, { size: "xs", color: "currentColor" }),
     });
 }
-
 function m(e) {
-    let { language: n, content: l } = e,
-        c = () =>
-            (0, r.jsx)("code", {
-                className: a()(d.kw, "hljs"),
-                children: l,
-            });
-    return (0, r.jsx)("pre", {
-        children: (0, r.jsxs)("div", {
+    let { language: n, content: r } = e,
+        a = () => (0, l.jsx)("code", { className: s()(o.kw, "hljs"), children: r });
+    return (0, l.jsx)("pre", {
+        children: (0, l.jsxs)("div", {
             className: u.Hy,
             children: [
-                o.p5
-                    ? (0, r.jsx)("div", {
-                          className: u.lB,
-                          children: (0, r.jsx)(h, {
-                              text: l,
-                          }),
-                      })
-                    : null,
-                (0, r.jsx)(s.c2, {
+                d.p5 ? (0, l.jsx)("div", { className: u.lB, children: (0, l.jsx)(h, { text: r }) }) : null,
+                (0, l.jsx)(c.c2, {
                     createPromise: () => Promise.resolve().then(t.bind(t, 752238)),
                     webpackId: 752238,
-                    renderFallback: c,
+                    renderFallback: a,
                     render: (e) => {
-                        if (!(null != n && e.hasLanguage(n))) return c();
+                        if (!(null != n && e.hasLanguage(n))) return a();
                         {
-                            let t = e.highlight(n, l, !0);
+                            let t = e.highlight(n, r, !0);
                             return null == t
-                                ? c()
-                                : (0, r.jsx)("code", {
-                                      className: a()(d.kw, "hljs", t.language),
-                                      dangerouslySetInnerHTML: {
-                                          __html: t.value,
-                                      },
+                                ? a()
+                                : (0, l.jsx)("code", {
+                                      className: s()(o.kw, "hljs", t.language),
+                                      dangerouslySetInnerHTML: { __html: t.value },
                                   });
                         }
                     },

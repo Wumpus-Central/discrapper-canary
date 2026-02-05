@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function e(t, n) {
     if (t === n) return !0;
     if (t && n && "object" == typeof t && "object" == typeof n) {

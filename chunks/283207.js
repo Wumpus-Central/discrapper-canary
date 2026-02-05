@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(715804),
     o = n(517480),
@@ -21,31 +22,8 @@ var r = n(834647),
             p(n, g, n.stack, 1),
             arguments.length > 2 && d(n, arguments[2]);
         var s = [];
-        return (
-            h(e, v, {
-                that: s,
-            }),
-            c(n, "errors", s),
-            n
-        );
+        return h(e, v, { that: s }), c(n, "errors", s), n;
     };
-i
-    ? i(g, y)
-    : s(g, y, {
-          name: !0,
-      });
-var b = (g.prototype = l(y.prototype, {
-    constructor: u(1, g),
-    message: u(1, ""),
-    name: u(1, "AggregateError"),
-}));
-r(
-    {
-        global: !0,
-        constructor: !0,
-        arity: 2,
-    },
-    {
-        AggregateError: g,
-    },
-);
+i ? i(g, y) : s(g, y, { name: !0 });
+var b = (g.prototype = l(y.prototype, { constructor: u(1, g), message: u(1, ""), name: u(1, "AggregateError") }));
+r({ global: !0, constructor: !0, arity: 2 }, { AggregateError: g });

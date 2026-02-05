@@ -1,100 +1,79 @@
-e.d(i, {
-    default: () => E,
-}),
-    e(321073);
-var n = e(627968);
+e.d(i, { default: () => E }), e(321073);
+var a = e(627968);
 e(64700);
-var a = e(158954),
-    l = e(509536),
-    r = e(71393),
+var n = e(158954),
+    r = e(509536),
+    s = e(71393),
     d = e(576705),
-    s = e(954571),
+    l = e(954571),
     u = e(63995),
-    o = e(69407),
-    p = e(233993),
-    _ = e(652215),
+    p = e(69407),
+    _ = e(233993),
+    o = e(652215),
     c = e(788868),
     I = e(985018),
     g = e(98209);
-
 function E(t) {
-    var i;
-    let e,
-        { channel: E, transitionState: T, onClose: S } = t,
-        C = r.A.getGuild(E.guild_id),
-        A = null != (i = null == C ? void 0 : C.maxStageVideoChannelUsers) ? i : 0,
-        O = null != C && C.features.has(_.GuildFeatures.COMMUNITY),
-        L = I.intl.string(I.t.pqPQL0),
-        m = O ? A < _.p2C : (null == C ? void 0 : C.premiumTier) !== _.TVA.TIER_3 && A <= _.nyz,
-        v = d.A.can(p.QY, E);
-    e =
-        O && (null == C ? void 0 : C.premiumTier) === _.TVA.TIER_3
-            ? A <= _.p2C
+    let i,
+        { channel: e, transitionState: E, onClose: T } = t,
+        S = s.A.getGuild(e.guild_id),
+        C = S?.maxStageVideoChannelUsers ?? 0,
+        A = null != S && S.features.has(o.GuildFeatures.COMMUNITY),
+        O = I.intl.string(I.t.pqPQL0),
+        L = A ? C < o.p2C : S?.premiumTier !== o.TVA.TIER_3 && C <= o.nyz,
+        m = d.A.can(_.QY, e);
+    i =
+        A && S?.premiumTier === o.TVA.TIER_3
+            ? C <= o.p2C
                 ? I.intl.string(I.t.tJmOuw)
                 : I.intl.string(I.t["7FHbPG"])
-            : m
+            : L
               ? I.intl.string(I.t["8/uDSF"])
               : I.intl.string(I.t["7FHbPG"]);
     let h = () => {
-            S(),
-                s.default.track(_.HAw.BOOSTING_UPSELL_CLICKED, {
-                    guild_id: E.guild_id,
+            T(),
+                l.default.track(o.HAw.BOOSTING_UPSELL_CLICKED, {
+                    guild_id: e.guild_id,
                     type: c.e.VIDEO_STAGE_LIMIT,
-                    is_moderator: v,
+                    is_moderator: m,
                     action: c.pd.DISMISS,
                 });
         },
-        G = u.A.getMutableParticipants(E.id, o.ip.SPEAKER).filter((t) => t.type === o.wY.VOICE).length,
-        f = u.A.getParticipantCount(E.id, o.ip.AUDIENCE);
-    s.default.track(_.HAw.BOOSTING_UPSELL_VIEWED, {
-        guild_id: E.guild_id,
+        G = u.A.getMutableParticipants(e.id, p.ip.SPEAKER).filter((t) => t.type === p.wY.VOICE).length,
+        f = u.A.getParticipantCount(e.id, p.ip.AUDIENCE);
+    l.default.track(o.HAw.BOOSTING_UPSELL_VIEWED, {
+        guild_id: e.guild_id,
         type: c.e.VIDEO_STAGE_LIMIT,
-        is_moderator: v,
+        is_moderator: m,
         listener_count: G + f,
     });
     let k = [];
     return (
-        m
+        L
             ? k.push(
-                  {
-                      text: I.intl.string(I.t.f3Pet9),
-                      variant: "secondary",
-                      onClick: h,
-                  },
+                  { text: I.intl.string(I.t.f3Pet9), variant: "secondary", onClick: h },
                   {
                       text: I.intl.string(I.t.Uj0md3),
                       variant: "expressive",
                       onClick: () => {
-                          S(),
-                              (0, l.K)({
-                                  guildId: E.guild_id,
-                                  location: {
-                                      section: _.JJy.STAGE_VIDEO_LIMIT,
-                                  },
-                              }),
-                              s.default.track(_.HAw.BOOSTING_UPSELL_CLICKED, {
-                                  guild_id: E.guild_id,
+                          T(),
+                              (0, r.K)({ guildId: e.guild_id, location: { section: o.JJy.STAGE_VIDEO_LIMIT } }),
+                              l.default.track(o.HAw.BOOSTING_UPSELL_CLICKED, {
+                                  guild_id: e.guild_id,
                                   type: c.e.VIDEO_STAGE_LIMIT,
-                                  is_moderator: v,
+                                  is_moderator: m,
                                   action: c.pd.BOOST,
                               });
                       },
                   },
               )
-            : k.push({
-                  text: I.intl.string(I.t["NX+WJN"]),
-                  variant: "primary",
-                  onClick: h,
-              }),
-        (0, n.jsx)(a.ExpressiveModal, {
-            transitionState: T,
-            onClose: S,
-            title: L,
-            subtitle: e,
-            graphic: {
-                type: "image",
-                src: g,
-            },
+            : k.push({ text: I.intl.string(I.t["NX+WJN"]), variant: "primary", onClick: h }),
+        (0, a.jsx)(n.ExpressiveModal, {
+            transitionState: E,
+            onClose: T,
+            title: O,
+            subtitle: i,
+            graphic: { type: "image", src: g },
             actions: k,
         })
     );

@@ -1,49 +1,32 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r,
-    i,
-    l = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(498642),
-    c = n(71393),
-    u = n(576705),
+n.d(t, { A: () => A });
+var i = n(311907),
+    r = n(506774),
+    a = n(73153),
+    l = n(498642),
+    s = n(71393),
+    o = n(576705),
     d = n(652215);
-let p = {
-    MAX_MEMBER_COUNT: new Set(),
-};
-class f extends (r = l.Ay.Store) {
+let c = { MAX_MEMBER_COUNT: new Set() };
+class u extends i.Ay.Store {
+    static displayName = "MaxMemberCountChannelNoticeStore";
     initialize() {
-        var e;
-        this.waitFor(u.A, c.A, o.A),
-            this.syncWith([u.A, c.A, o.A], d.tEg),
-            a.w.remove(d.n5X.MAX_MEMBER_COUNT_100),
-            a.w.remove(d.n5X.MAX_MEMBER_COUNT_250),
-            (e = new Set(a.w.get(d.n5X.MAX_MEMBER_COUNT))),
-            (p[d.n5X.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
+        this.waitFor(o.A, s.A, l.A),
+            this.syncWith([o.A, s.A, l.A], d.tEg),
+            r.w.remove(d.n5X.MAX_MEMBER_COUNT_100),
+            r.w.remove(d.n5X.MAX_MEMBER_COUNT_250),
+            (c[d.n5X.MAX_MEMBER_COUNT] = new Set(r.w.get(d.n5X.MAX_MEMBER_COUNT)) ?? new Set());
     }
     isVisible(e) {
-        var t;
         if (null == e) return !1;
-        let n = null != (t = o.A.getMemberCount(e.id)) ? t : 0,
-            r = u.A.can(d.xBc.ADMINISTRATOR, e);
-        return !p[d.n5X.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 1e4;
+        let t = l.A.getMemberCount(e.id) ?? 0,
+            n = o.A.can(d.xBc.ADMINISTRATOR, e);
+        return !c[d.n5X.MAX_MEMBER_COUNT].has(e.id) && n && e.maxMembers > 0 && e.maxMembers - t <= 1e4;
     }
 }
-(i = "displayName") in f
-    ? Object.defineProperty(f, i, {
-          value: "MaxMemberCountChannelNoticeStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (f[i] = "MaxMemberCountChannelNoticeStore");
-let h = new f(s.h, {
+let A = new u(a.h, {
     MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
-        if (!p[d.n5X.MAX_MEMBER_COUNT].has(t))
-            return p[d.n5X.MAX_MEMBER_COUNT].add(t), a.w.set(d.n5X.MAX_MEMBER_COUNT, p[d.n5X.MAX_MEMBER_COUNT]), !0;
+        if (!c[d.n5X.MAX_MEMBER_COUNT].has(t))
+            return c[d.n5X.MAX_MEMBER_COUNT].add(t), r.w.set(d.n5X.MAX_MEMBER_COUNT, c[d.n5X.MAX_MEMBER_COUNT]), !0;
     },
 });

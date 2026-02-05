@@ -135,64 +135,24 @@ e.exports = function (e) {
             "verbose",
             "warning",
         ],
-        a = {
-            className: "variable.constant",
-            begin: t.concat(/\$/, t.either(...n)),
-        },
-        s = {
-            className: "variable",
-            begin: /\$+\{[\!\w.:-]+\}/,
-        },
-        o = {
-            className: "variable",
-            begin: /\$+\w[\w\.]*/,
-            illegal: /\(\)\{\}/,
-        },
-        l = {
-            className: "variable",
-            begin: /\$+\([\w^.:!-]+\)/,
-        },
-        c = {
-            className: "params",
-            begin: t.either(...r),
-        },
-        u = {
-            className: "keyword",
-            begin: t.concat(/!/, t.either(...i)),
-        },
-        d = {
-            className: "title.function",
-            begin: /\w+::\w+/,
-        },
-        f = {
+        a = { className: "variable.constant", begin: t.concat(/\$/, t.either(...n)) },
+        s = { className: "variable", begin: /\$+\{[\!\w.:-]+\}/ },
+        o = { className: "variable", begin: /\$+\w[\w\.]*/, illegal: /\(\)\{\}/ },
+        l = { className: "variable", begin: /\$+\([\w^.:!-]+\)/ },
+        u = { className: "params", begin: t.either(...r) },
+        c = { className: "keyword", begin: t.concat(/!/, t.either(...i)) },
+        d = { className: "title.function", begin: /\w+::\w+/ },
+        _ = {
             className: "string",
             variants: [
-                {
-                    begin: '"',
-                    end: '"',
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                },
-                {
-                    begin: "`",
-                    end: "`",
-                },
+                { begin: '"', end: '"' },
+                { begin: "'", end: "'" },
+                { begin: "`", end: "`" },
             ],
             illegal: /\n/,
-            contains: [
-                {
-                    className: "char.escape",
-                    begin: /\$(\\[nrt]|\$)/,
-                },
-                a,
-                s,
-                o,
-                l,
-            ],
+            contains: [{ className: "char.escape", begin: /\$(\\[nrt]|\$)/ }, a, s, o, l],
         },
-        p = [
+        f = [
             "Abort",
             "AddBrandingImage",
             "AddSize",
@@ -406,7 +366,7 @@ e.exports = function (e) {
             "WriteUninstaller",
             "XPStyle",
         ],
-        _ = [
+        p = [
             "admin",
             "all",
             "auto",
@@ -461,45 +421,28 @@ e.exports = function (e) {
             "WinVista",
             "zlib",
         ],
-        h = {
-            match: [/Function/, /\s+/, t.concat(/(\.)?/, e.IDENT_RE)],
-            scope: {
-                1: "keyword",
-                3: "title.function",
-            },
-        },
+        h = { match: [/Function/, /\s+/, t.concat(/(\.)?/, e.IDENT_RE)], scope: { 1: "keyword", 3: "title.function" } },
         m = {
             match: [/Var/, /\s+/, /(?:\/GLOBAL\s+)?/, /[A-Za-z][\w.]*/],
-            scope: {
-                1: "keyword",
-                3: "params",
-                4: "variable",
-            },
+            scope: { 1: "keyword", 3: "params", 4: "variable" },
         };
     return {
         name: "NSIS",
         case_insensitive: !0,
-        keywords: {
-            keyword: p,
-            literal: _,
-        },
+        keywords: { keyword: f, literal: p },
         contains: [
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            e.COMMENT(";", "$", {
-                relevance: 0,
-            }),
+            e.COMMENT(";", "$", { relevance: 0 }),
             m,
             h,
-            {
-                beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd",
-            },
-            f,
-            u,
+            { beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd" },
+            _,
+            c,
             s,
             o,
             l,
-            c,
+            u,
             d,
             e.NUMBER_MODE,
         ],

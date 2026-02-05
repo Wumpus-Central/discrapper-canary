@@ -1,116 +1,46 @@
-n.d(t, {
-    i: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { i: () => _ });
 var r = n(64700),
     i = n(635358),
     a = n(311907),
     s = n(49463),
     o = n(979286),
     l = n(590180),
-    c = n(233525);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = 6e5,
-    h = 6e5;
-
-function m(e, t, n) {
-    (0, c.n)("useMaybeFetchCollectiblesCategoriesShared");
-    let u = (0, a.bG)([s.A], () => s.A.hasLoadedExperiments),
-        f = null == e ? void 0 : e.includeBundles,
-        m = i.g.VARIANTS_GROUP,
-        [g, E, b, y, O, A, v] = (0, a.yK)([l.A], () => {
-            var e, t;
-            return [
-                l.A.isFetchingCategories,
-                l.A.lastFetchOptions,
-                l.A.error,
-                null != (e = l.A.lastErrorTimestamp) ? e : 0,
-                null != (t = l.A.lastSuccessfulFetch) ? t : 0,
-                l.A.categories,
-                l.A.skipNumCategories,
-            ];
-        });
+    u = n(233525);
+let c = 6e5,
+    d = 6e5;
+function _(e, t, n) {
+    (0, u.n)("useMaybeFetchCollectiblesCategoriesShared");
+    let _ = (0, a.bG)([s.A], () => s.A.hasLoadedExperiments),
+        f = e?.includeBundles,
+        p = i.g.VARIANTS_GROUP,
+        [h, m, g, E, A, I, T] = (0, a.yK)([l.A], () => [
+            l.A.isFetchingCategories,
+            l.A.lastFetchOptions,
+            l.A.error,
+            l.A.lastErrorTimestamp ?? 0,
+            l.A.lastSuccessfulFetch ?? 0,
+            l.A.categories,
+            l.A.skipNumCategories,
+        ]);
     return (
         (0, r.useEffect)(() => {
-            if (!u || g) return;
-            let r = Date.now() - y < h;
-            if (b && r) return;
-            let i = p(d({}, e), {
-                    variantsReturnStyle: m,
-                    includeBundles: f,
-                    skipNumCategories: v,
-                }),
-                a = !(0, o.gn)(E, i),
-                s = Date.now() - O < _;
+            if (!_ || h) return;
+            let r = Date.now() - E < d;
+            if (g && r) return;
+            let i = { ...e, variantsReturnStyle: p, includeBundles: f, skipNumCategories: T },
+                a = !(0, o.gn)(m, i),
+                s = Date.now() - A < c;
             (a || !s) && (0, o.CK)(i, t, n);
-        }, [u, g, E, O, e, b, f, y, t, n, v, m]),
+        }, [_, h, m, A, e, g, f, E, t, n, T, p]),
         {
-            isFetching: g,
-            categories: A,
-            fetchCategoriesError: b,
+            isFetching: h,
+            categories: I,
+            fetchCategoriesError: g,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = p(d({}, e), {
-                    variantsReturnStyle: m,
-                    includeBundles: f,
-                    skipNumCategories: v,
-                });
+                let t = { ...e, variantsReturnStyle: p, includeBundles: f, skipNumCategories: T };
                 (0, o.CK)(t, void 0, n);
-            }, [e, f, n, v, m]),
+            }, [e, f, n, T, p]),
         }
     );
 }

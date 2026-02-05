@@ -1,290 +1,183 @@
-n.d(t, {
-    A: () => U,
-}),
-    n(896048),
-    n(65821);
-var r = n(627968),
+n.d(t, { A: () => k });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(311907),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
     o = n(397927),
     c = n(817363),
-    u = n(475743),
-    d = n(147087),
+    d = n(475743),
+    u = n(147087),
     h = n(734066),
-    p = n(274372),
-    g = n(572164),
-    f = n(157207),
-    m = n(794905),
-    b = n(450510),
-    A = n(267102),
-    y = n(969632),
-    O = n(566908),
-    _ = n(406704),
-    j = n(253932),
-    x = n(761640),
-    v = n(186111),
-    E = n(576705),
-    C = n(461213),
-    S = n(203982),
-    I = n(723702),
-    N = n(518960),
-    T = n(545428),
-    P = n(38198),
-    w = n(447155),
-    R = n(652215),
-    D = n(696016),
-    L = n(985018),
-    M = n(275825);
-
-function G(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function k(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let U = l.memo(function (e) {
-    var t, i;
-    let { className: U, channel: V, draftType: B, editorTextContent: H, setValue: F, canOnlyUseTextCommands: K } = e,
-        Y = (0, A.Us)(),
-        W = l.useRef(null),
-        z = l.useRef(null),
-        q = (0, a.bG)([C.A], () => C.A.getActivities()),
-        X = (0, g.Et)(),
-        J = (0, a.bG)([p.A], () => p.A.getLastClipsSession()),
-        Q = (0, a.yK)([p.A], () => p.A.getNewClipIds()),
-        Z = (0, a.bG)([x.Ay], () => null == x.Ay.getCurrentSidebarChannelId(V.id)),
-        { showClipsHeaderEntrypoint: $ } = h.L_.useExperiment(
-            {
-                location: "ChannelAttachButton",
-            },
-            {
-                autoTrackExposure: !1,
-            },
+    m = n(274372),
+    A = n(572164),
+    p = n(157207),
+    g = n(794905),
+    f = n(450510),
+    _ = n(267102),
+    E = n(969632),
+    C = n(566908),
+    x = n(406704),
+    S = n(253932),
+    T = n(761640),
+    I = n(186111),
+    N = n(576705),
+    v = n(461213),
+    y = n(203982),
+    b = n(723702),
+    R = n(518960),
+    j = n(545428),
+    M = n(38198),
+    D = n(447155),
+    O = n(652215),
+    L = n(696016),
+    P = n(985018),
+    w = n(275825);
+let k = l.memo(function (e) {
+    let { className: t, channel: a, draftType: k, editorTextContent: U, setValue: G, canOnlyUseTextCommands: F } = e,
+        H = (0, _.Us)(),
+        B = l.useRef(null),
+        V = l.useRef(null),
+        W = (0, r.bG)([v.A], () => v.A.getActivities()),
+        K = (0, A.Et)(),
+        z = (0, r.bG)([m.A], () => m.A.getLastClipsSession()),
+        Y = (0, r.yK)([m.A], () => m.A.getNewClipIds()),
+        q = (0, r.bG)([T.Ay], () => null == T.Ay.getCurrentSidebarChannelId(a.id)),
+        { showClipsHeaderEntrypoint: J } = h.L_.useExperiment(
+            { location: "ChannelAttachButton" },
+            { autoTrackExposure: !1 },
         ),
-        { onShareClick: ee } = (0, m.A)(V.id),
-        et = (0, a.bG)([b.HP], () => b.HP.hasHotspot(b._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        en = (0, o.red)((e) => (0, o.fDT)(e, D.nm)),
-        er = (0, a.bG)([v.A], () => v.A.hasLayers()),
-        el = (0, a.bG)([p.A], () => p.A.hasClips()),
-        [ei, es] = l.useState(null),
-        ea = (0, h.sw)() && (X || el),
-        eo = V.isPrivate(),
-        ec = (0, a.bG)([E.A], () => eo || (E.A.can(R.xBc.ATTACH_FILES, V) && E.A.can(R.xBc.SEND_MESSAGES, V))),
-        eu = (0, u.A)(J);
-
-    function ed() {
+        { onShareClick: $ } = (0, g.A)(a.id),
+        Z = (0, r.bG)([f.HP], () => f.HP.hasHotspot(f._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        X = (0, o.red)((e) => (0, o.fDT)(e, L.nm)),
+        Q = (0, r.bG)([I.A], () => I.A.hasLayers()),
+        ee = (0, r.bG)([m.A], () => m.A.hasClips()),
+        [et, en] = l.useState(null),
+        ei = (0, h.sw)() && (K || ee),
+        el = a.isPrivate(),
+        ea = (0, r.bG)([N.A], () => el || (N.A.can(O.xBc.ATTACH_FILES, a) && N.A.can(O.xBc.SEND_MESSAGES, a))),
+        es = (0, d.A)(z);
+    function er() {
         (0, o.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("4918"), n.e("98184")]).then(n.bind(n, 543428));
-                return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        k(G({}, t), {
-                            channelId: V.id,
-                            onClipClick: (e) =>
-                                ee({
-                                    clips: [e],
-                                }),
-                        }),
-                    );
+                return (t) => (0, i.jsx)(e, { ...t, channelId: a.id, onClipClick: (e) => $({ clips: [e] }) });
             },
-            {
-                modalKey: D.nm,
-            },
+            { modalKey: L.nm },
         ),
-            es(null);
+            en(null);
     }
-    (null == eu ? void 0 : eu.newClipIds.length) !== (null == J ? void 0 : J.newClipIds.length) &&
-        (null != (t = null == J ? void 0 : J.newClipIds.length) ? t : 0) > 0 &&
-        null == ei &&
-        et &&
+    es?.newClipIds.length !== z?.newClipIds.length &&
+        (z?.newClipIds.length ?? 0) > 0 &&
+        null == et &&
         Z &&
-        !en &&
-        !$ &&
-        !er &&
-        es("recentClips"),
+        q &&
+        !X &&
+        !J &&
+        !Q &&
+        en("recentClips"),
         l.useEffect(() => {
             let e = (e) => {
                 let { channelId: t } = e;
-                if (t === V.id) {
-                    var n;
-                    null == (n = W.current) || n.activateUploadDialogue();
-                }
+                t === a.id && B.current?.activateUploadDialogue();
             };
             return (
-                S._.subscribe(R.jej.UPLOAD_FILE, e),
+                y._.subscribe(O.jej.UPLOAD_FILE, e),
                 () => {
-                    S._.unsubscribe(R.jej.UPLOAD_FILE, e);
+                    y._.unsubscribe(O.jej.UPLOAD_FILE, e);
                 }
             );
         });
-    let eh = (0, _.n)(V),
-        ep = (0, _.Tb)(V),
-        eg = !j.D_.useSetting() && !(0, I.isAndroidWeb)() && null != window.ResizeObserver,
-        ef = (0, y.I7)(null != V ? V : void 0),
-        em = (0, O.Sc)({
-            location: "ChannelAttachButton",
-        }),
-        eb = (0, d.b)(),
-        eA = null != (i = null == Q ? void 0 : Q.length) ? i : 0,
-        ey = (0, w.A)({
-            canAttachFiles: ec,
-            canStartThreads: eh || ep,
-            useSlate: eg,
-            hasClips: ea,
-            canUseApplicationCommands: !K,
-            channel: V,
-            activities: q,
+    let eo = (0, x.n)(a),
+        ec = (0, x.Tb)(a),
+        ed = !S.D_.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+        eu = (0, E.I7)(a ?? void 0),
+        eh = (0, C.Sc)({ location: "ChannelAttachButton" }),
+        em = (0, u.b)(),
+        eA = Y?.length ?? 0,
+        ep = (0, D.A)({
+            canAttachFiles: ea,
+            canStartThreads: eo || ec,
+            useSlate: ed,
+            hasClips: ei,
+            canUseApplicationCommands: !F,
+            channel: a,
+            activities: W,
             newClipsCount: eA,
-            canPostPolls: ef,
-            appContext: Y,
-            canSendScheduledMessages: em,
-            canSummarizeThreads: eb,
+            canPostPolls: eu,
+            appContext: H,
+            canSendScheduledMessages: eh,
+            canSummarizeThreads: em,
         });
-    if (0 === ey.length) return null;
-    let eO = (0, r.jsx)(o.pa$, {
-            size: "refresh_sm",
-            color: "currentColor",
-            colorClass: M.dW,
-        }),
-        e_ = (0, r.jsx)(o.YNO, {
-            targetElementRef: z,
-            shouldShow: null != ei,
+    if (0 === ep.length) return null;
+    let eg = (0, i.jsx)(o.pa$, { size: "refresh_sm", color: "currentColor", colorClass: w.dW }),
+        ef = (0, i.jsx)(o.YNO, {
+            targetElementRef: V,
+            shouldShow: null != et,
             animation: o.YNO.Animation.NONE,
-            align: "recentClips" === ei ? "center" : "left",
+            align: "recentClips" === et ? "center" : "left",
             position: "top",
-            positionKey: null != ei ? ei : "null",
+            positionKey: et ?? "null",
             onRequestOpen: () => {
-                es("attachMenu");
+                en("attachMenu");
             },
             onRequestClose: () => {
-                (0, o.ueM)() || es(null);
+                (0, o.ueM)() || en(null);
             },
             renderPopout: (e) => {
-                switch (ei) {
+                switch (et) {
                     case "recentClips":
-                        return (0, r.jsx)(
-                            f.A,
-                            k(G({}, e), {
-                                onOpenClips: ed,
-                                lastClipsSession: J,
-                            }),
-                        );
+                        return (0, i.jsx)(p.A, { ...e, onOpenClips: er, lastClipsSession: z });
                     case "attachMenu":
-                        return (0, r.jsx)(
-                            P.A,
-                            k(G({}, e), {
-                                onClose: () => es(null),
-                                options: ey,
-                                channel: V,
-                                onFileUpload: () => {
-                                    var e;
-                                    return null == (e = W.current) ? void 0 : e.activateUploadDialogue();
-                                },
-                                draftType: B,
-                                editorTextContent: H,
-                                setValue: F,
-                                openClips: ed,
-                            }),
-                        );
+                        return (0, i.jsx)(M.A, {
+                            ...e,
+                            onClose: () => en(null),
+                            options: ep,
+                            channel: a,
+                            onFileUpload: () => B.current?.activateUploadDialogue(),
+                            draftType: k,
+                            editorTextContent: U,
+                            setValue: G,
+                            openClips: er,
+                        });
                     default:
                         throw Error("Invalid popout type provided");
                 }
             },
             children: (e) =>
-                (0, r.jsx)(
-                    T.A,
-                    k(
-                        G(
-                            {
-                                ref: z,
-                                className: s()(M.g$, U),
-                                childClassName: M.wh,
-                                isActive: !1,
-                                "aria-label": L.intl.string(L.t.d56gCa),
-                                onDoubleClick: ec
-                                    ? () => {
-                                          var e;
-                                          return null == (e = W.current) ? void 0 : e.activateUploadDialogue();
-                                      }
-                                    : void 0,
-                                "aria-haspopup": "menu",
-                            },
-                            e,
-                        ),
-                        {
-                            children: eO,
-                        },
-                    ),
-                ),
+                (0, i.jsx)(j.A, {
+                    ref: V,
+                    className: s()(w.g$, t),
+                    childClassName: w.wh,
+                    isActive: !1,
+                    "aria-label": P.intl.string(P.t.d56gCa),
+                    onDoubleClick: ea ? () => B.current?.activateUploadDialogue() : void 0,
+                    "aria-haspopup": "menu",
+                    ...e,
+                    children: eg,
+                }),
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("div", {
-                className: M.EJ,
-                children: (0, r.jsx)(c.A, {
-                    ref: W,
+            (0, i.jsx)("div", {
+                className: w.EJ,
+                children: (0, i.jsx)(c.A, {
+                    ref: B,
                     onChange: (e) => {
                         var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
-                                ? (0, N.V)(V, [])
-                                : (0, N.R)(t, V, B, {
-                                      requireConfirm: !0,
-                                      origin: "file_picker",
-                                  }),
-                            S._.dispatchToLastSubscribed(R.jej.TEXTAREA_FOCUS),
+                                ? (0, R.V)(a, [])
+                                : (0, R.R)(t, a, k, { requireConfirm: !0, origin: "file_picker" }),
+                            y._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
-                    multiple: V.rateLimitPerUser <= 0,
+                    multiple: a.rateLimitPerUser <= 0,
                     tabIndex: -1,
                     "aria-hidden": !0,
                 }),
             }),
-            (0, r.jsx)("div", {
-                className: M.Jd,
-                children: e_,
-            }),
+            (0, i.jsx)("div", { className: w.Jd, children: ef }),
         ],
     });
 });

@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.calculateChange = function (e, t, r) {
         var n = r.getBoundingClientRect(),
             o = n.width,
@@ -12,11 +11,5 @@ Object.defineProperty(t, "__esModule", {
         s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
         var c = s / o,
             p = 1 - u / a;
-        return {
-            h: t.h,
-            s: c,
-            v: p,
-            a: t.a,
-            source: "hsv",
-        };
+        return { h: t.h, s: c, v: p, a: t.a, source: "hsv" };
     });

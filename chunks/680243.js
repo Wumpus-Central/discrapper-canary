@@ -1,120 +1,93 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(65821);
-var r,
-    i = n(311907),
-    a = n(118356),
-    s = n(73153),
-    o = n(49463),
-    l = n(9302),
-    c = n(211753),
+"use strict";
+n.d(t, { A: () => R });
+var r = n(311907),
+    i = n(118356),
+    a = n(73153),
+    s = n(49463),
+    o = n(9302),
+    l = n(211753),
     u = n(682763),
-    d = n(327194),
-    f = n(672396);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let _ = new a.Vy("OverlayV3NativeModuleStore"),
-    h = !1,
+    c = n(327194),
+    d = n(672396);
+let _ = new i.Vy("OverlayV3NativeModuleStore"),
+    f = !1,
+    p = !1,
+    h = null,
     m = !1,
     g = null,
-    E = !1,
-    b = null,
-    y = null,
-    O = (() => {
+    E = null,
+    A = (() => {
         async function e() {
-            v(), (g = d.P.getInstance());
+            T(), (h = c.P.getInstance());
             try {
-                await g.initialize(), (h = !0);
+                await h.initialize(), (f = !0);
             } catch (e) {
-                (0, u._r)(null, "module_initialization_failed", {
-                    error: e,
-                }),
-                    (h = !1),
-                    (0, u.mD)(l.UNSET_PID, e, {
-                        crashType: "native",
-                    });
+                (0, u._r)(null, "module_initialization_failed", { error: e }),
+                    (f = !1),
+                    (0, u.mD)(o.UNSET_PID, e, { crashType: "native" });
             } finally {
-                R.emitChange();
+                N.emitChange();
             }
         }
-        return () => (null == y && (y = e()), y);
+        return () => (null == E && (E = e()), E);
     })();
-
-function A(e) {
-    __OVERLAY__ || !f.OX || (m !== e && ((m = e), e && (0, l.setOutOfProcessSupport)(!0)));
+function I(e) {
+    __OVERLAY__ || !d.OX || (p !== e && ((p = e), e && (0, o.setOutOfProcessSupport)(!0)));
 }
-
-function v() {
-    !__OVERLAY__ && f.OX && ((b = null), (E = !1), _.verbose("Maybe Enable Overlay"), A(c.x.oopEnabled));
+function T() {
+    !__OVERLAY__ && d.OX && ((g = null), (m = !1), _.verbose("Maybe Enable Overlay"), I(l.x.oopEnabled));
 }
-
-function S(e) {
+function y(e) {
     let { oopEnabled: t } = e;
-    (b = null), A(t);
+    (g = null), I(t);
 }
-
-function I() {
-    return (b = null), O(), !1;
+function S() {
+    return (g = null), A(), !1;
 }
-
-function T(e) {
+function v(e) {
     let { isCrashedDisabled: t, error: n } = e;
-    return !0 === t && (E = !0), null != n && (b = n instanceof Error ? n.message : String(n)), !0;
+    return !0 === t && (m = !0), null != n && (g = n instanceof Error ? n.message : String(n)), !0;
 }
-
 function C() {
-    return O(), !1;
+    return A(), !1;
 }
-class N extends (r = i.Ay.Store) {
+class b extends r.Ay.Store {
+    static displayName = "Overlay-v3-Native-Module-Store";
     initialize() {
-        this.waitFor(o.A);
+        this.waitFor(s.A);
     }
     get isModuleLoading() {
-        return null != y;
+        return null != E;
     }
     get isOverlayEnabled() {
-        return m;
+        return p;
     }
     get isSupported() {
-        return f.OX;
+        return d.OX;
     }
     get isModuleLoaded() {
-        return h;
+        return f;
     }
     get isCrashedDisabled() {
-        return E;
+        return m;
     }
     get errorMessage() {
-        return b;
-    }
-    getNativeModule() {
         return g;
     }
+    getNativeModule() {
+        return h;
+    }
 }
-p(N, "displayName", "Overlay-v3-Native-Module-Store");
-let R = new N(
-        s.h,
-        __OVERLAY__ || !f.OX
+let N = new b(
+        a.h,
+        __OVERLAY__ || !d.OX
             ? {}
             : {
                   CONNECTION_OPEN: C,
-                  EXPERIMENT_OVERRIDE_BUCKET: v,
-                  OVERLAY_SET_ENABLED: S,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE: I,
-                  OVERLAY_CRASHED: T,
+                  EXPERIMENT_OVERRIDE_BUCKET: T,
+                  OVERLAY_SET_ENABLED: y,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE: S,
+                  OVERLAY_CRASHED: v,
               },
     ),
-    w = R;
+    R = N;

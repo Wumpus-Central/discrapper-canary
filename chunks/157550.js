@@ -1,110 +1,85 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => m });
 var r = n(734057),
     i = n(536802);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = new Set(),
-    o = new Set(),
-    l = !1;
-
-function c(e) {
+let a = new Set(),
+    s = new Set(),
+    o = !1;
+function l(e) {
     return e.isSpam;
 }
-
 function u(e) {
     let t = !1;
     return (
-        c(e) && !s.has(e.id) && (s.add(e.id), (t = !0)),
-        !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
-        !c(e) && o.has(e.id) && (o.delete(e.id), (t = !0)),
+        l(e) && !a.has(e.id) && (a.add(e.id), (t = !0)),
+        !l(e) && a.has(e.id) && (a.delete(e.id), (t = !0)),
+        !l(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
         t
     );
 }
-
-function d() {
-    s.clear(),
-        o.clear(),
+function c() {
+    a.clear(),
+        s.clear(),
         Object.values(r.A.getMutablePrivateChannels()).forEach((e) => {
             u(e);
         }),
-        (l = !0);
+        (o = !0);
 }
-
-function f(e) {
+function d(e) {
     let { channelId: t } = e;
-    o.add(t);
+    s.add(t);
 }
-
-function p(e) {
+function _(e) {
     let { channel: t } = e;
     return u(t);
 }
-
-function _(e) {
+function f(e) {
     let { channels: t } = e;
     for (let e of t) u(e);
 }
-
-function h(e) {
+function p(e) {
     let { channel: t } = e,
         n = !1;
-    return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
+    return a.has(t.id) && (a.delete(t.id), (n = !0)), n;
 }
-class m extends i.A {
+class h extends i.A {
+    static displayName = "SpamMessageRequestStore";
+    static LATEST_SNAPSHOT_VERSION = 1;
+    constructor() {
+        super({
+            CONNECTION_OPEN: c,
+            CONNECTION_OPEN_SUPPLEMENTAL: c,
+            CACHE_LOADED_LAZY: () => this.loadCache(),
+            CHANNEL_CREATE: _,
+            CHANNEL_UPDATES: f,
+            CHANNEL_DELETE: p,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: d,
+        });
+    }
     initialize() {
         this.waitFor(r.A);
     }
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
-        null != e && (s = new Set(e));
+        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
+        null != e && (a = new Set(e));
     }
     takeSnapshot() {
-        return {
-            version: m.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(s),
-        };
+        return { version: h.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
     }
     getSpamChannelIds() {
-        return s;
+        return a;
     }
     getSpamChannelsCount() {
-        return s.size;
+        return a.size;
     }
     isSpam(e) {
-        return s.has(e);
+        return a.has(e);
     }
     isAcceptedOptimistic(e) {
-        return o.has(e);
+        return s.has(e);
     }
     isReady() {
-        return l;
-    }
-    constructor() {
-        super({
-            CONNECTION_OPEN: d,
-            CONNECTION_OPEN_SUPPLEMENTAL: d,
-            CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: p,
-            CHANNEL_UPDATES: _,
-            CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f,
-        });
+        return o;
     }
 }
-a(m, "displayName", "SpamMessageRequestStore"), a(m, "LATEST_SNAPSHOT_VERSION", 1);
-let g = new m();
+let m = new h();

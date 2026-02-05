@@ -1,17 +1,15 @@
-n.d(t, {
-    d: () => f,
-});
+"use strict";
+n.d(t, { d: () => _ });
 var r = n(765325),
     i = n(787709),
     a = n(142922),
     s = n(248759),
     o = n(929959),
     l = n(879452),
-    c = n(260043),
-    u = n(236230),
+    u = n(260043),
+    c = n(236230),
     d = n(287998);
-
-function f(e) {
+function _(e) {
     switch (e) {
         case "buddhist":
             return new (0, r.K)();
@@ -32,9 +30,9 @@ function f(e) {
         case "islamic-umalqura":
             return new (0, l.ZN)();
         case "japanese":
-            return new (0, c.u)();
+            return new (0, u.u)();
         case "persian":
-            return new (0, u.p)();
+            return new (0, c.p)();
         case "roc":
             return new (0, d.b)();
         default:

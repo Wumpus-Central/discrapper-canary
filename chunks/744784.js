@@ -1,5 +1,4 @@
 function t() {}
-
 function n(e) {
     (this._tree = e), (this._ancestors = []), (this._cursor = null);
 }

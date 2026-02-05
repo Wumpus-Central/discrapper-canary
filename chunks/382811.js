@@ -1,3 +1,4 @@
+"use strict";
 var r = n(549412),
     i = !0,
     a = !0;
@@ -13,7 +14,6 @@ try {
 }
 for (var s = new r.Buf8(256), o = 0; o < 256; o++)
     s[o] = o >= 252 ? 6 : o >= 248 ? 5 : o >= 240 ? 4 : o >= 224 ? 3 : o >= 192 ? 2 : 1;
-
 function l(e, t) {
     if (t < 65534 && ((e.subarray && a) || (!e.subarray && i)))
         return String.fromCharCode.apply(null, r.shrinkBuf(e, t));
@@ -64,26 +64,26 @@ function l(e, t) {
             i,
             a,
             o = t || e.length,
-            c = Array(2 * o);
+            u = Array(2 * o);
         for (r = 0, n = 0; n < o; ) {
             if ((i = e[n++]) < 128) {
-                c[r++] = i;
+                u[r++] = i;
                 continue;
             }
             if ((a = s[i]) > 4) {
-                (c[r++] = 65533), (n += a - 1);
+                (u[r++] = 65533), (n += a - 1);
                 continue;
             }
             for (i &= 2 === a ? 31 : 3 === a ? 15 : 7; a > 1 && n < o; ) (i = (i << 6) | (63 & e[n++])), a--;
             if (a > 1) {
-                c[r++] = 65533;
+                u[r++] = 65533;
                 continue;
             }
             i < 65536
-                ? (c[r++] = i)
-                : ((i -= 65536), (c[r++] = 55296 | ((i >> 10) & 1023)), (c[r++] = 56320 | (1023 & i)));
+                ? (u[r++] = i)
+                : ((i -= 65536), (u[r++] = 55296 | ((i >> 10) & 1023)), (u[r++] = 56320 | (1023 & i)));
         }
-        return l(c, r);
+        return l(u, r);
     }),
     (t.utf8border = function (e, t) {
         var n;

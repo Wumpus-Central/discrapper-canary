@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(84162),
     a = r(717519),
@@ -31,7 +30,6 @@ let s = function (e) {
     var t = (function (t) {
         if ("function" != typeof t && null !== t)
             throw TypeError("Super expression must either be null or a function, not " + typeof t);
-
         function r(e) {
             if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
             var t = (function (e, t) {
@@ -62,12 +60,7 @@ let s = function (e) {
         }
         return (
             (r.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: r,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0,
-                },
+                constructor: { value: r, enumerable: !1, writable: !0, configurable: !0 },
             })),
             t && (Object.setPrototypeOf ? Object.setPrototypeOf(r, t) : (r.__proto__ = t)),
             l(
@@ -79,18 +72,7 @@ let s = function (e) {
                             var t = {};
                             return (
                                 this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover),
-                                n.createElement(
-                                    e,
-                                    i(
-                                        {},
-                                        this.props,
-                                        this.state,
-                                        {
-                                            onChange: this.handleChange,
-                                        },
-                                        t,
-                                    ),
-                                )
+                                n.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, t))
                             );
                         },
                     },
@@ -109,14 +91,7 @@ let s = function (e) {
     })(n.PureComponent || n.Component);
     return (
         (t.propTypes = i({}, e.propTypes)),
-        (t.defaultProps = i({}, e.defaultProps, {
-            color: {
-                h: 250,
-                s: 0.5,
-                l: 0.2,
-                a: 1,
-            },
-        })),
+        (t.defaultProps = i({}, e.defaultProps, { color: { h: 250, s: 0.5, l: 0.2, a: 1 } })),
         t
     );
 };

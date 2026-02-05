@@ -1,58 +1,43 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(273166),
-    l = n(885996),
+n.d(t, { A: () => h });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(273166),
+    o = n(885996),
     c = n(397927),
-    u = n(963342),
-    d = n(3432),
-    f = n(580630),
-    p = n(240248),
-    _ = n(237218),
-    h = n(689296),
-    m = n(542858);
-
-function g(e) {
-    let { cta: t, storeListing: n, className: a } = e,
-        { applicationId: g, benefits: E, description: b } = n,
-        y = i.useMemo(() => (null == n.thumbnail ? null : (0, _.t)(g, n.thumbnail, 256)), [g, n.thumbnail]),
-        { data: O } = (0, u.j)(n.skuId),
-        A = i.useMemo(() => {
-            if (null == O || 0 === O.length) return null;
-            let e = O[0];
-            return (0, f._J)(e);
-        }, [O]);
-    return null == A
+    d = n(963342),
+    u = n(3432),
+    _ = n(580630),
+    m = n(240248),
+    A = n(237218),
+    g = n(689296),
+    E = n(542858);
+function h(e) {
+    let { cta: t, storeListing: n, className: r } = e,
+        { applicationId: h, benefits: p, description: C } = n,
+        x = s.useMemo(() => (null == n.thumbnail ? null : (0, A.t)(h, n.thumbnail, 256)), [h, n.thumbnail]),
+        { data: T } = (0, d.j)(n.skuId),
+        I = s.useMemo(() => {
+            if (null == T || 0 === T.length) return null;
+            let e = T[0];
+            return (0, _._J)(e);
+        }, [T]);
+    return null == I
         ? null
-        : (0, r.jsxs)(o.q, {
-              className: s()(m.iE, a),
-              header: (0, r.jsxs)(r.Fragment, {
+        : (0, i.jsxs)(l.q, {
+              className: a()(E.iE, r),
+              header: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, r.jsxs)("div", {
-                          className: m.qd,
+                      (0, i.jsxs)("div", {
+                          className: E.qd,
                           children: [
-                              null != y &&
-                                  (0, r.jsx)(c._V3, {
-                                      src: y.href,
-                                      imageClassName: m.rW,
-                                      width: 48,
-                                      height: 48,
-                                  }),
-                              (0, r.jsxs)("div", {
+                              null != x &&
+                                  (0, i.jsx)(c._V3, { src: x.href, imageClassName: E.rW, width: 48, height: 48 }),
+                              (0, i.jsxs)("div", {
                                   children: [
-                                      (0, r.jsx)(c.Heading, {
-                                          variant: "heading-md/bold",
-                                          children: n.summary,
-                                      }),
-                                      (0, r.jsx)(c.Text, {
-                                          variant: "text-md/medium",
-                                          children: A,
-                                      }),
+                                      (0, i.jsx)(c.Heading, { variant: "heading-md/bold", children: n.summary }),
+                                      (0, i.jsx)(c.Text, { variant: "text-md/medium", children: I }),
                                   ],
                               }),
                           ],
@@ -61,29 +46,18 @@ function g(e) {
                   ],
               }),
               children: [
-                  !(0, p.uJ)(b) &&
-                      (0, r.jsx)("div", {
-                          className: m.h_,
-                          children: (0, r.jsx)(h.A, {
-                              variant: "text-sm/medium",
-                              children: b,
-                          }),
+                  !(0, m.uJ)(C) &&
+                      (0, i.jsx)("div", {
+                          className: E.h_,
+                          children: (0, i.jsx)(g.A, { variant: "text-sm/medium", children: C }),
                       }),
-                  null != E &&
-                      E.length > 0 &&
-                      (0, r.jsx)("div", {
-                          className: m.PX,
-                          children: E.map((e) => {
-                              let { id: t, name: n, description: i, icon: a } = e;
-                              return (0, r.jsx)(
-                                  l.FY,
-                                  {
-                                      header: n,
-                                      icon: (0, d.N)(g, a),
-                                      description: i,
-                                  },
-                                  t,
-                              );
+                  null != p &&
+                      p.length > 0 &&
+                      (0, i.jsx)("div", {
+                          className: E.PX,
+                          children: p.map((e) => {
+                              let { id: t, name: n, description: s, icon: r } = e;
+                              return (0, i.jsx)(o.FY, { header: n, icon: (0, u.N)(h, r), description: s }, t);
                           }),
                       }),
               ],

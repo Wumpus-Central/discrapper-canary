@@ -1,24 +1,8 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    D: () => i,
-});
-class i {
+"use strict";
+n.d(t, { D: () => r });
+class r {
+    cpuCoreCount;
     getCPUCoreCount() {
         return this.cpuCoreCount;
-    }
-    constructor() {
-        r(this, "cpuCoreCount", void 0);
     }
 }

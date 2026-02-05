@@ -1,3 +1,4 @@
+"use strict";
 n(601301);
 var r,
     a = n(834647),
@@ -166,43 +167,14 @@ var r,
         return e;
     },
     eu = {},
-    ed = f({}, eu, {
-        " ": 1,
-        '"': 1,
-        "<": 1,
-        ">": 1,
-        "`": 1,
-    }),
-    ep = f({}, ed, {
-        "#": 1,
-        "?": 1,
-        "{": 1,
-        "}": 1,
-    }),
-    eh = f({}, ep, {
-        "/": 1,
-        ":": 1,
-        ";": 1,
-        "=": 1,
-        "@": 1,
-        "[": 1,
-        "\\": 1,
-        "]": 1,
-        "^": 1,
-        "|": 1,
-    }),
+    ed = f({}, eu, { " ": 1, '"': 1, "<": 1, ">": 1, "`": 1 }),
+    ep = f({}, ed, { "#": 1, "?": 1, "{": 1, "}": 1 }),
+    eh = f({}, ep, { "/": 1, ":": 1, ";": 1, "=": 1, "@": 1, "[": 1, "\\": 1, "]": 1, "^": 1, "|": 1 }),
     ef = function (e, t) {
         var n = v(e, 0);
         return n > 32 && n < 127 && !h(t, e) ? e : encodeURIComponent(e);
     },
-    em = {
-        ftp: 21,
-        file: null,
-        http: 80,
-        https: 443,
-        ws: 80,
-        wss: 443,
-    },
+    em = { ftp: 21, file: null, http: 80, https: 443, ws: 80, wss: 443 },
     ey = function (e, t) {
         var n;
         return 2 === e.length && M($, I(e, 0)) && (":" === (n = I(e, 1)) || (!t && "|" === n));
@@ -762,9 +734,7 @@ if (
         function () {
             return S(this).serialize();
         },
-        {
-            enumerable: !0,
-        },
+        { enumerable: !0 },
     ),
     u(
         eU,
@@ -772,9 +742,7 @@ if (
         function () {
             return S(this).serialize();
         },
-        {
-            enumerable: !0,
-        },
+        { enumerable: !0 },
     ),
     P)
 ) {
@@ -782,15 +750,4 @@ if (
         eH = P.revokeObjectURL;
     eK && u(ej, "createObjectURL", l(eK, P)), eH && u(ej, "revokeObjectURL", l(eH, P));
 }
-A(ej, "URL"),
-    a(
-        {
-            global: !0,
-            constructor: !0,
-            forced: !i,
-            sham: !o,
-        },
-        {
-            URL: ej,
-        },
-    );
+A(ej, "URL"), a({ global: !0, constructor: !0, forced: !i, sham: !o }, { URL: ej });

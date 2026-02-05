@@ -1,23 +1,12 @@
-n.d(t, {
-    T4: () => s,
-    TP: () => l,
-});
-var r = n(989349),
-    i = n.n(r);
-
+"use strict";
+n.d(t, { T4: () => r, TP: () => l });
+var i = n(989349),
+    s = n.n(i);
 function l(e, t) {
     let n = "",
-        r = e >= 0;
-    return (
-        r && (n += "+"),
-        t ? (n += "".concat(Math.floor(100 * e), "%")) : (n += e),
-        {
-            formattedValue: n,
-            isPositive: r,
-        }
-    );
+        i = e >= 0;
+    return i && (n += "+"), t ? (n += `${Math.floor(100 * e)}%`) : (n += e), { formattedValue: n, isPositive: i };
 }
-
-function s(e, t) {
-    return null != e ? i()(e).format(t) : "-";
+function r(e, t) {
+    return null != e ? s()(e).format(t) : "-";
 }

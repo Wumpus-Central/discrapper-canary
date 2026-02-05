@@ -1,37 +1,21 @@
-a.r(t),
-    a.d(t, {
-        default: () => i,
-    });
-var s = a(627968);
-a(64700);
-var c = a(549711),
-    d = a(760244),
-    n = a(200330),
-    f = a(595244),
-    b = a(612181),
-    r = a(603647),
-    o = a(652215);
-
-function i() {
-    return (0, s.jsxs)(r.A, {
-        splash: (0, b.u8)(),
+s.r(t), s.d(t, { default: () => u });
+var r = s(627968);
+s(64700);
+var i = s(549711),
+    l = s(760244),
+    o = s(200330),
+    a = s(595244),
+    n = s(612181),
+    c = s(603647),
+    d = s(652215);
+function u() {
+    return (0, r.jsxs)(c.A, {
+        splash: (0, n.u8)(),
         children: [
-            (0, s.jsx)(c.A, {
-                path: o.BVt.OAUTH2_AUTHORIZED,
-                component: f.i8,
-            }),
-            (0, s.jsx)(c.A, {
-                path: o.BVt.OAUTH2_AUTHORIZE,
-                component: n.OAuth2AuthorizePage,
-            }),
-            (0, s.jsx)(c.A, {
-                path: o.BVt.OAUTH2_ERROR,
-                component: f.bc,
-            }),
-            (0, s.jsx)(c.A, {
-                path: [o.BVt.OAUTH2_WHITELIST_ACCEPT, "/oauth2/whitelist/accept"],
-                component: d.A,
-            }),
+            (0, r.jsx)(i.A, { path: d.BVt.OAUTH2_AUTHORIZED, component: a.i8 }),
+            (0, r.jsx)(i.A, { path: d.BVt.OAUTH2_AUTHORIZE, component: o.OAuth2AuthorizePage }),
+            (0, r.jsx)(i.A, { path: d.BVt.OAUTH2_ERROR, component: a.bc }),
+            (0, r.jsx)(i.A, { path: [d.BVt.OAUTH2_WHITELIST_ACCEPT, "/oauth2/whitelist/accept"], component: l.A }),
         ],
     });
 }

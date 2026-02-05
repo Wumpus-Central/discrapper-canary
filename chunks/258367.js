@@ -1,54 +1,51 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(64700),
+n.d(t, { A: () => m });
+var i = n(64700),
     l = n(311907),
-    i = n(256311),
-    a = n(773669),
-    s = n(222823),
+    a = n(256311),
+    s = n(773669),
+    r = n(222823),
     o = n(954571),
     c = n(883600),
-    u = n(942366),
-    d = n(343328),
-    f = n(652215);
-
-function p(e) {
-    let t = (0, u.A)(e),
-        n = (0, l.bG)([a.default], () => a.default.locale),
-        p = (0, l.bG)([c.A], () => c.A.getChangelog(null != t ? t : "", n), [t, n]),
-        h = (0, d.A)(e),
-        b = r.useRef(h ? Date.now() : null),
-        g = (0, l.bG)([s.Ay], () => s.Ay.getUnreadCount(e), [e]),
-        m = r.useRef(g);
-    r.useEffect(() => {
-        m.current = g;
+    d = n(942366),
+    u = n(343328),
+    h = n(652215);
+function m(e) {
+    let t = (0, d.A)(e),
+        n = (0, l.bG)([s.default], () => s.default.locale),
+        m = (0, l.bG)([c.A], () => c.A.getChangelog(t ?? "", n), [t, n]),
+        A = (0, u.A)(e),
+        p = i.useRef(A ? Date.now() : null),
+        g = (0, l.bG)([r.Ay], () => r.Ay.getUnreadCount(e), [e]),
+        f = i.useRef(g);
+    i.useEffect(() => {
+        f.current = g;
     }),
-        r.useEffect(() => {
-            b.current = Date.now();
-        }, [h]),
-        r.useEffect(() => {
-            h && null != t && i.A.fetchChangelog(t, n, !0);
-        }, [t, n, h]),
-        r.useEffect(() => {
-            h &&
-                null != p &&
-                o.default.track(f.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: "".concat(p.date, ":").concat(p.revision),
-                    unread_count: m.current,
+        i.useEffect(() => {
+            p.current = Date.now();
+        }, [A]),
+        i.useEffect(() => {
+            A && null != t && a.A.fetchChangelog(t, n, !0);
+        }, [t, n, A]),
+        i.useEffect(() => {
+            A &&
+                null != m &&
+                o.default.track(h.HAw.CHANGE_LOG_OPENED, {
+                    change_log_id: `${m.date}:${m.revision}`,
+                    unread_count: f.current,
                 });
-        }, [h, p]),
-        r.useEffect(() => {
-            let e = b.current;
+        }, [A, m]),
+        i.useEffect(() => {
+            let e = p.current;
             return () => {
-                h &&
-                    null != p &&
+                A &&
+                    null != m &&
                     null != e &&
-                    (o.default.track(f.HAw.CHANGE_LOG_CLOSED, {
+                    (o.default.track(h.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: "".concat(p.date, ":").concat(p.revision),
-                        unread_count: m.current,
+                        change_log_id: `${m.date}:${m.revision}`,
+                        unread_count: f.current,
                     }),
-                    (b.current = 0));
+                    (p.current = 0));
             };
-        }, [h, p]);
+        }, [A, m]);
 }

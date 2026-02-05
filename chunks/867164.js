@@ -1,7 +1,5 @@
-n.d(t, {
-    o: () => i,
-    t: () => r,
-});
+"use strict";
+n.d(t, { o: () => i, t: () => r });
 var r = (function (e) {
     return (
         (e.NEW_PURCHASES_DISABLED = "NEW_PURCHASES_DISABLED"),

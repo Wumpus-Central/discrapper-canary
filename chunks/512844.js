@@ -1,35 +1,12 @@
 e.exports = function (e) {
-    let t = {
-            className: "number",
-            relevance: 0,
-            variants: [
-                {
-                    begin: "[$][a-fA-F0-9]+",
-                },
-                e.NUMBER_MODE,
-            ],
-        },
+    let t = { className: "number", relevance: 0, variants: [{ begin: "[$][a-fA-F0-9]+" }, e.NUMBER_MODE] },
         n = {
-            variants: [
-                {
-                    match: [/(function|method)/, /\s+/, e.UNDERSCORE_IDENT_RE],
-                },
-            ],
-            scope: {
-                1: "keyword",
-                3: "title.function",
-            },
+            variants: [{ match: [/(function|method)/, /\s+/, e.UNDERSCORE_IDENT_RE] }],
+            scope: { 1: "keyword", 3: "title.function" },
         },
         r = {
-            variants: [
-                {
-                    match: [/(class|interface|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE],
-                },
-            ],
-            scope: {
-                1: "keyword",
-                3: "title.class",
-            },
+            variants: [{ match: [/(class|interface|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE] }],
+            scope: { 1: "keyword", 3: "title.class" },
         };
     return {
         name: "Monkey",
@@ -127,34 +104,13 @@ e.exports = function (e) {
         illegal: /\/\*/,
         contains: [
             e.COMMENT("#rem", "#end"),
-            e.COMMENT("'", "$", {
-                relevance: 0,
-            }),
+            e.COMMENT("'", "$", { relevance: 0 }),
             n,
             r,
-            {
-                className: "variable.language",
-                begin: /\b(self|super)\b/,
-            },
-            {
-                className: "meta",
-                begin: /\s*#/,
-                end: "$",
-                keywords: {
-                    keyword: "if else elseif endif end then",
-                },
-            },
-            {
-                match: [/^\s*/, /strict\b/],
-                scope: {
-                    2: "meta",
-                },
-            },
-            {
-                beginKeywords: "alias",
-                end: "=",
-                contains: [e.UNDERSCORE_TITLE_MODE],
-            },
+            { className: "variable.language", begin: /\b(self|super)\b/ },
+            { className: "meta", begin: /\s*#/, end: "$", keywords: { keyword: "if else elseif endif end then" } },
+            { match: [/^\s*/, /strict\b/], scope: { 2: "meta" } },
+            { beginKeywords: "alias", end: "=", contains: [e.UNDERSCORE_TITLE_MODE] },
             e.QUOTE_STRING_MODE,
             t,
         ],

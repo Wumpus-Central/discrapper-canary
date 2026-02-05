@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     sA: "modalHeaderCustomGift_b54a5b",
     b: "closeButton_b54a5b",

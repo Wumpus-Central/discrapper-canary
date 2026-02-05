@@ -1,43 +1,25 @@
-n.d(t, {
-    Gw: () => _,
-    XF: () => d,
-    ni: () => h,
-    rE: () => f,
-}),
-    n(65821);
+"use strict";
+n.d(t, { Gw: () => p, XF: () => d, ni: () => h, rE: () => _ });
 var r = n(284009),
     i = n.n(r),
     a = n(96337),
-    o = n(997101),
-    s = n(487052),
+    s = n(997101),
+    o = n(487052),
     l = n(985018);
-let c = "United States";
-
-function u(e) {
+let u = "United States";
+function c(e) {
     let t = a.A.find((t) => t.name === e);
-    if (null != t)
-        return {
-            name: t.name,
-            code: t.phoneCountryCode,
-            alpha2: t.alpha2,
-        };
+    if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
 }
-
 function d(e) {
     let t = a.A.find((t) => t.alpha2 === e);
-    if (null != t)
-        return {
-            name: t.name,
-            code: t.phoneCountryCode,
-            alpha2: t.alpha2,
-        };
+    if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
 }
-
-function f() {
-    let e = u(c);
+function _() {
+    let e = c(u);
     return i()(e, "Default country code cannot be missing."), e;
 }
-let p = {
+let f = {
     AF: () => l.intl.string(l.t["Jafq/8"]),
     AX: () => l.intl.string(l.t.fqW5xC),
     AL: () => l.intl.string(l.t["45zGd8"]),
@@ -294,20 +276,18 @@ let p = {
     ZM: () => l.intl.string(l.t.e0NQFU),
     ZW: () => l.intl.string(l.t.kQ6oLs),
 };
-
-function _(e) {
-    return p[e]();
+function p(e) {
+    return f[e]();
 }
-
 function h(e) {
     let t;
     if (2 === e.length) {
-        let t = o.d[e];
-        if (null == t) throw Error("Invalid country code alpha2 ".concat(e));
+        let t = s.d[e];
+        if (null == t) throw Error(`Invalid country code alpha2 ${e}`);
         return t;
     }
     if (3 === e.length) {
-        if (null == (t = s._[e])) throw Error("Could not find ".concat(e, " in CountryCodesISO3to2"));
-    } else throw Error("Bad country code passed: ".concat(e, " with length ").concat(e.length));
+        if (null == (t = o._[e])) throw Error(`Could not find ${e} in CountryCodesISO3to2`);
+    } else throw Error(`Bad country code passed: ${e} with length ${e.length}`);
     return t;
 }

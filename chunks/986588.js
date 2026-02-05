@@ -1,3 +1,1 @@
-e.exports = {
-    u: "spinner__255ba",
-};
+e.exports = { u: "spinner__255ba" };

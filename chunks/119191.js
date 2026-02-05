@@ -1,114 +1,83 @@
-n.d(t, {
-    bi: () => g,
-    sI: () => m,
-});
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    a = n(397927),
-    s = n(15285),
-    o = n(523527),
-    l = n(942405),
-    c = n(780964),
-    u = n(840065),
-    d = n(994322),
-    f = n(22802),
-    p = n(652215),
-    _ = n(985018),
-    h = n(352143);
-
-function m(e, t, n) {
+i.d(t, { bi: () => f, sI: () => h });
+var n = i(627968);
+i(64700);
+var a = i(311907),
+    l = i(397927),
+    r = i(15285),
+    s = i(523527),
+    o = i(942405),
+    d = i(780964),
+    c = i(840065),
+    u = i(994322),
+    m = i(22802),
+    _ = i(652215),
+    A = i(985018),
+    g = i(352143);
+function h(e, t, i) {
     let {
-        highlightAdminWarningIfElevated: i,
-        useFlexboxLayout: a,
-        keybindClassName: s,
+        highlightAdminWarningIfElevated: a,
+        useFlexboxLayout: l,
+        keybindClassName: r,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    return (0, r.jsx)(E, {
+    return (0, n.jsx)(p, {
         keybind: e,
         message: t,
-        messageWithoutKeybind: n,
-        highlightAdminWarningIfElevated: i,
-        useFlexboxLayout: a,
-        keybindClassName: s,
+        messageWithoutKeybind: i,
+        highlightAdminWarningIfElevated: a,
+        useFlexboxLayout: l,
+        keybindClassName: r,
     });
 }
-let g = (e, t) =>
-    (0, r.jsx)(r.Fragment, {
-        children: _.intl.format(t, {
+let f = (e, t) =>
+    (0, n.jsx)(n.Fragment, {
+        children: A.intl.format(t, {
             keybind: e,
-            keybindHook: (t, n) =>
-                (0, r.jsx)(
-                    a.e7I,
-                    {
-                        shortcut: e,
-                        className: h.w,
-                        keyClassName: h.bx,
-                    },
-                    n,
-                ),
+            keybindHook: (t, i) => (0, n.jsx)(l.e7I, { shortcut: e, className: g.w, keyClassName: g.bx }, i),
         }),
     });
-
-function E(e) {
+function p(e) {
     let {
             keybind: t,
-            message: n,
-            messageWithoutKeybind: m,
-            highlightAdminWarningIfElevated: g = !1,
-            useFlexboxLayout: E = !1,
-            keybindClassName: b,
+            message: i,
+            messageWithoutKeybind: h,
+            highlightAdminWarningIfElevated: f = !1,
+            useFlexboxLayout: p = !1,
+            keybindClassName: S,
         } = e,
-        y = (0, d.F)(),
-        O = (0, i.bG)([s.Ay], () => {
-            let e = s.Ay.getVisibleGame();
-            return null != e && e.elevated && s.Ay.canShowAdminWarning;
+        I = (0, u.F)(),
+        x = (0, a.bG)([r.Ay], () => {
+            let e = r.Ay.getVisibleGame();
+            return null != e && e.elevated && r.Ay.canShowAdminWarning;
         }),
-        A = (0, l.NP)();
-    return O
-        ? (0, r.jsx)(a.Text, {
+        v = (0, o.NP)();
+    return x
+        ? (0, n.jsx)(l.Text, {
               variant: "text-xxs/semibold",
-              color: g ? "text-feedback-warning" : "text-muted",
-              children: A
-                  ? _.intl.format(_.t.MVS9pV, {
+              color: f ? "text-feedback-warning" : "text-muted",
+              children: v
+                  ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (e) => {
                             e.stopPropagation(),
-                                (0, o.A)(void 0, !0),
-                                (0, u.openUserSettings)(c.X.OVERLAY_PANEL, {
-                                    section: p.nc_.OVERLAY,
-                                });
+                                (0, s.A)(void 0, !0),
+                                (0, c.openUserSettings)(d.X.OVERLAY_PANEL, { section: _.nc_.OVERLAY });
                         },
                     })
-                  : _.intl.string(_.t.PIeSHF),
+                  : A.intl.string(A.t.PIeSHF),
           })
-        : y
-          ? E
-              ? (0, r.jsx)("div", {
-                    className: h.FH,
-                    children: _.intl.format(n, {
+        : I
+          ? p
+              ? (0, n.jsx)("div", {
+                    className: g.FH,
+                    children: A.intl.format(i, {
                         keybind: t,
-                        keybindHook: (e) =>
-                            (0, r.jsx)(
-                                f.G,
-                                {
-                                    keybind: t,
-                                    className: b,
-                                },
-                                t.join("+"),
-                            ),
+                        keybindHook: (e) => (0, n.jsx)(m.G, { keybind: t, className: S }, t.join("+")),
                     }),
                 })
-              : (0, r.jsx)(r.Fragment, {
-                    children: _.intl.format(n, {
+              : (0, n.jsx)(n.Fragment, {
+                    children: A.intl.format(i, {
                         keybind: t,
-                        keybindHook: (e) =>
-                            (0, r.jsx)(
-                                f.b,
-                                {
-                                    keybind: t,
-                                },
-                                t.join("+"),
-                            ),
+                        keybindHook: (e) => (0, n.jsx)(m.b, { keybind: t }, t.join("+")),
                     }),
                 })
-          : m;
+          : h;
 }

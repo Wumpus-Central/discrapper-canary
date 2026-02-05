@@ -1,128 +1,105 @@
-n.d(i, {
-    A: () => A,
-}),
-    n(228524),
-    n(896048);
-var t = n(627968),
-    a = n(64700),
-    s = n(311907),
-    l = n(397927),
-    r = n(73153),
-    d = n(235986),
-    c = n(308645),
-    o = n(207913),
-    x = n(393033),
-    m = n(985481),
-    g = n(652215),
-    p = n(985018),
-    N = n(211499),
-    u = n(299916);
-
-function A(e) {
-    let { className: i, isDsaEligible: n, onClose: A, onNext: h, onBack: j } = e,
+i.d(t, { A: () => h });
+var n = i(627968),
+    a = i(64700),
+    s = i(311907),
+    l = i(397927),
+    r = i(73153),
+    d = i(235986),
+    c = i(308645),
+    o = i(207913),
+    x = i(393033),
+    m = i(985481),
+    g = i(652215),
+    p = i(985018),
+    N = i(211499),
+    A = i(299916);
+function h(e) {
+    let { className: t, isDsaEligible: i, onClose: h, onNext: j, onBack: u } = e,
         _ = (0, s.bG)([o.A], () => o.A.getAppealClassificationId()),
-        { classification: C } = (0, m.LJ)(null != _ ? _ : g.dJq),
-        E = (0, x.eu)(null == C ? void 0 : C.description),
+        { classification: C } = (0, m.LJ)(_ ?? g.dJq),
+        E = (0, x.eu)(C?.description),
         I = (0, s.bG)([o.A], () => o.A.getIsSubmitting()),
-        v = (0, s.bG)([o.A], () => o.A.getAppealSignal()),
-        S = (0, s.bG)([o.A], () => o.A.getFreeTextAppealReason()),
-        [T, k] = a.useState(!1),
+        S = (0, s.bG)([o.A], () => o.A.getAppealSignal()),
+        T = (0, s.bG)([o.A], () => o.A.getFreeTextAppealReason()),
+        [v, k] = a.useState(!1),
         [L, b] = a.useState(""),
         P = a.useCallback((e) => {
-            r.h.dispatch({
-                type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-                userInput: e,
-            });
+            r.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: e });
         }, []),
         f = a.useCallback(async () => {
             if (null !== _)
                 try {
-                    b(""), await c.Gf(_, v, S), null == h || h();
-                } catch (i) {
-                    var e;
-                    b((0, x.Tk)(null == (e = i.body) ? void 0 : e.code));
+                    b(""), await c.Gf(_, S, T), j?.();
+                } catch (e) {
+                    b((0, x.Tk)(e.body?.code));
                 }
-        }, [_, v, S, h]);
-    return (0, t.jsxs)(t.Fragment, {
+        }, [_, S, T, j]);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, t.jsxs)(l.rQ0, {
+            (0, n.jsxs)(l.rQ0, {
                 "data-migration-pending": !0,
                 direction: d.A.Direction.VERTICAL,
-                className: u.wx,
+                className: A.wx,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(l.Heading, {
-                        className: u.DD,
+                    (0, n.jsx)(l.Heading, {
+                        className: A.DD,
                         variant: "heading-xl/semibold",
                         children: p.intl.string(p.t["C5q+pW"]),
                     }),
-                    (0, t.jsx)(l.Text, {
-                        className: u.VA,
+                    (0, n.jsx)(l.Text, {
+                        className: A.VA,
                         color: "text-default",
                         variant: "text-md/normal",
                         children: p.intl.string(p.t["G2g/g5"]),
                     }),
-                    null != A &&
-                        (0, t.jsx)(l.s_y, {
-                            "data-migration-pending": !0,
-                            className: u.b,
-                            onClick: A,
-                        }),
+                    null != h && (0, n.jsx)(l.s_y, { "data-migration-pending": !0, className: A.b, onClick: h }),
                 ],
             }),
-            (0, t.jsxs)(l.$mQ, {
+            (0, n.jsxs)(l.$mQ, {
                 "data-migration-pending": !0,
-                className: i,
+                className: t,
                 paddingFix: !1,
                 children: [
-                    (0, t.jsx)("ul", {
+                    (0, n.jsx)("ul", {
                         className: N.qI,
-                        children: [(0, x.l0)(v), S]
+                        children: [(0, x.l0)(S), T]
                             .filter((e) => e.length > 0)
-                            .map((e, i) =>
-                                (0, t.jsx)(
+                            .map((e, t) =>
+                                (0, n.jsx)(
                                     "li",
                                     {
                                         className: N.Aw,
-                                        children: (0, t.jsx)(l.Text, {
+                                        children: (0, n.jsx)(l.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
                                             children: e,
                                         }),
                                     },
-                                    i,
+                                    t,
                                 ),
                             ),
                     }),
-                    n &&
-                        (0, t.jsx)("div", {
+                    i &&
+                        (0, n.jsx)("div", {
                             className: N.DE,
-                            children: (0, t.jsx)(l.MzZ, {
+                            children: (0, n.jsx)(l.MzZ, {
                                 onClick: () => k((e) => !e),
-                                children: (0, t.jsx)(l.Heading, {
+                                children: (0, n.jsx)(l.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
-                                    children: S.length > 0 ? p.intl.string(p.t.tnE3bZ) : p.intl.string(p.t.uoQFIp),
+                                    children: T.length > 0 ? p.intl.string(p.t.tnE3bZ) : p.intl.string(p.t.uoQFIp),
                                 }),
                             }),
                         }),
-                    T &&
-                        n &&
-                        (0, t.jsx)("div", {
-                            className: N.Kf,
-                            children: (0, t.jsx)(l.fs1, {
-                                value: S,
-                                onChange: P,
-                            }),
-                        }),
-                    (0, t.jsx)("div", {
-                        className: u.kU,
-                        children: (0, t.jsx)(l.Text, {
-                            variant: "text-md/semibold",
-                            children: E,
-                        }),
+                    v &&
+                        i &&
+                        (0, n.jsx)("div", { className: N.Kf, children: (0, n.jsx)(l.fs1, { value: T, onChange: P }) }),
+                    (0, n.jsx)("div", {
+                        className: A.kU,
+                        children: (0, n.jsx)(l.Text, { variant: "text-md/semibold", children: E }),
                     }),
-                    (0, t.jsx)(l.Text, {
+                    (0, n.jsx)(l.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
                         className: N.PJ,
@@ -130,29 +107,29 @@ function A(e) {
                     }),
                 ],
             }),
-            (0, t.jsxs)(l.jlY, {
+            (0, n.jsxs)(l.jlY, {
                 "data-migration-pending": !0,
                 direction: d.A.Direction.VERTICAL,
                 children: [
                     "" !== L &&
-                        (0, t.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             className: N.kc,
                             variant: "text-lg/normal",
                             color: "text-feedback-critical",
                             children: L,
                         }),
-                    (0, t.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: N.UD,
-                        children: (0, t.jsxs)(l.ButtonGroup, {
+                        children: (0, n.jsxs)(l.ButtonGroup, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, t.jsx)(l.Button, {
+                                (0, n.jsx)(l.Button, {
                                     variant: "secondary",
                                     text: p.intl.string(p.t["13/7kX"]),
-                                    onClick: j,
+                                    onClick: u,
                                     disabled: I,
                                 }),
-                                (0, t.jsx)(l.Button, {
+                                (0, n.jsx)(l.Button, {
                                     variant: "critical-primary",
                                     text: p.intl.string(p.t.geKm7t),
                                     onClick: f,

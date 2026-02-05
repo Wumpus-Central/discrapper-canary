@@ -1,7 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.Swatch = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.Swatch = void 0);
 var n =
         Object.assign ||
         function (e) {
@@ -15,13 +13,8 @@ var n =
     a = s(r(205662)),
     i = r(684463),
     l = s(r(896132));
-
 function s(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
 var u = (t.Swatch = function (e) {
     var t = e.color,

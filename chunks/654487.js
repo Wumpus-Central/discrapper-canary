@@ -1,42 +1,41 @@
+"use strict";
 n.d(t, {
-    B3: () => N,
-    BQ: () => x,
+    B3: () => R,
+    BQ: () => P,
     CI: () => E,
-    Fw: () => A,
+    Fw: () => S,
     GD: () => g,
-    J6: () => C,
-    K3: () => P,
-    Ko: () => _,
-    Li: () => u.L,
-    Ls: () => w,
-    Pc: () => L,
-    TY: () => c.T,
-    WQ: () => j,
-    ZV: () => p,
-    aJ: () => I,
-    eA: () => v,
-    ej: () => b,
+    J6: () => N,
+    K3: () => L,
+    Ko: () => p,
+    Li: () => c.L,
+    Ls: () => O,
+    Pc: () => x,
+    TY: () => u.T,
+    WQ: () => k,
+    ZV: () => f,
+    aJ: () => v,
+    eA: () => y,
+    ej: () => I,
     fO: () => h,
-    fP: () => y,
-    gB: () => S,
-    hK: () => T,
-    kL: () => D,
-    mg: () => O,
-    pc: () => U,
+    fP: () => A,
+    gB: () => C,
+    hK: () => b,
+    kL: () => w,
+    mg: () => T,
+    pc: () => G,
     rE: () => d,
-    tZ: () => f,
-    zO: () => R,
-}),
-    n(896048),
-    n(638769);
+    tZ: () => _,
+    zO: () => D,
+});
 var r = n(735438),
     i = n(412703),
     a = n(257280),
-    o = n(562465),
-    s = n(927813),
+    s = n(562465),
+    o = n(927813),
     l = n(341915),
-    c = n(557567),
-    u = n(902173),
+    u = n(557567),
+    c = n(902173),
     d = (function (e) {
         return (
             (e.ACTIVITY_PANEL = "quests_bar_activity_panel"),
@@ -88,27 +87,19 @@ var r = n(735438),
             e
         );
     })({});
-let f = s.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
-    p = {
-        tension: 900,
-        friction: 45,
-        clamp: !0,
-    },
-    _ = {
-        tension: 360,
-        friction: 30,
-        clamp: !0,
-    };
+let _ = o.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
+    f = { tension: 900, friction: 45, clamp: !0 },
+    p = { tension: 360, friction: 30, clamp: !0 };
 var h = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let m = (0, o.TP)(),
+let m = (0, s.TP)(),
     g =
         -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
-            ? "".concat(m, "/_cdn_storage/")
+            ? `${m}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
     E = g + "quests/";
-var y = (function (e) {
+var A = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -118,9 +109,9 @@ var y = (function (e) {
         e
     );
 })({});
-let b = "545364944258990091",
-    O = "{reward_code}";
-var v = (function (e) {
+let I = "545364944258990091",
+    T = "{reward_code}";
+var y = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -128,27 +119,11 @@ var v = (function (e) {
         e
     );
 })({});
-let A = "1333839522189938740",
-    I = "1410358070831480904",
-    S = "1420556874629251124",
-    T = "1402418703554842694",
-    C = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
-    N = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
-    w = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
+let S = "1333839522189938740",
+    v = "1410358070831480904",
+    C = "1420556874629251124",
+    b = "1402418703554842694",
+    N = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
     R = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -157,10 +132,24 @@ let A = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    P = {
-        is_targeted: !1,
-    };
-var D = (function (e) {
+    O = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
+    D = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
+    L = { is_targeted: !1 };
+var w = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -169,10 +158,10 @@ var D = (function (e) {
             e
         );
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (
             (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.COLLECTIBLE = "reward_collectible"),
@@ -181,44 +170,22 @@ var D = (function (e) {
         );
     })({});
 let M = [
-    {
-        group: "task",
-        filter: "task_play",
-    },
-    {
-        group: "task",
-        filter: "task_video",
-    },
-    {
-        group: "reward",
-        filter: "reward_virtual_currency",
-    },
-    {
-        group: "reward",
-        filter: "reward_collectible",
-    },
-    {
-        group: "reward",
-        filter: "reward_in_game",
-    },
+    { group: "task", filter: "task_play" },
+    { group: "task", filter: "task_video" },
+    { group: "reward", filter: "reward_virtual_currency" },
+    { group: "reward", filter: "reward_collectible" },
+    { group: "reward", filter: "reward_in_game" },
 ];
-
-function j(e) {
-    return Object.values(L).includes(e)
-        ? {
-              group: "task",
-              filter: e,
-          }
-        : Object.values(x).includes(e)
-          ? {
-                group: "reward",
-                filter: e,
-            }
+function k(e) {
+    return Object.values(x).includes(e)
+        ? { group: "task", filter: e }
+        : Object.values(P).includes(e)
+          ? { group: "reward", filter: e }
           : null;
 }
-let k = ["reward", "task"],
-    U = Object.entries((0, r.groupBy)(M, "group")).sort((e, t) => {
-        let n = k.indexOf(e[0]),
-            r = k.indexOf(t[0]);
+let U = ["reward", "task"],
+    G = Object.entries((0, r.groupBy)(M, "group")).sort((e, t) => {
+        let n = U.indexOf(e[0]),
+            r = U.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });

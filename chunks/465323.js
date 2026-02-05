@@ -1,86 +1,15 @@
-n.d(t, {
-    $g: () => u,
-}),
-    n(65821);
+"use strict";
+n.d(t, { $g: () => s });
 var r = n(737291),
     i = n.n(r),
     a = n(818348);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = c(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function c(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let u = function (e, t, n) {
+let s = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (t === a.Yr.DISCORD_ORB) return e.toString();
-        let { convertToMajorUnits: i = !0 } = r,
-            s = l(r, ["convertToMajorUnits"]);
-        return Intl.NumberFormat(
-            n,
-            o(
-                {
-                    style: "currency",
-                    currency: t,
-                },
-                s,
-            ),
-        ).format(i ? f(e, t) : e);
+        let { convertToMajorUnits: i = !0, ...s } = r;
+        return Intl.NumberFormat(n, { style: "currency", currency: t, ...s }).format(i ? l(e, t) : e);
     },
-    d = {
+    o = {
         [a.Yr.AED]: 2,
         [a.Yr.AFN]: 2,
         [a.Yr.ALL]: 2,
@@ -265,8 +194,8 @@ let u = function (e, t, n) {
         [a.Yr.ZWL]: 2,
         [a.Yr.DISCORD_ORB]: 0,
     },
-    f = (e, t) => {
-        let n = d[t];
-        if (null == n) throw Error("Unexpected currency ".concat(t));
+    l = (e, t) => {
+        let n = o[t];
+        if (null == n) throw Error(`Unexpected currency ${t}`);
         return new (i())(e).dividedBy(10 ** n).toNumber();
     };

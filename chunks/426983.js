@@ -1,7 +1,5 @@
-n.d(t, {
-    K: () => a,
-    _: () => i,
-});
+"use strict";
+n.d(t, { K: () => a, _: () => i });
 var r = n(176128),
     i = (function (e) {
         return (
@@ -15,7 +13,6 @@ var r = n(176128),
             e
         );
     })({});
-
 function a(e) {
     return e.staff
         ? 5

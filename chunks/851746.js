@@ -1,198 +1,165 @@
-n.d(t, {
-    A: () => W,
-}),
-    n(896048);
-var r,
-    i = n(448761),
-    a = n(311907),
-    s = n(73153),
-    o = n(287809),
-    l = n(326084),
-    c = n(652215);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = 5,
-    f = null,
-    p = new Set(),
+"use strict";
+n.d(t, { A: () => H });
+var r = n(448761),
+    i = n(311907),
+    a = n(73153),
+    s = n(287809),
+    o = n(326084),
+    l = n(652215);
+let u = 5,
+    c = null,
+    d = new Set(),
     _ = new Map(),
-    h = !1,
-    m = new Set(),
-    g = new Set(),
-    E = new Map(),
-    b = 0,
-    y = null,
-    O = [],
-    A = !1,
-    v = 0,
-    S = !1,
+    f = !1,
+    p = new Set(),
+    h = new Set(),
+    m = new Map(),
+    g = 0,
+    E = null,
+    A = [],
     I = !1,
-    T = null;
-
+    T = 0,
+    y = !1,
+    S = !1,
+    v = null;
 function C() {
-    (f = null),
+    (c = null),
+        (d = new Set()),
+        (f = !1),
         (p = new Set()),
-        (h = !1),
-        (m = new Set()),
-        (g = new Set()),
-        (E = new Map()),
-        (b = 0),
-        (y = null),
-        (O = []),
-        (A = !1),
-        (v = 0),
-        (S = !1),
+        (h = new Set()),
+        (m = new Map()),
+        (g = 0),
+        (E = null),
+        (A = []),
         (I = !1),
-        (T = null),
+        (T = 0),
+        (y = !1),
+        (S = !1),
+        (v = null),
         (_ = new Map());
 }
-let N = () => !0;
-
+let b = () => !0;
+function N(e) {
+    let {} = e;
+    (v = null), (f = !0);
+}
 function R(e) {
-    let {} = e;
-    (T = null), (h = !0);
-}
-
-function w(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
-    (S = !0), (I = a), (h = !1), (f = t), (p = new Set(n)), (T = r), (_ = i);
+    (y = !0), (S = a), (f = !1), (c = t), (d = new Set(n)), (v = r), (_ = i);
 }
-
-function P(e) {
+function O(e) {
     let {} = e;
-    (S = !1), (I = !1), (T = null), (h = !1), (b += 1), (y = Date.now() + 1e3 * Math.pow(2, b));
+    (y = !1), (S = !1), (v = null), (f = !1), (g += 1), (E = Date.now() + 1e3 * Math.pow(2, g));
 }
-
 function D(e) {
     let { userTrialOffer: t } = e;
-    (0, l.xM)(), E.set(t.id, t), p.add(t.user_id);
+    (0, o.xM)(), m.set(t.id, t), d.add(t.user_id);
 }
-
-function x(e) {
-    let { userTrialOffers: t } = e;
-    for (let e of ((0, l.xM)(), t)) E.set(e.id, e), p.add(e.user_id);
-}
-
 function L(e) {
-    m.add(e);
+    let { userTrialOffers: t } = e;
+    for (let e of ((0, o.xM)(), t)) m.set(e.id, e), d.add(e.user_id);
 }
-
-function j(e) {
+function w(e) {
+    p.add(e);
+}
+function x(e) {
     let { userTrialOffer: t } = e;
-    null != t && (m.delete(t.id), g.add(t.id), E.set(t.id, t));
+    null != t && (p.delete(t.id), h.add(t.id), m.set(t.id, t));
 }
-
+function P(e) {
+    let { userTrialOfferId: t } = e;
+    p.delete(t), h.add(t);
+}
 function M(e) {
-    let { userTrialOfferId: t } = e;
-    m.delete(t), g.add(t);
-}
-
-function k(e) {
     let { message: t } = e;
-    V(t);
+    G(t);
 }
-
-function U(e) {
+function k(e) {
     let { messages: t } = e;
-    t.forEach((e) => V(e));
+    t.forEach((e) => G(e));
 }
-
-function G(e) {
+function U(e) {
     let { userTrialOfferId: t } = e;
-    h || (0, l.xM)(), m.has(t) || (L(t), s.h.wait(() => (0, l.kZ)(t).catch(c.FXj)));
+    f || (0, o.xM)(), p.has(t) || (w(t), a.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
 }
-
-function V(e) {
-    let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
+function G(e) {
+    let t = e.type === r.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    g.has(t) || m.has(t) || (L(t), s.h.wait(() => (0, l.kZ)(t).catch(c.FXj)));
+    h.has(t) || p.has(t) || (w(t), a.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
 }
-
-function F() {
-    A = !0;
+function V() {
+    I = !0;
 }
-
-function B(e) {
+function F(e) {
     let { users: t, nextIndex: n } = e;
-    (A = !1), (O = t), (v = n);
+    (I = !1), (A = t), (T = n);
 }
-
-function H() {
-    A = !1;
+function B() {
+    I = !1;
 }
-class Y extends (r = a.Ay.Store) {
+class j extends i.Ay.Store {
+    static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(o.default), this.syncWith([o.default], N);
+        this.waitFor(s.default), this.syncWith([s.default], b);
     }
     checkAndFetchReferralsRemaining() {
-        null == f && !h && b < d && (null == y || y < Date.now()) && (0, l.xM)();
+        null == c && !f && g < u && (null == E || E < Date.now()) && (0, o.xM)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), f;
+        return this.checkAndFetchReferralsRemaining(), c;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), Array.from(p.values());
+        return this.checkAndFetchReferralsRemaining(), Array.from(d.values());
     }
     isFetchingReferralsRemaining() {
-        return h;
+        return f;
     }
     getRelevantUserTrialOffer(e) {
-        return E.get(e);
+        return m.get(e);
     }
     isResolving(e) {
-        return m.has(e);
+        return p.has(e);
     }
     getEligibleUsers() {
-        return O;
-    }
-    getFetchingEligibleUsers() {
         return A;
     }
-    getNextIndexOfEligibleUsers() {
-        return v;
-    }
-    getIsEligibleToSendReferrals() {
-        return S;
-    }
-    getHasEligibleFriends() {
+    getFetchingEligibleUsers() {
         return I;
     }
-    getRefreshAt() {
+    getNextIndexOfEligibleUsers() {
         return T;
     }
+    getIsEligibleToSendReferrals() {
+        return y;
+    }
+    getHasEligibleFriends() {
+        return S;
+    }
+    getRefreshAt() {
+        return v;
+    }
     getAllRelevantReferralTrialOffers() {
-        return Array.from(E.values());
+        return Array.from(m.values());
     }
     getRecipientStatus() {
         return _;
     }
 }
-u(Y, "displayName", "ReferralTrialStore");
-let W = new Y(s.h, {
-    BILLING_REFERRAL_TRIAL_OFFER_UPDATE: G,
-    BILLING_REFERRALS_REMAINING_FETCH_START: R,
-    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: w,
-    BILLING_REFERRALS_REMAINING_FETCH_FAIL: P,
+let H = new j(a.h, {
+    BILLING_REFERRAL_TRIAL_OFFER_UPDATE: U,
+    BILLING_REFERRALS_REMAINING_FETCH_START: N,
+    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: R,
+    BILLING_REFERRALS_REMAINING_FETCH_FAIL: O,
     BILLING_CREATE_REFERRAL_SUCCESS: D,
-    CREATE_REFERRALS_SUCCESS: x,
-    BILLING_REFERRAL_RESOLVE_SUCCESS: j,
-    BILLING_REFERRAL_RESOLVE_FAIL: M,
-    REFERRALS_FETCH_ELIGIBLE_USER_START: F,
-    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: B,
-    REFERRALS_FETCH_ELIGIBLE_USER_FAIL: H,
-    LOAD_MESSAGES_SUCCESS: U,
-    MESSAGE_CREATE: k,
-    LOAD_MESSAGES_AROUND_SUCCESS: U,
+    CREATE_REFERRALS_SUCCESS: L,
+    BILLING_REFERRAL_RESOLVE_SUCCESS: x,
+    BILLING_REFERRAL_RESOLVE_FAIL: P,
+    REFERRALS_FETCH_ELIGIBLE_USER_START: V,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: F,
+    REFERRALS_FETCH_ELIGIBLE_USER_FAIL: B,
+    LOAD_MESSAGES_SUCCESS: k,
+    MESSAGE_CREATE: M,
+    LOAD_MESSAGES_AROUND_SUCCESS: k,
     LOGOUT: C,
 });

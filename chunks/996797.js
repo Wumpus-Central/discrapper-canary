@@ -1,34 +1,29 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var i = n(308368),
-    r = n(684013),
-    s = n(334738),
-    l = n(471024),
-    o = n(256415),
-    a = n(684748),
-    c = n(652215),
-    d = n(672396),
+    s = n(684013),
+    l = n(334738),
+    a = n(471024),
+    r = n(256415),
+    o = n(684748),
+    d = n(652215),
+    c = n(672396),
     u = n(985018);
-
 function h(e, t, n, h) {
     let p = t.username,
-        f = u.intl.format(u.t.VDODnv, {
-            username: "",
-            game: n.name,
-        }),
-        b = t.getAvatarURL(e.guild_id, 80),
-        { trackView: g, trackClick: y } = (0, a.Y)(d.KS.ActivityInvite, {
-            notif_type: d.KS.ActivityInvite,
+        A = u.intl.format(u.t.VDODnv, { username: "", game: n.name }),
+        f = t.getAvatarURL(e.guild_id, 80),
+        { trackView: g, trackClick: _ } = (0, o.Y)(c.KS.ActivityInvite, {
+            notif_type: c.KS.ActivityInvite,
             notif_user_id: t.id,
-            activity_type: c.xL.JOIN_REQUEST,
+            activity_type: d.xL.JOIN_REQUEST,
             activity_name: n.name,
         });
     return {
-        icon: b,
+        icon: f,
         title: p,
-        body: f,
-        hint: (e) => (0, l.sI)(e, (0, a.J)(), u.t.Odi54y),
+        body: A,
+        hint: (e) => (0, a.sI)(e, (0, o.J)(), u.t.Odi54y),
         confirmText: u.intl.string(u.t["fgP/wX"]),
         cancelText: u.intl.string(u.t["tpXzJ+"]),
         onNotificationShow: () => {
@@ -37,29 +32,29 @@ function h(e, t, n, h) {
         onConfirmClick: (t, n) => {
             i.A.sendActivityInvite({
                 channelId: e.id,
-                type: c.xL.JOIN,
+                type: d.xL.JOIN,
                 activity: h,
-                location: o.default.isInstanceLocked() ? c.ThZ.LOCKED_OVERLAY : c.ThZ.UNLOCKED_OVERLAY,
+                location: r.default.isInstanceLocked() ? d.ThZ.LOCKED_OVERLAY : d.ThZ.UNLOCKED_OVERLAY,
             }),
-                y("join"),
-                r.A.updateNotificationStatus(n);
+                _("join"),
+                s.A.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, s.ack)(
+            (0, l.ack)(
                 e.id,
                 {
-                    section: c.JJy.OVERLAY,
-                    object: c.ZSU.ACK_DECLINE_REQUEST_TO_JOIN,
-                    objectType: c.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                    section: d.JJy.OVERLAY,
+                    object: d.ZSU.ACK_DECLINE_REQUEST_TO_JOIN,
+                    objectType: d.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,
             ),
-                r.A.updateNotificationStatus(n),
-                y("decline");
+                s.A.updateNotificationStatus(n),
+                _("decline");
         },
         onDismissClick: () => {
-            y("dismiss");
+            _("dismiss");
         },
     };
 }

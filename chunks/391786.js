@@ -1,27 +1,20 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(321073),
-    n(864466),
-    n(443073),
-    n(896048);
-var r = n(64700),
+n.d(t, { A: () => o }), n(321073);
+var i = n(64700),
     l = n(311907),
-    i = n(508675),
+    s = n(508675),
     a = n(7584),
-    s = n(846218);
-
+    r = n(846218);
 function o(e) {
-    let t = (0, l.bG)([i.Ay], () => i.Ay.getGuilds()),
-        n = r.useRef([]);
+    let t = (0, l.bG)([s.Ay], () => s.Ay.getGuilds()),
+        n = i.useRef([]);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             a.Ay.forEach((e) => n.current.push(e));
         }, []),
-        r.useMemo(
+        i.useMemo(
             () => [
                 ...Object.values(t)
-                    .map((t) => t.emojis.filter((t) => (0, s.n)(t, e)))
+                    .map((t) => t.emojis.filter((t) => (0, r.n)(t, e)))
                     .flat(),
                 ...n.current,
             ],

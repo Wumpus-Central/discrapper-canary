@@ -1,34 +1,17 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(65821),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(972347),
     i = n(205693),
     a = n(731854);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
 function s(e) {
     return null;
 }
-
-function l(e) {
+function o(e) {
     return null;
 }
-class c extends r.A {
+class l extends r.A {
+    Video = s;
+    Camera = o;
     destroy() {
         this.emit(i.bg.Destroy), this.removeAllListeners();
     }
@@ -187,7 +170,4 @@ class c extends r.A {
         return Promise.reject(Error("Dummy noise cancellation stats not supported"));
     }
     setNoiseCancellationEnableStats(e) {}
-    constructor(...e) {
-        super(...e), o(this, "Video", s), o(this, "Camera", l);
-    }
 }

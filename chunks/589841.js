@@ -1,3 +1,4 @@
+"use strict";
 var r = n(404312),
     i = Object.prototype.hasOwnProperty,
     a = Array.isArray,
@@ -16,21 +17,11 @@ var r = n(404312),
         }
     },
     l = function (e, t) {
-        for (
-            var n =
-                    t && t.plainObjects
-                        ? {
-                              __proto__: null,
-                          }
-                        : {},
-                r = 0;
-            r < e.length;
-            ++r
-        )
+        for (var n = t && t.plainObjects ? { __proto__: null } : {}, r = 0; r < e.length; ++r)
             void 0 !== e[r] && (n[r] = e[r]);
         return n;
     },
-    c = function e(t, n, r) {
+    u = function e(t, n, r) {
         if (!n) return t;
         if ("object" != typeof n && "function" != typeof n) {
             if (a(t)) t.push(n);
@@ -55,7 +46,7 @@ var r = n(404312),
                   return i.call(t, a) ? (t[a] = e(t[a], s, r)) : (t[a] = s), t;
               }, s);
     },
-    u = 1024;
+    c = 1024;
 e.exports = {
     arrayToObject: l,
     assign: function (e, t) {
@@ -67,31 +58,11 @@ e.exports = {
         return [].concat(e, t);
     },
     compact: function (e) {
-        for (
-            var t = [
-                    {
-                        obj: {
-                            o: e,
-                        },
-                        prop: "o",
-                    },
-                ],
-                n = [],
-                r = 0;
-            r < t.length;
-            ++r
-        )
+        for (var t = [{ obj: { o: e }, prop: "o" }], n = [], r = 0; r < t.length; ++r)
             for (var i = t[r], a = i.obj[i.prop], s = Object.keys(a), l = 0; l < s.length; ++l) {
-                var c = s[l],
-                    u = a[c];
-                "object" == typeof u &&
-                    null !== u &&
-                    -1 === n.indexOf(u) &&
-                    (t.push({
-                        obj: a,
-                        prop: c,
-                    }),
-                    n.push(u));
+                var u = s[l],
+                    c = a[u];
+                "object" == typeof c && null !== c && -1 === n.indexOf(c) && (t.push({ obj: a, prop: u }), n.push(c));
             }
         return o(t), e;
     },
@@ -114,40 +85,40 @@ e.exports = {
             return escape(o).replace(/%u[0-9a-f]{4}/gi, function (e) {
                 return "%26%23" + parseInt(e.slice(2), 16) + "%3B";
             });
-        for (var l = "", c = 0; c < o.length; c += u) {
-            for (var d = o.length >= u ? o.slice(c, c + u) : o, f = [], p = 0; p < d.length; ++p) {
-                var _ = d.charCodeAt(p);
+        for (var l = "", u = 0; u < o.length; u += c) {
+            for (var d = o.length >= c ? o.slice(u, u + c) : o, _ = [], f = 0; f < d.length; ++f) {
+                var p = d.charCodeAt(f);
                 if (
-                    45 === _ ||
-                    46 === _ ||
-                    95 === _ ||
-                    126 === _ ||
-                    (_ >= 48 && _ <= 57) ||
-                    (_ >= 65 && _ <= 90) ||
-                    (_ >= 97 && _ <= 122) ||
-                    (a === r.RFC1738 && (40 === _ || 41 === _))
+                    45 === p ||
+                    46 === p ||
+                    95 === p ||
+                    126 === p ||
+                    (p >= 48 && p <= 57) ||
+                    (p >= 65 && p <= 90) ||
+                    (p >= 97 && p <= 122) ||
+                    (a === r.RFC1738 && (40 === p || 41 === p))
                 ) {
-                    f[f.length] = d.charAt(p);
+                    _[_.length] = d.charAt(f);
                     continue;
                 }
-                if (_ < 128) {
-                    f[f.length] = s[_];
+                if (p < 128) {
+                    _[_.length] = s[p];
                     continue;
                 }
-                if (_ < 2048) {
-                    f[f.length] = s[192 | (_ >> 6)] + s[128 | (63 & _)];
+                if (p < 2048) {
+                    _[_.length] = s[192 | (p >> 6)] + s[128 | (63 & p)];
                     continue;
                 }
-                if (_ < 55296 || _ >= 57344) {
-                    f[f.length] = s[224 | (_ >> 12)] + s[128 | ((_ >> 6) & 63)] + s[128 | (63 & _)];
+                if (p < 55296 || p >= 57344) {
+                    _[_.length] = s[224 | (p >> 12)] + s[128 | ((p >> 6) & 63)] + s[128 | (63 & p)];
                     continue;
                 }
-                (p += 1),
-                    (_ = 65536 + (((1023 & _) << 10) | (1023 & d.charCodeAt(p)))),
-                    (f[f.length] =
-                        s[240 | (_ >> 18)] + s[128 | ((_ >> 12) & 63)] + s[128 | ((_ >> 6) & 63)] + s[128 | (63 & _)]);
+                (f += 1),
+                    (p = 65536 + (((1023 & p) << 10) | (1023 & d.charCodeAt(f)))),
+                    (_[_.length] =
+                        s[240 | (p >> 18)] + s[128 | ((p >> 12) & 63)] + s[128 | ((p >> 6) & 63)] + s[128 | (63 & p)]);
             }
-            l += f.join("");
+            l += _.join("");
         }
         return l;
     },
@@ -164,5 +135,5 @@ e.exports = {
         }
         return t(e);
     },
-    merge: c,
+    merge: u,
 };

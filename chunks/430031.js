@@ -1,3 +1,4 @@
+"use strict";
 function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -14,17 +15,9 @@ function n(t) {
     }
     return t;
 }
-
 function i(t, e, r) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = r),
+        e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r),
         t
     );
 }
@@ -160,10 +153,7 @@ var o,
                 return (
                     0 === this.contentBlocks.length &&
                         (x ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
-                    {
-                        contentBlocks: this.contentBlocks,
-                        entityMap: this.entityMap,
-                    }
+                    { contentBlocks: this.contentBlocks, entityMap: this.entityMap }
                 );
             }),
             (e._makeBlockConfig = function () {
@@ -213,13 +203,7 @@ var o,
                         var f = h(),
                             p = this._toBlockConfigs(Array.from(i.childNodes), e);
                         this._trimCurrentText(),
-                            r.push(
-                                this._makeBlockConfig({
-                                    key: f,
-                                    childConfigs: p,
-                                    type: u,
-                                }),
-                            ),
+                            r.push(this._makeBlockConfig({ key: f, childConfigs: p, type: u })),
                             (this.currentDepth = c),
                             (this.wrapper = l);
                         continue;
@@ -254,10 +238,7 @@ var o,
             (e._appendText = function (t, e) {
                 this.currentText += t;
                 var r,
-                    n = a.create({
-                        style: e,
-                        entity: this.currentEntity,
-                    });
+                    n = a.create({ style: e, entity: this.currentEntity });
                 this.characterList = (r = this.characterList).push.apply(r, Array(t.length).fill(n));
             }),
             (e._trimCurrentText = function () {
@@ -351,12 +332,7 @@ var o,
                         i = r.text,
                         o = r.characterList;
                     e.contentBlocks.push(
-                        new s(
-                            n({}, t, {
-                                text: t.text + i,
-                                characterList: t.characterList.concat(o),
-                            }),
-                        ),
+                        new s(n({}, t, { text: t.text + i, characterList: t.characterList.concat(o) })),
                     );
                 });
             }),
@@ -369,10 +345,7 @@ var o,
                     var a = this._extractTextFromBlockConfigs(o.childConfigs);
                     (r += a.text), (n = n.concat(a.characterList));
                 }
-                return {
-                    text: r,
-                    characterList: n,
-                };
+                return { text: r, characterList: n };
             }),
             t
         );

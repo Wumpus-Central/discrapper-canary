@@ -1,7 +1,5 @@
-n.d(t, {
-    N: () => r,
-    T: () => i,
-});
+"use strict";
+n.d(t, { N: () => r, T: () => i });
 var r = (function (e) {
         return (e[(e.STANDARD = 1)] = "STANDARD"), (e[(e.GUILD = 2)] = "GUILD"), e;
     })({}),

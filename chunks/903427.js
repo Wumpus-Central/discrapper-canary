@@ -1,7 +1,4 @@
-i.d(t, {
-    K: () => O,
-    P: () => I,
-});
+i.d(e, { K: () => N, P: () => I });
 var n = i(627968),
     l = i(64700),
     s = i(574381),
@@ -11,85 +8,51 @@ var n = i(627968),
     o = i(793574),
     d = i(419954),
     T = i(430452),
-    c = i(780964),
-    A = i(825468),
-    S = i(509381),
-    _ = i(731854),
-    E = i(985018);
-let g = !s.Av;
-
+    A = i(780964),
+    S = i(825468),
+    E = i(509381),
+    g = i(731854),
+    _ = i(985018);
+let c = !s.Av;
 function I() {
-    return (0, r.bG)([T.A], () => T.A.getMode() === _.TB.PUSH_TO_TALK);
+    return (0, r.bG)([T.A], () => T.A.getMode() === g.TB.PUSH_TO_TALK);
 }
-let O = (0, d.zD)(c.X.VOICE_PUSH_TO_TALK_SETTING, {
+let N = (0, d.zD)(A.X.VOICE_PUSH_TO_TALK_SETTING, {
     useTitle: function () {
-        return s.Av ? E.intl.string(E.t.tG4Np5) : E.intl.string(E.t.JMyQin);
+        return s.Av ? _.intl.string(_.t.tG4Np5) : _.intl.string(_.t.JMyQin);
     },
     useSubtitle: function () {
-        let e = (0, r.bG)([T.A], () => T.A.getMode());
+        let t = (0, r.bG)([T.A], () => T.A.getMode());
         return l.useMemo(() => {
-            if (!s.Av && e === _.TB.PUSH_TO_TALK)
-                return E.intl.format(E.t["VHI4+Y"], {
-                    onDownloadClick: () => (0, A._)("Help Text PTT"),
-                });
-        }, [e]);
+            if (!s.Av && t === g.TB.PUSH_TO_TALK)
+                return _.intl.format(_.t["VHI4+Y"], { onDownloadClick: () => (0, S._)("Help Text PTT") });
+        }, [t]);
     },
     usePredicate: function () {
-        return (0, r.bG)([T.A], () => T.A.getActiveInputProfile() !== S.my.STUDIO);
+        return (0, r.bG)([T.A], () => T.A.getActiveInputProfile() !== E.my.STUDIO);
     },
     useValue: function () {
-        return (0, r.bG)([T.A], () => T.A.getMode() === _.TB.PUSH_TO_TALK);
+        return (0, r.bG)([T.A], () => T.A.getMode() === g.TB.PUSH_TO_TALK);
     },
-    setValue: function (e) {
-        var t, l;
-        (t = e ? _.TB.PUSH_TO_TALK : _.TB.VOICE_ACTIVITY),
+    setValue: function (t) {
+        var e, l;
+        (e = t ? g.TB.PUSH_TO_TALK : g.TB.VOICE_ACTIVITY),
             (l = [o.A.USER_SETTINGS_VOICE_AND_VIDEO]),
-            t === _.TB.PUSH_TO_TALK &&
-                g &&
+            e === g.TB.PUSH_TO_TALK &&
+                c &&
                 (0, a.openModalLazy)(async () => {
-                    let { default: e } = await i.e("10919").then(i.bind(i, 556506));
-                    return (t) =>
-                        (0, n.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var i = null != arguments[t] ? arguments[t] : {},
-                                        n = Object.keys(i);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (n = n.concat(
-                                            Object.getOwnPropertySymbols(i).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(i, e).enumerable;
-                                            }),
-                                        )),
-                                        n.forEach(function (t) {
-                                            var n;
-                                            (n = i[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: n,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = n);
-                                        });
-                                }
-                                return e;
-                            })(
-                                {
-                                    title: E.intl.string(E.t.Kdt0Gb),
-                                    confirmText: E.intl.string(E.t["1WjMbC"]),
-                                    cancelText: E.intl.string(E.t.BddRzS),
-                                    onConfirm: () => (0, A._)("PTT Limited Modal"),
-                                    body: E.intl.string(E.t.NIozvt),
-                                },
-                                t,
-                            ),
-                        );
+                    let { default: t } = await i.e("10919").then(i.bind(i, 556506));
+                    return (e) =>
+                        (0, n.jsx)(t, {
+                            title: _.intl.string(_.t.Kdt0Gb),
+                            confirmText: _.intl.string(_.t["1WjMbC"]),
+                            cancelText: _.intl.string(_.t.BddRzS),
+                            onConfirm: () => (0, S._)("PTT Limited Modal"),
+                            body: _.intl.string(_.t.NIozvt),
+                            ...e,
+                        });
                 }),
-            u.A.setMode(t, void 0, void 0, {
-                analyticsLocations: l,
-            });
+            u.A.setMode(e, void 0, void 0, { analyticsLocations: l });
     },
-    useSearchTerms: () => [E.intl.string(E.t["pS+K2L"]), E.intl.string(E.t.nuFtHH)],
+    useSearchTerms: () => [_.intl.string(_.t["pS+K2L"]), _.intl.string(_.t.nuFtHH)],
 });

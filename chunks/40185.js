@@ -1,153 +1,115 @@
-n.d(t, {
-    cg: () => N,
-    hb: () => w,
-    nq: () => R,
-});
+"use strict";
+n.d(t, { cg: () => R, hb: () => D, nq: () => O });
 var r = n(989349),
     i = n.n(r),
     a = n(607399),
     s = n(417597),
     o = n(384904),
     l = n(86379),
-    c = n(287809),
-    u = n(166403),
+    u = n(287809),
+    c = n(166403),
     d = n(816733),
-    f = n(469778),
-    p = n(723702),
-    _ = n(927578),
+    _ = n(469778),
+    f = n(723702),
+    p = n(927578),
     h = n(478097),
     m = n(238e3),
     g = n(196042),
     E = n(422936),
-    b = n(234419),
-    y = n(586983),
-    O = n(597758),
-    A = n(35587),
-    v = n(412260),
-    S = n(788868),
-    I = n(652215);
-let T = 10;
-
-function C(e) {
+    A = n(234419),
+    I = n(586983),
+    T = n(597758),
+    y = n(35587),
+    S = n(412260),
+    v = n(788868),
+    C = n(652215);
+let b = 10;
+function N(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r, previousPremiumSubscription: s } = e;
     if (!t) return !1;
-    if (null != r && r.status === I.Dmq.ENDED) {
+    if (null != r && r.status === C.Dmq.ENDED) {
         let e = r.endedAt,
-            t = r.hasPremiumAtLeast(S.PremiumTypes.TIER_2);
-        if (null != e && t && i()().subtract(T, "days").isBefore(e)) return !1;
+            t = r.hasPremiumAtLeast(v.PremiumTypes.TIER_2);
+        if (null != e && t && i()().subtract(b, "days").isBefore(e)) return !1;
     }
-    if (null != s && s.status === I.Dmq.ENDED) {
+    if (null != s && s.status === C.Dmq.ENDED) {
         let e = s.endedAt,
-            t = s.hasPremiumAtLeast(S.PremiumTypes.TIER_2);
-        if (null != e && t && i()().subtract(T, "days").isBefore(e)) return !1;
+            t = s.hasPremiumAtLeast(v.PremiumTypes.TIER_2);
+        if (null != e && t && i()().subtract(b, "days").isBefore(e)) return !1;
     }
     if (null != n) {
-        let e = n.hasPremiumAtLeast(S.PremiumTypes.TIER_2),
-            t = c.default.getCurrentUser(),
-            r = !!(null == n ? void 0 : n.hasActiveTrial) && _.Ay.isPremiumExactly(t, S.PremiumTypes.TIER_0),
-            i = (0, p.isAndroid)() && n.paymentGateway !== I.kM_.GOOGLE;
+        let e = n.hasPremiumAtLeast(v.PremiumTypes.TIER_2),
+            t = u.default.getCurrentUser(),
+            r = !!n?.hasActiveTrial && p.Ay.isPremiumExactly(t, v.PremiumTypes.TIER_0),
+            i = (0, f.isAndroid)() && n.paymentGateway !== C.kM_.GOOGLE;
         if (e || r || i) return !1;
     }
-    return !(a.Fr && f.A.isFractionalPremiumActive());
+    return !(a.Fr && _.A.isFractionalPremiumActive());
 }
-
-function N() {
-    var e;
-    let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { paymentsBlocked: n } = l.A.useExperiment(
-            {
-                location: "153d31_1",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
-        { promotion: r } = (0, A.Eu)(),
-        { enabled: i } = (0, g.Ay)(),
-        { enabled: o } = (0, m.Ay)(),
+function R() {
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        { paymentsBlocked: t } = l.A.useExperiment({ location: "153d31_1" }, { autoTrackExposure: !1 }),
+        { promotion: n } = (0, y.Eu)(),
+        { enabled: r } = (0, g.Ay)(),
+        { enabled: i } = (0, m.Ay)(),
         {
-            mostRecentSubscription: c,
-            premiumSubscription: d,
-            previousPremiumSubscription: f,
-        } = (0, s.cf)([u.A], () => ({
-            mostRecentSubscription: u.A.getMostRecentPremiumTypeSubscription(),
-            premiumSubscription: u.A.getPremiumTypeSubscription(),
-            previousPremiumSubscription: u.A.getPreviousPremiumTypeSubscription(),
+            mostRecentSubscription: o,
+            premiumSubscription: u,
+            previousPremiumSubscription: d,
+        } = (0, s.cf)([c.A], () => ({
+            mostRecentSubscription: c.A.getMostRecentPremiumTypeSubscription(),
+            premiumSubscription: c.A.getPremiumTypeSubscription(),
+            previousPremiumSubscription: c.A.getPreviousPremiumTypeSubscription(),
         })),
-        _ = (0, b.V)(),
-        O = (0, E.O)(),
-        v = new Date(null != (e = null == r ? void 0 : r.endDate) ? e : 0).valueOf(),
+        _ = (0, A.V)(),
+        p = (0, E.O)(),
+        T = new Date(n?.endDate ?? 0).valueOf(),
         S = Date.now(),
-        I = S > v;
-    (0, y.A)({
-        delay: I ? -1 : v - S,
-    });
-    let T = !a.Fr || ((0, p.isAndroid)() && o),
-        N = C({
-            experimentEnabled: i,
-            premiumSubscription: d,
-            mostRecentSubscription: c,
-            previousPremiumSubscription: f,
+        v = S > T;
+    (0, I.A)({ delay: v ? -1 : T - S });
+    let C = !a.Fr || ((0, f.isAndroid)() && i),
+        b = N({
+            experimentEnabled: r,
+            premiumSubscription: u,
+            mostRecentSubscription: o,
+            previousPremiumSubscription: d,
         }),
-        R = T && N && null == _ && null != r && !n && null == O,
-        { enabled: w } = h.A.useExperiment(
-            {
-                location: "153d31_2",
-            },
-            {
-                autoTrackExposure: R,
-                disable: !R,
-            },
-        );
-    return !I && (t ? w : R);
+        R = C && b && null == _ && null != n && !t && null == p,
+        { enabled: O } = h.A.useExperiment({ location: "153d31_2" }, { autoTrackExposure: R, disable: !R });
+    return !v && (e ? O : R);
 }
-async function R() {
-    var e;
-    let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        n = c.default.getCurrentUser(),
-        r = !(null == n ? void 0 : n.isClaimed()),
-        { paymentsBlocked: i } = l.A.getCurrentConfig(
-            {
-                location: "153d31_3",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
-        { enabled: s } = (0, g.fy)(),
-        { enabled: f } = (0, m.LB)(),
-        { enabled: p } = h.A.getCurrentConfig(
-            {
-                location: "153d31_4",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
-        _ = !a.Fr || f;
+async function O() {
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        t = u.default.getCurrentUser(),
+        n = !t?.isClaimed(),
+        { paymentsBlocked: r } = l.A.getCurrentConfig({ location: "153d31_3" }, { autoTrackExposure: !1 }),
+        { enabled: i } = (0, g.fy)(),
+        { enabled: s } = (0, m.LB)(),
+        { enabled: _ } = h.A.getCurrentConfig({ location: "153d31_4" }, { autoTrackExposure: !1 }),
+        f = !a.Fr || s;
     if (
+        n ||
         r ||
-        i ||
-        !s ||
-        (t && !p) ||
-        !_ ||
+        !i ||
+        (e && !_) ||
+        !f ||
         (d.A.hasFetchedOffer() && (d.A.hasAnyUnexpiredOffer() || d.A.hasAnyUnexpiredDiscountOffer()))
     )
         return !1;
-    !u.A.hasFetchedMostRecentPremiumTypeSubscription() &&
-        (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(S.lA.PREMIUM_TIER_2)) &&
+    !c.A.hasFetchedMostRecentPremiumTypeSubscription() &&
+        u.default.getCurrentUser()?.hasPurchasedFlag(v.lA.PREMIUM_TIER_2) &&
         (await (0, o.I8)()),
-        u.A.hasFetchedSubscriptions() || (await (0, o.hP)());
-    let E = u.A.getMostRecentPremiumTypeSubscription();
-    return C({
-        experimentEnabled: s,
-        premiumSubscription: u.A.getPremiumTypeSubscription(),
-        mostRecentSubscription: E,
-        previousPremiumSubscription: u.A.getPreviousPremiumTypeSubscription(),
+        c.A.hasFetchedSubscriptions() || (await (0, o.hP)());
+    let p = c.A.getMostRecentPremiumTypeSubscription();
+    return N({
+        experimentEnabled: i,
+        premiumSubscription: c.A.getPremiumTypeSubscription(),
+        mostRecentSubscription: p,
+        previousPremiumSubscription: c.A.getPreviousPremiumTypeSubscription(),
     });
 }
-async function w() {
-    if (!(await R(!1))) return;
-    let e = v.A.bogoPromotion;
-    (null != e && new Date(e.endDate).valueOf() >= Date.now()) || (await (0, O.hS)());
+async function D() {
+    if (!(await O(!1))) return;
+    let e = S.A.bogoPromotion;
+    (null != e && new Date(e.endDate).valueOf() >= Date.now()) || (await (0, T.hS)());
 }

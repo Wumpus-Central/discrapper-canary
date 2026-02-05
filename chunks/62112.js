@@ -1,38 +1,28 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(64700),
-    i = n(311907),
-    l = n(734057),
-    a = n(287809),
+n.d(t, { A: () => d });
+var i = n(64700),
+    r = n(311907),
+    a = n(734057),
+    l = n(287809),
     s = n(380335),
     o = n(180232);
-
-function c() {
-    let e = (0, i.bG)([l.A], () => l.A.getPrivateChannelsVersion()),
-        t = (0, i.yK)([l.A, s.A], () => {
-            let e = l.A.getMutablePrivateChannels(),
+function d() {
+    let e = (0, r.bG)([a.A], () => a.A.getPrivateChannelsVersion()),
+        t = (0, r.yK)([a.A, s.A], () => {
+            let e = a.A.getMutablePrivateChannels(),
                 t = Array.from(s.A.getMessageRequestChannelIds())
                     .map((t) => e[t])
                     .filter((e) => null != e);
             return (0, o.g)(t);
         }, [e]),
-        n = (0, i.cf)([a.default], () => {
+        n = (0, r.cf)([l.default], () => {
             let e = {};
             return (
                 t.forEach((t) => {
-                    let n = a.default.getUser(t.recipients[0]);
+                    let n = l.default.getUser(t.recipients[0]);
                     null != n && (e[t.id] = n);
                 }),
                 e
             );
         }, [t]);
-    return r.useMemo(
-        () =>
-            t.map((e) => ({
-                channel: e,
-                user: n[e.id],
-            })),
-        [t, n],
-    );
+    return i.useMemo(() => t.map((e) => ({ channel: e, user: n[e.id] })), [t, n]);
 }

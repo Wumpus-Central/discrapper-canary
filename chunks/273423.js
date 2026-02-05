@@ -1,167 +1,133 @@
-n.d(t, {
-    A: () => A,
-    I: () => x,
-}),
-    n(321073);
-var l,
-    a = n(627968),
-    r = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    c = n(311907),
-    o = n(990078),
-    d = n(319060),
-    u = n(397927),
-    p = n(573435),
-    h = n(773669),
-    m = n(486020),
-    b = n(240248),
-    f = n(985018),
-    g = n(420783),
-    x =
-        (((l = {})[(l.SMALL = (0, b.xI)(d.A.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
-        (l[(l.LARGE = (0, b.xI)(d.A.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
-        l);
-let v = {
-        [x.SMALL]: g.Ps,
-        [x.LARGE]: g.XY,
-    },
-    j = {
-        [x.SMALL]: g.Bx,
-        [x.LARGE]: g.J3,
-    };
-
-function A(e) {
-    var t, n, l;
+a.d(t, { A: () => v, I: () => A }), a(321073);
+var n,
+    i = a(627968),
+    s = a(64700),
+    l = a(503698),
+    r = a.n(l),
+    o = a(311907),
+    c = a(990078),
+    d = a(319060),
+    u = a(397927),
+    h = a(573435),
+    m = a(773669),
+    p = a(486020),
+    _ = a(240248),
+    g = a(985018),
+    x = a(420783),
+    A =
+        (((n = {})[(n.SMALL = (0, _.xI)(d.A.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
+        (n[(n.LARGE = (0, _.xI)(d.A.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
+        n);
+let C = { [A.SMALL]: x.Ps, [A.LARGE]: x.XY },
+    b = { [A.SMALL]: x.Bx, [A.LARGE]: x.J3 };
+function v(e) {
     let {
-            application: i,
-            mutualGuilds: d,
-            mutualGuildShownMax: b = 4,
-            className: A,
-            textVariant: _ = "text-sm/normal",
-            compact: y,
-            guildIconSize: O = x.LARGE,
-            guildsClassName: S,
-            children: C,
+            application: t,
+            mutualGuilds: a,
+            mutualGuildShownMax: n = 4,
+            className: l,
+            textVariant: d = "text-sm/normal",
+            compact: _,
+            guildIconSize: v = A.LARGE,
+            guildsClassName: f,
+            children: j,
         } = e,
-        E = (0, c.bG)([h.default], () => h.default.locale),
-        I = new Intl.ListFormat(E),
-        P = null != (t = null == (l = i.directory_entry) ? void 0 : l.guild_count) ? t : 0,
-        N = null != (n = null == d ? void 0 : d.length) ? n : 0,
-        R = Math.max(0, P - N),
-        { shownMutualGuilds: T, hiddenMutualGuilds: L } = r.useMemo(() => {
+        I = (0, o.bG)([m.default], () => m.default.locale),
+        E = new Intl.ListFormat(I),
+        S = t.directory_entry?.guild_count ?? 0,
+        N = a?.length ?? 0,
+        y = Math.max(0, S - N),
+        { shownMutualGuilds: T, hiddenMutualGuilds: R } = s.useMemo(() => {
             let e = [],
                 t = [];
             return (
-                null == d ||
-                    d.forEach((n) => {
-                        e.length < b && null != n.icon ? e.push(n) : t.push(n);
-                    }),
-                e.length === b && t.length > 0 && (t.push(e[b - 1]), (e = e.slice(0, b - 1))),
-                {
-                    shownMutualGuilds: e,
-                    hiddenMutualGuilds: t,
-                }
+                a?.forEach((a) => {
+                    e.length < n && null != a.icon ? e.push(a) : t.push(a);
+                }),
+                e.length === n && t.length > 0 && (t.push(e[n - 1]), (e = e.slice(0, n - 1))),
+                { shownMutualGuilds: e, hiddenMutualGuilds: t }
             );
-        }, [d, b]),
-        D = L.length,
-        w = (function (e, t, n, l, a) {
+        }, [a, n]),
+        L = R.length,
+        P = (function (e, t, a, n, i) {
             if (0 === t && 0 === e) return null;
-            if (t > 0 && 0 === n)
-                return f.intl.formatToPlainString(f.t.pnzE1t, {
-                    mutualGuildCount: t,
-                });
-            let r = t > 0 ? f.t.YR8PSL : f.t.GQjq6c,
-                i = new Intl.NumberFormat(l, {
-                    notation: a ? "compact" : "standard",
-                    compactDisplay: "short",
-                });
-            return f.intl.formatToPlainString(r, {
-                guildCount: i.format(e),
+            if (t > 0 && 0 === a) return g.intl.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
+            let s = t > 0 ? g.t.YR8PSL : g.t.GQjq6c,
+                l = new Intl.NumberFormat(n, { notation: i ? "compact" : "standard", compactDisplay: "short" });
+            return g.intl.formatToPlainString(s, {
+                guildCount: l.format(e),
                 mutualGuildCount: t,
-                nonMutualGuildCount: i.format(n),
+                nonMutualGuildCount: l.format(a),
             });
-        })(P, N, R, E, y);
-    return 0 === T.length && null == w
+        })(S, N, y, I, _);
+    return 0 === T.length && null == P
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  C,
-                  (0, a.jsxs)("div", {
-                      className: s()(A, g.iE),
+                  j,
+                  (0, i.jsxs)("div", {
+                      className: r()(l, x.iE),
                       children: [
-                          (0, a.jsx)("div", {
-                              className: s()(g.Pt, S),
+                          (0, i.jsx)("div", {
+                              className: r()(x.Pt, f),
                               children:
                                   T.length > 0
-                                      ? (0, a.jsxs)(a.Fragment, {
+                                      ? (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 T.map((e, t) => {
-                                                    let n = t === T.length - 1 && 0 === D,
-                                                        l = m.Ay.getGuildIconURL({
+                                                    let a = t === T.length - 1 && 0 === L,
+                                                        n = p.Ay.getGuildIconURL({
                                                             id: e.id,
                                                             icon: e.icon,
-                                                            size: O,
+                                                            size: v,
                                                             canAnimate: !1,
                                                         }),
-                                                        i = (0, a.jsx)(o.m, {
+                                                        l = (0, i.jsx)(c.m, {
                                                             text: e.name,
                                                             position: "top",
-                                                            children: (0, a.jsx)("img", {
-                                                                className: s()(g.Kk, j[O]),
-                                                                src: l,
+                                                            children: (0, i.jsx)("img", {
+                                                                className: r()(x.Kk, b[v]),
+                                                                src: n,
                                                                 alt: "",
                                                             }),
                                                         });
-                                                    return n
-                                                        ? (0, a.jsx)(
-                                                              r.Fragment,
+                                                    return a
+                                                        ? (0, i.jsx)(s.Fragment, { children: l }, e.id)
+                                                        : (0, i.jsx)(
+                                                              h.Ay,
                                                               {
-                                                                  children: i,
-                                                              },
-                                                              e.id,
-                                                          )
-                                                        : (0, a.jsx)(
-                                                              p.Ay,
-                                                              {
-                                                                  className: g.SA,
-                                                                  height: O,
-                                                                  width: O,
-                                                                  mask: p.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
-                                                                  children: i,
+                                                                  className: x.SA,
+                                                                  height: v,
+                                                                  width: v,
+                                                                  mask: h.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
+                                                                  children: l,
                                                               },
                                                               e.id,
                                                           );
                                                 }),
-                                                D > 0
-                                                    ? (0, a.jsx)(o.m, {
-                                                          text: f.intl.formatToPlainString(f.t.m6oRrA, {
-                                                              appNames: I.format(L.map((e) => e.name)),
+                                                L > 0
+                                                    ? (0, i.jsx)(c.m, {
+                                                          text: g.intl.formatToPlainString(g.t.m6oRrA, {
+                                                              appNames: E.format(R.map((e) => e.name)),
                                                           }),
                                                           position: "top",
-                                                          children: (0, a.jsxs)("div", {
-                                                              className: s()(g.S_, v[O]),
-                                                              children: ["+", D],
+                                                          children: (0, i.jsxs)("div", {
+                                                              className: r()(x.S_, C[v]),
+                                                              children: ["+", L],
                                                           }),
                                                       })
                                                     : null,
                                             ],
                                         })
-                                      : (0, a.jsx)(u.RR9, {
+                                      : (0, i.jsx)(u.RR9, {
                                             size: "custom",
                                             color: "currentColor",
-                                            width: O,
-                                            height: O,
-                                            className: g.DE,
+                                            width: v,
+                                            height: v,
+                                            className: x.DE,
                                         }),
                           }),
-                          null != w
-                              ? (0, a.jsx)(u.Text, {
-                                    variant: _,
-                                    color: "text-default",
-                                    children: w,
-                                })
-                              : null,
+                          null != P ? (0, i.jsx)(u.Text, { variant: d, color: "text-default", children: P }) : null,
                       ],
                   }),
               ],

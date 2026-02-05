@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zB: "primary__06eda",
     Rm: "secondary__06eda",

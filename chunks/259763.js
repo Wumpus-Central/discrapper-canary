@@ -1,6 +1,4 @@
-n.d(i, {
-    default: () => c,
-});
+n.d(i, { default: () => c });
 var r = n(627968);
 n(64700);
 var e = n(158954),
@@ -22,15 +20,7 @@ let c = (t) => {
                 variant: p ? "primary" : "critical-primary",
                 text: p ? u.intl.string(u.t.YqAjXy) : u.intl.string(u.t.w4m945),
                 onClick: () => {
-                    s.A.updateChannelOverrideSettings(
-                        null,
-                        n,
-                        {
-                            muted: !p,
-                        },
-                        p ? d.fd.Unmuted : d.fd.Muted,
-                    ),
-                        i();
+                    s.A.updateChannelOverrideSettings(null, n, { muted: !p }, p ? d.fd.Unmuted : d.fd.Muted), i();
                 },
             },
         ],

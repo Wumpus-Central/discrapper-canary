@@ -1,16 +1,15 @@
+"use strict";
 function r(e) {
     var t = null;
     return function () {
         return null == t && (t = e()), t;
     };
 }
-
 function i(e, t) {
     return e.filter(function (e) {
         return e !== t;
     });
 }
-
 function a(e, t) {
     var n = new Set(),
         r = function (e) {
@@ -25,8 +24,4 @@ function a(e, t) {
         i
     );
 }
-n.d(t, {
-    Bj: () => r,
-    FF: () => i,
-    KC: () => a,
-});
+n.d(t, { Bj: () => r, FF: () => i, KC: () => a });

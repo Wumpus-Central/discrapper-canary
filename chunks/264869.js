@@ -1,3 +1,4 @@
+"use strict";
 n.r(
     (e.exports = {
         qrCodeOverlay: "qrCodeOverlay_c28498",

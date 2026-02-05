@@ -1,29 +1,13 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048),
-    n(638769),
-    n(839272),
-    n(321073);
+"use strict";
+n.d(t, { A: () => l }), n(839272), n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(661191),
     s = n(849077);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class l {
+class o {
+    _messages = [];
+    _isSorted = !0;
+    _channelIds = new Set();
     updateChannelIds(e) {
         (this._channelIds = new Set(e)),
             (this._messages = this._messages.filter(
@@ -42,7 +26,7 @@ class l {
                 .map((e) => ({
                     id: e.id,
                     channelId: e.channel_id,
-                    guildId: null == t ? void 0 : t.guild_id,
+                    guildId: t?.guild_id,
                     kind: e.mentioned ? s.yL.MENTION : s.yL.ALL_MESSAGES_CHANNEL,
                     message: e,
                 })),
@@ -83,11 +67,7 @@ class l {
         let t = {};
         for (let e of this._messages)
             a.default.age(e.id) > s.V$ ||
-                (null == t[e.channelId] &&
-                    (t[e.channelId] = {
-                        mentions: [],
-                        messages: [],
-                    }),
+                (null == t[e.channelId] && (t[e.channelId] = { mentions: [], messages: [] }),
                 e.kind === s.yL.MENTION ? t[e.channelId].mentions.push(e) : t[e.channelId].messages.push(e));
         let n = [];
         Object.values(t).forEach((e) => {
@@ -101,8 +81,5 @@ class l {
             (this._messages = n),
             (this._isSorted = !1);
     }
-    constructor() {
-        o(this, "_messages", []), o(this, "_isSorted", !0), o(this, "_channelIds", new Set());
-    }
 }
-let c = l;
+let l = o;

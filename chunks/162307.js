@@ -1,12 +1,10 @@
-n.d(t, {
-    D: () => y,
-});
+"use strict";
+n.d(t, { D: () => I });
 var r = n(12543),
     i = n(438767),
     a = n(384623),
     s = n(174154),
     o = n(576103);
-
 function l(e) {
     return (l =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -19,12 +17,10 @@ function l(e) {
                       : typeof e;
               })(e);
 }
-
-function c(e, t) {
+function u(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
-function u(e, t) {
+function c(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1),
@@ -33,32 +29,22 @@ function u(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
 function d(e, t, n) {
-    return t && u(e.prototype, t), n && u(e, n), e;
+    return t && c(e.prototype, t), n && c(e, n), e;
 }
-
-function f(e, t) {
+function _(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            writable: !0,
-            configurable: !0,
-        },
-    })),
-        t && p(e, t);
+    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
+        t && f(e, t);
 }
-
-function p(e, t) {
-    return (p =
+function f(e, t) {
+    return (f =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-
-function _(e) {
+function p(e) {
     var t = g();
     return function () {
         var n,
@@ -66,16 +52,13 @@ function _(e) {
         return (n = t ? Reflect.construct(r, arguments, E(this).constructor) : r.apply(this, arguments)), h(this, n);
     };
 }
-
 function h(e, t) {
     return t && ("object" === l(t) || "function" == typeof t) ? t : m(e);
 }
-
 function m(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-
 function g() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
@@ -85,7 +68,6 @@ function g() {
         return !1;
     }
 }
-
 function E(e) {
     return (E = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -93,31 +75,22 @@ function E(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-
-function b(e, t, n) {
+function A(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var y = (function (e) {
-    f(n, e);
-    var t = _(n);
-
+var I = (function (e) {
+    _(n, e);
+    var t = p(n);
     function n() {
         var e;
-        c(this, n);
+        u(this, n);
         for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return (
-            b(m((e = t.call.apply(t, [this].concat(i)))), "priority", 100),
-            b(m(e), "incompatibleTokens", ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"]),
+            A(m((e = t.call.apply(t, [this].concat(i)))), "priority", 100),
+            A(m(e), "incompatibleTokens", ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"]),
             e
         );
     }
@@ -130,9 +103,7 @@ var y = (function (e) {
                         case "I":
                             return (0, a.P2)(i.h.week, e);
                         case "Io":
-                            return n.ordinalNumber(e, {
-                                unit: "week",
-                            });
+                            return n.ordinalNumber(e, { unit: "week" });
                         default:
                             return (0, a.ym)(t.length, e);
                     }

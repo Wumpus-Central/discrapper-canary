@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     MY: "page_d2b0e4",
     Cd: "leftColumn_d2b0e4",
@@ -39,8 +40,8 @@ e.exports = {
     A: "dropIndicatorBefore_d2b0e4",
     oz: "previewImage_d2b0e4",
     YB: "centeredSection_d2b0e4",
-    vn: "suggestedChannelsHeader_d2b0e4",
     rS: "suggestedChannelsSection_d2b0e4",
+    vn: "suggestedChannelsHeader_d2b0e4",
     cF: "suggestedChannels_d2b0e4",
     TG: "suggestedChannel_d2b0e4",
     cC: "suggestedChannelIcon_d2b0e4",

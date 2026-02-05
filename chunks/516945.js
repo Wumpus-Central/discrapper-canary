@@ -1,6 +1,4 @@
-t.d(a, {
-    A: () => n,
-});
+t.d(a, { A: () => n });
 var i = {
     lastWeek: function (e) {
         var a = e.getUTCDay();

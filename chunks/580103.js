@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fx: "diversitySelector_a45a2a",
     Dj: "diversitySelectorButton_a45a2a",

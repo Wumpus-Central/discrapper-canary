@@ -1,124 +1,54 @@
-r.d(t, {
-    default: () => u,
-});
-var n = r(627968),
-    i = r(64700),
-    o = r(732955),
-    l = r(397927),
-    s = r(558060),
-    c = r(284683),
-    a = r(985018);
-
-function d(e) {
-    let { closePopout: t, sortOptionContext: r } = e,
-        { sortOption: o, setSortOption: s, onReset: d } = r,
-        u = i.useMemo(
+i.d(t, { default: () => C });
+var s = i(627968),
+    r = i(64700),
+    n = i(732955),
+    l = i(397927),
+    d = i(558060),
+    a = i(284683),
+    o = i(985018);
+function c(e) {
+    let { closePopout: t, sortOptionContext: i } = e,
+        { sortOption: n, setSortOption: d, onReset: c } = i,
+        C = r.useMemo(
             () =>
-                c.aq.map((e) =>
-                    (0, n.jsx)(
+                a.aq.map((e) =>
+                    (0, s.jsx)(
                         l.iDA,
-                        {
-                            id: "".concat(e),
-                            group: "sort-by",
-                            label: (0, c.Ac)(e),
-                            action: () => s(e),
-                            checked: o === e,
-                        },
+                        { id: `${e}`, group: "sort-by", label: (0, a.Ac)(e), action: () => d(e), checked: n === e },
                         e,
                     ),
                 ),
-            [s, o],
+            [d, n],
         );
-    return (0, n.jsx)("div", {
-        children: (0, n.jsxs)(l.W1t, {
+    return (0, s.jsx)("div", {
+        children: (0, s.jsxs)(l.W1t, {
             "data-menu-migrated": !0,
             navId: "sort-and-view",
-            "aria-label": a.intl.string(a.t["4jfWTK"]),
+            "aria-label": o.intl.string(o.t["4jfWTK"]),
             hideScroller: !0,
             onClose: t,
             onSelect: t,
             children: [
-                (0, n.jsx)(l.rXV, {
-                    label: a.intl.string(a.t.mBvLev),
-                    children: u,
-                }),
-                (0, n.jsx)(l.rXV, {
-                    children: (0, n.jsx)(l.Drp, {
-                        id: "reset-all",
-                        label: a.intl.string(a.t["3b//lO"]),
-                        action: d,
-                    }),
+                (0, s.jsx)(l.rXV, { label: o.intl.string(o.t.mBvLev), children: C }),
+                (0, s.jsx)(l.rXV, {
+                    children: (0, s.jsx)(l.Drp, { id: "reset-all", label: o.intl.string(o.t["3b//lO"]), action: c }),
                 }),
             ],
         }),
     });
 }
-
-function u() {
-    let e = (0, s.R)(),
-        t = (0, c.Ac)(e.sortOption),
-        r = i.useRef(null);
-    return (0, n.jsx)(l.YNO, {
-        targetElementRef: r,
+function C() {
+    let e = (0, d.R)(),
+        t = (0, a.Ac)(e.sortOption),
+        i = r.useRef(null);
+    return (0, s.jsx)(l.YNO, {
+        targetElementRef: i,
         renderPopout: (t) => {
-            let { closePopout: r } = t;
-            return (0, n.jsx)(d, {
-                closePopout: r,
-                sortOptionContext: e,
-            });
+            let { closePopout: i } = t;
+            return (0, s.jsx)(c, { closePopout: i, sortOptionContext: e });
         },
         position: "bottom",
         align: "left",
-        children: (e) => {
-            var i, s;
-            return (0, n.jsx)(
-                o.$nd,
-                ((i = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                }),
-                            )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: n,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = n);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (s = s =
-                    {
-                        text: t,
-                        icon: l.JNJ,
-                        variant: "secondary",
-                        buttonRef: r,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                    : (function (e, t) {
-                          var r = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
-                          }
-                          return r;
-                      })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                      }),
-                i),
-            );
-        },
+        children: (e) => (0, s.jsx)(n.$nd, { ...e, text: t, icon: l.JNJ, variant: "secondary", buttonRef: i }),
     });
 }

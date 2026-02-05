@@ -1,28 +1,15 @@
-n.d(t, {
-    WL: () => s,
-    np: () => a,
-    tx: () => i,
-});
-var r = n(954571),
+n.d(t, { WL: () => r, np: () => a, tx: () => s });
+var i = n(954571),
     l = n(652215);
-
-function i(e) {
+function s(e) {
     let { selectedTab: t } = e;
-    r.default.track(l.HAw.GLOBAL_DISCOVERY_VIEWED, {
-        selected_tab: t,
-    });
+    i.default.track(l.HAw.GLOBAL_DISCOVERY_VIEWED, { selected_tab: t });
 }
-
 function a(e) {
     let { selectedCategoryId: t } = e;
-    r.default.track(l.HAw.GLOBAL_DISCOVERY_SERVERS_VIEWED, {
-        selected_category_id: t,
-    });
+    i.default.track(l.HAw.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
 }
-
-function s(e) {
+function r(e) {
     let { source: t } = e;
-    r.default.track(l.HAw.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, {
-        source: t,
-    });
+    i.default.track(l.HAw.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, { source: t });
 }

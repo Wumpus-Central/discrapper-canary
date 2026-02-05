@@ -1,3 +1,4 @@
+"use strict";
 var r = n(860511),
     i = n(598349),
     a = r.document,

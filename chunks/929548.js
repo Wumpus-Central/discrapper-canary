@@ -1,6 +1,4 @@
-i.d(t, {
-    L: () => R,
-});
+i.d(e, { L: () => P });
 var n = i(627968),
     l = i(64700),
     s = i(574381),
@@ -10,181 +8,102 @@ var n = i(627968),
     o = i(421380),
     d = i(397927),
     T = i(827343),
-    c = i(77729),
-    A = i(839214),
-    S = i(98919),
-    _ = i(709710),
-    E = i(419954),
-    g = i(430452),
+    A = i(77729),
+    S = i(839214),
+    E = i(98919),
+    g = i(709710),
+    _ = i(419954),
+    c = i(430452),
     I = i(353835),
-    O = i(780964),
+    N = i(780964),
     C = i(652215),
-    N = i(731854),
-    b = i(985018);
-let p = (0, A.D)(() => ({
-    isUploading: !1,
-    isDisabled: !1,
-}));
-async function m() {
-    let e = await c.A.fileManager.getLogPath();
-    c.A.fileManager.showItemInFolder(e);
+    O = i(731854),
+    L = i(985018);
+let R = (0, S.D)(() => ({ isUploading: !1, isDisabled: !1 }));
+async function b() {
+    let t = await A.A.fileManager.getLogPath();
+    A.A.fileManager.showItemInFolder(t);
 }
-
-function f(e) {
+function D(t) {
     (0, u.A)({
-        title: b.intl.string(b.t["7UXEF2"]),
-        subtitle: b.intl.string(b.t.IYPrRl),
-        confirmText: b.intl.string(b.t.BddRzS),
-        onConfirm: () => T.A.setDebugLogging(e),
+        title: L.intl.string(L.t["7UXEF2"]),
+        subtitle: L.intl.string(L.t.IYPrRl),
+        confirmText: L.intl.string(L.t.BddRzS),
+        onConfirm: () => T.A.setDebugLogging(t),
     });
 }
-async function L(e) {
-    let { onUploadStart: t, onUploadFinish: i } = e;
-    null == t || t();
+async function m(t) {
+    let { onUploadStart: e, onUploadFinish: i } = t;
+    e?.();
     try {
-        let e, t;
-        await g.A.getMediaEngine().writeAudioDebugState(),
-            await I.A.submitLiveCrashReport({
-                message: {
-                    message: "User Live Dump",
-                },
-            }),
-            await (0, S.a)(C.Umv.RTC),
-            (e = b.intl.string(b.t["fKBB8+"])),
-            (t = b.intl.string(b.t.BvyxE7)),
-            (0, a.A)({
-                title: e,
-                subtitle: t,
-            });
-    } catch (a) {
-        var l, s;
-        let e, t, i, r;
-        (l = a.displayMessage),
-            (e = b.intl.string(b.t.QZg0J7)),
-            (t = null != l ? l : b.intl.string(b.t.VzHcSm)),
-            (i = null == (s = (0, _.B1)(_.iy.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : s.errorCode),
-            (r = b.intl.formatToPlainString(b.t.ejOT95, {
-                errorCode: i,
-            })),
-            (0, d.qfG)((i) => {
-                var l, s;
-                return (0, n.jsx)(
-                    d.VoidConfirmModal,
-                    ((l = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var i = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(i);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(i).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(i, e).enumerable;
-                                    }),
-                                )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    (n = i[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: n,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = n);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            header: e,
-                            confirmButtonColor: o.$n.Colors.BRAND,
-                            confirmText: b.intl.string(b.t.BddRzS),
-                        },
-                        i,
-                    )),
-                    (s = s =
-                        {
-                            children: (0, n.jsxs)("div", {
-                                style: {
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    height: "100%",
-                                },
-                                children: [
-                                    (0, n.jsx)(d.Text, {
-                                        variant: "text-md/normal",
-                                        children: t,
-                                    }),
-                                    (0, n.jsx)(d.Text, {
-                                        variant: "text-sm/semibold",
-                                        selectable: !0,
-                                        style: {
-                                            marginTop: "auto",
-                                        },
-                                        children: r,
-                                    }),
-                                ],
+        let t, e;
+        await c.A.getMediaEngine().writeAudioDebugState(),
+            await I.A.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
+            await (0, E.a)(C.Umv.RTC),
+            (t = L.intl.string(L.t["fKBB8+"])),
+            (e = L.intl.string(L.t.BvyxE7)),
+            (0, a.A)({ title: t, subtitle: e });
+    } catch (r) {
+        var l;
+        let t, e, i, s;
+        (l = r.displayMessage),
+            (t = L.intl.string(L.t.QZg0J7)),
+            (e = l ?? L.intl.string(L.t.VzHcSm)),
+            (i = (0, g.B1)(g.iy.DEBUG_LOG_UPLOAD_FAILED)?.errorCode),
+            (s = L.intl.formatToPlainString(L.t.ejOT95, { errorCode: i })),
+            (0, d.qfG)((i) =>
+                (0, n.jsx)(d.VoidConfirmModal, {
+                    header: t,
+                    confirmButtonColor: o.$n.Colors.BRAND,
+                    confirmText: L.intl.string(L.t.BddRzS),
+                    ...i,
+                    children: (0, n.jsxs)("div", {
+                        style: { display: "flex", flexDirection: "column", height: "100%" },
+                        children: [
+                            (0, n.jsx)(d.Text, { variant: "text-md/normal", children: e }),
+                            (0, n.jsx)(d.Text, {
+                                variant: "text-sm/semibold",
+                                selectable: !0,
+                                style: { marginTop: "auto" },
+                                children: s,
                             }),
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
-                        : (function (e, t) {
-                              var i = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  i.push.apply(i, n);
-                              }
-                              return i;
-                          })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
-                          }),
-                    l),
-                );
-            });
+                        ],
+                    }),
+                }),
+            );
     } finally {
-        null == i || i();
+        i?.();
     }
 }
-async function D() {
-    await L({
-        onUploadStart: () =>
-            p.setState({
-                isUploading: !0,
-            }),
-        onUploadFinish: () =>
-            p.setState({
-                isUploading: !1,
-                isDisabled: !0,
-            }),
+async function p() {
+    await m({
+        onUploadStart: () => R.setState({ isUploading: !0 }),
+        onUploadFinish: () => R.setState({ isUploading: !1, isDisabled: !0 }),
     });
 }
-let R = (0, E.E2)(O.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
-    useSearchTerms: () => [b.intl.string(b.t["726JHL"]), b.intl.string(b.t.EbwFfR), b.intl.string(b.t.nuPtYi)],
+let P = (0, _.E2)(N.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
+    useSearchTerms: () => [L.intl.string(L.t["726JHL"]), L.intl.string(L.t.EbwFfR), L.intl.string(L.t.nuPtYi)],
     usePredicate: function () {
-        let e = (0, r.bG)([g.A], () => g.A.supports(N.O5.DEBUG_LOGGING));
-        return s.Av && e && null != c.A.fileManager.readLogFiles;
+        let t = (0, r.bG)([c.A], () => c.A.supports(O.O5.DEBUG_LOGGING));
+        return s.Av && t && null != A.A.fileManager.readLogFiles;
     },
     Component: function () {
-        let e = (0, r.bG)([g.A], () => g.A.getDebugLogging()),
-            t = p.useField("isUploading"),
-            i = p.useField("isDisabled"),
+        let t = (0, r.bG)([c.A], () => c.A.getDebugLogging()),
+            e = R.useField("isUploading"),
+            i = R.useField("isDisabled"),
             s = l.useId();
         return (0, n.jsxs)("fieldset", {
             children: [
-                (0, n.jsx)(d.AC4, {
-                    tag: "legend",
-                    id: s,
-                    children: b.intl.string(b.t["FjN+et"]),
-                }),
+                (0, n.jsx)(d.AC4, { tag: "legend", id: s, children: L.intl.string(L.t["FjN+et"]) }),
                 (0, n.jsxs)(d.BJc, {
                     direction: "vertical",
                     gap: 4,
                     children: [
                         (0, n.jsx)(d.dOG, {
-                            label: b.intl.string(b.t["726JHL"]),
-                            description: b.intl.string(b.t["/7ak9Q"]),
-                            checked: e,
-                            onChange: f,
+                            label: L.intl.string(L.t["726JHL"]),
+                            description: L.intl.string(L.t["/7ak9Q"]),
+                            checked: t,
+                            onChange: D,
                         }),
                         (0, n.jsx)("div", {
                             role: "group",
@@ -193,17 +112,17 @@ let R = (0, E.E2)(O.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
                                 children: [
                                     (0, n.jsx)(d.Button, {
                                         variant: "secondary",
-                                        text: b.intl.string(b.t.EbwFfR),
-                                        onClick: D,
-                                        loading: t,
+                                        text: L.intl.string(L.t.EbwFfR),
+                                        onClick: p,
+                                        loading: e,
                                         disabled: i,
-                                        "aria-label": b.intl.string(b.t.aY1OH2),
+                                        "aria-label": L.intl.string(L.t.aY1OH2),
                                     }),
                                     (0, n.jsx)(d.Button, {
                                         variant: "secondary",
-                                        text: b.intl.string(b.t.nuPtYi),
-                                        onClick: m,
-                                        "aria-label": b.intl.string(b.t["L/hFOe"]),
+                                        text: L.intl.string(L.t.nuPtYi),
+                                        onClick: b,
+                                        "aria-label": L.intl.string(L.t["L/hFOe"]),
                                     }),
                                 ],
                             }),

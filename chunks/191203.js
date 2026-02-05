@@ -1,9 +1,9 @@
+"use strict";
 var r = n(72290);
 let i = n(159093),
     a = n(17101),
     s = a.isObject,
     o = a.hasOwn;
-
 function l() {}
 (e.exports = l),
     (l.prototype.clearTimeout = function () {
@@ -56,7 +56,7 @@ function l() {}
             this
         );
     });
-let c = new Set([
+let u = new Set([
         "ETIMEDOUT",
         "ECONNRESET",
         "EADDRINUSE",
@@ -66,7 +66,7 @@ let c = new Set([
         "ENETUNREACH",
         "EAI_AGAIN",
     ]),
-    u = new Set([408, 413, 429, 500, 502, 503, 504, 521, 522, 524]);
+    c = new Set([408, 413, 429, 500, 502, 503, 504, 521, 522, 524]);
 (l.prototype._shouldRetry = function (e, t) {
     if (!this._maxRetries || this._retries++ >= this._maxRetries) return !1;
     if (this._retryCallback)
@@ -79,8 +79,8 @@ let c = new Set([
         }
     return (
         !!(
-            (t && t.status && u.has(t.status)) ||
-            (e && ((e.code && c.has(e.code)) || (e.timeout && "ECONNABORTED" === e.code) || e.crossDomain))
+            (t && t.status && c.has(t.status)) ||
+            (e && ((e.code && u.has(e.code)) || (e.timeout && "ECONNABORTED" === e.code) || e.crossDomain))
         ) || !1
     );
 }),
@@ -200,12 +200,7 @@ let c = new Set([
         return (this._maxResponseSize = e), this;
     }),
     (l.prototype.toJSON = function () {
-        return {
-            method: this.method,
-            url: this.url,
-            data: this._data,
-            headers: this._header,
-        };
+        return { method: this.method, url: this.url, data: this._data, headers: this._header };
     }),
     (l.prototype.send = function (e) {
         let t = s(e),

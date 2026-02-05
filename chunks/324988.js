@@ -1,3 +1,4 @@
+"use strict";
 var r = n(344815),
     i = n(339626),
     a = n(647055),
@@ -10,7 +11,7 @@ var r = n(344815),
                 return arguments;
             })(),
         ),
-    c = function (e, t) {
+    u = function (e, t) {
         try {
             return e[t];
         } catch (e) {}
@@ -23,7 +24,7 @@ e.exports = r
               ? "Undefined"
               : null === e
                 ? "Null"
-                : "string" == typeof (n = c((t = o(e)), s))
+                : "string" == typeof (n = u((t = o(e)), s))
                   ? n
                   : l
                     ? a(t)

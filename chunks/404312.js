@@ -1,3 +1,4 @@
+"use strict";
 var t = String.prototype.replace,
     n = /%20/g,
     r = "RFC3986";

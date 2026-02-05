@@ -1,42 +1,33 @@
-n.d(t, {
-    A: () => x,
-});
+n.d(t, { A: () => g });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(49229),
+    a = n(64700),
+    i = n(311907),
+    r = n(49229),
     s = n(58149),
-    o = n(662502),
-    c = n(632738),
-    d = n(734057),
-    u = n(994500),
+    d = n(662502),
+    o = n(632738),
+    u = n(734057),
+    c = n(994500),
     m = n(562153),
-    b = n(652215),
-    p = n(985018);
-let x = (e) => {
-    let { user: t, channelId: n, reportId: x, reportType: g } = e,
-        f = (0, a.bG)([u.A], () => u.A.isBlocked(t.id), [t.id]),
-        v = (0, a.bG)([d.A], () => d.A.getChannel(n), [n]),
-        h = r.useMemo(() => m.Ay.getName(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, t), [v, t]),
-        j = r.useCallback(() => {
-            s.Ay.trackWithMetadata(b.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, {
-                other_user_id: t.id,
-                report_id: x,
-            }),
-                i.A.blockUser(t.id, {
-                    location: "ReportMenuBlockUser-iOS",
-                }).then(() => {
-                    o.A.showBlockSuccessToast(t.id, n);
+    _ = n(652215),
+    x = n(985018);
+let g = (e) => {
+    let { user: t, channelId: n, reportId: g, reportType: h } = e,
+        p = (0, i.bG)([c.A], () => c.A.isBlocked(t.id), [t.id]),
+        A = (0, i.bG)([u.A], () => u.A.getChannel(n), [n]),
+        b = a.useMemo(() => m.Ay.getName(A?.guild_id, A?.id, t), [A, t]),
+        v = a.useCallback(() => {
+            s.Ay.trackWithMetadata(_.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: g }),
+                r.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
+                    d.A.showBlockSuccessToast(t.id, n);
                 });
-        }, [t, x, n]);
-    return (0, l.jsx)(c.PQ, {
-        title: p.intl.formatToPlainString(p.t["Q1o/f3"], {
-            username: h,
-        }),
-        description: p.intl.string(p.t.G08MKu),
-        buttonText: f ? p.intl.string(p.t.ot2tSp) : p.intl.string(p.t["l+7PZY"]),
-        buttonDisabled: f,
-        onButtonPress: j,
-        buttonVariant: "application" === g.name && f ? "secondary" : "critical-primary",
+        }, [t, g, n]);
+    return (0, l.jsx)(o.PQ, {
+        title: x.intl.formatToPlainString(x.t["Q1o/f3"], { username: b }),
+        description: x.intl.string(x.t.G08MKu),
+        buttonText: p ? x.intl.string(x.t.ot2tSp) : x.intl.string(x.t["l+7PZY"]),
+        buttonDisabled: p,
+        onButtonPress: v,
+        buttonVariant: "application" === h.name && p ? "secondary" : "critical-primary",
     });
 };

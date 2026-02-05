@@ -1,149 +1,87 @@
-l.d(t, {
-    A: () => O,
-}),
-    l(896048);
-var n = l(627968),
-    i = l(64700),
-    a = l(503698),
-    r = l.n(a),
-    s = l(735438),
-    o = l.n(s),
-    c = l(311907),
-    d = l(990078),
-    u = l(397927),
-    m = l(544420),
-    x = l(587895),
-    f = l(524799),
-    g = l(409626),
-    h = l(422069),
-    p = l(611656),
-    j = l(459746),
-    v = l(225732),
-    b = l(985018),
-    y = l(851822),
-    A = l(799864);
-let N = (e) => {
-    let { game: t, onClose: l, trackClick: i } = e,
-        a = (0, c.bG)([x.A], () => x.A.getApplication(t.applicationId));
-    return (0, n.jsx)(d.m, {
+i.d(t, { A: () => b });
+var l = i(627968),
+    a = i(64700),
+    n = i(503698),
+    s = i.n(n),
+    r = i(735438),
+    c = i.n(r),
+    o = i(311907),
+    d = i(990078),
+    u = i(397927),
+    m = i(544420),
+    x = i(587895),
+    g = i(524799),
+    h = i(409626),
+    f = i(422069),
+    j = i(611656),
+    p = i(459746),
+    v = i(225732),
+    A = i(985018),
+    N = i(851822),
+    _ = i(799864);
+let I = (e) => {
+    let { game: t, onClose: i, trackClick: a } = e,
+        n = (0, o.bG)([x.A], () => x.A.getApplication(t.applicationId));
+    return (0, l.jsx)(d.m, {
         asContainer: !0,
         text: t.name,
-        children: (0, n.jsx)(u.DUT, {
-            className: A.fS,
+        children: (0, l.jsx)(u.DUT, {
+            className: _.fS,
             onClick: async () => {
-                i(g.Ws.ClickSimilarGame, t.applicationId),
+                a(h.Ws.ClickSimilarGame, t.applicationId),
                     (0, u.mMO)(() =>
                         Promise.resolve((e) =>
-                            (0, n.jsx)(
-                                v.default,
-                                (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var l = null != arguments[t] ? arguments[t] : {},
-                                            n = Object.keys(l);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (n = n.concat(
-                                                Object.getOwnPropertySymbols(l).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                                                }),
-                                            )),
-                                            n.forEach(function (t) {
-                                                var n;
-                                                (n = l[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: n,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = n);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        applicationId: t.applicationId,
-                                        source: g.Ob.SimilarGames,
-                                    },
-                                    e,
-                                ),
-                            ),
+                            (0, l.jsx)(v.default, { applicationId: t.applicationId, source: h.Ob.SimilarGames, ...e }),
                         ),
                     ),
                     await new Promise((e) => setTimeout(e, 10)),
-                    l();
+                    i();
             },
-            children: (0, n.jsx)(j.A, {
-                game: t,
-                application: a,
-                className: A.n1,
-                size: j.w.SMALL,
-            }),
+            children: (0, l.jsx)(p.A, { game: t, application: n, className: _.n1, size: p.w.SMALL }),
         }),
     });
 };
-
-function O(e) {
-    let { applicationId: t, onClose: l, trackAction: a, similarGames: s, similarGamesError: d } = e,
-        x = (0, c.bG)([h.A, f.A], () => {
-            let e = void 0 === h.A.getSimilarGames(t) && null == h.A.getSimilarGamesError(t),
-                l = s.some((e) => f.A.isFetching(e));
-            return e || l;
+function b(e) {
+    let { applicationId: t, onClose: i, trackAction: n, similarGames: r, similarGamesError: d } = e,
+        x = (0, o.bG)([f.A, g.A], () => {
+            let e = void 0 === f.A.getSimilarGames(t) && null == f.A.getSimilarGamesError(t),
+                i = r.some((e) => g.A.isFetching(e));
+            return e || i;
         }),
-        g = (0, c.yK)([f.A], () =>
-            s
-                .map((e) => f.A.getGame(e))
+        h = (0, o.yK)([g.A], () =>
+            r
+                .map((e) => g.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, p.oS)(e.applicationId))
+                .filter((e) => (0, j.oS)(e.applicationId))
                 .slice(0, 5),
         );
-    return (i.useEffect(() => {
-        s.length > 0 && m.A.getDetectableGamesSupplemental([t, ...s]);
-    }, [t, s]),
+    return (a.useEffect(() => {
+        r.length > 0 && m.A.getDetectableGamesSupplemental([t, ...r]);
+    }, [t, r]),
     x && null == d)
-        ? (0, n.jsxs)("div", {
+        ? (0, l.jsxs)("div", {
               children: [
-                  (0, n.jsx)("div", {
-                      className: r()(A.vM, y.bV),
-                  }),
-                  (0, n.jsx)("div", {
-                      className: r()(y.nM, y.iH),
-                      children: o()
+                  (0, l.jsx)("div", { className: s()(_.vM, N.bV) }),
+                  (0, l.jsx)("div", {
+                      className: s()(N.nM, N.iH),
+                      children: c()
                           .range(0, 5)
-                          .map((e) =>
-                              (0, n.jsx)(
-                                  "div",
-                                  {
-                                      className: A.nn,
-                                  },
-                                  e,
-                              ),
-                          ),
+                          .map((e) => (0, l.jsx)("div", { className: _.nn }, e)),
                   }),
               ],
           })
-        : (x || 0 !== g.length) && null == d
-          ? (0, n.jsxs)("div", {
+        : (x || 0 !== h.length) && null == d
+          ? (0, l.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(u.Heading, {
-                        className: y.bV,
+                    (0, l.jsx)(u.Heading, {
+                        className: N.bV,
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: b.intl.string(b.t["6rLyQB"]),
+                        children: A.intl.string(A.t["6rLyQB"]),
                     }),
-                    (0, n.jsx)("div", {
-                        className: A.D$,
-                        children: g.map((e) =>
-                            (0, n.jsx)(
-                                N,
-                                {
-                                    game: e,
-                                    onClose: l,
-                                    trackClick: a,
-                                },
-                                e.applicationId,
-                            ),
-                        ),
+                    (0, l.jsx)("div", {
+                        className: _.D$,
+                        children: h.map((e) => (0, l.jsx)(I, { game: e, onClose: i, trackClick: n }, e.applicationId)),
                     }),
                 ],
             })

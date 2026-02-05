@@ -1,17 +1,13 @@
-i.d(e, {
-    r: () => d,
-}),
-    i(228524);
+i.d(e, { r: () => A });
 var n = i(311907),
     l = i(684013),
     s = i(592598),
     r = i(419954),
-    u = i(780964),
-    a = i(790076),
+    a = i(780964),
+    u = i(790076),
     o = i(985018);
-let T = (0, a.ze)(!0);
-
-function A(t) {
+let d = (0, u.ze)(!0);
+function T(t) {
     return (0, r.zD)(t.key, {
         useTitle: () => o.intl.string(t.title),
         useSubtitle: () => o.intl.string(t.description),
@@ -22,6 +18,4 @@ function A(t) {
         usePredicate: t.usePredicate,
     });
 }
-let d = (0, r.FW)(u.X.OVERLAY_NOTIFICATIONS_LIST, {
-    buildLayout: () => T.map(A),
-});
+let A = (0, r.FW)(a.X.OVERLAY_NOTIFICATIONS_LIST, { buildLayout: () => d.map(T) });

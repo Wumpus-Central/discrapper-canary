@@ -1,6 +1,5 @@
-n.d(t, {
-    K: () => s,
-});
+"use strict";
+n.d(t, { K: () => s });
 var r = n(99478),
     i = n(142922);
 let a = -543;
@@ -24,7 +23,6 @@ class s extends i.FG {
         super(...e), (this.identifier = "buddhist");
     }
 }
-
 function o(e) {
     let [t, n] = (0, i.f5)(e.year + a);
     return new (0, r.ng)(t, n, e.month, e.day);

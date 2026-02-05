@@ -1,4 +1,2 @@
-n.d(t, {
-    o: () => r,
-});
-let r = "resizable-sidebar-width-2";
+n.d(t, { o: () => i });
+let i = "resizable-sidebar-width-2";

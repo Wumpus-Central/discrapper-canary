@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = [
             "Am Faoilleach",
             "An Gearran",
@@ -76,9 +77,6 @@
             var t = 1 === e ? "d" : e % 10 == 2 ? "na" : "mh";
             return e + t;
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

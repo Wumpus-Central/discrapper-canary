@@ -1,3 +1,2 @@
-e.exports = {
-    i: "brokenImageIcon_f68fcb",
-};
+"use strict";
+e.exports = { i: "brokenImageIcon_f68fcb" };

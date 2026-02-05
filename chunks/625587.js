@@ -1,3 +1,1 @@
-e.exports = {
-    $: "poggermodeIcon_bc2dd4",
-};
+e.exports = { $: "poggermodeIcon_bc2dd4" };

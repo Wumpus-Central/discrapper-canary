@@ -1,31 +1,13 @@
-n.d(t, {
-    A: () => E,
-    N: () => f,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(156898),
-    o = n(67480),
-    l = n(328968);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = new Map(),
-    d = new Map();
-var f = (function (e) {
+"use strict";
+n.d(t, { A: () => m, N: () => c });
+var r = n(311907),
+    i = n(73153),
+    a = n(156898),
+    s = n(67480),
+    o = n(328968);
+let l = new Map(),
+    u = new Map();
+var c = (function (e) {
     return (
         (e[(e.NONE = 0)] = "NONE"),
         (e[(e.FETCHING = 1)] = "FETCHING"),
@@ -34,44 +16,36 @@ var f = (function (e) {
         e
     );
 })({});
-let p = new s.A({
-    subscriptions: [],
-    otps: [],
-});
-
+let d = new a.A({ subscriptions: [], otps: [] });
 function _(e) {
     let { applicationId: t, layout: n } = e;
-    u.set(t, s.A.createFromServer(n)), d.delete(t);
+    l.set(t, a.A.createFromServer(n)), u.delete(t);
 }
-
-function h(e) {
+function f(e) {
     let { applicationId: t } = e;
-    d.set(t, 3);
+    u.set(t, 3);
 }
-
-function m(e) {
+function p(e) {
     let { applicationId: t } = e;
-    d.set(t, 1);
+    u.set(t, 1);
 }
-class g extends (r = i.Ay.Store) {
+class h extends r.Ay.Store {
+    static displayName = "ApplicationStoreDirectoryStore";
     initialize() {
-        this.waitFor(o.A, l.A);
+        this.waitFor(s.A, o.A);
     }
     hasStorefront(e) {
-        return u.has(e);
+        return l.has(e);
     }
     getStoreLayout(e) {
-        var t;
-        return null != (t = u.get(e)) ? t : p;
+        return l.get(e) ?? d;
     }
     getFetchStatus(e) {
-        var t;
-        return u.has(e) ? 2 : null != (t = d.get(e)) ? t : 0;
+        return l.has(e) ? 2 : (u.get(e) ?? 0);
     }
 }
-c(g, "displayName", "ApplicationStoreDirectoryStore");
-let E = new g(a.h, {
+let m = new h(i.h, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: _,
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: f,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: p,
 });

@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n, r) {
         switch (n) {
             case "s":

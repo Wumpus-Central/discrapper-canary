@@ -1,38 +1,34 @@
+"use strict";
 n.d(t, {
-    Ag: () => _,
-    E1: () => S,
-    O4: () => P,
-    T$: () => f,
-    Zj: () => R,
-    e3: () => w,
+    Ag: () => p,
+    E1: () => v,
+    O4: () => L,
+    T$: () => _,
+    Zj: () => O,
+    e3: () => D,
     gK: () => E,
-    mk: () => p,
+    mk: () => f,
     ph: () => h,
-    qJ: () => T,
+    qJ: () => b,
     wR: () => g,
-    zi: () => I,
-}),
-    n(896048),
-    n(638769);
+    zi: () => C,
+});
 var r = n(56562),
     i = n(626584),
     a = n(15285),
     s = n(760751),
     o = n(837921),
     l = n(777334),
-    c = n(41984),
-    u = n(589051);
+    u = n(41984),
+    c = n(589051);
 let d = new i.A("OverlayRenderUtils"),
-    f = 5e3;
-
+    _ = 5e3;
+function f(e) {
+    return (0, c.Yz)(e).longTimeout;
+}
 function p(e) {
-    return (0, u.Yz)(e).longTimeout;
+    return (0, c.Yz)(e).shortTimeout;
 }
-
-function _(e) {
-    return (0, u.Yz)(e).shortTimeout;
-}
-
 function h(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Ay],
         n = t.getGameOrTransformedSubgameForPID(e);
@@ -41,15 +37,13 @@ function h(e) {
             ? o.Ay.GetWindowFullscreenTypeByPid(e)
             : o.Ay.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
     } catch (t) {
-        var i;
         return (
-            d.error("Error getting overlay fullscreen type for pid ".concat(e, ": ").concat(t)),
-            (0, l.pj)(t, c.Ue.OutOfProcess),
-            null != (i = null == n ? void 0 : n.fullscreenType) ? i : r.aI.UNKNOWN
+            d.error(`Error getting overlay fullscreen type for pid ${e}: ${t}`),
+            (0, l.pj)(t, u.Ue.OutOfProcess),
+            n?.fullscreenType ?? r.aI.UNKNOWN
         );
     }
 }
-
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.Ay];
@@ -59,7 +53,6 @@ function m(e) {
         }, t);
     });
 }
-
 function g(e) {
     switch (e) {
         case r.aI.BORDERLESS_FULLSCREEN:
@@ -76,74 +69,63 @@ function g(e) {
             return "Unknown";
     }
 }
-
 function E(e) {
     switch (e) {
-        case c.Ue.OutOfProcess:
+        case u.Ue.OutOfProcess:
             return "Out of Process";
-        case c.Ue.OutOfProcessLimitedInteraction:
+        case u.Ue.OutOfProcessLimitedInteraction:
             return "Out of Process (Limited Interaction)";
-        case c.Ue.Hook:
+        case u.Ue.Hook:
             return "Hook";
-        case c.Ue.Disabled:
+        case u.Ue.Disabled:
             return "Disabled";
     }
 }
-
-function b(e, t) {
+function A(e, t) {
     let { quns: n } = o.Ay.GetWindowFullscreenTypeExtraByPid(e, t.name);
-    return d.info("QUNS for ".concat(t.name, ": ").concat(n)), n === r.YL.QUNS_RUNNING_D3D_FULL_SCREEN;
+    return d.info(`QUNS for ${t.name}: ${n}`), n === r.YL.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let y = {
-        "1314682894106497096": (e, t, n) => (b(e, t) ? r.aI.FULLSCREEN : n),
-    },
-    O = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
-    A = 16,
-    v = !0;
-async function S(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A,
-        r = await m(e, n),
-        i = a.Ay.getGameOrTransformedSubgameForPID(e);
-    if (null == i || null == i.name) return r;
-    let o = null == (t = s.A.getGameByName(i.name)) ? void 0 : t.id;
-    if (null == o) return r;
-    let l = y[o];
-    return null != l ? l(e, i, r) : r;
+let I = { "1314682894106497096": (e, t, n) => (A(e, t) ? r.aI.FULLSCREEN : n) },
+    T = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
+    y = 16,
+    S = !0;
+async function v(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y,
+        n = await m(e, t),
+        r = a.Ay.getGameOrTransformedSubgameForPID(e);
+    if (null == r || null == r.name) return n;
+    let i = s.A.getGameByName(r.name)?.id;
+    if (null == i) return n;
+    let o = I[i];
+    return null != o ? o(e, r, n) : n;
 }
-
-function I(e) {
-    var t;
-    let n = null == (t = s.A.getGameByName(e.name)) ? void 0 : t.id;
-    return null != n && O.has(n);
+function C(e) {
+    let t = s.A.getGameByName(e.name)?.id;
+    return null != t && T.has(t);
 }
-
-function T(e) {
+function b(e) {
     let t = a.Ay.getGameOrTransformedSubgameForPID(e);
-    return null != t && null != t.name && I(t);
+    return null != t && null != t.name && C(t);
 }
-let C = new Set([r.aI.UNKNOWN, r.aI.FULLSCREEN]);
-
-function N(e) {
+let N = new Set([r.aI.UNKNOWN, r.aI.FULLSCREEN]);
+function R(e) {
     let t = Object.keys(e)
         .map(Number)
         .sort((e, t) => t - e);
     return 0 === t.length ? r.aI.UNKNOWN : e[t.length > 1 ? t[1] : t[0]];
 }
-
-function R(e, t, n) {
-    if (e.overlayMethod !== c.Ue.OutOfProcess && e.overlayMethod !== c.Ue.OutOfProcessLimitedInteraction) return !1;
+function O(e, t, n) {
+    if (e.overlayMethod !== u.Ue.OutOfProcess && e.overlayMethod !== u.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case r.aI.UNKNOWN:
-            return C.has(N(e.fullscreenHistory));
+            return N.has(R(e.fullscreenHistory));
         case r.aI.FULLSCREEN:
             return !0;
     }
     return !1;
 }
-
-function w(e, t) {
+function D(e, t) {
     if (!t) return !1;
     switch (e) {
         case r.aI.UNKNOWN:
@@ -153,14 +135,8 @@ function w(e, t) {
     }
     return !0;
 }
-
-function P(e) {
+function L(e) {
     return null == e
-        ? {
-              source: c.yp.DEFAULT,
-              enabledOOP: !1,
-              enabledLegacy: !1,
-              overlayMethod: c.Ue.Disabled,
-          }
-        : (0, a.hw)(e, v);
+        ? { source: u.yp.DEFAULT, enabledOOP: !1, enabledLegacy: !1, overlayMethod: u.Ue.Disabled }
+        : (0, a.hw)(e, S);
 }

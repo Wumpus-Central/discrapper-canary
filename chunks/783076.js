@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,9 +8,7 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: {
-            "aria-live": "polite",
-        },
+        props: { "aria-live": "polite" },
         relatedConcepts: [],
         requireContextRole: [],
         requiredContextRole: [],

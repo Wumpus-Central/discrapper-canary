@@ -1,17 +1,16 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split(
             "_",
         ),
         n = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia".split(
             "_",
         );
-
     function r(e) {
         return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1;
     }
-
     function i(e, t, n) {
         var i = e + " ";
         switch (n) {
@@ -103,9 +102,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

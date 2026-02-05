@@ -1,89 +1,75 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968);
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(990078),
-    a = n(397927),
-    s = n(58736),
+    a = n(990078),
+    s = n(397927),
+    r = n(58736),
     o = n(657331),
     c = n(498642),
-    u = n(71393),
-    d = n(576705),
-    f = n(661191),
-    p = n(844944),
-    h = n(513461),
-    b = n(123393),
+    d = n(71393),
+    u = n(576705),
+    h = n(661191),
+    m = n(844944),
+    A = n(513461),
+    p = n(123393),
     g = n(652215),
-    m = n(985018),
-    A = n(116228);
-
-function y(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
-        O = f.default.cast(t),
+    f = n(985018),
+    _ = n(116228);
+function E(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: E = !1 } = e,
+        C = h.default.cast(t),
         {
-            joinRequest: j,
-            isModmin: v,
-            guildId: x,
-            maxMembers: E,
-        } = (0, l.cf)([p.A, u.A, d.A], () => {
-            let e = p.A.getRequest(O),
-                t = u.A.getGuild(null == e ? void 0 : e.guildId);
+            joinRequest: x,
+            isModmin: S,
+            guildId: T,
+            maxMembers: I,
+        } = (0, l.cf)([m.A, d.A, u.A], () => {
+            let e = m.A.getRequest(C),
+                t = d.A.getGuild(e?.guildId);
             return {
                 joinRequest: e,
-                isModmin: null != t && d.A.can(g.xBc.KICK_MEMBERS, t),
-                guildId: null == t ? void 0 : t.id,
-                maxMembers: null == t ? void 0 : t.maxMembers,
+                isModmin: null != t && u.A.can(g.xBc.KICK_MEMBERS, t),
+                guildId: t?.id,
+                maxMembers: t?.maxMembers,
             };
         }),
-        _ = (0, l.bG)([c.A], () => (null != x ? c.A.getMemberCount(x) : 0)),
-        C = null != E && (null != _ ? _ : 0) >= E,
-        {
-            approveRequest: S,
-            rejectRequest: I,
-            submitting: N,
-        } = (0, b.W)(
-            null == j ? void 0 : j.guildId,
-            null == j ? void 0 : j.userId,
-            null == j ? void 0 : j.joinRequestId,
-        );
-    return null != j && j.applicationStatus === h.B5.SUBMITTED && v
-        ? (0, r.jsxs)("div", {
-              className: A.U,
+        N = (0, l.bG)([c.A], () => (null != T ? c.A.getMemberCount(T) : 0)),
+        v = null != I && (N ?? 0) >= I,
+        { approveRequest: y, rejectRequest: b, submitting: R } = (0, p.W)(x?.guildId, x?.userId, x?.joinRequestId);
+    return null != x && x.applicationStatus === A.B5.SUBMITTED && S
+        ? (0, i.jsxs)("div", {
+              className: _.U,
               children: [
-                  (0, r.jsx)(i.m, {
-                      text: m.intl.string(m.t.cdPGbE),
-                      shouldShow: C,
-                      children: (0, r.jsx)(a.Button, {
+                  (0, i.jsx)(a.m, {
+                      text: f.intl.string(f.t.cdPGbE),
+                      shouldShow: v,
+                      children: (0, i.jsx)(s.Button, {
                           variant: "active",
                           size: "sm",
-                          text: m.intl.string(m.t.BzjDQJ),
-                          loading: N,
-                          onClick: S,
-                          disabled: C,
+                          text: f.intl.string(f.t.BzjDQJ),
+                          loading: R,
+                          onClick: y,
+                          disabled: v,
                       }),
                   }),
-                  (0, r.jsx)(a.Button, {
+                  (0, i.jsx)(s.Button, {
                       variant: "critical-primary",
                       size: "sm",
-                      text: m.intl.string(m.t.hDtbsz),
-                      onClick: I,
-                      disabled: N || j.applicationStatus !== h.B5.SUBMITTED,
+                      text: f.intl.string(f.t.hDtbsz),
+                      onClick: b,
+                      disabled: R || x.applicationStatus !== A.B5.SUBMITTED,
                   }),
                   n &&
-                      (0, r.jsx)(a.Button, {
+                      (0, i.jsx)(s.Button, {
                           onClick: () => {
-                              (0, o.openUserProfileModal)({
-                                  userId: j.userId,
-                                  guildId: j.guildId,
-                              });
+                              (0, o.openUserProfileModal)({ userId: x.userId, guildId: x.guildId });
                           },
                           variant: "secondary",
                           size: "sm",
-                          text: m.intl.string(m.t.iXAna6),
+                          text: f.intl.string(f.t.iXAna6),
                       }),
-                  y && (0, r.jsx)(s.Ay.Divider, {}),
+                  E && (0, i.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

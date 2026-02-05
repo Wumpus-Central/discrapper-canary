@@ -1,82 +1,70 @@
-n.d(t, {
-    v: () => h,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(378570),
+n.d(t, { v: () => _ });
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(378570),
     s = n(138298),
     o = n(761640),
-    c = n(336590),
-    u = n(471271),
-    d = n(629199),
-    p = n(985018),
-    f = n(173801);
-
-function h(e) {
-    let { active: t, user: n, channel: h } = e,
-        A = (0, c.k)(),
-        g = i.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
+    d = n(336590),
+    c = n(471271),
+    u = n(629199),
+    A = n(985018),
+    h = n(173801);
+function _(e) {
+    let { active: t, user: n, channel: _ } = e,
+        m = (0, d.k)(),
+        p = r.useCallback(() => {
+            (0, a.showToast)((0, a.createToast)(A.intl.string(A.t["EDYbS+"]), a.ToastType.FAILURE));
         }, []),
-        m = i.useCallback(() => {
+        g = r.useCallback(() => {
             s.A.closeChannelSidebar(o.fe);
         }, []),
-        b = i.useCallback(() => {
-            s.A.closeChannelSidebar(o.fe), A && (0, a.iN)(h.id);
-        }, [h.id, A]),
+        E = r.useCallback(() => {
+            s.A.closeChannelSidebar(o.fe), m && (0, l.iN)(_.id);
+        }, [_.id, m]),
         {
-            acceptMessageRequest: _,
-            rejectMessageRequest: E,
-            isAcceptLoading: O,
-            isRejectLoading: y,
-            isUserProfileLoading: I,
-            isOptimisticAccepted: v,
-            isOptimisticRejected: S,
-        } = (0, u.t)({
-            user: n,
-            onAcceptSuccess: b,
-            onRejectSuccess: m,
-            onError: g,
-        }),
-        C = O || y || I || v || S;
-    return (0, r.jsxs)("div", {
-        className: f.kL,
+            acceptMessageRequest: f,
+            rejectMessageRequest: I,
+            isAcceptLoading: C,
+            isRejectLoading: N,
+            isUserProfileLoading: T,
+            isOptimisticAccepted: S,
+            isOptimisticRejected: x,
+        } = (0, c.t)({ user: n, onAcceptSuccess: E, onRejectSuccess: g, onError: p }),
+        v = C || N || T || S || x;
+    return (0, i.jsxs)("div", {
+        className: h.kL,
         children: [
-            (0, r.jsx)(d.A, {
-                channel: h,
-                otherUser: n,
-                active: t,
-            }),
-            (0, r.jsxs)("div", {
-                className: f.o1,
+            (0, i.jsx)(u.A, { channel: _, otherUser: n, active: t }),
+            (0, i.jsxs)("div", {
+                className: h.o1,
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: f.x6,
-                        children: (0, r.jsx)(l.Button, {
+                        className: h.x6,
+                        children: (0, i.jsx)(a.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: p.intl.string(p.t.B2nygW),
+                            text: A.intl.string(A.t.B2nygW),
                             onClick: (e) => {
-                                e.stopPropagation(), E(h.id);
+                                e.stopPropagation(), I(_.id);
                             },
-                            disabled: C,
-                            loading: y || S,
+                            disabled: v,
+                            loading: N || x,
                         }),
                     }),
-                    (0, r.jsx)("div", {
+                    (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: f.x6,
-                        children: (0, r.jsx)(l.Button, {
+                        className: h.x6,
+                        children: (0, i.jsx)(a.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: p.intl.string(p.t.Kz8Pwr),
+                            text: A.intl.string(A.t.Kz8Pwr),
                             onClick: (e) => {
-                                e.stopPropagation(), _(h.id);
+                                e.stopPropagation(), f(_.id);
                             },
-                            disabled: C,
-                            loading: O || I || v,
+                            disabled: v,
+                            loading: C || T || S,
                         }),
                     }),
                 ],

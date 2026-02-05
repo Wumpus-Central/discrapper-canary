@@ -1,133 +1,65 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => E });
 var r = n(311907),
     i = n(73153),
     a = n(652896),
     s = n(383501),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+let l = {},
+    u = {},
+    c = null;
+function d() {
+    (u = {}), (l = {});
 }
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = {},
-    p = {},
-    _ = null;
-
-function h() {
-    (p = {}), (f = {});
-}
-
-function m(e) {
+function _(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
     if (t === n) return !1;
-    h();
+    d();
 }
-
-function g(e) {
+function f(e) {
     let { id: t } = e;
-    for (let [e, n] of (delete f[t], Object.entries(p))) t === n && delete p[e];
+    for (let [e, n] of (delete l[t], Object.entries(u))) t === n && delete u[e];
 }
-
-function E(e) {
-    var t, n;
-    let { channelId: r, sendMessageOptions: i, message: a, optimistic: l } = e;
-    if (r !== s.A.getChannelId()) return !1;
-    if (l) {
-        let e = null == i || null == (n = i.activityAction) ? void 0 : n.targetUserId;
-        return null != e && ((f[a.id] = e), !1);
+function p(e) {
+    let { channelId: t, sendMessageOptions: n, message: r, optimistic: i } = e;
+    if (t !== s.A.getChannelId()) return !1;
+    if (i) {
+        let e = n?.activityAction?.targetUserId;
+        return null != e && ((l[r.id] = e), !1);
     }
-    if (null == a.nonce || (null == (t = a.activity) ? void 0 : t.type) !== o.xL.STREAM_REQUEST) return !1;
-    let u = f[a.nonce];
-    if (null == u) return !1;
-    delete f[a.nonce],
-        (p = d(c({}, p), {
-            [u]: a.id,
-        }));
+    if (null == r.nonce || r.activity?.type !== o.xL.STREAM_REQUEST) return !1;
+    let a = l[r.nonce];
+    if (null == a) return !1;
+    delete l[r.nonce], (u = { ...u, [a]: r.id });
 }
-
-function b(e) {
+function h(e) {
     let { streamKey: t } = e,
         { ownerId: n } = a.Iy(t);
-    if (null == p[n]) return !1;
-    delete p[n];
+    if (null == u[n]) return !1;
+    delete u[n];
 }
-
-function y() {
+function m() {
     if (s.A.getWasMoved()) {
-        if (s.A.getChannelId() === _) return !1;
-        (_ = s.A.getChannelId()), h();
+        if (s.A.getChannelId() === c) return !1;
+        (c = s.A.getChannelId()), d();
     } else {
-        if (null == _) return !1;
-        _ = null;
+        if (null == c) return !1;
+        c = null;
     }
 }
-class O extends r.Ay.Store {
+class g extends r.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
     getPendingRequestForUser(e) {
-        return p[e];
+        return u[e];
     }
 }
-let A = new O(i.h, {
-    STREAM_WATCH: b,
-    MESSAGE_CREATE: E,
-    MESSAGE_DELETE: g,
-    VOICE_CHANNEL_SELECT: m,
-    VOICE_STATE_UPDATES: y,
-    LOGOUT: h,
+let E = new g(i.h, {
+    STREAM_WATCH: h,
+    MESSAGE_CREATE: p,
+    MESSAGE_DELETE: f,
+    VOICE_CHANNEL_SELECT: _,
+    VOICE_STATE_UPDATES: m,
+    LOGOUT: d,
 });

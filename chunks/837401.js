@@ -1,7 +1,5 @@
-n.d(t, {
-    L: () => _,
-    c: () => p,
-});
+"use strict";
+n.d(t, { L: () => p, c: () => f });
 var r = n(45145),
     i = n(717205),
     a = n(941257),
@@ -10,13 +8,8 @@ var r = n(45145),
         return !!s;
     },
     l = 250,
-    c = {
-        attributes: !0,
-        characterData: !0,
-        childList: !0,
-        subtree: !0,
-    },
-    u = [
+    u = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    c = [
         "resize",
         "load",
         "transitionend",
@@ -35,8 +28,8 @@ var r = n(45145),
     d = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    f = !1,
-    p = new ((function () {
+    _ = !1,
+    f = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -47,15 +40,15 @@ var r = n(45145),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if ((void 0 === e && (e = l), !f)) {
-                    f = !0;
+                if ((void 0 === e && (e = l), !_)) {
+                    _ = !0;
                     var n = d(e);
                     (0, a.Y)(function () {
                         var i = !1;
                         try {
                             i = (0, r.e)();
                         } finally {
-                            if (((f = !1), (e = n - d()), !o())) return;
+                            if (((_ = !1), (e = n - d()), !o())) return;
                             i ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -67,7 +60,7 @@ var r = n(45145),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, c);
+                        return e.observer && e.observer.observe(document.body, u);
                     };
                 document.body ? t() : i.S.addEventListener("DOMContentLoaded", t);
             }),
@@ -77,7 +70,7 @@ var r = n(45145),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    u.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.S.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -85,7 +78,7 @@ var r = n(45145),
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    u.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.S.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -93,6 +86,6 @@ var r = n(45145),
             e
         );
     })())(),
-    _ = function (e) {
-        !s && e > 0 && p.start(), (s += e) || p.stop();
+    p = function (e) {
+        !s && e > 0 && f.start(), (s += e) || f.stop();
     };

@@ -1,33 +1,31 @@
-n.d(t, {
-    M: () => x,
-});
+n.d(t, { M: () => g });
 var i = n(627968),
-    s = n(989349),
-    l = n.n(s),
-    r = n(311907),
-    a = n(397927),
+    l = n(989349),
+    s = n.n(l),
+    a = n(311907),
+    r = n(397927),
     o = n(10094),
-    c = n(683760),
-    d = n(195043),
+    d = n(683760),
+    c = n(195043),
     u = n(287809),
-    g = n(531525),
-    h = n(788868);
-let x = () => {
-    let e = (0, r.bG)([u.default], () => u.default.getCurrentUser()),
-        t = (0, r.bG)([c.A], () => {
-            let e = c.A.getCreatedAtOverride();
+    h = n(531525),
+    A = n(788868);
+let g = () => {
+    let e = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        t = (0, a.bG)([d.A], () => {
+            let e = d.A.getCreatedAtOverride();
             return null != e ? e.toISOString().substring(0, 10) : "";
         }),
-        n = (0, r.bG)([c.A], () => c.A.getPremiumTypeOverride());
-    return (0, i.jsxs)(a.BJc, {
+        n = (0, a.bG)([d.A], () => d.A.getPremiumTypeOverride());
+    return (0, i.jsxs)(r.BJc, {
         gap: 16,
         children: [
-            (0, i.jsxs)(d.x, {
-                setting: g.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE,
+            (0, i.jsxs)(c.x, {
+                setting: h.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE,
                 children: [
-                    (0, i.jsx)(a.l6P, {
+                    (0, i.jsx)(r.l6P, {
                         label: "Override Client-Side Premium Type",
-                        options: h.Jm,
+                        options: A.Jm,
                         value: n,
                         onSelectionChange: (t) => {
                             (0, o.O)(t, e);
@@ -35,29 +33,26 @@ let x = () => {
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
-                    (0, i.jsx)(a.QWc, {
+                    (0, i.jsx)(r.QWc, {
                         onClick: () => {
-                            (0, o.O)(h.$I, e);
+                            (0, o.O)(A.$I, e);
                         },
                         text: "Reset premium type override",
                     }),
                 ],
             }),
-            (0, i.jsxs)(d.x, {
-                setting: g.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA,
+            (0, i.jsxs)(c.x, {
+                setting: h.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA,
                 children: [
-                    (0, i.jsx)(a.J3s, {
+                    (0, i.jsx)(r.J3s, {
                         label: "Override Client-Side Account Created At Date",
-                        value: l()(t),
+                        value: s()(t),
                         onSelect: (e) => {
                             var t;
                             return (t = e.toISOString()), void (0, o.Y)(new Date(t));
                         },
                     }),
-                    (0, i.jsx)(a.QWc, {
-                        onClick: () => (0, o.Y)(void 0),
-                        text: "Reset account created at override",
-                    }),
+                    (0, i.jsx)(r.QWc, { onClick: () => (0, o.Y)(void 0), text: "Reset account created at override" }),
                 ],
             }),
         ],

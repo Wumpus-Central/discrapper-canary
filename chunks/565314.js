@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 let r = {
     aa: "aa-ET",
     af: "af-ZA",

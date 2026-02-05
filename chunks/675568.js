@@ -266,66 +266,30 @@ e.exports = function (e) {
                 "WeakRef",
             ],
         },
-        r = {
-            keywords: n,
-            illegal: /<\//,
-        },
+        r = { keywords: n, illegal: /<\// },
         i = {
             className: "number",
             begin: /(\b0x[\d_]*(\.[\d_]*)?|0x\.\d[\d_]*)p[-+]?\d+|\b0[box][a-fA-F0-9][a-fA-F0-9_]*|(\b\d[\d_]*(\.[\d_]*)?|\.\d[\d_]*)([eEfF][-+]?\d+)?/,
             relevance: 0,
         },
-        a = {
-            className: "string",
-            begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/,
-        },
-        s = {
-            className: "subst",
-            begin: /\$\(/,
-            end: /\)/,
-            keywords: n,
-        },
-        o = {
-            className: "variable",
-            begin: "\\$" + t,
-        },
+        a = { className: "string", begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/ },
+        s = { className: "subst", begin: /\$\(/, end: /\)/, keywords: n },
+        o = { className: "variable", begin: "\\$" + t },
         l = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, s, o],
             variants: [
-                {
-                    begin: /\w*"""/,
-                    end: /"""\w*/,
-                    relevance: 10,
-                },
-                {
-                    begin: /\w*"/,
-                    end: /"\w*/,
-                },
+                { begin: /\w*"""/, end: /"""\w*/, relevance: 10 },
+                { begin: /\w*"/, end: /"\w*/ },
             ],
         },
-        c = {
-            className: "string",
-            contains: [e.BACKSLASH_ESCAPE, s, o],
-            begin: "`",
-            end: "`",
-        },
-        u = {
-            className: "meta",
-            begin: "@" + t,
-        },
+        u = { className: "string", contains: [e.BACKSLASH_ESCAPE, s, o], begin: "`", end: "`" },
+        c = { className: "meta", begin: "@" + t },
         d = {
             className: "comment",
             variants: [
-                {
-                    begin: "#=",
-                    end: "=#",
-                    relevance: 10,
-                },
-                {
-                    begin: "#",
-                    end: "$",
-                },
+                { begin: "#=", end: "=#", relevance: 10 },
+                { begin: "#", end: "$" },
             ],
         };
     return (
@@ -334,17 +298,12 @@ e.exports = function (e) {
             i,
             a,
             l,
-            c,
             u,
+            c,
             d,
             e.HASH_COMMENT_MODE,
-            {
-                className: "keyword",
-                begin: "\\b(((abstract|primitive)\\s+)type|(mutable\\s+)?struct)\\b",
-            },
-            {
-                begin: /<:/,
-            },
+            { className: "keyword", begin: "\\b(((abstract|primitive)\\s+)type|(mutable\\s+)?struct)\\b" },
+            { begin: /<:/ },
         ]),
         (s.contains = r.contains),
         r

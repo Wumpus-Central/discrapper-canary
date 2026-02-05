@@ -1,3 +1,2 @@
-e.exports = {
-    i: "wrapper_cdf8a9",
-};
+"use strict";
+e.exports = { i: "wrapper_cdf8a9" };

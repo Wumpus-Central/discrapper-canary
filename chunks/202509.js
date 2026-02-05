@@ -1,3 +1,1 @@
-e.exports = {
-    Q: "text_f4d1ff",
-};
+e.exports = { Q: "text_f4d1ff" };

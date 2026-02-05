@@ -1,14 +1,15 @@
+"use strict";
 n.d(t, {
     CV: () => a,
-    E9: () => S,
+    E9: () => v,
     EB: () => d,
-    Pl: () => A,
+    Pl: () => y,
     Wp: () => s,
-    d2: () => v,
+    d2: () => S,
     eB: () => o,
     fp: () => m,
     k8: () => h,
-    lT: () => _,
+    lT: () => p,
     zL: () => g,
 });
 var r = n(476858),
@@ -95,7 +96,7 @@ let a = {
         eleven: 11,
         twelve: 12,
     },
-    c = {
+    u = {
         first: 1,
         second: 2,
         third: 3,
@@ -138,7 +139,7 @@ let a = {
         "thirty first": 31,
         "thirty-first": 31,
     },
-    u = {
+    c = {
         second: "second",
         seconds: "second",
         minute: "minute",
@@ -189,11 +190,10 @@ let a = {
         yr: "year",
         year: "year",
         years: "year",
-        ...u,
+        ...c,
     },
-    f = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`;
-
-function p(e) {
+    _ = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`;
+function f(e) {
     let t = e.toLowerCase();
     if (void 0 !== l[t]) return l[t];
     if ("a" === t || "an" === t || "the" == t) return 1;
@@ -203,14 +203,12 @@ function p(e) {
     else if (t.match(/several/)) return 7;
     return parseFloat(t);
 }
-let _ = `(?:${(0, r.uJ)(c)}|[0-9]{1,2}(?:st|nd|rd|th)?)`;
-
+let p = `(?:${(0, r.uJ)(u)}|[0-9]{1,2}(?:st|nd|rd|th)?)`;
 function h(e) {
     let t = e.toLowerCase();
-    return void 0 !== c[t] ? c[t] : parseInt((t = t.replace(/(?:st|nd|rd|th)$/i, "")));
+    return void 0 !== u[t] ? u[t] : parseInt((t = t.replace(/(?:st|nd|rd|th)$/i, "")));
 }
 let m = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])";
-
 function g(e) {
     if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
     if (/BCE?/i.test(e)) return -parseInt((e = e.replace(/BCE?/i, "")));
@@ -218,23 +216,21 @@ function g(e) {
     let t = parseInt(e);
     return (0, i.D)(t);
 }
-let E = `(${f})\\s{0,3}(${(0, r.uJ)(d)})`,
-    b = RegExp(E, "i"),
-    y = `(${f})\\s{0,3}(${(0, r.uJ)(u)})`,
-    O = "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
-    A = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", E, O),
-    v = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", y, O);
-
-function S(e) {
+let E = `(${_})\\s{0,3}(${(0, r.uJ)(d)})`,
+    A = RegExp(E, "i"),
+    I = `(${_})\\s{0,3}(${(0, r.uJ)(c)})`,
+    T = "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
+    y = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", E, T),
+    S = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", I, T);
+function v(e) {
     let t = {},
         n = e,
-        r = b.exec(n);
-    for (; r; ) I(t, r), (n = n.substring(r[0].length).trim()), (r = b.exec(n));
+        r = A.exec(n);
+    for (; r; ) C(t, r), (n = n.substring(r[0].length).trim()), (r = A.exec(n));
     return 0 == Object.keys(t).length ? null : t;
 }
-
-function I(e, t) {
+function C(e, t) {
     if (t[0].match(/^[a-zA-Z]+$/)) return;
-    let n = p(t[1]);
+    let n = f(t[1]);
     e[d[t[2].toLowerCase()]] = n;
 }

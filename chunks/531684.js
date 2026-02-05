@@ -1,6 +1,5 @@
-n.d(t, {
-    Z: () => r,
-});
+"use strict";
+n.d(t, { Z: () => r });
 class r {
     *[Symbol.iterator]() {
         yield* [...this.rows];
@@ -49,50 +48,50 @@ class r {
             (this.rows = []);
         let t = (r) => {
                 var i, a, s, o, l;
-                let c = this.keyMap.get(r.key);
+                let u = this.keyMap.get(r.key);
                 e.visitNode && (r = e.visitNode(r)), this.keyMap.set(r.key, r);
-                let u = new Set(),
+                let c = new Set(),
                     d = null,
-                    f = !1;
+                    _ = !1;
                 if ("item" === r.type) {
                     for (let e of r.childNodes)
                         if ((null == (i = e.props) ? void 0 : i.colSpan) !== void 0) {
-                            f = !0;
+                            _ = !0;
                             break;
                         }
                 }
                 for (let e of r.childNodes)
                     "cell" === e.type &&
-                        f &&
+                        _ &&
                         ((e.colspan = null == (a = e.props) ? void 0 : a.colSpan),
                         (e.colSpan = null == (s = e.props) ? void 0 : s.colSpan),
                         (e.colIndex = d
                             ? (null != (o = d.colIndex) ? o : d.index) + (null != (l = d.colSpan) ? l : 1)
                             : e.index)),
                         "cell" === e.type && null == e.parentKey && (e.parentKey = r.key),
-                        u.add(e.key),
+                        c.add(e.key),
                         d ? ((d.nextKey = e.key), (e.prevKey = d.key)) : (e.prevKey = null),
                         t(e),
                         (d = e);
-                if ((d && (d.nextKey = null), c)) for (let e of c.childNodes) u.has(e.key) || n(e);
+                if ((d && (d.nextKey = null), u)) for (let e of u.childNodes) c.has(e.key) || n(e);
             },
             n = (e) => {
                 for (let t of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(t.key) === t && n(t);
             },
             r = null;
-        for (let [n, u] of e.items.entries()) {
-            var i, a, s, o, l, c;
+        for (let [n, c] of e.items.entries()) {
+            var i, a, s, o, l, u;
             let e = {
-                ...u,
-                level: null != (i = u.level) ? i : 0,
-                key: null != (a = u.key) ? a : "row-" + n,
-                type: null != (s = u.type) ? s : "row",
-                value: null != (o = u.value) ? o : null,
+                ...c,
+                level: null != (i = c.level) ? i : 0,
+                key: null != (a = c.key) ? a : "row-" + n,
+                type: null != (s = c.type) ? s : "row",
+                value: null != (o = c.value) ? o : null,
                 hasChildNodes: !0,
-                childNodes: [...u.childNodes],
-                rendered: u.rendered,
-                textValue: null != (l = u.textValue) ? l : "",
-                index: null != (c = u.index) ? c : n,
+                childNodes: [...c.childNodes],
+                rendered: c.rendered,
+                textValue: null != (l = c.textValue) ? l : "",
+                index: null != (u = c.index) ? u : n,
             };
             r ? ((r.nextKey = e.key), (e.prevKey = r.key)) : (e.prevKey = null), this.rows.push(e), t(e), (r = e);
         }

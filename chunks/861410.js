@@ -1,104 +1,62 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(228524);
-var r,
-    i = n(311907),
-    l = n(73153),
-    s = n(71393),
-    a = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = {
-        description: "",
-        channels: [],
-        enabled: !1,
-    },
-    d = o,
-    u = !1,
-    f = !1,
-    g = o;
-
-function b(e) {
+"use strict";
+n.d(t, { A: () => x });
+var i = n(311907),
+    s = n(73153),
+    l = n(71393),
+    r = n(652215);
+let a = { description: "", channels: [], enabled: !1 },
+    o = a,
+    d = !1,
+    c = !1,
+    u = a;
+function m(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        r = s.A.getGuild(n);
-    if (null != t) {
-        var i, l;
-        g = d = {
-            description: null != (i = t.description) ? i : "",
-            channels: null != (l = t.welcome_channels) ? l : [],
-            enabled: null == r ? void 0 : r.features.has(a.GuildFeatures.WELCOME_SCREEN_ENABLED),
-        };
-    } else g = d = o;
-    f = !1;
+        i = l.A.getGuild(n);
+    (u = o =
+        null != t
+            ? {
+                  description: t.description ?? "",
+                  channels: t.welcome_channels ?? [],
+                  enabled: i?.features.has(r.GuildFeatures.WELCOME_SCREEN_ENABLED),
+              }
+            : a),
+        (c = !1);
 }
-class m extends (r = i.Ay.Store) {
+class g extends i.Ay.Store {
+    static displayName = "WelcomeScreenSettingsStore";
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(l.A);
     }
     get() {
-        return g;
+        return u;
     }
     showNotice() {
-        return f;
+        return c;
     }
     getSettingsProps() {
-        return {
-            submitting: u,
-            hasErrors: f,
-            welcomeSettings: g,
-            originalWelcomeSettings: d,
-        };
+        return { submitting: d, hasErrors: c, welcomeSettings: u, originalWelcomeSettings: o };
     }
 }
-c(m, "displayName", "WelcomeScreenSettingsStore");
-let p = new m(l.h, {
-    WELCOME_SCREEN_FETCH_SUCCESS: b,
-    WELCOME_SCREEN_UPDATE: b,
+let x = new g(s.h, {
+    WELCOME_SCREEN_FETCH_SUCCESS: m,
+    WELCOME_SCREEN_UPDATE: m,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (g = d), (f = !1);
+        (u = o), (c = !1);
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (g = o), (d = o);
+        (u = a), (o = a);
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        g = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (t) {
-                        c(e, t, n[t]);
-                    });
-            }
-            return e;
-        })({}, g, t);
+        u = { ...u, ...t };
     },
     WELCOME_SCREEN_SUBMIT: function () {
-        u = !0;
+        d = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        b(e), (u = !1);
+        m(e), (d = !1);
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        (f = !0), (u = !1);
+        (c = !0), (d = !1);
     },
 });

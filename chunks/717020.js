@@ -1,6 +1,4 @@
-i.d(n, {
-    default: () => _,
-});
+i.d(n, { default: () => _ });
 var e = i(627968);
 i(64700);
 var a = i(158954),
@@ -14,10 +12,8 @@ var a = i(158954),
     d = i(355097),
     u = i(985018),
     E = i(575621);
-
 function _(t) {
     let { onClose: n, transitionState: i } = t;
-
     function _() {
         n();
         let t = (0, r.WJ)("LegacyChatInputExplanationModal");
@@ -30,27 +26,12 @@ function _(t) {
         transitionState: i,
         title: u.intl.string(u.t.G9HG5O),
         subtitle: u.intl.format(u.t.ZtUieE, {
-            openSettingsHook: (t, n) =>
-                (0, e.jsx)(
-                    o.MzZ,
-                    {
-                        onClick: _,
-                        children: t,
-                    },
-                    n,
-                ),
+            openSettingsHook: (t, n) => (0, e.jsx)(o.MzZ, { onClick: _, children: t }, n),
         }),
         onClose: n,
-        graphic: {
-            type: "image",
-            src: E,
-        },
+        graphic: { type: "image", src: E },
         actions: [
-            {
-                variant: "secondary",
-                text: u.intl.string(u.t.f3Pet9),
-                onClick: n,
-            },
+            { variant: "secondary", text: u.intl.string(u.t.f3Pet9), onClick: n },
             {
                 variant: "primary",
                 text: u.intl.string(u.t.VdzwlA),

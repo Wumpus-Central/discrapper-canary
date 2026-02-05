@@ -1,41 +1,26 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r = n(73153),
-    i = n(272355),
-    l = n(627363),
-    a = n(800828),
+n.d(t, { A: () => d });
+var i = n(73153),
+    r = n(272355),
+    a = n(627363),
+    l = n(800828),
     s = n(652215);
-class o extends i.A {
+class o extends r.A {
     _initialize() {
-        r.h.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+        i.h.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
     _terminate() {
-        r.h.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+        i.h.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
+    handlePostConnectionOpen = () => {
+        let e = l.A.getGameRelationships(),
+            t = new Set();
+        e.values().forEach((e) => {
+            e.type === s.eA$.PENDING_INCOMING && t.add(e.applicationId);
+        }),
+            a.Ay.fetchApplications(Array.from(t));
+    };
     destroy() {
-        r.h.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-    }
-    constructor(...e) {
-        super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: n,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = n);
-            })(this, "handlePostConnectionOpen", () => {
-                let e = a.A.getGameRelationships(),
-                    t = new Set();
-                e.values().forEach((e) => {
-                    e.type === s.eA$.PENDING_INCOMING && t.add(e.applicationId);
-                }),
-                    l.Ay.fetchApplications(Array.from(t));
-            });
+        i.h.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
 }
-let c = new o();
+let d = new o();

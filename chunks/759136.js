@@ -1,3 +1,1 @@
-e.exports = {
-    n: "panel_c8030e",
-};
+e.exports = { n: "panel_c8030e" };

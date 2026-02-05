@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(311017);
 n(
@@ -8,7 +9,5 @@ n(
             Array.from(t);
         }),
     },
-    {
-        from: o,
-    },
+    { from: o },
 );

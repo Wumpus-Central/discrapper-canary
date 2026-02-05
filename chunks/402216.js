@@ -1,9 +1,5 @@
-n.d(t, {
-    Ay: () => _,
-    ed: () => d,
-    gv: () => u,
-    u1: () => f,
-});
+"use strict";
+n.d(t, { Ay: () => p, ed: () => d, gv: () => c, u1: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -11,38 +7,29 @@ var i = n(503698),
     s = n(827734),
     o = n(397927),
     l = n(985018),
-    c = n(188618),
-    u = (function (e) {
+    u = n(188618),
+    c = (function (e) {
         return (e.RED = "RED"), (e.GRAY = "GRAY"), e;
     })({});
-let d = {
-        LARGE: c.Kp,
-        SMALL: c.qx,
-    },
-    f = {
-        [o.EGs.ROUND]: c.qG,
-        [o.EGs.ROUND_LEFT]: c.HZ,
-        [o.EGs.ROUND_RIGHT]: c.q5,
-        [o.EGs.SQUARE]: "",
-    };
-
-function p(e) {
-    let { className: t, style: n, shape: i = o.EGs.ROUND, look: u = "RED", size: p = d.LARGE } = e;
-    return "RED" === u
+let d = { LARGE: u.Kp, SMALL: u.qx },
+    _ = { [o.EGs.ROUND]: u.qG, [o.EGs.ROUND_LEFT]: u.HZ, [o.EGs.ROUND_RIGHT]: u.q5, [o.EGs.SQUARE]: "" };
+function f(e) {
+    let { className: t, style: n, shape: i = o.EGs.ROUND, look: c = "RED", size: f = d.LARGE } = e;
+    return "RED" === c
         ? (0, r.jsx)(o.LpS, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, c.VD, p),
+              className: a()(t, u.VD, f),
               color: s.A.unsafe_rawColors.RED_400.css,
-              shape: f[i],
+              shape: _[i],
               style: n,
           })
         : (0, r.jsx)(o.LpS, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, c.VD, p, c.Oh),
+              className: a()(t, u.VD, f, u.Oh),
               disableColor: !0,
-              shape: f[i],
+              shape: _[i],
               style: n,
           });
 }
-(p.Looks = u), (p.Sizes = d);
-let _ = p;
+(f.Looks = c), (f.Sizes = d);
+let p = f;

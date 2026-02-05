@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, {
     HD: () => l,
     HS: () => o,
-    M0: () => u,
+    M0: () => c,
     NJ: () => m,
     Qp: () => d,
     RQ: () => h,
-    UN: () => f,
+    UN: () => _,
     gY: () => s,
-    pH: () => c,
+    pH: () => u,
 });
 var r = n(573648),
     i = n(723702),
@@ -15,11 +16,10 @@ var r = n(573648),
 let s = "spotify",
     o = "spotify:",
     l = r.A.get(a.fg2.SPOTIFY).name;
-
-function c(e) {
+function u(e) {
     return null != e && e.startsWith(o);
 }
-var u = (function (e) {
+var c = (function (e) {
         return (
             (e.TRACK = "track"),
             (e.ARTIST = "artist"),
@@ -38,45 +38,37 @@ var u = (function (e) {
             e
         );
     })({});
-let f = ["open.spotify.com", "www.spotify.com"],
-    p = "https://api.spotify.com/v1",
-    _ = (e) => "?utm_source=discord&utm_medium=".concat(e),
+let _ = ["open.spotify.com", "www.spotify.com"],
+    f = "https://api.spotify.com/v1",
+    p = (e) => `?utm_source=discord&utm_medium=${e}`,
     h = Object.freeze({
-        PROFILE: "".concat(p, "/me"),
-        NOTIFICATIONS_PLAYER: "".concat(p, "/me/notifications/player"),
-        PLAYER: "".concat(p, "/me/player"),
-        PLAYER_DEVICES: "".concat(p, "/me/player/devices"),
-        PLAYER_PLAY: "".concat(p, "/me/player/play"),
-        PLAYER_PAUSE: "".concat(p, "/me/player/pause"),
-        PLAYER_REPEAT: "".concat(p, "/me/player/repeat"),
+        PROFILE: `${f}/me`,
+        NOTIFICATIONS_PLAYER: `${f}/me/notifications/player`,
+        PLAYER: `${f}/me/player`,
+        PLAYER_DEVICES: `${f}/me/player/devices`,
+        PLAYER_PLAY: `${f}/me/player/play`,
+        PLAYER_PAUSE: `${f}/me/player/pause`,
+        PLAYER_REPEAT: `${f}/me/player/repeat`,
         WEB_OPEN: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
-            return "https://open.spotify.com/"
-                .concat(encodeURIComponent(e), "/")
-                .concat(encodeURIComponent(t))
-                .concat(_(n));
+            return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${p(n)}`;
         },
         EMBED: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "desktop";
-            return "https://open.spotify.com/embed".concat(e).concat(_(t));
+            return `https://open.spotify.com/embed${e}${p(t)}`;
         },
         PLAYER_OPEN: function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "desktop";
-            return ""
-                .concat(s, ":")
-                .concat(encodeURIComponent(e), ":")
-                .concat(encodeURIComponent(t))
-                .concat(n ? _(r) : "");
+            return `${s}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? p(r) : ""}`;
         },
-        PREMIUM_SITE: "https://www.spotify.com/premium/".concat(_("desktop")),
-        INSTALL_ATTRIBUTION: (e) => "https://app.adjust.com/bdyga9?campaign=".concat(e),
+        PREMIUM_SITE: `https://www.spotify.com/premium/${p("desktop")}`,
+        INSTALL_ATTRIBUTION: (e) => `https://app.adjust.com/bdyga9?campaign=${e}`,
         APP_STORE: (0, i.isAndroid)()
             ? "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US"
             : "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
         IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
     });
-
 function m(e) {
     if ("string" != typeof e) return null;
     switch (e) {

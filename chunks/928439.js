@@ -1,41 +1,30 @@
-n.d(t, {
-    n: () => s,
-}),
-    n(896048),
-    n(638769),
-    n(65821),
-    n(321073);
+"use strict";
+n.d(t, { n: () => s }), n(321073);
 var r = n(73153);
 let i = {},
     a = !1;
-
 function s(e) {
     for (let t in e) {
         let n = e[t];
         o(t, n), l(n);
     }
-    r.h.addInterceptor(c);
+    r.h.addInterceptor(u);
 }
-
 function o(e, t) {
-    var n;
     t.actions;
 }
-
 function l(e) {
-    var t;
-    let n = null != (t = e.actions) ? t : [];
-    for (let t of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) &&
-        (n.includes("POST_CONNECTION_OPEN") || (n = [...n, "POST_CONNECTION_OPEN"]),
-        n.includes("OVERLAY_INITIALIZE") || (n = [...n, "OVERLAY_INITIALIZE"])),
+    let t = e.actions ?? [];
+    for (let n of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) &&
+        (t.includes("POST_CONNECTION_OPEN") || (t = [...t, "POST_CONNECTION_OPEN"]),
+        t.includes("OVERLAY_INITIALIZE") || (t = [...t, "OVERLAY_INITIALIZE"])),
     e.loadRightBeforeConnectionOpen &&
-        (n.includes("CONNECTION_OPEN") || (n = [...n, "CONNECTION_OPEN"]),
-        n.includes("OVERLAY_INITIALIZE") || (n = [...n, "OVERLAY_INITIALIZE"])),
-    n))
-        t in i || (i[t] = []), i[t].push(e);
+        (t.includes("CONNECTION_OPEN") || (t = [...t, "CONNECTION_OPEN"]),
+        t.includes("OVERLAY_INITIALIZE") || (t = [...t, "OVERLAY_INITIALIZE"])),
+    t))
+        n in i || (i[n] = []), i[n].push(e);
 }
-
-function c(e) {
+function u(e) {
     if ((("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (a = !0), e.type in i)) {
         let t = [];
         for (let n of i[e.type]) !a && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();

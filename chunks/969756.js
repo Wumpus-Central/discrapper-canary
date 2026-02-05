@@ -1,98 +1,71 @@
-n.d(t, {
-    A: () => j,
-});
+n.d(t, { A: () => _ });
 var i = n(627968),
-    r = n(64700),
-    l = n(735438),
-    a = n.n(l),
-    s = n(397927),
+    l = n(64700),
+    s = n(735438),
+    a = n.n(s),
+    r = n(397927),
     o = n(282956),
-    c = n(429913),
-    d = n(713654),
+    d = n(429913),
+    c = n(713654),
     u = n(769015),
-    b = n(887501),
-    f = n(975571),
-    p = n(523352),
-    m = n(652215),
-    g = n(985018),
-    h = n(358330);
-
-function x(e) {
+    m = n(887501),
+    g = n(975571),
+    x = n(523352),
+    h = n(652215),
+    p = n(985018),
+    A = n(358330);
+function b(e) {
     let { applicationId: t, channels: n } = e,
-        r = (0, c.h)(t);
-    return 0 === n.length || null == r
+        l = (0, d.h)(t);
+    return 0 === n.length || null == l
         ? null
         : (0, i.jsxs)("div", {
-              className: h.kF,
+              className: A.kF,
               children: [
                   (0, i.jsxs)("div", {
-                      className: h.wx,
+                      className: A.wx,
                       children: [
-                          (0, i.jsx)(u.A, {
-                              game: r,
-                              size: u.M.XSMALL,
-                          }),
-                          (0, i.jsx)(s.Heading, {
-                              variant: "heading-md/semibold",
-                              children: null == r ? void 0 : r.name,
-                          }),
+                          (0, i.jsx)(u.A, { game: l, size: u.M.XSMALL }),
+                          (0, i.jsx)(r.Heading, { variant: "heading-md/semibold", children: l?.name }),
                       ],
                   }),
-                  n.map((e) => {
-                      var t;
-                      return (0, i.jsx)(
-                          p.q,
+                  n.map((e) =>
+                      (0, i.jsx)(
+                          x.q,
                           {
                               channel: e,
-                              application: r,
+                              application: l,
                               name: e.name,
-                              icon: null != (t = (0, d.gU)(e)) ? t : void 0,
-                              iconWrapperClassName: h.N3,
+                              icon: (0, c.gU)(e) ?? void 0,
+                              iconWrapperClassName: A.N3,
                               hasNextSection: !0,
-                              trailing: (0, i.jsx)(s.R2l, {
-                                  size: "xs",
-                              }),
+                              trailing: (0, i.jsx)(r.R2l, { size: "xs" }),
                           },
                           e.id,
-                      );
-                  }),
+                      ),
+                  ),
               ],
           });
 }
-
-function j(e) {
+function _(e) {
     let { guild: t } = e,
-        n = (0, b.A)(t.id),
-        l = a().groupBy(n, (e) => {
-            var t;
-            return null == (t = e.linkedLobby) ? void 0 : t.application_id;
-        }),
-        c = Object.keys(l);
+        n = (0, m.A)(t.id),
+        s = a().groupBy(n, (e) => e.linkedLobby?.application_id),
+        d = Object.keys(s);
     return (
-        r.useEffect(() => {
-            0 === n.length && o.A.setSection(m.wLn.OVERVIEW);
+        l.useEffect(() => {
+            0 === n.length && o.A.setSection(h.wLn.OVERVIEW);
         }, [n]),
         (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: "text-sm/normal",
-                    children: g.intl.format(g.t["9gsSLu"], {
-                        helpdeskArticle: f.A.getArticleURL(m.MVz.LINKED_LOBBIES),
+                    children: p.intl.format(p.t["9gsSLu"], {
+                        helpdeskArticle: g.A.getArticleURL(h.MVz.LINKED_LOBBIES),
                     }),
                 }),
-                (0, i.jsx)(s.cGx, {
-                    className: h.zN,
-                }),
-                c.map((e) =>
-                    (0, i.jsx)(
-                        x,
-                        {
-                            applicationId: e,
-                            channels: l[e],
-                        },
-                        e,
-                    ),
-                ),
+                (0, i.jsx)(r.cGx, { className: A.zN }),
+                d.map((e) => (0, i.jsx)(b, { applicationId: e, channels: s[e] }, e)),
             ],
         })
     );

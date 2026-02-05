@@ -1,3 +1,4 @@
+"use strict";
 var r = n(120394),
     i = Math.max,
     a = Math.min;

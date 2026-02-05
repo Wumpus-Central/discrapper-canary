@@ -1,27 +1,16 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(735438),
     i = n.n(r),
     a = n(205693),
     s = n(687658);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = 1e3;
-class c {
+let o = 1e3;
+class l {
+    connection;
+    pttQueueLatencyHistogram;
+    constructor(e) {
+        (this.connection = e), (this.pttQueueLatencyHistogram = new s.d());
+    }
     start() {
         this.connection.on(a.yq.Stats, this.sampleStats);
     }
@@ -38,23 +27,14 @@ class c {
             ptt_queue_latency_samples: e.samples,
         };
     }
-    constructor(e) {
-        o(this, "connection", void 0),
-            o(this, "pttQueueLatencyHistogram", void 0),
-            o(this, "sampleStats", void 0),
-            (this.connection = e),
-            (this.sampleStats = (e) => {
-                null != e &&
-                    i().forEach(e.rtp.outbound, (e) => {
-                        if ("audio" === e.type) {
-                            var t;
-                            for (let n of null != (t = e.pttQueueLatencyMicrosSamples) ? t : []) {
-                                let e = n / l;
-                                this.pttQueueLatencyHistogram.addSample(e);
-                            }
-                        }
-                    });
-            }),
-            (this.pttQueueLatencyHistogram = new s.d());
-    }
+    sampleStats = (e) => {
+        null != e &&
+            i().forEach(e.rtp.outbound, (e) => {
+                if ("audio" === e.type)
+                    for (let t of e.pttQueueLatencyMicrosSamples ?? []) {
+                        let e = t / o;
+                        this.pttQueueLatencyHistogram.addSample(e);
+                    }
+            });
+    };
 }

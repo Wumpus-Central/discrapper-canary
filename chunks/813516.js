@@ -1,42 +1,26 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(580679),
     l = n(985018),
-    c = n(647162);
-let u = i.forwardRef(function (e, t) {
-    let { className: n, contentClassName: i, isUnread: a, children: u, id: d, role: f, "aria-label": p } = e;
+    u = n(647162);
+let c = i.forwardRef(function (e, t) {
+    let { className: n, contentClassName: i, isUnread: a, children: c, id: d, role: _, "aria-label": f } = e;
     return (0, r.jsxs)("div", {
-        className: s()(n, {
-            [c.yF]: !0,
-            [c.KJ]: a,
-            [c.ov]: null != u,
-        }),
+        className: s()(n, { [u.yF]: !0, [u.KJ]: a, [u.ov]: null != c }),
         ref: t,
         id: d,
-        role: f,
-        "aria-label": p,
+        role: _,
+        "aria-label": f,
         children: [
-            null != u
-                ? (0, r.jsx)("span", {
-                      className: s()(c.Qs, i),
-                      children: u,
-                  })
-                : null,
+            null != c ? (0, r.jsx)("span", { className: s()(u.Qs, i), children: c }) : null,
             a
                 ? (0, r.jsxs)("span", {
-                      className: c.dM,
-                      children: [
-                          (0, r.jsx)(o.A, {
-                              foreground: c.BH,
-                              className: c.fE,
-                          }),
-                          l.intl.string(l.t.y2b7CA),
-                      ],
+                      className: u.dM,
+                      children: [(0, r.jsx)(o.A, { foreground: u.BH, className: u.fE }), l.intl.string(l.t.y2b7CA)],
                   })
                 : null,
         ],

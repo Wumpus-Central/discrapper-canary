@@ -1,6 +1,5 @@
-l.d(t, {
-    I: () => r,
-});
+"use strict";
+s.d(t, { I: () => r });
 var n,
     r =
         (((n = {}).BLUE = "COLLECTIBLES_COLOR_BLUE"),

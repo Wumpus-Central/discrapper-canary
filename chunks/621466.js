@@ -1,27 +1,17 @@
+"use strict";
 function r(e, t) {
-    var n, r;
     if (null == e) return !1;
-    let i = null == e || null == (r = e.ownerDocument) ? void 0 : r.defaultView;
-    if (null == i) return console.warn("Unable to determine render window for element", e), !1;
-    let a = null != (n = null == t ? void 0 : t.name) ? n : "Element",
-        s = i[a];
-    return null == s ? (console.warn('Unable to find element constructor "'.concat(a, '" in'), i), !1) : e instanceof s;
+    let n = e?.ownerDocument?.defaultView;
+    if (null == n) return console.warn("Unable to determine render window for element", e), !1;
+    let r = t?.name ?? "Element",
+        i = n[r];
+    return null == i ? (console.warn(`Unable to find element constructor "${r}" in`, n), !1) : e instanceof i;
 }
-
 function i(e) {
     let t = parseInt(e, 10);
     return isNaN(t) ? 0 : t;
 }
-n.d(t, {
-    BF: () => c,
-    Cw: () => l,
-    p3: () => u,
-    vq: () => r,
-    wB: () => d,
-    xI: () => i,
-}),
-    n(896048),
-    n(747238);
+n.d(t, { BF: () => u, Cw: () => l, p3: () => c, vq: () => r, wB: () => d, xI: () => i });
 let a = /input/i,
     s = /textarea/i,
     o = new Set([
@@ -38,19 +28,16 @@ let a = /input/i,
         "tel",
         "url",
     ]);
-
 function l(e) {
     if (null == e) return !1;
     if ("true" === e.getAttribute("contenteditable") || s.test(e.tagName)) return !0;
     if (a.test(e.tagName)) {
-        var t;
-        let n = null != (t = e.getAttribute("type")) ? t : "text";
-        if (o.has(n)) return !0;
+        let t = e.getAttribute("type") ?? "text";
+        if (o.has(t)) return !0;
     }
     return !1;
 }
-
-function c(e) {
+function u(e) {
     let { target: t } = e;
     return null == t
         ? null
@@ -60,8 +47,7 @@ function c(e) {
             ? t.document
             : (console.warn("Unable to get owner document from event", e.type), null);
 }
-
-function u(e, t) {
+function c(e, t) {
     let n = e.parentElement;
     for (; null != n; ) {
         if (n.classList.contains(t)) return n;
@@ -69,7 +55,6 @@ function u(e, t) {
     }
     return null;
 }
-
 function d(e, t) {
     let n = e.parentElement;
     for (; null != n; ) {

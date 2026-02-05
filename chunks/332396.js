@@ -1,185 +1,138 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(896048),
-    n(114821),
-    n(339614),
-    n(321073);
-var r = n(627968),
+n.d(t, { A: () => y }), n(321073);
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(735438),
-    o = n.n(s),
-    c = n(311907),
-    u = n(435371),
-    d = n(397927),
-    f = n(933958),
-    p = n(104171),
-    h = n(63995),
-    b = n(69407),
-    g = n(616356),
-    m = n(734057),
-    A = n(287809),
-    y = n(607567),
-    O = n(403362),
-    j = n(661191),
-    v = n(181079),
-    x = n(652215),
-    E = n(985018),
-    _ = n(653750);
-
-function C(e, t) {
+    s = n(503698),
+    a = n.n(s),
+    r = n(735438),
+    o = n.n(r),
+    d = n(311907),
+    c = n(435371),
+    u = n(397927),
+    h = n(933958),
+    A = n(104171),
+    g = n(63995),
+    m = n(69407),
+    p = n(616356),
+    _ = n(734057),
+    x = n(287809),
+    f = n(607567),
+    E = n(403362),
+    C = n(661191),
+    I = n(181079),
+    S = n(652215),
+    b = n(985018),
+    N = n(653750);
+function T(e, t) {
     return 0 === t.length
         ? null
-        : (0, r.jsxs)("div", {
-              className: _.nM,
+        : (0, i.jsxs)("div", {
+              className: N.nM,
               children: [
-                  (0, r.jsx)(e, {
-                      className: _.RI,
-                      color: "currentColor",
-                  }),
-                  (0, r.jsx)(p.Ay, {
-                      guildId: void 0,
-                      users: t,
-                      max: 6,
-                  }),
+                  (0, i.jsx)(e, { className: N.RI, color: "currentColor" }),
+                  (0, i.jsx)(A.Ay, { guildId: void 0, users: t, max: 6 }),
               ],
           });
 }
-
-function S() {
-    let e = (0, c.yK)([v.A, m.A], () =>
-            j.default
-                .keys(v.A.getFavoriteChannels())
-                .map((e) => m.A.getChannel(e))
-                .filter(O.Vq),
+function j() {
+    let e = (0, d.yK)([I.A, _.A], () =>
+            C.default
+                .keys(I.A.getFavoriteChannels())
+                .map((e) => _.A.getChannel(e))
+                .filter(E.Vq),
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === x.rbe.GUILD_VOICE),
-        l = e.filter((e) => e.type === x.rbe.GUILD_STAGE_VOICE).map((e) => e.id),
-        i = (0, c.yK)(
-            [y.Ay],
+        n = e.filter((e) => e.type === S.rbe.GUILD_VOICE),
+        l = e.filter((e) => e.type === S.rbe.GUILD_STAGE_VOICE).map((e) => e.id),
+        s = (0, d.yK)(
+            [f.Ay],
             () =>
                 o().flatMap(n, (e) =>
-                    y.Ay.getVoiceStatesForChannel(e).map((e) => {
+                    f.Ay.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     }),
                 ),
             [n],
         ),
-        a = (0, c.yK)([h.A], () =>
+        a = (0, d.yK)([g.A], () =>
             o().flatMap(l, (e) =>
-                h.A.getMutableParticipants(e, b.ip.SPEAKER)
-                    .filter((e) => e.type === b.wY.VOICE)
+                g.A.getMutableParticipants(e, m.ip.SPEAKER)
+                    .filter((e) => e.type === m.wY.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
                     }),
             ),
         ),
-        s = (0, c.bG)([h.A], () => {
+        r = (0, d.bG)([g.A], () => {
             let e = 0;
-            for (let t of l) e += h.A.getParticipantCount(t, b.ip.AUDIENCE);
+            for (let t of l) e += g.A.getParticipantCount(t, m.ip.AUDIENCE);
             return e;
         }),
-        u = (0, c.yK)(
-            [g.A],
+        c = (0, d.yK)(
+            [p.A],
             () =>
-                g.A.getAllApplicationStreams()
+                p.A.getAllApplicationStreams()
                     .filter((e) => t.includes(e.channelId))
                     .map((e) => e.ownerId),
             [t],
         ),
-        E = (0, c.yK)([f.Ay], () => {
-            let e = f.Ay.getEmbeddedActivitiesByChannel(),
+        b = (0, d.yK)([h.Ay], () => {
+            let e = h.Ay.getEmbeddedActivitiesByChannel(),
                 n = [];
-            for (let i of t) {
-                var r, l;
-                n.push(
-                    ...(null != (r = null == (l = e.get(i)) ? void 0 : l.flatMap((e) => Array.from(e.userIds)))
-                        ? r
-                        : []),
-                );
-            }
+            for (let i of t) n.push(...(e.get(i)?.flatMap((e) => Array.from(e.userIds)) ?? []));
             return n;
         }, [t]),
-        S = (0, c.yK)([A.default], () => E.map((e) => A.default.getUser(e)), [E]),
-        I = (0, c.yK)([A.default], () => u.map((e) => A.default.getUser(e)), [u]),
-        N = C(
-            d.HKD,
-            i.filter((e) => !u.includes(e.id) && !E.includes(e.id)),
+        j = (0, d.yK)([x.default], () => b.map((e) => x.default.getUser(e)), [b]),
+        v = (0, d.yK)([x.default], () => c.map((e) => x.default.getUser(e)), [c]),
+        y = T(
+            u.HKD,
+            s.filter((e) => !c.includes(e.id) && !b.includes(e.id)),
         ),
-        T =
+        R =
             0 === a.length
                 ? null
-                : (0, r.jsxs)("div", {
-                      className: _.nM,
+                : (0, i.jsxs)("div", {
+                      className: N.nM,
                       children: [
-                          (0, r.jsx)(d.qux, {
-                              size: "lg",
-                              color: "currentColor",
-                              className: _.RI,
-                          }),
-                          (0, r.jsx)(p.Ay, {
-                              guildId: void 0,
-                              users: a,
-                              max: 3,
-                          }),
-                          (0, r.jsxs)("div", {
-                              className: _.GZ,
+                          (0, i.jsx)(u.qux, { size: "lg", color: "currentColor", className: N.RI }),
+                          (0, i.jsx)(A.Ay, { guildId: void 0, users: a, max: 3 }),
+                          (0, i.jsxs)("div", {
+                              className: N.GZ,
                               children: [
-                                  (0, r.jsx)(d.LoC, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                  }),
-                                  (0, r.jsx)(d.Text, {
-                                      className: _._I,
+                                  (0, i.jsx)(u.LoC, { size: "xs", color: "currentColor" }),
+                                  (0, i.jsx)(u.Text, {
+                                      className: N._I,
                                       color: "text-default",
                                       variant: "text-xs/medium",
-                                      children: s,
+                                      children: r,
                                   }),
                               ],
                           }),
                       ],
                   }),
-        P = C(
-            d.Fzq,
-            I.filter((e) => null != e && !E.includes(e.id)),
+        O = T(
+            u.Fzq,
+            v.filter((e) => null != e && !b.includes(e.id)),
         ),
-        w = C(d.bxf, S);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [T, N, P, w],
-    });
+        L = T(u.k9F, j);
+    return (0, i.jsxs)(i.Fragment, { children: [R, y, O, L] });
 }
-
-function I() {
-    return (0, r.jsxs)(r.Fragment, {
+function v() {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("div", {
-                className: a()(_.nM, _.Dl),
-                children: (0, r.jsx)("span", {
-                    className: a()(_.cN, _.NT),
-                    children: E.intl.string(E.t.wMWyci),
-                }),
+            (0, i.jsx)("div", {
+                className: a()(N.nM, N.Dl),
+                children: (0, i.jsx)("span", { className: a()(N.cN, N.NT), children: b.intl.string(b.t.wMWyci) }),
             }),
-            (0, r.jsx)(S, {}),
+            (0, i.jsx)(j, {}),
         ],
     });
 }
-
-function N(e) {
-    let { "aria-label": t = !1, onShow: n, children: i } = e,
-        a = l.useMemo(
-            () =>
-                (0, r.jsx)("div", {
-                    className: _.A_,
-                    children: (0, r.jsx)(I, {}),
-                }),
-            [],
-        );
-    return (0, r.jsx)(u.m_, {
+function y(e) {
+    let { "aria-label": t = !1, onShow: n, children: s } = e,
+        a = l.useMemo(() => (0, i.jsx)("div", { className: N.A_, children: (0, i.jsx)(v, {}) }), []);
+    return (0, i.jsx)(c.m_, {
         __unsupportedReactNodeAsText: a,
         hideOnClick: !0,
         spacing: 12,
@@ -187,6 +140,6 @@ function N(e) {
         "aria-label": !1 === t ? void 0 : t,
         onTooltipShow: n,
         asContainer: !0,
-        children: i,
+        children: s,
     });
 }

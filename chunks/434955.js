@@ -8,15 +8,8 @@ e.exports = function (e) {
             e.C_NUMBER_MODE,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: "`",
-                end: "`",
-                contains: [e.BACKSLASH_ESCAPE],
-            },
-            {
-                begin: /[$%@](\^\w\b|#\w+|[^\s\w{]|\{\w+\}|\w+)/,
-            },
+            { className: "string", begin: "`", end: "`", contains: [e.BACKSLASH_ESCAPE] },
+            { begin: /[$%@](\^\w\b|#\w+|[^\s\w{]|\{\w+\}|\w+)/ },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
         ],

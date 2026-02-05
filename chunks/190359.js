@@ -1,3 +1,2 @@
-e.exports = {
-    m: "separator__7bf69",
-};
+"use strict";
+e.exports = { m: "separator__7bf69" };

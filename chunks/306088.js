@@ -1,8 +1,4 @@
-l.d(t, {
-    default: () => v,
-}),
-    l(321073),
-    l(896048);
+l.d(e, { default: () => O }), l(321073);
 var n = l(627968),
     a = l(64700),
     i = l(158954),
@@ -11,25 +7,24 @@ var n = l(627968),
     s = l(472715),
     d = l(191485),
     b = l(670455),
-    O = l(985018);
-
-function o(e) {
+    E = l(985018);
+function v(t) {
     let {
-            title: t,
+            title: e,
             options: l,
             selectedOption: i,
             freeformText: u,
             isFreeformEnabled: d,
-            selectOption: o,
-            onFreeformTextChange: v,
-        } = e,
-        E = a.useMemo(() => l.map(s.zS), [l]),
+            selectOption: v,
+            onFreeformTextChange: O,
+        } = t,
+        g = a.useMemo(() => l.map(s.zS), [l]),
         f = a.useCallback(
-            (e) => {
-                let t = (0, s.MA)(e, l);
-                null != t && o(t);
+            (t) => {
+                let e = (0, s.MA)(t, l);
+                null != e && v(e);
             },
-            [o, l],
+            [v, l],
         );
     return (0, n.jsxs)(r.BJc, {
         gap: 24,
@@ -37,16 +32,8 @@ function o(e) {
             (0, n.jsxs)(r.BJc, {
                 gap: 16,
                 children: [
-                    (0, n.jsx)(r.Heading, {
-                        variant: "heading-lg/semibold",
-                        color: "text-strong",
-                        children: t,
-                    }),
-                    (0, n.jsx)(r.z6M, {
-                        options: E,
-                        value: null == i ? void 0 : i.value,
-                        onChange: f,
-                    }),
+                    (0, n.jsx)(r.Heading, { variant: "heading-lg/semibold", color: "text-strong", children: e }),
+                    (0, n.jsx)(r.z6M, { options: g, value: i?.value, onChange: f }),
                 ],
             }),
             (0, n.jsxs)(r.BJc, {
@@ -55,145 +42,80 @@ function o(e) {
                     (0, n.jsx)(r.Heading, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: O.intl.string(O.t.oV10fv),
+                        children: E.intl.string(E.t.oV10fv),
                     }),
-                    (0, n.jsx)(r.fs1, {
-                        value: u,
-                        maxLength: b.u0,
-                        onChange: v,
-                        disabled: !d,
-                    }),
+                    (0, n.jsx)(r.fs1, { value: u, maxLength: b.u0, onChange: O, disabled: !d }),
                 ],
             }),
         ],
     });
 }
-let v = function (e) {
-    let { searchContext: t, rating: l, transitionState: r, onClose: v } = e,
-        E = (0, d.L)({
-            getOptions: s.aK,
-        }),
-        f = (0, d.L)({
-            getOptions: s.mX,
-        }),
-        c = l === b.P0.BAD,
-        { questionItems: g, questionTitles: _ } = a.useMemo(() => {
-            let e = [],
-                t = [];
+let O = function (t) {
+    let { searchContext: e, rating: l, transitionState: r, onClose: O } = t,
+        g = (0, d.L)({ getOptions: s.aK }),
+        f = (0, d.L)({ getOptions: s.mX }),
+        _ = l === b.P0.BAD,
+        { questionItems: o, questionTitles: U } = a.useMemo(() => {
+            let t = [],
+                e = [];
             return (
-                c && (e.push(E), t.push(O.intl.string(O.t.UyBQF7))),
-                e.push(f),
-                t.push(O.intl.string(O.t.LhMLCk)),
-                {
-                    questionItems: e,
-                    questionTitles: t,
-                }
+                _ && (t.push(g), e.push(E.intl.string(E.t.UyBQF7))),
+                t.push(f),
+                e.push(E.intl.string(E.t.LhMLCk)),
+                { questionItems: t, questionTitles: e }
             );
-        }, [c, f, E]);
+        }, [_, f, g]);
     a.useEffect(() => {
-        (0, u.wU)({
-            rating: l,
-            searchContext: t,
-        });
-    }, [l, t]);
-    let [p, h] = a.useState(0),
-        S = 0 === p,
-        U = p === g.length - 1,
-        N = a.useMemo(() => {
-            let e = g[p],
-                t = _[p];
-            return (0, n.jsx)(
-                o,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var l = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(l);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(l).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                                }),
-                            )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = l[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: n,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = n);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        title: t,
-                    },
-                    e,
-                ),
-            );
-        }, [g, _, p]),
-        D = a.useMemo(() => g.every(s.GP), [g]),
+        (0, u.wU)({ rating: l, searchContext: e });
+    }, [l, e]);
+    let [S, h] = a.useState(0),
+        c = 0 === S,
+        N = S === o.length - 1,
         L = a.useMemo(() => {
-            let e = g[p];
-            return (0, s.GP)(e);
-        }, [g, p]),
+            let t = o[S],
+                e = U[S];
+            return (0, n.jsx)(v, { title: e, ...t });
+        }, [o, U, S]),
+        C = a.useMemo(() => o.every(s.GP), [o]),
+        D = a.useMemo(() => {
+            let t = o[S];
+            return (0, s.GP)(t);
+        }, [o, S]),
         I = a.useCallback(() => {
-            D &&
+            C &&
                 ((0, u.uZ)({
                     rating: l,
-                    searchContext: t,
-                    unsatisfiedQuestionOption: c ? (0, s.De)(E) : null,
-                    unsatisfiedQuestionText: c ? (0, s.mq)(E) : null,
+                    searchContext: e,
+                    unsatisfiedQuestionOption: _ ? (0, s.De)(g) : null,
+                    unsatisfiedQuestionText: _ ? (0, s.mq)(g) : null,
                     describeSearchQuestionOption: (0, s.De)(f),
                     describeSearchQuestionText: (0, s.mq)(f),
                 }),
-                v());
-        }, [D, l, t, c, E, f, v]),
-        j = a.useCallback(() => {
-            S ? v() : h(p - 1);
-        }, [S, p, v]),
-        C = a.useCallback(() => {
-            h(p + 1);
-        }, [p]),
-        y = a.useMemo(() => {
-            let e = [];
+                O());
+        }, [C, l, e, _, g, f, O]),
+        V = a.useCallback(() => {
+            c ? O() : h(S - 1);
+        }, [c, S, O]),
+        T = a.useCallback(() => {
+            h(S + 1);
+        }, [S]),
+        p = a.useMemo(() => {
+            let t = [];
             return (
-                S
-                    ? e.push({
-                          variant: "secondary",
-                          text: O.intl.string(O.t["ETE/oC"]),
-                          onClick: v,
-                      })
-                    : e.push({
-                          variant: "secondary",
-                          text: O.intl.string(O.t["13/7kX"]),
-                          onClick: j,
-                      }),
-                U
-                    ? e.push({
-                          variant: "primary",
-                          text: O.intl.string(O.t["4Zpxtl"]),
-                          onClick: I,
-                          disabled: !D,
-                      })
-                    : e.push({
-                          variant: "primary",
-                          text: O.intl.string(O.t.PDTjLN),
-                          onClick: C,
-                          disabled: !L,
-                      }),
-                e
+                c
+                    ? t.push({ variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: O })
+                    : t.push({ variant: "secondary", text: E.intl.string(E.t["13/7kX"]), onClick: V }),
+                N
+                    ? t.push({ variant: "primary", text: E.intl.string(E.t["4Zpxtl"]), onClick: I, disabled: !C })
+                    : t.push({ variant: "primary", text: E.intl.string(E.t.PDTjLN), onClick: T, disabled: !D }),
+                t
             );
-        }, [S, U, D, L, v, j, I, C]);
+        }, [c, N, C, D, O, V, I, T]);
     return (0, n.jsx)(i.Modal, {
-        title: O.intl.string(O.t.LRGdVy),
-        actions: y,
-        onClose: v,
+        title: E.intl.string(E.t.LRGdVy),
+        actions: p,
+        onClose: O,
         transitionState: r,
-        children: N,
+        children: L,
     });
 };

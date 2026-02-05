@@ -1,9 +1,5 @@
-n.d(t, {
-    F7: () => o,
-    Q: () => s,
-    hx: () => c,
-}),
-    n(65821);
+"use strict";
+n.d(t, { F7: () => o, Q: () => s, hx: () => u });
 var r = n(136722),
     i = n(652215),
     a = n(985018);
@@ -61,7 +57,6 @@ let s = [
     i.xBc.USE_EXTERNAL_SOUNDS,
     i.xBc.SET_VOICE_CHANNEL_STATUS,
 ];
-
 function o(e) {
     return Object.values(i.xBc).some((t) => r.zy(e, t) && !s.includes(t));
 }
@@ -119,9 +114,8 @@ let l = {
     [i.xBc.PIN_MESSAGES.toString()]: () => a.intl.string(a.t.Y5BI39),
     [i.xBc.BYPASS_SLOWMODE.toString()]: () => a.intl.string(a.t.kqcjeV),
 };
-
-function c(e) {
+function u(e) {
     let t = l[e.toString()];
-    if (null == t) throw Error("Unknown permission. Did you provide a _single_ bit flag? Perm: ".concat(e));
+    if (null == t) throw Error(`Unknown permission. Did you provide a _single_ bit flag? Perm: ${e}`);
     return t();
 }

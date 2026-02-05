@@ -1,72 +1,58 @@
-n.d(t, {
-    Fr: () => w,
-    Kk: () => A,
-    Mu: () => y,
-    jO: () => p,
-}),
-    n(896048),
-    n(638769),
-    n(264879);
-var r = n(64700),
-    l = n(735438),
-    a = n.n(l),
-    s = n(311907),
-    o = n(919577),
-    i = n(212007),
-    c = n(734057),
-    u = n(576705),
-    d = n(222823),
-    h = n(403362),
-    g = n(661191),
-    m = n(970278),
-    f = n(45494),
-    j = n(152007),
-    x = n(867455),
-    v = n(707539),
-    b = n(818348);
-
-function A() {
-    r.useEffect(() => {
-        (0, v.ju)();
+s.d(t, { Fr: () => N, Kk: () => T, Mu: () => S, jO: () => w });
+var l = s(64700),
+    n = s(735438),
+    a = s.n(n),
+    r = s(311907),
+    i = s(919577),
+    o = s(212007),
+    d = s(734057),
+    c = s(576705),
+    u = s(222823),
+    h = s(403362),
+    g = s(661191),
+    m = s(970278),
+    x = s(45494),
+    A = s(152007),
+    f = s(867455),
+    j = s(707539),
+    v = s(818348);
+function T() {
+    l.useEffect(() => {
+        (0, j.ju)();
     }, []);
 }
-
-function p(e) {
+function w(e) {
     let t,
-        n =
-            ((t = (0, s.yK)(
-                [u.A, m.A, c.A],
+        s =
+            ((t = (0, r.yK)(
+                [c.A, m.A, d.A],
                 () =>
                     a()(m.A.getThreadsForParent(e.guild_id, e.id))
                         .values()
                         .map((e) => {
                             let { id: t } = e;
-                            return c.A.getChannel(t);
+                            return d.A.getChannel(t);
                         })
                         .filter(h.Vq)
-                        .filter((e) => u.A.can(b.xB.VIEW_CHANNEL, e))
+                        .filter((e) => c.A.can(v.xB.VIEW_CHANNEL, e))
                         .map((e) => e.id)
                         .value(),
                 [e.guild_id, e.id],
             )),
-            r.useMemo(
+            l.useMemo(
                 () =>
                     a()(t)
-                        .sort((e, t) => g.default.compare(d.Ay.lastMessageId(e), d.Ay.lastMessageId(t)))
+                        .sort((e, t) => g.default.compare(u.Ay.lastMessageId(e), u.Ay.lastMessageId(t)))
                         .reverse()
                         .value(),
                 [t],
             )),
-        [l, o] = (0, s.bG)([j.A], () => a().partition(n, (e) => j.A.hasJoined(e)), [n], s.My);
-    return {
-        joinedThreadIds: l,
-        unjoinedThreadIds: o,
-    };
+        [n, i] = (0, r.bG)([A.A], () => a().partition(s, (e) => A.A.hasJoined(e)), [s], r.My);
+    return { joinedThreadIds: n, unjoinedThreadIds: i };
 }
-
-function y(e) {
-    let t = (0, s.yK)(
-        [u.A, m.A, c.A],
+function S(e) {
+    let t = (0, r.yK)(
+        [c.A, m.A, d.A],
         () =>
             a()(m.A.getThreadsForGuild(e))
                 .values()
@@ -74,74 +60,73 @@ function y(e) {
                 .flatten()
                 .map((e) => {
                     let { id: t } = e;
-                    return c.A.getChannel(t);
+                    return d.A.getChannel(t);
                 })
                 .filter(h.Vq)
-                .filter((e) => u.A.can(b.xB.VIEW_CHANNEL, e))
+                .filter((e) => c.A.can(v.xB.VIEW_CHANNEL, e))
                 .map((e) => e.id)
                 .value(),
         [e],
     );
-    return r.useMemo(
+    return l.useMemo(
         () =>
             a()(t)
-                .sort((e, t) => g.default.compare(d.Ay.lastMessageId(e), d.Ay.lastMessageId(t)))
+                .sort((e, t) => g.default.compare(u.Ay.lastMessageId(e), u.Ay.lastMessageId(t)))
                 .reverse()
                 .value(),
         [t],
     );
 }
-
-function w(e, t, n, l) {
-    let d = e.isModeratorReportChannel(),
-        { showResolvedFlags: h } = (0, i.T)(e.id),
+function N(e, t, s, n) {
+    let u = e.isModeratorReportChannel(),
+        { showResolvedFlags: h } = (0, o.T)(e.id),
         {
             canLoadMore: g,
             loading: m,
-            nextOffset: j,
-            isInitialLoad: v,
-        } = (0, s.cf)([f.A], () => ({
-            loading: f.A.isLoading(e.id, t, n, l),
-            isInitialLoad: f.A.isInitialLoad,
-            canLoadMore: f.A.canLoadMore,
-            nextOffset: f.A.nextOffset,
+            nextOffset: A,
+            isInitialLoad: j,
+        } = (0, r.cf)([x.A], () => ({
+            loading: x.A.isLoading(e.id, t, s, n),
+            isInitialLoad: x.A.isInitialLoad,
+            canLoadMore: x.A.canLoadMore,
+            nextOffset: x.A.nextOffset,
         })),
-        A = r.useCallback(() => {
-            u.A.can(b.xB.READ_MESSAGE_HISTORY, e) &&
-                (!d || h) &&
-                x.A.loadArchivedThreads({
+        T = l.useCallback(() => {
+            c.A.can(v.xB.READ_MESSAGE_HISTORY, e) &&
+                (!u || h) &&
+                f.A.loadArchivedThreads({
                     guildId: e.guild_id,
                     channelId: e.id,
                     sortOrder: t,
-                    tagFilter: n,
-                    tagSetting: l,
-                    offset: j,
+                    tagFilter: s,
+                    tagSetting: n,
+                    offset: A,
                 });
-        }, [e, t, n, l, j, h, d]),
-        p = r.useRef(A);
+        }, [e, t, s, n, A, h, u]),
+        w = l.useRef(T);
     return (
-        r.useEffect(() => {
-            p.current = A;
+        l.useEffect(() => {
+            w.current = T;
         }),
-        r.useEffect(() => {
-            v && p.current();
-        }, [e.id, t, n, v, h]),
-        r.useEffect(() => {
-            o.A.resort(e.id);
+        l.useEffect(() => {
+            j && w.current();
+        }, [e.id, t, s, j, h]),
+        l.useEffect(() => {
+            i.A.resort(e.id);
         }, [e.id, h]),
         {
-            threadIds: (0, s.yK)([f.A, c.A, u.A], () =>
-                a()(f.A.getThreads(e.id, t, n, l))
+            threadIds: (0, r.yK)([x.A, d.A, c.A], () =>
+                a()(x.A.getThreads(e.id, t, s, n))
                     .filter((e) => {
-                        if (d && !h) return !1;
-                        let t = c.A.getChannel(e);
-                        return null != t && u.A.can(b.xB.VIEW_CHANNEL, t);
+                        if (u && !h) return !1;
+                        let t = d.A.getChannel(e);
+                        return null != t && c.A.can(v.xB.VIEW_CHANNEL, t);
                     })
                     .value(),
             ),
             canLoadMore: g,
-            loading: (m || v) && h,
-            loadMore: A,
+            loading: (m || j) && h,
+            loadMore: T,
         }
     );
 }

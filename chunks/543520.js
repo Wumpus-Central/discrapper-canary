@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     return (r =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -10,11 +11,9 @@ function r(e) {
                       : typeof e;
               })(e);
 }
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -24,23 +23,14 @@ function a(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
 function s(e, t, n) {
     return t && a(e.prototype, t), n && a(e, n), e;
 }
-
 function o(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            writable: !0,
-            configurable: !0,
-        },
-    })),
+    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
         t && l(e, t);
 }
-
 function l(e, t) {
     return (l =
         Object.setPrototypeOf ||
@@ -48,26 +38,22 @@ function l(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-
-function c(e) {
-    var t = f();
+function u(e) {
+    var t = _();
     return function () {
         var n,
-            r = p(e);
-        return (n = t ? Reflect.construct(r, arguments, p(this).constructor) : r.apply(this, arguments)), u(this, n);
+            r = f(e);
+        return (n = t ? Reflect.construct(r, arguments, f(this).constructor) : r.apply(this, arguments)), c(this, n);
     };
 }
-
-function u(e, t) {
+function c(e, t) {
     return t && ("object" === r(t) || "function" == typeof t) ? t : d(e);
 }
-
 function d(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-
-function f() {
+function _() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -76,42 +62,30 @@ function f() {
         return !1;
     }
 }
-
-function p(e) {
-    return (p = Object.setPrototypeOf
+function f(e) {
+    return (f = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-
-function _(e, t, n) {
+function p(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-n.d(t, {
-    U: () => h,
-});
+n.d(t, { U: () => h });
 var h = (function (e) {
     o(n, e);
-    var t = c(n);
-
+    var t = u(n);
     function n() {
         var e;
         i(this, n);
         for (var r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
         return (
-            _(d((e = t.call.apply(t, [this].concat(a)))), "priority", 140),
-            _(d(e), "incompatibleTokens", ["R", "u", "t", "T"]),
+            p(d((e = t.call.apply(t, [this].concat(a)))), "priority", 140),
+            p(d(e), "incompatibleTokens", ["R", "u", "t", "T"]),
             e
         );
     }
@@ -124,29 +98,14 @@ var h = (function (e) {
                         case "G":
                         case "GG":
                         case "GGG":
-                            return (
-                                n.era(e, {
-                                    width: "abbreviated",
-                                }) ||
-                                n.era(e, {
-                                    width: "narrow",
-                                })
-                            );
+                            return n.era(e, { width: "abbreviated" }) || n.era(e, { width: "narrow" });
                         case "GGGGG":
-                            return n.era(e, {
-                                width: "narrow",
-                            });
+                            return n.era(e, { width: "narrow" });
                         default:
                             return (
-                                n.era(e, {
-                                    width: "wide",
-                                }) ||
-                                n.era(e, {
-                                    width: "abbreviated",
-                                }) ||
-                                n.era(e, {
-                                    width: "narrow",
-                                })
+                                n.era(e, { width: "wide" }) ||
+                                n.era(e, { width: "abbreviated" }) ||
+                                n.era(e, { width: "narrow" })
                             );
                     }
                 },

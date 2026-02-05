@@ -1,35 +1,31 @@
-n.d(t, {
-    h: () => c,
-    i: () => u,
-}),
-    n(896048);
+"use strict";
+n.d(t, { h: () => u, i: () => c });
 var r = n(627968),
     i = n(64700),
     a = n(435371),
     s = n(397927),
     o = n(297689),
     l = n(861175);
-
-function c(e) {
+function u(e) {
     let {
             label: t,
             defaultExpanded: n = !1,
             onExpandedChange: a,
             isDisabled: s = !1,
-            collapsedContent: c,
-            children: u,
+            collapsedContent: u,
+            children: c,
         } = e,
-        [d, f] = i.useState(n),
-        p = i.useCallback(
+        [d, _] = i.useState(n),
+        f = i.useCallback(
             (e) => {
-                f(e), null != a && a(e);
+                _(e), null != a && a(e);
             },
             [a],
         );
     return (0, r.jsxs)(o.nD, {
         defaultExpanded: n,
         isDisabled: s,
-        onExpandedChange: p,
+        onExpandedChange: f,
         children: [
             (0, r.jsxs)("div", {
                 className: l.wx,
@@ -39,21 +35,15 @@ function c(e) {
                         color: d ? "text-strong" : "text-muted",
                         children: t,
                     }),
-                    (!d || s) && c,
+                    (!d || s) && u,
                 ],
             }),
-            (0, r.jsx)(o.vr, {
-                children: (0, r.jsx)("div", {
-                    className: l.CS,
-                    children: u,
-                }),
-            }),
+            (0, r.jsx)(o.vr, { children: (0, r.jsx)("div", { className: l.CS, children: c }) }),
         ],
     });
 }
-
-function u(e) {
-    let { label: t, value: n, color: i = "text-muted", valueColor: o = "text-muted", icon: c, tooltip: u } = e;
+function c(e) {
+    let { label: t, value: n, color: i = "text-muted", valueColor: o = "text-muted", icon: u, tooltip: c } = e;
     return (0, r.jsxs)("div", {
         className: l.Yn,
         children: [
@@ -62,23 +52,16 @@ function u(e) {
                 color: i,
                 className: l.yB,
                 children: [
-                    c,
+                    u,
                     t,
-                    null != u &&
+                    null != c &&
                         (0, r.jsx)(a.m_, {
-                            text: u,
-                            children: (0, r.jsx)(s.cBN, {
-                                size: "xs",
-                                color: "currentColor",
-                            }),
+                            text: c,
+                            children: (0, r.jsx)(s.cBN, { size: "xs", color: "currentColor" }),
                         }),
                 ],
             }),
-            (0, r.jsx)(s.Text, {
-                variant: "text-md/normal",
-                color: o,
-                children: n,
-            }),
+            (0, r.jsx)(s.Text, { variant: "text-md/normal", color: o, children: n }),
         ],
     });
 }

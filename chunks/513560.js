@@ -1,26 +1,20 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(843626),
-    a = n(427209),
-    o = n(519222),
-    c = n(985018);
-
-function s(e, t) {
-    return (0, l.m)(e)
-        ? (0, r.jsx)(i.Drp, {
+var l = n(397927),
+    a = n(843626),
+    r = n(427209),
+    s = n(519222),
+    o = n(985018);
+function d(e, t) {
+    return (0, a.m)(e)
+        ? (0, i.jsx)(l.Drp, {
               id: "forward",
-              label: c.intl.string(c.t.I3ltXO),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: a.A,
-              },
-              icon: a.A,
+              label: o.intl.string(o.t.I3ltXO),
+              leadingAccessory: { type: "icon", icon: r.A },
+              icon: r.A,
               action: () => {
-                  (0, o.Z4)(t, e);
+                  (0, s.Z4)(t, e);
               },
           })
         : null;

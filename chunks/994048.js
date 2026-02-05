@@ -1,99 +1,81 @@
-n.d(t, {
-    j: () => v,
-});
+"use strict";
+n.d(t, { j: () => S });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(793574),
-    c = n(688810),
-    u = n(422936),
+    u = n(688810),
+    c = n(422936),
     d = n(234419),
-    f = n(811611),
-    p = n(954571),
-    _ = n(927578),
+    _ = n(811611),
+    f = n(954571),
+    p = n(927578),
     h = n(410558),
     m = n(320061),
     g = n(652215),
     E = n(788868),
-    b = n(985018),
-    y = n(369614),
-    O = n(939383);
-let A = () => (0, h.U)(!1),
-    v = (e) => {
-        var t, n, a;
-        let { onLearnMore: h } = e,
-            { analyticsLocations: v } = (0, c.Ay)(l.A.PREMIUM_UPSELL);
+    A = n(985018),
+    I = n(369614),
+    T = n(939383);
+let y = () => (0, h.U)(!1),
+    S = (e) => {
+        let { onLearnMore: t } = e,
+            { analyticsLocations: n } = (0, u.Ay)(l.A.PREMIUM_UPSELL);
         i.useEffect(() => {
-            p.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, {
+            f.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, {
                 location_section: g.JJy.STICKER_PICKER_UPSELL,
                 type: E.e.STICKER_PICKER_UPSELL,
-                location_stack: v,
+                location_stack: n,
             });
-        }, [v]);
-        let S = (0, d.V)(),
-            I = (0, u.O)(),
-            T = (null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id) === E.pe.TIER_0,
-            C = null != S || null != I;
+        }, [n]);
+        let a = (0, d.V)(),
+            h = (0, c.O)(),
+            S = a?.subscription_trial?.sku_id === E.pe.TIER_0,
+            v = null != a || null != h;
         return (0, r.jsxs)("div", {
-            className: s()(y.VL, {
-                [y.Hz]: C,
-            }),
+            className: s()(I.VL, { [I.Hz]: v }),
             children: [
-                C
-                    ? (0, r.jsx)(f.Ay, {
-                          trialOffer: S,
-                          discountOffer: I,
-                          onClose: A,
+                v
+                    ? (0, r.jsx)(_.Ay, {
+                          trialOffer: a,
+                          discountOffer: h,
+                          onClose: y,
                           type: E.e.STICKER_PICKER_UPSELL,
-                          subscriptionTier:
-                              null != (t = null == S || null == (a = S.subscription_trial) ? void 0 : a.sku_id)
-                                  ? t
-                                  : E.pe.TIER_2,
-                          children: T
-                              ? b.intl.format(b.t.MAGagw, {
-                                    planName: (0, _.RH)(E.gD.PREMIUM_MONTH_TIER_0),
-                                    onClick: h,
+                          subscriptionTier: a?.subscription_trial?.sku_id ?? E.pe.TIER_2,
+                          children: S
+                              ? A.intl.format(A.t.MAGagw, {
+                                    planName: (0, p.RH)(E.gD.PREMIUM_MONTH_TIER_0),
+                                    onClick: t,
                                 })
-                              : b.intl.format(b.t.jt7JX6, {
-                                    onClick: h,
-                                }),
+                              : A.intl.format(A.t.jt7JX6, { onClick: t }),
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)("img", {
-                                  className: y.Tn,
-                                  src: O,
-                                  alt: b.intl.string(b.t.do7AoM),
-                              }),
+                              (0, r.jsx)("img", { className: I.Tn, src: T, alt: A.intl.string(A.t.do7AoM) }),
                               (0, r.jsx)(o.Text, {
-                                  className: y.ex,
+                                  className: I.ex,
                                   color: "text-strong",
                                   variant: "text-lg/semibold",
-                                  children: b.intl.string(b.t.jJG1pl),
+                                  children: A.intl.string(A.t.jJG1pl),
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: y.GR,
+                                  className: I.GR,
                                   variant: "text-md/normal",
-                                  children: b.intl.format(b.t.jt7JX6, {
-                                      onClick: h,
-                                  }),
+                                  children: A.intl.format(A.t.jt7JX6, { onClick: t }),
                               }),
                           ],
                       }),
-                !C &&
+                !v &&
                     (0, r.jsx)(m.A, {
                         analyticsSection: g.JJy.EXPRESSION_PICKER,
-                        buttonText: C ? (T ? b.intl.string(b.t.hz78hE) : b.intl.string(b.t["Gd/XHF"])) : void 0,
+                        buttonText: v ? (S ? A.intl.string(A.t.hz78hE) : A.intl.string(A.t["Gd/XHF"])) : void 0,
                     }),
                 (0, r.jsx)(o.DUT, {
-                    className: y.kz,
-                    onClick: A,
-                    children: (0, r.jsx)(o.PGe, {
-                        size: "md",
-                        color: "currentColor",
-                    }),
+                    className: I.kz,
+                    onClick: y,
+                    children: (0, r.jsx)(o.PGe, { size: "md", color: "currentColor" }),
                 }),
             ],
         });

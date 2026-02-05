@@ -1,14 +1,10 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(219504),
-    i = n(636042);
-
+"use strict";
+n.d(t, { A: () => r });
+var i = n(219504),
+    s = n(636042);
 function l(e) {
-    (0, i.yy)([...e.map((e) => e.id)]);
+    (0, s.yy)([...e.map((e) => e.id)]);
 }
-
-function s(e) {
-    return (0, r.A)(e, l);
+function r(e) {
+    return (0, i.A)(e, l);
 }

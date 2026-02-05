@@ -1,15 +1,16 @@
+"use strict";
 n.r(t),
     n.d(t, {
-        assign: () => _,
-        batchedUpdates: () => f,
-        colorNames: () => c,
+        assign: () => p,
+        batchedUpdates: () => _,
+        colorNames: () => u,
         createStringInterpolator: () => r,
         frameLoop: () => o,
         now: () => l,
         requestAnimationFrame: () => d,
-        skipAnimation: () => u,
+        skipAnimation: () => c,
         to: () => i,
-        willAdvance: () => p,
+        willAdvance: () => f,
     });
 var r,
     i,
@@ -19,19 +20,19 @@ var r,
     l = function () {
         return performance.now();
     },
-    c = null,
-    u = !1,
+    u = null,
+    c = !1,
     d =
         "u" > typeof window
             ? window.requestAnimationFrame
             : function () {
                   return -1;
               },
-    f = function (e) {
+    _ = function (e) {
         return e();
     },
-    p = s.lQ,
-    _ = function (e) {
+    f = s.lQ,
+    p = function (e) {
         var t;
         return (
             (i = (t = Object.assign(
@@ -39,27 +40,26 @@ var r,
                     to: i,
                     now: l,
                     frameLoop: o,
-                    colorNames: c,
-                    skipAnimation: u,
+                    colorNames: u,
+                    skipAnimation: c,
                     createStringInterpolator: r,
                     requestAnimationFrame: d,
-                    batchedUpdates: f,
-                    willAdvance: p,
+                    batchedUpdates: _,
+                    willAdvance: f,
                 },
                 h(e),
             )).to),
             (l = t.now),
             (o = t.frameLoop),
-            (c = t.colorNames),
-            (u = t.skipAnimation),
+            (u = t.colorNames),
+            (c = t.skipAnimation),
             (r = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
-            (f = t.batchedUpdates),
-            (p = t.willAdvance),
+            (_ = t.batchedUpdates),
+            (f = t.willAdvance),
             t
         );
     };
-
 function h(e) {
     var t = {};
     for (var n in e) void 0 !== e[n] && (t[n] = e[n]);

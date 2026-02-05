@@ -1,23 +1,21 @@
-n.d(t, {
-    P: () => d,
-});
-var r = n(843472),
-    i = n(567035),
-    a = n(458294),
-    s = n(320501),
-    o = n(309010),
-    l = n(967198),
+n.d(t, { P: () => u });
+var i = n(843472),
+    s = n(567035),
+    r = n(458294),
+    a = n(320501),
+    l = n(309010),
+    o = n(967198),
     c = n(203982),
-    u = n(652215);
-let d = {
+    d = n(652215);
+let u = {
     binds: ["shift+esc"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = l.A.getGuildId();
-        if (null == e || !a.default.getGuildHasUnreadIgnoreMuted(e)) return;
-        (0, i.A)([e]);
-        let t = o.A.getChannelId(e);
+        let e = o.A.getGuildId();
+        if (null == e || !r.default.getGuildHasUnreadIgnoreMuted(e)) return;
+        (0, s.A)([e]);
+        let t = l.A.getChannelId(e);
         null == t ||
-            (s.A.getMessages(t).hasMoreAfter ? r.A.jumpToPresent(t, u.EMb) : c._.dispatch(u.jej.SCROLLTO_PRESENT));
+            (a.A.getMessages(t).hasMoreAfter ? i.A.jumpToPresent(t, d.EMb) : c._.dispatch(d.jej.SCROLLTO_PRESENT));
     },
 };

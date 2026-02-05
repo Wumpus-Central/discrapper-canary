@@ -1,30 +1,14 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(315069);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a extends r.A {
+class i extends r.A {
+    id;
+    path;
     static fromPath(e) {
-        return new a({
-            id: e,
-            path: e,
-        });
+        return new i({ id: e, path: e });
     }
     constructor(e) {
-        super(), i(this, "id", void 0), i(this, "path", void 0), (this.id = e.id), (this.path = e.path);
+        super(), (this.id = e.id), (this.path = e.path);
     }
 }
-let s = a;
+let a = i;

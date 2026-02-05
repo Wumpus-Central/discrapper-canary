@@ -1,209 +1,102 @@
-n.d(t, {
-    m: () => g,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { m: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(140735),
     s = n(158954),
     o = n(397927),
     l = n(717995),
-    c = n(348275),
-    u = n(505679),
+    u = n(348275),
+    c = n(505679),
     d = n(747781),
-    f = n(894524);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = m(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function g(e) {
+    _ = n(894524);
+function f(e) {
     let {
             children: t,
             text: n,
-            keyboardShortcut: p,
-            __unsupportedReactNodeAsText: m,
-            asContainer: g = !1,
-            tag: E = "span",
-            position: b = "top",
-            align: y = "center",
-            spacing: O,
-            layerContext: A,
-            targetElementRef: v,
-            anchorRef: S,
-            caretConfig: I,
-            positionKey: T,
+            keyboardShortcut: f,
+            __unsupportedReactNodeAsText: p,
+            asContainer: h = !1,
+            tag: m = "span",
+            position: g = "top",
+            align: E = "center",
+            spacing: A,
+            layerContext: I,
+            targetElementRef: T,
+            anchorRef: y,
+            caretConfig: S,
+            positionKey: v,
             ariaHidden: C = !1,
+            ...b
         } = e,
-        N = h(e, [
-            "children",
-            "text",
-            "keyboardShortcut",
-            "__unsupportedReactNodeAsText",
-            "asContainer",
-            "tag",
-            "position",
-            "align",
-            "spacing",
-            "layerContext",
-            "targetElementRef",
-            "anchorRef",
-            "caretConfig",
-            "positionKey",
-            "ariaHidden",
-        ]),
-        [R, w] = i.useState(null);
+        [N, R] = i.useState(null);
     i.useLayoutEffect(() => {
-        null != S && w(S.current);
-    }, [S]);
-    let P = i.useCallback(
+        null != y && R(y.current);
+    }, [y]);
+    let O = i.useCallback(
             (e) => {
-                null == S && w(e), (0, c.cZ)(v, e);
+                null == y && R(e), (0, u.cZ)(T, e);
             },
-            [v, S],
+            [T, y],
         ),
         {
             tooltipId: D,
-            isVisible: x,
-            targetElementRef: L,
-            trigger: j,
-        } = (0, d.D)(
-            _(
-                {
-                    children: t,
-                    targetElementRef: P,
-                    asContainer: g,
-                    containerTag: E,
-                    ariaHidden: C,
-                },
-                N,
-            ),
-        ),
-        [M, k] = i.useState(!1),
-        { defaultLayerContext: U } = (0, s.G98)(),
-        G = i.useMemo(
+            isVisible: L,
+            targetElementRef: w,
+            trigger: x,
+        } = (0, d.D)({ children: t, targetElementRef: O, asContainer: h, containerTag: m, ariaHidden: C, ...b }),
+        [P, M] = i.useState(!1),
+        { defaultLayerContext: k } = (0, s.G98)(),
+        U = i.useMemo(
             () =>
-                null != m
-                    ? m
+                null != p
+                    ? p
                     : null == n || "" === n
                       ? null
-                      : null != p && "" !== p
+                      : null != f && "" !== f
                         ? (0, r.jsxs)("div", {
-                              className: f.Cl,
+                              className: _.Cl,
                               children: [
-                                  (0, r.jsx)(o.Text, {
-                                      variant: "text-sm/medium",
-                                      children: n,
-                                  }),
-                                  (0, r.jsx)(o.e7I, {
-                                      shortcut: p,
-                                  }),
+                                  (0, r.jsx)(o.Text, { variant: "text-sm/medium", children: n }),
+                                  (0, r.jsx)(o.e7I, { shortcut: f }),
                               ],
                           })
                         : n,
-            [n, p, m],
+            [n, f, p],
         ),
-        V = null != G && ("string" != typeof G || "" !== G),
-        F = x || M;
+        G = null != U && ("string" != typeof U || "" !== U),
+        V = L || P;
     i.useEffect(() => {
-        x && V ? k(!0) : V || k(!1);
-    }, [x, V]);
-    let B = i.useCallback(() => {
-            k(!1);
+        L && G ? M(!0) : G || M(!1);
+    }, [L, G]);
+    let F = i.useCallback(() => {
+            M(!1);
         }, []),
-        H = (0, u.j)({
-            shouldShow: x,
-            onExitComplete: B,
-        });
-    if (!V && (x || !M)) return t;
-    if (null == t || (!g && !i.isValidElement(t))) return null;
-    let Y = null != T ? T : (0, c.Xj)(n),
-        W = H((e, t) =>
+        B = (0, c.j)({ shouldShow: L, onExitComplete: F });
+    if (!G && (L || !P)) return t;
+    if (null == t || (!h && !i.isValidElement(t))) return null;
+    let j = v ?? (0, u.Xj)(n),
+        H = B((e, t) =>
             t
                 ? (0, r.jsx)(l.R, {
-                      isVisible: x,
-                      isRendered: F,
-                      targetElementRef: L,
-                      targetElement: R,
-                      anchorRef: S,
+                      isVisible: L,
+                      isRendered: V,
+                      targetElementRef: w,
+                      targetElement: N,
+                      anchorRef: y,
                       id: D,
-                      content: G,
-                      position: b,
-                      align: y,
-                      spacing: O,
-                      caretConfig: I,
-                      layerContext: null != A ? A : U,
+                      content: U,
+                      position: g,
+                      align: E,
+                      spacing: A,
+                      caretConfig: S,
+                      layerContext: I ?? k,
                       animationStyle: e,
-                      positionKey: Y,
+                      positionKey: j,
                   })
                 : null,
         );
     return (0, r.jsxs)(r.Fragment, {
-        children: [
-            j,
-            C || null == G || "" === G
-                ? null
-                : (0, r.jsx)(a.A, {
-                      id: D,
-                      children: G,
-                  }),
-            W,
-        ],
+        children: [x, C || null == U || "" === U ? null : (0, r.jsx)(a.A, { id: D, children: U }), H],
     });
 }

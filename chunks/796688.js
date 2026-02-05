@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     vk: "clickable_a3e8db",
     r9: "disabled_a3e8db",

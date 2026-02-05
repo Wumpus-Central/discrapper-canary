@@ -1,31 +1,19 @@
-n.d(t, {
-    A: () => u,
-});
-var i,
-    r,
-    l = n(311907),
-    s = n(73153);
-let a = {};
-class o extends (r = l.Ay.Store) {
+n.d(t, { A: () => a });
+var i = n(311907),
+    l = n(73153);
+let s = {};
+class r extends i.Ay.Store {
+    static displayName = "ApplicationBranchStore";
     getBranches(e) {
-        var t;
-        return null != (t = a[e]) ? t : [];
+        return s[e] ?? [];
     }
 }
-(i = "displayName") in o
-    ? Object.defineProperty(o, i, {
-          value: "ApplicationBranchStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (o[i] = "ApplicationBranchStore");
-let u = new o(s.h, {
+let a = new r(l.h, {
     OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branches: n } = e;
-        a[t] = n;
+        s[t] = n;
     },
     LOGOUT: function () {
-        a = {};
+        s = {};
     },
 });

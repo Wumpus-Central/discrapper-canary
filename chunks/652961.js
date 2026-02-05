@@ -1,23 +1,18 @@
-n.d(t, {
-    A: () => o,
-    F: () => l,
-});
-var r = n(311907),
-    i = n(397438),
-    a = n(815968),
-    s = n(985018);
-
-function o(e) {
+n.d(t, { A: () => l, F: () => o });
+var i = n(311907),
+    s = n(397438),
+    r = n(815968),
+    a = n(985018);
+function l(e) {
     switch (e) {
-        case a._A.REDUCED_MOTION:
-            return s.intl.format(s.t["1dT9V4"], {});
-        case a._A.REDUCED_MOTION_STICKERS:
-            return s.intl.string(s.t["2ExvRu"]);
+        case r._A.REDUCED_MOTION:
+            return a.intl.format(a.t["1dT9V4"], {});
+        case r._A.REDUCED_MOTION_STICKERS:
+            return a.intl.string(a.t["2ExvRu"]);
         default:
             return;
     }
 }
-
-function l(e) {
-    return (0, r.bG)([i.A], () => o(i.A.getAppliedOverrideReasonKey(e)));
+function o(e) {
+    return (0, i.bG)([s.A], () => l(s.A.getAppliedOverrideReasonKey(e)));
 }

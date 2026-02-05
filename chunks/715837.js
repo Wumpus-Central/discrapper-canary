@@ -1,74 +1,59 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(228524);
-var r = n(627968);
+n.d(t, { A: () => g });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(599941),
-    a = n(922975),
+var r = n(397927),
+    a = n(599941),
+    l = n(922975),
     s = n(700206),
     o = n(950344),
-    c = n(815332),
-    u = n(456540),
-    d = n(136179),
-    p = n(250253),
-    f = n(406140),
-    h = n(652215),
-    A = n(985018),
-    g = n(510465);
-let m = (e) => {
-    var t, n;
-    let { guild: m } = e,
-        b = (0, l.uk)(m.id)[0];
+    d = n(815332),
+    c = n(456540),
+    u = n(136179),
+    A = n(250253),
+    h = n(406140),
+    _ = n(652215),
+    m = n(985018),
+    p = n(510465);
+let g = (e) => {
+    let { guild: t } = e,
+        n = (0, a.uk)(t.id)[0];
     (0, o.A)({
-        guildId: m.id,
-        groupListingId: null == b ? void 0 : b.id,
-        location: h.ThZ.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == b ? void 0 : b.subscription_listings_ids,
+        guildId: t.id,
+        groupListingId: n?.id,
+        location: _.ThZ.ROLE_SUBSCRIPTIONS_TAB,
+        relevantSubscriptionListingIds: n?.subscription_listings_ids,
     });
-    let { activeSubscription: _ } = (0, s.A)(null == b ? void 0 : b.id),
-        E = (0, l.Tq)(m.id),
-        O = null == E ? void 0 : E.description,
-        { editStateIds: y } = a.d0(null != (t = null == b ? void 0 : b.id) ? t : null, m.id);
-    return (0, r.jsxs)(r.Fragment, {
+    let { activeSubscription: g } = (0, s.A)(n?.id),
+        E = (0, a.Tq)(t.id),
+        f = E?.description,
+        { editStateIds: I } = l.d0(n?.id ?? null, t.id);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)(f.A, {
-                title: A.intl.format(A.t["rm+ojA"], {
-                    serverName: m.name,
-                }),
-                description: null != O ? O : null,
-                coverImageAsset: null != (n = null == E ? void 0 : E.cover_image_asset) ? n : null,
-                guild: m,
+            (0, i.jsxs)(h.A, {
+                title: m.intl.format(m.t["rm+ojA"], { serverName: t.name }),
+                description: f ?? null,
+                coverImageAsset: E?.cover_image_asset ?? null,
+                guild: t,
                 children: [
-                    null != b
-                        ? (0, r.jsx)(c.A, {
-                              className: g.Ds,
-                              groupListingId: b.id,
-                              subscription: _,
-                          })
-                        : null,
-                    (0, r.jsx)(u.A, {
-                        subscription: _,
-                    }),
+                    null != n ? (0, i.jsx)(d.A, { className: p.Ds, groupListingId: n.id, subscription: g }) : null,
+                    (0, i.jsx)(c.A, { subscription: g }),
                 ],
             }),
-            (0, r.jsx)(i.Fmo, {
-                children: (0, r.jsx)(d.A, {
-                    guildId: m.id,
-                    children: y.map((e) => {
-                        var t;
-                        return (0, r.jsx)(
-                            p.A,
+            (0, i.jsx)(r.Fmo, {
+                children: (0, i.jsx)(u.A, {
+                    guildId: t.id,
+                    children: I.map((e) =>
+                        (0, i.jsx)(
+                            A.A,
                             {
-                                guildId: m.id,
-                                groupListingId: null != (t = null == b ? void 0 : b.id) ? t : "",
+                                guildId: t.id,
+                                groupListingId: n?.id ?? "",
                                 listingId: e,
-                                analyticsLocation: h.ThZ.ROLE_SUBSCRIPTIONS_TAB,
+                                analyticsLocation: _.ThZ.ROLE_SUBSCRIPTIONS_TAB,
                             },
                             e,
-                        );
-                    }),
+                        ),
+                    ),
                 }),
             }),
         ],

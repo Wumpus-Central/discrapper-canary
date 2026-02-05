@@ -1,59 +1,48 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(110259),
-    l = n(417597),
-    a = n(342494),
+var r = n(110259),
+    a = n(417597),
+    l = n(342494),
     s = n(139286),
     o = n(997509),
-    c = n(260509),
-    u = n(71393),
-    d = n(287809),
-    p = n(652215),
-    f = n(49999),
-    h = n(985018),
-    A = n(330766);
-
-function g(e) {
-    let { guildId: t, markAsDismissed: n, targetElementRef: g } = e,
-        m = (0, l.bG)([u.A, d.default], () => {
-            let e = d.default.getCurrentUser(),
-                n = u.A.getGuild(t);
-            return null != n && (0, c.bM)(n, e);
+    d = n(260509),
+    c = n(71393),
+    u = n(287809),
+    A = n(652215),
+    h = n(49999),
+    _ = n(985018),
+    m = n(330766);
+function p(e) {
+    let { guildId: t, markAsDismissed: n, targetElementRef: p } = e,
+        g = (0, a.bG)([c.A, u.default], () => {
+            let e = u.default.getCurrentUser(),
+                n = c.A.getGuild(t);
+            return null != n && (0, d.bM)(n, e);
         });
     return (
         (0, s.A)({
-            type: i.ImpressionTypes.POPOUT,
-            name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
-            properties: {
-                guild_id: t,
-                is_owner: m,
-            },
+            type: r.ImpressionTypes.POPOUT,
+            name: r.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+            properties: { guild_id: t, is_owner: g },
         }),
-        (0, r.jsx)(a.AM, {
-            targetElementRef: g,
-            title: h.intl.string(h.t.C0m4rQ),
-            body: h.intl.string(h.t.zOHfEX),
-            graphic: {
-                type: "image",
-                src: A,
-            },
+        (0, i.jsx)(l.AM, {
+            targetElementRef: p,
+            title: _.intl.string(_.t.C0m4rQ),
+            body: _.intl.string(_.t.zOHfEX),
+            graphic: { type: "image", src: m },
             actions: [
                 {
-                    text: h.intl.string(h.t.OgQQbG),
+                    text: _.intl.string(_.t.OgQQbG),
                     variant: "primary",
                     onClick: () => {
-                        o.A.open(t, p.BEX.ROLE_SUBSCRIPTIONS);
+                        o.A.open(t, A.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
-            onRequestClose: () => n(f.i.USER_DISMISS),
+            onRequestClose: () => n(h.i.USER_DISMISS),
             position: "bottom",
-            caretConfig: {
-                align: "center",
-            },
+            caretConfig: { align: "center" },
         })
     );
 }

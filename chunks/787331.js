@@ -1,79 +1,61 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(49229),
-    a = n(688810),
+var r = n(397927),
+    a = n(49229),
+    l = n(688810),
     s = n(38910),
     o = n(657331),
-    c = n(513297),
-    u = n(414711),
-    d = n(723690),
-    p = n(652215),
-    f = n(985018),
-    h = n(276991);
-
-function A(e) {
-    let { user: t, nickname: n, status: A, isFocused: g } = e,
-        { analyticsLocations: m } = (0, a.Ay)(),
-        b = (e) => {
-            null == e || e.stopPropagation(),
-                l.A.addRelationship({
+    d = n(513297),
+    c = n(414711),
+    u = n(723690),
+    A = n(652215),
+    h = n(985018),
+    _ = n(276991);
+function m(e) {
+    let { user: t, nickname: n, status: m, isFocused: p } = e,
+        { analyticsLocations: g } = (0, l.Ay)(),
+        E = (e) => {
+            e?.stopPropagation(),
+                a.A.addRelationship({
                     userId: t.id,
-                    context: {
-                        location: "Friends",
-                    },
+                    context: { location: "Friends" },
                     type: void 0,
                     fromFriendSuggestion: !0,
                 });
         },
-        _ = (e) => {
-            null == e || e.stopPropagation(), s.A.ignore(t.id);
+        f = (e) => {
+            e?.stopPropagation(), s.A.ignore(t.id);
         },
-        E = A === p.clD.OFFLINE ? p.clD.UNKNOWN : A;
-    return (0, r.jsx)(u.A, {
-        isFocused: g,
+        I = m === A.clD.OFFLINE ? A.clD.UNKNOWN : m;
+    return (0, i.jsx)(c.A, {
+        isFocused: p,
         user: t,
-        onClick: () =>
-            (0, o.openUserProfileModal)({
-                userId: t.id,
-                sourceAnalyticsLocations: m,
-            }),
+        onClick: () => (0, o.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: g }),
         children: (e) => {
-            let l = (0, r.jsxs)(r.Fragment, {
+            let a = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(c.A, {
-                        icon: i.A9s,
-                        actionType: c.A.ActionTypes.ACCEPT,
-                        tooltip: f.intl.string(f.t.Zcibdf),
-                        onClick: b,
+                    (0, i.jsx)(d.A, {
+                        icon: r.A9s,
+                        actionType: d.A.ActionTypes.ACCEPT,
+                        tooltip: h.intl.string(h.t.Zcibdf),
+                        onClick: E,
                         shouldHighlight: e,
                     }),
-                    (0, r.jsx)(c.A, {
-                        icon: i.PGe,
-                        actionType: c.A.ActionTypes.DENY,
-                        tooltip: f.intl.string(f.t.xuio0C),
-                        onClick: _,
+                    (0, i.jsx)(d.A, {
+                        icon: r.PGe,
+                        actionType: d.A.ActionTypes.DENY,
+                        tooltip: h.intl.string(h.t.xuio0C),
+                        onClick: f,
                         shouldHighlight: e,
                     }),
                 ],
             });
-            return (0, r.jsxs)("div", {
-                className: h.a,
+            return (0, i.jsxs)("div", {
+                className: _.a,
                 children: [
-                    (0, r.jsx)(d.A, {
-                        user: t,
-                        hovered: e,
-                        status: E,
-                        subText: n,
-                        className: h.__invalid_userInfo,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: h.o,
-                        children: l,
-                    }),
+                    (0, i.jsx)(u.A, { user: t, hovered: e, status: I, subText: n, className: _.__invalid_userInfo }),
+                    (0, i.jsx)("div", { className: _.o, children: a }),
                 ],
             });
         },

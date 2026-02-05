@@ -1,179 +1,132 @@
 let s;
-e.d(t, {
-    default: () => w,
-}),
-    e(896048),
-    e(693327),
-    e(554719),
-    e(680155),
-    e(323874),
-    e(14289),
-    e(35956),
-    e(321073),
-    e(65821);
-var n = e(835245),
-    a = e(872379),
-    r = e(795521);
-
-function l(i, t, e) {
-    return (
-        t in i
-            ? Object.defineProperty(i, t, {
-                  value: e,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (i[t] = e),
-        i
-    );
-}
-let h = Math.min(4, Math.ceil(navigator.hardwareConcurrency / 2)),
-    o = "u" > typeof OffscreenCanvas,
-    d = [],
-    u = new Map(),
-    v = new Map(),
-    c = (0, r.u)(async () => {
-        for (let i = 0; i < h; i++) {
-            let i = new Worker(new URL("/assets/" + e.u("35343"), e.b));
-            d.push({
-                worker: i,
-                numActive: 0,
-            });
+t.d(i, { default: () => v }), t(323874), t(14289), t(35956), t(321073);
+var r = t(835245),
+    a = t(872379),
+    n = t(795521);
+let o = Math.min(4, Math.ceil(navigator.hardwareConcurrency / 2)),
+    h = "u" > typeof OffscreenCanvas,
+    l = [],
+    d = new Map(),
+    I = new Map(),
+    c = (0, n.u)(async () => {
+        for (let e = 0; e < o; e++) {
+            let e = new Worker(new URL("/assets/" + t.u("56565"), t.b));
+            l.push({ worker: e, numActive: 0 });
         }
     }),
-    I = (0, r.u)(async () => {
-        s = (await e.e("70959").then(e.bind(e, 787570))).default;
+    u = (0, n.u)(async () => {
+        s = (await t.e("70959").then(t.bind(t, 787570))).default;
     });
-o ? c() : I();
-class w {
-    get workerIndex() {
-        let i = u.get(this.canvasId);
-        if (null == i) {
-            let s = v.get(this.assetUrl);
-            if (null != s) i = s;
-            else {
-                var t, e;
-                let s = null != (t = null == (e = d[0]) ? void 0 : e.numActive) ? t : 0;
-                for (let [t, e] of d.entries()) e.numActive <= s && ((s = e.numActive), (i = t));
-                v.set(this.assetUrl, i);
-            }
-            u.set(this.canvasId, i), d[i].numActive++;
-        }
-        return i;
-    }
-    get worker() {
-        let i = this.workerIndex;
-        if (null == d[i]) throw Error("No worker in pool at index ".concat(i));
-        return d[i].worker;
-    }
-    async drop() {
-        var i, t, e, s;
-        if ((await this.initializationPromise, o)) {
-            null == (i = this.worker) || i.removeEventListener("message", this.handleMessage),
-                null == (t = this.worker) || t.removeEventListener("error", this.handleError),
-                null == (e = this.worker) ||
-                    e.postMessage({
-                        canvasId: this.canvasId,
-                        type: a.l.DROP,
-                    });
-            let s = u.get(this.canvasId);
-            if (null == s) throw Error("No worker index assigned for asset ".concat(this.canvasId));
-            u.delete(this.canvasId), d[s].numActive--;
-        } else null == (s = this.lottieView) || s.drop();
-        this.observer.disconnect();
-    }
-    setState(i, t) {
-        var e, s;
-        (this.shouldAnimate = i),
-            this.isInitialized &&
-                (o
-                    ? null == (e = this.worker) ||
-                      e.postMessage({
-                          canvasId: this.canvasId,
-                          type: a.l.STATE_CHANGE,
-                          shouldAnimate: i,
-                          nextFrame: t,
-                      })
-                    : null == (s = this.lottieView) || s.setState(i, t));
-    }
-    constructor({ canvas: i, animationId: t, assetUrl: e, assetData: r, onInitialDraw: h, onError: d }) {
-        l(this, "assetUrl", void 0),
-            l(this, "assetData", void 0),
-            l(this, "canvasId", void 0),
-            l(this, "lottieView", void 0),
-            l(this, "observer", void 0),
-            l(this, "isVisible", !1),
-            l(this, "isInitialized", !1),
-            l(this, "initializationPromise", void 0),
-            l(this, "shouldAnimate", !1),
-            l(this, "onInitialDraw", void 0),
-            l(this, "onError", void 0),
-            l(this, "handleVisibilityChange", (i) => {
-                let t = i[i.length - 1].isIntersecting;
-                if (t !== this.isVisible) {
-                    var e, s;
-                    if (((this.isVisible = t), !this.isInitialized)) return;
-                    o
-                        ? null == (e = this.worker) ||
-                          e.postMessage({
-                              canvasId: this.canvasId,
-                              type: a.l.VISIBILITY_CHANGE,
-                              isVisible: t,
-                          })
-                        : null == (s = this.lottieView) || s.setVisibility(t);
-                }
-            }),
-            l(this, "handleMessage", (i) => {
-                var t, e;
-                i.data.type === a.l.FIRST_DRAW && (null == (t = this.onInitialDraw) || t.call(this)),
-                    i.data.type === a.l.ERROR && (null == (e = this.onError) || e.call(this));
-            }),
-            l(this, "handleError", (i) => {
-                var t;
-                null == (t = this.onError) || t.call(this, i);
-            }),
-            (this.canvasId = (0, n.A)()),
-            (this.assetUrl = e),
-            (this.assetData = r),
-            (this.onInitialDraw = h),
-            (this.onError = d),
+h ? c() : u();
+class v {
+    assetUrl;
+    assetData;
+    canvasId;
+    lottieView;
+    observer;
+    isVisible = !1;
+    isInitialized = !1;
+    initializationPromise;
+    shouldAnimate = !1;
+    onInitialDraw;
+    onError;
+    constructor({ canvas: e, animationId: i, assetUrl: t, assetData: n, onInitialDraw: o, onError: l }) {
+        (this.canvasId = (0, r.A)()),
+            (this.assetUrl = t),
+            (this.assetData = n),
+            (this.onInitialDraw = o),
+            (this.onError = l),
             (this.observer = new IntersectionObserver(this.handleVisibilityChange)),
-            this.observer.observe(i),
-            o
+            this.observer.observe(e),
+            h
                 ? (this.initializationPromise = c().then(() => {
-                      var s, n, l;
-                      null == (s = this.worker) || s.addEventListener("message", this.handleMessage),
-                          null == (n = this.worker) || n.addEventListener("error", this.handleError);
-                      let h = i.transferControlToOffscreen();
-                      null == (l = this.worker) ||
-                          l.postMessage(
-                              {
-                                  type: a.l.INITIALIZE,
-                                  animationId: t,
-                                  assetUrl: e,
-                                  assetData: r,
-                                  canvas: h,
-                                  canvasId: this.canvasId,
-                                  isVisible: this.isVisible,
-                                  shouldAnimate: this.shouldAnimate,
-                              },
-                              [h],
-                          ),
+                      this.worker?.addEventListener("message", this.handleMessage),
+                          this.worker?.addEventListener("error", this.handleError);
+                      let s = e.transferControlToOffscreen();
+                      this.worker?.postMessage(
+                          {
+                              type: a.l.INITIALIZE,
+                              animationId: i,
+                              assetUrl: t,
+                              assetData: n,
+                              canvas: s,
+                              canvasId: this.canvasId,
+                              isVisible: this.isVisible,
+                              shouldAnimate: this.shouldAnimate,
+                          },
+                          [s],
+                      ),
                           (this.isInitialized = !0);
                   }))
-                : (this.initializationPromise = I().then(() => {
+                : (this.initializationPromise = u().then(() => {
                       (this.lottieView = new s({
-                          canvas: i,
-                          id: t,
-                          assetUrl: e,
-                          assetData: r,
+                          canvas: e,
+                          id: i,
+                          assetUrl: t,
+                          assetData: n,
                           isVisible: this.isVisible,
                           shouldAnimate: this.shouldAnimate,
-                          onInitialDraw: h,
-                          onError: d,
+                          onInitialDraw: o,
+                          onError: l,
                       })),
                           (this.isInitialized = !0);
                   }));
+    }
+    get workerIndex() {
+        let e = d.get(this.canvasId);
+        if (null == e) {
+            let i = I.get(this.assetUrl);
+            if (null != i) e = i;
+            else {
+                let i = l[0]?.numActive ?? 0;
+                for (let [t, s] of l.entries()) s.numActive <= i && ((i = s.numActive), (e = t));
+                I.set(this.assetUrl, e);
+            }
+            d.set(this.canvasId, e), l[e].numActive++;
+        }
+        return e;
+    }
+    get worker() {
+        let e = this.workerIndex;
+        if (null == l[e]) throw Error(`No worker in pool at index ${e}`);
+        return l[e].worker;
+    }
+    async drop() {
+        if ((await this.initializationPromise, h)) {
+            this.worker?.removeEventListener("message", this.handleMessage),
+                this.worker?.removeEventListener("error", this.handleError),
+                this.worker?.postMessage({ canvasId: this.canvasId, type: a.l.DROP });
+            let e = d.get(this.canvasId);
+            if (null == e) throw Error(`No worker index assigned for asset ${this.canvasId}`);
+            d.delete(this.canvasId), l[e].numActive--;
+        } else this.lottieView?.drop();
+        this.observer.disconnect();
+    }
+    handleVisibilityChange = (e) => {
+        let i = e[e.length - 1].isIntersecting;
+        if (i !== this.isVisible) {
+            if (((this.isVisible = i), !this.isInitialized)) return;
+            h
+                ? this.worker?.postMessage({ canvasId: this.canvasId, type: a.l.VISIBILITY_CHANGE, isVisible: i })
+                : this.lottieView?.setVisibility(i);
+        }
+    };
+    handleMessage = (e) => {
+        e.data.type === a.l.FIRST_DRAW && this.onInitialDraw?.(), e.data.type === a.l.ERROR && this.onError?.();
+    };
+    handleError = (e) => {
+        this.onError?.(e);
+    };
+    setState(e, i) {
+        (this.shouldAnimate = e),
+            this.isInitialized &&
+                (h
+                    ? this.worker?.postMessage({
+                          canvasId: this.canvasId,
+                          type: a.l.STATE_CHANGE,
+                          shouldAnimate: e,
+                          nextFrame: i,
+                      })
+                    : this.lottieView?.setState(e, i));
     }
 }

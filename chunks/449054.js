@@ -1,18 +1,16 @@
+"use strict";
 n.d(t, {
-    Cf: () => S,
-    PU: () => E,
-    Z2: () => m,
-    br: () => O,
-    cf: () => I,
-    fd: () => y,
-    gp: () => b,
-    jE: () => g,
-    jb: () => A,
-    uf: () => v,
+    Cf: () => I,
+    PU: () => p,
+    Z2: () => _,
+    br: () => g,
+    cf: () => T,
+    fd: () => m,
+    gp: () => h,
+    jE: () => f,
+    jb: () => E,
+    uf: () => A,
 }),
-    n(747238),
-    n(228524),
-    n(896048),
     n(488428),
     n(562465);
 var r = n(686956),
@@ -21,108 +19,37 @@ var r = n(686956),
     s = n(976860),
     o = n(345942),
     l = n(498642),
-    c = n(71393),
-    u = n(954571),
+    u = n(71393),
+    c = n(954571),
     d = n(652215);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-async function m(e, t) {
+async function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: _ = !0 } = n,
-        m = (0, s.JK)(),
-        g = c.A.getGuild(e),
-        E = {
-            state: {
-                analyticsSource: t,
-            },
-        };
-    null != g && null != g.joinedAt
-        ? _ &&
+        { channelId: a, onSuccess: l, joinSource: c, loadId: _, shouldNavigate: f = !0 } = n,
+        p = (0, s.JK)(),
+        h = u.A.getGuild(e),
+        m = { state: { analyticsSource: t } };
+    null != h && null != h.joinedAt
+        ? f &&
           (null == a
-              ? (0, o.u)(e, E)
-              : (0, i.A)(
-                    d.BVt.CHANNEL(e, a, n.messageId),
-                    h(p({}, E), {
-                        navigationReplace: !0,
-                        openChannel: !0,
-                    }),
-                ))
-        : (await r.A.joinGuild(e, {
-              lurker: !0,
-              source: u,
-              loadId: f,
-              lurkLocation: null == t ? void 0 : t.page,
-          }),
-          _ &&
+              ? (0, o.u)(e, m)
+              : (0, i.A)(d.BVt.CHANNEL(e, a, n.messageId), { ...m, navigationReplace: !0, openChannel: !0 }))
+        : (await r.A.joinGuild(e, { lurker: !0, source: c, loadId: _, lurkLocation: t?.page }),
+          f &&
               (await r.A.transitionToGuildSync(
                   e,
-                  h(p({}, E), {
+                  {
+                      ...m,
                       welcomeModalChannelId: a,
                       navigationReplace: null != a,
                       openChannel: null != a,
-                      search: m.location.search,
-                  }),
+                      search: p.location.search,
+                  },
                   a,
                   n.messageId,
               ))),
-        null == l || l();
+        l?.();
 }
-
-function g(e) {
+function f(e) {
     return {
         id: e.id,
         name: e.name,
@@ -143,43 +70,29 @@ function g(e) {
         keywords: e.keywords,
     };
 }
-
-function E(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    u.default.track(d.HAw.GUILD_DISCOVERY_EXITED, {
-        load_id: e,
-        guild_ids_viewed: t,
-        recommendations_source: n,
-    });
+    c.default.track(d.HAw.GUILD_DISCOVERY_EXITED, { load_id: e, guild_ids_viewed: t, recommendations_source: n });
 }
-
-function b(e) {
-    u.default.track(d.HAw.SEARCH_CLOSED, {
-        load_id: e,
-    });
+function h(e) {
+    c.default.track(d.HAw.SEARCH_CLOSED, { load_id: e });
 }
-
-function y(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    u.default.track(d.HAw.SEARCH_STARTED, {
+    c.default.track(d.HAw.SEARCH_STARTED, {
         search_type: d.I4_.GUILD_DISCOVERY,
         load_id: e,
         location: n.location,
         category_id: t,
     });
 }
-
-function O(e) {
+function g(e) {
     let { withCounts: t, offset: n } = e;
-    u.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_START, {
-        with_counts: t,
-        offset: n,
-    });
+    c.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_START, { with_counts: t, offset: n });
 }
-
-function A(e) {
+function E(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
-    u.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_FAILED, {
+    c.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
         request_status: n.status,
         request_error_code: n.code,
@@ -187,17 +100,13 @@ function A(e) {
         is_request_retry: i,
     });
 }
-
-function v(e) {
+function A(e) {
     let { categoryId: t } = e;
-    u.default.track(d.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, {
-        category_id: t,
-    });
+    c.default.track(d.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-
-function S(e) {
+function I(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
-    u.default.track(d.HAw.SEARCH_RESULT_VIEWED, {
+    c.default.track(d.HAw.SEARCH_RESULT_VIEWED, {
         search_type: o ? d.I4_.GUILD_DISCOVERY_TAG : d.I4_.GUILD_DISCOVERY,
         load_id: t,
         search_id: n,
@@ -208,10 +117,9 @@ function S(e) {
         category_id: s,
     });
 }
-
-function I(e) {
+function T(e) {
     let t = a.A.getLoadId(e);
-    u.default.track(d.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
+    c.default.track(d.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
         load_id: t,
         guild_size: l.A.getMemberCount(e),

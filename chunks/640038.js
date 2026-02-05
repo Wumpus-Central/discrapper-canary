@@ -1,16 +1,13 @@
-t.d(r, {
-    a: () => d,
-});
+"use strict";
+t.d(r, { a: () => d });
 var a = t(566515),
     l = t(659609),
     o = t(101603);
-
 function s(e, r) {
     if (!(0, o.vq)(e)) return !1;
     if ("range" === r) return (0, o.NU)(e, ["meter", "progressbar", "scrollbar", "slider", "spinbutton"]);
     throw TypeError("No knowledge about abstract role '".concat(r, "'. This is likely a bug :("));
 }
-
 function n(e, r) {
     var t = (0, a.A)(e.querySelectorAll(r));
     return (
@@ -20,12 +17,10 @@ function n(e, r) {
         t
     );
 }
-
 function i(e) {
     var r = e.getPropertyValue("content");
     return /^["'].*["']$/.test(r) ? r.slice(1, -1) : "";
 }
-
 function u(e) {
     var r = (0, o.Jk)(e);
     return (
@@ -38,7 +33,6 @@ function u(e) {
         "textarea" === r
     );
 }
-
 function d(e) {
     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         t = new l.A(),
@@ -60,7 +54,6 @@ function d(e) {
             var a = h(e, r);
             return d.set(e, a), a;
         };
-
     function x(e, r) {
         var t,
             l = "";
@@ -75,11 +68,7 @@ function d(e) {
                     : t
                 : (0, a.A)(e.childNodes).concat((0, o.QB)(e, "aria-owns"))
             ).forEach(function (e) {
-                var t = R(e, {
-                        isEmbeddedInLabel: r.isEmbeddedInLabel,
-                        isReferenced: !1,
-                        recursion: !0,
-                    }),
+                var t = R(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1, recursion: !0 }),
                     a = "inline" !== ((0, o.vq)(e) ? P(e).getPropertyValue("display") : "inline") ? " " : "";
                 l += "".concat(a).concat(t).concat(a);
             }),
@@ -90,12 +79,10 @@ function d(e) {
         }
         return l.trim();
     }
-
     function y(e, r) {
         var a = e.getAttributeNode(r);
         return null === a || t.has(a) || "" === a.value.trim() ? null : (t.add(a), a.value);
     }
-
     function R(e, r) {
         if (t.has(e)) return "";
         if (
@@ -116,11 +103,7 @@ function d(e) {
                 t.add(l),
                 i
                     .map(function (e) {
-                        return R(e, {
-                            isEmbeddedInLabel: r.isEmbeddedInLabel,
-                            isReferenced: !0,
-                            recursion: !1,
-                        });
+                        return R(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !0, recursion: !1 });
                     })
                     .join(" ")
             );
@@ -138,23 +121,13 @@ function d(e) {
                         t.add(e);
                         for (var r = (0, a.A)(e.childNodes), l = 0; l < r.length; l += 1) {
                             var s = r[l];
-                            if ((0, o.Jb)(s))
-                                return R(s, {
-                                    isEmbeddedInLabel: !1,
-                                    isReferenced: !1,
-                                    recursion: !1,
-                                });
+                            if ((0, o.Jb)(s)) return R(s, { isEmbeddedInLabel: !1, isReferenced: !1, recursion: !1 });
                         }
                     } else if ((0, o.SS)(e)) {
                         t.add(e);
                         for (var n = (0, a.A)(e.childNodes), i = 0; i < n.length; i += 1) {
                             var d = n[i];
-                            if ((0, o.UA)(d))
-                                return R(d, {
-                                    isEmbeddedInLabel: !1,
-                                    isReferenced: !1,
-                                    recursion: !1,
-                                });
+                            if ((0, o.UA)(d)) return R(d, { isEmbeddedInLabel: !1, isReferenced: !1, recursion: !1 });
                         }
                     } else if ((0, o.h1)(e)) {
                         t.add(e);
@@ -211,11 +184,7 @@ function d(e) {
                             t.add(e),
                             (0, a.A)(h)
                                 .map(function (e) {
-                                    return R(e, {
-                                        isEmbeddedInLabel: !0,
-                                        isReferenced: !1,
-                                        recursion: !0,
-                                    });
+                                    return R(e, { isEmbeddedInLabel: !0, isReferenced: !1, recursion: !0 });
                                 })
                                 .filter(function (e) {
                                     return e.length > 0;
@@ -229,10 +198,7 @@ function d(e) {
                         return null !== q ? q : "Submit Query";
                     }
                     if ((0, o.NU)(e, ["button"])) {
-                        var P = x(e, {
-                            isEmbeddedInLabel: !1,
-                            isReferenced: !1,
-                        });
+                        var P = x(e, { isEmbeddedInLabel: !1, isReferenced: !1 });
                         if ("" !== P) return P;
                     }
                     return null;
@@ -251,11 +217,7 @@ function d(e) {
                         : ""
                     : (0, a.A)(b)
                           .map(function (e) {
-                              return R(e, {
-                                  isEmbeddedInLabel: r.isEmbeddedInLabel,
-                                  isReferenced: !1,
-                                  recursion: !0,
-                              });
+                              return R(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1, recursion: !0 });
                           })
                           .join(" ");
             }
@@ -294,29 +256,15 @@ function d(e) {
             ((0, o.vq)(e) && r.isReferenced) ||
             (0, o.UA)(e)
         ) {
-            var f = x(e, {
-                isEmbeddedInLabel: r.isEmbeddedInLabel,
-                isReferenced: !1,
-            });
+            var f = x(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1 });
             if ("" !== f) return t.add(e), f;
         }
         if (e.nodeType === e.TEXT_NODE) return t.add(e), e.textContent || "";
-        if (r.recursion)
-            return (
-                t.add(e),
-                x(e, {
-                    isEmbeddedInLabel: r.isEmbeddedInLabel,
-                    isReferenced: !1,
-                })
-            );
+        if (r.recursion) return t.add(e), x(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1 });
         var v = (0, o.vq)(e) ? y(e, "title") : null;
         return null !== v ? (t.add(e), v) : (t.add(e), "");
     }
-    return R(e, {
-        isEmbeddedInLabel: !1,
-        isReferenced: "description" === m,
-        recursion: !1,
-    })
+    return R(e, { isEmbeddedInLabel: !1, isReferenced: "description" === m, recursion: !1 })
         .trim()
         .replace(/\s\s+/g, " ");
 }

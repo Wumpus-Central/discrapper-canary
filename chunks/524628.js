@@ -1,76 +1,45 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
+    s = n.n(l),
     a = n(158954),
-    s = n(311907),
+    r = n(311907),
     o = n(775602),
-    c = n(824134);
-
-function u(e) {
+    d = n(824134);
+function c(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
-        l = (0, s.bG)([o.A], () => o.A.useReducedMotion);
-    return (0, r.jsxs)(a.BJc, {
+        l = (0, r.bG)([o.A], () => o.A.useReducedMotion);
+    return (0, i.jsxs)(a.BJc, {
         gap: 4,
         children: [
             t &&
-                (0, r.jsx)("div", {
-                    className: i()(c.iE, {
-                        [c.cb]: l,
-                    }),
-                    style: {
-                        paddingTop: 8,
-                        paddingBottom: 8,
-                    },
-                    children: (0, r.jsx)(d, {
-                        className: i()(c.nq, c.NX),
-                    }),
+                (0, i.jsx)("div", {
+                    className: s()(d.iE, { [d.cb]: l }),
+                    style: { paddingTop: 8, paddingBottom: 8 },
+                    children: (0, i.jsx)(u, { className: s()(d.nq, d.NX) }),
                 }),
-            Array.from({
-                length: n,
-            }).map((e, t) => (0, r.jsx)(f, {}, t)),
+            Array.from({ length: n }).map((e, t) => (0, i.jsx)(h, {}, t)),
         ],
     });
 }
-
-function d(e) {
+function u(e) {
     let { className: t } = e;
-    return (0, r.jsx)("div", {
-        className: i()(c.n8, t),
-    });
+    return (0, i.jsx)("div", { className: s()(d.n8, t) });
 }
-
-function f() {
-    let e = (0, s.bG)([o.A], () => o.A.useReducedMotion);
-    return (0, r.jsxs)("div", {
-        style: {
-            display: "flex",
-            flexDirection: "row",
-            gap: 12,
-            padding: 4,
-        },
-        className: i()(c.iE, {
-            [c.cb]: e,
-        }),
+function h() {
+    let e = (0, r.bG)([o.A], () => o.A.useReducedMotion);
+    return (0, i.jsxs)("div", {
+        style: { display: "flex", flexDirection: "row", gap: 12, padding: 4 },
+        className: s()(d.iE, { [d.cb]: e }),
         children: [
-            (0, r.jsx)("div", {
-                className: i()(c.my, c.NX),
-            }),
-            (0, r.jsxs)("div", {
-                className: c.U0,
+            (0, i.jsx)("div", { className: s()(d.my, d.NX) }),
+            (0, i.jsxs)("div", {
+                className: d.U0,
                 children: [
-                    (0, r.jsx)(d, {
-                        className: i()(c.Md, c.NX),
-                    }),
-                    (0, r.jsx)(d, {
-                        className: i()(c.nq, c.NX),
-                    }),
-                    (0, r.jsx)(d, {
-                        className: i()(c.xs, c.NX),
-                    }),
+                    (0, i.jsx)(u, { className: s()(d.Md, d.NX) }),
+                    (0, i.jsx)(u, { className: s()(d.nq, d.NX) }),
+                    (0, i.jsx)(u, { className: s()(d.xs, d.NX) }),
                 ],
             }),
         ],

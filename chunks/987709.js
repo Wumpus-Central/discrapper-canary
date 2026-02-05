@@ -1,22 +1,18 @@
-n.d(t, {
-    E: () => c,
-});
-var r = n(125017),
-    i = n(833349),
+n.d(t, { E: () => d });
+var i = n(125017),
+    l = n(833349),
     a = n(287613),
-    s = n(659051),
-    o = n(702631),
-    l = n(652215);
-
-function c(e, t, n, c) {
-    var u;
+    r = n(659051),
+    s = n(702631),
+    o = n(652215);
+function d(e, t, n, d) {
     if (
-        t.author.id === c ||
-        !(0, s.A)(e, t, n.id) ||
-        (null == (u = t.activity) ? void 0 : u.type) !== l.xL.JOIN_REQUEST ||
-        !(0, i.A)(e, l.jUm.JOIN)
+        t.author.id === d ||
+        !(0, r.A)(e, t, n.id) ||
+        t.activity?.type !== o.xL.JOIN_REQUEST ||
+        !(0, l.A)(e, o.jUm.JOIN)
     )
         return !1;
-    let d = (0, r._)(e);
-    return !(!(0, a.A)(d) || (0, o.U)(d));
+    let c = (0, i._)(e);
+    return !(!(0, a.A)(c) || (0, s.U)(c));
 }

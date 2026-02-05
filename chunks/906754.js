@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,7 +7,7 @@ var i = n(503698),
     s = n(263063),
     o = n(936755),
     l = n(746160);
-let c = function (e) {
+let u = function (e) {
     let { guild: t, children: n } = e,
         i =
             null != t
@@ -20,14 +19,6 @@ let c = function (e) {
                   })
                 : null;
     return (0, r.jsxs)("span", {
-        children: [
-            (0, r.jsx)(o.A, {
-                children: i,
-            }),
-            (0, r.jsx)("span", {
-                className: l.UU,
-                children: n,
-            }),
-        ],
+        children: [(0, r.jsx)(o.A, { children: i }), (0, r.jsx)("span", { className: l.UU, children: n })],
     });
 };

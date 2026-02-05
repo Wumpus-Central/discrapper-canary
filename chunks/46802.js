@@ -1,9 +1,7 @@
-n.d(t, {
-    J: () => o,
-});
+"use strict";
+n.d(t, { J: () => o });
 var r = n(297987);
 let i = "u" > typeof Element && "checkVisibility" in Element.prototype;
-
 function a(e) {
     let t = (0, r.mD)(e);
     if (!(e instanceof t.HTMLElement) && !(e instanceof t.SVGElement)) return !1;
@@ -16,7 +14,6 @@ function a(e) {
     }
     return a;
 }
-
 function s(e, t) {
     return (
         !e.hasAttribute("hidden") &&
@@ -24,11 +21,8 @@ function s(e, t) {
         ("DETAILS" !== e.nodeName || !t || "SUMMARY" === t.nodeName || e.hasAttribute("open"))
     );
 }
-
 function o(e, t) {
     return i
-        ? e.checkVisibility({
-              visibilityProperty: !0,
-          }) && !e.closest("[data-react-aria-prevent-focus]")
+        ? e.checkVisibility({ visibilityProperty: !0 }) && !e.closest("[data-react-aria-prevent-focus]")
         : "#comment" !== e.nodeName && a(e) && s(e, t) && (!e.parentElement || o(e.parentElement, e));
 }

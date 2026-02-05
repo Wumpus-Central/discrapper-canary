@@ -1,9 +1,7 @@
-n.d(t, {
-    $: () => a,
-});
+"use strict";
+n.d(t, { $: () => a });
 var r = n(640831),
     i = n(476575);
-
 function a(e) {
     var t;
     return "number" == typeof e
@@ -17,7 +15,7 @@ function a(e) {
             : (t = r.Qh.exec(e))
               ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
               : (t = r.B3.exec(e))
-                ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | u(t[4])) >>> 0
+                ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0
                 : (t = r.NV.exec(e))
                   ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + "ff", 16) >>> 0
                   : (t = r.UM.exec(e))
@@ -25,12 +23,11 @@ function a(e) {
                     : (t = r.Ui.exec(e))
                       ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
                       : (t = r.KI.exec(e))
-                        ? (255 | o(c(t[1]), d(t[2]), d(t[3]))) >>> 0
+                        ? (255 | o(u(t[1]), d(t[2]), d(t[3]))) >>> 0
                         : (t = r.V$.exec(e))
-                          ? (o(c(t[1]), d(t[2]), d(t[3])) | u(t[4])) >>> 0
+                          ? (o(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0
                           : null;
 }
-
 function s(e, t, n) {
     return e < 60
         ? [t, n, 0]
@@ -44,7 +41,6 @@ function s(e, t, n) {
                 ? [n, 0, t]
                 : [t, 0, n];
 }
-
 function o(e, t, n) {
     var r = (1 - Math.abs(2 * n - 1)) * t,
         i = r * (1 - Math.abs(((e / 60) % 2) - 1)),
@@ -56,21 +52,17 @@ function o(e, t, n) {
         (Math.round((o[2] + a) * 255) << 8)
     );
 }
-
 function l(e) {
     var t = parseInt(e, 10);
     return t < 0 ? 0 : t > 255 ? 255 : t;
 }
-
-function c(e) {
+function u(e) {
     return (((parseFloat(e) % 360) + 360) % 360) / 360;
 }
-
-function u(e) {
+function c(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-
 function d(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;

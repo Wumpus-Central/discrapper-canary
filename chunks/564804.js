@@ -1,22 +1,20 @@
-n.d(t, {
-    A: () => l,
-});
+"use strict";
+n.d(t, { A: () => l });
 var r = n(29583),
     i = n(618027),
     a = n(327922),
     s = n(998280),
     o = n(98430);
-
 function l(e, t) {
     (0, i.A)(1, arguments);
     var n,
         l,
-        c,
         u,
+        c,
         d,
+        _,
         f,
         p,
-        _,
         h = (0, r.default)(e),
         m = h.getUTCFullYear(),
         g = (0, o.q)(),
@@ -26,27 +24,27 @@ function l(e, t) {
                     null !=
                     (l =
                         null !=
-                        (c =
-                            null != (u = null == t ? void 0 : t.firstWeekContainsDate)
-                                ? u
-                                : null == t || null == (d = t.locale) || null == (f = d.options)
+                        (u =
+                            null != (c = null == t ? void 0 : t.firstWeekContainsDate)
+                                ? c
+                                : null == t || null == (d = t.locale) || null == (_ = d.options)
                                   ? void 0
-                                  : f.firstWeekContainsDate)
-                            ? c
+                                  : _.firstWeekContainsDate)
+                            ? u
                             : g.firstWeekContainsDate)
                         ? l
-                        : null == (p = g.locale) || null == (_ = p.options)
+                        : null == (f = g.locale) || null == (p = f.options)
                           ? void 0
-                          : _.firstWeekContainsDate)
+                          : p.firstWeekContainsDate)
                 ? n
                 : 1,
         );
     if (!(E >= 1 && E <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-    var b = new Date(0);
-    b.setUTCFullYear(m + 1, 0, E), b.setUTCHours(0, 0, 0, 0);
-    var y = (0, a.A)(b, t),
-        O = new Date(0);
-    O.setUTCFullYear(m, 0, E), O.setUTCHours(0, 0, 0, 0);
-    var A = (0, a.A)(O, t);
-    return h.getTime() >= y.getTime() ? m + 1 : h.getTime() >= A.getTime() ? m : m - 1;
+    var A = new Date(0);
+    A.setUTCFullYear(m + 1, 0, E), A.setUTCHours(0, 0, 0, 0);
+    var I = (0, a.A)(A, t),
+        T = new Date(0);
+    T.setUTCFullYear(m, 0, E), T.setUTCHours(0, 0, 0, 0);
+    var y = (0, a.A)(T, t);
+    return h.getTime() >= I.getTime() ? m + 1 : h.getTime() >= y.getTime() ? m : m - 1;
 }

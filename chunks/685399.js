@@ -1,116 +1,50 @@
-n.d(t, {
-    Ay: () => h,
-    IQ: () => g,
-    Rz: () => E,
-    a1: () => m,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { Ay: () => d, IQ: () => f, Rz: () => p, a1: () => _ }), n(321073);
 var r = n(64700),
     i = n(311907),
     a = n(429913),
     s = n(290863),
     o = n(287809),
     l = n(403362),
-    c = n(933958),
-    u = n(969151);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function h(e, t) {
-    return g(
-        (0, i.yK)([c.Ay], () =>
-            null != e && null != e.id && "" !== e.id ? c.Ay.getEmbeddedActivitiesForChannel(e.id) : c.Am,
+    u = n(933958),
+    c = n(969151);
+function d(e, t) {
+    return f(
+        (0, i.yK)([u.Ay], () =>
+            null != e && null != e.id && "" !== e.id ? u.Ay.getEmbeddedActivitiesForChannel(e.id) : u.Am,
         ),
         t,
     );
 }
-
-function m(e) {
-    let t = g((0, i.bG)([c.Ay], () => (null != e ? c.Ay.getEmbeddedActivitiesForGuild(e) : c.Am)));
+function _(e) {
+    let t = f((0, i.bG)([u.Ay], () => (null != e ? u.Ay.getEmbeddedActivitiesForGuild(e) : u.Am)));
     return r.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
-                var n;
-                let r = (0, u.H)(t.embeddedActivity.location);
-                if (null == r) return;
-                let i = null != (n = e.get(r)) ? n : [];
-                i.push(t), e.set(r, i);
+                let n = (0, c.H)(t.embeddedActivity.location);
+                if (null == n) return;
+                let r = e.get(n) ?? [];
+                r.push(t), e.set(n, r);
             }),
             e
         );
     }, [t]);
 }
-
-function g(e, t) {
+function f(e, t) {
     let n = e.map((e) => e.applicationId),
         s = (0, a.A)(n),
-        c = new Set([]);
-    for (let t of e) for (let e of t.userIds) c.add(e);
-    let u = (0, i.yK)([o.default], () => {
+        u = new Set([]);
+    for (let t of e) for (let e of t.userIds) u.add(e);
+    let c = (0, i.yK)([o.default], () => {
         let e = [];
-        for (let t of c) e.push(o.default.getUser(t));
+        for (let t of u) e.push(o.default.getUser(t));
         return e;
-    }, [c]);
+    }, [u]);
     return r.useMemo(() => {
         let n = new Map();
         return (
-            u.forEach((e) => {
+            c.forEach((e) => {
                 null != e && n.set(e.id, e);
             }),
             e
@@ -125,40 +59,24 @@ function g(e, t) {
                                 null != n && a.push(n);
                             }
                         }
-                    return null == i
-                        ? null
-                        : {
-                              embeddedActivity: e,
-                              application: i,
-                              userParticipantAvatarUrls: a,
-                          };
+                    return null == i ? null : { embeddedActivity: e, application: i, userParticipantAvatarUrls: a };
                 })
                 .filter(l.Vq)
         );
-    }, [e, s, u, t]);
+    }, [e, s, c, t]);
 }
-
-function E(e) {
+function p(e) {
     return (0, i.bG)(
         [s.A],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    var n;
-                    let r = s.A.findActivity(
-                        null == e ? void 0 : e.embeddedActivity.userIds.values().next().value,
-                        (t) => {
-                            var n;
-                            return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
-                        },
+                    let n = s.A.findActivity(
+                        e?.embeddedActivity.userIds.values().next().value,
+                        (t) => t.application_id === e?.application?.id,
                     );
-                    t.set(
-                        null == e || null == (n = e.application) ? void 0 : n.id,
-                        _(f({}, e), {
-                            presenceActivity: r,
-                        }),
-                    );
+                    t.set(e?.application?.id, { ...e, presenceActivity: n });
                 }),
                 t
             );

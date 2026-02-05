@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     if (e.length < 2) return [];
     let n = [],
@@ -8,7 +9,4 @@ function r(e, t) {
     }
     return n;
 }
-n.d(t, {
-    A: () => r,
-}),
-    n(321073);
+n.d(t, { A: () => r }), n(321073);

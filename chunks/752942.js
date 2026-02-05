@@ -1,217 +1,131 @@
-s.d(t, {
-    A: () => h,
-}),
-    s(228524);
-var r = s(627968);
-s(64700);
-var a = s(317097),
-    n = s(827734),
-    l = s(397927),
-    i = s(580630),
-    c = s(35275),
-    d = s(652215),
-    o = s(985018),
-    m = s(558304);
-
+a.d(t, { A: () => p });
+var s = a(627968);
+a(64700);
+var n = a(317097),
+    l = a(827734),
+    i = a(397927),
+    r = a(580630),
+    c = a(35275),
+    o = a(652215),
+    d = a(985018),
+    m = a(558304);
 function x(e) {
     let { listing: t } = e,
-        { name: s, image: n, description: c } = t,
-        o = (0, i.$g)(t.price_tier, d.Yri.USD);
-    return (0, r.jsxs)("div", {
+        { name: a, image: l, description: c } = t,
+        d = (0, r.$g)(t.price_tier, o.Yri.USD);
+    return (0, s.jsxs)("div", {
         children: [
-            (0, r.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: m.l8,
                 children: [
-                    (0, r.jsx)("img", {
-                        src: n,
-                        alt: "",
-                        className: m.my,
-                    }),
-                    (0, r.jsxs)("div", {
+                    (0, s.jsx)("img", { src: l, alt: "", className: m.my }),
+                    (0, s.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(l.Heading, {
-                                variant: "heading-md/medium",
-                                className: m.KR,
-                                children: s,
-                            }),
-                            (0, r.jsx)(l.Text, {
-                                variant: "text-md/medium",
-                                tag: "span",
-                                children: o,
-                            }),
-                            (0, r.jsx)(l.Text, {
-                                variant: "text-xxs/medium",
-                                tag: "span",
-                                children: "/mo.",
-                            }),
+                            (0, s.jsx)(i.Heading, { variant: "heading-md/medium", className: m.KR, children: a }),
+                            (0, s.jsx)(i.Text, { variant: "text-md/medium", tag: "span", children: d }),
+                            (0, s.jsx)(i.Text, { variant: "text-xxs/medium", tag: "span", children: "/mo." }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: m.FE,
                 children: [
-                    (0, r.jsx)("div", {
-                        style: {
-                            backgroundColor: (0, a.Hl)(t.role_color),
-                        },
-                        className: m.yY,
-                    }),
-                    (0, r.jsx)("img", {
-                        src: n,
-                        alt: "",
-                        className: m.UT,
-                    }),
-                    (0, r.jsx)(l.Text, {
-                        variant: "text-xs/medium",
-                        children: s,
-                    }),
+                    (0, s.jsx)("div", { style: { backgroundColor: (0, n.Hl)(t.role_color) }, className: m.yY }),
+                    (0, s.jsx)("img", { src: l, alt: "", className: m.UT }),
+                    (0, s.jsx)(i.Text, { variant: "text-xs/medium", children: a }),
                 ],
             }),
-            (0, r.jsx)(l.Text, {
-                variant: "text-xs/normal",
-                className: m.rj,
-                children: c,
-            }),
+            (0, s.jsx)(i.Text, { variant: "text-xs/normal", className: m.rj, children: c }),
         ],
     });
 }
-
-function u(e) {
+function _(e) {
     let { channel: t } = e,
-        s = (function (e) {
+        a = (function (e) {
             switch (e) {
-                case d.rbe.GUILD_TEXT:
-                    return l.I$d;
-                case d.rbe.GUILD_VOICE:
-                    return l.trU;
-                case d.rbe.GUILD_STAGE_VOICE:
-                    return l.DC;
-                case d.rbe.GUILD_FORUM:
-                    return l.QVg;
-                case d.rbe.GUILD_MEDIA:
-                    return l.cfi;
-                case d.rbe.GUILD_ANNOUNCEMENT:
-                    return l.XDC;
+                case o.rbe.GUILD_TEXT:
+                    return i.I$d;
+                case o.rbe.GUILD_VOICE:
+                    return i.trU;
+                case o.rbe.GUILD_STAGE_VOICE:
+                    return i.DC;
+                case o.rbe.GUILD_FORUM:
+                    return i.QVg;
+                case o.rbe.GUILD_MEDIA:
+                    return i.cfi;
+                case o.rbe.GUILD_ANNOUNCEMENT:
+                    return i.XDC;
                 default:
                     return null;
             }
         })(t.type);
-    return (0, r.jsxs)("div", {
+    return (0, s.jsxs)("div", {
         className: m.$r,
         children: [
-            null != s &&
-                (0, r.jsx)(s, {
-                    className: m.WH,
-                    color: "currentColor",
-                }),
-            (0, r.jsxs)("div", {
+            null != a && (0, s.jsx)(a, { className: m.WH, color: "currentColor" }),
+            (0, s.jsxs)("div", {
                 className: m.WA,
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        variant: "text-sm/normal",
-                        children: t.name,
-                    }),
-                    (0, r.jsx)(l.Text, {
-                        variant: "text-xs/normal",
-                        className: m.zC,
-                        children: t.tagline,
-                    }),
+                    (0, s.jsx)(i.Text, { variant: "text-sm/normal", children: t.name }),
+                    (0, s.jsx)(i.Text, { variant: "text-xs/normal", className: m.zC, children: t.tagline }),
                 ],
             }),
-            (0, r.jsx)(c.A, {
+            (0, s.jsx)(c.A, {
                 className: m.__invalid_emojiIcon,
-                color: n.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css,
+                color: l.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css,
             }),
         ],
     });
 }
-
-function j(e) {
+function u(e) {
     let { benefit: t } = e;
     return void 0 === t
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, s.jsxs)("div", {
               className: m.Rr,
               children: [
-                  (0, r.jsx)("div", {
-                      className: m.KI,
-                  }),
-                  (0, r.jsx)(l.Text, {
-                      variant: "text-sm/normal",
-                      children: t,
-                  }),
+                  (0, s.jsx)("div", { className: m.KI }),
+                  (0, s.jsx)(i.Text, { variant: "text-sm/normal", children: t }),
               ],
           });
 }
-
-function f(e) {
+function h(e) {
     let { listing: t } = e;
-    return (0, r.jsxs)("div", {
+    return (0, s.jsxs)("div", {
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, s.jsx)(i.Heading, {
                 variant: "heading-sm/semibold",
                 className: m.Ts,
-                children: o.intl.string(o.t.CjC5XZ),
+                children: d.intl.string(d.t.CjC5XZ),
             }),
-            (0, r.jsx)(l.Text, {
-                variant: "text-xs/semibold",
-                className: m.hM,
-                children: o.intl.string(o.t.rI43Wx),
-            }),
-            t.channels.map((e) =>
-                (0, r.jsx)(
-                    u,
-                    {
-                        channel: e,
-                    },
-                    e.id,
-                ),
-            ),
-            (0, r.jsx)(l.Text, {
-                variant: "text-xs/semibold",
-                className: m.hM,
-                children: o.intl.string(o.t.XqWRLj),
-            }),
-            t.additional_perks.map((e, t) =>
-                (0, r.jsx)(
-                    j,
-                    {
-                        benefit: e.name,
-                    },
-                    t,
-                ),
-            ),
+            (0, s.jsx)(i.Text, { variant: "text-xs/semibold", className: m.hM, children: d.intl.string(d.t.rI43Wx) }),
+            t.channels.map((e) => (0, s.jsx)(_, { channel: e }, e.id)),
+            (0, s.jsx)(i.Text, { variant: "text-xs/semibold", className: m.hM, children: d.intl.string(d.t.XqWRLj) }),
+            t.additional_perks.map((e, t) => (0, s.jsx)(u, { benefit: e.name }, t)),
         ],
     });
 }
-
-function h(e) {
-    let { selectedTemplate: t, handleSelectTemplate: s } = e;
+function p(e) {
+    let { selectedTemplate: t, handleSelectTemplate: a } = e;
     if (void 0 === t) return null;
-    let a = t.listings[0];
-    return (0, r.jsxs)("div", {
+    let n = t.listings[0];
+    return (0, s.jsxs)("div", {
         className: m.kL,
         children: [
-            (0, r.jsxs)(l.IpV, {
+            (0, s.jsxs)(i.IpV, {
                 className: m.Qs,
                 children: [
-                    (0, r.jsx)(x, {
-                        listing: a,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: m.yF,
-                    }),
-                    (0, r.jsx)(f, {
-                        listing: a,
-                    }),
+                    (0, s.jsx)(x, { listing: n }),
+                    (0, s.jsx)("div", { className: m.yF }),
+                    (0, s.jsx)(h, { listing: n }),
                 ],
             }),
-            (0, r.jsx)(l.Button, {
+            (0, s.jsx)(i.Button, {
                 variant: "primary",
-                text: o.intl.string(o.t["1W7mCt"]),
+                text: d.intl.string(d.t["1W7mCt"]),
                 onClick: () => {
-                    s(t);
+                    a(t);
                 },
             }),
         ],

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     jv: "categoryList_a1e0e0",
     HZ: "expressionPickerCategoryList_a1e0e0",

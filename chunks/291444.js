@@ -1,256 +1,182 @@
-n.d(t, {
-    A: () => G,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => M });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(311907),
-    c = n(554146),
-    o = n(421380),
-    d = n(397927),
+    o = n(554146),
+    d = n(421380),
+    c = n(397927),
     u = n(83257),
-    f = n(826673),
+    m = n(826673),
     g = n(532197),
-    b = n(203982),
-    m = n(555337),
-    p = n(155008),
-    x = n(418448),
-    h = n(527678),
-    j = n(923121),
-    O = n(199940),
-    y = n(107795),
-    v = n(655943),
-    A = n(287479),
-    E = n(400812),
-    N = n(72533),
-    _ = n(729984),
-    S = n(193477),
-    T = n(692453),
-    I = n(307209),
-    C = n(360827),
-    P = n(307879),
-    w = n(652215),
-    R = n(985018),
+    x = n(203982),
+    h = n(555337),
+    _ = n(155008),
+    A = n(418448),
+    p = n(527678),
+    f = n(923121),
+    j = n(199940),
+    N = n(107795),
+    E = n(655943),
+    b = n(287479),
+    T = n(400812),
+    C = n(72533),
+    I = n(729984),
+    v = n(193477),
+    S = n(692453),
+    y = n(307209),
+    R = n(360827),
+    O = n(307879),
+    G = n(652215),
+    L = n(985018),
     D = n(361870);
-
-function G() {
-    let e = (0, a.bG)([m.A], () => m.A.getGuildId());
-    return null == e
-        ? null
-        : (0, r.jsx)(L, {
-              guildId: e,
-          });
+function M() {
+    let e = (0, a.bG)([h.A], () => h.A.getGuildId());
+    return null == e ? null : (0, i.jsx)(k, { guildId: e });
 }
-
-function L(e) {
+function k(e) {
     let t,
         { guildId: n } = e,
-        l = (0, a.bG)([A.A], () => A.A.getCurrentPage()),
-        m = (0, a.bG)([A.A], () => {
-            let e = (0, E.ql)(l);
-            return null != e && !A.A.isEducationUpsellDismissed(e);
+        l = (0, a.bG)([b.A], () => b.A.getCurrentPage()),
+        h = (0, a.bG)([b.A], () => {
+            let e = (0, T.ql)(l);
+            return null != e && !b.A.isEducationUpsellDismissed(e);
         }),
-        v = (0, N.A)(n),
-        G = !v && m;
+        E = (0, C.A)(n),
+        M = !E && h;
     switch (
-        (i.useEffect(() => {
-            (0, f.Dr)(c.M.COMMUNITY_ONBOARDING_NEW_BADGE);
+        (s.useEffect(() => {
+            (0, m.Dr)(o.M.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []),
         l)
     ) {
-        case E.Hy.LANDING:
-            t = v
-                ? (0, r.jsx)(I.A, {
-                      completed: !0,
-                      guildId: n,
-                  })
-                : (0, r.jsx)(P.A, {});
+        case T.Hy.LANDING:
+            t = E ? (0, i.jsx)(y.A, { completed: !0, guildId: n }) : (0, i.jsx)(O.A, {});
             break;
-        case E.Hy.SAFETY_CHECK:
-            t = (0, r.jsx)(p.A, {});
+        case T.Hy.SAFETY_CHECK:
+            t = (0, i.jsx)(_.A, {});
             break;
-        case E.Hy.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(_.A, {
-                saveOnClose: !v,
-            });
+        case T.Hy.DEFAULT_CHANNELS:
+            t = (0, i.jsx)(I.A, { saveOnClose: !E });
             break;
-        case E.Hy.CUSTOMIZATION_QUESTIONS:
-            t = (0, r.jsx)(C.Ay, {
-                saveOnClose: !v,
-            });
+        case T.Hy.CUSTOMIZATION_QUESTIONS:
+            t = (0, i.jsx)(R.Ay, { saveOnClose: !E });
             break;
-        case E.Hy.HOME_SETTINGS:
-            t = (0, r.jsx)(S.A, {
-                saveOnClose: !v,
-            });
+        case T.Hy.HOME_SETTINGS:
+            t = (0, i.jsx)(v.A, { saveOnClose: !E });
             break;
-        case E.Hy.CONNECTIONS:
-            t = (0, r.jsx)(T.A, {
-                saveOnClose: !v,
-            });
+        case T.Hy.CONNECTIONS:
+            t = (0, i.jsx)(S.A, { saveOnClose: !E });
             break;
-        case E.Hy.REVIEW:
-            t = (0, r.jsx)(I.A, {
-                completed: v,
-                guildId: n,
-            });
+        case T.Hy.REVIEW:
+            t = (0, i.jsx)(y.A, { completed: E, guildId: n });
     }
-    return (0, r.jsxs)("div", {
-        className: s()(D.Jp, {
-            [D.Q3]: G,
-        }),
+    return (0, i.jsxs)("div", {
+        className: r()(D.Jp, { [D.Q3]: M }),
         children: [
-            !v &&
-                l !== E.Hy.LANDING &&
-                (0, r.jsx)(k, {
-                    setOnboardingStep: h.e_,
-                    page: l,
-                    homeSettingsEnabled: !0,
-                }),
-            v &&
-                l !== E.Hy.LANDING &&
-                (0, r.jsx)("div", {
-                    children: (0, r.jsxs)(o.$n, {
+            !E && l !== T.Hy.LANDING && (0, i.jsx)(U, { setOnboardingStep: p.e_, page: l, homeSettingsEnabled: !0 }),
+            E &&
+                l !== T.Hy.LANDING &&
+                (0, i.jsx)("div", {
+                    children: (0, i.jsxs)(d.$n, {
                         innerClassName: D.Gv,
-                        look: o.$n.Looks.BLANK,
-                        size: o.$n.Sizes.MIN,
+                        look: d.$n.Looks.BLANK,
+                        size: d.$n.Sizes.MIN,
                         onClick: () => {
-                            if (A.A.hasChanges() && !A.A.canCloseEarly()) {
-                                b._.dispatch(w.jej.SHAKE_APP, {
-                                    duration: 300,
-                                    intensity: u.n3,
-                                }),
-                                    b._.dispatch(w.jej.EMPHASIZE_NOTICE);
+                            if (b.A.hasChanges() && !b.A.canCloseEarly()) {
+                                x._.dispatch(G.jej.SHAKE_APP, { duration: 300, intensity: u.n3 }),
+                                    x._.dispatch(G.jej.EMPHASIZE_NOTICE);
                                 return;
                             }
-                            (0, y.P3)(), (0, x.nx)(), (0, O.sk)(), (0, j.p2)(), (0, h.e_)(E.Hy.LANDING);
+                            (0, N.P3)(), (0, A.nx)(), (0, j.sk)(), (0, f.p2)(), (0, p.e_)(T.Hy.LANDING);
                         },
                         children: [
-                            (0, r.jsx)(g.A, {
-                                className: D.UE,
-                                direction: g.A.Directions.LEFT,
-                            }),
-                            (0, r.jsx)(d.Text, {
+                            (0, i.jsx)(g.A, { className: D.UE, direction: g.A.Directions.LEFT }),
+                            (0, i.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
                                 color: "interactive-text-default",
-                                children: R.intl.string(R.t["13/7kX"]),
+                                children: L.intl.string(L.t["13/7kX"]),
                             }),
                         ],
                     }),
                 }),
-            (0, r.jsx)("div", {
-                children: t,
-            }),
+            (0, i.jsx)("div", { children: t }),
         ],
     });
 }
-
-function k(e) {
-    let { page: t, setOnboardingStep: n, homeSettingsEnabled: i } = e,
-        l = (0, a.bG)([A.A], () => A.A.hasErrors()),
-        c = (e) => {
+function U(e) {
+    let { page: t, setOnboardingStep: n, homeSettingsEnabled: s } = e,
+        l = (0, a.bG)([b.A], () => b.A.hasErrors()),
+        o = (e) => {
             if (!l) return () => n(e);
         },
-        o = (0, a.bG)([v.A], () => v.A.advancedMode);
-    return (0, r.jsxs)("div", {
+        d = (0, a.bG)([E.A], () => E.A.advancedMode);
+    return (0, i.jsxs)("div", {
         className: D.L$,
         children: [
-            (0, r.jsxs)(d.DUT, {
-                className: s()(D.G9, D.zp),
-                onClick: c(E.Hy.SAFETY_CHECK),
+            (0, i.jsxs)(c.DUT, {
+                className: r()(D.G9, D.zp),
+                onClick: o(T.Hy.SAFETY_CHECK),
                 children: [
-                    (0, r.jsx)("div", {
-                        className: s()(D.hr, {
-                            [D.Ou]: t === E.Hy.SAFETY_CHECK,
-                        }),
-                    }),
-                    (0, r.jsx)(d.Text, {
-                        color: t === E.Hy.SAFETY_CHECK ? "text-brand" : "text-muted",
+                    (0, i.jsx)("div", { className: r()(D.hr, { [D.Ou]: t === T.Hy.SAFETY_CHECK }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === T.Hy.SAFETY_CHECK ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: R.intl.format(R.t.Me5Mma, {
-                            stepNumber: 1,
-                        }),
+                        children: L.intl.format(L.t.Me5Mma, { stepNumber: 1 }),
                     }),
                 ],
             }),
-            (0, r.jsxs)(d.DUT, {
-                className: s()(D.G9, D.zp),
-                onClick: c(E.Hy.DEFAULT_CHANNELS),
+            (0, i.jsxs)(c.DUT, {
+                className: r()(D.G9, D.zp),
+                onClick: o(T.Hy.DEFAULT_CHANNELS),
                 children: [
-                    (0, r.jsx)("div", {
-                        className: s()(D.hr, {
-                            [D.Ou]: t === E.Hy.DEFAULT_CHANNELS,
-                        }),
-                    }),
-                    (0, r.jsx)(d.Text, {
-                        color: t === E.Hy.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
+                    (0, i.jsx)("div", { className: r()(D.hr, { [D.Ou]: t === T.Hy.DEFAULT_CHANNELS }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === T.Hy.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: o
-                            ? R.intl.formatToPlainString(R.t["8mGhOy"], {
-                                  stepNumber: 2,
-                              })
-                            : R.intl.formatToPlainString(R.t.vxpuTd, {
-                                  stepNumber: 2,
-                              }),
+                        children: d
+                            ? L.intl.formatToPlainString(L.t["8mGhOy"], { stepNumber: 2 })
+                            : L.intl.formatToPlainString(L.t.vxpuTd, { stepNumber: 2 }),
                     }),
                 ],
             }),
-            (0, r.jsxs)(d.DUT, {
-                className: s()(D.G9, D.zp),
-                onClick: c(E.Hy.CUSTOMIZATION_QUESTIONS),
+            (0, i.jsxs)(c.DUT, {
+                className: r()(D.G9, D.zp),
+                onClick: o(T.Hy.CUSTOMIZATION_QUESTIONS),
                 children: [
-                    (0, r.jsx)("div", {
-                        className: s()(D.hr, {
-                            [D.Ou]: t === E.Hy.CUSTOMIZATION_QUESTIONS,
-                        }),
-                    }),
-                    (0, r.jsx)(d.Text, {
-                        color: t === E.Hy.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
+                    (0, i.jsx)("div", { className: r()(D.hr, { [D.Ou]: t === T.Hy.CUSTOMIZATION_QUESTIONS }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === T.Hy.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: o
-                            ? R.intl.formatToPlainString(R.t.vb6J5g, {
-                                  stepNumber: 3,
-                              })
-                            : R.intl.formatToPlainString(R.t.ZpdQqK, {
-                                  stepNumber: 3,
-                              }),
+                        children: d
+                            ? L.intl.formatToPlainString(L.t.vb6J5g, { stepNumber: 3 })
+                            : L.intl.formatToPlainString(L.t.ZpdQqK, { stepNumber: 3 }),
                     }),
                 ],
             }),
-            i &&
-                (0, r.jsxs)(d.DUT, {
-                    className: s()(D.G9, D.zp),
-                    onClick: c(E.Hy.HOME_SETTINGS),
+            s &&
+                (0, i.jsxs)(c.DUT, {
+                    className: r()(D.G9, D.zp),
+                    onClick: o(T.Hy.HOME_SETTINGS),
                     children: [
-                        (0, r.jsx)("div", {
-                            className: s()(D.hr, {
-                                [D.Ou]: t === E.Hy.HOME_SETTINGS,
-                            }),
-                        }),
-                        (0, r.jsx)(d.Text, {
-                            color: t === E.Hy.HOME_SETTINGS ? "text-brand" : "text-muted",
+                        (0, i.jsx)("div", { className: r()(D.hr, { [D.Ou]: t === T.Hy.HOME_SETTINGS }) }),
+                        (0, i.jsx)(c.Text, {
+                            color: t === T.Hy.HOME_SETTINGS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
-                            children: R.intl.format(R.t.KVOukh, {
-                                stepNumber: 4,
-                            }),
+                            children: L.intl.format(L.t.KVOukh, { stepNumber: 4 }),
                         }),
                     ],
                 }),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: D.G9,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: s()(D.hr, {
-                            [D.Ou]: t === E.Hy.REVIEW,
-                        }),
-                    }),
-                    (0, r.jsx)(d.Text, {
-                        color: t === E.Hy.REVIEW ? "text-brand" : "text-muted",
+                    (0, i.jsx)("div", { className: r()(D.hr, { [D.Ou]: t === T.Hy.REVIEW }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === T.Hy.REVIEW ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: R.intl.format(R.t.oVzkiA, {
-                            stepNumber: 3 + +!!i + 1,
-                        }),
+                        children: L.intl.format(L.t.oVzkiA, { stepNumber: 3 + +!!s + 1 }),
                     }),
                 ],
             }),

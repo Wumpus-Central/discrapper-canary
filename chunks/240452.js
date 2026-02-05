@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rf: "body_b25217",
     Ns: "infoNotice_b25217",

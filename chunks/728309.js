@@ -1,3 +1,4 @@
+"use strict";
 var n = r(391561),
     i = r(116740);
 t.exports = function (t, e, r) {
@@ -19,9 +20,5 @@ t.exports = function (t, e, r) {
                 var i = e === u ? c : t.getLength();
                 return n(t, e === a ? s : 0, i, r);
             });
-    return t.merge({
-        blockMap: o.merge(l),
-        selectionBefore: e,
-        selectionAfter: e,
-    });
+    return t.merge({ blockMap: o.merge(l), selectionBefore: e, selectionAfter: e });
 };

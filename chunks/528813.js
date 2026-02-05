@@ -1,24 +1,20 @@
-n.d(t, {
-    $: () => l,
-    m: () => c,
-});
+"use strict";
+n.d(t, { $: () => l, m: () => u });
 var r = n(56636),
     i = n(114922),
     a = n(734481),
     s = n(222367),
     o = n(90727);
-
 function l(e) {
     var t = e
         .split("\n")
-        .map(u)
+        .map(c)
         .filter(function (e) {
             return null !== e;
         });
     return (0, r.Cl)((0, r.Cl)({}, t[0]), t[1]);
 }
-
-function c(e) {
+function u(e) {
     var t = {},
         n = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i.exec(e);
     if (!n) return t;
@@ -26,8 +22,7 @@ function c(e) {
         i = n[2];
     return r && (t.tzid = r), (t.dtstart = (0, s.lP)(i)), t;
 }
-
-function u(e) {
+function c(e) {
     if (!(e = e.replace(/^\s+|\s+$/, "")).length) return null;
     var t = /^([A-Z]+?)[:;]/.exec(e.toUpperCase());
     if (!t) return d(e);
@@ -37,14 +32,13 @@ function u(e) {
         case "EXRULE":
             return d(e);
         case "DTSTART":
-            return c(e);
+            return u(e);
         default:
             throw Error("Unsupported RFC prop ".concat(n, " in ").concat(e));
     }
 }
-
 function d(e) {
-    var t = c(e.replace(/^RRULE:/i, ""));
+    var t = u(e.replace(/^RRULE:/i, ""));
     return (
         e
             .replace(/^(?:RRULE|EXRULE):/i, "")
@@ -70,16 +64,16 @@ function d(e) {
                     case "BYHOUR":
                     case "BYMINUTE":
                     case "BYSECOND":
-                        var u = f(l);
-                        t[a.toLowerCase()] = u;
+                        var c = _(l);
+                        t[a.toLowerCase()] = c;
                         break;
                     case "BYWEEKDAY":
                     case "BYDAY":
-                        t.byweekday = _(l);
+                        t.byweekday = p(l);
                         break;
                     case "DTSTART":
                     case "TZID":
-                        var d = c(e);
+                        var d = u(e);
                         (t.tzid = d.tzid), (t.dtstart = d.dtstart);
                         break;
                     case "UNTIL":
@@ -95,16 +89,13 @@ function d(e) {
         t
     );
 }
-
-function f(e) {
-    return -1 !== e.indexOf(",") ? e.split(",").map(p) : p(e);
+function _(e) {
+    return -1 !== e.indexOf(",") ? e.split(",").map(f) : f(e);
 }
-
-function p(e) {
+function f(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
 }
-
-function _(e) {
+function p(e) {
     return e.split(",").map(function (e) {
         if (2 === e.length) return o.Wn[e];
         var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);

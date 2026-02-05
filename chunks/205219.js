@@ -1,3 +1,4 @@
+"use strict";
 function r() {
     var e = navigator.userAgentData;
     return null != e && e.brands && Array.isArray(e.brands)
@@ -8,6 +9,4 @@ function r() {
               .join(" ")
         : navigator.userAgent;
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

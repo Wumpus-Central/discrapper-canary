@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
-var r,
-    l = n(218681),
-    i = n(397927),
-    a = n(322364);
-let s = (0, i.$Kl)(a.qZ, a.Rv, "", null != (r = window.ResizeObserver) ? r : l.t);
+n.d(t, { A: () => a });
+var i = n(218681),
+    l = n(397927),
+    s = n(322364);
+let a = (0, l.$Kl)(s.qZ, s.Rv, "", window.ResizeObserver ?? i.t);

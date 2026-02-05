@@ -1,53 +1,32 @@
-n.d(t, {
-    A: () => o,
-});
-var a = n(627968),
-    l = n(64700),
-    i = n(359701),
-    r = n(550111),
-    s = n(488189);
-let o = l.memo(function (e) {
-    let { user: t, nameplate: n, isHighlighted: l, size: o = "default" } = e,
-        c = "small" === o ? 62 : 94,
-        d = "small" === o ? 72 : 110;
-    return (0, a.jsx)("div", {
-        className: s.Dz,
-        children: (0, a.jsxs)("div", {
-            className: s.ur,
+"use strict";
+n.d(t, { A: () => l });
+var r = n(627968),
+    i = n(64700),
+    a = n(359701),
+    s = n(550111),
+    o = n(488189);
+let l = i.memo(function (e) {
+    let { user: t, nameplate: n, isHighlighted: i, size: l = "default" } = e,
+        u = "small" === l ? 62 : 94,
+        c = "small" === l ? 72 : 110;
+    return (0, r.jsx)("div", {
+        className: o.Dz,
+        children: (0, r.jsxs)("div", {
+            className: o.ur,
             children: [
-                (0, a.jsx)(i._, {
-                    showStatus: !0,
-                    width: c,
-                    opacity: 0.7,
-                    size: o,
-                }),
-                (0, a.jsx)(i._, {
-                    showStatus: !0,
-                    width: d,
-                    opacity: 0.85,
-                    size: o,
-                }),
-                (0, a.jsx)(r.A, {
+                (0, r.jsx)(a._, { showStatus: !0, width: u, opacity: 0.7, size: l }),
+                (0, r.jsx)(a._, { showStatus: !0, width: c, opacity: 0.85, size: l }),
+                (0, r.jsx)(s.A, {
                     user: t,
                     nameplate: n,
-                    className: s.tZ,
-                    isHighlighted: l,
-                    showPlaceholderUser: !l,
+                    className: o.tZ,
+                    isHighlighted: i,
+                    showPlaceholderUser: !i,
                     showStatus: !0,
-                    nameplatePreviewSize: "small" === o ? "small" : "default",
+                    nameplatePreviewSize: "small" === l ? "small" : "default",
                 }),
-                (0, a.jsx)(i._, {
-                    showStatus: !0,
-                    width: d,
-                    opacity: 0.85,
-                    size: o,
-                }),
-                (0, a.jsx)(i._, {
-                    showStatus: !0,
-                    width: c,
-                    opacity: 0.7,
-                    size: o,
-                }),
+                (0, r.jsx)(a._, { showStatus: !0, width: c, opacity: 0.85, size: l }),
+                (0, r.jsx)(a._, { showStatus: !0, width: u, opacity: 0.7, size: l }),
             ],
         }),
     });

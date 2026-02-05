@@ -1,21 +1,16 @@
-r.d(t, {
-    a: () => h,
-}),
-    r(801460),
-    r(508300),
-    r(650828);
-var n = r(73153),
-    s = r(830215),
-    i = r(77729),
-    l = r(954571),
-    a = r(464477),
-    o = r(917136),
-    c = r(293731),
-    u = r(652215);
-async function h(e) {
-    let { abortController: t, loginSource: r, giftCodeSKUId: h } = e;
+s.d(t, { a: () => d }), s(508300);
+var r = s(73153),
+    n = s(830215),
+    a = s(77729),
+    i = s(954571),
+    l = s(464477),
+    o = s(917136),
+    h = s(293731),
+    c = s(652215);
+async function d(e) {
+    let { abortController: t, loginSource: s, giftCodeSKUId: d } = e;
     if (
-        null == i.A &&
+        null == a.A &&
         null != window.PublicKeyCredential &&
         null != PublicKeyCredential.isConditionalMediationAvailable
     ) {
@@ -23,12 +18,12 @@ async function h(e) {
         try {
             if (!(await PublicKeyCredential.isConditionalMediationAvailable())) return;
         } catch (e) {
-            (0, a.Os)(e);
+            (0, l.Os)(e);
             return;
         }
-        let { challenge: i, ticket: d } = await (0, o.Ud)();
+        let { challenge: a, ticket: u } = await (0, o.Ud)();
         try {
-            e = await (0, c.J)(i, t.signal);
+            e = await (0, h.J)(a, t.signal);
         } catch (e) {
             if (!(e instanceof DOMException)) throw e;
             switch (e.name) {
@@ -36,24 +31,17 @@ async function h(e) {
                 case "NotAllowedError":
                     break;
                 default:
-                    (0, a.Os)(e);
+                    (0, l.Os)(e);
             }
             return;
         }
-        n.h.dispatch({
-            type: "PASSWORDLESS_START",
-        }),
-            l.default.track(u.HAw.LOGIN_ATTEMPTED, {
-                source: u.mdB.PASSWORDLESS_CONDITIONAL_UI,
+        r.h.dispatch({ type: "PASSWORDLESS_START" }),
+            i.default.track(c.HAw.LOGIN_ATTEMPTED, {
+                source: c.mdB.PASSWORDLESS_CONDITIONAL_UI,
                 login_method: "passwordless",
-                login_source: r,
-                gift_code_sku_id: h,
+                login_source: s,
+                gift_code_sku_id: d,
             }),
-            await s.A.loginWebAuthn({
-                ticket: d,
-                credential: e,
-                source: r,
-                giftCodeSKUId: h,
-            });
+            await n.A.loginWebAuthn({ ticket: u, credential: e, source: s, giftCodeSKUId: d });
     }
 }

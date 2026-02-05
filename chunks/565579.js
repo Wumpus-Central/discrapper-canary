@@ -1,7 +1,5 @@
-n.d(t, {
-    m: () => s,
-}),
-    n(747238);
+"use strict";
+n.d(t, { m: () => s });
 var r = n(76522),
     i = n(652215),
     a = n(985018);
@@ -17,10 +15,7 @@ let s = [
             return (
                 t.isForumPost() ? (l = a.t.sYW2cy) : t.isThread() && (l = a.t["2YaiQ1"]),
                 {
-                    body: a.intl.formatToPlainString(l, {
-                        role: i,
-                        count: (Math.trunc(s / o) * o).toLocaleString(),
-                    }),
+                    body: a.intl.formatToPlainString(l, { role: i, count: (Math.trunc(s / o) * o).toLocaleString() }),
                     footer: a.intl.string(a.t.mVyrtu),
                 }
             );
@@ -31,11 +26,5 @@ let s = [
             light: () => n.e("92705").then(n.t.bind(n, 111992, 19)),
         },
     },
-    {
-        check: (e) =>
-            !!i.AKn.test(e) && {
-                body: a.intl.string(a.t.sTwS1a),
-            },
-        analyticsType: "API Token Warning",
-    },
+    { check: (e) => !!i.AKn.test(e) && { body: a.intl.string(a.t.sTwS1a) }, analyticsType: "API Token Warning" },
 ];

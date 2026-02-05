@@ -1,68 +1,34 @@
-n.d(t, {
-    R: () => m,
-    T: () => p,
-}),
-    n(896048);
+n.d(t, { R: () => m, T: () => h });
 var a = n(627968),
-    l = n(64700),
-    r = n(92674),
-    i = n(311907),
-    s = n(397927),
+    s = n(64700),
+    i = n(92674),
+    l = n(311907),
+    r = n(397927),
     o = n(765671),
-    c = n(475743),
-    d = n(775602);
-let u = l.createContext({
-    springConfig: {},
-    isExpanded: !1,
-});
-
+    d = n(475743),
+    c = n(775602);
+let u = s.createContext({ springConfig: {}, isExpanded: !1 });
 function m(e) {
-    let t = l.useMemo(
-        () => ({
-            springConfig: e.springConfig,
-            isExpanded: e.isExpanded,
-        }),
+    let t = s.useMemo(
+        () => ({ springConfig: e.springConfig, isExpanded: e.isExpanded }),
         [e.springConfig, e.isExpanded],
     );
-    return (0, a.jsx)(u.Provider, {
-        value: t,
-        children: e.children,
-    });
+    return (0, a.jsx)(u.Provider, { value: t, children: e.children });
 }
-
-function p(e) {
-    var t;
-    let { children: n } = e,
-        { springConfig: m, isExpanded: p } = l.useContext(u),
-        h = (0, i.bG)([d.A], () => d.A.useReducedMotion),
-        { ref: x, height: g = null } = (0, o.Ay)(),
-        f = null != (t = (0, c.A)(g)) ? t : null,
-        [{ height: b }, v] = (0, s.zhh)(() => ({
-            from: {
-                height: 0,
-            },
-            config: m,
-        }));
+function h(e) {
+    let { children: t } = e,
+        { springConfig: n, isExpanded: m } = s.useContext(u),
+        h = (0, l.bG)([c.A], () => c.A.useReducedMotion),
+        { ref: x, height: p = null } = (0, o.Ay)(),
+        g = (0, d.A)(p) ?? null,
+        [{ height: _ }, f] = (0, r.zhh)(() => ({ from: { height: 0 }, config: n }));
     return (
-        l.useLayoutEffect(() => {
-            null !== g &&
-                v({
-                    height: g,
-                    immediate: !p || h || null === f,
-                });
-        }, [g, v, p, h, f]),
-        (0, a.jsx)(r.animated.div, {
-            style: {
-                height: null === f ? "auto" : b,
-                overflow: "hidden",
-            },
-            children: (0, a.jsx)("div", {
-                style: {
-                    overflow: "hidden",
-                },
-                ref: x,
-                children: n,
-            }),
+        s.useLayoutEffect(() => {
+            null !== p && f({ height: p, immediate: !m || h || null === g });
+        }, [p, f, m, h, g]),
+        (0, a.jsx)(i.animated.div, {
+            style: { height: null === g ? "auto" : _, overflow: "hidden" },
+            children: (0, a.jsx)("div", { style: { overflow: "hidden" }, ref: x, children: t }),
         })
     );
 }

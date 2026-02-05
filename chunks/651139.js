@@ -1,6 +1,5 @@
-n.d(t, {
-    b: () => r,
-});
+"use strict";
+n.d(t, { b: () => r });
 var r = (function (e) {
     return (
         (e.Destroy = "destroy"),

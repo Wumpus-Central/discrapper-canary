@@ -1,8 +1,5 @@
-n.d(t, {
-    u: () => i,
-});
-var r = n(85526);
-
-function i(e) {
-    return r.fromByteArray(e);
+n.d(t, { u: () => l });
+var i = n(85526);
+function l(e) {
+    return i.fromByteArray(e);
 }

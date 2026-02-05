@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     oD: "twoColorGradient_e5de78",
     a7: "threeColorGradient_e5de78",

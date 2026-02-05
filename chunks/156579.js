@@ -1,41 +1,34 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
 var l = n(417597),
-    i = n(87001),
+    s = n(87001),
     a = n(811024),
-    s = n(933958),
+    r = n(933958),
     o = n(969151),
-    c = n(108959),
-    u = n(829861),
-    d = n(5867),
-    f = n(652215);
-
-function p(e) {
+    d = n(108959),
+    c = n(829861),
+    u = n(5867),
+    h = n(652215);
+function A(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {
-            connectedChannelId: p,
-            connectedActivity: h,
-            activityPanelMode: b,
-        } = (0, l.cf)([s.Ay], () => {
-            let e = s.Ay.getConnectedActivityLocation(),
-                t = s.Ay.getSelfEmbeddedActivityForLocation(e);
+            connectedChannelId: A,
+            connectedActivity: g,
+            activityPanelMode: m,
+        } = (0, l.cf)([r.Ay], () => {
+            let e = r.Ay.getConnectedActivityLocation(),
+                t = r.Ay.getSelfEmbeddedActivityForLocation(e);
             return {
                 connectedChannelId: (0, o.H)(e),
                 connectedActivity: t,
-                activityPanelMode: s.Ay.getActivityPanelMode(),
+                activityPanelMode: r.Ay.getActivityPanelMode(),
             };
         }),
-        g = (0, l.bG)([i.A], () => i.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT));
-    if (!(0, a.Gp)(p)) return null;
-    let m = null == h ? void 0 : h.applicationId;
-    return b !== d.Gd.PANEL || null == m || g || null == p || null == h || (0, c.A)(p)
+        p = (0, l.bG)([s.A], () => s.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT));
+    if (!(0, a.Gp)(A)) return null;
+    let _ = g?.applicationId;
+    return m !== u.Gd.PANEL || null == _ || p || null == A || null == g || (0, d.A)(A)
         ? null
-        : (0, r.jsx)(u.A, {
-              maxHeight: t,
-              connectedLocation: h.location,
-              renderExternalHeader: n,
-          });
+        : (0, i.jsx)(c.A, { maxHeight: t, connectedLocation: g.location, renderExternalHeader: n });
 }

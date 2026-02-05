@@ -1,10 +1,8 @@
-n.d(t, {
-    V: () => s,
-});
+"use strict";
+n.d(t, { V: () => s });
 var r = n(426983),
     i = n(176128),
     a = n(985018);
-
 function s(e, t) {
     let n =
         t === i.qo.PUBLIC
@@ -38,18 +36,10 @@ function s(e, t) {
                 tooltipDescription: n,
             };
         case r._.COMMUNITY:
-            return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipDescription: n,
-            };
+            return { tooltipTitle: a.intl.string(a.t.K7iRig), tooltipDescription: n };
         case r._.DISCOVERABLE:
-            return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipDescription: a.intl.string(a.t.op2cJ6),
-            };
+            return { tooltipTitle: a.intl.string(a.t.K7iRig), tooltipDescription: a.intl.string(a.t.op2cJ6) };
         default:
-            return {
-                tooltipTitle: a.intl.string(a.t["iZRkC/"]),
-            };
+            return { tooltipTitle: a.intl.string(a.t["iZRkC/"]) };
     }
 }

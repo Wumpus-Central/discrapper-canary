@@ -1,19 +1,14 @@
-i.d(e, {
-    i: () => T,
-});
+i.d(e, { i: () => d });
 var n = i(311907),
     l = i(684013),
     s = i(994322),
     r = i(419954),
-    u = i(256415),
-    a = i(780964),
+    a = i(256415),
+    u = i(780964),
     o = i(985018);
-let T = (0, r.zD)(a.X.OVERLAY_SHOW_KEYBIND_INDICATORS_SETTING, {
-    usePredicate: () =>
-        (0, s.A)({
-            location: "overlay_user_settings",
-        }),
-    useValue: () => (0, n.bG)([u.default], () => u.default.showKeybindIndicators),
+let d = (0, r.zD)(u.X.OVERLAY_SHOW_KEYBIND_INDICATORS_SETTING, {
+    usePredicate: () => (0, s.A)({ location: "overlay_user_settings" }),
+    useValue: () => (0, n.bG)([a.default], () => a.default.showKeybindIndicators),
     setValue: (t) => {
         l.A.setShowKeybindIndicators(t);
     },

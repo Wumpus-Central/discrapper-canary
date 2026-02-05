@@ -1,170 +1,76 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var i = n(627968),
-    l = n(64700),
-    r = n(106778),
-    o = n(92674),
-    a = n(615300),
-    s = n(397927),
-    u = n(565645),
-    c = n(21161),
-    d = n(750506),
-    p = n(147421),
-    h = n(486020),
-    m = n(690521),
-    f = n(851110),
-    g = n(624085);
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let O = [];
-
-function v(e) {
-    let { messageId: t, emoji: n, startPosition: v, targetPosition: j } = e,
-        [A, T] = l.useState(0),
-        [E, I] = l.useState(0),
-        [S, x] = l.useState(null),
-        { confettiCanvas: N } = l.useContext(c.x),
-        R = (0, r.f9)(N, S),
-        P = l.useMemo(
+i.d(t, { A: () => T });
+var n = i(627968),
+    l = i(64700),
+    a = i(106778),
+    r = i(92674),
+    o = i(615300),
+    s = i(397927),
+    u = i(565645),
+    d = i(21161),
+    c = i(750506),
+    h = i(147421),
+    m = i(486020),
+    p = i(690521),
+    g = i(851110),
+    A = i(624085);
+let f = [];
+function T(e) {
+    let { messageId: t, emoji: i, startPosition: T, targetPosition: E } = e,
+        [I, x] = l.useState(0),
+        [N, v] = l.useState(0),
+        [R, j] = l.useState(null),
+        { confettiCanvas: S } = l.useContext(d.x),
+        b = (0, a.f9)(S, R),
+        C = l.useMemo(
             () => [
                 {
-                    src:
-                        null == n.id
-                            ? m.Ay.getURL(n.name)
-                            : h.Ay.getEmojiURL({
-                                  id: n.id,
-                                  animated: !1,
-                                  size: 22,
-                              }),
+                    src: null == i.id ? p.Ay.getURL(i.name) : m.Ay.getEmojiURL({ id: i.id, animated: !1, size: 22 }),
                     colorize: !1,
                 },
             ],
-            [n.name, n.id],
+            [i.name, i.id],
         ),
-        C = j.x - (j.width / 2) * 0.5,
-        w = j.y - (j.height / 2) * 0.5,
-        _ = (0, s.zhh)({
-            from: {
-                y: v.y,
-            },
-            to: {
-                y: w,
-            },
-            config: {
-                duration: 450,
-                easing: a.A.Easing.in(a.A.Easing.exp),
-            },
+        y = E.x - (E.width / 2) * 0.5,
+        _ = E.y - (E.height / 2) * 0.5,
+        O = (0, s.zhh)({
+            from: { y: T.y },
+            to: { y: _ },
+            config: { duration: 450, easing: o.A.Easing.in(o.A.Easing.exp) },
             onChange: (e) => {
                 let { y: t } = e;
-                I(t);
+                v(t);
             },
         }),
         M = (0, s.zhh)({
-            from: {
-                x: v.x,
-                scale: 1,
-                opacity: 1,
-            },
-            to: {
-                x: C,
-                scale: 0.5,
-                opacity: 0.4,
-            },
-            config: {
-                duration: 450,
-                easing: a.A.Easing.in(a.A.Easing.ease),
-            },
+            from: { x: T.x, scale: 1, opacity: 1 },
+            to: { x: y, scale: 0.5, opacity: 0.4 },
+            config: { duration: 450, easing: o.A.Easing.in(o.A.Easing.ease) },
             onRest: () => {
-                (0, p.p)(t, n.name, n.id);
+                (0, h.p)(t, i.name, i.id);
             },
             onChange: (e) => {
                 let { x: t } = e;
-                T(t);
+                x(t);
             },
         });
     return (
         l.useEffect(() => {
-            A > 0 &&
-                E > 0 &&
-                R.createConfetti(
-                    y(b({}, f.Mw), {
-                        position: {
-                            type: "static",
-                            value: {
-                                x: A,
-                                y: E,
-                            },
-                        },
-                    }),
-                );
-        }, [R, A, E]),
-        (0, i.jsxs)(i.Fragment, {
+            I > 0 && N > 0 && b.createConfetti({ ...g.Mw, position: { type: "static", value: { x: I, y: N } } });
+        }, [b, I, N]),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, i.jsx)(r.K_, {
-                    ref: x,
-                    sprites: P,
-                    colors: O,
-                    spriteWidth: f.wn,
-                    spriteHeight: f.wn,
-                }),
-                (0, i.jsx)(d.Ay, {
-                    children: (0, i.jsx)(o.animated.div, {
-                        style: b({}, _),
-                        className: g.qq,
-                        children: (0, i.jsx)(o.animated.div, {
-                            style: y(b({}, M), {
-                                opacity: M.opacity,
-                            }),
-                            children: (0, i.jsx)(u.A, {
-                                className: g.Zg,
-                                emojiId: n.id,
-                                emojiName: n.name,
-                                animated: n.animated,
+                (0, n.jsx)(a.K_, { ref: j, sprites: C, colors: f, spriteWidth: g.wn, spriteHeight: g.wn }),
+                (0, n.jsx)(c.Ay, {
+                    children: (0, n.jsx)(r.animated.div, {
+                        style: { ...O },
+                        className: A.qq,
+                        children: (0, n.jsx)(r.animated.div, {
+                            style: { ...M, opacity: M.opacity },
+                            children: (0, n.jsx)(u.A, {
+                                className: A.Zg,
+                                emojiId: i.id,
+                                emojiName: i.name,
+                                animated: i.animated,
                                 size: "jumbo",
                             }),
                         }),

@@ -1,11 +1,9 @@
-n.d(e, {
-    a: () => l,
-});
+n.d(e, { a: () => r });
 var i = n(397927);
 n(746672);
 var a = n(632707);
 n(917364), n(925487), n(415915), n(85255), n(137507);
-let l = {
+let r = {
     CREATE: i.oXq,
     GAMING: i.UJP,
     FRIENDS: i.xUn,

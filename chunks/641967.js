@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048),
-    n(747238);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(600975);
 let i = "bandwidth_estimation",
     a = (0, r.C)({
@@ -77,14 +74,7 @@ let i = "bandwidth_estimation",
     }),
     s = {
         getConfig(e, t) {
-            let n = a.getCurrentConfig(
-                {
-                    location: "e1c55b_1",
-                },
-                {
-                    autoTrackExposure: e,
-                },
-            );
+            let n = a.getCurrentConfig({ location: "e1c55b_1" }, { autoTrackExposure: e });
             return this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) || (n.enabled = !1), n;
         },
         supportsBandwidthEstimationExperimentFullname(e, t) {

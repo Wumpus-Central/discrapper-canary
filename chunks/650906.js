@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__6d099",
     NM: "profileEffectShopPreview__6d099",

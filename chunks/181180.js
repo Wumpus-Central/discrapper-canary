@@ -1,3 +1,1 @@
-e.exports = {
-    y: "emptyStateContainer__65428",
-};
+e.exports = { y: "emptyStateContainer__65428" };

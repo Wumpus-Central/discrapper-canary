@@ -1,90 +1,79 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968),
+    s = n(64700),
+    r = n(311907),
     l = n(397927),
     a = n(830215),
     o = n(803306),
     c = n(396681),
-    u = n(854378),
-    d = n(49463),
+    d = n(854378),
+    u = n(49463),
     h = n(369053),
-    f = n(158237),
+    _ = n(158237),
     p = n(210714),
     g = n(961350),
     m = n(652215),
-    A = n(985018),
-    x = n(473169);
-s.Ay.initialize();
-let _ = (e) => {
+    f = n(985018),
+    A = n(473169);
+r.Ay.initialize();
+let E = (e) => {
     let { location: t } = e,
-        n = (0, s.bG)([g.default], () => g.default.isAuthenticated()),
-        _ = (0, s.bG)([d.A], () => d.A.hasLoadedExperiments),
-        E = (0, f.Jp)("RSL - Landing Page"),
-        [b, v] = i.useState(!1),
-        [j, y] = i.useState(A.intl.string(A.t["9exy+V"])),
-        [S, N] = i.useState(!0),
-        O = (e) => {
+        n = (0, r.bG)([g.default], () => g.default.isAuthenticated()),
+        E = (0, r.bG)([u.A], () => u.A.hasLoadedExperiments),
+        x = (0, _.Jp)("RSL - Landing Page"),
+        [v, I] = s.useState(!1),
+        [N, S] = s.useState(f.intl.string(f.t["9exy+V"])),
+        [j, C] = s.useState(!0),
+        y = (e) => {
             switch (e) {
                 case m.t02.INVALID_FORM_BODY:
                 case m.t02.DSA_RSL_REPORT_NOT_FOUND:
-                    y(A.intl.string(A.t.bzXDfc));
+                    S(f.intl.string(f.t.bzXDfc));
                     break;
                 case m.t02.DSA_RSL_ALREADY_REQUESTED:
-                    y(A.intl.string(A.t.rV00wq));
+                    S(f.intl.string(f.t.rV00wq));
                     break;
                 case m.t02.DSA_RSL_LIMITED_TIME:
-                    y(A.intl.string(A.t["0dI29h"]));
+                    S(f.intl.string(f.t["0dI29h"]));
                     break;
                 case m.t02.DSA_RSL_REPORT_INELIGIBLE:
-                    y(A.intl.string(A.t["RGa/Gb"]));
+                    S(f.intl.string(f.t["RGa/Gb"]));
                     break;
                 default:
-                    y(A.intl.string(A.t["0QLzfv"]));
+                    S(f.intl.string(f.t["0QLzfv"]));
             }
         };
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             n
-                ? (N(!0),
+                ? (C(!0),
                   o
-                      .rQ({
-                          withAnalyticsToken: !0,
-                      })
-                      .then(() => N(!1))
-                      .catch(() => N(!1)))
-                : N(!1);
+                      .rQ({ withAnalyticsToken: !0 })
+                      .then(() => C(!1))
+                      .catch(() => C(!1)))
+                : C(!1);
         }, [n]),
-        i.useEffect(() => {
-            _ || E || a.A.getExperiments();
-        }, [_, E]),
-        i.useEffect(() => {
+        s.useEffect(() => {
+            E || x || a.A.getExperiments();
+        }, [E, x]),
+        s.useEffect(() => {
             let e = async (e) => {
-                var t, n;
                 try {
-                    let n = null != e ? await (0, h.q)(e) : void 0;
-                    null != n ? y(A.intl.string(A.t.e6mZMt)) : O(null == (t = n.body) ? void 0 : t.code);
+                    let t = null != e ? await (0, h.q)(e) : void 0;
+                    null != t ? S(f.intl.string(f.t.e6mZMt)) : y(t.body?.code);
                 } catch (e) {
-                    O(null == (n = e.body) ? void 0 : n.code);
+                    y(e.body?.code);
                 } finally {
-                    v(!1);
+                    I(!1);
                 }
             };
-            v(!0), e((0, c.A)(t)), (0, p.d)("report_second_look");
+            I(!0), e((0, c.A)(t)), (0, p.d)("report_second_look");
         }, [t]),
-        E &&
-            !S &&
-            (0, r.jsxs)(u.Ay, {
-                children: [
-                    (0, r.jsx)(u.hE, {
-                        className: x.QB,
-                        children: j,
-                    }),
-                    b && (0, r.jsx)(l.y$y, {}),
-                ],
+        x &&
+            !j &&
+            (0, i.jsxs)(d.Ay, {
+                children: [(0, i.jsx)(d.hE, { className: A.QB, children: N }), v && (0, i.jsx)(l.y$y, {})],
             })
     );
 };

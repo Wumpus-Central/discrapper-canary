@@ -1,75 +1,34 @@
-n.d(t, {
-    R: () => h,
-}),
-    n(321073);
+"use strict";
+n.d(t, { R: () => f }), n(321073);
 var r = n(313961),
     i = n(652896),
     a = n(616356),
     s = n(961350),
     o = n(162605),
     l = n(650338),
-    c = n(487329),
-    u = n(601900),
+    u = n(709710),
+    c = n(601900),
     d = n(548370),
-    f = n(652215);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let h = {
+    _ = n(652215);
+let f = {
     getActiveErrors: () =>
         (0, d.D$)()
             ? a.A.getAllActiveStreams().reduce((e, t) => {
-                  var n;
-                  let a = null == (n = o.A.getRTCConnection((0, i._z)(t))) ? void 0 : n.getMediaEngineConnectionId();
-                  if (null == a || t.ownerId === s.default.getId() || t.state === f.XYD.PAUSED) return e;
-                  let p = (0, d.xA)(a, t.ownerId);
-                  if (null == p) return e;
-                  let h = r.A.getParticipant(t.channelId, (0, i._z)(t));
-                  if (null == h) return e;
-                  let m = (0, l.wz)(h);
+                  let n = o.A.getRTCConnection((0, i._z)(t))?.getMediaEngineConnectionId();
+                  if (null == n || t.ownerId === s.default.getId() || t.state === _.XYD.PAUSED) return e;
+                  let a = (0, d.xA)(n, t.ownerId);
+                  if (null == a) return e;
+                  let f = r.A.getParticipant(t.channelId, (0, i._z)(t));
+                  if (null == f) return e;
+                  let p = (0, l.wz)(f);
                   return (
-                      null == m ||
-                          ((p.short.frameRate < (0, d.s1)(m.maxFrameRate) ||
-                              p.long.frameRate < (0, d.s1)(m.maxFrameRate)) &&
-                              e.push(
-                                  _(
-                                      {
-                                          type: c.iy.STREAM_VIEW_LOW_FPS,
-                                      },
-                                      (0, u.id)((0, i._z)(t)),
-                                  ),
-                              )),
+                      null == p ||
+                          ((a.short.frameRate < (0, d.s1)(p.maxFrameRate) ||
+                              a.long.frameRate < (0, d.s1)(p.maxFrameRate)) &&
+                              e.push({ type: u.iy.STREAM_VIEW_LOW_FPS, ...(0, c.id)((0, i._z)(t)) })),
                       e
                   );
               }, [])
             : null,
-    makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),
+    makeErrorContextKey: (e) => `${e.streamKey}:${e.mediaSessionId}`,
 };

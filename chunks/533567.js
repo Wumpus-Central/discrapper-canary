@@ -1,40 +1,33 @@
-function r(e) {
-    if ((null == e ? void 0 : e.fields) == null) return null;
+n.d(t, { A: () => i });
+function i(e) {
+    if (e?.fields == null) return null;
     let t = {},
         n = {};
-    for (let r of e.fields)
-        switch (r.rawName) {
+    for (let i of e.fields)
+        switch (i.rawName) {
             case "poll_question_text":
-                t.questionText = r.rawValue;
+                t.questionText = i.rawValue;
                 break;
             case "victor_answer_id":
-                t.victorAnswerId = r.rawValue;
+                t.victorAnswerId = i.rawValue;
                 break;
             case "victor_answer_text":
-                t.victorAnswerText = r.rawValue;
+                t.victorAnswerText = i.rawValue;
                 break;
             case "victor_answer_votes":
-                t.victorAnswerVotes = parseInt(r.rawValue, 10);
+                t.victorAnswerVotes = parseInt(i.rawValue, 10);
                 break;
             case "total_votes":
-                t.totalVotes = parseInt(r.rawValue, 10);
+                t.totalVotes = parseInt(i.rawValue, 10);
                 break;
             case "victor_answer_emoji_id":
-                n.id = r.rawValue;
+                n.id = i.rawValue;
                 break;
             case "victor_answer_emoji_name":
-                n.name = r.rawValue;
+                n.name = i.rawValue;
                 break;
             case "victor_answer_emoji_animated":
-                n.animated = "true" === r.rawValue;
+                n.animated = "true" === i.rawValue;
         }
-    if (null != n.name) {
-        var r;
-        (n.animated = null != (r = n.animated) && r), (t.victorEmoji = n);
-    }
-    return t;
+    return null != n.name && ((n.animated = n.animated ?? !1), (t.victorEmoji = n)), t;
 }
-n.d(t, {
-    A: () => r,
-}),
-    n(896048);

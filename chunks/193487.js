@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n, r) {
         var i = {
             m: ["eine Minute", "einer Minute"],
@@ -56,9 +57,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

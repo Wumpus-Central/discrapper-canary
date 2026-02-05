@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__5a2df",
     AA: "mobileContainer__5a2df",

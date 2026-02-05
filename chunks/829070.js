@@ -1,6 +1,5 @@
-n.d(t, {
-    a: () => r,
-});
+"use strict";
+n.d(t, { a: () => r });
 class r {
     call() {
         try {

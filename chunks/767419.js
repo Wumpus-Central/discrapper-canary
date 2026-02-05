@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     gH: "emojiSection_d5cd2d",
     Gl: "customEmojiLabel_d5cd2d",

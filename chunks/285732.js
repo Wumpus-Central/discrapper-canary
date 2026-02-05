@@ -1,147 +1,95 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(990078),
-    c = n(397927),
-    o = n(966327),
-    d = n(304072),
+    o = n(397927),
+    d = n(966327),
+    c = n(304072),
     u = n(427262),
-    f = n(631576),
+    m = n(631576),
     g = n(148355),
-    b = n(985018),
-    m = n(102982);
-let p = (e) => {
-    let { className: t, isDisabled: l, sticker: p, canManageSticker: x } = e,
-        [h, j] = i.useState(!1),
-        [O, y] = (0, d.A)(null, 4e3),
-        v = async () => {
-            y(null), j(!0);
+    x = n(985018),
+    h = n(102982);
+let _ = (e) => {
+    let { className: t, isDisabled: l, sticker: _, canManageSticker: A } = e,
+        [p, f] = s.useState(!1),
+        [j, N] = (0, c.A)(null, 4e3),
+        E = async () => {
+            N(null), f(!0);
             try {
-                await (0, f.sl)(p);
+                await (0, m.sl)(_);
             } catch (e) {
-                y(e.body.message), j(!1);
+                N(e.body.message), f(!1);
             }
         },
-        A = u.Ay.useUserTag(p.user);
-    return (0, r.jsx)(a.m, {
-        forceOpen: null != O,
-        text: O,
+        b = u.Ay.useUserTag(_.user);
+    return (0, i.jsx)(a.m, {
+        forceOpen: null != j,
+        text: j,
         asContainer: !0,
-        children: (0, r.jsxs)("div", {
-            className: s()(m.iE, t, {
-                [m.Ce]: l,
-            }),
+        children: (0, i.jsxs)("div", {
+            className: r()(h.iE, t, { [h.Ce]: l }),
             children: [
-                (0, r.jsxs)("div", {
-                    className: s()(m.Qs, {
-                        [m.d4]: h,
-                    }),
+                (0, i.jsxs)("div", {
+                    className: r()(h.Qs, { [h.d4]: p }),
                     children: [
-                        (0, r.jsx)(g.A, {
-                            className: m.yI,
-                            size: 72,
-                            sticker: p,
-                        }),
-                        (0, r.jsxs)("div", {
+                        (0, i.jsx)(g.A, { className: h.yI, size: 72, sticker: _ }),
+                        (0, i.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     color: "text-strong",
                                     variant: "text-xs/semibold",
-                                    className: m.Zl,
-                                    children: p.name,
+                                    className: h.Zl,
+                                    children: _.name,
                                 }),
-                                null != p.user &&
-                                    (0, r.jsxs)("div", {
-                                        className: m.kQ,
+                                null != _.user &&
+                                    (0, i.jsxs)("div", {
+                                        className: h.kQ,
                                         children: [
-                                            (0, r.jsx)(o.A, {
-                                                className: m.dj,
-                                                size: c._3J.SIZE_16,
-                                                user: p.user,
-                                            }),
-                                            (0, r.jsx)(c.Text, {
+                                            (0, i.jsx)(d.A, { className: h.dj, size: o._3J.SIZE_16, user: _.user }),
+                                            (0, i.jsx)(o.Text, {
                                                 color: "text-default",
                                                 variant: "text-xs/normal",
-                                                children: A,
+                                                children: b,
                                             }),
                                         ],
                                     }),
                             ],
                         }),
-                        x
-                            ? (0, r.jsxs)("div", {
-                                  className: m.o1,
+                        A
+                            ? (0, i.jsxs)("div", {
+                                  className: h.o1,
                                   children: [
-                                      (0, r.jsx)(c.DUT, {
-                                          className: m.XI,
+                                      (0, i.jsx)(o.DUT, {
+                                          className: h.XI,
                                           onClick: () => {
-                                              (0, c.mMO)(async () => {
+                                              (0, o.mMO)(async () => {
                                                   let { default: e } = await Promise.all([
                                                       n.e("29143"),
                                                       n.e("27382"),
                                                   ]).then(n.bind(n, 445002));
                                                   return (t) =>
-                                                      (0, r.jsx)(
-                                                          e,
-                                                          (function (e) {
-                                                              for (var t = 1; t < arguments.length; t++) {
-                                                                  var n = null != arguments[t] ? arguments[t] : {},
-                                                                      r = Object.keys(n);
-                                                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                                                      (r = r.concat(
-                                                                          Object.getOwnPropertySymbols(n).filter(
-                                                                              function (e) {
-                                                                                  return Object.getOwnPropertyDescriptor(
-                                                                                      n,
-                                                                                      e,
-                                                                                  ).enumerable;
-                                                                              },
-                                                                          ),
-                                                                      )),
-                                                                      r.forEach(function (t) {
-                                                                          var r;
-                                                                          (r = n[t]),
-                                                                              t in e
-                                                                                  ? Object.defineProperty(e, t, {
-                                                                                        value: r,
-                                                                                        enumerable: !0,
-                                                                                        configurable: !0,
-                                                                                        writable: !0,
-                                                                                    })
-                                                                                  : (e[t] = r);
-                                                                      });
-                                                              }
-                                                              return e;
-                                                          })(
-                                                              {
-                                                                  sticker: p,
-                                                                  guildId: p.guild_id,
-                                                              },
-                                                              t,
-                                                          ),
-                                                      );
+                                                      (0, i.jsx)(e, { sticker: _, guildId: _.guild_id, ...t });
                                               });
                                           },
-                                          "aria-label": b.intl.string(b.t.bt75uw),
-                                          children: (0, r.jsx)(c.R2l, {
+                                          "aria-label": x.intl.string(x.t.bt75uw),
+                                          children: (0, i.jsx)(o.R2l, {
                                               size: "xs",
                                               color: "currentColor",
-                                              className: m.Kk,
+                                              className: h.Kk,
                                           }),
                                       }),
-                                      (0, r.jsx)(c.DUT, {
-                                          className: s()(m.XI, m.v_),
-                                          onClick: v,
-                                          "aria-label": b.intl.string(b.t.N86XcP),
-                                          children: (0, r.jsx)(c.PGe, {
+                                      (0, i.jsx)(o.DUT, {
+                                          className: r()(h.XI, h.v_),
+                                          onClick: E,
+                                          "aria-label": x.intl.string(x.t.N86XcP),
+                                          children: (0, i.jsx)(o.PGe, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: m.Kk,
+                                              className: h.Kk,
                                           }),
                                       }),
                                   ],
@@ -149,10 +97,7 @@ let p = (e) => {
                             : null,
                     ],
                 }),
-                h &&
-                    (0, r.jsx)(c.y$y, {
-                        className: m.u1,
-                    }),
+                p && (0, i.jsx)(o.y$y, { className: h.u1 }),
             ],
         }),
     });

@@ -1,6 +1,5 @@
-n.d(t, {
-    o: () => s,
-});
+"use strict";
+n.d(t, { o: () => s });
 var r = n(253018),
     i = n(35277),
     a = n(711371);
@@ -10,40 +9,28 @@ let s = (e, t) => {
         removeMark: s,
         deleteBackward: o,
         deleteForward: l,
-        setFragmentData: c,
-        insertData: u,
+        setFragmentData: u,
+        insertData: c,
         insertFragmentData: d,
-        insertTextData: f,
+        insertTextData: _,
     } = e;
     return (
         ((e = (0, r.o$)(e)).addMark = n),
         (e.removeMark = s),
-        (e.setFragmentData = c),
-        (e.insertData = u),
+        (e.setFragmentData = u),
+        (e.insertData = c),
         (e.insertFragmentData = d),
-        (e.insertTextData = f),
+        (e.insertTextData = _),
         (e.deleteBackward = (n) => {
             if ("line" === n && !t) {
                 let t = a.ZF.toPoint(e.selection);
                 if (null != t) {
-                    let r = a.VW.before(e, t, {
-                        unit: n,
-                    });
+                    let r = a.VW.before(e, t, { unit: n });
                     if (null != r) {
                         let n = a.e0.getLineStart(e, t, !1);
                         null != n && a.Kh.isAfter(n, r)
-                            ? i.b.delete(e, {
-                                  at: {
-                                      anchor: n,
-                                      focus: t,
-                                  },
-                              })
-                            : i.b.delete(e, {
-                                  at: {
-                                      anchor: r,
-                                      focus: t,
-                                  },
-                              });
+                            ? i.b.delete(e, { at: { anchor: n, focus: t } })
+                            : i.b.delete(e, { at: { anchor: r, focus: t } });
                         return;
                     }
                 }
@@ -54,24 +41,12 @@ let s = (e, t) => {
             if ("line" === n && !t) {
                 let t = a.ZF.toPoint(e.selection);
                 if (null != t) {
-                    let r = a.VW.after(e, t, {
-                        unit: n,
-                    });
+                    let r = a.VW.after(e, t, { unit: n });
                     if (null != r) {
                         let n = a.e0.getLineEnd(e, t, !1);
                         null != n && a.Kh.isBefore(n, r)
-                            ? i.b.delete(e, {
-                                  at: {
-                                      anchor: n,
-                                      focus: t,
-                                  },
-                              })
-                            : i.b.delete(e, {
-                                  at: {
-                                      anchor: r,
-                                      focus: t,
-                                  },
-                              });
+                            ? i.b.delete(e, { at: { anchor: n, focus: t } })
+                            : i.b.delete(e, { at: { anchor: r, focus: t } });
                         return;
                     }
                 }

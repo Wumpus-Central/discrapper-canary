@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     WN: "roleDotRight__703b9",
     Hf: "roleDotLeft__703b9",

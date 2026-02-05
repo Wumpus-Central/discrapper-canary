@@ -1,60 +1,39 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(773669),
-    l = n(253932),
-    c = n(617617),
+"use strict";
+n.d(t, { A: () => R });
+var r = n(311907),
+    i = n(506774),
+    a = n(73153),
+    s = n(773669),
+    o = n(253932),
+    l = n(617617),
     u = n(559868);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = {},
-    p = {},
+let c = {},
+    d = {},
     _ = null,
-    h = null,
+    f = null,
+    p = null,
+    h = "lastChangeLogDate",
     m = null,
-    g = "lastChangeLogDate",
-    E = null,
-    b = null,
-    y = new Set();
-
-function O(e) {
-    let { key: t } = e;
-    if (y.has(t)) return !1;
-    (y = new Set(y)).add(t);
-}
-
+    g = null,
+    E = new Set();
 function A(e) {
     let { key: t } = e;
-    if (!y.has(t)) return !1;
-    (y = new Set(y)).delete(t);
+    if (E.has(t)) return !1;
+    (E = new Set(E)).add(t);
 }
-
-function v(e) {
+function I(e) {
+    let { key: t } = e;
+    if (!E.has(t)) return !1;
+    (E = new Set(E)).delete(t);
+}
+function T(e) {
     let { config: t, latestChangelogId: n } = e;
-    (_ = n), (m = t);
+    (_ = n), (p = t);
 }
-
-function S(e) {
+function y(e) {
     let { id: t, changelog: n } = e;
-    null == f[t] && (f[t] = {}),
-        (f[t][n.locale] = {
+    null == c[t] && (c[t] = {}),
+        (c[t][n.locale] = {
             id: t,
             date: n.date,
             body: n.content,
@@ -62,85 +41,74 @@ function S(e) {
             locale: n.locale,
             [n.asset_type === u.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
         }),
-        null == p[t] && (p[t] = {}),
-        (p[t][n.locale] = u._f.LOADED_SUCCESS);
+        null == d[t] && (d[t] = {}),
+        (d[t][n.locale] = u._f.LOADED_SUCCESS);
 }
-
-function I(e) {
+function S(e) {
     let { id: t, locale: n } = e;
-    if (null != f[t] && null != f[t][n]) return !1;
-    null == p[t] && (p[t] = {}), (p[t][n] = u._f.LOADED_FAILURE);
+    if (null != c[t] && null != c[t][n]) return !1;
+    null == d[t] && (d[t] = {}), (d[t][n] = u._f.LOADED_FAILURE);
 }
-
-function T(e) {
+function v(e) {
     let { id: t } = e;
-    h = t;
+    f = t;
 }
-
 function C(e) {
     let { changelogDate: t } = e;
-    (b = new Date(t)), a.w.set(g, t);
+    (g = new Date(t)), i.w.set(h, t);
 }
-
-function N() {
-    E = l.pK.getSetting();
+function b() {
+    m = o.pK.getSetting();
 }
-class R extends (r = i.Ay.Store) {
+class N extends r.Ay.Store {
+    static displayName = "ChangelogStore";
     initialize() {
-        this.waitFor(o.default, c.A), this.syncWith([o.default], () => !0), this.syncWith([c.A], N);
-        let e = a.w.get(g);
+        this.waitFor(s.default, l.A), this.syncWith([s.default], () => !0), this.syncWith([l.A], b);
+        let e = i.w.get(h);
         if (null != e)
             try {
-                b = new Date(e);
-            } catch (e) {
-                a.w.remove(g);
+                g = new Date(e);
+            } catch {
+                i.w.remove(h);
             }
     }
     getChangelog(e, t) {
-        var n, r;
-        return null != (n = null == (r = f[e]) ? void 0 : r[t]) ? n : null;
+        return c[e]?.[t] ?? null;
     }
     latestChangelogId() {
         return _;
     }
     getChangelogLoadStatus(e, t) {
-        var n, r;
-        return null != (n = null == (r = p[e]) ? void 0 : r[t]) ? n : u._f.NOT_LOADED;
+        return d[e]?.[t] ?? u._f.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != m;
+        return null != p;
     }
     getConfig() {
-        return m;
+        return p;
     }
     overrideId() {
-        return h;
+        return f;
     }
     lastSeenChangelogId() {
-        return E;
+        return m;
     }
     lastSeenChangelogDate() {
-        return b;
+        return g;
     }
     getStateForDebugging() {
-        return {
-            changelogConfig: m,
-            loadedChangelogs: p,
-            lastSeenChangelogId: E,
-            lastSeenChangelogDate: b,
-        };
+        return { changelogConfig: p, loadedChangelogs: d, lastSeenChangelogId: m, lastSeenChangelogDate: g };
     }
     isLocked() {
-        return y.size > 0;
+        return E.size > 0;
     }
 }
-d(R, "displayName", "ChangelogStore");
-let w = new R(s.h, {
-    CHANGE_LOG_LOCK: O,
-    CHANGE_LOG_UNLOCK: A,
-    CHANGE_LOG_SET_CONFIG: v,
-    CHANGE_LOG_FETCH_SUCCESS: S,
-    CHANGE_LOG_FETCH_FAILED: I,
-    CHANGE_LOG_SET_OVERRIDE: T,
+let R = new N(a.h, {
+    CHANGE_LOG_LOCK: A,
+    CHANGE_LOG_UNLOCK: I,
+    CHANGE_LOG_SET_CONFIG: T,
+    CHANGE_LOG_FETCH_SUCCESS: y,
+    CHANGE_LOG_FETCH_FAILED: S,
+    CHANGE_LOG_SET_OVERRIDE: v,
     CHANGE_LOG_MARK_SEEN: C,
 });

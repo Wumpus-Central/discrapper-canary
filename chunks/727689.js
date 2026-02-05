@@ -1,3 +1,2 @@
-e.exports = {
-    v: "_2bf7e7f226136fc1",
-};
+"use strict";
+e.exports = { v: "draftBadge__53d72" };

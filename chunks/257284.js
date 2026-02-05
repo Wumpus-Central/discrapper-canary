@@ -1,40 +1,34 @@
-r.d(t, {
-    A: () => m,
-});
-var n = r(627968);
-r(64700);
-var i = r(311907),
-    l = r(582754),
-    a = r(397927),
-    s = r(736653),
-    o = r(97352),
-    c = r(927578),
-    u = r(788868),
-    d = r(696389);
-let m = function (e) {
-    let { isGift: t = !1, priceOptions: r } = e,
-        m = (0, i.bG)([o.A], () => o.A.get(u.gD.PREMIUM_GROUP_MONTH)),
-        p = (0, l.qB)((0, s.Ay)());
-    if (null == m)
-        return (0, n.jsx)(a.y$y, {
-            type: a.y$y.Type.PULSING_ELLIPSIS,
-            className: d.xB,
-        });
-    let g = (0, c.sS)(m, r, !1, t),
-        x = u.WT.MONTH;
-    return (0, n.jsxs)("div", {
+i.d(t, { A: () => u });
+var r = i(627968);
+i(64700);
+var n = i(311907),
+    s = i(582754),
+    a = i(397927),
+    l = i(736653),
+    o = i(97352),
+    c = i(927578),
+    d = i(788868),
+    m = i(696389);
+let u = function (e) {
+    let { isGift: t = !1, priceOptions: i } = e,
+        u = (0, n.bG)([o.A], () => o.A.get(d.gD.PREMIUM_GROUP_MONTH)),
+        x = (0, s.qB)((0, l.Ay)());
+    if (null == u) return (0, r.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS, className: m.xB });
+    let C = (0, c.sS)(u, i, !1, t),
+        g = d.WT.MONTH;
+    return (0, r.jsxs)("div", {
         children: [
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "heading-xxl/extrabold",
-                color: p ? "text-strong" : "always-white",
+                color: x ? "text-strong" : "always-white",
                 tag: "span",
-                children: g,
+                children: C,
             }),
-            (0, n.jsxs)(a.Text, {
+            (0, r.jsxs)(a.Text, {
                 variant: "text-xs/medium",
                 tag: "span",
                 color: "text-muted",
-                children: ["/", (0, c.FJ)(x)],
+                children: ["/", (0, c.FJ)(g)],
             }),
         ],
     });

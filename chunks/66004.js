@@ -1,45 +1,31 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(835245),
-    a = n(311907),
-    s = n(73153),
-    o = n(775602),
-    c = n(58149),
-    u = n(667050),
-    d = n(407781),
-    p = n(652215),
-    f = n(6694);
-
-function m(e) {
-    let { channelId: t, guildId: n, userId: m, containerDimensions: g } = e,
-        y = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-        [_, b] = i.useState([]),
-        A = _.length < 50;
-    i.useEffect(() => {
+i.d(t, { A: () => A });
+var n = i(627968),
+    a = i(64700),
+    l = i(835245),
+    r = i(311907),
+    s = i(73153),
+    o = i(775602),
+    d = i(58149),
+    c = i(667050),
+    u = i(407781),
+    m = i(652215),
+    _ = i(6694);
+function A(e) {
+    let { channelId: t, guildId: i, userId: A, containerDimensions: g } = e,
+        h = (0, r.bG)([o.A], () => o.A.useReducedMotion),
+        [f, p] = a.useState([]),
+        S = f.length < 50;
+    a.useEffect(() => {
         function e(e) {
-            let { channelId: r, userId: i, emoji: a, animationType: s, animationId: o } = e;
-            if (null != m && m !== i) return;
-            let d = null != a && null != s && null != o;
-            if (r === t && !y && A && d) {
-                let e = (0, u.Br)(a),
-                    r = null != a.id && !a.animated,
-                    d = {
-                        id: (0, l.A)(),
-                        animationType: s,
-                        animationId: o,
-                        shouldResize: r,
-                        url: e,
-                        userId: i,
-                    };
-                b((e) => [...e, d]),
-                    c.Ay.trackWithMetadata(p.HAw.VOICE_CHANNEL_EFFECT_VIEWED, {
-                        channel_id: t,
-                        guild_id: n,
-                    });
+            let { channelId: n, userId: a, emoji: r, animationType: s, animationId: o } = e;
+            if (null != A && A !== a) return;
+            let u = null != r && null != s && null != o;
+            if (n === t && !h && S && u) {
+                let e = (0, c.Br)(r),
+                    n = null != r.id && !r.animated,
+                    u = { id: (0, l.A)(), animationType: s, animationId: o, shouldResize: n, url: e, userId: a };
+                p((e) => [...e, u]),
+                    d.Ay.trackWithMetadata(m.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: i });
             }
         }
         return (
@@ -48,34 +34,22 @@ function m(e) {
                 s.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, m, y, A]);
-    let h = i.useCallback((e) => {
-        b((t) => {
-            let n = [...t],
-                r = n.findIndex((t) => t.id === e);
-            return n.splice(r, 1), n;
+    }, [t, i, A, h, S]);
+    let I = a.useCallback((e) => {
+        p((t) => {
+            let i = [...t],
+                n = i.findIndex((t) => t.id === e);
+            return i.splice(n, 1), i;
         });
     }, []);
-    return y
+    return h
         ? null
-        : (0, r.jsx)("div", {
-              className: f.Y,
-              style: {
-                  width: g.width,
-              },
-              children: (0, r.jsx)("div", {
-                  className: f.z,
-                  children: _.map((e) =>
-                      (0, r.jsx)(
-                          d.A,
-                          {
-                              containerDimensions: g,
-                              effect: e,
-                              onComplete: h,
-                          },
-                          e.id,
-                      ),
-                  ),
+        : (0, n.jsx)("div", {
+              className: _.Y,
+              style: { width: g.width },
+              children: (0, n.jsx)("div", {
+                  className: _.z,
+                  children: f.map((e) => (0, n.jsx)(u.A, { containerDimensions: g, effect: e, onComplete: I }, e.id)),
               }),
           });
 }

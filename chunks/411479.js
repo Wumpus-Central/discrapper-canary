@@ -10,51 +10,26 @@ e.exports = function (e) {
             e.COMMENT("/\\*\\*", "\\*/", {
                 relevance: 0,
                 contains: [
-                    {
-                        begin: /\w+@/,
-                        relevance: 0,
-                    },
-                    {
-                        className: "doctag",
-                        begin: "@[A-Za-z]+",
-                    },
+                    { begin: /\w+@/, relevance: 0 },
+                    { className: "doctag", begin: "@[A-Za-z]+" },
                 ],
             }),
         ]),
-        a = {
-            className: "regexp",
-            begin: /~?\/[^\/\n]+\//,
-            contains: [e.BACKSLASH_ESCAPE],
-        },
+        a = { className: "regexp", begin: /~?\/[^\/\n]+\//, contains: [e.BACKSLASH_ESCAPE] },
         s = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
         o = t(
             [
-                {
-                    begin: /"""/,
-                    end: /"""/,
-                },
-                {
-                    begin: /'''/,
-                    end: /'''/,
-                },
-                {
-                    begin: "\\$/",
-                    end: "/\\$",
-                    relevance: 10,
-                },
+                { begin: /"""/, end: /"""/ },
+                { begin: /'''/, end: /'''/ },
+                { begin: "\\$/", end: "/\\$", relevance: 10 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE,
             ],
-            {
-                className: "string",
-            },
+            { className: "string" },
         ),
         l = {
             match: [/(class|interface|trait|enum|record|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE],
-            scope: {
-                1: "keyword",
-                3: "title.class",
-            },
+            scope: { 1: "keyword", 3: "title.class" },
         };
     return {
         name: "Groovy",
@@ -105,31 +80,15 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            e.SHEBANG({
-                binary: "groovy",
-                relevance: 10,
-            }),
+            e.SHEBANG({ binary: "groovy", relevance: 10 }),
             i,
             o,
             a,
             s,
             l,
-            {
-                className: "meta",
-                begin: "@[A-Za-z]+",
-                relevance: 0,
-            },
-            {
-                className: "attr",
-                begin: r + "[ 	]*:",
-                relevance: 0,
-            },
-            {
-                begin: /\?/,
-                end: /:/,
-                relevance: 0,
-                contains: [i, o, a, s, "self"],
-            },
+            { className: "meta", begin: "@[A-Za-z]+", relevance: 0 },
+            { className: "attr", begin: r + "[ 	]*:", relevance: 0 },
+            { begin: /\?/, end: /:/, relevance: 0, contains: [i, o, a, s, "self"] },
             {
                 className: "symbol",
                 begin: "^[ 	]*" + n.lookahead(r + ":"),

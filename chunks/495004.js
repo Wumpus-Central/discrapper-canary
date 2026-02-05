@@ -475,44 +475,20 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            {
-                className: "keyword",
-                begin: /^\s*(proc [\w\d_]+|data|run|quit)[\s;]/,
-            },
-            {
-                className: "variable",
-                begin: /&[a-zA-Z_&][a-zA-Z0-9_]*\.?/,
-            },
+            { className: "keyword", begin: /^\s*(proc [\w\d_]+|data|run|quit)[\s;]/ },
+            { className: "variable", begin: /&[a-zA-Z_&][a-zA-Z0-9_]*\.?/ },
             {
                 begin: [/^\s*/, /datalines;|cards;/, /(?:.*\n)+/, /^\s*;\s*$/],
-                className: {
-                    2: "keyword",
-                    3: "string",
-                },
+                className: { 2: "keyword", 3: "string" },
             },
             {
                 begin: [/%mend|%macro/, /\s+/, /[a-zA-Z_&][a-zA-Z0-9_]*/],
-                className: {
-                    1: "built_in",
-                    3: "title.function",
-                },
+                className: { 1: "built_in", 3: "title.function" },
             },
-            {
-                className: "built_in",
-                begin: "%" + t.either(...r),
-            },
-            {
-                className: "title.function",
-                begin: /%[a-zA-Z_][a-zA-Z_0-9]*/,
-            },
-            {
-                className: "meta",
-                begin: t.either(...n) + "(?=\\()",
-            },
-            {
-                className: "string",
-                variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
-            },
+            { className: "built_in", begin: "%" + t.either(...r) },
+            { className: "title.function", begin: /%[a-zA-Z_][a-zA-Z_0-9]*/ },
+            { className: "meta", begin: t.either(...n) + "(?=\\()" },
+            { className: "string", variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE] },
             e.COMMENT("\\*", ";"),
             e.C_BLOCK_COMMENT_MODE,
         ],

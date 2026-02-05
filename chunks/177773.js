@@ -1,16 +1,12 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(228524);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(401755);
-
 function i(e) {
-    var t;
     return {
         code: e.code,
         state: r.QB.RESOLVED,
         name: e.name,
-        description: null != (t = e.description) ? t : "",
+        description: e.description ?? "",
         creatorId: e.creator_id,
         creator: e.creator,
         createdAt: e.created_at,

@@ -1,60 +1,48 @@
-l.d(t, {
-    A: () => A,
-}),
-    l(321073),
-    l(896048);
-var r = l(627968),
-    n = l(64700),
-    i = l(512750),
-    s = l(311907),
-    o = l(554146),
-    a = l(192308),
-    u = l(342494),
-    d = l(379848),
-    c = l(186111),
-    f = l(89305),
-    p = l(49999),
-    m = l(333354),
-    v = l(985018);
-
-function A(e) {
-    let { powerup: t, targetRef: l, isCardVisible: A } = e,
-        g = (0, s.bG)([c.A], () => c.A.hasLayers()),
+n.d(t, { A: () => g }), n(321073);
+var r = n(627968),
+    l = n(64700),
+    i = n(512750),
+    s = n(311907),
+    o = n(554146),
+    a = n(192308),
+    u = n(342494),
+    d = n(379848),
+    c = n(186111),
+    p = n(89305),
+    m = n(49999),
+    A = n(333354),
+    _ = n(985018);
+function g(e) {
+    let { powerup: t, targetRef: n, isCardVisible: g } = e,
+        f = (0, s.bG)([c.A], () => c.A.hasLayers()),
         x = (0, a.useHasAnyModalOpen)(),
-        b =
+        h =
             t.skuId === i.FB
                 ? {
-                      title: v.intl.string(m.default.YWo6VL),
-                      body: v.intl.string(m.default.gXVvKc),
+                      title: _.intl.string(A.default.YWo6VL),
+                      body: _.intl.string(A.default.gXVvKc),
                       dismissibleContentType: o.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
-        h = [];
-    null == b || g || !A || x || h.push(b.dismissibleContentType);
-    let [j, _] = (0, d.kn)(h),
-        E = n.useCallback(() => {
-            _(p.i.INDIRECT_ACTION);
-        }, [_]);
-    return ((0, f.A)({
-        targetRef: l,
-        onShouldClose: E,
-        enabled: null != j,
-    }),
-    null == b || null == j)
+        v = [];
+    null == h || f || !g || x || v.push(h.dismissibleContentType);
+    let [j, b] = (0, d.kn)(v),
+        E = l.useCallback(() => {
+            b(m.i.INDIRECT_ACTION);
+        }, [b]);
+    return ((0, p.A)({ targetRef: n, onShouldClose: E, enabled: null != j }), null == h || null == j)
         ? null
         : (0, r.jsx)(u.AM, {
-              targetElementRef: l,
+              targetElementRef: n,
               shouldShow: !0,
               position: "right",
               align: "top",
               size: "sm",
-              caretConfig: {
-                  align: "start",
-              },
-              title: b.title,
-              body: b.body,
+              caretConfig: { align: "start" },
+              title: h.title,
+              body: h.body,
               onRequestClose: () => {
-                  _(p.i.USER_DISMISS);
+                  b(m.i.USER_DISMISS);
               },
           });
 }

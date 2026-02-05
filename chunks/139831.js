@@ -1,44 +1,40 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(321073);
-var l = n(666717),
-    r = n(202894);
-
-function i(e) {
+n.d(t, { A: () => a }), n(321073);
+var i = n(666717),
+    l = n(202894);
+function a(e) {
     let {
         line: t,
         context: n,
-        canvasWidth: i,
-        canvasHeight: a,
-        fallbackColor: s,
+        canvasWidth: a,
+        canvasHeight: s,
+        fallbackColor: r,
         outlineColorDark: o,
         outlineColorLight: c,
-        linesDrawnAt: u,
-        deadDrawables: d,
+        linesDrawnAt: d,
+        deadDrawables: u,
     } = e;
-    null == u.current[t.id] && (u.current[t.id] = Date.now()), (n.lineCap = "round"), (n.lineJoin = "round");
-    let f = t.points.map((e) => (0, l.RT)(e, i, a)),
-        p = u.current[t.id],
-        b = (e) => p + e.deltaTime + 1500 >= Date.now(),
-        g = (e) => p + e.deltaTime <= Date.now() && b(e),
-        m = f.find(g);
-    if (null == m) {
-        b(t.points[t.points.length - 1]) || d.push(t);
+    null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = "round"), (n.lineJoin = "round");
+    let h = t.points.map((e) => (0, i.RT)(e, a, s)),
+        m = d.current[t.id],
+        A = (e) => m + e.deltaTime + 1500 >= Date.now(),
+        p = (e) => m + e.deltaTime <= Date.now() && A(e),
+        g = h.find(p);
+    if (null == g) {
+        A(t.points[t.points.length - 1]) || u.push(t);
         return;
     }
-    let h = (e, t) => {
-            let l = null;
-            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(m.x, m.y);
-            for (let e = 1; e < f.length; e++) {
-                let t = f[e];
-                g(t) && (n.lineTo(t.x, t.y), (l = t));
+    let f = (e, t) => {
+            let i = null;
+            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(g.x, g.y);
+            for (let e = 1; e < h.length; e++) {
+                let t = h[e];
+                p(t) && (n.lineTo(t.x, t.y), (i = t));
             }
-            return n.stroke(), l;
+            return n.stroke(), i;
         },
-        { fillColor: A, outlineColor: y } = (0, l.yO)(t.userId, o, c, s),
-        _ = h(y, 9),
-        E = null != _ && g(_);
-    E && (0, r.y)(n, _.x, _.y, y, 3), h(A, 6), E && (0, r.k)(n, _.x, _.y, t.userId);
+        { fillColor: _, outlineColor: E } = (0, i.yO)(t.userId, o, c, r),
+        C = f(E, 9),
+        x = null != C && p(C);
+    x && (0, l.y)(n, C.x, C.y, E, 3), f(_, 6), x && (0, l.k)(n, C.x, C.y, t.userId);
 }
 n(824217);

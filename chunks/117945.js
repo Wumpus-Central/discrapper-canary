@@ -1,18 +1,7 @@
-n.d(t, {
-    T: () => s,
-});
-var l = n(607399),
-    r = n(483827),
-    i = n(788868);
-
-function s(e, t) {
-    return (
-        !e &&
-        t === i.pe.TIER_2 &&
-        !l.Ct &&
-        !l.KY &&
-        !(0, r.du)({
-            location: "wowMomentEligibilityUtils",
-        })
-    );
+t.d(n, { T: () => s });
+var i = t(607399),
+    l = t(483827),
+    r = t(788868);
+function s(e, n) {
+    return !e && n === r.pe.TIER_2 && !i.Ct && !i.KY && !(0, l.du)({ location: "wowMomentEligibilityUtils" });
 }

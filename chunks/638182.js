@@ -1,11 +1,6 @@
-n.d(t, {
-    q: () => a,
-});
-var r = n(319225),
-    i = n(985018);
-let a = () => {
-    (0, r.E)({
-        title: i.intl.string(i.t.oPV2cy),
-        body: i.intl.string(i.t.DdRizV),
-    });
+n.d(t, { q: () => r });
+var i = n(319225),
+    s = n(985018);
+let r = () => {
+    (0, i.E)({ title: s.intl.string(s.t.oPV2cy), body: s.intl.string(s.t.DdRizV) });
 };

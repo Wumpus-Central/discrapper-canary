@@ -1,52 +1,33 @@
-n.d(t, {
-    S: () => u,
-}),
-    n(896048);
-var l = n(64700),
-    a = n(311907),
-    r = n(620140),
-    i = n(38181),
-    s = n(412461),
-    c = n(310419),
-    o = n(656106),
-    d = n(652215);
-
+a.d(t, { S: () => u });
+var n = a(64700),
+    i = a(311907),
+    s = a(620140),
+    l = a(38181),
+    r = a(412461),
+    o = a(310419),
+    c = a(656106),
+    d = a(652215);
 function u(e) {
-    let t = (0, a.bG)([i.A], () => i.A.getCategories()),
-        n = (0, r.A)(),
-        u = l.useMemo(
-            () => [
-                {
-                    id: n.id.toString(),
-                    label: n.name,
-                },
-                ...t.map((e) => ({
-                    id: e.id.toString(),
-                    label: e.name,
-                })),
-            ],
-            [t, n],
+    let t = (0, i.bG)([l.A], () => l.A.getCategories()),
+        a = (0, s.A)(),
+        u = n.useMemo(
+            () => [{ id: a.id.toString(), label: a.name }, ...t.map((e) => ({ id: e.id.toString(), label: e.name }))],
+            [t, a],
         ),
-        p = (0, c.R4)(),
-        h = l.useCallback(
+        h = (0, o.R4)(),
+        m = n.useCallback(
             (e) => {
                 let t = u.find((t) => t.id === e);
                 null != t &&
-                    ((0, s.TR)(d.HAw.APP_DIRECTORY_CATEGORY_CLICKED, {
+                    ((0, r.TR)(d.HAw.APP_DIRECTORY_CATEGORY_CLICKED, {
                         category: t.label,
                         category_id: Number(t.id),
-                        current_page: null == p ? void 0 : p.type,
+                        current_page: h?.type,
                     }),
-                    (0, o.kq)({
-                        categoryId: e,
-                    }));
+                    (0, c.kq)({ categoryId: e }));
             },
-            [null == p ? void 0 : p.type, u],
+            [h?.type, u],
         ),
-        m = null != e && u.some((t) => t.id === e) ? e : u[0].id;
-    return {
-        tabs: u,
-        selectedTab: m,
-        onSelectTab: h,
-    };
+        p = null != e && u.some((t) => t.id === e) ? e : u[0].id;
+    return { tabs: u, selectedTab: p, onSelectTab: m };
 }

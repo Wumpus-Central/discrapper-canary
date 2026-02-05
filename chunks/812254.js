@@ -1,3 +1,1 @@
-e.exports = {
-    B: "af6d7e0546b1acfb",
-};
+e.exports = { B: "platforms__93ebb" };

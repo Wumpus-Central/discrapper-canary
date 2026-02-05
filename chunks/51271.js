@@ -1,14 +1,9 @@
-n.d(t, {
-    NC: () => u,
-    cK: () => c,
-    gH: () => o,
-    iN: () => l,
-});
+"use strict";
+n.d(t, { NC: () => c, cK: () => u, gH: () => o, iN: () => l });
 var r = n(961350),
     i = n(696451),
     a = n(954571),
     s = n(652215);
-
 function o(e) {
     let { guildId: t, applicationUserId: n, applicationStatus: i } = e;
     a.default.track(s.HAw.GUILD_MEMBER_APPLICATION_VIEWED, {
@@ -18,7 +13,6 @@ function o(e) {
         application_status: i,
     });
 }
-
 function l(e) {
     let { guildId: t, actionType: n, applicationUserId: i } = e;
     a.default.track(s.HAw.GUILD_MEMBER_APPLICATION_ACTION, {
@@ -28,25 +22,20 @@ function l(e) {
         viewing_user_id: r.default.getId(),
     });
 }
-
-function c(e) {
-    var t;
-    let { guildId: n, messageId: o, channelId: l, joinRequestStatus: c, joinRequestUserId: u } = e,
-        d = r.default.getId(),
-        f = (null == (t = i.Ay.getMember(n, d)) ? void 0 : t.joinedAt) != null;
+function u(e) {
+    let { guildId: t, messageId: n, channelId: o, joinRequestStatus: l, joinRequestUserId: u } = e,
+        c = r.default.getId(),
+        d = i.Ay.getMember(t, c)?.joinedAt != null;
     a.default.track(s.HAw.GUILD_MEMBER_APPLICATION_INTERVIEW_MESSAGE, {
-        guild_id: n,
-        channel_id: l,
-        message_id: o,
-        message_user_id: d,
-        is_member: f,
-        join_request_status: c,
+        guild_id: t,
+        channel_id: o,
+        message_id: n,
+        message_user_id: c,
+        is_member: d,
+        join_request_status: l,
         join_request_user_id: u,
     });
 }
-
-function u(e) {
-    a.default.track(s.HAw.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
-        guild_id: e,
-    });
+function c(e) {
+    a.default.track(s.HAw.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }

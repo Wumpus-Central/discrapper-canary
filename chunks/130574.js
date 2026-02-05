@@ -1,82 +1,40 @@
-n.d(e, {
-    default: () => s,
-});
-var r = n(627968),
-    i = n(158954),
-    l = n(397927),
-    o = n(360469),
-    a = n(985018);
-
-function s(t) {
-    let { application: e, onCancel: n, onClose: s, onConfirm: c } = t,
-        p = (function (t, e) {
-            if (null == t) return {};
-            var n,
-                r,
-                i,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (i = 0, n = Reflect.ownKeys(t); i < n.length; i++)
-                    (r = n[i]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (l[r] = t[r]);
-                return l;
-            }
-            if (
-                ((l = (function (t, e) {
-                    if (null == t) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.getOwnPropertyNames(t);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
-                            !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
-                    return i;
-                })(t, e)),
-                Object.getOwnPropertySymbols)
-            )
-                for (i = 0, n = Object.getOwnPropertySymbols(t); i < n.length; i++)
-                    (r = n[i]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (l[r] = t[r]);
-            return l;
-        })(t, ["application", "onCancel", "onClose", "onConfirm"]);
-    return (0, r.jsx)(i.Modal, {
-        transitionState: p.transitionState,
-        onClose: s,
-        title: a.intl.string(a.t["06YebE"]),
+n.d(i, { default: () => c });
+var a = n(627968),
+    r = n(158954),
+    e = n(397927),
+    s = n(360469),
+    l = n(985018);
+function c(t) {
+    let { application: i, onCancel: n, onClose: c, onConfirm: o, ...d } = t;
+    return (0, a.jsx)(r.Modal, {
+        transitionState: d.transitionState,
+        onClose: c,
+        title: l.intl.string(l.t["06YebE"]),
         actions: [
             {
-                text: a.intl.string(a.t["ETE/oC"]),
+                text: l.intl.string(l.t["ETE/oC"]),
                 onClick: () => {
-                    n(), s();
+                    n(), c();
                 },
                 variant: "secondary",
             },
             {
-                text: a.intl.string(a.t["3PatSz"]),
+                text: l.intl.string(l.t["3PatSz"]),
                 onClick: () => {
-                    c(), s();
+                    o(), c();
                 },
                 variant: "primary",
             },
         ],
-        children: (0, r.jsxs)(l.BJc, {
+        children: (0, a.jsxs)(e.BJc, {
             children: [
-                (0, r.jsxs)(l.Text, {
+                (0, a.jsxs)(e.Text, {
                     variant: "text-sm/normal",
-                    children: [
-                        a.intl.format(a.t["s+WDGz"], {
-                            activityName: e.name,
-                        }),
-                        " ",
-                    ],
+                    children: [l.intl.format(l.t["s+WDGz"], { activityName: i.name }), " "],
                 }),
-                (0, r.jsx)(l.Text, {
+                (0, a.jsx)(e.Text, {
                     variant: "text-sm/normal",
-                    children: (0, r.jsx)(l.MzZ, {
-                        href: o.i6,
-                        children: a.intl.string(a.t.E0gf5l),
-                    }),
+                    children: (0, a.jsx)(e.MzZ, { href: s.i6, children: l.intl.string(l.t.E0gf5l) }),
                 }),
             ],
         }),

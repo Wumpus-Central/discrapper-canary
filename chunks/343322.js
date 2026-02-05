@@ -1,77 +1,42 @@
-n.d(e, {
-    A: () => A,
-});
-var r = n(627968);
-n(64700);
-var i = n(665260),
-    l = n(311907),
-    a = n(314116),
-    c = n(397927),
-    o = n(59636),
-    u = n(189081),
-    d = n(194871),
-    b = n(954571),
-    s = n(652215),
-    p = n(985018);
-
-function A(t, e) {
-    let n = (0, l.bG)([d.A], () => d.A.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
-        A = (0, l.bG)([u.A], () => !u.A.hasRemovedLibraryApplicationThisSession);
-    if (n && !t.isHidden()) return null;
-
-    function f() {
-        let e = (0, i.PQ)(t.getFlags(), s.hM6.HIDDEN);
-        o.V(t.id, t.branchId, e),
-            b.default.track(
-                s.HAw.APPLICATION_SETTINGS_UPDATED,
-                (function (t) {
-                    for (var e = 1; e < arguments.length; e++) {
-                        var n = null != arguments[e] ? arguments[e] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (e) {
-                                var r;
-                                (r = n[e]),
-                                    e in t
-                                        ? Object.defineProperty(t, e, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (t[e] = r);
-                            });
-                    }
-                    return t;
-                })(
-                    {
-                        hidden_enabled: (0, i.Lt)(e, s.hM6.HIDDEN),
-                    },
-                    t.getAnalyticsData(),
-                ),
-            );
+i.d(n, { A: () => h });
+var l = i(627968);
+i(64700);
+var a = i(665260),
+    e = i(311907),
+    r = i(314116),
+    d = i(397927),
+    c = i(59636),
+    A = i(189081),
+    s = i(194871),
+    u = i(954571),
+    o = i(652215),
+    b = i(985018);
+function h(t, n) {
+    let i = (0, e.bG)([s.A], () => s.A.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        h = (0, e.bG)([A.A], () => !A.A.hasRemovedLibraryApplicationThisSession);
+    if (i && !t.isHidden()) return null;
+    function p() {
+        let n = (0, a.PQ)(t.getFlags(), o.hM6.HIDDEN);
+        c.V(t.id, t.branchId, n),
+            u.default.track(o.HAw.APPLICATION_SETTINGS_UPDATED, {
+                hidden_enabled: (0, a.Lt)(n, o.hM6.HIDDEN),
+                ...t.getAnalyticsData(),
+            });
     }
-    return (0, r.jsx)(c.Drp, {
+    return (0, l.jsx)(d.Drp, {
         id: "in-library",
-        label: t.isHidden() ? p.intl.string(p.t["0dnEUJ"]) : p.intl.string(p.t.TuJXLx),
+        label: t.isHidden() ? b.intl.string(b.t["0dnEUJ"]) : b.intl.string(b.t.TuJXLx),
         action: function () {
             null != t &&
-                null != e &&
-                (t.isHidden() || !A
-                    ? f()
-                    : (0, a.A)({
-                          title: p.intl.string(p.t.oB7isi),
-                          subtitle: p.intl.format(p.t.HXfjKt, {
-                              name: e.name,
-                          }),
+                null != n &&
+                (t.isHidden() || !h
+                    ? p()
+                    : (0, r.A)({
+                          title: b.intl.string(b.t.oB7isi),
+                          subtitle: b.intl.format(b.t.HXfjKt, { name: n.name }),
                           variant: "primary",
-                          confirmText: p.intl.string(p.t.OWjIiV),
-                          onConfirm: () => f(),
+                          confirmText: b.intl.string(b.t.OWjIiV),
+                          onConfirm: () => p(),
                       }));
         },
     });

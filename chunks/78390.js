@@ -1,7 +1,5 @@
-n.d(t, {
-    Q: () => a,
-    f: () => s,
-});
+"use strict";
+n.d(t, { Q: () => a, f: () => s });
 var r = n(317525),
     i = n(985018);
 let a = (e) => {
@@ -20,10 +18,9 @@ let a = (e) => {
     },
     s = (e, t, n) => {
         if ("linked-roles" === e) {
-            var i;
             if (null == n) return null;
             let e = r.A.getRole(n, t);
-            return null == e || (null == (i = e.tags) ? void 0 : i.guild_connections) !== null ? null : e.name;
+            return null == e || e.tags?.guild_connections !== null ? null : e.name;
         }
         return null;
     };

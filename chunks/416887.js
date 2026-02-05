@@ -1,30 +1,28 @@
-n.d(t, {
-    L: () => d,
-}),
-    n(896048),
-    n(65821);
-var r,
-    i = n(64700),
-    a = n(835245),
-    s = n(313271);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = (0, a.A)(),
-    c = new Map(),
-    u = new Map();
-class d extends (r = i.Component) {
+"use strict";
+n.d(t, { L: () => u });
+var r = n(64700),
+    i = n(835245),
+    a = n(313271);
+let s = (0, i.A)(),
+    o = new Map(),
+    l = new Map();
+class u extends r.Component {
+    elementId;
+    isVisible = !1;
+    static defaultProps = {
+        active: !0,
+        children: r.createElement("span"),
+        root: null,
+        rootMargin: "0px 0px 0px 0px",
+        threshold: [0, 5e-324],
+    };
+    constructor(e) {
+        super(e);
+        const { root: t, rootMargin: n, threshold: r } = e;
+        t ? (o.has(t) ? (this.elementId = o.get(t) || "") : o.set(t, (0, i.A)())) : (this.elementId = s);
+        const u = this.getVisibilityObserverId();
+        l.has(u) || l.set(u, new a.j({ root: t, rootMargin: n, threshold: r }));
+    }
     componentDidMount() {
         if (this.props.active) {
             let e = this.getVisibilityObserver();
@@ -47,37 +45,15 @@ class d extends (r = i.Component) {
     }
     getVisibilityObserverId() {
         let { rootMargin: e, threshold: t } = this.props;
-        return "".concat(this.elementId, " ").concat(e, " ").concat(t);
+        return `${this.elementId} ${e} ${t}`;
     }
     getVisibilityObserver() {
         let e = this.getVisibilityObserverId(),
-            t = u.get(e);
-        if (!t) throw Error("Visibility sensor with id ".concat(e, " not found."));
+            t = l.get(e);
+        if (!t) throw Error(`Visibility sensor with id ${e} not found.`);
         return t;
     }
     render() {
-        return i.Children.only(this.props.children);
-    }
-    constructor(e) {
-        super(e), o(this, "elementId", void 0), o(this, "isVisible", !1);
-        const { root: t, rootMargin: n, threshold: r } = e;
-        t ? (c.has(t) ? (this.elementId = c.get(t) || "") : c.set(t, (0, a.A)())) : (this.elementId = l);
-        const i = this.getVisibilityObserverId();
-        u.has(i) ||
-            u.set(
-                i,
-                new s.j({
-                    root: t,
-                    rootMargin: n,
-                    threshold: r,
-                }),
-            );
+        return r.Children.only(this.props.children);
     }
 }
-o(d, "defaultProps", {
-    active: !0,
-    children: i.createElement("span"),
-    root: null,
-    rootMargin: "0px 0px 0px 0px",
-    threshold: [0, 5e-324],
-});

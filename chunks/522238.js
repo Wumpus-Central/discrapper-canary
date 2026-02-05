@@ -1,10 +1,7 @@
-c.d(e, {
-    openMFAModal: () => t,
-}),
-    c(205816);
-var d = c(533925),
-    s = c(611248);
-
-function t(a, e, t) {
-    (a.methods = a.methods.filter((a) => Object.hasOwn(s.e, a.type))), c(720353).a(a, (a) => (0, d.s0)(a, e), t);
+"use strict";
+n.d(e, { openMFAModal: () => i }), n(205816);
+var r = n(533925),
+    a = n(611248);
+function i(t, e, i) {
+    (t.methods = t.methods.filter((t) => Object.hasOwn(a.e, t.type))), n(720353).a(t, (t) => (0, r.s0)(t, e), i);
 }

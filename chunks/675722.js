@@ -1,19 +1,9 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
-var i = n(143413),
+var l = n(143413),
     a = n(672834);
-
-function s(e) {
-    let { message: t, channel: n, compact: s, disableInteraction: o } = e;
-    return (0, i.A)(t)
-        ? (0, r.jsx)(a.A, {
-              message: t,
-              channel: n,
-              compact: s,
-              disableInteraction: o,
-          })
-        : null;
+function r(e) {
+    let { message: t, channel: n, compact: r, disableInteraction: s } = e;
+    return (0, l.A)(t) ? (0, i.jsx)(a.A, { message: t, channel: n, compact: r, disableInteraction: s }) : null;
 }

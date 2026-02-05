@@ -1,167 +1,91 @@
-n.d(t, {
-    Ay: () => p,
-    SB: () => m,
-}),
-    n(321073);
-var r = n(469993),
-    i = n(836039),
+"use strict";
+n.d(t, { Ay: () => _, SB: () => h }), n(321073);
+var i = n(469993),
+    s = n(836039),
     l = n(979816),
-    s = n(567305),
+    r = n(567305),
     a = n(555325),
-    c = n(403362),
-    o = n(91168),
-    d = n(652215),
+    o = n(403362),
+    d = n(91168),
+    c = n(652215),
     u = n(985018);
-let { getSectionDefinition: f } = o.A,
+let { getSectionDefinition: m } = d.A,
     g = "HEADER",
-    b = "DIVIDER";
-
-function m(e) {
-    var t, n;
+    x = "DIVIDER";
+function h(e) {
     let {
-            guild: o,
-            canManageGuild: m,
-            canViewAuditLog: p,
-            canManageRoles: x,
-            canManageBans: h,
-            canAccessMembersPage: j,
-            canViewGuildAnalytics: O,
-            isOwner: y,
-            isGuildAdmin: v,
-            canManageGuildExpressions: A,
+            guild: t,
+            canManageGuild: n,
+            canViewAuditLog: d,
+            canManageRoles: h,
+            canManageBans: _,
+            canAccessMembersPage: A,
+            canViewGuildAnalytics: p,
+            isOwner: f,
+            isGuildAdmin: j,
+            canManageGuildExpressions: N,
         } = e,
         E = () =>
             (0, a.V9)({
-                guild: o,
-                isOwner: y,
-                canManageGuildRoleSubscriptions: (0, a.X9)(o),
-                isMonetizationWaitlistEnabledForGuild: (0, r.Kw)(o.id),
-                isGuildEligibleForRoleSubscriptions: (0, s.OV)(o.id),
-                isExpeditedMonetizationOnboardingGuild: (0, r.Sm)(o),
-                isUserInCreatorMonetizationEligibleCountry: (0, r.Z1)(),
-                shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.mk)(o.id),
+                guild: t,
+                isOwner: f,
+                canManageGuildRoleSubscriptions: (0, a.X9)(t),
+                isMonetizationWaitlistEnabledForGuild: (0, i.Kw)(t.id),
+                isGuildEligibleForRoleSubscriptions: (0, r.OV)(t.id),
+                isExpeditedMonetizationOnboardingGuild: (0, i.Sm)(t),
+                isUserInCreatorMonetizationEligibleCountry: (0, i.Z1)(),
+                shouldRestrictUpdatingRoleSubscriptionSettings: (0, s.mk)(t.id),
             }),
-        N =
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })({}, e)),
-            (n = n =
-                {
-                    monetizationPredicate: E,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t),
-        _ = [];
-    _.push({
-        section: g,
-        label: "" !== o.name ? o.name : u.intl.string(u.t["154/bL"]),
-    }),
-        _.push(f(d.BEX.PROFILE, N)),
-        _.push(f(d.BEX.TAG, N)),
-        _.push(f(d.BEX.ENGAGEMENT, N)),
-        _.push(f(d.BEX.BOOST_PERKS, N)),
-        A &&
-            (_.push({
-                section: b,
-            }),
-            _.push({
-                section: g,
-                label: u.intl.string(u.t.m6lkGy),
-            }),
-            _.push(f(d.BEX.EMOJI, N)),
-            _.push(f(d.BEX.STICKERS, N)),
-            _.push(f(d.BEX.SOUNDBOARD, N))),
-        (m || x || j || v) &&
-            (_.push({
-                section: b,
-            }),
-            _.push({
-                section: g,
-                label: u.intl.string(u.t.bMAKMK),
-            }),
-            _.push(f(d.BEX.MEMBERS, N)),
-            _.push(f(d.BEX.ROLES, N)),
-            _.push(f(d.BEX.INVITES, N)),
-            _.push(f(d.BEX.ACCESS, N))),
-        _.push({
-            section: b,
-        }),
-        _.push({
-            section: g,
-            label: u.intl.string(u.t.wF3KJy),
-        }),
-        _.push(f(d.BEX.INTEGRATIONS, N)),
-        _.push(f(d.BEX.APP_DIRECTORY, N));
-    let S = !o.features.has(d.GuildFeatures.COMMUNITY) && ((0, l.hX)(o.id) || (0, l.i_)(o.id));
-    (m || p || h || S) &&
-        (_.push({
-            section: b,
-        }),
-        _.push({
-            section: g,
-            label: u.intl.string(u.t["5tbTdV"]),
-        }),
-        _.push(f(d.BEX.SAFETY, N)),
-        _.push(f(d.BEX.MODERATION, N)),
-        _.push(f(d.BEX.AUDIT_LOG, N)),
-        _.push(f(d.BEX.BANS, N)),
-        _.push(f(d.BEX.GUILD_AUTOMOD, N)));
-    let T = o.features.has(d.GuildFeatures.COMMUNITY) && O,
-        I = E();
+        b = { ...e, monetizationPredicate: E },
+        T = [];
+    T.push({ section: g, label: "" !== t.name ? t.name : u.intl.string(u.t["154/bL"]) }),
+        T.push(m(c.BEX.PROFILE, b)),
+        T.push(m(c.BEX.TAG, b)),
+        T.push(m(c.BEX.ENGAGEMENT, b)),
+        T.push(m(c.BEX.BOOST_PERKS, b)),
+        N &&
+            (T.push({ section: x }),
+            T.push({ section: g, label: u.intl.string(u.t.m6lkGy) }),
+            T.push(m(c.BEX.EMOJI, b)),
+            T.push(m(c.BEX.STICKERS, b)),
+            T.push(m(c.BEX.SOUNDBOARD, b))),
+        (n || h || A || j) &&
+            (T.push({ section: x }),
+            T.push({ section: g, label: u.intl.string(u.t.bMAKMK) }),
+            T.push(m(c.BEX.MEMBERS, b)),
+            T.push(m(c.BEX.ROLES, b)),
+            T.push(m(c.BEX.INVITES, b)),
+            T.push(m(c.BEX.ACCESS, b))),
+        T.push({ section: x }),
+        T.push({ section: g, label: u.intl.string(u.t.wF3KJy) }),
+        T.push(m(c.BEX.INTEGRATIONS, b)),
+        T.push(m(c.BEX.APP_DIRECTORY, b));
+    let C = !t.features.has(c.GuildFeatures.COMMUNITY) && ((0, l.hX)(t.id) || (0, l.i_)(t.id));
+    (n || d || _ || C) &&
+        (T.push({ section: x }),
+        T.push({ section: g, label: u.intl.string(u.t["5tbTdV"]) }),
+        T.push(m(c.BEX.SAFETY, b)),
+        T.push(m(c.BEX.MODERATION, b)),
+        T.push(m(c.BEX.AUDIT_LOG, b)),
+        T.push(m(c.BEX.BANS, b)),
+        T.push(m(c.BEX.GUILD_AUTOMOD, b)));
+    let I = t.features.has(c.GuildFeatures.COMMUNITY) && p,
+        v = E();
     return (
-        (m || T || I) &&
-            (_.push({
-                section: b,
-            }),
-            _.push(f(d.BEX.COMMUNITY, N)),
-            _.push(f(d.BEX.ONBOARDING, N)),
-            _.push(f(d.BEX.ANALYTICS, N)),
-            _.push(f(d.BEX.COMMUNITY_WELCOME, N)),
-            _.push(f(d.BEX.DISCOVERY_LANDING_PAGE, N)),
-            _.push(f(d.BEX.ROLE_SUBSCRIPTIONS, N)),
-            _.push(f(d.BEX.GUILD_PRODUCTS, N)),
-            _.push(f(d.BEX.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
-        _.push({
-            section: b,
-        }),
-        _.push(f(d.BEX.GUILD_TEMPLATES, N)),
-        _.push(f(d.BEX.DELETE, N)),
-        _.filter(c.Vq)
+        (n || I || v) &&
+            (T.push({ section: x }),
+            T.push(m(c.BEX.COMMUNITY, b)),
+            T.push(m(c.BEX.ONBOARDING, b)),
+            T.push(m(c.BEX.ANALYTICS, b)),
+            T.push(m(c.BEX.COMMUNITY_WELCOME, b)),
+            T.push(m(c.BEX.DISCOVERY_LANDING_PAGE, b)),
+            T.push(m(c.BEX.ROLE_SUBSCRIPTIONS, b)),
+            T.push(m(c.BEX.GUILD_PRODUCTS, b)),
+            T.push(m(c.BEX.ROLE_SUBSCRIPTIONS_STORE_PAGE, b))),
+        T.push({ section: x }),
+        T.push(m(c.BEX.GUILD_TEMPLATES, b)),
+        T.push(m(c.BEX.DELETE, b)),
+        T.filter(o.Vq)
     );
 }
-let p = {
-    generateSections: m,
-};
+let _ = { generateSections: h };

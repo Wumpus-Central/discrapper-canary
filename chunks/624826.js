@@ -1,11 +1,9 @@
-n.d(t, {
-    t: () => o,
-});
+"use strict";
+n.d(t, { t: () => o });
 var r = n(392107),
     i = n(954571),
     a = n(486020),
     s = n(652215);
-
 function o(e) {
     let { avatarHash: t, avatarId: n, isGuildProfile: o = !1, avatarAssetOrigin: l = r.E.NEW_ASSET } = e;
     i.default.track(s.HAw.USER_AVATAR_UPDATED, {

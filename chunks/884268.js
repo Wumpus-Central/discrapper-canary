@@ -144,65 +144,31 @@ e.exports = function (e) {
     let a = {
             scope: "string",
             variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                },
-                {
-                    begin: /"/,
-                    end: /"/,
-                },
+                { begin: /'/, end: /'/ },
+                { begin: /"/, end: /"/ },
             ],
         },
-        s = {
-            scope: "number",
-            match: /\d+/,
-        },
-        o = {
-            begin: /\(/,
-            end: /\)/,
-            excludeBegin: !0,
-            excludeEnd: !0,
-            contains: [a, s],
-        },
-        l = {
-            beginKeywords: n.join(" "),
-            keywords: {
-                name: n,
-            },
-            relevance: 0,
-            contains: [o],
-        },
-        c = {
+        s = { scope: "number", match: /\d+/ },
+        o = { begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0, contains: [a, s] },
+        l = { beginKeywords: n.join(" "), keywords: { name: n }, relevance: 0, contains: [o] },
+        u = {
             match: /\|(?=[A-Za-z_]+:?)/,
             beginScope: "punctuation",
             relevance: 0,
-            contains: [
-                {
-                    match: /[A-Za-z_]+:?/,
-                    keywords: r,
-                },
-            ],
+            contains: [{ match: /[A-Za-z_]+:?/, keywords: r }],
         },
-        u = (e, { relevance: n }) => ({
-            beginScope: {
-                1: "template-tag",
-                3: "name",
-            },
+        c = (e, { relevance: n }) => ({
+            beginScope: { 1: "template-tag", 3: "name" },
             relevance: n || 2,
             endScope: "template-tag",
             begin: [/\{%/, /\s*/, t.either(...e)],
             end: /%\}/,
             keywords: "in",
-            contains: [c, l, a, s],
+            contains: [u, l, a, s],
         }),
         d = /[a-z_]+/,
-        f = u(i, {
-            relevance: 2,
-        }),
-        p = u([d], {
-            relevance: 1,
-        });
+        _ = c(i, { relevance: 2 }),
+        f = c([d], { relevance: 1 });
     return {
         name: "Twig",
         aliases: ["craftcms"],
@@ -210,14 +176,9 @@ e.exports = function (e) {
         subLanguage: "xml",
         contains: [
             e.COMMENT(/\{#/, /#\}/),
+            _,
             f,
-            p,
-            {
-                className: "template-variable",
-                begin: /\{\{/,
-                end: /\}\}/,
-                contains: ["self", c, l, a, s],
-            },
+            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: ["self", u, l, a, s] },
         ],
     };
 };

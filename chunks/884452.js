@@ -1,44 +1,37 @@
-n.d(t, {
-    Ay: () => A,
-    is: () => m,
-    sc: () => g,
-});
-var r = n(627968),
+n.d(t, { Ay: () => x, is: () => _, sc: () => p });
+var i = n(627968),
     l = n(64700),
-    i = n(397927),
+    s = n(397927),
     a = n(616075),
-    s = n(637248),
+    r = n(637248),
     o = n(728321),
-    c = n(244083),
-    u = n(32603),
-    d = n(823142),
-    f = n(83766),
-    p = n(652215),
-    h = n(985018),
-    b = n(495401);
-
-function g(e, t, n, r) {
-    let l = "compact" === r ? 8 : 12;
-    if (e === u.PU) return l;
-    if (e === u.bK) return t.features.has(p.GuildFeatures.HUB) ? 0 : l;
+    d = n(244083),
+    c = n(32603),
+    u = n(823142),
+    h = n(83766),
+    A = n(652215),
+    g = n(985018),
+    m = n(495401);
+function p(e, t, n, i) {
+    let l = "compact" === i ? 8 : 12;
+    if (e === c.PU) return l;
+    if (e === c.bK) return t.features.has(A.GuildFeatures.HUB) ? 0 : l;
     if (e === n.voiceChannelsSectionNumber) {
-        var i;
         let t = n.getCategoryFromSection(e);
         if (null == t || t.isEmpty()) return 0;
         if (t.isCollapsed) return 49;
-        let r = null == (i = n.getChannelFromSectionRow(e, 0)) ? void 0 : i.channel;
-        return null == r || r.record.type === p.rbe.GUILD_CATEGORY ? 9 : 25;
+        let i = n.getChannelFromSectionRow(e, 0)?.channel;
+        return null == i || i.record.type === A.rbe.GUILD_CATEGORY ? 9 : 25;
     }
-    return "compact" === r ? 32 : 40;
+    return "compact" === i ? 32 : 40;
 }
-
-function m(e, t) {
+function _(e, t) {
     switch (e) {
-        case u.PU:
+        case c.PU:
             return "hoisted-spacer";
-        case u.bK:
+        case c.bK:
             return "uncategorized-spacer";
-        case u.HP:
+        case c.HP:
             return "favorites";
         case t.recentsSectionNumber:
             return "recents-header";
@@ -46,93 +39,67 @@ function m(e, t) {
             return "voice-channels-header";
         default: {
             let n = t.getNamedCategoryFromSection(e);
-            if (null != n) return "category-".concat(n.id);
-            return "section-".concat(e);
+            if (null != n) return `category-${n.id}`;
+            return `section-${e}`;
         }
     }
 }
-let A = l.memo(function (e) {
+let x = l.memo(function (e) {
     let {
             sectionIndex: t,
             guild: n,
-            guildChannels: g,
-            guildChannelsVersion: m,
-            selectedChannelId: A,
-            disableManageChannels: y,
+            guildChannels: p,
+            guildChannelsVersion: _,
+            selectedChannelId: x,
+            disableManageChannels: f,
         } = e,
-        { isFavoritesPerk: O } = (0, a.l)("ChannelListSection"),
-        j = l.useCallback(() => {
-            let e = g.getCategoryFromSection(g.recentsSectionNumber);
+        { isFavoritesPerk: E } = (0, a.l)("ChannelListSection"),
+        C = l.useCallback(() => {
+            let e = p.getCategoryFromSection(p.recentsSectionNumber);
             if (null == e) return;
             let t = null,
-                r = e.getShownChannelAndThreadIds();
-            null != A && r.includes(A) && (t = (0, s.xb)(g)), (0, s.DD)(n.id, r, t);
-        }, [n.id, A, g, m]),
-        { density: v } = (0, i.wRf)(),
-        x = "compact" === v ? 8 : 12;
+                i = e.getShownChannelAndThreadIds();
+            null != x && i.includes(x) && (t = (0, r.xb)(p)), (0, r.DD)(n.id, i, t);
+        }, [n.id, x, p, _]),
+        { density: I } = (0, s.wRf)(),
+        S = "compact" === I ? 8 : 12;
     switch (t) {
-        case u.PU:
-            return (0, r.jsx)("div", {
-                style: {
-                    height: x,
-                },
-            });
-        case u.bK:
-            if (n.features.has(p.GuildFeatures.HUB)) return null;
-            return (0, r.jsx)("div", {
-                style: {
-                    height: x,
-                },
-            });
-        case u.HP:
-            return (0, r.jsx)(d.P4, {
-                name: O ? h.intl.string(h.t.mlPMCy) : h.intl.string(h.t.k8fFjp),
-            });
-        case g.recentsSectionNumber:
-            return (0, r.jsx)(d.P4, {
-                name: h.intl.string(h.t.gKcrqM),
-                onDismiss: j,
-            });
-        case g.voiceChannelsSectionNumber: {
-            var E;
-            let e = g.getCategoryFromSection(g.voiceChannelsSectionNumber);
+        case c.PU:
+            return (0, i.jsx)("div", { style: { height: S } });
+        case c.bK:
+            if (n.features.has(A.GuildFeatures.HUB)) return null;
+            return (0, i.jsx)("div", { style: { height: S } });
+        case c.HP:
+            return (0, i.jsx)(u.P4, { name: E ? g.intl.string(g.t.mlPMCy) : g.intl.string(g.t.k8fFjp) });
+        case p.recentsSectionNumber:
+            return (0, i.jsx)(u.P4, { name: g.intl.string(g.t.gKcrqM), onDismiss: C });
+        case p.voiceChannelsSectionNumber: {
+            let e = p.getCategoryFromSection(p.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null == (E = g.getChannelFromSectionRow(t, 0)) ? void 0 : E.channel;
-            return (0, r.jsxs)(l.Fragment, {
-                children: [
-                    (0, r.jsx)("div", {
-                        className: b.ts,
-                    }),
-                    (0, r.jsx)(d.kD, {
-                        category: e,
-                        channel: n,
-                    }),
-                ],
+            let n = p.getChannelFromSectionRow(t, 0)?.channel;
+            return (0, i.jsxs)(l.Fragment, {
+                children: [(0, i.jsx)("div", { className: m.ts }), (0, i.jsx)(u.kD, { category: e, channel: n })],
             });
         }
-        case u.TF: {
-            let e = g.getNamedCategoryFromSection(t);
+        case c.TF: {
+            let e = p.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, r.jsx)(d.Ay, {
+            return (0, i.jsx)(u.Ay, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: y,
-                children: (0, r.jsx)(o.A, {
-                    inlineSpecs: f.qB,
-                    arrowAlignment: c.oN.TOP,
+                disableManageChannels: f,
+                children: (0, i.jsx)(o.A, {
+                    inlineSpecs: h.qB,
+                    arrowAlignment: d.oN.TOP,
                     tutorialId: "organize-by-topic",
                     position: "right",
                 }),
             });
         }
         default: {
-            let e = g.getNamedCategoryFromSection(t);
+            let e = p.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, r.jsx)(d.Ay, {
-                channel: e.record,
-                position: e.position,
-                disableManageChannels: y,
-            });
+            return (0, i.jsx)(u.Ay, { channel: e.record, position: e.position, disableManageChannels: f });
         }
     }
 });

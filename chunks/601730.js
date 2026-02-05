@@ -1,37 +1,28 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(554146),
-    a = n(397927),
+n.d(t, { A: () => d });
+var i = n(627968),
+    l = n(554146),
+    r = n(397927),
     s = n(379848),
-    o = n(722255),
-    l = n(14594),
-    c = n(652215),
-    u = n(49999),
-    d = n(985018);
-
-function f() {
-    let [e, t] = (0, s.Wl)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, {
-        cooldownDurationMs: l.aH,
-    });
-    return e !== i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
+    a = n(722255),
+    o = n(14594),
+    E = n(652215),
+    c = n(49999),
+    _ = n(985018);
+function d() {
+    let [e, t] = (0, s.Wl)(l.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: o.aH });
+    return e !== l.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
-        : (0, r.jsxs)(a.$Td, {
-              color: a.Hv$.BRAND,
+        : (0, i.jsxs)(r.$Td, {
+              color: r.Hv$.BRAND,
               children: [
-                  (0, r.jsx)(a.PMB, {
-                      onClick: () => t(u.i.DISMISS),
-                      noticeType: c.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
-                  }),
-                  d.intl.string(d.t.XkeW9N),
-                  (0, r.jsx)(a.Z_L, {
+                  (0, i.jsx)(r.PMB, { onClick: () => t(c.i.DISMISS), noticeType: E.kqX.IGNORE_USER_FEEDBACK_NAGBAR }),
+                  _.intl.string(_.t.XkeW9N),
+                  (0, i.jsx)(r.Z_L, {
                       onClick: () => {
-                          (0, o.u)(), t(u.i.TAKE_ACTION);
+                          (0, a.u)(), t(c.i.TAKE_ACTION);
                       },
-                      noticeType: c.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
-                      children: d.intl.string(d.t.vcdNKv),
+                      noticeType: E.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
+                      children: _.intl.string(_.t.vcdNKv),
                   }),
               ],
           });

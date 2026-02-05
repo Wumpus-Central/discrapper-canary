@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rf: "body_c6f1a4",
     OO: "sliderBody_c6f1a4",

@@ -1,28 +1,17 @@
-t(927092),
-    t(212978),
-    t(648691),
-    t(393431),
-    t(752391),
+t(393431),
     t(532706),
     t(42231),
     t(232424),
-    t(757074),
     t(949626),
     t(767709),
     t(65162),
-    t(896048),
     t(321073),
-    t(65821),
     self.addEventListener("message", (e) => {
         let {
             data: { trackChannels: r, width: t },
         } = e;
         try {
-            if (0 === r.length)
-                return void self.postMessage({
-                    waveform: [],
-                    error: "No track channels provided",
-                });
+            if (0 === r.length) return void self.postMessage({ waveform: [], error: "No track channels provided" });
             let e = [];
             for (let t of r)
                 e.push(
@@ -51,30 +40,25 @@ t(927092),
                     }
                     return r;
                 })(e),
-                n = (function (e, r) {
+                a = (function (e, r) {
                     let t = Math.floor(r / 2),
                         o = Math.floor(e.length / t),
-                        n = [];
+                        a = [];
                     for (let r = 0; r < t; r++) {
                         let t = o * r,
-                            a = 0;
+                            n = 0;
                         for (let r = 0; r < o; r++) {
                             let o = t + r;
-                            o < e.length && (a += Math.abs(e[o]));
+                            o < e.length && (n += Math.abs(e[o]));
                         }
-                        n.push(a / o);
+                        a.push(n / o);
                     }
-                    let a = Math.max(...n, 0.001);
-                    return n.map((e) => e / a);
+                    let n = Math.max(...a, 0.001);
+                    return a.map((e) => e / n);
                 })(o, t);
-            self.postMessage({
-                waveform: n,
-            });
+            self.postMessage({ waveform: a });
         } catch (r) {
-            let e = {
-                waveform: [],
-                error: r instanceof Error ? r.message : "Unknown error",
-            };
+            let e = { waveform: [], error: r instanceof Error ? r.message : "Unknown error" };
             self.postMessage(e);
         }
     });

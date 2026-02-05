@@ -1,38 +1,31 @@
-i.d(e, {
-    J: () => C,
-    q: () => N,
-}),
-    i(228524),
-    i(896048),
-    i(747238);
+i.d(e, { J: () => O, q: () => C });
 var n = i(627968),
     l = i(64700),
     s = i(397927),
     r = i(419954),
-    u = i(933297),
-    a = i(780964),
+    a = i(933297),
+    u = i(780964),
     o = i(143177),
-    T = i(350017),
-    A = i(819188),
-    d = i(231137),
+    d = i(350017),
+    T = i(819188),
+    A = i(231137),
     S = i(151098),
     E = i(716005),
-    _ = i(144010),
-    g = i(175631),
+    g = i(144010),
+    _ = i(175631),
     c = i(430443),
     I = i(997442),
-    O = i(985018);
-
-function N(t) {
-    let { label: e, description: i, placeholder: r, overrideId: u, setOverride: a, fetchOverride: o } = t,
-        [T, A] = l.useState(null != u ? u : ""),
-        d = l.useRef(null),
+    N = i(985018);
+function C(t) {
+    let { label: e, description: i, placeholder: r, overrideId: a, setOverride: u, fetchOverride: o } = t,
+        [d, T] = l.useState(a ?? ""),
+        A = l.useRef(null),
         [S, E] = l.useState(0),
-        _ = () => {
-            null != d.current && (clearTimeout(d.current), (d.current = null));
+        g = () => {
+            null != A.current && (clearTimeout(A.current), (A.current = null));
         };
     return (
-        l.useEffect(() => _, []),
+        l.useEffect(() => g, []),
         (0, n.jsx)(s.D0$, {
             layout: "horizontal-responsive",
             label: e,
@@ -41,17 +34,17 @@ function N(t) {
                 placeholder: r,
                 error: 2 === S ? "Failed to fetch override" : void 0,
                 successMessage: 3 === S ? "Override applied" : void 0,
-                value: T,
+                value: d,
                 onChange: (t) => {
                     if (!(t.length > 0) || /^[0-9]+$/.test(t)) {
-                        if ((A(t), _(), 0 === t.length)) {
-                            E(0), a(null);
+                        if ((T(t), g(), 0 === t.length)) {
+                            E(0), u(null);
                             return;
                         }
-                        d.current = setTimeout(() => {
+                        A.current = setTimeout(() => {
                             E(1),
                                 o(t).then((e) => {
-                                    E(null == e ? 2 : 3), null != e && a(t);
+                                    E(null == e ? 2 : 3), null != e && u(t);
                                 });
                         }, 500);
                     }
@@ -61,15 +54,12 @@ function N(t) {
         })
     );
 }
-let C = (0, r.zZ)(a.X.DEV_OVERRIDES, {
+let O = (0, r.zZ)(u.X.DEV_OVERRIDES, {
     useTitle: () => "Overrides",
-    buildLayout: () => [c.U, I.l, A.B, d.q, E.g, o.Y, g.s, S.t, _.T, T.s],
+    buildLayout: () => [c.U, I.l, T.B, A.q, E.g, o.Y, _.s, S.t, g.T, d.s],
     useInlineNotice: () => ({
-        type: u.W.INLINE_NOTICE,
+        type: a.W.INLINE_NOTICE,
         noticeType: "info",
-        useText: () =>
-            O.intl.format(O.t.UeZJlg, {
-                link: "https://i.dis.gd/dev-settings-changes",
-            }),
+        useText: () => N.intl.format(N.t.UeZJlg, { link: "https://i.dis.gd/dev-settings-changes" }),
     }),
 });

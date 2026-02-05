@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fr: "welcomeMessageContainer__6f212",
     my: "avatar__6f212",

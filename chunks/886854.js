@@ -1,42 +1,36 @@
-i.d(e, {
-    yj: () => C,
-});
+i.d(e, { yj: () => O });
 var n = i(934551),
     l = i(920603),
     s = i(419954),
     r = i(933297),
-    u = i(780964),
-    a = i(358776),
+    a = i(780964),
+    u = i(358776),
     o = i(368631),
-    T = i(614651),
-    A = i(859669),
-    S = i(662802),
-    E = i(988208),
-    d = i(819070),
-    _ = i(352694),
-    I = i(136451),
-    g = i(531525),
-    c = i(985018);
-let N = (0, s.t_)(u.X.APPEARANCE_PANEL, {
-        useTitle: () => c.intl.string(c.t["iHH+ky"]),
+    d = i(614651),
+    T = i(859669),
+    A = i(662802),
+    S = i(988208),
+    E = i(819070),
+    g = i(352694),
+    _ = i(136451),
+    c = i(531525),
+    I = i(985018);
+let N = (0, s.t_)(a.X.APPEARANCE_PANEL, {
+        useTitle: () => I.intl.string(I.t["iHH+ky"]),
         initialize: () => {
             (0, l.v)();
         },
-        buildLayout: () => [_.S, S._, I.b, E.U, d.M, A.d],
+        buildLayout: () => [g.S, A._, _.b, S.U, E.M, T.d],
     }),
-    O = (0, s.t_)(u.X.APPEARANCE_PANEL, {
-        useTitle: () => c.intl.string(c.t["iHH+ky"]),
-        StronglyDiscouragedCustomComponent: T.Ay,
+    C = (0, s.t_)(a.X.APPEARANCE_PANEL, {
+        useTitle: () => I.intl.string(I.t["iHH+ky"]),
+        StronglyDiscouragedCustomComponent: d.Ay,
         buildLayout: () => [],
     }),
-    C = (0, s.i4)(u.X.APPEARANCE_SIDEBAR_ITEM, {
-        useTitle: () => c.intl.string(c.t["iHH+ky"]),
-        getLegacySearchKey: () => ((0, a.WJ)("AppearanceSidebarItem") ? void 0 : g.H.APPEARANCE),
+    O = (0, s.i4)(a.X.APPEARANCE_SIDEBAR_ITEM, {
+        useTitle: () => I.intl.string(I.t["iHH+ky"]),
+        getLegacySearchKey: () => ((0, u.WJ)("AppearanceSidebarItem") ? void 0 : c.H.APPEARANCE),
         icon: n.PaintPaletteIcon,
-        trailing: {
-            type: r.S.BADGE_NEW,
-            getDismissibleContentTypes: o.p_,
-            stronglyDiscouragedBadgeComponent: o.AW,
-        },
-        buildLayout: () => ((0, a.WJ)("AppearanceSidebarItem") ? [N] : [O]),
+        trailing: { type: r.S.BADGE_NEW, getDismissibleContentTypes: o.p_, stronglyDiscouragedBadgeComponent: o.AW },
+        buildLayout: () => ((0, u.WJ)("AppearanceSidebarItem") ? [N] : [C]),
     });

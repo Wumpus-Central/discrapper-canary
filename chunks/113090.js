@@ -1,28 +1,18 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(64700),
-    i = n(311907),
-    a = n(73153),
-    s = n(233317);
-
-function o() {
+n.d(t, { A: () => l });
+var i = n(64700),
+    s = n(311907),
+    r = n(73153),
+    a = n(233317);
+function l() {
     let { useCachedData: e = !1, fetch: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { premiumGroupMembership: n, isFetchingMembership: o } = (0, i.cf)([s.A], () => ({
-            premiumGroupMembership: s.A.getMembership(),
-            isFetchingMembership: s.A.isFetchingMembership(),
+        { premiumGroupMembership: n, isFetchingMembership: l } = (0, s.cf)([a.A], () => ({
+            premiumGroupMembership: a.A.getMembership(),
+            isFetchingMembership: a.A.isFetchingMembership(),
         }));
     return (
-        (0, r.useEffect)(() => {
-            !t ||
-                (e && s.A.hasFetchedMembership()) ||
-                a.h.dispatch({
-                    type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST",
-                });
+        (0, i.useEffect)(() => {
+            !t || (e && a.A.hasFetchedMembership()) || r.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
         }, [t, e]),
-        {
-            premiumGroupMembership: n,
-            isLoading: o,
-        }
+        { premiumGroupMembership: n, isLoading: l }
     );
 }

@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(308227),
     s = e(740456),
@@ -33,15 +34,7 @@ t.exports = function (t, r, e) {
                 })))
     ) {
         var E = (d = r(function (r, e) {
-                g(a(r, E), {
-                    type: t,
-                    collection: new O(),
-                }),
-                    l(e) ||
-                        c(e, r[w], {
-                            that: r,
-                            AS_ENTRIES: m,
-                        });
+                g(a(r, E), { type: t, collection: new O() }), l(e) || c(e, r[w], { that: r, AS_ENTRIES: m });
             })).prototype,
             T = b(t);
         h(["add", "clear", "delete", "forEach", "get", "has", "set", "keys", "values", "entries"], function (t) {
@@ -63,17 +56,5 @@ t.exports = function (t, r, e) {
                     },
                 });
     } else (d = e.getConstructor(r, t, m, w)), s.enable();
-    return (
-        v(d, t, !1, !0),
-        (A[t] = d),
-        n(
-            {
-                global: !0,
-                forced: !0,
-            },
-            A,
-        ),
-        S || e.setStrong(d, t, m),
-        d
-    );
+    return v(d, t, !1, !0), (A[t] = d), n({ global: !0, forced: !0 }, A), S || e.setStrong(d, t, m), d;
 };

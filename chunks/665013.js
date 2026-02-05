@@ -1,29 +1,24 @@
-n.d(t, {
-    default: () => c,
-    x: () => o,
-});
+n.d(t, { default: () => d, x: () => o });
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    l = n(442433),
+var l = n(397927),
+    s = n(442433),
     a = n(484740),
-    s = n(985018);
-
+    r = n(985018);
 function o(e, t) {
     return (0, a.A)(e, t).length > 0;
 }
-
-function c(e) {
+function d(e) {
     let { role: t, guild: n, onSelect: o } = e,
-        c = (0, a.A)(n, t);
-    return 0 === c.length
+        d = (0, a.A)(n, t);
+    return 0 === d.length
         ? null
-        : (0, i.jsx)(r.W1t, {
+        : (0, i.jsx)(l.W1t, {
               "data-menu-migrated-auto": !0,
               navId: "guild-settings-role-context",
-              "aria-label": s.intl.string(s.t["337Ja9"]),
-              onClose: l.Z_,
+              "aria-label": r.intl.string(r.t["337Ja9"]),
+              onClose: s.Z_,
               onSelect: o,
-              children: c,
+              children: d,
           });
 }

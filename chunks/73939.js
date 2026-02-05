@@ -1,98 +1,32 @@
-n.d(t, {
-    F: () => p,
-}),
-    n(321073),
-    n(896048);
-var r,
-    i = n(64700),
-    a = n(480960);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = c(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function c(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function u(e, t) {
-    if ("object" !== f(e) || null === e) return e;
-    var n = e[Symbol.toPrimitive];
-    if (void 0 !== n) {
-        var r = n.call(e, t || "default");
-        if ("object" !== f(r)) return r;
-        throw TypeError("@@toPrimitive must return a primitive value.");
-    }
-    return ("string" === t ? String : Number)(e);
-}
-
-function d(e) {
-    var t = u(e, "string");
-    return "symbol" === f(t) ? t : String(t);
-}
-
-function f(e) {
-    return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
-}
-class p extends (r = i.Component) {
+"use strict";
+n.d(t, { F: () => a }), n(321073);
+var r = n(64700),
+    i = n(480960);
+class a extends r.Component {
+    static defaultProps = {
+        component: "span",
+        transitionAppear: !0,
+        transitionLeave: !0,
+        transitionEnter: !0,
+        childFactory: null,
+    };
     static getDerivedStateFromProps(e, t) {
         let { children: n, firstRender: r } = t,
-            i = (0, a.p)(e.children);
-        return {
-            children: r ? i : (0, a.a)(n, i),
-            firstRender: !1,
-        };
+            a = (0, i.p)(e.children);
+        return { children: r ? a : (0, i.a)(n, a), firstRender: !1 };
+    }
+    _currentlyTransitioningKeys;
+    _keysToEnter;
+    _keysToLeave;
+    _isMounted;
+    _keyChildMapping = {};
+    constructor(e) {
+        super(e),
+            (this.state = { children: (0, i.p)(e.children), firstRender: !0 }),
+            (this._currentlyTransitioningKeys = new Set()),
+            (this._keysToEnter = []),
+            (this._keysToLeave = []),
+            (this._isMounted = !1);
     }
     componentDidMount() {
         this._isMounted = !0;
@@ -108,7 +42,7 @@ class p extends (r = i.Component) {
             e.transitionAppear !== this.props.transitionAppear ||
             e.transitionLeave !== this.props.transitionLeave
         ) {
-            let e = (0, a.p)(this.props.children),
+            let e = (0, i.p)(this.props.children),
                 n = t.children;
             if (
                 (this.props.transitionEnter
@@ -120,12 +54,9 @@ class p extends (r = i.Component) {
             else {
                 let t = [];
                 this._enqueueTransitions(n, e, t);
-                let r = (0, a.a)(n, e);
+                let r = (0, i.a)(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete r[t[e]];
-                this._isMounted &&
-                    this.setState({
-                        children: r,
-                    }),
+                this._isMounted && this.setState({ children: r }),
                     this._keysToLeave.length > 0 && (this._keysToLeave = []);
             }
         }
@@ -155,18 +86,16 @@ class p extends (r = i.Component) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = this._keyChildMapping[e];
         null != r && null != r[t] && r[t](), this._currentlyTransitioningKeys.delete(e);
-        let i = (0, a.p)(this.props.children);
+        let a = (0, i.p)(this.props.children);
         n
-            ? null != i && i.hasOwnProperty(e)
+            ? null != a && a.hasOwnProperty(e)
                 ? this.performEnter(e)
                 : this.setState((t) => {
                       let { children: n } = t,
-                          { [e]: r } = n;
-                      return {
-                          children: l(n, [d(e)]),
-                      };
+                          { [e]: r, ...i } = n;
+                      return { children: i };
                   })
-            : (null != i && i.hasOwnProperty(e)) || this.performLeave(e);
+            : (null != a && a.hasOwnProperty(e)) || this.performLeave(e);
     }
     performAppear(e) {
         this._perform(e, "componentWillAppear", "componentDidAppear");
@@ -177,48 +106,20 @@ class p extends (r = i.Component) {
     performLeave(e) {
         this._perform(e, "componentWillLeave", "componentDidLeave", !0);
     }
+    addChildRef = (e, t) => {
+        this._keyChildMapping[e] = t;
+    };
     render() {
         let { childFactory: e, component: t } = this.props,
             { children: n } = this.state,
-            r = [];
+            i = [];
         for (let t in n) {
             let a = n[t];
             null != a &&
-                i.isValidElement(a) &&
-                r.push(
-                    i.cloneElement(null == e ? a : e(a), {
-                        ref: (e) => this.addChildRef(t, e),
-                        key: t,
-                    }),
-                );
+                r.isValidElement(a) &&
+                i.push(r.cloneElement(null == e ? a : e(a), { ref: (e) => this.addChildRef(t, e), key: t }));
         }
-        let a = o({}, this.props);
-        return Object.keys(p.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
-    }
-    constructor(e) {
-        super(e),
-            s(this, "_currentlyTransitioningKeys", void 0),
-            s(this, "_keysToEnter", void 0),
-            s(this, "_keysToLeave", void 0),
-            s(this, "_isMounted", void 0),
-            s(this, "_keyChildMapping", {}),
-            s(this, "addChildRef", (e, t) => {
-                this._keyChildMapping[e] = t;
-            }),
-            (this.state = {
-                children: (0, a.p)(e.children),
-                firstRender: !0,
-            }),
-            (this._currentlyTransitioningKeys = new Set()),
-            (this._keysToEnter = []),
-            (this._keysToLeave = []),
-            (this._isMounted = !1);
+        let s = { ...this.props };
+        return Object.keys(a.defaultProps).forEach((e) => delete s[e]), r.createElement(t, s, i);
     }
 }
-s(p, "defaultProps", {
-    component: "span",
-    transitionAppear: !0,
-    transitionLeave: !0,
-    transitionEnter: !0,
-    childFactory: null,
-});

@@ -1,6 +1,4 @@
-e.d(a, {
-    A: () => t,
-});
+e.d(a, { A: () => t });
 var n = e(303527);
 let t = {
     ordinalNumber: (0, e(722023).A)({
@@ -24,15 +22,9 @@ let t = {
         defaultParseWidth: "any",
     }),
     quarter: (0, n.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^T[1234]/i,
-            wide: /^trimestrul [1234]/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^trimestrul [1234]/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (i) {
             return i + 1;

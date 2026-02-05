@@ -1,10 +1,7 @@
-n.r(t),
-    n.d(t, {
-        default: () => s,
-    });
+"use strict";
+n.r(t), n.d(t, { default: () => s });
 var r = n(29583),
     i = n(618027);
-
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -17,7 +14,6 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-
 function s(e) {
     var t, n;
     if (((0, i.A)(1, arguments), e && "function" == typeof e.forEach)) t = e;

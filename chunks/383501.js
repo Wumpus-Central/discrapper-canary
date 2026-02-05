@@ -1,124 +1,60 @@
+"use strict";
 let r, i;
-n.d(t, {
-    A: () => Z,
-}),
-    n(65821),
-    n(896048);
-var a,
-    s = n(311907),
-    o = n(73153),
-    l = n(507821),
-    c = n(859159),
+n.d(t, { A: () => z });
+var a = n(311907),
+    s = n(73153),
+    o = n(507821),
+    l = n(859159),
     u = n(643501),
-    d = n(75076),
-    f = n(961350),
-    p = n(607567),
-    _ = n(652215),
-    h = n(731854);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let E = [],
-    b = null,
-    y = null,
-    O = null,
+    c = n(75076),
+    d = n(961350),
+    _ = n(607567),
+    f = n(652215),
+    p = n(731854);
+let h = [],
+    m = null,
+    g = null,
+    E = null,
     A = null,
-    v = !1,
-    S = !1,
-    I = null,
+    I = !1,
     T = !1,
-    C = null;
-
-function N(e, t) {
+    y = null,
+    S = !1,
+    v = null;
+function C(e, t) {
     if (null == i) throw Error("Creating RTCConnection without session.");
-    let r = f.default.getId(),
-        a = new (n(767065).A)({
-            userId: r,
-            sessionId: i,
-            guildId: e,
-            channelId: t,
-            joinVoiceId: C,
-        });
+    let r = d.default.getId(),
+        a = new (n(767065).A)({ userId: r, sessionId: i, guildId: e, channelId: t, joinVoiceId: v });
     return (
-        a.on(l.q.State, (e, t, n) => {
-            o.h.wait(() =>
-                o.h.dispatch(
-                    g(
-                        {
-                            type: "RTC_CONNECTION_STATE",
-                            state: e,
-                        },
-                        t,
-                        n,
-                    ),
-                ),
-            );
+        a.on(o.q.State, (e, t, n) => {
+            s.h.wait(() => s.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n }));
         }),
-        a.on(l.q.Video, (e, t, n, r, i) => {
-            o.h.wait(() =>
-                o.h.dispatch({
+        a.on(o.q.Video, (e, t, n, r, i) => {
+            s.h.wait(() =>
+                s.h.dispatch({
                     type: "RTC_CONNECTION_VIDEO",
                     guildId: e,
                     channelId: t,
                     userId: n,
                     streamId: r,
                     rtcServerId: i,
-                    context: h.x.DEFAULT,
+                    context: p.x.DEFAULT,
                     mediaEngineConnectionId: a.getMediaEngineConnectionId(),
                 }),
             );
         }),
-        a.on(l.q.Ping, (e, t) => {
-            o.h.wait(() =>
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_PING",
-                    pings: e,
-                    quality: t,
-                }),
-            );
+        a.on(o.q.Ping, (e, t) => {
+            s.h.wait(() => s.h.dispatch({ type: "RTC_CONNECTION_PING", pings: e, quality: t }));
         }),
-        a.on(l.q.OutboundLossRate, (e) => {
-            o.h.wait(() =>
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_LOSS_RATE",
-                    lossRate: e,
-                }),
-            );
+        a.on(o.q.OutboundLossRate, (e) => {
+            s.h.wait(() => s.h.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate: e }));
         }),
-        a.on(l.q.Speaking, (e, t) => {
-            null == A || A.setSpeaking(e, t);
+        a.on(o.q.Speaking, (e, t) => {
+            A?.setSpeaking(e, t);
         }),
-        a.on(l.q.Flags, (e, t) => {
-            o.h.wait(() => {
-                o.h.dispatch({
+        a.on(o.q.Flags, (e, t) => {
+            s.h.wait(() => {
+                s.h.dispatch({
                     type: "RTC_CONNECTION_FLAGS",
                     flags: t,
                     userId: e,
@@ -128,16 +64,12 @@ function N(e, t) {
                 });
             });
         }),
-        a.on(l.q.UsersMerged, (e, t) => {
-            o.h.dispatch({
-                type: "RTC_CONNECTION_USERS_MERGED",
-                userIds: e,
-                context: t,
-            });
+        a.on(o.q.UsersMerged, (e, t) => {
+            s.h.dispatch({ type: "RTC_CONNECTION_USERS_MERGED", userIds: e, context: t });
         }),
-        a.on(l.q.ClientConnect, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({
+        a.on(o.q.ClientConnect, (e) => {
+            s.h.wait(() => {
+                s.h.dispatch({
                     type: "RTC_CONNECTION_CLIENT_CONNECT",
                     userIds: e,
                     guildId: a.guildId,
@@ -146,9 +78,9 @@ function N(e, t) {
                 });
             });
         }),
-        a.on(l.q.ClientDisconnect, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({
+        a.on(o.q.ClientDisconnect, (e) => {
+            s.h.wait(() => {
+                s.h.dispatch({
                     type: "RTC_CONNECTION_CLIENT_DISCONNECT",
                     userId: e,
                     guildId: a.guildId,
@@ -157,107 +89,90 @@ function N(e, t) {
                 });
             });
         }),
-        a.on(l.q.Platform, (e, t, n) => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_PLATFORM",
-                    platform: t,
-                    userId: e,
-                    channelId: n,
-                });
+        a.on(o.q.Platform, (e, t, n) => {
+            s.h.wait(() => {
+                s.h.dispatch({ type: "RTC_CONNECTION_PLATFORM", platform: t, userId: e, channelId: n });
             });
         }),
-        a.on(l.q.SecureFramesUpdate, () => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE",
-                });
+        a.on(o.q.SecureFramesUpdate, () => {
+            s.h.wait(() => {
+                s.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
             });
         }),
-        a.on(l.q.RosterMapUpdate, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_ROSTER_MAP_UPDATE",
-                    userIds: e,
-                });
+        a.on(o.q.RosterMapUpdate, (e) => {
+            s.h.wait(() => {
+                s.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
             });
         }),
-        (A = new c.A(f.default.getId(), t)),
-        (y = null),
-        (v = !1),
-        (S = !1),
+        (A = new l.A(d.default.getId(), t)),
+        (g = null),
+        (I = !1),
+        (T = !1),
         a
     );
 }
-
-function R() {
-    var e;
+function b() {
     if (null == r) return !1;
-    (y = {
+    (g = {
         duration: r.getDuration(),
-        mediaSessionId: null != (e = r.getMediaSessionId()) ? e : null,
+        mediaSessionId: r.getMediaSessionId() ?? null,
         rtcConnectionId: r.getRTCConnectionId(),
-        wasEverMultiParticipant: v,
-        wasEverRtcConnected: S,
+        wasEverMultiParticipant: I,
+        wasEverRtcConnected: T,
         voiceStateAnalytics: A,
         channelId: r.channelId,
     }),
-        o.h.dispatch({
+        s.h.dispatch({
             type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
             mediaEngineConnectionId: r.getMediaEngineConnectionId(),
         }),
         r.destroy(),
         (r = null),
         (A = null),
-        (T = !1);
+        (S = !1);
 }
-
-function w(e) {
-    return (i = e.sessionId), (b = null), (O = null), R(), !1;
+function N(e) {
+    return (i = e.sessionId), (m = null), (E = null), b(), !1;
 }
-
-function P() {
-    (i = null), (b = null), (O = null), R();
+function R() {
+    (i = null), (m = null), (E = null), b();
 }
-
-function D(e) {
+function O(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        var n, a, s;
         if (
-            (null == A || A.updateVoiceStates(t.userId, t.channelId),
-            (v = v || (null != (n = null == A ? void 0 : A.getStats().max_voice_state_count) ? n : 0) > 1),
-            f.default.getId() !== t.userId)
+            (A?.updateVoiceStates(t.userId, t.channelId),
+            (I = I || (A?.getStats().max_voice_state_count ?? 0) > 1),
+            d.default.getId() !== t.userId)
         )
             return e;
         if (null != r)
             t.sessionId === i
                 ? (null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId)
                     ? null == t.channelId
-                        ? R()
-                        : (r.setNextChannelId(t.channelId), (T = !0), (C = null), r.clearJoinVoiceId())
-                    : ((t.guildId !== r.guildId && null == t.channelId) || R(),
+                        ? b()
+                        : (r.setNextChannelId(t.channelId), (S = !0), (v = null), r.clearJoinVoiceId())
+                    : ((t.guildId !== r.guildId && null == t.channelId) || b(),
                       null != t.channelId &&
-                          ((b = null),
-                          (O = null),
-                          (r = N(t.guildId, t.channelId)),
-                          (v = (null != (a = null == A ? void 0 : A.getStats().max_voice_state_count) ? a : 0) > 1)))
+                          ((m = null),
+                          (E = null),
+                          (r = C(t.guildId, t.channelId)),
+                          (I = (A?.getStats().max_voice_state_count ?? 0) > 1)))
                 : t.guildId === r.guildId &&
                   ((null == u.default.getAwaitingRemoteSessionInfo() || null == u.default.getRemoteSessionId()) &&
-                      (b = r.channelId),
-                  R());
+                      (m = r.channelId),
+                  b());
         else {
             if (t.sessionId !== i || null == t.channelId) return e;
-            (b = null),
-                (O = null),
-                (r = N(t.guildId, t.channelId)),
-                (v = (null != (s = null == A ? void 0 : A.getStats().max_voice_state_count) ? s : 0) > 1);
+            (m = null),
+                (E = null),
+                (r = C(t.guildId, t.channelId)),
+                (I = (A?.getStats().max_voice_state_count ?? 0) > 1);
         }
         return !0;
     }, !1);
 }
-
-function x(e) {
+function D(e) {
     if (
         null == r ||
         (null != e.guildId && e.guildId !== r.guildId) ||
@@ -266,213 +181,198 @@ function x(e) {
         return !1;
     r.connect(e.endpoint, e.token);
 }
-
 function L() {
-    b = null;
+    m = null;
 }
-
-function j() {
-    O = null;
+function w() {
+    E = null;
 }
-
-function M(e) {
+function x(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
-    R();
+    b();
 }
-
-function k(e) {
+function P(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
-    R();
+    b();
 }
-
-function U(e) {
+function M(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
-    R();
+    b();
 }
-
-function G(e) {
+function k(e) {
     let { channelId: t, joinVoiceId: n } = e;
-    null != r && (null == t || r.channelId !== t) && R(), (C = n);
+    null != r && (null == t || r.channelId !== t) && b(), (v = n);
 }
-
+function U(e) {
+    return e.state === f.g6G.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
+}
+function G(e) {
+    return e.state === f.S7L.RTC_CONNECTED && (T = !0), !0;
+}
 function V(e) {
-    return e.state === _.g6G.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
+    r?.setNoiseCancellationEnabled(e.enabled);
 }
-
-function F(e) {
-    return e.state === _.S7L.RTC_CONNECTED && (S = !0), !0;
-}
-
-function B(e) {
-    null == r || r.setNoiseCancellationEnabled(e.enabled);
-}
-
-function H() {
+function F() {
     return !0;
 }
-
-function Y(e) {
+function B(e) {
     let { context: t, wants: n } = e;
     if (
-        t !== h.x.DEFAULT ||
+        t !== p.x.DEFAULT ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
             return "any" !== t && 0 !== n;
         })
     )
         return !1;
-    I = performance.now();
+    y = performance.now();
 }
-
-function W(e) {
+function j(e) {
     return e.connection === r;
 }
-
-function K(e) {
+function H(e) {
     let { userId: t, context: n, quality: i } = e;
-    null == r || r.setSimulcastDebugOverride(t, n, i);
+    r?.setSimulcastDebugOverride(t, n, i);
 }
-
-function z(e) {
+function Y(e) {
     let { streamId: t, dimensions: n, zoom: i } = e;
-    null == r || r.setVideoSize(t, n, i);
+    r?.setVideoSize(t, n, i);
 }
-class q extends (a = s.Ay.Store) {
+class W extends a.Ay.Store {
+    static displayName = "RTCConnectionStore";
     initialize() {
-        this.waitFor(f.default, u.default, p.Ay), (0, d.I)(this.getRTCConnectionId, this.getMediaSessionId);
+        this.waitFor(d.default, u.default, _.Ay), (0, c.I)(this.getRTCConnectionId, this.getMediaSessionId);
     }
     getRTCConnection() {
         return r;
     }
     getState() {
-        return null != r ? r.state : _.S7L.DISCONNECTED;
+        return null != r ? r.state : f.S7L.DISCONNECTED;
     }
     isConnected() {
-        return this.getState() === _.S7L.RTC_CONNECTED;
+        return this.getState() === f.S7L.RTC_CONNECTED;
     }
     isDisconnected() {
-        return this.getState() === _.S7L.DISCONNECTED;
+        return this.getState() === f.S7L.DISCONNECTED;
     }
     getRemoteDisconnectVoiceChannelId() {
-        return b;
+        return m;
     }
     getLastSessionVoiceChannelId() {
-        return O;
+        return E;
     }
     setLastSessionVoiceChannelId(e) {
-        O = e;
+        E = e;
     }
     getGuildId() {
-        return null == r ? void 0 : r.guildId;
+        return r?.guildId;
     }
     getChannelId() {
-        return null == r ? void 0 : r.channelId;
+        return r?.channelId;
     }
     getHostname() {
         return null != r ? r.hostname : "";
     }
     getQuality() {
-        return null != r ? r.quality : _.bFR.UNKNOWN;
+        return null != r ? r.quality : f.bFR.UNKNOWN;
     }
     getPings() {
-        return null != r ? r.getPings() : E;
+        return null != r ? r.getPings() : h;
     }
     getAveragePing() {
-        return null != r ? (null == r ? void 0 : r.getAveragePing()) : 0;
+        return null != r ? r?.getAveragePing() : 0;
     }
     getLastPing() {
-        return null == r ? void 0 : r.getLastPing();
+        return r?.getLastPing();
     }
     getOutboundLossRate() {
-        return null == r ? void 0 : r.getOutboundLossRate();
+        return r?.getOutboundLossRate();
     }
     getMediaSessionId() {
-        return null == r ? void 0 : r.getMediaSessionId();
+        return r?.getMediaSessionId();
     }
     getRTCConnectionId() {
-        return null == r ? void 0 : r.getRTCConnectionId();
+        return r?.getRTCConnectionId();
     }
     getDuration() {
-        var e;
-        return null != (e = null == r ? void 0 : r.getDuration()) ? e : null == y ? void 0 : y.duration;
+        return r?.getDuration() ?? g?.duration;
     }
     getLastRTCConnectionState() {
-        return y;
+        return g;
     }
     getVoiceFilterSpeakingDurationMs() {
-        return null == r ? void 0 : r.getVoiceFilterSpeakingDurationMs();
+        return r?.getVoiceFilterSpeakingDurationMs();
     }
     getPacketStats() {
-        return null == r ? void 0 : r.getPacketStats();
+        return r?.getPacketStats();
     }
     getVoiceStateStats() {
-        return null == A ? void 0 : A.getStats();
+        return A?.getStats();
     }
     getUserVoiceSettingsStats(e) {
-        return null == A ? void 0 : A.getUserVoiceSettingsStats(e);
+        return A?.getUserVoiceSettingsStats(e);
     }
     getWasEverMultiParticipant() {
-        return v;
-    }
-    getWasEverRtcConnected() {
-        return S;
-    }
-    getUserIds() {
-        return null == r ? void 0 : r.getUserIds();
-    }
-    getJoinVoiceId() {
-        return C;
-    }
-    isUserConnected(e) {
-        return null == r ? void 0 : r.getIsUserConnected(e);
-    }
-    getSecureFramesState() {
-        return null == r ? void 0 : r.getSecureFramesState();
-    }
-    getSecureFramesRosterMapEntry(e) {
-        let t = null == r ? void 0 : r.getSecureFramesRosterMap();
-        return null == t ? void 0 : t.get(e);
-    }
-    getLastNonZeroRemoteVideoSinkWantsTime() {
         return I;
     }
-    getWasMoved() {
+    getWasEverRtcConnected() {
         return T;
     }
+    getUserIds() {
+        return r?.getUserIds();
+    }
+    getJoinVoiceId() {
+        return v;
+    }
+    isUserConnected(e) {
+        return r?.getIsUserConnected(e);
+    }
+    getSecureFramesState() {
+        return r?.getSecureFramesState();
+    }
+    getSecureFramesRosterMapEntry(e) {
+        let t = r?.getSecureFramesRosterMap();
+        return t?.get(e);
+    }
+    getLastNonZeroRemoteVideoSinkWantsTime() {
+        return y;
+    }
+    getWasMoved() {
+        return S;
+    }
 }
-m(q, "displayName", "RTCConnectionStore");
-let X = new q(
-    o.h,
+let K = new W(
+    s.h,
     __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: w,
-              CONNECTION_CLOSED: P,
-              RTC_CONNECTION_STATE: F,
-              RTC_CONNECTION_PING: H,
-              RTC_CONNECTION_LOSS_RATE: H,
-              RTC_CONNECTION_UPDATE_ID: W,
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: H,
-              RTC_CONNECTION_CLIENT_CONNECT: H,
-              RTC_CONNECTION_CLIENT_DISCONNECT: H,
-              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: Y,
-              VIDEO_SIZE_UPDATE: z,
-              VOICE_STATE_UPDATES: D,
-              VOICE_CHANNEL_SELECT: G,
-              AUDIO_SET_NOISE_CANCELLATION: B,
-              VOICE_SERVER_UPDATE: x,
+              CONNECTION_OPEN: N,
+              CONNECTION_CLOSED: R,
+              RTC_CONNECTION_STATE: G,
+              RTC_CONNECTION_PING: F,
+              RTC_CONNECTION_LOSS_RATE: F,
+              RTC_CONNECTION_UPDATE_ID: j,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: F,
+              RTC_CONNECTION_CLIENT_CONNECT: F,
+              RTC_CONNECTION_CLIENT_DISCONNECT: F,
+              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: B,
+              VIDEO_SIZE_UPDATE: Y,
+              VOICE_STATE_UPDATES: O,
+              VOICE_CHANNEL_SELECT: k,
+              AUDIO_SET_NOISE_CANCELLATION: V,
+              VOICE_SERVER_UPDATE: D,
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
               REMOTE_SESSION_CONNECT: L,
-              CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: j,
-              GUILD_DELETE: M,
-              CHANNEL_DELETE: U,
-              THREAD_DELETE: U,
-              CALL_DELETE: k,
-              APP_STATE_UPDATE: V,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: K,
+              CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: w,
+              GUILD_DELETE: x,
+              CHANNEL_DELETE: M,
+              THREAD_DELETE: M,
+              CALL_DELETE: P,
+              APP_STATE_UPDATE: U,
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: H,
           },
 );
 Promise.resolve()
@@ -480,7 +380,7 @@ Promise.resolve()
     .then((e) => {
         let { addExtraAnalyticsDecorator: t } = e;
         t((e) => {
-            e.client_rtc_state = X.getState();
+            e.client_rtc_state = K.getState();
         });
     });
-let Z = X;
+let z = K;

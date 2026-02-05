@@ -1,8 +1,5 @@
-n.d(t, {
-    Gy: () => g,
-    k7: () => l.k,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Gy: () => h, k7: () => l.k });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,125 +7,79 @@ var r = n(627968),
     o = n(397927);
 n(14115);
 var l = n(305003),
-    c = n(626031),
-    u = n(339763),
+    u = n(626031),
+    c = n(339763),
     d = n(796688);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let _ = () =>
-        (0, r.jsx)("img", {
-            className: d.V8,
-            src: n(324292),
-            alt: "",
-        }),
-    h = "balance-widget-pill",
-    m = (e, t) => (e === l.k.SELECTED ? d.wH : t ? d.mr : d.Ay),
-    g = (0, i.forwardRef)(function (e, t) {
+let _ = () => (0, r.jsx)("img", { className: d.V8, src: n(324292), alt: "" }),
+    f = "balance-widget-pill",
+    p = (e, t) => (e === l.k.SELECTED ? d.wH : t ? d.mr : d.Ay),
+    h = (0, i.forwardRef)(function (e, t) {
         let {
                 id: n,
                 balance: a,
-                balanceWidgetMode: f = l.k.DEFAULT,
-                showNotificationBadge: g,
-                onClick: E,
-                onMouseDown: b,
-                disabled: y,
-                isInModalOverlay: O,
-                className: A,
+                balanceWidgetMode: h = l.k.DEFAULT,
+                showNotificationBadge: m,
+                onClick: g,
+                onMouseDown: E,
+                disabled: A,
+                isInModalOverlay: I,
+                className: T,
             } = e,
-            [v, S] = (0, i.useState)(!1),
-            I = (0, i.useMemo)(() => m(f, v), [f, v]),
-            [T, C] = (0, i.useState)(!1),
+            [y, S] = (0, i.useState)(!1),
+            v = (0, i.useMemo)(() => p(h, y), [h, y]),
+            [C, b] = (0, i.useState)(!1),
             [N, R] = (0, i.useState)(!1),
-            [w, P] = (0, i.useState)(2700),
-            D = null === a;
+            [O, D] = (0, i.useState)(2700),
+            L = null === a;
         (0, i.useEffect)(() => {
-            D &&
-                !T &&
-                (C(!0),
+            L &&
+                !C &&
+                (b(!0),
                 setTimeout(() => {
                     R(!0);
                 }, 500));
-        }, [D, C, T]),
+        }, [L, b, C]),
             (0, i.useEffect)(() => {
-                N && !D && C(!1);
-            }, [D, N]);
-        let x = D || T,
-            L = T ? null : a,
-            [j, M] = (0, i.useState)(null),
+                N && !L && b(!1);
+            }, [L, N]);
+        let w = L || C,
+            x = C ? null : a,
+            [P, M] = (0, i.useState)(null),
             k = (0, i.useRef)(null),
             U = (0, i.useCallback)(() => {
                 (k.current = null), M(null);
             }, []),
             G = (0, i.useCallback)(
                 (e) => {
-                    let t = j === k.current;
-                    e > 0 && ("earn" !== j || !t) && M("earn");
+                    let t = P === k.current;
+                    e > 0 && ("earn" !== P || !t) && M("earn");
                 },
-                [M, j],
+                [M, P],
             ),
-            V = {
-                currentAnimationType: j,
-                animationTypeRef: k,
-                onSetAnimationDurationMS: P,
-            };
+            V = { currentAnimationType: P, animationTypeRef: k, onSetAnimationDurationMS: D };
         return (0, r.jsx)(o.DUT, {
-            onClick: x ? void 0 : E,
-            className: s()(d.vk, {
-                [d.r9]: y,
-            }),
-            id: null != n ? n : h,
+            onClick: w ? void 0 : g,
+            className: s()(d.vk, { [d.r9]: A }),
+            id: n ?? f,
             children: (0, r.jsxs)("span", {
-                onMouseDown: b,
-                onMouseEnter: y ? void 0 : () => S(!0),
-                onMouseLeave: y ? void 0 : () => S(!1),
+                onMouseDown: E,
+                onMouseEnter: A ? void 0 : () => S(!0),
+                onMouseLeave: A ? void 0 : () => S(!1),
                 ref: t,
-                className: s()(d.kL, I, A, {
-                    [d.En]: x,
-                    [d.dA]: O,
-                    [d.r9]: y,
-                }),
+                className: s()(d.kL, v, T, { [d.En]: w, [d.dA]: I, [d.r9]: A }),
                 children: [
                     (0, r.jsx)("div", {
-                        className: s()(d.hr, x ? d.nr : void 0),
-                        children: (0, r.jsx)(u.Ay, p({}, V)),
+                        className: s()(d.hr, w ? d.nr : void 0),
+                        children: (0, r.jsx)(c.Ay, { ...V }),
                     }),
-                    (0, r.jsx)(c.A, {
-                        value: L,
+                    (0, r.jsx)(u.A, {
+                        value: x,
                         onValueChange: G,
                         onValueReached: U,
-                        targetTotalCounterTime: w,
-                        className: x ? d.F : void 0,
+                        targetTotalCounterTime: O,
+                        className: w ? d.F : void 0,
                     }),
-                    g && (0, r.jsx)(_, {}),
+                    m && (0, r.jsx)(_, {}),
                 ],
             }),
         });

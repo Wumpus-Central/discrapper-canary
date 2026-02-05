@@ -1,128 +1,58 @@
-r.d(t, {
-    ParagraphFormFieldModal: () => p,
-    TextInputFormFieldModal: () => d,
-}),
-    r(228524),
-    r(896048),
-    r(747238),
-    r(812715),
-    r(733351);
-var n = r(627968),
-    i = r(64700),
-    a = r(397927),
-    c = r(198982),
-    l = r(513461),
-    o = r(242273),
-    s = r(260197),
-    b = r(985018);
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function u(e) {
-    var t, r, l;
-    let { type: u, title: d, description: p, field: y, onSave: g, onClose: O } = e,
-        [j, h] = i.useState(null != (t = null == y ? void 0 : y.label) ? t : ""),
-        [w, v] = i.useState(null),
-        P = async () => {
-            null != w && v(null);
-            let e = j.trim();
-            if ("" === e) return void v(b.intl.string(b.t["G+TI44"]));
+e.d(n, { ParagraphFormFieldModal: () => p, TextInputFormFieldModal: () => _ });
+var r = e(627968),
+    i = e(64700),
+    a = e(397927),
+    l = e(198982),
+    o = e(513461),
+    s = e(242273),
+    c = e(260197),
+    d = e(985018);
+function u(t) {
+    let { type: n, title: e, description: o, field: u, onSave: _, onClose: p } = t,
+        [b, g] = i.useState(u?.label ?? ""),
+        [y, x] = i.useState(null),
+        h = async () => {
+            null != y && x(null);
+            let t = b.trim();
+            if ("" === t) return void x(d.intl.string(d.t["G+TI44"]));
             try {
-                await g({
-                    field_type: u,
-                    label: e,
-                    required: !0,
-                }),
-                    O();
-            } catch (e) {
-                v(new c.LG(e).getAnyErrorMessage());
+                await _({ field_type: n, label: t, required: !0 }), p();
+            } catch (t) {
+                x(new l.LG(t).getAnyErrorMessage());
             }
         };
-    return (0, n.jsx)(
-        o.A,
-        ((r = f({}, e)),
-        (l = l =
-            {
-                errorText: w,
-                title: d,
-                description: p,
-                onConfirm: P,
-                onCancel: O,
-                children: (0, n.jsx)(a.ksK, {
-                    onChange: (e) => {
-                        null != w && v(null);
-                        let t = e.replace(/(\r\n|\n|\r)/g, " ");
-                        t.length > s.Ty && (t = t.slice(0, s.Ty)), h(t);
-                    },
-                    placeholder: b.intl.string(b.t.fqVmbL),
-                    value: j,
-                    onKeyDown: (e) => "Enter" === e.key && P(),
-                }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(l)).forEach(function (e) {
-                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
-              }),
-        r),
-    );
-}
-
-function d(e) {
-    return (0, n.jsx)(
-        u,
-        f(
-            {
-                title: b.intl.string(b.t.w6Q9wz),
-                description: b.intl.string(b.t["A6M+qv"]),
-                type: l.rX.TEXT_INPUT,
+    return (0, r.jsx)(s.A, {
+        ...t,
+        errorText: y,
+        title: e,
+        description: o,
+        onConfirm: h,
+        onCancel: p,
+        children: (0, r.jsx)(a.ksK, {
+            onChange: (t) => {
+                null != y && x(null);
+                let n = t.replace(/(\r\n|\n|\r)/g, " ");
+                n.length > c.Ty && (n = n.slice(0, c.Ty)), g(n);
             },
-            e,
-        ),
-    );
+            placeholder: d.intl.string(d.t.fqVmbL),
+            value: b,
+            onKeyDown: (t) => "Enter" === t.key && h(),
+        }),
+    });
 }
-
-function p(e) {
-    return (0, n.jsx)(
-        u,
-        f(
-            {
-                title: b.intl.string(b.t.gG0JBN),
-                description: b.intl.string(b.t.SMX0ia),
-                type: l.rX.PARAGRAPH,
-            },
-            e,
-        ),
-    );
+function _(t) {
+    return (0, r.jsx)(u, {
+        title: d.intl.string(d.t.w6Q9wz),
+        description: d.intl.string(d.t["A6M+qv"]),
+        type: o.rX.TEXT_INPUT,
+        ...t,
+    });
+}
+function p(t) {
+    return (0, r.jsx)(u, {
+        title: d.intl.string(d.t.gG0JBN),
+        description: d.intl.string(d.t.SMX0ia),
+        type: o.rX.PARAGRAPH,
+        ...t,
+    });
 }

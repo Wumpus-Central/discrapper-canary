@@ -1,11 +1,9 @@
-i.d(e, {
-    m: () => u,
-});
+i.d(e, { m: () => a });
 var n = i(745109),
     l = i(419954),
     s = i(780964),
     r = i(985018);
-let u = (0, l.E2)(s.X.PROFILE_SETTING, {
+let a = (0, l.E2)(s.X.PROFILE_SETTING, {
     Component: n.A,
     useSearchTerms: () => [
         r.intl.string(r.t["vi7f+q"]),

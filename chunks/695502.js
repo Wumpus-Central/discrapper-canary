@@ -1,18 +1,9 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = e.inherit(e.QUOTE_STRING_MODE, {
-            illegal: null,
-        }),
-        r = {
-            className: "params",
-            begin: /\(/,
-            end: /\)/,
-            contains: ["self", e.C_NUMBER_MODE, n],
-        },
+        n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        r = { className: "params", begin: /\(/, end: /\)/, contains: ["self", e.C_NUMBER_MODE, n] },
         i = e.COMMENT(/--/, /$/),
-        a = e.COMMENT(/\(\*/, /\*\)/, {
-            contains: ["self", i],
-        }),
+        a = e.COMMENT(/\(\*/, /\*\)/, { contains: ["self", i] }),
         s = [i, a, e.HASH_COMMENT_MODE],
         o = [
             /apart from/,
@@ -67,27 +58,11 @@ e.exports = function (e) {
         contains: [
             n,
             e.C_NUMBER_MODE,
-            {
-                className: "built_in",
-                begin: t.concat(/\b/, t.either(...l), /\b/),
-            },
-            {
-                className: "built_in",
-                begin: /^\s*return\b/,
-            },
-            {
-                className: "literal",
-                begin: /\b(text item delimiters|current application|missing value)\b/,
-            },
-            {
-                className: "keyword",
-                begin: t.concat(/\b/, t.either(...o), /\b/),
-            },
-            {
-                beginKeywords: "on",
-                illegal: /[${=;\n]/,
-                contains: [e.UNDERSCORE_TITLE_MODE, r],
-            },
+            { className: "built_in", begin: t.concat(/\b/, t.either(...l), /\b/) },
+            { className: "built_in", begin: /^\s*return\b/ },
+            { className: "literal", begin: /\b(text item delimiters|current application|missing value)\b/ },
+            { className: "keyword", begin: t.concat(/\b/, t.either(...o), /\b/) },
+            { beginKeywords: "on", illegal: /[${=;\n]/, contains: [e.UNDERSCORE_TITLE_MODE, r] },
             ...s,
         ],
         illegal: /\/\/|->|=>|\[\[/,

@@ -1,8 +1,4 @@
-s.d(e, {
-    Ai: () => n,
-    hE: () => i,
-    uu: () => a,
-});
-let n = "example.com",
-    i = (t) => "_discord.".concat(t),
-    a = (t) => "https://".concat(t, "/.well-known/discord");
+i.d(n, { Ai: () => e, hE: () => s, uu: () => a });
+let e = "example.com",
+    s = (t) => `_discord.${t}`,
+    a = (t) => `https://${t}/.well-known/discord`;

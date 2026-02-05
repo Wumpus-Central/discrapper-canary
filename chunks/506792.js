@@ -1,129 +1,70 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968),
+n.d(t, { A: () => x });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
     o = n(442433),
-    c = n(676002),
-    u = n(734057),
-    d = n(808728),
-    f = n(576705),
-    p = n(557534),
-    h = n(166444),
-    b = n(652215),
-    g = n(790782),
-    m = n(728444);
-let A = (0, c.a)(function (e) {
+    d = n(676002),
+    c = n(734057),
+    u = n(808728),
+    h = n(576705),
+    A = n(557534),
+    g = n(166444),
+    m = n(652215),
+    p = n(790782),
+    _ = n(728444);
+let x = (0, d.a)(function (e) {
     let {
             guild: t,
-            selectedChannelId: i,
-            position: c,
-            disableManageChannels: A,
-            sorting: y,
-            sortingType: O,
-            sortingPosition: j,
-            connectChannelDragSource: v,
-            connectChannelDropTarget: x,
-            tabIndex: E,
+            selectedChannelId: s,
+            position: d,
+            disableManageChannels: x,
+            sorting: f,
+            sortingType: E,
+            sortingPosition: C,
+            connectChannelDragSource: I,
+            connectChannelDropTarget: S,
+            tabIndex: b,
         } = e,
-        _ = (0, s.bG)([u.A, d.Ay], () => {
-            let e = d.Ay.getDirectoryChannelIds(t.id);
-            return 0 === e.length ? null : u.A.getChannel(e[0]);
+        N = (0, r.bG)([c.A, u.Ay], () => {
+            let e = u.Ay.getDirectoryChannelIds(t.id);
+            return 0 === e.length ? null : c.A.getChannel(e[0]);
         }),
-        C = (0, s.bG)([u.A], () => u.A.getChannel(null == _ ? void 0 : _.parent_id)),
-        S = i === (null == _ ? void 0 : _.id),
-        I = (0, s.bG)([f.A], () =>
-            null != C ? f.A.can(b.xBc.MANAGE_CHANNELS, C) : null != t && f.A.can(b.xBc.MANAGE_CHANNELS, t),
+        T = (0, r.bG)([c.A], () => c.A.getChannel(N?.parent_id)),
+        j = s === N?.id,
+        v = (0, r.bG)([h.A], () =>
+            null != T ? h.A.can(m.xBc.MANAGE_CHANNELS, T) : null != t && h.A.can(m.xBc.MANAGE_CHANNELS, t),
         ),
-        N = l.useCallback(
+        y = l.useCallback(
             (e) => {
-                null != _ &&
+                null != N &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await n.e("29559").then(n.bind(n, 994058));
-                        return (t) => {
-                            var n, l;
-                            return (0, r.jsx)(
-                                e,
-                                ((n = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, t)),
-                                (l = l =
-                                    {
-                                        channel: _,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                                      }),
-                                n),
-                            );
-                        };
+                        return (t) => (0, i.jsx)(e, { ...t, channel: N });
                     });
             },
-            [_],
+            [N],
         );
-    if (null == _) return null;
-    let T = (0, p.O6)(c, j),
-        P = (0, p.h$)(_, y, O),
-        w = (0, r.jsx)("div", {
-            className: a()(T, {
-                [m.r9]: P,
-                [m.wH]: S,
-            }),
-            "data-dnd-name": _.name,
-            children: (0, r.jsxs)(h.Ay, {
-                className: m.Ki,
-                channel: _,
+    if (null == N) return null;
+    let R = (0, A.O6)(d, C),
+        O = (0, A.h$)(N, f, E),
+        L = (0, i.jsx)("div", {
+            className: a()(R, { [_.r9]: O, [_.wH]: j }),
+            "data-dnd-name": N.name,
+            children: (0, i.jsxs)(g.Ay, {
+                className: _.Ki,
+                channel: N,
                 guild: t,
-                selected: S,
-                onContextMenu: N,
+                selected: j,
+                onContextMenu: y,
                 forceInteractable: !0,
-                resolvedUnreadSetting: g.e.ONLY_MENTIONS,
+                resolvedUnreadSetting: p.e.ONLY_MENTIONS,
                 children: [
-                    (0, r.jsx)(p.gQ, {
-                        channel: _,
-                        tabIndex: E,
-                    }),
-                    (0, r.jsx)(p.Jd, {
-                        channel: _,
-                        disableManageChannels: A,
-                        tabIndex: E,
-                    }),
+                    (0, i.jsx)(A.gQ, { channel: N, tabIndex: b }),
+                    (0, i.jsx)(A.Jd, { channel: N, disableManageChannels: x, tabIndex: b }),
                 ],
             }),
         });
-    return I && (w = x(v(w))), w;
+    return v && (L = S(I(L))), L;
 });

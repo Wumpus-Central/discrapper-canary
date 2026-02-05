@@ -1,3 +1,4 @@
+"use strict";
 var r = n(381265),
     i = n(189891);
 e.exports = function () {
@@ -5,9 +6,7 @@ e.exports = function () {
     return (
         r(
             Array.prototype,
-            {
-                map: e,
-            },
+            { map: e },
             {
                 map: function () {
                     return Array.prototype.map !== e;

@@ -1,21 +1,21 @@
-var r = n(611122).notEmptyKey;
-
-function i(e, t) {
-    return r(t) && "MUTABLE" === e.__get(t).getMutability() ? t : null;
+"use strict";
+var n = r(611122).notEmptyKey;
+function i(t, e) {
+    return n(e) && "MUTABLE" === t.__get(e).getMutability() ? e : null;
 }
-e.exports = function (e, t) {
-    if (t.isCollapsed()) {
-        var n,
-            r = t.getAnchorKey(),
-            a = t.getAnchorOffset();
-        return a > 0
-            ? (n = e.getBlockForKey(r).getEntityAt(a - 1)) !== e.getBlockForKey(r).getEntityAt(a)
+t.exports = function (t, e) {
+    if (e.isCollapsed()) {
+        var r,
+            n = e.getAnchorKey(),
+            o = e.getAnchorOffset();
+        return o > 0
+            ? (r = t.getBlockForKey(n).getEntityAt(o - 1)) !== t.getBlockForKey(n).getEntityAt(o)
                 ? null
-                : i(e.getEntityMap(), n)
+                : i(t.getEntityMap(), r)
             : null;
     }
-    var s = t.getStartKey(),
-        o = t.getStartOffset(),
-        l = e.getBlockForKey(s);
-    return (n = o === l.getLength() ? null : l.getEntityAt(o)), i(e.getEntityMap(), n);
+    var a = e.getStartKey(),
+        s = e.getStartOffset(),
+        u = t.getBlockForKey(a);
+    return (r = s === u.getLength() ? null : u.getEntityAt(s)), i(t.getEntityMap(), r);
 };

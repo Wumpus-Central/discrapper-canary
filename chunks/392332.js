@@ -1,75 +1,61 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(158954),
-    o = n(397927),
-    c = n(760459),
-    u = n(985018),
-    d = n(851822),
-    m = n(491510);
-
-function f(e) {
-    let { entries: t, viewId: n, officialGuildId: i, onClose: f, source: g } = e,
-        x = t.length > 7,
-        [p, j] = r.useState(!1),
-        h = r.useMemo(() => t.slice(0, x && !p ? 6 : void 0), [t, x, p]);
+i.d(t, { A: () => x });
+var l = i(627968),
+    a = i(64700),
+    n = i(503698),
+    s = i.n(n),
+    r = i(158954),
+    c = i(397927),
+    o = i(760459),
+    d = i(985018),
+    u = i(851822),
+    m = i(491510);
+function x(e) {
+    let { entries: t, viewId: i, officialGuildId: n, onClose: x, source: g } = e,
+        h = t.length > 7,
+        [f, j] = a.useState(!1),
+        p = a.useMemo(() => t.slice(0, h && !f ? 6 : void 0), [t, h, f]);
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(s.DZT, {
-                className: d.bV,
+            (0, l.jsx)(r.DZT, {
+                className: u.bV,
                 variant: "text-md/semibold",
                 color: "text-strong",
-                children: u.intl.string(u.t.ak8OHk),
+                children: d.intl.string(d.t.ak8OHk),
             }),
             0 === t.length
-                ? (0, l.jsx)(s.EYj, {
+                ? (0, l.jsx)(r.EYj, {
                       variant: "text-xs/semibold",
                       color: "text-strong",
                       className: m.p$,
-                      children: u.intl.string(u.t.R5fYVO),
+                      children: d.intl.string(d.t.R5fYVO),
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
-                              className: a()(m.yz, {
-                                  [m.T6]: x && !p,
-                              }),
+                              className: s()(m.yz, { [m.T6]: h && !f }),
                               children: (0, l.jsx)("div", {
-                                  className: d.fi,
-                                  children: h.map((e) =>
+                                  className: u.fi,
+                                  children: p.map((e) =>
                                       (0, l.jsx)(
-                                          c.A,
-                                          {
-                                              entry: e,
-                                              viewId: n,
-                                              onClose: f,
-                                              officialGuildId: i,
-                                              source: g,
-                                          },
+                                          o.A,
+                                          { entry: e, viewId: i, onClose: x, officialGuildId: n, source: g },
                                           e.id,
                                       ),
                                   ),
                               }),
                           }),
-                          x &&
-                              !p &&
-                              (0, l.jsxs)(o.DUT, {
+                          h &&
+                              !f &&
+                              (0, l.jsxs)(c.DUT, {
                                   className: m.ND,
                                   onClick: () => j(!0),
                                   children: [
-                                      (0, l.jsx)(s.EYj, {
+                                      (0, l.jsx)(r.EYj, {
                                           variant: "text-xs/semibold",
                                           color: "interactive-text-default",
-                                          children: u.intl.string(u.t.yohc6E),
+                                          children: d.intl.string(d.t.yohc6E),
                                       }),
-                                      (0, l.jsx)(o.abt, {
-                                          size: "xs",
-                                      }),
+                                      (0, l.jsx)(c.abt, { size: "xs" }),
                                   ],
                               }),
                       ],

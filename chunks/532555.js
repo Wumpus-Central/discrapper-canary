@@ -1,5 +1,5 @@
+"use strict";
 function r(e) {
-    var t;
     return {
         id: e.id,
         name: e.name,
@@ -7,7 +7,7 @@ function r(e) {
         regionName: e.region_name,
         planId: e.sku_id,
         planName: e.plan_name,
-        onlineConnectionsCount: null != (t = e.players_count) ? t : 0,
+        onlineConnectionsCount: e.players_count ?? 0,
         maxConnectionsCount: e.max_players_count,
         serverIP: e.ip,
         port: e.port,
@@ -19,6 +19,4 @@ function r(e) {
         gameConfig: e.game_config,
     };
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

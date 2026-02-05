@@ -1,140 +1,105 @@
-n.d(t, {
-    Q: () => y,
-}),
-    n(938796);
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
+n.d(t, { Q: () => I }), n(938796);
+var l = n(627968),
+    a = n(64700),
+    r = n(311907),
     s = n(562465),
-    o = n(397927),
-    l = n(73153),
-    c = n(163437),
-    u = n(97352),
-    d = n(67480),
-    f = n(328968),
+    i = n(397927),
+    o = n(73153),
+    d = n(163437),
+    c = n(97352),
+    u = n(67480),
+    m = n(328968),
     p = n(927578),
-    _ = n(580630),
+    A = n(580630),
     h = n(963179),
-    m = n(168393),
-    g = n(652215),
-    E = n(985018);
-let b = (0, a.UT)([d.A, u.A, f.A], {
-    getQueryId: g.fic.APP_PREMIUM_BUTTON,
+    C = n(168393),
+    E = n(652215),
+    x = n(985018);
+let N = (0, r.UT)([u.A, c.A, m.A], {
+    getQueryId: E.fic.APP_PREMIUM_BUTTON,
     get: (e) => {
-        var t;
         if (null == e) return;
-        let n = d.A.get(e),
-            r = null != (t = u.A.getForSKU(e)) ? t : [],
-            i = f.A.getForSKU(e),
-            a = d.A.getParentSKU(e);
-        return null == n || null == i || (null != n && n.type === g.Puh.SUBSCRIPTION && null == a)
+        let t = u.A.get(e),
+            n = c.A.getForSKU(e) ?? [],
+            l = m.A.getForSKU(e),
+            a = u.A.getParentSKU(e);
+        return null == t || null == l || (null != t && t.type === E.Puh.SUBSCRIPTION && null == a)
             ? null
-            : {
-                  parentSku: a,
-                  sku: n,
-                  storeListing: i,
-                  subscriptionPlans: r,
-              };
+            : { parentSku: a, sku: t, storeListing: l, subscriptionPlans: n };
     },
     load: async (e) => {
         if (null == e) return;
-        let t = {
-                url: g.Rsh.STOREFRONT_PREMIUM_BUTTON(e),
-                rejectWithError: !1,
-            },
+        let t = { url: E.Rsh.STOREFRONT_PREMIUM_BUTTON(e), rejectWithError: !1 },
             { body: n } = await s.Bo.get(t);
-        l.h.dispatch({
-            type: "STORE_LISTINGS_FETCH_SUCCESS",
-            storeListings: n.store_listings,
-        }),
+        o.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: n.store_listings }),
             null != n.subscription_plans &&
-                l.h.dispatch({
+                o.h.dispatch({
                     type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS",
                     skuId: e,
                     subscriptionPlans: n.subscription_plans,
                 }),
             null != n.skus &&
                 n.skus.forEach((e) => {
-                    l.h.dispatch({
-                        type: "SKU_FETCH_SUCCESS",
-                        sku: e,
-                    });
+                    o.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: e });
                 });
     },
 });
-
-function y(e) {
-    let { data: t } = b(e),
-        n = null == t ? void 0 : t.parentSku,
-        a = null == t ? void 0 : t.sku,
-        s = null == t ? void 0 : t.storeListing,
-        l = null == t ? void 0 : t.subscriptionPlans,
-        u = i.useCallback(() => {
-            if (
-                (null == a ? void 0 : a.applicationId) == null ||
-                (null == a ? void 0 : a.id) == null ||
-                (null == a ? void 0 : a.flags) == null
-            )
-                return null;
-            (0, o.qfG)((e) => {
+function I(e) {
+    let { data: t } = N(e),
+        n = t?.parentSku,
+        r = t?.sku,
+        s = t?.storeListing,
+        o = t?.subscriptionPlans,
+        c = a.useCallback(() => {
+            if (r?.applicationId == null || r?.id == null || r?.flags == null) return null;
+            (0, i.qfG)((e) => {
                 let { onClose: t, transitionState: n } = e;
-                return (0, r.jsx)(m.SubscriptionDetailsModal, {
-                    appId: a.applicationId,
-                    subscriptionType: (0, c.bg)(a.flags) ? "user" : "guild",
+                return (0, l.jsx)(C.SubscriptionDetailsModal, {
+                    appId: r.applicationId,
+                    subscriptionType: (0, d.bg)(r.flags) ? "user" : "guild",
                     onClose: t,
-                    skuId: a.id,
+                    skuId: r.id,
                     transitionState: n,
                     guildId: null,
                 });
             });
-        }, [null == a ? void 0 : a.applicationId, null == a ? void 0 : a.id, null == a ? void 0 : a.flags]),
-        d = i.useCallback(() => {
-            if (null == a) return null;
-            (0, o.qfG)((e) => {
+        }, [r?.applicationId, r?.id, r?.flags]),
+        u = a.useCallback(() => {
+            if (null == r) return null;
+            (0, i.qfG)((e) => {
                 let { onClose: t, transitionState: n } = e;
-                return (0, r.jsx)(h.ItemDetailsModal, {
-                    appId: a.applicationId,
-                    skuId: a.id,
+                return (0, l.jsx)(h.ItemDetailsModal, {
+                    appId: r.applicationId,
+                    skuId: r.id,
                     onClose: t,
                     transitionState: n,
                 });
             });
-        }, [a]);
-    if (null != a && null != s && (null == a || a.type !== g.Puh.SUBSCRIPTION || null != n)) {
-        if (null == e || (null != a && !a.available))
-            return {
-                disabled: !0,
-                label: E.intl.string(E.t.CHa0vN),
-            };
-        if (a.type === g.Puh.SUBSCRIPTION) {
-            if (null == l || 0 === l.length)
-                return {
-                    disabled: !0,
-                    label: E.intl.string(E.t.CHa0vN),
-                };
-            let e = l[0],
+        }, [r]);
+    if (null != r && null != s && (null == r || r.type !== E.Puh.SUBSCRIPTION || null != n)) {
+        if (null == e || (null != r && !r.available)) return { disabled: !0, label: x.intl.string(x.t.CHa0vN) };
+        if (r.type === E.Puh.SUBSCRIPTION) {
+            if (null == o || 0 === o.length) return { disabled: !0, label: x.intl.string(x.t.CHa0vN) };
+            let e = o[0],
                 t = (0, p.y8)(e.id);
             return {
                 disabled: !1,
-                label: E.intl.formatToPlainString(E.t["c6Q+B3"], {
-                    skuName: a.name,
-                    price: (0, _.$g)(t.amount, t.currency),
+                label: x.intl.formatToPlainString(x.t["c6Q+B3"], {
+                    skuName: r.name,
+                    price: (0, A.$g)(t.amount, t.currency),
                 }),
-                onClick: u,
+                onClick: c,
             };
         }
-        return null == a.price
-            ? {
-                  disabled: !0,
-                  label: E.intl.string(E.t.CHa0vN),
-              }
+        return null == r.price
+            ? { disabled: !0, label: x.intl.string(x.t.CHa0vN) }
             : {
                   disabled: !1,
-                  label: E.intl.formatToPlainString(E.t["c6Q+B3"], {
-                      skuName: a.name,
-                      price: (0, _.$g)(a.price.amount, a.price.currency),
+                  label: x.intl.formatToPlainString(x.t["c6Q+B3"], {
+                      skuName: r.name,
+                      price: (0, A.$g)(r.price.amount, r.price.currency),
                   }),
-                  onClick: d,
+                  onClick: u,
               };
     }
 }

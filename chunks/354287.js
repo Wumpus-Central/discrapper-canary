@@ -1,9 +1,5 @@
-n.d(t, {
-    KL: () => l,
-    gx: () => s,
-    kY: () => a,
-    wV: () => o,
-});
+"use strict";
+n.d(t, { KL: () => l, gx: () => s, kY: () => a, wV: () => o });
 var r = n(954571),
     i = n(652215),
     a = (function (e) {
@@ -23,7 +19,6 @@ var r = n(954571),
             e
         );
     })({});
-
 function s(e) {
     let { applicationId: t, linkType: n, area: a, referrerId: s, customId: o, isDeadEnd: l } = e;
     r.default.track(i.HAw.APP_EMBED_CLICKED, {
@@ -35,9 +30,8 @@ function s(e) {
         is_dead_end: l,
     });
 }
-
 function o(e) {
-    let { appId: t, linkType: n, referrerId: a, customId: s, guildId: o, channelId: l, messageId: c } = e;
+    let { appId: t, linkType: n, referrerId: a, customId: s, guildId: o, channelId: l, messageId: u } = e;
     r.default.track(i.HAw.APP_EMBED_VIEWED, {
         application_id: t,
         link_type: n,
@@ -45,15 +39,9 @@ function o(e) {
         custom_id: s,
         guild_id: o,
         channel_id: l,
-        message_id: c,
+        message_id: u,
     });
 }
-
 function l(e, t, n, a) {
-    r.default.track(i.HAw.APP_EMBED_LINK_SENT, {
-        application_id: e,
-        link_type: t,
-        referrer_id: n,
-        custom_id: a,
-    });
+    r.default.track(i.HAw.APP_EMBED_LINK_SENT, { application_id: e, link_type: t, referrer_id: n, custom_id: a });
 }

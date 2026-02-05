@@ -1,7 +1,4 @@
-t.d(e, {
-    b: () => C,
-}),
-    t(65821);
+t.d(e, { b: () => C });
 var n = t(627968),
     r = t(64700),
     s = t(284009),
@@ -17,7 +14,6 @@ var n = t(627968),
     h = t(985018),
     p = t(689588);
 let j = new u.A("TwoWayLink");
-
 function C(a) {
     let {
             platformType: e,
@@ -26,8 +22,8 @@ function C(a) {
             expectedCallbackState: u,
             onAuthToken: C,
             onError: g,
-            onClose: v,
-            img: b,
+            onClose: b,
+            img: v,
             title: E,
             body: f,
             redirectDestination: k,
@@ -35,29 +31,21 @@ function C(a) {
         A = r.useCallback(async () => {
             let a;
             try {
-                if (
-                    ((a = await (0, x.d)(e, {
-                        twoWayLinkType: l.I.DESKTOP,
-                    })),
-                    null == a)
-                )
+                if (((a = await (0, x.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
                     throw Error("missing authorizeURL");
             } catch (a) {
                 j.error("Error opening provider authorize page", a), g();
                 return;
             }
             let { state: t } = (0, d.vA)(a);
-            i()(null != t, "Authorize URL state query parameter must be present"), null == s || s(t);
+            i()(null != t, "Authorize URL state query parameter must be present"), s?.(t);
         }, [e, g, s]),
         T = r.useCallback(
             (a) => {
                 let { callbackCode: t, callbackState: n } = a;
                 n !== u
-                    ? j.warn("".concat(e, " link: received mismatching callback state!"))
-                    : C({
-                          callbackCode: t,
-                          callbackState: n,
-                      });
+                    ? j.warn(`${e} link: received mismatching callback state!`)
+                    : C({ callbackCode: t, callbackState: n });
             },
             [e, u, C],
         );
@@ -83,25 +71,11 @@ function C(a) {
                             className: p.u1,
                             variant: "text-xs/bold",
                             color: "text-default",
-                            children: h.intl.format(h.t.fHz6eR, {
-                                number: 1,
-                                total: 2,
-                            }),
+                            children: h.intl.format(h.t.fHz6eR, { number: 1, total: 2 }),
                         }),
-                        (0, n.jsxs)("div", {
-                            className: p.bm,
-                            children: [b, " "],
-                        }),
-                        (0, n.jsx)(c.Heading, {
-                            className: p.DD,
-                            variant: "heading-xl/extrabold",
-                            children: E,
-                        }),
-                        null != v &&
-                            (0, n.jsx)(c.s_y, {
-                                className: p.b,
-                                onClick: v,
-                            }),
+                        (0, n.jsxs)("div", { className: p.bm, children: [v, " "] }),
+                        (0, n.jsx)(c.Heading, { className: p.DD, variant: "heading-xl/extrabold", children: E }),
+                        null != b && (0, n.jsx)(c.s_y, { className: p.b, onClick: b }),
                     ],
                 }),
                 (0, n.jsxs)(c.$mQ, {
@@ -109,21 +83,14 @@ function C(a) {
                     className: p.rf,
                     paddingFix: !1,
                     children: [
-                        (0, n.jsx)(c.Text, {
-                            tag: "p",
-                            variant: "text-md/normal",
-                            color: "text-default",
-                            children: f,
-                        }),
+                        (0, n.jsx)(c.Text, { tag: "p", variant: "text-md/normal", color: "text-default", children: f }),
                         !t &&
                             null != k &&
                             (0, n.jsx)(c.Text, {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: h.intl.format(h.t.XhlYYn, {
-                                    redirectUrl: k,
-                                }),
+                                children: h.intl.format(h.t.XhlYYn, { redirectUrl: k }),
                             }),
                     ],
                 }),
@@ -135,11 +102,7 @@ function C(a) {
                         text: h.intl.format(t ? h.t["8Laby+"] : h.t["6623tt"], {
                             popoutWindowIcon: {},
                             popoutWindowIconHook: () =>
-                                (0, n.jsx)(c.tfB, {
-                                    color: "currentColor",
-                                    className: p.LE,
-                                    size: "xs",
-                                }),
+                                (0, n.jsx)(c.tfB, { color: "currentColor", className: p.LE, size: "xs" }),
                         }),
                         onClick: A,
                         fullWidth: !0,

@@ -1,3 +1,1 @@
-e.exports = {
-    Z: "emoji_ab6c65",
-};
+e.exports = { Z: "emoji_ab6c65" };

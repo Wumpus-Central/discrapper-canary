@@ -1,39 +1,27 @@
+"use strict";
 let r;
-n.d(t, {
-    Cv: () => d,
-    So: () => u,
-    _Z: () => _,
-    ap: () => h,
-    uK: () => p,
-    ux: () => f,
-}),
-    n(747238),
-    n(896048);
+n.d(t, { Cv: () => d, So: () => c, _Z: () => p, ap: () => h, uK: () => f, ux: () => _ });
 var i = n(832081),
     a = n(562465),
     s = n(626584),
     o = n(652215);
 let l = new s.A("StripeUtils"),
-    c = (e) => {
+    u = (e) => {
         let t = (t) =>
-                "You passed an invalid expiration date ".concat(e) +
-                "".concat(null != t ? t : "") +
-                "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`",
+                `You passed an invalid expiration date ${e}${t ?? ""}Please pass a string containing a numeric month and year such as \`01-17\` or \`2015 / 05\``,
             n = e.split(/[.\-/\s]+/g);
         2 !== n.length && t();
         let r = n.map((e) => {
                 let r = parseInt(e);
-                return (
-                    isNaN(r) && t("".concat(n, " is not a number.")), r < 1 && t("".concat(r, " is less than one.")), r
-                );
+                return isNaN(r) && t(`${n} is not a number.`), r < 1 && t(`${r} is less than one.`), r;
             }),
             [i, a] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
-        return i > 12 && t("Month must be a number 1-12, not ".concat(i, ".")), a < 100 && (a += 2e3), [i, a];
+        return i > 12 && t(`Month must be a number 1-12, not ${i}.`), a < 100 && (a += 2e3), [i, a];
     },
-    u = (e) => {
+    c = (e) => {
         let t, n;
         try {
-            [t, n] = c(e);
+            [t, n] = u(e);
         } catch (e) {
             return !1;
         }
@@ -41,12 +29,10 @@ let l = new s.A("StripeUtils"),
             i = new Date();
         return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i;
     };
-
 function d() {
     return null != r ? Promise.resolve(r) : (0, i.loadStripe)(o.Gg3.STRIPE.KEY).then((e) => ((r = e), e));
 }
-
-function f() {
+function _() {
     return null == o.Gg3.STRIPE.KEY
         ? (l.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", o.Gg3.STRIPE.KEY),
           "unknown")
@@ -56,63 +42,34 @@ function f() {
             ? "test"
             : (l.warn("Unexpected value for Stripe public key: ", o.Gg3.STRIPE.KEY), "unknown");
 }
-
-function p(e) {
-    var t, n, r, i, a, s, o, l;
-    let { billing_details: c } = e,
-        u = null != (t = c.address) ? t : {},
-        d = {
-            name: null != (n = c.name) ? n : "",
-            line1: null != (r = u.line1) ? r : "",
-            line2: null != (i = u.line2) ? i : "",
-            city: null != (a = u.city) ? a : "",
-            state: null != (s = u.state) ? s : "",
-            country: null != (o = u.country) ? o : "",
-            postalCode: null != (l = u.postal_code) ? l : "",
+function f(e) {
+    let { billing_details: t } = e,
+        n = t.address ?? {},
+        r = {
+            name: t.name ?? "",
+            line1: n.line1 ?? "",
+            line2: n.line2 ?? "",
+            city: n.city ?? "",
+            state: n.state ?? "",
+            country: n.country ?? "",
+            postalCode: n.postal_code ?? "",
         };
-    return {
-        token: e.id,
-        billingAddressInfo: d,
-    };
+    return { token: e.id, billingAddressInfo: r };
 }
-
-function _(e) {
+function p(e) {
     let { name: t, line1: n, line2: r, city: i, state: a, postalCode: s, country: o } = e;
-    return {
-        name: t,
-        address: {
-            line1: n,
-            line2: r,
-            city: i,
-            state: a,
-            postal_code: s,
-            country: o,
-        },
-    };
+    return { name: t, address: { line1: n, line2: r, city: i, state: a, postal_code: s, country: o } };
 }
 async function h(e) {
     try {
         let { stripe_payment_intent_client_secret: t } = (
-                await a.Bo.get({
-                    url: o.Rsh.BILLING_STRIPE_PAYMENT_INTENTS(e),
-                    oldFormErrors: !0,
-                    rejectWithError: !1,
-                })
+                await a.Bo.get({ url: o.Rsh.BILLING_STRIPE_PAYMENT_INTENTS(e), oldFormErrors: !0, rejectWithError: !1 })
             ).body,
             n = await d();
-        if (null == n)
-            return {
-                error: "unable to load stripe",
-            };
+        if (null == n) return { error: "unable to load stripe" };
         let { error: r, paymentIntent: i } = await n.retrievePaymentIntent(t);
-        if (null != r)
-            return {
-                error: r.message,
-            };
-        if (null == i)
-            return {
-                error: "payment intent does not exist",
-            };
+        if (null != r) return { error: r.message };
+        if (null == i) return { error: "payment intent does not exist" };
         let s = {};
         switch (
             ("requires_payment_method" === i.status &&
@@ -125,22 +82,15 @@ async function h(e) {
             case "requires_confirmation":
             case "requires_action":
                 let { error: l } = await n.confirmCardPayment(t, s);
-                if (null != l)
-                    return {
-                        error: l.message,
-                    };
+                if (null != l) return { error: l.message };
                 return {};
             case "succeeded":
             case "processing":
                 return {};
             default:
-                return {
-                    error: "Invalid Payment Intent status: ".concat(i.status),
-                };
+                return { error: `Invalid Payment Intent status: ${i.status}` };
         }
     } catch (e) {
-        return {
-            error: e.message,
-        };
+        return { error: e.message };
     }
 }

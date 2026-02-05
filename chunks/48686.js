@@ -1,7 +1,5 @@
-n.d(t, {
-    Q: () => c,
-    t: () => l,
-});
+"use strict";
+n.d(t, { Q: () => u, t: () => l });
 var r = n(311907),
     i = n(734057),
     a = n(71393),
@@ -15,7 +13,7 @@ let l = () => {
         let n = a.A.getGuild(t.getGuildId());
         return null != n && n.features.has(o.GuildFeatures.HUB);
     },
-    c = (e) =>
+    u = (e) =>
         (0, r.bG)([s.A, i.A, a.A], () => {
             let t = s.A.getVoiceChannelId();
             if (null == t) return !1;

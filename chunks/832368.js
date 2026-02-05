@@ -1,16 +1,11 @@
-var r = n(869639);
-e.exports = function (e) {
-    var t = e.getSelection(),
-        n = t.getEndKey(),
-        i = e.getCurrentContent().getBlockForKey(n).getLength();
-    return r.set(e, {
-        selection: t.merge({
-            anchorKey: n,
-            anchorOffset: i,
-            focusKey: n,
-            focusOffset: i,
-            isBackward: !1,
-        }),
+"use strict";
+var n = r(869639);
+t.exports = function (t) {
+    var e = t.getSelection(),
+        r = e.getEndKey(),
+        i = t.getCurrentContent().getBlockForKey(r).getLength();
+    return n.set(t, {
+        selection: e.merge({ anchorKey: r, anchorOffset: i, focusKey: r, focusOffset: i, isBackward: !1 }),
         forceSelection: !0,
     });
 };

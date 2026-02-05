@@ -1,39 +1,26 @@
-n.d(t, {
-    A: () => d,
-});
+n.d(t, { A: () => c });
 var a = n(627968),
-    l = n(397927),
+    s = n(397927),
     i = n(736653),
-    r = n(653523),
-    s = n(270704),
+    l = n(653523),
+    r = n(270704),
     o = n(652215),
-    c = n(566305);
-
-function d(e) {
+    d = n(566305);
+function c(e) {
     let { selected: t, onSelect: n } = e,
-        d = (0, i.Ay)();
+        c = (0, i.Ay)();
     return (0, a.jsxs)("div", {
-        className: c.N,
+        className: d.N,
         children: [
-            (0, a.jsx)(l.Text, {
-                variant: "text-sm/semibold",
-                children: "Preselected Gradient",
-            }),
+            (0, a.jsx)(s.Text, { variant: "text-sm/semibold", children: "Preselected Gradient" }),
             (0, a.jsx)("div", {
-                className: c.Z,
-                children: s.Z6.map((e) => {
-                    let l = d !== o.NJ8.LIGHT ? e.darkBackground : e.lightBackground,
+                className: d.Z,
+                children: r.Z6.map((e) => {
+                    let s = c !== o.NJ8.LIGHT ? e.darkBackground : e.lightBackground,
                         i = t === e.name;
                     return (0, a.jsx)(
-                        r.S4,
-                        {
-                            onSelect: () => n(e),
-                            style: {
-                                background: l,
-                            },
-                            name: e.name,
-                            isSelected: i,
-                        },
+                        l.S4,
+                        { onSelect: () => n(e), style: { background: s }, name: e.name, isSelected: i },
                         e.name,
                     );
                 }),

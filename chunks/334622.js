@@ -1,90 +1,58 @@
-n.d(e, {
-    A: () => A,
-}),
-    n(896048);
+n.d(e, { A: () => A });
 var a = n(627968),
     r = n(64700),
     i = n(311907),
-    l = n(397927),
-    s = n(631670),
-    o = n(752319),
+    s = n(397927),
+    l = n(631670),
+    o = n(836602),
     c = n(592074),
-    u = n(985018),
-    E = n(222872);
-
+    E = n(985018),
+    u = n(222872);
 function A(t) {
-    var e, n;
-    let { emailToken: A, onClose: _, onBack: C, onNext: d, transitionState: g } = t,
-        [N, S] = r.useState(""),
-        [k, m] = r.useState(""),
-        [h, x] = r.useState(!1),
-        p = (0, i.bG)([o.A], () => o.A.getErrors()),
-        v = r.useRef(null);
-    async function T(t) {
-        t.preventDefault(), x(!0);
-        let e = await (0, s.yu)({
-            email: N,
-            emailToken: A,
-            password: k,
-        });
-        if ((x(!1), null == e ? void 0 : e.ok)) d(N);
-        else {
-            var n, a;
-            (null == e || null == (n = e.body) ? void 0 : n.username) != null
-                ? (0, c.E)()
-                : (null == e || null == (a = e.body) ? void 0 : a.email_token) != null && (null == C || C());
-        }
+    let { emailToken: e, onClose: n, onBack: A, onNext: _, transitionState: C } = t,
+        [g, N] = r.useState(""),
+        [S, d] = r.useState(""),
+        [k, m] = r.useState(!1),
+        h = (0, i.bG)([o.A], () => o.A.getErrors()),
+        x = r.useRef(null);
+    async function p(t) {
+        t.preventDefault(), m(!0);
+        let n = await (0, l.yu)({ email: g, emailToken: e, password: S });
+        m(!1), n?.ok ? _(g) : n?.body?.username != null ? (0, c.E)() : n?.body?.email_token != null && A?.();
     }
     return (
         r.useEffect(() => {
-            var t;
-            null == (t = v.current) || t.focus();
+            x.current?.focus();
         }, []),
-        (0, a.jsx)(l.kpP, {
-            graphic: {
-                type: "image",
-                src: E,
-            },
-            title: u.intl.string(u.t.p3280r),
-            subtitle: u.intl.string(u.t["1k44EL"]),
-            onClose: _,
-            transitionState: g,
+        (0, a.jsx)(s.kpP, {
+            graphic: { type: "image", src: u },
+            title: E.intl.string(E.t.p3280r),
+            subtitle: E.intl.string(E.t["1k44EL"]),
+            onClose: n,
+            transitionState: C,
             actions: [
-                null != C
-                    ? {
-                          variant: "secondary",
-                          text: u.intl.string(u.t["13/7kX"]),
-                          onClick: C,
-                      }
-                    : {
-                          variant: "secondary",
-                          text: u.intl.string(u.t["ETE/oC"]),
-                          onClick: _,
-                      },
-                {
-                    variant: "primary",
-                    text: u.intl.string(u.t.i4jeWR),
-                    loading: h,
-                    onClick: T,
-                },
+                null != A
+                    ? { variant: "secondary", text: E.intl.string(E.t["13/7kX"]), onClick: A }
+                    : { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: n },
+                { variant: "primary", text: E.intl.string(E.t.i4jeWR), loading: k, onClick: p },
             ],
-            children: (0, a.jsxs)(l.BJc, {
+            children: (0, a.jsxs)(s.BJc, {
                 gap: 20,
                 children: [
-                    (0, a.jsx)(l.ksK, {
-                        label: u.intl.string(u.t["w/qqKK"]),
-                        error: null == p || null == (e = p.email) ? void 0 : e[0],
+                    (0, a.jsx)(s.ksK, {
+                        label: E.intl.string(E.t["w/qqKK"]),
+                        error: h?.email?.[0],
                         type: "email",
-                        value: N,
-                        onChange: S,
-                        inputRef: v,
+                        value: g,
+                        onChange: N,
+                        inputRef: x,
                     }),
-                    (0, a.jsx)(l.ksK, {
-                        label: u.intl.string(u.t.TmdnJ3),
-                        error: null == p || null == (n = p.password) ? void 0 : n[0],
+                    (0, a.jsx)(s.ksK, {
+                        label: E.intl.string(E.t.TmdnJ3),
+                        error: h?.password?.[0],
                         type: "password",
-                        value: k,
-                        onChange: m,
+                        value: S,
+                        onChange: d,
                     }),
                 ],
             }),

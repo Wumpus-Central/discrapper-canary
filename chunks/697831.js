@@ -1,47 +1,44 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(961350),
+var r = n(311907),
+    a = n(397927),
+    l = n(961350),
     s = n(655116),
     o = n(341335),
-    c = n(286617),
-    u = n(533207),
-    d = n(881335),
-    p = n(272984),
-    f = n(985018);
-
-function h(e, t, n) {
-    let h = (0, i.bG)([s.A, a.default], () => (null != t ? (0, c.A)(s.A, a.default, t, e) : void 0), [e, t]);
-    if (null == h || null == e || null == t) return null;
-    let A = h.isCurrentUser || h.notPlayable || h.playingSameTrack,
-        g = h.isCurrentUser || h.syncingWithUser || h.syncingWithParty;
+    d = n(286617),
+    c = n(533207),
+    u = n(881335),
+    A = n(272984),
+    h = n(985018);
+function _(e, t, n) {
+    let _ = (0, r.bG)([s.A, l.default], () => (null != t ? (0, d.A)(s.A, l.default, t, e) : void 0), [e, t]);
+    if (null == _ || null == e || null == t) return null;
+    let m = _.isCurrentUser || _.notPlayable || _.playingSameTrack,
+        p = _.isCurrentUser || _.syncingWithUser || _.syncingWithParty;
     return [
-        (0, r.jsx)(
-            l.Drp,
+        (0, i.jsx)(
+            a.Drp,
             {
-                id: "spotify-play-".concat(e.session_id),
-                action: () => (0, d.A)(h, p.Qp.USER_ACTIVITY_PLAY, n),
-                label: f.intl.string(f.t.rRffNz),
-                subtext: A ? (0, o.A)(h, p.Qp.USER_ACTIVITY_PLAY) : void 0,
-                disabled: A,
+                id: `spotify-play-${e.session_id}`,
+                action: () => (0, u.A)(_, A.Qp.USER_ACTIVITY_PLAY, n),
+                label: h.intl.string(h.t.rRffNz),
+                subtext: m ? (0, o.A)(_, A.Qp.USER_ACTIVITY_PLAY) : void 0,
+                disabled: m,
             },
-            "spotify-play-".concat(e.session_id),
+            `spotify-play-${e.session_id}`,
         ),
-        h.canPlaySpotify
-            ? (0, r.jsx)(
-                  l.Drp,
+        _.canPlaySpotify
+            ? (0, i.jsx)(
+                  a.Drp,
                   {
-                      id: "spotify-sync-".concat(e.session_id),
-                      action: () => (0, u.A)(h, p.Qp.USER_ACTIVITY_SYNC, n),
-                      label: f.intl.string(f.t.eU3inB),
-                      subtext: g ? (0, o.A)(h, p.Qp.USER_ACTIVITY_SYNC) : void 0,
-                      disabled: g,
+                      id: `spotify-sync-${e.session_id}`,
+                      action: () => (0, c.A)(_, A.Qp.USER_ACTIVITY_SYNC, n),
+                      label: h.intl.string(h.t.eU3inB),
+                      subtext: p ? (0, o.A)(_, A.Qp.USER_ACTIVITY_SYNC) : void 0,
+                      disabled: p,
                   },
-                  "spotify-sync-".concat(e.session_id),
+                  `spotify-sync-${e.session_id}`,
               )
             : null,
     ];

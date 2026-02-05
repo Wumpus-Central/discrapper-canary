@@ -1,77 +1,64 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => g });
+var i = n(627968),
+    l = n(64700),
     a = n(158954),
-    s = n(956793),
-    o = n(265422),
-    l = n(986268),
-    c = n(529200),
-    u = n(309010),
-    d = n(967198),
-    f = n(954571),
-    p = n(652215),
-    _ = n(985018),
-    h = n(563111);
-
-function m(e) {
-    let { guild: t, channel: n, message: m } = e,
-        g = d.A.getGuildId(),
-        E = u.A.getChannelId(g),
-        b = i.useCallback(() => {
-            var e;
-            f.default.track(p.HAw.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null == (e = m.author) ? void 0 : e.id,
+    r = n(956793),
+    s = n(265422),
+    o = n(986268),
+    d = n(529200),
+    c = n(309010),
+    u = n(967198),
+    m = n(954571),
+    _ = n(652215),
+    h = n(985018),
+    p = n(563111);
+function g(e) {
+    let { guild: t, channel: n, message: g } = e,
+        A = u.A.getGuildId(),
+        f = c.A.getChannelId(A),
+        x = l.useCallback(() => {
+            m.default.track(_.HAw.CHANNEL_LINK_PREVIEW_JOINED, {
+                author_id: g.author?.id,
                 link_guild_id: t.id,
                 link_channel_id: n.id,
                 link_channel_type: n.type,
-                guild_id: g,
-                channel_id: E,
+                guild_id: A,
+                channel_id: f,
             }),
-                (0, o.i)(t.id, n.id),
-                s.default.selectVoiceChannel(n.id);
-        }, [m, t, n, g, E]),
-        y = (0, r.jsx)(c.A.Channel, {
-            channel: n,
-        });
-    return (0, r.jsx)(c.A, {
-        children: (0, r.jsxs)(c.A.Body, {
+                (0, s.i)(t.id, n.id),
+                r.default.selectVoiceChannel(n.id);
+        }, [g, t, n, A, f]),
+        E = (0, i.jsx)(d.A.Channel, { channel: n });
+    return (0, i.jsx)(d.A, {
+        children: (0, i.jsxs)(d.A.Body, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: h.iH,
+                (0, i.jsxs)("div", {
+                    className: p.iH,
                     children: [
-                        (0, r.jsx)(c.A.Icon, {
-                            guild: t,
-                        }),
-                        (0, r.jsx)(c.A.Info, {
-                            title: y,
-                            onClick: b,
-                            children: (0, r.jsxs)("span", {
-                                className: h.FA,
+                        (0, i.jsx)(d.A.Icon, { guild: t }),
+                        (0, i.jsx)(d.A.Info, {
+                            title: E,
+                            onClick: x,
+                            children: (0, i.jsxs)("span", {
+                                className: p.FA,
                                 children: [
-                                    _.intl.format(_.t["2wimj5"], {
-                                        guildName: t.name,
-                                    }),
-                                    (0, r.jsx)("span", {
-                                        className: h.E3,
-                                        children: (0, r.jsx)(l.A, {
-                                            guild: t,
-                                            isBannerVisible: !1,
-                                        }),
+                                    h.intl.format(h.t["2wimj5"], { guildName: t.name }),
+                                    (0, i.jsx)("span", {
+                                        className: p.E3,
+                                        children: (0, i.jsx)(o.A, { guild: t, isBannerVisible: !1 }),
                                     }),
                                 ],
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)("div", {
-                    className: h.UD,
-                    children: (0, r.jsx)(a.$nd, {
+                (0, i.jsx)("div", {
+                    className: p.UD,
+                    children: (0, i.jsx)(a.$nd, {
                         fullWidth: !0,
-                        onClick: b,
+                        onClick: x,
                         variant: "active",
-                        text: n.isGuildStageVoice() ? _.intl.string(_.t["7vb2cc"]) : _.intl.string(_.t["96ANUN"]),
+                        text: n.isGuildStageVoice() ? h.intl.string(h.t["7vb2cc"]) : h.intl.string(h.t["96ANUN"]),
                     }),
                 }),
             ],

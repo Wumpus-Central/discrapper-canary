@@ -1,44 +1,33 @@
-n.d(t, {
-    Lu: () => f,
-    cE: () => u,
-    le: () => b,
-}),
-    n(938796),
-    n(896048),
-    n(321073);
+n.d(t, { Lu: () => _, cE: () => u, le: () => h }), n(938796), n(321073);
 var l = n(665260);
 n(873298);
-var r = n(669953);
+var i = n(669953);
 n(617617);
-var i = n(808728),
+var s = n(808728),
     a = n(696451),
-    s = n(543465),
-    c = n(816662),
-    d = n(395504),
+    r = n(543465),
+    d = n(816662),
+    c = n(395504),
     o = n(340837);
-
 function u(e) {
-    var t, n;
-    let r = (0, d.WW)(e),
-        i = null != (t = null == (n = a.Ay.getSelfMember(e)) ? void 0 : n.flags) ? t : 0,
-        c = (0, l.Lt)(i, o.D.COMPLETED_ONBOARDING),
-        u = s.Ay.getOptedInChannels(e).size > 0;
-    return !r && !c && !u;
+    let t = (0, c.WW)(e),
+        n = a.Ay.getSelfMember(e)?.flags ?? 0,
+        i = (0, l.Lt)(n, o.D.COMPLETED_ONBOARDING),
+        s = r.Ay.getOptedInChannels(e).size > 0;
+    return !t && !i && !s;
 }
-
-function f(e) {
-    if (u(e)) return void b(e);
+function _(e) {
+    if (u(e)) return void h(e);
     {
-        let t = (0, d.WW)(e);
-        (0, c.e4)(e, !t);
+        let t = (0, c.WW)(e);
+        (0, d.e4)(e, !t);
     }
 }
-
-function b(e) {
+function h(e) {
     let { include: t = new Set(), exclude: n = new Set() } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        l = i.Ay.getChannels(e),
-        a = [...l[i.I6], ...l[i.vM]]
+        l = s.Ay.getChannels(e),
+        a = [...l[s.I6], ...l[s.vM]]
             .filter((e) => {
                 let { channel: t } = e;
                 return !t.isThread() && !n.has(t.id);
@@ -47,5 +36,5 @@ function b(e) {
                 let { channel: t } = e;
                 return t.id;
             });
-    t.forEach((e) => a.push(e)), r.A.onboardExistingMember(e, new Set(a));
+    t.forEach((e) => a.push(e)), i.A.onboardExistingMember(e, new Set(a));
 }

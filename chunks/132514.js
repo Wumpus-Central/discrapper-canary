@@ -1,108 +1,61 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
-var l,
-    i = n(735438),
+"use strict";
+n.d(t, { A: () => S }), n(323874), n(14289), n(35956);
+var i = n(735438),
     r = n.n(i),
-    u = n(311907),
-    a = n(73153),
-    s = n(701785),
-    c = n(555337);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let _ = {
-        enabled: !1,
-    },
-    S = null,
-    f = Object.assign({}, _),
-    E = !1,
-    g = {},
-    A = {};
-
-function b(e) {
+    a = n(311907),
+    s = n(73153),
+    o = n(701785),
+    l = n(555337);
+let c = { enabled: !1 },
+    _ = null,
+    d = Object.assign({}, c),
+    u = !1,
+    b = {},
+    m = {};
+function h(e) {
     try {
-        return new URL(null != e ? e : ""), !0;
+        return new URL(e ?? ""), !0;
     } catch (e) {
         return !1;
     }
 }
-
-function N() {
-    (S = null),
-        (f = Object.assign({}, _)),
-        (E = !1),
-        (A = {}),
-        (S = c.A.getGuildId()),
-        (f = r().cloneDeep(Object.assign({}, s.h.getSettings(S))));
+function E() {
+    (_ = null),
+        (d = Object.assign({}, c)),
+        (u = !1),
+        (m = {}),
+        (_ = l.A.getGuildId()),
+        (d = r().cloneDeep(Object.assign({}, o.h.getSettings(_))));
 }
-
-function I(e, t) {
-    if (null == f.newMemberActions) return !1;
-    let n = f.newMemberActions.findIndex((t) => t.channelId === e);
+function g(e, t) {
+    if (null == d.newMemberActions) return !1;
+    let n = d.newMemberActions.findIndex((t) => t.channelId === e);
     if (n < 0) return !1;
-    (f.newMemberActions[n] = d({}, t)), (f.newMemberActions = [...f.newMemberActions]);
+    (d.newMemberActions[n] = { ...t }), (d.newMemberActions = [...d.newMemberActions]);
 }
-
-function O(e, t) {
-    if (null == f.resourceChannels) return !1;
-    let n = f.resourceChannels.findIndex((t) => t.channelId === e);
+function f(e, t) {
+    if (null == d.resourceChannels) return !1;
+    let n = d.resourceChannels.findIndex((t) => t.channelId === e);
     if (n < 0) return !1;
-    (f.resourceChannels[n] = d({}, t)), (f.resourceChannels = [...f.resourceChannels]);
+    (d.resourceChannels[n] = { ...t }), (d.resourceChannels = [...d.resourceChannels]);
 }
-
-function T() {
-    (E = !1), (f = r().cloneDeep(Object.assign({}, s.h.getSettings(S))));
+function I() {
+    (u = !1), (d = r().cloneDeep(Object.assign({}, o.h.getSettings(_))));
 }
-class m extends (l = u.Ay.PersistedStore) {
+class A extends a.Ay.PersistedStore {
+    static displayName = "GuildSettingsOnboardingHomeSettingsStore";
+    static persistKey = "GuildSettingsOnboardingHomeSettingsStore";
     initialize(e) {
-        null != e && (g = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.A, s.h);
+        null != e && (b = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(l.A, o.h);
     }
     getState() {
-        return {
-            dismissedSuggestedChannelIdsByGuildId: g,
-        };
+        return { dismissedSuggestedChannelIdsByGuildId: b };
     }
     getSettings() {
-        return null != f ? f : _;
+        return d ?? c;
     }
     hasChanges() {
-        return null != S && !r().isEqual(f, s.h.getSettings(S));
+        return null != _ && !r().isEqual(d, o.h.getSettings(_));
     }
     canCloseEarly() {
         return !this.hasChanges();
@@ -111,128 +64,104 @@ class m extends (l = u.Ay.PersistedStore) {
         return this.hasChanges();
     }
     getSubmitting() {
-        return E;
+        return u;
     }
     getDismissedSuggestedChannelIds(e) {
-        var t;
-        return null == e ? [] : null != (t = g[e]) ? t : [];
+        return null == e ? [] : (b[e] ?? []);
     }
     getResourceChannel(e) {
-        var t;
         if (null == e) return null;
-        let n = null == (t = f.resourceChannels) ? void 0 : t.find((t) => t.channelId === e);
-        return null == n ? null : n;
+        let t = d.resourceChannels?.find((t) => t.channelId === e);
+        return null == t ? null : t;
     }
     getNewMemberAction(e) {
-        var t;
         if (null == e) return null;
-        let n = null == (t = f.newMemberActions) ? void 0 : t.find((t) => t.channelId === e);
-        return null == n ? null : n;
+        let t = d.newMemberActions?.find((t) => t.channelId === e);
+        return null == t ? null : t;
     }
     getPendingData() {
-        return A;
+        return m;
     }
     getPendingDataForChannel(e) {
-        if (null != e) return A[e];
+        if (null != e) return m[e];
     }
 }
-o(m, "displayName", "GuildSettingsOnboardingHomeSettingsStore"),
-    o(m, "persistKey", "GuildSettingsOnboardingHomeSettingsStore");
-let h = new m(a.h, {
-    GUILD_SETTINGS_INIT: N,
-    GUILD_SETTINGS_SET_SECTION: N,
-    GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: N,
+let S = new A(s.h, {
+    GUILD_SETTINGS_INIT: E,
+    GUILD_SETTINGS_SET_SECTION: E,
+    GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: E,
     GUILD_HOME_SETTINGS_FETCH_SUCCESS: function () {
-        f = r().cloneDeep(Object.assign({}, s.h.getSettings(S)));
+        d = r().cloneDeep(Object.assign({}, o.h.getSettings(_)));
     },
     GUILD_HOME_SETTINGS_UPDATE_START: function () {
-        E = !0;
+        u = !0;
     },
-    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: T,
-    GUILD_HOME_SETTINGS_UPDATE_FAIL: T,
+    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: I,
+    GUILD_HOME_SETTINGS_UPDATE_FAIL: I,
     GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function (e) {
         let { action: t } = e;
-        return I(t.channelId, t);
+        return g(t.channelId, t);
     },
     GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: function (e) {
         let { resourceChannel: t } = e;
-        O(t.channelId, t);
+        f(t.channelId, t);
     },
     GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE: function (e) {
         let { welcomeMessage: t } = e;
-        if (null == t) f.welcomeMessage = void 0;
-        else {
-            var n, l, i, r, u, a;
-            f.welcomeMessage = {
-                authorIds:
-                    null != (n = null != (l = t.authorIds) ? l : null == (u = f.welcomeMessage) ? void 0 : u.authorIds)
-                        ? n
-                        : [],
-                message:
-                    null != (i = null != (r = t.message) ? r : null == (a = f.welcomeMessage) ? void 0 : a.message)
-                        ? i
-                        : "",
-            };
-        }
+        null == t
+            ? (d.welcomeMessage = void 0)
+            : (d.welcomeMessage = {
+                  authorIds: t.authorIds ?? d.welcomeMessage?.authorIds ?? [],
+                  message: t.message ?? d.welcomeMessage?.message ?? "",
+              });
     },
     GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION: function (e) {
         let { channelId: t, action: n } = e;
-        return I(t, n);
+        return g(t, n);
     },
     GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION: function (e) {
-        var t;
-        let { action: n, pendingData: l } = e;
-        (f.newMemberActions = null != (t = f.newMemberActions) ? t : []),
-            (f.newMemberActions = [...f.newMemberActions, n]),
-            (A[n.channelId] = {
-                iconData: l.icon,
-                isUrl: b(l.icon),
-                emoji: l.emoji,
-            });
+        let { action: t, pendingData: n } = e;
+        (d.newMemberActions = d.newMemberActions ?? []),
+            (d.newMemberActions = [...d.newMemberActions, t]),
+            (m[t.channelId] = { iconData: n.icon, isUrl: h(n.icon), emoji: n.emoji });
     },
     GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_PENDING_DATA: function (e) {
         let { channelId: t, pendingData: n } = e;
-        A[t] = {
-            iconData: n.icon,
-            isUrl: b(n.icon),
-            emoji: n.emoji,
-        };
+        m[t] = { iconData: n.icon, isUrl: h(n.icon), emoji: n.emoji };
     },
     GUILD_SETTINGS_ONBOARDING_CLEAR_NEW_MEMBER_ACTION_PENDING_DATA: function (e) {
         let { channelId: t } = e;
-        null == t ? (A = {}) : delete A[t];
+        null == t ? (m = {}) : delete m[t];
     },
     GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION: function (e) {
         let { channelId: t } = e;
-        if (null == f.newMemberActions) return !1;
-        (f.newMemberActions = [...f.newMemberActions.filter((e) => e.channelId !== t)]), delete A[t];
+        if (null == d.newMemberActions) return !1;
+        (d.newMemberActions = [...d.newMemberActions.filter((e) => e.channelId !== t)]), delete m[t];
     },
     GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION: function (e) {
         let { actions: t } = e;
-        f.newMemberActions = t;
+        d.newMemberActions = t;
     },
     GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL: function (e) {
         let { channelId: t, resourceChannel: n } = e;
-        O(t, n);
+        f(t, n);
     },
     GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL: function (e) {
-        var t;
-        let { resourceChannel: n } = e;
-        (f.resourceChannels = (null != (t = f.resourceChannels) ? t : []).filter((e) => e.channelId !== n.channelId)),
-            (f.resourceChannels = [...f.resourceChannels, n]);
+        let { resourceChannel: t } = e;
+        (d.resourceChannels = (d.resourceChannels ?? []).filter((e) => e.channelId !== t.channelId)),
+            (d.resourceChannels = [...d.resourceChannels, t]);
     },
     GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL: function (e) {
         let { resourceChannelId: t } = e;
-        if (null == f.resourceChannels) return !1;
-        f.resourceChannels = [...f.resourceChannels.filter((e) => e.channelId !== t)];
+        if (null == d.resourceChannels) return !1;
+        d.resourceChannels = [...d.resourceChannels.filter((e) => e.channelId !== t)];
     },
     GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL: function (e) {
         let { resourceChannels: t } = e;
-        f.resourceChannels = t;
+        d.resourceChannels = t;
     },
     GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION: function (e) {
-        var t;
-        let { guildId: n, channelIds: l } = e;
-        g[n] = [...(null != (t = g[n]) ? t : []), ...l];
+        let { guildId: t, channelIds: n } = e;
+        b[t] = [...(b[t] ?? []), ...n];
     },
 });

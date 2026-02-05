@@ -1,6 +1,5 @@
-n.d(t, {
-    M: () => r,
-});
+"use strict";
+n.d(t, { M: () => r });
 var r = (function () {
     return function (e, t) {
         (this.activeTargets = []),

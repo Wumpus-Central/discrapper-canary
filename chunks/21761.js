@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -11,17 +10,8 @@ t(697509)(r, "__esModule", {
         prohibitedProps: [],
         props: {},
         relatedConcepts: [
-            {
-                concept: {
-                    name: "Device Independence Delivery Unit",
-                },
-            },
-            {
-                concept: {
-                    name: "body",
-                },
-                module: "HTML",
-            },
+            { concept: { name: "Device Independence Delivery Unit" } },
+            { concept: { name: "body" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

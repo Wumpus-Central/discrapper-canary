@@ -1,14 +1,13 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(989479),
     i = n(476858),
     a = n(1673),
     s = n(241738);
 let o = 1,
     l = 2,
-    c = 3;
-class u extends s.w {
+    u = 3;
+class c extends s.w {
     innerPatternString(e) {
         return `(?:(?:,|\\(|（)\\s*)?(?:в\\s*?)?(?:(эту|этот|прошлый|прошлую|следующий|следующую|следующего)\\s*)?(${(0, i.uJ)(r.CV)})(?:\\s*(?:,|\\)|）))?(?:\\s*на\\s*(этой|прошлой|следующей)\\s*неделе)?`;
     }
@@ -16,17 +15,17 @@ class u extends s.w {
         let n = t[l].toLowerCase(),
             i = r.CV[n],
             s = t[o],
-            u = t[c],
-            d = s || u;
+            c = t[u],
+            d = s || c;
         d = (d = d || "").toLowerCase();
-        let f = null;
+        let _ = null;
         return (
             "прошлый" == d || "прошлую" == d || "прошлой" == d
-                ? (f = "last")
+                ? (_ = "last")
                 : "следующий" == d || "следующую" == d || "следующей" == d || "следующего" == d
-                  ? (f = "next")
-                  : ("этот" == d || "эту" == d || "этой" == d) && (f = "this"),
-            (0, a.Y5)(e.reference, i, f)
+                  ? (_ = "next")
+                  : ("этот" == d || "эту" == d || "этой" == d) && (_ = "this"),
+            (0, a.Y5)(e.reference, i, _)
         );
     }
 }

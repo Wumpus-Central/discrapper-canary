@@ -1,50 +1,32 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(321073),
-    n(896048);
-var r = n(64700),
+n.d(t, { A: () => u }), n(321073);
+var i = n(64700),
     l = n(311907),
-    i = n(573695),
-    a = n(911411),
-    s = n(290863);
+    a = n(573695),
+    s = n(911411),
+    r = n(290863);
 let o = [],
     c = [],
-    u = [];
-
-function d(e, t) {
-    let [n, d] = (function (e, t) {
-        let [n, i] = r.useMemo(
+    d = [];
+function u(e, t) {
+    let [n, u] = (function (e, t) {
+        let [n, a] = i.useMemo(
                 () =>
                     (function (e, t) {
-                        if (!t.isPrivate()) return [u, c];
-                        let n = e.filter((e) => {
-                                var t, n;
-                                return (
-                                    (null == (t = e.application) ? void 0 : t.id) != null &&
-                                    (null == (n = e.activity) ? void 0 : n.party_id) != null
-                                );
-                            }),
-                            r = n.map((e) => e.id);
-                        return [n, r];
+                        if (!t.isPrivate()) return [d, c];
+                        let n = e.filter((e) => e.application?.id != null && e.activity?.party_id != null),
+                            i = n.map((e) => e.id);
+                        return [n, i];
                     })(e, t),
                 [e, t],
             ),
-            a = (0, l.yK)([s.A], () => {
+            s = (0, l.yK)([r.A], () => {
                 let e = [];
                 return (
                     n.forEach((t) => {
                         null !=
-                            s.A.findActivity(
+                            r.A.findActivity(
                                 t.author.id,
-                                (e) => {
-                                    var n, r, l;
-                                    return (
-                                        e.application_id === (null == (n = t.application) ? void 0 : n.id) &&
-                                        (null == (r = e.party) ? void 0 : r.id) ===
-                                            (null == (l = t.activity) ? void 0 : l.party_id)
-                                    );
-                                },
+                                (e) => e.application_id === t.application?.id && e.party?.id === t.activity?.party_id,
                                 null,
                                 !0,
                             ) && e.push(t.id);
@@ -53,40 +35,39 @@ function d(e, t) {
                 );
             }, [n]);
         return [
-            i,
-            r.useMemo(
+            a,
+            i.useMemo(
                 () =>
                     (function (e, t) {
                         if (0 === e.length) return o;
                         let n = [];
                         return (
                             e.forEach((e) => {
-                                var r, l;
-                                let i = null == (r = e.application) ? void 0 : r.id,
-                                    a = null == (l = e.activity) ? void 0 : l.party_id;
-                                if (e.id in t || null == i || null == a) return;
-                                let s = e.timestamp.getTime(),
-                                    o = {
+                                let i = e.application?.id,
+                                    l = e.activity?.party_id;
+                                if (e.id in t || null == i || null == l) return;
+                                let a = e.timestamp.getTime(),
+                                    s = {
                                         userId: e.author.id,
                                         applicationId: i,
-                                        partyId: a,
+                                        partyId: l,
                                         messageId: e.id,
                                         channelId: e.channel_id,
-                                        inviteTime: s,
+                                        inviteTime: a,
                                     };
-                                n.push(o);
+                                n.push(s);
                             }),
                             n
                         );
-                    })(n, a),
-                [n, a],
+                    })(n, s),
+                [n, s],
             ),
         ];
     })(e, t);
     return (
-        r.useEffect(() => {
-            for (let e of d) a.A.isSubscribed(e) || (0, i.B)(e);
-        }, [d]),
-        [n, d]
+        i.useEffect(() => {
+            for (let e of u) s.A.isSubscribed(e) || (0, a.B)(e);
+        }, [u]),
+        [n, u]
     );
 }

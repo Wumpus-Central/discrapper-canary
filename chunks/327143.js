@@ -1,53 +1,22 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048);
-var r,
-    i,
-    a = n(64700);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e, t, n) {
+"use strict";
+n.d(t, { A: () => a });
+var r = n(64700);
+function i(e, t, n) {
     return Math.min(Math.max(Math.floor(e / t), 1), n);
 }
-let l = (0, n(456412).A)(
-    ((i = class extends (r = a.Component) {
+let a = (0, n(456412).A)(
+    class extends r.Component {
+        static defaultProps = { desiredItemWidth: 200 };
         static getDerivedStateFromProps(e, t) {
-            let { width: n, desiredItemWidth: r, maxColumns: i } = e,
-                a = o(n, r, i);
-            return a !== t.columns
-                ? {
-                      columns: a,
-                  }
-                : null;
+            let { width: n, desiredItemWidth: r, maxColumns: a } = e,
+                s = i(n, r, a);
+            return s !== t.columns ? { columns: s } : null;
         }
+        state = { columns: i(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) };
         render() {
             let { width: e, height: t, children: n } = this.props,
                 { columns: r } = this.state;
             return n(r, e, t);
         }
-        constructor(...e) {
-            super(...e),
-                s(this, "state", {
-                    columns: o(this.props.width, this.props.desiredItemWidth, this.props.maxColumns),
-                });
-        }
-    }),
-    s(i, "defaultProps", {
-        desiredItemWidth: 200,
-    }),
-    i),
+    },
 );

@@ -1,9 +1,7 @@
-n.d(t, {
-    K: () => a,
-});
+"use strict";
+n.d(t, { K: () => a });
 var r = n(3388),
     i = n(64700);
-
 function a(e, t) {
     let n = (0, i.useRef)(!0),
         a = (0, i.useRef)(null);

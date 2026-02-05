@@ -1,8 +1,6 @@
-r.d(t, {
-    A: () => n,
-});
+"use strict";
+r.d(t, { A: () => n });
 var a = r(299146);
-
 function n(e, t) {
     if (null == e) return {};
     var r,

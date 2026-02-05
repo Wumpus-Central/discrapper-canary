@@ -1,68 +1,27 @@
-n.d(t, {
-    Bl: () => N,
-    Gv: () => A,
-    I5: () => y,
-    fK: () => C,
-    h0: () => T,
-    sW: () => R,
-    wy: () => I,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Bl: () => b, Gv: () => I, I5: () => E, fK: () => C, h0: () => v, sW: () => N, wy: () => S });
 var r = n(562465),
     i = n(73153),
     a = n(843472),
     s = n(155718),
     o = n(587895),
     l = n(113267),
-    c = n(867455),
-    u = n(961350),
+    u = n(867455),
+    c = n(961350),
     d = n(661191),
-    f = n(706727),
-    p = n(436283),
-    _ = n(337591),
+    _ = n(706727),
+    f = n(436283),
+    p = n(337591),
     h = n(616716),
     m = n(652215),
     g = n(985018);
-
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e) {
+function E(e) {
     return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 9e5;
 }
-
-function O(e) {
+function A(e) {
     return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3e3;
 }
-let A = async (e) => {
+let I = async (e) => {
     let {
             componentType: t,
             messageId: n,
@@ -70,55 +29,35 @@ let A = async (e) => {
             customId: a,
             componentId: o,
             applicationId: l,
-            channelId: _,
+            channelId: p,
             guildId: h,
             localState: g,
         } = e,
         E = d.default.fromTimestamp(Date.now());
-    if (!p.Ay.canQueueInteraction(n, E)) return;
-    await c.A.unarchiveThreadIfNecessary(_),
-        (0, f.tU)(E, {
+    if (!f.Ay.canQueueInteraction(n, E)) return;
+    await u.A.unarchiveThreadIfNecessary(p),
+        (0, _.tU)(E, {
             messageId: n,
-            data: {
-                interactionType: s.G4.MESSAGE_COMPONENT,
-                applicationId: l,
-                customId: a,
-                componentId: o,
-            },
-            onFailure: (e, t) => S(_, e, t),
+            data: { interactionType: s.G4.MESSAGE_COMPONENT, applicationId: l, customId: a, componentId: o },
+            onFailure: (e, t) => y(p, e, t),
         }),
-        null != g && (0, f.Sw)(n, E, g, o);
-    let y = {
+        null != g && (0, _.Sw)(n, E, g, o);
+    let A = {
         type: s.G4.MESSAGE_COMPONENT,
         nonce: E,
         guild_id: h,
-        channel_id: _,
+        channel_id: p,
         message_flags: i,
         message_id: n,
         application_id: l,
-        session_id: u.default.getSessionId(),
-        data: b(
-            {
-                component_type: t,
-                custom_id: a,
-            },
-            v(g),
-        ),
+        session_id: c.default.getSessionId(),
+        data: { component_type: t, custom_id: a, ...T(g) },
     };
-    await r.Bo.post(
-        {
-            url: m.Rsh.INTERACTIONS,
-            body: y,
-            timeout: 3e3,
-            rejectWithError: !1,
-        },
-        (e) => {
-            I(E, e, l, _, h);
-        },
-    );
+    await r.Bo.post({ url: m.Rsh.INTERACTIONS, body: A, timeout: 3e3, rejectWithError: !1 }, (e) => {
+        S(E, e, l, p, h);
+    });
 };
-
-function v(e) {
+function T(e) {
     if (null == e) return null;
     switch (e.type) {
         case s.I5.TEXT_INPUT:
@@ -134,54 +73,46 @@ function v(e) {
         case s.I5.MENTIONABLE_SELECT:
         case s.I5.CHANNEL_SELECT:
             let t = e.selectedOptions.map((e) => e.value);
-            return {
-                type: e.type,
-                values: t,
-            };
+            return { type: e.type, values: t };
         default:
             return null;
     }
 }
-let S = (e, t, n) => {
+let y = (e, t, n) => {
         null == n && null != t && a.A.sendClydeError(e, t);
     },
-    I = (e, t, n, r, a) => {
+    S = (e, t, n, r, a) => {
         if (!t.ok) {
             if (!t.hasErr)
-                if (t.status >= 400 && t.status < 500 && t.body)
-                    if (t.body.code === m.t02.INVALID_FORM_BODY && t.body.errors) {
-                        let s = (0, h.W)(t.body.errors);
-                        null != s &&
-                            ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code ||
-                                "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) &&
-                            i.h.dispatch({
-                                type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
-                                applicationId: n,
-                                channelId: r,
-                                guildId: null != a ? a : null,
-                            }),
-                            (0, f.C1)(e, void 0, null == s ? void 0 : s.message);
-                        return;
-                    } else
-                        return t.body.code !== m.t02.UNKNOWN_INTEGRATION
-                            ? void (0, f.C1)(e, t.body.code, t.body.message, t.status)
-                            : (i.h.dispatch({
-                                  type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
-                                  applicationId: n,
-                                  channelId: r,
-                                  guildId: null != a ? a : null,
-                              }),
-                              (0, f.C1)(e, void 0, t.body.message),
-                              void 0);
-                else {
-                    var s;
-                    (0, f.C1)(e, null == (s = t.body) ? void 0 : s.code);
+                if (!(t.status >= 400) || !(t.status < 500) || !t.body) return void (0, _.C1)(e, t.body?.code);
+                else if (t.body.code === m.t02.INVALID_FORM_BODY && t.body.errors) {
+                    let s = (0, h.W)(t.body.errors);
+                    null != s &&
+                        ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code ||
+                            "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) &&
+                        i.h.dispatch({
+                            type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
+                            applicationId: n,
+                            channelId: r,
+                            guildId: a ?? null,
+                        }),
+                        (0, _.C1)(e, void 0, s?.message);
                     return;
-                }
-            (0, f.C1)(e);
+                } else
+                    return t.body.code !== m.t02.UNKNOWN_INTEGRATION
+                        ? void (0, _.C1)(e, t.body.code, t.body.message, t.status)
+                        : (i.h.dispatch({
+                              type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
+                              applicationId: n,
+                              channelId: r,
+                              guildId: a ?? null,
+                          }),
+                          (0, _.C1)(e, void 0, t.body.message),
+                          void 0);
+            (0, _.C1)(e);
         }
     };
-var T = (function (e) {
+var v = (function (e) {
     return (
         (e[(e.SENDING = 0)] = "SENDING"),
         (e[(e.CREATED = 1)] = "CREATED"),
@@ -192,39 +123,30 @@ var T = (function (e) {
     );
 })({});
 let C = (e, t) => {
-    let n = null == t ? void 0 : t.state,
-        r = e.state === m.cmJ.SENT && y(e.id) < Date.now(),
-        i = e.state === m.cmJ.SEND_FAILED && O(e.id) < Date.now(),
-        a = (null == t ? void 0 : t.data.interactionType) === s.G4.APPLICATION_COMMAND,
+    let n = t?.state,
+        r = e.state === m.cmJ.SENT && E(e.id) < Date.now(),
+        i = e.state === m.cmJ.SEND_FAILED && A(e.id) < Date.now(),
+        a = t?.data.interactionType === s.G4.APPLICATION_COMMAND,
         o = e.isCommandType();
-    if ((a && n === _.m.QUEUED) || (o && e.state === m.cmJ.SENDING && null != t)) return 0;
-    if ((a && n === _.m.CREATED) || (e.hasFlag(m.pr7.LOADING) && !r)) return 1;
+    if ((a && n === p.m.QUEUED) || (o && e.state === m.cmJ.SENDING && null != t)) return 0;
+    if ((a && n === p.m.CREATED) || (e.hasFlag(m.pr7.LOADING) && !r)) return 1;
     if (null != e.interaction && e.hasFlag(m.pr7.LOADING) && r) return 3;
     if (null != e.interaction && !e.hasFlag(m.pr7.LOADING) && i) return 3;
     if (o && e.state === m.cmJ.SEND_FAILED) return 2;
     else if (null != e.interaction && e.hasFlag(m.pr7.EPHEMERAL)) return 4;
 };
-
-function N(e) {
+function b(e) {
     let t = e.options;
-    for (
-        ;
-        (null == t ? void 0 : t.length) === 1 &&
-        (t[0].type === s.n4.SUB_COMMAND_GROUP || t[0].type === s.n4.SUB_COMMAND);
-    )
+    for (; t?.length === 1 && (t[0].type === s.n4.SUB_COMMAND_GROUP || t[0].type === s.n4.SUB_COMMAND); )
         t = t[0].options;
-    for (let e of null != t ? t : []) if (e.type === s.n4.ATTACHMENT) return !1;
+    for (let e of t ?? []) if (e.type === s.n4.ATTACHMENT) return !1;
     return !0;
 }
-
-function R(e, t) {
+function N(e, t) {
     switch (e) {
         case l.A.ReasonCodes.TIMEOUT:
             let n = o.A.getApplication(t);
-            if (null != n)
-                return g.intl.formatToPlainString(g.t.u2D2Uj, {
-                    applicationName: n.name,
-                });
+            if (null != n) return g.intl.formatToPlainString(g.t.u2D2Uj, { applicationName: n.name });
             return g.intl.string(g.t["vGU8+r"]);
         case l.A.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT:
             return g.intl.string(g.t.GyzcrS);

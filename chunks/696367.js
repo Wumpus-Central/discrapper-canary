@@ -1,3 +1,4 @@
+"use strict";
 var r = n(72290),
     i = n(626800),
     a = n(171463);
@@ -9,18 +10,18 @@ if (n(912877)() || n(640847)()) {
 } else {
     var o = n(425344),
         l = n(400696),
-        c = n(439619),
-        u = c("%Map%", !0),
-        d = c("%Set%", !0),
-        f = n(616380),
-        p = f("Array.prototype.push"),
-        _ = f("String.prototype.charCodeAt"),
-        h = f("String.prototype.slice"),
+        u = n(439619),
+        c = u("%Map%", !0),
+        d = u("%Set%", !0),
+        _ = n(616380),
+        f = _("Array.prototype.push"),
+        p = _("String.prototype.charCodeAt"),
+        h = _("String.prototype.slice"),
         m = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
-            var n = _(e, t);
+            var n = p(e, t);
             if (n < 55296 || n > 56319) return t + 1;
-            var r = _(e, t + 1);
+            var r = p(e, t + 1);
             return r < 56320 || r > 57343 ? t + 1 : t + 2;
         },
         g = function (e) {
@@ -29,13 +30,7 @@ if (n(912877)() || n(640847)()) {
                 next: function () {
                     var n,
                         r = t >= e.length;
-                    return (
-                        r || ((n = e[t]), (t += 1)),
-                        {
-                            done: r,
-                            value: n,
-                        }
-                    );
+                    return r || ((n = e[t]), (t += 1)), { done: r, value: n };
                 },
             };
         },
@@ -47,50 +42,44 @@ if (n(912877)() || n(640847)()) {
                     next: function () {
                         var t = m(e, n),
                             r = h(e, n, t);
-                        return (
-                            (n = t),
-                            {
-                                done: t > e.length,
-                                value: r,
-                            }
-                        );
+                        return (n = t), { done: t > e.length, value: r };
                     },
                 };
             }
             if (t && void 0 !== e["_es6-shim iterator_"]) return e["_es6-shim iterator_"]();
         };
-    if (u || d) {
-        var b = n(232258),
-            y = n(551306),
-            O = f("Map.prototype.forEach", !0),
-            A = f("Set.prototype.forEach", !0);
+    if (c || d) {
+        var A = n(232258),
+            I = n(551306),
+            T = _("Map.prototype.forEach", !0),
+            y = _("Set.prototype.forEach", !0);
         if (void 0 === r || !r.versions || !r.versions.node)
-            var v = f("Map.prototype.iterator", !0),
-                S = f("Set.prototype.iterator", !0);
-        var I = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
-            T = f("Set.prototype.@@iterator", !0) || f("Set.prototype._es6-shim iterator_", !0),
-            C = function (e) {
-                if (b(e)) {
-                    if (v) return a(v(e));
-                    if (I) return I(e);
-                    if (O) {
+            var S = _("Map.prototype.iterator", !0),
+                v = _("Set.prototype.iterator", !0);
+        var C = _("Map.prototype.@@iterator", !0) || _("Map.prototype._es6-shim iterator_", !0),
+            b = _("Set.prototype.@@iterator", !0) || _("Set.prototype._es6-shim iterator_", !0),
+            N = function (e) {
+                if (A(e)) {
+                    if (S) return a(S(e));
+                    if (C) return C(e);
+                    if (T) {
                         var t = [];
                         return (
-                            O(e, function (e, n) {
-                                p(t, [n, e]);
+                            T(e, function (e, n) {
+                                f(t, [n, e]);
                             }),
                             g(t)
                         );
                     }
                 }
-                if (y(e)) {
-                    if (S) return a(S(e));
-                    if (T) return T(e);
-                    if (A) {
+                if (I(e)) {
+                    if (v) return a(v(e));
+                    if (b) return b(e);
+                    if (y) {
                         var n = [];
                         return (
-                            A(e, function (e) {
-                                p(n, e);
+                            y(e, function (e) {
+                                f(n, e);
                             }),
                             g(n)
                         );
@@ -98,7 +87,7 @@ if (n(912877)() || n(640847)()) {
                 }
             };
         e.exports = function (e) {
-            return C(e) || E(e);
+            return N(e) || E(e);
         };
     } else
         e.exports = function (e) {

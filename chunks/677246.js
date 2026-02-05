@@ -1,21 +1,10 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n) {
-        return (
-            e +
-            " " +
-            i(
-                {
-                    mm: "munutenn",
-                    MM: "miz",
-                    dd: "devezh",
-                }[n],
-                e,
-            )
-        );
+        return e + " " + i({ mm: "munutenn", MM: "miz", dd: "devezh" }[n], e);
     }
-
     function n(e) {
         switch (r(e)) {
             case 1:
@@ -28,21 +17,14 @@
                 return e + " vloaz";
         }
     }
-
     function r(e) {
         return e > 9 ? r(e % 10) : e;
     }
-
     function i(e, t) {
         return 2 === t ? a(e) : e;
     }
-
     function a(e) {
-        var t = {
-            m: "v",
-            b: "v",
-            d: "z",
-        };
+        var t = { m: "v", b: "v", d: "z" };
         return void 0 === t[e.charAt(0)] ? e : t[e.charAt(0)] + e.substring(1);
     }
     return e.defineLocale("br", {
@@ -89,9 +71,6 @@
             var t = 1 === e ? "a\xf1" : "vet";
             return e + t;
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

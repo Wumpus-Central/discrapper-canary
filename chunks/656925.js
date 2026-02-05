@@ -1,34 +1,21 @@
-r.d(t, {
-    A: () => u,
-});
-var n = r(64700),
-    l = r(311907),
-    a = r(397927),
-    i = r(45837),
-    s = r(961350),
-    o = r(101058),
-    c = r(595535);
-
-function u(e) {
-    let { avatarId: t, storageHash: r, size: u } = e,
-        { onMouseEnter: f, onMouseLeave: d, shouldAnimate: p } = (0, i.A)(),
-        g = (0, l.bG)([s.default], () => s.default.getId());
+a.d(t, { A: () => o });
+var n = a(64700),
+    s = a(311907),
+    l = a(397927),
+    r = a(45837),
+    i = a(961350),
+    c = a(101058),
+    u = a(595535);
+function o(e) {
+    let { avatarId: t, storageHash: a, size: o } = e,
+        { onMouseEnter: d, onMouseLeave: A, shouldAnimate: h } = (0, r.A)(),
+        f = (0, s.bG)([i.default], () => i.default.getId());
     return {
         avatarSrc: n.useMemo(
-            () =>
-                (0, o.Xp)({
-                    userId: g,
-                    avatarId: t,
-                    storageHash: r,
-                    canAnimate: p,
-                    size: (0, a.FT9)(null != u ? u : c.q),
-                }),
-            [g, t, r, p, u],
+            () => (0, c.Xp)({ userId: f, avatarId: t, storageHash: a, canAnimate: h, size: (0, l.FT9)(o ?? u.q) }),
+            [f, t, a, h, o],
         ),
-        isAvatarAnimating: p,
-        eventHandlers: {
-            onMouseEnter: f,
-            onMouseLeave: d,
-        },
+        isAvatarAnimating: h,
+        eventHandlers: { onMouseEnter: d, onMouseLeave: A },
     };
 }

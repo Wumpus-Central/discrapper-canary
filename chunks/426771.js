@@ -1,3 +1,2 @@
-e.exports = {
-    i: "previewContainer__70c78",
-};
+"use strict";
+e.exports = { i: "previewContainer__70c78" };

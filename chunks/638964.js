@@ -1,85 +1,77 @@
-r.d(t, {
-    h: () => O,
-});
-var n = r(627968),
-    i = r(64700),
-    o = r(503698),
-    l = r.n(o),
-    s = r(735438),
-    c = r.n(s),
-    a = r(397927),
-    d = r(793574),
-    u = r(250627),
-    p = r(284605),
-    f = r(558060),
-    b = r(284683),
-    C = r(985018),
-    j = r(77142);
-
-function O(e) {
-    let { guildId: t, productId: r } = e,
-        { listingsLoaded: o } = (0, u.bb)(t),
-        s = (0, u.fZ)(t),
-        O = i.useRef(null),
-        { sortOption: g } = (0, f.R)(),
-        h = i.useMemo(
+i.d(t, { h: () => j });
+var s = i(627968),
+    r = i(64700),
+    n = i(503698),
+    l = i.n(n),
+    d = i(735438),
+    a = i.n(d),
+    o = i(397927),
+    c = i(793574),
+    C = i(250627),
+    u = i(284605),
+    x = i(558060),
+    h = i(284683),
+    _ = i(985018),
+    p = i(77142);
+function j(e) {
+    let { guildId: t, productId: i } = e,
+        { listingsLoaded: n } = (0, C.bb)(t),
+        d = (0, C.fZ)(t),
+        j = r.useRef(null),
+        { sortOption: g } = (0, x.R)(),
+        m = r.useMemo(
             () =>
                 (function (e, t) {
-                    let r, n;
+                    let i, s;
                     switch (t) {
-                        case b.p$.NAME:
-                            (r = (e) => e.name.toLowerCase()), (n = "asc");
+                        case h.p$.NAME:
+                            (i = (e) => e.name.toLowerCase()), (s = "asc");
                             break;
-                        case b.p$.PRICE_ASC:
-                            (r = "price_tier"), (n = "asc");
+                        case h.p$.PRICE_ASC:
+                            (i = "price_tier"), (s = "asc");
                             break;
-                        case b.p$.PRICE_DESC:
-                            (r = "price_tier"), (n = "desc");
+                        case h.p$.PRICE_DESC:
+                            (i = "price_tier"), (s = "desc");
                             break;
-                        case b.p$.NEWEST_ARRIVALS:
-                            (r = "published_at"), (n = "desc");
+                        case h.p$.NEWEST_ARRIVALS:
+                            (i = "published_at"), (s = "desc");
                             break;
                         default:
                             return e;
                     }
-                    return c().orderBy(e, [r], [n]);
-                })(s, g),
-            [s, g],
+                    return a().orderBy(e, [i], [s]);
+                })(d, g),
+            [d, g],
         );
-    return o
-        ? (0, n.jsx)("ul", {
-              className: j.Ui,
-              "aria-label": C.intl.string(C.t.qe4kTa),
-              children: h.map((e) =>
-                  (0, n.jsx)(
+    return n
+        ? (0, s.jsx)("ul", {
+              className: p.Ui,
+              "aria-label": _.intl.string(_.t.qe4kTa),
+              children: m.map((e) =>
+                  (0, s.jsx)(
                       "li",
                       {
-                          className: j.Nr,
-                          children: (0, n.jsx)(
+                          className: p.Nr,
+                          children: (0, s.jsx)(
                               "div",
                               {
-                                  className: l()(j.Ux, {
-                                      [j.Oj]: e.id === r,
-                                  }),
-                                  ref: e.id === r ? O : void 0,
+                                  className: l()(p.Ux, { [p.Oj]: e.id === i }),
+                                  ref: e.id === i ? j : void 0,
                                   onLoad: () => {
-                                      let t = O.current;
+                                      let t = j.current;
                                       null != t &&
-                                          e.id === r &&
-                                          (t.scrollIntoView({
-                                              behavior: "smooth",
-                                              block: "center",
-                                          }),
+                                          e.id === i &&
+                                          (t.scrollIntoView({ behavior: "smooth", block: "center" }),
                                           setTimeout(() => {
-                                              t.classList.remove(j.Oj);
+                                              t.classList.remove(p.Oj);
                                           }, 2e3));
                                   },
-                                  children: (0, n.jsx)(
-                                      p.i,
+                                  children: (0, s.jsx)(
+                                      u.i,
                                       {
                                           guildProductListing: e,
                                           guildId: t,
-                                          location: d.A.GUILD_SHOP_PAGE,
+                                          location: c.A.GUILD_SHOP_PAGE,
                                           shouldShowFullDescriptionButton: !1,
                                           hideRoleTag: !0,
                                           lineClamp: 2,
@@ -99,5 +91,5 @@ function O(e) {
                   ),
               ),
           })
-        : (0, n.jsx)(a.y$y, {});
+        : (0, s.jsx)(o.y$y, {});
 }

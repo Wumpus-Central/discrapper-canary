@@ -1,73 +1,57 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048),
-    n(492834),
-    n(638769);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968),
+    s = n(64700),
     l = n(397927),
-    s = n(493581),
+    r = n(493581),
     a = n(308072),
-    c = n(985018),
-    o = n(194976);
-
-function d(e) {
-    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: f, tryFetchTopGames: g } = (0, s.f)(),
-        b = f.get(t),
-        [m, p] = i.useState(!1);
-    i.useEffect(() => {
-        p(!0),
+    o = n(985018),
+    d = n(194976);
+function c(e) {
+    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: c, disabled: u } = e,
+        { topGames: m, tryFetchTopGames: g } = (0, r.f)(),
+        x = m.get(t),
+        [h, _] = s.useState(!1);
+    s.useEffect(() => {
+        _(!0),
             g(t).finally(() => {
-                p(!1);
+                _(!1);
             });
     }, [t, g]);
-    let x = i.useMemo(
+    let A = s.useMemo(
             () =>
-                null == b
+                null == x
                     ? []
-                    : Object.keys(b)
+                    : Object.keys(x)
                           .filter((e) => !n.includes(e))
-                          .sort((e, t) => b[t].score - b[e].score),
-            [b, n],
+                          .sort((e, t) => x[t].score - x[e].score),
+            [x, n],
         ),
-        h = i.useCallback(
+        p = s.useCallback(
             (e) => {
-                n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
+                n.includes(e) ? c(n.filter((t) => t !== e)) : c([...n, e]);
             },
-            [d, n],
+            [c, n],
         );
-    return m && null == b
-        ? (0, r.jsx)(l.y$y, {})
-        : null == x || 0 === x.length
+    return h && null == x
+        ? (0, i.jsx)(l.y$y, {})
+        : null == A || 0 === A.length
           ? null
-          : (0, r.jsxs)(r.Fragment, {
+          : (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)("div", {
-                        className: o.me,
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: o.rS,
+                    (0, i.jsx)("div", { className: d.me }),
+                    (0, i.jsxs)("div", {
+                        className: d.rS,
                         children: [
-                            (0, r.jsx)(l.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: "text-xs/semibold",
                                 color: "text-muted",
-                                children: c.intl.string(c.t.bFGpua),
+                                children: o.intl.string(o.t.bFGpua),
                             }),
-                            (0, r.jsx)("div", {
-                                className: o.CW,
-                                children: x.map((e) =>
-                                    (0, r.jsx)(
-                                        a.A,
-                                        {
-                                            applicationId: e,
-                                            selected: !1,
-                                            onClick: h,
-                                            disabled: u,
-                                        },
-                                        e,
-                                    ),
+                            (0, i.jsx)("div", {
+                                className: d.CW,
+                                children: A.map((e) =>
+                                    (0, i.jsx)(a.A, { applicationId: e, selected: !1, onClick: p, disabled: u }, e),
                                 ),
                             }),
                         ],

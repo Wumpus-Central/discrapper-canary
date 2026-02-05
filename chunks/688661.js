@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     P_: "customHeader__5906b",
     SO: "quickSelect__5906b",

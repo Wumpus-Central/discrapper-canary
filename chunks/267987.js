@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__4bbc6",
     WB: "fitInAccount__4bbc6",

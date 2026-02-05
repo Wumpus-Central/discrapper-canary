@@ -1,25 +1,10 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    l = n(311907),
-    i = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(73153);
 let s = {};
-class o extends (r = l.Ay.PersistedStore) {
+class a extends i.Ay.PersistedStore {
+    static displayName = "ViewHistoryStore";
+    static persistKey = "ViewHistoryStore";
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
@@ -33,8 +18,7 @@ class o extends (r = l.Ay.PersistedStore) {
         return null != s[e];
     }
 }
-a(o, "displayName", "ViewHistoryStore"), a(o, "persistKey", "ViewHistoryStore");
-let c = new o(i.h, {
+let r = new a(l.h, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
         s[t] = Date.now();

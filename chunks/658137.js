@@ -1,107 +1,96 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+n.d(t, { A: () => j });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     o = n(421380),
     c = n(397927),
     d = n(775602),
     u = n(793574),
     _ = n(688810),
-    p = n(607470),
-    m = n(676279),
+    m = n(607470),
+    A = n(676279),
     g = n(560138),
-    A = n(526292),
-    f = n(89366),
-    h = n(236834),
-    b = n(194509),
-    E = n(224850),
-    x = n(797255),
-    O = n(753894),
-    C = n(288351),
-    I = n(693591),
-    T = n(985018),
-    S = n(413515),
-    j = n(182514),
+    E = n(526292),
+    h = n(89366),
+    p = n(236834),
+    C = n(194509),
+    x = n(224850),
+    T = n(797255),
+    I = n(753894),
+    S = n(288351),
+    f = n(693591),
+    N = n(985018),
+    b = n(413515),
+    R = n(182514),
     v = n(619947),
-    N = n(733907);
-let y = i.forwardRef((e, t) => {
+    O = n(733907);
+let j = s.forwardRef((e, t) => {
     let {
             className: n,
-            buttonClassName: i,
-            subscriptionTier: l,
-            isDarkMode: y,
+            buttonClassName: s,
+            subscriptionTier: r,
+            isDarkMode: j,
             isEligibleForBogoPromotion: P,
-            videoRef: R,
+            videoRef: y,
         } = e,
-        { analyticsLocations: D } = (0, _.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
-        w = (0, f.QQ)(),
-        L = (0, A.ar)(),
-        M = (0, a.bG)([g.A], () => g.A.affinities),
-        U = (0, h.A)(),
-        G = null != U,
-        k = y ? o.XD.WHITE : o.XD.BRAND,
-        V = M.length > 0,
-        H = T.intl.string(T.t.YCZldK),
-        B = (0, m.TM)(),
-        F = (0, a.bG)([d.A], () => d.A.useReducedMotion);
-    return (0, r.jsx)(_.f5, {
-        value: D,
-        children: (0, r.jsxs)("div", {
-            className: s()(S.kL, S.qY, n),
+        { analyticsLocations: L } = (0, _.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
+        D = (0, h.QQ)(),
+        M = (0, E.ar)(),
+        G = (0, l.bG)([g.A], () => g.A.affinities),
+        U = (0, p.A)(),
+        k = null != U,
+        B = j ? o.XD.WHITE : o.XD.BRAND,
+        w = G.length > 0,
+        H = N.intl.string(N.t.YCZldK),
+        V = (0, A.TM)(),
+        F = (0, l.bG)([d.A], () => d.A.useReducedMotion);
+    return (0, i.jsx)(_.f5, {
+        value: L,
+        children: (0, i.jsxs)("div", {
+            className: a()(b.kL, b.qY, n),
             ref: t,
             "data-testid": "marketing-page-hero-header",
             children: [
-                (0, r.jsx)("div", {
-                    className: S.kL,
-                    children: (0, r.jsxs)("div", {
-                        className: S.s8,
+                (0, i.jsx)("div", {
+                    className: b.kL,
+                    children: (0, i.jsxs)("div", {
+                        className: b.s8,
                         children: [
-                            L && (0, r.jsx)(C.A, {}),
-                            (0, r.jsx)(c.Heading, {
-                                className: S.WT,
+                            M && (0, i.jsx)(S.A, {}),
+                            (0, i.jsx)(c.Heading, {
+                                className: b.WT,
                                 variant: "display-sm",
                                 color: "text-strong",
                                 children: H,
                             }),
-                            G
-                                ? (0, r.jsx)(x.A, {
-                                      referrer: U,
-                                  })
-                                : V &&
-                                  (0, r.jsx)("div", {
-                                      className: S.kb,
-                                      children: (0, r.jsx)(E.A, {
+                            k
+                                ? (0, i.jsx)(T.A, { referrer: U })
+                                : w &&
+                                  (0, i.jsx)("div", {
+                                      className: b.kb,
+                                      children: (0, i.jsx)(x.A, {
                                           textColor: "text-default",
                                           smallerText: !1,
                                           isApplicationHome: !0,
                                       }),
                                   }),
-                            w
-                                ? (0, r.jsx)("div", {
-                                      className: s()(S.UD, S.$F, {
-                                          [S.In]: !(V || G),
-                                      }),
-                                      children: (0, r.jsx)(b.A, {
-                                          className: s()(S.x6, i),
-                                          color: k,
-                                      }),
+                            D
+                                ? (0, i.jsx)("div", {
+                                      className: a()(b.UD, b.$F, { [b.In]: !(w || k) }),
+                                      children: (0, i.jsx)(C.A, { className: a()(b.x6, s), color: B }),
                                   })
-                                : (0, r.jsx)(O.KN, {
-                                      subscriptionTier: l,
-                                      inOfferExperience: L,
-                                      containerClassName: s()(S.$F, {
-                                          [S.In]: !(V || G),
-                                      }),
-                                      buttonClassName: i,
+                                : (0, i.jsx)(I.KN, {
+                                      subscriptionTier: r,
+                                      inOfferExperience: M,
+                                      containerClassName: a()(b.$F, { [b.In]: !(w || k) }),
+                                      buttonClassName: s,
                                       isApplicationHome: !0,
-                                      isDarkMode: y,
+                                      isDarkMode: j,
                                       isEligibleForBogoPromotion: P,
                                   }),
-                            (0, r.jsx)(O.U9, {
+                            (0, i.jsx)(I.U9, {
                                 variant: "text-sm/normal",
                                 withBottomMargin: !1,
                                 isApplicationHome: !0,
@@ -109,20 +98,17 @@ let y = i.forwardRef((e, t) => {
                         ],
                     }),
                 }),
-                (0, r.jsx)("div", {
-                    className: S.TT,
-                    children: (0, r.jsx)(p.A, {
+                (0, i.jsx)("div", {
+                    className: b.TT,
+                    children: (0, i.jsx)(m.A, {
                         autoPlay: !F,
                         playsInline: !0,
                         preload: F ? "none" : "auto",
                         poster: v.A,
                         loop: !0,
-                        className: S.gm,
-                        ref: R,
-                        children: (0, r.jsx)("source", {
-                            src: B ? j.A : N.A,
-                            type: B ? I.a.MP4 : I.a.WEBM,
-                        }),
+                        className: b.gm,
+                        ref: y,
+                        children: (0, i.jsx)("source", { src: V ? R.A : O.A, type: V ? f.a.MP4 : f.a.WEBM }),
                     }),
                 }),
             ],

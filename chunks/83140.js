@@ -1,30 +1,28 @@
-n.d(t, {
-    A: () => s,
-});
+n.d(t, { A: () => s });
 var l = n(873298),
-    r = n(444802),
-    a = n(17372),
-    i = n(985018);
+    a = n(444802),
+    i = n(17372),
+    r = n(985018);
 let s = {
-    getTitle: () => i.intl.string(i.t.RVX1zT),
-    getDisabledTitle: () => i.intl.string(i.t.SYkEBi),
-    getDescription: () => i.intl.string(i.t.aqlmp8),
-    eligibleReportSubtypes: [a.TS.SUB_GORE, a.TS.SUB_GLORIFYING_VIOLENCE],
+    getTitle: () => r.intl.string(r.t.RVX1zT),
+    getDisabledTitle: () => r.intl.string(r.t.SYkEBi),
+    getDescription: () => r.intl.string(r.t.aqlmp8),
+    eligibleReportSubtypes: [i.TS.SUB_GORE, i.TS.SUB_GLORIFYING_VIOLENCE],
     onApply: () =>
-        (0, r.qY)(
+        (0, a.qY)(
             (function () {
-                let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, r.T4)(),
-                    a = {};
+                let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, a.T4)(),
+                    i = {};
                 return (
-                    e === l.TO.SHOW && (a.goreContentGuilds = l.TO.BLUR),
-                    t === l.TO.SHOW && (a.goreContentFriendDm = l.TO.BLUR),
-                    n === l.TO.SHOW && (a.goreContentNonFriendDm = l.TO.BLUR),
-                    a
+                    e === l.TO.SHOW && (i.goreContentGuilds = l.TO.BLUR),
+                    t === l.TO.SHOW && (i.goreContentFriendDm = l.TO.BLUR),
+                    n === l.TO.SHOW && (i.goreContentNonFriendDm = l.TO.BLUR),
+                    i
                 );
             })(),
         ),
     predicate: () => {
-        let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, r.T4)();
+        let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, a.T4)();
         return e === l.TO.SHOW || t === l.TO.SHOW || n === l.TO.SHOW;
     },
 };

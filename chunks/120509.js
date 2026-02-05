@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nd: "panel__79a1f",
     Iv: "panelHeader__79a1f",

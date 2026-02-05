@@ -1,3 +1,2 @@
-e.exports = {
-    q: "rowContainer__1e702",
-};
+"use strict";
+e.exports = { q: "rowContainer__1e702" };

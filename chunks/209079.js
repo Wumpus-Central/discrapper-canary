@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(643015);
-
+n.d(t, { A: () => l });
+var i = n(643015);
 function l() {
-    return (0, r.A)();
+    return (0, i.A)();
 }

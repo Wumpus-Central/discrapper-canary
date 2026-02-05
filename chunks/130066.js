@@ -1,93 +1,74 @@
-n.d(t, {
-    A: () => D,
-});
-var r = n(627968),
-    i = n(311907),
-    a = n(195043),
-    s = n(628965),
-    o = n(740625),
-    l = n(524738),
-    c = n(378631),
-    u = n(962789),
-    d = n(476009),
-    f = n(585052),
-    p = n(831320),
-    _ = n(965563),
-    h = n(320134),
-    m = n(604151),
-    g = n(638130),
-    E = n(389242),
-    b = n(772538),
-    y = n(61610),
-    O = n(751461),
-    A = n(638324),
-    v = n(428854),
-    S = n(531525),
-    I = n(190363),
+n.d(t, { A: () => L });
+var i = n(627968),
+    l = n(311907),
+    s = n(195043),
+    a = n(628965),
+    r = n(740625),
+    o = n(524738),
+    d = n(378631),
+    c = n(962789),
+    u = n(476009),
+    h = n(585052),
+    A = n(831320),
+    g = n(965563),
+    m = n(320134),
+    p = n(604151),
+    _ = n(638130),
+    x = n(389242),
+    f = n(772538),
+    E = n(61610),
+    C = n(751461),
+    I = n(638324),
+    S = n(428854),
+    b = n(531525),
+    N = n(190363),
     T = n(652215),
-    C = n(985018);
-let N = () =>
-        (0, r.jsxs)(h.A, {
-            title: C.intl.string(C.t.xVRG4P),
-            webSetting: S.H.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+    j = n(985018);
+let v = () =>
+        (0, i.jsxs)(m.A, {
+            title: j.intl.string(j.t.xVRG4P),
+            webSetting: b.H.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [
-                (0, r.jsx)(g.f, {}),
-                (0, r.jsx)(f.A, {}),
-                (0, r.jsx)(d.A, {}),
-                (0, r.jsx)(c.A, {}),
-                (0, r.jsx)(E.A, {}),
+                (0, i.jsx)(_.f, {}),
+                (0, i.jsx)(h.A, {}),
+                (0, i.jsx)(u.A, {}),
+                (0, i.jsx)(d.A, {}),
+                (0, i.jsx)(x.A, {}),
+            ],
+        }),
+    y = () =>
+        (0, i.jsxs)(m.A, {
+            title: j.intl.string(j.t["y62Z/d"]),
+            webSetting: b.H.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            children: [
+                (0, i.jsx)(s.x, { setting: b.H.PRIVACY_AND_SAFETY_SERVER_SELECTOR, children: (0, i.jsx)(g.A, {}) }),
+                (0, i.jsx)(C.A, {}),
+                (0, i.jsx)(I.A, {}),
+                (0, i.jsx)(E.A, {}),
+                (0, i.jsx)(f.A, {}),
             ],
         }),
     R = () =>
-        (0, r.jsxs)(h.A, {
-            title: C.intl.string(C.t["y62Z/d"]),
-            webSetting: S.H.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
-            children: [
-                (0, r.jsx)(a.x, {
-                    setting: S.H.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                    children: (0, r.jsx)(_.A, {}),
-                }),
-                (0, r.jsx)(O.A, {}),
-                (0, r.jsx)(A.A, {}),
-                (0, r.jsx)(y.A, {}),
-                (0, r.jsx)(b.A, {}),
-            ],
+        (0, i.jsxs)(m.A, {
+            title: j.intl.string(j.t["1Qn8iV"]),
+            webSetting: b.H.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            children: [(0, i.jsx)(A.A, {}), (0, i.jsx)(p.Ay, {})],
         }),
-    w = () =>
-        (0, r.jsxs)(h.A, {
-            title: C.intl.string(C.t["1Qn8iV"]),
-            webSetting: S.H.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: [(0, r.jsx)(p.A, {}), (0, r.jsx)(m.Ay, {})],
-        }),
-    P = () =>
-        (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)(N, {}), (0, r.jsx)(R, {}), (0, r.jsx)(w, {})],
-        });
-
-function D() {
-    let e = (0, i.bG)([s.A], () => s.A.getSubsection()),
+    O = () => (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(v, {}), (0, i.jsx)(y, {}), (0, i.jsx)(R, {})] });
+function L() {
+    let e = (0, l.bG)([a.A], () => a.A.getSubsection()),
         t = [
-            {
-                title: C.intl.string(C.t["/7xJCF"]),
-                component: P,
-                setting: S.H.CONTENT_SOCIAL_DISCORD_TAB,
-            },
-            {
-                title: C.intl.string(C.t.YpCiMt),
-                component: u.A,
-                setting: S.H.CONTENT_SOCIAL_CONNECTED_GAMES,
-            },
+            { title: j.intl.string(j.t["/7xJCF"]), component: O, setting: b.H.CONTENT_SOCIAL_DISCORD_TAB },
+            { title: j.intl.string(j.t.YpCiMt), component: c.A, setting: b.H.CONTENT_SOCIAL_CONNECTED_GAMES },
         ];
-    return (0, r.jsx)(o.R, {
-        header: C.intl.string(C.t["+o1pDZ"]),
-        notice: (0, r.jsx)(v.A, {
-            page: v.R.CONTENT_AND_SOCIAL,
-        }),
-        children: (0, r.jsx)(l.A, {
-            parentSetting: S.H.CONTENT_SOCIAL,
+    return (0, i.jsx)(r.R, {
+        header: j.intl.string(j.t["+o1pDZ"]),
+        notice: (0, i.jsx)(S.A, { page: S.R.CONTENT_AND_SOCIAL }),
+        children: (0, i.jsx)(o.A, {
+            parentSetting: b.H.CONTENT_SOCIAL,
             settingsSection: T.nc_.CONTENT_AND_SOCIAL,
             tabs: t,
-            defaultTabIndex: e === I.k ? 1 : void 0,
+            defaultTabIndex: e === N.k ? 1 : void 0,
         }),
     });
 }

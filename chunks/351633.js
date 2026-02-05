@@ -1,56 +1,42 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
-n(64700);
-var l = n(397927),
-    a = n(303727),
-    s = n(406704),
-    o = n(985018),
-    i = n(993229);
-
-function c(e) {
-    let { channel: t, header: n, startThread: c } = e,
-        u = (0, s.n)(t),
-        d = (0, s.Tb)(t);
-    return (0, r.jsxs)("div", {
-        className: i.kL,
+s.d(t, { A: () => d });
+var l = s(627968);
+s(64700);
+var n = s(397927),
+    a = s(303727),
+    r = s(406704),
+    i = s(985018),
+    o = s(993229);
+function d(e) {
+    let { channel: t, header: s, startThread: d } = e,
+        c = (0, r.n)(t),
+        u = (0, r.Tb)(t);
+    return (0, l.jsxs)("div", {
+        className: o.kL,
         children: [
-            (0, r.jsxs)("div", {
-                className: i.zc,
+            (0, l.jsxs)("div", {
+                className: o.zc,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: i.Kk,
-                        children: (0, r.jsx)(l.ysw, {
-                            size: "custom",
-                            color: "currentColor",
-                            width: 36,
-                            height: 36,
-                        }),
+                    (0, l.jsx)("div", {
+                        className: o.Kk,
+                        children: (0, l.jsx)(n.ysw, { size: "custom", color: "currentColor", width: 36, height: 36 }),
                     }),
-                    (0, r.jsx)(a.A, {
-                        className: i.uf,
-                    }),
+                    (0, l.jsx)(a.A, { className: o.uf }),
                 ],
             }),
-            (0, r.jsx)(l.Heading, {
-                className: i.wx,
-                variant: "heading-xl/semibold",
-                children: n,
-            }),
-            (0, r.jsx)(l.Text, {
+            (0, l.jsx)(n.Heading, { className: o.wx, variant: "heading-xl/semibold", children: s }),
+            (0, l.jsx)(n.Text, {
                 color: "text-default",
                 variant: "text-md/normal",
-                children: o.intl.string(o.t.jmq9GC),
+                children: i.intl.string(i.t.jmq9GC),
             }),
-            u || d
-                ? (0, r.jsx)("div", {
+            c || u
+                ? (0, l.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
-                      className: i.lO,
-                      children: (0, r.jsx)(l.Button, {
+                      className: o.lO,
+                      children: (0, l.jsx)(n.Button, {
                           variant: "primary",
-                          text: o.intl.string(o.t.rBIGBL),
-                          onClick: c,
+                          text: i.intl.string(i.t.rBIGBL),
+                          onClick: d,
                       }),
                   })
                 : null,

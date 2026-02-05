@@ -1,3 +1,4 @@
+"use strict";
 var n,
     o =
         Object.assign ||
@@ -8,12 +9,7 @@ var n,
             }
             return e;
         },
-    a =
-        (n = r(64700)) && n.__esModule
-            ? n
-            : {
-                  default: n,
-              };
+    a = (n = r(64700)) && n.__esModule ? n : { default: n };
 t.default = function (e) {
     var t = e.fill,
         r = e.width,

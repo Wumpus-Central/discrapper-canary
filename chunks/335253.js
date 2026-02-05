@@ -1,88 +1,63 @@
-n.d(t, {
-    default: () => O,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { default: () => m });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(442433),
-    o = n(847767),
-    a = n(358367),
-    u = n(793574),
-    c = n(50268),
-    d = n(235052),
-    s = n(222311),
+var l = n(397927),
+    a = n(442433),
+    r = n(847767),
+    d = n(358367),
+    s = n(793574),
+    o = n(50268),
+    u = n(235052),
+    c = n(222311),
     A = n(237749),
-    _ = n(961350),
-    f = n(661455),
-    b = n(291247),
-    E = n(652215),
-    g = n(985018);
-let O = (0, a.A)(
-    (0, o.A)(
+    g = n(961350),
+    E = n(661455),
+    _ = n(291247),
+    b = n(652215),
+    f = n(985018);
+let m = (0, d.A)(
+    (0, r.A)(
         function (e) {
-            let { user: t, channel: n, guildId: o, onSelect: a, onInteraction: u, context: E } = e,
-                O = n.id,
-                j = t.isNonUserBot(),
-                v = t.id === _.default.getId(),
-                p = (0, s.A)(t),
-                y = (0, A.A)(t, o, O),
-                S = (0, f.n)({
-                    isOwnSettings: v,
-                    userId: t.id,
-                    channelId: O,
-                    guildId: o,
-                    context: E,
-                }),
-                [C, h] = (0, f.O)(t, O, o),
-                I = (0, b.A)(t, o, O),
-                m = (0, c.A)({
-                    id: t.id,
-                    label: g.intl.string(g.t["/AXYnE"]),
-                }),
-                T = (0, d.A)(t.id, n);
-            return (0, r.jsx)(i.W1t, {
+            let { user: t, channel: n, guildId: r, onSelect: d, onInteraction: s, context: b } = e,
+                m = n.id,
+                C = t.isNonUserBot(),
+                h = t.id === g.default.getId(),
+                M = (0, c.A)(t),
+                S = (0, A.A)(t, r, m),
+                x = (0, E.n)({ isOwnSettings: h, userId: t.id, channelId: m, guildId: r, context: b }),
+                [I, D] = (0, E.O)(t, m, r),
+                v = (0, _.A)(t, r, m),
+                T = (0, o.A)({ id: t.id, label: f.intl.string(f.t["/AXYnE"]) }),
+                j = (0, u.A)(t.id, n);
+            return (0, i.jsx)(l.W1t, {
                 "data-menu-migrated-auto": !0,
                 navId: "user-context",
-                onClose: l.Z_,
-                "aria-label": g.intl.string(g.t.liqwPJ),
-                onSelect: a,
-                onInteraction: u,
+                onClose: a.Z_,
+                "aria-label": f.intl.string(f.t.liqwPJ),
+                onSelect: d,
+                onInteraction: s,
                 variant: "fixed",
                 children:
-                    !j &&
-                    (0, r.jsxs)(r.Fragment, {
+                    !C &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, r.jsxs)(i.rXV, {
-                                children: [p, y],
-                            }),
-                            T,
-                            S,
-                            !v &&
-                                (0, r.jsx)(i.rXV, {
-                                    children: (0, r.jsxs)(i.Drp, {
+                            (0, i.jsxs)(l.rXV, { children: [M, S] }),
+                            j,
+                            x,
+                            !h &&
+                                (0, i.jsx)(l.rXV, {
+                                    children: (0, i.jsxs)(l.Drp, {
                                         id: "more-options",
-                                        label: g.intl.string(g.t.PdRCRg),
-                                        children: [
-                                            C,
-                                            (0, r.jsx)(i.rXV, {
-                                                children: I,
-                                            }),
-                                            h,
-                                        ],
+                                        label: f.intl.string(f.t.PdRCRg),
+                                        children: [I, (0, i.jsx)(l.rXV, { children: v }), D],
                                     }),
                                 }),
-                            v &&
-                                (0, r.jsx)(i.rXV, {
-                                    children: m,
-                                }),
+                            h && (0, i.jsx)(l.rXV, { children: T }),
                         ],
                     }),
             });
         },
-        {
-            object: E.ZSU.CONTEXT_MENU,
-        },
+        { object: b.ZSU.CONTEXT_MENU },
     ),
-    [u.A.VOICE_USER],
+    [s.A.VOICE_USER],
 );

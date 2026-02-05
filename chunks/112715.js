@@ -1,13 +1,10 @@
-n.d(t, {
-    Z: () => i,
-});
-var r = n(964486);
-
-function i(e) {
-    (0, r.Ay)(() => {
-        let t = null == e ? void 0 : e();
+n.d(t, { Z: () => s });
+var i = n(964486);
+function s(e) {
+    (0, i.Ay)(() => {
+        let t = e?.();
         return () => {
-            null == t || t();
+            t?.();
         };
     });
 }

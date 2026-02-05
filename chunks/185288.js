@@ -1,15 +1,13 @@
-n.d(t, {
-    P: () => l,
-});
+"use strict";
+n.d(t, { P: () => l });
 var r = n(13163),
     i = n(803082),
     a = n(853590),
     s = n(64700),
     o = n(8321);
-
 function l(e, t, n) {
     let { direction: l } = (0, a.Y)(),
-        u = (0, s.useMemo)(() => (0, r.C7)(t), [t]),
+        c = (0, s.useMemo)(() => (0, r.C7)(t), [t]),
         d = (r) => {
             if (
                 r.currentTarget.contains(r.target) &&
@@ -24,28 +22,26 @@ function l(e, t, n) {
                         if ((r.preventDefault(), r.stopPropagation(), "rtl" === l)) {
                             if (t.current) {
                                 let e = r.target,
-                                    n = c(t.current, e.getBoundingClientRect().left, -1);
+                                    n = u(t.current, e.getBoundingClientRect().left, -1);
                                 n && n.focus();
                             }
-                        } else u.focusPrevious();
+                        } else c.focusPrevious();
                         break;
                     case "ArrowRight":
                         if ((r.preventDefault(), r.stopPropagation(), "rtl" === l)) {
                             if (t.current) {
                                 let e = r.target,
-                                    n = c(t.current, e.getBoundingClientRect().left, 1);
+                                    n = u(t.current, e.getBoundingClientRect().left, 1);
                                 n && n.focus();
                             }
-                        } else u.focusNext();
+                        } else c.focusNext();
                 }
         },
-        f = () => {
+        _ = () => {
             var e;
             if (!t.current) return;
             let n = null == (e = window.event) ? void 0 : e.target,
-                i = (0, r.N$)(t.current, {
-                    tabbable: !0,
-                });
+                i = (0, r.N$)(t.current, { tabbable: !0 });
             if ((n && ((i.currentNode = n), (n = i.previousNode())), !n)) {
                 let e;
                 do (e = i.lastChild()) && (n = e);
@@ -58,25 +54,20 @@ function l(e, t, n) {
             }
             n && n.focus();
         },
-        { pressProps: p } = (0, o.d)({
+        { pressProps: f } = (0, o.d)({
             preventFocusOnPress: !0,
             allowTextSelectionOnPress: !0,
             onPressStart(e) {
-                "mouse" === e.pointerType && f();
+                "mouse" === e.pointerType && _();
             },
             onPress(e) {
-                ("touch" === e.pointerType || "pen" === e.pointerType) && f();
+                ("touch" === e.pointerType || "pen" === e.pointerType) && _();
             },
         });
-    return (0, i.v)(p, {
-        onKeyDown: d,
-    });
+    return (0, i.v)(f, { onKeyDown: d });
 }
-
-function c(e, t, n) {
-    let i = (0, r.N$)(e, {
-            tabbable: !0,
-        }),
+function u(e, t, n) {
+    let i = (0, r.N$)(e, { tabbable: !0 }),
         a = i.nextNode(),
         s = null,
         o = 1 / 0;

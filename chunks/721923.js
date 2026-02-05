@@ -1,262 +1,123 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(311907),
     l = n(502572),
-    c = n(435371),
-    u = n(421380),
+    u = n(435371),
+    c = n(421380),
     d = n(397927),
-    f = n(923408),
-    p = n(688810),
-    _ = n(531260),
+    _ = n(923408),
+    f = n(688810),
+    p = n(531260),
     h = n(267102),
     m = n(178368),
     g = n(166403),
     E = n(473145),
-    b = n(987144),
-    y = n(652215),
-    O = n(788868),
-    A = n(985018),
-    v = n(737211);
-
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function I(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                S(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function T(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function C(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function N(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = R(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let w = (e) => {
+    A = n(987144),
+    I = n(652215),
+    T = n(788868),
+    y = n(985018),
+    S = n(737211);
+let v = (e) => {
     let {
             analyticsLocation: t,
             analyticsSourceLocation: n,
             guild: a,
-            buttonText: S,
-            targetBoostedGuildTier: T,
-            onClose: R = () => {},
-            closeLayer: w = () => {},
-            pauseAnimation: P = !1,
-            applicationId: D,
-            handleSubscribeModalClose: x,
+            buttonText: v,
+            targetBoostedGuildTier: C,
+            onClose: b = () => {},
+            closeLayer: N = () => {},
+            pauseAnimation: R = !1,
+            applicationId: O,
+            handleSubscribeModalClose: D,
             withHighlight: L = !1,
-            icon: j,
-            intent: M,
-            useExpressiveButton: k = !1,
+            icon: w,
+            intent: x,
+            useExpressiveButton: P = !1,
+            ...M
         } = e,
-        U = N(e, [
-            "analyticsLocation",
-            "analyticsSourceLocation",
-            "guild",
-            "buttonText",
-            "targetBoostedGuildTier",
-            "onClose",
-            "closeLayer",
-            "pauseAnimation",
-            "applicationId",
-            "handleSubscribeModalClose",
-            "withHighlight",
-            "icon",
-            "intent",
-            "useExpressiveButton",
-        ]),
-        { analyticsLocations: G } = (0, p.Ay)(),
-        V = (0, h.Us)() === y.BRT.POPOUT,
-        [F, B] = i.useState(!1),
-        { fractionalState: H } = (0, _.A)(),
-        Y = (0, o.bG)([m.A], () => m.A.hasFetched);
+        { analyticsLocations: k } = (0, f.Ay)(),
+        U = (0, h.Us)() === I.BRT.POPOUT,
+        [G, V] = i.useState(!1),
+        { fractionalState: F } = (0, p.A)(),
+        B = (0, o.bG)([m.A], () => m.A.hasFetched);
     i.useEffect(() => {
-        Y || (0, f.CD)();
-    }, [Y]);
-    let W = (0, E.D$)(m.A.boostSlots),
-        K = null != T ? Math.max((0, E.Os)(a, T), 1) : 1,
-        z = (0, E.Nc)({
-            fractionalState: H,
-        }),
-        q = async () => {
-            B(!0),
-                await (0, b.g)({
-                    analyticsLocations: G,
+        B || (0, _.CD)();
+    }, [B]);
+    let j = (0, E.D$)(m.A.boostSlots),
+        H = null != C ? Math.max((0, E.Os)(a, C), 1) : 1,
+        Y = (0, E.Nc)({ fractionalState: F }),
+        W = async () => {
+            V(!0),
+                await (0, A.g)({
+                    analyticsLocations: k,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
-                    numberOfBoostsToAdd: K,
-                    onClose: R,
-                    closeLayer: w,
-                    inPopout: V,
-                    applicationId: D,
-                    handleSubscribeModalClose: x,
-                    intent: M,
+                    numberOfBoostsToAdd: H,
+                    onClose: b,
+                    closeLayer: N,
+                    inPopout: U,
+                    applicationId: O,
+                    handleSubscribeModalClose: D,
+                    intent: x,
                 }),
-                B(!1);
+                V(!1);
         },
-        X = g.A.getPremiumTypeSubscription(),
-        Z = (0, r.jsxs)("div", {
-            className: v.x6,
-            children: [j, null != S ? S : A.intl.string(A.t.gKmQ1G)],
-        }),
-        Q = !1;
-    return ((Q = null !== X && !(W.length > 0) && (null == X ? void 0 : X.isPausedOrPausePending) && H === O.xc.NONE) &&
-        ((Z = (0, r.jsxs)("div", {
-            className: v.x6,
-            children: [
-                (0, r.jsx)(d.XAi, {
-                    size: "xs",
-                    className: v.iA,
-                }),
-                " ",
-                Z,
-            ],
+        K = g.A.getPremiumTypeSubscription(),
+        z = (0, r.jsxs)("div", { className: S.x6, children: [w, v ?? y.intl.string(y.t.gKmQ1G)] }),
+        $ = !1;
+    return (($ = null !== K && !(j.length > 0) && K?.isPausedOrPausePending && F === T.xc.NONE) &&
+        ((z = (0, r.jsxs)("div", {
+            className: S.x6,
+            children: [(0, r.jsx)(d.XAi, { size: "xs", className: S.iA }), " ", z],
         })),
-        (U.disabled = !0)),
-    null != z)
-        ? k
-            ? (0, r.jsx)(c.m_, {
-                  text: z,
+        (M.disabled = !0)),
+    null != Y)
+        ? P
+            ? (0, r.jsx)(u.m_, {
+                  text: Y,
                   children: (0, r.jsx)(d.Button, {
                       variant: "expressive",
                       icon: d.XAi,
                       iconPosition: "start",
                       disabled: !0,
-                      text: null != S ? S : A.intl.string(A.t.gKmQ1G),
+                      text: v ?? y.intl.string(y.t.gKmQ1G),
                   }),
               })
             : (0, r.jsx)(l.A, {
-                  text: z,
+                  text: Y,
                   "aria-label": !1,
                   children: (e) =>
-                      (0, r.jsx)(
-                          d.wLn,
-                          C(
-                              I(
-                                  C(
-                                      I(
-                                          {
-                                              "data-migration-pending": !0,
-                                          },
-                                          e,
-                                      ),
-                                      {
-                                          disabled: !0,
-                                          size: u.$n.Sizes.SMALL,
-                                          pauseAnimation: P,
-                                      },
-                                  ),
-                                  U,
-                              ),
-                              {
-                                  children: Z,
-                              },
-                          ),
-                      ),
+                      (0, r.jsx)(d.wLn, {
+                          "data-migration-pending": !0,
+                          ...e,
+                          disabled: !0,
+                          size: c.$n.Sizes.SMALL,
+                          pauseAnimation: R,
+                          ...M,
+                          children: z,
+                      }),
               })
-        : k
+        : P
           ? (0, r.jsx)(d.Button, {
                 variant: "expressive",
-                disabled: Q,
-                loading: F,
-                text: null != S ? S : A.intl.string(A.t.gKmQ1G),
-                onClick: q,
+                disabled: $,
+                loading: G,
+                text: v ?? y.intl.string(y.t.gKmQ1G),
+                onClick: W,
             })
-          : (0, r.jsx)(
-                d.wLn,
-                C(
-                    I(
-                        {
-                            "data-migration-pending": !0,
-                            size: u.$n.Sizes.SMALL,
-                        },
-                        U,
-                    ),
-                    {
-                        className: s()(U.className, {
-                            [v.yj]: L,
-                        }),
-                        submitting: F,
-                        onClick: q,
-                        pauseAnimation: P,
-                        children: Z,
-                    },
-                ),
-            );
+          : (0, r.jsx)(d.wLn, {
+                "data-migration-pending": !0,
+                size: c.$n.Sizes.SMALL,
+                ...M,
+                className: s()(M.className, { [S.yj]: L }),
+                submitting: G,
+                onClick: W,
+                pauseAnimation: R,
+                children: z,
+            });
 };

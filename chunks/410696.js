@@ -1,13 +1,8 @@
 e.exports = function (e) {
     let t = {
         variants: [
-            e.COMMENT("^[ \\t]*(?=#)", "$", {
-                relevance: 0,
-                excludeBegin: !0,
-            }),
-            e.COMMENT("[;@]", "$", {
-                relevance: 0,
-            }),
+            e.COMMENT("^[ \\t]*(?=#)", "$", { relevance: 0, excludeBegin: !0 }),
+            e.COMMENT("[;@]", "$", { relevance: 0 }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
         ],
@@ -29,49 +24,24 @@ e.exports = function (e) {
             },
             t,
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: "'",
-                end: "[^\\\\]'",
-                relevance: 0,
-            },
-            {
-                className: "title",
-                begin: "\\|",
-                end: "\\|",
-                illegal: "\\n",
-                relevance: 0,
-            },
+            { className: "string", begin: "'", end: "[^\\\\]'", relevance: 0 },
+            { className: "title", begin: "\\|", end: "\\|", illegal: "\\n", relevance: 0 },
             {
                 className: "number",
                 variants: [
-                    {
-                        begin: "[#$=]?0x[0-9a-f]+",
-                    },
-                    {
-                        begin: "[#$=]?0b[01]+",
-                    },
-                    {
-                        begin: "[#$=]\\d+",
-                    },
-                    {
-                        begin: "\\b\\d+",
-                    },
+                    { begin: "[#$=]?0x[0-9a-f]+" },
+                    { begin: "[#$=]?0b[01]+" },
+                    { begin: "[#$=]\\d+" },
+                    { begin: "\\b\\d+" },
                 ],
                 relevance: 0,
             },
             {
                 className: "symbol",
                 variants: [
-                    {
-                        begin: "^[ \\t]*[a-z_\\.\\$][a-z0-9_\\.\\$]+:",
-                    },
-                    {
-                        begin: "^[a-z_\\.\\$][a-z0-9_\\.\\$]+",
-                    },
-                    {
-                        begin: "[=#]\\w+",
-                    },
+                    { begin: "^[ \\t]*[a-z_\\.\\$][a-z0-9_\\.\\$]+:" },
+                    { begin: "^[a-z_\\.\\$][a-z0-9_\\.\\$]+" },
+                    { begin: "[=#]\\w+" },
                 ],
                 relevance: 0,
             },

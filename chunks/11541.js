@@ -1,48 +1,33 @@
-n.d(t, {
-    CI: () => b,
-    UP: () => E,
-    eN: () => O,
-    uY: () => g,
-    v8: () => y,
-    vk: () => v,
-}),
-    n(747238),
-    n(321073);
+"use strict";
+n.d(t, { CI: () => A, UP: () => E, eN: () => T, uY: () => g, v8: () => I, vk: () => S }), n(321073);
 var r = n(562465),
     i = n(582754),
     a = n(736653),
     s = n(573648),
     o = n(681819),
     l = n(652215),
-    c = n(985018);
-let u = {};
-
+    u = n(985018);
+let c = {};
 function d(e, t) {
     return e + t;
 }
-
-function f(e, t) {
+function _(e, t) {
     return t.map((t) => d(e, t));
 }
-
-function p(e) {
+function f(e) {
     return e.split("-")[1];
 }
-
-function _(e) {
-    return e.filter((e) => u[e] <= 1).map(p);
+function p(e) {
+    return e.filter((e) => c[e] <= 1).map(f);
 }
-
 function h(e, t) {
     e.forEach((e) => {
-        u[e] = t;
+        c[e] = t;
     });
 }
-
 function m(e, t, n) {
-    u[d(e, t)] = n;
+    c[d(e, t)] = n;
 }
-
 function g(e, t) {
     t.forEach((t) => m(e, t, 3));
 }
@@ -60,53 +45,49 @@ var E = (function (e) {
         e
     );
 })({});
-let b = function (e) {
+let A = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         switch (e) {
             case 1:
-                return c.intl.string(c.t.HumZAi);
+                return u.intl.string(u.t.HumZAi);
             case 2:
-                return c.intl.string(c.t.gmCUFw);
+                return u.intl.string(u.t.gmCUFw);
             case 3:
-                return c.intl.string(c.t["Ql/e9Y"]);
+                return u.intl.string(u.t["Ql/e9Y"]);
             case 4:
-                return c.intl.string(c.t.Op8B3O);
+                return u.intl.string(u.t.Op8B3O);
             case 5:
-                return c.intl.string(c.t["/3vIRd"]);
+                return u.intl.string(u.t["/3vIRd"]);
             case 6:
-                if (null != t && !n)
-                    return c.intl.formatToPlainString(c.t.EIUjRy, {
-                        vanityUrl: t,
-                    });
-                return c.intl.string(c.t.dGiD1O);
+                if (null != t && !n) return u.intl.formatToPlainString(u.t.EIUjRy, { vanityUrl: t });
+                return u.intl.string(u.t.dGiD1O);
             case 7:
-                return c.intl.string(c.t.vdu7oS);
+                return u.intl.string(u.t.vdu7oS);
             case 8:
-                return c.intl.string(c.t["9/ZreX"]);
+                return u.intl.string(u.t["9/ZreX"]);
             default:
-                return c.intl.string(c.t.DvMBkS);
+                return u.intl.string(u.t.DvMBkS);
         }
     },
-    y = (e) => {
+    I = (e) => {
         switch (e) {
             case "twitch":
-                return c.intl.string(c.t.AVGAkw);
+                return u.intl.string(u.t.AVGAkw);
             case "youtube":
-                return c.intl.string(c.t.PHSAsn);
+                return u.intl.string(u.t.PHSAsn);
             default:
-                return c.intl.string(c.t.gmCUFw);
+                return u.intl.string(u.t.gmCUFw);
         }
     },
-    O = (e) => {
+    T = (e) => {
         let t = s.A.get((0, o.ML)(e)),
             n = (0, a.Ay)();
         return null != t && ["twitch", "youtube"].includes(e)
-            ? "url('".concat((0, i.Mw)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')")
+            ? `url('${((0, i.Mw))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
             : null;
     };
-
-function A(e) {
+function y(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -115,30 +96,28 @@ function A(e) {
         integrationType: e.integration_type,
     };
 }
-async function v(e, t) {
-    let n = f(e, t),
-        i = _(n);
+async function S(e, t) {
+    let n = _(e, t),
+        i = p(n);
     if (0 === i.length) return [];
     h(n, 2);
     try {
         let t = await r.Bo.post({
             url: l.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: {
-                user_ids: i,
-            },
+            body: { user_ids: i },
             rejectWithError: !0,
         });
         if (!Array.isArray(t.body)) return h(n, 0), [];
-        let a = t.body.map(A),
+        let a = t.body.map(y),
             s = [];
         a.forEach((e) => {
             let { userId: t } = e;
             return s.push(t);
         });
-        let o = f(e, s),
-            c = i.filter((e) => !s.includes(e)),
-            u = f(e, c);
-        return h(o, 3), h(u, 0), a;
+        let o = _(e, s),
+            u = i.filter((e) => !s.includes(e)),
+            c = _(e, u);
+        return h(o, 3), h(c, 0), a;
     } catch (e) {
         h(n, 0);
     }

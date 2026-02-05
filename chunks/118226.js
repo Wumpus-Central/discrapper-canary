@@ -56,10 +56,7 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                className: "meta",
-                begin: "@[A-Za-z]+",
-            },
+            { className: "meta", begin: "@[A-Za-z]+" },
         ],
     };
 };

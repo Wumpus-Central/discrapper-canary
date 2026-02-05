@@ -1,7 +1,5 @@
-n.d(t, {
-    x: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { x: () => r });
 let r = {
     IN_APP: new Set([
         "application",

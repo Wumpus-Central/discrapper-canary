@@ -1,32 +1,28 @@
-n.d(t, {
-    D: () => i.DL,
-    u: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { D: () => i.DL, u: () => o });
 var r = n(64700),
     i = n(862019),
     a = n(879821),
     s = n(193439);
-
 function o(e) {
     let {
             defaultOpen: t,
             offset: n = 4,
             placement: o,
             matchReferenceWidth: l = !0,
-            setHeight: c,
-            setWidth: u,
+            setHeight: u,
+            setWidth: c,
             transform: d,
         } = e,
-        [f, p] = r.useState(null != t && t),
-        _ = r.useRef(c);
+        [_, f] = r.useState(t ?? !1),
+        p = r.useRef(u);
     r.useEffect(() => {
-        _.current = c;
-    }, [c]);
-    let h = r.useRef(u);
-    r.useEffect(() => {
-        h.current = u;
+        p.current = u;
     }, [u]);
+    let h = r.useRef(c);
+    r.useEffect(() => {
+        h.current = c;
+    }, [c]);
     let m = r.useRef(l);
     r.useEffect(() => {
         m.current = l;
@@ -34,10 +30,10 @@ function o(e) {
     let {
             refs: g,
             floatingStyles: E,
-            context: b,
+            context: A,
         } = (0, i.we)({
-            open: f,
-            onOpenChange: p,
+            open: _,
+            onOpenChange: f,
             transform: d,
             middleware: [
                 null == o ? (0, a.RK)() : void 0,
@@ -46,17 +42,13 @@ function o(e) {
                         let { rects: t, elements: n } = e;
                         m.current &&
                             Object.assign(n.floating.style, {
-                                minWidth: "".concat(t.reference.width, "px"),
-                                width: "".concat(t.reference.width, "px"),
+                                minWidth: `${t.reference.width}px`,
+                                width: `${t.reference.width}px`,
                             }),
                             null != h.current &&
-                                Object.assign(n.floating.style, {
-                                    width: "".concat(h.current(t.reference), "px"),
-                                }),
-                            null != _.current &&
-                                Object.assign(n.floating.style, {
-                                    maxHeight: "".concat(_.current(t.reference), "px"),
-                                });
+                                Object.assign(n.floating.style, { width: `${h.current(t.reference)}px` }),
+                            null != p.current &&
+                                Object.assign(n.floating.style, { maxHeight: `${p.current(t.reference)}px` });
                     },
                 }),
                 (0, a.UU)(),
@@ -67,19 +59,15 @@ function o(e) {
             placement: o,
             strategy: "fixed",
         }),
-        y = (0, i.s9)(b, {
-            bubbles: {
-                escapeKey: !1,
-            },
-        }),
-        { getReferenceProps: O, getFloatingProps: A } = (0, i.bv)([y]);
+        I = (0, i.s9)(A, { bubbles: { escapeKey: !1 } }),
+        { getReferenceProps: T, getFloatingProps: y } = (0, i.bv)([I]);
     return {
-        isOpen: f,
-        setIsOpen: p,
+        isOpen: _,
+        setIsOpen: f,
         refs: g,
         floatingStyles: E,
-        context: b,
-        getReferenceProps: O,
-        getFloatingProps: A,
+        context: A,
+        getReferenceProps: T,
+        getFloatingProps: y,
     };
 }

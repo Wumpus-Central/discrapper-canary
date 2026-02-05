@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     SO: "quickSelect_ebaca5",
     AF: "quickSelectClick_ebaca5",

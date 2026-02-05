@@ -1,3 +1,4 @@
+"use strict";
 var t = TypeError;
 e.exports = function (e) {
     if (!e || "function" != typeof e.next) throw new t("iterator must be an object with a `next` method");

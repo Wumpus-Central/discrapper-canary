@@ -1,15 +1,12 @@
-n.d(t, {
-    W: () => u,
-});
+"use strict";
+n.d(t, { W: () => c });
 var r = n(321733),
     i = n(294292),
     a = n(522311),
     s = n(441870);
-
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -19,26 +16,20 @@ function l(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
-function c(e, t, n) {
+function u(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
-var u = (function () {
+var c = (function () {
     function e(t, n) {
         o(this, e), (this.store = t), (this.registry = n);
     }
     return (
-        c(e, [
+        u(e, [
             {
                 key: "subscribeToStateChange",
                 value: function (e) {
                     var t = this,
-                        n =
-                            arguments.length > 1 && void 0 !== arguments[1]
-                                ? arguments[1]
-                                : {
-                                      handlerIds: void 0,
-                                  },
+                        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
                         i = n.handlerIds;
                     (0, r.V)("function" == typeof e, "listener must be a function."),
                         (0, r.V)(
@@ -120,12 +111,7 @@ var u = (function () {
             {
                 key: "isOverTarget",
                 value: function (e) {
-                    var t =
-                        arguments.length > 1 && void 0 !== arguments[1]
-                            ? arguments[1]
-                            : {
-                                  shallow: !1,
-                              };
+                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shallow: !1 };
                     if (!e) return !1;
                     var n = t.shallow;
                     if (!this.isDragging()) return !1;

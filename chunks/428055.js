@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     R_: "heading__686cf",
     wY: "tableWrapper__686cf",

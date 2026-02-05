@@ -1,201 +1,124 @@
-n.d(t, {
-    A: () => T,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => y });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(877227),
     o = n(311907),
-    c = n(319354),
-    u = n(990078),
-    d = n(397927),
-    p = n(573435),
+    d = n(319354),
+    c = n(990078),
+    u = n(397927),
+    A = n(573435),
     h = n(545167),
-    g = n(418842),
+    _ = n(418842),
     m = n(309010),
-    f = n(723702),
-    A = n(851109),
-    _ = n(394953),
-    b = n(355216),
-    E = n(596540),
-    O = n(652215),
-    y = n(985018),
-    I = n(687836);
-let v = {
-        cozy: 0,
-        default: 0,
-        compact: 0,
-    },
-    S = {
-        cozy: 36,
-        default: 24,
-        compact: 14,
-    },
-    C = {
-        cozy: 95,
-        default: 84,
-        compact: 72,
-    };
-
-function N(e) {
-    var t, n;
-    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: m, focusSectionProps: A } = e,
-        [E, O] = i.useState(!1),
-        N = (0, _.lI)(),
-        T = s || N,
-        j = s || T,
+    p = n(723702),
+    g = n(851109),
+    E = n(394953),
+    f = n(355216),
+    I = n(596540),
+    C = n(652215),
+    N = n(985018),
+    T = n(687836);
+let S = { cozy: 0, default: 0, compact: 0 },
+    x = { cozy: 36, default: 24, compact: 14 },
+    v = { cozy: 95, default: 84, compact: 72 };
+function b(e) {
+    let { onClick: t, selectedOverride: n = !1, popoutProps: a, ref: s, focusSectionProps: o } = e,
+        [m, g] = r.useState(!1),
+        I = (0, E.lI)(),
+        C = n || I,
+        b = n || C,
         {
-            backForwardButtons: x,
-            titlebarIconSize: P,
-            titlebarHoverHighlight: w,
-        } = (0, h.pz)({
-            location: "NotificationsInboxTitleBarButton",
+            backForwardButtons: y,
+            titlebarIconSize: L,
+            titlebarHoverHighlight: O,
+        } = (0, h.pz)({ location: "NotificationsInboxTitleBarButton" }),
+        R = (0, i.jsx)(u.XFE, {
+            className: T.icon,
+            color: m || b ? u.LU0.colors.ICON_STRONG : u.LU0.colors.ICON_MUTED,
+            size: L,
         }),
-        L = (0, r.jsx)(d.XFE, {
-            className: I.icon,
-            color: E || j ? d.LU0.colors.ICON_STRONG : d.LU0.colors.ICON_MUTED,
-            size: P,
-        }),
-        { badge: R, badgeType: D } = (0, b.ux)({
-            isSelected: T,
-        }),
-        M = (0, f.isDesktop)() && x,
-        k = (0, g.C)(),
-        U = (0, f.isMac)() ? v[k] : M ? S[k] : C[k];
-    return (0, r.jsxs)(d.BJc, {
+        { badge: P, badgeType: j } = (0, f.ux)({ isSelected: C }),
+        D = (0, p.isDesktop)() && y,
+        w = (0, _.C)(),
+        M = (0, p.isMac)() ? S[w] : D ? x[w] : v[w];
+    return (0, i.jsxs)(u.BJc, {
         gap: 0,
         direction: "horizontal",
         children: [
-            (0, r.jsx)(d.hKd, {
-                size: U,
-                horizontal: !0,
-            }),
-            (0, r.jsx)(u.m, {
+            (0, i.jsx)(u.hKd, { size: M, horizontal: !0 }),
+            (0, i.jsx)(c.m, {
                 asContainer: !0,
-                shouldShow: !j,
-                text: y.intl.string(y.t.HcoRu0),
-                children: (0, r.jsxs)(
-                    d.DUT,
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            innerRef: m,
-                            className: a()(I.clickableContainer, {
-                                [I.withHoverHighlight]: w,
-                            }),
-                        },
-                        A,
-                        o,
-                    )),
-                    (n = n =
-                        {
-                            onMouseEnter: () => {
-                                O(!0);
-                            },
-                            onMouseLeave: () => {
-                                O(!1);
-                            },
-                            onClick: () => {
-                                var e;
-                                null == l || l(), null == o || null == (e = o.onClick) || e.call(o);
-                            },
-                            children: [
-                                (0, r.jsx)("div", {
-                                    className: a()(I.iconWrapper, null),
-                                    children:
-                                        "unread" === D
-                                            ? (0, r.jsxs)(r.Fragment, {
-                                                  children: [
-                                                      (0, r.jsx)(p.Ay, {
-                                                          width: c.E[P],
-                                                          height: c.E[P],
-                                                          mask: p.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                          children: L,
-                                                      }),
-                                                      (0, r.jsx)("div", {
-                                                          className: a()(I.unreadDot, I[P]),
-                                                      }),
-                                                  ],
-                                              })
-                                            : L,
-                                }),
-                                R,
-                            ],
+                shouldShow: !b,
+                text: N.intl.string(N.t.HcoRu0),
+                children: (0, i.jsxs)(u.DUT, {
+                    innerRef: s,
+                    className: l()(T.clickableContainer, { [T.withHoverHighlight]: O }),
+                    ...o,
+                    ...a,
+                    onMouseEnter: () => {
+                        g(!0);
+                    },
+                    onMouseLeave: () => {
+                        g(!1);
+                    },
+                    onClick: () => {
+                        t?.(), a?.onClick?.();
+                    },
+                    children: [
+                        (0, i.jsx)("div", {
+                            className: l()(T.iconWrapper, null),
+                            children:
+                                "unread" === j
+                                    ? (0, i.jsxs)(i.Fragment, {
+                                          children: [
+                                              (0, i.jsx)(A.Ay, {
+                                                  width: d.E[L],
+                                                  height: d.E[L],
+                                                  mask: A.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                                  children: R,
+                                              }),
+                                              (0, i.jsx)("div", { className: l()(T.unreadDot, T[L]) }),
+                                          ],
+                                      })
+                                    : R,
                         }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                ),
+                        P,
+                    ],
+                }),
             }),
         ],
     });
 }
-
-function T() {
+function y() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = i.useRef(null),
-        { notificationCenterVariant: n } = (0, A.X8)({
-            location: "NotificationsInboxButton",
-        }),
-        l = (0, o.bG)([m.A], () => m.A.getChannelId()),
-        a = i.useMemo(() => O.BVt.CHANNEL(O.gNP, null != l ? l : void 0), [l]),
-        c = (0, b.HN)();
-    return n === A.U5.SIDEBAR
-        ? (0, r.jsx)(N, {
+        t = r.useRef(null),
+        { notificationCenterVariant: n } = (0, g.X8)({ location: "NotificationsInboxButton" }),
+        a = (0, o.bG)([m.A], () => m.A.getChannelId()),
+        l = r.useMemo(() => C.BVt.CHANNEL(C.gNP, a ?? void 0), [a]),
+        d = (0, f.HN)();
+    return n === g.U5.SIDEBAR
+        ? (0, i.jsx)(b, {
               onClick: () => {
-                  c(), (0, s.pX)(a);
+                  d(), (0, s.pX)(l);
               },
               focusSectionProps: e,
           })
-        : n === A.U5.POPOUT
-          ? (0, r.jsx)(E.A, {
+        : n === g.U5.POPOUT
+          ? (0, i.jsx)(I.A, {
                 targetElementRef: t,
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 spacing: 2,
-                children: (n, i, l) =>
-                    (0, r.jsx)(N, {
+                children: (n, r, a) =>
+                    (0, i.jsx)(b, {
                         ref: t,
-                        selectedOverride: i,
+                        selectedOverride: r,
                         onClick: () => {
-                            c(), n();
+                            d(), n();
                         },
-                        popoutProps: l,
+                        popoutProps: a,
                         focusSectionProps: e,
                     }),
             })

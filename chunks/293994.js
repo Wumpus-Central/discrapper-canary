@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     chip: "chip__3854f",
     "blurple-light": "blurple-light__3854f",

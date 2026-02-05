@@ -1,19 +1,18 @@
-n.d(t, {
-    zH: () => O,
-});
+"use strict";
+n.d(t, { zH: () => T });
 var r = n(575593),
     i = n(517950),
     a = n(793574),
     s = n(810498),
     o = n(652215),
     l = n(985018),
-    c = n(490111),
-    u = n(910026),
+    u = n(490111),
+    c = n(910026),
     d = n(380212),
-    f = n(876318);
+    _ = n(876318);
 n(642827), n(669531);
-var p = n(320306),
-    _ = n(516738),
+var f = n(320306),
+    p = n(516738),
     h = n(604156);
 let m = {
         skuId: i.a.SEASONAL_GIFTING_2025_HEAD_IN_THE_CLOUDS_SKU_ID,
@@ -37,13 +36,9 @@ let m = {
         name: () => l.intl.string(l.t.ZK9IyY),
         a11yLabel: () => l.intl.string(l.t["m/y43M"]),
     },
-    b = {
-        gradient: ["rgba(177, 186, 253, 1)", "rgba(91, 108, 242, 1)", "rgba(21, 18, 99, 1)"],
-    },
-    y = {
-        gradient: ["rgba(74, 87, 192, 1)", "rgba(8, 5, 67, 1)"],
-    },
-    O = {
+    A = { gradient: ["rgba(177, 186, 253, 1)", "rgba(91, 108, 242, 1)", "rgba(21, 18, 99, 1)"] },
+    I = { gradient: ["rgba(74, 87, 192, 1)", "rgba(8, 5, 67, 1)"] },
+    T = {
         rewards: [m, g, E],
         rewardAssetIdMap: (0, s.t8)([m, g, E]),
         chatGiftIcon: {
@@ -58,12 +53,10 @@ let m = {
                         }),
                 getGlowAnimationData: () => Promise.resolve(null),
             },
-            gradientConfig: {
-                gradient: ["rgba(88, 101, 242, 0)", "rgba(88, 101, 242, 1)"],
-            },
+            gradientConfig: { gradient: ["rgba(88, 101, 242, 0)", "rgba(88, 101, 242, 1)"] },
         },
         firstTimeNotice: {
-            getImageUrl: (e, t) => (t ? u.A : c.A),
+            getImageUrl: (e, t) => (t ? c.A : u.A),
             title: () => l.intl.string(l.t.Eeqjcv),
             description: () => l.intl.string(l.t["Wp+i/e"]),
             cta: () => l.intl.string(l.t.RzWDqY),
@@ -77,7 +70,7 @@ let m = {
             analyticsPage: o.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         reminderNotice: {
-            getImageUrl: (e, t) => (t ? u.A : c.A),
+            getImageUrl: (e, t) => (t ? c.A : u.A),
             title: () => l.intl.string(l.t.bLOiLM),
             description: () => l.intl.string(l.t["cE/UX7"]),
             cta: () => l.intl.string(l.t.RzWDqY),
@@ -88,32 +81,27 @@ let m = {
             heading: () => l.intl.string(l.t.OEtqpm),
             subheading: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-                return l.intl.formatToPlainString(l.t["2h5M+X"], {
-                    availableCount: e,
-                });
+                return l.intl.formatToPlainString(l.t["2h5M+X"], { availableCount: e });
             },
-            mobileSubheading: (e) =>
-                l.intl.formatToPlainString(l.t["2h5M+X"], {
-                    availableCount: e,
-                }),
-            gradientConfig: b,
-            getImageUrl: (e, t) => (t ? f.A : d.A),
+            mobileSubheading: (e) => l.intl.formatToPlainString(l.t["2h5M+X"], { availableCount: e }),
+            gradientConfig: A,
+            getImageUrl: (e, t) => (t ? _.A : d.A),
             getBannerImageUrl: () => h.A,
-            getBackgroundImageUrl: () => _.A,
+            getBackgroundImageUrl: () => p.A,
         },
         planSelectionBanner: {
             desktopBannerText: () => l.intl.string(l.t.Abiuci),
             mobileBannerText: () => l.intl.string(l.t.cMiNit),
-            getImageUrl: () => f.A,
-            gradientConfig: () => b,
+            getImageUrl: () => _.A,
+            gradientConfig: () => A,
             getBackgroundImageUrl: () => h.A,
         },
         billingSettingsMarketingBanner: {
-            getImageUrl: (e) => (e ? f.A : d.A),
+            getImageUrl: (e) => (e ? _.A : d.A),
             title: () => l.intl.string(l.t.Eeqjcv),
             body: () => l.intl.string(l.t.IuMZS3),
-            getBackgroundImageUrl: () => p.A,
-            gradientConfig: y,
+            getBackgroundImageUrl: () => f.A,
+            gradientConfig: I,
         },
         giftPurchaseConfirmation: {
             yearGiftText: l.t["0Z0G7m"],

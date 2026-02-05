@@ -186,36 +186,13 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            {
-                scope: "string",
-                begin: /"/,
-                end: /"|$/,
-                contains: [e.BACKSLASH_ESCAPE],
-            },
-            e.COMMENT("REM", "$", {
-                relevance: 10,
-            }),
-            e.COMMENT("'", "$", {
-                relevance: 0,
-            }),
-            {
-                className: "symbol",
-                begin: "^[0-9]+ ",
-                relevance: 10,
-            },
-            {
-                className: "number",
-                begin: "\\b\\d+(\\.\\d+)?([edED]\\d+)?[#!]?",
-                relevance: 0,
-            },
-            {
-                className: "number",
-                begin: "(&[hH][0-9a-fA-F]{1,4})",
-            },
-            {
-                className: "number",
-                begin: "(&[oO][0-7]{1,6})",
-            },
+            { scope: "string", begin: /"/, end: /"|$/, contains: [e.BACKSLASH_ESCAPE] },
+            e.COMMENT("REM", "$", { relevance: 10 }),
+            e.COMMENT("'", "$", { relevance: 0 }),
+            { className: "symbol", begin: "^[0-9]+ ", relevance: 10 },
+            { className: "number", begin: "\\b\\d+(\\.\\d+)?([edED]\\d+)?[#!]?", relevance: 0 },
+            { className: "number", begin: "(&[hH][0-9a-fA-F]{1,4})" },
+            { className: "number", begin: "(&[oO][0-7]{1,6})" },
         ],
     };
 };

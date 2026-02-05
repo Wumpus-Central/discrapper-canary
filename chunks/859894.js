@@ -1,35 +1,27 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
 var l = n(827734),
-    i = n(397927),
+    s = n(397927),
     a = n(267102),
-    s = n(993838),
+    r = n(993838),
     o = n(418208),
-    c = n(47868),
-    u = n(985018);
-
-function d(e) {
-    let { className: t, channel: n, highlight: d } = e,
-        f = (0, a.Us)();
+    d = n(47868),
+    c = n(985018);
+function u(e) {
+    let { className: t, channel: n, highlight: u } = e,
+        h = (0, a.Us)();
     return (0, o.zU)()
         ? null
-        : (0, r.jsx)(c.A, {
-              highlight: null != d && d,
+        : (0, i.jsx)(d.A, {
+              highlight: u ?? !1,
               className: t,
-              icon: (0, r.jsx)(i.qux, {
-                  size: "custom",
-                  color: "currentColor",
-                  height: 20,
-                  width: 20,
-              }),
+              icon: (0, i.jsx)(s.qux, { size: "custom", color: "currentColor", height: 20, width: 20 }),
               color: l.A.unsafe_rawColors.GREEN_360.css,
-              title: u.intl.string(u.t.OYbHfv),
-              description: u.intl.string(u.t.yXwLMQ),
+              title: c.intl.string(c.t.OYbHfv),
+              description: c.intl.string(c.t.yXwLMQ),
               onClick: function () {
-                  (0, s.tQ)(n, f);
+                  (0, r.tQ)(n, h);
               },
           });
 }

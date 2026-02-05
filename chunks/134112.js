@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     x6: "button__201d5",
     PG: "contents__201d5",

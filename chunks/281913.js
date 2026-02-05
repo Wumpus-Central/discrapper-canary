@@ -1,22 +1,17 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(139033),
-    i = n(73153),
-    l = n(272355),
-    a = n(985018);
-class s extends l.A {
+n.d(t, { A: () => o });
+var i = n(139033),
+    r = n(73153),
+    a = n(272355),
+    l = n(985018);
+class s extends a.A {
     _initialize() {
-        i.h.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
+        r.h.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
     _terminate() {
-        i.h.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
+        r.h.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
     handlePoggermodeTemporarilyDisabled() {
-        (0, r.A)({
-            title: a.intl.string(a.t.wDQgnX),
-            subtitle: a.intl.string(a.t.OJklbS),
-        });
+        (0, i.A)({ title: l.intl.string(l.t.wDQgnX), subtitle: l.intl.string(l.t.OJklbS) });
     }
 }
 let o = new s();

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,13 +7,12 @@ var i = n(311907),
     s = n(31432),
     o = n(810396),
     l = n(442228),
-    c = n(192867),
-    u = n(696451),
+    u = n(192867),
+    c = n(696451),
     d = n(351906),
-    f = n(385612),
-    p = n(996988),
-    _ = n(183959);
-
+    _ = n(385612),
+    f = n(996988),
+    p = n(183959);
 function h(e) {
     let {
             user: t,
@@ -23,64 +21,51 @@ function h(e) {
             pendingAvatar: m,
             pendingNickname: g,
             pendingGlobalName: E,
-            pendingBio: b,
-            pendingPronouns: y,
-            pendingLegacyUsernameDisabled: O,
-            pendingBadges: A,
-            pendingDisplayNameStyles: v,
-            pendingPrimaryGuildId: S,
-            isTryItOut: I,
-            hideBioSection: T,
-            shouldOpenBadgeTooltip: C,
+            pendingBio: A,
+            pendingPronouns: I,
+            pendingLegacyUsernameDisabled: T,
+            pendingBadges: y,
+            pendingDisplayNameStyles: S,
+            pendingPrimaryGuildId: v,
+            isTryItOut: C,
+            hideBioSection: b,
+            shouldOpenBadgeTooltip: N,
         } = e,
-        N = (0, i.bG)([u.Ay], () => (null == h ? null : u.Ay.getMember(h.id, t.id))),
-        R = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
-        w = null == n ? void 0 : n.getPreviewBio(b),
-        P = null != y ? y : null == n ? void 0 : n.pronouns,
-        D = (0, f.eh)({
-            pendingNickname: g,
-            pendingGlobalName: E,
-            user: t,
-            guildMember: N,
-        }),
-        x = (0, a.gS)(S),
-        L = () => {
-            if (null != N && null !== m && (null != N.avatar || null != m))
-                return (0, r.jsx)(c.A, {
-                    user: t,
-                    nickname: D,
-                });
+        R = (0, i.bG)([c.Ay], () => (null == h ? null : c.Ay.getMember(h.id, t.id))),
+        O = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
+        D = n?.getPreviewBio(A),
+        L = I ?? n?.pronouns,
+        w = (0, _.eh)({ pendingNickname: g, pendingGlobalName: E, user: t, guildMember: R }),
+        x = (0, a.gS)(v),
+        P = () => {
+            if (null != R && null !== m && (null != R.avatar || null != m))
+                return (0, r.jsx)(u.A, { user: t, nickname: w });
         };
     return (0, r.jsxs)("div", {
-        className: _.rf,
+        className: p.rf,
         inert: !0,
         children: [
             (0, r.jsx)(o.A, {
                 user: t,
-                guildId: null == h ? void 0 : h.id,
-                usernameIcon: L(),
-                nickname: D,
-                pendingDisplayNameStyles: v,
-                pronouns: P,
+                guildId: h?.id,
+                usernameIcon: P(),
+                nickname: w,
+                pendingDisplayNameStyles: S,
+                pronouns: L,
                 primaryGuild: x,
-                isTryItOut: I,
+                isTryItOut: C,
                 tags: (0, r.jsx)(s.A, {
                     displayProfile: n,
-                    themeType: p.d.POPOUT,
-                    pendingLegacyUsernameDisabled: O,
-                    pendingBadges: A,
-                    shouldOpenBadgeTooltip: C,
+                    themeType: f.d.POPOUT,
+                    pendingLegacyUsernameDisabled: T,
+                    pendingBadges: y,
+                    shouldOpenBadgeTooltip: N,
                 }),
             }),
-            !T &&
-                null != w &&
-                "" !== w &&
-                (0, r.jsx)(l.A, {
-                    user: t,
-                    bio: w,
-                    hidePersonalInformation: R,
-                    viewFullBioDisabled: !0,
-                }),
+            !b &&
+                null != D &&
+                "" !== D &&
+                (0, r.jsx)(l.A, { user: t, bio: D, hidePersonalInformation: O, viewFullBioDisabled: !0 }),
         ],
     });
 }

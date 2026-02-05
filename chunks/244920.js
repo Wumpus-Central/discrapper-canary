@@ -1,182 +1,99 @@
-n.d(t, {
-    A: () => F,
-}),
-    n(134528),
-    n(947204);
-var r = n(627968),
-    a = n(64700),
-    i = n(735438),
-    l = n.n(i),
-    s = n(311907),
-    o = n(397927),
-    d = n(235986),
-    c = n(383501),
-    u = n(412780),
-    m = n(967198),
-    p = n(162605),
-    y = n(351906),
-    h = n(287809),
-    g = n(562153),
-    A = n(917592),
-    f = n(828904),
-    v = n(522278),
-    b = n(974175),
-    C = n(731854),
-    E = n(985018),
-    x = n(518959),
-    D = n(473169);
+r.d(t, { A: () => F }), r(134528), r(947204);
+var n = r(627968),
+    a = r(64700),
+    i = r(735438),
+    s = r.n(i),
+    l = r(311907),
+    o = r(397927),
+    d = r(235986),
+    c = r(383501),
+    u = r(412780),
+    m = r(967198),
+    p = r(162605),
+    y = r(351906),
+    h = r(287809),
+    A = r(562153),
+    g = r(917592),
+    f = r(828904),
+    v = r(522278),
+    C = r(974175),
+    x = r(731854),
+    E = r(985018),
+    D = r(518959),
+    b = r(473169);
 class R extends a.PureComponent {
     render() {
-        var e, t;
-        let { transport: n, mediaSessionId: a, hidePersonalInformation: i, hostname: s } = this.props;
-        if (null == n)
-            return (0, r.jsx)(o.y$y, {
-                type: o.y$y.Type.SPINNING_CIRCLE,
-            });
-        let c =
-                ((e = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, n)),
-                (t = t =
-                    {
-                        hostname: s,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(t)).forEach(function (n) {
-                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                      }),
-                e),
-            u = l().map(c, (e, t) => {
-                if ("receiverReports" !== t && (!i || "localAddress" !== t))
-                    return (0, r.jsx)(
-                        b.q7,
-                        {
-                            label: t,
-                            value: e,
-                        },
-                        t,
-                    );
+        let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: a } = this.props;
+        if (null == e) return (0, n.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE });
+        let i = { ...e, hostname: a },
+            l = s().map(i, (e, t) => {
+                if ("receiverReports" !== t && (!r || "localAddress" !== t))
+                    return (0, n.jsx)(C.q7, { label: t, value: e }, t);
             }),
-            p = l().map(c.receiverReports, (e) => {
-                let t = Array.isArray(e.bitrate) ? (null == (r = e.bitrate.at(-1)) ? void 0 : r.value) : e.bitrate,
-                    n = h.default.getUser(e.id);
-                var r,
-                    a = g.Ay.getNickname(m.A.getGuildId(), void 0, n);
+            c = s().map(i.receiverReports, (e) => {
+                let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
+                    r = h.default.getUser(e.id);
+                var n = A.Ay.getNickname(m.A.getGuildId(), void 0, r);
                 return (
-                    null == a && (a = null != n ? n.username : e.id),
-                    {
-                        displayName: a,
-                        bitrate: t / 1e3,
-                        lost: (100 * e.fractionLost) / 256,
-                    }
+                    null == n && (n = null != r ? r.username : e.id),
+                    { displayName: n, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
                 );
             }),
-            y = l().sortBy(p, (e) => e.displayName),
-            A = l().map(y, (e) => {
-                var t, n, a;
-                let i, l;
+            u = s().sortBy(c, (e) => e.displayName),
+            p = s().map(u, (e) => {
+                var t, r, a;
+                let i, s;
                 return (
                     (t = e.displayName),
-                    (n = e.bitrate),
+                    (r = e.bitrate),
                     (a = e.lost),
-                    (i = (0, r.jsxs)(d.A, {
-                        id: "bitrate-".concat(t),
+                    (i = (0, n.jsxs)(d.A, {
+                        id: `bitrate-${t}`,
                         justify: d.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)("span", {
-                                children: "Bitrate:",
-                            }),
-                            (0, r.jsxs)("span", {
-                                children: [n.toFixed(2), " Kbps"],
-                            }),
+                            (0, n.jsx)("span", { children: "Bitrate:" }),
+                            (0, n.jsxs)("span", { children: [r.toFixed(2), " Kbps"] }),
                         ],
                     })),
-                    (l = (0, r.jsxs)(d.A, {
-                        id: "lost-".concat(t),
+                    (s = (0, n.jsxs)(d.A, {
+                        id: `lost-${t}`,
                         justify: d.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)("span", {
-                                children: "Packet Loss:",
-                            }),
-                            (0, r.jsxs)("span", {
-                                children: [a.toFixed(0), "%"],
-                            }),
+                            (0, n.jsx)("span", { children: "Packet Loss:" }),
+                            (0, n.jsxs)("span", { children: [a.toFixed(0), "%"] }),
                         ],
                     })),
-                    (0, r.jsx)(
-                        v.A,
-                        {
-                            label: t,
-                            valueRendered: [i, l],
-                            children: t,
-                        },
-                        t,
-                    )
+                    (0, n.jsx)(v.A, { label: t, valueRendered: [i, s], children: t }, t)
                 );
             });
-        return (0, r.jsxs)(o.BJc, {
-            className: x._8,
+        return (0, n.jsxs)(o.BJc, {
+            className: D._8,
             children: [
-                (0, r.jsx)(o.Heading, {
+                (0, n.jsx)(o.Heading, {
                     variant: "heading-md/medium",
-                    children: E.intl.string(E.t.wU9IN2) + (null != a ? " - " + a : ""),
+                    children: E.intl.string(E.t.wU9IN2) + (null != t ? " - " + t : ""),
                 }),
-                (0, f.C6)(u),
-                0 === A.length
-                    ? null
-                    : (0, r.jsx)(o.cGx, {
-                          className: D.SX,
-                      }),
-                (0, f.C6)(A),
+                (0, f.C6)(l),
+                0 === p.length ? null : (0, n.jsx)(o.cGx, { className: b.SX }),
+                (0, f.C6)(p),
             ],
         });
     }
 }
-let F = s.Ay.connectStores([u.Ay, c.A, y.A, p.A], (e) => {
-    var t;
-    let { context: n, index: r } = e,
-        a = u.Ay.getAllStats(n)[r],
-        i =
-            n === C.x.STREAM
+let F = l.Ay.connectStores([u.Ay, c.A, y.A, p.A], (e) => {
+    let { context: t, index: r } = e,
+        n = u.Ay.getAllStats(t)[r],
+        a =
+            t === x.x.STREAM
                 ? Object.values(p.A.getRTCConnections()).find(
-                      (e) => e.getMediaEngineConnectionId() === a.mediaEngineConnectionId,
+                      (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )
                 : null,
-        l = null != (t = null == i ? void 0 : i.hostname) ? t : "";
+        i = a?.hostname ?? "";
     return {
         hidePersonalInformation: y.A.hidePersonalInformation,
-        transport: null != a ? a.transport : null,
+        transport: null != n ? n.transport : null,
         mediaSessionId: c.A.getMediaSessionId(),
-        hostname: A.A.getShortHostname(l),
+        hostname: g.A.getShortHostname(i),
     };
 })(R);

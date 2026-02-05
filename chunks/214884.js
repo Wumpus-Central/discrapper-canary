@@ -1,407 +1,346 @@
-n.d(t, {
-    A: () => M,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => M });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(827734),
-    c = n(397927),
-    u = n(803306),
-    d = n(793574),
-    p = n(713654),
-    f = n(707592),
-    h = n(698441),
-    A = n(935159),
-    g = n(473019),
-    m = n(435328),
-    b = n(539446),
-    _ = n(508654),
-    E = n(9448),
-    O = n(974930),
-    y = n(976860),
-    I = n(323443),
-    v = n(63995),
-    S = n(69407),
-    C = n(446600),
-    N = n(964175),
-    T = n(342296),
-    j = n(576705),
-    x = n(287809),
-    P = n(182028),
-    w = n(652215),
-    L = n(988794),
-    R = n(985018),
-    D = n(861968);
-
+    d = n(397927),
+    c = n(803306),
+    u = n(793574),
+    A = n(713654),
+    h = n(707592),
+    _ = n(698441),
+    m = n(935159),
+    p = n(473019),
+    g = n(435328),
+    E = n(539446),
+    f = n(508654),
+    I = n(9448),
+    C = n(974930),
+    N = n(976860),
+    T = n(323443),
+    S = n(63995),
+    x = n(69407),
+    v = n(446600),
+    b = n(964175),
+    y = n(342296),
+    L = n(576705),
+    O = n(287809),
+    R = n(182028),
+    P = n(652215),
+    j = n(988794),
+    D = n(985018),
+    w = n(861968);
 function M(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
-        l = (0, b.V)(t.id),
-        d = (0, _.BP)(t.id),
-        T = (0, s.bG)([C.A], () => C.A.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
-        { isStageNoticeHidden: M, isEventNoticeHidden: U } = (0, s.cf)(
-            [g.A],
+        a = (0, E.V)(t.id),
+        u = (0, f.BP)(t.id),
+        y = (0, s.bG)([v.A], () => v.A.getStageInstanceByChannel(a?.id), [a]),
+        { isStageNoticeHidden: M, isEventNoticeHidden: G } = (0, s.cf)(
+            [p.A],
             () => ({
-                isStageNoticeHidden: g.A.isLiveChannelNoticeHidden({
-                    stageId: null == T ? void 0 : T.id,
-                }),
-                isEventNoticeHidden: g.A.isLiveChannelNoticeHidden({
-                    eventId: null == d ? void 0 : d.id,
-                }),
+                isStageNoticeHidden: p.A.isLiveChannelNoticeHidden({ stageId: y?.id }),
+                isEventNoticeHidden: p.A.isLiveChannelNoticeHidden({ eventId: u?.id }),
             }),
-            [T, d],
+            [y, u],
         ),
-        G = null == l ? void 0 : l.id,
-        V = (0, s.yK)([v.A], () => [...new Set(v.A.getMutableParticipants(G, S.ip.SPEAKER).map((e) => e.user))], [G]),
-        B = (0, s.bG)([v.A], () => (null != G ? v.A.getParticipantCount(G, S.ip.AUDIENCE) : 0), [G]),
-        H = (0, s.bG)([j.A], () => j.A.can(w.xBc.CONNECT, l)),
-        F = (0, N.A)(null == l ? void 0 : l.id),
-        Y = null == d ? void 0 : d.creator_id,
-        K = (0, s.bG)([x.default], () => x.default.getUser(Y), [Y]);
-    i.useEffect(() => {
-        null != Y && (0, u.wz)(Y);
+        k = a?.id,
+        V = (0, s.yK)([S.A], () => [...new Set(S.A.getMutableParticipants(k, x.ip.SPEAKER).map((e) => e.user))], [k]),
+        B = (0, s.bG)([S.A], () => (null != k ? S.A.getParticipantCount(k, x.ip.AUDIENCE) : 0), [k]),
+        H = (0, s.bG)([L.A], () => L.A.can(P.xBc.CONNECT, a)),
+        F = (0, b.A)(a?.id),
+        Y = u?.creator_id,
+        W = (0, s.bG)([O.default], () => O.default.getUser(Y), [Y]);
+    r.useEffect(() => {
+        null != Y && (0, c.wz)(Y);
     }, [Y]);
     let {
-        noticeType: z,
-        title: W,
-        location: q,
-        locationIcon: Q,
-        canListenIn: X,
-        buttonText: Z,
-        users: J,
-        overflowUsers: $,
+        noticeType: q,
+        title: z,
+        location: K,
+        locationIcon: $,
+        canListenIn: Q,
+        buttonText: X,
+        users: Z,
+        overflowUsers: J,
         onClose: ee,
-    } = i.useMemo(
+    } = r.useMemo(
         () =>
             (function (e) {
                 let {
                         guildEvent: t,
                         stageInstance: n,
-                        activeChannel: i,
-                        canConnect: l,
-                        myRole: a,
+                        activeChannel: r,
+                        canConnect: a,
+                        myRole: l,
                         eventCreator: s,
                         speakers: o,
-                        listenerCount: u,
-                        isEventNoticeHidden: d,
-                        isStageNoticeHidden: f,
-                        isStudyRoomNotice: g,
+                        listenerCount: c,
+                        isEventNoticeHidden: u,
+                        isStageNoticeHidden: h,
+                        isStudyRoomNotice: p,
                     } = e,
-                    b = null != n && null != i && !f,
-                    _ = null != t ? (0, O.G3)(t) : null;
-                if (g && null != i) {
-                    let e = (0, p.gU)(i);
+                    E = null != n && null != r && !h,
+                    f = null != t ? (0, C.G3)(t) : null;
+                if (p && null != r) {
+                    let e = (0, A.gU)(r);
                     return {
                         noticeType: 3,
-                        title: "\uD83D\uDCDA☕ ".concat(i.name),
-                        location: R.intl.string(R.t.LZA6Na),
+                        title: `📚☕ ${r.name}`,
+                        location: D.intl.string(D.t.LZA6Na),
                         locationIcon:
-                            null != e
-                                ? (0, r.jsx)(e, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: D.NR,
-                                  })
-                                : null,
-                        canListenIn: l,
-                        buttonText: R.intl.string(R.t.wBoE6L),
+                            null != e ? (0, i.jsx)(e, { size: "xs", color: "currentColor", className: w.NR }) : null,
+                        canListenIn: a,
+                        buttonText: D.intl.string(D.t.wBoE6L),
                         users: [],
                         overflowUsers: null,
                     };
                 }
-                if (null == t || d) {
-                    if (b) {
-                        let e = R.intl.string(R.t.ZYO5OK);
+                if (null == t || u) {
+                    if (E) {
+                        let e = D.intl.string(D.t.ZYO5OK);
                         return (
-                            (null == a ? void 0 : a.speaker)
-                                ? (e = R.intl.string(R.t["/cnSFc"]))
-                                : null != a && (e = R.intl.string(R.t.btSGOj)),
+                            l?.speaker
+                                ? (e = D.intl.string(D.t["/cnSFc"]))
+                                : null != l && (e = D.intl.string(D.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
-                                location: i.name,
-                                locationIcon: (0, r.jsx)(c.qux, {
+                                location: r.name,
+                                locationIcon: (0, i.jsx)(d.qux, {
                                     size: "custom",
                                     color: "currentColor",
                                     width: 16,
                                     height: 16,
-                                    className: D.NR,
+                                    className: w.NR,
                                 }),
-                                canListenIn: l,
+                                canListenIn: a,
                                 buttonText: e,
-                                onClose: () =>
-                                    (0, A.iF)({
-                                        stageId: null == n ? void 0 : n.id,
-                                    }),
+                                onClose: () => (0, m.iF)({ stageId: n?.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
-                                    u < 1
+                                    c < 1
                                         ? null
-                                        : (0, r.jsxs)("div", {
-                                              className: D.Io,
+                                        : (0, i.jsxs)("div", {
+                                              className: w.Io,
                                               children: [
-                                                  (0, r.jsx)(c.LoC, {
+                                                  (0, i.jsx)(d.LoC, {
                                                       size: "custom",
                                                       color: "currentColor",
                                                       width: 12,
                                                       height: 12,
-                                                      className: D.nW,
+                                                      className: w.nW,
                                                   }),
-                                                  (0, r.jsx)(c.Text, {
+                                                  (0, i.jsx)(d.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "text-default",
-                                                      className: D.W8,
-                                                      children: u,
+                                                      className: w.W8,
+                                                      children: c,
                                                   }),
                                               ],
                                           }),
                             }
                         );
                     }
-                } else if (t.entity_type === L.Ps.STAGE_INSTANCE && b) {
-                    let e = R.intl.string(R.t.ZYO5OK);
+                } else if (t.entity_type === j.Ps.STAGE_INSTANCE && E) {
+                    let e = D.intl.string(D.t.ZYO5OK);
                     return (
-                        (null == a ? void 0 : a.speaker)
-                            ? (e = R.intl.string(R.t["/cnSFc"]))
-                            : null != a && (e = R.intl.string(R.t.btSGOj)),
+                        l?.speaker ? (e = D.intl.string(D.t["/cnSFc"])) : null != l && (e = D.intl.string(D.t.btSGOj)),
                         {
                             noticeType: 0,
                             title: n.topic,
-                            location: i.name,
-                            locationIcon: (0, r.jsx)(c.qux, {
+                            location: r.name,
+                            locationIcon: (0, i.jsx)(d.qux, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 16,
                                 height: 16,
-                                className: D.NR,
+                                className: w.NR,
                             }),
-                            canListenIn: l,
+                            canListenIn: a,
                             buttonText: e,
-                            onClose: () =>
-                                (0, A.iF)({
-                                    stageId: null == n ? void 0 : n.id,
-                                }),
+                            onClose: () => (0, m.iF)({ stageId: n?.id }),
                             users: o.length > 5 ? o.slice(0, 5) : o,
                             overflowUsers:
-                                u < 1
+                                c < 1
                                     ? null
-                                    : (0, r.jsxs)("div", {
-                                          className: D.Io,
+                                    : (0, i.jsxs)("div", {
+                                          className: w.Io,
                                           children: [
-                                              (0, r.jsx)(c.LoC, {
+                                              (0, i.jsx)(d.LoC, {
                                                   size: "custom",
                                                   color: "currentColor",
                                                   width: 12,
                                                   height: 12,
-                                                  className: D.nW,
+                                                  className: w.nW,
                                               }),
-                                              (0, r.jsx)(c.Text, {
+                                              (0, i.jsx)(d.Text, {
                                                   variant: "text-xs/medium",
                                                   color: "text-default",
-                                                  className: D.W8,
-                                                  children: u,
+                                                  className: w.W8,
+                                                  children: c,
                                               }),
                                           ],
                                       }),
                         }
                     );
-                } else if (t.entity_type === L.Ps.EXTERNAL) {
-                    let e = (0, E.oF)(t);
-                    if (null == e)
-                        return {
-                            noticeType: null,
-                        };
-                    let n = h.Ay.getUserCount(t.id, _);
+                } else if (t.entity_type === j.Ps.EXTERNAL) {
+                    let e = (0, I.oF)(t);
+                    if (null == e) return { noticeType: null };
+                    let n = _.Ay.getUserCount(t.id, f);
                     return {
                         noticeType: 1,
                         title: t.name,
-                        location: (0, m.l)(e, !0),
-                        locationIcon: (0, r.jsx)(c.BT6, {
+                        location: (0, g.l)(e, !0),
+                        locationIcon: (0, i.jsx)(d.BT6, {
                             size: "custom",
                             color: "currentColor",
                             width: 16,
                             height: 16,
-                            className: D.NR,
+                            className: w.NR,
                         }),
                         canListenIn: !1,
-                        buttonText: R.intl.string(R.t.iW6Xuo),
-                        onClose: () =>
-                            (0, A.iF)({
-                                eventId: null == t ? void 0 : t.id,
-                            }),
+                        buttonText: D.intl.string(D.t.iW6Xuo),
+                        onClose: () => (0, m.iF)({ eventId: t?.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
                                 ? null
-                                : (0, r.jsxs)("div", {
-                                      className: D.Io,
+                                : (0, i.jsxs)("div", {
+                                      className: w.Io,
                                       children: [
-                                          (0, r.jsx)(c.Gg5, {
+                                          (0, i.jsx)(d.Gg5, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: D.nW,
+                                              className: w.nW,
                                           }),
-                                          (0, r.jsx)(c.Text, {
+                                          (0, i.jsx)(d.Text, {
                                               variant: "text-xs/medium",
                                               color: "text-default",
-                                              className: D.W8,
+                                              className: w.W8,
                                               children: n,
                                           }),
                                       ],
                                   }),
                     };
-                } else if (t.entity_type === L.Ps.VOICE && null != i) {
-                    let e = (0, p.gU)(i),
-                        n = h.Ay.getUserCount(t.id, _);
+                } else if (t.entity_type === j.Ps.VOICE && null != r) {
+                    let e = (0, A.gU)(r),
+                        n = _.Ay.getUserCount(t.id, f);
                     return {
                         noticeType: 2,
                         title: t.name,
-                        location: i.name,
+                        location: r.name,
                         locationIcon:
-                            null != e
-                                ? (0, r.jsx)(e, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: D.NR,
-                                  })
-                                : null,
-                        canListenIn: l,
-                        buttonText: R.intl.string(R.t.nxUtoQ),
-                        onClose: () =>
-                            (0, A.iF)({
-                                eventId: null == t ? void 0 : t.id,
-                            }),
+                            null != e ? (0, i.jsx)(e, { size: "xs", color: "currentColor", className: w.NR }) : null,
+                        canListenIn: a,
+                        buttonText: D.intl.string(D.t.nxUtoQ),
+                        onClose: () => (0, m.iF)({ eventId: t?.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
                                 ? null
-                                : (0, r.jsxs)("div", {
-                                      className: D.Io,
+                                : (0, i.jsxs)("div", {
+                                      className: w.Io,
                                       children: [
-                                          (0, r.jsx)(c.Gg5, {
+                                          (0, i.jsx)(d.Gg5, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: D.nW,
+                                              className: w.nW,
                                           }),
-                                          (0, r.jsx)(c.Text, {
+                                          (0, i.jsx)(d.Text, {
                                               variant: "text-xs/medium",
                                               color: "text-default",
-                                              className: D.W8,
+                                              className: w.W8,
                                               children: n,
                                           }),
                                       ],
                                   }),
                     };
                 }
-                return {
-                    noticeType: null,
-                };
+                return { noticeType: null };
             })({
-                guildEvent: d,
-                stageInstance: T,
-                activeChannel: l,
+                guildEvent: u,
+                stageInstance: y,
+                activeChannel: a,
                 canConnect: H,
                 myRole: F,
-                eventCreator: K,
+                eventCreator: W,
                 speakers: V,
                 listenerCount: B,
-                isEventNoticeHidden: U,
+                isEventNoticeHidden: G,
                 isStageNoticeHidden: M,
                 isStudyRoomNotice: n,
             }),
-        [d, T, l, H, F, K, V, B, U, M, n],
+        [u, y, a, H, F, W, V, B, G, M, n],
     );
-    return null == z
+    return null == q
         ? null
-        : (0, r.jsxs)("div", {
-              className: D.kL,
+        : (0, i.jsxs)("div", {
+              className: w.kL,
               children: [
                   null != ee
-                      ? (0, r.jsx)(c.DUT, {
+                      ? (0, i.jsx)(d.DUT, {
                             onClick: ee,
-                            className: D.VN,
-                            "aria-label": R.intl.string(R.t.WAI6xu),
-                            children: (0, r.jsx)(c.PGe, {
-                                size: "md",
-                                color: "currentColor",
-                                className: D.ut,
-                            }),
+                            className: w.VN,
+                            "aria-label": D.intl.string(D.t.WAI6xu),
+                            children: (0, i.jsx)(d.PGe, { size: "md", color: "currentColor", className: w.ut }),
                         })
                       : null,
-                  (0, r.jsxs)("div", {
-                      className: D.wx,
+                  (0, i.jsxs)("div", {
+                      className: w.wx,
                       children: [
-                          (0, r.jsx)(P.A, {
-                              color: o.A.unsafe_rawColors.GREEN_230.css,
-                              width: 16,
-                              height: 16,
-                          }),
-                          (0, r.jsx)(c.Text, {
+                          (0, i.jsx)(R.A, { color: o.A.unsafe_rawColors.GREEN_230.css, width: 16, height: 16 }),
+                          (0, i.jsx)(d.Text, {
                               variant: "text-xs/semibold",
                               color: "text-feedback-positive",
-                              children: R.intl.string(R.t.dI3q4h),
+                              children: D.intl.string(D.t.dI3q4h),
                           }),
                       ],
                   }),
-                  (J.length > 0 || null != $) &&
-                      (0, r.jsxs)("div", {
-                          className: D.lF,
-                          children: [
-                              J.map((e) =>
-                                  (0, r.jsx)(
-                                      k,
-                                      {
-                                          user: e,
-                                          guildId: t.id,
-                                      },
-                                      e.id,
-                                  ),
-                              ),
-                              $,
-                          ],
+                  (Z.length > 0 || null != J) &&
+                      (0, i.jsxs)("div", {
+                          className: w.lF,
+                          children: [Z.map((e) => (0, i.jsx)(U, { user: e, guildId: t.id }, e.id)), J],
                       }),
-                  (0, r.jsx)(c.Text, {
+                  (0, i.jsx)(d.Text, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      className: a()(D.DD, D.VD),
-                      children: W,
+                      className: l()(w.DD, w.VD),
+                      children: z,
                   }),
-                  (0, r.jsxs)("div", {
-                      className: D.j5,
+                  (0, i.jsxs)("div", {
+                      className: w.j5,
                       children: [
-                          Q,
-                          (0, r.jsx)(c.Text, {
+                          $,
+                          (0, i.jsx)(d.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              className: D.C5,
-                              children: q,
+                              className: w.C5,
+                              children: K,
                           }),
                       ],
                   }),
-                  X || 1 === z
-                      ? (0, r.jsx)("div", {
+                  Q || 1 === q
+                      ? (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: D.x6,
-                            children: (0, r.jsx)(c.Button, {
+                            className: w.x6,
+                            children: (0, i.jsx)(d.Button, {
                                 variant: "active",
                                 size: "sm",
-                                text: Z,
+                                text: X,
                                 onClick: () => {
-                                    if (X)
-                                        null != l &&
-                                            null != l.getGuildId() &&
-                                            ((0, I.av)(l), (0, y.uh)(l.getGuildId(), l.id));
+                                    if (Q)
+                                        null != a &&
+                                            null != a.getGuildId() &&
+                                            ((0, T.av)(a), (0, N.uh)(a.getGuildId(), a.id));
                                     else {
-                                        if (null == d) return;
-                                        (0, f.uR)({
-                                            eventId: d.id,
-                                        });
+                                        if (null == u) return;
+                                        (0, h.uR)({ eventId: u.id });
                                     }
                                 },
                                 fullWidth: !0,
@@ -411,67 +350,23 @@ function M(e) {
               ],
           });
 }
-
-function k(e) {
+function U(e) {
     let { user: t, guildId: n } = e,
-        l = i.useRef(null);
-    return (0, r.jsx)(T.A, {
-        targetElementRef: l,
+        a = r.useRef(null);
+    return (0, i.jsx)(y.A, {
+        targetElementRef: a,
         user: t,
         guildId: n,
-        newAnalyticsLocations: [d.A.AVATAR],
+        newAnalyticsLocations: [u.A.AVATAR],
         clickTrap: !0,
-        children: (e) => {
-            var i, a;
-            return (0, r.jsx)(
-                c.euF,
-                ((i = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (a = a =
-                    {
-                        ref: l,
-                        src: t.getAvatarURL(n, 24),
-                        "aria-label": t.username,
-                        size: c._3J.SIZE_24,
-                        className: D.my,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
-                      }),
-                i),
-            );
-        },
+        children: (e) =>
+            (0, i.jsx)(d.euF, {
+                ...e,
+                ref: a,
+                src: t.getAvatarURL(n, 24),
+                "aria-label": t.username,
+                size: d._3J.SIZE_24,
+                className: w.my,
+            }),
     });
 }

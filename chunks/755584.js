@@ -1,109 +1,69 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(65821);
+"use strict";
+n.d(t, { A: () => f });
 var r = n(110259),
     i = n(933681),
     a = n(73153),
     s = n(568185),
     o = n(543465),
     l = n(477427),
-    c = n(499785),
-    u = n(832712),
+    u = n(499785),
+    c = n(832712),
     d = n(652215),
-    f = n(355097);
-let p = {
+    _ = n(355097);
+let f = {
     createChannel(e) {
         let {
             guildId: t,
             type: n,
-            name: p,
-            permissionOverwrites: _ = [],
+            name: f,
+            permissionOverwrites: p = [],
             bitrate: h,
             userLimit: m,
             parentId: g,
             skuId: E,
-            branchId: b,
+            branchId: A,
         } = e;
-        a.h.dispatch({
-            type: "CREATE_CHANNEL_MODAL_SUBMIT",
-            guildId: t,
-            channelType: n,
-        });
-        let y = {
-            type: n,
-            name: p,
-            permission_overwrites: _,
-        };
+        a.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: n });
+        let I = { type: n, name: f, permission_overwrites: p };
         if (
-            (null != h && h !== d.gp3 && (y.bitrate = h),
-            null != m && m > 0 && (y.user_limit = m),
-            null != g && (y.parent_id = g),
+            (null != h && h !== d.gp3 && (I.bitrate = h),
+            null != m && m > 0 && (I.user_limit = m),
+            null != g && (I.parent_id = g),
             n === d.rbe.GUILD_STORE)
         ) {
             if (null == E) throw Error("Unexpected missing SKU");
-            (y.sku_id = E), (y.branch_id = b);
+            (I.sku_id = E), (I.branch_id = A);
         }
-        return c.A.post({
+        return u.A.post({
             url: d.Rsh.GUILD_CHANNELS(t),
-            body: y,
+            body: I,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.CHANNEL_CREATE,
-                properties: (e) => {
-                    var t, n;
-                    return (0, i.e0)({
-                        is_private: _.length > 0,
-                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
-                        channel_type: null == e || null == (n = e.body) ? void 0 : n.type,
-                    });
-                },
+                properties: (e) =>
+                    (0, i.e0)({ is_private: p.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
             rejectWithError: !1,
         }).then(
             (e) => (
                 o.Ay.isOptInEnabled(t) &&
-                    u.A.updateChannelOverrideSettings(
-                        t,
-                        e.body.id,
-                        {
-                            flags: f.vv.OPT_IN_ENABLED,
-                        },
-                        l.fd.OptedIn,
-                    ),
+                    c.A.updateChannelOverrideSettings(t, e.body.id, { flags: _.vv.OPT_IN_ENABLED }, l.fd.OptedIn),
                 s.A.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {
-                throw (
-                    (a.h.dispatch({
-                        type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
-                        errors: e.body,
-                    }),
-                    e)
-                );
+                throw (a.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
             },
         );
     },
     createRoleSubscriptionTemplateChannel: (e, t, n, a) =>
-        c.A.post({
+        u.A.post({
             url: d.Rsh.GUILD_CHANNELS(e),
-            body: {
-                name: t,
-                type: n,
-                topic: a,
-            },
+            body: { name: t, type: n, topic: a },
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.CHANNEL_CREATE,
-                properties: (e) => {
-                    var t, n;
-                    return (0, i.e0)({
-                        is_private: !0,
-                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
-                        channel_type: null == e || null == (n = e.body) ? void 0 : n.type,
-                    });
-                },
+                properties: (e) => (0, i.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
             rejectWithError: !1,
         }),

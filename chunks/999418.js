@@ -1,27 +1,14 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(723727),
     i = n(116657);
 let a = {
-    33434: {
-        name: "ExposureTime",
-        description: i.A.ExposureTime,
-    },
-    33437: {
-        name: "FNumber",
-        description: i.A.FNumber,
-    },
-    34850: {
-        name: "ExposureProgram",
-        description: i.A.ExposureProgram,
-    },
+    33434: { name: "ExposureTime", description: i.A.ExposureTime },
+    33437: { name: "FNumber", description: i.A.FNumber },
+    34850: { name: "ExposureProgram", description: i.A.ExposureProgram },
     34852: "SpectralSensitivity",
     34855: "ISOSpeedRatings",
-    34856: {
-        name: "OECF",
-        description: () => "[Raw OECF table data]",
-    },
+    34856: { name: "OECF", description: () => "[Raw OECF table data]" },
     34858: "TimeZoneOffset",
     34859: "SelfTimerMode",
     34864: {
@@ -42,47 +29,23 @@ let a = {
     34867: "ISOSpeed",
     34868: "ISOSpeedLatitudeyyy",
     34869: "ISOSpeedLatitudezzz",
-    36864: {
-        name: "ExifVersion",
-        description: (e) => (0, r.Jn)(e),
-    },
+    36864: { name: "ExifVersion", description: (e) => (0, r.Jn)(e) },
     36867: "DateTimeOriginal",
     36868: "DateTimeDigitized",
     36873: "GooglePlusUploadCode",
     36880: "OffsetTime",
     36881: "OffsetTimeOriginal",
     36882: "OffsetTimeDigitized",
-    37121: {
-        name: "ComponentsConfiguration",
-        description: i.A.ComponentsConfiguration,
-    },
+    37121: { name: "ComponentsConfiguration", description: i.A.ComponentsConfiguration },
     37122: "CompressedBitsPerPixel",
-    37377: {
-        name: "ShutterSpeedValue",
-        description: i.A.ShutterSpeedValue,
-    },
-    37378: {
-        name: "ApertureValue",
-        description: i.A.ApertureValue,
-    },
+    37377: { name: "ShutterSpeedValue", description: i.A.ShutterSpeedValue },
+    37378: { name: "ApertureValue", description: i.A.ApertureValue },
     37379: "BrightnessValue",
     37380: "ExposureBiasValue",
-    37381: {
-        name: "MaxApertureValue",
-        description: (e) => Math.pow(Math.sqrt(2), e[0] / e[1]).toFixed(2),
-    },
-    37382: {
-        name: "SubjectDistance",
-        description: (e) => e[0] / e[1] + " m",
-    },
-    37383: {
-        name: "MeteringMode",
-        description: i.A.MeteringMode,
-    },
-    37384: {
-        name: "LightSource",
-        description: i.A.LightSource,
-    },
+    37381: { name: "MaxApertureValue", description: (e) => Math.pow(Math.sqrt(2), e[0] / e[1]).toFixed(2) },
+    37382: { name: "SubjectDistance", description: (e) => e[0] / e[1] + " m" },
+    37383: { name: "MeteringMode", description: i.A.MeteringMode },
+    37384: { name: "LightSource", description: i.A.LightSource },
     37385: {
         name: "Flash",
         description: (e) => {
@@ -113,21 +76,12 @@ let a = {
             return "Unknown";
         },
     },
-    37386: {
-        name: "FocalLength",
-        description: i.A.FocalLength,
-    },
+    37386: { name: "FocalLength", description: i.A.FocalLength },
     37393: "ImageNumber",
     37394: {
         name: "SecurityClassification",
         description: (e) =>
-            ({
-                C: "Confidential",
-                R: "Restricted",
-                S: "Secret",
-                T: "Top Secret",
-                U: "Unclassified",
-            })[e] || "Unknown",
+            ({ C: "Confidential", R: "Restricted", S: "Secret", T: "Top Secret", U: "Unclassified" })[e] || "Unknown",
     },
     37395: "ImageHistory",
     37396: {
@@ -141,69 +95,30 @@ let a = {
                     ? `Rectangle; X: ${e[0]}, Y: ${e[1]}, width: ${e[2]}, height: ${e[3]}`
                     : "Unknown",
     },
-    37500: {
-        name: "MakerNote",
-        description: () => "[Raw maker note data]",
-    },
-    37510: {
-        name: "UserComment",
-        description: r.Cn,
-    },
+    37500: { name: "MakerNote", description: () => "[Raw maker note data]" },
+    37510: { name: "UserComment", description: r.Cn },
     37520: "SubSecTime",
     37521: "SubSecTimeOriginal",
     37522: "SubSecTimeDigitized",
     37724: "ImageSourceData",
-    37888: {
-        name: "AmbientTemperature",
-        description: (e) => e[0] / e[1] + " \xb0C",
-    },
-    37889: {
-        name: "Humidity",
-        description: (e) => e[0] / e[1] + " %",
-    },
-    37890: {
-        name: "Pressure",
-        description: (e) => e[0] / e[1] + " hPa",
-    },
-    37891: {
-        name: "WaterDepth",
-        description: (e) => e[0] / e[1] + " m",
-    },
-    37892: {
-        name: "Acceleration",
-        description: (e) => e[0] / e[1] + " mGal",
-    },
-    37893: {
-        name: "CameraElevationAngle",
-        description: (e) => e[0] / e[1] + " \xb0",
-    },
-    40960: {
-        name: "FlashpixVersion",
-        description: (e) => e.map((e) => String.fromCharCode(e)).join(""),
-    },
-    40961: {
-        name: "ColorSpace",
-        description: i.A.ColorSpace,
-    },
+    37888: { name: "AmbientTemperature", description: (e) => e[0] / e[1] + " \xb0C" },
+    37889: { name: "Humidity", description: (e) => e[0] / e[1] + " %" },
+    37890: { name: "Pressure", description: (e) => e[0] / e[1] + " hPa" },
+    37891: { name: "WaterDepth", description: (e) => e[0] / e[1] + " m" },
+    37892: { name: "Acceleration", description: (e) => e[0] / e[1] + " mGal" },
+    37893: { name: "CameraElevationAngle", description: (e) => e[0] / e[1] + " \xb0" },
+    40960: { name: "FlashpixVersion", description: (e) => e.map((e) => String.fromCharCode(e)).join("") },
+    40961: { name: "ColorSpace", description: i.A.ColorSpace },
     40962: "PixelXDimension",
     40963: "PixelYDimension",
     40964: "RelatedSoundFile",
     40965: "Interoperability IFD Pointer",
     41483: "FlashEnergy",
-    41484: {
-        name: "SpatialFrequencyResponse",
-        description: () => "[Raw SFR table data]",
-    },
+    41484: { name: "SpatialFrequencyResponse", description: () => "[Raw SFR table data]" },
     41486: "FocalPlaneXResolution",
     41487: "FocalPlaneYResolution",
-    41488: {
-        name: "FocalPlaneResolutionUnit",
-        description: i.A.FocalPlaneResolutionUnit,
-    },
-    41492: {
-        name: "SubjectLocation",
-        description: ([e, t]) => `X: ${e}, Y: ${t}`,
-    },
+    41488: { name: "FocalPlaneResolutionUnit", description: i.A.FocalPlaneResolutionUnit },
+    41492: { name: "SubjectLocation", description: ([e, t]) => `X: ${e}, Y: ${t}` },
     41493: "ExposureIndex",
     41495: {
         name: "SensingMethod",
@@ -218,42 +133,18 @@ let a = {
             return "Unknown";
         },
     },
-    41728: {
-        name: "FileSource",
-        description: (e) => (3 === e ? "DSC" : "Unknown"),
-    },
-    41729: {
-        name: "SceneType",
-        description: (e) => (1 === e ? "A directly photographed image" : "Unknown"),
-    },
-    41730: {
-        name: "CFAPattern",
-        description: () => "[Raw CFA pattern table data]",
-    },
-    41985: {
-        name: "CustomRendered",
-        description: i.A.CustomRendered,
-    },
-    41986: {
-        name: "ExposureMode",
-        description: i.A.ExposureMode,
-    },
-    41987: {
-        name: "WhiteBalance",
-        description: i.A.WhiteBalance,
-    },
+    41728: { name: "FileSource", description: (e) => (3 === e ? "DSC" : "Unknown") },
+    41729: { name: "SceneType", description: (e) => (1 === e ? "A directly photographed image" : "Unknown") },
+    41730: { name: "CFAPattern", description: () => "[Raw CFA pattern table data]" },
+    41985: { name: "CustomRendered", description: i.A.CustomRendered },
+    41986: { name: "ExposureMode", description: i.A.ExposureMode },
+    41987: { name: "WhiteBalance", description: i.A.WhiteBalance },
     41988: {
         name: "DigitalZoomRatio",
         description: (e) => (0 === e[0] ? "Digital zoom was not used" : "" + e[0] / e[1]),
     },
-    41989: {
-        name: "FocalLengthIn35mmFilm",
-        description: i.A.FocalLengthIn35mmFilm,
-    },
-    41990: {
-        name: "SceneCaptureType",
-        description: i.A.SceneCaptureType,
-    },
+    41989: { name: "FocalLengthIn35mmFilm", description: i.A.FocalLengthIn35mmFilm },
+    41990: { name: "SceneCaptureType", description: i.A.SceneCaptureType },
     41991: {
         name: "GainControl",
         description: (e) => {
@@ -265,22 +156,10 @@ let a = {
             return "Unknown";
         },
     },
-    41992: {
-        name: "Contrast",
-        description: i.A.Contrast,
-    },
-    41993: {
-        name: "Saturation",
-        description: i.A.Saturation,
-    },
-    41994: {
-        name: "Sharpness",
-        description: i.A.Sharpness,
-    },
-    41995: {
-        name: "DeviceSettingDescription",
-        description: () => "[Raw device settings table data]",
-    },
+    41992: { name: "Contrast", description: i.A.Contrast },
+    41993: { name: "Saturation", description: i.A.Saturation },
+    41994: { name: "Sharpness", description: i.A.Sharpness },
+    41995: { name: "DeviceSettingDescription", description: () => "[Raw device settings table data]" },
     41996: {
         name: "SubjectDistanceRange",
         description: (e) => (1 === e ? "Macro" : 2 === e ? "Close view" : 3 === e ? "Distant view" : "Unknown"),

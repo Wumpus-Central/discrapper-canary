@@ -1,3 +1,2 @@
-e.exports = {
-    I: "labelValueRow__2e5ea",
-};
+"use strict";
+e.exports = { I: "labelValueRow__2e5ea" };

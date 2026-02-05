@@ -1,78 +1,46 @@
-n.d(t, {
-    A: () => N,
-    x: () => v,
-}),
-    n(747238);
-var r,
-    i = n(735438),
-    l = n.n(i),
+n.d(t, { A: () => x, x: () => N });
+var i = n(735438),
+    r = n.n(i),
     a = n(311907),
-    s = n(73153),
-    o = n(827343),
-    c = n(617617),
-    u = n(430452),
-    d = n(723702),
-    p = n(792205),
-    f = n(731854);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let A = {
-        ignoredDevices: {},
-    },
-    g = A,
+    l = n(73153),
+    s = n(827343),
+    o = n(617617),
+    d = n(430452),
+    c = n(723702),
+    u = n(792205),
+    A = n(731854);
+let h = { ignoredDevices: {} },
+    _ = h,
     m = !1,
-    b = {},
-    _ = {},
+    p = {},
+    g = {},
     E = {},
-    O = {
-        id: null,
-        justChanged: !1,
-    },
-    y = {
-        id: null,
-        justChanged: !1,
-    },
-    I = /\(([^)]+)\)/;
-
-function v(e) {
-    if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(I);
+    f = { id: null, justChanged: !1 },
+    I = { id: null, justChanged: !1 },
+    C = /\(([^)]+)\)/;
+function N(e) {
+    if ((0, c.getPlatform)() === c.PlatformTypes.WINDOWS) {
+        let t = e.name.match(C);
         if (null != t) return t[1];
     }
     return e.name;
 }
-
-function S(e, t, n) {
+function T(e, t, n) {
     return null == e || e.displayName !== t
-        ? {
-              displayName: t,
-              type: n,
-          }
-        : (e.type === p.E.INPUT && n === p.E.OUTPUT) || (e.type === p.E.OUTPUT && n === p.E.INPUT)
-          ? {
-                displayName: t,
-                type: p.E.INPUT_AND_OUTPUT,
-            }
+        ? { displayName: t, type: n }
+        : (e.type === u.E.INPUT && n === u.E.OUTPUT) || (e.type === u.E.OUTPUT && n === u.E.INPUT)
+          ? { displayName: t, type: u.E.INPUT_AND_OUTPUT }
           : e;
 }
-class C extends (r = a.Ay.DeviceSettingsStore) {
+class S extends a.Ay.DeviceSettingsStore {
+    static displayName = "ConnectedDeviceStore";
+    static persistKey = "ConnectedDeviceStore";
+    static migrations = [(e) => (null == e.ignoredDevices ? { ...e, ignoredDevices: {} } : e)];
     initialize(e) {
-        this.waitFor(u.A, c.A), (g = null != e ? e : A);
+        this.waitFor(d.A, o.A), (_ = e ?? h);
     }
     getUserAgnosticState() {
-        return g;
+        return _;
     }
     get initialized() {
         return m;
@@ -81,130 +49,74 @@ class C extends (r = a.Ay.DeviceSettingsStore) {
         return E;
     }
     get inputDevices() {
-        return b;
+        return p;
     }
     get lastInputSystemDevice() {
-        return O;
+        return f;
     }
     get outputDevices() {
-        return _;
+        return g;
     }
     get lastOutputSystemDevice() {
-        return y;
+        return I;
     }
 }
-h(C, "displayName", "ConnectedDeviceStore"),
-    h(C, "persistKey", "ConnectedDeviceStore"),
-    h(C, "migrations", [
-        (e) => {
-            if (null == e.ignoredDevices) {
-                var t, n;
-                return (
-                    (t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    h(e, t, n[t]);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (n = n =
-                        {
-                            ignoredDevices: {},
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t
-                );
-            }
-            return e;
-        },
-    ]);
-let N = new C(s.h, {
+let x = new S(l.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
-            r = {};
-        (O.justChanged = !1),
+            i = {};
+        (f.justChanged = !1),
             t.forEach((e) => {
-                if (((r[v(e)] = e.id), e.id === f.dx)) {
-                    var t;
-                    let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== O.id && (O.justChanged = !0), (O.id = n);
+                if (((i[N(e)] = e.id), e.id === A.dx)) {
+                    let t = e.originalId ?? e.originalName;
+                    t !== f.id && (f.justChanged = !0), (f.id = t);
                 }
             });
-        let i = {};
+        let a = {};
         if (
-            ((y.justChanged = !1),
+            ((I.justChanged = !1),
             n.forEach((e) => {
-                if (((i[v(e)] = e.id), e.id === f.dx)) {
-                    var t;
-                    let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== y.id && (y.justChanged = !0), (y.id = n);
+                if (((a[N(e)] = e.id), e.id === A.dx)) {
+                    let t = e.originalId ?? e.originalName;
+                    t !== I.id && (I.justChanged = !0), (I.id = t);
                 }
             }),
             !m)
         ) {
-            (b = r), (_ = i), (m = !0);
+            (p = i), (g = a), (m = !0);
             return;
         }
-        let a = Object.keys(b),
-            s = Object.keys(r),
-            o = Object.keys(_),
-            c = Object.keys(i),
-            u = l().difference(a, s),
-            d = l().difference(o, c);
+        let l = Object.keys(p),
+            s = Object.keys(i),
+            o = Object.keys(g),
+            d = Object.keys(a),
+            c = r().difference(l, s),
+            h = r().difference(o, d);
         return (
-            u.length > 0 || d.length > 0
+            c.length > 0 || h.length > 0
                 ? (E = {})
-                : (l()
-                      .difference(s, a)
+                : (r()
+                      .difference(s, l)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.E.INPUT);
+                          E[e] = T(E[e], e, u.E.INPUT);
                       }),
-                  l()
-                      .difference(c, o)
+                  r()
+                      .difference(d, o)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.E.OUTPUT);
+                          E[e] = T(E[e], e, u.E.OUTPUT);
                       })),
-            !(l().isEqual(a, s) && l().isEqual(o, c)) && ((b = r), (_ = i), !0)
+            !(r().isEqual(l, s) && r().isEqual(o, d)) && ((p = i), (g = a), !0)
         );
     },
     CONNECTED_DEVICE_SWITCH: function (e) {
-        let { displayName: t, connectedDevicePreference: n, location: r } = e;
-        if (n === p.f.INPUT || n === p.f.INPUT_AND_OUTPUT) {
-            let e = b[t];
-            null != e &&
-                s.h.wait(() =>
-                    o.A.setInputDevice(e, {
-                        location: r,
-                    }),
-                );
+        let { displayName: t, connectedDevicePreference: n, location: i } = e;
+        if (n === u.f.INPUT || n === u.f.INPUT_AND_OUTPUT) {
+            let e = p[t];
+            null != e && l.h.wait(() => s.A.setInputDevice(e, { location: i }));
         }
-        if (n === p.f.OUTPUT || n === p.f.INPUT_AND_OUTPUT) {
-            let e = _[t];
-            s.h.wait(() =>
-                o.A.setOutputDevice(e, {
-                    location: r,
-                }),
-            );
+        if (n === u.f.OUTPUT || n === u.f.INPUT_AND_OUTPUT) {
+            let e = g[t];
+            l.h.wait(() => s.A.setOutputDevice(e, { location: i }));
         }
         delete E[t];
     },
@@ -214,9 +126,9 @@ let N = new C(s.h, {
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        (g.ignoredDevices[t] = !0), delete E[t];
+        (_.ignoredDevices[t] = !0), delete E[t];
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-        (E = {}), (g.neverShowModal = !0);
+        (E = {}), (_.neverShowModal = !0);
     },
 });

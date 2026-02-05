@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     dotGrow: "dotGrow__714a9",
     dotShrink: "dotShrink__714a9",

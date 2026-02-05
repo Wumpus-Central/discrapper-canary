@@ -1,168 +1,111 @@
-n.d(t, {
-    A: () => D,
-}),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+n.d(t, { A: () => P }), n(321073);
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     o = n(502572),
     c = n(732955),
     d = n(397927),
     u = n(775602),
     _ = n(531260),
-    p = n(657516),
-    m = n(983511),
+    m = n(657516),
+    A = n(983511),
     g = n(342744),
-    A = n(87719),
-    f = n(287809),
-    h = n(166403),
-    b = n(473145),
-    E = n(927578),
-    x = n(432334),
-    O = n(101135),
-    C = n(708030),
-    I = n(652215),
-    T = n(788868),
-    S = n(985018),
-    j = n(652804);
-
+    E = n(87719),
+    h = n(287809),
+    p = n(166403),
+    C = n(473145),
+    x = n(927578),
+    T = n(432334),
+    I = n(101135),
+    S = n(708030),
+    f = n(652215),
+    N = n(788868),
+    b = n(985018),
+    R = n(652804);
 function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function N(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e) {
     let {
             guildBoostSlot: t,
             isCancellable: n,
-            onCancel: l,
-            onUncancel: s,
-            premiumSubscription: a,
+            onCancel: r,
+            onUncancel: a,
+            premiumSubscription: l,
             useReducedMotion: u,
             fractionalState: _,
         } = e,
-        p = i.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        m = (0, b.I5)(t),
-        g = (null == a ? void 0 : a.isPaused) === !0 && _ === T.xc.NONE,
-        A = S.intl.string(S.t.mOWsF1);
-    return (0, r.jsxs)(
+        m = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
+        A = (0, C.I5)(t),
+        g = l?.isPaused === !0 && _ === N.xc.NONE,
+        E = b.intl.string(b.t.mOWsF1);
+    return (0, i.jsxs)(
         "li",
         {
-            className: j.Hp,
+            className: R.Hp,
             children: [
-                (0, r.jsxs)("div", {
-                    className: j.YL,
+                (0, i.jsxs)("div", {
+                    className: R.YL,
                     children: [
-                        (0, r.jsx)(C.A, {
-                            className: j.W6,
+                        (0, i.jsx)(S.A, {
+                            className: R.W6,
                             hasCooldown: t.isOnCooldown(),
-                            isCanceled: m,
+                            isCanceled: A,
                             useReducedMotion: u,
                         }),
-                        m && null != a
-                            ? (0, r.jsx)(d.Text, {
+                        A && null != l
+                            ? (0, i.jsx)(d.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/medium",
-                                  children: S.intl.format(S.t.Z4ULRD, {
-                                      date: a.currentPeriodEnd,
-                                  }),
+                                  children: b.intl.format(b.t.Z4ULRD, { date: l.currentPeriodEnd }),
                               })
-                            : t.isOnCooldown() && null != p
-                              ? (0, r.jsx)(O.A, {
-                                    cooldown: p.getTime(),
-                                })
-                              : (0, r.jsx)(d.Text, {
-                                    className: j.__invalid_unappliedGuildBoostSlotDescription,
+                            : t.isOnCooldown() && null != m
+                              ? (0, i.jsx)(I.A, { cooldown: m.getTime() })
+                              : (0, i.jsx)(d.Text, {
+                                    className: R.__invalid_unappliedGuildBoostSlotDescription,
                                     color: "text-muted",
                                     variant: "text-sm/medium",
-                                    children: S.intl.string(S.t["2mcafz"]),
+                                    children: b.intl.string(b.t["2mcafz"]),
                                 }),
                     ],
                 }),
-                (0, r.jsxs)("div", {
-                    className: j.E7,
+                (0, i.jsxs)("div", {
+                    className: R.E7,
                     children: [
                         n &&
-                            !m &&
-                            (0, r.jsx)(o.A, {
+                            !A &&
+                            (0, i.jsx)(o.A, {
                                 shouldShow: g,
-                                text: A,
-                                "aria-label": A.toString(),
+                                text: E,
+                                "aria-label": E.toString(),
                                 children: (e) =>
-                                    (0, r.jsx)("div", {
-                                        className: j.LB,
-                                        children: (0, r.jsx)(
-                                            c.QWc,
-                                            N(v({}, e), {
-                                                variant: "primary",
-                                                text: S.intl.string(S.t.twFU3R),
-                                                onClick: () => l(t),
-                                                disabled: g,
-                                                size: "sm",
-                                            }),
-                                        ),
+                                    (0, i.jsx)("div", {
+                                        className: R.LB,
+                                        children: (0, i.jsx)(c.QWc, {
+                                            ...e,
+                                            variant: "primary",
+                                            text: b.intl.string(b.t.twFU3R),
+                                            onClick: () => r(t),
+                                            disabled: g,
+                                            size: "sm",
+                                        }),
                                     }),
                             }),
-                        m &&
-                            (0, r.jsx)(o.A, {
+                        A &&
+                            (0, i.jsx)(o.A, {
                                 shouldShow: g,
-                                text: A,
-                                "aria-label": A.toString(),
+                                text: E,
+                                "aria-label": E.toString(),
                                 children: (e) =>
-                                    (0, r.jsx)("div", {
-                                        className: j.LB,
-                                        children: (0, r.jsx)(
-                                            c.QWc,
-                                            N(v({}, e), {
-                                                variant: "primary",
-                                                text: S.intl.string(S.t["2glQNp"]),
-                                                onClick: () => s(t),
-                                                disabled: g,
-                                                size: "sm",
-                                            }),
-                                        ),
+                                    (0, i.jsx)("div", {
+                                        className: R.LB,
+                                        children: (0, i.jsx)(c.QWc, {
+                                            ...e,
+                                            variant: "primary",
+                                            text: b.intl.string(b.t["2glQNp"]),
+                                            onClick: () => a(t),
+                                            disabled: g,
+                                            size: "sm",
+                                        }),
                                     }),
                             }),
                     ],
@@ -172,156 +115,114 @@ function y(e) {
         t.id,
     );
 }
-
-function P(e) {
-    (0, d.mMO)(
-        async () => (t) =>
-            (0, r.jsx)(
-                m.default,
-                N(v({}, t), {
-                    guildBoostSlot: e,
-                }),
-            ),
-    );
+function O(e) {
+    (0, d.mMO)(async () => (t) => (0, i.jsx)(A.default, { ...t, guildBoostSlot: e }));
 }
-
-function R(e) {
-    (0, d.mMO)(
-        async () => (t) =>
-            (0, r.jsx)(
-                g.default,
-                N(v({}, t), {
-                    guildBoostSlotId: e.id,
-                }),
-            ),
-    );
+function j(e) {
+    (0, d.mMO)(async () => (t) => (0, i.jsx)(g.default, { ...t, guildBoostSlotId: e.id }));
 }
-let D = function (e) {
+let P = function (e) {
     let t,
         n,
-        l,
+        r,
         { guildBoostSlots: c } = e,
-        m = (0, a.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
-        g = (null == m ? void 0 : m.isPausedOrPausePending) === !0,
-        { fractionalState: O } = (0, _.A)(),
-        C = (0, a.bG)([u.A], () => u.A.useReducedMotion),
-        D = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
-        w = O === T.xc.FP_SUB_PAUSED,
-        L = g && !w,
+        A = (0, l.bG)([p.A], () => p.A.getPremiumTypeSubscription()),
+        g = A?.isPausedOrPausePending === !0,
+        { fractionalState: I } = (0, _.A)(),
+        S = (0, l.bG)([u.A], () => u.A.useReducedMotion),
+        P = (0, l.bG)([h.default], () => h.default.getCurrentUser()),
+        y = I === N.xc.FP_SUB_PAUSED,
+        L = g && !y,
         {
-            appliedGuildBoostSlots: M,
-            unappliedGuildBoostSlots: U,
+            appliedGuildBoostSlots: D,
+            unappliedGuildBoostSlots: M,
             numActiveGuildBoostSlots: G,
-            hasCooldownBoosts: k,
-            allGuildBoostsAreOnCooldown: V,
-        } = i.useMemo(() => {
+            hasCooldownBoosts: U,
+            allGuildBoostsAreOnCooldown: k,
+        } = s.useMemo(() => {
             let e = [],
                 t = [],
                 n = 0,
-                r = !1,
-                i = !0;
+                i = !1,
+                s = !0;
             return (
-                c.forEach((l) => {
-                    !(0, b.I5)(l) && n++,
-                        l.isOnCooldown() ? (r = !0) : (i = !1),
-                        null != l.premiumGuildSubscription ? e.push(l) : t.push(l);
+                c.forEach((r) => {
+                    !(0, C.I5)(r) && n++,
+                        r.isOnCooldown() ? (i = !0) : (s = !1),
+                        null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
                 }),
                 {
                     appliedGuildBoostSlots: e,
                     unappliedGuildBoostSlots: t,
                     numActiveGuildBoostSlots: n,
-                    hasCooldownBoosts: r,
-                    allGuildBoostsAreOnCooldown: i,
+                    hasCooldownBoosts: i,
+                    allGuildBoostsAreOnCooldown: s,
                 }
             );
         }, [c]),
-        H = null != m ? E.Ay.getNumIncludedPremiumGuildSubscriptionSlots(m.planId) : 0,
-        B = Math.max(0, H - M.length),
-        F = G > H,
-        Y = H === c.length,
-        W = Y ? B : 1,
-        z = i.useMemo(() => {
+        B = null != A ? x.Ay.getNumIncludedPremiumGuildSubscriptionSlots(A.planId) : 0,
+        w = Math.max(0, B - D.length),
+        H = G > B,
+        V = B === c.length,
+        F = V ? w : 1,
+        Y = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < W; t++)
-                e.push(
-                    (0, r.jsx)(
-                        x.A,
-                        {
-                            className: j.YA,
-                            useReducedMotion: C,
-                        },
-                        t,
-                    ),
-                );
+            for (let t = 0; t < F; t++) e.push((0, i.jsx)(T.A, { className: R.YA, useReducedMotion: S }, t));
             return e;
-        }, [W, C]),
-        K = i.useMemo(() => U.find((e) => e.isAvailable()), [U]);
-    if (0 === U.length) return null;
-    let Z = U.length;
+        }, [F, S]),
+        W = s.useMemo(() => M.find((e) => e.isAvailable()), [M]);
+    if (0 === M.length) return null;
+    let z = M.length;
     if (
-        ((t = Y
-            ? S.intl.formatToPlainString(V ? S.t["3DW6Dc"] : S.t["/u15Qc"], {
-                  numUnappliedGuildBoostSlots: Z,
-              })
-            : S.intl.formatToPlainString(V ? S.t["3DW6Dc"] : S.t.BPadnO, {
-                  numUnappliedGuildBoostSlots: Z,
-              })),
-        E.Ay.isPremium(D))
+        ((t = V
+            ? b.intl.formatToPlainString(k ? b.t["3DW6Dc"] : b.t["/u15Qc"], { numUnappliedGuildBoostSlots: z })
+            : b.intl.formatToPlainString(k ? b.t["3DW6Dc"] : b.t.BPadnO, { numUnappliedGuildBoostSlots: z })),
+        x.Ay.isPremium(P))
     ) {
         let e = (e, t) =>
-            (0, r.jsx)(
+            (0, i.jsx)(
                 d.DUT,
                 {
-                    className: j.nw,
+                    className: R.nw,
                     tag: "span",
                     onClick: () => {
-                        (0, A.Z)();
+                        (0, E.e)();
                     },
                     children: e,
                 },
                 t,
             );
-        n = V
-            ? S.intl.format(S.t.omcpSE, {
-                  learnMoreHook: e,
-              })
-            : S.intl.format(S.t["5mAkVi"], {
-                  numUnappliedGuildBoostSlots: Z,
-                  learnMoreHook: e,
-              });
+        n = k
+            ? b.intl.format(b.t.omcpSE, { learnMoreHook: e })
+            : b.intl.format(b.t["5mAkVi"], { numUnappliedGuildBoostSlots: z, learnMoreHook: e });
     } else
-        n = V
-            ? S.intl.string(S.t["8pcUZi"])
-            : S.intl.formatToPlainString(S.t.Kaw82o, {
-                  numUnappliedGuildBoostSlots: Z,
-              });
+        n = k
+            ? b.intl.string(b.t["8pcUZi"])
+            : b.intl.formatToPlainString(b.t.Kaw82o, { numUnappliedGuildBoostSlots: z });
     return (
-        (l = g && O === T.xc.NONE ? S.intl.string(S.t.mOWsF1) : S.intl.string(S.t.xr4m5B)),
-        (0, r.jsx)("div", {
-            className: j.iE,
-            children: (0, r.jsxs)("div", {
-                className: s()(j.Qs, [j.Yq]),
+        (r = g && I === N.xc.NONE ? b.intl.string(b.t.mOWsF1) : b.intl.string(b.t.xr4m5B)),
+        (0, i.jsx)("div", {
+            className: R.iE,
+            children: (0, i.jsxs)("div", {
+                className: a()(R.Qs, [R.Yq]),
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: j.wx,
+                    (0, i.jsxs)("div", {
+                        className: R.wx,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: j.RW,
+                            (0, i.jsxs)("div", {
+                                className: R.RW,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: j.PS,
-                                        children: z,
-                                    }),
-                                    (0, r.jsxs)("div", {
-                                        className: j.__invalid_headerCopy,
+                                    (0, i.jsx)("div", { className: R.PS, children: Y }),
+                                    (0, i.jsxs)("div", {
+                                        className: R.__invalid_headerCopy,
                                         children: [
-                                            (0, r.jsx)(d.Heading, {
-                                                className: j.gg,
+                                            (0, i.jsx)(d.Heading, {
+                                                className: R.gg,
                                                 variant: "heading-lg/bold",
                                                 children: t,
                                             }),
-                                            (0, r.jsx)(d.Text, {
-                                                className: j.__invalid_headerSubheading,
+                                            (0, i.jsx)(d.Text, {
+                                                className: R.__invalid_headerSubheading,
                                                 color: "text-strong",
                                                 variant: "text-sm/normal",
                                                 children: n,
@@ -330,62 +231,50 @@ let D = function (e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", {
-                                className: j.di,
-                                children: (0, r.jsx)(o.A, {
-                                    shouldShow: null == K || L,
-                                    text: l,
-                                    "aria-label": l.toString(),
+                            (0, i.jsx)("div", {
+                                className: R.di,
+                                children: (0, i.jsx)(o.A, {
+                                    shouldShow: null == W || L,
+                                    text: r,
+                                    "aria-label": r.toString(),
                                     children: (e) =>
-                                        (0, r.jsx)(
-                                            d.Button,
-                                            N(
-                                                v(
-                                                    {
-                                                        variant: "primary",
-                                                        text: S.intl.string(S.t.BMx1iy),
-                                                    },
-                                                    e,
-                                                ),
-                                                {
-                                                    disabled: null == K || L,
-                                                    onClick:
-                                                        null != K
-                                                            ? () => {
-                                                                  (0, d.mMO)(
-                                                                      async () => (e) =>
-                                                                          (0, r.jsx)(
-                                                                              p.default,
-                                                                              N(v({}, e), {
-                                                                                  guildBoostSlots: [K],
-                                                                                  locationSection:
-                                                                                      I.JJy.SETTINGS_PREMIUM,
-                                                                              }),
-                                                                          ),
-                                                                  );
-                                                              }
-                                                            : void 0,
-                                                },
-                                            ),
-                                        ),
+                                        (0, i.jsx)(d.Button, {
+                                            variant: "primary",
+                                            text: b.intl.string(b.t.BMx1iy),
+                                            ...e,
+                                            disabled: null == W || L,
+                                            onClick:
+                                                null != W
+                                                    ? () => {
+                                                          (0, d.mMO)(
+                                                              async () => (e) =>
+                                                                  (0, i.jsx)(m.default, {
+                                                                      ...e,
+                                                                      guildBoostSlots: [W],
+                                                                      locationSection: f.JJy.SETTINGS_PREMIUM,
+                                                                  }),
+                                                          );
+                                                      }
+                                                    : void 0,
+                                        }),
                                 }),
                             }),
                         ],
                     }),
-                    (!Y || k) &&
-                        (0, r.jsx)("ul", {
-                            className: j.LU,
-                            children: U.map((e) =>
-                                (0, r.jsx)(
-                                    y,
+                    (!V || U) &&
+                        (0, i.jsx)("ul", {
+                            className: R.LU,
+                            children: M.map((e) =>
+                                (0, i.jsx)(
+                                    v,
                                     {
                                         guildBoostSlot: e,
-                                        isCancellable: F,
-                                        onCancel: P,
-                                        onUncancel: R,
-                                        premiumSubscription: m,
-                                        useReducedMotion: C,
-                                        fractionalState: O,
+                                        isCancellable: H,
+                                        onCancel: O,
+                                        onUncancel: j,
+                                        premiumSubscription: A,
+                                        useReducedMotion: S,
+                                        fractionalState: I,
                                     },
                                     e.id,
                                 ),

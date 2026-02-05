@@ -1,16 +1,11 @@
-i.d(a, {
-    default: () => r,
-}),
-    i(896048),
-    i(321073);
+i.d(a, { default: () => l }), i(321073);
 var n = i(627968),
-    l = i(64700),
-    s = i(158954),
-    e = i(985018);
-
-function r(t) {
-    let { transitionState: a, onClose: i, title: r, body: c, cta: o, closeLabel: u, onConfirm: d } = t,
-        [p, h] = l.useState(!1),
+    s = i(64700),
+    e = i(158954),
+    r = i(985018);
+function l(t) {
+    let { transitionState: a, onClose: i, title: l, body: c, cta: o, closeLabel: u, onConfirm: d } = t,
+        [p, h] = s.useState(!1),
         k = async () => {
             h(!0);
             try {
@@ -19,27 +14,11 @@ function r(t) {
                 h(!1);
             }
         },
-        y = null != r ? r : e.intl.string(e.t.D94rwS),
+        y = l ?? r.intl.string(r.t.D94rwS),
         C = [];
     return (
-        null != u &&
-            C.push({
-                variant: "secondary",
-                text: u,
-                onClick: i,
-            }),
-        C.push({
-            variant: "primary",
-            text: o,
-            onClick: k,
-            loading: p,
-        }),
-        (0, n.jsx)(s.Modal, {
-            title: y,
-            actions: C,
-            transitionState: a,
-            onClose: i,
-            children: c,
-        })
+        null != u && C.push({ variant: "secondary", text: u, onClick: i }),
+        C.push({ variant: "primary", text: o, onClick: k, loading: p }),
+        (0, n.jsx)(e.Modal, { title: y, actions: C, transitionState: a, onClose: i, children: c })
     );
 }

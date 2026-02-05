@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     UO: "premiumSubscribeButton_e00877",
     PC: "premiumIcon_e00877",

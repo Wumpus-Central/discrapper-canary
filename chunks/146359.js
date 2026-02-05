@@ -1,145 +1,66 @@
-n.d(t, {
-    A: () => j,
-});
-var r = n(627968),
-    l = n(64700),
-    i = n(311907),
-    a = n(397927),
-    o = n(80682),
-    s = n(660273),
-    u = n(351001),
-    c = n(867455),
-    d = n(406704),
-    A = n(734057),
-    b = n(71393),
-    g = n(576705),
-    O = n(287809),
-    f = n(985018);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function j(e, t, j) {
-    let h = l.useMemo(
-        () => ({
-            [t]: [e.id],
-        }),
-        [t, e.id],
-    );
-    (0, o.E)(h, "useThreadAdminActionItems"), (0, i.bG)([g.A], () => g.A.getGuildVersion(t), [t]);
-    let y = (0, i.bG)([A.A], () => A.A.getChannel(j)),
-        E = (0, i.bG)([b.A], () => b.A.getGuild(t), [t]),
-        x = (0, i.bG)([O.default], () => O.default.getCurrentUser()),
-        P = (0, s.A)(y, "Context Menu"),
-        v = (0, d.qi)(null == y ? void 0 : y.id);
-    return (null == x ? void 0 : x.id) === e.id
-        ? [P]
-        : null == E || null == y || null == x
+t.d(n, { A: () => x });
+var l = t(627968),
+    i = t(64700),
+    r = t(311907),
+    a = t(397927),
+    d = t(80682),
+    s = t(660273),
+    o = t(351001),
+    u = t(867455),
+    c = t(406704),
+    A = t(734057),
+    g = t(71393),
+    m = t(576705),
+    f = t(287809),
+    p = t(985018);
+function x(e, n, x) {
+    let b = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
+    (0, d.E)(b, "useThreadAdminActionItems"), (0, r.bG)([m.A], () => m.A.getGuildVersion(n), [n]);
+    let E = (0, r.bG)([A.A], () => A.A.getChannel(x)),
+        h = (0, r.bG)([g.A], () => g.A.getGuild(n), [n]),
+        _ = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
+        C = (0, s.A)(E, "Context Menu"),
+        T = (0, c.qi)(E?.id);
+    return _?.id === e.id
+        ? [C]
+        : null == h || null == E || null == _
           ? []
           : [
-                v
-                    ? (0, r.jsx)(a.Drp, {
+                T
+                    ? (0, l.jsx)(a.Drp, {
                           id: "remove",
-                          label: y.isForumPost()
-                              ? f.intl.formatToPlainString(f.t.v2KNNx, {
-                                    user: e.username,
-                                })
-                              : f.intl.formatToPlainString(f.t["27xWaT"], {
-                                    user: e.username,
-                                }),
+                          label: E.isForumPost()
+                              ? p.intl.formatToPlainString(p.t.v2KNNx, { user: e.username })
+                              : p.intl.formatToPlainString(p.t["27xWaT"], { user: e.username }),
                           color: "danger",
-                          action: () => c.A.removeMember(y.id, e.id, "Context Menu"),
+                          action: () => u.A.removeMember(E.id, e.id, "Context Menu"),
                       })
                     : null,
-                (0, u.L7)(e, E)
-                    ? (0, r.jsx)(a.Drp, {
+                (0, o.L7)(e, h)
+                    ? (0, l.jsx)(a.Drp, {
                           id: "kick",
-                          label: v
-                              ? f.intl.formatToPlainString(f.t["1Ie87p"], {
-                                    user: e.username,
-                                })
-                              : f.intl.formatToPlainString(f.t["9l/iTS"], {
-                                    user: e.username,
-                                }),
+                          label: T
+                              ? p.intl.formatToPlainString(p.t["1Ie87p"], { user: e.username })
+                              : p.intl.formatToPlainString(p.t["9l/iTS"], { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.mMO)(async () => {
-                                  let { default: t } = await n.e("62624").then(n.bind(n, 324785));
-                                  return (n) =>
-                                      (0, r.jsx)(
-                                          t,
-                                          m(p({}, n), {
-                                              guildId: E.id,
-                                              user: e,
-                                          }),
-                                      );
+                                  let { default: n } = await t.e("62624").then(t.bind(t, 324785));
+                                  return (t) => (0, l.jsx)(n, { ...t, guildId: h.id, user: e });
                               }),
                       })
                     : null,
-                (0, u.EZ)(e, E)
-                    ? (0, r.jsx)(a.Drp, {
+                (0, o.EZ)(e, h)
+                    ? (0, l.jsx)(a.Drp, {
                           id: "ban",
-                          label: v
-                              ? f.intl.formatToPlainString(f.t.i62APf, {
-                                    user: e.username,
-                                })
-                              : f.intl.formatToPlainString(f.t.WnpUBi, {
-                                    user: e.username,
-                                }),
+                          label: T
+                              ? p.intl.formatToPlainString(p.t.i62APf, { user: e.username })
+                              : p.intl.formatToPlainString(p.t.WnpUBi, { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.mMO)(async () => {
-                                  let { default: t } = await n.e("80123").then(n.bind(n, 333179));
-                                  return (n) =>
-                                      (0, r.jsx)(
-                                          t,
-                                          m(p({}, n), {
-                                              guildId: E.id,
-                                              user: e,
-                                          }),
-                                      );
+                                  let { default: n } = await t.e("80123").then(t.bind(t, 333179));
+                                  return (t) => (0, l.jsx)(n, { ...t, guildId: h.id, user: e });
                               }),
                       })
                     : null,

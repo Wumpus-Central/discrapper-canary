@@ -1,7 +1,5 @@
-n.d(t, {
-    E: () => c,
-    U: () => l,
-});
+"use strict";
+n.d(t, { E: () => u, U: () => l });
 var r = n(627968),
     i = n(64700),
     a = n(677313),
@@ -13,22 +11,12 @@ let o = i.createContext({
     secondaryColor: null,
     userId: null,
 });
-
 function l(e) {
-    let { theme: t, themeType: n, primaryColor: a, secondaryColor: s, userId: l, children: c } = e,
-        u = i.useMemo(
-            () => ({
-                theme: t,
-                themeType: n,
-                primaryColor: a,
-                secondaryColor: s,
-                userId: l,
-            }),
+    let { theme: t, themeType: n, primaryColor: a, secondaryColor: s, userId: l, children: u } = e,
+        c = i.useMemo(
+            () => ({ theme: t, themeType: n, primaryColor: a, secondaryColor: s, userId: l }),
             [t, n, a, s, l],
         );
-    return (0, r.jsx)(o.Provider, {
-        value: u,
-        children: c,
-    });
+    return (0, r.jsx)(o.Provider, { value: c, children: u });
 }
-let c = () => i.useContext(o);
+let u = () => i.useContext(o);

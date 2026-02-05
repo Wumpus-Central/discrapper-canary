@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function () {
     var e = this,
         t = n(367e3),

@@ -1,7 +1,5 @@
-n.d(t, {
-    sA: () => i,
-    us: () => a,
-});
+"use strict";
+n.d(t, { sA: () => i, us: () => a });
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2025-09_mention_suggestion",
@@ -89,21 +87,9 @@ let r = (0, n(600975).C)({
         },
     ],
 });
-
 function i(e, t) {
-    return r.getCurrentConfig(
-        {
-            location: e,
-        },
-        t,
-    );
+    return r.getCurrentConfig({ location: e }, t);
 }
-
 function a(e, t) {
-    return r.useExperiment(
-        {
-            location: e,
-        },
-        t,
-    );
+    return r.useExperiment({ location: e }, t);
 }

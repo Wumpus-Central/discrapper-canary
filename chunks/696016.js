@@ -1,32 +1,33 @@
+"use strict";
 n.d(t, {
-    DQ: () => b,
-    Fv: () => s,
-    GU: () => I,
+    DQ: () => I,
+    Fv: () => o,
+    GU: () => v,
     LX: () => a,
-    Ot: () => c,
+    Ot: () => u,
     P4: () => l,
-    T2: () => R,
+    T2: () => D,
     U_: () => E,
-    V0: () => _,
-    VP: () => T,
+    V0: () => p,
+    VP: () => b,
     Vi: () => d,
-    YM: () => N,
-    cM: () => S,
-    dV: () => C,
-    gC: () => L,
-    iJ: () => w,
-    kd: () => p,
+    YM: () => R,
+    cM: () => C,
+    dV: () => N,
+    gC: () => x,
+    iJ: () => O,
+    kd: () => f,
     l_: () => h,
-    mk: () => y,
-    nm: () => O,
-    nx: () => f,
-    on: () => o,
-    qh: () => D,
-    s3: () => A,
+    mk: () => A,
+    nm: () => T,
+    nx: () => _,
+    on: () => s,
+    qh: () => w,
+    s3: () => S,
     sc: () => m,
-    sz: () => u,
-    vZ: () => v,
-    wN: () => P,
+    sz: () => c,
+    vZ: () => y,
+    wN: () => L,
     zj: () => g,
 });
 var r = n(626584),
@@ -39,40 +40,40 @@ var r = n(626584),
             e
         );
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (e[(e.ALL = 0)] = "ALL"), (e[(e.FRIENDS = 1)] = "FRIENDS"), e;
     })({}),
-    s = (function (e) {
+    o = (function (e) {
         return (e.DECOUPLED = "decoupled"), (e.VIEWER = "viewer"), (e.STREAMER = "streamer"), (e.VOICE = "voice"), e;
     })({}),
     l = (function (e) {
         return (e[(e.Error = 0)] = "Error"), (e[(e.Disabled = 1)] = "Disabled"), (e[(e.Enabled = 2)] = "Enabled"), e;
     })({});
-let c = "alt+c",
-    u = "f12",
+let u = "alt+c",
+    c = "f12",
     d = 6 * i.A.Millis.SECOND,
-    f = new r.A("Clips"),
-    p = 4,
-    _ = 2,
+    _ = new r.A("Clips"),
+    f = 4,
+    p = 2,
     h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     m = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
     g = 0.1,
     E = 0,
-    y = 200,
-    b = "clips-edit",
-    O = "clips-gallery",
-    v = 640,
-    A = 360,
-    I = 100,
-    S = (e) => "Clip - ".concat(new Date(e).toLocaleString()),
-    T = 15,
-    C = 3e4,
-    N = 30,
-    w = 10;
+    A = 200,
+    I = "clips-edit",
+    T = "clips-gallery",
+    y = 640,
+    S = 360,
+    v = 100,
+    C = (e) => `Clip - ${new Date(e).toLocaleString()}`,
+    b = 15,
+    N = 3e4,
+    R = 30,
+    O = 10;
 i.A.Millis.DAY;
-let R = 20,
-    P = 1,
-    D = 50;
-var L = (function (e) {
+let D = 20,
+    L = 1,
+    w = 50;
+var x = (function (e) {
     return (e.ALL = ":all"), (e.APPLICATION = ":application"), (e.VOICE = ":voice"), (e.SOUNDBOARD = ":soundboard"), e;
 })({});

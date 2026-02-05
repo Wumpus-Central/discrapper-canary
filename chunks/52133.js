@@ -1,10 +1,6 @@
-n.d(t, {
-    A: () => i,
-    v: () => a,
-}),
-    n(321073);
+"use strict";
+n.d(t, { A: () => i, v: () => a }), n(321073);
 let r = {};
-
 function i(e, t, n) {
     let { shouldWarnLargeObjects: i, logCallback: a } =
         arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r;
@@ -20,7 +16,6 @@ function i(e, t, n) {
     }
     return 0 === l.length;
 }
-
 function a(e, t) {
     let { logCallback: n, shouldWarnLargeObjects: i } =
         arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;

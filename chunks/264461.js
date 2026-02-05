@@ -1,59 +1,56 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048);
+n.d(t, { A: () => _ });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(158954),
+    l = n.n(i),
+    r = n(158954),
     o = n(311907),
-    c = n(902592),
-    d = n(996958),
+    d = n(902592),
+    c = n(996958),
     u = n(869146),
     m = n(680108),
-    p = n(439895),
-    h = n(652215),
-    f = n(569885);
-let x = (e) => {
+    h = n(439895),
+    x = n(652215),
+    p = n(569885);
+let g = (e) => {
         let { setTab: t } = e,
-            n = (0, o.bG)([u.A], () => u.A.getWindowOpen(h.MLl.DEVTOOLS_POPOUT));
+            n = (0, o.bG)([u.A], () => u.A.getWindowOpen(x.MLl.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
-            className: f.Qs,
+            className: p.Qs,
             children: [
-                (0, a.jsx)(s.DUT, {
+                (0, a.jsx)(r.DUT, {
                     onClick: () => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: r()(f.vK, f.Dg),
-                        children: (0, a.jsx)(s.EYj, {
+                        className: l()(p.vK, p.Dg),
+                        children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Profile Effects",
                         }),
                     }),
                 }),
-                (0, a.jsx)(s.DUT, {
+                (0, a.jsx)(r.DUT, {
                     onClick: () => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: r()(f.vK, f.st),
-                        children: (0, a.jsx)(s.EYj, {
+                        className: l()(p.vK, p.st),
+                        children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Nameplates",
                         }),
                     }),
                 }),
-                (0, a.jsx)(s.DUT, {
+                (0, a.jsx)(r.DUT, {
                     onClick: () => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: r()(f.vK, f.IP),
-                        children: (0, a.jsx)(s.EYj, {
+                        className: l()(p.vK, p.IP),
+                        children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Products",
@@ -62,27 +59,22 @@ let x = (e) => {
                 }),
                 !n &&
                     (0, a.jsx)("div", {
-                        style: {
-                            marginTop: 16,
-                        },
-                        children: (0, a.jsx)(s.wx6, {
+                        style: { marginTop: 16 },
+                        children: (0, a.jsx)(r.wx6, {
                             type: "warning",
-                            children: (0, a.jsxs)(s.BJc, {
+                            children: (0, a.jsxs)(r.BJc, {
                                 gap: 8,
                                 children: [
-                                    (0, a.jsx)(s.EYj, {
-                                        variant: "text-md/semibold",
-                                        children: "Not enough space?",
-                                    }),
-                                    (0, a.jsx)(s.EYj, {
+                                    (0, a.jsx)(r.EYj, { variant: "text-md/semibold", children: "Not enough space?" }),
+                                    (0, a.jsx)(r.EYj, {
                                         variant: "text-sm/normal",
                                         children: "You can pop out the DevTools to see the full layout.",
                                     }),
-                                    (0, a.jsx)(s.$nd, {
+                                    (0, a.jsx)(r.$nd, {
                                         size: "sm",
-                                        icon: s.tfB,
+                                        icon: r.tfB,
                                         variant: "secondary",
-                                        onClick: c.openDevToolsPopout,
+                                        onClick: d.openDevToolsPopout,
                                         text: "Popout DevTools",
                                     }),
                                 ],
@@ -92,24 +84,16 @@ let x = (e) => {
             ],
         });
     },
-    b = () => {
-        let [e, t] = l.useState(0);
-        return (0, a.jsxs)(s.IpV, {
-            className: f.iE,
+    _ = () => {
+        let [e, t] = s.useState(0);
+        return (0, a.jsxs)(r.IpV, {
+            className: p.iE,
             children: [
                 (0, a.jsxs)("div", {
-                    className: f.C$,
+                    className: p.C$,
                     children: [
-                        (0, a.jsx)(s.DZT, {
-                            variant: "heading-xxl/medium",
-                            children: "Collectibles DevTools",
-                        }),
-                        0 !== e &&
-                            (0, a.jsx)(s.$nd, {
-                                variant: "primary",
-                                onClick: () => t(0),
-                                text: "Back",
-                            }),
+                        (0, a.jsx)(r.DZT, { variant: "heading-xxl/medium", children: "Collectibles DevTools" }),
+                        0 !== e && (0, a.jsx)(r.$nd, { variant: "primary", onClick: () => t(0), text: "Back" }),
                     ],
                 }),
                 (() => {
@@ -117,13 +101,11 @@ let x = (e) => {
                         case 1:
                             return (0, a.jsx)(m.A, {});
                         case 2:
-                            return (0, a.jsx)(d.A, {});
+                            return (0, a.jsx)(c.A, {});
                         case 3:
-                            return (0, a.jsx)(p.A, {});
+                            return (0, a.jsx)(h.A, {});
                         default:
-                            return (0, a.jsx)(x, {
-                                setTab: t,
-                            });
+                            return (0, a.jsx)(g, { setTab: t });
                     }
                 })(),
             ],

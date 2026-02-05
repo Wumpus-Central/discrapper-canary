@@ -1,16 +1,13 @@
-r.d(t, {
-    A: () => c,
-});
+"use strict";
+r.d(t, { A: () => c });
 var a = r(1139),
     n = r(64700),
     s = r(431384);
-
 function o(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
-
 function i(e, t) {
     var r = 0,
         a = !1;
@@ -42,14 +39,7 @@ function i(e, t) {
                         return {
                             s: n,
                             n: function () {
-                                return a >= e.length
-                                    ? {
-                                          done: !0,
-                                      }
-                                    : {
-                                          done: !1,
-                                          value: e[a++],
-                                      };
+                                return a >= e.length ? { done: !0 } : { done: !1, value: e[a++] };
                             },
                             e: function (e) {
                                 throw e;
@@ -107,10 +97,6 @@ let c = function (e) {
     var t = (0, a.A)({}, e);
     return n.createElement(
         s.A,
-        (0, a.A)({}, t, {
-            nodeType: "Iterable",
-            nodeTypeIndicator: "()",
-            createItemString: i,
-        }),
+        (0, a.A)({}, t, { nodeType: "Iterable", nodeTypeIndicator: "()", createItemString: i }),
     );
 };

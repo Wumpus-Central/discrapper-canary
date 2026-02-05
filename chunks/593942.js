@@ -1,14 +1,6 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(314116),
-    i = n(985018);
-
-function a(e, t, n) {
-    (0, r.A)({
-        title: e,
-        subtitle: t,
-        confirmText: i.intl.string(i.t.BddRzS),
-        onConfirm: n,
-    });
+i.d(e, { A: () => s });
+var n = i(314116),
+    l = i(985018);
+function s(t, e, i) {
+    (0, n.A)({ title: t, subtitle: e, confirmText: l.intl.string(l.t.BddRzS), onConfirm: i });
 }

@@ -1,3 +1,1 @@
-a.exports = {
-    w: "cardImage__3f7b1",
-};
+a.exports = { w: "cardImage__3f7b1" };

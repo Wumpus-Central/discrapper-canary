@@ -1,6 +1,5 @@
-n.d(t, {
-    b: () => r,
-});
+"use strict";
+n.d(t, { b: () => r });
 let r = {
     HARASSMENT: "1000",
     SPAM: "1001",

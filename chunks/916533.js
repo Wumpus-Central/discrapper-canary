@@ -139,20 +139,14 @@ e.exports = function (e) {
                 "_Bool",
             ],
         },
-        r = {
-            $pattern: t,
-            keyword: ["@interface", "@class", "@protocol", "@implementation"],
-        };
+        r = { $pattern: t, keyword: ["@interface", "@class", "@protocol", "@implementation"] };
     return {
         name: "Objective-C",
         aliases: ["mm", "objc", "obj-c", "obj-c++", "objective-c++"],
         keywords: n,
         illegal: "</",
         contains: [
-            {
-                className: "built_in",
-                begin: "\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+",
-            },
+            { className: "built_in", begin: "\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+" },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.C_NUMBER_MODE,
@@ -160,36 +154,17 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             {
                 className: "string",
-                variants: [
-                    {
-                        begin: '@"',
-                        end: '"',
-                        illegal: "\\n",
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                ],
+                variants: [{ begin: '@"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] }],
             },
             {
                 className: "meta",
                 begin: /#\s*[a-z]+\b/,
                 end: /$/,
-                keywords: {
-                    keyword: "if else elif endif define undef warning error line pragma ifdef ifndef include",
-                },
+                keywords: { keyword: "if else elif endif define undef warning error line pragma ifdef ifndef include" },
                 contains: [
-                    {
-                        begin: /\\\n/,
-                        relevance: 0,
-                    },
-                    e.inherit(e.QUOTE_STRING_MODE, {
-                        className: "string",
-                    }),
-                    {
-                        className: "string",
-                        begin: /<.*?>/,
-                        end: /$/,
-                        illegal: "\\n",
-                    },
+                    { begin: /\\\n/, relevance: 0 },
+                    e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
+                    { className: "string", begin: /<.*?>/, end: /$/, illegal: "\\n" },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                 ],
@@ -202,10 +177,7 @@ e.exports = function (e) {
                 keywords: r,
                 contains: [e.UNDERSCORE_TITLE_MODE],
             },
-            {
-                begin: "\\." + e.UNDERSCORE_IDENT_RE,
-                relevance: 0,
-            },
+            { begin: "\\." + e.UNDERSCORE_IDENT_RE, relevance: 0 },
         ],
     };
 };

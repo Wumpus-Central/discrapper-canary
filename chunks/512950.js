@@ -1,15 +1,13 @@
-n.d(t, {
-    Y: () => u,
-    p: () => _,
-});
+"use strict";
+n.d(t, { Y: () => c, p: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(934551),
+    s = n.n(a),
+    o = n(934551),
     l = n(834730),
-    c = n(154624),
-    u = (function (e) {
+    u = n(154624),
+    c = (function (e) {
         return (
             (e.WARNING = "warn"),
             (e.INFO = "info"),
@@ -19,83 +17,59 @@ var r = n(627968),
             e
         );
     })({});
-
 function d(e, t) {
     if (null != t) return t;
     switch (e) {
         case "warn":
-            return s.WarningIcon;
+            return o.WarningIcon;
         case "info":
-            return s.CircleInformationIcon;
+            return o.CircleInformationIcon;
         case "danger":
-            return s.CircleErrorIcon;
+            return o.CircleErrorIcon;
         case "positive":
-            return s.CircleCheckIcon;
+            return o.CircleCheckIcon;
         case "preview":
-            return s.ScienceIcon;
+            return o.ScienceIcon;
     }
 }
-
-function f(e) {
+function _(e) {
     switch (e) {
         case "warn":
-            return c.$e;
+            return u.$e;
         case "info":
-            return c.pq;
+            return u.pq;
         case "danger":
-            return c.z3;
+            return u.z3;
         case "positive":
         case "preview":
-            return c.yj;
+            return u.yj;
     }
 }
-let p = (e) => {
+let f = (e) => {
     let { messageType: t, icon: n } = e,
         r = d(t, n);
-    return i.createElement(r, {
-        className: c.Kk,
-        color: "currentColor",
-    });
+    return i.createElement(r, { className: u.Kk, color: "currentColor" });
 };
-
-function _(e) {
+function p(e) {
     let {
             children: t,
             messageType: n,
             action: i,
             className: a,
-            textColor: s = "text-default",
-            textVariant: u = "text-sm/medium",
+            textColor: o = "text-default",
+            textVariant: c = "text-sm/medium",
             icon: d,
-            hidden: _ = !1,
+            hidden: p = !1,
         } = e,
-        h = f(n);
+        h = _(n);
     return (0, r.jsx)("div", {
-        className: o()(c.kL, h, a, {
-            [c.R]: _,
-        }),
+        className: s()(u.kL, h, a, { [u.R]: p }),
         children: (0, r.jsxs)("div", {
-            className: c.WH,
+            className: u.WH,
             children: [
-                (0, r.jsx)("div", {
-                    className: c.XG,
-                    children: (0, r.jsx)(p, {
-                        messageType: n,
-                        icon: d,
-                    }),
-                }),
-                (0, r.jsx)(l.E, {
-                    className: c.Qq,
-                    color: s,
-                    variant: u,
-                    children: t,
-                }),
-                null != i
-                    ? (0, r.jsx)("div", {
-                          className: c.Ik,
-                          children: i,
-                      })
-                    : null,
+                (0, r.jsx)("div", { className: u.XG, children: (0, r.jsx)(f, { messageType: n, icon: d }) }),
+                (0, r.jsx)(l.E, { className: u.Qq, color: o, variant: c, children: t }),
+                null != i ? (0, r.jsx)("div", { className: u.Ik, children: i }) : null,
             ],
         }),
     });

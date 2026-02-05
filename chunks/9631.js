@@ -1,27 +1,13 @@
-n.d(t, {
-    f: () => i,
-    x: () => a,
-});
+"use strict";
+n.d(t, { f: () => i, x: () => a });
 var r = n(643479);
 let i = {
-        desc: {
-            name: "ICC Description",
-        },
-        cprt: {
-            name: "ICC Copyright",
-        },
-        dmdd: {
-            name: "ICC Device Model Description",
-        },
-        vued: {
-            name: "ICC Viewing Conditions Description",
-        },
-        dmnd: {
-            name: "ICC Device Manufacturer for Display",
-        },
-        tech: {
-            name: "Technology",
-        },
+        desc: { name: "ICC Description" },
+        cprt: { name: "ICC Copyright" },
+        dmdd: { name: "ICC Device Model Description" },
+        vued: { name: "ICC Viewing Conditions Description" },
+        dmnd: { name: "ICC Device Manufacturer for Display" },
+        tech: { name: "Technology" },
     },
     a = {
         4: {
@@ -70,36 +56,13 @@ let i = {
                 }
             },
         },
-        16: {
-            name: "Color Space",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-        },
-        20: {
-            name: "Connection Space",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-        },
-        24: {
-            name: "ICC Profile Date",
-            value: (e, t) => s(e, t).toISOString(),
-        },
-        36: {
-            name: "ICC Signature",
-            value: (e, t) => o(e.buffer.slice(t, t + 4)),
-        },
-        40: {
-            name: "Primary Platform",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-            description: (e) => l(e),
-        },
-        48: {
-            name: "Device Manufacturer",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-            description: (e) => l(e),
-        },
-        52: {
-            name: "Device Model Number",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-        },
+        16: { name: "Color Space", value: (e, t) => (0, r.hT)(e, t, 4) },
+        20: { name: "Connection Space", value: (e, t) => (0, r.hT)(e, t, 4) },
+        24: { name: "ICC Profile Date", value: (e, t) => s(e, t).toISOString() },
+        36: { name: "ICC Signature", value: (e, t) => o(e.buffer.slice(t, t + 4)) },
+        40: { name: "Primary Platform", value: (e, t) => (0, r.hT)(e, t, 4), description: (e) => l(e) },
+        48: { name: "Device Manufacturer", value: (e, t) => (0, r.hT)(e, t, 4), description: (e) => l(e) },
+        52: { name: "Device Model Number", value: (e, t) => (0, r.hT)(e, t, 4) },
         64: {
             name: "Rendering Intent",
             value: (e, t) => e.getUint32(t),
@@ -118,12 +81,8 @@ let i = {
                 }
             },
         },
-        80: {
-            name: "Profile Creator",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-        },
+        80: { name: "Profile Creator", value: (e, t) => (0, r.hT)(e, t, 4) },
     };
-
 function s(e, t) {
     return new Date(
         Date.UTC(
@@ -136,11 +95,9 @@ function s(e, t) {
         ),
     );
 }
-
 function o(e) {
     return String.fromCharCode.apply(null, new Uint8Array(e));
 }
-
 function l(e) {
     switch (e.toLowerCase()) {
         case "appl":

@@ -1,18 +1,11 @@
+"use strict";
 function n(t) {
     if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t;
 }
-
 function i(t, e, r) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = r),
+        e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r),
         t
     );
 }
@@ -56,38 +49,14 @@ t.exports = (function (t) {
                           return (r._node = t);
                       }),
                       c
-                          ? o.createElement(
-                                "span",
-                                {
-                                    key: "A",
-                                    "data-text": "true",
-                                    ref: t,
-                                },
-                                "\n",
-                            )
-                          : o.createElement("br", {
-                                key: "A",
-                                "data-text": "true",
-                                ref: t,
-                            }))
+                          ? o.createElement("span", { key: "A", "data-text": "true", ref: t }, "\n")
+                          : o.createElement("br", { key: "A", "data-text": "true", ref: t }))
                     : ((e = function (t) {
                           return (r._node = t);
                       }),
                       c
-                          ? o.createElement(
-                                "span",
-                                {
-                                    key: "B",
-                                    "data-text": "true",
-                                    ref: e,
-                                },
-                                "\n",
-                            )
-                          : o.createElement("br", {
-                                key: "B",
-                                "data-text": "true",
-                                ref: e,
-                            }))
+                          ? o.createElement("span", { key: "B", "data-text": "true", ref: e }, "\n")
+                          : o.createElement("br", { key: "B", "data-text": "true", ref: e }))
                 : o.createElement(
                       "span",
                       {

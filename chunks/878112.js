@@ -1,83 +1,79 @@
-n.d(t, {
-    A: () => g,
-});
+"use strict";
+n.d(t, { A: () => E });
 var r = n(627968),
-    l = n(64700),
+    i = n(64700),
     a = n(575593),
-    i = n(635358),
+    s = n(635358),
     o = n(990078),
-    s = n(397927),
-    c = n(688810),
-    u = n(44120),
+    l = n(397927),
+    u = n(688810),
+    c = n(44120),
     d = n(954571),
-    p = n(440938),
-    v = n(238184),
-    b = n(766172),
-    y = n(652215),
+    _ = n(440938),
+    f = n(238184),
+    p = n(766172),
+    h = n(652215),
     m = n(788868),
-    f = n(985018);
-let g = (e) => {
+    g = n(985018);
+let E = (e) => {
     let {
             product: t,
             primary: n,
-            selectedVariantIndex: g,
-            returnRef: O,
-            onSuccess: j,
-            tooltipDelay: h,
-            fullWidth: x = !1,
+            selectedVariantIndex: E,
+            returnRef: A,
+            onSuccess: I,
+            tooltipDelay: T,
+            fullWidth: y = !1,
         } = e,
-        { analyticsLocations: P } = (0, c.Ay)(),
-        A = l.useRef(null),
-        C = (0, p.uM)(),
-        R = (0, v.A)(),
-        k = (e) => {
+        { analyticsLocations: S } = (0, u.Ay)(),
+        v = i.useRef(null),
+        C = (0, _.uM)(),
+        b = (0, f.A)(),
+        N = (e) => {
             e.stopPropagation(),
-                d.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == C ? void 0 : C.sessionId,
+                d.default.track(h.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: C?.sessionId,
                     sku_id: t.skuId,
-                    page_section: null == C ? void 0 : C.pageSection,
-                    page_category: null == C ? void 0 : C.pageCategory,
+                    page_section: C?.pageSection,
+                    page_category: C?.pageCategory,
                     tile_type: a.R[t.type],
-                    tile_position: String(null == C ? void 0 : C.tilePosition),
+                    tile_position: String(C?.tilePosition),
                     cta_name: "gift button",
-                    page_type: R || "home",
+                    page_type: b || "home",
                 }),
-                (0, u.A)({
-                    skuId: (0, b.Y)({
-                        product: t,
-                        selectedVariantIndex: g,
-                    }),
+                (0, c.A)({
+                    skuId: (0, p.Y)({ product: t, selectedVariantIndex: E }),
                     isGift: !0,
                     giftingOrigin: m.vQ.SHOP_PAGE,
-                    analyticsLocations: P,
-                    returnRef: O,
-                    variantsReturnStyle: i.g.VARIANTS_GROUP,
+                    analyticsLocations: S,
+                    returnRef: A,
+                    variantsReturnStyle: s.g.VARIANTS_GROUP,
                     onClose:
-                        null != j
+                        null != I
                             ? (e) => {
-                                  e && j();
+                                  e && I();
                               }
                             : void 0,
                 });
         };
-    return x
-        ? (0, r.jsx)(s.Button, {
+    return y
+        ? (0, r.jsx)(l.Button, {
               variant: n ? "primary" : "secondary",
-              icon: s.okO,
-              onClick: k,
-              text: f.intl.string(f.t.gmnzqM),
+              icon: l.okO,
+              onClick: N,
+              text: g.intl.string(g.t.gmnzqM),
               fullWidth: !0,
           })
         : (0, r.jsx)(o.m, {
-              text: f.intl.string(f.t["JCFN/y"]),
-              delay: h,
-              children: (0, r.jsx)(s.K0, {
-                  "aria-label": f.intl.string(f.t["JCFN/y"]),
-                  buttonRef: A,
+              text: g.intl.string(g.t["JCFN/y"]),
+              delay: T,
+              children: (0, r.jsx)(l.K0, {
+                  "aria-label": g.intl.string(g.t["JCFN/y"]),
+                  buttonRef: v,
                   variant: n ? "primary" : "secondary",
-                  icon: s.okO,
+                  icon: l.okO,
                   size: "md",
-                  onClick: k,
+                  onClick: N,
               }),
           });
 };

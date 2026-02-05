@@ -1,280 +1,190 @@
-n.d(t, {
-    A: () => x,
-});
-var r = n(627968),
-    l = n(64700),
-    i = n(827734),
-    o = n(421380),
-    a = n(397927),
-    s = n(793574),
-    c = n(834409),
-    d = n(903093),
-    u = n(671576),
-    C = n(449585),
-    f = n(93474),
-    b = n(985018),
-    m = n(119619);
-
-function p(e) {
-    var t;
-    if (null == (null != (t = e.dmsDisabledUntil) ? t : e.invitesDisabledUntil)) return "";
-    let n = null != e.dmsDisabledUntil,
-        r = null != e.invitesDisabledUntil;
+l.d(t, { A: () => f });
+var n = l(627968),
+    i = l(64700),
+    s = l(827734),
+    a = l(421380),
+    r = l(397927),
+    o = l(793574),
+    C = l(834409),
+    d = l(903093),
+    c = l(671576),
+    u = l(449585),
+    m = l(93474),
+    x = l(985018),
+    h = l(119619);
+function g(e) {
+    if (null == (e.dmsDisabledUntil ?? e.invitesDisabledUntil)) return "";
+    let t = null != e.dmsDisabledUntil,
+        l = null != e.invitesDisabledUntil;
     switch (!0) {
-        case n && r:
-            return b.intl.string(b.t.CEygF8);
-        case n:
-            return b.intl.string(b.t.Wmbjcz);
-        case r:
-            return b.intl.string(b.t.Q1QrAi);
+        case t && l:
+            return x.intl.string(x.t.CEygF8);
+        case t:
+            return x.intl.string(x.t.Wmbjcz);
+        case l:
+            return x.intl.string(x.t.Q1QrAi);
         default:
             return "";
     }
 }
-
-function j(e) {
-    var t;
-    let { onHandleEnableLockdown: n, onHandleReportFalseAlarm: l, incidentData: o } = e,
-        s = null != (t = o.raidDetectedAt) ? t : o.dmSpamDetectedAt;
-    return (0, r.jsxs)("div", {
-        className: m.hD,
+function _(e) {
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i } = e,
+        a = i.raidDetectedAt ?? i.dmSpamDetectedAt;
+    return (0, n.jsxs)("div", {
+        className: h.hD,
         children: [
-            (0, r.jsxs)("div", {
-                className: m.iD,
+            (0, n.jsxs)("div", {
+                className: h.iD,
                 children: [
-                    (0, r.jsx)(a.lmn, {
-                        size: "md",
-                        className: m.F_,
-                        color: i.A.unsafe_rawColors.RED_345.css,
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: m.Tm,
+                    (0, n.jsx)(r.lmn, { size: "md", className: h.F_, color: s.A.unsafe_rawColors.RED_345.css }),
+                    (0, n.jsxs)("div", {
+                        className: h.Tm,
                         children: [
-                            (0, r.jsx)(a.Heading, {
-                                className: m.R_,
+                            (0, n.jsx)(r.Heading, {
+                                className: h.R_,
                                 variant: "heading-lg/semibold",
                                 color: "text-feedback-critical",
-                                children: (0, d.Qm)(o) ? b.intl.string(b.t.raRxxT) : b.intl.string(b.t["4nbAta"]),
+                                children: (0, d.Qm)(i) ? x.intl.string(x.t.raRxxT) : x.intl.string(x.t["4nbAta"]),
                             }),
-                            (0, r.jsx)(a.Text, {
-                                className: m.Ng,
+                            (0, n.jsx)(r.Text, {
+                                className: h.Ng,
                                 variant: "text-sm/medium",
-                                children: b.intl.format(b.t["4QIIZl"], {
-                                    dateTime: new Date(null != s ? s : "").toLocaleString(b.intl.currentLocale, d.yc),
+                                children: x.intl.format(x.t["4QIIZl"], {
+                                    dateTime: new Date(a ?? "").toLocaleString(x.intl.currentLocale, d.yc),
                                 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: m.UD,
+            (0, n.jsxs)("div", {
+                className: h.UD,
                 children: [
-                    (0, r.jsx)(a.Button, {
+                    (0, n.jsx)(r.Button, {
                         variant: "secondary",
                         onClick: l,
-                        text: b.intl.string(b.t.ISiXba),
+                        text: x.intl.string(x.t.ISiXba),
                         size: "sm",
                     }),
-                    (0, r.jsx)(a.Button, {
+                    (0, n.jsx)(r.Button, {
                         variant: "critical-primary",
-                        onClick: n,
+                        onClick: t,
                         size: "sm",
-                        text: b.intl.string(b.t.UgXhdn),
+                        text: x.intl.string(x.t.UgXhdn),
                     }),
                 ],
             }),
         ],
     });
 }
-
-function g(e) {
-    let { onHandleEnableLockdown: t, incidentData: n, guildName: l } = e;
-    return (0, r.jsxs)("div", {
-        className: m.hD,
+function H(e) {
+    let { onHandleEnableLockdown: t, incidentData: l, guildName: i } = e;
+    return (0, n.jsxs)("div", {
+        className: h.hD,
         children: [
-            (0, r.jsxs)("div", {
-                className: m.iD,
+            (0, n.jsxs)("div", {
+                className: h.iD,
                 children: [
-                    (0, r.jsx)(a.lmn, {
-                        size: "md",
-                        className: m.F_,
-                        color: i.A.unsafe_rawColors.BRAND_360.css,
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: m.Tm,
+                    (0, n.jsx)(r.lmn, { size: "md", className: h.F_, color: s.A.unsafe_rawColors.BRAND_360.css }),
+                    (0, n.jsxs)("div", {
+                        className: h.Tm,
                         children: [
-                            (0, r.jsx)(a.Heading, {
-                                className: m.R_,
+                            (0, n.jsx)(r.Heading, {
+                                className: h.R_,
                                 variant: "heading-lg/semibold",
                                 color: "text-brand",
-                                children: p(n),
+                                children: g(l),
                             }),
-                            (0, r.jsx)(a.Text, {
-                                className: m.Ng,
+                            (0, n.jsx)(r.Text, {
+                                className: h.Ng,
                                 variant: "text-sm/medium",
-                                children: (0, d.ql)(n, l),
+                                children: (0, d.ql)(l, i),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Button, {
-                color: o.$n.Colors.BRAND,
-                onClick: t,
-                text: b.intl.string(b.t.e1bMNf),
-                size: "sm",
-            }),
+            (0, n.jsx)(r.Button, { color: a.$n.Colors.BRAND, onClick: t, text: x.intl.string(x.t.e1bMNf), size: "sm" }),
         ],
     });
 }
-
-function h(e) {
-    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: o } = e;
-    return (0, r.jsxs)("div", {
-        className: m.hD,
+function p(e) {
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i, guildName: a } = e;
+    return (0, n.jsxs)("div", {
+        className: h.hD,
         children: [
-            (0, r.jsxs)("div", {
-                className: m.iD,
+            (0, n.jsxs)("div", {
+                className: h.iD,
                 children: [
-                    (0, r.jsx)(a.lmn, {
-                        size: "md",
-                        className: m.F_,
-                        color: i.A.unsafe_rawColors.BRAND_360.css,
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: m.Tm,
+                    (0, n.jsx)(r.lmn, { size: "md", className: h.F_, color: s.A.unsafe_rawColors.BRAND_360.css }),
+                    (0, n.jsxs)("div", {
+                        className: h.Tm,
                         children: [
-                            (0, r.jsx)(a.Heading, {
-                                className: m.R_,
+                            (0, n.jsx)(r.Heading, {
+                                className: h.R_,
                                 variant: "heading-lg/semibold",
                                 color: "text-brand",
-                                children: p(l),
+                                children: g(i),
                             }),
-                            (0, r.jsx)(a.Text, {
-                                className: m.Ng,
+                            (0, n.jsx)(r.Text, {
+                                className: h.Ng,
                                 variant: "text-sm/medium",
-                                children: (0, d.ql)(l, o),
+                                children: (0, d.ql)(i, a),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: m.UD,
+            (0, n.jsxs)("div", {
+                className: h.UD,
                 children: [
-                    (0, r.jsx)(a.Button, {
-                        onClick: n,
-                        text: b.intl.string(b.t.ISiXba),
+                    (0, n.jsx)(r.Button, {
+                        onClick: l,
+                        text: x.intl.string(x.t.ISiXba),
                         variant: "secondary",
                         size: "sm",
                     }),
-                    (0, r.jsx)(a.Button, {
-                        onClick: t,
-                        text: b.intl.string(b.t.e1bMNf),
-                        size: "sm",
-                    }),
+                    (0, n.jsx)(r.Button, { onClick: t, text: x.intl.string(x.t.e1bMNf), size: "sm" }),
                 ],
             }),
         ],
     });
 }
-
-function x(e) {
-    let { guild: t, incidentData: n, isUnderLockdown: i, isRaidDetected: o } = e,
-        b = l.useCallback(() => {
-            (0, a.mMO)(async () => {
-                let e = {
-                    source: c.Eo.MEMBER_SAFETY_PAGE,
-                    location: s.A.MEMBER_SAFETY_PAGE,
-                    alertType: (0, d.$5)(n),
-                };
-                return (n) => {
-                    var l, i;
-                    return (0, r.jsx)(
-                        u.default,
-                        ((l = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (i = i =
-                            {
-                                guildId: t.id,
-                                analyticsData: e,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                              }),
-                        l),
-                    );
-                };
+function f(e) {
+    let { guild: t, incidentData: l, isUnderLockdown: s, isRaidDetected: a } = e,
+        x = i.useCallback(() => {
+            (0, r.mMO)(async () => {
+                let e = { source: C.Eo.MEMBER_SAFETY_PAGE, location: o.A.MEMBER_SAFETY_PAGE, alertType: (0, d.$5)(l) };
+                return (l) => (0, n.jsx)(c.default, { ...l, guildId: t.id, analyticsData: e });
             });
-        }, [t.id, n]),
-        m = l.useCallback(() => {
-            let e = f.A.getLastIncidentAlertMessage(t.id);
-            (0, C.is)(e, t.id);
+        }, [t.id, l]),
+        h = i.useCallback(() => {
+            let e = m.A.getLastIncidentAlertMessage(t.id);
+            (0, u.is)(e, t.id);
         }, [t.id]),
-        p = (() => {
+        g = (() => {
             switch (!0) {
-                case o && i:
+                case a && s:
                     return 3;
-                case o:
+                case a:
                     return 1;
-                case i:
+                case s:
                     return 2;
                 default:
                     return 0;
             }
         })();
-    if (null == t || null == n) return null;
-    switch (p) {
+    if (null == t || null == l) return null;
+    switch (g) {
         case 1:
-            return (0, r.jsx)(j, {
-                onHandleEnableLockdown: b,
-                onHandleReportFalseAlarm: m,
-                incidentData: n,
-            });
+            return (0, n.jsx)(_, { onHandleEnableLockdown: x, onHandleReportFalseAlarm: h, incidentData: l });
         case 2:
-            return (0, r.jsx)(g, {
-                onHandleEnableLockdown: b,
-                incidentData: n,
-                guildName: t.name,
-            });
+            return (0, n.jsx)(H, { onHandleEnableLockdown: x, incidentData: l, guildName: t.name });
         case 3:
-            return (0, r.jsx)(h, {
-                onHandleEnableLockdown: b,
-                onHandleReportFalseAlarm: m,
-                incidentData: n,
+            return (0, n.jsx)(p, {
+                onHandleEnableLockdown: x,
+                onHandleReportFalseAlarm: h,
+                incidentData: l,
                 guildName: t.name,
             });
         default:

@@ -1,6 +1,5 @@
-n.d(t, {
-    c: () => a,
-});
+"use strict";
+n.d(t, { c: () => a });
 var r = n(476575),
     i =
         (n(72290),
@@ -15,10 +14,10 @@ var r = n(476575),
                 a = 0,
                 o = [],
                 l = 0,
-                c = new Set(),
                 u = new Set(),
+                c = new Set(),
                 d = new Set(),
-                f = function (e) {
+                _ = function (e) {
                     var t = o.indexOf(e);
                     t < 0 &&
                         ((t = o.findIndex(function (t) {
@@ -26,16 +25,16 @@ var r = n(476575),
                         })),
                         o.splice(~t ? t : o.length, 0, e));
                 },
-                p = function () {
+                f = function () {
                     if (!t)
                         try {
-                            m(), e(p);
+                            m(), e(f);
                         } catch (e) {
                             console.error(e);
                         }
                 },
-                _ = function () {
-                    t && ((t = !1), 0 == a && ((a = r.now()), e(p)));
+                p = function () {
+                    t && ((t = !1), 0 == a && ((a = r.now()), e(f)));
                 },
                 h = [];
             this.setTimeout = function (e, t) {
@@ -49,17 +48,13 @@ var r = n(476575),
                     a = s(h, function (e) {
                         return e.time > n;
                     }),
-                    o = {
-                        time: n,
-                        handler: e,
-                        cancel: i,
-                    };
-                return h.splice(a, 0, o), _(), o;
+                    o = { time: n, handler: e, cancel: i };
+                return h.splice(a, 0, o), p(), o;
             };
             var m = (this.advance = function () {
                 var e = r.now();
                 if (
-                    (c.size && (c.forEach(f), c.clear()),
+                    (u.size && (u.forEach(_), u.clear()),
                     h.length &&
                         r.batchedUpdates(function () {
                             var t = s(h, function (t) {
@@ -80,11 +75,11 @@ var r = n(476575),
                                     return (l = e.priority), e.idle || e.advance(t), !e.idle;
                                 })),
                                 (l = 0)),
-                                u.size &&
-                                    (u.forEach(function (t) {
+                                c.size &&
+                                    (c.forEach(function (t) {
                                         return t(e);
                                     }),
-                                    u.clear()),
+                                    c.clear()),
                                 d.size &&
                                     ((n = !0),
                                     d.forEach(function (t) {
@@ -96,17 +91,16 @@ var r = n(476575),
                 }
             });
             (this.start = function (e) {
-                l > e.priority ? c.add(e) : (f(e), _());
+                l > e.priority ? u.add(e) : (_(e), p());
             }),
                 (this.onFrame = function (e) {
-                    u.add(e), _();
+                    c.add(e), p();
                 }),
                 (this.onWrite = function (e) {
                     n ? e(a) : d.add(e);
                 });
         };
     })();
-
 function s(e, t) {
     var n = e.findIndex(t);
     return n < 0 ? e.length : n;

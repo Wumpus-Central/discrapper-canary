@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Co: "appIconSelectionContainer__8a3d7",
     Ni: "appIconSelection__8a3d7",

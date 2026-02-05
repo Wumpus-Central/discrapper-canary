@@ -1,3 +1,1 @@
-e.exports = {
-    F: "fastTravelButton_bbe3de",
-};
+e.exports = { F: "fastTravelButton_bbe3de" };

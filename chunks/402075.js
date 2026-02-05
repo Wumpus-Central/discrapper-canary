@@ -1,7 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.Saturation = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.Saturation = void 0);
 var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
@@ -26,18 +24,12 @@ var n = (function () {
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(401919));
-
 function u(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
 var c = (t.Saturation = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
@@ -65,12 +57,7 @@ var c = (t.Saturation = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         n(t, [
@@ -113,10 +100,7 @@ var c = (t.Saturation = (function (e) {
                                         background: "hsl(" + this.props.hsl.h + ",100%, 50%)",
                                         borderRadius: this.props.radius,
                                     },
-                                    white: {
-                                        absolute: "0px 0px 0px 0px",
-                                        borderRadius: this.props.radius,
-                                    },
+                                    white: { absolute: "0px 0px 0px 0px", borderRadius: this.props.radius },
                                     black: {
                                         absolute: "0px 0px 0px 0px",
                                         boxShadow: this.props.shadow,
@@ -138,17 +122,9 @@ var c = (t.Saturation = (function (e) {
                                         transform: "translate(-2px, -2px)",
                                     },
                                 },
-                                custom: {
-                                    color: r,
-                                    white: n,
-                                    black: o,
-                                    pointer: l,
-                                    circle: s,
-                                },
+                                custom: { color: r, white: n, black: o, pointer: l, circle: s },
                             },
-                            {
-                                custom: !!this.props.style,
-                            },
+                            { custom: !!this.props.style },
                         );
                     return a.default.createElement(
                         "div",
@@ -168,24 +144,14 @@ var c = (t.Saturation = (function (e) {
                         ),
                         a.default.createElement(
                             "div",
-                            {
-                                style: u.white,
-                                className: "saturation-white",
-                            },
-                            a.default.createElement("div", {
-                                style: u.black,
-                                className: "saturation-black",
-                            }),
+                            { style: u.white, className: "saturation-white" },
+                            a.default.createElement("div", { style: u.black, className: "saturation-black" }),
                             a.default.createElement(
                                 "div",
-                                {
-                                    style: u.pointer,
-                                },
+                                { style: u.pointer },
                                 this.props.pointer
                                     ? a.default.createElement(this.props.pointer, this.props)
-                                    : a.default.createElement("div", {
-                                          style: u.circle,
-                                      }),
+                                    : a.default.createElement("div", { style: u.circle }),
                             ),
                         ),
                     );

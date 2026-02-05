@@ -1,56 +1,51 @@
-n.d(t, {
-    A: () => m,
-    G: () => g,
-});
-var r,
-    i = n(64700),
-    l = n(311907),
-    a = n(285059),
+n.d(t, { A: () => g, G: () => p });
+var i,
+    r = n(64700),
+    a = n(311907),
+    l = n(285059),
     s = n(82005),
     o = n(508654),
-    c = n(221094),
-    u = n(320426),
-    d = n(915043),
-    p = n(788866),
-    f = n(992250),
-    h = n(15438),
-    A = n(652215),
-    g =
-        (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = "ENABLE_PUBLIC_GUILD"),
-        (r[(r.MAX_MEMBER_COUNT = 1)] = "MAX_MEMBER_COUNT"),
-        (r[(r.GUILD_LIVE_CHANNEL = 2)] = "GUILD_LIVE_CHANNEL"),
-        (r[(r.GUILD_MFA_WARNING = 3)] = "GUILD_MFA_WARNING"),
-        (r[(r.COMMANDS_MIGRATION = 4)] = "COMMANDS_MIGRATION"),
-        (r[(r.APPLICATION_SUBSCRIPTION_EXPIRATION = 5)] = "APPLICATION_SUBSCRIPTION_EXPIRATION"),
-        (r[(r.HUB_STUDY_ROOM = 6)] = "HUB_STUDY_ROOM"),
-        (r[(r.CLAN_UPSELL = 7)] = "CLAN_UPSELL"),
-        r);
-
-function m(e) {
-    var t;
-    let n = null != (t = null == e ? void 0 : e.id) ? t : A.dJq,
-        r = (0, l.bG)([p.A], () => p.A.isVisible(e)),
-        g = (0, l.bG)([h.A], () => h.A.isVisible(e)),
-        m = (0, s.C)(n),
-        b = (0, l.bG)([f.A], () => f.A.isVisible(e)),
-        _ = u.A.useShouldShowChannelNotice(n),
-        E = (0, d.$s)(e),
-        { enableStudyGroup: O } = (0, c.y)(e),
-        y = E.length > 0,
-        I = O && !(null == e ? void 0 : e.features.has(A.GuildFeatures.HUB)),
-        v = (0, o.WG)(n);
+    d = n(221094),
+    c = n(320426),
+    u = n(915043),
+    A = n(788866),
+    h = n(992250),
+    _ = n(15438),
+    m = n(652215),
+    p =
+        (((i = {})[(i.ENABLE_PUBLIC_GUILD = 0)] = "ENABLE_PUBLIC_GUILD"),
+        (i[(i.MAX_MEMBER_COUNT = 1)] = "MAX_MEMBER_COUNT"),
+        (i[(i.GUILD_LIVE_CHANNEL = 2)] = "GUILD_LIVE_CHANNEL"),
+        (i[(i.GUILD_MFA_WARNING = 3)] = "GUILD_MFA_WARNING"),
+        (i[(i.COMMANDS_MIGRATION = 4)] = "COMMANDS_MIGRATION"),
+        (i[(i.APPLICATION_SUBSCRIPTION_EXPIRATION = 5)] = "APPLICATION_SUBSCRIPTION_EXPIRATION"),
+        (i[(i.HUB_STUDY_ROOM = 6)] = "HUB_STUDY_ROOM"),
+        (i[(i.CLAN_UPSELL = 7)] = "CLAN_UPSELL"),
+        i);
+function g(e) {
+    let t = e?.id ?? m.dJq,
+        n = (0, a.bG)([A.A], () => A.A.isVisible(e)),
+        i = (0, a.bG)([_.A], () => _.A.isVisible(e)),
+        p = (0, s.C)(t),
+        g = (0, a.bG)([h.A], () => h.A.isVisible(e)),
+        E = c.A.useShouldShowChannelNotice(t),
+        f = (0, u.$s)(e),
+        { enableStudyGroup: I } = (0, d.y)(e),
+        C = f.length > 0,
+        N = I && !e?.features.has(m.GuildFeatures.HUB),
+        T = (0, o.WG)(t);
     if (
-        (i.useEffect(() => {
-            a.A.getGuildEventsForCurrentUser(n);
-        }, [n]),
-        r)
+        (r.useEffect(() => {
+            l.A.getGuildEventsForCurrentUser(t);
+        }, [t]),
+        n)
     )
         return 0;
-    if (g) return 1;
-    if (m || null != v) return 2;
-    if (b) return 3;
-    if (_) return 4;
-    else if (y) return 5;
-    else if (I) return 6;
+    if (i) return 1;
+    if (p || null != T) return 2;
+    if (g) return 3;
+    if (E) return 4;
+    else if (C) return 5;
+    else if (N) return 6;
     return null;
 }

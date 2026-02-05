@@ -1,29 +1,24 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(311907),
     i = n(73153),
     a = n(626584),
     s = n(927813),
     o = n(723176);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = new a.A("FileSystemStore"),
+let l = new a.A("FileSystemStore"),
     u = 1048576,
-    d = 10 * s.A.Millis.MINUTE;
-class f extends r.Ay.Store {
+    c = 10 * s.A.Millis.MINUTE;
+class d extends r.Ay.Store {
+    isLowDisk = !1;
+    constructor() {
+        super(i.h, {
+            APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
+            POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+        }),
+            this.refresh(),
+            this.waitFor(o.A),
+            setInterval(() => this.refresh(), c);
+    }
     handlePostConnectionOpen() {
         return this.refresh(), !1;
     }
@@ -31,32 +26,21 @@ class f extends r.Ay.Store {
         return "active" !== e.state && this.refresh(), !1;
     }
     async refresh() {
-        var e, t;
-        let n = await (null == (t = o.A.database()) || null == (e = t.fsInfo())
-            ? void 0
-            : e.catch((e) => c.warn("couldn't get fs info", e)));
-        if (null != n) {
-            let e =
-                    n.fs.available < 256 * u ||
-                    n.fs.available < 3 * n.database.used ||
-                    n.fs.available < 2 * n.database.total,
-                t =
-                    n.fs.available > 768 * u &&
-                    n.fs.available > 4 * n.database.used &&
-                    n.fs.available > 4 * n.database.total,
-                r = !!e || (!t && null);
+        let e = await o.A.database()
+            ?.fsInfo()
+            ?.catch((e) => l.warn("couldn't get fs info", e));
+        if (null != e) {
+            let t =
+                    e.fs.available < 256 * u ||
+                    e.fs.available < 3 * e.database.used ||
+                    e.fs.available < 2 * e.database.total,
+                n =
+                    e.fs.available > 768 * u &&
+                    e.fs.available > 4 * e.database.used &&
+                    e.fs.available > 4 * e.database.total,
+                r = !!t || (!n && null);
             null != r && this.isLowDisk !== r && ((this.isLowDisk = r), this.emitChange());
         }
     }
-    constructor() {
-        super(i.h, {
-            APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
-            POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
-        }),
-            l(this, "isLowDisk", !1),
-            this.refresh(),
-            this.waitFor(o.A),
-            setInterval(() => this.refresh(), d);
-    }
 }
-let p = new f();
+let _ = new d();

@@ -1,12 +1,9 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => o });
 var r = n(682213);
-
 function i(e) {
     return e === Object(e) && 0 !== Object.keys(e).length;
 }
-
 function a(e, t) {
     void 0 === t && (t = "auto");
     var n = "scrollBehavior" in document.body.style;
@@ -14,28 +11,11 @@ function a(e, t) {
         var r = e.el,
             i = e.top,
             a = e.left;
-        r.scroll && n
-            ? r.scroll({
-                  top: i,
-                  left: a,
-                  behavior: t,
-              })
-            : ((r.scrollTop = i), (r.scrollLeft = a));
+        r.scroll && n ? r.scroll({ top: i, left: a, behavior: t }) : ((r.scrollTop = i), (r.scrollLeft = a));
     });
 }
-
 function s(e) {
-    return !1 === e
-        ? {
-              block: "end",
-              inline: "nearest",
-          }
-        : i(e)
-          ? e
-          : {
-                block: "start",
-                inline: "nearest",
-            };
+    return !1 === e ? { block: "end", inline: "nearest" } : i(e) ? e : { block: "start", inline: "nearest" };
 }
 let o = function (e, t) {
     var n = e.isConnected || e.ownerDocument.documentElement.contains(e);

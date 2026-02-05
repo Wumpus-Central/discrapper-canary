@@ -1,60 +1,36 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(667532);
-var r = n(627968),
+n.d(t, { A: () => A }), n(667532);
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(73939),
-    s = n(397927),
+    r = n(397927),
     o = n(734057),
-    c = n(131677),
-    u = n(383501),
-    d = n(50400),
-    f = n(985018);
-
-function p() {
-    (0, i.bG)([o.A], () => o.A.getPrivateChannelsVersion());
+    d = n(131677),
+    c = n(383501),
+    u = n(50400),
+    h = n(985018);
+function A() {
+    (0, s.bG)([o.A], () => o.A.getPrivateChannelsVersion());
     let e = o.A.getMutablePrivateChannels(),
-        t = (0, i.yK)([c.A], () => c.A.getUnreadPrivateChannelIds()),
-        { selectedVoiceGuildId: n, selectedVoiceChannelId: p } = (0, i.cf)([u.A], () => ({
-            selectedVoiceGuildId: u.A.getGuildId(),
-            selectedVoiceChannelId: u.A.getChannelId(),
+        t = (0, s.yK)([d.A], () => d.A.getUnreadPrivateChannelIds()),
+        { selectedVoiceGuildId: n, selectedVoiceChannelId: A } = (0, s.cf)([c.A], () => ({
+            selectedVoiceGuildId: c.A.getGuildId(),
+            selectedVoiceChannelId: c.A.getChannelId(),
         })),
-        h = t.map((t) => {
+        g = t.map((t) => {
             let n = e[t];
-            return null == n || n.id === p
-                ? null
-                : (0, r.jsx)(
-                      d.A,
-                      {
-                          channel: n,
-                      },
-                      n.id,
-                  );
+            return null == n || n.id === A ? null : (0, i.jsx)(u.A, { channel: n }, n.id);
         }),
-        b = null == n && null != p ? e[p] : null;
+        m = null == n && null != A ? e[A] : null;
     return (
-        null != b &&
-            h.unshift(
-                (0, r.jsx)(
-                    d.A,
-                    {
-                        channel: b,
-                    },
-                    b.id,
-                ),
-            ),
-        (0, r.jsx)(s.BJc, {
+        null != m && g.unshift((0, i.jsx)(u.A, { channel: m }, m.id)),
+        (0, i.jsx)(r.BJc, {
             id: "guild-list-unread-dms",
             role: "group",
-            "aria-label": f.intl.string(f.t.YUU0RF),
+            "aria-label": h.intl.string(h.t.YUU0RF),
             gap: "xs",
-            hidden: h.length < 1,
-            children: (0, r.jsx)(a.F, {
-                component: l.Fragment,
-                children: h,
-            }),
+            hidden: g.length < 1,
+            children: (0, i.jsx)(a.F, { component: l.Fragment, children: g }),
         })
     );
 }

@@ -1,36 +1,35 @@
-n.d(t, {
-    v: () => u,
-}),
-    n(734808),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { v: () => c });
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(324281),
     o = n(453360),
     l = n(414525);
-class c extends s.G {
+class u extends s.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", [
+            { no: 1, name: "asset_url", kind: "scalar", T: 9 },
+            { no: 2, name: "header", kind: "scalar", T: 9 },
+            { no: 3, name: "body", kind: "scalar", T: 9 },
+            { no: 4, name: "background_asset_url", kind: "scalar", T: 9 },
+            { no: 5, name: "gradient", kind: "message", T: () => l.H },
+            { no: 6, name: "text_color", kind: "scalar", T: 9 },
+            { no: 7, name: "additional_terms", kind: "scalar", T: 9 },
+            { no: 8, name: "asset", kind: "message", T: () => o.i },
+            { no: 9, name: "background_asset", kind: "message", T: () => o.i },
+        ]);
+    }
     create(e) {
-        let t = {
-            assetUrl: "",
-            header: "",
-            body: "",
-            backgroundAssetUrl: "",
-            textColor: "",
-            additionalTerms: "",
-        };
+        let t = { assetUrl: "", header: "", body: "", backgroundAssetUrl: "", textColor: "", additionalTerms: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -65,11 +64,9 @@ class c extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
-                    let c = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, c);
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let u = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, u);
             }
         }
         return a;
@@ -88,63 +85,5 @@ class c extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", [
-            {
-                no: 1,
-                name: "asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 2,
-                name: "header",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 3,
-                name: "body",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 4,
-                name: "background_asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 5,
-                name: "gradient",
-                kind: "message",
-                T: () => l.H,
-            },
-            {
-                no: 6,
-                name: "text_color",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 7,
-                name: "additional_terms",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 8,
-                name: "asset",
-                kind: "message",
-                T: () => o.i,
-            },
-            {
-                no: 9,
-                name: "background_asset",
-                kind: "message",
-                T: () => o.i,
-            },
-        ]);
-    }
 }
-let u = new c();
+let c = new u();

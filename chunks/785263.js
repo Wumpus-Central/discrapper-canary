@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     e1: "clipContainer__841c8",
     kL: "container__841c8",

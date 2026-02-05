@@ -1,65 +1,58 @@
-n.d(t, {
-    RG: () => p,
-    Uo: () => f,
-}),
-    n(321073),
-    n(896048);
-var r = n(64700),
+n.d(t, { RG: () => A, Uo: () => h }), n(321073);
+var i = n(64700),
     l = n(735438),
-    i = n(311907),
+    s = n(311907),
     a = n(59520),
-    s = n(313961),
+    r = n(313961),
     o = n(996439),
-    c = n(63995),
-    u = n(113783),
-    d = n(69407);
-
-function f(e) {
-    let t = (0, u.zy)(e, d.ip.AUDIENCE),
-        [n, l] = r.useState(!1);
+    d = n(63995),
+    c = n(113783),
+    u = n(69407);
+function h(e) {
+    let t = (0, c.zy)(e, u.ip.AUDIENCE),
+        [n, l] = i.useState(!1);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             t > 100 ? l(!0) : t < 75 && l(!1);
         }, [t]),
         5e3 * !!n
     );
 }
-
-function p(e, t, n) {
-    let u,
-        f,
-        p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        h =
-            ((u = (0, i.bG)([c.A], () => [e, c.A.getParticipantsVersion(e)], [e], o.D)),
-            (f = (0, i.bG)([s.A], () => s.A.getSelectedParticipantId(e), [e])),
-            r.useMemo(() => {
+function A(e, t, n) {
+    let c,
+        h,
+        A = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        g =
+            ((c = (0, s.bG)([d.A], () => [e, d.A.getParticipantsVersion(e)], [e], o.D)),
+            (h = (0, s.bG)([r.A], () => r.A.getSelectedParticipantId(e), [e])),
+            i.useMemo(() => {
                 let n = [],
-                    r = [],
-                    i = -1,
+                    i = [],
+                    s = -1,
                     a = [];
-                if (p)
-                    for (let t of c.A.getMutableParticipants(e, d.ip.SPEAKER))
-                        if (t.type === d.wY.STREAM) t.id !== f && a.push(t), i++;
+                if (A)
+                    for (let t of d.A.getMutableParticipants(e, u.ip.SPEAKER))
+                        if (t.type === u.wY.STREAM) t.id !== h && a.push(t), s++;
                         else break;
-                let s = (e, t, a) => {
-                        let s = a ? e.filter((e, t) => e.id !== f && t > i) : e,
-                            o = (0, l.chunk)(s, t);
-                        r.push(o), n.push(o.length);
+                let r = (e, t, a) => {
+                        let r = a ? e.filter((e, t) => e.id !== h && t > s) : e,
+                            o = (0, l.chunk)(r, t);
+                        i.push(o), n.push(o.length);
                     },
-                    o = null != f ? c.A.getParticipant(e, f) : null;
+                    o = null != h ? d.A.getParticipant(e, h) : null;
                 return (
-                    (null == o ? void 0 : o.speaker) ? s([o], 1, !1) : s([], 1, !1),
-                    [d.ip.SPEAKER, d.ip.AUDIENCE].forEach((e) => {
-                        s(c.A.getMutableParticipants(u[0], e), t[e], e === d.ip.SPEAKER);
+                    o?.speaker ? r([o], 1, !1) : r([], 1, !1),
+                    [u.ip.SPEAKER, u.ip.AUDIENCE].forEach((e) => {
+                        r(d.A.getMutableParticipants(c[0], e), t[e], e === u.ip.SPEAKER);
                     }),
-                    s(a, 1, !1),
-                    [n, r]
+                    r(a, 1, !1),
+                    [n, i]
                 );
-            }, [u, t, f, p, e])),
-        [b, g] = h,
-        [m, A] = (0, a.J)(h, n, [t[d.ip.AUDIENCE]]);
+            }, [c, t, h, A, e])),
+        [m, p] = g,
+        [_, x] = (0, a.J)(g, n, [t[u.ip.AUDIENCE]]);
     return [
-        [b[3 * !!p], b[1], m[2]],
-        [g[3 * !!p], g[1], A[2]],
+        [m[3 * !!A], m[1], _[2]],
+        [p[3 * !!A], p[1], x[2]],
     ];
 }

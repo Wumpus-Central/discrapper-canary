@@ -1,30 +1,14 @@
 e.exports = function (e) {
     let t = {
             className: "variable",
-            variants: [
-                {
-                    begin: "\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)",
-                },
-                {
-                    begin: "\\$_[A-Z]+",
-                },
-            ],
+            variants: [{ begin: "\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)" }, { begin: "\\$_[A-Z]+" }],
             relevance: 0,
         },
         n = [e.C_BLOCK_COMMENT_MODE, e.HASH_COMMENT_MODE, e.COMMENT("--", "$"), e.COMMENT("[^:]//", "$")],
         r = e.inherit(e.TITLE_MODE, {
-            variants: [
-                {
-                    begin: "\\b_*rig[A-Z][A-Za-z0-9_\\-]*",
-                },
-                {
-                    begin: "\\b_[a-z0-9\\-]+",
-                },
-            ],
+            variants: [{ begin: "\\b_*rig[A-Z][A-Za-z0-9_\\-]*" }, { begin: "\\b_[a-z0-9\\-]+" }],
         }),
-        i = e.inherit(e.TITLE_MODE, {
-            begin: "\\b([A-Za-z0-9_\\-]+)\\b",
-        });
+        i = e.inherit(e.TITLE_MODE, { begin: "\\b([A-Za-z0-9_\\-]+)\\b" });
     return {
         name: "LiveCode",
         case_insensitive: !1,
@@ -38,24 +22,14 @@ e.exports = function (e) {
         },
         contains: [
             t,
-            {
-                className: "keyword",
-                begin: "\\bend\\sif\\b",
-            },
+            { className: "keyword", begin: "\\bend\\sif\\b" },
             {
                 className: "function",
                 beginKeywords: "function",
                 end: "$",
                 contains: [t, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, r],
             },
-            {
-                className: "function",
-                begin: "\\bend\\s+",
-                end: "$",
-                keywords: "end",
-                contains: [i, r],
-                relevance: 0,
-            },
+            { className: "function", begin: "\\bend\\s+", end: "$", keywords: "end", contains: [i, r], relevance: 0 },
             {
                 beginKeywords: "command on",
                 end: "$",
@@ -63,18 +37,7 @@ e.exports = function (e) {
             },
             {
                 className: "meta",
-                variants: [
-                    {
-                        begin: "<\\?(rev|lc|livecode)",
-                        relevance: 10,
-                    },
-                    {
-                        begin: "<\\?",
-                    },
-                    {
-                        begin: "\\?>",
-                    },
-                ],
+                variants: [{ begin: "<\\?(rev|lc|livecode)", relevance: 10 }, { begin: "<\\?" }, { begin: "\\?>" }],
             },
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,

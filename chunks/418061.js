@@ -1,3 +1,1 @@
-e.exports = {
-    L: "gameCoverOverflowCount_fc1255",
-};
+e.exports = { L: "gameCoverOverflowCount_fc1255" };

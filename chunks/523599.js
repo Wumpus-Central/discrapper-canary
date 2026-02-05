@@ -1,180 +1,164 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(264879),
-    n(321073),
-    n(896048),
-    n(667532);
-var l,
-    r,
-    a = n(735438),
-    i = n.n(a),
-    s = n(136722),
-    o = n(311907),
-    c = n(73153),
-    u = n(411153),
+n.d(t, { A: () => P }), n(321073), n(667532);
+var l = n(735438),
+    r = n.n(l),
+    a = n(136722),
+    i = n(311907),
+    s = n(73153),
+    o = n(411153),
     E = n(95701),
-    d = n(34457),
-    _ = n(696451),
-    g = n(317525),
-    A = n(71393),
-    T = n(652215);
-let f = s.kg(
-        T.xBc.KICK_MEMBERS,
-        T.xBc.BAN_MEMBERS,
-        T.xBc.ADMINISTRATOR,
-        T.xBc.MANAGE_CHANNELS,
-        T.xBc.MANAGE_GUILD,
-        T.xBc.MANAGE_MESSAGES,
-        T.xBc.MANAGE_NICKNAMES,
-        T.xBc.MANAGE_ROLES,
-        T.xBc.MANAGE_WEBHOOKS,
-        T.xBc.MANAGE_GUILD_EXPRESSIONS,
-        T.xBc.MOVE_MEMBERS,
-        T.xBc.MUTE_MEMBERS,
-        T.xBc.DEAFEN_MEMBERS,
+    u = n(34457),
+    c = n(696451),
+    _ = n(317525),
+    d = n(71393),
+    g = n(652215);
+let A = a.kg(
+        g.xBc.KICK_MEMBERS,
+        g.xBc.BAN_MEMBERS,
+        g.xBc.ADMINISTRATOR,
+        g.xBc.MANAGE_CHANNELS,
+        g.xBc.MANAGE_GUILD,
+        g.xBc.MANAGE_MESSAGES,
+        g.xBc.MANAGE_NICKNAMES,
+        g.xBc.MANAGE_ROLES,
+        g.xBc.MANAGE_WEBHOOKS,
+        g.xBc.MANAGE_GUILD_EXPRESSIONS,
+        g.xBc.MOVE_MEMBERS,
+        g.xBc.MUTE_MEMBERS,
+        g.xBc.DEAFEN_MEMBERS,
     ),
-    h = null,
+    T = null,
     I = [],
-    O = [],
     N = [],
+    h = [],
     m = [],
     S = [],
-    p = [],
-    b = [],
     G = [],
+    O = [],
+    C = [],
     R = !0,
-    D = !1,
     L = !1,
-    x = !0,
-    C = !1,
+    D = !1,
+    f = !0,
+    x = !1,
     M = null,
-    v = T.F_X.ALL,
-    j = null,
-    U = {},
-    y = 0;
-
-function P(e) {
+    p = g.F_X.ALL,
+    U = null,
+    k = {},
+    b = 0;
+function F(e) {
     let t = [],
         n = 0;
     return (
         e.reverse().forEach((e) => {
-            var l, r, a;
-            let s = [],
-                o = null,
-                c = null,
-                d = null;
-            if ((null != e.reason && s.push(new u.QO(T.gGk.REASON, null, e.reason)), null != e.changes))
+            let l = [],
+                a = null,
+                i = null,
+                s = null;
+            if ((null != e.reason && l.push(new o.QO(g.gGk.REASON, null, e.reason)), null != e.changes))
                 for (let t of e.changes) {
-                    let e = new u.QO(t.key, t.old_value, t.new_value);
-                    s.push(e),
-                        e.key === T.gGk.NAME
-                            ? (o = e)
-                            : e.key === T.gGk.TYPE
-                              ? (d = e)
-                              : e.key === T.gGk.TITLE && (c = e);
+                    let e = new o.QO(t.key, t.old_value, t.new_value);
+                    l.push(e),
+                        e.key === g.gGk.NAME
+                            ? (a = e)
+                            : e.key === g.gGk.TYPE
+                              ? (s = e)
+                              : e.key === g.gGk.TITLE && (i = e);
                 }
-            if (e.action_type === T.F_X.MEMBER_PRUNE) {
+            if (e.action_type === g.F_X.MEMBER_PRUNE) {
                 let t =
                         null != e && null != e.options && null != e.options.delete_member_days
                             ? e.options.delete_member_days
                             : 1,
-                    n = new u.QO(T.gGk.PRUNE_DELETE_DAYS, null, t);
-                s.push(n);
+                    n = new o.QO(g.gGk.PRUNE_DELETE_DAYS, null, t);
+                l.push(n);
             }
-            e.action_type === T.F_X.AUTO_MODERATION_BLOCK_MESSAGE &&
-                (null == (r = e.options) ? void 0 : r.auto_moderation_rule_name) != null &&
-                s.push(new u.QO(T.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)),
-                e.action_type === T.F_X.VOICE_CHANNEL_STATUS_CREATE &&
-                    (null == (l = e.options) ? void 0 : l.status) != null &&
-                    s.push(new u.QO(T.gGk.STATUS, null, e.options.status));
-            let _ = new u.Ay({
+            e.action_type === g.F_X.AUTO_MODERATION_BLOCK_MESSAGE &&
+                e.options?.auto_moderation_rule_name != null &&
+                l.push(new o.QO(g.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)),
+                e.action_type === g.F_X.VOICE_CHANNEL_STATUS_CREATE &&
+                    e.options?.status != null &&
+                    l.push(new o.QO(g.gGk.STATUS, null, e.options.status));
+            let u = new o.Ay({
                     id: e.id,
                     action: e.action_type,
                     targetId: e.target_id,
                     userId: e.user_id,
-                    changes: s,
+                    changes: l,
                     options: e.options,
                 }),
-                g = t[0];
+                c = t[0];
             if (
                 (function (e, t, n) {
                     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
-                        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
+                        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
                     return (
                         null != e &&
                         e.action === t.action &&
                         e.targetId === t.targetId &&
                         e.userId === t.userId &&
-                        i().isEqual(e.options, t.options) &&
+                        r().isEqual(e.options, t.options) &&
                         t.timestampStart.diff(e.timestampStart, "minutes") < l &&
-                        n < r &&
-                        t.targetType !== T.GaG.INVITE &&
-                        t.action !== T.F_X.MESSAGE_DELETE &&
-                        t.action !== T.F_X.MESSAGE_BULK_DELETE &&
-                        t.action !== T.F_X.MESSAGE_PIN &&
-                        t.action !== T.F_X.MESSAGE_UNPIN &&
-                        t.action !== T.F_X.MEMBER_MOVE &&
-                        t.action !== T.F_X.MEMBER_DISCONNECT &&
-                        t.action !== T.F_X.BOT_ADD &&
-                        t.action !== T.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE &&
-                        t.action !== T.F_X.MEMBER_PRUNE
+                        n < a &&
+                        t.targetType !== g.GaG.INVITE &&
+                        t.action !== g.F_X.MESSAGE_DELETE &&
+                        t.action !== g.F_X.MESSAGE_BULK_DELETE &&
+                        t.action !== g.F_X.MESSAGE_PIN &&
+                        t.action !== g.F_X.MESSAGE_UNPIN &&
+                        t.action !== g.F_X.MEMBER_MOVE &&
+                        t.action !== g.F_X.MEMBER_DISCONNECT &&
+                        t.action !== g.F_X.BOT_ADD &&
+                        t.action !== g.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE &&
+                        t.action !== g.F_X.MEMBER_PRUNE
                     );
-                })(g, _, n)
+                })(c, u, n)
             ) {
-                (t[0] = g.merge({
-                    changes: [...g.changes, ..._.changes],
-                    timestampEnd: _.timestampStart,
-                })),
-                    n++;
+                (t[0] = c.merge({ changes: [...c.changes, ...u.changes], timestampEnd: u.timestampStart })), n++;
                 return;
             }
-            if (_.actionType === T.RWi.DELETE && (null != o || null != c)) {
-                let e = null != (a = null == o ? void 0 : o.oldValue) ? a : null == c ? void 0 : c.oldValue;
-                (_.targetType === T.GaG.CHANNEL || _.targetType === T.GaG.CHANNEL_OVERWRITE) &&
-                    null !== d &&
-                    (0, E.tr)(d.oldValue) &&
-                    (e = "#".concat(e)),
-                    null == U[_.targetType]
-                        ? (U[_.targetType] = {
-                              [_.targetId]: e,
-                          })
-                        : (U[_.targetType][_.targetId] = e);
+            if (u.actionType === g.RWi.DELETE && (null != a || null != i)) {
+                let e = a?.oldValue ?? i?.oldValue;
+                (u.targetType === g.GaG.CHANNEL || u.targetType === g.GaG.CHANNEL_OVERWRITE) &&
+                    null !== s &&
+                    (0, E.tr)(s.oldValue) &&
+                    (e = `#${e}`),
+                    null == k[u.targetType]
+                        ? (k[u.targetType] = { [u.targetId]: e })
+                        : (k[u.targetType][u.targetId] = e);
             }
-            (n = 0), t.unshift(_);
+            (n = 0), t.unshift(u);
         }),
         t
     );
 }
-
-function k(e) {
+function j(e) {
     let { section: t } = e;
-    if (t !== T.BEX.AUDIT_LOG) return !1;
-    let n = _.Ay.getMembers(h),
-        l = A.A.getGuild(h),
-        r = null != h ? g.A.getUnsafeMutableRoles(h) : void 0;
-    N = i()(n)
+    if (t !== g.BEX.AUDIT_LOG) return !1;
+    let n = c.Ay.getMembers(T),
+        l = d.A.getGuild(T),
+        a = null != T ? _.A.getUnsafeMutableRoles(T) : void 0;
+    h = r()(n)
         .filter((e) =>
             e.roles.some((t) => {
                 if (null != l) {
                     if (e.userId === l.ownerId) return !0;
-                    let n = null == r ? void 0 : r[t];
-                    return null != n && (0, d.sx)(n, f);
+                    let n = a?.[t];
+                    return null != n && (0, u.sx)(n, A);
                 }
             }),
         )
         .map((e) => e.userId)
         .value();
 }
-class F extends (l = o.Ay.Store) {
+class v extends i.Ay.Store {
+    static displayName = "GuildSettingsAuditLogStore";
     initialize() {
-        this.waitFor(A.A, g.A, _.Ay);
+        this.waitFor(d.A, _.A, c.Ay);
     }
     get logs() {
         return I;
     }
     get integrations() {
-        return O;
+        return N;
     }
     get webhooks() {
         return m;
@@ -183,82 +167,73 @@ class F extends (l = o.Ay.Store) {
         return S;
     }
     get automodRules() {
-        return p;
+        return G;
     }
     get threads() {
-        return b;
+        return O;
     }
     get applicationCommands() {
-        return G;
+        return C;
     }
     get isInitialLoading() {
         return R;
     }
     get isLoading() {
-        return D;
-    }
-    get isLoadingNextPage() {
         return L;
     }
+    get isLoadingNextPage() {
+        return D;
+    }
     get hasOlderLogs() {
-        return x;
+        return f;
     }
     get hasError() {
-        return C;
+        return x;
     }
     get userIds() {
-        return N;
+        return h;
     }
     get userIdFilter() {
         return M;
     }
     get targetIdFilter() {
-        return j;
-    }
-    get actionFilter() {
-        return v;
-    }
-    get deletedTargets() {
         return U;
     }
+    get actionFilter() {
+        return p;
+    }
+    get deletedTargets() {
+        return k;
+    }
     get groupedFetchCount() {
-        return y;
+        return b;
     }
 }
-(r = "displayName") in F
-    ? Object.defineProperty(F, r, {
-          value: "GuildSettingsAuditLogStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (F[r] = "GuildSettingsAuditLogStore");
-let w = new F(c.h, {
+let P = new v(s.h, {
     AUDIT_LOG_FETCH_START: function () {
-        D = !0;
+        L = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
-        var t;
-        (y = 0),
+        (b = 0),
             (R = !1),
-            (D = !1),
-            (x = !0),
-            (C = !1),
-            (I = P(e.logs)),
-            (O = e.integrations),
+            (L = !1),
+            (f = !0),
+            (x = !1),
+            (I = F(e.logs)),
+            (N = e.integrations),
             (m = e.webhooks),
             (S = e.guildScheduledEvents),
-            (p = null != (t = e.automodRules) ? t : []),
-            (b = e.threads),
-            (G = e.applicationCommands),
-            e.logs.length < T.$jw && (x = !1);
+            (G = e.automodRules ?? []),
+            (O = e.threads),
+            (C = e.applicationCommands),
+            e.logs.length < g.$jw && (f = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
-        (D = !1), (C = !0), (I = []);
+        (L = !1), (x = !0), (I = []);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        (L = !0), t && y++;
+        (D = !0), t && b++;
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -271,26 +246,26 @@ let w = new F(c.h, {
             applicationCommands: s,
         } = e;
         if (
-            ((L = !1),
-            (O = n),
+            ((D = !1),
+            (N = n),
             (m = l),
             (S = r),
-            (p = a),
-            (b = i),
-            (G = s),
-            (0 === t.length || t.length < T.$jw) && (x = !1),
+            (G = a),
+            (O = i),
+            (C = s),
+            (0 === t.length || t.length < g.$jw) && (f = !1),
             t.length > 0)
         ) {
-            let e = P(t);
+            let e = F(t);
             I = [...I, ...e];
         }
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_FAIL: function () {
-        L = !1;
+        D = !1;
     },
     AUDIT_LOG_FILTER_BY_ACTION: function (e) {
         let { action: t } = e;
-        v = t;
+        p = t;
     },
     AUDIT_LOG_FILTER_BY_USER: function (e) {
         let { userId: t } = e;
@@ -298,32 +273,26 @@ let w = new F(c.h, {
     },
     AUDIT_LOG_FILTER_BY_TARGET: function (e) {
         let { targetId: t } = e;
-        j = t;
+        U = t;
     },
-    GUILD_SETTINGS_SET_SECTION: k,
+    GUILD_SETTINGS_SET_SECTION: j,
     GUILD_SETTINGS_INIT: function (e) {
         let { guildId: t, section: n } = e;
-        return (
-            (h = t),
-            (j = null),
-            k({
-                section: n,
-            })
-        );
+        return (T = t), (U = null), j({ section: n });
     },
     GUILD_SETTINGS_CLOSE: function () {
         (I = []),
-            (N = []),
-            (v = T.F_X.ALL),
+            (h = []),
+            (p = g.F_X.ALL),
             (M = null),
-            (j = null),
-            (U = {}),
-            (y = 0),
+            (U = null),
+            (k = {}),
+            (b = 0),
             (R = !0),
-            (O = []),
+            (N = []),
             (m = []),
             (S = []),
-            (p = []),
-            (b = []);
+            (G = []),
+            (O = []);
     },
 });

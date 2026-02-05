@@ -1,61 +1,47 @@
-n.d(t, {
-    F: () => f,
-    J: () => p,
-});
-var r = n(205369),
+n.d(t, { F: () => h, J: () => A });
+var i = n(205369),
     l = n(22174),
-    i = n(686956),
+    s = n(686956),
     a = n(71393),
-    s = n(576705),
+    r = n(576705),
     o = n(977997),
-    c = n(607567),
-    u = n(652215);
-let d = "DRAGGABLE_USER";
-
-function f(e) {
-    return (0, r.T)(
-        d,
+    d = n(607567),
+    c = n(652215);
+let u = "DRAGGABLE_USER";
+function h(e) {
+    return (0, i.T)(
+        u,
         {
             canDrop(e) {
-                var t, n;
-                let { channel: r } = e,
-                    l = r.getGuildId(),
-                    i = null != (t = null == (n = a.A.getGuild(l)) ? void 0 : n.maxVideoChannelUsers) ? t : -1,
-                    d = c.Ay.countVoiceStatesForChannel(r.id),
-                    f = null != l && o.A.hasVideo(r.id) && i > 0 && d >= i + 1;
-                return s.A.can(u.xBc.MOVE_MEMBERS, r) && s.A.can(u.xBc.CONNECT, r) && !f;
+                let { channel: t } = e,
+                    n = t.getGuildId(),
+                    i = a.A.getGuild(n)?.maxVideoChannelUsers ?? -1,
+                    l = d.Ay.countVoiceStatesForChannel(t.id),
+                    s = null != n && o.A.hasVideo(t.id) && i > 0 && l >= i + 1;
+                return r.A.can(c.xBc.MOVE_MEMBERS, t) && r.A.can(c.xBc.CONNECT, t) && !s;
             },
             drop(e, t) {
                 let { channel: n } = e,
-                    r = o.A.getVoiceStateForUser(t.getItem().user.id);
-                (null == r ? void 0 : r.channelId) !== n.id &&
-                    i.A.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                    i = o.A.getVoiceStateForUser(t.getItem().user.id);
+                i?.channelId !== n.id && s.A.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             },
         },
-        (e, t) => ({
-            connectUserDropTarget: e.dropTarget(),
-            isUserOver: t.isOver() && t.canDrop(),
-        }),
+        (e, t) => ({ connectUserDropTarget: e.dropTarget(), isUserOver: t.isOver() && t.canDrop() }),
     )(e);
 }
-
-function p(e) {
+function A(e) {
     return (0, l.I)(
-        d,
+        u,
         {
             canDrag(e) {
                 let { user: t, canDrag: n } = e;
-                return null != n && n;
+                return n ?? !1;
             },
             beginDrag(e) {
                 let { user: t } = e;
-                return {
-                    user: t,
-                };
+                return { user: t };
             },
         },
-        (e) => ({
-            connectUserDragSource: e.dragSource(),
-        }),
+        (e) => ({ connectUserDragSource: e.dragSource() }),
     )(e);
 }

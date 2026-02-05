@@ -1,258 +1,187 @@
-r.d(t, {
-    default: () => b,
-}),
-    r(896048),
-    r(321073),
-    r(638769),
-    r(733351);
-var l = r(627968),
-    n = r(64700),
-    i = r(91871),
-    a = r.n(i),
-    o = r(397927),
-    s = r(442433),
-    c = r(71393),
-    u = r(287809),
-    d = r(661191),
-    g = r(792852),
-    p = r(985018);
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, l);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
-        e
-    );
-}
-
-function b(e) {
-    let { onSelect: t, allClips: r } = e,
+l.d(t, { default: () => m }), l(321073);
+var r = l(627968),
+    i = l(64700),
+    n = l(91871),
+    a = l.n(n),
+    s = l(397927),
+    o = l(442433),
+    c = l(71393),
+    d = l(287809),
+    u = l(661191),
+    g = l(792852),
+    h = l(985018);
+function m(e) {
+    let { onSelect: t, allClips: l } = e,
         {
-            selectedUserIds: i,
-            selectedActivity: b,
-            selectedGuildId: m,
-            selectedYear: y,
-            sortOrder: j,
-            toggleUserId: v,
-            setSelectedActivity: x,
-            setSelectedGuildId: O,
-            setSelectedYear: w,
-            setSortOrder: D,
-            clearFilters: C,
+            selectedUserIds: n,
+            selectedActivity: m,
+            selectedGuildId: p,
+            selectedYear: f,
+            sortOrder: x,
+            toggleUserId: b,
+            setSelectedActivity: j,
+            setSelectedGuildId: y,
+            setSelectedYear: v,
+            setSortOrder: C,
+            clearFilters: w,
         } = (0, g.P)(),
-        P = n.useMemo(
+        D = i.useMemo(
             () =>
                 (function (e) {
                     let t = new Set();
-                    for (let r of e) r.users.forEach((e) => t.add(e));
-                    let r = [];
+                    for (let l of e) l.users.forEach((e) => t.add(e));
+                    let l = [];
                     for (let e of t) {
-                        let t = u.default.getUser(e);
+                        let t = d.default.getUser(e);
                         if (null != t) {
-                            var l;
-                            let n = null != (l = t.globalName) ? l : t.username;
-                            r.push({
-                                userId: e,
-                                name: n,
-                            });
+                            let r = t.globalName ?? t.username;
+                            l.push({ userId: e, name: r });
                         }
                     }
-                    return r.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())), r;
-                })(r),
-            [r],
+                    return l.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())), l;
+                })(l),
+            [l],
         ),
-        k = n.useMemo(
+        k = i.useMemo(
             () =>
                 (function (e) {
                     let t = new Set();
-                    for (let n of e) {
-                        var r, l;
-                        (null == (r = n.activity) ? void 0 : r.state) != null && t.add(n.activity.state),
-                            (null == (l = n.activity) ? void 0 : l.details) != null && t.add(n.activity.details);
-                    }
+                    for (let l of e)
+                        l.activity?.state != null && t.add(l.activity.state),
+                            l.activity?.details != null && t.add(l.activity.details);
                     return Array.from(t).sort((e, t) => e.localeCompare(t));
-                })(r),
-            [r],
+                })(l),
+            [l],
         ),
-        S = n.useMemo(
+        L = i.useMemo(
             () =>
                 (function (e) {
                     let t = new Set();
-                    for (let r of e) null != r.guildId && t.add(r.guildId);
-                    let r = [];
+                    for (let l of e) null != l.guildId && t.add(l.guildId);
+                    let l = [];
                     for (let e of t) {
                         let t = c.A.getGuild(e);
-                        null != t &&
-                            r.push({
-                                guildId: e,
-                                name: t.name,
-                            });
+                        null != t && l.push({ guildId: e, name: t.name });
                     }
-                    return r.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())), r;
-                })(r),
-            [r],
+                    return l.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())), l;
+                })(l),
+            [l],
         ),
-        L = n.useMemo(
+        M = i.useMemo(
             () =>
                 (function (e) {
                     let t = new Set();
-                    for (let r of e) {
-                        let e = new Date(d.default.extractTimestamp(r.id)).getFullYear();
+                    for (let l of e) {
+                        let e = new Date(u.default.extractTimestamp(l.id)).getFullYear();
                         t.add(e);
                     }
                     return Array.from(t).sort((e, t) => t - e);
-                })(r),
-            [r],
+                })(l),
+            [l],
         ),
-        [M, A] = n.useState(""),
-        [U, I] = n.useState(""),
-        [V, X] = n.useState(""),
-        q = n.useMemo(
-            () => (0 === M.trim().length ? P : P.filter((e) => a()(M.toLowerCase(), e.name.toLowerCase()))),
-            [P, M],
+        [A, S] = i.useState(""),
+        [P, U] = i.useState(""),
+        [I, O] = i.useState(""),
+        V = i.useMemo(
+            () => (0 === A.trim().length ? D : D.filter((e) => a()(A.toLowerCase(), e.name.toLowerCase()))),
+            [D, A],
         ),
-        E = n.useMemo(
-            () => (0 === U.trim().length ? S : S.filter((e) => a()(U.toLowerCase(), e.name.toLowerCase()))),
-            [S, U],
+        X = i.useMemo(
+            () => (0 === P.trim().length ? L : L.filter((e) => a()(P.toLowerCase(), e.name.toLowerCase()))),
+            [L, P],
         ),
-        K = n.useMemo(
-            () => (0 === V.trim().length ? k : k.filter((e) => a()(V.toLowerCase(), e.toLowerCase()))),
-            [k, V],
+        q = i.useMemo(
+            () => (0 === I.trim().length ? k : k.filter((e) => a()(I.toLowerCase(), e.toLowerCase()))),
+            [k, I],
         ),
-        Q = i.size > 0 || null != b || null != m || null != y,
-        z = n.useMemo(() => {
-            if (0 !== i.size)
-                return P.filter((e) => i.has(e.userId))
+        K = n.size > 0 || null != m || null != p || null != f,
+        Q = i.useMemo(() => {
+            if (0 !== n.size)
+                return D.filter((e) => n.has(e.userId))
                     .map((e) => e.name)
                     .join(", ");
-        }, [i, P]),
-        F = n.useMemo(() => {
-            if (null == m) return;
-            let e = S.find((e) => e.guildId === m);
-            return null == e ? void 0 : e.name;
-        }, [m, S]),
-        N = n.useMemo(() => (null != b ? b : void 0), [b]),
-        _ = n.useMemo(() => (null != y ? String(y) : void 0), [y]);
-    return (0, l.jsxs)(o.W1t, {
+        }, [n, D]),
+        $ = i.useMemo(() => {
+            if (null == p) return;
+            let e = L.find((e) => e.guildId === p);
+            return e?.name;
+        }, [p, L]),
+        z = i.useMemo(() => m ?? void 0, [m]),
+        F = i.useMemo(() => (null != f ? String(f) : void 0), [f]);
+    return (0, r.jsxs)(s.W1t, {
         "data-menu-migrated": !0,
         navId: "clips-filters-context",
-        "aria-label": p.intl.string(p.t.X7yRDm),
-        onClose: s.Z_,
+        "aria-label": h.intl.string(h.t.X7yRDm),
+        onClose: o.Z_,
         variant: "fixed",
         onSelect: t,
         children: [
-            (0, l.jsxs)(o.rXV, {
+            (0, r.jsxs)(s.rXV, {
                 label: "Filter",
                 children: [
-                    P.length > 0 &&
-                        (0, l.jsxs)(o.Drp, {
+                    D.length > 0 &&
+                        (0, r.jsxs)(s.Drp, {
                             id: "participants",
-                            label: p.intl.string(p.t.YQ6dJg),
-                            subtext: z,
+                            label: h.intl.string(h.t.YQ6dJg),
+                            subtext: Q,
                             children: [
-                                P.length > 20 &&
-                                    (0, l.jsx)(o.aK1, {
+                                D.length > 20 &&
+                                    (0, r.jsx)(s.aK1, {
                                         id: "participants-search",
                                         control: (e, t) =>
-                                            (0, l.jsx)(
-                                                o.VPO,
-                                                h(f({}, e), {
-                                                    query: M,
-                                                    onChange: A,
-                                                    ref: t,
-                                                    placeholder: p.intl.string(p.t["5h0QOP"]),
-                                                }),
-                                            ),
+                                            (0, r.jsx)(s.VPO, {
+                                                ...e,
+                                                query: A,
+                                                onChange: S,
+                                                ref: t,
+                                                placeholder: h.intl.string(h.t["5h0QOP"]),
+                                            }),
                                     }),
-                                q.map((e) => {
-                                    let { userId: t, name: r } = e;
-                                    return (0, l.jsx)(
-                                        o.sLh,
-                                        {
-                                            id: "participant-".concat(t),
-                                            label: r,
-                                            action: () => v(t),
-                                            checked: i.has(t),
-                                        },
+                                V.map((e) => {
+                                    let { userId: t, name: l } = e;
+                                    return (0, r.jsx)(
+                                        s.sLh,
+                                        { id: `participant-${t}`, label: l, action: () => b(t), checked: n.has(t) },
                                         t,
                                     );
                                 }),
                             ],
                         }),
-                    S.length > 0 &&
-                        (0, l.jsxs)(o.Drp, {
+                    L.length > 0 &&
+                        (0, r.jsxs)(s.Drp, {
                             id: "servers",
-                            label: p.intl.string(p.t["5qyruI"]),
-                            subtext: F,
+                            label: h.intl.string(h.t["5qyruI"]),
+                            subtext: $,
                             children: [
-                                S.length > 20 &&
-                                    (0, l.jsx)(o.aK1, {
+                                L.length > 20 &&
+                                    (0, r.jsx)(s.aK1, {
                                         id: "servers-search",
                                         control: (e, t) =>
-                                            (0, l.jsx)(
-                                                o.VPO,
-                                                h(f({}, e), {
-                                                    query: U,
-                                                    onChange: I,
-                                                    ref: t,
-                                                    placeholder: p.intl.string(p.t["5h0QOP"]),
-                                                }),
-                                            ),
+                                            (0, r.jsx)(s.VPO, {
+                                                ...e,
+                                                query: P,
+                                                onChange: U,
+                                                ref: t,
+                                                placeholder: h.intl.string(h.t["5h0QOP"]),
+                                            }),
                                     }),
-                                (0, l.jsx)(o.iDA, {
+                                (0, r.jsx)(s.iDA, {
                                     id: "server-all",
                                     group: "server",
-                                    label: p.intl.string(p.t["2/yeUU"]),
-                                    action: () => O(null),
-                                    checked: null == m,
+                                    label: h.intl.string(h.t["2/yeUU"]),
+                                    action: () => y(null),
+                                    checked: null == p,
                                 }),
-                                E.map((e) => {
-                                    let { guildId: t, name: r } = e;
-                                    return (0, l.jsx)(
-                                        o.iDA,
+                                X.map((e) => {
+                                    let { guildId: t, name: l } = e;
+                                    return (0, r.jsx)(
+                                        s.iDA,
                                         {
-                                            id: "server-".concat(t),
+                                            id: `server-${t}`,
                                             group: "server",
-                                            label: r,
-                                            action: () => O(t),
-                                            checked: m === t,
+                                            label: l,
+                                            action: () => y(t),
+                                            checked: p === t,
                                         },
                                         t,
                                     );
@@ -260,69 +189,67 @@ function b(e) {
                             ],
                         }),
                     k.length > 0 &&
-                        (0, l.jsxs)(o.Drp, {
+                        (0, r.jsxs)(s.Drp, {
                             id: "activities",
-                            label: p.intl.string(p.t.agRtPG),
-                            subtext: N,
+                            label: h.intl.string(h.t.agRtPG),
+                            subtext: z,
                             children: [
                                 k.length > 20 &&
-                                    (0, l.jsx)(o.aK1, {
+                                    (0, r.jsx)(s.aK1, {
                                         id: "activities-search",
                                         control: (e, t) =>
-                                            (0, l.jsx)(
-                                                o.VPO,
-                                                h(f({}, e), {
-                                                    query: V,
-                                                    onChange: X,
-                                                    ref: t,
-                                                    placeholder: p.intl.string(p.t["5h0QOP"]),
-                                                }),
-                                            ),
+                                            (0, r.jsx)(s.VPO, {
+                                                ...e,
+                                                query: I,
+                                                onChange: O,
+                                                ref: t,
+                                                placeholder: h.intl.string(h.t["5h0QOP"]),
+                                            }),
                                     }),
-                                (0, l.jsx)(o.iDA, {
+                                (0, r.jsx)(s.iDA, {
                                     id: "activity-all",
                                     group: "activity",
-                                    label: p.intl.string(p.t["2/yeUU"]),
-                                    action: () => x(null),
-                                    checked: null == b,
+                                    label: h.intl.string(h.t["2/yeUU"]),
+                                    action: () => j(null),
+                                    checked: null == m,
                                 }),
-                                K.map((e) =>
-                                    (0, l.jsx)(
-                                        o.iDA,
+                                q.map((e) =>
+                                    (0, r.jsx)(
+                                        s.iDA,
                                         {
-                                            id: "activity-".concat(e),
+                                            id: `activity-${e}`,
                                             group: "activity",
                                             label: e,
-                                            action: () => x(e),
-                                            checked: b === e,
+                                            action: () => j(e),
+                                            checked: m === e,
                                         },
                                         e,
                                     ),
                                 ),
                             ],
                         }),
-                    L.length > 0 &&
-                        (0, l.jsxs)(o.Drp, {
+                    M.length > 0 &&
+                        (0, r.jsxs)(s.Drp, {
                             id: "years",
-                            label: p.intl.string(p.t.w9zd68),
-                            subtext: _,
+                            label: h.intl.string(h.t.w9zd68),
+                            subtext: F,
                             children: [
-                                (0, l.jsx)(o.iDA, {
+                                (0, r.jsx)(s.iDA, {
                                     id: "year-all",
                                     group: "year",
-                                    label: p.intl.string(p.t["2/yeUU"]),
-                                    action: () => w(null),
-                                    checked: null == y,
+                                    label: h.intl.string(h.t["2/yeUU"]),
+                                    action: () => v(null),
+                                    checked: null == f,
                                 }),
-                                L.map((e) =>
-                                    (0, l.jsx)(
-                                        o.iDA,
+                                M.map((e) =>
+                                    (0, r.jsx)(
+                                        s.iDA,
                                         {
-                                            id: "year-".concat(e),
+                                            id: `year-${e}`,
                                             group: "year",
                                             label: String(e),
-                                            action: () => w(e),
-                                            checked: y === e,
+                                            action: () => v(e),
+                                            checked: f === e,
                                         },
                                         e,
                                     ),
@@ -331,32 +258,28 @@ function b(e) {
                         }),
                 ],
             }),
-            (0, l.jsxs)(o.rXV, {
-                label: p.intl.string(p.t.XvNMNk),
+            (0, r.jsxs)(s.rXV, {
+                label: h.intl.string(h.t.XvNMNk),
                 children: [
-                    (0, l.jsx)(o.iDA, {
+                    (0, r.jsx)(s.iDA, {
                         id: "sort-recent",
                         group: "sort",
-                        label: p.intl.string(p.t["4LLKx3"]),
-                        action: () => D("descending"),
-                        checked: "descending" === j,
+                        label: h.intl.string(h.t["4LLKx3"]),
+                        action: () => C("descending"),
+                        checked: "descending" === x,
                     }),
-                    (0, l.jsx)(o.iDA, {
+                    (0, r.jsx)(s.iDA, {
                         id: "sort-oldest",
                         group: "sort",
-                        label: p.intl.string(p.t["0gitSE"]),
-                        action: () => D("ascending"),
-                        checked: "ascending" === j,
+                        label: h.intl.string(h.t["0gitSE"]),
+                        action: () => C("ascending"),
+                        checked: "ascending" === x,
                     }),
                 ],
             }),
-            Q &&
-                (0, l.jsx)(o.rXV, {
-                    children: (0, l.jsx)(o.Drp, {
-                        id: "clear-filters",
-                        label: p.intl.string(p.t.FbDgiu),
-                        action: C,
-                    }),
+            K &&
+                (0, r.jsx)(s.rXV, {
+                    children: (0, r.jsx)(s.Drp, { id: "clear-filters", label: h.intl.string(h.t.FbDgiu), action: w }),
                 }),
         ],
     });

@@ -1,195 +1,143 @@
-n.d(t, {
-    A: () => C,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(827734),
+n.d(t, { A: () => v });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(827734),
     s = n(397927),
     o = n(688810),
-    c = n(587895),
-    u = n(769015),
-    d = n(640708),
-    p = n(657331),
-    f = n(287809),
-    h = n(427262),
-    A = n(390848),
-    g = n(513297),
-    m = n(414711),
-    b = n(723690),
-    _ = n(652215),
-    E = n(985018),
-    O = n(615078);
-
-function y(e) {
-    var t;
-    let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
-        u = (null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
-        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, A.I)({
-            userId: n.id,
-            applicationId: l,
-            isGameRelationship: o,
+    d = n(587895),
+    c = n(769015),
+    u = n(640708),
+    A = n(657331),
+    h = n(287809),
+    _ = n(427262),
+    m = n(390848),
+    p = n(513297),
+    g = n(414711),
+    E = n(723690),
+    f = n(652215),
+    I = n(985018),
+    C = n(615078);
+function N(e) {
+    let { user: t, applicationId: n, isGameRelationship: a, active: o } = e,
+        d = h.default.getCurrentUser()?.isStaff() && t?.isStaff(),
+        { acceptFriendRequest: c, cancelFriendRequest: u } = (0, m.I)({
+            userId: t.id,
+            applicationId: n,
+            isGameRelationship: a,
             location: "Friends",
         }),
-        h = i.useCallback(
+        A = r.useCallback(
             (e) => {
-                e.stopPropagation(), d();
+                e.stopPropagation(), c();
             },
-            [d],
+            [c],
         ),
-        m = i.useCallback(
+        _ = r.useCallback(
             (e) => {
-                e.stopPropagation(), p();
+                e.stopPropagation(), u();
             },
-            [p],
+            [u],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            u &&
-                (0, r.jsx)("div", {
-                    className: O.ou,
-                    children: (0, r.jsx)(s.LpS, {
-                        color: a.A.unsafe_rawColors.BRAND_500.css,
-                        text: E.intl.string(E.t.oMx98L),
+            d &&
+                (0, i.jsx)("div", {
+                    className: C.ou,
+                    children: (0, i.jsx)(s.LpS, {
+                        color: l.A.unsafe_rawColors.BRAND_500.css,
+                        text: I.intl.string(I.t.oMx98L),
                     }),
                 }),
-            (0, r.jsx)(g.A, {
+            (0, i.jsx)(p.A, {
                 icon: s.A9s,
-                actionType: g.A.ActionTypes.ACCEPT,
-                tooltip: E.intl.string(E.t.Zcibdf),
-                onClick: h,
-                shouldHighlight: c,
+                actionType: p.A.ActionTypes.ACCEPT,
+                tooltip: I.intl.string(I.t.Zcibdf),
+                onClick: A,
+                shouldHighlight: o,
             }),
-            (0, r.jsx)(g.A, {
+            (0, i.jsx)(p.A, {
                 icon: s.PGe,
-                actionType: g.A.ActionTypes.DENY,
-                tooltip: E.intl.string(E.t.xuio0C),
-                onClick: m,
-                shouldHighlight: c,
+                actionType: p.A.ActionTypes.DENY,
+                tooltip: I.intl.string(I.t.xuio0C),
+                onClick: _,
+                shouldHighlight: o,
             }),
         ],
     });
 }
-
-function I(e) {
-    let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
-        { cancelFriendRequest: o } = (0, A.I)({
+function T(e) {
+    let { userId: t, applicationId: n, isGameRelationship: a, active: l } = e,
+        { cancelFriendRequest: o } = (0, m.I)({
             userId: t,
             applicationId: n,
-            isGameRelationship: l,
+            isGameRelationship: a,
             location: "Friends",
         }),
-        c = i.useCallback(
+        d = r.useCallback(
             (e) => {
                 e.stopPropagation(), o();
             },
             [o],
         );
-    return (0, r.jsx)(g.A, {
+    return (0, i.jsx)(p.A, {
         icon: s.PGe,
-        actionType: g.A.ActionTypes.DENY,
-        tooltip: E.intl.string(E.t.eaq81S),
-        onClick: c,
-        shouldHighlight: a,
+        actionType: p.A.ActionTypes.DENY,
+        tooltip: I.intl.string(I.t.eaq81S),
+        onClick: d,
+        shouldHighlight: l,
     });
 }
-
-function v(e) {
-    let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: o } = e,
-        p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eTx"]) : a), [t, a]),
-        f = (0, l.bG)([c.A], () => (null != n ? c.A.getApplication(n) : null));
-    return (0, r.jsxs)("div", {
-        className: O.P9,
+function S(e) {
+    let { isGameRelationship: t, applicationId: n, userTag: l, isProvisional: o } = e,
+        A = r.useMemo(() => (t ? I.intl.string(I.t["Uv/eTx"]) : l), [t, l]),
+        h = (0, a.bG)([d.A], () => (null != n ? d.A.getApplication(n) : null));
+    return (0, i.jsxs)("div", {
+        className: C.P9,
         children: [
-            !o &&
-                (0, r.jsx)(s.Text, {
-                    variant: "text-sm/medium",
-                    color: "text-subtle",
-                    children: p,
-                }),
-            null != f &&
-                (0, r.jsxs)(r.Fragment, {
+            !o && (0, i.jsx)(s.Text, { variant: "text-sm/medium", color: "text-subtle", children: A }),
+            null != h &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !o &&
-                            (0, r.jsx)(d.A, {
-                                height: 2,
-                                width: 2,
-                            }),
-                        (0, r.jsx)(u.A, {
-                            game: f,
-                            size: u.M.XXSMALL,
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-sm/medium",
-                            color: "text-subtle",
-                            children: f.name,
-                        }),
+                        !o && (0, i.jsx)(u.A, { height: 2, width: 2 }),
+                        (0, i.jsx)(c.A, { game: h, size: c.M.XXSMALL }),
+                        (0, i.jsx)(s.Text, { variant: "text-sm/medium", color: "text-subtle", children: h.name }),
                     ],
                 }),
         ],
     });
 }
-
-function S(e) {
-    let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
-        s = h.Ay.useUserTag(t);
-    return (0, r.jsx)(b.A, {
+function x(e) {
+    let { user: t, hovered: n, status: r, isGameRelationship: a, applicationId: l } = e,
+        s = _.Ay.useUserTag(t);
+    return (0, i.jsx)(E.A, {
         user: t,
         hovered: n,
-        status: i,
-        showAccountIdentifier: !l && !t.isProvisional,
-        subText: (0, r.jsx)(v, {
-            isGameRelationship: l,
-            isProvisional: t.isProvisional,
-            applicationId: a,
-            userTag: s,
-        }),
+        status: r,
+        showAccountIdentifier: !a && !t.isProvisional,
+        subText: (0, i.jsx)(S, { isGameRelationship: a, isProvisional: t.isProvisional, applicationId: l, userTag: s }),
     });
 }
-
-function C(e) {
-    let { user: t, type: n, status: l, isFocused: a, applicationId: s, isGameRelationship: c } = e,
-        { analyticsLocations: u } = (0, o.Ay)(),
-        d = l === _.clD.OFFLINE ? _.clD.UNKNOWN : l,
-        f = i.useCallback(
-            () =>
-                (0, p.openUserProfileModal)({
-                    userId: t.id,
-                    sourceAnalyticsLocations: u,
-                }),
-            [u, t.id],
-        );
-    return (0, r.jsx)(m.A, {
-        isFocused: a,
+function v(e) {
+    let { user: t, type: n, status: a, isFocused: l, applicationId: s, isGameRelationship: d } = e,
+        { analyticsLocations: c } = (0, o.Ay)(),
+        u = a === f.clD.OFFLINE ? f.clD.UNKNOWN : a,
+        h = r.useCallback(() => (0, A.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: c }), [c, t.id]);
+    return (0, i.jsx)(g.A, {
+        isFocused: l,
         user: t,
-        onClick: f,
+        onClick: h,
         children: (e) =>
-            (0, r.jsxs)("div", {
-                className: O.a4,
+            (0, i.jsxs)("div", {
+                className: C.a4,
                 children: [
-                    (0, r.jsx)(S, {
-                        user: t,
-                        hovered: e,
-                        status: d,
-                        isGameRelationship: c,
-                        applicationId: s,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: O.o1,
+                    (0, i.jsx)(x, { user: t, hovered: e, status: u, isGameRelationship: d, applicationId: s }),
+                    (0, i.jsx)("div", {
+                        className: C.o1,
                         children:
-                            n === _.eA$.PENDING_INCOMING
-                                ? (0, r.jsx)(y, {
-                                      user: t,
-                                      applicationId: s,
-                                      isGameRelationship: c,
-                                      active: e,
-                                  })
-                                : (0, r.jsx)(I, {
-                                      userId: t.id,
-                                      applicationId: s,
-                                      isGameRelationship: c,
-                                      active: e,
-                                  }),
+                            n === f.eA$.PENDING_INCOMING
+                                ? (0, i.jsx)(N, { user: t, applicationId: s, isGameRelationship: d, active: e })
+                                : (0, i.jsx)(T, { userId: t.id, applicationId: s, isGameRelationship: d, active: e }),
                     }),
                 ],
             }),

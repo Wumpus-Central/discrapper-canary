@@ -1,3 +1,4 @@
+"use strict";
 var r = n(712192),
     a = n(663172),
     o = TypeError;

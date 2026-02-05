@@ -1,4 +1,5 @@
 t.exports = (function () {
+    "use strict";
     function t() {
         (this.dataPoints_ = []),
             (this.color_ = "red"),
@@ -7,7 +8,6 @@ t.exports = (function () {
             (this.cacheStepSize_ = 0),
             (this.cacheValues_ = []);
     }
-
     function i(t, i) {
         (this.time = t), (this.value = i);
     }
@@ -55,10 +55,10 @@ t.exports = (function () {
                 );
             },
             getValuesInternal_: function (t, i, e) {
-                for (var s = [], a = 0, h = 0, n = t, r = 0; r < e; ++r) {
-                    for (; a < this.dataPoints_.length && this.dataPoints_[a].time < n; )
+                for (var s = [], a = 0, h = 0, r = t, n = 0; n < e; ++n) {
+                    for (; a < this.dataPoints_.length && this.dataPoints_[a].time < r; )
                         (h = this.dataPoints_[a].value), ++a;
-                    (s[r] = h), (n += i);
+                    (s[n] = h), (r += i);
                 }
                 return s;
             },

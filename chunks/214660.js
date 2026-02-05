@@ -1,172 +1,103 @@
-n.d(t, {
-    A: () => y,
-    H: () => A,
-});
-var r,
+n.d(t, { A: () => f, H: () => x });
+var i,
     l = n(627968);
 n(64700);
-var i = n(311907),
+var s = n(311907),
     a = n(139033),
-    s = n(397927),
+    r = n(397927),
     o = n(830215),
-    c = n(315982),
-    u = n(915089),
-    d = n(557722),
-    f = n(834942),
-    p = n(287809),
-    h = n(652215),
-    b = n(53516),
-    g = n(985018),
-    m = n(43310),
-    A = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
-let y = (e) => {
-    let { type: t, guildId: r, closePopout: A } = e,
-        y = (0, u.GV)(),
+    d = n(315982),
+    c = n(915089),
+    u = n(557722),
+    h = n(834942),
+    A = n(287809),
+    g = n(652215),
+    m = n(53516),
+    p = n(985018),
+    _ = n(43310),
+    x = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
+let f = (e) => {
+    let { type: t, guildId: i, closePopout: x } = e,
+        f = (0, c.GV)(),
         {
-            notClaimed: O,
-            notEmailVerified: j,
-            notPhoneVerified: v,
-            newAccount: x,
-            newMember: E,
-        } = (0, i.bG)([f.A], () => f.A.getCheck(r), [r]),
-        _ = 0 === t ? g.intl.string(g.t["6zY8BI"]) : null,
-        C = null,
-        S = null;
+            notClaimed: E,
+            notEmailVerified: C,
+            notPhoneVerified: I,
+            newAccount: S,
+            newMember: b,
+        } = (0, s.bG)([h.A], () => h.A.getCheck(i), [i]),
+        N = 0 === t ? p.intl.string(p.t["6zY8BI"]) : null,
+        T = null,
+        j = null;
     return (0 === t &&
-        (O
-            ? ((C = g.intl.string(g.t.IRxUlG)), (S = g.intl.string(g.t.fiNVin)))
-            : v
-              ? ((C = g.intl.string(g.t.vW8iUF)), (S = g.intl.string(g.t["50gfOv"])))
-              : j
-                ? ((C = g.intl.string(g.t.vdSOpz)), (S = g.intl.string(g.t.lm1UKt)))
-                : E
-                  ? ((C = g.intl.formatToPlainString(g.t.v1ktYb, {
-                        min: h.$8o.MEMBER_AGE,
-                    })),
-                    (S = g.intl.string(g.t.BddRzS)))
-                  : x &&
-                    ((C = g.intl.formatToPlainString(g.t.sncw41, {
-                        min: h.$8o.ACCOUNT_AGE,
-                    })),
-                    (S = g.intl.string(g.t.BddRzS)))),
-    null == _ || null == C)
+        (E
+            ? ((T = p.intl.string(p.t.IRxUlG)), (j = p.intl.string(p.t.fiNVin)))
+            : I
+              ? ((T = p.intl.string(p.t.vW8iUF)), (j = p.intl.string(p.t["50gfOv"])))
+              : C
+                ? ((T = p.intl.string(p.t.vdSOpz)), (j = p.intl.string(p.t.lm1UKt)))
+                : b
+                  ? ((T = p.intl.formatToPlainString(p.t.v1ktYb, { min: g.$8o.MEMBER_AGE })),
+                    (j = p.intl.string(p.t.BddRzS)))
+                  : S &&
+                    ((T = p.intl.formatToPlainString(p.t.sncw41, { min: g.$8o.ACCOUNT_AGE })),
+                    (j = p.intl.string(p.t.BddRzS)))),
+    null == N || null == T)
         ? null
-        : (0, l.jsxs)(s.lGe, {
-              className: m.kL,
-              "aria-labelledby": y,
+        : (0, l.jsxs)(r.lGe, {
+              className: _.kL,
+              "aria-labelledby": f,
               children: [
-                  (0, l.jsx)("img", {
-                      alt: "",
-                      className: m.Sl,
-                      src: n(303528),
-                  }),
+                  (0, l.jsx)("img", { alt: "", className: _.Sl, src: n(303528) }),
                   (0, l.jsxs)("div", {
-                      className: m.Qs,
+                      className: _.Qs,
                       children: [
-                          (0, l.jsx)(s.Heading, {
-                              variant: "heading-md/semibold",
-                              id: y,
-                              children: _,
-                          }),
-                          (0, l.jsx)(s.Text, {
-                              color: "text-default",
-                              variant: "text-sm/normal",
-                              children: C,
-                          }),
+                          (0, l.jsx)(r.Heading, { variant: "heading-md/semibold", id: f, children: N }),
+                          (0, l.jsx)(r.Text, { color: "text-default", variant: "text-sm/normal", children: T }),
                           (0, l.jsxs)("div", {
-                              className: m.UD,
+                              className: _.UD,
                               children: [
-                                  null != S
+                                  null != j
                                       ? (0, l.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
-                                            className: m.FS,
-                                            children: (0, l.jsx)(s.Button, {
+                                            className: _.FS,
+                                            children: (0, l.jsx)(r.Button, {
                                                 variant: "primary",
-                                                text: S,
+                                                text: j,
                                                 onClick: () => {
-                                                    if (O) c.R();
-                                                    else if (v)
-                                                        (0, s.mMO)(
-                                                            async () => {
-                                                                let { default: e } = await Promise.resolve().then(
-                                                                    n.bind(n, 615715),
-                                                                );
-                                                                return (t) =>
-                                                                    (0, l.jsx)(
-                                                                        e,
-                                                                        (function (e) {
-                                                                            for (var t = 1; t < arguments.length; t++) {
-                                                                                var n =
-                                                                                        null != arguments[t]
-                                                                                            ? arguments[t]
-                                                                                            : {},
-                                                                                    r = Object.keys(n);
-                                                                                "function" ==
-                                                                                    typeof Object.getOwnPropertySymbols &&
-                                                                                    (r = r.concat(
-                                                                                        Object.getOwnPropertySymbols(
-                                                                                            n,
-                                                                                        ).filter(function (e) {
-                                                                                            return Object.getOwnPropertyDescriptor(
-                                                                                                n,
-                                                                                                e,
-                                                                                            ).enumerable;
-                                                                                        }),
-                                                                                    )),
-                                                                                    r.forEach(function (t) {
-                                                                                        var r;
-                                                                                        (r = n[t]),
-                                                                                            t in e
-                                                                                                ? Object.defineProperty(
-                                                                                                      e,
-                                                                                                      t,
-                                                                                                      {
-                                                                                                          value: r,
-                                                                                                          enumerable:
-                                                                                                              !0,
-                                                                                                          configurable:
-                                                                                                              !0,
-                                                                                                          writable: !0,
-                                                                                                      },
-                                                                                                  )
-                                                                                                : (e[t] = r);
-                                                                                    });
-                                                                            }
-                                                                            return e;
-                                                                        })(
-                                                                            {
-                                                                                reason: d.d.GUILD_PHONE_REQUIRED,
-                                                                            },
-                                                                            t,
-                                                                        ),
+                                                    E
+                                                        ? d.R()
+                                                        : I
+                                                          ? (0, r.mMO)(
+                                                                async () => {
+                                                                    let { default: e } = await Promise.resolve().then(
+                                                                        n.bind(n, 615715),
                                                                     );
-                                                            },
-                                                            {
-                                                                modalKey: b.V,
-                                                            },
-                                                        );
-                                                    else if (j) {
-                                                        var e;
-                                                        o.A.verifyResend(),
+                                                                    return (t) =>
+                                                                        (0, l.jsx)(e, {
+                                                                            reason: u.d.GUILD_PHONE_REQUIRED,
+                                                                            ...t,
+                                                                        });
+                                                                },
+                                                                { modalKey: m.V },
+                                                            )
+                                                          : C &&
+                                                            (o.A.verifyResend(),
                                                             (0, a.A)({
-                                                                title: g.intl.string(g.t.LykQYk),
-                                                                subtitle: g.intl.format(g.t.azKEPy, {
-                                                                    email:
-                                                                        null == (e = p.default.getCurrentUser())
-                                                                            ? void 0
-                                                                            : e.email,
+                                                                title: p.intl.string(p.t.LykQYk),
+                                                                subtitle: p.intl.format(p.t.azKEPy, {
+                                                                    email: A.default.getCurrentUser()?.email,
                                                                 }),
-                                                            });
-                                                    }
-                                                    A();
+                                                            })),
+                                                        x();
                                                 },
                                             }),
                                         })
                                       : null,
-                                  O || v || j
-                                      ? (0, l.jsx)(s.QWc, {
-                                            onClick: A,
-                                            text: g.intl.string(g.t.oEAioF),
+                                  E || I || C
+                                      ? (0, l.jsx)(r.QWc, {
+                                            onClick: x,
+                                            text: p.intl.string(p.t.oEAioF),
                                             variant: "secondary",
                                         })
                                       : null,

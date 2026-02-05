@@ -1,5 +1,5 @@
+"use strict";
 n(321073),
-    n(65821),
     !(function (e) {
         var t = Date.now ? Date.now() : +new Date(),
             n = e.performance || {},
@@ -25,12 +25,7 @@ n(321073),
                 (n.mark =
                     n.webkitMark ||
                     function (e) {
-                        var t = {
-                            name: e,
-                            entryType: "mark",
-                            startTime: n.now(),
-                            duration: 0,
-                        };
+                        var t = { name: e, entryType: "mark", startTime: n.now(), duration: 0 };
                         r.push(t), (i[e] = t);
                     }),
             n.measure ||
@@ -48,12 +43,7 @@ n(321073),
                             );
                         (s = i[t] ? i[t].startTime : 0),
                             (o = i[a] ? i[a].startTime : n.now()),
-                            r.push({
-                                name: e,
-                                entryType: "measure",
-                                startTime: s,
-                                duration: o - s,
-                            });
+                            r.push({ name: e, entryType: "measure", startTime: s, duration: o - s });
                     }),
             n.getEntriesByType ||
                 (n.getEntriesByType =

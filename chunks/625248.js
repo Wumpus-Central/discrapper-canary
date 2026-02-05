@@ -1,41 +1,34 @@
-n.d(t, {
-    l: () => c,
-}),
-    n(938796);
-var r = n(665260),
-    i = n(134861),
-    l = n(528767),
-    a = n(723702),
+n.d(t, { l: () => d }), n(938796);
+var i = n(665260),
+    l = n(134861),
+    a = n(528767),
+    r = n(723702),
     s = n(182892),
     o = n(652215);
-
-function c(e) {
-    var t, n, c;
+function d(e) {
     if (null == e) return null;
-    let u = e.application_id;
-    if (null == u || !(0, r.Lt)(null != (t = e.flags) ? t : 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN))
-        return null;
-    let d = l.A.getRemoteApplicationActivity(u);
-    return null == d ||
+    let t = e.application_id;
+    if (null == t || !(0, i.Lt)(e.flags ?? 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN)) return null;
+    let n = a.A.getRemoteApplicationActivity(t);
+    return null == n ||
         (function (e) {
             let { platform: t } = e;
             return (
                 !!(0, s.e)(e) ||
-                ((0, a.isAndroid)()
+                ((0, r.isAndroid)()
                     ? t === o.yTV.ANDROID
-                    : (0, a.isIOS)()
+                    : (0, r.isIOS)()
                       ? t === o.yTV.IOS
-                      : (0, a.isWeb)()
+                      : (0, r.isWeb)()
                         ? t === o.yTV.DESKTOP
-                        : !!(0, a.isDesktop)() &&
+                        : !!(0, r.isDesktop)() &&
                           null != e.application_id &&
-                          i.A.isConnected(e.application_id) &&
+                          l.A.isConnected(e.application_id) &&
                           t === o.yTV.DESKTOP)
             );
-        })(d)
+        })(n)
         ? null
-        : (0, r.Lt)(null != (n = d.flags) ? n : 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN) &&
-            null != (c = d.platform)
-          ? c
+        : (0, i.Lt)(n.flags ?? 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN)
+          ? (n.platform ?? null)
           : null;
 }

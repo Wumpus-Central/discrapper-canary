@@ -1,6 +1,5 @@
-n.d(t, {
-    zv: () => r,
-});
+"use strict";
+n.d(t, { zv: () => r });
 let r = {
     Layout: {
         SPACE_0: 0,
@@ -70,86 +69,26 @@ let r = {
         BREAKPOINT_MAX: "var(--breakpoint-max)",
     },
     Space: {
-        SPACE_0: {
-            css: "0px",
-            resolve: () => 0,
-        },
-        SPACE_4: {
-            css: "4px",
-            resolve: () => 4,
-        },
-        SPACE_6: {
-            css: "6px",
-            resolve: () => 6,
-        },
-        SPACE_8: {
-            css: "8px",
-            resolve: () => 8,
-        },
-        SPACE_10: {
-            css: "10px",
-            resolve: () => 10,
-        },
-        SPACE_12: {
-            css: "12px",
-            resolve: () => 12,
-        },
-        SPACE_16: {
-            css: "16px",
-            resolve: () => 16,
-        },
-        SPACE_20: {
-            css: "20px",
-            resolve: () => 20,
-        },
-        SPACE_24: {
-            css: "24px",
-            resolve: () => 24,
-        },
-        SPACE_26: {
-            css: "26px",
-            resolve: () => 26,
-        },
-        SPACE_30: {
-            css: "30px",
-            resolve: () => 30,
-        },
-        SPACE_32: {
-            css: "32px",
-            resolve: () => 32,
-        },
-        SPACE_40: {
-            css: "40px",
-            resolve: () => 40,
-        },
-        SPACE_48: {
-            css: "48px",
-            resolve: () => 48,
-        },
-        SPACE_64: {
-            css: "64px",
-            resolve: () => 64,
-        },
-        SPACE_80: {
-            css: "80px",
-            resolve: () => 80,
-        },
-        SPACE_96: {
-            css: "96px",
-            resolve: () => 96,
-        },
-        SPACE_128: {
-            css: "128px",
-            resolve: () => 128,
-        },
-        SPACE_160: {
-            css: "160px",
-            resolve: () => 160,
-        },
-        SPACE_192: {
-            css: "192px",
-            resolve: () => 192,
-        },
+        SPACE_0: { css: "0px", resolve: () => 0 },
+        SPACE_4: { css: "4px", resolve: () => 4 },
+        SPACE_6: { css: "6px", resolve: () => 6 },
+        SPACE_8: { css: "8px", resolve: () => 8 },
+        SPACE_10: { css: "10px", resolve: () => 10 },
+        SPACE_12: { css: "12px", resolve: () => 12 },
+        SPACE_16: { css: "16px", resolve: () => 16 },
+        SPACE_20: { css: "20px", resolve: () => 20 },
+        SPACE_24: { css: "24px", resolve: () => 24 },
+        SPACE_26: { css: "26px", resolve: () => 26 },
+        SPACE_30: { css: "30px", resolve: () => 30 },
+        SPACE_32: { css: "32px", resolve: () => 32 },
+        SPACE_40: { css: "40px", resolve: () => 40 },
+        SPACE_48: { css: "48px", resolve: () => 48 },
+        SPACE_64: { css: "64px", resolve: () => 64 },
+        SPACE_80: { css: "80px", resolve: () => 80 },
+        SPACE_96: { css: "96px", resolve: () => 96 },
+        SPACE_128: { css: "128px", resolve: () => 128 },
+        SPACE_160: { css: "160px", resolve: () => 160 },
+        SPACE_192: { css: "192px", resolve: () => 192 },
         SPACE_XXS: {
             css: "var(--space-xxs)",
             resolve: (e) => {

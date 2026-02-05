@@ -1,137 +1,59 @@
-n.d(t, {
-    A: () => P,
-}),
-    n(747238),
-    n(896048);
+"use strict";
+n.d(t, { A: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(156828),
+    s = n.n(a),
+    o = n(156828),
     l = n(990078),
-    c = n(397927),
-    u = n(718468),
+    u = n(397927),
+    c = n(718468),
     d = n(417964),
-    f = n(639169),
-    p = n(255438),
-    _ = n(985018),
+    _ = n(639169),
+    f = n(255438),
+    p = n(985018),
     h = n(772543),
     m = n(829681);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function O(e) {
-    var t;
-    let n = "utf-8",
-        r = null != (t = null == e ? void 0 : e.split("charset=").slice(-1)[0]) ? t : n;
+function g(e) {
+    let t = "utf-8",
+        n = e?.split("charset=").slice(-1)[0] ?? t;
     try {
-        return new TextDecoder(r);
-    } catch (t) {
-        if ((null == e ? void 0 : e.startsWith("text")) || r.toLowerCase().includes("utf")) return new TextDecoder(n);
-        throw t;
+        return new TextDecoder(n);
+    } catch (r) {
+        if (e?.startsWith("text") || n.toLowerCase().includes("utf")) return new TextDecoder(t);
+        throw r;
     }
 }
-
-function v(e, t) {
+function E(e, t) {
     let [n, r] = i.useState(!1),
-        [a, o] = i.useState(null),
-        [s, l] = i.useState(1);
+        [a, s] = i.useState(null),
+        [o, l] = i.useState(1);
     return (
         i.useEffect(() => {
             let n = 5e4;
             !(async function () {
                 try {
-                    var i, a;
-                    let s = await fetch(e, {
-                            headers: {
-                                Range: "bytes=0-".concat(n),
-                                Accept: "text/plain",
-                            },
-                        }),
-                        c = O(t).decode(await s.arrayBuffer()),
-                        u = null != (i = s.headers.get("content-range")) ? i : "0",
-                        d = null != (a = s.headers.get("content-length")) ? a : "1",
-                        f = parseInt(u.split("/")[1]) - parseInt(d);
-                    o(0 === f ? c : c.slice(0, -1)), l(f), r(!1);
+                    let i = await fetch(e, { headers: { Range: `bytes=0-${n}`, Accept: "text/plain" } }),
+                        a = g(t).decode(await i.arrayBuffer()),
+                        o = i.headers.get("content-range") ?? "0",
+                        u = i.headers.get("content-length") ?? "1",
+                        c = parseInt(o.split("/")[1]) - parseInt(u);
+                    s(0 === c ? a : a.slice(0, -1)), l(c), r(!1);
                 } catch (e) {
                     l(0), r(!0);
                 }
             })();
         }, [e, t]),
-        {
-            fileContents: a,
-            bytesLeft: s,
-            hadError: n,
-        }
+        { fileContents: a, bytesLeft: o, hadError: n }
     );
 }
-
 function A(e) {
     let { text: t, language: i, wordWrap: a } = e,
         l = () =>
             (0, r.jsx)("pre", {
-                children: (0, r.jsx)("code", {
-                    className: o()(m.kw, h.Xb, "hljs", {
-                        [h.Zw]: a,
-                    }),
-                    children: t,
-                }),
+                children: (0, r.jsx)("code", { className: s()(m.kw, h.Xb, "hljs", { [h.Zw]: a }), children: t }),
             });
-    return (0, r.jsx)(s.c2, {
+    return (0, r.jsx)(o.c2, {
         createPromise: () => Promise.resolve().then(n.bind(n, 752238)),
         webpackId: 752238,
         render: (e) => {
@@ -141,43 +63,35 @@ function A(e) {
                 ? l()
                 : (0, r.jsx)("pre", {
                       children: (0, r.jsx)("code", {
-                          className: o()(m.kw, h.Xb, "hljs", n.language, {
-                              [h.Zw]: a,
-                          }),
-                          dangerouslySetInnerHTML: {
-                              __html: n.value,
-                          },
+                          className: s()(m.kw, h.Xb, "hljs", n.language, { [h.Zw]: a }),
+                          dangerouslySetInnerHTML: { __html: n.value },
                       }),
                   });
         },
         renderFallback: () => l(),
     });
 }
-
 function I(e) {
     let { expanded: t, setExpanded: n, numLines: i, isWholeFile: a } = e,
-        o = _.intl.formatToPlainString(a ? _.t.Go5Vvs : _.t.yJcYan, {
-            lines: i,
-        }),
-        s = "".concat(t ? _.intl.string(_.t.iTcuma) : _.intl.string(_.t.dcl9MQ), " (").concat(o, ")");
+        s = p.intl.formatToPlainString(a ? p.t.Go5Vvs : p.t.yJcYan, { lines: i }),
+        o = `${t ? p.intl.string(p.t.iTcuma) : p.intl.string(p.t.dcl9MQ)} (${s})`;
     return (0, r.jsx)("div", {
         className: h.py,
         children: (0, r.jsx)(l.m, {
-            text: s,
-            children: (0, r.jsx)(c.K0, {
-                icon: t ? c.tN5 : c.abt,
+            text: o,
+            children: (0, r.jsx)(u.K0, {
+                icon: t ? u.tN5 : u.abt,
                 size: "md",
                 variant: "secondary",
-                onClick: () => (null == n ? void 0 : n(!t)),
-                "aria-label": s,
+                onClick: () => n?.(!t),
+                "aria-label": o,
             }),
         }),
     });
 }
-
-function S(e) {
+function T(e) {
     let { fileName: t, fileSize: n } = e,
-        i = "".concat(t, " (").concat((0, p.up)(n), ")");
+        i = `${t} (${(0, f.up)(n)})`;
     return (0, r.jsxs)("div", {
         className: h.VI,
         children: [
@@ -185,7 +99,7 @@ function S(e) {
                 className: h.VW,
                 children: (0, r.jsx)(l.m, {
                     text: i,
-                    children: (0, r.jsx)(c.Text, {
+                    children: (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "text-default",
                         className: h.Md,
@@ -193,44 +107,33 @@ function S(e) {
                     }),
                 }),
             }),
-            (0, r.jsx)(c.Text, {
-                variant: "text-xs/normal",
-                color: "text-subtle",
-                children: (0, p.up)(n),
-            }),
+            (0, r.jsx)(u.Text, { variant: "text-xs/normal", color: "text-subtle", children: (0, f.up)(n) }),
         ],
     });
 }
-
-function T(e) {
+function y(e) {
     let { language: t, setLanguage: n, align: a } = e,
-        o = i.useRef(null);
-    return (0, r.jsx)(c.YNO, {
-        targetElementRef: o,
+        s = i.useRef(null);
+    return (0, r.jsx)(u.YNO, {
+        targetElementRef: s,
         position: "left",
         align: a,
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, r.jsx)(c.lGe, {
-                "aria-label": _.intl.string(_.t.utm4qs),
+            return (0, r.jsx)(u.lGe, {
+                "aria-label": p.intl.string(p.t.utm4qs),
                 children: (0, r.jsx)("div", {
                     className: h.md,
-                    children: (0, r.jsxs)(c.iS7, {
+                    children: (0, r.jsxs)(u.iS7, {
                         selectionMode: "single",
                         onSelectionChange: (e) => {
                             n(e), i();
                         },
-                        options: Array.from(f.Q).map((e) => ({
-                            value: e,
-                            label: e,
-                            id: e,
-                        })),
+                        options: Array.from(_.Q).map((e) => ({ value: e, label: e, id: e })),
                         value: t,
                         children: [
-                            (0, r.jsx)(c.a32, {
-                                placeholder: _.intl.string(_.t.GofftW),
-                            }),
-                            (0, r.jsx)(c.X2W, {}),
+                            (0, r.jsx)(u.a32, { placeholder: p.intl.string(p.t.GofftW) }),
+                            (0, r.jsx)(u.X2W, {}),
                         ],
                     }),
                 }),
@@ -238,52 +141,42 @@ function T(e) {
         },
         children: (e) =>
             (0, r.jsx)(l.m, {
-                text: _.intl.string(_.t.utm4qs),
-                children: (0, r.jsx)(
-                    c.GaO,
-                    b(E({}, e), {
-                        size: "sm",
-                        color: "currentColor",
-                        className: h.Qw,
-                        ref: o,
-                    }),
-                ),
+                text: p.intl.string(p.t.utm4qs),
+                children: (0, r.jsx)(u.GaO, { ...e, size: "sm", color: "currentColor", className: h.Qw, ref: s }),
             }),
     });
 }
-
-function C(e) {
-    let { wordWrap: t, setWordWrap: n, url: a, fileName: o } = e,
-        s = i.useRef(null),
-        u = i.useRef(null);
+function S(e) {
+    let { wordWrap: t, setWordWrap: n, url: a, fileName: s } = e,
+        o = i.useRef(null),
+        c = i.useRef(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.YNO, {
-                targetElementRef: s,
+            (0, r.jsx)(u.YNO, {
+                targetElementRef: o,
                 position: "top",
                 align: "left",
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
-                    return (0, r.jsx)(c.W1t, {
+                    return (0, r.jsx)(u.W1t, {
                         "data-menu-migrated": !0,
                         navId: "plaintext-preview-overflow-menu",
                         onClose: i,
                         onSelect: () => {},
-                        "aria-label": _.intl.string(_.t.PdRCRg),
-                        children: (0, r.jsxs)(c.rXV, {
+                        "aria-label": p.intl.string(p.t.PdRCRg),
+                        children: (0, r.jsxs)(u.rXV, {
                             children: [
-                                (0, r.jsx)(c.Drp, {
+                                (0, r.jsx)(u.Drp, {
                                     id: "download",
-                                    label: _.intl.string(_.t["1WjMbC"]),
-                                    icon: c.s3U,
+                                    label: p.intl.string(p.t["1WjMbC"]),
+                                    icon: u.s3U,
                                     action: () => {
-                                        var e;
-                                        null == (e = u.current) || e.click(), i();
+                                        c.current?.click(), i();
                                     },
                                 }),
-                                (0, r.jsx)(c.sLh, {
+                                (0, r.jsx)(u.sLh, {
                                     id: "word-wrap",
-                                    label: _.intl.string(_.t.AMKNT1),
+                                    label: p.intl.string(p.t.AMKNT1),
                                     checked: t,
                                     action: () => n(!t),
                                 }),
@@ -293,218 +186,140 @@ function C(e) {
                 },
                 children: (e) =>
                     (0, r.jsx)(l.m, {
-                        text: _.intl.string(_.t["UKOtz+"]),
-                        children: (0, r.jsx)(
-                            c.DUT,
-                            b(E({}, e), {
-                                className: h.IQ,
-                                children: (0, r.jsx)(c.jNK, {
-                                    ref: s,
-                                    size: "sm",
-                                    color: "currentColor",
-                                }),
-                            }),
-                        ),
+                        text: p.intl.string(p.t["UKOtz+"]),
+                        children: (0, r.jsx)(u.DUT, {
+                            ...e,
+                            className: h.IQ,
+                            children: (0, r.jsx)(u.jNK, { ref: o, size: "sm", color: "currentColor" }),
+                        }),
                     }),
             }),
-            (0, r.jsx)(c.MzZ, {
-                ref: u,
+            (0, r.jsx)(u.MzZ, {
+                ref: c,
                 href: a,
-                download: o,
+                download: s,
                 className: h.op,
-                children: (0, r.jsx)(c.s3U, {
-                    size: "sm",
-                    color: "currentColor",
-                }),
+                children: (0, r.jsx)(u.s3U, { size: "sm", color: "currentColor" }),
             }),
         ],
     });
 }
-
-function N(e) {
+function v(e) {
     return (0, r.jsx)(l.m, {
         asContainer: !0,
-        text: _.intl.string(_.t["0PQYk3"]),
-        children: (0, r.jsx)(c.DUT, {
+        text: p.intl.string(p.t["0PQYk3"]),
+        children: (0, r.jsx)(u.DUT, {
             className: h.R1,
             onClick: () => {
-                (0, c.qfG)((t) => (0, r.jsx)(R, E({}, e, t)));
+                (0, u.qfG)((t) => (0, r.jsx)(b, { ...e, ...t }));
             },
-            children: (0, r.jsx)(c._Xm, {
-                size: "sm",
-                color: "currentColor",
-            }),
+            children: (0, r.jsx)(u._Xm, { size: "sm", color: "currentColor" }),
         }),
     });
 }
-
-function w(e) {
-    var t;
+function C(e) {
     let {
-            url: n,
-            fileName: i,
-            fileSize: a,
-            fileContents: s,
-            expanded: l,
-            setExpanded: u,
-            language: f,
-            setLanguage: m,
-            wordWrap: g,
-            setWordWrap: E,
-            bytesLeft: y,
-            className: b,
+            url: t,
+            fileName: n,
+            fileSize: i,
+            fileContents: a,
+            expanded: o,
+            setExpanded: l,
+            language: c,
+            setLanguage: _,
+            wordWrap: m,
+            setWordWrap: g,
+            bytesLeft: E,
+            className: C,
         } = e,
-        O = null == s ? void 0 : s.split("\n"),
-        v = null != (t = null == O ? void 0 : O.length) ? t : 0,
-        w = l ? 100 : 6,
-        R = 0 === y,
-        P = "";
-    R && l && v > w ? (P = "\n...") : R || (P = "..."),
-        "" !== P &&
-            (R
-                ? (P +=
-                      " " +
-                      _.intl.formatToPlainString(_.t.DQnFp2, {
-                          lines: v - w,
-                      }))
-                : (P +=
-                      " " +
-                      _.intl.formatToPlainString(_.t["1+gGcK"], {
-                          formattedBytes: (0, p.up)(y),
-                      })));
-    let D = (null == O ? void 0 : O.slice(0, w).join("\n")) + P,
-        L = (0, d.sJ)(D),
-        x = l || w < v;
+        b = a?.split("\n"),
+        N = b?.length ?? 0,
+        R = o ? 100 : 6,
+        O = 0 === E,
+        D = "";
+    O && o && N > R ? (D = "\n...") : O || (D = "..."),
+        "" !== D &&
+            (O
+                ? (D += " " + p.intl.formatToPlainString(p.t.DQnFp2, { lines: N - R }))
+                : (D += " " + p.intl.formatToPlainString(p.t["1+gGcK"], { formattedBytes: (0, f.up)(E) })));
+    let L = b?.slice(0, R).join("\n") + D,
+        w = (0, d.sJ)(L),
+        x = o || R < N;
     return (0, r.jsxs)("div", {
-        className: o()(b, h.kL),
+        className: s()(C, h.kL),
         children: [
             (0, r.jsx)("div", {
-                className: o()(h.FS, {
-                    [h.sz]: l,
-                }),
+                className: s()(h.FS, { [h.sz]: o }),
                 children:
-                    null == s
-                        ? (0, r.jsx)(c.y$y, {
-                              className: h.u1,
-                          })
-                        : (0, r.jsx)(A, {
-                              text: L,
-                              language: f,
-                              wordWrap: g,
-                          }),
+                    null == a
+                        ? (0, r.jsx)(u.y$y, { className: h.u1 })
+                        : (0, r.jsx)(A, { text: w, language: c, wordWrap: m }),
             }),
             (0, r.jsxs)("div", {
                 className: h.qr,
                 children: [
-                    x
-                        ? (0, r.jsx)(I, {
-                              expanded: l,
-                              setExpanded: u,
-                              numLines: v,
-                              isWholeFile: R,
+                    x ? (0, r.jsx)(I, { expanded: o, setExpanded: l, numLines: N, isWholeFile: O }) : null,
+                    (0, r.jsx)(T, { fileName: n, fileSize: i }),
+                    (0, r.jsx)("div", { className: h.Kb }),
+                    (0, r.jsx)(y, { language: c, setLanguage: _, align: "top" }),
+                    null != a
+                        ? (0, r.jsx)(v, {
+                              url: t,
+                              fileName: n,
+                              fileSize: i,
+                              language: c,
+                              wordWrap: m,
+                              fileContents: a,
+                              bytesLeft: E,
                           })
                         : null,
-                    (0, r.jsx)(S, {
-                        fileName: i,
-                        fileSize: a,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: h.Kb,
-                    }),
-                    (0, r.jsx)(T, {
-                        language: f,
-                        setLanguage: m,
-                        align: "top",
-                    }),
-                    null != s
-                        ? (0, r.jsx)(N, {
-                              url: n,
-                              fileName: i,
-                              fileSize: a,
-                              language: f,
-                              wordWrap: g,
-                              fileContents: s,
-                              bytesLeft: y,
-                          })
-                        : null,
-                    (0, r.jsx)(C, {
-                        wordWrap: g,
-                        setWordWrap: E,
-                        url: n,
-                        fileName: i,
-                    }),
+                    (0, r.jsx)(S, { wordWrap: m, setWordWrap: g, url: t, fileName: n }),
                 ],
             }),
         ],
     });
 }
-
-function R(e) {
+function b(e) {
     let {
             url: t,
             fileName: n,
             fileSize: a,
-            transitionState: o,
-            language: s,
+            transitionState: s,
+            language: o,
             wordWrap: l,
-            fileContents: u,
+            fileContents: c,
             bytesLeft: d,
-            onClose: f,
+            onClose: _,
         } = e,
-        [m, g] = i.useState(s),
-        [E, y] = i.useState(l),
-        b = null != u ? u : "";
+        [m, g] = i.useState(o),
+        [E, I] = i.useState(l),
+        v = c ?? "";
     return (
-        0 !== d &&
-            (b += "... ".concat(
-                _.intl.formatToPlainString(_.t["1+gGcK"], {
-                    formattedBytes: (0, p.up)(d),
-                }),
-            )),
-        (0, r.jsx)(c.dWK, {
-            transitionState: o,
-            "aria-label": _.intl.string(_.t["qxQjc+"]),
+        0 !== d && (v += `... ${p.intl.formatToPlainString(p.t["1+gGcK"], { formattedBytes: (0, f.up)(d) })}`),
+        (0, r.jsx)(u.dWK, {
+            transitionState: s,
+            "aria-label": p.intl.string(p.t["qxQjc+"]),
             size: "xxl",
-            onClose: f,
+            onClose: _,
             children: (0, r.jsxs)("div", {
                 className: h.jE,
                 children: [
-                    (0, r.jsx)(c.IpV, {
+                    (0, r.jsx)(u.IpV, {
                         className: h.ot,
                         children:
-                            null == u
-                                ? (0, r.jsx)(c.y$y, {
-                                      className: h.u1,
-                                  })
-                                : (0, r.jsx)(A, {
-                                      text: b,
-                                      language: m,
-                                      wordWrap: E,
-                                  }),
+                            null == c
+                                ? (0, r.jsx)(u.y$y, { className: h.u1 })
+                                : (0, r.jsx)(A, { text: v, language: m, wordWrap: E }),
                     }),
-                    (0, r.jsxs)(c.Text, {
+                    (0, r.jsxs)(u.Text, {
                         color: "text-default",
                         className: h.Hx,
                         variant: "text-sm/normal",
                         children: [
-                            (0, r.jsx)(S, {
-                                fileName: n,
-                                fileSize: a,
-                            }),
-                            (0, r.jsx)("div", {
-                                className: h.Kb,
-                            }),
-                            (0, r.jsx)(T, {
-                                language: m,
-                                setLanguage: g,
-                                align: "bottom",
-                            }),
-                            (0, r.jsx)(C, {
-                                wordWrap: E,
-                                setWordWrap: y,
-                                url: t,
-                                fileName: n,
-                            }),
+                            (0, r.jsx)(T, { fileName: n, fileSize: a }),
+                            (0, r.jsx)("div", { className: h.Kb }),
+                            (0, r.jsx)(y, { language: m, setLanguage: g, align: "bottom" }),
+                            (0, r.jsx)(S, { wordWrap: E, setWordWrap: I, url: t, fileName: n }),
                         ],
                     }),
                 ],
@@ -512,35 +327,28 @@ function R(e) {
         })
     );
 }
-let P = i.memo(
+let N = i.memo(
     function (e) {
-        let { url: t, fileName: n, fileSize: a, contentType: s, className: l, onClick: c, onContextMenu: d } = e,
-            [f, p] = i.useState(!1),
-            [_, m] = i.useState(n.split(".").slice(-1)[0]),
-            [g, E] = i.useState(!1),
-            { fileContents: y, bytesLeft: b, hadError: O } = v(t, s);
-        return O
-            ? (0, r.jsx)(u.A, {
+        let { url: t, fileName: n, fileSize: a, contentType: o, className: l, onClick: u, onContextMenu: d } = e,
+            [_, f] = i.useState(!1),
+            [p, m] = i.useState(n.split(".").slice(-1)[0]),
+            [g, A] = i.useState(!1),
+            { fileContents: I, bytesLeft: T, hadError: y } = E(t, o);
+        return y
+            ? (0, r.jsx)(c.A, { url: t, fileName: n, fileSize: a, onClick: u, onContextMenu: d, className: l })
+            : (0, r.jsx)(C, {
                   url: t,
                   fileName: n,
                   fileSize: a,
-                  onClick: c,
-                  onContextMenu: d,
-                  className: l,
-              })
-            : (0, r.jsx)(w, {
-                  url: t,
-                  fileName: n,
-                  fileSize: a,
-                  fileContents: y,
-                  bytesLeft: b,
-                  expanded: f,
-                  setExpanded: p,
-                  language: _,
+                  fileContents: I,
+                  bytesLeft: T,
+                  expanded: _,
+                  setExpanded: f,
+                  language: p,
                   setLanguage: m,
                   wordWrap: g,
-                  setWordWrap: E,
-                  className: o()(h.mr, l),
+                  setWordWrap: A,
+                  className: s()(h.mr, l),
               });
     },
     (e, t) => e.url === t.url && e.className === t.className,

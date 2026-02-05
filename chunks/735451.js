@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(664886),
     s = e(780940),
@@ -66,31 +67,8 @@ t.exports = function (t, r, e, i, y, x, E) {
                   }))),
         y)
     )
-        if (
-            ((P = {
-                values: I(O),
-                keys: x ? R : I(w),
-                entries: I(j),
-            }),
-            E)
-        )
+        if (((P = { values: I(O), keys: x ? R : I(w), entries: I(j) }), E))
             for (k in P) (!m && !D && k in M) || v(M, k, P[k]);
-        else
-            n(
-                {
-                    target: r,
-                    proto: !0,
-                    forced: m || D,
-                },
-                P,
-            );
-    return (
-        (!s || E) &&
-            M[S] !== R &&
-            v(M, S, R, {
-                name: y,
-            }),
-        (h[r] = R),
-        P
-    );
+        else n({ target: r, proto: !0, forced: m || D }, P);
+    return (!s || E) && M[S] !== R && v(M, S, R, { name: y }), (h[r] = R), P;
 };

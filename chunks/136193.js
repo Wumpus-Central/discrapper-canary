@@ -1,13 +1,10 @@
-n.d(t, {
-    L: () => l,
-    n: () => o,
-});
+"use strict";
+n.d(t, { L: () => l, n: () => o });
 var r = n(371926),
     i = n(531684);
 let a = "row-header-column-" + Math.random().toString(36).slice(2),
     s = "row-header-column-" + Math.random().toString(36).slice(2);
 for (; a === s; ) s = "row-header-column-" + Math.random().toString(36).slice(2);
-
 function o(e, t) {
     if (0 === t.length) return [];
     let n = [],
@@ -25,14 +22,7 @@ function o(e, t) {
                 if (t > o.length) break;
                 for (let n = t; n < o.length; n++) e.splice(n, 0, null);
                 for (let t = o.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t);
-            } else
-                (n.colSpan = 1),
-                    (n.colspan = 1),
-                    o.push(n),
-                    r.set(n, {
-                        column: o,
-                        index: o.length - 1,
-                    });
+            } else (n.colSpan = 1), (n.colspan = 1), o.push(n), r.set(n, { column: o, index: o.length - 1 });
             t = n.parentKey;
         }
         n.push(o), (s.index = n.length - 1);
@@ -76,7 +66,7 @@ function o(e, t) {
         }
         l++;
     }
-    let c = 0;
+    let u = 0;
     for (let e of o) {
         let n = e.reduce((e, t) => {
             var n;
@@ -91,7 +81,7 @@ function o(e, t) {
                 index: n,
                 value: null,
                 rendered: null,
-                level: c,
+                level: u,
                 hasChildNodes: !1,
                 childNodes: [],
                 textValue: "",
@@ -99,7 +89,7 @@ function o(e, t) {
             };
             e.push(r);
         }
-        c++;
+        u++;
     }
     return o.map((e, t) => ({
         type: "headerrow",
@@ -182,9 +172,7 @@ class l extends i.Z {
                 hasChildNodes: !1,
                 rendered: null,
                 childNodes: [],
-                props: {
-                    isSelectionCell: !0,
-                },
+                props: { isSelectionCell: !0 },
             };
             l.unshift(e);
         }
@@ -199,42 +187,36 @@ class l extends i.Z {
                 hasChildNodes: !1,
                 rendered: null,
                 childNodes: [],
-                props: {
-                    isDragButtonCell: !0,
-                },
+                props: { isDragButtonCell: !0 },
             };
             l.unshift(e);
         }
-        let c = [],
-            u = new Map(),
+        let u = [],
+            c = new Map(),
             d = (e) => {
                 switch (e.type) {
                     case "body":
                         i = e;
                         break;
                     case "column":
-                        u.set(e.key, e), !e.hasChildNodes && (l.push(e), e.props.isRowHeader && r.add(e.key));
+                        c.set(e.key, e), !e.hasChildNodes && (l.push(e), e.props.isRowHeader && r.add(e.key));
                         break;
                     case "item":
-                        c.push(e);
+                        u.push(e);
                         return;
                 }
                 for (let t of e.childNodes) d(t);
             };
         for (let t of e) d(t);
-        let f = o(u, l);
+        let _ = o(c, l);
         if (
-            (f.forEach((e, t) => c.splice(t, 0, e)),
-            super({
-                columnCount: l.length,
-                items: c,
-                visitNode: (e) => ((e.column = l[e.index]), e),
-            }),
+            (_.forEach((e, t) => u.splice(t, 0, e)),
+            super({ columnCount: l.length, items: u, visitNode: (e) => ((e.column = l[e.index]), e) }),
             (this._size = 0),
             (this.columns = l),
             (this.rowHeaderColumnKeys = r),
             (this.body = i),
-            (this.headerRows = f),
+            (this.headerRows = _),
             (this._size = [...i.childNodes].length),
             0 === this.rowHeaderColumnKeys.size)
         ) {

@@ -1,54 +1,39 @@
-n.d(t, {
-    A: () => g,
-});
-var r,
-    i,
-    l = n(311907),
-    a = n(73153),
-    s = n(723702),
-    o = n(837921),
-    c = n(857275),
-    u = n(214335),
+n.d(t, { A: () => _ });
+var i = n(311907),
+    r = n(73153),
+    a = n(723702),
+    l = n(837921),
+    s = n(857275),
+    o = n(214335),
     d = n(625002);
-let p = !1,
-    f = !0,
-    h = !1;
-class A extends (i = l.Ay.Store) {
+let c = !1,
+    u = !0,
+    A = !1;
+class h extends i.Ay.Store {
+    static displayName = "StreamingCapabilitiesStore";
     initialize() {
-        !s.isPlatformEmbedded ||
+        !a.isPlatformEmbedded ||
             __OVERLAY__ ||
-            o.Ay.getGPUDriverVersions().then((e) => {
-                (p = (0, d.A)(e)), (f = (0, c.A)(e)), (h = (0, u.A)(e)), this.emitChange();
+            l.Ay.getGPUDriverVersions().then((e) => {
+                (c = (0, d.A)(e)), (u = (0, s.A)(e)), (A = (0, o.A)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
-        return p;
+        return c;
     }
     get canUseHardwareAcceleration() {
-        return f;
+        return u;
     }
     get problematicGPUDriver() {
-        return h;
+        return A;
     }
     getState() {
-        return {
-            GPUDriversOutdated: p,
-            canUseHardwareAcceleration: f,
-            problematicGPUDriver: h,
-        };
+        return { GPUDriversOutdated: c, canUseHardwareAcceleration: u, problematicGPUDriver: A };
     }
 }
-(r = "displayName") in A
-    ? Object.defineProperty(A, r, {
-          value: "StreamingCapabilitiesStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (A[r] = "StreamingCapabilitiesStore");
-let g = new A(a.h, {
+let _ = new h(r.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
-        (p = t.GPUDriversOutdated), (f = t.canUseHardwareAcceleration);
+        (c = t.GPUDriversOutdated), (u = t.canUseHardwareAcceleration);
     },
 });

@@ -1,11 +1,9 @@
-n.d(t, {
-    k: () => i,
-});
-var r,
-    i =
-        (((r = {}).HOME = "home"),
-        (r.WHATS_NEW = "whatsNew"),
-        (r.BEST_OF_NITRO = "bestOfNitro"),
-        (r.PLANS = "plans"),
-        (r.COMPARE = "compare"),
-        r);
+n.d(t, { k: () => s });
+var i,
+    s =
+        (((i = {}).HOME = "home"),
+        (i.WHATS_NEW = "whatsNew"),
+        (i.BEST_OF_NITRO = "bestOfNitro"),
+        (i.PLANS = "plans"),
+        (i.COMPARE = "compare"),
+        i);

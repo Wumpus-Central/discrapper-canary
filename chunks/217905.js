@@ -1,81 +1,54 @@
-n.d(t, {
-    F: () => s,
-}),
-    n(228524);
-var r = n(627968);
+n.d(t, { F: () => i });
+var l = n(627968);
 n(64700);
-var l = n(855522),
-    a = n(158954),
-    i = n(183377);
-
-function s(e) {
-    let { benefits: t, description: n, imgSrc: s, title: o, tag: c, FallbackIcon: u } = e,
-        d =
-            null != s
-                ? {
-                      "--custom-background-url": "url(".concat(s.toString(), ")"),
-                  }
-                : void 0;
-    return (0, r.jsxs)("div", {
-        className: i.kL,
+var a = n(855522),
+    r = n(158954),
+    s = n(183377);
+function i(e) {
+    let { benefits: t, description: n, imgSrc: i, title: o, tag: d, FallbackIcon: c } = e,
+        u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;
+    return (0, l.jsxs)("div", {
+        className: s.kL,
         children: [
-            (0, r.jsxs)("div", {
-                className: i.wx,
+            (0, l.jsxs)("div", {
+                className: s.wx,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: i.y2,
-                        style: d,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: i.F0,
+                    (0, l.jsx)("div", { className: s.y2, style: u }),
+                    (0, l.jsx)("div", {
+                        className: s.F0,
                         children:
-                            null != s
-                                ? (0, r.jsx)("img", {
-                                      src: s.toString(),
-                                      alt: "",
-                                  })
-                                : (0, r.jsx)(u, {
-                                      size: "custom",
-                                      color: "var(--text-muted)",
-                                      height: 96,
-                                      width: 96,
-                                  }),
+                            null != i
+                                ? (0, l.jsx)("img", { src: i.toString(), alt: "" })
+                                : (0, l.jsx)(c, { size: "custom", color: "var(--text-muted)", height: 96, width: 96 }),
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: i.Qs,
+            (0, l.jsxs)("div", {
+                className: s.Qs,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: i.zH,
+                    (0, l.jsxs)("div", {
+                        className: s.zH,
                         children: [
-                            null != c &&
-                                (0, r.jsx)("div", {
-                                    children: c,
-                                }),
-                            (0, r.jsx)(a.DZT, {
-                                color: "text-strong",
-                                variant: "heading-xl/semibold",
-                                children: o,
-                            }),
+                            null != d && (0, l.jsx)("div", { children: d }),
+                            (0, l.jsx)(r.DZT, { color: "text-strong", variant: "heading-xl/semibold", children: o }),
                             null != n &&
                                 "" !== n &&
-                                (0, r.jsx)(a.EYj, {
+                                (0, l.jsx)(r.EYj, {
                                     color: "text-default",
                                     variant: "text-md/normal",
-                                    className: i.h_,
+                                    className: s.h_,
                                     children: n,
                                 }),
                         ],
                     }),
                     null != t &&
-                        (0, r.jsxs)("div", {
-                            className: i.PX,
+                        (0, l.jsxs)("div", {
+                            className: s.PX,
                             children: [
-                                (0, r.jsx)(a.EYj, {
+                                (0, l.jsx)(r.EYj, {
                                     color: "text-default",
                                     variant: "eyebrow",
-                                    children: l.A.Messages.STOREFRONT_BENEFITS_TITLE,
+                                    children: a.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                 }),
                                 t,
                             ],

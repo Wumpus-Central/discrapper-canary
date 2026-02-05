@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(732955),
@@ -8,7 +7,7 @@ var i = n(732955),
     s = n(156312),
     o = n(877062),
     l = n(252561);
-let c = {
+let u = {
     name: "Deep Link Test",
     id: "deep-link-test",
     component: function (e) {
@@ -25,10 +24,7 @@ let c = {
             activeSubscription: null,
             children: (0, r.jsxs)(l.wn, {
                 children: [
-                    (0, r.jsx)(a.Heading, {
-                        variant: "heading-xl/semibold",
-                        children: "Deep Link Test",
-                    }),
+                    (0, r.jsx)(a.Heading, { variant: "heading-xl/semibold", children: "Deep Link Test" }),
                     (0, r.jsx)(l.Hq, {
                         label: "Test Deeplinking with a Custom Path",
                         direction: "vertical",
@@ -47,7 +43,7 @@ let c = {
         deepLinkUrl: {
             label: "Deep Link URL",
             type: "text",
-            defaultValue: "discord://".concat(location.host, "/feature/apple-payment-link"),
+            defaultValue: `discord://${location.host}/feature/apple-payment-link`,
         },
     },
 };

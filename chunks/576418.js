@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
         n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
         r = [
@@ -81,9 +82,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
         ordinal: "%d\xba",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

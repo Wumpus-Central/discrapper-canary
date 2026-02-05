@@ -1,6 +1,4 @@
-i.d(n, {
-    A: () => a,
-});
+i.d(n, { A: () => a });
 var e = i(385987);
 let a = {
     date: (0, e.A)({
@@ -13,12 +11,7 @@ let a = {
         defaultWidth: "full",
     }),
     time: (0, e.A)({
-        formats: {
-            full: "HH:mm:ss zzzz",
-            long: "HH:mm:ss z",
-            medium: "HH:mm:ss",
-            short: "HH:mm",
-        },
+        formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" },
         defaultWidth: "full",
     }),
     dateTime: (0, e.A)({

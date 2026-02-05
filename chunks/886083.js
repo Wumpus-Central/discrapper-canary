@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     MY: "page__12efe",
     r$: "logoContainer__12efe",

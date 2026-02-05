@@ -1,3 +1,4 @@
+"use strict";
 var r = n(739305),
     i = n(304052).findLastIndex,
     a = r.aTypedArray;

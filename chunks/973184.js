@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     To: "keywordsTextArea__6a631",
     dG: "paddingTop__6a631",

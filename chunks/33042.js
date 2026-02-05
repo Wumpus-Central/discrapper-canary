@@ -1,214 +1,148 @@
-n.d(t, {
-    Q: () => f,
-    T: () => b,
-}),
-    n(228524);
+n.d(t, { Q: () => _, T: () => f });
 var a = n(627968);
 n(64700);
-var l = n(397927),
-    r = n(970931),
-    i = n(341967),
-    s = n(253932),
+var s = n(397927),
+    i = n(970931),
+    l = n(341967),
+    r = n(253932),
     o = n(927813),
-    c = n(427262),
-    d = n(146901),
+    d = n(427262),
+    c = n(146901),
     u = n(827827),
     m = n(652215),
-    p = n(985018);
-let h = [
-        {
-            duration: 15 * o.A.Millis.MINUTE,
-            label: () => p.intl.string(p.t["8ot6gv"]),
-        },
-        {
-            duration: o.A.Millis.HOUR,
-            label: () => p.intl.string(p.t.UMWBZr),
-        },
-        {
-            duration: 8 * o.A.Millis.HOUR,
-            label: () => p.intl.string(p.t.EpAXPC),
-        },
-        {
-            duration: o.A.Millis.DAY,
-            label: () => p.intl.string(p.t["755t4q"]),
-        },
-        {
-            duration: 3 * o.A.Millis.DAY,
-            label: () => p.intl.string(p.t["f3/1ch"]),
-        },
-        {
-            duration: void 0,
-            label: () => p.intl.string(p.t["46dqJY"]),
-        },
+    h = n(985018);
+let x = [
+        { duration: 15 * o.A.Millis.MINUTE, label: () => h.intl.string(h.t["8ot6gv"]) },
+        { duration: o.A.Millis.HOUR, label: () => h.intl.string(h.t.UMWBZr) },
+        { duration: 8 * o.A.Millis.HOUR, label: () => h.intl.string(h.t.EpAXPC) },
+        { duration: o.A.Millis.DAY, label: () => h.intl.string(h.t["755t4q"]) },
+        { duration: 3 * o.A.Millis.DAY, label: () => h.intl.string(h.t["f3/1ch"]) },
+        { duration: void 0, label: () => h.intl.string(h.t["46dqJY"]) },
     ],
-    x = "forever";
-
+    p = "forever";
 function g(e) {
-    let { status: t, currentStatus: n, description: r } = e,
-        i = t !== m.clD.ONLINE,
-        s = (0, a.jsx)(a.Fragment, {
-            children: h.map((e) => {
-                let { duration: r, label: i } = e;
+    let { status: t, currentStatus: n, description: i } = e,
+        l = t !== m.clD.ONLINE,
+        r = (0, a.jsx)(a.Fragment, {
+            children: x.map((e) => {
+                let { duration: i, label: l } = e;
                 return (0, a.jsx)(
-                    l.Drp,
+                    s.Drp,
                     {
-                        id: "".concat(t, "-").concat(r),
-                        label: i(),
-                        action: () =>
-                            (0, u.A)({
-                                nextStatus: t,
-                                prevStatus: n,
-                                durationMillis: r,
-                            }),
+                        id: `${t}-${i}`,
+                        label: l(),
+                        action: () => (0, u.A)({ nextStatus: t, prevStatus: n, durationMillis: i }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : x,
+                    i ?? p,
                 );
             }),
         });
-    return (0, a.jsx)(l.Drp, {
+    return (0, a.jsx)(s.Drp, {
         id: t,
         keepItemStyles: !0,
-        hasSubmenu: i,
-        label: (0, c.MU)(t),
-        subtext: r,
-        iconLeft: () =>
-            (0, a.jsx)(l.nW6, {
-                status: t,
-                size: 10,
-            }),
-        leadingAccessory: {
-            type: "status",
-            status: t,
-        },
+        hasSubmenu: l,
+        label: (0, d.MU)(t),
+        subtext: i,
+        iconLeft: () => (0, a.jsx)(s.nW6, { status: t, size: 10 }),
+        leadingAccessory: { type: "status", status: t },
         action: () => {
-            (0, u.A)({
-                nextStatus: t,
-                prevStatus: n,
-            });
+            (0, u.A)({ nextStatus: t, prevStatus: n });
         },
         dontCloseOnAction: !0,
-        children: i ? s : void 0,
+        children: l ? r : void 0,
     });
 }
-
-function f(e) {
+function _(e) {
     if (null == e || "0" === e) return;
-    let { kind: t, dateString: n, timeString: a } = (0, d._)(e);
+    let { kind: t, dateString: n, timeString: a } = (0, c._)(e);
     return "today" === t
-        ? p.intl.formatToPlainString(p.t.ZxxHIO, {
-              timeString: a,
-          })
-        : p.intl.formatToPlainString(p.t["9OFjSe"], {
-              dateString: n,
-              timeString: a,
-          });
+        ? h.intl.formatToPlainString(h.t.ZxxHIO, { timeString: a })
+        : h.intl.formatToPlainString(h.t["9OFjSe"], { dateString: n, timeString: a });
 }
-
-function b(e) {
-    let t = s.CY.useSetting(),
-        n = (0, r.kB)(),
-        o =
-            i.P.useExperiment({
-                location: "UserProfileAccountPopout",
-            }).allowQuietMode || n,
-        c = s.Jr.useSetting(),
-        d = e === m.clD.DND,
+function f(e) {
+    let t = r.CY.useSetting(),
+        n = (0, i.kB)(),
+        o = l.P.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
+        d = r.Jr.useSetting(),
+        c = e === m.clD.DND,
         u = (n) => {
-            let a = f(t);
+            let a = _(t);
             if (e === n && null != a) return a;
             switch (n) {
                 case m.clD.DND:
-                    return o ? p.intl.string(p.t.day5A6) : p.intl.string(p.t["tq/fMK"]);
+                    return o ? h.intl.string(h.t.day5A6) : h.intl.string(h.t["tq/fMK"]);
                 case m.clD.INVISIBLE:
-                    return p.intl.string(p.t.zPc6Mc);
+                    return h.intl.string(h.t.zPc6Mc);
                 default:
                     return;
             }
         },
-        b = (0, a.jsx)(a.Fragment, {
-            children: h.map((t) => {
-                let { duration: n, label: i } = t;
+        f = (0, a.jsx)(a.Fragment, {
+            children: x.map((t) => {
+                let { duration: n, label: l } = t;
                 return (0, a.jsx)(
-                    l.Drp,
+                    s.Drp,
                     {
-                        id: "".concat(e, "-").concat(n),
-                        label: i(),
+                        id: `${e}-${n}`,
+                        label: l(),
                         action: () => {
-                            (0, r.ES)(!0, n);
+                            (0, i.ES)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : x,
+                    n ?? p,
                 );
             }),
         }),
-        v = g({
-            status: m.clD.ONLINE,
-            currentStatus: e,
-        }),
-        j = g({
-            status: m.clD.IDLE,
-            currentStatus: e,
-            description: u(m.clD.IDLE),
-        }),
-        _ = g({
-            status: m.clD.DND,
-            currentStatus: e,
-            description: u(m.clD.DND),
-        }),
-        y = g({
-            status: m.clD.INVISIBLE,
-            currentStatus: e,
-            description: u(m.clD.INVISIBLE),
-        });
+        v = g({ status: m.clD.ONLINE, currentStatus: e }),
+        b = g({ status: m.clD.IDLE, currentStatus: e, description: u(m.clD.IDLE) }),
+        j = g({ status: m.clD.DND, currentStatus: e, description: u(m.clD.DND) }),
+        A = g({ status: m.clD.INVISIBLE, currentStatus: e, description: u(m.clD.INVISIBLE) });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             v,
-            (0, a.jsx)(l.bXX, {}, "menu-separator-statuses"),
+            (0, a.jsx)(s.bXX, {}, "menu-separator-statuses"),
+            b,
             j,
-            _,
-            y,
+            A,
             o || n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(l.bXX, {}, "menu-separator-statuses"),
+                          (0, a.jsx)(s.bXX, {}, "menu-separator-statuses"),
                           (0, a.jsx)(
-                              l.Drp,
+                              s.Drp,
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
                                   keepItemStyles: !0,
                                   hasSubmenu: !0,
-                                  label: p.intl.string(p.t.gJRnwK),
-                                  iconLeft: l.a_I,
-                                  leadingAccessory: {
-                                      type: "icon",
-                                      icon: l.a_I,
-                                  },
+                                  label: h.intl.string(h.t.gJRnwK),
+                                  iconLeft: s.a_I,
+                                  leadingAccessory: { type: "icon", icon: s.a_I },
                                   badge: {
                                       text: n
-                                          ? p.intl.string(p.t.ApAu9f)
-                                          : d
-                                            ? p.intl.string(p.t.gH3Frd)
-                                            : p.intl.string(p.t["64pl82"]),
+                                          ? h.intl.string(h.t.ApAu9f)
+                                          : c
+                                            ? h.intl.string(h.t.gH3Frd)
+                                            : h.intl.string(h.t["64pl82"]),
                                   },
                                   subtext:
-                                      n && null != c && "0" !== c
-                                          ? p.intl.format(p.t.BWD8fs, {
-                                                endTime: new Date(Number(c)).toLocaleString(p.intl.currentLocale, {
+                                      n && null != d && "0" !== d
+                                          ? h.intl.format(h.t.BWD8fs, {
+                                                endTime: new Date(Number(d)).toLocaleString(h.intl.currentLocale, {
                                                     month: "numeric",
                                                     day: "numeric",
                                                     hour: "numeric",
                                                     minute: "2-digit",
                                                 }),
                                             })
-                                          : p.intl.string(p.t["Br1q+x"]),
+                                          : h.intl.string(h.t["Br1q+x"]),
                                   action: () => {
-                                      (0, r.ES)(!n);
+                                      (0, i.ES)(!n);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: b,
+                                  children: f,
                               },
                               "quiet-mode",
                           ),

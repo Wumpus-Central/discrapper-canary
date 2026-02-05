@@ -1,64 +1,54 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => u });
+var i = n(627968),
     l = n(64700),
-    i = n(435371),
+    s = n(435371),
     a = n(421380),
-    s = n(397927),
+    r = n(397927),
     o = n(954571),
-    c = n(652215),
-    u = n(985018);
-
-function d(e) {
+    d = n(652215),
+    c = n(985018);
+function u(e) {
     let { onClick: t } = e,
         [n, a] = l.useState(!1),
-        d = () => {
+        u = () => {
             t(),
-                o.default.track(c.HAw.INBOX_CHANNEL_ACKED, {
+                o.default.track(d.HAw.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0,
                 });
         };
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            n
-                ? (0, r.jsx)(f, {
-                      confirm: d,
-                      cancel: () => a(!1),
-                  })
-                : null,
-            (0, r.jsx)(i.m_, {
-                text: u.intl.string(u.t["8k+6QY"]),
-                children: (0, r.jsx)(s.K0, {
+            n ? (0, i.jsx)(h, { confirm: u, cancel: () => a(!1) }) : null,
+            (0, i.jsx)(s.m_, {
+                text: c.intl.string(c.t["8k+6QY"]),
+                children: (0, i.jsx)(r.K0, {
                     variant: "secondary",
-                    "aria-label": u.intl.string(u.t["8k+6QY"]),
+                    "aria-label": c.intl.string(c.t["8k+6QY"]),
                     size: "sm",
-                    icon: s.iA$,
+                    icon: r.iA$,
                     onClick: (e) => {
-                        e.shiftKey ? d() : a(!0);
+                        e.shiftKey ? u() : a(!0);
                     },
                 }),
             }),
         ],
     });
 }
-
-function f(e) {
+function h(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, r.jsx)(s.MJ3, {
+    return (0, i.jsx)(r.MJ3, {
         dismissable: !0,
-        header: u.intl.string(u.t.h4bVZ2),
-        confirmText: u.intl.string(u.t.e6RscS),
-        cancelText: u.intl.string(u.t["ETE/oC"]),
+        header: c.intl.string(c.t.h4bVZ2),
+        confirmText: c.intl.string(c.t.e6RscS),
+        cancelText: c.intl.string(c.t["ETE/oC"]),
         confirmButtonColor: a.$n.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, r.jsx)(s.Text, {
+        children: (0, i.jsx)(r.Text, {
             color: "text-default",
             variant: "text-sm/normal",
-            children: u.intl.string(u.t["0MQ0Bf"]),
+            children: c.intl.string(c.t["0MQ0Bf"]),
         }),
     });
 }

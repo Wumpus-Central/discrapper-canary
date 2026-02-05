@@ -1,33 +1,26 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(695825);
-
+"use strict";
+n.d(t, { A: () => l });
+var i = n(64700),
+    s = n(695825);
 function l(e) {
-    let [t, n] = r.useState(!0),
-        [l, s] = r.useState(),
-        [a, c] = r.useState(),
-        o = r.useCallback(async (e) => {
-            n(!0), s(void 0);
+    let [t, n] = i.useState(!0),
+        [l, r] = i.useState(),
+        [a, o] = i.useState(),
+        d = i.useCallback(async (e) => {
+            n(!0), r(void 0);
             try {
-                let t = await i.zW(e);
-                c(t);
+                let t = await s.zW(e);
+                o(t);
             } catch (e) {
-                s(e);
+                r(e);
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        r.useEffect(() => {
-            o(e);
-        }, [e, o]),
-        {
-            isLoading: t,
-            error: l,
-            highlightedCreatorDetails: a,
-        }
+        i.useEffect(() => {
+            d(e);
+        }, [e, d]),
+        { isLoading: t, error: l, highlightedCreatorDetails: a }
     );
 }

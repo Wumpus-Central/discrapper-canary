@@ -1,5 +1,3 @@
-n.d(t, {
-    X: () => l,
-});
-var r,
-    l = (((r = {}).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"), r);
+n.d(t, { X: () => l });
+var i,
+    l = (((i = {}).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"), i);

@@ -1,7 +1,5 @@
-n.d(t, {
-    y: () => a,
-}),
-    n(321073);
+"use strict";
+n.d(t, { y: () => a }), n(321073);
 var r = n(361670),
     i = n(464114);
 let a = (e, t, n) => {
@@ -13,9 +11,6 @@ let a = (e, t, n) => {
             let i = (0, r.W$)(e, t, n);
             i === r.Ux.SENDABLE ? a.push(e) : i === r.Ux.SENDABLE_WITH_PREMIUM && s.push(e);
         }),
-        {
-            sendable: a,
-            sendableWithPremium: s,
-        }
+        { sendable: a, sendableWithPremium: s }
     );
 };

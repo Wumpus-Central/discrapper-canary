@@ -1,96 +1,71 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(827734),
+n.d(t, { A: () => m });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(827734),
     s = n(397927),
     o = n(817281),
-    c = n(688810),
-    u = n(692798),
-    d = n(544028),
-    p = n(652215),
-    f = n(985018),
-    h = n(882773);
-let A = function () {
-    let { analyticsLocations: e } = (0, c.Ay)(),
-        t = (0, l.bG)([d.A], () => d.A.theme),
-        n = i.useRef(null);
-    i.useEffect(() => {
+    d = n(688810),
+    c = n(692798),
+    u = n(544028),
+    A = n(652215),
+    h = n(985018),
+    _ = n(882773);
+let m = function () {
+    let { analyticsLocations: e } = (0, d.Ay)(),
+        t = (0, a.bG)([u.A], () => u.A.theme),
+        n = r.useRef(null);
+    r.useEffect(() => {
         null == n.current && (n.current = t);
     }, [t]);
-    let A = (0, s.rdh)(a.A.colors.BACKGROUND_BASE_LOW, p.NJ8.LIGHT),
-        g = (0, s.rdh)(a.A.colors.BACKGROUND_BASE_LOW, p.NJ8.DARKER),
-        m = (0, s.rdh)(a.A.colors.BACKGROUND_BASE_LOW, p.NJ8.MIDNIGHT),
-        b = i.useMemo(
+    let m = (0, s.rdh)(l.A.colors.BACKGROUND_BASE_LOW, A.NJ8.LIGHT),
+        p = (0, s.rdh)(l.A.colors.BACKGROUND_BASE_LOW, A.NJ8.DARKER),
+        g = (0, s.rdh)(l.A.colors.BACKGROUND_BASE_LOW, A.NJ8.MIDNIGHT),
+        E = r.useMemo(
             () => [
-                {
-                    theme: p.NJ8.LIGHT,
-                    label: f.t.K2sFfo,
-                    color: A.hex(),
-                },
-                {
-                    theme: p.NJ8.DARKER,
-                    label: f.t.b8Cei3,
-                    color: g.hex(),
-                },
-                {
-                    theme: p.NJ8.MIDNIGHT,
-                    label: f.t.Do4ZJx,
-                    color: m.hex(),
-                },
+                { theme: A.NJ8.LIGHT, label: h.t.K2sFfo, color: m.hex() },
+                { theme: A.NJ8.DARKER, label: h.t.b8Cei3, color: p.hex() },
+                { theme: A.NJ8.MIDNIGHT, label: h.t.Do4ZJx, color: g.hex() },
             ],
-            [A, g, m],
+            [m, p, g],
         ),
-        _ = i.useCallback(
+        f = r.useCallback(
             (t) => {
-                (0, u.X8)({
-                    isPersisted: !0,
-                    analyticsLocations: e,
-                    themeName: "default ".concat(t),
-                }),
-                    (0, o.u_)({
-                        theme: t,
-                    });
+                (0, c.X8)({ isPersisted: !0, analyticsLocations: e, themeName: `default ${t}` }),
+                    (0, o.u_)({ theme: t });
             },
             [e],
         ),
-        E = i.useCallback(() => {
-            null != n.current && _(n.current);
-        }, [_]);
-    return (0, r.jsx)("div", {
-        className: h.N,
-        children: (0, r.jsxs)("div", {
-            className: h.t7,
+        I = r.useCallback(() => {
+            null != n.current && f(n.current);
+        }, [f]);
+    return (0, i.jsx)("div", {
+        className: _.N,
+        children: (0, i.jsxs)("div", {
+            className: _.t7,
             children: [
-                b.map((e) =>
-                    (0, r.jsxs)(
+                E.map((e) =>
+                    (0, i.jsxs)(
                         "button",
                         {
                             type: "button",
-                            className: h.Du,
-                            onClick: () => _(e.theme),
-                            "aria-label": f.intl.string(e.label),
+                            className: _.Du,
+                            onClick: () => f(e.theme),
+                            "aria-label": h.intl.string(e.label),
                             children: [
-                                (0, r.jsx)("div", {
-                                    className: "".concat(h.WT, " ").concat(t === e.theme ? h.TA : ""),
-                                    style: {
-                                        backgroundColor: e.color,
-                                    },
+                                (0, i.jsx)("div", {
+                                    className: `${_.WT} ${t === e.theme ? _.TA : ""}`,
+                                    style: { backgroundColor: e.color },
                                 }),
-                                (0, r.jsx)("span", {
-                                    className: h.i,
-                                    children: f.intl.string(e.label),
-                                }),
+                                (0, i.jsx)("span", { className: _.i, children: h.intl.string(e.label) }),
                             ],
                         },
                         e.theme,
                     ),
                 ),
-                (0, r.jsx)(s.K0, {
-                    onClick: E,
-                    "aria-label": f.intl.string(f.t.yBZMsQ),
+                (0, i.jsx)(s.K0, {
+                    onClick: I,
+                    "aria-label": h.intl.string(h.t.yBZMsQ),
                     icon: s.fNY,
                     variant: "secondary",
                 }),

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XG: "scroller_d80a13",
     gg: "headerHeading_d80a13",

@@ -1,16 +1,7 @@
-n.d(t, {
-    j: () => l,
-});
-var r = n(397927),
-    i = n(851907);
-
-function l(e) {
+n.d(t, { j: () => a });
+var i = n(397927),
+    r = n(851907);
+function a(e) {
     let { application: t, channelId: n } = e;
-    return null !=
-        (0, i.Ay)({
-            application: t,
-            channelId: n,
-        })
-        ? r.KX8
-        : r.SYi;
+    return null != (0, r.Ay)({ application: t, channelId: n }) ? i.KX8 : i.SYi;
 }

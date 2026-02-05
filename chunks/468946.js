@@ -1,34 +1,26 @@
-n.d(t, {
-    A: () => g,
-});
-var l = n(627968),
+n.d(t, { A: () => _ });
+var a = n(627968),
     i = n(281445),
-    a = n(158954),
-    r = n(736653),
-    s = n(27023),
-    u = n(818348),
-    o = n(294726),
-    d = n(985018),
-    c = n(288948),
+    l = n(158954),
+    s = n(736653),
+    r = n(27023),
+    d = n(818348),
+    u = n(294726),
+    c = n(985018),
+    o = n(288948),
     m = n(391637),
-    v = n(588979);
-
+    g = n(588979);
 function f() {
-    let e = (0, r.Ay)();
-    return (0, l.jsx)(a.EYj, {
+    let e = (0, s.Ay)();
+    return (0, a.jsx)(l.EYj, {
         variant: "text-sm/medium",
-        className: c.Q,
-        children: d.intl.format(o.default.fcJiY8, {
-            provider: (0, l.jsx)("img", {
-                className: c.S,
-                src: e !== u.NJ.LIGHT ? v : m,
-                alt: "Shockbyte",
-            }),
+        className: o.Q,
+        children: c.intl.format(u.default.fcJiY8, {
+            provider: (0, a.jsx)("img", { className: o.S, src: e !== d.NJ.LIGHT ? g : m, alt: "Shockbyte" }),
         }),
     });
 }
-
-function g() {
-    let { gameProvider: e } = (0, s.bv)();
-    return e === i.X.SHOCKBYTE ? (0, l.jsx)(f, {}) : null;
+function _() {
+    let { gameProvider: e } = (0, r.bv)();
+    return e === i.X.SHOCKBYTE ? (0, a.jsx)(f, {}) : null;
 }

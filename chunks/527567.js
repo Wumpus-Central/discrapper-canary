@@ -1,74 +1,46 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    s = n(830215),
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
+    r = n(830215),
     l = n(396681),
     a = n(854378),
     o = n(210714),
     c = n(985018),
-    u = n(473169);
-
-function d(e) {
+    d = n(473169);
+function u(e) {
     let { location: t } = e,
-        [d, h] = i.useState("submitting");
-    return (i.useEffect(() => {
+        [u, h] = s.useState("submitting");
+    return (s.useEffect(() => {
         (0, o.d)("authorize_payment");
         let e = (0, l.A)(t);
         null == e
             ? h("failed")
             : (async () => {
                   try {
-                      await s.A.authorizePayment(e), h("succeeded");
+                      await r.A.authorizePayment(e), h("succeeded");
                   } catch (e) {
                       h("failed");
                   }
               })();
     }, [t]),
-    "failed" === d)
-        ? (0, r.jsxs)(a.Ay, {
+    "failed" === u)
+        ? (0, i.jsxs)(a.Ay, {
               children: [
-                  (0, r.jsx)("img", {
-                      alt: "",
-                      src: n(678985),
-                      className: u.SX,
-                  }),
-                  (0, r.jsx)(a.hE, {
-                      className: u.QB,
-                      children: c.intl.string(c.t.GHRpue),
-                  }),
-                  (0, r.jsx)(a.tK, {
-                      className: u.C2,
-                      children: c.intl.string(c.t["1nO55v"]),
-                  }),
+                  (0, i.jsx)("img", { alt: "", src: n(678985), className: d.SX }),
+                  (0, i.jsx)(a.hE, { className: d.QB, children: c.intl.string(c.t.GHRpue) }),
+                  (0, i.jsx)(a.tK, { className: d.C2, children: c.intl.string(c.t["1nO55v"]) }),
               ],
           })
-        : "succeeded" === d
-          ? (0, r.jsxs)(a.Ay, {
+        : "succeeded" === u
+          ? (0, i.jsxs)(a.Ay, {
                 children: [
-                    (0, r.jsx)("img", {
-                        alt: "",
-                        src: n(586430),
-                        className: u.SX,
-                    }),
-                    (0, r.jsx)(a.hE, {
-                        className: u.QB,
-                        children: c.intl.string(c.t.ihHX53),
-                    }),
-                    (0, r.jsx)(a.tK, {
-                        className: u.C2,
-                        children: c.intl.string(c.t["pGPCv+"]),
-                    }),
+                    (0, i.jsx)("img", { alt: "", src: n(586430), className: d.SX }),
+                    (0, i.jsx)(a.hE, { className: d.QB, children: c.intl.string(c.t.ihHX53) }),
+                    (0, i.jsx)(a.tK, { className: d.C2, children: c.intl.string(c.t["pGPCv+"]) }),
                 ],
             })
-          : (0, r.jsxs)(a.Ay, {
-                children: [
-                    (0, r.jsx)(a.CK, {}),
-                    (0, r.jsx)(a.hE, {
-                        children: c.intl.string(c.t.T3vC7n),
-                    }),
-                ],
+          : (0, i.jsxs)(a.Ay, {
+                children: [(0, i.jsx)(a.CK, {}), (0, i.jsx)(a.hE, { children: c.intl.string(c.t.T3vC7n) })],
             });
 }

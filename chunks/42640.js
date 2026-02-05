@@ -1,3 +1,4 @@
+"use strict";
 var r =
         (this && this.__createBinding) ||
         (Object.create
@@ -20,10 +21,7 @@ var r =
         (this && this.__setModuleDefault) ||
         (Object.create
             ? function (e, t) {
-                  Object.defineProperty(e, "default", {
-                      enumerable: !0,
-                      value: t,
-                  });
+                  Object.defineProperty(e, "default", { enumerable: !0, value: t });
               }
             : function (e, t) {
                   e.default = t;

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => y,
-});
+"use strict";
+n.d(t, { A: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,112 +7,49 @@ var i = n(503698),
     s = n(397927),
     o = n(442433),
     l = n(975807),
-    c = n(235393),
-    u = n(332173),
+    u = n(235393),
+    c = n(332173),
     d = n(202803),
-    f = n(365526),
-    p = n(652215),
-    _ = n(446440),
+    _ = n(365526),
+    f = n(652215),
+    p = n(446440),
     h = n(800344);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e) {
+function m(e) {
     return {
         react(t, i, m) {
-            let E = m.noStyleAndInteraction
+            let g = m.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.AN)(t.attachmentUrl);
-                          e.shouldStopPropagation && (null == n || n.stopPropagation()),
-                              c.A.trackLinkClicked(r),
+                          e.shouldStopPropagation && n?.stopPropagation(),
+                              u.A.trackLinkClicked(r),
                               e.shouldCloseDefaultModals && (0, s.s7G)(),
                               (0, l.A)(r);
                       },
-                y = m.noStyleAndInteraction
-                    ? p.tEg
+                E = m.noStyleAndInteraction
+                    ? f.tEg
                     : (e) => {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await n.e("62529").then(n.bind(n, 740024));
                               return (n) =>
-                                  (0, r.jsx)(
-                                      e,
-                                      b(g({}, n), {
-                                          attachmentUrl: t.attachmentUrl,
-                                          attachmentName: t.attachmentName,
-                                      }),
-                                  );
+                                  (0, r.jsx)(e, {
+                                      ...n,
+                                      attachmentUrl: t.attachmentUrl,
+                                      attachmentName: t.attachmentName,
+                                  });
                           });
                       };
             return (0, r.jsxs)(
-                u.A,
+                c.A,
                 {
                     role: "link",
                     href: t.attachmentUrl,
-                    onClick: E,
-                    onContextMenu: y,
+                    onClick: g,
+                    onContextMenu: E,
                     className: "attachmentLink",
                     children: [
-                        (0, r.jsx)(s.PtA, {
-                            size: "xs",
-                            className: a()(h.Kk, _.K),
-                            color: "currentColor",
-                        }),
-                        (0, f.t)(t, i, m),
+                        (0, r.jsx)(s.PtA, { size: "xs", className: a()(h.Kk, p.K), color: "currentColor" }),
+                        (0, _.t)(t, i, m),
                     ],
                 },
                 m.key,

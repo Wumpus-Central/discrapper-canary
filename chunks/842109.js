@@ -65,58 +65,27 @@ e.exports = function (e) {
     return {
         name: "Smali",
         contains: [
-            {
-                className: "string",
-                begin: '"',
-                end: '"',
-                relevance: 0,
-            },
-            e.COMMENT("#", "$", {
-                relevance: 0,
-            }),
+            { className: "string", begin: '"', end: '"', relevance: 0 },
+            e.COMMENT("#", "$", { relevance: 0 }),
             {
                 className: "keyword",
                 variants: [
-                    {
-                        begin: "\\s*\\.end\\s[a-zA-Z0-9]*",
-                    },
-                    {
-                        begin: "^[ ]*\\.[a-zA-Z]*",
-                        relevance: 0,
-                    },
-                    {
-                        begin: "\\s:[a-zA-Z_0-9]*",
-                        relevance: 0,
-                    },
-                    {
-                        begin: "\\s(" + r.join("|") + ")",
-                    },
+                    { begin: "\\s*\\.end\\s[a-zA-Z0-9]*" },
+                    { begin: "^[ ]*\\.[a-zA-Z]*", relevance: 0 },
+                    { begin: "\\s:[a-zA-Z_0-9]*", relevance: 0 },
+                    { begin: "\\s(" + r.join("|") + ")" },
                 ],
             },
             {
                 className: "built_in",
                 variants: [
-                    {
-                        begin: "\\s(" + t.join("|") + ")\\s",
-                    },
-                    {
-                        begin: "\\s(" + t.join("|") + ")((-|/)[a-zA-Z0-9]+)+\\s",
-                        relevance: 10,
-                    },
-                    {
-                        begin: "\\s(" + n.join("|") + ")((-|/)[a-zA-Z0-9]+)*\\s",
-                        relevance: 10,
-                    },
+                    { begin: "\\s(" + t.join("|") + ")\\s" },
+                    { begin: "\\s(" + t.join("|") + ")((-|/)[a-zA-Z0-9]+)+\\s", relevance: 10 },
+                    { begin: "\\s(" + n.join("|") + ")((-|/)[a-zA-Z0-9]+)*\\s", relevance: 10 },
                 ],
             },
-            {
-                className: "class",
-                begin: "L[^(;:\n]*;",
-                relevance: 0,
-            },
-            {
-                begin: "[vp][0-9]+",
-            },
+            { className: "class", begin: "L[^(;:\n]*;", relevance: 0 },
+            { begin: "[vp][0-9]+" },
         ],
     };
 };

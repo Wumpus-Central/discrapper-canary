@@ -1,171 +1,103 @@
-n.d(e, {
-    G: () => h,
-    default: () => g,
-}),
-    n(896048);
-var r,
-    i = n(627968),
-    a = n(64700),
-    s = n(397927),
+n.d(e, { G: () => A, default: () => h });
+var i,
+    s = n(627968),
+    r = n(64700),
+    a = n(397927),
     l = n(544231),
-    c = n(665909),
-    o = n(464838),
+    o = n(665909),
+    c = n(464838),
     d = n(120340),
-    u = n(196645),
-    x = n(985018),
-    m = n(705656);
-
-function A(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                }),
-            )),
-            r.forEach(function (e) {
-                var r;
-                (r = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = r);
-            });
-    }
-    return t;
-}
-
-function f(t, e) {
-    return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
-              }),
-        t
-    );
-}
-var h =
-    (((r = {})[(r.INTRO = 0)] = "INTRO"),
-    (r[(r.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
-    (r[(r.TAKE_ACTION = 2)] = "TAKE_ACTION"),
-    r);
-let g = (t) => {
-    let { warningId: e, warningType: n, senderId: r, modalProps: h, channelId: g } = t,
-        [O, j] = a.useState(0),
-        _ = a.useMemo(
-            () => ({
-                channelId: g,
-                senderId: r,
-                warningId: e,
-                warningType: n,
-                isNudgeWarning: !1,
-            }),
-            [g, r, e, n],
+    E = n(196645),
+    _ = n(985018),
+    u = n(705656),
+    A =
+        (((i = {})[(i.INTRO = 0)] = "INTRO"),
+        (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
+        (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
+        i);
+let h = (t) => {
+    let { warningId: e, warningType: n, senderId: i, modalProps: A, channelId: h } = t,
+        [x, T] = r.useState(0),
+        m = r.useMemo(
+            () => ({ channelId: h, senderId: i, warningId: e, warningType: n, isNudgeWarning: !1 }),
+            [h, i, e, n],
         );
-    a.useEffect(() => {
-        (0, c.QF)(
-            f(A({}, _), {
-                viewName: c.gN.SAFETY_TAKEOVER_MODAL,
-            }),
-        );
-    }, [_]);
-    let p = a.useCallback(
+    r.useEffect(() => {
+        (0, o.QF)({ ...m, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
+    }, [m]);
+    let g = r.useCallback(
             (t) => {
-                (0, c._$)(
-                    f(A({}, _), {
-                        cta: t,
-                    }),
-                );
+                (0, o._$)({ ...m, cta: t });
             },
-            [_],
+            [m],
         ),
-        [v, b] = a.useState(!1);
-
-    function E(t) {
-        j(t);
+        [N, S] = r.useState(!1);
+    function C(t) {
+        T(t);
     }
-    return (0, i.jsxs)(s.EOs, {
+    return (0, s.jsxs)(a.EOs, {
         "data-migration-pending": !0,
-        transitionState: h.transitionState,
+        transitionState: A.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
-            (0, i.jsx)("div", {
-                className: m.kL,
-                children: (0, i.jsxs)(s.tN_, {
+            (0, s.jsx)("div", {
+                className: u.kL,
+                children: (0, s.jsxs)(a.tN_, {
                     width: 440,
-                    activeSlide: O,
+                    activeSlide: x,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
                     children: [
-                        (0, i.jsx)(s.q7S, {
+                        (0, s.jsx)(a.q7S, {
                             id: 0,
-                            children: (0, i.jsx)(o.A, {
+                            children: (0, s.jsx)(c.A, {
                                 warningId: e,
-                                senderId: r,
-                                trackAnalyticsEvent: p,
-                                onNavigate: E,
+                                senderId: i,
+                                trackAnalyticsEvent: g,
+                                onNavigate: C,
                             }),
                         }),
-                        (0, i.jsx)(s.q7S, {
+                        (0, s.jsx)(a.q7S, {
                             id: 1,
-                            children: (0, i.jsx)(d.A, {
-                                warningId: e,
-                                senderId: r,
-                                trackAnalyticsEvent: p,
-                            }),
+                            children: (0, s.jsx)(d.A, { warningId: e, senderId: i, trackAnalyticsEvent: g }),
                         }),
-                        (0, i.jsx)(s.q7S, {
+                        (0, s.jsx)(a.q7S, {
                             id: 2,
-                            children: (0, i.jsx)(u.A, {
+                            children: (0, s.jsx)(E.A, {
                                 warningId: e,
-                                senderId: r,
-                                trackAnalyticsEvent: p,
-                                channelId: g,
-                                hasReported: v,
+                                senderId: i,
+                                trackAnalyticsEvent: g,
+                                channelId: h,
+                                hasReported: N,
                                 onReport: function () {
-                                    b(!0);
+                                    S(!0);
                                 },
                             }),
                         }),
                     ],
                 }),
             }),
-            (0, i.jsxs)(s.jlY, {
+            (0, s.jsxs)(a.jlY, {
                 "data-migration-pending": !0,
-                className: m.qr,
+                className: u.qr,
                 children: [
-                    (0, i.jsx)(s.QWc, {
+                    (0, s.jsx)(a.QWc, {
                         variant: "secondary",
                         size: "sm",
-                        text: x.intl.string(x.t.cpT0Cq),
+                        text: _.intl.string(_.t.cpT0Cq),
                         onClick: function () {
-                            h.onClose(), (0, l.xi)(g, [e]), p(c.Wm.USER_TAKEOVER_MODAL_DISMISS);
+                            A.onClose(), (0, l.xi)(h, [e]), g(o.Wm.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
-                    0 !== O &&
-                        (0, i.jsx)(s.QWc, {
+                    0 !== x &&
+                        (0, s.jsx)(a.QWc, {
                             variant: "secondary",
                             size: "sm",
-                            text: x.intl.string(x.t["13/7kX"]),
+                            text: _.intl.string(_.t["13/7kX"]),
                             textVariant: "text-sm/normal",
-                            onClick: () => E(0),
+                            onClick: () => C(0),
                         }),
                 ],
             }),

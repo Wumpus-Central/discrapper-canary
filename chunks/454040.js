@@ -137,122 +137,50 @@ e.exports = function (e) {
             "__bind",
             "__indexOf",
         ],
-        o = {
-            keyword: t.concat(s),
-            literal: n.concat(a),
-            built_in: r.concat(i),
-        },
+        o = { keyword: t.concat(s), literal: n.concat(a), built_in: r.concat(i) },
         l = "[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*",
-        c = e.inherit(e.TITLE_MODE, {
-            begin: l,
-        }),
-        u = {
-            className: "subst",
-            begin: /#\{/,
-            end: /\}/,
-            keywords: o,
-        },
-        d = {
-            className: "subst",
-            begin: /#[A-Za-z$_]/,
-            end: /(?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*/,
-            keywords: o,
-        },
-        f = [
+        u = e.inherit(e.TITLE_MODE, { begin: l }),
+        c = { className: "subst", begin: /#\{/, end: /\}/, keywords: o },
+        d = { className: "subst", begin: /#[A-Za-z$_]/, end: /(?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*/, keywords: o },
+        _ = [
             e.BINARY_NUMBER_MODE,
             {
                 className: "number",
                 begin: "(\\b0[xX][a-fA-F0-9_]+)|(\\b\\d(\\d|_\\d)*(\\.(\\d(\\d|_\\d)*)?)?(_*[eE]([-+]\\d(_\\d|\\d)*)?)?[_a-z]*)",
                 relevance: 0,
-                starts: {
-                    end: "(\\s*/)?",
-                    relevance: 0,
-                },
+                starts: { end: "(\\s*/)?", relevance: 0 },
             },
             {
                 className: "string",
                 variants: [
-                    {
-                        begin: /'''/,
-                        end: /'''/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        begin: /'/,
-                        end: /'/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        begin: /"""/,
-                        end: /"""/,
-                        contains: [e.BACKSLASH_ESCAPE, u, d],
-                    },
-                    {
-                        begin: /"/,
-                        end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE, u, d],
-                    },
-                    {
-                        begin: /\\/,
-                        end: /(\s|$)/,
-                        excludeEnd: !0,
-                    },
+                    { begin: /'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE] },
+                    { begin: /'/, end: /'/, contains: [e.BACKSLASH_ESCAPE] },
+                    { begin: /"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, c, d] },
+                    { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, c, d] },
+                    { begin: /\\/, end: /(\s|$)/, excludeEnd: !0 },
                 ],
             },
             {
                 className: "regexp",
                 variants: [
-                    {
-                        begin: "//",
-                        end: "//[gim]*",
-                        contains: [u, e.HASH_COMMENT_MODE],
-                    },
-                    {
-                        begin: /\/(?![ *])(\\.|[^\\\n])*?\/[gim]*(?=\W)/,
-                    },
+                    { begin: "//", end: "//[gim]*", contains: [c, e.HASH_COMMENT_MODE] },
+                    { begin: /\/(?![ *])(\\.|[^\\\n])*?\/[gim]*(?=\W)/ },
                 ],
             },
-            {
-                begin: "@" + l,
-            },
-            {
-                begin: "``",
-                end: "``",
-                excludeBegin: !0,
-                excludeEnd: !0,
-                subLanguage: "javascript",
-            },
+            { begin: "@" + l },
+            { begin: "``", end: "``", excludeBegin: !0, excludeEnd: !0, subLanguage: "javascript" },
         ];
-    u.contains = f;
-    let p = {
+    c.contains = _;
+    let f = {
             className: "params",
             begin: "\\(",
             returnBegin: !0,
-            contains: [
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    keywords: o,
-                    contains: ["self"].concat(f),
-                },
-            ],
+            contains: [{ begin: /\(/, end: /\)/, keywords: o, contains: ["self"].concat(_) }],
         },
-        _ = {
-            begin: "(#=>|=>|\\|>>|-?->|!->)",
-        },
+        p = { begin: "(#=>|=>|\\|>>|-?->|!->)" },
         h = {
-            variants: [
-                {
-                    match: [/class\s+/, l, /\s+extends\s+/, l],
-                },
-                {
-                    match: [/class\s+/, l],
-                },
-            ],
-            scope: {
-                2: "title.class",
-                4: "title.class.inherited",
-            },
+            variants: [{ match: [/class\s+/, l, /\s+extends\s+/, l] }, { match: [/class\s+/, l] }],
+            scope: { 2: "title.class", 4: "title.class.inherited" },
             keywords: o,
         };
     return {
@@ -260,23 +188,17 @@ e.exports = function (e) {
         aliases: ["ls"],
         keywords: o,
         illegal: /\/\*/,
-        contains: f.concat([
+        contains: _.concat([
             e.COMMENT("\\/\\*", "\\*\\/"),
             e.HASH_COMMENT_MODE,
-            _,
+            p,
             {
                 className: "function",
-                contains: [c, p],
+                contains: [u, f],
                 returnBegin: !0,
                 variants: [
-                    {
-                        begin: "(" + l + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B->\\*?",
-                        end: "->\\*?",
-                    },
-                    {
-                        begin: "(" + l + "\\s*(?:=|:=)\\s*)?!?(\\(.*\\)\\s*)?\\B[-~]{1,2}>\\*?",
-                        end: "[-~]{1,2}>\\*?",
-                    },
+                    { begin: "(" + l + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B->\\*?", end: "->\\*?" },
+                    { begin: "(" + l + "\\s*(?:=|:=)\\s*)?!?(\\(.*\\)\\s*)?\\B[-~]{1,2}>\\*?", end: "[-~]{1,2}>\\*?" },
                     {
                         begin: "(" + l + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B!?[-~]{1,2}>\\*?",
                         end: "!?[-~]{1,2}>\\*?",
@@ -284,13 +206,7 @@ e.exports = function (e) {
                 ],
             },
             h,
-            {
-                begin: l + ":",
-                end: ":",
-                returnBegin: !0,
-                returnEnd: !0,
-                relevance: 0,
-            },
+            { begin: l + ":", end: ":", returnBegin: !0, returnEnd: !0, relevance: 0 },
         ]),
     };
 };

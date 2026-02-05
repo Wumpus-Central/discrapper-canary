@@ -1,61 +1,54 @@
-n.d(t, {
-    A: () => f,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(420474),
     i = n(688899),
     a = n(514467),
     s = n(638704),
     o = n(395177),
     l = n(140851),
-    c = n(444746),
-    u = n(125685),
+    u = n(444746),
+    c = n(125685),
     d = n(658614);
-
-function f(e, t) {
+function _(e, t) {
     void 0 === t && (t = {});
     var n = t,
-        f = n.placement,
-        p = void 0 === f ? e.placement : f,
-        _ = n.strategy,
-        h = void 0 === _ ? e.strategy : _,
+        _ = n.placement,
+        f = void 0 === _ ? e.placement : _,
+        p = n.strategy,
+        h = void 0 === p ? e.strategy : p,
         m = n.boundary,
         g = void 0 === m ? l.WY : m,
         E = n.rootBoundary,
-        b = void 0 === E ? l.R9 : E,
-        y = n.elementContext,
-        O = void 0 === y ? l.xf : y,
-        A = n.altBoundary,
-        v = void 0 !== A && A,
-        S = n.padding,
-        I = void 0 === S ? 0 : S,
-        T = (0, u.A)("number" != typeof I ? I : (0, d.A)(I, l.OM)),
-        C = O === l.xf ? l.ir : l.xf,
-        N = e.rects.popper,
-        R = e.elements[v ? C : O],
-        w = (0, r.A)((0, c.vq)(R) ? R : R.contextElement || (0, i.A)(e.elements.popper), g, b, h),
-        P = (0, a.A)(e.elements.reference),
-        D = (0, s.A)({
-            reference: P,
-            element: N,
-            strategy: "absolute",
-            placement: p,
-        }),
-        x = (0, o.A)(Object.assign({}, N, D)),
-        L = O === l.xf ? x : P,
-        j = {
-            top: w.top - L.top + T.top,
-            bottom: L.bottom - w.bottom + T.bottom,
-            left: w.left - L.left + T.left,
-            right: L.right - w.right + T.right,
+        A = void 0 === E ? l.R9 : E,
+        I = n.elementContext,
+        T = void 0 === I ? l.xf : I,
+        y = n.altBoundary,
+        S = void 0 !== y && y,
+        v = n.padding,
+        C = void 0 === v ? 0 : v,
+        b = (0, c.A)("number" != typeof C ? C : (0, d.A)(C, l.OM)),
+        N = T === l.xf ? l.ir : l.xf,
+        R = e.rects.popper,
+        O = e.elements[S ? N : T],
+        D = (0, r.A)((0, u.vq)(O) ? O : O.contextElement || (0, i.A)(e.elements.popper), g, A, h),
+        L = (0, a.A)(e.elements.reference),
+        w = (0, s.A)({ reference: L, element: R, strategy: "absolute", placement: f }),
+        x = (0, o.A)(Object.assign({}, R, w)),
+        P = T === l.xf ? x : L,
+        M = {
+            top: D.top - P.top + b.top,
+            bottom: P.bottom - D.bottom + b.bottom,
+            left: D.left - P.left + b.left,
+            right: P.right - D.right + b.right,
         },
-        M = e.modifiersData.offset;
-    if (O === l.xf && M) {
-        var k = M[p];
-        Object.keys(j).forEach(function (e) {
+        k = e.modifiersData.offset;
+    if (T === l.xf && k) {
+        var U = k[f];
+        Object.keys(M).forEach(function (e) {
             var t = [l.pG, l.sQ].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.Mn, l.sQ].indexOf(e) >= 0 ? "y" : "x";
-            j[e] += k[n] * t;
+            M[e] += U[n] * t;
         });
     }
-    return j;
+    return M;
 }

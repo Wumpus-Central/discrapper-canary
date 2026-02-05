@@ -1,13 +1,8 @@
-n.d(t, {
-    G: () => r,
-    t: () => a,
-}),
-    n(896048),
-    n(747238);
+"use strict";
+n.d(t, { G: () => r, t: () => a });
 var r = (function (e) {
     return (e[(e.MANAGED = 0)] = "MANAGED"), (e[(e.QUICK = 1)] = "QUICK"), e;
 })({});
-
 function i(e) {
     switch (e) {
         case "0":
@@ -18,16 +13,9 @@ function i(e) {
             return null;
     }
 }
-
 function a(e) {
     if (null == e) return null;
     let [t, n] = e.split("-"),
         r = i(t);
-    return null == r
-        ? null
-        : {
-              type: r,
-              encodedLinkId: e,
-              decodedLinkId: n,
-          };
+    return null == r ? null : { type: r, encodedLinkId: e, decodedLinkId: n };
 }

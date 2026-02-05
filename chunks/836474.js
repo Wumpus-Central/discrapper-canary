@@ -1,3 +1,2 @@
-e.exports = {
-    w: "loader__82471",
-};
+"use strict";
+e.exports = { w: "loader__82471" };

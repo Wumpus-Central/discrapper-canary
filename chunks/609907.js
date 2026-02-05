@@ -1,54 +1,17 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
-            className: "meta",
-            begin: "@[A-Za-z]+",
-        },
-        r = {
-            className: "subst",
-            variants: [
-                {
-                    begin: "\\$[A-Za-z0-9_]+",
-                },
-                {
-                    begin: /\$\{/,
-                    end: /\}/,
-                },
-            ],
-        },
+        n = { className: "meta", begin: "@[A-Za-z]+" },
+        r = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }, { begin: /\$\{/, end: /\}/ }] },
         i = {
             className: "string",
             variants: [
-                {
-                    begin: '"""',
-                    end: '"""',
-                },
-                {
-                    begin: '"',
-                    end: '"',
-                    illegal: "\\n",
-                    contains: [e.BACKSLASH_ESCAPE],
-                },
-                {
-                    begin: '[a-z]+"',
-                    end: '"',
-                    illegal: "\\n",
-                    contains: [e.BACKSLASH_ESCAPE, r],
-                },
-                {
-                    className: "string",
-                    begin: '[a-z]+"""',
-                    end: '"""',
-                    contains: [r],
-                    relevance: 10,
-                },
+                { begin: '"""', end: '"""' },
+                { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
+                { begin: '[a-z]+"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, r] },
+                { className: "string", begin: '[a-z]+"""', end: '"""', contains: [r], relevance: 10 },
             ],
         },
-        a = {
-            className: "type",
-            begin: "\\b[A-Z][A-Za-z0-9_]*",
-            relevance: 0,
-        },
+        a = { className: "type", begin: "\\b[A-Z][A-Za-z0-9_]*", relevance: 0 },
         s = {
             className: "title",
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
@@ -62,10 +25,7 @@ e.exports = function (e) {
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                {
-                    beginKeywords: "extends with",
-                    relevance: 10,
-                },
+                { beginKeywords: "extends with", relevance: 10 },
                 {
                     begin: /\[/,
                     end: /\]/,
@@ -86,40 +46,11 @@ e.exports = function (e) {
                 s,
             ],
         },
-        l = {
-            className: "function",
-            beginKeywords: "def",
-            end: t.lookahead(/[:={\[(\n;]/),
-            contains: [s],
-        },
-        c = {
-            begin: [/^\s*/, "extension", /\s+(?=[[(])/],
-            beginScope: {
-                2: "keyword",
-            },
-        },
-        u = {
-            begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
-            beginScope: {
-                2: "keyword",
-                4: "keyword",
-            },
-        },
-        d = [
-            {
-                match: /\.inline\b/,
-            },
-            {
-                begin: /\binline(?=\s)/,
-                keywords: "inline",
-            },
-        ],
-        f = {
-            begin: [/\(\s*/, /using/, /\s+(?!\))/],
-            beginScope: {
-                2: "keyword",
-            },
-        };
+        l = { className: "function", beginKeywords: "def", end: t.lookahead(/[:={\[(\n;]/), contains: [s] },
+        u = { begin: [/^\s*/, "extension", /\s+(?=[[(])/], beginScope: { 2: "keyword" } },
+        c = { begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/], beginScope: { 2: "keyword", 4: "keyword" } },
+        d = [{ match: /\.inline\b/ }, { begin: /\binline(?=\s)/, keywords: "inline" }],
+        _ = { begin: [/\(\s*/, /using/, /\s+(?!\))/], beginScope: { 2: "keyword" } };
     return {
         name: "Scala",
         keywords: {
@@ -130,18 +61,9 @@ e.exports = function (e) {
         contains: [
             {
                 begin: ["//>", /\s+/, /using/, /\s+/, /\S+/],
-                beginScope: {
-                    1: "comment",
-                    3: "keyword",
-                    5: "type",
-                },
+                beginScope: { 1: "comment", 3: "keyword", 5: "type" },
                 end: /$/,
-                contains: [
-                    {
-                        className: "string",
-                        begin: /\S+/,
-                    },
-                ],
+                contains: [{ className: "string", begin: /\S+/ }],
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -150,10 +72,10 @@ e.exports = function (e) {
             l,
             o,
             e.C_NUMBER_MODE,
-            c,
             u,
+            c,
             ...d,
-            f,
+            _,
             n,
         ],
     };

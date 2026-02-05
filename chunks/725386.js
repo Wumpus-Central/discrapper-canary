@@ -1,47 +1,31 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048),
-    n(114821),
-    n(339614);
-var r = n(64700),
+n.d(t, { A: () => m });
+var i = n(64700),
     l = n(540185),
-    i = n(417597),
-    a = n(395332),
+    a = n(417597),
+    r = n(395332),
     s = n(287809),
     o = n(403362),
-    c = n(633075),
-    u = n(289173),
-    d = n(667049),
-    f = n(229231);
-
-function p(e) {
-    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
-        n = (0, d.A)(null == t ? void 0 : t.id),
-        p = (0, a.DB)(e);
-    return r.useMemo(() => {
-        let e = new Set(n.filter((e) => e instanceof c.R).map((e) => e.applicationId)),
+    d = n(633075),
+    c = n(289173),
+    u = n(667049),
+    g = n(229231);
+function m(e) {
+    let t = (0, a.bG)([s.default], () => s.default.getCurrentUser()),
+        n = (0, u.A)(t?.id),
+        m = (0, r.DB)(e);
+    return i.useMemo(() => {
+        let e = new Set(n.filter((e) => e instanceof d.R).map((e) => e.applicationId)),
             t = new Set(n.map((e) => e.type));
-        return f.Zc.flatMap((n) =>
+        return g.Zc.flatMap((n) =>
             n === l.x.APPLICATION
-                ? null == p
+                ? null == m
                     ? []
-                    : p
-                          .filter((t) => !e.has(t.applicationId))
-                          .map(
-                              (e) =>
-                                  new c.R({
-                                      applicationId: e.applicationId,
-                                  }),
-                          )
-                : (0, u.hL)(n)
+                    : m.filter((t) => !e.has(t.applicationId)).map((e) => new d.R({ applicationId: e.applicationId }))
+                : (0, c.hL)(n)
                   ? t.has(n)
                       ? []
-                      : new u.Yy({
-                            type: n,
-                            games: [],
-                        })
+                      : new c.Yy({ type: n, games: [] })
                   : void (0, o.xb)(n),
         );
-    }, [p, n]);
+    }, [m, n]);
 }

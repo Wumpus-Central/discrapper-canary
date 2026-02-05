@@ -1,36 +1,24 @@
-n.d(t, {
-    V: () => f,
-    Z: () => g,
-});
-var r,
-    l = n(64700),
-    s = n(311907),
-    a = n(773669),
-    i = n(248352),
-    o = n(797490),
-    c = n(758836),
-    u = n(788868),
-    d = n(985018),
-    g = (((r = {})[(r.COUNTDOWN = 0)] = "COUNTDOWN"), r);
-
-function f(e, t) {
-    let n = (0, s.bG)([i.A], () => i.A.getUserDiscount(u.tU)),
-        r = (0, s.bG)([a.default], () => a.default.locale),
+"use strict";
+s.d(t, { V: () => m, Z: () => g });
+var n,
+    r = s(64700),
+    l = s(311907),
+    a = s(773669),
+    i = s(248352),
+    o = s(797490),
+    c = s(758836),
+    d = s(788868),
+    u = s(985018),
+    g = (((n = {})[(n.COUNTDOWN = 0)] = "COUNTDOWN"), n);
+function m(e, t) {
+    let s = (0, l.bG)([i.A], () => i.A.getUserDiscount(d.tU)),
+        n = (0, l.bG)([a.default], () => a.default.locale),
         g = (0, o.$)(t);
-    if (l.useMemo(() => null != n && g && e !== c.G2.ORBS, [n, g, e])) {
+    if (r.useMemo(() => null != s && g && e !== c.G2.ORBS, [s, g, e])) {
         let e =
-            null != n && null != n.expiresAt
-                ? new Date(n.expiresAt).toLocaleDateString(r, {
-                      day: "numeric",
-                      month: "numeric",
-                  })
+            null != s && null != s.expiresAt
+                ? new Date(s.expiresAt).toLocaleDateString(n, { day: "numeric", month: "numeric" })
                 : void 0;
-        return {
-            type: 0,
-            countdownEndDate: null == n ? void 0 : n.expiresAt,
-            message: d.intl.format(d.t.RCo9MF, {
-                date: e,
-            }),
-        };
+        return { type: 0, countdownEndDate: s?.expiresAt, message: u.intl.format(u.t.RCo9MF, { date: e }) };
     }
 }

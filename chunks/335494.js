@@ -1,32 +1,20 @@
-l.d(t, {
-    A: () => v,
-}),
-    l(896048),
-    l(693327),
-    l(554719),
-    l(680155),
+l.d(t, { A: () => f }),
     l(323874),
     l(14289),
     l(35956),
-    l(65821),
-    l(927092),
-    l(212978),
-    l(648691),
     l(393431),
-    l(752391),
     l(532706),
     l(42231),
     l(232424),
-    l(757074),
     l(949626),
     l(767709),
     l(65162),
     l(321073);
-var n = l(627968),
-    a = l(64700),
-    r = l(503698),
-    i = l.n(r),
-    s = l(827734),
+var a = l(627968),
+    n = l(64700),
+    s = l(503698),
+    i = l.n(s),
+    r = l(827734),
     o = l(397927),
     u = l(765671),
     c = l(602674),
@@ -34,102 +22,87 @@ var n = l(627968),
     m = l(335416),
     h = l(48912);
 let p = new Map(),
-    v = a.memo(function (e) {
-        let { clipId: t, voiceAudioTracks: r, onMouseDown: v, className: f } = e,
-            b = a.useRef(null),
-            { ref: g, width: j, height: x } = (0, u.Ay)(),
-            [y, C] = a.useState(null),
-            k = (0, o.rdh)(s.A.colors.BACKGROUND_MOD_STRONG).hex();
-        return (a.useEffect(
+    f = n.memo(function (e) {
+        let { clipId: t, voiceAudioTracks: s, onMouseDown: f, className: g } = e,
+            v = n.useRef(null),
+            { ref: x, width: b, height: j } = (0, u.Ay)(),
+            [C, N] = n.useState(null),
+            k = (0, o.rdh)(r.A.colors.BACKGROUND_MOD_STRONG).hex();
+        return (n.useEffect(
             () => (
-                (b.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
+                (v.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
                 () => {
-                    var e;
-                    null == (e = b.current) || e.terminate();
+                    v.current?.terminate();
                 }
             ),
             [],
         ),
-        a.useEffect(() => {
-            if (0 === j || 0 === r.length || null == b.current) return;
-            let e = ""
-                    .concat(t, "-")
-                    .concat(r.map((e) => e.trackName).join(","), "-")
-                    .concat(j),
+        n.useEffect(() => {
+            if (0 === b || 0 === s.length || null == v.current) return;
+            let e = `${t}-${s.map((e) => e.trackName).join(",")}-${b}`,
                 l = p.get(e);
-            if (null != l) return void C(l.waveform);
-            let n = b.current,
-                a = !1,
+            if (null != l) return void N(l.waveform);
+            let a = v.current,
+                n = !1,
                 i = (t) => {
-                    if (a) return;
-                    let { waveform: l, error: n } = t.data;
-                    null != n
-                        ? d.nx.error("Failed to load waveform:", n)
-                        : (p.set(e, {
-                              waveform: l,
-                          }),
-                          C(l));
+                    if (n) return;
+                    let { waveform: l, error: a } = t.data;
+                    null != a ? d.nx.error("Failed to load waveform:", a) : (p.set(e, { waveform: l }), N(l));
                 };
             return (
-                n.addEventListener("message", i),
+                a.addEventListener("message", i),
                 (async () => {
                     try {
                         let e = (0, c.v)();
                         if (null == e) throw Error("Failed to create audio context");
-                        let t = await Promise.all(r.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
-                        if (a) return;
+                        let t = await Promise.all(s.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
+                        if (n) return;
                         let l = [],
                             i = [];
                         for (let e of t) {
                             let t = [];
                             for (let l = 0; l < e.numberOfChannels; l++) {
-                                let n = new Float32Array(e.getChannelData(l));
-                                t.push(n), i.push(n.buffer);
+                                let a = new Float32Array(e.getChannelData(l));
+                                t.push(a), i.push(a.buffer);
                             }
                             l.push(t);
                         }
-                        if (a) return;
-                        n.postMessage(
-                            {
-                                trackChannels: l,
-                                width: j,
-                            },
-                            i,
-                        );
+                        if (n) return;
+                        a.postMessage({ trackChannels: l, width: b }, i);
                     } catch (e) {
-                        a || d.nx.error("Failed to decode audio:", e);
+                        n || d.nx.error("Failed to decode audio:", e);
                     }
                 })(),
                 () => {
-                    (a = !0), n.removeEventListener("message", i);
+                    (n = !0), a.removeEventListener("message", i);
                 }
             );
-        }, [r, t, j]),
-        a.useEffect(() => {
-            if (null == g.current || null == y || (null != j ? j : 0) === 0 || (null != x ? x : 0) === 0) return;
-            let e = g.current,
+        }, [s, t, b]),
+        n.useEffect(() => {
+            if (null == x.current || null == C || (b ?? 0) === 0 || (j ?? 0) === 0) return;
+            let e = x.current,
                 t = e.getContext("2d");
             if (null == t) return;
-            let { width: l, height: n } = e,
-                a = l / y.length,
-                r = -(a * (m.Jh.waveformBarWidth - 1));
-            t.clearRect(0, 0, l, n), (t.fillStyle = k);
-            for (let e = 0; e < y.length; e++) {
-                let l = y[e] * n,
-                    i = e * a + r;
-                t.fillRect(i, n, a - r, -l);
+            let { width: l, height: a } = e,
+                n = l / C.length,
+                s = -(n * (m.Jh.waveformBarWidth - 1));
+            t.clearRect(0, 0, l, a), (t.fillStyle = k);
+            for (let e = 0; e < C.length; e++) {
+                let l = C[e] * a,
+                    i = e * n + s;
+                t.fillRect(i, a, n - s, -l);
             }
-        }, [k, j, g, x, y]),
-        0 === r.length)
+        }, [k, b, x, j, C]),
+        0 === s.length)
             ? null
-            : (0, n.jsx)("div", {
-                  className: i()(h.k, f),
-                  children: (0, n.jsx)("canvas", {
+            : (0, a.jsx)("div", {
+                  className: i()(h.k, g),
+                  children: (0, a.jsx)("canvas", {
                       className: h.s,
-                      ref: g,
-                      width: (null != j ? j : 0) * 2,
-                      height: (null != x ? x : 0) * 2,
-                      onMouseDown: v,
+                      ref: x,
+                      width: (b ?? 0) * 2,
+                      height: (j ?? 0) * 2,
+                      onMouseDown: f,
                   }),
               });
     });

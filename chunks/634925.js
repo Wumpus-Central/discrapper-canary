@@ -1,69 +1,52 @@
-l.d(t, {
-    A: () => m,
-    h: () => v,
-}),
-    l(896048);
-var r = l(627968),
-    n = l(64700),
-    i = l(172218),
-    s = l(294384),
-    o = l(363487),
-    a = l(998418),
-    u = l(813847),
-    d = l(890942),
-    c = l(79275),
-    f = l(224331),
-    p = l(568065);
-
-function m(e) {
-    let { guildId: t, powerup: l, className: n } = e,
-        i = (0, a.Ay)(t, l),
-        o = i.type !== p.b_.LEVEL_ACTIVATED,
-        c = (0, s.A)(t, l, "GuildPowerupCardBodyFooter"),
-        f = (0, u.e)(l, i, c);
-    return (0, r.jsx)(d.$L, {
-        status: f,
-        cost: o ? l.cost : void 0,
-        className: n,
-    });
+n.d(t, { A: () => A, h: () => _ });
+var r = n(627968),
+    l = n(64700),
+    i = n(172218),
+    s = n(294384),
+    o = n(363487),
+    a = n(998418),
+    u = n(813847),
+    d = n(890942),
+    c = n(79275),
+    p = n(224331),
+    m = n(568065);
+function A(e) {
+    let { guildId: t, powerup: n, className: l } = e,
+        i = (0, a.Ay)(t, n),
+        o = i.type !== m.b_.LEVEL_ACTIVATED,
+        c = (0, s.A)(t, n, "GuildPowerupCardBodyFooter"),
+        p = (0, u.e)(n, i, c);
+    return (0, r.jsx)(d.$L, { status: p, cost: o ? n.cost : void 0, className: l });
 }
-
-function v(e) {
-    var t;
-    let { guildId: l, powerup: u, badge: m, className: v, onHover: A, children: g } = e,
-        x = (0, o.A)(l),
-        b = (0, a.Ay)(l, u),
-        h = b.type !== p.b_.INACTIVE,
-        j = (null == (t = b.sourceEntitlement) ? void 0 : t.ends_at) != null,
-        _ = (0, s.A)(l, u, "GuildPowerupCard"),
-        E = n.useRef(null),
-        y = (0, f.A)(l, u),
-        [I, S] = n.useState(!1),
+function _(e) {
+    let { guildId: t, powerup: n, badge: u, className: A, onHover: _, children: g } = e,
+        f = (0, o.A)(t),
+        x = (0, a.Ay)(t, n),
+        h = x.type !== m.b_.INACTIVE,
+        v = x.sourceEntitlement?.ends_at != null,
+        j = (0, s.A)(t, n, "GuildPowerupCard"),
+        b = l.useRef(null),
+        E = (0, p.A)(t, n),
+        [I, S] = l.useState(!1),
         w = (0, i.K)(S, 1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.NI, {
-                label: u.title,
+                label: n.title,
                 isActive: h,
-                isWarning: j,
-                badge: m,
-                canRollback: _,
-                onClick: y,
-                onMouseOver: () => (null == A ? void 0 : A(!0)),
-                onMouseLeave: () => (null == A ? void 0 : A(!1)),
-                className: v,
+                isWarning: v,
+                badge: u,
+                canRollback: j,
+                onClick: E,
+                onMouseOver: () => _?.(!0),
+                onMouseLeave: () => _?.(!1),
+                className: A,
                 ref: (e) => {
-                    (E.current = e), (w.current = e);
+                    (b.current = e), (w.current = e);
                 },
                 children: g,
             }),
-            !_ &&
-                x &&
-                (0, r.jsx)(c.A, {
-                    powerup: u,
-                    targetRef: E,
-                    isCardVisible: I,
-                }),
+            !j && f && (0, r.jsx)(c.A, { powerup: n, targetRef: b, isCardVisible: I }),
         ],
     });
 }

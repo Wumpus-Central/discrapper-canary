@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 let a = {
     scheme: "solarized",
     author: "ethan schoonover (http://ethanschoonover.com/solarized)",

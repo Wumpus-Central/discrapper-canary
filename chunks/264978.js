@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -20,53 +21,30 @@ var n = r(64700),
                 (0, s.A)(
                     {
                         default: {
-                            picker: {
-                                width: t,
-                                height: r,
-                            },
-                            overflow: {
-                                height: r,
-                                overflowY: "scroll",
-                            },
-                            body: {
-                                padding: "16px 0 6px 16px",
-                            },
-                            clear: {
-                                clear: "both",
-                            },
+                            picker: { width: t, height: r },
+                            overflow: { height: r, overflowY: "scroll" },
+                            body: { padding: "16px 0 6px 16px" },
+                            clear: { clear: "both" },
                         },
                     },
                     void 0 === f ? {} : f,
                 ),
             ),
             v = function (e, t) {
-                return o(
-                    {
-                        hex: e,
-                        source: "hex",
-                    },
-                    t,
-                );
+                return o({ hex: e, source: "hex" }, t);
             };
         return n.createElement(
             "div",
-            {
-                style: b.picker,
-                className: "swatches-picker " + (void 0 === h ? "" : h),
-            },
+            { style: b.picker, className: "swatches-picker " + (void 0 === h ? "" : h) },
             n.createElement(
                 c.H1,
                 null,
                 n.createElement(
                     "div",
-                    {
-                        style: b.overflow,
-                    },
+                    { style: b.overflow },
                     n.createElement(
                         "div",
-                        {
-                            style: b.body,
-                        },
+                        { style: b.body },
                         (0, l.A)(u, function (e) {
                             return n.createElement(p.A, {
                                 key: e.toString(),
@@ -76,9 +54,7 @@ var n = r(64700),
                                 onSwatchHover: a,
                             });
                         }),
-                        n.createElement("div", {
-                            style: b.clear,
-                        }),
+                        n.createElement("div", { style: b.clear }),
                     ),
                 ),
             ),

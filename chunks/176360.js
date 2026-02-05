@@ -1,213 +1,152 @@
-let r, i;
-n.d(t, {
-    A: () => w,
-}),
-    n(896048);
-var l,
-    a = n(735438),
-    s = n.n(a),
-    o = n(311907),
-    c = n(506774),
-    u = n(73153),
-    d = n(488926),
-    p = n(863036),
-    f = n(734057),
+let i, r;
+n.d(t, { A: () => y });
+var a = n(735438),
+    l = n.n(a),
+    s = n(311907),
+    o = n(506774),
+    d = n(73153),
+    c = n(488926),
+    u = n(863036),
+    A = n(734057),
     h = n(652215),
-    A = n(737045);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = new Set(),
-    E = h.XlH.CLOSED,
-    O = !1,
-    y = null,
+    _ = n(737045);
+let m = new Set(),
+    p = h.XlH.CLOSED,
+    g = !1,
+    E = null,
+    f = null,
     I = null,
-    v = null,
-    S = null,
     C = null,
     N = null,
-    T = c.w.get(A.t0) || !1;
-
-function j(e) {
+    T = null,
+    S = o.w.get(_.t0) || !1;
+function x(e) {
     let t = e.getGuildId(),
-        n = m({}, e.permissionOverwrites);
-    return null != t && null == n[t] && (n[t] = d.xT(t)), n;
+        n = { ...e.permissionOverwrites };
+    return null != t && null == n[t] && (n[t] = c.xT(t)), n;
 }
-
-function x() {
-    if (((v = p.A.getChannel()), (S = p.A.getCategory()), null == v)) return !1;
-    let e = v.getGuildId();
-    (I = y = j(v)),
-        null == y[C] && (C = e),
-        (i = null != S),
-        (r = d.r(v, S)),
-        (N = null),
-        (O = !1),
-        (E = h.XlH.CLOSED),
-        _.clear();
+function v() {
+    if (((I = u.A.getChannel()), (C = u.A.getCategory()), null == I)) return !1;
+    let e = I.getGuildId();
+    (f = E = x(I)),
+        null == E[N] && (N = e),
+        (r = null != C),
+        (i = c.r(I, C)),
+        (T = null),
+        (g = !1),
+        (p = h.XlH.CLOSED),
+        m.clear();
 }
-class P extends (l = o.Ay.Store) {
+class b extends s.Ay.Store {
+    static displayName = "ChannelSettingsPermissionsStore";
     initialize() {
-        this.waitFor(p.A, f.A);
+        this.waitFor(u.A, A.A);
     }
     hasChanges() {
-        return O;
+        return g;
     }
     showNotice() {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == y ? void 0 : y[e];
+        return E?.[e];
     }
     get editedPermissionIds() {
-        return Array.from(_);
+        return Array.from(m);
     }
     get permissionOverwrites() {
-        return y;
-    }
-    get selectedOverwriteId() {
-        return C;
-    }
-    get formState() {
         return E;
     }
-    get isLockable() {
-        return i;
+    get selectedOverwriteId() {
+        return N;
     }
-    get locked() {
+    get formState() {
+        return p;
+    }
+    get isLockable() {
         return r;
     }
+    get locked() {
+        return i;
+    }
     get channel() {
-        return v;
+        return I;
     }
     get category() {
-        return S;
+        return C;
     }
     get advancedMode() {
-        return T;
+        return S;
     }
 }
-g(P, "displayName", "ChannelSettingsPermissionsStore");
-let w = new P(u.h, {
+let y = new b(d.h, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
-        if (null != v || t !== h.p_A.PERMISSIONS) return !1;
-        x();
+        if (null != I || t !== h.p_A.PERMISSIONS) return !1;
+        v();
     },
-    CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
+    CHANNEL_SETTINGS_PERMISSIONS_INIT: v,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
-        let { id: t, allow: n, deny: i } = e,
-            l = null == y ? void 0 : y[t];
-        if (null == l || null == v) return !1;
-        (l = b(m({}, l), {
-            allow: n,
-            deny: i,
-        })),
-            (y = b(m({}, y), {
-                [t]: l,
-            })),
-            _.add(t),
-            (E = h.XlH.OPEN),
-            (O = !s().isEqual(y, I)),
-            (r = d.r(v, S));
+        let { id: t, allow: n, deny: r } = e,
+            a = E?.[t];
+        if (null == a || null == I) return !1;
+        (a = { ...a, allow: n, deny: r }),
+            (E = { ...E, [t]: a }),
+            m.add(t),
+            (p = h.XlH.OPEN),
+            (g = !l().isEqual(E, f)),
+            (i = c.r(I, C));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != y && null != y[t]) C = t;
+        if (null != E && null != E[t]) N = t;
         else {
-            if (null == v) return !1;
-            N = t;
+            if (null == I) return !1;
+            T = t;
         }
     },
     CHANNEL_SETTINGS_INIT: function () {
-        p.A.getSection() === h.p_A.PERMISSIONS && x();
+        u.A.getSection() === h.p_A.PERMISSIONS && v();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (E = h.XlH.CLOSED), (y = null), (I = null), (v = null), (S = null), (O = !1), _.clear(), (C = null), (N = null);
+        (p = h.XlH.CLOSED), (E = null), (f = null), (I = null), (C = null), (g = !1), m.clear(), (N = null), (T = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
-        if (null == v) return !1;
+        if (null == I) return !1;
         let n = !1;
         for (let e of t)
             !1 !==
                 (function (e) {
-                    if (null == v || v.id !== e || null == (v = f.A.getChannel(e))) return !1;
-                    S = p.A.getCategory();
-                    let t = v.getGuildId();
+                    if (null == I || I.id !== e || null == (I = A.A.getChannel(e))) return !1;
+                    C = u.A.getCategory();
+                    let t = I.getGuildId();
                     if (null == t) return !1;
-                    I = j(v);
+                    f = x(I);
                     let n = {};
                     return (
-                        _.forEach((e) => {
-                            null != y && (n[e] = y[e]);
+                        m.forEach((e) => {
+                            null != E && (n[e] = E[e]);
                         }),
-                        null == n[t] && null == v.permissionOverwrites[t] && (n[t] = d.xT(t)),
-                        null == (y = m({}, v.permissionOverwrites, n))[C]
-                            ? (C = t)
-                            : null != N && null != y[N] && ((C = N), (N = null)),
-                        (r = d.r(v, S)),
+                        null == n[t] && null == I.permissionOverwrites[t] && (n[t] = c.xT(t)),
+                        null == (E = { ...I.permissionOverwrites, ...n })[N]
+                            ? (N = t)
+                            : null != T && null != E[T] && ((N = T), (T = null)),
+                        (i = c.r(I, C)),
                         !0
                     );
                 })(e.id) && (n = !0);
         return n;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-        E = h.XlH.SUBMITTING;
+        p = h.XlH.SUBMITTING;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
         let { silent: t } = e;
-        t ? (E = h.XlH.OPEN) : ((E = h.XlH.CLOSED), x());
+        t ? (p = h.XlH.OPEN) : ((p = h.XlH.CLOSED), v());
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (T = t), c.w.set(A.t0, t);
+        (S = t), o.w.set(_.t0, t);
     },
 });

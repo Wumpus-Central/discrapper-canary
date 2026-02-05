@@ -1,13 +1,11 @@
-n.d(t, {
-    i: () => i,
-});
-var r,
-    i =
-        (((r = {}).AGE_GATE = "age-gate"),
-        (r.CHOOSE_TEMPLATE = "choose-template"),
-        (r.CUSTOMIZE_GUILD = "customize-server"),
-        (r.CHANNEL_PROMPT = "channel-prompt"),
-        (r.JOIN_GUILD = "join-server"),
-        (r.CREATION_INTENT = "creation-intent"),
-        (r.COMPLETE = "complete"),
-        r);
+n.d(t, { i: () => r });
+var i,
+    r =
+        (((i = {}).AGE_GATE = "age-gate"),
+        (i.CHOOSE_TEMPLATE = "choose-template"),
+        (i.CUSTOMIZE_GUILD = "customize-server"),
+        (i.CHANNEL_PROMPT = "channel-prompt"),
+        (i.JOIN_GUILD = "join-server"),
+        (i.CREATION_INTENT = "creation-intent"),
+        (i.COMPLETE = "complete"),
+        i);

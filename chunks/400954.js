@@ -1,48 +1,31 @@
-n.d(e, {
-    default: () => h,
-});
+n.d(e, { default: () => h });
 var i = n(627968),
-    a = n(64700),
-    r = n(732955),
-    s = n(424798),
+    r = n(64700),
+    s = n(732955),
+    a = n(424798),
     o = n(663535),
-    c = n(747926),
-    l = n(37411),
+    l = n(747926),
+    c = n(37411),
     d = n(985018);
-
 function h(t) {
     let { guildId: e, onClose: n, transitionState: h } = t,
-        u = (0, s.Mu)(e),
-        p = a.useCallback(
+        u = (0, a.Mu)(e),
+        p = r.useCallback(
             (t, e) => {
-                n(), (0, c.JA)(t, !e, l.H9.GUILD_ACTIVE_THREADS_MODAL);
+                n(), (0, l.JA)(t, !e, c.H9.GUILD_ACTIVE_THREADS_MODAL);
             },
             [n],
         ),
-        C = a.useCallback(
+        C = r.useCallback(
             (t) => {
                 let e = u[t.row];
-                return (0, i.jsx)(
-                    o.A,
-                    {
-                        threadId: e,
-                        goToThread: p,
-                        showChannelName: !0,
-                    },
-                    "".concat(t.section, "-").concat(t.row),
-                );
+                return (0, i.jsx)(o.A, { threadId: e, goToThread: p, showChannelName: !0 }, `${t.section}-${t.row}`);
             },
             [u, p],
         );
-    return (0, i.jsx)(r.aFV, {
+    return (0, i.jsx)(s.aFV, {
         title: d.intl.string(d.t["dOWb+f"]),
-        actions: [
-            {
-                text: d.intl.string(d.t.cpT0Cq),
-                onClick: n,
-                variant: "primary",
-            },
-        ],
+        actions: [{ text: d.intl.string(d.t.cpT0Cq), onClick: n, variant: "primary" }],
         onClose: n,
         transitionState: h,
         listProps: {

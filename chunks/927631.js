@@ -1,21 +1,19 @@
-i.d(e, {
-    W: () => a,
-});
+i.d(e, { W: () => u });
 var n = i(77468),
     l = i(419954),
     s = i(780964),
     r = i(75698),
-    u = i(985018);
-let a = (0, l.E2)(s.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
+    a = i(985018);
+let u = (0, l.E2)(s.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
     Component: r.d7,
     initialize: () => {
         n.A.fetch();
     },
     useSearchTerms: () => [
-        u.intl.string(u.t["+/hZM/"]),
-        u.intl.string(u.t.bsbMVz),
-        u.intl.string(u.t.f7yOAX),
-        u.intl.string(u.t.FYKGsL),
-        u.intl.string(u.t["+KCMSi"]),
+        a.intl.string(a.t["+/hZM/"]),
+        a.intl.string(a.t.bsbMVz),
+        a.intl.string(a.t.f7yOAX),
+        a.intl.string(a.t.FYKGsL),
+        a.intl.string(a.t["+KCMSi"]),
     ],
 });

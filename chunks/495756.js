@@ -1,49 +1,24 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(352505),
-    o = n(894010);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = {};
-
-function u(e) {
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(73153),
+    a = n(352505),
+    s = n(894010);
+let o = {};
+function l(e) {
     let { settings: t } = e;
-    c = t;
+    o = t;
 }
-
-function d() {
-    s.m.getCurrentConfig({
-        location: "GameMentionSettingsStore",
-    }).enabled && (0, o.G)();
+function u() {
+    a.m.getCurrentConfig({ location: "GameMentionSettingsStore" }).enabled && (0, s.G)();
 }
-
-function f() {
-    c = {};
+function c() {
+    o = {};
 }
-class p extends (r = i.Ay.Store) {
+class d extends r.Ay.Store {
+    static displayName = "GameMentionSettingsStore";
     getMute(e) {
-        return c[e];
+        return o[e];
     }
 }
-l(p, "displayName", "GameMentionSettingsStore");
-let _ = new p(a.h, {
-    REPLACE_GAME_MENTION_SETTINGS: u,
-    CONNECTION_OPEN: d,
-    LOGOUT: f,
-});
+let _ = new d(i.h, { REPLACE_GAME_MENTION_SETTINGS: l, CONNECTION_OPEN: u, LOGOUT: c });

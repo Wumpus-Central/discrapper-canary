@@ -1,46 +1,34 @@
-r.d(t, {
-    A: () => f,
-});
-var n = r(64700),
-    l = r(141931),
-    s = r(311907),
-    i = r(451988),
-    a = r(15285),
-    c = r(920281);
-let o = [l.fS.CAMERA],
-    d = [l.fS.SCREEN, l.fS.WINDOW, l.fS.CAMERA];
-
-function f(e, t) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        l = (0, s.bG)([a.Ay], () => a.Ay.getRunningGames().length > 0),
-        f = n.useRef(0),
-        u = l ? 2e3 : 1e3,
-        h = n.useRef(new i.Ep());
-    n.useEffect(() => {
-        if (r) return;
-        let n = h.current,
-            l = f.current,
-            s = {
-                width: 447,
-                height: 251,
-                types: e ? o : d,
-            };
-        async function i() {
-            let { screenSources: e, windowSources: r, cameraSources: a } = await (0, c.d)(s);
-            f.current > l ||
-                (t({
-                    type: "set_source_candidates",
-                    screenSources: e,
-                    windowSources: r,
-                    deviceSources: a,
-                }),
-                n.start(u, i));
+s.d(t, { A: () => u });
+var r = s(64700),
+    i = s(141931),
+    n = s(311907),
+    l = s(451988),
+    a = s(15285),
+    o = s(920281);
+let c = [i.fS.CAMERA],
+    d = [i.fS.SCREEN, i.fS.WINDOW, i.fS.CAMERA];
+function u(e, t) {
+    let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = (0, n.bG)([a.Ay], () => a.Ay.getRunningGames().length > 0),
+        u = r.useRef(0),
+        f = i ? 2e3 : 1e3,
+        h = r.useRef(new l.Ep());
+    r.useEffect(() => {
+        if (s) return;
+        let r = h.current,
+            i = u.current,
+            n = { width: 447, height: 251, types: e ? c : d };
+        async function l() {
+            let { screenSources: e, windowSources: s, cameraSources: a } = await (0, o.d)(n);
+            u.current > i ||
+                (t({ type: "set_source_candidates", screenSources: e, windowSources: s, deviceSources: a }),
+                r.start(f, l));
         }
         return (
-            i(),
+            l(),
             () => {
-                (f.current += 1), n.stop();
+                (u.current += 1), r.stop();
             }
         );
-    }, [t, u, e, r]);
+    }, [t, f, e, s]);
 }

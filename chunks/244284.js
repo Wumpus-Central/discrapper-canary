@@ -1,24 +1,8 @@
-n.d(t, {
-    QU: () => d,
-    kX: () => u,
-});
+"use strict";
+n.d(t, { QU: () => c, kX: () => u });
 var r = n(988506),
     i = n(315069);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = Object.freeze({
+let a = Object.freeze({
     0: r.ob.SUNDAY,
     1: r.ob.MONDAY,
     2: r.ob.TUESDAY,
@@ -27,27 +11,37 @@ let o = Object.freeze({
     5: r.ob.FRIDAY,
     6: r.ob.SATURDAY,
 });
-
 function s(e) {
     return 60 * e.hours + e.minutes;
 }
-
-function l(e) {
+function o(e) {
     return e === r.ob.MONDAY ? r.ob.SUNDAY : e - 1;
 }
-class c extends i.A {
+class l extends i.A {
+    ruleId;
+    label;
+    startTime;
+    endTime;
+    days;
     static fromServer(e) {
-        var t, n;
-        return new c({
+        return new l({
             ruleId: e.rule_id,
             label: e.label,
-            startTime: null != (t = e.start_time) ? t : void 0,
-            endTime: null != (n = e.end_time) ? n : void 0,
+            startTime: e.start_time ?? void 0,
+            endTime: e.end_time ?? void 0,
             days: e.days,
         });
     }
     static fromCache(e) {
-        return new c(e);
+        return new l(e);
+    }
+    constructor(e) {
+        super(),
+            (this.ruleId = e.ruleId),
+            (this.label = e.label),
+            (this.startTime = e.startTime),
+            (this.endTime = e.endTime),
+            (this.days = e.days);
     }
     isActiveAt(e, t) {
         if (null == this.startTime || null == this.endTime || 0 === this.days.length) return !1;
@@ -60,61 +54,38 @@ class c extends i.A {
             } else if (t >= n && t < r) return !0;
         }
         if (i) {
-            let n = l(e);
+            let n = o(e);
             if (this.days.includes(n) && t < r) return !0;
         }
         return !1;
     }
-    constructor(e) {
-        super(),
-            a(this, "ruleId", void 0),
-            a(this, "label", void 0),
-            a(this, "startTime", void 0),
-            a(this, "endTime", void 0),
-            a(this, "days", void 0),
-            (this.ruleId = e.ruleId),
-            (this.label = e.label),
-            (this.startTime = e.startTime),
-            (this.endTime = e.endTime),
-            (this.days = e.days);
-    }
 }
 class u extends i.A {
+    rules;
     static fromServer(e) {
-        return null == e
-            ? null
-            : new u({
-                  rules: e.rules.map(c.fromServer),
-              });
+        return null == e ? null : new u({ rules: e.rules.map(l.fromServer) });
     }
     static fromCache(e) {
-        return null == e
-            ? null
-            : new u({
-                  rules: e.rules.map(c.fromCache),
-              });
+        return null == e ? null : new u({ rules: e.rules.map(l.fromCache) });
+    }
+    constructor(e) {
+        super(), (this.rules = e.rules);
     }
     isInRestrictedHours() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (0 === this.rules.length) return !1;
-        let t = o[e.getDay()],
+        let t = a[e.getDay()],
             n = 60 * e.getHours() + e.getMinutes();
         return this.rules.some((e) => e.isActiveAt(t, n));
     }
-    constructor(e) {
-        super(), a(this, "rules", void 0), (this.rules = e.rules);
-    }
 }
-
-function d(e) {
+function c(e) {
     return null == e
         ? null
         : e instanceof u
           ? e
           : 0 === e.rules.length
-            ? new u({
-                  rules: [],
-              })
+            ? new u({ rules: [] })
             : "ruleId" in e.rules[0]
               ? u.fromCache(e)
               : u.fromServer(e);

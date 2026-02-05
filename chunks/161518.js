@@ -1,66 +1,42 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048),
-    n(321073);
-var r,
-    i = n(357758),
-    a = n(311907),
-    s = n(73153);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = new Map(),
-    c = new Map();
-
-function u(e, t) {
+"use strict";
+n.d(t, { A: () => d }), n(321073);
+var r = n(357758),
+    i = n(311907),
+    a = n(73153);
+let s = new Map(),
+    o = new Map();
+function l(e, t) {
     return e.type === t;
 }
-class d extends (r = a.Ay.Store) {
+class u extends i.Ay.Store {
+    static displayName = "AVErrorStore";
     hasActiveErrorOfType(e) {
-        var t;
-        return (null != (t = c.get(e)) ? t : []).length > 0;
+        return (o.get(e) ?? []).length > 0;
     }
     getActiveErrors() {
-        return l instanceof Map || (l = new Map()), l;
+        return s instanceof Map || (s = new Map()), s;
     }
     getActiveErrorsOfType(e) {
         let t = [],
-            n = c.get(e);
+            n = o.get(e);
         if (null == n) return t;
         for (let r of n) {
-            let n = l.get(r);
-            null != n && u(n, e) && t.push(n);
+            let n = s.get(r);
+            null != n && l(n, e) && t.push(n);
         }
         return t;
     }
 }
-
-function f(e) {
+function c(e) {
     let { activeErrors: t } = e;
     if (__OVERLAY__ || !(t instanceof Map)) return;
-    l instanceof Map || (l = new Map());
+    s instanceof Map || (s = new Map());
     let n = new Set(t.keys()),
-        r = new Set(l.keys());
-    if (!(0, i._)(n, r))
-        for (let [e, n] of ((l = t), (c = new Map()), l.entries())) {
-            var a;
-            let t = null != (a = c.get(n.type)) ? a : [];
-            t.push(e), c.set(n.type, t);
+        i = new Set(s.keys());
+    if (!(0, r._)(n, i))
+        for (let [e, n] of ((s = t), (o = new Map()), s.entries())) {
+            let t = o.get(n.type) ?? [];
+            t.push(e), o.set(n.type, t);
         }
 }
-o(d, "displayName", "AVErrorStore");
-let p = new d(s.h, {
-    ACTIVE_AV_ERRORS_CHANGED: f,
-});
+let d = new u(a.h, { ACTIVE_AV_ERRORS_CHANGED: c });

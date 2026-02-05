@@ -1,39 +1,32 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    i = n(311907),
-    a = n(688810),
-    s = n(625841),
-    o = n(74848),
-    l = n(204050),
-    c = n(430452),
-    u = n(954571),
-    d = n(948641),
-    f = n(652215),
-    p = n(731854),
-    _ = n(985018);
-
-function h() {
-    let e = (0, i.bG)([c.A], () => c.A.isVideoAvailable()),
-        { id: t } = (0, o.x5)(p.oh.VIDEO_INPUT),
-        { analyticsLocations: n } = (0, a.Ay)();
-    return (0, r.jsx)(s.U, {
-        label: _.intl.string(_.t.FsQ3OR),
-        deviceType: p.oh.VIDEO_INPUT,
+i.d(e, { A: () => g });
+var n = i(627968),
+    l = i(311907),
+    s = i(688810),
+    r = i(625841),
+    a = i(74848),
+    u = i(204050),
+    o = i(430452),
+    d = i(954571),
+    T = i(948641),
+    A = i(652215),
+    S = i(731854),
+    E = i(985018);
+function g() {
+    let t = (0, l.bG)([o.A], () => o.A.isVideoAvailable()),
+        { id: e } = (0, a.x5)(S.oh.VIDEO_INPUT),
+        { analyticsLocations: i } = (0, s.Ay)();
+    return (0, n.jsx)(r.U, {
+        label: E.intl.string(E.t.FsQ3OR),
+        deviceType: S.oh.VIDEO_INPUT,
         location: "UserSettingsCameraSelect",
-        isDisabled: !e,
+        isDisabled: !t,
         showAllDevices: !0,
-        helperText: (0, l.p)()
-            ? _.intl.format(_.t.aJYgRt, {
+        helperText: (0, u.p)()
+            ? E.intl.format(E.t.aJYgRt, {
                   onCameraSettingsClick: () => {
-                      d.A.setState({
-                          previewEnabled: !1,
-                      }),
-                          window.open((0, l.i)(t)),
-                          u.default.track(f.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, {
-                              location_stack: n,
-                          });
+                      T.A.setState({ previewEnabled: !1 }),
+                          window.open((0, u.i)(e)),
+                          d.default.track(A.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: i });
                   },
               })
             : void 0,

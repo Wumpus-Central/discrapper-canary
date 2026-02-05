@@ -1,19 +1,16 @@
-l.d(t, {
-    default: () => o,
-});
+l.d(t, { default: () => c });
 var n = l(627968),
     i = l(311907),
     a = l(397927),
     s = l(442433),
     d = l(684407),
     r = l(985018);
-let o = (e) => {
-    var t;
-    let { guildId: l, welcomeChannel: o, onChannelReorder: c, onShowDeleteModal: p, index: u, onSelect: b } = e,
-        g = (0, i.bG)([d.A], () => d.A.get(l)),
-        h = (null != (t = null == g ? void 0 : g.welcome_channels) ? t : []).length - 1,
-        x = (e) => {
-            c(o, e, !0);
+let c = (e) => {
+    let { guildId: t, welcomeChannel: l, onChannelReorder: c, onShowDeleteModal: o, index: p, onSelect: b } = e,
+        g = (0, i.bG)([d.A], () => d.A.get(t)),
+        h = (g?.welcome_channels ?? []).length - 1,
+        u = (e) => {
+            c(l, e, !0);
         };
     return (0, n.jsxs)(a.W1t, {
         "data-menu-migrated-auto": !0,
@@ -27,14 +24,14 @@ let o = (e) => {
                     (0, n.jsx)(a.Drp, {
                         id: "move-up",
                         label: r.intl.string(r.t["4UBqwA"]),
-                        disabled: u <= 0,
-                        action: () => x(u - 1),
+                        disabled: p <= 0,
+                        action: () => u(p - 1),
                     }),
                     (0, n.jsx)(a.Drp, {
                         id: "move-down",
                         label: r.intl.string(r.t.b73Gwa),
-                        disabled: u >= h,
-                        action: () => x(u + 1),
+                        disabled: p >= h,
+                        action: () => u(p + 1),
                     }),
                 ],
             }),
@@ -42,7 +39,7 @@ let o = (e) => {
                 children: (0, n.jsx)(a.Drp, {
                     id: "delete",
                     label: r.intl.string(r.t.JYBc3K),
-                    action: p,
+                    action: o,
                     color: "danger",
                 }),
             }),

@@ -1,6 +1,5 @@
-n.d(t, {
-    D: () => r,
-});
+"use strict";
+n.d(t, { D: () => r });
 var r = (function (e) {
     return (
         (e.TEXT = "text"),

@@ -1,29 +1,26 @@
-n.d(t, {
-    z: () => p,
-});
-var r = n(627968);
+n.d(t, { z: () => m });
+var i = n(627968);
 n(64700);
-var i = n(780964),
-    a = n(358776),
-    s = n(782844),
-    o = n(840065),
-    l = n(871930),
+var s = n(780964),
+    r = n(358776),
+    a = n(782844),
+    l = n(840065),
+    o = n(871930),
     c = n(355097),
-    u = n(531525),
-    d = n(652215),
-    f = n(985018);
-
-function p() {
-    return (0, r.jsx)(l.h, {
-        setting: u.H.PRIVACY_DATA_BASIC_SERVICE_V2,
-        children: (0, r.jsx)(l._, {
-            header: f.intl.string(f.t.D60Gfj),
-            description: f.intl.format(f.t.R5N31P, {
+    d = n(531525),
+    u = n(652215),
+    _ = n(985018);
+function m() {
+    return (0, i.jsx)(o.h, {
+        setting: d.H.PRIVACY_DATA_BASIC_SERVICE_V2,
+        children: (0, i.jsx)(o._, {
+            header: _.intl.string(_.t.D60Gfj),
+            description: _.intl.format(_.t.R5N31P, {
                 onClick: () => {
-                    let e = (0, a.WJ)("DataUsageDisclaimer");
-                    (0, o.openUserSettings)(e ? i.X.ACCOUNT_REMOVAL_SETTING : i.X.ACCOUNT_PANEL, {
-                        section: d.nc_.ACCOUNT,
-                        subsection: s.D.SECURITY,
+                    let e = (0, r.WJ)("DataUsageDisclaimer");
+                    (0, l.openUserSettings)(e ? s.X.ACCOUNT_REMOVAL_SETTING : s.X.ACCOUNT_PANEL, {
+                        section: u.nc_.ACCOUNT,
+                        subsection: a.D.SECURITY,
                         scrollPosition: e ? void 0 : c.Ew.AccountScrollPositions.DISABLE_ACCOUNT,
                     });
                 },

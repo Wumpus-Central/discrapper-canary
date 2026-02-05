@@ -1,212 +1,125 @@
-a.d(t, {
-    default: () => P,
-}),
-    a(896048);
-var r = a(627968),
-    n = a(64700),
-    o = a(397927),
-    c = a(843472),
-    s = a(9578),
-    l = a(688810),
-    i = a(429913),
-    d = a(911269),
-    f = a(451909),
-    b = a(223863),
-    u = a(734057),
-    p = a(954571),
-    y = a(957565),
-    O = a(403362),
-    m = a(871123),
-    _ = a(366523),
-    g = a(995393),
-    w = a(652215),
-    j = a(381941),
-    x = a(985018),
-    h = a(588187);
-
-function v(e) {
-    let { sku: t, guildId: a } = e,
-        c = (0, i.h)(t.applicationId),
-        l = n.useMemo(() => (0, m.OY)(a, t), [a, t]);
-    return (0, r.jsxs)("div", {
-        className: h.sq,
+r.d(a, { default: () => p });
+var n = r(627968),
+    o = r(64700),
+    t = r(397927),
+    _ = r(843472),
+    s = r(9578),
+    E = r(688810),
+    C = r(429913),
+    l = r(911269),
+    d = r(451909),
+    A = r(223863),
+    c = r(734057),
+    N = r(954571),
+    i = r(957565),
+    O = r(403362),
+    R = r(871123),
+    u = r(366523),
+    I = r(995393),
+    T = r(652215),
+    P = r(381941),
+    f = r(985018),
+    S = r(588187);
+function b(e) {
+    let { sku: a, guildId: r } = e,
+        _ = (0, C.h)(a.applicationId),
+        E = o.useMemo(() => (0, R.OY)(r, a), [r, a]);
+    return (0, n.jsxs)("div", {
+        className: S.sq,
         children: [
-            (0, r.jsxs)("div", {
-                className: h.kx,
+            (0, n.jsxs)("div", {
+                className: S.kx,
                 children: [
-                    (0, r.jsx)(s.A, {
-                        title: t.name,
-                        href: l,
-                        children: (0, r.jsx)(o.Text, {
+                    (0, n.jsx)(s.A, {
+                        title: a.name,
+                        href: E,
+                        children: (0, n.jsx)(t.Text, {
                             variant: "text-md/medium",
                             color: "text-link",
                             lineClamp: 1,
-                            children: t.name,
+                            children: a.name,
                         }),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: h.Bo,
+                    (0, n.jsxs)("div", {
+                        className: S.Bo,
                         children: [
-                            (0, r.jsx)(o.qYV, {
-                                size: "xs",
-                                color: "currentColor",
-                                className: h.ds,
-                            }),
-                            (0, r.jsx)(o.Text, {
+                            (0, n.jsx)(t.qYV, { size: "xs", color: "currentColor", className: S.ds }),
+                            (0, n.jsx)(t.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: x.intl.formatToPlainString(x.t["CqpEC+"], {
-                                    applicationName: null == c ? void 0 : c.name,
-                                }),
+                                children: f.intl.formatToPlainString(f.t["CqpEC+"], { applicationName: _?.name }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)(_.e, {
-                containerClassName: h.wP,
-                foregroundImageClassName: h.wP,
-                backgroundImageClassName: h.wP,
-                sku: t,
+            (0, n.jsx)(u.e, {
+                containerClassName: S.wP,
+                foregroundImageClassName: S.wP,
+                backgroundImageClassName: S.wP,
+                sku: a,
                 shape: "square",
             }),
         ],
     });
 }
-
-function P(e) {
-    var t, a;
-    let { sku: s, guildId: i, source: _, onClose: h, analyticsLocations: P, analyticsContext: k } = e,
-        C = (function (e, t) {
-            if (null == e) return {};
-            var a,
-                r,
-                n,
-                o = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (n = 0, a = Reflect.ownKeys(e); n < a.length; n++)
-                    (r = a[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                return o;
-            }
-            if (
-                ((o = (function (e, t) {
-                    if (null == e) return {};
-                    var a,
-                        r,
-                        n = {},
-                        o = Object.getOwnPropertyNames(e);
-                    for (r = 0; r < o.length; r++)
-                        (a = o[r]),
-                            !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (n[a] = e[a]);
-                    return n;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (n = 0, a = Object.getOwnPropertySymbols(e); n < a.length; n++)
-                    (r = a[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-            return o;
-        })(e, ["sku", "guildId", "source", "onClose", "analyticsLocations", "analyticsContext"]),
-        { analyticsLocations: T } = (0, l.Ay)(null != P ? P : []),
-        S = n.useCallback(
-            async (e, t, a) => {
-                let { withMessage: r, closeAfterSend: n } = t;
-                a(!0);
+function p(e) {
+    let { sku: a, guildId: r, source: s, onClose: C, analyticsLocations: u, analyticsContext: S, ...p } = e,
+        { analyticsLocations: h } = (0, E.Ay)(u ?? []),
+        w = o.useCallback(
+            async (e, n, o) => {
+                let { withMessage: s, closeAfterSend: E } = n;
+                o(!0);
                 try {
-                    let t = (await Promise.all(e.map(b.pk))).filter(O.Vq);
-                    if (0 === t.length) return void a(!1);
-                    n && h();
-                    let l = (0, m.Q6)(i, s);
-                    for (let e of t) {
-                        let t = u.A.getChannel(e);
-                        null != t &&
-                            (await c.A.sendMessage(t.id, f.Ay.parse(t, l + (null != r ? r : "")), !1, {
-                                location: j.Hx.SOCIAL_LAYER_STOREFRONT,
+                    let n = (await Promise.all(e.map(A.pk))).filter(O.Vq);
+                    if (0 === n.length) return void o(!1);
+                    E && C();
+                    let l = (0, R.Q6)(r, a);
+                    for (let e of n) {
+                        let a = c.A.getChannel(e);
+                        null != a &&
+                            (await _.A.sendMessage(a.id, d.Ay.parse(a, l + (s ?? "")), !1, {
+                                location: P.Hx.SOCIAL_LAYER_STOREFRONT,
                             }));
                     }
-                    (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.kwmYkt), o.ToastType.SUCCESS));
+                    (0, t.showToast)((0, t.createToast)(f.intl.string(f.t.kwmYkt), t.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.iufib1), o.ToastType.FAILURE));
+                    (0, t.showToast)((0, t.createToast)(f.intl.string(f.t.iufib1), t.ToastType.FAILURE));
                 } finally {
-                    a(!1);
+                    o(!1);
                 }
             },
-            [h, i, s],
+            [C, r, a],
         ),
-        E = n.useMemo(
+        m = o.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        p.default.track(w.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
-                            slayer_storefront_session_id: null == k ? void 0 : k.sessionId,
-                            guild_id: i,
-                            sku_id: s.id,
-                            cta_type: g.Ng.COPY_LINK_BUTTON,
-                            location_stack: T,
+                        N.default.track(T.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
+                            slayer_storefront_session_id: S?.sessionId,
+                            guild_id: r,
+                            sku_id: a.id,
+                            cta_type: I.Ng.COPY_LINK_BUTTON,
+                            location_stack: h,
                         }),
-                            (0, y.C)((0, m.OY)(i, s), () =>
-                                (0, o.showToast)((0, o.createToast)(x.intl.string(x.t["L/PwZf"]), o.ToastType.SUCCESS)),
+                            (0, i.C)((0, R.OY)(r, a), () =>
+                                (0, t.showToast)((0, t.createToast)(f.intl.string(f.t["L/PwZf"]), t.ToastType.SUCCESS)),
                             );
                     },
-                    icon: o.qYV,
+                    icon: t.qYV,
                 },
             ],
-            [i, s, null == k ? void 0 : k.sessionId, T],
+            [r, a, S?.sessionId, h],
         );
-    return (0, r.jsx)(
-        d.ForwardModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var a = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(a);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(a).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = a[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = r);
-                    });
-            }
-            return e;
-        })({}, C)),
-        (a = a =
-            {
-                onClose: h,
-                source: _,
-                customPreview: (0, r.jsx)(v, {
-                    sku: s,
-                    guildId: i,
-                }),
-                customSubtitle: x.intl.string(x.t.yiaXeN),
-                customSendHandler: S,
-                additionalActions: E,
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
-            : (function (e, t) {
-                  var a = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, r);
-                  }
-                  return a;
-              })(Object(a)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
-              }),
-        t),
-    );
+    return (0, n.jsx)(l.ForwardModal, {
+        ...p,
+        onClose: C,
+        source: s,
+        customPreview: (0, n.jsx)(b, { sku: a, guildId: r }),
+        customSubtitle: f.intl.string(f.t.yiaXeN),
+        customSendHandler: w,
+        additionalActions: m,
+    });
 }

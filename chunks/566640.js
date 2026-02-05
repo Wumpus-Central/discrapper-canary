@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(353766),
     o = Math.max;
 let a = function (e, t, r) {

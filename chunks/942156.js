@@ -1,76 +1,45 @@
-i.d(e, {
-    A: () => p,
-}),
-    i(896048);
-var s,
-    n = i(627968),
-    r = i(64700),
-    a = i(503698),
-    h = i.n(a),
-    l = i(615300),
-    o = i(397927),
-    c = i(652215),
-    d = i(505802);
-
-function u(t, e, i) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = i),
-        t
-    );
-}
-class p extends (s = r.Component) {
+"use strict";
+a.d(t, { A: () => u });
+var s = a(627968),
+    r = a(64700),
+    n = a(503698),
+    i = a.n(n),
+    l = a(615300),
+    o = a(397927),
+    c = a(652215),
+    d = a(505802);
+class u extends r.Component {
+    static contextType = o.CZY;
+    anim = new l.A.Value(0);
     componentDidMount() {
         this.props.show && this.animate(1);
     }
-    componentDidUpdate(t) {
-        t.show !== this.props.show && this.animate(+!!this.props.show);
+    componentDidUpdate(e) {
+        e.show !== this.props.show && this.animate(+!!this.props.show);
     }
+    animate = (e) => {
+        l.A.spring(this.anim, { toValue: e, friction: 10, tension: 100 }).start();
+    };
     getAnimatedStyle() {
-        let { anim: t } = this,
-            { reducedMotion: e } = this.context;
+        let { anim: e } = this,
+            { reducedMotion: t } = this.context;
         return {
-            opacity: t,
-            transform: e.enabled
+            opacity: e,
+            transform: t.enabled
                 ? void 0
                 : [
-                      {
-                          translateY: t.interpolate({
-                              inputRange: [0, 1],
-                              outputRange: ["-100px", "0px"],
-                          }),
-                      },
-                      {
-                          translateZ: 0,
-                      },
+                      { translateY: e.interpolate({ inputRange: [0, 1], outputRange: ["-100px", "0px"] }) },
+                      { translateZ: 0 },
                   ],
         };
     }
     render() {
-        return (0, n.jsx)(l.A.a, {
+        return (0, s.jsx)(l.A.a, {
             href: c.BVt.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: h()(d.w, this.props.className),
+            className: i()(d.w, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }
-    constructor(...t) {
-        super(...t),
-            u(this, "anim", new l.A.Value(0)),
-            u(this, "animate", (t) => {
-                l.A.spring(this.anim, {
-                    toValue: t,
-                    friction: 10,
-                    tension: 100,
-                }).start();
-            });
-    }
 }
-u(p, "contextType", o.CZY);

@@ -1,6 +1,5 @@
 if (
-    (n(65821),
-    null == window.GLOBAL_ENV && (window.GLOBAL_ENV = {}),
+    (null == window.GLOBAL_ENV && (window.GLOBAL_ENV = {}),
     null == window.GLOBAL_ENV.API_VERSION &&
         null == window.GLOBAL_ENV.API_ENDPOINT &&
         null == window.GLOBAL_ENV.GATEWAY_ENDPOINT &&

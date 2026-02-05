@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(6678),
     i = n(476858),
     a = n(355418),
@@ -10,8 +9,8 @@ let o = RegExp(
         "i",
     ),
     l = 1,
-    c = 2;
-class u extends a.c {
+    u = 2;
+class c extends a.c {
     innerPattern() {
         return o;
     }
@@ -19,7 +18,7 @@ class u extends a.c {
         let n = t[l].toLowerCase(),
             i = r.CV[n];
         if (void 0 === i) return null;
-        let a = t[c];
+        let a = t[u];
         a = (a = a || "").toLowerCase();
         let o = null;
         return "dernier" == a ? (o = "last") : "prochain" == a && (o = "next"), (0, s.Y5)(e.reference, i, o);

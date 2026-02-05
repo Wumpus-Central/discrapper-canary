@@ -1,55 +1,43 @@
-n.d(t, {
-    A: () => u,
-});
+n.d(t, { A: () => u });
 var i = n(627968),
-    r = n(64700),
-    l = n(990078),
+    l = n(64700),
+    s = n(990078),
     a = n(397927),
-    s = n(442433),
+    r = n(442433),
     o = n(950072),
-    c = n(985018),
-    d = n(560927);
-
+    d = n(985018),
+    c = n(560927);
 function u(e) {
-    var t;
-    let { roles: u, guildId: b } = e,
-        f = null != (t = u[0]) ? t : null,
-        p = u.length - 1,
-        m = r.useMemo(() => new Intl.NumberFormat(c.intl.currentLocale).format(p), [p]),
-        g = r.useCallback(
+    let { roles: t, guildId: u } = e,
+        m = t[0] ?? null,
+        g = t.length - 1,
+        x = l.useMemo(() => new Intl.NumberFormat(d.intl.currentLocale).format(g), [g]),
+        h = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, s.L3)(e, async () => {
+                    (0, r.L3)(e, async () => {
                         let { default: e } = await n.e("54526").then(n.bind(n, 551309));
-                        return () =>
-                            (0, i.jsx)(e, {
-                                roles: u,
-                            });
+                        return () => (0, i.jsx)(e, { roles: t });
                     });
             },
-            [u],
+            [t],
         );
-    return 0 === u.length
+    return 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
-              className: d.yk,
+              className: c.yk,
               children: [
-                  null != f &&
-                      (0, i.jsx)(o.A, {
-                          className: d.Bc,
-                          role: f,
-                          guildId: b,
-                      }),
-                  p > 0 &&
+                  null != m && (0, i.jsx)(o.A, { className: c.Bc, role: m, guildId: u }),
+                  g > 0 &&
                       (0, i.jsx)(a.DUT, {
-                          className: d.yt,
-                          onClick: g,
-                          children: (0, i.jsx)(l.m, {
-                              text: c.intl.string(c.t.DY6n4q),
+                          className: c.yt,
+                          onClick: h,
+                          children: (0, i.jsx)(s.m, {
+                              text: d.intl.string(d.t.DY6n4q),
                               children: (0, i.jsxs)(a.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-strong",
-                                  children: ["+", m],
+                                  children: ["+", x],
                               }),
                           }),
                       }),

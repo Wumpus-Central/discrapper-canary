@@ -1,58 +1,22 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(264879),
-    n(896048),
-    n(321073);
-var r,
-    l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(111956),
-    c = n.n(o),
-    u = n(615300),
-    d = n(52133),
-    f = n(397927),
-    p = n(473134);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
+n.d(t, { A: () => p }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(111956),
+    o = n.n(r),
+    d = n(615300),
+    c = n(52133),
+    u = n(397927),
+    h = n(473134);
+let A = { friction: 10, tension: 300 };
+class g extends l.Component {
+    _timeout;
+    constructor(e) {
+        super(e), (this.state = { translateY: new d.A.Value(), reduceMotion: !1 });
     }
-    return e;
-}
-let g = {
-    friction: 10,
-    tension: 300,
-};
-class m extends i.Component {
     shouldComponentUpdate(e, t) {
-        return !(0, d.A)(this.props, e, ["animate"]) || !(0, d.A)(this.state, t);
+        return !(0, c.A)(this.props, e, ["animate"]) || !(0, c.A)(this.state, t);
     }
     componentDidMount() {
         let { hide: e } = this.props;
@@ -70,45 +34,24 @@ class m extends i.Component {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
             ? (this._timeout = setTimeout(() => {
-                  u.A.spring(
-                      e,
-                      b(
-                          {
-                              toValue: 0,
-                          },
-                          g,
-                      ),
-                  ).start();
+                  d.A.spring(e, { toValue: 0, ...A }).start();
               }, 100))
             : e.setValue(0);
     }
     animateOut() {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
-            ? u.A.spring(
-                  e,
-                  b(
-                      {
-                          toValue: 1,
-                      },
-                      g,
-                  ),
-              ).start()
+            ? d.A.spring(e, { toValue: 1, ...A }).start()
             : e.setValue(1);
     }
     render() {
-        let { className: e, text: t, hide: n, onClick: r } = this.props;
-        return (0, l.jsx)(u.A.div, {
-            className: s()(p.M0, e, {
-                [p.R]: n,
-            }),
-            onClick: r,
+        let { className: e, text: t, hide: n, onClick: l } = this.props;
+        return (0, i.jsx)(d.A.div, {
+            className: a()(h.M0, e, { [h.R]: n }),
+            onClick: l,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,
-            children: (0, l.jsx)("span", {
-                className: p.Qq,
-                children: t,
-            }),
+            children: (0, i.jsx)("span", { className: h.Qq, children: t }),
         });
     }
     getAnimatedStyle() {
@@ -116,25 +59,15 @@ class m extends i.Component {
             { reverse: t } = this.props;
         return {
             transform: [
-                {
-                    translateY: e.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: ["0%", t ? "180%" : "-180%"],
-                    }),
-                },
+                { translateY: e.interpolate({ inputRange: [0, 1], outputRange: ["0%", t ? "180%" : "-180%"] }) },
             ],
         };
     }
-    constructor(e) {
-        super(e),
-            h(this, "_timeout", void 0),
-            (this.state = {
-                translateY: new u.A.Value(),
-                reduceMotion: !1,
-            });
-    }
 }
-class A extends (r = i.PureComponent) {
+class m extends l.PureComponent {
+    static contextType = u.CZY;
+    static defaultProps = { className: h.kL, reverse: !1, hide: !1, animate: !0 };
+    state = { unread: null, mention: null };
     componentDidMount() {
         this.calculateState();
     }
@@ -144,104 +77,82 @@ class A extends (r = i.PureComponent) {
     componentWillUnmount() {
         this.calculateState.cancel();
     }
+    calculateState = o()(() => {
+        let {
+                items: e,
+                expandedFolders: t,
+                isVisible: n,
+                isUnread: i,
+                isMentioned: l,
+                reverse: s,
+                onCalculate: a,
+            } = this.props,
+            r = null,
+            o = null,
+            d = [];
+        e.forEach((e) => {
+            "string" == typeof e
+                ? d.push(e)
+                : "object" == typeof e && null != e.folderId
+                  ? null != t && t.has(e.folderId)
+                      ? (d.push(`folder:${e.folderId}`), e.guildIds.forEach((e) => d.push(e)))
+                      : d.push(e.guildIds)
+                  : d.push(e.guildIds[0]);
+        });
+        let c = (e) => {
+                null == r && l(e, s, d) && (r = e), null == o && i(e, s, d) && (o = e);
+            },
+            u = s ? d.length - 1 : 0,
+            h = d[u];
+        for (; null != h; ) {
+            if ("string" == typeof h) {
+                if (n(h, s, d)) break;
+                c(h);
+            } else {
+                let e = !1;
+                for (let t of h) {
+                    if (n(t, s, d)) {
+                        e = !0;
+                        break;
+                    }
+                    c(t);
+                }
+                if (e) break;
+            }
+            (u += s ? -1 : 1), (h = d[u]);
+        }
+        null != a && a(r, o, s), this.setState({ mention: r, unread: o });
+    }, 200);
+    handleClick = (e) => {
+        e.preventDefault(), e.stopPropagation();
+        let { unread: t, mention: n } = this.state,
+            { onJumpTo: i } = this.props,
+            l = null != n ? n : t;
+        null != l && i(l, [n, t]);
+    };
     render() {
         let { unread: e, mention: t } = this.state,
             {
                 textMention: n,
-                textUnread: r,
-                reverse: i,
-                className: a,
+                textUnread: l,
+                reverse: s,
+                className: r,
                 barClassName: o,
-                hide: c,
-                animate: u,
+                hide: d,
+                animate: c,
             } = this.props,
-            { reducedMotion: d } = this.context;
-        return (0, l.jsx)("div", {
-            className: null != a ? a : void 0,
-            children: (0, l.jsx)(m, {
-                hide: !0 === c || (null == e && null == t),
-                className: s()(o, null != t ? p.lE : p.gy),
-                text: null != t ? n : r,
-                reverse: i,
-                animate: u && !d.enabled,
+            { reducedMotion: u } = this.context;
+        return (0, i.jsx)("div", {
+            className: r ?? void 0,
+            children: (0, i.jsx)(g, {
+                hide: !0 === d || (null == e && null == t),
+                className: a()(o, null != t ? h.lE : h.gy),
+                text: null != t ? n : l,
+                reverse: s,
+                animate: c && !u.enabled,
                 onClick: this.handleClick,
             }),
         });
     }
-    constructor(...e) {
-        super(...e),
-            h(this, "state", {
-                unread: null,
-                mention: null,
-            }),
-            h(
-                this,
-                "calculateState",
-                c()(() => {
-                    let {
-                            items: e,
-                            expandedFolders: t,
-                            isVisible: n,
-                            isUnread: r,
-                            isMentioned: l,
-                            reverse: i,
-                            onCalculate: a,
-                        } = this.props,
-                        s = null,
-                        o = null,
-                        c = [];
-                    e.forEach((e) => {
-                        "string" == typeof e
-                            ? c.push(e)
-                            : "object" == typeof e && null != e.folderId
-                              ? null != t && t.has(e.folderId)
-                                  ? (c.push("folder:".concat(e.folderId)), e.guildIds.forEach((e) => c.push(e)))
-                                  : c.push(e.guildIds)
-                              : c.push(e.guildIds[0]);
-                    });
-                    let u = (e) => {
-                            null == s && l(e, i, c) && (s = e), null == o && r(e, i, c) && (o = e);
-                        },
-                        d = i ? c.length - 1 : 0,
-                        f = c[d];
-                    for (; null != f; ) {
-                        if ("string" == typeof f) {
-                            if (n(f, i, c)) break;
-                            u(f);
-                        } else {
-                            let e = !1;
-                            for (let t of f) {
-                                if (n(t, i, c)) {
-                                    e = !0;
-                                    break;
-                                }
-                                u(t);
-                            }
-                            if (e) break;
-                        }
-                        (d += i ? -1 : 1), (f = c[d]);
-                    }
-                    null != a && a(s, o, i),
-                        this.setState({
-                            mention: s,
-                            unread: o,
-                        });
-                }, 200),
-            ),
-            h(this, "handleClick", (e) => {
-                e.preventDefault(), e.stopPropagation();
-                let { unread: t, mention: n } = this.state,
-                    { onJumpTo: r } = this.props,
-                    l = null != n ? n : t;
-                null != l && r(l, [n, t]);
-            });
-    }
 }
-h(A, "contextType", f.CZY),
-    h(A, "defaultProps", {
-        className: p.kL,
-        reverse: !1,
-        hide: !1,
-        animate: !0,
-    });
-let y = A;
+let p = m;

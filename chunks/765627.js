@@ -1,120 +1,98 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968);
+n.d(t, { A: () => x });
+var i = n(627968);
 n(64700);
 var l = n(417597),
-    i = n(873298),
+    s = n(873298),
     a = n(827734),
-    s = n(397927),
+    r = n(397927),
     o = n(835835),
-    c = n(966597),
-    u = n(85109),
-    d = n(566908),
-    f = n(646468),
-    p = n(790368),
-    h = n(435084),
-    b = n(412484),
-    g = n(985018),
-    m = n(655967);
-
-function A(e) {
-    let { tab: t, setTab: n, badgeState: f, closePopout: h } = e,
-        { enabled: b, inInbox: A } = c.A.useExperiment({
-            location: "RecentsPopout",
-        }),
-        O = (0, d.Sc)({
-            location: "RecentsHeader",
-        }),
-        j = (0, l.bG)([u.A], () => u.A.getOverdueMessageReminderCount());
-    return (0, r.jsxs)(o.Y9, {
-        className: m.wx,
+    d = n(966597),
+    c = n(85109),
+    u = n(566908),
+    h = n(646468),
+    A = n(790368),
+    g = n(435084),
+    m = n(412484),
+    p = n(985018),
+    _ = n(655967);
+function x(e) {
+    let { tab: t, setTab: n, badgeState: h, closePopout: g } = e,
+        { enabled: m, inInbox: x } = d.A.useExperiment({ location: "RecentsPopout" }),
+        E = (0, u.Sc)({ location: "RecentsHeader" }),
+        C = (0, l.bG)([c.A], () => c.A.getOverdueMessageReminderCount());
+    return (0, i.jsxs)(o.Y9, {
+        className: _.wx,
         children: [
-            (0, r.jsxs)("div", {
-                className: m.qd,
+            (0, i.jsxs)("div", {
+                className: _.qd,
                 children: [
-                    (0, r.jsx)(s.K$s, {
-                        size: "md",
-                        color: "currentColor",
-                        className: m.yH,
-                    }),
-                    (0, r.jsx)(s.Heading, {
-                        className: m.Hi,
+                    (0, i.jsx)(r.K$s, { size: "md", color: "currentColor", className: _.yH }),
+                    (0, i.jsx)(r.Heading, {
+                        className: _.Hi,
                         variant: "text-lg/semibold",
                         color: "interactive-text-active",
-                        children: g.intl.string(g.t.GSmTKJ),
+                        children: p.intl.string(p.t.GSmTKJ),
                     }),
-                    (0, r.jsxs)(s.sqX, {
-                        className: m.ne,
+                    (0, i.jsxs)(r.sqX, {
+                        className: _.ne,
                         onClick: (e) => e.stopPropagation(),
-                        focusProps: {
-                            enabled: !1,
-                        },
-                        "aria-label": g.intl.string(g.t["8k+6QY"]),
-                        children: [
-                            (0, r.jsx)(y, {
-                                tab: t,
-                            }),
-                            (0, r.jsx)(p.A, {
-                                closePopout: h,
-                            }),
-                        ],
+                        focusProps: { enabled: !1 },
+                        "aria-label": p.intl.string(p.t["8k+6QY"]),
+                        children: [(0, i.jsx)(f, { tab: t }), (0, i.jsx)(A.A, { closePopout: g })],
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: m.YF,
-                children: (0, r.jsxs)(s.VQ0, {
+            (0, i.jsx)("div", {
+                className: _.YF,
+                children: (0, i.jsxs)(r.VQ0, {
                     selectedItem: t,
                     type: "top",
                     look: "brand",
                     onItemSelect: n,
-                    className: m.$H,
+                    className: _.$H,
                     children: [
-                        (0, r.jsxs)(s.VQ0.Item, {
-                            id: i.Y2.FOR_YOU,
-                            "aria-label": g.intl.string(g.t["En+D+u"]),
-                            className: m.Mf,
+                        (0, i.jsxs)(r.VQ0.Item, {
+                            id: s.Y2.FOR_YOU,
+                            "aria-label": p.intl.string(p.t["En+D+u"]),
+                            className: _.Mf,
                             children: [
-                                g.intl.string(g.t["En+D+u"]),
-                                (null == f ? void 0 : f.badgeForYou)
-                                    ? (0, r.jsx)(s.SC0, {
+                                p.intl.string(p.t["En+D+u"]),
+                                h?.badgeForYou
+                                    ? (0, i.jsx)(r.SC0, {
                                           color: a.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
-                                          className: m.bG,
+                                          className: _.bG,
                                       })
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(s.VQ0.Item, {
-                            id: i.Y2.UNREADS,
-                            className: m.Mf,
-                            children: g.intl.string(g.t.sRUdB8),
+                        (0, i.jsx)(r.VQ0.Item, {
+                            id: s.Y2.UNREADS,
+                            className: _.Mf,
+                            children: p.intl.string(p.t.sRUdB8),
                         }),
-                        (0, r.jsx)(s.VQ0.Item, {
-                            "aria-label": g.intl.string(g.t.GRZF96),
-                            id: i.Y2.MENTIONS,
-                            className: m.Mf,
-                            children: g.intl.string(g.t.GRZF96),
+                        (0, i.jsx)(r.VQ0.Item, {
+                            "aria-label": p.intl.string(p.t.GRZF96),
+                            id: s.Y2.MENTIONS,
+                            className: _.Mf,
+                            children: p.intl.string(p.t.GRZF96),
                         }),
-                        b && A
-                            ? (0, r.jsx)(s.VQ0.Item, {
-                                  "aria-label": g.intl.string(g.t["2pAkDA"]),
-                                  id: i.Y2.BOOKMARKS,
-                                  className: m.Mf,
+                        m && x
+                            ? (0, i.jsx)(r.VQ0.Item, {
+                                  "aria-label": p.intl.string(p.t["2pAkDA"]),
+                                  id: s.Y2.BOOKMARKS,
+                                  className: _.Mf,
                                   children:
-                                      0 === j
-                                          ? g.intl.string(g.t["2pAkDA"])
-                                          : g.intl.formatToPlainString(g.t.I4fryG, {
-                                                count: j,
-                                            }),
+                                      0 === C
+                                          ? p.intl.string(p.t["2pAkDA"])
+                                          : p.intl.formatToPlainString(p.t.I4fryG, { count: C }),
                               })
                             : null,
-                        O
-                            ? (0, r.jsx)(s.VQ0.Item, {
+                        E
+                            ? (0, i.jsx)(r.VQ0.Item, {
                                   "aria-label": "scheduled",
-                                  id: i.Y2.SCHEDULED,
-                                  className: m.Mf,
-                                  children: g.intl.string(g.t.Fn6Odn),
+                                  id: s.Y2.SCHEDULED,
+                                  className: _.Mf,
+                                  children: p.intl.string(p.t.Fn6Odn),
                               })
                             : null,
                     ],
@@ -123,14 +101,13 @@ function A(e) {
         ],
     });
 }
-
-function y(e) {
+function f(e) {
     let { tab: t } = e;
-    return t === i.Y2.FOR_YOU
-        ? (0, r.jsx)(f.xc, {})
-        : t === i.Y2.UNREADS
-          ? (0, r.jsx)(b.NH, {})
-          : t === i.Y2.MENTIONS
-            ? (0, r.jsx)(h.A, {})
+    return t === s.Y2.FOR_YOU
+        ? (0, i.jsx)(h.xc, {})
+        : t === s.Y2.UNREADS
+          ? (0, i.jsx)(m.NH, {})
+          : t === s.Y2.MENTIONS
+            ? (0, i.jsx)(g.A, {})
             : null;
 }

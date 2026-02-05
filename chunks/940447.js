@@ -1,31 +1,26 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+n.d(t, { A: () => h });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(675704),
-    a = n(793322),
+var r = n(397927),
+    a = n(675704),
+    l = n(793322),
     s = n(64983),
     o = n(652215),
-    c = n(49999),
-    u = n(985018),
-    d = n(861968),
-    p = n(208907);
-let f = (e) => {
-    let t = (0, r.jsx)(i.e7I, {
-        shortcut: l.R.binds["0"],
-        keyClassName: d.Eb,
-    });
-    return (0, r.jsx)(s.A, {
+    d = n(49999),
+    c = n(985018),
+    u = n(861968),
+    A = n(208907);
+let h = (e) => {
+    let t = (0, i.jsx)(r.e7I, { shortcut: a.R.binds["0"], keyClassName: u.Eb });
+    return (0, i.jsx)(s.A, {
         guild: e.guild,
-        onDismissed: () => e.markAsDismissed(c.i.UNKNOWN),
-        onClick: () => (0, a.WU)("CHANNEL_NOTICE"),
-        message: u.intl.string(u.t.Qhk8cs),
+        onDismissed: () => e.markAsDismissed(d.i.UNKNOWN),
+        onClick: () => (0, l.WU)("CHANNEL_NOTICE"),
+        message: c.intl.string(c.t.Qhk8cs),
         cta: t,
         trackingSource: o.kZU.QUICK_SWITCHER_NOTICE,
         type: o.n5X.QUICKSWITCHER,
-        image: p,
+        image: A,
         imageMarginX: 50,
     });
 };

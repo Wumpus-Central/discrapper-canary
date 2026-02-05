@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,43 +7,28 @@ var i = n(503698),
     s = n(580630),
     o = n(788868),
     l = n(985018),
-    c = n(709246);
-
-function u(e) {
+    u = n(709246);
+function c(e) {
     let {
             price: t,
             currency: n,
             intervalType: i,
-            className: u,
+            className: c,
             intervalCount: d = 1,
-            isPrepaidPaymentSource: f = !1,
+            isPrepaidPaymentSource: _ = !1,
         } = e,
-        p = (0, s.$g)(t, n),
-        _ = null;
+        f = (0, s.$g)(t, n),
+        p = null;
     return (
         i === o.WT.YEAR
-            ? (_ = l.intl.format(l.t["3U719t"], {
-                  price: p,
-              }))
+            ? (p = l.intl.format(l.t["3U719t"], { price: f }))
             : i === o.WT.MONTH && 1 === d
-              ? (_ = l.intl.format(l.t.NkR7BU, {
-                    price: p,
-                }))
-              : i === o.WT.MONTH &&
-                d > 1 &&
-                (_ = l.intl.format(l.t.CNAGg4, {
-                    price: p,
-                    intervalCount: d,
-                })),
+              ? (p = l.intl.format(l.t.NkR7BU, { price: f }))
+              : i === o.WT.MONTH && d > 1 && (p = l.intl.format(l.t.CNAGg4, { price: f, intervalCount: d })),
         (0, r.jsx)("div", {
-            className: a()(c.S, u),
-            "data-testid": "PricePerInterval-".concat(n),
-            children:
-                null == i || f
-                    ? (0, r.jsx)("strong", {
-                          children: p,
-                      })
-                    : _,
+            className: a()(u.S, c),
+            "data-testid": `PricePerInterval-${n}`,
+            children: null == i || _ ? (0, r.jsx)("strong", { children: f }) : p,
         })
     );
 }

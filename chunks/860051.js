@@ -1,31 +1,23 @@
-a.r(t),
-    a.d(t, {
-        default: () => s,
-    });
-var c = a(627968),
-    n = a(311907),
-    l = a(627363),
-    d = a(91242),
-    r = a(127938),
-    o = a(923917),
-    i = a(620148),
-    f = a(33445),
-    b = a(985018);
-
-function s(e) {
-    var t, a;
-    let { windowKey: s } = e,
-        u = (0, i.A)(),
-        p = (0, n.bG)([d.A], () => d.A.getConnectedFrame()),
-        { data: _ } = (0, l.YY)(null == p ? void 0 : p.applicationId),
-        m =
-            null != (t = null != (a = null == u ? void 0 : u.name) ? a : null == _ ? void 0 : _.name)
-                ? t
-                : b.intl.string(b.t.IC5Ann);
-    return (0, c.jsx)(o.A, {
+n.r(t), n.d(t, { default: () => p });
+var l = n(627968),
+    i = n(311907),
+    a = n(627363),
+    o = n(91242),
+    r = n(127938),
+    s = n(923917),
+    c = n(620148),
+    d = n(33445),
+    u = n(985018);
+function p(e) {
+    let { windowKey: t } = e,
+        n = (0, c.A)(),
+        p = (0, i.bG)([o.A], () => o.A.getConnectedFrame()),
+        { data: A } = (0, a.YY)(p?.applicationId),
+        m = n?.name ?? A?.name ?? u.intl.string(u.t.IC5Ann);
+    return (0, l.jsx)(s.A, {
         withTitleBar: !0,
-        windowKey: s,
+        windowKey: t,
         title: m,
-        children: null != u ? (0, c.jsx)(f.A, {}) : (0, c.jsx)(r.A, {}),
+        children: null != n ? (0, l.jsx)(d.A, {}) : (0, l.jsx)(r.A, {}),
     });
 }

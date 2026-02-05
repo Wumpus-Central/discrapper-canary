@@ -1,3 +1,2 @@
-e.exports = {
-    j: "child__8fdf6",
-};
+"use strict";
+e.exports = { j: "child__8fdf6" };

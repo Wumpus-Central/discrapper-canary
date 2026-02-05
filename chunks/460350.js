@@ -1,96 +1,62 @@
-n.d(t, {
-    i: () => h,
-}),
-    n(896048),
-    n(64700);
+"use strict";
+n.d(t, { i: () => h }), n(64700);
 var r = n(73153),
     i = n(157559),
     a = n(884384),
     s = n(101392),
     o = n(287809),
     l = n(954571),
-    c = n(565579),
-    u = n(927578),
+    u = n(565579),
+    c = n(927578),
     d = n(652215),
-    f = n(985018);
-
-function p(e, t) {
+    _ = n(985018);
+function f(e, t) {
     i.A.show({
-        title: f.intl.string(f.t.l8rYLt),
-        body: f.intl.formatToPlainString(f.t.FfjF15, {
-            currentLength: e,
-            maxLength: t,
-        }),
-        confirmText: f.intl.string(f.t.BddRzS),
+        title: _.intl.string(_.t.l8rYLt),
+        body: _.intl.formatToPlainString(_.t.FfjF15, { currentLength: e, maxLength: t }),
+        confirmText: _.intl.string(_.t.BddRzS),
     }),
-        l.default.track(d.HAw.OPEN_MODAL, {
-            type: "Message Too Long Alert",
-            message_content_length: e,
-        });
+        l.default.track(d.HAw.OPEN_MODAL, { type: "Message Too Long Alert", message_content_length: e });
 }
-
-function _(e) {
-    var t;
+function p(e) {
     let {
-        openWarningPopout: n,
-        type: o,
-        content: l,
-        stickers: u,
-        uploads: _,
-        channel: h,
-        restrictMentions: m,
-        respectCooldown: g,
-        userCanUsePremiumMessageLength: E,
-        resolve: b,
+        openWarningPopout: t,
+        type: n,
+        content: o,
+        stickers: l,
+        uploads: c,
+        channel: p,
+        restrictMentions: h,
+        respectCooldown: m,
+        userCanUsePremiumMessageLength: g,
+        resolve: E,
     } = e;
     if (
-        0 === l.length &&
-        !(null == (t = o.submit) ? void 0 : t.allowEmptyMessage) &&
-        (null == u || 0 === u.length) &&
-        (null == _ || 0 === _.length)
+        0 === o.length &&
+        !n.submit?.allowEmptyMessage &&
+        (null == l || 0 === l.length) &&
+        (null == c || 0 === c.length)
     )
-        return void b({
-            valid: !1,
-            failureReason: d.X8x.EMPTY_MESSAGE,
-        });
-    let y = E ? d.CS1 : d.uvi,
-        O = !E;
-    if (l.length > y) {
-        O && null != h
-            ? r.h.dispatch({
-                  type: "MESSAGE_LENGTH_UPSELL",
-                  channel: h,
-                  content: l,
-              })
-            : p(l.length, y),
-            b({
-                valid: !1,
-                failureReason: d.X8x.MESSAGE_TOO_LONG,
-            });
+        return void E({ valid: !1, failureReason: d.X8x.EMPTY_MESSAGE });
+    let A = g ? d.CS1 : d.uvi,
+        I = !g;
+    if (o.length > A) {
+        I && null != p ? r.h.dispatch({ type: "MESSAGE_LENGTH_UPSELL", channel: p, content: o }) : f(o.length, A),
+            E({ valid: !1, failureReason: d.X8x.MESSAGE_TOO_LONG });
         return;
     }
-    if (null != h) {
-        if (null != h.getGuildId() && g && s.A.getSlowmodeCooldownGuess(h.id) > 0)
-            return void b({
-                valid: !1,
-                failureReason: d.X8x.SLOWMODE_COOLDOWN,
-            });
-        if (null != n)
-            for (let { check: e, analyticsType: t, animation: r } of c.m) {
-                let i = e(l, h, m);
+    if (null != p) {
+        if (null != p.getGuildId() && m && s.A.getSlowmodeCooldownGuess(p.id) > 0)
+            return void E({ valid: !1, failureReason: d.X8x.SLOWMODE_COOLDOWN });
+        if (null != t)
+            for (let { check: e, analyticsType: n, animation: r } of u.m) {
+                let i = e(o, p, h);
                 if (!1 !== i)
-                    return void n({
-                        analyticsType: t,
-                        channel: h,
-                        onCancel: () =>
-                            b({
-                                valid: !1,
-                                failureReason: d.X8x.SHOUTING_CANCELLED,
-                            }),
-                        onConfirm: () =>
-                            b({
-                                valid: !0,
-                            }),
+                    return void t({
+                        analyticsType: n,
+                        channel: p,
+                        onCancel: () => E({ valid: !1, failureReason: d.X8x.SHOUTING_CANCELLED }),
+                        onConfirm: () => E({ valid: !0 }),
                         popoutText: i,
                         animation: r,
                     });
@@ -98,21 +64,15 @@ function _(e) {
     }
     if (a.Ay.isFull()) {
         i.A.show({
-            title: f.intl.string(f.t["7Q4eo2"]),
-            body: f.intl.string(f.t.gi6XHp),
-            confirmText: f.intl.string(f.t["Z4U1g/"]),
+            title: _.intl.string(_.t["7Q4eo2"]),
+            body: _.intl.string(_.t.gi6XHp),
+            confirmText: _.intl.string(_.t["Z4U1g/"]),
         }),
-            b({
-                valid: !1,
-                failureReason: d.X8x.RATE_LIMITED,
-            });
+            E({ valid: !1, failureReason: d.X8x.RATE_LIMITED });
         return;
     }
-    b({
-        valid: !0,
-    });
+    E({ valid: !0 });
 }
-
 function h(e) {
     let {
             openWarningPopout: t,
@@ -122,11 +82,11 @@ function h(e) {
             uploads: a,
             channel: s,
             restrictMentions: l = !0,
-            respectCooldown: c = !0,
+            respectCooldown: u = !0,
         } = e,
-        d = u.Ay.canUseIncreasedMessageLength(o.default.getCurrentUser());
+        d = c.Ay.canUseIncreasedMessageLength(o.default.getCurrentUser());
     return new Promise((e) =>
-        _({
+        p({
             openWarningPopout: t,
             type: n,
             content: r,
@@ -134,7 +94,7 @@ function h(e) {
             uploads: a,
             channel: s,
             restrictMentions: l,
-            respectCooldown: c,
+            respectCooldown: u,
             userCanUsePremiumMessageLength: d,
             resolve: e,
         }),

@@ -1,3 +1,4 @@
+"use strict";
 var r =
         (this && this.__createBinding) ||
         (Object.create
@@ -21,9 +22,7 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.makeMessagesProxy =
         t.chainMessagesObjects =
         t.MessageLoader =
@@ -74,24 +73,24 @@ Object.defineProperty(t, "runtimeHashMessageKey", {
         return l.runtimeHashMessageKey;
     },
 });
-var c = n(72932);
+var u = n(72932);
 Object.defineProperty(t, "IntlManager", {
     enumerable: !0,
     get: function () {
-        return c.IntlManager;
+        return u.IntlManager;
     },
 }),
     Object.defineProperty(t, "DEFAULT_LOCALE", {
         enumerable: !0,
         get: function () {
-            return c.DEFAULT_LOCALE;
+            return u.DEFAULT_LOCALE;
         },
     });
-var u = n(921034);
+var c = n(921034);
 Object.defineProperty(t, "InternalIntlMessage", {
     enumerable: !0,
     get: function () {
-        return u.InternalIntlMessage;
+        return c.InternalIntlMessage;
     },
 });
 var d = n(631260);
@@ -119,16 +118,16 @@ Object.defineProperty(t, "createLoader", {
             return d.MessageLoader;
         },
     });
-var f = n(214537);
+var _ = n(214537);
 Object.defineProperty(t, "chainMessagesObjects", {
     enumerable: !0,
     get: function () {
-        return f.chainMessagesObjects;
+        return _.chainMessagesObjects;
     },
 }),
     Object.defineProperty(t, "makeMessagesProxy", {
         enumerable: !0,
         get: function () {
-            return f.makeMessagesProxy;
+            return _.makeMessagesProxy;
         },
     });

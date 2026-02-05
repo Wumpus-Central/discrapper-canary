@@ -1,41 +1,35 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968);
+n.d(e, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    c = n(397927),
-    o = n(414798),
-    a = n(734057),
-    l = n(576705),
-    u = n(309010),
-    s = n(203982),
-    b = n(652215),
-    d = n(985018);
-
-function f(e, t, n) {
-    let [f, p] = (0, i.yK)([u.A, a.A, l.A], () => {
-            let e = u.A.getChannelId(t),
-                n = a.A.getChannel(e);
-            return [e, null != n && (n.isPrivate() || l.A.can(b.xBc.SEND_MESSAGES, n))];
-        }, [t]),
-        A = n === b.BRT.POPOUT;
-    return !p || A
+var r = n(311907),
+    a = n(397927),
+    l = n(414798),
+    c = n(734057),
+    o = n(576705),
+    s = n(309010),
+    u = n(203982),
+    d = n(652215),
+    A = n(985018);
+function p(t, e, n) {
+    let [p, E] = (0, r.yK)([s.A, c.A, o.A], () => {
+            let t = s.A.getChannelId(e),
+                n = c.A.getChannel(t);
+            return [t, null != n && (n.isPrivate() || o.A.can(d.xBc.SEND_MESSAGES, n))];
+        }, [e]),
+        b = n === d.BRT.POPOUT;
+    return !E || b
         ? null
-        : (0, r.jsx)(c.Drp, {
+        : (0, i.jsx)(a.Drp, {
               id: "mention",
-              label: d.intl.string(d.t.P8tvKG),
+              label: A.intl.string(A.t.P8tvKG),
               action: function () {
-                  !(function (e, t) {
-                      let { id: n } = e,
-                          r = "@".concat(e.name);
-                      s._.dispatchToLastSubscribed(b.jej.INSERT_TEXT, {
-                          plainText: r,
-                          rawText: "<@$".concat(n, ">"),
-                      }),
-                          null != t && o.A.startTyping(t);
-                  })(e, f);
+                  !(function (t, e) {
+                      let { id: n } = t,
+                          i = `@${t.name}`,
+                          r = `<@$${n}>`;
+                      u._.dispatchToLastSubscribed(d.jej.INSERT_TEXT, { plainText: i, rawText: r }),
+                          null != e && l.A.startTyping(e);
+                  })(t, p);
               },
           });
 }

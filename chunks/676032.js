@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Qs: "content_a8c622",
     QN: "breadcrumbsWrapper_a8c622",

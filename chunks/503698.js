@@ -1,6 +1,6 @@
 !(function () {
+    "use strict";
     var t = {}.hasOwnProperty;
-
     function n() {
         for (var e = "", t = 0; t < arguments.length; t++) {
             var n = arguments[t];
@@ -8,7 +8,6 @@
         }
         return e;
     }
-
     function r(e) {
         if ("string" == typeof e || "number" == typeof e) return e;
         if ("object" != typeof e) return "";
@@ -19,7 +18,6 @@
         for (var a in e) t.call(e, a) && e[a] && (r = i(r, a));
         return r;
     }
-
     function i(e, t) {
         return t ? (e ? e + " " + t : e + t) : e;
     }

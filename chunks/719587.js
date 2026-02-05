@@ -1,36 +1,32 @@
-i.d(e, {
-    L: () => E,
-});
+i.d(e, { L: () => S });
 var n = i(311907),
     l = i(290595),
     s = i(171316),
     r = i(419954),
-    u = i(153488),
-    a = i(975571),
+    a = i(153488),
+    u = i(975571),
     o = i(780964),
-    T = i(997913),
-    A = i(652215),
-    S = i(985018);
-let E = (0, r.zD)(o.X.DATA_USAGE_STATISTICS_SETTING, {
-    useTitle: () => S.intl.string(S.t.XuADY2),
+    d = i(997913),
+    T = i(652215),
+    A = i(985018);
+let S = (0, r.zD)(o.X.DATA_USAGE_STATISTICS_SETTING, {
+    useTitle: () => A.intl.string(A.t.XuADY2),
     useSubtitle: () =>
-        S.intl.format(S.t["igTSG/"], {
-            helpdeskArticle: a.A.getArticleURL(A.MVz.DATA_PRIVACY_CONTROLS),
-        }),
+        A.intl.format(A.t["igTSG/"], { helpdeskArticle: u.A.getArticleURL(T.MVz.DATA_PRIVACY_CONTROLS) }),
     useValue: function () {
-        return (0, n.bG)([u.A], () => u.A.hasConsented(A.YAq.USAGE_STATISTICS));
+        return (0, n.bG)([a.A], () => a.A.hasConsented(T.YAq.USAGE_STATISTICS));
     },
     setValue: function (t) {
         t
-            ? (0, l.U)([A.YAq.USAGE_STATISTICS], []).catch(T.i)
-            : (0, T.O)({
-                  header: S.intl.string(S.t.OdPCbN),
-                  body: S.intl.string(S.t.MGWabA),
-                  confirmText: S.intl.string(S.t["D3+rU4"]),
-                  cancelText: S.intl.string(S.t.kYpG0u),
-                  onConfirm: () => (0, l.U)([], [A.YAq.USAGE_STATISTICS]).catch(T.i),
+            ? (0, l.U)([T.YAq.USAGE_STATISTICS], []).catch(d.i)
+            : (0, d.O)({
+                  header: A.intl.string(A.t.OdPCbN),
+                  body: A.intl.string(A.t.MGWabA),
+                  confirmText: A.intl.string(A.t["D3+rU4"]),
+                  cancelText: A.intl.string(A.t.kYpG0u),
+                  onConfirm: () => (0, l.U)([], [T.YAq.USAGE_STATISTICS]).catch(d.i),
               });
     },
-    useSearchTerms: () => [S.intl.string(S.t.XuADY2)],
+    useSearchTerms: () => [A.intl.string(A.t.XuADY2)],
     useDisabled: s.uM,
 });

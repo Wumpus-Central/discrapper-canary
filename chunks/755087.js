@@ -1,3 +1,1 @@
-e.exports = {
-    e: "keybindContainer_eedc51",
-};
+e.exports = { e: "keybindContainer_eedc51" };

@@ -1,32 +1,27 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(310784),
     s = n.n(a),
     o = n(735438),
     l = n(582754),
-    c = n(397927),
-    u = n(736653),
+    u = n(397927),
+    c = n(736653),
     d = n(654107),
-    f = n(998304),
-    p = n(735991),
-    _ = n(278597),
+    _ = n(998304),
+    f = n(735991),
+    p = n(278597),
     h = n(645725),
     m = n(541781);
 let g = 20;
-
 function E(e, t, n) {
     return t === n ? 1 : (0, o.clamp)((e - t) / (n - t), 0, 1);
 }
-
-function b(e, t, n) {
+function A(e, t, n) {
     return e + (t - e) * n;
 }
-
-function y(e) {
+function I(e) {
     let [t, n] = i.useState(void 0);
     return (
         i.useEffect(() => {
@@ -35,75 +30,64 @@ function y(e) {
         t
     );
 }
-
-function O(e) {
-    let { application: t, context: n, name: a, iconURL: O, scrollerRef: A, sectionName: v } = e,
-        S = (0, l.qB)((0, u.Ay)()),
-        I = i.useRef(null),
-        T = i.useRef(null),
+function T(e) {
+    let { application: t, context: n, name: a, iconURL: T, scrollerRef: y, sectionName: S } = e,
+        v = (0, l.qB)((0, c.Ay)()),
         C = i.useRef(null),
+        b = i.useRef(null),
         N = i.useRef(null),
-        R = (0, c.rdh)(c.LU0.colors.BACKGROUND_BASE_LOW).hex(),
-        w = (0, d.Ay)("number" == typeof O ? "" : O, null != R ? R : ""),
-        P = i.useMemo(() => {
-            var e, t;
-            return null !=
-                (e =
-                    null ==
-                    (t = (0, f.lZ)({
-                        foreground: s()(w),
-                        background: s()(S ? "#000000" : "#ffffff"),
-                        ratio: 5,
-                        saturationFactor: 0.6,
-                    }))
-                        ? void 0
-                        : t.hex())
-                ? e
-                : w;
-        }, [w, S]),
-        D = y(I),
-        x = y(T),
-        L = i.useCallback(() => {
-            var e, t, n;
-            let r = A.current,
-                i = I.current,
-                a = C.current,
-                s = null == N ? void 0 : N.current,
-                l = parseInt(null != (e = null == D ? void 0 : D.height) ? e : ""),
-                c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
-            if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
-                let e = null != (n = r.scrollTop) ? n : 0,
-                    t = 0 !== r.scrollHeight ? r.scrollHeight : c + g,
-                    u = 0 !== r.clientHeight ? r.clientHeight : c + g,
-                    d = c - l,
-                    f = (0, o.clamp)(t - u, d + 1, c + g),
-                    p = E(e, d, f);
-                (i.style.filter = "brightness(".concat(b(1, S ? 1.4 : 0.6, p), ")")),
-                    (i.style.backgroundColor = "color-mix(in oklab,"
-                        .concat(w, " ")
-                        .concat((1 - p) * 100, "%, ")
-                        .concat(P, ")")),
-                    (a.style.opacity = "".concat(b(0, 1, p))),
-                    (a.style.transform = "translateY(".concat(b(l / 4, 0, p), "px)")),
-                    null != s && (s.style.opacity = "".concat(b(1, 0, p)));
+        R = i.useRef(null),
+        O = (0, u.rdh)(u.LU0.colors.BACKGROUND_BASE_LOW).hex(),
+        D = (0, d.Ay)("number" == typeof T ? "" : T, O ?? ""),
+        L = i.useMemo(
+            () =>
+                (0, _.lZ)({
+                    foreground: s()(D),
+                    background: s()(v ? "#000000" : "#ffffff"),
+                    ratio: 5,
+                    saturationFactor: 0.6,
+                })?.hex() ?? D,
+            [D, v],
+        ),
+        w = I(C),
+        x = I(b),
+        P = i.useCallback(() => {
+            let e = y.current,
+                t = C.current,
+                n = N.current,
+                r = R?.current,
+                i = parseInt(w?.height ?? ""),
+                a = parseInt(x?.height ?? "");
+            if (null != e && null != t && null != n && !isNaN(i) && !isNaN(a)) {
+                let s = e.scrollTop ?? 0,
+                    l = 0 !== e.scrollHeight ? e.scrollHeight : a + g,
+                    u = 0 !== e.clientHeight ? e.clientHeight : a + g,
+                    c = a - i,
+                    d = (0, o.clamp)(l - u, c + 1, a + g),
+                    _ = E(s, c, d);
+                (t.style.filter = `brightness(${A(1, v ? 1.4 : 0.6, _)})`),
+                    (t.style.backgroundColor = `color-mix(in oklab,${D} ${(1 - _) * 100}%, ${L})`),
+                    (n.style.opacity = `${A(0, 1, _)}`),
+                    (n.style.transform = `translateY(${A(i / 4, 0, _)}px)`),
+                    null != r && (r.style.opacity = `${A(1, 0, _)}`);
             }
-        }, [P, w, null == x ? void 0 : x.height, S, A, null == D ? void 0 : D.height]);
+        }, [L, D, x?.height, v, y, w?.height]);
     return (
         i.useEffect(() => {
-            L();
-        }, [L, S]),
+            P();
+        }, [P, v]),
         i.useEffect(() => {
-            let e = A.current,
+            let e = y.current,
                 t = () => {
-                    L();
+                    P();
                 };
             return (
-                null == e || e.addEventListener("scroll", t),
+                e?.addEventListener("scroll", t),
                 () => {
-                    null == e || e.removeEventListener("scroll", t);
+                    e?.removeEventListener("scroll", t);
                 }
             );
-        }, [A, L]),
+        }, [y, P]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -111,21 +95,13 @@ function O(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: m.LO,
-                            children: (0, r.jsx)("div", {
-                                className: m.If,
-                                ref: I,
-                            }),
+                            children: (0, r.jsx)("div", { className: m.If, ref: C }),
                         }),
-                        (0, r.jsx)("div", {
-                            className: m.FY,
-                            children: (0, r.jsx)(_.A, {
-                                className: m.aY,
-                            }),
-                        }),
+                        (0, r.jsx)("div", { className: m.FY, children: (0, r.jsx)(p.A, { className: m.aY }) }),
                         (0, r.jsx)("div", {
                             className: m.VW,
-                            children: (0, r.jsx)(c.Heading, {
-                                ref: C,
+                            children: (0, r.jsx)(u.Heading, {
+                                ref: N,
                                 className: m.n,
                                 variant: "heading-lg/extrabold",
                                 children: a,
@@ -133,25 +109,14 @@ function O(e) {
                         }),
                     ],
                 }),
-                (0, p.$B)(t)
+                (0, f.$B)(t)
                     ? (0, r.jsx)("div", {
-                          ref: N,
+                          ref: R,
                           className: m.Ch,
-                          children: (0, r.jsx)(h.A, {
-                              application: t,
-                              context: n,
-                              className: m.aY,
-                              sectionName: v,
-                          }),
+                          children: (0, r.jsx)(h.A, { application: t, context: n, className: m.aY, sectionName: S }),
                       })
                     : null,
-                (0, r.jsx)("div", {
-                    ref: T,
-                    className: m.b8,
-                    style: {
-                        backgroundColor: w,
-                    },
-                }),
+                (0, r.jsx)("div", { ref: b, className: m.b8, style: { backgroundColor: D } }),
             ],
         })
     );

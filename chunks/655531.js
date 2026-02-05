@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(999843),
     o = n(280173),
@@ -6,12 +7,7 @@ var r = n(834647),
     l = i.has,
     c = i.set;
 r(
-    {
-        target: "Map",
-        proto: !0,
-        real: !0,
-        forced: !0,
-    },
+    { target: "Map", proto: !0, real: !0, forced: !0 },
     {
         getOrInsertComputed: function (e, t) {
             if ((o(this), a(t), l(this, e))) return s(this, e);

@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.default = function (e, t, n) {
         let r = 0,
             i = e.length;

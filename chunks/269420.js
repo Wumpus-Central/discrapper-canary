@@ -1,21 +1,19 @@
-i.d(e, {
-    K: () => g,
-});
+i.d(e, { K: () => c });
 var n = i(419954),
     l = i(780964),
     s = i(907218),
     r = i(311453),
-    u = i(812757),
-    a = i(424305),
+    a = i(812757),
+    u = i(424305),
     o = i(256199),
-    T = i(229823),
-    A = i(53825),
-    S = i(544727),
-    E = i(298648),
-    d = i(782e3),
-    _ = i(509725),
-    I = i(985018);
-let g = (0, n.zZ)(l.X.CLIPS_RECORDING_CATEGORY, {
-    useTitle: () => I.intl.string(I.t.iIwmV5),
-    buildLayout: () => [o.e, r.X, E.T, d.B, _.Z, a.R, T.j, s.k, u.t, A.N, S.$],
+    d = i(229823),
+    T = i(53825),
+    A = i(544727),
+    S = i(298648),
+    E = i(782e3),
+    g = i(509725),
+    _ = i(985018);
+let c = (0, n.zZ)(l.X.CLIPS_RECORDING_CATEGORY, {
+    useTitle: () => _.intl.string(_.t.iIwmV5),
+    buildLayout: () => [o.e, r.X, S.T, E.B, g.Z, u.R, d.j, s.k, a.t, T.N, A.$],
 });

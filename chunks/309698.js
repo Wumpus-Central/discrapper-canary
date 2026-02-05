@@ -1,63 +1,41 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048);
-var r,
-    i = n(478437),
-    a = n(311907),
-    s = n(73153),
-    o = n(142120);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => p });
+var r = n(478437),
+    i = n(311907),
+    a = n(73153),
+    s = n(142120);
+let o = new Set(),
+    l = {};
+function u() {
+    o.clear();
 }
-let c = new Set(),
-    u = {};
-
-function d() {
-    c.clear();
+function c(e) {
+    o.delete(e.guild.id);
 }
-
-function f(e) {
-    c.delete(e.guild.id);
+function d(e) {
+    null == l[e.guildId] && (l[e.guildId] = {}), (l[e.guildId][e.id] = e.status);
 }
-
-function p(e) {
-    null == u[e.guildId] && (u[e.guildId] = {}), (u[e.guildId][e.id] = e.status);
-}
-
 function _(e) {
-    for (let { id: t, status: n } of ((u[e.guildId] = {}), e.channels)) u[e.guildId][t] = n;
+    for (let { id: t, status: n } of ((l[e.guildId] = {}), e.channels)) l[e.guildId][t] = n;
 }
-class h extends (r = a.Ay.Store) {
+class f extends i.Ay.Store {
     initialize() {
-        this.waitFor(o.A);
+        this.waitFor(s.A);
     }
+    static displayName = "ChannelStatusStore";
     getChannelStatus(e) {
-        var t;
-        if (null != e && null != e.guild_id && e.type === i.r.GUILD_VOICE)
+        if (null != e && null != e.guild_id && e.type === r.r.GUILD_VOICE)
             return (
-                c.has(e.guild_id) || (c.add(e.guild_id), o.A.getSocket().requestChannelStatuses(e.guild_id)),
-                null == (t = u[e.guild_id]) ? void 0 : t[e.id]
+                o.has(e.guild_id) || (o.add(e.guild_id), s.A.getSocket().requestChannelStatuses(e.guild_id)),
+                l[e.guild_id]?.[e.id]
             );
     }
 }
-l(h, "displayName", "ChannelStatusStore");
-let m = new h(s.h, {
-    GUILD_CREATE: f,
-    GUILD_DELETE: f,
-    CONNECTION_RESUMED: d,
-    CONNECTION_OPEN: d,
-    VOICE_CHANNEL_STATUS_UPDATE: p,
+let p = new f(a.h, {
+    GUILD_CREATE: c,
+    GUILD_DELETE: c,
+    CONNECTION_RESUMED: u,
+    CONNECTION_OPEN: u,
+    VOICE_CHANNEL_STATUS_UPDATE: d,
     CHANNEL_STATUSES: _,
 });

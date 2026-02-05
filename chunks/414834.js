@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     EA: "combobox__97e86",
     wx: "header__97e86",

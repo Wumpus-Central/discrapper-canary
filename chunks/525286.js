@@ -1,23 +1,12 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 let r = (0, n(600975).C)({
         kind: "user",
         id: "2024-10_golive_simulcast",
         label: "GoLive Simulcast",
-        defaultConfig: {
-            simulcastEnabled: !1,
-            lqStreamBitrate: 0,
-        },
+        defaultConfig: { simulcastEnabled: !1, lqStreamBitrate: 0 },
         treatments: [
-            {
-                id: 1,
-                label: "Simulcast",
-                config: {
-                    simulcastEnabled: !0,
-                    lqStreamBitrate: 15e5,
-                },
-            },
+            { id: 1, label: "Simulcast", config: { simulcastEnabled: !0, lqStreamBitrate: 15e5 } },
             {
                 id: 2,
                 label: "Simulcast, no pacer for LQ",
@@ -31,31 +20,10 @@ let r = (0, n(600975).C)({
         ],
     }),
     i = {
-        getConfig: () =>
-            r.getCurrentConfig(
-                {
-                    location: "getConfig",
-                },
-                {
-                    autoTrackExposure: !1,
-                },
-            ),
+        getConfig: () => r.getCurrentConfig({ location: "getConfig" }, { autoTrackExposure: !1 }),
         simulcastEnabled: () =>
-            r.getCurrentConfig(
-                {
-                    location: "simulcastEnabled",
-                },
-                {
-                    autoTrackExposure: !0,
-                },
-            ).simulcastEnabled,
+            r.getCurrentConfig({ location: "simulcastEnabled" }, { autoTrackExposure: !0 }).simulcastEnabled,
         workerExperimentString: () =>
-            r.getCurrentConfig(
-                {
-                    location: "workerExperimentString",
-                },
-                {
-                    autoTrackExposure: !1,
-                },
-            ).workerExperimentString,
+            r.getCurrentConfig({ location: "workerExperimentString" }, { autoTrackExposure: !1 })
+                .workerExperimentString,
     };

@@ -1,30 +1,28 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(64983),
-    l = n(450510),
-    a = n(976860),
+var r = n(64983),
+    a = n(450510),
+    l = n(976860),
     s = n(323443),
     o = n(652215),
-    c = n(985018),
-    u = n(213242);
-let d = (e) => {
+    d = n(985018),
+    c = n(213242);
+let u = (e) => {
     let { channel: t, guild: n } = e;
-    return (0, r.jsx)(i.A, {
+    return (0, i.jsx)(r.A, {
         guild: n,
         onDismissed: () => {
-            (0, l.sF)(l._2.HUB_STUDY_ROOM_NOTICE);
+            (0, a.sF)(a._2.HUB_STUDY_ROOM_NOTICE);
         },
         onClick: () => {
-            (0, l.sF)(l._2.HUB_STUDY_ROOM_NOTICE),
-                null != t && null != t.getGuildId() && ((0, s.av)(t), (0, a.uh)(t.getGuildId(), t.id));
+            (0, a.sF)(a._2.HUB_STUDY_ROOM_NOTICE),
+                null != t && null != t.getGuildId() && ((0, s.av)(t), (0, l.uh)(t.getGuildId(), t.id));
         },
-        title: c.intl.string(c.t["4Y2AS7"]),
-        message: c.intl.string(c.t.wTsxTS),
-        cta: c.intl.string(c.t.wBoE6L),
-        image: u,
+        title: d.intl.string(d.t["4Y2AS7"]),
+        message: d.intl.string(d.t.wTsxTS),
+        cta: d.intl.string(d.t.wBoE6L),
+        image: c,
         type: o.n5X.HUB_STUDY_ROOM,
     });
 };

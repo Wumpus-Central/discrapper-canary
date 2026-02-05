@@ -1,156 +1,59 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+n.d(t, { A: () => x });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(961350),
-    a = n(823016),
+    a = n(961350),
+    r = n(823016),
     s = n(750492),
     o = n(253798),
-    c = n(622249),
-    u = n(742710),
-    d = n(192),
-    f = n(957382);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e) {
-    let { games: t, user: n, widgetType: l } = e,
-        i = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                l,
-                i = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                    (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-                return i;
-            }
-            if (
-                ((i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        l = {},
-                        i = Object.getOwnPropertyNames(e);
-                    for (r = 0; r < i.length; r++)
-                        (n = i[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                    (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-            return i;
-        })(e, ["games", "user", "widgetType"]),
-        { registerItemRef: s, manageFocusOnDelete: o } = (0, a.r)();
-    return (0, r.jsx)("ul", {
-        className: f.h,
+    d = n(622249),
+    c = n(742710),
+    u = n(192),
+    g = n(957382);
+function m(e) {
+    let { games: t, user: n, widgetType: l, ...a } = e,
+        { registerItemRef: s, manageFocusOnDelete: o } = (0, r.r)();
+    return (0, i.jsx)("ul", {
+        className: g.h,
         children: t.map((e, t) =>
-            (0, r.jsx)(
+            (0, i.jsx)(
                 "li",
                 {
-                    children: (0, r.jsx)(
-                        u.A,
-                        p(
-                            {
-                                index: t,
-                                user: n,
-                                game: e,
-                                widgetType: l,
-                                coverRef: s(e.applicationId),
-                                onRemoveGame: o,
-                            },
-                            i,
-                        ),
-                    ),
+                    children: (0, i.jsx)(c.A, {
+                        index: t,
+                        user: n,
+                        game: e,
+                        widgetType: l,
+                        coverRef: s(e.applicationId),
+                        onRemoveGame: o,
+                        ...a,
+                    }),
                 },
                 e.applicationId,
             ),
         ),
     });
 }
-
-function g(e) {
-    var t, n;
-    let { user: u, widgetType: f, disableInteraction: g, games: m } = e,
-        y = (0, l.bG)([i.default], () => i.default.getId() === u.id),
-        { getManageButtonForWidget: O } = (0, d.r)(),
-        j = O(f),
-        { expanded: x, setExpanded: h } = (0, o.B)(),
-        v = x ? m : m.slice(0, 2),
-        A = m.length > 2,
-        w = (0, r.jsxs)(r.Fragment, {
+function x(e) {
+    let { user: t, widgetType: n, disableInteraction: c, games: g } = e,
+        x = (0, l.bG)([a.default], () => a.default.getId() === t.id),
+        { getManageButtonForWidget: f } = (0, u.r)(),
+        h = f(n),
+        { expanded: p, setExpanded: _ } = (0, o.B)(),
+        A = p ? g : g.slice(0, 2),
+        I = g.length > 2,
+        j = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(
-                    b,
-                    ((t = p({}, e)),
-                    (n = n =
-                        {
-                            games: v,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                ),
-                A &&
-                    (0, r.jsx)(c.A, {
-                        expanded: x,
-                        onClick: () => h((e) => !e),
-                    }),
+                (0, i.jsx)(m, { ...e, games: A }),
+                I && (0, i.jsx)(d.A, { expanded: p, onClick: () => _((e) => !e) }),
             ],
         });
-    return y && !g
-        ? (0, r.jsxs)(r.Fragment, {
+    return x && !c
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(s.A, {
-                      widgetType: f,
-                      gameCount: m.length,
-                  }),
-                  (0, r.jsx)(a.B, {
-                      emptyListFallbackRef: j,
-                      children: w,
-                  }),
+                  (0, i.jsx)(s.A, { widgetType: n, gameCount: g.length }),
+                  (0, i.jsx)(r.B, { emptyListFallbackRef: h, children: j }),
               ],
           })
-        : w;
+        : j;
 }

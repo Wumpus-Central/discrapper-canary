@@ -11,9 +11,7 @@ e.exports = function (e) {
             meta: "%define %xdefine %+ %undef %defstr %deftok %assign %strcat %strlen %substr %rotate %elif %else %endif %if %ifmacro %ifctx %ifidn %ifidni %ifid %ifnum %ifstr %iftoken %ifempty %ifenv %error %warning %fatal %rep %endrep %include %push %pop %repl %pathsearch %depend %use %arg %stacksize %local %line %comment %endcomment .nolist __FILE__ __LINE__ __SECT__  __BITS__ __OUTPUT_FORMAT__ __DATE__ __TIME__ __DATE_NUM__ __TIME_NUM__ __UTC_DATE__ __UTC_TIME__ __UTC_DATE_NUM__ __UTC_TIME_NUM__  __PASS__ struc endstruc istruc at iend align alignb sectalign daz nodaz up down zero default option assume public bits use16 use32 use64 default section segment absolute extern global common cpu float __utf16__ __utf16le__ __utf16be__ __utf32__ __utf32le__ __utf32be__ __float8__ __float16__ __float32__ __float64__ __float80m__ __float80e__ __float128l__ __float128h__ __Infinity__ __QNaN__ __SNaN__ Inf NaN QNaN SNaN float8 float16 float32 float64 float80m float80e float128l float128h __FLOAT_DAZ__ __FLOAT_ROUND__ __FLOAT__",
         },
         contains: [
-            e.COMMENT(";", "$", {
-                relevance: 0,
-            }),
+            e.COMMENT(";", "$", { relevance: 0 }),
             {
                 className: "number",
                 variants: [
@@ -21,59 +19,33 @@ e.exports = function (e) {
                         begin: "\\b(?:([0-9][0-9_]*)?\\.[0-9_]*(?:[eE][+-]?[0-9_]+)?|(0[Xx])?[0-9][0-9_]*(\\.[0-9_]*)?(?:[pP](?:[+-]?[0-9_]+)?)?)\\b",
                         relevance: 0,
                     },
-                    {
-                        begin: "\\$[0-9][0-9A-Fa-f]*",
-                        relevance: 0,
-                    },
+                    { begin: "\\$[0-9][0-9A-Fa-f]*", relevance: 0 },
                     {
                         begin: "\\b(?:[0-9A-Fa-f][0-9A-Fa-f_]*[Hh]|[0-9][0-9_]*[DdTt]?|[0-7][0-7_]*[QqOo]|[0-1][0-1_]*[BbYy])\\b",
                     },
-                    {
-                        begin: "\\b(?:0[Xx][0-9A-Fa-f_]+|0[DdTt][0-9_]+|0[QqOo][0-7_]+|0[BbYy][0-1_]+)\\b",
-                    },
+                    { begin: "\\b(?:0[Xx][0-9A-Fa-f_]+|0[DdTt][0-9_]+|0[QqOo][0-7_]+|0[BbYy][0-1_]+)\\b" },
                 ],
             },
             e.QUOTE_STRING_MODE,
             {
                 className: "string",
                 variants: [
-                    {
-                        begin: "'",
-                        end: "[^\\\\]'",
-                    },
-                    {
-                        begin: "`",
-                        end: "[^\\\\]`",
-                    },
+                    { begin: "'", end: "[^\\\\]'" },
+                    { begin: "`", end: "[^\\\\]`" },
                 ],
                 relevance: 0,
             },
             {
                 className: "symbol",
                 variants: [
-                    {
-                        begin: "^\\s*[A-Za-z._?][A-Za-z0-9_$#@~.?]*(:|\\s+label)",
-                    },
-                    {
-                        begin: "^\\s*%%[A-Za-z0-9_$#@~.?]*:",
-                    },
+                    { begin: "^\\s*[A-Za-z._?][A-Za-z0-9_$#@~.?]*(:|\\s+label)" },
+                    { begin: "^\\s*%%[A-Za-z0-9_$#@~.?]*:" },
                 ],
                 relevance: 0,
             },
-            {
-                className: "subst",
-                begin: "%[0-9]+",
-                relevance: 0,
-            },
-            {
-                className: "subst",
-                begin: "%!S+",
-                relevance: 0,
-            },
-            {
-                className: "meta",
-                begin: /^\s*\.[\w_-]+/,
-            },
+            { className: "subst", begin: "%[0-9]+", relevance: 0 },
+            { className: "subst", begin: "%!S+", relevance: 0 },
+            { className: "meta", begin: /^\s*\.[\w_-]+/ },
         ],
     };
 };

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__4328f",
     wx: "header__4328f",

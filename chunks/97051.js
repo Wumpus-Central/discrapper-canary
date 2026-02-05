@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_a8e786",
     uZ: "playIcon_a8e786",

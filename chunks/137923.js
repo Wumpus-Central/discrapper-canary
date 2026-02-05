@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });
 var a = n(303527);
 let r = {
     ordinalNumber: (0, n(722023).A)({
@@ -17,21 +15,13 @@ let r = {
             wide: /^(före Kristus|före vår tid|efter Kristus|vår tid)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^f/i, /^[ev]/i],
-        },
+        parsePatterns: { any: [/^f/i, /^[ev]/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, a.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^q[1234]/i,
-            wide: /^[1234](:a|:e)? kvartalet/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](:a|:e)? kvartalet/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -58,15 +48,11 @@ let r = {
             wide: /^(söndag|måndag|tisdag|onsdag|torsdag|fredag|lördag)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i],
-        },
+        parsePatterns: { any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, a.A)({
-        matchPatterns: {
-            any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i,
-        },
+        matchPatterns: { any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(499221),
     i = n(870064),
     a = "object" == typeof StopIteration ? StopIteration : null;
@@ -9,16 +10,10 @@ e.exports = function (e) {
             var e = r.get(this, "[[Iterator]]"),
                 t = !!r.get(e, "[[Done]]");
             try {
-                return {
-                    done: t,
-                    value: t ? void 0 : e.next(),
-                };
+                return { done: t, value: t ? void 0 : e.next() };
             } catch (t) {
                 if ((r.set(e, "[[Done]]", !0), t !== a)) throw t;
-                return {
-                    done: !0,
-                    value: void 0,
-                };
+                return { done: !0, value: void 0 };
             }
         },
     };

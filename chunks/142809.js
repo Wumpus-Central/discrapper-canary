@@ -1,10 +1,8 @@
-n.d(t, {
-    Hd: () => s,
-});
+"use strict";
+n.d(t, { Hd: () => s });
 var r = n(550505);
 let i = n(627354).O,
     a = 80;
-
 function s(e, t = {}) {
     if (!e) return "<unknown>";
     try {
@@ -13,19 +11,18 @@ function s(e, t = {}) {
             i = 5,
             s = [],
             l = 0,
-            c = 0,
-            u = " > ",
-            d = u.length,
-            f = Array.isArray(t) ? t : t.keyAttrs,
-            p = (!Array.isArray(t) && t.maxStringLength) || a;
-        for (; r && l++ < i && ((n = o(r, f)), "html" !== n && (!(l > 1) || !(c + s.length * d + n.length >= p))); )
-            s.push(n), (c += n.length), (r = r.parentNode);
-        return s.reverse().join(u);
+            u = 0,
+            c = " > ",
+            d = c.length,
+            _ = Array.isArray(t) ? t : t.keyAttrs,
+            f = (!Array.isArray(t) && t.maxStringLength) || a;
+        for (; r && l++ < i && ((n = o(r, _)), "html" !== n && (!(l > 1) || !(u + s.length * d + n.length >= f))); )
+            s.push(n), (u += n.length), (r = r.parentNode);
+        return s.reverse().join(c);
     } catch (e) {
         return "<unknown>";
     }
 }
-
 function o(e, t) {
     let n = e,
         a = [];

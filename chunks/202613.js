@@ -1,178 +1,103 @@
+"use strict";
 n.d(t, {
-    A0: () => h,
-    Ay: () => f,
-    EE: () => b,
-    FQ: () => N,
-    F_: () => O,
-    Pw: () => R,
-    Qh: () => m,
-    SJ: () => _,
-    Tu: () => g,
-    UG: () => C,
-    Ux: () => y,
-    Xj: () => A,
-    YS: () => p,
-    _1: () => S,
-    am: () => v,
-    cg: () => T,
-    i6: () => I,
-    rJ: () => E,
+    A0: () => d,
+    Ay: () => l,
+    EE: () => h,
+    FQ: () => v,
+    F_: () => g,
+    Pw: () => C,
+    Qh: () => _,
+    SJ: () => c,
+    Tu: () => f,
+    UG: () => S,
+    Ux: () => m,
+    Xj: () => E,
+    YS: () => u,
+    _1: () => I,
+    am: () => A,
+    cg: () => y,
+    i6: () => T,
+    rJ: () => p,
 }),
-    n(938796),
-    n(65821);
+    n(938796);
 var r = n(665260),
     i = n(315069),
     a = n(596334),
     s = n(403362),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-class f extends i.A {
+class l extends i.A {
+    id;
+    type;
+    paymentGateway;
+    billingAddress;
+    country;
+    invalid;
+    isDefault;
+    flags;
+    email;
+    brand;
+    bank;
+    username;
     static createFromServer(e) {
-        var t;
-        let n = null != (t = e.billing_address) ? t : {},
-            r = {
+        let t = e.billing_address ?? {},
+            n = {
                 id: e.id,
                 type: e.type,
                 paymentGateway: e.payment_gateway,
                 invalid: e.invalid,
                 isDefault: e.default,
                 billingAddress: {
-                    name: n.name,
-                    line1: n.line_1,
-                    line2: n.line_2,
-                    city: n.city,
-                    postalCode: n.postal_code,
-                    state: n.state,
-                    country: n.country,
+                    name: t.name,
+                    line1: t.line_1,
+                    line2: t.line_2,
+                    city: t.city,
+                    postalCode: t.postal_code,
+                    state: t.state,
+                    country: t.country,
                 },
                 country: e.country,
                 flags: e.flags,
             };
         switch (e.type) {
             case o.hes.CARD:
-                return new p(
-                    d(c({}, r), {
-                        brand: e.brand,
-                        last4: e.last_4,
-                        expiresMonth: e.expires_month,
-                        expiresYear: e.expires_year,
-                    }),
-                );
+                return new u({
+                    ...n,
+                    brand: e.brand,
+                    last4: e.last_4,
+                    expiresMonth: e.expires_month,
+                    expiresYear: e.expires_year,
+                });
             case o.hes.PAYPAL:
-                return new _(
-                    d(c({}, r), {
-                        email: e.email,
-                    }),
-                );
+                return new c({ ...n, email: e.email });
             case o.hes.VENMO:
-                return new S(
-                    d(c({}, r), {
-                        username: e.username,
-                    }),
-                );
+                return new I({ ...n, username: e.username });
             case o.hes.SEPA_DEBIT:
             case o.hes.SOFORT:
-                return new h(
-                    d(c({}, r), {
-                        email: e.email,
-                    }),
-                );
+                return new d({ ...n, email: e.email });
             case o.hes.GIROPAY:
-                return new m(c({}, r));
+                return new _({ ...n });
             case o.hes.PRZELEWY24:
-                return new g(
-                    d(c({}, r), {
-                        email: e.email,
-                        bank: e.bank,
-                    }),
-                );
+                return new f({ ...n, email: e.email, bank: e.bank });
             case o.hes.EPS:
-                return new E(
-                    d(c({}, r), {
-                        bank: e.bank,
-                    }),
-                );
+                return new p({ ...n, bank: e.bank });
             case o.hes.PAYSAFE_CARD:
-                return new y(c({}, r));
+                return new m({ ...n });
             case o.hes.GCASH:
-                return new O(c({}, r));
+                return new g({ ...n });
             case o.hes.GRABPAY_MY:
-                return new A(c({}, r));
+                return new E({ ...n });
             case o.hes.MOMO_WALLET:
-                return new v(c({}, r));
+                return new A({ ...n });
             case o.hes.KAKAOPAY:
-                return new I(c({}, r));
+                return new T({ ...n });
             case o.hes.GOPAY_WALLET:
-                return new T(c({}, r));
+                return new y({ ...n });
             case o.hes.BANCONTACT:
-                return new C(c({}, r));
+                return new S({ ...n });
             case o.hes.IDEAL:
-                return new b(
-                    d(c({}, r), {
-                        bank: e.bank,
-                    }),
-                );
+                return new h({ ...n, bank: e.bank });
             case o.hes.CASH_APP:
-                return new N(
-                    d(c({}, r), {
-                        username: e.username,
-                    }),
-                );
+                return new v({ ...n, username: e.username });
             default:
                 (0, s.xb)(e);
         }
@@ -181,41 +106,53 @@ class f extends i.A {
         let t = e.type;
         switch (t) {
             case o.hes.CARD:
-                return new p(e);
+                return new u(e);
             case o.hes.PAYPAL:
-                return new _(e);
+                return new c(e);
             case o.hes.SOFORT:
             case o.hes.SEPA_DEBIT:
-                return new h(e);
+                return new d(e);
             case o.hes.GIROPAY:
-                return new m(e);
+                return new _(e);
             case o.hes.PRZELEWY24:
-                return new g(e);
+                return new f(e);
             case o.hes.PAYSAFE_CARD:
-                return new y(e);
+                return new m(e);
             case o.hes.GCASH:
-                return new O(e);
+                return new g(e);
             case o.hes.GRABPAY_MY:
-                return new A(e);
-            case o.hes.MOMO_WALLET:
-                return new v(e);
-            case o.hes.VENMO:
-                return new S(e);
-            case o.hes.KAKAOPAY:
-                return new I(e);
-            case o.hes.GOPAY_WALLET:
-                return new T(e);
-            case o.hes.BANCONTACT:
-                return new C(e);
-            case o.hes.EPS:
                 return new E(e);
+            case o.hes.MOMO_WALLET:
+                return new A(e);
+            case o.hes.VENMO:
+                return new I(e);
+            case o.hes.KAKAOPAY:
+                return new T(e);
+            case o.hes.GOPAY_WALLET:
+                return new y(e);
+            case o.hes.BANCONTACT:
+                return new S(e);
+            case o.hes.EPS:
+                return new p(e);
             case o.hes.IDEAL:
-                return new b(e);
+                return new h(e);
             case o.hes.CASH_APP:
-                return new N(e);
+                return new v(e);
             default:
                 (0, s.xb)(t);
         }
+    }
+    constructor(e) {
+        if ((super(), !Object.values(o.hes).includes(e.type)))
+            throw Error(`Unrecognized payment source type ${e.type}`);
+        (this.id = e.id),
+            (this.type = e.type),
+            (this.paymentGateway = e.paymentGateway),
+            (this.invalid = e.invalid ?? !1),
+            (this.billingAddress = e.billingAddress ?? {}),
+            (this.isDefault = e.isDefault),
+            (this.flags = e.flags ?? 0),
+            (this.country = e.country ?? "");
     }
     hasFlag(e) {
         return (0, r.Lt)(this.flags, e);
@@ -224,202 +161,131 @@ class f extends i.A {
         return null != this.country && "" !== this.country ? this.country : this.billingAddress.country;
     }
     canRedeemTrial() {
-        let { enabled: e } = a.A.getCurrentConfig({
-            location: "3a6d55_1",
-        });
+        let { enabled: e } = a.A.getCurrentConfig({ location: "3a6d55_1" });
         return this.paymentGateway === o.kM_.ADYEN && this.type === o.hes.CASH_APP ? e : !o.OLI.has(this.type);
     }
+}
+class u extends l {
+    brand;
+    last4;
+    expiresMonth;
+    expiresYear;
     constructor(e) {
-        var t, n, r, i;
-        if (
-            (super(),
-            l(this, "id", void 0),
-            l(this, "type", void 0),
-            l(this, "paymentGateway", void 0),
-            l(this, "billingAddress", void 0),
-            l(this, "country", void 0),
-            l(this, "invalid", void 0),
-            l(this, "isDefault", void 0),
-            l(this, "flags", void 0),
-            l(this, "email", void 0),
-            l(this, "brand", void 0),
-            l(this, "bank", void 0),
-            l(this, "username", void 0),
-            !Object.values(o.hes).includes(e.type))
-        )
-            throw Error("Unrecognized payment source type ".concat(e.type));
-        (this.id = e.id),
-            (this.type = e.type),
-            (this.paymentGateway = e.paymentGateway),
-            (this.invalid = null != (t = e.invalid) && t),
-            (this.billingAddress = null != (n = e.billingAddress) ? n : {}),
-            (this.isDefault = e.isDefault),
-            (this.flags = null != (r = e.flags) ? r : 0),
-            (this.country = null != (i = e.country) ? i : "");
+        if ((super(e), e.type !== o.hes.CARD))
+            throw Error(`Cannot instantiate CreditCardSourceRecord with type: ${e.type}, must be ${o.hes.CARD}`);
+        (this.brand = e.brand ?? ""),
+            (this.last4 = e.last4 ?? ""),
+            (this.expiresMonth = e.expiresMonth ?? 0),
+            (this.expiresYear = e.expiresYear ?? 0);
     }
 }
-class p extends f {
+class c extends l {
+    email;
     constructor(e) {
-        var t, n, r, i;
-        if (
-            (super(e),
-            l(this, "brand", void 0),
-            l(this, "last4", void 0),
-            l(this, "expiresMonth", void 0),
-            l(this, "expiresYear", void 0),
-            e.type !== o.hes.CARD)
-        )
-            throw Error(
-                "Cannot instantiate CreditCardSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.CARD),
-            );
-        (this.brand = null != (t = e.brand) ? t : ""),
-            (this.last4 = null != (n = e.last4) ? n : ""),
-            (this.expiresMonth = null != (r = e.expiresMonth) ? r : 0),
-            (this.expiresYear = null != (i = e.expiresYear) ? i : 0);
+        if ((super(e), e.type !== o.hes.PAYPAL))
+            throw Error(`Cannot instantiate PaypalSourceRecord with type: ${e.type}, must be ${o.hes.PAYPAL}`);
+        this.email = e.email || "";
     }
 }
-class _ extends f {
+class d extends l {
+    email;
     constructor(e) {
-        if ((super(e), l(this, "email", void 0), e.type !== o.hes.PAYPAL))
+        if ((super(e), e.type !== o.hes.SOFORT && e.type !== o.hes.SEPA_DEBIT))
             throw Error(
-                "Cannot instantiate PaypalSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.PAYPAL),
+                `Cannot instantiate SofortSourceRecord with type: ${e.type}, must be ${o.hes.SOFORT} or ` +
+                    o.hes.SEPA_DEBIT,
             );
         this.email = e.email || "";
     }
 }
-class h extends f {
-    constructor(e) {
-        if ((super(e), l(this, "email", void 0), e.type !== o.hes.SOFORT && e.type !== o.hes.SEPA_DEBIT))
-            throw Error(
-                "Cannot instantiate SofortSourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.SOFORT, " or ") + o.hes.SEPA_DEBIT,
-            );
-        this.email = e.email || "";
-    }
-}
-class m extends f {
+class _ extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.GIROPAY))
-            throw Error(
-                "Cannot instantiate GiropaySourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.GIROPAY),
-            );
+            throw Error(`Cannot instantiate GiropaySourceRecord with type: ${e.type}, must be ${o.hes.GIROPAY}`);
     }
 }
-class g extends f {
+class f extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.PRZELEWY24))
-            throw Error(
-                "Cannot instantiate Przelewy24SourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.PRZELEWY24),
-            );
+            throw Error(`Cannot instantiate Przelewy24SourceRecord with type: ${e.type}, must be ${o.hes.PRZELEWY24}`);
         (this.email = e.email || ""), (this.bank = e.bank);
     }
 }
-class E extends f {
+class p extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.EPS))
-            throw Error(
-                "Cannot instantiate EPSSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.EPS),
-            );
+            throw Error(`Cannot instantiate EPSSourceRecord with type: ${e.type}, must be ${o.hes.EPS}`);
         this.bank = e.bank;
     }
 }
-class b extends f {
+class h extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.IDEAL))
-            throw Error(
-                "Cannot instantiate IdealSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.IDEAL),
-            );
+            throw Error(`Cannot instantiate IdealSourceRecord with type: ${e.type}, must be ${o.hes.IDEAL}`);
         this.bank = e.bank;
     }
 }
-class y extends f {
+class m extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.PAYSAFE_CARD))
-            throw Error(
-                "Cannot instantiate PaysafeSourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.PAYSAFE_CARD),
-            );
+            throw Error(`Cannot instantiate PaysafeSourceRecord with type: ${e.type}, must be ${o.hes.PAYSAFE_CARD}`);
     }
 }
-class O extends f {
+class g extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.GCASH))
-            throw Error(
-                "Cannot instantiate GcashSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.GCASH),
-            );
+            throw Error(`Cannot instantiate GcashSourceRecord with type: ${e.type}, must be ${o.hes.GCASH}`);
     }
 }
-class A extends f {
+class E extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.GRABPAY_MY))
-            throw Error(
-                "Cannot instantiate GrabPayMySourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.GRABPAY_MY),
-            );
+            throw Error(`Cannot instantiate GrabPayMySourceRecord with type: ${e.type}, must be ${o.hes.GRABPAY_MY}`);
     }
 }
-class v extends f {
+class A extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.MOMO_WALLET))
-            throw Error(
-                "Cannot instantiate MomoWalletSourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.MOMO_WALLET),
-            );
+            throw Error(`Cannot instantiate MomoWalletSourceRecord with type: ${e.type}, must be ${o.hes.MOMO_WALLET}`);
     }
 }
-class S extends f {
+class I extends l {
+    username;
     constructor(e) {
-        if ((super(e), l(this, "username", void 0), e.type !== o.hes.VENMO))
-            throw Error(
-                "Cannot instantiate VenmoSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.VENMO),
-            );
+        if ((super(e), e.type !== o.hes.VENMO))
+            throw Error(`Cannot instantiate VenmoSourceRecord with type: ${e.type}, must be ${o.hes.VENMO}`);
         this.username = e.username || "";
     }
 }
-class I extends f {
+class T extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.KAKAOPAY))
-            throw Error(
-                "Cannot instantiate KaKaoPaySourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.KAKAOPAY),
-            );
+            throw Error(`Cannot instantiate KaKaoPaySourceRecord with type: ${e.type}, must be ${o.hes.KAKAOPAY}`);
     }
 }
-class T extends f {
+class y extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.GOPAY_WALLET))
             throw Error(
-                "Cannot instantiate GoPayWalletSourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.GOPAY_WALLET),
+                `Cannot instantiate GoPayWalletSourceRecord with type: ${e.type}, must be ${o.hes.GOPAY_WALLET}`,
             );
     }
 }
-class C extends f {
+class S extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.BANCONTACT))
-            throw Error(
-                "Cannot instantiate BancontactSourceRecord with type: "
-                    .concat(e.type, ", must be ")
-                    .concat(o.hes.BANCONTACT),
-            );
+            throw Error(`Cannot instantiate BancontactSourceRecord with type: ${e.type}, must be ${o.hes.BANCONTACT}`);
     }
 }
-class N extends f {
+class v extends l {
+    username;
     constructor(e) {
-        if ((super(e), l(this, "username", void 0), e.type !== o.hes.CASH_APP))
-            throw Error("Cannot instantiate Cashapp with type: ".concat(e.type, ", must be ").concat(o.hes.CASH_APP));
+        if ((super(e), e.type !== o.hes.CASH_APP))
+            throw Error(`Cannot instantiate Cashapp with type: ${e.type}, must be ${o.hes.CASH_APP}`);
         this.username = e.username || "";
     }
 }
-class R extends f {
+class C extends l {
     constructor(e) {
         if (
             ((e.id = ""),
@@ -433,8 +299,6 @@ class R extends f {
             super(e),
             e.type !== o.hes.APPLE)
         )
-            throw Error(
-                "Cannot instantiate AppleSourceRecord with type: ".concat(e.type, ", must be ").concat(o.hes.APPLE),
-            );
+            throw Error(`Cannot instantiate AppleSourceRecord with type: ${e.type}, must be ${o.hes.APPLE}`);
     }
 }

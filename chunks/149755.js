@@ -1,7 +1,4 @@
-a.r(t),
-    a.d(t, {
-        default: () => d,
-    });
+a.r(t), a.d(t, { default: () => d });
 var s = a(627968),
     p = a(64700),
     r = a(156828),
@@ -15,8 +12,8 @@ let n = p.lazy(() =>
                 a.e("3795"),
                 a.e("28936"),
                 a.e("40396"),
-                a.e("13088"),
                 a.e("48330"),
+                a.e("13088"),
                 a.e("92414"),
                 a.e("94857"),
                 a.e("7034"),
@@ -34,10 +31,6 @@ let n = p.lazy(() =>
         webpackId: 122204,
     }),
 );
-
 function d() {
-    return (0, s.jsx)(c.A, {
-        path: i.BVt.GLOBAL_DISCOVERY_APPS,
-        component: n,
-    });
+    return (0, s.jsx)(c.A, { path: i.BVt.GLOBAL_DISCOVERY_APPS, component: n });
 }

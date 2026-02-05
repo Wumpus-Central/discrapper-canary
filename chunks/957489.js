@@ -1,158 +1,129 @@
-n.d(t, {
-    F: () => v,
-});
-var l = n(627968),
-    r = n(503698),
-    i = n.n(r),
-    s = n(397927),
-    a = n(234419),
-    o = n(612669),
-    u = n(672525),
-    c = n(927578),
-    d = n(937008),
-    p = n(156312),
-    m = n(166532),
-    f = n(800471),
-    g = n(169801),
-    j = n(788868),
-    y = n(985018),
-    h = n(113437);
-
-function v(e) {
-    let { handleStepChange: t, handleClose: n, referralTrialOfferId: r } = e,
+t.d(n, { F: () => h });
+var i = t(627968),
+    l = t(503698),
+    r = t.n(l),
+    s = t(397927),
+    a = t(234419),
+    o = t(612669),
+    u = t(672525),
+    d = t(927578),
+    c = t(937008),
+    p = t(156312),
+    m = t(166532),
+    E = t(800471),
+    g = t(169801),
+    _ = t(788868),
+    x = t(985018),
+    T = t(113437);
+function h(e) {
+    let { handleStepChange: n, handleClose: t, referralTrialOfferId: l } = e,
         {
-            setSelectedSkuId: i,
+            setSelectedSkuId: r,
             activeSubscription: s,
             startedPaymentFlowWithPaymentSourcesRef: o,
             setSelectedPlanId: u,
-            priceOptions: y,
-            defaultPlanId: h,
-            hasPaymentSources: v,
+            priceOptions: x,
+            defaultPlanId: T,
+            hasPaymentSources: h,
         } = (0, p.P5)(),
-        { isGift: O, claimableRewards: x } = (0, d.Pv)(),
-        P = O && null != x && x.length > 0,
-        S = (0, a.V)(r);
-    return (0, l.jsx)(b, {
+        { isGift: A, claimableRewards: S } = (0, c.Pv)(),
+        I = A && null != S && S.length > 0,
+        j = (0, a.V)(l);
+    return (0, i.jsx)(P, {
         selectSku: (e) =>
             (function (e) {
                 let {
-                    activeSubscription: t,
-                    newSkuId: n,
-                    setSelectedSkuId: l,
-                    handleStepChange: r,
-                    isGift: i,
+                    activeSubscription: n,
+                    newSkuId: t,
+                    setSelectedSkuId: i,
+                    handleStepChange: l,
+                    isGift: r,
                     userTrialOffer: s,
                     setSelectedPlanId: a,
                     startedPaymentFlowWithPaymentSources: o,
                     defaultPlanId: u,
                 } = e;
-                l(n);
-                let d = m.pn.PLAN_SELECT,
-                    p = (0, c.aZ)(t);
-                (p !== j.pe.TIER_1 && p !== j.pe.TIER_2) || n !== j.pe.TIER_0 || i || (d = m.pn.WHAT_YOU_LOSE);
-                let y = (0, g.t)({
-                        userTrialOffer: s,
-                        isGift: i,
-                        skuId: n,
-                    }),
-                    h = (0, f.vT)({
-                        isTrial: y,
-                        isGift: i,
-                        selectedSkuId: n,
-                        startedPaymentFlowWithPaymentSources: o,
-                    });
-                d !== m.pn.WHAT_YOU_LOSE && h && ((d = m.pn.REVIEW), a((0, f.xT)(n, t, u))),
-                    r(d, {
-                        analyticsDataOverride: {
-                            sku_id: n,
-                        },
-                    });
+                i(t);
+                let c = m.pn.PLAN_SELECT,
+                    p = (0, d.aZ)(n);
+                (p !== _.pe.TIER_1 && p !== _.pe.TIER_2) || t !== _.pe.TIER_0 || r || (c = m.pn.WHAT_YOU_LOSE);
+                let x = (0, g.t)({ userTrialOffer: s, isGift: r, skuId: t }),
+                    T = (0, E.vT)({ isTrial: x, isGift: r, selectedSkuId: t, startedPaymentFlowWithPaymentSources: o });
+                c !== m.pn.WHAT_YOU_LOSE && T && ((c = m.pn.REVIEW), a((0, E.xT)(t, n, u))),
+                    l(c, { analyticsDataOverride: { sku_id: t } });
             })({
                 activeSubscription: s,
                 newSkuId: e,
-                setSelectedSkuId: i,
-                handleStepChange: t,
-                isGift: O,
-                userTrialOffer: S,
+                setSelectedSkuId: r,
+                handleStepChange: n,
+                isGift: A,
+                userTrialOffer: j,
                 startedPaymentFlowWithPaymentSources: o.current,
                 setSelectedPlanId: u,
-                defaultPlanId: h,
+                defaultPlanId: T,
             }),
         onSelectPremiumGroup: () =>
             (function (e) {
-                let { setSelectedPlanId: t, handleStepChange: n, hasPaymentSources: l, setSelectedSkuId: r } = e;
-                r((0, c.mH)(j.pe.TIER_2)),
-                    t(j.gD.PREMIUM_GROUP_MONTH),
-                    n(l ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, {
-                        analyticsDataOverride: {
-                            sku_id: j.pe.TIER_2,
-                        },
-                    });
-            })({
-                setSelectedPlanId: u,
-                handleStepChange: t,
-                hasPaymentSources: v,
-                setSelectedSkuId: i,
-            }),
-        onClose: n,
-        isGift: O,
-        priceOptions: y,
-        showPromotionalGiftBanner: P,
+                let { setSelectedPlanId: n, handleStepChange: t, hasPaymentSources: i, setSelectedSkuId: l } = e;
+                l((0, d.mH)(_.pe.TIER_2)),
+                    n(_.gD.PREMIUM_GROUP_MONTH),
+                    t(i ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: _.pe.TIER_2 } });
+            })({ setSelectedPlanId: u, handleStepChange: n, hasPaymentSources: h, setSelectedSkuId: r }),
+        onClose: t,
+        isGift: A,
+        priceOptions: x,
+        showPromotionalGiftBanner: I,
     });
 }
-
-function b(e) {
+function P(e) {
     let {
-            selectSku: t,
-            onClose: n,
-            isGift: r,
+            selectSku: n,
+            onClose: t,
+            isGift: l,
             priceOptions: a,
-            showPromotionalGiftBanner: d,
+            showPromotionalGiftBanner: c,
             onSelectPremiumGroup: p,
         } = e,
-        m = (0, o.PA)() && !r;
-    return (0, l.jsxs)(l.Fragment, {
+        m = (0, o.PA)() && !l;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)(s.rQ0, {
+            (0, i.jsx)(s.rQ0, {
                 "data-migration-pending": !0,
-                className: i()(h.wC, h.LG),
+                className: r()(T.wC, T.LG),
                 separator: !1,
-                children: (0, l.jsxs)(s.BJc, {
+                children: (0, i.jsxs)(s.BJc, {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        (0, l.jsx)(s.Heading, {
-                            variant: "heading-lg/bold",
-                            children: y.intl.string(y.t["r+SebU"]),
-                        }),
-                        (0, l.jsx)(s.s_y, {
+                        (0, i.jsx)(s.Heading, { variant: "heading-lg/bold", children: x.intl.string(x.t["r+SebU"]) }),
+                        (0, i.jsx)(s.s_y, {
                             "data-migration-pending": !0,
-                            className: h.VN,
-                            innerClassName: h.to,
-                            onClick: n,
+                            className: T.VN,
+                            innerClassName: T.to,
+                            onClick: t,
                         }),
                     ],
                 }),
             }),
             m
-                ? (0, l.jsx)(s.$mQ, {
+                ? (0, i.jsx)(s.$mQ, {
                       "data-migration-pending": !0,
-                      className: h.eE,
-                      children: (0, l.jsx)(u.yS, {
-                          onSelectSku: (e) => t((0, c.mH)(e)),
+                      className: T.eE,
+                      children: (0, i.jsx)(u.yS, {
+                          onSelectSku: (e) => n((0, d.mH)(e)),
                           onSelectPremiumGroup: p,
                           priceOptions: a,
-                          showPromotionalGiftBanner: d,
+                          showPromotionalGiftBanner: c,
                       }),
                   })
-                : (0, l.jsx)(s.$mQ, {
+                : (0, i.jsx)(s.$mQ, {
                       "data-migration-pending": !0,
-                      className: i()(h.a2, h.dt),
-                      children: (0, l.jsx)(u.Ay, {
-                          onSelectSku: (e) => t((0, c.mH)(e)),
-                          isGift: r,
+                      className: r()(T.a2, T.dt),
+                      children: (0, i.jsx)(u.Ay, {
+                          onSelectSku: (e) => n((0, d.mH)(e)),
+                          isGift: l,
                           priceOptions: a,
-                          showPromotionalGiftBanner: d,
+                          showPromotionalGiftBanner: c,
                       }),
                   }),
         ],

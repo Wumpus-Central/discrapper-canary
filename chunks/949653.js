@@ -1,77 +1,62 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => _ });
+var s = n(627968);
 n(64700);
-var s = n(397927),
-    i = n(573648),
-    o = n(414121),
+var r = n(397927),
+    o = n(573648),
+    i = n(414121),
     a = n(975571),
     c = n(236863),
     l = n(652215),
     d = n(544105),
-    f = n(985018),
-    b = n(552762),
-    u = n(326513);
-
-function p() {
-    return (0, r.jsxs)("div", {
-        className: b.rV,
+    p = n(985018),
+    u = n(552762),
+    b = n(326513);
+function f() {
+    return (0, s.jsxs)("div", {
+        className: u.rV,
         children: [
-            (0, r.jsxs)("div", {
-                className: b.bF,
+            (0, s.jsxs)("div", {
+                className: u.bF,
                 children: [
-                    (0, r.jsxs)(s.Heading, {
-                        className: b.n5,
+                    (0, s.jsxs)(r.Heading, {
+                        className: u.n5,
                         variant: "text-lg/semibold",
                         children: [
-                            (0, r.jsx)("div", {
-                                className: b.YD,
-                                children: (0, r.jsx)("img", {
-                                    src: i.A.get(l.fg2.XBOX).icon.whiteSVG,
-                                    alt: "",
-                                }),
+                            (0, s.jsx)("div", {
+                                className: u.YD,
+                                children: (0, s.jsx)("img", { src: o.A.get(l.fg2.XBOX).icon.whiteSVG, alt: "" }),
                             }),
-                            f.intl.string(f.t["12Kx2v"]),
+                            p.intl.string(p.t["12Kx2v"]),
                         ],
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, s.jsx)(r.Text, {
                         tag: "p",
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: f.intl.string(f.t.M5yEcb),
+                        children: p.intl.string(p.t.M5yEcb),
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, s.jsx)(r.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: (0, r.jsx)(s.MzZ, {
+                        children: (0, s.jsx)(r.MzZ, {
                             href: a.A.getArticleURL(l.MVz.XBOX_CONNECTION),
-                            children: f.intl.string(f.t.hvVgAZ),
+                            children: p.intl.string(p.t.hvVgAZ),
                         }),
                     }),
                 ],
             }),
-            (0, r.jsx)(o.Ay, {
-                className: b.C9,
-                text: d.EY,
-                size: 90,
-            }),
+            (0, s.jsx)(i.Ay, { className: u.C9, text: d.EY, size: 90 }),
         ],
     });
 }
-
-function g(e) {
+function _(e) {
     let { onClose: t } = e;
-    return (0, r.jsx)(c.b, {
-        img: (0, r.jsx)("img", {
-            src: u.A,
-            width: "124",
-            height: "160",
-            alt: "",
-        }),
-        title: f.intl.string(f.t["7QsHmh"]),
-        body: f.intl.string(f.t.byYNPX),
-        content: (0, r.jsx)(p, {}),
+    return (0, s.jsx)(c.b, {
+        img: (0, s.jsx)("img", { src: b.A, width: "124", height: "160", alt: "" }),
+        title: p.intl.string(p.t["7QsHmh"]),
+        body: p.intl.string(p.t.byYNPX),
+        content: (0, s.jsx)(f, {}),
         onClose: t,
     });
 }

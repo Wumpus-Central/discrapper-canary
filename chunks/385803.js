@@ -1,8 +1,5 @@
-n.d(t, {
-    Jm: () => d,
-    ag: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Jm: () => d, ag: () => _ });
 var r = n(735438),
     i = n(873298),
     a = n(739031),
@@ -14,18 +11,9 @@ let l = [
             id: i.ju.MINT_APPLE,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_MINT_APPLE_1",
-                    stop: 6.15,
-                },
-                {
-                    token: "BG_GRADIENT_MINT_APPLE_2",
-                    stop: 48.7,
-                },
-                {
-                    token: "BG_GRADIENT_MINT_APPLE_3",
-                    stop: 93.07,
-                },
+                { token: "BG_GRADIENT_MINT_APPLE_1", stop: 6.15 },
+                { token: "BG_GRADIENT_MINT_APPLE_2", stop: 48.7 },
+                { token: "BG_GRADIENT_MINT_APPLE_3", stop: 93.07 },
             ],
             angle: 180,
             getName: () => o.intl.string(o.t.kCdS4d),
@@ -36,14 +24,8 @@ let l = [
             id: i.ju.CITRUS_SHERBERT,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_CITRUS_SHERBERT_1",
-                    stop: 31.1,
-                },
-                {
-                    token: "BG_GRADIENT_CITRUS_SHERBERT_2",
-                    stop: 67.09,
-                },
+                { token: "BG_GRADIENT_CITRUS_SHERBERT_1", stop: 31.1 },
+                { token: "BG_GRADIENT_CITRUS_SHERBERT_2", stop: 67.09 },
             ],
             angle: 180,
             getName: () => o.intl.string(o.t.S4UnEz),
@@ -54,22 +36,10 @@ let l = [
             id: i.ju.RETRO_RAINCLOUD,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_RETRO_RAINCLOUD_1",
-                    stop: 5.64,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_RAINCLOUD_2",
-                    stop: 26.38,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_RAINCLOUD_2",
-                    stop: 49.92,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_RAINCLOUD_1",
-                    stop: 73.12,
-                },
+                { token: "BG_GRADIENT_RETRO_RAINCLOUD_1", stop: 5.64 },
+                { token: "BG_GRADIENT_RETRO_RAINCLOUD_2", stop: 26.38 },
+                { token: "BG_GRADIENT_RETRO_RAINCLOUD_2", stop: 49.92 },
+                { token: "BG_GRADIENT_RETRO_RAINCLOUD_1", stop: 73.12 },
             ],
             angle: 148.71,
             getName: () => o.intl.string(o.t["48xnKc"]),
@@ -80,18 +50,9 @@ let l = [
             id: i.ju.HANAMI,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_HANAMI_1",
-                    stop: 3.56,
-                },
-                {
-                    token: "BG_GRADIENT_HANAMI_2",
-                    stop: 35.49,
-                },
-                {
-                    token: "BG_GRADIENT_HANAMI_3",
-                    stop: 68.78,
-                },
+                { token: "BG_GRADIENT_HANAMI_1", stop: 3.56 },
+                { token: "BG_GRADIENT_HANAMI_2", stop: 35.49 },
+                { token: "BG_GRADIENT_HANAMI_3", stop: 68.78 },
             ],
             angle: 38.08,
             getName: () => o.intl.string(o.t.G4HsBJ),
@@ -102,18 +63,9 @@ let l = [
             id: i.ju.SUNRISE,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_SUNRISE_1",
-                    stop: 8.62,
-                },
-                {
-                    token: "BG_GRADIENT_SUNRISE_2",
-                    stop: 48.07,
-                },
-                {
-                    token: "BG_GRADIENT_SUNRISE_3",
-                    stop: 76.04,
-                },
+                { token: "BG_GRADIENT_SUNRISE_1", stop: 8.62 },
+                { token: "BG_GRADIENT_SUNRISE_2", stop: 48.07 },
+                { token: "BG_GRADIENT_SUNRISE_3", stop: 76.04 },
             ],
             angle: 154.19,
             getName: () => o.intl.string(o.t.NAt885),
@@ -124,14 +76,8 @@ let l = [
             id: i.ju.COTTON_CANDY,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_COTTON_CANDY_1",
-                    stop: 8.5,
-                },
-                {
-                    token: "BG_GRADIENT_COTTON_CANDY_2",
-                    stop: 94.28,
-                },
+                { token: "BG_GRADIENT_COTTON_CANDY_1", stop: 8.5 },
+                { token: "BG_GRADIENT_COTTON_CANDY_2", stop: 94.28 },
             ],
             angle: 180.14,
             getName: () => o.intl.string(o.t.godtzA),
@@ -142,22 +88,10 @@ let l = [
             id: i.ju.LOFI_VIBES,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_LOFI_VIBES_1",
-                    stop: 7.08,
-                },
-                {
-                    token: "BG_GRADIENT_LOFI_VIBES_2",
-                    stop: 34.94,
-                },
-                {
-                    token: "BG_GRADIENT_LOFI_VIBES_3",
-                    stop: 65.12,
-                },
-                {
-                    token: "BG_GRADIENT_LOFI_VIBES_4",
-                    stop: 96.23,
-                },
+                { token: "BG_GRADIENT_LOFI_VIBES_1", stop: 7.08 },
+                { token: "BG_GRADIENT_LOFI_VIBES_2", stop: 34.94 },
+                { token: "BG_GRADIENT_LOFI_VIBES_3", stop: 65.12 },
+                { token: "BG_GRADIENT_LOFI_VIBES_4", stop: 96.23 },
             ],
             angle: 179.52,
             getName: () => o.intl.string(o.t.hlS2xq),
@@ -168,39 +102,24 @@ let l = [
             id: i.ju.DESERT_KHAKI,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_DESERT_KHAKI_1",
-                    stop: 12.92,
-                },
-                {
-                    token: "BG_GRADIENT_DESERT_KHAKI_2",
-                    stop: 32.92,
-                },
-                {
-                    token: "BG_GRADIENT_DESERT_KHAKI_3",
-                    stop: 52.11,
-                },
+                { token: "BG_GRADIENT_DESERT_KHAKI_1", stop: 12.92 },
+                { token: "BG_GRADIENT_DESERT_KHAKI_2", stop: 32.92 },
+                { token: "BG_GRADIENT_DESERT_KHAKI_3", stop: 52.11 },
             ],
             angle: 38.99,
             getName: () => o.intl.string(o.t.abMn9y),
             midpointPercentage: 50,
         },
     ],
-    c = s.NJ.DARK,
-    u = [
+    u = s.NJ.DARK,
+    c = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.SUNSET,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_SUNSET_1",
-                    stop: 27.57,
-                },
-                {
-                    token: "BG_GRADIENT_SUNSET_2",
-                    stop: 71.25,
-                },
+                { token: "BG_GRADIENT_SUNSET_1", stop: 27.57 },
+                { token: "BG_GRADIENT_SUNSET_2", stop: 71.25 },
             ],
             angle: 141.68,
             getName: () => o.intl.string(o.t.JKDra4),
@@ -209,28 +128,13 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.CHROMA_GLOW,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_CHROMA_GLOW_1",
-                    stop: 3.94,
-                },
-                {
-                    token: "BG_GRADIENT_CHROMA_GLOW_2",
-                    stop: 26.1,
-                },
-                {
-                    token: "BG_GRADIENT_CHROMA_GLOW_3",
-                    stop: 39.82,
-                },
-                {
-                    token: "BG_GRADIENT_CHROMA_GLOW_4",
-                    stop: 56.89,
-                },
-                {
-                    token: "BG_GRADIENT_CHROMA_GLOW_5",
-                    stop: 76.45,
-                },
+                { token: "BG_GRADIENT_CHROMA_GLOW_1", stop: 3.94 },
+                { token: "BG_GRADIENT_CHROMA_GLOW_2", stop: 26.1 },
+                { token: "BG_GRADIENT_CHROMA_GLOW_3", stop: 39.82 },
+                { token: "BG_GRADIENT_CHROMA_GLOW_4", stop: 56.89 },
+                { token: "BG_GRADIENT_CHROMA_GLOW_5", stop: 76.45 },
             ],
             angle: 128.92,
             getName: () => o.intl.string(o.t.kwc8Us),
@@ -239,28 +143,13 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.FOREST,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_FOREST_1",
-                    stop: 11.2,
-                },
-                {
-                    token: "BG_GRADIENT_FOREST_2",
-                    stop: 29.93,
-                },
-                {
-                    token: "BG_GRADIENT_FOREST_3",
-                    stop: 48.64,
-                },
-                {
-                    token: "BG_GRADIENT_FOREST_4",
-                    stop: 67.85,
-                },
-                {
-                    token: "BG_GRADIENT_FOREST_5",
-                    stop: 83.54,
-                },
+                { token: "BG_GRADIENT_FOREST_1", stop: 11.2 },
+                { token: "BG_GRADIENT_FOREST_2", stop: 29.93 },
+                { token: "BG_GRADIENT_FOREST_3", stop: 48.64 },
+                { token: "BG_GRADIENT_FOREST_4", stop: 67.85 },
+                { token: "BG_GRADIENT_FOREST_5", stop: 83.54 },
             ],
             angle: 162.27,
             getName: () => o.intl.string(o.t["TeA/j8"]),
@@ -269,16 +158,10 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.CRIMSON_MOON,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_CRIMSON_MOON_1",
-                    stop: 16.17,
-                },
-                {
-                    token: "BG_GRADIENT_CRIMSON_MOON_2",
-                    stop: 72,
-                },
+                { token: "BG_GRADIENT_CRIMSON_MOON_1", stop: 16.17 },
+                { token: "BG_GRADIENT_CRIMSON_MOON_2", stop: 72 },
             ],
             angle: 64.92,
             getName: () => o.intl.string(o.t.blIucj),
@@ -287,16 +170,10 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.MIDNIGHT_BLURPLE,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_MIDNIGHT_BLURPLE_1",
-                    stop: 11.21,
-                },
-                {
-                    token: "BG_GRADIENT_MIDNIGHT_BLURPLE_2",
-                    stop: 61.92,
-                },
+                { token: "BG_GRADIENT_MIDNIGHT_BLURPLE_1", stop: 11.21 },
+                { token: "BG_GRADIENT_MIDNIGHT_BLURPLE_2", stop: 61.92 },
             ],
             angle: 48.17,
             getName: () => o.intl.string(o.t.O1yOXG),
@@ -305,16 +182,10 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.MARS,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_MARS_1",
-                    stop: 14.61,
-                },
-                {
-                    token: "BG_GRADIENT_MARS_2",
-                    stop: 74.62,
-                },
+                { token: "BG_GRADIENT_MARS_1", stop: 14.61 },
+                { token: "BG_GRADIENT_MARS_2", stop: 74.62 },
             ],
             angle: 170.82,
             getName: () => o.intl.string(o.t["1swi9s"]),
@@ -323,16 +194,10 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.DUSK,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_DUSK_1",
-                    stop: 12.84,
-                },
-                {
-                    token: "BG_GRADIENT_DUSK_2",
-                    stop: 85.99,
-                },
+                { token: "BG_GRADIENT_DUSK_1", stop: 12.84 },
+                { token: "BG_GRADIENT_DUSK_2", stop: 85.99 },
             ],
             angle: 180,
             getName: () => o.intl.string(o.t.So2Wuh),
@@ -341,20 +206,11 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.UNDER_THE_SEA,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_UNDER_THE_SEA_1",
-                    stop: 1.91,
-                },
-                {
-                    token: "BG_GRADIENT_UNDER_THE_SEA_2",
-                    stop: 48.99,
-                },
-                {
-                    token: "BG_GRADIENT_UNDER_THE_SEA_3",
-                    stop: 96.35,
-                },
+                { token: "BG_GRADIENT_UNDER_THE_SEA_1", stop: 1.91 },
+                { token: "BG_GRADIENT_UNDER_THE_SEA_2", stop: 48.99 },
+                { token: "BG_GRADIENT_UNDER_THE_SEA_3", stop: 96.35 },
             ],
             angle: 179.14,
             getName: () => o.intl.string(o.t.a22o48),
@@ -363,24 +219,12 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.RETRO_STORM,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_RETRO_STORM_1",
-                    stop: 5.64,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_STORM_2",
-                    stop: 26.38,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_STORM_2",
-                    stop: 49.92,
-                },
-                {
-                    token: "BG_GRADIENT_RETRO_STORM_1",
-                    stop: 73.12,
-                },
+                { token: "BG_GRADIENT_RETRO_STORM_1", stop: 5.64 },
+                { token: "BG_GRADIENT_RETRO_STORM_2", stop: 26.38 },
+                { token: "BG_GRADIENT_RETRO_STORM_2", stop: 49.92 },
+                { token: "BG_GRADIENT_RETRO_STORM_1", stop: 73.12 },
             ],
             angle: 148.71,
             getName: () => o.intl.string(o.t.Bf294R),
@@ -389,20 +233,11 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.NEON_NIGHTS,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_NEON_NIGHTS_1",
-                    stop: 0,
-                },
-                {
-                    token: "BG_GRADIENT_NEON_NIGHTS_2",
-                    stop: 50,
-                },
-                {
-                    token: "BG_GRADIENT_NEON_NIGHTS_3",
-                    stop: 100,
-                },
+                { token: "BG_GRADIENT_NEON_NIGHTS_1", stop: 0 },
+                { token: "BG_GRADIENT_NEON_NIGHTS_2", stop: 50 },
+                { token: "BG_GRADIENT_NEON_NIGHTS_3", stop: 100 },
             ],
             angle: 180,
             getName: () => o.intl.string(o.t["p+XCta"]),
@@ -411,20 +246,11 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.STRAWBERRY_LEMONADE,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_STRAWBERRY_LEMONADE_1",
-                    stop: 18.79,
-                },
-                {
-                    token: "BG_GRADIENT_STRAWBERRY_LEMONADE_2",
-                    stop: 49.76,
-                },
-                {
-                    token: "BG_GRADIENT_STRAWBERRY_LEMONADE_3",
-                    stop: 80.72,
-                },
+                { token: "BG_GRADIENT_STRAWBERRY_LEMONADE_1", stop: 18.79 },
+                { token: "BG_GRADIENT_STRAWBERRY_LEMONADE_2", stop: 49.76 },
+                { token: "BG_GRADIENT_STRAWBERRY_LEMONADE_3", stop: 80.72 },
             ],
             angle: 161.03,
             getName: () => o.intl.string(o.t["d5Ar+j"]),
@@ -433,28 +259,13 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.AURORA,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_AURORA_1",
-                    stop: 10.39,
-                },
-                {
-                    token: "BG_GRADIENT_AURORA_2",
-                    stop: 26.87,
-                },
-                {
-                    token: "BG_GRADIENT_AURORA_3",
-                    stop: 48.31,
-                },
-                {
-                    token: "BG_GRADIENT_AURORA_4",
-                    stop: 64.98,
-                },
-                {
-                    token: "BG_GRADIENT_AURORA_5",
-                    stop: 92.5,
-                },
+                { token: "BG_GRADIENT_AURORA_1", stop: 10.39 },
+                { token: "BG_GRADIENT_AURORA_2", stop: 26.87 },
+                { token: "BG_GRADIENT_AURORA_3", stop: 48.31 },
+                { token: "BG_GRADIENT_AURORA_4", stop: 64.98 },
+                { token: "BG_GRADIENT_AURORA_5", stop: 92.5 },
             ],
             angle: 239.16,
             getName: () => o.intl.string(o.t.Je1FWC),
@@ -463,16 +274,10 @@ let l = [
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.SEPIA,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_SEPIA_1",
-                    stop: 14.14,
-                },
-                {
-                    token: "BG_GRADIENT_SEPIA_2",
-                    stop: 60.35,
-                },
+                { token: "BG_GRADIENT_SEPIA_1", stop: 14.14 },
+                { token: "BG_GRADIENT_SEPIA_2", stop: 60.35 },
             ],
             angle: 69.98,
             getName: () => o.intl.string(o.t["Z+Un40"]),
@@ -481,20 +286,14 @@ let l = [
     ],
     d = [
         ...l,
-        ...u,
+        ...c,
         {
             type: a.F.BACKGROUND_GRADIENT_PRESET,
             id: i.ju.BLURPLE_TWILIGHT,
-            theme: c,
+            theme: u,
             colors: [
-                {
-                    token: "BG_GRADIENT_BLURPLE_TWILIGHT_1",
-                    stop: 11.18,
-                },
-                {
-                    token: "BG_GRADIENT_BLURPLE_TWILIGHT_2",
-                    stop: 64.54,
-                },
+                { token: "BG_GRADIENT_BLURPLE_TWILIGHT_1", stop: 11.18 },
+                { token: "BG_GRADIENT_BLURPLE_TWILIGHT_2", stop: 64.54 },
             ],
             angle: 47.61,
             getName: () => o.intl.string(o.t.Mfoe3p),
@@ -505,25 +304,19 @@ let l = [
             id: i.ju.EASTER_EGG,
             theme: s.NJ.LIGHT,
             colors: [
-                {
-                    token: "BG_GRADIENT_EASTER_EGG_1",
-                    stop: 4,
-                },
-                {
-                    token: "BG_GRADIENT_EASTER_EGG_2",
-                    stop: 96,
-                },
+                { token: "BG_GRADIENT_EASTER_EGG_1", stop: 4 },
+                { token: "BG_GRADIENT_EASTER_EGG_2", stop: 96 },
             ],
             angle: 180,
             getName: () => o.intl.string(o.t.mFinbb),
             midpointPercentage: 50,
         },
     ];
-[...u, ...l],
+[...c, ...l],
     a.F.STANDARD_BACKGROUND_THEME,
     a.F.STANDARD_BACKGROUND_THEME,
     s.NJ.LIGHT,
     a.F.STANDARD_BACKGROUND_THEME,
     s.NJ.MIDNIGHT,
     a.F.STANDARD_BACKGROUND_THEME;
-let f = (0, r.keyBy)(d, "id");
+let _ = (0, r.keyBy)(d, "id");

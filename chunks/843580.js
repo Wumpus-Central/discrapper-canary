@@ -1,57 +1,49 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(228524),
-    n(896048);
-var l = n(627968),
-    i = n(64700),
-    s = n(158954),
-    a = n(397927),
-    r = n(181658),
-    c = n(946116),
-    d = n(985018),
-    o = n(577114);
-
+l.d(t, { A: () => u });
+var i = l(627968),
+    s = l(64700),
+    a = l(158954),
+    n = l(397927),
+    r = l(181658),
+    c = l(946116),
+    d = l(985018),
+    o = l(577114);
 function u(e) {
     let {
             directoryChannelId: t,
-            description: n,
+            description: l,
             onDescriptionChange: u,
             categoryId: x,
             onCategoryIdChange: m,
-            onSubmit: g,
-            onBack: C,
+            onSubmit: C,
+            onBack: g,
         } = e,
-        [j, b] = i.useState(!1),
-        [f, h] = i.useState(null),
-        p = async () => {
-            b(!0);
+        [h, j] = s.useState(!1),
+        [L, _] = s.useState(null),
+        f = async () => {
+            j(!0);
             try {
-                await g();
+                await C();
             } catch (e) {
-                h(new r.A(e));
+                _(new r.A(e));
             }
-            b(!1);
+            j(!1);
         };
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)(s.rQ0, {
-                title: d.intl.string(d.t["5bQcoa"]),
-                subtitle: d.intl.string(d.t.Ie60Wc),
-            }),
-            (0, l.jsx)(s.cwr, {
-                children: (0, l.jsxs)("div", {
+            (0, i.jsx)(a.rQ0, { title: d.intl.string(d.t["5bQcoa"]), subtitle: d.intl.string(d.t.Ie60Wc) }),
+            (0, i.jsx)(a.cwr, {
+                children: (0, i.jsxs)("div", {
                     className: o.S,
                     children: [
-                        (0, l.jsx)(a.fs1, {
+                        (0, i.jsx)(n.fs1, {
                             label: d.intl.string(d.t.FFFAGt),
-                            value: n,
+                            value: l,
                             maxLength: 200,
                             placeholder: d.intl.string(d.t.VzuITC),
                             onChange: u,
-                            error: null == f ? void 0 : f.getAnyErrorMessage(),
+                            error: L?.getAnyErrorMessage(),
                         }),
-                        (0, l.jsx)(a.l6P, {
+                        (0, i.jsx)(n.l6P, {
                             selectionMode: "single",
                             label: d.intl.string(d.t.Olo8FB),
                             placeholder: d.intl.string(d.t.XqMe3N),
@@ -63,20 +55,20 @@ function u(e) {
                     ],
                 }),
             }),
-            (0, l.jsx)(s.H7u, {
-                leading: (0, l.jsx)(a.QWc, {
+            (0, i.jsx)(a.H7u, {
+                leading: (0, i.jsx)(n.QWc, {
                     size: "sm",
                     variant: "secondary",
                     text: d.intl.string(d.t["13/7kX"]),
-                    onClick: C,
+                    onClick: g,
                 }),
                 actions: [
                     {
                         variant: "primary",
                         text: d.intl.string(d.t.H9jxS1),
-                        onClick: p,
-                        loading: j,
-                        disabled: "" === n || x === c.mU.UNCATEGORIZED,
+                        onClick: f,
+                        loading: h,
+                        disabled: "" === l || x === c.mU.UNCATEGORIZED,
                     },
                 ],
             }),

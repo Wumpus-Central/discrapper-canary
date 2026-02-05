@@ -1,8 +1,6 @@
-n.d(t, {
-    w: () => i,
-});
+"use strict";
+n.d(t, { w: () => i });
 var r = n(985018);
-
 function i(e) {
     switch (e) {
         case "giphy":

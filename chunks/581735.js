@@ -1,8 +1,6 @@
-r.d(t, {
-    E: () => i,
-});
+i.d(t, { E: () => s });
 var n,
-    i =
+    s =
         (((n = {})[(n.INFO = 0)] = "INFO"),
         (n[(n.EDIT_SCREEN = 1)] = "EDIT_SCREEN"),
         (n[(n.FINISH_LATER = 2)] = "FINISH_LATER"),

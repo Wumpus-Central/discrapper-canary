@@ -1,3 +1,1 @@
-e.exports = {
-    R: "avatarWrapper__69074",
-};
+e.exports = { R: "avatarWrapper__69074" };

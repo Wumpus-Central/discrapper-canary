@@ -1,53 +1,46 @@
-n.d(t, {
-    l: () => c,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(646881),
+n.d(t, { l: () => d });
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(646881),
     s = n(92534),
     o = n(760799);
-
-function c(e) {
-    let { onOpen: t, onClose: n, children: c, popoutPosition: u, popoutAlign: d } = e,
-        [p, h] = i.useState(!1),
-        f = i.useRef(null),
-        g = i.useCallback(() => {
-            h(!1), null == n || n();
+function d(e) {
+    let { onOpen: t, onClose: n, children: d, popoutPosition: c, popoutAlign: u } = e,
+        [A, h] = r.useState(!1),
+        _ = r.useRef(null),
+        m = r.useCallback(() => {
+            h(!1), n?.();
         }, [n]),
-        { handlePrimaryAction: m, handleContextMenu: A } = (0, s.B)(g),
-        _ = i.useCallback(() => {
+        { handlePrimaryAction: p, handleContextMenu: g } = (0, s.B)(m),
+        E = r.useCallback(() => {
             h((e) => {
-                let r = !e;
-                return r ? null == t || t() : null == n || n(), r;
+                let i = !e;
+                return i ? t?.() : n?.(), i;
             });
         }, [n, t]),
-        b = i.useCallback(
+        f = r.useCallback(
             () =>
-                (0, r.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: o.k,
-                    children: (0, r.jsx)(a.$, {
-                        onPrimaryAction: m,
-                        onContextMenu: A,
-                    }),
+                    children: (0, i.jsx)(l.$, { onPrimaryAction: p, onContextMenu: g }),
                 }),
-            [A, m],
+            [g, p],
         );
-    return (0, r.jsx)(l.YNO, {
-        targetElementRef: f,
-        animation: l.YNO.Animation.NONE,
-        position: u,
-        align: d,
+    return (0, i.jsx)(a.YNO, {
+        targetElementRef: _,
+        animation: a.YNO.Animation.NONE,
+        position: c,
+        align: u,
         autoInvert: !1,
-        shouldShow: p,
-        onRequestClose: g,
-        renderPopout: b,
+        shouldShow: A,
+        onRequestClose: m,
+        renderPopout: f,
         ignoreModalClicks: !0,
         clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return c(_, n, e, f);
+            return d(E, n, e, _);
         },
     });
 }

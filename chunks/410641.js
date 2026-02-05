@@ -1,3 +1,4 @@
+"use strict";
 var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
@@ -12,46 +13,35 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 n(313319);
 var o = n(958554),
     l = n(698380),
-    c = n(284009),
-    u = n(972535);
+    u = n(284009),
+    c = n(972535);
 e.exports = (function (e) {
     function t(e) {
         i(this, t);
         var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
-            r = e || {
-                x: 0,
-                y: 0,
-            };
+            r = e || { x: 0, y: 0 };
         return (
             "number" == typeof r.x && "number" == typeof r.y
                 ? ((n.x = new o(r.x)), (n.y = new o(r.y)))
-                : (c(
+                : (u(
                       r.x instanceof o && r.y instanceof o,
                       "AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.",
                   ),
@@ -85,10 +75,7 @@ e.exports = (function (e) {
             {
                 key: "__getValue",
                 value: function () {
-                    return {
-                        x: this.x.__getValue(),
-                        y: this.y.__getValue(),
-                    };
+                    return { x: this.x.__getValue(), y: this.y.__getValue() };
                 },
             },
             {
@@ -101,17 +88,11 @@ e.exports = (function (e) {
                 key: "addListener",
                 value: function (e) {
                     var t = this,
-                        n = u(),
+                        n = c(),
                         r = function (n) {
                             n.value, e(t.__getValue());
                         };
-                    return (
-                        (this._listeners[n] = {
-                            x: this.x.addListener(r),
-                            y: this.y.addListener(r),
-                        }),
-                        n
-                    );
+                    return (this._listeners[n] = { x: this.x.addListener(r), y: this.y.addListener(r) }), n;
                 },
             },
             {
@@ -125,23 +106,13 @@ e.exports = (function (e) {
             {
                 key: "getLayout",
                 value: function () {
-                    return {
-                        left: this.x,
-                        top: this.y,
-                    };
+                    return { left: this.x, top: this.y };
                 },
             },
             {
                 key: "getTranslateTransform",
                 value: function () {
-                    return [
-                        {
-                            translateX: this.x,
-                        },
-                        {
-                            translateY: this.y,
-                        },
-                    ];
+                    return [{ translateX: this.x }, { translateY: this.y }];
                 },
             },
         ]),

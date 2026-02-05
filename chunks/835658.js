@@ -10,6 +10,7 @@ e.exports = function (e) {
                 e.call(
                     [null],
                     function () {
+                        "use strict";
                         n = "string" == typeof this;
                     },
                     "x",

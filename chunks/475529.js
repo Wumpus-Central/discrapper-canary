@@ -1,49 +1,32 @@
-n.d(t, {
-    J: () => c,
-}),
-    n(747238);
-var r = n(64700),
-    i = n(960488),
-    l = n(403362),
-    a = n(631001),
+n.d(t, { J: () => d });
+var i = n(64700),
+    r = n(960488),
+    a = n(403362),
+    l = n(631001),
     s = n(890687),
     o = n(985018);
-
-function c(e) {
+function d(e) {
     let { withClaimedQuestsTab: t = !0 } = e,
-        n = a.A.useField("tab"),
-        c = (0, i.zy)(),
-        u = (0, s.p5)();
-    r.useEffect(() => {
-        a.A.getState().initializeFromUrl(c.search, u);
-    }, [c.search, u]);
-    let d = r.useCallback((e) => {
-        a.A.getState().setTab(e);
+        n = l.A.useField("tab"),
+        d = (0, r.zy)(),
+        c = (0, s.p5)();
+    i.useEffect(() => {
+        l.A.getState().initializeFromUrl(d.search, c);
+    }, [d.search, c]);
+    let u = i.useCallback((e) => {
+        l.A.getState().setTab(e);
     }, []);
     return {
-        tabs: r.useMemo(
+        tabs: i.useMemo(
             () =>
                 [
-                    {
-                        id: s.NC.ALL,
-                        label: o.intl.string(o.t["0SzXmi"]),
-                    },
-                    t
-                        ? {
-                              id: s.NC.CLAIMED,
-                              label: o.intl.string(o.t.zyNYNB),
-                          }
-                        : null,
-                    t && u
-                        ? {
-                              id: s.NC.PREVIEW_TOOL,
-                              label: o.intl.string(o.t.BDUDau),
-                          }
-                        : null,
-                ].filter(l.Vq),
-            [t, u],
+                    { id: s.NC.ALL, label: o.intl.string(o.t["0SzXmi"]) },
+                    t ? { id: s.NC.CLAIMED, label: o.intl.string(o.t.zyNYNB) } : null,
+                    t && c ? { id: s.NC.PREVIEW_TOOL, label: o.intl.string(o.t.BDUDau) } : null,
+                ].filter(a.Vq),
+            [t, c],
         ),
         selectedTab: n,
-        onSelectTab: d,
+        onSelectTab: u,
     };
 }

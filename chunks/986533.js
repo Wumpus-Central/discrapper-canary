@@ -1,32 +1,29 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968);
+n.d(t, { A: () => g });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(709066),
-    l = n(763754),
-    c = n(643204),
-    u = n(809115),
-    d = n(888675),
-    f = n(652215),
-    p = n(705751),
-    _ = n(985018),
-    h = n(234054);
-
-function m(e) {
-    let { message: t, compact: n, usernameHook: i } = e,
-        m = (0, l.Ay)(t),
-        g = i(m),
+var l = n(503698),
+    a = n.n(l),
+    r = n(397927),
+    s = n(709066),
+    o = n(763754),
+    d = n(643204),
+    c = n(809115),
+    u = n(888675),
+    m = n(652215),
+    _ = n(705751),
+    h = n(985018),
+    p = n(234054);
+function g(e) {
+    let { message: t, compact: n, usernameHook: l } = e,
+        g = (0, o.Ay)(t),
+        A = l(g),
         {
-            avatarSrc: E,
-            eventHandlers: { onMouseEnter: b, onMouseLeave: y },
-        } = (0, u.a)(!0),
-        O =
+            avatarSrc: f,
+            eventHandlers: { onMouseEnter: x, onMouseLeave: E },
+        } = (0, c.a)(!0),
+        C =
             "" !== t.content
-                ? new Date(t.content).toLocaleString(_.intl.currentLocale, {
+                ? new Date(t.content).toLocaleString(h.intl.currentLocale, {
                       hour: "numeric",
                       minute: "2-digit",
                       month: "2-digit",
@@ -34,65 +31,43 @@ function m(e) {
                       year: "numeric",
                   })
                 : "";
-    return (0, r.jsx)("div", {
-        onMouseEnter: b,
-        onMouseLeave: y,
-        children: (0, r.jsx)(d.A, {
-            className: a()(h.rs, {
-                [h.oE]: n,
-            }),
-            iconNode: n
-                ? null
-                : (0, r.jsx)(u.l, {
-                      src: E,
-                  }),
-            iconContainerClassName: h.zc,
+    return (0, i.jsx)("div", {
+        onMouseEnter: x,
+        onMouseLeave: E,
+        children: (0, i.jsx)(u.A, {
+            className: a()(p.rs, { [p.oE]: n }),
+            iconNode: n ? null : (0, i.jsx)(c.l, { src: f }),
+            iconContainerClassName: p.zc,
             compact: n,
-            children: (0, r.jsxs)("div", {
-                className: a()(h.Qs, {
-                    [h.oE]: n,
-                }),
+            children: (0, i.jsxs)("div", {
+                className: a()(p.Qs, { [p.oE]: n }),
                 children: [
-                    (0, r.jsx)(c.ix, {
+                    (0, i.jsx)(d.ix, {
                         message: t,
-                        messageClassname: h.he,
-                        className: a()(h.QV, h.he, {
-                            [h.oE]: n,
-                        }),
-                        username: (0, r.jsxs)("div", {
-                            className: h.he,
+                        messageClassname: p.he,
+                        className: a()(p.QV, p.he, { [p.oE]: n }),
+                        username: (0, i.jsxs)("div", {
+                            className: p.he,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
-                                    className: h.Xh,
-                                    children: _.intl.string(_.t.hG1StD),
+                                    className: p.Xh,
+                                    children: h.intl.string(h.t.hG1StD),
                                 }),
-                                (0, r.jsx)(o.A, {
-                                    type: p.nu.SYSTEM_DM,
-                                    className: h.Al,
-                                }),
+                                (0, i.jsx)(s.A, { type: _.nu.SYSTEM_DM, className: p.Al }),
                             ],
                         }),
                         compact: n,
                         showTimestamp: !0,
                     }),
-                    (0, r.jsx)("div", {
-                        className: a()(h.__invalid_messageContent, {
-                            [h.oE]: n,
-                        }),
+                    (0, i.jsx)("div", {
+                        className: a()(p.__invalid_messageContent, { [p.oE]: n }),
                         children:
-                            t.type === f.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? _.intl.format(_.t["+m8eD7"], {
-                                      username: m.nick,
-                                      usernameHook: g,
-                                      time: O,
-                                  })
-                                : _.intl.format(_.t["BHeke+"], {
-                                      username: m.nick,
-                                      usernameHook: g,
-                                  }),
+                            t.type === m.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED
+                                ? h.intl.format(h.t["+m8eD7"], { username: g.nick, usernameHook: A, time: C })
+                                : h.intl.format(h.t["BHeke+"], { username: g.nick, usernameHook: A }),
                     }),
                 ],
             }),

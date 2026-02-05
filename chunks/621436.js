@@ -1,13 +1,6 @@
-n.d(t, {
-    A: () => l,
-});
+n.d(t, { A: () => a });
 var i = n(961350),
-    r = n(652215);
-
-function l(e) {
-    if (r.kvI.CALLABLE.has(e.type)) {
-        var t;
-        return (null == (t = e.recipients) ? void 0 : t.length) === 1 ? e.recipients[0] : null;
-    }
-    return i.default.getId();
+    l = n(652215);
+function a(e) {
+    return l.kvI.CALLABLE.has(e.type) ? (e.recipients?.length === 1 ? e.recipients[0] : null) : i.default.getId();
 }

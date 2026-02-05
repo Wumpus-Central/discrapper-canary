@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     if ("object" != typeof e || null === e || !e.hasOwnProperty("oneofKind")) return !1;
     switch (typeof e.oneofKind) {
@@ -10,6 +11,4 @@ function r(e) {
             return !1;
     }
 }
-n.d(t, {
-    Zs: () => r,
-});
+n.d(t, { Zs: () => r });

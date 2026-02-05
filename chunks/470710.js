@@ -1,234 +1,121 @@
-n.d(t, {
-    A: () => D,
-});
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(562465),
-    l = n(73153),
-    c = n(734057),
+"use strict";
+n.d(t, { A: () => N });
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(562465),
+    o = n(73153),
+    l = n(734057),
     u = n(309010),
-    d = n(967198),
-    f = n(652215);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = {},
-    E = {};
-
-function b() {
+    c = n(967198),
+    d = n(652215);
+let _ = {},
+    f = {};
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A.getChannelId(),
-        n = c.A.getChannel(t);
-    if (null != n && null == n.getGuildId() && null != t && (null == g[t] || e)) {
-        var r;
-        return (
-            (g[t] =
-                null != (r = g[t])
-                    ? r
-                    : {
-                          channelId: t,
-                          ringing: [],
-                      }),
-            l.h.dispatch({
-                type: "CALL_CONNECT",
-                channelId: t,
-            }),
-            !0
-        );
-    }
-    return !1;
+        n = l.A.getChannel(t);
+    return (
+        null != n &&
+        null == n.getGuildId() &&
+        null != t &&
+        (null == _[t] || !!e) &&
+        ((_[t] = _[t] ?? { channelId: t, ringing: [] }), o.h.dispatch({ type: "CALL_CONNECT", channelId: t }), !0)
+    );
 }
-
-function y() {
-    return b(!0);
+function h() {
+    return p(!0);
 }
-
-function O(e) {
+function m(e) {
     let { callStoreInternalState: t } = e;
-    (g = _({}, t.calls)), (E = _({}, t.enqueuedRings));
+    (_ = { ...t.calls }), (f = { ...t.enqueuedRings });
 }
-
-function A() {
-    (g = {}), (E = {});
+function g() {
+    (_ = {}), (f = {});
 }
-
-function v() {
-    return b(!0);
+function E() {
+    return p(!0);
 }
-
-function S(e) {
+function A(e) {
     let { channelId: t } = e;
-    return b(!1, t);
+    return p(!1, t);
 }
-
 function I(e) {
     let { channel: t } = e;
-    if ((null != E[t.id] && delete E[t.id], null == g[t.id])) return !1;
-    delete g[t.id];
+    if ((null != f[t.id] && delete f[t.id], null == _[t.id])) return !1;
+    delete _[t.id];
 }
-
 function T(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e;
     if (
-        ((g[t] = {
-            channelId: t,
-            messageId: n,
-            region: r,
-            ringing: i,
-            unavailable: !1,
-            regionUpdated: !1,
-        }),
-        null != E[t])
+        ((_[t] = { channelId: t, messageId: n, region: r, ringing: i, unavailable: !1, regionUpdated: !1 }),
+        null != f[t])
     ) {
-        let e = E[t];
-        delete E[t],
+        let e = f[t];
+        delete f[t],
             1 !== e.indexOf("all") && (e = null),
-            o.Bo.post({
-                url: f.Rsh.CALL_RING(t),
-                body: {
-                    recipients: e,
-                },
-                oldFormErrors: !0,
-                rejectWithError: !0,
-            });
+            s.Bo.post({ url: d.Rsh.CALL_RING(t), body: { recipients: e }, oldFormErrors: !0, rejectWithError: !0 });
     }
 }
-
-function C(e) {
-    var t;
-    let { channelId: n, recipients: r } = e;
-    E[n] = a().union(null != (t = E[n]) ? t : [], null != r ? r : ["all"]);
+function y(e) {
+    let { channelId: t, recipients: n } = e;
+    f[t] = i().union(f[t] ?? [], n ?? ["all"]);
 }
-
-function N(e) {
+function S(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e,
-        a = g[t],
+        a = _[t],
         s = null != a && (a.regionUpdated || a.region !== r);
-    g[t] = m(_({}, g[t]), {
-        messageId: n,
-        region: r,
-        ringing: i,
-        regionUpdated: s,
-    });
+    _[t] = { ..._[t], messageId: n, region: r, ringing: i, regionUpdated: s };
 }
-
-function R(e) {
+function v(e) {
     let { channelId: t, unavailable: n } = e,
-        r = g[t];
+        r = _[t];
     !0 === n && null != r
-        ? (g[t] = m(_({}, r), {
-              unavailable: n,
-          }))
-        : (g[t] = {
-              channelId: t,
-              ringing: [],
-              messageId: null,
-              region: null,
-              regionUpdated: !1,
-              unavailable: n,
-          }),
-        null != E[t] && delete E[t];
+        ? (_[t] = { ...r, unavailable: n })
+        : (_[t] = { channelId: t, ringing: [], messageId: null, region: null, regionUpdated: !1, unavailable: n }),
+        null != f[t] && delete f[t];
 }
-
-function w(e) {
+function C(e) {
     let { channelId: t } = e;
-    null == t && (E = {});
+    null == t && (f = {});
 }
-class P extends (r = s.Ay.Store) {
+class b extends a.Ay.Store {
+    static displayName = "CallStore";
     initialize() {
-        this.waitFor(c.A, u.A, d.A);
+        this.waitFor(l.A, u.A, c.A);
     }
     getCall(e) {
-        return g[e];
+        return _[e];
     }
     getCalls() {
-        return Object.values(g);
+        return Object.values(_);
     }
     getMessageId(e) {
         let t = this.getCall(e);
         return null != t ? t.messageId : null;
     }
     isCallActive(e, t) {
-        let n = g[e];
+        let n = _[e];
         return null != n && !n.unavailable && (null != t ? n.messageId === t : null != n.region);
     }
     isCallUnavailable(e) {
-        let t = g[e];
+        let t = _[e];
         return null != t && t.unavailable;
     }
     getInternalState() {
-        return {
-            calls: g,
-            enqueuedRings: E,
-        };
+        return { calls: _, enqueuedRings: f };
     }
 }
-p(P, "displayName", "CallStore");
-let D = new P(l.h, {
-    CONNECTION_OPEN: y,
-    CONNECTION_CLOSED: A,
-    OVERLAY_INITIALIZE: O,
-    CONNECTION_RESUMED: v,
-    CHANNEL_SELECT: S,
+let N = new b(o.h, {
+    CONNECTION_OPEN: h,
+    CONNECTION_CLOSED: g,
+    OVERLAY_INITIALIZE: m,
+    CONNECTION_RESUMED: E,
+    CHANNEL_SELECT: A,
     CHANNEL_DELETE: I,
     CALL_CREATE: T,
-    CALL_UPDATE: N,
-    CALL_DELETE: R,
-    CALL_ENQUEUE_RING: C,
-    VOICE_CHANNEL_SELECT: w,
+    CALL_UPDATE: S,
+    CALL_DELETE: v,
+    CALL_ENQUEUE_RING: y,
+    VOICE_CHANNEL_SELECT: C,
 });

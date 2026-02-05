@@ -1,53 +1,43 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968),
-    i = n(110259),
+"use strict";
+n.d(t, { A: () => g });
+var i = n(627968),
+    s = n(110259),
     l = n(397927),
-    s = n(139286),
+    r = n(139286),
     a = n(893148),
-    c = n(400281),
-    o = n(985018),
-    d = n(5164),
+    o = n(400281),
+    d = n(985018),
+    c = n(5164),
     u = n(584643);
-
-function f(e) {
+function m(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: i, ctaClickable: s, onCtaClicked: a } = t;
-    return (0, r.jsxs)("div", {
-        className: d.__invalid_ctaContainer,
+        { noticeText: n, ctaLabel: s, ctaClickable: r, onCtaClicked: a } = t;
+    return (0, i.jsxs)("div", {
+        className: c.__invalid_ctaContainer,
         children: [
-            (0, r.jsx)("img", {
-                className: d.__invalid_heroBanner,
-                src: u,
-                alt: o.intl.string(o.t.Af4klP),
-            }),
-            (0, r.jsxs)("div", {
-                className: d.__invalid_ctaContent,
+            (0, i.jsx)("img", { className: c.__invalid_heroBanner, src: u, alt: d.intl.string(d.t.Af4klP) }),
+            (0, i.jsxs)("div", {
+                className: c.__invalid_ctaContent,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        children: o.intl.string(o.t["PqYfh/"]),
+                        children: d.intl.string(d.t["PqYfh/"]),
                     }),
-                    (0, r.jsx)(l.hKd, {
-                        size: 12,
-                    }),
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(l.hKd, { size: 12 }),
+                    (0, i.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: o.intl.string(o.t["41wkMc"]),
+                        children: d.intl.string(d.t["41wkMc"]),
                     }),
-                    (0, r.jsx)(l.hKd, {
-                        size: 24,
-                    }),
-                    (0, r.jsx)(l.po8, {
+                    (0, i.jsx)(l.hKd, { size: 24 }),
+                    (0, i.jsx)(l.po8, {
                         messageType: l.YCn.INFO,
-                        action: (0, r.jsx)(l.Button, {
+                        action: (0, i.jsx)(l.Button, {
                             variant: "overlay-secondary",
-                            text: i,
+                            text: s,
                             onClick: a,
-                            disabled: !s,
+                            disabled: !r,
                         }),
                         children: n,
                     }),
@@ -56,29 +46,21 @@ function f(e) {
         ],
     });
 }
-
 function g(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: u, creatorMonetizationOnboardingMarketing: g } = (0, a.A)(t.id);
-    return ((0, s.A)({
-        type: i.ImpressionTypes.PANE,
-        name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
-        properties: {
-            guild_id: t.id,
-        },
+        { isLoading: d, error: u, creatorMonetizationOnboardingMarketing: g } = (0, a.A)(t.id);
+    return ((0, r.A)({
+        type: s.ImpressionTypes.PANE,
+        name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
+        properties: { guild_id: t.id },
     }),
-    o)
-        ? (0, r.jsx)(l.y$y, {})
-        : (0, r.jsxs)("div", {
-              className: d.__invalid_container,
+    d)
+        ? (0, i.jsx)(l.y$y, {})
+        : (0, i.jsxs)("div", {
+              className: c.__invalid_container,
               children: [
-                  (0, r.jsx)(f, {
-                      config: n,
-                  }),
-                  (0, r.jsx)(c.j, {
-                      onboardingMarketing: g,
-                      onboardingMarketingError: u,
-                  }),
+                  (0, i.jsx)(m, { config: n }),
+                  (0, i.jsx)(o.j, { onboardingMarketing: g, onboardingMarketingError: u }),
               ],
           });
 }

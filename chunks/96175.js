@@ -1,16 +1,9 @@
-n.d(t, {
-    Br: () => a,
-    I2: () => s,
-    Ms: () => o,
-    Oy: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Br: () => a, I2: () => s, Ms: () => o, Oy: () => i });
 var r = n(41984);
-
 function i(e) {
     return e;
 }
-
 function a(e) {
     switch (e) {
         case "click":
@@ -26,7 +19,6 @@ function a(e) {
             return "mousemove";
     }
 }
-
 function s() {
     return {
         popoutOpened: !1,

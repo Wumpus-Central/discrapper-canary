@@ -1,58 +1,37 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
-var r = n(73153),
-    i = n(827343),
-    l = n(401843),
-    a = n(272355),
+n.d(t, { A: () => _ });
+var i = n(73153),
+    r = n(827343),
+    a = n(401843),
+    l = n(272355),
     s = n(652896),
     o = n(616356),
-    c = n(961350),
-    u = n(734057),
-    d = n(430452),
-    p = n(105530);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class h extends a.A {
+    d = n(961350),
+    c = n(734057),
+    u = n(430452),
+    A = n(105530);
+class h extends l.A {
     _initialize() {
-        r.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+        i.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
     _terminate() {
-        r.h.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+        i.h.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
-    constructor(...e) {
-        super(...e),
-            f(this, "handleVoiceStateUpdates", (e) => {
-                let { voiceStates: t } = e,
-                    n = c.default.getId();
-                t.forEach((e) => {
-                    var t;
-                    e.userId === n &&
-                        (null == (t = u.A.getChannel(e.channelId)) ? void 0 : t.isGuildStageVoice()) &&
-                        (0, p.eY)(e) !== p.zF.ON_STAGE &&
-                        (this.handleStopStream(e), this.handleStopUserVideo());
-                });
-            }),
-            f(this, "handleStopStream", (e) => {
-                let t = o.A.getActiveStreamForUser(e.userId, e.guildId);
-                null != t && (0, l.vN)((0, s._z)(t), !1);
-            }),
-            f(this, "handleStopUserVideo", () => {
-                d.A.isVideoEnabled() && i.A.setVideoEnabled(!1);
-            });
-    }
+    handleVoiceStateUpdates = (e) => {
+        let { voiceStates: t } = e,
+            n = d.default.getId();
+        t.forEach((e) => {
+            e.userId === n &&
+                c.A.getChannel(e.channelId)?.isGuildStageVoice() &&
+                (0, A.eY)(e) !== A.zF.ON_STAGE &&
+                (this.handleStopStream(e), this.handleStopUserVideo());
+        });
+    };
+    handleStopStream = (e) => {
+        let t = o.A.getActiveStreamForUser(e.userId, e.guildId);
+        null != t && (0, a.vN)((0, s._z)(t), !1);
+    };
+    handleStopUserVideo = () => {
+        u.A.isVideoEnabled() && r.A.setVideoEnabled(!1);
+    };
 }
-let A = new h();
+let _ = new h();

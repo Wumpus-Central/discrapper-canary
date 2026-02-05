@@ -1,7 +1,5 @@
-n.d(t, {
-    g: () => r,
-    n: () => i,
-});
+"use strict";
+n.d(t, { g: () => r, n: () => i });
 var r = (function (e) {
     return (
         (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
@@ -11,9 +9,4 @@ var r = (function (e) {
         e
     );
 })({});
-let i = {
-    0: "UNKNOWN",
-    1: "INFO",
-    2: "MESSAGE_HISTORY",
-    3: "PERMISSIONS",
-};
+let i = { 0: "UNKNOWN", 1: "INFO", 2: "MESSAGE_HISTORY", 3: "PERMISSIONS" };

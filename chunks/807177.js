@@ -1,11 +1,9 @@
-n.d(t, {
-    I: () => o,
-});
+"use strict";
+n.d(t, { I: () => o });
 var r = n(3388),
     i = n(64700);
 let a = 0,
     s = new Map();
-
 function o(e) {
     let [t, n] = (0, i.useState)();
     return (
@@ -21,10 +19,7 @@ function o(e) {
                     (i.style.display = "none"),
                     (i.textContent = e),
                     document.body.appendChild(i),
-                    (t = {
-                        refCount: 0,
-                        element: i,
-                    }),
+                    (t = { refCount: 0, element: i }),
                     s.set(e, t);
             }
             return (
@@ -34,8 +29,6 @@ function o(e) {
                 }
             );
         }, [e]),
-        {
-            "aria-describedby": e ? t : void 0,
-        }
+        { "aria-describedby": e ? t : void 0 }
     );
 }

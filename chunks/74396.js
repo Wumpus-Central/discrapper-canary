@@ -1,52 +1,30 @@
-n.d(t, {
-    A: () => m,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(728458),
-    o = n(185928);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = [],
-    u = 0;
-
-function d(e) {
+"use strict";
+n.d(t, { A: () => p });
+var r = n(311907),
+    i = n(73153),
+    a = n(728458),
+    s = n(185928);
+let o = [],
+    l = 0;
+function u(e) {
     try {
-        let t = o.dP[e.base_theme];
+        let t = s.dP[e.base_theme];
         return e.colors.length > 0 && "number" == typeof e.gradient_angle && "number" == typeof e.base_mix && null != t;
     } catch (e) {
         return (
-            s.A.captureMessage("Invalid saved custom theme: " + e, {
-                tags: {
-                    app_context: "SavedCustomThemeStore",
-                },
-            }),
+            a.A.captureMessage("Invalid saved custom theme: " + e, { tags: { app_context: "SavedCustomThemeStore" } }),
             !1
         );
     }
 }
-
-function f() {
-    u = 1;
+function c() {
+    l = 1;
 }
-let p = (e) => {
+let d = (e) => {
         let { themes: t } = e;
-        (u = 2),
-            (c = t.filter(d).map((e) => {
-                let t = o.dP;
+        (l = 2),
+            (o = t.filter(u).map((e) => {
+                let t = s.dP;
                 return {
                     colors: e.colors,
                     gradient_angle: e.gradient_angle,
@@ -57,44 +35,38 @@ let p = (e) => {
     },
     _ = (e) => {
         let { error: t } = e;
-        (u = 3),
-            s.A.captureException(t, {
-                tags: {
-                    app_context: "SavedCustomThemeStore",
-                },
-            });
+        (l = 3), a.A.captureException(t, { tags: { app_context: "SavedCustomThemeStore" } });
     };
-class h extends (r = i.Ay.PersistedStore) {
+class f extends r.Ay.PersistedStore {
+    static displayName = "SavedCustomThemeStore";
+    static persistKey = "SavedCustomThemeStore";
     initialize(e) {
-        null != e && (c = e.savedCustomThemes), (u = 0);
+        null != e && (o = e.savedCustomThemes), (l = 0);
     }
     getState() {
-        return {
-            savedCustomThemes: null != c ? c : [],
-        };
+        return { savedCustomThemes: o ?? [] };
     }
     getSavedCustomTheme() {
-        return (null == c ? void 0 : c.length) > 0 && c[0].colors.length > 0 ? c[0] : null;
+        return o?.length > 0 && o[0].colors.length > 0 ? o[0] : null;
     }
     getFetchState() {
-        return u;
+        return l;
     }
     hasSavedCustomThemes() {
-        return (null == c ? void 0 : c.length) > 0;
+        return o?.length > 0;
     }
     isFetching() {
-        return 1 === u;
+        return 1 === l;
     }
     hasFetched() {
-        return 2 === u;
+        return 2 === l;
     }
     hasError() {
-        return 3 === u;
+        return 3 === l;
     }
 }
-l(h, "displayName", "SavedCustomThemeStore"), l(h, "persistKey", "SavedCustomThemeStore");
-let m = new h(a.h, {
-    SAVED_CUSTOM_THEMES_FETCH_START: f,
-    SAVED_CUSTOM_THEMES_FETCH_SUCCESS: p,
+let p = new f(i.h, {
+    SAVED_CUSTOM_THEMES_FETCH_START: c,
+    SAVED_CUSTOM_THEMES_FETCH_SUCCESS: d,
     SAVED_CUSTOM_THEMES_FETCH_FAILURE: _,
 });

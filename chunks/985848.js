@@ -1,3 +1,4 @@
+"use strict";
 var r = n(630017),
     i = Function.prototype,
     a = i.apply,

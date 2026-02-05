@@ -1,3 +1,1 @@
-e.exports = {
-    X: "scroller__23746",
-};
+e.exports = { X: "scroller__23746" };

@@ -1,19 +1,11 @@
-n.d(t, {
-    F: () => l,
-    d: () => o,
-});
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(231323);
-
-function s(e, t) {
-    let { children: n } = e;
-    return (0, r.jsx)(i.Text, {
-        variant: "text-sm/medium",
-        className: t,
-        children: n,
-    });
+r.d(t, { F: () => o, d: () => i });
+var s = r(627968);
+r(64700);
+var n = r(397927),
+    l = r(231323);
+function a(e, t) {
+    let { children: r } = e;
+    return (0, s.jsx)(n.Text, { variant: "text-sm/medium", className: t, children: r });
 }
-let o = (e) => s(e, a.nM),
-    l = (e) => s(e, a.pB);
+let i = (e) => a(e, l.nM),
+    o = (e) => a(e, l.pB);

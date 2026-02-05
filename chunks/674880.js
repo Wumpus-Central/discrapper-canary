@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -40,12 +41,7 @@ var n = r(64700),
                                 boxSizing: "border-box",
                                 fontFamily: "Roboto-Regular,HelveticaNeue,Arial,sans-serif",
                             },
-                            saturation: {
-                                width: "70%",
-                                padding: "0px",
-                                position: "relative",
-                                overflow: "hidden",
-                            },
+                            saturation: { width: "70%", padding: "0px", position: "relative", overflow: "hidden" },
                             swatch: {
                                 width: "30%",
                                 height: "228px",
@@ -54,28 +50,11 @@ var n = r(64700),
                                 position: "relative",
                                 overflow: "hidden",
                             },
-                            body: {
-                                margin: "auto",
-                                width: "95%",
-                            },
-                            controls: {
-                                display: "flex",
-                                boxSizing: "border-box",
-                                height: "52px",
-                                paddingTop: "22px",
-                            },
-                            color: {
-                                width: "32px",
-                            },
-                            hue: {
-                                height: "8px",
-                                position: "relative",
-                                margin: "0px 16px 0px 16px",
-                                width: "100%",
-                            },
-                            Hue: {
-                                radius: "2px",
-                            },
+                            body: { margin: "auto", width: "95%" },
+                            controls: { display: "flex", boxSizing: "border-box", height: "52px", paddingTop: "22px" },
+                            color: { width: "32px" },
+                            hue: { height: "8px", position: "relative", margin: "0px 16px 0px 16px", width: "100%" },
+                            Hue: { radius: "2px" },
                         },
                     },
                     void 0 === b ? {} : b,
@@ -83,75 +62,30 @@ var n = r(64700),
             );
         return n.createElement(
             "div",
-            {
-                style: g.picker,
-                className: "google-picker " + (void 0 === v ? "" : v),
-            },
+            { style: g.picker, className: "google-picker " + (void 0 === v ? "" : v) },
+            n.createElement("div", { style: g.head }, h),
+            n.createElement("div", { style: g.swatch }),
             n.createElement(
                 "div",
-                {
-                    style: g.head,
-                },
-                h,
-            ),
-            n.createElement("div", {
-                style: g.swatch,
-            }),
-            n.createElement(
-                "div",
-                {
-                    style: g.saturation,
-                },
-                n.createElement(s.VI, {
-                    hsl: a,
-                    hsv: d,
-                    pointer: u.A,
-                    onChange: r,
-                }),
+                { style: g.saturation },
+                n.createElement(s.VI, { hsl: a, hsv: d, pointer: u.A, onChange: r }),
             ),
             n.createElement(
                 "div",
-                {
-                    style: g.body,
-                },
+                { style: g.body },
                 n.createElement(
                     "div",
-                    {
-                        style: g.controls,
-                        className: "flexbox-fix",
-                    },
+                    { style: g.controls, className: "flexbox-fix" },
                     n.createElement(
                         "div",
-                        {
-                            style: g.hue,
-                        },
-                        n.createElement(s.RG, {
-                            style: g.Hue,
-                            hsl: a,
-                            radius: "4px",
-                            pointer: c.A,
-                            onChange: r,
-                        }),
+                        { style: g.hue },
+                        n.createElement(s.RG, { style: g.Hue, hsl: a, radius: "4px", pointer: c.A, onChange: r }),
                     ),
                 ),
-                n.createElement(p.A, {
-                    rgb: o,
-                    hsl: a,
-                    hex: f,
-                    hsv: d,
-                    onChange: r,
-                }),
+                n.createElement(p.A, { rgb: o, hsl: a, hex: f, hsv: d, onChange: r }),
             ),
         );
     };
-(d.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    styles: a().object,
-    header: a().string,
-}),
-    (d.defaultProps = {
-        width: 652,
-        styles: {},
-        header: "Color picker",
-    }),
+(d.propTypes = { width: a().oneOfType([a().string, a().number]), styles: a().object, header: a().string }),
+    (d.defaultProps = { width: 652, styles: {}, header: "Color picker" }),
     (0, s.Q$)(d);

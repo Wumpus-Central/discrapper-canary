@@ -1,117 +1,93 @@
-n.d(t, {
-    A: () => b,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(397927),
-    a = n(263063),
-    s = n(513461),
+    a = n(397927),
+    s = n(263063),
+    r = n(513461),
     o = n(654265),
     c = n(561446),
-    u = n(287809),
-    d = n(314307),
-    f = n(985018),
-    p = n(958404);
-
-function h(e) {
-    var t;
-    let { joinRequest: n, guild: o } = e,
-        c = (0, l.bG)([u.default], () => u.default.getUser(n.userId));
-    return (0, r.jsxs)("div", {
-        className: p.I8,
+    d = n(287809),
+    u = n(314307),
+    h = n(985018),
+    m = n(958404);
+function A(e) {
+    let { joinRequest: t, guild: n } = e,
+        o = (0, l.bG)([d.default], () => d.default.getUser(t.userId));
+    return (0, i.jsxs)("div", {
+        className: m.I8,
         children: [
-            (0, r.jsxs)("div", {
-                className: p.Ov,
+            (0, i.jsxs)("div", {
+                className: m.Ov,
                 children: [
-                    null != o &&
-                        (0, r.jsxs)("div", {
-                            className: p.yB,
+                    null != n &&
+                        (0, i.jsxs)("div", {
+                            className: m.yB,
                             children: [
-                                (0, r.jsx)(a.A, {
-                                    guild: o,
-                                    active: !0,
-                                    size: a.A.Sizes.SMOL,
-                                    className: p.$f,
-                                }),
-                                (0, r.jsx)(i.Heading, {
+                                (0, i.jsx)(s.A, { guild: n, active: !0, size: s.A.Sizes.SMOL, className: m.$f }),
+                                (0, i.jsx)(a.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
-                                    children: o.name,
+                                    children: n.name,
                                 }),
                             ],
                         }),
-                    null != c &&
-                        (0, r.jsx)(i.Heading, {
+                    null != o &&
+                        (0, i.jsx)(a.Heading, {
                             variant: "heading-xl/semibold",
                             color: "text-strong",
-                            children: f.intl.format(f.t.jDV3i6, {
-                                username: c.globalName,
-                            }),
+                            children: h.intl.format(h.t.jDV3i6, { username: o.globalName }),
                         }),
                 ],
             }),
-            null == (t = n.formResponses)
-                ? void 0
-                : t
-                      .filter((e) => e.field_type !== s.rX.TERMS)
-                      .map((e) => {
-                          let t =
-                              e.field_type === s.rX.MULTIPLE_CHOICE && null != e.response
-                                  ? e.choices[e.response]
-                                  : e.response;
-                          return (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  (0, r.jsx)("hr", {
-                                      className: p.g2,
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: p.fs,
-                                      children: [
-                                          (0, r.jsx)(i.Text, {
-                                              variant: "text-xs/semibold",
-                                              color: "text-muted",
-                                              children: e.label,
-                                          }),
-                                          (0, r.jsx)(i.Text, {
-                                              variant: "text-md/medium",
-                                              color: "text-strong",
-                                              children: t,
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          });
-                      }),
+            t.formResponses
+                ?.filter((e) => e.field_type !== r.rX.TERMS)
+                .map((e) => {
+                    let t =
+                        e.field_type === r.rX.MULTIPLE_CHOICE && null != e.response
+                            ? e.choices[e.response]
+                            : e.response;
+                    return (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            (0, i.jsx)("hr", { className: m.g2 }),
+                            (0, i.jsxs)("div", {
+                                className: m.fs,
+                                children: [
+                                    (0, i.jsx)(a.Text, {
+                                        variant: "text-xs/semibold",
+                                        color: "text-muted",
+                                        children: e.label,
+                                    }),
+                                    (0, i.jsx)(a.Text, {
+                                        variant: "text-md/medium",
+                                        color: "text-strong",
+                                        children: t,
+                                    }),
+                                ],
+                            }),
+                        ],
+                    });
+                }),
         ],
     });
 }
-
-function b(e) {
+function p(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: l, joinRequestGuild: a } = (0, o.A)(t.id);
-    return (0, r.jsx)(d.Ay, {
+        { loading: n, joinRequest: l, joinRequestGuild: s } = (0, o.A)(t.id);
+    return (0, i.jsx)(u.Ay, {
         channelId: t.id,
-        className: p.kL,
+        className: m.kL,
         children:
             null != l && null != l.formResponses
-                ? (0, r.jsxs)("div", {
-                      className: p.KJ,
+                ? (0, i.jsxs)("div", {
+                      className: m.KJ,
                       children: [
-                          (0, r.jsx)("div", {
-                              children: (0, r.jsx)(h, {
-                                  guild: a,
-                                  joinRequest: l,
-                              }),
-                          }),
-                          (0, r.jsx)(c.A, {
-                              channelId: t.id,
-                              showProfile: !0,
-                          }),
+                          (0, i.jsx)("div", { children: (0, i.jsx)(A, { guild: s, joinRequest: l }) }),
+                          (0, i.jsx)(c.A, { channelId: t.id, showProfile: !0 }),
                       ],
                   })
                 : n
-                  ? (0, r.jsx)(i.y$y, {})
+                  ? (0, i.jsx)(a.y$y, {})
                   : null,
     });
 }

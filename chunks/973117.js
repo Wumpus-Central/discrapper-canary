@@ -1,32 +1,14 @@
+"use strict";
 let r;
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    J: () => l,
-    n: () => c,
-}),
-    n(457529);
-let a = "__d6gp33cibjs";
+n.d(t, { J: () => o, n: () => l });
+let i = "__d6gp33cibjs";
 try {
-    (r = window.localStorage), null == r && null != a && ((r = window[a]), delete window[a]);
+    (r = window.localStorage), null == r && null != i && ((r = window[i]), delete window[i]);
 } catch (e) {}
 try {
-    null != window.localStorage && null != a && (window[a] = window.localStorage), delete window.localStorage;
+    null != window.localStorage && null != i && (window[i] = window.localStorage), delete window.localStorage;
 } catch (e) {}
-
-function s() {
+function a() {
     let e = "test";
     try {
         return r.setItem(e, e), r.removeItem(e), !0;
@@ -34,7 +16,7 @@ function s() {
         return !1;
     }
 }
-class o {
+class s {
     get(e, t) {
         let n = r.getItem(e);
         if (null != n)
@@ -71,7 +53,11 @@ class o {
         return Promise.resolve(this.get(e));
     }
 }
-class l {
+class o {
+    storage;
+    constructor() {
+        this.storage = {};
+    }
     get(e, t) {
         return this.storage.hasOwnProperty(e) ? this.storage[e] : t;
     }
@@ -99,8 +85,5 @@ class l {
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
-    constructor() {
-        i(this, "storage", void 0), (this.storage = {});
-    }
 }
-let c = s() ? new o() : new l();
+let l = a() ? new s() : new o();

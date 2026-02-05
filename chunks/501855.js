@@ -1,8 +1,5 @@
-a.d(t, {
-    A: () => i,
-});
+a.d(t, { A: () => i });
 var r = a(981737);
-
 function n(e, t, a, r, n) {
     return e + "-" + ("quarter" === t ? n : "year" === t || "week" === t || "minute" === t || "second" === t ? r : a);
 }

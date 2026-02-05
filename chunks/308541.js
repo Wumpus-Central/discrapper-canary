@@ -1,73 +1,62 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(524007),
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(524007),
     o = n(844222),
     c = n(786558),
     d = n(799226),
     u = n(397927),
     _ = n(331405);
-let p = {
-        HoverLightmode: {
-            posy: "number",
-            posx: "number",
-        },
+let m = {
+        HoverLightmode: { posy: "number", posx: "number" },
         BaseGlow: {},
         ButtonFillLightmode: {},
-        HoverDarkmode: {
-            posy: "number",
-            posx: "number",
-        },
+        HoverDarkmode: { posy: "number", posx: "number" },
         BaseGlowRemapped: {},
         ButtonFillDarkmode: {},
     },
-    m = (e) => {
+    A = (e) => {
         let {
                 children: t,
                 className: n,
-                cardClassName: l,
-                cardType: m,
+                cardClassName: r,
+                cardType: A,
                 artboard: g = "BaseGlowRemapped",
-                fit: A = "layout",
-                glowAmount: f = 8,
-                blurAmount: b = 30,
-                hueRotate: h = 0,
-                isReducedMotion: E,
+                fit: E = "layout",
+                glowAmount: h = 8,
+                blurAmount: p = 30,
+                hueRotate: C = 0,
+                isReducedMotion: x,
             } = e,
-            O = i.useRef(null),
-            x = i.useRef(null),
-            { status: C, buffer: S } = (0, d.CE)(a.A),
-            T = i.useContext(o.C),
-            I = null != E ? E : T.reducedMotion.enabled;
-        return (0, r.jsxs)("div", {
-            ref: O,
-            className: s()(_.kL, n),
-            style: {
-                "--custom-glow-amount": "".concat(f, "px"),
-                "--custom-blur-amount": "".concat(b, "px"),
-                "--custom-hue-rotate": "".concat(h, "deg"),
-            },
+            T = s.useRef(null),
+            I = s.useRef(null),
+            { status: S, buffer: f } = (0, d.CE)(l.A),
+            N = s.useContext(o.C),
+            b = x ?? N.reducedMotion.enabled,
+            R = {
+                "--custom-glow-amount": `${h}px`,
+                "--custom-blur-amount": `${p}px`,
+                "--custom-hue-rotate": `${C}deg`,
+            };
+        return (0, i.jsxs)("div", {
+            ref: T,
+            className: a()(_.kL, n),
+            style: R,
             children: [
-                C !== d.BW.Loading &&
-                    (0, r.jsx)(c.w, {
-                        buffer: S,
+                S !== d.BW.Loading &&
+                    (0, i.jsx)(c.w, {
+                        buffer: f,
                         artboard: g,
-                        artboardProperties: p,
-                        eventTargetRef: O,
+                        artboardProperties: m,
+                        eventTargetRef: T,
                         className: _.Q_,
-                        ref: x,
-                        fit: A,
-                        withReducedMotion: I ? "halt" : "play",
+                        ref: I,
+                        fit: E,
+                        withReducedMotion: b ? "halt" : "play",
                     }),
-                (0, r.jsx)(u.ZpM, {
-                    type: null != m ? m : u.sl2.CUSTOM,
-                    className: s()(_.Nr, l),
-                    children: t,
-                }),
+                (0, i.jsx)(u.ZpM, { type: A ?? u.sl2.CUSTOM, className: a()(_.Nr, r), children: t }),
             ],
         });
     };

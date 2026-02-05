@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(136722),
     i = n(317525),
     a = n(71393),
@@ -14,22 +13,15 @@ let o = [
         s.rbe.PRIVATE_THREAD,
     ],
     l = r.kg(s.xBc.VIEW_CHANNEL, s.xBc.SEND_MESSAGES);
-
-function c(e) {
+function u(e) {
     if (null == e || !o.includes(e.type)) return [];
     let t = a.A.getGuild(e.guild_id);
     return null == t
         ? []
         : Object.values(e.permissionOverwrites)
-              .filter((e) => {
-                  var n, a;
-                  return (
-                      0 === e.type &&
-                      (null == (a = i.A.getRole(t.id, e.id)) || null == (n = a.tags) ? void 0 : n.guild_connections) ===
-                          null &&
-                      !r.X8(e.deny, l)
-                  );
-              })
+              .filter(
+                  (e) => 0 === e.type && i.A.getRole(t.id, e.id)?.tags?.guild_connections === null && !r.X8(e.deny, l),
+              )
               .map((e) => i.A.getRole(t.id, e.id))
               .filter((e) => null != e);
 }

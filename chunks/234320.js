@@ -1,31 +1,12 @@
-n.d(t, {
-    Ah: () => f,
-    EG: () => _,
-    EH: () => d,
-    Vo: () => p,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { Ah: () => d, EG: () => f, EH: () => c, Vo: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(143236),
     s = n(444927),
     o = n(203982);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c {
+class l {
+    emitter = new a.EventEmitter();
     subscribe(e, t) {
         o._.subscribe(e, t), this.emitter.on(e, t);
     }
@@ -34,9 +15,6 @@ class c {
     }
     bumpDispatchPriority() {
         for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) o._.resubscribe(e, t);
-    }
-    constructor() {
-        l(this, "emitter", new a.EventEmitter());
     }
 }
 class u {
@@ -48,22 +26,15 @@ class u {
     }
     bumpDispatchPriority() {}
 }
-let d = i.createContext(new u()),
-    f = i.forwardRef(function (e, t) {
+let c = i.createContext(new u()),
+    d = i.forwardRef(function (e, t) {
         let { children: n } = e,
-            a = (0, s.A)(() => new c());
-        return (
-            i.useImperativeHandle(t, () => a, [a]),
-            (0, r.jsx)(d.Provider, {
-                value: a,
-                children: n,
-            })
-        );
+            a = (0, s.A)(() => new l());
+        return i.useImperativeHandle(t, () => a, [a]), (0, r.jsx)(c.Provider, { value: a, children: n });
     });
-
-function p(e) {
+function _(e) {
     let { event: t, handler: n } = e,
-        r = i.useContext(d),
+        r = i.useContext(c),
         a = i.useRef(n);
     i.useEffect(() => {
         a.current = n;
@@ -73,8 +44,8 @@ function p(e) {
         i.useEffect(() => {
             if (s) return;
             let e = function () {
-                for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                null == (e = a.current) || e.call(a, ...n);
+                for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+                a.current?.(...t);
             };
             return (
                 r.subscribe(t, e),
@@ -86,7 +57,6 @@ function p(e) {
         null
     );
 }
-
-function _(e) {
-    return p(e), null;
+function f(e) {
+    return _(e), null;
 }

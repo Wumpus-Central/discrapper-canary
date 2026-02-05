@@ -1,119 +1,69 @@
-n.d(t, {
-    A: () => m,
-    q: () => p,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => g, q: () => x });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(397927),
+var s = n(503698),
+    l = n.n(s),
+    r = n(397927),
     a = n(147925),
-    c = n(371794),
-    o = n(500345),
-    d = n(11351),
+    o = n(371794),
+    d = n(500345),
+    c = n(11351),
     u = n(985018),
-    f = n(100634);
-
+    m = n(100634);
 function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function m(e) {
-    let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: a, onImport: m } = e,
-        p = (0, d.gN)();
-    return (0, r.jsx)("div", {
-        className: f.kL,
+    let { channelBenefits: t, intangibleBenefits: s, subscriptionListings: a, onImport: g } = e,
+        x = (0, c.gN)();
+    return (0, i.jsx)("div", {
+        className: m.kL,
         children: a.map((e) =>
-            (0, r.jsxs)(
+            (0, i.jsxs)(
                 "div",
                 {
-                    className: f.nM,
+                    className: m.nM,
                     children: [
-                        (0, r.jsx)("img", {
+                        (0, i.jsx)("img", {
                             alt: "",
-                            src: null == e.image_asset ? void 0 : (0, c.YE)(e.application_id, e.image_asset, 512),
-                            className: l()(f.aL, f.mi),
+                            src: null == e.image_asset ? void 0 : (0, o.YE)(e.application_id, e.image_asset, 512),
+                            className: l()(m.aL, m.mi),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: f.fw,
+                        (0, i.jsxs)("div", {
+                            className: m.fw,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: "text-md/normal",
                                     color: "text-strong",
-                                    className: l()(f.qg, f.Wo),
+                                    className: l()(m.qg, m.Wo),
                                     children: e.name,
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(r.Text, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
                                     children: u.intl.format(u.t["QMj+In"], {
-                                        channels: e.role_benefits.benefits.filter(o.B1).length,
-                                        benefits: e.role_benefits.benefits.filter(o.b1).length,
+                                        channels: e.role_benefits.benefits.filter(d.B1).length,
+                                        benefits: e.role_benefits.benefits.filter(d.b1).length,
                                     }),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.Button, {
+                        (0, i.jsx)(r.Button, {
                             variant: "secondary",
                             onClick: () => {
-                                (0, s.mMO)(async () => {
+                                (0, r.mMO)(async () => {
                                     let { ImportBenefitsFromSubscriptionListingModal: l } = await n
                                         .e("66946")
                                         .then(n.bind(n, 362937));
                                     return (n) =>
-                                        (0, r.jsx)(
-                                            l,
-                                            b(g({}, n), {
-                                                fromSubscriptionListing: e,
-                                                existingChannelBenefits: t,
-                                                existingIntangibleBenefits: i,
-                                                onSubmit: m,
-                                            }),
-                                        );
+                                        (0, i.jsx)(l, {
+                                            ...n,
+                                            fromSubscriptionListing: e,
+                                            existingChannelBenefits: t,
+                                            existingIntangibleBenefits: s,
+                                            onSubmit: g,
+                                        });
                                 });
                             },
-                            disabled: p,
+                            disabled: x,
                             text: u.intl.string(u.t["90bIv9"]),
                         }),
                     ],
@@ -123,47 +73,28 @@ function m(e) {
         ),
     });
 }
-
-function p(e) {
-    let { guildId: t, onImport: i, disabled: c = !1 } = e;
-    return (0, r.jsxs)(s.DUT, {
-        className: l()(f.eZ, {
-            [f.r9]: c,
-        }),
-        onClick: c
+function x(e) {
+    let { guildId: t, onImport: s, disabled: o = !1 } = e;
+    return (0, i.jsxs)(r.DUT, {
+        className: l()(m.eZ, { [m.r9]: o }),
+        onClick: o
             ? void 0
             : function () {
-                  (0, s.mMO)(async () => {
+                  (0, r.mMO)(async () => {
                       let { ImportBenefitsFromRoleModal: e } = await n.e("66946").then(n.bind(n, 362937));
-                      return (n) =>
-                          (0, r.jsx)(
-                              e,
-                              b(g({}, n), {
-                                  guildId: t,
-                                  onImport: i,
-                              }),
-                          );
+                      return (n) => (0, i.jsx)(e, { ...n, guildId: t, onImport: s });
                   });
               },
-        "aria-disabled": c,
+        "aria-disabled": o,
         children: [
-            (0, r.jsx)(s.iTF, {
-                size: "custom",
-                width: 23,
-                height: 23,
-                color: "currentColor",
-                className: f.aL,
-            }),
-            (0, r.jsx)(s.Text, {
+            (0, i.jsx)(r.iTF, { size: "custom", width: 23, height: 23, color: "currentColor", className: m.aL }),
+            (0, i.jsx)(r.Text, {
                 variant: "text-md/normal",
                 color: "text-strong",
-                className: f.qg,
+                className: m.qg,
                 children: u.intl.string(u.t.xK9pBC),
             }),
-            (0, r.jsx)(a.A, {
-                direction: a.A.Directions.RIGHT,
-                className: f.OW,
-            }),
+            (0, i.jsx)(a.A, { direction: a.A.Directions.RIGHT, className: m.OW }),
         ],
     });
 }

@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
@@ -9,12 +8,7 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: {
-            "aria-valuemax": null,
-            "aria-valuemin": null,
-            "aria-valuenow": null,
-            "aria-valuetext": null,
-        },
+        props: { "aria-valuemax": null, "aria-valuemin": null, "aria-valuenow": null, "aria-valuetext": null },
         relatedConcepts: [],
         requireContextRole: [],
         requiredContextRole: [],

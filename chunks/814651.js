@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     container: "container__29209",
     content: "content__29209",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Hu: "pictureInPictureVideo_e4cb9a",
     _v: "videoControls_e4cb9a",

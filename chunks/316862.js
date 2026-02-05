@@ -1,85 +1,73 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+n.d(t, { A: () => p });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(157559),
+    a = n(64700),
+    i = n(311907),
+    r = n(157559),
     s = n(58149),
-    o = n(997509),
-    c = n(794967),
-    d = n(632738),
-    u = n(734057),
+    d = n(997509),
+    o = n(794967),
+    u = n(632738),
+    c = n(734057),
     m = n(71393),
-    b = n(576705),
-    p = n(309010),
-    x = n(652215),
-    g = n(985018);
-let f = (e) => {
+    _ = n(576705),
+    x = n(309010),
+    g = n(652215),
+    h = n(985018);
+let p = (e) => {
     let { application: t, reportId: n } = e,
-        [f, v] = r.useState(!1),
-        [h, j] = r.useState(!1),
-        _ = (0, a.bG)([p.A, u.A], () => {
-            var e;
-            return null == (e = u.A.getChannel(p.A.getChannelId())) ? void 0 : e.guild_id;
-        }),
-        [A, y] = r.useState(null);
-    r.useEffect(() => {
-        null != A && (v(!0), j(!0));
-    }, [A]),
-        r.useEffect(() => {
-            if (null == _) return;
+        [p, A] = a.useState(!1),
+        [b, v] = a.useState(!1),
+        f = (0, i.bG)([x.A, c.A], () => c.A.getChannel(x.A.getChannelId())?.guild_id),
+        [j, T] = a.useState(null);
+    a.useEffect(() => {
+        null != j && (A(!0), v(!0));
+    }, [j]),
+        a.useEffect(() => {
+            if (null == f) return;
             let e = !1;
             return (
                 (async () => {
                     let n = null;
                     try {
-                        n = await (0, c.c)(_);
-                    } catch (e) {}
+                        n = await (0, o.c)(f);
+                    } catch {}
                     if (e || null == n) return;
-                    let l = n.find((e) => {
-                        var n;
-                        return (null == (n = e.application) ? void 0 : n.id) === t.id;
-                    });
-                    null != l && y(l);
+                    let l = n.find((e) => e.application?.id === t.id);
+                    null != l && T(l);
                 })(),
                 () => {
                     e = !0;
                 }
             );
-        }, [_, t.id]);
-    let O = r.useCallback(() => {
-            j(!1),
-                s.Ay.trackWithMetadata(x.HAw.IAR_REMOVE_APP_BUTTON_CLICKED, {
-                    guild_id: _,
+        }, [f, t.id]);
+    let N = a.useCallback(() => {
+            v(!1),
+                s.Ay.trackWithMetadata(g.HAw.IAR_REMOVE_APP_BUTTON_CLICKED, {
+                    guild_id: f,
                     application_id: t.id,
                     report_id: n,
                 }),
-                null != _ &&
-                    null != A &&
-                    o.A.disableIntegration(_, A.id).catch(() => {
-                        i.A.show({
-                            title: g.intl.string(g.t.wYqMmI),
-                            body: g.intl.string(g.t.A4Mnst),
-                        });
+                null != f &&
+                    null != j &&
+                    d.A.disableIntegration(f, j.id).catch(() => {
+                        r.A.show({ title: h.intl.string(h.t.wYqMmI), body: h.intl.string(h.t.A4Mnst) });
                     });
-        }, [t.id, _, A, n]),
-        S = (0, a.bG)([b.A, m.A], () => {
-            let e = m.A.getGuild(_);
+        }, [t.id, f, j, n]),
+        S = (0, i.bG)([_.A, m.A], () => {
+            let e = m.A.getGuild(f);
             if (null == e) return !1;
-            let n = b.A.can(x.xBc.MANAGE_GUILD, e),
-                l = null == t.bot || b.A.canManageUser(x.xBc.MANAGE_GUILD, t.bot.id, e);
+            let n = _.A.can(g.xBc.MANAGE_GUILD, e),
+                l = null == t.bot || _.A.canManageUser(g.xBc.MANAGE_GUILD, t.bot.id, e);
             return n && l;
         });
-    return null != t && null != _ && f && S
-        ? (0, l.jsx)(d.PQ, {
-              title: g.intl.string(g.t["WV/CsH"]),
-              description: g.intl.string(g.t["FlcC+3"]),
-              buttonText: h ? g.intl.string(g.t.aCJlq4) : g.intl.string(g.t["6I1F3i"]),
-              buttonDisabled: !h,
-              onButtonPress: O,
-              buttonVariant: h ? "critical-primary" : "secondary",
+    return null != t && null != f && p && S
+        ? (0, l.jsx)(u.PQ, {
+              title: h.intl.string(h.t["WV/CsH"]),
+              description: h.intl.string(h.t["FlcC+3"]),
+              buttonText: b ? h.intl.string(h.t.aCJlq4) : h.intl.string(h.t["6I1F3i"]),
+              buttonDisabled: !b,
+              onButtonPress: N,
+              buttonVariant: b ? "critical-primary" : "secondary",
           })
         : null;
 };

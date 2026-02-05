@@ -1,15 +1,6 @@
-n.d(t, {
-    Z: () => a,
-});
-var r = n(311907),
-    i = n(287809);
-
-function a() {
-    return (
-        !1 ===
-        (0, r.bG)([i.default], () => {
-            var e;
-            return null == (e = i.default.getCurrentUser()) ? void 0 : e.nsfwAllowed;
-        })
-    );
+n.d(t, { Z: () => s });
+var i = n(311907),
+    l = n(287809);
+function s() {
+    return !1 === (0, i.bG)([l.default], () => l.default.getCurrentUser()?.nsfwAllowed);
 }

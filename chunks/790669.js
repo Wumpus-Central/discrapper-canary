@@ -1,3 +1,4 @@
+"use strict";
 var r = n(906046),
     i = r("Date.prototype.getDay"),
     a = function (e) {

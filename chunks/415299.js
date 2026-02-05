@@ -1,42 +1,35 @@
-l.d(t, {
-    v: () => u,
-});
-var n = l(64700),
+l.d(t, { v: () => u });
+var s = l(64700),
     a = l(508425),
-    s = l(559949),
-    r = l(631670),
-    i = l(159001),
+    n = l(559949),
+    i = l(631670),
+    r = l(159001),
     o = l(207803),
-    c = l(954571),
-    d = l(652215);
-
+    d = l(954571),
+    c = l(652215);
 function u(e) {
     let {
         hasChanges: t,
         selectedFontId: l,
         selectedEffectId: u,
-        selectedColors: f,
-        defaultColor: m,
-        guildId: b,
-        isTryItOut: p,
-        onClose: x,
+        selectedColors: m,
+        defaultColor: _,
+        guildId: x,
+        isTryItOut: g,
+        onClose: h,
     } = e;
-    return n.useCallback(() => {
+    return s.useCallback(() => {
         if (t) {
-            let e = f;
-            u === a.z.SOLID && f.length > 0 && f[0] === m && (e = []);
-            let t = {
-                fontId: l,
-                effectId: u,
-                colors: e,
-            };
-            null != b ? (0, i.mZ)(t) : p ? (0, o.EW)(t) : (0, r.dM)(t),
-                c.default.track(d.HAw.DISPLAY_NAME_STYLES_APPLIED, {
-                    font_name: s.x[l],
+            let e = m;
+            u === a.z.SOLID && m.length > 0 && m[0] === _ && (e = []);
+            let t = { fontId: l, effectId: u, colors: e };
+            null != x ? (0, r.mZ)(t) : g ? (0, o.EW)(t) : (0, i.dM)(t),
+                d.default.track(c.HAw.DISPLAY_NAME_STYLES_APPLIED, {
+                    font_name: n.x[l],
                     effect_name: a.z[u],
-                    colors: f,
+                    colors: m,
                 }),
-                null == x || x();
+                h?.();
         }
-    }, [t, l, u, f, m, x, b, p]);
+    }, [t, l, u, m, _, h, x, g]);
 }

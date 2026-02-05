@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,44 +8,11 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author", "contents"],
         prohibitedProps: [],
-        props: {
-            "aria-disabled": null,
-            "aria-expanded": null,
-        },
+        props: { "aria-disabled": null, "aria-expanded": null },
         relatedConcepts: [
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "href",
-                        },
-                    ],
-                    name: "a",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "href",
-                        },
-                    ],
-                    name: "area",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "href",
-                        },
-                    ],
-                    name: "link",
-                },
-                module: "HTML",
-            },
+            { concept: { attributes: [{ name: "href" }], name: "a" }, module: "HTML" },
+            { concept: { attributes: [{ name: "href" }], name: "area" }, module: "HTML" },
+            { concept: { attributes: [{ name: "href" }], name: "link" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

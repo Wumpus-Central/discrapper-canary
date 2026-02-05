@@ -1,116 +1,79 @@
-n.d(t, {
-    C: () => b,
-});
-var r = n(627968);
+n.d(t, { C: () => N });
+var l = n(627968);
 n(64700);
-var i = n(991660),
-    a = n(158954),
+var a = n(991660),
+    r = n(158954),
     s = n(311907),
-    o = n(397927),
-    l = n(587895),
-    c = n(212534),
-    u = n(272859),
-    d = n(957565),
-    f = n(943775),
+    i = n(397927),
+    o = n(587895),
+    d = n(212534),
+    c = n(272859),
+    u = n(957565),
+    m = n(943775),
     p = n(997997),
-    _ = n(816709),
+    A = n(816709),
     h = n(652215),
-    m = n(985018),
-    g = n(356426),
-    E = n(22789);
-
-function b(e) {
-    let { appId: t, skuId: n, transitionState: b, onClose: y, children: O, footer: A } = e,
-        v = (0, s.bG)([l.A, c.A], () => {
-            var e;
-            return null != (e = l.A.getApplication(t)) ? e : c.A.getApplicationRecord(t);
-        }, [t]),
-        { data: S } = (0, u.d)(n);
-    if (null == v) return null;
-    let I = (0, f.A)(v, 25),
-        { termsOfServiceUrl: T, privacyPolicyUrl: C } = v;
-    if ((null == S ? void 0 : S.applicationId) !== t)
-        return (0, r.jsx)(a.Modal, {
-            actions: [
-                {
-                    onClick: y,
-                    text: m.intl.string(m.t.BddRzS),
-                    variant: "primary",
-                },
-            ],
-            onClose: y,
+    C = n(985018),
+    E = n(356426),
+    x = n(22789);
+function N(e) {
+    let { appId: t, skuId: n, transitionState: N, onClose: I, children: _, footer: f } = e,
+        g = (0, s.bG)([o.A, d.A], () => o.A.getApplication(t) ?? d.A.getApplicationRecord(t), [t]),
+        { data: T } = (0, c.d)(n);
+    if (null == g) return null;
+    let v = (0, m.A)(g, 25),
+        { termsOfServiceUrl: j, privacyPolicyUrl: S } = g;
+    if (T?.applicationId !== t)
+        return (0, l.jsx)(r.Modal, {
+            actions: [{ onClick: I, text: C.intl.string(C.t.BddRzS), variant: "primary" }],
+            onClose: I,
             size: "sm",
-            transitionState: b,
-            title: m.intl.string(m.t["0Bf80I"]),
-            children: (0, r.jsx)(o.Text, {
+            transitionState: N,
+            title: C.intl.string(C.t["0Bf80I"]),
+            children: (0, l.jsx)(i.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                className: g.$r,
-                children: m.intl.string(m.t.omH3bq),
+                className: E.$r,
+                children: C.intl.string(C.t.omH3bq),
             }),
         });
-    let N =
-        null != I
-            ? (0, r.jsx)("img", {
-                  src: I.href,
-                  alt: "",
-                  className: g.Z2,
-              })
-            : void 0;
-    return (0, r.jsxs)(a.dWK, {
-        onClose: y,
+    let O = null != v ? (0, l.jsx)("img", { src: v.href, alt: "", className: E.Z2 }) : void 0;
+    return (0, l.jsxs)(r.dWK, {
+        onClose: I,
         size: "lg",
-        transitionState: b,
+        transitionState: N,
         children: [
-            (0, r.jsx)(a.rQ0, {
-                leading: N,
-                title: v.name,
-            }),
-            (0, r.jsx)(i.A, {
-                children: (0, r.jsx)("main", {
-                    className: E.bodyInner,
-                    children: O,
-                }),
-            }),
-            (0, r.jsx)(a.jlY, {
-                children: (0, r.jsxs)("div", {
-                    className: g.qr,
+            (0, l.jsx)(r.rQ0, { leading: O, title: g.name }),
+            (0, l.jsx)(a.A, { children: (0, l.jsx)("main", { className: x.bodyInner, children: _ }) }),
+            (0, l.jsx)(r.jlY, {
+                children: (0, l.jsxs)("div", {
+                    className: E.qr,
                     children: [
-                        null != T || null != C
-                            ? (0, r.jsx)(o.Text, {
+                        null != j || null != S
+                            ? (0, l.jsx)(i.Text, {
                                   color: "text-strong",
                                   variant: "text-sm/normal",
-                                  children: (0, r.jsx)(_.A, {
-                                      termsOfServiceUrl: T,
-                                      privacyPolicyUrl: C,
-                                  }),
+                                  children: (0, l.jsx)(A.A, { termsOfServiceUrl: j, privacyPolicyUrl: S }),
                               })
-                            : (0, r.jsx)(o.Text, {
+                            : (0, l.jsx)(i.Text, {
                                   color: "text-strong",
                                   variant: "text-xs/normal",
-                                  children: m.intl.string(m.t["3ZY+0D"]),
+                                  children: C.intl.string(C.t["3ZY+0D"]),
                               }),
-                        (0, r.jsxs)("div", {
-                            className: g.Hq,
+                        (0, l.jsxs)("div", {
+                            className: E.Hq,
                             children: [
-                                d.p5 &&
-                                    (0, r.jsx)(o.K0, {
-                                        "aria-label": m.intl.string(m.t.WqhZss),
-                                        icon: () =>
-                                            (0, r.jsx)(o.qYV, {
-                                                size: "xs",
-                                                color: "currentColor",
-                                            }),
+                                u.p5 &&
+                                    (0, l.jsx)(i.K0, {
+                                        "aria-label": C.intl.string(C.t.WqhZss),
+                                        icon: () => (0, l.jsx)(i.qYV, { size: "xs", color: "currentColor" }),
                                         onClick: () => {
-                                            let e = ""
-                                                .concat(location.protocol, "//")
-                                                .concat(location.host)
-                                                .concat(h.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n));
-                                            (0, d.C)(e, () =>
-                                                (0, o.showToast)(
-                                                    (0, o.createToast)(
-                                                        m.intl.string(m.t["L/PwZf"]),
-                                                        o.ToastType.SUCCESS,
+                                            let e = `${location.protocol}//${location.host}${h.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n)}`;
+                                            (0, u.C)(e, () =>
+                                                (0, i.showToast)(
+                                                    (0, i.createToast)(
+                                                        C.intl.string(C.t["L/PwZf"]),
+                                                        i.ToastType.SUCCESS,
                                                     ),
                                                 ),
                                             ),
@@ -118,7 +81,7 @@ function b(e) {
                                         },
                                         variant: "icon-only",
                                     }),
-                                A,
+                                f,
                             ],
                         }),
                     ],

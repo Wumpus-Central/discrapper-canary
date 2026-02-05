@@ -1,27 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    o = n(961350);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class l extends (r = i.Ay.Store) {
+"use strict";
+n.d(t, { A: () => o });
+var r = n(311907),
+    i = n(73153),
+    a = n(961350);
+class s extends r.Ay.Store {
+    static displayName = "VoiceDareTrackingStore";
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(a.default);
     }
     getProgressForUserId(e) {
         return null;
@@ -39,5 +24,4 @@ class l extends (r = i.Ay.Store) {
         return null;
     }
 }
-s(l, "displayName", "VoiceDareTrackingStore");
-let c = new l(a.h, {});
+let o = new s(i.h, {});

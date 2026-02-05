@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     var t = e.reduce(function (e, t) {
         var n = e[t.name];
@@ -15,6 +16,4 @@ function r(e) {
         return t[e];
     });
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

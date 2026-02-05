@@ -1,16 +1,12 @@
-n.d(t, {
-    X: () => l,
-}),
-    n(896048);
+n.d(t, { X: () => i });
 var r = n(64700);
-
-function l(e) {
+function i(e) {
     let { slideCount: t, intervalMs: n = 3e3 } = e,
-        [l, a] = (0, r.useState)(0),
-        [i, s] = (0, r.useState)(!1),
+        [i, a] = (0, r.useState)(0),
+        [l, s] = (0, r.useState)(!1),
         c = (0, r.useCallback)(
             (e) => {
-                i ||
+                l ||
                     e < 0 ||
                     e >= t ||
                     (s(!0),
@@ -18,19 +14,16 @@ function l(e) {
                         a(e), s(!1);
                     }, 300));
             },
-            [i, t, 300],
+            [l, t, 300],
         );
     return (
         (0, r.useEffect)(() => {
             if (t <= 1) return;
             let e = setInterval(() => {
-                c((l + 1) % t);
+                c((i + 1) % t);
             }, n);
             return () => clearInterval(e);
-        }, [t, n, l, c]),
-        {
-            activeSlide: l,
-            isTransitioning: i,
-        }
+        }, [t, n, i, c]),
+        { activeSlide: i, isTransitioning: l }
     );
 }

@@ -1,3 +1,4 @@
+"use strict";
 var n = r(617179),
     i = r(27395),
     o = r(116740);
@@ -71,10 +72,7 @@ t.exports = function (t, e) {
         m === _
             ? p(m.getCharacterList(), g, v)
             : m.getCharacterList().slice(0, g).concat(_.getCharacterList().slice(v));
-    var x = m.merge({
-            text: m.getText().slice(0, g) + _.getText().slice(v),
-            characterList: o,
-        }),
+    var x = m.merge({ text: m.getText().slice(0, g) + _.getText().slice(v), characterList: o }),
         C =
             b && 0 === g && 0 === v && _.getParentKey() === d && null == _.getPrevSiblingKey()
                 ? a([[d, null]])
@@ -102,16 +100,10 @@ t.exports = function (t, e) {
             (E = (r = E).withMutations(function (t) {
                 if (
                     (s(m.getKey(), t, function (e) {
-                        return e.merge({
-                            nextSibling: l(e, t, h),
-                            prevSibling: f(e, t, h),
-                        });
+                        return e.merge({ nextSibling: l(e, t, h), prevSibling: f(e, t, h) });
                     }),
                     s(_.getKey(), t, function (e) {
-                        return e.merge({
-                            nextSibling: l(e, t, h),
-                            prevSibling: f(e, t, h),
-                        });
+                        return e.merge({ nextSibling: l(e, t, h), prevSibling: f(e, t, h) });
                     }),
                     u(m.getKey(), h).forEach(function (e) {
                         return s(e, t, function (e) {
@@ -125,24 +117,16 @@ t.exports = function (t, e) {
                         });
                     }),
                     s(m.getNextSiblingKey(), t, function (t) {
-                        return t.merge({
-                            prevSibling: m.getPrevSiblingKey(),
-                        });
+                        return t.merge({ prevSibling: m.getPrevSiblingKey() });
                     }),
                     s(m.getPrevSiblingKey(), t, function (e) {
-                        return e.merge({
-                            nextSibling: l(e, t, h),
-                        });
+                        return e.merge({ nextSibling: l(e, t, h) });
                     }),
                     s(_.getNextSiblingKey(), t, function (e) {
-                        return e.merge({
-                            prevSibling: f(e, t, h),
-                        });
+                        return e.merge({ prevSibling: f(e, t, h) });
                     }),
                     s(_.getPrevSiblingKey(), t, function (t) {
-                        return t.merge({
-                            nextSibling: _.getNextSiblingKey(),
-                        });
+                        return t.merge({ nextSibling: _.getNextSiblingKey() });
                     }),
                     u(_.getKey(), h).forEach(function (e) {
                         s(e, t, function (e) {
@@ -157,10 +141,7 @@ t.exports = function (t, e) {
                     }),
                     c(_, h).forEach(function (e) {
                         return s(e, t, function (e) {
-                            return e.merge({
-                                nextSibling: l(e, t, h),
-                                prevSibling: f(e, t, h),
-                            });
+                            return e.merge({ nextSibling: l(e, t, h), prevSibling: f(e, t, h) });
                         });
                     }),
                     null == r.get(m.getKey()) &&
@@ -170,32 +151,24 @@ t.exports = function (t, e) {
                 ) {
                     var e = m.getPrevSiblingKey();
                     s(_.getKey(), t, function (t) {
-                        return t.merge({
-                            prevSibling: e,
-                        });
+                        return t.merge({ prevSibling: e });
                     }),
                         s(e, t, function (t) {
-                            return t.merge({
-                                nextSibling: _.getKey(),
-                            });
+                            return t.merge({ nextSibling: _.getKey() });
                         });
                     var n = e ? r.get(e) : null,
                         i = n ? n.getParentKey() : null;
                     if (
                         (m.getChildKeys().forEach(function (e) {
                             s(e, t, function (t) {
-                                return t.merge({
-                                    parent: i,
-                                });
+                                return t.merge({ parent: i });
                             });
                         }),
                         null != i)
                     ) {
                         var o = r.get(i);
                         s(i, t, function (t) {
-                            return t.merge({
-                                children: o.getChildKeys().concat(m.getChildKeys()),
-                            });
+                            return t.merge({ children: o.getChildKeys().concat(m.getChildKeys()) });
                         });
                     }
                     s(
@@ -204,9 +177,7 @@ t.exports = function (t, e) {
                         }),
                         t,
                         function (t) {
-                            return t.merge({
-                                nextSibling: m.getNextSiblingKey(),
-                            });
+                            return t.merge({ nextSibling: m.getNextSiblingKey() });
                         },
                     );
                 }
@@ -214,13 +185,7 @@ t.exports = function (t, e) {
         t.merge({
             blockMap: E,
             selectionBefore: e,
-            selectionAfter: e.merge({
-                anchorKey: d,
-                anchorOffset: g,
-                focusKey: d,
-                focusOffset: g,
-                isBackward: !1,
-            }),
+            selectionAfter: e.merge({ anchorKey: d, anchorOffset: g, focusKey: d, focusOffset: g, isBackward: !1 }),
         })
     );
 };

@@ -1,162 +1,62 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048),
-    n(264879),
-    n(228524);
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(92674),
+    s = n.n(a),
+    o = n(92674),
     l = n(158954),
-    c = n(397927),
-    u = n(263215),
+    u = n(397927),
+    c = n(263215),
     d = n(333354),
-    f = n(985018),
-    p = n(68388);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function E(e) {
+    _ = n(985018),
+    f = n(68388);
+function p(e) {
     let { powerup: t } = e;
-    return (0, r.jsx)(l.EYj, {
-        tag: "span",
-        variant: "text-md/semibold",
-        className: p.Zt,
-        children: t.title,
-    });
+    return (0, r.jsx)(l.EYj, { tag: "span", variant: "text-md/semibold", className: f.Zt, children: t.title });
 }
-
-function y(e) {
+function h(e) {
     let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
-        _ = (0, u.A)(t.id),
-        [m, y] = i.useState(!1),
-        [b, O] = (0, c.zhh)(() => ({
-            scale: 0.8,
-            config: {
-                tension: 500,
-                friction: 10,
-            },
-        }));
+        h = (0, c.A)(t.id),
+        [m, g] = i.useState(!1),
+        [E, A] = (0, u.zhh)(() => ({ scale: 0.8, config: { tension: 500, friction: 10 } }));
     i.useEffect(() => {
         let e = setTimeout(() => {
-            O({
-                scale: 1,
-            }),
-                y(!0);
+            A({ scale: 1 }), g(!0);
         }, 300);
         return () => clearTimeout(e);
-    }, [O]);
-    let v = i.useMemo(() => {
+    }, [A]);
+    let I = i.useMemo(() => {
         let e;
-        if (null == _ || 0 === _.length) return "";
-        if (1 === _.length)
-            e = (0, r.jsx)(E, {
-                powerup: _[0],
-            });
-        else if (2 === _.length)
-            e = f.intl.format(d.default.MNO3sG, {
-                perk1: (0, r.jsx)(E, {
-                    powerup: _[0],
-                }),
-                perk2: (0, r.jsx)(E, {
-                    powerup: _[1],
-                }),
+        if (null == h || 0 === h.length) return "";
+        if (1 === h.length) e = (0, r.jsx)(p, { powerup: h[0] });
+        else if (2 === h.length)
+            e = _.intl.format(d.default.MNO3sG, {
+                perk1: (0, r.jsx)(p, { powerup: h[0] }),
+                perk2: (0, r.jsx)(p, { powerup: h[1] }),
             });
         else {
-            let t = Array.from(_).reverse();
-            e = f.intl.format(d.default.GmN3Vf, {
-                perk1: (0, r.jsx)(E, {
-                    powerup: t[0],
-                }),
-                perk2: (0, r.jsx)(E, {
-                    powerup: t[1],
-                }),
+            let t = Array.from(h).reverse();
+            e = _.intl.format(d.default.GmN3Vf, {
+                perk1: (0, r.jsx)(p, { powerup: t[0] }),
+                perk2: (0, r.jsx)(p, { powerup: t[1] }),
             });
         }
-        return f.intl.format(d.default["/6GgQq"], {
-            perks: e,
-        });
-    }, [_]);
-    return null == _ || 0 === _.length
+        return _.intl.format(d.default["/6GgQq"], { perks: e });
+    }, [h]);
+    return null == h || 0 === h.length
         ? null
-        : (0, r.jsxs)(s.animated.div, {
-              className: o()(p.kL, {
-                  [p.Vz]: n,
-              }),
-              style: g(h({}, b), {
-                  opacity: +!!m,
-              }),
+        : (0, r.jsxs)(o.animated.div, {
+              className: s()(f.kL, { [f.Vz]: n }),
+              style: { ...E, opacity: +!!m },
               children: [
                   (0, r.jsx)(l.EYj, {
                       tag: "span",
                       variant: "text-md/semibold",
-                      className: o()(p.h_, {
-                          [p.Qq]: !n,
-                          [p.sl]: n,
-                      }),
-                      children: v,
+                      className: s()(f.h_, { [f.Qq]: !n, [f.sl]: n }),
+                      children: I,
                   }),
-                  (0, r.jsx)(l.$nd, {
-                      variant: "primary",
-                      text: f.intl.string(d.default.E5V5KK),
-                      onClick: a,
-                  }),
+                  (0, r.jsx)(l.$nd, { variant: "primary", text: _.intl.string(d.default.E5V5KK), onClick: a }),
               ],
           });
 }

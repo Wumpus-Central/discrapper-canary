@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     d: "headerWave__1dfae",
     S4: "bodyWave__1dfae",

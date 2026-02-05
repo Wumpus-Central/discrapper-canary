@@ -1,22 +1,20 @@
-i.d(e, {
-    o: () => A,
-});
+i.d(e, { o: () => T });
 var n = i(64700),
     l = i(171316),
     s = i(419954),
     r = i(115063),
-    u = i(253932),
-    a = i(780964),
+    a = i(253932),
+    u = i(780964),
     o = i(652215),
-    T = i(985018);
-let A = (0, s.zD)(a.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_EVERYONE_SETTING, {
-    useTitle: () => T.intl.string(T.t["7x9dyE"]),
+    d = i(985018);
+let T = (0, s.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_EVERYONE_SETTING, {
+    useTitle: () => d.intl.string(d.t["7x9dyE"]),
     useValue: () => {
-        let t = u.FA.useSetting();
+        let t = a.FA.useSetting();
         return n.useMemo(() => (0, r.Lx)(t), [t]).all;
     },
     setValue: (t) => {
-        u.FA.updateSetting(t ? o.yKI : o.yKI & ~o.dzt.NO_RELATION);
+        a.FA.updateSetting(t ? o.yKI : o.yKI & ~o.dzt.NO_RELATION);
     },
     useDisabled: () => (0, l.uM)(),
 });

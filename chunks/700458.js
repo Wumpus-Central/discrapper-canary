@@ -1,38 +1,25 @@
-n.d(t, {
-    Oi: () => s,
-    Tj: () => c,
-    ZM: () => o,
-}),
-    n(65821),
-    n(896048);
-var r,
-    i = n(627968),
+"use strict";
+n.d(t, { Oi: () => r, Tj: () => o, ZM: () => d });
+var i,
+    s = n(627968),
     l = n(64700),
-    s =
-        (((r = {})[(r.BASIC_INFO = 0)] = "BASIC_INFO"),
-        (r[(r.TIERS = 1)] = "TIERS"),
-        (r[(r.PAYMENT = 2)] = "PAYMENT"),
-        (r[(r.EMOJIS = 3)] = "EMOJIS"),
-        r);
+    r =
+        (((i = {})[(i.BASIC_INFO = 0)] = "BASIC_INFO"),
+        (i[(i.TIERS = 1)] = "TIERS"),
+        (i[(i.PAYMENT = 2)] = "PAYMENT"),
+        (i[(i.EMOJIS = 3)] = "EMOJIS"),
+        i);
 let a = l.createContext({
     currentTab: 0,
     setCurrentTab: () => {
         throw Error("useTabBarState must be used within TabBarContextProvider");
     },
 });
-
-function c() {
+function o() {
     return l.useContext(a);
 }
-
-function o(e) {
+function d(e) {
     let { initialTab: t, children: n } = e,
-        [r, s] = l.useState(t);
-    return (0, i.jsx)(a.Provider, {
-        value: {
-            currentTab: r,
-            setCurrentTab: s,
-        },
-        children: n,
-    });
+        [i, r] = l.useState(t);
+    return (0, s.jsx)(a.Provider, { value: { currentTab: i, setCurrentTab: r }, children: n });
 }

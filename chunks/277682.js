@@ -1,57 +1,34 @@
-n.d(t, {
-    A: () => f,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(954571),
-    o = n(765682),
-    l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = {
-    permissionStates: {},
-};
-class d extends (r = i.Ay.DeviceSettingsStore) {
+"use strict";
+n.d(t, { A: () => c });
+var r = n(311907),
+    i = n(73153),
+    a = n(954571),
+    s = n(765682),
+    o = n(652215);
+let l = { permissionStates: {} };
+class u extends r.Ay.DeviceSettingsStore {
+    static displayName = "NativePermissionStore";
+    static persistKey = "NativePermissionsStore";
+    constructor() {
+        super(i.h, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
+    }
     initialize(e) {
-        u = null != e ? e : u;
+        l = e ?? l;
     }
     getUserAgnosticState() {
-        return u;
+        return l;
     }
     hasPermission(e) {
-        let t = u.permissionStates[e];
-        return null != t && t === o.hL.ACCEPTED;
+        let t = l.permissionStates[e];
+        return null != t && t === s.hL.ACCEPTED;
     }
     handleSetNativePermission(e) {
         let { state: t, permissionType: n } = e,
-            r = u.permissionStates,
+            r = l.permissionStates,
             i = r[n];
         (r[n] = t),
             i !== t &&
-                s.default.track(l.HAw.PERMISSIONS_ACKED, {
-                    type: n,
-                    action: t,
-                    previous_action: null != i ? i : o.hL.NONE,
-                });
-    }
-    constructor() {
-        super(a.h, {
-            SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e),
-        });
+                a.default.track(o.HAw.PERMISSIONS_ACKED, { type: n, action: t, previous_action: i ?? s.hL.NONE });
     }
 }
-c(d, "displayName", "NativePermissionStore"), c(d, "persistKey", "NativePermissionsStore");
-let f = d;
+let c = u;

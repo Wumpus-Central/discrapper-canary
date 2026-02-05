@@ -23,10 +23,7 @@ e.exports = function (e) {
                     {
                         scope: "doctag",
                         match: /@examples/,
-                        starts: {
-                            end: t.lookahead(t.either(/\n^#'\s*(?=@[a-zA-Z]+)/, /\n^(?!#')/)),
-                            endsParent: !0,
-                        },
+                        starts: { end: t.lookahead(t.either(/\n^#'\s*(?=@[a-zA-Z]+)/, /\n^(?!#')/)), endsParent: !0 },
                     },
                     {
                         scope: "doctag",
@@ -35,26 +32,13 @@ e.exports = function (e) {
                         contains: [
                             {
                                 scope: "variable",
-                                variants: [
-                                    {
-                                        match: n,
-                                    },
-                                    {
-                                        match: /`(?:\\.|[^`\\])+`/,
-                                    },
-                                ],
+                                variants: [{ match: n }, { match: /`(?:\\.|[^`\\])+`/ }],
                                 endsParent: !0,
                             },
                         ],
                     },
-                    {
-                        scope: "doctag",
-                        match: /@[a-zA-Z]+/,
-                    },
-                    {
-                        scope: "keyword",
-                        match: /\\[a-zA-Z]+/,
-                    },
+                    { scope: "doctag", match: /@[a-zA-Z]+/ },
+                    { scope: "keyword", match: /\\[a-zA-Z]+/ },
                 ],
             }),
             e.HASH_COMMENT_MODE,
@@ -62,106 +46,29 @@ e.exports = function (e) {
                 scope: "string",
                 contains: [e.BACKSLASH_ESCAPE],
                 variants: [
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]"(-*)\(/,
-                        end: /\)(-*)"/,
-                    }),
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]"(-*)\{/,
-                        end: /\}(-*)"/,
-                    }),
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]"(-*)\[/,
-                        end: /\](-*)"/,
-                    }),
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]'(-*)\(/,
-                        end: /\)(-*)'/,
-                    }),
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]'(-*)\{/,
-                        end: /\}(-*)'/,
-                    }),
-                    e.END_SAME_AS_BEGIN({
-                        begin: /[rR]'(-*)\[/,
-                        end: /\](-*)'/,
-                    }),
-                    {
-                        begin: '"',
-                        end: '"',
-                        relevance: 0,
-                    },
-                    {
-                        begin: "'",
-                        end: "'",
-                        relevance: 0,
-                    },
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]"(-*)\(/, end: /\)(-*)"/ }),
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]"(-*)\{/, end: /\}(-*)"/ }),
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]"(-*)\[/, end: /\](-*)"/ }),
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]'(-*)\(/, end: /\)(-*)'/ }),
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]'(-*)\{/, end: /\}(-*)'/ }),
+                    e.END_SAME_AS_BEGIN({ begin: /[rR]'(-*)\[/, end: /\](-*)'/ }),
+                    { begin: '"', end: '"', relevance: 0 },
+                    { begin: "'", end: "'", relevance: 0 },
                 ],
             },
             {
                 relevance: 0,
                 variants: [
-                    {
-                        scope: {
-                            1: "operator",
-                            2: "number",
-                        },
-                        match: [i, r],
-                    },
-                    {
-                        scope: {
-                            1: "operator",
-                            2: "number",
-                        },
-                        match: [/%[^%]*%/, r],
-                    },
-                    {
-                        scope: {
-                            1: "punctuation",
-                            2: "number",
-                        },
-                        match: [a, r],
-                    },
-                    {
-                        scope: {
-                            2: "number",
-                        },
-                        match: [/[^a-zA-Z0-9._]|^/, r],
-                    },
+                    { scope: { 1: "operator", 2: "number" }, match: [i, r] },
+                    { scope: { 1: "operator", 2: "number" }, match: [/%[^%]*%/, r] },
+                    { scope: { 1: "punctuation", 2: "number" }, match: [a, r] },
+                    { scope: { 2: "number" }, match: [/[^a-zA-Z0-9._]|^/, r] },
                 ],
             },
-            {
-                scope: {
-                    3: "operator",
-                },
-                match: [n, /\s+/, /<-/, /\s+/],
-            },
-            {
-                scope: "operator",
-                relevance: 0,
-                variants: [
-                    {
-                        match: i,
-                    },
-                    {
-                        match: /%[^%]*%/,
-                    },
-                ],
-            },
-            {
-                scope: "punctuation",
-                relevance: 0,
-                match: a,
-            },
-            {
-                begin: "`",
-                end: "`",
-                contains: [
-                    {
-                        begin: /\\./,
-                    },
-                ],
-            },
+            { scope: { 3: "operator" }, match: [n, /\s+/, /<-/, /\s+/] },
+            { scope: "operator", relevance: 0, variants: [{ match: i }, { match: /%[^%]*%/ }] },
+            { scope: "punctuation", relevance: 0, match: a },
+            { begin: "`", end: "`", contains: [{ begin: /\\./ }] },
         ],
     };
 };

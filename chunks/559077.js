@@ -1,25 +1,20 @@
-n.d(t, {
-    h: () => s,
-});
+"use strict";
+n.d(t, { h: () => s });
 var r = n(339241),
     i = n(492313),
     a = n(64700);
-
 function s(e = {}) {
     var t, n;
     let [o, l] = (0, i.P)(e.value, e.defaultValue || [], e.onChange),
-        [c] = (0, a.useState)(o),
-        u = !!e.isRequired && 0 === o.length,
+        [u] = (0, a.useState)(o),
+        c = !!e.isRequired && 0 === o.length,
         d = (0, a.useRef)(new Map()),
-        f = (0, r.KZ)({
-            ...e,
-            value: o,
-        }),
-        p = f.displayValidation.isInvalid;
+        _ = (0, r.KZ)({ ...e, value: o }),
+        f = _.displayValidation.isInvalid;
     return {
-        ...f,
+        ..._,
         value: o,
-        defaultValue: null != (t = e.defaultValue) ? t : c,
+        defaultValue: null != (t = e.defaultValue) ? t : u,
         setValue(t) {
             e.isReadOnly || e.isDisabled || l(t);
         },
@@ -37,10 +32,10 @@ function s(e = {}) {
         },
         setInvalid(e, t) {
             let n = new Map(d.current);
-            t.isInvalid ? n.set(e, t) : n.delete(e), (d.current = n), f.updateValidation((0, r.cX)(...n.values()));
+            t.isInvalid ? n.set(e, t) : n.delete(e), (d.current = n), _.updateValidation((0, r.cX)(...n.values()));
         },
-        validationState: null != (n = e.validationState) ? n : p ? "invalid" : null,
-        isInvalid: p,
-        isRequired: u,
+        validationState: null != (n = e.validationState) ? n : f ? "invalid" : null,
+        isInvalid: f,
+        isRequired: c,
     };
 }

@@ -1,93 +1,28 @@
-n.d(t, {
-    n: () => p,
-});
+"use strict";
+n.d(t, { n: () => u });
 var r = n(627968),
     i = n(397927),
     a = n(954571),
     s = n(188275),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = "social-layer-storefront-item-claimed-successfully-modal",
-    p = (e) => {
-        let { sku: t, application: l, analyticsLocations: u } = e;
+let l = "social-layer-storefront-item-claimed-successfully-modal",
+    u = (e) => {
+        let { sku: t, application: u, analyticsLocations: c } = e;
         (0, i.mMO)(
             async () => {
                 let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await n
                     .e("80307")
                     .then(n.bind(n, 472734));
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        d(c({}, n), {
-                            sku: t,
-                            application: l,
-                            analyticsLocations: u,
-                        }),
-                    );
+                return (n) => (0, r.jsx)(e, { ...n, sku: t, application: u, analyticsLocations: c });
             },
             {
-                modalKey: f,
+                modalKey: l,
                 onCloseCallback: () => {
                     a.default.track(o.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
                         type: s.e2,
                         sku_id: t.id,
-                        application_id: l.id,
-                        location_stack: null != u ? u : [],
+                        application_id: u.id,
+                        location_stack: c ?? [],
                     });
                 },
             },

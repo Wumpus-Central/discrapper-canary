@@ -1,111 +1,24 @@
-n.d(t, {
-    L: () => u,
-});
+"use strict";
+n.d(t, { L: () => s });
 var r = n(73153),
     i = n(425059),
     a = n(141468);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-async function u(e) {
-    let { channelId: t, message: n, items: s, shouldUploadFailureSendNotification: l } = e,
-        u = new i.A(),
-        d = (0, a.rh)(
-            c(o({}, n), {
-                id: u._file.id,
-            }),
-        );
-    u.on("start", (e) => {
-        r.h.dispatch({
-            type: "UPLOAD_START",
-            channelId: t,
-            file: e,
-            message: d,
-            uploader: u,
-        });
+async function s(e) {
+    let { channelId: t, message: n, items: s, shouldUploadFailureSendNotification: o } = e,
+        l = new i.A(),
+        u = (0, a.rh)({ ...n, id: l._file.id });
+    l.on("start", (e) => {
+        r.h.dispatch({ type: "UPLOAD_START", channelId: t, file: e, message: u, uploader: l });
     }),
-        u.on("progress", (e) => {
-            r.h.dispatch({
-                type: "UPLOAD_PROGRESS",
-                channelId: t,
-                file: e,
-            });
+        l.on("progress", (e) => {
+            r.h.dispatch({ type: "UPLOAD_PROGRESS", channelId: t, file: e });
         }),
-        u.on("error", (e, n, i, a) => {
-            r.h.dispatch({
-                type: "UPLOAD_FAIL",
-                channelId: t,
-                file: e,
-                messageId: d.id,
-                shouldSendNotification: l,
-            });
+        l.on("error", (e, n, i, a) => {
+            r.h.dispatch({ type: "UPLOAD_FAIL", channelId: t, file: e, messageId: u.id, shouldSendNotification: o });
         }),
-        u.on("complete", (e) => {
-            u._aborted &&
-                r.h.dispatch({
-                    type: "UPLOAD_COMPLETE",
-                    channelId: t,
-                    file: e,
-                    aborted: !0,
-                });
+        l.on("complete", (e) => {
+            l._aborted && r.h.dispatch({ type: "UPLOAD_COMPLETE", channelId: t, file: e, aborted: !0 });
         });
-    let f = await u.uploadFiles(s);
-    if (!u._aborted)
-        return {
-            attachments: f,
-            uploader: u,
-        };
+    let c = await l.uploadFiles(s);
+    if (!l._aborted) return { attachments: c, uploader: l };
 }

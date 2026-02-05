@@ -420,15 +420,8 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.COMMENT("\\(\\*", "\\*\\)"),
             e.C_NUMBER_MODE,
-            {
-                className: "type",
-                excludeBegin: !0,
-                begin: "\\|\\s*",
-                end: "\\w+",
-            },
-            {
-                begin: /[-=]>/,
-            },
+            { className: "type", excludeBegin: !0, begin: "\\|\\s*", end: "\\w+" },
+            { begin: /[-=]>/ },
         ],
     };
 };

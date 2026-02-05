@@ -1,87 +1,63 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(155718);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => g });
+var r = n(311907),
+    i = n(73153),
+    a = n(155718);
+let s = !1,
+    o = [],
+    l = !1;
+function u() {
+    (o = []), (s = !1), (l = !1);
 }
-let l = !1,
-    c = [],
-    u = !1;
-
+function c() {
+    if (l) return !1;
+    l = !0;
+}
 function d() {
-    (c = []), (l = !1), (u = !1);
+    if (!l) return !1;
+    l = !1;
 }
-
-function f() {
-    if (u) return !1;
-    u = !0;
-}
-
-function p() {
-    if (!u) return !1;
-    u = !1;
-}
-
 function _(e) {
     let { credentials: t } = e,
         n = !1;
-    return c !== t && ((c = t), (n = !0)), l || ((l = !0), (n = !0)), n;
+    return o !== t && ((o = t), (n = !0)), s || ((s = !0), (n = !0)), n;
 }
-
+function f(e) {
+    let { credential: t } = e;
+    if (t.type !== a.Wq.WEBAUTHN || void 0 !== o.find((e) => e.id === t.id)) return !1;
+    o = [...o, t];
+}
+function p(e) {
+    let { credential: t } = e;
+    if (t.type !== a.Wq.WEBAUTHN) return !1;
+    o = o.map((e) => (e.id === t.id ? t : e));
+}
 function h(e) {
     let { credential: t } = e;
-    if (t.type !== s.Wq.WEBAUTHN || void 0 !== c.find((e) => e.id === t.id)) return !1;
-    c = [...c, t];
+    if (t.type !== a.Wq.WEBAUTHN) return !1;
+    o = o.filter((e) => e.id !== t.id);
 }
-
-function m(e) {
-    let { credential: t } = e;
-    if (t.type !== s.Wq.WEBAUTHN) return !1;
-    c = c.map((e) => (e.id === t.id ? t : e));
-}
-
-function g(e) {
-    let { credential: t } = e;
-    if (t.type !== s.Wq.WEBAUTHN) return !1;
-    c = c.filter((e) => e.id !== t.id);
-}
-class E extends (r = i.Ay.Store) {
+class m extends r.Ay.Store {
+    static displayName = "WebAuthnStore";
     hasFetchedCredentials() {
-        return l;
+        return s;
     }
     get hasCredentials() {
-        return c.length > 0;
+        return o.length > 0;
     }
     getCredentials() {
-        return c;
+        return o;
     }
     hasPendingRegisterTrigger() {
-        return u;
+        return l;
     }
 }
-o(E, "displayName", "WebAuthnStore");
-let b = new E(a.h, {
-    LOGOUT: d,
+let g = new m(i.h, {
+    LOGOUT: u,
     MFA_WEBAUTHN_CREDENTIALS_LOADED: _,
-    AUTHENTICATOR_CREATE: h,
-    AUTHENTICATOR_UPDATE: m,
-    AUTHENTICATOR_DELETE: g,
-    WEBAUTHN_TRIGGER_REGISTER: f,
-    WEBAUTHN_CLEAR_REGISTER_TRIGGER: p,
+    AUTHENTICATOR_CREATE: f,
+    AUTHENTICATOR_UPDATE: p,
+    AUTHENTICATOR_DELETE: h,
+    WEBAUTHN_TRIGGER_REGISTER: c,
+    WEBAUTHN_CLEAR_REGISTER_TRIGGER: d,
 });

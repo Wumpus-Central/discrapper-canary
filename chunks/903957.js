@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     video: "video__1689b",
     container: "container__1689b",

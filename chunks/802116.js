@@ -1,139 +1,82 @@
-n.d(t, {
-    i: () => h,
-}),
-    n(896048);
-var i = n(735438),
-    l = n.n(i),
-    r = n(815807),
-    o = n(734057),
-    a = n(956703),
-    s = n(994500),
-    u = n(562153),
-    c = n(505527),
-    d = n(985018);
-let p = {
+i.d(t, { i: () => m });
+var n = i(735438),
+    l = i.n(n),
+    a = i(815807),
+    r = i(734057),
+    o = i(956703),
+    s = i(994500),
+    u = i(562153),
+    d = i(505527),
+    c = i(985018);
+let h = {
     standard: {
-        reactionTooltip1NInteractive: d.t.dgtYDJ,
-        reactionTooltip1N: d.t.mXild1,
-        reactionTooltip1: d.t.Oro30L,
-        reactionTooltip2NInteractive: d.t["0GBwVR"],
-        reactionTooltip2N: d.t.UWGs2n,
-        reactionTooltip2: d.t["p+0jvt"],
-        reactionTooltip3NInteractive: d.t["dK6/7W"],
-        reactionTooltip3N: d.t["UnXdX/"],
-        reactionTooltip3: d.t.bbPMcR,
-        reactionTooltipNInteractive: d.t.Thj7LX,
-        reactionTooltipN: d.t.CRrc7c,
+        reactionTooltip1NInteractive: c.t.dgtYDJ,
+        reactionTooltip1N: c.t.mXild1,
+        reactionTooltip1: c.t.Oro30L,
+        reactionTooltip2NInteractive: c.t["0GBwVR"],
+        reactionTooltip2N: c.t.UWGs2n,
+        reactionTooltip2: c.t["p+0jvt"],
+        reactionTooltip3NInteractive: c.t["dK6/7W"],
+        reactionTooltip3N: c.t["UnXdX/"],
+        reactionTooltip3: c.t.bbPMcR,
+        reactionTooltipNInteractive: c.t.Thj7LX,
+        reactionTooltipN: c.t.CRrc7c,
     },
     burst: {
-        reactionTooltip1NInteractive: d.t.G98B0W,
-        reactionTooltip1N: d.t["u/03eN"],
-        reactionTooltip1: d.t["z4q3+w"],
-        reactionTooltip2NInteractive: d.t.wkcffp,
-        reactionTooltip2N: d.t.T4EYUu,
-        reactionTooltip2: d.t.R2HykW,
-        reactionTooltip3NInteractive: d.t.OhtGxz,
-        reactionTooltip3N: d.t["M8bwl+"],
-        reactionTooltip3: d.t.sNl6XR,
-        reactionTooltipNInteractive: d.t.nsITOq,
-        reactionTooltipN: d.t.dkieH5,
+        reactionTooltip1NInteractive: c.t.G98B0W,
+        reactionTooltip1N: c.t["u/03eN"],
+        reactionTooltip1: c.t["z4q3+w"],
+        reactionTooltip2NInteractive: c.t.wkcffp,
+        reactionTooltip2N: c.t.T4EYUu,
+        reactionTooltip2: c.t.R2HykW,
+        reactionTooltip3NInteractive: c.t.OhtGxz,
+        reactionTooltip3N: c.t["M8bwl+"],
+        reactionTooltip3: c.t.sNl6XR,
+        reactionTooltipNInteractive: c.t.nsITOq,
+        reactionTooltipN: c.t.dkieH5,
     },
 };
-
-function h(e, t) {
-    var n, i;
-    let h = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.v.NORMAL,
-        m = arguments.length > 3 ? arguments[3] : void 0,
-        f = a.A.getReactions(e.getChannelId(), e.id, t, 3, h),
-        g = o.A.getChannel(e.getChannelId()),
-        b = null == g || g.isPrivate() ? null : g.getGuildId(),
-        y = e.getReaction(t),
-        O = h === c.v.BURST,
-        v = l()(Array.from(null != (n = null == f ? void 0 : f.values()) ? n : []))
+function m(e, t) {
+    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.v.NORMAL,
+        n = arguments.length > 3 ? arguments[3] : void 0,
+        m = o.A.getReactions(e.getChannelId(), e.id, t, 3, i),
+        p = r.A.getChannel(e.getChannelId()),
+        g = null == p || p.isPrivate() ? null : p.getGuildId(),
+        A = e.getReaction(t),
+        f = i === d.v.BURST,
+        T = l()(Array.from(m?.values() ?? []))
             .reject((e) => s.A.isBlockedOrIgnored(e.id))
             .take(3)
-            .map((e) => u.Ay.getName(b, null == g ? void 0 : g.id, e))
+            .map((e) => u.Ay.getName(g, p?.id, e))
             .value();
-    if (0 === v.length) return "";
-    let j = O ? p.burst : p.standard,
-        A = Math.max(
-            0,
-            (null != (i = O ? (null == y ? void 0 : y.burst_count) : null == y ? void 0 : y.count) ? i : 0) - v.length,
-        ),
-        T = (0, r.b3)(t);
-    if (1 === v.length)
-        if (!(A > 0))
-            return d.intl.formatToPlainString(j.reactionTooltip1, {
-                a: v[0],
-                emojiName: T,
-            });
-        else if (null != m)
-            return d.intl.format(j.reactionTooltip1NInteractive, {
-                a: v[0],
-                n: A,
-                emojiName: T,
-                onClick: m,
-            });
-        else
-            return d.intl.formatToPlainString(j.reactionTooltip1N, {
-                a: v[0],
-                n: A,
-                emojiName: T,
-            });
-    if (2 === v.length)
-        if (!(A > 0))
-            return d.intl.formatToPlainString(j.reactionTooltip2, {
-                a: v[0],
-                b: v[1],
-                emojiName: T,
-            });
-        else if (null != m)
-            return d.intl.format(j.reactionTooltip2NInteractive, {
-                a: v[0],
-                b: v[1],
-                n: A,
-                emojiName: T,
-                onClick: m,
-            });
-        else
-            return d.intl.formatToPlainString(j.reactionTooltip2N, {
-                a: v[0],
-                b: v[1],
-                n: A,
-                emojiName: T,
-            });
-    return 3 !== v.length
-        ? null != m
-            ? d.intl.format(j.reactionTooltipNInteractive, {
-                  n: A,
-                  emojiName: T,
-                  onClick: m,
-              })
-            : d.intl.formatToPlainString(j.reactionTooltipN, {
-                  n: A,
-                  emojiName: T,
-              })
-        : A > 0
-          ? null != m
-              ? d.intl.format(j.reactionTooltip3NInteractive, {
-                    a: v[0],
-                    b: v[1],
-                    c: v[2],
-                    n: A,
-                    emojiName: T,
-                    onClick: m,
+    if (0 === T.length) return "";
+    let E = f ? h.burst : h.standard,
+        I = Math.max(0, ((f ? A?.burst_count : A?.count) ?? 0) - T.length),
+        x = (0, a.b3)(t);
+    if (1 === T.length)
+        if (!(I > 0)) return c.intl.formatToPlainString(E.reactionTooltip1, { a: T[0], emojiName: x });
+        else if (null != n)
+            return c.intl.format(E.reactionTooltip1NInteractive, { a: T[0], n: I, emojiName: x, onClick: n });
+        else return c.intl.formatToPlainString(E.reactionTooltip1N, { a: T[0], n: I, emojiName: x });
+    if (2 === T.length)
+        if (!(I > 0)) return c.intl.formatToPlainString(E.reactionTooltip2, { a: T[0], b: T[1], emojiName: x });
+        else if (null != n)
+            return c.intl.format(E.reactionTooltip2NInteractive, { a: T[0], b: T[1], n: I, emojiName: x, onClick: n });
+        else return c.intl.formatToPlainString(E.reactionTooltip2N, { a: T[0], b: T[1], n: I, emojiName: x });
+    return 3 !== T.length
+        ? null != n
+            ? c.intl.format(E.reactionTooltipNInteractive, { n: I, emojiName: x, onClick: n })
+            : c.intl.formatToPlainString(E.reactionTooltipN, { n: I, emojiName: x })
+        : I > 0
+          ? null != n
+              ? c.intl.format(E.reactionTooltip3NInteractive, {
+                    a: T[0],
+                    b: T[1],
+                    c: T[2],
+                    n: I,
+                    emojiName: x,
+                    onClick: n,
                 })
-              : d.intl.formatToPlainString(j.reactionTooltip3N, {
-                    a: v[0],
-                    b: v[1],
-                    c: v[2],
-                    n: A,
-                    emojiName: T,
-                })
-          : d.intl.formatToPlainString(j.reactionTooltip3, {
-                a: v[0],
-                b: v[1],
-                c: v[2],
-                emojiName: T,
-            });
+              : c.intl.formatToPlainString(E.reactionTooltip3N, { a: T[0], b: T[1], c: T[2], n: I, emojiName: x })
+          : c.intl.formatToPlainString(E.reactionTooltip3, { a: T[0], b: T[1], c: T[2], emojiName: x });
 }

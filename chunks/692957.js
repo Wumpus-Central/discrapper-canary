@@ -1,17 +1,9 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(587895);
-
 function i(e) {
-    var t;
-    let { applicationId: n, activityConfigs: i, applications: a } = e,
-        s = null != (t = null == a ? void 0 : a.find((e) => e.id === n)) ? t : r.A.getApplication(n),
-        o = i.find((e) => e.application_id === n);
-    return null == o || null == s
-        ? null
-        : {
-              activity: o,
-              application: s,
-          };
+    let { applicationId: t, activityConfigs: n, applications: i } = e,
+        a = i?.find((e) => e.id === t) ?? r.A.getApplication(t),
+        s = n.find((e) => e.application_id === t);
+    return null == s || null == a ? null : { activity: s, application: a };
 }

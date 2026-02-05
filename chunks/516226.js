@@ -1,8 +1,4 @@
-n.d(t, {
-    M: () => a,
-});
-var r = n(64700),
-    i = n(818348);
-let a = r.createContext({
-    onAssetLoadComplete: i.tE,
-});
+n.d(t, { M: () => a });
+var i = n(64700),
+    l = n(818348);
+let a = i.createContext({ onAssetLoadComplete: l.tE });

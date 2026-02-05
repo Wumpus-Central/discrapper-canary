@@ -44,9 +44,7 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                begin: "->|<-[|:]?|#!?|>>=|\\{\\||\\|\\}|:==|=:|<>",
-            },
+            { begin: "->|<-[|:]?|#!?|>>=|\\{\\||\\|\\}|:==|=:|<>" },
         ],
     };
 };

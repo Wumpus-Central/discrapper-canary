@@ -3,16 +3,8 @@ e.exports = function (e) {
             className: "built_in",
             begin: "\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)",
         },
-        n = {
-            className: "symbol",
-            begin: "[a-zA-Z0-9_]+@",
-        },
-        r = {
-            className: "keyword",
-            begin: "<",
-            end: ">",
-            contains: [t, n],
-        };
+        n = { className: "symbol", begin: "[a-zA-Z0-9_]+@" },
+        r = { className: "keyword", begin: "<", end: ">", contains: [t, n] };
     return (
         (t.contains = [r]),
         (n.contains = [r]),
@@ -77,11 +69,7 @@ e.exports = function (e) {
                     contains: [e.BACKSLASH_ESCAPE],
                     relevance: 0,
                 },
-                {
-                    className: "string",
-                    begin: '"""',
-                    end: '"""',
-                },
+                { className: "string", begin: '"""', end: '"""' },
                 {
                     className: "string",
                     begin: '"',
@@ -92,21 +80,12 @@ e.exports = function (e) {
                 },
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                {
-                    className: "string",
-                    begin: "^\\s*\\[",
-                    end: "\\]",
-                },
+                { className: "string", begin: "^\\s*\\[", end: "\\]" },
                 {
                     beginKeywords: "interface namespace",
                     end: /\{/,
                     illegal: "[;.\\-]",
-                    contains: [
-                        {
-                            className: "symbol",
-                            begin: "[a-zA-Z0-9_]+",
-                        },
-                    ],
+                    contains: [{ className: "symbol", begin: "[a-zA-Z0-9_]+" }],
                 },
                 {
                     beginKeywords: "class",
@@ -117,25 +96,14 @@ e.exports = function (e) {
                             className: "symbol",
                             begin: "[a-zA-Z0-9_]+",
                             contains: [
-                                {
-                                    begin: "[:,]\\s*",
-                                    contains: [
-                                        {
-                                            className: "symbol",
-                                            begin: "[a-zA-Z0-9_]+",
-                                        },
-                                    ],
-                                },
+                                { begin: "[:,]\\s*", contains: [{ className: "symbol", begin: "[a-zA-Z0-9_]+" }] },
                             ],
                         },
                     ],
                 },
                 t,
                 n,
-                {
-                    className: "literal",
-                    begin: "\\b(null|true|false)",
-                },
+                { className: "literal", begin: "\\b(null|true|false)" },
                 {
                     className: "number",
                     relevance: 0,

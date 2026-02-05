@@ -1,21 +1,22 @@
-function t(e, t) {
-    return !!t && (e === t.documentElement || e === t.body);
+"use strict";
+function e(t, e) {
+    return !!e && (t === e.documentElement || t === e.body);
 }
-e.exports = {
-    getTop: function (e) {
-        var n = e.ownerDocument;
-        return t(e, n) ? n.body.scrollTop || n.documentElement.scrollTop : e.scrollTop;
+t.exports = {
+    getTop: function (t) {
+        var r = t.ownerDocument;
+        return e(t, r) ? r.body.scrollTop || r.documentElement.scrollTop : t.scrollTop;
     },
-    setTop: function (e, n) {
-        var r = e.ownerDocument;
-        t(e, r) ? (r.body.scrollTop = r.documentElement.scrollTop = n) : (e.scrollTop = n);
+    setTop: function (t, r) {
+        var n = t.ownerDocument;
+        e(t, n) ? (n.body.scrollTop = n.documentElement.scrollTop = r) : (t.scrollTop = r);
     },
-    getLeft: function (e) {
-        var n = e.ownerDocument;
-        return t(e, n) ? n.body.scrollLeft || n.documentElement.scrollLeft : e.scrollLeft;
+    getLeft: function (t) {
+        var r = t.ownerDocument;
+        return e(t, r) ? r.body.scrollLeft || r.documentElement.scrollLeft : t.scrollLeft;
     },
-    setLeft: function (e, n) {
-        var r = e.ownerDocument;
-        t(e, r) ? (r.body.scrollLeft = r.documentElement.scrollLeft = n) : (e.scrollLeft = n);
+    setLeft: function (t, r) {
+        var n = t.ownerDocument;
+        e(t, n) ? (n.body.scrollLeft = n.documentElement.scrollLeft = r) : (t.scrollLeft = r);
     },
 };

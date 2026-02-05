@@ -1,55 +1,37 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(203982),
-    o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = null,
-    u = 0;
-
-function d(e) {
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(73153),
+    a = n(203982),
+    s = n(652215);
+let o = null,
+    l = 0;
+function u(e) {
     let { contextMenu: t } = e;
-    u++, (c = t);
+    l++, (o = t);
 }
-
-function f() {
-    c = null;
+function c() {
+    o = null;
 }
-class p extends (r = i.Ay.Store) {
+class d extends r.Ay.Store {
+    static displayName = "ContextMenuStore";
     isOpen() {
-        return null != c;
+        return null != o;
     }
     get version() {
-        return u;
+        return l;
     }
     getContextMenu() {
-        return c;
+        return o;
     }
     close() {
-        return !!this.isOpen() && (s._.dispatch(o.jej.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (a._.dispatch(s.jej.CONTEXT_MENU_CLOSE), !0);
     }
 }
-l(p, "displayName", "ContextMenuStore");
-let _ = new p(a.h, {
-    CONTEXT_MENU_OPEN: d,
-    LAYER_PUSH: f,
-    CONTEXT_MENU_CLOSE: f,
-    OVERLAY_SET_INPUT_LOCKED: f,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: f,
+let _ = new d(i.h, {
+    CONTEXT_MENU_OPEN: u,
+    LAYER_PUSH: c,
+    CONTEXT_MENU_CLOSE: c,
+    OVERLAY_SET_INPUT_LOCKED: c,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: c,
 });

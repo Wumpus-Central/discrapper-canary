@@ -1,6 +1,5 @@
-n.d(t, {
-    _: () => a,
-});
+"use strict";
+n.d(t, { _: () => a });
 var r = n(627968);
 n(64700);
 var i = n(417098);
@@ -20,10 +19,7 @@ let a = {
                         DEFAULT: i.Hv.DEFAULT,
                         NEUTRAL: i.Hv.NEUTRAL,
                     };
-                return (0, r.jsx)(i.$T, {
-                    color: a[t],
-                    children: n,
-                });
+                return (0, r.jsx)(i.$T, { color: a[t], children: n });
             },
             controls: {
                 color: {
@@ -31,30 +27,12 @@ let a = {
                     label: "Color",
                     defaultValue: "BRAND",
                     options: [
-                        {
-                            label: "Brand",
-                            value: "BRAND",
-                        },
-                        {
-                            label: "Info",
-                            value: "INFO",
-                        },
-                        {
-                            label: "Warning",
-                            value: "WARNING",
-                        },
-                        {
-                            label: "Danger",
-                            value: "DANGER",
-                        },
-                        {
-                            label: "Default",
-                            value: "DEFAULT",
-                        },
-                        {
-                            label: "Neutral",
-                            value: "NEUTRAL",
-                        },
+                        { label: "Brand", value: "BRAND" },
+                        { label: "Info", value: "INFO" },
+                        { label: "Warning", value: "WARNING" },
+                        { label: "Danger", value: "DANGER" },
+                        { label: "Default", value: "DEFAULT" },
+                        { label: "Neutral", value: "NEUTRAL" },
                     ],
                 },
                 message: {

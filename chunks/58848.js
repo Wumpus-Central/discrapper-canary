@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => r,
-});
+a.d(t, { A: () => r });
 var n = a(303527);
 let r = {
     ordinalNumber: (0, a(722023).A)({
@@ -17,21 +15,13 @@ let r = {
             wide: /^(før Kristus|før vår tid|etter Kristus|vår tid)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^f/i, /^e/i],
-        },
+        parsePatterns: { any: [/^f/i, /^e/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, n.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^q[1234]/i,
-            wide: /^[1234](\.)? kvartal/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? kvartal/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -58,9 +48,7 @@ let r = {
             wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i],
-        },
+        parsePatterns: { any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, n.A)({

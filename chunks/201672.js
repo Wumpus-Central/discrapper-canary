@@ -1,3 +1,4 @@
+"use strict";
 function n(e) {
     return (n =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -10,12 +11,10 @@ function n(e) {
                       : typeof e;
               })(e);
 }
-
 function o(e) {
     var t = e.current;
     return null == t ? null : t.decoratedRef ? t.decoratedRef.current : t;
 }
-
 function i(e) {
     var t;
     return (
@@ -23,15 +22,11 @@ function i(e) {
         (null == e || null == (t = e.$$typeof) ? void 0 : t.toString()) === "Symbol(react.forward_ref)"
     );
 }
-
 function a(e, t) {}
-
 function s(e) {
     return "function" == typeof e;
 }
-
 function c() {}
-
 function u(e) {
     if ("object" !== n(e) || null === e) return !1;
     if (null === Object.getPrototypeOf(e)) return !0;

@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => b,
-});
+"use strict";
+r.d(t, { A: () => b });
 var n = r(627968),
     o = r(64700),
     i = r(816885),
@@ -10,7 +9,6 @@ var n = r(627968),
     u = r(201672),
     d = r(833871),
     p = r.n(d);
-
 function f(e) {
     return (f =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -23,13 +21,11 @@ function f(e) {
                       : typeof e;
               })(e);
 }
-
 function l(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-
 function h(e, t) {
     return (h =
         Object.setPrototypeOf ||
@@ -37,12 +33,10 @@ function h(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-
 function v(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-
 function y(e) {
     return (y = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -50,47 +44,34 @@ function y(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-
 function g(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-
 function b(e) {
     var t = e.DecoratedComponent,
         r = e.createHandler,
         d = e.createMonitor,
         b = e.createConnector,
         m = e.registerHandler,
-        D = e.containerDisplayName,
-        k = e.getType,
-        w = e.collect,
-        j = e.options.arePropsEqual,
-        C = void 0 === j ? i.b : j,
-        I = t.displayName || t.name || "Component",
-        O = (function (e) {
+        w = e.containerDisplayName,
+        D = e.getType,
+        S = e.collect,
+        k = e.options.arePropsEqual,
+        O = void 0 === k ? i.b : k,
+        C = t.displayName || t.name || "Component",
+        I = (function (e) {
             if ("function" != typeof e && null !== e)
                 throw TypeError("Super expression must either be null or a function");
-            (O.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: O,
-                    writable: !0,
-                    configurable: !0,
-                },
+            (I.prototype = Object.create(e && e.prototype, {
+                constructor: { value: I, writable: !0, configurable: !0 },
             })),
-                e && h(O, e);
+                e && h(I, e);
             var p,
-                D,
-                j =
+                w,
+                k =
                     ((p = (function () {
                         if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                         if ("function" == typeof Proxy) return !0;
@@ -102,7 +83,7 @@ function b(e) {
                     })()),
                     function () {
                         var e,
-                            t = y(O);
+                            t = y(I);
                         return (
                             (e = p ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
                             (function (e, t) {
@@ -113,12 +94,11 @@ function b(e) {
                             })(this, e)
                         );
                     });
-
-            function O(e) {
+            function I(e) {
                 var t;
-                if (!(this instanceof O)) throw TypeError("Cannot call a class as a function");
+                if (!(this instanceof I)) throw TypeError("Cannot call a class as a function");
                 return (
-                    g(v((t = j.call(this, e))), "decoratedRef", (0, o.createRef)()),
+                    g(v((t = k.call(this, e))), "decoratedRef", (0, o.createRef)()),
                     g(v(t), "handlerId", void 0),
                     g(v(t), "manager", void 0),
                     g(v(t), "handlerMonitor", void 0),
@@ -138,7 +118,7 @@ function b(e) {
                 );
             }
             return (
-                (D = [
+                (w = [
                     {
                         key: "getHandlerId",
                         value: function () {
@@ -160,7 +140,7 @@ function b(e) {
                     {
                         key: "shouldComponentUpdate",
                         value: function (e, t) {
-                            return !C(e, this.props) || !(0, i.b)(t, this.state);
+                            return !O(e, this.props) || !(0, i.b)(t, this.state);
                         },
                     },
                     {
@@ -175,7 +155,7 @@ function b(e) {
                     {
                         key: "componentDidUpdate",
                         value: function (e) {
-                            C(this.props, e) || (this.receiveProps(this.props), this.handleChange());
+                            O(this.props, e) || (this.receiveProps(this.props), this.handleChange());
                         },
                     },
                     {
@@ -188,7 +168,7 @@ function b(e) {
                     {
                         key: "receiveProps",
                         value: function (e) {
-                            this.handler && (this.handler.receiveProps(e), this.receiveType(k(e)));
+                            this.handler && (this.handler.receiveProps(e), this.receiveType(D(e)));
                         },
                     },
                     {
@@ -262,9 +242,9 @@ function b(e) {
                                 (this.handlerId = n),
                                     this.handlerMonitor.receiveHandlerId(n),
                                     this.handlerConnector.receiveHandlerId(n);
-                                var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, {
-                                    handlerIds: [n],
-                                });
+                                var i = this.manager
+                                    .getMonitor()
+                                    .subscribeToStateChange(this.handleChange, { handlerIds: [n] });
                                 this.disposable.setDisposable(new c.ke(new c.jG(i), new c.jG(o)));
                             }
                         },
@@ -280,7 +260,7 @@ function b(e) {
                         key: "getCurrentState",
                         value: function () {
                             return this.handlerConnector
-                                ? w(this.handlerConnector.hooks, this.handlerMonitor, this.props)
+                                ? S(this.handlerConnector.hooks, this.handlerMonitor, this.props)
                                 : {};
                         },
                     },
@@ -325,8 +305,8 @@ function b(e) {
                                 ((0, a.V)(
                                     void 0 !== e,
                                     "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context",
-                                    I,
-                                    I,
+                                    C,
+                                    C,
                                 ),
                                 void 0 !== e &&
                                     ((this.manager = e),
@@ -344,9 +324,9 @@ function b(e) {
                             "value" in n && (n.writable = !0),
                             Object.defineProperty(e, n.key, n);
                     }
-                })(O.prototype, D),
-                O
+                })(I.prototype, w),
+                I
             );
         })(o.Component);
-    return g(O, "DecoratedComponent", t), g(O, "displayName", "".concat(D, "(").concat(I, ")")), p()(O, t);
+    return g(I, "DecoratedComponent", t), g(I, "displayName", "".concat(w, "(").concat(C, ")")), p()(I, t);
 }

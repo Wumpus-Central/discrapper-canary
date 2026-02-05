@@ -1,248 +1,125 @@
-n.d(t, {
-    D: () => v,
-});
+"use strict";
+n.d(t, { D: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(158954),
+    s = n.n(a),
+    o = n(158954),
     l = n(86968),
-    c = n(900283),
-    u = n(563014),
+    u = n(900283),
+    c = n(563014),
     d = n(745396),
-    f = n(298063),
-    p = n(112378),
-    _ = n(52738),
+    _ = n(298063),
+    f = n(112378),
+    p = n(52738),
     h = n(516971),
     m = n(885621),
     g = n(658122);
-
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function v(e) {
+function E(e) {
     let {
             color: t = "default",
             label: n,
             void_label: a,
             icon: E,
-            iconLeft: b,
-            leadingAccessory: v,
-            trailingIndicator: A,
-            shortcut: I,
+            iconLeft: A,
+            leadingAccessory: I,
+            trailingIndicator: T,
+            shortcut: y,
             subtext: S,
-            subtextLineClamp: T,
+            subtextLineClamp: v,
             hasSubmenu: C,
-            loading: N,
-            badge: w,
+            loading: b,
+            badge: N,
             disabled: R,
-            isFocused: P,
+            isFocused: O,
             menuItemProps: D,
             action: L,
-            onClose: x,
-            onFocus: M,
-            className: j,
-            focusedClassName: k,
-            dontCloseOnActionIfHoldingShiftKey: U,
-            dontCloseOnAction: G,
-            iconProps: F,
+            onClose: w,
+            onFocus: x,
+            className: P,
+            focusedClassName: M,
+            dontCloseOnActionIfHoldingShiftKey: k,
+            dontCloseOnAction: U,
+            iconProps: G,
         } = e,
-        { onSelect: V, onInteraction: B } = i.useContext(c.x),
-        H = i.useRef(null),
-        Y = (0, f.Y)("MenuItem"),
-        W = i.useCallback(
+        { onSelect: V, onInteraction: F } = i.useContext(u.x),
+        B = i.useRef(null),
+        j = (0, _.Y)("MenuItem"),
+        H = i.useCallback(
             (e) => {
-                var t;
-                if (
-                    (null == B ||
-                        B({
-                            type: c.Q.DEFAULT,
-                        }),
-                    null == L)
-                )
-                    return !1;
-                (e.shiftKey && U) || G || x(),
+                if ((F?.({ type: u.Q.DEFAULT }), null == L)) return !1;
+                (e.shiftKey && k) || U || w(),
                     e.persist(),
-                    null == V || V(),
-                    (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => L(e));
+                    V?.(),
+                    (e.nativeEvent.view ?? window).requestAnimationFrame(() => L(e));
             },
-            [L, x, V, U, G, B],
+            [L, w, V, k, U, F],
         );
     return (
         i.useEffect(() => {
-            P && ((0, u.Y)(H), null == M || M());
-        }, [P, M]),
-        (0, r.jsxs)(
-            s.DUT,
-            O(
-                y(
-                    {
-                        innerRef: H,
-                        className: o()(g.item, g.labelContainer, m.jV[t], j, {
-                            [g.disabled]: R,
-                            [g.focused]: P,
-                            [null != k ? k : ""]: P,
+            O && ((0, c.Y)(B), x?.());
+        }, [O, x]),
+        (0, r.jsxs)(o.DUT, {
+            innerRef: B,
+            className: s()(g.item, g.labelContainer, m.jV[t], P, { [g.disabled]: R, [g.focused]: O, [M ?? ""]: O }),
+            onClick: R ? void 0 : H,
+            "aria-disabled": R,
+            ...D,
+            "data-menu-item": "true",
+            children: [
+                j || I?.type === "status"
+                    ? null != I && (0, r.jsx)(p.B, { accessory: I, isFocused: O })
+                    : (0, d.O)(A)
+                      ? A
+                      : null != A &&
+                        (0, r.jsx)("div", {
+                            className: g.iconContainerLeft,
+                            children: (0, r.jsx)(A, {
+                                color: "currentColor",
+                                ...G,
+                                className: s()(g.icon, G?.className),
+                            }),
                         }),
-                        onClick: R ? void 0 : W,
-                        "aria-disabled": R,
-                    },
-                    D,
-                ),
-                {
-                    "data-menu-item": "true",
+                (0, r.jsxs)("div", {
+                    className: g.label,
                     children: [
-                        Y || (null == v ? void 0 : v.type) === "status"
-                            ? null != v &&
-                              (0, r.jsx)(_.B, {
-                                  accessory: v,
-                                  isFocused: P,
-                              })
-                            : (0, d.O)(b)
-                              ? b
-                              : null != b &&
-                                (0, r.jsx)("div", {
-                                    className: g.iconContainerLeft,
-                                    children: (0, r.jsx)(
-                                        b,
-                                        O(
-                                            y(
-                                                {
-                                                    color: "currentColor",
-                                                },
-                                                F,
-                                            ),
-                                            {
-                                                className: o()(g.icon, null == F ? void 0 : F.className),
-                                            },
-                                        ),
-                                    ),
-                                }),
-                        (0, r.jsxs)("div", {
-                            className: g.label,
-                            children: [
-                                (0, r.jsx)(p.V, {
-                                    children: (0, l.J)(null != a ? a : n, e),
-                                }),
-                                null != S &&
-                                    (0, r.jsx)(s.EYj, {
-                                        variant: "text-xs/normal",
-                                        className: o()(g.subtext, {
-                                            [g.subtextLineClamp]: null != T,
-                                        }),
-                                        lineClamp: T,
-                                        children: S,
-                                    }),
-                            ],
-                        }),
-                        null != I &&
-                            (0, r.jsx)("div", {
-                                className: g.shortcutContainer,
-                                children: I,
-                            }),
-                        null != w &&
-                            (0, r.jsx)("div", {
-                                className: g.badgeContainer,
-                                children: (0, r.jsx)(s.Exy, {
-                                    type: w,
-                                }),
-                            }),
-                        N &&
-                            (0, r.jsx)("div", {
-                                className: g.iconContainer,
-                                children: (0, r.jsx)(s.y$y, {
-                                    type: s.y$y.Type.PULSING_ELLIPSIS,
-                                }),
-                            }),
-                        Y
-                            ? null != A &&
-                              (0, r.jsx)(h.g, {
-                                  indicator: A,
-                              })
-                            : (0, d.O)(E)
-                              ? E
-                              : null != E &&
-                                (0, r.jsx)("div", {
-                                    className: g.iconContainer,
-                                    children: (0, r.jsx)(
-                                        E,
-                                        O(
-                                            y(
-                                                {
-                                                    color: "currentColor",
-                                                },
-                                                F,
-                                            ),
-                                            {
-                                                className: o()(g.icon, null == F ? void 0 : F.className),
-                                            },
-                                        ),
-                                    ),
-                                }),
-                        C &&
-                            (0, r.jsx)("div", {
-                                className: g.iconContainer,
-                                children: (0, r.jsx)(s._BQ, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: g.caret,
-                                }),
+                        (0, r.jsx)(f.V, { children: (0, l.J)(a ?? n, e) }),
+                        null != S &&
+                            (0, r.jsx)(o.EYj, {
+                                variant: "text-xs/normal",
+                                className: s()(g.subtext, { [g.subtextLineClamp]: null != v }),
+                                lineClamp: v,
+                                children: S,
                             }),
                     ],
-                },
-            ),
-        )
+                }),
+                null != y && (0, r.jsx)("div", { className: g.shortcutContainer, children: y }),
+                null != N &&
+                    (0, r.jsx)("div", { className: g.badgeContainer, children: (0, r.jsx)(o.Exy, { type: N }) }),
+                b &&
+                    (0, r.jsx)("div", {
+                        className: g.iconContainer,
+                        children: (0, r.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS }),
+                    }),
+                j
+                    ? null != T && (0, r.jsx)(h.g, { indicator: T })
+                    : (0, d.O)(E)
+                      ? E
+                      : null != E &&
+                        (0, r.jsx)("div", {
+                            className: g.iconContainer,
+                            children: (0, r.jsx)(E, {
+                                color: "currentColor",
+                                ...G,
+                                className: s()(g.icon, G?.className),
+                            }),
+                        }),
+                C &&
+                    (0, r.jsx)("div", {
+                        className: g.iconContainer,
+                        children: (0, r.jsx)(o._BQ, { size: "md", color: "currentColor", className: g.caret }),
+                    }),
+            ],
+        })
     );
 }

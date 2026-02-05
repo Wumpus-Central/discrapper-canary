@@ -1,7 +1,5 @@
-n.d(t, {
-    D: () => i,
-    I: () => r,
-});
+"use strict";
+n.d(t, { D: () => i, I: () => r });
 var r = (function (e) {
         return (
             (e.ACCOUNT_REVERT_CHANGE_PASSWORD = "impression_account_revert_change_password"),

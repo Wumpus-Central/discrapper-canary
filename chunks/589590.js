@@ -1,15 +1,13 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(735438),
-    i = n(842901);
-let l = (0, r.memoize)(
+n.d(t, { A: () => a });
+var i = n(735438),
+    l = n(842901);
+let a = (0, i.memoize)(
     function (e) {
         let { theme: t, layoutType: n } = e;
-        return (0, i.E)(t, n);
+        return (0, l.E)(t, n);
     },
     (e) => {
         let { theme: t, layoutType: n } = e;
-        return "".concat(t, ":").concat(n);
+        return `${t}:${n}`;
     },
 );

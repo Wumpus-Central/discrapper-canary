@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });
 var a = n(981737),
     i = {
         narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
@@ -48,11 +46,7 @@ let r = {
             return e - 1;
         },
     }),
-    month: (0, a.A)({
-        values: i,
-        formattingValues: o,
-        defaultWidth: "wide",
-    }),
+    month: (0, a.A)({ values: i, formattingValues: o, defaultWidth: "wide" }),
     day: (0, a.A)({
         values: {
             narrow: ["S", "M", "D", "M", "D", "F", "S"],

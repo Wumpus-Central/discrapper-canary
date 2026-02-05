@@ -1,46 +1,37 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => g });
+var i = n(627968),
     l = n(311907),
-    i = n(397927),
-    a = n(991982),
-    s = n(838111),
+    a = n(397927),
+    s = n(991982),
+    r = n(838111),
     o = n(870136),
     c = n(696451),
-    u = n(71393),
-    d = n(576705),
-    f = n(287809),
-    p = n(102817),
-    h = n(641131),
-    b = n(985018);
-
+    d = n(71393),
+    u = n(576705),
+    h = n(287809),
+    m = n(102817),
+    A = n(641131),
+    p = n(985018);
 function g(e) {
     let { channel: t, user: n, guild: g } = e,
-        m = (0, l.bG)(
-            [f.default, u.A, d.A],
-            () => null != n && null != g && (0, s.b)(g.id, n.id, [f.default, u.A, d.A]),
+        f = (0, l.bG)(
+            [h.default, d.A, u.A],
+            () => null != n && null != g && (0, r.b)(g.id, n.id, [h.default, d.A, u.A]),
         ),
-        [A, y] = (0, o.Ay)(null == n ? void 0 : n.id, t.guild_id),
-        O = (0, l.bG)([c.Ay], () => null != g && null != n && null != c.Ay.getMember(g.id, n.id));
-    if (!m || !O) return null;
-    let j = "timeout-user-".concat(null == n ? void 0 : n.id);
-    return (0, r.jsx)(
-        p.A,
+        [_, E] = (0, o.Ay)(n?.id, t.guild_id),
+        C = (0, l.bG)([c.Ay], () => null != g && null != n && null != c.Ay.getMember(g.id, n.id));
+    if (!f || !C) return null;
+    let x = `timeout-user-${n?.id}`;
+    return (0, i.jsx)(
+        m.A,
         {
-            text: y ? b.intl.string(h.default["6uMZbv"]) : b.intl.string(h.default["Sgg/uI"]),
-            icon: i.O4,
+            text: E ? p.intl.string(A.default["6uMZbv"]) : p.intl.string(A.default["Sgg/uI"]),
+            icon: a.O4,
             onClick: () => {
-                null != n &&
-                    (0, a.R)({
-                        guildId: t.guild_id,
-                        userId: n.id,
-                        modReportId: t.id,
-                    });
+                null != n && (0, s.R)({ guildId: t.guild_id, userId: n.id, modReportId: t.id });
             },
-            disabled: y,
+            disabled: E,
         },
-        j,
+        x,
     );
 }

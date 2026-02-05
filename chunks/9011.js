@@ -1,60 +1,61 @@
-n(945730),
-    (e.exports = {
-        isValidBlock: function (e, t) {
-            var n = e.getKey(),
-                r = e.getParentKey();
+"use strict";
+r(945730),
+    (t.exports = {
+        isValidBlock: function (t, e) {
+            var r = t.getKey(),
+                n = t.getParentKey();
             if (
-                (null != r && !t.get(r).getChildKeys().includes(n)) ||
-                !e
+                (null != n && !e.get(n).getChildKeys().includes(r)) ||
+                !t
                     .getChildKeys()
-                    .map(function (e) {
-                        return t.get(e);
+                    .map(function (t) {
+                        return e.get(t);
                     })
-                    .every(function (e) {
-                        return e.getParentKey() === n;
+                    .every(function (t) {
+                        return t.getParentKey() === r;
                     })
             )
                 return !1;
-            var i = e.getPrevSiblingKey();
-            if (null != i && t.get(i).getNextSiblingKey() !== n) return !1;
-            var a = e.getNextSiblingKey();
+            var i = t.getPrevSiblingKey();
+            if (null != i && e.get(i).getNextSiblingKey() !== r) return !1;
+            var o = t.getNextSiblingKey();
             return (
-                (null == a || t.get(a).getPrevSiblingKey() === n) &&
-                (null === a || null === i || i !== a) &&
-                ("" == e.text || !(e.getChildKeys().size > 0))
+                (null == o || e.get(o).getPrevSiblingKey() === r) &&
+                (null === o || null === i || i !== o) &&
+                ("" == t.text || !(t.getChildKeys().size > 0))
             );
         },
-        isConnectedTree: function (e) {
-            var t = e.toArray().filter(function (e) {
-                return null == e.getParentKey() && null == e.getPrevSiblingKey();
+        isConnectedTree: function (t) {
+            var e = t.toArray().filter(function (t) {
+                return null == t.getParentKey() && null == t.getPrevSiblingKey();
             });
-            if (1 !== t.length) return !1;
-            for (var n = t.shift(), r = 0, i = n.getKey(), a = []; null != i; ) {
-                var s = e.get(i),
-                    o = s.getChildKeys(),
-                    l = s.getNextSiblingKey();
-                if (o.size > 0) {
-                    null != l && a.unshift(l);
-                    var c = o
-                        .map(function (t) {
-                            return e.get(t);
+            if (1 !== e.length) return !1;
+            for (var r = e.shift(), n = 0, i = r.getKey(), o = []; null != i; ) {
+                var a = t.get(i),
+                    s = a.getChildKeys(),
+                    u = a.getNextSiblingKey();
+                if (s.size > 0) {
+                    null != u && o.unshift(u);
+                    var c = s
+                        .map(function (e) {
+                            return t.get(e);
                         })
-                        .find(function (e) {
-                            return null == e.getPrevSiblingKey();
+                        .find(function (t) {
+                            return null == t.getPrevSiblingKey();
                         });
                     if (null == c) return !1;
                     i = c.getKey();
-                } else i = null != s.getNextSiblingKey() ? s.getNextSiblingKey() : a.shift();
-                r++;
+                } else i = null != a.getNextSiblingKey() ? a.getNextSiblingKey() : o.shift();
+                n++;
             }
-            return r === e.size;
+            return n === t.size;
         },
-        isValidTree: function (e) {
-            var t = this;
+        isValidTree: function (t) {
+            var e = this;
             return (
-                !!e.toArray().every(function (n) {
-                    return t.isValidBlock(n, e);
-                }) && this.isConnectedTree(e)
+                !!t.toArray().every(function (r) {
+                    return e.isValidBlock(r, t);
+                }) && this.isConnectedTree(t)
             );
         },
     });

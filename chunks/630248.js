@@ -1,154 +1,66 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(321073);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(155718),
-    c = n(283047),
+"use strict";
+n.d(t, { A: () => T }), n(321073);
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(155718),
+    l = n(283047),
     u = n(933958),
-    d = n(617617),
-    f = n(705751),
-    p = n(355097);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+    c = n(617617);
+n(705751);
+var d = n(355097);
+let _ = [o.kc.CHAT, o.kc.PRIMARY_ENTRY_POINT],
+    f = { pendingUsages: [] },
+    p = new l.A({ computeBonus: () => 100, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
 function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let E = [l.kc.CHAT, l.kc.PRIMARY_ENTRY_POINT],
-    b = {
-        pendingUsages: [],
-    },
-    y = new c.A({
-        computeBonus: () => 100,
-        lookupKey: (e) => e,
-        afterCompute: () => {},
-        numFrequentlyItems: f.h2,
-    });
-
-function O(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    if (t !== p.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    b.pendingUsages = [];
+    if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    f.pendingUsages = [];
 }
-
-function A(e) {
-    var t;
-    let { command: n } = e;
-    if (!E.includes(n.type) || (null == (t = u.Ay.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
-    S(n.applicationId);
+function m(e) {
+    let { command: t } = e;
+    if (!_.includes(t.type) || u.Ay.getLaunchState(t.applicationId)?.isLaunching) return !1;
+    E(t.applicationId);
 }
-
-function v(e) {
+function g(e) {
     let { applicationId: t } = e;
-    S(t);
+    E(t);
 }
-
-function S(e) {
-    b.pendingUsages.push({
-        key: e,
-        timestamp: Date.now(),
-    }),
-        y.track(e),
-        y.compute();
+function E(e) {
+    f.pendingUsages.push({ key: e, timestamp: Date.now() }), p.track(e), p.compute();
 }
-
-function I() {
-    var e, t;
-    let n =
-        null != (e = null == (t = d.A.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : t.applications)
-            ? e
-            : {};
-    y.overwriteHistory(
-        a().mapValues(n, (e) =>
-            g(h({}, e), {
-                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
-            }),
-        ),
-        b.pendingUsages,
+function A() {
+    let e = c.A.frecencyWithoutFetchingLatest,
+        t = e.applicationFrecency?.applications ?? {};
+    p.overwriteHistory(
+        i().mapValues(t, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        f.pendingUsages,
     );
 }
-class T extends (r = s.Ay.PersistedStore) {
+class I extends a.Ay.PersistedStore {
+    static displayName = "ApplicationFrecencyStore";
+    static persistKey = "ApplicationFrecency";
     initialize(e) {
-        null != e && (b = e), this.waitFor(u.Ay, d.A), this.syncWith([d.A], I);
+        null != e && (f = e), this.waitFor(u.Ay, c.A), this.syncWith([c.A], A);
     }
     getState() {
-        return b;
+        return f;
     }
     hasPendingUsage() {
-        return b.pendingUsages.length > 0;
+        return f.pendingUsages.length > 0;
     }
     getApplicationFrecencyWithoutLoadingLatest() {
-        return y;
+        return p;
     }
     getScoreWithoutLoadingLatest(e) {
-        var t;
-        return null != (t = y.getScore(e)) ? t : 0;
+        return p.getScore(e) ?? 0;
     }
     getTopApplicationsWithoutLoadingLatest() {
-        return y.frequently;
+        return p.frequently;
     }
 }
-_(T, "displayName", "ApplicationFrecencyStore"), _(T, "persistKey", "ApplicationFrecency");
-let C = new T(o.h, {
-    APPLICATION_COMMAND_USED: A,
-    EMBEDDED_ACTIVITY_OPEN: v,
-    USER_SETTINGS_PROTO_UPDATE: O,
-});
+let T = new I(s.h, { APPLICATION_COMMAND_USED: m, EMBEDDED_ACTIVITY_OPEN: g, USER_SETTINGS_PROTO_UPDATE: h });

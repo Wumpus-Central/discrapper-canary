@@ -1,7 +1,5 @@
-n.d(t, {
-    f: () => o,
-    j: () => l,
-});
+"use strict";
+n.d(t, { f: () => o, j: () => l });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,7 +12,6 @@ var i = n(397927),
             e
         );
     })({});
-
 function l(e) {
     let { paymentRestrictionBannerType: t } = e,
         n = "";
@@ -32,25 +29,12 @@ function l(e) {
             (0, r.jsxs)("div", {
                 className: s.NX,
                 children: [
-                    (0, r.jsx)(i.k9F, {
-                        size: "md",
-                        color: "white",
-                        className: s.Kk,
-                    }),
-                    (0, r.jsx)(i.k9F, {
-                        size: "md",
-                        color: "currentColor",
-                        className: s.kV,
-                    }),
+                    (0, r.jsx)(i.k9F, { size: "md", color: "white", className: s.Kk }),
+                    (0, r.jsx)(i.k9F, { size: "md", color: "currentColor", className: s.kV }),
                 ],
             }),
-            (0, r.jsx)(i.Text, {
-                variant: "text-sm/normal",
-                children: n,
-            }),
-            (0, r.jsx)("div", {
-                className: s.u,
-            }),
+            (0, r.jsx)(i.Text, { variant: "text-sm/normal", children: n }),
+            (0, r.jsx)("div", { className: s.u }),
         ],
     });
 }

@@ -1,91 +1,55 @@
-n.d(t, {
-    A: () => m,
-});
+"use strict";
+n.d(t, { A: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    o = n(990078),
-    s = n(397927),
+    s = n(990078),
+    o = n(397927),
     l = n(51183),
-    c = n(140547),
-    u = n(886019),
+    u = n(140547),
+    c = n(886019),
     d = n(559405),
-    f = n(890330),
-    p = n(613125);
+    _ = n(890330),
+    f = n(613125);
 n(851883);
-var _ = n(123511);
+var p = n(123511);
 let h = 14;
-
 function m(e) {
-    var t;
     let {
-            customStatusActivity: n,
-            iconClassName: i,
-            textClassName: m,
-            voiceChannel: g,
-            hangStatus: E,
-            userId: y,
-            textSize: b = "xs",
-            animateEmoji: O = !0,
-            hideEmoji: v = !1,
-            hideTooltip: A = !1,
+            customStatusActivity: t,
+            iconClassName: n,
+            textClassName: i,
+            voiceChannel: m,
+            hangStatus: g,
+            userId: E,
+            textSize: A = "xs",
+            animateEmoji: I = !0,
+            hideEmoji: T = !1,
+            hideTooltip: y = !1,
         } = e,
-        I = (0, f.v)("ActivityStatus", g),
-        { defaultStatusVariant: S } = (0, c.$j)({
-            guildId: null == g ? void 0 : g.guild_id,
-            location: "CustomStatusVoiceDare",
-        }),
-        T = null != E && I,
-        C = T && null != y ? (0, u.Au)(y, E, S) : null,
-        N = null == n ? void 0 : n.emoji,
-        w = (0, p.Z)({
-            customStatusActivity: n,
-            statusOwnerId: y,
-            location: "CustomStatusVoiceDare",
-        }),
-        R = null != (t = null != C ? C : w.statusTextOverride) ? t : null == n ? void 0 : n.state,
-        P = null != R && "" !== R,
-        D = null;
-    T && null != y
-        ? (D = (0, r.jsx)(d.A, {
-              userId: y,
-              size: h,
-              className: a()(i, _.W9),
-              hangStatusActivity: E,
-          }))
-        : null == N ||
-          v ||
-          (D = (0, r.jsx)(l.A, {
-              emoji: N,
-              animate: O,
-              className: i,
-              hideTooltip: A || P,
-          }));
-    let L = P ? (null != D ? " ".concat(R) : R) : null,
+        S = (0, _.v)("ActivityStatus", m),
+        { defaultStatusVariant: v } = (0, u.$j)({ guildId: m?.guild_id, location: "CustomStatusVoiceDare" }),
+        C = null != g && S,
+        b = C && null != E ? (0, c.Au)(E, g, v) : null,
+        N = t?.emoji,
+        R = (0, f.Z)({ customStatusActivity: t, statusOwnerId: E, location: "CustomStatusVoiceDare" }),
+        O = b ?? R.statusTextOverride ?? t?.state,
+        D = null != O && "" !== O,
+        L = null;
+    C && null != E
+        ? (L = (0, r.jsx)(d.A, { userId: E, size: h, className: a()(n, p.W9), hangStatusActivity: g }))
+        : null == N || T || (L = (0, r.jsx)(l.A, { emoji: N, animate: I, className: n, hideTooltip: y || D }));
+    let w = D ? (null != L ? ` ${O}` : O) : null,
         x = () => {
-            let e = null != N && !v && !P;
-            return A || e
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [D, L],
-                  })
-                : null != w.presence
-                  ? (0, r.jsx)(o.m, {
-                        delay: 150,
-                        children: (0, r.jsxs)("span", {
-                            children: [D, L],
-                        }),
-                    })
-                  : (0, r.jsxs)("span", {
-                        children: [D, L],
-                    });
+            let e = null != N && !T && !D;
+            return y || e
+                ? (0, r.jsxs)(r.Fragment, { children: [L, w] })
+                : null != R.presence
+                  ? (0, r.jsx)(s.m, { delay: 150, children: (0, r.jsxs)("span", { children: [L, w] }) })
+                  : (0, r.jsxs)("span", { children: [L, w] });
         };
-    return null == n && null == E
+    return null == t && null == g
         ? null
-        : (0, r.jsx)(s.Text, {
-              variant: "text-".concat(b, "/medium"),
-              color: "none",
-              className: a()(_.ps, m),
-              children: x(),
-          });
+        : (0, r.jsx)(o.Text, { variant: `text-${A}/medium`, color: "none", className: a()(p.ps, i), children: x() });
 }

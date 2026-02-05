@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(512008),
     s = e(389150),
@@ -6,11 +7,7 @@ var n = e(834647),
     c = e(767623),
     a = u("symbol-to-string-registry");
 n(
-    {
-        target: "Symbol",
-        stat: !0,
-        forced: !c,
-    },
+    { target: "Symbol", stat: !0, forced: !c },
     {
         keyFor: function (t) {
             if (!s(t)) throw TypeError(i(t) + " is not a symbol");

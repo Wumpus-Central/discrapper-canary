@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,25 +7,23 @@ var i = n(503698),
     s = n(735438),
     o = n.n(s),
     l = n(990078),
-    c = n(421380),
-    u = n(397927),
+    u = n(421380),
+    c = n(397927),
     d = n(263063),
-    f = n(232358);
-
-function p() {
+    _ = n(232358);
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.A.Sizes.SMALLER;
     switch (e) {
         case d.A.Sizes.SMOL:
-            return f.nc;
+            return _.nc;
         case d.A.Sizes.MINI:
-            return f.qV;
+            return _.qV;
         case d.A.Sizes.SMALLER:
         default:
-            return f.q1;
+            return _.q1;
     }
 }
-
-function _() {
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.A.Sizes.SMALLER;
     switch (e) {
         case d.A.Sizes.SMOL:
@@ -37,7 +34,6 @@ function _() {
             return "text-xs/medium";
     }
 }
-
 function h(e) {
     let {
             className: t,
@@ -49,64 +45,46 @@ function h(e) {
             hideOverflowCount: g = !1,
             disableGuildNameTooltip: E = !1,
         } = e,
-        b = p(m);
-
-    function y() {
+        A = f(m);
+    function I() {
         let e = i.length - n,
             t = e + 1,
-            p = e > 0 && !g,
-            y = Math.min(i.length, n) - 1,
-            O = o()(i)
+            f = e > 0 && !g,
+            I = Math.min(i.length, n) - 1,
+            T = o()(i)
                 .take(n)
                 .map((e, t) => {
                     let n = e.name,
-                        i = t === y && !p,
-                        s = a()(f.my, b, i && f.NE);
+                        i = t === I && !f,
+                        s = a()(_.my, A, i && _.NE);
                     return E
                         ? (0, r.jsx)("div", {
                               className: s,
-                              children: (0, r.jsx)(d.A, {
-                                  guild: e,
-                                  onClick: h,
-                                  size: m,
-                                  showTooltip: !1,
-                              }),
+                              children: (0, r.jsx)(d.A, { guild: e, onClick: h, size: m, showTooltip: !1 }),
                           })
                         : (0, r.jsx)(
                               l.m,
                               {
                                   asContainer: !0,
                                   text: n,
-                                  children: (0, r.jsx)(d.A, {
-                                      guild: e,
-                                      onClick: h,
-                                      size: m,
-                                  }),
+                                  children: (0, r.jsx)(d.A, { guild: e, onClick: h, size: m }),
                               },
                               e.id,
                           );
                 })
                 .value();
-        if (p) {
-            let e = _(m);
-            O[O.length - 1] = (0, r.jsx)(c.$n, {
-                className: a()(f.ju, b),
+        if (f) {
+            let e = p(m);
+            T[T.length - 1] = (0, r.jsx)(u.$n, {
+                className: a()(_.ju, A),
                 onFocus: s,
-                onClick: (e) => (null == h ? void 0 : h(e)),
-                look: c.$n.Looks.BLANK,
-                size: c.$n.Sizes.NONE,
-                children: (0, r.jsx)(u.Text, {
-                    variant: e,
-                    children: t > 99 ? ">99" : "+".concat(t),
-                }),
+                onClick: (e) => h?.(e),
+                look: u.$n.Looks.BLANK,
+                size: u.$n.Sizes.NONE,
+                children: (0, r.jsx)(c.Text, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
             });
         }
-        return O;
+        return T;
     }
-    return i.length <= 0
-        ? null
-        : (0, r.jsx)("div", {
-              className: a()(t, f.HD),
-              children: y(),
-          });
+    return i.length <= 0 ? null : (0, r.jsx)("div", { className: a()(t, _.HD), children: I() });
 }

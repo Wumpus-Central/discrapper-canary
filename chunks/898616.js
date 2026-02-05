@@ -1,41 +1,22 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(64700),
+n.d(t, { A: () => u });
+var i = n(64700),
     l = n(311907),
-    i = n(721932),
-    a = n(71393),
+    a = n(721932),
+    r = n(71393),
     s = n(871123),
     o = n(916023),
-    c = n(501838),
-    u = n(188275);
-
-function d(e) {
-    var t;
-    let { location: n, wishlist: d } = e,
-        f = (0, o.kt)({
-            location: n,
-        }),
-        p = r.useMemo(() => ((null == d ? void 0 : d.userId) != null ? [d.userId] : []), [d]),
-        b = (0, l.bG)([a.A], () => a.A.getGuild((0, s.zf)())),
-        g = null != (t = null == d ? void 0 : d.items.some((e) => (0, i.$)(e))) && t,
-        m = (0, c.gT)({
-            gameIds: u.sQ,
-            userIds: p,
-        }),
-        y = (0, c.K6)({
-            gameIds: u.sQ,
-            userIds: p,
-        }),
-        O = (0, c.l1)({
-            userIds: p,
-            guildIdsWithGameStores: u.tC,
-        }),
-        j = (0, c.hJ)({
-            gameIds: u.sQ,
-        }),
-        x = (0, c.ok)({
-            gameIds: u.sQ,
-        });
-    return f && (null != b || x || g || m || y || O || j);
+    d = n(501838),
+    c = n(188275);
+function u(e) {
+    let { location: t, wishlist: n } = e,
+        u = (0, o.kt)({ location: t }),
+        g = i.useMemo(() => (n?.userId != null ? [n.userId] : []), [n]),
+        m = (0, l.bG)([r.A], () => r.A.getGuild((0, s.zf)())),
+        x = n?.items.some((e) => (0, a.$)(e)) ?? !1,
+        f = (0, d.gT)({ gameIds: c.sQ, userIds: g }),
+        h = (0, d.K6)({ gameIds: c.sQ, userIds: g }),
+        p = (0, d.l1)({ userIds: g, guildIdsWithGameStores: c.tC }),
+        _ = (0, d.hJ)({ gameIds: c.sQ }),
+        A = (0, d.ok)({ gameIds: c.sQ });
+    return u && (null != m || A || x || f || h || p || _);
 }

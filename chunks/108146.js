@@ -1,33 +1,31 @@
-n.d(t, {
-    t: () => l,
-});
+"use strict";
+n.d(t, { t: () => l });
 var r = n(13163),
     i = n(3388),
     a = n(290424),
     s = n(64700),
     o = n(853590);
-
 function l(e, t) {
-    let { "aria-label": n, "aria-labelledby": l, orientation: c = "horizontal" } = e,
-        [u, d] = (0, s.useState)(!1);
+    let { "aria-label": n, "aria-labelledby": l, orientation: u = "horizontal" } = e,
+        [c, d] = (0, s.useState)(!1);
     (0, i.N)(() => {
         var e;
         d(!!(t.current && (null == (e = t.current.parentElement) ? void 0 : e.closest('[role="toolbar"]'))));
     });
-    let { direction: f } = (0, o.Y)(),
-        p = "rtl" === f && "horizontal" === c,
-        _ = (0, r.C7)(t),
+    let { direction: _ } = (0, o.Y)(),
+        f = "rtl" === _ && "horizontal" === u,
+        p = (0, r.C7)(t),
         h = (e) => {
             if (e.currentTarget.contains(e.target)) {
-                if (("horizontal" === c && "ArrowRight" === e.key) || ("vertical" === c && "ArrowDown" === e.key))
-                    p ? _.focusPrevious() : _.focusNext();
-                else if (("horizontal" === c && "ArrowLeft" === e.key) || ("vertical" === c && "ArrowUp" === e.key))
-                    p ? _.focusNext() : _.focusPrevious();
+                if (("horizontal" === u && "ArrowRight" === e.key) || ("vertical" === u && "ArrowDown" === e.key))
+                    f ? p.focusPrevious() : p.focusNext();
+                else if (("horizontal" === u && "ArrowLeft" === e.key) || ("vertical" === u && "ArrowUp" === e.key))
+                    f ? p.focusNext() : p.focusPrevious();
                 else {
                     if ("Tab" !== e.key) return;
                     e.stopPropagation(),
                         (m.current = document.activeElement),
-                        e.shiftKey ? _.focusFirst() : _.focusLast();
+                        e.shiftKey ? p.focusFirst() : p.focusLast();
                     return;
                 }
                 e.stopPropagation(), e.preventDefault();
@@ -46,16 +44,14 @@ function l(e, t) {
         };
     return {
         toolbarProps: {
-            ...(0, a.$)(e, {
-                labelable: !0,
-            }),
-            role: u ? "group" : "toolbar",
-            "aria-orientation": c,
+            ...(0, a.$)(e, { labelable: !0 }),
+            role: c ? "group" : "toolbar",
+            "aria-orientation": u,
             "aria-label": n,
             "aria-labelledby": null == n ? l : void 0,
-            onKeyDownCapture: u ? void 0 : h,
-            onFocusCapture: u ? void 0 : E,
-            onBlurCapture: u ? void 0 : g,
+            onKeyDownCapture: c ? void 0 : h,
+            onFocusCapture: c ? void 0 : E,
+            onBlurCapture: c ? void 0 : g,
         },
     };
 }

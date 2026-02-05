@@ -1,67 +1,42 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(321073),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => _ }), n(321073);
+var r = n(311907),
+    i = n(73153);
+let a = [],
+    s = !1,
+    o = a;
+function l(e) {
+    s = e.persistentCodesEnabled;
 }
-let o = [],
-    l = !1,
-    c = o;
-
 function u(e) {
-    l = e.persistentCodesEnabled;
-}
-
-function d(e) {
     let t = [];
-    for (let n of c) {
+    for (let n of o) {
         if (n === e.keyVersion) return;
         t.push(n);
     }
-    t.push(e.keyVersion), (c = t);
+    t.push(e.keyVersion), (o = t);
 }
-
-function f() {
-    c = o;
+function c() {
+    o = a;
 }
-class p extends (r = i.Ay.PersistedStore) {
+class d extends r.Ay.PersistedStore {
+    static displayName = "SecureFramesPersistedStore";
+    static persistKey = "SecureFramesPersistedStore";
     initialize(e) {
-        var t, n;
-        (l = null != (t = null == e ? void 0 : e.persistentCodesEnabled) && t),
-            (c = null != (n = null == e ? void 0 : e.uploadedKeyVersions) ? n : o);
+        (s = e?.persistentCodesEnabled ?? !1), (o = e?.uploadedKeyVersions ?? a);
     }
     getState() {
-        return {
-            persistentCodesEnabled: l,
-            uploadedKeyVersions: c,
-        };
+        return { persistentCodesEnabled: s, uploadedKeyVersions: o };
     }
     getPersistentCodesEnabled() {
-        return l;
+        return s;
     }
     getUploadedKeyVersionsCached() {
-        return c;
+        return o;
     }
 }
-s(p, "displayName", "SecureFramesPersistedStore"), s(p, "persistKey", "SecureFramesPersistedStore");
-let _ = new p(a.h, {
-    SECURE_FRAMES_SETTINGS_UPDATE: u,
-    SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: d,
-    SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: f,
+let _ = new d(i.h, {
+    SECURE_FRAMES_SETTINGS_UPDATE: l,
+    SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: u,
+    SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: c,
 });

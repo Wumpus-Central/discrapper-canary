@@ -1,6 +1,4 @@
-i.d(t, {
-    g: () => N,
-});
+i.d(e, { g: () => O });
 var n = i(934551),
     l = i(419954),
     s = i(780964),
@@ -10,25 +8,25 @@ var n = i(934551),
     o = i(74973),
     d = i(982770),
     T = i(461158),
-    c = i(81453),
-    A = i(289882),
-    S = i(427887),
-    _ = i(222323),
-    E = i(411476),
-    g = i(531525),
+    A = i(81453),
+    S = i(289882),
+    E = i(427887),
+    g = i(222323),
+    _ = i(411476),
+    c = i(531525),
     I = i(985018);
-let O = (0, l.t_)(s.X.CHAT_PANEL, {
+let N = (0, l.t_)(s.X.CHAT_PANEL, {
         useTitle: () => I.intl.string(I.t["/VQax8"]),
-        buildLayout: () => [d.M, u.f, o.z, S.J, c.n, _.p, E.U, T.W, A.o],
+        buildLayout: () => [d.M, u.f, o.z, E.J, A.n, g.p, _.U, T.W, S.o],
     }),
     C = (0, l.t_)(s.X.CHAT_PANEL, {
         useTitle: () => I.intl.string(I.t["/VQax8"]),
         StronglyDiscouragedCustomComponent: a.A,
         buildLayout: () => [],
     }),
-    N = (0, l.i4)(s.X.CHAT_SIDEBAR_ITEM, {
+    O = (0, l.i4)(s.X.CHAT_SIDEBAR_ITEM, {
         useTitle: () => I.intl.string(I.t["/VQax8"]),
-        getLegacySearchKey: () => ((0, r.WJ)("ChatPanel") ? void 0 : g.H.CHAT),
+        getLegacySearchKey: () => ((0, r.WJ)("ChatPanel") ? void 0 : c.H.CHAT),
         icon: n.ChatIcon,
-        buildLayout: () => [(0, r.WJ)("ChatPanel") ? O : C],
+        buildLayout: () => [(0, r.WJ)("ChatPanel") ? N : C],
     });

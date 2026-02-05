@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     IL: "galleryContainer_d75751",
     nV: "gallery_d75751",

@@ -1,3 +1,4 @@
+"use strict";
 function a(e) {
     var t,
         r,
@@ -16,7 +17,6 @@ function a(e) {
         ]
     );
 }
-
 function n(e) {
     var t = e[0] / 255,
         r = e[1] / 255,
@@ -27,7 +27,4 @@ function n(e) {
         0.615 * t + -0.51499 * r + -0.10001 * a,
     ];
 }
-r.d(t, {
-    I: () => a,
-    o: () => n,
-});
+r.d(t, { I: () => a, o: () => n });

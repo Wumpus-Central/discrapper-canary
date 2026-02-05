@@ -1,23 +1,17 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968),
     i = n(136722),
     a = n(397927),
     s = n(652215),
     o = n(985018),
     l = n(80739);
-let c = 5;
-
-function u(e) {
-    let { error: t, selectedGuildId: n, onGuildChange: u, guilds: d, disabled: f = !1 } = e,
-        p = d
+let u = 5;
+function c(e) {
+    let { error: t, selectedGuildId: n, onGuildChange: c, guilds: d, disabled: _ = !1 } = e,
+        f = d
             .filter((e) => i.zy(e.permissions, s.xBc.MANAGE_GUILD))
-            .map((e) => ({
-                id: e.id,
-                value: e.id,
-                label: e.name,
-            }));
+            .map((e) => ({ id: e.id, value: e.id, label: e.name }));
     return (0, r.jsx)("div", {
         className: l.g,
         children: (0, r.jsx)(a.ZiE, {
@@ -25,12 +19,12 @@ function u(e) {
             helperText: o.intl.format(o.t.t9Jm9o, {}),
             errorMessage: t,
             selectionMode: "single",
-            maxOptionsVisible: c,
+            maxOptionsVisible: u,
             placeholder: o.intl.string(o.t.oM4E1A),
-            options: p,
-            onSelectionChange: u,
-            disabled: f,
-            value: null != n ? n : void 0,
+            options: f,
+            onSelectionChange: c,
+            disabled: _,
+            value: n ?? void 0,
         }),
     });
 }

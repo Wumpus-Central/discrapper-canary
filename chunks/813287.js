@@ -1,3 +1,2 @@
-e.exports = {
-    D: "title_feb59c",
-};
+"use strict";
+e.exports = { D: "title_feb59c" };

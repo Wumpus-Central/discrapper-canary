@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(116657);
 let i = {
     11: "ProcessingSoftware",
@@ -23,11 +22,8 @@ let i = {
     255: {
         name: "OldSubfileType",
         description: (e) =>
-            ({
-                0: "Full-resolution image",
-                1: "Reduced-resolution image",
-                2: "Single page of multi-page image",
-            })[e] || "Unknown",
+            ({ 0: "Full-resolution image", 1: "Reduced-resolution image", 2: "Single page of multi-page image" })[e] ||
+            "Unknown",
     },
     256: "ImageWidth",
     257: "ImageLength",
@@ -37,22 +33,12 @@ let i = {
     263: {
         name: "Thresholding",
         description: (e) =>
-            ({
-                1: "No dithering or halftoning",
-                2: "Ordered dither or halfton",
-                3: "Randomized dither",
-            })[e] || "Unknown",
+            ({ 1: "No dithering or halftoning", 2: "Ordered dither or halfton", 3: "Randomized dither" })[e] ||
+            "Unknown",
     },
     264: "CellWidth",
     265: "CellLength",
-    266: {
-        name: "FillOrder",
-        description: (e) =>
-            ({
-                1: "Normal",
-                2: "Reversed",
-            })[e] || "Unknown",
-    },
+    266: { name: "FillOrder", description: (e) => ({ 1: "Normal", 2: "Reversed" })[e] || "Unknown" },
     269: "DocumentName",
     270: "ImageDescription",
     271: "Make",
@@ -84,39 +70,17 @@ let i = {
     279: "StripByteCounts",
     280: "MinSampleValue",
     281: "MaxSampleValue",
-    282: {
-        name: "XResolution",
-        description: r.A.XResolution,
-    },
-    283: {
-        name: "YResolution",
-        description: r.A.YResolution,
-    },
+    282: { name: "XResolution", description: r.A.XResolution },
+    283: { name: "YResolution", description: r.A.YResolution },
     284: "PlanarConfiguration",
     285: "PageName",
-    286: {
-        name: "XPosition",
-        description: (e) => "" + Math.round(e[0] / e[1]),
-    },
-    287: {
-        name: "YPosition",
-        description: (e) => "" + Math.round(e[0] / e[1]),
-    },
+    286: { name: "XPosition", description: (e) => "" + Math.round(e[0] / e[1]) },
+    287: { name: "YPosition", description: (e) => "" + Math.round(e[0] / e[1]) },
     290: {
         name: "GrayResponseUnit",
-        description: (e) =>
-            ({
-                1: "0.1",
-                2: "0.001",
-                3: "0.0001",
-                4: "1e-05",
-                5: "1e-06",
-            })[e] || "Unknown",
+        description: (e) => ({ 1: "0.1", 2: "0.001", 3: "0.0001", 4: "1e-05", 5: "1e-06" })[e] || "Unknown",
     },
-    296: {
-        name: "ResolutionUnit",
-        description: r.A.ResolutionUnit,
-    },
+    296: { name: "ResolutionUnit", description: r.A.ResolutionUnit },
     297: "PageNumber",
     301: "TransferFunction",
     305: "Software",
@@ -124,72 +88,38 @@ let i = {
     315: "Artist",
     316: "HostComputer",
     317: "Predictor",
-    318: {
-        name: "WhitePoint",
-        description: (e) => e.map((e) => `${e[0]}/${e[1]}`).join(", "),
-    },
-    319: {
-        name: "PrimaryChromaticities",
-        description: (e) => e.map((e) => `${e[0]}/${e[1]}`).join(", "),
-    },
+    318: { name: "WhitePoint", description: (e) => e.map((e) => `${e[0]}/${e[1]}`).join(", ") },
+    319: { name: "PrimaryChromaticities", description: (e) => e.map((e) => `${e[0]}/${e[1]}`).join(", ") },
     321: "HalftoneHints",
     322: "TileWidth",
     323: "TileLength",
     330: "A100DataOffset",
-    332: {
-        name: "InkSet",
-        description: (e) =>
-            ({
-                1: "CMYK",
-                2: "Not CMYK",
-            })[e] || "Unknown",
-    },
+    332: { name: "InkSet", description: (e) => ({ 1: "CMYK", 2: "Not CMYK" })[e] || "Unknown" },
     337: "TargetPrinter",
     338: {
         name: "ExtraSamples",
-        description: (e) =>
-            ({
-                0: "Unspecified",
-                1: "Associated Alpha",
-                2: "Unassociated Alpha",
-            })[e] || "Unknown",
+        description: (e) => ({ 0: "Unspecified", 1: "Associated Alpha", 2: "Unassociated Alpha" })[e] || "Unknown",
     },
     339: {
         name: "SampleFormat",
         description: (e) => {
-            let t = {
-                1: "Unsigned",
-                2: "Signed",
-                3: "Float",
-                4: "Undefined",
-                5: "Complex int",
-                6: "Complex float",
-            };
+            let t = { 1: "Unsigned", 2: "Signed", 3: "Float", 4: "Undefined", 5: "Complex int", 6: "Complex float" };
             return Array.isArray(e) ? e.map((e) => t[e] || "Unknown").join(", ") : "Unknown";
         },
     },
     513: "JPEGInterchangeFormat",
     514: "JPEGInterchangeFormatLength",
-    529: {
-        name: "YCbCrCoefficients",
-        description: (e) => e.map((e) => "" + e[0] / e[1]).join("/"),
-    },
+    529: { name: "YCbCrCoefficients", description: (e) => e.map((e) => "" + e[0] / e[1]).join("/") },
     530: "YCbCrSubSampling",
     531: {
         name: "YCbCrPositioning",
         description: (e) => (1 === e ? "centered" : 2 === e ? "co-sited" : "undefined " + e),
     },
-    532: {
-        name: "ReferenceBlackWhite",
-        description: (e) => e.map((e) => "" + e[0] / e[1]).join(", "),
-    },
+    532: { name: "ReferenceBlackWhite", description: (e) => e.map((e) => "" + e[0] / e[1]).join(", ") },
     700: "ApplicationNotes",
     18246: "Rating",
     18249: "RatingPercent",
-    33432: {
-        name: "Copyright",
-        description: (e) => e.join("; "),
-    },
+    33432: { name: "Copyright", description: (e) => e.join("; ") },
     33550: "PixelScale",
     33723: "IPTC-NAA",
     33920: "IntergraphMatrix",
@@ -203,26 +133,11 @@ let i = {
     34736: "GeoTiffDoubleParams",
     34737: "GeoTiffAsciiParams",
     34853: "GPS Info IFD Pointer",
-    40091: {
-        name: "XPTitle",
-        description: a,
-    },
-    40092: {
-        name: "XPComment",
-        description: a,
-    },
-    40093: {
-        name: "XPAuthor",
-        description: a,
-    },
-    40094: {
-        name: "XPKeywords",
-        description: a,
-    },
-    40095: {
-        name: "XPSubject",
-        description: a,
-    },
+    40091: { name: "XPTitle", description: a },
+    40092: { name: "XPComment", description: a },
+    40093: { name: "XPAuthor", description: a },
+    40094: { name: "XPKeywords", description: a },
+    40095: { name: "XPSubject", description: a },
     42112: "GDALMetadata",
     42113: "GDALNoData",
     50341: "PrintIM",
@@ -245,22 +160,9 @@ let i = {
     50735: "CameraSerialNumber",
     50736: "DNGLensInfo",
     50739: "ShadowScale",
-    50741: {
-        name: "MakerNoteSafety",
-        description: (e) =>
-            ({
-                0: "Unsafe",
-                1: "Safe",
-            })[e] || "Unknown",
-    },
-    50778: {
-        name: "CalibrationIlluminant1",
-        description: r.A.LightSource,
-    },
-    50779: {
-        name: "CalibrationIlluminant2",
-        description: r.A.LightSource,
-    },
+    50741: { name: "MakerNoteSafety", description: (e) => ({ 0: "Unsafe", 1: "Safe" })[e] || "Unknown" },
+    50778: { name: "CalibrationIlluminant1", description: r.A.LightSource },
+    50779: { name: "CalibrationIlluminant2", description: r.A.LightSource },
     50781: "RawDataUniqueID",
     50827: "OriginalRawFileName",
     50828: "OriginalRawFileData",
@@ -284,12 +186,7 @@ let i = {
     50941: {
         name: "ProfileEmbedPolicy",
         description: (e) =>
-            ({
-                0: "Allow Copying",
-                1: "Embed if Used",
-                2: "Never Embed",
-                3: "No Restrictions",
-            })[e] || "Unknown",
+            ({ 0: "Allow Copying", 1: "Embed if Used", 2: "Never Embed", 3: "No Restrictions" })[e] || "Unknown",
     },
     50942: "ProfileCopyright",
     50964: "ForwardMatrix1",
@@ -300,13 +197,7 @@ let i = {
     50969: "PreviewSettingsDigest",
     50970: {
         name: "PreviewColorSpace",
-        description: (e) =>
-            ({
-                1: "Gray Gamma 2.2",
-                2: "sRGB",
-                3: "Adobe RGB",
-                4: "ProPhoto RGB",
-            })[e] || "Unknown",
+        description: (e) => ({ 1: "Gray Gamma 2.2", 2: "sRGB", 3: "Adobe RGB", 4: "ProPhoto RGB" })[e] || "Unknown",
     },
     50971: "PreviewDateTime",
     50972: "RawImageDigest",
@@ -321,35 +212,13 @@ let i = {
     51090: "OriginalBestQualitySize",
     51091: "OriginalDefaultCropSize",
     51105: "CameraLabel",
-    51107: {
-        name: "ProfileHueSatMapEncoding",
-        description: (e) =>
-            ({
-                0: "Linear",
-                1: "sRGB",
-            })[e] || "Unknown",
-    },
-    51108: {
-        name: "ProfileLookTableEncoding",
-        description: (e) =>
-            ({
-                0: "Linear",
-                1: "sRGB",
-            })[e] || "Unknown",
-    },
+    51107: { name: "ProfileHueSatMapEncoding", description: (e) => ({ 0: "Linear", 1: "sRGB" })[e] || "Unknown" },
+    51108: { name: "ProfileLookTableEncoding", description: (e) => ({ 0: "Linear", 1: "sRGB" })[e] || "Unknown" },
     51109: "BaselineExposureOffset",
-    51110: {
-        name: "DefaultBlackRender",
-        description: (e) =>
-            ({
-                0: "Auto",
-                1: "None",
-            })[e] || "Unknown",
-    },
+    51110: { name: "DefaultBlackRender", description: (e) => ({ 0: "Auto", 1: "None" })[e] || "Unknown" },
     51111: "NewRawImageDigest",
     51112: "RawToPreviewGain",
 };
-
 function a(e) {
     return new TextDecoder("utf-16").decode(new Uint8Array(e)).replace(/\u0000+$/, "");
 }

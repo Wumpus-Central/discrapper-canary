@@ -1,20 +1,16 @@
-n.d(t, {
-    A: () => _,
-    j: () => p,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => p, j: () => f });
 var r = n(877413),
     i = n.n(r),
     a = n(284009),
     s = n.n(a),
     o = n(186306),
     l = n(339871),
-    c = n(35277),
-    u = n(711371),
+    u = n(35277),
+    c = n(711371),
     d = n(652215);
-let f = "  ";
-
-function p(e, t) {
+let _ = "  ";
+function f(e, t) {
     let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: a = !1 } = t;
     return (
         (null == n || e.metaKey === n) &&
@@ -23,134 +19,64 @@ function p(e, t) {
         (null == a || e.shiftKey === a)
     );
 }
-
-function _(e) {
+function p(e) {
     return (
         (e.onKeyDown = (t) => {
-            var n, r, a, _;
-            let h = e.isMac;
+            let n = e.isMac;
             switch (t.which) {
                 case d.Ks6.B:
-                    if (
-                        !u.VW.isEditorEmpty(e) &&
-                        p(t, {
-                            ctrl: !h,
-                            cmd: h,
-                        })
-                    )
-                        return (0, l.Px)(e, "bold"), !0;
+                    if (!c.VW.isEditorEmpty(e) && f(t, { ctrl: !n, cmd: n })) return (0, l.Px)(e, "bold"), !0;
                     break;
                 case d.Ks6.I:
-                    if (
-                        !u.VW.isEditorEmpty(e) &&
-                        p(t, {
-                            ctrl: !h,
-                            cmd: h,
-                        })
-                    )
-                        return (0, l.Px)(e, "italics"), !0;
+                    if (!c.VW.isEditorEmpty(e) && f(t, { ctrl: !n, cmd: n })) return (0, l.Px)(e, "italics"), !0;
                     break;
                 case d.Ks6.U:
-                    if (
-                        !u.VW.isEditorEmpty(e) &&
-                        p(t, {
-                            ctrl: !h,
-                            cmd: h,
-                        })
-                    )
-                        return (0, l.Px)(e, "underline"), !0;
+                    if (!c.VW.isEditorEmpty(e) && f(t, { ctrl: !n, cmd: n })) return (0, l.Px)(e, "underline"), !0;
                     break;
                 case d.Ks6.S:
-                    if (
-                        !u.VW.isEditorEmpty(e) &&
-                        p(t, {
-                            ctrl: !h,
-                            cmd: h,
-                            shift: !0,
-                        })
-                    )
+                    if (!c.VW.isEditorEmpty(e) && f(t, { ctrl: !n, cmd: n, shift: !0 }))
                         return (0, l.Px)(e, "strikethrough"), !0;
                     break;
                 case d.Ks6.TAB:
-                    if (
-                        null != e.selection &&
-                        p(t, {
-                            shift: null,
-                        })
-                    ) {
-                        let [r, i] = u.ZF.edges(e.selection),
-                            a = u.VW.blocks(e).slice(r.path[0], i.path[0] + 1),
-                            s = !0;
-                        for (let [e] of a)
-                            if ("line" !== e.type || !(null == (n = e.codeBlockState) ? void 0 : n.isInCodeBlock)) {
-                                s = !1;
+                    if (null != e.selection && f(t, { shift: null })) {
+                        let [n, r] = c.ZF.edges(e.selection),
+                            i = c.VW.blocks(e).slice(n.path[0], r.path[0] + 1),
+                            a = !0;
+                        for (let [e] of i)
+                            if ("line" !== e.type || !e.codeBlockState?.isInCodeBlock) {
+                                a = !1;
                                 break;
                             }
-                        if (s) {
-                            if (!t.shiftKey && u.ZF.isCollapsed(e.selection)) return c.b.insertText(e, f), !0;
+                        if (a) {
+                            if (!t.shiftKey && c.ZF.isCollapsed(e.selection)) return u.b.insertText(e, _), !0;
                             let n = !t.shiftKey;
                             return (
                                 o.o.withSingleEntry(e, () => {
-                                    var t, r, i, s;
-                                    let o =
-                                            null != (t = null == (i = e.selection) ? void 0 : i.anchor)
-                                                ? t
-                                                : u.VW.start(e, []),
-                                        l =
-                                            null != (r = null == (s = e.selection) ? void 0 : s.focus)
-                                                ? r
-                                                : u.VW.end(e, []);
-                                    for (let [t, r] of a) {
-                                        let i = t.children[0];
-                                        if (!u.l5.isText(i)) continue;
-                                        let a = u.PW.child(r, 0),
-                                            s = {
-                                                path: a,
-                                                offset: 0,
-                                            };
+                                    let t = e.selection?.anchor ?? c.VW.start(e, []),
+                                        r = e.selection?.focus ?? c.VW.end(e, []);
+                                    for (let [a, s] of i) {
+                                        let i = a.children[0];
+                                        if (!c.l5.isText(i)) continue;
+                                        let o = c.PW.child(s, 0),
+                                            l = { path: o, offset: 0 };
                                         if (n)
-                                            c.b.insertText(e, f, {
-                                                at: s,
-                                            }),
-                                                u.PW.equals(o.path, a) &&
-                                                    0 !== o.offset &&
-                                                    (o = {
-                                                        path: a,
-                                                        offset: o.offset + f.length,
-                                                    }),
-                                                u.PW.equals(l.path, a) &&
-                                                    0 !== l.offset &&
-                                                    (l = {
-                                                        path: a,
-                                                        offset: l.offset + f.length,
-                                                    });
-                                        else if (i.text.startsWith(f)) {
-                                            let t = {
-                                                path: u.PW.child(r, 0),
-                                                offset: f.length,
-                                            };
-                                            c.b.delete(e, {
-                                                at: {
-                                                    anchor: s,
-                                                    focus: t,
-                                                },
-                                            }),
-                                                u.PW.equals(o.path, a) &&
-                                                    (o = {
-                                                        path: a,
-                                                        offset: Math.max(0, o.offset - f.length),
-                                                    }),
-                                                u.PW.equals(l.path, a) &&
-                                                    (l = {
-                                                        path: a,
-                                                        offset: Math.max(0, l.offset - f.length),
-                                                    });
+                                            u.b.insertText(e, _, { at: l }),
+                                                c.PW.equals(t.path, o) &&
+                                                    0 !== t.offset &&
+                                                    (t = { path: o, offset: t.offset + _.length }),
+                                                c.PW.equals(r.path, o) &&
+                                                    0 !== r.offset &&
+                                                    (r = { path: o, offset: r.offset + _.length });
+                                        else if (i.text.startsWith(_)) {
+                                            let n = { path: c.PW.child(s, 0), offset: _.length };
+                                            u.b.delete(e, { at: { anchor: l, focus: n } }),
+                                                c.PW.equals(t.path, o) &&
+                                                    (t = { path: o, offset: Math.max(0, t.offset - _.length) }),
+                                                c.PW.equals(r.path, o) &&
+                                                    (r = { path: o, offset: Math.max(0, r.offset - _.length) });
                                         }
                                     }
-                                    c.b.select(e, {
-                                        anchor: o,
-                                        focus: l,
-                                    });
+                                    u.b.select(e, { anchor: t, focus: r });
                                 }),
                                 !0
                             );
@@ -159,117 +85,51 @@ function _(e) {
                     break;
                 case d.Ks6.ARROW_LEFT:
                 case d.Ks6.ARROW_RIGHT: {
-                    let n;
-                    if (
-                        p(t, {
-                            shift: null,
-                        })
-                    )
-                        n = "character";
-                    else if (
-                        p(t, {
-                            ctrl: !h,
-                            alt: h,
-                            shift: null,
-                        })
-                    )
-                        n = "word";
-                    else if (
-                        h &&
-                        p(t, {
-                            cmd: !0,
-                            shift: null,
-                        })
-                    )
-                        return !1;
+                    let r;
+                    if (f(t, { shift: null })) r = "character";
+                    else if (f(t, { ctrl: !n, alt: n, shift: null })) r = "word";
+                    else if (n && f(t, { cmd: !0, shift: null })) return !1;
                     else return !1;
-                    let s =
-                            e.children[
-                                null != (r = null == (_ = e.selection) || null == (a = _.focus) ? void 0 : a.path[0])
-                                    ? r
-                                    : 0
-                            ],
-                        o = "rtl" === i()(u.AS.string(s)),
-                        l = (t.which === d.Ks6.ARROW_LEFT) == !o;
-                    return (
-                        c.b.keyboardMove(e, {
-                            reverse: l,
-                            unit: n,
-                            edge: t.shiftKey ? "focus" : void 0,
-                        }),
-                        !0
-                    );
+                    let a = e.children[e.selection?.focus?.path[0] ?? 0],
+                        s = "rtl" === i()(c.AS.string(a)),
+                        o = (t.which === d.Ks6.ARROW_LEFT) == !s;
+                    return u.b.keyboardMove(e, { reverse: o, unit: r, edge: t.shiftKey ? "focus" : void 0 }), !0;
                 }
                 case d.Ks6.A:
-                    if (
-                        h &&
-                        p(t, {
-                            ctrl: !0,
-                        })
-                    ) {
-                        let t = u.VW.getCurrentBlock(e);
+                    if (n && f(t, { ctrl: !0 })) {
+                        let t = c.VW.getCurrentBlock(e);
                         if (null != t) {
-                            let n = u.VW.start(e, t[1]);
-                            return (
-                                c.b.select(e, {
-                                    anchor: n,
-                                    focus: n,
-                                }),
-                                !0
-                            );
+                            let n = c.VW.start(e, t[1]);
+                            return u.b.select(e, { anchor: n, focus: n }), !0;
                         }
                     }
                     break;
                 case d.Ks6.E:
-                    if (
-                        h &&
-                        p(t, {
-                            ctrl: !0,
-                        })
-                    ) {
-                        let t = u.VW.getCurrentBlock(e);
+                    if (n && f(t, { ctrl: !0 })) {
+                        let t = c.VW.getCurrentBlock(e);
                         if (null != t) {
-                            let n = u.VW.end(e, t[1]);
-                            return (
-                                c.b.select(e, {
-                                    anchor: n,
-                                    focus: n,
-                                }),
-                                !0
-                            );
+                            let n = c.VW.end(e, t[1]);
+                            return u.b.select(e, { anchor: n, focus: n }), !0;
                         }
                     }
                     break;
                 case d.Ks6.BACKSPACE:
                 case d.Ks6.DELETE:
                 case d.Ks6.K:
-                    let m = t.which === d.Ks6.BACKSPACE;
+                    let r = t.which === d.Ks6.BACKSPACE;
                     if (
-                        ((!h &&
-                            t.which !== d.Ks6.K &&
-                            p(t, {
-                                ctrl: !0,
-                                shift: !0,
-                            })) ||
-                            (h &&
-                                t.which !== d.Ks6.K &&
-                                p(t, {
-                                    cmd: !0,
-                                })) ||
-                            (h &&
-                                t.which === d.Ks6.K &&
-                                p(t, {
-                                    ctrl: !0,
-                                }))) &&
+                        ((!n && t.which !== d.Ks6.K && f(t, { ctrl: !0, shift: !0 })) ||
+                            (n && t.which !== d.Ks6.K && f(t, { cmd: !0 })) ||
+                            (n && t.which === d.Ks6.K && f(t, { ctrl: !0 }))) &&
                         null != e.selection
                     ) {
-                        let [t, n] = u.ZF.edges(e.selection),
-                            [r, i] = u.VW.node(e, [m ? t.path[0] : n.path[0]]);
+                        let [t, n] = c.ZF.edges(e.selection),
+                            [i, a] = c.VW.node(e, [r ? t.path[0] : n.path[0]]);
                         if (
-                            (s()(u.VW.isBlock(e, r), "Top-most node of selection is not a block"),
-                            (m && !u.Kh.isAtStart(t, [r, i])) || (!m && !u.Kh.isAtEnd(n, [r, i])))
+                            (s()(c.VW.isBlock(e, i), "Top-most node of selection is not a block"),
+                            (r && !c.Kh.isAtStart(t, [i, a])) || (!r && !c.Kh.isAtEnd(n, [i, a])))
                         )
-                            return m ? e.deleteBackward("line") : e.deleteForward("line"), !0;
+                            return r ? e.deleteBackward("line") : e.deleteForward("line"), !0;
                     }
             }
             return !1;

@@ -1,11 +1,5 @@
-n.d(t, {
-    CV: () => i,
-    E9: () => h,
-    Pl: () => _,
-    eB: () => a,
-    fp: () => u,
-    zL: () => d,
-});
+"use strict";
+n.d(t, { CV: () => i, E9: () => h, Pl: () => p, eB: () => a, fp: () => c, zL: () => d });
 var r = n(476858);
 let i = {
         domingo: 0,
@@ -106,8 +100,7 @@ let i = {
         años: "year",
     },
     l = `(?:${(0, r.uJ)(s)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`;
-
-function c(e) {
+function u(e) {
     let t = e.toLowerCase();
     if (void 0 !== s[t]) return s[t];
     if ("un" === t || "una" === t || "uno" === t) return 1;
@@ -116,8 +109,7 @@ function c(e) {
     if (t.match(/media?/)) return 0.5;
     return parseFloat(t);
 }
-let u = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
-
+let c = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
 function d(e) {
     if (e.match(/^[0-9]{1,4}$/)) {
         let t = parseInt(e);
@@ -125,19 +117,17 @@ function d(e) {
     }
     return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
 }
-let f = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
-    p = RegExp(f, "i"),
-    _ = (0, r.mb)("", f);
-
+let _ = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
+    f = RegExp(_, "i"),
+    p = (0, r.mb)("", _);
 function h(e) {
     let t = {},
         n = e,
-        r = p.exec(n);
-    for (; r; ) m(t, r), (n = n.substring(r[0].length)), (r = p.exec(n));
+        r = f.exec(n);
+    for (; r; ) m(t, r), (n = n.substring(r[0].length)), (r = f.exec(n));
     return t;
 }
-
 function m(e, t) {
-    let n = c(t[1]);
+    let n = u(t[1]);
     e[o[t[2].toLowerCase()]] = n;
 }

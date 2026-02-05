@@ -12,35 +12,15 @@ e.exports = function (e) {
         },
         contains: [
             e.C_BLOCK_COMMENT_MODE,
-            e.COMMENT(";", "$", {
-                relevance: 0,
-            }),
+            e.COMMENT(";", "$", { relevance: 0 }),
             e.C_NUMBER_MODE,
             e.BINARY_NUMBER_MODE,
-            {
-                className: "number",
-                begin: "\\b(\\$[a-zA-Z0-9]+|0o[0-7]+)",
-            },
+            { className: "number", begin: "\\b(\\$[a-zA-Z0-9]+|0o[0-7]+)" },
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: "'",
-                end: "[^\\\\]'",
-                illegal: "[^\\\\][^']",
-            },
-            {
-                className: "symbol",
-                begin: "^[A-Za-z0-9_.$]+:",
-            },
-            {
-                className: "meta",
-                begin: "#",
-                end: "$",
-            },
-            {
-                className: "subst",
-                begin: "@[0-9]+",
-            },
+            { className: "string", begin: "'", end: "[^\\\\]'", illegal: "[^\\\\][^']" },
+            { className: "symbol", begin: "^[A-Za-z0-9_.$]+:" },
+            { className: "meta", begin: "#", end: "$" },
+            { className: "subst", begin: "@[0-9]+" },
         ],
     };
 };

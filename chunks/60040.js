@@ -1,70 +1,60 @@
-n.d(t, {
-    A: () => E,
-});
+n.d(t, { A: () => v });
 var r = n(627968),
-    l = n(64700),
-    o = n(311907),
-    i = n(827734),
-    s = n(990078),
-    a = n(397927),
-    c = n(775602),
-    u = n(341915),
+    s = n(64700),
+    i = n(311907),
+    l = n(827734),
+    a = n(990078),
+    o = n(397927),
+    u = n(775602),
+    c = n(341915),
     d = n(890687),
-    f = n(92246),
-    m = n(793683),
-    p = n(717415),
-    v = n(985018);
-
-function E() {
-    var e, t, n;
-    let { quest: E, sourceQuestContent: g, onClose: h } = l.useContext(p.VideoQuestModalContext),
-        b = (0, d.LS)(E),
-        y = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-        O = null != (0, f._Z)(E.config),
-        S = (0, m.v)({
-            quest: E,
-            questContent: u.uF.QUEST_HOME_DESKTOP,
-            sourceQuestContent: g,
-            onCloseModal: h,
+    m = n(92246),
+    E = n(793683),
+    f = n(717415),
+    p = n(985018);
+function v() {
+    let { quest: e, sourceQuestContent: t, onClose: n } = s.useContext(f.VideoQuestModalContext),
+        v = (0, d.LS)(e),
+        h = (0, i.bG)([u.A], () => u.A.useReducedMotion),
+        _ = null != (0, m._Z)(e.config),
+        C = (0, E.v)({
+            quest: e,
+            questContent: c.uF.QUEST_HOME_DESKTOP,
+            sourceQuestContent: t,
+            onCloseModal: n,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
-        _ =
-            (null == (e = E.userStatus) ? void 0 : e.claimedAt) != null
-                ? O
-                    ? v.intl.string(v.t.WYchde)
-                    : v.intl.string(v.t.vTgCWx)
-                : v.intl.string(v.t.cfY4PE),
-        C =
-            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null
-                ? b
-                    ? v.intl.string(v.t.NJ6Bnm)
-                    : v.intl.string(v.t.USNO1K)
-                : void 0;
-    return (0, r.jsx)(s.m, {
-        text: C,
+        g =
+            e.userStatus?.claimedAt != null
+                ? _
+                    ? p.intl.string(p.t.WYchde)
+                    : p.intl.string(p.t.vTgCWx)
+                : p.intl.string(p.t.cfY4PE),
+        S = e.userStatus?.completedAt == null ? (v ? p.intl.string(p.t.NJ6Bnm) : p.intl.string(p.t.USNO1K)) : void 0;
+    return (0, r.jsx)(a.m, {
+        text: S,
         children: (0, r.jsx)("div", {
-            children: (0, r.jsx)(a.Button, {
+            children: (0, r.jsx)(o.Button, {
                 variant: "secondary",
                 fullWidth: !0,
                 icon: ((e, t) => {
-                    var n, r;
-                    if ((null == (n = e.userStatus) ? void 0 : n.claimedAt) == null)
+                    if (e.userStatus?.claimedAt == null)
                         return {
                             type: "rive",
-                            asset: a.Vs8,
+                            asset: o.Vs8,
                             riveProps: {
                                 withReducedMotion: "play",
                                 dataBinding: {
-                                    locked: (null == (r = e.userStatus) ? void 0 : r.completedAt) === null,
-                                    fill: i.A.colors.ICON_STRONG,
+                                    locked: e.userStatus?.completedAt === null,
+                                    fill: l.A.colors.ICON_STRONG,
                                     reducedMotion: t,
                                 },
                             },
                         };
-                })(E, y),
-                onClick: S,
-                text: _,
-                disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,
+                })(e, h),
+                onClick: C,
+                text: g,
+                disabled: e.userStatus?.completedAt == null,
             }),
         }),
     });

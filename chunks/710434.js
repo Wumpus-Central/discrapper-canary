@@ -1,228 +1,158 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => p });
+var i = n(627968),
+    s = n(64700),
     l = n(417597),
-    s = n(397927),
-    c = n(58149),
-    a = n(408213),
-    o = n(60175),
+    r = n(397927),
+    a = n(58149),
+    o = n(408213),
+    c = n(60175),
     d = n(46054),
     u = n(954571),
-    f = n(652215),
-    p = n(985018),
-    b = n(22941);
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function O(e) {
-    var t;
+    m = n(652215),
+    _ = n(985018),
+    x = n(22941);
+function p(e) {
     let {
-            guild: n,
-            prompts: O,
-            completeOnboarding: x,
-            setCurrentStep: h,
-            disableTracking: j,
-            previousPromptIndex: v,
+            guild: t,
+            prompts: n,
+            completeOnboarding: p,
+            setCurrentStep: g,
+            disableTracking: h,
+            previousPromptIndex: f,
         } = e,
-        y = i.useRef(null),
-        _ = (0, l.bG)([o.A], () => o.A.getRulesPrompt(n.id)),
-        [A, N] = i.useState(null != (t = null == _ ? void 0 : _.response) && t),
-        [P, E] = i.useState(!1),
-        D = (0, l.bG)([o.A], () => o.A.get(n.id)),
-        w = i.useRef(null),
-        S = i.useRef(null),
-        C = i.useCallback(async () => {
-            if (null != D && null != _) {
+        A = s.useRef(null),
+        v = (0, l.bG)([c.A], () => c.A.getRulesPrompt(t.id)),
+        [N, j] = s.useState(v?.response ?? !1),
+        [b, E] = s.useState(!1),
+        C = (0, l.bG)([c.A], () => c.A.get(t.id)),
+        I = s.useRef(null),
+        O = s.useRef(null),
+        T = s.useCallback(async () => {
+            if (null != C && null != v) {
                 E(!0);
                 try {
-                    await a.Ay.submitVerificationForm(
-                        n.id,
-                        g(m({}, D), {
-                            formFields: [
-                                g(m({}, _), {
-                                    response: A,
-                                }),
-                            ],
-                        }),
-                    );
-                } catch (e) {}
-                x();
+                    await o.Ay.submitVerificationForm(t.id, { ...C, formFields: [{ ...v, response: N }] });
+                } catch {}
+                p();
             }
-        }, [n.id, D, _, A, x]);
-
-    function I(e) {
+        }, [t.id, C, v, N, p]);
+    function y(e) {
         let [t] = e;
-        t.isIntersecting && N(!0);
+        t.isIntersecting && j(!0);
     }
-    return (i.useEffect(() => {
-        let e = new IntersectionObserver(I, {
-                root: w.current,
-                rootMargin: "0px",
-                threshold: 0,
-            }),
-            t = S.current;
+    return (s.useEffect(() => {
+        let e = new IntersectionObserver(y, { root: I.current, rootMargin: "0px", threshold: 0 }),
+            t = O.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [S, w]),
-    null == _)
+    }, [O, I]),
+    null == v)
         ? null
-        : (0, r.jsx)("div", {
-              className: b.J1,
-              children: (0, r.jsxs)("div", {
-                  className: b.mK,
-                  ref: w,
+        : (0, i.jsx)("div", {
+              className: x.J1,
+              children: (0, i.jsxs)("div", {
+                  className: x.mK,
+                  ref: I,
                   children: [
-                      (0, r.jsxs)(s.ChK, {
-                          className: b.gT,
-                          ref: y,
+                      (0, i.jsxs)(r.ChK, {
+                          className: x.gT,
+                          ref: A,
                           children: [
-                              (0, r.jsx)(s.Text, {
+                              (0, i.jsx)(r.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: p.intl.string(p.t["b1JC+l"]),
+                                  children: _.intl.string(_.t["b1JC+l"]),
                               }),
-                              (0, r.jsx)(s.Heading, {
+                              (0, i.jsx)(r.Heading, {
                                   variant: "heading-xl/semibold",
-                                  children: p.intl.string(p.t.prJqwT),
+                                  children: _.intl.string(_.t.prJqwT),
                               }),
-                              (0, r.jsx)("div", {
-                                  className: b.qE,
-                                  ref: S,
-                                  children: _.values.map((e, t) =>
-                                      (0, r.jsxs)(
+                              (0, i.jsx)("div", {
+                                  className: x.qE,
+                                  ref: O,
+                                  children: v.values.map((e, n) =>
+                                      (0, i.jsxs)(
                                           "div",
                                           {
-                                              className: b.gJ,
+                                              className: x.gJ,
                                               children: [
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, i.jsx)(r.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "text-muted",
-                                                      children: "".concat(t + 1, "."),
+                                                      children: `${n + 1}.`,
                                                   }),
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, i.jsx)(r.Text, {
                                                       variant: "text-sm/normal",
-                                                      className: b.RQ,
+                                                      className: x.RQ,
                                                       children: d.A.parseGuildVerificationFormRule(e, !0, {
-                                                          channelId: n.rulesChannelId,
+                                                          channelId: t.rulesChannelId,
                                                       }),
                                                   }),
                                               ],
                                           },
-                                          "term-".concat(t),
+                                          `term-${n}`,
                                       ),
                                   ),
                               }),
                           ],
                       }),
-                      (0, r.jsx)("div", {
-                          className: b.Lw,
-                      }),
-                      (0, r.jsxs)("div", {
-                          className: b.N3,
+                      (0, i.jsx)("div", { className: x.Lw }),
+                      (0, i.jsxs)("div", {
+                          className: x.N3,
                           children: [
-                              (0, r.jsx)("div", {
-                                  className: b.X1,
+                              (0, i.jsx)("div", {
+                                  className: x.X1,
                                   children:
-                                      -1 !== v &&
-                                      "cover" !== v &&
-                                      (0, r.jsx)(s.Button, {
+                                      -1 !== f &&
+                                      "cover" !== f &&
+                                      (0, i.jsx)(r.Button, {
                                           variant: "secondary",
                                           size: "md",
-                                          text: p.intl.string(p.t["13/7kX"]),
+                                          text: _.intl.string(_.t["13/7kX"]),
                                           onClick: () => {
-                                              !j &&
-                                                  (u.default.track(
-                                                      f.HAw.GUILD_ONBOARDING_STEP_COMPLETED,
-                                                      g(m({}, (0, c.H$)(n.id)), {
-                                                          step: -1,
-                                                          skipped: !1,
-                                                          back: !0,
-                                                          options_selected: 0,
-                                                          in_onboarding: !0,
-                                                          is_final_step: !1,
-                                                      }),
-                                                  ),
-                                                  "number" == typeof v &&
-                                                      v >= 0 &&
-                                                      u.default.track(
-                                                          f.HAw.GUILD_ONBOARDING_STEP_VIEWED,
-                                                          g(m({}, (0, c.H$)(n.id)), {
-                                                              step: v,
-                                                              required: O[v].required,
-                                                          }),
-                                                      )),
-                                                  h(v);
+                                              !h &&
+                                                  (u.default.track(m.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+                                                      ...(0, a.H$)(t.id),
+                                                      step: -1,
+                                                      skipped: !1,
+                                                      back: !0,
+                                                      options_selected: 0,
+                                                      in_onboarding: !0,
+                                                      is_final_step: !1,
+                                                  }),
+                                                  "number" == typeof f &&
+                                                      f >= 0 &&
+                                                      u.default.track(m.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
+                                                          ...(0, a.H$)(t.id),
+                                                          step: f,
+                                                          required: n[f].required,
+                                                      })),
+                                                  g(f);
                                           },
-                                          icon: s.Zge,
+                                          icon: r.Zge,
                                           iconPosition: "start",
                                       }),
                               }),
-                              (0, r.jsxs)("div", {
-                                  className: b.Oh,
+                              (0, i.jsxs)("div", {
+                                  className: x.Oh,
                                   children: [
-                                      (0, r.jsx)(s.Text, {
-                                          className: b.BK,
+                                      (0, i.jsx)(r.Text, {
+                                          className: x.BK,
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: A ? p.intl.string(p.t.arAe3I) : p.intl.string(p.t.D0CVAc),
+                                          children: N ? _.intl.string(_.t.arAe3I) : _.intl.string(_.t.D0CVAc),
                                       }),
-                                      (0, r.jsx)(s.Button, {
+                                      (0, i.jsx)(r.Button, {
                                           variant: "primary",
                                           size: "md",
-                                          text: "".concat(p.intl.string(p.t["8SuVoE"]), " \uD83C\uDF89"),
-                                          onClick: C,
-                                          disabled: !A || P,
-                                          loading: P,
+                                          text: `${_.intl.string(_.t["8SuVoE"])} 🎉`,
+                                          onClick: T,
+                                          disabled: !N || b,
+                                          loading: b,
                                       }),
                                   ],
                               }),

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     $f: "guildIcon__0fa6d",
     dK: "mask__0fa6d",

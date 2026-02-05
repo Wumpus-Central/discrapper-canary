@@ -1,125 +1,86 @@
-n.d(t, {
-    E: () => h,
-});
+"use strict";
+n.d(t, { E: () => h });
 var r = n(403992),
     i = n(966209),
     a = n(227510),
     s = n(406985),
     o = n(723906),
     l = n(290424),
-    c = n(803082),
-    u = n(64700),
+    u = n(803082),
+    c = n(64700),
     d = n(74172),
-    f = n(853590),
-    p = n(510281),
-    _ = n(564949);
-
+    _ = n(853590),
+    f = n(510281),
+    p = n(564949);
 function h(e, t, n) {
     let {
             isVirtualized: h,
             disallowTypeAhead: m,
             keyboardDelegate: g,
             focusMode: E,
-            scrollRef: b,
-            getRowText: y,
-            onRowAction: O,
-            onCellAction: A,
-            escapeKeyBehavior: v = "clearSelection",
-            shouldSelectOnPressUp: S,
+            scrollRef: A,
+            getRowText: I,
+            onRowAction: T,
+            onCellAction: y,
+            escapeKeyBehavior: S = "clearSelection",
+            shouldSelectOnPressUp: v,
         } = e,
-        { selectionManager: I } = t;
+        { selectionManager: C } = t;
     e["aria-label"] ||
         e["aria-labelledby"] ||
         console.warn("An aria-label or aria-labelledby prop is required for accessibility.");
-    let T = (0, d.Q)({
-            usage: "search",
-            sensitivity: "base",
-        }),
-        { direction: C } = (0, f.Y)(),
-        N = t.selectionManager.disabledBehavior,
-        R = (0, u.useMemo)(
+    let b = (0, d.Q)({ usage: "search", sensitivity: "base" }),
+        { direction: N } = (0, _.Y)(),
+        R = t.selectionManager.disabledBehavior,
+        O = (0, c.useMemo)(
             () =>
                 g ||
                 new (0, r.J)({
                     collection: t.collection,
                     disabledKeys: t.disabledKeys,
-                    disabledBehavior: N,
+                    disabledBehavior: R,
                     ref: n,
-                    direction: C,
-                    collator: T,
+                    direction: N,
+                    collator: b,
                     focusMode: E,
                 }),
-            [g, t.collection, t.disabledKeys, N, n, C, T, E],
+            [g, t.collection, t.disabledKeys, R, n, N, b, E],
         ),
-        { collectionProps: w } = (0, _.y)({
+        { collectionProps: D } = (0, p.y)({
             ref: n,
-            selectionManager: I,
-            keyboardDelegate: R,
+            selectionManager: C,
+            keyboardDelegate: O,
             isVirtualized: h,
-            scrollRef: b,
+            scrollRef: A,
             disallowTypeAhead: m,
-            escapeKeyBehavior: v,
+            escapeKeyBehavior: S,
         }),
-        P = (0, o.Bi)(e.id);
-    i.B.set(t, {
-        keyboardDelegate: R,
-        actions: {
-            onRowAction: O,
-            onCellAction: A,
-        },
-        shouldSelectOnPressUp: S,
-    });
-    let D = (0, s.m)({
-            selectionManager: I,
-            hasItemActions: !!(O || A),
-        }),
-        x = (0, l.$)(e, {
-            labelable: !0,
-        }),
-        L = (0, u.useCallback)(
+        L = (0, o.Bi)(e.id);
+    i.B.set(t, { keyboardDelegate: O, actions: { onRowAction: T, onCellAction: y }, shouldSelectOnPressUp: v });
+    let w = (0, s.m)({ selectionManager: C, hasItemActions: !!(T || y) }),
+        x = (0, l.$)(e, { labelable: !0 }),
+        P = (0, c.useCallback)(
             (e) => {
-                if (I.isFocused) {
-                    e.currentTarget.contains(e.target) || I.setFocused(!1);
+                if (C.isFocused) {
+                    e.currentTarget.contains(e.target) || C.setFocused(!1);
                     return;
                 }
-                e.currentTarget.contains(e.target) && I.setFocused(!0);
+                e.currentTarget.contains(e.target) && C.setFocused(!0);
             },
-            [I],
+            [C],
         ),
-        j = (0, u.useMemo)(
-            () => ({
-                onBlur: w.onBlur,
-                onFocus: L,
-            }),
-            [L, w.onBlur],
-        ),
-        M = (0, p.$)(n, {
-            isDisabled: 0 !== t.collection.size,
-        }),
-        k = (0, c.v)(
+        M = (0, c.useMemo)(() => ({ onBlur: D.onBlur, onFocus: P }), [P, D.onBlur]),
+        k = (0, f.$)(n, { isDisabled: 0 !== t.collection.size }),
+        U = (0, u.v)(
             x,
-            {
-                role: "grid",
-                id: P,
-                "aria-multiselectable": "multiple" === I.selectionMode ? "true" : void 0,
-            },
-            t.isKeyboardNavigationDisabled ? j : w,
-            (0 === t.collection.size && {
-                tabIndex: M ? -1 : 0,
-            }) ||
-                void 0,
-            D,
+            { role: "grid", id: L, "aria-multiselectable": "multiple" === C.selectionMode ? "true" : void 0 },
+            t.isKeyboardNavigationDisabled ? M : D,
+            (0 === t.collection.size && { tabIndex: k ? -1 : 0 }) || void 0,
+            w,
         );
     return (
-        h && ((k["aria-rowcount"] = t.collection.size), (k["aria-colcount"] = t.collection.columnCount)),
-        (0, a.H)(
-            {
-                getRowText: y,
-            },
-            t,
-        ),
-        {
-            gridProps: k,
-        }
+        h && ((U["aria-rowcount"] = t.collection.size), (U["aria-colcount"] = t.collection.columnCount)),
+        (0, a.H)({ getRowText: I }, t),
+        { gridProps: U }
     );
 }

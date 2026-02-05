@@ -1,21 +1,10 @@
-n.d(t, {
-    p: () => l,
-});
-var r = n(659051),
-    i = n(652215);
-
-function l(e, t, n, l) {
+n.d(t, { p: () => a });
+var i = n(659051),
+    l = n(652215);
+function a(e, t, n, a) {
     return !t.hasAnyAfter(
         e,
-        (e) => {
-            var t;
-            return (
-                null != e.activity &&
-                (null == (t = e.application) ? void 0 : t.id) === n &&
-                e.activity.type === i.xL.JOIN &&
-                !(0, r.A)(l, e, n)
-            );
-        },
+        (e) => null != e.activity && e.application?.id === n && e.activity.type === l.xL.JOIN && !(0, i.A)(a, e, n),
         25,
     );
 }

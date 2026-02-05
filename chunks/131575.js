@@ -1,32 +1,20 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    l = n(328913),
-    o = n(407195),
-    a = n(855790),
-    c = n(594479);
-
-function d(e) {
-    let { dragStart: t, dragging: n, pinned: r, locked: d, className: u } = e;
-    return (0, i.jsxs)(a.Ay, {
-        className: s()(c.i, u),
+var s = n(503698),
+    l = n.n(s),
+    a = n(328913),
+    r = n(407195),
+    o = n(855790),
+    d = n(594479);
+function c(e) {
+    let { dragStart: t, dragging: n, pinned: s, locked: c, className: u } = e;
+    return (0, i.jsxs)(o.Ay, {
+        className: l()(d.i, u),
         children: [
-            (0, i.jsx)(l.A, {
-                contained: !0,
-                dragStart: t,
-                locked: d,
-            }),
-            (0, i.jsx)(o.A, {
-                dragStart: t,
-                locked: d,
-                pinned: r,
-                dragging: n,
-                contained: !0,
-            }),
+            (0, i.jsx)(a.A, { contained: !0, dragStart: t, locked: c }),
+            (0, i.jsx)(r.A, { dragStart: t, locked: c, pinned: s, dragging: n, contained: !0 }),
         ],
     });
 }

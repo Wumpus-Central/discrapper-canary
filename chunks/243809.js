@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(627968);
 n(64700);
 let i = (e) => {
@@ -111,13 +110,8 @@ let i = (e) => {
                         y2: "23.8981",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -128,13 +122,8 @@ let i = (e) => {
                         y2: "23.9092",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -145,13 +134,8 @@ let i = (e) => {
                         y2: "23.1636",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -162,13 +146,8 @@ let i = (e) => {
                         y2: "23.1636",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -179,13 +158,8 @@ let i = (e) => {
                         y2: "23.1636",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -196,13 +170,8 @@ let i = (e) => {
                         y2: "23.8106",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -213,13 +182,8 @@ let i = (e) => {
                         y2: "23.5132",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -230,13 +194,8 @@ let i = (e) => {
                         y2: "5.12062",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -247,13 +206,8 @@ let i = (e) => {
                         y2: "1.21667",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -264,13 +218,8 @@ let i = (e) => {
                         y2: "34.3352",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -281,13 +230,8 @@ let i = (e) => {
                         y2: "40.3635",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -298,13 +242,8 @@ let i = (e) => {
                         y2: "35.8773",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsxs)("linearGradient", {
@@ -315,13 +254,8 @@ let i = (e) => {
                         y2: "41.9056",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", {
-                                stopColor: "#B473F5",
-                            }),
-                            (0, r.jsx)("stop", {
-                                offset: "1",
-                                stopColor: "#E292AA",
-                            }),
+                            (0, r.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#E292AA" }),
                         ],
                     }),
                     (0, r.jsx)("clipPath", {

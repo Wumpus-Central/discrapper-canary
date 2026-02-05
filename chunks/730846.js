@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(360345);
 let i = RegExp(`^\\s*(${r.fp})`, "i"),
     a = 1;

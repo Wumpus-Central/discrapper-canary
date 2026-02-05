@@ -1,7 +1,4 @@
-t.r(a),
-    t.d(a, {
-        default: () => r,
-    });
+t.r(a), t.d(a, { default: () => r });
 var r = {
     payButton: "Fizet\xe9s",
     "payButton.redirecting": "\xc1tir\xe1ny\xedt\xe1s...",

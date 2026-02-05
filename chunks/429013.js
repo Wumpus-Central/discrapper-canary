@@ -1,3 +1,4 @@
+"use strict";
 var r = n(906046),
     i = n(486335),
     a = r("RegExp.prototype.exec"),

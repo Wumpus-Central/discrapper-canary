@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
 r = {
     deselectedItem: (e) => `${e.item} \u{5DC}\u{5D0} \u{5E0}\u{5D1}\u{5D7}\u{5E8}.`,

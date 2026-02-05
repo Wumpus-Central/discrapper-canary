@@ -1,28 +1,33 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048),
-    n(321073),
-    n(733351),
-    n(747238);
-var r = n(91871),
-    i = n.n(r),
-    l = n(18108);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+n.d(t, { A: () => a }), n(321073);
+var i = n(91871),
+    s = n.n(i),
+    r = n(18108);
 class a {
+    terms;
+    cache;
+    cacheScored;
+    preprocessed;
+    constructor(e) {
+        (this.terms = e),
+            (this.cache = new Map()),
+            (this.cacheScored = new Map()),
+            (this.preprocessed = []),
+            e.forEach((e) => {
+                let [t, n] = e,
+                    i = [],
+                    s = [],
+                    r = new Set();
+                n.forEach((e) => {
+                    i.push(e.toLocaleLowerCase()),
+                        e.includes(" ") &&
+                            e.split(/\s+/).forEach((e) => {
+                                let t = e.toLocaleLowerCase();
+                                r.has(t) || (s.push(t), r.add(t));
+                            });
+                }),
+                    this.preprocessed.push([t, { normalizedSearchTerms: i, normalizedTokens: s }]);
+            });
+    }
     search(e) {
         return new Promise((t) => {
             t(this.getMatchingSettings(e));
@@ -35,10 +40,10 @@ class a {
             let t = [];
             return (
                 this.terms.forEach((n) => {
-                    let [r, l] = n;
-                    for (let n of l)
-                        if (i()(e.toLowerCase(), n.toLowerCase())) {
-                            t.push(r);
+                    let [i, r] = n;
+                    for (let n of r)
+                        if (s()(e.toLowerCase(), n.toLowerCase())) {
+                            t.push(i);
                             break;
                         }
                 }),
@@ -52,59 +57,24 @@ class a {
         if (0 === t.length) return [];
         let n = this.cacheScored.get(t);
         if (null != n) return n;
-        let r = [];
+        let i = [];
         return (
             this.preprocessed.forEach((e) => {
-                let [n, { normalizedTokens: i, normalizedSearchTerms: s }] = e,
-                    a = 0;
-                s.some((e) => e === t)
-                    ? (a = 1)
-                    : i.some((e) => e.startsWith(t))
-                      ? (a = 0.95)
-                      : s.forEach((e) => {
+                let [n, { normalizedTokens: s, normalizedSearchTerms: a }] = e,
+                    l = 0;
+                a.some((e) => e === t)
+                    ? (l = 1)
+                    : s.some((e) => e.startsWith(t))
+                      ? (l = 0.95)
+                      : a.forEach((e) => {
                             let n = 0,
-                                r = (0, l.g)(t, e);
-                            r >= 0.8 && (n = r), (a = Math.max(a, n));
+                                i = (0, r.g)(t, e);
+                            i >= 0.8 && (n = i), (l = Math.max(l, n));
                         }),
-                    a > 0 &&
-                        r.push({
-                            setting: n,
-                            score: a,
-                        });
+                    l > 0 && i.push({ setting: n, score: l });
             }),
-            this.cacheScored.set(t, r),
-            r
+            this.cacheScored.set(t, i),
+            i
         );
-    }
-    constructor(e) {
-        s(this, "terms", void 0),
-            s(this, "cache", void 0),
-            s(this, "cacheScored", void 0),
-            s(this, "preprocessed", void 0),
-            (this.terms = e),
-            (this.cache = new Map()),
-            (this.cacheScored = new Map()),
-            (this.preprocessed = []),
-            e.forEach((e) => {
-                let [t, n] = e,
-                    r = [],
-                    i = [],
-                    l = new Set();
-                n.forEach((e) => {
-                    r.push(e.toLocaleLowerCase()),
-                        e.includes(" ") &&
-                            e.split(/\s+/).forEach((e) => {
-                                let t = e.toLocaleLowerCase();
-                                l.has(t) || (i.push(t), l.add(t));
-                            });
-                }),
-                    this.preprocessed.push([
-                        t,
-                        {
-                            normalizedSearchTerms: r,
-                            normalizedTokens: i,
-                        },
-                    ]);
-            });
     }
 }

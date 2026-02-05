@@ -1,148 +1,66 @@
-n.d(t, {
-    A: () => O,
-    V: () => g,
-});
+"use strict";
+n.d(t, { A: () => g, V: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(92674),
+    s = n.n(a),
+    o = n(92674),
     l = n(397927),
-    c = n(573435),
-    u = n(44998),
+    u = n(573435),
+    c = n(44998),
     d = n(597222),
-    f = n(543202);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-var g = (function (e) {
-    return (e[(e.UPDATE = 0)] = "UPDATE"), (e[(e.NEW = 1)] = "NEW"), e;
-})({});
-let E = 20,
-    y = {
-        config: {
-            friction: 26,
-            tension: 700,
-            mass: 1,
-        },
-        initial: {
-            scale: 1,
-            opacity: 1,
-        },
-        from: {
-            scale: 0.6,
-            opacity: 0,
-        },
-        enter: {
-            scale: 1,
-            opacity: 1,
-        },
-        leave: {
-            scale: 0.6,
-            opacity: 0,
-        },
+    _ = n(543202),
+    f = (function (e) {
+        return (e[(e.UPDATE = 0)] = "UPDATE"), (e[(e.NEW = 1)] = "NEW"), e;
+    })({});
+let p = 20,
+    h = {
+        config: { friction: 26, tension: 700, mass: 1 },
+        initial: { scale: 1, opacity: 1 },
+        from: { scale: 0.6, opacity: 0 },
+        enter: { scale: 1, opacity: 1 },
+        leave: { scale: 0.6, opacity: 0 },
     };
-
-function b(e) {
+function m(e) {
     let {
             ref: t,
             className: n,
             disabled: i = !1,
             childClassName: a,
-            iconClassName: p,
-            icon: h,
+            iconClassName: f,
+            icon: m,
             children: g,
-            onClick: b,
-            onDoubleClick: O,
-            isActive: v,
-            onMouseEnter: A,
-            onMouseLeave: I,
+            onClick: E,
+            onDoubleClick: A,
+            isActive: I,
+            onMouseEnter: T,
+            onMouseLeave: y,
             onFocus: S,
-            onBlur: T,
+            onBlur: v,
             pulse: C,
-            sparkle: N,
-            notification: w,
+            sparkle: b,
+            notification: N,
             "aria-label": R,
-            "aria-expanded": P,
+            "aria-expanded": O,
             "aria-haspopup": D,
             "aria-controls": L,
-            noHover: x,
+            noHover: w,
         } = e,
-        M = (0, l.pnh)(
-            null != g,
-            m(_({}, y), {
-                keys: (e) => (e ? "children" : "icon"),
-            }),
-        ),
-        j = (e) => {
+        x = (0, l.pnh)(null != g, { ...h, keys: (e) => (e ? "children" : "icon") }),
+        P = (e) => {
             let { component: t } = e;
-            return null != w
+            return null != N
                 ? (0, r.jsxs)("div", {
-                      className: f.IO,
+                      className: _.IO,
                       children: [
-                          (0, r.jsx)(c.Ay, {
-                              className: f.SA,
-                              mask: c.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: E,
-                              height: E,
+                          (0, r.jsx)(u.Ay, {
+                              className: _.SA,
+                              mask: u.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
+                              width: p,
+                              height: p,
                               children: t,
                           }),
-                          (0, r.jsx)("span", {
-                              className: f.T3,
-                          }),
+                          (0, r.jsx)("span", { className: _.T3 }),
                       ],
                   })
                 : t;
@@ -150,54 +68,36 @@ function b(e) {
     return (0, r.jsxs)(l.DUT, {
         innerRef: t,
         "aria-label": R,
-        "aria-expanded": P,
+        "aria-expanded": O,
         "aria-haspopup": D,
         "aria-controls": L,
         "aria-disabled": i,
-        className: o()(n, f.x6, {
-            [f.vu]: v,
-            [f.CK]: x,
-            [f.s0]: C,
-            [f.r9]: i,
-        }),
-        onClick: i ? void 0 : b,
-        onDoubleClick: i ? void 0 : O,
-        onMouseEnter: A,
-        onMouseLeave: I,
+        className: s()(n, _.x6, { [_.vu]: I, [_.CK]: w, [_.s0]: C, [_.r9]: i }),
+        onClick: i ? void 0 : E,
+        onDoubleClick: i ? void 0 : A,
+        onMouseEnter: T,
+        onMouseLeave: y,
         onFocus: S,
-        onBlur: T,
-        focusProps: {
-            offset: {
-                top: 4,
-                bottom: 4,
-            },
-        },
+        onBlur: v,
+        focusProps: { offset: { top: 4, bottom: 4 } },
         children: [
-            M((e, t, n) => {
+            x((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
-                          s.animated.div,
-                          {
-                              style: e,
-                              className: o()(f._o, a),
-                              children: j({
-                                  component: g,
-                              }),
-                          },
+                          o.animated.div,
+                          { style: e, className: s()(_._o, a), children: P({ component: g }) },
                           i,
                       )
-                    : null != h
+                    : null != m
                       ? (0, r.jsx)(
-                            s.animated.div,
+                            o.animated.div,
                             {
                                 style: e,
-                                className: o()(f._o, a),
-                                children: j({
-                                    component: (0, r.jsx)(h, {
-                                        className: o()(f.Kk, p, {
-                                            [f.d1]: C,
-                                        }),
+                                className: s()(_._o, a),
+                                children: P({
+                                    component: (0, r.jsx)(m, {
+                                        className: s()(_.Kk, f, { [_.d1]: C }),
                                         color: "currentColor",
                                     }),
                                 }),
@@ -206,19 +106,12 @@ function b(e) {
                         )
                       : void 0;
             }),
-            N &&
+            b &&
                 (0, r.jsxs)("div", {
-                    className: f.YX,
-                    children: [
-                        (0, r.jsx)(d.A, {
-                            className: f.XR,
-                        }),
-                        (0, r.jsx)(u.A, {
-                            className: f.Hv,
-                        }),
-                    ],
+                    className: _.YX,
+                    children: [(0, r.jsx)(d.A, { className: _.XR }), (0, r.jsx)(c.A, { className: _.Hv })],
                 }),
         ],
     });
 }
-let O = i.memo(b);
+let g = i.memo(m);

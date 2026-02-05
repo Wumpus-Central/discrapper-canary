@@ -1,7 +1,4 @@
-n.d(t, {
-    t: () => r,
-});
-
-function r(e) {
+n.d(t, { t: () => i });
+function i(e) {
     e();
 }

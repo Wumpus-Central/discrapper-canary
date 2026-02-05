@@ -1,102 +1,82 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(311907),
-    a = n(732955),
-    s = n(397927),
+n.d(t, { A: () => S });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
+    s = n(732955),
+    r = n(397927),
     o = n(775602),
     c = n(793574),
-    u = n(571694),
-    d = n(47167),
+    d = n(571694),
+    u = n(47167),
     h = n(922301),
-    p = n(750112),
-    f = n(598104),
-    m = n(697122),
+    m = n(750112),
+    A = n(598104),
+    p = n(697122),
     g = n(73028),
-    A = n(95550),
-    b = n(854627),
-    _ = n(314307),
-    y = n(985018),
-    v = n(82842);
-
-function E(e) {
-    var t;
-    let n,
-        { channel: E, children: O, user: C } = e,
-        x = (0, i.bG)([o.A], () => o.A.useReducedMotion),
-        S = null != (t = (0, d.Ay)(E)) ? t : "",
+    f = n(95550),
+    _ = n(854627),
+    E = n(314307),
+    C = n(985018),
+    x = n(82842);
+function S(e) {
+    let t,
+        { channel: n, children: S, user: T } = e,
+        I = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        N = (0, u.Ay)(n) ?? "",
         {
-            avatarDecorationSrc: j,
-            eventHandlers: I,
-            isAnimating: T,
-        } = (0, b.A)({
-            userId: null == C ? void 0 : C.id,
-            size: s._3J.SIZE_80,
-            animateOnHover: !0,
-        }),
-        [N, P] = r.useState(!1),
-        w = r.useCallback(() => {
-            I.onMouseEnter(), P(!0);
-        }, [I]),
-        R = r.useCallback(() => {
-            I.onMouseLeave(), P(!1);
-        }, [I]),
-        D = !E.isMultiUserDM() && (null == C ? void 0 : C.displayNameStyles) != null;
-    return (0, l.jsxs)(_.Ay, {
-        channelId: E.id,
-        onMouseEnter: w,
-        onMouseLeave: R,
+            avatarDecorationSrc: v,
+            eventHandlers: y,
+            isAnimating: b,
+        } = (0, _.A)({ userId: T?.id, size: r._3J.SIZE_80, animateOnHover: !0 }),
+        [R, j] = l.useState(!1),
+        M = l.useCallback(() => {
+            y.onMouseEnter(), j(!0);
+        }, [y]),
+        D = l.useCallback(() => {
+            y.onMouseLeave(), j(!1);
+        }, [y]),
+        O = !n.isMultiUserDM() && T?.displayNameStyles != null;
+    return (0, i.jsxs)(E.Ay, {
+        channelId: n.id,
+        onMouseEnter: M,
+        onMouseLeave: D,
         children: [
-            ((n = !x && T),
-            E.isMultiUserDM()
-                ? (0, l.jsx)(m.Q, {
-                      channel: E,
+            ((t = !I && b),
+            n.isMultiUserDM()
+                ? (0, i.jsx)(p.Q, {
+                      channel: n,
                       editable: !0,
                       location: c.A.EMPTY_GROUP_DM,
-                      children: (0, l.jsx)(f.A, {
-                          channel: E,
-                          size: s._3J.SIZE_80,
-                          animated: n,
-                          "aria-label": S,
-                      }),
+                      children: (0, i.jsx)(A.A, { channel: n, size: r._3J.SIZE_80, animated: t, "aria-label": N }),
                   })
-                : (0, l.jsx)(s.euF, {
-                      "aria-label": S,
-                      size: s._3J.SIZE_80,
-                      src: (0, u.Y)(E, 80, n),
-                      avatarDecoration: j,
+                : (0, i.jsx)(r.euF, {
+                      "aria-label": N,
+                      size: r._3J.SIZE_80,
+                      src: (0, d.Y)(n, 80, t),
+                      avatarDecoration: v,
                   })),
-            (0, l.jsx)(_.cr, {
-                children: D
-                    ? (0, l.jsx)(p.A, {
-                          userName: S,
-                          displayNameStyles: null == C ? void 0 : C.displayNameStyles,
-                          effectDisplayType: N ? h.G.ANIMATED : h.G.STATIC,
+            (0, i.jsx)(E.cr, {
+                children: O
+                    ? (0, i.jsx)(m.A, {
+                          userName: N,
+                          displayNameStyles: T?.displayNameStyles,
+                          effectDisplayType: R ? h.G.ANIMATED : h.G.STATIC,
                           loop: !0,
                       })
-                    : S,
+                    : N,
             }),
-            (0, l.jsx)(_.j1, {
-                children: O,
-            }),
-            E.isMultiUserDM() &&
-                (0, l.jsxs)(a.e2v, {
-                    className: v.U,
+            (0, i.jsx)(E.j1, { children: S }),
+            n.isMultiUserDM() &&
+                (0, i.jsxs)(s.e2v, {
+                    className: x.U,
                     children: [
-                        (0, l.jsx)(A.NE, {
-                            channel: E,
-                            text: y.intl.string(y.t["6Qgrev"]),
-                            icon: s.DpX,
-                        }),
-                        (0, l.jsx)(a.$nd, {
-                            icon: s.R2l,
+                        (0, i.jsx)(f.NE, { channel: n, text: C.intl.string(C.t["6Qgrev"]), icon: r.DpX }),
+                        (0, i.jsx)(s.$nd, {
+                            icon: r.R2l,
                             variant: "secondary",
-                            text: y.intl.string(y.t["5Q9+/L"]),
-                            "aria-label": y.intl.string(y.t["5Q9+/L"]),
-                            onClick: () => (0, g.U)(E.id, c.A.EMPTY_GROUP_DM),
+                            text: C.intl.string(C.t["5Q9+/L"]),
+                            "aria-label": C.intl.string(C.t["5Q9+/L"]),
+                            onClick: () => (0, g.U)(n.id, c.A.EMPTY_GROUP_DM),
                         }),
                     ],
                 }),

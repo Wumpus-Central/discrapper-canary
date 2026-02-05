@@ -1,29 +1,26 @@
-n.d(t, {
-    f: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { f: () => l });
 var r = n(64700),
     i = n(621466),
     a = n(451988),
     s = n(775602);
 let o = 0;
-
 function l(e) {
     let {
             targetElementRef: t,
             shouldShow: n = !0,
             delay: l,
-            onTooltipShow: c,
-            onTooltipHide: u,
+            onTooltipShow: u,
+            onTooltipHide: c,
             forceOpen: d = !1,
-            overflowOnly: f = !1,
-            hideOnClick: p = !0,
+            overflowOnly: _ = !1,
+            hideOnClick: f = !0,
         } = e,
-        _ = r.useRef(null),
-        h = null != t ? t : _,
+        p = r.useRef(null),
+        h = t ?? p,
         [m, g] = r.useState(!1),
         E = r.useRef(null),
-        b = r.useRef(!1);
+        A = r.useRef(!1);
     r.useEffect(
         () => (
             (E.current = new a.Ep()),
@@ -34,91 +31,77 @@ function l(e) {
         ),
         [],
     );
-    let y = null != h.current,
-        O = !1 !== n && (m || d) && y && !b.current,
-        A = r.useCallback(() => {
-            if (b.current || (f && null == h.current)) return;
-            if (f && null != h.current) {
+    let I = null != h.current,
+        T = !1 !== n && (m || d) && I && !A.current,
+        y = r.useCallback(() => {
+            if (A.current || (_ && null == h.current)) return;
+            if (_ && null != h.current) {
                 let e = h.current;
                 if ((0, i.vq)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return;
             }
-            let e = null != l ? l : o,
+            let e = l ?? o,
                 t = E.current;
             null != t &&
                 t.start(
                     e,
                     () => {
-                        g(!0), null == c || c();
+                        g(!0), u?.();
                     },
                     !1,
                 );
-        }, [l, c, f, h]),
-        v = r.useCallback(() => {
-            var e;
-            null == (e = E.current) || e.stop(), g(!1), null == u || u();
-        }, [u]),
+        }, [l, u, _, h]),
         S = r.useCallback(() => {
-            p && v();
-        }, [v, p]),
-        I = r.useCallback(
+            E.current?.stop(), g(!1), c?.();
+        }, [c]),
+        v = r.useCallback(() => {
+            f && S();
+        }, [S, f]),
+        C = r.useCallback(
             (e) => {
-                null == h.current && (h.current = e.currentTarget), (b.current = !1), A();
+                null == h.current && (h.current = e.currentTarget), (A.current = !1), y();
             },
-            [A, h],
+            [y, h],
         ),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
-                s.A.keyboardModeEnabled && (null == h.current && (h.current = e.currentTarget), (b.current = !1), A());
+                s.A.keyboardModeEnabled && (null == h.current && (h.current = e.currentTarget), (A.current = !1), y());
             },
-            [A, h],
+            [y, h],
         ),
-        C = r.useCallback(() => {
-            var e;
-            null == (e = E.current) || e.stop(), v();
-        }, [v]),
-        N = r.useMemo(
-            () => ({
-                onMouseEnter: I,
-                onMouseLeave: C,
-                onFocus: T,
-                onBlur: v,
-                onContextMenu: v,
-                onClick: S,
-            }),
-            [I, C, T, v, S],
+        N = r.useCallback(() => {
+            E.current?.stop(), S();
+        }, [S]),
+        R = r.useMemo(
+            () => ({ onMouseEnter: C, onMouseLeave: N, onFocus: b, onBlur: S, onContextMenu: S, onClick: v }),
+            [C, N, b, S, v],
         );
     return (
         r.useEffect(() => {
-            var e, t;
-            if (!O) return;
-            let n = null != (e = null == (t = h.current) ? void 0 : t.ownerDocument) ? e : document,
-                r = (e) => {
-                    ("Escape" === e.key || "Esc" === e.key) && ((b.current = !0), v());
+            if (!T) return;
+            let e = h.current?.ownerDocument ?? document,
+                t = (e) => {
+                    ("Escape" === e.key || "Esc" === e.key) && ((A.current = !0), S());
                 };
             return (
-                n.addEventListener("keydown", r),
+                e.addEventListener("keydown", t),
                 () => {
-                    n.removeEventListener("keydown", r);
+                    e.removeEventListener("keydown", t);
                 }
             );
-        }, [O, v, h]),
+        }, [T, S, h]),
         r.useEffect(() => {
-            var e, t;
-            if (!O) return;
-            let n = null != (e = null == (t = h.current) ? void 0 : t.ownerDocument) ? e : document,
-                r = () => {
-                    v();
+            if (!T) return;
+            let e = h.current?.ownerDocument ?? document,
+                t = () => {
+                    S();
                 };
             return (
-                n.addEventListener("click", r),
+                e.addEventListener("click", t),
                 () => {
-                    n.removeEventListener("click", r);
+                    e.removeEventListener("click", t);
                 }
             );
-        }, [O, v, h]),
-        {
-            isVisible: O,
-            triggerProps: N,
-        }
+        }, [T, S, h]),
+        { isVisible: T, triggerProps: R }
     );
 }

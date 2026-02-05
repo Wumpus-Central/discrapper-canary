@@ -1,47 +1,27 @@
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = 10 * n(927813).A.Millis.MINUTE,
-    l = {
-        lastUsedCommandId: null,
-        lastUsedTimeMs: null,
-    };
-
-function c(e) {
+"use strict";
+var r = n(311907),
+    i = n(73153);
+let a = 10 * n(927813).A.Millis.MINUTE,
+    s = { lastUsedCommandId: null, lastUsedTimeMs: null };
+function o(e) {
     let { command: t } = e;
-    (l.lastUsedCommandId = t.id), (l.lastUsedTimeMs = Date.now());
+    (s.lastUsedCommandId = t.id), (s.lastUsedTimeMs = Date.now());
 }
-class u extends (r = i.Ay.PersistedStore) {
+class l extends r.Ay.PersistedStore {
+    static displayName = "AppLauncherLastUsedCommandStore";
+    static persistKey = "AppLauncherLastUsedCommandStore";
     initialize(e) {
-        null != e && ((l.lastUsedCommandId = e.lastUsedCommandId), (l.lastUsedTimeMs = e.lastUsedTimeMs));
+        null != e && ((s.lastUsedCommandId = e.lastUsedCommandId), (s.lastUsedTimeMs = e.lastUsedTimeMs));
     }
     getState() {
-        return l;
+        return s;
     }
     getLastUsedCommandId() {
         let e = Date.now();
-        return null == l.lastUsedTimeMs || null == l.lastUsedCommandId
+        return null == s.lastUsedTimeMs || null == s.lastUsedCommandId
             ? null
-            : (e > l.lastUsedTimeMs + o && ((l.lastUsedCommandId = null), (l.lastUsedTimeMs = null)),
-              l.lastUsedCommandId);
+            : (e > s.lastUsedTimeMs + a && ((s.lastUsedCommandId = null), (s.lastUsedTimeMs = null)),
+              s.lastUsedCommandId);
     }
 }
-s(u, "displayName", "AppLauncherLastUsedCommandStore"),
-    s(u, "persistKey", "AppLauncherLastUsedCommandStore"),
-    new u(a.h, {
-        APPLICATION_COMMAND_USED: c,
-    });
+new l(i.h, { APPLICATION_COMMAND_USED: o });

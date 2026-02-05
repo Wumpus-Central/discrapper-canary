@@ -1,21 +1,18 @@
-e.d(t, {
-    A: () => u,
-});
-var i = e(627968);
-e(64700);
-var l = e(311907),
-    r = e(397927),
-    a = e(367513),
-    s = e(976860),
-    c = e(576705),
-    o = e(652215),
-    d = e(985018);
-
-function u(n, t) {
-    return (0, l.bG)([c.A], () => c.A.can(o.xBc.CONNECT, n), [n]) && n.isGuildVocal()
-        ? (0, i.jsx)(r.Drp, {
+i.d(t, { A: () => A });
+var e = i(627968);
+i(64700);
+var l = i(311907),
+    r = i(397927),
+    a = i(367513),
+    s = i(976860),
+    d = i(576705),
+    c = i(652215),
+    o = i(985018);
+function A(n, t) {
+    return (0, l.bG)([d.A], () => d.A.can(c.xBc.CONNECT, n), [n]) && n.isGuildVocal()
+        ? (0, e.jsx)(r.Drp, {
               id: "open-chat",
-              label: d.intl.string(d.t.ZXxLQg),
+              label: o.intl.string(o.t.ZXxLQg),
               action: () => {
                   a.A.updateChatOpen(n.id, !0), (0, s.uh)(t.id, n.id);
               },

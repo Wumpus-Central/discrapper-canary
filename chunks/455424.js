@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_c0c49a",
     DM: "containerHovered_c0c49a",

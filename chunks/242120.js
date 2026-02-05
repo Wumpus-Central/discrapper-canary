@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(272355),
     i = n(954571),
     a = n(723702),
@@ -19,7 +18,7 @@ class l extends r.A {
         try {
             s.Ay.send("APP_GET_ANALYTICS_EVENTS");
         } catch (e) {
-            console.error("[analytics] failed to send analytics events query: ".concat(e));
+            console.error(`[analytics] failed to send analytics events query: ${e}`);
         }
     }
     _handleEventResponse(e) {
@@ -28,12 +27,12 @@ class l extends r.A {
                 "cdm" === e.type
                     ? e.name === o.HAw.CDM_LOAD_STATUS || e.name === o.HAw.CDM_READY_COMPLETE
                         ? i.default.track(e.name, e.data)
-                        : console.log("[analytics] received unknown cdm analytic event ".concat(e.name))
+                        : console.log(`[analytics] received unknown cdm analytic event ${e.name}`)
                     : "desktop_tti" === e.type &&
                       (e.name === o.HAw.DESKTOP_TTI
                           ? i.default.track(e.name, e.data)
-                          : console.log("[analytics] received unknown desktop_tti analytic event ".concat(e.name)));
+                          : console.log(`[analytics] received unknown desktop_tti analytic event ${e.name}`));
             });
     }
 }
-let c = new l();
+let u = new l();

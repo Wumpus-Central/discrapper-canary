@@ -1,40 +1,29 @@
-n.d(t, {
-    A: () => _,
-});
+"use strict";
+n.d(t, { A: () => p });
 var r = n(562465),
     i = n(73153),
     a = n(157559),
     s = n(867455),
     o = n(543531),
     l = n(407689),
-    c = n(613999),
-    u = n(853742),
+    u = n(613999),
+    c = n(853742),
     d = n(652215),
-    f = n(985018);
-async function p(e, t, n) {
+    _ = n(985018);
+async function f(e, t, n) {
     try {
         return await e();
     } catch (e) {
-        var r, i, s;
-        (null == (r = e.body) ? void 0 : r.code) === d.t02.NON_MODERATED_TAG_REQUIRED
-            ? a.A.show({
-                  title: t,
-                  body: n,
-              })
-            : (null == (i = e.body) ? void 0 : i.code) === d.t02.INVALID_FORM_BODY &&
-              (null == (s = e.body) ? void 0 : s.errors.emoji) &&
-              a.A.show({
-                  title: f.intl.string(f.t.T8sBLJ),
-                  body: f.intl.string(f.t.aHt1Bd),
-              });
+        e.body?.code === d.t02.NON_MODERATED_TAG_REQUIRED
+            ? a.A.show({ title: t, body: n })
+            : e.body?.code === d.t02.INVALID_FORM_BODY &&
+              e.body?.errors.emoji &&
+              a.A.show({ title: _.intl.string(_.t.T8sBLJ), body: _.intl.string(_.t.aHt1Bd) });
     }
 }
-let _ = {
+let p = {
     resort(e) {
-        i.h.dispatch({
-            type: "RESORT_THREADS",
-            channelId: e,
-        });
+        i.h.dispatch({ type: "RESORT_THREADS", channelId: e });
     },
     createForumTag: (e, t) =>
         r.Bo.post({
@@ -58,77 +47,43 @@ let _ = {
             },
             rejectWithError: !1,
         });
-        p(() => n, f.intl.string(f.t.T8sBLJ), f.intl.string(f.t.imcb5u));
+        f(() => n, _.intl.string(_.t.T8sBLJ), _.intl.string(_.t.imcb5u));
     },
     deleteForumTag(e, t) {
-        let n = r.Bo.del({
-            url: d.Rsh.FORUM_TAG(e, t),
-            rejectWithError: !1,
-        });
-        p(() => n, f.intl.string(f.t["0ZkNDU"]), f.intl.string(f.t.imcb5u));
+        let n = r.Bo.del({ url: d.Rsh.FORUM_TAG(e, t), rejectWithError: !1 });
+        f(() => n, _.intl.string(_.t["0ZkNDU"]), _.intl.string(_.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await s.A.unarchiveThreadIfNecessary(e),
-        r.Bo.patch({
-            url: d.Rsh.CHANNEL(e),
-            body: {
-                applied_tags: t,
-            },
-            rejectWithError: !1,
-        })
+        r.Bo.patch({ url: d.Rsh.CHANNEL(e), body: { applied_tags: t }, rejectWithError: !1 })
     ),
     hideAdminOnboarding(e, t) {
-        i.h.dispatch({
-            type: "ADMIN_ONBOARDING_GUIDE_HIDE",
-            channelId: e,
-            hide: t,
-        });
+        i.h.dispatch({ type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId: e, hide: t });
     },
     markPostAsSeen(e, t, n) {
-        (0, o.wR)((0, c.$l)(e), t, n);
+        (0, o.wR)((0, u.$l)(e), t, n);
     },
     markPostAsUnseen(e, t, n) {
-        (0, o.zK)((0, c.$l)(e), t, n);
+        (0, o.zK)((0, u.$l)(e), t, n);
     },
     flushSeenItems(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Ao.IMMEDIATE_WITH_COOLDOWN;
-        (0, o.Xt)((0, c.$l)(e), t);
+        (0, o.Xt)((0, u.$l)(e), t);
     },
     async searchForumPosts(e, t, n, r, a) {
-        i.h.dispatch({
-            type: "FORUM_SEARCH_START",
-            channelId: t,
-        });
+        i.h.dispatch({ type: "FORUM_SEARCH_START", channelId: t });
         try {
             let o = await s.A.searchThreads(e, t, n, r, a);
-            (0, u.Sc)({
-                guildId: e,
-                channelId: t,
-                numSearchResults: o.length,
-            }),
-                i.h.dispatch({
-                    type: "FORUM_SEARCH_SUCCESS",
-                    channelId: t,
-                    threadIds: o,
-                });
-        } catch (e) {
-            i.h.dispatch({
-                type: "FORUM_SEARCH_FAILURE",
-                channelId: t,
-            });
+            (0, c.Sc)({ guildId: e, channelId: t, numSearchResults: o.length }),
+                i.h.dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: t, threadIds: o });
+        } catch {
+            i.h.dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: t });
         }
     },
     updateForumSearchQuery(e, t) {
-        i.h.dispatch({
-            type: "FORUM_SEARCH_QUERY_UPDATED",
-            channelId: e,
-            query: t,
-        });
+        i.h.dispatch({ type: "FORUM_SEARCH_QUERY_UPDATED", channelId: e, query: t });
     },
     clearForumSearch(e) {
-        i.h.dispatch({
-            type: "FORUM_SEARCH_CLEAR",
-            channelId: e,
-        });
+        i.h.dispatch({ type: "FORUM_SEARCH_CLEAR", channelId: e });
     },
 };

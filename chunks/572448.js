@@ -1,262 +1,160 @@
-n.d(t, {
-    A: () => R,
-});
-var r = n(627968);
+n.d(t, { A: () => D });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
+    s = n.n(l),
     a = n(837381),
-    s = n(311907),
+    r = n(311907),
     o = n(827734),
-    c = n(435371),
-    u = n(397927),
-    d = n(901517),
-    f = n(397244),
-    p = n(714114),
-    h = n(729551),
-    b = n(58149),
-    g = n(571694),
-    m = n(47167),
-    A = n(713654),
-    y = n(915089),
-    O = n(263063),
-    j = n(616356),
-    v = n(734057),
-    x = n(71393),
-    E = n(290863),
-    _ = n(222823),
-    C = n(287809),
-    S = n(147925),
-    I = n(652215),
-    N = n(985018),
-    T = n(386590);
-let P = {
-    top: 8,
-    bottom: 8,
-    left: -4,
-    right: -4,
-};
-
-function w(e) {
+    d = n(435371),
+    c = n(397927),
+    u = n(901517),
+    h = n(397244),
+    A = n(714114),
+    g = n(729551),
+    m = n(58149),
+    p = n(571694),
+    _ = n(47167),
+    x = n(713654),
+    f = n(915089),
+    E = n(263063),
+    C = n(616356),
+    I = n(734057),
+    S = n(71393),
+    b = n(290863),
+    N = n(222823),
+    T = n(287809),
+    j = n(147925),
+    v = n(652215),
+    y = n(985018),
+    R = n(386590);
+let O = { top: 8, bottom: 8, left: -4, right: -4 };
+function L(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
-    return (0, r.jsx)(c.m_, {
-        text: N.intl.string(N.t.iTcuma),
-        children: (0, r.jsx)(u.DUT, {
-            className: i()(T.cS, {
-                [T.yZ]: null == t ? void 0 : t.collapsed,
-            }),
+    return (0, i.jsx)(d.m_, {
+        text: y.intl.string(y.t.iTcuma),
+        children: (0, i.jsx)(c.DUT, {
+            className: s()(R.cS, { [R.yZ]: t?.collapsed }),
             onClick: function () {
-                var e;
                 null != t &&
                     null != n &&
                     (n(t),
-                    (0, b.zV)(I.HAw.INBOX_CHANNEL_COLLAPSED, {
+                    (0, m.zV)(v.HAw.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
-                        num_unread_channels_remaining: null != (e = null == l ? void 0 : l()) ? e : 0,
+                        num_unread_channels_remaining: l?.() ?? 0,
                         is_now_collapsed: !t.collapsed,
                     }));
             },
-            children: (0, r.jsx)(S.A, {
-                width: 16,
-                height: 16,
-            }),
+            children: (0, i.jsx)(j.A, { width: 16, height: 16 }),
         }),
     });
 }
-
-function R(e) {
-    var t, n;
+function D(e) {
     let {
-            channel: l,
-            children: s,
-            gotoChannel: o,
-            mentionCount: c,
-            channelState: d,
-            toggleCollapsed: f,
-            showCollapseButton: p = !1,
+            channel: t,
+            children: n,
+            gotoChannel: l,
+            mentionCount: r,
+            channelState: o,
+            toggleCollapsed: d,
+            showCollapseButton: u = !1,
             getNumUnreadChannels: h,
         } = e,
-        b = (0, a.rm)("recents-header-".concat(l.id, "-").concat((0, y.GV)())),
-        g = p && !l.isNSFW() && null != d && "nsfw" !== d.type;
-    return (0, r.jsx)(u.vN3, {
-        offset: P,
-        children: (0, r.jsxs)(
-            "div",
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
-                {
-                    className: i()(T.ZO, {
-                        [T.b4]: g,
-                    }),
-                },
-                b,
-            )),
-            (n = n =
-                {
-                    tabIndex: 0,
-                    "data-recents-channel": l.id,
-                    onKeyDown: function (e) {
-                        null != f &&
-                            null != d &&
-                            (("ArrowRight" === e.key && d.collapsed) || ("ArrowLeft" === e.key && !d.collapsed)) &&
-                            (null == f || f(d));
-                    },
-                    children: [
-                        g && null != d
-                            ? (0, r.jsx)(w, {
-                                  channelState: d,
-                                  toggle: f,
-                                  getNumUnreadChannels: h,
-                              })
-                            : null,
-                        (0, r.jsx)(D, {
-                            channel: l,
-                            gotoChannel: o,
-                        }),
-                        (0, r.jsx)(G, {
-                            channel: l,
-                            gotoChannel: o,
-                            mentionCount: c,
-                        }),
-                        s,
-                    ],
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t),
-        ),
-    });
-}
-
-function D(e) {
-    let { channel: t, gotoChannel: n } = e;
-    return t.isPrivate()
-        ? (0, r.jsx)(M, {
-              channel: t,
-              gotoChannel: n,
-          })
-        : (0, r.jsx)(L, {
-              channel: t,
-              gotoChannel: n,
-          });
-}
-
-function M(e) {
-    let { channel: t, gotoChannel: n } = e,
-        l = (0, s.bG)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
-        i = null == l ? (0, g.Y)(t) : l.getAvatarURL(void 0, 40);
-    return (0, r.jsx)(u.DUT, {
-        onClick: n,
-        tabIndex: -1,
-        children: (0, r.jsx)("img", {
-            className: T.ro,
-            src: i,
-            alt: "",
-            "aria-hidden": !0,
+        A = (0, a.rm)(`recents-header-${t.id}-${(0, f.GV)()}`),
+        g = u && !t.isNSFW() && null != o && "nsfw" !== o.type;
+    return (0, i.jsx)(c.vN3, {
+        offset: O,
+        children: (0, i.jsxs)("div", {
+            className: s()(R.ZO, { [R.b4]: g }),
+            ...A,
+            tabIndex: 0,
+            "data-recents-channel": t.id,
+            onKeyDown: function (e) {
+                null != d &&
+                    null != o &&
+                    (("ArrowRight" === e.key && o.collapsed) || ("ArrowLeft" === e.key && !o.collapsed)) &&
+                    d?.(o);
+            },
+            children: [
+                g && null != o ? (0, i.jsx)(L, { channelState: o, toggle: d, getNumUnreadChannels: h }) : null,
+                (0, i.jsx)(M, { channel: t, gotoChannel: l }),
+                (0, i.jsx)(P, { channel: t, gotoChannel: l, mentionCount: r }),
+                n,
+            ],
         }),
     });
 }
-
-function L(e) {
+function M(e) {
+    let { channel: t, gotoChannel: n } = e;
+    return t.isPrivate()
+        ? (0, i.jsx)(G, { channel: t, gotoChannel: n })
+        : (0, i.jsx)(U, { channel: t, gotoChannel: n });
+}
+function G(e) {
     let { channel: t, gotoChannel: n } = e,
-        l = (0, s.bG)([x.A], () => x.A.getGuild(t.guild_id));
+        l = (0, r.bG)([T.default], () => (t.isDM() ? T.default.getUser(t.getRecipientId()) : null)),
+        s = null == l ? (0, p.Y)(t) : l.getAvatarURL(void 0, 40);
+    return (0, i.jsx)(c.DUT, {
+        onClick: n,
+        tabIndex: -1,
+        children: (0, i.jsx)("img", { className: R.ro, src: s, alt: "", "aria-hidden": !0 }),
+    });
+}
+function U(e) {
+    let { channel: t, gotoChannel: n } = e,
+        l = (0, r.bG)([S.A], () => S.A.getGuild(t.guild_id));
     return null == l
         ? null
-        : (0, r.jsx)(O.A, {
+        : (0, i.jsx)(E.A, {
               "aria-hidden": !0,
-              className: T.$f,
+              className: R.$f,
               guild: l,
-              size: O.A.Sizes.MEDIUM,
+              size: E.A.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1,
           });
 }
-
-function G(e) {
+function P(e) {
     let { channel: t, gotoChannel: n, mentionCount: l } = e,
-        a = (0, s.bG)([x.A], () => x.A.getGuild(t.guild_id)),
-        c = (0, s.bG)([v.A], () => v.A.getChannel(t.parent_id)),
-        d = (0, s.bG)([_.Ay], () => _.Ay.getIsMentionLowImportance(t.id)),
-        f = (0, A.gU)(t, a),
-        p = (0, m.Ay)(t, !1),
-        h = null == c ? (null == a ? void 0 : a.name) : "".concat(null == a ? void 0 : a.name, " › ").concat(c.name),
-        b = t.isMultiUserDM()
-            ? N.intl.formatToPlainString(N.t.CxSA5N, {
-                  members: t.recipients.length + 1,
-              })
+        a = (0, r.bG)([S.A], () => S.A.getGuild(t.guild_id)),
+        d = (0, r.bG)([I.A], () => I.A.getChannel(t.parent_id)),
+        u = (0, r.bG)([N.Ay], () => N.Ay.getIsMentionLowImportance(t.id)),
+        h = (0, x.gU)(t, a),
+        A = (0, _.Ay)(t, !1),
+        g = null == d ? a?.name : `${a?.name} › ${d.name}`,
+        m = t.isMultiUserDM()
+            ? y.intl.formatToPlainString(y.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, r.jsx)(k, {
-                    channel: t,
-                })
-              : (0, r.jsx)(u.DUT, {
-                    className: i()(T.W$, T.J5),
-                    onClick: n,
-                    children: h,
-                });
-    return (0, r.jsxs)("div", {
-        className: T.yP,
+              ? (0, i.jsx)(k, { channel: t })
+              : (0, i.jsx)(c.DUT, { className: s()(R.W$, R.J5), onClick: n, children: g });
+    return (0, i.jsxs)("div", {
+        className: R.yP,
         children: [
-            (0, r.jsx)(u.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: "heading-md/semibold",
-                className: T.un,
-                children: (0, r.jsxs)(u.DUT, {
-                    className: T.HA,
+                className: R.un,
+                children: (0, i.jsxs)(c.DUT, {
+                    className: R.HA,
                     onClick: n,
                     children: [
-                        t.isThread() || t.isGroupDM() || null == f
+                        t.isThread() || t.isGroupDM() || null == h
                             ? null
-                            : (0, r.jsx)(f, {
-                                  className: t.isForumLikeChannel() ? T.dj : void 0,
+                            : (0, i.jsx)(h, {
+                                  className: t.isForumLikeChannel() ? R.dj : void 0,
                                   width: 18,
                                   height: 18,
                                   size: "custom",
                                   color: "currentColor",
                               }),
-                        (0, r.jsx)("span", {
-                            className: T.je,
-                            children: p,
-                        }),
+                        (0, i.jsx)("span", { className: R.je, children: A }),
                         null != l && l > 0
-                            ? (0, r.jsx)("div", {
-                                  className: T.qS,
-                                  children: (0, r.jsx)(u.hVq, {
+                            ? (0, i.jsx)("div", {
+                                  className: R.qS,
+                                  children: (0, i.jsx)(c.hVq, {
                                       count: l,
-                                      color: d
+                                      color: u
                                           ? o.A.colors.BACKGROUND_MOD_STRONG.css
                                           : o.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                                   }),
@@ -265,51 +163,30 @@ function G(e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(u.Text, {
-                color: "text-default",
-                variant: "text-xs/normal",
-                className: T.PL,
-                children: b,
-            }),
+            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-xs/normal", className: R.PL, children: m }),
         ],
     });
 }
-
 function k(e) {
     let { channel: t } = e,
         {
             user: n,
             status: l,
-            activities: i,
+            activities: s,
             applicationStream: a,
-        } = (0, s.cf)([C.default, E.A, j.A], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, r.cf)([T.default, b.A, C.A], () => {
+            let e = T.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? E.A.getStatus(e.id) : null,
-                activities: null != e ? E.A.getActivities(e.id) : null,
-                applicationStream: null != e ? j.A.getAnyStreamForUser(e.id) : null,
+                status: null != e ? b.A.getStatus(e.id) : null,
+                activities: null != e ? b.A.getActivities(e.id) : null,
+                applicationStream: null != e ? C.A.getAnyStreamForUser(e.id) : null,
             };
         }),
-        { voiceActivityStatusEnabled: o } = (0, d.G)({
-            location: "RecentsChannelHeader",
-        }),
-        { voiceChannel: c } = (0, p.A)({
-            userId: null == n ? void 0 : n.id,
-        }),
-        u = o ? c : void 0;
-    return (0, f.A)({
-        activities: i,
-        status: l,
-        applicationStream: a,
-        voiceChannel: u,
-    })
-        ? (0, r.jsx)(h.A, {
-              user: n,
-              activities: i,
-              applicationStream: a,
-              voiceChannel: u,
-              hideTooltip: !0,
-          })
+        { voiceActivityStatusEnabled: o } = (0, u.G)({ location: "RecentsChannelHeader" }),
+        { voiceChannel: d } = (0, A.A)({ userId: n?.id }),
+        c = o ? d : void 0;
+    return (0, h.A)({ activities: s, status: l, applicationStream: a, voiceChannel: c })
+        ? (0, i.jsx)(g.A, { user: n, activities: s, applicationStream: a, voiceChannel: c, hideTooltip: !0 })
         : null;
 }

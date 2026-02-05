@@ -1,16 +1,12 @@
-l.d(s, {
-    m: () => r,
-}),
-    l(896048),
-    l(638769);
+l.d(s, { m: () => n });
 var t = l(64700),
     a = l(417597),
-    i = l(4227);
-let d = (e, s) => {
+    r = l(4227);
+let i = (e, s) => {
         let l = s.get(e.skuId);
         return null == l ? 0 : null != l.expiresAt ? 1 : 2;
     },
-    r = (e) => {
-        let s = (0, a.bG)([i.A], () => i.A.purchases);
-        return (0, t.useMemo)(() => [...e].sort((e, l) => d(e, s) - d(l, s)), [e, s]);
+    n = (e) => {
+        let s = (0, a.bG)([r.A], () => r.A.purchases);
+        return (0, t.useMemo)(() => [...e].sort((e, l) => i(e, s) - i(l, s)), [e, s]);
     };

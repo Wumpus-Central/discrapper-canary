@@ -1,9 +1,5 @@
-n.d(t, {
-    FD: () => a,
-    H0: () => o,
-    jV: () => i,
-    vx: () => s,
-});
+"use strict";
+n.d(t, { FD: () => a, H0: () => o, jV: () => i, vx: () => s });
 var r = n(658122);
 let i = {
         default: r.colorDefault,

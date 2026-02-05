@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => n,
-});
+a.d(t, { A: () => n });
 var i = a(981737);
 let n = {
     ordinalNumber: function (e, t) {
@@ -16,11 +14,7 @@ let n = {
         );
     },
     era: (0, i.A)({
-        values: {
-            narrow: ["πΧ", "μΧ"],
-            abbreviated: ["π.Χ.", "μ.Χ."],
-            wide: ["προ Χριστού", "μετά Χριστόν"],
-        },
+        values: { narrow: ["πΧ", "μΧ"], abbreviated: ["π.Χ.", "μ.Χ."], wide: ["προ Χριστού", "μετά Χριστόν"] },
         defaultWidth: "wide",
     }),
     quarter: (0, i.A)({

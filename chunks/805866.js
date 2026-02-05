@@ -1,16 +1,9 @@
-n.d(t, {
-    Ij: () => d,
-    Qq: () => o,
-    Vn: () => c,
-    wP: () => s,
-}),
-    n(896048),
-    n(64700);
+n.d(t, { Ij: () => c, Qq: () => o, Vn: () => d, wP: () => r }), n(64700);
 var a,
-    l,
+    s,
     i = n(646284),
-    r = n(985018),
-    s =
+    l = n(985018),
+    r =
         (((a = {})[(a.REFRESH_APP = -1)] = "REFRESH_APP"),
         (a[(a.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
         (a[(a.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
@@ -22,6 +15,6 @@ let o = {
         REFRESH_APP: "refresh_app",
         AGE_VERIFICATION: "age_verification",
     },
-    c = new Set(Object.values(o));
-r.intl.string(i.default["Qm6K/s"]), r.intl.string(i.default["dSkE/A"]);
-var d = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"), l);
+    d = new Set(Object.values(o));
+l.intl.string(i.default["Qm6K/s"]), l.intl.string(i.default["dSkE/A"]);
+var c = (((s = {}).Empty = "empty"), (s.VerificationCode = "verification_code"), s);

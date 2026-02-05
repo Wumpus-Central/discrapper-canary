@@ -1,41 +1,25 @@
-n.d(t, {
-    AK: () => p,
-    Qh: () => h,
-    Xd: () => _,
-    Zm: () => d,
-    pz: () => m,
-    qM: () => f,
-}),
-    n(638769),
-    n(321073);
+"use strict";
+n.d(t, { AK: () => f, Qh: () => h, Xd: () => p, Zm: () => d, pz: () => m, qM: () => _ }), n(321073);
 var r = n(562465),
     i = n(73153),
     a = n(403362),
     s = n(371794),
     o = n(299308),
     l = n(337545),
-    c = n(568065),
-    u = n(652215);
-
+    u = n(568065),
+    c = n(652215);
 function d(e) {
-    i.h.dispatch({
-        type: "GUILD_POWERUPS_ACK_NOTIFICATION",
-        guildId: e,
-    });
+    i.h.dispatch({ type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: e });
 }
-
-function f() {
-    i.h.dispatch({
-        type: "GUILD_POWERUPS_RESET_NOTIFICATIONS",
-    });
+function _() {
+    i.h.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 }
-
-function p(e, t) {
+function f(e, t) {
     if (!0 === t) {
         let t = o.Z.concat(o.D),
             n = {};
-        (n[c.o9.LEVEL] = o.Z),
-            (n[c.o9.PERK] = o.D),
+        (n[u.o9.LEVEL] = o.Z),
+            (n[u.o9.PERK] = o.D),
             i.h.dispatch({
                 type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS",
                 guildId: e,
@@ -46,12 +30,9 @@ function p(e, t) {
             });
         return;
     }
-    let n = {
-        application_id: c.Wb,
-        guild_id: e,
-    };
+    let n = { application_id: u.Wb, guild_id: e };
     return (0, s.aP)({
-        url: u.Rsh.STORE_PUBLISHED_LISTINGS_SKUS,
+        url: c.Rsh.STORE_PUBLISHED_LISTINGS_SKUS,
         query: n,
         oldFormErrors: !0,
         rejectWithError: !1,
@@ -62,19 +43,10 @@ function p(e, t) {
             .sort((e, t) => (e.skuId >= t.skuId ? 1 : -1))
             .reduce(
                 (e, t) => {
-                    var n, r;
-                    let { allPowerups: i, powerupCatalog: a } = e;
-                    return (
-                        (i[t.skuId] = t),
-                        null == a[t.type] && (a[t.type] = []),
-                        null == (r = a[t.type]) || null == (n = r.push) || n.call(r, t),
-                        e
-                    );
+                    let { allPowerups: n, powerupCatalog: r } = e;
+                    return (n[t.skuId] = t), null == r[t.type] && (r[t.type] = []), r[t.type]?.push?.(t), e;
                 },
-                {
-                    allPowerups: {},
-                    powerupCatalog: {},
-                },
+                { allPowerups: {}, powerupCatalog: {} },
             );
         return (
             i.h.dispatch({
@@ -87,28 +59,20 @@ function p(e, t) {
         );
     });
 }
-
-function _(e) {
+function p(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (0, s.aP)({
-        url: u.Rsh.GUILD_POWERUPS(e),
-        query: {
-            include_ends_at: t,
-        },
+        url: c.Rsh.GUILD_POWERUPS(e),
+        query: { include_ends_at: t },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then((t) => {
         let n = {},
             r = {};
         t.body.forEach((e) => {
-            var t, i, a, s, o, l, c;
-            (null == (a = e.sku) || null == (i = a.tenant_metadata) || null == (t = i.guild_monetization)
-                ? void 0
-                : t.powerup) != null || (null == e || null == (s = e.sku) ? void 0 : s.powerup_metadata) != null
+            e.sku?.tenant_metadata?.guild_monetization?.powerup != null || e?.sku?.powerup_metadata != null
                 ? (n[e.sku_id] = e)
-                : (null == (c = e.sku) || null == (l = c.tenant_metadata) || null == (o = l.guild_monetization)
-                      ? void 0
-                      : o.game_server) != null && (r[e.id] = e);
+                : e.sku?.tenant_metadata?.guild_monetization?.game_server != null && (r[e.id] = e);
         }),
             i.h.dispatch({
                 type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS",
@@ -118,17 +82,9 @@ function _(e) {
             });
     });
 }
-
 function h(e, t) {
-    return r.Bo.post({
-        url: u.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        rejectWithError: !0,
-    });
+    return r.Bo.post({ url: c.Rsh.GUILD_POWERUP_TOGGLE(e, t), rejectWithError: !0 });
 }
-
 function m(e, t) {
-    return r.Bo.del({
-        url: u.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        rejectWithError: !0,
-    });
+    return r.Bo.del({ url: c.Rsh.GUILD_POWERUP_TOGGLE(e, t), rejectWithError: !0 });
 }

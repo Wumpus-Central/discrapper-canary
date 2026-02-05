@@ -1,6 +1,4 @@
-e.d(a, {
-    A: () => t,
-});
+e.d(a, { A: () => t });
 var n = {
     lastWeek: "eeee 'trecută la' p",
     yesterday: "'ieri la' p",

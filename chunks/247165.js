@@ -1,94 +1,52 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(747238),
-    n(938796);
-var l = n(627968),
-    a = n(64700),
-    r = n(158954),
-    i = n(311907),
-    s = n(397927),
-    c = n(9578),
-    o = n(549711),
-    d = n(123791),
-    u = n(55926),
-    p = n(311321),
-    h = n(163437),
-    m = n(67480),
-    b = n(412461),
-    f = n(656106),
-    g = n(435220),
-    x = n(652215),
-    v = n(985018),
-    j = n(70345);
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function _(e) {
+a.d(t, { A: () => v }), a(938796);
+var n = a(627968),
+    i = a(64700),
+    s = a(158954),
+    l = a(311907),
+    r = a(397927),
+    o = a(9578),
+    c = a(549711),
+    d = a(123791),
+    u = a(55926),
+    h = a(311321),
+    m = a(163437),
+    p = a(67480),
+    _ = a(412461),
+    g = a(656106),
+    x = a(435220),
+    A = a(652215),
+    C = a(985018),
+    b = a(70345);
+function v(e) {
     let { application: t } = e;
-    return (0, l.jsxs)("div", {
-        className: j.ZM,
-        children: [
-            (0, l.jsx)(y, {
-                application: t,
-            }),
-            (0, l.jsx)(S, {
-                application: t,
-            }),
-        ],
+    return (0, n.jsxs)("div", {
+        className: b.ZM,
+        children: [(0, n.jsx)(f, { application: t }), (0, n.jsx)(I, { application: t })],
     });
 }
-
-function y(e) {
+function f(e) {
     let { application: t } = e,
-        { subscriptions: n, otps: a } = (0, d.C)(t.id);
-    return (0, l.jsxs)("div", {
-        className: j.ZM,
+        { subscriptions: a, otps: i } = (0, d.C)(t.id);
+    return (0, n.jsxs)("div", {
+        className: b.ZM,
         children: [
-            n.length > 0 &&
-                (0, l.jsxs)("div", {
-                    className: j.dD,
+            a.length > 0 &&
+                (0, n.jsxs)("div", {
+                    className: b.dD,
                     children: [
-                        (0, l.jsx)(p.A, {
-                            subscriptions: n,
-                            color: "text-strong",
-                        }),
-                        (0, l.jsx)("div", {
-                            className: j.ZE,
-                            children: n.map((e) => {
-                                let n = (0, h.bg)(e.skuFlags) ? "user" : "guild";
-                                return (0, l.jsx)(
+                        (0, n.jsx)(h.A, { subscriptions: a, color: "text-strong" }),
+                        (0, n.jsx)("div", {
+                            className: b.ZE,
+                            children: a.map((e) => {
+                                let a = (0, m.bg)(e.skuFlags) ? "user" : "guild";
+                                return (0, n.jsx)(
                                     u.B4,
                                     {
                                         appId: t.id,
                                         listing: e,
-                                        subscriptionType: n,
+                                        subscriptionType: a,
                                         onDetails: () =>
-                                            (0, f.Fr)(x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
+                                            (0, g.Fr)(A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
                                     },
                                     e.id,
                                 );
@@ -96,25 +54,25 @@ function y(e) {
                         }),
                     ],
                 }),
-            a.length > 0 &&
-                (0, l.jsxs)("div", {
-                    className: j.dD,
+            i.length > 0 &&
+                (0, n.jsxs)("div", {
+                    className: b.dD,
                     children: [
-                        (0, l.jsx)(r.DZT, {
+                        (0, n.jsx)(s.DZT, {
                             variant: "heading-lg/semibold",
                             color: "text-strong",
-                            children: v.intl.string(v.t.yUGTs8),
+                            children: C.intl.string(C.t.yUGTs8),
                         }),
-                        (0, l.jsx)("div", {
-                            className: j.ZE,
-                            children: a.map((e) =>
-                                (0, l.jsx)(
+                        (0, n.jsx)("div", {
+                            className: b.ZE,
+                            children: i.map((e) =>
+                                (0, n.jsx)(
                                     u.B8,
                                     {
                                         skuId: e.skuId,
                                         appId: t.id,
                                         onDetails: () =>
-                                            (0, f.Fr)(x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
+                                            (0, g.Fr)(A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
                                     },
                                     e.id,
                                 ),
@@ -122,91 +80,69 @@ function y(e) {
                         }),
                     ],
                 }),
-            (0, l.jsx)(o.A, {
-                path: x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
+            (0, n.jsx)(c.A, {
+                path: A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
                 exact: !0,
-                render: (e) => (0, l.jsx)(O, A({}, e)),
+                render: (e) => (0, n.jsx)(j, { ...e }),
             }),
         ],
     });
 }
-
-function O(e) {
+function j(e) {
     let {
             match: {
-                params: { applicationId: t, skuId: r },
+                params: { applicationId: t, skuId: s },
             },
         } = e,
-        c = (0, i.bG)([m.A], () => m.A.get(r), [r]),
-        o = (0, i.bG)([m.A], () => (null != r ? m.A.getParentSKU(r) : void 0), [r]),
-        d = a.useId(),
-        u = a.useCallback(
-            () => (0, f.Fr)(x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, g.GlobalDiscoveryAppsSections.STORE)),
+        o = (0, l.bG)([p.A], () => p.A.get(s), [s]),
+        c = (0, l.bG)([p.A], () => (null != s ? p.A.getParentSKU(s) : void 0), [s]),
+        d = i.useId(),
+        u = i.useCallback(
+            () => (0, g.Fr)(A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, x.GlobalDiscoveryAppsSections.STORE)),
             [t],
         );
     return (
-        a.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             var e;
-            switch (null == c ? void 0 : c.type) {
-                case x.Puh.CONSUMABLE:
-                case x.Puh.DURABLE:
-                    return void (0, s.mMO)(
+            switch (o?.type) {
+                case A.Puh.CONSUMABLE:
+                case A.Puh.DURABLE:
+                    return void (0, r.mMO)(
                         async () => {
-                            let { ItemDetailsModal: e } = await Promise.resolve().then(n.bind(n, 963179));
-                            return (n) =>
-                                (0, l.jsx)(
-                                    e,
-                                    A(
-                                        {
-                                            appId: t,
-                                            skuId: r,
-                                        },
-                                        n,
-                                    ),
-                                );
+                            let { ItemDetailsModal: e } = await Promise.resolve().then(a.bind(a, 963179));
+                            return (a) => (0, n.jsx)(e, { appId: t, skuId: s, ...a });
                         },
                         {
                             modalKey: d,
                             onCloseCallback: () => {
-                                C() ||
-                                    (0, f.Fr)(
-                                        x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
+                                E() ||
+                                    (0, g.Fr)(
+                                        A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                             t,
-                                            g.GlobalDiscoveryAppsSections.STORE,
+                                            x.GlobalDiscoveryAppsSections.STORE,
                                         ),
                                     );
                             },
                         },
                     );
-                case x.Puh.SUBSCRIPTION:
-                    if ((null == o ? void 0 : o.flags) == null) return;
+                case A.Puh.SUBSCRIPTION:
+                    if (c?.flags == null) return;
                     return (
-                        (e = (0, h.bg)(o.flags) ? "user" : "guild"),
-                        void (0, s.mMO)(
+                        (e = (0, m.bg)(c.flags) ? "user" : "guild"),
+                        void (0, r.mMO)(
                             async () => {
-                                let { SubscriptionDetailsModal: a } = await Promise.resolve().then(n.bind(n, 168393));
-                                return (n) =>
-                                    (0, l.jsx)(
-                                        a,
-                                        A(
-                                            {
-                                                appId: t,
-                                                subscriptionType: e,
-                                                skuId: r,
-                                                guildId: void 0,
-                                            },
-                                            n,
-                                        ),
-                                    );
+                                let { SubscriptionDetailsModal: i } = await Promise.resolve().then(a.bind(a, 168393));
+                                return (a) =>
+                                    (0, n.jsx)(i, { appId: t, subscriptionType: e, skuId: s, guildId: void 0, ...a });
                             },
                             {
                                 modalKey: d,
                                 onCloseCallback: () => {
-                                    C() ||
-                                        (0, f.Fr)(
-                                            x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
+                                    E() ||
+                                        (0, g.Fr)(
+                                            A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                                 t,
-                                                g.GlobalDiscoveryAppsSections.STORE,
+                                                x.GlobalDiscoveryAppsSections.STORE,
                                             ),
                                         );
                                 },
@@ -214,53 +150,39 @@ function O(e) {
                         )
                     );
             }
-        }, [t, d, u, null == o ? void 0 : o.flags, null == c ? void 0 : c.flags, null == c ? void 0 : c.type, r]),
-        a.useLayoutEffect(
+        }, [t, d, u, c?.flags, o?.flags, o?.type, s]),
+        i.useLayoutEffect(
             () => () => {
-                (0, s.OoC)(d);
+                (0, r.OoC)(d);
             },
             [d],
         ),
         null
     );
 }
-
-function S(e) {
+function I(e) {
     let { application: t } = e,
-        n = (0, b.DB)(),
-        a = t.terms_of_service_url,
-        i = t.privacy_policy_url;
-    if (null == a && null == i) return null;
-    let s = (e, t) =>
-        (0, l.jsx)(c.A, {
-            href: t,
-            trusted: !n,
-            children: e,
-        });
-    return (0, l.jsx)("div", {
-        className: j.V6,
-        children: (0, l.jsx)(r.EYj, {
+        a = (0, _.DB)(),
+        i = t.terms_of_service_url,
+        l = t.privacy_policy_url;
+    if (null == i && null == l) return null;
+    let r = (e, t) => (0, n.jsx)(o.A, { href: t, trusted: !a, children: e });
+    return (0, n.jsx)("div", {
+        className: b.V6,
+        children: (0, n.jsx)(s.EYj, {
             color: "text-strong",
             variant: "text-sm/normal",
             children:
-                null != a && null != i
-                    ? v.intl.format(v.t.nylPOT, {
-                          termsHook: (e) => s(e, a),
-                          privacyHook: (e) => s(e, i),
-                      })
-                    : null != a
-                      ? v.intl.format(v.t["0cPyDz"], {
-                            termsHook: (e) => s(e, a),
-                        })
-                      : null != i
-                        ? v.intl.format(v.t["loYGC/"], {
-                              privacyHook: (e) => s(e, i),
-                          })
+                null != i && null != l
+                    ? C.intl.format(C.t.nylPOT, { termsHook: (e) => r(e, i), privacyHook: (e) => r(e, l) })
+                    : null != i
+                      ? C.intl.format(C.t["0cPyDz"], { termsHook: (e) => r(e, i) })
+                      : null != l
+                        ? C.intl.format(C.t["loYGC/"], { privacyHook: (e) => r(e, l) })
                         : null,
         }),
     });
 }
-
-function C() {
+function E() {
     return window.location.pathname.startsWith("/login");
 }

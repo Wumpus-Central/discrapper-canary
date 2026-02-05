@@ -1,112 +1,38 @@
-n.d(t, {
-    A: () => O,
-    n: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => g, n: () => f });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(73153),
-    o = n(272355),
-    s = n(267102),
+    s = n(272355),
+    o = n(267102),
     l = n(287809),
-    c = n(958805),
-    u = n(61881),
+    u = n(958805),
+    c = n(61881),
     d = n(652215);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+let _ = new Set();
+function f(e, t) {
+    return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = h(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let m = new Set();
-
-function g(e, t) {
-    return "USER_PROFILE_MODAL_KEY:".concat(e, ":").concat(null == t ? "" : t);
-}
-async function E(e) {
-    var t;
+async function p(e) {
     let {
-            userId: a,
-            tabSection: o,
-            scrollTarget: f,
-            guildId: h,
-            channelId: E,
-            showGuildProfile: y = !0,
-            appContext: b,
-            customStatusPrompt: O,
-            disableActionsForPreview: v = !1,
+            userId: t,
+            tabSection: a,
+            scrollTarget: s,
+            guildId: p,
+            channelId: h,
+            showGuildProfile: m = !0,
+            appContext: g,
+            customStatusPrompt: E,
+            disableActionsForPreview: A = !1,
+            ...I
         } = e,
-        A = _(e, [
-            "userId",
-            "tabSection",
-            "scrollTarget",
-            "guildId",
-            "channelId",
-            "showGuildProfile",
-            "appContext",
-            "customStatusPrompt",
-            "disableActionsForPreview",
-        ]),
-        I = l.default.getUser(a);
-    if (null == I) return;
-    let S = l.default.getCurrentUser();
-    if (null == S) return;
-    let T = g(a, y ? h : void 0);
-    m.add(
+        T = l.default.getUser(t);
+    if (null == T) return;
+    let y = l.default.getCurrentUser();
+    if (null == y) return;
+    let S = f(t, m ? p : void 0);
+    _.add(
         await (0, i.mMO)(
             async () => {
                 let e = (
@@ -114,58 +40,52 @@ async function E(e) {
                         n.e("10614"),
                         n.e("28936"),
                         n.e("10253"),
-                        n.e("13696"),
+                        n.e("95320"),
                         n.e("10117"),
-                        n.e("60118"),
+                        n.e("59569"),
                         n.e("49282"),
                         n.e("63974"),
                     ]).then(n.bind(n, 293071))
                 ).default;
                 return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        p(
-                            {
-                                user: I,
-                                currentUser: S,
-                                guildId: h,
-                                initialTabSection: o,
-                                initialScrollTarget: f,
-                                channelId: E,
-                                showGuildProfile: y,
-                                customStatusPrompt: O,
-                                disableActionsForPreview: v,
-                            },
-                            t,
-                            A,
-                        ),
-                    );
+                    (0, r.jsx)(e, {
+                        user: T,
+                        currentUser: y,
+                        guildId: p,
+                        initialTabSection: a,
+                        initialScrollTarget: s,
+                        channelId: h,
+                        showGuildProfile: m,
+                        customStatusPrompt: E,
+                        disableActionsForPreview: A,
+                        ...t,
+                        ...I,
+                    });
             },
             {
-                modalKey: T,
-                contextKey: (0, i.TId)(null != (t = null != b ? b : (0, s.zd)()) ? t : d.BRT.APP),
+                modalKey: S,
+                contextKey: (0, i.TId)(g ?? (0, o.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
-                    u.A.hasUnsavedChanges()
-                        ? c.A.notifyUnsavedWidgets()
-                        : ((0, i.OoC)(T), m.delete(T), c.A.clearPendingWidgets());
+                    c.A.hasUnsavedChanges()
+                        ? u.A.notifyUnsavedWidgets()
+                        : ((0, i.OoC)(S), _.delete(S), u.A.clearPendingWidgets());
                 },
             },
         ),
     );
 }
-
-function y() {
-    if (0 !== m.size) {
-        for (let e of m) (0, i.OoC)(e);
-        m.clear(), c.A.clearPendingWidgets();
+function h() {
+    if (0 !== _.size) {
+        for (let e of _) (0, i.OoC)(e);
+        _.clear(), u.A.clearPendingWidgets();
     }
 }
-class b extends o.A {
+class m extends s.A {
     _initialize() {
-        a.h.subscribe("USER_PROFILE_MODAL_OPEN", E), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", y);
+        a.h.subscribe("USER_PROFILE_MODAL_OPEN", p), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", h);
     }
     _terminate() {
-        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", E), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", y);
+        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", p), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", h);
     }
 }
-let O = new b();
+let g = new m();

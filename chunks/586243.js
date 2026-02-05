@@ -1,30 +1,27 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(181658),
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700),
+    s = n(181658),
     l = n(493540);
-
-function s(e) {
-    let [t, n] = r.useState(),
-        [s, a] = r.useState(!1),
-        [c, o] = r.useState(!1);
+function r(e) {
+    let [t, n] = i.useState(),
+        [r, a] = i.useState(!1),
+        [o, d] = i.useState(!1);
     return {
         error: t,
-        loading: s,
-        createEnableRequest: r.useCallback(async () => {
+        loading: r,
+        createEnableRequest: i.useCallback(async () => {
             if (null != e) {
-                a(!0), n(void 0), o(!1);
+                a(!0), n(void 0), d(!1);
                 try {
-                    await l.gO(e), o(!0);
+                    await l.gO(e), d(!0);
                 } catch (e) {
-                    n(new i.A(e));
+                    n(new s.A(e));
                 } finally {
                     a(!1);
                 }
             }
         }, [e]),
-        submittedRequest: c,
+        submittedRequest: o,
     };
 }

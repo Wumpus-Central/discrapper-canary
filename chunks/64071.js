@@ -1,21 +1,17 @@
-n.d(t, {
-    x: () => o,
-});
-var r = n(311907),
+n.d(t, { x: () => o });
+var i = n(311907),
     l = n(519480),
-    i = n(370876),
+    s = n(370876),
     a = n(222823),
-    s = n(661191);
-
+    r = n(661191);
 function o(e) {
-    return (0, r.bG)([l.A, a.Ay], () => {
-        var t;
+    return (0, i.bG)([l.A, a.Ay], () => {
         if (null == e) return 0;
-        let n = a.Ay.ackMessageId(e.id);
-        if (null == n) return 0;
-        let r = Object.values(null != (t = l.A.getDirectoryEntries(e.id)) ? t : {}).filter(
-            (e) => new Date(e.createdAt).getTime() > s.default.extractTimestamp(n),
+        let t = a.Ay.ackMessageId(e.id);
+        if (null == t) return 0;
+        let n = Object.values(l.A.getDirectoryEntries(e.id) ?? {}).filter(
+            (e) => new Date(e.createdAt).getTime() > r.default.extractTimestamp(t),
         );
-        return Math.min(i.zP, r.length);
+        return Math.min(s.zP, n.length);
     }, [e]);
 }

@@ -1,22 +1,13 @@
-n.d(t, {
-    T: () => o,
-});
-var r = n(734057),
-    i = n(309010),
-    a = n(203982),
-    s = n(652215);
-let o = {
+n.d(t, { T: () => l });
+var i = n(734057),
+    s = n(309010),
+    r = n(203982),
+    a = n(652215);
+let l = {
     binds: ["mod+shift+u"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = r.A.getChannel(i.A.getChannelId());
-        return (
-            null == e ||
-                e.isManaged() ||
-                a._.dispatch(s.jej.UPLOAD_FILE, {
-                    channelId: e.id,
-                }),
-            !1
-        );
+        let e = i.A.getChannel(s.A.getChannelId());
+        return null == e || e.isManaged() || r._.dispatch(a.jej.UPLOAD_FILE, { channelId: e.id }), !1;
     },
 };

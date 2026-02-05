@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Xv: "results__2dc39",
     Ke: "result__2dc39",

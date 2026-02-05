@@ -1,86 +1,58 @@
-n.d(t, {
-    A: () => A,
-    e: () => O,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968),
+"use strict";
+n.d(t, { A: () => v, e: () => I }), n(321073);
+var s = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(554146),
-    l = n(827734),
-    c = n(397927),
-    u = n(404374),
-    d = n(379848),
-    f = n(40185),
-    p = n(552736),
-    _ = n(422936),
-    h = n(234419),
-    m = n(603488),
-    g = n(105390),
-    E = n(49999),
-    b = n(788868),
-    y = n(738386);
-
-function O() {
+    r = n(503698),
+    l = n.n(r),
+    a = n(554146),
+    o = n(827734),
+    d = n(397927),
+    h = n(404374),
+    c = n(379848),
+    u = n(40185),
+    g = n(552736),
+    p = n(422936),
+    C = n(234419),
+    f = n(603488),
+    S = n(105390),
+    A = n(49999),
+    m = n(788868),
+    E = n(738386);
+function I() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = (0, h.V)(),
-        a = (0, _.O)(),
-        s = (0, f.cg)(),
-        l = null != (0, p.A)(),
-        c = s || l,
-        u = (null == n ? void 0 : n.trial_id) === b.Dw,
-        y = [];
-    c && y.push(o.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [O, A] = (0, d.kn)(y, void 0, !0);
+        n = (0, C.V)(),
+        r = (0, p.O)(),
+        l = (0, u.cg)(),
+        o = null != (0, g.A)(),
+        d = l || o,
+        h = n?.trial_id === m.Dw,
+        E = [];
+    d && E.push(a.M.BOGO_2025_NITRO_TAB_BADGE);
+    let [I, v] = (0, c.kn)(E, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === t && O === o.M.BOGO_2025_NITRO_TAB_BADGE && A(E.i.AUTO_DISMISS);
-        }, [A, t, O]),
-        c
-            ? (e = (0, r.jsx)(m.A, {}))
-            : null != a
-              ? (e = (0, r.jsx)(g.fY, {
-                    isTabSelected: t,
-                    userDiscount: a,
-                    includesAmountOff: !1,
-                }))
-              : null == n ||
-                u ||
-                (e = (0, r.jsx)(g.Ag, {
-                    isTabSelected: t,
-                    trialOffer: n,
-                })),
+            !0 === t && I === a.M.BOGO_2025_NITRO_TAB_BADGE && v(A.i.AUTO_DISMISS);
+        }, [v, t, I]),
+        d
+            ? (e = (0, s.jsx)(f.A, {}))
+            : null != r
+              ? (e = (0, s.jsx)(S.fY, { isTabSelected: t, userDiscount: r, includesAmountOff: !1 }))
+              : null == n || h || (e = (0, s.jsx)(S.Ag, { isTabSelected: t, trialOffer: n })),
         e
     );
 }
-
-function A(e) {
-    var t, n;
-    let { decoration: i, label: a, isSelected: o } = e,
-        d = (0, f.cg)(),
-        p =
-            null != (t = null != (n = O(o)) ? n : i)
-                ? t
-                : (0, r.jsx)(c.tvc, {
-                      size: "sm",
-                      color: o ? l.A.unsafe_rawColors.WHITE.css : u.k0.PREMIUM_TIER_2,
-                  });
-    return (0, r.jsxs)(r.Fragment, {
+function v(e) {
+    let { decoration: t, label: n, isSelected: i } = e,
+        r = (0, u.cg)(),
+        a =
+            I(i) ??
+            t ??
+            (0, s.jsx)(d.tvc, { size: "sm", color: i ? o.A.unsafe_rawColors.WHITE.css : h.k0.PREMIUM_TIER_2 });
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, r.jsxs)("div", {
-                className: s()(y.gj, {
-                    [y.wH]: o && !d,
-                }),
-                children: [a, p],
-            }),
-            (0, r.jsx)("div", {
-                className: s()(y.Tp, {
-                    [y._I]: !d && o,
-                }),
-            }),
+            (0, s.jsxs)("div", { className: l()(E.gj, { [E.wH]: i && !r }), children: [n, a] }),
+            (0, s.jsx)("div", { className: l()(E.Tp, { [E._I]: !r && i }) }),
         ],
     });
 }

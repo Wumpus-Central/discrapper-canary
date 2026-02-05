@@ -1,15 +1,9 @@
-n.d(t, {
-    V: () => l,
-    e: () => o,
-});
+"use strict";
+n.d(t, { V: () => l, e: () => o });
 var r = n(852015),
     i = n(82180),
     a = n(679314);
-let s = {
-    readUnknownField: !0,
-    readerFactory: (e) => new l(e),
-};
-
+let s = { readUnknownField: !0, readerFactory: (e) => new l(e) };
 function o(e) {
     return e ? Object.assign(Object.assign({}, s), e) : s;
 }
@@ -21,13 +15,7 @@ class l {
             (this.len = e.length),
             (this.pos = 0),
             (this.view = new DataView(e.buffer, e.byteOffset, e.byteLength)),
-            (this.textDecoder =
-                null != t
-                    ? t
-                    : new TextDecoder("utf-8", {
-                          fatal: !0,
-                          ignoreBOM: !0,
-                      }));
+            (this.textDecoder = null != t ? t : new TextDecoder("utf-8", { fatal: !0, ignoreBOM: !0 }));
     }
     tag() {
         let e = this.uint32(),

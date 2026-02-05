@@ -1,72 +1,37 @@
-n.d(t, {
-    yW: () => g,
-}),
-    n(228524),
-    n(321073),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { yW: () => h }), n(321073);
 var r = n(311907),
     i = n(73153),
     a = n(626584),
-    o = n(747465);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let c = Symbol("version"),
-    u = Object.freeze({}),
-    d = "0",
-    f = new a.A("LibdiscoreStore"),
-    p = (e) => e;
+    s = n(747465);
+let o = Symbol("version"),
+    l = Object.freeze({}),
+    u = "0",
+    c = new a.A("LibdiscoreStore"),
+    d = (e) => e;
 class _ {
+    type;
+    kkvDatabase;
+    k1key;
+    k2key;
+    shouldIndex;
+    constructor(e, t, n, r, i) {
+        (this.type = e), (this.kkvDatabase = t), (this.k1key = n), (this.k2key = r), (this.shouldIndex = i);
+    }
     getK1Key(e) {
-        return "kv" === this.type ? d : "string" == typeof this.k1key ? e[this.k1key] : this.k1key(e);
+        return "kv" === this.type ? u : "string" == typeof this.k1key ? e[this.k1key] : this.k1key(e);
     }
     getK2Key(e) {
         let t = "kv" === this.type ? this.k1key : this.k2key;
         if ((null == this.shouldIndex || this.shouldIndex(e)) && null != t) return "string" == typeof t ? e[t] : t(e);
     }
-    constructor(e, t, n, r, i) {
-        s(this, "type", void 0),
-            s(this, "kkvDatabase", void 0),
-            s(this, "k1key", void 0),
-            s(this, "k2key", void 0),
-            s(this, "shouldIndex", void 0),
-            (this.type = e),
-            (this.kkvDatabase = t),
-            (this.k1key = n),
-            (this.k2key = r),
-            (this.shouldIndex = i);
-    }
 }
-class h {
+class f {
+    kkvDatabase;
+    partition;
+    constructor(e, t) {
+        (this.kkvDatabase = e), (this.partition = t);
+    }
     set(e, t) {
         this.kkvDatabase.setRecord(this.partition, e, t);
     }
@@ -89,29 +54,31 @@ class h {
         return this.kkvDatabase.partitionLength(this.partition);
     }
     version() {
-        var e;
-        return null != (e = this.kkvDatabase.partitionVersion(this.partition)) ? e : this.kkvDatabase.version();
+        return this.kkvDatabase.partitionVersion(this.partition) ?? this.kkvDatabase.version();
     }
     memoized(e, t) {
         return this.kkvDatabase.memoizedSinglePartition(this.partition, e, t);
     }
-    constructor(e, t) {
-        s(this, "kkvDatabase", void 0), s(this, "partition", void 0), (this.kkvDatabase = e), (this.partition = t);
-    }
 }
-class m {
+class p {
+    nextVersion;
+    state;
+    secondaryIndexes = [];
+    constructor(e) {
+        (this.nextVersion = e), (this.state = this.emptyState());
+    }
     addSecondaryKVIndex(e, t) {
-        let n = new m(this.nextVersion),
+        let n = new p(this.nextVersion),
             r = new _("kv", n, e, void 0, t);
         return this.secondaryIndexes.push(r), n.intoKV();
     }
     addSecondaryKKVIndex(e, t, n) {
-        let r = new m(this.nextVersion),
+        let r = new p(this.nextVersion),
             i = new _("kkv", r, e, t, n);
         return this.secondaryIndexes.push(i), r;
     }
     intoKV(e) {
-        return new h(this, null != e ? e : d);
+        return new f(this, e ?? u);
     }
     version() {
         return this.state.version;
@@ -124,12 +91,10 @@ class m {
         return null != this.state.root[e];
     }
     hasRecord(e, t) {
-        var n;
-        return (null == (n = this.state.root[e]) ? void 0 : n.root[t]) != null;
+        return this.state.root[e]?.root[t] != null;
     }
     getRecord(e, t) {
-        var n;
-        return null == (n = this.state.root[e]) ? void 0 : n.root[t];
+        return this.state.root[e]?.root[t];
     }
     getManyRecords(e, t) {
         let n = this.state.root[e];
@@ -143,7 +108,7 @@ class m {
     }
     getPartition(e) {
         let t = this.state.root[e];
-        return null != t ? t.root : u;
+        return null != t ? t.root : l;
     }
     getAllPartitions() {
         return this.state.root;
@@ -166,17 +131,13 @@ class m {
         return null == t ? null : t.root;
     }
     _derivedVersion(e) {
-        let t = e[c];
-        return null == t && (e[c] = t = this.nextVersion()), t;
+        let t = e[o];
+        return null == t && (e[o] = t = this.nextVersion()), t;
     }
     mapPartitions(e) {
         let t = [],
             { root: n } = this.state;
-        for (let r in n)
-            t.push({
-                partitionKey: r,
-                values: e(n[r].root, r),
-            });
+        for (let r in n) t.push({ partitionKey: r, values: e(n[r].root, r) });
         return t;
     }
     memoizedPartition(e, t) {
@@ -187,24 +148,24 @@ class m {
             if (null == i) return r;
             let {
                     root: a,
-                    derived: { memoized: o },
+                    derived: { memoized: s },
                 } = i,
-                s = o[n];
-            return Object.hasOwnProperty.call(o, n) || ((s = e(t, a)), (o[n] = s)), s;
+                o = s[n];
+            return Object.hasOwnProperty.call(s, n) || ((o = e(t, a)), (s[n] = o)), o;
         };
     }
     memoizedSinglePartition(e, t, n) {
         let r = Symbol(),
-            i = void 0 !== n ? n : t(u);
+            i = void 0 !== n ? n : t(l);
         return () => {
             let n = this.state.root[e];
             if (null == n) return i;
             let {
                     root: a,
-                    derived: { memoized: o },
+                    derived: { memoized: s },
                 } = n,
-                s = o[r];
-            return Object.hasOwnProperty.call(o, r) || ((s = t(a)), (o[r] = s)), s;
+                o = s[r];
+            return Object.hasOwnProperty.call(s, r) || ((o = t(a)), (s[r] = o)), o;
         };
     }
     memoized(e) {
@@ -216,31 +177,16 @@ class m {
         };
     }
     emptyState() {
-        return {
-            root: {},
-            version: this.nextVersion(),
-            derived: {
-                length: 0,
-                numPartitions: 0,
-                memoized: {},
-            },
-        };
+        return { root: {}, version: this.nextVersion(), derived: { length: 0, numPartitions: 0, memoized: {} } };
     }
     emptyPartitionState(e) {
-        return {
-            root: {},
-            version: null != e ? e : this.nextVersion(),
-            derived: {
-                length: 0,
-                memoized: {},
-            },
-        };
+        return { root: {}, version: e ?? this.nextVersion(), derived: { length: 0, memoized: {} } };
     }
     clear() {
         for (let e of ((this.state = this.emptyState()), this.secondaryIndexes)) e.kkvDatabase.clear();
     }
     removePartition(e, t) {
-        null != t || (t = this.nextVersion());
+        t ??= this.nextVersion();
         let n = this.state.root[e];
         return (
             null != n &&
@@ -254,7 +200,7 @@ class m {
         );
     }
     removeRecord(e, t, n) {
-        null != n || (n = this.nextVersion());
+        n ??= this.nextVersion();
         let r = this.state.root[e];
         if (null == r) return !1;
         let i = r.root[t];
@@ -273,17 +219,15 @@ class m {
         );
     }
     updateRecord(e, t, n, r, i) {
-        if ((null != i || (i = this.nextVersion()), null == this.state.root[e]))
-            throw Error("Partition ".concat(e, " does not exist"));
-        if (null == this.state.root[e].root[t])
-            throw Error("Record ".concat(t, " does not exist in partition ").concat(e));
+        if (((i ??= this.nextVersion()), null == this.state.root[e])) throw Error(`Partition ${e} does not exist`);
+        if (null == this.state.root[e].root[t]) throw Error(`Record ${t} does not exist in partition ${e}`);
         let a = this.state.root[e].root[t],
-            o = r(l({}, a, n));
-        return this.updateSecondaryIndexes([o], [a], i), (this.touchPartition(e, i).root[t] = o), !0;
+            s = r({ ...a, ...n });
+        return this.updateSecondaryIndexes([s], [a], i), (this.touchPartition(e, i).root[t] = s), !0;
     }
     touchPartition(e, t) {
         return (
-            null != t || (t = this.nextVersion()),
+            (t ??= this.nextVersion()),
             null == this.state.root[e]
                 ? ((this.state.root[e] = this.emptyPartitionState(t)), this.state.derived.numPartitions++)
                 : ((this.state.root[e].version = t), (this.state.root[e].derived.memoized = {})),
@@ -293,7 +237,7 @@ class m {
         );
     }
     setRecord(e, t, n, r) {
-        null != r || (r = this.nextVersion());
+        r ??= this.nextVersion();
         let i = this.touchPartition(e, r);
         return (
             null == i.root[t] && (i.derived.length++, this.state.derived.length++),
@@ -303,7 +247,7 @@ class m {
         );
     }
     setPartition(e, t, n) {
-        null != n || (n = this.nextVersion()), this.removePartition(e, n);
+        (n ??= this.nextVersion()), this.removePartition(e, n);
         let r = Object.keys(t).length;
         if (0 === r) return !0;
         this.updateSecondaryIndexes(Object.values(t), void 0, n);
@@ -326,16 +270,33 @@ class m {
                 }
         }
     }
-    constructor(e) {
-        s(this, "nextVersion", void 0),
-            s(this, "state", void 0),
-            s(this, "secondaryIndexes", void 0),
-            (this.nextVersion = e),
-            (this.secondaryIndexes = []),
-            (this.state = this.emptyState());
-    }
 }
-class g extends r.il {
+class h extends r.il {
+    mode;
+    state;
+    _nextVersion = 0;
+    recordCreators = new Map();
+    wrappedState = null;
+    shadowDatabases = null;
+    shadowRecordCreators = null;
+    constructor(e, t = "typescript") {
+        const n = {};
+        if ("typescript" === t || "typescript-libdiscore-dual-read" === t)
+            for (const t in e) {
+                const r = e[t],
+                    i = (e) => {
+                        this.wrappedState ??= this.stateWrapper();
+                        let t = this._nextVersion;
+                        if ((r(e, this.wrappedState), this._nextVersion === t)) return !1;
+                    };
+                n[t] = i;
+            }
+        super(i.h, n),
+            (this.mode = t),
+            (this.state = { databases: {} }),
+            "typescript-libdiscore-dual-read" === t &&
+                ((this.shadowDatabases = {}), (this.shadowRecordCreators = new Map()));
+    }
     getMode() {
         return this.mode;
     }
@@ -343,10 +304,7 @@ class g extends r.il {
         if ("typescript" === this.mode) throw Error("connectWithLibdiscore should not be called in TypeScript mode.");
         let { storeToken: t, initialState: n } = e.connectStore({
             storeName: this.getName(),
-            databases: Object.keys(this.state.databases).map((e) => ({
-                name: e,
-                type: "kkv",
-            })),
+            databases: Object.keys(this.state.databases).map((e) => ({ name: e, type: "kkv" })),
         });
         return (
             this.applyChanges(n), "typescript-libdiscore-dual-read" === this.mode && this.setupDualReadValidation(), t
@@ -354,13 +312,7 @@ class g extends r.il {
     }
     setupDualReadValidation() {
         let e = Symbol("didValidatePartition"),
-            t = {
-                root: {},
-                derived: {
-                    length: 0,
-                    memoized: {},
-                },
-            };
+            t = { root: {}, derived: { length: 0, memoized: {} } };
         this.addChangeListener(() => {
             let n = this.shadowDatabases;
             if (null != n)
@@ -368,51 +320,47 @@ class g extends r.il {
                     let i = this.state.databases[r],
                         a = n[r];
                     if (null == a) {
-                        f.warn("Shadow database ".concat(r, " not found for dual-read validation"));
+                        c.warn(`Shadow database ${r} not found for dual-read validation`);
                         continue;
                     }
-                    let s = i.getAllPartitions(),
+                    let o = i.getAllPartitions(),
                         l = a.getAllPartitions();
-                    (0, o.R7)("".concat(this.getName(), ":").concat(r), "Kkv", (n) => {
-                        let r = Object.keys(s),
+                    (0, s.R7)(`${this.getName()}:${r}`, "Kkv", (n) => {
+                        let r = Object.keys(o),
                             i = Object.keys(l);
                         for (let i of r) {
-                            let r = s[i];
+                            let r = o[i];
                             if (!Object.prototype.hasOwnProperty.call(l, i)) {
                                 n(r, t);
                                 continue;
                             }
                             let a = l[i],
-                                o = r.derived.memoized[e],
-                                c = a.derived.memoized[e];
-                            if (null != o && o === c) continue;
+                                s = r.derived.memoized[e],
+                                u = a.derived.memoized[e];
+                            if (null != s && s === u) continue;
                             n(r, a);
-                            let u = {};
-                            (r.derived.memoized[e] = u), (a.derived.memoized[e] = u);
+                            let c = {};
+                            (r.derived.memoized[e] = c), (a.derived.memoized[e] = c);
                         }
-                        for (let e of i) Object.prototype.hasOwnProperty.call(s, e) || n(t, l[e]);
+                        for (let e of i) Object.prototype.hasOwnProperty.call(o, e) || n(t, l[e]);
                     });
                 }
         });
     }
     addKKVDatabase(e, t) {
-        let n = new m(this.nextVersion.bind(this));
-        if (
-            ((this.state.databases[e] = n), this.recordCreators.set(e, null != t ? t : p), null != this.shadowDatabases)
-        ) {
-            let n = new m(this.nextVersion.bind(this));
-            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, null != t ? t : p);
+        let n = new p(this.nextVersion.bind(this));
+        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? d), null != this.shadowDatabases)) {
+            let n = new p(this.nextVersion.bind(this));
+            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? d);
         }
         return n;
     }
     addKVDatabase(e, t) {
-        let n = new m(this.nextVersion.bind(this)),
+        let n = new p(this.nextVersion.bind(this)),
             r = n.intoKV();
-        if (
-            ((this.state.databases[e] = n), this.recordCreators.set(e, null != t ? t : p), null != this.shadowDatabases)
-        ) {
-            let n = new m(this.nextVersion.bind(this));
-            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, null != t ? t : p);
+        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? d), null != this.shadowDatabases)) {
+            let n = new p(this.nextVersion.bind(this));
+            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? d);
         }
         return r;
     }
@@ -431,68 +379,35 @@ class g extends r.il {
             { databaseName: n, opcodes: r } = e,
             i = this.nextVersion(),
             a = t ? this.shadowDatabases : this.state.databases,
-            o = t ? this.shadowRecordCreators : this.recordCreators,
-            s = a[n];
-        if (null == s) throw Error("Database ".concat(n, " does not exist"));
-        let l = o.get(n);
+            s = t ? this.shadowRecordCreators : this.recordCreators,
+            o = a[n];
+        if (null == o) throw Error(`Database ${n} does not exist`);
+        let l = s.get(n);
         for (let e of r)
             switch (e.opcode) {
                 case "removePartition":
-                    s.removePartition(e.partitionKey, i);
+                    o.removePartition(e.partitionKey, i);
                     break;
                 case "setPartition": {
                     let t = e.partition;
                     for (let e in t) t[e] = l(t[e]);
-                    s.setPartition(e.partitionKey, t, i);
+                    o.setPartition(e.partitionKey, t, i);
                     break;
                 }
                 case "updateRecord":
-                    s.updateRecord(e.partitionKey, e.clusteringKey, e.value, l, i);
+                    o.updateRecord(e.partitionKey, e.clusteringKey, e.value, l, i);
                     break;
                 case "setRecord":
-                    s.setRecord(e.partitionKey, e.clusteringKey, l(e.value), i);
+                    o.setRecord(e.partitionKey, e.clusteringKey, l(e.value), i);
                     break;
                 case "removeRecord":
-                    s.removeRecord(e.partitionKey, e.clusteringKey, i);
+                    o.removeRecord(e.partitionKey, e.clusteringKey, i);
                     break;
                 case "clearDatabase":
-                    s.clear();
+                    o.clear();
             }
     }
     nextVersion() {
         return this._nextVersion++;
-    }
-    constructor(e, t = "typescript") {
-        const n = {};
-        if ("typescript" === t || "typescript-libdiscore-dual-read" === t)
-            for (const t in e) {
-                const r = e[t],
-                    i = (e) => {
-                        var t;
-                        null != (t = this.wrappedState) || (this.wrappedState = this.stateWrapper());
-                        let n = this._nextVersion;
-                        if ((r(e, this.wrappedState), this._nextVersion === n)) return !1;
-                    };
-                n[t] = i;
-            }
-        super(i.h, n),
-            s(this, "mode", void 0),
-            s(this, "state", void 0),
-            s(this, "_nextVersion", void 0),
-            s(this, "recordCreators", void 0),
-            s(this, "wrappedState", void 0),
-            s(this, "shadowDatabases", void 0),
-            s(this, "shadowRecordCreators", void 0),
-            (this.mode = t),
-            (this._nextVersion = 0),
-            (this.recordCreators = new Map()),
-            (this.wrappedState = null),
-            (this.shadowDatabases = null),
-            (this.shadowRecordCreators = null),
-            (this.state = {
-                databases: {},
-            }),
-            "typescript-libdiscore-dual-read" === t &&
-                ((this.shadowDatabases = {}), (this.shadowRecordCreators = new Map()));
     }
 }

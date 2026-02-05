@@ -1,45 +1,30 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => o });
 var r = n(627968),
     i = n(158954),
-    a = n(596395),
-    o = n(524025);
-let s = (e) => {
-    let { backgroundImage: t, logoSrc: n, supplementalImage: s, href: l, ctaText: c } = e;
+    a = n(653793),
+    s = n(524025);
+let o = (e) => {
+    let { backgroundImage: t, logoSrc: n, supplementalImage: o, href: l, ctaText: u } = e;
     return (0, r.jsxs)("div", {
-        className: o.rJ,
+        className: s.rJ,
         children: [
             (0, r.jsx)(a.A, {
                 overflowable: !0,
                 children: (0, r.jsx)("div", {
-                    className: o.rf,
-                    style: {
-                        backgroundImage: "url(".concat(t, ")"),
-                    },
+                    className: s.rf,
+                    style: { backgroundImage: `url(${t})` },
                     children: (0, r.jsxs)("div", {
-                        className: o.kb,
+                        className: s.kb,
                         children: [
                             (0, r.jsx)("div", {}),
-                            (0, r.jsx)("img", {
-                                className: o.wm,
-                                src: n,
-                                alt: "",
-                            }),
-                            (0, r.jsx)(i.$nd, {
-                                text: c,
-                                variant: "overlay-primary",
-                            }),
+                            (0, r.jsx)("img", { className: s.wm, src: n, alt: "" }),
+                            (0, r.jsx)(i.$nd, { text: u, variant: "overlay-primary" }),
                         ],
                     }),
                 }),
             }),
-            null != s &&
-                (0, r.jsx)("img", {
-                    className: o.hP,
-                    src: s,
-                    alt: "",
-                }),
+            null != o && (0, r.jsx)("img", { className: s.hP, src: o, alt: "" }),
         ],
     });
 };

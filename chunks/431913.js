@@ -1,7 +1,4 @@
-i.d(r, {
-    default: () => s,
-}),
-    i(896048);
+i.d(r, { default: () => s });
 var e = i(627968),
     n = i(64700),
     a = i(158954),
@@ -9,7 +6,6 @@ var e = i(627968),
     E = i(493540),
     T = i(980406),
     c = i(985018);
-
 function s(t) {
     let { guildId: r, transitionState: i, onClose: s } = t,
         [l, R] = n.useState(!1),
@@ -31,18 +27,8 @@ function s(t) {
         title: A,
         subtitle: c.intl.string(c.t.kdbm9C),
         actions: [
-            {
-                variant: "secondary",
-                onClick: s,
-                text: c.intl.string(c.t["ETE/oC"]),
-            },
-            {
-                variant: "primary",
-                text: c.intl.string(c.t["cY+Oob"]),
-                disabled: !_,
-                onClick: u,
-                loading: l,
-            },
+            { variant: "secondary", onClick: s, text: c.intl.string(c.t["ETE/oC"]) },
+            { variant: "primary", text: c.intl.string(c.t["cY+Oob"]), disabled: !_, onClick: u, loading: l },
         ],
         children: (0, e.jsx)(o.Kj, {
             onChange: () => {

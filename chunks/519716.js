@@ -1,76 +1,59 @@
-n.r(t),
-    n.d(t, {
-        default: () => m,
-    }),
-    n(747238),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
-var a = n(627968);
-n(64700);
-var r = n(421380),
-    l = n(397927),
-    i = n(77468),
-    s = n(573648),
-    o = n(114716),
-    c = n(321987),
-    d = n(950198),
-    u = n(985018),
-    f = n(859409);
-let m = (0, o.C)(function (e) {
+r.r(t), r.d(t, { default: () => w }), r(323874), r(14289), r(35956);
+var a = r(627968);
+r(64700);
+var n = r(421380),
+    s = r(397927),
+    i = r(77468),
+    o = r(573648),
+    l = r(114716),
+    d = r(321987),
+    c = r(950198),
+    u = r(985018),
+    m = r(859409);
+let w = (0, l.C)(function (e) {
     let { match: t } = e,
-        n = t.params.type,
-        o = s.A.get(n);
-    if (null == o)
-        return (0, a.jsx)(c.$, {
-            children: (0, a.jsx)(l.Text, {
-                className: f.z3,
+        r = t.params.type,
+        l = o.A.get(r);
+    if (null == l)
+        return (0, a.jsx)(d.$, {
+            children: (0, a.jsx)(s.Text, {
+                className: m.z3,
                 variant: "text-md/normal",
                 color: "text-feedback-warning",
                 children: u.intl.string(u.t.WLDKSb),
             }),
         });
-    async function m() {
-        var e, t, a;
-        let r = new URLSearchParams(window.location.search),
-            { body: l } = await i.A.authorize(n, {
+    async function w() {
+        let e = new URLSearchParams(window.location.search),
+            { body: t } = await i.A.authorize(r, {
                 location: "Connection Intermediate",
-                twoWayLink: null != r.get("two_way_link") ? "true" === r.get("two_way_link") : void 0,
-                twoWayLinkType: null != (e = r.get("two_way_link_type")) ? e : void 0,
-                userCode: null != (t = r.get("two_way_user_code")) ? t : void 0,
-                successRedirect: null != (a = r.get("success_redirect")) ? a : void 0,
+                twoWayLink: null != e.get("two_way_link") ? "true" === e.get("two_way_link") : void 0,
+                twoWayLinkType: e.get("two_way_link_type") ?? void 0,
+                userCode: e.get("two_way_user_code") ?? void 0,
+                successRedirect: e.get("success_redirect") ?? void 0,
             });
-        window.location = l.url;
+        window.location = t.url;
     }
-    return (0, a.jsx)(c.$, {
-        wrapperClassName: f.iE,
+    return (0, a.jsx)(d.$, {
+        wrapperClassName: m.iE,
         children: (0, a.jsxs)("div", {
-            className: f.zr,
+            className: m.zr,
             children: [
-                (0, a.jsx)(d.Jq, {
-                    className: f.ry,
-                    platform: o,
-                }),
-                (0, a.jsx)(l.Heading, {
+                (0, a.jsx)(c.Jq, { className: m.ry, platform: l }),
+                (0, a.jsx)(s.Heading, {
                     variant: "text-lg/bold",
-                    className: f.wx,
-                    children: u.intl.format(u.t.Pw4vee, {
-                        provider: o.name,
-                    }),
+                    className: m.wx,
+                    children: u.intl.format(u.t.Pw4vee, { provider: l.name }),
                 }),
-                (0, a.jsx)(l.Text, {
+                (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
-                    className: f.rf,
-                    children: u.intl.format(u.t.rHlSVB, {
-                        provider: o.name,
-                    }),
+                    className: m.rf,
+                    children: u.intl.format(u.t.rHlSVB, { provider: l.name }),
                 }),
-                (0, a.jsx)(r.$n, {
-                    size: r.$n.Sizes.LARGE,
-                    color: r.$n.Colors.BRAND,
-                    onClick: m,
+                (0, a.jsx)(n.$n, {
+                    size: n.$n.Sizes.LARGE,
+                    color: n.$n.Colors.BRAND,
+                    onClick: w,
                     children: u.intl.string(u.t["+NJGEj"]),
                 }),
             ],

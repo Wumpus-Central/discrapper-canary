@@ -1,12 +1,9 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(64700),
     i = n(267102),
     a = n(652215);
 let s = ["Shift", "Alt", "Meta", "Control"];
-
 function o(e, t) {
     let [n, o] = r.useState(0),
         l = (0, i.aL)();
@@ -21,20 +18,20 @@ function o(e, t) {
             }
         );
     }, [l]);
-    let [c, u] = r.useState(!1);
+    let [u, c] = r.useState(!1);
     return (
         r.useLayoutEffect(() => {
             let r = (e) => {
-                    (!t || n > 0) && c
-                        ? u(!1)
-                        : (!c && n > 0) ||
+                    (!t || n > 0) && u
+                        ? c(!1)
+                        : (!u && n > 0) ||
                           (e instanceof KeyboardEvent &&
                               (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || s.indexOf(e.key) >= 0)) ||
-                          u((e) => !e);
+                          c((e) => !e);
                 },
-                i = c ? "keyup" : "mousemove";
-            return t && e.addEventListener(i, r), () => (null == e ? void 0 : e.removeEventListener(i, r));
-        }, [e, c, n, t]),
-        t && 0 === n && c
+                i = u ? "keyup" : "mousemove";
+            return t && e.addEventListener(i, r), () => e?.removeEventListener(i, r);
+        }, [e, u, n, t]),
+        t && 0 === n && u
     );
 }

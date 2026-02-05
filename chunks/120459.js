@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Os: "giftMainAnimation_d54fab",
     mx: "adjustedGiftMainAnimation_d54fab",

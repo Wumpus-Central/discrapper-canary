@@ -1,17 +1,16 @@
+"use strict";
 n.d(t, {
     EY: () => s,
     Gp: () => a,
-    K8: () => f,
+    K8: () => _,
     NL: () => l,
-    f$: () => u,
+    f$: () => c,
     hv: () => d,
-    hw: () => c,
+    hw: () => u,
     sS: () => o,
-    v_: () => p,
-    yM: () => _,
+    v_: () => f,
+    yM: () => p,
 }),
-    n(896048),
-    n(680155),
     n(323874),
     n(14289),
     n(35956);
@@ -29,24 +28,17 @@ let a = "xbox://communitylinking/donut/audio",
         r.F.ACTIVITIES_READ,
     ],
     l = [r.F.VOICE, r.F.DM_CHANNELS_READ, r.F.GUILDS, r.F.GUILDS_MEMBERS_READ, r.F.IDENTIFY, r.F.CONNECTIONS],
-    c = (e) => {
+    u = (e) => {
         let { guildId: t, channelName: n, guildName: r, channelId: i, muted: a, deafened: s, nonce: o } = e,
-            l = {
-                channelid: i,
-                guildid: t,
-                channelname: n,
-                guildname: r,
-                muted: String(a),
-                deafened: String(s),
-            };
+            l = { channelid: i, guildid: t, channelname: n, guildname: r, muted: String(a), deafened: String(s) };
         return null != o && (l.nonce = o), new URLSearchParams(l);
     };
-var u = (function (e) {
+var c = (function (e) {
     return (e.PLAYSTATION = "playstation"), (e.XBOX = "xbox"), e;
 })({});
 let d = new Set(["xbox", "playstation"]);
 i.yTV.XBOX, i.yTV.PS5;
-var f = (function (e) {
+var _ = (function (e) {
     return (
         (e[(e.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
         (e[(e.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = "CONSOLE_DEVICE_UNAVAILABLE"),
@@ -59,5 +51,5 @@ var f = (function (e) {
         e
     );
 })({});
-let p = new Set([27e4]),
-    _ = "console error alert";
+let f = new Set([27e4]),
+    p = "console error alert";

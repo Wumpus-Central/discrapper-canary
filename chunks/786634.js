@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -21,33 +22,18 @@ var n = r(64700),
                 (0, s.A)(
                     {
                         default: {
-                            card: {
-                                width: t,
-                                display: "flex",
-                                flexWrap: "wrap",
-                                marginRight: -f,
-                                marginBottom: -f,
-                            },
+                            card: { width: t, display: "flex", flexWrap: "wrap", marginRight: -f, marginBottom: -f },
                         },
                     },
                     void 0 === d ? {} : d,
                 ),
             ),
             v = function (e, t) {
-                return r(
-                    {
-                        hex: e,
-                        source: "hex",
-                    },
-                    t,
-                );
+                return r({ hex: e, source: "hex" }, t);
             };
         return n.createElement(
             "div",
-            {
-                style: b.card,
-                className: "circle-picker " + (void 0 === h ? "" : h),
-            },
+            { style: b.card, className: "circle-picker " + (void 0 === h ? "" : h) },
             (0, l.A)(a, function (e) {
                 return n.createElement(p.A, {
                     key: e,

@@ -1,24 +1,20 @@
-n.d(t, {
-    b: () => l,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
+n.d(t, { b: () => o });
+var i = n(64700),
+    l = n(311907),
     a = n(354138),
-    s = n(212534),
-    o = n(611010);
-
-function l(e) {
+    r = n(212534),
+    s = n(611010);
+function o(e) {
     let { id: t, isDiscoverable: n } = e,
-        [l, c, u] = (0, i.yK)(
-            [s.A],
-            () => [s.A.getApplication(t), s.A.isInvalidApplication(t), s.A.getApplicationFetchState(t)],
+        [o, d, c] = (0, l.yK)(
+            [r.A],
+            () => [r.A.getApplication(t), r.A.isInvalidApplication(t), r.A.getApplicationFetchState(t)],
             [t],
         );
     return (
-        r.useEffect(() => {
-            !1 === n || c || u === s.e.FETCHED || u === s.e.FETCHING || (0, a.eP)(t);
-        }, [t, u, n, c]),
-        r.useMemo(() => (null != l ? e.mergeFromApplicationUpdate(o.Ay.createFromServer(l)) : e), [e, l])
+        i.useEffect(() => {
+            !1 === n || d || c === r.e.FETCHED || c === r.e.FETCHING || (0, a.eP)(t);
+        }, [t, c, n, d]),
+        i.useMemo(() => (null != o ? e.mergeFromApplicationUpdate(s.Ay.createFromServer(o)) : e), [e, o])
     );
 }

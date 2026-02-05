@@ -1,3 +1,4 @@
+"use strict";
 var r = n(410323),
     i = r({}.toString),
     a = r("".slice);

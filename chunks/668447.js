@@ -1,13 +1,9 @@
-n.d(t, {
-    Ay: () => f,
-    Ut: () => d,
-    rx: () => s,
-});
+"use strict";
+n.d(t, { Ay: () => _, Ut: () => d, rx: () => s });
 var r = n(64700),
     i = function () {
         (this.locks = []), (this.listeners = []);
     };
-
 function a(e, t, n) {
     void 0 === n && (n = !1);
     var r = (function (e) {
@@ -25,11 +21,7 @@ function a(e, t, n) {
         (null != a ? a : e).focus();
 }
 (i.prototype.add = function (e, t) {
-    var n = {
-        uid: e,
-        setEnabled: t,
-        enabled: !1,
-    };
+    var n = { uid: e, setEnabled: t, enabled: !1 };
     this.toggleLayer(this.current(), !1), this.locks.push(n), this.toggleLayer(n, !0), this.emit();
 }),
     (i.prototype.remove = function (e) {
@@ -76,7 +68,6 @@ function a(e, t, n) {
     });
 var s = new i(),
     o = 0;
-
 function l(e) {
     (0, r.useEffect)(
         function () {
@@ -85,8 +76,7 @@ function l(e) {
         [e],
     );
 }
-
-function c(e, t) {
+function u(e, t) {
     var n = (0, r.useRef)(document.activeElement);
     (0, r.useLayoutEffect)(function () {
         return function () {
@@ -99,8 +89,7 @@ function c(e, t) {
         };
     }, []);
 }
-
-function u(e) {
+function c(e) {
     var t = (0, r.useState)(function () {
             return e || "lock-" + o++;
         })[0],
@@ -129,16 +118,11 @@ var d = (0, r.memo)(function () {
         l(e[1]),
         (0, r.createElement)("div", {
             tabIndex: t ? 0 : void 0,
-            style: {
-                position: "fixed",
-                opacity: 0,
-                pointerEvents: "none",
-            },
+            style: { position: "fixed", opacity: 0, pointerEvents: "none" },
         })
     );
 });
-
-function f(e, t) {
+function _(e, t) {
     void 0 === t && (t = {});
     var n = t.returnRef,
         i = t.disableReturnRef,
@@ -146,7 +130,7 @@ function f(e, t) {
     void 0 === s && (s = document);
     var o = t.disable,
         l = s instanceof HTMLElement ? s.ownerDocument : s,
-        d = u();
+        d = c();
     (0, r.useEffect)(
         function () {
             o && (d.current = !1);
@@ -156,7 +140,6 @@ function f(e, t) {
         (0, r.useLayoutEffect)(
             function () {
                 var t = e.current;
-
                 function n(t) {
                     if (d.current) {
                         var n = e.current;
@@ -166,7 +149,6 @@ function f(e, t) {
                         }
                     }
                 }
-
                 function r(t) {
                     if (d.current) {
                         var n = e.current;
@@ -183,23 +165,15 @@ function f(e, t) {
                         t.contains(l.activeElement) ||
                         null != t.querySelector("[autofocus]") ||
                         a(t, l.activeElement, !0),
-                    s.addEventListener("focusin", n, {
-                        capture: !0,
-                    }),
-                    s.addEventListener("focusout", r, {
-                        capture: !0,
-                    }),
+                    s.addEventListener("focusin", n, { capture: !0 }),
+                    s.addEventListener("focusout", r, { capture: !0 }),
                     function () {
-                        s.removeEventListener("focusin", n, {
-                            capture: !0,
-                        }),
-                            s.removeEventListener("focusout", r, {
-                                capture: !0,
-                            });
+                        s.removeEventListener("focusin", n, { capture: !0 }),
+                            s.removeEventListener("focusout", r, { capture: !0 });
                     }
                 );
             },
             [s, l, e, d],
         ),
-        c(n, i);
+        u(n, i);
 }

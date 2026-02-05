@@ -1,22 +1,22 @@
+"use strict";
 n.d(t, {
     SP: () => l,
     Vi: () => s,
-    bK: () => f,
+    bK: () => _,
     dH: () => d,
-    dR: () => c,
-    e$: () => u,
+    dR: () => u,
+    e$: () => c,
     hs: () => o,
-    pj: () => p,
+    pj: () => f,
     wX: () => a,
-}),
-    n(896048);
+});
 var r = n(136722),
     i = n(652215);
 let a = "publicSuccessModalSeen",
     s = "667560445975986187",
     o = "669627189624307712",
     l = "1",
-    c = [
+    u = [
         i.xBc.ADMINISTRATOR,
         i.xBc.KICK_MEMBERS,
         i.xBc.BAN_MEMBERS,
@@ -31,10 +31,10 @@ let a = "publicSuccessModalSeen",
         i.xBc.MODERATE_MEMBERS,
         i.xBc.MENTION_EVERYONE,
     ],
-    u = r.kg(...c),
+    c = r.kg(...u),
     d = 1e3,
-    f = "Enable Community Modal";
-var p = (function (e) {
+    _ = "Enable Community Modal";
+var f = (function (e) {
     return (
         (e.INTRO = "intro"),
         (e.SAFETY_CHECK = "safety_check"),

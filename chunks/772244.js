@@ -1,68 +1,44 @@
-n.d(t, {
-    OY: () => o,
-    Ry: () => s,
-    qV: () => d,
-}),
-    n(896048);
+n.d(t, { OY: () => o, Ry: () => r, qV: () => c });
 var a = n(64700),
-    l = n(397927),
+    s = n(397927),
     i = n(736653),
-    r = n(890687);
-
-function s() {
-    let [{ spring: e }, t] = (0, l.zhh)(
-        () => ({
-            spring: 0,
-        }),
-        "animate-always",
-    );
+    l = n(890687);
+function r() {
+    let [{ spring: e }, t] = (0, s.zhh)(() => ({ spring: 0 }), "animate-always");
     return {
         completionSpring: e,
         startCompletionAnimation: a.useCallback(() => {
-            t({
-                spring: 1,
-            }),
-                t({
-                    spring: 0,
-                    delay: 2e3,
-                });
+            t({ spring: 1 }), t({ spring: 0, delay: 2e3 });
         }, [t]),
     };
 }
-
 function o(e, t) {
-    var n;
-    let a = (0, r.Vn)(e),
-        l = null != (n = (0, i.xv)()) ? n : 0,
+    let n = (0, l.Vn)(e),
+        a = (0, i.xv)() ?? 0,
         s = "var(--green-330)",
-        o = ["var(--background-base-lowest)", "var(--interactive-text-default)"];
+        r = ["var(--background-base-lowest)", "var(--interactive-text-default)"];
     return {
-        backgroundTop: t ? o[l] : ["#828288", "#CBCDD4"][l],
-        backgroundBottom: t ? o[l] : ["#535356", "#8B8C95"][l],
+        backgroundTop: t ? r[a] : ["#828288", "#CBCDD4"][a],
+        backgroundBottom: t ? r[a] : ["#535356", "#8B8C95"][a],
         foreground: s,
-        glow: t && a ? s : "#C4C1D66E",
+        glow: t && n ? s : "#C4C1D66E",
     };
 }
-let c = () => {
+let d = () => {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
 };
-
-function d() {
+function c() {
     return {
         label: !(function () {
-            let [e, t] = a.useState(() => 270 > c());
+            let [e, t] = a.useState(() => 270 > d());
             return (
                 a.useEffect(() => {
                     let e = new MutationObserver(() => {
-                        t(270 > c());
+                        t(270 > d());
                     });
                     return (
-                        e.observe(document.body, {
-                            attributes: !0,
-                            attributeFilter: ["style"],
-                        }),
-                        () => e.disconnect()
+                        e.observe(document.body, { attributes: !0, attributeFilter: ["style"] }), () => e.disconnect()
                     );
                 }, [270]),
                 e

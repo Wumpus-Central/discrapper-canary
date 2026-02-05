@@ -1,21 +1,18 @@
-t.d(n, {
-    default: () => c,
-});
-var r = t(627968),
-    o = t(397927),
-    a = t(887092),
-    i = t(652215),
-    l = t(985018);
-
-function c(e) {
-    let { onClose: n, onSelect: t, application: c, channelId: _ } = e,
-        s = (0, a.A)(c, _, i.BRT.POPOUT);
-    return (0, r.jsx)(o.W1t, {
+n.d(t, { default: () => s });
+var l = n(627968),
+    i = n(397927),
+    a = n(887092),
+    o = n(652215),
+    r = n(985018);
+function s(e) {
+    let { onClose: t, onSelect: n, application: s, channelId: c } = e,
+        d = (0, a.A)(s, c, o.BRT.POPOUT);
+    return (0, l.jsx)(i.W1t, {
         "data-menu-migrated": !0,
         navId: "activity-popout-overflow-popout",
-        onClose: n,
-        onSelect: t,
-        "aria-label": l.intl.string(l.t.SS9Y6P),
-        children: s,
+        onClose: t,
+        onSelect: n,
+        "aria-label": r.intl.string(r.t.SS9Y6P),
+        children: d,
     });
 }

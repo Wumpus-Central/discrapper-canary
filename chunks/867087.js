@@ -1,8 +1,4 @@
-s.d(e, {
-    default: () => L,
-}),
-    s(896048),
-    s(65821);
+s.d(e, { default: () => N });
 var l = s(627968),
     a = s(64700),
     n = s(311907),
@@ -16,30 +12,23 @@ var l = s(627968),
     p = s(587895),
     A = s(235986),
     I = s(769015),
-    f = s(976860),
-    g = s(568004),
-    m = s(293066),
-    P = s(775228),
-    C = s(255438),
+    g = s(976860),
+    m = s(568004),
+    _ = s(293066),
+    C = s(775228),
+    P = s(255438),
     T = s(980888),
-    b = s(652215),
-    _ = s(985018),
-    S = s(25327);
-
-function y(t, e, s) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: s,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = s),
-        t
-    );
-}
-class E extends a.Component {
+    f = s(652215),
+    S = s(985018),
+    E = s(25327);
+class y extends a.Component {
+    state = {
+        selectedInstallationPath: this.props.defaultInstallationPath,
+        hasError: !1,
+        isInstalling: !1,
+        hasAcceptedNeccessaryTerms: !1,
+    };
+    isUnmounted = !1;
     fetchInstallSize() {
         let { applicationId: t, branchId: e, buildId: s, manifestIds: l, buildSizeKB: a } = this.props;
         null != s &&
@@ -59,12 +48,41 @@ class E extends a.Component {
     componentWillUnmount() {
         this.isUnmounted = !0;
     }
+    handleChangePath = (t, e) => {
+        this.setState({ selectedInstallationPath: t, hasError: e });
+    };
+    install = (t, e) => {
+        let { application: s, branchId: l, analyticsLocation: a } = this.props;
+        if (null == s) return null;
+        (0, u.oc)({
+            application: s,
+            branchId: l,
+            buildId: t,
+            manifestIds: e,
+            installationPath: this.state.selectedInstallationPath,
+            analyticsLocation: a,
+        }),
+            (0, g.pX)(f.BVt.APPLICATION_LIBRARY),
+            this.close();
+    };
+    handleInstall = () => {
+        let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
+        if (null != e && null != s)
+            l || (0, d.v)(), null != t && null != t.eulaId && (0, d.C)(t.eulaId), this.install(e, s);
+        else throw Error("Unexpected missing build info for non-premium product");
+    };
+    handlePurchaseTermsChange = (t) => {
+        this.setState({ hasAcceptedNeccessaryTerms: t });
+    };
+    close = () => {
+        this.props.onClose();
+    };
     renderButton() {
         let { buildId: t } = this.props,
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
         return (0, l.jsx)(i.Button, {
             variant: "active",
-            text: _.intl.string(_.t.nL0WvC),
+            text: S.intl.string(S.t.nL0WvC),
             disabled: e || null == t || !s,
             onClick: this.handleInstall,
         });
@@ -76,17 +94,10 @@ class E extends a.Component {
         return (0, l.jsxs)(i.EOs, {
             transitionState: s,
             size: i.rIJ.SMALL,
-            "aria-label": _.intl.string(_.t.PphjtJ),
+            "aria-label": S.intl.string(S.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
-                null != r
-                    ? (0, l.jsx)("div", {
-                          className: S.Yi,
-                          style: {
-                              backgroundImage: "url(".concat(r, ")"),
-                          },
-                      })
-                    : null,
+                null != r ? (0, l.jsx)("div", { className: E.Yi, style: { backgroundImage: `url(${r})` } }) : null,
                 (0, l.jsxs)(i.rQ0, {
                     justify: A.A.Justify.BETWEEN,
                     children: [
@@ -94,15 +105,10 @@ class E extends a.Component {
                             grow: 1,
                             children: (0, l.jsx)(i.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: _.intl.string(_.t.PphjtJ),
+                                children: S.intl.string(S.t.PphjtJ),
                             }),
                         }),
-                        (0, l.jsx)(A.A.Child, {
-                            grow: 0,
-                            children: (0, l.jsx)(i.s_y, {
-                                onClick: this.close,
-                            }),
-                        }),
+                        (0, l.jsx)(A.A.Child, { grow: 0, children: (0, l.jsx)(i.s_y, { onClick: this.close }) }),
                     ],
                 }),
                 (0, l.jsxs)(i.$mQ, {
@@ -110,31 +116,20 @@ class E extends a.Component {
                         (0, l.jsxs)(A.A, {
                             align: A.A.Align.CENTER,
                             children: [
-                                (0, l.jsx)(I.A, {
-                                    game: t,
-                                    size: I.M.MEDIUM,
-                                    className: S.Gt,
-                                }),
-                                (0, l.jsx)("div", {
-                                    className: S.mO,
-                                    children: null != t && t.name,
-                                }),
+                                (0, l.jsx)(I.A, { game: t, size: I.M.MEDIUM, className: E.Gt }),
+                                (0, l.jsx)("div", { className: E.mO, children: null != t && t.name }),
                                 null != e
                                     ? (0, l.jsx)("div", {
-                                          className: S.hc,
-                                          children: (0, C.Xq)(e, {
-                                              useKibibytes: !0,
-                                          }),
+                                          className: E.hc,
+                                          children: (0, P.Xq)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", {
-                            className: S.yF,
-                        }),
+                        (0, l.jsx)("div", { className: E.yF }),
                         (0, l.jsx)(T.A, {
                             autoFocus: !0,
-                            className: S.gD,
+                            className: E.gD,
                             value: a,
                             requiredDiskKB: e,
                             onChange: this.handleChangePath,
@@ -144,70 +139,24 @@ class E extends a.Component {
                             applicationName: t.name,
                             disabled: n,
                             onChange: this.handlePurchaseTermsChange,
-                            className: S.a_,
+                            className: E.a_,
                         }),
                     ],
                 }),
-                (0, l.jsx)(i.jlY, {
-                    children: this.renderButton(),
-                }),
+                (0, l.jsx)(i.jlY, { children: this.renderButton() }),
             ],
         });
     }
-    constructor(...t) {
-        super(...t),
-            y(this, "state", {
-                selectedInstallationPath: this.props.defaultInstallationPath,
-                hasError: !1,
-                isInstalling: !1,
-                hasAcceptedNeccessaryTerms: !1,
-            }),
-            y(this, "isUnmounted", !1),
-            y(this, "handleChangePath", (t, e) => {
-                this.setState({
-                    selectedInstallationPath: t,
-                    hasError: e,
-                });
-            }),
-            y(this, "install", (t, e) => {
-                let { application: s, branchId: l, analyticsLocation: a } = this.props;
-                if (null == s) return null;
-                (0, u.oc)({
-                    application: s,
-                    branchId: l,
-                    buildId: t,
-                    manifestIds: e,
-                    installationPath: this.state.selectedInstallationPath,
-                    analyticsLocation: a,
-                }),
-                    (0, f.pX)(b.BVt.APPLICATION_LIBRARY),
-                    this.close();
-            }),
-            y(this, "handleInstall", () => {
-                let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
-                if (null != e && null != s)
-                    l || (0, d.v)(), null != t && null != t.eulaId && (0, d.C)(t.eulaId), this.install(e, s);
-                else throw Error("Unexpected missing build info for non-premium product");
-            }),
-            y(this, "handlePurchaseTermsChange", (t) => {
-                this.setState({
-                    hasAcceptedNeccessaryTerms: t,
-                });
-            }),
-            y(this, "close", () => {
-                this.props.onClose();
-            });
-    }
 }
-let L = n.Ay.connectStores([g.A, P.A, m.A, p.A], (t) => {
+let N = n.Ay.connectStores([m.A, C.A, _.A, p.A], (t) => {
     let { applicationId: e, branchId: s } = t,
-        l = g.A.getTargetBuildId(e, s);
+        l = m.A.getTargetBuildId(e, s);
     return {
         application: p.A.getApplication(e),
-        defaultInstallationPath: P.A.defaultInstallationPath,
+        defaultInstallationPath: C.A.defaultInstallationPath,
         buildId: l,
-        manifestIds: g.A.getTargetManifests(e, s),
-        buildSizeKB: null != l ? g.A.getBuildSize(l) : null,
-        hasPreviouslyAcceptedStoreTerms: m.A.hasAcceptedStoreTerms,
+        manifestIds: m.A.getTargetManifests(e, s),
+        buildSizeKB: null != l ? m.A.getBuildSize(l) : null,
+        hasPreviouslyAcceptedStoreTerms: _.A.hasAcceptedStoreTerms,
     };
-})(E);
+})(y);

@@ -1,10 +1,9 @@
+"use strict";
 var n = r(797686),
     i = null;
-
 function o(t) {
     return "LTR" === t || "RTL" === t;
 }
-
 function a(t) {
     return o(t) || n(!1), "LTR" === t ? "ltr" : "rtl";
 }

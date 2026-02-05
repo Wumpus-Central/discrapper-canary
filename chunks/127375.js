@@ -1,7 +1,6 @@
 var r = n(994665),
     i = n(520336),
     a = n(261007);
-
 function s(e) {
     var t = -1,
         n = null == e ? 0 : e.length;

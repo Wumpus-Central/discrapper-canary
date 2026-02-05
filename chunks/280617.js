@@ -1,57 +1,51 @@
-a.d(t, {
-    i: () => h,
-}),
-    a(896048);
+a.d(t, { i: () => I });
 var s = a(627968),
     l = a(64700),
-    r = a(503698),
-    n = a.n(r),
-    i = a(359459),
+    i = a(503698),
+    r = a.n(i),
+    n = a(359459),
     o = a(137540),
     c = a(709808),
     d = a(464261),
-    u = a(818348),
+    _ = a(818348),
     N = a(563853),
     A = a(510057);
-let p = u.sE.MAIN_NAVIGATION_MENU;
-
-function h(e) {
+let u = _.sE.MAIN_NAVIGATION_MENU;
+function I(e) {
     let {
             className: t,
             TrackClick: a,
-            onChangeLocale: r,
-            avoidRouter: h,
-            openNavAriaLabel: b,
-            hideNavAriaLabel: f,
+            onChangeLocale: i,
+            avoidRouter: I,
+            openNavAriaLabel: k,
+            hideNavAriaLabel: h,
         } = e,
-        k = l.useId(),
-        [I, O] = l.useState(!1),
-        m = l.useCallback(() => O(!I), [I]),
-        g = l.useCallback(
+        p = l.useId(),
+        [m, g] = l.useState(!1),
+        T = l.useCallback(() => g(!m), [m]),
+        O = l.useCallback(
             (e) => {
-                ("Escape" === e.key || "Esc" === e.key) && (e.preventDefault(), I && m());
+                ("Escape" === e.key || "Esc" === e.key) && (e.preventDefault(), m && T());
             },
-            [I, m],
+            [m, T],
         );
     return (
-        l.useEffect(() => (window.addEventListener("keydown", g), () => window.removeEventListener("keydown", g)), [g]),
+        l.useEffect(() => (window.addEventListener("keydown", O), () => window.removeEventListener("keydown", O)), [O]),
         (0, s.jsx)("header", {
-            className: n()(A.header, t),
+            className: r()(A.header, t),
             children: (0, s.jsxs)("nav", {
                 className: A.headerInner,
                 children: [
                     (0, s.jsx)(a, {
                         tag: "div",
-                        eventName: p,
+                        eventName: u,
                         className: A.headerLogo,
-                        data: {
-                            linkClicked: "logo",
-                        },
+                        data: { linkClicked: "logo" },
                         children: (0, s.jsx)(o.A, {
-                            avoidRouter: h,
+                            avoidRouter: I,
                             className: A.logoWrapper,
-                            to: u.Tk.INDEX,
-                            from: u.sE.MAIN_NAVIGATION_MENU,
+                            to: _.Tk.INDEX,
+                            from: _.sE.MAIN_NAVIGATION_MENU,
                             children: (0, s.jsx)("img", {
                                 className: A.logo,
                                 src: N.T.ASSET_LOGO_DISCORD_SVG,
@@ -63,32 +57,22 @@ function h(e) {
                     (0, s.jsx)(a, {
                         tag: "div",
                         className: A.hamburgerButton,
-                        eventName: p,
-                        data: {
-                            linkClicked: "mobile-menu",
-                        },
-                        children: (0, s.jsx)(i._, {
-                            open: I,
+                        eventName: u,
+                        data: { linkClicked: "mobile-menu" },
+                        children: (0, s.jsx)(n._, {
+                            open: m,
                             "aria-haspopup": "true",
-                            "aria-label": I ? f : b,
-                            "aria-expanded": I,
-                            "aria-controls": k,
-                            onClick: m,
+                            "aria-label": m ? h : k,
+                            "aria-expanded": m,
+                            "aria-controls": p,
+                            onClick: T,
                         }),
                     }),
                     (0, s.jsxs)("ul", {
-                        className: I ? A.headerNavOpen : A.headerNav,
+                        className: m ? A.headerNavOpen : A.headerNav,
                         children: [
-                            (0, s.jsx)(d.C, {
-                                avoidRouter: h,
-                                TrackClick: a,
-                                styles: A,
-                                isMobile: !0,
-                                isVisible: I,
-                            }),
-                            (0, s.jsx)(c.B, {
-                                onChange: r,
-                            }),
+                            (0, s.jsx)(d.C, { avoidRouter: I, TrackClick: a, styles: A, isMobile: !0, isVisible: m }),
+                            (0, s.jsx)(c.B, { onChange: i }),
                         ],
                     }),
                 ],

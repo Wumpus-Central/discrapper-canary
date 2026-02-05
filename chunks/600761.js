@@ -1,81 +1,68 @@
-n.d(t, {
-    i: () => a,
-});
-var r = n(64700),
+n.d(t, { i: () => r });
+var i = n(64700),
     l = n(688807),
-    i = n(397927);
-
-function a(e) {
-    let { containerRef: t, itemType: n = "WIDGET", edgeDistance: a = 130, maxSpeed: s = 1700, power: o = 2.2 } = e,
-        c = (0, r.useRef)(null),
-        u = (0, r.useRef)(0),
-        d = (0, r.useRef)({
-            top: 0,
-            bottom: 0,
-        }),
-        f = (0, r.useRef)(null),
-        p = (0, r.useCallback)(
-            (e) => ({
-                isDragging: e.isDragging(),
-                clientOffset: e.getClientOffset(),
-                item: e.getItem(),
-            }),
+    a = n(397927);
+function r(e) {
+    let { containerRef: t, itemType: n = "WIDGET", edgeDistance: r = 130, maxSpeed: s = 1700, power: o = 2.2 } = e,
+        d = (0, i.useRef)(null),
+        c = (0, i.useRef)(0),
+        u = (0, i.useRef)({ top: 0, bottom: 0 }),
+        g = (0, i.useRef)(null),
+        m = (0, i.useCallback)(
+            (e) => ({ isDragging: e.isDragging(), clientOffset: e.getClientOffset(), item: e.getItem() }),
             [],
         ),
-        { isDragging: b, clientOffset: g, item: m } = (0, l.V)(p);
-    (0, r.useEffect)(() => {
-        f.current = g;
-    }, [g]);
-    let y = (0, i.VUy)();
-    (0, r.useEffect)(() => {
+        { isDragging: x, clientOffset: f, item: h } = (0, l.V)(m);
+    (0, i.useEffect)(() => {
+        g.current = f;
+    }, [f]);
+    let p = (0, a.VUy)();
+    (0, i.useEffect)(() => {
         let e = t.current;
         if (null == e) return;
-        if (!(!0 === b && (null == m ? void 0 : m.itemType) === n && !y)) {
-            null !== c.current && cancelAnimationFrame(c.current),
-                (c.current = null),
+        if (!(!0 === x && h?.itemType === n && !p)) {
+            null !== d.current && cancelAnimationFrame(d.current),
+                (d.current = null),
                 (e.style.overflowAnchor = "auto"),
                 (e.style.overscrollBehavior = "auto"),
-                (u.current = 0);
+                (c.current = 0);
             return;
         }
-        let r = e.getBoundingClientRect();
+        let i = e.getBoundingClientRect();
         return (
-            (d.current = {
-                top: r.top,
-                bottom: r.bottom,
-            }),
+            (u.current = { top: i.top, bottom: i.bottom }),
             (e.style.overflowAnchor = "none"),
             (e.style.overscrollBehavior = "contain"),
-            (c.current = requestAnimationFrame(function t(n) {
-                c.current = requestAnimationFrame(t);
-                let r = f.current;
-                if (null == e || null == r) {
-                    u.current = n;
+            (d.current = requestAnimationFrame(function t(n) {
+                d.current = requestAnimationFrame(t);
+                let i = g.current;
+                if (null == e || null == i) {
+                    c.current = n;
                     return;
                 }
-                let l = Math.min(32, 0 !== u.current ? n - u.current : 16) / 1e3;
-                u.current = n;
-                let { top: i, bottom: p } = d.current,
-                    b = r.y,
-                    g = b - i,
-                    m = p - b,
-                    y = 0;
+                let l = Math.min(32, 0 !== c.current ? n - c.current : 16) / 1e3;
+                c.current = n;
+                let { top: a, bottom: m } = u.current,
+                    x = i.y,
+                    f = x - a,
+                    h = m - x,
+                    p = 0;
                 if (
-                    (g >= 0 && g < a
-                        ? (y = -s * Math.pow(1 - g / a, o))
-                        : m >= 0 && m < a && (y = s * Math.pow(1 - m / a, o)),
-                    0 !== y)
+                    (f >= 0 && f < r
+                        ? (p = -s * Math.pow(1 - f / r, o))
+                        : h >= 0 && h < r && (p = s * Math.pow(1 - h / r, o)),
+                    0 !== p)
                 ) {
-                    let t = y * l;
+                    let t = p * l;
                     Math.abs(t) >= 1 && (e.scrollTop += Math.round(t));
                 }
             })),
             () => {
-                null !== c.current && cancelAnimationFrame(c.current),
-                    (c.current = null),
-                    (u.current = 0),
+                null !== d.current && cancelAnimationFrame(d.current),
+                    (d.current = null),
+                    (c.current = 0),
                     null != e && ((e.style.overflowAnchor = "auto"), (e.style.overscrollBehavior = "auto"));
             }
         );
-    }, [t, b, null == m ? void 0 : m.itemType, n, a, s, o, y]);
+    }, [t, x, h?.itemType, n, r, s, o, p]);
 }

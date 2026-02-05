@@ -1,93 +1,71 @@
-n.d(t, {
-    default: () => T,
-}),
-    n(896048);
+n.d(t, { default: () => T });
 var a = n(627968),
     i = n(64700),
     l = n(732955),
     r = n(397927),
-    c = n(964486),
-    d = n(954571),
-    u = n(179172),
-    o = n(792205),
-    s = n(652215),
+    d = n(964486),
+    u = n(954571),
+    c = n(179172),
+    s = n(792205),
+    o = n(652215),
     N = n(985018);
-
 function m(e) {
     switch (e) {
-        case o.E.INPUT:
-            return o.f.INPUT;
-        case o.E.OUTPUT:
-            return o.f.OUTPUT;
-        case o.E.INPUT_AND_OUTPUT:
-            return o.f.INPUT_AND_OUTPUT;
+        case s.E.INPUT:
+            return s.f.INPUT;
+        case s.E.OUTPUT:
+            return s.f.OUTPUT;
+        case s.E.INPUT_AND_OUTPUT:
+            return s.f.INPUT_AND_OUTPUT;
         default:
             return null;
     }
 }
-
 function T(e) {
     let t,
         { device: n, certifiedDeviceMetadata: T, onClose: U, transitionState: f } = e,
         [p, E] = (0, i.useState)(null != n ? m(n.type) : null),
         [D, P] = (0, i.useState)(!1),
         _ = (0, i.useRef)(!1);
-
     function y() {
-        (_.current = !0), u.mk(n.displayName), D && v();
+        (_.current = !0), c.mk(n.displayName), D && v();
     }
-
     function v() {
-        u.BG(n.displayName),
-            d.default.track(s.HAw.MODAL_DISMISSED, {
+        c.BG(n.displayName),
+            u.default.track(o.HAw.MODAL_DISMISSED, {
                 type: null != T ? "New Audio Device Detected - Certified" : "New Audio Device Detected - Not Certified",
                 location_object: n.displayName,
                 dismiss_type: "permanent",
             });
     }
-    (0, c.l0)(() => {
+    (0, d.l0)(() => {
         _.current || y();
     }),
         (0, i.useEffect)(() => {
-            d.default.track(s.HAw.OPEN_MODAL, {
+            u.default.track(o.HAw.OPEN_MODAL, {
                 type: null != T ? "New Audio Device Detected - Certified" : "New Audio Device Detected - Not Certified",
-                device_name: null != T ? "".concat(T.vendor.name, " ").concat(T.model.name) : n.displayName,
+                device_name: null != T ? `${T.vendor.name} ${T.model.name}` : n.displayName,
             });
         }, [n.displayName, T]);
     let I = null != T ? N.intl.string(N.t.kiqvHd) : N.intl.string(N.t.AbnGI5);
     switch (n.type) {
-        case o.E.INPUT:
+        case s.E.INPUT:
             t =
                 null != T
-                    ? N.intl.format(N.t.NqNqy2, {
-                          vendorName: T.vendor.name,
-                          modelName: T.model.name,
-                      })
-                    : N.intl.format(N.t.stSaRi, {
-                          name: n.displayName,
-                      });
+                    ? N.intl.format(N.t.NqNqy2, { vendorName: T.vendor.name, modelName: T.model.name })
+                    : N.intl.format(N.t.stSaRi, { name: n.displayName });
             break;
-        case o.E.OUTPUT:
+        case s.E.OUTPUT:
             t =
                 null != T
-                    ? N.intl.format(N.t.uPgqIA, {
-                          vendorName: T.vendor.name,
-                          modelName: T.model.name,
-                      })
-                    : N.intl.format(N.t.jyhYp1, {
-                          name: n.displayName,
-                      });
+                    ? N.intl.format(N.t.uPgqIA, { vendorName: T.vendor.name, modelName: T.model.name })
+                    : N.intl.format(N.t.jyhYp1, { name: n.displayName });
             break;
-        case o.E.INPUT_AND_OUTPUT:
+        case s.E.INPUT_AND_OUTPUT:
             t =
                 null != T
-                    ? N.intl.format(N.t["4Xyzxy"], {
-                          vendorName: T.vendor.name,
-                          modelName: T.model.name,
-                      })
-                    : N.intl.format(N.t.Z7XQcr, {
-                          name: n.displayName,
-                      });
+                    ? N.intl.format(N.t["4Xyzxy"], { vendorName: T.vendor.name, modelName: T.model.name })
+                    : N.intl.format(N.t.Z7XQcr, { name: n.displayName });
     }
     return (0, a.jsx)(l.aFV, {
         title: I,
@@ -105,50 +83,39 @@ function T(e) {
                 variant: "primary",
                 onClick: () => {
                     (_.current = !0),
-                        null != p && (u.TO(n.displayName, p, "New Audio Device Detected Modal"), D && v()),
+                        null != p && (c.TO(n.displayName, p, "New Audio Device Detected Modal"), D && v()),
                         U();
                 },
             },
         ],
         actionBarInput: (0, a.jsx)(l.eCc, {
             checked: D,
-            label: N.intl.format(N.t.cwS3E6, {
-                device: n.displayName,
-            }),
+            label: N.intl.format(N.t.cwS3E6, { device: n.displayName }),
             onChange: (e) => P(e),
         }),
         onClose: U,
         transitionState: f,
         children:
-            n.type === o.E.INPUT_AND_OUTPUT &&
+            n.type === s.E.INPUT_AND_OUTPUT &&
             (0, a.jsx)(r.z6M, {
                 value: (function (e) {
                     if (null == e) return null;
                     switch (e) {
-                        case o.f.INPUT:
-                            return o.E.INPUT;
-                        case o.f.OUTPUT:
-                            return o.E.OUTPUT;
-                        case o.f.INPUT_AND_OUTPUT:
-                            return o.E.INPUT_AND_OUTPUT;
+                        case s.f.INPUT:
+                            return s.E.INPUT;
+                        case s.f.OUTPUT:
+                            return s.E.OUTPUT;
+                        case s.f.INPUT_AND_OUTPUT:
+                            return s.E.INPUT_AND_OUTPUT;
                         default:
                             return null;
                     }
                 })(p),
                 onChange: (e) => E(m(e)),
                 options: [
-                    {
-                        name: N.intl.string(N.t.vhxqwT),
-                        value: o.E.INPUT_AND_OUTPUT,
-                    },
-                    {
-                        name: N.intl.string(N.t["Kqs9+J"]),
-                        value: o.E.INPUT,
-                    },
-                    {
-                        name: N.intl.string(N.t.GGlM3e),
-                        value: o.E.OUTPUT,
-                    },
+                    { name: N.intl.string(N.t.vhxqwT), value: s.E.INPUT_AND_OUTPUT },
+                    { name: N.intl.string(N.t["Kqs9+J"]), value: s.E.INPUT },
+                    { name: N.intl.string(N.t.GGlM3e), value: s.E.OUTPUT },
                 ],
             }),
     });

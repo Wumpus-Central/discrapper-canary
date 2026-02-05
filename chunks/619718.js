@@ -1,68 +1,63 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
     s = n(964486);
 let o = 1e3 / 24,
     l = 3,
-    c = 3e3,
-    u = function (e) {
+    u = 3e3,
+    c = function (e) {
         let {
                 minInterval: t = o,
                 allowableMinInterval: n,
                 droppedFramesCallbackThreshold: i,
-                droppedFramesCallback: u,
-                droppedFramesResetTime: d = c,
+                droppedFramesCallback: c,
+                droppedFramesResetTime: d = u,
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            f = r.useRef(t),
-            p = r.useRef(0),
-            _ = r.useRef(void 0),
+            _ = r.useRef(t),
+            f = r.useRef(0),
+            p = r.useRef(void 0),
             h = r.useRef(void 0),
             m = r.useRef(!0),
             g = r.useRef(0),
             E = r.useRef(void 0),
-            b = r.useCallback(() => {
+            A = r.useCallback(() => {
                 (g.current = 0), null != E.current && (clearTimeout(E.current), (E.current = void 0));
             }, []),
-            y = r.useCallback(() => {
-                (m.current = !1), cancelAnimationFrame(p.current), clearTimeout(E.current);
+            I = r.useCallback(() => {
+                (m.current = !1), cancelAnimationFrame(f.current), clearTimeout(E.current);
             }, []),
-            O = r.useCallback(
+            T = r.useCallback(
                 (t) => {
                     if (!m.current) return;
-                    null == _.current && (_.current = t), null == h.current && (h.current = t);
+                    null == p.current && (p.current = t), null == h.current && (h.current = t);
                     let r = t - h.current;
-                    t - _.current > 1.5 * Math.min(null != n ? n : 120, f.current) &&
+                    t - p.current > 1.5 * Math.min(n ?? 120, _.current) &&
                         ((g.current += 1),
                         null != E.current && clearTimeout(E.current),
-                        (E.current = setTimeout(b, d)),
+                        (E.current = setTimeout(A, d)),
                         null != i &&
                             g.current > i &&
                             (a()(
-                                null != u,
+                                null != c,
                                 "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit",
                             ),
-                            u() && (g.current = 0))),
-                        (_.current = t),
-                        r >= f.current - l && ((h.current = t), e(r)),
-                        (p.current = requestAnimationFrame(O));
+                            c() && (g.current = 0))),
+                        (p.current = t),
+                        r >= _.current - l && ((h.current = t), e(r)),
+                        (f.current = requestAnimationFrame(T));
                 },
-                [n, b, d, i, u, e],
+                [n, A, d, i, c, e],
             ),
-            A = r.useCallback(() => {
-                (m.current = !0), (h.current = void 0), (p.current = requestAnimationFrame(O));
-            }, [O]);
+            y = r.useCallback(() => {
+                (m.current = !0), (h.current = void 0), (f.current = requestAnimationFrame(T));
+            }, [T]);
         return (
             r.useEffect(() => {
-                f.current = t;
+                _.current = t;
             }, [t]),
-            (0, s.Ay)(() => ((p.current = requestAnimationFrame(O)), () => y())),
-            {
-                stop: y,
-                reset: A,
-                ticking: m,
-            }
+            (0, s.Ay)(() => ((f.current = requestAnimationFrame(T)), () => I())),
+            { stop: I, reset: y, ticking: m }
         );
     };

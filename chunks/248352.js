@@ -1,64 +1,48 @@
-n.d(t, {
-    A: () => m,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = [],
-    l = o,
-    c = (e) => {
-        d(e.shopHome.userDiscounts);
+"use strict";
+n.d(t, { A: () => p });
+var r = n(311907),
+    i = n(73153);
+let a = [],
+    s = a,
+    o = (e) => {
+        u(e.shopHome.userDiscounts);
+    },
+    l = (e) => {
+        u(e.categories.userDiscounts);
     },
     u = (e) => {
-        d(e.categories.userDiscounts);
+        s = null != e && e.length > 0 ? e : a;
     },
-    d = (e) => {
-        l = null != e && e.length > 0 ? e : o;
-    },
-    f = (e) => {
+    c = (e) => {
         let t = e.appliedUserDiscounts;
         if (null != t && t.length > 0) {
-            let e = l.filter((e) => !t.some((t) => t.discount.id === e.discountId));
-            e.length !== l.length && (l = e);
+            let e = s.filter((e) => !t.some((t) => t.discount.id === e.discountId));
+            e.length !== s.length && (s = e);
         }
     },
-    p = (e) => {
+    d = (e) => {
         let t = e.discountIds;
         if (t.length > 0) {
-            let e = l.filter((e) => !t.includes(e.discountId));
-            e.length !== l.length && (l = e);
+            let e = s.filter((e) => !t.includes(e.discountId));
+            e.length !== s.length && (s = e);
         }
     },
     _ = () => {
-        l = o;
+        s = a;
     };
-class h extends (r = i.Ay.Store) {
+class f extends r.Ay.Store {
+    static displayName = "CollectiblesUserDiscountStore";
     getUserDiscounts() {
-        return l;
+        return s;
     }
     getUserDiscount(e) {
-        return l.find((t) => t.discountId === e);
+        return s.find((t) => t.discountId === e);
     }
 }
-s(h, "displayName", "CollectiblesUserDiscountStore");
-let m = new h(a.h, {
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: c,
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: u,
-    SKU_PURCHASE_SUCCESS: f,
-    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: p,
+let p = new f(i.h, {
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: o,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: l,
+    SKU_PURCHASE_SUCCESS: c,
+    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: d,
     LOGOUT: _,
 });

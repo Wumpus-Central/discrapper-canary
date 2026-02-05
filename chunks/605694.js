@@ -1,89 +1,39 @@
-n.d(t, {
-    A: () => $,
-}),
-    n(446912),
-    n(896048),
-    n(747238);
-var r = n(627968),
+n.d(t, { A: () => Z });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
+    a = n(503698),
+    r = n.n(a),
     s = n(205338),
     o = n(87075),
-    c = n(311907),
-    u = n(397927),
-    d = n(155718),
-    f = n(793574),
-    p = n(688810),
-    b = n(362490),
-    g = n(385771),
-    m = n(789069),
-    y = n(429913),
-    O = n(409626),
-    j = n(692969),
-    x = n(207963),
-    h = n(953756),
+    d = n(311907),
+    c = n(397927),
+    u = n(155718),
+    g = n(793574),
+    m = n(688810),
+    x = n(362490),
+    f = n(385771),
+    h = n(789069),
+    p = n(429913),
+    _ = n(409626),
+    A = n(692969),
+    I = n(207963),
+    j = n(953756),
     v = n(647901),
-    A = n(371068),
-    w = n(61266),
-    I = n(731068),
-    P = n(619517),
-    E = n(339580),
-    S = n(961350),
-    T = n(760751),
-    _ = n(403362),
-    N = n(183555),
-    D = n(622543),
-    R = n(466853),
-    C = n(985018),
-    k = n(442716);
-
-function G(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function L(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let U = /{{(.*?)}}/g,
-    M = {
+    T = n(371068),
+    E = n(61266),
+    b = n(731068),
+    y = n(619517),
+    C = n(339580),
+    N = n(961350),
+    S = n(760751),
+    w = n(403362),
+    k = n(183555),
+    R = n(622543),
+    O = n(466853),
+    L = n(985018),
+    P = n(442716);
+let D = /{{(.*?)}}/g,
+    G = {
         [s.A.MARVEL_RIVALS]: [
             {
                 type: "HERO",
@@ -96,20 +46,11 @@ let U = /{{(.*?)}}/g,
                         image: "{{rank_image}}",
                         imagePosition: "right",
                     },
-                    {
-                        type: "TEXT",
-                        content: "Top Hero: {{featured_played_character}}",
-                    },
+                    { type: "TEXT", content: "Top Hero: {{featured_played_character}}" },
                 ],
             },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
+            { type: "SEPARATOR", divider: !1 },
+            { type: "SEPARATOR", divider: !1 },
             {
                 type: "GRID",
                 children: [
@@ -121,78 +62,39 @@ let U = /{{(.*?)}}/g,
                             image: "{{highest_rank_image}}",
                             imagePosition: "right",
                         },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Highest Rank",
-                        },
+                        name: { type: "TEXT", content: "-# Highest Rank" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{playtime_hours}} Hours**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Time Played",
-                        },
+                        value: { type: "TEXT", content: "**{{playtime_hours}} Hours**" },
+                        name: { type: "TEXT", content: "-# Time Played" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_games}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Matches Played",
-                        },
+                        value: { type: "TEXT", content: "**{{total_games}}**" },
+                        name: { type: "TEXT", content: "-# Matches Played" },
                     },
                 ],
             },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
+            { type: "SEPARATOR", divider: !1 },
+            { type: "SEPARATOR", divider: !1 },
             {
                 type: "GRID",
                 children: [
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_wins}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Wins",
-                        },
+                        value: { type: "TEXT", content: "**{{total_wins}}**" },
+                        name: { type: "TEXT", content: "-# Wins" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_kills}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# KOs",
-                        },
+                        value: { type: "TEXT", content: "**{{total_kills}}**" },
+                        name: { type: "TEXT", content: "-# KOs" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_assists}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Assists",
-                        },
+                        value: { type: "TEXT", content: "**{{total_assists}}**" },
+                        name: { type: "TEXT", content: "-# Assists" },
                     },
                 ],
             },
@@ -203,283 +105,142 @@ let U = /{{(.*?)}}/g,
                 title: "{{username}}",
                 image: "{{featured_played_character_image}}",
                 body: [
-                    {
-                        type: "TEXT",
-                        content: "Server: {{server_name}}",
-                    },
-                    {
-                        type: "TEXT",
-                        content: "UID: {{user_id}}",
-                    },
+                    { type: "TEXT", content: "Server: {{server_name}}" },
+                    { type: "TEXT", content: "UID: {{user_id}}" },
                 ],
             },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
+            { type: "SEPARATOR", divider: !1 },
+            { type: "SEPARATOR", divider: !1 },
             {
                 type: "GRID",
                 children: [
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{union_level}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Union Level",
-                        },
+                        value: { type: "TEXT", content: "**{{union_level}}**" },
+                        name: { type: "TEXT", content: "-# Union Level" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_resonators}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Resonators",
-                        },
+                        value: { type: "TEXT", content: "**{{total_resonators}}**" },
+                        name: { type: "TEXT", content: "-# Resonators" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_achievements}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Achievements",
-                        },
+                        value: { type: "TEXT", content: "**{{total_achievements}}**" },
+                        name: { type: "TEXT", content: "-# Achievements" },
                     },
                 ],
             },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
-            {
-                type: "SEPARATOR",
-                divider: !1,
-            },
+            { type: "SEPARATOR", divider: !1 },
+            { type: "SEPARATOR", divider: !1 },
             {
                 type: "GRID",
                 children: [
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{total_echoes}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Echoes",
-                        },
+                        value: { type: "TEXT", content: "**{{total_echoes}}**" },
+                        name: { type: "TEXT", content: "-# Echoes" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{login_days}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Login Days",
-                        },
+                        value: { type: "TEXT", content: "**{{login_days}}**" },
+                        name: { type: "TEXT", content: "-# Login Days" },
                     },
                     {
                         type: "FIELD",
-                        value: {
-                            type: "TEXT",
-                            content: "**{{data_bank_level}}**",
-                        },
-                        name: {
-                            type: "TEXT",
-                            content: "-# Data Bank Level",
-                        },
+                        value: { type: "TEXT", content: "**{{data_bank_level}}**" },
+                        name: { type: "TEXT", content: "-# Data Bank Level" },
                     },
                 ],
             },
         ],
     };
-
-function F(e) {
+function M(e) {
     let { component: t } = e;
-    if (Array.isArray(t)) return W(t);
+    if (Array.isArray(t)) return F(t);
     switch (t.type) {
         case "HERO":
-            let { body: n } = t,
-                l = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        l,
-                        i = {};
-                    if ("u" > typeof Reflect && Reflect.ownKeys) {
-                        for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                            (r = n[l]),
-                                !(t.indexOf(r) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                    (i[r] = e[r]);
-                        return i;
-                    }
-                    if (
-                        ((i = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                l = {},
-                                i = Object.getOwnPropertyNames(e);
-                            for (r = 0; r < i.length; r++)
-                                (n = i[r]),
-                                    !(t.indexOf(n) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                        (l[n] = e[n]);
-                            return l;
-                        })(e, t)),
-                        Object.getOwnPropertySymbols)
-                    )
-                        for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                            (r = n[l]),
-                                !(t.indexOf(r) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                    (i[r] = e[r]);
-                    return i;
-                })(t, ["body"]);
-            return (0, r.jsx)(
-                B,
-                L(G({}, l), {
-                    body: W(n),
-                }),
-            );
+            let { body: n, ...l } = t;
+            return (0, i.jsx)(W, { ...l, body: F(n) });
         case "GRID":
-            return (0, r.jsx)(H, {
-                children: W(t.children),
-            });
+            return (0, i.jsx)(H, { children: F(t.children) });
         case "FIELD":
-            return (0, r.jsx)(K, {
-                value: X(t.value),
-                name: X(t.name),
-            });
+            return (0, i.jsx)(B, { value: U(t.value), name: U(t.name) });
         case "TEXT":
-            return (0, r.jsx)(z, G({}, t));
+            return (0, i.jsx)(X, { ...t });
         case "TEXT_WITH_IMAGE":
-            return (0, r.jsx)(V, G({}, t));
+            return (0, i.jsx)(z, { ...t });
         case "SEPARATOR":
-            return (0, r.jsx)(Y, G({}, t));
+            return (0, i.jsx)(V, { ...t });
     }
 }
-
-function X(e, t) {
-    return (0, r.jsx)(
-        F,
-        {
-            component: e,
-        },
-        t,
-    );
+function U(e, t) {
+    return (0, i.jsx)(M, { component: e }, t);
 }
-
+function F(e) {
+    return e.map((e, t) => U(e, t));
+}
 function W(e) {
-    return e.map((e, t) => X(e, t));
-}
-
-function B(e) {
-    let { title: t, body: n, image: l, imagePlaceholder: i } = e;
-    return (0, r.jsxs)("div", {
-        className: k.mY,
+    let { title: t, body: n, image: l, imagePlaceholder: a } = e;
+    return (0, i.jsxs)("div", {
+        className: P.mY,
         children: [
-            (0, r.jsxs)("div", {
-                className: k.TL,
+            (0, i.jsxs)("div", {
+                className: P.TL,
                 children: [
-                    (0, r.jsx)(u.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: "text-lg/medium",
-                        className: k.ZY,
-                        children:
-                            null != t
-                                ? t
-                                : (0, r.jsx)("div", {
-                                      className: k.jC,
-                                  }),
+                        className: P.ZY,
+                        children: null != t ? t : (0, i.jsx)("div", { className: P.jC }),
                     }),
-                    (0, r.jsx)(v.x, {
-                        color: "muted",
-                        children: n,
-                    }),
+                    (0, i.jsx)(v.x, { color: "muted", children: n }),
                 ],
             }),
-            (0, m.c)(l)
-                ? (0, r.jsx)("div", {
-                      className: k.Xr,
-                      children: (0, r.jsx)(P.Ay, {
+            (0, h.c)(l)
+                ? (0, i.jsx)("div", {
+                      className: P.Xr,
+                      children: (0, i.jsx)(y.Ay, {
                           src: l.proxyUrl,
                           alt: "",
                           width: l.width,
                           height: l.height,
                           responsive: !0,
-                          className: k.c8,
+                          className: P.c8,
                       }),
                   })
-                : null != i
-                  ? (0, r.jsx)("div", {
-                        className: k.Xr,
-                        children: (0, r.jsx)("img", {
-                            src: i,
-                            alt: "",
-                            className: k.c8,
-                        }),
+                : null != a
+                  ? (0, i.jsx)("div", {
+                        className: P.Xr,
+                        children: (0, i.jsx)("img", { src: a, alt: "", className: P.c8 }),
                     })
-                  : (0, r.jsx)("div", {
-                        className: k.Hi,
-                    }),
+                  : (0, i.jsx)("div", { className: P.Hi }),
         ],
     });
 }
-
 function H(e) {
     let { children: t } = e;
-    return (0, r.jsx)("div", {
-        className: k.Vg,
-        children: t,
-    });
+    return (0, i.jsx)("div", { className: P.Vg, children: t });
 }
-
-function K(e) {
+function B(e) {
     let { name: t, value: n } = e;
-    return (0, r.jsxs)("div", {
-        children: [n, t],
-    });
+    return (0, i.jsxs)("div", { children: [n, t] });
 }
-
-function z(e) {
+function X(e) {
     let { content: t } = e,
         n = l.useId(),
-        i = (0, v.X)();
+        a = (0, v.X)();
     return null != t
-        ? (0, r.jsx)(w.A, {
-              type: d.I5.TEXT_DISPLAY,
-              id: n,
-              content: t,
-              className: k.Qq,
-          })
-        : (0, r.jsx)("div", {
-              className: a()(k.jC, i.className),
-          });
+        ? (0, i.jsx)(E.A, { type: u.I5.TEXT_DISPLAY, id: n, content: t, className: P.Qq })
+        : (0, i.jsx)("div", { className: r()(P.jC, a.className) });
 }
-
-function V(e) {
+function z(e) {
     let { content: t, image: n, imagePosition: l } = e,
-        i = (0, v.X)(),
-        s = (0, m.c)(n)
-            ? (0, r.jsx)("div", {
-                  className: a()(k.Sl, i.className),
+        a = (0, v.X)(),
+        s = (0, h.c)(n)
+            ? (0, i.jsx)("div", {
+                  className: r()(P.Sl, a.className),
                   "data-position": l,
-                  children: (0, r.jsx)(P.Ay, {
+                  children: (0, i.jsx)(y.Ay, {
                       src: n.proxyUrl,
                       alt: "",
                       width: n.width,
@@ -488,122 +249,93 @@ function V(e) {
                   }),
               })
             : null == t
-              ? (0, r.jsx)("div", {
-                    className: a()(k.bc, i.className),
-                })
+              ? (0, i.jsx)("div", { className: r()(P.bc, a.className) })
               : null;
-    return (0, r.jsxs)("div", {
-        className: k.rQ,
+    return (0, i.jsxs)("div", {
+        className: P.rQ,
         children: [
-            null != s && "left" === l
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [s, " "],
-                  })
-                : null,
-            (0, r.jsx)(z, {
-                content: t,
-            }),
-            null != s && "right" === l
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [" ", s],
-                  })
-                : null,
+            null != s && "left" === l ? (0, i.jsxs)(i.Fragment, { children: [s, " "] }) : null,
+            (0, i.jsx)(X, { content: t }),
+            null != s && "right" === l ? (0, i.jsxs)(i.Fragment, { children: [" ", s] }) : null,
         ],
     });
 }
-
-function Y(e) {
+function V(e) {
     let { size: t = "small", divider: n = !1 } = e,
-        i = l.useId();
-    return (0, r.jsx)(A.A, {
-        type: d.I5.SEPARATOR,
-        id: i,
+        a = l.useId();
+    return (0, i.jsx)(T.A, {
+        type: u.I5.SEPARATOR,
+        id: a,
         divider: n,
-        spacing: "large" === t ? d.C8.LARGE : d.C8.SMALL,
+        spacing: "large" === t ? u.C8.LARGE : u.C8.SMALL,
     });
 }
-
-function q(e, t) {
+function K(e, t) {
     if (null == e) return null;
-    let n = e.split(U);
+    let n = e.split(D);
     if (1 === n.length) return n[0];
     if ("skeleton" === t.mode) return null;
-    let r = "";
+    let i = "";
     for (let e = 0; e < n.length; e++) {
         let l = n[e];
         if (e % 2 == 0) {
-            r += l;
+            i += l;
             continue;
         }
-        let i = t.variables[l];
-        null == i
-            ? (r += "––")
-            : "unfurled_media" === i.type
-              ? (r += i.media.url)
-              : "number" === i.type
-                ? (r += t.numberFormat.format(i.value))
-                : "string" === i.type && (r += i.value);
+        let a = t.variables[l];
+        null == a
+            ? (i += "––")
+            : "unfurled_media" === a.type
+              ? (i += a.media.url)
+              : "number" === a.type
+                ? (i += t.numberFormat.format(a.value))
+                : "string" === a.type && (i += a.value);
     }
-    return r;
+    return i;
 }
-
-function J(e, t) {
-    var n, r;
+function Y(e, t) {
     if (null == e || "skeleton" === t.mode) return null;
-    let l = null == (r = e.match(U)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
-    if (null == l) return null;
-    let i = t.variables[l];
+    let n = e.match(D)?.[0]?.slice(2, -2);
+    if (null == n) return null;
+    let i = t.variables[n];
     return null == i || "unfurled_media" !== i.type ? null : i.media;
 }
-
-function Q(e) {
+function q(e) {
     let { children: t, widget: n } = e;
-    return (0, r.jsx)(h.O7.Root, {
+    return (0, i.jsx)(j.O7.Root, {
         containerInnerWidth: 396,
-        children: (0, r.jsx)(x.f5, {
+        children: (0, i.jsx)(I.f5, {
             applicationWidget: n,
-            children: (0, r.jsx)(v.x, {
+            children: (0, i.jsx)(v.x, {
                 size: "reduced",
                 weight: "reduced",
-                children: (0, r.jsx)("div", {
-                    className: k.kL,
-                    children: t,
-                }),
+                children: (0, i.jsx)("div", { className: P.kL, children: t }),
             }),
         }),
     });
 }
-
-function Z(e) {
-    return (0, r.jsxs)(u.BJc, {
+function J(e) {
+    return (0, i.jsxs)(c.BJc, {
         direction: "horizontal",
         gap: 24,
         padding: 12,
         fullWidth: !1,
-        className: k.lO,
+        className: P.lO,
         children: [
-            (0, r.jsxs)(u.BJc, {
+            (0, i.jsxs)(c.BJc, {
                 gap: 4,
                 children: [
                     e.showSuggestedForYou &&
-                        (0, r.jsx)(u.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: C.intl.string(C.t.zMUr6Z),
+                            children: L.intl.string(L.t.zMUr6Z),
                         }),
-                    (0, r.jsx)(u.Heading, {
-                        variant: "heading-sm/medium",
-                        color: "text-default",
-                        children: e.heading,
-                    }),
-                    (0, r.jsx)(u.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-subtle",
-                        children: e.content,
-                    }),
+                    (0, i.jsx)(c.Heading, { variant: "heading-sm/medium", color: "text-default", children: e.heading }),
+                    (0, i.jsx)(c.Text, { variant: "text-xs/normal", color: "text-subtle", children: e.content }),
                 ],
             }),
-            (0, r.jsx)(u.BJc, {
+            (0, i.jsx)(c.BJc, {
                 direction: "horizontal",
                 gap: 12,
                 align: "center",
@@ -614,284 +346,178 @@ function Z(e) {
         ],
     });
 }
-let $ = Object.assign(
+let Z = Object.assign(
     function (e) {
         var t, n;
-        let i,
+        let a,
             s,
-            d,
-            m,
-            x,
-            { trackUserProfileAction: h } = (0, N.NJ)(),
-            { user: v, widget: A, cta: w, subtle: P = !1 } = e,
-            U = (0, c.bG)([S.default], () => S.default.getId()) === v.id,
-            X = (0, y.h)(A.applicationId),
-            W = null == X ? void 0 : X.getIconURL(16),
-            B = (0, c.bG)([T.A], () => (null != X ? T.A.getGameByApplication(X) : null)),
-            H = (0, j.A)({
+            u,
+            h,
+            I,
+            { trackUserProfileAction: j } = (0, k.NJ)(),
+            { user: v, widget: T, cta: E, subtle: y = !1 } = e,
+            D = (0, d.bG)([N.default], () => N.default.getId()) === v.id,
+            U = (0, p.h)(T.applicationId),
+            F = U?.getIconURL(16),
+            W = (0, d.bG)([S.A], () => (null != U ? S.A.getGameByApplication(U) : null)),
+            H = (0, A.A)({
                 location: "UserProfileApplicationWidget",
-                applicationId: null == B ? void 0 : B.id,
-                source: O.Ob.UserProfile,
+                applicationId: W?.id,
+                source: _.Ob.UserProfile,
                 sourceUserId: v.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: K, hasAlreadyLinked: z, canStartAuthorization: V, startAuthorization: Y } = (0, b.RD)(X),
-            { analyticsLocations: $ } = (0, p.Ay)(f.A.USER_PROFILE_APPLICATION_WIDGET),
-            ee = l.useCallback(() => {
-                V &&
-                    (h({
-                        action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
-                        applicationId: A.applicationId,
-                    }),
-                    Y({
-                        analyticsLocations: $,
-                    }));
-            }, [V, Y, h, A.applicationId, $]),
-            et = null == w && K && !z && V,
-            en = (0, r.jsxs)(r.Fragment, {
+            { fetched: B, hasAlreadyLinked: X, canStartAuthorization: z, startAuthorization: V } = (0, x.RD)(U),
+            { analyticsLocations: Z } = (0, m.Ay)(g.A.USER_PROFILE_APPLICATION_WIDGET),
+            Q = l.useCallback(() => {
+                z &&
+                    (j({ action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT", applicationId: T.applicationId }),
+                    V({ analyticsLocations: Z }));
+            }, [z, V, j, T.applicationId, Z]),
+            $ = null == E && B && !X && z,
+            ee = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != W
-                        ? (0, r.jsx)("img", {
-                              className: k.Z2,
-                              src: W,
-                              width: 16,
-                              height: 16,
-                              alt: "",
-                          })
-                        : (0, r.jsx)("span", {
-                              className: k.qP,
-                          }),
-                    (0, r.jsx)(u.Text, {
+                    null != F
+                        ? (0, i.jsx)("img", { className: P.Z2, src: F, width: 16, height: 16, alt: "" })
+                        : (0, i.jsx)("span", { className: P.qP }),
+                    (0, i.jsx)(c.Text, {
                         variant: "text-sm/medium",
-                        children:
-                            (null == X ? void 0 : X.name) != null
-                                ? X.name
-                                : (0, r.jsx)("div", {
-                                      className: k.jC,
-                                  }),
+                        children: U?.name != null ? U.name : (0, i.jsx)("div", { className: P.jC }),
                     }),
                 ],
             }),
-            er =
-                null == B
-                    ? (0, r.jsx)("div", {
-                          className: k.qd,
-                          children: en,
-                      })
-                    : (0, r.jsx)(u.DUT, {
-                          className: a()(k.qd, k.vk),
-                          onClick: H,
-                          children: en,
-                      }),
+            et =
+                null == W
+                    ? (0, i.jsx)("div", { className: P.qd, children: ee })
+                    : (0, i.jsx)(c.DUT, { className: r()(P.qd, P.vk), onClick: H, children: ee }),
             {
-                isLoading: el,
+                isLoading: en,
                 hasData: ei,
-                components: ea,
+                components: el,
             } = ((t = v.id),
-            (n = A.applicationId),
-            (i = (0, g.A)()),
-            (s = (0, c.bG)([E.A], () => E.A.getUserIdentityByApplication(t, n))),
-            (d = (0, c.bG)([D.A], () => D.A.getApplicationWidgetConfig(n))),
-            (m = (0, c.bG)([E.A, D.A], () => null == E.A.getUserIdentities(t) || null == D.A.applicationWidgetConfigs)),
-            (x = l.useMemo(() => {
-                var e, t, n, r, l, a, c, u, f;
-                if (null == d) return null;
-                let p = M[d.widgetTemplateId];
-                if (null == p) return null;
-                let b =
-                    ((e = null != s ? s : null),
-                    (t = null != d ? d : null),
+            (n = T.applicationId),
+            (a = (0, f.A)()),
+            (s = (0, d.bG)([C.A], () => C.A.getUserIdentityByApplication(t, n))),
+            (u = (0, d.bG)([R.A], () => R.A.getApplicationWidgetConfig(n))),
+            (h = (0, d.bG)([C.A, R.A], () => null == C.A.getUserIdentities(t) || null == R.A.applicationWidgetConfigs)),
+            (I = l.useMemo(() => {
+                var e, t;
+                if (null == u) return null;
+                let n = G[u.widgetTemplateId];
+                if (null == n) return null;
+                let i =
+                    ((e = s ?? null),
+                    (t = u ?? null),
                     null == e
-                        ? {
-                              mode: "skeleton",
-                              config: t,
-                              numberFormat: i,
-                          }
+                        ? { mode: "skeleton", config: t, numberFormat: a }
                         : {
                               mode: "from_data",
                               variables: Object.fromEntries([
-                                  ...(null !=
-                                  (n =
-                                      null == (a = e.profile) || null == (l = a.data) || null == (r = l.dynamic)
-                                          ? void 0
-                                          : r.map((e) =>
-                                                e.type === o.f.STRING
-                                                    ? [
-                                                          e.name,
-                                                          {
-                                                              type: "string",
-                                                              value: e.value,
-                                                          },
-                                                      ]
-                                                    : e.type === o.f.NUMBER
-                                                      ? [
-                                                            e.name,
-                                                            {
-                                                                type: "number",
-                                                                value: e.value,
-                                                            },
-                                                        ]
-                                                      : e.type === o.f.MEDIA
-                                                        ? [
-                                                              e.name,
-                                                              {
-                                                                  type: "unfurled_media",
-                                                                  media: (0, I.Uv)(e.value),
-                                                              },
-                                                          ]
-                                                        : (0, _.xb)(e),
-                                            ))
-                                      ? n
-                                      : []),
-                                  ...Object.entries(
-                                      G(
-                                          {
-                                              username: null == (c = e.profile) ? void 0 : c.username,
-                                          },
-                                          null == (f = e.profile) || null == (u = f.data) ? void 0 : u.primary,
-                                      ),
-                                  )
-                                      .filter(_.QE)
+                                  ...(e.profile?.data?.dynamic?.map((e) =>
+                                      e.type === o.f.STRING
+                                          ? [e.name, { type: "string", value: e.value }]
+                                          : e.type === o.f.NUMBER
+                                            ? [e.name, { type: "number", value: e.value }]
+                                            : e.type === o.f.MEDIA
+                                              ? [e.name, { type: "unfurled_media", media: (0, b.Uv)(e.value) }]
+                                              : (0, w.xb)(e),
+                                  ) ?? []),
+                                  ...Object.entries({ username: e.profile?.username, ...e.profile?.data?.primary })
+                                      .filter(w.QE)
                                       .map((e) => {
                                           let [t, n] = e;
                                           if ("object" == typeof n) {
                                               if ("url" in n && "proxy_url" in n && "loading_state" in n)
-                                                  return [
-                                                      t,
-                                                      {
-                                                          type: "unfurled_media",
-                                                          media: (0, I.Uv)(n),
-                                                      },
-                                                  ];
-                                          } else if ("string" == typeof n)
-                                              return [
-                                                  t,
-                                                  {
-                                                      type: "string",
-                                                      value: n,
-                                                  },
-                                              ];
-                                          else if ("number" == typeof n)
-                                              return [
-                                                  t,
-                                                  {
-                                                      type: "number",
-                                                      value: n,
-                                                  },
-                                              ];
+                                                  return [t, { type: "unfurled_media", media: (0, b.Uv)(n) }];
+                                          } else if ("string" == typeof n) return [t, { type: "string", value: n }];
+                                          else if ("number" == typeof n) return [t, { type: "number", value: n }];
                                           return null;
                                       })
-                                      .filter(_.Vq),
+                                      .filter(w.Vq),
                               ]),
                               config: t,
-                              numberFormat: i,
+                              numberFormat: a,
                           });
-                return p.map(function e(t) {
+                return n.map(function e(t) {
                     switch (t.type) {
                         case "HERO":
-                            var n;
                             return {
                                 type: "HERO",
                                 body: t.body.map(e),
-                                title: q(t.title, b),
-                                image: J(t.image, b),
-                                imagePlaceholder: null == (n = b.config) ? void 0 : n.heroPlaceholderImage,
+                                title: K(t.title, i),
+                                image: Y(t.image, i),
+                                imagePlaceholder: i.config?.heroPlaceholderImage,
                             };
                         case "GRID":
-                            return {
-                                type: "GRID",
-                                children: t.children.map(e),
-                            };
+                            return { type: "GRID", children: t.children.map(e) };
                         case "FIELD":
-                            return {
-                                type: "FIELD",
-                                name: e(t.name),
-                                value: e(t.value),
-                            };
+                            return { type: "FIELD", name: e(t.name), value: e(t.value) };
                         case "TEXT":
-                            return {
-                                type: "TEXT",
-                                content: q(t.content, b),
-                            };
+                            return { type: "TEXT", content: K(t.content, i) };
                         case "TEXT_WITH_IMAGE":
                             return {
                                 type: "TEXT_WITH_IMAGE",
-                                content: q(t.content, b),
-                                image: J(t.image, b),
+                                content: K(t.content, i),
+                                image: Y(t.image, i),
                                 imagePosition: t.imagePosition,
                             };
                         case "SEPARATOR":
                             return t;
                     }
                 });
-            }, [d, s, i])),
-            {
-                isLoading: m,
-                hasData: null != s,
-                components: x,
-            });
-        return null == ea
+            }, [u, s, a])),
+            { isLoading: h, hasData: null != s, components: I });
+        return null == el
             ? null
-            : (0, r.jsxs)(
-                  R.A,
-                  L(G({}, e), {
-                      userId: v.id,
-                      widget: A,
-                      className: a()(k.Y5, P && k.aK),
-                      headerTitle: er,
-                      headerClassName: k.wx,
-                      additionalManageWidgetMenuItems:
-                          null != B
-                              ? (0, r.jsx)(u.Drp, {
-                                    id: "view-game-profile",
-                                    label: "View Game Profile",
-                                    icon: u._xR,
-                                    action: H,
-                                })
-                              : null,
-                      children: [
-                          (0, r.jsx)(Q, {
-                              widget: A,
-                              children: (0, r.jsx)(F, {
-                                  component: ea,
-                              }),
-                          }),
-                          U &&
-                              (0, r.jsxs)("div", {
-                                  className: k.qr,
-                                  children: [
-                                      el || ei || et
-                                          ? null
-                                          : (0, r.jsxs)("div", {
-                                                className: k.o8,
-                                                children: [
-                                                    (0, r.jsx)(u.Qfk, {
-                                                        size: "xxs",
-                                                    }),
-                                                    (0, r.jsx)(u.Text, {
-                                                        variant: "text-sm/medium",
-                                                        color: "text-subtle",
-                                                        children: C.intl.string(C.t.z5K4Uv),
-                                                    }),
-                                                ],
-                                            }),
-                                      et
-                                          ? (0, r.jsx)(Z, {
-                                                heading: C.intl.string(C.t.UDPRLO),
-                                                content: C.intl.string(C.t["OW/2al"]),
-                                                buttons: (0, r.jsx)(u.Button, {
-                                                    text: C.intl.string(C.t.S0W8Z5),
-                                                    onClick: ee,
+            : (0, i.jsxs)(O.A, {
+                  ...e,
+                  userId: v.id,
+                  widget: T,
+                  className: r()(P.Y5, y && P.aK),
+                  headerTitle: et,
+                  headerClassName: P.wx,
+                  additionalManageWidgetMenuItems:
+                      null != W
+                          ? (0, i.jsx)(c.Drp, {
+                                id: "view-game-profile",
+                                label: "View Game Profile",
+                                icon: c._xR,
+                                action: H,
+                            })
+                          : null,
+                  children: [
+                      (0, i.jsx)(q, { widget: T, children: (0, i.jsx)(M, { component: el }) }),
+                      D &&
+                          (0, i.jsxs)("div", {
+                              className: P.qr,
+                              children: [
+                                  en || ei || $
+                                      ? null
+                                      : (0, i.jsxs)("div", {
+                                            className: P.o8,
+                                            children: [
+                                                (0, i.jsx)(c.Qfk, { size: "xxs" }),
+                                                (0, i.jsx)(c.Text, {
+                                                    variant: "text-sm/medium",
+                                                    color: "text-subtle",
+                                                    children: L.intl.string(L.t.z5K4Uv),
                                                 }),
-                                            })
-                                          : w,
-                                  ],
-                              }),
-                      ],
-                  }),
-              );
+                                            ],
+                                        }),
+                                  $
+                                      ? (0, i.jsx)(J, {
+                                            heading: L.intl.string(L.t.UDPRLO),
+                                            content: L.intl.string(L.t["OW/2al"]),
+                                            buttons: (0, i.jsx)(c.Button, {
+                                                text: L.intl.string(L.t.S0W8Z5),
+                                                onClick: Q,
+                                            }),
+                                        })
+                                      : E,
+                              ],
+                          }),
+                  ],
+              });
     },
-    {
-        Cta: Z,
-    },
+    { Cta: J },
 );

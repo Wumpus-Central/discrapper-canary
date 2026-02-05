@@ -1,9 +1,6 @@
-l.d(t, {
-    A: () => a,
-});
-var n = l(696016);
-
-function a(e, t) {
-    let l = e / n.YM;
-    return t && (l /= n.iJ), l;
+l.d(t, { A: () => n });
+var a = l(696016);
+function n(e, t) {
+    let l = e / a.YM;
+    return t && (l /= a.iJ), l;
 }

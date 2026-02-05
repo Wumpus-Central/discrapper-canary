@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ig: "fileWrapper__0ccae",
     NJ: "file__0ccae",

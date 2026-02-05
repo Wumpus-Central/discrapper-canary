@@ -3,75 +3,30 @@ e.exports = function (e) {
         n = {
             className: "number",
             relevance: 0,
-            variants: [
-                {
-                    begin: /([+-]+)?[\d]+_[\d_]+/,
-                },
-                {
-                    begin: e.NUMBER_RE,
-                },
-            ],
+            variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }],
         },
         r = e.COMMENT();
     r.variants = [
-        {
-            begin: /;/,
-            end: /$/,
-        },
-        {
-            begin: /#/,
-            end: /$/,
-        },
+        { begin: /;/, end: /$/ },
+        { begin: /#/, end: /$/ },
     ];
-    let i = {
-            className: "variable",
-            variants: [
-                {
-                    begin: /\$[\w\d"][\w\d_]*/,
-                },
-                {
-                    begin: /\$\{(.*?)\}/,
-                },
-            ],
-        },
-        a = {
-            className: "literal",
-            begin: /\bon|off|true|false|yes|no\b/,
-        },
+    let i = { className: "variable", variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
+        a = { className: "literal", begin: /\bon|off|true|false|yes|no\b/ },
         s = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
-                {
-                    begin: "'''",
-                    end: "'''",
-                    relevance: 10,
-                },
-                {
-                    begin: '"""',
-                    end: '"""',
-                    relevance: 10,
-                },
-                {
-                    begin: '"',
-                    end: '"',
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                },
+                { begin: "'''", end: "'''", relevance: 10 },
+                { begin: '"""', end: '"""', relevance: 10 },
+                { begin: '"', end: '"' },
+                { begin: "'", end: "'" },
             ],
         },
-        o = {
-            begin: /\[/,
-            end: /\]/,
-            contains: [r, a, i, s, n, "self"],
-            relevance: 0,
-        },
+        o = { begin: /\[/, end: /\]/, contains: [r, a, i, s, n, "self"], relevance: 0 },
         l = /[A-Za-z0-9_-]+/,
-        c = /"(\\"|[^"])*"/,
-        u = /'[^']*'/,
-        d = t.either(l, c, u);
+        u = /"(\\"|[^"])*"/,
+        c = /'[^']*'/,
+        d = t.either(l, u, c);
     return {
         name: "TOML, also INI",
         aliases: ["toml"],
@@ -79,18 +34,11 @@ e.exports = function (e) {
         illegal: /\S/,
         contains: [
             r,
-            {
-                className: "section",
-                begin: /\[+/,
-                end: /\]+/,
-            },
+            { className: "section", begin: /\[+/, end: /\]+/ },
             {
                 begin: t.concat(d, "(\\s*\\.\\s*", d, ")*", t.lookahead(/\s*=\s*[^#\s]/)),
                 className: "attr",
-                starts: {
-                    end: /$/,
-                    contains: [r, o, a, i, s, n],
-                },
+                starts: { end: /$/, contains: [r, o, a, i, s, n] },
             },
         ],
     };

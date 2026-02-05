@@ -1,9 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(954571),
     i = n(652215);
-
 function a(e) {
     let {
         type: t,
@@ -12,12 +10,12 @@ function a(e) {
         guildId: s,
         channelId: o,
         channelType: l,
-        applicationId: c,
-        partyId: u,
+        applicationId: u,
+        partyId: c,
         messageId: d,
-        locationObject: f,
-        analyticsLocations: p,
-        referrerId: _,
+        locationObject: _,
+        analyticsLocations: f,
+        referrerId: p,
         inviterUserId: h,
         remoteJoinPlatform: m,
     } = e;
@@ -27,13 +25,13 @@ function a(e) {
         guild_id: s,
         channel_id: o,
         channel_type: l,
-        application_id: c,
-        party_id: null != u ? u : void 0,
+        application_id: u,
+        party_id: c ?? void 0,
         other_user_id: a,
         message_id: d,
-        location: f,
-        location_stack: p,
-        referrer_id: _,
+        location: _,
+        location_stack: f,
+        referrer_id: p,
         invite_inviter_id: h,
         remote_join_platform: m,
     });

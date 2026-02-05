@@ -1,3 +1,4 @@
+"use strict";
 function r(...e) {
     return 1 === e.length && e[0]
         ? e[0]
@@ -15,11 +16,8 @@ function r(...e) {
                   };
           };
 }
-
 function i(e, t) {
     if ("function" == typeof e) return e(t);
     null != e && (e.current = t);
 }
-n.d(t, {
-    P: () => r,
-});
+n.d(t, { P: () => r });

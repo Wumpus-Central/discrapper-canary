@@ -9,8 +9,8 @@ var r = n(797407).default,
     d = n(687044),
     p = n(782186),
     h = n(151502);
-
 function f() {
+    "use strict";
     (e.exports = f =
         function () {
             return n;
@@ -30,17 +30,8 @@ function f() {
         b = g.iterator || "@@iterator",
         A = g.asyncIterator || "@@asyncIterator",
         _ = g.toStringTag || "@@toStringTag";
-
     function k(e, t, n) {
-        return (
-            a(e, t, {
-                value: n,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0,
-            }),
-            e[t]
-        );
+        return a(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }), e[t];
     }
     try {
         k({}, "");
@@ -49,7 +40,6 @@ function f() {
             return (e[t] = n);
         };
     }
-
     function C(e, n, r, a) {
         var o,
             s,
@@ -67,10 +57,7 @@ function f() {
                         if (c === N) throw Error("Generator is already running");
                         if (c === x) {
                             if ("throw" === e) throw n;
-                            return {
-                                value: t,
-                                done: !0,
-                            };
+                            return { value: t, done: !0 };
                         }
                         for (l.method = e, l.arg = n; ; ) {
                             var r = l.delegate;
@@ -122,10 +109,7 @@ function f() {
                             var i = w(o, s, l);
                             if ("normal" === i.type) {
                                 if (((c = l.done ? x : "suspendedYield"), i.arg === P)) continue;
-                                return {
-                                    value: i.arg,
-                                    done: l.done,
-                                };
+                                return { value: i.arg, done: l.done };
                             }
                             "throw" === i.type && ((c = x), (l.method = "throw"), (l.arg = i.arg));
                         }
@@ -134,18 +118,11 @@ function f() {
             u
         );
     }
-
     function w(e, t, n) {
         try {
-            return {
-                type: "normal",
-                arg: e.call(t, n),
-            };
+            return { type: "normal", arg: e.call(t, n) };
         } catch (e) {
-            return {
-                type: "throw",
-                arg: e,
-            };
+            return { type: "throw", arg: e };
         }
     }
     n.wrap = C;
@@ -153,11 +130,8 @@ function f() {
         N = "executing",
         x = "completed",
         P = {};
-
     function R() {}
-
     function F() {}
-
     function O() {}
     var E = {};
     k(E, b, function () {
@@ -166,7 +140,6 @@ function f() {
     var I = s && s(s(j([])));
     I && I !== m && y.call(I, b) && (E = I);
     var M = (O.prototype = R.prototype = i(E));
-
     function T(e) {
         var t;
         l((t = ["next", "throw", "return"])).call(t, function (t) {
@@ -175,7 +148,6 @@ function f() {
             });
         });
     }
-
     function B(e, t) {
         var n;
         v(this, "_invoke", {
@@ -213,32 +185,20 @@ function f() {
             },
         });
     }
-
     function D(e) {
         var t,
-            n = {
-                tryLoc: e[0],
-            };
+            n = { tryLoc: e[0] };
         1 in e && (n.catchLoc = e[1]),
             2 in e && ((n.finallyLoc = e[2]), (n.afterLoc = e[3])),
             c((t = this.tryEntries)).call(t, n);
     }
-
     function L(e) {
         var t = e.completion || {};
         (t.type = "normal"), delete t.arg, (e.completion = t);
     }
-
     function V(e) {
-        (this.tryEntries = [
-            {
-                tryLoc: "root",
-            },
-        ]),
-            l(e).call(e, D, this),
-            this.reset(!0);
+        (this.tryEntries = [{ tryLoc: "root" }]), l(e).call(e, D, this), this.reset(!0);
     }
-
     function j(e) {
         if (e || "" === e) {
             var n = e[b];
@@ -257,14 +217,8 @@ function f() {
     }
     return (
         (F.prototype = O),
-        v(M, "constructor", {
-            value: O,
-            configurable: !0,
-        }),
-        v(O, "constructor", {
-            value: F,
-            configurable: !0,
-        }),
+        v(M, "constructor", { value: O, configurable: !0 }),
+        v(O, "constructor", { value: F, configurable: !0 }),
         (F.displayName = k(O, _, "GeneratorFunction")),
         (n.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
@@ -274,9 +228,7 @@ function f() {
             return u ? u(e, O) : ((e.__proto__ = O), k(e, _, "GeneratorFunction")), (e.prototype = i(M)), e;
         }),
         (n.awrap = function (e) {
-            return {
-                __await: e,
-            };
+            return { __await: e };
         }),
         T(B.prototype),
         k(B.prototype, A, function () {
@@ -343,7 +295,6 @@ function f() {
             dispatchException: function (e) {
                 if (this.done) throw e;
                 var n = this;
-
                 function r(r, a) {
                     return (i.type = "throw"), (i.arg = e), (n.next = r), a && ((n.method = "next"), (n.arg = t)), !!a;
                 }
@@ -415,11 +366,7 @@ function f() {
             },
             delegateYield: function (e, n, r) {
                 return (
-                    (this.delegate = {
-                        iterator: j(e),
-                        resultName: n,
-                        nextLoc: r,
-                    }),
+                    (this.delegate = { iterator: j(e), resultName: n, nextLoc: r }),
                     "next" === this.method && (this.arg = t),
                     P
                 );

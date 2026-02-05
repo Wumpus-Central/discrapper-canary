@@ -1,67 +1,56 @@
-a.d(t, {
-    default: () => _,
-}),
-    a(896048);
+a.d(t, { default: () => g });
 var n = a(627968),
     s = a(64700),
     i = a(110259),
     l = a(158954),
     r = a(311907),
     c = a(397927),
-    d = a(139286),
-    o = a(287809),
+    o = a(139286),
+    d = a(287809),
     u = a(274303),
     m = a(970573),
-    f = a(347853);
+    _ = a(347853);
 a(573879);
 var x = a(652215),
     A = a(985018),
-    b = a(202501);
-
-function _(e) {
+    f = a(202501);
+function g(e) {
     let { transitionState: t, onClose: a } = e,
-        { currentUser: _, multiAccountUsers: g } = (0, r.cf)([o.default, u.A], () => ({
-            currentUser: o.default.getCurrentUser(),
+        { currentUser: g, multiAccountUsers: h } = (0, r.cf)([d.default, u.A], () => ({
+            currentUser: d.default.getCurrentUser(),
             multiAccountUsers: u.A.getUsers(),
         })),
-        [h, C] = s.useState(!1),
-        [N, p] = s.useState(x.dJq),
+        [C, b] = s.useState(!1),
+        [p, N] = s.useState(x.dJq),
         [T, U] = s.useState(null);
     return (
         s.useEffect(() => {
-            if (h)
+            if (C)
                 U(
                     (0, n.jsx)(c.po8, {
                         messageType: c.YCn.ERROR,
-                        className: b.u,
-                        children: A.intl.format(A.t.HAuRSM, {
-                            maxNumAccounts: 5,
-                        }),
+                        className: f.u,
+                        children: A.intl.format(A.t.HAuRSM, { maxNumAccounts: 5 }),
                     }),
                 ),
-                    p(x.dJq);
-            else if (null != N) {
-                let e = o.default.getUser(N);
+                    N(x.dJq);
+            else if (null != p) {
+                let e = d.default.getUser(p);
                 null != e &&
                     U(
                         (0, n.jsx)(c.po8, {
                             messageType: c.YCn.POSITIVE,
-                            className: b.u,
-                            children: A.intl.format(A.t["09qide"], {
-                                username: e.username,
-                            }),
+                            className: f.u,
+                            children: A.intl.format(A.t["09qide"], { username: e.username }),
                         }),
                     ),
-                    C(!1);
+                    b(!1);
             }
-        }, [N, h]),
+        }, [p, C]),
         s.useEffect(() => {
-            g.length < 5 && C(!1);
-        }, [g]),
-        (0, d.A)({
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
-        }),
+            h.length < 5 && b(!1);
+        }, [h]),
+        (0, o.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
         (0, n.jsxs)(l.Modal, {
             onClose: a,
             transitionState: t,
@@ -74,7 +63,7 @@ function _(e) {
                     text: A.intl.string(A.t["9g2mqT"]),
                     variant: "secondary",
                     onClick: () => {
-                        g.length >= 5 ? C(!0) : (a(), (0, f.D)());
+                        h.length >= 5 ? b(!0) : (a(), (0, _.D)());
                     },
                 },
             ],
@@ -85,13 +74,13 @@ function _(e) {
                     onAction: (e, t) => {
                         switch (e) {
                             case m.X.LOGIN_REQUIRED:
-                                a(), (0, f.D)();
+                                a(), (0, _.D)();
                                 break;
                             case m.X.SWITCHED:
                                 a();
                                 break;
                             case m.X.REMOVED:
-                                t === (null == _ ? void 0 : _.id) && a(), p(t);
+                                t === g?.id && a(), N(t);
                         }
                     },
                 }),

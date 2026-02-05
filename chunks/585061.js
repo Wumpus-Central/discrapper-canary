@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => g,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(582754),
@@ -8,83 +7,34 @@ var i = n(582754),
     s = n(736653),
     o = n(854627),
     l = n(427262),
-    c = n(236834),
-    u = n(243809),
+    u = n(236834),
+    c = n(243809),
     d = n(165856),
-    f = n(778712),
-    p = n(985018),
-    _ = n(617705);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let g = () => {
-    let e = (0, c.A)(),
-        { avatarSrc: t, eventHandlers: n } = (0, o.A)({
-            userId: null == e ? void 0 : e.id,
-            size: f._3.SIZE_32,
-            animateOnHover: !0,
-        }),
+    _ = n(778712),
+    f = n(985018),
+    p = n(617705);
+let h = () => {
+    let e = (0, u.A)(),
+        { avatarSrc: t, eventHandlers: n } = (0, o.A)({ userId: e?.id, size: _._3.SIZE_32, animateOnHover: !0 }),
         h = (0, s.DP)(),
-        g = (0, i.qB)(h),
-        E = l.Ay.getName(e),
-        b = g ? u.A : d.A;
+        m = (0, i.qB)(h),
+        g = l.Ay.getName(e),
+        E = m ? c.A : d.A;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
-              className: _.$6,
+              className: p.$6,
               children: [
                   (0, r.jsx)("div", {
-                      className: _.H,
-                      children: (0, r.jsx)(
-                          a.euF,
-                          m(
-                              {
-                                  src: t,
-                                  "aria-label": e.username,
-                                  size: f._3.SIZE_32,
-                              },
-                              n,
-                          ),
-                      ),
+                      className: p.H,
+                      children: (0, r.jsx)(a.euF, { src: t, "aria-label": e.username, size: _._3.SIZE_32, ...n }),
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: "text-xs/bold",
-                      className: _.U_,
-                      children: p.intl.format(p.t.oxhCOl, {
-                          userName: E,
-                      }),
+                      className: p.U_,
+                      children: f.intl.format(f.t.oxhCOl, { userName: g }),
                   }),
-                  (0, r.jsx)(b, {
-                      className: _.q3,
-                  }),
+                  (0, r.jsx)(E, { className: p.q3 }),
               ],
           });
 };

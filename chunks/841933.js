@@ -1,76 +1,57 @@
-l.d(t, {
-    A: () => w,
-});
+l.d(t, { A: () => U });
 var n = l(627968),
-    r = l(64700),
+    s = l(64700),
     i = l(503698),
-    s = l.n(i),
-    a = l(989349),
-    c = l.n(a),
-    d = l(311907),
+    a = l.n(i),
+    r = l(989349),
+    d = l.n(r),
+    c = l(311907),
     o = l(397927),
     u = l(688810),
     x = l(726249),
     m = l(624458),
-    j = l(513461),
-    b = l(716416),
-    f = l(886486),
-    h = l(123393),
+    h = l(513461),
+    j = l(716416),
+    _ = l(886486),
+    A = l(123393),
     g = l(534400),
-    v = l(657331),
-    A = l(427157),
-    p = l(71393),
+    b = l(657331),
+    T = l(427157),
+    f = l(71393),
     E = l(661191),
-    S = l(427262),
-    T = l(652215),
-    y = l(743981),
-    _ = l(985018),
-    O = l(971517),
-    N = l(186891);
-
-function I(e) {
-    let { icon: t, label: l, onClick: r, disabled: i } = e;
+    v = l(427262),
+    S = l(652215),
+    N = l(743981),
+    I = l(985018),
+    R = l(971517),
+    C = l(186891);
+function p(e) {
+    let { icon: t, label: l, onClick: s, disabled: i } = e;
     return (0, n.jsxs)(o.DUT, {
-        className: s()(O.hP, {
-            [O.r9]: i,
-        }),
-        onClick: i ? T.tEg : r,
+        className: a()(R.hP, { [R.r9]: i }),
+        onClick: i ? S.tEg : s,
         "aria-label": l,
         children: [
-            (0, n.jsx)(t, {
-                size: "custom",
-                color: "currentColor",
-                width: 20,
-                height: 20,
-            }),
-            (0, n.jsx)(o.Text, {
-                variant: "text-sm/normal",
-                color: "none",
-                children: l,
-            }),
+            (0, n.jsx)(t, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+            (0, n.jsx)(o.Text, { variant: "text-sm/normal", color: "none", children: l }),
         ],
     });
 }
-
-function R(e) {
-    let { user: t, guildId: l, joinRequest: r } = e,
+function M(e) {
+    let { user: t, guildId: l, joinRequest: s } = e,
         { analyticsLocations: i } = (0, u.Ay)(),
-        a = () => {
-            (0, v.openUserProfileModal)({
-                userId: t.id,
-                joinRequestId: r.joinRequestId,
-                sourceAnalyticsLocations: i,
-            });
+        r = () => {
+            (0, b.openUserProfileModal)({ userId: t.id, joinRequestId: s.joinRequestId, sourceAnalyticsLocations: i });
         };
     return (0, n.jsxs)("div", {
-        className: O.op,
+        className: R.op,
         children: [
             (0, n.jsxs)("div", {
-                className: N.FD,
+                className: C.FD,
                 children: [
                     (0, n.jsx)(o.DUT, {
-                        onClick: a,
-                        className: s()(O.vk, N.Wn),
+                        onClick: r,
+                        className: a()(R.vk, C.Wn),
                         children: (0, n.jsx)(o.euF, {
                             src: t.getAvatarURL(l, 48),
                             "aria-label": t.username,
@@ -78,37 +59,37 @@ function R(e) {
                         }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: N.oS,
+                        className: C.oS,
                         children: [
                             (0, n.jsxs)("div", {
-                                className: N.K$,
+                                className: C.K$,
                                 children: [
                                     (0, n.jsx)(o.DUT, {
-                                        onClick: a,
-                                        className: O.vk,
+                                        onClick: r,
+                                        className: R.vk,
                                         children: (0, n.jsx)(o.Text, {
                                             variant: "text-lg/medium",
-                                            children: null == t ? void 0 : t.globalName,
+                                            children: t?.globalName,
                                         }),
                                     }),
                                     (0, n.jsx)(g.Ay, {
-                                        primaryGuild: null == t ? void 0 : t.primaryGuild,
-                                        userId: null == t ? void 0 : t.id,
+                                        primaryGuild: t?.primaryGuild,
+                                        userId: t?.id,
                                         contextGuildId: l,
-                                        badgeSize: y.Sl.SIZE_16,
+                                        badgeSize: N.Sl.SIZE_16,
                                         textVariant: "heading-md/semibold",
-                                        className: N.Dz,
-                                        containerClassName: N.UL,
+                                        className: C.Dz,
+                                        containerClassName: C.UL,
                                     }),
                                 ],
                             }),
                             (0, n.jsx)(o.DUT, {
-                                onClick: a,
-                                className: O.vk,
+                                onClick: r,
+                                className: R.vk,
                                 children: (0, n.jsx)(o.Text, {
                                     variant: "text-md/medium",
                                     color: "text-default",
-                                    children: S.Ay.getUserTag(t),
+                                    children: v.Ay.getUserTag(t),
                                 }),
                             }),
                         ],
@@ -116,56 +97,35 @@ function R(e) {
                 ],
             }),
             (0, n.jsx)(o.DUT, {
-                className: N.d4,
+                className: C.d4,
                 onClick: () => m.A.setSelectedGuildJoinRequest(l, null),
-                children: (0, n.jsx)(o.PGe, {
-                    size: "md",
-                    color: "currentColor",
-                }),
+                children: (0, n.jsx)(o.PGe, { size: "md", color: "currentColor" }),
             }),
         ],
     });
 }
-
 function D(e) {
-    let { user: t, guildId: l, joinRequest: r } = e,
+    let { user: t, guildId: l, joinRequest: s } = e,
         {
             approveRequest: i,
-            rejectRequest: s,
-            handleOpenInterview: a,
-            submitting: c,
-        } = (0, h.W)(l, t.id, r.joinRequestId, r.interviewChannelId);
+            rejectRequest: a,
+            handleOpenInterview: r,
+            submitting: d,
+        } = (0, A.W)(l, t.id, s.joinRequestId, s.interviewChannelId);
     return (0, n.jsxs)("div", {
-        className: O.$l,
+        className: R.$l,
         children: [
-            (0, n.jsx)(I, {
-                icon: o.yr3,
-                label: _.intl.string(_.t.BzjDQJ),
-                onClick: i,
-                disabled: c,
-            }),
-            (0, n.jsx)(I, {
-                icon: o.aXh,
-                label: _.intl.string(_.t.hDtbsz),
-                onClick: s,
-                disabled: c,
-            }),
-            (0, n.jsx)(I, {
-                icon: o.oyn,
-                label: _.intl.string(_.t.KQeYoC),
-                onClick: a,
-                disabled: c,
-            }),
+            (0, n.jsx)(p, { icon: o.yr3, label: I.intl.string(I.t.BzjDQJ), onClick: i, disabled: d }),
+            (0, n.jsx)(p, { icon: o.aXh, label: I.intl.string(I.t.hDtbsz), onClick: a, disabled: d }),
+            (0, n.jsx)(p, { icon: o.oyn, label: I.intl.string(I.t.KQeYoC), onClick: r, disabled: d }),
         ],
     });
 }
-
-function P(e) {
-    var t;
-    let { joinRequest: l } = e,
-        { actionedAt: r, actionedByUser: i, rejectionReason: s } = l;
+function G(e) {
+    let { joinRequest: t } = e,
+        { actionedAt: l, actionedByUser: s, rejectionReason: i } = t;
     return (0, n.jsxs)("div", {
-        className: O.Ik,
+        className: R.Ik,
         children: [
             (0, n.jsx)(o.aXh, {
                 size: "lg",
@@ -177,50 +137,44 @@ function P(e) {
                     (0, n.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        children: _.intl.string(_.t.bSZkla),
+                        children: I.intl.string(I.t.bSZkla),
                     }),
-                    null != i && null != r
+                    null != s && null != l
                         ? (0, n.jsxs)("div", {
-                              className: O.Ay,
+                              className: R.Ay,
                               children: [
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: _.intl.formatToPlainString(_.t.qnimbL, {
-                                          username: null != (t = i.global_name) ? t : i.username,
+                                      children: I.intl.formatToPlainString(I.t.qnimbL, {
+                                          username: s.global_name ?? s.username,
                                       }),
                                   }),
-                                  (0, n.jsx)("div", {
-                                      className: O.Om,
-                                  }),
+                                  (0, n.jsx)("div", { className: R.Om }),
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: c()(E.default.extractTimestamp(r)).format("ll"),
+                                      children: d()(E.default.extractTimestamp(l)).format("ll"),
                                   }),
                               ],
                           })
                         : null,
-                    null != s &&
+                    null != i &&
                         (0, n.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: _.intl.formatToPlainString(_.t.fU5PPM, {
-                                rejectionReason: s,
-                            }),
+                            children: I.intl.formatToPlainString(I.t.fU5PPM, { rejectionReason: i }),
                         }),
                 ],
             }),
         ],
     });
 }
-
-function C(e) {
-    var t;
-    let { joinRequest: l } = e,
-        { actionedAt: r, actionedByUser: i } = l;
+function y(e) {
+    let { joinRequest: t } = e,
+        { actionedAt: l, actionedByUser: s } = t;
     return (0, n.jsxs)("div", {
-        className: O.Ik,
+        className: R.Ik,
         children: [
             (0, n.jsx)(o.yr3, {
                 size: "lg",
@@ -232,26 +186,24 @@ function C(e) {
                     (0, n.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        children: _.intl.string(_.t.aURgY2),
+                        children: I.intl.string(I.t.aURgY2),
                     }),
-                    null != i && null != r
+                    null != s && null != l
                         ? (0, n.jsxs)("div", {
-                              className: O.Ay,
+                              className: R.Ay,
                               children: [
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: _.intl.formatToPlainString(_.t.qnimbL, {
-                                          username: null != (t = i.global_name) ? t : i.username,
+                                      children: I.intl.formatToPlainString(I.t.qnimbL, {
+                                          username: s.global_name ?? s.username,
                                       }),
                                   }),
-                                  (0, n.jsx)("div", {
-                                      className: O.Om,
-                                  }),
+                                  (0, n.jsx)("div", { className: R.Om }),
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: c()(E.default.extractTimestamp(r)).format("ll"),
+                                      children: d()(E.default.extractTimestamp(l)).format("ll"),
                                   }),
                               ],
                           })
@@ -261,47 +213,46 @@ function C(e) {
         ],
     });
 }
-
-function M(e) {
+function L(e) {
     let { user: t, joinRequest: l } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(o.Text, {
-                className: O._3,
+                className: R._3,
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: _.intl.string(_.t["ldCE/p"]),
+                children: I.intl.string(I.t["ldCE/p"]),
             }),
             (0, n.jsxs)("div", {
-                className: O.TT,
+                className: R.TT,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: O.lj,
+                        className: R.lj,
                         children: [
                             (0, n.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: _.intl.string(_.t.SaDIpL),
+                                children: I.intl.string(I.t.SaDIpL),
                             }),
                             (0, n.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: c()(E.default.extractTimestamp(t.id)).format("ll"),
+                                children: d()(E.default.extractTimestamp(t.id)).format("ll"),
                             }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: O.lj,
+                        className: R.lj,
                         children: [
                             (0, n.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: _.intl.string(_.t["Vt4cn+"]),
+                                children: I.intl.string(I.t["Vt4cn+"]),
                             }),
                             (0, n.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: c()(l.createdAt).format("ll"),
+                                children: d()(l.createdAt).format("ll"),
                             }),
                         ],
                     }),
@@ -310,69 +261,37 @@ function M(e) {
         ],
     });
 }
-
-function w(e) {
+function U(e) {
     let { guildId: t } = e,
-        l = (0, b.R)({
-            guildId: t,
-        }),
-        { user: i } = null != l ? l : {},
-        a = r.useMemo(() => {
-            var e;
-            return null != (e = null == l ? void 0 : l.formResponses) ? e : [];
-        }, [null == l ? void 0 : l.formResponses]),
-        c = r.useMemo(() => (null != i ? new A.A(i) : null), [i]),
-        u = (0, d.bG)([p.A], () => p.A.getGuild(t), [t]);
-    return ((0, x.HU)({
-        subsection: _.intl.string(_.t.nqrK8X),
-        location: null == u ? void 0 : u.name,
-    }),
-    null == l || null == u || null == c || null == i)
+        l = (0, j.R)({ guildId: t }),
+        { user: i } = l ?? {},
+        r = s.useMemo(() => l?.formResponses ?? [], [l?.formResponses]),
+        d = s.useMemo(() => (null != i ? new T.A(i) : null), [i]),
+        u = (0, c.bG)([f.A], () => f.A.getGuild(t), [t]);
+    return ((0, x.HU)({ subsection: I.intl.string(I.t.nqrK8X), location: u?.name }),
+    null == l || null == u || null == d || null == i)
         ? null
         : (0, n.jsx)("section", {
-              className: O.pz,
+              className: R.pz,
               children: (0, n.jsx)(o.HOs, {
                   children: (0, n.jsxs)("div", {
-                      className: O.WH,
+                      className: R.WH,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: O.Ui,
+                              className: R.Ui,
                               children: [
-                                  (0, n.jsx)(R, {
-                                      user: c,
-                                      guildId: t,
-                                      joinRequest: l,
-                                  }),
-                                  l.applicationStatus === j.B5.SUBMITTED &&
-                                      (0, n.jsx)(D, {
-                                          user: c,
-                                          guildId: t,
-                                          joinRequest: l,
-                                      }),
-                                  l.applicationStatus === j.B5.REJECTED &&
-                                      (0, n.jsx)(P, {
-                                          joinRequest: l,
-                                      }),
-                                  l.applicationStatus === j.B5.APPROVED &&
-                                      (0, n.jsx)(C, {
-                                          joinRequest: l,
-                                      }),
+                                  (0, n.jsx)(M, { user: d, guildId: t, joinRequest: l }),
+                                  l.applicationStatus === h.B5.SUBMITTED &&
+                                      (0, n.jsx)(D, { user: d, guildId: t, joinRequest: l }),
+                                  l.applicationStatus === h.B5.REJECTED && (0, n.jsx)(G, { joinRequest: l }),
+                                  l.applicationStatus === h.B5.APPROVED && (0, n.jsx)(y, { joinRequest: l }),
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: s()(O.Ui, O.gi),
+                              className: a()(R.Ui, R.gi),
                               children: [
-                                  (0, n.jsx)(f.A, {
-                                      guildId: u.id,
-                                      formFields: a,
-                                      user: c,
-                                      showRequirements: !1,
-                                  }),
-                                  (0, n.jsx)(M, {
-                                      guildId: t,
-                                      user: c,
-                                      joinRequest: l,
-                                  }),
+                                  (0, n.jsx)(_.A, { guildId: u.id, formFields: r, user: d, showRequirements: !1 }),
+                                  (0, n.jsx)(L, { guildId: t, user: d, joinRequest: l }),
                               ],
                           }),
                       ],

@@ -7,15 +7,9 @@ var i,
     l =
         (this && this.__importDefault) ||
         function (t) {
-            return t && t.__esModule
-                ? t
-                : {
-                      default: t,
-                  };
+            return t && t.__esModule ? t : { default: t };
         };
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = void 0);
 let u = l(a(367019)),
     h = a(778090),
@@ -165,12 +159,7 @@ let u = l(a(367019)),
             if (void 0 === t) return this.data.repeating;
             if (!t) return (this.data.repeating = null), this;
             if ((0, h.isRRule)(t) || "string" == typeof t) return (this.data.repeating = t), this;
-            if (
-                ((this.data.repeating = {
-                    freq: (0, h.checkEnum)(m.ICalEventRepeatingFreq, t.freq),
-                }),
-                t.count)
-            ) {
+            if (((this.data.repeating = { freq: (0, h.checkEnum)(m.ICalEventRepeatingFreq, t.freq) }), t.count)) {
                 if (!isFinite(t.count)) throw Error("`repeating.count` must be a finite number!");
                 this.data.repeating.count = t.count;
             }
@@ -221,13 +210,7 @@ let u = l(a(367019)),
         }
         location(t) {
             if (void 0 === t) return this.data.location;
-            if ("string" == typeof t)
-                return (
-                    (this.data.location = {
-                        title: t,
-                    }),
-                    this
-                );
+            if ("string" == typeof t) return (this.data.location = { title: t }), this;
             if ((t && !t.title) || ((null == t ? void 0 : t.geo) && (!isFinite(t.geo.lat) || !isFinite(t.geo.lon))))
                 throw Error(
                     "`location` isn't formatted correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalevent.html#location",
@@ -240,9 +223,7 @@ let u = l(a(367019)),
                 : (null === t
                       ? (this.data.description = null)
                       : "string" == typeof t
-                        ? (this.data.description = {
-                              plain: t,
-                          })
+                        ? (this.data.description = { plain: t })
                         : (this.data.description = t),
                   this);
         }

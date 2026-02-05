@@ -1,57 +1,44 @@
-n.d(t, {
-    Ay: () => g,
-    JB: () => f,
-    z$: () => p,
-}),
-    n(228524);
+"use strict";
+n.d(t, { Ay: () => g, JB: () => _, z$: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(580424),
     s = n(696451),
     o = n(248465),
     l = n(427262),
-    c = n(634788),
-    u = n(374803);
+    u = n(634788),
+    c = n(374803);
 n(827669);
 var d = n(985018);
-
-function f(e, t, n) {
+function _(e, t, n) {
     return o.Ay.hasSameRoleAsUsername(t, e)
-        ? "".concat("@").concat(e.tag)
-        : "".concat("@").concat(
-              l.Ay.getUserTag(e, {
-                  identifiable: n ? "never" : "always",
-              }),
-          );
+        ? `@${e.tag}`
+        : `@${l.Ay.getUserTag(e, { identifiable: n ? "never" : "always" })}`;
 }
-
+function f(e) {
+    return `<@${e.id}>`;
+}
 function p(e) {
-    return "<@".concat(e.id, ">");
-}
-
-function _(e) {
     return e.text;
 }
-
 function h(e) {
-    return "".concat("@").concat(e.name);
+    return `@${e.name}`;
 }
-
 function m(e) {
-    return "<@&".concat(e.id, ">");
+    return `<@&${e.id}>`;
 }
 let g = {
     sentinel: "@",
     stores: [s.Ay],
     matches: (e, t, n, r, i) =>
-        i.mentions.user !== u.Vf.DENY || i.mentions.role !== u.eP.DENY || i.mentions.global !== u.VN.DENY,
+        i.mentions.user !== c.Vf.DENY || i.mentions.role !== c.eP.DENY || i.mentions.global !== c.VN.DENY,
     queryResults(e, t, n, r, i) {
-        let a = r.mentions.global === u.VN.ALLOW_EVERYONE || r.mentions.global === u.VN.ALLOW_EVERYONE_OR_HERE,
-            s = r.mentions.global === u.VN.ALLOW_EVERYONE_OR_HERE,
-            l = r.mentions.user !== u.Vf.DENY,
-            c = r.mentions.role !== u.eP.DENY,
-            d = r.mentions.user === u.Vf.ALLOW_GUILD,
-            f = r.mentions.role === u.eP.ALLOW_ALL;
+        let a = r.mentions.global === c.VN.ALLOW_EVERYONE || r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
+            s = r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
+            l = r.mentions.user !== c.Vf.DENY,
+            u = r.mentions.role !== c.eP.DENY,
+            d = r.mentions.user === c.Vf.ALLOW_GUILD,
+            _ = r.mentions.role === c.eP.ALLOW_ALL;
         return {
             results: o.Ay.queryMentionResults({
                 query: n,
@@ -59,10 +46,10 @@ let g = {
                 canMentionEveryone: a,
                 canMentionHere: s,
                 canMentionUsers: l,
-                canMentionRoles: c,
+                canMentionRoles: u,
                 canMentionOtherGlobals: r.mentions.otherGlobals,
                 includeAllGuildUsers: d,
-                includeNonMentionableRoles: f,
+                includeNonMentionableRoles: _,
                 request: i,
             }),
         };
@@ -72,9 +59,9 @@ let g = {
             n,
             {
                 results: { users: s, globals: o, roles: l },
-                selectedIndex: f,
-                channel: p,
-                query: _,
+                selectedIndex: _,
+                channel: f,
+                query: p,
                 options: h,
                 onHover: m,
                 onClick: g,
@@ -83,10 +70,10 @@ let g = {
                 (0, r.jsx)(
                     a.Ay.User,
                     {
-                        guildId: p.guild_id,
+                        guildId: f.guild_id,
                         onClick: g,
                         onHover: m,
-                        selected: f === t,
+                        selected: _ === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
@@ -96,13 +83,13 @@ let g = {
                     e.user.id,
                 ),
             ),
-            b = o.map((e, t) =>
+            A = o.map((e, t) =>
                 (0, r.jsx)(
                     a.Ay.Generic,
                     {
                         onClick: g,
                         onHover: m,
-                        selected: f === t + s.length,
+                        selected: _ === t + s.length,
                         index: s.length + t,
                         text: e.text,
                         description: h.hideMentionDescription ? null : e.description,
@@ -112,42 +99,37 @@ let g = {
                     e.text,
                 ),
             ),
-            y = l.map((e, t) =>
+            I = l.map((e, t) =>
                 (0, r.jsx)(
                     a.Ay.Role,
                     {
                         onClick: g,
                         onHover: m,
-                        selected: f === t + s.length + o.length,
+                        selected: _ === t + s.length + o.length,
                         index: s.length + o.length + t,
                         role: e,
                         hideDescription: h.hideMentionDescription,
-                        guildId: p.guild_id,
+                        guildId: f.guild_id,
                     },
                     e.id,
                 ),
             );
         return (
-            h.mentions.user === u.Vf.DENY
+            h.mentions.user === c.Vf.DENY
                 ? ((t = d.t.MLiD1e), (n = d.intl.string(d.t["LPJmL/"])))
                 : ((t = d.t.rPNimn), (n = d.intl.string(d.t["9Oq93m"]))),
             (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
-                        (0, c.wZ)({
-                            titleWithQuery: t,
-                            titleWithoutQuery: n,
-                            query: _,
-                            getQuery: (e) => "".concat("@").concat(e),
-                        }),
+                        (0, u.wZ)({ titleWithQuery: t, titleWithoutQuery: n, query: p, getQuery: (e) => `@${e}` }),
                         E,
                         s.length > 0 && o.length > 0 ? (0, r.jsx)(a.Ay.Divider, {}) : null,
-                        b,
+                        A,
                         (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0)
                             ? (0, r.jsx)(a.Ay.Divider, {})
                             : null,
-                        y,
+                        I,
                     ],
                 },
                 "mentions",
@@ -163,20 +145,18 @@ let g = {
             } = e,
             o = t[i],
             l = n[i - t.length],
-            c = r[i - t.length - n.length],
-            d = u.kc.MENTION;
+            u = r[i - t.length - n.length],
+            d = c.kc.MENTION;
         return (
             null != o
-                ? a.insertText(f(o.user, s, a.hidePersonalInformation), p(o.user))
+                ? a.insertText(_(o.user, s, a.hidePersonalInformation), f(o.user))
                 : null != l
                   ? null != l.inlineAutocompleteType
                       ? (a.insertAutocompleteInput(l.inlineAutocompleteType),
-                        (d = "timestampMentionInput" === l.inlineAutocompleteType ? u.kc.TIMESTAMP : u.kc.GAME_MENTION))
-                      : a.insertText(_(l))
-                  : null != c && a.insertText(h(c), m(c)),
-            {
-                type: d,
-            }
+                        (d = "timestampMentionInput" === l.inlineAutocompleteType ? c.kc.TIMESTAMP : c.kc.GAME_MENTION))
+                      : a.insertText(p(l))
+                  : null != u && a.insertText(h(u), m(u)),
+            { type: d }
         );
     },
 };

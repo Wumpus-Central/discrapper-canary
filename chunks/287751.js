@@ -1,117 +1,50 @@
-n.d(i, {
-    A: () => a,
-});
+n.d(i, { A: () => a });
 var o = {
     lessThanXSeconds: {
-        one: {
-            regular: "mniej niż sekunda",
-            past: "mniej niż sekundę",
-            future: "mniej niż sekundę",
-        },
+        one: { regular: "mniej niż sekunda", past: "mniej niż sekundę", future: "mniej niż sekundę" },
         twoFour: "mniej niż {{count}} sekundy",
         other: "mniej niż {{count}} sekund",
     },
     xSeconds: {
-        one: {
-            regular: "sekunda",
-            past: "sekundę",
-            future: "sekundę",
-        },
+        one: { regular: "sekunda", past: "sekundę", future: "sekundę" },
         twoFour: "{{count}} sekundy",
         other: "{{count}} sekund",
     },
-    halfAMinute: {
-        one: "p\xf3ł minuty",
-        twoFour: "p\xf3ł minuty",
-        other: "p\xf3ł minuty",
-    },
+    halfAMinute: { one: "p\xf3ł minuty", twoFour: "p\xf3ł minuty", other: "p\xf3ł minuty" },
     lessThanXMinutes: {
-        one: {
-            regular: "mniej niż minuta",
-            past: "mniej niż minutę",
-            future: "mniej niż minutę",
-        },
+        one: { regular: "mniej niż minuta", past: "mniej niż minutę", future: "mniej niż minutę" },
         twoFour: "mniej niż {{count}} minuty",
         other: "mniej niż {{count}} minut",
     },
     xMinutes: {
-        one: {
-            regular: "minuta",
-            past: "minutę",
-            future: "minutę",
-        },
+        one: { regular: "minuta", past: "minutę", future: "minutę" },
         twoFour: "{{count}} minuty",
         other: "{{count}} minut",
     },
     aboutXHours: {
-        one: {
-            regular: "około godziny",
-            past: "około godziny",
-            future: "około godzinę",
-        },
+        one: { regular: "około godziny", past: "około godziny", future: "około godzinę" },
         twoFour: "około {{count}} godziny",
         other: "około {{count}} godzin",
     },
     xHours: {
-        one: {
-            regular: "godzina",
-            past: "godzinę",
-            future: "godzinę",
-        },
+        one: { regular: "godzina", past: "godzinę", future: "godzinę" },
         twoFour: "{{count}} godziny",
         other: "{{count}} godzin",
     },
     xDays: {
-        one: {
-            regular: "dzień",
-            past: "dzień",
-            future: "1 dzień",
-        },
+        one: { regular: "dzień", past: "dzień", future: "1 dzień" },
         twoFour: "{{count}} dni",
         other: "{{count}} dni",
     },
-    aboutXWeeks: {
-        one: "około tygodnia",
-        twoFour: "około {{count}} tygodni",
-        other: "około {{count}} tygodni",
-    },
-    xWeeks: {
-        one: "tydzień",
-        twoFour: "{{count}} tygodnie",
-        other: "{{count}} tygodni",
-    },
-    aboutXMonths: {
-        one: "około miesiąc",
-        twoFour: "około {{count}} miesiące",
-        other: "około {{count}} miesięcy",
-    },
-    xMonths: {
-        one: "miesiąc",
-        twoFour: "{{count}} miesiące",
-        other: "{{count}} miesięcy",
-    },
-    aboutXYears: {
-        one: "około rok",
-        twoFour: "około {{count}} lata",
-        other: "około {{count}} lat",
-    },
-    xYears: {
-        one: "rok",
-        twoFour: "{{count}} lata",
-        other: "{{count}} lat",
-    },
-    overXYears: {
-        one: "ponad rok",
-        twoFour: "ponad {{count}} lata",
-        other: "ponad {{count}} lat",
-    },
-    almostXYears: {
-        one: "prawie rok",
-        twoFour: "prawie {{count}} lata",
-        other: "prawie {{count}} lat",
-    },
+    aboutXWeeks: { one: "około tygodnia", twoFour: "około {{count}} tygodni", other: "około {{count}} tygodni" },
+    xWeeks: { one: "tydzień", twoFour: "{{count}} tygodnie", other: "{{count}} tygodni" },
+    aboutXMonths: { one: "około miesiąc", twoFour: "około {{count}} miesiące", other: "około {{count}} miesięcy" },
+    xMonths: { one: "miesiąc", twoFour: "{{count}} miesiące", other: "{{count}} miesięcy" },
+    aboutXYears: { one: "około rok", twoFour: "około {{count}} lata", other: "około {{count}} lat" },
+    xYears: { one: "rok", twoFour: "{{count}} lata", other: "{{count}} lat" },
+    overXYears: { one: "ponad rok", twoFour: "ponad {{count}} lata", other: "ponad {{count}} lat" },
+    almostXYears: { one: "prawie rok", twoFour: "prawie {{count}} lata", other: "prawie {{count}} lat" },
 };
-
 function t(e, i, n) {
     var o = (function (e, i) {
         if (1 === i) return e.one;

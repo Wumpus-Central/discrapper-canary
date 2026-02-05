@@ -1,3 +1,2 @@
-e.exports = {
-    v: "clickable_faf576",
-};
+"use strict";
+e.exports = { v: "clickable_faf576" };

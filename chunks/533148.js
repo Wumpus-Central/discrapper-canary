@@ -1,23 +1,19 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(747238),
-    n(812715);
-var r = n(627968),
-    i = n(397927),
+"use strict";
+n.d(t, { A: () => r });
+var i = n(627968),
+    s = n(397927),
     l = n(927573);
-
-function s(e) {
-    let { value: t, onChange: n, error: s, disabled: a, autoFocus: c = !1 } = e;
-    return (0, r.jsx)(i.ksK, {
-        leading: "".concat(l.mu, "/"),
+function r(e) {
+    let { value: t, onChange: n, error: r, disabled: a, autoFocus: o = !1 } = e;
+    return (0, i.jsx)(s.ksK, {
+        leading: `${l.mu}/`,
         value: t,
         onChange: (e) => {
             n(e.replace(/ /g, "-"));
         },
         maxLength: 25,
-        error: s,
+        error: r,
         disabled: a,
-        autoFocus: c,
+        autoFocus: o,
     });
 }

@@ -1,12 +1,8 @@
-n.d(e, {
-    default: () => m,
-}),
-    n(896048),
-    n(228524);
+n.d(e, { default: () => p });
 var a = n(627968),
-    l = n(64700),
-    i = n(311907),
-    s = n(732955),
+    i = n(64700),
+    s = n(311907),
+    l = n(732955),
     r = n(397927),
     c = n(47167),
     o = n(734057),
@@ -14,46 +10,35 @@ var a = n(627968),
     d = n(422258),
     x = n(985018),
     h = n(129115);
-
-function m(t) {
-    let { channelId: e, onClose: n, transitionState: m, heading: p, formTitle: f, allowReset: k = !1 } = t,
-        v = (0, i.bG)([o.A], () => o.A.getChannel(e)),
+function p(t) {
+    let { channelId: e, onClose: n, transitionState: p, heading: m, formTitle: f, allowReset: k = !1 } = t,
+        v = (0, s.bG)([o.A], () => o.A.getChannel(e)),
         C = (0, c.Ay)(v),
-        b = u.A.getNickname(e),
-        [g, j] = l.useState(null != b ? b : "");
-
+        g = u.A.getNickname(e),
+        [b, j] = i.useState(g ?? "");
     function y(t) {
-        t.preventDefault(), (0, d.w6)(e, g), n();
+        t.preventDefault(), (0, d.w6)(e, b), n();
     }
     return (0, a.jsx)("form", {
         onSubmit: y,
-        children: (0, a.jsxs)(s.aFV, {
-            title: p,
+        children: (0, a.jsxs)(l.aFV, {
+            title: m,
             actions: [
-                {
-                    text: x.intl.string(x.t["ETE/oC"]),
-                    onClick: n,
-                    variant: "secondary",
-                },
-                {
-                    text: p,
-                    onClick: y,
-                    variant: "primary",
-                    type: "submit",
-                },
+                { text: x.intl.string(x.t["ETE/oC"]), onClick: n, variant: "secondary" },
+                { text: m, onClick: y, variant: "primary", type: "submit" },
             ],
             onClose: n,
-            transitionState: m,
+            transitionState: p,
             children: [
                 (0, a.jsx)(r.ksK, {
                     label: f,
-                    value: g,
+                    value: b,
                     onChange: j,
-                    placeholder: null != C ? C : void 0,
+                    placeholder: C ?? void 0,
                     maxLength: 100,
                     autoFocus: !0,
                 }),
-                k && null != b
+                k && null != g
                     ? (0, a.jsx)("div", {
                           className: h.c,
                           children: (0, a.jsx)(r.QWc, {

@@ -1,16 +1,8 @@
-n.d(t, {
-    A: () => i,
-});
-var l = n(627968),
-    a = n(238502),
-    r = n(262834);
-
-function i() {
-    let e = (0, a.J)();
-    return (0, l.jsx)("div", {
-        className: r.pm,
-        children: (0, l.jsx)("div", {
-            className: e,
-        }),
-    });
+a.d(t, { A: () => l });
+var n = a(627968),
+    i = a(238502),
+    s = a(262834);
+function l() {
+    let e = (0, i.J)();
+    return (0, n.jsx)("div", { className: s.pm, children: (0, n.jsx)("div", { className: e }) });
 }

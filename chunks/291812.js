@@ -1,74 +1,58 @@
-n.d(t, {
-    Ay: () => y,
-    _A: () => m,
-    sP: () => E,
-});
+"use strict";
+n.d(t, { Ay: () => A, _A: () => m, sP: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(877413),
-    l = n.n(s),
-    c = n(52133),
-    u = n(860227),
+    s = n.n(a),
+    o = n(877413),
+    l = n.n(o),
+    u = n(52133),
+    c = n(860227),
     d = n(861986),
-    f = n(652215),
-    p = n(985018),
-    _ = n(679740),
+    _ = n(652215),
+    f = n(985018),
+    p = n(679740),
     h = n(206314);
-
 function m(e, t) {
-    return e.type === f.lAJ.VOICE_HANGOUT_INVITE
+    return e.type === _.lAJ.VOICE_HANGOUT_INVITE
         ? ""
-        : e.hasFlag(f.pr7.SOURCE_MESSAGE_DELETED)
-          ? p.intl.string(p.t.JOtgSw)
+        : e.hasFlag(_.pr7.SOURCE_MESSAGE_DELETED)
+          ? f.intl.string(f.t.JOtgSw)
           : t;
 }
-
 function g(e) {
-    var t;
-    let { className: n, message: a, children: s, content: c, onUpdate: p, contentRef: g, compact: E } = e,
-        y = a.state === f.cmJ.SEND_FAILED,
-        b = a.state === f.cmJ.SENDING,
-        O = a.isCommandType(),
-        v = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        A = i.useRef(!1);
+    let { className: t, message: n, children: a, content: o, onUpdate: u, contentRef: f, compact: g } = e,
+        E = n.state === _.cmJ.SEND_FAILED,
+        A = n.state === _.cmJ.SENDING,
+        I = n.isCommandType(),
+        T = n.editedTimestamp?.toString(),
+        y = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
-            A.current ? null != p && p() : (A.current = !0);
-        }, [p, a.content, c, v, s]),
+            y.current ? null != u && u() : (y.current = !0);
+        }, [u, n.content, o, T, a]),
         (0, r.jsxs)("div", {
-            id: (0, u.CJ)(a),
-            ref: g,
-            className: o()(n, h.PT, {
-                [_.BK]: !0,
-                [_.Tn]: b && !O,
-                [_.nB]: "rtl" === l()(a.content),
-                [_.Ix]: y,
-                [_.w3]: a.isUnsupported,
+            id: (0, c.CJ)(n),
+            ref: f,
+            className: s()(t, h.PT, {
+                [p.BK]: !0,
+                [p.Tn]: A && !I,
+                [p.nB]: "rtl" === l()(n.content),
+                [p.Ix]: E,
+                [p.w3]: n.isUnsupported,
             }),
-            children: [
-                null != s ? s : m(a, c),
-                (0, r.jsx)(d.A, {
-                    message: a,
-                    compact: E,
-                    location: d.O.WITH_CONTENT,
-                }),
-            ],
+            children: [a ?? m(n, o), (0, r.jsx)(d.A, { message: n, compact: g, location: d.O.WITH_CONTENT })],
         })
     );
 }
-
 function E(e, t) {
-    var n, r;
-    let { message: i } = t,
-        { message: a } = e;
+    let { message: n } = t,
+        { message: r } = e;
     return (
-        (0, c.A)(e, t, ["message"]) &&
-        i.content === a.content &&
-        i.state === a.state &&
-        (null == (n = i.editedTimestamp) ? void 0 : n.toString()) ===
-            (null == (r = a.editedTimestamp) ? void 0 : r.toString())
+        (0, u.A)(e, t, ["message"]) &&
+        n.content === r.content &&
+        n.state === r.state &&
+        n.editedTimestamp?.toString() === r.editedTimestamp?.toString()
     );
 }
-let y = i.memo(g, E);
+let A = i.memo(g, E);

@@ -1,7 +1,5 @@
-n.r(t),
-    n.d(t, {
-        default: () => r,
-    });
+"use strict";
+n.r(t), n.d(t, { default: () => r });
 let r = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,

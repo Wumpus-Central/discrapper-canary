@@ -1,3 +1,1 @@
-t.exports = {
-    C: "learnMoreLink_b81ad6",
-};
+t.exports = { C: "learnMoreLink_b81ad6" };

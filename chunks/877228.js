@@ -1,3 +1,2 @@
-e.exports = {
-    d: "exemptionHint__54558",
-};
+"use strict";
+e.exports = { d: "exemptionHint__54558" };

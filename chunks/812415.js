@@ -1,5 +1,6 @@
-var r = n(410475);
-e.exports = function (e) {
-    var t = e.getSelection();
-    return t.isCollapsed() ? null : r(e.getCurrentContent(), t);
+"use strict";
+var n = r(410475);
+t.exports = function (t) {
+    var e = t.getSelection();
+    return e.isCollapsed() ? null : n(t.getCurrentContent(), e);
 };

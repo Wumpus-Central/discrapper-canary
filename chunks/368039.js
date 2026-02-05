@@ -1,14 +1,7 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.autoprefix = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0);
 var n,
-    o =
-        (n = r(471171)) && n.__esModule
-            ? n
-            : {
-                  default: n,
-              },
+    o = (n = r(471171)) && n.__esModule ? n : { default: n },
     a =
         Object.assign ||
         function (e) {
@@ -20,22 +13,10 @@ var n,
         },
     i = {
         borderRadius: function (e) {
-            return {
-                msBorderRadius: e,
-                MozBorderRadius: e,
-                OBorderRadius: e,
-                WebkitBorderRadius: e,
-                borderRadius: e,
-            };
+            return { msBorderRadius: e, MozBorderRadius: e, OBorderRadius: e, WebkitBorderRadius: e, borderRadius: e };
         },
         boxShadow: function (e) {
-            return {
-                msBoxShadow: e,
-                MozBoxShadow: e,
-                OBoxShadow: e,
-                WebkitBoxShadow: e,
-                boxShadow: e,
-            };
+            return { msBoxShadow: e, MozBoxShadow: e, OBoxShadow: e, WebkitBoxShadow: e, boxShadow: e };
         },
         userSelect: function (e) {
             return {
@@ -48,61 +29,27 @@ var n,
             };
         },
         flex: function (e) {
-            return {
-                WebkitBoxFlex: e,
-                MozBoxFlex: e,
-                WebkitFlex: e,
-                msFlex: e,
-                flex: e,
-            };
+            return { WebkitBoxFlex: e, MozBoxFlex: e, WebkitFlex: e, msFlex: e, flex: e };
         },
         flexBasis: function (e) {
-            return {
-                WebkitFlexBasis: e,
-                flexBasis: e,
-            };
+            return { WebkitFlexBasis: e, flexBasis: e };
         },
         justifyContent: function (e) {
-            return {
-                WebkitJustifyContent: e,
-                justifyContent: e,
-            };
+            return { WebkitJustifyContent: e, justifyContent: e };
         },
         transition: function (e) {
-            return {
-                msTransition: e,
-                MozTransition: e,
-                OTransition: e,
-                WebkitTransition: e,
-                transition: e,
-            };
+            return { msTransition: e, MozTransition: e, OTransition: e, WebkitTransition: e, transition: e };
         },
         transform: function (e) {
-            return {
-                msTransform: e,
-                MozTransform: e,
-                OTransform: e,
-                WebkitTransform: e,
-                transform: e,
-            };
+            return { msTransform: e, MozTransform: e, OTransform: e, WebkitTransform: e, transform: e };
         },
         absolute: function (e) {
             var t = e && e.split(" ");
-            return {
-                position: "absolute",
-                top: t && t[0],
-                right: t && t[1],
-                bottom: t && t[2],
-                left: t && t[3],
-            };
+            return { position: "absolute", top: t && t[0], right: t && t[1], bottom: t && t[2], left: t && t[3] };
         },
         extend: function (e, t) {
             var r = t[e];
-            return (
-                r || {
-                    extend: e,
-                }
-            );
+            return r || { extend: e };
         },
     },
     l = (t.autoprefix = function (e) {

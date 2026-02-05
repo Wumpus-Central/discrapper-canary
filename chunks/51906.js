@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     if (e === t) return !0;
     if (null == e || null == t || e.length !== t.length) return !1;
@@ -5,7 +6,6 @@ function r(e, t) {
     for (let r = 0; r < n; r++) if (e[r] !== t[r]) return !1;
     return !0;
 }
-
 function i(e) {
     let t = null,
         n = null;
@@ -14,7 +14,4 @@ function i(e) {
         return r(t, a) || (n = e(...a)), (t = a), n;
     };
 }
-n.d(t, {
-    L_: () => i,
-}),
-    n(896048);
+n.d(t, { L_: () => i });

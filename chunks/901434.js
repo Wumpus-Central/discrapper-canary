@@ -1,35 +1,31 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(321073);
+n.d(t, { A: () => a }), n(321073);
 var l = n(64700),
-    r = n(417597),
-    i = n(591552);
-
+    i = n(417597),
+    s = n(591552);
 function a(e) {
-    let t = (0, r.yK)([i.A], () => i.A.getEnabledOnboardingPrompts(e));
+    let t = (0, i.yK)([s.A], () => s.A.getEnabledOnboardingPrompts(e));
     return l.useMemo(() => {
         let e = 0,
             n = [],
             l = [],
-            r = [],
-            i = [];
+            i = [],
+            s = [];
         for (var a = 0; a < t.length; a++) {
-            let s = t[a];
-            s.isNew
-                ? n.push(s)
-                : s.hasNewAnswers
-                  ? (l.push(s), (e += s.options.filter((e) => e.isUnseen).length))
-                  : s.inOnboarding
-                    ? i.push(s)
-                    : r.push(s);
+            let r = t[a];
+            r.isNew
+                ? n.push(r)
+                : r.hasNewAnswers
+                  ? (l.push(r), (e += r.options.filter((e) => e.isUnseen).length))
+                  : r.inOnboarding
+                    ? s.push(r)
+                    : i.push(r);
         }
         return {
             onboardingPromptsRaw: t,
             newOnboardingPrompts: n,
             onboardingPromptsWithNewAnswers: l,
             newAnswersCount: e,
-            onboardingPrompts: r.concat(i),
+            onboardingPrompts: i.concat(s),
         };
     }, [t]);
 }

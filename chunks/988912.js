@@ -1,3 +1,2 @@
-e.exports = {
-    r: "body__96722",
-};
+"use strict";
+e.exports = { r: "body__96722" };

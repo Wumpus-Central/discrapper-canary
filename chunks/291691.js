@@ -1,3 +1,4 @@
+"use strict";
 t.exports = function (t) {
     if (!t || !("ownerDocument" in t)) return !1;
     if ("ownerDocument" in t) {

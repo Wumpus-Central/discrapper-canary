@@ -1,3 +1,4 @@
+"use strict";
 var n,
     o,
     s,
@@ -23,7 +24,4 @@ var n,
         p(n, y, function () {
             return this;
         }),
-    (t.exports = {
-        IteratorPrototype: n,
-        BUGGY_SAFARI_ITERATORS: h,
-    });
+    (t.exports = { IteratorPrototype: n, BUGGY_SAFARI_ITERATORS: h });

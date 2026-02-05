@@ -1,3 +1,1 @@
-e.exports = {
-    I: "inputWrapper__51422",
-};
+e.exports = { I: "inputWrapper__51422" };

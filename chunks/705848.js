@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     copyInput: "copyInput_fffc15",
     copyInputDefault: "copyInputDefault_fffc15 copyInput_fffc15",

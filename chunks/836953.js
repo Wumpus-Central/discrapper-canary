@@ -1,64 +1,50 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(587895),
+n.d(t, { A: () => _ }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(587895),
     s = n(64983),
     o = n(997509),
-    c = n(143582),
-    u = n(915043),
-    d = n(652215),
-    p = n(985018),
-    f = n(298525);
-
-function h(e) {
+    d = n(143582),
+    c = n(915043),
+    u = n(652215),
+    A = n(985018),
+    h = n(298525);
+function _(e) {
     let t,
         { guild: n } = e,
-        h = (0, u.$s)(n),
-        A = () => (0, c.Hc)(n.id),
-        g = i.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
-        m = (0, l.yK)([a.A], () => {
+        _ = (0, c.$s)(n),
+        m = () => (0, d.Hc)(n.id),
+        p = r.useMemo(() => new Set(_.map((e) => e.applicationId)), [_]),
+        g = (0, a.yK)([l.A], () => {
             let e = [];
-            for (let t of g) {
-                let n = a.A.getApplication(t);
+            for (let t of p) {
+                let n = l.A.getApplication(t);
                 null != n && e.push(n);
             }
             return e;
-        }, [g]);
-    return 0 === m.length
+        }, [p]);
+    return 0 === g.length
         ? null
         : ((t =
-              1 === m.length
-                  ? p.intl.formatToPlainString(p.t["Egq+G/"], {
-                        a: m[0].name,
-                    })
-                  : 2 === m.length
-                    ? p.intl.formatToPlainString(p.t.LxU9R3, {
-                          a: m[0].name,
-                          b: m[1].name,
-                      })
-                    : 3 === m.length
-                      ? p.intl.formatToPlainString(p.t.crKXMC, {
-                            a: m[0].name,
-                            b: m[1].name,
-                            c: m[2].name,
-                        })
-                      : p.intl.string(p.t.MvfowF)),
-          (0, r.jsx)(s.A, {
+              1 === g.length
+                  ? A.intl.formatToPlainString(A.t["Egq+G/"], { a: g[0].name })
+                  : 2 === g.length
+                    ? A.intl.formatToPlainString(A.t.LxU9R3, { a: g[0].name, b: g[1].name })
+                    : 3 === g.length
+                      ? A.intl.formatToPlainString(A.t.crKXMC, { a: g[0].name, b: g[1].name, c: g[2].name })
+                      : A.intl.string(A.t.MvfowF)),
+          (0, i.jsx)(s.A, {
               guild: n,
-              onDismissed: A,
+              onDismissed: m,
               message: t,
-              type: d.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
-              image: f,
+              type: u.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
+              image: h,
               onClick: () => {
-                  A(), o.A.open(n.id, d.BEX.INTEGRATIONS);
+                  m(), o.A.open(n.id, u.BEX.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,
-              cta: p.intl.string(p.t.Rr3MAe),
+              cta: A.intl.string(A.t.Rr3MAe),
           }));
 }

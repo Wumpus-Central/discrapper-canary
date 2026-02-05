@@ -1,72 +1,61 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(942381),
     s = n(602034),
     o = n(397927),
     l = n(850992),
-    c = n(151271),
-    u = n(64306);
+    u = n(151271),
+    c = n(64306);
 let d = i.forwardRef(function (e, t) {
     let {
             store: n,
             hasSendableExpressions: d,
-            onKeyDown: f,
-            gridNavigatorId: p,
-            expressionsListRef: _,
+            onKeyDown: _,
+            gridNavigatorId: f,
+            expressionsListRef: p,
             defaultSearchPlaceholder: h,
             emptySearchPlaceholder: m,
         } = e,
         g = i.useRef(null),
-        [E, b] = (0, c.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], a.x),
-        y = n.useStore((e) => e.searchPlaceholder),
-        O = n.useStore((e) => e.inspectedExpressionPosition, a.x),
-        A = i.useCallback(
+        [E, A] = (0, u.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], a.x),
+        I = n.useStore((e) => e.searchPlaceholder),
+        T = n.useStore((e) => e.inspectedExpressionPosition, a.x),
+        y = i.useCallback(
             (e) => {
-                var t;
                 n.setActiveCategoryIndex("" === e ? 0 : l.Uk),
                     n.setInspectedExpressionPosition(0, 0),
                     n.setSearchPlaceholder(null),
-                    (0, c.Ri)(e),
-                    null == (t = _.current) || t.scrollTo(0);
+                    (0, u.Ri)(e),
+                    p.current?.scrollTo(0);
             },
-            [_, n],
+            [p, n],
         ),
-        v = i.useCallback(() => {
-            (0, c.Ri)("");
+        S = i.useCallback(() => {
+            (0, u.Ri)("");
         }, []);
-    i.useImperativeHandle(t, () => ({
-        focus: () => {
-            var e;
-            return null == (e = g.current) ? void 0 : e.focus();
-        },
-    })),
+    i.useImperativeHandle(t, () => ({ focus: () => g.current?.focus() })),
         i.useLayoutEffect(() => {
-            if (b) {
-                var e;
-                null == (e = g.current) || e.focus();
-            }
-        }, [b]);
-    let S = () => (null != y ? y : d || null == m ? h : m);
+            A && g.current?.focus();
+        }, [A]);
+    let v = () => (null != I ? I : d || null == m ? h : m);
     return (0, r.jsx)("div", {
-        className: u.i,
+        className: c.i,
         children: (0, r.jsx)(o.IWV, {
             autoFocus: d,
             disabled: !d,
             query: E,
             ref: g,
-            placeholder: S(),
-            onClear: v,
-            onKeyDown: f,
-            onChange: A,
+            placeholder: v(),
+            onClear: S,
+            onKeyDown: _,
+            onChange: y,
             inputProps: {
                 "aria-haspopup": "grid",
-                "aria-controls": p,
+                "aria-controls": f,
                 "aria-expanded": !0,
-                "aria-activedescendant": (0, s.Aq)(p, O.columnIndex, O.rowIndex),
+                "aria-activedescendant": (0, s.Aq)(f, T.columnIndex, T.rowIndex),
             },
         }),
     });

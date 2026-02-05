@@ -1,19 +1,15 @@
-n.d(t, {
-    A: () => c,
-});
+n.d(t, { A: () => d });
 var a = n(627968),
-    l = n(311907),
+    s = n(311907),
     i = n(935154),
-    r = n(748319),
-    s = n(287809),
+    l = n(748319),
+    r = n(287809),
     o = n(427262);
-
-function c(e) {
-    var t;
-    let { nameplate: n } = e,
-        c = (0, l.bG)([s.default], () => s.default.getCurrentUser()),
-        d = null != (t = o.Ay.useName(c)) ? t : "";
-    return (0, a.jsx)(r.g, {
+function d(e) {
+    let { nameplate: t } = e,
+        n = (0, s.bG)([r.default], () => r.default.getCurrentUser()),
+        d = o.Ay.useName(n) ?? "";
+    return (0, a.jsx)(l.g, {
         username: d,
         selfMute: !1,
         selfDeaf: !1,
@@ -23,7 +19,7 @@ function c(e) {
         speaking: !1,
         streaming: !1,
         status: i.cl.ONLINE,
-        currentUser: c,
+        currentUser: n,
         activities: [],
         applicationStream: void 0,
         userTag: "",
@@ -32,13 +28,10 @@ function c(e) {
         speakingWhileMuted: !1,
         speakingWhilePTTInactive: !1,
         occluded: !1,
-        dismissibleContents: {
-            avatar: [],
-            settings: [],
-        },
+        dismissibleContents: { avatar: [], settings: [] },
         awaitingRemote: !1,
         isEligibleForPomelo: !1,
-        nameplate: n,
+        nameplate: t,
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,

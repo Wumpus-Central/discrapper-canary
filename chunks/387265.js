@@ -1,76 +1,66 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048),
-    n(321073);
+n.d(t, { A: () => c }), n(321073);
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(554146),
-    r = n(397927),
-    s = n(617617),
+    l = n(397927),
+    r = n(617617),
     o = n(256787),
-    c = n(20439);
-let d = l.memo(function (e) {
-    let { className: t, content: n, onChange: d } = e,
+    d = n(20439);
+let c = s.memo(function (e) {
+    let { className: t, content: n, onChange: c } = e,
         u = i.M[n],
-        { isDismissed: m, handleToggleDismissState: p } = (0, c.A)(u),
-        [h, f] = l.useState(!1),
-        x = l.useCallback(() => {
-            null == d || d(n), p();
-        }, [d, p, n]),
-        b = l.useCallback(
+        { isDismissed: m, handleToggleDismissState: h } = (0, d.A)(u),
+        [x, p] = s.useState(!1),
+        g = s.useCallback(() => {
+            c?.(n), h();
+        }, [c, h, n]),
+        _ = s.useCallback(
             (e) => {
-                e.preventDefault(), f(!0), navigator.clipboard.writeText(n.toLowerCase());
+                e.preventDefault(), p(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
             [n],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(r.BJc, {
+            (0, a.jsxs)(l.BJc, {
                 className: t,
                 direction: "horizontal",
                 align: "center",
                 children: [
-                    (0, a.jsx)(r.K0, {
+                    (0, a.jsx)(l.K0, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: h ? r.ODX : r.sjE,
-                        onClick: b,
-                        "aria-label": h ? "Copied" : "Copy",
+                        icon: x ? l.ODX : l.sjE,
+                        onClick: _,
+                        "aria-label": x ? "Copied" : "Copy",
                     }),
-                    (0, a.jsx)(r.dOG, {
-                        label: "".concat(n.toLowerCase(), " (").concat(i.M[n], ")"),
+                    (0, a.jsx)(l.dOG, {
+                        label: `${n.toLowerCase()} (${i.M[n]})`,
                         description: (0, o.Zm)(u)
                             ? (function (e) {
-                                  var t, n;
-                                  let a =
-                                      null == (n = s.A.settings.userContent) ||
-                                      null == (t = n.recurringDismissibleContentStates)
-                                          ? void 0
-                                          : t[e];
-                                  if (null == a) return null;
-                                  let l = [],
-                                      { lastDismissedVersion: i, lastDismissedAtMs: r, lastDismissedObjectId: o } = a;
+                                  let t = r.A.settings.userContent?.recurringDismissibleContentStates?.[e];
+                                  if (null == t) return null;
+                                  let n = [],
+                                      { lastDismissedVersion: a, lastDismissedAtMs: s, lastDismissedObjectId: i } = t;
                                   if (
-                                      (void 0 !== i && 0 !== i && l.push("last_dismissed_version: ".concat(i)),
-                                      void 0 !== r)
+                                      (void 0 !== a && 0 !== a && n.push(`last_dismissed_version: ${a}`), void 0 !== s)
                                   ) {
-                                      let e = Number(r),
+                                      let e = Number(s),
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
-                                      l.push("last_dismissed_at: ".concat(t));
+                                      n.push(`last_dismissed_at: ${t}`);
                                   }
-                                  return (void 0 !== o && "0" !== o && l.push("last_dismissed_object_id: ".concat(o)),
-                                  0 === l.length)
+                                  return (void 0 !== i && "0" !== i && n.push(`last_dismissed_object_id: ${i}`),
+                                  0 === n.length)
                                       ? null
-                                      : l.join(", ");
+                                      : n.join(", ");
                               })(u)
                             : null,
                         checked: m,
-                        onChange: x,
+                        onChange: g,
                     }),
                 ],
             }),
-            (0, a.jsx)(r.cGx, {}),
+            (0, a.jsx)(l.cGx, {}),
         ],
     });
 });

@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t, n) {
     let r = new n.constructor(n.toJS());
     return (
@@ -7,6 +8,4 @@ function r(e, t, n) {
         r
     );
 }
-n.d(t, {
-    K: () => r,
-});
+n.d(t, { K: () => r });

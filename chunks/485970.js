@@ -1,36 +1,31 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r = n(64700),
+n.d(t, { A: () => c });
+var i = n(64700),
     l = n(311907),
-    i = n(71393),
+    s = n(71393),
     a = n(403362),
-    s = n(645619),
+    r = n(645619),
     o = n(864310),
-    c = n(568065);
-
-function u(e, t) {
-    var n;
-    let u = (0, l.bG)([i.A], () => i.A.getGuild(e)),
-        d = (0, l.bG)([s.A], () => s.A.getStateForGuild(e)),
-        { spent: f } = (0, o.A)(e),
-        p = r.useMemo(() => {
-            if (null == t || t.type !== c.o9.LEVEL || null == d) return [];
-            let e = c.y7[t.skuId];
+    d = n(568065);
+function c(e, t) {
+    let n = (0, l.bG)([s.A], () => s.A.getGuild(e)),
+        c = (0, l.bG)([r.A], () => r.A.getStateForGuild(e)),
+        { spent: u } = (0, o.A)(e),
+        h = i.useMemo(() => {
+            if (null == t || t.type !== d.o9.LEVEL || null == c) return [];
+            let e = d.y7[t.skuId];
             return null == e
                 ? []
-                : Object.entries(c.wr)
+                : Object.entries(d.wr)
                       .filter((t) => {
-                          let [n, r] = t;
-                          return r === e && null != d.unlockedPowerups[n];
+                          let [n, i] = t;
+                          return i === e && null != c.unlockedPowerups[n];
                       })
                       .map((e) => {
                           let [t] = e;
-                          return d.allPowerups[t];
+                          return c.allPowerups[t];
                       })
                       .filter(a.Vq);
-        }, [t, d]),
-        h = null == p ? void 0 : p.reduce((e, t) => e + t.cost, 0);
-    return Math.max((null != (n = null == u ? void 0 : u.premiumSubscriberCount) ? n : 0) - f + (null != h ? h : 0), 0);
+        }, [t, c]),
+        A = h?.reduce((e, t) => e + t.cost, 0);
+    return Math.max((n?.premiumSubscriberCount ?? 0) - u + (A ?? 0), 0);
 }

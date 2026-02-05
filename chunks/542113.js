@@ -1,3 +1,4 @@
+"use strict";
 function r() {
     return (r = Object.assign
         ? Object.assign.bind()
@@ -9,6 +10,4 @@ function r() {
               return e;
           }).apply(null, arguments);
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

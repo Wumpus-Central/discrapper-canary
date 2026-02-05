@@ -1,8 +1,6 @@
-r.d(t, {
-    A: () => c,
-});
+"use strict";
+r.d(t, { A: () => c });
 var a = r(64700);
-
 function n(e, t) {
     return (n =
         Object.setPrototypeOf ||
@@ -47,14 +45,9 @@ var s = function (e) {
                         r = e.explicit,
                         a = e.onLoad;
                     window.grecaptcha.ready(function () {
-                        t.setState(
-                            {
-                                ready: !0,
-                            },
-                            function () {
-                                r || t.renderExplicitly(), a && a();
-                            },
-                        );
+                        t.setState({ ready: !0 }, function () {
+                            r || t.renderExplicitly(), a && a();
+                        });
                     });
                 }),
                 (t._renderRecaptcha = function (e, t) {
@@ -109,15 +102,9 @@ var s = function (e) {
                             isolated: t.state.invisible ? t.props.isolated : void 0,
                             hl: t.state.invisible ? void 0 : t.props.hl,
                         });
-                        t.setState(
-                            {
-                                instanceId: a,
-                                rendered: !0,
-                            },
-                            function () {
-                                t.props.onRender && t.props.onRender(), e();
-                            },
-                        );
+                        t.setState({ instanceId: a, rendered: !0 }, function () {
+                            t.props.onRender && t.props.onRender(), e();
+                        });
                     });
                 }),
                 (t.reset = function () {
@@ -168,26 +155,16 @@ var s = function (e) {
             n(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 var r = "invisible" === e.size;
-                return r !== t.invisible
-                    ? {
-                          invisible: r,
-                      }
-                    : null;
+                return r !== t.invisible ? { invisible: r } : null;
             }),
             (t.prototype.componentDidUpdate = function (e) {
                 var t = this;
                 i.reduce(function (r, a) {
                     return t.props[a] !== e[a] ? [].concat(r, [a]) : r;
                 }, []).length > 0 &&
-                    this.setState(
-                        {
-                            instanceKey: Date.now(),
-                            rendered: !1,
-                        },
-                        function () {
-                            t.props.explicit || t.renderExplicitly();
-                        },
-                    );
+                    this.setState({ instanceKey: Date.now(), rendered: !1 }, function () {
+                        t.props.explicit || t.renderExplicitly();
+                    });
             }),
             t
         );

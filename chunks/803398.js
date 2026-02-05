@@ -1,44 +1,34 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(77468),
-    l = n(974544),
-    c = n(736653),
-    u = n(351906),
-    d = n(985018);
-let f = () => {
-    let e = (0, a.bG)([u.A], () => u.A.hidePersonalInformation),
-        t = (0, c.Ay)();
-    return (i.useEffect(() => {
-        o.A.fetch();
+n.d(t, { A: () => h });
+var i = n(627968),
+    l = n(64700),
+    s = n(311907),
+    a = n(397927),
+    r = n(77468),
+    o = n(974544),
+    d = n(736653),
+    c = n(351906),
+    u = n(985018);
+let h = () => {
+    let e = (0, s.bG)([c.A], () => c.A.hidePersonalInformation),
+        t = (0, d.Ay)();
+    return (l.useEffect(() => {
+        r.A.fetch();
     }, []),
     e)
-        ? (0, r.jsx)(l.A, {})
-        : (0, r.jsxs)(s.BJc, {
+        ? (0, i.jsx)(o.A, {})
+        : (0, i.jsxs)(a.BJc, {
               gap: 16,
               children: [
-                  (0, r.jsx)(s.Heading, {
+                  (0, i.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
-                      children: d.intl.string(d.t["Ig/XFa"]),
+                      children: u.intl.string(u.t["Ig/XFa"]),
                   }),
-                  (0, r.jsxs)(s.ppr, {
+                  (0, i.jsxs)(a.ppr, {
                       theme: t,
                       children: [
-                          (0, r.jsx)(s.G8R, {
-                              darkSrc: n(289142),
-                              lightSrc: n(796614),
-                              width: 230,
-                              height: 220,
-                          }),
-                          (0, r.jsx)(s.SGT, {
-                              note: d.intl.string(d.t.WenGZ2),
-                              children: d.intl.string(d.t.aoLS84),
-                          }),
+                          (0, i.jsx)(a.G8R, { darkSrc: n(289142), lightSrc: n(796614), width: 230, height: 220 }),
+                          (0, i.jsx)(a.SGT, { note: u.intl.string(u.t.WenGZ2), children: u.intl.string(u.t.aoLS84) }),
                       ],
                   }),
               ],

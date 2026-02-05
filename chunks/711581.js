@@ -1,26 +1,12 @@
-n.d(e, {
-    NG: () => a,
-    Np: () => r,
-    QZ: () => i,
-});
-var l = n(73153);
-
-function r() {
-    l.h.dispatch({
-        type: "SPELLCHECK_TOGGLE",
-    });
+"use strict";
+s.d(e, { NG: () => r, Np: () => a, QZ: () => i });
+var n = s(73153);
+function a() {
+    n.h.dispatch({ type: "SPELLCHECK_TOGGLE" });
 }
-
-function a(t) {
-    l.h.dispatch({
-        type: "SPELLCHECK_LEARN_WORD",
-        word: t,
-    });
+function r(t) {
+    n.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: t });
 }
-
 function i(t) {
-    l.h.dispatch({
-        type: "SPELLCHECK_UNLEARN_WORD",
-        word: t,
-    });
+    n.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: t });
 }

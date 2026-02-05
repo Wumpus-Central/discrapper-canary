@@ -1,3 +1,4 @@
+"use strict";
 var t,
     n,
     r = Function.prototype.toString,
@@ -39,12 +40,12 @@ var a = /^\s*class\b/,
         }
     },
     l = Object.prototype.toString,
-    c = "[object Object]",
-    u = "[object Function]",
+    u = "[object Object]",
+    c = "[object Function]",
     d = "[object GeneratorFunction]",
-    f = "[object HTMLAllCollection]",
-    p = "[object HTML document.all class]",
-    _ = "[object HTMLCollection]",
+    _ = "[object HTMLAllCollection]",
+    f = "[object HTML document.all class]",
+    p = "[object HTMLCollection]",
     h = "function" == typeof Symbol && !!Symbol.toStringTag,
     m = !(0 in [,]),
     g = function () {
@@ -57,7 +58,7 @@ if ("object" == typeof document) {
             if ((m || !e) && (void 0 === e || "object" == typeof e))
                 try {
                     var t = l.call(e);
-                    return (t === f || t === p || t === _ || t === c) && null == e("");
+                    return (t === _ || t === f || t === p || t === u) && null == e("");
                 } catch (e) {}
             return !1;
         });
@@ -79,5 +80,5 @@ e.exports = i
           if (h) return o(e);
           if (s(e)) return !1;
           var t = l.call(e);
-          return (t === u || t === d || !!/^\[object HTML/.test(t)) && o(e);
+          return (t === c || t === d || !!/^\[object HTML/.test(t)) && o(e);
       };

@@ -1,107 +1,50 @@
-n.d(t, {
-    A: () => p,
-});
-var i = n(627968);
-n(64700);
-var a = n(397927),
-    l = n(73153),
-    r = n(847599),
-    o = n(308645),
-    s = n(239093);
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
+I.d(_, { A: () => P });
+var A = I(627968);
+I(64700);
+var S = I(397927),
+    T = I(73153),
+    C = I(847599),
+    O = I(308645),
+    N = I(239093);
+function R() {
+    e.success(), e.start_verification_check();
 }
-
-function d() {
-    u.success(), u.start_verification_check();
-}
-let u = {
-        open(e, t) {
-            (0, a.mMO)(
+let e = {
+        open(E, _) {
+            (0, S.mMO)(
                 async () => {
-                    l.h.dispatch({
-                        type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN",
-                    });
-                    let { default: t } = await n.e("9018").then(n.bind(n, 244321));
-                    return (n) =>
-                        (0, i.jsx)(
-                            t,
-                            c(
-                                {
-                                    classificationId: e,
-                                },
-                                n,
-                            ),
-                        );
+                    T.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+                    let { default: _ } = await I.e("9018").then(I.bind(I, 244321));
+                    return (I) => (0, A.jsx)(_, { classificationId: E, ...I });
                 },
-                {
-                    onCloseCallback: t,
-                },
+                { onCloseCallback: _ },
             );
         },
-        openV2(e, t) {
-            (0, a.mMO)(
+        openV2(E, _) {
+            (0, S.mMO)(
                 async () => {
-                    l.h.dispatch({
-                        type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN",
-                    });
-                    let { default: t } = await n.e("18128").then(n.bind(n, 767379));
-                    return (n) =>
-                        (0, i.jsx)(
-                            t,
-                            c(
-                                {
-                                    classificationId: e,
-                                    entryPoint: r.q1.AUTOMATED_UNDERAGE_APPEALS,
-                                    onComplete: d,
-                                },
-                                n,
-                            ),
-                        );
+                    T.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+                    let { default: _ } = await I.e("18128").then(I.bind(I, 767379));
+                    return (I) =>
+                        (0, A.jsx)(_, {
+                            classificationId: E,
+                            entryPoint: C.q1.AUTOMATED_UNDERAGE_APPEALS,
+                            onComplete: R,
+                            ...I,
+                        });
                 },
-                {
-                    onCloseCallback: t,
-                },
+                { onCloseCallback: _ },
             );
         },
         close() {
-            l.h.dispatch({
-                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE",
-            });
+            T.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
         },
         success() {
-            l.h.dispatch({
-                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS",
-            });
+            T.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
         },
         start_verification_check() {
-            l.h.dispatch({
-                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL",
-            }),
-                setTimeout(() => (0, o.d)(), s.wQ);
+            T.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }),
+                setTimeout(() => (0, O.d)(), N.wQ);
         },
     },
-    p = u;
+    P = e;

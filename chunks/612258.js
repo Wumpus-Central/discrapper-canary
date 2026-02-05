@@ -1,60 +1,24 @@
-n.d(t, {
-    A: () => u,
-});
-var l = n(627968),
-    r = n(64700),
-    i = n(620141),
-    a = n(966598),
-    s = n(224964),
+n.d(t, { A: () => d });
+var i = n(627968),
+    l = n(64700),
+    a = n(620141),
+    s = n(966598),
+    r = n(224964),
     o = n(31408);
-
 function c(e) {
     let { callTileRef: t, isFiring: n } = e,
-        l = (0, s.A)(),
-        i = (0, a.A)(t);
+        i = (0, r.A)(),
+        a = (0, s.A)(t);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             n &&
-                null != i &&
+                null != a &&
                 null != t &&
-                l.fire(i.x + t.clientWidth / 2, i.y + t.clientHeight / 2, {
-                    countMultiplier: 4,
-                });
-        }, [t, l, n, i]),
+                i.fire(a.x + t.clientWidth / 2, a.y + t.clientHeight / 2, { countMultiplier: 4 });
+        }, [t, i, n, a]),
         null
     );
 }
-
-function u(e) {
-    return (0, l.jsx)(i.A, {
-        confettiLocation: o.k.CALL_TILE,
-        children: (0, l.jsx)(
-            c,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        l = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (l = l.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        l.forEach(function (t) {
-                            var l;
-                            (l = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: l,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = l);
-                        });
-                }
-                return e;
-            })({}, e),
-        ),
-    });
+function d(e) {
+    return (0, i.jsx)(a.A, { confettiLocation: o.k.CALL_TILE, children: (0, i.jsx)(c, { ...e }) });
 }

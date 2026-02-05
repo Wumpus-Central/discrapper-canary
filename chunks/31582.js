@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Do: "placeholderPulse__27cc6",
     ce: "multiplePlaceholder__27cc6",

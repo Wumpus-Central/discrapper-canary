@@ -1,3 +1,4 @@
+"use strict";
 function t(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
@@ -11,17 +12,17 @@ e.exports = function (e, n, r, i) {
     i && "number" == typeof i.maxKeys && (o = i.maxKeys);
     var l = e.length;
     o > 0 && l > o && (l = o);
-    for (var c = 0; c < l; ++c) {
-        var u,
+    for (var u = 0; u < l; ++u) {
+        var c,
             d,
+            _,
             f,
-            p,
-            _ = e[c].replace(s, "%20"),
-            h = _.indexOf(r);
-        h >= 0 ? ((u = _.substr(0, h)), (d = _.substr(h + 1))) : ((u = _), (d = "")),
-            (f = decodeURIComponent(u)),
-            (p = decodeURIComponent(d)),
-            t(a, f) ? (Array.isArray(a[f]) ? a[f].push(p) : (a[f] = [a[f], p])) : (a[f] = p);
+            p = e[u].replace(s, "%20"),
+            h = p.indexOf(r);
+        h >= 0 ? ((c = p.substr(0, h)), (d = p.substr(h + 1))) : ((c = p), (d = "")),
+            (_ = decodeURIComponent(c)),
+            (f = decodeURIComponent(d)),
+            t(a, _) ? (Array.isArray(a[_]) ? a[_].push(f) : (a[_] = [a[_], f])) : (a[_] = f);
     }
     return a;
 };

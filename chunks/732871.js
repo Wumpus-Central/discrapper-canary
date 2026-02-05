@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(615339),
     i = n(476858),
     a = n(355418),
@@ -10,27 +9,27 @@ let o = RegExp(
         "i",
     ),
     l = 1,
-    c = 2,
-    u = 3;
+    u = 2,
+    c = 3;
 class d extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[c].toLowerCase(),
+        let n = t[u].toLowerCase(),
             i = r.CV[n],
             a = t[l],
-            o = t[u],
+            o = t[c],
             d = a || o;
         d = (d = d || "").toLowerCase();
-        let f = null;
+        let _ = null;
         return (
             "ultima" == d || "scorsa" == d
-                ? (f = "ultima")
+                ? (_ = "ultima")
                 : "prossima" == d
-                  ? (f = "prossima")
-                  : "questa" == d && (f = "questa"),
-            (0, s.Y5)(e.reference, i, f)
+                  ? (_ = "prossima")
+                  : "questa" == d && (_ = "questa"),
+            (0, s.Y5)(e.reference, i, _)
         );
     }
 }

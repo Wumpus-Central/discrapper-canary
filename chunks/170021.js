@@ -1,15 +1,13 @@
-i.d(e, {
-    H: () => o,
-});
+i.d(e, { H: () => o });
 var n = i(864145),
     l = i(419954),
     s = i(824744),
     r = i(253932),
-    u = i(780964),
-    a = i(985018);
-let o = (0, l.sN)(u.X.SOUNDMOJI_VOLUME_SETTING, {
-    useTitle: () => a.intl.string(a.t["2JbvKw"]),
-    useSubtitle: () => a.intl.string(a.t.INenzY),
+    a = i(780964),
+    u = i(985018);
+let o = (0, l.sN)(a.X.SOUNDMOJI_VOLUME_SETTING, {
+    useTitle: () => u.intl.string(u.t["2JbvKw"]),
+    useSubtitle: () => u.intl.string(u.t.INenzY),
     setValue: function (t) {
         let e = (0, s.w)(t);
         r.HO.updateSetting(e);
@@ -21,11 +19,9 @@ let o = (0, l.sN)(u.X.SOUNDMOJI_VOLUME_SETTING, {
         return (0, s.M)(t);
     },
     onValueRender: function (t) {
-        return "".concat(t.toFixed(0), "%");
+        return `${t.toFixed(0)}%`;
     },
     usePredicate: function () {
-        return (0, n.X9)({
-            location: "SoundmojiVolumeSetting",
-        });
+        return (0, n.X9)({ location: "SoundmojiVolumeSetting" });
     },
 });

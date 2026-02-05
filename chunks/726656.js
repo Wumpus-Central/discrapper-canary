@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -17,11 +16,7 @@ let s = function (e) {
                 height: 20,
                 color: i.LU0.colors.TEXT_FEEDBACK_WARNING,
             }),
-            (0, r.jsx)(i.Text, {
-                variant: "text-sm/normal",
-                color: "text-muted",
-                children: t,
-            }),
+            (0, r.jsx)(i.Text, { variant: "text-sm/normal", color: "text-muted", children: t }),
         ],
     });
 };

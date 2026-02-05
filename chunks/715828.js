@@ -1,26 +1,18 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
+"use strict";
+function r(e) {
     return "row" === e.type;
 }
-n.d(t, {
-    A: () => s,
-    o: () => i,
-}),
-    n(321073);
-class a {
+n.d(t, { A: () => a, o: () => r }), n(321073);
+class i {
+    sectionHeight = 0;
+    rowHeight = 0;
+    footerHeight = 0;
+    listHeaderHeight = 0;
+    uniform = !1;
+    paddingBottom = 0;
+    paddingTop = 0;
+    sections = [];
+    getAnchorId = () => void 0;
     mergeProps(e) {
         let {
             sectionHeight: t,
@@ -40,7 +32,7 @@ class a {
             (this.uniform = "number" == typeof n),
             (this.paddingTop = a),
             (this.paddingBottom = s),
-            (this.getAnchorId = null != l ? l : this.getAnchorId);
+            (this.getAnchorId = l ?? this.getAnchorId);
     }
     getHeight() {
         let e = this.paddingTop + this.getListHeaderHeight(),
@@ -76,12 +68,7 @@ class a {
             s = 0,
             o = [],
             l = (a) => (((i = n), (n += a) < e) ? ((r += a), !1) : !(i > t));
-        l(this.getListHeaderHeight()) &&
-            o.push({
-                type: "header",
-                section: -1,
-                offsetTop: i,
-            });
+        l(this.getListHeaderHeight()) && o.push({ type: "header", section: -1, offsetTop: i });
         for (let e = 0; e < this.sections.length; e++) {
             let t = this.sections[e];
             if (0 !== t) {
@@ -125,19 +112,10 @@ class a {
                             }),
                             (a += 1),
                             (s += 1);
-                l(this.getHeightForFooter(e)) &&
-                    o.push({
-                        type: "footer",
-                        section: e,
-                        offsetTop: i,
-                    });
+                l(this.getHeightForFooter(e)) && o.push({ type: "footer", section: e, offsetTop: i });
             }
         }
-        return {
-            spacerTop: r,
-            totalHeight: n + this.paddingBottom,
-            items: o,
-        };
+        return { spacerTop: r, totalHeight: n + this.paddingBottom, items: o };
     }
     computeScrollPosition(e, t) {
         let { paddingTop: n } = this,
@@ -168,16 +146,5 @@ class a {
         }
         return [r, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(i)];
     }
-    constructor() {
-        r(this, "sectionHeight", 0),
-            r(this, "rowHeight", 0),
-            r(this, "footerHeight", 0),
-            r(this, "listHeaderHeight", 0),
-            r(this, "uniform", !1),
-            r(this, "paddingBottom", 0),
-            r(this, "paddingTop", 0),
-            r(this, "sections", []),
-            r(this, "getAnchorId", () => void 0);
-    }
 }
-let s = a;
+let a = i;

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(257943),
     i = n(516549),
     a = n(4940),
@@ -9,6 +10,6 @@ t.f =
         ? Object.defineProperties
         : function (e, t) {
               s(e);
-              for (var n, r = o(t), i = l(t), c = i.length, u = 0; c > u; ) a.f(e, (n = i[u++]), r[n]);
+              for (var n, r = o(t), i = l(t), u = i.length, c = 0; u > c; ) a.f(e, (n = i[c++]), r[n]);
               return e;
           };

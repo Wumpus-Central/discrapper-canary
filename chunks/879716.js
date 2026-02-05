@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     k$: "animationWrapper_e8d31f",
     VC: "clickZone_e8d31f",

@@ -1,308 +1,222 @@
-n.d(t, {
-    A: () => V,
-}),
-    n(896048),
-    n(667532),
-    n(321073);
-var r = n(627968),
+n.d(t, { A: () => B }), n(667532), n(321073);
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(311907),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
     o = n(451988),
-    c = n(717558),
-    u = n(933958),
-    d = n(627363),
-    p = n(429913),
-    h = n(313961),
-    f = n(532622),
-    g = n(140547),
-    m = n(242919),
-    b = n(7054),
-    A = n(220995),
-    y = n(582904),
-    _ = n(551826),
-    O = n(159426),
-    j = n(25528),
-    v = n(530804),
-    x = n(481947),
-    E = n(616356),
-    C = n(961350),
-    S = n(696451),
-    I = n(430452),
-    N = n(576705),
-    T = n(290863),
-    P = n(528767),
-    w = n(485296),
-    R = n(977997),
-    D = n(427262),
-    M = n(340851),
-    L = n(652215),
-    k = n(31408),
-    G = n(50314);
-let U = l.memo((e) => {
-    var t, n, l, i;
-    let { mute: s, deaf: o, user: A, channel: y, sessionId: x, nick: N } = e,
-        T = A.id,
-        G = (0, a.bG)([C.default], () => C.default.getId() === T, [T]),
-        [U, B, V] = (0, a.yK)(
-            [I.A],
+    d = n(717558),
+    c = n(933958),
+    u = n(627363),
+    h = n(429913),
+    A = n(313961),
+    g = n(532622),
+    m = n(140547),
+    p = n(242919),
+    _ = n(7054),
+    x = n(220995),
+    f = n(582904),
+    E = n(551826),
+    C = n(159426),
+    I = n(25528),
+    S = n(530804),
+    b = n(481947),
+    N = n(616356),
+    T = n(961350),
+    j = n(696451),
+    v = n(430452),
+    y = n(576705),
+    R = n(290863),
+    O = n(528767),
+    L = n(485296),
+    D = n(977997),
+    M = n(427262),
+    G = n(340851),
+    U = n(652215),
+    P = n(31408),
+    k = n(50314);
+let w = l.memo((e) => {
+    let { mute: t, deaf: n, user: l, channel: s, sessionId: a, nick: o } = e,
+        x = l.id,
+        f = (0, r.bG)([T.default], () => T.default.getId() === x, [x]),
+        [b, y, R] = (0, r.yK)(
+            [v.A],
             () =>
-                G
-                    ? [!I.A.isSupported() || I.A.isSelfMute() || I.A.isSelfMutedTemporarily(), I.A.isSelfDeaf(), !1]
-                    : [!I.A.isSupported() || I.A.isLocalMute(T), !1, I.A.isLocalVideoDisabled(T)],
-            [G, T],
+                f
+                    ? [!v.A.isSupported() || v.A.isSelfMute() || v.A.isSelfMutedTemporarily(), v.A.isSelfDeaf(), !1]
+                    : [!v.A.isSupported() || v.A.isLocalMute(x), !1, v.A.isLocalVideoDisabled(x)],
+            [f, x],
         ),
-        F = (0, a.bG)([w.A], () => w.A.isPrioritySpeaker(T)),
-        H = (0, c.A)({
-            userId: T,
-            checkSoundSharing: !0,
-        }),
-        K = (0, a.bG)([w.A], () => w.A.isCurrentUserPTTLatched()),
-        W = G && K,
-        z = (0, a.bG)([S.Ay], () => S.Ay.isGuestOrLurker(y.guild_id, T)),
-        Y = (0, a.bG)([h.A], () => h.A.getGuildRingingUsers(y.id).has(T)),
-        q = (0, a.bG)(
-            [u.Ay],
+        k = (0, r.bG)([L.A], () => L.A.isPrioritySpeaker(x)),
+        w = (0, d.A)({ userId: x, checkSoundSharing: !0 }),
+        V = (0, r.bG)([L.A], () => L.A.isCurrentUserPTTLatched()),
+        B = f && V,
+        H = (0, r.bG)([j.Ay], () => j.Ay.isGuestOrLurker(s.guild_id, x)),
+        F = (0, r.bG)([A.A], () => A.A.getGuildRingingUsers(s.id).has(x)),
+        Y = (0, r.bG)(
+            [c.Ay],
             () =>
-                u.Ay.getEmbeddedActivitiesForChannel(y.id).find((e) => {
+                c.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
                     let { userIds: t } = e;
-                    return t.has(T);
+                    return t.has(x);
                 }),
-            [T, y.id],
+            [x, s.id],
         ),
-        X = (0, p.A)(null != q ? [q.applicationId] : []),
-        J = (0, j.A)(T, y.guild_id)[0],
-        Q = null != (t = (0, d.YY)(null == J ? void 0 : J.application_id).data) ? t : void 0,
-        [Z, $] = (0, a.yK)(
-            [E.A],
-            () => [E.A.getStreamForUser(T, y.getGuildId()), E.A.getActiveStreamForUser(T, y.getGuildId())],
-            [y, T],
+        W = (0, h.A)(null != Y ? [Y.applicationId] : []),
+        K = (0, I.A)(x, s.guild_id)[0],
+        z = (0, u.YY)(K?.application_id).data ?? void 0,
+        [X, q] = (0, r.yK)(
+            [N.A],
+            () => [N.A.getStreamForUser(x, s.getGuildId()), N.A.getActiveStreamForUser(x, s.getGuildId())],
+            [s, x],
         ),
-        ee = (0, a.bG)([P.A], () => P.A.getSessionById(x)),
-        et = D.Ay.useName(A),
-        en = (0, a.bG)([R.A], () => R.A.getVoicePlatformForChannel(y.id, T), [y.id, T]),
-        { enableHangStatus: er } = (0, g.$j)({
-            guildId: y.guild_id,
-            location: "VoiceUsers",
+        J = (0, r.bG)([O.A], () => O.A.getSessionById(a)),
+        Q = M.Ay.useName(l),
+        Z = (0, r.bG)([D.A], () => D.A.getVoicePlatformForChannel(s.id, x), [s.id, x]),
+        { enableHangStatus: $ } = (0, m.$j)({ guildId: s.guild_id, location: "VoiceUsers" }),
+        ee = (0, g.Ay)(s, !0, l),
+        et = (0, r.bG)([p.A], () => (f ? p.A.getHangStatusActivity() : null), [f]),
+        en = (0, _.h)(x),
+        ei = (0, S.uy)(s.id, x),
+        { enableVCStatusIcons: el, enableRequestToStream: es } = C.m.useExperiment(
+            { guildId: s.guild_id, location: "VoiceUsers" },
+            { autoTrackExposure: K?.session_id != null },
+        ),
+        ea = el || $;
+    return (0, i.jsx)(E.A, {
+        shakeLocation: P.uD.VOICE_USER,
+        isShaking: w,
+        children: (0, i.jsx)(G.Ay, {
+            ...e,
+            nick: o ?? Q,
+            canDrag: e.canDrag && !H,
+            disconnected: ei,
+            otherClientSessionType: J?.clientInfo?.os,
+            voicePlatform: Z,
+            localMute: b && !f,
+            localVideoDisabled: R,
+            mute: t || b,
+            deaf: n || y,
+            speaking: w,
+            latched: B,
+            ringing: F,
+            priority: k,
+            embeddedApplication: W[0],
+            isStreaming: null != X && X.channelId === s.id,
+            isWatching: null != q && q.state !== U.XYD.ENDED,
+            isGuest: H,
+            isSelf: f,
+            requestToStreamActivity: es ? K : void 0,
+            application: ea && K?.session_id != null ? z : void 0,
+            showHangStatus: ee && $ && (f || null != en),
+            hangStatusActivity: f ? et : en,
         }),
-        el = (0, f.Ay)(y, !0, A),
-        ei = (0, a.bG)([m.A], () => (G ? m.A.getHangStatusActivity() : null), [G]),
-        es = (0, b.h)(T),
-        ea = (0, v.uy)(y.id, T),
-        { enableVCStatusIcons: eo, enableRequestToStream: ec } = O.m.useExperiment(
-            {
-                guildId: y.guild_id,
-                location: "VoiceUsers",
-            },
-            {
-                autoTrackExposure: (null == J ? void 0 : J.session_id) != null,
-            },
-        );
-    return (0, r.jsx)(_.A, {
-        shakeLocation: k.uD.VOICE_USER,
-        isShaking: H,
-        children: (0, r.jsx)(
-            M.Ay,
-            ((l = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })({}, e)),
-            (i = i =
-                {
-                    nick: null != N ? N : et,
-                    canDrag: e.canDrag && !z,
-                    disconnected: ea,
-                    otherClientSessionType: null == ee || null == (n = ee.clientInfo) ? void 0 : n.os,
-                    voicePlatform: en,
-                    localMute: U && !G,
-                    localVideoDisabled: V,
-                    mute: s || U,
-                    deaf: o || B,
-                    speaking: H,
-                    latched: W,
-                    ringing: Y,
-                    priority: F,
-                    embeddedApplication: X[0],
-                    isStreaming: null != Z && Z.channelId === y.id,
-                    isWatching: null != $ && $.state !== L.XYD.ENDED,
-                    isGuest: z,
-                    isSelf: G,
-                    requestToStreamActivity: ec ? J : void 0,
-                    application: (eo || er) && (null == J ? void 0 : J.session_id) != null ? Q : void 0,
-                    showHangStatus: el && er && (G || null != es),
-                    hangStatusActivity: G ? ei : es,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(i)).forEach(function (e) {
-                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                  }),
-            l),
-        ),
     });
 });
-U.displayName = "ConnectedVoiceUser";
-let B = [],
-    V = function (e) {
+w.displayName = "ConnectedVoiceUser";
+let V = [],
+    B = function (e) {
         let {
                 allowPreviews: t = !0,
                 allowDragging: n = !0,
-                channel: i,
-                voiceStates: c,
-                collapsed: u,
-                collapsedMax: d = 6,
-                tabIndex: f,
-                location: g,
-                numAudience: m,
-                withGuildIcon: b = !1,
-                className: _,
-                children: O,
-                isThread: j = !1,
+                channel: s,
+                voiceStates: d,
+                collapsed: c,
+                collapsedMax: u = 6,
+                tabIndex: g,
+                location: m,
+                numAudience: p,
+                withGuildIcon: _ = !1,
+                className: E,
+                children: C,
+                isThread: I = !1,
             } = e,
-            [E, S] = l.useState(null),
-            [I, P] = l.useState(!1),
-            w = l.useRef(null),
-            R = (0, v.$n)(i.id, null != c ? c : B),
-            { shouldShow: D, dismiss: k } = (0, y.Z0)(i, {
-                collapsed: u,
-            }),
-            V = l.useRef(
+            [N, j] = l.useState(null),
+            [v, O] = l.useState(!1),
+            L = l.useRef(null),
+            D = (0, S.$n)(s.id, d ?? V),
+            { shouldShow: M, dismiss: P } = (0, f.Z0)(s, { collapsed: c }),
+            B = l.useRef(
                 new o.J_(50, () => {
-                    S(w.current), (w.current = null);
+                    j(L.current), (L.current = null);
                 }),
             ),
-            F = l.useRef(
+            H = l.useRef(
                 new o.J_(175, () => {
-                    S(null);
+                    j(null);
                 }),
             ),
-            H = l.useCallback(
+            F = l.useCallback(
                 (e) => {
-                    t && (P(!0), F.current.cancel(), (w.current = e), V.current.delay());
+                    t && (O(!0), H.current.cancel(), (L.current = e), B.current.delay());
                 },
                 [t],
             ),
-            K = l.useCallback(
+            Y = l.useCallback(
                 (e) => {
-                    t && (V.current.cancel(), (w.current = null), P(!1), F.current.delay());
+                    t && (B.current.cancel(), (L.current = null), O(!1), H.current.delay());
                 },
                 [t],
             ),
-            W = (0, a.yK)([T.A], () => {
-                if (u) return [];
+            W = (0, r.yK)([R.A], () => {
+                if (c) return [];
                 let e = new Set();
                 return (
-                    null == R ||
-                        R.forEach((t) => {
-                            let { user: n } = t;
-                            T.A.getActivities(n.id, i.guild_id).forEach((t) => {
-                                null != t.application_id && e.add(t.application_id);
-                            });
-                        }),
+                    D?.forEach((t) => {
+                        let { user: n } = t;
+                        R.A.getActivities(n.id, s.guild_id).forEach((t) => {
+                            null != t.application_id && e.add(t.application_id);
+                        });
+                    }),
                     Array.from(e)
                 );
             });
-        (0, p.A)(W);
-        let z = (() => {
-            if (null == R || 0 === R.length) return null;
-            let e = u && R.length > d + 1 ? R.slice(0, d) : R,
-                t = h.A.getGuildRingingUsers(i.id),
+        (0, h.A)(W);
+        let K = (() => {
+            if (null == D || 0 === D.length) return null;
+            let e = c && D.length > u + 1 ? D.slice(0, u) : D,
+                t = A.A.getGuildRingingUsers(s.id),
                 l = e.map((e) => {
-                    var l;
-                    let { user: s, nick: a, voiceState: o } = e,
-                        c = t.has(s.id);
-                    return (0, r.jsx)(
-                        U,
+                    let { user: l, nick: a, voiceState: r } = e,
+                        o = t.has(l.id);
+                    return (0, i.jsx)(
+                        w,
                         {
-                            user: s,
+                            user: l,
                             nick: a,
-                            isSelfOnOtherClient: C.default.getId() === s.id && o.sessionId !== C.default.getSessionId(),
-                            mute: o.isVoiceMuted(),
-                            deaf: o.isVoiceDeafened(),
-                            video: o.selfVideo,
-                            serverMute: o.mute,
-                            serverDeaf: o.deaf,
-                            sessionId: null != (l = o.sessionId) ? l : "",
-                            channel: i,
-                            collapsed: u,
-                            canDrag: n && N.A.can(L.xBc.MOVE_MEMBERS, i),
-                            showPreview: H,
-                            hidePreview: K,
-                            previewIsOpen: I,
-                            shouldShowHoverPopout: E === s.id,
-                            tabIndex: f,
-                            location: g,
+                            isSelfOnOtherClient: T.default.getId() === l.id && r.sessionId !== T.default.getSessionId(),
+                            mute: r.isVoiceMuted(),
+                            deaf: r.isVoiceDeafened(),
+                            video: r.selfVideo,
+                            serverMute: r.mute,
+                            serverDeaf: r.deaf,
+                            sessionId: r.sessionId ?? "",
+                            channel: s,
+                            collapsed: c,
+                            canDrag: n && y.A.can(U.xBc.MOVE_MEMBERS, s),
+                            showPreview: F,
+                            hidePreview: Y,
+                            previewIsOpen: v,
+                            shouldShowHoverPopout: N === l.id,
+                            tabIndex: g,
+                            location: m,
                         },
-                        "voice-user-".concat(s.id, "-").concat(c),
+                        `voice-user-${l.id}-${o}`,
                     );
                 });
             return (
-                D &&
-                    l.unshift(
-                        (0, r.jsx)(
-                            A.p,
-                            {
-                                channel: i,
-                                onClose: k,
-                            },
-                            "voice-invite-suggestions-button",
-                        ),
-                    ),
-                null != m && m > 0
-                    ? l.push(
-                          (0, r.jsx)(M.aI, {
-                              collapsed: u,
-                              numAudience: m,
-                          }),
-                      )
-                    : u &&
-                      R.length > d + 1 &&
-                      l.push(
-                          (0, r.jsx)(M.LR, {
-                              numUsers: R.length - d,
-                          }),
-                      ),
+                M && l.unshift((0, i.jsx)(x.p, { channel: s, onClose: P }, "voice-invite-suggestions-button")),
+                null != p && p > 0
+                    ? l.push((0, i.jsx)(G.aI, { collapsed: c, numAudience: p }))
+                    : c && D.length > u + 1 && l.push((0, i.jsx)(G.LR, { numUsers: D.length - u })),
                 l
             );
         })();
-        return null == z && null == O
+        return null == K && null == C
             ? null
-            : (0, r.jsxs)(x.Wr, {
-                  className: s()(_, G.p_, {
-                      [G.yZ]: u,
-                      [G.lY]: b,
-                      [G.fT]: j,
-                  }),
-                  collapsed: u,
-                  children: [z, O],
+            : (0, i.jsxs)(b.Wr, {
+                  className: a()(E, k.p_, { [k.yZ]: c, [k.lY]: _, [k.fT]: I }),
+                  collapsed: c,
+                  children: [K, C],
               });
     };

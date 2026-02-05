@@ -1,80 +1,40 @@
-n.d(t, {
-    a: () => s,
-});
-var r = n(627968);
+n.d(t, { a: () => s });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(587895),
-    a = n(851907);
-
+var r = n(397927),
+    a = n(587895),
+    l = n(851907);
 function s(e) {
-    let { applicationId: t, customId: s, linkId: o, message: c, onShare: u } = e,
-        d = l.A.getApplication(t);
-    if (null == d) return void u(!1, !1);
-    let p =
-            null !=
-            (0, a.LU)({
-                applicationId: d.id,
-            })
-                ? i.KX8
-                : i.SYi,
-        f = !1;
-
-    function h(e) {
-        u(e, f);
+    let { applicationId: t, customId: s, linkId: o, message: d, onShare: c } = e,
+        u = a.A.getApplication(t);
+    if (null == u) return void c(!1, !1);
+    let A = null != (0, l.LU)({ applicationId: u.id }) ? r.KX8 : r.SYi,
+        h = !1;
+    function _(e) {
+        c(e, h);
     }
-
-    function A() {
-        f = !0;
+    function m() {
+        h = !0;
     }
-    (0, i.mMO)(
+    (0, r.mMO)(
         async () => {
             let { default: e } = await n.e("48587").then(n.bind(n, 824774));
             return (n) =>
-                (0, r.jsx)(
-                    e,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            applicationId: t,
-                            customId: s,
-                            linkId: o,
-                            message: c,
-                            onCopyLink: A,
-                            onShare: h,
-                        },
-                        n,
-                    ),
-                );
+                (0, i.jsx)(e, {
+                    applicationId: t,
+                    customId: s,
+                    linkId: o,
+                    message: d,
+                    onCopyLink: m,
+                    onShare: _,
+                    ...n,
+                });
         },
         {
             modalKey: "activity-share-moment-modal",
-            contextKey: p,
+            contextKey: A,
             onCloseCallback: () => {
-                u(!1, f);
+                c(!1, h);
             },
         },
     );

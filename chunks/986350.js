@@ -1,51 +1,27 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var l = n(397927),
     a = n(29352),
-    s = n(652215),
-    o = n(985018),
-    l = n(144365);
-
-function c(e) {
-    var t;
-    let n,
-        { message: c, onDeleteMessage: u, children: d } = e,
-        f = null == (t = c.interactionMetadata) ? void 0 : t.ephemerality_reason,
-        p = () => u(c, !0);
-    if (null != f) {
-        let e = (0, a.R)(f);
-        n = (0, r.jsx)("div", {
-            className: l.rd,
-            children: o.intl.format(o.t.wx1tLQ, {
-                handleDelete: p,
-                reason: e,
-            }),
-        });
+    r = n(652215),
+    s = n(985018),
+    o = n(144365);
+function d(e) {
+    let t,
+        { message: n, onDeleteMessage: d, children: c } = e,
+        u = n.interactionMetadata?.ephemerality_reason,
+        m = () => d(n, !0);
+    if (null != u) {
+        let e = (0, a.R)(u);
+        t = (0, i.jsx)("div", { className: o.rd, children: s.intl.format(s.t.wx1tLQ, { handleDelete: m, reason: e }) });
     } else
-        n =
-            c.type === s.lAJ.STAGE_RAISE_HAND
-                ? o.intl.format(o.t["qDAX++"], {
-                      handleDelete: p,
-                  })
-                : o.intl.format(o.t.uX3ecL, {
-                      count: 1,
-                      countMessages: 1,
-                      handleDelete: p,
-                  });
-    return (0, r.jsxs)("div", {
-        className: l.XO,
+        t =
+            n.type === r.lAJ.STAGE_RAISE_HAND
+                ? s.intl.format(s.t["qDAX++"], { handleDelete: m })
+                : s.intl.format(s.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: m });
+    return (0, i.jsxs)("div", {
+        className: o.XO,
         onClick: (e) => e.stopPropagation(),
-        children: [
-            (0, r.jsx)(i.bMW, {
-                size: "xs",
-                color: "currentColor",
-                className: l.Kk,
-            }),
-            n,
-            d,
-        ],
+        children: [(0, i.jsx)(l.bMW, { size: "xs", color: "currentColor", className: o.Kk }), t, c],
     });
 }

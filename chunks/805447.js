@@ -1,12 +1,10 @@
-n.d(t, {
-    l: () => l,
-});
+"use strict";
+n.d(t, { l: () => l });
 var r = n(885714),
     i = n(297987),
     a = n(241827),
     s = n(17118),
     o = n(401705);
-
 function l(e) {
     let t = (0, i.TW)(e),
         n = (0, a.bq)(t);

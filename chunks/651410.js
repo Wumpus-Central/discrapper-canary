@@ -1,75 +1,64 @@
-l.d(s, {
-    default: () => f,
-});
+l.d(s, { default: () => j });
 var t = l(627968),
     a = l(64700),
-    i = l(789645),
-    d = l(732955),
-    r = l(397927),
-    n = l(688810),
+    r = l(789645),
+    i = l(732955),
+    n = l(397927),
+    d = l(688810),
     c = l(590180),
-    u = l(379177),
-    o = l(102666),
+    o = l(379177),
+    u = l(102666),
     x = l(751304),
     h = l(561769),
     b = l(758836),
-    p = l(985018),
-    j = l(477920);
-let f = (e) => {
-    let { analyticsLocations: s, transitionState: l, onClose: f } = e,
-        m = (0, u.eJ)("CollectiblesRentalsModal"),
-        v = a.useMemo(() => b.Vk.map((e) => c.A.getProduct(e)).filter((e) => null != e), []),
-        g = (0, o.m)(v);
-    return (0, t.jsx)(n.f5, {
+    _ = l(985018),
+    p = l(477920);
+let j = (e) => {
+    let { analyticsLocations: s, transitionState: l, onClose: j } = e,
+        m = (0, o.eJ)("CollectiblesRentalsModal"),
+        g = a.useMemo(() => b.Vk.map((e) => c.A.getProduct(e)).filter((e) => null != e), []),
+        v = (0, u.m)(g);
+    return (0, t.jsx)(d.f5, {
         value: s,
-        children: (0, t.jsx)(d.dWK, {
+        children: (0, t.jsx)(i.dWK, {
             size: "xl",
-            onClose: f,
+            onClose: j,
             transitionState: l,
             children: (0, t.jsxs)("div", {
-                className: j.yl,
+                className: p.yl,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: j.wx,
+                        className: p.wx,
                         children: [
                             (0, t.jsxs)("div", {
-                                className: j.gn,
+                                className: p.gn,
                                 children: [
-                                    (0, t.jsx)(r.Heading, {
+                                    (0, t.jsx)(n.Heading, {
                                         variant: "heading-xl/bold",
-                                        children: p.intl.string(p.t.bfXHLB),
+                                        children: _.intl.string(_.t.bfXHLB),
                                     }),
-                                    (0, t.jsx)(r.LpS, {
-                                        text: p.intl.string(p.t.oW0eUd),
-                                        disableColor: !0,
-                                    }),
+                                    (0, t.jsx)(n.LpS, { text: _.intl.string(_.t.oW0eUd), disableColor: !0 }),
                                 ],
                             }),
                             (0, t.jsx)("button", {
-                                className: j.b,
-                                onClick: f,
-                                "aria-label": p.intl.string(p.t.cpT0Cq),
-                                children: (0, t.jsx)(i.P, {}),
+                                className: p.b,
+                                onClick: j,
+                                "aria-label": _.intl.string(_.t.cpT0Cq),
+                                children: (0, t.jsx)(r.P, {}),
                             }),
                         ],
                     }),
-                    (0, t.jsx)(r.T7Y, {
-                        className: j.XG,
+                    (0, t.jsx)(n.T7Y, {
+                        className: p.XG,
                         children: (0, t.jsx)("div", {
-                            className: j.Vg,
+                            className: p.Vg,
                             children: (0, t.jsx)(h.v3.Provider, {
-                                value: {
-                                    rentalDuration: m,
-                                    flattenProductVariants: !0,
-                                },
-                                children: g.map((e) =>
+                                value: { rentalDuration: m, flattenProductVariants: !0 },
+                                children: v.map((e) =>
                                     (0, t.jsx)(
                                         x.A,
-                                        {
-                                            skuId: null == e ? void 0 : e.skuId,
-                                            prioritizedCurrency: h.Hi.ORBS,
-                                        },
-                                        "rental_inner_".concat(e.skuId),
+                                        { skuId: e?.skuId, prioritizedCurrency: h.Hi.ORBS },
+                                        `rental_inner_${e.skuId}`,
                                     ),
                                 ),
                             }),

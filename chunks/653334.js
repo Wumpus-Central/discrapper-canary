@@ -1,20 +1,11 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n(896048);
-class i {
-    getConsoleArgs(e, t) {
-        return ["".concat(i.getDateTimeString(), " ").concat(this.name, ": ").concat(e), ...t];
+"use strict";
+class e {
+    name;
+    constructor(e) {
+        this.name = e;
+    }
+    getConsoleArgs(t, n) {
+        return [`${e.getDateTimeString()} ${this.name}: ${t}`, ...n];
     }
     log(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
@@ -34,8 +25,5 @@ class i {
     }
     static getDateTimeString() {
         return new Date().toISOString();
-    }
-    constructor(e) {
-        r(this, "name", void 0), (this.name = e);
     }
 }

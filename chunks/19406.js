@@ -1,11 +1,8 @@
-var o = t(877020);
-self.addEventListener("message", (e) => {
+var o = e(877020);
+self.addEventListener("message", (r) => {
     let {
-            data: { id: r, placeholderData: t },
-        } = e,
-        a = (0, o.H)(t);
-    self.postMessage({
-        png: a,
-        id: r,
-    });
+            data: { id: t, placeholderData: e },
+        } = r,
+        n = (0, o.H)(e);
+    self.postMessage({ png: n, id: t });
 });

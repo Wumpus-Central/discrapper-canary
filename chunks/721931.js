@@ -1,28 +1,25 @@
-n.d(t, {
-    E: () => u,
-});
-var r = n(627968),
+n.d(t, { E: () => c });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(636920),
+    s = n(503698),
+    a = n.n(s),
+    r = n(636920),
     o = n(889599),
-    c = n(248789);
-
-function u(e) {
-    let { hangStatusActivity: t, channel: n, userId: i, setPopoutRef: u } = e,
-        d = l.useRef(null);
+    d = n(248789);
+function c(e) {
+    let { hangStatusActivity: t, channel: n, userId: s, setPopoutRef: c } = e,
+        u = l.useRef(null);
     return (
         l.useEffect(() => {
-            null == u || u(null == d ? void 0 : d.current);
-        }, [d, u]),
-        (0, r.jsx)("div", {
-            ref: d,
-            className: s()(c.popover, o.kL),
-            children: (0, r.jsx)(a.Z, {
+            c?.(u?.current);
+        }, [u, c]),
+        (0, i.jsx)("div", {
+            ref: u,
+            className: a()(d.popover, o.kL),
+            children: (0, i.jsx)(r.Z, {
                 hangStatusActivity: t,
                 channel: n,
-                userId: i,
+                userId: s,
                 analyticsSource: "HangStatusPopout",
                 iconClassName: o.Kk,
                 textClassName: o.qS,

@@ -1,97 +1,70 @@
-t.d(r, {
-    H: () => a,
-}),
-    t(927092),
-    t(212978),
-    t(201528),
-    t(393431),
-    t(752391),
-    t(532706),
-    t(42231),
-    t(232424),
-    t(757074),
-    t(949626),
-    t(767709),
-    t(65162),
-    t(21862),
-    t(801460),
-    t(508300),
-    t(650828),
-    t(321073);
-var o = t(344390);
-
-function a(e) {
-    let r = (function (e) {
-        let { detail: r = 1, pop: t = 1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { PI: a, min: l, max: n, cos: i, round: f } = Math,
-            s = e[0] | (e[1] << 8) | (e[2] << 16),
-            p = e[3] | (e[4] << 8),
-            u = (63 & s) / 63,
-            d = ((s >> 6) & 63) / 31.5 - 1,
-            c = ((s >> 12) & 63) / 31.5 - 1,
-            h = s >> 23,
-            v = p >> 15,
-            b = n(3, v ? (h ? 5 : 7) : 7 & p),
-            g = n(3, v ? 7 & p : h ? 5 : 7),
-            y = h ? (15 & e[5]) / 15 : 1,
-            O = (e[5] >> 4) / 15,
-            m = h ? 6 : 5,
-            w = 0,
-            x = (r, t, o) => {
-                let a = [];
-                for (let l = 0; l < t; l++)
-                    for (let n = +!l; n * t < r * (t - l); n++)
-                        a.push((((e[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * o);
-                return a;
+e.d(t, { H: () => n }), e(393431), e(532706), e(42231), e(232424), e(949626), e(767709), e(65162), e(508300), e(321073);
+var o = e(344390);
+function n(r) {
+    let t = (function (r) {
+        let { detail: t = 1, pop: e = 1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { PI: n, min: a, max: c, cos: s, round: i } = Math,
+            E = r[0] | (r[1] << 8) | (r[2] << 16),
+            l = r[3] | (r[4] << 8),
+            f = (63 & E) / 63,
+            p = ((E >> 6) & 63) / 31.5 - 1,
+            R = ((E >> 12) & 63) / 31.5 - 1,
+            u = E >> 23,
+            d = l >> 15,
+            _ = c(3, d ? (u ? 5 : 7) : 7 & l),
+            m = c(3, d ? 7 & l : u ? 5 : 7),
+            v = u ? (15 & r[5]) / 15 : 1,
+            I = (r[5] >> 4) / 15,
+            O = u ? 6 : 5,
+            b = 0,
+            h = (t, e, o) => {
+                let n = [];
+                for (let a = 0; a < e; a++)
+                    for (let c = +!a; c * e < t * (e - a); c++)
+                        n.push((((r[O + (b >> 1)] >> ((1 & b++) << 2)) & 15) / 7.5 - 1) * o);
+                return n;
             },
-            j = x(b, g, ((s >> 18) & 31) / 31 / 2),
-            k = x(3, 3, (((p >> 3) & 63) / 63) * t),
-            M = x(3, 3, (((p >> 9) & 63) / 63) * t),
-            P = h ? x(5, 5, O) : [],
-            _ = (0, o.HM)(e),
-            A = f(_ > 1 ? 32 : 32 * _),
-            C = f(_ > 1 ? 32 / _ : 32),
-            H = new Uint8Array(A * C * 4),
-            T = [],
-            U = [];
-        for (let e = 0, t = 0; e < C; e++)
-            for (let o = 0; o < A; o++, t += 4) {
-                let f = u,
-                    s = d,
-                    p = c,
-                    v = y;
-                for (let e = 0, r = n(b, h ? 5 : 3); e < r; e++) T[e] = i((a / A) * (o + 0.5) * e);
-                for (let r = 0, t = n(g, h ? 5 : 3); r < t; r++) U[r] = i((a / C) * (e + 0.5) * r);
-                for (let e = 0, t = 0; e < g; e++)
-                    for (let o = +!e, a = 2 * U[e]; o * g < b * (g - e); o++, t++)
-                        o > r || e > r || (f += j[t] * T[o] * a);
-                for (let e = 0, r = 0; e < 3; e++)
-                    for (let t = +!e, o = 2 * U[e]; t < 3 - e; t++, r++) {
-                        let e = T[t] * o;
-                        (s += k[r] * e), (p += M[r] * e);
+            x = h(_, m, ((E >> 18) & 31) / 31 / 2),
+            A = h(3, 3, (((l >> 3) & 63) / 63) * e),
+            T = h(3, 3, (((l >> 9) & 63) / 63) * e),
+            N = u ? h(5, 5, I) : [],
+            S = (0, o.HM)(r),
+            y = i(S > 1 ? 32 : 32 * S),
+            D = i(S > 1 ? 32 / S : 32),
+            g = new Uint8Array(y * D * 4),
+            w = [],
+            C = [];
+        for (let r = 0, e = 0; r < D; r++)
+            for (let o = 0; o < y; o++, e += 4) {
+                let i = f,
+                    E = p,
+                    l = R,
+                    d = v;
+                for (let r = 0, t = c(_, u ? 5 : 3); r < t; r++) w[r] = s((n / y) * (o + 0.5) * r);
+                for (let t = 0, e = c(m, u ? 5 : 3); t < e; t++) C[t] = s((n / D) * (r + 0.5) * t);
+                for (let r = 0, e = 0; r < m; r++)
+                    for (let o = +!r, n = 2 * C[r]; o * m < _ * (m - r); o++, e++)
+                        o > t || r > t || (i += x[e] * w[o] * n);
+                for (let r = 0, t = 0; r < 3; r++)
+                    for (let e = +!r, o = 2 * C[r]; e < 3 - r; e++, t++) {
+                        let r = w[e] * o;
+                        (E += A[t] * r), (l += T[t] * r);
                     }
-                if (h)
-                    for (let e = 0, r = 0; e < 5; e++)
-                        for (let t = +!e, o = 2 * U[e]; t < 5 - e; t++, r++) v += P[r] * T[t] * o;
-                let O = f - (2 / 3) * s,
-                    m = (3 * f - O + p) / 2,
-                    w = m - p;
-                (H[t] = n(0, 255 * l(1, m))),
-                    (H[t + 1] = n(0, 255 * l(1, w))),
-                    (H[t + 2] = n(0, 255 * l(1, O))),
-                    (H[t + 3] = n(0, 255 * l(1, v)));
+                if (u)
+                    for (let r = 0, t = 0; r < 5; r++)
+                        for (let e = +!r, o = 2 * C[r]; e < 5 - r; e++, t++) d += N[t] * w[e] * o;
+                let I = i - (2 / 3) * E,
+                    O = (3 * i - I + l) / 2,
+                    b = O - l;
+                (g[e] = c(0, 255 * a(1, O))),
+                    (g[e + 1] = c(0, 255 * a(1, b))),
+                    (g[e + 2] = c(0, 255 * a(1, I))),
+                    (g[e + 3] = c(0, 255 * a(1, d)));
             }
-        return {
-            w: A,
-            h: C,
-            rgba: H,
-        };
+        return { w: y, h: D, rgba: g };
     })(
-        Uint8Array.from(atob(e), (e) => e.charCodeAt(0)),
-        {
-            detail: 1,
-            pop: 1.1,
-        },
+        Uint8Array.from(atob(r), (r) => r.charCodeAt(0)),
+        { detail: 1, pop: 1.1 },
     );
-    return (0, o.J9)(r.w, r.h, r.rgba);
+    return (0, o.J9)(t.w, t.h, t.rgba);
 }

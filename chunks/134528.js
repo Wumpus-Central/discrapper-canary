@@ -1,13 +1,11 @@
+"use strict";
 var r = n(557939),
     i = n(250594),
     a = n(503199),
     s = n(120394),
     o = n(633228);
 r(
-    {
-        target: "Array",
-        proto: !0,
-    },
+    { target: "Array", proto: !0 },
     {
         at: function (e) {
             var t = i(this),

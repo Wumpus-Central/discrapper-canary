@@ -1,23 +1,23 @@
-i.d(e, {
-    A: () => r,
-});
+i.d(e, { A: () => n });
 var s = i(364298);
-
-function n(t, e, i) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = i),
-        t
-    );
-}
 i(852431);
-let r = class {
+let n = class {
+    x = -40;
+    y = -40;
+    targetX = 0;
+    targetY = 0;
+    oscillate = !0;
+    velX = 0;
+    velY = 0;
+    angle = 0;
+    speedUp = 1.5;
+    waveRange = 60;
+    count;
+    index;
+    spring = { friction: 15, tension: 150 };
+    constructor(t) {
+        (this.index = t), (this.spring.tension = 150 * Math.max(0.1, t / 7) + 150), (this.count = -2.15 * t);
+    }
     updateStatic() {
         (this.targetX = this.targetX + 30 * Math.cos(this.angle) * Math.sin(this.count)),
             (this.targetY = this.targetY + 30 * Math.sin(this.angle) * Math.sin(this.count)),
@@ -38,9 +38,9 @@ let r = class {
             this.oscillate)
         ) {
             let n = this.targetX + this.waveRange * Math.cos(this.angle) * Math.sin(this.count),
-                r = this.targetY + this.waveRange * Math.sin(this.angle) * Math.sin(this.count);
+                a = this.targetY + this.waveRange * Math.sin(this.angle) * Math.sin(this.count);
             (e = (0, s.J)(n, this.x, this.velX, this.spring)),
-                (i = (0, s.J)(r, this.y, this.velY, this.spring)),
+                (i = (0, s.J)(a, this.y, this.velY, this.spring)),
                 (this.velX += e * t),
                 (this.velY += i * t);
         }
@@ -48,26 +48,5 @@ let r = class {
     }
     render(t) {
         (t.fillStyle = "#fff"), t.fillRect(this.x, this.y, 4, 4);
-    }
-    constructor(t) {
-        n(this, "x", -40),
-            n(this, "y", -40),
-            n(this, "targetX", 0),
-            n(this, "targetY", 0),
-            n(this, "oscillate", !0),
-            n(this, "velX", 0),
-            n(this, "velY", 0),
-            n(this, "angle", 0),
-            n(this, "speedUp", 1.5),
-            n(this, "waveRange", 60),
-            n(this, "count", void 0),
-            n(this, "index", void 0),
-            n(this, "spring", {
-                friction: 15,
-                tension: 150,
-            }),
-            (this.index = t),
-            (this.spring.tension = 150 * Math.max(0.1, t / 7) + 150),
-            (this.count = -2.15 * t);
     }
 };

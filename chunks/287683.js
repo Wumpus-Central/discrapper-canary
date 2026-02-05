@@ -1,59 +1,63 @@
-n.d(t, {
-    m: () => O,
-}),
-    n(734808),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { m: () => T });
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(324281),
     o = n(536578),
     l = n(641558),
-    c = n(978926),
-    u = n(959129),
+    u = n(978926),
+    c = n(959129),
     d = n(67948),
-    f = n(978656),
-    p = n(720119),
-    _ = n(342371),
+    _ = n(978656),
+    f = n(720119),
+    p = n(342371),
     h = n(149613),
     m = n(297204),
     g = n(670474),
     E = n(108094),
-    b = n(232582);
-class y extends s.G {
+    A = n(232582);
+class I extends s.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", [
+            { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 },
+            { no: 2, name: "announcement_modal_variant_1", kind: "message", oneof: "properties", T: () => A.ih },
+            { no: 4, name: "premium_tab", kind: "message", oneof: "properties", T: () => E.x },
+            { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => g.C },
+            { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => m.Y },
+            { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => h.L },
+            { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => p.o },
+            { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => f.l },
+            { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => _.s },
+            { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => d.E },
+            { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => c.v },
+            { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => u.s },
+            { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => l.m },
+            { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => o.G },
+            { no: 3, name: "content_identifier", kind: "scalar", T: 9 },
+        ]);
+    }
     create(e) {
-        let t = {
-            properties: {
-                oneofKind: void 0,
-            },
-            contentIdentifier: "",
-        };
+        let t = { properties: { oneofKind: void 0 }, contentIdentifier: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.properties = {
-                        oneofKind: "placeholder",
-                        placeholder: e.string(),
-                    };
+                    a.properties = { oneofKind: "placeholder", placeholder: e.string() };
                     break;
                 case 2:
                     a.properties = {
                         oneofKind: "announcementModalVariant1",
-                        announcementModalVariant1: b.ih.internalBinaryRead(
+                        announcementModalVariant1: A.ih.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -88,19 +92,19 @@ class y extends s.G {
                 case 8:
                     a.properties = {
                         oneofKind: "giftIcon",
-                        giftIcon: _.o.internalBinaryRead(e, e.uint32(), n, a.properties.giftIcon),
+                        giftIcon: p.o.internalBinaryRead(e, e.uint32(), n, a.properties.giftIcon),
                     };
                     break;
                 case 9:
                     a.properties = {
                         oneofKind: "giftIconCoachmark",
-                        giftIconCoachmark: p.l.internalBinaryRead(e, e.uint32(), n, a.properties.giftIconCoachmark),
+                        giftIconCoachmark: f.l.internalBinaryRead(e, e.uint32(), n, a.properties.giftIconCoachmark),
                     };
                     break;
                 case 10:
                     a.properties = {
                         oneofKind: "giftPlanSelectionCardBanner",
-                        giftPlanSelectionCardBanner: f.s.internalBinaryRead(
+                        giftPlanSelectionCardBanner: _.s.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -122,7 +126,7 @@ class y extends s.G {
                 case 12:
                     a.properties = {
                         oneofKind: "billingSettingsNitroGiftBanner",
-                        billingSettingsNitroGiftBanner: u.v.internalBinaryRead(
+                        billingSettingsNitroGiftBanner: c.v.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -133,7 +137,7 @@ class y extends s.G {
                 case 13:
                     a.properties = {
                         oneofKind: "giftReminderNagbar",
-                        giftReminderNagbar: c.s.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
+                        giftReminderNagbar: u.s.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
                     };
                     break;
                 case 14:
@@ -159,11 +163,9 @@ class y extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
-                    let y = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, y);
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let I = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, I);
             }
         }
         return a;
@@ -171,7 +173,7 @@ class y extends s.G {
     internalBinaryWrite(e, t, n) {
         "placeholder" === e.properties.oneofKind && t.tag(1, r.O0.LengthDelimited).string(e.properties.placeholder),
             "announcementModalVariant1" === e.properties.oneofKind &&
-                b.ih
+                A.ih
                     .internalBinaryWrite(
                         e.properties.announcementModalVariant1,
                         t.tag(2, r.O0.LengthDelimited).fork(),
@@ -199,13 +201,13 @@ class y extends s.G {
                     n,
                 ).join(),
             "giftIcon" === e.properties.oneofKind &&
-                _.o.internalBinaryWrite(e.properties.giftIcon, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
+                p.o.internalBinaryWrite(e.properties.giftIcon, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             "giftIconCoachmark" === e.properties.oneofKind &&
-                p.l
+                f.l
                     .internalBinaryWrite(e.properties.giftIconCoachmark, t.tag(9, r.O0.LengthDelimited).fork(), n)
                     .join(),
             "giftPlanSelectionCardBanner" === e.properties.oneofKind &&
-                f.s
+                _.s
                     .internalBinaryWrite(
                         e.properties.giftPlanSelectionCardBanner,
                         t.tag(10, r.O0.LengthDelimited).fork(),
@@ -219,7 +221,7 @@ class y extends s.G {
                     n,
                 ).join(),
             "billingSettingsNitroGiftBanner" === e.properties.oneofKind &&
-                u.v
+                c.v
                     .internalBinaryWrite(
                         e.properties.billingSettingsNitroGiftBanner,
                         t.tag(12, r.O0.LengthDelimited).fork(),
@@ -227,7 +229,7 @@ class y extends s.G {
                     )
                     .join(),
             "giftReminderNagbar" === e.properties.oneofKind &&
-                c.s
+                u.s
                     .internalBinaryWrite(e.properties.giftReminderNagbar, t.tag(13, r.O0.LengthDelimited).fork(), n)
                     .join(),
             "giftReminderCoachmark" === e.properties.oneofKind &&
@@ -244,113 +246,5 @@ class y extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", [
-            {
-                no: 1,
-                name: "placeholder",
-                kind: "scalar",
-                oneof: "properties",
-                T: 9,
-            },
-            {
-                no: 2,
-                name: "announcement_modal_variant_1",
-                kind: "message",
-                oneof: "properties",
-                T: () => b.ih,
-            },
-            {
-                no: 4,
-                name: "premium_tab",
-                kind: "message",
-                oneof: "properties",
-                T: () => E.x,
-            },
-            {
-                no: 5,
-                name: "marketing_page_banner",
-                kind: "message",
-                oneof: "properties",
-                T: () => g.C,
-            },
-            {
-                no: 6,
-                name: "payment_modal_banner",
-                kind: "message",
-                oneof: "properties",
-                T: () => m.Y,
-            },
-            {
-                no: 7,
-                name: "mobile_bottom_sheet",
-                kind: "message",
-                oneof: "properties",
-                T: () => h.L,
-            },
-            {
-                no: 8,
-                name: "gift_icon",
-                kind: "message",
-                oneof: "properties",
-                T: () => _.o,
-            },
-            {
-                no: 9,
-                name: "gift_icon_coachmark",
-                kind: "message",
-                oneof: "properties",
-                T: () => p.l,
-            },
-            {
-                no: 10,
-                name: "gift_plan_selection_card_banner",
-                kind: "message",
-                oneof: "properties",
-                T: () => f.s,
-            },
-            {
-                no: 11,
-                name: "gift_customization_banner",
-                kind: "message",
-                oneof: "properties",
-                T: () => d.E,
-            },
-            {
-                no: 12,
-                name: "billing_settings_nitro_gift_banner",
-                kind: "message",
-                oneof: "properties",
-                T: () => u.v,
-            },
-            {
-                no: 13,
-                name: "gift_reminder_nagbar",
-                kind: "message",
-                oneof: "properties",
-                T: () => c.s,
-            },
-            {
-                no: 14,
-                name: "gift_reminder_coachmark",
-                kind: "message",
-                oneof: "properties",
-                T: () => l.m,
-            },
-            {
-                no: 15,
-                name: "premium_tab_tooltip",
-                kind: "message",
-                oneof: "properties",
-                T: () => o.G,
-            },
-            {
-                no: 3,
-                name: "content_identifier",
-                kind: "scalar",
-                T: 9,
-            },
-        ]);
-    }
 }
-let O = new y();
+let T = new I();

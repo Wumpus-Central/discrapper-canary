@@ -1,118 +1,145 @@
-n.d(t, {
-    Ay: () => E,
-    _c: () => g,
-    go: () => _,
-    vF: () => h,
-}),
-    n(938796),
-    n(321073);
+"use strict";
+n.d(t, { Ay: () => p, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
 var r = n(485845),
     i = n(665260),
     a = n(315069),
     s = n(427930),
     o = n(505527),
     l = n(815807),
-    c = n(652215);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
+    u = n(652215);
+class c extends a.A {
+    type;
+    content;
+    attachments;
+    embeds;
+    timestamp;
+    editedTimestamp;
+    flags;
+    components;
+    codedLinks;
+    stickers;
+    stickerItems;
+    soundboardSounds;
+    constructor(e) {
+        super(),
+            (this.type = e.type ?? u.lAJ.DEFAULT),
+            (this.content = e.content ?? ""),
+            (this.attachments = e.attachments ?? []),
+            (this.embeds = e.embeds ?? []),
+            (this.timestamp = e.timestamp ?? new Date()),
+            (this.editedTimestamp = e.editedTimestamp ?? null),
+            (this.flags = e.flags ?? 0),
+            (this.components = e.components ?? []),
+            (this.codedLinks = e.codedLinks ?? []),
+            (this.stickers = e.stickers ?? []),
+            (this.stickerItems = e.sticker_items ?? e.stickerItems ?? []),
+            (this.soundboardSounds = e.soundboard_sounds ?? e.soundboardSounds);
     }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-class _ extends a.A {
     hasFlag(e) {
         return (0, i.Lt)(this.flags, e);
     }
+}
+class d extends a.A {
+    message;
+    moderatorReport;
     constructor(e) {
-        var t, n, r, i, a, s, o, l, d, f, p, _, h;
-        super(),
-            u(this, "type", void 0),
-            u(this, "content", void 0),
-            u(this, "attachments", void 0),
-            u(this, "embeds", void 0),
-            u(this, "timestamp", void 0),
-            u(this, "editedTimestamp", void 0),
-            u(this, "flags", void 0),
-            u(this, "components", void 0),
-            u(this, "codedLinks", void 0),
-            u(this, "stickers", void 0),
-            u(this, "stickerItems", void 0),
-            u(this, "soundboardSounds", void 0),
-            (this.type = null != (t = e.type) ? t : c.lAJ.DEFAULT),
-            (this.content = null != (n = e.content) ? n : ""),
-            (this.attachments = null != (r = e.attachments) ? r : []),
-            (this.embeds = null != (i = e.embeds) ? i : []),
-            (this.timestamp = null != (a = e.timestamp) ? a : new Date()),
-            (this.editedTimestamp = null != (s = e.editedTimestamp) ? s : null),
-            (this.flags = null != (o = e.flags) ? o : 0),
-            (this.components = null != (l = e.components) ? l : []),
-            (this.codedLinks = null != (d = e.codedLinks) ? d : []),
-            (this.stickers = null != (f = e.stickers) ? f : []),
-            (this.stickerItems = null != (p = null != (_ = e.sticker_items) ? _ : e.stickerItems) ? p : []),
-            (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
+        super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null);
     }
 }
-class h extends a.A {
+class _ extends c {
+    id;
+    channel_id;
+    author;
+    bot;
+    customRenderedContent;
+    pinned;
+    mentions;
+    mentionRoles;
+    mentionChannels;
+    mentionGames;
+    mentionEveryone;
+    mentioned;
+    tts;
+    giftCodes;
+    state;
+    nonce;
+    blocked;
+    ignored;
+    call;
+    webhookId;
+    reactions;
+    applicationId;
+    application;
+    activity;
+    activityInstance;
+    interaction;
+    interactionData;
+    interactionMetadata;
+    interactionError;
+    messageReference;
+    isSearchHit;
+    roleSubscriptionData;
+    purchaseNotification;
+    poll;
+    sharedClientTheme;
+    loggingName;
+    referralTrialOfferId;
+    premiumGroupInviteId;
+    giftInfo;
+    giftingPrompt;
+    messageSnapshots;
+    isUnsupported;
+    changelogId;
+    colorString;
+    nick;
     constructor(e) {
-        var t;
-        super(),
-            u(this, "message", void 0),
-            u(this, "moderatorReport", void 0),
-            (this.message = new _(e.message)),
-            (this.moderatorReport = null != (t = e.moderator_report) ? t : null);
+        super(e),
+            (this.id = e.id),
+            (this.channel_id = e.channel_id),
+            (this.author = e.author),
+            (this.customRenderedContent = e.customRenderedContent),
+            (this.mentions = e.mentions || []),
+            (this.mentionRoles = e.mentionRoles || []),
+            (this.mentionChannels = e.mentionChannels || []),
+            (this.mentionGames = e.mentionGames || []),
+            (this.mentioned = e.mentioned || !1),
+            (this.pinned = e.pinned || !1),
+            (this.mentionEveryone = e.mentionEveryone || !1),
+            (this.tts = e.tts || !1),
+            (this.giftCodes = e.giftCodes || []),
+            (this.state = e.state || u.cmJ.SENT),
+            (this.nonce = e.nonce ?? void 0),
+            (this.blocked = e.blocked || !1),
+            (this.ignored = e.ignored || !1),
+            (this.call = e.call || null),
+            (this.bot = e.bot || !1),
+            (this.webhookId = e.webhookId || null),
+            (this.reactions = e.reactions || []),
+            (this.applicationId = e.application_id || e.applicationId || null),
+            (this.application = e.application || null),
+            (this.activity = e.activity || null),
+            (this.activityInstance = e.activity_instance || e.activityInstance || null),
+            (this.messageReference = e.messageReference || null),
+            (this.isSearchHit = e.hit || e.isSearchHit || !1),
+            (this.loggingName = e.loggingName || null),
+            (this.colorString = e.colorString),
+            (this.nick = e.nick),
+            (this.interaction = e.interaction || null),
+            (this.interactionData = e.interactionData || null),
+            (this.interactionMetadata = e.interactionMetadata || null),
+            (this.interactionError = e.interactionError || null),
+            (this.roleSubscriptionData = e.roleSubscriptionData),
+            (this.purchaseNotification = e.purchaseNotification),
+            (this.poll = e.poll),
+            (this.sharedClientTheme = e.shared_client_theme || e.sharedClientTheme),
+            (this.referralTrialOfferId = e.referralTrialOfferId || null),
+            (this.premiumGroupInviteId = e.premiumGroupInviteId || null),
+            (this.giftInfo = e.gift_info ?? e.giftInfo),
+            (this.giftingPrompt = e.giftingPrompt || null),
+            (this.messageSnapshots = e.messageSnapshots || []),
+            (this.isUnsupported = e.isUnsupported || !1),
+            (this.changelogId = e.changelog_id ?? (e.changelogId || null));
     }
-}
-class m extends _ {
     isEdited() {
         return null != this.editedTimestamp;
     }
@@ -141,34 +168,21 @@ class m extends _ {
                         if (t && a.me) return a;
                         let e = t && a.me_burst ? a.burst_count : a.burst_count + 1,
                             r = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
-                        a = p(d({}, a), {
+                        a = {
+                            ...a,
                             me_burst: !!t || a.me_burst,
                             burst_count: e,
-                            count_details: p(d({}, a.count_details), {
-                                burst: e,
-                            }),
+                            count_details: { ...a.count_details, burst: e },
                             burst_colors: r,
-                        });
+                        };
                     } else if (r === o.v.VOTE) {
-                        var c, u;
-                        let e = null != (c = null == (u = a.count_details) ? void 0 : u.vote) ? c : 0,
+                        let e = a.count_details?.vote ?? 0,
                             n = t && a.me_vote ? e : e + 1;
-                        a = p(d({}, a), {
-                            count_details: p(d({}, a.count_details), {
-                                vote: n,
-                            }),
-                            me_vote: !!t || a.me_vote,
-                        });
+                        a = { ...a, count_details: { ...a.count_details, vote: n }, me_vote: !!t || a.me_vote };
                     } else {
                         if (t && a.me_burst) return a;
                         let e = t && a.me ? a.count : a.count + 1;
-                        a = p(d({}, a), {
-                            count: e,
-                            count_details: p(d({}, a.count_details), {
-                                normal: e,
-                            }),
-                            me: !!t || a.me,
-                        });
+                        a = { ...a, count: e, count_details: { ...a.count_details, normal: e }, me: !!t || a.me };
                     }
                 return a;
             });
@@ -180,10 +194,7 @@ class m extends _ {
                           me: !1,
                           me_burst: t,
                           count: 0,
-                          count_details: {
-                              burst: 1,
-                              normal: 0,
-                          },
+                          count_details: { burst: 1, normal: 0 },
                           burst_count: 1,
                           burst_colors: n,
                       })
@@ -194,11 +205,7 @@ class m extends _ {
                             me_burst: !1,
                             me_vote: t,
                             count: 0,
-                            count_details: {
-                                burst: 0,
-                                normal: 0,
-                                vote: 1,
-                            },
+                            count_details: { burst: 0, normal: 0, vote: 1 },
                             burst_count: 0,
                             burst_colors: [],
                         })
@@ -207,10 +214,7 @@ class m extends _ {
                             me: t,
                             me_burst: !1,
                             count: 1,
-                            count_details: {
-                                burst: 0,
-                                normal: 1,
-                            },
+                            count_details: { burst: 0, normal: 1 },
                             burst_count: 0,
                             burst_colors: [],
                         })),
@@ -224,50 +228,36 @@ class m extends _ {
         }, this);
     }
     removeReaction(e) {
-        var t, n, r, i;
-        let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.v.NORMAL,
-            c = -1,
-            u = this.reactions.map((t, n) => {
-                if ((0, l.i6)(t.emoji, e)) {
-                    if (s === o.v.BURST) {
-                        let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
-                        t = p(d({}, t), {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.v.NORMAL,
+            r = -1,
+            i = this.reactions.map((i, a) => {
+                if ((0, l.i6)(i.emoji, e)) {
+                    if (n === o.v.BURST) {
+                        let e = t && !i.me_burst ? i.burst_count : i.burst_count - 1;
+                        i = {
+                            ...i,
                             burst_count: e,
-                            me_burst: !a && t.me_burst,
-                            count_details: p(d({}, t.count_details), {
-                                burst: e,
-                            }),
-                        });
-                    } else if (s === o.v.VOTE) {
-                        var r, i;
-                        let e = null != (r = null == (i = t.count_details) ? void 0 : i.vote) ? r : 0,
-                            n = a && !t.me_vote ? e : e - 1;
-                        t = p(d({}, t), {
-                            count_details: p(d({}, t.count_details), {
-                                vote: n,
-                            }),
-                            me_vote: !a && t.me_vote,
-                        });
+                            me_burst: !t && i.me_burst,
+                            count_details: { ...i.count_details, burst: e },
+                        };
+                    } else if (n === o.v.VOTE) {
+                        let e = i.count_details?.vote ?? 0,
+                            n = t && !i.me_vote ? e : e - 1;
+                        i = { ...i, count_details: { ...i.count_details, vote: n }, me_vote: !t && i.me_vote };
                     } else {
-                        let e = a && !t.me ? t.count : t.count - 1;
-                        t = p(d({}, t), {
-                            count: e,
-                            me: !a && t.me,
-                            count_details: p(d({}, t.count_details), {
-                                normal: e,
-                            }),
-                        });
+                        let e = t && !i.me ? i.count : i.count - 1;
+                        i = { ...i, count: e, me: !t && i.me, count_details: { ...i.count_details, normal: e } };
                     }
-                    c = n;
+                    r = a;
                 }
-                return t;
+                return i;
             }),
-            { count: f, burst_count: _, count_details: h } = null != (t = u[c]) ? t : {},
-            m = null != (n = null == h ? void 0 : h.normal) ? n : 0,
-            g = null != (r = null == h ? void 0 : h.burst) ? r : 0,
-            E = null != (i = null == h ? void 0 : h.vote) ? i : 0;
-        return -1 !== c && f <= 0 && _ <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set("reactions", u);
+            { count: a, burst_count: s, count_details: u } = i[r] ?? {},
+            c = u?.normal ?? 0,
+            d = u?.burst ?? 0,
+            _ = u?.vote ?? 0;
+        return -1 !== r && a <= 0 && s <= 0 && c <= 0 && d <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -279,7 +269,7 @@ class m extends _ {
         return this.author.isSystemUser();
     }
     isCommandType() {
-        return this.type === c.lAJ.CHAT_INPUT_COMMAND || this.type === c.lAJ.CONTEXT_MENU_COMMAND;
+        return this.type === u.lAJ.CHAT_INPUT_COMMAND || this.type === u.lAJ.CONTEXT_MENU_COMMAND;
     }
     isPoll() {
         return null != this.poll;
@@ -288,123 +278,23 @@ class m extends _ {
         return null != this.interaction && this.author.isNonUserBot();
     }
     canDeleteOwnMessage(e) {
-        var t, n, i;
         if (this.author.id === e) return !0;
-        let a =
-            null != (t = null == (n = this.interactionMetadata) ? void 0 : n.authorizing_integration_owners) ? t : {};
-        return (
-            (null == (i = this.interactionMetadata) ? void 0 : i.user.id) === e &&
-            1 === Object.keys(a).length &&
-            r.b.USER_INSTALL in a
-        );
+        let t = this.interactionMetadata?.authorizing_integration_owners ?? {};
+        return this.interactionMetadata?.user.id === e && 1 === Object.keys(t).length && r.b.USER_INSTALL in t;
     }
     toJS() {
-        return p(d({}, this), {
+        return {
+            ...this,
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
             mention_everyone: this.mentionEveryone,
-        });
+        };
     }
     isFirstMessageInForumPost(e) {
         return this.id === this.channel_id && e.isForumPost();
     }
-    constructor(e) {
-        var t, n, r;
-        super(e),
-            u(this, "id", void 0),
-            u(this, "channel_id", void 0),
-            u(this, "author", void 0),
-            u(this, "bot", void 0),
-            u(this, "customRenderedContent", void 0),
-            u(this, "pinned", void 0),
-            u(this, "mentions", void 0),
-            u(this, "mentionRoles", void 0),
-            u(this, "mentionChannels", void 0),
-            u(this, "mentionGames", void 0),
-            u(this, "mentionEveryone", void 0),
-            u(this, "mentioned", void 0),
-            u(this, "tts", void 0),
-            u(this, "giftCodes", void 0),
-            u(this, "state", void 0),
-            u(this, "nonce", void 0),
-            u(this, "blocked", void 0),
-            u(this, "ignored", void 0),
-            u(this, "call", void 0),
-            u(this, "webhookId", void 0),
-            u(this, "reactions", void 0),
-            u(this, "applicationId", void 0),
-            u(this, "application", void 0),
-            u(this, "activity", void 0),
-            u(this, "activityInstance", void 0),
-            u(this, "interaction", void 0),
-            u(this, "interactionData", void 0),
-            u(this, "interactionMetadata", void 0),
-            u(this, "interactionError", void 0),
-            u(this, "messageReference", void 0),
-            u(this, "isSearchHit", void 0),
-            u(this, "roleSubscriptionData", void 0),
-            u(this, "purchaseNotification", void 0),
-            u(this, "poll", void 0),
-            u(this, "sharedClientTheme", void 0),
-            u(this, "loggingName", void 0),
-            u(this, "referralTrialOfferId", void 0),
-            u(this, "premiumGroupInviteId", void 0),
-            u(this, "giftInfo", void 0),
-            u(this, "giftingPrompt", void 0),
-            u(this, "messageSnapshots", void 0),
-            u(this, "isUnsupported", void 0),
-            u(this, "changelogId", void 0),
-            u(this, "colorString", void 0),
-            u(this, "nick", void 0),
-            (this.id = e.id),
-            (this.channel_id = e.channel_id),
-            (this.author = e.author),
-            (this.customRenderedContent = e.customRenderedContent),
-            (this.mentions = e.mentions || []),
-            (this.mentionRoles = e.mentionRoles || []),
-            (this.mentionChannels = e.mentionChannels || []),
-            (this.mentionGames = e.mentionGames || []),
-            (this.mentioned = e.mentioned || !1),
-            (this.pinned = e.pinned || !1),
-            (this.mentionEveryone = e.mentionEveryone || !1),
-            (this.tts = e.tts || !1),
-            (this.giftCodes = e.giftCodes || []),
-            (this.state = e.state || c.cmJ.SENT),
-            (this.nonce = null != (t = e.nonce) ? t : void 0),
-            (this.blocked = e.blocked || !1),
-            (this.ignored = e.ignored || !1),
-            (this.call = e.call || null),
-            (this.bot = e.bot || !1),
-            (this.webhookId = e.webhookId || null),
-            (this.reactions = e.reactions || []),
-            (this.applicationId = e.application_id || e.applicationId || null),
-            (this.application = e.application || null),
-            (this.activity = e.activity || null),
-            (this.activityInstance = e.activity_instance || e.activityInstance || null),
-            (this.messageReference = e.messageReference || null),
-            (this.isSearchHit = e.hit || e.isSearchHit || !1),
-            (this.loggingName = e.loggingName || null),
-            (this.colorString = e.colorString),
-            (this.nick = e.nick),
-            (this.interaction = e.interaction || null),
-            (this.interactionData = e.interactionData || null),
-            (this.interactionMetadata = e.interactionMetadata || null),
-            (this.interactionError = e.interactionError || null),
-            (this.roleSubscriptionData = e.roleSubscriptionData),
-            (this.purchaseNotification = e.purchaseNotification),
-            (this.poll = e.poll),
-            (this.sharedClientTheme = e.shared_client_theme || e.sharedClientTheme),
-            (this.referralTrialOfferId = e.referralTrialOfferId || null),
-            (this.premiumGroupInviteId = e.premiumGroupInviteId || null),
-            (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo),
-            (this.giftingPrompt = e.giftingPrompt || null),
-            (this.messageSnapshots = e.messageSnapshots || []),
-            (this.isUnsupported = e.isUnsupported || !1),
-            (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null);
-    }
 }
-
-function g(e) {
-    return (0, i.Lt)(e.flags, c.pr7.IS_COMPONENTS_V2);
+function f(e) {
+    return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
 }
-let E = m;
+let p = _;

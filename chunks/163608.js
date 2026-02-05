@@ -1,49 +1,30 @@
-n.d(t, {
-    E: () => s,
-}),
-    n(733351);
+"use strict";
+n.d(t, { E: () => a });
 var r = n(651162),
     i = n(993408);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s {
-    static fromServer(e) {
-        return new s(e);
-    }
+class a {
+    categorySkuId;
+    name;
+    summary;
+    categoryStoreListingId;
+    title;
+    rankedSkuIds;
+    unpublishedAt;
+    bannerTextColor;
+    mobileTitle;
+    mobileSummary;
+    mobileProductsTitle;
+    rewardSkuId;
+    heroBannerUrl;
+    heroBannerAnimatedUrl;
+    heroRiveUrl;
+    heroLogoUrl;
+    mobileHeroUrl;
+    mobileHeroAnimatedUrl;
+    bannerDisplayConfig;
+    logoDisplayConfig;
     constructor(e) {
-        a(this, "categorySkuId", void 0),
-            a(this, "name", void 0),
-            a(this, "summary", void 0),
-            a(this, "categoryStoreListingId", void 0),
-            a(this, "title", void 0),
-            a(this, "rankedSkuIds", void 0),
-            a(this, "unpublishedAt", void 0),
-            a(this, "bannerTextColor", void 0),
-            a(this, "mobileTitle", void 0),
-            a(this, "mobileSummary", void 0),
-            a(this, "mobileProductsTitle", void 0),
-            a(this, "rewardSkuId", void 0),
-            a(this, "heroBannerUrl", void 0),
-            a(this, "heroBannerAnimatedUrl", void 0),
-            a(this, "heroRiveUrl", void 0),
-            a(this, "heroLogoUrl", void 0),
-            a(this, "mobileHeroUrl", void 0),
-            a(this, "mobileHeroAnimatedUrl", void 0),
-            a(this, "bannerDisplayConfig", void 0),
-            a(this, "logoDisplayConfig", void 0),
-            (this.type = r.g.REWARD_HERO),
+        (this.type = r.g.REWARD_HERO),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
             (this.summary = e.summary.trim()),
@@ -64,5 +45,8 @@ class s {
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
             (this.logoDisplayConfig = (0, i.f6)(e.logo_display_config)),
             (this.bannerDisplayConfig = (0, i.f6)(e.banner_display_config));
+    }
+    static fromServer(e) {
+        return new a(e);
     }
 }

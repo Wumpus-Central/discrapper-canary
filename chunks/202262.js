@@ -1,13 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(615339),
     i = n(374372),
     a = n(355418),
     s = n(632434);
 let o = RegExp(`(${r.Pl})\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))`, "i"),
     l = RegExp(`(${r.Pl})\\s{0,5}fa(?=(?:\\W|$))`, "i");
-class c extends a.c {
+class u extends a.c {
     strictMode;
     constructor(e) {
         super(), (this.strictMode = e);

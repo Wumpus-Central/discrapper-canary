@@ -1,53 +1,45 @@
-n.d(t, {
-    k: () => a,
-});
+"use strict";
+n.d(t, { k: () => a });
 var r = n(476575),
     i = n(233710),
     a = function (e, t, n) {
         if (i.is.fun(e)) return e;
-        if (i.is.arr(e))
-            return a({
-                range: e,
-                output: t,
-                extrapolate: n,
-            });
+        if (i.is.arr(e)) return a({ range: e, output: t, extrapolate: n });
         if (i.is.str(e.output[0])) return r.createStringInterpolator(e);
         var l = e,
-            c = l.output,
-            u = l.range || [0, 1],
+            u = l.output,
+            c = l.range || [0, 1],
             d = l.extrapolateLeft || l.extrapolate || "extend",
-            f = l.extrapolateRight || l.extrapolate || "extend",
-            p =
+            _ = l.extrapolateRight || l.extrapolate || "extend",
+            f =
                 l.easing ||
                 function (e) {
                     return e;
                 };
         return function (e) {
-            var t = o(e, u);
-            return s(e, u[t], u[t + 1], c[t], c[t + 1], p, d, f, l.map);
+            var t = o(e, c);
+            return s(e, c[t], c[t + 1], u[t], u[t + 1], f, d, _, l.map);
         };
     };
-
 function s(e, t, n, r, i, a, s, o, l) {
-    var c = l ? l(e) : e;
-    if (c < t)
-        if ("identity" === s) return c;
-        else "clamp" === s && (c = t);
-    if (c > n)
-        if ("identity" === o) return c;
-        else "clamp" === o && (c = n);
+    var u = l ? l(e) : e;
+    if (u < t)
+        if ("identity" === s) return u;
+        else "clamp" === s && (u = t);
+    if (u > n)
+        if ("identity" === o) return u;
+        else "clamp" === o && (u = n);
     return r === i
         ? r
         : t === n
           ? e <= t
               ? r
               : i
-          : (t === -1 / 0 ? (c = -c) : n === 1 / 0 ? (c -= t) : (c = (c - t) / (n - t)),
-            (c = a(c)),
-            r === -1 / 0 ? (c = -c) : i === 1 / 0 ? (c += r) : (c = c * (i - r) + r),
-            c);
+          : (t === -1 / 0 ? (u = -u) : n === 1 / 0 ? (u -= t) : (u = (u - t) / (n - t)),
+            (u = a(u)),
+            r === -1 / 0 ? (u = -u) : i === 1 / 0 ? (u += r) : (u = u * (i - r) + r),
+            u);
 }
-
 function o(e, t) {
     for (var n = 1; n < t.length - 1 && !(t[n] >= e); ++n);
     return n - 1;

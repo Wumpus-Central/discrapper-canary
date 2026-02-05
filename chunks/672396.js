@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, {
     BR: () => l,
     Jr: () => s,
-    KS: () => c,
+    KS: () => u,
     Kv: () => d,
-    Li: () => f,
+    Li: () => _,
     OX: () => i,
     Vo: () => o,
     ed: () => a,
-    uj: () => u,
+    uj: () => c,
 });
 var r = n(723702);
 let i = r.isPlatformEmbedded && ((0, r.isWindows)() || !1),
@@ -23,7 +24,6 @@ var s = (function (e) {
         e
     );
 })({});
-
 function o(e) {
     switch (e) {
         case "News Nudge":
@@ -56,7 +56,7 @@ var l = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (
             (e.NewsNudge = "News Nudge"),
             (e.WelcomeNudge = "Welcome Nudge"),
@@ -77,7 +77,7 @@ var l = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (e[(e.Viewed = 0)] = "Viewed"), (e[(e.Clicked = 1)] = "Clicked"), e;
     })({});
 let d = Object.freeze({
@@ -87,9 +87,4 @@ let d = Object.freeze({
         FULL: "background-opacity-full",
         DISABLED: null,
     }),
-    f = Object.freeze({
-        BOTTOM: 0,
-        LOWER: 0.25,
-        UPPER: 0.75,
-        TOP: 1,
-    });
+    _ = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });

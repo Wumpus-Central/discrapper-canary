@@ -1,5 +1,3 @@
-n.d(t, {
-    k: () => l,
-});
-var r,
-    l = (((r = {}).PREPARING = "PREPARING"), (r.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (r.ERROR = "ERROR"), r);
+n.d(t, { k: () => a });
+var l,
+    a = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (l.ERROR = "ERROR"), l);

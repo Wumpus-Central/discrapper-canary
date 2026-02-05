@@ -1,3 +1,1 @@
-e.exports = {
-    A: "newBadge__17510",
-};
+e.exports = { A: "newBadge__17510" };

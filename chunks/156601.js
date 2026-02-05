@@ -1,72 +1,57 @@
-r.d(t, {
-    A: () => g,
-});
-var n = r(627968);
-r(64700);
-var i = r(503698),
-    l = r.n(i),
-    a = r(311907),
-    s = r(582754),
-    o = r(397927),
-    c = r(736653),
-    u = r(97352),
-    d = r(927578),
-    m = r(788868),
-    p = r(696389);
-let g = function (e) {
+i.d(t, { A: () => C });
+var r = i(627968);
+i(64700);
+var n = i(503698),
+    s = i.n(n),
+    a = i(311907),
+    l = i(582754),
+    o = i(397927),
+    c = i(736653),
+    d = i(97352),
+    m = i(927578),
+    u = i(788868),
+    x = i(696389);
+let C = function (e) {
     let {
             subscriptionTier: t,
-            interval: r = m.WT.MONTH,
-            className: i,
-            isGift: g = !1,
-            variant: x,
-            priceOptions: C,
-            isApplicationHome: f,
-            enablePremiumBrandRefresh: T,
+            interval: i = u.WT.MONTH,
+            className: n,
+            isGift: C = !1,
+            variant: g,
+            priceOptions: p,
+            isApplicationHome: T,
+            enablePremiumBrandRefresh: h,
         } = e,
-        h = (0, a.bG)([u.A], () => u.A.isLoadedForSKUs([t])),
-        v = (0, s.qB)((0, c.Ay)());
-    if (!h)
-        return (0, n.jsx)(o.y$y, {
-            type: o.y$y.Type.PULSING_ELLIPSIS,
-            className: p.xB,
-        });
-    let j = u.A.getForSkuAndInterval((0, d.mH)(t), r),
-        I = null != j ? (0, d.sS)(j, C, !1, g) : null;
-    if (T) {
-        let e = r === m.WT.YEAR;
-        return (0, n.jsxs)("div", {
+        I = (0, a.bG)([d.A], () => d.A.isLoadedForSKUs([t])),
+        f = (0, l.qB)((0, c.Ay)());
+    if (!I) return (0, r.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS, className: x.xB });
+    let j = d.A.getForSkuAndInterval((0, m.mH)(t), i),
+        A = null != j ? (0, m.sS)(j, p, !1, C) : null;
+    if (h) {
+        let e = i === u.WT.YEAR;
+        return (0, r.jsxs)("div", {
             children: [
-                (0, n.jsx)(o.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
-                    color: e ? "text-muted" : v ? "text-strong" : "always-white",
+                    color: e ? "text-muted" : f ? "text-strong" : "always-white",
                     tag: "span",
-                    children: (0, n.jsx)("span", {
-                        children: I,
-                    }),
+                    children: (0, r.jsx)("span", { children: A }),
                 }),
-                (0, n.jsxs)(o.Text, {
+                (0, r.jsxs)(o.Text, {
                     variant: "text-xs/medium",
                     tag: "span",
                     color: "text-muted",
-                    children: ["/", (0, d.FJ)(r)],
+                    children: ["/", (0, m.FJ)(i)],
                 }),
             ],
         });
     }
-    return (0, n.jsx)(o.Heading, {
-        color: f ? "none" : "always-white",
-        variant: null != x ? x : "heading-md/medium",
-        className: l()(p.SW, i),
-        children: (0, n.jsxs)(n.Fragment, {
-            children: [
-                (0, n.jsx)("span", {
-                    className: f ? void 0 : p.q9,
-                    children: I,
-                }),
-                " / ",
-                (0, d.FJ)(r),
-            ],
+    return (0, r.jsx)(o.Heading, {
+        color: T ? "none" : "always-white",
+        variant: g ?? "heading-md/medium",
+        className: s()(x.SW, n),
+        children: (0, r.jsxs)(r.Fragment, {
+            children: [(0, r.jsx)("span", { className: T ? void 0 : x.q9, children: A }), " / ", (0, m.FJ)(i)],
         }),
     });
 };

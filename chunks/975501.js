@@ -1,129 +1,53 @@
-n.d(t, {
-    A: () => p,
-});
-var l = n(64700),
-    r = n(735438),
-    i = n.n(r),
-    a = n(835245),
-    s = n(451988),
+n.d(t, { A: () => u });
+var i = n(64700),
+    l = n(735438),
+    a = n.n(l),
+    s = n(835245),
+    r = n(451988),
     o = n(318937),
     c = n(134753);
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 n(824217);
-let f = i().debounce(o.W9, 500, {
-    maxWait: 500,
-});
-
-function p(e, t, n) {
-    let r = l.useRef((0, a.A)()),
-        i = l.useRef(new s.IX()),
-        p = l.useCallback(
-            (l) => {
-                (l.lastUpdatedAt = Date.now()), (0, o.Rl)(l, e, n), (0, o.W9)(t, n, l);
+let d = a().debounce(o.W9, 500, { maxWait: 500 });
+function u(e, t, n) {
+    let l = i.useRef((0, s.A)()),
+        a = i.useRef(new r.IX()),
+        u = i.useCallback(
+            (i) => {
+                (i.lastUpdatedAt = Date.now()), (0, o.Rl)(i, e, n), (0, o.W9)(t, n, i);
             },
             [t, n, e],
         ),
-        b = l.useCallback(
-            (l, s, f) => {
-                r.current = (0, a.A)();
-                let b = d(u({}, l), {
-                    id: r.current,
-                    x: s,
-                    y: f,
-                    userId: e,
-                    state: c.B.START,
-                    lastUpdatedAt: Date.now(),
-                });
-                (0, o.W9)(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5e3, () => p(b));
+        h = i.useCallback(
+            (i, r, d) => {
+                l.current = (0, s.A)();
+                let h = { ...i, id: l.current, x: r, y: d, userId: e, state: c.B.START, lastUpdatedAt: Date.now() };
+                (0, o.W9)(t, n, h), (0, o.Rl)(h, e, n), a.current.start(5e3, () => u(h));
             },
-            [e, t, n, p],
+            [e, t, n, u],
         ),
-        g = l.useCallback(
-            (l, a, s) => {
-                let b = d(u({}, l), {
-                    id: r.current,
-                    x: a,
-                    y: s,
-                    userId: e,
-                    state: c.B.START,
-                    lastUpdatedAt: Date.now(),
-                });
-                f(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5e3, () => p(b));
+        m = i.useCallback(
+            (i, s, r) => {
+                let h = { ...i, id: l.current, x: s, y: r, userId: e, state: c.B.START, lastUpdatedAt: Date.now() };
+                d(t, n, h), (0, o.Rl)(h, e, n), a.current.start(5e3, () => u(h));
             },
-            [e, t, n, p],
+            [e, t, n, u],
         ),
-        m = l.useCallback(
-            (l, a, s) => {
-                f.cancel(),
-                    (0, o.MH)(t, n, r.current),
+        A = i.useCallback(
+            (i, s, r) => {
+                d.cancel(),
+                    (0, o.MH)(t, n, l.current),
                     (0, o.Rl)(
-                        d(u({}, l), {
-                            id: r.current,
-                            x: a,
-                            y: s,
-                            userId: e,
-                            state: c.B.STOP,
-                            lastUpdatedAt: Date.now(),
-                        }),
+                        { ...i, id: l.current, x: s, y: r, userId: e, state: c.B.STOP, lastUpdatedAt: Date.now() },
                         e,
                         n,
                     ),
-                    i.current.stop();
+                    a.current.stop();
             },
             [t, n, e],
         ),
-        h = l.useCallback((e, t, n) => g(e, t, n), [g]);
-    return l.useMemo(
-        () => ({
-            handleMouseDown: b,
-            handleMouseMove: g,
-            handleMouseUp: m,
-            handleMouseEnter: h,
-        }),
-        [b, h, g, m],
+        p = i.useCallback((e, t, n) => m(e, t, n), [m]);
+    return i.useMemo(
+        () => ({ handleMouseDown: h, handleMouseMove: m, handleMouseUp: A, handleMouseEnter: p }),
+        [h, p, m, A],
     );
 }

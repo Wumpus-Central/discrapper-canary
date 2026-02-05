@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => n,
-});
+a.d(t, { A: () => n });
 var r = a(303527);
 let n = {
     ordinalNumber: (0, a(722023).A)({
@@ -17,9 +15,7 @@ let n = {
             wide: /^(преди новата ера|новата ера|нова ера)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^п/i, /^н/i],
-        },
+        parsePatterns: { any: [/^п/i, /^н/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, r.A)({
@@ -29,9 +25,7 @@ let n = {
             wide: /^[1234](-?[врт]?о?)? тримесечие/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -63,9 +57,7 @@ let n = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, r.A)({
-        matchPatterns: {
-            any: /^(преди о|след о|в по|на о|през|веч|сут|следо)/i,
-        },
+        matchPatterns: { any: /^(преди о|след о|в по|на о|през|веч|сут|следо)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

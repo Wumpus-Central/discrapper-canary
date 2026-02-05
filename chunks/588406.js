@@ -1,68 +1,54 @@
-n.d(t, {
-    E: () => f,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { E: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(429913),
     o = n(403362),
     l = n(648304),
-    c = n(437918),
-    u = n(985018);
+    u = n(437918),
+    c = n(985018);
 let d = [];
-
-function f(e) {
-    let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: f } = e,
-        [p, _] = i.useState(!1),
-        h = i.useCallback(() => _(!0), []),
+function _(e) {
+    let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: _ } = e,
+        [f, p] = i.useState(!1),
+        h = i.useCallback(() => p(!0), []),
         m = i.useMemo(
             () =>
-                p
+                f
                     ? t.map((e) => {
                           let { applicationId: t } = e;
                           return t;
                       })
                     : d,
-            [p, t],
+            [f, t],
         ),
-        g = (0, s.A)(m, p),
+        g = (0, s.A)(m, f),
         E = i.useMemo(() => g.filter(o.Vq), [g]),
-        { tooltipText: b, ariaLabel: y } = i.useMemo(() => {
-            if (t.length > 0) {
-                var e;
+        { tooltipText: A, ariaLabel: I } = i.useMemo(() => {
+            if (t.length > 0)
                 return {
-                    tooltipText: (0, r.jsx)(l.a, {
-                        applications: E,
-                    }),
-                    ariaLabel: null != (e = (0, c._)(E)) ? e : u.intl.string(u.t.ujfP6f),
+                    tooltipText: (0, r.jsx)(l.a, { applications: E }),
+                    ariaLabel: (0, u._)(E) ?? c.intl.string(c.t.ujfP6f),
                 };
-            }
             if (n) {
-                let e = u.intl.string(u.t["0eWeav"]);
-                return {
-                    tooltipText: e,
-                    ariaLabel: e,
-                };
+                let e = c.intl.string(c.t["0eWeav"]);
+                return { tooltipText: e, ariaLabel: e };
             }
-            if (f) {
-                let e = u.intl.string(u.t.MCgl9c);
-                return {
-                    tooltipText: e,
-                    ariaLabel: e,
-                };
+            if (_) {
+                let e = c.intl.string(c.t.MCgl9c);
+                return { tooltipText: e, ariaLabel: e };
             }
             throw Error("[GameRelationshipButton] Tooltip text and aria label should not be undefined.");
-        }, [E, t.length, n, f]);
+        }, [E, t.length, n, _]);
     return {
         onMouseEnter: h,
-        ariaLabel: y,
-        tooltipText: b,
+        ariaLabel: I,
+        tooltipText: A,
         icon: i.useMemo(() => {
             if (t.length > 0) return a._CD;
-            if (n || f) return a.lI8;
+            if (n || _) return a.lI8;
             throw Error("[GameRelationshipButton] Icon should not be undefined.");
-        }, [t.length, n, f]),
+        }, [t.length, n, _]),
     };
 }

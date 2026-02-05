@@ -1,21 +1,17 @@
-n.d(t, {
-    Cu: () => l,
-    eU: () => r,
-    sq: () => c,
-});
+"use strict";
+n.d(t, { Cu: () => l, eU: () => r, sq: () => u });
 let r = (e) => new Promise((t) => setTimeout(t, e)),
     i = 50,
     a = 500,
     s = 5e3,
     o = () => Promise.resolve();
-
 function l(e) {
     o = e;
 }
-async function c(e) {
+async function u(e) {
     let { createPromise: t, webpackId: l } = e,
-        c = a,
-        u = 0;
+        u = a,
+        c = 0;
     for (;;)
         try {
             return await t();
@@ -27,7 +23,7 @@ async function c(e) {
                     ),
                     e)
                 );
-            if (u >= i) throw e;
-            await r(c), await o(), (c = Math.min(s, 2 * c)), u++;
+            if (c >= i) throw e;
+            await r(u), await o(), (u = Math.min(s, 2 * u)), c++;
         }
 }

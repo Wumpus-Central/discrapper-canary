@@ -1,250 +1,182 @@
-n.d(t, {
-    L: () => f,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(989349),
-    c = n.n(a),
-    o = n(827734),
-    u = n(990078),
-    d = n(397927),
-    m = n(722260),
-    v = n(974930),
-    p = n(604701),
-    x = n(988794),
-    g = n(985018),
-    j = n(719247);
-
-function h() {
-    return (0, l.jsx)(d.LpS, {
-        className: j.Ad,
-        color: o.A.unsafe_rawColors.BRAND_260.css,
-        text: (0, l.jsx)(d.Text, {
-            className: j.rm,
-            variant: "text-xs/bold",
-            children: g.intl.string(g.t.y2b7CA),
-        }),
+l.d(t, { L: () => A });
+var n = l(627968),
+    s = l(64700),
+    i = l(503698),
+    a = l.n(i),
+    r = l(989349),
+    c = l.n(r),
+    u = l(827734),
+    d = l(990078),
+    o = l(397927),
+    m = l(722260),
+    x = l(974930),
+    v = l(604701),
+    h = l(988794),
+    N = l(985018),
+    g = l(719247);
+function p() {
+    return (0, n.jsx)(o.LpS, {
+        className: g.Ad,
+        color: u.A.unsafe_rawColors.BRAND_260.css,
+        text: (0, n.jsx)(o.Text, { className: g.rm, variant: "text-xs/bold", children: N.intl.string(N.t.y2b7CA) }),
     });
 }
-
-function N(e) {
-    let { children: t, className: n, tooltipText: r } = e;
-    return (0, l.jsx)("div", {
-        className: s()(j.cd, n),
-        children: (0, l.jsx)(u.m, {
+function j(e) {
+    let { children: t, className: l, tooltipText: s } = e;
+    return (0, n.jsx)("div", {
+        className: a()(g.cd, l),
+        children: (0, n.jsx)(d.m, {
             position: "right",
-            text: r,
-            shouldShow: null != r,
-            children: (0, l.jsx)("div", {
-                className: s()(j.cd, n),
-                children: t,
-            }),
+            text: s,
+            shouldShow: null != s,
+            children: (0, n.jsx)("div", { className: a()(g.cd, l), children: t }),
         }),
     });
 }
-
-function f(e) {
+function A(e) {
     let {
             startTime: t,
-            status: n,
+            status: l,
             eventType: i,
-            className: a,
-            endTime: u,
-            liveText: f,
-            textVariant: y = "text-sm/semibold",
-            isNew: E,
-            recurrenceRule: b,
-            guildEventId: I,
-            recurrenceId: A,
+            className: r,
+            endTime: d,
+            liveText: A,
+            textVariant: E = "text-sm/semibold",
+            isNew: I,
+            recurrenceRule: C,
+            guildEventId: f,
+            recurrenceId: T,
         } = e,
-        C = (0, d.rdh)(o.A.colors.TEXT_BRAND).hex(),
-        O = (0, d.rdh)(o.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        T = (0, d.rdh)(o.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
-    null == f && (f = i === x.Ps.EXTERNAL ? g.intl.string(g.t.IyZxjH) : g.intl.string(g.t["X2K3/4"]));
-    let S = (0, m.A)(A, I),
-        [{ startDateTimeString: P, endDateTimeString: w, currentOrPastEvent: _, upcomingEvent: k, diffMinutes: D }, R] =
-            r.useState((0, v.CC)(t, u));
-    r.useEffect(() => {
-        R((0, v.CC)(t, u));
-        let e = setInterval(() => R((0, v.CC)(t, u)), 1e3);
+        S = (0, o.rdh)(u.A.colors.TEXT_BRAND).hex(),
+        y = (0, o.rdh)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
+        _ = (0, o.rdh)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
+    null == A && (A = i === h.Ps.EXTERNAL ? N.intl.string(N.t.IyZxjH) : N.intl.string(N.t["X2K3/4"]));
+    let k = (0, m.A)(T, f),
+        [{ startDateTimeString: R, endDateTimeString: L, currentOrPastEvent: b, upcomingEvent: D, diffMinutes: P }, B] =
+            s.useState((0, x.CC)(t, d));
+    s.useEffect(() => {
+        B((0, x.CC)(t, d));
+        let e = setInterval(() => B((0, x.CC)(t, d)), 1e3);
         return () => {
             clearInterval(e);
         };
-    }, [t, u]);
-    let L = P;
-    null != w &&
-        "" !== w &&
-        (L = g.intl.formatToPlainString(g.t.tXbu7I, {
-            start: P,
-            end: w,
-        }));
-    let B = r.useMemo(
-            () =>
-                n === x.XG.CANCELED || (null == S ? void 0 : S.is_canceled)
-                    ? 5
-                    : n === x.XG.ACTIVE
-                      ? 3
-                      : x.lV.has(n)
-                        ? 4
-                        : _
-                          ? 2
-                          : +!!k,
-            [n, null == S ? void 0 : S.is_canceled, _, k],
+    }, [t, d]);
+    let G = R;
+    null != L && "" !== L && (G = N.intl.formatToPlainString(N.t.tXbu7I, { start: R, end: L }));
+    let w = s.useMemo(
+            () => (l === h.XG.CANCELED || k?.is_canceled ? 5 : l === h.XG.ACTIVE ? 3 : h.lV.has(l) ? 4 : b ? 2 : +!!D),
+            [l, k?.is_canceled, b, D],
         ),
-        G = (function (e, t, n, r, i) {
+        z = (function (e, t, l, s, i) {
             switch (e) {
                 case 1:
-                    return i > 0
-                        ? g.intl.formatToPlainString(g.t.PQlCWk, {
-                              minutes: i,
-                          })
-                        : g.intl.string(g.t.WINqKV);
+                    return i > 0 ? N.intl.formatToPlainString(N.t.PQlCWk, { minutes: i }) : N.intl.string(N.t.WINqKV);
                 case 2:
-                    return g.intl.string(g.t.WINqKV);
+                    return N.intl.string(N.t.WINqKV);
                 case 3:
-                    return null != r && "" !== r
-                        ? g.intl.format(g.t.vHYgJW, {
-                              start: n,
+                    return null != s && "" !== s
+                        ? N.intl.format(N.t.vHYgJW, {
+                              start: l,
                               startHook: (e) =>
-                                  (0, l.jsx)(d.Text, {
+                                  (0, n.jsx)(o.Text, {
                                       color: "text-feedback-positive",
                                       variant: "text-sm/semibold",
-                                      className: j.Py,
+                                      className: g.Py,
                                       children: e,
                                   }),
-                              end: r,
+                              end: s,
                           })
-                        : null != n
-                          ? n
-                          : "";
+                        : (l ?? "");
                 default:
                     return t;
             }
-        })(B, L, f, w, D),
+        })(w, G, A, L, P),
         {
-            Icon: z,
-            iconColor: U,
+            Icon: U,
+            iconColor: O,
             textColor: X,
             tooltipText: M,
-        } = r.useMemo(
+        } = s.useMemo(
             () =>
                 (function (e) {
                     let t,
                         {
-                            timeStatus: n,
-                            textBrand: l,
-                            textPositive: r,
+                            timeStatus: l,
+                            textBrand: n,
+                            textPositive: s,
                             textDanger: i,
-                            endDateTimeString: s,
-                            startDateTimeString: a,
+                            endDateTimeString: a,
+                            startDateTimeString: r,
                         } = e,
-                        c = d.CTc,
-                        o = l,
-                        u = "text-default";
-                    switch (n) {
+                        c = o.CTc,
+                        u = n,
+                        d = "text-default";
+                    switch (l) {
                         case 3:
-                            (o = r), (u = null != s ? void 0 : "text-feedback-positive");
+                            (u = s), (d = null != a ? void 0 : "text-feedback-positive");
                             break;
                         case 4:
-                            c = d.O4;
+                            c = o.O4;
                             break;
                         case 2:
                         case 1:
-                            (u = "text-brand"), (t = a);
+                            (d = "text-brand"), (t = r);
                             break;
                         case 5:
-                            o = i;
+                            u = i;
                     }
-                    return {
-                        Icon: c,
-                        iconColor: o,
-                        textColor: u,
-                        tooltipText: t,
-                    };
+                    return { Icon: c, iconColor: u, textColor: d, tooltipText: t };
                 })({
-                    timeStatus: B,
-                    textBrand: C,
-                    textPositive: O,
-                    textDanger: T,
-                    endDateTimeString: w,
-                    startDateTimeString: P,
+                    timeStatus: w,
+                    textBrand: S,
+                    textPositive: y,
+                    textDanger: _,
+                    endDateTimeString: L,
+                    startDateTimeString: R,
                 }),
-            [B, C, O, T, w, P],
+            [w, S, y, _, L, R],
         ),
-        V = null;
-    if (null != b) {
-        let e = (0, v.X7)(b);
-        V = g.intl.formatToPlainString(g.t.HmKEqW, {
-            recurrenceRule: e.toText(),
-        });
-        let n = c()(t);
-        V = (function (e, t) {
-            let n = t.toDate(),
-                l = n.toLocaleString(g.intl.currentLocale, {
-                    weekday: "long",
-                });
+        Y = null;
+    if (null != C) {
+        let e = (0, x.X7)(C);
+        Y = N.intl.formatToPlainString(N.t.HmKEqW, { recurrenceRule: e.toText() });
+        let l = c()(t);
+        Y = (function (e, t) {
+            let l = t.toDate(),
+                n = l.toLocaleString(N.intl.currentLocale, { weekday: "long" });
             switch (e) {
-                case p.z.WEEKLY:
-                    return g.intl.formatToPlainString(g.t.xQM9X0, {
-                        weekday: l,
+                case v.z.WEEKLY:
+                    return N.intl.formatToPlainString(N.t.xQM9X0, { weekday: n });
+                case v.z.BIWEEKLY:
+                    return N.intl.formatToPlainString(N.t.RYscac, { weekday: n });
+                case v.z.MONTHLY:
+                    let s = Math.ceil(l.getDate() / 7);
+                    return N.intl.formatToPlainString(N.t["4ZN9Ap"], { weekday: n, nth: s });
+                case v.z.YEARLY:
+                    return N.intl.formatToPlainString(N.t["rXUS+j"], {
+                        date: l.toLocaleString(N.intl.currentLocale, { month: "short", day: "2-digit" }),
                     });
-                case p.z.BIWEEKLY:
-                    return g.intl.formatToPlainString(g.t.RYscac, {
-                        weekday: l,
-                    });
-                case p.z.MONTHLY:
-                    let r = Math.ceil(n.getDate() / 7);
-                    return g.intl.formatToPlainString(g.t["4ZN9Ap"], {
-                        weekday: l,
-                        nth: r,
-                    });
-                case p.z.YEARLY:
-                    return g.intl.formatToPlainString(g.t["rXUS+j"], {
-                        date: n.toLocaleString(g.intl.currentLocale, {
-                            month: "short",
-                            day: "2-digit",
-                        }),
-                    });
-                case p.z.WEEKDAY_ONLY:
-                    return g.intl.string(g.t["2BX6bC"]);
-                case p.z.WEEKEND_ONLY:
-                    return g.intl.string(g.t["IEi+Rw"]);
+                case v.z.WEEKDAY_ONLY:
+                    return N.intl.string(N.t["2BX6bC"]);
+                case v.z.WEEKEND_ONLY:
+                    return N.intl.string(N.t["IEi+Rw"]);
                 default:
                     return null;
             }
-        })((0, v.z7)(n, b), n);
+        })((0, x.z7)(l, C), l);
     }
-    return (0, l.jsxs)(N, {
-        className: s()(a, {
-            [j.AD]: null != V,
-        }),
+    return (0, n.jsxs)(j, {
+        className: a()(r, { [g.AD]: null != Y }),
         tooltipText: M,
         children: [
-            E && n === x.XG.SCHEDULED
-                ? (0, l.jsx)(h, {})
-                : (0, l.jsx)(z, {
-                      color: U,
-                      size: "custom",
-                      width: 20,
-                      height: 20,
-                  }),
-            (0, l.jsxs)("div", {
-                className: j.Zy,
+            I && l === h.XG.SCHEDULED
+                ? (0, n.jsx)(p, {})
+                : (0, n.jsx)(U, { color: O, size: "custom", width: 20, height: 20 }),
+            (0, n.jsxs)("div", {
+                className: g.Zy,
                 children: [
-                    (0, l.jsx)(d.Text, {
-                        color: X,
-                        variant: y,
-                        children: G,
-                    }),
-                    null != V &&
-                        (0, l.jsx)(d.Text, {
-                            color: "text-default",
-                            variant: "text-xs/normal",
-                            children: V,
-                        }),
+                    (0, n.jsx)(o.Text, { color: X, variant: E, children: z }),
+                    null != Y && (0, n.jsx)(o.Text, { color: "text-default", variant: "text-xs/normal", children: Y }),
                 ],
             }),
         ],

@@ -1,17 +1,18 @@
-e.exports = function (e, t, n) {
-    var r = e;
-    if (n === r.count())
-        t.forEach(function (e) {
-            r = r.push(e);
+"use strict";
+t.exports = function (t, e, r) {
+    var n = t;
+    if (r === n.count())
+        e.forEach(function (t) {
+            n = n.push(t);
         });
-    else if (0 === n)
-        t.reverse().forEach(function (e) {
-            r = r.unshift(e);
+    else if (0 === r)
+        e.reverse().forEach(function (t) {
+            n = n.unshift(t);
         });
     else {
-        var i = r.slice(0, n),
-            a = r.slice(n);
-        r = i.concat(t, a).toList();
+        var i = n.slice(0, r),
+            o = n.slice(r);
+        n = i.concat(e, o).toList();
     }
-    return r;
+    return n;
 };

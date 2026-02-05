@@ -1,13 +1,11 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(917269),
     a = n(773520),
     o = n(807583),
     i = n(878379),
     s = n(504183),
     l = n(621047);
-
 function c(e) {
     var t = "function" == typeof r ? new r() : void 0;
     return (c = function (e) {
@@ -17,18 +15,12 @@ function c(e) {
             if (t.has(e)) return t.get(e);
             t.set(e, n);
         }
-
         function n() {
             return (0, l.A)(e, arguments, (0, o.A)(this).constructor);
         }
         return (
             (n.prototype = a(e.prototype, {
-                constructor: {
-                    value: n,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0,
-                },
+                constructor: { value: n, enumerable: !1, writable: !0, configurable: !0 },
             })),
             (0, i.A)(n, e)
         );

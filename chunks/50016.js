@@ -1,6 +1,5 @@
-n.d(t, {
-    W: () => o,
-});
+"use strict";
+n.d(t, { W: () => o });
 var r = n(852015),
     i = n(124651),
     a = n(716115),
@@ -30,39 +29,31 @@ class o {
                 continue;
             }
             let l = t,
-                c = o.repeat,
-                u = o.localName;
-            switch (
-                (o.oneof &&
-                    (l = l[o.oneof]).oneofKind !== u &&
-                    (l = t[o.oneof] =
-                        {
-                            oneofKind: u,
-                        }),
-                o.kind)
-            ) {
+                u = o.repeat,
+                c = o.localName;
+            switch ((o.oneof && (l = l[o.oneof]).oneofKind !== c && (l = t[o.oneof] = { oneofKind: c }), o.kind)) {
                 case "scalar":
                 case "enum":
                     let d = "enum" == o.kind ? i.LN.INT32 : o.T,
-                        f = "scalar" == o.kind ? o.L : void 0;
-                    if (c) {
-                        let t = l[u];
+                        _ = "scalar" == o.kind ? o.L : void 0;
+                    if (u) {
+                        let t = l[c];
                         if (s == r.O0.LengthDelimited && d != i.LN.STRING && d != i.LN.BYTES) {
                             let n = e.uint32() + e.pos;
-                            for (; e.pos < n; ) t.push(this.scalar(e, d, f));
-                        } else t.push(this.scalar(e, d, f));
-                    } else l[u] = this.scalar(e, d, f);
+                            for (; e.pos < n; ) t.push(this.scalar(e, d, _));
+                        } else t.push(this.scalar(e, d, _));
+                    } else l[c] = this.scalar(e, d, _);
                     break;
                 case "message":
-                    if (c) {
-                        let t = l[u],
+                    if (u) {
+                        let t = l[c],
                             r = o.T().internalBinaryRead(e, e.uint32(), n);
                         t.push(r);
-                    } else l[u] = o.T().internalBinaryRead(e, e.uint32(), n, l[u]);
+                    } else l[c] = o.T().internalBinaryRead(e, e.uint32(), n, l[c]);
                     break;
                 case "map":
-                    let [p, _] = this.mapEntry(o, e, n);
-                    l[u][p] = _;
+                    let [f, p] = this.mapEntry(o, e, n);
+                    l[c][f] = p;
             }
         }
     }

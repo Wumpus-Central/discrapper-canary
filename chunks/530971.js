@@ -1,115 +1,100 @@
-l.d(t, {
-    A: () => v,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(311907),
-    a = l(775602),
-    i = l(287809),
-    o = l(728458),
-    c = l(590180),
-    u = l(4227),
-    d = l(856686),
-    f = l(429876),
-    b = l(599062),
-    g = l(998694),
-    p = l(231209),
-    m = l(781724),
-    h = l(758836);
-let E = [h.G2.HOME, h.G2.ORBS];
-
-function v(e) {
+"use strict";
+s.d(t, { A: () => C });
+var n = s(627968),
+    r = s(64700),
+    l = s(311907),
+    a = s(775602),
+    i = s(287809),
+    o = s(728458),
+    c = s(590180),
+    d = s(4227),
+    u = s(856686),
+    g = s(429876),
+    m = s(599062),
+    _ = s(998694),
+    h = s(231209),
+    p = s(781724),
+    f = s(758836);
+let E = [f.G2.HOME, f.G2.ORBS];
+function C(e) {
     let {
             tab: t,
-            sortedCategories: l,
+            sortedCategories: s,
             transitionToTab: i,
             transitionState: o,
             updateAnalyticsState: c,
-            refreshCategories: u,
+            refreshCategories: d,
         } = e,
-        g = A();
-    x(g);
-    let v = (0, s.bG)([a.A], () => a.A.useReducedMotion),
-        [S, C] = r.useState(void 0),
-        [O, _] = r.useState(!0),
-        y = r.useMemo(
+        _ = b();
+    A(_);
+    let C = (0, l.bG)([a.A], () => a.A.useReducedMotion),
+        [x, S] = r.useState(void 0),
+        [v, L] = r.useState(!0),
+        T = r.useMemo(
             () =>
-                l.filter(
+                s.filter(
                     (e) =>
-                        !h.MS.some((t) => {
-                            let { categorySkuId: l } = t;
-                            return l === e.skuId;
+                        !f.MS.some((t) => {
+                            let { categorySkuId: s } = t;
+                            return s === e.skuId;
                         }),
                 ),
-            [l],
+            [s],
         ),
-        j = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
-                    categorySkuId: l,
+                    categorySkuId: s,
                     shouldAnimate: n,
                     isInternalShopDeeplink: r,
-                    isOrbsExclusive: s,
+                    isOrbsExclusive: l,
                 } = e;
-                c(t, l);
-                let a = n && !v,
-                    o = s ? h.G2.ORBS : h.G2.CATALOG;
-                C(l), _(!r), i(o, a);
+                c(t, s);
+                let a = n && !C,
+                    o = l ? f.G2.ORBS : f.G2.CATALOG;
+                S(s), L(!r), i(o, a);
             },
-            [v, i, c],
+            [C, i, c],
         ),
-        { searchError: L } = (0, d.S)();
-    return null != L
-        ? (0, n.jsx)(m.A, {})
-        : null != g
-          ? (0, n.jsx)(b.h, {
-                onRetry: u,
-                errorMessage: g,
-                errorOrigin: b.A.SHOP_PAGE,
-            })
+        { searchError: O } = (0, u.S)();
+    return null != O
+        ? (0, n.jsx)(p.A, {})
+        : null != _
+          ? (0, n.jsx)(m.h, { onRetry: d, errorMessage: _, errorOrigin: m.A.SHOP_PAGE })
           : E.includes(t)
-            ? (0, n.jsx)(p.A, {
-                  handleTransition: j,
+            ? (0, n.jsx)(h.A, { handleTransition: I, tab: t, transitionState: o })
+            : (0, n.jsx)(g.A, {
                   tab: t,
-                  transitionState: o,
-              })
-            : (0, n.jsx)(f.A, {
-                  tab: t,
-                  sortedCategories: y,
-                  initialCategoryId: S,
-                  showFilterInitially: O,
+                  sortedCategories: T,
+                  initialCategoryId: x,
+                  showFilterInitially: v,
                   onUnmount: () => {
-                      C(void 0), _(!0);
+                      S(void 0), L(!0);
                   },
               });
 }
-let A = () =>
-        (0, s.bG)([c.A, u.A], () =>
+let b = () =>
+        (0, l.bG)([c.A, d.A], () =>
             null != c.A.error
-                ? "shop load fetch categories error: ".concat(c.A.error.message)
-                : null != u.A.claimError
-                  ? "shop load claim error: ".concat(u.A.claimError.message)
-                  : null != u.A.fetchError
-                    ? "shop load fetch purchase error: ".concat(u.A.fetchError.message)
+                ? `shop load fetch categories error: ${c.A.error.message}`
+                : null != d.A.claimError
+                  ? `shop load claim error: ${d.A.claimError.message}`
+                  : null != d.A.fetchError
+                    ? `shop load fetch purchase error: ${d.A.fetchError.message}`
                     : void 0,
         ),
-    x = (e) => {
-        let t = (0, s.bG)([i.default], () => i.default.getCurrentUser()),
-            { noCache: l, includeUnpublished: n } = (0, g.A)();
+    A = (e) => {
+        let t = (0, l.bG)([i.default], () => i.default.getCurrentUser()),
+            { noCache: s, includeUnpublished: n } = (0, _.A)();
         r.useEffect(() => {
-            var r, s;
             null != e &&
                 o.A.captureMessage(e, {
                     tags: {
-                        isStaff:
-                            null != (r = null == t || null == (s = t.isStaff()) ? void 0 : s.toString())
-                                ? r
-                                : "unknown",
-                        disableCache: l.toString(),
+                        isStaff: t?.isStaff()?.toString() ?? "unknown",
+                        disableCache: s.toString(),
                         includeUnpublished: n.toString(),
                     },
                 });
-        }, [e, t, l, n]);
+        }, [e, t, s, n]);
     };

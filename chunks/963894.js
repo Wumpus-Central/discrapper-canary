@@ -1,37 +1,26 @@
-n.d(t, {
-    A: () => h,
-    H: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => h, H: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(92674),
-    o = n(311907),
-    s = n(397927),
+    s = n(311907),
+    o = n(397927),
     l = n(775602),
-    c = n(21161),
-    u = n(726368);
+    u = n(21161),
+    c = n(726368);
 let d = 200,
-    f = 20,
-    p = 200;
-
-function _(e) {
-    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: _ } = e,
+    _ = 20,
+    f = 200;
+function p(e) {
+    let { children: t, confettiTriggerRef: n, setConfettiCount: u, setShouldFireConfetti: _, tooltipProps: p } = e,
         [h, m] = i.useState(0),
         g = i.useRef(-1),
         E = i.useRef(!0),
-        y = (0, o.bG)([l.A], () => l.A.useReducedMotion),
-        { scaleFactor: b } = (0, s.zhh)({
-            from: {
-                scaleFactor: 1,
-            },
-            to: {
-                scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1,
-            },
-            config: {
-                tension: 380,
-                friction: 7,
-            },
+        A = (0, s.bG)([l.A], () => l.A.useReducedMotion),
+        { scaleFactor: I } = (0, o.zhh)({
+            from: { scaleFactor: 1 },
+            to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
+            config: { tension: 380, friction: 7 },
         });
     return (i.useEffect(
         () => () => {
@@ -39,34 +28,30 @@ function _(e) {
         },
         [],
     ),
-    y)
+    A)
         ? t
         : (0, r.jsx)(a.animated.div, {
-              className: u.WD,
-              style: {
-                  transform: b.to((e) => "scale(".concat(e, ")")),
-              },
-              children: (0, r.jsx)(s.DUT, {
-                  className: u.hh,
+              className: c.WD,
+              style: { transform: I.to((e) => `scale(${e})`) },
+              children: (0, r.jsx)(o.DUT, {
+                  className: c.hh,
                   onMouseDown: () => {
                       m(1),
-                          f(!0),
-                          c((e) => Math.min(e + 2, p)),
+                          _(!0),
+                          u((e) => Math.min(e + 2, f)),
                           window.clearTimeout(g.current),
                           (g.current = window.setTimeout(() => {
-                              E.current && c(0);
+                              E.current && u(0);
                           }, d));
                   },
                   onMouseUp: () => {
-                      m(0), f(!1);
+                      m(0), _(!1);
                   },
                   onMouseEnter: () => {
-                      var e;
-                      m(2), null == _ || null == (e = _.onMouseEnter) || e.call(_);
+                      m(2), p?.onMouseEnter?.();
                   },
                   onMouseLeave: () => {
-                      var e;
-                      m(0), null == _ || null == (e = _.onMouseLeave) || e.call(_);
+                      m(0), p?.onMouseLeave?.();
                   },
                   innerRef: n,
                   children: t,
@@ -75,37 +60,25 @@ function _(e) {
 }
 let h = function (e) {
     let { confettiCount: t, confettiTriggerRef: n, isFiring: r } = e,
-        { cannon: a, createMultipleConfettiAt: s } = i.useContext(c.x),
-        u = (0, o.bG)([l.A], () => l.A.useReducedMotion);
+        { cannon: a, createMultipleConfettiAt: o } = i.useContext(u.x),
+        c = (0, s.bG)([l.A], () => l.A.useReducedMotion);
     return (
         i.useEffect(
             () => () => {
-                null == a || a.clearConfetti();
+                a?.clearConfetti();
             },
             [a],
         ),
         i.useEffect(() => {
-            if (!r || u || null == n.current) return;
+            if (!r || c || null == n.current) return;
             let e = n.current.getBoundingClientRect();
-            s(
+            o(
                 e.left + e.width / 2,
                 e.top + e.height / 2,
-                {
-                    velocity: {
-                        type: "static-random",
-                        minValue: {
-                            x: -180,
-                            y: -180,
-                        },
-                        maxValue: {
-                            x: 180,
-                            y: 180,
-                        },
-                    },
-                },
-                Math.max(t, f),
+                { velocity: { type: "static-random", minValue: { x: -180, y: -180 }, maxValue: { x: 180, y: 180 } } },
+                Math.max(t, _),
             );
-        }, [t, n, s, r, u]),
+        }, [t, n, o, r, c]),
         null
     );
 };

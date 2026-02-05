@@ -1,51 +1,45 @@
-n.d(t, {
-    A: () => p,
-});
+n.d(t, { A: () => h });
 var i = n(308368),
-    r = n(684013),
-    l = n(334738),
-    a = n(592598),
-    o = n(481484),
-    s = n(581730),
-    c = n(672396),
+    l = n(684013),
+    a = n(334738),
+    s = n(592598),
+    r = n(481484),
+    o = n(581730),
+    d = n(672396),
     u = n(652215),
-    d = n(985018);
-
-function p(e, t, n, p) {
-    if (a.A.isNotificationDisabled(c.KS.ActivityInvite)) return null;
-    let h = t.username,
-        f = d.intl.format(d.t.VDODnv, {
-            username: "",
-            game: n.name,
-        }),
-        m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: g, trackClick: y } = (0, s.Y9)(c.KS.ActivityInvite, {
-            notif_type: c.KS.ActivityInvite,
+    c = n(985018);
+function h(e, t, n, h) {
+    if (s.A.isNotificationDisabled(d.KS.ActivityInvite)) return null;
+    let A = t.username,
+        m = c.intl.format(c.t.VDODnv, { username: "", game: n.name }),
+        g = t.getAvatarURL(e.guild_id, 80),
+        { trackView: p, trackClick: f } = (0, o.Y9)(d.KS.ActivityInvite, {
+            notif_type: d.KS.ActivityInvite,
             notif_user_id: t.id,
             activity_type: u.xL.JOIN_REQUEST,
-            activity_name: p.name,
+            activity_name: h.name,
         });
     return {
-        icon: m,
-        title: h,
-        body: f,
-        confirmText: d.intl.string(d.t["fgP/wX"]),
-        cancelText: d.intl.string(d.t["tpXzJ+"]),
+        icon: g,
+        title: A,
+        body: m,
+        confirmText: c.intl.string(c.t["fgP/wX"]),
+        cancelText: c.intl.string(c.t["tpXzJ+"]),
         onNotificationShow: () => {
-            g();
+            p();
         },
         onConfirmClick: (t, n) => {
             i.A.sendActivityInvite({
                 channelId: e.id,
                 type: u.xL.JOIN,
-                activity: p,
-                location: (0, o.y)() ? u.ThZ.LOCKED_OVERLAY : u.ThZ.UNLOCKED_OVERLAY,
+                activity: h,
+                location: (0, r.y)() ? u.ThZ.LOCKED_OVERLAY : u.ThZ.UNLOCKED_OVERLAY,
             }),
-                y("join"),
-                r.A.updateNotificationStatus(n);
+                f("join"),
+                l.A.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, l.ack)(
+            (0, a.ack)(
                 e.id,
                 {
                     section: u.JJy.OVERLAY,
@@ -55,11 +49,11 @@ function p(e, t, n, p) {
                 !0,
                 !0,
             ),
-                r.A.updateNotificationStatus(n),
-                y("decline");
+                l.A.updateNotificationStatus(n),
+                f("decline");
         },
         onDismissClick: () => {
-            y("dismiss");
+            f("dismiss");
         },
     };
 }

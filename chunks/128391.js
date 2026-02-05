@@ -1,104 +1,41 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function o(e, t) {
+"use strict";
+function r(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { onBeforeBatch: r } = n,
-        a = new Set();
-
+        i = new Set();
+    function a(e) {
+        null != e.channel_id && i.has(e.channel_id) && t(e);
+    }
+    function s() {
+        i.clear();
+    }
     function o(e) {
-        null != e.channel_id && a.has(e.channel_id) && t(e);
-    }
-
-    function l() {
-        a.clear();
-    }
-
-    function c(e) {
         let { channelId: t } = e;
-        null != t && a.add(t);
+        null != t && i.add(t);
     }
-
-    function u(e) {
+    function l(e) {
         let { message: t } = e;
-        null != t.channel_id && a.has(t.channel_id) && (null == r || r(), o(t));
+        null != t.channel_id && i.has(t.channel_id) && (r?.(), a(t));
     }
-
-    function d(e) {
+    function u(e) {
         let { channelId: t, messages: n } = e;
-        a.add(t), null == r || r(), n.forEach((e) => o(e));
+        i.add(t), r?.(), n.forEach((e) => a(e));
     }
-
-    function f(e) {
+    function c(e) {
         let { messages: n } = e;
-        null == r || r(), n.forEach((e) => t(e));
+        r?.(), n.forEach((e) => t(e));
     }
-
-    function p(e) {
+    function d(e) {
         let { pins: n } = e;
-        null == r || r(),
+        r?.(),
             n.forEach((e) => {
                 let { message: n } = e;
                 return t(n);
             });
     }
-
     function _(e) {
         let { data: n } = e;
-        null == r || r(),
+        r?.(),
             n.forEach((e) => {
                 let { messages: n } = e;
                 n.forEach((e) => {
@@ -106,26 +43,18 @@ function o(e, t) {
                 });
             });
     }
-    e.actions = s(i({}, e.actions), {
-        POST_CONNECTION_OPEN: l,
-        MESSAGE_CREATE: {
-            callback: u,
-            autoSubscribe: !1,
-        },
-        MESSAGE_UPDATE: u,
-        LOAD_MESSAGES_SUCCESS: d,
-        LOAD_MESSAGES_AROUND_SUCCESS: d,
-        LOAD_RECENT_MENTIONS_SUCCESS: f,
-        LOAD_PINNED_MESSAGES_SUCCESS: p,
+    e.actions = {
+        ...e.actions,
+        POST_CONNECTION_OPEN: s,
+        MESSAGE_CREATE: { callback: l, autoSubscribe: !1 },
+        MESSAGE_UPDATE: l,
+        LOAD_MESSAGES_SUCCESS: u,
+        LOAD_MESSAGES_AROUND_SUCCESS: u,
+        LOAD_RECENT_MENTIONS_SUCCESS: c,
+        LOAD_PINNED_MESSAGES_SUCCESS: d,
         SEARCH_MESSAGES_SUCCESS: _,
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: _,
-        CHANNEL_SELECT: {
-            callback: c,
-            autoSubscribe: !1,
-        },
-    });
+        CHANNEL_SELECT: { callback: o, autoSubscribe: !1 },
+    };
 }
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+n.d(t, { A: () => r });

@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,34 +8,12 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: {
-            "aria-orientation": "vertical",
-        },
+        props: { "aria-orientation": "vertical" },
         relatedConcepts: [
-            {
-                concept: {
-                    name: "MENU",
-                },
-                module: "JAPI",
-            },
-            {
-                concept: {
-                    name: "list",
-                },
-                module: "ARIA",
-            },
-            {
-                concept: {
-                    name: "select",
-                },
-                module: "XForms",
-            },
-            {
-                concept: {
-                    name: "sidebar",
-                },
-                module: "DTB",
-            },
+            { concept: { name: "MENU" }, module: "JAPI" },
+            { concept: { name: "list" }, module: "ARIA" },
+            { concept: { name: "select" }, module: "XForms" },
+            { concept: { name: "sidebar" }, module: "DTB" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

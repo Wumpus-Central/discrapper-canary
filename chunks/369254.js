@@ -1,97 +1,66 @@
-n.d(t, {
-    Ay: () => P,
-    Z5: () => R,
-    t1: () => C,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => L, Z5: () => D, t1: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(397927),
+    s = n.n(a),
+    o = n(397927),
     l = n(930125),
-    c = n(338717),
-    u = n(282108),
+    u = n(338717),
+    c = n(282108),
     d = n(776231),
-    f = n(619517),
-    p = n(302031),
-    _ = n(644447),
+    _ = n(619517),
+    f = n(302031),
+    p = n(644447),
     h = n(203982),
     m = n(515718),
     g = n(700331),
     E = n(454290),
-    y = n(976247),
-    b = n(358731),
-    O = n(215050),
-    v = n(597351),
-    A = n(608214),
-    I = n(652215),
-    S = n(985018),
-    T = n(720308);
-
-function C(e) {
+    A = n(976247),
+    I = n(358731),
+    T = n(215050),
+    y = n(597351),
+    S = n(608214),
+    v = n(652215),
+    C = n(985018),
+    b = n(720308);
+function N(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
-        { width: o, height: s } = (0, y.z)(i, {
-            width: n,
-            height: r,
-        });
-    f.Ay.preloadImage({
-        src: t,
-        dimensions: {
-            maxWidth: o,
-            maxHeight: s,
-            imageWidth: n,
-            imageHeight: r,
-        },
-        options: a,
-    });
+        { width: s, height: o } = (0, A.z)(i, { width: n, height: r });
+    _.Ay.preloadImage({ src: t, dimensions: { maxWidth: s, maxHeight: o, imageWidth: n, imageHeight: r }, options: a });
 }
-
-function N(e, t) {
+function R(e, t) {
     return ((e % t) + t) % t;
 }
-
-function w(e) {
+function O(e) {
     let { children: t, isObscured: n, src: a } = e,
-        [s, l] = i.useState(!1),
-        u = i.useCallback(() => {
+        [o, l] = i.useState(!1),
+        c = i.useCallback(() => {
             l((e) => !e);
         }, []);
     return n
-        ? (0, r.jsx)(p.Bs.Provider, {
-              value: s,
+        ? (0, r.jsx)(f.Bs.Provider, {
+              value: o,
               children: (0, r.jsx)(
-                  p.Ay,
+                  f.Ay,
                   {
-                      type: p.Ay.Types.ATTACHMENT,
-                      reason: c.Oc.EXPLICIT_CONTENT,
+                      type: f.Ay.Types.ATTACHMENT,
+                      reason: u.Oc.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
-                      onToggleObscurity: u,
-                      children: (e) =>
-                          (0, r.jsx)("div", {
-                              className: o()(T.JT, {
-                                  [T.Qr]: e,
-                              }),
-                              children: t(e),
-                          }),
+                      onToggleObscurity: c,
+                      children: (e) => (0, r.jsx)("div", { className: s()(b.JT, { [b.Qr]: e }), children: t(e) }),
                   },
                   a,
               ),
           })
-        : (0, r.jsx)(r.Fragment, {
-              children: t(!1),
-          });
+        : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
-
-function R(e, t) {
+function D(e, t) {
     "IMAGE" !== e.type ||
         ((0, m.eJ)(e)
-            ? C({
-                  src: (0, _.E)({
-                      proxyURL: e.proxyUrl,
-                      url: e.url,
-                  }),
+            ? N({
+                  src: (0, p.E)({ proxyURL: e.proxyUrl, url: e.url }),
                   width: e.width,
                   height: e.height,
                   hasMultiple: t,
@@ -99,102 +68,89 @@ function R(e, t) {
               })
             : (0, d.yt)(e.url));
 }
-
-function P(e) {
+function L(e) {
     let {
             items: t,
             onIndexChange: n,
             startIndex: a = 0,
-            enabledContentHarmTypeFlags: c = 0,
+            enabledContentHarmTypeFlags: u = 0,
             shouldHideMediaOptions: d = !1,
         } = e,
-        [f, p] = i.useState(a),
-        _ = i.useRef(a),
-        { zoomed: m, setZoomed: C } = (0, E.Q)(),
-        R = i.useCallback(
+        [_, f] = i.useState(a),
+        p = i.useRef(a),
+        { zoomed: m, setZoomed: N } = (0, E.Q)(),
+        D = i.useCallback(
             (e) => {
-                p((e = N(e, t.length))), (_.current = e), null == n || n(e), C(!1);
+                f((e = R(e, t.length))), (p.current = e), n?.(e), N(!1);
             },
-            [n, t, C],
+            [n, t, N],
         );
     i.useEffect(() => {
-        let e = () => R(_.current + 1),
-            t = () => R(_.current - 1);
+        let e = () => D(p.current + 1),
+            t = () => D(p.current - 1);
         return (
-            h._.subscribe(I.jej.MODAL_CAROUSEL_NEXT, e),
-            h._.subscribe(I.jej.MODAL_CAROUSEL_PREV, t),
+            h._.subscribe(v.jej.MODAL_CAROUSEL_NEXT, e),
+            h._.subscribe(v.jej.MODAL_CAROUSEL_PREV, t),
             () => {
-                h._.unsubscribe(I.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(I.jej.MODAL_CAROUSEL_PREV, t);
+                h._.unsubscribe(v.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(v.jej.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [R, C]);
-    let P = t[f],
-        D = (0, u.qo)(
-            {
-                type: l.D.GenericMedia,
-                media: P,
-            },
-            c,
-        ),
-        L = d
+    }, [D, N]);
+    let L = t[_],
+        w = (0, c.qo)({ type: l.D.GenericMedia, media: L }, u),
+        x = d
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : () => g.l.markActionPerformed(g.N.CONTEXT_MENU_OPENED),
-        x = t.length > 1;
+        P = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(b.Ay, {
+            (0, r.jsx)(I.Ay, {
                 children: (e) =>
-                    x
+                    P
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(v.A, {
+                                  (0, r.jsx)(y.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(I.jej.MODAL_CAROUSEL_PREV);
+                                          e.stopPropagation(), h._.dispatch(v.jej.MODAL_CAROUSEL_PREV);
                                       },
-                                      icon: s.Zge,
-                                      tooltip: S.intl.string(S.t.vgfxaA),
-                                      className: o()(T.vi, e),
+                                      icon: o.Zge,
+                                      tooltip: C.intl.string(C.t.vgfxaA),
+                                      className: s()(b.vi, e),
                                   }),
-                                  (0, r.jsx)(v.A, {
+                                  (0, r.jsx)(y.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(I.jej.MODAL_CAROUSEL_NEXT);
+                                          e.stopPropagation(), h._.dispatch(v.jej.MODAL_CAROUSEL_NEXT);
                                       },
-                                      icon: s.KS6,
-                                      tooltip: S.intl.string(S.t.XiOHRX),
-                                      className: o()(T.f8, e),
+                                      icon: o.KS6,
+                                      tooltip: C.intl.string(C.t.XiOHRX),
+                                      className: s()(b.f8, e),
                                   }),
                               ],
                           })
                         : void 0,
             }),
-            (0, r.jsx)(y.A, {
+            (0, r.jsx)(A.A, {
                 items: t,
-                currentIndex: f,
+                currentIndex: _,
                 children: (e, t) =>
-                    (0, r.jsx)(w, {
-                        isObscured: !m && D,
-                        src: P.url,
+                    (0, r.jsx)(O, {
+                        isObscured: !m && w,
+                        src: L.url,
                         children: (n) =>
-                            (0, r.jsx)(A.Ay, {
-                                media: P,
-                                maxWidth: e,
-                                maxHeight: t,
-                                obscured: n,
-                                onContextMenu: L,
-                            }),
+                            (0, r.jsx)(S.Ay, { media: L, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: x }),
                     }),
             }),
-            x &&
-                (0, r.jsx)(b.Ay, {
+            P &&
+                (0, r.jsx)(I.Ay, {
                     children: (e) =>
-                        (0, r.jsx)(O.A, {
+                        (0, r.jsx)(T.A, {
                             items: t,
-                            currentIndex: f,
-                            onGalleryItemClick: R,
+                            currentIndex: _,
+                            onGalleryItemClick: D,
                             className: e,
-                            enabledContentHarmTypeFlags: c,
+                            enabledContentHarmTypeFlags: u,
                         }),
                 }),
         ],

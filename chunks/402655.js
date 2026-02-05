@@ -1,6 +1,5 @@
-n.d(t, {
-    M: () => a,
-});
+"use strict";
+n.d(t, { M: () => a });
 var r = n(136722),
     i = n(652215);
 let a = r.kg(

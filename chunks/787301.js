@@ -1,37 +1,26 @@
-n.d(t, {
-    A: () => d,
-});
-var a,
-    l,
-    i = n(311907),
-    r = n(73153);
-let s = null,
-    o = !1;
-class c extends (l = i.Ay.Store) {
+n.d(t, { A: () => o });
+var a = n(311907),
+    s = n(73153);
+let i = null,
+    l = !1;
+class r extends a.Ay.Store {
+    static displayName = "AgeVerificationStore";
     get loading() {
-        return o;
+        return l;
     }
     get methods() {
-        return s;
+        return i;
     }
 }
-(a = "displayName") in c
-    ? Object.defineProperty(c, a, {
-          value: "AgeVerificationStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (c[a] = "AgeVerificationStore");
-let d = new c(r.h, {
+let o = new r(s.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
-        o = !0;
+        l = !0;
     },
     AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
         let { methods: t } = e;
-        (s = t), (o = !1);
+        (i = t), (l = !1);
     },
     AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
-        o = !1;
+        l = !1;
     },
 });

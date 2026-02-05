@@ -1,109 +1,75 @@
-t.d(n, {
-    k: () => j,
-}),
-    t(896048);
-var r = t(627968),
+t.d(n, { k: () => x });
+var i = t(627968),
     l = t(64700),
-    i = t(503698),
-    s = t.n(i),
+    r = t(503698),
+    s = t.n(r),
     a = t(575593),
     o = t(397927),
     u = t(713517),
-    c = t(674658),
-    d = t(898461),
+    d = t(674658),
+    c = t(898461),
     p = t(837015),
     m = t(929283),
-    g = t(761365),
-    f = t(985018),
-    E = t(836314);
-let j = (e) => {
-    var n;
-    let t,
-        i,
-        { skuId: j, user: x, claimed: h, onSelect: T, selectedSkuId: P } = e,
-        [S, A] = l.useState(null),
-        b = l.useCallback((e) => {
-            A(e);
+    E = t(761365),
+    g = t(985018),
+    _ = t(836314);
+let x = (e) => {
+    let n,
+        t,
+        { skuId: r, user: x, claimed: T, onSelect: h, selectedSkuId: P } = e,
+        [A, S] = l.useState(null),
+        I = l.useCallback((e) => {
+            S(e);
         }, []),
-        y = l.useMemo(
-            () => ({
-                current: S,
-            }),
-            [S],
-        ),
-        { isHoveringOrFocusing: I } = (0, u.A)(y),
-        O = !h && I,
-        { product: v } = (0, c.q)(j);
-    if (null == v) return null;
-    let _ = v.items[0];
-    return null == _
+        j = l.useMemo(() => ({ current: A }), [A]),
+        { isHoveringOrFocusing: f } = (0, u.A)(j),
+        R = !T && f,
+        { product: C } = (0, d.q)(r);
+    if (null == C) return null;
+    let M = C.items[0];
+    return null == M
         ? null
-        : ((0, d.T)(_)
-              ? ((i = a.R.AVATAR_DECORATION),
-                (t = (0, r.jsx)(m.i, {
-                    item: _,
-                    user: x,
-                    isHighlighted: O,
-                    avatarSize: o._3J.SIZE_96,
-                })))
-              : (0, p.F)(_) &&
-                ((i = a.R.NAMEPLATE),
-                (t = (0, r.jsx)(g.A, {
-                    nameplate: _,
-                    user: x,
-                    isHighlighted: O,
-                    size: "small",
-                }))),
-          (0, r.jsx)(o.vN3, {
-              children: (0, r.jsxs)(o.sqX, {
-                  ref: b,
-                  "aria-label": null != (n = v.name) ? n : "",
+        : ((0, c.T)(M)
+              ? ((t = a.R.AVATAR_DECORATION),
+                (n = (0, i.jsx)(m.i, { item: M, user: x, isHighlighted: R, avatarSize: o._3J.SIZE_96 })))
+              : (0, p.F)(M) &&
+                ((t = a.R.NAMEPLATE),
+                (n = (0, i.jsx)(E.A, { nameplate: M, user: x, isHighlighted: R, size: "small" }))),
+          (0, i.jsx)(o.vN3, {
+              children: (0, i.jsxs)(o.sqX, {
+                  ref: I,
+                  "aria-label": C.name ?? "",
                   onClick: () => {
-                      null == j || null == T || h || T(j);
+                      null == r || null == h || T || h(r);
                   },
-                  className: s()(E._x, {
-                      [E.Vp]: !h,
-                      [E.mr]: O,
-                      [E.md]: P === j,
-                  }),
+                  className: s()(_._x, { [_.Vp]: !T, [_.mr]: R, [_.md]: P === r }),
                   children: [
-                      (0, r.jsx)("div", {
-                          className: s()(E.VH, {
-                              [E._Q]: i === a.R.AVATAR_DECORATION,
-                              [E.M4]: i === a.R.NAMEPLATE,
-                          }),
+                      (0, i.jsx)("div", {
+                          className: s()(_.VH, { [_._Q]: t === a.R.AVATAR_DECORATION, [_.M4]: t === a.R.NAMEPLATE }),
                           children:
-                              null != t
-                                  ? (0, r.jsxs)(r.Fragment, {
+                              null != n
+                                  ? (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, r.jsx)("div", {
-                                                className: s()(E.i1, {
-                                                    [E.Sf]: h,
-                                                }),
-                                                children: t,
-                                            }),
-                                            h &&
-                                                (0, r.jsx)(o.rOg, {
+                                            (0, i.jsx)("div", { className: s()(_.i1, { [_.Sf]: T }), children: n }),
+                                            T &&
+                                                (0, i.jsx)(o.rOg, {
                                                     size: "custom",
                                                     width: 48,
                                                     height: 48,
                                                     color: o.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
-                                                    className: E.j0,
+                                                    className: _.j0,
                                                 }),
                                         ],
                                     })
                                   : null,
                       }),
-                      (0, r.jsxs)("div", {
-                          className: E.tZ,
+                      (0, i.jsxs)("div", {
+                          className: _.tZ,
                           children: [
-                              (0, r.jsx)(o.Heading, {
-                                  variant: "heading-md/extrabold",
-                                  children: v.name,
-                              }),
-                              (0, r.jsx)(o.Text, {
+                              (0, i.jsx)(o.Heading, { variant: "heading-md/extrabold", children: C.name }),
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-sm/normal",
-                                  children: h ? f.intl.string(f.t["6cfuDj"]) : f.intl.string(f.t.QQsaCc),
+                                  children: T ? g.intl.string(g.t["6cfuDj"]) : g.intl.string(g.t.QQsaCc),
                               }),
                           ],
                       }),

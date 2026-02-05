@@ -1,96 +1,58 @@
-n.d(t, {
-    A: () => E,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(141468),
-    o = n(390248);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => m });
+var r = n(311907),
+    i = n(73153),
+    a = n(141468),
+    s = n(390248);
+let o = {};
+function l(e) {
+    return `${e.channel_id}:${e.id}`;
 }
-let c = {};
-
 function u(e) {
-    return "".concat(e.channel_id, ":").concat(e.id);
-}
-
-function d(e) {
     let { data: t } = e;
-    (c = {}),
+    (o = {}),
         t.forEach((e) => {
             let { messages: t } = e;
             t.forEach((e) => {
                 e.forEach((e) => {
-                    c[u(e)] = (0, s.rh)(e);
+                    o[l(e)] = (0, a.rh)(e);
                 });
             });
         });
 }
-
-function f(e) {
+function c(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
-    let n = u(t),
-        r = c[n];
-    return (
-        null != r &&
-        ((c[n] = (0, s.IU)(r, {
-            attachments: t.attachments,
-            embeds: t.embeds,
-        })),
-        !0)
-    );
+    let n = l(t),
+        r = o[n];
+    return null != r && ((o[n] = (0, a.IU)(r, { attachments: t.attachments, embeds: t.embeds })), !0);
 }
-
-function p(e) {
+function d(e) {
     let { messageId: t, channelId: n } = e,
-        r = u({
-            id: t,
-            channel_id: n,
-        }),
-        i = c[r];
-    null != i && (c[r] = (0, o.Td)(i));
+        r = l({ id: t, channel_id: n }),
+        i = o[r];
+    null != i && (o[r] = (0, s.Td)(i));
 }
-
 function _() {
-    m();
+    p();
 }
-
-function h() {
-    m();
+function f() {
+    p();
 }
-
-function m() {
-    c = {};
+function p() {
+    o = {};
 }
-class g extends (r = i.Ay.Store) {
+class h extends r.Ay.Store {
+    static displayName = "SearchMessageStore";
     getMessage(e, t) {
-        return c[
-            u({
-                id: e,
-                channel_id: t,
-            })
-        ];
+        return o[l({ id: e, channel_id: t })];
     }
 }
-l(g, "displayName", "SearchMessageStore");
-let E = new g(a.h, {
-    SEARCH_MESSAGES_SUCCESS: d,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
-    MESSAGE_UPDATE: f,
+let m = new h(i.h, {
+    SEARCH_MESSAGES_SUCCESS: u,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: u,
+    MESSAGE_UPDATE: c,
     LOGOUT: _,
-    CONNECTION_OPEN: h,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: p,
+    CONNECTION_OPEN: f,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: d,
 });

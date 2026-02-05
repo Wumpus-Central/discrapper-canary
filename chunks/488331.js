@@ -1,45 +1,35 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(793574),
+var l = n(793574),
     a = n(688810),
-    s = n(735991),
-    o = n(485724),
-    l = n(429913),
-    c = n(246097),
-    u = n(96440),
-    d = n(768349);
-
-function f(e) {
-    let { applicationId: t, customId: n, referrerId: f, linkId: p, message: _ } = e,
-        { analyticsLocations: h } = (0, a.Ay)(i.A.ACTIVITY_BOOKMARK),
-        [m] = (0, l.A)([t]),
-        g = null != m && (0, s.Ag)(m),
-        { data: E, error: b } = (0, c.K)(null == m ? void 0 : m.id, p);
-    return null == m || !1 === g
+    r = n(735991),
+    s = n(485724),
+    o = n(429913),
+    d = n(246097),
+    c = n(96440),
+    u = n(768349);
+function m(e) {
+    let { applicationId: t, customId: n, referrerId: m, linkId: _, message: h } = e,
+        { analyticsLocations: p } = (0, a.Ay)(l.A.ACTIVITY_BOOKMARK),
+        [g] = (0, o.A)([t]),
+        A = null != g && (0, r.Ag)(g),
+        { data: f, error: x } = (0, d.K)(g?.id, _);
+    return null == g || !1 === A
         ? null
-        : null != p && null == b && null != E
-          ? (0, r.jsx)(a.f5, {
-                value: h,
-                children: (0, r.jsx)(u.W, {
-                    application: m,
-                    customId: n,
-                    customLink: E,
-                    referrerId: f,
-                    message: _,
-                }),
+        : null != _ && null == x && null != f
+          ? (0, i.jsx)(a.f5, {
+                value: p,
+                children: (0, i.jsx)(c.W, { application: g, customId: n, customLink: f, referrerId: m, message: h }),
             })
-          : (0, r.jsx)(a.f5, {
-                value: h,
-                children: (0, r.jsx)(o.W, {
-                    app: m,
-                    linkType: d.J.ACTIVITY,
+          : (0, i.jsx)(a.f5, {
+                value: p,
+                children: (0, i.jsx)(s.W, {
+                    app: g,
+                    linkType: u.J.ACTIVITY,
                     activityCustomId: n,
-                    activityReferrerId: f,
-                    message: _,
+                    activityReferrerId: m,
+                    message: h,
                 }),
             });
 }

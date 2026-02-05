@@ -1,39 +1,26 @@
-n.d(t, {
-    A: () => p,
-});
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var r = n(311907),
-    l = n(397927),
+var l = n(311907),
+    s = n(397927),
     a = n(997509),
-    s = n(529942),
+    r = n(529942),
     o = n(209700),
-    c = n(576705),
-    d = n(652215),
+    d = n(576705),
+    c = n(652215),
     u = n(985018);
-
-function p(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.BEX.ROLES;
-    return (0, r.bG)([c.A], () => c.A.canImpersonateRole(e, t))
+function m(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.BEX.ROLES;
+    return (0, l.bG)([d.A], () => d.A.canImpersonateRole(e, t))
         ? (0, i.jsx)(
-              l.Drp,
+              s.Drp,
               {
                   id: "view-as-role",
                   label: u.intl.string(u.t.arFPfJ),
-                  icon: l.EdP,
-                  leadingAccessory: {
-                      type: "icon",
-                      icon: l.EdP,
-                  },
+                  icon: s.EdP,
+                  leadingAccessory: { type: "icon", icon: s.EdP },
                   action: () => {
-                      a.A.close(),
-                          (0, s.Tk)(e.id, {
-                              type: o._.ROLES,
-                              roles: {
-                                  [t.id]: t,
-                              },
-                              returnToSection: n,
-                          });
+                      a.A.close(), (0, r.Tk)(e.id, { type: o._.ROLES, roles: { [t.id]: t }, returnToSection: n });
                   },
               },
               "view-as-role",

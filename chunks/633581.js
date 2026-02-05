@@ -1,31 +1,17 @@
-n.d(t, {
-    A: () => r,
-}),
-    n(896048);
+n.d(t, { A: () => l });
 var a = n(627968),
-    l = n(397927),
+    s = n(397927),
     i = n(890687);
-let r = function (e) {
+let l = function (e) {
     let { onSelect: t, quest: n } = e,
-        { quests: r } = (0, i.mL)({
-            fetchPolicy: "cache-and-network",
-            callerSource: "prefill_selector",
-        }),
-        s = [
-            {
-                id: "none",
-                label: "NONE",
-                value: null,
-            },
-            ...r.map((e) => ({
-                id: e.id,
-                label: e.config.messages.questName,
-                value: e,
-            })),
+        { quests: l } = (0, i.mL)({ fetchPolicy: "cache-and-network", callerSource: "prefill_selector" }),
+        r = [
+            { id: "none", label: "NONE", value: null },
+            ...l.map((e) => ({ id: e.id, label: e.config.messages.questName, value: e })),
         ];
-    return (0, a.jsx)(l.l6P, {
+    return (0, a.jsx)(s.l6P, {
         label: "Prefill with Quest",
-        options: s,
+        options: r,
         value: n,
         onSelectionChange: t,
         selectionMode: "single",

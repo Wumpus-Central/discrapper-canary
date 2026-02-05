@@ -1,21 +1,15 @@
-n.d(t, {
-    J: () => a,
-    P: () => c,
-}),
-    n(321073),
-    n(896048);
-var r = n(136722),
-    i = n(34457),
+"use strict";
+n.d(t, { J: () => a, P: () => o }), n(321073);
+var i = n(136722),
+    s = n(34457),
     l = n(558393),
-    s = n(652215);
-
+    r = n(652215);
 function a(e) {
-    return r.X8(e.permissions, s.Lti);
+    return i.X8(e.permissions, r.Lti);
 }
-
-function c(e, t) {
+function o(e, t) {
     let n = [],
-        r = l.A.getGuildPermissionSpecMap(e);
-    for (let e of s.nfo) (0, i._m)(t, e) && n.push(r[e.toString()].title);
+        i = l.A.getGuildPermissionSpecMap(e);
+    for (let e of r.nfo) (0, s._m)(t, e) && n.push(i[e.toString()].title);
     return n;
 }

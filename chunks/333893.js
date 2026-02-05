@@ -1,68 +1,37 @@
-n(896048);
-var r,
-    i = n(311907),
-    l = n(73153),
+var i = n(311907),
+    r = n(73153),
     a = n(142120),
-    s = n(734057),
-    o = n(661191);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = Object.freeze({
-        online: null,
-        total: null,
-    }),
+    l = n(734057),
+    s = n(661191);
+let o = Object.freeze({ online: null, total: null }),
     d = {},
-    p = {},
-    f = null;
-class h extends (r = i.Ay.PersistedStore) {
+    c = {},
+    u = null;
+class A extends i.Ay.PersistedStore {
+    static displayName = "ChannelMemberCountStore";
+    static persistKey = "channelMemberCounts";
     initialize(e) {
-        this.waitFor(a.A, s.A), (p = null != e ? e : d);
+        this.waitFor(a.A, l.A), (c = e ?? d);
     }
     getState() {
-        return p;
+        return c;
     }
     getMemberCount(e) {
-        var t;
-        return null != (t = p[e]) ? t : u;
+        return c[e] ?? o;
     }
     requestCount(e, t) {
-        (f = {
-            guildId: e,
-            channelId: t,
-        }),
-            a.A.getSocket().requestChannelMemberCount(e, t);
+        (u = { guildId: e, channelId: t }), a.A.getSocket().requestChannelMemberCount(e, t);
     }
 }
-c(h, "displayName", "ChannelMemberCountStore"),
-    c(h, "persistKey", "channelMemberCounts"),
-    new h(l.h, {
-        CONNECTION_OPEN: function () {
-            null != f && a.A.getSocket().requestChannelMemberCount(f.guildId, f.channelId),
-                o.default.keys(p).forEach((e) => {
-                    null == s.A.getChannel(e) && delete p[e];
-                });
-        },
-        CHANNEL_MEMBER_COUNT_UPDATE: function (e) {
-            let { channelId: t, online: n, total: r } = e;
-            return (
-                (null != n || null != r) &&
-                    (p[t] = {
-                        online: n,
-                        total: r,
-                    }),
-                !0
-            );
-        },
-    });
+new A(r.h, {
+    CONNECTION_OPEN: function () {
+        null != u && a.A.getSocket().requestChannelMemberCount(u.guildId, u.channelId),
+            s.default.keys(c).forEach((e) => {
+                null == l.A.getChannel(e) && delete c[e];
+            });
+    },
+    CHANNEL_MEMBER_COUNT_UPDATE: function (e) {
+        let { channelId: t, online: n, total: i } = e;
+        return (null != n || null != i) && (c[t] = { online: n, total: i }), !0;
+    },
+});

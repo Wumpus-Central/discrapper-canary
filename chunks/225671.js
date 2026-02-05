@@ -1,110 +1,48 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r = n(942381),
-    l = n(265690),
-    i = n(121894);
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let s = (0, l.h)((e, t) => ({
+l.d(t, { A: () => o });
+var n = l(942381),
+    i = l(265690),
+    s = l(121894);
+let a = (0, i.h)((e, t) => ({
         selectedUserIds: {},
-        addUsers: (n, r) => {
-            var l;
-            let { selectedUserIds: s } = t(),
-                c = new Set([...(null != (l = s[n]) ? l : new Set()), ...r]);
-            (0, i.r)(() => {
-                e({
-                    selectedUserIds: a(o({}, s), {
-                        [n]: c,
-                    }),
-                });
+        addUsers: (l, n) => {
+            let { selectedUserIds: i } = t(),
+                a = new Set([...(i[l] ?? new Set()), ...n]);
+            (0, s.r)(() => {
+                e({ selectedUserIds: { ...i, [l]: a } });
             });
         },
-        removeUser: (n, r) => {
-            let { selectedUserIds: l } = t(),
-                s = l[n];
-            if (null == s) return;
-            let c = [...s].filter((e) => e !== r);
-            (0, i.r)(() => {
-                e({
-                    selectedUserIds: a(o({}, l), {
-                        [n]: new Set(c),
-                    }),
-                });
+        removeUser: (l, n) => {
+            let { selectedUserIds: i } = t(),
+                a = i[l];
+            if (null == a) return;
+            let r = [...a].filter((e) => e !== n);
+            (0, s.r)(() => {
+                e({ selectedUserIds: { ...i, [l]: new Set(r) } });
             });
         },
-        clearSelection: (n) => {
-            let { selectedUserIds: r } = t();
-            null != r &&
-                (0, i.r)(() => {
-                    e({
-                        selectedUserIds: a(o({}, r), {
-                            [n]: new Set(),
-                        }),
-                    });
+        clearSelection: (l) => {
+            let { selectedUserIds: n } = t();
+            null != n &&
+                (0, s.r)(() => {
+                    e({ selectedUserIds: { ...n, [l]: new Set() } });
                 });
         },
     })),
-    c = new Set();
-
-function d(e) {
-    return s((t) => {
-        var n;
-        return {
-            selectedUserIds: null != (n = t.selectedUserIds[e]) ? n : c,
-            addUsers: (n) => {
-                t.addUsers(e, n);
+    r = new Set();
+function o(e) {
+    return a(
+        (t) => ({
+            selectedUserIds: t.selectedUserIds[e] ?? r,
+            addUsers: (l) => {
+                t.addUsers(e, l);
             },
-            removeUser: (n) => {
-                t.removeUser(e, n);
+            removeUser: (l) => {
+                t.removeUser(e, l);
             },
             clearSelection: () => {
                 t.clearSelection(e);
             },
-        };
-    }, r.x);
+        }),
+        n.x,
+    );
 }

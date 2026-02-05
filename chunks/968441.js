@@ -1,51 +1,29 @@
-n.d(t, {
-    r: () => a,
-}),
-    n(65821);
+"use strict";
+n.d(t, { r: () => i });
 var r = n(390225);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+class i {
+    stores;
+    changeCallback;
+    storeVersionHandled;
+    constructor(e, t) {
+        (this.stores = e), (this.changeCallback = t);
+    }
     attach(e) {
         let { stores: t } = this;
         t.forEach((t, n) => {
             if (null == t)
                 throw Error(
-                    ""
-                        .concat(
-                            e,
-                            " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ",
-                        )
-                        .concat(n, " stores before error."),
+                    `${e} tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ${n} stores before error.`,
                 );
             t.addReactChangeListener(this.handleStoreChange);
         });
     }
+    handleStoreChange = () => {
+        let e = r.A.getChangeSentinel();
+        this.storeVersionHandled !== e && (this.changeCallback(), (this.storeVersionHandled = e));
+    };
     detach() {
         let { stores: e } = this;
         e.forEach((e) => e.removeReactChangeListener(this.handleStoreChange));
-    }
-    constructor(e, t) {
-        i(this, "stores", void 0),
-            i(this, "changeCallback", void 0),
-            i(this, "storeVersionHandled", void 0),
-            i(this, "handleStoreChange", () => {
-                let e = r.A.getChangeSentinel();
-                this.storeVersionHandled !== e && (this.changeCallback(), (this.storeVersionHandled = e));
-            }),
-            (this.stores = e),
-            (this.changeCallback = t);
     }
 }

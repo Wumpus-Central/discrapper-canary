@@ -1,3 +1,1 @@
-e.exports = {
-    r: "suggestedGames_dbb349",
-};
+e.exports = { r: "suggestedGames_dbb349" };

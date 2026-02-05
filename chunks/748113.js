@@ -1,55 +1,36 @@
-n.d(t, {
-    A: () => c,
-});
+n.d(t, { A: () => o });
 var l = n(627968);
 n(64700);
-var r = n(397927),
-    a = n(573435),
-    i = n(486020),
+var a = n(397927),
+    i = n(573435),
+    r = n(486020),
     s = n(985018),
-    o = n(248065);
-let c = (e) => {
-    var t;
-    let { entry: n } = e,
-        { id: c, icon: d, name: u } = n,
-        m =
-            null !=
-            (t = i.Ay.getGuildIconURL({
-                id: c,
-                icon: d,
-                size: 32,
-            }))
-                ? t
-                : void 0;
+    d = n(248065);
+let o = (e) => {
+    let { entry: t } = e,
+        { id: n, icon: o, name: u } = t,
+        c = r.Ay.getGuildIconURL({ id: n, icon: o, size: 32 }) ?? void 0;
     return (0, l.jsxs)("div", {
-        className: o.kL,
+        className: d.kL,
         children: [
-            (0, l.jsx)(r.Heading, {
-                className: o.wx,
+            (0, l.jsx)(a.Heading, {
+                className: d.wx,
                 variant: "heading-sm/semibold",
                 children: s.intl.string(s.t.nTe4HC),
             }),
             (0, l.jsx)("div", {
-                className: o.bo,
+                className: d.bo,
                 children: (0, l.jsxs)("div", {
-                    className: o.OA,
+                    className: d.OA,
                     children: [
-                        (0, l.jsx)(a.Ay, {
-                            mask: a.Ay.Masks.SQUIRCLE,
+                        (0, l.jsx)(i.Ay, {
+                            mask: i.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: o.$d,
-                            children: (0, l.jsx)("img", {
-                                src: m,
-                                alt: "",
-                                className: o.$f,
-                            }),
+                            className: d.$d,
+                            children: (0, l.jsx)("img", { src: c, alt: "", className: d.$f }),
                         }),
-                        (0, l.jsx)(r.Text, {
-                            color: "text-default",
-                            variant: "text-sm/normal",
-                            children: u,
-                        }),
+                        (0, l.jsx)(a.Text, { color: "text-default", variant: "text-sm/normal", children: u }),
                     ],
                 }),
             }),

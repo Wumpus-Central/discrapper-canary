@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     VH: "preview__3e443",
     Ck: "firstMessage__3e443",

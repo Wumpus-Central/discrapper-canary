@@ -1,63 +1,47 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(73153),
-    i = n(631670),
-    l = n(272355),
-    a = n(159001),
+n.d(t, { A: () => _ });
+var i = n(73153),
+    r = n(631670),
+    a = n(272355),
+    l = n(159001),
     s = n(688796),
     o = n(101058),
-    c = n(207803),
-    u = n(287809),
-    d = n(927578),
-    p = n(339984);
-class f extends l.A {
+    d = n(207803),
+    c = n(287809),
+    u = n(927578),
+    A = n(339984);
+class h extends a.A {
     _initialize() {
-        r.h.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
+        i.h.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     _terminate() {
-        r.h.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
+        i.h.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === p.HL.AVATAR
+        return e.uploadType === A.HL.AVATAR
             ? ((e) => {
-                  let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOut: f } = e;
-                  if (f) return void (0, c.e$)(t);
-                  let h = u.default.getCurrentUser(),
-                      A = null != r ? a.zq : i.zq,
-                      g = d.Ay.canUseAnimatedAvatar(h);
-                  if (g || "image/gif" !== n.type) return void A(t);
-                  if (null == h) return;
-                  let m = (0, o.V7)({
-                      userId: h.id,
-                      image: t,
-                  });
-                  if (!g)
-                      return void (0, s.G)({
-                          uploadType: p.HL.AVATAR,
-                          imageSrc: m,
-                          analyticsSource: l,
-                      });
+                  let { image: t, file: n, guildId: i, analyticsSource: a, isTryItOut: h } = e;
+                  if (h) return void (0, d.e$)(t);
+                  let _ = c.default.getCurrentUser(),
+                      m = null != i ? l.zq : r.zq,
+                      p = u.Ay.canUseAnimatedAvatar(_);
+                  if (p || "image/gif" !== n.type) return void m(t);
+                  if (null == _) return;
+                  let g = (0, o.V7)({ userId: _.id, image: t });
+                  if (!p) return void (0, s.G)({ uploadType: A.HL.AVATAR, imageSrc: g, analyticsSource: a });
               })(e)
-            : e.uploadType === p.HL.BANNER
+            : e.uploadType === A.HL.BANNER
               ? ((e) => {
-                    let { image: t, guildId: n, analyticsSource: r, isTryItOut: i } = e,
-                        l = t.imageUri;
-                    if (i) return void (0, c.xe)(l);
-                    let o = u.default.getCurrentUser(),
-                        f = null != n ? a.Iz : c.Iz,
-                        h = d.Ay.canUsePremiumProfileCustomization(o);
-                    d.Ay.canUsePremiumProfileCustomization(o)
-                        ? f(l)
-                        : null == o ||
-                          h ||
-                          (0, s.G)({
-                              uploadType: p.HL.BANNER,
-                              imageSrc: l,
-                              analyticsSource: r,
-                          });
+                    let { image: t, guildId: n, analyticsSource: i, isTryItOut: r } = e,
+                        a = t.imageUri;
+                    if (r) return void (0, d.xe)(a);
+                    let o = c.default.getCurrentUser(),
+                        h = null != n ? l.Iz : d.Iz,
+                        _ = u.Ay.canUsePremiumProfileCustomization(o);
+                    u.Ay.canUsePremiumProfileCustomization(o)
+                        ? h(a)
+                        : null == o || _ || (0, s.G)({ uploadType: A.HL.BANNER, imageSrc: a, analyticsSource: i });
                 })(e)
               : void 0;
     }
 }
-let h = new f();
+let _ = new h();

@@ -1,9 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
-var l = n(839214);
-let a = Object.freeze({
-        query: "",
-        searchBarState: n(488995).GlobalDiscoverySearchBarState.DEFAULT,
-    }),
-    r = (0, l.D)(() => a);
+a.d(t, { A: () => s });
+var n = a(839214);
+let i = Object.freeze({ query: "", searchBarState: a(488995).GlobalDiscoverySearchBarState.DEFAULT }),
+    s = (0, n.D)(() => i);

@@ -1,20 +1,6 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    A: () => a,
-});
-var i = (function (e) {
+"use strict";
+n.d(t, { A: () => i });
+var r = (function (e) {
     return (
         (e[(e.UNKNOWN = 1)] = "UNKNOWN"),
         (e[(e.TIMEOUT = 2)] = "TIMEOUT"),
@@ -44,10 +30,11 @@ var i = (function (e) {
             "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION"),
         e
     );
-})(i || {});
-class a {
+})(r || {});
+class i {
+    reason;
+    static ReasonCodes = r;
     constructor(e) {
-        r(this, "reason", void 0), (this.reason = e);
+        this.reason = e;
     }
 }
-r(a, "ReasonCodes", i);

@@ -1,230 +1,115 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048),
-    n(733351);
-var r = n(627968),
-    l = n(64700),
-    i = n(111956),
-    o = n.n(i),
-    a = n(33851),
-    s = n.n(a),
-    c = n(136722),
-    u = n(417597),
-    d = n(397927),
-    C = n(576705),
-    m = n(504049),
-    p = n(266047),
-    f = n(221950),
-    b = n(512068),
-    j = n(779662),
-    g = n(818348),
-    h = n(985018),
-    x = n(985911);
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let v = l.forwardRef(function (e, t) {
-    let { guild: n } = e,
-        i = l.useRef(null),
-        a = (0, u.bG)([p.A], () => p.A.hasDefaultSearchStateByGuildId(n.id), [n.id]),
-        v = (0, u.bG)([C.A], () => C.A.can(c.kg(g.xB.MANAGE_GUILD, g.xB.KICK_MEMBERS), n)),
-        _ = l.useCallback(() => {
-            null != n &&
-                v &&
-                (0, d.mMO)(
-                    async () => (e) =>
-                        (0, r.jsx)(
-                            b.A,
-                            O(y({}, e), {
-                                guild: n,
-                            }),
-                        ),
-                );
-        }, [n, v]),
-        H = (0, u.bG)([p.A], () => p.A.getSearchStateByGuildId(n.id), [n.id], s()),
-        w = (0, m.Ks)(n.id),
-        [A, S] = l.useState(H.query),
-        D = l.useCallback(
+l.d(t, { A: () => j });
+var n = l(627968),
+    i = l(64700),
+    s = l(111956),
+    a = l.n(s),
+    r = l(33851),
+    o = l.n(r),
+    C = l(136722),
+    d = l(417597),
+    c = l(397927),
+    u = l(576705),
+    m = l(504049),
+    x = l(266047),
+    h = l(221950),
+    g = l(512068),
+    _ = l(779662),
+    H = l(818348),
+    p = l(985018),
+    f = l(985911);
+let j = i.forwardRef(function (e, t) {
+    let { guild: l } = e,
+        s = i.useRef(null),
+        r = (0, d.bG)([x.A], () => x.A.hasDefaultSearchStateByGuildId(l.id), [l.id]),
+        j = (0, d.bG)([u.A], () => u.A.can(C.kg(H.xB.MANAGE_GUILD, H.xB.KICK_MEMBERS), l)),
+        v = i.useCallback(() => {
+            null != l && j && (0, c.mMO)(async () => (e) => (0, n.jsx)(g.A, { ...e, guild: l }));
+        }, [l, j]),
+        b = (0, d.bG)([x.A], () => x.A.getSearchStateByGuildId(l.id), [l.id], o()),
+        A = (0, m.Ks)(l.id),
+        [L, N] = i.useState(b.query),
+        V = i.useCallback(
             (e) => {
                 let t = e.trim();
-                t.length > 0 && w(),
-                    (0, f.Ld)(n.id, {
-                        query: t,
-                    });
+                t.length > 0 && A(), (0, h.Ld)(l.id, { query: t });
             },
-            [n.id, w],
+            [l.id, A],
         ),
-        N = l.useMemo(() => o()(D, 300), [D]),
-        L = l.useCallback(
+        R = i.useMemo(() => a()(V, 300), [V]),
+        M = i.useCallback(
             (e) => {
-                S(e), N(e);
+                N(e), R(e);
             },
-            [N],
+            [R],
         ),
-        P = l.useCallback(() => {
-            S(""), D("");
-        }, [D]);
+        D = i.useCallback(() => {
+            N(""), V("");
+        }, [V]);
     return (
-        l.useImperativeHandle(t, () => ({
+        i.useImperativeHandle(t, () => ({
             resetSearchText() {
-                S("");
+                N("");
             },
         })),
-        (0, r.jsxs)("div", {
-            className: x.db,
+        (0, n.jsxs)("div", {
+            className: f.db,
             children: [
-                (0, r.jsx)("div", {
-                    className: x.wL,
-                    children: a
-                        ? (0, r.jsx)(d.Heading, {
-                              variant: "heading-md/medium",
-                              children: h.intl.string(h.t.y12ALM),
-                          })
-                        : (0, r.jsx)(d.Heading, {
-                              variant: "heading-md/medium",
-                              children: h.intl.string(h.t.BUqwK8),
-                          }),
+                (0, n.jsx)("div", {
+                    className: f.wL,
+                    children: r
+                        ? (0, n.jsx)(c.Heading, { variant: "heading-md/medium", children: p.intl.string(p.t.y12ALM) })
+                        : (0, n.jsx)(c.Heading, { variant: "heading-md/medium", children: p.intl.string(p.t.BUqwK8) }),
                 }),
-                (0, r.jsx)("div", {
-                    className: x.Rt,
-                    children: (0, r.jsx)("div", {
-                        className: x.wL,
-                        children: (0, r.jsx)(d.IWV, {
+                (0, n.jsx)("div", {
+                    className: f.Rt,
+                    children: (0, n.jsx)("div", {
+                        className: f.wL,
+                        children: (0, n.jsx)(c.IWV, {
                             size: "sm",
-                            query: A,
-                            placeholder: h.intl.string(h.t["NVoAM+"]),
-                            onChange: L,
-                            onClear: P,
+                            query: L,
+                            placeholder: p.intl.string(p.t["NVoAM+"]),
+                            onChange: M,
+                            onClear: D,
                             autoComplete: "off",
-                            inputProps: {
-                                autoCapitalize: "none",
-                                autoCorrect: "off",
-                                spellCheck: "false",
-                            },
+                            inputProps: { autoCapitalize: "none", autoCorrect: "off", spellCheck: "false" },
                         }),
                     }),
                 }),
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(d.YNO, {
-                        targetElementRef: i,
-                        animation: d.YNO.Animation.FADE,
+                (0, n.jsx)("div", {
+                    children: (0, n.jsx)(c.YNO, {
+                        targetElementRef: s,
+                        animation: c.YNO.Animation.FADE,
                         position: "bottom",
                         spacing: 4,
                         align: "left",
-                        renderPopout: () =>
-                            (0, r.jsx)(j.default, {
-                                guildId: n.id,
-                                onClose: void 0,
-                            }),
+                        renderPopout: () => (0, n.jsx)(_.default, { guildId: l.id, onClose: void 0 }),
                         children: (e) => {
-                            let { onClick: t } = e,
-                                n = (function (e, t) {
-                                    if (null == e) return {};
-                                    var n,
-                                        r,
-                                        l,
-                                        i = {};
-                                    if ("u" > typeof Reflect && Reflect.ownKeys) {
-                                        for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                                            (r = n[l]),
-                                                !(t.indexOf(r) >= 0) &&
-                                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                                    (i[r] = e[r]);
-                                        return i;
-                                    }
-                                    if (
-                                        ((i = (function (e, t) {
-                                            if (null == e) return {};
-                                            var n,
-                                                r,
-                                                l = {},
-                                                i = Object.getOwnPropertyNames(e);
-                                            for (r = 0; r < i.length; r++)
-                                                (n = i[r]),
-                                                    !(t.indexOf(n) >= 0) &&
-                                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                        (l[n] = e[n]);
-                                            return l;
-                                        })(e, t)),
-                                        Object.getOwnPropertySymbols)
-                                    )
-                                        for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                                            (r = n[l]),
-                                                !(t.indexOf(r) >= 0) &&
-                                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                                    (i[r] = e[r]);
-                                    return i;
-                                })(e, ["onClick"]);
-                            return (0, r.jsx)(
-                                d.Button,
-                                O(y({}, n), {
-                                    buttonRef: i,
-                                    text: h.intl.string(h.t.XvNMNk),
-                                    onClick: t,
-                                    size: "sm",
-                                    variant: "secondary",
-                                    icon: d.JNJ,
-                                }),
-                            );
+                            let { onClick: t, ...l } = e;
+                            return (0, n.jsx)(c.Button, {
+                                ...l,
+                                buttonRef: s,
+                                text: p.intl.string(p.t.XvNMNk),
+                                onClick: t,
+                                size: "sm",
+                                variant: "secondary",
+                                icon: c.JNJ,
+                            });
                         },
                     }),
                 }),
-                (0, r.jsx)("div", {
-                    className: x.nw,
+                (0, n.jsx)("div", {
+                    className: f.nw,
                     children:
-                        v &&
-                        (0, r.jsx)("div", {
+                        j &&
+                        (0, n.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: x.__invalid_pruneButton,
-                            children: (0, r.jsx)(d.Button, {
+                            className: f.__invalid_pruneButton,
+                            children: (0, n.jsx)(c.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: h.intl.string(h.t["2mIlKQ"]),
-                                onClick: _,
-                                "aria-label": h.intl.string(h.t.zbyz7p),
+                                text: p.intl.string(p.t["2mIlKQ"]),
+                                onClick: v,
+                                "aria-label": p.intl.string(p.t.zbyz7p),
                             }),
                         }),
                 }),

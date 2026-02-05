@@ -1,39 +1,29 @@
-n.d(t, {
-    default: () => f,
-});
+n.d(t, { default: () => p });
 var r = n(627968);
 n(64700);
-var o = n(397927),
+var i = n(397927),
     c = n(442433),
-    i = n(847767),
+    o = n(847767),
     a = n(358367),
-    u = n(793574),
-    l = n(50268),
-    b = n(652215),
-    s = n(985018);
-let f = (0, a.A)(
-    (0, i.A)(
+    s = n(793574),
+    u = n(50268),
+    l = n(652215),
+    d = n(985018);
+let p = (0, a.A)(
+    (0, o.A)(
         function (e) {
             let { userId: t, onSelect: n } = e,
-                i = (0, l.A)({
-                    id: t,
-                    label: s.intl.string(s.t["/AXYnE"]),
-                    showWithoutDeveloperMode: !0,
-                });
-            return (0, r.jsx)(o.W1t, {
+                o = (0, u.A)({ id: t, label: d.intl.string(d.t["/AXYnE"]), showWithoutDeveloperMode: !0 });
+            return (0, r.jsx)(i.W1t, {
                 "data-menu-migrated": !0,
                 navId: "unknown-user-context",
                 onClose: c.Z_,
-                "aria-label": s.intl.string(s.t.liqwPJ),
+                "aria-label": d.intl.string(d.t.liqwPJ),
                 onSelect: n,
-                children: (0, r.jsx)(o.rXV, {
-                    children: i,
-                }),
+                children: (0, r.jsx)(i.rXV, { children: o }),
             });
         },
-        {
-            object: b.ZSU.CONTEXT_MENU,
-        },
+        { object: l.ZSU.CONTEXT_MENU },
     ),
-    [u.A.CONTEXT_MENU, u.A.UNKNOWN_USER_MENU],
+    [s.A.CONTEXT_MENU, s.A.UNKNOWN_USER_MENU],
 );

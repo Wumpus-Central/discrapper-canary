@@ -1,3 +1,4 @@
+"use strict";
 var n = r(573750),
     i = r(797686);
 t.exports = n.isBrowser("Chrome")

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__78aa3",
     QR: "infoWrapper__78aa3",

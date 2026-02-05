@@ -1,17 +1,15 @@
-t(114821), t(339614), t(896048), t(638769), t(747238), t(733351), t(591487), t(727858), t(321073);
-var a = t(91871),
-    n = t.n(a),
+t(321073);
+var n = t(91871),
+    a = t.n(n),
     o = t(240248),
     l = t(18108),
     i = t(379078);
-
 function s(e) {
     return e
         .split(",")
         .map((e) => e.trim())
         .filter((e) => "" !== e);
 }
-
 function u(e) {
     return "string" == typeof e ? [e.trim()] : e.map((e) => e.trim());
 }
@@ -20,13 +18,13 @@ self.addEventListener("message", (e) => {
     let t,
         {
             data: {
-                id: a,
+                id: n,
                 searchTerm: f,
                 searchStrings: h,
                 searchType: p,
                 sortType: c,
-                jaroWinklerSearchThreshold: d,
-                maxSearchResults: m,
+                jaroWinklerSearchThreshold: m,
+                maxSearchResults: d,
             },
         } = e,
         g = [];
@@ -36,7 +34,7 @@ self.addEventListener("message", (e) => {
                 g.push(
                     ...(function (e, r) {
                         let t = RegExp(e, "i");
-                        return r.reduce((e, r, a) => (u(r).some((e) => t.test(e)) ? [...e, a] : e), []);
+                        return r.reduce((e, r, n) => (u(r).some((e) => t.test(e)) ? [...e, n] : e), []);
                     })(e, h),
                 );
                 break;
@@ -44,12 +42,12 @@ self.addEventListener("message", (e) => {
                 g.push(
                     ...(function (e, r) {
                         return r.reduce(
-                            (r, t, a) =>
+                            (r, t, n) =>
                                 u(t).some((r) => {
-                                    let t, a;
-                                    return (t = (0, o.S8)(e)), (a = (0, o.S8)(r)), n()(e, r) || n()(t, r) || n()(t, a);
+                                    let t, n;
+                                    return (t = (0, o.S8)(e)), (n = (0, o.S8)(r)), a()(e, r) || a()(t, r) || a()(t, n);
                                 })
-                                    ? [...r, a]
+                                    ? [...r, n]
                                     : r,
                             [],
                         );
@@ -60,41 +58,35 @@ self.addEventListener("message", (e) => {
                 g.push(
                     ...(function (e, r, t) {
                         return r.reduce(
-                            (r, a, n) => (Math.max(...u(a).map((r) => (0, l.g)(e, r))) >= t ? [...r, n] : r),
+                            (r, n, a) => (Math.max(...u(n).map((r) => (0, l.g)(e, r))) >= t ? [...r, a] : r),
                             [],
                         );
-                    })(e, h, d),
+                    })(e, h, m),
                 );
                 break;
             case i.n.EXACT:
                 g.push(
                     ...(function (e, r) {
                         return r.reduce(
-                            (r, t, a) =>
-                                u(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, a] : r,
+                            (r, t, n) =>
+                                u(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, n] : r,
                             [],
                         );
                     })(e, h),
                 );
         }
-    let v = [...new Set(g)];
+    let b = [...new Set(g)];
     c === i.r.JARO_WINKLER &&
-        ((r = v),
+        ((r = b),
         (t = s(f)),
-        (v = r
+        (b = r
             .map((e) => {
                 let r = u(h[e]);
-                return {
-                    index: e,
-                    rank: Math.max(...t.flatMap((e) => r.map((r) => (0, l.g)(e, r)))),
-                };
+                return { index: e, rank: Math.max(...t.flatMap((e) => r.map((r) => (0, l.g)(e, r)))) };
             })
             .sort((e, r) => r.rank - e.rank)
             .map((e) => e.index))),
-        m > 0 && (v = v.slice(0, m));
-    let b = {
-        id: a,
-        foundItemIndexes: v,
-    };
-    self.postMessage(b);
+        d > 0 && (b = b.slice(0, d));
+    let v = { id: n, foundItemIndexes: b };
+    self.postMessage(v);
 });

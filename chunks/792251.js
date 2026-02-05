@@ -1,10 +1,7 @@
-n.d(t, {
-    M: () => s,
-    w: () => a,
-});
+"use strict";
+n.d(t, { M: () => s, w: () => a });
 let r = 2.8,
     i = 6;
-
 function a(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
@@ -12,7 +9,6 @@ function a(e) {
     let a = e / n;
     return (t = a < 1 ? Math.pow(a, r) : Math.pow(10, ((a - 1) * i) / 20)) * n;
 }
-
 function s(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;

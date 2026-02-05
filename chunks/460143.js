@@ -1,8 +1,5 @@
-a.d(t, {
-    A: () => s,
-});
+a.d(t, { A: () => s });
 var i = ["vas\xe1rnap", "h\xe9tfőn", "kedden", "szerd\xe1n", "cs\xfct\xf6rt\xf6k\xf6n", "p\xe9nteken", "szombaton"];
-
 function r(e) {
     return function (t) {
         var a = i[t.getUTCDay()];

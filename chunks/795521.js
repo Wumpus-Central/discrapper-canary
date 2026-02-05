@@ -1,20 +1,14 @@
-function n(e) {
-    let r = 0,
+function s(e) {
+    let i = 0,
         t = [];
     return async function () {
-        if (2 !== r) {
-            if (1 === r)
+        if (2 !== i) {
+            if (1 === i)
                 return new Promise((e) => {
                     t.push(e);
                 });
-            for (r = 1, await e(), r = 2; t.length > 0; ) {
-                var n;
-                null == (n = t.shift()) || n();
-            }
+            for (i = 1, await e(), i = 2; t.length > 0; ) t.shift()?.();
         }
     };
 }
-t.d(r, {
-    u: () => n,
-}),
-    t(321073);
+t.d(i, { u: () => s }), t(321073);

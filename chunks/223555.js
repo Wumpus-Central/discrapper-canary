@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     P3: "socialLayerCardHover__517e1",
     m1: "socialLayerCardBackgroundImage__517e1",

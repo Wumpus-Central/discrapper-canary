@@ -1,63 +1,56 @@
-n.d(t, {
-    h: () => a,
-}),
-    n(938796);
-var l = n(627968),
-    i = n(189213),
+n.d(t, { h: () => r }), n(938796);
+var i = n(627968),
+    l = n(189213),
     s = n(167596),
-    r = n(985018);
-let a = (e) => {
+    a = n(985018);
+let r = (e) => {
     let {
             handleDone: t,
             modalState: n,
-            shouldHideTemporaryInviteToggle: a,
+            shouldHideTemporaryInviteToggle: r,
             onGenerateNewLink: o,
-            onToggleTemporary: u,
-            onSelectMaxAge: d,
+            onToggleTemporary: d,
+            onSelectMaxAge: u,
             onSelectMaxUses: c,
             isGuestInviteCreationToggleEnabled: g,
             onSetInviteFlags: h,
-            onClose: p,
-            transitionState: v,
-            isRoleAssignmentEnabled: A,
-            assignableRoles: I,
-            onToggleRole: m,
+            onClose: A,
+            transitionState: p,
+            isRoleAssignmentEnabled: I,
+            assignableRoles: m,
+            onToggleRole: x,
         } = e,
-        { maxAgeOptions: S, maxAge: x, maxUses: y, temporary: f, flags: E, roleIds: _ } = n;
-    return (0, l.jsx)(i.Modal, {
-        transitionState: v,
-        onClose: p,
-        title: r.intl.string(r.t.Atdlyu),
+        { maxAgeOptions: v, maxAge: S, maxUses: y, temporary: E, flags: C, roleIds: f } = n;
+    return (0, i.jsx)(l.Modal, {
+        transitionState: p,
+        onClose: A,
+        title: a.intl.string(a.t.Atdlyu),
         actions: [
-            {
-                variant: "secondary",
-                text: r.intl.string(r.t["ETE/oC"]),
-                onClick: t,
-            },
+            { variant: "secondary", text: a.intl.string(a.t["ETE/oC"]), onClick: t },
             {
                 variant: "primary",
-                text: r.intl.string(r.t.pz1lRG),
+                text: a.intl.string(a.t.pz1lRG),
                 onClick: () => {
                     o(), t();
                 },
             },
         ],
-        children: (0, l.jsx)(s.A, {
-            shouldHideTemporaryInviteToggle: a,
-            maxAgeOptions: S,
-            maxAge: x,
+        children: (0, i.jsx)(s.A, {
+            shouldHideTemporaryInviteToggle: r,
+            maxAgeOptions: v,
+            maxAge: S,
             maxUses: y,
-            temporary: f,
-            onToggleTemporary: u,
-            onSelectMaxAge: d,
+            temporary: E,
+            onToggleTemporary: d,
+            onSelectMaxAge: u,
             onSelectMaxUses: c,
             isGuestInviteCreationToggleEnabled: g,
             onSetInviteFlags: h,
-            inviteFlags: E,
-            isRoleAssignmentEnabled: A,
-            assignableRoles: I,
-            selectedRoleIds: _,
-            onToggleRole: m,
+            inviteFlags: C,
+            isRoleAssignmentEnabled: I,
+            assignableRoles: m,
+            selectedRoleIds: f,
+            onToggleRole: x,
         }),
     });
 };

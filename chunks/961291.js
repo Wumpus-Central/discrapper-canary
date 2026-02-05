@@ -1,37 +1,31 @@
-n.d(t, {
-    Pm: () => v,
-    rS: () => j,
-    rr: () => A,
-    sW: () => y,
-    yI: () => O,
-});
-var r = n(827734),
+n.d(t, { Pm: () => I, rS: () => C, rr: () => x, sW: () => f, yI: () => E });
+var i = n(827734),
     l = n(322387),
-    i = n(286035),
+    s = n(286035),
     a = n(289876),
-    s = n(31687),
+    r = n(31687),
     o = n(441955),
-    c = n(271764),
-    u = n(790018),
-    d = n(338943),
-    f = n(478772),
-    p = n(846500),
-    h = n(784297),
-    b = n(51213),
-    g = n(194066),
-    m = n(211643);
-let A = {
-        MISSED_MESSAGES: h,
-        FRIEND_REQUEST_REMINDER: d,
-        SCHEDULED_GUILD_EVENT: c,
-        TOP_MESSAGES: p,
-        NOTIFICATION_CENTER: s,
+    d = n(271764),
+    c = n(790018),
+    u = n(338943),
+    h = n(478772),
+    A = n(846500),
+    g = n(784297),
+    m = n(51213),
+    p = n(194066),
+    _ = n(211643);
+let x = {
+        MISSED_MESSAGES: g,
+        FRIEND_REQUEST_REMINDER: u,
+        SCHEDULED_GUILD_EVENT: d,
+        TOP_MESSAGES: A,
+        NOTIFICATION_CENTER: r,
         UPDATE_PROFILE: n(566213),
         FIND_FRIENDS: a,
         ADD_FRIEND: a,
-        FIRST_MESSAGE: g,
+        FIRST_MESSAGE: p,
     },
-    y = (e) => {
+    f = (e) => {
         switch (e.type) {
             case "lifecycle_item":
                 switch (e.item_enum) {
@@ -58,57 +52,39 @@ let A = {
                 return "NOTIFICATION_CENTER";
         }
     },
-    O = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
-    j = (e) => {
+    E = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
+    C = (e) => {
         switch (e) {
             case l.hW.GO_LIVE_PUSH:
-                return {
-                    icon: m,
-                    color: r.A.colors.BACKGROUND_MOD_STRONG,
-                };
+                return { icon: _, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case l.hW.FRIEND_REQUEST_ACCEPTED:
             case l.hW.GAME_FRIEND_REQUEST_ACCEPTED:
-                return {
-                    icon: o,
-                    color: r.A.colors.STATUS_POSITIVE_BACKGROUND,
-                };
+                return { icon: o, color: i.A.colors.STATUS_POSITIVE_BACKGROUND };
             case l.hW.FRIEND_REQUEST_PENDING:
             case l.hW.FRIEND_SUGGESTION_CREATED:
-                return {
-                    icon: u,
-                    color: r.A.colors.BACKGROUND_MOD_STRONG,
-                };
+                return { icon: c, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case l.hW.DM_FRIEND_NUDGE:
-                return {
-                    icon: b,
-                    color: r.A.colors.BACKGROUND_MOD_STRONG,
-                };
+                return { icon: m, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case l.Uo.INCOMING_FRIEND_REQUESTS:
             case l.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED:
-                return {
-                    icon: u,
-                    color: r.A.colors.BACKGROUND_MOD_STRONG,
-                };
+                return { icon: c, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case l.Uo.INCOMING_GAME_FRIEND_REQUESTS:
             case l.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
-                return {
-                    icon: f,
-                    color: r.A.colors.BACKGROUND_MOD_STRONG,
-                };
+                return { icon: h, color: i.A.colors.BACKGROUND_MOD_STRONG };
             default:
                 return null;
         }
     },
-    v = (e) => {
+    I = (e) => {
         switch (e.item_enum) {
             case l.r_.UPDATE_PROFILE:
-                return i.Zp;
+                return s.Zp;
             case l.r_.ADD_FRIEND:
             case l.r_.FIND_FRIENDS:
-                return i.k;
+                return s.k;
             case l.r_.FIRST_MESSAGE:
-                return i.l0;
+                return s.l0;
             default:
-                return r.A.unsafe_rawColors.BRAND_500.css;
+                return i.A.unsafe_rawColors.BRAND_500.css;
         }
     };

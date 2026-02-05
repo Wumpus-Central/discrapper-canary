@@ -1,29 +1,25 @@
-i.d(s, {
-    default: () => u,
-});
-var a = i(627968),
-    e = i(64700),
+i.d(s, { default: () => p });
+var e = i(627968),
+    a = i(64700),
     n = i(732955),
-    c = i(397927),
-    r = i(985018),
+    r = i(397927),
+    c = i(985018),
     l = i(720188);
-let u = (t) => {
-    let { transitionState: s, processFiles: i, onClose: u } = t;
+let p = (t) => {
+    let { transitionState: s, processFiles: i, onClose: p } = t;
     return (
-        e.useEffect(() => {
+        a.useEffect(() => {
             (async () => {
-                s === c.ip4.ENTERED && (await i(), u());
+                s === r.ip4.ENTERED && (await i(), p());
             })();
-        }, [u, i, s]),
-        (0, a.jsx)(n.aFV, {
-            title: r.intl.string(r.t["B/HSDd"]),
-            subtitle: r.intl.string(r.t.k7OALr),
+        }, [p, i, s]),
+        (0, e.jsx)(n.aFV, {
+            title: c.intl.string(c.t["B/HSDd"]),
+            subtitle: c.intl.string(c.t.k7OALr),
             actions: void 0,
-            onClose: u,
+            onClose: p,
             transitionState: s,
-            children: (0, a.jsx)(c.y$y, {
-                className: l.u,
-            }),
+            children: (0, e.jsx)(r.y$y, { className: l.u }),
         })
     );
 };

@@ -1,6 +1,5 @@
-n.d(t, {
-    t: () => r,
-});
+"use strict";
+n.d(t, { t: () => r });
 var r = (function (e) {
     return (
         (e.BLOCK_PROFILE_UPDATE = "block_profile_update"),

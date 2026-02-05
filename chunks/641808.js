@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t, n) {
     if (t.set) t.set.call(e, n);
     else {
@@ -5,6 +6,4 @@ function r(e, t, n) {
         t.value = n;
     }
 }
-n.d(t, {
-    _: () => r,
-});
+n.d(t, { _: () => r });

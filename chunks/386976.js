@@ -1,27 +1,24 @@
-n.d(t, {
-    op: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { op: () => _ });
 var r = n(64700),
     i = n(311907),
     a = n(949355),
     s = n(102609),
     o = n(620233),
     l = n(217222),
-    c = n(375441);
-
-function u(e, t) {
+    u = n(375441);
+function c(e, t) {
     let n = {};
     for (let [t, r] of Object.entries(e))
         n[t] = {
             system: s.l5.APEX,
-            kind: r.unitType === c.ni.User ? "user" : "guild",
+            kind: r.unitType === u.ni.User ? "user" : "guild",
             name: r.name,
             title: r.title,
             variants: r.variants.map((e) => ({
                 id: e.id,
-                label: "Variant ".concat(e.id, ": ").concat(e.label),
-                shortLabel: "Variant ".concat(e.id),
+                label: `Variant ${e.id}: ${e.label}`,
+                shortLabel: `Variant ${e.id}`,
                 type: e.type,
             })),
         };
@@ -34,38 +31,23 @@ function u(e, t) {
                 title: r.name,
                 variants: Object.entries(r.variations).map((e) => {
                     let [t, n] = e;
-                    return {
-                        id: Number(t),
-                        label: "Variant ".concat(t),
-                        shortLabel: "Variant ".concat(t),
-                        type: a.FZ.UNSPECIFIED,
-                    };
+                    return { id: Number(t), label: `Variant ${t}`, shortLabel: `Variant ${t}`, type: a.FZ.UNSPECIFIED };
                 }),
             });
     return n;
 }
-
 function d(e) {
     let t = {};
-    for (let [n, r] of Object.entries(e))
-        t[n] = {
-            experimentId: n,
-            variantId: r.variantId,
-            originalDescriptor: r,
-        };
+    for (let [n, r] of Object.entries(e)) t[n] = { experimentId: n, variantId: r.variantId, originalDescriptor: r };
     return t;
 }
-
-function f() {
+function _() {
     (0, r.useEffect)(() => {
         (0, o.sD)(a.Um.APP);
     }, []);
     let e = (0, i.bG)([l.A], () => l.A.getExperimentsMetadata()),
         t = (0, i.bG)([l.A], () => l.A.getRegisteredExperiments()),
-        n = (0, r.useMemo)(() => u(e, t), [e, t]),
+        n = (0, r.useMemo)(() => c(e, t), [e, t]),
         s = (0, i.bG)([l.A], () => l.A.getClientOverrides());
-    return {
-        experiments: n,
-        overridesInfo: (0, r.useMemo)(() => d(s), [s]),
-    };
+    return { experiments: n, overridesInfo: (0, r.useMemo)(() => d(s), [s]) };
 }

@@ -1,43 +1,33 @@
-r.d(t, {
-    default: () => d,
-});
-var n = r(627968),
-    c = r(64700),
-    i = r(284009),
-    l = r.n(i),
-    a = r(311907),
-    o = r(885377),
-    s = r(287809),
-    p = r(927578),
-    u = r(985018);
-class b extends c.Component {
+i.d(a, { default: () => u });
+var n = i(627968),
+    t = i(64700),
+    l = i(284009),
+    r = i.n(l),
+    s = i(311907),
+    d = i(885377),
+    m = i(287809),
+    c = i(927578),
+    g = i(985018);
+class o extends t.Component {
     render() {
-        let { user: e, transitionState: t, onClose: r } = this.props;
-        return (0, n.jsx)(o.A, {
-            transitionState: t,
+        let { user: e, transitionState: a, onClose: i } = this.props;
+        return (0, n.jsx)(d.A, {
+            transitionState: a,
             onClose: async () => {
-                await r(!1);
+                await i(!1);
             },
-            "aria-label": u.intl.string(u.t.BNg1ir),
-            title: u.intl.string(u.t.BNg1ir),
-            premiumModalType: o.A.Types.UPGRADE,
-            primary: {
-                onClick: () => r(!0),
-                label: u.intl.string(u.t.P3etAv),
-            },
+            "aria-label": g.intl.string(g.t.BNg1ir),
+            title: g.intl.string(g.t.BNg1ir),
+            premiumModalType: d.A.Types.UPGRADE,
+            primary: { onClick: () => i(!0), label: g.intl.string(g.t.P3etAv) },
             children:
-                p.Ay.isPremium(e) && !p.Ay.canInstallPremiumApplications(e)
-                    ? u.intl.string(u.t.mKA9OJ)
-                    : u.intl.string(u.t.sqSlm4),
+                c.Ay.isPremium(e) && !c.Ay.canInstallPremiumApplications(e)
+                    ? g.intl.string(g.t.mKA9OJ)
+                    : g.intl.string(g.t.sqSlm4),
         });
     }
 }
-let d = a.Ay.connectStores([s.default], () => {
-    let e = s.default.getCurrentUser();
-    return (
-        l()(null != e, "PremiumRequiredModal: user cannot be null"),
-        {
-            user: e,
-        }
-    );
-})(b);
+let u = s.Ay.connectStores([m.default], () => {
+    let e = m.default.getCurrentUser();
+    return r()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
+})(o);

@@ -7,62 +7,28 @@ e.exports = function (e) {
                 "_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table",
         },
         n = "[A-Za-z$_][0-9A-Za-z$_]*",
-        r = {
-            className: "subst",
-            begin: /#\{/,
-            end: /\}/,
-            keywords: t,
-        },
+        r = { className: "subst", begin: /#\{/, end: /\}/, keywords: t },
         i = [
-            e.inherit(e.C_NUMBER_MODE, {
-                starts: {
-                    end: "(\\s*/)?",
-                    relevance: 0,
-                },
-            }),
+            e.inherit(e.C_NUMBER_MODE, { starts: { end: "(\\s*/)?", relevance: 0 } }),
             {
                 className: "string",
                 variants: [
-                    {
-                        begin: /'/,
-                        end: /'/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        begin: /"/,
-                        end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE, r],
-                    },
+                    { begin: /'/, end: /'/, contains: [e.BACKSLASH_ESCAPE] },
+                    { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, r] },
                 ],
             },
-            {
-                className: "built_in",
-                begin: "@__" + e.IDENT_RE,
-            },
-            {
-                begin: "@" + e.IDENT_RE,
-            },
-            {
-                begin: e.IDENT_RE + "\\\\" + e.IDENT_RE,
-            },
+            { className: "built_in", begin: "@__" + e.IDENT_RE },
+            { begin: "@" + e.IDENT_RE },
+            { begin: e.IDENT_RE + "\\\\" + e.IDENT_RE },
         ];
     r.contains = i;
-    let a = e.inherit(e.TITLE_MODE, {
-            begin: n,
-        }),
+    let a = e.inherit(e.TITLE_MODE, { begin: n }),
         s = "(\\(.*\\)\\s*)?\\B[-=]>",
         o = {
             className: "params",
             begin: "\\([^\\(]",
             returnBegin: !0,
-            contains: [
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    keywords: t,
-                    contains: ["self"].concat(i),
-                },
-            ],
+            contains: [{ begin: /\(/, end: /\)/, keywords: t, contains: ["self"].concat(i) }],
         };
     return {
         name: "MoonScript",
@@ -81,39 +47,16 @@ e.exports = function (e) {
             {
                 begin: /[\(,:=]\s*/,
                 relevance: 0,
-                contains: [
-                    {
-                        className: "function",
-                        begin: s,
-                        end: "[-=]>",
-                        returnBegin: !0,
-                        contains: [o],
-                    },
-                ],
+                contains: [{ className: "function", begin: s, end: "[-=]>", returnBegin: !0, contains: [o] }],
             },
             {
                 className: "class",
                 beginKeywords: "class",
                 end: "$",
                 illegal: /[:="\[\]]/,
-                contains: [
-                    {
-                        beginKeywords: "extends",
-                        endsWithParent: !0,
-                        illegal: /[:="\[\]]/,
-                        contains: [a],
-                    },
-                    a,
-                ],
+                contains: [{ beginKeywords: "extends", endsWithParent: !0, illegal: /[:="\[\]]/, contains: [a] }, a],
             },
-            {
-                className: "name",
-                begin: n + ":",
-                end: ":",
-                returnBegin: !0,
-                returnEnd: !0,
-                relevance: 0,
-            },
+            { className: "name", begin: n + ":", end: ":", returnBegin: !0, returnEnd: !0, relevance: 0 },
         ]),
     };
 };

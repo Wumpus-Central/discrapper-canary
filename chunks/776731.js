@@ -1,3 +1,2 @@
-e.exports = {
-    h: "paymentSections__72707",
-};
+"use strict";
+e.exports = { h: "paymentSections__72707" };

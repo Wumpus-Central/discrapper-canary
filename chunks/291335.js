@@ -1,124 +1,102 @@
-t.d(l, {
-    A: () => v,
-});
-var n = t(627968);
-t(64700);
-var i = t(503698),
-    r = t.n(i),
-    s = t(311907),
-    a = t(397927),
-    o = t(730134),
-    d = t(169869),
-    c = t(837057),
-    u = t(310419),
-    f = t(773669),
-    p = t(427157),
-    m = t(967198),
-    x = t(183555),
-    A = t(488995),
-    j = t(985018),
-    h = t(882119);
-
-function g(e) {
-    let { applicationRoleConnection: l, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
-        s = (0, d.VW)(l, t);
-    return (0, n.jsxs)(n.Fragment, {
+n.d(t, { A: () => j });
+var i = n(627968);
+n(64700);
+var s = n(503698),
+    l = n.n(s),
+    a = n(311907),
+    r = n(397927),
+    d = n(730134),
+    o = n(169869),
+    c = n(837057),
+    u = n(310419),
+    A = n(773669),
+    x = n(427157),
+    m = n(967198),
+    p = n(183555),
+    h = n(488995),
+    f = n(985018),
+    g = n(882119);
+function I(e) {
+    let { applicationRoleConnection: t, locale: n, onApplicationClicked: s, selectedGuildId: l } = e,
+        a = (0, o.VW)(t, n);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsx)("div", {
-                className: h.k_,
+            (0, i.jsx)("div", {
+                className: g.k_,
                 children:
-                    null != l.application.bot
-                        ? (0, n.jsx)(o.A, {
-                              user: new p.A(l.application.bot),
-                              size: a._3J.SIZE_16,
-                          })
-                        : (0, n.jsx)(a._7Z, {
-                              color: "currentColor",
-                              size: "sm",
-                          }),
+                    null != t.application.bot
+                        ? (0, i.jsx)(d.A, { user: new x.A(t.application.bot), size: r._3J.SIZE_16 })
+                        : (0, i.jsx)(r._7Z, { color: "currentColor", size: "sm" }),
             }),
-            (0, n.jsxs)("div", {
-                className: h.Hd,
+            (0, i.jsxs)("div", {
+                className: g.Hd,
                 children: [
-                    (0, n.jsxs)(a.DUT, {
-                        className: h.OB,
+                    (0, i.jsxs)(r.DUT, {
+                        className: g.OB,
                         onClick: () => {
-                            null == i || i(),
+                            s?.(),
                                 (0, c.transitionToGlobalDiscovery)({
-                                    tab: A.GlobalDiscoveryTab.APPS,
-                                    applicationId: l.application.id,
+                                    tab: h.GlobalDiscoveryTab.APPS,
+                                    applicationId: t.application.id,
                                     newSessionState: {
-                                        entrypoint: {
-                                            name: u.sW.APPLICATION_DIRECTORY_URL,
-                                        },
-                                        guildId: r,
+                                        entrypoint: { name: u.sW.APPLICATION_DIRECTORY_URL },
+                                        guildId: l,
                                     },
                                 });
                         },
                         children: [
-                            null != l.platform_name
-                                ? (0, n.jsx)(a.Text, {
+                            null != t.platform_name
+                                ? (0, i.jsx)(r.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: l.platform_name,
+                                      children: t.platform_name,
                                   })
                                 : null,
-                            null != l.platform_username
-                                ? (0, n.jsx)(a.Text, {
+                            null != t.platform_username
+                                ? (0, i.jsx)(r.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: l.platform_username,
+                                      children: t.platform_username,
                                   })
                                 : null,
-                            (0, n.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
-                                className: h.nk,
-                                children: j.intl.format(j.t.zIT9YA, {
-                                    applicationHook: () => l.application.name,
-                                }),
+                                className: g.nk,
+                                children: f.intl.format(f.t.zIT9YA, { applicationHook: () => t.application.name }),
                             }),
                         ],
                     }),
-                    null != s && s.length > 0
-                        ? (0, n.jsx)("div", {
-                              className: h.yu,
-                              children: s,
-                          })
-                        : null,
+                    null != a && a.length > 0 ? (0, i.jsx)("div", { className: g.yu, children: a }) : null,
                 ],
             }),
         ],
     });
 }
-
-function v(e) {
-    let { applicationRoleConnections: l, className: t, onClose: i } = e,
-        { trackUserProfileAction: a } = (0, x.NJ)(),
-        o = (0, s.bG)([f.default], () => f.default.locale),
-        d = (0, s.bG)([m.A], () => m.A.getGuildId());
-    return 0 === l.length
+function j(e) {
+    let { applicationRoleConnections: t, className: n, onClose: s } = e,
+        { trackUserProfileAction: r } = (0, p.NJ)(),
+        d = (0, a.bG)([A.default], () => A.default.locale),
+        o = (0, a.bG)([m.A], () => m.A.getGuildId());
+    return 0 === t.length
         ? null
-        : (0, n.jsx)("ul", {
-              className: r()(h.kL, t),
-              children: l.map((e, l) =>
-                  (0, n.jsx)(
+        : (0, i.jsx)("ul", {
+              className: l()(g.kL, n),
+              children: t.map((e, t) =>
+                  (0, i.jsx)(
                       "li",
                       {
-                          className: h.FI,
-                          children: (0, n.jsx)(g, {
+                          className: g.FI,
+                          children: (0, i.jsx)(I, {
                               applicationRoleConnection: e,
-                              locale: o,
+                              locale: d,
                               onApplicationClicked: () => {
-                                  a({
-                                      action: "PRESS_APP_CONNECTION",
-                                  }),
-                                      i();
+                                  r({ action: "PRESS_APP_CONNECTION" }), s();
                               },
-                              selectedGuildId: null != d ? d : void 0,
+                              selectedGuildId: o ?? void 0,
                           }),
                       },
-                      "".concat(l, "-").concat(e.application.id),
+                      `${t}-${e.application.id}`,
                   ),
               ),
           });

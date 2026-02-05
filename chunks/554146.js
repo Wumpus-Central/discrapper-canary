@@ -1,7 +1,5 @@
-n.d(t, {
-    M: () => r,
-    V: () => i,
-});
+"use strict";
+n.d(t, { M: () => r, V: () => i });
 var r = (function (e) {
         return (
             (e[(e.HUB_WAITLIST_UPSELL = 0)] = "HUB_WAITLIST_UPSELL"),
@@ -527,6 +525,7 @@ var r = (function (e) {
             (e[(e.BOOST_PROGRESS_BAR_MEMBER_COACHMARK = 675)] = "BOOST_PROGRESS_BAR_MEMBER_COACHMARK"),
             (e[(e.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE = 676)] = "QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE"),
             (e[(e.SLAYER_STOREFRONT_XBOX_ANNOUNCEMENT = 677)] = "SLAYER_STOREFRONT_XBOX_ANNOUNCEMENT"),
+            (e[(e.BOOST_TO_UNLOCK_COACHMARK = 678)] = "BOOST_TO_UNLOCK_COACHMARK"),
             e
         );
     })({}),

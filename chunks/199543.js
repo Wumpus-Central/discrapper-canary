@@ -1,44 +1,15 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(439372),
     i = n(966597),
     a = n(216623);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+function s() {
+    i.A.getCurrentConfig({ location: "saved_messages_manager" }, { autoTrackExposure: !1 }).enabled && (0, a.AX)();
 }
-
-function o() {
-    i.A.getCurrentConfig(
-        {
-            location: "saved_messages_manager",
-        },
-        {
-            autoTrackExposure: !1,
-        },
-    ).enabled && (0, a.AX)();
+class o extends r.A {
+    actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
+    handlePostConnectionOpen = () => {
+        s();
+    };
 }
-class l extends r.A {
-    constructor(...e) {
-        super(...e),
-            s(this, "actions", {
-                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
-            }),
-            s(this, "handlePostConnectionOpen", () => {
-                o();
-            });
-    }
-}
-let c = new l();
+let l = new o();

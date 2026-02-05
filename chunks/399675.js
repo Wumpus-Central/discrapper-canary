@@ -1,3 +1,1 @@
-t.exports = {
-    VA: "subtitle_f0889e",
-};
+t.exports = { VA: "subtitle_f0889e" };

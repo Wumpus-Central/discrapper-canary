@@ -1,39 +1,32 @@
-n.d(t, {
-    L: () => d,
-    d: () => f,
-});
+"use strict";
+n.d(t, { L: () => d, d: () => _ });
 var r = n(311907),
     i = n(627363),
     a = n(651743),
     s = n(134861),
     o = n(760751),
     l = n(189081),
-    c = n(194871),
-    u = n(144914);
-
+    u = n(194871),
+    c = n(144914);
 function d(e) {
     return (0, r.bG)(
-        [l.A, a.A, c.A, s.A],
+        [l.A, a.A, u.A, s.A],
         () =>
             null != e &&
-            (0, u.A)({
+            (0, c.A)({
                 LibraryApplicationStore: l.A,
                 LaunchableGameStore: a.A,
-                DispatchApplicationStore: c.A,
+                DispatchApplicationStore: u.A,
                 ConnectedAppsStore: s.A,
                 applicationId: e,
             }),
         [e],
     );
 }
-
-function f(e) {
+function _(e) {
     let { data: t } = (0, i.YY)(e),
-        n = (0, r.bG)([o.A], () => {
-            var e;
-            return null != t ? (null != (e = o.A.getOfficialGame(t)) ? e : o.A.getGameByApplication(t)) : null;
-        }, [t]),
+        n = (0, r.bG)([o.A], () => (null != t ? (o.A.getOfficialGame(t) ?? o.A.getGameByApplication(t)) : null), [t]),
         a = d(e),
-        s = d(null == n ? void 0 : n.id);
-    return null != n && s ? n.id : a && null != e ? e : null;
+        s = d(n?.id);
+    return null != n && s ? n.id : a ? (e ?? null) : null;
 }

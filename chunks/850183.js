@@ -1,21 +1,16 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(695035);
-
-function o(e) {
-    let { source: t, className: n } = e;
+l.d(t, { A: () => r });
+var n = l(627968);
+l(64700);
+var s = l(503698),
+    i = l.n(s),
+    a = l(695035);
+function r(e) {
+    let { source: t, className: l } = e;
     return null == t
         ? null
-        : (0, r.jsx)("div", {
-              className: a()(s.k, n),
-              style: {
-                  backgroundImage: "url(".concat(t, ")"),
-              },
+        : (0, n.jsx)("div", {
+              className: i()(a.k, l),
+              style: { backgroundImage: `url(${t})` },
               "data-type": "event-image",
           });
 }

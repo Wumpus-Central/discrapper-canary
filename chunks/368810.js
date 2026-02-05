@@ -1,7 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.Alpha = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.Alpha = void 0);
 var n =
         Object.assign ||
         function (e) {
@@ -35,15 +33,9 @@ var n =
         return (t.default = e), t;
     })(r(738331)),
     u = c(r(896132));
-
 function c(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
-
 function p(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -51,7 +43,6 @@ function p(e, t) {
 var d = (t.Alpha = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
@@ -78,12 +69,7 @@ var d = (t.Alpha = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         o(t, [
@@ -101,10 +87,7 @@ var d = (t.Alpha = (function (e) {
                         r = (0, l.default)(
                             {
                                 default: {
-                                    alpha: {
-                                        absolute: "0px 0px 0px 0px",
-                                        borderRadius: this.props.radius,
-                                    },
+                                    alpha: { absolute: "0px 0px 0px 0px", borderRadius: this.props.radius },
                                     checkboard: {
                                         absolute: "0px 0px 0px 0px",
                                         overflow: "hidden",
@@ -129,15 +112,8 @@ var d = (t.Alpha = (function (e) {
                                         boxShadow: this.props.shadow,
                                         borderRadius: this.props.radius,
                                     },
-                                    container: {
-                                        position: "relative",
-                                        height: "100%",
-                                        margin: "0 3px",
-                                    },
-                                    pointer: {
-                                        position: "absolute",
-                                        left: 100 * t.a + "%",
-                                    },
+                                    container: { position: "relative", height: "100%", margin: "0 3px" },
+                                    pointer: { position: "absolute", left: 100 * t.a + "%" },
                                     slider: {
                                         width: "4px",
                                         borderRadius: "1px",
@@ -165,35 +141,21 @@ var d = (t.Alpha = (function (e) {
                                             t.b +
                                             ", 1) 100%)",
                                     },
-                                    pointer: {
-                                        left: 0,
-                                        top: 100 * t.a + "%",
-                                    },
+                                    pointer: { left: 0, top: 100 * t.a + "%" },
                                 },
                                 overwrite: n({}, this.props.style),
                             },
-                            {
-                                vertical: "vertical" === this.props.direction,
-                                overwrite: !0,
-                            },
+                            { vertical: "vertical" === this.props.direction, overwrite: !0 },
                         );
                     return i.default.createElement(
                         "div",
-                        {
-                            style: r.alpha,
-                        },
+                        { style: r.alpha },
                         i.default.createElement(
                             "div",
-                            {
-                                style: r.checkboard,
-                            },
-                            i.default.createElement(u.default, {
-                                renderers: this.props.renderers,
-                            }),
+                            { style: r.checkboard },
+                            i.default.createElement(u.default, { renderers: this.props.renderers }),
                         ),
-                        i.default.createElement("div", {
-                            style: r.gradient,
-                        }),
+                        i.default.createElement("div", { style: r.gradient }),
                         i.default.createElement(
                             "div",
                             {
@@ -207,14 +169,10 @@ var d = (t.Alpha = (function (e) {
                             },
                             i.default.createElement(
                                 "div",
-                                {
-                                    style: r.pointer,
-                                },
+                                { style: r.pointer },
                                 this.props.pointer
                                     ? i.default.createElement(this.props.pointer, this.props)
-                                    : i.default.createElement("div", {
-                                          style: r.slider,
-                                      }),
+                                    : i.default.createElement("div", { style: r.slider }),
                             ),
                         ),
                     );

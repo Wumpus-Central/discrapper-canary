@@ -1,22 +1,19 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(735438),
-    s = n(942381),
-    a = n(770178),
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
+    r = n(735438),
+    a = n(942381),
+    l = n(770178),
     o = n(894858),
     c = n(641324),
     d = n(78837);
-let u = i.memo(function (e) {
+let u = s.memo(function (e) {
     let { node: t } = e,
         { useTitle: n, layout: u, useCollapsedSubtitle: _ } = t,
-        [p, m] = i.useState(!1),
-        [g, A] = i.useState(!0),
-        f = i.useRef(p);
-    i.useEffect(
+        [m, A] = s.useState(!1),
+        [g, E] = s.useState(!0),
+        h = s.useRef(m);
+    s.useEffect(
         () =>
             o.A.subscribe(
                 (e) => {
@@ -24,70 +21,20 @@ let u = i.memo(function (e) {
                     return t;
                 },
                 (e) => {
-                    let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    if ((n && !p && ((f.current = !0), m(!0), A(!1)), n && p)) {
-                        var r, i;
-                        o.A.setState({
-                            navTransition:
-                                ((r = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, e)),
-                                (i = i =
-                                    {
-                                        targetAccordionKey: void 0,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                                      }),
-                                r),
-                        }),
-                            A(!0);
-                    }
+                    let n = e?.targetAccordionKey === t.key;
+                    n && !m && ((h.current = !0), A(!0), E(!1)),
+                        n && m && (o.A.setState({ navTransition: { ...e, targetAccordionKey: void 0 } }), E(!0));
                 },
-                {
-                    equalityFn: s.x,
-                    fireImmediately: !0,
-                },
+                { equalityFn: a.x, fireImmediately: !0 },
             ),
-        [p, t.key],
+        [m, t.key],
     );
-    let b = i.useCallback(
+    let p = s.useCallback(
             (e) => {
                 null == e.target ||
-                    f.current === p ||
-                    ((f.current = p),
-                    p &&
+                    h.current === m ||
+                    ((h.current = m),
+                    m &&
                         o.A.setState({
                             navTransition: {
                                 targetKey: t.key,
@@ -97,27 +44,19 @@ let u = i.memo(function (e) {
                             },
                         }));
             },
-            [p, t.key],
+            [m, t.key],
         ),
-        h = i.useMemo(() => (0, l.debounce)(b, 50), [b]),
-        E = (0, a.w)(h),
-        O = null == n ? void 0 : n(p),
-        x = null == _ ? void 0 : _();
-    return (0, r.jsx)(d.f, {
-        ref: E,
-        title: O,
-        collapsedSubtitle: x,
-        isExpanded: p,
-        onExpandedChange: m,
+        C = s.useMemo(() => (0, r.debounce)(p, 50), [p]),
+        x = (0, l.w)(C),
+        T = n?.(m),
+        I = _?.();
+    return (0, i.jsx)(d.f, {
+        ref: x,
+        title: T,
+        collapsedSubtitle: I,
+        isExpanded: m,
+        onExpandedChange: A,
         animate: g,
-        children: u.map((e) =>
-            (0, r.jsx)(
-                c.A,
-                {
-                    node: e,
-                },
-                e.key,
-            ),
-        ),
+        children: u.map((e) => (0, i.jsx)(c.A, { node: e }, e.key)),
     });
 });

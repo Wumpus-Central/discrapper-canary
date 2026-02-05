@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => d,
-    V: () => c,
-});
+"use strict";
+n.d(t, { A: () => d, V: () => u });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,30 +7,15 @@ var i = n(503698),
     s = n(486020),
     o = n(371794),
     l = n(544681),
-    c = (function (e) {
+    u = (function (e) {
         return (e[(e.SMALL = 40)] = "SMALL"), (e[(e.MEDIUM = 66)] = "MEDIUM"), (e[(e.LARGE = 128)] = "LARGE"), e;
     })({});
-let u = {
-        40: l.EX,
-        66: l.Y,
-        128: l.as,
-    },
+let c = { 40: l.EX, 66: l.Y, 128: l.as },
     d = (e) => {
         let t,
-            { application: n, size: i, asset: c, className: d } = e;
+            { application: n, size: i, asset: u, className: d } = e;
         return (
-            (t =
-                null != c
-                    ? (0, o.YE)(n.id, c, i)
-                    : s.Ay.getApplicationIconURL({
-                          id: n.id,
-                          icon: n.icon,
-                          size: i,
-                      })),
-            (0, r.jsx)("img", {
-                alt: "",
-                src: t,
-                className: a()(l.Kk, u[i], d),
-            })
+            (t = null != u ? (0, o.YE)(n.id, u, i) : s.Ay.getApplicationIconURL({ id: n.id, icon: n.icon, size: i })),
+            (0, r.jsx)("img", { alt: "", src: t, className: a()(l.Kk, c[i], d) })
         );
     };

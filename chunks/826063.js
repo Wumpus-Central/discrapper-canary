@@ -1,3 +1,1 @@
-e.exports = {
-    U: "doubleInput__594ce",
-};
+t.exports = { U: "doubleInput__594ce" };

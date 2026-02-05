@@ -1,26 +1,17 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
-    a = n(287809),
-    s = n(966107),
-    o = n(380335);
-let l = new Set(["GB"]);
-
-function c() {
-    let e = (0, i.bG)([o.A], () => o.A.getUserCountryCode()),
-        t =
-            !1 ===
-            (0, i.bG)([a.default], () => {
-                var e;
-                return null == (e = a.default.getCurrentUser()) ? void 0 : e.nsfwAllowed;
-            });
+i.d(t, { A: () => d });
+var n = i(64700),
+    a = i(311907),
+    l = i(287809),
+    r = i(966107),
+    s = i(380335);
+let o = new Set(["GB"]);
+function d() {
+    let e = (0, a.bG)([s.A], () => s.A.getUserCountryCode()),
+        t = !1 === (0, a.bG)([l.default], () => l.default.getCurrentUser()?.nsfwAllowed);
     return (
-        r.useEffect(() => {
-            null == e && (0, s.xf)();
+        n.useEffect(() => {
+            null == e && (0, r.xf)();
         }, [e]),
-        null != e && !!l.has(e.alpha2) && !!t
+        null != e && !!o.has(e.alpha2) && !!t
     );
 }

@@ -1,53 +1,38 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048),
-    n(638769);
-var r,
-    i = n(627968),
-    l = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    o = n(732955),
-    c = n(397927),
-    d = n(384904),
-    u = n(391048),
-    _ = n(83617),
-    p = n(661191),
+n.d(t, { A: () => x });
+var i = n(627968),
+    s = n(64700),
+    r = n(735438),
+    a = n.n(r),
+    l = n(732955),
+    o = n(397927),
+    c = n(384904),
+    d = n(391048),
+    u = n(83617),
+    _ = n(661191),
     m = n(533808),
-    g = n(219887),
-    A = n(652215),
-    f = n(985018),
+    A = n(219887),
+    g = n(652215),
+    E = n(985018),
     h = n(228851);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class E extends (r = l.PureComponent) {
+class p extends s.PureComponent {
+    static defaultProps = { isEditing: !1, hideDivider: !1, onEditClick: () => {} };
+    handleEditClick = () => {
+        this.props.onEditClick(this.props.paymentSource.id);
+    };
     render() {
         let {
             paymentSource: e,
             isDefault: t,
             isEditing: n,
-            index: r,
-            hideDivider: l,
-            isForSubscription: s,
-            locale: a,
+            index: s,
+            hideDivider: r,
+            isForSubscription: a,
+            locale: c,
             removing: d,
             submitting: u,
             onSubmit: _,
-            onCancel: p,
-            onDelete: A,
+            onCancel: g,
+            onDelete: p,
         } = this.props;
         return n
             ? (0, i.jsx)(m.A, {
@@ -55,57 +40,79 @@ class E extends (r = l.PureComponent) {
                   isDefault: t,
                   removing: d,
                   submitting: u,
-                  locale: a,
-                  isForSubscription: s,
+                  locale: c,
+                  isForSubscription: a,
                   onSubmit: _,
-                  onCancel: p,
-                  onDelete: A,
+                  onCancel: g,
+                  onDelete: p,
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      r > 0 && !l
-                          ? (0, i.jsx)(c.cGx, {
-                                className: h.__invalid_sourceDivider,
-                            })
-                          : null,
+                      s > 0 && !r ? (0, i.jsx)(o.cGx, { className: h.__invalid_sourceDivider }) : null,
                       (0, i.jsxs)("div", {
                           className: h.Yb,
                           children: [
-                              (0, i.jsx)(g.A, {
+                              (0, i.jsx)(A.A, {
                                   paymentSource: e,
                                   isDefault: t,
-                                  isForSubscription: s,
-                                  locale: a,
+                                  isForSubscription: a,
+                                  locale: c,
                                   showSubtext: !0,
                                   showLabels: !0,
                                   showPaymentSourceIcon: !0,
                               }),
                               n
                                   ? null
-                                  : (0, i.jsx)(o.$nd, {
+                                  : (0, i.jsx)(l.$nd, {
                                         variant: "secondary",
                                         onClick: this.handleEditClick,
                                         size: "sm",
-                                        text: f.intl.string(f.t.bt75uw),
+                                        text: E.intl.string(E.t.bt75uw),
                                     }),
                           ],
                       }),
                   ],
               });
     }
-    constructor(...e) {
-        super(...e),
-            b(this, "handleEditClick", () => {
-                this.props.onEditClick(this.props.paymentSource.id);
-            });
-    }
 }
-b(E, "defaultProps", {
-    isEditing: !1,
-    hideDivider: !1,
-    onEditClick: () => {},
-});
-class x extends l.PureComponent {
+class C extends s.PureComponent {
+    state = { editingPayment: null };
+    handleEditClick = async (e) => {
+        try {
+            await c.Gr(e), this.setState({ editingPayment: e });
+        } catch (e) {}
+    };
+    handleCancel = () => {
+        this.setState({ editingPayment: null });
+    };
+    handleDelete = async (e) => {
+        try {
+            await c.JQ(e), this.setState({ editingPayment: null });
+        } catch (e) {}
+    };
+    handleSubmit = async (e, t) => {
+        if (null != e)
+            try {
+                await c.Ps(e, t), this.setState({ editingPayment: null });
+            } catch (e) {}
+    };
+    handlePaymentSourceAdded = async (e) => {
+        await (0, u.c_)(e.id);
+    };
+    handleAddPaymentMethod = () => {
+        (0, o.mMO)(
+            async () => {
+                let { default: e } = await Promise.resolve().then(n.bind(n, 362111));
+                return (t) => (0, i.jsx)(e, { ...t, onAddPaymentSource: this.handlePaymentSourceAdded });
+            },
+            {
+                onCloseCallback: () => {
+                    (0, d.ET)();
+                },
+                onCloseRequest: g.tEg,
+            },
+        );
+    };
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, i.jsxs)("div", {
@@ -115,21 +122,12 @@ class x extends l.PureComponent {
                     ? (0, i.jsxs)("div", {
                           className: h.z8,
                           children: [
-                              (0, i.jsx)(c.Text, {
-                                  variant: "text-sm/normal",
-                                  children: f.intl.string(f.t.aRHpAB),
-                              }),
-                              (0, i.jsx)("div", {
-                                  className: h.Sv,
-                                  children: f.intl.string(f.t.o9bOIl),
-                              }),
+                              (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: E.intl.string(E.t.aRHpAB) }),
+                              (0, i.jsx)("div", { className: h.Sv, children: E.intl.string(E.t.o9bOIl) }),
                           ],
                       })
                     : null,
-                (0, i.jsx)(o.$nd, {
-                    onClick: this.handleAddPaymentMethod,
-                    text: f.intl.string(f.t.CpOiEO),
-                }),
+                (0, i.jsx)(l.$nd, { onClick: this.handleAddPaymentMethod, text: E.intl.string(E.t.CpOiEO) }),
             ],
         });
     }
@@ -138,31 +136,31 @@ class x extends l.PureComponent {
                 showHeader: e,
                 defaultPaymentSourceId: t,
                 paymentSources: n,
-                locale: r,
-                removing: l,
-                submitting: s,
-                premiumSubscriptionPaymentSourceId: o,
+                locale: s,
+                removing: r,
+                submitting: l,
+                premiumSubscriptionPaymentSourceId: c,
             } = this.props,
             d = a()
                 .values(n)
-                .sort((e, n) => (e.id === t ? -1 : n.id === t ? 1 : p.default.compare(e.id, n.id))),
+                .sort((e, n) => (e.id === t ? -1 : n.id === t ? 1 : _.default.compare(e.id, n.id))),
             u = this.state.editingPayment,
-            _ = d.findIndex((e) => e.id === u),
-            m = d.map((e, n) =>
+            m = d.findIndex((e) => e.id === u),
+            A = d.map((e, n) =>
                 (0, i.jsx)(
-                    E,
+                    p,
                     {
-                        locale: r,
+                        locale: s,
                         paymentSource: e,
                         isDefault: t === e.id,
                         onCancel: this.handleCancel,
                         onDelete: this.handleDelete,
-                        isForSubscription: e.id === o,
-                        hideDivider: _ === n - 1,
+                        isForSubscription: e.id === c,
+                        hideDivider: m === n - 1,
                         onSubmit: this.handleSubmit,
                         index: n,
-                        submitting: s,
-                        removing: l,
+                        submitting: l,
+                        removing: r,
                         isEditing: u === e.id,
                         onEditClick: this.handleEditClick,
                     },
@@ -174,121 +172,27 @@ class x extends l.PureComponent {
                 e
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsxs)(c.Heading, {
+                              (0, i.jsxs)(o.Heading, {
                                   variant: "heading-lg/semibold",
                                   children: [
-                                      (0, i.jsx)(c.XAi, {
-                                          size: "sm",
-                                          className: h.hz,
-                                      }),
+                                      (0, i.jsx)(o.XAi, { size: "sm", className: h.hz }),
                                       " ",
-                                      f.intl.string(f.t.W26xGQ),
+                                      E.intl.string(E.t.W26xGQ),
                                   ],
                               }),
-                              (0, i.jsx)(c.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
-                                  children: f.intl.string(f.t.h6V3uK),
+                                  children: E.intl.string(E.t.h6V3uK),
                               }),
                           ],
                       })
                     : null,
-                m,
-                _ !== d.length - 1 ? (0, i.jsx)(c.cGx, {}) : null,
+                A,
+                m !== d.length - 1 ? (0, i.jsx)(o.cGx, {}) : null,
                 this.renderFooter(),
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            b(this, "state", {
-                editingPayment: null,
-            }),
-            b(this, "handleEditClick", async (e) => {
-                try {
-                    await d.Gr(e),
-                        this.setState({
-                            editingPayment: e,
-                        });
-                } catch (e) {}
-            }),
-            b(this, "handleCancel", () => {
-                this.setState({
-                    editingPayment: null,
-                });
-            }),
-            b(this, "handleDelete", async (e) => {
-                try {
-                    await d.JQ(e),
-                        this.setState({
-                            editingPayment: null,
-                        });
-                } catch (e) {}
-            }),
-            b(this, "handleSubmit", async (e, t) => {
-                if (null != e)
-                    try {
-                        await d.Ps(e, t),
-                            this.setState({
-                                editingPayment: null,
-                            });
-                    } catch (e) {}
-            }),
-            b(this, "handlePaymentSourceAdded", async (e) => {
-                await (0, _.c_)(e.id);
-            }),
-            b(this, "handleAddPaymentMethod", () => {
-                (0, c.mMO)(
-                    async () => {
-                        let { default: e } = await Promise.resolve().then(n.bind(n, 362111));
-                        return (t) => {
-                            var n, r;
-                            return (0, i.jsx)(
-                                e,
-                                ((n = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                b(e, t, n[t]);
-                                            });
-                                    }
-                                    return e;
-                                })({}, t)),
-                                (r = r =
-                                    {
-                                        onAddPaymentSource: this.handlePaymentSourceAdded,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(r)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                                      }),
-                                n),
-                            );
-                        };
-                    },
-                    {
-                        onCloseCallback: () => {
-                            (0, u.ET)();
-                        },
-                        onCloseRequest: A.tEg,
-                    },
-                );
-            });
-    }
 }
-let O = x;
+let x = C;

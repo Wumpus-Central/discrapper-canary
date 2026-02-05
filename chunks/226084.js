@@ -1,6 +1,4 @@
-a.d(e, {
-    A: () => r,
-});
+a.d(e, { A: () => r });
 var t = a(303527);
 let r = {
     ordinalNumber: (0, a(722023).A)({
@@ -17,10 +15,7 @@ let r = {
             wide: /^(prieš Kristų|prieš mūsų erą|po Kristaus|mūsų eroje)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            wide: [/prieš/i, /(po|mūsų)/i],
-            any: [/^pr/i, /^(po|m)/i],
-        },
+        parsePatterns: { wide: [/prieš/i, /(po|mūsų)/i], any: [/^pr/i, /^(po|m)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, t.A)({
@@ -30,10 +25,7 @@ let r = {
             wide: /^(I|II|III|IV)\s?ketvirtis/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            narrow: [/1/i, /2/i, /3/i, /4/i],
-            any: [/I$/i, /II$/i, /III/i, /IV/i],
-        },
+        parsePatterns: { narrow: [/1/i, /2/i, /3/i, /4/i], any: [/I$/i, /II$/i, /III/i, /IV/i] },
         defaultParseWidth: "any",
         valueCallback: function (i) {
             return i + 1;

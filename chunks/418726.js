@@ -1,6 +1,4 @@
-t.d(e, {
-    A: () => n,
-});
+t.d(e, { A: () => n });
 var i = t(303527);
 let n = {
     ordinalNumber: (0, t(722023).A)({
@@ -11,15 +9,9 @@ let n = {
         },
     }),
     era: (0, i.A)({
-        matchPatterns: {
-            narrow: /^(mö|ms)/i,
-            abbreviated: /^(mö|ms)/i,
-            wide: /^(milattan önce|milattan sonra)/i,
-        },
+        matchPatterns: { narrow: /^(mö|ms)/i, abbreviated: /^(mö|ms)/i, wide: /^(milattan önce|milattan sonra)/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/(^mö|^milattan önce)/i, /(^ms|^milattan sonra)/i],
-        },
+        parsePatterns: { any: [/(^mö|^milattan önce)/i, /(^ms|^milattan sonra)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, i.A)({

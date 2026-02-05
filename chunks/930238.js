@@ -1,537 +1,425 @@
-n.d(t, {
-    A: () => W,
-}),
-    n(321073),
-    n(733351),
-    n(896048);
+n.d(t, { A: () => W }), n(321073);
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(91871),
-    o = n.n(s),
-    c = n(311907),
-    d = n(582754),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(91871),
+    o = n.n(r),
+    d = n(311907),
+    c = n(582754),
     u = n(397927),
-    b = n(398590),
-    f = n(736653),
-    p = n(573648),
-    m = n(429913),
-    g = n(882997),
-    h = n(235986),
-    x = n(837057),
-    j = n(310419),
-    O = n(526132),
-    y = n(887501),
-    A = n(962173),
-    v = n(576705),
-    N = n(954571),
-    E = n(486020),
-    T = n(975571),
-    w = n(661191),
-    C = n(427262),
-    S = n(523352),
-    _ = n(517765),
-    I = n(381616),
-    P = n(652215),
+    m = n(398590),
+    g = n(736653),
+    x = n(573648),
+    h = n(429913),
+    p = n(882997),
+    A = n(235986),
+    b = n(837057),
+    _ = n(310419),
+    f = n(526132),
+    N = n(887501),
+    j = n(962173),
+    T = n(576705),
+    C = n(954571),
+    v = n(486020),
+    E = n(975571),
+    I = n(661191),
+    S = n(427262),
+    y = n(523352),
+    O = n(517765),
+    w = n(381616),
+    R = n(652215),
     k = n(488995),
-    R = n(985018),
-    L = n(443536),
-    M = n(882370),
-    D = n(854766),
-    G = n(237070);
-
-function U(e, t) {
+    L = n(985018),
+    M = n(443536),
+    G = n(882370),
+    U = n(854766),
+    D = n(237070);
+function P(e, t) {
     return t.includes(e);
 }
-
 function B(e) {
     let { query: t, setQuery: n } = e,
-        l = r.useCallback(
+        s = l.useCallback(
             (e) => {
                 n(e);
             },
             [n],
         );
     return (0, i.jsx)("div", {
-        className: L.MT,
+        className: M.MT,
         children: (0, i.jsx)(u.IWV, {
             query: t,
-            onChange: l,
+            onChange: s,
             onClear: () => n(""),
-            placeholder: R.intl.string(R.t["5prvKe"]),
-            "aria-label": R.intl.string(R.t["5prvKe"]),
+            placeholder: L.intl.string(L.t["5prvKe"]),
+            "aria-label": L.intl.string(L.t["5prvKe"]),
         }),
     });
 }
-
 function W(e) {
-    var t, n, l, s, W;
-    let H,
+    var t, n, s, r;
+    let W,
+        H,
         V,
         z,
-        K,
         F,
+        K,
         Y,
         q,
-        Q,
         J,
-        Z,
+        Q,
         {
-            guild: X,
-            channel: $,
-            applicationIntegrations: ee,
-            builtInIntegrations: et,
-            customWebhooks: en,
-            followedChannelWebhooks: ei,
-            isLoadingWebhooks: er,
+            guild: Z,
+            channel: X,
+            applicationIntegrations: $,
+            builtInIntegrations: ee,
+            customWebhooks: et,
+            followedChannelWebhooks: en,
+            isLoadingWebhooks: ei,
             canCreateWebhook: el,
-            onManageBuiltIn: ea,
-            onManageCustomWebhooks: es,
-            onManageFollowedChannels: eo,
-            onManageApplication: ec,
+            onManageBuiltIn: es,
+            onManageCustomWebhooks: ea,
+            onManageFollowedChannels: er,
+            onManageApplication: eo,
             onManageLobbiesLinked: ed,
         } = e,
-        eu = (0, f.Ay)(),
-        [eb, ef] = r.useState(""),
-        { isFetchingConnections: ep, accounts: em } = (0, c.cf)(
-            [A.A],
-            () => ({
-                isFetchingConnections: A.A.isFetching(),
-                accounts: A.A.getAccounts(),
-            }),
+        ec = (0, g.Ay)(),
+        [eu, em] = l.useState(""),
+        { isFetchingConnections: eg, accounts: ex } = (0, d.cf)(
+            [j.A],
+            () => ({ isFetchingConnections: j.A.isFetching(), accounts: j.A.getAccounts() }),
             [],
         ),
-        { canManageWebhooks: eg, canManageGuild: eh } = (0, c.cf)(
-            [v.A],
+        { canManageWebhooks: eh, canManageGuild: ep } = (0, d.cf)(
+            [T.A],
             () => ({
                 canManageWebhooks:
-                    (null != X && v.A.can(P.xBc.MANAGE_WEBHOOKS, X)) ||
-                    (null != $ && v.A.can(P.xBc.MANAGE_WEBHOOKS, $)),
-                canManageGuild: null != X && null == $ && v.A.can(P.xBc.MANAGE_GUILD, X),
+                    (null != Z && T.A.can(R.xBc.MANAGE_WEBHOOKS, Z)) ||
+                    (null != X && T.A.can(R.xBc.MANAGE_WEBHOOKS, X)),
+                canManageGuild: null != Z && null == X && T.A.can(R.xBc.MANAGE_GUILD, Z),
             }),
-            [X, $],
+            [Z, X],
         ),
-        ex = (0, O.e)($),
-        ej = (0, m.h)(null == $ || null == (t = $.linkedLobby) ? void 0 : t.application_id),
-        eO = (0, y.A)(null == X ? void 0 : X.id),
+        eA = (0, f.e)(X),
+        eb = (0, h.h)(X?.linkedLobby?.application_id),
+        e_ = (0, N.A)(Z?.id),
         {
-            availableTwitchIntegrations: ey,
-            availableYoutubeIntegrations: eA,
-            guildTwitchIntegrations: ev,
-            guildYoutubeIntegrations: eN,
-        } = r.useMemo(() => {
-            var e, t, n, i, r, l, a, s;
-            return {
-                availableTwitchIntegrations: null != (e = null == (r = et.twitch) ? void 0 : r.length) ? e : 0,
-                availableYoutubeIntegrations: null != (t = null == (l = et.youtube) ? void 0 : l.length) ? t : 0,
-                guildTwitchIntegrations:
-                    null != (n = null == (a = et.twitch) ? void 0 : a.filter((e) => e.enabled).length) ? n : 0,
-                guildYoutubeIntegrations:
-                    null != (i = null == (s = et.youtube) ? void 0 : s.filter((e) => e.enabled).length) ? i : 0,
-            };
-        }, [et.twitch, et.youtube]),
-        { showTwitchCard: eE, showYoutubeCard: eT } = r.useMemo(() => {
-            if (ep || !eh)
-                return {
-                    showTwitchCard: !1,
-                    showYoutubeCard: !1,
-                };
-            let e = null == X ? void 0 : X.features.has(P.GuildFeatures.COMMUNITY),
-                t = em.filter((e) => e.type === P.fg2.TWITCH).length > 0,
-                n = em.filter((e) => e.type === P.fg2.YOUTUBE).length > 0;
-            return {
-                showTwitchCard: ey > 0 || (!t && e),
-                showYoutubeCard: eA > 0 || (!n && e),
-            };
-        }, [ep, eh, X, em, ey, eA]),
-        ew = Object.values(ee).length,
-        eC = r.useMemo(() => {
-            let e = ew > 100 ? U : o();
-            return Object.values(ee).filter((t) => {
+            availableTwitchIntegrations: ef,
+            availableYoutubeIntegrations: eN,
+            guildTwitchIntegrations: ej,
+            guildYoutubeIntegrations: eT,
+        } = l.useMemo(
+            () => ({
+                availableTwitchIntegrations: ee.twitch?.length ?? 0,
+                availableYoutubeIntegrations: ee.youtube?.length ?? 0,
+                guildTwitchIntegrations: ee.twitch?.filter((e) => e.enabled).length ?? 0,
+                guildYoutubeIntegrations: ee.youtube?.filter((e) => e.enabled).length ?? 0,
+            }),
+            [ee.twitch, ee.youtube],
+        ),
+        { showTwitchCard: eC, showYoutubeCard: ev } = l.useMemo(() => {
+            if (eg || !ep) return { showTwitchCard: !1, showYoutubeCard: !1 };
+            let e = Z?.features.has(R.GuildFeatures.COMMUNITY),
+                t = ex.filter((e) => e.type === R.fg2.TWITCH).length > 0,
+                n = ex.filter((e) => e.type === R.fg2.YOUTUBE).length > 0;
+            return { showTwitchCard: ef > 0 || (!t && e), showYoutubeCard: eN > 0 || (!n && e) };
+        }, [eg, ep, Z, ex, ef, eN]),
+        eE = Object.values($).length,
+        eI = l.useMemo(() => {
+            let e = eE > 100 ? P : o();
+            return Object.values($).filter((t) => {
                 var n;
                 let { application: i } = t;
                 return !!(
-                    "" === (n = (n = eb).trim().toLowerCase()) ||
+                    "" === (n = (n = eu).trim().toLowerCase()) ||
                     i.id === n ||
                     e(n, i.name.toLowerCase()) ||
                     (null != i.bot && e(n, i.bot.username.toLowerCase()))
                 );
             });
-        }, [ee, ew, eb]),
-        eS = (0, c.bG)([I.A], () => {
-            if (null != X) return eC.find((e) => I.A.canShowOverviewTooltip(X.id, e.integration.id));
-        }, [eC, X]),
-        e_ = r.useMemo(
-            () => (void 0 !== eS ? [eS, ...eC.filter((e) => e.integration.id !== eS.integration.id)] : eC),
-            [eC, eS],
+        }, [$, eE, eu]),
+        eS = (0, d.bG)([w.A], () => {
+            if (null != Z) return eI.find((e) => w.A.canShowOverviewTooltip(Z.id, e.integration.id));
+        }, [eI, Z]),
+        ey = l.useMemo(
+            () => (void 0 !== eS ? [eS, ...eI.filter((e) => e.integration.id !== eS.integration.id)] : eI),
+            [eI, eS],
         ),
-        eI = (0, u.red)(u.DXt),
-        [eP, ek] = r.useState(!1),
-        eR = r.useRef(0),
+        eO = (0, u.red)(u.DXt),
+        [ew, eR] = l.useState(!1),
+        ek = l.useRef(0),
         eL = () => {
-            ek(!0),
-                clearTimeout(eR.current),
-                (eR.current = setTimeout(() => {
-                    ek(!1);
+            eR(!0),
+                clearTimeout(ek.current),
+                (ek.current = setTimeout(() => {
+                    eR(!1);
                 }, 200));
         };
-    r.useEffect(() => (window.addEventListener("scroll", eL, !0), () => window.removeEventListener("scroll", eL)));
-    let eM = e_.map((e) => {
-            let t = !eI && e.integration.id === (null == eS ? void 0 : eS.integration.id);
-            return (function (e, t, n, r, l) {
-                let { application: a, integration: s } = t,
+    l.useEffect(() => (window.addEventListener("scroll", eL, !0), () => window.removeEventListener("scroll", eL)));
+    let eM = ey.map((e) => {
+            let t = !eO && e.integration.id === eS?.integration.id;
+            return (function (e, t, n, l, s) {
+                let { application: a, integration: r } = t,
                     o = [];
                 return (
-                    null != s.user
+                    null != r.user
                         ? o.push({
                               icon: u.O4,
-                              text: R.intl.formatToPlainString(R.t.Nu9sat, {
-                                  timestamp: w.default.extractTimestamp(s.id),
-                                  user: C.Ay.getUserTag(s.user),
+                              text: L.intl.formatToPlainString(L.t.Nu9sat, {
+                                  timestamp: I.default.extractTimestamp(r.id),
+                                  user: S.Ay.getUserTag(r.user),
                               }),
                           })
                         : o.push({
                               icon: u.O4,
-                              text: R.intl.formatToPlainString(R.t.gcdJ8J, {
-                                  timestamp: w.default.extractTimestamp(s.id),
+                              text: L.intl.formatToPlainString(L.t.gcdJ8J, {
+                                  timestamp: I.default.extractTimestamp(r.id),
                               }),
                           }),
                     (0, i.jsx)(
-                        _.A,
+                        O.A,
                         {
                             name: a.name,
-                            imageSrc: E.Ay.getApplicationIconURL({
-                                id: a.id,
-                                icon: a.icon,
-                                size: 48,
-                            }),
+                            imageSrc: v.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }),
                             integration: t,
-                            buttonText: R.intl.string(R.t["Z/qRnM"]),
+                            buttonText: L.intl.string(L.t["Z/qRnM"]),
                             hasNextSection: !0,
                             onButtonClick: () => {
                                 n(a.id),
-                                    N.default.track(P.HAw.APP_MANAGE_CTA_CLICKED, {
+                                    C.default.track(R.HAw.APP_MANAGE_CTA_CLICKED, {
                                         application_id: a.id,
-                                        guild_id: null == e ? void 0 : e.id,
-                                        is_admin: null != e ? v.A.can(P.xBc.ADMINISTRATOR, e) : void 0,
+                                        guild_id: e?.id,
+                                        is_admin: null != e ? T.A.can(R.xBc.ADMINISTRATOR, e) : void 0,
                                     });
                             },
                             details: o,
-                            guildId: null == e ? void 0 : e.id,
-                            isScrolling: r,
-                            canShowMigrationTooltip: l,
+                            guildId: e?.id,
+                            isScrolling: l,
+                            canShowMigrationTooltip: s,
                         },
-                        "integration-".concat(s.id),
+                        `integration-${r.id}`,
                     )
                 );
-            })(X, e, ec, eP, t);
+            })(Z, e, eo, ew, t);
         }),
-        eD = (0, i.jsx)("div", {
-            className: L.Hw,
-        });
-    if (0 === eM.length && eh) {
-        let e, t, r;
-        (n = null == X ? void 0 : X.id),
-            (e = (0, d.Mw)(eu) ? D : G),
-            (t = (0, i.jsxs)(h.A, {
-                direction: h.A.Direction.VERTICAL,
-                align: h.A.Align.CENTER,
-                className: L.Kl,
+        eG = (0, i.jsx)("div", { className: M.Hw });
+    if (0 === eM.length && ep) {
+        let e, n, l;
+        (t = Z?.id),
+            (e = (0, c.Mw)(ec) ? U : D),
+            (n = (0, i.jsxs)(A.A, {
+                direction: A.A.Direction.VERTICAL,
+                align: A.A.Align.CENTER,
+                className: M.Kl,
                 children: [
-                    (0, i.jsx)("img", {
-                        alt: "",
-                        src: e,
-                        className: L.s1,
-                    }),
+                    (0, i.jsx)("img", { alt: "", src: e, className: M.s1 }),
                     (0, i.jsx)(u.ZpM, {
                         editable: !0,
-                        className: L.$N,
+                        className: M.$N,
                         children: (0, i.jsx)(u.Text, {
                             color: "text-muted",
                             variant: "text-sm/normal",
-                            children: R.intl.string(R.t.EVWFNr),
+                            children: L.intl.string(L.t.EVWFNr),
                         }),
                     }),
                 ],
             })),
-            (r = (0, i.jsx)(u.ZpM, {
+            (l = (0, i.jsx)(u.ZpM, {
                 editable: !0,
-                className: L.$N,
+                className: M.$N,
                 children: (0, i.jsxs)("div", {
-                    className: L.q6,
+                    className: M.q6,
                     children: [
-                        (0, i.jsx)("img", {
-                            alt: "",
-                            src: M,
-                            className: L.QT,
-                        }),
+                        (0, i.jsx)("img", { alt: "", src: G, className: M.QT }),
                         (0, i.jsx)(u.Heading, {
                             color: "text-default",
                             variant: "heading-xl/bold",
-                            children: R.intl.string(R.t.nQQeFM),
+                            children: L.intl.string(L.t.nQQeFM),
                         }),
                         (0, i.jsx)(u.Text, {
                             color: "text-default",
                             variant: "text-sm/normal",
-                            children: R.intl.format(R.t.snvKU3, {
+                            children: L.intl.format(L.t.snvKU3, {
                                 handleGoToAppDirectory: () => {
-                                    (0, x.transitionToGlobalDiscovery)({
+                                    (0, b.transitionToGlobalDiscovery)({
                                         tab: k.GlobalDiscoveryTab.APPS,
                                         newSessionState: {
-                                            entrypoint: {
-                                                name: j.sW.GUILD_INTEGRATION_SETTINGS,
-                                            },
-                                            guildId: n,
+                                            entrypoint: { name: _.sW.GUILD_INTEGRATION_SETTINGS },
+                                            guildId: t,
                                         },
                                     }),
-                                        (0, b.jH)();
+                                        (0, m.jH)();
                                 },
                             }),
                         }),
                     ],
                 }),
             })),
-            (eM = ew > 0 ? t : r),
-            (eD = null);
+            (eM = eE > 0 ? n : l),
+            (eG = null);
     }
-    let eG = T.A.getArticleURL(P.MVz.INTEGRATIONS),
-        eU = null != $ ? R.t.YV0vh6 : R.t.FnZEJs,
-        eB = [];
-    if (eg) {
-        let e, t, n, r, a;
-        eB.push(
-            ((l = en.length),
-            l > 0
-                ? (t = (0, i.jsx)(u.uhT, {
-                      size: "xs",
-                  }))
-                : (e = R.intl.string(R.t.lOQqJK)),
+    let eU = E.A.getArticleURL(R.MVz.INTEGRATIONS),
+        eD = null != X ? L.t.YV0vh6 : L.t.FnZEJs,
+        eP = [];
+    if (eh) {
+        let e, t, l, a, r;
+        eP.push(
+            ((n = et.length),
+            n > 0 ? (t = (0, i.jsx)(u.uhT, { size: "xs" })) : (e = L.intl.string(L.t.lOQqJK)),
             (0, i.jsx)(
-                _.A,
+                O.A,
                 {
-                    name: R.intl.string(R.t.xOg4SP),
+                    name: L.intl.string(L.t.xOg4SP),
                     icon: u.XC7,
                     buttonText: e,
                     buttonDisabled: !el,
                     trailing: t,
-                    onButtonClick: es,
-                    hasNextSection: l > 0,
-                    details: [
-                        {
-                            text: R.intl.formatToPlainString(R.t["6HqDfT"], {
-                                count: l,
-                            }),
-                        },
-                    ],
+                    onButtonClick: ea,
+                    hasNextSection: n > 0,
+                    details: [{ text: L.intl.formatToPlainString(L.t["6HqDfT"], { count: n }) }],
                 },
                 "webhooks",
             )),
         ),
-            (null == $ ? void 0 : $.type) === P.rbe.GUILD_VOICE ||
-                ((null == $ ? void 0 : $.type) != null && P.kvI.GUILD_THREADS_ONLY.has($.type)) ||
-                eB.push(
-                    ((s = ei.length),
+            X?.type === R.rbe.GUILD_VOICE ||
+                (X?.type != null && R.kvI.GUILD_THREADS_ONLY.has(X.type)) ||
+                eP.push(
+                    ((s = en.length),
                     s > 0
-                        ? ((a = (0, i.jsx)(u.uhT, {
-                              size: "xs",
-                          })),
-                          (r = eo))
-                        : ((n = R.intl.string(R.t["ZwSt+T"])),
-                          (r = () => open(T.A.getArticleURL(P.MVz.CHANNEL_FOLLOWING)))),
+                        ? ((r = (0, i.jsx)(u.uhT, { size: "xs" })), (a = er))
+                        : ((l = L.intl.string(L.t["ZwSt+T"])),
+                          (a = () => open(E.A.getArticleURL(R.MVz.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        _.A,
+                        O.A,
                         {
-                            name: R.intl.string(R.t.OrV60r),
+                            name: L.intl.string(L.t.OrV60r),
                             icon: u._qW,
-                            buttonText: n,
-                            onButtonClick: r,
-                            trailing: a,
+                            buttonText: l,
+                            onButtonClick: a,
+                            trailing: r,
                             hasNextSection: s > 0,
-                            details: [
-                                {
-                                    text: R.intl.formatToPlainString(R.t.JUNGIZ, {
-                                        count: s,
-                                    }),
-                                },
-                            ],
+                            details: [{ text: L.intl.formatToPlainString(L.t.JUNGIZ, { count: s }) }],
                         },
                         "channels-followed",
                     )),
                 );
     }
-    null == $ &&
-        eO.length > 0 &&
-        eB.push(
-            ((W = eO.length),
+    null == X &&
+        e_.length > 0 &&
+        eP.push(
+            ((r = e_.length),
             (0, i.jsx)(
-                _.A,
+                O.A,
                 {
-                    name: R.intl.string(R.t.tqtDXC),
+                    name: L.intl.string(L.t.tqtDXC),
                     icon: u.fNY,
-                    trailing: (0, i.jsx)(u.uhT, {
-                        size: "xs",
-                    }),
+                    trailing: (0, i.jsx)(u.uhT, { size: "xs" }),
                     onButtonClick: ed,
                     hasNextSection: !0,
-                    details: [
-                        {
-                            text: R.intl.formatToPlainString(R.t["puxS4+"], {
-                                count: W,
-                            }),
-                        },
-                    ],
+                    details: [{ text: L.intl.formatToPlainString(L.t["puxS4+"], { count: r }) }],
                 },
                 "channels-syncing",
             )),
         ),
-        eE &&
-            eB.push(
-                ((F = p.A.get(P.fg2.TWITCH)),
-                ey > 0
-                    ? ((K = (0, i.jsx)(u.uhT, {
-                          size: "xs",
-                      })),
-                      (V = R.intl.formatToPlainString(R.t.FFpnT8, {
-                          count: ev,
-                      })),
-                      (z = () => ea(P.fg2.TWITCH)))
-                    : ((H = R.intl.string(R.t.bkvGkn)),
-                      (V = R.intl.string(R.t.Qq3X2M)),
-                      (z = () =>
-                          (0, g.A)({
-                              platformType: P.fg2.TWITCH,
-                              location: "Integration Settings",
-                          }))),
+        eC &&
+            eP.push(
+                ((F = x.A.get(R.fg2.TWITCH)),
+                ef > 0
+                    ? ((z = (0, i.jsx)(u.uhT, { size: "xs" })),
+                      (H = L.intl.formatToPlainString(L.t.FFpnT8, { count: ej })),
+                      (V = () => es(R.fg2.TWITCH)))
+                    : ((W = L.intl.string(L.t.bkvGkn)),
+                      (H = L.intl.string(L.t.Qq3X2M)),
+                      (V = () => (0, p.A)({ platformType: R.fg2.TWITCH, location: "Integration Settings" }))),
                 (0, i.jsx)(
-                    _.A,
+                    O.A,
                     {
-                        name: R.intl.string(R.t.q4pBG3),
+                        name: L.intl.string(L.t.q4pBG3),
                         icon: F.icon.whiteSVG,
                         iconBackgroundColor: F.color,
-                        iconClassName: L.tV,
-                        buttonText: H,
-                        onButtonClick: z,
-                        trailing: K,
-                        hasNextSection: ey > 0,
-                        details: [
-                            {
-                                text: V,
-                            },
-                        ],
+                        iconClassName: M.tV,
+                        buttonText: W,
+                        onButtonClick: V,
+                        trailing: z,
+                        hasNextSection: ef > 0,
+                        details: [{ text: H }],
                     },
                     "integrations-twitch",
                 )),
             ),
-        eT &&
-            eB.push(
-                ((Z = p.A.get(P.fg2.YOUTUBE)),
-                eA > 0
-                    ? ((J = (0, i.jsx)(u.uhT, {
-                          size: "xs",
-                      })),
-                      (q = R.intl.formatToPlainString(R.t.b2g5vC, {
-                          count: eN,
-                      })),
-                      (Q = () => ea(P.fg2.YOUTUBE)))
-                    : ((Y = R.intl.string(R.t.xEyQ3X)),
-                      (q = R.intl.string(R.t.T0ivgQ)),
-                      (Q = () =>
-                          (0, g.A)({
-                              platformType: P.fg2.YOUTUBE,
-                              location: "Integration Settings",
-                          }))),
+        ev &&
+            eP.push(
+                ((Q = x.A.get(R.fg2.YOUTUBE)),
+                eN > 0
+                    ? ((J = (0, i.jsx)(u.uhT, { size: "xs" })),
+                      (Y = L.intl.formatToPlainString(L.t.b2g5vC, { count: eT })),
+                      (q = () => es(R.fg2.YOUTUBE)))
+                    : ((K = L.intl.string(L.t.xEyQ3X)),
+                      (Y = L.intl.string(L.t.T0ivgQ)),
+                      (q = () => (0, p.A)({ platformType: R.fg2.YOUTUBE, location: "Integration Settings" }))),
                 (0, i.jsx)(
-                    _.A,
+                    O.A,
                     {
-                        name: R.intl.string(R.t.aS6cK4),
-                        icon: Z.icon.whiteSVG,
-                        iconBackgroundColor: Z.color,
-                        iconClassName: L.tV,
-                        buttonText: Y,
-                        onButtonClick: Q,
+                        name: L.intl.string(L.t.aS6cK4),
+                        icon: Q.icon.whiteSVG,
+                        iconBackgroundColor: Q.color,
+                        iconClassName: M.tV,
+                        buttonText: K,
+                        onButtonClick: q,
                         trailing: J,
-                        hasNextSection: eA > 0,
-                        details: [
-                            {
-                                text: q,
-                            },
-                        ],
+                        hasNextSection: eN > 0,
+                        details: [{ text: Y }],
                     },
                     "integrations-youtube",
                 )),
             );
-    let eW = null != $ && ex && null != ej;
+    let eB = null != X && eA && null != eb;
     return (0, i.jsxs)("div", {
-        className: a()(null != eD ? L.bg : null),
+        className: a()(null != eG ? M.bg : null),
         children: [
-            (0, i.jsx)(u.Text, {
-                variant: "text-sm/normal",
-                children: R.intl.format(eU, {
-                    helpdeskArticle: eG,
-                }),
-            }),
-            (0, i.jsx)(u.cGx, {
-                className: L.yF,
-            }),
-            er || ep || null == X
-                ? (0, i.jsx)(u.y$y, {
-                      className: L.__invalid_spinner,
-                      type: u.y$y.Type.SPINNING_CIRCLE,
-                  })
+            (0, i.jsx)(u.Text, { variant: "text-sm/normal", children: L.intl.format(eD, { helpdeskArticle: eU }) }),
+            (0, i.jsx)(u.cGx, { className: M.yF }),
+            ei || eg || null == Z
+                ? (0, i.jsx)(u.y$y, { className: M.__invalid_spinner, type: u.y$y.Type.SPINNING_CIRCLE })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eB,
-                          eW &&
+                          eP,
+                          eB &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eB.length > 0
-                                          ? (0, i.jsx)(u.cGx, {
-                                                className: L.yF,
-                                            })
-                                          : null,
+                                      eP.length > 0 ? (0, i.jsx)(u.cGx, { className: M.yF }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
-                                          className: L.bV,
-                                          children: R.intl.string(R.t.oAvIAg),
+                                          className: M.bV,
+                                          children: L.intl.string(L.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(S.q, {
-                                          channel: $,
-                                          application: ej,
+                                      (0, i.jsx)(y.q, {
+                                          channel: X,
+                                          application: eb,
                                           showApplicationImage: !0,
-                                          name: ej.name,
+                                          name: eb.name,
                                           hasNextSection: !0,
-                                          iconClassName: L.d0,
-                                          trailing: (0, i.jsx)(u.R2l, {
-                                              size: "xs",
-                                          }),
+                                          iconClassName: M.d0,
+                                          trailing: (0, i.jsx)(u.R2l, { size: "xs" }),
                                       }),
                                   ],
                               }),
-                          eh
+                          ep
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eB.length > 0 || eW
-                                            ? (0, i.jsx)(u.cGx, {
-                                                  className: L.yF,
-                                              })
-                                            : null,
+                                        eP.length > 0 || eB ? (0, i.jsx)(u.cGx, { className: M.yF }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
-                                            className: L.bV,
-                                            children: R.intl.string(R.t.pUBKht),
+                                            className: M.bV,
+                                            children: L.intl.string(L.t.pUBKht),
                                         }),
-                                        ew > 4
-                                            ? (0, i.jsx)(B, {
-                                                  query: eb,
-                                                  setQuery: ef,
-                                              })
-                                            : null,
+                                        eE > 4 ? (0, i.jsx)(B, { query: eu, setQuery: em }) : null,
                                         eM,
                                     ],
                                 })
                               : null,
-                          eD,
+                          eG,
                       ],
                   }),
         ],

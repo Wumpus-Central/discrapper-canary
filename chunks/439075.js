@@ -1,175 +1,110 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
+n.d(t, { A: () => j });
 var a = n(627968),
-    l = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(341915),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(341915),
     o = n(890687),
-    c = n(18437),
-    d = n(590202),
+    d = n(18437),
+    c = n(590202),
     u = n(792620),
     m = n(73473),
-    p = n(545986),
-    h = n(203879),
-    x = n(321503),
+    h = n(545986),
+    x = n(203879),
+    p = n(321503),
     g = n(56853),
-    f = n(515038),
-    b = n(652215),
+    _ = n(515038),
+    f = n(652215),
     v = n(348655);
-
-function j(e) {
-    var t, n;
+function b(e) {
     let {
-            quest: r,
-            className: s,
-            questContent: m,
-            contentPosition: j,
-            rowIndex: _,
-            impressionRef: y,
-            sourceQuestContent: A,
+            quest: t,
+            className: n,
+            questContent: i,
+            contentPosition: r,
+            rowIndex: m,
+            impressionRef: b,
+            sourceQuestContent: j,
         } = e,
-        [C, S] = l.useState(!1),
-        [O, T] = l.useState([]),
-        E = (0, o.aC)(r),
-        N = l.useMemo(() => (0, u.vv)(r), [r]),
-        w = (0, c.u0)(),
-        I = l.useCallback(() => {
-            S(!0),
-                w({
-                    questId: r.id,
-                    event: b.HAw.QUEST_HOVER,
-                    properties: {
-                        content_id: m,
-                        content_name: (0, d.jO)(m),
-                        content_position: j,
-                    },
-                    sourceQuestContent: A,
+        [A, C] = s.useState(!1),
+        [S, T] = s.useState([]),
+        y = (0, o.aC)(t),
+        N = s.useMemo(() => (0, u.vv)(t), [t]),
+        E = (0, d.u0)(),
+        I = s.useCallback(() => {
+            C(!0),
+                E({
+                    questId: t.id,
+                    event: f.HAw.QUEST_HOVER,
+                    properties: { content_id: i, content_name: (0, c.jO)(i), content_position: r },
+                    sourceQuestContent: j,
                 }),
-                N && (0, p.l9)();
-        }, [w, r.id, m, N, A, j]),
-        k = l.useCallback(() => {
-            S(!1),
-                w({
-                    questId: r.id,
-                    event: b.HAw.QUEST_HOVER_OFF,
-                    properties: {
-                        content_id: m,
-                        content_name: (0, d.jO)(m),
-                        content_position: j,
-                    },
-                    sourceQuestContent: A,
+                N && (0, h.l9)();
+        }, [E, t.id, i, N, j, r]),
+        k = s.useCallback(() => {
+            C(!1),
+                E({
+                    questId: t.id,
+                    event: f.HAw.QUEST_HOVER_OFF,
+                    properties: { content_id: i, content_name: (0, c.jO)(i), content_position: r },
+                    sourceQuestContent: j,
                 });
-        }, [w, r.id, m, A, j]),
-        P = l.useContext(x.X),
-        { visibilityElementRef: R, almostVisibleInViewport: D } = (function (e) {
-            let [t, n] = l.useState(!1),
-                a = l.useCallback((e) => {
+        }, [E, t.id, i, j, r]),
+        R = s.useContext(p.X),
+        { visibilityElementRef: O, almostVisibleInViewport: w } = (function (e) {
+            let [t, n] = s.useState(!1),
+                a = s.useCallback((e) => {
                     e.isIntersecting && n(!0);
                 }, []);
             return {
-                visibilityElementRef: (0, h.B)(
+                visibilityElementRef: (0, x.B)(
                     a,
-                    {
-                        root: null != e ? e : null,
-                        threshold: 0,
-                        rootMargin: "900px 0px 900px 0px",
-                    },
+                    { root: e ?? null, threshold: 0, rootMargin: "900px 0px 900px 0px" },
                     !0,
                 ),
                 almostVisibleInViewport: t,
             };
-        })(null != (t = null == P || null == (n = P.current) ? void 0 : n.getScrollerNode()) ? t : null);
+        })(R?.current?.getScrollerNode() ?? null);
     return (0, a.jsxs)("div", {
-        id: "quest-tile-".concat(r.id),
+        id: `quest-tile-${t.id}`,
         ref: (e) => {
-            (y.current = e), (R.current = e);
+            (b.current = e), (O.current = e);
         },
-        className: i()(v.k, s),
+        className: l()(v.k, n),
         onMouseEnter: I,
         onMouseLeave: k,
         onFocus: I,
         onBlur: k,
         children: [
             (0, a.jsx)(g.A, {
-                quest: r,
-                isHovering: C,
-                errorHints: O,
-                warningHints: E,
-                isVisibleInViewport: D,
-                sourceQuestContent: A,
+                quest: t,
+                isHovering: A,
+                errorHints: S,
+                warningHints: y,
+                isVisibleInViewport: w,
+                sourceQuestContent: j,
             }),
-            (0, a.jsx)(f.A, {
-                quest: r,
-                questContent: m,
-                isHovering: C,
-                contentPosition: j,
-                rowIndex: _,
+            (0, a.jsx)(_.A, {
+                quest: t,
+                questContent: i,
+                isHovering: A,
+                contentPosition: r,
+                rowIndex: m,
                 onReceiveErrorHints: T,
-                isVisibleInViewport: D,
-                sourceQuestContent: A,
+                isVisibleInViewport: w,
+                sourceQuestContent: j,
             }),
         ],
     });
 }
-
-function _(e) {
+function j(e) {
     return (0, a.jsx)(m.R, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
-        trackGuildAndChannelMetadata: e.questContent === s.uF.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: e.questContent === r.uF.QUESTS_EMBED,
         sourceQuestContent: e.sourceQuestContent,
-        children: (t) => {
-            var n, l;
-            return (0, a.jsx)(
-                j,
-                ((n = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            a = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (a = a.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            a.forEach(function (t) {
-                                var a;
-                                (a = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: a,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = a);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (l = l =
-                    {
-                        impressionRef: t,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var a = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, a);
-                          }
-                          return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                      }),
-                n),
-            );
-        },
+        children: (t) => (0, a.jsx)(b, { ...e, impressionRef: t }),
     });
 }

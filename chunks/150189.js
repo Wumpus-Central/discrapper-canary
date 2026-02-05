@@ -1,35 +1,14 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(559751),
     i = n(140851);
-
 function a(e, t, n) {
     var a = (0, r.A)(e),
         s = [i.kb, i.Mn].indexOf(a) >= 0 ? -1 : 1,
-        o =
-            "function" == typeof n
-                ? n(
-                      Object.assign({}, t, {
-                          placement: e,
-                      }),
-                  )
-                : n,
+        o = "function" == typeof n ? n(Object.assign({}, t, { placement: e })) : n,
         l = o[0],
-        c = o[1];
-    return (
-        (l = l || 0),
-        (c = (c || 0) * s),
-        [i.kb, i.pG].indexOf(a) >= 0
-            ? {
-                  x: c,
-                  y: l,
-              }
-            : {
-                  x: l,
-                  y: c,
-              }
-    );
+        u = o[1];
+    return (l = l || 0), (u = (u || 0) * s), [i.kb, i.pG].indexOf(a) >= 0 ? { x: u, y: l } : { x: l, y: u };
 }
 let s = {
     name: "offset",
@@ -45,11 +24,11 @@ let s = {
             l = i.DD.reduce(function (e, n) {
                 return (e[n] = a(n, t.rects, o)), e;
             }, {}),
-            c = l[t.placement],
-            u = c.x,
-            d = c.y;
+            u = l[t.placement],
+            c = u.x,
+            d = u.y;
         null != t.modifiersData.popperOffsets &&
-            ((t.modifiersData.popperOffsets.x += u), (t.modifiersData.popperOffsets.y += d)),
+            ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)),
             (t.modifiersData[r] = l);
     },
 };

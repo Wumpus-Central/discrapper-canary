@@ -1,15 +1,9 @@
-n.d(t, {
-    A: () => o,
-});
+n.d(t, { A: () => o });
 var i = n(303527),
     a = n(722023),
     r = n(729675);
 let o = {
-    ordinalNumber: (0, a.A)({
-        matchPattern: /^[०१२३४५६७८९]+/i,
-        parsePattern: /^[०१२३४५६७८९]+/i,
-        valueCallback: r.BR,
-    }),
+    ordinalNumber: (0, a.A)({ matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: r.BR }),
     era: (0, i.A)({
         matchPatterns: {
             narrow: /^(ईसा-पूर्व|ईस्वी)/i,
@@ -17,9 +11,7 @@ let o = {
             wide: /^(ईसा-पूर्व|ईसवी पूर्व|ईसवी सन|ईसवी)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^b/i, /^(a|c)/i],
-        },
+        parsePatterns: { any: [/^b/i, /^(a|c)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, i.A)({
@@ -29,9 +21,7 @@ let o = {
             wide: /^[1234](पहली|दूसरी|तीसरी|चौथी)? तिमाही/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -65,10 +55,7 @@ let o = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, i.A)({
-        matchPatterns: {
-            narrow: /^(पू|अ|म|द.\?|सु|दो|शा|रा)/i,
-            any: /^(पूर्वाह्न|अपराह्न|म|द.\?|सु|दो|शा|रा)/i,
-        },
+        matchPatterns: { narrow: /^(पू|अ|म|द.\?|सु|दो|शा|रा)/i, any: /^(पूर्वाह्न|अपराह्न|म|द.\?|सु|दो|शा|रा)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

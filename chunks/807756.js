@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -21,48 +22,23 @@ var n = r(64700),
                 (0, s.A)(
                     {
                         default: {
-                            Compact: {
-                                background: "#f6f6f6",
-                                radius: "4px",
-                            },
-                            compact: {
-                                paddingTop: "5px",
-                                paddingLeft: "5px",
-                                boxSizing: "initial",
-                                width: "240px",
-                            },
-                            clear: {
-                                clear: "both",
-                            },
+                            Compact: { background: "#f6f6f6", radius: "4px" },
+                            compact: { paddingTop: "5px", paddingLeft: "5px", boxSizing: "initial", width: "240px" },
+                            clear: { clear: "both" },
                         },
                     },
                     b,
                 ),
             ),
             x = function (e, r) {
-                e.hex
-                    ? u.qt(e.hex) &&
-                      t(
-                          {
-                              hex: e.hex,
-                              source: "hex",
-                          },
-                          r,
-                      )
-                    : t(e, r);
+                e.hex ? u.qt(e.hex) && t({ hex: e.hex, source: "hex" }, r) : t(e, r);
             };
         return n.createElement(
             c.H1,
-            {
-                style: g.Compact,
-                styles: b,
-            },
+            { style: g.Compact, styles: b },
             n.createElement(
                 "div",
-                {
-                    style: g.compact,
-                    className: "compact-picker " + (void 0 === v ? "" : v),
-                },
+                { style: g.compact, className: "compact-picker " + (void 0 === v ? "" : v) },
                 n.createElement(
                     "div",
                     null,
@@ -75,22 +51,13 @@ var n = r(64700),
                             onSwatchHover: r,
                         });
                     }),
-                    n.createElement("div", {
-                        style: g.clear,
-                    }),
+                    n.createElement("div", { style: g.clear }),
                 ),
-                n.createElement(d.A, {
-                    hex: a,
-                    rgb: f,
-                    onChange: x,
-                }),
+                n.createElement(d.A, { hex: a, rgb: f, onChange: x }),
             ),
         );
     };
-(f.propTypes = {
-    colors: a().arrayOf(a().string),
-    styles: a().object,
-}),
+(f.propTypes = { colors: a().arrayOf(a().string), styles: a().object }),
     (f.defaultProps = {
         colors: [
             "#4D4D4D",

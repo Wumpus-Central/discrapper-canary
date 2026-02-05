@@ -1,7 +1,7 @@
+"use strict";
 var r = n(948055),
     i = n(724039),
     a = n(389293);
-
 function s(e) {
     switch (e.arrayFormat) {
         case "index":
@@ -18,7 +18,6 @@ function s(e) {
             };
     }
 }
-
 function o(e) {
     var t;
     switch (e.arrayFormat) {
@@ -53,16 +52,14 @@ function o(e) {
             };
     }
 }
-
 function l(e, t) {
     return t.encode ? (t.strict ? r(e) : encodeURIComponent(e)) : e;
 }
-
-function c(e) {
+function u(e) {
     return Array.isArray(e)
         ? e.sort()
         : "object" == typeof e
-          ? c(Object.keys(e))
+          ? u(Object.keys(e))
                 .sort(function (e, t) {
                     return Number(e) - Number(t);
                 })
@@ -75,14 +72,7 @@ function c(e) {
     return e.split("?")[1] || "";
 }),
     (t.parse = function (e, t) {
-        var n = o(
-                (t = i(
-                    {
-                        arrayFormat: "none",
-                    },
-                    t,
-                )),
-            ),
+        var n = o((t = i({ arrayFormat: "none" }, t))),
             r = Object.create(null);
         return "string" == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ""))
             ? (e.split("&").forEach(function (e) {
@@ -95,21 +85,12 @@ function c(e) {
                   .sort()
                   .reduce(function (e, t) {
                       var n = r[t];
-                      return n && "object" == typeof n && !Array.isArray(n) ? (e[t] = c(n)) : (e[t] = n), e;
+                      return n && "object" == typeof n && !Array.isArray(n) ? (e[t] = u(n)) : (e[t] = n), e;
                   }, Object.create(null)))
             : r;
     }),
     (t.stringify = function (e, t) {
-        var n = s(
-            (t = i(
-                {
-                    encode: !0,
-                    strict: !0,
-                    arrayFormat: "none",
-                },
-                t,
-            )),
-        );
+        var n = s((t = i({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
         return e
             ? Object.keys(e)
                   .sort()

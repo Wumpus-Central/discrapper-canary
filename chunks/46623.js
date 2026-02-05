@@ -1,42 +1,36 @@
-r.d(t, {
-    A: () => d,
-});
-var n = r(627968);
-r(64700);
-var i = r(732955),
-    o = r(397927),
-    l = r(381969),
-    s = r(920814),
-    c = r(985018),
-    a = r(41715);
-
-function d() {
-    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, l.k)();
+i.d(t, { A: () => c });
+var s = i(627968);
+i(64700);
+var r = i(732955),
+    n = i(397927),
+    l = i(381969),
+    d = i(920814),
+    a = i(985018),
+    o = i(41715);
+function c() {
+    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: i } = (0, l.k)();
     return t
-        ? (0, n.jsxs)(n.Fragment, {
+        ? (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, n.jsxs)("div", {
-                      className: a.ZF,
+                  (0, s.jsxs)("div", {
+                      className: o.ZF,
                       children: [
-                          (0, n.jsx)(o.G3N, {
-                              size: "xs",
-                              color: "currentColor",
-                          }),
-                          (0, n.jsx)(o.Text, {
+                          (0, s.jsx)(n.G3N, { size: "xs", color: "currentColor" }),
+                          (0, s.jsx)(n.Text, {
                               variant: "text-sm/normal",
-                              className: a.cP,
+                              className: o.cP,
                               children:
-                                  e === s.B.GUILD_PRODUCTS_PREVIEW
-                                      ? c.intl.string(c.t.F4Z0nV)
-                                      : c.intl.string(c.t.pzTFpM),
+                                  e === d.B.GUILD_PRODUCTS_PREVIEW
+                                      ? a.intl.string(a.t.F4Z0nV)
+                                      : a.intl.string(a.t.pzTFpM),
                           }),
                       ],
                   }),
-                  (0, n.jsx)(i.$nd, {
-                      text: e === s.B.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pV) : c.intl.string(c.t.r30bky),
+                  (0, s.jsx)(r.$nd, {
+                      text: e === d.B.GUILD_PRODUCTS_PREVIEW ? a.intl.string(a.t.YF35pV) : a.intl.string(a.t.r30bky),
                       size: "sm",
                       variant: "secondary",
-                      onClick: r,
+                      onClick: i,
                   }),
               ],
           })

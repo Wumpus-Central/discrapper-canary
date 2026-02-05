@@ -8,11 +8,9 @@ var r = {
     "./special-template/update-badge.svg": "892796",
     "./store.jpg": "191686",
 };
-
 function i(e) {
     return n(a(e));
 }
-
 function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");

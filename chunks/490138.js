@@ -1,7 +1,5 @@
-n.d(t, {
-    f: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { f: () => r });
 let r = {
     WEB_AND_IOS: new Set(["canary", "ptb", "stable"]),
     ANDROID: new Set(["betaRelease", "canaryRelease", "googleRelease"]),

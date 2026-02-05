@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     y2: "headerBackground_b66356",
     qG: "tier2HeaderBackground_b66356 headerBackground_b66356",

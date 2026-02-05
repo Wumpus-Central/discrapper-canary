@@ -1,58 +1,51 @@
-n.d(t, {
-    cd: () => l,
-});
+"use strict";
+n.d(t, { cd: () => l });
 var r = n(550505),
     i = n(318503),
     a = n(869922),
     s = n(587100);
-
 function o(e, t = 100, n = Infinity) {
     try {
-        return c("", e, t, n);
+        return u("", e, t, n);
     } catch (e) {
-        return {
-            ERROR: `**non-serializable** (${e})`,
-        };
+        return { ERROR: `**non-serializable** (${e})` };
     }
 }
-
 function l(e, t = 3, n = 102400) {
     let r = o(e, t);
-    return p(r) > n ? l(e, t - 1, n) : r;
+    return f(r) > n ? l(e, t - 1, n) : r;
 }
-
-function c(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
+function u(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
     let [o, l] = s;
     if (null == t || (["number", "boolean", "string"].includes(typeof t) && !Number.isNaN(t))) return t;
-    let d = u(e, t);
+    let d = c(e, t);
     if (!d.startsWith("[object ")) return d;
     if (t.__sentry_skip_normalization__) return t;
-    let f =
+    let _ =
         "number" == typeof t.__sentry_override_normalization_depth__ ? t.__sentry_override_normalization_depth__ : n;
-    if (0 === f) return d.replace("object ", "");
+    if (0 === _) return d.replace("object ", "");
     if (o(t)) return "[Circular ~]";
-    let p = t;
-    if (p && "function" == typeof p.toJSON)
+    let f = t;
+    if (f && "function" == typeof f.toJSON)
         try {
-            let e = p.toJSON();
-            return c("", e, f - 1, r, s);
+            let e = f.toJSON();
+            return u("", e, _ - 1, r, s);
         } catch (e) {}
-    let _ = Array.isArray(t) ? [] : {},
+    let p = Array.isArray(t) ? [] : {},
         h = 0,
         m = (0, a.W4)(t);
     for (let e in m) {
         if (!Object.prototype.hasOwnProperty.call(m, e)) continue;
         if (h >= r) {
-            _[e] = "[MaxProperties ~]";
+            p[e] = "[MaxProperties ~]";
             break;
         }
         let t = m[e];
-        (_[e] = c(e, t, f - 1, r, s)), h++;
+        (p[e] = u(e, t, _ - 1, r, s)), h++;
     }
-    return l(t), _;
+    return l(t), p;
 }
-
-function u(e, t) {
+function c(e, t) {
     try {
         if ("domain" === e && t && "object" == typeof t && t._events) return "[Domain]";
         if ("domainEmitter" === e) return "[DomainEmitter]";
@@ -72,16 +65,13 @@ function u(e, t) {
         return `**non-serializable** (${e})`;
     }
 }
-
 function d(e) {
     let t = Object.getPrototypeOf(e);
     return t ? t.constructor.name : "null prototype";
 }
-
-function f(e) {
+function _(e) {
     return ~-encodeURI(e).split(/%..|./).length;
 }
-
-function p(e) {
-    return f(JSON.stringify(e));
+function f(e) {
+    return _(JSON.stringify(e));
 }

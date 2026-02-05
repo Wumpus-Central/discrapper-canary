@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => l,
-});
+n.d(t, { A: () => s });
 var a = n(64700);
-let l = (e, t) => {
+let s = (e, t) => {
     let n = (0, a.useRef)(e);
     (0, a.useEffect)(() => {
         n.current = e;

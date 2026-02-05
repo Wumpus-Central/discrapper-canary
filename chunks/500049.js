@@ -1,11 +1,5 @@
-n.d(t, {
-    F5: () => l,
-    Se: () => o,
-    W8: () => a,
-    s4: () => r,
-    wg: () => s,
-    yK: () => i,
-});
+"use strict";
+n.d(t, { F5: () => l, Se: () => o, W8: () => a, s4: () => r, wg: () => s, yK: () => i });
 var r = (function (e) {
     return (e.NONE = "NONE"), (e.TEXT = "TEXT"), (e.VOICE = "VOICE"), e;
 })({});
@@ -19,10 +13,7 @@ let i = {
         NEW_TO_APPS: "new_to_apps",
         APPS_IN_THIS_SERVER: "apps_in_this_server",
     },
-    a = {
-        HOME: "home",
-        APP_DETAIL: "app_detail",
-    };
+    a = { HOME: "home", APP_DETAIL: "app_detail" };
 var s = (function (e) {
         return (
             (e.HOME_EMPTY = "home_empty"),

@@ -1,11 +1,9 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(725499);
-
 function s(e) {
     let { user: t, nickname: n } = e,
         s = null != n;

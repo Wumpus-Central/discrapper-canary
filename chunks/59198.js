@@ -1,7 +1,4 @@
-t.d(e, {
-    W: () => p,
-}),
-    t(896048);
+t.d(e, { W: () => p });
 var n = t(627968),
     r = t(64700),
     s = t(284009),
@@ -15,7 +12,6 @@ var n = t(627968),
     u = t(985018),
     N = t(689588);
 let h = new d.A("TwoWayLinkDiscordConsentWeb");
-
 function p(a) {
     let {
             platformType: e,
@@ -27,7 +23,7 @@ function p(a) {
             onClose: C,
             redirectUri: g,
         } = a,
-        [v, b] = r.useState(!1),
+        [b, v] = r.useState(!1),
         E = r.useCallback(
             async (a) => {
                 let t,
@@ -37,8 +33,7 @@ function p(a) {
                 try {
                     t = await c.A.completeTwoWayLink(e, r, s, i);
                 } catch (a) {
-                    var l;
-                    h.error("".concat(e, " link error:"), a), (n = null == (l = a.body) ? void 0 : l.code);
+                    h.error(`${e} link error:`, a), (n = a.body?.code);
                 }
                 null != t ? p() : j(n);
             },
@@ -60,7 +55,7 @@ function p(a) {
             isTwoWayLinkDiscordConsent: !0,
         }),
         w = r.useCallback(() => {
-            i()(null != T, "sendAuthorize not available"), b(!0), T(!0);
+            i()(null != T, "sendAuthorize not available"), v(!0), T(!0);
         }, [T]);
     return (0, n.jsxs)(m.A, {
         children: [
@@ -74,30 +69,16 @@ function p(a) {
                         className: N.u1,
                         variant: "text-xs/bold",
                         color: "text-default",
-                        children: u.intl.format(u.t.fHz6eR, {
-                            number: 2,
-                            total: 2,
-                        }),
+                        children: u.intl.format(u.t.fHz6eR, { number: 2, total: 2 }),
                     }),
-                    null != C &&
-                        (0, n.jsx)(l.s_y, {
-                            className: N.b,
-                            onClick: C,
-                        }),
+                    null != C && (0, n.jsx)(l.s_y, { className: N.b, onClick: C }),
                 ],
             }),
             (0, n.jsxs)(l.$mQ, {
                 "data-migration-pending": !0,
                 className: N.mB,
                 paddingFix: !1,
-                children: [
-                    (0, n.jsx)("div", {
-                        className: N.a8,
-                        children: f,
-                    }),
-                    k,
-                    A,
-                ],
+                children: [(0, n.jsx)("div", { className: N.a8, children: f }), k, A],
             }),
             (0, n.jsx)(l.jlY, {
                 "data-migration-pending": !0,
@@ -108,7 +89,7 @@ function p(a) {
                     children: (0, n.jsx)(l.Button, {
                         variant: "primary",
                         text: u.intl.string(u.t.ZN4hkc),
-                        loading: v,
+                        loading: b,
                         onClick: w,
                     }),
                 }),

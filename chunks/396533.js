@@ -1,11 +1,8 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(64700),
     i = n(311907),
     a = n(775602);
-
 function s(e) {
     let {
             key: t,
@@ -13,61 +10,54 @@ function s(e) {
             durationMs: s = 100,
             minHeightOverride: o,
             maxHeightOverride: l,
-            maxAnimationHeight: c,
+            maxAnimationHeight: u,
         } = e,
-        u = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-        [d, f] = r.useState(null),
-        p = r.useCallback(() => {}, []),
-        _ = u ? p : f,
+        c = (0, i.bG)([a.A], () => a.A.useReducedMotion),
+        [d, _] = r.useState(null),
+        f = r.useCallback(() => {}, []),
+        p = c ? f : _,
         h = r.useRef(null),
         m = r.useRef(null),
         g = r.useRef(t),
         E = r.useRef(s);
     E.current = s;
-    let b = r.useRef(o);
-    b.current = o;
-    let y = r.useRef(l);
-    y.current = l;
-    let O = r.useRef(c);
-    O.current = c;
-    let [A, v] = r.useState(!1),
-        S = r.useCallback(() => v(!1), []);
+    let A = r.useRef(o);
+    A.current = o;
+    let I = r.useRef(l);
+    I.current = l;
+    let T = r.useRef(u);
+    T.current = u;
+    let [y, S] = r.useState(!1),
+        v = r.useCallback(() => S(!1), []);
     return (
         r.useLayoutEffect(() => {
-            void 0 !== t && ((h.current = null), (m.current = null), v(!1));
+            void 0 !== t && ((h.current = null), (m.current = null), S(!1));
         }, [t]),
         r.useLayoutEffect(() => {
-            var e, r, i;
             if (null == d) return;
-            let { height: a } = d.getBoundingClientRect();
-            !n && (null == h.current || a < h.current) && (h.current = a),
-                n && (null == m.current || a > m.current) && (m.current = a);
-            let s = null != (e = b.current) ? e : h.current,
-                o = null != (r = y.current) ? r : m.current,
-                l = g.current !== t;
-            if (((g.current = t), null == s || null == o || l)) return;
-            let c = Math.min(null != (i = O.current) ? i : o, o),
-                u = n ? s : c,
-                f = n ? c : s;
-            if (u === f) return;
-            v(!0), (d.style.height = "".concat(u, "px")), (d.style.transition = "");
-            let p = null;
+            let { height: e } = d.getBoundingClientRect();
+            !n && (null == h.current || e < h.current) && (h.current = e),
+                n && (null == m.current || e > m.current) && (m.current = e);
+            let r = A.current ?? h.current,
+                i = I.current ?? m.current,
+                a = g.current !== t;
+            if (((g.current = t), null == r || null == i || a)) return;
+            let s = Math.min(T.current ?? i, i),
+                o = n ? r : s,
+                l = n ? s : r;
+            if (o === l) return;
+            S(!0), (d.style.height = `${o}px`), (d.style.transition = "");
+            let u = null;
             return (
-                (p = requestAnimationFrame(() => {
-                    (p = null),
-                        (d.style.height = "".concat(f, "px")),
-                        (d.style.transition = "height ".concat(E.current, "ms ease-in-out"));
+                (u = requestAnimationFrame(() => {
+                    (u = null), (d.style.height = `${l}px`), (d.style.transition = `height ${E.current}ms ease-in-out`);
                 })),
-                () => (null != p ? cancelAnimationFrame(p) : void 0)
+                () => (null != u ? cancelAnimationFrame(u) : void 0)
             );
         }, [t, d, n]),
         r.useLayoutEffect(() => {
-            null == d || A || ((d.style.height = ""), (d.style.transition = ""));
-        }, [t, d, A]),
-        {
-            ref: _,
-            isTransitioning: A,
-            onTransitionEnd: S,
-        }
+            null == d || y || ((d.style.height = ""), (d.style.transition = ""));
+        }, [t, d, y]),
+        { ref: p, isTransitioning: y, onTransitionEnd: v }
     );
 }

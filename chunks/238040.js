@@ -1,16 +1,10 @@
-n.d(t, {
-    $v: () => u,
-    JE: () => d,
-    NQ: () => l,
-    wB: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { $v: () => c, JE: () => d, NQ: () => l, wB: () => u });
 var r = n(121894);
 let i = new WeakMap(),
     a = new Map(),
-    o = new WeakMap();
-
-function s(e) {
+    s = new WeakMap();
+function o(e) {
     return new e.ResizeObserver((e) => {
         (0, r.r)(() => {
             for (let t of e) {
@@ -23,23 +17,18 @@ function s(e) {
         });
     });
 }
-
 function l(e, t, n) {
-    var r, l;
     i.set(t, e), a.set(e, n);
-    let c = null != (r = null == (l = t.ownerDocument) ? void 0 : l.defaultView) ? r : window,
-        u = o.get(c);
-    return null == u && ((u = s(c)), o.set(c, u)), u;
+    let r = t.ownerDocument?.defaultView ?? window,
+        l = s.get(r);
+    return null == l && ((l = o(r)), s.set(r, l)), l;
 }
-
-function c(e, t) {
+function u(e, t) {
     e.observe(t);
 }
-
-function u(e, t) {
+function c(e, t) {
     e.unobserve(t);
 }
-
 function d(e, t) {
     a.delete(e), null != t && i.delete(t);
 }

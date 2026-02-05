@@ -1,102 +1,45 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(397927),
-    a = n(531260),
+var s = n(503698),
+    r = n.n(s),
+    a = n(397927),
+    l = n(531260),
     o = n(927578),
     c = n(788868),
     d = n(985018),
     u = n(416179);
-
 function _(e) {
-    let { subscription: t, renewalMutations: i, className: _, analyticsLocation: p } = e,
-        m = (0, a.A)(),
+    let { subscription: t, renewalMutations: s, className: _, analyticsLocation: m } = e,
+        A = (0, l.A)(),
         g = t.currentPeriodEnd;
     return (
-        m.fractionalState === c.xc.FP_SUB_PAUSED && (g = m.endsAt.toDate()),
-        (0, r.jsxs)("div", {
-            className: l()(u.zr, _),
+        A.fractionalState === c.xc.FP_SUB_PAUSED && (g = A.endsAt.toDate()),
+        (0, i.jsxs)("div", {
+            className: r()(u.zr, _),
             children: [
-                (0, r.jsx)(s.EpV, {
-                    size: "custom",
-                    width: 20,
-                    height: 20,
-                    color: "currentColor",
-                    className: u.G,
-                }),
-                (0, r.jsx)("div", {
+                (0, i.jsx)(a.EpV, { size: "custom", width: 20, height: 20, color: "currentColor", className: u.G }),
+                (0, i.jsx)("div", {
                     className: u.Qq,
                     children: d.intl.format(d.t.ar1cPl, {
-                        planName: t.hasExternalPlanChange ? (0, o.OU)(i) : o.Ay.getDisplayName(i.planId),
+                        planName: t.hasExternalPlanChange ? (0, o.OU)(s) : o.Ay.getDisplayName(s.planId),
                         date: g,
                     }),
                 }),
                 t.isPurchasedExternally
                     ? null
-                    : (0, r.jsx)(s.MzZ, {
+                    : (0, i.jsx)(a.MzZ, {
                           onClick: (e) => {
                               e.preventDefault(),
-                                  (0, s.mMO)(async () => {
+                                  (0, a.mMO)(async () => {
                                       let { default: e } = await n.e("65975").then(n.bind(n, 702698));
-                                      return (n) => {
-                                          var l, s;
-                                          return (0, r.jsx)(
-                                              e,
-                                              ((l = (function (e) {
-                                                  for (var t = 1; t < arguments.length; t++) {
-                                                      var n = null != arguments[t] ? arguments[t] : {},
-                                                          r = Object.keys(n);
-                                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                                          (r = r.concat(
-                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                  return Object.getOwnPropertyDescriptor(n, e)
-                                                                      .enumerable;
-                                                              }),
-                                                          )),
-                                                          r.forEach(function (t) {
-                                                              var r;
-                                                              (r = n[t]),
-                                                                  t in e
-                                                                      ? Object.defineProperty(e, t, {
-                                                                            value: r,
-                                                                            enumerable: !0,
-                                                                            configurable: !0,
-                                                                            writable: !0,
-                                                                        })
-                                                                      : (e[t] = r);
-                                                          });
-                                                  }
-                                                  return e;
-                                              })({}, n)),
-                                              (s = s =
-                                                  {
-                                                      subscription: t,
-                                                      renewalMutations: i,
-                                                      analyticsLocation: p,
-                                                  }),
-                                              Object.getOwnPropertyDescriptors
-                                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
-                                                  : (function (e, t) {
-                                                        var n = Object.keys(e);
-                                                        if (Object.getOwnPropertySymbols) {
-                                                            var r = Object.getOwnPropertySymbols(e);
-                                                            n.push.apply(n, r);
-                                                        }
-                                                        return n;
-                                                    })(Object(s)).forEach(function (e) {
-                                                        Object.defineProperty(
-                                                            l,
-                                                            e,
-                                                            Object.getOwnPropertyDescriptor(s, e),
-                                                        );
-                                                    }),
-                                              l),
-                                          );
-                                      };
+                                      return (n) =>
+                                          (0, i.jsx)(e, {
+                                              ...n,
+                                              subscription: t,
+                                              renewalMutations: s,
+                                              analyticsLocation: m,
+                                          });
                                   });
                           },
                           className: u.Lu,

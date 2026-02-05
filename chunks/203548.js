@@ -1,84 +1,54 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => u });
+var i = n(627968),
     l = n(64700),
-    i = n(92674),
-    s = n(397927),
-    a = n(770178),
+    s = n(92674),
+    a = n(397927),
+    r = n(770178),
     o = n(180686);
-let c = Math.ceil(Math.sqrt(115200)),
-    u = (c - 240) / 2,
-    d = l.forwardRef(function (e, t) {
+let d = Math.ceil(Math.sqrt(115200)),
+    c = (d - 240) / 2,
+    u = l.forwardRef(function (e, t) {
         let { children: n } = e,
-            [d, p] = l.useState(-1),
-            h = l.useCallback((e) => {
-                p(e.contentRect.width);
+            [u, h] = l.useState(-1),
+            A = l.useCallback((e) => {
+                h(e.contentRect.width);
             }, []),
-            g = (0, a.w)(h, [], {
-                fireOnMount: !0,
-            }),
-            [{ shineSpring: f }, m] = (0, s.zhh)(() => ({
-                from: {
-                    shineSpring: 0,
-                },
-                config: {
-                    clamp: !0,
-                    mass: 1,
-                    tension: 170,
-                    friction: 38,
-                },
+            g = (0, r.w)(A, [], { fireOnMount: !0 }),
+            [{ shineSpring: m }, p] = (0, a.zhh)(() => ({
+                from: { shineSpring: 0 },
+                config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            b = l.useCallback(
+            _ = l.useCallback(
                 (e, t) => {
-                    m({
-                        shineSpring: 1,
-                        delay: t,
-                    });
+                    p({ shineSpring: 1, delay: t });
                 },
-                [m],
+                [p],
             ),
-            A = l.useCallback(() => {
-                m({
-                    shineSpring: 0,
-                    immediate: !0,
-                });
-            }, [m]),
-            y = l.useMemo(() => {
-                let e = (0, r.jsx)(i.animated.div, {
+            x = l.useCallback(() => {
+                p({ shineSpring: 0, immediate: !0 });
+            }, [p]),
+            f = l.useMemo(() => {
+                let e = (0, i.jsx)(s.animated.div, {
                     className: o.q2,
                     style: {
-                        transform: f.to((e) =>
-                            "translateX(calc("
-                                .concat(e * d, "px + ")
-                                .concat(e * c, "px)) translateY(-50%) rotate(45deg)"),
+                        transform: m.to(
+                            (e) => `translateX(calc(${e * u}px + ${e * d}px)) translateY(-50%) rotate(45deg)`,
                         ),
                     },
                 });
                 return n(o.VU, o.Qq, o.Kk, e);
-            }, [n, d, f]);
+            }, [n, u, m]);
         return (
-            l.useImperativeHandle(
-                t,
-                () => ({
-                    onMouseEnter: b,
-                    onMouseLeave: A,
-                }),
-                [b, A],
-            ),
-            (0, r.jsx)("div", {
+            l.useImperativeHandle(t, () => ({ onMouseEnter: _, onMouseLeave: x }), [_, x]),
+            (0, i.jsx)("div", {
                 className: o.iE,
-                onMouseEnter: b,
-                onMouseLeave: A,
-                onFocus: b,
-                onBlur: A,
+                onMouseEnter: _,
+                onMouseLeave: x,
+                onFocus: _,
+                onBlur: x,
                 ref: g,
-                style: {
-                    "--custom-shine-dimensions": "".concat(240, "px"),
-                    "--custom-shine-rotated-dimensions-delta": "".concat(u, "px"),
-                },
-                children: y,
+                style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${c}px` },
+                children: f,
             })
         );
     });

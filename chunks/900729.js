@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yl: "modal_ab9bdf",
     PG: "sizeSmall_ab9bdf",

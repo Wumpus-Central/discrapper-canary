@@ -1,3 +1,4 @@
+"use strict";
 n.r(t),
     n.d(t, {
         Chrono: () => a.u,
@@ -7,11 +8,11 @@ n.r(t),
         ReferenceWithTimezone: () => s.b5,
         Weekday: () => o.Bw,
         casual: () => g,
-        createCasualConfiguration: () => O,
-        createConfiguration: () => A,
+        createCasualConfiguration: () => T,
+        createConfiguration: () => y,
         hans: () => m,
-        parse: () => b,
-        parseDate: () => y,
+        parse: () => A,
+        parseDate: () => I,
         strict: () => E,
     });
 var r = n(321287),
@@ -20,34 +21,30 @@ var r = n(321287),
     s = n(374372),
     o = n(322811),
     l = n(255061),
-    c = n(677752),
-    u = n(875919),
+    u = n(677752),
+    c = n(875919),
     d = n(946318),
-    f = n(356751),
-    p = n(295498),
-    _ = n(361565),
+    _ = n(356751),
+    f = n(295498),
+    p = n(361565),
     h = n(127569);
-let m = new a.u(O()),
-    g = new a.u(O()),
-    E = new a.u(A());
-
-function b(e, t, n) {
+let m = new a.u(T()),
+    g = new a.u(T()),
+    E = new a.u(y());
+function A(e, t, n) {
     return g.parse(e, t, n);
 }
-
-function y(e, t, n) {
+function I(e, t, n) {
     return g.parseDate(e, t, n);
 }
-
-function O() {
-    let e = A();
+function T() {
+    let e = y();
     return e.parsers.unshift(new l.A()), e;
 }
-
-function A() {
+function y() {
     let e = (0, i.i)({
-        parsers: [new c.A(), new d.A(), new p.A(), new f.A(), new u.A()],
-        refiners: [new _.A(), new h.A()],
+        parsers: [new u.A(), new d.A(), new f.A(), new _.A(), new c.A()],
+        refiners: [new p.A(), new h.A()],
     });
     return (e.refiners = e.refiners.filter((e) => !(e instanceof r.A))), e;
 }

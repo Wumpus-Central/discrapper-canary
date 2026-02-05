@@ -1,125 +1,64 @@
-n.d(t, {
-    D: () => b,
-});
-var r = n(64700),
-    i = n(417597),
-    l = n(717125),
-    a = n(376943),
+n.d(t, { D: () => f });
+var i = n(64700),
+    l = n(417597),
+    a = n(717125),
+    r = n(376943),
     s = n(961350),
     o = n(734057),
-    c = n(696451),
-    u = n(71393),
-    d = n(967198),
-    p = n(287809),
-    m = n(36491),
-    f = n(219444),
-    g = n(752755),
-    h = n(461715),
-    _ = n(652215);
-
-function b(e, t) {
-    let n = (0, f.$k)(),
-        b = (0, h.CI)(e),
-        A = (0, i.bG)([c.Ay, s.default], () => {
+    d = n(696451),
+    c = n(71393),
+    u = n(967198),
+    m = n(287809),
+    _ = n(36491),
+    h = n(219444),
+    p = n(752755),
+    g = n(461715),
+    A = n(652215);
+function f(e, t) {
+    let n = (0, h.$k)(),
+        f = (0, g.CI)(e),
+        x = (0, l.bG)([d.Ay, s.default], () => {
             let e = s.default.getId();
-            return c.Ay.isMember(null == b ? void 0 : b.guildId, e);
-        }, [b]),
-        y = (0, i.bG)(
-            [l.A],
-            () => null != b && (null == b ? void 0 : b.channelId) != null && l.A.isChannelGated(b.guildId, b.channelId),
-            [b],
-        ),
-        v = t.hasFlag(_.pr7.IS_CROSSPOST),
+            return d.Ay.isMember(f?.guildId, e);
+        }, [f]),
+        E = (0, l.bG)([a.A], () => null != f && f?.channelId != null && a.A.isChannelGated(f.guildId, f.channelId), [
+            f,
+        ]),
+        C = t.hasFlag(A.pr7.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: x,
-            guild: O,
-            parentChannel: E,
-            user: j,
-            selectedGuildId: C,
-            canAccess: I,
-        } = (0, i.cf)([g.A, u.A, o.A, p.default, d.A], () => {
-            var e;
-            let t = null == (e = g.A.getMediaPostEmbed(null == b ? void 0 : b.threadId)) ? void 0 : e.media,
-                n = u.A.getGuild(null == b ? void 0 : b.guildId),
-                r = o.A.getChannel(null == b ? void 0 : b.channelId),
-                i = p.default.getUser(null == t ? void 0 : t.author_id),
-                l = d.A.getGuildId(),
-                s = null != r && (0, a.nc)(r);
-            return {
-                rawMediaPostEmbedData: t,
-                guild: n,
-                parentChannel: r,
-                user: i,
-                selectedGuildId: l,
-                canAccess: s,
-            };
-        }, [b]),
-        S = r.useMemo(() => {
-            var e, t;
-            let n = (0, h.tU)({
-                mediaPostEmbedData: x,
-                guild: O,
-                parentChannel: E,
-                user: j,
-                selectedGuildId: C,
-                canAccess: I,
+            rawMediaPostEmbedData: I,
+            guild: T,
+            parentChannel: v,
+            user: N,
+            selectedGuildId: S,
+            canAccess: b,
+        } = (0, l.cf)([p.A, c.A, o.A, m.default, u.A], () => {
+            let e = p.A.getMediaPostEmbed(f?.threadId)?.media,
+                t = c.A.getGuild(f?.guildId),
+                n = o.A.getChannel(f?.channelId),
+                i = m.default.getUser(e?.author_id),
+                l = u.A.getGuildId(),
+                a = null != n && (0, r.nc)(n);
+            return { rawMediaPostEmbedData: e, guild: t, parentChannel: n, user: i, selectedGuildId: l, canAccess: a };
+        }, [f]),
+        y = i.useMemo(() => {
+            let e = (0, g.tU)({
+                mediaPostEmbedData: I,
+                guild: T,
+                parentChannel: v,
+                user: N,
+                selectedGuildId: S,
+                canAccess: b,
             });
-            return null == n
-                ? null
-                : ((e = (function (e) {
-                      for (var t = 1; t < arguments.length; t++) {
-                          var n = null != arguments[t] ? arguments[t] : {},
-                              r = Object.keys(n);
-                          "function" == typeof Object.getOwnPropertySymbols &&
-                              (r = r.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                  }),
-                              )),
-                              r.forEach(function (t) {
-                                  var r;
-                                  (r = n[t]),
-                                      t in e
-                                          ? Object.defineProperty(e, t, {
-                                                value: r,
-                                                enumerable: !0,
-                                                configurable: !0,
-                                                writable: !0,
-                                            })
-                                          : (e[t] = r);
-                              });
-                      }
-                      return e;
-                  })({}, n)),
-                  (t = t =
-                      {
-                          user: j,
-                      }),
-                  Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                      : (function (e, t) {
-                            var n = Object.keys(e);
-                            if (Object.getOwnPropertySymbols) {
-                                var r = Object.getOwnPropertySymbols(e);
-                                n.push.apply(n, r);
-                            }
-                            return n;
-                        })(Object(t)).forEach(function (n) {
-                            Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                        }),
-                  e);
-        }, [x, O, E, j, C, I]);
+            return null == e ? null : { ...e, user: N };
+        }, [I, T, v, N, S, b]);
     return (
-        r.useEffect(() => {
-            if ((null == b ? void 0 : b.threadId) != null) {
-                let e = g.A.getEmbedFetchState(b.threadId);
-                !0 !== n ||
-                    e !== g.e.NOT_FETCHED ||
-                    (A && !1 === y) ||
-                    (!A && v) ||
-                    (0, m.O0)(null == b ? void 0 : b.threadId);
+        i.useEffect(() => {
+            if (f?.threadId != null) {
+                let e = p.A.getEmbedFetchState(f.threadId);
+                !0 !== n || e !== p.e.NOT_FETCHED || (x && !1 === E) || (!x && C) || (0, _.O0)(f?.threadId);
             }
-        }, [b, n, A, y, v]),
-        S
+        }, [f, n, x, E, C]),
+        y
     );
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__65e57",
     ND: "headerSection__65e57",

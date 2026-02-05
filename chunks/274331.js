@@ -1,3 +1,4 @@
+"use strict";
 var a = r(359470),
     n = r(466208),
     s = [].slice,
@@ -7,7 +8,6 @@ Object.keys(n).forEach(function (e) {
     i[s.call(n[e].labels).sort().join("")] = e;
 });
 var c = {};
-
 function l(e, t) {
     if (!(this instanceof l)) return new l(e, t);
     if ((t && t in o && (t = null), t && !(t in n))) throw Error("Unknown model: " + t);
@@ -50,7 +50,6 @@ function l(e, t) {
         }
     (this.valpha = Math.max(0, Math.min(1, this.valpha))), Object.freeze && Object.freeze(this);
 }
-
 function u(e, t, r) {
     return (
         (e = Array.isArray(e) ? e : [e]).forEach(function (e) {
@@ -68,13 +67,11 @@ function u(e, t, r) {
         }
     );
 }
-
 function b(e) {
     return function (t) {
         return Math.max(0, Math.min(e, t));
     };
 }
-
 function f(e, t) {
     for (var r = 0; r < t; r++) "number" != typeof e[r] && (e[r] = 0);
     return e;

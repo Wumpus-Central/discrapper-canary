@@ -1,39 +1,28 @@
-n.d(t, {
-    A: () => p,
-    k: () => f,
-});
-var r = n(627968);
+n.d(t, { A: () => m, k: () => g });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     s = n(397927),
     o = n(961350),
-    c = n(61881),
-    u = n(633098),
-    d = n(855255);
-
-function f(e) {
-    let t = (0, a.bG)([o.default], () => o.default.getId() === e),
+    d = n(61881),
+    c = n(633098),
+    u = n(855255);
+function g(e) {
+    let t = (0, r.bG)([o.default], () => o.default.getId() === e),
         n = (0, s.VUy)(),
-        r = (0, a.bG)([c.A], () => c.A.hasUnsavedChanges());
-    return t && (n || r);
+        i = (0, r.bG)([d.A], () => d.A.hasUnsavedChanges());
+    return t && (n || i);
 }
-
-function p(e) {
+function m(e) {
     let { userId: t, className: n } = e,
-        l = (0, a.bG)([o.default], () => o.default.getId() === t),
-        c = (0, s.VUy)();
+        l = (0, r.bG)([o.default], () => o.default.getId() === t),
+        d = (0, s.VUy)();
     return l
-        ? (0, r.jsx)("div", {
-              className: i()(d.kL, n),
-              children: c
-                  ? (0, r.jsx)(s.Smm, {
-                        className: d.Wg,
-                    })
-                  : (0, r.jsx)(u.A, {
-                        className: d.ZS,
-                    }),
+        ? (0, i.jsx)("div", {
+              className: a()(u.kL, n),
+              children: d ? (0, i.jsx)(s.Smm, { className: u.Wg }) : (0, i.jsx)(c.A, { className: u.ZS }),
           })
         : null;
 }

@@ -1,93 +1,72 @@
-n.d(t, {
-    A: () => T,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { A: () => b }), n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(311907),
     s = n(73153),
     o = n(287809),
     l = n(622543);
-let c = null,
-    u = null,
+let u = null,
+    c = null,
     d = !1,
-    f = {
-        suggestedGamesIds: [],
-        suggestedWishlistGamesIds: [],
-    },
+    _ = { suggestedGamesIds: [], suggestedWishlistGamesIds: [] },
+    f = !1,
     p = !1,
-    _ = !1,
     h = !1;
-
 function m(e) {
     let { widgets: t } = e;
-    if (((c = t), null === u)) {
+    if (((u = t), null === c)) {
         let e = o.default.getCurrentUser();
         if (null != e) {
-            var n;
             let t = l.A.getUserProfile(e.id);
-            u = null != (n = null == t ? void 0 : t.widgets) ? n : [];
+            c = t?.widgets ?? [];
         }
     }
 }
-
 function g() {
-    (c = null), (u = null);
+    (u = null), (c = null);
 }
-
 function E(e) {
     let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-    (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (_ = !1), (p = !1);
+    (_.suggestedGamesIds = t), (_.suggestedWishlistGamesIds = n), (p = !1), (f = !1);
 }
-
-function b() {
-    (p = !0), (_ = !1);
+function A() {
+    (f = !0), (p = !1);
 }
-
-function y() {
-    (_ = !0), (p = !1), (h = !0);
+function I() {
+    (p = !0), (f = !1), (h = !0);
 }
-
-function O(e) {
+function T(e) {
     d = !0;
 }
-
-function A(e) {
-    (d = !1), null !== c && ((u = null), (c = null));
+function y(e) {
+    (d = !1), null !== u && ((c = null), (u = null));
 }
-
-function v(e) {
+function S(e) {
     d = !1;
 }
-
-function S(e) {
+function v(e) {
     let { applicationId: t } = e;
-    (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),
-        (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
+    (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
+        (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class I extends a.Ay.Store {
+class C extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
     getPendingWidgets() {
-        return c;
+        return u;
     }
     getSaveablePendingWidgets() {
-        return null == c ? null : c.filter((e) => !e.isDiscardable());
+        return null == u ? null : u.filter((e) => !e.isDiscardable());
     }
     hasPendingChanges() {
-        return null !== c && (null === u || !i().isEqual(c, u));
+        return null !== u && (null === c || !i().isEqual(u, c));
     }
     getWidgetUpdates() {
         let e = this.getSaveablePendingWidgets();
-        if (null == e || null == u)
-            return {
-                changedWidgets: null != e ? e : [],
-                removedWidgets: [],
-                hasOrderChanges: !1,
-            };
-        let t = new Map(u.map((e) => [e.id, e])),
+        if (null == e || null == c) return { changedWidgets: e ?? [], removedWidgets: [], hasOrderChanges: !1 };
+        let t = new Map(c.map((e) => [e.id, e])),
             n = new Map(e.map((e) => [e.id, e])),
             r = [],
             i = [];
@@ -97,18 +76,12 @@ class I extends a.Ay.Store {
         }
         for (let [e, r] of t) n.has(e) || i.push(r);
         let a = !1;
-        for (let t = 0; t < e.length; t++) {
-            var s, o;
-            if ((null == (s = e[t]) ? void 0 : s.id) !== (null == (o = u[t]) ? void 0 : o.id)) {
+        for (let t = 0; t < e.length; t++)
+            if (e[t]?.id !== c[t]?.id) {
                 a = !0;
                 break;
             }
-        }
-        return {
-            changedWidgets: r,
-            removedWidgets: i,
-            hasOrderChanges: a,
-        };
+        return { changedWidgets: r, removedWidgets: i, hasOrderChanges: a };
     }
     getChangedWidgets() {
         let { changedWidgets: e } = this.getWidgetUpdates();
@@ -130,26 +103,26 @@ class I extends a.Ay.Store {
         return d;
     }
     get suggestedFetchError() {
-        return p;
+        return f;
     }
     get suggestedFetchIsLoading() {
-        return _;
+        return p;
     }
     get suggestedFetchAttempted() {
         return h;
     }
     get suggestedGameIds() {
-        return f;
+        return _;
     }
 }
-let T = new I(s.h, {
+let b = new C(s.h, {
     WIDGET_PENDING_SET: m,
-    WIDGET_PENDING_SAVE_START: O,
-    WIDGET_PENDING_SAVE_SUCCESS: A,
-    WIDGET_PENDING_SAVE_FAILURE: v,
+    WIDGET_PENDING_SAVE_START: T,
+    WIDGET_PENDING_SAVE_SUCCESS: y,
+    WIDGET_PENDING_SAVE_FAILURE: S,
     WIDGET_SUGGESTED_FETCH_SUCCESS: E,
-    WIDGET_SUGGESTED_FETCH_FAILURE: b,
-    WIDGET_SUGGESTED_FETCH_START: y,
+    WIDGET_SUGGESTED_FETCH_FAILURE: A,
+    WIDGET_SUGGESTED_FETCH_START: I,
     WIDGET_PENDING_CLEAR: g,
-    WIDGET_SUGGESTED_REMOVE_GAME: S,
+    WIDGET_SUGGESTED_REMOVE_GAME: v,
 });

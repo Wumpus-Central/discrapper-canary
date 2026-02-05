@@ -1,46 +1,17 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
+n.d(t, { A: () => c });
 var l = n(627968),
     r = n(64700),
     a = n(481613),
     i = n.n(a),
     s = n(615300),
     o = n(876575);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+function E(e) {
+    let t = (e) => e.interpolate({ inputRange: [0, 1], outputRange: ["0px", "1px"] });
+    return { transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }] };
 }
-
-function u(e) {
-    let t = (e) =>
-        e.interpolate({
-            inputRange: [0, 1],
-            outputRange: ["0px", "1px"],
-        });
-    return {
-        transform: [
-            {
-                translateX: t(e.x),
-            },
-            {
-                translateY: t(e.y),
-            },
-        ],
-    };
-}
-class E extends r.Component {
+class u extends r.Component {
+    state = { x: new s.A.Value(0), y: new s.A.Value(0) };
+    _isMounted = !1;
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
@@ -67,13 +38,12 @@ class E extends r.Component {
     componentWillUnmount() {
         this._isMounted = !1;
     }
+    shouldLoop = () => this._isMounted;
     render() {
         return (0, l.jsxs)("div", {
             className: o.dJ,
             children: [
-                (0, l.jsx)("div", {
-                    className: o.LU,
-                }),
+                (0, l.jsx)("div", { className: o.LU }),
                 (0, l.jsxs)("svg", {
                     className: o.GR,
                     width: "320",
@@ -98,7 +68,7 @@ class E extends r.Component {
                                             id: "search-index-foreground-mask-b",
                                             fill: "#fff",
                                             children: (0, l.jsx)(s.A.use, {
-                                                style: u(this.state),
+                                                style: E(this.state),
                                                 className: o.dK,
                                                 xlinkHref: "#search-index-foreground-mask-a",
                                             }),
@@ -425,7 +395,7 @@ class E extends r.Component {
                                 }),
                                 (0, l.jsxs)(s.A.g, {
                                     className: o.KS,
-                                    style: u(this.state),
+                                    style: E(this.state),
                                     children: [
                                         (0, l.jsx)("path", {
                                             fill: "#C9D2F0",
@@ -467,9 +437,7 @@ class E extends r.Component {
                                             strokeLinecap: "round",
                                             strokeLinejoin: "round",
                                         }),
-                                        (0, l.jsx)("path", {
-                                            d: "M84 66h130v130H84z",
-                                        }),
+                                        (0, l.jsx)("path", { d: "M84 66h130v130H84z" }),
                                     ],
                                 }),
                             ],
@@ -479,14 +447,5 @@ class E extends r.Component {
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            c(this, "state", {
-                x: new s.A.Value(0),
-                y: new s.A.Value(0),
-            }),
-            c(this, "_isMounted", !1),
-            c(this, "shouldLoop", () => this._isMounted);
-    }
 }
-let d = E;
+let c = u;

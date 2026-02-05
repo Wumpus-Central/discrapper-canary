@@ -1,15 +1,13 @@
-n.d(t, {
-    oH: () => u,
-    vz: () => c,
-});
-var r,
-    i = n(723702);
+"use strict";
+n.d(t, { oH: () => c, vz: () => u });
+var r = n(723702);
+let i = null;
+i?.Identifier;
 let a = !1,
     s = null,
     o = null,
     l = null,
-    c = null;
-
-function u() {
-    return a ? o : (0, i.isAndroid)() ? s : l;
+    u = null;
+function c() {
+    return a ? o : (0, r.isAndroid)() ? s : l;
 }

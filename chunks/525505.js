@@ -1,14 +1,10 @@
-n.d(t, {
-    A: () => c,
-    u: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u, u: () => l });
 var r = n(311907),
     i = n(961350),
-    a = n(487329),
+    a = n(709710),
     s = n(161518),
     o = n(731854);
-
 function l(e, t) {
     return (0, r.bG)([s.A, i.default], () => {
         for (let n of i.default.getId() === t
@@ -24,8 +20,6 @@ function l(e, t) {
             if (n.mediaContext === e && n.userId === t) return n;
     });
 }
-
-function c(e, t) {
-    var n;
-    return null == (n = l(e, t)) ? void 0 : n.type;
+function u(e, t) {
+    return l(e, t)?.type;
 }

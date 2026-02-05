@@ -1,6 +1,5 @@
-n.d(t, {
-    N: () => u,
-});
+"use strict";
+n.d(t, { N: () => c });
 var r = n(64700),
     i = n(554352),
     a = n(418034),
@@ -9,73 +8,61 @@ var r = n(64700),
     l = function () {
         return Promise.resolve(null);
     },
-    c = [];
-
-function u(e) {
+    u = [];
+function c(e) {
     var t = e.placement,
         n = void 0 === t ? "bottom" : t,
-        u = e.strategy,
-        d = void 0 === u ? "absolute" : u,
-        f = e.modifiers,
-        p = void 0 === f ? c : f,
-        _ = e.referenceElement,
+        c = e.strategy,
+        d = void 0 === c ? "absolute" : c,
+        _ = e.modifiers,
+        f = void 0 === _ ? u : _,
+        p = e.referenceElement,
         h = e.onFirstUpdate,
         m = e.innerRef,
         g = e.children,
         E = r.useContext(i.kr),
-        b = r.useState(null),
-        y = b[0],
-        O = b[1],
         A = r.useState(null),
-        v = A[0],
-        S = A[1];
+        I = A[0],
+        T = A[1],
+        y = r.useState(null),
+        S = y[0],
+        v = y[1];
     r.useEffect(
         function () {
-            (0, a.cZ)(m, y);
+            (0, a.cZ)(m, I);
         },
-        [m, y],
+        [m, I],
     );
-    var I = r.useMemo(
+    var C = r.useMemo(
             function () {
                 return {
                     placement: n,
                     strategy: d,
                     onFirstUpdate: h,
-                    modifiers: [].concat(p, [
-                        {
-                            name: "arrow",
-                            enabled: null != v,
-                            options: {
-                                element: v,
-                            },
-                        },
-                    ]),
+                    modifiers: [].concat(f, [{ name: "arrow", enabled: null != S, options: { element: S } }]),
                 };
             },
-            [n, d, h, p, v],
+            [n, d, h, f, S],
         ),
-        T = (0, s.E)(_ || E, y, I),
-        C = T.state,
-        N = T.styles,
-        R = T.forceUpdate,
-        w = T.update,
-        P = r.useMemo(
+        b = (0, s.E)(p || E, I, C),
+        N = b.state,
+        R = b.styles,
+        O = b.forceUpdate,
+        D = b.update,
+        L = r.useMemo(
             function () {
                 return {
-                    ref: O,
-                    style: N.popper,
-                    placement: C ? C.placement : n,
-                    hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
-                    isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
-                    arrowProps: {
-                        style: N.arrow,
-                        ref: S,
-                    },
-                    forceUpdate: R || o,
-                    update: w || l,
+                    ref: T,
+                    style: R.popper,
+                    placement: N ? N.placement : n,
+                    hasPopperEscaped: N && N.modifiersData.hide ? N.modifiersData.hide.hasPopperEscaped : null,
+                    isReferenceHidden: N && N.modifiersData.hide ? N.modifiersData.hide.isReferenceHidden : null,
+                    arrowProps: { style: R.arrow, ref: v },
+                    forceUpdate: O || o,
+                    update: D || l,
                 };
             },
-            [O, S, n, C, N, w, R],
+            [T, v, n, N, R, D, O],
         );
-    return (0, a.vq)(g)(P);
+    return (0, a.vq)(g)(L);
 }

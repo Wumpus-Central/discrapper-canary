@@ -1,46 +1,37 @@
-n.d(t, {
-    v: () => s,
-});
-var r = n(627968),
-    i = n(397927),
-    a = n(244242);
-
-function s(e) {
-    var t;
-    let { node: n } = e,
+n.d(t, { v: () => a });
+var i = n(627968),
+    s = n(397927),
+    r = n(244242);
+function a(e) {
+    let { node: t } = e,
         {
-            useValue: s,
-            setValue: o,
+            useValue: n,
+            setValue: a,
             useTitle: l,
-            useSubtitle: c,
-            useDisabled: u,
+            useSubtitle: o,
+            useDisabled: c,
             useDisabledMessage: d,
-            useBadge: f,
-            hasIcon: p,
-        } = n,
-        _ = l(),
-        h = null == c ? void 0 : c(),
-        m = s(),
-        g = null != (t = null == u ? void 0 : u()) && t,
-        E = null == d ? void 0 : d(),
-        b = null == f ? void 0 : f();
-    return (0, r.jsxs)(a.L, {
+            useBadge: u,
+            hasIcon: _,
+        } = t,
+        m = l(),
+        A = o?.(),
+        g = n(),
+        E = c?.() ?? !1,
+        h = d?.(),
+        p = u?.();
+    return (0, i.jsxs)(r.L, {
         children: [
-            (0, r.jsx)(i.dOG, {
-                label: _,
-                description: h,
-                badge: b,
-                checked: m,
-                hasIcon: p,
-                onChange: (e) => o(e),
-                disabled: g,
+            (0, i.jsx)(s.dOG, {
+                label: m,
+                description: A,
+                badge: p,
+                checked: g,
+                hasIcon: _,
+                onChange: (e) => a(e),
+                disabled: E,
             }),
-            g && null != E
-                ? (0, r.jsx)(i.po8, {
-                      messageType: i.YCn.WARNING,
-                      children: E,
-                  })
-                : null,
+            E && null != h ? (0, i.jsx)(s.po8, { messageType: s.YCn.WARNING, children: h }) : null,
         ],
     });
 }

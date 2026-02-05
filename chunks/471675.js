@@ -1,3 +1,1 @@
-e.exports = {
-    l: "notice_c15d44",
-};
+e.exports = { l: "notice_c15d44" };

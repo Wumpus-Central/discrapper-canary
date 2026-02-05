@@ -1,3 +1,2 @@
-e.exports = {
-    S: "guildProductRoleIcon__77573",
-};
+"use strict";
+e.exports = { S: "guildProductRoleIcon__77573" };

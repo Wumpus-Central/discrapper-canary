@@ -6,10 +6,7 @@ e.exports = function (e) {
             {
                 className: "meta.prompt",
                 begin: /^\s{0,3}[/~\w\d[\]()@-]*[>%$#][ ]?/,
-                starts: {
-                    end: /[^\\](?=\s*$)/,
-                    subLanguage: "bash",
-                },
+                starts: { end: /[^\\](?=\s*$)/, subLanguage: "bash" },
             },
         ],
     };

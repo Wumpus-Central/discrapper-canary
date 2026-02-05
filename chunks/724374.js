@@ -1,10 +1,8 @@
-r.d(t, {
-    A: () => c,
-});
+"use strict";
+r.d(t, { A: () => c });
 var a = r(416886),
     n = r(190873),
     s = r(206423);
-
 function o(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -17,7 +15,6 @@ function o(e, t) {
     }
     return r;
 }
-
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -83,13 +80,8 @@ let c = (0, n.NE)(
                     ),
                 };
             },
-            label: {
-                display: "inline-block",
-                color: t.LABEL_COLOR,
-            },
-            valueLabel: {
-                margin: "0 0.5em 0 0",
-            },
+            label: { display: "inline-block", color: t.LABEL_COLOR },
+            valueLabel: { margin: "0 0.5em 0 0" },
             valueText: function (e, r) {
                 return {
                     style: i(
@@ -111,13 +103,7 @@ let c = (0, n.NE)(
                 };
             },
             itemRange: function (e, r) {
-                return {
-                    style: {
-                        paddingTop: r ? 0 : "0.25em",
-                        cursor: "pointer",
-                        color: t.LABEL_COLOR,
-                    },
-                };
+                return { style: { paddingTop: r ? 0 : "0.25em", cursor: "pointer", color: t.LABEL_COLOR } };
             },
             arrow: function (e, t, r) {
                 return {
@@ -156,14 +142,8 @@ let c = (0, n.NE)(
                     ),
                 };
             },
-            arrowSign: {
-                color: t.ARROW_COLOR,
-            },
-            arrowSignInner: {
-                position: "absolute",
-                top: 0,
-                left: "-0.4em",
-            },
+            arrowSign: { color: t.ARROW_COLOR },
+            arrowSignInner: { position: "absolute", top: 0, left: "-0.4em" },
             nestedNode: function (e, t, r, a, n) {
                 return {
                     style: i(
@@ -178,10 +158,7 @@ let c = (0, n.NE)(
                     ),
                 };
             },
-            rootNode: {
-                padding: 0,
-                margin: 0,
-            },
+            rootNode: { padding: 0, margin: 0 },
             nestedNodeLabel: function (e, t, r, a, n) {
                 return {
                     style: i(
@@ -210,32 +187,18 @@ let c = (0, n.NE)(
                     ),
                 };
             },
-            nestedNodeItemType: {
-                marginLeft: "0.3em",
-                marginRight: "0.3em",
-            },
+            nestedNodeItemType: { marginLeft: "0.3em", marginRight: "0.3em" },
             nestedNodeChildren: function (e, t, r) {
                 return {
                     style: i(
                         i({}, e.style),
                         {},
-                        {
-                            padding: 0,
-                            margin: 0,
-                            listStyle: "none",
-                            display: r ? "block" : "none",
-                        },
+                        { padding: 0, margin: 0, listStyle: "none", display: r ? "block" : "none" },
                     ),
                 };
             },
-            rootNodeChildren: {
-                padding: 0,
-                margin: 0,
-                listStyle: "none",
-            },
+            rootNodeChildren: { padding: 0, margin: 0, listStyle: "none" },
         };
     },
-    {
-        defaultBase16: s.A,
-    },
+    { defaultBase16: s.A },
 );

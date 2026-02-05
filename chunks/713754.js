@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, {
     $I: () => r.$I,
     B8: () => l,
@@ -28,10 +29,7 @@ n.d(t, {
 });
 var r = n(731854);
 let i = 3e4,
-    a = {
-        [r.TB.VOICE_ACTIVITY]: 1,
-        [r.TB.PUSH_TO_TALK]: 2,
-    };
+    a = { [r.TB.VOICE_ACTIVITY]: 1, [r.TB.PUSH_TO_TALK]: 2 };
 var s = (function (e) {
         return (
             (e.VOICE_SOUND_STOP_LOOP = "voice_sound_stop_loop"),

@@ -82,59 +82,23 @@ e.exports = function (e) {
         },
         illegal: /(:-|:=|\$\{|\+=)/,
         contains: [
-            {
-                scope: "literal",
-                match: /\[(\|\|)?\]|\(\)/,
-                relevance: 0,
-            },
+            { scope: "literal", match: /\[(\|\|)?\]|\(\)/, relevance: 0 },
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\/\*/, /\*\//, {
-                illegal: /^(#,\/\/)/,
-            }),
-            {
-                scope: "symbol",
-                match: /\'[A-Za-z_](?!\')[\w\']*/,
-            },
-            {
-                scope: "type",
-                match: /`[A-Z][\w\']*/,
-            },
-            {
-                scope: "type",
-                match: /\b[A-Z][\w\']*/,
-                relevance: 0,
-            },
-            {
-                match: /[a-z_]\w*\'[\w\']*/,
-                relevance: 0,
-            },
-            {
-                scope: "operator",
-                match: /\s+(\|\||\+[\+\.]?|\*[\*\/\.]?|\/[\.]?|\.\.\.|\|>|&&|===?)\s+/,
-                relevance: 0,
-            },
-            e.inherit(e.APOS_STRING_MODE, {
-                scope: "string",
-                relevance: 0,
-            }),
-            e.inherit(e.QUOTE_STRING_MODE, {
-                illegal: null,
-            }),
+            e.COMMENT(/\/\*/, /\*\//, { illegal: /^(#,\/\/)/ }),
+            { scope: "symbol", match: /\'[A-Za-z_](?!\')[\w\']*/ },
+            { scope: "type", match: /`[A-Z][\w\']*/ },
+            { scope: "type", match: /\b[A-Z][\w\']*/, relevance: 0 },
+            { match: /[a-z_]\w*\'[\w\']*/, relevance: 0 },
+            { scope: "operator", match: /\s+(\|\||\+[\+\.]?|\*[\*\/\.]?|\/[\.]?|\.\.\.|\|>|&&|===?)\s+/, relevance: 0 },
+            e.inherit(e.APOS_STRING_MODE, { scope: "string", relevance: 0 }),
+            e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
             {
                 scope: "number",
                 variants: [
-                    {
-                        match: /\b0[xX][a-fA-F0-9_]+[Lln]?/,
-                    },
-                    {
-                        match: /\b0[oO][0-7_]+[Lln]?/,
-                    },
-                    {
-                        match: /\b0[bB][01_]+[Lln]?/,
-                    },
-                    {
-                        match: /\b[0-9][0-9_]*([Lln]|(\.[0-9_]*)?([eE][-+]?[0-9_]+)?)/,
-                    },
+                    { match: /\b0[xX][a-fA-F0-9_]+[Lln]?/ },
+                    { match: /\b0[oO][0-7_]+[Lln]?/ },
+                    { match: /\b0[bB][01_]+[Lln]?/ },
+                    { match: /\b[0-9][0-9_]*([Lln]|(\.[0-9_]*)?([eE][-+]?[0-9_]+)?)/ },
                 ],
                 relevance: 0,
             },

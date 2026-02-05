@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nM: "row__93d4a",
     vu: "active__93d4a",

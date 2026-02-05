@@ -314,24 +314,9 @@ e.exports = function (e) {
                     ],
                 },
                 contains: [
-                    {
-                        className: "string",
-                        begin: "'",
-                        end: "'",
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        className: "string",
-                        begin: '"',
-                        end: '"',
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        className: "symbol",
-                        begin: "`",
-                        end: "`",
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
+                    { className: "string", begin: "'", end: "'", contains: [e.BACKSLASH_ESCAPE] },
+                    { className: "string", begin: '"', end: '"', contains: [e.BACKSLASH_ESCAPE] },
+                    { className: "symbol", begin: "`", end: "`", contains: [e.BACKSLASH_ESCAPE] },
                     e.C_NUMBER_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                 ],

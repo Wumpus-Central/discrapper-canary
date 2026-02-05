@@ -1,30 +1,15 @@
-n.d(t, {
-    N: () => s,
-});
-var l = n(562465),
-    r = n(73153),
-    i = n(198982),
-    a = n(652215);
-let s = async (e) => {
+i.d(t, { N: () => r });
+var l = i(562465),
+    a = i(73153),
+    n = i(198982),
+    s = i(652215);
+let r = async (e) => {
     try {
-        var t;
-        let n = (
-            null !=
-            (t = (
-                await l.Bo.get({
-                    url: a.Rsh.SIMILAR_GAMES(e),
-                    rejectWithError: !1,
-                })
-            ).body.similar_games)
-                ? t
-                : []
+        let t = (
+            (await l.Bo.get({ url: s.Rsh.SIMILAR_GAMES(e), rejectWithError: !1 })).body.similar_games ?? []
         ).filter((t) => t !== e);
-        r.h.dispatch({
-            type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS",
-            applicationId: e,
-            games: n,
-        });
+        a.h.dispatch({ type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", applicationId: e, games: t });
     } catch (e) {
-        throw new i.LG(e);
+        throw new n.LG(e);
     }
 };

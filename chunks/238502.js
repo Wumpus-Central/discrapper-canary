@@ -1,15 +1,10 @@
-n.d(t, {
-    J: () => c,
-});
-var l = n(503698),
-    a = n.n(l),
-    r = n(311907),
-    i = n(47671),
-    s = n(262834);
-
-function c(e) {
-    let t = (0, r.bG)([i.A], () => null != i.A.gradientPreset);
-    return a()(s.D7, e, {
-        [s.cJ]: t,
-    });
+a.d(t, { J: () => o });
+var n = a(503698),
+    i = a.n(n),
+    s = a(311907),
+    l = a(47671),
+    r = a(262834);
+function o(e) {
+    let t = (0, s.bG)([l.A], () => null != l.A.gradientPreset);
+    return i()(r.D7, e, { [r.cJ]: t });
 }

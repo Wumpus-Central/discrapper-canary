@@ -1,14 +1,12 @@
-n.d(t, {
-    c: () => c,
-});
+"use strict";
+n.d(t, { c: () => u });
 var r = n(64700),
     i = n(311907),
     a = n(816733),
     s = n(597758),
     o = n(412260),
     l = n(852218);
-
-function c(e) {
+function u(e) {
     return (
         r.useEffect(() => {
             (0, s.BE)();
@@ -18,7 +16,7 @@ function c(e) {
             if (null == t) return null;
             let n = t.promotionId,
                 r = o.A.getPromotionByTypeAndId(l.pt.MARKETING_MOMENT, n);
-            if ((null == r ? void 0 : r.trialId) != null) {
+            if (r?.trialId != null) {
                 let e = a.A.getUserTrialOffer(r.trialId);
                 if (null == e || (null != e.expires_at && Date.parse(e.expires_at) < Date.now())) return null;
             }

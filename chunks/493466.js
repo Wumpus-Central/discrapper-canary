@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_c02108",
     R5: "verifiedRow_c02108",

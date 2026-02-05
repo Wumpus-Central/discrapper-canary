@@ -1,43 +1,8 @@
-n.d(t, {
-    B1: () => d,
-    B6: () => c,
-    QW: () => u,
-    iy: () => s,
-}),
-    n(896048),
-    n(65821),
-    n(457529);
+"use strict";
+n.d(t, { B1: () => u, B6: () => o, QW: () => l, iy: () => a });
 var r = n(73153);
-
-function i(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        o = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-        return o;
-    }
-    if (((o = a(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-    return o;
-}
-
-function a(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let o = new (n(626584).A)("AVError");
-var s = (function (e) {
+let i = new (n(626584).A)("AVError");
+var a = (function (e) {
     return (
         (e.STREAM_FAILED_TO_START = "stream-failed-to-start"),
         (e.NO_INPUT_DEVICES = "no-input-devices"),
@@ -65,85 +30,25 @@ var s = (function (e) {
         e
     );
 })({});
-let l = {
-    "stream-soundshare-failed": {
-        errorCode: 1001,
-        severity: "warning",
-        category: "audio",
-        isErrorOutbound: !0,
-    },
-    "noise-canceller-error": {
-        errorCode: 1002,
-        severity: "warning",
-        category: "audio",
-        isErrorOutbound: !0,
-    },
+let s = {
+    "stream-soundshare-failed": { errorCode: 1001, severity: "warning", category: "audio", isErrorOutbound: !0 },
+    "noise-canceller-error": { errorCode: 1002, severity: "warning", category: "audio", isErrorOutbound: !0 },
     "audio-capture-sample-rate-mismatch": {
         errorCode: 1003,
         severity: "warning",
         category: "audio",
         isErrorOutbound: !0,
     },
-    "stream-failed-to-start": {
-        errorCode: 2001,
-        severity: "critical",
-        category: "video",
-        isErrorOutbound: !0,
-    },
-    "stream-view-low-fps": {
-        errorCode: 2002,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !1,
-    },
-    "stream-view-high-packet-loss": {
-        errorCode: 2003,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !1,
-    },
-    "stream-send-high-packet-loss": {
-        errorCode: 2004,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !0,
-    },
-    "stream-send-low-encode-fps": {
-        errorCode: 2005,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !0,
-    },
-    "stream-send-network-quality": {
-        errorCode: 2006,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !0,
-    },
-    "stream-reconnecting": {
-        errorCode: 2007,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !1,
-    },
-    "video-decode-error": {
-        errorCode: 2008,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !1,
-    },
-    "video-encode-error": {
-        errorCode: 2009,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !0,
-    },
-    "stream-full": {
-        errorCode: 2010,
-        severity: "critical",
-        category: "video",
-        isErrorOutbound: !1,
-    },
+    "stream-failed-to-start": { errorCode: 2001, severity: "critical", category: "video", isErrorOutbound: !0 },
+    "stream-view-low-fps": { errorCode: 2002, severity: "warning", category: "video", isErrorOutbound: !1 },
+    "stream-view-high-packet-loss": { errorCode: 2003, severity: "warning", category: "video", isErrorOutbound: !1 },
+    "stream-send-high-packet-loss": { errorCode: 2004, severity: "warning", category: "video", isErrorOutbound: !0 },
+    "stream-send-low-encode-fps": { errorCode: 2005, severity: "warning", category: "video", isErrorOutbound: !0 },
+    "stream-send-network-quality": { errorCode: 2006, severity: "warning", category: "video", isErrorOutbound: !0 },
+    "stream-reconnecting": { errorCode: 2007, severity: "warning", category: "video", isErrorOutbound: !1 },
+    "video-decode-error": { errorCode: 2008, severity: "warning", category: "video", isErrorOutbound: !1 },
+    "video-encode-error": { errorCode: 2009, severity: "warning", category: "video", isErrorOutbound: !0 },
+    "stream-full": { errorCode: 2010, severity: "critical", category: "video", isErrorOutbound: !1 },
     "video-stream-sender-ready-timeout": {
         errorCode: 2011,
         severity: "critical",
@@ -156,12 +61,7 @@ let l = {
         category: "video",
         isErrorOutbound: !1,
     },
-    "camera-send-low-encode-fps": {
-        errorCode: 2013,
-        severity: "warning",
-        category: "video",
-        isErrorOutbound: !0,
-    },
+    "camera-send-low-encode-fps": { errorCode: 2013, severity: "warning", category: "video", isErrorOutbound: !0 },
     "video-stream-sender-ready-timeout-no-stream": {
         errorCode: 2014,
         severity: "critical",
@@ -174,38 +74,18 @@ let l = {
         category: "video",
         isErrorOutbound: !1,
     },
-    "no-input-devices": {
-        errorCode: 3001,
-        severity: "critical",
-        category: "devices",
-        isErrorOutbound: !0,
-    },
-    "no-audio-input-detected": {
-        errorCode: 3002,
-        severity: "critical",
-        category: "devices",
-        isErrorOutbound: !0,
-    },
+    "no-input-devices": { errorCode: 3001, severity: "critical", category: "devices", isErrorOutbound: !0 },
+    "no-audio-input-detected": { errorCode: 3002, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "screenshare-min-os-requirement": {
         errorCode: 3003,
         severity: "critical",
         category: "devices",
         isErrorOutbound: !0,
     },
-    "screenshare-os-error": {
-        errorCode: 3004,
-        severity: "critical",
-        category: "devices",
-        isErrorOutbound: !0,
-    },
-    "debug-log-upload-failed": {
-        errorCode: 4001,
-        severity: "info",
-        category: "debug",
-        isErrorOutbound: !0,
-    },
+    "screenshare-os-error": { errorCode: 3004, severity: "critical", category: "devices", isErrorOutbound: !0 },
+    "debug-log-upload-failed": { errorCode: 4001, severity: "info", category: "debug", isErrorOutbound: !0 },
 };
-var c = (function (e) {
+var o = (function (e) {
     return (
         (e.Unknown = "Unknown"),
         (e.UploadErrorGeneral = "UploadErrorCodes.GENERAL"),
@@ -219,12 +99,10 @@ var c = (function (e) {
         e
     );
 })({});
-
-function u(e) {
-    let { type: t } = e,
-        n = i(e, ["type"]);
-    o.error("AV error reported: ".concat(t, " ").concat(JSON.stringify(n)));
-    let a = l[t];
+function l(e) {
+    let { type: t, ...n } = e;
+    i.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
+    let a = s[t];
     r.h.dispatch({
         type: "REPORT_AV_ERROR",
         error: t,
@@ -234,24 +112,24 @@ function u(e) {
         context: e,
     });
 }
-
-function d(e) {
-    return l[e];
+function u(e) {
+    return s[e];
 }
 !(function () {
-    let e = Object.values(l).map((e) => e.errorCode),
+    let e = Object.values(s).map((e) => e.errorCode),
         t = new Set(e);
     if (e.length !== t.size) {
         let t = e.filter((t, n) => e.indexOf(t) !== n),
-            n = Object.entries(l)
+            n = Object.entries(s)
                 .filter((e) => {
                     let [n, r] = e;
                     return t.includes(r.errorCode);
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return "".concat(t, ": ").concat(n.errorCode);
+                    return `${t}: ${n.errorCode}`;
                 });
-        throw Error("Duplicate AV error codes found:\n".concat(n.join("\n")));
+        throw Error(`Duplicate AV error codes found:
+${n.join("\n")}`);
     }
 })();

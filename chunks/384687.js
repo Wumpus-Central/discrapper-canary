@@ -1,3 +1,1 @@
-e.exports = {
-    H: "hoverableStatus_cdcd10",
-};
+e.exports = { H: "hoverableStatus_cdcd10" };

@@ -1,50 +1,33 @@
-a.d(t, {
-    A: () => i,
-}),
-    a(896048),
-    a(747238);
-var s = a(627968),
-    c = a(64700),
-    d = a(492462),
-    n = a(960488),
-    f = a(716965),
-    b = a(321987),
-    r = a(595244),
-    o = a(985018);
-
-function i() {
+s.d(t, { A: () => u });
+var r = s(627968),
+    i = s(64700),
+    l = s(492462),
+    o = s(960488),
+    a = s(716965),
+    n = s(321987),
+    c = s(595244),
+    d = s(985018);
+function u() {
     let e,
-        t = (0, n.zy)(),
-        [a, i] = c.useState(!1),
-        [p, _] = c.useState(!1);
+        t = (0, o.zy)(),
+        [s, u] = i.useState(!1),
+        [h, f] = i.useState(!1);
     return (
-        c.useEffect(() => {
+        i.useEffect(() => {
             !(async function () {
-                let e = (0, d.parse)(t.search);
+                let e = (0, l.parse)(t.search);
                 try {
-                    var a;
-                    await (0, f.Kf)(null != (a = e.token) ? a : ""), i(!0);
-                } catch (e) {
-                    _(!0);
+                    await (0, a.Kf)(e.token ?? ""), u(!0);
+                } catch {
+                    f(!0);
                 }
             })();
         }, [t.search]),
-        (e = a
-            ? (0, s.jsx)(r.jX, {
-                  message: o.intl.string(o.t.Tqu3OQ),
-                  showsCloseWindowText: !0,
-              })
-            : p
-              ? (0, s.jsx)(r.gz, {
-                    message: o.intl.string(o.t.J8LsCs),
-                    showsCloseWindowText: !0,
-                })
-              : (0, s.jsx)(r.Ay, {
-                    message: o.intl.string(o.t.BAcf6a),
-                    spinner: !0,
-                })),
-        (0, s.jsx)(b.$, {
-            children: e,
-        })
+        (e = s
+            ? (0, r.jsx)(c.jX, { message: d.intl.string(d.t.Tqu3OQ), showsCloseWindowText: !0 })
+            : h
+              ? (0, r.jsx)(c.gz, { message: d.intl.string(d.t.J8LsCs), showsCloseWindowText: !0 })
+              : (0, r.jsx)(c.Ay, { message: d.intl.string(d.t.BAcf6a), spinner: !0 })),
+        (0, r.jsx)(n.$, { children: e })
     );
 }

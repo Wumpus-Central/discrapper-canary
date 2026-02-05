@@ -1,27 +1,20 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var l = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(235986),
-    s = n(985018),
+var s = n(397927),
+    r = n(235986),
+    i = n(985018),
     a = n(288661);
 let o = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
-        return (0, r.jsx)(l.$mQ, {
-            "data-migration-pending": !0,
-            className: a.Qs,
-            scrollbarType: n,
-            children: t,
-        });
+        return (0, l.jsx)(s.$mQ, { "data-migration-pending": !0, className: a.Qs, scrollbarType: n, children: t });
     },
     SlideError: function (e) {
         let { error: t } = e;
         return null == t
             ? null
-            : (0, r.jsx)(l.Text, {
+            : (0, l.jsx)(s.Text, {
                   className: a.z3,
                   variant: "text-sm/normal",
                   color: "text-feedback-critical",
@@ -29,29 +22,29 @@ let o = {
               });
     },
     SlideFooter: function (e) {
-        let { mfaChallenge: t, setSlide: n, trailingButton: i, showConfirm: a = !1, disabled: o, submitting: d } = e,
+        let { mfaChallenge: t, setSlide: n, trailingButton: r, showConfirm: a = !1, disabled: o, submitting: d } = e,
             c = t.methods.length > 1;
-        return null != i || c || a
-            ? (0, r.jsx)(l.jlY, {
+        return null != r || c || a
+            ? (0, l.jsx)(s.jlY, {
                   "data-migration-pending": !0,
-                  children: (0, r.jsxs)(l.ButtonGroup, {
+                  children: (0, l.jsxs)(s.ButtonGroup, {
                       fullWidth: !0,
                       children: [
                           c &&
-                              (0, r.jsx)(l.Button, {
+                              (0, l.jsx)(s.Button, {
                                   variant: "secondary",
-                                  text: s.intl.string(s.t.Tot4EC),
+                                  text: i.intl.string(i.t.Tot4EC),
                                   onClick: () => n("select"),
                               }),
                           a &&
-                              (0, r.jsx)(l.Button, {
+                              (0, l.jsx)(s.Button, {
                                   type: "submit",
                                   variant: "primary",
-                                  text: s.intl.string(s.t["cY+Oob"]),
+                                  text: i.intl.string(i.t["cY+Oob"]),
                                   disabled: o,
                                   loading: d,
                               }),
-                          i,
+                          r,
                       ],
                   }),
               })
@@ -59,28 +52,20 @@ let o = {
     },
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n, headerAlignStart: o } = e;
-        return (0, r.jsxs)(l.rQ0, {
+        return (0, l.jsxs)(s.rQ0, {
             "data-migration-pending": !0,
-            direction: i.A.Direction.VERTICAL,
+            direction: r.A.Direction.VERTICAL,
             className: a.wx,
             separator: !1,
-            align: o ? i.A.Align.START : void 0,
+            align: o ? r.A.Align.START : void 0,
             children: [
-                (0, r.jsx)(l.Heading, {
+                (0, l.jsx)(s.Heading, {
                     variant: "heading-xl/semibold",
                     color: "text-strong",
-                    children: s.intl.string(s.t.saHocI),
+                    children: i.intl.string(i.t.saHocI),
                 }),
-                null != t &&
-                    (0, r.jsx)(l.Heading, {
-                        variant: "heading-lg/semibold",
-                        className: a.VA,
-                        children: t,
-                    }),
-                (0, r.jsx)(l.s_y, {
-                    className: a.b,
-                    onClick: n,
-                }),
+                null != t && (0, l.jsx)(s.Heading, { variant: "heading-lg/semibold", className: a.VA, children: t }),
+                (0, l.jsx)(s.s_y, { className: a.b, onClick: n }),
             ],
         });
     },

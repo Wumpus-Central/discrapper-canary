@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(486816),
     s = e(453669),
@@ -23,12 +24,7 @@ var n = e(834647),
         return void 0 !== r ? !!r : s(t);
     };
 n(
-    {
-        target: "Array",
-        proto: !0,
-        arity: 1,
-        forced: !x || !l("concat"),
-    },
+    { target: "Array", proto: !0, arity: 1, forced: !x || !l("concat") },
     {
         concat: function (t) {
             var r,

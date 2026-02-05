@@ -1,3 +1,4 @@
+"use strict";
 var n = e(991207),
     o = e(530383),
     s = e(831718),
@@ -17,19 +18,9 @@ t.exports = {
     getConstructor: function (t, r, e, f) {
         var p = t(function (t, o) {
                 u(t, l),
-                    x(t, {
-                        type: r,
-                        index: n(null),
-                        first: null,
-                        last: null,
-                        size: 0,
-                    }),
+                    x(t, { type: r, index: n(null), first: null, last: null, size: 0 }),
                     v || (t.size = 0),
-                    c(o) ||
-                        a(o, t[f], {
-                            that: t,
-                            AS_ENTRIES: e,
-                        });
+                    c(o) || a(o, t[f], { that: t, AS_ENTRIES: e });
             }),
             l = p.prototype,
             h = d(r),
@@ -134,13 +125,7 @@ t.exports = {
             t,
             r,
             function (t, r) {
-                x(this, {
-                    type: n,
-                    target: t,
-                    state: o(t),
-                    kind: r,
-                    last: null,
-                });
+                x(this, { type: n, target: t, state: o(t), kind: r, last: null });
             },
             function () {
                 for (var t = s(this), r = t.kind, e = t.last; e && e.removed; ) e = e.previous;

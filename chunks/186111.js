@@ -1,53 +1,27 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = [];
-
-function l(e) {
+"use strict";
+n.d(t, { A: () => c });
+var r = n(311907),
+    i = n(73153);
+let a = [];
+function s(e) {
     let { component: t } = e;
-    if (o.indexOf(t) >= 0) return !1;
-    o = [...o, t];
+    if (a.indexOf(t) >= 0) return !1;
+    a = [...a, t];
 }
-
-function c() {
-    if (0 === o.length) return !1;
-    o = o.slice(0, -1);
+function o() {
+    if (0 === a.length) return !1;
+    a = a.slice(0, -1);
 }
-
-function u() {
-    o = [];
+function l() {
+    a = [];
 }
-class d extends (r = i.Ay.Store) {
+class u extends r.Ay.Store {
+    static displayName = "LayerStore";
     hasLayers() {
-        return o.length > 0;
+        return a.length > 0;
     }
     getLayers() {
-        return o;
+        return a;
     }
 }
-s(d, "displayName", "LayerStore");
-let f = new d(a.h, {
-    LAYER_PUSH: l,
-    LAYER_POP: c,
-    LAYER_POP_ALL: u,
-    LOGOUT: u,
-    NOTIFICATION_CLICK: u,
-});
+let c = new u(i.h, { LAYER_PUSH: s, LAYER_POP: o, LAYER_POP_ALL: l, LOGOUT: l, NOTIFICATION_CLICK: l });

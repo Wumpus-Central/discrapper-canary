@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     SW: "popout_af3b89",
     ZK: "hero_af3b89",

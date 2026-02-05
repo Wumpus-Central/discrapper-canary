@@ -1,3 +1,4 @@
+"use strict";
 var n = r(934886),
     i = r(747105),
     o = r(573750),
@@ -7,7 +8,6 @@ var n = r(934886),
     c = r(797686),
     l = r(494277),
     f = o.isBrowser("IE");
-
 function p(t, e) {
     for (var r = t, n = r; r; )
         if (l(r) && n.hasAttribute("contenteditable"))
@@ -29,20 +29,16 @@ function p(t, e) {
         else n = r = r.parentNode;
     return "Could not find contentEditable parent of node";
 }
-
 function h(t) {
     return null === t.nodeValue ? t.childNodes.length : t.nodeValue.length;
 }
-
 function d(t, e, r, n) {
     var o = s();
     if (t.extend && a(o, e)) {
         r > h(e) &&
             i.logSelectionStateFailure({
                 anonymizedDom: p(e),
-                extraParams: JSON.stringify({
-                    offset: r,
-                }),
+                extraParams: JSON.stringify({ offset: r }),
                 selectionState: JSON.stringify(n.toJS()),
             });
         var u = e === t.focusNode;
@@ -86,16 +82,13 @@ function d(t, e, r, n) {
         c.setEnd(e, r), t.addRange(c.cloneRange());
     }
 }
-
 function g(t, e, r, o) {
     var a = u(e).createRange();
     if (
         (r > h(e) &&
             (i.logSelectionStateFailure({
                 anonymizedDom: p(e),
-                extraParams: JSON.stringify({
-                    offset: r,
-                }),
+                extraParams: JSON.stringify({ offset: r }),
                 selectionState: JSON.stringify(o.toJS()),
             }),
             n.handleExtensionCausedError()),

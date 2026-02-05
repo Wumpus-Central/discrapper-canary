@@ -1,20 +1,17 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(627968);
+n.d(t, { A: () => s });
+var i = n(627968);
 n(64700);
 var l = n(990078),
-    i = n(397927);
-
-function a(e) {
-    let { text: t, icon: n, onClick: a, disabled: s, submitting: o } = e;
-    return (0, r.jsx)(l.m, {
-        __unsupportedReactNodeAsText: null != t ? t : void 0,
-        children: (0, r.jsx)(i.K0, {
+    a = n(397927);
+function s(e) {
+    let { text: t, icon: n, onClick: s, disabled: r, submitting: o } = e;
+    return (0, i.jsx)(l.m, {
+        __unsupportedReactNodeAsText: t ?? void 0,
+        children: (0, i.jsx)(a.K0, {
             icon: n,
             variant: "secondary",
-            onClick: a,
-            disabled: s,
+            onClick: s,
+            disabled: r,
             loading: o,
             "aria-label": t,
             size: "sm",

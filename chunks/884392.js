@@ -1,70 +1,61 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968),
-    i = n(412703),
-    l = n(311907),
-    a = n(397927),
+n.d(t, { A: () => A });
+var i = n(627968),
+    l = n(412703),
+    a = n(311907),
+    r = n(397927),
     s = n(829219),
     o = n(859703),
-    c = n(868031),
-    u = n(890687),
-    d = n(590202),
-    p = n(792620),
-    m = n(545986),
-    f = n(654487),
-    g = n(985018);
-
-function h(e) {
+    d = n(868031),
+    c = n(890687),
+    u = n(590202),
+    m = n(792620),
+    _ = n(545986),
+    h = n(654487),
+    p = n(985018);
+function g(e) {
     switch (e) {
-        case i.n.ACHIEVEMENT_IN_GAME:
-        case i.n.ACHIEVEMENT_IN_ACTIVITY:
-        case i.n.PLAY_ACTIVITY:
-        case i.n.WATCH_VIDEO:
-            return d.Cy.START_QUEST;
+        case l.n.ACHIEVEMENT_IN_GAME:
+        case l.n.ACHIEVEMENT_IN_ACTIVITY:
+        case l.n.PLAY_ACTIVITY:
+        case l.n.WATCH_VIDEO:
+            return u.Cy.START_QUEST;
         default:
-            return d.Cy.ACCEPT_QUEST;
+            return u.Cy.ACCEPT_QUEST;
     }
 }
-let _ = function (e) {
+let A = function (e) {
     var t;
     let {
             quest: n,
-            taskType: d,
-            size: _ = "sm",
-            preClickCallback: b,
-            analyticsCtxQuestContent: A,
-            analyticsCtxSourceQuestContent: y,
-            analyticsCtxQuestContentPosition: v,
-            analyticsCtxQuestContentRowIndex: x,
+            taskType: u,
+            size: A = "sm",
+            preClickCallback: f,
+            analyticsCtxQuestContent: x,
+            analyticsCtxSourceQuestContent: E,
+            analyticsCtxQuestContentPosition: C,
+            analyticsCtxQuestContentRowIndex: I,
         } = e,
-        O = {
-            questContent: A,
-            questContentCTA: h(d),
-            sourceQuestContent: y,
-            questContentPosition: v,
-            questContentRowIndex: x,
+        T = {
+            questContent: x,
+            questContentCTA: g(u),
+            sourceQuestContent: E,
+            questContentPosition: C,
+            questContentRowIndex: I,
         },
-        E = n.id,
-        { isEnrolling: j } = (0, l.cf)(
-            [o.A],
-            () => ({
-                isEnrolling: o.A.isEnrolling(E),
-            }),
-            [E],
-        ),
-        C = (0, m.Oz)(n),
-        I = (function (e, t) {
-            let { launchInGameActivity: n } = (0, u.zW)(t);
-            if ((0, p.BS)(t))
+        v = n.id,
+        { isEnrolling: N } = (0, a.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
+        S = (0, _.Oz)(n),
+        b = (function (e, t) {
+            let { launchInGameActivity: n } = (0, c.zW)(t);
+            if ((0, m.BS)(t))
                 return () => {
-                    (0, m.Fy)(t);
+                    (0, _.Fy)(t);
                 };
             switch (e) {
-                case i.n.ACHIEVEMENT_IN_GAME:
-                case i.n.ACHIEVEMENT_IN_ACTIVITY:
-                case i.n.PLAY_ACTIVITY:
-                    if (t.config.features.includes(f.Li.START_QUEST_CTA))
+                case l.n.ACHIEVEMENT_IN_GAME:
+                case l.n.ACHIEVEMENT_IN_ACTIVITY:
+                case l.n.PLAY_ACTIVITY:
+                    if (t.config.features.includes(h.Li.START_QUEST_CTA))
                         return () => {
                             n();
                         };
@@ -72,55 +63,55 @@ let _ = function (e) {
                 default:
                     return null;
             }
-        })(d, n),
-        S = (function (e, t) {
+        })(u, n),
+        y = (function (e, t) {
             let { features: n } = t.config;
             switch (e) {
-                case i.n.WATCH_VIDEO:
-                    return (0, c.WB)(t);
-                case i.n.ACHIEVEMENT_IN_GAME:
-                case i.n.ACHIEVEMENT_IN_ACTIVITY:
-                    return n.includes(f.Li.START_QUEST_CTA) ? g.intl.string(g.t["hRIVy+"]) : g.intl.string(g.t.l7E81v);
-                case i.n.PLAY_ACTIVITY:
-                    if (n.includes(f.Li.CLOUD_GAMING_ACTIVITY)) return g.intl.string(g.t["+qoymD"]);
-                    if (n.includes(f.Li.START_QUEST_CTA)) return g.intl.string(g.t["Ie9++s"]);
-                    return g.intl.string(g.t.l7E81v);
+                case l.n.WATCH_VIDEO:
+                    return (0, d.WB)(t);
+                case l.n.ACHIEVEMENT_IN_GAME:
+                case l.n.ACHIEVEMENT_IN_ACTIVITY:
+                    return n.includes(h.Li.START_QUEST_CTA) ? p.intl.string(p.t["hRIVy+"]) : p.intl.string(p.t.l7E81v);
+                case l.n.PLAY_ACTIVITY:
+                    if (n.includes(h.Li.CLOUD_GAMING_ACTIVITY)) return p.intl.string(p.t["+qoymD"]);
+                    if (n.includes(h.Li.START_QUEST_CTA)) return p.intl.string(p.t["Ie9++s"]);
+                    return p.intl.string(p.t.l7E81v);
                 default:
-                    return g.intl.string(g.t.kUQLMJ);
+                    return p.intl.string(p.t.kUQLMJ);
             }
-        })(d, n),
-        T =
-            ((t = null != I ? I : void 0),
-            d === i.n.WATCH_VIDEO
+        })(u, n),
+        j =
+            ((t = b ?? void 0),
+            u === l.n.WATCH_VIDEO
                 ? async () => {
-                      await (0, m.e0)(n, {
-                          questContent: O.questContent,
-                          questContentCTA: O.questContentCTA,
-                          sourceQuestContent: O.sourceQuestContent,
-                          sourceQuestContentCTA: h(d),
-                          questContentPosition: O.questContentPosition,
-                          questContentRowIndex: O.questContentRowIndex,
+                      await (0, _.e0)(n, {
+                          questContent: T.questContent,
+                          questContentCTA: T.questContentCTA,
+                          sourceQuestContent: T.sourceQuestContent,
+                          sourceQuestContentCTA: g(u),
+                          questContentPosition: T.questContentPosition,
+                          questContentRowIndex: T.questContentRowIndex,
                       });
                   }
                 : async () => {
                       await (0, s.Oy)(n.id, {
-                          questContent: O.questContent,
-                          questContentCTA: O.questContentCTA,
-                          sourceQuestContent: O.sourceQuestContent,
-                          questContentPosition: O.questContentPosition,
-                          questContentRowIndex: O.questContentRowIndex,
+                          questContent: T.questContent,
+                          questContentCTA: T.questContentCTA,
+                          sourceQuestContent: T.sourceQuestContent,
+                          questContentPosition: T.questContentPosition,
+                          questContentRowIndex: T.questContentRowIndex,
                       }),
-                          null == t || t();
+                          t?.();
                   });
-    return (0, r.jsx)(a.Button, {
-        size: _,
-        loading: j,
+    return (0, i.jsx)(r.Button, {
+        size: A,
+        loading: N,
         variant: "primary",
         onClick: () => {
-            null == b || b(), T();
+            f?.(), j();
         },
-        text: S,
-        icon: C,
+        text: y,
+        icon: S,
         fullWidth: !0,
     });
 };

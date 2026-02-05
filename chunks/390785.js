@@ -1,9 +1,6 @@
-i.d(a, {
-    A: () => d,
-});
+i.d(a, { A: () => d });
 var t = i(204801),
     n = ["domenica", "luned\xec", "marted\xec", "mercoled\xec", "gioved\xec", "venerd\xec", "sabato"];
-
 function o(e) {
     return "'" + n[e] + " alle' p";
 }

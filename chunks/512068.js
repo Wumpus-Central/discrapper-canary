@@ -1,127 +1,96 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    i = n(735438),
-    o = n.n(i),
-    a = n(311907),
-    s = n(732955),
-    c = n(397927),
-    u = n(73153),
-    d = n(437553),
-    C = n(34457),
-    m = n(317525),
-    p = n(576705),
-    f = n(552247),
-    b = n(985018),
-    j = n(510403);
-let g = (e) => {
-    var t;
-    let { guild: n, transitionState: i, onClose: g } = e,
-        [h, x] = l.useState(7),
-        [y, O] = l.useState([]),
-        v = null != (t = (0, f._k)(n.id, h, y)) ? t : -1;
-    l.useEffect(() => {
+l.d(t, { A: () => H });
+var n = l(627968),
+    i = l(64700),
+    s = l(735438),
+    a = l.n(s),
+    r = l(311907),
+    o = l(732955),
+    C = l(397927),
+    d = l(73153),
+    c = l(437553),
+    u = l(34457),
+    m = l(317525),
+    x = l(576705),
+    h = l(552247),
+    g = l(985018),
+    _ = l(510403);
+let H = (e) => {
+    let { guild: t, transitionState: l, onClose: s } = e,
+        [H, p] = i.useState(7),
+        [f, j] = i.useState([]),
+        v = (0, h._k)(t.id, H, f) ?? -1;
+    i.useEffect(() => {
         let e = (e) => {
-            if (e.guildId !== n.id || !e.prune.isPreview) return;
-            let t = e.prune.days,
-                r = e.prune.includeRoles,
-                l = Number(e.prune.pruneCount);
-            (0, f.nA)(e.guildId, t, r, l);
+            if (e.guildId !== t.id || !e.prune.isPreview) return;
+            let l = e.prune.days,
+                n = e.prune.includeRoles,
+                i = Number(e.prune.pruneCount);
+            (0, h.nA)(e.guildId, l, n, i);
         };
         return (
-            u.h.subscribe("GUILD_PRUNE_UPDATE", e),
+            d.h.subscribe("GUILD_PRUNE_UPDATE", e),
             () => {
-                u.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
+                d.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
             }
         );
-    }, [n.id]),
-        l.useEffect(() => {
-            -1 === v && d.A.updateEstimateV2(n.id, h, y);
-        }, [n.id, h, y, v]);
-    let _ = l.useCallback(() => {
-            d.A.prune(n.id, h, y), g();
-        }, [n.id, h, y, g]),
-        H = (0, a.yK)([p.A, m.A], () => {
-            let e = p.A.getHighestRole(n);
-            return o()(m.A.getSortedRoles(n.id))
-                .filter((t) => !(0, C.Oy)(t) && p.A.isRoleHigher(n, e, t))
+    }, [t.id]),
+        i.useEffect(() => {
+            -1 === v && c.A.updateEstimateV2(t.id, H, f);
+        }, [t.id, H, f, v]);
+    let b = i.useCallback(() => {
+            c.A.prune(t.id, H, f), s();
+        }, [t.id, H, f, s]),
+        A = (0, r.yK)([x.A, m.A], () => {
+            let e = x.A.getHighestRole(t);
+            return a()(m.A.getSortedRoles(t.id))
+                .filter((l) => !(0, u.Oy)(l) && x.A.isRoleHigher(t, e, l))
                 .map((e) => {
-                    let { id: t, name: n } = e;
-                    return {
-                        id: t,
-                        label: n,
-                        value: t,
-                    };
+                    let { id: t, name: l } = e;
+                    return { id: t, label: l, value: t };
                 })
                 .value();
-        }, [n]);
-    return (0, r.jsx)(s.aFV, {
-        title: "".concat(b.intl.string(b.t.zbyz7p), "—").concat(null != n ? n.name : ""),
+        }, [t]);
+    return (0, n.jsx)(o.aFV, {
+        title: `${g.intl.string(g.t.zbyz7p)}—${null != t ? t.name : ""}`,
         actions: [
-            {
-                text: b.intl.string(b.t["ETE/oC"]),
-                onClick: g,
-                variant: "secondary",
-            },
-            {
-                text: b.intl.string(b.t["2mIlKQ"]),
-                onClick: _,
-            },
+            { text: g.intl.string(g.t["ETE/oC"]), onClick: s, variant: "secondary" },
+            { text: g.intl.string(g.t["2mIlKQ"]), onClick: b },
         ],
         onClose: async () => {
-            await g();
+            await s();
         },
-        transitionState: i,
-        children: (0, r.jsxs)("div", {
-            className: j.Q,
+        transitionState: l,
+        children: (0, n.jsxs)("div", {
+            className: _.Q,
             children: [
-                (0, r.jsx)(c.z6M, {
-                    label: b.intl.string(b.t.YccTvK),
-                    value: String(h),
+                (0, n.jsx)(C.z6M, {
+                    label: g.intl.string(g.t.YccTvK),
+                    value: String(H),
                     options: [
-                        {
-                            name: b.intl.formatToPlainString(b.t.FM1dHS, {
-                                days: 7,
-                            }),
-                            value: "7",
-                        },
-                        {
-                            name: b.intl.formatToPlainString(b.t.FM1dHS, {
-                                days: 30,
-                            }),
-                            value: "30",
-                        },
+                        { name: g.intl.formatToPlainString(g.t.FM1dHS, { days: 7 }), value: "7" },
+                        { name: g.intl.formatToPlainString(g.t.FM1dHS, { days: 30 }), value: "30" },
                     ],
                     onChange: (e) => {
-                        x(Number(e));
+                        p(Number(e));
                     },
                 }),
-                (0, r.jsx)(c.IpV, {
-                    className: j.X,
-                    children: (0, r.jsx)(c.ZiE, {
+                (0, n.jsx)(C.IpV, {
+                    className: _.X,
+                    children: (0, n.jsx)(C.ZiE, {
                         selectionMode: "multiple",
-                        label: b.intl.string(b.t.buoe17),
+                        label: g.intl.string(g.t.buoe17),
                         maxOptionsVisible: 10,
-                        value: y,
-                        onSelectionChange: (e) => O(e),
-                        options: H,
+                        value: f,
+                        onSelectionChange: (e) => j(e),
+                        options: A,
                     }),
                 }),
-                (0, r.jsx)(c.Text, {
+                (0, n.jsx)(C.Text, {
                     variant: "text-sm/normal",
                     children:
-                        y.length > 0
-                            ? b.intl.format(b.t["5WxHHp"], {
-                                  members: v,
-                                  days: h,
-                              })
-                            : b.intl.format(b.t.f13az9, {
-                                  members: v,
-                                  days: h,
-                              }),
+                        f.length > 0
+                            ? g.intl.format(g.t["5WxHHp"], { members: v, days: H })
+                            : g.intl.format(g.t.f13az9, { members: v, days: H }),
                 }),
             ],
         }),

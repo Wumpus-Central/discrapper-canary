@@ -1,40 +1,29 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i,
-    l = n(311907),
-    a = n(73153);
-let s = !1,
-    o = !1,
-    c = !1;
-class u extends (i = l.Ay.Store) {
+n.d(t, { A: () => d });
+var i = n(311907),
+    l = n(73153);
+let a = !1,
+    r = !1,
+    s = !1;
+class o extends i.Ay.Store {
+    static displayName = "CheckoutRecoveryStore";
     getIsTargeted() {
-        return c;
+        return s;
     }
     shouldFetchCheckoutRecovery() {
-        return !s && !o;
+        return !a && !r;
     }
 }
-(r = "displayName") in u
-    ? Object.defineProperty(u, r, {
-          value: "CheckoutRecoveryStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (u[r] = "CheckoutRecoveryStore");
-let d = new u(a.h, {
+let d = new o(l.h, {
     CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
-        (o = !0), (s = !1), (c = e.isTargeted);
+        (r = !0), (a = !1), (s = e.isTargeted);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function () {
-        (o = !0), (s = !1);
+        (r = !0), (a = !1);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH: function () {
-        s = !0;
+        a = !0;
     },
     LOGOUT: function () {
-        (s = !1), (o = !1), (c = !1);
+        (a = !1), (r = !1), (s = !1);
     },
 });

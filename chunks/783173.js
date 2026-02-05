@@ -1,22 +1,19 @@
-r.d(t, {
-    A: () => c,
-});
-var n = r(627968);
-r(64700);
-var l = r(503698),
-    a = r.n(l),
-    i = r(397927),
-    s = r(595535),
-    o = r(48369);
-
-function c(e) {
-    let { className: t, size: r = s.q } = e,
-        l = (0, i.FT9)(r);
+a.d(t, { A: () => u });
+var n = a(627968);
+a(64700);
+var s = a(503698),
+    l = a.n(s),
+    r = a(397927),
+    i = a(595535),
+    c = a(48369);
+function u(e) {
+    let { className: t, size: a = i.q } = e,
+        s = (0, r.FT9)(a);
     return (0, n.jsx)("svg", {
-        width: l,
-        height: l,
-        viewBox: "0 0 ".concat(l, " ").concat(l),
-        className: a()(o.R, t),
+        width: s,
+        height: s,
+        viewBox: `0 0 ${s} ${s}`,
+        className: l()(c.R, t),
         "aria-hidden": !0,
         children: (0, n.jsx)("path", {
             fillRule: "evenodd",

@@ -1,12 +1,8 @@
-n.d(t, {
-    w: () => s,
-}),
-    n(938796),
-    n(65821);
+"use strict";
+n.d(t, { w: () => s }), n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(38021);
-
 function s(e) {
     let {
             children: t,
@@ -14,28 +10,28 @@ function s(e) {
             primaryColor: s,
             secondaryColor: o,
             gradient: l,
-            flags: c,
-            contrast: u,
+            flags: u,
+            contrast: c,
             saturation: d,
-            density: f,
-            disableAdaptiveTheme: p,
-            reduceAdaptiveTheme: _,
+            density: _,
+            disableAdaptiveTheme: f,
+            reduceAdaptiveTheme: p,
         } = e,
         h = i.useContext(a.Dx);
     a.PQ;
     let m = i.useMemo(
         () =>
             (0, a.dI)({
-                theme: null != n ? n : h.theme,
-                primaryColor: null != s ? s : h.primaryColor,
-                secondaryColor: null != o ? o : h.secondaryColor,
-                gradient: null != l ? l : h.gradient,
-                flags: null != c ? c : h.flags,
-                contrast: null != u ? u : h.contrast,
-                saturation: null != d ? d : h.saturation,
-                density: null != f ? f : h.density,
-                disableAdaptiveTheme: null != p ? p : h.disableAdaptiveTheme,
-                reduceAdaptiveTheme: null != _ ? _ : h.reduceAdaptiveTheme,
+                theme: n ?? h.theme,
+                primaryColor: s ?? h.primaryColor,
+                secondaryColor: o ?? h.secondaryColor,
+                gradient: l ?? h.gradient,
+                flags: u ?? h.flags,
+                contrast: c ?? h.contrast,
+                saturation: d ?? h.saturation,
+                density: _ ?? h.density,
+                disableAdaptiveTheme: f ?? h.disableAdaptiveTheme,
+                reduceAdaptiveTheme: p ?? h.reduceAdaptiveTheme,
             }),
         [
             n,
@@ -52,16 +48,13 @@ function s(e) {
             s,
             o,
             l,
-            c,
             u,
+            c,
             d,
+            _,
             f,
             p,
-            _,
         ],
     );
-    return (0, r.jsx)(a.Dx.Provider, {
-        value: m,
-        children: t,
-    });
+    return (0, r.jsx)(a.Dx.Provider, { value: m, children: t });
 }

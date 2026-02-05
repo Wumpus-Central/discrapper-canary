@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => g,
-    i: () => m,
-});
+"use strict";
+n.d(t, { A: () => h, i: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,168 +7,95 @@ var i = n(503698),
     s = n(607470),
     o = n(572808),
     l = n(860923),
-    c = n(149505),
-    u = n(577632),
+    u = n(149505),
+    c = n(577632),
     d = n(451772),
-    f = n(822768),
-    p = n(185014);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let m = {
-        width: 2180,
-        height: 1536,
-    },
-    g = (e) => {
+    _ = n(822768),
+    f = n(185014);
+let p = { width: 2180, height: 1536 },
+    h = (e) => {
         let {
                 roomSeats: t,
                 roomParticipants: n,
                 participants: i,
-                channel: _,
-                idle: m,
-                showAmbientEffects: g = !0,
-                enableAnimations: E = !0,
-                skipNewUserEducation: b = !1,
-                onSeatClick: y,
-                disableInteractions: O = !1,
+                channel: p,
+                idle: h,
+                showAmbientEffects: m = !0,
+                enableAnimations: g = !0,
+                skipNewUserEducation: E = !1,
+                onSeatClick: A,
+                disableInteractions: I = !1,
             } = e,
-            A = (0, l.A)();
-        return null == A
+            T = (0, l.A)();
+        return null == T
             ? null
             : (0, r.jsxs)("div", {
-                  className: p.cA,
+                  className: f.cA,
                   children: [
+                      (0, r.jsx)("img", { className: f.Tp, src: T.backgrounds.sky.static, alt: "", draggable: !1 }),
+                      m && (0, r.jsx)(_.A, {}),
                       (0, r.jsx)("img", {
-                          className: p.Tp,
-                          src: A.backgrounds.sky.static,
+                          className: f.Tp,
+                          src: T.backgrounds.mountains.static,
                           alt: "",
                           draggable: !1,
                       }),
-                      g && (0, r.jsx)(f.A, {}),
-                      (0, r.jsx)("img", {
-                          className: p.Tp,
-                          src: A.backgrounds.mountains.static,
-                          alt: "",
-                          draggable: !1,
-                      }),
-                      g && (0, r.jsx)(c.A, {}),
-                      (0, r.jsx)("img", {
-                          className: p.Tp,
-                          src: A.backgrounds.river.static,
-                          alt: "",
-                          draggable: !1,
-                      }),
-                      g &&
+                      m && (0, r.jsx)(u.A, {}),
+                      (0, r.jsx)("img", { className: f.Tp, src: T.backgrounds.river.static, alt: "", draggable: !1 }),
+                      m &&
                           (0, r.jsx)(s.A, {
-                              className: p.Ki,
-                              style: {
-                                  transform: "translate(779px, 1009px)",
-                              },
-                              src: A.ambience.river.animated,
+                              className: f.Ki,
+                              style: { transform: "translate(779px, 1009px)" },
+                              src: T.ambience.river.animated,
                               autoPlay: !0,
                               controls: !1,
                               loop: !0,
                           }),
-                      (0, r.jsx)("img", {
-                          className: p.Tp,
-                          src: A.backgrounds.camp.static,
-                          alt: "",
-                          draggable: !1,
-                      }),
-                      o.dG.map((e) => {
-                          var n;
-                          return (0, r.jsx)(
+                      (0, r.jsx)("img", { className: f.Tp, src: T.backgrounds.camp.static, alt: "", draggable: !1 }),
+                      o.dG.map((e) =>
+                          (0, r.jsx)(
                               d.A,
-                              h(
-                                  {
-                                      occupant: null == (n = t[e.id - 1]) ? void 0 : n.claimedBy,
-                                      onClick: y,
-                                      skipNewUserEducation: b,
-                                  },
-                                  e,
-                              ),
+                              { occupant: t[e.id - 1]?.claimedBy, onClick: A, skipNewUserEducation: E, ...e },
                               e.id,
-                          );
-                      }),
+                          ),
+                      ),
                       n.map((e) =>
                           (0, r.jsx)(
-                              u.A,
-                              {
-                                  seats: t,
-                                  participant: e,
-                                  participants: i,
-                                  channel: _,
-                                  idle: m,
-                                  enableAnimations: E,
-                              },
+                              c.A,
+                              { seats: t, participant: e, participants: i, channel: p, idle: h, enableAnimations: g },
                               e.userId,
                           ),
                       ),
-                      g &&
+                      m &&
                           (0, r.jsxs)("div", {
-                              className: a()(p.cA, p.ey),
+                              className: a()(f.cA, f.ey),
                               children: [
                                   (0, r.jsx)(s.A, {
-                                      className: p.Ki,
-                                      style: {
-                                          transform: "translate(1014px, 773px)",
-                                      },
-                                      src: A.ambience.fire.animated,
+                                      className: f.Ki,
+                                      style: { transform: "translate(1014px, 773px)" },
+                                      src: T.ambience.fire.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
                                   (0, r.jsx)(s.A, {
-                                      className: p.Ki,
-                                      src: A.ambience.fireflies.animated,
+                                      className: f.Ki,
+                                      src: T.ambience.fireflies.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
                                   (0, r.jsx)(s.A, {
-                                      className: p.Ki,
-                                      style: {
-                                          transform: "translate(0, 1216px)",
-                                      },
-                                      src: A.ambience.foliage_front.animated,
+                                      className: f.Ki,
+                                      style: { transform: "translate(0, 1216px)" },
+                                      src: T.ambience.foliage_front.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
                               ],
                           }),
-                      O &&
-                          (0, r.jsx)("div", {
-                              className: p.ps,
-                          }),
+                      I && (0, r.jsx)("div", { className: f.ps }),
                   ],
               });
     };

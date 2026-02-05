@@ -1,13 +1,12 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(73153),
     i = n(272355),
     a = n(723702),
     s = n(536194),
     o = n(765682),
     l = n(652215);
-class c extends i.A {
+class u extends i.A {
     isEnabled() {
         return (0, a.isDesktop)() && (0, a.isMac)() && !s.P.isDiscordTestSet();
     }
@@ -22,4 +21,4 @@ class c extends i.A {
         t === l.TBI.PUSH_TO_TALK && n(674966).A.requestPermission(o.iL.INPUT_MONITORING);
     }
 }
-let u = new c();
+let c = new u();

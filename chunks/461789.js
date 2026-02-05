@@ -1,21 +1,9 @@
-i.d(o, {
-    B5: () => s,
-    Lw: () => n,
-});
+i.d(o, { B5: () => s, Lw: () => n });
 let n = async (e) =>
         window.Meticulous?.isRunningAsTest
             ? (console.debug("Running as part of a Meticulous test case, so skipping loading the Meticulous recorder."),
-              {
-                  stopRecording: async () => {},
-              })
-            : await t(e).catch(
-                  (e) => (
-                      console.error(e),
-                      {
-                          stopRecording: async () => {},
-                      }
-                  ),
-              ),
+              { stopRecording: async () => {} })
+            : await t(e).catch((e) => (console.error(e), { stopRecording: async () => {} })),
     t = ({
         projectId: e,
         recordingToken: o,
@@ -36,10 +24,7 @@ let n = async (e) =>
             let S = s ?? 2e3;
             S > 0 &&
                 setTimeout(() => {
-                    (w = !0),
-                        _({
-                            stopRecording: async () => {},
-                        });
+                    (w = !0), _({ stopRecording: async () => {} });
                 }, S);
             let R = document.createElement("script");
             (R.type = "text/javascript"),

@@ -1,13 +1,12 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "leden_\xfanor_březen_duben_květen_červen_červenec_srpen_z\xe1ř\xed_ř\xedjen_listopad_prosinec".split("_"),
         n = "led_\xfano_bře_dub_kvě_čvn_čvc_srp_z\xe1ř_ř\xedj_lis_pro".split("_");
-
     function r(e) {
         return e > 1 && e < 5 && 1 != ~~(e / 10);
     }
-
     function i(e, t, n, i) {
         var a = e + " ";
         switch (n) {
@@ -133,9 +132,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

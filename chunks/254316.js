@@ -1,48 +1,37 @@
-n.r(t),
-    n.d(t, {
-        default: () => E,
-    }),
-    n(896048);
-var i = n(627968),
-    r = n(64700),
-    a = n(960488),
-    o = n(311907),
-    s = n(397927),
-    l = n(544199),
-    d = n(448564),
-    u = n(997509),
-    c = n(976860),
-    S = n(71393),
-    b = n(652215);
-
-function E(e) {
+i.r(t), i.d(t, { default: () => G });
+var n = i(627968),
+    a = i(64700),
+    o = i(960488),
+    r = i(311907),
+    s = i(397927),
+    l = i(544199),
+    d = i(448564),
+    u = i(997509),
+    c = i(976860),
+    S = i(71393),
+    E = i(652215);
+function G(e) {
     let { guildId: t } = e,
-        n = (0, o.bG)([S.A], () => S.A.getGuild(t)),
-        [E, G] = r.useState(!0);
-    return (r.useEffect(() => {
+        i = (0, r.bG)([S.A], () => S.A.getGuild(t)),
+        [G, b] = a.useState(!0);
+    return (a.useEffect(() => {
         let e = setTimeout(() => {
-            null == n &&
-                (0, c.pX)(b.BVt.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-onboarding"));
+            null == i &&
+                (0, c.pX)(E.BVt.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-onboarding"));
         }, 3e3);
         return () => clearTimeout(e);
-    }, [n]),
-    r.useEffect(() => {
-        null != n &&
-            E &&
-            (d.A.hasSeenCreatorOnboardingForGuild(n.id) || (0, l.G)(n.id),
-            u.A.open(n.id, b.BEX.ROLE_SUBSCRIPTIONS),
-            G(!1));
-    }, [E, n]),
-    null == n || E)
-        ? (0, i.jsx)("div", {
-              style: {
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "100%",
-              },
-              children: (0, i.jsx)(s.y$y, {}),
+    }, [i]),
+    a.useEffect(() => {
+        null != i &&
+            G &&
+            (d.A.hasSeenCreatorOnboardingForGuild(i.id) || (0, l.G)(i.id),
+            u.A.open(i.id, E.BEX.ROLE_SUBSCRIPTIONS),
+            b(!1));
+    }, [G, i]),
+    null == i || G)
+        ? (0, n.jsx)("div", {
+              style: { display: "flex", justifyContent: "center", width: "100%" },
+              children: (0, n.jsx)(s.y$y, {}),
           })
-        : (0, i.jsx)(a.rd, {
-              to: b.BVt.CHANNEL(t),
-          });
+        : (0, n.jsx)(o.rd, { to: E.BVt.CHANNEL(t) });
 }

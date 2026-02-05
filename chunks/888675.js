@@ -1,84 +1,56 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(449859),
-    l = n(256883);
-
+t.d(s, { A: () => m });
+var n = t(627968);
+t(64700);
+var a = t(503698),
+    l = t.n(a),
+    i = t(397927),
+    r = t(449859),
+    o = t(256883);
 function c(e) {
     let {
-        icon: t,
-        iconNode: n,
-        timestamp: i,
-        timestampFormat: s,
+        icon: s,
+        iconNode: t,
+        timestamp: a,
+        timestampFormat: i,
         className: c,
-        children: u,
-        contentClassName: d,
-        iconClassName: f,
-        iconContainerClassName: p,
-        timestampClassName: _,
-        compact: h = !1,
-        additionalContent: m,
+        children: m,
+        contentClassName: u,
+        iconClassName: d,
+        iconContainerClassName: h,
+        timestampClassName: g,
+        compact: A = !1,
+        additionalContent: x,
     } = e;
-    return (0, r.jsxs)("div", {
-        className: a()(c, {
-            [l.kL]: !0,
-            [l.oE]: h,
-            [l.E]: !h,
-        }),
+    return (0, n.jsxs)("div", {
+        className: l()(c, { [o.kL]: !0, [o.oE]: A, [o.E]: !A }),
         children: [
-            null != n &&
-                (0, r.jsx)("div", {
-                    className: a()(l.zc, p),
-                    children: n,
-                }),
-            null != t &&
-                (0, r.jsx)("div", {
-                    className: l.zc,
-                    children: (0, r.jsx)("div", {
+            null != t && (0, n.jsx)("div", { className: l()(o.zc, h), children: t }),
+            null != s &&
+                (0, n.jsx)("div", {
+                    className: o.zc,
+                    children: (0, n.jsx)("div", {
                         "data-accessibility": "desaturate",
-                        className: a()(l.Kk, l.RK, f),
-                        style: {
-                            backgroundImage: "url('".concat(t, "')"),
-                        },
+                        className: l()(o.Kk, o.RK, d),
+                        style: { backgroundImage: `url('${s}')` },
                     }),
                 }),
-            (0, r.jsxs)("div", {
-                className: a()(d, l.Qs),
+            (0, n.jsxs)("div", {
+                className: l()(u, o.Qs),
                 children: [
-                    (0, r.jsxs)("div", {
-                        children: [
-                            u,
-                            null != i &&
-                                (0, r.jsx)(o.A, {
-                                    timestamp: i,
-                                    timestampFormat: s,
-                                    className: _,
-                                }),
-                        ],
+                    (0, n.jsxs)("div", {
+                        children: [m, null != a && (0, n.jsx)(r.A, { timestamp: a, timestampFormat: i, className: g })],
                     }),
-                    m,
+                    x,
                 ],
             }),
         ],
     });
 }
 c.Action = (e) => {
-    let { onClick: t, children: n } = e;
-    return (0, r.jsxs)("span", {
-        className: l.XI,
-        children: [
-            "—",
-            (0, r.jsx)(s.MzZ, {
-                onClick: t,
-                className: l.si,
-                children: n,
-            }),
-        ],
+    let { onClick: s, children: t } = e;
+    return (0, n.jsxs)("span", {
+        className: o.XI,
+        children: ["—", (0, n.jsx)(i.MzZ, { onClick: s, className: o.si, children: t })],
     });
 };
-let u = c;
+let m = c;

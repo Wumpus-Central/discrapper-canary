@@ -1,39 +1,31 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700);
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968),
+    s = n(64700);
 n(516773);
 var l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(997509),
-    c = n(555337),
-    o = n(985018);
-
-function d(e) {
+    o = n(555337),
+    d = n(985018);
+function c(e) {
     let { profile: t, canManageGuild: n } = e,
-        d = t.id,
-        u = i.useCallback(
+        c = t.id,
+        u = s.useCallback(
             (e) => {
-                a.A.updateGuild({
-                    description: e,
-                }),
-                    a.A.updateGuildProfile(d, {
-                        description: e,
-                    });
+                a.A.updateGuild({ description: e }), a.A.updateGuildProfile(c, { description: e });
             },
-            [d],
+            [c],
         ),
-        f = (0, l.bG)([c.A], () => c.A.getError("description"));
-    return (0, r.jsx)(s.fs1, {
-        label: o.intl.string(o.t.Z27SCb),
-        description: o.intl.string(o.t.pw0MIk),
+        m = (0, l.bG)([o.A], () => o.A.getError("description"));
+    return (0, i.jsx)(r.fs1, {
+        label: d.intl.string(d.t.Z27SCb),
+        description: d.intl.string(d.t.pw0MIk),
         value: t.description,
-        placeholder: o.intl.string(o.t.Nvfowl),
+        placeholder: d.intl.string(d.t.Nvfowl),
         onChange: u,
         maxLength: 300,
         disabled: !n,
-        error: f,
+        error: m,
     });
 }

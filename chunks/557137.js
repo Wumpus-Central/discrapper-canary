@@ -1,75 +1,49 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     s = n(397927),
     o = n(961350),
-    c = n(296227),
-    u = n(582153);
-
-function d(e) {
+    d = n(296227),
+    c = n(582153);
+function u(e) {
     let {
         userId: t,
         headingId: n,
         widget: l,
-        disableInteraction: a = !1,
+        disableInteraction: r = !1,
         title: o,
-        subtitle: c,
-        actionButtons: d = [],
-        className: p,
+        subtitle: d,
+        actionButtons: u = [],
+        className: m,
     } = e;
-    return (0, r.jsxs)("div", {
-        className: i()(u.U1, p),
+    return (0, i.jsxs)("div", {
+        className: a()(c.U1, m),
         children: [
-            (0, r.jsxs)("div", {
-                className: u.DD,
+            (0, i.jsxs)("div", {
+                className: c.DD,
                 children: [
-                    (0, r.jsx)(s.Heading, {
-                        variant: "heading-sm/medium",
-                        color: "text-default",
-                        id: n,
-                        children: o,
-                    }),
-                    null != c &&
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-xs/normal",
-                            color: "text-subtle",
-                            children: c,
-                        }),
+                    (0, i.jsx)(s.Heading, { variant: "heading-sm/medium", color: "text-default", id: n, children: o }),
+                    null != d && (0, i.jsx)(s.Text, { variant: "text-xs/normal", color: "text-subtle", children: d }),
                 ],
             }),
-            (0, r.jsx)(f, {
-                widget: l,
-                actionButtons: d,
-                disabledInteraction: a,
-                userId: t,
-            }),
+            (0, i.jsx)(g, { widget: l, actionButtons: u, disabledInteraction: r, userId: t }),
         ],
     });
 }
-
-function f(e) {
-    let { widget: t, actionButtons: n, disabledInteraction: l, userId: i } = e,
-        s = (0, a.bG)([o.default], () => o.default.getId());
+function g(e) {
+    let { widget: t, actionButtons: n, disabledInteraction: l, userId: a } = e,
+        s = (0, r.bG)([o.default], () => o.default.getId());
     return l
         ? null
         : null != n && n.length > 0
-          ? (0, r.jsx)("div", {
-                className: u.o1,
-                children: n,
-            })
-          : s !== i
-            ? (0, r.jsx)("div", {
-                  className: u.o1,
-                  children: (0, r.jsx)(c.A, {
-                      widget: t,
-                      userId: i,
-                      className: u.AQ,
-                  }),
+          ? (0, i.jsx)("div", { className: c.o1, children: n })
+          : s !== a
+            ? (0, i.jsx)("div", {
+                  className: c.o1,
+                  children: (0, i.jsx)(d.A, { widget: t, userId: a, className: c.AQ }),
               })
             : null;
 }

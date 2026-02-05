@@ -1,210 +1,96 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048);
-var r,
-    i = n(284009),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(365971);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let p = null,
-    _ = new Map();
-
-function h(e) {
-    let t = _.get(e);
+"use strict";
+n.d(t, { A: () => A });
+var r = n(284009),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(365971);
+let l = null,
+    u = new Map();
+function c(e) {
+    let t = u.get(e);
     return null == t
         ? (console.warn("Window state not initialized", e),
-          {
-              isElementFullscreen: !1,
-              focused: !1,
-              windowSize: {
-                  width: 0,
-                  height: 0,
-              },
-              visible: !1,
-          })
+          { isElementFullscreen: !1, focused: !1, windowSize: { width: 0, height: 0 }, visible: !1 })
         : t;
 }
-
-function m(e) {
-    a()(!_.has(e.windowId), "Window initialized multiple times");
-    let { width: t, height: n, isElementFullscreen: r, focused: i, visible: s } = e;
+function d(e) {
+    i()(!u.has(e.windowId), "Window initialized multiple times");
+    let { width: t, height: n, isElementFullscreen: r, focused: a, visible: s } = e;
     return (
-        _.set(e.windowId, {
-            windowSize: {
-                width: t,
-                height: n,
-            },
-            isElementFullscreen: r,
-            focused: i,
-            visible: s,
-        }),
-        i && (p = e.windowId),
+        u.set(e.windowId, { windowSize: { width: t, height: n }, isElementFullscreen: r, focused: a, visible: s }),
+        a && (l = e.windowId),
         !0
     );
 }
-
-function g(e) {
-    let t = h(e.windowId);
+function _(e) {
+    let t = c(e.windowId);
     return (
         t.isElementFullscreen !== e.isElementFullscreen &&
-        (_.set(
-            e.windowId,
-            f(u({}, t), {
-                isElementFullscreen: e.isElementFullscreen,
-            }),
-        ),
-        !0)
+        (u.set(e.windowId, { ...t, isElementFullscreen: e.isElementFullscreen }), !0)
     );
 }
-
-function E(e) {
-    let t = h(e.windowId);
+function f(e) {
+    let t = c(e.windowId);
     return (
-        t.focused !== e.focused &&
-        (e.focused && (p = e.windowId),
-        _.set(
-            e.windowId,
-            f(u({}, t), {
-                focused: e.focused,
-            }),
-        ),
-        !0)
+        t.focused !== e.focused && (e.focused && (l = e.windowId), u.set(e.windowId, { ...t, focused: e.focused }), !0)
     );
 }
-
-function b(e) {
-    let t = h(e.windowId);
-    return (
-        t.visible !== e.visible &&
-        (_.set(
-            e.windowId,
-            f(u({}, t), {
-                visible: e.visible,
-            }),
-        ),
-        !0)
-    );
+function p(e) {
+    let t = c(e.windowId);
+    return t.visible !== e.visible && (u.set(e.windowId, { ...t, visible: e.visible }), !0);
 }
-
-function y(e) {
-    let t = h(e.windowId);
+function h(e) {
+    let t = c(e.windowId);
     return (
         (t.windowSize.width !== e.width || t.windowSize.height !== e.height) &&
-        (_.set(
-            e.windowId,
-            f(u({}, t), {
-                windowSize: {
-                    width: e.width,
-                    height: e.height,
-                },
-            }),
-        ),
-        !0)
+        (u.set(e.windowId, { ...t, windowSize: { width: e.width, height: e.height } }), !0)
     );
 }
-
-function O(e) {
-    return _.delete(e.windowId), p === e.windowId && (p = null), !0;
+function m(e) {
+    return u.delete(e.windowId), l === e.windowId && (l = null), !0;
 }
-class A extends (r = s.Ay.Store) {
+class g extends a.Ay.Store {
+    static displayName = "WindowStore";
     isFocused() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, l.Xg)();
-        return h(e).focused;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.Xg)();
+        return c(e).focused;
     }
     isAppFocused() {
         return null != this.getFocusedWindowId();
     }
     isVisible() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, l.Xg)();
-        return h(e).visible;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.Xg)();
+        return c(e).visible;
     }
     getFocusedWindowId() {
         let e = null;
         return (
-            _.forEach((t, n) => {
+            u.forEach((t, n) => {
                 t.focused && (e = n);
             }),
             e
         );
     }
     getLastFocusedWindowId() {
-        return p;
+        return l;
     }
     isElementFullScreen() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, l.Xg)();
-        return h(e).isElementFullscreen;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.Xg)();
+        return c(e).isElementFullscreen;
     }
     windowSize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, l.Xg)();
-        return h(e).windowSize;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.Xg)();
+        return c(e).windowSize;
     }
 }
-c(A, "displayName", "WindowStore");
-let v = new A(o.h, {
-    WINDOW_INIT: m,
-    WINDOW_FULLSCREEN_CHANGE: g,
-    WINDOW_FOCUS: E,
-    WINDOW_RESIZED: y,
-    WINDOW_UNLOAD: O,
-    WINDOW_VISIBILITY_CHANGE: b,
+let E = new g(s.h, {
+    WINDOW_INIT: d,
+    WINDOW_FULLSCREEN_CHANGE: _,
+    WINDOW_FOCUS: f,
+    WINDOW_RESIZED: h,
+    WINDOW_UNLOAD: m,
+    WINDOW_VISIBILITY_CHANGE: p,
 });
 Promise.resolve()
     .then(n.bind(n, 954571))
@@ -212,10 +98,10 @@ Promise.resolve()
         let { addExtraAnalyticsDecorator: t } = e;
         t((e) => {
             {
-                e.client_app_state = v.isAppFocused() ? "focused" : "unfocused";
-                let t = v.windowSize();
+                e.client_app_state = E.isAppFocused() ? "focused" : "unfocused";
+                let t = E.windowSize();
                 (e.client_viewport_width = t.width), (e.client_viewport_height = t.height);
             }
         });
     });
-let S = v;
+let A = E;

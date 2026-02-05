@@ -1,176 +1,83 @@
-n.d(t, {
-    Ed: () => y,
-    Pw: () => E,
-    rg: () => b,
-});
+"use strict";
+n.d(t, { Ed: () => g, Pw: () => m, rg: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(158954),
-    o = n(397927),
-    s = n(166532),
+    s = n(397927),
+    o = n(166532),
     l = n(69494),
-    c = n(482132),
-    u = n(516248),
+    u = n(482132),
+    c = n(516248),
     d = n(866485),
-    f = n(981036),
-    p = n(954848);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let m = (e) => (0, r.jsx)(g, h({}, e)),
-    g = (e) => {
+    _ = n(981036),
+    f = n(954848);
+let p = (e) => (0, r.jsx)(h, { ...e }),
+    h = (e) => {
         let { unifiedStepProps: t } = e,
             {
                 isStepLoading: n,
                 reviewBodyContent: a,
-                reviewBodyLegalContent: s,
+                reviewBodyLegalContent: o,
                 errorMessage: d,
-                warningMessage: _,
-                primaryCTAButtonProps: m,
+                warningMessage: p,
+                primaryCTAButtonProps: h,
             } = t,
-            g = i.useMemo(
-                () =>
-                    h(
-                        {
-                            variant: "active",
-                            type: "submit",
-                            "data-testid": "submitButton",
-                        },
-                        m,
-                    ),
-                [m],
-            );
+            m = i.useMemo(() => ({ variant: "active", type: "submit", "data-testid": "submitButton", ...h }), [h]);
         return n
-            ? (0, r.jsx)("div", {
-                  className: p.y3,
-                  children: (0, r.jsx)(o.y$y, {
-                      type: o.y$y.Type.WANDERING_CUBES,
-                  }),
-              })
+            ? (0, r.jsx)("div", { className: f.y3, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.WANDERING_CUBES }) })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.A, {}),
-                      (0, r.jsxs)(c.dZ, {
+                      (0, r.jsxs)(u.dZ, {
                           children: [
-                              (0, r.jsxs)(o.BJc, {
+                              (0, r.jsxs)(s.BJc, {
                                   direction: "vertical",
                                   gap: 8,
                                   children: [
-                                      null != d
-                                          ? (0, r.jsx)(f.Wg, {
-                                                message: d,
-                                            })
-                                          : null,
-                                      null != _
-                                          ? (0, r.jsx)(u.A, {
-                                                message: _,
-                                            })
-                                          : null,
+                                      null != d ? (0, r.jsx)(_.Wg, { message: d }) : null,
+                                      null != p ? (0, r.jsx)(c.A, { message: p }) : null,
                                   ],
                               }),
-                              (0, r.jsxs)("div", {
-                                  className: p.y3,
-                                  children: [a, s],
-                              }),
+                              (0, r.jsxs)("div", { className: f.y3, children: [a, o] }),
                           ],
                       }),
-                      (0, r.jsx)(c.UX, {
-                          children: (0, r.jsx)(f.cy, {
-                              primaryCTAButtonProps: g,
-                              showLockIcon: !0,
-                          }),
-                      }),
+                      (0, r.jsx)(u.UX, { children: (0, r.jsx)(_.cy, { primaryCTAButtonProps: m, showLockIcon: !0 }) }),
                   ],
               });
     },
-    E = (0, d.R)({
-        step: s.pn.REVIEW,
-        renderStep: m,
-        DirectStepComponent: g,
-    }),
-    y = () =>
-        (0, r.jsx)("div", {
-            className: p.g4,
-            children: (0, r.jsx)(o.y$y, {
-                type: o.y$y.Type.PULSING_ELLIPSIS,
-            }),
-        }),
-    b = (e) => {
+    m = (0, d.R)({ step: o.pn.REVIEW, renderStep: p, DirectStepComponent: h }),
+    g = () =>
+        (0, r.jsx)("div", { className: f.g4, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS }) }),
+    E = (e) => {
         let {
             upperInlineNoticeProps: t,
             upperInlineNoticeContent: n,
             planSelectContent: i,
-            purchaseItemContent: o,
-            subscriptionDetailsContent: s,
+            purchaseItemContent: s,
+            subscriptionDetailsContent: o,
             isStepLoading: l,
-            paymentSelectContent: c,
-            invoiceSummaryContent: u,
+            paymentSelectContent: u,
+            invoiceSummaryContent: c,
         } = e;
         return l
-            ? (0, r.jsx)(y, {})
+            ? (0, r.jsx)(g, {})
             : (0, r.jsxs)("div", {
-                  className: p.db,
+                  className: f.db,
                   children: [
                       (null != t || null != n) &&
                           (0, r.jsx)("div", {
-                              className: p.dD,
+                              className: f.dD,
                               children:
                                   null != t
-                                      ? (0, r.jsx)(a.wx6, {
-                                            type: t.type,
-                                            hidden: t.hidden,
-                                            children: t.message,
-                                        })
+                                      ? (0, r.jsx)(a.wx6, { type: t.type, hidden: t.hidden, children: t.message })
                                       : n,
                           }),
                       i,
-                      null != i &&
-                          null != o &&
-                          (0, r.jsx)("div", {
-                              className: p.GG,
-                          }),
-                      o,
-                      null != s &&
-                          (0, r.jsx)("div", {
-                              className: p.P3,
-                              children: s,
-                          }),
-                      (0, r.jsx)("div", {
-                          className: p.Jv,
-                          children: c,
-                      }),
-                      (0, r.jsx)("div", {
-                          className: p.ZF,
-                          children: u,
-                      }),
+                      null != i && null != s && (0, r.jsx)("div", { className: f.GG }),
+                      s,
+                      null != o && (0, r.jsx)("div", { className: f.P3, children: o }),
+                      (0, r.jsx)("div", { className: f.Jv, children: u }),
+                      (0, r.jsx)("div", { className: f.ZF, children: c }),
                   ],
               });
     };

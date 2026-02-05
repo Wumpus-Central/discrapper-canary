@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t) {
         var n = e.split("_");
         return t % 10 == 1 && t % 100 != 11
@@ -9,7 +10,6 @@
               ? n[1]
               : n[2];
     }
-
     function n(e, n, r) {
         var i = {
             ss: n ? "секунда_секунды_секунд" : "секунду_секунды_секунд",
@@ -114,9 +114,6 @@
                     return e;
             }
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ud: "bannerVideoBackground_aff7d9",
     _e: "bannerImage_aff7d9",

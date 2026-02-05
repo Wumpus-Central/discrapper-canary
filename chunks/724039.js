@@ -1,7 +1,7 @@
+"use strict";
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
     r = Object.prototype.propertyIsEnumerable;
-
 function i(e) {
     if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
     return Object(e);
@@ -30,8 +30,8 @@ e.exports = !(function () {
     }
 })()
     ? function (e, a) {
-          for (var s, o, l = i(e), c = 1; c < arguments.length; c++) {
-              for (var u in (s = Object(arguments[c]))) n.call(s, u) && (l[u] = s[u]);
+          for (var s, o, l = i(e), u = 1; u < arguments.length; u++) {
+              for (var c in (s = Object(arguments[u]))) n.call(s, c) && (l[c] = s[c]);
               if (t) {
                   o = t(s);
                   for (var d = 0; d < o.length; d++) r.call(s, o[d]) && (l[o[d]] = s[o[d]]);

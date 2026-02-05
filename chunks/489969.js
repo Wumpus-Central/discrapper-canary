@@ -1,29 +1,8 @@
 e.exports = function (e) {
     let t = e.regex,
         n = e.COMMENT("--", "$"),
-        r = {
-            scope: "string",
-            variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                    contains: [
-                        {
-                            match: /''/,
-                        },
-                    ],
-                },
-            ],
-        },
-        i = {
-            begin: /"/,
-            end: /"/,
-            contains: [
-                {
-                    match: /""/,
-                },
-            ],
-        },
+        r = { scope: "string", variants: [{ begin: /'/, end: /'/, contains: [{ match: /''/ }] }] },
+        i = { begin: /"/, end: /"/, contains: [{ match: /""/ }] },
         a = ["true", "false", "unknown"],
         s = ["double precision", "large object", "with timezone", "without timezone"],
         o = [
@@ -142,7 +121,7 @@ e.exports = function (e) {
             "var_samp",
             "width_bucket",
         ],
-        c = [
+        u = [
             "current_catalog",
             "current_date",
             "current_default_transform_group",
@@ -159,7 +138,7 @@ e.exports = function (e) {
             "current_timestamp",
             "localtimestamp",
         ],
-        u = [
+        c = [
             "create table",
             "insert into",
             "primary key",
@@ -178,7 +157,7 @@ e.exports = function (e) {
             "breadth first",
         ],
         d = l,
-        f = [
+        _ = [
             "abs",
             "acos",
             "all",
@@ -554,31 +533,13 @@ e.exports = function (e) {
             "last",
             "view",
         ].filter((e) => !l.includes(e)),
-        p = {
-            scope: "variable",
-            match: /@[a-z0-9][a-z0-9_]*/,
-        },
-        _ = {
-            scope: "operator",
-            match: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/,
-            relevance: 0,
-        },
-        h = {
-            match: t.concat(/\b/, t.either(...d), /\s*\(/),
-            relevance: 0,
-            keywords: {
-                built_in: d,
-            },
-        };
-
+        f = { scope: "variable", match: /@[a-z0-9][a-z0-9_]*/ },
+        p = { scope: "operator", match: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/, relevance: 0 },
+        h = { match: t.concat(/\b/, t.either(...d), /\s*\(/), relevance: 0, keywords: { built_in: d } };
     function m(e) {
         return t.concat(/\b/, t.either(...e.map((e) => e.replace(/\s+/, "\\s+"))), /\b/);
     }
-    let g = {
-        scope: "keyword",
-        match: m(u),
-        relevance: 0,
-    };
+    let g = { scope: "keyword", match: m(c), relevance: 0 };
     return {
         name: "SQL",
         case_insensitive: !0,
@@ -588,27 +549,11 @@ e.exports = function (e) {
             keyword: (function (e, { exceptions: t, when: n } = {}) {
                 let r = n;
                 return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e));
-            })(f, {
-                when: (e) => e.length < 3,
-            }),
+            })(_, { when: (e) => e.length < 3 }),
             literal: a,
             type: o,
-            built_in: c,
+            built_in: u,
         },
-        contains: [
-            {
-                scope: "type",
-                match: m(s),
-            },
-            g,
-            h,
-            p,
-            r,
-            i,
-            e.C_NUMBER_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            n,
-            _,
-        ],
+        contains: [{ scope: "type", match: m(s) }, g, h, f, r, i, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, n, p],
     };
 };

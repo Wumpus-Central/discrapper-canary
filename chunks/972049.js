@@ -1,149 +1,104 @@
-n.d(t, {
-    dL: () => T,
-    nY: () => g,
-}),
-    n(896048),
-    n(321073);
-var r,
-    a,
-    l = n(64700),
-    o = n(21574),
-    i = n(763424),
-    u = n(283014),
-    c = n(992520),
-    s = n(175678),
-    d = n(265337),
-    f = n(517576),
-    h = n(249214),
-    b = n(908665);
-let m = [u.A, c.A, s.A, f.A, d.A, b.A, h.A],
-    g = "data-accessibility-violation",
-    p = "function" == typeof (null == (a = navigator) || null == (r = a.scheduling) ? void 0 : r.isInputPending),
-    v = null,
-    A = null,
-    w = 0,
-    y = 0,
-    x = null,
-    k = {
-        hash: 0,
-        violations: new Map(),
-    },
-    I = () => {},
-    N = document.body;
-
+r.d(t, { dL: () => _, nY: () => b }), r(321073);
+var n = r(64700),
+    a = r(21574),
+    l = r(763424),
+    i = r(283014),
+    o = r(992520),
+    u = r(175678),
+    s = r(265337),
+    c = r(517576),
+    d = r(249214),
+    f = r(908665);
+let h = [i.A, o.A, u.A, c.A, s.A, f.A, d.A],
+    b = "data-accessibility-violation",
+    m = "function" == typeof navigator?.scheduling?.isInputPending,
+    g = null,
+    p = null,
+    v = 0,
+    A = 0,
+    w = null,
+    y = { hash: 0, violations: new Map() },
+    $ = () => {},
+    x = document.body;
+function k() {
+    (v = 0), (A = 0), (w = null), (y = { hash: 0, violations: new Map() });
+}
+function I() {
+    p = requestIdleCallback(E);
+}
+function N() {
+    (w = null), (A = 0), v < h.length - 1 ? ((v += 1), I()) : ($(y), k());
+}
 function E() {
-    (w = 0),
-        (y = 0),
-        (x = null),
-        (k = {
-            hash: 0,
-            violations: new Map(),
-        });
-}
-
-function M() {
-    A = requestIdleCallback(L);
-}
-
-function _() {
-    (x = null), (y = 0), w < m.length - 1 ? ((w += 1), M()) : (I(k), E());
-}
-
-function L() {
-    let e = m[w];
+    let e = h[v];
     if (
-        (null == x && (x = null != e.selector ? Array.from(N.querySelectorAll(e.selector)) : e.select(N)),
-        0 === x.length)
+        (null == w && (w = null != e.selector ? Array.from(x.querySelectorAll(e.selector)) : e.select(x)),
+        0 === w.length)
     )
-        return _();
+        return N();
     let t = performance.now() + 16,
-        n = {
-            includeContinuous: !0,
-        };
-    for (; y < x.length && !(navigator.scheduling.isInputPending(n) || performance.now() >= t); ) {
-        let t = x[y++],
-            n = e.check(t);
-        if (n !== i.o) {
-            var r, a;
-            let l = (0, o.h)(t),
-                i = C(
-                    ""
-                        .concat(n, "_")
-                        .concat(e.id, "_")
-                        .concat(
-                            null == l
-                                ? (function (e) {
-                                      let t = "",
-                                          n = e;
-                                      for (; null != n; ) (t += n.className), (n = n.parentElement);
-                                      return C(t);
-                                  })(t)
-                                : l.join("\n"),
-                        ),
+        r = { includeContinuous: !0 };
+    for (; A < w.length && !(navigator.scheduling.isInputPending(r) || performance.now() >= t); ) {
+        let t = w[A++],
+            r = e.check(t);
+        if (r !== l.o) {
+            let n = (0, a.h)(t),
+                l = L(
+                    `${r}_${e.id}_${
+                        null == n
+                            ? (function (e) {
+                                  let t = "",
+                                      r = e;
+                                  for (; null != r; ) (t += r.className), (r = r.parentElement);
+                                  return L(t);
+                              })(t)
+                            : n.join("\n")
+                    }`,
                 );
-            k.hash = C("".concat(k.hash).concat(i));
-            let u = i.toString(),
-                c = "".concat(e.id, "_").concat(i),
-                s =
-                    null != (r = k.violations.get(e.id))
-                        ? r
-                        : {
-                              rule: e,
-                              instances: new Map(),
-                          },
-                d = null != (a = s.instances.get(c)) ? a : [],
-                f = {
-                    element: t,
-                    message: n,
-                    trace: null != l ? l : [],
-                    hash: u,
-                };
-            d.push(f), s.instances.set(c, d), k.violations.set(e.id, s);
+            y.hash = L(`${y.hash}${l}`);
+            let i = l.toString(),
+                o = `${e.id}_${l}`,
+                u = y.violations.get(e.id) ?? { rule: e, instances: new Map() },
+                s = u.instances.get(o) ?? [],
+                c = { element: t, message: r, trace: n ?? [], hash: i };
+            s.push(c), u.instances.set(o, s), y.violations.set(e.id, u);
         }
     }
-    if (y < x.length - 1) return M();
-    _();
+    if (A < w.length - 1) return I();
+    N();
 }
-let S = (e) => {
-    0 !== e.filter((e) => "attributes" !== e.type || e.attributeName !== g).length &&
-        (E(),
-        null != v && (clearTimeout(v), (v = null)),
-        null != A && (clearTimeout(A), (A = null)),
-        (v = setTimeout(M, 250)));
+let M = (e) => {
+    0 !== e.filter((e) => "attributes" !== e.type || e.attributeName !== b).length &&
+        (k(),
+        null != g && (clearTimeout(g), (g = null)),
+        null != p && (clearTimeout(p), (p = null)),
+        (g = setTimeout(I, 250)));
 };
-
-function T(e, t) {
-    let n = (0, l.useRef)(t);
-    (0, l.useLayoutEffect)(() => {
-        n.current = t;
+function _(e, t) {
+    let r = (0, n.useRef)(t);
+    (0, n.useLayoutEffect)(() => {
+        r.current = t;
     }),
-        (0, l.useLayoutEffect)(() => {
-            if (p && null != e) {
+        (0, n.useLayoutEffect)(() => {
+            if (m && null != e) {
                 let t;
-                (I = n.current), (N = e);
-                let r =
-                    ((t = new MutationObserver(S)).observe(e, {
-                        attributes: !0,
-                        childList: !0,
-                        subtree: !0,
-                    }),
-                    t);
+                ($ = r.current), (x = e);
+                let n = ((t = new MutationObserver(M)).observe(e, { attributes: !0, childList: !0, subtree: !0 }), t);
                 return () => {
-                    (I = () => {}), r.disconnect();
+                    ($ = () => {}), n.disconnect();
                 };
             }
         }, [e]);
 }
-
-function C(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        n = 0xdeadbeef ^ t,
-        r = 0x41c6ce57 ^ t;
+        r = 0xdeadbeef ^ t,
+        n = 0x41c6ce57 ^ t;
     for (let t = 0, a; t < e.length; t++)
-        (n = Math.imul(n ^ (a = e.charCodeAt(t)), 0x9e3779b1)), (r = Math.imul(r ^ a, 0x5f356495));
+        (r = Math.imul(r ^ (a = e.charCodeAt(t)), 0x9e3779b1)), (n = Math.imul(n ^ a, 0x5f356495));
     return (
-        (n = Math.imul(n ^ (n >>> 16), 0x85ebca6b) ^ Math.imul(r ^ (r >>> 13), 0xc2b2ae35)),
-        0x100000000 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 0x85ebca6b) ^ Math.imul(n ^ (n >>> 13), 0xc2b2ae35))) +
-            (n >>> 0)
+        (r = Math.imul(r ^ (r >>> 16), 0x85ebca6b) ^ Math.imul(n ^ (n >>> 13), 0xc2b2ae35)),
+        0x100000000 * (2097151 & (n = Math.imul(n ^ (n >>> 16), 0x85ebca6b) ^ Math.imul(r ^ (r >>> 13), 0xc2b2ae35))) +
+            (r >>> 0)
     );
 }

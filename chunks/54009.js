@@ -1,51 +1,35 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968);
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
-var i = n(417597),
-    a = n(397927),
-    s = n(736653),
-    o = n(775602),
-    l = n(607470),
+var s = n(417597),
+    r = n(397927),
+    a = n(736653),
+    l = n(775602),
+    o = n(607470),
     c = n(676279),
-    u = n(69091),
-    d = n(264996),
-    f = n(837137),
-    p = n(723473),
-    _ = n(728654),
-    h = n(903671);
-let m = (e) => {
+    d = n(69091),
+    u = n(264996),
+    _ = n(837137),
+    m = n(723473),
+    A = n(728654),
+    g = n(903671);
+let E = (e) => {
     let t,
         { className: n } = e,
-        m = (0, i.bG)([o.A], () => o.A.useReducedMotion),
-        g = (0, c.TM)(),
-        E = (0, a.qB1)((0, s.Ay)());
-    if (m) {
-        let e = E ? h.A : f.A;
-        return (0, r.jsx)("div", {
-            className: n,
-            children: (0, r.jsx)("img", {
-                src: e,
-                alt: "",
-            }),
-        });
+        E = (0, s.bG)([l.A], () => l.A.useReducedMotion),
+        h = (0, c.TM)(),
+        p = (0, r.qB1)((0, a.Ay)());
+    if (E) {
+        let e = p ? g.A : _.A;
+        return (0, i.jsx)("div", { className: n, children: (0, i.jsx)("img", { src: e, alt: "" }) });
     }
     return (
-        (t = g ? (E ? p.A : u.A) : E ? _.A : d.A),
-        (0, r.jsx)("div", {
+        (t = h ? (p ? m.A : d.A) : p ? A.A : u.A),
+        (0, i.jsx)("div", {
             className: n,
-            children: (0, r.jsx)(
-                l.A,
-                {
-                    muted: !0,
-                    autoPlay: !0,
-                    playsInline: !0,
-                    loop: !0,
-                    children: (0, r.jsx)("source", {
-                        src: t,
-                    }),
-                },
+            children: (0, i.jsx)(
+                o.A,
+                { muted: !0, autoPlay: !0, playsInline: !0, loop: !0, children: (0, i.jsx)("source", { src: t }) },
                 t,
             ),
         })

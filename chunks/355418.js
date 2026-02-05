@@ -1,6 +1,5 @@
-n.d(t, {
-    c: () => r,
-});
+"use strict";
+n.d(t, { c: () => r });
 class r {
     innerPatternHasChange(e, t) {
         return this.innerPattern(e) !== t;

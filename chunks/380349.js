@@ -1,35 +1,22 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(211401),
-    i = n(500049),
-    a = n(429913),
+n.d(t, { A: () => c });
+var l = n(211401),
+    a = n(500049),
+    r = n(429913),
     s = n(355622),
-    o = n(583846),
-    l = n(360469),
-    c = n(985018);
-
-function u(e) {
+    i = n(583846),
+    o = n(360469),
+    d = n(985018);
+function c(e) {
     let { entry: t } = e,
-        n = (0, a.h)(t.extra.application_id),
-        u = null == n ? void 0 : n.getIconURL(l.iu.LARGE),
-        d = t.extra.activity_name,
-        f = (0, o.Hd)(t) ? c.t.vPg1JT : c.t.rPqqts,
+        n = (0, r.h)(t.extra.application_id),
+        c = n?.getIconURL(o.iu.LARGE),
+        u = t.extra.activity_name,
+        m = (0, i.Hd)(t) ? d.t.vPg1JT : d.t.rPqqts,
         p = {
             onClick: () => {
-                r.R(i.s4.TEXT, s.oU.NORMAL, {
-                    applicationId: t.extra.application_id,
-                });
+                l.R(a.s4.TEXT, s.oU.NORMAL, { applicationId: t.extra.application_id });
             },
-            ariaDescription: c.intl.formatToPlainString(c.t.NTHttN, {
-                title: d,
-            }),
+            ariaDescription: d.intl.formatToPlainString(d.t.NTHttN, { title: u }),
         };
-    return {
-        thumbnailUrl: u,
-        title: d,
-        titleClickable: p,
-        thumbnailClickable: p,
-        userDescription: f,
-    };
+    return { thumbnailUrl: c, title: u, titleClickable: p, thumbnailClickable: p, userDescription: m };
 }

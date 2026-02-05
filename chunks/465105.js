@@ -1,27 +1,19 @@
-a.d(n, {
-    A: () => l,
-}),
-    a(896048);
-var e = a(64700),
-    i = a(198982);
-
+e.d(n, { A: () => l });
+var a = e(64700),
+    i = e(198982);
 function l(t) {
-    let { onSubmit: n, onClose: a } = t,
-        [l, r] = e.useState(!1),
-        [s, c] = e.useState(null),
-        o = e.useCallback(async () => {
+    let { onSubmit: n, onClose: e } = t,
+        [l, r] = a.useState(!1),
+        [s, c] = a.useState(null),
+        o = a.useCallback(async () => {
             if (!l) {
                 r(!0), c(null);
                 try {
-                    await n(), a();
+                    await n(), e();
                 } catch (t) {
                     c(new i.LG(t).getAnyErrorMessage()), r(!1);
                 }
             }
-        }, [a, n, l]);
-    return {
-        submitting: l,
-        errorMessage: s,
-        onSubmit: o,
-    };
+        }, [e, n, l]);
+    return { submitting: l, errorMessage: s, onSubmit: o };
 }

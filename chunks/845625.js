@@ -1,7 +1,5 @@
-n.d(t, {
-    G: () => r,
-    v: () => a,
-});
+"use strict";
+n.d(t, { G: () => r, v: () => a });
 var r = (function (e) {
     return (
         (e[(e.SET_COMPLETED = 1)] = "SET_COMPLETED"),
@@ -11,7 +9,6 @@ var r = (function (e) {
         e
     );
 })({});
-
 function i(e) {
     if (null == e) return null;
     try {
@@ -20,7 +17,6 @@ function i(e) {
         return null;
     }
 }
-
 function a(e) {
     if (null == e) return null;
     let t = i(e);

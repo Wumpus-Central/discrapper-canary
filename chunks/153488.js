@@ -1,89 +1,51 @@
-n.d(t, {
-    A: () => E,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let l = !1,
-    c = !1,
-    u = {},
-    d = null;
-
-function f(e) {
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153);
+let a = !1,
+    s = !1,
+    o = {},
+    l = null;
+function u(e) {
     let { consents: t } = e;
-    null != t && ((u = o({}, u, t)), (c = !0));
+    null != t && ((o = { ...o, ...t }), (s = !0));
 }
-
-function p(e) {
+function c(e) {
     let { consents: t } = e;
-    (u = o({}, t)), (l = !0);
+    (o = { ...t }), (a = !0);
 }
-
+function d(e) {
+    let { consents: t } = e;
+    (o = { ...t }), (a = !0);
+}
 function _(e) {
-    let { consents: t } = e;
-    (u = o({}, t)), (l = !0);
+    l = e.consentRequired;
 }
-
-function h(e) {
-    d = e.consentRequired;
+function f() {
+    l = null;
 }
-
-function m() {
-    d = null;
-}
-class g extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "ConsentStore";
     hasConsented(e) {
-        return null != u[e] && u[e].consented;
+        return null != o[e] && o[e].consented;
     }
     get consents() {
-        return u;
+        return o;
     }
     get fetchedConsents() {
-        return l;
+        return a;
     }
     get receivedConsentsInConnectionOpen() {
-        return c;
+        return s;
     }
     getAuthenticationConsentRequired() {
-        return d;
+        return l;
     }
 }
-s(g, "displayName", "ConsentStore");
-let E = new g(a.h, {
-    CONNECTION_OPEN: f,
-    OVERLAY_INITIALIZE: p,
-    UPDATE_CONSENTS: _,
-    SET_CONSENT_REQUIRED: h,
-    LOGOUT: m,
+let h = new p(i.h, {
+    CONNECTION_OPEN: u,
+    OVERLAY_INITIALIZE: c,
+    UPDATE_CONSENTS: d,
+    SET_CONSENT_REQUIRED: _,
+    LOGOUT: f,
 });

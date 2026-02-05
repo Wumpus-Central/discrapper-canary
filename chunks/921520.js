@@ -4,33 +4,15 @@ var t = "[0-9](_*[0-9])*",
     i = {
         className: "number",
         variants: [
-            {
-                begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b`,
-            },
-            {
-                begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)`,
-            },
-            {
-                begin: `(${n})[fFdD]?\\b`,
-            },
-            {
-                begin: `\\b(${t})[fFdD]\\b`,
-            },
-            {
-                begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b`,
-            },
-            {
-                begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b",
-            },
-            {
-                begin: `\\b0[xX](${r})[lL]?\\b`,
-            },
-            {
-                begin: "\\b0(_*[0-7])*[lL]?\\b",
-            },
-            {
-                begin: "\\b0[bB][01](_*[01])*[lL]?\\b",
-            },
+            { begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
+            { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
+            { begin: `(${n})[fFdD]?\\b` },
+            { begin: `\\b(${t})[fFdD]\\b` },
+            { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
+            { begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b" },
+            { begin: `\\b0[xX](${r})[lL]?\\b` },
+            { begin: "\\b0(_*[0-7])*[lL]?\\b" },
+            { begin: "\\b0[bB][01](_*[01])*[lL]?\\b" },
         ],
         relevance: 0,
     };
@@ -44,49 +26,17 @@ e.exports = function (e) {
         n = {
             className: "keyword",
             begin: /\b(break|continue|return|this)\b/,
-            starts: {
-                contains: [
-                    {
-                        className: "symbol",
-                        begin: /@\w+/,
-                    },
-                ],
-            },
+            starts: { contains: [{ className: "symbol", begin: /@\w+/ }] },
         },
-        r = {
-            className: "symbol",
-            begin: e.UNDERSCORE_IDENT_RE + "@",
-        },
-        a = {
-            className: "subst",
-            begin: /\$\{/,
-            end: /\}/,
-            contains: [e.C_NUMBER_MODE],
-        },
-        s = {
-            className: "variable",
-            begin: "\\$" + e.UNDERSCORE_IDENT_RE,
-        },
+        r = { className: "symbol", begin: e.UNDERSCORE_IDENT_RE + "@" },
+        a = { className: "subst", begin: /\$\{/, end: /\}/, contains: [e.C_NUMBER_MODE] },
+        s = { className: "variable", begin: "\\$" + e.UNDERSCORE_IDENT_RE },
         o = {
             className: "string",
             variants: [
-                {
-                    begin: '"""',
-                    end: '"""(?=[^"])',
-                    contains: [s, a],
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                    illegal: /\n/,
-                    contains: [e.BACKSLASH_ESCAPE],
-                },
-                {
-                    begin: '"',
-                    end: '"',
-                    illegal: /\n/,
-                    contains: [e.BACKSLASH_ESCAPE, s, a],
-                },
+                { begin: '"""', end: '"""(?=[^"])', contains: [s, a] },
+                { begin: "'", end: "'", illegal: /\n/, contains: [e.BACKSLASH_ESCAPE] },
+                { begin: '"', end: '"', illegal: /\n/, contains: [e.BACKSLASH_ESCAPE, s, a] },
             ],
         };
     a.contains.push(o);
@@ -97,43 +47,23 @@ e.exports = function (e) {
                 e.UNDERSCORE_IDENT_RE +
                 ")?",
         },
-        c = {
+        u = {
             className: "meta",
             begin: "@" + e.UNDERSCORE_IDENT_RE,
-            contains: [
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    contains: [
-                        e.inherit(o, {
-                            className: "string",
-                        }),
-                        "self",
-                    ],
-                },
-            ],
+            contains: [{ begin: /\(/, end: /\)/, contains: [e.inherit(o, { className: "string" }), "self"] }],
         },
-        u = i,
-        d = e.COMMENT("/\\*", "\\*/", {
-            contains: [e.C_BLOCK_COMMENT_MODE],
-        }),
-        f = {
+        c = i,
+        d = e.COMMENT("/\\*", "\\*/", { contains: [e.C_BLOCK_COMMENT_MODE] }),
+        _ = {
             variants: [
-                {
-                    className: "type",
-                    begin: e.UNDERSCORE_IDENT_RE,
-                },
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    contains: [],
-                },
+                { className: "type", begin: e.UNDERSCORE_IDENT_RE },
+                { begin: /\(/, end: /\)/, contains: [] },
             ],
         },
-        p = f;
+        f = _;
     return (
-        (p.variants[1].contains = [f]),
-        (f.variants[1].contains = [p]),
+        (f.variants[1].contains = [_]),
+        (_.variants[1].contains = [f]),
         {
             name: "Kotlin",
             aliases: ["kt", "kts"],
@@ -141,19 +71,14 @@ e.exports = function (e) {
             contains: [
                 e.COMMENT("/\\*\\*", "\\*/", {
                     relevance: 0,
-                    contains: [
-                        {
-                            className: "doctag",
-                            begin: "@[A-Za-z]+",
-                        },
-                    ],
+                    contains: [{ className: "doctag", begin: "@[A-Za-z]+" }],
                 }),
                 e.C_LINE_COMMENT_MODE,
                 d,
                 n,
                 r,
                 l,
-                c,
+                u,
                 {
                     className: "function",
                     beginKeywords: "fun",
@@ -169,13 +94,7 @@ e.exports = function (e) {
                             relevance: 0,
                             contains: [e.UNDERSCORE_TITLE_MODE],
                         },
-                        {
-                            className: "type",
-                            begin: /</,
-                            end: />/,
-                            keywords: "reified",
-                            relevance: 0,
-                        },
+                        { className: "type", begin: /</, end: />/, keywords: "reified", relevance: 0 },
                         {
                             className: "params",
                             begin: /\(/,
@@ -188,13 +107,13 @@ e.exports = function (e) {
                                     begin: /:/,
                                     end: /[=,\/]/,
                                     endsWithParent: !0,
-                                    contains: [f, e.C_LINE_COMMENT_MODE, d],
+                                    contains: [_, e.C_LINE_COMMENT_MODE, d],
                                     relevance: 0,
                                 },
                                 e.C_LINE_COMMENT_MODE,
                                 d,
                                 l,
-                                c,
+                                u,
                                 o,
                                 e.C_NUMBER_MODE,
                             ],
@@ -204,45 +123,23 @@ e.exports = function (e) {
                 },
                 {
                     begin: [/class|interface|trait/, /\s+/, e.UNDERSCORE_IDENT_RE],
-                    beginScope: {
-                        3: "title.class",
-                    },
+                    beginScope: { 3: "title.class" },
                     keywords: "class interface trait",
                     end: /[:\{(]|$/,
                     excludeEnd: !0,
                     illegal: "extends implements",
                     contains: [
-                        {
-                            beginKeywords: "public protected internal private constructor",
-                        },
+                        { beginKeywords: "public protected internal private constructor" },
                         e.UNDERSCORE_TITLE_MODE,
-                        {
-                            className: "type",
-                            begin: /</,
-                            end: />/,
-                            excludeBegin: !0,
-                            excludeEnd: !0,
-                            relevance: 0,
-                        },
-                        {
-                            className: "type",
-                            begin: /[,:]\s*/,
-                            end: /[<\(,){\s]|$/,
-                            excludeBegin: !0,
-                            returnEnd: !0,
-                        },
+                        { className: "type", begin: /</, end: />/, excludeBegin: !0, excludeEnd: !0, relevance: 0 },
+                        { className: "type", begin: /[,:]\s*/, end: /[<\(,){\s]|$/, excludeBegin: !0, returnEnd: !0 },
                         l,
-                        c,
+                        u,
                     ],
                 },
                 o,
-                {
-                    className: "meta",
-                    begin: "^#!/usr/bin/env",
-                    end: "$",
-                    illegal: "\n",
-                },
-                u,
+                { className: "meta", begin: "^#!/usr/bin/env", end: "$", illegal: "\n" },
+                c,
             ],
         }
     );

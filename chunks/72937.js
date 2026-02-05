@@ -1,6 +1,4 @@
-t.d(e, {
-    A: () => l,
-});
+t.d(e, { A: () => l });
 var i = t(981737),
     u = {
         narrow: ["T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J"],
@@ -86,18 +84,8 @@ let l = {
             return a - 1;
         },
     }),
-    month: (0, i.A)({
-        values: u,
-        defaultWidth: "wide",
-        formattingValues: n,
-        defaultFormattingWidth: "wide",
-    }),
-    day: (0, i.A)({
-        values: r,
-        defaultWidth: "wide",
-        formattingValues: o,
-        defaultFormattingWidth: "wide",
-    }),
+    month: (0, i.A)({ values: u, defaultWidth: "wide", formattingValues: n, defaultFormattingWidth: "wide" }),
+    day: (0, i.A)({ values: r, defaultWidth: "wide", formattingValues: o, defaultFormattingWidth: "wide" }),
     dayPeriod: (0, i.A)({
         values: {
             narrow: {

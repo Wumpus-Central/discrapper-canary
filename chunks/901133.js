@@ -1,92 +1,37 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => C });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(990078),
     o = n(397927),
-    c = n(793574),
-    u = n(235986),
-    d = n(342296),
-    p = n(636585),
-    f = n(975571),
-    h = n(42473),
-    A = n(994314),
-    g = n(485599),
-    m = n(652215),
-    b = n(985018),
-    _ = n(308685);
-
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-class I extends i.PureComponent {
+    d = n(793574),
+    c = n(235986),
+    u = n(342296),
+    A = n(636585),
+    h = n(975571),
+    _ = n(42473),
+    m = n(994314),
+    p = n(485599),
+    g = n(652215),
+    E = n(985018),
+    f = n(308685);
+class I extends r.PureComponent {
+    partyMemberAvatarRef = r.createRef();
+    partyMemberOverflowRef = r.createRef();
     isHost() {
         let { currentUser: e, host: t } = this.props;
-        return e.id === (null == t ? void 0 : t.id);
+        return e.id === t?.id;
     }
     renderTitle() {
-        return (0, r.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             children: [
-                (0, r.jsx)(g.A, {
+                (0, i.jsx)(p.A, {
                     children: this.isHost()
-                        ? b.intl.formatToPlainString(b.t["6UJ7mh"], {
-                              count: this.props.party.length,
-                          })
-                        : b.intl.string(b.t.RZufbH),
+                        ? E.intl.formatToPlainString(E.t["6UJ7mh"], { count: this.props.party.length })
+                        : E.intl.string(E.t.RZufbH),
                 }),
-                (0, r.jsx)(A.A, {
-                    children: b.intl.string(b.t["0ZHLIi"]),
-                }),
+                (0, i.jsx)(m.A, { children: E.intl.string(E.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -94,111 +39,95 @@ class I extends i.PureComponent {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, r.jsx)(h.A, {
-                  tooltipText: b.intl.string(b.t.LeZSpz),
-                  onClick: e,
-                  icon: o.PGe,
-              });
+            : (0, i.jsx)(_.A, { tooltipText: E.intl.string(E.t.LeZSpz), onClick: e, icon: o.PGe });
     }
+    renderPartyMember = (e, t) => {
+        let n;
+        if (null == e) return null;
+        let { host: a, onUserContextMenu: c } = this.props;
+        return (
+            (n = a?.id === e.id ? E.intl.string(E.t["N9bqD+"]) : E.intl.string(E.t.Z2Y4c9)),
+            (0, i.jsx)(
+                u.A,
+                {
+                    targetElementRef: this.partyMemberAvatarRef,
+                    user: e,
+                    newAnalyticsLocations: [d.A.AVATAR],
+                    position: "top",
+                    align: "center",
+                    clickTrap: !0,
+                    children: (a) =>
+                        (0, i.jsx)(s.m, {
+                            text: n,
+                            children: (0, r.createElement)(o.euF, {
+                                ...a,
+                                key: e.id,
+                                src: e.getAvatarURL(void 0, 24),
+                                size: o._3J.SIZE_24,
+                                className: l()(f.my, t),
+                                "aria-label": e.username,
+                                onContextMenu: (t) => void (null != e && c?.(t, e)),
+                                avatarContentRef: this.partyMemberAvatarRef,
+                            }),
+                        }),
+                },
+                e.id,
+            )
+        );
+    };
+    renderPartyMemberOverflow = (e, t, n) => {
+        let { renderOverflowPopout: r } = this.props;
+        return (0, i.jsx)(
+            o.YNO,
+            {
+                renderPopout: r,
+                targetElementRef: this.partyMemberOverflowRef,
+                children: (n) =>
+                    (0, i.jsx)(s.m, {
+                        text: E.intl.string(E.t.Zf4NPe),
+                        children: (0, i.jsx)("div", {
+                            ...n,
+                            ref: this.partyMemberOverflowRef,
+                            className: l()(f.ju, t),
+                            children: e,
+                        }),
+                    }),
+            },
+            n,
+        );
+    };
     renderHelpIcon() {
         return this.isHost()
-            ? (0, r.jsx)(h.A, {
-                  tooltipText: b.intl.string(b.t.U7N2Hs),
+            ? (0, i.jsx)(_.A, {
+                  tooltipText: E.intl.string(E.t.U7N2Hs),
                   onClick: () => {
-                      window.open(f.A.getArticleURL(m.MVz.SPOTIFY_CONNECTION), "_blank");
+                      window.open(h.A.getArticleURL(g.MVz.SPOTIFY_CONNECTION), "_blank");
                   },
                   icon: o.mir,
               })
             : null;
     }
     render() {
-        return (0, r.jsxs)("div", {
-            className: _.Jh,
+        return (0, i.jsxs)("div", {
+            className: f.Jh,
             children: [
                 this.renderTitle(),
-                (0, r.jsx)(u.A, {
-                    justify: u.A.Justify.END,
-                    className: _.Hg,
-                    children: (0, r.jsx)(p.A, {
+                (0, i.jsx)(c.A, {
+                    justify: c.A.Justify.END,
+                    className: f.Hg,
+                    children: (0, i.jsx)(A.A, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow,
                     }),
                 }),
-                (0, r.jsxs)("div", {
-                    className: _.Pt,
+                (0, i.jsxs)("div", {
+                    className: f.Pt,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            E(this, "partyMemberAvatarRef", i.createRef()),
-            E(this, "partyMemberOverflowRef", i.createRef()),
-            E(this, "renderPartyMember", (e, t) => {
-                let n;
-                if (null == e) return null;
-                let { host: l, onUserContextMenu: u } = this.props;
-                return (
-                    (n =
-                        (null == l ? void 0 : l.id) === e.id
-                            ? b.intl.string(b.t["N9bqD+"])
-                            : b.intl.string(b.t.Z2Y4c9)),
-                    (0, r.jsx)(
-                        d.A,
-                        {
-                            targetElementRef: this.partyMemberAvatarRef,
-                            user: e,
-                            newAnalyticsLocations: [c.A.AVATAR],
-                            position: "top",
-                            align: "center",
-                            clickTrap: !0,
-                            children: (l) =>
-                                (0, r.jsx)(s.m, {
-                                    text: n,
-                                    children: (0, i.createElement)(
-                                        o.euF,
-                                        y(O({}, l), {
-                                            key: e.id,
-                                            src: e.getAvatarURL(void 0, 24),
-                                            size: o._3J.SIZE_24,
-                                            className: a()(_.my, t),
-                                            "aria-label": e.username,
-                                            onContextMenu: (t) => void (null != e && (null == u || u(t, e))),
-                                            avatarContentRef: this.partyMemberAvatarRef,
-                                        }),
-                                    ),
-                                }),
-                        },
-                        e.id,
-                    )
-                );
-            }),
-            E(this, "renderPartyMemberOverflow", (e, t, n) => {
-                let { renderOverflowPopout: i } = this.props;
-                return (0, r.jsx)(
-                    o.YNO,
-                    {
-                        renderPopout: i,
-                        targetElementRef: this.partyMemberOverflowRef,
-                        children: (n) =>
-                            (0, r.jsx)(s.m, {
-                                text: b.intl.string(b.t.Zf4NPe),
-                                children: (0, r.jsx)(
-                                    "div",
-                                    y(O({}, n), {
-                                        ref: this.partyMemberOverflowRef,
-                                        className: a()(_.ju, t),
-                                        children: e,
-                                    }),
-                                ),
-                            }),
-                    },
-                    n,
-                );
-            });
-    }
 }
-let v = I;
+let C = I;

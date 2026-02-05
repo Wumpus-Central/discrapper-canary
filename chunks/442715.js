@@ -1,3 +1,4 @@
+"use strict";
 async function r(e, t = {}) {
     let { width: n, height: i } = getImageSize(e, t),
         a = await cloneNode(e, t, !0);

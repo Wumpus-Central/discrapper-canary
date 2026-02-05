@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n, r) {
         var i = {
             m: ["eng Minutt", "enger Minutt"],
@@ -11,15 +12,12 @@
         };
         return t ? i[n][0] : i[n][1];
     }
-
     function n(e) {
         return i(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e;
     }
-
     function r(e) {
         return i(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e;
     }
-
     function i(e) {
         if (isNaN((e = parseInt(e, 10)))) return !1;
         if (e < 0) return !0;
@@ -83,9 +81,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

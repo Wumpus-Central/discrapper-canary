@@ -1,12 +1,9 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(201327),
     s = n(539541);
-
 function o(e) {
     null != e && e.getTracks().forEach((e) => e.stop());
 }
@@ -27,26 +24,14 @@ async function l(e) {
         return null;
     }
 }
-
-function c(e) {
-    let { deviceId: t, width: n, height: c, disabled: u } = e,
-        [d, f] = i.useState();
+function u(e) {
+    let { deviceId: t, width: n, height: u, disabled: c } = e,
+        [d, _] = i.useState();
     return (
         i.useEffect(() => {
-            let e = l({
-                deviceId: t,
-                width: n,
-                height: c,
-                disabled: u,
-            }).then((e) => {
+            let e = l({ deviceId: t, width: n, height: u, disabled: c }).then((e) => {
                 let t = null != e ? (0, a.ju)(e) : null;
-                return (
-                    f(t),
-                    {
-                        stream: e,
-                        streamId: t,
-                    }
-                );
+                return _(t), { stream: e, streamId: t };
             });
             return () => {
                 e.then((e) => {
@@ -54,26 +39,10 @@ function c(e) {
                     o(t), null != n && (0, a.it)(n);
                 });
             };
-        }, [t, n, c, u]),
+        }, [t, n, u, c]),
         null == d
-            ? (0, r.jsx)("div", {
-                  className: "media-engine-video",
-                  style: {
-                      width: n,
-                      height: c,
-                  },
-              })
-            : (0, r.jsx)(s.A, {
-                  streamId: d,
-                  style: {
-                      width: n,
-                      height: c,
-                  },
-              })
+            ? (0, r.jsx)("div", { className: "media-engine-video", style: { width: n, height: u } })
+            : (0, r.jsx)(s.A, { streamId: d, style: { width: n, height: u } })
     );
 }
-c.defaultProps = {
-    disabled: !1,
-    width: 320,
-    height: 180,
-};
+u.defaultProps = { disabled: !1, width: 320, height: 180 };

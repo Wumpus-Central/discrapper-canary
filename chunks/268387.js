@@ -1,73 +1,46 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => A,
-});
-var i,
-    a = n(735438),
-    s = n.n(a),
-    o = n(311907),
-    l = n(506774),
-    c = n(73153),
+n.d(t, { A: () => I });
+var i = n(735438),
+    a = n.n(i),
+    s = n(311907),
+    o = n(506774),
+    l = n(73153),
     u = n(652215);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = "GameLibraryViewStore",
-    p = 200,
+let c = "GameLibraryViewStore",
+    d = 200,
     _ = u.tSW.ASCENDING,
-    h = u.DpB.LAST_PLAYED,
-    m = !1,
-    g = s().debounce(() => {
-        (m = !1), O.emitChange();
-    }, p);
-
-function E(e) {
+    f = u.DpB.LAST_PLAYED,
+    p = !1,
+    h = a().debounce(() => {
+        (p = !1), A.emitChange();
+    }, d);
+function m(e) {
     let { key: t, isKeyboardEvent: n } = e;
-    n && ((m = !0), g()), (r = t);
+    n && ((p = !0), h()), (r = t);
 }
-
-function b(e) {
+function g(e) {
     let { direction: t, key: n } = e;
-    (_ = t),
-        (h = n),
-        l.w.set(f, {
-            sortDirection: _,
-            sortKey: h,
-        });
+    (_ = t), (f = n), o.w.set(c, { sortDirection: _, sortKey: f });
 }
-class y extends (i = o.Ay.Store) {
+class E extends s.Ay.Store {
+    static displayName = "GameLibraryViewStore";
     initialize() {
-        var e;
-        let t = null != (e = l.w.get(f)) ? e : {};
-        null != t.sortDirection && null != t.sortKey && ((_ = t.sortDirection), (h = t.sortKey));
+        let e = o.w.get(c) ?? {};
+        null != e.sortDirection && null != e.sortKey && ((_ = e.sortDirection), (f = e.sortKey));
     }
     get sortDirection() {
         return _;
     }
     get sortKey() {
-        return h;
+        return f;
     }
     get activeRowKey() {
         return r;
     }
     get isNavigatingByKeyboard() {
-        return m;
+        return p;
     }
 }
-d(y, "displayName", "GameLibraryViewStore");
-let O = new y(c.h, {
-        LIBRARY_TABLE_SORT_UPDATE: b,
-        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E,
-    }),
-    A = O;
+let A = new E(l.h, { LIBRARY_TABLE_SORT_UPDATE: g, LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: m }),
+    I = A;

@@ -1,40 +1,22 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(315069);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a extends r.A {
-    toString() {
-        return this.name;
-    }
+class i extends r.A {
+    id;
+    type;
+    name;
+    revoked;
+    integrations;
+    visibility;
+    friendSync;
+    verified;
+    showActivity;
+    twoWayLink;
+    accessToken;
+    metadata;
+    metadataVisibility;
     constructor(e) {
         super(),
-            i(this, "id", void 0),
-            i(this, "type", void 0),
-            i(this, "name", void 0),
-            i(this, "revoked", void 0),
-            i(this, "integrations", void 0),
-            i(this, "visibility", void 0),
-            i(this, "friendSync", void 0),
-            i(this, "verified", void 0),
-            i(this, "showActivity", void 0),
-            i(this, "twoWayLink", void 0),
-            i(this, "accessToken", void 0),
-            i(this, "metadata", void 0),
-            i(this, "metadataVisibility", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.name = e.name),
@@ -48,5 +30,8 @@ class a extends r.A {
             (this.twoWayLink = e.two_way_link || !1),
             (this.metadata = e.metadata || null),
             (this.metadataVisibility = e.metadata_visibility || 0);
+    }
+    toString() {
+        return this.name;
     }
 }

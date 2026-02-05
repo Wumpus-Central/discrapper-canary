@@ -1,90 +1,38 @@
-n.d(t, {
-    Ay: () => L,
-    Mm: () => G,
-    RA: () => P,
-    j5: () => C,
-}),
-    n(457529);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    s = n.n(i),
+n.d(t, { Ay: () => b, Mm: () => v, RA: () => C, j5: () => L });
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(883885),
-    o = n.n(a),
-    c = n(311907),
-    d = n(397927),
+    d = n.n(a),
+    o = n(311907),
+    c = n(397927),
     u = n(964486),
     m = n(775602),
-    g = n(58149),
-    f = n(260509),
-    h = n(954571),
-    N = n(486020),
-    I = n(515718),
-    p = n(591552),
-    O = n(713125),
-    S = n(71876),
-    E = n(739408),
-    A = n(113473),
-    x = n(694268),
-    _ = n(896018),
-    j = n(652215),
-    T = n(985018),
-    b = n(986700);
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function D(e, t) {
+    N = n(58149),
+    h = n(260509),
+    I = n(954571),
+    g = n(486020),
+    A = n(515718),
+    E = n(591552),
+    S = n(713125),
+    x = n(71876),
+    _ = n(739408),
+    T = n(113473),
+    f = n(694268),
+    p = n(896018),
+    D = n(652215),
+    O = n(985018),
+    G = n(986700);
+function j(e) {
+    let t = (0, o.bG)([m.A], () => m.A.useReducedMotion),
+        n = l.useRef(null);
     return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e) {
-    let t = (0, c.bG)([m.A], () => m.A.useReducedMotion),
-        n = r.useRef(null);
-    return (
-        r.useEffect(() => {
-            let l;
+        l.useEffect(() => {
+            let i;
             return (
                 null != n.current &&
-                    (l = o().loadAnimation({
+                    (i = d().loadAnimation({
                         container: n.current,
                         renderer: "svg",
                         loop: !0,
@@ -92,164 +40,120 @@ function y(e) {
                         animationData: JSON.parse(JSON.stringify(e)),
                     })),
                 () => {
-                    null == l || l.destroy();
+                    i?.destroy();
                 }
             );
         }, [n, t, e]),
         n
     );
 }
-
-function G() {
-    let e = y(A);
-    return (0, l.jsx)("div", {
-        className: s()(b.vV, b.KP),
-        children: (0, l.jsx)("div", {
-            ref: e,
-            className: b.yi,
-        }),
-    });
+function v() {
+    let e = j(T);
+    return (0, i.jsx)("div", { className: r()(G.vV, G.KP), children: (0, i.jsx)("div", { ref: e, className: G.yi }) });
 }
-
-function P() {
-    let e = y(_);
-    return (0, l.jsx)("div", {
-        className: s()(b.M8, b.KP),
-        children: (0, l.jsx)("div", {
-            ref: e,
-            className: b.D8,
-        }),
-    });
+function C() {
+    let e = j(p);
+    return (0, i.jsx)("div", { className: r()(G.M8, G.KP), children: (0, i.jsx)("div", { ref: e, className: G.D8 }) });
 }
-
-function C(e) {
-    let { guild: t, mainIslandClassName: n, balloonDogClassName: i } = e,
-        a = (0, c.bG)([m.A], () => m.A.useReducedMotion),
-        d = r.useRef(null),
-        u = y(E),
-        g = N.Ay.getGuildIconURL({
-            id: t.id,
-            icon: t.icon,
-            size: 96,
-        });
+function L(e) {
+    let { guild: t, mainIslandClassName: n, balloonDogClassName: s } = e,
+        a = (0, o.bG)([m.A], () => m.A.useReducedMotion),
+        c = l.useRef(null),
+        u = j(_),
+        N = g.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 96 });
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             let e;
             return (
-                null != d.current && null != g
-                    ? (0, I.S4)(g).then((t) => {
-                          let n = (0, S.A)(JSON.parse(JSON.stringify(x)), g, t[0]);
-                          e = o().loadAnimation({
-                              container: d.current,
+                null != c.current && null != N
+                    ? (0, A.S4)(N).then((t) => {
+                          let n = (0, x.A)(JSON.parse(JSON.stringify(f)), N, t[0]);
+                          e = d().loadAnimation({
+                              container: c.current,
                               renderer: "svg",
                               loop: !0,
                               autoplay: !a,
                               animationData: n,
                           });
                       })
-                    : null != d.current &&
-                      (e = o().loadAnimation({
-                          container: d.current,
+                    : null != c.current &&
+                      (e = d().loadAnimation({
+                          container: c.current,
                           renderer: "svg",
                           loop: !0,
                           autoplay: !a,
-                          animationData: JSON.parse(JSON.stringify(x)),
+                          animationData: JSON.parse(JSON.stringify(f)),
                       })),
                 () => {
-                    null == e || e.destroy();
+                    e?.destroy();
                 }
             );
-        }, [g, d, a]),
-        (0, l.jsxs)("div", {
-            className: s()(b.tu, b.fV),
+        }, [N, c, a]),
+        (0, i.jsxs)("div", {
+            className: r()(G.tu, G.fV),
             children: [
-                (0, l.jsx)("div", {
-                    className: s()(b.Sb, i),
-                    ref: u,
-                }),
-                (0, l.jsx)("div", {
-                    className: s()(b.$h, n),
-                    ref: d,
-                }),
+                (0, i.jsx)("div", { className: r()(G.Sb, s), ref: u }),
+                (0, i.jsx)("div", { className: r()(G.$h, n), ref: c }),
             ],
         })
     );
 }
-
-function L(e) {
-    let { guild: t, onStart: n, onboardingStatus: i, headerId: s, disableTracking: a } = e,
-        o = (0, c.bG)([p.A], () => p.A.isLoading()),
-        m = r.useRef(!1);
-    r.useEffect(() => {
+function b(e) {
+    let { guild: t, onStart: n, onboardingStatus: s, headerId: r, disableTracking: a } = e,
+        d = (0, o.bG)([E.A], () => E.A.isLoading()),
+        m = l.useRef(!1);
+    l.useEffect(() => {
         if (!a)
             return (
-                h.default.track(
-                    j.HAw.GUILD_ONBOARDING_STEP_VIEWED,
-                    D(v({}, (0, g.H$)(t.id)), {
-                        step: -1,
-                        required: !0,
-                    }),
-                ),
+                I.default.track(D.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, N.H$)(t.id), step: -1, required: !0 }),
                 () => {
-                    h.default.track(
-                        j.HAw.GUILD_ONBOARDING_STEP_COMPLETED,
-                        D(v({}, (0, g.H$)(t.id)), {
-                            step: -1,
-                            skipped: !m.current,
-                            is_final_step: !1,
-                            in_onboarding: !0,
-                        }),
-                    );
+                    I.default.track(D.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+                        ...(0, N.H$)(t.id),
+                        step: -1,
+                        skipped: !m.current,
+                        is_final_step: !1,
+                        in_onboarding: !0,
+                    });
                 }
             );
     }, [t.id, m, a]);
-    let N = r.useMemo(() => (0, f.Iv)(t, 135, !1, !0), [t]);
+    let g = l.useMemo(() => (0, h.Iv)(t, 135, !1, !0), [t]);
     return (
         (0, u.Ay)(() => {
             setTimeout(() => {
                 (m.current = !0), n();
             }, 3e3);
         }),
-        (0, l.jsx)("div", {
-            className: b.PY,
-            children: (0, l.jsxs)("div", {
-                className: b.Fo,
+        (0, i.jsx)("div", {
+            className: G.PY,
+            children: (0, i.jsxs)("div", {
+                className: G.Fo,
                 children: [
-                    (0, l.jsx)("div", {
-                        children: (0, l.jsx)("img", {
-                            className: b.D3,
-                            src: N,
-                            alt: "",
-                        }),
-                    }),
-                    (0, l.jsxs)("div", {
-                        className: b.rD,
+                    (0, i.jsx)("div", { children: (0, i.jsx)("img", { className: G.D3, src: g, alt: "" }) }),
+                    (0, i.jsxs)("div", {
+                        className: G.rD,
                         children: [
-                            (0, l.jsx)(d.Text, {
-                                className: b.CH,
+                            (0, i.jsx)(c.Text, {
+                                className: G.CH,
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                id: s,
-                                children: T.intl.format(T.t["j59F/c"], {
-                                    guildName: null == t ? void 0 : t.name,
-                                }),
+                                id: r,
+                                children: O.intl.format(O.t["j59F/c"], { guildName: t?.name }),
                             }),
-                            o
-                                ? (0, l.jsx)(d.y$y, {
-                                      className: b.__invalid_subtitle,
-                                  })
-                                : i === O.$o.NOT_APPLICABLE
-                                  ? (0, l.jsx)(d.Heading, {
-                                        className: b.__invalid_subtitle,
+                            d
+                                ? (0, i.jsx)(c.y$y, { className: G.__invalid_subtitle })
+                                : s === S.$o.NOT_APPLICABLE
+                                  ? (0, i.jsx)(c.Heading, {
+                                        className: G.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: T.intl.string(T.t.Q5ibtV),
+                                        children: O.intl.string(O.t.Q5ibtV),
                                     })
-                                  : (0, l.jsx)(d.Heading, {
-                                        className: b.__invalid_subtitle,
+                                  : (0, i.jsx)(c.Heading, {
+                                        className: G.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: T.intl.string(T.t["Alcl/e"]),
+                                        children: O.intl.string(O.t["Alcl/e"]),
                                     }),
                         ],
                     }),

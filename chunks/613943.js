@@ -1,20 +1,15 @@
-l.d(t, {
-    A: () => s,
-}),
-    l(321073),
-    l(896048);
-var r = l(554146),
-    n = l(379848),
-    i = l(553103);
-
+n.d(t, { A: () => s }), n(321073);
+var r = n(554146),
+    l = n(379848),
+    i = n(553103);
 function s(e) {
-    let { shouldShow: t, notificationConfig: l } = (0, i.A)(e, "GuildPowerupNotificationContainer"),
+    let { shouldShow: t, notificationConfig: n } = (0, i.A)(e, "GuildPowerupNotificationContainer"),
         s = [];
-    t && null != l && s.push(r.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [o, a] = (0, n.ww)(s, e);
+    t && null != n && s.push(r.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [o, a] = (0, l.ww)(s, e);
     return {
         shouldShow: null != o && o === r.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
-        notificationConfig: l,
+        notificationConfig: n,
         markAsDismissed: a,
     };
 }

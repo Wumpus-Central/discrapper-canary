@@ -1,147 +1,117 @@
-n.d(t, {
-    default: () => O,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(91871),
-    s = n.n(a),
-    o = n(158954),
-    l = n(311907),
-    c = n(397927),
-    u = n(398590),
-    d = n(263063),
-    f = n(976860),
-    p = n(71393),
-    _ = n(711014),
-    h = n(473145),
-    m = n(652215),
-    g = n(985018),
-    E = n(197161);
-
-function b(e) {
-    let { setQuery: t, query: n } = e;
-    return (0, r.jsx)(c.IWV, {
-        placeholder: g.intl.string(g.t.vf3ZTa),
-        "aria-label": g.intl.string(g.t.vf3ZTa),
-        query: n,
-        onChange: t,
-        onClear: () => t(""),
+l.d(e, { default: () => f }), l(321073);
+var n = l(627968),
+    i = l(64700),
+    s = l(91871),
+    r = l.n(s),
+    a = l(158954),
+    o = l(311907),
+    d = l(397927),
+    u = l(398590),
+    c = l(263063),
+    x = l(976860),
+    m = l(71393),
+    h = l(711014),
+    C = l(473145),
+    g = l(652215),
+    j = l(985018),
+    p = l(197161);
+function v(t) {
+    let { setQuery: e, query: l } = t;
+    return (0, n.jsx)(d.IWV, {
+        placeholder: j.intl.string(j.t.vf3ZTa),
+        "aria-label": j.intl.string(j.t.vf3ZTa),
+        query: l,
+        onChange: e,
+        onClear: () => e(""),
     });
 }
-
-function y(e) {
-    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: i, onSelectGuild: a, query: o } = e,
-        b = (0, l.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
-        y = (0, l.yK)([p.A], () =>
-            b.reduce((e, t) => {
-                let r = p.A.getGuild(t);
+function S(t) {
+    let { isTransfer: e = !1, selectedSlotGuilds: l, onClose: i, onSelectGuild: s, query: a } = t,
+        v = (0, o.bG)([h.Ay], () => h.Ay.getFlattenedGuildIds()),
+        S = (0, o.yK)([m.A], () =>
+            v.reduce((t, e) => {
+                let n = m.A.getGuild(e);
                 return (
-                    null == r ||
-                        (null != n && n.some((e) => e.id === t)) ||
-                        ((o.length <= 0 || s()(o.toLowerCase(), null == r ? void 0 : r.name.toLowerCase())) &&
-                            e.push(r)),
-                    e
+                    null == n ||
+                        (null != l && l.some((t) => t.id === e)) ||
+                        ((a.length <= 0 || r()(a.toLowerCase(), n?.name.toLowerCase())) && t.push(n)),
+                    t
                 );
             }, []),
         );
-
-    function O() {
-        i(), (0, u.jH)(), (0, f.pX)(m.BVt.GUILD_DISCOVERY);
+    function f() {
+        i(), (0, u.jH)(), (0, x.pX)(g.BVt.GUILD_DISCOVERY);
     }
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            0 === y.length &&
-                (0, r.jsx)("div", {
-                    className: E.Kl,
-                    children: (0, r.jsx)(c.Text, {
+            0 === S.length &&
+                (0, n.jsx)("div", {
+                    className: p.Kl,
+                    children: (0, n.jsx)(d.Text, {
                         variant: "text-md/normal",
                         children:
-                            0 === b.length
-                                ? g.intl.format(g.t["E3tB6+"], {
-                                      publicGuildDirectoryHook: (e, t) =>
-                                          (0, r.jsx)(
-                                              c.DUT,
-                                              {
-                                                  onClick: O,
-                                                  tag: "a",
-                                                  children: e,
-                                              },
-                                              t,
-                                          ),
+                            0 === v.length
+                                ? j.intl.format(j.t["E3tB6+"], {
+                                      publicGuildDirectoryHook: (t, e) =>
+                                          (0, n.jsx)(d.DUT, { onClick: f, tag: "a", children: t }, e),
                                   })
-                                : g.intl.string(g.t.w3GLl9),
+                                : j.intl.string(j.t.w3GLl9),
                     }),
                 }),
-            y.map((e) =>
-                (0, r.jsxs)(
-                    c.DUT,
+            S.map((t) =>
+                (0, n.jsxs)(
+                    d.DUT,
                     {
-                        className: E.Ss,
+                        className: p.Ss,
                         onClick: () => {
-                            a(e);
+                            s(t);
                         },
                         children: [
-                            (0, r.jsx)(d.A, {
-                                className: E.Bq,
-                                guild: e,
-                                size: d.A.Sizes.SMALL,
-                            }),
-                            (0, r.jsxs)("div", {
-                                className: E.Vi,
+                            (0, n.jsx)(c.A, { className: p.Bq, guild: t, size: c.A.Sizes.SMALL }),
+                            (0, n.jsxs)("div", {
+                                className: p.Vi,
                                 children: [
-                                    (0, r.jsx)(c.Text, {
-                                        className: E.tD,
+                                    (0, n.jsx)(d.Text, {
+                                        className: p.tD,
                                         variant: "text-md/normal",
-                                        children: e.name,
+                                        children: t.name,
                                     }),
-                                    (0, r.jsx)(c.Text, {
-                                        className: E.w2,
+                                    (0, n.jsx)(d.Text, {
+                                        className: p.w2,
                                         color: "text-muted",
                                         variant: "text-xs/normal",
-                                        children: (0, h.gb)(e.premiumTier),
+                                        children: (0, C.gb)(t.premiumTier),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(c.Text, {
-                                className: E.qW,
+                            (0, n.jsx)(d.Text, {
+                                className: p.qW,
                                 color: "always-white",
                                 variant: "text-sm/medium",
-                                children: t ? g.intl.string(g.t.dUgaF8) : g.intl.string(g.t.Uj0md3),
+                                children: e ? j.intl.string(j.t.dUgaF8) : j.intl.string(j.t.Uj0md3),
                             }),
                         ],
                     },
-                    e.id,
+                    t.id,
                 ),
             ),
         ],
     });
 }
-
-function O(e) {
-    let { onClose: t, onSelectGuild: n, transitionState: a, isTransfer: s = !1, selectedSlotGuilds: l } = e,
-        [c, u] = i.useState(""),
-        d = async () => {
-            await t();
+function f(t) {
+    let { onClose: e, onSelectGuild: l, transitionState: s, isTransfer: r = !1, selectedSlotGuilds: o } = t,
+        [d, u] = i.useState(""),
+        c = async () => {
+            await e();
         },
-        f = s ? g.intl.string(g.t.IB13DV) : g.intl.string(g.t.cQYceV);
-    return (0, r.jsx)(o.Modal, {
-        transitionState: a,
-        onClose: d,
+        x = r ? j.intl.string(j.t.IB13DV) : j.intl.string(j.t.cQYceV);
+    return (0, n.jsx)(a.Modal, {
+        transitionState: s,
+        onClose: c,
         size: "md",
-        title: f,
-        input: (0, r.jsx)(b, {
-            query: c,
-            setQuery: u,
-        }),
+        title: x,
+        input: (0, n.jsx)(v, { query: d, setQuery: u }),
         actions: [],
-        children: (0, r.jsx)(y, {
-            onClose: t,
-            onSelectGuild: n,
-            query: c,
-            isTransfer: s,
-            selectedSlotGuilds: l,
-        }),
+        children: (0, n.jsx)(S, { onClose: e, onSelectGuild: l, query: d, isTransfer: r, selectedSlotGuilds: o }),
     });
 }

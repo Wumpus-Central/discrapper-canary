@@ -1,20 +1,17 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(397927),
-    o = n(367513),
-    a = n(313961),
-    c = n(985018);
-
-function s(e) {
-    let t = (0, l.bG)([a.A], () => a.A.getVoiceParticipantsHidden(e));
-    return (0, r.jsx)(i.sLh, {
+    s = n(397927),
+    a = n(367513),
+    r = n(313961),
+    o = n(985018);
+function d(e) {
+    let t = (0, l.bG)([r.A], () => r.A.getVoiceParticipantsHidden(e));
+    return (0, i.jsx)(s.sLh, {
         id: "no-video-hide",
-        label: c.intl.string(c.t.BL8ss6),
+        label: o.intl.string(o.t.BL8ss6),
         checked: !t,
-        action: () => o.A.toggleVoiceParticipantsHidden(e, !t),
+        action: () => a.A.toggleVoiceParticipantsHidden(e, !t),
     });
 }

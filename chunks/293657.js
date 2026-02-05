@@ -1,31 +1,22 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var l = n(397927),
     a = n(763754),
-    s = n(888675),
-    o = n(985018),
-    l = n(355200);
-
-function c(e) {
-    let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, a.Ay)(t),
-        d = c(u),
-        f = o.intl.format(o.t["dKW5C+"], {
-            username: u.nick,
-            usernameHook: d,
-        });
-    return (0, r.jsx)(s.A, {
-        className: l.d,
-        iconNode: (0, r.jsx)(i.LvC, {
-            size: "md",
-            color: "currentColor",
-        }),
-        iconContainerClassName: l.z,
+    r = n(888675),
+    s = n(985018),
+    o = n(355200);
+function d(e) {
+    let { message: t, compact: n, usernameHook: d } = e,
+        c = (0, a.Ay)(t),
+        u = d(c),
+        m = s.intl.format(s.t["dKW5C+"], { username: c.nick, usernameHook: u });
+    return (0, i.jsx)(r.A, {
+        className: o.d,
+        iconNode: (0, i.jsx)(l.LvC, { size: "md", color: "currentColor" }),
+        iconContainerClassName: o.z,
         timestamp: t.timestamp,
         compact: n,
-        children: f,
+        children: m,
     });
 }

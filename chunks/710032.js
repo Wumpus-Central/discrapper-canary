@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__459fb",
     D7: "gradient__459fb",

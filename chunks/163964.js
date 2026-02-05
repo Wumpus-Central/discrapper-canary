@@ -1,3 +1,2 @@
-e.exports = {
-    f: "defaultColor__5345c",
-};
+"use strict";
+e.exports = { f: "defaultColor__5345c" };

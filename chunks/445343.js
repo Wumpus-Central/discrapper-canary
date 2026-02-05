@@ -1,33 +1,29 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(93857),
-    a = n(871930),
-    s = n(578746),
-    o = n(975571),
-    l = n(500470),
+var s = n(93857),
+    r = n(871930),
+    a = n(578746),
+    l = n(975571),
+    o = n(500470),
     c = n(652215),
-    u = n(842130),
-    d = n(985018);
-
-function f() {
-    var e;
-    let t = null != (e = (0, l.k)()) ? e : void 0,
-        n = i.yH.useControlledSetting(t),
-        f = i.kf.useControlledSetting(t);
-    return null == t
+    d = n(842130),
+    u = n(985018);
+function _() {
+    let e = (0, o.k)() ?? void 0,
+        t = s.yH.useControlledSetting(e),
+        n = s.kf.useControlledSetting(e);
+    return null == e
         ? null
-        : (0, r.jsx)(a.h, {
-              children: (0, r.jsx)(s.Ay, {
-                  title: d.intl.string(d.t.CyLYKZ),
-                  note: d.intl.format(u.default["6mK5Pz"], {
-                      helpdeskArticle: o.A.getArticleURL(c.MVz.QUESTS_PRIVACY_CONTROLS),
+        : (0, i.jsx)(r.h, {
+              children: (0, i.jsx)(a.Ay, {
+                  title: u.intl.string(u.t.CyLYKZ),
+                  note: u.intl.format(d.default["6mK5Pz"], {
+                      helpdeskArticle: l.A.getArticleURL(c.MVz.QUESTS_PRIVACY_CONTROLS),
                   }),
-                  value: !n,
-                  onChange: (e) => i.yH.updateControlledSetting(t, !e),
-                  disabled: f,
+                  value: !t,
+                  onChange: (t) => s.yH.updateControlledSetting(e, !t),
+                  disabled: n,
               }),
           });
 }

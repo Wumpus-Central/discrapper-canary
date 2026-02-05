@@ -1,19 +1,17 @@
-var r = n(797686);
-e.exports = function (e, t) {
-    var n = [];
+"use strict";
+var n = r(797686);
+t.exports = function (t, e) {
+    var r = [];
     return (
-        e.findEntityRanges(
-            function (e) {
-                return e.getEntity() === t;
+        t.findEntityRanges(
+            function (t) {
+                return t.getEntity() === e;
             },
-            function (e, t) {
-                n.push({
-                    start: e,
-                    end: t,
-                });
+            function (t, e) {
+                r.push({ start: t, end: e });
             },
         ),
-        n.length || r(!1),
-        n
+        r.length || n(!1),
+        r
     );
 };

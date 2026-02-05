@@ -1,21 +1,14 @@
-n.d(t, {
-    EV: () => o,
-    NM: () => a,
-    gm: () => s,
-});
+"use strict";
+n.d(t, { EV: () => o, NM: () => a, gm: () => s });
 let r = {},
     i = null;
-
 function a(e) {
-    var t;
-    let n = null != (t = r[e]) ? t : 0;
-    0 === n && (null == i || i(e, !0)), (r[e] = n + 1);
+    let t = r[e] ?? 0;
+    0 === t && i?.(e, !0), (r[e] = t + 1);
 }
-
 function s(e) {
-    r[e]--, 0 === r[e] && (null == i || i(e, !1));
+    r[e]--, 0 === r[e] && i?.(e, !1);
 }
-
 function o(e) {
-    i = null != e ? e : null;
+    i = e ?? null;
 }

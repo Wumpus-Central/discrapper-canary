@@ -1,9 +1,5 @@
-n.d(t, {
-    Ay: () => s,
-    jK: () => u,
-    o0: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => s, jK: () => c, o0: () => l });
 var r = n(600975),
     i = n(652215),
     a = n(985018);
@@ -11,20 +7,12 @@ let s = (0, r.C)({
         kind: "user",
         id: "2021-08_regional_payment_methods",
         label: "Regional Payment Methods",
-        defaultConfig: {
-            enabledPaymentTypes: [],
-            forceCountryCode: null,
-            validCountryCodes: [],
-        },
+        defaultConfig: { enabledPaymentTypes: [], forceCountryCode: null, validCountryCodes: [] },
         treatments: [
             {
                 id: 1,
                 label: "Regional Payment Method for Germany",
-                config: {
-                    enabledPaymentTypes: [],
-                    forceCountryCode: "DE",
-                    validCountryCodes: ["DE"],
-                },
+                config: { enabledPaymentTypes: [], forceCountryCode: "DE", validCountryCodes: ["DE"] },
             },
             {
                 id: 2,
@@ -38,29 +26,17 @@ let s = (0, r.C)({
             {
                 id: 3,
                 label: "Regional Payment Method for Brazil",
-                config: {
-                    enabledPaymentTypes: [],
-                    forceCountryCode: "BR",
-                    validCountryCodes: ["BR"],
-                },
+                config: { enabledPaymentTypes: [], forceCountryCode: "BR", validCountryCodes: ["BR"] },
             },
             {
                 id: 4,
                 label: "Regional Payment Method for Turkey",
-                config: {
-                    enabledPaymentTypes: [],
-                    forceCountryCode: "TR",
-                    validCountryCodes: ["TR"],
-                },
+                config: { enabledPaymentTypes: [], forceCountryCode: "TR", validCountryCodes: ["TR"] },
             },
             {
                 id: 5,
                 label: "Regional Payment Method for Poland",
-                config: {
-                    enabledPaymentTypes: [i.hes.PRZELEWY24],
-                    forceCountryCode: "PL",
-                    validCountryCodes: ["PL"],
-                },
+                config: { enabledPaymentTypes: [i.hes.PRZELEWY24], forceCountryCode: "PL", validCountryCodes: ["PL"] },
             },
             {
                 id: 6,
@@ -74,29 +50,17 @@ let s = (0, r.C)({
             {
                 id: 7,
                 label: "Regional Payment Method for Philippines",
-                config: {
-                    enabledPaymentTypes: [i.hes.GCASH],
-                    forceCountryCode: "PH",
-                    validCountryCodes: ["PH"],
-                },
+                config: { enabledPaymentTypes: [i.hes.GCASH], forceCountryCode: "PH", validCountryCodes: ["PH"] },
             },
             {
                 id: 8,
                 label: "Regional Payment Method for Malaysia",
-                config: {
-                    enabledPaymentTypes: [i.hes.GRABPAY_MY],
-                    forceCountryCode: "MY",
-                    validCountryCodes: ["MY"],
-                },
+                config: { enabledPaymentTypes: [i.hes.GRABPAY_MY], forceCountryCode: "MY", validCountryCodes: ["MY"] },
             },
             {
                 id: 9,
                 label: "Regional Payment Method for Vietnam",
-                config: {
-                    enabledPaymentTypes: [i.hes.MOMO_WALLET],
-                    forceCountryCode: "VN",
-                    validCountryCodes: ["VN"],
-                },
+                config: { enabledPaymentTypes: [i.hes.MOMO_WALLET], forceCountryCode: "VN", validCountryCodes: ["VN"] },
             },
             {
                 id: 10,
@@ -110,11 +74,7 @@ let s = (0, r.C)({
             {
                 id: 11,
                 label: "Regional Payment Method for South Korea",
-                config: {
-                    enabledPaymentTypes: [i.hes.KAKAOPAY],
-                    forceCountryCode: "KR",
-                    validCountryCodes: ["KR"],
-                },
+                config: { enabledPaymentTypes: [i.hes.KAKAOPAY], forceCountryCode: "KR", validCountryCodes: ["KR"] },
             },
             {
                 id: 12,
@@ -155,11 +115,7 @@ let s = (0, r.C)({
             {
                 id: 16,
                 label: "Launch Cash App",
-                config: {
-                    enabledPaymentTypes: [i.hes.CASH_APP],
-                    forceCountryCode: "US",
-                    validCountryCodes: ["US"],
-                },
+                config: { enabledPaymentTypes: [i.hes.CASH_APP], forceCountryCode: "US", validCountryCodes: ["US"] },
             },
         ],
     }),
@@ -180,11 +136,10 @@ let s = (0, r.C)({
         ["yoursafe", "Yoursafe"],
         ["handelsbanken", "Handelsbanken"],
     ]);
-
 function l(e) {
     return void 0 !== e && o.has(e) ? o.get(e) : a.intl.string(a.t.jdPblk);
 }
-let c = new Map([
+let u = new Map([
     ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
     ["austrian_anadi_bank_ag", "Austrian Anadi Bank AG"],
     ["bank_austria", "Bank Austria"],
@@ -213,7 +168,6 @@ let c = new Map([
     ["volkskreditbank_ag", "Volkskreditbank AG"],
     ["vr_bank_braunau", "VR-Bank Braunau"],
 ]);
-
-function u(e) {
-    return void 0 !== e && c.has(e) ? c.get(e) : a.intl.string(a.t.jdPblk);
+function c(e) {
+    return void 0 !== e && u.has(e) ? u.get(e) : a.intl.string(a.t.jdPblk);
 }

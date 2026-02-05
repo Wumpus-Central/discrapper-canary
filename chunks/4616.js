@@ -1,119 +1,48 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(65821);
-var r,
-    i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => d });
+var i = n(627968),
+    r = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(397086);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class u extends (r = l.PureComponent) {
+    l = n.n(a),
+    s = n(397086);
+class o extends r.PureComponent {
+    unmounting = !1;
+    state = { loaded: !1 };
+    static defaultProps = { width: 0, height: 0, alt: "" };
+    constructor(e) {
+        super(e), this.initialize();
+    }
     componentDidUpdate(e) {
-        e.src !== this.props.src &&
-            this.setState(
-                {
-                    loaded: !1,
-                },
-                () => this.initialize(),
-            );
+        e.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
     }
     initialize() {
         let e;
         ((e = this.props.src),
         new Promise((t, n) => {
             null == e && n(Error("No image src passed"));
-            let r = new Image();
-            (r.src = e), (r.onload = () => t(r)), (r.onerror = (e) => n(e));
+            let i = new Image();
+            (i.src = e), (i.onload = () => t(i)), (i.onerror = (e) => n(e));
         })).then(() => {
-            this.unmounting ||
-                this.setState({
-                    loaded: !0,
-                });
+            this.unmounting || this.setState({ loaded: !0 });
         });
     }
     componentWillUnmount() {
         this.unmounting = !0;
     }
     render() {
-        var e, t;
-        let { className: n, src: r, alt: l, width: a, height: u, onLoad: d, style: p, imageClassName: f } = this.props,
-            { loaded: h } = this.state;
+        let { className: e, src: t, alt: n, width: r, height: a, onLoad: o, style: d, imageClassName: c } = this.props,
+            { loaded: u } = this.state;
         return (0, i.jsx)("div", {
-            className: n,
-            style:
-                ((e = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                c(e, t, n[t]);
-                            });
-                    }
-                    return e;
-                })({}, p)),
-                (t = t =
-                    {
-                        width: a,
-                        height: u,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(t)).forEach(function (n) {
-                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                      }),
-                e),
+            className: e,
+            style: { ...d, width: r, height: a },
             children: (0, i.jsx)("img", {
-                className: s()(o.S, f, {
-                    [o.K]: h,
-                }),
-                width: a,
-                height: u,
-                src: r,
-                alt: l,
-                onLoad: d,
+                className: l()(s.S, c, { [s.K]: u }),
+                width: r,
+                height: a,
+                src: t,
+                alt: n,
+                onLoad: o,
             }),
         });
     }
-    constructor(e) {
-        super(e),
-            c(this, "unmounting", !1),
-            c(this, "state", {
-                loaded: !1,
-            }),
-            this.initialize();
-    }
 }
-c(u, "defaultProps", {
-    width: 0,
-    height: 0,
-    alt: "",
-});
-let d = u;
+let d = o;

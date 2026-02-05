@@ -1,3 +1,1 @@
-e.exports = {
-    i: "_81626df03600859d",
-};
+e.exports = { i: "questsCard__12e16" };

@@ -1,105 +1,79 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => C }), n(321073);
+var i = n(627968),
+    l = n(64700),
     a = n(284009),
-    s = n.n(a),
-    o = n(158954),
-    l = n(311907),
-    c = n(846293),
-    u = n(793574),
-    d = n(688810),
-    f = n(529200),
-    p = n(95701),
-    _ = n(734057),
-    h = n(287809),
-    m = n(403362),
-    g = n(168428),
-    E = n(652215),
-    b = n(985018),
-    y = n(563111);
-
-function O(e) {
+    r = n.n(a),
+    s = n(158954),
+    o = n(311907),
+    d = n(846293),
+    c = n(793574),
+    u = n(688810),
+    m = n(529200),
+    _ = n(95701),
+    h = n(734057),
+    p = n(287809),
+    g = n(403362),
+    A = n(168428),
+    f = n(652215),
+    x = n(985018),
+    E = n(563111);
+function C(e) {
     let t,
-        { invite: n, message: a, currentUserId: O, onTransitionToInviteChannel: A, onAcceptInstantInvite: v } = e,
-        S = O === a.author.id,
-        I = n.state === E.elq.ACCEPTING,
-        T = (0, l.bG)([_.A], () => (null != n.channel ? _.A.getChannel(n.channel.id) : null), [n]);
-    s()(null == T || T.isPrivate(), "must be a private channel");
-    let { analyticsLocations: C } = (0, d.Ay)(u.A.INVITE_EMBED),
-        N = null != T,
-        R = i.useCallback(() => {
+        { invite: n, message: a, currentUserId: C, onTransitionToInviteChannel: I, onAcceptInstantInvite: T } = e,
+        v = C === a.author.id,
+        N = n.state === f.elq.ACCEPTING,
+        S = (0, o.bG)([h.A], () => (null != n.channel ? h.A.getChannel(n.channel.id) : null), [n]);
+    r()(null == S || S.isPrivate(), "must be a private channel");
+    let { analyticsLocations: b } = (0, u.Ay)(c.A.INVITE_EMBED),
+        y = null != S,
+        j = l.useCallback(() => {
             let e = "noop";
-            N ? (A(), (e = "transition")) : (v(), (e = "accept")),
-                (0, c.he)(
-                    {
-                        invite: n,
-                        action: e,
-                        inviter_id: a.author.id,
-                        invite_message_id: a.id,
-                    },
-                    C,
-                );
-        }, [n, a, C, N, A, v]);
-    if (null == T) {
-        if (null == n.channel) return (0, r.jsx)(g.A, {});
-        (T = (0, p.OY)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+            y ? (I(), (e = "transition")) : (T(), (e = "accept")),
+                (0, d.he)({ invite: n, action: e, inviter_id: a.author.id, invite_message_id: a.id }, b);
+        }, [n, a, b, y, I, T]);
+    if (null == S) {
+        if (null == n.channel) return (0, i.jsx)(A.A, {});
+        (S = (0, _.OY)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = T.recipients.reduce((e, t) => {
-            let n = h.default.getUser(t);
+        t = S.recipients.reduce((e, t) => {
+            let n = p.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = h.default.getCurrentUser();
-        N && null != e && t.push(e);
+        let e = p.default.getCurrentUser();
+        y && null != e && t.push(e);
     }
-    let w = T.name;
-    (null == w || "" === w) &&
-        (w =
+    let R = S.name;
+    (null == R || "" === R) &&
+        (R =
             t.length > 0
                 ? t
-                      .filter(m.Vq)
+                      .filter(g.Vq)
                       .map((e) => e.username)
                       .join(", ")
-                : b.intl.string(b.t.LJpTRF));
-    let P = b.intl.string(b.t.XpeFYr),
-        D = "active";
-    N && ((P = b.intl.string(b.t.cEnaWx)), (D = "secondary"));
-    let x = b.intl.string(b.t["3p3/BK"]);
+                : x.intl.string(x.t.LJpTRF));
+    let L = x.intl.string(x.t.XpeFYr),
+        M = "active";
+    y && ((L = x.intl.string(x.t.cEnaWx)), (M = "secondary"));
+    let O = x.intl.string(x.t["3p3/BK"]);
     return (
-        S && (x = b.intl.string(b.t.qmtuXE)),
-        (0, r.jsxs)(f.A, {
+        v && (O = x.intl.string(x.t.qmtuXE)),
+        (0, i.jsxs)(m.A, {
             children: [
-                (0, r.jsx)(f.A.Header, {
-                    text: x,
-                }),
-                (0, r.jsxs)(f.A.Body, {
+                (0, i.jsx)(m.A.Header, { text: O }),
+                (0, i.jsxs)(m.A.Body, {
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: y.iH,
+                        (0, i.jsxs)("div", {
+                            className: E.iH,
                             children: [
-                                (0, r.jsx)(f.A.Icon, {
-                                    channel: T,
-                                    onClick: N ? R : void 0,
-                                }),
-                                (0, r.jsx)(f.A.Info, {
-                                    title: w,
-                                    onClick: N ? R : void 0,
-                                    children: (0, r.jsx)(f.A.Data, {
-                                        members: t.length,
-                                    }),
+                                (0, i.jsx)(m.A.Icon, { channel: S, onClick: y ? j : void 0 }),
+                                (0, i.jsx)(m.A.Info, {
+                                    title: R,
+                                    onClick: y ? j : void 0,
+                                    children: (0, i.jsx)(m.A.Data, { members: t.length }),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(o.$nd, {
-                            onClick: R,
-                            loading: I,
-                            disabled: N,
-                            variant: D,
-                            text: P,
-                            fullWidth: !0,
-                        }),
+                        (0, i.jsx)(s.$nd, { onClick: j, loading: N, disabled: y, variant: M, text: L, fullWidth: !0 }),
                     ],
                 }),
             ],

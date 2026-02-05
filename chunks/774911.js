@@ -1,4 +1,1 @@
-e.exports = {
-    J: "artContainer__22b59",
-    s: "artAsset__22b59",
-};
+t.exports = { J: "artContainer__22b59", s: "artAsset__22b59" };

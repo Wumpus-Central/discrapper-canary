@@ -2,66 +2,21 @@ var a = r(653620),
     n = {};
 for (var s in a) a.hasOwnProperty(s) && (n[a[s]] = s);
 var o = (e.exports = {
-    rgb: {
-        channels: 3,
-        labels: "rgb",
-    },
-    hsl: {
-        channels: 3,
-        labels: "hsl",
-    },
-    hsv: {
-        channels: 3,
-        labels: "hsv",
-    },
-    hwb: {
-        channels: 3,
-        labels: "hwb",
-    },
-    cmyk: {
-        channels: 4,
-        labels: "cmyk",
-    },
-    xyz: {
-        channels: 3,
-        labels: "xyz",
-    },
-    lab: {
-        channels: 3,
-        labels: "lab",
-    },
-    lch: {
-        channels: 3,
-        labels: "lch",
-    },
-    hex: {
-        channels: 1,
-        labels: ["hex"],
-    },
-    keyword: {
-        channels: 1,
-        labels: ["keyword"],
-    },
-    ansi16: {
-        channels: 1,
-        labels: ["ansi16"],
-    },
-    ansi256: {
-        channels: 1,
-        labels: ["ansi256"],
-    },
-    hcg: {
-        channels: 3,
-        labels: ["h", "c", "g"],
-    },
-    apple: {
-        channels: 3,
-        labels: ["r16", "g16", "b16"],
-    },
-    gray: {
-        channels: 1,
-        labels: ["gray"],
-    },
+    rgb: { channels: 3, labels: "rgb" },
+    hsl: { channels: 3, labels: "hsl" },
+    hsv: { channels: 3, labels: "hsv" },
+    hwb: { channels: 3, labels: "hwb" },
+    cmyk: { channels: 4, labels: "cmyk" },
+    xyz: { channels: 3, labels: "xyz" },
+    lab: { channels: 3, labels: "lab" },
+    lch: { channels: 3, labels: "lch" },
+    hex: { channels: 1, labels: ["hex"] },
+    keyword: { channels: 1, labels: ["keyword"] },
+    ansi16: { channels: 1, labels: ["ansi16"] },
+    ansi256: { channels: 1, labels: ["ansi256"] },
+    hcg: { channels: 3, labels: ["h", "c", "g"] },
+    apple: { channels: 3, labels: ["r16", "g16", "b16"] },
+    gray: { channels: 1, labels: ["gray"] },
 });
 for (var i in o)
     if (o.hasOwnProperty(i)) {
@@ -72,12 +27,8 @@ for (var i in o)
             l = o[i].labels;
         delete o[i].channels,
             delete o[i].labels,
-            Object.defineProperty(o[i], "channels", {
-                value: c,
-            }),
-            Object.defineProperty(o[i], "labels", {
-                value: l,
-            });
+            Object.defineProperty(o[i], "channels", { value: c }),
+            Object.defineProperty(o[i], "labels", { value: l });
     }
 (o.rgb.hsl = function (e) {
     var t,

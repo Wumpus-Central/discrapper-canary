@@ -1,286 +1,193 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(896048);
+n.d(t, { A: () => _ });
 var l = n(627968),
-    r = n(64700),
-    i = n(989349),
-    s = n.n(i),
-    a = n(311907),
-    o = n(397927),
+    i = n(64700),
+    s = n(989349),
+    a = n.n(s),
+    r = n(311907),
+    d = n(397927),
     c = n(47167),
-    u = n(841937),
-    d = n(734057),
+    o = n(841937),
+    u = n(734057),
     x = n(71393),
-    g = n(576705),
+    h = n(576705),
     m = n(994500),
-    h = n(287809),
-    j = n(698441),
-    v = n(770666),
-    f = n(761836),
-    p = n(232246),
-    b = n(530209),
-    y = n(9448),
-    O = n(181961),
-    A = n(988794),
-    E = n(652215),
-    N = n(985018),
-    P = n(197905);
-let C = (e) => {
-        let { guildId: t, channelType: n, channel: r, onSelectChannel: i, disabled: s, entityType: a } = e,
-            u = n === E.rbe.GUILD_STAGE_VOICE,
-            x = (0, b.D)(r, a),
-            g = (0, f.pW)(t, n);
-        return (0, l.jsx)(o.ZiE, {
+    g = n(287809),
+    v = n(698441),
+    j = n(770666),
+    A = n(761836),
+    N = n(232246),
+    f = n(530209),
+    E = n(9448),
+    p = n(181961),
+    C = n(988794),
+    T = n(652215),
+    y = n(985018),
+    b = n(197905);
+let I = (e) => {
+        let { guildId: t, channelType: n, channel: i, onSelectChannel: s, disabled: a, entityType: r } = e,
+            o = n === T.rbe.GUILD_STAGE_VOICE,
+            x = (0, f.D)(i, r),
+            h = (0, A.pW)(t, n);
+        return (0, l.jsx)(d.ZiE, {
             selectionMode: "single",
-            label: u ? N.intl.string(N.t.S7GjDz) : N.intl.string(N.t["7RYWCP"]),
+            label: o ? y.intl.string(y.t.S7GjDz) : y.intl.string(y.t["7RYWCP"]),
             required: !0,
-            helperText: x ? void 0 : N.intl.string(N.t.F3bDaX),
-            value: null == r ? void 0 : r.id,
-            options: g.map((e) => ({
+            helperText: x ? void 0 : y.intl.string(y.t.F3bDaX),
+            value: i?.id,
+            options: h.map((e) => ({
                 id: e.id,
                 value: e.id,
-                label: (0, c.m1)(e, h.default, m.A, !0),
+                label: (0, c.m1)(e, g.default, m.A, !0),
                 leading: ((e, t) => {
-                    let n = d.A.getChannel(e);
+                    let n = u.A.getChannel(e);
                     if (null == n) return null;
-                    let r = n.type === E.rbe.GUILD_STAGE_VOICE,
-                        i = (0, b.D)(n, t),
-                        s = i ? o.HKD : o.trU,
-                        a = i ? o.qux : o.DC;
-                    return (0, l.jsx)(r ? a : s, {
-                        color: "currentColor",
-                        size: "md",
-                        className: P.sr,
-                    });
-                })(e.id, a),
+                    let i = n.type === T.rbe.GUILD_STAGE_VOICE,
+                        s = (0, f.D)(n, t),
+                        a = s ? d.HKD : d.trU,
+                        r = s ? d.qux : d.DC;
+                    return (0, l.jsx)(i ? r : a, { color: "currentColor", size: "md", className: b.sr });
+                })(e.id, r),
             })),
             onSelectionChange: (e) => {
-                let t = g.find((t) => t.id === e);
-                i(null != t ? t : void 0);
+                s(h.find((t) => t.id === e) ?? void 0);
             },
-            disabled: s,
+            disabled: a,
         });
     },
     S = (e, t) => (n) => {
-        let l = {
-            entityType: n,
-            scheduledEndTime: void 0,
-        };
-        if (n === A.Ps.EXTERNAL) {
-            var r;
-            l.scheduledEndTime = (null != (r = s()(t.scheduledStartTime)) ? r : s()()).add(2, "hour").toISOString();
-        }
-        e(l);
+        let l = { entityType: n, scheduledEndTime: void 0 };
+        n === C.Ps.EXTERNAL && (l.scheduledEndTime = (a()(t.scheduledStartTime) ?? a()()).add(2, "hour").toISOString()),
+            e(l);
     };
-
-function T(e) {
-    let { guildId: t, guildEvent: n, onChange: i, isFocusReady: s } = e,
-        { entityType: c, channelId: u } = n,
-        x = (0, a.bG)([d.A], () => d.A.getChannel(u), [u]),
-        g = r.useRef(null);
-    r.useEffect(() => {
-        if (s && c === A.Ps.EXTERNAL) {
-            var e;
-            null == (e = g.current) || e.focus();
-        }
-    }, [s, c]);
+function G(e) {
+    let { guildId: t, guildEvent: n, onChange: s, isFocusReady: a } = e,
+        { entityType: c, channelId: o } = n,
+        x = (0, r.bG)([u.A], () => u.A.getChannel(o), [o]),
+        h = i.useRef(null);
+    i.useEffect(() => {
+        a && c === C.Ps.EXTERNAL && h.current?.focus();
+    }, [a, c]);
     let m = (e) => {
-            var t;
-            i({
-                channelId: null != (t = null == e ? void 0 : e.id) ? t : null,
-            });
+            s({ channelId: e?.id ?? null });
         },
-        h = (0, y.k5)(n),
-        v = (0, y.dy)(c),
-        f = (0, j.Fd)(n);
-    return null == c || c === A.Ps.NONE
+        g = (0, E.k5)(n),
+        j = (0, E.dy)(c),
+        A = (0, v.Fd)(n);
+    return null == c || c === C.Ps.NONE
         ? null
-        : c === A.Ps.EXTERNAL
-          ? (0, l.jsx)(o.ksK, {
-                label: N.intl.string(N.t.yx785A),
+        : c === C.Ps.EXTERNAL
+          ? (0, l.jsx)(d.ksK, {
+                label: y.intl.string(y.t.yx785A),
                 required: !0,
                 onChange: (e) => {
-                    i({
-                        entityMetadata: {
-                            location: e,
-                        },
-                    });
+                    s({ entityMetadata: { location: e } });
                 },
-                placeholder: N.intl.string(N.t.mkCMia),
-                maxLength: A.vj,
-                value: null != h ? h : "",
-                inputRef: g,
+                placeholder: y.intl.string(y.t.mkCMia),
+                maxLength: C.vj,
+                value: g ?? "",
+                inputRef: h,
             })
-          : null == v
+          : null == j
             ? null
-            : (0, l.jsx)(C, {
-                  guildId: t,
-                  channelType: v,
-                  onSelectChannel: m,
-                  channel: x,
-                  entityType: c,
-                  disabled: f,
-              });
+            : (0, l.jsx)(I, { guildId: t, channelType: j, onSelectChannel: m, channel: x, entityType: c, disabled: A });
 }
-
-function w(e) {
-    let { guildId: t, guildEvent: n, onChange: i } = e,
-        s = (0, a.bG)([x.A], () => x.A.getGuild(t), [t]),
-        c = (0, v.A)(t, void 0),
-        u = (0, v.A)(t, E.rbe.GUILD_VOICE),
-        d = (0, v.A)(t, E.rbe.GUILD_STAGE_VOICE),
-        g = (0, f.pW)(t, E.rbe.GUILD_VOICE),
-        m = (0, p.A)(s),
-        h = null == s ? void 0 : s.features.has(E.GuildFeatures.COMMUNITY),
-        b = (0, j.Fd)(n),
-        y = S(i, n),
-        O = r.useMemo(() => {
-            let e = !u || 0 === g.length,
-                t = u ? N.intl.string(N.t["DkY+cO"]) : N.intl.string(N.t.HeF1kV),
+function k(e) {
+    let { guildId: t, guildEvent: n, onChange: s } = e,
+        a = (0, r.bG)([x.A], () => x.A.getGuild(t), [t]),
+        c = (0, j.A)(t, void 0),
+        o = (0, j.A)(t, T.rbe.GUILD_VOICE),
+        u = (0, j.A)(t, T.rbe.GUILD_STAGE_VOICE),
+        h = (0, A.pW)(t, T.rbe.GUILD_VOICE),
+        m = (0, N.A)(a),
+        g = a?.features.has(T.GuildFeatures.COMMUNITY),
+        f = (0, v.Fd)(n),
+        E = S(s, n),
+        p = i.useMemo(() => {
+            let e = !o || 0 === h.length,
+                t = o ? y.intl.string(y.t["DkY+cO"]) : y.intl.string(y.t.HeF1kV),
                 n = [
                     {
-                        name: N.intl.string(N.t.BVZqJl),
-                        value: A.Ps.VOICE,
-                        desc: e ? t : N.intl.string(N.t["EV//4f"]),
-                        leadingIcon: o.HKD,
+                        name: y.intl.string(y.t.BVZqJl),
+                        value: C.Ps.VOICE,
+                        desc: e ? t : y.intl.string(y.t["EV//4f"]),
+                        leadingIcon: d.HKD,
                         disabled: e,
                     },
                     {
-                        name: N.intl.string(N.t.w7ipbz),
-                        value: A.Ps.EXTERNAL,
-                        desc: c ? N.intl.string(N.t.DYxrHm) : N.intl.string(N.t.HeF1kV),
-                        leadingIcon: o.BT6,
+                        name: y.intl.string(y.t.w7ipbz),
+                        value: C.Ps.EXTERNAL,
+                        desc: c ? y.intl.string(y.t.DYxrHm) : y.intl.string(y.t.HeF1kV),
+                        leadingIcon: d.BT6,
                         disabled: !c,
                     },
                 ];
-            if (h) {
-                let e = !d || 0 === m.length,
-                    t = d ? N.intl.string(N.t["DkY+cO"]) : N.intl.string(N.t.HeF1kV);
+            if (g) {
+                let e = !u || 0 === m.length,
+                    t = u ? y.intl.string(y.t["DkY+cO"]) : y.intl.string(y.t.HeF1kV);
                 return [
                     {
-                        name: N.intl.string(N.t.EErMzA),
-                        value: A.Ps.STAGE_INSTANCE,
-                        desc: e ? t : N.intl.string(N.t.LgALpp),
-                        leadingIcon: o.qux,
+                        name: y.intl.string(y.t.EErMzA),
+                        value: C.Ps.STAGE_INSTANCE,
+                        desc: e ? t : y.intl.string(y.t.LgALpp),
+                        leadingIcon: d.qux,
                         disabled: e,
                     },
                     ...n,
                 ];
             }
             return n;
-        }, [c, u, d, h, g.length, m.length]);
-    return (0, l.jsx)(o.z6M, {
+        }, [c, o, u, g, h.length, m.length]);
+    return (0, l.jsx)(d.z6M, {
         value: n.entityType,
-        options: O,
-        onChange: y,
-        disabled: b,
-        helperText: b ? N.intl.string(N.t.yutP5U) : void 0,
+        options: p,
+        onChange: E,
+        disabled: f,
+        helperText: f ? y.intl.string(y.t.yutP5U) : void 0,
     });
 }
-
-function I(e) {
-    let { guildId: t, guildEvent: r, validationErrorMessage: i, onChange: s, isSlideReady: c = !1 } = e,
-        { entityType: d } = r,
-        m = (0, a.bG)([x.A], () => x.A.getGuild(t), [t]),
-        h = (0, p.A)(m),
-        j = (0, a.bG)([g.A], () => g.A.can(E.xBc.MANAGE_CHANNELS, m)),
-        v = null == m ? void 0 : m.features.has(E.GuildFeatures.COMMUNITY),
-        f = S(s, r),
-        b = v && d !== A.Ps.EXTERNAL && 0 === h.length && j && null != d;
+function _(e) {
+    let { guildId: t, guildEvent: i, validationErrorMessage: s, onChange: a, isSlideReady: c = !1 } = e,
+        { entityType: u } = i,
+        m = (0, r.bG)([x.A], () => x.A.getGuild(t), [t]),
+        g = (0, N.A)(m),
+        v = (0, r.bG)([h.A], () => h.A.can(T.xBc.MANAGE_CHANNELS, m)),
+        j = m?.features.has(T.GuildFeatures.COMMUNITY),
+        A = S(a, i),
+        f = j && u !== C.Ps.EXTERNAL && 0 === g.length && v && null != u;
     return (0, l.jsxs)("div", {
-        className: P.kL,
+        className: b.kL,
         children: [
-            (0, l.jsxs)(o.BJc, {
+            (0, l.jsxs)(d.BJc, {
                 gap: 4,
                 children: [
-                    (0, l.jsx)(o.Heading, {
-                        variant: "heading-xl/semibold",
-                        children: N.intl.string(N.t["DC+Qm8"]),
-                    }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(d.Heading, { variant: "heading-xl/semibold", children: y.intl.string(y.t["DC+Qm8"]) }),
+                    (0, l.jsx)(d.Text, {
                         color: "text-subtle",
                         variant: "text-sm/normal",
-                        children: N.intl.string(N.t.IwmXLP),
+                        children: y.intl.string(y.t.IwmXLP),
                     }),
                 ],
             }),
-            (0, l.jsx)(w, {
-                guildId: t,
-                guildEvent: r,
-                onChange: s,
-            }),
-            (0, l.jsx)(T, {
-                guildId: t,
-                guildEvent: r,
-                isFocusReady: c,
-                onChange: s,
-            }),
-            b
-                ? (0, l.jsx)(O.A, {
+            (0, l.jsx)(k, { guildId: t, guildEvent: i, onChange: a }),
+            (0, l.jsx)(G, { guildId: t, guildEvent: i, isFocusReady: c, onChange: a }),
+            f
+                ? (0, l.jsx)(p.A, {
                       onClick: () => {
-                          f(A.Ps.STAGE_INSTANCE),
-                              (0, o.mMO)(async () => {
+                          A(C.Ps.STAGE_INSTANCE),
+                              (0, d.mMO)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("8018"),
-                                      n.e("72271"),
+                                      n.e("93142"),
                                       n.e("64233"),
-                                      n.e("29592"),
+                                      n.e("77970"),
                                   ]).then(n.bind(n, 409200));
-                                  return (n) => {
-                                      var r, i;
-                                      return (0, l.jsx)(
-                                          e,
-                                          ((r = (function (e) {
-                                              for (var t = 1; t < arguments.length; t++) {
-                                                  var n = null != arguments[t] ? arguments[t] : {},
-                                                      l = Object.keys(n);
-                                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                                      (l = l.concat(
-                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          }),
-                                                      )),
-                                                      l.forEach(function (t) {
-                                                          var l;
-                                                          (l = n[t]),
-                                                              t in e
-                                                                  ? Object.defineProperty(e, t, {
-                                                                        value: l,
-                                                                        enumerable: !0,
-                                                                        configurable: !0,
-                                                                        writable: !0,
-                                                                    })
-                                                                  : (e[t] = l);
-                                                      });
-                                              }
-                                              return e;
-                                          })({}, n)),
-                                          (i = i =
-                                              {
-                                                  channelType: E.rbe.GUILD_STAGE_VOICE,
-                                                  guildId: t,
-                                              }),
-                                          Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                                              : (function (e, t) {
-                                                    var n = Object.keys(e);
-                                                    if (Object.getOwnPropertySymbols) {
-                                                        var l = Object.getOwnPropertySymbols(e);
-                                                        n.push.apply(n, l);
-                                                    }
-                                                    return n;
-                                                })(Object(i)).forEach(function (e) {
-                                                    Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                                                }),
-                                          r),
-                                      );
-                                  };
+                                  return (n) =>
+                                      (0, l.jsx)(e, { ...n, channelType: T.rbe.GUILD_STAGE_VOICE, guildId: t });
                               });
                       },
                   })
                 : null,
-            A.Tn.has(r.entityType) && (0, l.jsx)(u.A, {}),
+            C.Tn.has(i.entityType) && (0, l.jsx)(o.A, {}),
         ],
     });
 }

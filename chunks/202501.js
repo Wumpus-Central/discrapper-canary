@@ -1,3 +1,1 @@
-e.exports = {
-    u: "infoMessage__56d1c",
-};
+e.exports = { u: "infoMessage__56d1c" };

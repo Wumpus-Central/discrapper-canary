@@ -1,106 +1,77 @@
-n.d(t, {
-    $r: () => C,
-    AN: () => R,
-    BX: () => y,
-    fr: () => b,
-    w6: () => O,
-}),
-    n(747238),
-    n(896048);
-var r,
-    i,
-    a,
-    s = n(562465),
-    o = n(927813),
-    l = n(998218),
-    c = n(652215);
-let u = (e) => (null == e ? void 0 : e.split(":")[0]);
-
-function d(e) {
+"use strict";
+n.d(t, { $r: () => v, AN: () => b, BX: () => g, fr: () => m, w6: () => E });
+var r = n(562465),
+    i = n(927813),
+    a = n(998218),
+    s = n(652215);
+let o = (e) => e?.split(":")[0];
+function l(e) {
     return "localhost" === e || "127.0.0.1" === e;
 }
-let f = new Set(["/attachments/", "/ephemeral-attachments/"]),
-    p = new Set(["/external/"]),
-    _ = +o.A.Millis.HOUR,
-    h = new Set(
-        [window.GLOBAL_ENV.CDN_HOST, null == (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : i.substring(2)]
-            .map(u)
-            .filter(Boolean),
+let u = new Set(["/attachments/", "/ephemeral-attachments/"]),
+    c = new Set(["/external/"]),
+    d = +i.A.Millis.HOUR,
+    _ = new Set(
+        [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)].map(o).filter(Boolean),
     ),
-    m = new Set(
-        (null != (r = null == (a = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS) ? void 0 : a.split(",")) ? r : [])
+    f = new Set(
+        (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS?.split(",") ?? [])
             .map((e) => e.substring(2))
-            .map(u)
+            .map(o)
             .filter(Boolean),
     ),
-    g = !1,
-    E = !1;
-
-function b(e) {
-    let t = h.has(e.hostname),
-        n = g && d(e.hostname),
-        r = Array.from(f).some((t) => e.pathname.startsWith(t));
+    p = !1,
+    h = !1;
+function m(e) {
+    let t = _.has(e.hostname),
+        n = p && l(e.hostname),
+        r = Array.from(u).some((t) => e.pathname.startsWith(t));
     return (t || n) && r;
 }
-
-function y(e) {
-    var t;
-    let n = m.has(e.hostname),
-        r = E && d(null != (t = e.hostname) ? t : ""),
-        i = Array.from(p).some((t) => e.pathname.startsWith(t));
-    return (n || r) && i;
+function g(e) {
+    let t = f.has(e.hostname),
+        n = h && l(e.hostname ?? ""),
+        r = Array.from(c).some((t) => e.pathname.startsWith(t));
+    return (t || n) && r;
 }
-
-function O(e) {
-    let t = l.A.toURLSafe(e);
+function E(e) {
+    let t = a.A.toURLSafe(e);
     if (null == t) return e;
     for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
     return t;
 }
-
 function A(e) {
-    let t = e.searchParams.get("ex"),
-        n = parseInt(null != t ? t : "", 16);
-    return isNaN(n) ? void 0 : n * o.A.Millis.SECOND;
+    let t = parseInt(e.searchParams.get("ex") ?? "", 16);
+    return isNaN(t) ? void 0 : t * i.A.Millis.SECOND;
 }
-
-function v(e) {
-    let t = A(e);
-    return null == t || t <= Date.now() + _;
-}
-
-function S(e) {
-    let t = l.A.toURLSafe(e.url);
-    return null != t && v(t);
-}
-
 function I(e) {
-    if (null == e) return !1;
-    let t = l.A.toURLSafe(e.url);
-    return null != t && !!b(t) && v(t);
+    let t = A(e);
+    return null == t || t <= Date.now() + d;
 }
-
 function T(e) {
-    var t;
-    return I(e.image) || (null == (t = e.images) ? void 0 : t.some(I)) || I(e.video);
+    let t = a.A.toURLSafe(e.url);
+    return null != t && I(t);
 }
-
-function C(e) {
-    return e.attachments.some(S) || e.embeds.some(T);
+function y(e) {
+    if (null == e) return !1;
+    let t = a.A.toURLSafe(e.url);
+    return null != t && !!m(t) && I(t);
 }
-async function N(e) {
-    let t = await s.Bo.post({
-        url: c.Rsh.ATTACHMENTS_REFRESH_URLS,
-        body: {
-            attachment_urls: [e],
-        },
+function S(e) {
+    return y(e.image) || e.images?.some(y) || y(e.video);
+}
+function v(e) {
+    return e.attachments.some(T) || e.embeds.some(S);
+}
+async function C(e) {
+    let t = await r.Bo.post({
+        url: s.Rsh.ATTACHMENTS_REFRESH_URLS,
+        body: { attachment_urls: [e] },
         rejectWithError: !1,
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function R(e) {
-    let t = l.A.toURLSafe(e);
-    if (null == t || !v(t)) return e;
-    let n = await N(e);
-    return null != n ? n : e;
+async function b(e) {
+    let t = a.A.toURLSafe(e);
+    return null != t && I(t) ? ((await C(e)) ?? e) : e;
 }

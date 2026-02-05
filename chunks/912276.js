@@ -1,127 +1,57 @@
-n.d(t, {
-    A: () => D,
-    D: () => R,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => R, D: () => b });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(735438),
+    s = n.n(a),
+    o = n(735438),
     l = n(92674),
-    c = n(435371),
-    u = n(397927),
+    u = n(435371),
+    c = n(397927),
     d = n(565645),
-    f = n(915089),
-    p = n(713517),
-    _ = n(822123),
+    _ = n(915089),
+    f = n(713517),
+    p = n(822123),
     h = n(375499),
     m = n(937773),
     g = n(7584),
     E = n(850992),
-    y = n(690521),
-    b = n(403362);
+    A = n(690521),
+    I = n(403362);
 n(806931);
-var O = n(307731),
-    v = n(650583),
-    A = n(845762);
-
-function I(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                I(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function T(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function C(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let N = O.b_.CHAT,
-    w = [
+var T = n(307731),
+    y = n(650583),
+    S = n(845762);
+let v = T.b_.CHAT,
+    C = [
         g.Ay.getByName("thumbsup"),
         g.Ay.getByName("eyes"),
         g.Ay.getByName("laughing"),
         g.Ay.getByName("watermelon"),
         g.Ay.getByName("fork_and_knife"),
         g.Ay.getByName("yum"),
-    ].filter(b.Vq);
-
-function R(e) {
-    let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
-        c = i.useRef(null),
-        f = (0, p.M)(c);
+    ].filter(I.Vq);
+function b(e) {
+    let { emoji: t, isDisabled: n = !1, onClick: a, className: o } = e,
+        u = i.useRef(null),
+        _ = (0, f.M)(u);
     return (0, r.jsx)("span", {
-        ref: c,
-        children: (0, r.jsx)(u.DUT, {
+        ref: u,
+        children: (0, r.jsx)(c.DUT, {
             onClick: a,
-            focusProps: {
-                enabled: !n,
-            },
-            children: (0, r.jsx)(u.c7X, {
+            focusProps: { enabled: !n },
+            children: (0, r.jsx)(c.c7X, {
                 config: h.B,
-                from: {
-                    value: 0,
-                },
-                to: {
-                    value: +!!f,
-                },
+                from: { value: 0 },
+                to: { value: +!!_ },
                 children: (e) => {
                     let { value: i } = e;
                     return (0, r.jsx)(l.animated.div, {
-                        style: {
-                            transform: i.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
-                        },
+                        style: { transform: i.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
                         children: (0, r.jsx)(d.A, {
-                            className: o()(A.Zg, s, {
-                                [A.c4]: n,
-                            }),
+                            className: s()(S.Zg, o, { [S.c4]: n }),
                             emojiId: t.id,
-                            emojiName: null == t ? void 0 : t.surrogates,
+                            emojiName: t?.surrogates,
                             animated: t.animated,
                         }),
                     });
@@ -130,135 +60,103 @@ function R(e) {
         }),
     });
 }
-
-function P(e) {
+function N(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            (0, r.jsx)(u.DUT, {
-                className: A.Nz,
+            (0, r.jsx)(c.DUT, {
+                className: S.Nz,
                 onClick: () => {
                     i(!n), a();
                 },
-                children: (0, r.jsx)(u.abt, {
-                    size: "md",
-                    color: "currentColor",
-                    className: o()(A.Gu, {
-                        [A.Y9]: n,
-                    }),
-                }),
+                children: (0, r.jsx)(c.abt, { size: "md", color: "currentColor", className: s()(S.Gu, { [S.Y9]: n }) }),
             }),
         ],
     });
 }
-
-function D(e) {
+function R(e) {
     let {
             channel: t,
             title: n,
             closePopout: a,
             onFocus: l,
             onSelectEmoji: d,
-            onSelectDisabledEmoji: p,
+            onSelectDisabledEmoji: f,
             onExpandedToggle: h,
             emojiSearchProps: g,
-            recentlyUsedEmojis: b,
-            analyticsOverride: I,
-            ref: T,
+            recentlyUsedEmojis: I,
+            analyticsOverride: R,
+            ref: O,
         } = e,
-        D = (0, f.GV)(),
-        [L, x] = i.useState(!1),
-        M = (0, _.Fj)(t.guild_id),
-        j = (0, s.uniqBy)([...M, ...w], "name")
-            .filter(
-                (e) =>
-                    !y.Ay.isEmojiFilteredOrLocked({
-                        emoji: e,
-                        channel: t,
-                        intention: N,
-                    }),
-            )
+        D = (0, _.GV)(),
+        [L, w] = i.useState(!1),
+        x = (0, p.Fj)(t.guild_id),
+        P = (0, o.uniqBy)([...x, ...C], "name")
+            .filter((e) => !A.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: v }))
             .slice(0, 8);
-    null != b && b.length > 0 && j.splice(j.length - 1, 1, b[0]);
-    let k = (e) => {
-            x(e), null == h || h(e);
+    null != I && I.length > 0 && P.splice(P.length - 1, 1, I[0]);
+    let M = (e) => {
+            w(e), h?.(e);
+        },
+        k = (e) => {
+            let { emoji: t, willClose: n } = e;
+            null == t && n ? a() : (null != t && d(t), M(!n), n && E.Om.setSearchPlaceholder(null));
         },
         U = (e) => {
-            let { emoji: t, willClose: n } = e;
-            null == t && n ? a() : (null != t && d(t), k(!n), n && E.Om.setSearchPlaceholder(null));
-        },
-        G = (e) => {
-            null != e && e.key !== v.dh.TAB && (e.key !== v.dh.ENTER || e.shiftKey ? k(!0) : k(!L));
+            null != e && e.key !== y.dh.TAB && (e.key !== y.dh.ENTER || e.shiftKey ? M(!0) : M(!L));
         };
-    return (0, r.jsxs)(u.lGe, {
+    return (0, r.jsxs)(c.lGe, {
         "aria-labelledby": D,
-        ref: T,
+        ref: O,
         children: [
-            (0, r.jsx)(u.Fmo, {
+            (0, r.jsx)(c.Fmo, {
                 forceLevel: 2,
-                children: (0, r.jsx)(u.AC4, {
-                    children: (0, r.jsx)(u.H, {
-                        id: D,
-                        children: n,
-                    }),
-                }),
+                children: (0, r.jsx)(c.AC4, { children: (0, r.jsx)(c.H, { id: D, children: n }) }),
             }),
             (0, r.jsxs)("div", {
-                className: A.kL,
+                className: S.kL,
                 children: [
                     (0, r.jsx)(m.A, {
-                        analyticsOverride: I,
+                        analyticsOverride: R,
                         channel: t,
-                        className: o()(A.Mk, {
-                            [A.DZ]: L,
-                        }),
-                        headerClassName: o()(A.AW, {
-                            [A.v6]: L,
-                        }),
+                        className: s()(S.Mk, { [S.DZ]: L }),
+                        headerClassName: s()(S.AW, { [S.v6]: L }),
                         closePopout: a,
-                        onSelectEmoji: L ? U : () => {},
+                        onSelectEmoji: L ? k : () => {},
                         shouldHidePickerActions: !L,
                         wrapper: "div",
-                        pickerIntention: N,
-                        searchProps: C(S({}, g), {
-                            accessory: (0, r.jsx)(P, {
-                                otherAccessories: null == g ? void 0 : g.accessory,
+                        pickerIntention: v,
+                        searchProps: {
+                            ...g,
+                            accessory: (0, r.jsx)(N, {
+                                otherAccessories: g?.accessory,
                                 isEmojiPickerExpanded: L,
-                                onSetExpanded: k,
+                                onSetExpanded: M,
                                 onFocus: l,
                             }),
-                            onKeyDown: G,
-                        }),
+                            onKeyDown: U,
+                        },
                     }),
                     (0, r.jsx)("div", {
-                        className: A.nt,
+                        className: S.nt,
                         children: (0, r.jsx)("div", {
-                            className: o()(A.Q0, A.Vg),
-                            children: j.map((e) => {
-                                let n = y.Ay.isEmojiDisabled({
-                                    emoji: e,
-                                    channel: t,
-                                    intention: O.b_.CHAT,
-                                });
+                            className: s()(S.Q0, S.Vg),
+                            children: P.map((e) => {
+                                let n = A.Ay.isEmojiDisabled({ emoji: e, channel: t, intention: T.b_.CHAT });
                                 return (0, r.jsx)(
                                     "div",
                                     {
-                                        className: A.NI,
-                                        children: (0, r.jsx)(c.m_, {
+                                        className: S.NI,
+                                        children: (0, r.jsx)(u.m_, {
                                             text: e.name,
                                             position: "top",
                                             asContainer: !0,
-                                            children: (0, r.jsx)(R, {
+                                            children: (0, r.jsx)(b, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n
-                                                        ? null == p || p(e)
-                                                        : U({
-                                                              emoji: e,
-                                                              willClose: !0,
-                                                          });
+                                                    n ? f?.(e) : k({ emoji: e, willClose: !0 });
                                                 },
                                             }),
                                         }),

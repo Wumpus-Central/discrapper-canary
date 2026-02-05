@@ -1,3 +1,4 @@
+"use strict";
 var n = r(743595),
     i = r(954055),
     o = r(869639),
@@ -8,20 +9,14 @@ var n = r(743595),
     l = r(882270),
     f = r(4323),
     p = r(670200);
-
 function h(t) {
     t._internalDrag = !1;
     var e = t.editorContainer;
     if (e) {
-        var r = new MouseEvent("mouseup", {
-            view: l(e),
-            bubbles: !0,
-            cancelable: !0,
-        });
+        var r = new MouseEvent("mouseup", { view: l(e), bubbles: !0, cancelable: !0 });
         e.dispatchEvent(r);
     }
 }
-
 function d(t, e, r) {
     var n = i.insertText(t.getCurrentContent(), e, r, t.getCurrentInlineStyle());
     return o.push(t, n, "insert-fragment");

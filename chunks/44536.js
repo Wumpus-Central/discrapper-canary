@@ -1,101 +1,64 @@
-n.d(t, {
-    default: () => T,
-});
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    l = n(442433),
-    a = n(358367),
-    o = n(793574),
-    c = n(50268),
-    s = n(133238),
-    u = n(182061),
-    d = n(886393),
-    f = n(307623),
-    A = n(848977),
-    p = n(660273),
-    b = n(40389),
-    v = n(707792),
-    h = n(41402),
-    g = n(990028),
-    O = n(271456),
-    y = n(200273),
-    m = n(565846),
-    _ = n(57907),
-    C = n(375500),
-    E = n(707653),
-    j = n(985018);
-let T = (0, a.A)(
-    function (e) {
-        let { channel: t, onSelect: n } = e,
-            a = (0, d.A)(t),
-            o = (0, A.A)(t),
-            T = (0, _.A)(t),
-            S = (0, u.A)(t),
-            w = (0, v.A)(t),
-            R = (0, f.A)(t),
-            N = (0, c.A)({
-                id: t.id,
-                label: j.intl.string(j.t.DQ797g),
-            }),
-            x = (0, p.A)(t, "Context Menu"),
-            G = (0, h.A)(t),
-            D = (0, O.A)(t),
-            I = (0, C.A)(t),
-            P = (0, y.A)(t),
-            U = (0, m.A)(t.id),
-            M = (0, b.A)(t),
-            L = (0, E.A)(t),
-            F = (0, s.m)(t),
-            Y = (0, s.y)(t),
-            k = (0, g.A)(t);
-        return (0, r.jsxs)(i.W1t, {
+t.d(e, { default: () => E });
+var i = t(627968);
+t(64700);
+var r = t(397927),
+    l = t(442433),
+    a = t(358367),
+    d = t(793574),
+    o = t(50268),
+    s = t(133238),
+    c = t(182061),
+    u = t(886393),
+    A = t(307623),
+    h = t(848977),
+    f = t(660273),
+    v = t(40389),
+    _ = t(707792),
+    p = t(41402),
+    m = t(990028),
+    b = t(271456),
+    g = t(200273),
+    y = t(565846),
+    x = t(57907),
+    j = t(375500),
+    C = t(707653),
+    T = t(985018);
+let E = (0, a.A)(
+    function (n) {
+        let { channel: e, onSelect: t } = n,
+            a = (0, u.A)(e),
+            d = (0, h.A)(e),
+            E = (0, x.A)(e),
+            L = (0, c.A)(e),
+            O = (0, _.A)(e),
+            G = (0, A.A)(e),
+            D = (0, o.A)({ id: e.id, label: T.intl.string(T.t.DQ797g) }),
+            N = (0, f.A)(e, "Context Menu"),
+            M = (0, p.A)(e),
+            U = (0, b.A)(e),
+            R = (0, j.A)(e),
+            S = (0, g.A)(e),
+            X = (0, y.A)(e.id),
+            V = (0, v.A)(e),
+            Y = (0, C.A)(e),
+            P = (0, s.m)(e),
+            w = (0, s.y)(e),
+            F = (0, m.A)(e);
+        return (0, i.jsxs)(r.W1t, {
             "data-menu-migrated": !0,
             navId: "thread-context",
             onClose: l.Z_,
-            "aria-label": j.intl.string(j.t["1NBjqb"]),
-            onSelect: n,
+            "aria-label": T.intl.string(T.t["1NBjqb"]),
+            onSelect: t,
             children: [
-                (0, r.jsxs)(
-                    i.rXV,
-                    {
-                        children: [o, F],
-                    },
-                    "mark-as-read-or-favorite",
-                ),
-                (0, r.jsxs)(
-                    i.rXV,
-                    {
-                        children: [x, M, S, w, P, U, a],
-                    },
-                    "thread-actions",
-                ),
-                (0, r.jsxs)(
-                    i.rXV,
-                    {
-                        children: [T, I],
-                    },
-                    "notifications",
-                ),
-                (0, r.jsxs)(
-                    i.rXV,
-                    {
-                        children: [L, G, k, D, R],
-                    },
-                    "admin-actions",
-                ),
-                (0, r.jsx)(i.rXV, {
-                    children: Y,
-                }),
-                (0, r.jsx)(
-                    i.rXV,
-                    {
-                        children: N,
-                    },
-                    "developer-actions",
-                ),
+                (0, i.jsxs)(r.rXV, { children: [d, P] }, "mark-as-read-or-favorite"),
+                (0, i.jsxs)(r.rXV, { children: [N, V, L, O, S, X, a] }, "thread-actions"),
+                (0, i.jsxs)(r.rXV, { children: [E, R] }, "notifications"),
+                (0, i.jsxs)(r.rXV, { children: [Y, M, F, U, G] }, "admin-actions"),
+                (0, i.jsx)(r.rXV, { children: w }),
+                (0, i.jsx)(r.rXV, { children: D }, "developer-actions"),
             ],
         });
     },
-    [o.A.CONTEXT_MENU, o.A.CHANNEL_LIST_THREAD_MENU],
+    [d.A.CONTEXT_MENU, d.A.CHANNEL_LIST_THREAD_MENU],
 );

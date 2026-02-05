@@ -1,21 +1,17 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var i = n(64700),
-    r = n(311907),
-    l = n(602582),
-    a = n(946132);
-
-function s(e) {
+n.d(t, { A: () => a });
+var l = n(64700),
+    i = n(311907),
+    s = n(602582),
+    r = n(946132);
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.guild_id,
-        s = e.id,
-        [o, u] = (0, r.yK)([a.A], () => (t ? [null, !0] : [a.A.message(n, s), a.A.isLatest(n, s)]));
+        a = e.id,
+        [u, o] = (0, i.yK)([r.A], () => (t ? [null, !0] : [r.A.message(n, a), r.A.isLatest(n, a)]));
     return (
-        (0, i.useEffect)(() => {
-            null == s || u || l.A.addWant(s);
-        }, [s, u]),
-        o
+        (0, l.useEffect)(() => {
+            null == a || o || s.A.addWant(a);
+        }, [a, o]),
+        u
     );
 }

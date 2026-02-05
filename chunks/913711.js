@@ -1,32 +1,30 @@
-n.d(t, {
-    j: () => c,
-});
+"use strict";
+n.d(t, { j: () => u });
 var r = n(340287),
     i = n(64700),
     a = n(723906),
     s = n(248215),
     o = n(3388),
     l = n(341221);
-
-function c(e, t, n) {
-    let { isDisabled: c } = e,
-        u = (0, a.Bi)(),
+function u(e, t, n) {
+    let { isDisabled: u } = e,
+        c = (0, a.Bi)(),
         d = (0, a.Bi)(),
-        f = (0, l.wR)(),
-        p = (0, i.useRef)(null),
-        _ = (0, i.useCallback)(() => {
-            (p.current = requestAnimationFrame(() => {
+        _ = (0, l.wR)(),
+        f = (0, i.useRef)(null),
+        p = (0, i.useCallback)(() => {
+            (f.current = requestAnimationFrame(() => {
                 n.current && n.current.setAttribute("hidden", "until-found");
             })),
                 (0, r.flushSync)(() => {
                     t.toggle();
                 });
         }, [n, t]);
-    (0, s._)(n, "beforematch", _);
+    (0, s._)(n, "beforematch", p);
     let h = (0, i.useRef)(null);
     return (
         (0, o.N)(() => {
-            if ((p.current && cancelAnimationFrame(p.current), n.current && !c && !f)) {
+            if ((f.current && cancelAnimationFrame(f.current), n.current && !u && !_)) {
                 let e = n.current;
                 null == h.current || "function" != typeof e.getAnimations
                     ? t.isExpanded
@@ -57,32 +55,32 @@ function c(e, t, n) {
                                 .catch(() => {}))),
                     (h.current = t.isExpanded);
             }
-        }, [c, n, t.isExpanded, f]),
+        }, [u, n, t.isExpanded, _]),
         (0, i.useEffect)(
             () => () => {
-                p.current && cancelAnimationFrame(p.current);
+                f.current && cancelAnimationFrame(f.current);
             },
             [],
         ),
         {
             buttonProps: {
-                id: u,
+                id: c,
                 "aria-expanded": t.isExpanded,
                 "aria-controls": d,
                 onPress: (e) => {
-                    c || "keyboard" === e.pointerType || t.toggle();
+                    u || "keyboard" === e.pointerType || t.toggle();
                 },
-                isDisabled: c,
+                isDisabled: u,
                 onPressStart(e) {
-                    "keyboard" !== e.pointerType || c || t.toggle();
+                    "keyboard" !== e.pointerType || u || t.toggle();
                 },
             },
             panelProps: {
                 id: d,
                 role: "group",
-                "aria-labelledby": u,
+                "aria-labelledby": c,
                 "aria-hidden": !t.isExpanded,
-                hidden: f || c ? c || !t.isExpanded : void 0,
+                hidden: _ || u ? u || !t.isExpanded : void 0,
             },
         }
     );

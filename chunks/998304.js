@@ -1,94 +1,34 @@
+"use strict";
 n.d(t, {
-    De: () => M,
-    E2: () => f,
-    IB: () => N,
-    KU: () => _,
-    Ob: () => g,
-    Q7: () => C,
-    WN: () => x,
-    cb: () => h,
-    fE: () => R,
-    h6: () => D,
-    lZ: () => P,
-    tp: () => d,
+    De: () => L,
+    E2: () => l,
+    IB: () => v,
+    KU: () => c,
+    Ob: () => f,
+    Q7: () => S,
+    WN: () => D,
+    cb: () => d,
+    fE: () => b,
+    h6: () => R,
+    lZ: () => N,
+    tp: () => o,
 }),
-    n(65821),
-    n(896048),
-    n(747238),
-    n(321073),
-    n(638769);
+    n(321073);
 var r = n(310784),
     i = n.n(r);
 n(626584);
 var a = n(325335),
-    o = n(985018);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function d(e, t) {
+    s = n(985018);
+function o(e, t) {
     let n, r, i, a;
     if (7 === e.length) return e + ((255 * t) | 0).toString(16).padStart(2, "0").toUpperCase();
-    let o = "#" === e.charAt(0) ? e.slice(1) : e;
-    switch (o.length) {
+    let s = "#" === e.charAt(0) ? e.slice(1) : e;
+    switch (s.length) {
         case 3:
             return (
-                (n = o.charAt(0)),
-                (r = o.charAt(1)),
-                (i = o.charAt(2)),
+                (n = s.charAt(0)),
+                (r = s.charAt(1)),
+                (i = s.charAt(2)),
                 (n += n),
                 (r += r),
                 (i += i),
@@ -97,10 +37,10 @@ function d(e, t) {
             );
         case 4:
             return (
-                (n = o.charAt(0)),
-                (r = o.charAt(1)),
-                (i = o.charAt(2)),
-                (a = o.charAt(3)),
+                (n = s.charAt(0)),
+                (r = s.charAt(1)),
+                (i = s.charAt(2)),
+                (a = s.charAt(3)),
                 (n += n),
                 (r += r),
                 (i += i),
@@ -111,76 +51,56 @@ function d(e, t) {
                     ((255 * ((parseInt((a += a), 16) / 255) * t)) | 0).toString(16).padStart(2, "0").toUpperCase()
             );
         case 6:
-            return "#" + o + ((255 * t) | 0).toString(16).padStart(2, "0").toUpperCase();
+            return "#" + s + ((255 * t) | 0).toString(16).padStart(2, "0").toUpperCase();
         case 8:
             return (
                 "#" +
-                o.slice(0, 6) +
-                (((parseInt(o.slice(6), 16) / 255) * t * 255) | 0).toString(16).padStart(2, "0").toUpperCase()
+                s.slice(0, 6) +
+                (((parseInt(s.slice(6), 16) / 255) * t * 255) | 0).toString(16).padStart(2, "0").toUpperCase()
             );
         default:
             throw Error("Invalid hex color format");
     }
 }
-
-function f(e) {
+function l(e) {
     let [t, n, r] = i()(e).rgb();
-    return {
-        r: t,
-        g: n,
-        b: r,
-    };
+    return { r: t, g: n, b: r };
 }
-
-function p(e) {
+function u(e) {
     let [t, n, r, a] = i()(e).rgba();
-    return {
-        r: t,
-        g: n,
-        b: r,
-        a,
-    };
+    return { r: t, g: n, b: r, a };
 }
-
-function _(e, t) {
-    let { r: n, g: r, b: i, a } = p(e);
-    return "rgba("
-        .concat(n, ", ")
-        .concat(r, ", ")
-        .concat(i, ", ")
-        .concat(null != t ? t : a, ")");
+function c(e, t) {
+    let { r: n, g: r, b: i, a } = u(e);
+    return `rgba(${n}, ${r}, ${i}, ${t ?? a})`;
 }
-
-function h(e, t) {
-    let { r: n, g: r, b: i } = f(e);
-    return "rgba(".concat(n, ", ").concat(r, ", ").concat(i, ", ").concat(t, ")");
+function d(e, t) {
+    let { r: n, g: r, b: i } = l(e);
+    return `rgba(${n}, ${r}, ${i}, ${t})`;
 }
-
-function m(e, t, n) {
+function _(e, t, n) {
     let r = Math.min((e /= 255), (t /= 255), (n /= 255)),
         i = Math.max(e, t, n),
         a = i - r,
-        o = 0,
         s = 0,
+        o = 0,
         l = 0;
     return (
-        (o = Math.round(
-            60 * (o = 0 === a ? 0 : i === e ? ((t - n) / a) % 6 : i === t ? (n - e) / a + 2 : (e - t) / a + 4),
-        )) < 0 && (o += 360),
+        (s = Math.round(
+            60 * (s = 0 === a ? 0 : i === e ? ((t - n) / a) % 6 : i === t ? (n - e) / a + 2 : (e - t) / a + 4),
+        )) < 0 && (s += 360),
         (l = (i + r) / 2),
         {
-            h: o,
-            s: (s = +(100 * (s = 0 === a ? 0 : a / (1 - Math.abs(2 * l - 1)))).toFixed(1)),
+            h: s,
+            s: (o = +(100 * (o = 0 === a ? 0 : a / (1 - Math.abs(2 * l - 1)))).toFixed(1)),
             l: (l = +(100 * l).toFixed(1)),
         }
     );
 }
-
-function g(e, t, n) {
+function f(e, t, n) {
     return "#" + (0x1000000 + (e << 16) + (t << 8) + n).toString(16).slice(1);
 }
-
-function E(e, t, n) {
+function p(e, t, n) {
     let r = (t * Math.min((n /= 100), 1 - n)) / 100,
         i = (t) => {
             let i = (t + e / 30) % 12;
@@ -188,109 +108,70 @@ function E(e, t, n) {
                 .toString(16)
                 .padStart(2, "0");
         };
-    return "#".concat(i(0)).concat(i(8)).concat(i(4));
+    return `#${i(0)}${i(8)}${i(4)}`;
 }
-
-function y(e) {
+function h(e) {
     let t, n, r, i, a;
-    var o = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
-    if (null == o) return null;
-    var s = parseInt(o[1], 16),
-        l = parseInt(o[2], 16),
-        c = parseInt(o[3], 16);
-    let u = s / 255,
+    var s = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
+    if (null == s) return null;
+    var o = parseInt(s[1], 16),
+        l = parseInt(s[2], 16),
+        u = parseInt(s[3], 16);
+    let c = o / 255,
         d = l / 255,
-        f = c / 255,
-        p = Math.max(u, d, f),
-        _ = p - Math.min(u, d, f),
-        h = (e) => (p - e) / 6 / _ + 0.5,
+        _ = u / 255,
+        f = Math.max(c, d, _),
+        p = f - Math.min(c, d, _),
+        h = (e) => (f - e) / 6 / p + 0.5,
         m = (e) => Math.round(100 * e) / 100;
     return (
-        0 === _
+        0 === p
             ? (i = a = 0)
-            : ((a = _ / p),
-              (t = h(u)),
+            : ((a = p / f),
+              (t = h(c)),
               (n = h(d)),
-              (r = h(f)),
-              (i = u === p ? r - n : d === p ? 1 / 3 + t - r : f === p ? 2 / 3 + n - t : 0) < 0
+              (r = h(_)),
+              (i = c === f ? r - n : d === f ? 1 / 3 + t - r : _ === f ? 2 / 3 + n - t : 0) < 0
                   ? (i += 1)
                   : i > 1 && (i -= 1)),
-        {
-            h: Math.round(360 * i),
-            s: m(100 * a),
-            v: m(100 * p),
-        }
+        { h: Math.round(360 * i), s: m(100 * a), v: m(100 * f) }
     );
 }
-
-function b(e, t, n) {
-    return f(E(e, t, n));
+function m(e, t, n) {
+    return l(p(e, t, n));
 }
-u(
-    l(
-        {},
-        {
-            "#1abc9c": () => o.intl.string(o.t.fBawRj),
-            "#2ecc71": () => o.intl.string(o.t.hvv3QR),
-            "#3498db": () => o.intl.string(o.t.JwX6Jd),
-            "#9b59b6": () => o.intl.string(o.t.H3xljj),
-            "#e91e63": () => o.intl.string(o.t.X9izyR),
-            "#11806a": () => o.intl.string(o.t.Kw7K2z),
-            "#1f8b4c": () => o.intl.string(o.t.z5AZKW),
-            "#206694": () => o.intl.string(o.t.JqBqKz),
-            "#71368a": () => o.intl.string(o.t.edPgnK),
-            "#ad1457": () => o.intl.string(o.t.ti7gsS),
-            "#f1c40f": () => o.intl.string(o.t["H9jz+S"]),
-            "#e67e22": () => o.intl.string(o.t.UmsfHL),
-            "#e74c3c": () => o.intl.string(o.t.GoDlAC),
-            "#95a5a6": () => o.intl.string(o.t["9GpDYK"]),
-            "#607d8b": () => o.intl.string(o.t.lwrNQG),
-            "#c27c0e": () => o.intl.string(o.t.Lf10GG),
-            "#a84300": () => o.intl.string(o.t["H+AjY7"]),
-            "#992d22": () => o.intl.string(o.t.XTkdex),
-            "#979c9f": () => o.intl.string(o.t.Ve0Lip),
-            "#546e7a": () => o.intl.string(o.t.BwbOAO),
-            "#99aab5": () => o.intl.string(o.t["/po5rJ"]),
-        },
-    ),
-    {
-        "#5865f2": () => o.intl.string(o.t["Cn/LJ4"]),
-    },
-);
-let O = 30,
-    v = 80,
+let g = 30,
+    E = 80,
     A = 20,
     I = 30,
-    S = 40,
-    T = 15;
-
-function C(e) {
+    T = 40,
+    y = 15;
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         n = [],
-        { h: r, s: i, l: a } = m(e[0], e[1], e[2]),
-        o = r,
-        s = i,
+        { h: r, s: i, l: a } = _(e[0], e[1], e[2]),
+        s = r,
+        o = i,
         l = a;
-    s < O && (s += I), l > v && (l -= S), l < A && (l += T);
-    let c = 360 / (t + 1);
+    o < g && (o += I), l > E && (l -= T), l < A && (l += y);
+    let u = 360 / (t + 1);
     for (; n.length < t; ) {
-        (o -= c) < 0 && (o += 360);
-        let { r: e, g: t, b: r } = b(o, s, l);
+        (s -= u) < 0 && (s += 360);
+        let { r: e, g: t, b: r } = m(s, o, l);
         n.push([e, t, r]);
     }
     return n;
 }
-
-function N(e, t, n) {
+function v(e, t, n) {
     let r,
         i,
         a = Math.max((e /= 255), (t /= 255), (n /= 255)),
-        o = Math.min(e, t, n),
-        s = (a + o) / 2;
-    if (a === o) r = i = 0;
+        s = Math.min(e, t, n),
+        o = (a + s) / 2;
+    if (a === s) r = i = 0;
     else {
-        let l = a - o;
-        switch (((i = s > 0.5 ? l / (2 - a - o) : l / (a + o)), a)) {
+        let l = a - s;
+        switch (((i = o > 0.5 ? l / (2 - a - s) : l / (a + s)), a)) {
             case e:
                 r = (t - n) / l + 6 * (t < n);
                 break;
@@ -302,17 +183,11 @@ function N(e, t, n) {
         }
         null == r ? (r = 0) : (r /= 6);
     }
-    return {
-        hue: 360 * r,
-        saturation: i,
-        lightness: s,
-        alpha: 1,
-    };
+    return { hue: 360 * r, saturation: i, lightness: o, alpha: 1 };
 }
-
-function w(e, t, n) {
-    let r, i, o;
-    if (((e /= 360), 0 === t)) r = i = o = n;
+function C(e, t, n) {
+    let r, i, s;
+    if (((e /= 360), 0 === t)) r = i = s = n;
     else {
         let a = function (e, t, n) {
                 return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
@@ -323,96 +198,70 @@ function w(e, t, n) {
                         ? e + (t - e) * (2 / 3 - n) * 6
                         : e;
             },
-            s = n < 0.5 ? n * (1 + t) : n + t - n * t,
-            l = 2 * n - s;
-        (r = a(l, s, e + 1 / 3)), (i = a(l, s, e)), (o = a(l, s, e - 1 / 3));
+            o = n < 0.5 ? n * (1 + t) : n + t - n * t,
+            l = 2 * n - o;
+        (r = a(l, o, e + 1 / 3)), (i = a(l, o, e)), (s = a(l, o, e - 1 / 3));
     }
-    return new a.A(Math.round(255 * r), Math.round(255 * i), Math.round(255 * o), 1);
+    return new a.A(Math.round(255 * r), Math.round(255 * i), Math.round(255 * s), 1);
 }
-
-function R(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = N(e.red, e.green, e.blue);
+        r = v(e.red, e.green, e.blue);
     return (
         n
             ? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t)
             : (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t),
-        w(r.hue, r.saturation, r.lightness)
+        C(r.hue, r.saturation, r.lightness)
     );
 }
-
-function P(e) {
+function N(e) {
     let { foreground: t, background: n, ratio: r = 5, saturationFactor: a = 1 } = e;
     a < 1 && ((t = t.set("hsl.s", t.get("hsl.s") * a)), (n = n.set("hsl.s", n.get("hsl.s") * a)));
-    let o = 0.5 >= n.luminance(),
-        s = i().contrast(t, n);
-    for (let e = 0; e < 10 && s < r; e++) {
+    let s = 0.5 >= n.luminance(),
+        o = i().contrast(t, n);
+    for (let e = 0; e < 10 && o < r; e++) {
         let e = t.get("hsl.l");
-        if (o)
+        if (s)
             if (e < 0.95) t = t.set("hsl.l", e + 0.05);
             else break;
         else if (e > 0.05) t = t.set("hsl.l", e - 0.05);
         else break;
-        s = i().contrast(t, n);
+        o = i().contrast(t, n);
     }
     return t.alpha(1);
 }
-
-function D(e) {
+function R(e) {
     return e
         .slice(0, 3)
-        .map((e) => {
-            var t;
-            return {
-                hex: e,
-                hsv:
-                    null != (t = y(e))
-                        ? t
-                        : {
-                              h: 0,
-                              s: 0,
-                              v: 0,
-                          },
-            };
-        })
-        .sort(L)[0].hex;
+        .map((e) => ({ hex: e, hsv: h(e) ?? { h: 0, s: 0, v: 0 } }))
+        .sort(O)[0].hex;
 }
-
-function L(e, t) {
+function O(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-
-function x(e) {
-    var t;
-    let { colorRGB: n, saturationFactor: r = 1 } = e;
-    if (null == n) return n;
-    let i = N(n.get("rgb.r"), n.get("rgb.g"), n.get("rgb.b"));
-    return null == i
-        ? null == n
-            ? void 0
-            : n.hex()
-        : null == (t = w(i.hue, i.saturation * r, i.lightness))
-          ? void 0
-          : t.toHexString();
+function D(e) {
+    let { colorRGB: t, saturationFactor: n = 1 } = e;
+    if (null == t) return t;
+    let r = v(t.get("rgb.r"), t.get("rgb.g"), t.get("rgb.b"));
+    return null == r ? t?.hex() : C(r.hue, r.saturation * n, r.lightness)?.toHexString();
 }
-
-function M(e, t, n) {
+function L(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),
         i = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),
-        o = parseInt(t.substring(1, 3), 16),
-        s = parseInt(t.substring(3, 5), 16),
+        s = parseInt(t.substring(1, 3), 16),
+        o = parseInt(t.substring(3, 5), 16),
         l = parseInt(t.substring(5, 7), 16),
-        c = Math.round(r + (o - r) * n)
+        u = Math.round(r + (s - r) * n)
             .toString(16)
             .padStart(2, "0"),
-        u = Math.round(i + (s - i) * n)
+        c = Math.round(i + (o - i) * n)
             .toString(16)
             .padStart(2, "0"),
         d = Math.round(a + (l - a) * n)
             .toString(16)
             .padStart(2, "0");
-    return "#".concat(c).concat(u).concat(d);
+    return `#${u}${c}${d}`;
 }

@@ -1,34 +1,21 @@
-t.d(n, {
-    A: () => o,
-});
-var r = t(311907),
+t.d(n, { A: () => o });
+var i = t(311907),
     l = t(113783),
-    i = t(69407),
-    s = t(446600),
-    a = t(734057),
+    a = t(69407),
+    r = t(446600),
+    s = t(734057),
     c = t(71393);
-
 function o(e) {
     let {
             id: n,
-            data: { guild: t, instance: o, speakers: u, participantCount: d },
-            context: m,
+            data: { guild: t, instance: o, speakers: d, participantCount: u },
+            context: g,
         } = e,
-        g = (0, r.bG)([c.A, a.A], () => {
-            var e;
-            return c.A.getGuild(null == (e = a.A.getChannel(n)) ? void 0 : e.getGuildId());
-        }, [n]),
-        h = (0, r.bG)([s.A], () => s.A.getStageInstanceByChannel(n), [n]),
-        j = (0, l.E5)(n, i.ip.SPEAKER),
+        A = (0, i.bG)([c.A, s.A], () => c.A.getGuild(s.A.getChannel(n)?.getGuildId()), [n]),
+        h = (0, i.bG)([r.A], () => r.A.getStageInstanceByChannel(n), [n]),
+        m = (0, l.E5)(n, a.ip.SPEAKER),
         x = (0, l.zy)(n),
-        v = null != h ? j : u,
-        p = (null != h ? x : d) - v.length;
-    return {
-        channelId: n,
-        guild: null != g ? g : t,
-        stage: null != h ? h : o,
-        speakers: v,
-        audienceCount: p,
-        context: m,
-    };
+        C = null != h ? m : d,
+        v = (null != h ? x : u) - C.length;
+    return { channelId: n, guild: A ?? t, stage: h ?? o, speakers: C, audienceCount: v, context: g };
 }

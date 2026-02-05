@@ -1,3 +1,4 @@
+"use strict";
 var r = n(315646),
     i = n(741623),
     a = function (e, t, n) {
@@ -12,18 +13,12 @@ var r = n(315646),
     },
     o = function (e, t, n) {
         var r = a(e, t);
-        r
-            ? (r.value = n)
-            : (e.next = {
-                  key: t,
-                  next: e.next,
-                  value: n,
-              });
+        r ? (r.value = n) : (e.next = { key: t, next: e.next, value: n });
     },
     l = function (e, t) {
         return !!e && !!a(e, t);
     },
-    c = function (e, t) {
+    u = function (e, t) {
         if (e) return a(e, t, !0);
     };
 e.exports = function () {
@@ -34,7 +29,7 @@ e.exports = function () {
             },
             delete: function (t) {
                 var n = e && e.next,
-                    r = c(e, t);
+                    r = u(e, t);
                 return r && n && n === r && (e = void 0), !!r;
             },
             get: function (t) {
@@ -44,11 +39,7 @@ e.exports = function () {
                 return l(e, t);
             },
             set: function (t, n) {
-                e ||
-                    (e = {
-                        next: void 0,
-                    }),
-                    o(e, t, n);
+                e || (e = { next: void 0 }), o(e, t, n);
             },
         };
     return t;

@@ -1,5 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
-let r =
+"use strict";
+n.d(t, { A: () => i });
+let i =
     "https://cdn.discordapp.com/assets/content/2532e8cd0600ccfbc61ff81c21959bde90a6645d0e71644a92f6cde5bfc48439.png";

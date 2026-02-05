@@ -7,9 +7,7 @@ e.exports = (function e(t, n, r) {
                 var c = Error("Cannot find module '" + a + "'");
                 throw ((c.code = "MODULE_NOT_FOUND"), c);
             }
-            var d = (n[a] = {
-                exports: {},
-            });
+            var d = (n[a] = { exports: {} });
             t[a][0].call(
                 d.exports,
                 function (e) {
@@ -31,8 +29,8 @@ e.exports = (function e(t, n, r) {
     {
         1: [
             function (e, t, n) {
+                "use strict";
                 var r = {};
-
                 function i(e) {
                     var t,
                         n = JSON.stringify(e);
@@ -76,12 +74,11 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/load-script");
             },
-            {
-                "./dist/load-script": 1,
-            },
+            { "./dist/load-script": 1 },
         ],
         3: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (e = e || window.navigator.userAgent), /Android/i.test(e);
                 };
@@ -90,6 +87,7 @@ e.exports = (function e(t, n, r) {
         ],
         4: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (e = e || window.navigator.userAgent), /CrOS/i.test(e);
                 };
@@ -98,6 +96,7 @@ e.exports = (function e(t, n, r) {
         ],
         5: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-edge"),
                     i = e("./is-samsung"),
                     o = e("./is-duckduckgo"),
@@ -114,16 +113,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "./is-duckduckgo": 6,
-                "./is-edge": 7,
-                "./is-opera": 16,
-                "./is-samsung": 17,
-                "./is-silk": 18,
-            },
+            { "./is-duckduckgo": 6, "./is-edge": 7, "./is-opera": 16, "./is-samsung": 17, "./is-silk": 18 },
         ],
         6: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("DuckDuckGo/");
                 };
@@ -132,6 +126,7 @@ e.exports = (function e(t, n, r) {
         ],
         7: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Edge/") || -1 !== e.indexOf("Edg/");
                 };
@@ -140,6 +135,7 @@ e.exports = (function e(t, n, r) {
         ],
         8: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (e = e || window.navigator.userAgent), /Firefox/i.test(e);
                 };
@@ -148,6 +144,7 @@ e.exports = (function e(t, n, r) {
         ],
         9: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (e = e || window.navigator.userAgent), /FxiOS/i.test(e);
                 };
@@ -156,18 +153,18 @@ e.exports = (function e(t, n, r) {
         ],
         10: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios");
                 t.exports = function (e) {
                     var t;
                     return r((e = e || window.navigator.userAgent)) && ((t = e), /\bGSA\b/.test(t));
                 };
             },
-            {
-                "./is-ios": 14,
-            },
+            { "./is-ios": 14 },
         ],
         11: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-firefox"),
                     o = /webkit/i;
@@ -182,13 +179,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "./is-ios": 14,
-                "./is-ios-firefox": 9,
-            },
+            { "./is-ios": 14, "./is-ios-firefox": 9 },
         ],
         12: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-google-search-app");
                 t.exports = function (e) {
@@ -197,24 +192,21 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "./is-ios": 14,
-                "./is-ios-google-search-app": 10,
-            },
+            { "./is-ios": 14, "./is-ios-google-search-app": 10 },
         ],
         13: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios-webview");
                 t.exports = function (e, t) {
                     return (t = void 0 !== t ? t : window.statusbar.visible), r(e) && t;
                 };
             },
-            {
-                "./is-ios-webview": 12,
-            },
+            { "./is-ios-webview": 12 },
         ],
         14: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ipados");
                 t.exports = function (e, t, n) {
                     void 0 === t && (t = !0), (e = e || window.navigator.userAgent);
@@ -222,12 +214,11 @@ e.exports = (function e(t, n, r) {
                     return t ? i || r(e, n) : i;
                 };
             },
-            {
-                "./is-ipados": 15,
-            },
+            { "./is-ipados": 15 },
         ],
         15: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (e = e || window.navigator.userAgent),
@@ -240,6 +231,7 @@ e.exports = (function e(t, n, r) {
         ],
         16: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (
                         -1 !== (e = e || window.navigator.userAgent).indexOf("OPR/") ||
@@ -252,6 +244,7 @@ e.exports = (function e(t, n, r) {
         ],
         17: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e);
                 };
@@ -260,6 +253,7 @@ e.exports = (function e(t, n, r) {
         ],
         18: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Silk/");
                 };
@@ -268,13 +262,13 @@ e.exports = (function e(t, n, r) {
         ],
         19: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-android"),
                     i = e("./is-ios-firefox"),
                     o = e("./is-ios-webview"),
                     a = e("./is-chrome"),
                     s = e("./is-samsung"),
                     c = e("./is-duckduckgo");
-
                 function d(e) {
                     return (e = e || window.navigator.userAgent).indexOf("Opera Mini") > -1;
                 }
@@ -306,84 +300,65 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/is-android");
             },
-            {
-                "./dist/is-android": 3,
-            },
+            { "./dist/is-android": 3 },
         ],
         21: [
             function (e, t, n) {
                 t.exports = e("./dist/is-chrome-os");
             },
-            {
-                "./dist/is-chrome-os": 4,
-            },
+            { "./dist/is-chrome-os": 4 },
         ],
         22: [
             function (e, t, n) {
                 t.exports = e("./dist/is-chrome");
             },
-            {
-                "./dist/is-chrome": 5,
-            },
+            { "./dist/is-chrome": 5 },
         ],
         23: [
             function (e, t, n) {
                 t.exports = e("./dist/is-firefox");
             },
-            {
-                "./dist/is-firefox": 8,
-            },
+            { "./dist/is-firefox": 8 },
         ],
         24: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-safari");
             },
-            {
-                "./dist/is-ios-safari": 11,
-            },
+            { "./dist/is-ios-safari": 11 },
         ],
         25: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-webview");
             },
-            {
-                "./dist/is-ios-webview": 12,
-            },
+            { "./dist/is-ios-webview": 12 },
         ],
         26: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-wkwebview");
             },
-            {
-                "./dist/is-ios-wkwebview": 13,
-            },
+            { "./dist/is-ios-wkwebview": 13 },
         ],
         27: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios");
             },
-            {
-                "./dist/is-ios": 14,
-            },
+            { "./dist/is-ios": 14 },
         ],
         28: [
             function (e, t, n) {
                 t.exports = e("./dist/is-samsung");
             },
-            {
-                "./dist/is-samsung": 17,
-            },
+            { "./dist/is-samsung": 17 },
         ],
         29: [
             function (e, t, n) {
                 t.exports = e("./dist/supports-popups");
             },
-            {
-                "./dist/supports-popups": 19,
-            },
+            { "./dist/supports-popups": 19 },
         ],
         30: [
             function (e, t, n) {
+                "use strict";
                 t.exports = (function () {
                     function e() {
                         this._events = {};
@@ -412,9 +387,7 @@ e.exports = (function e(t, n, r) {
                             return !!t && t.length > 0;
                         }),
                         (e.createChild = function (t) {
-                            t.prototype = Object.create(e.prototype, {
-                                constructor: t,
-                            });
+                            t.prototype = Object.create(e.prototype, { constructor: t });
                         }),
                         e
                     );
@@ -424,6 +397,7 @@ e.exports = (function e(t, n, r) {
         ],
         31: [
             function (e, t, n) {
+                "use strict";
                 var r = "u" > typeof Promise ? Promise : null;
                 t.exports = (function () {
                     function e(t) {
@@ -533,6 +507,7 @@ e.exports = (function e(t, n, r) {
         ],
         32: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/set-attributes"),
                     i = e("./lib/default-attributes"),
                     o = e("./lib/assign");
@@ -548,17 +523,12 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "./lib/assign": 33,
-                "./lib/default-attributes": 34,
-                "./lib/set-attributes": 35,
-            },
+            { "./lib/assign": 33, "./lib/default-attributes": 34, "./lib/set-attributes": 35 },
         ],
         33: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.assign = void 0),
                     (n.assign = function (e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
@@ -577,9 +547,8 @@ e.exports = (function e(t, n, r) {
         ],
         34: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.defaultAttributes = void 0),
                     (n.defaultAttributes = {
                         src: "about:blank",
@@ -592,9 +561,8 @@ e.exports = (function e(t, n, r) {
         ],
         35: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.setAttributes = void 0),
                     (n.setAttributes = function (e, t) {
                         for (var n in t)
@@ -608,6 +576,7 @@ e.exports = (function e(t, n, r) {
         ],
         36: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -619,9 +588,8 @@ e.exports = (function e(t, n, r) {
         ],
         37: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.deferred = function (e) {
                         return function () {
                             for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -639,9 +607,8 @@ e.exports = (function e(t, n, r) {
         ],
         38: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.once = function (e) {
                         var t = !1;
                         return function () {
@@ -654,9 +621,8 @@ e.exports = (function e(t, n, r) {
         ],
         39: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.promiseOrCallback = function (e, t) {
                         if (!t) return e;
                         e.then(function (e) {
@@ -670,10 +636,10 @@ e.exports = (function e(t, n, r) {
         ],
         40: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/deferred"),
                     i = e("./lib/once"),
                     o = e("./lib/promise-or-callback");
-
                 function a(e) {
                     return function () {
                         for (var t, n = [], a = 0; a < arguments.length; a++) n[a] = arguments[a];
@@ -704,17 +670,14 @@ e.exports = (function e(t, n, r) {
                 }),
                     (t.exports = a);
             },
-            {
-                "./lib/deferred": 37,
-                "./lib/once": 38,
-                "./lib/promise-or-callback": 39,
-            },
+            { "./lib/deferred": 37, "./lib/once": 38, "./lib/promise-or-callback": 39 },
         ],
         41: [
             function (e, n, r) {
                 var i, o;
                 (i = this),
                     (o = function (e) {
+                        "use strict";
                         function t(e, t, n, r) {
                             return new (n || (n = Promise))(function (i, o) {
                                 function a(e) {
@@ -724,7 +687,6 @@ e.exports = (function e(t, n, r) {
                                         o(e);
                                     }
                                 }
-
                                 function s(e) {
                                     try {
                                         c(r.throw(e));
@@ -732,7 +694,6 @@ e.exports = (function e(t, n, r) {
                                         o(e);
                                     }
                                 }
-
                                 function c(e) {
                                     var t;
                                     e.done
@@ -747,7 +708,6 @@ e.exports = (function e(t, n, r) {
                                 c((r = r.apply(e, t || [])).next());
                             });
                         }
-
                         function n(e, t) {
                             var n,
                                 r,
@@ -763,18 +723,13 @@ e.exports = (function e(t, n, r) {
                                     ops: [],
                                 };
                             return (
-                                (o = {
-                                    next: s(0),
-                                    throw: s(1),
-                                    return: s(2),
-                                }),
+                                (o = { next: s(0), throw: s(1), return: s(2) }),
                                 "function" == typeof Symbol &&
                                     (o[Symbol.iterator] = function () {
                                         return this;
                                     }),
                                 o
                             );
-
                             function s(o) {
                                 return function (s) {
                                     var c = [o, s];
@@ -799,13 +754,7 @@ e.exports = (function e(t, n, r) {
                                                     i = c;
                                                     break;
                                                 case 4:
-                                                    return (
-                                                        a.label++,
-                                                        {
-                                                            value: c[1],
-                                                            done: !1,
-                                                        }
-                                                    );
+                                                    return a.label++, { value: c[1], done: !1 };
                                                 case 5:
                                                     a.label++, (r = c[1]), (c = [0]);
                                                     continue;
@@ -842,10 +791,7 @@ e.exports = (function e(t, n, r) {
                                             n = i = 0;
                                         }
                                     if (5 & c[0]) throw c[1];
-                                    return {
-                                        value: c[0] ? c[1] : void 0,
-                                        done: !0,
-                                    };
+                                    return { value: c[0] ? c[1] : void 0, done: !0 };
                                 };
                             }
                         }
@@ -853,7 +799,6 @@ e.exports = (function e(t, n, r) {
                             i,
                             o = {},
                             a = {};
-
                         function s(e) {
                             var t,
                                 n = JSON.stringify(e);
@@ -889,9 +834,7 @@ e.exports = (function e(t, n, r) {
                         (s.clearCache = function () {
                             a = {};
                         }),
-                            Object.defineProperty(o, "__esModule", {
-                                value: !0,
-                            }),
+                            Object.defineProperty(o, "__esModule", { value: !0 }),
                             (o.loadStylesheet = c = o.loadScript = void 0);
                         var c = (o.loadScript = s);
                         o.loadStylesheet = function (e) {
@@ -911,19 +854,14 @@ e.exports = (function e(t, n, r) {
                         var d = "fastlane",
                             l = "connect-boba",
                             u = {
-                                AXO_ASSET_NAME: {
-                                    minified: "axo.min",
-                                    unminified: "axo",
-                                },
+                                AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" },
                                 AXO_ASSET_PATH: l,
                                 LOCALE_PATH: "".concat(l, "/locales/"),
                                 CDNX_PROD: "https://www.paypalobjects.com",
                             };
-
                         function p() {
                             return "function" == typeof window.define && !!window.define.amd;
                         }
-
                         function _(e, r, i) {
                             var o, a;
                             return (
@@ -1000,16 +938,13 @@ e.exports = (function e(t, n, r) {
                                     },
                                 }),
                                 i);
-
                         function A(e, t) {
                             var n;
                             if ((void 0 === t && (t = !0), p())) {
                                 p() &&
                                     "function" == typeof window.requirejs &&
                                     "function" == typeof window.requirejs.config &&
-                                    requirejs.config({
-                                        paths: (((n = {})[d] = e), n),
-                                    });
+                                    requirejs.config({ paths: (((n = {})[d] = e), n) });
                                 var r = ""
                                     .concat(d, "/")
                                     .concat(t ? u.AXO_ASSET_NAME.minified : u.AXO_ASSET_NAME.unminified);
@@ -1017,13 +952,8 @@ e.exports = (function e(t, n, r) {
                                     window.require([r], e, t);
                                 });
                             }
-                            return c({
-                                id: "axo-id",
-                                src: e,
-                                forceScriptReload: !0,
-                            });
+                            return c({ id: "axo-id", src: e, forceScriptReload: !0 });
                         }
-
                         function T(e) {
                             var t = e.assetUrl,
                                 n = e.bundleId;
@@ -1080,14 +1010,7 @@ e.exports = (function e(t, n, r) {
                                             case 4:
                                                 throw Error("unsupported axo platform");
                                             case 5:
-                                                return [
-                                                    2,
-                                                    {
-                                                        metadata: {
-                                                            localeUrl: o,
-                                                        },
-                                                    },
-                                                ];
+                                                return [2, { metadata: { localeUrl: o } }];
                                         }
                                     });
                                 });
@@ -1103,6 +1026,7 @@ e.exports = (function e(t, n, r) {
         ],
         42: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -1150,18 +1074,15 @@ e.exports = (function e(t, n, r) {
                         l.HIPERCARD,
                     ],
                     p = (0, c.clone)(u);
-
                 function _(e) {
                     return d[e] || i[e];
                 }
-
                 function E(e, t) {
                     void 0 === t && (t = !1);
                     var n = p.indexOf(e);
                     if (!t && -1 === n) throw Error('"' + e + '" is not a supported card type.');
                     return n;
                 }
-
                 function h(e) {
                     var t = [];
                     if (!(0, a.isValidInputType)(e)) return t;
@@ -1214,10 +1135,8 @@ e.exports = (function e(t, n, r) {
         ],
         43: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.addMatchingCardsToResults = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.addMatchingCardsToResults = void 0);
                 var r = e("./clone"),
                     i = e("./matches");
                 n.addMatchingCardsToResults = function (e, t, n) {
@@ -1234,13 +1153,11 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            {
-                "./clone": 45,
-                "./matches": 48,
-            },
+            { "./clone": 45, "./matches": 48 },
         ],
         44: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     visa: {
                         niceType: "Visa",
@@ -1248,10 +1165,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [4],
                         gaps: [4, 8, 12],
                         lengths: [16, 18, 19],
-                        code: {
-                            name: "CVV",
-                            size: 3,
-                        },
+                        code: { name: "CVV", size: 3 },
                     },
                     mastercard: {
                         niceType: "Mastercard",
@@ -1259,10 +1173,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [[51, 55], [2221, 2229], [223, 229], [23, 26], [270, 271], 2720],
                         gaps: [4, 8, 12],
                         lengths: [16],
-                        code: {
-                            name: "CVC",
-                            size: 3,
-                        },
+                        code: { name: "CVC", size: 3 },
                     },
                     "american-express": {
                         niceType: "American Express",
@@ -1270,10 +1181,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [34, 37],
                         gaps: [4, 10],
                         lengths: [15],
-                        code: {
-                            name: "CID",
-                            size: 4,
-                        },
+                        code: { name: "CID", size: 4 },
                     },
                     "diners-club": {
                         niceType: "Diners Club",
@@ -1281,10 +1189,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [[300, 305], 36, 38, 39],
                         gaps: [4, 10],
                         lengths: [14, 16, 19],
-                        code: {
-                            name: "CVV",
-                            size: 3,
-                        },
+                        code: { name: "CVV", size: 3 },
                     },
                     discover: {
                         niceType: "Discover",
@@ -1292,10 +1197,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [6011, [644, 649], 65],
                         gaps: [4, 8, 12],
                         lengths: [16, 19],
-                        code: {
-                            name: "CID",
-                            size: 3,
-                        },
+                        code: { name: "CID", size: 3 },
                     },
                     jcb: {
                         niceType: "JCB",
@@ -1303,10 +1205,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [2131, 1800, [3528, 3589]],
                         gaps: [4, 8, 12],
                         lengths: [16, 17, 18, 19],
-                        code: {
-                            name: "CVV",
-                            size: 3,
-                        },
+                        code: { name: "CVV", size: 3 },
                     },
                     unionpay: {
                         niceType: "UnionPay",
@@ -1337,10 +1236,7 @@ e.exports = (function e(t, n, r) {
                         ],
                         gaps: [4, 8, 12],
                         lengths: [14, 15, 16, 17, 18, 19],
-                        code: {
-                            name: "CVN",
-                            size: 3,
-                        },
+                        code: { name: "CVN", size: 3 },
                     },
                     maestro: {
                         niceType: "Maestro",
@@ -1348,10 +1244,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [493698, [5e5, 504174], [504176, 506698], [506779, 508999], [56, 59], 63, 67, 6],
                         gaps: [4, 8, 12],
                         lengths: [12, 13, 14, 15, 16, 17, 18, 19],
-                        code: {
-                            name: "CVC",
-                            size: 3,
-                        },
+                        code: { name: "CVC", size: 3 },
                     },
                     elo: {
                         niceType: "Elo",
@@ -1385,10 +1278,7 @@ e.exports = (function e(t, n, r) {
                         ],
                         gaps: [4, 8, 12],
                         lengths: [16],
-                        code: {
-                            name: "CVE",
-                            size: 3,
-                        },
+                        code: { name: "CVE", size: 3 },
                     },
                     mir: {
                         niceType: "Mir",
@@ -1396,10 +1286,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [[2200, 2204]],
                         gaps: [4, 8, 12],
                         lengths: [16, 17, 18, 19],
-                        code: {
-                            name: "CVP2",
-                            size: 3,
-                        },
+                        code: { name: "CVP2", size: 3 },
                     },
                     hiper: {
                         niceType: "Hiper",
@@ -1407,10 +1294,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [637095, 0x3cc8e4f, 0x3cca57e, 637568, 637599, 637609, 637612],
                         gaps: [4, 8, 12],
                         lengths: [16],
-                        code: {
-                            name: "CVC",
-                            size: 3,
-                        },
+                        code: { name: "CVC", size: 3 },
                     },
                     hipercard: {
                         niceType: "Hipercard",
@@ -1418,10 +1302,7 @@ e.exports = (function e(t, n, r) {
                         patterns: [606282],
                         gaps: [4, 8, 12],
                         lengths: [16],
-                        code: {
-                            name: "CVC",
-                            size: 3,
-                        },
+                        code: { name: "CVC", size: 3 },
                     },
                 };
             },
@@ -1429,9 +1310,8 @@ e.exports = (function e(t, n, r) {
         ],
         45: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.clone = void 0),
                     (n.clone = function (e) {
                         return e ? JSON.parse(JSON.stringify(e)) : null;
@@ -1441,9 +1321,8 @@ e.exports = (function e(t, n, r) {
         ],
         46: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.findBestMatch = void 0),
                     (n.findBestMatch = function (e) {
                         var t;
@@ -1460,9 +1339,8 @@ e.exports = (function e(t, n, r) {
         ],
         47: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isValidInputType = void 0),
                     (n.isValidInputType = function (e) {
                         return "string" == typeof e || e instanceof String;
@@ -1472,9 +1350,8 @@ e.exports = (function e(t, n, r) {
         ],
         48: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.matches = void 0),
                     (n.matches = function (e, t) {
                         var n, r, i, o, a, s;
@@ -1493,10 +1370,8 @@ e.exports = (function e(t, n, r) {
         ],
         49: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.Framebus = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.Framebus = void 0);
                 var r = e("./lib"),
                     i = "u" > typeof window && window.Promise;
                 n.Framebus = (function () {
@@ -1546,10 +1421,7 @@ e.exports = (function e(t, n, r) {
                                     ? this.targetFramesAsWindows().forEach(function (e) {
                                           (0, r.sendMessage)(e, o, i);
                                       })
-                                    : (0, r.broadcast)(o, {
-                                          origin: i,
-                                          frame: window.top || window.self,
-                                      }),
+                                    : (0, r.broadcast)(o, { origin: i, frame: window.top || window.self }),
                                 !0)
                             );
                         }),
@@ -1575,11 +1447,7 @@ e.exports = (function e(t, n, r) {
                                             !n.passesVerifyDomainCheck(this && this.origin) ||
                                                 (n.hasMatchingTargetFrame(this && this.source) && t.apply(void 0, e));
                                         }),
-                                    this.listeners.push({
-                                        eventName: e,
-                                        handler: o,
-                                        originalHandler: t,
-                                    }),
+                                    this.listeners.push({ eventName: e, handler: o, originalHandler: t }),
                                     (r.subscribers[i] = r.subscribers[i] || {}),
                                     (r.subscribers[i][e] = r.subscribers[i][e] || []),
                                     r.subscribers[i][e].push(o),
@@ -1656,27 +1524,21 @@ e.exports = (function e(t, n, r) {
                     );
                 })();
             },
-            {
-                "./lib": 57,
-            },
+            { "./lib": 57 },
         ],
         50: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib"),
                     i = e("./framebus");
                 (0, r.attach)(), (t.exports = i.Framebus);
             },
-            {
-                "./framebus": 49,
-                "./lib": 57,
-            },
+            { "./framebus": 49, "./lib": 57 },
         ],
         51: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.detach = n.attach = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.detach = n.attach = void 0);
                 var r = e("./"),
                     i = !1;
                 (n.attach = function () {
@@ -1686,40 +1548,28 @@ e.exports = (function e(t, n, r) {
                         (i = !1), window.removeEventListener("message", r.onMessage, !1);
                     });
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         52: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.broadcastToChildWindows = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcastToChildWindows = void 0);
                 var r = e("./");
                 n.broadcastToChildWindows = function (e, t, n) {
                     for (var i = r.childWindows.length - 1; i >= 0; i--) {
                         var o = r.childWindows[i];
                         o.closed
                             ? r.childWindows.splice(i, 1)
-                            : n !== o &&
-                              (0, r.broadcast)(e, {
-                                  origin: t,
-                                  frame: o.top,
-                              });
+                            : n !== o && (0, r.broadcast)(e, { origin: t, frame: o.top });
                     }
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         53: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.broadcast = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcast = void 0);
                 var r = e("./");
                 n.broadcast = function e(t, n) {
                     var i,
@@ -1731,29 +1581,19 @@ e.exports = (function e(t, n, r) {
                             s.postMessage(t, a),
                                 (0, r.hasOpener)(s) &&
                                     s.opener.top !== window.top &&
-                                    e(t, {
-                                        origin: a,
-                                        frame: s.opener.top,
-                                    });
+                                    e(t, { origin: a, frame: s.opener.top });
                             (i = s.frames[o]);
                         )
-                            e(t, {
-                                origin: a,
-                                frame: i,
-                            }),
-                                o++;
+                            e(t, { origin: a, frame: i }), o++;
                     } catch (e) {}
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         54: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.subscribers = n.childWindows = n.prefix = void 0),
                     (n.prefix = "/*framebus*/"),
                     (n.childWindows = []),
@@ -1763,10 +1603,8 @@ e.exports = (function e(t, n, r) {
         ],
         55: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.dispatch = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.dispatch = void 0);
                 var r = e("./");
                 n.dispatch = function (e, t, n, i, o) {
                     if (r.subscribers[e] && r.subscribers[e][t]) {
@@ -1776,15 +1614,12 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         56: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.hasOpener = void 0),
                     (n.hasOpener = function (e) {
                         return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed;
@@ -1794,6 +1629,7 @@ e.exports = (function e(t, n, r) {
         ],
         57: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__createBinding) ||
                         (Object.create
@@ -1818,9 +1654,7 @@ e.exports = (function e(t, n, r) {
                             for (var n in e)
                                 "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
                         };
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     i(e("./attach"), n),
                     i(e("./broadcast-to-child-windows"), n),
                     i(e("./broadcast"), n),
@@ -1855,9 +1689,8 @@ e.exports = (function e(t, n, r) {
         ],
         58: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isntString = void 0),
                     (n.isntString = function (e) {
                         return "string" != typeof e;
@@ -1867,10 +1700,8 @@ e.exports = (function e(t, n, r) {
         ],
         59: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.onMessage = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.onMessage = void 0);
                 var r = e("./");
                 n.onMessage = function (e) {
                     if (!(0, r.isntString)(e.data)) {
@@ -1885,23 +1716,16 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         60: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.packagePayload = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.packagePayload = void 0);
                 var r = e("./");
                 n.packagePayload = function (e, t, n, i) {
                     var o,
-                        a = {
-                            event: e,
-                            origin: t,
-                        };
+                        a = { event: e, origin: t };
                     "function" == typeof i && (a.reply = (0, r.subscribeReplier)(i, t)), (a.eventData = n);
                     try {
                         o = r.prefix + JSON.stringify(a);
@@ -1911,15 +1735,12 @@ e.exports = (function e(t, n, r) {
                     return o;
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         61: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.sendMessage = void 0),
                     (n.sendMessage = function (e, t, n) {
                         try {
@@ -1931,70 +1752,49 @@ e.exports = (function e(t, n, r) {
         ],
         62: [
             function (e, t, n) {
+                "use strict";
                 var r =
                     (this && this.__importDefault) ||
                     function (e) {
-                        return e && e.__esModule
-                            ? e
-                            : {
-                                  default: e,
-                              };
+                        return e && e.__esModule ? e : { default: e };
                     };
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.subscribeReplier = void 0);
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscribeReplier = void 0);
                 var i = e("../framebus"),
                     o = r(e("@braintree/uuid"));
                 n.subscribeReplier = function (e, t) {
                     var n = (0, o.default)();
                     return (
-                        i.Framebus.target({
-                            origin: t,
-                        }).on(n, function r(o, a) {
-                            e(o, a),
-                                i.Framebus.target({
-                                    origin: t,
-                                }).off(n, r);
+                        i.Framebus.target({ origin: t }).on(n, function r(o, a) {
+                            e(o, a), i.Framebus.target({ origin: t }).off(n, r);
                         }),
                         n
                     );
                 };
             },
-            {
-                "../framebus": 49,
-                "@braintree/uuid": 66,
-            },
+            { "../framebus": 49, "@braintree/uuid": 66 },
         ],
         63: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.subscriptionArgsInvalid = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscriptionArgsInvalid = void 0);
                 var r = e("./");
                 n.subscriptionArgsInvalid = function (e, t, n) {
                     return !!(0, r.isntString)(e) || "function" != typeof t || (0, r.isntString)(n);
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         64: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                });
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 });
             },
             {},
         ],
         65: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
-                    (n.unpackPayload = void 0);
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }), (n.unpackPayload = void 0);
                 var r = e("./");
                 n.unpackPayload = function (e) {
                     var t;
@@ -2018,12 +1818,11 @@ e.exports = (function e(t, n, r) {
                     return t;
                 };
             },
-            {
-                "./": 57,
-            },
+            { "./": 57 },
         ],
         66: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -2035,9 +1834,8 @@ e.exports = (function e(t, n, r) {
         ],
         67: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0);
                 var r = "u" > typeof window && window.navigator && window.navigator.userAgent,
                     i = e("@braintree/browser-detection/is-android"),
@@ -2070,62 +1868,47 @@ e.exports = (function e(t, n, r) {
         ],
         68: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/device");
                 t.exports = function () {
                     return !(0, r.isSamsungBrowser)();
                 };
             },
-            {
-                "./lib/device": 67,
-            },
+            { "./lib/device": 67 },
         ],
         69: [
             function (e, t, n) {
                 arguments[4][3][0].apply(n, arguments);
             },
-            {
-                dup: 3,
-            },
+            { dup: 3 },
         ],
         70: [
             function (e, t, n) {
                 arguments[4][4][0].apply(n, arguments);
             },
-            {
-                dup: 4,
-            },
+            { dup: 4 },
         ],
         71: [
             function (e, t, n) {
                 arguments[4][5][0].apply(n, arguments);
             },
-            {
-                "./is-duckduckgo": 72,
-                "./is-edge": 73,
-                "./is-opera": 77,
-                "./is-samsung": 78,
-                "./is-silk": 79,
-                dup: 5,
-            },
+            { "./is-duckduckgo": 72, "./is-edge": 73, "./is-opera": 77, "./is-samsung": 78, "./is-silk": 79, dup: 5 },
         ],
         72: [
             function (e, t, n) {
                 arguments[4][6][0].apply(n, arguments);
             },
-            {
-                dup: 6,
-            },
+            { dup: 6 },
         ],
         73: [
             function (e, t, n) {
                 arguments[4][7][0].apply(n, arguments);
             },
-            {
-                dup: 7,
-            },
+            { dup: 7 },
         ],
         74: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("MSIE 9");
                 };
@@ -2136,104 +1919,77 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 arguments[4][14][0].apply(n, arguments);
             },
-            {
-                "./is-ipados": 76,
-                dup: 14,
-            },
+            { "./is-ipados": 76, dup: 14 },
         ],
         76: [
             function (e, t, n) {
                 arguments[4][15][0].apply(n, arguments);
             },
-            {
-                dup: 15,
-            },
+            { dup: 15 },
         ],
         77: [
             function (e, t, n) {
                 arguments[4][16][0].apply(n, arguments);
             },
-            {
-                dup: 16,
-            },
+            { dup: 16 },
         ],
         78: [
             function (e, t, n) {
                 arguments[4][17][0].apply(n, arguments);
             },
-            {
-                dup: 17,
-            },
+            { dup: 17 },
         ],
         79: [
             function (e, t, n) {
                 arguments[4][18][0].apply(n, arguments);
             },
-            {
-                dup: 18,
-            },
+            { dup: 18 },
         ],
         80: [
             function (e, t, n) {
                 arguments[4][20][0].apply(n, arguments);
             },
-            {
-                "./dist/is-android": 69,
-                dup: 20,
-            },
+            { "./dist/is-android": 69, dup: 20 },
         ],
         81: [
             function (e, t, n) {
                 arguments[4][21][0].apply(n, arguments);
             },
-            {
-                "./dist/is-chrome-os": 70,
-                dup: 21,
-            },
+            { "./dist/is-chrome-os": 70, dup: 21 },
         ],
         82: [
             function (e, t, n) {
                 arguments[4][22][0].apply(n, arguments);
             },
-            {
-                "./dist/is-chrome": 71,
-                dup: 22,
-            },
+            { "./dist/is-chrome": 71, dup: 22 },
         ],
         83: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ie9");
             },
-            {
-                "./dist/is-ie9": 74,
-            },
+            { "./dist/is-ie9": 74 },
         ],
         84: [
             function (e, t, n) {
                 arguments[4][27][0].apply(n, arguments);
             },
-            {
-                "./dist/is-ios": 75,
-                dup: 27,
-            },
+            { "./dist/is-ios": 75, dup: 27 },
         ],
         85: [
             function (e, t, n) {
                 t.exports = e("./dist/supports-input-formatting");
             },
-            {
-                "./dist/supports-input-formatting": 68,
-            },
+            { "./dist/supports-input-formatting": 68 },
         ],
         86: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assign").assign,
                     a = e("../lib/methods"),
                     s = e("../lib/convert-methods-to-error"),
                     c = e("@braintree/wrap-promise");
-
                 function d(e) {
                     this._client = e.client;
                 }
@@ -2241,22 +1997,10 @@ e.exports = (function e(t, n, r) {
                     var t,
                         n = e.nonce;
                     return n
-                        ? ((t = o(
-                              {
-                                  _meta: {
-                                      source: "american-express",
-                                  },
-                                  paymentMethodNonce: n,
-                              },
-                              e,
-                          )),
+                        ? ((t = o({ _meta: { source: "american-express" }, paymentMethodNonce: n }, e)),
                           delete t.nonce,
                           this._client
-                              .request({
-                                  method: "get",
-                                  endpoint: "payment_methods/amex_rewards_balance",
-                                  data: t,
-                              })
+                              .request({ method: "get", endpoint: "payment_methods/amex_rewards_balance", data: t })
                               .catch(function (e) {
                                   return Promise.reject(
                                       new r({
@@ -2264,9 +2008,7 @@ e.exports = (function e(t, n, r) {
                                           code: i.AMEX_NETWORK_ERROR.code,
                                           message:
                                               "A network error occurred when getting the American Express rewards balance.",
-                                          details: {
-                                              originalError: e,
-                                          },
+                                          details: { originalError: e },
                                       }),
                                   );
                               }))
@@ -2284,12 +2026,7 @@ e.exports = (function e(t, n, r) {
                                   .request({
                                       method: "get",
                                       endpoint: "payment_methods/amex_express_checkout_cards/" + e.nonce,
-                                      data: {
-                                          _meta: {
-                                              source: "american-express",
-                                          },
-                                          paymentMethodNonce: e.nonce,
-                                      },
+                                      data: { _meta: { source: "american-express" }, paymentMethodNonce: e.nonce },
                                   })
                                   .catch(function (e) {
                                       return Promise.reject(
@@ -2298,9 +2035,7 @@ e.exports = (function e(t, n, r) {
                                               code: i.AMEX_NETWORK_ERROR.code,
                                               message:
                                                   "A network error occurred when getting the American Express Checkout nonce profile.",
-                                              details: {
-                                                  originalError: e,
-                                              },
+                                              details: { originalError: e },
                                           }),
                                       );
                                   })
@@ -2328,24 +2063,18 @@ e.exports = (function e(t, n, r) {
         ],
         87: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
-                    AMEX_NONCE_REQUIRED: {
-                        type: r.types.MERCHANT,
-                        code: "AMEX_NONCE_REQUIRED",
-                    },
-                    AMEX_NETWORK_ERROR: {
-                        type: r.types.NETWORK,
-                        code: "AMEX_NETWORK_ERROR",
-                    },
+                    AMEX_NONCE_REQUIRED: { type: r.types.MERCHANT, code: "AMEX_NONCE_REQUIRED" },
+                    AMEX_NETWORK_ERROR: { type: r.types.NETWORK, code: "AMEX_NETWORK_ERROR" },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         88: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./american-express"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -2354,11 +2083,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "American Express";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -2385,13 +2110,13 @@ e.exports = (function e(t, n, r) {
         ],
         89: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
                     a = e("../lib/methods"),
                     s = e("../lib/convert-methods-to-error"),
                     c = e("@braintree/wrap-promise");
-
                 function d(e) {
                     (this._instantiatedWithClient = !e.useDeferredClient),
                         (this._client = e.client),
@@ -2455,12 +2180,7 @@ e.exports = (function e(t, n, r) {
                                           t._client.request({
                                               method: "post",
                                               endpoint: "apple_pay_web/sessions",
-                                              data: {
-                                                  _meta: {
-                                                      source: "apple-pay",
-                                                  },
-                                                  applePayWebSession: n,
-                                              },
+                                              data: { _meta: { source: "apple-pay" }, applePayWebSession: n },
                                           })
                                       );
                                   })
@@ -2478,9 +2198,7 @@ e.exports = (function e(t, n, r) {
                                                     type: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.type,
                                                     code: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.code,
                                                     message: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.message,
-                                                    details: {
-                                                        originalError: e.details.originalError,
-                                                    },
+                                                    details: { originalError: e.details.originalError },
                                                 }),
                                             )
                                           : Promise.reject(
@@ -2488,9 +2206,7 @@ e.exports = (function e(t, n, r) {
                                                     type: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.type,
                                                     code: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.code,
                                                     message: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.message,
-                                                    details: {
-                                                        originalError: e,
-                                                    },
+                                                    details: { originalError: e },
                                                 }),
                                             );
                                   })
@@ -2505,9 +2221,7 @@ e.exports = (function e(t, n, r) {
                                           method: "post",
                                           endpoint: "payment_methods/apple_payment_tokens",
                                           data: {
-                                              _meta: {
-                                                  source: "apple-pay",
-                                              },
+                                              _meta: { source: "apple-pay" },
                                               applePaymentToken: Object.assign({}, e.token, {
                                                   paymentData: btoa(JSON.stringify(e.token.paymentData)),
                                               }),
@@ -2528,9 +2242,7 @@ e.exports = (function e(t, n, r) {
                                                   type: o.APPLE_PAY_TOKENIZATION.type,
                                                   code: o.APPLE_PAY_TOKENIZATION.code,
                                                   message: o.APPLE_PAY_TOKENIZATION.message,
-                                                  details: {
-                                                      originalError: e,
-                                                  },
+                                                  details: { originalError: e },
                                               }),
                                           )
                                       );
@@ -2553,6 +2265,7 @@ e.exports = (function e(t, n, r) {
         ],
         90: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     APPLE_PAY_NOT_ENABLED: {
@@ -2587,12 +2300,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         91: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./apple-pay"),
                     i = e("../lib/analytics"),
                     o = e("../lib/braintree-error"),
@@ -2604,11 +2316,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "Apple Pay";
                         return a
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 var n,
                                     a = c
@@ -2647,6 +2355,7 @@ e.exports = (function e(t, n, r) {
         ],
         92: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants").BRAINTREE_VERSION,
                     i = e("./request/graphql"),
                     o = e("./request"),
@@ -2671,7 +2380,6 @@ e.exports = (function e(t, n, r) {
                     g = e("../lib/constants").FRAUDNET_SOURCE,
                     P = e("../lib/constants").FRAUDNET_URL,
                     b = {};
-
                 function v(e) {
                     var t, n;
                     if (((t = JSON.stringify((e = e || {}))), !(n = e.gatewayConfiguration)))
@@ -2699,9 +2407,7 @@ e.exports = (function e(t, n, r) {
                                 code: f.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code,
                                 message: "graphQL.url property is on an invalid domain.",
                             });
-                        this._graphQL = new i({
-                            graphQL: n.graphQL,
-                        });
+                        this._graphQL = new i({ graphQL: n.graphQL });
                     }
                 }
                 (v.initialize = function (e) {
@@ -2751,12 +2457,7 @@ e.exports = (function e(t, n, r) {
                                     var t = e.split("=");
                                     "customer_id" === t[0] && t.length > 1 && (n.cid = t[1]);
                                 }),
-                            (i = {
-                                f: e.substr(0, 32),
-                                fp: n,
-                                bu: !1,
-                                s: g,
-                            }),
+                            (i = { f: e.substr(0, 32), fp: n, bu: !1, s: g }),
                             (o.text = JSON.stringify(i));
                     }),
                     (v.prototype.request = function (e, t) {
@@ -2858,20 +2559,12 @@ e.exports = (function e(t, n, r) {
                                                         message: f.CLIENT_GRAPHQL_REQUEST_ERROR.message,
                                                     }),
                                                 )
-                                              : ((a = h(
-                                                    {
-                                                        _httpStatus: o,
-                                                    },
-                                                    r,
-                                                )),
+                                              : ((a = h({ _httpStatus: o }, r)),
                                                 _ &&
                                                     a.creditCards &&
                                                     a.creditCards.length > 0 &&
                                                     (n._findOrCreateFraudnetJSON(a.creditCards[0].nonce),
-                                                    N.loadScript({
-                                                        src: P,
-                                                        forceScriptReload: !0,
-                                                    })),
+                                                    N.loadScript({ src: P, forceScriptReload: !0 })),
                                                 t(a));
                                     });
                             });
@@ -2926,28 +2619,22 @@ e.exports = (function e(t, n, r) {
         ],
         93: [
             function (e, t, n) {
-                t.exports = {
-                    BRAINTREE_VERSION: "2018-05-10",
-                };
+                "use strict";
+                t.exports = { BRAINTREE_VERSION: "2018-05-10" };
             },
             {},
         ],
         94: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN: {
                         type: r.types.MERCHANT,
                         code: "CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN",
                     },
-                    CLIENT_OPTION_REQUIRED: {
-                        type: r.types.MERCHANT,
-                        code: "CLIENT_OPTION_REQUIRED",
-                    },
-                    CLIENT_OPTION_INVALID: {
-                        type: r.types.MERCHANT,
-                        code: "CLIENT_OPTION_INVALID",
-                    },
+                    CLIENT_OPTION_REQUIRED: { type: r.types.MERCHANT, code: "CLIENT_OPTION_REQUIRED" },
+                    CLIENT_OPTION_INVALID: { type: r.types.MERCHANT, code: "CLIENT_OPTION_INVALID" },
                     CLIENT_MISSING_GATEWAY_CONFIGURATION: {
                         type: r.types.INTERNAL,
                         code: "CLIENT_MISSING_GATEWAY_CONFIGURATION",
@@ -2996,12 +2683,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         95: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./request"),
@@ -3033,26 +2719,16 @@ e.exports = (function e(t, n, r) {
                                 (_._meta = f),
                                 (_.braintreeLibraryVersion = s.BRAINTREE_LIBRARY_VERSION),
                                 (_.configVersion = "3"),
-                                (h = {
-                                    url: E,
-                                    method: "GET",
-                                    data: _,
-                                }),
+                                (h = { url: E, method: "GET", data: _ }),
                                 _.authorizationFingerprint && e.graphQL
                                     ? (u(e.graphQL.date, p) &&
                                           (h.graphQL = new d({
-                                              graphQL: {
-                                                  url: e.graphQL.url,
-                                                  features: ["configuration"],
-                                              },
+                                              graphQL: { url: e.graphQL.url, features: ["configuration"] },
                                           })),
                                       (h.metadata = f))
                                     : _.tokenizationKey &&
                                       ((h.graphQL = new d({
-                                          graphQL: {
-                                              url: l[e.environment],
-                                              features: ["configuration"],
-                                          },
+                                          graphQL: { url: l[e.environment], features: ["configuration"] },
                                       })),
                                       (h.metadata = f)),
                                 o(h, function (e, t, o) {
@@ -3068,9 +2744,7 @@ e.exports = (function e(t, n, r) {
                                                             : c.CLIENT_GATEWAY_NETWORK).type,
                                                   code: a.code,
                                                   message: a.message,
-                                                  details: {
-                                                      originalError: e,
-                                                  },
+                                                  details: { originalError: e },
                                               }),
                                           )
                                         : n({
@@ -3100,6 +2774,7 @@ e.exports = (function e(t, n, r) {
         ],
         96: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./client"),
                     o = e("@braintree/wrap-promise"),
@@ -3119,15 +2794,11 @@ e.exports = (function e(t, n, r) {
                     VERSION: "3.112.1",
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-                "../lib/errors": 154,
-                "./client": 92,
-                "@braintree/wrap-promise": 40,
-            },
+            { "../lib/braintree-error": 143, "../lib/errors": 154, "./client": 92, "@braintree/wrap-promise": 40 },
         ],
         97: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/querystring"),
                     i = e("../../lib/assign").assign,
                     o = e("./prep-body"),
@@ -3151,12 +2822,7 @@ e.exports = (function e(t, n, r) {
                                 I = t.timeout,
                                 N = s.getRequestObject(),
                                 O = !!(T && T.isGraphQLRequest(A, t.data));
-                            (t.headers = i(
-                                {
-                                    "Content-Type": "application/json",
-                                },
-                                t.headers,
-                            )),
+                            (t.headers = i({ "Content-Type": "application/json" }, t.headers)),
                                 (A = (E = O ? new d(t) : new l(t)).getUrl()),
                                 (h = E.getBody()),
                                 (m = E.getMethod()),
@@ -3236,6 +2902,7 @@ e.exports = (function e(t, n, r) {
         ],
         98: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     (this._url = e.url), (this._data = e.data), (this._method = e.method), (this._headers = e.headers);
                 }
@@ -3263,6 +2930,7 @@ e.exports = (function e(t, n, r) {
         ],
         99: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = e("../../../../lib/assign").assign,
                     o = {
@@ -3310,7 +2978,6 @@ e.exports = (function e(t, n, r) {
                         INTERNATIONAL_MAESTRO: "maestro",
                         JCB: "jcb",
                     };
-
                 function l(e, t) {
                     return e.reduce(function (e, n) {
                         return t.hasOwnProperty(n) ? e.concat(t[n]) : e;
@@ -3325,9 +2992,7 @@ e.exports = (function e(t, n, r) {
                               environment: (_ = n.data.clientConfiguration).environment.toLowerCase(),
                               clientApiUrl: _.clientApiUrl,
                               assetsUrl: _.assetsUrl,
-                              analytics: {
-                                  url: _.analyticsUrl,
-                              },
+                              analytics: { url: _.analyticsUrl },
                               merchantId: _.merchantId,
                               venmo: "off",
                           }),
@@ -3345,23 +3010,16 @@ e.exports = (function e(t, n, r) {
                               delete p.applePayWeb.supportedCardBrands),
                           _.fastlane && (p.fastlane = _.fastlane),
                           _.ideal && (p.ideal = _.ideal),
-                          _.kount &&
-                              (p.kount = {
-                                  kountMerchantId: _.kount.merchantId,
-                              }),
+                          _.kount && (p.kount = { kountMerchantId: _.kount.merchantId }),
                           _.creditCard
                               ? ((p.challenges = _.creditCard.challenges.map(function (e) {
                                     return e.toLowerCase();
                                 })),
-                                (p.creditCards = {
-                                    supportedCardTypes: l(_.creditCard.supportedCardBrands, o),
-                                }),
+                                (p.creditCards = { supportedCardTypes: l(_.creditCard.supportedCardBrands, o) }),
                                 (p.threeDSecureEnabled = _.creditCard.threeDSecureEnabled),
                                 (p.threeDSecure = _.creditCard.threeDSecure))
                               : ((p.challenges = []),
-                                (p.creditCards = {
-                                    supportedCardTypes: [],
-                                }),
+                                (p.creditCards = { supportedCardTypes: [] }),
                                 (p.threeDSecureEnabled = !1)),
                           _.googlePay &&
                               (p.androidPay = {
@@ -3386,11 +3044,7 @@ e.exports = (function e(t, n, r) {
                                 (p.paypal.environment = p.paypal.environment.toLowerCase()),
                                 delete p.paypal.currencyCode)
                               : (p.paypalEnabled = !1),
-                          _.unionPay &&
-                              (p.unionPay = {
-                                  enabled: !0,
-                                  merchantAccountId: _.unionPay.merchantAccountId,
-                              }),
+                          _.unionPay && (p.unionPay = { enabled: !0, merchantAccountId: _.unionPay.merchantAccountId }),
                           _.visaCheckout &&
                               (p.visaCheckout = {
                                   apikey: _.visaCheckout.apiKey,
@@ -3406,21 +3060,17 @@ e.exports = (function e(t, n, r) {
                           _.usBankAccount &&
                               (p.usBankAccount = {
                                   routeId: _.usBankAccount.routeId,
-                                  plaid: {
-                                      publicKey: _.usBankAccount.plaidPublicKey,
-                                  },
+                                  plaid: { publicKey: _.usBankAccount.plaidPublicKey },
                               }),
                           p)
                         : r(e);
                 };
             },
-            {
-                "../../../../lib/assign": 140,
-                "./error": 102,
-            },
+            { "../../../../lib/assign": 140, "./error": 102 },
         ],
         100: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3436,14 +3086,8 @@ e.exports = (function e(t, n, r) {
                         UNION_PAY: "UnionPay",
                         VISA: "Visa",
                     },
-                    o = {
-                        YES: "Yes",
-                        NO: "No",
-                        UNKNOWN: "Unknown",
-                    },
-                    a = {
-                        PSDTWO: "psd2",
-                    };
+                    o = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" },
+                    a = { PSDTWO: "psd2" };
                 t.exports = function (e) {
                     var t, n, s, c, d, l;
                     return e.data && !e.errors
@@ -3489,12 +3133,11 @@ e.exports = (function e(t, n, r) {
                         : r(e);
                 };
             },
-            {
-                "./error": 102,
-            },
+            { "./error": 102 },
         ],
         101: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3510,14 +3153,8 @@ e.exports = (function e(t, n, r) {
                         UNION_PAY: "UnionPay",
                         VISA: "Visa",
                     },
-                    o = {
-                        YES: "Yes",
-                        NO: "No",
-                        UNKNOWN: "Unknown",
-                    },
-                    a = {
-                        PSDTWO: "psd2",
-                    };
+                    o = { YES: "Yes", NO: "No", UNKNOWN: "Unknown" },
+                    a = { PSDTWO: "psd2" };
                 t.exports = function (e) {
                     var t, n, s, c, d, l;
                     return e.data && !e.errors
@@ -3561,12 +3198,11 @@ e.exports = (function e(t, n, r) {
                         : r(e);
                 };
             },
-            {
-                "./error": 102,
-            },
+            { "./error": 102 },
         ],
         102: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     var t,
                         n,
@@ -3586,56 +3222,30 @@ e.exports = (function e(t, n, r) {
                                               o = n.extensions.legacyCode,
                                               a = t[0];
                                           1 === t.length
-                                              ? r.push({
-                                                    code: o,
-                                                    field: a,
-                                                    message: n.message,
-                                                })
+                                              ? r.push({ code: o, field: a, message: n.message })
                                               : (r.forEach(function (e) {
                                                     e.field === a && (i = e);
                                                 }),
-                                                i ||
-                                                    ((i = {
-                                                        field: a,
-                                                        fieldErrors: [],
-                                                    }),
-                                                    r.push(i)),
+                                                i || ((i = { field: a, fieldErrors: [] }), r.push(i)),
                                                 e(t.slice(1), n, i.fieldErrors));
                                       })(e.extensions.inputPath.slice(1), e, r);
                               }),
                               r)).length
-                            ? {
-                                  error: {
-                                      message: t.errors[0].message,
-                                  },
-                              }
+                            ? { error: { message: t.errors[0].message } }
                             : {
-                                  error: {
-                                      message: {
-                                          creditCard: "Credit card is invalid",
-                                      }[i[0].field],
-                                  },
+                                  error: { message: { creditCard: "Credit card is invalid" }[i[0].field] },
                                   fieldErrors: i,
                               }
                         : o
-                          ? {
-                                error: {
-                                    message: e.errors[0].message,
-                                },
-                                fieldErrors: [],
-                            }
-                          : {
-                                error: {
-                                    message: "There was a problem serving your request",
-                                },
-                                fieldErrors: [],
-                            };
+                          ? { error: { message: e.errors[0].message }, fieldErrors: [] }
+                          : { error: { message: "There was a problem serving your request" }, fieldErrors: [] };
                 };
             },
             {},
         ],
         103: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return {
                         query: "query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     fastlane {       enabled     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }",
@@ -3647,6 +3257,7 @@ e.exports = (function e(t, n, r) {
         ],
         104: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3669,9 +3280,7 @@ e.exports = (function e(t, n, r) {
                         A,
                         T,
                         I,
-                        N = {
-                            hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId),
-                        };
+                        N = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
                     return {
                         query:
                             ((_ = N.hasAuthenticationInsight),
@@ -3714,9 +3323,7 @@ e.exports = (function e(t, n, r) {
                                     },
                                 }),
                                 n.hasAuthenticationInsight &&
-                                    (d.authenticationInsightInput = {
-                                        merchantAccountId: t.merchantAccountId,
-                                    }),
+                                    (d.authenticationInsightInput = { merchantAccountId: t.merchantAccountId }),
                                 o && (d.input.creditCard.billingAddress = o),
                                 (l = t),
                                 (u = d.input),
@@ -3727,37 +3334,23 @@ e.exports = (function e(t, n, r) {
                                     : (l.authorizationFingerprint && l.tokenizationKey) || l.authorizationFingerprint
                                       ? (p = !0)
                                       : l.tokenizationKey && (p = !1),
-                                "boolean" == typeof p &&
-                                    (u.options = r(
-                                        {
-                                            validate: p,
-                                        },
-                                        u.options,
-                                    )),
+                                "boolean" == typeof p && (u.options = r({ validate: p }, u.options)),
                                 (d.input = u),
                                 d).input,
-                                {
-                                    email: y,
-                                    optIn: A,
-                                    phone: h.phone,
-                                    termsAndConditionsVersion: f,
-                                },
+                                { email: y, optIn: A, phone: h.phone, termsAndConditionsVersion: f },
                             )),
                             "authAssertion" in m && (I.authAssertion = m.authAssertion),
                             T && (I.shippingAddress = T),
-                            {
-                                input: I,
-                            }),
+                            { input: I }),
                         operationName: "TokenizeCreditCardForPayPalConnect",
                     };
                 };
             },
-            {
-                "../../../../lib/assign": 140,
-            },
+            { "../../../../lib/assign": 140 },
         ],
         105: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3771,9 +3364,7 @@ e.exports = (function e(t, n, r) {
                         l,
                         u,
                         p,
-                        _ = {
-                            hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId),
-                        };
+                        _ = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
                     return {
                         query:
                             ((o = _.hasAuthenticationInsight),
@@ -3803,9 +3394,7 @@ e.exports = (function e(t, n, r) {
                                 },
                             }),
                             _.hasAuthenticationInsight &&
-                                (p.authenticationInsightInput = {
-                                    merchantAccountId: e.merchantAccountId,
-                                }),
+                                (p.authenticationInsightInput = { merchantAccountId: e.merchantAccountId }),
                             c && (p.input.creditCard.billingAddress = c),
                             (t = e),
                             (n = p.input),
@@ -3814,31 +3403,20 @@ e.exports = (function e(t, n, r) {
                                 : (t.authorizationFingerprint && t.tokenizationKey) || t.authorizationFingerprint
                                   ? (i = !0)
                                   : t.tokenizationKey && (i = !1),
-                            "boolean" == typeof i &&
-                                (n.options = r(
-                                    {
-                                        validate: i,
-                                    },
-                                    n.options,
-                                )),
+                            "boolean" == typeof i && (n.options = r({ validate: i }, n.options)),
                             (p.input = n),
                             p),
                         operationName: "TokenizeCreditCard",
                     };
                 };
             },
-            {
-                "../../../../lib/assign": 140,
-            },
+            { "../../../../lib/assign": 140 },
         ],
         106: [
             function (e, t, n) {
-                var r = {
-                        tokenize_credit_cards: "payment_methods/credit_cards",
-                        configuration: "configuration",
-                    },
+                "use strict";
+                var r = { tokenize_credit_cards: "payment_methods/credit_cards", configuration: "configuration" },
                     i = ["creditCard.options.unionPayEnrollment"];
-
                 function o(e) {
                     this._config = e.graphQL;
                 }
@@ -3880,6 +3458,7 @@ e.exports = (function e(t, n, r) {
         ],
         107: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../constants").BRAINTREE_VERSION,
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/snake-case-to-camel-case"),
@@ -3902,7 +3481,6 @@ e.exports = (function e(t, n, r) {
                         },
                         configuration: p,
                     };
-
                 function h(e) {
                     var t = e.graphQL.getClientApiPath(e.url);
                     (this._graphQL = e.graphQL),
@@ -3938,14 +3516,7 @@ e.exports = (function e(t, n, r) {
                                 );
                             })(this._data),
                             t = this._generator(e, a(this._data.creditCard));
-                        return JSON.stringify(
-                            i(
-                                {
-                                    clientSdkMetadata: this._clientSdkMetadata,
-                                },
-                                t,
-                            ),
-                        );
+                        return JSON.stringify(i({ clientSdkMetadata: this._clientSdkMetadata }, t));
                     }),
                     (h.prototype.getMethod = function () {
                         return "POST";
@@ -3958,10 +3529,7 @@ e.exports = (function e(t, n, r) {
                                   (e = this._data.authorizationFingerprint))
                                 : (this._sendAnalyticsEvent("graphql.tokenization-key"),
                                   (e = this._data.tokenizationKey)),
-                            (t = {
-                                Authorization: "Bearer " + e,
-                                "Braintree-Version": r,
-                            }),
+                            (t = { Authorization: "Bearer " + e, "Braintree-Version": r }),
                             i({}, this._headers, t)
                         );
                     }),
@@ -4012,6 +3580,7 @@ e.exports = (function e(t, n, r) {
         ],
         108: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/once"),
                     i = e("./ajax-driver");
                 t.exports = function (e, t) {
@@ -4022,13 +3591,11 @@ e.exports = (function e(t, n, r) {
                         i.request(e, t);
                 };
             },
-            {
-                "../../lib/once": 176,
-                "./ajax-driver": 97,
-            },
+            { "../../lib/once": 176, "./ajax-driver": 97 },
         ],
         109: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     try {
                         e = JSON.parse(e);
@@ -4040,6 +3607,7 @@ e.exports = (function e(t, n, r) {
         ],
         110: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     if ("string" != typeof e) throw Error("Method must be a string");
                     return (
@@ -4051,6 +3619,7 @@ e.exports = (function e(t, n, r) {
         ],
         111: [
             function (e, t, n) {
+                "use strict";
                 var r =
                     "u" > typeof window && window.XMLHttpRequest && "withCredentials" in new window.XMLHttpRequest();
                 t.exports = {
@@ -4064,6 +3633,7 @@ e.exports = (function e(t, n, r) {
         ],
         112: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     DATA_COLLECTOR_KOUNT_NOT_ENABLED: {
@@ -4071,10 +3641,7 @@ e.exports = (function e(t, n, r) {
                         code: "DATA_COLLECTOR_KOUNT_NOT_ENABLED",
                         message: "Kount is not enabled for this merchant.",
                     },
-                    DATA_COLLECTOR_KOUNT_ERROR: {
-                        type: r.types.MERCHANT,
-                        code: "DATA_COLLECTOR_KOUNT_ERROR",
-                    },
+                    DATA_COLLECTOR_KOUNT_ERROR: { type: r.types.MERCHANT, code: "DATA_COLLECTOR_KOUNT_ERROR" },
                     DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS: {
                         type: r.types.MERCHANT,
                         code: "DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS",
@@ -4082,20 +3649,17 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         113: [
             function (e, t, n) {
+                "use strict";
                 var r,
                     i = e("../lib/constants").FRAUDNET_FNCLS,
                     o = e("../lib/constants").FRAUDNET_SOURCE,
                     a = e("../lib/constants").FRAUDNET_URL,
                     s = e("../lib/assets").loadScript;
-
                 function c() {}
-
                 function d(e) {
                     e && e.parentNode && e.parentNode.removeChild(e);
                 }
@@ -4122,19 +3686,13 @@ e.exports = (function e(t, n, r) {
                             (n = this._beaconId),
                             (c = u),
                             (d = document.body.appendChild(document.createElement("script"))),
-                            (l = {
-                                f: t,
-                                s: o,
-                                b: n,
-                            }),
+                            (l = { f: t, s: o, b: n }),
                             "production" !== c && (l.sandbox = !0),
                             (d.type = "application/json"),
                             d.setAttribute("fncls", i),
                             (d.text = JSON.stringify(l)),
                             d)),
-                        s({
-                            src: a,
-                        })
+                        s({ src: a })
                             .then(function (e) {
                                 return (p._thirdPartyBlock = e), p;
                             })
@@ -4161,13 +3719,11 @@ e.exports = (function e(t, n, r) {
                         },
                     });
             },
-            {
-                "../lib/assets": 139,
-                "../lib/constants": 145,
-            },
+            { "../lib/assets": 139, "../lib/constants": 145 },
         ],
         114: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./kount"),
                     i = e("./fraudnet"),
                     o = e("../lib/braintree-error"),
@@ -4182,15 +3738,9 @@ e.exports = (function e(t, n, r) {
                     create: u(function (e) {
                         var t,
                             n = "Data Collector",
-                            _ = {
-                                _instances: [],
-                            };
+                            _ = { _instances: [] };
                         return a
-                            .verify({
-                                name: n,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: n, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 var a, E;
                                 return ((_._instantiatedWithAClient = !e.useDeferredClient),
@@ -4284,6 +3834,7 @@ e.exports = (function e(t, n, r) {
         ],
         115: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./vendor/sjcl"),
                     i = e("../lib/camel-case-to-snake-case"),
                     o = "https://assets.qa.braintreepayments.com/data",
@@ -4294,7 +3845,6 @@ e.exports = (function e(t, n, r) {
                         production: "https://assets.braintreegateway.com/data",
                     },
                     s = {};
-
                 function c(e) {
                     var t = c.getCachedDeviceData(e.merchantId);
                     if (t) {
@@ -4358,11 +3908,7 @@ e.exports = (function e(t, n, r) {
                     (c.prototype._initializeEnvironment = function (e) {
                         var t = a[e.environment];
                         if (null == t) throw Error(e.environment + " is not a valid environment for kount.environment");
-                        return {
-                            url: t,
-                            name: e.environment,
-                            id: e.merchantId,
-                        };
+                        return { url: t, name: e.environment, id: e.merchantId };
                     }),
                     (t.exports = {
                         setup: function (e) {
@@ -4372,13 +3918,11 @@ e.exports = (function e(t, n, r) {
                         environmentUrls: a,
                     });
             },
-            {
-                "../lib/camel-case-to-snake-case": 144,
-                "./vendor/sjcl": 116,
-            },
+            { "../lib/camel-case-to-snake-case": 144, "./vendor/sjcl": 116 },
         ],
         116: [
             function (e, n, r) {
+                "use strict";
                 var i,
                     o,
                     a,
@@ -4418,7 +3962,6 @@ e.exports = (function e(t, n, r) {
                             },
                         },
                     };
-
                 function l(e, t, n) {
                     if (4 !== t.length) throw new d.exception.invalid("invalid aes block size");
                     var r = e.b[n],
@@ -4461,7 +4004,6 @@ e.exports = (function e(t, n, r) {
                             (t = s);
                     return E;
                 }
-
                 function u(e, t) {
                     var n,
                         r,
@@ -4513,7 +4055,6 @@ e.exports = (function e(t, n, r) {
                         (o[6] = (o[6] + _) | 0),
                         (o[7] = (o[7] + E) | 0);
                 }
-
                 function p(e, t) {
                     var n,
                         r = d.random.B[e],
@@ -4521,22 +4062,18 @@ e.exports = (function e(t, n, r) {
                     for (n in r) r.hasOwnProperty(n) && i.push(r[n]);
                     for (n = 0; n < i.length; n++) i[n](t);
                 }
-
                 function _(e, t) {
                     "u" > typeof window && window.performance && "function" == typeof window.performance.now
                         ? e.addEntropy(window.performance.now(), t, "loadtime")
                         : e.addEntropy(new Date().valueOf(), t, "loadtime");
                 }
-
                 function E(e) {
                     (e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b));
                 }
-
                 function h(e) {
                     for (var t = 0; 4 > t && ((e.g[t] = (e.g[t] + 1) | 0), !e.g[t]); t++);
                     return e.C.encrypt(e.g);
                 }
-
                 function m(e, t) {
                     return function () {
                         t.apply(e, arguments);
@@ -4796,10 +4333,7 @@ e.exports = (function e(t, n, r) {
                             (this.C = void 0),
                             (this.D = e),
                             (this.s = !1),
-                            (this.B = {
-                                progress: {},
-                                seeded: {},
-                            }),
+                            (this.B = { progress: {}, seeded: {} }),
                             (this.m = this.S = 0),
                             (this.w = 1),
                             (this.A = 2),
@@ -5032,12 +4566,11 @@ e.exports = (function e(t, n, r) {
                             return d;
                         });
             },
-            {
-                crypto: void 0,
-            },
+            { crypto: void 0 },
         ],
         117: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     FASTLANE_SDK_LOAD_ERROR: {
                         type: e("../lib/braintree-error").types.MERCHANT,
@@ -5045,12 +4578,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         118: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assets").loadFastlane,
@@ -5063,16 +4595,7 @@ e.exports = (function e(t, n, r) {
                         c = !0;
                     return (
                         "production" !== a && (c = !1),
-                        o(
-                            s(
-                                {
-                                    platform: "BT",
-                                    btSdkVersion: n,
-                                    minified: c,
-                                },
-                                e,
-                            ),
-                        )
+                        o(s({ platform: "BT", btSdkVersion: n, minified: c }, e))
                             .then(function (t) {
                                 var n = {
                                     platform: "BT",
@@ -5086,15 +4609,7 @@ e.exports = (function e(t, n, r) {
                                     delete e.deviceData,
                                     delete e.minified,
                                     delete e.btSdkVersion,
-                                    window.braintree.fastlane.create(
-                                        s(
-                                            {
-                                                platformOptions: n,
-                                            },
-                                            e,
-                                            t.metadata,
-                                        ),
-                                    )
+                                    window.braintree.fastlane.create(s({ platformOptions: n }, e, t.metadata))
                                 );
                             })
                             .catch(function (e) {
@@ -5119,6 +4634,7 @@ e.exports = (function e(t, n, r) {
         ],
         119: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("./fastlane"),
                     o = e("../lib/create-assets-url"),
@@ -5129,11 +4645,7 @@ e.exports = (function e(t, n, r) {
                     create: s(function (e) {
                         var t = "fastlane";
                         return r
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return a.create({
                                     authorization: e.authorization,
@@ -5143,15 +4655,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return i(
-                                    c(
-                                        {
-                                            client: t,
-                                            deviceData: e.deviceData,
-                                        },
-                                        e,
-                                    ),
-                                );
+                                return i(c({ client: t, deviceData: e.deviceData }, e));
                             });
                     }),
                     VERSION: "3.112.1",
@@ -5168,6 +4672,7 @@ e.exports = (function e(t, n, r) {
         ],
         120: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     GOOGLE_PAYMENT_NOT_ENABLED: {
@@ -5186,12 +4691,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         121: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/convert-methods-to-error"),
@@ -5201,11 +4705,7 @@ e.exports = (function e(t, n, r) {
                     d = e("./errors"),
                     l = e("../lib/methods"),
                     u = e("@braintree/wrap-promise"),
-                    p = {
-                        1: "_createV1PaymentDataRequest",
-                        2: "_createV2PaymentDataRequest",
-                    };
-
+                    p = { 1: "_createV1PaymentDataRequest", 2: "_createV2PaymentDataRequest" };
                 function _(e) {
                     if (
                         ((this._createPromise = e.createPromise),
@@ -5310,11 +4810,7 @@ e.exports = (function e(t, n, r) {
                                         i.paypalAccounts)
                                       ? ((n = i.paypalAccounts[0]),
                                         r.sendEvent(t._createPromise, "google-payment.parseResponse.succeeded.paypal"),
-                                        Promise.resolve({
-                                            nonce: n.nonce,
-                                            type: n.type,
-                                            description: n.description,
-                                        }))
+                                        Promise.resolve({ nonce: n.nonce, type: n.type, description: n.description }))
                                       : ((n = i.androidPayCards[0]),
                                         r.sendEvent(
                                             t._createPromise,
@@ -5342,9 +4838,7 @@ e.exports = (function e(t, n, r) {
                                             code: d.GOOGLE_PAYMENT_GATEWAY_ERROR.code,
                                             message: d.GOOGLE_PAYMENT_GATEWAY_ERROR.message,
                                             type: d.GOOGLE_PAYMENT_GATEWAY_ERROR.type,
-                                            details: {
-                                                originalError: e,
-                                            },
+                                            details: { originalError: e },
                                         }),
                                     )
                                 );
@@ -5369,6 +4863,7 @@ e.exports = (function e(t, n, r) {
         ],
         122: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./google-payment"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-assets-url"),
@@ -5380,11 +4875,7 @@ e.exports = (function e(t, n, r) {
                     create: c(function (e) {
                         var t = "Google Pay";
                         return s
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 var n, s;
                                 return ((n = a
@@ -5425,6 +4916,7 @@ e.exports = (function e(t, n, r) {
         ],
         123: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../shared/constants").allowedAttributes;
@@ -5452,40 +4944,33 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-                "../shared/constants": 131,
-                "../shared/errors": 132,
-            },
+            { "../../lib/braintree-error": 143, "../shared/constants": 131, "../shared/errors": 132 },
         ],
         124: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants"),
                     i = e("../../lib/use-min");
                 t.exports = function (e, t, n) {
                     return e + "/web/" + r.VERSION + "/html/hosted-fields-frame" + i(n) + ".html#" + t;
                 };
             },
-            {
-                "../../lib/use-min": 181,
-                "../shared/constants": 131,
-            },
+            { "../../lib/use-min": 181, "../shared/constants": 131 },
         ],
         125: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants").navigationDirections,
                     i = e("../shared/browser-detection"),
                     o = e("../shared/focus-intercept"),
                     a = e("../shared/find-parent-tags"),
                     s = ["INPUT", "SELECT", "TEXTAREA"],
                     c = ["hidden", "button", "reset", "submit", "checkbox", "radio", "file"];
-
                 function d(e) {
                     return i.hasSoftwareKeyboard()
                         ? s.indexOf(e.tagName) > -1 && 0 > c.indexOf(e.type)
                         : "hidden" !== e.type;
                 }
-
                 function l(e) {
                     var t, n;
                     for (t = 0; t < e.length; t++) if (d((n = e[t]))) return n;
@@ -5549,6 +5034,7 @@ e.exports = (function e(t, n, r) {
         ],
         126: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants").allowedStyles;
                 t.exports = function (e) {
                     var t,
@@ -5572,12 +5058,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "../shared/constants": 131,
-            },
+            { "../shared/constants": 131 },
         ],
         127: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/assign").assign,
                     i = e("../../lib/create-assets-url"),
                     o = e("../../lib/is-verified-domain"),
@@ -5609,7 +5094,6 @@ e.exports = (function e(t, n, r) {
                     D = e("@braintree/wrap-promise"),
                     w = e("./focus-change"),
                     L = e("../shared/focus-intercept").destroy;
-
                 function M(e) {
                     var t,
                         n,
@@ -5648,15 +5132,8 @@ e.exports = (function e(t, n, r) {
                         (this._injectedNodes = []),
                         (this._destructor = new a()),
                         (this._fields = S),
-                        (this._state = {
-                            fields: {},
-                            cards: R(""),
-                        }),
-                        (this._bus = new c({
-                            channel: k,
-                            verifyDomain: o,
-                            targetFrames: [window],
-                        })),
+                        (this._state = { fields: {}, cards: R("") }),
+                        (this._bus = new c({ channel: k, verifyDomain: o, targetFrames: [window] })),
                         this._destructor.registerFunctionForTeardown(function () {
                             b._bus.teardown();
                         }),
@@ -5708,18 +5185,14 @@ e.exports = (function e(t, n, r) {
                                         type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                         code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                         message: "The value for maxlength must be a number.",
-                                        details: {
-                                            fieldKey: t,
-                                        },
+                                        details: { fieldKey: t },
                                     });
                                 if (n.minlength && "number" != typeof n.minlength)
                                     throw new l({
                                         type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                         code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                         message: "The value for minlength must be a number.",
-                                        details: {
-                                            fieldKey: t,
-                                        },
+                                        details: { fieldKey: t },
                                     });
                                 (o = s({
                                     type: t,
@@ -5735,10 +5208,7 @@ e.exports = (function e(t, n, r) {
                                         }),
                                     ),
                                     this._setupLabelFocus(t, r),
-                                    (S[t] = {
-                                        frameElement: o,
-                                        containerElement: r,
-                                    }),
+                                    (S[t] = { frameElement: o, containerElement: r }),
                                     (a = new Promise(function (e) {
                                         D[t] = e;
                                     })),
@@ -5767,9 +5237,7 @@ e.exports = (function e(t, n, r) {
                             A.TRIGGER_FOCUS_CHANGE,
                             w.createFocusChangeHandler(k, {
                                 onRemoveFocusIntercepts: function (e) {
-                                    b._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, {
-                                        id: e,
-                                    });
+                                    b._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
                                 },
                                 onTriggerInputFocus: function (e) {
                                     b.focus(e);
@@ -5785,9 +5253,7 @@ e.exports = (function e(t, n, r) {
                             N.sendEvent(b._clientPromise, "hosted-fields.input.started");
                         }),
                         this._bus.on(A.BIN_AVAILABLE, function (e) {
-                            b._emit("binAvailable", {
-                                bin: e,
-                            });
+                            b._emit("binAvailable", { bin: e });
                         }),
                         (t = setTimeout(function () {
                             N.sendEvent(b._clientPromise, "custom.hosted-fields.load.timed-out"), b._emit("timeout");
@@ -5823,10 +5289,7 @@ e.exports = (function e(t, n, r) {
                                     i.classList.toggle(_.externalClasses.FOCUSED, t.isFocused),
                                     i.classList.toggle(_.externalClasses.VALID, t.isValid),
                                     i.classList.toggle(_.externalClasses.INVALID, !t.isPotentiallyValid),
-                                    (this._state = {
-                                        cards: n.cards,
-                                        fields: n.fields,
-                                    }),
+                                    (this._state = { cards: n.cards, fields: n.fields }),
                                     this._emit(e.type, n);
                             }.bind(this),
                         ),
@@ -5872,7 +5335,6 @@ e.exports = (function e(t, n, r) {
                                 for (r = 0; r < n.length; r++) n[r].removeEventListener("click", a, !1);
                             });
                         }
-
                         function a() {
                             i.focus(e);
                         }
@@ -5891,9 +5353,7 @@ e.exports = (function e(t, n, r) {
                               ? w.removeExtraFocusElements(
                                     e,
                                     function (e) {
-                                        this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, {
-                                            id: e,
-                                        });
+                                        this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
                                     }.bind(this),
                                 )
                               : this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS);
@@ -5949,10 +5409,7 @@ e.exports = (function e(t, n, r) {
                         var n;
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
-                                ? this._bus.emit(A.ADD_CLASS, {
-                                      field: e,
-                                      classname: t,
-                                  })
+                                ? this._bus.emit(A.ADD_CLASS, { field: e, classname: t })
                                 : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                       code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
@@ -5977,10 +5434,7 @@ e.exports = (function e(t, n, r) {
                         var n;
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
-                                ? this._bus.emit(A.REMOVE_CLASS, {
-                                      field: e,
-                                      classname: t,
-                                  })
+                                ? this._bus.emit(A.REMOVE_CLASS, { field: e, classname: t })
                                 : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                       code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
@@ -6052,10 +5506,7 @@ e.exports = (function e(t, n, r) {
                               });
                     }),
                     (M.prototype.setMessage = function (e) {
-                        this._bus.emit(A.SET_MESSAGE, {
-                            field: e.field,
-                            message: e.message,
-                        });
+                        this._bus.emit(A.SET_MESSAGE, { field: e.field, message: e.message });
                     }),
                     (M.prototype.removeAttribute = function (e) {
                         var t, n;
@@ -6063,10 +5514,7 @@ e.exports = (function e(t, n, r) {
                             ? this._fields.hasOwnProperty(e.field)
                                 ? (t = S(e.attribute))
                                     ? (n = t)
-                                    : this._bus.emit(A.REMOVE_ATTRIBUTE, {
-                                          field: e.field,
-                                          attribute: e.attribute,
-                                      })
+                                    : this._bus.emit(A.REMOVE_ATTRIBUTE, { field: e.field, attribute: e.attribute })
                                 : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                       code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
@@ -6088,19 +5536,13 @@ e.exports = (function e(t, n, r) {
                             : Promise.resolve();
                     }),
                     (M.prototype.setPlaceholder = function (e, t) {
-                        return this.setAttribute({
-                            field: e,
-                            attribute: "placeholder",
-                            value: t,
-                        });
+                        return this.setAttribute({ field: e, attribute: "placeholder", value: t });
                     }),
                     (M.prototype.clear = function (e) {
                         var t;
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
-                                ? this._bus.emit(A.CLEAR_FIELD, {
-                                      field: e,
-                                  })
+                                ? this._bus.emit(A.CLEAR_FIELD, { field: e })
                                 : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                       code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
@@ -6127,9 +5569,7 @@ e.exports = (function e(t, n, r) {
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
                                 ? (n.frameElement.focus(),
-                                  this._bus.emit(A.TRIGGER_INPUT_FOCUS, {
-                                      field: e,
-                                  }),
+                                  this._bus.emit(A.TRIGGER_INPUT_FOCUS, { field: e }),
                                   y.isIos() &&
                                       setTimeout(function () {
                                           var e, t, r;
@@ -6204,6 +5644,7 @@ e.exports = (function e(t, n, r) {
         ],
         128: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/focus-intercept"),
                     i = e("../shared/constants").navigationDirections;
                 t.exports = function (e, t, n, o) {
@@ -6223,13 +5664,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "../shared/constants": 131,
-                "../shared/focus-intercept": 134,
-            },
+            { "../shared/constants": 131, "../shared/focus-intercept": 134 },
         ],
         129: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/hosted-fields"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/errors"),
@@ -6240,11 +5679,7 @@ e.exports = (function e(t, n, r) {
                     supportsInputFormatting: a,
                     create: s(function (e) {
                         return i
-                            .verify({
-                                name: "Hosted Fields",
-                                authorization: e.authorization,
-                                client: e.client,
-                            })
+                            .verify({ name: "Hosted Fields", authorization: e.authorization, client: e.client })
                             .then(function () {
                                 var t = new r(e);
                                 return new Promise(function (e, n) {
@@ -6271,6 +5706,7 @@ e.exports = (function e(t, n, r) {
         ],
         130: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome-os"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -6300,6 +5736,7 @@ e.exports = (function e(t, n, r) {
         ],
         131: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {
@@ -6326,16 +5763,8 @@ e.exports = (function e(t, n, r) {
                             INVALID: "braintree-hosted-fields-invalid",
                             VALID: "braintree-hosted-fields-valid",
                         },
-                        navigationDirections: {
-                            BACK: "before",
-                            FORWARD: "after",
-                        },
-                        defaultIFrameStyle: {
-                            border: "none",
-                            width: "100%",
-                            height: "100%",
-                            float: "left",
-                        },
+                        navigationDirections: { BACK: "before", FORWARD: "after" },
+                        defaultIFrameStyle: { border: "none", width: "100%", height: "100%", float: "left" },
                         tokenizationErrorCodes: {
                             81724: i.HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE,
                             81736: i.HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED,
@@ -6387,34 +5816,13 @@ e.exports = (function e(t, n, r) {
                             "transition",
                         ],
                         allowedFields: {
-                            cardholderName: {
-                                name: "cardholder-name",
-                                label: "Cardholder Name",
-                            },
-                            number: {
-                                name: "credit-card-number",
-                                label: "Credit Card Number",
-                            },
-                            cvv: {
-                                name: "cvv",
-                                label: "CVV",
-                            },
-                            expirationDate: {
-                                name: "expiration",
-                                label: "Expiration Date",
-                            },
-                            expirationMonth: {
-                                name: "expiration-month",
-                                label: "Expiration Month",
-                            },
-                            expirationYear: {
-                                name: "expiration-year",
-                                label: "Expiration Year",
-                            },
-                            postalCode: {
-                                name: "postal-code",
-                                label: "Postal Code",
-                            },
+                            cardholderName: { name: "cardholder-name", label: "Cardholder Name" },
+                            number: { name: "credit-card-number", label: "Credit Card Number" },
+                            cvv: { name: "cvv", label: "CVV" },
+                            expirationDate: { name: "expiration", label: "Expiration Date" },
+                            expirationMonth: { name: "expiration-month", label: "Expiration Month" },
+                            expirationYear: { name: "expiration-year", label: "Expiration Year" },
+                            postalCode: { name: "postal-code", label: "Postal Code" },
                         },
                         allowedAttributes: {
                             "aria-invalid": "boolean",
@@ -6486,13 +5894,11 @@ e.exports = (function e(t, n, r) {
                 )),
                     (t.exports = o);
             },
-            {
-                "../../lib/enumerate": 153,
-                "./errors": 132,
-            },
+            { "../../lib/enumerate": 153, "./errors": 132 },
         ],
         132: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     HOSTED_FIELDS_TIMEOUT: {
@@ -6514,10 +5920,7 @@ e.exports = (function e(t, n, r) {
                         code: "HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME",
                         message: "Element already contains a Braintree iframe.",
                     },
-                    HOSTED_FIELDS_FIELD_INVALID: {
-                        type: r.types.MERCHANT,
-                        code: "HOSTED_FIELDS_FIELD_INVALID",
-                    },
+                    HOSTED_FIELDS_FIELD_INVALID: { type: r.types.MERCHANT, code: "HOSTED_FIELDS_FIELD_INVALID" },
                     HOSTED_FIELDS_FIELD_NOT_PRESENT: {
                         type: r.types.MERCHANT,
                         code: "HOSTED_FIELDS_FIELD_NOT_PRESENT",
@@ -6566,12 +5969,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         133: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     for (var n = e.parentNode, r = []; null != n; )
                         null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode);
@@ -6582,6 +5984,7 @@ e.exports = (function e(t, n, r) {
         ],
         134: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./browser-detection"),
                     i = e("./constants"),
                     o = Object.keys(i.allowedFields),
@@ -6644,13 +6047,11 @@ e.exports = (function e(t, n, r) {
                     };
                 t.exports = s;
             },
-            {
-                "./browser-detection": 130,
-                "./constants": 131,
-            },
+            { "./browser-detection": 130, "./constants": 131 },
         ],
         135: [
             function (e, t, n) {
+                "use strict";
                 var r = e("credit-card-type");
                 t.exports = function (e) {
                     var t = r(e);
@@ -6662,12 +6063,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "credit-card-type": 42,
-            },
+            { "credit-card-type": 42 },
         ],
         136: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./american-express"),
                     i = e("./apple-pay"),
                     o = e("./client"),
@@ -6730,6 +6130,7 @@ e.exports = (function e(t, n, r) {
         ],
         137: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./create-authorization-data"),
                     i = e("./json-clone"),
                     o = e("./constants");
@@ -6776,14 +6177,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./constants": 145,
-                "./create-authorization-data": 149,
-                "./json-clone": 174,
-            },
+            { "./constants": 145, "./create-authorization-data": 149, "./json-clone": 174 },
         ],
         138: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants"),
                     i = e("./add-metadata");
                 t.exports = {
@@ -6795,10 +6193,7 @@ e.exports = (function e(t, n, r) {
                                     s = r.ANALYTICS_URL,
                                     c = r.ANALYTICS_PREFIX + t,
                                     d = "production" === e.getConfiguration().gatewayConfiguration.environment,
-                                    l = {
-                                        events: [],
-                                        tracking: [],
-                                    },
+                                    l = { events: [], tracking: [] },
                                     u = i.addEventMetadata(e, l);
                                 return (
                                     (u.event_name = c),
@@ -6807,22 +6202,11 @@ e.exports = (function e(t, n, r) {
                                         {
                                             level: "info",
                                             event: c,
-                                            payload: {
-                                                env: d ? "production" : "sandbox",
-                                                timestamp: o,
-                                            },
+                                            payload: { env: d ? "production" : "sandbox", timestamp: o },
                                         },
                                     ]),
                                     (l.tracking = [u]),
-                                    a(
-                                        {
-                                            url: s,
-                                            method: "post",
-                                            data: l,
-                                            timeout: r.ANALYTICS_REQUEST_TIMEOUT_MS,
-                                        },
-                                        n,
-                                    )
+                                    a({ url: s, method: "post", data: l, timeout: r.ANALYTICS_REQUEST_TIMEOUT_MS }, n)
                                 );
                             })
                             .catch(function (e) {
@@ -6831,40 +6215,34 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./add-metadata": 137,
-                "./constants": 145,
-            },
+            { "./add-metadata": 137, "./constants": 145 },
         ],
         139: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     loadScript: e("@braintree/asset-loader/load-script"),
                     loadFastlane: e("@paypal/accelerated-checkout-loader").loadAxo,
                 };
             },
-            {
-                "@braintree/asset-loader/load-script": 2,
-                "@paypal/accelerated-checkout-loader": 41,
-            },
+            { "@braintree/asset-loader/load-script": 2, "@paypal/accelerated-checkout-loader": 41 },
         ],
         140: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     var t, n, r;
                     for (t = 1; t < arguments.length; t++)
                         for (r in (n = arguments[t])) n.hasOwnProperty(r) && (e[r] = n[r]);
                     return e;
                 }
-                t.exports = {
-                    assign: "function" == typeof Object.assign ? Object.assign : r,
-                    _assign: r,
-                };
+                t.exports = { assign: "function" == typeof Object.assign ? Object.assign : r, _assign: r };
             },
             {},
         ],
         141: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors"),
                     o = "3.112.1";
@@ -6906,13 +6284,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./braintree-error": 143,
-                "./errors": 154,
-            },
+            { "./braintree-error": 143, "./errors": 154 },
         ],
         142: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./once");
                 t.exports = function (e, t) {
                     var n,
@@ -6921,21 +6297,18 @@ e.exports = (function e(t, n, r) {
                         a = o,
                         s = r(t);
                     if (0 === o) return void s(null);
-
                     function c(e) {
                         e ? s(e) : 0 == (a -= 1) && s(null);
                     }
                     for (i = 0; i < o; i++) (n = e[i]), 0 === n.length ? (n(), c(null)) : n(c);
                 };
             },
-            {
-                "./once": 176,
-            },
+            { "./once": 176 },
         ],
         143: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./enumerate");
-
                 function i(e) {
                     if (!i.types.hasOwnProperty(e.type)) throw Error(e.type + " is not a valid type.");
                     if (!e.code) throw Error("Error code required.");
@@ -6956,12 +6329,11 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            {
-                "./enumerate": 153,
-            },
+            { "./enumerate": 153 },
         ],
         144: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function e(t) {
                     var n;
                     return (
@@ -6990,6 +6362,7 @@ e.exports = (function e(t, n, r) {
         ],
         145: [
             function (e, t, n) {
+                "use strict";
                 var r = "3.112.1";
                 t.exports = {
                     ANALYTICS_PREFIX: "web.",
@@ -7023,6 +6396,7 @@ e.exports = (function e(t, n, r) {
         ],
         146: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors");
                 t.exports = function (e, t) {
@@ -7037,33 +6411,23 @@ e.exports = (function e(t, n, r) {
                     });
                 };
             },
-            {
-                "./braintree-error": 143,
-                "./errors": 154,
-            },
+            { "./braintree-error": 143, "./errors": 154 },
         ],
         147: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error");
                 t.exports = function (e, t) {
                     return e instanceof r
                         ? e
-                        : new r({
-                              type: t.type,
-                              code: t.code,
-                              message: t.message,
-                              details: {
-                                  originalError: e,
-                              },
-                          });
+                        : new r({ type: t.type, code: t.code, message: t.message, details: { originalError: e } });
                 };
             },
-            {
-                "./braintree-error": 143,
-            },
+            { "./braintree-error": 143 },
         ],
         148: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants").ASSETS_URLS;
                 t.exports = {
                     create: function (e) {
@@ -7071,12 +6435,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./constants": 145,
-            },
+            { "./constants": 145 },
         ],
         149: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/vendor/polyfill").atob,
                     i = e("../lib/constants").CLIENT_API_URLS;
                 t.exports = function (e) {
@@ -7084,17 +6447,11 @@ e.exports = (function e(t, n, r) {
                         n,
                         o,
                         a,
-                        s = {
-                            attrs: {},
-                            configUrl: "",
-                        };
+                        s = { attrs: {}, configUrl: "" };
                     return (
                         /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_[a-zA-Z0-9_]+$/.test(e)
                             ? ((n = (t = e.split("_"))[0]),
-                              (s.environment = (a = {
-                                  merchantId: t.slice(2).join("_"),
-                                  environment: n,
-                              }).environment),
+                              (s.environment = (a = { merchantId: t.slice(2).join("_"), environment: n }).environment),
                               (s.attrs.tokenizationKey = e),
                               (s.configUrl =
                                   i[a.environment] + "/merchants/" + a.merchantId + "/client_api/v1/configuration"))
@@ -7106,13 +6463,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "../lib/constants": 145,
-                "../lib/vendor/polyfill": 182,
-            },
+            { "../lib/constants": 145, "../lib/vendor/polyfill": 182 },
         ],
         150: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./assets"),
                     o = e("./errors"),
@@ -7124,18 +6479,14 @@ e.exports = (function e(t, n, r) {
                             ? Promise.resolve(e.client)
                             : ((window.braintree && window.braintree.client) ||
                                   (t = i
-                                      .loadScript({
-                                          src: e.assetsUrl + "/web/" + a + "/js/client.min.js",
-                                      })
+                                      .loadScript({ src: e.assetsUrl + "/web/" + a + "/js/client.min.js" })
                                       .catch(function (e) {
                                           return Promise.reject(
                                               new r({
                                                   type: o.CLIENT_SCRIPT_FAILED_TO_LOAD.type,
                                                   code: o.CLIENT_SCRIPT_FAILED_TO_LOAD.code,
                                                   message: o.CLIENT_SCRIPT_FAILED_TO_LOAD.message,
-                                                  details: {
-                                                      originalError: e,
-                                                  },
+                                                  details: { originalError: e },
                                               }),
                                           );
                                       })),
@@ -7163,14 +6514,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./assets": 139,
-                "./braintree-error": 143,
-                "./errors": 154,
-            },
+            { "./assets": 139, "./braintree-error": 143, "./errors": 154 },
         ],
         151: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return function () {
                         var t = arguments;
@@ -7184,8 +6532,8 @@ e.exports = (function e(t, n, r) {
         ],
         152: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./batch-execute-functions");
-
                 function i() {
                     (this._teardownRegistry = []), (this._isTearingDown = !1);
                 }
@@ -7207,12 +6555,11 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            {
-                "./batch-execute-functions": 142,
-            },
+            { "./batch-execute-functions": 142 },
         ],
         153: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (t = null == t ? "" : t),
@@ -7226,37 +6573,28 @@ e.exports = (function e(t, n, r) {
         ],
         154: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error");
                 t.exports = {
                     INVALID_USE_OF_INTERNAL_FUNCTION: {
                         type: r.types.INTERNAL,
                         code: "INVALID_USE_OF_INTERNAL_FUNCTION",
                     },
-                    INSTANTIATION_OPTION_REQUIRED: {
-                        type: r.types.MERCHANT,
-                        code: "INSTANTIATION_OPTION_REQUIRED",
-                    },
-                    INCOMPATIBLE_VERSIONS: {
-                        type: r.types.MERCHANT,
-                        code: "INCOMPATIBLE_VERSIONS",
-                    },
+                    INSTANTIATION_OPTION_REQUIRED: { type: r.types.MERCHANT, code: "INSTANTIATION_OPTION_REQUIRED" },
+                    INCOMPATIBLE_VERSIONS: { type: r.types.MERCHANT, code: "INCOMPATIBLE_VERSIONS" },
                     CLIENT_SCRIPT_FAILED_TO_LOAD: {
                         type: r.types.NETWORK,
                         code: "CLIENT_SCRIPT_FAILED_TO_LOAD",
                         message: "Braintree client script could not be loaded.",
                     },
-                    METHOD_CALLED_AFTER_TEARDOWN: {
-                        type: r.types.MERCHANT,
-                        code: "METHOD_CALLED_AFTER_TEARDOWN",
-                    },
+                    METHOD_CALLED_AFTER_TEARDOWN: { type: r.types.MERCHANT, code: "METHOD_CALLED_AFTER_TEARDOWN" },
                 };
             },
-            {
-                "./braintree-error": 143,
-            },
+            { "./braintree-error": 143 },
         ],
         155: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     for (; e.parentNode; ) e = e.parentNode;
                     return e;
@@ -7266,6 +6604,7 @@ e.exports = (function e(t, n, r) {
         ],
         156: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t, n) {
                     var r;
                     for (r = 0; r < e.length; r++) if (e[r].hasOwnProperty(t) && e[r][t] === n) return e[r];
@@ -7276,6 +6615,7 @@ e.exports = (function e(t, n, r) {
         ],
         157: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./strategies/popup"),
                     i = e("./strategies/popup-bridge"),
                     o = e("./strategies/modal"),
@@ -7290,9 +6630,7 @@ e.exports = (function e(t, n, r) {
                     E = e("./../../assign").assign,
                     h = e("../../constants").BUS_CONFIGURATION_REQUEST_EVENT,
                     m = ["name", "dispatchFrameUrl", "openFrameUrl"];
-
                 function f() {}
-
                 function y(e) {
                     if (!e) throw Error("Valid configuration is required");
                     if (
@@ -7313,9 +6651,7 @@ e.exports = (function e(t, n, r) {
                             left: e.left,
                         }),
                         (this.state = e.state || {}),
-                        (this._bus = new a({
-                            channel: this._serviceId,
-                        })),
+                        (this._bus = new a({ channel: this._serviceId })),
                         this._setBusEvents();
                 }
                 (y.prototype.initialize = function (e) {
@@ -7335,10 +6671,7 @@ e.exports = (function e(t, n, r) {
                             class: d.DISPATCH_FRAME_CLASS,
                             height: 0,
                             width: 0,
-                            style: {
-                                position: "absolute",
-                                left: "-9999px",
-                            },
+                            style: { position: "absolute", left: "-9999px" },
                         })),
                             document.body.appendChild(this._dispatchFrame);
                     }),
@@ -7401,10 +6734,7 @@ e.exports = (function e(t, n, r) {
                         );
                     }),
                     (y.prototype.createNoopHandler = function () {
-                        return {
-                            close: f,
-                            focus: f,
-                        };
+                        return { close: f, focus: f };
                     }),
                     (y.prototype.teardown = function () {
                         this.close(),
@@ -7458,6 +6788,7 @@ e.exports = (function e(t, n, r) {
         ],
         158: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./frame-service");
                 t.exports = {
                     create: function (e, t) {
@@ -7468,12 +6799,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./frame-service": 157,
-            },
+            { "./frame-service": 157 },
         ],
         159: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/iframer"),
                     i = e("../../../assign").assign,
                     o = e("../../shared/browser-detection"),
@@ -7489,9 +6819,7 @@ e.exports = (function e(t, n, r) {
                         zIndex: 20001,
                         background: "#FFFFFF",
                     };
-
                 function s() {}
-
                 function c(e) {
                     (this._closed = null),
                         (this._frame = null),
@@ -7557,19 +6885,14 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = c);
             },
-            {
-                "../../../assign": 140,
-                "../../shared/browser-detection": 164,
-                "@braintree/iframer": 32,
-            },
+            { "../../../assign": 140, "../../shared/browser-detection": 164, "@braintree/iframer": 32 },
         ],
         160: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../braintree-error"),
                     i = e("../../shared/errors");
-
                 function o() {}
-
                 function a(e) {
                     (this._closed = null), (this._options = e);
                 }
@@ -7592,22 +6915,17 @@ e.exports = (function e(t, n, r) {
                         return !!this._closed;
                     }),
                     (a.prototype.redirect = function (e) {
-                        this.open({
-                            openFrameUrl: e,
-                        });
+                        this.open({ openFrameUrl: e });
                     }),
                     (t.exports = a);
             },
-            {
-                "../../../braintree-error": 143,
-                "../../shared/errors": 166,
-            },
+            { "../../../braintree-error": 143, "../../shared/errors": 166 },
         ],
         161: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../shared/constants"),
                     i = e("./position");
-
                 function o(e, t, n) {
                     return void 0 !== t ? t : i[e](n);
                 }
@@ -7619,15 +6937,12 @@ e.exports = (function e(t, n, r) {
                     return [r.POPUP_BASE_OPTIONS, "height=" + t, "width=" + n, "top=" + i, "left=" + a].join(",");
                 };
             },
-            {
-                "../../../shared/constants": 165,
-                "./position": 163,
-            },
+            { "../../../shared/constants": 165, "./position": 163 },
         ],
         162: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./compose-options");
-
                 function i(e) {
                     (this._frame = null), (this._options = e || {});
                 }
@@ -7649,12 +6964,11 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            {
-                "./compose-options": 161,
-            },
+            { "./compose-options": 161 },
         ],
         163: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     top: function (e) {
                         var t;
@@ -7679,6 +6993,7 @@ e.exports = (function e(t, n, r) {
         ],
         164: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     isIos: e("@braintree/browser-detection/is-ios"),
                     isIosWKWebview: e("@braintree/browser-detection/is-ios-wkwebview"),
@@ -7693,6 +7008,7 @@ e.exports = (function e(t, n, r) {
         ],
         165: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     DISPATCH_FRAME_NAME: "dispatch",
                     DISPATCH_FRAME_CLASS: "braintree-dispatch-frame",
@@ -7707,6 +7023,7 @@ e.exports = (function e(t, n, r) {
         ],
         166: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../braintree-error");
                 t.exports = {
                     FRAME_SERVICE_FRAME_CLOSED: {
@@ -7721,23 +7038,20 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../braintree-error": 143,
-            },
+            { "../../braintree-error": 143 },
         ],
         167: [
             function (e, t, n) {
+                "use strict";
                 t.exports = e("../../enumerate")(["DISPATCH_FRAME_READY", "DISPATCH_FRAME_REPORT"], "frameService:");
             },
-            {
-                "../../enumerate": 153,
-            },
+            { "../../enumerate": 153 },
         ],
         168: [
             function (e, t, n) {
+                "use strict";
                 var r = "3.112.1",
                     i = e("./assign").assign;
-
                 function o(e, t) {
                     var n = e.analyticsMetadata;
                     return i(
@@ -7788,30 +7102,20 @@ e.exports = (function e(t, n, r) {
                                       },
                                   ],
                               }),
-                              n &&
-                                  (r.merchantInfo = {
-                                      merchantId: n,
-                                  }),
+                              n && (r.merchantInfo = { merchantId: n }),
                               a.paypalClientId &&
                                   ((i = {
                                       type: "PAYPAL",
                                       parameters: {
                                           purchase_context: {
                                               purchase_units: [
-                                                  {
-                                                      payee: {
-                                                          client_id: a.paypalClientId,
-                                                      },
-                                                      recurring_payment: !0,
-                                                  },
+                                                  { payee: { client_id: a.paypalClientId }, recurring_payment: !0 },
                                               ],
                                           },
                                       },
                                       tokenizationSpecification: {
                                           type: "PAYMENT_GATEWAY",
-                                          parameters: o(e, {
-                                              "braintree:paypalClientId": a.paypalClientId,
-                                          }),
+                                          parameters: o(e, { "braintree:paypalClientId": a.paypalClientId }),
                                       },
                                   }),
                                   r.allowedPaymentMethods.push(i)))
@@ -7839,12 +7143,11 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            {
-                "./assign": 140,
-            },
+            { "./assign": 140 },
         ],
         169: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     e = e || window;
                     try {
@@ -7858,6 +7161,7 @@ e.exports = (function e(t, n, r) {
         ],
         170: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     var t = e.split("-");
                     return new Date(t[0], t[1], t[2]);
@@ -7870,6 +7174,7 @@ e.exports = (function e(t, n, r) {
         ],
         171: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return e && e.hasOwnProperty("fastlane") && e.fastlane;
                 };
@@ -7878,6 +7183,7 @@ e.exports = (function e(t, n, r) {
         ],
         172: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     isHTTPS: function (e) {
                         return "https:" === (e = e || window.location.protocol);
@@ -7888,6 +7194,7 @@ e.exports = (function e(t, n, r) {
         ],
         173: [
             function (e, t, n) {
+                "use strict";
                 var r,
                     i = {
                         "paypal.com": 1,
@@ -7910,6 +7217,7 @@ e.exports = (function e(t, n, r) {
         ],
         174: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return JSON.parse(JSON.stringify(e));
                 };
@@ -7918,6 +7226,7 @@ e.exports = (function e(t, n, r) {
         ],
         175: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return Object.keys(e).filter(function (t) {
                         return "function" == typeof e[t];
@@ -7928,6 +7237,7 @@ e.exports = (function e(t, n, r) {
         ],
         176: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     var t = !1;
                     return function () {
@@ -7939,10 +7249,10 @@ e.exports = (function e(t, n, r) {
         ],
         177: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     return (e = e || window.location.href), /\?/.test(e);
                 }
-
                 function i(e, t) {
                     var n,
                         r,
@@ -8002,13 +7312,12 @@ e.exports = (function e(t, n, r) {
         ],
         178: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/uuid"),
                     i = e("./find-root-node");
-
                 function o(e) {
                     return "[object ShadowRoot]" === (e = i(e)).toString();
                 }
-
                 function a(e) {
                     return o((e = i(e))) ? e.host : null;
                 }
@@ -8034,13 +7343,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./find-root-node": 155,
-                "@braintree/uuid": 36,
-            },
+            { "./find-root-node": 155, "@braintree/uuid": 36 },
         ],
         179: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 === e.indexOf("_")
                         ? e
@@ -8053,6 +7360,7 @@ e.exports = (function e(t, n, r) {
         ],
         180: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./querystring");
                 t.exports = {
                     getUrlParams: function () {
@@ -8060,12 +7368,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "./querystring": 177,
-            },
+            { "./querystring": 177 },
         ],
         181: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return e ? "" : ".min";
                 };
@@ -8074,8 +7381,8 @@ e.exports = (function e(t, n, r) {
         ],
         182: [
             function (e, t, n) {
+                "use strict";
                 var r = "function" == typeof atob ? atob : i;
-
                 function i(e) {
                     var t,
                         n,
@@ -8118,6 +7425,7 @@ e.exports = (function e(t, n, r) {
         ],
         183: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS_FOR_START_PAYMENT: [
                         "givenName",
@@ -8163,6 +7471,7 @@ e.exports = (function e(t, n, r) {
         ],
         184: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/use-min"),
@@ -8177,7 +7486,6 @@ e.exports = (function e(t, n, r) {
                     E = e("./constants"),
                     h = e("../shared/errors"),
                     m = e("../../lib/assign").assign;
-
                 function f(e) {
                     (this._client = e.client),
                         (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + "/web/3.112.1"),
@@ -8189,7 +7497,6 @@ e.exports = (function e(t, n, r) {
                         (this._merchantAccountId = e.merchantAccountId),
                         e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0));
                 }
-
                 function y(e) {
                     var t = e.blikOptions || {},
                         n = "string" == typeof e.paymentType ? e.paymentType.toLowerCase() : e.paymentType;
@@ -8395,10 +7702,7 @@ e.exports = (function e(t, n, r) {
                                     state: r.region,
                                 }),
                                 O._isRedirectFlow
-                                    ? ((I = p.queryify(O._redirectUrl, {
-                                          wasCanceled: !0,
-                                      })),
-                                      (N = O._redirectUrl))
+                                    ? ((I = p.queryify(O._redirectUrl, { wasCanceled: !0 })), (N = O._redirectUrl))
                                     : ((I = p.queryify(
                                           O._assetsUrl + "/html/local-payment-redirect-frame" + o(O._isDebug) + ".html",
                                           {
@@ -8410,16 +7714,9 @@ e.exports = (function e(t, n, r) {
                                       )),
                                       (N = p.queryify(
                                           O._assetsUrl + "/html/local-payment-redirect-frame" + o(O._isDebug) + ".html",
-                                          {
-                                              channel: T,
-                                              r: a.url,
-                                              t: a.buttonText,
-                                          },
+                                          { channel: T, r: a.url, t: a.buttonText },
                                       ))),
-                                m(c, {
-                                    cancelUrl: I,
-                                    returnUrl: N,
-                                }),
+                                m(c, { cancelUrl: I, returnUrl: N }),
                                 (O._paymentType = e.paymentType.toLowerCase()),
                                 O._authorizationInProgress && !O._isRedirectFlow)
                               ? (s.sendEvent(
@@ -8440,18 +7737,11 @@ e.exports = (function e(t, n, r) {
                                         },
                                     )),
                                     O._frameService.open(
-                                        {
-                                            width: f.width || 1282,
-                                            height: f.height || 720,
-                                        },
+                                        { width: f.width || 1282, height: f.height || 720 },
                                         O._startPaymentCallback,
                                     )),
                                 O._client
-                                    .request({
-                                        method: "post",
-                                        endpoint: "local_payments/create",
-                                        data: c,
-                                    })
+                                    .request({ method: "post", endpoint: "local_payments/create", data: c })
                                     .then(function (t) {
                                         var n = t.paymentResource.redirectUrl;
                                         O._isRedirectFlow
@@ -8482,9 +7772,7 @@ e.exports = (function e(t, n, r) {
                                                 : O._isRedirectFlow
                                                   ? (window.location.href = t.paymentResource.redirectUrl)
                                                   : e.onPaymentStart(
-                                                        {
-                                                            paymentId: t.paymentResource.paymentToken,
-                                                        },
+                                                        { paymentId: t.paymentResource.paymentToken },
                                                         function () {
                                                             O._frameService.redirect(t.paymentResource.redirectUrl);
                                                         },
@@ -8500,9 +7788,7 @@ e.exports = (function e(t, n, r) {
                                                       type: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.type,
                                                       code: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.code,
                                                       message: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.message,
-                                                      details: {
-                                                          originalError: e,
-                                                      },
+                                                      details: { originalError: e },
                                                   }),
                                               )
                                             : d.reject(
@@ -8524,12 +7810,7 @@ e.exports = (function e(t, n, r) {
                                       type: h.LOCAL_PAYMENT_CANCELED.type,
                                       code: h.LOCAL_PAYMENT_CANCELED.code,
                                       message: h.LOCAL_PAYMENT_CANCELED.message,
-                                      details: {
-                                          originalError: {
-                                              errorcode: e.errorcode,
-                                              token: e.btLpToken,
-                                          },
-                                      },
+                                      details: { originalError: { errorcode: e.errorcode, token: e.btLpToken } },
                                   }),
                               )
                             : e.errorcode
@@ -8538,12 +7819,7 @@ e.exports = (function e(t, n, r) {
                                         type: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.type,
                                         code: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.code,
                                         message: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.message,
-                                        details: {
-                                            originalError: {
-                                                errorcode: e.errorcode,
-                                                token: e.btLpToken,
-                                            },
-                                        },
+                                        details: { originalError: { errorcode: e.errorcode, token: e.btLpToken } },
                                     }),
                                 )
                               : n
@@ -8613,9 +7889,7 @@ e.exports = (function e(t, n, r) {
                                                 code: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.code,
                                                 type: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.type,
                                                 message: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.message,
-                                                details: {
-                                                    originalError: o,
-                                                },
+                                                details: { originalError: o },
                                             }),
                                         );
                             else
@@ -8635,11 +7909,7 @@ e.exports = (function e(t, n, r) {
                             n = {};
                         return (
                             e.paypalAccounts && (n = e.paypalAccounts[0]),
-                            (t = {
-                                nonce: n.nonce,
-                                details: {},
-                                type: n.type,
-                            }),
+                            (t = { nonce: n.nonce, details: {}, type: n.type }),
                             n.details &&
                                 (n.details.payerInfo && (t.details = n.details.payerInfo),
                                 n.details.correlationId && (t.correlationId = n.details.correlationId)),
@@ -8692,6 +7962,7 @@ e.exports = (function e(t, n, r) {
         ],
         185: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -8705,11 +7976,7 @@ e.exports = (function e(t, n, r) {
                     create: c(function (e) {
                         var t = "Local Payment";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -8756,6 +8023,7 @@ e.exports = (function e(t, n, r) {
         ],
         186: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     LOCAL_PAYMENT_NOT_ENABLED: {
@@ -8811,12 +8079,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         187: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -8827,7 +8094,6 @@ e.exports = (function e(t, n, r) {
                     l = e("../../lib/convert-to-braintree-error"),
                     u = e("../shared/constants"),
                     p = e("../../lib/constants").INTEGRATION_TIMEOUT_MS;
-
                 function _(e) {
                     var t = e.client.getConfiguration();
                     (this._client = e.client),
@@ -8966,9 +8232,7 @@ e.exports = (function e(t, n, r) {
                                                       code: o.MASTERPASS_POPUP_OPEN_FAILED.code,
                                                       type: o.MASTERPASS_POPUP_OPEN_FAILED.type,
                                                       message: o.MASTERPASS_POPUP_OPEN_FAILED.message,
-                                                      details: {
-                                                          originalError: r,
-                                                      },
+                                                      details: { originalError: r },
                                                   }),
                                               );
                                           return;
@@ -9054,6 +8318,7 @@ e.exports = (function e(t, n, r) {
         ],
         188: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/browser-detection"),
@@ -9061,7 +8326,6 @@ e.exports = (function e(t, n, r) {
                     s = e("../lib/create-deferred-client"),
                     c = e("../lib/create-assets-url"),
                     d = e("./shared/errors");
-
                 function l() {
                     return !!(window.popupBridge || o.supportsPopups());
                 }
@@ -9069,11 +8333,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "Masterpass";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return l()
                                     ? Promise.resolve()
@@ -9111,16 +8371,14 @@ e.exports = (function e(t, n, r) {
         ],
         189: [
             function (e, t, n) {
-                t.exports = {
-                    supportsPopups: e("@braintree/browser-detection/supports-popups"),
-                };
+                "use strict";
+                t.exports = { supportsPopups: e("@braintree/browser-detection/supports-popups") };
             },
-            {
-                "@braintree/browser-detection/supports-popups": 29,
-            },
+            { "@braintree/browser-detection/supports-popups": 29 },
         ],
         190: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreemasterpasslanding",
                     POPUP_WIDTH: 450,
@@ -9133,6 +8391,7 @@ e.exports = (function e(t, n, r) {
         ],
         191: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     MASTERPASS_BROWSER_NOT_SUPPORTED: {
@@ -9189,12 +8448,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         192: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/assign").assign,
                     o = e("framebus"),
@@ -9220,7 +8478,6 @@ e.exports = (function e(t, n, r) {
                         UnionPay: "unionpay",
                         Maestro: "maestro",
                     };
-
                 function A(e) {
                     var t = e.enabledPaymentMethods || {};
                     p.call(this),
@@ -9238,9 +8495,7 @@ e.exports = (function e(t, n, r) {
                                 return this._supportedPaymentMethods[e];
                             }.bind(this),
                         )),
-                        (this._bus = new o({
-                            channel: this._componentId,
-                        }));
+                        (this._bus = new o({ channel: this._componentId }));
                 }
                 p.createChild(A),
                     (A.prototype._constructDefaultSupportedPaymentMethods = function () {
@@ -9279,10 +8534,7 @@ e.exports = (function e(t, n, r) {
                             class: "braintree-payment-request-frame",
                             height: 0,
                             width: 0,
-                            style: {
-                                position: "absolute",
-                                left: "-9999px",
-                            },
+                            style: { position: "absolute", left: "-9999px" },
                             title: "Secure Payment Frame",
                         })),
                         0 === this._defaultSupportedPaymentMethods.length)
@@ -9296,9 +8548,7 @@ e.exports = (function e(t, n, r) {
                                           r.sendEvent(t._client, "payment-request.initialized"),
                                               t._bus.on(h.SHIPPING_ADDRESS_CHANGE, function (e) {
                                                   var n = {
-                                                      target: {
-                                                          shippingAddress: e,
-                                                      },
+                                                      target: { shippingAddress: e },
                                                       updateWith: function (e) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_ADDRESS, e);
                                                       },
@@ -9308,9 +8558,7 @@ e.exports = (function e(t, n, r) {
                                               }),
                                               t._bus.on(h.SHIPPING_OPTION_CHANGE, function (e) {
                                                   var n = {
-                                                      target: {
-                                                          shippingOption: e,
-                                                      },
+                                                      target: { shippingOption: e },
                                                       updateWith: function (e) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_OPTION, e);
                                                       },
@@ -9429,9 +8677,7 @@ e.exports = (function e(t, n, r) {
                                         type: m.PAYMENT_REQUEST_CANCELED.type,
                                         code: m.PAYMENT_REQUEST_CANCELED.code,
                                         message: m.PAYMENT_REQUEST_CANCELED.message,
-                                        details: {
-                                            originalError: e,
-                                        },
+                                        details: { originalError: e },
                                     })),
                                     r.sendEvent(this._client, "payment-request.tokenize.canceled"),
                                     t
@@ -9441,9 +8687,7 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type,
                                     code: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code,
                                     message: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                                 break;
                             case "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR":
@@ -9451,9 +8695,7 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.type,
                                     code: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.code,
                                     message: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                                 break;
                             case "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR":
@@ -9461,9 +8703,7 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.type,
                                     code: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.code,
                                     message: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                                 break;
                             default:
@@ -9471,9 +8711,7 @@ e.exports = (function e(t, n, r) {
                                     code: m.PAYMENT_REQUEST_NOT_COMPLETED.code,
                                     type: e.type || _.types.CUSTOMER,
                                     message: m.PAYMENT_REQUEST_NOT_COMPLETED.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                         }
                         return r.sendEvent(this._client, "payment-request.tokenize.failed"), t;
@@ -9486,9 +8724,7 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type,
                                     code: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code,
                                     message: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                                 break;
                             case "NotAllowedError":
@@ -9496,9 +8732,7 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.type,
                                     code: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.code,
                                     message: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                                 break;
                             default:
@@ -9506,9 +8740,7 @@ e.exports = (function e(t, n, r) {
                                     code: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.code,
                                     type: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.type,
                                     message: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.message,
-                                    details: {
-                                        originalError: e,
-                                    },
+                                    details: { originalError: e },
                                 });
                         }
                         return r.sendEvent(this._client, "payment-request.can-make-payment.failed"), t;
@@ -9533,6 +8765,7 @@ e.exports = (function e(t, n, r) {
         ],
         193: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/payment-request"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -9541,11 +8774,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "Payment Request";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -9572,6 +8801,7 @@ e.exports = (function e(t, n, r) {
         ],
         194: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {};
@@ -9589,19 +8819,14 @@ e.exports = (function e(t, n, r) {
                     "payment-request:",
                 )),
                     (o.errors = i),
-                    (o.SUPPORTED_METHODS = {
-                        "basic-card": !0,
-                        "https://google.com/pay": !0,
-                    }),
+                    (o.SUPPORTED_METHODS = { "basic-card": !0, "https://google.com/pay": !0 }),
                     (t.exports = o);
             },
-            {
-                "../../lib/enumerate": 153,
-                "./errors": 195,
-            },
+            { "../../lib/enumerate": 153, "./errors": 195 },
         ],
         195: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS: {
@@ -9660,12 +8885,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         196: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -9731,23 +8955,18 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         197: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./paypal-checkout");
                 t.exports = {
                     create: i(function (e) {
                         return r
-                            .verify({
-                                name: "PayPal Checkout",
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: "PayPal Checkout", client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return new o(e)._initialize(e);
                             });
@@ -9758,14 +8977,11 @@ e.exports = (function e(t, n, r) {
                     VERSION: "3.112.1",
                 };
             },
-            {
-                "../lib/basic-component-verification": 141,
-                "./paypal-checkout": 198,
-                "@braintree/wrap-promise": 40,
-            },
+            { "../lib/basic-component-verification": 141, "./paypal-checkout": 198, "@braintree/wrap-promise": 40 },
         ],
         198: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/create-deferred-client"),
@@ -9785,7 +9001,6 @@ e.exports = (function e(t, n, r) {
                     A = e("../lib/camel-case-to-snake-case"),
                     T = e("../lib/constants").INTEGRATION_TIMEOUT_MS,
                     I = ["amount", "currency", "vaultInitiatedCheckoutPaymentMethodToken"];
-
                 function N(e) {
                     (this._merchantAccountId = e.merchantAccountId),
                         (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken);
@@ -9902,9 +9117,7 @@ e.exports = (function e(t, n, r) {
                                                     type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                                     code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                                     message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                                    details: {
-                                                        originalError: e,
-                                                    },
+                                                    details: { originalError: e },
                                                 }),
                                             )
                                           : Promise.reject(
@@ -9940,9 +9153,7 @@ e.exports = (function e(t, n, r) {
                                                       type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                                       code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                                       message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                                      details: {
-                                                          originalError: e,
-                                                      },
+                                                      details: { originalError: e },
                                                   }),
                                               ))
                                             : (r.sendEvent(
@@ -9993,9 +9204,7 @@ e.exports = (function e(t, n, r) {
                                 )
                               : ((this._vaultInitiatedCheckoutInProgress = !0),
                                 this._addModalBackdrop(e),
-                                (e = i({}, e, {
-                                    flow: "checkout",
-                                })),
+                                (e = i({}, e, { flow: "checkout" })),
                                 r.sendEvent(this._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.started"),
                                 this._waitForVaultInitiatedCheckoutDependencies()
                                     .then(function () {
@@ -10035,9 +9244,7 @@ e.exports = (function e(t, n, r) {
                                                         message:
                                                             u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED
                                                                 .message,
-                                                        details: {
-                                                            originalError: e,
-                                                        },
+                                                        details: { originalError: e },
                                                     }),
                                                 ))
                                               : Promise.reject(e);
@@ -10141,10 +9348,7 @@ e.exports = (function e(t, n, r) {
                         var t,
                             n = this,
                             i = !0,
-                            o = {
-                                flow: this._flow,
-                                intent: e.intent || this.intentFromCreatePayment,
-                            },
+                            o = { flow: this._flow, intent: e.intent || this.intentFromCreatePayment },
                             a = {
                                 ecToken: e.paymentToken,
                                 billingToken: e.billingToken,
@@ -10207,13 +9411,7 @@ e.exports = (function e(t, n, r) {
                                     this._authorizationInformation.fingerprint &&
                                     this._authorizationInformation.fingerprint.split("?")[0]),
                             (this._paypalScript = document.createElement("script")),
-                            (e = i(
-                                {},
-                                {
-                                    components: "buttons",
-                                },
-                                e,
-                            )),
+                            (e = i({}, { components: "buttons" }, e)),
                             delete e.dataAttributes,
                             e.vault
                                 ? (e.intent = e.intent || "tokenize")
@@ -10259,10 +9457,7 @@ e.exports = (function e(t, n, r) {
                                 "{ENV}",
                                 "production" === i ? "" : "sandbox.",
                             ),
-                            a = {
-                                "client-id": n,
-                                "user-id-token": r,
-                            };
+                            a = { "client-id": n, "user-id-token": r };
                         e.amount && (a.amount = e.amount),
                             e.currency && (a.currency = e.currency),
                             e.merchantId && (a["merchant-id"] = e.merchantId),
@@ -10368,9 +9563,7 @@ e.exports = (function e(t, n, r) {
                             a = {
                                 paypalAccount: {
                                     correlationId: this._riskCorrelationId || t.billingToken || t.ecToken,
-                                    options: {
-                                        validate: o && !i && e.vault,
-                                    },
+                                    options: { validate: o && !i && e.vault },
                                 },
                             };
                         return (
@@ -10389,11 +9582,7 @@ e.exports = (function e(t, n, r) {
                             n = {};
                         return (
                             e.paypalAccounts && (n = e.paypalAccounts[0]),
-                            (t = {
-                                nonce: n.nonce,
-                                details: {},
-                                type: n.type,
-                            }),
+                            (t = { nonce: n.nonce, details: {}, type: n.type }),
                             n.details && n.details.payerInfo && (t.details = n.details.payerInfo),
                             n.details &&
                                 n.details.creditFinancingOffered &&
@@ -10446,6 +9635,7 @@ e.exports = (function e(t, n, r) {
         ],
         199: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/convert-to-braintree-error"),
@@ -10461,7 +9651,6 @@ e.exports = (function e(t, n, r) {
                     h = e("../../lib/convert-methods-to-error"),
                     m = e("../../lib/querystring"),
                     f = e("@braintree/wrap-promise");
-
                 function y(e) {
                     (this._client = e.client),
                         (this._assetsUrl =
@@ -10548,9 +9737,7 @@ e.exports = (function e(t, n, r) {
                                                         code: E.PAYPAL_POPUP_OPEN_FAILED.code,
                                                         type: E.PAYPAL_POPUP_OPEN_FAILED.type,
                                                         message: E.PAYPAL_POPUP_OPEN_FAILED.message,
-                                                        details: {
-                                                            originalError: a,
-                                                        },
+                                                        details: { originalError: a },
                                                     }),
                                                 )
                                           : s && r._tokenizePayPal(e, s).then(t).catch(n);
@@ -10600,11 +9787,7 @@ e.exports = (function e(t, n, r) {
                             n = {};
                         return (
                             e.paypalAccounts && (n = e.paypalAccounts[0]),
-                            (t = {
-                                nonce: n.nonce,
-                                details: {},
-                                type: n.type,
-                            }),
+                            (t = { nonce: n.nonce, details: {}, type: n.type }),
                             n.details && n.details.payerInfo && (t.details = n.details.payerInfo),
                             n.details &&
                                 n.details.creditFinancingOffered &&
@@ -10619,9 +9802,7 @@ e.exports = (function e(t, n, r) {
                             o = {
                                 paypalAccount: {
                                     correlationId: t.ba_token || t.token,
-                                    options: {
-                                        validate: "vault" === e.flow && !i,
-                                    },
+                                    options: { validate: "vault" === e.flow && !i },
                                 },
                             };
                         return (
@@ -10639,21 +9820,14 @@ e.exports = (function e(t, n, r) {
                             n = this._client,
                             r = "paypal_hermes/" + d.FLOW_ENDPOINTS[e.flow];
                         return n
-                            .request({
-                                endpoint: r,
-                                method: "post",
-                                data: this._formatPaymentResourceData(e),
-                            })
+                            .request({ endpoint: r, method: "post", data: this._formatPaymentResourceData(e) })
                             .then(function (r) {
                                 var i;
                                 (i =
                                     "checkout" === e.flow
                                         ? r.paymentResource.redirectUrl
                                         : r.agreementSetup.approvalUrl),
-                                    "commit" === e.useraction &&
-                                        (i = m.queryify(i, {
-                                            useraction: "commit",
-                                        })),
+                                    "commit" === e.useraction && (i = m.queryify(i, { useraction: "commit" })),
                                     window.popupBridge && u.sendEvent(n, "paypal.tokenization.opened-popupbridge"),
                                     t._frameService.redirect(i);
                             })
@@ -10665,9 +9839,7 @@ e.exports = (function e(t, n, r) {
                                               type: E.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                               code: E.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                               message: E.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                              details: {
-                                                  originalError: e,
-                                              },
+                                              details: { originalError: e },
                                           }),
                                       )
                                     : Promise.reject(
@@ -10764,6 +9936,7 @@ e.exports = (function e(t, n, r) {
         ],
         200: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -10775,11 +9948,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "PayPal";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -10815,12 +9984,10 @@ e.exports = (function e(t, n, r) {
         ],
         201: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreepaypallanding",
-                    FLOW_ENDPOINTS: {
-                        checkout: "create_payment_resource",
-                        vault: "setup_billing_agreement",
-                    },
+                    FLOW_ENDPOINTS: { checkout: "create_payment_resource", vault: "setup_billing_agreement" },
                     REQUIRED_OPTIONS: ["paymentId", "currency"],
                 };
             },
@@ -10828,6 +9995,7 @@ e.exports = (function e(t, n, r) {
         ],
         202: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -10872,12 +10040,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         203: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./preferred-payment-methods");
@@ -10904,11 +10071,11 @@ e.exports = (function e(t, n, r) {
         ],
         204: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/analytics"),
                     o = e("../lib/create-assets-url"),
                     a = e("../lib/create-deferred-client");
-
                 function s() {}
                 (s.prototype.initialize = function (e) {
                     var t = this;
@@ -10946,20 +10113,14 @@ e.exports = (function e(t, n, r) {
                                 return (
                                     i.sendEvent(e, "preferred-payment-methods.paypal.api-detected." + n),
                                     i.sendEvent(e, "preferred-payment-methods.venmo.api-detected." + r),
-                                    {
-                                        paypalPreferred: n,
-                                        venmoPreferred: r,
-                                    }
+                                    { paypalPreferred: n, venmoPreferred: r }
                                 );
                             })
                             .catch(function () {
                                 return t._setupError
                                     ? Promise.reject(t._setupError)
                                     : (i.sendEvent(e, "preferred-payment-methods.api-error"),
-                                      {
-                                          paypalPreferred: !1,
-                                          venmoPreferred: !1,
-                                      });
+                                      { paypalPreferred: !1, venmoPreferred: !1 });
                             });
                     }),
                     (t.exports = r.wrapPrototype(s));
@@ -10973,6 +10134,7 @@ e.exports = (function e(t, n, r) {
         ],
         205: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../../lib/frame-service/external"),
@@ -10981,7 +10143,6 @@ e.exports = (function e(t, n, r) {
                     c = e("../shared/constants").BILLING_ADDRESS_OPTIONS,
                     d = e("../../lib/snake-case-to-camel-case"),
                     l = e("../../lib/assign").assign;
-
                 function u(e, t) {
                     var n = {
                         sepa_debit_account: {
@@ -11017,9 +10178,7 @@ e.exports = (function e(t, n, r) {
                         var n = {
                             sepa_debit: {
                                 account_holder_name: t.accountHolderName,
-                                billing_address: {
-                                    country_code: t.countryCode,
-                                },
+                                billing_address: { country_code: t.countryCode },
                                 iban: t.iban,
                                 merchant_or_partner_customer_id: t.customerId,
                                 mandate_type: t.mandateType,
@@ -11036,12 +10195,7 @@ e.exports = (function e(t, n, r) {
                                     r in t.billingAddress && (n.sepa_debit.billing_address[e] = t.billingAddress[r]);
                                 }),
                             e
-                                .request({
-                                    api: "clientApi",
-                                    method: "post",
-                                    endpoint: "sepa_debit",
-                                    data: n,
-                                })
+                                .request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data: n })
                                 .then(function (e) {
                                     var t = e.message.body.sepaDebitAccount;
                                     if (!t) throw new r(i.SEPA_CREATE_MANDATE_FAILED);
@@ -11099,11 +10253,7 @@ e.exports = (function e(t, n, r) {
                     },
                     handleApprovalForFullPageRedirect: function (e, t) {
                         return e
-                            .request({
-                                api: "clientApi",
-                                method: "get",
-                                endpoint: "sepa_debit/" + t.cart_id,
-                            })
+                            .request({ api: "clientApi", method: "get", endpoint: "sepa_debit/" + t.cart_id })
                             .then(function (n) {
                                 var r = n.sepaDebitMandateDetail;
                                 return (
@@ -11142,6 +10292,7 @@ e.exports = (function e(t, n, r) {
         ],
         206: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -11150,7 +10301,6 @@ e.exports = (function e(t, n, r) {
                     c = e("../shared/has-missing-option"),
                     d = e("../../lib/analytics"),
                     l = e("../../lib/assign").assign;
-
                 function u(e) {
                     var t = e.client.getConfiguration();
                     (this._client = e.client),
@@ -11168,13 +10318,7 @@ e.exports = (function e(t, n, r) {
                 (u.prototype.tokenize = function (e) {
                     var t,
                         n = this,
-                        r = l(
-                            {
-                                cancelUrl: n._cancelUrl,
-                                returnUrl: n._returnUrl,
-                            },
-                            e,
-                        );
+                        r = l({ cancelUrl: n._cancelUrl, returnUrl: n._returnUrl }, e);
                     return !e || c(e, a.REQUIRED_OPTIONS)
                         ? (d.sendEvent(n._client, "sepa.input-validation.missing-options"),
                           Promise.reject(new i(o.SEPA_TOKENIZE_MISSING_REQUIRED_OPTION)))
@@ -11184,10 +10328,7 @@ e.exports = (function e(t, n, r) {
                                     ? s.redirectPage(t.approvalUrl)
                                     : ((e.last4 = t.last4),
                                       (e.bankReferenceToken = t.bankReferenceToken),
-                                      s.openPopup(n._client, {
-                                          approvalUrl: t.approvalUrl,
-                                          assetsUrl: n._assetsUrl,
-                                      }));
+                                      s.openPopup(n._client, { approvalUrl: t.approvalUrl, assetsUrl: n._assetsUrl }));
                             })),
                             n._isRedirectFlow)
                               ? Promise.resolve()
@@ -11230,6 +10371,7 @@ e.exports = (function e(t, n, r) {
         ],
         207: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./external/sepa"),
                     o = e("../lib/create-assets-url"),
@@ -11244,11 +10386,7 @@ e.exports = (function e(t, n, r) {
                         var t = "SEPA",
                             n = d(window.location.href);
                         return s
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return a.create({
                                     authorization: e.authorization,
@@ -11292,6 +10430,7 @@ e.exports = (function e(t, n, r) {
         ],
         208: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS: [
                         "iban",
@@ -11315,6 +10454,7 @@ e.exports = (function e(t, n, r) {
         ],
         209: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     SEPA_CREATE_MANDATE_FAILED: {
@@ -11353,12 +10493,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         210: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     var n, r;
                     for (n = 0, t = t || []; n < t.length; n++) if (((r = t[n]), !e.hasOwnProperty(r))) return !0;
@@ -11369,6 +10508,7 @@ e.exports = (function e(t, n, r) {
         ],
         211: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../lib/assign").assign,
                     i = e("../../../lib/analytics"),
                     o = e("../../../lib/braintree-error"),
@@ -11384,7 +10524,6 @@ e.exports = (function e(t, n, r) {
                     h = e("../../../lib/use-min"),
                     m = e("../../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT,
                     f = "3.112.1";
-
                 function y(e) {
                     c.call(this),
                         (this._client = e.client),
@@ -11471,35 +10610,27 @@ e.exports = (function e(t, n, r) {
                         var n = this,
                             r = "payment_methods/" + e + "/three_d_secure/lookup";
                         return this._waitForClient().then(function () {
-                            return n._client
-                                .request({
-                                    endpoint: r,
-                                    method: "post",
-                                    data: t,
-                                })
-                                .catch(function (e) {
-                                    var t,
-                                        r = e && e.details && e.details.httpStatus,
-                                        a = "three-d-secure.verification-flow.lookup-failed";
-                                    return (
-                                        404 === r
-                                            ? ((t = d.THREEDS_LOOKUP_TOKENIZED_CARD_NOT_FOUND_ERROR), (a += ".404"))
-                                            : 422 === r
-                                              ? ((t = d.THREEDS_LOOKUP_VALIDATION_ERROR), (a += ".422"))
-                                              : (t = d.THREEDS_LOOKUP_ERROR),
-                                        i.sendEvent(n._createPromise, a),
-                                        Promise.reject(
-                                            new o({
-                                                type: t.type,
-                                                code: t.code,
-                                                message: t.message,
-                                                details: {
-                                                    originalError: e,
-                                                },
-                                            }),
-                                        )
-                                    );
-                                });
+                            return n._client.request({ endpoint: r, method: "post", data: t }).catch(function (e) {
+                                var t,
+                                    r = e && e.details && e.details.httpStatus,
+                                    a = "three-d-secure.verification-flow.lookup-failed";
+                                return (
+                                    404 === r
+                                        ? ((t = d.THREEDS_LOOKUP_TOKENIZED_CARD_NOT_FOUND_ERROR), (a += ".404"))
+                                        : 422 === r
+                                          ? ((t = d.THREEDS_LOOKUP_VALIDATION_ERROR), (a += ".422"))
+                                          : (t = d.THREEDS_LOOKUP_ERROR),
+                                    i.sendEvent(n._createPromise, a),
+                                    Promise.reject(
+                                        new o({
+                                            type: t.type,
+                                            code: t.code,
+                                            message: t.message,
+                                            details: { originalError: e },
+                                        }),
+                                    )
+                                );
+                            });
                         });
                     }),
                     (y.prototype._existsAndIsNumeric = function (e) {
@@ -11587,9 +10718,7 @@ e.exports = (function e(t, n, r) {
                         return r({}, e);
                     }),
                     (y.prototype._formatLookupData = function (e) {
-                        var t = {
-                            amount: e.amount,
-                        };
+                        var t = { amount: e.amount };
                         return (
                             !0 === e.collectDeviceData &&
                                 ((t.browserColorDepth = window.screen.colorDepth),
@@ -11639,10 +10768,7 @@ e.exports = (function e(t, n, r) {
                             n = window.location.href.split("#")[0],
                             r = e.lookupResponse,
                             i = _(),
-                            o = new u({
-                                channel: i,
-                                verifyDomain: a,
-                            }),
+                            o = new u({ channel: i, verifyDomain: a }),
                             s =
                                 this._assetsUrl +
                                 "/html/three-d-secure-authentication-complete-frame.html?channel=" +
@@ -11722,14 +10848,12 @@ e.exports = (function e(t, n, r) {
         ],
         212: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird");
-
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, {
-                    constructor: r,
-                })),
+                (i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div");
                         return (
@@ -11745,20 +10869,16 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            {
-                "./songbird": 217,
-            },
+            { "./songbird": 217 },
         ],
         213: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird");
-
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, {
-                    constructor: r,
-                })),
+                (i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div"),
                             n = !!(
@@ -11777,12 +10897,11 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            {
-                "./songbird": 217,
-            },
+            { "./songbird": 217 },
         ],
         214: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     legacy: e("./legacy"),
                     "cardinal-modal": e("./cardinal-modal"),
@@ -11790,26 +10909,19 @@ e.exports = (function e(t, n, r) {
                     "inline-iframe": e("./inline-iframe"),
                 };
             },
-            {
-                "./bootstrap3-modal": 212,
-                "./cardinal-modal": 213,
-                "./inline-iframe": 215,
-                "./legacy": 216,
-            },
+            { "./bootstrap3-modal": 212, "./cardinal-modal": 213, "./inline-iframe": 215, "./legacy": 216 },
         ],
         215: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird"),
                     i = e("../../../lib/braintree-error"),
                     o = e("../../shared/errors"),
                     a = e("../../../lib/enumerate");
-
                 function s(e) {
                     r.call(this, e);
                 }
-                (s.prototype = Object.create(r.prototype, {
-                    constructor: r,
-                })),
+                (s.prototype = Object.create(r.prototype, { constructor: r })),
                     (s.events = a(["AUTHENTICATION_IFRAME_AVAILABLE"], "inline-iframe-framework:")),
                     (s.prototype.setUpEventListeners = function (e) {
                         r.prototype.setUpEventListeners.call(this, e),
@@ -11824,9 +10936,7 @@ e.exports = (function e(t, n, r) {
                     (s.prototype._addV1IframeToPage = function () {
                         this._emit(
                             s.events.AUTHENTICATION_IFRAME_AVAILABLE,
-                            {
-                                element: this._v1Modal,
-                            },
+                            { element: this._v1Modal },
                             function () {},
                         );
                     }),
@@ -11846,15 +10956,9 @@ e.exports = (function e(t, n, r) {
                               "suppress" === t.data.mode
                                   ? ((a.style.display = "none"), document.body.appendChild(a), n())
                                   : "static" === t.data.mode &&
-                                    this._emit(
-                                        s.events.AUTHENTICATION_IFRAME_AVAILABLE,
-                                        {
-                                            element: a,
-                                        },
-                                        function () {
-                                            n();
-                                        },
-                                    ));
+                                    this._emit(s.events.AUTHENTICATION_IFRAME_AVAILABLE, { element: a }, function () {
+                                        n();
+                                    }));
                     }),
                     (t.exports = s);
             },
@@ -11867,15 +10971,13 @@ e.exports = (function e(t, n, r) {
         ],
         216: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/deferred");
-
                 function o(e) {
                     r.call(this, e);
                 }
-                (o.prototype = Object.create(r.prototype, {
-                    constructor: o,
-                })),
+                (o.prototype = Object.create(r.prototype, { constructor: o })),
                     (o.prototype.setUpEventListeners = function () {}),
                     (o.prototype.transformV1CustomerBillingAddress = function (e) {
                         return (
@@ -11957,13 +11059,11 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = o);
             },
-            {
-                "../../../lib/deferred": 151,
-                "./base": 211,
-            },
+            { "../../../lib/deferred": 151, "./base": 211 },
         ],
         217: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/deferred"),
@@ -11980,20 +11080,15 @@ e.exports = (function e(t, n, r) {
                     m = "3.112.1",
                     f = ["ui.close", "ui.render", "ui.renderHidden", "ui.loading.close", "ui.loading.render"],
                     y = ["low_value", "transaction_risk_analysis"];
-
                 function A(e) {
                     r.call(this, e),
                         (this._songbirdInitFailed = !1),
-                        (this._clientMetadata = {
-                            requestedThreeDSecureVersion: "2",
-                            sdkVersion: h + "/" + m,
-                        }),
+                        (this._clientMetadata = { requestedThreeDSecureVersion: "2", sdkVersion: h + "/" + m }),
                         (this.originalSetupOptions = e),
                         (this._getDfReferenceIdPromisePlus = new _()),
                         this.setupSongbird(e),
                         (this._cardinalEvents = []);
                 }
-
                 function T(e, t, n) {
                     (t[n + "Line1"] = e.streetAddress),
                         (t[n + "Line2"] = e.extendedAddress),
@@ -12004,9 +11099,7 @@ e.exports = (function e(t, n, r) {
                         (t[n + "CountryCode"] = e.countryCodeAlpha2);
                 }
                 (_.suppressUnhandledPromiseMessage = !0),
-                    (A.prototype = Object.create(r.prototype, {
-                        constructor: A,
-                    })),
+                    (A.prototype = Object.create(r.prototype, { constructor: A })),
                     (A.events = u(
                         [
                             "LOOKUP_COMPLETE",
@@ -12115,7 +11208,6 @@ e.exports = (function e(t, n, r) {
                             n = t.querySelector("[data-braintree-v1-fallback-close-button]"),
                             r = t.querySelector("[data-braintree-v1-fallback-backdrop]"),
                             i = this;
-
                         function o() {
                             t.parentNode.removeChild(t),
                                 i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED),
@@ -12147,10 +11239,7 @@ e.exports = (function e(t, n, r) {
                                     ._loadCardinalScript(e)
                                     .then(function () {
                                         return window.Cardinal
-                                            ? t._configureCardinalSdk({
-                                                  setupOptions: e,
-                                                  setupStartTime: n,
-                                              })
+                                            ? t._configureCardinalSdk({ setupOptions: e, setupStartTime: n })
                                             : ((t._v2SetupFailureReason = "cardinal-global-unavailable"),
                                               Promise.reject(new a(l.THREEDS_CARDINAL_SDK_SETUP_FAILED)));
                                     })
@@ -12192,9 +11281,7 @@ e.exports = (function e(t, n, r) {
                                     ),
                                     t._setupFrameworkSpecificListeners(),
                                     window.Cardinal.configure(a),
-                                    window.Cardinal.setup("init", {
-                                        jwt: r,
-                                    }),
+                                    window.Cardinal.setup("init", { jwt: r }),
                                     (t._clientMetadata.cardinalDeviceDataCollectionTimeElapsed = Date.now() - o),
                                     t.setCardinalListener("payments.validated", t._createPaymentsValidatedCallback());
                             })
@@ -12212,11 +11299,7 @@ e.exports = (function e(t, n, r) {
                         var t = e.cardinalSDKConfig || {},
                             n = t.payment || {};
                         return (
-                            !t.logging &&
-                                e.loggingEnabled &&
-                                (t.logging = {
-                                    level: "verbose",
-                                }),
+                            !t.logging && e.loggingEnabled && (t.logging = { level: "verbose" }),
                             (t.payment = {}),
                             n.hasOwnProperty("displayLoading") && (t.payment.displayLoading = n.displayLoading),
                             n.hasOwnProperty("displayExitButton") &&
@@ -12234,9 +11317,7 @@ e.exports = (function e(t, n, r) {
                                         c.sendEvent(t._client, "three-d-secure.cardinal-sdk.init.setup-timeout"),
                                             t.handleSongbirdError("cardinal-sdk-setup-timeout");
                                     }, e.timeout || E)),
-                                    d.loadScript({
-                                        src: n,
-                                    })
+                                    d.loadScript({ src: n })
                                 );
                             })
                             .catch(function (e) {
@@ -12285,10 +11366,7 @@ e.exports = (function e(t, n, r) {
                                     return n._client.request({
                                         method: "post",
                                         endpoint: i,
-                                        data: {
-                                            jwt: t,
-                                            paymentMethodNonce: r,
-                                        },
+                                        data: { jwt: t, paymentMethodNonce: r },
                                     });
                                 })
                                 .then(function (t) {
@@ -12308,9 +11386,7 @@ e.exports = (function e(t, n, r) {
                                         type: l.THREEDS_JWT_AUTHENTICATION_FAILED.type,
                                         code: l.THREEDS_JWT_AUTHENTICATION_FAILED.code,
                                         message: l.THREEDS_JWT_AUTHENTICATION_FAILED.message,
-                                        details: {
-                                            originalError: e,
-                                        },
+                                        details: { originalError: e },
                                     });
                                     return (
                                         c.sendEvent(
@@ -12380,10 +11456,7 @@ e.exports = (function e(t, n, r) {
                                             r = new a(l.THREEDS_CARDINAL_SDK_ERROR);
                                     }
                                     (r.details = {
-                                        originalError: {
-                                            code: t.ErrorNumber,
-                                            description: t.ErrorDescription,
-                                        },
+                                        originalError: { code: t.ErrorNumber, description: t.ErrorDescription },
                                     }),
                                         e._verifyCardPromisePlus.reject(r);
                             }
@@ -12440,15 +11513,8 @@ e.exports = (function e(t, n, r) {
                             e.lookup.transactionId &&
                             window.Cardinal.continue(
                                 "cca",
-                                {
-                                    AcsUrl: e.lookup.acsUrl,
-                                    Payload: e.lookup.pareq,
-                                },
-                                {
-                                    OrderDetails: {
-                                        TransactionId: e.lookup.transactionId,
-                                    },
-                                },
+                                { AcsUrl: e.lookup.acsUrl, Payload: e.lookup.pareq },
+                                { OrderDetails: { TransactionId: e.lookup.transactionId } },
                             );
                     }),
                     (A.prototype._formatLookupData = function (e) {
@@ -12510,10 +11576,7 @@ e.exports = (function e(t, n, r) {
                         var e = this,
                             t = Date.now();
                         return e.teardown().then(function () {
-                            e._configureCardinalSdk({
-                                setupOptions: e.originalSetupOptions,
-                                setupStartTime: t,
-                            });
+                            e._configureCardinalSdk({ setupOptions: e.originalSetupOptions, setupStartTime: t });
                         });
                     }),
                     (t.exports = A);
@@ -12535,12 +11598,12 @@ e.exports = (function e(t, n, r) {
         ],
         218: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/methods"),
                     o = e("../../lib/convert-methods-to-error"),
                     a = e("@braintree/event-emitter"),
                     s = e("./frameworks");
-
                 function c(e) {
                     var t = this,
                         n = s[e.framework];
@@ -12554,10 +11617,7 @@ e.exports = (function e(t, n, r) {
                     (c.prototype.verifyCard = function (e) {
                         var t;
                         return (
-                            this.hasListener("lookup-complete") &&
-                                (t = {
-                                    ignoreOnLookupCompleteRequirement: !0,
-                                }),
+                            this.hasListener("lookup-complete") && (t = { ignoreOnLookupCompleteRequirement: !0 }),
                             this._framework.verifyCard(e, t)
                         );
                     }),
@@ -12590,6 +11650,7 @@ e.exports = (function e(t, n, r) {
         ],
         219: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/three-d-secure"),
                     i = e("../lib/is-https").isHTTPS,
                     o = e("../lib/basic-component-verification"),
@@ -12629,11 +11690,7 @@ e.exports = (function e(t, n, r) {
                                 }
                             })(e);
                         return o
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 var o = s.create(e.authorization),
                                     u = a
@@ -12696,6 +11753,7 @@ e.exports = (function e(t, n, r) {
         ],
         220: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreethreedsecurelanding",
                     CARDINAL_SCRIPT_SOURCE: {
@@ -12708,6 +11766,7 @@ e.exports = (function e(t, n, r) {
         ],
         221: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     THREEDS_NOT_ENABLED: {
@@ -12731,10 +11790,7 @@ e.exports = (function e(t, n, r) {
                         message:
                             "3D Secure version 2 is not enabled for this merchant. Contact Braintree Support for assistance at https://help.braintreepayments.com/",
                     },
-                    THREEDS_UNRECOGNIZED_VERSION: {
-                        type: r.types.MERCHANT,
-                        code: "THREEDS_UNRECOGNIZED_VERSION",
-                    },
+                    THREEDS_UNRECOGNIZED_VERSION: { type: r.types.MERCHANT, code: "THREEDS_UNRECOGNIZED_VERSION" },
                     THREEDS_CARDINAL_SDK_SETUP_FAILED: {
                         type: r.types.UNKNOWN,
                         code: "THREEDS_CARDINAL_SDK_SETUP_FAILED",
@@ -12844,20 +11900,18 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         222: [
             function (e, t, n) {
+                "use strict";
                 t.exports = e("../../lib/enumerate")(["AUTHENTICATION_COMPLETE"], "threedsecure:");
             },
-            {
-                "../../lib/enumerate": 153,
-            },
+            { "../../lib/enumerate": 153 },
         ],
         223: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./shared/unionpay"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/braintree-error"),
@@ -12869,11 +11923,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "UnionPay";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return a.create({
                                     authorization: e.authorization,
@@ -12907,6 +11957,7 @@ e.exports = (function e(t, n, r) {
         ],
         224: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     events: e("../../lib/enumerate")(
                         ["HOSTED_FIELDS_FETCH_CAPABILITIES", "HOSTED_FIELDS_ENROLL", "HOSTED_FIELDS_TOKENIZE"],
@@ -12915,12 +11966,11 @@ e.exports = (function e(t, n, r) {
                     HOSTED_FIELDS_FRAME_NAME: "braintreeunionpayhostedfields",
                 };
             },
-            {
-                "../../lib/enumerate": 153,
-            },
+            { "../../lib/enumerate": 153 },
         ],
         225: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     UNIONPAY_NOT_ENABLED: {
@@ -12986,12 +12036,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         226: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/braintree-error"),
                     o = e("framebus"),
@@ -13006,7 +12055,6 @@ e.exports = (function e(t, n, r) {
                     E = e("@braintree/uuid"),
                     h = e("@braintree/wrap-promise"),
                     m = e("../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
-
                 function f(e) {
                     this._options = e;
                 }
@@ -13022,14 +12070,7 @@ e.exports = (function e(t, n, r) {
                                 .request({
                                     method: "get",
                                     endpoint: "payment_methods/credit_cards/capabilities",
-                                    data: {
-                                        _meta: {
-                                            source: "unionpay",
-                                        },
-                                        creditCard: {
-                                            number: o,
-                                        },
-                                    },
+                                    data: { _meta: { source: "unionpay" }, creditCard: { number: o } },
                                 })
                                 .then(function (e) {
                                     return r.sendEvent(n, "unionpay.capabilities-received"), e;
@@ -13043,9 +12084,7 @@ e.exports = (function e(t, n, r) {
                                                   type: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.type,
                                                   code: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.code,
                                                   message: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.message,
-                                                  details: {
-                                                      originalError: e,
-                                                  },
+                                                  details: { originalError: e },
                                               }),
                                           );
                                 })
@@ -13055,9 +12094,7 @@ e.exports = (function e(t, n, r) {
                                       return new Promise(function (e, n) {
                                           t._bus.emit(
                                               u.HOSTED_FIELDS_FETCH_CAPABILITIES,
-                                              {
-                                                  hostedFields: a,
-                                              },
+                                              { hostedFields: a },
                                               function (t) {
                                                   t.err ? n(new i(t.err)) : e(t.payload);
                                               },
@@ -13083,10 +12120,7 @@ e.exports = (function e(t, n, r) {
                                           n._initializeHostedFields().then(function () {
                                               n._bus.emit(
                                                   u.HOSTED_FIELDS_ENROLL,
-                                                  {
-                                                      hostedFields: c,
-                                                      mobile: s,
-                                                  },
+                                                  { hostedFields: c, mobile: s },
                                                   function (n) {
                                                       n.err ? t(new i(n.err)) : e(n.payload);
                                                   },
@@ -13097,9 +12131,7 @@ e.exports = (function e(t, n, r) {
                         if (a && a.number) {
                             if (
                                 ((t = {
-                                    _meta: {
-                                        source: "unionpay",
-                                    },
+                                    _meta: { source: "unionpay" },
                                     unionPayEnrollment: {
                                         number: a.number,
                                         mobileCountryCode: s.countryCode,
@@ -13116,18 +12148,11 @@ e.exports = (function e(t, n, r) {
                                     (t.unionPayEnrollment.expirationYear = a.expirationYear),
                                         (t.unionPayEnrollment.expirationMonth = a.expirationMonth);
                             return o
-                                .request({
-                                    method: "post",
-                                    endpoint: "union_pay_enrollments",
-                                    data: t,
-                                })
+                                .request({ method: "post", endpoint: "union_pay_enrollments", data: t })
                                 .then(function (e) {
                                     return (
                                         r.sendEvent(o, "unionpay.enrollment-succeeded"),
-                                        {
-                                            enrollmentId: e.unionPayEnrollmentId,
-                                            smsCodeRequired: e.smsCodeRequired,
-                                        }
+                                        { enrollmentId: e.unionPayEnrollmentId, smsCodeRequired: e.smsCodeRequired }
                                     );
                                 })
                                 .catch(function (e) {
@@ -13160,16 +12185,10 @@ e.exports = (function e(t, n, r) {
                             ? Promise.reject(new i(l.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
                             : a
                               ? ((t = {
-                                    _meta: {
-                                        source: "unionpay",
-                                    },
+                                    _meta: { source: "unionpay" },
                                     creditCard: {
                                         number: e.card.number,
-                                        options: {
-                                            unionPayEnrollment: {
-                                                id: e.enrollmentId,
-                                            },
-                                        },
+                                        options: { unionPayEnrollment: { id: e.enrollmentId } },
                                     },
                                 }),
                                 e.smsCode && (t.creditCard.options.unionPayEnrollment.smsCode = e.smsCode),
@@ -13181,11 +12200,7 @@ e.exports = (function e(t, n, r) {
                                       (t.creditCard.expirationMonth = a.expirationMonth)),
                                 e.card.cvv && (t.creditCard.cvv = e.card.cvv),
                                 o
-                                    .request({
-                                        method: "post",
-                                        endpoint: "payment_methods/credit_cards",
-                                        data: t,
-                                    })
+                                    .request({ method: "post", endpoint: "payment_methods/credit_cards", data: t })
                                     .then(function (e) {
                                         var t = e.creditCards[0];
                                         return (
@@ -13243,10 +12258,7 @@ e.exports = (function e(t, n, r) {
                                 (this._hostedFieldsInitializePromise = new Promise(function (i) {
                                     (e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
                                         (t = r._options.client.getConfiguration().isDebug),
-                                        (r._bus = new o({
-                                            channel: n,
-                                            verifyDomain: s,
-                                        })),
+                                        (r._bus = new o({ channel: n, verifyDomain: s })),
                                         (r._hostedFieldsFrame = p({
                                             name: a.HOSTED_FIELDS_FRAME_NAME + "_" + n,
                                             src: e + "/web/3.112.1/html/unionpay-hosted-fields-frame" + c(t) + ".html",
@@ -13281,14 +12293,14 @@ e.exports = (function e(t, n, r) {
         ],
         227: [
             function (e, t, n) {
-                t.exports = {
-                    PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js",
-                };
+                "use strict";
+                t.exports = { PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js" };
             },
             {},
         ],
         228: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     US_BANK_ACCOUNT_OPTION_REQUIRED: {
@@ -13336,12 +12348,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         229: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -13352,11 +12363,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "US Bank Account";
                         return r
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -13387,6 +12394,7 @@ e.exports = (function e(t, n, r) {
         ],
         230: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./constants"),
                     o = e("./errors"),
@@ -13398,13 +12406,11 @@ e.exports = (function e(t, n, r) {
                     u = e("@braintree/wrap-promise"),
                     p = T("UsBankAccount"),
                     _ = T("UsBankLogin");
-
                 function E(e) {
                     (this._client = e.client),
                         (this._isTokenizingBankLogin = !1),
                         s.sendEvent(this._client, "usbankaccount.initialized");
                 }
-
                 function h(e) {
                     var t,
                         n = e.details && e.details.httpStatus;
@@ -13415,13 +12421,10 @@ e.exports = (function e(t, n, r) {
                                 : n < 500
                                   ? o.US_BANK_ACCOUNT_FAILED_TOKENIZATION
                                   : o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR,
-                        )).details = {
-                            originalError: e,
-                        }),
+                        )).details = { originalError: e }),
                         t
                     );
                 }
-
                 function m(e, t) {
                     var n = e.data[t].paymentMethod,
                         r = n.details.last4;
@@ -13432,7 +12435,6 @@ e.exports = (function e(t, n, r) {
                         type: "us_bank_account",
                     };
                 }
-
                 function f(e, t) {
                     function n() {
                         var r = this.readyState;
@@ -13442,7 +12444,6 @@ e.exports = (function e(t, n, r) {
                             e.removeEventListener("readystatechange", n),
                             t(null, window.Plaid));
                     }
-
                     function i() {
                         e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
                     }
@@ -13450,7 +12451,6 @@ e.exports = (function e(t, n, r) {
                         e.addEventListener("load", n),
                         e.addEventListener("readystatechange", n);
                 }
-
                 function y(e) {
                     return {
                         streetAddress: e.streetAddress,
@@ -13460,19 +12460,11 @@ e.exports = (function e(t, n, r) {
                         zipCode: e.postalCode,
                     };
                 }
-
                 function A(e, t) {
                     "personal" === t.ownershipType
-                        ? (e.individualOwner = {
-                              firstName: t.firstName,
-                              lastName: t.lastName,
-                          })
-                        : "business" === t.ownershipType &&
-                          (e.businessOwner = {
-                              businessName: t.businessName,
-                          });
+                        ? (e.individualOwner = { firstName: t.firstName, lastName: t.lastName })
+                        : "business" === t.ownershipType && (e.businessOwner = { businessName: t.businessName });
                 }
-
                 function T(e) {
                     return (
                         "mutation Tokenize" +
@@ -13528,14 +12520,7 @@ e.exports = (function e(t, n, r) {
                             t
                                 .request({
                                     api: "graphQLApi",
-                                    data: {
-                                        query: p,
-                                        variables: {
-                                            input: {
-                                                usBankAccount: r,
-                                            },
-                                        },
-                                    },
+                                    data: { query: p, variables: { input: { usBankAccount: r } } },
                                 })
                                 .then(function (e) {
                                     return (
@@ -13601,9 +12586,7 @@ e.exports = (function e(t, n, r) {
                                                                             data: {
                                                                                 query: _,
                                                                                 variables: {
-                                                                                    input: {
-                                                                                        usBankLogin: l,
-                                                                                    },
+                                                                                    input: { usBankLogin: l },
                                                                                 },
                                                                             },
                                                                         })
@@ -13675,6 +12658,7 @@ e.exports = (function e(t, n, r) {
         ],
         231: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN: {
@@ -13692,12 +12676,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         232: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/create-deferred-client"),
                     o = e("../lib/create-assets-url"),
@@ -13706,11 +12689,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "Vault Manager";
                         return r
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return new a({
                                     createPromise: i.create({
@@ -13736,17 +12715,16 @@ e.exports = (function e(t, n, r) {
         ],
         233: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/braintree-error"),
                     o = e("./errors"),
                     a = e("../lib/convert-methods-to-error"),
                     s = e("../lib/methods"),
                     c = e("@braintree/wrap-promise");
-
                 function d(e) {
                     this._createPromise = e.createPromise;
                 }
-
                 function l(e) {
                     var t = {
                         nonce: e.nonce,
@@ -13766,9 +12744,7 @@ e.exports = (function e(t, n, r) {
                                 return e.request({
                                     endpoint: "payment_methods",
                                     method: "get",
-                                    data: {
-                                        defaultFirst: t,
-                                    },
+                                    data: { defaultFirst: t },
                                 });
                             })
                             .then(
@@ -13795,11 +12771,7 @@ e.exports = (function e(t, n, r) {
                                           api: "graphQLApi",
                                           data: {
                                               query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}",
-                                              variables: {
-                                                  input: {
-                                                      singleUseTokenId: e,
-                                                  },
-                                              },
+                                              variables: { input: { singleUseTokenId: e } },
                                               operationName: "DeletePaymentMethodFromSingleUseToken",
                                           },
                                       })
@@ -13820,9 +12792,7 @@ e.exports = (function e(t, n, r) {
                                                           "A payment method for payment method nonce `" +
                                                           e +
                                                           "` could not be found.",
-                                                      details: {
-                                                          originalError: s,
-                                                      },
+                                                      details: { originalError: s },
                                                   })),
                                               a ||
                                                   (a = new i({
@@ -13832,9 +12802,7 @@ e.exports = (function e(t, n, r) {
                                                           "An unknown error occured when attempting to delete the payment method assocaited with the payment method nonce `" +
                                                           e +
                                                           "`.",
-                                                      details: {
-                                                          originalError: s,
-                                                      },
+                                                      details: { originalError: s },
                                                   })),
                                               Promise.reject(a)
                                           );
@@ -13857,29 +12825,23 @@ e.exports = (function e(t, n, r) {
         ],
         234: [
             function (e, t, n) {
+                "use strict";
                 var r = (
                     (this && this.__importDefault) ||
                     function (e) {
-                        return e && e.__esModule
-                            ? e
-                            : {
-                                  default: e,
-                              };
+                        return e && e.__esModule ? e : { default: e };
                     }
                 )(e("./venmo-desktop"));
                 t.exports = function (e) {
                     return new r.default(e).initialize();
                 };
             },
-            {
-                "./venmo-desktop": 236,
-            },
+            { "./venmo-desktop": 236 },
         ],
         235: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.UPDATE_PAYMENT_CONTEXT_QUERY =
@@ -13904,6 +12866,7 @@ e.exports = (function e(t, n, r) {
         ],
         236: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -13919,15 +12882,9 @@ e.exports = (function e(t, n, r) {
                     i =
                         (this && this.__importDefault) ||
                         function (e) {
-                            return e && e.__esModule
-                                ? e
-                                : {
-                                      default: e,
-                                  };
+                            return e && e.__esModule ? e : { default: e };
                         };
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                });
+                Object.defineProperty(n, "__esModule", { value: !0 });
                 var o = i(e("framebus")),
                     a = i(e("@braintree/iframer")),
                     s = i(e("@braintree/uuid")),
@@ -14005,20 +12962,13 @@ e.exports = (function e(t, n, r) {
                                     i = function (t) {
                                         r(),
                                             e.sendEvent("venmo.tokenize.desktop.unknown-error"),
-                                            n({
-                                                allowUIToHandleError: !1,
-                                                reason: "UNKNOWN_ERROR",
-                                                err: t,
-                                            });
+                                            n({ allowUIToHandleError: !1, reason: "UNKNOWN_ERROR", err: t });
                                     },
                                     o = function () {
                                         r(),
                                             e.updateVenmoDesktopPaymentContext("CANCELED"),
                                             e.sendEvent("venmo.tokenize.desktop.status-change.canceled-from-modal"),
-                                            n({
-                                                allowUIToHandleError: !1,
-                                                reason: "CUSTOMER_CANCELED",
-                                            });
+                                            n({ allowUIToHandleError: !1, reason: "CUSTOMER_CANCELED" });
                                     };
                                 (e.completedHandler = function (e) {
                                     r(), t(e);
@@ -14062,17 +13012,11 @@ e.exports = (function e(t, n, r) {
                         }),
                         (e.prototype.displayError = function (e) {
                             this.isHidden ||
-                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, {
-                                    message: e,
-                                }),
-                                this.setAlert(e));
+                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, { message: e }), this.setAlert(e));
                         }),
                         (e.prototype.displayQRCode = function (e, t) {
                             this.isHidden ||
-                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, {
-                                    id: e,
-                                    merchantId: t,
-                                }),
+                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, { id: e, merchantId: t }),
                                 this.setAlert("To scan the QR code, open your Venmo app"));
                         }),
                         (e.prototype.authorize = function () {
@@ -14117,10 +13061,7 @@ e.exports = (function e(t, n, r) {
                                           return (
                                               n.displayError("Something went wrong"),
                                               n.sendEvent("venmo.tokenize.desktop.status-change.sdk-timeout"),
-                                              n.Promise.reject({
-                                                  allowUIToHandleError: !0,
-                                                  reason: "TIMEOUT",
-                                              })
+                                              n.Promise.reject({ allowUIToHandleError: !0, reason: "TIMEOUT" })
                                           );
                                       })
                                     : this.lookupVenmoDesktopPaymentContext().then(function (r) {
@@ -14145,10 +13086,7 @@ e.exports = (function e(t, n, r) {
                                                               : "Something went wrong";
                                                       return (
                                                           n.displayError(o),
-                                                          n.Promise.reject({
-                                                              allowUIToHandleError: !0,
-                                                              reason: e,
-                                                          })
+                                                          n.Promise.reject({ allowUIToHandleError: !0, reason: e })
                                                       );
                                                   case "SCANNED":
                                                       n.authorizing();
@@ -14174,10 +13112,7 @@ e.exports = (function e(t, n, r) {
                         }),
                         (e.prototype.createPaymentContextFromGraphqlLegacyQRCodeMutation = function (e) {
                             return this.apiRequest(d.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, {
-                                input: {
-                                    environment: this.env,
-                                    intent: e,
-                                },
+                                input: { environment: this.env, intent: e },
                             }).then(function (e) {
                                 return e.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext;
                             });
@@ -14191,9 +13126,7 @@ e.exports = (function e(t, n, r) {
                             return (
                                 this.profileId && (t.merchantProfileId = this.profileId),
                                 this.displayName && (t.displayName = this.displayName),
-                                this.apiRequest(d.CREATE_PAYMENT_CONTEXT_QUERY, {
-                                    input: t,
-                                }).then(function (e) {
+                                this.apiRequest(d.CREATE_PAYMENT_CONTEXT_QUERY, { input: t }).then(function (e) {
                                     return e.createVenmoPaymentContext.venmoPaymentContext;
                                 })
                             );
@@ -14218,15 +13151,7 @@ e.exports = (function e(t, n, r) {
                         }),
                         (e.prototype.updateVenmoDesktopPaymentContext = function (e, t) {
                             if ((void 0 === t && (t = {}), !this.venmoContextId)) return this.Promise.resolve();
-                            var n = {
-                                    input: r(
-                                        {
-                                            id: this.venmoContextId,
-                                            status: e,
-                                        },
-                                        t,
-                                    ),
-                                },
+                            var n = { input: r({ id: this.venmoContextId, status: e }, t) },
                                 i = this.shouldUseLegacyQRCodeMutation
                                     ? d.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY
                                     : d.UPDATE_PAYMENT_CONTEXT_QUERY;
@@ -14237,9 +13162,7 @@ e.exports = (function e(t, n, r) {
                             var e = this.shouldUseLegacyQRCodeMutation
                                 ? d.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY
                                 : d.VENMO_PAYMENT_CONTEXT_STATUS_QUERY;
-                            return this.apiRequest(e, {
-                                id: this.venmoContextId,
-                            }).then(function (e) {
+                            return this.apiRequest(e, { id: this.venmoContextId }).then(function (e) {
                                 return e.node;
                             });
                         }),
@@ -14257,6 +13180,7 @@ e.exports = (function e(t, n, r) {
         ],
         237: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -14270,11 +13194,7 @@ e.exports = (function e(t, n, r) {
                     create: c(function (e) {
                         var t = "Venmo";
                         return i
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 var n, i;
                                 return e.profileId && "string" != typeof e.profileId
@@ -14323,6 +13243,7 @@ e.exports = (function e(t, n, r) {
         ],
         238: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -14364,6 +13285,7 @@ e.exports = (function e(t, n, r) {
         ],
         239: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500,
                     DEFAULT_PROCESS_RESULTS_DELAY: 1e3,
@@ -14376,6 +13298,7 @@ e.exports = (function e(t, n, r) {
         ],
         240: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     VENMO_NOT_ENABLED: {
@@ -14486,15 +13409,12 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/braintree-error": 143,
-            },
+            { "../../lib/braintree-error": 143 },
         ],
         241: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", {
-                    value: !0,
-                }),
+                "use strict";
+                Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_DESKTOP_UNKNOWN_ERROR =
                         n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE =
                         n.VENMO_DESKTOP_CLOSED_FROM_PARENT =
@@ -14521,6 +13441,7 @@ e.exports = (function e(t, n, r) {
         ],
         242: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants");
                 t.exports = function (e) {
                     return e.useAllowDesktopWebLogin
@@ -14530,12 +13451,11 @@ e.exports = (function e(t, n, r) {
                           : r.VENMO_MOBILE_APP_AUTH_ONLY_URL;
                 };
             },
-            {
-                "./constants": 239,
-            },
+            { "./constants": 239 },
         ],
         243: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./browser-detection"),
                     i = e("../../lib/in-iframe");
                 t.exports = {
@@ -14561,13 +13481,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../../lib/in-iframe": 169,
-                "./browser-detection": 238,
-            },
+            { "../../lib/in-iframe": 169, "./browser-detection": 238 },
         ],
         244: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/use-min"),
                     o = e("@braintree/extended-promise"),
@@ -14579,7 +13497,6 @@ e.exports = (function e(t, n, r) {
                     u = "venmo-popup-continue-button",
                     p = "venmo-message",
                     _ = "venmo-instructions";
-
                 function E(e) {
                     var t = e.frameServiceInstance,
                         n = e.venmoUrl,
@@ -14615,7 +13532,6 @@ e.exports = (function e(t, n, r) {
                         d
                     );
                 }
-
                 function h() {
                     document.getElementById("venmo-desktop-web-backdrop").classList.add("hidden");
                 }
@@ -14790,6 +13706,7 @@ e.exports = (function e(t, n, r) {
         ],
         245: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./shared/supports-venmo"),
                     o = e("./shared/browser-detection"),
@@ -14810,7 +13727,6 @@ e.exports = (function e(t, n, r) {
                     T = e("./external/"),
                     I = e("./external/queries"),
                     N = "3.112.1";
-
                 function O(e) {
                     var t = this;
                     (this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
@@ -14862,13 +13778,7 @@ e.exports = (function e(t, n, r) {
                                         Promise: Promise,
                                         apiRequest: function (t, n) {
                                             return e
-                                                .request({
-                                                    api: "graphQLApi",
-                                                    data: {
-                                                        query: t,
-                                                        variables: n,
-                                                    },
-                                                })
+                                                .request({ api: "graphQLApi", data: { query: t, variables: n } })
                                                 .then(function (e) {
                                                     return e.data;
                                                 });
@@ -14940,9 +13850,7 @@ e.exports = (function e(t, n, r) {
                                                                     ? e.details.originalError[0].message
                                                                     : s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED
                                                                           .message,
-                                                            details: {
-                                                                originalError: e,
-                                                            },
+                                                            details: { originalError: e },
                                                         }),
                                                     )
                                                 );
@@ -14958,7 +13866,6 @@ e.exports = (function e(t, n, r) {
                                     );
                                 })));
                 }
-
                 function g(e) {
                     var t = (e || window.location.hash.substring(1)).split("&").reduce(function (e, t) {
                         var n = t.split("="),
@@ -14968,11 +13875,9 @@ e.exports = (function e(t, n, r) {
                     }, {});
                     return t.resourceId && (t.id = t.resourceId), t;
                 }
-
                 function P(e) {
                     return "@" + (e = e || "").replace("@", "");
                 }
-
                 function b() {
                     var e;
                     return (
@@ -15187,10 +14092,7 @@ e.exports = (function e(t, n, r) {
                                                   (r = {
                                                       nonce: (n = e).paymentMethodNonce,
                                                       type: "VenmoAccount",
-                                                      details: {
-                                                          username: P(n.username),
-                                                          paymentContextId: n.id,
-                                                      },
+                                                      details: { username: P(n.username), paymentContextId: n.id },
                                                   }),
                                                   n.payerInfo &&
                                                       ((r.details.payerInfo = n.payerInfo),
@@ -15258,15 +14160,7 @@ e.exports = (function e(t, n, r) {
                                 var r = t._shouldUseLegacyFlow
                                     ? I.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY
                                     : I.VENMO_PAYMENT_CONTEXT_STATUS_QUERY;
-                                return n.request({
-                                    api: "graphQLApi",
-                                    data: {
-                                        query: r,
-                                        variables: {
-                                            id: e,
-                                        },
-                                    },
-                                });
+                                return n.request({ api: "graphQLApi", data: { query: r, variables: { id: e } } });
                             })
                             .then(function (e) {
                                 return e.data.node;
@@ -15323,9 +14217,7 @@ e.exports = (function e(t, n, r) {
                                               type: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.type,
                                               code: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.code,
                                               message: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.message,
-                                              details: {
-                                                  originalError: e,
-                                              },
+                                              details: { originalError: e },
                                           }),
                                       );
                                   })
@@ -15389,7 +14281,6 @@ e.exports = (function e(t, n, r) {
                             n,
                             i = this;
                         if (this.hasTokenizationResult()) return this.processHashChangeFlowResults();
-
                         function o(e) {
                             var t;
                             i.processHashChangeFlowResults(e)
@@ -15453,9 +14344,7 @@ e.exports = (function e(t, n, r) {
                                                   type: s.VENMO_DESKTOP_UNKNOWN_ERROR.type,
                                                   code: s.VENMO_DESKTOP_UNKNOWN_ERROR.code,
                                                   message: s.VENMO_DESKTOP_UNKNOWN_ERROR.message,
-                                                  details: {
-                                                      originalError: t,
-                                                  },
+                                                  details: { originalError: t },
                                               }),
                                           );
                                 }),
@@ -15474,12 +14363,7 @@ e.exports = (function e(t, n, r) {
                                       api: "graphQLApi",
                                       data: {
                                           query: n,
-                                          variables: {
-                                              input: {
-                                                  id: e._venmoPaymentContextId,
-                                                  status: "CANCELED",
-                                              },
-                                          },
+                                          variables: { input: { id: e._venmoPaymentContextId, status: "CANCELED" } },
                                       },
                                   }))
                                 : Promise.resolve();
@@ -15601,6 +14485,7 @@ e.exports = (function e(t, n, r) {
         ],
         246: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VISA_CHECKOUT_NOT_ENABLED: {
@@ -15625,12 +14510,11 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            {
-                "../lib/braintree-error": 143,
-            },
+            { "../lib/braintree-error": 143 },
         ],
         247: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -15642,11 +14526,7 @@ e.exports = (function e(t, n, r) {
                     create: e("@braintree/wrap-promise")(function (e) {
                         var t = "Visa Checkout";
                         return r
-                            .verify({
-                                name: t,
-                                client: e.client,
-                                authorization: e.authorization,
-                            })
+                            .verify({ name: t, client: e.client, authorization: e.authorization })
                             .then(function () {
                                 return o.create({
                                     authorization: e.authorization,
@@ -15678,6 +14558,7 @@ e.exports = (function e(t, n, r) {
         ],
         248: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
@@ -15685,13 +14566,7 @@ e.exports = (function e(t, n, r) {
                     s = e("../lib/methods"),
                     c = e("../lib/convert-methods-to-error"),
                     d = e("@braintree/wrap-promise"),
-                    l = {
-                        Visa: "VISA",
-                        MasterCard: "MASTERCARD",
-                        Discover: "DISCOVER",
-                        "American Express": "AMEX",
-                    };
-
+                    l = { Visa: "VISA", MasterCard: "MASTERCARD", Discover: "DISCOVER", "American Express": "AMEX" };
                 function u(e) {
                     this._client = e.client;
                 }
@@ -15722,9 +14597,7 @@ e.exports = (function e(t, n, r) {
                                       method: "post",
                                       endpoint: "payment_methods/visa_checkout_cards",
                                       data: {
-                                          _meta: {
-                                              source: "visa-checkout",
-                                          },
+                                          _meta: { source: "visa-checkout" },
                                           visaCheckoutCard: {
                                               callId: e.callid,
                                               encryptedPaymentData: e.encPaymentData,
@@ -15746,9 +14619,7 @@ e.exports = (function e(t, n, r) {
                                                   type: o.VISA_CHECKOUT_TOKENIZATION.type,
                                                   code: o.VISA_CHECKOUT_TOKENIZATION.code,
                                                   message: o.VISA_CHECKOUT_TOKENIZATION.message,
-                                                  details: {
-                                                      originalError: e,
-                                                  },
+                                                  details: { originalError: e },
                                               }),
                                           )
                                       );

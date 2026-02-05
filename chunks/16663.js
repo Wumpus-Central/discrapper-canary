@@ -1,85 +1,68 @@
-n.d(e, {
-    A: () => b,
-});
-var l = n(627968);
+n.d(e, { A: () => A });
+var i = n(627968);
 n(64700);
-var a = n(397927),
-    r = n(182592),
-    i = n(950191),
-    o = n(718019),
-    s = n(31432),
+var l = n(397927),
+    a = n(182592),
+    r = n(950191),
+    s = n(718019),
+    o = n(31432),
     u = n(915614),
-    c = n(946356),
-    d = n(810396),
+    d = n(946356),
+    c = n(810396),
     m = n(159218),
     f = n(562153),
     g = n(996988),
-    p = n(985018),
-    h = n(98167);
-
-function b(t) {
-    var e;
-    let { user: n, previewText: b, previewEmoji: T, previewStatus: A, placeHolderText: y, transitionState: O } = t,
-        S = (0, i.Ay)(n.id),
-        j =
-            (null != b && "" !== b) || null != T
-                ? p.intl.formatToPlainString(p.t.UpF5Qa, {
-                      emoji: null != (e = null == T ? void 0 : T.name) ? e : "",
-                      status: b,
-                  })
-                : "".concat(p.intl.string(p.t.EVV6uZ), ": ").concat(y);
-    return (0, l.jsx)("div", {
+    h = n(985018),
+    p = n(98167);
+function A(t) {
+    let { user: e, previewText: n, previewEmoji: A, previewStatus: T, placeHolderText: S, transitionState: b } = t,
+        _ = (0, r.Ay)(e.id),
+        x =
+            (null != n && "" !== n) || null != A
+                ? h.intl.formatToPlainString(h.t.UpF5Qa, { emoji: A?.name ?? "", status: n })
+                : `${h.intl.string(h.t.EVV6uZ)}: ${S}`;
+    return (0, i.jsx)("div", {
         role: "img",
-        "aria-label": j,
-        children: (0, l.jsxs)(c.A, {
-            user: n,
-            displayProfile: S,
+        "aria-label": x,
+        children: (0, i.jsxs)(d.A, {
+            user: e,
+            displayProfile: _,
             themeType: g.d.POPOUT,
-            className: h.ti,
+            className: p.ti,
             "aria-hidden": "true",
             children: [
-                (0, l.jsxs)("header", {
+                (0, i.jsxs)("header", {
                     children: [
-                        (0, l.jsx)(u.A, {
-                            user: n,
-                            displayProfile: S,
-                            themeType: g.d.POPOUT,
-                        }),
-                        (0, l.jsx)("div", {
+                        (0, i.jsx)(u.A, { user: e, displayProfile: _, themeType: g.d.POPOUT }),
+                        (0, i.jsx)("div", {
                             inert: !0,
-                            children: (0, l.jsx)(o.A, {
-                                user: n,
-                                displayProfile: S,
+                            children: (0, i.jsx)(s.A, {
+                                user: e,
+                                displayProfile: _,
                                 themeType: g.d.POPOUT,
-                                previewStatus: A,
-                                className: h.my,
+                                previewStatus: T,
+                                className: p.my,
                             }),
                         }),
-                        (0, l.jsx)(m.A, {
-                            user: n,
+                        (0, i.jsx)(m.A, {
+                            user: e,
                             themeType: g.d.POPOUT,
-                            previewText: b,
-                            previewEmoji: T,
-                            placeholderText: y,
-                            hasEntered: O === a.ip4.ENTERED,
+                            previewText: n,
+                            previewEmoji: A,
+                            placeholderText: S,
+                            hasEntered: b === l.ip4.ENTERED,
                         }),
                     ],
                 }),
-                (null == S ? void 0 : S.profileEffect) != null &&
-                    (0, l.jsx)(r.A, {
-                        skuId: S.profileEffect.skuId,
-                    }),
-                (0, l.jsx)("div", {
-                    className: h.QV,
+                _?.profileEffect != null && (0, i.jsx)(a.A, { skuId: _.profileEffect.skuId }),
+                (0, i.jsx)("div", {
+                    className: p.QV,
                     inert: !0,
-                    children: (0, l.jsx)(d.A, {
-                        user: n,
-                        nickname: f.Ay.getName(null, null, n),
-                        pronouns: null == S ? void 0 : S.pronouns,
-                        tags: (0, l.jsx)(s.A, {
-                            displayProfile: S,
-                            themeType: g.d.POPOUT,
-                        }),
+                    children: (0, i.jsx)(c.A, {
+                        user: e,
+                        nickname: f.Ay.getName(null, null, e),
+                        pronouns: _?.pronouns,
+                        tags: (0, i.jsx)(o.A, { displayProfile: _, themeType: g.d.POPOUT }),
                     }),
                 }),
             ],

@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = {
         0: "-ші",
         1: "-ші",
@@ -67,9 +68,6 @@
                 r = e >= 100 ? 100 : null;
             return e + (t[e] || t[n] || t[r]);
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

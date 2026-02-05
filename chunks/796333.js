@@ -1,3 +1,2 @@
-e.exports = {
-    j: "previewButton__50a36",
-};
+"use strict";
+e.exports = { j: "previewButton__50a36" };

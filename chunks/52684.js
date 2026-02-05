@@ -1,18 +1,13 @@
-n.d(t, {
-    A: () => c,
-    G: () => o,
-}),
-    n(321073);
-var r,
+n.d(t, { A: () => o, G: () => r }), n(321073);
+var i,
     l = n(311907),
-    i = n(961350),
-    o = (((r = {})[(r.END_EARLY = 0)] = "END_EARLY"), r);
-let a = [];
-
-function c(e) {
-    let t = (0, l.bG)([i.default], () => i.default.getId()),
+    a = n(961350),
+    r = (((i = {})[(i.END_EARLY = 0)] = "END_EARLY"), i);
+let s = [];
+function o(e) {
+    let t = (0, l.bG)([a.default], () => a.default.getId()),
         { poll: n } = e;
-    if (!e.isPoll() || null == n) return a;
-    let r = [];
-    return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || r.push(0), r;
+    if (!e.isPoll() || null == n) return s;
+    let i = [];
+    return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || i.push(0), i;
 }

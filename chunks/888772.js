@@ -1,116 +1,93 @@
-n.d(t, {
-    A: () => U,
-}),
-    n(228524),
-    n(801541);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(889137),
+n.d(t, { A: () => U }), n(801541);
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(889137),
     o = n(837381),
     c = n(397927),
     d = n(260762),
     u = n(485947),
     _ = n(294433),
-    p = n(426190),
-    m = n(438732),
+    m = n(426190),
+    A = n(438732),
     g = n(834981),
-    A = n(469696),
-    f = n(796497),
-    h = n(148131),
-    b = n(845197),
-    E = n(442671),
-    x = n(191627),
-    O = n(327337),
-    C = n(842130),
-    I = n(985018),
-    T = n(896498),
-    S = n(205806),
-    j = n(473169),
+    E = n(469696),
+    h = n(796497),
+    p = n(148131),
+    C = n(845197),
+    x = n(442671),
+    T = n(191627),
+    I = n(327337),
+    S = n(842130),
+    f = n(985018),
+    N = n(896498),
+    b = n(205806),
+    R = n(473169),
     v = n(525351);
-
-function N(e) {
-    let { header: t, description: n, stepNumber: i } = e;
-    return (0, r.jsxs)("div", {
-        className: S.PM,
+function O(e) {
+    let { header: t, description: n, stepNumber: s } = e;
+    return (0, i.jsxs)("div", {
+        className: b.PM,
         children: [
-            (0, r.jsx)("div", {
-                className: S.CD,
-                children: (0, r.jsx)(c.Heading, {
+            (0, i.jsx)("div", {
+                className: b.CD,
+                children: (0, i.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
-                    children: (0, r.jsx)(c.Fmo, {
-                        children: i,
-                    }),
+                    children: (0, i.jsx)(c.Fmo, { children: s }),
                 }),
             }),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.Heading, {
-                        variant: "heading-sm/bold",
-                        children: (0, r.jsx)(c.Fmo, {
-                            children: t,
-                        }),
-                    }),
-                    (0, r.jsx)(c.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-muted",
-                        children: n,
-                    }),
+                    (0, i.jsx)(c.Heading, { variant: "heading-sm/bold", children: (0, i.jsx)(c.Fmo, { children: t }) }),
+                    (0, i.jsx)(c.Text, { variant: "text-sm/medium", color: "text-muted", children: n }),
                 ],
             }),
         ],
     });
 }
-
-function y() {
-    return (0, r.jsxs)("div", {
-        className: s()(S.aP, T.a, S.dO, S.p2),
+function j() {
+    return (0, i.jsxs)("div", {
+        className: a()(b.aP, N.a, b.dO, b.p2),
         children: [
-            (0, r.jsxs)("div", {
-                className: S.Np,
+            (0, i.jsxs)("div", {
+                className: b.Np,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(c.Heading, {
-                                className: j.QB,
+                            (0, i.jsx)(c.Heading, {
+                                className: R.QB,
                                 variant: "heading-xl/medium",
-                                children: (0, r.jsx)(c.Fmo, {
-                                    children: I.intl.string(C.default.pHEnV5),
-                                }),
+                                children: (0, i.jsx)(c.Fmo, { children: f.intl.string(S.default.pHEnV5) }),
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: j.SX,
-                                children: I.intl.string(C.default["1J/gZ4"]),
+                                className: R.SX,
+                                children: f.intl.string(S.default["1J/gZ4"]),
                             }),
                         ],
                     }),
-                    (0, r.jsx)("img", {
-                        className: S._u,
-                        src: v,
-                        alt: I.intl.string(C.default["r+PDmu"]),
-                    }),
+                    (0, i.jsx)("img", { className: b._u, src: v, alt: f.intl.string(S.default["r+PDmu"]) }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: S.Ci,
+            (0, i.jsxs)("div", {
+                className: b.Ci,
                 children: [
-                    (0, r.jsx)(N, {
-                        header: I.intl.string(C.default["7xxAni"]),
-                        description: I.intl.string(C.default["1M9So2"]),
+                    (0, i.jsx)(O, {
+                        header: f.intl.string(S.default["7xxAni"]),
+                        description: f.intl.string(S.default["1M9So2"]),
                         stepNumber: 1,
                     }),
-                    (0, r.jsx)(N, {
-                        header: I.intl.string(C.default["AXgx+a"]),
-                        description: I.intl.string(C.default.GzMFnb),
+                    (0, i.jsx)(O, {
+                        header: f.intl.string(S.default["AXgx+a"]),
+                        description: f.intl.string(S.default.GzMFnb),
                         stepNumber: 2,
                     }),
-                    (0, r.jsx)(N, {
-                        header: I.intl.string(C.default.MZn1tG),
-                        description: I.intl.string(C.default["8rLBxD"]),
+                    (0, i.jsx)(O, {
+                        header: f.intl.string(S.default.MZn1tG),
+                        description: f.intl.string(S.default["8rLBxD"]),
                         stepNumber: 3,
                     }),
                 ],
@@ -118,79 +95,65 @@ function y() {
         ],
     });
 }
-
 function P() {
     let e = (0, g.xr)();
-    return (0, r.jsxs)("div", {
-        className: s()(S.aP, T.a, S.dO),
+    return (0, i.jsxs)("div", {
+        className: a()(b.aP, N.a, b.dO),
         children: [
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.Heading, {
-                        className: j.QB,
+                    (0, i.jsx)(c.Heading, {
+                        className: R.QB,
                         variant: "heading-xl/medium",
-                        children: (0, r.jsx)(c.Fmo, {
-                            children: I.intl.string(C.default.zUCWEL),
-                        }),
+                        children: (0, i.jsx)(c.Fmo, { children: f.intl.string(S.default.zUCWEL) }),
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        className: j.SX,
-                        children: I.intl.format(C.default.yMnoDl, {
+                        className: R.SX,
+                        children: f.intl.format(S.default.yMnoDl, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
-                    e ? null : (0, r.jsx)(f.A, {}),
+                    e ? null : (0, i.jsx)(h.A, {}),
                 ],
             }),
-            (0, r.jsx)("img", {
-                className: S._u,
-                src: v,
-                alt: I.intl.string(C.default["r+PDmu"]),
-            }),
+            (0, i.jsx)("img", { className: b._u, src: v, alt: f.intl.string(S.default["r+PDmu"]) }),
         ],
     });
 }
-
-function R(e) {
-    let { sectionType: t, sectionTitle: n, requests: l } = e,
-        s = i.useRef(null),
-        a = "".concat(t, "-list"),
-        _ = (0, d.A)(a),
-        p = i.useCallback(
+function y(e) {
+    let { sectionType: t, sectionTitle: n, requests: r } = e,
+        a = s.useRef(null),
+        l = `${t}-list`,
+        _ = (0, d.A)(l),
+        m = s.useCallback(
             (e) => {
-                let { row: n, listIndex: i } = e,
-                    s = l[n],
-                    a = i === l.length;
-                return null == s
+                let { row: n, listIndex: s } = e,
+                    a = r[n],
+                    l = s === r.length;
+                return null == a
                     ? null
-                    : (0, r.jsx)(
-                          E.A,
+                    : (0, i.jsx)(
+                          x.A,
                           {
-                              userId: s.id,
-                              isLast: a,
+                              userId: a.id,
+                              isLast: l,
                               children: () =>
-                                  t === x.Ef.ACTIVE
-                                      ? (0, r.jsx)(h.w, {
-                                            user: s,
-                                        })
-                                      : (0, r.jsx)(b.M, {
-                                            user: s,
-                                        }),
+                                  t === T.Ef.ACTIVE ? (0, i.jsx)(p.w, { user: a }) : (0, i.jsx)(C.M, { user: a }),
                           },
-                          s.id,
+                          a.id,
                       );
             },
-            [l, t],
+            [r, t],
         ),
-        m = i.useCallback(
+        A = s.useCallback(
             () =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     u.A,
                     {
-                        children: (0, r.jsx)(c.Text, {
-                            className: j.QB,
+                        children: (0, i.jsx)(c.Text, {
+                            className: R.QB,
                             variant: "eyebrow",
                             color: "text-default",
                             children: n,
@@ -200,234 +163,116 @@ function R(e) {
                 ),
             [n],
         );
-    return (0, r.jsx)("div", {
-        className: S.uW,
-        children: (0, r.jsx)(o.hD, {
+    return (0, i.jsx)("div", {
+        className: b.uW,
+        children: (0, i.jsx)(o.hD, {
             navigator: _,
-            children: (0, r.jsx)(o.PR, {
+            children: (0, i.jsx)(o.PR, {
                 children: (e) => {
-                    let { ref: t, role: i } = e,
-                        o = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                i,
-                                l = {};
-                            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-                                    (r = n[i]),
-                                        !(t.indexOf(r) >= 0) &&
-                                            Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                            (l[r] = e[r]);
-                                return l;
-                            }
-                            if (
-                                ((l = (function (e, t) {
-                                    if (null == e) return {};
-                                    var n,
-                                        r,
-                                        i = {},
-                                        l = Object.getOwnPropertyNames(e);
-                                    for (r = 0; r < l.length; r++)
-                                        (n = l[r]),
-                                            !(t.indexOf(n) >= 0) &&
-                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                (i[n] = e[n]);
-                                    return i;
-                                })(e, t)),
-                                Object.getOwnPropertySymbols)
-                            )
-                                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-                                    (r = n[i]),
-                                        !(t.indexOf(r) >= 0) &&
-                                            Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                            (l[r] = e[r]);
-                            return l;
-                        })(e, ["ref", "role"]);
-                    return (0, r.jsx)(
+                    let { ref: t, role: s, ...o } = e;
+                    return (0, i.jsx)(
                         c.B8B,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })(
-                            {
-                                innerRole: i,
-                                innerAriaLabel: n,
-                                ref: (e) => {
-                                    var n;
-                                    (s.current = e),
-                                        (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
-                                },
-                                sectionHeight: x.h4,
-                                rowHeight: x.Gg,
-                                renderSection: m,
-                                renderRow: p,
-                                sections: [l.length],
-                                chunkSize: 30,
-                                fade: !0,
+                        {
+                            innerRole: s,
+                            innerAriaLabel: n,
+                            ref: (e) => {
+                                (a.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            o,
-                        ),
-                        a,
+                            sectionHeight: T.h4,
+                            rowHeight: T.Gg,
+                            renderSection: A,
+                            renderRow: m,
+                            sections: [r.length],
+                            chunkSize: 30,
+                            fade: !0,
+                            ...o,
+                        },
+                        l,
                     );
                 },
             }),
         }),
     });
 }
-let D = () => {
-        let e = (0, m.A)(),
+let L = () => {
+        let e = (0, A.A)(),
             t = (0, g.GR)(),
-            n = e ? x.Y7 : x.kp,
-            i = {
-                count: t.length,
-                max: n,
-            },
-            l = (0, _.y)(
-                I.intl.formatToPlainString(C.default["+tnO34"], i),
-                I.intl.formatToPlainString(C.default["pu6/U0"], i),
+            n = e ? T.Y7 : T.kp,
+            s = { count: t.length, max: n },
+            r = (0, _.y)(
+                f.intl.formatToPlainString(S.default["+tnO34"], s),
+                f.intl.formatToPlainString(S.default["pu6/U0"], s),
             );
         return t.length > 0
-            ? (0, r.jsx)(R, {
-                  sectionType: x.Ef.ACTIVE,
-                  sectionTitle: l,
-                  requests: t,
-              })
-            : (0, r.jsxs)("div", {
-                  className: S.uW,
+            ? (0, i.jsx)(y, { sectionType: T.Ef.ACTIVE, sectionTitle: r, requests: t })
+            : (0, i.jsxs)("div", {
+                  className: b.uW,
                   children: [
-                      (0, r.jsx)(c.Text, {
-                          className: j.QB,
-                          variant: "eyebrow",
-                          color: "text-default",
-                          children: l,
-                      }),
-                      (0, r.jsx)("div", {
-                          className: S.aP,
-                          children: (0, r.jsx)(A.A, {
-                              text: I.intl.string(C.default.C4ScLD),
-                          }),
+                      (0, i.jsx)(c.Text, { className: R.QB, variant: "eyebrow", color: "text-default", children: r }),
+                      (0, i.jsx)("div", {
+                          className: b.aP,
+                          children: (0, i.jsx)(E.A, { text: f.intl.string(S.default.C4ScLD) }),
                       }),
                   ],
               });
     },
-    w = () => {
+    D = () => {
         let e = (0, g.xr)(),
-            t = (0, m.A)() ? x.Y7 : x.kp,
+            t = (0, A.A)() ? T.Y7 : T.kp,
             n = (0, _.y)(
-                I.intl.formatToPlainString(C.default["1/PzIj"], {
-                    maxConnections: t,
-                }),
-                I.intl.formatToPlainString(C.default.RcTgiE, {
-                    maxConnections: t,
-                }),
+                f.intl.formatToPlainString(S.default["1/PzIj"], { maxConnections: t }),
+                f.intl.formatToPlainString(S.default.RcTgiE, { maxConnections: t }),
             );
         return e
-            ? (0, r.jsx)("div", {
-                  className: S.rv,
-                  children: (0, r.jsx)(c.Text, {
-                      variant: "text-xxs/medium",
-                      color: "text-muted",
-                      children: n,
-                  }),
+            ? (0, i.jsx)("div", {
+                  className: b.rv,
+                  children: (0, i.jsx)(c.Text, { variant: "text-xxs/medium", color: "text-muted", children: n }),
               })
             : null;
     },
-    L = () => {
-        let e = (0, p.N)(),
-            t = (0, p.z)(),
-            n = (0, a.YW)({
-                helpline: e,
-                throughline: t,
-            })
-                .with(
-                    {
-                        helpline: !0,
-                    },
-                    () =>
-                        I.intl.format(C.default["KOwsf/"], {
-                            helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
-                        }),
+    M = () => {
+        let e = (0, m.N)(),
+            t = (0, m.z)(),
+            n = (0, l.YW)({ helpline: e, throughline: t })
+                .with({ helpline: !0 }, () =>
+                    f.intl.format(S.default["KOwsf/"], {
+                        helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
+                    }),
                 )
-                .with(
-                    {
-                        throughline: !0,
-                    },
-                    () =>
-                        I.intl.format(C.default["6tsC8u"], {
-                            helpLink: O.CL,
-                        }),
-                )
+                .with({ throughline: !0 }, () => f.intl.format(S.default["6tsC8u"], { helpLink: I.CL }))
                 .otherwise(() => null);
         return null == n
             ? null
-            : (0, r.jsxs)("div", {
-                  className: j.QX,
+            : (0, i.jsxs)("div", {
+                  className: R.QX,
                   children: [
-                      (0, r.jsx)(c.Heading, {
-                          className: S.rH,
+                      (0, i.jsx)(c.Heading, {
+                          className: b.rH,
                           variant: "heading-sm/semibold",
-                          children: (0, r.jsx)(c.Fmo, {
-                              children: I.intl.string(C.default["7/tVhv"]),
-                          }),
+                          children: (0, i.jsx)(c.Fmo, { children: f.intl.string(S.default["7/tVhv"]) }),
                       }),
-                      (0, r.jsx)(c.Text, {
-                          variant: "text-xs/medium",
-                          color: "text-muted",
-                          children: n,
-                      }),
+                      (0, i.jsx)(c.Text, { variant: "text-xs/medium", color: "text-muted", children: n }),
                   ],
               });
     },
-    M = () => {
-        let e = (0, g.xk)(x.Ef.PENDING),
+    G = () => {
+        let e = (0, g.xk)(T.Ef.PENDING),
             t = (0, _.y)(
-                I.intl.formatToPlainString(C.default.IkAgkG, {
-                    count: e.length,
-                }),
-                I.intl.formatToPlainString(C.default.Q8XnAa, {
-                    count: e.length,
-                }),
+                f.intl.formatToPlainString(S.default.IkAgkG, { count: e.length }),
+                f.intl.formatToPlainString(S.default.Q8XnAa, { count: e.length }),
             );
-        return 0 === e.length
-            ? null
-            : (0, r.jsx)(R, {
-                  sectionType: x.Ef.PENDING,
-                  sectionTitle: t,
-                  requests: e,
-              });
+        return 0 === e.length ? null : (0, i.jsx)(y, { sectionType: T.Ef.PENDING, sectionTitle: t, requests: e });
     },
     U = () => {
-        let e = (0, m.A)();
-        return (0, r.jsxs)("div", {
-            className: S.kL,
+        let e = (0, A.A)();
+        return (0, i.jsxs)("div", {
+            className: b.kL,
             children: [
-                e ? (0, r.jsx)(y, {}) : (0, r.jsx)(P, {}),
-                (0, r.jsx)(D, {}),
-                (0, r.jsx)(M, {}),
-                (0, r.jsx)(w, {}),
-                (0, r.jsx)(L, {}),
+                e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}),
+                (0, i.jsx)(L, {}),
+                (0, i.jsx)(G, {}),
+                (0, i.jsx)(D, {}),
+                (0, i.jsx)(M, {}),
             ],
         });
     };

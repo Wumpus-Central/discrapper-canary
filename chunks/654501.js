@@ -1,3 +1,2 @@
-e.exports = {
-    n: "link__6a22b",
-};
+"use strict";
+e.exports = { n: "link__6a22b" };

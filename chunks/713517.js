@@ -1,12 +1,8 @@
-n.d(t, {
-    A: () => s,
-    M: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s, M: () => o });
 var r = n(64700),
     i = n(311907),
     a = n(775602);
-
 function s(e) {
     let [t, n] = r.useState(!1),
         [s, o] = r.useState(!1),
@@ -34,14 +30,9 @@ function s(e) {
             }
         );
     }, [e]);
-    let c = l && s;
-    return {
-        isHovering: t,
-        isFocusing: c,
-        isHoveringOrFocusing: t || c,
-    };
+    let u = l && s;
+    return { isHovering: t, isFocusing: u, isHoveringOrFocusing: t || u };
 }
-
 function o(e) {
     let [t, n] = r.useState(!1);
     return (

@@ -1,104 +1,79 @@
-n.d(t, {
-    $P: () => w,
-    An: () => D,
-    Di: () => C,
-    bW: () => N,
-    eP: () => T,
-    wD: () => x,
-    xZ: () => R,
-}),
-    n(896048);
+"use strict";
+n.d(t, { $P: () => D, An: () => w, Di: () => N, bW: () => R, eP: () => b, wD: () => x, xZ: () => O });
 var r = n(158390),
     i = n(724002),
     a = n(277419),
     s = n(287174),
     o = n(994369),
     l = n(562465),
-    c = n(73153);
+    u = n(73153);
 n(865116);
-var u = n(773669),
+var c = n(773669),
     d = n(111162),
-    f = n(723702),
-    p = n(212534),
-    _ = n(38181),
+    _ = n(723702),
+    f = n(212534),
+    p = n(38181),
     h = n(111042),
     m = n(651753),
     g = n(82293),
     E = n(680646),
-    b = n(652215);
-let y = 1e3,
-    O = 5e3,
-    A = 10,
-    v = 864e5,
-    S = 6e5,
-    I = new Map();
-async function T(e) {
-    var t;
-    let n = Date.now(),
-        i = null != (t = I.get(e)) ? t : 0;
-    if (p.A.getApplicationFetchState(e) === p.e.FETCHING || p.A.isInvalidApplication(e) || n < i + S) return;
-    I.set(e, n),
-        c.h.dispatch({
-            type: "APPLICATION_DIRECTORY_FETCH_APPLICATION",
-            applicationId: e,
-        });
-    let a = new r.A(y, O),
-        s = (e, t) =>
+    A = n(652215);
+let I = 1e3,
+    T = 5e3,
+    y = 10,
+    S = 864e5,
+    v = 6e5,
+    C = new Map();
+async function b(e) {
+    let t = Date.now(),
+        n = C.get(e) ?? 0;
+    if (f.A.getApplicationFetchState(e) === f.e.FETCHING || f.A.isInvalidApplication(e) || t < n + v) return;
+    C.set(e, t), u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
+    let i = new r.A(I, T),
+        a = (e, t) =>
             429 === e.status &&
-            a.fails < A &&
-            (a.fail(() => {
-                t(void 0, s);
+            i.fails < y &&
+            (i.fail(() => {
+                t(void 0, a);
             }),
             !0);
     try {
         let t = (
             await l.Bo.get({
-                url: b.Rsh.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
-                backoff: a,
-                retries: A,
-                interceptResponse: s,
+                url: A.Rsh.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
+                backoff: i,
+                retries: y,
+                interceptResponse: a,
                 rejectWithError: !1,
             })
         ).body;
-        c.h.dispatch({
-            type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS",
-            application: t,
-        });
+        u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS", application: t });
     } catch (t) {
-        c.h.dispatch({
+        u.h.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE",
             applicationId: e,
             isInvalidApplication: !0,
         });
     }
 }
-async function C(e) {
+async function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = Date.now(),
-        r = p.A.getApplicationFetchState(e),
-        i = p.A.getApplicationLastFetchTime(e),
+        r = f.A.getApplicationFetchState(e),
+        i = f.A.getApplicationLastFetchTime(e),
         { dontRefetchMs: a, noCache: s } = t,
-        o = null != i && i + (null != a ? a : S) > n;
-    if (r !== p.e.FETCHING && !o) {
-        c.h.dispatch({
-            type: "APPLICATION_DIRECTORY_FETCH_APPLICATION",
-            applicationId: e,
-        });
+        o = null != i && i + (a ?? v) > n;
+    if (r !== f.e.FETCHING && !o) {
+        u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
         try {
             let t = await l.Bo.get({
-                url: b.Rsh.APPLICATION_DIRECTORY_APPLICATION(e),
-                query: {
-                    locale: u.default.locale,
-                    nocache: s,
-                },
+                url: A.Rsh.APPLICATION_DIRECTORY_APPLICATION(e),
+                query: { locale: c.default.locale, nocache: s },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
-                type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS",
-                application: t.body,
-            });
+            u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS", application: t.body });
         } catch (t) {
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE",
                 applicationId: e,
                 isInvalidApplication: !0,
@@ -106,152 +81,115 @@ async function C(e) {
         }
     }
 }
-async function N() {
+async function R() {
     let e = Date.now(),
-        t = _.A.getLastFetchTimeMs();
-    if (null != t && t + S > e) return;
+        t = p.A.getLastFetchTimeMs();
+    if (null != t && t + v > e) return;
     let n = await l.Bo.get({
-        url: b.Rsh.APPLICATION_DIRECTORY_CATEGORIES,
-        query: {
-            locale: u.default.locale,
-        },
+        url: A.Rsh.APPLICATION_DIRECTORY_CATEGORIES,
+        query: { locale: c.default.locale },
         rejectWithError: !1,
     });
-    c.h.dispatch({
-        type: "APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS",
-        categories: n.body,
-    });
+    u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS", categories: n.body });
 }
-async function R(e) {
-    var t;
-    let { applicationId: n, guildId: r, options: i } = e,
-        { page: a } = null != i ? i : {},
-        s = Date.now(),
-        o = g.A.getFetchState({
-            applicationId: n,
-            guildId: r,
-        }),
-        { lastFetchTimeMs: d } =
-            null !=
-            (t = g.A.getSimilarApplications({
-                applicationId: n,
-                guildId: r,
-            }))
-                ? t
-                : {};
-    if (o !== g.e.FETCHING && (null == d || !(d + S > s))) {
-        c.h.dispatch({
+async function O(e) {
+    let { applicationId: t, guildId: n, options: r } = e,
+        { page: i } = r ?? {},
+        a = Date.now(),
+        s = g.A.getFetchState({ applicationId: t, guildId: n }),
+        { lastFetchTimeMs: o } = g.A.getSimilarApplications({ applicationId: t, guildId: n }) ?? {};
+    if (s !== g.e.FETCHING && (null == o || !(o + v > a))) {
+        u.h.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS",
-            applicationId: n,
-            guildId: r,
-            page: a,
+            applicationId: t,
+            guildId: n,
+            page: i,
         });
         try {
             let e = await l.Bo.get({
-                url: b.Rsh.APPLICATION_DIRECTORY_SIMILAR(n),
-                query: {
-                    guild_id: r,
-                    page: a,
-                    locale: u.default.locale,
-                },
+                url: A.Rsh.APPLICATION_DIRECTORY_SIMILAR(t),
+                query: { guild_id: n, page: i, locale: c.default.locale },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS",
-                applicationId: n,
-                guildId: r,
+                applicationId: t,
+                guildId: n,
                 similarApplications: e.body.applications,
                 loadId: e.body.load_id,
-                page: a,
+                page: i,
                 totalPages: e.body.num_pages,
             });
         } catch (e) {
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE",
-                applicationId: n,
-                guildId: r,
-                page: a,
+                applicationId: t,
+                guildId: n,
+                page: i,
             });
         }
     }
 }
-async function w(e) {
-    var t;
-    let { query: n, guildId: r, options: i, onSuccessCallback: a } = e,
+async function D(e) {
+    let { query: t, guildId: n, options: r, onSuccessCallback: i } = e,
         {
-            page: s,
-            pageSize: d,
-            categoryId: f,
-            integrationType: p,
-            minUserInstallCommandCount: _,
-            excludeAppsWithCustomInstallUrl: h,
-            excludeNonEmbeddedApps: g,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
-            source: y = o.V.APP_DIRECTORY,
-        } = null != i ? i : {},
-        O = Date.now(),
-        A = m.A.getFetchState({
-            query: n,
-            guildId: r,
-            page: s,
-            pageSize: d,
-            categoryId: f,
-            integrationType: p,
-        }),
-        { lastFetchTimeMs: v } =
-            null !=
-            (t = m.A.getSearchResults({
-                query: n,
-                guildId: r,
-                page: s,
-                pageSize: d,
-                categoryId: f,
-                integrationType: p,
-            }))
-                ? t
-                : {};
-    if (A !== m.e.FETCHING && (null == v || !(v + S > O))) {
-        c.h.dispatch({
+            page: a,
+            pageSize: s,
+            categoryId: d,
+            integrationType: _,
+            minUserInstallCommandCount: f,
+            excludeAppsWithCustomInstallUrl: p,
+            excludeNonEmbeddedApps: h,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: g,
+            source: E = o.V.APP_DIRECTORY,
+        } = r ?? {},
+        I = Date.now(),
+        T = m.A.getFetchState({ query: t, guildId: n, page: a, pageSize: s, categoryId: d, integrationType: _ }),
+        { lastFetchTimeMs: y } =
+            m.A.getSearchResults({ query: t, guildId: n, page: a, pageSize: s, categoryId: d, integrationType: _ }) ??
+            {};
+    if (T !== m.e.FETCHING && (null == y || !(y + v > I))) {
+        u.h.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
-            query: n,
-            guildId: r,
-            page: s,
-            pageSize: d,
-            categoryId: f,
-            integrationType: p,
-            minUserInstallCommandCount: _,
-            excludeAppsWithCustomInstallUrl: h,
-            excludeNonEmbeddedApps: g,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
-            source: y,
+            query: t,
+            guildId: n,
+            page: a,
+            pageSize: s,
+            categoryId: d,
+            integrationType: _,
+            minUserInstallCommandCount: f,
+            excludeAppsWithCustomInstallUrl: p,
+            excludeNonEmbeddedApps: h,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: g,
+            source: E,
         });
         try {
             let e = await l.Bo.get({
-                url: b.Rsh.APPLICATION_DIRECTORY_SEARCH,
+                url: A.Rsh.APPLICATION_DIRECTORY_SEARCH,
                 query: {
-                    query: n,
-                    guild_id: r,
-                    page: s,
-                    page_size: d,
-                    category_id: f,
-                    locale: u.default.locale,
-                    integration_type: p,
-                    min_user_install_command_count: _,
-                    exclude_apps_with_custom_install_url: h,
-                    exclude_non_embedded_apps: g,
-                    exclude_embedded_apps_without_primary_entry_point_app_command: E,
-                    source: y,
+                    query: t,
+                    guild_id: n,
+                    page: a,
+                    page_size: s,
+                    category_id: d,
+                    locale: c.default.locale,
+                    integration_type: _,
+                    min_user_install_command_count: f,
+                    exclude_apps_with_custom_install_url: p,
+                    exclude_non_embedded_apps: h,
+                    exclude_embedded_apps_without_primary_entry_point_app_command: g,
+                    source: E,
                 },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS",
-                query: n,
-                guildId: r,
-                page: s,
-                pageSize: d,
-                categoryId: f,
-                integrationType: p,
+                query: t,
+                guildId: n,
+                page: a,
+                pageSize: s,
+                categoryId: d,
+                integrationType: _,
                 result: {
                     results: e.body.results,
                     countsByCategory: e.body.counts_by_category,
@@ -260,80 +198,59 @@ async function w(e) {
                     type: e.body.type,
                     loadId: e.body.load_id,
                 },
-                minUserInstallCommandCount: _,
-                excludeAppsWithCustomInstallUrl: h,
-                excludeNonEmbeddedApps: g,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
-                source: y,
+                minUserInstallCommandCount: f,
+                excludeAppsWithCustomInstallUrl: p,
+                excludeNonEmbeddedApps: h,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: g,
+                source: E,
             }),
-                null == a || a(e.body.result_count);
+                i?.(e.body.result_count);
         } catch (e) {
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE",
-                query: n,
-                guildId: r,
-                page: s,
-                pageSize: d,
-                categoryId: f,
-                integrationType: p,
-                minUserInstallCommandCount: _,
-                excludeAppsWithCustomInstallUrl: h,
-                excludeNonEmbeddedApps: g,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
-                source: y,
+                query: t,
+                guildId: n,
+                page: a,
+                pageSize: s,
+                categoryId: d,
+                integrationType: _,
+                minUserInstallCommandCount: f,
+                excludeAppsWithCustomInstallUrl: p,
+                excludeNonEmbeddedApps: h,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: g,
+                source: E,
             });
         }
     }
 }
-
-function P() {
-    return (0, f.isAndroid)() ? a.T.ANDROID : (0, f.isIOS)() ? a.T.IOS : a.T.WEB;
+function L() {
+    return (0, _.isAndroid)() ? a.T.ANDROID : (0, _.isIOS)() ? a.T.IOS : a.T.WEB;
 }
-async function D() {
+async function w() {
     let { surface: e = s.K.APPLICATION_DIRECTORY, activeState: t = i.W.ACTIVE } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = d.default.disableAppCollectionsCache,
         r = Date.now(),
-        a = h.A.getFetchState({
-            surface: e,
-            activeState: t,
-        }),
-        o = h.A.getLastFetchTimeMs({
-            surface: e,
-            activeState: t,
-        });
+        a = h.A.getFetchState({ surface: e, activeState: t }),
+        o = h.A.getLastFetchTimeMs({ surface: e, activeState: t });
     if (a === h.e.FETCHING) return;
-    let f = !n && t === i.W.ACTIVE;
-    if (!f || null == o || !(o + S > r)) {
-        c.h.dispatch({
-            type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS",
-            surface: e,
-            activeState: t,
-        });
+    let _ = !n && t === i.W.ACTIVE;
+    if (!_ || null == o || !(o + v > r)) {
+        u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS", surface: e, activeState: t });
         try {
             let n = await l.Bo.get({
-                url: b.Rsh.APPLICATION_DIRECTORY_COLLECTIONS,
-                query: {
-                    surface: e,
-                    active_state: t,
-                    platform: P(),
-                    locale: u.default.locale,
-                    cache: f,
-                },
+                url: A.Rsh.APPLICATION_DIRECTORY_COLLECTIONS,
+                query: { surface: e, active_state: t, platform: L(), locale: c.default.locale, cache: _ },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
+            u.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS",
                 collections: n.body,
                 surface: e,
                 activeState: t,
             });
         } catch (n) {
-            c.h.dispatch({
-                type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE",
-                surface: e,
-                activeState: t,
-            });
+            u.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE", surface: e, activeState: t });
         }
     }
 }
@@ -342,25 +259,19 @@ async function x() {
         t = E.A.getFetchState(),
         n = E.A.getLastFetchTimeMs(),
         r = E.A.getNextFetchRetryTimeMs();
-    if (t !== E.e.FETCHING && (null == n || !(n + v > e)) && (null == r || !(e < r))) {
-        c.h.dispatch({
-            type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS",
-        });
+    if (t !== E.e.FETCHING && (null == n || !(n + S > e)) && (null == r || !(e < r))) {
+        u.h.dispatch({ type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS" });
         try {
-            let e = await l.Bo.get({
-                url: b.Rsh.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS,
-                rejectWithError: !1,
-            });
-            c.h.dispatch({
+            let e = await l.Bo.get({ url: A.Rsh.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS, rejectWithError: !1 });
+            u.h.dispatch({
                 type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS",
                 guildIdToApplicationIds: e.body,
             });
         } catch (t) {
-            var i;
-            let e = (null == t ? void 0 : t.status) === 429;
-            c.h.dispatch({
+            let e = t?.status === 429;
+            u.h.dispatch({
                 type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE",
-                retryAfterSeconds: e ? (null == t || null == (i = t.body) ? void 0 : i.retry_after) : void 0,
+                retryAfterSeconds: e ? t?.body?.retry_after : void 0,
             });
         }
     }

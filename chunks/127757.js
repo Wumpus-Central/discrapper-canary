@@ -1,71 +1,43 @@
-n.d(t, {
-    d: () => g,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { d: () => g });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(397927),
+var s = n(503698),
+    l = n.n(s),
+    r = n(397927),
     a = n(486020),
-    c = n(11351),
-    o = n(320137),
-    d = n(985018),
+    o = n(11351),
+    d = n(320137),
+    c = n(985018),
     u = n(86045);
-
-function f(e) {
-    let { emoji: t, onRemoveEmoji: n, disabled: i = !1 } = e,
-        c = a.Ay.getEmojiURL({
-            id: t.id,
-            animated: t.animated,
-            size: 32,
-        });
-    return (0, r.jsxs)("div", {
-        className: l()(u.nI, {
-            [u.r9]: i,
-        }),
+function m(e) {
+    let { emoji: t, onRemoveEmoji: n, disabled: s = !1 } = e,
+        o = a.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 32 });
+    return (0, i.jsxs)("div", {
+        className: l()(u.nI, { [u.r9]: s }),
         children: [
-            (0, r.jsx)("img", {
-                className: u.mp,
-                src: c,
-                alt: t.name,
-            }),
-            (0, r.jsx)(s.Text, {
-                color: "text-strong",
-                variant: "text-md/medium",
-                className: u.JN,
-                children: t.name,
-            }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("img", { className: u.mp, src: o, alt: t.name }),
+            (0, i.jsx)(r.Text, { color: "text-strong", variant: "text-md/medium", className: u.JN, children: t.name }),
+            (0, i.jsx)("div", {
                 className: u.G5,
-                children: (0, r.jsx)(s.K0, {
+                children: (0, i.jsx)(r.K0, {
                     variant: "secondary",
-                    icon: s.ucK,
+                    icon: r.ucK,
                     onClick: () => n(t),
-                    "aria-label": d.intl.string(d.t.dVS92c),
-                    disabled: i,
+                    "aria-label": c.intl.string(c.t.dVS92c),
+                    disabled: s,
                 }),
             }),
         ],
     });
 }
-
 function g(e) {
-    let { tierEmojiIds: t, guildId: n, onRemoveEmoji: i } = e,
-        l = (0, o.A)(n),
-        s = null != t ? l.filter((e) => t.has(e.id)) : [],
-        a = (0, c.gN)();
-    return (0, r.jsx)("div", {
+    let { tierEmojiIds: t, guildId: n, onRemoveEmoji: s } = e,
+        l = (0, d.A)(n),
+        r = null != t ? l.filter((e) => t.has(e.id)) : [],
+        a = (0, o.gN)();
+    return (0, i.jsx)("div", {
         className: u.kL,
-        children: s.map((e) =>
-            (0, r.jsx)(
-                f,
-                {
-                    emoji: e,
-                    onRemoveEmoji: () => i(e),
-                    disabled: a,
-                },
-                e.id,
-            ),
-        ),
+        children: r.map((e) => (0, i.jsx)(m, { emoji: e, onRemoveEmoji: () => s(e), disabled: a }, e.id)),
     });
 }

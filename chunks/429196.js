@@ -1,6 +1,5 @@
-n.d(t, {
-    S: () => o,
-});
+"use strict";
+n.d(t, { S: () => o });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -17,11 +16,7 @@ let o = (e) => {
                 children: a.intl.string(a.t["4VDCG0"]),
             }),
             t
-                ? (0, r.jsx)(i.Text, {
-                      variant: "text-xs/medium",
-                      className: s.z,
-                      children: a.intl.string(a.t.qNorwt),
-                  })
+                ? (0, r.jsx)(i.Text, { variant: "text-xs/medium", className: s.z, children: a.intl.string(a.t.qNorwt) })
                 : (0, r.jsx)(i.Text, {
                       variant: "text-xs/medium",
                       color: "text-muted",

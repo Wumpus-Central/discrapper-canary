@@ -1,17 +1,12 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(938796);
-var r = n(665260),
-    i = n(427930),
+n.d(t, { A: () => r }), n(938796);
+var i = n(665260),
+    l = n(427930),
     a = n(652215);
-
-function s(e) {
-    var t;
+function r(e) {
     return !(
         e.type !== a.lAJ.DEFAULT ||
         null != e.poll ||
-        (0, r.Lt)(null != (t = e.flags) ? t : 0, a.pr7.EPHEMERAL) ||
-        ("messageReference" in e ? (0, i.A)(e) : (0, i.m)(e))
+        (0, i.Lt)(e.flags ?? 0, a.pr7.EPHEMERAL) ||
+        ("messageReference" in e ? (0, l.A)(e) : (0, l.m)(e))
     );
 }

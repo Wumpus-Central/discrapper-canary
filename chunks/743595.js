@@ -1,12 +1,9 @@
+"use strict";
 var n = r(924905),
     i = r(743032),
     o = r(675427),
     a = RegExp("\r\n", "g"),
-    s = {
-        "text/rtf": 1,
-        "text/html": 1,
-    };
-
+    s = { "text/rtf": 1, "text/html": 1 };
 function u(t) {
     if ("file" == t.kind) return t.getAsFile();
 }

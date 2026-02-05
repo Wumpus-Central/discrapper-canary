@@ -1,3 +1,1 @@
-e.exports = {
-    t: "c0426be2b492b9d8",
-};
+e.exports = { t: "hoverCard_fdda30" };

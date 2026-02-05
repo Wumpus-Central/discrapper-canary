@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => a,
-    n: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => a, n: () => s });
 var r = n(37411),
     i = (function (e) {
         return (

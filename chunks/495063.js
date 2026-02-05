@@ -1,277 +1,145 @@
-n.d(t, {
-    A: () => T,
-});
-var r,
-    i,
-    l = n(627968),
+"use strict";
+n.d(t, { A: () => C });
+var i = n(627968),
     s = n(64700),
-    a = n(284009),
-    c = n.n(a),
-    o = n(989349),
-    d = n.n(o),
-    u = n(990078),
-    f = n(397927),
-    g = n(971630),
-    b = n(942117),
-    m = n(487552),
-    p = n(311237),
-    x = n(105917),
-    h = n(242564),
-    j = n(476719),
-    O = n(311750),
-    y = n(985018),
-    v = n(473711);
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let E = (e) => {
+    l = n(284009),
+    r = n.n(l),
+    a = n(989349),
+    o = n.n(a),
+    d = n(990078),
+    c = n(397927),
+    u = n(971630),
+    m = n(942117),
+    g = n(487552),
+    x = n(311237),
+    h = n(105917),
+    _ = n(242564),
+    A = n(476719),
+    p = n(311750),
+    f = n(985018),
+    j = n(473711);
+let N = (e) => {
     let { dateUtc: t } = e;
-    return (0, l.jsx)(f.Text, {
+    return (0, i.jsx)(c.Text, {
         variant: "text-md/medium",
         color: "interactive-text-active",
-        children: d()(t).utc().format("MMMM YYYY"),
+        children: o()(t).utc().format("MMMM YYYY"),
     });
 };
-
-function N(e) {
+function E(e) {
     let { item: t } = e,
-        { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, x.Rs)(t),
-        a = null != s ? d()(s).add(15, "days").toISOString() : void 0,
-        c = (0, g.T4)(a, "MMM D");
+        { ppgStatus: n, payoutStatus: s, ppgDeferralReasons: l, periodEndDate: r } = (0, h.Rs)(t),
+        a = null != r ? o()(r).add(15, "days").toISOString() : void 0,
+        d = (0, u.T4)(a, "MMM D");
     switch (n) {
-        case O.U1.OPEN:
-            return (0, l.jsxs)(l.Fragment, {
+        case p.U1.OPEN:
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != c
-                        ? y.intl.formatToPlainString(y.t.I6YOjS, {
-                              payoutDate: c,
-                          })
-                        : y.intl.string(y.t.G5ATX6),
-                    (0, l.jsx)(m.A, {
-                        className: v.$A,
-                    }),
+                    null != d ? f.intl.formatToPlainString(f.t.I6YOjS, { payoutDate: d }) : f.intl.string(f.t.G5ATX6),
+                    (0, i.jsx)(g.A, { className: j.$A }),
                 ],
             });
-        case O.U1.CANCELED:
-            return (0, l.jsxs)(l.Fragment, {
+        case p.U1.CANCELED:
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    y.intl.string(y.t["0SrNPx"]),
-                    (0, l.jsx)(f.aXh, {
-                        size: "md",
-                        color: "currentColor",
-                        className: v.u5,
-                    }),
+                    f.intl.string(f.t["0SrNPx"]),
+                    (0, i.jsx)(c.aXh, { size: "md", color: "currentColor", className: j.u5 }),
                 ],
             });
-        case O.U1.PAYOUT_DEFERRED:
-            if ((null == i ? void 0 : i.includes(O.MC.PAYOUT_SEIZED)) === !0)
-                return (0, l.jsxs)(l.Fragment, {
+        case p.U1.PAYOUT_DEFERRED:
+            if (l?.includes(p.MC.PAYOUT_SEIZED) === !0)
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        y.intl.string(y.t["0SrNPx"]),
-                        (0, l.jsx)(f.aXh, {
-                            size: "md",
-                            color: "currentColor",
-                            className: v.u5,
-                        }),
+                        f.intl.string(f.t["0SrNPx"]),
+                        (0, i.jsx)(c.aXh, { size: "md", color: "currentColor", className: j.u5 }),
                     ],
                 });
-            return (0, l.jsxs)(l.Fragment, {
-                children: [
-                    y.intl.string(y.t.OtZ5kz),
-                    (0, l.jsx)(p.A, {
-                        className: v.tK,
-                    }),
-                ],
+            return (0, i.jsxs)(i.Fragment, {
+                children: [f.intl.string(f.t.OtZ5kz), (0, i.jsx)(x.A, { className: j.tK })],
             });
     }
-    switch (r) {
-        case O.bp.MANUAL:
-        case O.bp.OPEN:
-        case O.bp.PENDING:
-        case O.bp.PROCESSING:
-        case O.bp.SUBMITTED:
-        case O.bp.PENDING_FUNDS:
-        case O.bp.CANCELED:
-        case O.bp.ERROR:
-            return (0, l.jsxs)(l.Fragment, {
+    switch (s) {
+        case p.bp.MANUAL:
+        case p.bp.OPEN:
+        case p.bp.PENDING:
+        case p.bp.PROCESSING:
+        case p.bp.SUBMITTED:
+        case p.bp.PENDING_FUNDS:
+        case p.bp.CANCELED:
+        case p.bp.ERROR:
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != c
-                        ? y.intl.formatToPlainString(y.t.I6YOjS, {
-                              payoutDate: c,
-                          })
-                        : y.intl.string(y.t.ubdQTt),
-                    (0, l.jsx)(m.A, {
-                        className: v.$A,
-                    }),
+                    null != d ? f.intl.formatToPlainString(f.t.I6YOjS, { payoutDate: d }) : f.intl.string(f.t.ubdQTt),
+                    (0, i.jsx)(g.A, { className: j.$A }),
                 ],
             });
-        case O.bp.PAID:
-            return (0, l.jsxs)(l.Fragment, {
+        case p.bp.PAID:
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    y.intl.string(y.t.eoSslJ),
-                    (0, l.jsx)(f.yr3, {
-                        size: "md",
-                        color: "currentColor",
-                        className: v.Ql,
-                    }),
+                    f.intl.string(f.t.eoSslJ),
+                    (0, i.jsx)(c.yr3, { size: "md", color: "currentColor", className: j.Ql }),
                 ],
             });
-        case O.bp.DEFERRED:
-        case O.bp.DEFERRED_INTERNAL:
-        case O.bp.REJECTED:
-        case O.bp.RISK_REVIEW:
-            return (0, l.jsxs)(l.Fragment, {
+        case p.bp.DEFERRED:
+        case p.bp.DEFERRED_INTERNAL:
+        case p.bp.REJECTED:
+        case p.bp.RISK_REVIEW:
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    b.A.getStatusErrorText(r),
-                    (0, l.jsx)(f.aXh, {
-                        size: "md",
-                        color: "currentColor",
-                        className: v.u5,
-                    }),
+                    m.A.getStatusErrorText(s),
+                    (0, i.jsx)(c.aXh, { size: "md", color: "currentColor", className: j.u5 }),
                 ],
             });
     }
     return null;
 }
-let _ = (0, h.CU)({
+let b = (0, _.CU)({
         key: "AMOUNT ",
-        cellClassName: v.Fh,
+        cellClassName: j.Fh,
         renderHeader() {
-            let e = (0, l.jsx)(u.m, {
-                text: y.intl.string(y.t.q3PkL5),
-                children: (0, l.jsx)(f.mir, {
-                    size: "xs",
-                    color: "currentColor",
-                    className: v.EU,
-                }),
+            let e = (0, i.jsx)(d.m, {
+                text: f.intl.string(f.t.q3PkL5),
+                children: (0, i.jsx)(c.mir, { size: "xs", color: "currentColor", className: j.EU }),
             });
-            return (0, l.jsxs)(h.A3, {
-                children: [y.intl.string(y.t.VodAGZ), e],
-            });
+            return (0, i.jsxs)(_.A3, { children: [f.intl.string(f.t.VodAGZ), e] });
         },
         getAmount: (e) => e.amount,
     }),
-    S = (0, j.gE)(
+    T = (0, A.gE)(
         [
-            (0, j.N7)({
+            (0, A.N7)({
                 key: "PERIOD",
-                cellClassName: v.Ii,
-                renderHeader: () =>
-                    (0, l.jsx)(h.A3, {
-                        children: y.intl.string(y.t.fThnXa),
-                    }),
-                renderContent: (e) =>
-                    (0, l.jsx)(E, {
-                        dateUtc: e.periodStartingAt,
-                    }),
+                cellClassName: j.Ii,
+                renderHeader: () => (0, i.jsx)(_.A3, { children: f.intl.string(f.t.fThnXa) }),
+                renderContent: (e) => (0, i.jsx)(N, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
-                    c()(null != t, "CellProps should always be provided");
+                    r()(null != t, "CellProps should always be provided");
                     let { ListingIdLabel: n } = t;
-                    return (0, l.jsx)(n, {
-                        listingId: e.listingId,
-                    });
+                    return (0, i.jsx)(n, { listingId: e.listingId });
                 },
             }),
-            (0, j.N7)(
-                ((r = A({}, _)),
-                (i = i =
-                    {
-                        renderContent: _.render,
-                        renderExpandedContent: (e, t) => _.render(e, t),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                r),
-            ),
-            (0, h.HA)({
+            (0, A.N7)({ ...b, renderContent: b.render, renderExpandedContent: (e, t) => b.render(e, t) }),
+            (0, _.HA)({
                 key: "STATUS ",
-                cellClassName: v.xG,
+                cellClassName: j.xG,
                 renderHeader() {
-                    let e = (0, l.jsx)(u.m, {
-                        text: y.intl.string(y.t.cIGvZI),
-                        children: (0, l.jsx)(f.mir, {
-                            size: "xs",
-                            color: "currentColor",
-                            className: v.Cg,
-                        }),
+                    let e = (0, i.jsx)(d.m, {
+                        text: f.intl.string(f.t.cIGvZI),
+                        children: (0, i.jsx)(c.mir, { size: "xs", color: "currentColor", className: j.Cg }),
                     });
-                    return (0, l.jsxs)(h.A3, {
-                        children: [y.intl.string(y.t.oypxxw), e],
-                    });
+                    return (0, i.jsxs)(_.A3, { children: [f.intl.string(f.t.oypxxw), e] });
                 },
-                renderContent: (e) =>
-                    (0, l.jsx)(h.fh, {
-                        className: v.fo,
-                        children: (0, l.jsx)(N, {
-                            item: e,
-                        }),
-                    }),
+                renderContent: (e) => (0, i.jsx)(_.fh, { className: j.fo, children: (0, i.jsx)(E, { item: e }) }),
             }),
         ],
-        {
-            expandableToggleColumnKey: "DROPDOWN",
-        },
+        { expandableToggleColumnKey: "DROPDOWN" },
     );
-
-function T(e) {
+function C(e) {
     let { ListingIdLabel: t, payoutsByPeriod: n } = e,
-        { cellProps: r, data: i } = (0, j.vL)(n, {
+        { cellProps: l, data: r } = (0, A.vL)(n, {
             generateExpandedRows: (e) =>
-                Object.keys(e.ppgs).map((t) => {
-                    var n;
-                    return {
-                        key: e.key + t,
-                        listingId: t,
-                        amount: null == (n = e.ppgs[t]) ? void 0 : n.amount,
-                    };
-                }),
+                Object.keys(e.ppgs).map((t) => ({ key: e.key + t, listingId: t, amount: e.ppgs[t]?.amount })),
         }),
-        a = s.useMemo(
-            () =>
-                A(
-                    {
-                        ListingIdLabel: t,
-                    },
-                    r,
-                ),
-            [r, t],
-        );
-    return (0, l.jsx)(h.Ay, {
-        columns: S,
-        data: i,
-        cellProps: a,
-    });
+        a = s.useMemo(() => ({ ListingIdLabel: t, ...l }), [l, t]);
+    return (0, i.jsx)(_.Ay, { columns: T, data: r, cellProps: a });
 }

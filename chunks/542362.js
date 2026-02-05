@@ -1,38 +1,28 @@
-n.d(t, {
-    E: () => u,
-});
+"use strict";
+n.d(t, { E: () => c });
 var r = n(64700),
     i = n(340287),
     a = n(669507),
     s = n(412700),
     o = n.n(s),
     l = n(418034),
-    c = [],
-    u = function (e, t, n) {
+    u = [],
+    c = function (e, t, n) {
         void 0 === n && (n = {});
         var s = r.useRef(null),
-            u = {
+            c = {
                 onFirstUpdate: n.onFirstUpdate,
                 placement: n.placement || "bottom",
                 strategy: n.strategy || "absolute",
-                modifiers: n.modifiers || c,
+                modifiers: n.modifiers || u,
             },
             d = r.useState({
-                styles: {
-                    popper: {
-                        position: u.strategy,
-                        left: "0",
-                        top: "0",
-                    },
-                    arrow: {
-                        position: "absolute",
-                    },
-                },
+                styles: { popper: { position: c.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
                 attributes: {},
             }),
-            f = d[0],
-            p = d[1],
-            _ = r.useMemo(function () {
+            _ = d[0],
+            f = d[1],
+            p = r.useMemo(function () {
                 return {
                     name: "updateState",
                     enabled: !0,
@@ -41,7 +31,7 @@ var r = n(64700),
                         var t = e.state,
                             n = Object.keys(t.elements);
                         i.flushSync(function () {
-                            p({
+                            f({
                                 styles: (0, l.PW)(
                                     n.map(function (e) {
                                         return [e, t.styles[e] || {}];
@@ -61,20 +51,14 @@ var r = n(64700),
             h = r.useMemo(
                 function () {
                     var e = {
-                        onFirstUpdate: u.onFirstUpdate,
-                        placement: u.placement,
-                        strategy: u.strategy,
-                        modifiers: [].concat(u.modifiers, [
-                            _,
-                            {
-                                name: "applyStyles",
-                                enabled: !1,
-                            },
-                        ]),
+                        onFirstUpdate: c.onFirstUpdate,
+                        placement: c.placement,
+                        strategy: c.strategy,
+                        modifiers: [].concat(c.modifiers, [p, { name: "applyStyles", enabled: !1 }]),
                     };
                     return o()(s.current, e) ? s.current || e : ((s.current = e), e);
                 },
-                [u.onFirstUpdate, u.placement, u.strategy, u.modifiers, _],
+                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, p],
             ),
             m = r.useRef();
         return (
@@ -101,8 +85,8 @@ var r = n(64700),
             ),
             {
                 state: m.current ? m.current.state : null,
-                styles: f.styles,
-                attributes: f.attributes,
+                styles: _.styles,
+                attributes: _.attributes,
                 update: m.current ? m.current.update : null,
                 forceUpdate: m.current ? m.current.forceUpdate : null,
             }

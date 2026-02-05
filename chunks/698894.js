@@ -1,62 +1,46 @@
-r.d(t, {
-    r: () => f,
-});
-var a = r(627968),
-    n = r(64700),
-    s = r(333748),
-    i = r(397927),
-    l = r(647053),
-    c = r(985018),
-    o = r(856229),
-    d = r(806782),
-    u = r(277606);
-let f = (e) => {
-    let { onComplete: t, data: r } = e,
-        f = (0, n.useId)(),
+"use strict";
+a.d(t, { r: () => h });
+var s = a(627968),
+    r = a(64700),
+    n = a(333748),
+    i = a(397927),
+    l = a(647053),
+    o = a(985018),
+    c = a(856229),
+    d = a(806782),
+    u = a(277606);
+let h = (e) => {
+    let { onComplete: t, data: a } = e,
+        h = (0, r.useId)(),
         p = null,
-        h = null,
-        x = r.scopes.some((e) => (0, l.RM)(e));
+        x = null,
+        f = a.scopes.some((e) => (0, l.RM)(e));
     return (
-        r.clientId === s.i.PLAYSTATION_APPLICATION_ID || r.clientId === s.i.PLAYSTATION_STAGING_APPLICATION_ID
+        a.clientId === n.i.PLAYSTATION_APPLICATION_ID || a.clientId === n.i.PLAYSTATION_STAGING_APPLICATION_ID
             ? (p = d.A)
-            : x && (p = u.A),
-        null != r.twoWayLinkCode ? (h = c.intl.string(c.t.QhATl2)) : x && (h = c.intl.string(c.t.vBPvK3)),
-        (0, a.jsxs)("div", {
-            className: o.Qs,
+            : f && (p = u.A),
+        null != a.twoWayLinkCode ? (x = o.intl.string(o.t.QhATl2)) : f && (x = o.intl.string(o.t.vBPvK3)),
+        (0, s.jsxs)("div", {
+            className: c.Qs,
             children: [
-                null != p
-                    ? (0, a.jsx)("img", {
-                          src: p,
-                          className: o.xX,
-                          alt: "",
-                          "aria-labelledby": f,
-                      })
-                    : null,
-                (0, a.jsxs)("div", {
-                    className: o.gx,
+                null != p ? (0, s.jsx)("img", { src: p, className: c.xX, alt: "", "aria-labelledby": h }) : null,
+                (0, s.jsxs)("div", {
+                    className: c.gx,
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, s.jsx)(i.Heading, {
                             variant: "heading-xl/extrabold",
-                            id: f,
-                            children: c.intl.string(c.t.qDtJmD),
+                            id: h,
+                            children: o.intl.string(o.t.qDtJmD),
                         }),
-                        null != h
-                            ? (0, a.jsx)(i.Text, {
-                                  variant: "text-md/normal",
-                                  color: "text-default",
-                                  children: h,
-                              })
+                        null != x
+                            ? (0, s.jsx)(i.Text, { variant: "text-md/normal", color: "text-default", children: x })
                             : null,
                     ],
                 }),
-                (0, a.jsx)("div", {
+                (0, s.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: o.wC,
-                    children: (0, a.jsx)(i.Button, {
-                        variant: "primary",
-                        text: c.intl.string(c.t.i4jeWR),
-                        onClick: t,
-                    }),
+                    className: c.wC,
+                    children: (0, s.jsx)(i.Button, { variant: "primary", text: o.intl.string(o.t.i4jeWR), onClick: t }),
                 }),
             ],
         })

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(780940),
     o = n(145595),
@@ -17,12 +18,7 @@ if (
             forced:
                 !!o &&
                 i(function () {
-                    p.finally.call(
-                        {
-                            then: function () {},
-                        },
-                        function () {},
-                    );
+                    p.finally.call({ then: function () {} }, function () {});
                 }),
         },
         {
@@ -51,8 +47,5 @@ if (
     !a && l(o))
 ) {
     var h = s("Promise").prototype.finally;
-    p.finally !== h &&
-        d(p, "finally", h, {
-            unsafe: !0,
-        });
+    p.finally !== h && d(p, "finally", h, { unsafe: !0 });
 }

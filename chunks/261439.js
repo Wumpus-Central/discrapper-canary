@@ -1,6 +1,5 @@
-n.d(t, {
-    a: () => s,
-});
+"use strict";
+n.d(t, { a: () => s });
 var r = n(627968),
     i = n(158954),
     a = n(67098);
@@ -17,29 +16,13 @@ let s = {
                     children: Object.values(a.Y).map((e) =>
                         (0, r.jsx)(
                             i.D0$,
-                            {
-                                label: e,
-                                children: (0, r.jsx)(
-                                    a.p,
-                                    {
-                                        messageType: e,
-                                        children: t,
-                                    },
-                                    e,
-                                ),
-                            },
+                            { label: e, children: (0, r.jsx)(a.p, { messageType: e, children: t }, e) },
                             e,
                         ),
                     ),
                 });
             },
-            controls: {
-                text: {
-                    label: "Text",
-                    type: "text",
-                    defaultValue: "This is a help message",
-                },
-            },
+            controls: { text: { label: "Text", type: "text", defaultValue: "This is a help message" } },
         },
     ],
 };

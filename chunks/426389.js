@@ -1,245 +1,166 @@
-n.d(t, {
-    A: () => U,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(735438),
-    a = n.n(l),
+n.d(t, { A: () => G });
+var i = n(627968),
+    r = n(64700),
+    a = n(735438),
+    l = n.n(a),
     s = n(111956),
     o = n.n(s),
-    c = n(311907),
-    u = n(397927),
-    d = n(73153),
-    p = n(829219),
+    d = n(311907),
+    c = n(397927),
+    u = n(73153),
+    A = n(829219),
     h = n(859703),
-    g = n(341915),
-    f = n(843490),
-    m = n(890687),
-    A = n(639214),
-    _ = n(814793),
-    b = n(219271),
-    E = n(21119),
-    O = n(287809),
-    y = n(943577),
-    I = n(954571),
-    v = n(927813),
-    S = n(279877),
-    C = n(112273),
-    N = n(666290),
-    T = n(928636),
-    j = n(502696),
-    x = n(282447),
-    P = n(652215),
-    w = n(654487),
-    L = n(985018),
-    R = n(23729);
-let D = 15 * v.A.Millis.MINUTE,
-    M = (0, x.A)(function (e) {
-        let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = i.useRef(null),
-            c = (0, r.jsx)(N.A, {
-                party: t,
-                onUserContextMenu: n,
-            }),
-            d = (0, r.jsx)(C.A, {
-                party: t,
-                onChannelContextMenu: l,
-                quest: a,
-            }),
-            { partiedMembers: p, applicationStreams: h, currentActivities: g, voiceChannels: f } = t,
-            m = p.length,
-            A = h.length,
-            _ = g.length,
-            b = f.length > 0,
-            E = i.useCallback(() => {
-                let e = g
-                    .filter((e) => {
-                        var t, n;
-                        return (
-                            (null == (t = e.game) ? void 0 : t.name) != null &&
-                            (0, I.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
-                        );
-                    })
-                    .map((e) => e.game.name);
-                I.default.track(P.HAw.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: m,
-                    num_streams: A,
-                    num_activities: _,
-                    in_voice_channel: b,
+    _ = n(341915),
+    m = n(843490),
+    p = n(890687),
+    g = n(639214),
+    E = n(814793),
+    f = n(219271),
+    I = n(21119),
+    C = n(287809),
+    N = n(943577),
+    T = n(954571),
+    S = n(927813),
+    x = n(279877),
+    v = n(112273),
+    b = n(666290),
+    y = n(928636),
+    L = n(502696),
+    O = n(282447),
+    R = n(652215),
+    P = n(654487),
+    j = n(985018),
+    D = n(23729);
+let w = 15 * S.A.Millis.MINUTE,
+    M = (0, O.A)(function (e) {
+        let { party: t, onUserContextMenu: n, onChannelContextMenu: a, quest: l } = e,
+            s = r.useRef(null),
+            d = (0, i.jsx)(b.A, { party: t, onUserContextMenu: n }),
+            u = (0, i.jsx)(v.A, { party: t, onChannelContextMenu: a, quest: l }),
+            { partiedMembers: A, applicationStreams: h, currentActivities: _, voiceChannels: m } = t,
+            p = A.length,
+            g = h.length,
+            E = _.length,
+            f = m.length > 0,
+            I = r.useCallback(() => {
+                let e = _.filter((e) => e.game?.name != null && (0, T.isGameApplicationType)(e.game?.type)).map(
+                    (e) => e.game.name,
+                );
+                T.default.track(R.HAw.NOW_PLAYING_CARD_HOVERED, {
+                    num_users: p,
+                    num_streams: g,
+                    num_activities: E,
+                    in_voice_channel: f,
                     games_detected: e,
                 });
-            }, [m, A, _, b, g]),
-            O = i.useMemo(() => o()(E, D), [E]);
-        return null != c || null != d
-            ? (0, r.jsx)(u.YNO, {
+            }, [p, g, E, f, _]),
+            C = r.useMemo(() => o()(I, w), [I]);
+        return null != d || null != u
+            ? (0, i.jsx)(c.YNO, {
                   targetElementRef: s,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, r.jsx)(j.A, {
-                          party: t,
-                          close: n,
-                      });
+                      return (0, i.jsx)(L.A, { party: t, close: n });
                   },
                   spacing: 8,
                   children: (e, t) => {
-                      var n, i;
-                      let { isShown: l } = t;
-                      return (0, r.jsx)(
-                          T.A,
-                          ((n = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      r = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (r = r.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      r.forEach(function (t) {
-                                          var r;
-                                          (r = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: r,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = r);
-                                      });
-                              }
-                              return e;
-                          })({}, e)),
-                          (i = i =
-                              {
-                                  ref: s,
-                                  onMouseEnter: O,
-                                  "aria-haspopup": "menu",
-                                  className: R.MP,
-                                  active: l,
-                                  children: (0, r.jsxs)("div", {
-                                      children: [c, d],
-                                  }),
-                              }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var r = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, r);
-                                    }
-                                    return n;
-                                })(Object(i)).forEach(function (e) {
-                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                }),
-                          n),
-                      );
+                      let { isShown: n } = t;
+                      return (0, i.jsx)(y.A, {
+                          ...e,
+                          ref: s,
+                          onMouseEnter: C,
+                          "aria-haspopup": "menu",
+                          className: D.MP,
+                          active: n,
+                          children: (0, i.jsxs)("div", { children: [d, u] }),
+                      });
                   },
               })
             : null;
     }),
-    k = a().throttle(() => b.u(), 3e5);
-
-function U() {
+    U = l().throttle(() => f.u(), 3e5);
+function G() {
     let {
             nowPlayingCards: e,
             loaded: t,
             needsRefresh: n,
-            fetching: l,
-            currentUser: a,
-        } = (0, c.cf)([y.A, E.A, O.default], () => ({
-            nowPlayingCards: y.A.nowPlayingCards,
-            loaded: y.A.loaded,
-            needsRefresh: E.A.shouldFetch(),
-            fetching: E.A.isFetching(),
-            currentUser: O.default.getCurrentUser(),
+            fetching: a,
+            currentUser: l,
+        } = (0, d.cf)([N.A, I.A, C.default], () => ({
+            nowPlayingCards: N.A.nowPlayingCards,
+            loaded: N.A.loaded,
+            needsRefresh: I.A.shouldFetch(),
+            fetching: I.A.isFetching(),
+            currentUser: C.default.getCurrentUser(),
         })),
-        s = (0, c.bG)([h.A], () => h.A.quests),
-        o = (0, m.oH)(Array.from(s.values()));
-    i.useEffect(
+        s = (0, d.bG)([h.A], () => h.A.quests),
+        o = (0, p.oH)(Array.from(s.values()));
+    r.useEffect(
         () => (
-            d.h.wait(() => S.O()),
+            u.h.wait(() => x.O()),
             () => {
-                d.h.wait(() => S.v());
+                u.h.wait(() => x.v());
             }
         ),
-        [null == a ? void 0 : a.id],
+        [l?.id],
     ),
-        i.useEffect(() => {
-            n && !l && k();
-        }, [n, l]);
-    let { use_api_call: b } = f.M.getConfig({
-            location: "NowPlaying",
-        }),
-        { questsByPartyId: I, questIdsByPartyId: v } = i.useMemo(() => {
+        r.useEffect(() => {
+            n && !a && U();
+        }, [n, a]);
+    let { use_api_call: f } = m.M.getConfig({ location: "NowPlaying" }),
+        { questsByPartyId: T, questIdsByPartyId: S } = r.useMemo(() => {
             let t = new Map(),
                 n = new Map(),
-                r = new Set(),
-                i = (0, _.$e)(s, w.B3);
-            for (let l of e)
-                l.party.currentActivities.forEach((e) => {
-                    let { activity: a } = e;
-                    if (null == a) return;
-                    let s = (0, A.nq)(i, a);
-                    null == s || r.has(s.id) || (t.set(l.party.id, s), r.add(s.id), n.set(l.party.id, s.id));
+                i = new Set(),
+                r = (0, E.$e)(s, P.B3);
+            for (let a of e)
+                a.party.currentActivities.forEach((e) => {
+                    let { activity: l } = e;
+                    if (null == l) return;
+                    let s = (0, g.nq)(r, l);
+                    null == s || i.has(s.id) || (t.set(a.party.id, s), i.add(s.id), n.set(a.party.id, s.id));
                 });
-            return {
-                questsByPartyId: t,
-                questIdsByPartyId: n,
-            };
+            return { questsByPartyId: t, questIdsByPartyId: n };
         }, [e, s, o]),
-        C = i.useMemo(() => new Set(Array.from(v.values())), [v]);
-    i.useEffect(() => {
-        b && C.size > 0 && (0, p.yO)(Array.from(C), g.uF.ACTIVITY_PANEL, "NowPlaying");
-    }, [C, b]);
-    let N = (0, c.bG)([h.A], () => h.A.earnedQuestForPlacement.get(g.uF.ACTIVITY_PANEL), []),
-        T = i.useMemo(() => {
-            if (!b) return I;
-            if (null == N) return new Map();
+        v = r.useMemo(() => new Set(Array.from(S.values())), [S]);
+    r.useEffect(() => {
+        f && v.size > 0 && (0, A.yO)(Array.from(v), _.uF.ACTIVITY_PANEL, "NowPlaying");
+    }, [v, f]);
+    let b = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
+        y = r.useMemo(() => {
+            if (!f) return T;
+            if (null == b) return new Map();
             let e = new Map();
-            for (let [t, n] of v.entries()) {
-                let r = N.quests.get(n);
-                null != r && e.set(t, r);
+            for (let [t, n] of S.entries()) {
+                let i = b.quests.get(n);
+                null != i && e.set(t, i);
             }
             return e;
-        }, [b, N, I, v]),
-        j = null;
+        }, [f, b, T, S]),
+        L = null;
     return t
-        ? (j =
+        ? (L =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
-                        return (0, r.jsx)(
-                            M,
-                            {
-                                party: t,
-                                quest: T.get(t.id),
-                            },
-                            t.id,
-                        );
+                        return (0, i.jsx)(M, { party: t, quest: y.get(t.id) }, t.id);
                     })
-                  : (0, r.jsxs)("div", {
-                        className: R.aM,
+                  : (0, i.jsxs)("div", {
+                        className: D.aM,
                         children: [
-                            (0, r.jsx)(u.Heading, {
+                            (0, i.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                className: R.jU,
-                                children: L.intl.string(L.t["ngJ/5u"]),
+                                className: D.jU,
+                                children: j.intl.string(j.t["ngJ/5u"]),
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, i.jsx)(c.Text, {
                                 color: "none",
-                                className: R.BI,
+                                className: D.BI,
                                 variant: "text-sm/normal",
-                                children: L.intl.string(L.t["99ZWxQ"]),
+                                children: j.intl.string(j.t["99ZWxQ"]),
                             }),
                         ],
                     }))
-        : (0, r.jsx)("div", {
-              className: R.aM,
-              children: (0, r.jsx)(u.y$y, {}),
-          });
+        : (0, i.jsx)("div", { className: D.aM, children: (0, i.jsx)(c.y$y, {}) });
 }

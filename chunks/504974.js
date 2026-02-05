@@ -1,25 +1,14 @@
-n.d(t, {
-    A: () => l,
-});
-var a = n(627968);
-n(64700);
-var r = n(515598),
-    i = n(719335),
-    c = n(339984);
-
-function l(e) {
-    let { type: t, analyticsPage: n, analyticsSection: l, isGIF: s, banner: o } = e;
-    return [c.HL.BANNER, c.HL.AVATAR].includes(t) && s
-        ? (0, a.jsx)(i.A, {
-              analyticsSection: l,
-              type: t,
-          })
-        : t === c.HL.GUILD_BANNER
-          ? (0, a.jsx)(r.A, {
-                analyticsSection: l,
-                analyticsPage: n,
-                isGIF: s,
-                banner: o,
-            })
+a.d(t, { A: () => s });
+var n = a(627968);
+a(64700);
+var i = a(515598),
+    o = a(719335),
+    r = a(339984);
+function s(e) {
+    let { type: t, analyticsPage: a, analyticsSection: s, isGIF: l, banner: _ } = e;
+    return [r.HL.BANNER, r.HL.AVATAR].includes(t) && l
+        ? (0, n.jsx)(o.A, { analyticsSection: s, type: t })
+        : t === r.HL.GUILD_BANNER
+          ? (0, n.jsx)(i.A, { analyticsSection: s, analyticsPage: a, isGIF: l, banner: _ })
           : null;
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Kk: "icon_dbd216",
     nG: "writingMessagesTitle_dbd216",

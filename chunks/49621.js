@@ -1,6 +1,5 @@
-n.d(t, {
-    x: () => r,
-});
+"use strict";
+n.d(t, { x: () => r });
 let r = [
     "gg-sans/ggsans-400-normalitalic",
     "gg-sans/ggsans-700-bold",

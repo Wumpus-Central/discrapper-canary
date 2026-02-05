@@ -1,10 +1,8 @@
-n.d(t, {
-    _: () => s,
-});
+"use strict";
+n.d(t, { _: () => s });
 var r = n(627968),
     i = n(64700),
     a = n(397927);
-
 function s(e) {
     let { groups: t, selectedStory: n, onStorySelect: s } = e;
     return (0, r.jsx)(a.VQ0, {
@@ -18,9 +16,7 @@ function s(e) {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(a.VQ0.Header, {
-                            children: e.title,
-                        }),
+                        (0, r.jsx)(a.VQ0.Header, { children: e.title }),
                         e.stories.map((e) =>
                             (0, r.jsx)(
                                 a.VQ0.Item,

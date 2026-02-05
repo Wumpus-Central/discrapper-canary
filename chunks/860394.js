@@ -1,8 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
-r = {
-    removeButtonLabel: "Usuń",
-    removeDescription: "Naciśnij Usuń, aby usunąć znacznik.",
-};
+r = { removeButtonLabel: "Usuń", removeDescription: "Naciśnij Usuń, aby usunąć znacznik." };

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(664886),
     o = n(999843),
@@ -5,11 +6,7 @@ var r = n(834647),
     s = n(564904),
     l = n(554987);
 r(
-    {
-        target: "Promise",
-        stat: !0,
-        forced: n(655246),
-    },
+    { target: "Promise", stat: !0, forced: n(655246) },
     {
         race: function (e) {
             var t = this,

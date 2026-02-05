@@ -1,108 +1,44 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(189081),
-    a = n(67480),
+var l = n(311907),
+    a = n(189081),
+    r = n(67480),
     s = n(674378),
     o = n(598429),
-    c = n(979604);
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function p(e) {
+    d = n(979604);
+function c(e) {
     let {
             application: t,
             fullWidth: n = !1,
-            size: p = "md",
-            playButtonVariant: m,
-            disabledVariant: f,
-            hideNotLaunchable: g,
+            size: c = "md",
+            playButtonVariant: u,
+            disabledVariant: m,
+            hideNotLaunchable: _,
             tooltipPosition: h,
-            onClick: _,
-            className: b,
+            onClick: p,
+            className: g,
             source: A,
-            hover: y,
-            innerClassName: v,
+            hover: f,
+            innerClassName: x,
         } = e,
-        x = {
+        E = {
             fullWidth: n,
-            size: p,
-            disabledVariant: f,
+            size: c,
+            disabledVariant: m,
             tooltipPosition: h,
-            onClick: _,
-            className: b,
-            hover: y,
-            innerClassName: v,
+            onClick: p,
+            className: g,
+            hover: f,
+            innerClassName: x,
         },
-        O = (0, i.bG)([l.A], () => l.A.getActiveLibraryApplication(t.id)),
-        E = null != O ? O.sku.id : null,
-        j = null != E ? E : t.primarySkuId,
-        C = (0, i.bG)([a.A], () => null != j && !a.A.didFetchingSkuFail(j));
-    return null != O && (0, s.XZ)(O)
-        ? (0, r.jsx)(
-              c.A,
-              d(u({}, x), {
-                  playButtonVariant: m,
-                  libraryApplication: O,
-                  source: A,
-              }),
-          )
-        : C
-          ? (0, r.jsx)("div", {
-                children: "deprecated!",
-            })
-          : (0, r.jsx)(
-                o.A,
-                d(u({}, x), {
-                    variant: m,
-                    hideNotLaunchable: g,
-                    applicationId: t.id,
-                }),
-            );
+        C = (0, l.bG)([a.A], () => a.A.getActiveLibraryApplication(t.id)),
+        I = null != C ? C.sku.id : null,
+        T = null != I ? I : t.primarySkuId,
+        v = (0, l.bG)([r.A], () => null != T && !r.A.didFetchingSkuFail(T));
+    return null != C && (0, s.XZ)(C)
+        ? (0, i.jsx)(d.A, { ...E, playButtonVariant: u, libraryApplication: C, source: A })
+        : v
+          ? (0, i.jsx)("div", { children: "deprecated!" })
+          : (0, i.jsx)(o.A, { ...E, variant: u, hideNotLaunchable: _, applicationId: t.id });
 }

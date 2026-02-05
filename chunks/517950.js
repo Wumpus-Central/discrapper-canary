@@ -1,7 +1,5 @@
-n.d(t, {
-    a: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { a: () => r });
 var r = (function (e) {
     return (
         (e.SEASONAL_GIFTING_2024_BALLOONS_REWARD_SKU_ID = "1301993378484850769"),

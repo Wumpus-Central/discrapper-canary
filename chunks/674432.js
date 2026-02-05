@@ -1,5 +1,3 @@
-t.d(r, {
-    U: () => o,
-});
-var n,
-    o = (((n = {}).OAUTH_REDIRECT = "oauth_redirect"), n);
+t.d(e, { U: () => o });
+var a,
+    o = (((a = {}).OAUTH_REDIRECT = "oauth_redirect"), a);

@@ -1,79 +1,10 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(801460),
-    n(508300),
-    n(650828);
+"use strict";
+n.d(t, { A: () => o }), n(323874), n(14289), n(35956), n(508300);
 var r = n(64700);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function o(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-async function l(e, t) {
-    let n = await fetch(e, {
-            signal: t,
-        }),
+async function i(e, t) {
+    let n = await fetch(e, { signal: t }),
         r = await n.blob();
-    null == t || t.throwIfAborted();
+    t?.throwIfAborted();
     let i = URL.createObjectURL(r);
     try {
         let e = new Image();
@@ -88,9 +19,7 @@ async function l(e, t) {
                             () => {
                                 n(new DOMException("Aborted", "AbortError"));
                             },
-                            {
-                                once: !0,
-                            },
+                            { once: !0 },
                         );
                 }),
             ]),
@@ -100,76 +29,62 @@ async function l(e, t) {
         throw (URL.revokeObjectURL(i), e);
     }
 }
-
-function c(e) {
+function a(e) {
     URL.revokeObjectURL(e);
 }
-
-function u(e) {
+function s(e) {
     for (let t of e.values()) if (2 !== t) return !1;
     return !0;
 }
-let d = (e, t) => {
+let o = (e, t) => {
     let n = r.useRef(0),
-        [i, s] = r.useState(!1),
-        [d, f] = r.useState({}),
-        p = r.useRef(new AbortController()),
-        [_, h] = r.useState(t),
-        m = r.useRef(new Map()),
-        g = r.useRef(new Map()),
-        E = r.useRef(null == e ? void 0 : e.skuId);
+        [o, l] = r.useState(!1),
+        [u, c] = r.useState({}),
+        d = r.useRef(new AbortController()),
+        [_, f] = r.useState(t),
+        p = r.useRef(new Map()),
+        h = r.useRef(new Map()),
+        m = r.useRef(e?.skuId);
     return (
         r.useEffect(() => {
-            t && !_ && h(!0);
+            t && !_ && f(!0);
         }, [t, _]),
         r.useEffect(() => {
-            if ((null == e ? void 0 : e.skuId) !== E.current) {
-                var r;
-                (E.current = null == e ? void 0 : e.skuId), h(t);
-                let i =
-                    null !=
-                        (r =
-                            null == e
-                                ? void 0
-                                : e.config.effects.every((e) => {
-                                      let { src: t } = e;
-                                      return g.current.has(t);
-                                  })) && r;
-                if ((s(i), (n.current = 0), !i && null != e))
-                    for (let { src: t } of e.config.effects) m.current.has(t) || m.current.set(t, 0);
+            if (e?.skuId !== m.current) {
+                (m.current = e?.skuId), f(t);
+                let r =
+                    e?.config.effects.every((e) => {
+                        let { src: t } = e;
+                        return h.current.has(t);
+                    }) ?? !1;
+                if ((l(r), (n.current = 0), !r && null != e))
+                    for (let { src: t } of e.config.effects) p.current.has(t) || p.current.set(t, 0);
             }
         }, [e, t]),
         r.useEffect(() => {
             if (null == e || 0 === e.config.effects.length || !1 === _ || 0 !== n.current) return;
             n.current = 1;
-            let t = p.current;
+            let t = d.current;
             e.config.effects.forEach(async (e) => {
-                if (g.current.has(e.src)) m.current.set(e.src, 2), u(m.current) && (s(!0), (n.current = 2));
+                if (h.current.has(e.src)) p.current.set(e.src, 2), s(p.current) && (l(!0), (n.current = 2));
                 else
                     try {
-                        let r = await l(e.src, t.signal);
+                        let r = await i(e.src, t.signal);
                         if (t.signal.aborted) return;
-                        m.current.set(e.src, 2),
-                            g.current.set(e.src, r.src),
-                            f((t) =>
-                                o(a({}, t), {
-                                    [e.src]: r,
-                                }),
-                            ),
-                            u(m.current) && (s(!0), (n.current = 2));
+                        p.current.set(e.src, 2),
+                            h.current.set(e.src, r.src),
+                            c((t) => ({ ...t, [e.src]: r })),
+                            s(p.current) && (l(!0), (n.current = 2));
                     } catch (e) {}
             });
         }, [e, _]),
         r.useEffect(() => {
-            let e = g.current,
-                t = p.current;
+            let e = h.current,
+                t = d.current;
             return () => {
-                Array.from(e.values()).forEach(c), t.abort();
+                Array.from(e.values()).forEach(a), t.abort();
             };
         }, []),
-        {
-            loaded: i,
-            layerData: d,
-        }
+        { loaded: o, layerData: u }
     );
 };

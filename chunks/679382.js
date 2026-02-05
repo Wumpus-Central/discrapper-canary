@@ -1,110 +1,83 @@
-n.d(t, {
-    A: () => A,
-});
-var r,
-    i = n(61090),
-    a = n(311907),
-    s = n(73153),
-    o = n(723176),
-    l = n(154049),
-    c = n(351697),
+"use strict";
+n.d(t, { A: () => I });
+var r = n(61090),
+    i = n(311907),
+    a = n(73153),
+    s = n(723176),
+    o = n(154049),
+    l = n(351697),
     u = n(184989),
-    d = n(71393),
-    f = n(41237),
-    p = n(514983);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let h = 2,
-    m = async () => {
-        if (0 !== h) return;
-        let e = o.A.database();
+    c = n(71393),
+    d = n(41237),
+    _ = n(514983);
+let f = 2,
+    p = async () => {
+        if (0 !== f) return;
+        let e = s.A.database();
         if (null == e) return;
-        h = 2;
-        let t = await (0, l.ES)("StickerStore.loadSavedGuildStickers", () =>
-            i.A.timeAsync("\uD83D\uDCBE", "loadSavedGuildStickers", () => c.A.getAsync(e)),
+        f = 2;
+        let t = await (0, o.ES)("StickerStore.loadSavedGuildStickers", () =>
+            r.A.timeAsync("\uD83D\uDCBE", "loadSavedGuildStickers", () => l.A.getAsync(e)),
         );
-        null != t &&
-            s.h.dispatch({
-                type: "CACHED_STICKERS_LOADED",
-                stickers: t,
-            });
+        null != t && a.h.dispatch({ type: "CACHED_STICKERS_LOADED", stickers: t });
     },
-    g = (e) => {
+    h = (e) => {
         let { guilds: t } = e;
-        h = +!!t.every((e) => null != e.stickers.items);
+        f = +!!t.every((e) => null != e.stickers.items);
     },
-    E = () => {
-        h = 0;
+    m = () => {
+        f = 0;
     };
-
-function b(e) {
+function g(e) {
     let { guild: t } = e;
-    1 === h && "update" === t.stickers.op && null == t.stickers.items && (h = 0);
+    1 === f && "update" === t.stickers.op && null == t.stickers.items && (f = 0);
 }
-let y = () => {
-    h = 0;
+let E = () => {
+    f = 0;
 };
-class O extends (r = a.Ay.Store) {
+class A extends i.Ay.Store {
+    static displayName = "StickersStore";
     initialize() {
-        this.waitFor(u.A, f.A, d.A, p.A), this.syncWith([f.A, p.A], () => !0);
+        this.waitFor(u.A, d.A, c.A, _.A), this.syncWith([d.A, _.A], () => !0);
     }
     get isLoaded() {
-        return 0 !== h;
+        return 0 !== f;
     }
     get loadState() {
-        return h;
+        return f;
     }
     getStickerMetadataArrays() {
-        return m(), [f.A.getStickerMetadataMap(), p.A.getStickerMetadataMap()];
+        return p(), [d.A.getStickerMetadataMap(), _.A.getStickerMetadataMap()];
     }
     get hasLoadedStickerPacks() {
-        return p.A.hasLoadedStickerPacks;
+        return _.A.hasLoadedStickerPacks;
     }
     get isFetchingStickerPacks() {
-        return p.A.isFetchingStickerPacks;
+        return _.A.isFetchingStickerPacks;
     }
     getStickerById(e) {
-        var t;
-        return m(), null != (t = f.A.getStickerById(e)) ? t : p.A.getStickerById(e);
+        return p(), d.A.getStickerById(e) ?? _.A.getStickerById(e);
     }
     getStickerPack(e) {
-        return p.A.getStickerPack(e);
+        return _.A.getStickerPack(e);
     }
     getPremiumPacks() {
-        return p.A.getPremiumPacks();
+        return _.A.getPremiumPacks();
     }
     isPremiumPack(e) {
-        return p.A.isPremiumPack(e);
+        return _.A.isPremiumPack(e);
     }
     getRawStickersByGuild() {
-        return f.A.getAllGuildStickers();
+        return d.A.getAllGuildStickers();
     }
     getAllGuildStickers() {
-        return m(), f.A.getAllGuildStickers();
+        return p(), d.A.getAllGuildStickers();
     }
     getAllPackStickers() {
-        return p.A.getAllPackStickers();
+        return _.A.getAllPackStickers();
     }
     getStickersByGuildId(e) {
-        return m(), f.A.getStickersByGuildId(e);
+        return p(), d.A.getStickersByGuildId(e);
     }
 }
-_(O, "displayName", "StickersStore");
-let A = new O(s.h, {
-    BACKGROUND_SYNC: E,
-    CONNECTION_OPEN: g,
-    GUILD_CREATE: b,
-    LOGOUT: y,
-});
+let I = new A(a.h, { BACKGROUND_SYNC: m, CONNECTION_OPEN: h, GUILD_CREATE: g, LOGOUT: E });

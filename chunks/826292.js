@@ -1,36 +1,33 @@
-n.d(t, {
-    A: () => h,
-    K: () => j,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => p, K: () => f });
+var i = n(627968);
 n(64700);
-var i = n(788373),
+var s = n(788373),
     l = n(311907),
-    s = n(36525),
+    r = n(36525),
     a = n(397927),
-    c = n(282956),
-    o = n(875264),
-    d = n(576705),
+    o = n(282956),
+    d = n(875264),
+    c = n(576705),
     u = n(997509),
-    f = n(555337),
+    m = n(555337),
     g = n(53656),
-    b = n(542580),
-    m = n(803378),
-    p = n(652215),
-    x = n(985018);
-
-function h(e) {
+    x = n(542580),
+    h = n(803378),
+    _ = n(652215),
+    A = n(985018);
+function p(e) {
     let { refToScroller: t } = e,
-        n = (0, l.bG)([f.A], () => f.A.getGuild()),
+        n = (0, l.bG)([m.A], () => m.A.getGuild()),
         {
-            section: i,
-            sectionId: s,
+            section: s,
+            sectionId: r,
             integrations: a,
-            editedIntegration: c,
-            webhooks: d,
+            editedIntegration: o,
+            webhooks: c,
             editedWebhook: u,
-            isFetching: b,
-            errors: m,
+            isFetching: x,
+            errors: h,
         } = (0, l.cf)([g.default], () => ({
             editedIntegration: g.default.editedIntegration,
             editedWebhook: g.default.editedWebhook,
@@ -43,60 +40,55 @@ function h(e) {
         }));
     return null == n
         ? null
-        : (0, r.jsx)(o.A, {
+        : (0, i.jsx)(d.A, {
               guild: n,
-              section: i,
-              sectionId: s,
+              section: s,
+              sectionId: r,
               integrations: a,
-              webhooks: d,
-              editedIntegration: c,
+              webhooks: c,
+              editedIntegration: o,
               editedWebhook: u,
-              isFetchingWebhooks: b,
+              isFetchingWebhooks: x,
               hasChanges: g.default.hasChanges,
-              errors: m,
+              errors: h,
               refToScroller: t,
           });
 }
-
-function j() {
-    var e;
-    let { guild: t, submitting: n } = (0, l.cf)([f.A], () => ({
-            guild: f.A.getGuild(),
-            submitting: f.A.isSubmitting(),
+function f() {
+    let { guild: e, submitting: t } = (0, l.cf)([m.A], () => ({
+            guild: m.A.getGuild(),
+            submitting: m.A.isSubmitting(),
         })),
-        o = (0, l.bG)([d.A], () => d.A.can(p.xBc.KICK_MEMBERS, t)),
-        h = !1,
-        j = null;
+        n = (0, l.bG)([c.A], () => c.A.can(_.xBc.KICK_MEMBERS, e)),
+        d = !1,
+        p = null;
     return (
-        o ||
-            (null == (e = g.default.editedIntegration) ? void 0 : e.expire_behavior) !== i.F.KICK ||
-            ((h = !0),
-            (j = (0, r.jsx)(a.Text, {
+        n ||
+            g.default.editedIntegration?.expire_behavior !== s.F.KICK ||
+            ((d = !0),
+            (p = (0, i.jsx)(a.Text, {
                 color: "text-feedback-critical",
                 variant: "text-md/normal",
-                children: x.intl.string(x.t["mrO/ZQ"]),
+                children: A.intl.string(A.t["mrO/ZQ"]),
             }))),
-        (0, r.jsx)(s.A, {
-            submitting: n,
-            disabled: h,
-            errorMessage: j,
+        (0, i.jsx)(r.A, {
+            submitting: t,
+            disabled: d,
+            errorMessage: p,
             onReset: () => {
-                c.A.init(), b.C8(), null != t && u.A.init(t.id);
+                o.A.init(), x.C8(), null != e && u.A.init(e.id);
             },
             onSave: () => {
-                if (null != t) {
-                    if (null != g.default.editedIntegration) c.A.saveIntegration(t.id, g.default.editedIntegration);
-                    else if (null != g.default.editedWebhook) c.A.saveWebhook(t.id, g.default.editedWebhook);
+                if (null != e) {
+                    if (null != g.default.editedIntegration) o.A.saveIntegration(e.id, g.default.editedIntegration);
+                    else if (null != g.default.editedWebhook) o.A.saveWebhook(e.id, g.default.editedWebhook);
                     else if (null != g.default.editedCommandId) {
-                        let e = g.default.getSectionId(),
-                            n = m.A.getEditedApplication();
-                        if (null == e || null == n) return;
-                        c.A.saveApplicationPermissions(e, t.id, Object.values(n));
+                        let t = g.default.getSectionId(),
+                            n = h.A.getEditedApplication();
+                        if (null == t || null == n) return;
+                        o.A.saveApplicationPermissions(t, e.id, Object.values(n));
                     }
-                    f.A.hasChanges() &&
-                        u.A.saveGuild(t.id, {
-                            features: t.features,
-                        });
+                    m.A.hasChanges() && u.A.saveGuild(e.id, { features: e.features });
                 }
             },
         })

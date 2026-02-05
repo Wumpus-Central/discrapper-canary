@@ -1,157 +1,94 @@
-n.d(t, {
-    default: () => L,
-});
+n.d(t, { default: () => U });
 var l = n(627968);
 n(64700);
-var r = n(397927),
-    i = n(442433),
-    a = n(847767),
-    o = n(358367),
-    s = n(468389),
-    d = n(793574),
+var i = n(397927),
+    a = n(442433),
+    r = n(847767),
+    d = n(358367),
+    o = n(468389),
+    s = n(793574),
     u = n(50268),
     c = n(346247),
     A = n(700210),
-    b = n(803664),
-    g = n(29293),
-    f = n(509302),
-    m = n(497600),
-    p = n(291247),
-    O = n(239211),
-    y = n(707378),
-    v = n(399476),
-    E = n(889460),
-    h = n(448290),
-    j = n(301541),
-    x = n(252726),
-    S = n(460597),
-    M = n(198229),
-    D = n(243949),
-    C = n(180798),
-    I = n(972432),
-    P = n(77544),
-    T = n(652215),
-    _ = n(985018);
-let L = (0, o.A)(
-    (0, a.A)(
+    g = n(803664),
+    m = n(29293),
+    b = n(509302),
+    E = n(497600),
+    f = n(291247),
+    h = n(239211),
+    x = n(707378),
+    M = n(399476),
+    p = n(889460),
+    C = n(448290),
+    S = n(301541),
+    I = n(252726),
+    j = n(460597),
+    D = n(198229),
+    v = n(243949),
+    O = n(180798),
+    T = n(972432),
+    _ = n(77544),
+    y = n(652215),
+    L = n(985018);
+let U = (0, d.A)(
+    (0, r.A)(
         function (e) {
             let {
                     user: t,
                     guildId: n,
-                    showModalItems: a = !0,
-                    showMediaItems: o = !1,
-                    showChatItems: d = !0,
-                    context: L,
-                    onSelect: U,
+                    showModalItems: r = !0,
+                    showMediaItems: d = !1,
+                    showChatItems: s = !0,
+                    context: U,
+                    onSelect: N,
                 } = e,
-                N = {
-                    page: T.liQ.GUILD_CHANNEL,
-                    section: T.JJy.CHAT_USERNAME,
-                    object: T.ZSU.CONTEXT_MENU_ITEM,
-                },
-                G = (0, D.A)({
-                    userId: t.id,
-                    guildId: n,
-                }),
-                R = (0, h.A)(t, n, L),
-                B = (0, j.A)(t.id, L),
-                w = (0, P.A)(t.id),
-                V = (0, y.A)({
-                    user: t,
-                    context: L,
-                }),
-                k = (0, m.A)({
-                    user: t,
-                    guildId: n,
-                    context: L,
-                }),
-                F = (0, g.A)({
-                    user: t,
-                }),
-                K = (0, I.A)(t.id),
-                X = (0, M.A)(t.id),
-                W = (0, c.A)({
-                    guildId: n,
-                    userId: t.id,
-                    analyticsLocation: N,
-                    context: L,
-                }),
-                H = (0, A.A)({
-                    user: t,
-                    guildId: n,
-                }),
-                Y = (0, E.A)({
-                    user: t,
-                    guildId: n,
-                }),
-                J = (0, s.A)(null, t),
-                q = (0, b.A)({
-                    user: t,
-                }),
-                Z = (0, f.A)({
-                    user: t,
-                }),
-                z = (0, S.A)({
-                    user: t,
-                }),
-                $ = (0, O.A)({
-                    user: t,
-                    guildId: n,
-                    location: "GuildUserContextMenu",
-                }),
-                Q = (0, v.A)({
-                    user: t,
-                    guildId: n,
-                    location: "GuildUserContextMenu",
-                }),
-                ee = (0, p.A)(t, n),
-                et = (0, C.A)(t.id, n),
-                en = (0, x.A)(t, n),
-                el = (0, u.A)({
-                    id: t.id,
-                    label: _.intl.string(_.t["/AXYnE"]),
-                }),
-                er = t.isNonUserBot();
-            return (0, l.jsxs)(r.W1t, {
+                G = { page: y.liQ.GUILD_CHANNEL, section: y.JJy.CHAT_USERNAME, object: y.ZSU.CONTEXT_MENU_ITEM },
+                R = (0, v.A)({ userId: t.id, guildId: n }),
+                B = (0, C.A)(t, n, U),
+                V = (0, S.A)(t.id, U),
+                P = (0, _.A)(t.id),
+                k = (0, x.A)({ user: t, context: U }),
+                w = (0, E.A)({ user: t, guildId: n, context: U }),
+                F = (0, m.A)({ user: t }),
+                K = (0, T.A)(t.id),
+                X = (0, D.A)(t.id),
+                W = (0, c.A)({ guildId: n, userId: t.id, analyticsLocation: G, context: U }),
+                H = (0, A.A)({ user: t, guildId: n }),
+                Y = (0, p.A)({ user: t, guildId: n }),
+                J = (0, o.A)(null, t),
+                q = (0, g.A)({ user: t }),
+                Z = (0, b.A)({ user: t }),
+                z = (0, j.A)({ user: t }),
+                $ = (0, h.A)({ user: t, guildId: n, location: "GuildUserContextMenu" }),
+                Q = (0, M.A)({ user: t, guildId: n, location: "GuildUserContextMenu" }),
+                ee = (0, f.A)(t, n),
+                et = (0, O.A)(t.id, n),
+                en = (0, I.A)(t, n),
+                el = (0, u.A)({ id: t.id, label: L.intl.string(L.t["/AXYnE"]) }),
+                ei = t.isNonUserBot();
+            return (0, l.jsxs)(i.W1t, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: i.Z_,
-                "aria-label": _.intl.string(_.t.liqwPJ),
-                onSelect: U,
+                onClose: a.Z_,
+                "aria-label": L.intl.string(L.t.liqwPJ),
+                onSelect: N,
                 children: [
-                    !er &&
+                    !ei &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsxs)(r.rXV, {
-                                    children: [a && G, d && R, B, V, a && k, a && F, w],
-                                }),
-                                o &&
-                                    (0, l.jsx)(r.rXV, {
-                                        children: K,
-                                    }),
-                                (0, l.jsx)(r.rXV, {
-                                    children: a && J,
-                                }),
-                                (0, l.jsxs)(r.rXV, {
-                                    children: [o && X, a && W, a && Y, q, Z, z, H, a && Q, a && $],
-                                }),
-                                (0, l.jsx)(r.rXV, {
-                                    children: en,
-                                }),
-                                (0, l.jsxs)(r.rXV, {
-                                    children: [et, ee],
-                                }),
+                                (0, l.jsxs)(i.rXV, { children: [r && R, s && B, V, k, r && w, r && F, P] }),
+                                d && (0, l.jsx)(i.rXV, { children: K }),
+                                (0, l.jsx)(i.rXV, { children: r && J }),
+                                (0, l.jsxs)(i.rXV, { children: [d && X, r && W, r && Y, q, Z, z, H, r && Q, r && $] }),
+                                (0, l.jsx)(i.rXV, { children: en }),
+                                (0, l.jsxs)(i.rXV, { children: [et, ee] }),
                             ],
                         }),
-                    (0, l.jsx)(r.rXV, {
-                        children: el,
-                    }),
+                    (0, l.jsx)(i.rXV, { children: el }),
                 ],
             });
         },
-        {
-            object: T.ZSU.CONTEXT_MENU,
-        },
+        { object: y.ZSU.CONTEXT_MENU },
     ),
-    [d.A.CONTEXT_MENU, d.A.GUILD_USER_MENU],
+    [s.A.CONTEXT_MENU, s.A.GUILD_USER_MENU],
 );

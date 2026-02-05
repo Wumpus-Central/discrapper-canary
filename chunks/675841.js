@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     syntaxAfter: "syntaxAfter_ada32f",
     syntaxBefore: "syntaxBefore_ada32f",

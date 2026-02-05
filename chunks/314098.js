@@ -1,3 +1,1 @@
-e.exports = {
-    T: "_15f2230c5b20ba41",
-};
+e.exports = { T: "background_df5e2e" };

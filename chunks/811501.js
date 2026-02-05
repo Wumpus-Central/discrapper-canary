@@ -1,35 +1,21 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
+n.d(t, { A: () => d });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(990078),
+    a = n(503698),
+    s = n.n(a),
+    r = n(990078),
     o = n(664929),
     c = n(453313);
-let u = l.memo(function (e) {
-    var t;
-    let { className: n, channel: l, section: i } = e,
-        u = null != i ? (0, o.Rg)(i) : null,
+let d = l.memo(function (e) {
+    let { className: t, channel: n, section: l } = e,
+        a = null != l ? (0, o.Rg)(l) : null,
         d =
-            null != u
-                ? (0, r.jsx)(s.m, {
-                      __unsupportedReactNodeAsText: null != (t = null == i ? void 0 : i.name) ? t : "",
+            null != a
+                ? (0, i.jsx)(r.m, {
+                      __unsupportedReactNodeAsText: l?.name ?? "",
                       position: "top",
-                      children: (0, r.jsx)(u, {
-                          channel: l,
-                          section: i,
-                          width: 24,
-                          height: 24,
-                      }),
+                      children: (0, i.jsx)(a, { channel: n, section: l, width: 24, height: 24 }),
                   })
                 : null;
-    return (0, r.jsx)("div", {
-        className: a()(n, c.i),
-        children: (0, r.jsx)("div", {
-            className: c.K,
-            children: d,
-        }),
-    });
+    return (0, i.jsx)("div", { className: s()(t, c.i), children: (0, i.jsx)("div", { className: c.K, children: d }) });
 });

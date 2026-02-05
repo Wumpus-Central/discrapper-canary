@@ -1,11 +1,5 @@
-n.d(t, {
-    Do: () => a,
-    PW: () => o,
-    V5: () => s,
-    _f: () => l,
-    lb: () => r,
-    tL: () => i,
-});
+"use strict";
+n.d(t, { Do: () => a, PW: () => o, V5: () => s, _f: () => l, lb: () => r, tL: () => i });
 let r = "CHANGELOG_MODAL",
     i = "1232523165893132288",
     a = "https://discord.com/category/product";

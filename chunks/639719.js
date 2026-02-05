@@ -1,115 +1,72 @@
-n.d(t, {
-    default: () => m,
-}),
-    n(896048),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    l = n(110259),
-    a = n(158954),
+n.d(t, { default: () => g });
+var i = n(627968),
+    r = n(64700),
+    a = n(110259),
+    l = n(158954),
     s = n(417597),
     o = n(397927),
-    c = n(803306),
-    u = n(139286),
-    d = n(870570),
-    p = n(652215),
-    f = n(985018),
-    h = n(665763),
-    A = n(546);
-
-function g(e) {
+    d = n(803306),
+    c = n(139286),
+    u = n(870570),
+    A = n(652215),
+    h = n(985018),
+    _ = n(665763),
+    m = n(546);
+function p(e) {
     let { text: t } = e;
-    return (0, r.jsxs)("li", {
-        className: h.nf,
-        children: [
-            t,
-            " ",
-            (0, r.jsx)(a.I9m, {
-                size: "sm",
-                color: "currentColor",
-            }),
-        ],
+    return (0, i.jsxs)("li", {
+        className: _.nf,
+        children: [t, " ", (0, i.jsx)(l.I9m, { size: "sm", color: "currentColor" })],
     });
 }
-
-function m(e) {
+function g(e) {
     let { transitionState: t } = e,
-        n = (0, s.bG)([d.A], () => d.A.getAction()),
-        [a, m] = i.useState(!1);
-    async function b() {
-        return m(!0), n === p.a3B.AGREEMENTS && m(await (0, c.Q9)()), null;
+        n = (0, s.bG)([u.A], () => u.A.getAction()),
+        [l, g] = r.useState(!1);
+    async function E() {
+        return g(!0), n === A.a3B.AGREEMENTS && g(await (0, d.Q9)()), null;
     }
     return (
-        (0, u.A)(
+        (0, c.A)(
             {
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.USER_AGREEMENTS,
-                properties: {
-                    required_action: n,
-                },
+                type: a.ImpressionTypes.VIEW,
+                name: a.ImpressionNames.USER_AGREEMENTS,
+                properties: { required_action: n },
             },
             {},
             [],
         ),
-        (0, r.jsx)(o.kpP, {
-            graphic: {
-                src: A.A,
-                type: "image",
-            },
+        (0, i.jsx)(o.kpP, {
+            graphic: { src: m.A, type: "image" },
             gradientColor: "blue",
             dismissable: !1,
-            title: f.intl.string(f.t["7glvXu"]),
-            subtitle: f.intl.string(f.t["+USXQE"]),
-            actions: [
-                {
-                    variant: "primary",
-                    text: f.intl.string(f.t["+TBKL1"]),
-                    onClick: b,
-                    loading: a,
-                },
-            ],
+            title: h.intl.string(h.t["7glvXu"]),
+            subtitle: h.intl.string(h.t["+USXQE"]),
+            actions: [{ variant: "primary", text: h.intl.string(h.t["+TBKL1"]), onClick: E, loading: l }],
             transitionState: t,
-            onClose: p.js$,
-            children: (0, r.jsxs)(o.BJc, {
+            onClose: A.js$,
+            children: (0, i.jsxs)(o.BJc, {
                 gap: 20,
                 children: [
-                    n === p.a3B.AGREEMENTS
-                        ? (0, r.jsx)(o.Text, {
+                    n === A.a3B.AGREEMENTS
+                        ? (0, i.jsx)(o.Text, {
                               variant: "text-md/normal",
-                              className: h.h_,
-                              children: f.intl.format(f.t.CN0Hvb, {
-                                  url: p.X7G.TERMS_SUMMARY,
-                              }),
+                              className: _.h_,
+                              children: h.intl.format(h.t.CN0Hvb, { url: A.X7G.TERMS_SUMMARY }),
                           })
                         : null,
-                    (0, r.jsx)("div", {
-                        className: h.kL,
-                        children: (0, r.jsxs)("ul", {
-                            className: h.yJ,
+                    (0, i.jsx)("div", {
+                        className: _.kL,
+                        children: (0, i.jsxs)("ul", {
+                            className: _.yJ,
                             children: [
-                                (0, r.jsx)(g, {
-                                    text: f.intl.format(f.t.iw0hFi, {
-                                        url: p.X7G.TERMS,
-                                    }),
-                                }),
-                                (0, r.jsx)(o.cGx, {}),
-                                (0, r.jsx)(g, {
-                                    text: f.intl.format(f.t["36klnD"], {
-                                        url: p.X7G.PAID_TERMS,
-                                    }),
-                                }),
-                                (0, r.jsx)(o.cGx, {}),
-                                (0, r.jsx)(g, {
-                                    text: f.intl.format(f.t.TquFBF, {
-                                        url: p.X7G.PRIVACY,
-                                    }),
-                                }),
-                                (0, r.jsx)(o.cGx, {}),
-                                (0, r.jsx)(g, {
-                                    text: f.intl.format(f.t.ia96Tb, {
-                                        url: p.X7G.GUIDELINES,
-                                    }),
-                                }),
+                                (0, i.jsx)(p, { text: h.intl.format(h.t.iw0hFi, { url: A.X7G.TERMS }) }),
+                                (0, i.jsx)(o.cGx, {}),
+                                (0, i.jsx)(p, { text: h.intl.format(h.t["36klnD"], { url: A.X7G.PAID_TERMS }) }),
+                                (0, i.jsx)(o.cGx, {}),
+                                (0, i.jsx)(p, { text: h.intl.format(h.t.TquFBF, { url: A.X7G.PRIVACY }) }),
+                                (0, i.jsx)(o.cGx, {}),
+                                (0, i.jsx)(p, { text: h.intl.format(h.t.ia96Tb, { url: A.X7G.GUIDELINES }) }),
                             ],
                         }),
                     }),

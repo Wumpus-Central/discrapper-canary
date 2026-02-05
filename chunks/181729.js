@@ -1,6 +1,3 @@
-n.d(t, {
-    A: () => r,
-});
-let r = {
-    disabled: !1,
-};
+"use strict";
+n.d(t, { A: () => r });
+let r = { disabled: !1 };

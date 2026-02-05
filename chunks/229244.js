@@ -1,102 +1,47 @@
-n.d(t, {
-    A: () => K,
-}),
-    n(896048),
-    n(801541);
+n.d(t, { A: () => V }), n(801541);
 var a = n(627968),
-    l = n(64700),
-    r = n(284009),
-    i = n.n(r),
-    s = n(889137),
+    s = n(64700),
+    i = n(284009),
+    l = n.n(i),
+    r = n(889137),
     o = n(412703),
-    c = n(440703),
-    d = n(267548),
+    d = n(440703),
+    c = n(267548),
     u = n(668824),
     m = n(397927),
-    p = n(341915),
-    h = n(92246),
-    x = n(792620),
+    h = n(341915),
+    x = n(92246),
+    p = n(792620),
     g = n(241124),
-    f = n(947926),
-    b = n(717695),
+    _ = n(947926),
+    f = n(717695),
     v = n(164203),
-    j = n(127219),
-    _ = n(438038),
-    y = n(439075),
-    A = n(223344),
-    C = n(589939),
-    S = n(443960),
-    O = n(899860),
-    T = n(633581),
+    b = n(127219),
+    j = n(438038),
+    A = n(439075),
+    C = n(223344),
+    S = n(589939),
+    T = n(443960),
+    y = n(899860),
+    N = n(633581),
     E = n(508575),
-    N = n(847807),
-    w = n(364329),
-    I = n(545986),
-    k = n(927813),
-    P = n(350246);
-
-function R(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function D(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                R(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function M(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let L = ["png", "gif", "webp"],
-    U = [...L, "jpg", "jpeg"],
-    B = Array.from(new Set([...U, "gif", "mp4", "webm"]));
-
-function G() {
+    I = n(847807),
+    k = n(364329),
+    R = n(545986),
+    O = n(927813),
+    w = n(350246);
+let D = ["png", "gif", "webp"],
+    M = [...D, "jpg", "jpeg"],
+    P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
+function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: a = null, claimedAt: l = null } = e;
+        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: a = null, claimedAt: s = null } = e;
     return {
         userId: "123",
         questId: "1193992107035983872",
         enrolledAt: a,
         completedAt: n,
-        claimedAt: l,
+        claimedAt: s,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: t,
@@ -104,28 +49,18 @@ function G() {
         progress: {},
     };
 }
-let F = "1193992107035983872",
-    V = {
-        id: F,
+let U = "1193992107035983872",
+    B = {
+        id: U,
         preview: !0,
         config: {
-            id: F,
+            id: U,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
-            application: {
-                id: "123",
-                name: "Sky Runners",
-            },
-            messages: {
-                questName: "Sky Runners",
-                gameTitle: "Sky Runners",
-                gamePublisher: "Discord",
-            },
-            colors: {
-                primary: "#B377F3",
-                secondary: "#5865F2",
-            },
+            application: { id: "123", name: "Sky Runners" },
+            messages: { questName: "Sky Runners", gameTitle: "Sky Runners", gamePublisher: "Discord" },
+            colors: { primary: "#B377F3", secondary: "#5865F2" },
             rewardsConfig: {
                 assignmentMethod: 1,
                 rewards: [
@@ -133,7 +68,7 @@ let F = "1193992107035983872",
                         skuId: "",
                         asset: "reward.png",
                         assetVideo: null,
-                        type: c.l.REWARD_CODE,
+                        type: d.l.REWARD_CODE,
                         messages: {
                             name: "Orange Buddy Jetpack",
                             nameWithArticle: "an Orange Buddy Jetpack",
@@ -161,50 +96,31 @@ let F = "1193992107035983872",
             },
             taskConfigV2: {
                 joinOperator: u.K.AND,
-                tasks: {
-                    [o.n.PLAY_ON_DESKTOP]: {
-                        type: o.n.PLAY_ON_DESKTOP,
-                        target: 300,
-                    },
-                },
+                tasks: { [o.n.PLAY_ON_DESKTOP]: { type: o.n.PLAY_ON_DESKTOP, target: 300 } },
             },
             features: [],
-            sharePolicy: d.i.SHAREABLE_EVERYWHERE,
-            ctaConfig: {
-                link: "https://discord.com/",
-                buttonLabel: "Learn More",
-            },
+            sharePolicy: c.i.SHAREABLE_EVERYWHERE,
+            ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
         userStatus: null,
         targetedContent: [],
     };
-
-function W() {
-    var e, t, r, d, u, R;
-    let [F, W] = l.useState(V),
-        H = l.useCallback((e) => {
-            W(
-                M(D({}, e), {
-                    preview: !0,
-                }),
-            );
+function G() {
+    var e;
+    let [t, i] = s.useState(B),
+        c = s.useCallback((e) => {
+            i({ ...e, preview: !0 });
         }, []),
-        [K, z] = l.useState(w.b.UNENROLLED),
-        [q, Q] = l.useState(!1),
-        [Y, J] = l.useState(!1),
-        [X, $] = l.useState(null),
-        Z =
-            ((R = F.config),
-            (0, s.YW)(R)
-                .with(
-                    {
-                        configVersion: 2,
-                    },
-                    (e) => e.rewardsConfig.rewards,
-                )
+        [u, U] = s.useState(k.b.UNENROLLED),
+        [G, F] = s.useState(!1),
+        [V, W] = s.useState(!1),
+        [H, K] = s.useState(null),
+        z =
+            ((e = t.config),
+            (0, r.YW)(e)
+                .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
-
-    function ee(e, t) {
+    function $(e, n) {
         if (
             "hero" === e ||
             "questBarHero" === e ||
@@ -213,416 +129,313 @@ function W() {
             "heroVideo" === e ||
             "questBarHeroVideo" === e
         ) {
-            var n, a;
-            H(
-                M(D({}, F), {
-                    config:
-                        ((n = F.config),
-                        (a = {
-                            [e]: t,
-                        }),
-                        (0, s.YW)(n)
-                            .with(
-                                {
-                                    configVersion: 2,
-                                },
-                                (e) =>
-                                    M(D({}, e), {
-                                        assets: D({}, e.assets, a),
-                                    }),
-                            )
-                            .exhaustive()),
-                }),
-            );
+            var a, s;
+            c({
+                ...t,
+                config:
+                    ((a = t.config),
+                    (s = { [e]: n }),
+                    (0, r.YW)(a)
+                        .with({ configVersion: 2 }, (e) => ({ ...e, assets: { ...e.assets, ...s } }))
+                        .exhaustive()),
+            });
         }
     }
-
-    function et(e, t) {
-        let n = F.config.taskConfigV2.tasks,
-            a = n[o.n.WATCH_VIDEO];
-        if (null == a) return;
-        let l = D({}, a.assets);
+    function q(e, n) {
+        let a = t.config.taskConfigV2.tasks,
+            s = a[o.n.WATCH_VIDEO];
+        if (null == s) return;
+        let i = { ...s.assets };
         switch (e) {
             case "videoPlayerVideo":
-                l.video = {
-                    url: t,
-                };
+                i.video = { url: n };
                 break;
             case "videoPlayerVideoLowRes":
-                l.videoLowRes = {
-                    url: t,
-                };
+                i.videoLowRes = { url: n };
                 break;
             case "videoPlayerThumbnail":
-                l.video = M(D({}, l.video), {
-                    thumbnail: t,
-                });
+                i.video = { ...i.video, thumbnail: n };
                 break;
             default:
                 return;
         }
-        H(
-            M(D({}, F), {
-                config: M(D({}, F.config), {
-                    taskConfigV2: M(D({}, F.config.taskConfigV2), {
-                        tasks: M(D({}, n), {
-                            [o.n.WATCH_VIDEO]: M(D({}, a), {
-                                assets: l,
-                            }),
-                        }),
-                    }),
-                }),
-            }),
-        );
+        c({
+            ...t,
+            config: {
+                ...t.config,
+                taskConfigV2: { ...t.config.taskConfigV2, tasks: { ...a, [o.n.WATCH_VIDEO]: { ...s, assets: i } } },
+            },
+        });
     }
-
-    function en(e, t) {
+    function Q(e, n) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
-            var n, a;
-            H(
-                M(D({}, F), {
-                    config:
-                        ((n = F.config),
-                        (a = {
-                            [e]: t,
-                        }),
-                        (0, s.YW)(n)
-                            .with(
-                                {
-                                    configVersion: 2,
-                                },
-                                (e) =>
-                                    M(D({}, e), {
-                                        messages: D({}, e.messages, a),
-                                    }),
-                            )
-                            .exhaustive()),
-                }),
-            );
+            var a, s;
+            c({
+                ...t,
+                config:
+                    ((a = t.config),
+                    (s = { [e]: n }),
+                    (0, r.YW)(a)
+                        .with({ configVersion: 2 }, (e) => ({ ...e, messages: { ...e.messages, ...s } }))
+                        .exhaustive()),
+            });
         }
     }
-
-    function ea(e, t, n) {
+    function Y(e, n, a) {
         if ("name" === e || "nameWithArticle" === e) {
-            var a, l;
-            H(
-                M(D({}, F), {
-                    config:
-                        ((a = F.config),
-                        (l = {
-                            [e]: t,
-                        }),
-                        (0, s.YW)(a)
-                            .with(
-                                {
-                                    configVersion: 2,
-                                },
-                                (e) =>
-                                    M(D({}, e), {
-                                        rewardsConfig: M(D({}, e.rewardsConfig), {
-                                            rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                                t === n
-                                                    ? M(D({}, e), {
-                                                          messages: D({}, e.messages, l),
-                                                      })
-                                                    : e,
-                                            ),
-                                        }),
-                                    }),
-                            )
-                            .exhaustive()),
-                }),
-            );
+            var s, i;
+            c({
+                ...t,
+                config:
+                    ((s = t.config),
+                    (i = { [e]: n }),
+                    (0, r.YW)(s)
+                        .with({ configVersion: 2 }, (e) => ({
+                            ...e,
+                            rewardsConfig: {
+                                ...e.rewardsConfig,
+                                rewards: e.rewardsConfig.rewards.map((e, t) =>
+                                    t === a ? { ...e, messages: { ...e.messages, ...i } } : e,
+                                ),
+                            },
+                        }))
+                        .exhaustive()),
+            });
         }
     }
-
-    function el(e, t) {
-        H(
-            M(D({}, F), {
-                config: M(D({}, F.config), {
-                    colors: M(D({}, F.config.colors), {
-                        [e]: t,
-                    }),
-                }),
-            }),
-        );
+    function J(e, n) {
+        c({ ...t, config: { ...t.config, colors: { ...t.config.colors, [e]: n } } });
     }
-
-    function er() {
-        (0, h.tU)(F.config) && (0, I.hJ)(F, p.uF.GIFT_INVENTORY_FOR_YOU, p.uF.INTERNAL_PREVIEW_TOOL, !0);
+    function X() {
+        (0, x.tU)(t.config) && (0, R.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
-    let ei = l.useMemo(() => {
-            for (let [e, t] of Object.entries(F.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
-            return 10 * k.A.Seconds.MINUTE;
-        }, [F.config.taskConfigV2.tasks]),
-        es = l.useMemo(() => o.n.WATCH_VIDEO in F.config.taskConfigV2.tasks, [F.config.taskConfigV2.tasks]);
-    i()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
-    let eo = F.config.taskConfigV2.tasks[o.n.WATCH_VIDEO];
+    let Z = s.useMemo(() => {
+            for (let [e, n] of Object.entries(t.config.taskConfigV2.tasks)) if (null != n.target) return n.target;
+            return 10 * O.A.Seconds.MINUTE;
+        }, [t.config.taskConfigV2.tasks]),
+        ee = s.useMemo(() => o.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
+    l()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
+    let et = t.config.taskConfigV2.tasks[o.n.WATCH_VIDEO];
     return (0, a.jsxs)(m.IpV, {
-        className: P.kL,
+        className: w.kL,
         children: [
-            (0, a.jsx)(m.Heading, {
-                variant: "heading-lg/bold",
-                className: P.R_,
-                children: "Quest Preview Tool",
-            }),
+            (0, a.jsx)(m.Heading, { variant: "heading-lg/bold", className: w.R_, children: "Quest Preview Tool" }),
             (0, a.jsx)("div", {
-                className: P.OA,
-                children: (0, a.jsx)(T.A, {
+                className: w.OA,
+                children: (0, a.jsx)(N.A, {
                     onSelect: function (e) {
-                        $(e),
+                        K(e),
                             null == e ||
-                                (z(
+                                (U(
                                     (function (e) {
-                                        if (null == e.userStatus) return w.b.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return w.b.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return w.b.COMPLETED_100;
-                                        let t = (0, x.Yh)(e),
+                                        if (null == e.userStatus) return k.b.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return k.b.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return k.b.COMPLETED_100;
+                                        let t = (0, p.Yh)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? w.b.COMPLETED_100
+                                            ? k.b.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? w.b.COMPLETED_75
+                                              ? k.b.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? w.b.COMPLETED_50
+                                                ? k.b.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? w.b.COMPLETED_25
-                                                  : w.b.ENROLLED;
+                                                  ? k.b.COMPLETED_25
+                                                  : k.b.ENROLLED;
                                     })(e),
                                 ),
-                                H(e));
+                                c(e));
                     },
-                    quest: X,
+                    quest: H,
                 }),
             }),
-            (0, a.jsx)(m.Heading, {
-                variant: "heading-md/semibold",
-                className: P.fV,
-                children: "Task Config",
-            }),
+            (0, a.jsx)(m.Heading, { variant: "heading-md/semibold", className: w.fV, children: "Task Config" }),
             (0, a.jsx)("div", {
-                className: P.OA,
+                className: w.OA,
                 children: (0, a.jsx)(E.A, {
-                    taskDuration: ei,
-                    taskConfigV2: F.config.taskConfigV2,
+                    taskDuration: Z,
+                    taskConfigV2: t.config.taskConfigV2,
                     onSelect: function (e) {
-                        H(
-                            M(D({}, F), {
-                                config: M(D({}, F.config), {
-                                    taskConfigV2: e,
-                                }),
-                            }),
-                        );
+                        c({ ...t, config: { ...t.config, taskConfigV2: e } });
                     },
                 }),
             }),
-            (0, a.jsx)(m.Heading, {
-                variant: "heading-md/semibold",
-                className: P.fV,
-                children: "Messages",
-            }),
+            (0, a.jsx)(m.Heading, { variant: "heading-md/semibold", className: w.fV, children: "Messages" }),
             (0, a.jsxs)("div", {
-                className: P.OA,
+                className: w.OA,
                 children: [
-                    (0, a.jsx)(O.A, {
+                    (0, a.jsx)(y.A, {
                         title: "Quest Name",
                         assetKey: "questName",
-                        onMessageChange: en,
-                        initialValue: F.config.messages.questName,
+                        onMessageChange: Q,
+                        initialValue: t.config.messages.questName,
                     }),
-                    (0, a.jsx)(O.A, {
+                    (0, a.jsx)(y.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
-                        onMessageChange: en,
-                        initialValue: F.config.messages.gameTitle,
+                        onMessageChange: Q,
+                        initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(O.A, {
+                    (0, a.jsx)(y.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
-                        onMessageChange: en,
-                        initialValue: F.config.messages.gamePublisher,
+                        onMessageChange: Q,
+                        initialValue: t.config.messages.gamePublisher,
                     }),
-                    es &&
-                        (0, a.jsx)(O.A, {
+                    ee &&
+                        (0, a.jsx)(y.A, {
                             title: "Video Title",
                             assetKey: "videoTitle",
-                            onMessageChange: function (e, t) {
-                                let n = F.config.taskConfigV2.tasks,
-                                    a = n[o.n.WATCH_VIDEO];
-                                if (null == a) return;
-                                let l = M(D({}, a.messages), {
-                                    [e]: t,
+                            onMessageChange: function (e, n) {
+                                let a = t.config.taskConfigV2.tasks,
+                                    s = a[o.n.WATCH_VIDEO];
+                                if (null == s) return;
+                                let i = { ...s.messages, [e]: n };
+                                c({
+                                    ...t,
+                                    config: {
+                                        ...t.config,
+                                        taskConfigV2: {
+                                            ...t.config.taskConfigV2,
+                                            tasks: { ...a, [o.n.WATCH_VIDEO]: { ...s, messages: i } },
+                                        },
+                                    },
                                 });
-                                H(
-                                    M(D({}, F), {
-                                        config: M(D({}, F.config), {
-                                            taskConfigV2: M(D({}, F.config.taskConfigV2), {
-                                                tasks: M(D({}, n), {
-                                                    [o.n.WATCH_VIDEO]: M(D({}, a), {
-                                                        messages: l,
-                                                    }),
-                                                }),
-                                            }),
-                                        }),
-                                    }),
-                                );
                             },
-                            initialValue: null == eo ? void 0 : eo.messages.videoTitle,
+                            initialValue: et?.messages.videoTitle,
                         }),
                 ],
             }),
-            (0, a.jsx)(m.Heading, {
-                variant: "heading-md/semibold",
-                className: P.fV,
-                children: "Assets",
-            }),
+            (0, a.jsx)(m.Heading, { variant: "heading-md/semibold", className: w.fV, children: "Assets" }),
             (0, a.jsxs)("div", {
-                className: P.OA,
+                className: w.OA,
                 children: [
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Hero",
                         assetKey: "hero",
-                        onFileChange: ee,
-                        filters: B,
-                        initialValue: F.config.assets.hero,
+                        onFileChange: $,
+                        filters: P,
+                        initialValue: t.config.assets.hero,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
-                        onFileChange: ee,
-                        filters: B,
-                        initialValue: null != (e = F.config.assets.heroVideo) ? e : void 0,
+                        onFileChange: $,
+                        filters: P,
+                        initialValue: t.config.assets.heroVideo ?? void 0,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
-                        onFileChange: ee,
-                        filters: B,
-                        initialValue: F.config.assets.questBarHero,
+                        onFileChange: $,
+                        filters: P,
+                        initialValue: t.config.assets.questBarHero,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
-                        onFileChange: ee,
-                        filters: B,
-                        initialValue: null != (t = F.config.assets.questBarHeroVideo) ? t : void 0,
+                        onFileChange: $,
+                        filters: P,
+                        initialValue: t.config.assets.questBarHeroVideo ?? void 0,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Game Tile",
                         assetKey: "gameTile",
-                        onFileChange: ee,
-                        filters: [...U, "svg"],
-                        initialValue: F.config.assets.gameTile,
+                        onFileChange: $,
+                        filters: [...M, "svg"],
+                        initialValue: t.config.assets.gameTile,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Logotype",
                         assetKey: "logotype",
-                        onFileChange: ee,
-                        filters: [...L, "svg"],
-                        initialValue: F.config.assets.logotype,
+                        onFileChange: $,
+                        filters: [...D, "svg"],
+                        initialValue: t.config.assets.logotype,
                     }),
-                    es &&
+                    ee &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
-                                    onFileChange: et,
-                                    filters: B,
-                                    initialValue: null == eo ? void 0 : eo.assets.video.url,
+                                    onFileChange: q,
+                                    filters: P,
+                                    initialValue: et?.assets.video.url,
                                 }),
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
-                                    onFileChange: et,
-                                    filters: B,
-                                    initialValue: null == eo || null == (r = eo.assets.videoLowRes) ? void 0 : r.url,
+                                    onFileChange: q,
+                                    filters: P,
+                                    initialValue: et?.assets.videoLowRes?.url,
                                 }),
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
-                                    onFileChange: et,
-                                    filters: U,
-                                    initialValue: null == eo ? void 0 : eo.assets.video.thumbnail,
+                                    onFileChange: q,
+                                    filters: M,
+                                    initialValue: et?.assets.video.thumbnail,
                                 }),
                             ],
                         }),
                 ],
             }),
-            Z.map((e, t) =>
+            z.map((e, n) =>
                 (0, a.jsxs)(
                     "div",
                     {
                         children: [
                             (0, a.jsxs)(m.Heading, {
                                 variant: "heading-md/semibold",
-                                className: P.fV,
-                                children: ["Reward #", t + 1],
+                                className: w.fV,
+                                children: ["Reward #", n + 1],
                             }),
                             (0, a.jsxs)("div", {
-                                className: P.OA,
+                                className: w.OA,
                                 children: [
-                                    (0, a.jsx)(O.A, {
+                                    (0, a.jsx)(y.A, {
                                         title: "Name",
                                         assetKey: "name",
-                                        onMessageChange: (e, n) => ea(e, n, t),
+                                        onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(O.A, {
+                                    (0, a.jsx)(y.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
-                                        onMessageChange: (e, n) => ea(e, n, t),
+                                        onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
-                                    e.type !== c.l.VIRTUAL_CURRENCY &&
-                                        (0, a.jsx)(S.A, {
+                                    e.type !== d.l.VIRTUAL_CURRENCY &&
+                                        (0, a.jsx)(T.A, {
                                             title: "Asset",
                                             assetKey: "asset",
-                                            onFileChange: (e, n) =>
-                                                (function (e, t, n) {
+                                            onFileChange: (e, a) =>
+                                                (function (e, n, a) {
                                                     if ("asset" === e) {
-                                                        var a;
-                                                        H(
-                                                            M(D({}, F), {
-                                                                config:
-                                                                    ((a = F.config),
-                                                                    (0, s.YW)(a)
-                                                                        .with(
-                                                                            {
-                                                                                configVersion: 2,
-                                                                            },
-                                                                            (e) =>
-                                                                                M(D({}, e), {
-                                                                                    rewardsConfig: M(
-                                                                                        D({}, e.rewardsConfig),
-                                                                                        {
-                                                                                            rewards:
-                                                                                                e.rewardsConfig.rewards.map(
-                                                                                                    (e, a) =>
-                                                                                                        a === n
-                                                                                                            ? M(
-                                                                                                                  D(
-                                                                                                                      {},
-                                                                                                                      e,
-                                                                                                                  ),
-                                                                                                                  {
-                                                                                                                      asset: t,
-                                                                                                                      skuId: "",
-                                                                                                                  },
-                                                                                                              )
-                                                                                                            : e,
-                                                                                                ),
-                                                                                        },
-                                                                                    ),
-                                                                                }),
-                                                                        )
-                                                                        .exhaustive()),
-                                                            }),
-                                                        );
+                                                        var s;
+                                                        c({
+                                                            ...t,
+                                                            config:
+                                                                ((s = t.config),
+                                                                (0, r.YW)(s)
+                                                                    .with({ configVersion: 2 }, (e) => ({
+                                                                        ...e,
+                                                                        rewardsConfig: {
+                                                                            ...e.rewardsConfig,
+                                                                            rewards: e.rewardsConfig.rewards.map(
+                                                                                (e, t) =>
+                                                                                    t === a
+                                                                                        ? { ...e, asset: n, skuId: "" }
+                                                                                        : e,
+                                                                            ),
+                                                                        },
+                                                                    }))
+                                                                    .exhaustive()),
+                                                        });
                                                     }
-                                                })(e, n, t),
-                                            filters: B,
+                                                })(e, a, n),
+                                            filters: P,
                                             initialValue: e.asset,
                                         }),
                                     (0, a.jsxs)(m.BJc, {
@@ -636,7 +449,7 @@ function W() {
                                             (0, a.jsx)(m.Button, {
                                                 variant: "primary",
                                                 text: "Open Reward Modal",
-                                                onClick: er,
+                                                onClick: X,
                                             }),
                                         ],
                                     }),
@@ -644,189 +457,152 @@ function W() {
                             }),
                         ],
                     },
-                    t,
+                    n,
                 ),
             ),
             (0, a.jsx)(m.Heading, {
                 variant: "heading-md/semibold",
-                className: P.fV,
+                className: w.fV,
                 children: "Colors & Quest States",
             }),
             (0, a.jsxs)("div", {
-                className: P.OA,
+                className: w.OA,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: P.OA,
-                        style: {
-                            marginBottom: 0,
-                        },
+                        className: w.OA,
+                        style: { marginBottom: 0 },
                         children: [
-                            (0, a.jsx)(A.A, {
+                            (0, a.jsx)(C.A, {
                                 title: "Primary",
                                 colorKey: "primary",
-                                onChange: el,
-                                value: F.config.colors.primary,
+                                onChange: J,
+                                value: t.config.colors.primary,
                             }),
-                            (0, a.jsx)(A.A, {
+                            (0, a.jsx)(C.A, {
                                 title: "Secondary",
                                 colorKey: "secondary",
-                                onChange: el,
-                                value: F.config.colors.secondary,
+                                onChange: J,
+                                value: t.config.colors.secondary,
                             }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
-                        className: P.OA,
-                        children: (0, a.jsx)(N.A, {}),
-                    }),
-                    (0, a.jsx)(w.A, {
+                    (0, a.jsx)("div", { className: w.OA, children: (0, a.jsx)(I.A, {}) }),
+                    (0, a.jsx)(k.A, {
                         onChange: function (e) {
-                            switch ((z(e), e)) {
-                                case w.b.UNENROLLED:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: null,
-                                        }),
-                                    );
+                            switch ((U(e), e)) {
+                                case k.b.UNENROLLED:
+                                    c({ ...t, userStatus: null });
                                     break;
-                                case w.b.ENROLLED:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                enrolledAt: new Date().toISOString(),
-                                            }),
-                                        }),
-                                    );
+                                case k.b.ENROLLED:
+                                    c({ ...t, userStatus: L({ enrolledAt: new Date().toISOString() }) });
                                     break;
-                                case w.b.COMPLETED_25:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * ei,
-                                            }),
+                                case k.b.COMPLETED_25:
+                                    c({
+                                        ...t,
+                                        userStatus: L({
+                                            enrolledAt: new Date().toISOString(),
+                                            streamProgressSeconds: 0.25 * Z,
                                         }),
-                                    );
+                                    });
                                     break;
-                                case w.b.COMPLETED_50:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * ei,
-                                            }),
+                                case k.b.COMPLETED_50:
+                                    c({
+                                        ...t,
+                                        userStatus: L({
+                                            enrolledAt: new Date().toISOString(),
+                                            streamProgressSeconds: 0.5 * Z,
                                         }),
-                                    );
+                                    });
                                     break;
-                                case w.b.COMPLETED_75:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * ei,
-                                            }),
+                                case k.b.COMPLETED_75:
+                                    c({
+                                        ...t,
+                                        userStatus: L({
+                                            enrolledAt: new Date().toISOString(),
+                                            streamProgressSeconds: 0.75 * Z,
                                         }),
-                                    );
+                                    });
                                     break;
-                                case w.b.COMPLETED_100:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                completedAt: new Date().toISOString(),
-                                                enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ei,
-                                            }),
+                                case k.b.COMPLETED_100:
+                                    c({
+                                        ...t,
+                                        userStatus: L({
+                                            completedAt: new Date().toISOString(),
+                                            enrolledAt: new Date().toISOString(),
+                                            streamProgressSeconds: Z,
                                         }),
-                                    );
+                                    });
                                     break;
-                                case w.b.CLAIMED:
-                                    H(
-                                        M(D({}, F), {
-                                            userStatus: G({
-                                                claimedAt: new Date().toISOString(),
-                                                completedAt: new Date().toISOString(),
-                                                enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ei,
-                                            }),
+                                case k.b.CLAIMED:
+                                    c({
+                                        ...t,
+                                        userStatus: L({
+                                            claimedAt: new Date().toISOString(),
+                                            completedAt: new Date().toISOString(),
+                                            enrolledAt: new Date().toISOString(),
+                                            streamProgressSeconds: Z,
                                         }),
-                                    );
+                                    });
                             }
                         },
-                        value: K,
+                        value: u,
                     }),
                 ],
             }),
-            (0, a.jsx)(m.Heading, {
-                variant: "heading-lg/bold",
-                className: P.R_,
-                children: "Component Previews",
-            }),
+            (0, a.jsx)(m.Heading, { variant: "heading-lg/bold", className: w.R_, children: "Component Previews" }),
             (0, a.jsxs)("div", {
-                className: P.$$,
+                className: w.$$,
                 children: [
-                    (0, a.jsxs)(C.A, {
+                    (0, a.jsxs)(S.A, {
                         withBorder: !0,
                         children: [
-                            (0, a.jsx)(m.Heading, {
-                                variant: "heading-sm/semibold",
-                                children: "Quest Bar",
-                            }),
+                            (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Bar" }),
                             (0, a.jsxs)("div", {
-                                className: P.l4,
+                                className: w.l4,
                                 children: [
-                                    (null == (d = F.userStatus) ? void 0 : d.claimedAt) != null &&
+                                    t.userStatus?.claimedAt != null &&
                                         (0, a.jsx)(m.Text, {
                                             color: "text-subtle",
                                             variant: "text-sm/normal",
                                             children: "The Quest Bar is hidden when the user has claimed the reward.",
                                         }),
                                     (0, a.jsx)("div", {
-                                        className: P.ok,
+                                        className: w.ok,
                                         children: (0, a.jsx)(g.jY, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(b.A, {
-                                                children: (0, a.jsx)(f.Y, {
-                                                    quest: F,
-                                                }),
-                                            }),
+                                            children: (0, a.jsx)(f.A, { children: (0, a.jsx)(_.Y, { quest: t }) }),
                                         }),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsxs)(C.A, {
+                    (0, a.jsxs)(S.A, {
                         withBorder: !0,
                         children: [
-                            (0, a.jsx)(m.Heading, {
-                                variant: "heading-sm/semibold",
-                                children: "Quest Home Card",
-                            }),
+                            (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Home Card" }),
                             (0, a.jsx)(g.jY, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, a.jsx)(y.A, {
-                                    quest: F,
-                                    className: P.d,
-                                    questContent: p.uF.QUEST_HOME_DESKTOP,
+                                children: (0, a.jsx)(A.A, {
+                                    quest: t,
+                                    className: w.d,
+                                    questContent: h.uF.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0,
-                                    sourceQuestContent: p.uF.INTERNAL_PREVIEW_TOOL,
+                                    sourceQuestContent: h.uF.INTERNAL_PREVIEW_TOOL,
                                 }),
                             }),
                         ],
                     }),
-                    (0, a.jsxs)(C.A, {
+                    (0, a.jsxs)(S.A, {
                         withBorder: !0,
                         children: [
-                            (0, a.jsx)(m.Heading, {
-                                variant: "heading-sm/semibold",
-                                children: "Channel Call Header",
-                            }),
-                            (null == (u = F.userStatus) ? void 0 : u.claimedAt) != null &&
+                            (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Channel Call Header" }),
+                            t.userStatus?.claimedAt != null &&
                                 (0, a.jsx)(m.Text, {
                                     color: "text-subtle",
                                     variant: "text-sm/normal",
@@ -834,17 +610,17 @@ function W() {
                                         "The Quest Channel Call Header is hidden when the user has claimed the reward.",
                                 }),
                             (0, a.jsx)("div", {
-                                className: P.l4,
+                                className: w.l4,
                                 children: (0, a.jsx)(g.jY, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
                                     children: (0, a.jsx)("div", {
-                                        className: P.Jr,
+                                        className: w.Jr,
                                         children: (0, a.jsx)(v.A, {
                                             channelId: "123",
-                                            previewQuest: F,
-                                            isParticipatingOverride: q,
+                                            previewQuest: t,
+                                            isParticipatingOverride: G,
                                         }),
                                     }),
                                 }),
@@ -852,54 +628,42 @@ function W() {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: P.NY,
+                        className: w.NY,
                         children: (0, a.jsx)(m.dOG, {
                             label: "Is Participating:",
-                            checked: q,
+                            checked: G,
                             onChange: function (e) {
-                                Q(e);
+                                F(e);
                             },
                         }),
                     }),
-                    (0, a.jsxs)(C.A, {
+                    (0, a.jsxs)(S.A, {
                         withBorder: !0,
                         children: [
-                            (0, a.jsx)(m.Heading, {
-                                variant: "heading-sm/semibold",
-                                children: "Quest Card Embed",
-                            }),
-                            Y
-                                ? (0, a.jsx)(j.l, {
-                                      questId: F.id,
-                                  })
+                            (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Card Embed" }),
+                            V
+                                ? (0, a.jsx)(b.l, { questId: t.id })
                                 : (0, a.jsx)(
-                                      _.R,
+                                      j.R,
                                       {
-                                          quest: F,
-                                          location: p.uF.QUESTS_EMBED,
-                                          sourceQuestContent: p.uF.INTERNAL_PREVIEW_TOOL,
+                                          quest: t,
+                                          location: h.uF.QUESTS_EMBED,
+                                          sourceQuestContent: h.uF.INTERNAL_PREVIEW_TOOL,
                                       },
-                                      F.id,
+                                      t.id,
                                   ),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: P.NY,
-                        children: (0, a.jsx)(m.dOG, {
-                            label: "Invalid Quests Embed:",
-                            checked: Y,
-                            onChange: J,
-                        }),
+                        className: w.NY,
+                        children: (0, a.jsx)(m.dOG, { label: "Invalid Quests Embed:", checked: V, onChange: W }),
                     }),
-                    es &&
-                        (0, a.jsxs)(C.A, {
+                    ee &&
+                        (0, a.jsxs)(S.A, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
-                                (0, a.jsx)(m.Heading, {
-                                    variant: "heading-sm/semibold",
-                                    children: "Video Player",
-                                }),
+                                (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Video Player" }),
                                 (0, a.jsx)(m.Button, {
                                     variant: "primary",
                                     text: "Open Video Player Modal",
@@ -910,20 +674,16 @@ function W() {
                                                 n.e("23628"),
                                                 n.e("18728"),
                                             ]).then(n.bind(n, 717415));
-                                            return (t) => {
-                                                var n;
-                                                return (0, a.jsx)(
-                                                    e,
-                                                    M(D({}, t), {
-                                                        openStartClockTime: performance.now(),
-                                                        videoSessionId: "fake-quest-session-id",
-                                                        questId: null != (n = F.id) ? n : "fake-quest-id",
-                                                        overrideQuest: F,
-                                                        autoplay: !0,
-                                                        sourceQuestContent: p.uF.INTERNAL_PREVIEW_TOOL,
-                                                    }),
-                                                );
-                                            };
+                                            return (n) =>
+                                                (0, a.jsx)(e, {
+                                                    ...n,
+                                                    openStartClockTime: performance.now(),
+                                                    videoSessionId: "fake-quest-session-id",
+                                                    questId: t.id ?? "fake-quest-id",
+                                                    overrideQuest: t,
+                                                    autoplay: !0,
+                                                    sourceQuestContent: h.uF.INTERNAL_PREVIEW_TOOL,
+                                                });
                                         });
                                     },
                                 }),
@@ -934,54 +694,34 @@ function W() {
         ],
     });
 }
-class H extends l.Component {
+class F extends s.Component {
+    state = { error: null, renderKey: 0 };
     componentDidCatch(e) {
-        this.setState({
-            error: e,
-        });
+        this.setState({ error: e });
     }
+    handleResetState = () => {
+        this.setState((e) => ({ error: null, renderKey: e.renderKey + 1 }));
+    };
     render() {
         let { error: e, renderKey: t } = this.state;
         return null != e
             ? (0, a.jsxs)("div", {
-                  className: P.TA,
+                  className: w.TA,
                   children: [
-                      (0, a.jsx)(m.EpV, {
-                          className: P.Yw,
-                      }),
+                      (0, a.jsx)(m.EpV, { className: w.Yw }),
                       (0, a.jsx)(m.Heading, {
                           variant: "heading-lg/semibold",
                           children: "Something broke in the Quest preview tool :(",
                       }),
-                      (0, a.jsx)(m.Button, {
-                          variant: "secondary",
-                          text: "Reset",
-                          onClick: this.handleResetState,
-                      }),
+                      (0, a.jsx)(m.Button, { variant: "secondary", text: "Reset", onClick: this.handleResetState }),
                       null != e.message &&
                           (0, a.jsx)(m.ZpM, {
-                              className: P.Fx,
-                              children: (0, a.jsx)("code", {
-                                  className: P.gJ,
-                                  children: e.message,
-                              }),
+                              className: w.Fx,
+                              children: (0, a.jsx)("code", { className: w.gJ, children: e.message }),
                           }),
                   ],
               })
-            : (0, a.jsx)(W, {}, t);
-    }
-    constructor(...e) {
-        super(...e),
-            R(this, "state", {
-                error: null,
-                renderKey: 0,
-            }),
-            R(this, "handleResetState", () => {
-                this.setState((e) => ({
-                    error: null,
-                    renderKey: e.renderKey + 1,
-                }));
-            });
+            : (0, a.jsx)(G, {}, t);
     }
 }
-let K = H;
+let V = F;

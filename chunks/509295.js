@@ -1,18 +1,16 @@
-n.d(t, {
-    k: () => l,
-});
-var i = n(73153),
-    r = n(576420);
-async function l(e) {
-    let { tab: t, targetId: n, isFavorite: l } = e;
-    await i.h.dispatch({
+n.d(t, { k: () => s });
+var l = n(73153),
+    i = n(576420);
+async function s(e) {
+    let { tab: t, targetId: n, isFavorite: s } = e;
+    await l.h.dispatch({
         type: "OVERLAY_FRIENDS_WIDGET_SET_FAVORITE",
         tab: t,
         targetId: n,
-        isFavorite: l,
-        addedTimestampMs: l ? Date.now() : void 0,
+        isFavorite: s,
+        addedTimestampMs: s ? Date.now() : void 0,
     }),
-        l
-            ? (r.Ay.getState().setActiveTab(t), r.Ay.getState().markFavoriteAdded(n))
-            : r.Ay.getState().clearFavoriteAdded(n);
+        s
+            ? (i.Ay.getState().setActiveTab(t), i.Ay.getState().markFavoriteAdded(n))
+            : i.Ay.getState().clearFavoriteAdded(n);
 }

@@ -1,10 +1,8 @@
-n.d(t, {
-    o: () => s,
-});
+"use strict";
+n.d(t, { o: () => s });
 var r = n(64700),
     i = n(66455),
     a = n(348275);
-
 function s(e, t, n, s) {
     let o = r.useCallback(
             (e) => {
@@ -13,49 +11,49 @@ function s(e, t, n, s) {
             [s],
         ),
         l = e.props.ref,
-        c = (0, i.A)(l),
-        u = r.useCallback(
+        u = (0, i.A)(l),
+        c = r.useCallback(
             (e) => {
-                (0, a.cZ)(c.current, e), o(e);
+                (0, a.cZ)(u.current, e), o(e);
             },
-            [c, o],
+            [u, o],
         ),
         d = r.useRef(l);
     r.useEffect(() => {
         d.current = l;
     }, [l]);
-    let f = e.props,
-        p = f.buttonRef,
-        _ = r.useCallback(
+    let _ = e.props,
+        f = _.buttonRef,
+        p = r.useCallback(
             (e) => {
-                (0, a.cZ)(p, e), u(e);
+                (0, a.cZ)(f, e), c(e);
             },
-            [p, u],
+            [f, c],
         ),
-        h = f.innerRef,
+        h = _.innerRef,
         m = r.useCallback(
             (e) => {
-                (0, a.cZ)(h, e), u(e);
+                (0, a.cZ)(h, e), c(e);
             },
-            [h, u],
+            [h, c],
         ),
         g = {
-            onMouseEnter: (0, a.cy)(f.onMouseEnter, t.onMouseEnter),
-            onMouseLeave: (0, a.cy)(f.onMouseLeave, t.onMouseLeave),
-            onFocus: (0, a.cy)(f.onFocus, t.onFocus),
-            onBlur: (0, a.cy)(f.onBlur, t.onBlur),
-            onContextMenu: (0, a.cy)(f.onContextMenu, t.onContextMenu),
-            onClick: (0, a.cy)(f.onClick, t.onClick),
+            onMouseEnter: (0, a.cy)(_.onMouseEnter, t.onMouseEnter),
+            onMouseLeave: (0, a.cy)(_.onMouseLeave, t.onMouseLeave),
+            onFocus: (0, a.cy)(_.onFocus, t.onFocus),
+            onBlur: (0, a.cy)(_.onBlur, t.onBlur),
+            onContextMenu: (0, a.cy)(_.onContextMenu, t.onContextMenu),
+            onClick: (0, a.cy)(_.onClick, t.onClick),
         };
     return (
-        null != n && "" !== n && (g["aria-describedby"] = (0, a.iO)(f["aria-describedby"], n)),
+        null != n && "" !== n && (g["aria-describedby"] = (0, a.iO)(_["aria-describedby"], n)),
         "string" == typeof e.type
-            ? (g.ref = u)
+            ? (g.ref = c)
             : "buttonRef" in e.props
-              ? ((g.buttonRef = _), (g.ref = u))
+              ? ((g.buttonRef = p), (g.ref = c))
               : "innerRef" in e.props
-                ? ((g.innerRef = m), (g.ref = u))
-                : ((g.ref = u), (g.innerRef = u)),
+                ? ((g.innerRef = m), (g.ref = c))
+                : ((g.ref = c), (g.innerRef = c)),
         r.cloneElement(e, g)
     );
 }

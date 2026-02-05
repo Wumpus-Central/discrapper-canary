@@ -1,63 +1,47 @@
-n.d(t, {
-    A: () => g,
-    _: () => u,
-}),
-    n(896048);
+n.d(t, { A: () => h, _: () => u });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(397927),
     o = n(252452),
-    c = n(55029),
-    d = n(847568);
+    d = n(55029),
+    c = n(847568);
 let u = (e) => {
         let {
                 tabs: t,
                 panelClassName: n,
-                tabsClassName: l,
+                tabsClassName: s,
                 defaultTab: o,
-                onTabChange: c,
+                onTabChange: d,
                 orientation: u = "horizontal",
             } = e,
-            g = null != o ? o : t[0],
-            [h, x] = s.useState(null != g ? g : t[0]);
-        s.useEffect(() => {
-            x(g);
-        }, [g]);
-        let A = s.useMemo(() => {
-            let e = h.component;
-            return (0, i.jsx)(e, {});
+            h = o ?? t[0],
+            [A, g] = l.useState(h ?? t[0]);
+        l.useEffect(() => {
+            g(h);
         }, [h]);
+        let m = l.useMemo(() => {
+            let e = A.component;
+            return (0, i.jsx)(e, {});
+        }, [A]);
         return (0, i.jsxs)("div", {
-            className: r()(d.P5, {
-                [d.Vd]: "vertical" === u,
-            }),
+            className: a()(c.P5, { [c.Vd]: "vertical" === u }),
             children: [
-                (0, i.jsx)(a.VQ0, {
-                    className: r()(
-                        d.$H,
-                        {
-                            [d.Vd]: "vertical" === u,
-                        },
-                        l,
-                    ),
-                    selectedItem: h.setting,
+                (0, i.jsx)(r.VQ0, {
+                    className: a()(c.$H, { [c.Vd]: "vertical" === u }, s),
+                    selectedItem: A.setting,
                     onItemSelect: (e) => {
-                        var n;
-                        x(null != (n = t.find((t) => t.setting === e)) ? n : t[0]), null == c || c(e);
+                        g(t.find((t) => t.setting === e) ?? t[0]), d?.(e);
                     },
                     orientation: u,
                     type: "vertical" === u ? "side" : "top",
                     look: "brand",
                     children: t.map((e) =>
                         (0, i.jsx)(
-                            a.VQ0.Item,
+                            r.VQ0.Item,
                             {
-                                className: r()(d.Mf, {
-                                    [d.Vd]: "vertical" === u,
-                                    [d.wH]: e.setting === h.setting,
-                                }),
+                                className: a()(c.Mf, { [c.Vd]: "vertical" === u, [c.wH]: e.setting === A.setting }),
                                 id: e.setting,
                                 "aria-label": e.title,
                                 children: e.title,
@@ -66,38 +50,34 @@ let u = (e) => {
                         ),
                     ),
                 }),
-                (0, i.jsx)(a.VQ0.Panel, {
-                    id: h.setting,
-                    "aria-labelledby": h.title,
-                    className: r()(d.NM, n, {
-                        [d.Vd]: "vertical" === u,
-                    }),
-                    children: A,
+                (0, i.jsx)(r.VQ0.Panel, {
+                    id: A.setting,
+                    "aria-labelledby": A.title,
+                    className: a()(c.NM, n, { [c.Vd]: "vertical" === u }),
+                    children: m,
                 }),
             ],
         });
     },
-    g = (e) => {
-        var t;
+    h = (e) => {
         let {
-                tabs: n,
-                settingsSection: s,
+                tabs: t,
+                settingsSection: n,
                 parentSetting: l,
-                panelClassName: r,
+                panelClassName: s,
                 defaultTabIndex: a,
-                onTabChange: d,
-                orientation: g = "horizontal",
+                onTabChange: r,
+                orientation: c = "horizontal",
             } = e,
-            { viewableTabs: h, filteredTab: x } = (0, c.A)(n, l),
-            A = null != a ? n[a] : null,
-            p = null != (t = null != A ? A : x) ? t : h[0];
+            { viewableTabs: h, filteredTab: A } = (0, d.A)(t, l),
+            g = (null != a ? t[a] : null) ?? A ?? h[0];
         return (0, i.jsx)(u, {
             tabs: h,
-            orientation: g,
-            defaultTab: p,
+            orientation: c,
+            defaultTab: g,
             onTabChange: (e) => {
-                o.A.setSection(s, e), null == d || d(e);
+                o.A.setSection(n, e), r?.(e);
             },
-            panelClassName: r,
+            panelClassName: s,
         });
     };

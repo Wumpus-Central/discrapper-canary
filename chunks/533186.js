@@ -1,13 +1,11 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.reactFormatter = t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = void 0),
     (t.formatReact = o),
     (t.makeReactFormatter = l);
 let r = n(64700),
     i = n(941242),
     a = r.createElement;
-
 function s(e) {
     return class extends i.FormatBuilder {
         constructor() {
@@ -29,66 +27,18 @@ function s(e) {
         }
     };
 }
-
 function o(e, t, n) {
     return "string" == typeof e ? e : this.bindFormatValues(n, e, t);
 }
-
 function l(e) {
-    return {
-        format: o,
-        builder: s(e),
-    };
+    return { format: o, builder: s(e) };
 }
 (t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
-    $b: (e, t) =>
-        a(
-            "strong",
-            {
-                key: t,
-            },
-            e,
-        ),
-    $i: (e, t) =>
-        a(
-            "em",
-            {
-                key: t,
-            },
-            e,
-        ),
-    $del: (e, t) =>
-        a(
-            "del",
-            {
-                key: t,
-            },
-            e,
-        ),
-    $code: (e, t) =>
-        a(
-            "code",
-            {
-                key: t,
-            },
-            e,
-        ),
-    $link: (e, t, [n]) =>
-        a(
-            "a",
-            {
-                href: n,
-                key: t,
-            },
-            e,
-        ),
-    $p: (e, t) =>
-        a(
-            "p",
-            {
-                key: t,
-            },
-            e,
-        ),
+    $b: (e, t) => a("strong", { key: t }, e),
+    $i: (e, t) => a("em", { key: t }, e),
+    $del: (e, t) => a("del", { key: t }, e),
+    $code: (e, t) => a("code", { key: t }, e),
+    $link: (e, t, [n]) => a("a", { href: n, key: t }, e),
+    $p: (e, t) => a("p", { key: t }, e),
 }),
     (t.reactFormatter = l(t.DEFAULT_REACT_RICH_TEXT_ELEMENTS));

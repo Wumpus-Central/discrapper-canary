@@ -1,14 +1,10 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(896048);
-var l = n(64700),
-    r = n(684339);
-
-function i(e) {
-    let { location: t, videoSpinnerContext: n, userId: i, streamId: a, loading: s, paused: o = !1 } = e,
-        [c] = l.useState(() => new r.M(t));
-    l.useEffect(() => {
-        o || (s ? c.onSpinnerStarted() : null != a && c.trackSpinnerDuration(n, i, a));
-    }, [s, o, a, c, n, i]);
+n.d(t, { A: () => a });
+var i = n(64700),
+    l = n(684339);
+function a(e) {
+    let { location: t, videoSpinnerContext: n, userId: a, streamId: s, loading: r, paused: o = !1 } = e,
+        [c] = i.useState(() => new l.M(t));
+    i.useEffect(() => {
+        o || (r ? c.onSpinnerStarted() : null != s && c.trackSpinnerDuration(n, a, s));
+    }, [r, o, s, c, n, a]);
 }

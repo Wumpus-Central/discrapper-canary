@@ -287,40 +287,16 @@ e.exports = function (e) {
             "variables",
             "view",
         ],
-        a = {
-            className: "symbol",
-            begin: "\\$" + t.either(...i),
-        },
+        a = { className: "symbol", begin: "\\$" + t.either(...i) },
         s = {
             className: "number",
-            variants: [
-                {
-                    begin: "\\b(0[bB][01]+)",
-                },
-                {
-                    begin: "\\b(0[oO][0-7]+)",
-                },
-                {
-                    begin: e.C_NUMBER_RE,
-                },
-            ],
+            variants: [{ begin: "\\b(0[bB][01]+)" }, { begin: "\\b(0[oO][0-7]+)" }, { begin: e.C_NUMBER_RE }],
             relevance: 0,
         },
-        o = {
-            className: "subst",
-            begin: "\\$\\{",
-            end: "\\}",
-            keywords: r,
-            contains: [],
-        },
-        l = {
-            className: "string",
-            begin: "`",
-            end: "`",
-            contains: [e.BACKSLASH_ESCAPE, o],
-        };
+        o = { className: "subst", begin: "\\$\\{", end: "\\}", keywords: r, contains: [] },
+        l = { className: "string", begin: "`", end: "`", contains: [e.BACKSLASH_ESCAPE, o] };
     o.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, l, s, e.REGEXP_MODE];
-    let c = o.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
+    let u = o.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
     return {
         name: "ArcGIS Arcade",
         case_insensitive: !0,
@@ -341,13 +317,7 @@ e.exports = function (e) {
                         begin: n + "\\s*:",
                         returnBegin: !0,
                         relevance: 0,
-                        contains: [
-                            {
-                                className: "attr",
-                                begin: n,
-                                relevance: 0,
-                            },
-                        ],
+                        contains: [{ className: "attr", begin: n, relevance: 0 }],
                     },
                 ],
             },
@@ -367,19 +337,15 @@ e.exports = function (e) {
                             {
                                 className: "params",
                                 variants: [
-                                    {
-                                        begin: n,
-                                    },
-                                    {
-                                        begin: /\(\s*\)/,
-                                    },
+                                    { begin: n },
+                                    { begin: /\(\s*\)/ },
                                     {
                                         begin: /\(/,
                                         end: /\)/,
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: r,
-                                        contains: c,
+                                        contains: u,
                                     },
                                 ],
                             },
@@ -393,24 +359,12 @@ e.exports = function (e) {
                 end: /\{/,
                 excludeEnd: !0,
                 contains: [
-                    e.inherit(e.TITLE_MODE, {
-                        className: "title.function",
-                        begin: n,
-                    }),
-                    {
-                        className: "params",
-                        begin: /\(/,
-                        end: /\)/,
-                        excludeBegin: !0,
-                        excludeEnd: !0,
-                        contains: c,
-                    },
+                    e.inherit(e.TITLE_MODE, { className: "title.function", begin: n }),
+                    { className: "params", begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0, contains: u },
                 ],
                 illegal: /\[|%/,
             },
-            {
-                begin: /\$[(.]/,
-            },
+            { begin: /\$[(.]/ },
         ],
         illegal: /#(?!!)/,
     };

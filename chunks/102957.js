@@ -1,77 +1,44 @@
-n.d(t, {
-    r: () => b,
-}),
-    n(457529),
-    n(896048);
+"use strict";
+n.d(t, { r: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(342393),
     s = n(732955),
     o = n(397927),
     l = n(558179),
-    c = n(156312),
-    u = n(252561),
+    u = n(156312),
+    c = n(252561),
     d = n(825057);
-let f = {
+let _ = {
         DEFAULT: "Express Checkout Element - Default (No Config)",
         GPAY_FILTERED: "Express Checkout Element - Filtered for Google Pay",
         APPLE_PAY_FILTERED: "Express Checkout Element - Filtered for Apple Pay",
         APPLE_AND_GPAY_DISABLED: "Express Checkout Element - Google Pay and Apple Pay Disabled",
         CONFIGURABLE: "Express Checkout Element - Configurable",
     },
-    p = {
-        GPAY_FILTERED: {
-            wallets: {
-                googlePay: "always",
-                applePay: "never",
-            },
-        },
-        APPLE_PAY_FILTERED: {
-            wallets: {
-                googlePay: "never",
-                applePay: "always",
-            },
-        },
-        APPLE_AND_GPAY_DISABLED: {
-            wallets: {
-                googlePay: "never",
-                applePay: "never",
-            },
-        },
+    f = {
+        GPAY_FILTERED: { wallets: { googlePay: "always", applePay: "never" } },
+        APPLE_PAY_FILTERED: { wallets: { googlePay: "never", applePay: "always" } },
+        APPLE_AND_GPAY_DISABLED: { wallets: { googlePay: "never", applePay: "never" } },
     },
-    _ = {
-        appearance: {
-            theme: "flat",
-            variables: {
-                spacingUnit: "12px",
-                borderRadius: "36px",
-            },
-        },
-    },
+    p = { appearance: { theme: "flat", variables: { spacingUnit: "12px", borderRadius: "36px" } } },
     h = {
-        buttonType: {
-            googlePay: "pay",
-            applePay: "book",
-        },
-        buttonTheme: {
-            applePay: "black",
-            googlePay: "white",
-        },
+        buttonType: { googlePay: "pay", applePay: "book" },
+        buttonTheme: { applePay: "black", googlePay: "white" },
         buttonHeight: 40,
     },
     m = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined"),
     g = "``";
-
 function E() {
-    let [e, t] = i.useState(m(_)),
-        [n, c] = i.useState(_),
-        [p, E] = i.useState(m(h)),
-        [b, y] = i.useState(h),
-        [O, A] = i.useState(null),
-        [v, S] = i.useState(
-            (0, r.jsx)(u.a8, {
-                errorLabel: f.CONFIGURABLE,
-                elementOptions: _,
+    let [e, t] = i.useState(m(p)),
+        [n, u] = i.useState(p),
+        [f, E] = i.useState(m(h)),
+        [A, I] = i.useState(h),
+        [T, y] = i.useState(null),
+        [S, v] = i.useState(
+            (0, r.jsx)(c.a8, {
+                errorLabel: _.CONFIGURABLE,
+                elementOptions: p,
                 children: (0, r.jsx)(a.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log("ExpressCheckoutElement onConfirm event: ", e);
@@ -80,12 +47,12 @@ function E() {
                 }),
             }),
         ),
-        I = () => {
+        C = () => {
             try {
                 let t = JSON.parse(e),
-                    n = JSON.parse(p);
-                S(null),
-                    S(
+                    n = JSON.parse(f);
+                v(null),
+                    v(
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)(o.Text, {
@@ -93,8 +60,8 @@ function E() {
                                     className: d.cW,
                                     children: ["Element updated at: ", new Date().toString()],
                                 }),
-                                (0, r.jsx)(u.a8, {
-                                    errorLabel: f.CONFIGURABLE,
+                                (0, r.jsx)(c.a8, {
+                                    errorLabel: _.CONFIGURABLE,
                                     elementOptions: t,
                                     children: (0, r.jsx)(a.ExpressCheckoutElement, {
                                         onConfirm: (e) => {
@@ -106,12 +73,12 @@ function E() {
                             ],
                         }),
                     ),
-                    c(t),
-                    y(n),
-                    A(null);
+                    u(t),
+                    I(n),
+                    y(null);
             } catch (e) {
                 console.error("ConfigurableStripeExpressCheckoutElement - error parsing JSON: ", e),
-                    A("Error parsing JSON. Check console for more information.");
+                    y("Error parsing JSON. Check console for more information.");
             }
         };
     return (0, r.jsxs)("div", {
@@ -130,11 +97,9 @@ function E() {
                 variant: "text-md/normal",
                 className: d.cW,
                 children: [
-                    (0, r.jsx)("b", {
-                        children: "elements.options:",
-                    }),
+                    (0, r.jsx)("b", { children: "elements.options:" }),
                     (0, r.jsx)("br", {}),
-                    (0, r.jsx)(u.Tu, {
+                    (0, r.jsx)(c.Tu, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements-group.d.ts#L632",
                     }),
                 ],
@@ -153,15 +118,13 @@ function E() {
                 variant: "text-md/normal",
                 className: d.cW,
                 children: [
-                    (0, r.jsx)("b", {
-                        children: "expressCheckoutElement.options:",
-                    }),
+                    (0, r.jsx)("b", { children: "expressCheckoutElement.options:" }),
                     (0, r.jsx)("br", {}),
-                    (0, r.jsx)(u.Tu, {
+                    (0, r.jsx)(c.Tu, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements/express-checkout.d.ts#L314",
                     }),
                     (0, r.jsx)("br", {}),
-                    (0, r.jsx)(u.Tu, {
+                    (0, r.jsx)(c.Tu, {
                         href: "https://docs.stripe.com/elements/express-checkout-element/migration#customize-express-checkout-element",
                     }),
                 ],
@@ -171,38 +134,22 @@ function E() {
                 children: (0, r.jsx)(o.fs1, {
                     placeholder: "Stripe Express Checkout Element Options",
                     showCharacterCount: !0,
-                    value: p,
+                    value: f,
                     onChange: E,
                     rows: 7,
                 }),
             }),
-            null != O &&
-                (0, r.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    color: "text-feedback-critical",
-                    children: O,
-                }),
+            null != T &&
+                (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-feedback-critical", children: T }),
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: d.Ut,
-                children: (0, r.jsx)(s.$nd, {
-                    variant: "primary",
-                    size: "sm",
-                    text: "Apply Changes",
-                    onClick: I,
-                }),
+                children: (0, r.jsx)(s.$nd, { variant: "primary", size: "sm", text: "Apply Changes", onClick: C }),
             }),
+            (0, r.jsx)(o.Text, { variant: "text-md/normal", className: d.cW, children: "Current Element Options:" }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
-                className: d.cW,
-                children: "Current Element Options:",
-            }),
-            (0, r.jsx)(o.Text, {
-                variant: "text-md/normal",
-                children: (0, r.jsx)(l.A, {
-                    className: d.wD,
-                    children: "".concat(g, " ").concat(m(n), " ").concat(g),
-                }),
+                children: (0, r.jsx)(l.A, { className: d.wD, children: `${g} ${m(n)} ${g}` }),
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
@@ -211,34 +158,31 @@ function E() {
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: (0, r.jsx)(l.A, {
-                    className: d.wD,
-                    children: "".concat(g, " ").concat(m(b), " ").concat(g),
-                }),
+                children: (0, r.jsx)(l.A, { className: d.wD, children: `${g} ${m(A)} ${g}` }),
             }),
-            v,
+            S,
         ],
     });
 }
-let b = {
+let A = {
     name: "Stripe Components",
     id: "stripe-components",
     component: function () {
-        return (0, r.jsx)(c.PaymentContextProvider, {
+        return (0, r.jsx)(u.PaymentContextProvider, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
-            children: (0, r.jsxs)(u.wn, {
+            children: (0, r.jsxs)(c.wn, {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
                         children: "Stripe Express Checkout Buttons",
                     }),
-                    (0, r.jsx)(u.Hq, {
-                        label: f.DEFAULT,
+                    (0, r.jsx)(c.Hq, {
+                        label: _.DEFAULT,
                         children: (0, r.jsx)("div", {
-                            children: (0, r.jsx)(u.a8, {
-                                errorLabel: f.DEFAULT,
+                            children: (0, r.jsx)(c.a8, {
+                                errorLabel: _.DEFAULT,
                                 children: (0, r.jsx)(a.ExpressCheckoutElement, {
                                     onConfirm: (e) => {
                                         console.log("ExpressCheckoutElement onConfirm event: ", e);
@@ -249,9 +193,9 @@ let b = {
                         }),
                     }),
                     ["GPAY_FILTERED", "APPLE_PAY_FILTERED", "APPLE_AND_GPAY_DISABLED"].map((e) => {
-                        let t = f[e];
+                        let t = _[e];
                         return (0, r.jsx)(
-                            u.Hq,
+                            c.Hq,
                             {
                                 label: t,
                                 children: (0, r.jsxs)("div", {
@@ -265,16 +209,16 @@ let b = {
                                             variant: "text-md/normal",
                                             children: (0, r.jsx)(l.A, {
                                                 className: d.wD,
-                                                children: "".concat(g).concat(m(p[e]), " ").concat(g),
+                                                children: `${g}${m(f[e])} ${g}`,
                                             }),
                                         }),
-                                        (0, r.jsx)(u.a8, {
+                                        (0, r.jsx)(c.a8, {
                                             errorLabel: t,
                                             children: (0, r.jsx)(a.ExpressCheckoutElement, {
                                                 onConfirm: (e) => {
                                                     console.log("ExpressCheckoutElement onConfirm event: ", e);
                                                 },
-                                                options: p[e],
+                                                options: f[e],
                                             }),
                                         }),
                                     ],
@@ -283,10 +227,7 @@ let b = {
                             e,
                         );
                     }),
-                    (0, r.jsx)(u.Hq, {
-                        label: f.CONFIGURABLE,
-                        children: (0, r.jsx)(E, {}),
-                    }),
+                    (0, r.jsx)(c.Hq, { label: _.CONFIGURABLE, children: (0, r.jsx)(E, {}) }),
                 ],
             }),
         });

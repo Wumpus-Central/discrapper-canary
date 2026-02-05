@@ -1,322 +1,193 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(446912),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => N });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(311907),
     o = n(397927),
-    c = n(155718),
-    u = n(688810),
-    d = n(740075),
-    p = n(706727),
-    m = n(332173),
-    f = n(657331),
-    g = n(734057),
-    h = n(317525),
-    _ = n(71393),
-    b = n(287809),
-    A = n(763754);
+    d = n(155718),
+    c = n(688810),
+    u = n(740075),
+    m = n(706727),
+    _ = n(332173),
+    h = n(657331),
+    p = n(734057),
+    g = n(317525),
+    A = n(71393),
+    f = n(287809),
+    x = n(763754);
 n(827669);
-var y = n(985018),
-    v = n(998815);
-
-function x(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
+var E = n(985018),
+    C = n(998815);
+let I = { tag: "span", variant: "text-md/normal", color: "text-default" },
+    T = { className: r()("mention", C.lE) };
+function v(e) {
+    return (0, i.jsx)(o.Text, { ...I, color: "text-strong", children: e });
 }
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let E = {
-        tag: "span",
-        variant: "text-md/normal",
-        color: "text-default",
-    },
-    j = {
-        className: a()("mention", v.lE),
-    };
-
-function C(e) {
-    return (0, r.jsx)(
-        o.Text,
-        O(x({}, E), {
-            color: "text-strong",
-            children: e,
-        }),
-    );
-}
-let I = i.memo(function (e) {
-    var t, n, l, a, I, S;
-    let T,
-        { channel: N, messageId: P, interactionData: w } = e,
-        { analyticsLocations: R } = (0, u.Ay)(),
-        { onCopy: D, copyRef: L } = (0, d.A)(N, null == w || null == (t = w.application_command) ? void 0 : t.id),
-        M = (0, s.bG)([_.A], () => _.A.getGuild(N.guild_id), [N.guild_id]);
+let N = l.memo(function (e) {
+    let t,
+        { channel: n, messageId: a, interactionData: r } = e,
+        { analyticsLocations: N } = (0, c.Ay)(),
+        { onCopy: S, copyRef: b } = (0, u.A)(n, r?.application_command?.id),
+        y = (0, s.bG)([A.A], () => A.A.getGuild(n.guild_id), [n.guild_id]);
     if (
-        (i.useEffect(() => {
-            (null == w || (w.type === c.kc.CHAT && void 0 === w.application_command)) && p.S7(N.id, P);
-        }, [N.id, P, w]),
-        null == w)
+        (l.useEffect(() => {
+            (null == r || (r.type === d.kc.CHAT && void 0 === r.application_command)) && m.S7(n.id, a);
+        }, [n.id, a, r]),
+        null == r)
     )
-        T = (0, r.jsx)(o.y$y, {
-            type: o.y$y.Type.SPINNING_CIRCLE,
-            className: v.u1,
-        });
+        t = (0, i.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: C.u1 });
     else {
         let e = [],
-            t = Object.fromEntries(
-                (null != (n = null == (I = w.application_command) ? void 0 : I.options) ? n : []).map((e) => [
-                    e.name,
-                    e,
-                ]),
-            );
-        for (let n of null != (l = w.options) ? l : [])
+            s = Object.fromEntries((r.application_command?.options ?? []).map((e) => [e.name, e]));
+        for (let t of r.options ?? [])
             e = e.concat(
                 (function e(t) {
-                    var n, l, a, s, u, d, p;
-                    let _,
+                    let n,
                         {
-                            option: v,
-                            channel: I,
-                            guild: S,
-                            messageId: T,
-                            parentOptionKey: N,
-                            commandOptionSpec: P,
-                            sourceAnalyticsLocations: w,
+                            option: a,
+                            channel: r,
+                            guild: s,
+                            messageId: c,
+                            parentOptionKey: u,
+                            commandOptionSpec: m,
+                            sourceAnalyticsLocations: A,
                         } = t,
-                        R = null != N ? N + " " + v.name : v.name;
-                    if (v.type === c.n4.SUB_COMMAND || v.type === c.n4.SUB_COMMAND_GROUP) {
+                        C = null != u ? u + " " + a.name : a.name;
+                    if (a.type === d.n4.SUB_COMMAND || a.type === d.n4.SUB_COMMAND_GROUP) {
                         let t = [
-                                (0, r.jsxs)(
-                                    i.Fragment,
+                                (0, i.jsxs)(
+                                    l.Fragment,
                                     {
                                         children: [
                                             " ",
-                                            (0, r.jsx)(
-                                                o.Text,
-                                                O(x({}, E), {
-                                                    children:
-                                                        null != (l = null == P ? void 0 : P.name_localized)
-                                                            ? l
-                                                            : v.name,
-                                                }),
-                                            ),
+                                            (0, i.jsx)(o.Text, { ...I, children: m?.name_localized ?? a.name }),
                                         ],
                                     },
-                                    R,
+                                    C,
                                 ),
                             ],
-                            n = Object.fromEntries(
-                                null == (u = null != (a = null == P ? void 0 : P.options) ? a : [])
-                                    ? void 0
-                                    : u.map((e) => [e.name, e]),
-                            );
-                        for (let r of null != (s = v.options) ? s : [])
+                            n = Object.fromEntries((m?.options ?? [])?.map((e) => [e.name, e]));
+                        for (let i of a.options ?? [])
                             t = t.concat(
                                 e({
-                                    option: r,
-                                    channel: I,
-                                    guild: S,
-                                    messageId: T,
-                                    parentOptionKey: R,
-                                    commandOptionSpec: n[r.name],
-                                    sourceAnalyticsLocations: w,
+                                    option: i,
+                                    channel: r,
+                                    guild: s,
+                                    messageId: c,
+                                    parentOptionKey: C,
+                                    commandOptionSpec: n[i.name],
+                                    sourceAnalyticsLocations: A,
                                 }),
                             );
                         return t;
                     }
-                    let D = v.value;
-                    if (null != v.value)
-                        switch (v.type) {
-                            case c.n4.USER: {
-                                let e = v.value.toString(),
-                                    t = b.default.getUser(e);
+                    let N = a.value;
+                    if (null != a.value)
+                        switch (a.type) {
+                            case d.n4.USER: {
+                                let e = a.value.toString(),
+                                    t = f.default.getUser(e);
                                 if (null != t) {
-                                    let e = (0, A.FT)(t, I);
-                                    _ = (0, r.jsxs)(
-                                        m.A,
-                                        O(x({}, j), {
-                                            onClick: () =>
-                                                (0, f.openUserProfileModal)({
-                                                    userId: t.id,
-                                                    guildId: I.guild_id,
-                                                    channelId: I.id,
-                                                    messageId: T,
-                                                    sourceAnalyticsLocations: w,
-                                                }),
-                                            children: ["@", e.nick],
-                                        }),
-                                    );
+                                    let e = (0, x.FT)(t, r);
+                                    n = (0, i.jsxs)(_.A, {
+                                        ...T,
+                                        onClick: () =>
+                                            (0, h.openUserProfileModal)({
+                                                userId: t.id,
+                                                guildId: r.guild_id,
+                                                channelId: r.id,
+                                                messageId: c,
+                                                sourceAnalyticsLocations: A,
+                                            }),
+                                        children: ["@", e.nick],
+                                    });
                                 }
                                 break;
                             }
-                            case c.n4.CHANNEL: {
-                                let e = v.value.toString(),
-                                    t = g.A.getChannel(e);
-                                null != t &&
-                                    (_ = (0, r.jsxs)(
-                                        m.A,
-                                        O(x({}, j), {
-                                            children: ["#", t.name],
-                                        }),
-                                    ));
+                            case d.n4.CHANNEL: {
+                                let e = a.value.toString(),
+                                    t = p.A.getChannel(e);
+                                null != t && (n = (0, i.jsxs)(_.A, { ...T, children: ["#", t.name] }));
                                 break;
                             }
-                            case c.n4.ROLE: {
-                                let e = v.value.toString(),
-                                    t = null != S ? h.A.getRole(S.id, e) : void 0;
-                                null != t &&
-                                    (_ = (0, r.jsxs)(
-                                        m.A,
-                                        O(x({}, j), {
-                                            children: ["@", t.name],
-                                        }),
-                                    ));
+                            case d.n4.ROLE: {
+                                let e = a.value.toString(),
+                                    t = null != s ? g.A.getRole(s.id, e) : void 0;
+                                null != t && (n = (0, i.jsxs)(_.A, { ...T, children: ["@", t.name] }));
                                 break;
                             }
-                            case c.n4.MENTIONABLE: {
-                                let e = v.value.toString(),
-                                    t = null != S ? h.A.getRole(S.id, e) : void 0;
-                                if (null != t)
-                                    _ = (0, r.jsxs)(m.A, {
-                                        children: ["@", t.name],
-                                    });
+                            case d.n4.MENTIONABLE: {
+                                let e = a.value.toString(),
+                                    t = null != s ? g.A.getRole(s.id, e) : void 0;
+                                if (null != t) n = (0, i.jsxs)(_.A, { children: ["@", t.name] });
                                 else {
-                                    let t = b.default.getUser(e);
+                                    let t = f.default.getUser(e);
                                     if (null != t) {
-                                        let e = (0, A.FT)(t, I);
-                                        _ = (0, r.jsxs)(
-                                            m.A,
-                                            O(x({}, j), {
-                                                onClick: () =>
-                                                    (0, f.openUserProfileModal)({
-                                                        userId: t.id,
-                                                        guildId: I.guild_id,
-                                                        sourceAnalyticsLocations: w,
-                                                    }),
-                                                children: ["@", e.nick],
-                                            }),
-                                        );
+                                        let e = (0, x.FT)(t, r);
+                                        n = (0, i.jsxs)(_.A, {
+                                            ...T,
+                                            onClick: () =>
+                                                (0, h.openUserProfileModal)({
+                                                    userId: t.id,
+                                                    guildId: r.guild_id,
+                                                    sourceAnalyticsLocations: A,
+                                                }),
+                                            children: ["@", e.nick],
+                                        });
                                     }
                                 }
                                 break;
                             }
-                            case c.n4.ATTACHMENT:
-                                _ = C(y.intl.string(y.t.nONJVc));
+                            case d.n4.ATTACHMENT:
+                                n = v(E.intl.string(E.t.nONJVc));
                                 break;
                             default: {
-                                let e =
-                                    null == P || null == (d = P.choices) ? void 0 : d.find((e) => e.value === v.value);
-                                null != e && (D = null != (p = e.name_localized) ? p : e.name);
+                                let e = m?.choices?.find((e) => e.value === a.value);
+                                null != e && (N = e.name_localized ?? e.name);
                             }
                         }
                     return (
-                        null == _ && (_ = C(null == D ? void 0 : D.toString())),
+                        null == n && (n = v(N?.toString())),
                         [
-                            (0, r.jsxs)(
-                                i.Fragment,
+                            (0, i.jsxs)(
+                                l.Fragment,
                                 {
                                     children: [
-                                        (0, r.jsxs)(
-                                            o.Text,
-                                            O(x({}, E), {
-                                                children: [
-                                                    " ",
-                                                    null != (n = null == P ? void 0 : P.name_localized) ? n : v.name,
-                                                    ": ",
-                                                ],
-                                            }),
-                                        ),
-                                        _,
+                                        (0, i.jsxs)(o.Text, {
+                                            ...I,
+                                            children: [" ", m?.name_localized ?? a.name, ": "],
+                                        }),
+                                        n,
                                     ],
                                 },
-                                R,
+                                C,
                             ),
                         ]
                     );
                 })({
-                    option: n,
-                    channel: N,
-                    guild: M,
-                    messageId: P,
+                    option: t,
+                    channel: n,
+                    guild: y,
+                    messageId: a,
                     parentOptionKey: null,
-                    commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: R,
+                    commandOptionSpec: s[t.name],
+                    sourceAnalyticsLocations: N,
                 }),
             );
-        T = (0, r.jsxs)(r.Fragment, {
+        t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsxs)(
-                    o.Text,
-                    O(x({}, E), {
-                        children: [
-                            "/",
-                            null != (a = null == (S = w.application_command) ? void 0 : S.name_localized) ? a : w.name,
-                        ],
-                    }),
-                ),
+                (0, i.jsxs)(o.Text, { ...I, children: ["/", r.application_command?.name_localized ?? r.name] }),
                 e,
             ],
         });
     }
-    return (0, r.jsxs)("div", {
-        className: v.kL,
+    return (0, i.jsxs)("div", {
+        className: C.kL,
         onCopy: (e) => {
-            var t, n, r;
-            let i =
-                null != (t = null == (r = window) || null == (n = r.getSelection()) ? void 0 : n.toString()) ? t : "";
-            i.startsWith("/") && i.endsWith("\n") && D(e, w);
+            let t = window?.getSelection()?.toString() ?? "";
+            t.startsWith("/") && t.endsWith("\n") && S(e, r);
         },
-        children: [
-            (0, r.jsx)("div", {
-                className: v.YL,
-                ref: L,
-                children: T,
-            }),
-            (0, r.jsx)("div", {
-                className: v.xQ,
-            }),
-        ],
+        children: [(0, i.jsx)("div", { className: C.YL, ref: b, children: t }), (0, i.jsx)("div", { className: C.xQ })],
     });
 });

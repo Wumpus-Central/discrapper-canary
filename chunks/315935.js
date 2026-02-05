@@ -1,20 +1,15 @@
-n.r(t),
-    n.d(t, {
-        default: () => o,
-    }),
-    n(65821);
+"use strict";
+n.r(t), n.d(t, { default: () => o });
 var r = n(734057),
     i = n(383501),
     a = n(652215),
     s = n(746080);
-
 function o(e, t) {
     let n;
     switch (e) {
         case a.HAw.CHANNEL_OPENED_CLICKSTREAM:
-            var o, l;
-            let c = (n = t).channelId;
-            switch (c) {
+            let o = (n = t).channelId;
+            switch (o) {
                 case s.VV.CHANNEL_BROWSER:
                 case s.VV.GUILD_HOME:
                 case s.VV.GUILD_SHOP:
@@ -27,20 +22,11 @@ function o(e, t) {
                 case s.VV.GUILD_BOOSTS:
                     return;
             }
-            let u = null != (o = null == (l = r.A.getChannel(c)) ? void 0 : l.type) ? o : a.rbe.UNKNOWN;
-            return {
-                timestamp: new Date(),
-                rtc_state: i.A.getState(),
-                channelId: c,
-                channelType: u,
-            };
+            let l = r.A.getChannel(o)?.type ?? a.rbe.UNKNOWN;
+            return { timestamp: new Date(), rtc_state: i.A.getState(), channelId: o, channelType: l };
         case a.HAw.GUILD_VIEWED_CLICKSTREAM:
-            let d = (n = t).guildId;
-            return {
-                timestamp: new Date(),
-                rtc_state: i.A.getState(),
-                guildId: d,
-            };
+            let u = (n = t).guildId;
+            return { timestamp: new Date(), rtc_state: i.A.getState(), guildId: u };
         case a.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM:
             return (
                 (n = t),
@@ -65,6 +51,6 @@ function o(e, t) {
                 }
             );
         default:
-            throw Error("getClickstreamTrackEvent: Unknown event: ".concat(e));
+            throw Error(`getClickstreamTrackEvent: Unknown event: ${e}`);
     }
 }

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,53 +7,37 @@ var i = n(397927),
     s = n(145497),
     o = n(649640),
     l = n(985018),
-    c = n(838934);
-
-function u(e) {
+    u = n(838934);
+function c(e) {
     let { name: t, onRetry: n } = e,
-        u = (0, o.b2)(),
-        d = (0, o.n6)(u.hex()),
-        f = null != t ? t : l.intl.string(l.t.DmIUGK);
+        c = (0, o.b2)(),
+        d = (0, o.n6)(c.hex()),
+        _ = t ?? l.intl.string(l.t.DmIUGK);
     return (0, r.jsxs)("div", {
-        className: c.kL,
+        className: u.kL,
         children: [
+            (0, r.jsx)("div", { className: u.vK, style: { background: d } }),
             (0, r.jsx)("div", {
-                className: c.vK,
-                style: {
-                    background: d,
-                },
-            }),
-            (0, r.jsx)("div", {
-                className: c.H,
+                className: u.H,
                 children: (0, r.jsx)(a.Ay, {
                     mask: a.hW.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, r.jsx)("div", {
-                        className: c.R3,
-                        children: (0, r.jsx)(s.B$, {
-                            guildName: f,
-                            iconSize: 64,
-                        }),
+                        className: u.R3,
+                        children: (0, r.jsx)(s.B$, { guildName: _, iconSize: 64 }),
                     }),
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: c.wx,
+                className: u.wx,
                 children: [
-                    (0, r.jsx)(i.Heading, {
-                        variant: "heading-lg/medium",
-                        color: "text-strong",
-                        children: f,
-                    }),
+                    (0, r.jsx)(i.Heading, { variant: "heading-lg/medium", color: "text-strong", children: _ }),
                     (0, r.jsxs)(i.DUT, {
-                        className: c.z3,
+                        className: u.z3,
                         onClick: n,
                         children: [
-                            (0, r.jsx)(i.EpV, {
-                                size: "sm",
-                                color: "currentColor",
-                            }),
+                            (0, r.jsx)(i.EpV, { size: "sm", color: "currentColor" }),
                             (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-warning",

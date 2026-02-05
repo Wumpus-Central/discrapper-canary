@@ -1,123 +1,92 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(397927),
-    u = n(927813),
-    o = n(904054),
-    c = n(236972),
-    d = n(677202),
-    f = n(667920),
-    m = n(980504),
-    g = n(461555);
-let h = {
-        startPositionMs: 0,
-        endPositionMs: 2 * (10 * u.A.Millis.SECOND),
-        playheadPositionMs: 0,
-    },
-    v = i.memo(function (e) {
-        let { className: t, volume: n, disabled: a = !1, onChange: v } = e,
-            { audio: b } = (0, c.L)(),
-            [x, p] = i.useState(!1),
-            [j, y] = i.useState(h),
-            { playheadPositionMs: w, endPositionMs: N, startPositionMs: O } = j,
-            A = null != b,
-            C = N - O,
-            S = C > m.cT * u.A.Millis.SECOND;
-        i.useEffect(() => {
-            if (null != b)
+l.d(t, { A: () => g });
+var n = l(627968),
+    a = l(64700),
+    i = l(503698),
+    s = l.n(i),
+    r = l(397927),
+    u = l(927813),
+    o = l(904054),
+    d = l(236972),
+    c = l(677202),
+    m = l(667920);
+l(980504);
+var f = l(461555);
+let h = { startPositionMs: 0, endPositionMs: 2 * (10 * u.A.Millis.SECOND), playheadPositionMs: 0 },
+    g = a.memo(function (e) {
+        let { className: t, volume: l, disabled: i = !1, onChange: g } = e,
+            { audio: x } = (0, d.L)(),
+            [v, j] = a.useState(!1),
+            [p, N] = a.useState(h),
+            { playheadPositionMs: b, endPositionMs: y, startPositionMs: C } = p,
+            A = null != x,
+            w = y - C,
+            S = w > 5 * u.A.Millis.SECOND;
+        a.useEffect(() => {
+            if (null != x)
                 return (
-                    y({
-                        playheadPositionMs: 0,
-                        endPositionMs: b.duration * u.A.Millis.SECOND,
-                        startPositionMs: 0,
-                    }),
+                    N({ playheadPositionMs: 0, endPositionMs: x.duration * u.A.Millis.SECOND, startPositionMs: 0 }),
                     () => {
-                        b.pause(), p(!1);
+                        x.pause(), j(!1);
                     }
                 );
-        }, [b]);
-        let P = i.useCallback(
+        }, [x]);
+        let M = a.useCallback(
                 (e) => {
-                    null != b && (b.pause(), null != e && (b.currentTime = e), p(!1));
+                    null != x && (x.pause(), null != e && (x.currentTime = e), j(!1));
                 },
-                [b],
+                [x],
             ),
-            E = i.useCallback(() => {
-                if (null != b) {
-                    if (x) return void P();
-                    w >= N ? (b.currentTime = (0, f.fP)(O)) : (b.currentTime = (0, f.fP)(w)),
-                        (b.volume = (0, o.A)(n)),
-                        b.play(),
-                        p(!0);
+            E = a.useCallback(() => {
+                if (null != x) {
+                    if (v) return void M();
+                    b >= y ? (x.currentTime = (0, m.fP)(C)) : (x.currentTime = (0, m.fP)(b)),
+                        (x.volume = (0, o.A)(l)),
+                        x.play(),
+                        j(!0);
                 }
-            }, [b, N, P, w, x, O, n]),
-            M = i.useCallback(
+            }, [x, y, M, b, v, C, l]),
+            T = a.useCallback(
                 (e) => {
-                    y(e),
-                        null == v ||
-                            v({
-                                startMs: e.startPositionMs,
-                                endMs: e.endPositionMs,
-                            });
+                    N(e), g?.({ startMs: e.startPositionMs, endMs: e.endPositionMs });
                 },
-                [v],
+                [g],
             ),
-            k = i.useCallback(
+            k = a.useCallback(
                 (e) => {
-                    null != b && (b.currentTime = e);
+                    null != x && (x.currentTime = e);
                 },
-                [b],
+                [x],
             );
-        return (0, l.jsxs)("div", {
-            className: r()(
-                g.kL,
-                {
-                    [g.J_]: A,
-                    [g.r9]: !A || a,
-                },
-                t,
-            ),
+        return (0, n.jsxs)("div", {
+            className: s()(f.kL, { [f.J_]: A, [f.r9]: !A || i }, t),
             children: [
-                (0, l.jsxs)("div", {
-                    className: g.k0,
+                (0, n.jsxs)("div", {
+                    className: f.k0,
                     children: [
-                        (0, l.jsx)(s.DUT, {
-                            className: g.Rr,
+                        (0, n.jsx)(r.DUT, {
+                            className: f.Rr,
                             onClick: A ? E : void 0,
-                            children: x
-                                ? (0, l.jsx)(s.wFz, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: g.CJ,
-                                  })
-                                : (0, l.jsx)(s.udU, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: g.CJ,
-                                  }),
+                            children: v
+                                ? (0, n.jsx)(r.wFz, { size: "xs", color: "currentColor", className: f.CJ })
+                                : (0, n.jsx)(r.udU, { size: "xs", color: "currentColor", className: f.CJ }),
                         }),
-                        (0, l.jsx)("div", {
-                            className: g.aq,
-                            children: (0, l.jsx)(s.Text, {
-                                className: g.__invalid_duration,
+                        (0, n.jsx)("div", {
+                            className: f.aq,
+                            children: (0, n.jsx)(r.Text, {
+                                className: f.__invalid_duration,
                                 variant: "text-xs/normal",
                                 color: S ? "text-feedback-warning" : "text-feedback-positive",
-                                children: "".concat((0, f.fP)(C).toFixed(2), "s"),
+                                children: `${(0, m.fP)(w).toFixed(2)}s`,
                             }),
                         }),
                     ],
                 }),
-                (0, l.jsx)(d.A, {
-                    playing: x,
+                (0, n.jsx)(c.A, {
+                    playing: v,
                     onPlaybackChange: k,
-                    onPausePlayback: P,
-                    onChangePosition: M,
-                    disabled: a,
+                    onPausePlayback: M,
+                    onChangePosition: T,
+                    disabled: i,
                 }),
             ],
         });

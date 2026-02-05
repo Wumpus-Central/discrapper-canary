@@ -1,35 +1,16 @@
-a.d(t, {
-    r: () => r,
-});
-var s = a(627968),
-    n = a(397927),
-    i = a(985018),
-    c = a(991635);
-
-function r(e) {
+n.d(t, { r: () => l });
+var s = n(627968),
+    i = n(397927),
+    a = n(985018),
+    r = n(991635);
+function l(e) {
     let { rewardName: t } = e;
-    return (0, s.jsx)(n.Text, {
+    return (0, s.jsx)(i.Text, {
         variant: "text-xs/medium",
-        className: c.tI,
-        children: i.intl.format(i.t.loyTil, {
-            rewardName: (e, a) =>
-                (0, s.jsx)(
-                    n.Text,
-                    {
-                        variant: "text-xs/medium",
-                        className: c.Ht,
-                        children: t,
-                    },
-                    a,
-                ),
-            verticalDivider: (e, t) =>
-                (0, s.jsx)(
-                    "div",
-                    {
-                        className: c.yF,
-                    },
-                    t,
-                ),
+        className: r.tI,
+        children: a.intl.format(a.t.loyTil, {
+            rewardName: (e, n) => (0, s.jsx)(i.Text, { variant: "text-xs/medium", className: r.Ht, children: t }, n),
+            verticalDivider: (e, t) => (0, s.jsx)("div", { className: r.yF }, t),
         }),
     });
 }

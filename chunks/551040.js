@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -40,57 +41,22 @@ var n = r(64700),
                                 borderBottomColor: "rgba(0,0,0,0.15)",
                             },
                         },
-                        "hide-triangle": {
-                            triangle: {
-                                display: "none",
-                            },
-                            triangleShadow: {
-                                display: "none",
-                            },
-                        },
+                        "hide-triangle": { triangle: { display: "none" }, triangleShadow: { display: "none" } },
                         "top-left-triangle": {
-                            triangle: {
-                                top: "-14px",
-                                left: "10px",
-                            },
-                            triangleShadow: {
-                                top: "-16px",
-                                left: "9px",
-                            },
+                            triangle: { top: "-14px", left: "10px" },
+                            triangleShadow: { top: "-16px", left: "9px" },
                         },
                         "top-right-triangle": {
-                            triangle: {
-                                top: "-14px",
-                                right: "10px",
-                            },
-                            triangleShadow: {
-                                top: "-16px",
-                                right: "9px",
-                            },
+                            triangle: { top: "-14px", right: "10px" },
+                            triangleShadow: { top: "-16px", right: "9px" },
                         },
                         "bottom-left-triangle": {
-                            triangle: {
-                                top: "35px",
-                                left: "10px",
-                                transform: "rotate(180deg)",
-                            },
-                            triangleShadow: {
-                                top: "37px",
-                                left: "9px",
-                                transform: "rotate(180deg)",
-                            },
+                            triangle: { top: "35px", left: "10px", transform: "rotate(180deg)" },
+                            triangleShadow: { top: "37px", left: "9px", transform: "rotate(180deg)" },
                         },
                         "bottom-right-triangle": {
-                            triangle: {
-                                top: "35px",
-                                right: "10px",
-                                transform: "rotate(180deg)",
-                            },
-                            triangleShadow: {
-                                top: "37px",
-                                right: "9px",
-                                transform: "rotate(180deg)",
-                            },
+                            triangle: { top: "35px", right: "10px", transform: "rotate(180deg)" },
+                            triangleShadow: { top: "37px", right: "9px", transform: "rotate(180deg)" },
                         },
                     },
                     void 0 === p ? {} : p,
@@ -104,33 +70,15 @@ var n = r(64700),
                 },
             ),
             h = function (e, t) {
-                return o(
-                    {
-                        hex: e,
-                        source: "hex",
-                    },
-                    t,
-                );
+                return o({ hex: e, source: "hex" }, t);
             };
         return n.createElement(
             "div",
-            {
-                style: f.card,
-                className: "github-picker " + (void 0 === d ? "" : d),
-            },
-            n.createElement("div", {
-                style: f.triangleShadow,
-            }),
-            n.createElement("div", {
-                style: f.triangle,
-            }),
+            { style: f.card, className: "github-picker " + (void 0 === d ? "" : d) },
+            n.createElement("div", { style: f.triangleShadow }),
+            n.createElement("div", { style: f.triangle }),
             (0, l.A)(r, function (e) {
-                return n.createElement(c.A, {
-                    color: e,
-                    key: e,
-                    onClick: h,
-                    onSwatchHover: a,
-                });
+                return n.createElement(c.A, { color: e, key: e, onClick: h, onSwatchHover: a });
             }),
         );
     };

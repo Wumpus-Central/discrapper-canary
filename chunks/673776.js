@@ -1,3 +1,4 @@
+"use strict";
 var n = r(868361),
     i = r(63996),
     o = r(573750),
@@ -5,7 +6,6 @@ var n = r(868361),
     s = a && o.isBrowser("Firefox < 29"),
     u = n.hasCommandModifier,
     c = n.isCtrlKeyCommand;
-
 function l(t) {
     return (a && t.altKey) || c(t);
 }

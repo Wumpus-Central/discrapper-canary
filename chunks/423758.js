@@ -1,3 +1,4 @@
+"use strict";
 var n = r(724039),
     i = r(719609),
     o = r(64700),
@@ -14,12 +15,7 @@ t.exports = (function (t) {
             })((e = t.call.apply(t, [this].concat(a)) || this))),
             (i = void 0),
             (n = "leaf") in r
-                ? Object.defineProperty(r, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
+                ? Object.defineProperty(r, n, { value: i, enumerable: !0, configurable: !0, writable: !0 })
                 : (r[n] = i),
             e
         );

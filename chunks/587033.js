@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(205662),
     a = r(237190),
@@ -32,20 +31,8 @@ var n = r(64700),
                 },
             });
         return (0, n.isValidElement)(p)
-            ? n.cloneElement(
-                  p,
-                  i({}, p.props, {
-                      style: i({}, p.props.style, d.grid),
-                  }),
-              )
-            : n.createElement("div", {
-                  style: d.grid,
-              });
+            ? n.cloneElement(p, i({}, p.props, { style: i({}, p.props.style, d.grid) }))
+            : n.createElement("div", { style: d.grid });
     };
-l.defaultProps = {
-    size: 8,
-    white: "transparent",
-    grey: "rgba(0,0,0,.08)",
-    renderers: {},
-};
+l.defaultProps = { size: 8, white: "transparent", grey: "rgba(0,0,0,.08)", renderers: {} };
 let s = l;

@@ -1,5 +1,3 @@
-n.d(t, {
-    Y: () => l,
-});
-var r,
-    l = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), r);
+n.d(t, { Y: () => l });
+var i,
+    l = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), i);

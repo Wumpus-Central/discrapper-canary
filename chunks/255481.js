@@ -1,76 +1,61 @@
-r.d(t, {
-    A: () => u,
-}),
-    r(896048);
-var n = r(627968),
-    l = r(64700),
-    s = r(141931),
-    i = r(397927),
-    a = r(430452),
-    c = r(830012),
-    o = r(920281),
-    d = r(688465),
-    f = r(977529);
-
-function u() {
+s.d(t, { A: () => f });
+var r = s(627968),
+    i = s(64700),
+    n = s(141931),
+    l = s(397927),
+    a = s(430452),
+    o = s(830012),
+    c = s(920281),
+    d = s(688465),
+    u = s(977529);
+function f() {
     let [{ selectedSource: e }] = (0, d.tS)(),
-        [t, r] = l.useState(null),
-        [u, h] = l.useState(!0);
+        [t, s] = i.useState(null),
+        [f, h] = i.useState(!0);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             !(async function () {
-                var t, n;
                 if (null == e) return;
-                if ((h(!0), null == (n = e.id) ? void 0 : n.startsWith(s.fS.CAMERA))) {
-                    "url" in e && (r(e.url), h(!1));
+                if ((h(!0), e.id?.startsWith(n.fS.CAMERA))) {
+                    "url" in e && (s(e.url), h(!1));
                     return;
                 }
                 if ("url" in e && "" !== e.url) {
-                    r(e.url), h(!1);
+                    s(e.url), h(!1);
                     return;
                 }
-                let l = "windowHandle" in e ? e.windowHandle : void 0;
-                if (null != l) {
+                let t = "windowHandle" in e ? e.windowHandle : void 0;
+                if (null != t) {
                     try {
                         let e = a.A.getMediaEngine(),
-                            t = await e.getSingleWindowPreview(l, 960, 540);
-                        if (null != t) {
-                            r(t.url), h(!1);
+                            r = await e.getSingleWindowPreview(t, 960, 540);
+                        if (null != r) {
+                            s(r.url), h(!1);
                             return;
                         }
-                    } catch (e) {}
-                    let { windowSources: e } = await (0, o.d)({
-                            width: 960,
-                            height: 540,
-                            types: [s.fS.WINDOW],
-                        }),
-                        t = e.find((e) => (0, c.A)(e.id, l));
-                    null != t && (r(t.url), h(!1));
+                    } catch {}
+                    let { windowSources: e } = await (0, c.d)({ width: 960, height: 540, types: [n.fS.WINDOW] }),
+                        r = e.find((e) => (0, o.A)(e.id, t));
+                    null != r && (s(r.url), h(!1));
                     return;
                 }
-                let { screenSources: i, windowSources: d } = await (0, o.d)({
+                let { screenSources: r, windowSources: i } = await (0, c.d)({
                         width: 960,
                         height: 540,
-                        types: [s.fS.SCREEN, s.fS.WINDOW],
+                        types: [n.fS.SCREEN, n.fS.WINDOW],
                     }),
-                    f =
-                        null !=
-                        (t = d.find((t) => ("windowHandle" in e ? (0, c.A)(t.id, e.windowHandle) : t.id === e.id)))
-                            ? t
-                            : i.find((t) => e.id === t.id);
-                null != f && (r(f.url), h(!1));
+                    l =
+                        i.find((t) => ("windowHandle" in e ? (0, o.A)(t.id, e.windowHandle) : t.id === e.id)) ??
+                        r.find((t) => e.id === t.id);
+                null != l && (s(l.url), h(!1));
             })();
         }, [e]),
-        (0, n.jsx)("div", {
-            className: f.z,
-            children: u
-                ? (0, n.jsx)(i.y$y, {})
+        (0, r.jsx)("div", {
+            className: u.z,
+            children: f
+                ? (0, r.jsx)(l.y$y, {})
                 : null != t
-                  ? (0, n.jsx)("img", {
-                        src: t,
-                        alt: "",
-                        className: f.Q,
-                    })
+                  ? (0, r.jsx)("img", { src: t, alt: "", className: u.Q })
                   : null,
         })
     );

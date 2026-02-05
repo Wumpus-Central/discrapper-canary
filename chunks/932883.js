@@ -1,44 +1,27 @@
-n.d(t, {
-    GM: () => h,
-    Hi: () => S,
-    Ml: () => y,
-    P3: () => v,
-    Ut: () => O,
-    X8: () => b,
-    op: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { GM: () => h, Hi: () => v, Ml: () => I, P3: () => S, Ut: () => T, X8: () => A, op: () => m });
 var r = n(627968),
     i = n(64700),
     a = n(835245),
     s = n(311907),
     o = n(964486),
     l = n(919796),
-    c = n(954571),
-    u = n(320697),
+    u = n(954571),
+    c = n(320697),
     d = n(394953),
-    f = n(849077),
-    p = n(652215);
-let _ = i.createContext(""),
+    _ = n(849077),
+    f = n(652215);
+let p = i.createContext(""),
     h = (e) => {
         let { children: t } = e,
             [n] = i.useState(() => (0, a.A)());
-        return (0, r.jsx)(_.Provider, {
-            value: n,
-            children: t,
-        });
+        return (0, r.jsx)(p.Provider, { value: n, children: t });
     },
-    m = () => i.useContext(_);
-
+    m = () => i.useContext(p);
 function g(e) {
     let { variant: t, viewId: n, entrypoint: r } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_OPENED, {
-        inbox_variant: t,
-        inbox_entrypoint: r,
-        view_id: n,
-    });
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: r, view_id: n });
 }
-
 function E(e) {
     let {
         timeToLoad: t,
@@ -50,7 +33,7 @@ function E(e) {
         unreadMessageItemsCount: o,
         unreadMentionsCount: l,
     } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_READY, {
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_READY, {
         time_to_load: t,
         unreads_count: n,
         total_messages_count: r,
@@ -61,7 +44,7 @@ function E(e) {
         unread_mentions_count: l,
     });
 }
-var b = (function (e) {
+var A = (function (e) {
     return (
         (e.CLICK = "click"),
         (e.CONTEXT_MENU = "context_menu"),
@@ -71,33 +54,25 @@ var b = (function (e) {
         e
     );
 })({});
-
-function y(e) {
-    var t, n;
-    let { message: r, interactionType: i, viewId: a } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
-        interaction_type: i,
-        message_id: r.id,
-        channel_id: r.channel_id,
-        author_id: r.author.id,
-        message_type: r.type,
-        view_id: a,
-        mentioned_game_ids: null != (t = null == (n = r.mentionGames) ? void 0 : n.map((e) => e.id)) ? t : [],
-    });
-}
-
-function O(e) {
-    let { section: t, enabled: n, viewId: r } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
-        section: t,
-        enabled: n,
+function I(e) {
+    let { message: t, interactionType: n, viewId: r } = e;
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+        interaction_type: n,
+        message_id: t.id,
+        channel_id: t.channel_id,
+        author_id: t.author.id,
+        message_type: t.type,
         view_id: r,
+        mentioned_game_ids: t.mentionGames?.map((e) => e.id) ?? [],
     });
 }
-
-function A(e) {
+function T(e) {
+    let { section: t, enabled: n, viewId: r } = e;
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: r });
+}
+function y(e) {
     let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: r, totalItemsCount: i, viewId: a } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
         unreads_count: t,
         total_messages_count: n,
         unread_items_count: r,
@@ -105,8 +80,7 @@ function A(e) {
         view_id: a,
     });
 }
-
-function v(e) {
+function S(e) {
     let {
         timeToLoad: t,
         messagesCount: n,
@@ -116,86 +90,73 @@ function v(e) {
         loadingTrigger: s,
         viewId: o,
     } = e;
-    c.default.track(p.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
+    u.default.track(f.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
         time_to_load: t,
         messages_count: n,
         unread_messages_count: r,
         channels_fetched: i,
         mentions_fetched: a,
-        loading_trigger: null != s ? s : f.VA.UNKNOWN,
+        loading_trigger: s ?? _.VA.UNKNOWN,
         view_id: o,
     });
 }
-
-function S(e) {
+function v(e) {
     let {
             notificationCenterVariant: t,
             entrypoint: n,
             messages: r,
             unreadMessages: a,
-            viewId: c,
-            messagesByCategory: p,
+            viewId: u,
+            messagesByCategory: f,
         } = e,
-        _ = i.useRef(null),
+        p = i.useRef(null),
         h = i.useRef(!1),
-        m = (0, s.bG)([u.A], () => u.A.isLoading),
-        b = (0, l.A)(m),
-        y = (0, s.bG)([u.A], () => {
-            var e;
-            return null != (e = u.A.currentRequestAnalyticsPayload) ? e : null;
-        }),
-        { unreadRecentMentionsCount: O, unreadChannelIds: S } = (0, d.U4)();
+        m = (0, s.bG)([c.A], () => c.A.isLoading),
+        A = (0, l.A)(m),
+        I = (0, s.bG)([c.A], () => c.A.currentRequestAnalyticsPayload ?? null),
+        { unreadRecentMentionsCount: T, unreadChannelIds: v } = (0, d.U4)();
     (0, o.Ay)(() => {
-        g({
-            variant: t,
-            viewId: c,
-            entrypoint: n,
-        }),
-            (_.current = Date.now());
+        g({ variant: t, viewId: u, entrypoint: n }), (p.current = Date.now());
     }),
         i.useEffect(() => {
-            if (
-                null != _.current &&
-                ((null == r ? void 0 : r.length) > 0 || (null == a ? void 0 : a.length) > 0) &&
-                !h.current
-            ) {
-                let e = Date.now() - _.current;
+            if (null != p.current && (r?.length > 0 || a?.length > 0) && !h.current) {
+                let e = Date.now() - p.current;
                 (h.current = !0),
                     E({
                         timeToLoad: e,
                         unreadsCount: a.length,
                         totalMessagesCount: r.length,
-                        unreadsBadgeMentionCount: O,
-                        unreadsBadgeChannelCount: S.length,
-                        unreadMessageItemsCount: p.UNREAD.length,
-                        unreadMentionsCount: p.UNREAD.filter((e) => e.every((e) => e.kind === f.yL.MENTION)).length,
-                        viewId: c,
+                        unreadsBadgeMentionCount: T,
+                        unreadsBadgeChannelCount: v.length,
+                        unreadMessageItemsCount: f.UNREAD.length,
+                        unreadMentionsCount: f.UNREAD.filter((e) => e.every((e) => e.kind === _.yL.MENTION)).length,
+                        viewId: u,
                     });
             }
-        }, [r, a, c, S, O, p]),
+        }, [r, a, u, v, T, f]),
         i.useEffect(() => {
-            let e = (null == y ? void 0 : y.loadingTrigger) === f.VA.AUTO_LOAD;
-            if (null != y && !0 === b && !1 === m && !e) {
-                var t;
-                v({
-                    timeToLoad: null == y ? void 0 : y.timeToLoad,
+            let e = I?.loadingTrigger === _.VA.AUTO_LOAD;
+            null == I ||
+                !0 !== A ||
+                !1 !== m ||
+                e ||
+                S({
+                    timeToLoad: I?.timeToLoad,
                     messagesCount: r.length,
                     unreadMessagesCount: a.length,
-                    loadingTrigger: null != (t = null == y ? void 0 : y.loadingTrigger) ? t : f.VA.UNKNOWN,
-                    viewId: null == y ? void 0 : y.viewId,
-                    channelsFetched: null == y ? void 0 : y.channelsFetched,
-                    mentionsFetched: null == y ? void 0 : y.mentionsFetched,
+                    loadingTrigger: I?.loadingTrigger ?? _.VA.UNKNOWN,
+                    viewId: I?.viewId,
+                    channelsFetched: I?.channelsFetched,
+                    mentionsFetched: I?.mentionsFetched,
                 });
-            }
-        }, [m, r, a, c, b, y]),
+        }, [m, r, a, u, A, I]),
         (0, o.l0)(() => {
-            var e, t;
-            A({
-                unreadsCount: null != (e = null == a ? void 0 : a.length) ? e : 0,
-                totalMessagesCount: null != (t = null == r ? void 0 : r.length) ? t : 0,
-                unreadItemsCount: p.UNREAD.length,
-                totalItemsCount: p.TODAY.length + p.YESTERDAY.length + p.OLDER.length,
-                viewId: c,
+            y({
+                unreadsCount: a?.length ?? 0,
+                totalMessagesCount: r?.length ?? 0,
+                unreadItemsCount: f.UNREAD.length,
+                totalItemsCount: f.TODAY.length + f.YESTERDAY.length + f.OLDER.length,
+                viewId: u,
             });
         });
 }

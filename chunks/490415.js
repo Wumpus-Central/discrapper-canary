@@ -1,82 +1,21 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(961350);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+n.d(t, { A: () => a });
+var i = n(627968),
+    s = n(64700),
+    r = n(961350);
 function a(e) {
-    return class extends i.Component {
+    return class extends s.Component {
+        state = { isAuthenticated: r.default.isAuthenticated() };
         componentDidMount() {
-            l.default.addChangeListener(this.onStoreChange);
+            r.default.addChangeListener(this.onStoreChange);
         }
         componentWillUnmount() {
-            l.default.removeChangeListener(this.onStoreChange);
+            r.default.removeChangeListener(this.onStoreChange);
         }
+        onStoreChange = () => {
+            this.setState({ isAuthenticated: r.default.isAuthenticated() });
+        };
         render() {
-            var t, n;
-            return (0, r.jsx)(
-                e,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                s(e, t, n[t]);
-                            });
-                    }
-                    return e;
-                })({}, this.props)),
-                (n = n =
-                    {
-                        isAuthenticated: this.state.isAuthenticated,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
-            );
-        }
-        constructor(...e) {
-            super(...e),
-                s(this, "state", {
-                    isAuthenticated: l.default.isAuthenticated(),
-                }),
-                s(this, "onStoreChange", () => {
-                    this.setState({
-                        isAuthenticated: l.default.isAuthenticated(),
-                    });
-                });
+            return (0, i.jsx)(e, { ...this.props, isAuthenticated: this.state.isAuthenticated });
         }
     };
 }

@@ -1,17 +1,7 @@
 e.exports = function (e) {
     let t = [
         e.C_NUMBER_MODE,
-        {
-            className: "string",
-            begin: "'|\"",
-            end: "'|\"",
-            contains: [
-                e.BACKSLASH_ESCAPE,
-                {
-                    begin: "''",
-                },
-            ],
-        },
+        { className: "string", begin: "'|\"", end: "'|\"", contains: [e.BACKSLASH_ESCAPE, { begin: "''" }] },
     ];
     return {
         name: "Scilab",
@@ -30,25 +20,10 @@ e.exports = function (e) {
                 className: "function",
                 beginKeywords: "function",
                 end: "$",
-                contains: [
-                    e.UNDERSCORE_TITLE_MODE,
-                    {
-                        className: "params",
-                        begin: "\\(",
-                        end: "\\)",
-                    },
-                ],
+                contains: [e.UNDERSCORE_TITLE_MODE, { className: "params", begin: "\\(", end: "\\)" }],
             },
-            {
-                begin: "[a-zA-Z_][a-zA-Z_0-9]*[\\.']+",
-                relevance: 0,
-            },
-            {
-                begin: "\\[",
-                end: "\\][\\.']*",
-                relevance: 0,
-                contains: t,
-            },
+            { begin: "[a-zA-Z_][a-zA-Z_0-9]*[\\.']+", relevance: 0 },
+            { begin: "\\[", end: "\\][\\.']*", relevance: 0, contains: t },
             e.COMMENT("//", "$"),
         ].concat(t),
     };

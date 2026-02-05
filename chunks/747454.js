@@ -1,10 +1,6 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
-var r = n(652215);
-let i = new Set([r.fg2.XBOX, r.fg2.PLAYSTATION, r.fg2.PLAYSTATION_STAGING, r.fg2.CRUNCHYROLL]);
-
-function a(e) {
-    return i.has(e.type) && e.twoWayLink;
+n.d(t, { A: () => r });
+var i = n(652215);
+let s = new Set([i.fg2.XBOX, i.fg2.PLAYSTATION, i.fg2.PLAYSTATION_STAGING, i.fg2.CRUNCHYROLL]);
+function r(e) {
+    return s.has(e.type) && e.twoWayLink;
 }

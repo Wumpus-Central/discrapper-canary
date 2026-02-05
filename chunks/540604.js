@@ -1,12 +1,10 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => o });
 var r = n(627968);
 n(64700);
 var i = n(985410),
     a = n(379326),
     s = n(269385);
-
 function o() {
     return (0, r.jsx)("div", {
         className: i.k,
@@ -140,13 +138,7 @@ function o() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, r.jsx)("image", {
-                                x: "0",
-                                y: "0",
-                                height: "44",
-                                width: "44",
-                                href: a,
-                            }),
+                            children: (0, r.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: a }),
                         }),
                         (0, r.jsx)("pattern", {
                             id: "tutorial-media-voice-channels-image2",
@@ -155,13 +147,7 @@ function o() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, r.jsx)("image", {
-                                x: "0",
-                                y: "0",
-                                height: "44",
-                                width: "44",
-                                href: s,
-                            }),
+                            children: (0, r.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: s }),
                         }),
                     ],
                 }),

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(56636);
 let i = (function (e) {
     function t(t, n, r) {

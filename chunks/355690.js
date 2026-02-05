@@ -1,99 +1,81 @@
-n.d(i, {
-    default: () => u,
-}),
-    n(896048);
-var t = n(627968),
-    a = n(64700),
-    s = n(110259),
-    l = n(397927),
-    r = n(985481),
-    d = n(890811),
-    c = n(766298),
-    o = n(26095),
-    x = n(700741),
-    m = n(885737),
-    g = n(239093),
-    p = n(652215),
-    N = n(277e3);
-
-function u(e) {
-    let { classificationId: i, transitionState: n, initialSlide: u = g.yN.SPEED_BUMP, onClose: A } = e,
-        [h, j] = a.useState(u),
-        { classification: _, isDsaEligible: C } = (0, r.LJ)(null != i ? i : p.dJq),
-        E = (null == _ ? void 0 : _.is_spam) || !1,
-        I = (null == _ ? void 0 : _.is_coppa) || !1,
-        v = null == _ ? void 0 : _.appeal_ingestion_type;
+i.d(t, { default: () => A });
+var n = i(627968),
+    a = i(64700),
+    s = i(110259),
+    l = i(397927),
+    r = i(985481),
+    d = i(890811),
+    c = i(766298),
+    o = i(26095),
+    x = i(700741),
+    m = i(885737),
+    g = i(239093),
+    p = i(652215),
+    N = i(277e3);
+function A(e) {
+    let { classificationId: t, transitionState: i, initialSlide: A = g.yN.SPEED_BUMP, onClose: h } = e,
+        [j, u] = a.useState(A),
+        { classification: _, isDsaEligible: C } = (0, r.LJ)(t ?? p.dJq),
+        E = _?.is_spam || !1,
+        I = _?.is_coppa || !1,
+        S = _?.appeal_ingestion_type;
     a.useEffect(() => {
-        j(u);
-    }, [j, u]);
-    let S = a.useCallback(() => {
-            o.A.close(), A();
-        }, [A]),
-        T = a.useCallback(() => {
-            var e;
-            let i = null == (e = g.A8[h]) ? void 0 : e.next;
-            i ? j(i) : S();
-        }, [h, S]),
+        u(A);
+    }, [u, A]);
+    let T = a.useCallback(() => {
+            o.A.close(), h();
+        }, [h]),
+        v = a.useCallback(() => {
+            let e = g.A8[j]?.next;
+            e ? u(e) : T();
+        }, [j, T]),
         k = a.useCallback(() => {
-            var e;
-            let i = null == (e = g.A8[h]) ? void 0 : e.prev;
-            i ? j(i) : S();
-        }, [h, S]);
-    return (0, t.jsx)(l.EOs, {
+            let e = g.A8[j]?.prev;
+            e ? u(e) : T();
+        }, [j, T]);
+    return (0, n.jsx)(l.EOs, {
         "data-migration-pending": !0,
-        transitionState: n,
+        transitionState: i,
         disableTrack: !0,
         size: l.rIJ.DYNAMIC,
         parentComponent: "AppealIngestionModal",
-        children: (0, t.jsx)("div", {
+        children: (0, n.jsx)("div", {
             className: N.k,
-            children: (0, t.jsxs)(l.tN_, {
-                activeSlide: h,
+            children: (0, n.jsxs)(l.tN_, {
+                activeSlide: j,
                 width: 500,
                 children: [
-                    (0, t.jsx)(l.q7S, {
+                    (0, n.jsx)(l.q7S, {
                         id: g.yN.SPEED_BUMP,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
                         impressionProperties: g.nY,
-                        children: (0, t.jsx)(m.A, {
+                        children: (0, n.jsx)(m.A, {
                             classification: _,
-                            onClose: S,
-                            onNext: T,
+                            onClose: T,
+                            onNext: v,
                             isSpam: E,
                             isCoppa: I,
-                            appealIngestionType: v,
+                            appealIngestionType: S,
                             isDsaEligible: C,
                         }),
                     }),
-                    (0, t.jsx)(l.q7S, {
+                    (0, n.jsx)(l.q7S, {
                         id: g.yN.COLLECT_SIGNAL,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
                         impressionProperties: g.nY,
-                        children: (0, t.jsx)(d.A, {
-                            isDsaEligible: C,
-                            onClose: S,
-                            onNext: T,
-                            onBack: k,
-                        }),
+                        children: (0, n.jsx)(d.A, { isDsaEligible: C, onClose: T, onNext: v, onBack: k }),
                     }),
-                    (0, t.jsx)(l.q7S, {
+                    (0, n.jsx)(l.q7S, {
                         id: g.yN.CONFIRM_SUBMISSION,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
                         impressionProperties: g.nY,
-                        children: (0, t.jsx)(c.A, {
-                            isDsaEligible: C,
-                            onClose: S,
-                            onNext: T,
-                            onBack: k,
-                        }),
+                        children: (0, n.jsx)(c.A, { isDsaEligible: C, onClose: T, onNext: v, onBack: k }),
                     }),
-                    (0, t.jsx)(l.q7S, {
+                    (0, n.jsx)(l.q7S, {
                         id: g.yN.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: g.nY,
-                        children: (0, t.jsx)(x.A, {
-                            onNext: T,
-                        }),
+                        children: (0, n.jsx)(x.A, { onNext: v }),
                     }),
                 ],
             }),

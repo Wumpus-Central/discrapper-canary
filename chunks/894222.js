@@ -1,5 +1,3 @@
-t.d(i, {
-    J: () => l,
-});
-var n,
-    l = (((n = {}).INVITE = "invite"), (n.APPLY = "apply"), (n.DISCOVERABLE = "discoverable"), n);
+t.d(i, { J: () => n });
+var l,
+    n = (((l = {}).INVITE = "invite"), (l.APPLY = "apply"), (l.DISCOVERABLE = "discoverable"), l);

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(559242),
     o = n(529030),
@@ -5,10 +6,7 @@ var r = n(834647),
     s = n(918078),
     l = n(107532);
 r(
-    {
-        target: "Array",
-        proto: !0,
-    },
+    { target: "Array", proto: !0 },
     {
         flat: function () {
             var e = arguments.length ? arguments[0] : void 0,

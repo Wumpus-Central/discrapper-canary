@@ -1,21 +1,18 @@
-t.d(e, {
-    A: () => a,
-});
-var i = t(627968);
+t.d(n, { A: () => l });
+var o = t(627968);
 t(64700);
-var o = t(59198),
+var i = t(59198),
     r = t(278086),
     s = t(652215);
-
-function a(n) {
-    let { authToken: e, onContinue: t, onError: a, onClose: d } = n;
-    return (0, i.jsx)(o.W, {
+function l(e) {
+    let { authToken: n, onContinue: t, onError: l, onClose: a } = e;
+    return (0, o.jsx)(i.W, {
         platformType: s.fg2.CRUNCHYROLL,
         clientId: r.ex,
         scopes: r._B,
-        authToken: e,
+        authToken: n,
         onContinue: t,
-        onError: a,
-        onClose: d,
+        onError: l,
+        onClose: a,
     });
 }

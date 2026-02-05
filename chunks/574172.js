@@ -1,94 +1,30 @@
+"use strict";
 n.r(t),
     n.d(t, {
-        addStylesheet: () => f,
-        close: () => u,
-        open: () => o,
-        openCallTilePopout: () => c,
-        openChannelCallPopout: () => l,
-        setAlwaysOnTop: () => d,
+        addStylesheet: () => c,
+        close: () => l,
+        open: () => a,
+        openCallTilePopout: () => o,
+        openChannelCallPopout: () => s,
+        setAlwaysOnTop: () => u,
     });
 var r = n(73153);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+let i = { menubar: !1, toolbar: !1, location: !1, directories: !1 };
+function a(e, t, n) {
+    return r.h.dispatch({ type: "POPOUT_WINDOW_OPEN", key: e, features: { ...i, ...n }, render: t });
 }
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
+function s(e) {
+    return r.h.dispatch({ type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN", channel: e });
 }
-let s = {
-    menubar: !1,
-    toolbar: !1,
-    location: !1,
-    directories: !1,
-};
-
-function o(e, t, n) {
-    return r.h.dispatch({
-        type: "POPOUT_WINDOW_OPEN",
-        key: e,
-        features: a({}, s, n),
-        render: t,
-    });
+function o(e, t) {
+    return r.h.dispatch({ type: "CALL_TILE_POPOUT_WINDOW_OPEN", channelId: e, participantId: t });
 }
-
 function l(e) {
-    return r.h.dispatch({
-        type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
-        channel: e,
-    });
+    return r.h.dispatch({ type: "POPOUT_WINDOW_CLOSE", key: e });
 }
-
+function u(e, t) {
+    return r.h.dispatch({ type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP", alwaysOnTop: t, key: e });
+}
 function c(e, t) {
-    return r.h.dispatch({
-        type: "CALL_TILE_POPOUT_WINDOW_OPEN",
-        channelId: e,
-        participantId: t,
-    });
-}
-
-function u(e) {
-    return r.h.dispatch({
-        type: "POPOUT_WINDOW_CLOSE",
-        key: e,
-    });
-}
-
-function d(e, t) {
-    return r.h.dispatch({
-        type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
-        alwaysOnTop: t,
-        key: e,
-    });
-}
-
-function f(e, t) {
-    return r.h.dispatch({
-        type: "POPOUT_WINDOW_ADD_STYLESHEET",
-        url: e,
-        integrity: t,
-    });
+    return r.h.dispatch({ type: "POPOUT_WINDOW_ADD_STYLESHEET", url: e, integrity: t });
 }

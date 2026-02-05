@@ -1,102 +1,48 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048),
-    n(492834);
-var r = n(627968),
+n.d(t, { A: () => g });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
-    a = n(421380),
-    s = n(397927),
+    a = n(311907),
+    s = n(421380),
+    r = n(397927),
     o = n(686956),
     c = n(964486),
-    u = n(351001),
-    d = n(576705),
-    f = n(400528),
-    p = n(102817),
-    h = n(641131),
-    b = n(985018);
-
+    d = n(351001),
+    u = n(576705),
+    h = n(400528),
+    m = n(102817),
+    A = n(641131),
+    p = n(985018);
 function g(e) {
-    let { channel: t, user: g, guild: m } = e,
-        A = (0, i.bG)([f.A], () => null != g && f.A.isUserBanned(g.id)),
-        y = null != g && null == A,
-        [O, j] = l.useState(y),
-        v = (0, i.bG)([d.A], () => null != g && null != m && (0, u.fJ)(g, m, [d.A]));
+    let { channel: t, user: g, guild: f } = e,
+        _ = (0, a.bG)([h.A], () => null != g && h.A.isUserBanned(g.id)),
+        E = null != g && null == _,
+        [C, x] = l.useState(E),
+        S = (0, a.bG)([u.A], () => null != g && null != f && (0, d.fJ)(g, f, [u.A]));
     if (
         ((0, c.Ay)(() => {
-            y && o.A.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => j(!1));
+            E && o.A.searchGuildBans(t.guild_id, void 0, [g?.id]).finally(() => x(!1));
         }),
-        !v)
+        !S)
     )
         return null;
-    let x = !0 === A ? b.intl.string(h.default.dpfwQ1) : b.intl.string(h.default.ASv23S),
-        E = "ban-user-".concat(null == g ? void 0 : g.id);
-    return (0, r.jsx)(
-        p.A,
+    let T = !0 === _ ? p.intl.string(A.default.dpfwQ1) : p.intl.string(A.default.ASv23S),
+        I = `ban-user-${g?.id}`;
+    return (0, i.jsx)(
+        m.A,
         {
-            text: x,
-            icon: s.wI0,
+            text: T,
+            icon: r.wI0,
             onClick: () => {
                 null != g &&
-                    (0, s.mMO)(async () => {
+                    (0, r.mMO)(async () => {
                         let { default: e } = await n.e("57742").then(n.bind(n, 333179));
-                        return (n) => {
-                            var l, i;
-                            return (0, r.jsx)(
-                                e,
-                                ((l = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, n)),
-                                (i = i =
-                                    {
-                                        guildId: t.guild_id,
-                                        user: g,
-                                        modReportId: t.id,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                                      }),
-                                l),
-                            );
-                        };
+                        return (n) => (0, i.jsx)(e, { ...n, guildId: t.guild_id, user: g, modReportId: t.id });
                     });
             },
-            disabled: !0 === A || O,
-            submitting: O,
-            color: a.$n.Colors.RED,
+            disabled: !0 === _ || C,
+            submitting: C,
+            color: s.$n.Colors.RED,
         },
-        E,
+        I,
     );
 }

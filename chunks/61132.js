@@ -1,3 +1,4 @@
+"use strict";
 var r = n(524152),
     i = TypeError;
 e.exports = function (e, t) {

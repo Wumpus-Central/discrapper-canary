@@ -1,20 +1,13 @@
-n.r(t),
-    n.d(t, {
-        announce: () => a,
-        clearAnnouncer: () => s,
-        destroyAnnouncer: () => o,
-    });
+"use strict";
+n.r(t), n.d(t, { announce: () => a, clearAnnouncer: () => s, destroyAnnouncer: () => o });
 let r = 7e3,
     i = null;
-
 function a(e, t = "assertive", n = r) {
     i || (i = new l()), i.announce(e, t, n);
 }
-
 function s(e) {
     i && i.clear(e);
 }
-
 function o() {
     i && (i.destroy(), (i = null));
 }

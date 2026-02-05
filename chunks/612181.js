@@ -1,15 +1,9 @@
-n.d(t, {
-    gf: () => i,
-    u8: () => s,
-    wR: () => a,
-}),
-    n(747238);
+"use strict";
+n.d(t, { gf: () => i, u8: () => s, wR: () => a });
 var r = n(247775);
-
 function i() {
     return r.getToken();
 }
-
 function a() {
     return null != i();
 }

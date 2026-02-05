@@ -1,55 +1,44 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(627968);
+n.d(t, { A: () => l });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(985018),
-    s = n(87078);
-let a = function (e) {
-    let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, hasBoostPerk: o, canAddBoosts: c } = e;
-    return (0, r.jsxs)("div", {
-        className: s.iE,
+var s = n(397927),
+    r = n(985018),
+    a = n(87078);
+let l = function (e) {
+    let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: l, hasBoostPerk: o, canAddBoosts: c } = e;
+    return (0, i.jsxs)("div", {
+        className: a.iE,
         children: [
-            (0, r.jsx)("div", {
-                className: s.bj,
-                children: (0, r.jsx)("img", {
-                    alt: "",
-                    className: s.KV,
-                    src: n(960954),
-                }),
+            (0, i.jsx)("div", {
+                className: a.bj,
+                children: (0, i.jsx)("img", { alt: "", className: a.KV, src: n(960954) }),
             }),
-            (0, r.jsxs)("div", {
-                className: s.D7,
+            (0, i.jsxs)("div", {
+                className: a.D7,
                 children: [
-                    (0, r.jsx)(i.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: "display-md",
-                        className: s.R_,
+                        className: a.R_,
                         children: (function (e) {
                             let {
                                 hasGuildBoostSlots: t,
                                 hasAppliedGuildBoosts: n,
-                                hasBoostPerk: r,
-                                canAddBoosts: i,
+                                hasBoostPerk: i,
+                                canAddBoosts: s,
                             } = e;
-                            return i
+                            return s
                                 ? t
-                                    ? r && !n
-                                        ? l.intl.format(l.t.s9zQyG, {})
-                                        : l.intl.format(l.t.Rb8Jhs, {})
-                                    : l.intl.string(l.t["2rh0by"])
-                                : l.intl.format(l.t.Rb8Jhs, {});
-                        })({
-                            hasGuildBoostSlots: t,
-                            hasBoostPerk: o,
-                            hasAppliedGuildBoosts: a,
-                            canAddBoosts: c,
-                        }),
+                                    ? i && !n
+                                        ? r.intl.format(r.t.s9zQyG, {})
+                                        : r.intl.format(r.t.Rb8Jhs, {})
+                                    : r.intl.string(r.t["2rh0by"])
+                                : r.intl.format(r.t.Rb8Jhs, {});
+                        })({ hasGuildBoostSlots: t, hasBoostPerk: o, hasAppliedGuildBoosts: l, canAddBoosts: c }),
                     }),
-                    (0, r.jsx)("svg", {
+                    (0, i.jsx)("svg", {
                         viewBox: "0 0 660 210",
-                        className: s.Mz,
-                        children: (0, r.jsx)("path", {
+                        className: a.Mz,
+                        children: (0, i.jsx)("path", {
                             d: "M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z",
                         }),
                     }),

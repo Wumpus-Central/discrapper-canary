@@ -1,88 +1,60 @@
-n.r(s),
-    n.d(s, {
-        default: () => g,
-    });
-var t = n(627968);
+"use strict";
+n.r(t), n.d(t, { default: () => m });
+var r = n(627968);
 n(64700);
-var r = n(311907),
-    a = n(397927),
+var a = n(311907),
+    s = n(397927),
     i = n(976860),
-    l = n(961350),
-    d = n(207913),
+    d = n(961350),
+    o = n(207913),
     c = n(210742),
-    o = n(239093),
-    u = n(652215),
-    h = n(985018),
+    _ = n(239093),
+    l = n(652215),
+    u = n(985018),
     p = n(90344);
-
-function N() {
-    return (0, t.jsxs)(a.$Td, {
-        color: a.Hv$.DANGER,
+function f() {
+    return (0, r.jsxs)(s.$Td, {
+        color: s.Hv$.DANGER,
         className: p.aL,
         children: [
-            (0, t.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: h.intl.string(h.t["MG+Bzb"]),
+                children: u.intl.string(u.t["MG+Bzb"]),
             }),
-            (0, t.jsx)(a.eCN, {
-                noticeType: u.kqX.SAFETY_SUSPENDED_USER_WARNING,
-                href: o.d$.WARNING_SYSTEM_HELPCENTER_LINK,
-                children: (0, t.jsx)(a.Text, {
+            (0, r.jsx)(s.eCN, {
+                noticeType: l.kqX.SAFETY_SUSPENDED_USER_WARNING,
+                href: _.d$.WARNING_SYSTEM_HELPCENTER_LINK,
+                children: (0, r.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "always-white",
-                    children: h.intl.string(h.t["9JceHN"]),
+                    children: u.intl.string(u.t["9JceHN"]),
                 }),
             }),
         ],
     });
 }
-
 function x(e) {
     let {} = e,
-        s = (0, r.bG)([d.A], () => d.A.getAgeCheckStatus());
-    return s === o.qN.NONE
+        t = (0, a.bG)([o.A], () => o.A.getAgeCheckStatus());
+    return t === _.qN.NONE
         ? null
-        : s === o.qN.SUCCESS
-          ? (0, t.jsx)(a.po8, {
-                messageType: a.YCn.POSITIVE,
-                children: h.intl.format(h.t.maZDL6, {
-                    login: "/login",
-                }),
-            })
-          : s === o.qN.ERROR
-            ? (0, t.jsx)(a.po8, {
-                  messageType: a.YCn.ERROR,
-                  children: h.intl.string(h.t["4sILBU"]),
-              })
-            : s === o.qN.FAILURE
-              ? (0, t.jsx)(a.po8, {
-                    messageType: a.YCn.ERROR,
-                    children: h.intl.string(h.t["40R63o"]),
-                })
-              : (0, t.jsx)(a.po8, {
-                    messageType: a.YCn.INFO,
-                    children: h.intl.string(h.t["nhhy/R"]),
-                });
+        : t === _.qN.SUCCESS
+          ? (0, r.jsx)(s.po8, { messageType: s.YCn.POSITIVE, children: u.intl.format(u.t.maZDL6, { login: "/login" }) })
+          : t === _.qN.ERROR
+            ? (0, r.jsx)(s.po8, { messageType: s.YCn.ERROR, children: u.intl.string(u.t["4sILBU"]) })
+            : t === _.qN.FAILURE
+              ? (0, r.jsx)(s.po8, { messageType: s.YCn.ERROR, children: u.intl.string(u.t["40R63o"]) })
+              : (0, r.jsx)(s.po8, { messageType: s.YCn.INFO, children: u.intl.string(u.t["nhhy/R"]) });
 }
-
-function R() {
-    return (0, t.jsxs)("div", {
-        className: p.$$,
-        children: [(0, t.jsx)(x, {}), (0, t.jsx)(c.A, {})],
-    });
+function h() {
+    return (0, r.jsxs)("div", { className: p.$$, children: [(0, r.jsx)(x, {}), (0, r.jsx)(c.A, {})] });
 }
-
-function g() {
+function m() {
     return (
-        null == (0, r.bG)([l.default], () => l.default.getSuspendedUserToken()) &&
-            (0, i.pX)(u.BVt.LOGIN, {
-                source: "suspended_user_safety_hub_page",
-            }),
-        (0, t.jsxs)("div", {
-            className: p.kL,
-            children: [(0, t.jsx)(N, {}), (0, t.jsx)(R, {})],
-        })
+        null == (0, a.bG)([d.default], () => d.default.getSuspendedUserToken()) &&
+            (0, i.pX)(l.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
+        (0, r.jsxs)("div", { className: p.kL, children: [(0, r.jsx)(f, {}), (0, r.jsx)(h, {})] })
     );
 }

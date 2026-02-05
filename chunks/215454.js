@@ -1,37 +1,17 @@
 e.exports = function (e) {
-    let t = {
-        className: "literal",
-        begin: /[+-]+/,
-        relevance: 0,
-    };
+    let t = { className: "literal", begin: /[+-]+/, relevance: 0 };
     return {
         name: "Brainfuck",
         aliases: ["bf"],
         contains: [
             e.COMMENT(/[^\[\]\.,\+\-<> \r\n]/, /[\[\]\.,\+\-<> \r\n]/, {
-                contains: [
-                    {
-                        match: /[ ]+[^\[\]\.,\+\-<> \r\n]/,
-                        relevance: 0,
-                    },
-                ],
+                contains: [{ match: /[ ]+[^\[\]\.,\+\-<> \r\n]/, relevance: 0 }],
                 returnEnd: !0,
                 relevance: 0,
             }),
-            {
-                className: "title",
-                begin: "[\\[\\]]",
-                relevance: 0,
-            },
-            {
-                className: "string",
-                begin: "[\\.,]",
-                relevance: 0,
-            },
-            {
-                begin: /(?=\+\+|--)/,
-                contains: [t],
-            },
+            { className: "title", begin: "[\\[\\]]", relevance: 0 },
+            { className: "string", begin: "[\\.,]", relevance: 0 },
+            { begin: /(?=\+\+|--)/, contains: [t] },
             t,
         ],
     };

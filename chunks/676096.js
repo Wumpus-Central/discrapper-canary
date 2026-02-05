@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
 r = {
     rangeOverflow: (e) => `Verdien m\xe5 v\xe6re ${e.maxValue} eller tidligere.`,

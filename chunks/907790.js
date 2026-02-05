@@ -14,7 +14,7 @@ var r = {
     "./noto-sans/notosans-800-extrabold.woff2": ["479940"],
     "./gg-sans/ggsans-400-normal.woff2": ["601084"],
     "./sinistre/sinistre-400-normal.woff2": ["654799"],
-    "./gg-sans/ggsans-600-semibold.woff2": ["959443"],
+    "./gg-sans/ggsans-600-semibold.woff2": ["181824"],
     "./noto-sans/notosans-600-semibold.woff2": ["173388"],
     "./abc-ginto-normal/abcgintonormal-500-mediumitalic.woff2": ["379888"],
     "./abc-ginto-normal/abcgintonormal-800-extrabold.woff2": ["301265"],
@@ -44,7 +44,7 @@ var r = {
     "./abc-ginto-nord/abcgintonord-800-extrabolditalic.woff2": ["214105"],
     "./abc-ginto-normal/abcgintonormal-700-bold.woff2": ["7118"],
     "./biorhyme/biorhyme-400-normal.woff2": ["557715", "79504"],
-    "./gg-mono/ggmono-700-bold.woff2": ["866630"],
+    "./gg-mono/ggmono-700-bold.woff2": ["644249"],
     "./noto-sans/notosans-400-normal.woff2": ["69440"],
     "./abc-ginto-normal/abcgintonormal-400-normalitalic.woff2": ["483807"],
     "./noto-sans/notosans-500-mediumitalic.woff2": ["661651"],
@@ -57,7 +57,6 @@ var r = {
     "./noto-sans/notosans-400-normalitalic.woff2": ["533668"],
     "./noto-sans/notosans-800-extrabolditalic.woff2": ["967192"],
 };
-
 function i(e) {
     if (!n.o(r, e))
         return Promise.resolve().then(function () {

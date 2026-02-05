@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_d8f25b",
     Kk: "icon_d8f25b",

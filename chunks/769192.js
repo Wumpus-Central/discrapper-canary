@@ -1,100 +1,62 @@
-t.d(n, {
-    default: () => S,
-});
-var r = t(627968);
+t.d(n, { default: () => M });
+var i = t(627968);
 t(64700);
-var i = t(311907),
+var r = t(311907),
     l = t(397927),
     a = t(442433),
-    o = t(847767),
-    c = t(358367),
-    u = t(793574),
-    s = t(886393),
-    d = t(475777),
+    s = t(847767),
+    u = t(358367),
+    o = t(793574),
+    d = t(886393),
+    c = t(475777),
     A = t(848977),
-    f = t(995102),
-    b = t(288104),
-    y = t(661504),
-    E = t(304694),
-    p = t(671483),
-    v = t(217563),
-    g = t(50268),
-    O = t(769591),
-    h = t(446600),
-    j = t(914853),
+    E = t(995102),
+    v = t(288104),
+    g = t(661504),
+    f = t(304694),
+    h = t(671483),
+    y = t(217563),
+    I = t(50268),
+    N = t(769591),
+    p = t(446600),
+    C = t(914853),
     D = t(708653),
-    I = t(297460),
-    N = t(652215),
-    C = t(985018);
-let S = (0, c.A)(
-    (0, o.A)(
+    b = t(297460),
+    _ = t(652215),
+    x = t(985018);
+let M = (0, u.A)(
+    (0, s.A)(
         function (e) {
-            let { channel: n, guild: t, onSelect: o, widgetType: c } = e,
-                u = n.isGuildStageVoice(),
-                N = (0, i.bG)([h.A], () => (u ? h.A.getStageInstanceByChannel(n.id) : void 0), [u, n.id]),
-                S = (0, A.A)(n),
-                _ = (0, s.A)(n),
-                { toggleFavoriteItem: m } = (0, D.Ay)(j.x.VOICE, n, c),
-                x = (0, f.Ay)(n),
-                P = (0, b.A)(n),
-                M = (0, d.A)(n, t, N),
-                w = (0, I.A)(
-                    {
-                        kind: "CHANNEL",
-                        channel: n,
-                        guildId: t.id,
-                    },
-                    c,
-                ),
-                G = (0, g.A)({
-                    id: n.id,
-                    label: C.intl.string(C.t.gFHI3k),
-                }),
-                U = (0, E.A)(n),
-                L = (0, p.A)(n, t),
-                k = (0, v.A)(n, t.id),
-                R = (0, O.os)("OverlayChannelListVoiceChannelContextMenu"),
-                T = (0, y.Ay)(n);
-            return (0, r.jsxs)(l.W1t, {
+            let { channel: n, guild: t, onSelect: s, widgetType: u } = e,
+                o = n.isGuildStageVoice(),
+                _ = (0, r.bG)([p.A], () => (o ? p.A.getStageInstanceByChannel(n.id) : void 0), [o, n.id]),
+                M = (0, A.A)(n),
+                S = (0, d.A)(n),
+                { toggleFavoriteItem: j } = (0, D.Ay)(C.x.VOICE, n, u),
+                O = (0, E.Ay)(n),
+                U = (0, v.A)(n),
+                G = (0, c.A)(n, t, _),
+                L = (0, b.A)({ kind: "CHANNEL", channel: n, guildId: t.id }, u),
+                T = (0, I.A)({ id: n.id, label: x.intl.string(x.t.gFHI3k) }),
+                R = (0, f.A)(n),
+                m = (0, h.A)(n, t),
+                k = (0, y.A)(n, t.id),
+                F = (0, N.os)("OverlayChannelListVoiceChannelContextMenu"),
+                H = (0, g.Ay)(n);
+            return (0, i.jsxs)(l.W1t, {
                 navId: "overlay-channel-context",
                 onClose: a.Z_,
-                "aria-label": C.intl.string(C.t.Xm41aV),
-                onSelect: o,
+                "aria-label": x.intl.string(x.t.Xm41aV),
+                onSelect: s,
                 children: [
-                    (0, r.jsxs)(
-                        l.rXV,
-                        {
-                            children: [w, m, M, _],
-                        },
-                        "primary-actions",
-                    ),
-                    (0, r.jsxs)(
-                        l.rXV,
-                        {
-                            children: [k, S, L, U],
-                        },
-                        "voice-actions",
-                    ),
-                    (0, r.jsxs)(
-                        l.rXV,
-                        {
-                            children: [x, R ? T : P],
-                        },
-                        "notifications",
-                    ),
-                    (0, r.jsx)(
-                        l.rXV,
-                        {
-                            children: G,
-                        },
-                        "developer-actions",
-                    ),
+                    (0, i.jsxs)(l.rXV, { children: [L, j, G, S] }, "primary-actions"),
+                    (0, i.jsxs)(l.rXV, { children: [k, M, m, R] }, "voice-actions"),
+                    (0, i.jsxs)(l.rXV, { children: [O, F ? H : U] }, "notifications"),
+                    (0, i.jsx)(l.rXV, { children: T }, "developer-actions"),
                 ],
             });
         },
-        {
-            object: N.ZSU.CONTEXT_MENU,
-        },
+        { object: _.ZSU.CONTEXT_MENU },
     ),
-    [u.A.CONTEXT_MENU, u.A.OVERLAY, u.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
+    [o.A.CONTEXT_MENU, o.A.OVERLAY, o.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

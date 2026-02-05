@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(114821),
-    n(339614);
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,38 +7,29 @@ var i = n(503698),
     s = n(397927),
     o = n(156312),
     l = n(166532),
-    c = n(329268);
-
-function u(e) {
+    u = n(329268);
+function c(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
         {
             step: i,
-            breadcrumbs: u,
+            breadcrumbs: c,
             startedPaymentFlowWithPaymentSourcesRef: d,
-            enablePremiumBrandRefresh: f,
+            enablePremiumBrandRefresh: _,
         } = (0, o.P5)();
-    if (f || null == u || 0 === u.length) return null;
-    let p = u.flatMap((e) => {
+    if (_ || null == c || 0 === c.length) return null;
+    let f = c.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);
-        return null != t
-            ? {
-                  id: e.id,
-                  label: t,
-              }
-            : [];
+        return null != t ? { id: e.id, label: t } : [];
     });
-    return 0 === p.length
+    return 0 === f.length
         ? null
-        : ((p = p.filter((e) => {
+        : ((f = f.filter((e) => {
               let t = e.id !== l.pn.ADD_PAYMENT_STEPS,
                   r = e.id === l.pn.ADD_PAYMENT_STEPS && !d.current;
               return !n || (n && (t || r));
           })),
           (0, r.jsx)("div", {
-              className: a()("breadcrumb", c.i, t),
-              children: (0, r.jsx)(s.BIu, {
-                  activeId: i,
-                  breadcrumbs: p,
-              }),
+              className: a()("breadcrumb", u.i, t),
+              children: (0, r.jsx)(s.BIu, { activeId: i, breadcrumbs: f }),
           }));
 }

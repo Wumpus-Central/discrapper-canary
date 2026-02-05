@@ -1,49 +1,27 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(652215);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153),
+    a = n(652215);
+let s = {};
+function o() {
+    s = {};
 }
-let l = {};
-
-function c() {
-    l = {};
+function l() {
+    delete s[a.LU7.SOUND];
 }
-
-function u() {
-    delete l[s.LU7.SOUND];
-}
-
-function d(e) {
+function u(e) {
     let { errorMessage: t, errorCode: n } = e;
-    l[s.LU7.SOUND] = {
-        errorMessage: t,
-        errorCode: n,
-    };
+    s[a.LU7.SOUND] = { errorMessage: t, errorCode: n };
 }
-class f extends (r = i.Ay.Store) {
+class c extends r.Ay.Store {
+    static displayName = "HookErrorStore";
     getHookError(e) {
-        return l[e];
+        return s[e];
     }
 }
-o(f, "displayName", "HookErrorStore");
-let p = new f(a.h, {
-    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
-    MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: u,
-    MEDIA_ENGINE_SOUNDSHARE_FAILED: d,
+let d = new c(i.h, {
+    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: o,
+    MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: l,
+    MEDIA_ENGINE_SOUNDSHARE_FAILED: u,
 });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Tp: "analyticsCard__0dfec",
     tG: "analyticsCardTitle__0dfec",

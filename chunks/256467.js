@@ -1,166 +1,114 @@
-r.r(t),
-    r.d(t, {
-        default: () => U,
-    });
-var n = r(627968),
-    i = r(64700),
-    o = r(503698),
-    l = r.n(o),
-    s = r(110259),
-    c = r(311907),
-    a = r(827734),
-    d = r(397927),
-    u = r(139286),
-    p = r(465932),
-    f = r(142120),
-    C = r(495066),
-    j = r(854018),
-    b = r(742589),
-    O = r(71393),
-    g = r(722888),
-    h = r(683271),
-    y = r(558060),
-    x = r(381969),
-    m = r(920814),
-    v = r(638964),
-    _ = r(422373),
-    w = r(812136),
-    P = r(398828),
-    L = r(46623),
-    I = r(43136),
-    S = r(575926),
-    D = r(284683),
-    A = r(746080),
-    R = r(412728),
-    E = r(985018),
-    N = r(86719),
-    k = r(638990);
-
-function T(e) {
-    var t;
-    let { guildId: r, productId: i } = e,
-        { loaded: o, subscriptionsSettings: l } = (0, g.G)(r),
-        s = (0, c.bG)([O.A], () => O.A.getGuild(r)),
-        { selectedTab: a, isPhantomPreview: u, categoryTabs: p } = (0, x.k)(),
-        f = !o || null == l;
-    return null == s || (!u && f)
-        ? (0, n.jsx)(d.y$y, {})
-        : (0, n.jsx)(y.default, {
-              defaultSortOption:
-                  null != (t = null == l ? void 0 : l.store_page_guild_products_default_sort) ? t : D.p$.NAME,
-              children: (0, n.jsxs)("div", {
-                  className: N.hQ,
+i.r(t), i.d(t, { default: () => O });
+var s = i(627968),
+    r = i(64700),
+    n = i(503698),
+    l = i.n(n),
+    d = i(110259),
+    a = i(311907),
+    o = i(827734),
+    c = i(397927),
+    C = i(139286),
+    u = i(465932),
+    x = i(142120),
+    h = i(495066),
+    _ = i(854018),
+    p = i(742589),
+    j = i(71393),
+    g = i(722888),
+    m = i(683271),
+    f = i(558060),
+    v = i(381969),
+    L = i(920814),
+    I = i(638964),
+    A = i(422373),
+    w = i(812136),
+    N = i(398828),
+    T = i(46623),
+    R = i(43136),
+    S = i(575926),
+    b = i(284683),
+    V = i(746080),
+    k = i(412728),
+    D = i(985018),
+    U = i(86719),
+    P = i(638990);
+function E(e) {
+    let { guildId: t, productId: i } = e,
+        { loaded: r, subscriptionsSettings: n } = (0, g.G)(t),
+        l = (0, a.bG)([j.A], () => j.A.getGuild(t)),
+        { selectedTab: d, isPhantomPreview: o, categoryTabs: C } = (0, v.k)(),
+        u = !r || null == n;
+    return null == l || (!o && u)
+        ? (0, s.jsx)(c.y$y, {})
+        : (0, s.jsx)(f.default, {
+              defaultSortOption: n?.store_page_guild_products_default_sort ?? b.p$.NAME,
+              children: (0, s.jsxs)("div", {
+                  className: U.hQ,
                   children: [
-                      (0, n.jsx)(I.A, {
-                          guild: s,
-                          subscriptionsSettings: l,
-                      }),
-                      (0, n.jsx)(d.hKd, {
-                          size: 32,
-                      }),
-                      p.length > 0 &&
-                          (0, n.jsx)(w.F, {
-                              guild: s,
-                          }),
-                      (0, n.jsxs)("div", {
-                          className: N.v_,
+                      (0, s.jsx)(R.A, { guild: l, subscriptionsSettings: n }),
+                      (0, s.jsx)(c.hKd, { size: 32 }),
+                      C.length > 0 && (0, s.jsx)(w.F, { guild: l }),
+                      (0, s.jsxs)("div", {
+                          className: U.v_,
                           children: [
-                              (0, n.jsx)(d.hKd, {
-                                  size: 32,
-                              }),
-                              u &&
-                                  (0, n.jsx)(P.A, {
-                                      guildId: r,
-                                  }),
-                              a === m.B.GUILD_PRODUCTS &&
-                                  (0, n.jsx)(v.h, {
-                                      guildId: r,
-                                      productId: i,
-                                  }),
-                              a === m.B.GUILD_ROLE_SUBSCRIPTIONS &&
-                                  (0, n.jsx)(_.A, {
-                                      guildId: r,
-                                  }),
+                              (0, s.jsx)(c.hKd, { size: 32 }),
+                              o && (0, s.jsx)(N.A, { guildId: t }),
+                              d === L.B.GUILD_PRODUCTS && (0, s.jsx)(I.h, { guildId: t, productId: i }),
+                              d === L.B.GUILD_ROLE_SUBSCRIPTIONS && (0, s.jsx)(A.A, { guildId: t }),
                           ],
                       }),
                   ],
               }),
           });
 }
-
-function V(e) {
-    let { guildId: t, productId: r } = e,
-        o = (0, c.bG)([f.A], () => f.A.isConnected()),
-        g = (0, c.bG)([O.A], () => O.A.getGuild(t)),
-        { shouldHideGuildPurchaseEntryPoints: y, restrictionsLoading: m } = (0, p.MH)(t),
-        { selectedTab: v, isPhantomPreview: _, categoryTabs: w } = (0, x.k)(),
-        P = o && (null == g || (0 === w.length && !_) || (y && !m));
+function H(e) {
+    let { guildId: t, productId: i } = e,
+        n = (0, a.bG)([x.A], () => x.A.isConnected()),
+        g = (0, a.bG)([j.A], () => j.A.getGuild(t)),
+        { shouldHideGuildPurchaseEntryPoints: f, restrictionsLoading: L } = (0, u.MH)(t),
+        { selectedTab: I, isPhantomPreview: A, categoryTabs: w } = (0, v.k)(),
+        N = n && (null == g || (0 === w.length && !A) || (f && !L));
     return (
-        i.useEffect(() => {
-            P && (0, h.B)(t, A.VV.GUILD_SHOP);
-        }, [t, P]),
-        (0, u.A)(
-            {
-                type: R.z.PAGE,
-                name: s.ImpressionNames.GUILD_SHOP_PAGE,
-                properties: {
-                    product_id: r,
-                    tab: v,
-                },
-            },
-            {
-                disableTrack: P,
-            },
+        r.useEffect(() => {
+            N && (0, m.B)(t, V.VV.GUILD_SHOP);
+        }, [t, N]),
+        (0, C.A)(
+            { type: k.z.PAGE, name: d.ImpressionNames.GUILD_SHOP_PAGE, properties: { product_id: i, tab: I } },
+            { disableTrack: N },
         ),
-        (0, n.jsxs)("div", {
+        (0, s.jsxs)("div", {
             "data-has-border": !0,
-            className: l()(k.TE, N.kL),
+            className: l()(P.TE, U.kL),
             children: [
-                (0, n.jsxs)(b.A, {
+                (0, s.jsxs)(p.A, {
                     children: [
-                        (0, n.jsx)(b.A.Icon, {
-                            icon: (0, d.kHD)(S.h),
+                        (0, s.jsx)(p.A.Icon, {
+                            icon: (0, c.kHD)(S.h),
                             "aria-hidden": !0,
-                            color: a.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
+                            color: o.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
-                        (0, n.jsx)(b.A.Title, {
-                            children: E.intl.string(E.t.al5EXL),
-                        }),
-                        (0, n.jsx)(L.A, {}),
+                        (0, s.jsx)(p.A.Title, { children: D.intl.string(D.t.al5EXL) }),
+                        (0, s.jsx)(T.A, {}),
                     ],
                 }),
-                (0, n.jsx)(d.d_W, {
-                    className: N.Qs,
-                    children: o
-                        ? (0, n.jsx)(T, {
-                              guildId: t,
-                              productId: r,
-                          })
-                        : (0, n.jsx)(d.y$y, {}),
+                (0, s.jsx)(c.d_W, {
+                    className: U.Qs,
+                    children: n ? (0, s.jsx)(E, { guildId: t, productId: i }) : (0, s.jsx)(c.y$y, {}),
                 }),
-                (0, n.jsx)(j.A, {
-                    className: N.Dv,
-                }),
-                (0, n.jsx)(C.A, {
-                    className: N.xC,
-                }),
+                (0, s.jsx)(_.A, { className: U.Dv }),
+                (0, s.jsx)(h.A, { className: U.xC }),
             ],
         })
     );
 }
-
-function U(e) {
-    let { guildId: t, productId: r, initialTab: i } = e;
+function O(e) {
+    let { guildId: t, productId: i, initialTab: r } = e;
     return (
-        null == i && null != r && (i = m.B.GUILD_PRODUCTS),
-        (0, n.jsx)(x.A, {
-            initialTab: i,
+        null == r && null != i && (r = L.B.GUILD_PRODUCTS),
+        (0, s.jsx)(v.A, {
+            initialTab: r,
             guildId: t,
-            children: (0, n.jsx)(V, {
-                initialTab: i,
-                productId: r,
-                guildId: t,
-            }),
+            children: (0, s.jsx)(H, { initialTab: r, productId: i, guildId: t }),
         })
     );
 }

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => l,
-});
+"use strict";
+n.d(t, { A: () => l });
 var r = n(355418),
     i = n(322811),
     a = n(658809);
@@ -14,17 +13,17 @@ class l extends r.c {
         let n = t[s].toLowerCase(),
             r = t[o].toLowerCase(),
             l = e.createParsingComponents(),
-            c = e.refDate;
+            u = e.refDate;
         switch (n) {
             case "gisteren":
-                let u = new Date(c.getTime());
-                u.setDate(u.getDate() - 1), (0, a.Pl)(l, u);
+                let c = new Date(u.getTime());
+                c.setDate(c.getDate() - 1), (0, a.Pl)(l, c);
                 break;
             case "van":
-                (0, a.Pl)(l, c);
+                (0, a.Pl)(l, u);
                 break;
             case "morgen":
-                let d = new Date(c.getTime());
+                let d = new Date(u.getTime());
                 d.setDate(d.getDate() + 1), (0, a.Pl)(l, d), (0, a.A4)(l, d);
         }
         switch (r) {

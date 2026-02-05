@@ -1,78 +1,63 @@
-n.d(t, {
-    l: () => x,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { l: () => A });
+var i = n(627968),
+    s = n(64700),
     l = n(732955),
-    s = n(688810),
+    r = n(688810),
     a = n(2553),
-    c = n(946274),
-    o = n(997509),
-    d = n(342490),
+    o = n(946274),
+    d = n(997509),
+    c = n(342490),
     u = n(695800),
-    f = n(652215),
+    m = n(652215),
     g = n(874864),
-    b = n(478644),
-    m = n(985018),
-    p = n(822679);
-
-function x(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: x } = e,
-        { analyticsLocations: h } = (0, s.Ay)(),
-        j = t.features.has(f.GuildFeatures.INVITE_SPLASH),
-        O = n && j,
-        y = i.useRef(null),
-        v = i.useCallback((e) => {
-            o.A.updateGuild({
-                splash: e,
-            });
+    x = n(478644),
+    h = n(985018),
+    _ = n(822679);
+function A(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: A } = e,
+        { analyticsLocations: p } = (0, r.Ay)(),
+        f = t.features.has(m.GuildFeatures.INVITE_SPLASH),
+        j = n && f,
+        N = s.useRef(null),
+        E = s.useCallback((e) => {
+            d.A.updateGuild({ splash: e });
         }, []),
-        A = i.useCallback(
+        b = s.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, u.p_)({
                         guild: t,
-                        analyticsLocations: h,
-                        analyticsSection: f.JJy.GUILD_INVITE_BACKGROUND,
-                        analyticsObject: f.ZSU.BUTTON_CTA,
+                        analyticsLocations: p,
+                        analyticsSection: m.JJy.GUILD_INVITE_BACKGROUND,
+                        analyticsObject: m.ZSU.BUTTON_CTA,
                         perks: (0, g.Lp)(),
                     });
             },
-            [h, t],
+            [p, t],
         ),
-        E = i.useCallback(() => {
-            var e;
-            null == (e = y.current) || e.activateUploadDialogue();
+        T = s.useCallback(() => {
+            N.current?.activateUploadDialogue();
         }, []);
-    return j
-        ? (0, r.jsxs)("div", {
-              className: x,
+    return f
+        ? (0, i.jsxs)("div", {
+              className: A,
               children: [
-                  (0, r.jsx)(l.$nd, {
-                      disabled: !O,
-                      variant: "primary",
-                      text: m.intl.string(m.t.yG2pUi),
-                      onClick: E,
-                  }),
-                  (0, r.jsx)("div", {
-                      className: p.y,
-                      children: (0, r.jsx)(c.Ay, {
-                          ref: y,
-                          disabled: !O,
-                          onChange: v,
-                          maxFileSizeBytes: b.j,
-                          onFileSizeError: () => (0, a.A)(b.j),
+                  (0, i.jsx)(l.$nd, { disabled: !j, variant: "primary", text: h.intl.string(h.t.yG2pUi), onClick: T }),
+                  (0, i.jsx)("div", {
+                      className: _.y,
+                      children: (0, i.jsx)(o.Ay, {
+                          ref: N,
+                          disabled: !j,
+                          onChange: E,
+                          maxFileSizeBytes: x.j,
+                          onFileSizeError: () => (0, a.A)(x.j),
                           tabIndex: -1,
                           "aria-hidden": !0,
                       }),
                   }),
               ],
           })
-        : (0, r.jsx)("div", {
-              className: x,
-              children: (0, r.jsx)(d.u, {
-                  onClick: A,
-              }),
-          });
+        : (0, i.jsx)("div", { className: A, children: (0, i.jsx)(c.u, { onClick: b }) });
 }

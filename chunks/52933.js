@@ -1,97 +1,72 @@
-n.d(t, {
-    Ay: () => v,
-    BA: () => f,
-});
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    r = n.n(s),
-    l = n(827734),
-    a = n(990078),
-    o = n(397927),
-    c = n(422844),
-    d = n(435470),
-    u = n(376310),
-    h = n(746080),
-    g = n(985018),
-    m = n(558997),
-    p = n(902049);
-
-function f(e) {
-    let { channel: t, isNew: n } = e,
-        i = (0, d.kt)(t),
-        s = i.slice(void 0, 3),
-        r = i.slice(3),
-        l = i.length > 3 ? i.length - 3 : 0,
-        a = t.hasFlag(h.lx.PINNED),
-        o = s.length > 0 || a || n;
+s.d(t, { Ay: () => f, BA: () => A });
+var n = s(627968);
+s(64700);
+var l = s(503698),
+    a = s.n(l),
+    i = s(827734),
+    r = s(990078),
+    o = s(397927),
+    d = s(422844),
+    c = s(435470),
+    u = s(376310),
+    h = s(746080),
+    m = s(985018),
+    g = s(558997),
+    x = s(902049);
+function A(e) {
+    let { channel: t, isNew: s } = e,
+        n = (0, c.kt)(t),
+        l = n.slice(void 0, 3),
+        a = n.slice(3),
+        i = n.length > 3 ? n.length - 3 : 0,
+        r = t.hasFlag(h.lx.PINNED),
+        o = l.length > 0 || r || s;
     return {
-        shownTags: s,
-        remainingTags: r,
-        moreTagsCount: l,
-        isPinned: a,
+        shownTags: l,
+        remainingTags: a,
+        moreTagsCount: i,
+        isPinned: r,
         shouldRenderTagsRow: o,
-        forumPostContainsTags: i.length > 0,
+        forumPostContainsTags: n.length > 0,
     };
 }
-
-function v(e) {
-    let { channel: t, isNew: n, tagsClassName: s, className: d } = e,
+function f(e) {
+    let { channel: t, isNew: s, tagsClassName: l, className: c } = e,
         {
             shownTags: h,
-            remainingTags: v,
-            moreTagsCount: b,
-            isPinned: A,
-            shouldRenderTagsRow: O,
-        } = f({
-            channel: t,
-            isNew: n,
-        }),
-        { tagFilter: x } = (0, c.R)(t.id);
-    return O
-        ? (0, i.jsxs)("div", {
-              className: r()(p._A, d),
+            remainingTags: f,
+            moreTagsCount: p,
+            isPinned: C,
+            shouldRenderTagsRow: S,
+        } = A({ channel: t, isNew: s }),
+        { tagFilter: v } = (0, d.R)(t.id);
+    return S
+        ? (0, n.jsxs)("div", {
+              className: a()(x._A, c),
               children: [
-                  n
-                      ? (0, i.jsx)(o.LpS, {
-                            className: r()(m.Ad, m.PP),
-                            color: l.A.unsafe_rawColors.BRAND_260.css,
-                            text: g.intl.string(g.t.y2b7CA),
+                  s
+                      ? (0, n.jsx)(o.LpS, {
+                            className: a()(g.Ad, g.PP),
+                            color: i.A.unsafe_rawColors.BRAND_260.css,
+                            text: m.intl.string(m.t.y2b7CA),
                         })
                       : null,
-                  A &&
-                      (0, i.jsx)("div", {
-                          className: p.Ne,
-                          children: (0, i.jsx)(a.m, {
-                              text: g.intl.string(g.t["1QLRYb"]),
-                              children: (0, i.jsx)(o.tsw, {
-                                  size: "custom",
-                                  width: 16,
-                                  height: 16,
-                                  color: "white",
-                              }),
+                  C &&
+                      (0, n.jsx)("div", {
+                          className: x.Ne,
+                          children: (0, n.jsx)(r.m, {
+                              text: m.intl.string(m.t["1QLRYb"]),
+                              children: (0, n.jsx)(o.tsw, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
                   h.map((e) =>
-                      (0, i.jsx)(
+                      (0, n.jsx)(
                           u.A,
-                          {
-                              tag: e,
-                              size: u.A.Sizes.SMALL,
-                              className: r()(s, {
-                                  [p.At]: x.has(e.id),
-                              }),
-                          },
+                          { tag: e, size: u.A.Sizes.SMALL, className: a()(l, { [x.At]: v.has(e.id) }) },
                           e.id,
                       ),
                   ),
-                  b > 0
-                      ? (0, i.jsx)(u.q, {
-                            tags: v,
-                            count: b,
-                            size: u.A.Sizes.SMALL,
-                        })
-                      : null,
+                  p > 0 ? (0, n.jsx)(u.q, { tags: f, count: p, size: u.A.Sizes.SMALL }) : null,
               ],
           })
         : null;

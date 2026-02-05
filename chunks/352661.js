@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     container: "container_a62383",
     purple: "purple_a62383",

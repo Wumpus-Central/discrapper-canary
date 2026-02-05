@@ -1,135 +1,85 @@
-n.d(e, {
-    Ay: () => h,
-    gv: () => N,
-    pB: () => E,
-}),
-    n(896048);
-var i = n(627968);
+"use strict";
+n.d(t, { Ay: () => b, gv: () => m, pB: () => A });
+var r = n(627968);
 n(64700);
-var r = n(989349),
-    l = n.n(r),
-    a = n(311907),
-    s = n(397927),
+var a = n(989349),
+    s = n.n(a),
+    i = n(311907),
+    l = n(397927),
     o = n(914430),
-    d = n(832712),
-    u = n(392567),
-    c = n(543465),
-    g = n(477427),
-    _ = n(47167),
-    A = n(652215),
-    S = n(815968),
-    f = n(985018);
-let N = () => [
-        {
-            value: S.Xx.MINUTES_15,
-            label: f.intl.string(f.t["8ot6gv"]),
-        },
-        {
-            value: S.Xx.HOURS_1,
-            label: f.intl.string(f.t.UMWBZr),
-        },
-        {
-            value: S.Xx.HOURS_3,
-            label: f.intl.string(f.t.QmYWtu),
-        },
-        {
-            value: S.Xx.HOURS_8,
-            label: f.intl.string(f.t.EpAXPC),
-        },
-        {
-            value: S.Xx.HOURS_24,
-            label: f.intl.string(f.t["755t4q"]),
-        },
-        {
-            value: S.Xx.ALWAYS,
-            label: f.intl.string(f.t.r3LawO),
-        },
+    c = n(832712),
+    d = n(392567),
+    u = n(543465),
+    _ = n(477427),
+    p = n(47167),
+    f = n(652215),
+    g = n(815968),
+    h = n(985018);
+let m = () => [
+        { value: g.Xx.MINUTES_15, label: h.intl.string(h.t["8ot6gv"]) },
+        { value: g.Xx.HOURS_1, label: h.intl.string(h.t.UMWBZr) },
+        { value: g.Xx.HOURS_3, label: h.intl.string(h.t.QmYWtu) },
+        { value: g.Xx.HOURS_8, label: h.intl.string(h.t.EpAXPC) },
+        { value: g.Xx.HOURS_24, label: h.intl.string(h.t["755t4q"]) },
+        { value: g.Xx.ALWAYS, label: h.intl.string(h.t.r3LawO) },
     ],
-    E = (t) => {
-        let e = t > 0 ? l()().add(t, "second").toISOString() : null;
-        return {
-            muted: !0,
-            mute_config: {
-                selected_time_window: t,
-                end_time: e,
-            },
-        };
+    A = (e) => {
+        let t = e > 0 ? s()().add(e, "second").toISOString() : null;
+        return { muted: !0, mute_config: { selected_time_window: e, end_time: t } };
     };
-
-function h(t, e) {
+function b(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r, l] = (0, a.yK)([c.Ay], () => [
-            c.Ay.isChannelMuted(t.guild_id, t.id),
-            c.Ay.getChannelMuteConfig(t.guild_id, t.id),
+        [a, s] = (0, i.yK)([u.Ay], () => [
+            u.Ay.isChannelMuted(e.guild_id, e.id),
+            u.Ay.getChannelMuteConfig(e.guild_id, e.id),
         ]),
-        S = (0, u.M)(l),
-        h = (0, _.Ay)(t, !0);
-
-    function b(e) {
-        e && t.type === A.rbe.GUILD_CATEGORY && (0, o.Gv)(t.id),
-            d.A.updateChannelOverrideSettings(
-                t.guild_id,
-                t.id,
-                {
-                    muted: e,
-                },
-                g.G_.muted(e),
-            );
+        g = (0, d.M)(s),
+        b = (0, p.Ay)(e, !0);
+    function x(t) {
+        t && e.type === f.rbe.GUILD_CATEGORY && (0, o.Gv)(e.id),
+            c.A.updateChannelOverrideSettings(e.guild_id, e.id, { muted: t }, _.G_.muted(t));
     }
-    let v = f.intl.string(f.t.tbeRRJ),
-        p = f.intl.string(f.t.OYefme);
-    switch (t.type) {
-        case A.rbe.GUILD_CATEGORY:
-            (v = f.intl.string(f.t.pNMCg2)), (p = f.intl.string(f.t.olaBeG));
+    let I = h.intl.string(h.t.tbeRRJ),
+        C = h.intl.string(h.t.OYefme);
+    switch (e.type) {
+        case f.rbe.GUILD_CATEGORY:
+            (I = h.intl.string(h.t.pNMCg2)), (C = h.intl.string(h.t.olaBeG));
             break;
-        case A.rbe.GROUP_DM:
-            (v = f.intl.string(f.t.LO3kaK)), (p = f.intl.string(f.t["s5/5fm"]));
+        case f.rbe.GROUP_DM:
+            (I = h.intl.string(h.t.LO3kaK)), (C = h.intl.string(h.t["s5/5fm"]));
             break;
-        case A.rbe.DM:
-            (v = n
-                ? f.intl.format(f.t.byjuJm, {
-                      name: h,
-                  })
-                : f.intl.string(f.t.LO3kaK)),
-                (p = n
-                    ? f.intl.format(f.t["eC+9rj"], {
-                          name: h,
-                      })
-                    : f.intl.string(f.t["s5/5fm"]));
+        case f.rbe.DM:
+            (I = n ? h.intl.format(h.t.byjuJm, { name: b }) : h.intl.string(h.t.LO3kaK)),
+                (C = n ? h.intl.format(h.t["eC+9rj"], { name: b }) : h.intl.string(h.t["s5/5fm"]));
             break;
         default:
-            (v = f.intl.string(f.t.tbeRRJ)), (p = f.intl.string(f.t.OYefme));
+            (I = h.intl.string(h.t.tbeRRJ)), (C = h.intl.string(h.t.OYefme));
     }
-    return r
-        ? (0, i.jsx)(s.Drp, {
-              id: "unmute-channel",
-              label: p,
-              subtext: S,
-              action: () => b(!1),
-          })
-        : (0, i.jsx)(s.Drp, {
+    return a
+        ? (0, r.jsx)(l.Drp, { id: "unmute-channel", label: C, subtext: g, action: () => x(!1) })
+        : (0, r.jsx)(l.Drp, {
               id: "mute-channel",
-              label: v,
+              label: I,
               action: () => {
-                  b(!0);
+                  x(!0);
               },
-              children: N().map((n) => {
-                  let { value: r, label: l } = n;
-                  return (0, i.jsx)(
-                      s.Drp,
+              children: m().map((n) => {
+                  let { value: a, label: s } = n;
+                  return (0, r.jsx)(
+                      l.Drp,
                       {
-                          id: "".concat(r),
-                          label: l,
+                          id: `${a}`,
+                          label: s,
                           action: () => {
                               let n;
                               return (
-                                  t.type === A.rbe.GUILD_CATEGORY && (0, o.Gv)(t.id),
-                                  (n = E(r)),
-                                  void d.A.updateChannelOverrideSettings(t.guild_id, t.id, n, g.fd.Muted, e)
+                                  e.type === f.rbe.GUILD_CATEGORY && (0, o.Gv)(e.id),
+                                  (n = A(a)),
+                                  void c.A.updateChannelOverrideSettings(e.guild_id, e.id, n, _.fd.Muted, t)
                               );
                           },
                       },
-                      r,
+                      a,
                   );
               }),
           });

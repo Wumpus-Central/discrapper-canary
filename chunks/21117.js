@@ -1,31 +1,21 @@
-i.d(e, {
-    b: () => A,
-});
+i.d(e, { b: () => T });
 var n = i(64700),
     l = i(311907),
     s = i(955572),
     r = i(406360),
-    u = i(419954),
-    a = i(964404),
+    a = i(419954),
+    u = i(964404),
     o = i(780964),
-    T = i(985018);
-let A = (0, u.Qx)(o.X.HIGH_DYNAMIC_RANGE, {
-    useTitle: () => T.intl.string(T.t.nemtgW),
-    useSubtitle: () => T.intl.string(T.t["O/Gjvn"]),
+    d = i(985018);
+let T = (0, a.Qx)(o.X.HIGH_DYNAMIC_RANGE, {
+    useTitle: () => d.intl.string(d.t.nemtgW),
+    useSubtitle: () => d.intl.string(d.t["O/Gjvn"]),
     useBadge: () => "beta",
     useOptions: function () {
         return n.useMemo(
             () => [
-                {
-                    name: T.intl.string(T.t.D5Fma9),
-                    desc: T.intl.string(T.t.Qj75ck),
-                    value: "no-limit",
-                },
-                {
-                    name: T.intl.string(T.t.ldcGIH),
-                    desc: T.intl.string(T.t["+V/bDk"]),
-                    value: "standard",
-                },
+                { name: d.intl.string(d.t.D5Fma9), desc: d.intl.string(d.t.Qj75ck), value: "no-limit" },
+                { name: d.intl.string(d.t.ldcGIH), desc: d.intl.string(d.t["+V/bDk"]), value: "standard" },
             ],
             [],
         );
@@ -37,7 +27,7 @@ let A = (0, u.Qx)(o.X.HIGH_DYNAMIC_RANGE, {
         (0, s.FU)(t);
     },
     useValue: function () {
-        return (0, l.bG)([a.Ay], () => a.Ay.hdrDynamicRange);
+        return (0, l.bG)([u.Ay], () => u.Ay.hdrDynamicRange);
     },
-    useSearchTerms: () => ["HDR", T.intl.string(T.t["O/Gjvn"])],
+    useSearchTerms: () => ["HDR", d.intl.string(d.t["O/Gjvn"])],
 });

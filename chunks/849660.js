@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kT: "filterBar__11877",
     KZ: "filterSection__11877",

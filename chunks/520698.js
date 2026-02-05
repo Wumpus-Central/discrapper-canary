@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(806931),
     i = n(731854);
 let a = Object.freeze({
@@ -9,7 +8,6 @@ let a = Object.freeze({
     [r.lp.USER]: i.x.DEFAULT,
     [r.lp.ACTIVITY]: i.x.DEFAULT,
 });
-
 function s(e) {
     return a[e];
 }

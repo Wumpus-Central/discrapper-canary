@@ -1,6 +1,5 @@
-n.d(t, {
-    c: () => o,
-});
+"use strict";
+n.d(t, { c: () => o });
 var r = n(852015),
     i = n(124651),
     a = n(123789),
@@ -20,20 +19,20 @@ class o {
             let s,
                 o,
                 l = r.repeat,
-                c = r.localName;
+                u = r.localName;
             if (r.oneof) {
                 let t = e[r.oneof];
-                if (t.oneofKind !== c) continue;
-                (s = t[c]), (o = !0);
-            } else (s = e[c]), (o = !1);
+                if (t.oneofKind !== u) continue;
+                (s = t[u]), (o = !0);
+            } else (s = e[u]), (o = !1);
             switch (r.kind) {
                 case "scalar":
                 case "enum":
-                    let u = "enum" == r.kind ? i.LN.INT32 : r.T;
+                    let c = "enum" == r.kind ? i.LN.INT32 : r.T;
                     if (l)
-                        if (((0, a.vA)(Array.isArray(s)), l == i.sA.PACKED)) this.packed(t, u, r.no, s);
-                        else for (let e of s) this.scalar(t, u, r.no, e, !0);
-                    else void 0 === s ? (0, a.vA)(r.opt) : this.scalar(t, u, r.no, s, o || r.opt);
+                        if (((0, a.vA)(Array.isArray(s)), l == i.sA.PACKED)) this.packed(t, c, r.no, s);
+                        else for (let e of s) this.scalar(t, c, r.no, e, !0);
+                    else void 0 === s ? (0, a.vA)(r.opt) : this.scalar(t, c, r.no, s, o || r.opt);
                     break;
                 case "message":
                     if (l) for (let e of ((0, a.vA)(Array.isArray(s)), s)) this.message(t, n, r.T(), r.no, e);

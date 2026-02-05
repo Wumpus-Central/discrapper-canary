@@ -1,17 +1,10 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(621070);
-let l = (e) => {
-    let { className: t, color: n = "text-strong", responsive: i = !0, children: l } = e;
-    return (0, r.jsx)(s.Heading, {
-        className: a()(o.w, t, i && o.n),
-        variant: "display-md",
-        color: n,
-        children: l,
-    });
+n.d(t, { A: () => o });
+var i = n(627968),
+    s = n(503698),
+    r = n.n(s),
+    a = n(397927),
+    l = n(621070);
+let o = (e) => {
+    let { className: t, color: n = "text-strong", responsive: s = !0, children: o } = e;
+    return (0, i.jsx)(a.Heading, { className: r()(l.w, t, s && l.n), variant: "display-md", color: n, children: o });
 };

@@ -1,229 +1,131 @@
-n.d(t, {
-    A: () => y,
-    L: () => j,
-}),
-    n(747238),
-    n(896048);
-var i,
-    r = n(627968),
+n.d(t, { A: () => A, L: () => h });
+var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(284009),
-    c = n.n(o),
+    s = n(503698),
+    a = n.n(s),
+    r = n(284009),
+    o = n.n(r),
     d = n(397927),
-    u = n(240248),
-    b = n(946274),
-    f = n(652215),
-    p = n(985018),
-    m = n(315628);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+    c = n(240248),
+    u = n(946274),
+    m = n(652215),
+    g = n(985018),
+    x = n(315628);
 function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function x(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function j(e) {
     let { className: t, icon: n = null } = e;
-    return (0, r.jsx)(d.NPJ, {
-        theme: f.NJ8.LIGHT,
-        children: (e) =>
-            (0, r.jsx)("div", {
-                className: s()(m.XD, t, e),
-                children: n,
-            }),
+    return (0, i.jsx)(d.NPJ, {
+        theme: m.NJ8.LIGHT,
+        children: (e) => (0, i.jsx)("div", { className: a()(x.XD, t, e), children: n }),
     });
 }
-class O extends (i = l.PureComponent) {
+class p extends l.PureComponent {
+    static defaultProps = {
+        name: "",
+        makeURL: (e) => e,
+        disabled: !1,
+        showIcon: !1,
+        hideSize: !1,
+        showRemoveButton: !0,
+        maxFileSizeBytes: 1 / 0,
+        icon: null,
+    };
+    inputRef = l.createRef();
     handleExternalFileChange(e) {
-        c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
+        o()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
             this.inputRef.current.handleFileChange(e);
     }
+    handleRemove = () => {
+        this.props.onChange(null);
+    };
     render() {
-        var e;
-        let t,
+        let e,
+            t,
             n,
-            i,
             l,
             {
-                image: a,
-                hint: o,
-                name: c,
-                makeURL: g,
-                disabled: O,
-                onChange: y,
-                showIcon: A,
-                showIconDisabled: v,
+                image: s,
+                hint: r,
+                name: o,
+                makeURL: p,
+                disabled: A,
+                onChange: b,
+                showIcon: _,
+                showIconDisabled: f,
                 className: N,
-                imageClassName: E,
+                imageClassName: j,
                 iconClassName: T,
-                iconWrapperClassName: w,
-                icon: C,
-                hideSize: S,
-                imageStyle: _,
-                showRemoveButton: I,
-                maxFileSizeBytes: P,
-                onFileSizeError: k,
-                onOpenImageSelectModal: R,
-                "aria-label": L,
+                iconWrapperClassName: C,
+                icon: v,
+                hideSize: E,
+                imageStyle: I,
+                showRemoveButton: S,
+                maxFileSizeBytes: y,
+                onFileSizeError: O,
+                onOpenImageSelectModal: w,
+                "aria-label": R,
             } = this.props;
         if (
-            (null != (t = null != a && /^data:/.test(a) ? a : g(a))
-                ? (n = 'url("'.concat(t, '")'))
-                : null != c &&
-                  (i = (0, r.jsx)(d.Heading, {
+            (null != (e = null != s && /^data:/.test(s) ? s : p(s))
+                ? (t = `url("${e}")`)
+                : null != o &&
+                  (n = (0, i.jsx)(d.Heading, {
                       variant: "heading-xxl/normal",
                       color: "always-white",
-                      className: m.nX,
-                      children: (0, u.oN)(c),
+                      className: x.nX,
+                      children: (0, c.oN)(o),
                   })),
-            O)
+            A)
         )
-            return (0, r.jsx)("div", {
-                className: s()(m.WY, m.r9, N),
-                children: (0, r.jsxs)("div", {
-                    className: s()(m.Yp, E),
-                    style: x(h({}, _), {
-                        backgroundImage: n,
-                    }),
-                    children: [
-                        i,
-                        v &&
-                            (0, r.jsx)("div", {
-                                className: s()(m.XD, m.$N, T),
-                                children: C,
-                            }),
-                    ],
+            return (0, i.jsx)("div", {
+                className: a()(x.WY, x.r9, N),
+                children: (0, i.jsxs)("div", {
+                    className: a()(x.Yp, j),
+                    style: { ...I, backgroundImage: t },
+                    children: [n, f && (0, i.jsx)("div", { className: a()(x.XD, x.$N, T), children: v })],
                 }),
             });
-        null != a
-            ? (l = (0, r.jsx)(d.MzZ, {
-                  className: m.DT,
+        null != s
+            ? (l = (0, i.jsx)(d.MzZ, {
+                  className: x.DT,
                   onClick: this.handleRemove,
-                  children: p.intl.string(p.t.N86XcP),
+                  children: g.intl.string(g.t.N86XcP),
               }))
-            : S ||
-              (l = (0, r.jsx)("small", {
-                  className: m.UZ,
-                  children: p.intl.format(p.t.AH4c7Y, {
-                      size: f.eQT,
-                  }),
-              }));
-        let M = null != (e = null != L ? L : o) ? e : p.intl.string(p.t["Ge+941"]);
-        return (0, r.jsxs)("div", {
-            className: s()(m.WY, N),
+            : E || (l = (0, i.jsx)("small", { className: x.UZ, children: g.intl.format(g.t.AH4c7Y, { size: m.eQT }) }));
+        let k = R ?? r ?? g.intl.string(g.t["Ge+941"]);
+        return (0, i.jsxs)("div", {
+            className: a()(x.WY, N),
             children: [
-                (0, r.jsx)(d.vN3, {
+                (0, i.jsx)(d.vN3, {
                     within: !0,
-                    children: (0, r.jsxs)("div", {
-                        className: A ? s()(m.U1, w) : void 0,
+                    children: (0, i.jsxs)("div", {
+                        className: _ ? a()(x.U1, C) : void 0,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: s()(m.Yp, E),
-                                style: x(h({}, _), {
-                                    backgroundImage: n,
-                                }),
+                            (0, i.jsxs)("div", {
+                                className: a()(x.Yp, j),
+                                style: { ...I, backgroundImage: t },
                                 children: [
-                                    (0, r.jsx)("span", {
-                                        "aria-hidden": !0,
-                                        children: i,
-                                    }),
-                                    null != R
-                                        ? (0, r.jsx)(d.DUT, {
-                                              className: m.c4,
-                                              "aria-label": M,
-                                              onClick: R,
-                                          })
-                                        : (0, r.jsx)(b.Ay, {
+                                    (0, i.jsx)("span", { "aria-hidden": !0, children: n }),
+                                    null != w
+                                        ? (0, i.jsx)(d.DUT, { className: x.c4, "aria-label": k, onClick: w })
+                                        : (0, i.jsx)(u.Ay, {
                                               ref: this.inputRef,
-                                              onChange: y,
-                                              className: m.c4,
-                                              "aria-label": M,
+                                              onChange: b,
+                                              className: x.c4,
+                                              "aria-label": k,
                                               tabIndex: 0,
-                                              maxFileSizeBytes: P,
-                                              onFileSizeError: k,
+                                              maxFileSizeBytes: y,
+                                              onFileSizeError: O,
                                           }),
                                 ],
                             }),
-                            null != o &&
-                                (0, r.jsx)("div", {
-                                    className: m.$J,
-                                    "aria-hidden": "true",
-                                    children: o,
-                                }),
-                            A &&
-                                (0, r.jsx)(j, {
-                                    className: T,
-                                    icon: C,
-                                }),
+                            null != r && (0, i.jsx)("div", { className: x.$J, "aria-hidden": "true", children: r }),
+                            _ && (0, i.jsx)(h, { className: T, icon: v }),
                         ],
                     }),
                 }),
-                I ? l : null,
+                S ? l : null,
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            g(this, "inputRef", l.createRef()),
-            g(this, "handleRemove", () => {
-                this.props.onChange(null);
-            });
-    }
 }
-g(O, "defaultProps", {
-    name: "",
-    makeURL: (e) => e,
-    disabled: !1,
-    showIcon: !1,
-    hideSize: !1,
-    showRemoveButton: !0,
-    maxFileSizeBytes: 1 / 0,
-    icon: null,
-});
-let y = O;
+let A = p;

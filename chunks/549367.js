@@ -1,50 +1,32 @@
-l.d(t, {
-    A: () => u,
-});
-var n = l(627968),
-    r = l(64700),
-    s = l(641150),
-    a = l(397927),
-    i = l(365491),
-    o = l(856686),
-    c = l(985018);
-
-function u() {
+"use strict";
+s.d(t, { A: () => d });
+var n = s(627968),
+    r = s(64700),
+    l = s(641150),
+    a = s(397927),
+    i = s(365491),
+    o = s(856686),
+    c = s(985018);
+function d() {
     let { itemTypeFilters: e, searchQuery: t } = (0, i.v)((e) => e),
-        { totalCount: l, isFetchingResults: u } = (0, o.S)(),
-        d = (0, i.v)((e) => e.hasFilters()),
-        f = r.useCallback(() => {
-            if (!d) return "";
-            if (u) return c.intl.string(c.t["/FaMSE"]);
+        { totalCount: s, isFetchingResults: d } = (0, o.S)(),
+        u = (0, i.v)((e) => e.hasFilters()),
+        g = r.useCallback(() => {
+            if (!u) return "";
+            if (d) return c.intl.string(c.t["/FaMSE"]);
             if ("" !== t) {
-                let e = t.length > 40 ? "".concat(t.slice(0, 40), "...") : t;
-                return c.intl.format(c.t.KJMJOz, {
-                    count: l,
-                    search: e,
-                });
+                let e = t.length > 40 ? `${t.slice(0, 40)}...` : t;
+                return c.intl.format(c.t.KJMJOz, { count: s, search: e });
             }
-            return 1 === e.size && e.has(s.q.AVATAR_DECORATION)
-                ? c.intl.format(c.t.s1UzGQ, {
-                      count: l,
-                  })
-                : 1 === e.size && e.has(s.q.NAMEPLATE)
-                  ? c.intl.format(c.t.ZWGN9T, {
-                        count: l,
-                    })
-                  : 1 === e.size && e.has(s.q.PROFILE_EFFECT)
-                    ? c.intl.format(c.t["v/7apu"], {
-                          count: l,
-                      })
-                    : 1 === e.size && e.has(s.q.BUNDLE)
-                      ? c.intl.format(c.t.fZ1rdk, {
-                            count: l,
-                        })
-                      : c.intl.format(c.t["/rPvmQ"], {
-                            count: l,
-                        });
-        }, [e, l, d, t, u]);
-    return (0, n.jsx)(a.Heading, {
-        variant: "heading-lg/semibold",
-        children: f(),
-    });
+            return 1 === e.size && e.has(l.q.AVATAR_DECORATION)
+                ? c.intl.format(c.t.s1UzGQ, { count: s })
+                : 1 === e.size && e.has(l.q.NAMEPLATE)
+                  ? c.intl.format(c.t.ZWGN9T, { count: s })
+                  : 1 === e.size && e.has(l.q.PROFILE_EFFECT)
+                    ? c.intl.format(c.t["v/7apu"], { count: s })
+                    : 1 === e.size && e.has(l.q.BUNDLE)
+                      ? c.intl.format(c.t.fZ1rdk, { count: s })
+                      : c.intl.format(c.t["/rPvmQ"], { count: s });
+        }, [e, s, u, t, d]);
+    return (0, n.jsx)(a.Heading, { variant: "heading-lg/semibold", children: g() });
 }

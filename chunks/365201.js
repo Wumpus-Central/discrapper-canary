@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(683570),
     o = n(486816),
@@ -14,11 +15,7 @@ var r = n(834647),
         return 1 !== c.canParse.length;
     });
 r(
-    {
-        target: "URL",
-        stat: !0,
-        forced: !u || d,
-    },
+    { target: "URL", stat: !0, forced: !u || d },
     {
         canParse: function (e) {
             var t = i(arguments.length, 1),

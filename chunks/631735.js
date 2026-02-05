@@ -1,23 +1,16 @@
-var r = n(869639);
-e.exports = function (e, t, n) {
-    var i = r.undo(t);
-    if ("spellcheck-change" === t.getLastChangeType()) {
-        var a = i.getCurrentContent();
-        n(
-            r.set(i, {
-                nativelyRenderedContent: a,
-            }),
-        );
+"use strict";
+var n = r(869639);
+t.exports = function (t, e, r) {
+    var i = n.undo(e);
+    if ("spellcheck-change" === e.getLastChangeType()) {
+        var o = i.getCurrentContent();
+        r(n.set(i, { nativelyRenderedContent: o }));
         return;
     }
-    (e.preventDefault(), t.getNativelyRenderedContent())
-        ? (n(
-              r.set(t, {
-                  nativelyRenderedContent: null,
-              }),
-          ),
+    (t.preventDefault(), e.getNativelyRenderedContent())
+        ? (r(n.set(e, { nativelyRenderedContent: null })),
           setTimeout(function () {
-              n(i);
+              r(i);
           }, 0))
-        : n(i);
+        : r(i);
 };

@@ -1,28 +1,25 @@
-a.d(n, {
-    default: () => h,
-}),
-    a(896048);
-var l = a(627968),
-    t = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    r = a(862482),
-    d = a(935462),
-    o = a(571356),
-    c = a(397927),
-    u = a(235986),
-    m = a(985018),
-    p = a(933976);
+n.d(a, { default: () => h });
+var t = n(627968),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(862482),
+    d = n(935462),
+    o = n(571356),
+    c = n(397927),
+    m = n(235986),
+    u = n(985018),
+    p = n(933976);
 let h = (e) => {
-    let n,
-        a,
-        i,
+    let a,
+        n,
+        s,
         {
             body: h,
             cancelText: _,
             className: g,
             confirmColor: x,
-            confirmText: j = m.intl.string(m.t.BddRzS),
+            confirmText: j = u.intl.string(u.t.BddRzS),
             secondaryConfirmText: b,
             onCancel: f,
             onClose: N,
@@ -33,30 +30,30 @@ let h = (e) => {
             titleClassName: k,
         } = e,
         S = r.$n.Sizes.MEDIUM,
-        [z, E] = t.useState(!1);
+        [z, E] = i.useState(!1);
     return (
-        t.useEffect(
+        i.useEffect(
             () => () => {
-                z && (null == A || A());
+                z && A?.();
             },
             [z, A],
         ),
         null != _ &&
             "" !== _ &&
-            (n = (0, l.jsx)(r.$n, {
+            (a = (0, t.jsx)(r.$n, {
                 "data-migration-pending": !0,
                 type: "button",
                 size: S,
                 color: r.$n.Colors.PRIMARY,
                 onClick: () => {
-                    null == N || N(), null == f || f();
+                    N?.(), f?.();
                 },
                 className: p.zr,
                 children: _,
             })),
         null != j &&
             "" !== j &&
-            (a = (0, l.jsx)(r.$n, {
+            (n = (0, t.jsx)(r.$n, {
                 "data-migration-pending": !0,
                 type: "submit",
                 color: x,
@@ -67,50 +64,45 @@ let h = (e) => {
             })),
         null != b &&
             "" !== b &&
-            (i = (0, l.jsx)(c.Checkbox, {
-                checked: z,
-                onChange: (e) => E(e),
-                label: b,
-                labelType: "secondary",
-            })),
-        (0, l.jsx)(d.EO, {
+            (s = (0, t.jsx)(c.Checkbox, { checked: z, onChange: (e) => E(e), label: b, labelType: "secondary" })),
+        (0, t.jsx)(d.EO, {
             "data-migration-pending": !0,
             transitionState: D,
             size: d.rI.DYNAMIC,
-            className: s()(g, p.kL),
+            className: l()(g, p.kL),
             "aria-label": C,
             parentComponent: "Alert",
-            children: (0, l.jsxs)("form", {
+            children: (0, t.jsxs)("form", {
                 onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == N || N(), null == y || y();
+                    null != e && e.preventDefault(), N?.(), y?.();
                 },
                 className: p.Zd,
                 children: [
-                    (0, l.jsx)(d.rQ, {
+                    (0, t.jsx)(d.rQ, {
                         "data-migration-pending": !0,
                         children:
                             null != C
-                                ? (0, l.jsx)(c.Heading, {
+                                ? (0, t.jsx)(c.Heading, {
                                       variant: "heading-lg/semibold",
-                                      className: s()(p.DD, k),
+                                      className: l()(p.DD, k),
                                       children: C,
                                   })
-                                : (0, l.jsx)(c.Heading, {
+                                : (0, t.jsx)(c.Heading, {
                                       variant: "heading-md/semibold",
-                                      className: s()(p.DD, k),
+                                      className: l()(p.DD, k),
                                       children: C,
                                   }),
                     }),
-                    (0, l.jsx)(d.$m, {
+                    (0, t.jsx)(d.$m, {
                         "data-migration-pending": !0,
                         className: p.jE,
-                        children: (0, l.jsx)(u.A, {
-                            direction: u.A.Direction.VERTICAL,
-                            justify: u.A.Justify.START,
+                        children: (0, t.jsx)(m.A, {
+                            direction: m.A.Direction.VERTICAL,
+                            justify: m.A.Justify.START,
                             className: p.Qs,
                             children:
                                 null != h &&
-                                (0, l.jsx)(o.E, {
+                                (0, t.jsx)(o.E, {
                                     variant: "text-md/normal",
                                     className: p.rf,
                                     color: "text-default",
@@ -118,12 +110,12 @@ let h = (e) => {
                                 }),
                         }),
                     }),
-                    (0, l.jsxs)(d.jl, {
+                    (0, t.jsxs)(d.jl, {
                         "data-migration-pending": !0,
                         justify: void 0,
-                        wrap: u.A.Wrap.WRAP,
+                        wrap: m.A.Wrap.WRAP,
                         className: p.Hx,
-                        children: [a, n, i],
+                        children: [n, a, s],
                     }),
                 ],
             }),

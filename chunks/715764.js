@@ -1,23 +1,14 @@
-t.d(n, {
-    EY: () => l,
-    Sv: () => a,
-    fz: () => c,
-});
-var r = t(627968);
-
-function l(e) {
+t.d(n, { EY: () => r, Sv: () => s, fz: () => a });
+var l = t(627968);
+function r(e) {
     let { children: n } = e;
     return n;
 }
-
-function c(e) {
-    let { siblings: n, index: t, children: l } = e;
-    return (0, r.jsxs)("span", {
-        children: [l, t < n.length - 1 ? (0, r.jsx)("br", {}) : null],
-    });
+function a(e) {
+    let { siblings: n, index: t, children: r } = e;
+    return (0, l.jsxs)("span", { children: [r, t < n.length - 1 ? (0, l.jsx)("br", {}) : null] });
 }
-
-function a() {
-    return (0, r.jsx)("p", {});
+function s() {
+    return (0, l.jsx)("p", {});
 }
 t(64700);

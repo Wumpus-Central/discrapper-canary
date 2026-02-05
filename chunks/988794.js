@@ -1,35 +1,35 @@
+"use strict";
 n.d(t, {
     BV: () => l,
-    C1: () => y,
+    C1: () => I,
     GW: () => E,
     IJ: () => s,
-    Oz: () => A,
-    Ps: () => f,
-    Qi: () => I,
+    Oz: () => y,
+    Ps: () => _,
+    Qi: () => C,
     Tn: () => h,
-    XG: () => u,
-    aj: () => O,
-    al: () => b,
-    b8: () => p,
-    dD: () => _,
+    XG: () => c,
+    aj: () => T,
+    al: () => A,
+    b8: () => f,
+    dD: () => p,
     lV: () => d,
-    nN: () => v,
+    nN: () => S,
     o_: () => g,
     om: () => m,
     t_: () => a,
-    tq: () => c,
+    tq: () => u,
     vj: () => o,
-    w0: () => S,
-}),
-    n(896048);
+    w0: () => v,
+});
 var r = n(927813),
     i = n(652215);
 let a = 100,
     s = 1e3,
     o = 100,
     l = "Guild Events Modal",
-    c = "-1";
-var u = (function (e) {
+    u = "-1";
+var c = (function (e) {
     return (
         (e[(e.SCHEDULED = 1)] = "SCHEDULED"),
         (e[(e.ACTIVE = 2)] = "ACTIVE"),
@@ -39,7 +39,7 @@ var u = (function (e) {
     );
 })({});
 let d = new Set([3, 4]);
-var f = (function (e) {
+var _ = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.STAGE_INSTANCE = 1)] = "STAGE_INSTANCE"),
@@ -49,29 +49,26 @@ var f = (function (e) {
             e
         );
     })({}),
-    p = (function (e) {
+    f = (function (e) {
         return (e[(e.EVENT_START = 1)] = "EVENT_START"), e;
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (e[(e.PUBLIC = 1)] = "PUBLIC"), (e[(e.GUILD_ONLY = 2)] = "GUILD_ONLY"), e;
     })({});
 let h = new Set([1, 4]),
-    m = {
-        1: i.rbe.GUILD_STAGE_VOICE,
-        2: i.rbe.GUILD_VOICE,
-    },
+    m = { 1: i.rbe.GUILD_STAGE_VOICE, 2: i.rbe.GUILD_VOICE },
     g = new Set([3]),
     E = new Set([1, 2]);
-var b = (function (e) {
+var A = (function (e) {
     return (e[(e.EVENT_INFO = 0)] = "EVENT_INFO"), (e[(e.RSVP_LIST = 1)] = "RSVP_LIST"), e;
 })({});
-let y = 100,
-    O = 2 * r.A.Millis.DAY,
-    A = 12 * r.A.Millis.HOUR,
-    v = 4;
-var S = (function (e) {
+let I = 100,
+    T = 2 * r.A.Millis.DAY,
+    y = 12 * r.A.Millis.HOUR,
+    S = 4;
+var v = (function (e) {
         return (e.NEW_EVENT = "Upcoming Event Notice"), (e.EVENT_STARTING_SOON = "Event Starting Soon Notice"), e;
     })({}),
-    I = (function (e) {
+    C = (function (e) {
         return (e[(e.UNINTERESTED = 0)] = "UNINTERESTED"), (e[(e.INTERESTED = 1)] = "INTERESTED"), e;
     })({});

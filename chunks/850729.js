@@ -1,217 +1,136 @@
-n.d(t, {
-    C: () => L,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { C: () => U });
+var i = n(627968),
     l = n(64700),
-    i = n(837381),
+    s = n(837381),
     a = n(311907),
-    s = n(506774),
+    r = n(506774),
     o = n(397927),
-    c = n(509963),
-    u = n(704761),
-    d = n(531260),
-    f = n(793943),
-    p = n(411976),
-    h = n(912309),
-    b = n(400492),
-    g = n(728321),
-    m = n(309010),
-    A = n(287809),
-    y = n(816733),
-    O = n(619921),
-    j = n(194871),
-    v = n(966846),
-    x = n(674378),
-    E = n(87941),
-    _ = n(941971),
-    C = n(900848),
-    S = n(550591),
-    I = n(65611),
-    N = n(652215),
-    T = n(788868),
-    P = n(235079),
-    w = n(985018),
-    R = n(623773);
-let D = {
-    origin: {
-        x: -16,
-        y: 0,
-    },
-    targetWidth: 48,
-    targetHeight: 48,
-    offset: {
-        x: 0,
-        y: 0,
-    },
-};
-
-function M(e) {
-    var t, n;
-    let { selected: a, user: d, badge: p, link: h, showProgressBadge: m } = e,
-        [A, y] = l.useState(!1),
-        [O, j] = l.useState(!1),
-        [v, x] = l.useState(null),
-        [E, T] = l.useState(0),
-        M = (0, i.Vd)("home"),
-        L = (0, f.fy)().activePanel === f.HP.APP_ICON,
+    d = n(509963),
+    c = n(704761),
+    u = n(531260),
+    h = n(793943),
+    A = n(411976),
+    g = n(912309),
+    m = n(400492),
+    p = n(728321),
+    _ = n(309010),
+    x = n(287809),
+    f = n(816733),
+    E = n(619921),
+    C = n(194871),
+    I = n(966846),
+    S = n(674378),
+    b = n(87941),
+    N = n(941971),
+    T = n(900848),
+    j = n(550591),
+    v = n(65611),
+    y = n(652215),
+    R = n(788868),
+    O = n(235079),
+    L = n(985018),
+    D = n(623773);
+let M = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
+function G(e) {
+    let { selected: t, user: n, badge: a, link: u, showProgressBadge: A } = e,
+        [g, _] = l.useState(!1),
+        [x, f] = l.useState(!1),
+        [E, C] = l.useState(null),
+        [I, S] = l.useState(0),
+        b = (0, s.Vd)("home"),
+        R = (0, h.fy)().activePanel === h.HP.APP_ICON,
         G = () => {
-            x(null), T(0), clearTimeout(v);
+            C(null), S(0), clearTimeout(E);
         };
-    if (null == d) return null;
-    let k = w.intl.string(w.t.YUU0RF);
-    O && (k = s.w.get(N.wqg) ? w.intl.string(w.t["nkq1l+"]) : w.intl.string(w.t.Be8Q5E));
-    let U = null;
-    !a &&
-        m &&
-        (U = (0, r.jsx)(c.A, {
-            className: R.Cp,
-            determineOwnVisibility: !1,
-        }));
-    let V = a || A || L,
-        F = (0, r.jsx)(o.Qk9, {
+    if (null == n) return null;
+    let U = L.intl.string(L.t.YUU0RF);
+    x && (U = r.w.get(y.wqg) ? L.intl.string(L.t["nkq1l+"]) : L.intl.string(L.t.Be8Q5E));
+    let P = null;
+    !t && A && (P = (0, i.jsx)(d.A, { className: D.Cp, determineOwnVisibility: !1 }));
+    let k = t || g || R,
+        w = (0, i.jsx)(o.Qk9, {
             selected: !0,
-            lowerBadge: p > 0 ? (0, I.wN)(p) : null,
-            upperBadge: U,
-            lowerBadgeSize: {
-                width: (0, o.o6S)(p),
-            },
-            children: (0, r.jsx)(
-                o.jlP,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
+            lowerBadge: a > 0 ? (0, v.wN)(a) : null,
+            upperBadge: P,
+            lowerBadgeSize: { width: (0, o.o6S)(a) },
+            children: (0, i.jsx)(o.jlP, {
+                onMouseEnter: () => _(!0),
+                onMouseLeave: () => _(!1),
+                onClick: () => {
+                    if (!__OVERLAY__ && (null != E && clearTimeout(E), C(setTimeout(G, 500)), S(I + 1), 15 === I)) {
+                        G();
+                        let e = !r.w.get(y.wqg);
+                        r.w.set(y.wqg, e),
+                            e && r.w.set(O.L, !0),
+                            e ? (0, m.Ak)("discodo") : (0, m.Ak)("user_leave"),
+                            f(!0),
+                            setTimeout(() => {
+                                f(!1);
+                            }, 1e3);
                     }
-                    return e;
-                })(
-                    {
-                        onMouseEnter: () => y(!0),
-                        onMouseLeave: () => y(!1),
-                        onClick: () => {
-                            if (
-                                !__OVERLAY__ &&
-                                (null != v && clearTimeout(v), x(setTimeout(G, 500)), T(E + 1), 15 === E)
-                            ) {
-                                G();
-                                let e = !s.w.get(N.wqg);
-                                s.w.set(N.wqg, e),
-                                    e && s.w.set(P.L, !0),
-                                    e ? (0, b.Ak)("discodo") : (0, b.Ak)("user_leave"),
-                                    j(!0),
-                                    setTimeout(() => {
-                                        j(!1);
-                                    }, 1e3);
-                            }
+                },
+                selected: k,
+                ariaLabel: L.intl.string(L.t.YUU0RF),
+                "aria-owns": "guild-list-unread-dms",
+                "aria-selected": t,
+                ...b,
+                to: {
+                    pathname: u,
+                    state: {
+                        analyticsSource: {
+                            page: y.liQ.GUILD_CHANNEL,
+                            section: y.JJy.NAVIGATION,
+                            object: y.ZSU.BUTTON_HOME,
                         },
-                        selected: V,
-                        ariaLabel: w.intl.string(w.t.YUU0RF),
-                        "aria-owns": "guild-list-unread-dms",
-                        "aria-selected": a,
                     },
-                    M,
-                )),
-                (n = n =
-                    {
-                        to: {
-                            pathname: h,
-                            state: {
-                                analyticsSource: {
-                                    page: N.liQ.GUILD_CHANNEL,
-                                    section: N.JJy.NAVIGATION,
-                                    object: N.ZSU.BUTTON_HOME,
-                                },
-                            },
-                        },
-                        children: (0, r.jsx)(u.A, {}),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
-            ),
+                },
+                children: (0, i.jsx)(c.A, {}),
+            }),
         });
-    return (0, r.jsx)("div", {
-        className: R.Uq,
-        children: (0, r.jsx)(g.A, {
-            inlineSpecs: D,
+    return (0, i.jsx)("div", {
+        className: D.Uq,
+        children: (0, i.jsx)(p.A, {
+            inlineSpecs: M,
             tutorialId: "friends-list",
             position: "right",
-            children: (0, r.jsxs)(C.c, {
+            children: (0, i.jsxs)(T.c, {
                 children: [
-                    (0, r.jsx)(_.A, {
-                        selected: a,
-                        hovered: A,
-                        className: R.Io,
-                    }),
-                    (0, r.jsx)(S.A, {
-                        hideOnClick: !0,
-                        text: k,
-                        selected: a,
-                        children: F,
-                    }),
+                    (0, i.jsx)(N.A, { selected: t, hovered: g, className: D.Io }),
+                    (0, i.jsx)(j.A, { hideOnClick: !0, text: U, selected: t, children: w }),
                 ],
             }),
         }),
     });
 }
-
-function L() {
-    let e = (0, E.q)(),
-        t = (0, a.bG)([v.A, j.A], () => {
-            let e = (0, c.v)(v.A.activeItems, j.A),
-                { total: t, progress: n } = x.zY(e),
-                r = x.uA(n, t);
-            return r > 0 && r < 100;
+function U() {
+    let e = (0, b.q)(),
+        t = (0, a.bG)([I.A, C.A], () => {
+            let e = (0, d.v)(I.A.activeItems, C.A),
+                { total: t, progress: n } = S.zY(e),
+                i = S.uA(n, t);
+            return i > 0 && i < 100;
         }),
-        n = (0, h.kX)(),
-        l = Object.keys(T.TP),
-        i = (0, d.A)(),
-        { unviewedTrialCount: s, unviewedDiscountCount: o } = (0, a.cf)([y.A], () => ({
-            unviewedTrialCount: y.A.getUnacknowledgedOffers(l).length,
-            unviewedDiscountCount: y.A.getUnacknowledgedDiscountOffers().length,
+        n = (0, g.kX)(),
+        l = Object.keys(R.TP),
+        s = (0, u.A)(),
+        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cf)([f.A], () => ({
+            unviewedTrialCount: f.A.getUnacknowledgedOffers(l).length,
+            unviewedDiscountCount: f.A.getUnacknowledgedDiscountOffers().length,
         })),
-        u = i.fractionalState === T.xc.NONE ? s + o : 0,
-        f = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
-        b = (0, p.W)(),
-        g = n + u + b,
-        _ = g === u && u > 0 && n + b === 0,
-        C = O.A.getHomeLink();
+        c = s.fractionalState === R.xc.NONE ? r + o : 0,
+        h = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
+        m = (0, A.W)(),
+        p = n + c + m,
+        N = p === c && c > 0 && n + m === 0,
+        T = E.A.getHomeLink();
     return (
-        _ && (C = N.BVt.APPLICATION_STORE),
-        (0, r.jsx)(M, {
+        N && (T = y.BVt.APPLICATION_STORE),
+        (0, i.jsx)(G, {
             selected: e,
-            user: f,
-            selectedChannelId: m.A.getChannelId(N.ME),
-            badge: g,
-            link: C,
+            user: h,
+            selectedChannelId: _.A.getChannelId(y.ME),
+            badge: p,
+            link: T,
             showProgressBadge: t,
         })
     );

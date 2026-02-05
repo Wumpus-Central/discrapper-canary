@@ -1,10 +1,10 @@
+"use strict";
 var n = r(587321),
     i = r(584606),
     o = r(692001),
     a = r(797686),
     s = r(494277),
     u = r(670200);
-
 function c(t, e, r) {
     var o = e,
         c = n(o);
@@ -30,10 +30,7 @@ function c(t, e, r) {
             })(o);
             f = u(i(p));
         }
-        return {
-            key: f,
-            offset: 0,
-        };
+        return { key: f, offset: 0 };
     }
     var h = o.childNodes[r - 1],
         d = null,
@@ -50,12 +47,8 @@ function c(t, e, r) {
         })(h);
         (d = u(i(y))), (g = l(y));
     } else (d = u(c)), (g = l(h));
-    return {
-        key: d,
-        offset: g,
-    };
+    return { key: d, offset: g };
 }
-
 function l(t) {
     var e = t.textContent;
     return "\n" === e ? 0 : e.length;
@@ -63,33 +56,18 @@ function l(t) {
 t.exports = function (t, e, r, i, a, s) {
     var l = r.nodeType === Node.TEXT_NODE,
         f = a.nodeType === Node.TEXT_NODE;
-    if (l && f)
-        return {
-            selectionState: o(t, u(n(r)), i, u(n(a)), s),
-            needsRecovery: !1,
-        };
+    if (l && f) return { selectionState: o(t, u(n(r)), i, u(n(a)), s), needsRecovery: !1 };
     var p = null,
         h = null,
         d = !0;
     return (
         l
-            ? ((p = {
-                  key: u(n(r)),
-                  offset: i,
-              }),
-              (h = c(e, a, s)))
+            ? ((p = { key: u(n(r)), offset: i }), (h = c(e, a, s)))
             : f
-              ? ((h = {
-                    key: u(n(a)),
-                    offset: s,
-                }),
-                (p = c(e, r, i)))
+              ? ((h = { key: u(n(a)), offset: s }), (p = c(e, r, i)))
               : ((p = c(e, r, i)),
                 (h = c(e, a, s)),
                 r === a && i === s && (d = !!r.firstChild && "BR" !== r.firstChild.nodeName)),
-        {
-            selectionState: o(t, p.key, p.offset, h.key, h.offset),
-            needsRecovery: d,
-        }
+        { selectionState: o(t, p.key, p.offset, h.key, h.offset), needsRecovery: d }
     );
 };

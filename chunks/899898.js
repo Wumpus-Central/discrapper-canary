@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     if (
         "IntersectionObserver" in e &&
         "IntersectionObserverEntry" in e &&
@@ -13,7 +14,6 @@
         return;
     }
     var n = [];
-
     function r(e) {
         (this.time = e.time),
             (this.target = e.target),
@@ -27,7 +27,6 @@
             i = r.width * r.height;
         n ? (this.intersectionRatio = i / n) : (this.intersectionRatio = +!!this.isIntersecting);
     }
-
     function i(e, t) {
         var n = t || {};
         if ("function" != typeof e) throw Error("callback must be a function");
@@ -45,11 +44,9 @@
                 })
                 .join(" "));
     }
-
     function a() {
         return e.performance && performance.now && performance.now();
     }
-
     function s(e, t) {
         var n = null;
         return function () {
@@ -59,40 +56,26 @@
                 }, t));
         };
     }
-
     function o(e, t, n, r) {
         "function" == typeof e.addEventListener
             ? e.addEventListener(t, n, r || !1)
             : "function" == typeof e.attachEvent && e.attachEvent("on" + t, n);
     }
-
     function l(e, t, n, r) {
         "function" == typeof e.removeEventListener
             ? e.removeEventListener(t, n, r || !1)
             : "function" == typeof e.detatchEvent && e.detatchEvent("on" + t, n);
     }
-
-    function c(e, t) {
+    function u(e, t) {
         var n = Math.max(e.top, t.top),
             r = Math.min(e.bottom, t.bottom),
             i = Math.max(e.left, t.left),
             a = Math.min(e.right, t.right),
             s = a - i,
             o = r - n;
-        return (
-            s >= 0 &&
-            o >= 0 && {
-                top: n,
-                bottom: r,
-                left: i,
-                right: a,
-                width: s,
-                height: o,
-            }
-        );
+        return s >= 0 && o >= 0 && { top: n, bottom: r, left: i, right: a, width: s, height: o };
     }
-
-    function u(e) {
+    function c(e) {
         var t;
         try {
             t = e.getBoundingClientRect();
@@ -110,27 +93,17 @@
               t)
             : d();
     }
-
     function d() {
-        return {
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            width: 0,
-            height: 0,
-        };
+        return { top: 0, bottom: 0, left: 0, right: 0, width: 0, height: 0 };
     }
-
-    function f(e, t) {
+    function _(e, t) {
         for (var n = t; n; ) {
             if (n == e) return !0;
-            n = p(n);
+            n = f(n);
         }
         return !1;
     }
-
-    function p(e) {
+    function f(e) {
         var t = e.parentNode;
         return t && 11 == t.nodeType && t.host ? t.host : t;
     }
@@ -145,10 +118,7 @@
             ) {
                 if (!(e && 1 == e.nodeType)) throw Error("target must be an Element");
                 this._registerInstance(),
-                    this._observationTargets.push({
-                        element: e,
-                        entry: null,
-                    }),
+                    this._observationTargets.push({ element: e, entry: null }),
                     this._monitorIntersections(),
                     this._checkForIntersections();
             }
@@ -181,10 +151,7 @@
             var t = (e || "0px").split(/\s+/).map(function (e) {
                 var t = /^(-?\d*\.?\d+)(px|%)$/.exec(e);
                 if (!t) throw Error("rootMargin must be specified in pixels or percent");
-                return {
-                    value: parseFloat(t[1]),
-                    unit: t[2],
-                };
+                return { value: parseFloat(t[1]), unit: t[2] };
             });
             return (t[1] = t[1] || t[0]), (t[2] = t[2] || t[0]), (t[3] = t[3] || t[1]), t;
         }),
@@ -219,16 +186,16 @@
                 t = e ? this._getRootRect() : d();
             this._observationTargets.forEach(function (n) {
                 var i = n.element,
-                    s = u(i),
+                    s = c(i),
                     o = this._rootContainsTarget(i),
                     l = n.entry,
-                    c = e && o && this._computeTargetAndRootIntersection(i, t),
+                    u = e && o && this._computeTargetAndRootIntersection(i, t),
                     d = (n.entry = new r({
                         time: a(),
                         target: i,
                         boundingClientRect: s,
                         rootBounds: t,
-                        intersectionRect: c,
+                        intersectionRect: u,
                     }));
                 l
                     ? e && o
@@ -240,25 +207,25 @@
         }),
         (i.prototype._computeTargetAndRootIntersection = function (n, r) {
             if ("none" != e.getComputedStyle(n).display) {
-                for (var i = u(n), a = i, s = p(n), o = !1; !o; ) {
+                for (var i = c(n), a = i, s = f(n), o = !1; !o; ) {
                     var l = null,
                         d = 1 == s.nodeType ? e.getComputedStyle(s) : {};
                     if ("none" == d.display) return;
                     if (
                         (s == this.root || s == t
                             ? ((o = !0), (l = r))
-                            : s != t.body && s != t.documentElement && "visible" != d.overflow && (l = u(s)),
-                        l && !(a = c(l, a)))
+                            : s != t.body && s != t.documentElement && "visible" != d.overflow && (l = c(s)),
+                        l && !(a = u(l, a)))
                     )
                         break;
-                    s = p(s);
+                    s = f(s);
                 }
                 return a;
             }
         }),
         (i.prototype._getRootRect = function () {
             var e;
-            if (this.root) e = u(this.root);
+            if (this.root) e = c(this.root);
             else {
                 var n = t.documentElement,
                     r = t.body;
@@ -277,12 +244,7 @@
             var t = this._rootMarginValues.map(function (t, n) {
                     return "px" == t.unit ? t.value : (t.value * (n % 2 ? e.width : e.height)) / 100;
                 }),
-                n = {
-                    top: e.top - t[0],
-                    right: e.right + t[1],
-                    bottom: e.bottom + t[2],
-                    left: e.left - t[3],
-                };
+                n = { top: e.top - t[0], right: e.right + t[1], bottom: e.bottom + t[2], left: e.left - t[3] };
             return (n.width = n.right - n.left), (n.height = n.bottom - n.top), n;
         }),
         (i.prototype._hasCrossedThreshold = function (e, t) {
@@ -295,10 +257,10 @@
                 }
         }),
         (i.prototype._rootIsInDom = function () {
-            return !this.root || f(t, this.root);
+            return !this.root || _(t, this.root);
         }),
         (i.prototype._rootContainsTarget = function (e) {
-            return f(this.root || t, e);
+            return _(this.root || t, e);
         }),
         (i.prototype._registerInstance = function () {
             0 > n.indexOf(this) && n.push(this);

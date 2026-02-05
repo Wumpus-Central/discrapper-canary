@@ -1,108 +1,87 @@
-n.d(t, {
-    Ay: () => d,
-    Vi: () => u,
-    pO: () => f,
-}),
-    n(938796),
-    n(321073);
+"use strict";
+n.d(t, { Ay: () => d, Vi: () => c, pO: () => _ }), n(938796), n(321073);
 var r = n(284009),
     i = n.n(r),
     a = n(9842),
     s = n(427157),
     o = n(287809),
     l = n(195880),
-    c = n(652215);
-
-function u(e) {
+    u = n(652215);
+function c(e) {
     let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: s } = e;
-    return {
-        id: t,
-        username: n,
-        avatar: r,
-        discriminator: i,
-        bot: a,
-        global_name: s,
-    };
+    return { id: t, username: n, avatar: r, discriminator: i, bot: a, global_name: s };
 }
-
 function d(e) {
     let {
             channelId: t,
             content: n,
             tts: r = !1,
-            type: d = c.lAJ.DEFAULT,
-            messageReference: f,
-            allowedMentions: p,
-            author: _,
+            type: d = u.lAJ.DEFAULT,
+            messageReference: _,
+            allowedMentions: f,
+            author: p,
             flags: h,
             nonce: m,
             poll: g,
             sharedCustomTheme: E,
-            changelogId: b,
-            giftingPrompt: y,
-            state: O,
+            changelogId: A,
+            giftingPrompt: I,
+            state: T,
         } = e,
-        A = [];
-    if (d === c.lAJ.REPLY && (i()(null != f, "Replies must have a message reference"), null == p || p.replied_user)) {
-        let e = a.A.getMessageByReference(f);
-        (null == e ? void 0 : e.state) === a.a.LOADED && A.push(u(e.message.author));
+        y = [];
+    if (d === u.lAJ.REPLY && (i()(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
+        let e = a.A.getMessageByReference(_);
+        e?.state === a.a.LOADED && y.push(c(e.message.author));
     }
     return (
-        null == _ && (_ = o.default.getCurrentUser()),
-        _ instanceof s.A && (_ = u(_)),
-        i()(null != _, "createMessage: author cannot be undefined"),
+        null == p && (p = o.default.getCurrentUser()),
+        p instanceof s.A && (p = c(p)),
+        i()(null != p, "createMessage: author cannot be undefined"),
         {
-            id: null != m ? m : (0, l.m)(),
+            id: m ?? (0, l.m)(),
             type: d,
             content: n,
             channel_id: t,
-            author: _,
+            author: p,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: A,
+            mentions: y,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: O || c.cmJ.SENDING,
+            state: T || u.cmJ.SENDING,
             tts: r,
-            message_reference: f,
+            message_reference: _,
             message_snapshots: [],
             flags: h,
             nonce: m,
             poll: g,
             shared_client_theme: E,
-            changelog_id: b,
-            gifting_prompt: y,
+            changelog_id: A,
+            gifting_prompt: I,
         }
     );
 }
-
-function f(e) {
+function _(e) {
     let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {
-        id: null != t ? t : (0, l.m)(),
-        type: c.lAJ.DEFAULT,
-        flags: c.pr7.EPHEMERAL,
+        id: t ?? (0, l.m)(),
+        type: u.lAJ.DEFAULT,
+        flags: u.pr7.EPHEMERAL,
         content: r,
         channel_id: n,
-        author: {
-            id: c.oIV,
-            username: "Clyde",
-            discriminator: c.h3J,
-            avatar: "clyde",
-            bot: !0,
-        },
+        author: { id: u.oIV, username: "Clyde", discriminator: u.h3J, avatar: "clyde", bot: !0 },
         attachments: [],
-        embeds: null != i ? i : [],
+        embeds: i ?? [],
         pinned: !1,
         mentions: [],
         mention_channels: [],
         mention_roles: [],
         mention_everyone: !1,
         timestamp: new Date().toISOString(),
-        state: c.cmJ.SENT,
+        state: u.cmJ.SENT,
         tts: !1,
         loggingName: a,
     };

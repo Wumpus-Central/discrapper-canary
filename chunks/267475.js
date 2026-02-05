@@ -1,3 +1,2 @@
-e.exports = {
-    q: "placeholder__84ae7",
-};
+"use strict";
+e.exports = { q: "placeholder__84ae7" };

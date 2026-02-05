@@ -1,34 +1,15 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(228524),
-    n(896048),
-    n(938796);
+"use strict";
+n.d(t, { A: () => E }), n(938796);
 var r = n(989349),
     i = n.n(r),
     a = n(575593),
     s = n(665260),
     o = n(315069),
     l = n(871123),
-    c = n(611010),
-    u = n(652215);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
-
-function p(e) {
+    u = n(611010),
+    c = n(652215);
+let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+function _(e) {
     if (null != e)
         return {
             staticImagePath: e.static_image_path,
@@ -36,36 +17,28 @@ function p(e) {
             videoPath: e.video_path,
         };
 }
-
-function _(e) {
-    var t, n, r;
+function f(e) {
     return {
         src: e.src,
         loop: e.loop,
         height: e.height,
         width: e.width,
-        duration: null != (t = e.duration) ? t : 0,
-        start: null != (n = e.start) ? n : 0,
+        duration: e.duration ?? 0,
+        start: e.start ?? 0,
         loopDelay: e.loop_delay,
         position: e.position,
         zIndex: e.z_index,
-        randomizedSources:
-            null == (r = e.randomized_sources)
-                ? void 0
-                : r.map((e) => ({
-                      src: e.src,
-                  })),
+        randomizedSources: e.randomized_sources?.map((e) => ({ src: e.src })),
     };
 }
-
-function h(e) {
+function p(e) {
     if (null != e) {
         if (e.type === a.R.AVATAR_DECORATION)
             return {
                 id: e.id,
                 type: e.type,
                 asset: e.asset,
-                assets: p(e.assets),
+                assets: _(e.assets),
                 label: e.label,
                 labelLocalized: e.label_localized,
             };
@@ -74,13 +47,12 @@ function h(e) {
                 id: e.id,
                 type: e.type,
                 asset: e.asset,
-                assets: p(e.assets),
+                assets: _(e.assets),
                 label: e.label,
                 labelLocalized: e.label_localized,
                 palette: e.palette,
             };
-        if (e.type === a.R.PROFILE_EFFECT) {
-            var t;
+        if (e.type === a.R.PROFILE_EFFECT)
             return {
                 id: e.id,
                 type: e.type,
@@ -94,13 +66,11 @@ function h(e) {
                 staticFrameSrc: e.static_frame_src,
                 thumbnailPreviewSrc: e.thumbnail_preview_src,
                 reducedMotionSrc: e.reduced_motion_src,
-                effects: null == (t = e.effects) ? void 0 : t.map(_),
+                effects: e.effects?.map(f),
             };
-        }
     }
 }
-
-function m(e) {
+function h(e) {
     if (null != e)
         return {
             role: e.role,
@@ -111,40 +81,69 @@ function m(e) {
             collapseUnder: e.collapse_under,
         };
 }
-
-function g(e) {
+function m(e) {
     if (null != e)
         return {
             type: e.type,
-            item: h(e.item),
+            item: p(e.item),
             categorySkuId: e.category_sku_id,
             premiumType: e.premium_type,
             expiresSecondsAfterClaim: e.expires_seconds_after_claim,
             expiresAt: null != e.expires_at ? new Date(1e3 * e.expires_at) : void 0,
-            variant: m(e.variant),
+            variant: h(e.variant),
             optionSelectorDisplayValue: e.option_selector_display_value,
         };
 }
-
-function E(e) {
-    if (null != e)
-        return {
-            socialLayer: (0, l.M$)(e.social_layer),
-            collectibles: g(e.collectibles),
-        };
+function g(e) {
+    if (null != e) return { socialLayer: (0, l.M$)(e.social_layer), collectibles: m(e.collectibles) };
 }
-class y extends o.A {
+class E extends o.A {
+    id;
+    type;
+    applicationId;
+    application;
+    eligiblePaymentGateways;
+    productLine;
+    name;
+    releaseDate;
+    preorderReleaseAt;
+    preorderApproximateReleaseDate;
+    summary;
+    features;
+    genres;
+    dependentSkuId;
+    manifests;
+    availableRegions;
+    accessType;
+    systemRequirements;
+    contentRating;
+    contentRatingAgency;
+    legalNotice;
+    price;
+    premium;
+    showAgeGate;
+    restricted;
+    slug;
+    exclusive;
+    locales;
+    flags;
+    externalPurchaseUrl;
+    deleted;
+    bundledSkuIds;
+    bundledSkus;
+    tenantMetadata;
+    thumbnailAssetId;
+    description;
     static createFromServer(e) {
-        var t, n, r, a, s, o, l, u, d;
-        let { price: f } = e;
-        return new y({
+        let { price: t } = e;
+        return new E({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
-            application: null != e.application ? c.Ay.createFromServer(e.application) : null,
-            eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,
+            application: null != e.application ? u.Ay.createFromServer(e.application) : null,
+            eligiblePaymentGateways: e.eligible_payment_gateways ?? null,
             productLine: e.product_line,
-            name: null != (n = e.name) ? n : "",
+            name: e.name ?? "",
             releaseDate: null != e.release_date ? i()(e.release_date) : null,
             preorderReleaseAt: null != e.preorder_release_at ? i()(e.preorder_release_at) : null,
             preorderApproximateReleaseDate: e.preorder_approximate_release_date,
@@ -160,150 +159,33 @@ class y extends o.A {
             contentRatingAgency: e.content_rating_agency,
             legalNotice: e.legal_notice,
             price:
-                null != f
+                null != t
                     ? {
-                          amount: f.amount,
-                          currency: f.currency,
-                          saleAmount: f.sale_amount,
-                          salePercentage: f.sale_percentage,
-                          premium: f.premium,
+                          amount: t.amount,
+                          currency: t.currency,
+                          saleAmount: t.sale_amount,
+                          salePercentage: t.sale_percentage,
+                          premium: t.premium,
                       }
                     : null,
-            premium: null != (r = e.premium) && r,
+            premium: e.premium ?? !1,
             showAgeGate: e.show_age_gate || !1,
             restricted: e.restricted || !1,
-            slug: null != (a = e.slug) ? a : "",
+            slug: e.slug ?? "",
             exclusive: e.exclusive || !1,
-            locales: null != (s = e.locales) ? s : ["en-US"],
+            locales: e.locales ?? ["en-US"],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
-            deleted: null != (o = e.deleted) && o,
-            bundledSkuIds: null != (l = e.bundled_sku_ids) ? l : [],
-            bundledSkus:
-                null != (u = null == (d = e.bundled_skus) ? void 0 : d.map((e) => y.createFromServer(e))) ? u : [],
-            tenantMetadata: E(e.tenant_metadata),
+            deleted: e.deleted ?? !1,
+            bundledSkuIds: e.bundled_sku_ids ?? [],
+            bundledSkus: e.bundled_skus?.map((e) => E.createFromServer(e)) ?? [],
+            tenantMetadata: g(e.tenant_metadata),
             thumbnailAssetId: e.thumbnail_asset_id,
             description: e.description,
         });
     }
-    get supportedOperatingSystems() {
-        let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [u.uje.WINDOWS];
-    }
-    get isOnSale() {
-        return null != this.price && null != this.price.saleAmount;
-    }
-    isGiftable() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
-        return (
-            this.type === u.Puh.DURABLE_PRIMARY &&
-            this.available &&
-            this.requiresPayment &&
-            null != e &&
-            u.Ly6.has(e.currency) &&
-            null == this.externalPurchaseUrl
-        );
-    }
-    getPrice() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            { price: n } = this;
-        if (null == n) return null;
-        if (null != e) {
-            var r;
-            let t = null == (r = n.premium) ? void 0 : r[e];
-            if (null != t)
-                return {
-                    amount: t.amount,
-                    currency: n.currency,
-                };
-        }
-        return t && null != n.saleAmount
-            ? {
-                  amount: n.saleAmount,
-                  currency: n.currency,
-              }
-            : {
-                  amount: n.amount,
-                  currency: n.currency,
-              };
-    }
-    getDisplaySalePercentage() {
-        return null == this.price || null == this.price.salePercentage
-            ? null
-            : "-".concat(this.price.salePercentage, "%");
-    }
-    get requiresPayment() {
-        let e = this.getPrice();
-        return !this.premium && null != e && e.amount > 0;
-    }
-    get isTheGameAwardsWinner() {
-        return f.includes(this.id);
-    }
-    get available() {
-        return (0, s.Lt)(this.flags, u.d68.AVAILABLE) || null != this.externalPurchaseUrl;
-    }
-    isAvailableForDistribution() {
-        return (
-            this.available &&
-            null != this.getPrice() &&
-            null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.Lt)(this.flags, u.d68.PREMIUM_AND_DISTRIBUTION))
-        );
-    }
-    isAvailable() {
-        return (0, s.Lt)(this.flags, u.d68.AVAILABLE);
-    }
-    isPremiumPerk() {
-        return (
-            this.premium &&
-            ((0, s.Lt)(this.flags, u.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, u.d68.PREMIUM_AND_DISTRIBUTION))
-        );
-    }
-    hasFeature(e) {
-        return this.features.has(e);
-    }
-    isPreorder() {
-        return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
-    }
     constructor(e) {
         super(),
-            d(this, "id", void 0),
-            d(this, "type", void 0),
-            d(this, "applicationId", void 0),
-            d(this, "application", void 0),
-            d(this, "eligiblePaymentGateways", void 0),
-            d(this, "productLine", void 0),
-            d(this, "name", void 0),
-            d(this, "releaseDate", void 0),
-            d(this, "preorderReleaseAt", void 0),
-            d(this, "preorderApproximateReleaseDate", void 0),
-            d(this, "summary", void 0),
-            d(this, "features", void 0),
-            d(this, "genres", void 0),
-            d(this, "dependentSkuId", void 0),
-            d(this, "manifests", void 0),
-            d(this, "availableRegions", void 0),
-            d(this, "accessType", void 0),
-            d(this, "systemRequirements", void 0),
-            d(this, "contentRating", void 0),
-            d(this, "contentRatingAgency", void 0),
-            d(this, "legalNotice", void 0),
-            d(this, "price", void 0),
-            d(this, "premium", void 0),
-            d(this, "showAgeGate", void 0),
-            d(this, "restricted", void 0),
-            d(this, "slug", void 0),
-            d(this, "exclusive", void 0),
-            d(this, "locales", void 0),
-            d(this, "flags", void 0),
-            d(this, "externalPurchaseUrl", void 0),
-            d(this, "deleted", void 0),
-            d(this, "bundledSkuIds", void 0),
-            d(this, "bundledSkus", void 0),
-            d(this, "tenantMetadata", void 0),
-            d(this, "thumbnailAssetId", void 0),
-            d(this, "description", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.applicationId = e.applicationId),
@@ -340,5 +222,72 @@ class y extends o.A {
             (this.tenantMetadata = e.tenantMetadata),
             (this.thumbnailAssetId = e.thumbnailAssetId),
             (this.description = e.description);
+    }
+    get supportedOperatingSystems() {
+        let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
+        return e.length > 0 ? e : [c.uje.WINDOWS];
+    }
+    get isOnSale() {
+        return null != this.price && null != this.price.saleAmount;
+    }
+    isGiftable() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
+        return (
+            this.type === c.Puh.DURABLE_PRIMARY &&
+            this.available &&
+            this.requiresPayment &&
+            null != e &&
+            c.Ly6.has(e.currency) &&
+            null == this.externalPurchaseUrl
+        );
+    }
+    getPrice() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+            t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            { price: n } = this;
+        if (null == n) return null;
+        if (null != e) {
+            let t = n.premium?.[e];
+            if (null != t) return { amount: t.amount, currency: n.currency };
+        }
+        return t && null != n.saleAmount
+            ? { amount: n.saleAmount, currency: n.currency }
+            : { amount: n.amount, currency: n.currency };
+    }
+    getDisplaySalePercentage() {
+        return null == this.price || null == this.price.salePercentage ? null : `-${this.price.salePercentage}%`;
+    }
+    get requiresPayment() {
+        let e = this.getPrice();
+        return !this.premium && null != e && e.amount > 0;
+    }
+    get isTheGameAwardsWinner() {
+        return d.includes(this.id);
+    }
+    get available() {
+        return (0, s.Lt)(this.flags, c.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+    }
+    isAvailableForDistribution() {
+        return (
+            this.available &&
+            null != this.getPrice() &&
+            null == this.externalPurchaseUrl &&
+            (!this.premium || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+        );
+    }
+    isAvailable() {
+        return (0, s.Lt)(this.flags, c.d68.AVAILABLE);
+    }
+    isPremiumPerk() {
+        return (
+            this.premium &&
+            ((0, s.Lt)(this.flags, c.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+        );
+    }
+    hasFeature(e) {
+        return this.features.has(e);
+    }
+    isPreorder() {
+        return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
     }
 }

@@ -1,49 +1,38 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(402216),
-    a = n(763754),
+var l = n(397927),
+    a = n(402216),
+    r = n(763754),
     s = n(888675),
     o = n(985018);
-
-function c(e) {
-    var t;
-    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
-        f = (0, a.Ay)(n),
-        g = null == (t = n.call) ? void 0 : t.duration,
-        h = p(f),
-        _ = o.intl.format(o.t.FKXvaI, {
-            username: f.nick,
-            activityName: null != u ? u.name : "unknown",
-            onJoinStream: d,
-            usernameHook: h,
+function d(e) {
+    let { message: t, channel: n, playingActivity: d, onJoinStream: c, usernameHook: u, compact: m } = e,
+        _ = (0, r.Ay)(t),
+        h = t.call?.duration,
+        p = u(_),
+        g = o.intl.format(o.t.FKXvaI, {
+            username: _.nick,
+            activityName: null != d ? d.name : "unknown",
+            onJoinStream: c,
+            usernameHook: p,
         });
     return (
-        null != g &&
-            (_ = o.intl.format(o.t.NEFxtd, {
-                username: f.nick,
-                duration: g.humanize(),
-                channelName: c.name,
-                usernameHook: h,
+        null != h &&
+            (g = o.intl.format(o.t.NEFxtd, {
+                username: _.nick,
+                duration: h.humanize(),
+                channelName: n.name,
+                usernameHook: p,
             })),
-        (0, r.jsx)(s.A, {
+        (0, i.jsx)(s.A, {
             iconNode:
-                null != g
-                    ? (0, r.jsx)(i.GT3, {
-                          size: "custom",
-                          color: "currentColor",
-                          width: 20,
-                          height: 20,
-                      })
-                    : (0, r.jsx)(l.Ay, {
-                          size: l.Ay.Sizes.SMALL,
-                      }),
-            timestamp: n.timestamp,
+                null != h
+                    ? (0, i.jsx)(l.GT3, { size: "custom", color: "currentColor", width: 20, height: 20 })
+                    : (0, i.jsx)(a.Ay, { size: a.Ay.Sizes.SMALL }),
+            timestamp: t.timestamp,
             compact: m,
-            children: _,
+            children: g,
         })
     );
 }

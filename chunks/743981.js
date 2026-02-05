@@ -1,12 +1,13 @@
+"use strict";
 n.d(t, {
     C9: () => l,
-    Sl: () => c,
-    Tf: () => _,
+    Sl: () => u,
+    Tf: () => p,
     Ub: () => o,
     bl: () => a,
     hc: () => d,
     kO: () => h,
-    lv: () => u,
+    lv: () => c,
     xj: () => s,
 });
 var r = n(512750),
@@ -79,58 +80,19 @@ var r = n(512750),
         );
     })({});
 let o = [
-    {
-        primary: "#ff1c90",
-        secondary: "#ff7fc0",
-    },
-    {
-        primary: "#ff8f1c",
-        secondary: "#ffae77",
-    },
-    {
-        primary: "#eebe1a",
-        secondary: "#fffc7f",
-    },
-    {
-        primary: "#32a070",
-        secondary: "#57b59e",
-    },
-    {
-        primary: "#32839a",
-        secondary: "#71c2d9",
-    },
-    {
-        primary: "#8a43ff",
-        secondary: "#bd95ff",
-    },
-    {
-        primary: "#9b3fe5",
-        secondary: "#cc8dff",
-    },
-    {
-        primary: "#942e8f",
-        secondary: "#d46cb5",
-    },
-    {
-        primary: "#d14242",
-        secondary: "#ff8989",
-    },
-    {
-        primary: "#814300",
-        secondary: "#a88a6c",
-    },
-    {
-        primary: "#717224",
-        secondary: "#c3c3c3",
-    },
-    {
-        primary: "#5d1d47",
-        secondary: "#c58fbb",
-    },
-    {
-        primary: "#222222",
-        secondary: "#cccccc",
-    },
+    { primary: "#ff1c90", secondary: "#ff7fc0" },
+    { primary: "#ff8f1c", secondary: "#ffae77" },
+    { primary: "#eebe1a", secondary: "#fffc7f" },
+    { primary: "#32a070", secondary: "#57b59e" },
+    { primary: "#32839a", secondary: "#71c2d9" },
+    { primary: "#8a43ff", secondary: "#bd95ff" },
+    { primary: "#9b3fe5", secondary: "#cc8dff" },
+    { primary: "#942e8f", secondary: "#d46cb5" },
+    { primary: "#d14242", secondary: "#ff8989" },
+    { primary: "#814300", secondary: "#a88a6c" },
+    { primary: "#717224", secondary: "#c3c3c3" },
+    { primary: "#5d1d47", secondary: "#c58fbb" },
+    { primary: "#222222", secondary: "#cccccc" },
 ];
 o[0].primary, o[0].secondary;
 let l = {
@@ -166,7 +128,7 @@ let l = {
     29: 1,
     30: 1,
 };
-var c = (function (e) {
+var u = (function (e) {
     return (
         (e[(e.SIZE_12 = 12)] = "SIZE_12"),
         (e[(e.SIZE_14 = 14)] = "SIZE_14"),
@@ -177,22 +139,9 @@ var c = (function (e) {
         e
     );
 })({});
-let u = {
-        12: 16,
-        14: 16,
-        16: 16,
-        24: 24,
-        32: 32,
-        36: 40,
-    },
+let c = { 12: 16, 14: 16, 16: 16, 24: 24, 32: 32, 36: 40 },
     d = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
-    f = [21, 22, 23, 24, 25],
-    p = [26, 27, 28, 29, 30],
-    _ = {
-        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: f,
-        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: p,
-    },
-    h = {
-        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.OJ,
-        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.jF,
-    };
+    _ = [21, 22, 23, 24, 25],
+    f = [26, 27, 28, 29, 30],
+    p = { [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: _, [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: f },
+    h = { [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.OJ, [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.jF };

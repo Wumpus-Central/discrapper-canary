@@ -1,35 +1,32 @@
-n.d(t, {
-    N: () => u,
-});
+"use strict";
+n.d(t, { N: () => c });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(38021),
     l = n(86182),
-    c = n(112834);
-
-function u(e) {
-    var t, n;
+    u = n(112834);
+function c(e) {
     let {
-            theme: a,
-            gradient: u,
-            disableAdaptiveTheme: d,
-            reduceAdaptiveTheme: f,
-            customBackgroundClassName: p,
+            theme: t,
+            gradient: n,
+            disableAdaptiveTheme: a,
+            reduceAdaptiveTheme: c,
+            customBackgroundClassName: d,
             children: _,
         } = e,
-        { theme: h } = i.useContext(o.Dx);
+        { theme: f } = i.useContext(o.Dx);
     return (0, r.jsx)(l.w, {
-        theme: a,
-        gradient: u,
-        disableAdaptiveTheme: d,
-        reduceAdaptiveTheme: f,
+        theme: t,
+        gradient: n,
+        disableAdaptiveTheme: a,
+        reduceAdaptiveTheme: c,
         children: _(
-            s()((0, c.m)(null != (t = null != (n = null == u ? void 0 : u.theme) ? n : a) ? t : h), {
-                [null != p ? p : ""]: null != u && null != p,
-                "disable-adaptive-theme": d,
-                "reduce-adaptive-theme": f,
+            s()((0, u.m)(n?.theme ?? t ?? f), {
+                [d ?? ""]: null != n && null != d,
+                "disable-adaptive-theme": a,
+                "reduce-adaptive-theme": c,
             }),
         ),
     });

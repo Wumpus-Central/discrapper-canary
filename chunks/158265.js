@@ -1,208 +1,119 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
+n.d(t, { A: () => A });
 var a = n(627968),
-    l = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(106778),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(106778),
     o = n(340287),
-    c = n(92674),
-    d = n(311907),
+    d = n(92674),
+    c = n(311907),
     u = n(475743),
     m = n(775602),
-    p = n(186111),
-    h = n(398025),
-    x = n(568329),
+    h = n(186111),
+    x = n(398025),
+    p = n(568329),
     g = n(963713),
-    f = n(772244),
-    b = n(851110),
+    _ = n(772244),
+    f = n(851110),
     v = n(307725),
-    j = n(231901);
-let _ = ["#51BC9D"],
-    y = (e) => {
-        var t;
-        let { overlayRef: n, progressBarRef: r, isHovered: y } = e,
-            { quest: A, isExpanded: C } = l.useContext(g.T),
-            { expansionSpring: S } = l.useContext(x.PW),
-            { completionSpring: O, startCompletionAnimation: T } = (0, f.Ry)(),
-            E = (null == (t = A.userStatus) ? void 0 : t.completedAt) != null,
-            N = l.useRef(!1),
-            w = (0, d.bG)([m.A], () => m.A.useReducedMotion),
-            I = l.useRef(null),
-            k = (0, d.bG)([p.A], () => p.A.hasLayers()),
-            P = (0, u.A)(k),
-            [R, D] = l.useState(null),
-            [M, L] = l.useState(null),
-            U = l.useRef(
-                new s.OH({
-                    gravity: 0,
-                    wind: 0,
-                }),
-            ),
-            B = (0, s.f9)(R, M),
-            G = l.useCallback(() => {
-                if (w) return;
-                let e = r.current,
-                    t = I.current;
-                if (null != t && null != e && B.isReady) {
-                    var n, a, l, i, s, o;
-                    let { x: r, y: c } = e.getBoundingClientRect(),
-                        { x: d, y: u } = t.getBoundingClientRect();
-                    B.createMultipleConfetti(
-                        ((n = r - d),
-                        (a = c - u),
-                        (l = e.clientHeight),
-                        (i = e.clientWidth),
-                        (s = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    a = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (a = a.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    a.forEach(function (t) {
-                                        var a;
-                                        (a = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: a,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = a);
-                                    });
-                            }
-                            return e;
-                        })({}, b.Mw)),
-                        (o = o =
-                            {
-                                position: {
-                                    type: "static-random",
-                                    minValue: {
-                                        x: n,
-                                        y: a,
-                                    },
-                                    maxValue: {
-                                        x: n + l,
-                                        y: a + i,
-                                    },
-                                },
-                                velocity: {
-                                    type: "static-random",
-                                    minValue: {
-                                        x: -20,
-                                        y: -20,
-                                    },
-                                    maxValue: {
-                                        x: 20,
-                                        y: 20,
-                                    },
-                                },
-                                opacity: {
-                                    type: "linear",
-                                    value: 2,
-                                    addValue: -0.1,
-                                },
-                                dragCoefficient: {
-                                    type: "static",
-                                    value: 0.166,
-                                },
-                                size: {
-                                    type: "static-random",
-                                    minValue: 2,
-                                    maxValue: 3,
-                                },
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(o))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var a = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, a);
-                                  }
-                                  return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(o, e));
-                              }),
-                        s),
+    b = n(231901);
+let j = ["#51BC9D"],
+    A = (e) => {
+        let { overlayRef: t, progressBarRef: n, isHovered: i } = e,
+            { quest: A, isExpanded: C } = s.useContext(g.T),
+            { expansionSpring: S } = s.useContext(p.PW),
+            { completionSpring: T, startCompletionAnimation: y } = (0, _.Ry)(),
+            N = A.userStatus?.completedAt != null,
+            E = s.useRef(!1),
+            I = (0, c.bG)([m.A], () => m.A.useReducedMotion),
+            k = s.useRef(null),
+            R = (0, c.bG)([h.A], () => h.A.hasLayers()),
+            O = (0, u.A)(R),
+            [w, D] = s.useState(null),
+            [M, P] = s.useState(null),
+            L = s.useRef(new r.OH({ gravity: 0, wind: 0 })),
+            U = (0, r.f9)(w, M),
+            B = s.useCallback(() => {
+                if (I) return;
+                let e = n.current,
+                    t = k.current;
+                if (null != t && null != e && U.isReady) {
+                    var a, s, i, l;
+                    let { x: n, y: r } = e.getBoundingClientRect(),
+                        { x: o, y: d } = t.getBoundingClientRect();
+                    U.createMultipleConfetti(
+                        ((a = n - o),
+                        (s = r - d),
+                        (i = e.clientHeight),
+                        (l = e.clientWidth),
+                        {
+                            ...f.Mw,
+                            position: {
+                                type: "static-random",
+                                minValue: { x: a, y: s },
+                                maxValue: { x: a + i, y: s + l },
+                            },
+                            velocity: {
+                                type: "static-random",
+                                minValue: { x: -20, y: -20 },
+                                maxValue: { x: 20, y: 20 },
+                            },
+                            opacity: { type: "linear", value: 2, addValue: -0.1 },
+                            dragCoefficient: { type: "static", value: 0.166 },
+                            size: { type: "static-random", minValue: 2, maxValue: 3 },
+                        }),
                         100,
                     );
                 }
-            }, [r, I, B, w]),
-            F = (0, u.A)(C);
-        return (l.useEffect(() => {
-            E && C && !F && (T(), G());
-        }, [C, E, T, G, F]),
-        l.useEffect(() => {
-            E &&
-                !k &&
-                P &&
+            }, [n, k, U, I]),
+            G = (0, u.A)(C);
+        return (s.useEffect(() => {
+            N && C && !G && (y(), B());
+        }, [C, N, y, B, G]),
+        s.useEffect(() => {
+            N &&
+                !R &&
+                O &&
                 setTimeout(() => {
-                    T(), G();
+                    y(), B();
                 }, 200);
-        }, [E, P, k, T, G]),
-        l.useEffect(() => {
-            B.isReady && (!N.current && E && (T(), G()), (N.current = E));
-        }, [E, N, G, T, B]),
-        l.useEffect(() => {
-            y && E && (T(), G());
-        }, [y, E, T, G]),
-        w)
+        }, [N, O, R, y, B]),
+        s.useEffect(() => {
+            U.isReady && (!E.current && N && (y(), B()), (E.current = N));
+        }, [N, E, B, y, U]),
+        s.useEffect(() => {
+            i && N && (y(), B());
+        }, [i, N, y, B]),
+        I)
             ? null
             : (0, a.jsxs)("div", {
                   className: v.iE,
                   "aria-hidden": "true",
-                  ref: I,
+                  ref: k,
                   children: [
-                      (0, a.jsx)(c.animated.div, {
-                          className: v.Tp,
-                          style: {
-                              opacity: (0, h.a)(O),
-                          },
-                      }),
-                      (0, a.jsx)(c.animated.div, {
-                          className: i()(v.sJ, v.ix),
-                          style: {
-                              opacity: (0, h.a)(O),
-                          },
-                      }),
-                      (0, a.jsxs)(c.animated.div, {
+                      (0, a.jsx)(d.animated.div, { className: v.Tp, style: { opacity: (0, x.a)(T) } }),
+                      (0, a.jsx)(d.animated.div, { className: l()(v.sJ, v.ix), style: { opacity: (0, x.a)(T) } }),
+                      (0, a.jsxs)(d.animated.div, {
                           className: v.KG,
                           style: {
-                              transform: S.to({
-                                  range: [0, 1],
-                                  output: [-35, 0],
-                              }).to((e) => "translateY(".concat(e, "px)")),
+                              transform: S.to({ range: [0, 1], output: [-35, 0] }).to((e) => `translateY(${e}px)`),
                           },
                           children: [
-                              (0, a.jsx)(s.Fk, {
-                                  ref: D,
-                                  className: v.t_,
-                                  environment: U.current,
+                              (0, a.jsx)(r.Fk, { ref: D, className: v.t_, environment: L.current }),
+                              (0, a.jsx)(r.K_, {
+                                  ref: P,
+                                  sprites: [b],
+                                  colors: j,
+                                  spriteWidth: f.wn,
+                                  spriteHeight: f.wn,
                               }),
-                              (0, a.jsx)(s.K_, {
-                                  ref: L,
-                                  sprites: [j],
-                                  colors: _,
-                                  spriteWidth: b.wn,
-                                  spriteHeight: b.wn,
-                              }),
-                              null != n.current &&
+                              null != t.current &&
                                   (0, o.createPortal)(
-                                      (0, a.jsx)(c.animated.div, {
-                                          className: i()(v.sJ, v.d7),
-                                          style: {
-                                              opacity: (0, h.a)(O),
-                                          },
+                                      (0, a.jsx)(d.animated.div, {
+                                          className: l()(v.sJ, v.d7),
+                                          style: { opacity: (0, x.a)(T) },
                                       }),
-                                      n.current,
+                                      t.current,
                                   ),
                           ],
                       }),

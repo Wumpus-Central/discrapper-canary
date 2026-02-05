@@ -1,28 +1,24 @@
-n.d(t, {
-    k: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { k: () => p });
 var r = n(824120),
     i = n.n(r),
     a = n(181370),
     s = n.n(a),
     o = n(403727),
     l = n(498642),
-    c = n(71393),
-    u = n(927813),
+    u = n(71393),
+    c = n(927813),
     d = n(661191);
-
-function f(e, t, n) {
+function _(e, t, n) {
     let r, a, s;
     try {
         (r = i()(e)), (a = null != t ? i()(t) : null), (s = null != n ? i()(n) : null);
-    } catch (e) {
+    } catch {
         return !1;
     }
     return !((null != a && r.lesser(a)) || (null != s && r.greater(s)));
 }
-
-function p(e) {
+function f(e) {
     let t, n;
     for (let [r, i] of e)
         switch (r) {
@@ -32,69 +28,62 @@ function p(e) {
             case s().v3("max_id"):
                 n = i;
         }
-    return {
-        min: t,
-        max: n,
-    };
+    return { min: t, max: n };
 }
-let _ = {
+let p = {
     [s().v3("guild_ids")]: (e) => {
         let t = [];
         for (let [n, r] of e) n === s().v3("guild_ids") && (t = r);
         return (e) => t.includes(e);
     },
     [s().v3("guild_id_range")]: (e) => {
-        let { min: t, max: n } = p(e);
-        return (e) => f(e, t, n);
+        let { min: t, max: n } = f(e);
+        return (e) => _(e, t, n);
     },
     [s().v3("guild_age_range_days")]: (e) => {
-        let { min: t, max: n } = p(e);
-        return (e) => f(Math.floor(d.default.age(e) / u.A.Millis.DAY), t, n);
+        let { min: t, max: n } = f(e);
+        return (e) => _(Math.floor(d.default.age(e) / c.A.Millis.DAY), t, n);
     },
     [s().v3("guild_member_count_range")]: (e) => {
-        let { min: t, max: n } = p(e);
+        let { min: t, max: n } = f(e);
         return (e) => {
             let r = l.A.getMemberCount(e);
-            return null != r && f(r, t, n);
+            return null != r && _(r, t, n);
         };
     },
     [s().v3("guild_has_feature")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            var n;
-            let r = null != (n = c.A.getGuild(e)) ? n : o.A.getGuild(e);
-            return null != r && t.some((e) => r.features.has(e));
+            let n = u.A.getGuild(e) ?? o.A.getGuild(e);
+            return null != n && t.some((e) => n.features.has(e));
         };
     },
     [s().v3("guild_hub_types")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            var n;
-            let r = null != (n = c.A.getGuild(e)) ? n : o.A.getGuild(e);
-            return null != r && "number" == typeof r.hubType && t.some((e) => r.hubType === e);
+            let n = u.A.getGuild(e) ?? o.A.getGuild(e);
+            return null != n && "number" == typeof n.hubType && t.some((e) => n.hubType === e);
         };
     },
     [s().v3("guild_has_vanity_url")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            var n;
-            let r = null != (n = c.A.getGuild(e)) ? n : o.A.getGuild(e);
-            return null != r && t === (null != r.vanityURLCode);
+            let n = u.A.getGuild(e) ?? o.A.getGuild(e);
+            return null != n && t === (null != n.vanityURLCode);
         };
     },
     [s().v3("guild_in_range_by_hash")]: (e) => {
         let t, n;
-        for (let [i, a] of e)
-            switch (i) {
+        for (let [r, i] of e)
+            switch (r) {
                 case s().v3("hash_key"):
-                    t = a;
+                    t = i;
                     break;
                 case s().v3("target"):
-                    var r;
-                    n = null != (r = parseInt(a)) ? r : 0;
+                    n = parseInt(i) ?? 0;
             }
         return (e) => {
-            let r = s().v3("".concat(t, ":").concat(e));
+            let r = s().v3(`${t}:${e}`);
             return (r > 0 ? r + r : r >>> 0) % 1e4 < n;
         };
     },

@@ -1,3 +1,2 @@
-e.exports = {
-    q: "badge__6ba43",
-};
+"use strict";
+e.exports = { q: "badge__6ba43" };

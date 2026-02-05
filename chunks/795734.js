@@ -1,3 +1,4 @@
+"use strict";
 var r = n(439619)("%String%"),
     i = n(741623);
 e.exports = function (e) {

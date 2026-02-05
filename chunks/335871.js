@@ -1,18 +1,18 @@
-n.d(t, {
-    D: () => u,
-}),
-    n(65821),
-    n(747238),
-    n(812715),
-    n(734808),
-    n(896048);
+"use strict";
+n.d(t, { D: () => c });
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(467276),
     o = n(82180),
     l = n(324281);
-class c extends l.G {
+class u extends l.G {
+    constructor() {
+        super("google.protobuf.Timestamp", [
+            { no: 1, name: "seconds", kind: "scalar", T: 3 },
+            { no: 2, name: "nanos", kind: "scalar", T: 5 },
+        ]);
+    }
     now() {
         let e = this.create(),
             t = Date.now();
@@ -66,21 +66,15 @@ class c extends l.G {
         );
     }
     create(e) {
-        let t = {
-            seconds: "0",
-            nanos: 0,
-        };
+        let t = { seconds: "0", nanos: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -94,9 +88,7 @@ class c extends l.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
                     !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -109,21 +101,5 @@ class c extends l.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("google.protobuf.Timestamp", [
-            {
-                no: 1,
-                name: "seconds",
-                kind: "scalar",
-                T: 3,
-            },
-            {
-                no: 2,
-                name: "nanos",
-                kind: "scalar",
-                T: 5,
-            },
-        ]);
-    }
 }
-let u = new c();
+let c = new u();

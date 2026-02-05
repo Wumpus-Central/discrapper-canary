@@ -1,179 +1,89 @@
-n.d(t, {
-    A: () => v,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(734057);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = {};
-
-function f(e) {
-    let t = s.A.getChannel(e);
+"use strict";
+n.d(t, { A: () => E });
+var r = n(311907),
+    i = n(73153),
+    a = n(734057);
+let s = {};
+function o(e) {
+    let t = a.A.getChannel(e);
     return null != t && !!t.isForumLikeChannel();
 }
-
-function p(e) {
-    var t;
-    let n =
-        null != (t = d[e])
-            ? t
-            : {
-                  query: null,
-                  loading: !1,
-                  results: null,
-              };
-    return (d[e] = n), n;
+function l(e) {
+    let t = s[e] ?? { query: null, loading: !1, results: null };
+    return (s[e] = t), t;
 }
-
-function _(e) {
+function u(e) {
     let { channelId: t, query: n } = e;
-    if (!f(t)) return !1;
-    let r = p(t);
-    d[t] = u(l({}, r), {
-        query: n,
-    });
+    if (!o(t)) return !1;
+    let r = l(t);
+    s[t] = { ...r, query: n };
 }
-
-function h(e) {
+function c(e) {
     let { channelId: t } = e;
-    if (!f(t)) return !1;
-    let n = p(t);
-    d[t] = u(l({}, n), {
-        loading: !0,
-    });
+    if (!o(t)) return !1;
+    let n = l(t);
+    s[t] = { ...n, loading: !0 };
 }
-
-function m(e) {
+function d(e) {
     let { channelId: t, threadIds: n } = e;
-    if (!f(t)) return !1;
-    let r = p(t);
-    d[t] = u(l({}, r), {
-        loading: !1,
-        results: n,
-    });
+    if (!o(t)) return !1;
+    let r = l(t);
+    s[t] = { ...r, loading: !1, results: n };
 }
-
-function g(e) {
+function _(e) {
     let { channelId: t } = e;
-    if (!f(t)) return !1;
-    let n = p(t);
-    d[t] = u(l({}, n), {
-        loading: !1,
-        results: [],
-    });
+    if (!o(t)) return !1;
+    let n = l(t);
+    s[t] = { ...n, loading: !1, results: [] };
 }
-
-function E(e) {
+function f(e) {
     let { channelId: t } = e;
-    return !!f(t) && delete d[t];
+    return !!o(t) && delete s[t];
 }
-
-function b(e) {
-    var t;
-    let { channel: n } = e,
-        r = n.parent_id;
+function p(e) {
+    let { channel: t } = e,
+        n = t.parent_id;
+    if (null == n) return !1;
+    let r = s[n];
     if (null == r) return !1;
-    let i = d[r];
-    if (null == i) return !1;
-    d[r] = u(l({}, i), {
-        results: null == (t = i.results) ? void 0 : t.filter((e) => n.id !== e),
-    });
+    s[n] = { ...r, results: r.results?.filter((e) => t.id !== e) };
 }
-
-function y(e) {
+function h(e) {
     let { channel: t } = e;
-    return delete d[t.id];
+    return delete s[t.id];
 }
-
-function O() {
-    d = {};
+function m() {
+    s = {};
 }
-class A extends (r = i.Ay.Store) {
+class g extends r.Ay.Store {
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(a.A);
     }
+    static displayName = "ForumSearchStore";
     getSearchQuery(e) {
-        let t = d[e];
-        return null == t ? void 0 : t.query;
+        let t = s[e];
+        return t?.query;
     }
     getSearchLoading(e) {
-        var t;
-        let n = d[e];
-        return null != (t = null == n ? void 0 : n.loading) && t;
+        let t = s[e];
+        return t?.loading ?? !1;
     }
     getSearchResults(e) {
-        let t = d[e];
-        return null == t ? void 0 : t.results;
+        let t = s[e];
+        return t?.results;
     }
     getHasSearchResults(e) {
-        let t = d[e];
-        return (null == t ? void 0 : t.results) != null && t.results.length > 0;
+        let t = s[e];
+        return t?.results != null && t.results.length > 0;
     }
 }
-o(A, "displayName", "ForumSearchStore");
-let v = new A(a.h, {
-    CONNECTION_OPEN: O,
-    THREAD_DELETE: b,
-    CHANNEL_DELETE: y,
-    FORUM_SEARCH_QUERY_UPDATED: _,
-    FORUM_SEARCH_START: h,
-    FORUM_SEARCH_SUCCESS: m,
-    FORUM_SEARCH_FAILURE: g,
-    FORUM_SEARCH_CLEAR: E,
+let E = new g(i.h, {
+    CONNECTION_OPEN: m,
+    THREAD_DELETE: p,
+    CHANNEL_DELETE: h,
+    FORUM_SEARCH_QUERY_UPDATED: u,
+    FORUM_SEARCH_START: c,
+    FORUM_SEARCH_SUCCESS: d,
+    FORUM_SEARCH_FAILURE: _,
+    FORUM_SEARCH_CLEAR: f,
 });

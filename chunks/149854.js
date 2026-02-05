@@ -1,64 +1,46 @@
-l.d(t, {
-    A: () => g,
-}),
-    l(896048),
-    l(228524);
-var r = l(627968),
-    n = l(64700),
-    i = l(512750),
-    s = l(397927),
-    o = l(840120),
-    a = l(998418),
-    u = l(890942),
-    d = l(722523),
-    c = l(490557),
-    f = l(634925),
-    p = l(744201),
-    m = l(867060),
-    v = l(568065),
-    A = l(876380);
-
-function g(e) {
-    let { guildId: t, powerup: l } = e,
-        [g, x] = n.useState(void 0);
-    (0, m.A)(g);
-    let [b, h] = n.useState(!1),
-        j = (0, a.Ay)(t, l).type !== v.b_.INACTIVE,
-        { textColor: _ } = (0, p.A)(j),
+n.d(t, { A: () => f });
+var r = n(627968),
+    l = n(64700),
+    i = n(512750),
+    s = n(397927),
+    o = n(840120),
+    a = n(998418),
+    u = n(890942),
+    d = n(722523),
+    c = n(490557),
+    p = n(634925),
+    m = n(744201),
+    A = n(867060),
+    _ = n(568065),
+    g = n(876380);
+function f(e) {
+    let { guildId: t, powerup: n } = e,
+        [f, x] = l.useState(void 0);
+    (0, A.A)(f);
+    let [h, v] = l.useState(!1),
+        j = (0, a.Ay)(t, n).type !== _.b_.INACTIVE,
+        { textColor: b } = (0, m.A)(j),
         E = (0, o.M5)(t, "GuildPowerupPerkCard"),
-        y = l.skuId === i.FB;
-    return (0, r.jsxs)(f.h, {
-        onHover: (e) => h(e),
+        I = n.skuId === i.FB;
+    return (0, r.jsxs)(p.h, {
+        onHover: (e) => v(e),
         guildId: t,
-        powerup: l,
-        badge: y && E ? "beta" : void 0,
+        powerup: n,
+        badge: I && E ? "beta" : void 0,
         children: [
-            (0, r.jsx)(c.l, {
-                className: A.Sl,
-                powerup: l,
-                isHovering: b,
-            }),
+            (0, r.jsx)(c.l, { className: g.Sl, powerup: n, isHovering: h }),
             (0, r.jsx)(u.Ft, {
-                title: l.title,
-                textColor: _,
-                footer: (0, r.jsx)(f.A, {
-                    guildId: t,
-                    powerup: l,
-                }),
+                title: n.title,
+                textColor: b,
+                footer: (0, r.jsx)(p.A, { guildId: t, powerup: n }),
                 children: (0, r.jsx)(s.Text, {
-                    className: A.h_,
-                    color: _,
+                    className: g.h_,
+                    color: b,
                     variant: "text-sm/medium",
-                    children: l.description,
+                    children: n.description,
                 }),
             }),
-            (0, r.jsx)(u.kd, {
-                children: (0, r.jsx)(d.Ay, {
-                    guildId: t,
-                    powerup: l,
-                    onError: x,
-                }),
-            }),
+            (0, r.jsx)(u.kd, { children: (0, r.jsx)(d.Ay, { guildId: t, powerup: n, onError: x }) }),
         ],
     });
 }

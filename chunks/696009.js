@@ -1,7 +1,8 @@
-var r = n(63996);
-e.exports = function (e) {
+"use strict";
+var n = r(63996);
+t.exports = function (t) {
     return (
-        e.which === r.RETURN &&
-        (e.getModifierState("Shift") || e.getModifierState("Alt") || e.getModifierState("Control"))
+        t.which === n.RETURN &&
+        (t.getModifierState("Shift") || t.getModifierState("Alt") || t.getModifierState("Control"))
     );
 };

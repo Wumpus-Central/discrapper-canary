@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(325639);
 class i extends r.V {
     requestPermissionCore(e, t) {

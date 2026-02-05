@@ -1,66 +1,56 @@
-n.d(t, {
-    y: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { y: () => d });
 var r = n(64700),
     i = n(417597),
     a = n(71393),
     s = n(508675),
     o = n(770335),
     l = n(624793),
-    c = n(652215);
-let u = (e, t, n) => {
+    u = n(652215);
+let c = (e, t, n) => {
         let r = null != n ? e.getCustomEmojiById(n) : null;
-        return (null == r ? void 0 : r.type) === o.i.GUILD
-            ? {
-                  emoji: r,
-                  joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId),
-              }
-            : {
-                  emoji: null,
-                  joinedEmojiSourceGuildRecord: null,
-              };
+        return r?.type === o.i.GUILD
+            ? { emoji: r, joinedEmojiSourceGuildRecord: t.getGuild(r?.guildId) }
+            : { emoji: null, joinedEmojiSourceGuildRecord: null };
     },
     d = (e) => {
         let { emojiId: t, refreshPositionKey: n } = e,
-            { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cf)([s.Ay, a.A], () => u(s.Ay, a.A, t)),
-            f = null != o,
-            p = null != o && o.features.has(c.GuildFeatures.DISCOVERABLE),
-            _ = (!f || p) && null != t,
-            [h, m] = r.useState(_),
+            { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cf)([s.Ay, a.A], () => c(s.Ay, a.A, t)),
+            _ = null != o,
+            f = null != o && o.features.has(u.GuildFeatures.DISCOVERABLE),
+            p = (!_ || f) && null != t,
+            [h, m] = r.useState(p),
             [g, E] = r.useState(null),
-            b = null != o ? l.GO.createFromGuildRecord(o) : null,
-            [y, O] = r.useState(b),
-            [A, v] = r.useState(null),
-            S = r.useRef(n);
+            A = null != o ? l.GO.createFromGuildRecord(o) : null,
+            [I, T] = r.useState(A),
+            [y, S] = r.useState(null),
+            v = r.useRef(n);
         return (
             r.useEffect(() => {
-                S.current = n;
+                v.current = n;
             }),
             r.useEffect(() => {
-                var e, n;
-                null == (e = S.current) || e.call(S);
-                let r = async () => {
-                    var e;
-                    let n = null != t ? await (0, l.g_)(t) : null;
-                    if (null != n)
-                        switch ((E(n.type), n.type)) {
+                v.current?.();
+                let e = async () => {
+                    let e = null != t ? await (0, l.g_)(t) : null;
+                    if (null != e)
+                        switch ((E(e.type), e.type)) {
                             case l.rV.APPLICATION:
-                                v(n.application);
+                                S(e.application);
                                 break;
                             case l.rV.GUILD:
-                                O(n.guild);
+                                T(e.guild);
                         }
-                    m(!1), null == (e = S.current) || e.call(S);
+                    m(!1), v.current?.();
                 };
-                _ ? r() : null == (n = S.current) || n.call(S);
-            }, [t, _]),
+                p ? e() : v.current?.();
+            }, [t, p]),
             {
-                expressionSourceGuild: y,
-                expressionSourceApplication: A,
+                expressionSourceGuild: I,
+                expressionSourceApplication: y,
                 sourceType: g,
                 joinedEmojiSourceGuildRecord: o,
-                hasJoinedEmojiSourceGuild: f,
+                hasJoinedEmojiSourceGuild: _,
                 emoji: d,
                 isFetching: h,
             }

@@ -1,23 +1,20 @@
-n.d(t, {
-    B: () => s,
-});
-var r = n(627968),
-    i = n(158954),
-    l = n(235052),
-    a = n(426127),
-    o = n(985018);
-
-function s(e) {
-    let { userId: t, channel: n, onAction: s, variant: c = "primary" } = e,
-        u = (0, l.u)(t, n, "useRequestToStreamButton");
-    return null == u
+i.d(t, { B: () => o });
+var n = i(627968),
+    a = i(158954),
+    l = i(235052),
+    r = i(426127),
+    s = i(985018);
+function o(e) {
+    let { userId: t, channel: i, onAction: o, variant: d = "primary" } = e,
+        c = (0, l.u)(t, i, "useRequestToStreamButton");
+    return null == c
         ? null
-        : (0, r.jsx)(i.$nd, {
-              text: o.intl.string(a.default.DKHhec),
-              variant: c,
+        : (0, n.jsx)(a.$nd, {
+              text: s.intl.string(r.default.DKHhec),
+              variant: d,
               size: "sm",
               onClick: () => {
-                  u.handleRequestToStream("request to stream button"), null == s || s();
+                  c.handleRequestToStream("request to stream button"), o?.();
               },
               fullWidth: !0,
           });

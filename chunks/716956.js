@@ -1,44 +1,28 @@
-r.d(t, {
-    A: () => s,
-});
-var n = r(627968);
-r(64700);
-var o = r(503698),
-    l = r.n(o),
-    c = r(397927),
-    i = r(303612),
-    u = r(855018);
-
-function a(e) {
-    let { className: t, onClose: r } = e;
-    return (0, n.jsx)(c.DUT, {
-        className: l()(u.cG, t),
-        onClick: r,
-        children: (0, n.jsx)(c.PGe, {
-            size: "xs",
-            color: "currentColor",
-            className: u.yP,
-        }),
+t.d(n, { A: () => o });
+var r = t(627968);
+t(64700);
+var l = t(503698),
+    s = t.n(l),
+    a = t(397927),
+    i = t(303612),
+    u = t(855018);
+function c(e) {
+    let { className: n, onClose: t } = e;
+    return (0, r.jsx)(a.DUT, {
+        className: s()(u.cG, n),
+        onClick: t,
+        children: (0, r.jsx)(a.PGe, { size: "xs", color: "currentColor", className: u.yP }),
     });
 }
-
-function s(e) {
-    let { guildProductListing: t, onClose: r, className: o } = e;
-    return (0, n.jsxs)(c.rQ0, {
-        className: l()(u.wx, o),
+function o(e) {
+    let { guildProductListing: n, onClose: t, className: l } = e;
+    return (0, r.jsxs)(a.rQ0, {
+        className: s()(u.wx, l),
         separator: !1,
         "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(i.A, {
-                className: u.F0,
-                listing: t,
-                imageSize: 500,
-                alt: "",
-            }),
-            (0, n.jsx)(a, {
-                className: u.b,
-                onClose: r,
-            }),
+            (0, r.jsx)(i.A, { className: u.F0, listing: n, imageSize: 500, alt: "" }),
+            (0, r.jsx)(c, { className: u.b, onClose: t }),
         ],
     });
 }

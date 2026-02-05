@@ -5,13 +5,11 @@
         n = 0,
         s = [];
     for (r = 0; r < 256; r++) s[r] = (r + 256).toString(16).substr(1);
-
     function o() {
         var t =
             ((!i || n + 16 > d.BUFFER_SIZE) && ((n = 0), (i = d.randomBytes(d.BUFFER_SIZE))), i.slice(n, (n += 16)));
         return (t[6] = (15 & t[6]) | 64), (t[8] = (63 & t[8]) | 128), t;
     }
-
     function d() {
         var t = o();
         return (

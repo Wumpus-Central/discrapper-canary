@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,15 +7,14 @@ var i = n(503698),
     s = n(397927),
     o = n(60809),
     l = n(985018),
-    c = n(502573);
-
-function u(e) {
+    u = n(502573);
+function c(e) {
     let { sortOrder: t, onSortOptionClick: n, closePopout: i } = e,
-        u = (e) => {
+        c = (e) => {
             n(e), i();
         };
     return (0, r.jsx)("div", {
-        className: a()(o.Wx, c.k),
+        className: a()(o.Wx, u.k),
         children: (0, r.jsx)(s.W1t, {
             "data-menu-migrated": !0,
             navId: "command-list-sort",
@@ -31,14 +29,14 @@ function u(e) {
                         id: "sort-by-popular",
                         group: "sort-by",
                         label: l.intl.string(l.t.SzxiqK),
-                        action: () => u(o.Ug.POPULAR),
+                        action: () => c(o.Ug.POPULAR),
                         checked: t === o.Ug.POPULAR,
                     }),
                     (0, r.jsx)(s.iDA, {
                         id: "sort-by-alphabetical",
                         group: "sort-by",
                         label: l.intl.string(l.t.m8xsti),
-                        action: () => u(o.Ug.ALPHABETICAL),
+                        action: () => c(o.Ug.ALPHABETICAL),
                         checked: t === o.Ug.ALPHABETICAL,
                     }),
                 ],

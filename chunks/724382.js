@@ -1,52 +1,36 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var l = n(397927),
     a = n(429913),
-    s = n(763754),
-    o = n(447215),
-    l = n(888675),
-    c = n(985018),
-    u = n(893112);
-
-function d(e) {
-    let { message: t, channel: n, compact: d } = e,
-        f = (0, s.Ay)(t),
-        p = (0, o.P)({
-            user: t.author,
-            channelId: n.id,
-            guildId: n.guild_id,
-            messageId: t.id,
-        })(f),
-        _ = (0, a.h)(t.applicationId);
-    if (null == _) return null;
-    let h = c.intl.format(c.t.mAtJTC, {
+    r = n(763754),
+    s = n(447215),
+    o = n(888675),
+    d = n(985018),
+    c = n(893112);
+function u(e) {
+    let { message: t, channel: n, compact: u } = e,
+        m = (0, r.Ay)(t),
+        _ = (0, s.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id })(m),
+        h = (0, a.h)(t.applicationId);
+    if (null == h) return null;
+    let p = d.intl.format(d.t.mAtJTC, {
         username: t.author.username,
-        usernameHook: p,
-        applicationName: _.name,
+        usernameHook: _,
+        applicationName: h.name,
         applicationNameHook: () =>
-            (0, r.jsx)(
-                i.Text,
-                {
-                    className: u.S,
-                    variant: "text-md/semibold",
-                    color: "text-strong",
-                    children: _.name,
-                },
-                _.name,
+            (0, i.jsx)(
+                l.Text,
+                { className: c.S, variant: "text-md/semibold", color: "text-strong", children: h.name },
+                h.name,
             ),
         helpdeskArticle: "#",
     });
-    return (0, r.jsx)(l.A, {
-        iconNode: (0, r.jsx)(i.fNY, {
-            size: "sm",
-            color: i.LU0.colors.STATUS_POSITIVE,
-        }),
+    return (0, i.jsx)(o.A, {
+        iconNode: (0, i.jsx)(l.fNY, { size: "sm", color: l.LU0.colors.STATUS_POSITIVE }),
         timestamp: t.timestamp,
-        compact: d,
-        contentClassName: u.H,
-        children: h,
+        compact: u,
+        contentClassName: c.H,
+        children: p,
     });
 }

@@ -1,69 +1,52 @@
-n.d(t, {
-    Rc: () => m,
-    Wv: () => g,
-});
+"use strict";
+n.d(t, { Rc: () => h, Wv: () => m });
 var r = n(735438),
     i = n(562465),
     a = n(793574),
     s = n(508675),
     o = n(807348),
     l = n(542675),
-    c = n(309010),
-    u = n(319191),
+    u = n(309010),
+    c = n(319191),
     d = n(667050),
-    f = n(194486),
-    p = n(652215),
-    _ = n(980504);
-
-function h(e) {
+    _ = n(194486),
+    f = n(652215);
+function p(e) {
     let t = new AbortController(),
         n = (0, r.throttle)((n) => {
-            c.A.getVoiceChannelId() !== e && t.abort();
+            u.A.getVoiceChannelId() !== e && t.abort();
         }, 1e3);
-    return {
-        abortController: t,
-        onRequestProgress: n,
-    };
+    return { abortController: t, onRequestProgress: n };
 }
-
-function m(e, t, n) {
-    var r;
-    let { abortController: s, onRequestProgress: c } = h(e),
-        _ = null != (r = u.A.getState().animationType) ? r : f.B.BASIC,
-        m = {
-            animation_type: _,
-            animation_id: (0, d.oS)(_, d.m4),
-        };
+function h(e, t, n) {
+    let { abortController: r, onRequestProgress: s } = p(e),
+        u = c.A.getState().animationType ?? _.B.BASIC,
+        h = { animation_type: u, animation_id: (0, d.oS)(u, d.m4) };
     i.Bo.post({
-        url: p.Rsh.CUSTOM_CALL_SOUNDS(e),
-        body: m,
-        signal: s.signal,
-        onRequestProgress: c,
+        url: f.Rsh.CUSTOM_CALL_SOUNDS(e),
+        body: h,
+        signal: r.signal,
+        onRequestProgress: s,
         rejectWithError: !0,
-    }).then(p.FXj, () => {
-        if (s.signal.aborted) return;
+    }).then(f.FXj, () => {
+        if (r.signal.aborted) return;
     }),
         (0, l.A)([a.A.CHANNEL_CALL], n, t, o.ib.ENTRY);
 }
-
-function g(e, t, n, r, a) {
-    var c;
+function m(e, t, n, r, a) {
     let u = null != t.emojiId ? s.Ay.getCustomEmojiById(t.emojiId) : null,
-        { abortController: d, onRequestProgress: f } = h(e),
-        m = {
-            sound_id: t.soundId,
-            emoji_id: t.emojiId,
-            emoji_name: null != (c = t.emojiName) ? c : null == u ? void 0 : u.name,
-        };
-    t.guildId !== _.mV && (m.source_guild_id = t.guildId),
+        { abortController: c, onRequestProgress: d } = p(e),
+        _ = { sound_id: t.soundId, emoji_id: t.emojiId, emoji_name: t.emojiName ?? u?.name };
+    "0" !== t.guildId && (_.source_guild_id = t.guildId),
         i.Bo.post({
-            url: p.Rsh.SEND_SOUNDBOARD_SOUND(e),
-            body: m,
-            signal: d.signal,
-            onRequestProgress: f,
+            url: f.Rsh.SEND_SOUNDBOARD_SOUND(e),
+            body: _,
+            signal: c.signal,
+            onRequestProgress: d,
             rejectWithError: !0,
-        }).then(p.FXj, () => {
-            if (d.signal.aborted) return;
+        }).then(f.FXj, () => {
+            if (c.signal.aborted) return;
         }),
-        (0, l.A)(null != r ? r : [], n, t, o.ib.DEFAULT, a);
+        (0, l.A)(r ?? [], n, t, o.ib.DEFAULT, a);
 }
+n(980504);

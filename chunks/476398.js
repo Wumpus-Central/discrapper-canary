@@ -1,105 +1,64 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048),
-    n(114821),
-    n(339614);
+n.d(t, { A: () => _ });
 var a = n(627968),
-    l = n(311907),
+    s = n(311907),
     i = n(397927),
-    r = n(793574),
-    s = n(657331),
+    l = n(793574),
+    r = n(657331),
     o = n(287809),
-    c = n(574520),
-    d = n(435738),
+    d = n(574520),
+    c = n(435738),
     u = n(99753),
     m = n(475450),
-    p = n(583846),
-    h = n(424994),
-    f = n(805176);
-
-function x(e) {
+    h = n(583846),
+    x = n(424994),
+    p = n(805176);
+function g(e) {
     let { id: t } = e,
-        n = (0, l.bG)([o.default], () => o.default.getUser(t));
+        n = (0, s.bG)([o.default], () => o.default.getUser(t));
     return null == n
         ? null
         : (0, a.jsx)(i.DUT, {
-              className: f._,
+              className: p._,
               onClick: function () {
-                  (0, s.openUserProfileModal)({
-                      sourceAnalyticsLocations: [r.A.DEV_TOOLS],
-                      userId: t,
-                  });
+                  (0, r.openUserProfileModal)({ sourceAnalyticsLocations: [l.A.DEV_TOOLS], userId: t });
               },
-              children: (0, a.jsx)(i.Text, {
-                  variant: "text-md/semibold",
-                  children: n.username,
-              }),
+              children: (0, a.jsx)(i.Text, { variant: "text-md/semibold", children: n.username }),
           });
 }
-
-function b() {
-    var e;
-    let t = (0, l.bG)([u.A], () => u.A.getFeed(h.X1.GLOBAL_FEED)),
-        n = (0, l.bG)([u.A], () => u.A.getFilters()),
-        r = (0, l.cf)([c.A], () => {
-            var e;
-            let n = {};
-            for (let a of null != (e = null == t ? void 0 : t.entries) ? e : [])
-                n[(0, c.$)(a.content)] = c.A.canRenderContent(a.content);
-            return n;
-        }, [t]),
-        s = (0, l.bG)([d.A], () => d.A.getImpressionCappedItemIds());
-    if (null == n) return null;
-    let o =
-        null == t || null == (e = t.entries)
-            ? void 0
-            : e.flatMap((e) => {
-                  let { content: t } = e;
-                  if (!(0, m.l)(n, t)) return [];
-                  let l = r[(0, c.$)(t)];
-                  return (0, a.jsxs)(
-                      "li",
-                      {
-                          className: f.p,
-                          children: [
-                              (0, a.jsx)(x, {
-                                  type: t.author_type,
-                                  id: t.author_id,
-                              }),
-                              !l &&
-                                  (0, a.jsx)(i.Text, {
-                                      variant: "text-md/normal",
-                                      children: "Expired or no matching presence",
-                                  }),
-                              (0, p.I5)(t) &&
-                                  (0, a.jsxs)(i.Text, {
-                                      variant: "text-md/normal",
-                                      children: ["Expired at ", t.expires_at],
-                                  }),
-                              s.has(t.id) &&
-                                  (0, a.jsx)(i.Text, {
-                                      variant: "text-md/normal",
-                                      children: "Impression capped",
-                                  }),
-                          ],
-                      },
-                      t.id,
-                  );
-              });
+function _() {
+    let e = (0, s.bG)([u.A], () => u.A.getFeed(x.X1.GLOBAL_FEED)),
+        t = (0, s.bG)([u.A], () => u.A.getFilters()),
+        n = (0, s.cf)([d.A], () => {
+            let t = {};
+            for (let n of e?.entries ?? []) t[(0, d.$)(n.content)] = d.A.canRenderContent(n.content);
+            return t;
+        }, [e]),
+        l = (0, s.bG)([c.A], () => c.A.getImpressionCappedItemIds());
+    if (null == t) return null;
+    let r = e?.entries?.flatMap((e) => {
+        let { content: s } = e;
+        if (!(0, m.l)(t, s)) return [];
+        let r = n[(0, d.$)(s)];
+        return (0, a.jsxs)(
+            "li",
+            {
+                className: p.p,
+                children: [
+                    (0, a.jsx)(g, { type: s.author_type, id: s.author_id }),
+                    !r &&
+                        (0, a.jsx)(i.Text, { variant: "text-md/normal", children: "Expired or no matching presence" }),
+                    (0, h.I5)(s) &&
+                        (0, a.jsxs)(i.Text, { variant: "text-md/normal", children: ["Expired at ", s.expires_at] }),
+                    l.has(s.id) && (0, a.jsx)(i.Text, { variant: "text-md/normal", children: "Impression capped" }),
+                ],
+            },
+            s.id,
+        );
+    });
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsx)(i.Heading, {
-                variant: "heading-md/semibold",
-                children: "Selected Content",
-            }),
-            null != o
-                ? (0, a.jsx)("ul", {
-                      children: o,
-                  })
-                : (0, a.jsx)("div", {
-                      children: "(none?)",
-                  }),
+            (0, a.jsx)(i.Heading, { variant: "heading-md/semibold", children: "Selected Content" }),
+            null != r ? (0, a.jsx)("ul", { children: r }) : (0, a.jsx)("div", { children: "(none?)" }),
         ],
     });
 }

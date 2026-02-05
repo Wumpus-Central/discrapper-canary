@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(723727);
 let i = {
     0: {
@@ -14,10 +13,7 @@ let i = {
             return "N" === t ? "North latitude" : "S" === t ? "South latitude" : "Unknown";
         },
     },
-    2: {
-        name: "GPSLatitude",
-        description: r.e7,
-    },
+    2: { name: "GPSLatitude", description: r.e7 },
     3: {
         name: "GPSLongitudeRef",
         description: (e) => {
@@ -25,18 +21,12 @@ let i = {
             return "E" === t ? "East longitude" : "W" === t ? "West longitude" : "Unknown";
         },
     },
-    4: {
-        name: "GPSLongitude",
-        description: r.e7,
-    },
+    4: { name: "GPSLongitude", description: r.e7 },
     5: {
         name: "GPSAltitudeRef",
         description: (e) => (0 === e ? "Sea level" : 1 === e ? "Sea level reference (negative value)" : "Unknown"),
     },
-    6: {
-        name: "GPSAltitude",
-        description: (e) => e[0] / e[1] + " m",
-    },
+    6: { name: "GPSAltitude", description: (e) => e[0] / e[1] + " m" },
     7: {
         name: "GPSTimeStamp",
         description: (e) =>
@@ -126,14 +116,8 @@ let i = {
         },
     },
     26: "GPSDestDistance",
-    27: {
-        name: "GPSProcessingMethod",
-        description: r.Cn,
-    },
-    28: {
-        name: "GPSAreaInformation",
-        description: r.Cn,
-    },
+    27: { name: "GPSProcessingMethod", description: r.Cn },
+    28: { name: "GPSAreaInformation", description: r.Cn },
     29: "GPSDateStamp",
     30: {
         name: "GPSDifferential",

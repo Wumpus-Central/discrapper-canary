@@ -1,6 +1,4 @@
-s.d(i, {
-    default: () => r,
-});
+s.d(i, { default: () => r });
 var n = s(627968);
 s(64700);
 var e = s(732955),
@@ -10,12 +8,7 @@ let r = (t) => {
     return (0, n.jsx)(e.aFV, {
         title: a.intl.string(a.t.EouHwv),
         subtitle: a.intl.string(a.t.zNPBMA),
-        actions: [
-            {
-                text: a.intl.string(a.t.BddRzS),
-                onClick: i,
-            },
-        ],
+        actions: [{ text: a.intl.string(a.t.BddRzS), onClick: i }],
         onClose: i,
         transitionState: s,
     });

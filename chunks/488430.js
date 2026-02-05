@@ -1,6 +1,5 @@
-n.d(t, {
-    G: () => r,
-});
+"use strict";
+n.d(t, { G: () => r });
 var r = (function (e) {
     return (
         (e[(e.COACHTIP = 0)] = "COACHTIP"),

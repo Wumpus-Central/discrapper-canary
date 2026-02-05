@@ -1,6 +1,5 @@
-n.d(t, {
-    u: () => a,
-});
+"use strict";
+n.d(t, { u: () => a });
 var r = n(374372),
     i = n(579926);
 class a {
@@ -13,10 +12,7 @@ class a {
             (this.refiners = [...e.refiners]);
     }
     clone() {
-        return new a({
-            parsers: [...this.parsers],
-            refiners: [...this.refiners],
-        });
+        return new a({ parsers: [...this.parsers], refiners: [...this.refiners] });
     }
     parseDate(e, t, n) {
         let r = this.parse(e, t, n);
@@ -46,22 +42,22 @@ class a {
         for (; o; ) {
             let l = o.index + a.length - s.length;
             o.index = l;
-            let c = t.extract(e, o);
-            if (!c) {
+            let u = t.extract(e, o);
+            if (!u) {
                 (s = a.substring(o.index + 1)), (o = i.exec(s));
                 continue;
             }
-            let u = null;
-            c instanceof r.s4
-                ? (u = c)
-                : c instanceof r.BP
-                  ? ((u = e.createParsingResult(o.index, o[0])).start = c)
-                  : (u = e.createParsingResult(o.index, o[0], c));
-            let d = u.index,
-                f = u.text;
-            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${d}) '${f}'`)),
-                n.push(u),
-                (s = a.substring(d + f.length)),
+            let c = null;
+            u instanceof r.s4
+                ? (c = u)
+                : u instanceof r.BP
+                  ? ((c = e.createParsingResult(o.index, o[0])).start = u)
+                  : (c = e.createParsingResult(o.index, o[0], u));
+            let d = c.index,
+                _ = c.text;
+            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${d}) '${_}'`)),
+                n.push(c),
+                (s = a.substring(d + _.length)),
                 (o = i.exec(s));
         }
         return n;

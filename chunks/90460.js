@@ -1,4 +1,2 @@
-e.exports = {
-    x: "button__0f074",
-    R: "visible__0f074",
-};
+"use strict";
+e.exports = { x: "button__0f074", R: "visible__0f074" };

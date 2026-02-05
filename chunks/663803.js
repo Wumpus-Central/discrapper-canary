@@ -1,39 +1,36 @@
-n.d(t, {
-    l: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { l: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(985018),
-    c = n(643239);
-
-function u(e) {
+    u = n(643239);
+function c(e) {
     return "" === e || "-" === e;
 }
 let d = (e) => {
-    let { value: t, onChange: n, className: a, minValue: d, maxValue: f } = e,
-        [p, _] = i.useState(t),
-        h = u(p) || (null != d && p <= d),
-        m = u(p) || (null != f && p >= f),
+    let { value: t, onChange: n, className: a, minValue: d, maxValue: _ } = e,
+        [f, p] = i.useState(t),
+        h = c(f) || (null != d && f <= d),
+        m = c(f) || (null != _ && f >= _),
         g = (e) => {
-            n(u(e) ? (null != d ? d : 0) : e), _(e);
+            n(c(e) ? (d ?? 0) : e), p(e);
         },
         E = (e) => {
-            e.stopPropagation(), h || g(p - 1);
+            e.stopPropagation(), h || g(f - 1);
         },
-        b = (e) => {
-            e.stopPropagation(), m || g(p + 1);
+        A = (e) => {
+            e.stopPropagation(), m || g(f + 1);
         },
-        y = (e) => {
-            if (u(e)) return g(e);
+        I = (e) => {
+            if (c(e)) return g(e);
             let t = parseInt(e);
-            if (!isNaN(t)) return null != f && t >= f ? g(f) : null != d && t <= d ? g(d) : g(t);
+            if (!isNaN(t)) return null != _ && t >= _ ? g(_) : null != d && t <= d ? g(d) : g(t);
         };
     return (0, r.jsxs)("div", {
-        className: s()(c.o, a),
+        className: s()(u.o, a),
         children: [
             (0, r.jsx)(o.K0, {
                 variant: "icon-only",
@@ -43,18 +40,12 @@ let d = (e) => {
                 "aria-label": l.intl.string(l.t["k+ohJm"]),
                 disabled: h,
             }),
-            (0, r.jsx)("div", {
-                className: c.U,
-                children: (0, r.jsx)(o.ksK, {
-                    value: "".concat(p),
-                    onChange: y,
-                }),
-            }),
+            (0, r.jsx)("div", { className: u.U, children: (0, r.jsx)(o.ksK, { value: `${f}`, onChange: I }) }),
             (0, r.jsx)(o.K0, {
                 size: "sm",
                 variant: "icon-only",
                 icon: o.j96,
-                onClick: b,
+                onClick: A,
                 "aria-label": l.intl.string(l.t.w8Sc4B),
                 disabled: m,
             }),

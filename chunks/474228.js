@@ -1,11 +1,9 @@
-n.d(t, {
-    w: () => c,
-});
+"use strict";
+n.d(t, { w: () => u });
 var r = n(728458);
 let i = null,
     a = null,
     s = null;
-
 function o(e, t, n) {
     return (
         t.beginPath(),
@@ -16,7 +14,6 @@ function o(e, t, n) {
         t
     );
 }
-
 function l(e) {
     let t = document.createElement("canvas"),
         n = t.getContext("2d"),
@@ -25,8 +22,7 @@ function l(e) {
     let i = t.toDataURL();
     return t.remove(), i;
 }
-
-function c(e) {
+function u(e) {
     let t = new Image();
     return (
         (t.src = e),
@@ -36,7 +32,7 @@ function c(e) {
                 "" === t.src || e(l(t));
             }),
                 (t.onerror = (n) => {
-                    r.A.captureMessage("Failed to load notification avatar to circle crop: ".concat(n)), e(t.src);
+                    r.A.captureMessage(`Failed to load notification avatar to circle crop: ${n}`), e(t.src);
                 });
         })
     );

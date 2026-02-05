@@ -1,50 +1,32 @@
-n.d(t, {
-    A: () => h,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(209489),
-    o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = o.wY_.UNKNOWN,
-    u = o.NKC.UNKNOWN,
-    d = null;
-
-function f(e) {
-    var t;
-    (c = null != e.type ? e.type : o.wY_.UNKNOWN),
-        (u = null != (t = e.effectiveSpeed) ? t : o.NKC.UNKNOWN),
-        (d = e.serviceProvider),
+"use strict";
+n.d(t, { A: () => f });
+var r = n(311907),
+    i = n(73153),
+    a = n(209489),
+    s = n(652215);
+let o = s.wY_.UNKNOWN,
+    l = s.NKC.UNKNOWN,
+    u = null;
+function c(e) {
+    (o = null != e.type ? e.type : s.wY_.UNKNOWN),
+        (l = e.effectiveSpeed ?? s.NKC.UNKNOWN),
+        (u = e.serviceProvider),
         _.emitChange();
 }
-class p extends (r = i.Ay.Store) {
+class d extends r.Ay.Store {
+    static displayName = "NetworkStore";
     initialize() {
-        s.A.getNetworkInformation().then(f), s.A.addChangeCallback(f);
+        a.A.getNetworkInformation().then(c), a.A.addChangeCallback(c);
     }
     getType() {
-        return c;
+        return o;
     }
     getEffectiveConnectionSpeed() {
-        return u;
+        return l;
     }
     getServiceProvider() {
-        return d;
+        return u;
     }
 }
-l(p, "displayName", "NetworkStore");
-let _ = new p(a.h, {}),
-    h = _;
+let _ = new d(i.h, {}),
+    f = _;

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = (e, t) => (
     (t = t || (() => {})),
     e.then(

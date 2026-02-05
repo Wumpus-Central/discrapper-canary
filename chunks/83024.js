@@ -1,71 +1,47 @@
-a.d(n, {
-    default: () => f,
-});
-var e = a(627968),
-    i = a(64700),
-    l = a(158954),
-    r = a(397927),
-    s = a(997509),
-    c = a(976860),
-    o = a(465105),
-    u = a(652215),
-    d = a(746080),
-    x = a(985018),
-    h = a(442146);
+e.d(n, { default: () => f });
+var a = e(627968),
+    i = e(64700),
+    l = e(158954),
+    r = e(397927),
+    s = e(997509),
+    c = e(976860),
+    o = e(465105),
+    u = e(652215),
+    x = e(746080),
+    d = e(985018),
+    h = e(442146);
 let f = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: a, onClose: f, transitionState: k, onConfirm: m } = t,
-        {
-            submitting: C,
-            errorMessage: p,
-            onSubmit: b,
-        } = (0, o.A)({
-            onSubmit: m,
-            onClose: f,
-        }),
-        g = i.useCallback(() => {
-            f(), s.A.close(), (0, c.pX)(u.BVt.CHANNEL(n, d.VV.MEMBER_APPLICATIONS));
+    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: f, transitionState: k, onConfirm: m } = t,
+        { submitting: p, errorMessage: C, onSubmit: b } = (0, o.A)({ onSubmit: m, onClose: f }),
+        T = i.useCallback(() => {
+            f(), s.A.close(), (0, c.pX)(u.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS));
         }, [n, f]);
-    return (0, e.jsxs)(l.Modal, {
+    return (0, a.jsxs)(l.Modal, {
         transitionState: k,
         onClose: f,
-        title: x.intl.formatToPlainString(x.t.chV4Jb, {
-            count: a,
-        }),
+        title: d.intl.formatToPlainString(d.t.chV4Jb, { count: e }),
         actions: [
-            {
-                text: x.intl.string(x.t["ETE/oC"]),
-                onClick: f,
-                variant: "secondary",
-            },
-            {
-                text: x.intl.string(x.t.LW0aUP),
-                onClick: b,
-                variant: "primary",
-                loading: C,
-            },
+            { text: d.intl.string(d.t["ETE/oC"]), onClick: f, variant: "secondary" },
+            { text: d.intl.string(d.t.LW0aUP), onClick: b, variant: "primary", loading: p },
         ],
         children: [
-            (0, e.jsx)(r.Text, {
+            (0, a.jsx)(r.Text, {
                 className: h.ij,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: x.intl.string(x.t.uNQItz),
+                children: d.intl.string(d.t.uNQItz),
             }),
-            (0, e.jsx)(r.DUT, {
+            (0, a.jsx)(r.DUT, {
                 className: h.K2,
-                onClick: g,
-                children: (0, e.jsx)(r.Text, {
+                onClick: T,
+                children: (0, a.jsx)(r.Text, {
                     variant: "text-sm/normal",
                     color: "text-link",
-                    children: x.intl.string(x.t.szESVF),
+                    children: d.intl.string(d.t.szESVF),
                 }),
             }),
-            null != p &&
-                (0, e.jsx)(r.Text, {
-                    variant: "text-xs/normal",
-                    color: "text-feedback-critical",
-                    children: p,
-                }),
+            null != C &&
+                (0, a.jsx)(r.Text, { variant: "text-xs/normal", color: "text-feedback-critical", children: C }),
         ],
     });
 };

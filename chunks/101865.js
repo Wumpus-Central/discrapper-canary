@@ -1,3 +1,2 @@
-e.exports = {
-    D: "tidaDescription_f18f4f",
-};
+"use strict";
+e.exports = { D: "tidaDescription_f18f4f" };

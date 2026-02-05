@@ -1,52 +1,47 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
+n.d(t, { A: () => c });
 var l = n(627968),
-    r = n(64700),
-    a = n(857250),
-    i = n(397927),
+    a = n(64700),
+    i = n(857250),
+    r = n(397927),
     s = n(899847),
-    o = n(662502),
-    c = n(632738),
-    d = n(985018);
-let u = (e) => {
-    var t, n;
-    let { parents: u } = e,
-        [m, b] = r.useState(!1),
-        p = r.useCallback(() => {
+    d = n(662502),
+    o = n(632738),
+    u = n(985018);
+let c = (e) => {
+    let { parents: t } = e,
+        [n, c] = a.useState(!1),
+        m = a.useCallback(() => {
             (0, s.Xz)()
                 .then(() => {
-                    var e, t;
-                    (0, i.showToast)(
-                        (0, a.o)(
-                            d.intl.formatToPlainString(d.t.wr4IT5, {
-                                count: u.length,
-                                parent1: u[0].username,
-                                parent2: null == (e = u[1]) ? void 0 : e.username,
-                                parent3: null == (t = u[2]) ? void 0 : t.username,
+                    (0, r.showToast)(
+                        (0, i.o)(
+                            u.intl.formatToPlainString(u.t.wr4IT5, {
+                                count: t.length,
+                                parent1: t[0].username,
+                                parent2: t[1]?.username,
+                                parent3: t[2]?.username,
                             }),
-                            i.ToastType.SUCCESS,
+                            r.ToastType.SUCCESS,
                         ),
                     ),
-                        b(!0);
+                        c(!0);
                 })
                 .catch(() => {
-                    o.A.showFailedToast();
+                    d.A.showFailedToast();
                 });
-        }, [u]);
-    if (0 === u.length) return null;
-    let x = d.intl.formatToPlainString(d.t.HqyWeO, {
-        count: u.length,
-        parent1: u[0].username,
-        parent2: null == (t = u[1]) ? void 0 : t.username,
-        parent3: null == (n = u[2]) ? void 0 : n.username,
+        }, [t]);
+    if (0 === t.length) return null;
+    let _ = u.intl.formatToPlainString(u.t.HqyWeO, {
+        count: t.length,
+        parent1: t[0].username,
+        parent2: t[1]?.username,
+        parent3: t[2]?.username,
     });
-    return (0, l.jsx)(c.PQ, {
-        title: x,
-        description: d.intl.string(d.t["5l/hlt"]),
-        buttonText: m ? d.intl.string(d.t.ntuuk7) : d.intl.string(d.t["sYdX/H"]),
-        buttonDisabled: m,
-        onButtonPress: p,
+    return (0, l.jsx)(o.PQ, {
+        title: _,
+        description: u.intl.string(u.t["5l/hlt"]),
+        buttonText: n ? u.intl.string(u.t.ntuuk7) : u.intl.string(u.t["sYdX/H"]),
+        buttonDisabled: n,
+        onButtonPress: m,
     });
 };

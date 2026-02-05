@@ -1,15 +1,16 @@
-var r = n(1140),
-    i = n(116740).OrderedSet,
-    a = r.substr,
-    s = i();
-e.exports = function (e, t) {
-    var n = Array(e.length).fill(s);
+"use strict";
+var n = r(1140),
+    i = r(116740).OrderedSet,
+    o = n.substr,
+    a = i();
+t.exports = function (t, e) {
+    var r = Array(t.length).fill(a);
     return (
-        t &&
-            t.forEach(function (t) {
-                for (var r = a(e, 0, t.offset).length, i = r + a(e, t.offset, t.length).length; r < i; )
-                    (n[r] = n[r].add(t.style)), r++;
+        e &&
+            e.forEach(function (e) {
+                for (var n = o(t, 0, e.offset).length, i = n + o(t, e.offset, e.length).length; n < i; )
+                    (r[n] = r[n].add(e.style)), n++;
             }),
-        n
+        r
     );
 };

@@ -1,51 +1,38 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(860407),
     i = n(180944);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s {
+class a {
+    originalPrefix;
+    table;
     get prefix() {
         return this.table.prefix;
     }
+    constructor(e, t, n, r = !0) {
+        (this.originalPrefix = e), (this.table = new i.X([e], t, n, r));
+    }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t, n) {
-        return this.table.get([e, t, c(n)]);
+        return this.table.get([e, t, l(n)]);
     }
     getLatest(e, t, n) {
-        return this.table.getMany([e, t], {
-            ordering: r.J.Descending,
-            limit: n,
-        });
+        return this.table.getMany([e, t], { ordering: r.J.Descending, limit: n });
     }
     getRange(e, t, n, r, i) {
-        return this.table.getRange([e, t, c(n)], [e, t, c(r)], i);
+        return this.table.getRange([e, t, l(n)], [e, t, l(r)], i);
     }
     getMostRecents(e) {
         return this.table.messages.getLatest(e);
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.hh.Replace;
-        return this.table.put(l(e, t, n), i);
+        return this.table.put(o(e, t, n), i);
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.hh.Replace,
-            a = n.map((n) => l(e, t, n));
+            a = n.map((n) => o(e, t, n));
         return this.table.putAll(a, i);
     }
     deleteAll() {
@@ -58,35 +45,33 @@ class s {
         return this.table.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        return this.table.delete([e, t, c(n)]);
+        return this.table.delete([e, t, l(n)]);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+        return this.table.transaction((t) => e(new s(t)), t);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
-    }
-    constructor(e, t, n, r = !0) {
-        a(this, "originalPrefix", void 0),
-            a(this, "table", void 0),
-            (this.originalPrefix = e),
-            (this.table = new i.X([e], t, n, r));
+        return new s(this.table.upgradeTransaction(e));
     }
 }
-class o {
+class s {
+    transaction;
     static fromTableTransaction(e) {
-        return new o(e);
+        return new s(e);
     }
     static fromDatabaseTransaction(e, t, n) {
-        return new o(new i.l(e, t, n));
+        return new s(new i.l(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.hh.Replace;
-        this.transaction.put(l(e, t, n), i);
+        this.transaction.put(o(e, t, n), i);
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.hh.Replace,
-            a = n.map((n) => l(e, t, n));
+            a = n.map((n) => o(e, t, n));
         this.transaction.putAll(a, i);
     }
     replaceChannel(e, t, n) {
@@ -102,7 +87,7 @@ class o {
         this.transaction.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        this.transaction.delete([e, t, c(n)]);
+        this.transaction.delete([e, t, l(n)]);
     }
     trimOrphans(e) {
         this.transaction.messages.trimOrphans(e);
@@ -116,21 +101,12 @@ class o {
     trimChannelsNotIn(e, t) {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
-    constructor(e) {
-        a(this, "transaction", void 0), (this.transaction = e);
-    }
 }
-
-function l(e, t, n) {
-    let r = c(n.id);
-    return {
-        key: [e, t, r],
-        data: n,
-        generation: r,
-    };
+function o(e, t, n) {
+    let r = l(n.id);
+    return { key: [e, t, r], data: n, generation: r };
 }
-
-function c(e) {
+function l(e) {
     let t = 19;
     return e.padStart(t, "0");
 }

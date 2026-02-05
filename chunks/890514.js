@@ -1,71 +1,31 @@
-n.d(t, {
-    S: () => g,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { S: () => o });
+var i = n(627968),
+    s = n(64700),
     l = n(397927),
-    s = n(997509),
+    r = n(997509),
     a = n(985018);
-let c = "".concat(60),
-    o = "".concat(300),
-    d = "".concat(900),
-    u = "".concat(1800),
-    f = "".concat(3600);
-
-function g(e) {
-    var t;
-    let { canManageGuild: n, afkTimeout: g, afkChannelId: b, label: m } = e,
-        p = i.useMemo(
+function o(e) {
+    let { canManageGuild: t, afkTimeout: n, afkChannelId: o, label: d } = e,
+        c = s.useMemo(
             () => [
-                {
-                    id: "1min",
-                    value: c,
-                    label: a.intl.formatToPlainString(a.t.iXLF9W, {
-                        minutes: 1,
-                    }),
-                },
-                {
-                    id: "5min",
-                    value: o,
-                    label: a.intl.formatToPlainString(a.t.iXLF9W, {
-                        minutes: 5,
-                    }),
-                },
-                {
-                    id: "15min",
-                    value: d,
-                    label: a.intl.formatToPlainString(a.t.iXLF9W, {
-                        minutes: 15,
-                    }),
-                },
-                {
-                    id: "30min",
-                    value: u,
-                    label: a.intl.formatToPlainString(a.t.iXLF9W, {
-                        minutes: 30,
-                    }),
-                },
-                {
-                    id: "1hr",
-                    value: f,
-                    label: a.intl.formatToPlainString(a.t.xCjYxK, {
-                        hours: 1,
-                    }),
-                },
+                { id: "1min", value: "60", label: a.intl.formatToPlainString(a.t.iXLF9W, { minutes: 1 }) },
+                { id: "5min", value: "300", label: a.intl.formatToPlainString(a.t.iXLF9W, { minutes: 5 }) },
+                { id: "15min", value: "900", label: a.intl.formatToPlainString(a.t.iXLF9W, { minutes: 15 }) },
+                { id: "30min", value: "1800", label: a.intl.formatToPlainString(a.t.iXLF9W, { minutes: 30 }) },
+                { id: "1hr", value: "3600", label: a.intl.formatToPlainString(a.t.xCjYxK, { hours: 1 }) },
             ],
             [],
         ),
-        x = i.useCallback((e) => {
-            s.A.updateGuild({
-                afkTimeout: parseInt(e, 10),
-            });
+        u = s.useCallback((e) => {
+            r.A.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
-    return (0, r.jsx)(l.l6P, {
+    return (0, i.jsx)(l.l6P, {
         selectionMode: "single",
-        label: m,
-        value: null != (t = null == g ? void 0 : g.toString()) ? t : void 0,
-        options: p,
-        disabled: null == b || !n,
-        onSelectionChange: x,
+        label: d,
+        value: n?.toString() ?? void 0,
+        options: c,
+        disabled: null == o || !t,
+        onSelectionChange: u,
     });
 }

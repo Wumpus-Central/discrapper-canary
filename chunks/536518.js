@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card__3988c",
     O: "cardText__3988c",

@@ -1,24 +1,19 @@
-n.d(t, {
-    m: () => a,
-}),
-    n(321073);
-var i = n(311907),
-    s = n(994500),
-    r = n(741961),
-    l = n(287809);
-
-function a(e) {
+s.d(t, { m: () => r }), s(321073);
+var n = s(311907),
+    l = s(994500),
+    a = s(741961),
+    i = s(287809);
+function r(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Number.MAX_SAFE_INTEGER;
-    return (0, i.yK)([l.default, r.A, s.A], () => {
-        var n;
-        let i = null == (n = l.default.getCurrentUser()) ? void 0 : n.id,
-            a = r.A.getTypingUsers(e),
-            o = [];
-        for (let e in a) {
-            if (o.length >= t) break;
-            let n = l.default.getUser(e);
-            null != n && n.id !== i && (s.A.isBlockedOrIgnored(n.id) || o.push(n.id));
+    return (0, n.yK)([i.default, a.A, l.A], () => {
+        let s = i.default.getCurrentUser()?.id,
+            n = a.A.getTypingUsers(e),
+            r = [];
+        for (let e in n) {
+            if (r.length >= t) break;
+            let n = i.default.getUser(e);
+            null != n && n.id !== s && (l.A.isBlockedOrIgnored(n.id) || r.push(n.id));
         }
-        return o;
+        return r;
     }, [e, t]);
 }

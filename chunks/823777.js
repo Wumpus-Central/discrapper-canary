@@ -1,22 +1,18 @@
-n.d(r, {
-    default: () => d,
-}),
-    n(896048);
-var i = n(627968),
-    a = n(64700),
+n.d(a, { default: () => m });
+var r = n(627968),
+    i = n(64700),
     e = n(158954),
     s = n(397927),
     l = n(400492),
     o = n(985018),
     c = n(237905);
-
-function d(t) {
-    let { transitionState: r, onClose: n } = t,
-        d = () => (null == n || n(), Promise.resolve());
-    a.useEffect(() => {
+function m(t) {
+    let { transitionState: a, onClose: n } = t,
+        m = () => (n?.(), Promise.resolve());
+    i.useEffect(() => {
         (0, l.Ak)("success", 0.1);
     }, []);
-    let [f] = a.useState(() => {
+    let [d] = i.useState(() => {
         let t;
         return (t = [
             o.intl.format(o.t.ZAbzbA, {}),
@@ -28,23 +24,17 @@ function d(t) {
             o.intl.format(o.t.SN3QDR, {}),
         ])[Math.floor(Math.random() * t.length)];
     });
-    return (0, i.jsx)(e.Modal, {
-        transitionState: r,
+    return (0, r.jsx)(e.Modal, {
+        transitionState: a,
         title: o.intl.string(o.t["62E+tw"]),
-        actions: [
-            {
-                text: o.intl.string(o.t.cpT0Cq),
-                onClick: d,
-                variant: "primary",
-            },
-        ],
-        onClose: d,
-        children: (0, i.jsx)("div", {
+        actions: [{ text: o.intl.string(o.t.cpT0Cq), onClick: m, variant: "primary" }],
+        onClose: m,
+        children: (0, r.jsx)("div", {
             className: c.jE,
-            children: (0, i.jsxs)(s.Text, {
+            children: (0, r.jsxs)(s.Text, {
                 className: c.KP,
                 variant: "text-sm/normal",
-                children: [o.intl.string(o.t["4z1Tq0"]), (0, i.jsx)("br", {}), f],
+                children: [o.intl.string(o.t["4z1Tq0"]), (0, r.jsx)("br", {}), d],
             }),
         }),
     });

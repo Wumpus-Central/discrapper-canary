@@ -1,13 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(989479),
     i = n(374372),
     a = n(476858),
     s = n(241738);
 let o = 1,
     l = 2;
-class c extends s.w {
+class u extends s.w {
     innerPatternString(e) {
         return `(в прошлом|на прошлой|на следующей|в следующем|на этой|в этом)\\s*(${(0, a.uJ)(r.EB)})`;
     }
@@ -23,26 +22,26 @@ class c extends s.w {
             let t = {};
             return (t[s] = -1), i.BP.createRelativeFromReference(e.reference, t);
         }
-        let c = e.createParsingComponents(),
-            u = new Date(e.reference.instant.getTime());
+        let u = e.createParsingComponents(),
+            c = new Date(e.reference.instant.getTime());
         return (
             s.match(/week/i)
-                ? (u.setDate(u.getDate() - u.getDay()),
-                  c.imply("day", u.getDate()),
-                  c.imply("month", u.getMonth() + 1),
-                  c.imply("year", u.getFullYear()))
+                ? (c.setDate(c.getDate() - c.getDay()),
+                  u.imply("day", c.getDate()),
+                  u.imply("month", c.getMonth() + 1),
+                  u.imply("year", c.getFullYear()))
                 : s.match(/month/i)
-                  ? (u.setDate(1),
-                    c.imply("day", u.getDate()),
-                    c.assign("year", u.getFullYear()),
-                    c.assign("month", u.getMonth() + 1))
+                  ? (c.setDate(1),
+                    u.imply("day", c.getDate()),
+                    u.assign("year", c.getFullYear()),
+                    u.assign("month", c.getMonth() + 1))
                   : s.match(/year/i) &&
-                    (u.setDate(1),
-                    u.setMonth(0),
-                    c.imply("day", u.getDate()),
-                    c.imply("month", u.getMonth() + 1),
-                    c.assign("year", u.getFullYear())),
-            c
+                    (c.setDate(1),
+                    c.setMonth(0),
+                    u.imply("day", c.getDate()),
+                    u.imply("month", c.getMonth() + 1),
+                    u.assign("year", c.getFullYear())),
+            u
         );
     }
 }

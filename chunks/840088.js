@@ -1,163 +1,88 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    o = n(311907),
-    c = n(397927),
-    s = n(822123),
-    d = n(649963),
+n.d(t, { A: () => b });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
+    s = n(311907),
+    o = n(397927),
+    d = n(822123),
+    c = n(649963),
     u = n(815807),
     g = n(406704),
-    p = n(253932),
-    f = n(576705),
-    y = n(486020),
-    b = n(203982),
-    A = n(690521),
-    m = n(652215),
-    O = n(307731),
-    v = n(985018),
-    j = n(451590);
-
-function h(e, t) {
-    let { reducedMotion: n } = i.useContext(c.CZY),
-        l = (0, g.Id)(t),
-        a = (0, o.bG)([f.A], () => (t.isPrivate() || f.A.can(m.xBc.ADD_REACTIONS, t)) && l, [t, l]),
-        y = (0, s.D6)(t.getGuildId());
-    if (!p.jW.getSetting() || !a) return null;
-    let j = y
-        .filter(
-            (e) =>
-                !A.Ay.isEmojiFilteredOrLocked({
-                    emoji: e,
-                    channel: t,
-                    intention: O.b_.REACTION,
-                }),
-        )
+    A = n(253932),
+    p = n(576705),
+    m = n(486020),
+    f = n(203982),
+    y = n(690521),
+    h = n(652215),
+    E = n(307731),
+    S = n(985018),
+    _ = n(451590);
+function b(e, t) {
+    let { reducedMotion: n } = l.useContext(o.CZY),
+        a = (0, g.Id)(t),
+        r = (0, s.bG)([p.A], () => (t.isPrivate() || p.A.can(h.xBc.ADD_REACTIONS, t)) && a, [t, a]),
+        m = (0, d.D6)(t.getGuildId());
+    if (!A.jW.getSetting() || !r) return null;
+    let _ = m
+        .filter((e) => !y.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: E.b_.REACTION }))
         .slice(0, 12)
-        .map((i, l) => {
-            var a, o, s;
-            return (0, r.jsx)(
-                c.Drp,
+        .map((l, a) =>
+            (0, i.jsx)(
+                o.Drp,
                 {
                     color: "default",
-                    id: null != (a = null != (o = i.id) ? o : i.optionallyDiverseSequence) ? a : i.name,
-                    label: ":".concat(i.name, ":"),
-                    icon: (e) => {
-                        var t, l;
-                        return (0, r.jsx)(
-                            E,
-                            ((t = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, e)),
-                            (l = l =
-                                {
-                                    reducedMotionEnabled: n.enabled,
-                                    emoji: i,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
-                                  }),
-                            t),
-                        );
-                    },
+                    id: l.id ?? l.optionallyDiverseSequence ?? l.name,
+                    label: `:${l.name}:`,
+                    icon: (e) => (0, i.jsx)(v, { ...e, reducedMotionEnabled: n.enabled, emoji: l }),
                     leadingAccessory: {
                         type: "emoji",
-                        emojiId: i.id,
-                        src: null == i.id ? A.Ay.getURL(null != (s = i.optionallyDiverseSequence) ? s : "") : void 0,
-                        animated: i.animated,
+                        emojiId: l.id,
+                        src: null == l.id ? y.Ay.getURL(l.optionallyDiverseSequence ?? "") : void 0,
+                        animated: l.animated,
                     },
                     action: () => {
-                        (0, d.BB)(t.id, e.id, (0, u.jq)(i), d.qN.MESSAGE_CONTEXT_MENU);
+                        (0, c.BB)(t.id, e.id, (0, u.jq)(l), c.qN.MESSAGE_CONTEXT_MENU);
                     },
                     dontCloseOnActionIfHoldingShiftKey: !0,
                 },
-                l,
-            );
-        });
-    return (0, r.jsx)(c.Drp, {
+                a,
+            ),
+        );
+    return (0, i.jsx)(o.Drp, {
         id: "add-reaction",
-        label: v.intl.string(v.t.lfIHs4),
-        leadingAccessory: {
-            type: "icon",
-            icon: c.nm2,
-        },
+        label: S.intl.string(S.t.lfIHs4),
+        leadingAccessory: { type: "icon", icon: o.nm2 },
         action: () => {
-            b._.dispatchKeyed(m.zOV.TOGGLE_REACTION_POPOUT, e.id, {
-                emojiPicker: !0,
-            });
+            f._.dispatchKeyed(h.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: "default",
-        children: (0, r.jsxs)(r.Fragment, {
+        children: (0, i.jsxs)(i.Fragment, {
             children: [
-                j,
-                (0, r.jsx)(c.bXX, {}),
-                (0, r.jsx)(c.Drp, {
+                _,
+                (0, i.jsx)(o.bXX, {}),
+                (0, i.jsx)(o.Drp, {
                     color: "default",
                     id: "other-reactions",
-                    label: v.intl.string(v.t["OBCR+p"]),
-                    icon: c.nm2,
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: c.nm2,
-                    },
+                    label: S.intl.string(S.t["OBCR+p"]),
+                    icon: o.nm2,
+                    leadingAccessory: { type: "icon", icon: o.ShF },
                     action: () => {
-                        b._.dispatchKeyed(m.zOV.TOGGLE_REACTION_POPOUT, e.id, {
-                            emojiPicker: !0,
-                        });
+                        f._.dispatchKeyed(h.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     },
                 }),
             ],
         }),
     });
 }
-
-function E(e) {
-    var t;
-    let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: o = !1 } = e;
-    return (0, r.jsx)("img", {
-        className: a()(l, j.Z),
+function v(e) {
+    let { emoji: t, reducedMotionEnabled: n, className: l = "", isFocused: a = !1 } = e;
+    return (0, i.jsx)("img", {
+        className: r()(l, _.Z),
         src:
-            null != n.id
-                ? y.Ay.getEmojiURL({
-                      id: n.id,
-                      animated: n.animated && (!i || o),
-                      size: 18,
-                  })
-                : A.Ay.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
+            null != t.id
+                ? m.Ay.getEmojiURL({ id: t.id, animated: t.animated && (!n || a), size: 18 })
+                : y.Ay.getURL(t.optionallyDiverseSequence ?? ""),
         alt: "",
     });
 }

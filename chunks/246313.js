@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     gJ: "errorMessage_d332d2",
     lR: "createAccountTemplateHeader_d332d2",

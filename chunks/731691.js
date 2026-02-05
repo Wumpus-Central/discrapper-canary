@@ -1,31 +1,18 @@
-n.d(t, {
-    u: () => s,
-}),
-    n(747238),
-    n(812715),
-    n(866193);
+"use strict";
+n.d(t, { u: () => a });
 var r = n(860407),
     i = n(180944);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s {
+class a {
+    originalPrefix;
+    table;
     get prefix() {
         return this.table.prefix;
     }
+    constructor(e, t, n, r = !0) {
+        (this.originalPrefix = e), (this.table = new i.X([e], t, n, r));
+    }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -50,23 +37,23 @@ class s {
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
-        return this.transaction((n) => n.put(e, t), "".concat(this.prefix, " put"));
+        return this.transaction((n) => n.put(e, t), `${this.prefix} put`);
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
-        return this.transaction((n) => n.putAll(e, t), "".concat(this.prefix, " putAll"));
+        return this.transaction((n) => n.putAll(e, t), `${this.prefix} putAll`);
     }
     replaceAll(e) {
-        return this.transaction((t) => t.replaceAll(e), "".concat(this.prefix, " replaceAll"));
+        return this.transaction((t) => t.replaceAll(e), `${this.prefix} replaceAll`);
     }
     delete(e) {
-        return this.transaction((t) => t.delete(e), "".concat(this.prefix, " delete"));
+        return this.transaction((t) => t.delete(e), `${this.prefix} delete`);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+        return this.table.transaction((t) => e(new s(t)), t);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
+        return new s(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -75,31 +62,25 @@ class s {
         return this.table.getMapEntriesSyncUnsafe();
     }
     static cell(e, t) {
-        return {
-            key: [e.id],
-            data: e,
-            generation: t,
-        };
-    }
-    constructor(e, t, n, r = !0) {
-        a(this, "originalPrefix", void 0),
-            a(this, "table", void 0),
-            (this.originalPrefix = e),
-            (this.table = new i.X([e], t, n, r));
+        return { key: [e.id], data: e, generation: t };
     }
 }
-class o {
+class s {
+    transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new o(new i.l(e, t, n));
+        return new s(new i.l(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
-        return this.transaction.put(s.cell(e, null), t);
+        return this.transaction.put(a.cell(e, null), t);
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
         return this.transaction.putAll(
-            e.map((e) => s.cell(e, null)),
+            e.map((e) => a.cell(e, null)),
             t,
         );
     }
@@ -108,8 +89,5 @@ class o {
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete([]) : this.transaction.delete([e]);
-    }
-    constructor(e) {
-        a(this, "transaction", void 0), (this.transaction = e);
     }
 }

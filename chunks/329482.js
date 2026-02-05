@@ -1,105 +1,79 @@
-n.d(t, {
-    A: () => j,
-});
+n.d(t, { A: () => b });
 var a = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
-    r = n(136722),
-    s = n(311907),
+var s = n(503698),
+    i = n.n(s),
+    l = n(136722),
+    r = n(311907),
     o = n(397927),
-    c = n(47167),
-    d = n(734057),
+    d = n(47167),
+    c = n(734057),
     u = n(71393),
     m = n(576705),
-    p = n(309010),
-    h = n(967198),
-    f = n(558393),
-    x = n(737045),
-    b = n(574068),
-    g = n(661251);
-
+    h = n(309010),
+    x = n(967198),
+    p = n(558393),
+    g = n(737045),
+    _ = n(574068),
+    f = n(661251);
 function v(e) {
     let { title: t, can: n } = e,
-        l = n ? o.A9s : o.PGe,
-        r = (0, a.jsx)("div", {
-            className: i()(b.v_, n ? b.uU : b.Ss),
-            children: (0, a.jsx)(l, {
-                className: b.Kk,
-            }),
-        });
+        s = n ? o.A9s : o.PGe,
+        l = (0, a.jsx)("div", { className: i()(_.v_, n ? _.uU : _.Ss), children: (0, a.jsx)(s, { className: _.Kk }) });
     return (0, a.jsxs)("div", {
-        className: b.z8,
+        className: _.z8,
         children: [
-            r,
+            l,
             (0, a.jsx)("div", {
-                className: b.rv,
-                children: (0, a.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    children: t,
-                }),
+                className: _.rv,
+                children: (0, a.jsx)(o.Text, { variant: "text-md/normal", children: t }),
             }),
         ],
     });
 }
-
-function j() {
-    let e = (0, s.bG)([p.A], () => p.A.getChannelId()),
-        t = (0, s.bG)([h.A], () => h.A.getGuildId()),
-        n = (0, s.bG)([d.A], () => d.A.getChannel(e)),
-        l = (0, s.bG)([u.A], () => u.A.getGuild(t)),
-        j = (0, s.bG)([m.A], () => m.A.computePermissions(n)),
-        y = (0, s.bG)([m.A], () => m.A.computePermissions(l)),
-        _ = (0, c.Ay)(n, !0),
-        A = null != n ? (0, x.mW)(n, !1) : null,
-        C = null != l ? f.A.getGuildPermissionSpecMap(l) : null,
-        S = Object.values(null != A ? A : {}).map((e) => {
+function b() {
+    let e = (0, r.bG)([h.A], () => h.A.getChannelId()),
+        t = (0, r.bG)([x.A], () => x.A.getGuildId()),
+        n = (0, r.bG)([c.A], () => c.A.getChannel(e)),
+        s = (0, r.bG)([u.A], () => u.A.getGuild(t)),
+        b = (0, r.bG)([m.A], () => m.A.computePermissions(n)),
+        j = (0, r.bG)([m.A], () => m.A.computePermissions(s)),
+        A = (0, d.Ay)(n, !0),
+        C = null != n ? (0, g.mW)(n, !1) : null,
+        S = null != s ? p.A.getGuildPermissionSpecMap(s) : null,
+        T = Object.values(C ?? {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = r.zy(j, n);
-            return (0, a.jsx)(
-                v,
-                {
-                    title: t,
-                    can: l,
-                },
-                t,
-            );
+                s = l.zy(b, n);
+            return (0, a.jsx)(v, { title: t, can: s }, t);
         }),
-        O = Object.values(null != C ? C : {}).map((e) => {
+        y = Object.values(S ?? {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = r.zy(y, n);
-            return (0, a.jsx)(
-                v,
-                {
-                    title: t,
-                    can: l,
-                },
-                t,
-            );
+                s = l.zy(j, n);
+            return (0, a.jsx)(v, { title: t, can: s }, t);
         });
     return (0, a.jsx)("div", {
-        className: i()(g.nd, b.nd),
+        className: i()(f.nd, _.nd),
         children: (0, a.jsxs)("div", {
-            className: b.l$,
+            className: _.l$,
             children: [
                 (0, a.jsxs)("section", {
-                    className: b.uW,
+                    className: _.uW,
                     children: [
                         (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
-                            children: null != _ ? "Permissions in ".concat(_) : "No channel selected",
+                            children: null != A ? `Permissions in ${A}` : "No channel selected",
                         }),
-                        S,
+                        T,
                     ],
                 }),
                 (0, a.jsxs)("section", {
-                    className: b.uW,
+                    className: _.uW,
                     children: [
                         (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
-                            children: null != l ? "Permissions in ".concat(l.name) : "No guild selected",
+                            children: null != s ? `Permissions in ${s.name}` : "No guild selected",
                         }),
-                        O,
+                        y,
                     ],
                 }),
             ],

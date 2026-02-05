@@ -1,40 +1,20 @@
-n.d(t, {
-    Px: () => h,
-    Sx: () => u,
-    fO: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Px: () => h, Sx: () => c, fO: () => m });
 var r = n(284009),
     i = n.n(r),
     a = n(186306),
     s = n(35277),
     o = n(711371);
 let l = new Set(["*", "_", "~", "`", "|"]),
-    c = {
-        bold: "**",
-        italics: "*",
-        underline: "__",
-        strikethrough: "~~",
-        inlineCode: "`",
-        spoiler: "||",
-    };
-
-function u(e, t, n) {
-    if (null == e.selection)
-        return {
-            before: {},
-            after: {},
-        };
+    u = { bold: "**", italics: "*", underline: "__", strikethrough: "~~", inlineCode: "`", spoiler: "||" };
+function c(e, t, n) {
+    if (null == e.selection) return { before: {}, after: {} };
     let r = d(e, t),
         i = d(e, n);
     for (let e in r) e in i || delete r[e];
     for (let e in i) e in r || delete i[e];
-    return {
-        before: r,
-        after: i,
-    };
+    return { before: r, after: i };
 }
-
 function d(e, t) {
     let [n] = o.VW.node(e, t.path);
     if (!o.l5.isText(n)) return {};
@@ -48,59 +28,32 @@ function d(e, t) {
         if (l.has(r.charAt(e))) a++;
         else break;
     let s = r.substring(i, a),
-        c = {};
+        u = {};
     return (
-        p({
-            result: c,
-            text: s,
-            startIndex: i,
-            syntax: "***",
-            type1: "italics",
-            type2: "bold",
-        }),
-        p({
-            result: c,
-            text: s,
-            startIndex: i,
-            syntax: "___",
-            type1: "italics",
-            type2: "underline",
-        }),
-        f(c, s, i, "**", "bold"),
-        f(c, s, i, "*", "italics"),
-        f(c, s, i, "_", "italics"),
-        f(c, s, i, "__", "underline"),
-        f(c, s, i, "`", "inlineCode"),
-        f(c, s, i, "~~", "strikethrough"),
-        f(c, s, i, "||", "spoiler"),
-        c
+        f({ result: u, text: s, startIndex: i, syntax: "***", type1: "italics", type2: "bold" }),
+        f({ result: u, text: s, startIndex: i, syntax: "___", type1: "italics", type2: "underline" }),
+        _(u, s, i, "**", "bold"),
+        _(u, s, i, "*", "italics"),
+        _(u, s, i, "_", "italics"),
+        _(u, s, i, "__", "underline"),
+        _(u, s, i, "`", "inlineCode"),
+        _(u, s, i, "~~", "strikethrough"),
+        _(u, s, i, "||", "spoiler"),
+        u
     );
 }
-
-function f(e, t, n, r, i) {
-    let a = _(t, r);
-    a >= 0 &&
-        (e[i] = {
-            chars: r,
-            location: n + a,
-        });
+function _(e, t, n, r, i) {
+    let a = p(t, r);
+    a >= 0 && (e[i] = { chars: r, location: n + a });
 }
-
-function p(e) {
+function f(e) {
     let { result: t, text: n, startIndex: r, syntax: i, type1: a, type2: s } = e,
-        o = _(n, i);
+        o = p(n, i);
     o >= 0 &&
-        ((t[a] = {
-            chars: i.substring(0, 1),
-            location: o + r,
-        }),
-        (t[s] = {
-            chars: i.substring(1),
-            location: o + r + 1,
-        }));
+        ((t[a] = { chars: i.substring(0, 1), location: o + r }),
+        (t[s] = { chars: i.substring(1), location: o + r + 1 }));
 }
-
-function _(e, t) {
+function p(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
         let r = t.charAt(0);
@@ -108,77 +61,45 @@ function _(e, t) {
     }
     return n;
 }
-
 function h(e, t) {
     a.o.withSingleEntry(e, () => {
         o.VW.withoutNormalizing(e, () => {
             i()(null != e.selection, "Editor has no selection");
             let [n, r] = o.ZF.edges(e.selection),
-                a = u(e, n, r),
+                a = c(e, n, r),
                 l = a.before[t],
                 d = a.after[t],
-                f = o.VW.node(e, n.path),
-                p = o.VW.node(e, r.path);
-            if (null == f || null == p || !o.l5.isText(f[0]) || !o.l5.isText(p[0])) return;
-            let _ = o.PW.equals(f[1], p[1]);
+                _ = o.VW.node(e, n.path),
+                f = o.VW.node(e, r.path);
+            if (null == _ || null == f || !o.l5.isText(_[0]) || !o.l5.isText(f[0])) return;
+            let p = o.PW.equals(_[1], f[1]);
             if (null != l && null != d) {
-                let t = {
-                        path: n.path,
-                        offset: l.location,
-                    },
-                    i = {
-                        path: r.path,
-                        offset: d.location,
-                    };
-                s.b.delete(e, {
-                    at: i,
-                    distance: d.chars.length,
-                }),
-                    s.b.delete(e, {
-                        at: t,
-                        distance: l.chars.length,
-                    });
+                let t = { path: n.path, offset: l.location },
+                    i = { path: r.path, offset: d.location };
+                s.b.delete(e, { at: i, distance: d.chars.length }), s.b.delete(e, { at: t, distance: l.chars.length });
                 let a = n.offset,
-                    c = r.offset;
+                    u = r.offset;
                 o.Kh.isBefore(n, t) || (a -= l.chars.length),
-                    _ && !o.Kh.isBefore(r, t) && (c -= l.chars.length),
-                    o.Kh.isAfter(r, i) && (c -= d.chars.length),
+                    p && !o.Kh.isBefore(r, t) && (u -= l.chars.length),
+                    o.Kh.isAfter(r, i) && (u -= d.chars.length),
                     s.b.select(e, {
-                        anchor: {
-                            path: n.path,
-                            offset: Math.max(0, a),
-                        },
-                        focus: {
-                            path: r.path,
-                            offset: Math.max(0, c),
-                        },
+                        anchor: { path: n.path, offset: Math.max(0, a) },
+                        focus: { path: r.path, offset: Math.max(0, u) },
                     });
             } else {
-                let i = c[t];
-                s.b.insertText(e, i, {
-                    at: r,
-                }),
-                    s.b.insertText(e, i, {
-                        at: n,
-                    });
-                let a = f[0].text.length + i.length,
-                    o = p[0].text.length + (_ ? 2 * i.length : i.length);
+                let i = u[t];
+                s.b.insertText(e, i, { at: r }), s.b.insertText(e, i, { at: n });
+                let a = _[0].text.length + i.length,
+                    o = f[0].text.length + (p ? 2 * i.length : i.length);
                 s.b.select(e, {
-                    anchor: {
-                        path: n.path,
-                        offset: Math.min(a, n.offset + i.length),
-                    },
-                    focus: {
-                        path: r.path,
-                        offset: Math.min(o, r.offset + (_ ? i.length : 0)),
-                    },
+                    anchor: { path: n.path, offset: Math.min(a, n.offset + i.length) },
+                    focus: { path: r.path, offset: Math.min(o, r.offset + (p ? i.length : 0)) },
                 });
             }
         });
     }),
         o.VW.focus(e);
 }
-
 function m(e, t) {
     let n = e.selection;
     if (null == n) return;
@@ -189,26 +110,8 @@ function m(e, t) {
         for (let [i, a] of o.VW.blocks(e))
             o.ZF.includes(n, a) &&
                 (r || "line" !== i.type
-                    ? r &&
-                      i.type === t &&
-                      s.b.setNodes(
-                          e,
-                          {
-                              type: "line",
-                          },
-                          {
-                              at: a,
-                          },
-                      )
-                    : s.b.setNodes(
-                          e,
-                          {
-                              type: t,
-                          },
-                          {
-                              at: a,
-                          },
-                      ));
+                    ? r && i.type === t && s.b.setNodes(e, { type: "line" }, { at: a })
+                    : s.b.setNodes(e, { type: t }, { at: a }));
     }),
         o.VW.focus(e);
 }

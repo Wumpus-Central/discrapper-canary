@@ -1,7 +1,6 @@
+"use strict";
 var r;
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.astFormatter = t.RichTextNodeType = void 0),
     (t.formatToAst = o);
 let i = n(941242);
@@ -15,31 +14,12 @@ let i = n(941242);
         (e.Paragraph = "paragraph");
 })(r || (t.RichTextNodeType = r = {}));
 let a = {
-    $b: (e) => ({
-        type: r.Strong,
-        content: e,
-    }),
-    $i: (e) => ({
-        type: r.Emphasis,
-        content: e,
-    }),
-    $del: (e) => ({
-        type: r.Strikethrough,
-        content: e,
-    }),
-    $code: (e) => ({
-        type: r.Code,
-        content: e,
-    }),
-    $link: (e, t, [n]) => ({
-        type: r.Link,
-        target: n,
-        content: e,
-    }),
-    $p: (e) => ({
-        type: r.Paragraph,
-        content: e,
-    }),
+    $b: (e) => ({ type: r.Strong, content: e }),
+    $i: (e) => ({ type: r.Emphasis, content: e }),
+    $del: (e) => ({ type: r.Strikethrough, content: e }),
+    $code: (e) => ({ type: r.Code, content: e }),
+    $link: (e, t, [n]) => ({ type: r.Link, target: n, content: e }),
+    $p: (e) => ({ type: r.Paragraph, content: e }),
 };
 class s extends i.FormatBuilder {
     constructor() {
@@ -52,12 +32,7 @@ class s extends i.FormatBuilder {
     }
     pushLiteralText(e) {
         let t = this.result[this.result.length - 1];
-        null != t && t.type === r.Text
-            ? (t.content += e)
-            : this.result.push({
-                  type: r.Text,
-                  content: e,
-              });
+        null != t && t.type === r.Text ? (t.content += e) : this.result.push({ type: r.Text, content: e });
     }
     pushObject(e) {
         this.result.push(e);
@@ -66,18 +41,7 @@ class s extends i.FormatBuilder {
         return this.result;
     }
 }
-
 function o(e, t) {
-    return "string" == typeof e
-        ? [
-              {
-                  type: r.Text,
-                  content: e,
-              },
-          ]
-        : this.bindFormatValues(s, e, t);
+    return "string" == typeof e ? [{ type: r.Text, content: e }] : this.bindFormatValues(s, e, t);
 }
-t.astFormatter = {
-    format: o,
-    builder: s,
-};
+t.astFormatter = { format: o, builder: s };

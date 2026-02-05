@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     let t = !1,
         n = [];
@@ -15,6 +16,4 @@ function r(e) {
     }
     return n.join("");
 }
-n.d(t, {
-    W: () => r,
-});
+n.d(t, { W: () => r });

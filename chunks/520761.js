@@ -1,195 +1,139 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(990078),
-    c = n(397927),
-    o = n(599119),
-    d = n(374084),
+    o = n(397927),
+    d = n(599119),
+    c = n(374084),
     u = n(734057),
-    f = n(486020),
+    m = n(486020),
     g = n(199940),
-    b = n(132514),
-    m = n(985018),
-    p = n(659233);
-let x = function (e) {
-    let { guildId: t, resourceChannel: l, index: x, onDragComplete: h, onDragStart: j, onDragReset: O } = e,
-        { title: y, channelId: v, description: A } = l,
-        E = u.A.getChannel(v),
-        N = null;
-    (null != E && (0, d.Yt)(E)) || (N = m.intl.string(m.t.kTdL8X));
-    let _ = null == A || 0 === A.length,
-        S = f.Ay.getResourceChannelIconURL({
-            channelId: l.channelId,
-            icon: l.icon,
-        }),
+    x = n(132514),
+    h = n(985018),
+    _ = n(659233);
+let A = function (e) {
+    let { guildId: t, resourceChannel: l, index: A, onDragComplete: p, onDragStart: f, onDragReset: j } = e,
+        { title: N, channelId: E, description: b } = l,
+        T = u.A.getChannel(E),
+        C = null;
+    (null != T && (0, c.Yt)(T)) || (C = h.intl.string(h.t.kTdL8X));
+    let I = null == b || 0 === b.length,
+        v = m.Ay.getResourceChannelIconURL({ channelId: l.channelId, icon: l.icon }),
         {
-            drag: T,
-            dragSourcePosition: I,
-            drop: C,
-            setIsDraggable: P,
-        } = (0, o.A)({
+            drag: S,
+            dragSourcePosition: y,
+            drop: R,
+            setIsDraggable: O,
+        } = (0, d.A)({
             type: "RESOURCE_CHANNEL",
             optionId: l.channelId,
-            index: x,
-            onDragStart: j,
-            onDragComplete: h,
-            onDragReset: O,
+            index: A,
+            onDragStart: f,
+            onDragComplete: p,
+            onDragReset: j,
         }),
-        w = i.useCallback(
+        G = s.useCallback(
             (e) => {
                 (0, g.z4)(l.channelId, e);
             },
             [l.channelId],
         ),
-        R = i.useCallback(
+        L = s.useCallback(
             (e, n) => {
-                let r = b.A.getSettings();
-                null != r &&
+                let i = x.A.getSettings();
+                null != i &&
                     ((0, g.z4)(l.channelId, e),
-                    (0, g.W5)(t, r).then(() => {
+                    (0, g.W5)(t, i).then(() => {
                         (0, g.E0)(t, e.channelId, n);
                     }));
             },
             [t, l],
         ),
-        D = i.useCallback(
+        D = s.useCallback(
             () =>
-                (0, c.mMO)(async () => {
+                (0, o.mMO)(async () => {
                     let { default: e } = await n.e("36354").then(n.bind(n, 983161));
-                    return (n) => {
-                        var i, s;
-                        return (0, r.jsx)(
-                            e,
-                            ((i = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, n)),
-                            (s = s =
-                                {
-                                    guildId: t,
-                                    resourceChannel: l,
-                                    onSave: w,
-                                    onDelete: () => (0, g.XD)(l.channelId),
-                                    onIconUpload: R,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(s)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                                  }),
-                            i),
-                        );
-                    };
+                    return (n) =>
+                        (0, i.jsx)(e, {
+                            ...n,
+                            guildId: t,
+                            resourceChannel: l,
+                            onSave: G,
+                            onDelete: () => (0, g.XD)(l.channelId),
+                            onIconUpload: L,
+                        });
                 }),
-            [t, l, w, R],
+            [t, l, G, L],
         );
-    return null == E
+    return null == T
         ? null
-        : (0, r.jsxs)("div", {
-              className: p.l5,
+        : (0, i.jsxs)("div", {
+              className: _.l5,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: s()(p.Km, {
-                          [p.A]: null != I && x < I,
-                          [p.Ze]: null != I && x > I,
-                          [p._t]: null != N,
+                  (0, i.jsxs)("div", {
+                      className: r()(_.Km, {
+                          [_.A]: null != y && A < y,
+                          [_.Ze]: null != y && A > y,
+                          [_._t]: null != C,
                       }),
                       ref: (e) => {
-                          T(C(e));
+                          S(R(e));
                       },
                       children: [
-                          (0, r.jsx)("div", {
-                              className: p.cK,
-                              onMouseEnter: () => P(!0),
-                              onMouseLeave: () => P(!1),
-                              children: (0, r.jsx)(c.WP0, {
-                                  size: "xs",
-                                  color: "currentColor",
-                                  className: p.co,
-                              }),
+                          (0, i.jsx)("div", {
+                              className: _.cK,
+                              onMouseEnter: () => O(!0),
+                              onMouseLeave: () => O(!1),
+                              children: (0, i.jsx)(o.WP0, { size: "xs", color: "currentColor", className: _.co }),
                           }),
-                          null != S &&
-                              (0, r.jsx)("div", {
-                                  className: p.P0,
-                                  children: (0, r.jsx)("img", {
-                                      src: S,
-                                      className: p.Kk,
+                          null != v &&
+                              (0, i.jsx)("div", {
+                                  className: _.P0,
+                                  children: (0, i.jsx)("img", {
+                                      src: v,
+                                      className: _.Kk,
                                       width: 32,
                                       height: 32,
                                       alt: "",
                                       "aria-hidden": !0,
                                   }),
                               }),
-                          (0, r.jsxs)("div", {
-                              className: p.DP,
+                          (0, i.jsxs)("div", {
+                              className: _.DP,
                               children: [
-                                  (0, r.jsx)(c.Text, {
-                                      className: p.qj,
+                                  (0, i.jsx)(o.Text, {
+                                      className: _.qj,
                                       variant: "text-md/semibold",
                                       color: "text-strong",
-                                      children: y,
+                                      children: N,
                                   }),
-                                  !_ &&
-                                      (0, r.jsx)(c.Text, {
-                                          className: p.ur,
+                                  !I &&
+                                      (0, i.jsx)(o.Text, {
+                                          className: _.ur,
                                           variant: "text-xs/medium",
                                           color: "text-muted",
                                           lineClamp: 1,
-                                          children: A,
+                                          children: b,
                                       }),
                               ],
                           }),
-                          (0, r.jsx)(a.m, {
-                              text: m.intl.string(m.t.bt75uw),
-                              children: (0, r.jsx)(c.K0, {
-                                  icon: c.R2l,
+                          (0, i.jsx)(a.m, {
+                              text: h.intl.string(h.t.bt75uw),
+                              children: (0, i.jsx)(o.K0, {
+                                  icon: o.R2l,
                                   size: "sm",
                                   variant: "primary",
                                   onClick: D,
-                                  "aria-label": m.intl.string(m.t.bt75uw),
+                                  "aria-label": h.intl.string(h.t.bt75uw),
                               }),
                           }),
                       ],
                   }),
-                  null != N &&
-                      (0, r.jsx)(c.Text, {
-                          variant: "text-xs/medium",
-                          color: "text-feedback-critical",
-                          children: N,
-                      }),
+                  null != C &&
+                      (0, i.jsx)(o.Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: C }),
               ],
           });
 };

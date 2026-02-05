@@ -1,14 +1,12 @@
-n.d(t, {
-    E: () => d,
-    U: () => u,
-});
+"use strict";
+n.d(t, { E: () => d, U: () => c });
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
-    o = n(460890),
-    s = n(834730),
+    s = n(460890),
+    o = n(834730),
     l = n(769796);
-let c = (e, t) => {
+let u = (e, t) => {
     switch (e) {
         case "new":
             return t.NEW;
@@ -22,29 +20,15 @@ let c = (e, t) => {
             return e.text;
     }
 };
-
-function u(e) {
-    return "string" == typeof e || e.hasOwnProperty("text")
-        ? {
-              type: e,
-              variant: "brand",
-          }
-        : e;
+function c(e) {
+    return "string" == typeof e || e.hasOwnProperty("text") ? { type: e, variant: "brand" } : e;
 }
-
 function d(e) {
     let { type: t, variant: n = "default", icon: i } = e,
-        { i18n: u } = (0, o.G9)();
-    return (0, r.jsxs)(s.E, {
+        { i18n: c } = (0, s.G9)();
+    return (0, r.jsxs)(o.E, {
         variant: "eyebrow",
         className: a()(l.badge, l[n]),
-        children: [
-            null != i &&
-                (0, r.jsx)(i, {
-                    size: "xxs",
-                    color: "currentColor",
-                }),
-            c(t, u),
-        ],
+        children: [null != i && (0, r.jsx)(i, { size: "xxs", color: "currentColor" }), u(t, c)],
     });
 }

@@ -1,21 +1,12 @@
-n.d(t, {
-    Ay: () => x,
-    yg: () => D,
-}),
-    n(927092),
-    n(212978),
-    n(201528),
+"use strict";
+n.d(t, { Ay: () => O, yg: () => R }),
     n(393431),
-    n(752391),
     n(532706),
     n(42231),
     n(232424),
-    n(757074),
     n(949626),
     n(767709),
     n(65162),
-    n(896048),
-    n(457529),
     n(938796);
 var r = n(284009),
     i = n.n(r),
@@ -23,80 +14,22 @@ var r = n(284009),
     s = n(972347),
     o = n(499979),
     l = n(626584),
-    c = n(111162),
-    u = n(927813),
+    u = n(111162),
+    c = n(927813),
     d = n(723702),
-    f = n(731854);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = 3,
-    E = 9;
-
-function b() {}
-let y = 20 * u.A.Millis.SECOND,
-    O = 3,
-    A = +u.A.Millis.MINUTE,
-    v = 0.25,
-    S = 0.1,
-    I = 5 * u.A.Millis.SECOND,
-    T = 2,
-    C = 8;
-
-function N(e) {
+    _ = n(731854);
+let f = 3,
+    p = 9;
+function h() {}
+let m = 20 * c.A.Millis.SECOND,
+    g = 3,
+    E = +c.A.Millis.MINUTE,
+    A = 0.25,
+    I = 0.1,
+    T = 5 * c.A.Millis.SECOND,
+    y = 2,
+    S = 8;
+function v(e) {
     return e.map((e) => ({
         name: e.name,
         type: e.type,
@@ -107,62 +40,44 @@ function N(e) {
         decode: e.decode,
     }));
 }
-
-function R(e) {
-    return null == e
-        ? void 0
-        : e.map((e) => ({
-              type: e.type,
-              rid: e.rid,
-              ssrc: e.ssrc,
-              active: e.active,
-              quality: e.quality,
-              rtx_ssrc: e.rtxSsrc,
-              max_bitrate: e.maxBitrate,
-              max_framerate: e.maxFrameRate,
-              max_resolution:
-                  null != e.maxResolution
-                      ? {
-                            type: e.maxResolution.type,
-                            width: e.maxResolution.width,
-                            height: e.maxResolution.height,
-                        }
-                      : void 0,
-          }));
+function C(e) {
+    return e?.map((e) => ({
+        type: e.type,
+        rid: e.rid,
+        ssrc: e.ssrc,
+        active: e.active,
+        quality: e.quality,
+        rtx_ssrc: e.rtxSsrc,
+        max_bitrate: e.maxBitrate,
+        max_framerate: e.maxFrameRate,
+        max_resolution:
+            null != e.maxResolution
+                ? { type: e.maxResolution.type, width: e.maxResolution.width, height: e.maxResolution.height }
+                : void 0,
+    }));
 }
-
-function w(e) {
-    return "audio" === e ? f.mI.AUDIO : "test" === e ? f.mI.TEST : "screen" === e ? f.mI.SCREEN : f.mI.VIDEO;
+function b(e) {
+    return "audio" === e ? _.mI.AUDIO : "test" === e ? _.mI.TEST : "screen" === e ? _.mI.SCREEN : _.mI.VIDEO;
 }
-
-function P(e) {
-    var t;
-    return null !=
-        (t =
-            null == e
-                ? void 0
-                : e.map((e) => ({
-                      type: w(e.type),
-                      rid: e.rid,
-                      ssrc: e.ssrc,
-                      rtxSsrc: e.rtx_ssrc,
-                      active: e.active,
-                      quality: e.quality,
-                      maxBitrate: e.max_bitrate,
-                      maxFrameRate: e.max_framerate,
-                      maxResolution:
-                          null != e.max_resolution
-                              ? {
-                                    type: e.max_resolution.type,
-                                    width: e.max_resolution.width,
-                                    height: e.max_resolution.height,
-                                }
-                              : void 0,
-                  })))
-        ? t
-        : [];
+function N(e) {
+    return (
+        e?.map((e) => ({
+            type: b(e.type),
+            rid: e.rid,
+            ssrc: e.ssrc,
+            rtxSsrc: e.rtx_ssrc,
+            active: e.active,
+            quality: e.quality,
+            maxBitrate: e.max_bitrate,
+            maxFrameRate: e.max_framerate,
+            maxResolution:
+                null != e.max_resolution
+                    ? { type: e.max_resolution.type, width: e.max_resolution.width, height: e.max_resolution.height }
+                    : void 0,
+        })) ?? []
+    );
 }
-var D = (function (e) {
+var R = (function (e) {
     return (
         (e.Connecting = "connecting"),
         (e.Connect = "connect"),
@@ -198,22 +113,60 @@ var D = (function (e) {
         e
     );
 })({});
-class x extends s.A {
+class O extends s.A {
+    url;
+    logger;
+    backoff = new a.A(1e3, 5e3);
+    webSocket;
+    connectionState;
+    heartbeatInterval;
+    helloTimeout;
+    heartbeater;
+    lastHeartbeatAckTime;
+    expeditedHeartbeatTimeout;
+    heartbeatAck;
+    heartbeatIntervalModifier;
+    connectionStartTime;
+    lastRecvSeqNum;
+    sessionId;
+    serverId;
+    channelId;
+    token;
+    resumable;
+    serverVersion = 0;
+    constructor(e, t = _.x.DEFAULT) {
+        super(),
+            (this.url = e),
+            (this.logger = new l.A(`RTCControlSocket(${t})`)),
+            this.logger.enableNativeLogger(!0),
+            (this.webSocket = null),
+            (this.connectionState = 0),
+            (this.helloTimeout = null),
+            (this.lastHeartbeatAckTime = null),
+            (this.heartbeatInterval = null),
+            (this.heartbeater = null),
+            (this.heartbeatAck = !0),
+            (this.expeditedHeartbeatTimeout = null),
+            (this.heartbeatIntervalModifier = 1),
+            (this.connectionStartTime = 0),
+            (this.lastRecvSeqNum = null),
+            (this.sessionId = null),
+            (this.serverId = null),
+            (this.channelId = null),
+            (this.token = null),
+            (this.resumable = !1);
+    }
     createWebSocket() {
-        this.logger.info("[CONNECT] ".concat(this.url)),
+        this.logger.info(`[CONNECT] ${this.url}`),
             null !== this.webSocket &&
                 (this.logger.error("Connect called with already existing websocket"),
                 this.cleanupWebSocket((e) => e.close(4e3))),
             (this.connectionStartTime = (0, o.tB)()),
             (this.helloTimeout = setTimeout(() => {
                 let e = (0, o.tB)() - this.connectionStartTime;
-                this.handleClose(
-                    !1,
-                    0,
-                    "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."),
-                );
-            }, y));
-        let e = (this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(E)));
+                this.handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`);
+            }, m));
+        let e = (this.webSocket = new WebSocket(`${this.url}?v=${p}`));
         (e.binaryType = "arraybuffer"),
             (e.onopen = () => {
                 1 === this.connectionState
@@ -221,20 +174,19 @@ class x extends s.A {
                     : 5 === this.connectionState && this.doResumeOrClose(),
                     (this.connectionState = 4);
                 let e = (0, o.tB)() - this.connectionStartTime;
-                this.logger.info("[CONNECTED] ".concat(this.url, " in ").concat(e, " ms")),
-                    this.emit("ping", Math.round(e / 2));
+                this.logger.info(`[CONNECTED] ${this.url} in ${e} ms`), this.emit("ping", Math.round(e / 2));
             }),
             (e.onmessage = (e) => {
                 let { op: t, seq: n, d: r } = this.parseWebSocketMessage(e);
                 if (
                     (this.emit("receive-message", t, r),
                     n && (this.lastRecvSeqNum = n),
-                    c.default.isLoggingGatewayEvents)
+                    u.default.isLoggingGatewayEvents)
                 )
                     if (r instanceof Uint8Array) {
                         let e = [...r].map((e) => e.toString(16).padStart(2, "0")).join("");
-                        this.logger.info("~> ".concat(t, ": 0x").concat(e));
-                    } else this.logger.info("~> ".concat(t, ": ").concat(JSON.stringify(r)));
+                        this.logger.info(`~> ${t}: 0x${e}`);
+                    } else this.logger.info(`~> ${t}: ${JSON.stringify(r)}`);
                 switch (t) {
                     case 8:
                         this.clearHelloTimeout(), this.handleHello(r);
@@ -257,7 +209,7 @@ class x extends s.A {
                         break;
                     case 5:
                         let i = r.speaking;
-                        "boolean" == typeof i && (i = i ? f.ME.VOICE : f.ME.NONE),
+                        "boolean" == typeof i && (i = i ? _.ME.VOICE : _.ME.NONE),
                             this.emit("speaking", r.user_id, r.ssrc, i);
                         break;
                     case 3:
@@ -267,7 +219,7 @@ class x extends s.A {
                         this.handleHeartbeatAck(r);
                         break;
                     case 12:
-                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, P(r.streams));
+                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, N(r.streams));
                         break;
                     case 11:
                         this.emit("client-connect", r.user_ids);
@@ -315,19 +267,19 @@ class x extends s.A {
                         this.emit("mls-proposals", r);
                         break;
                     case 29: {
-                        let e = new DataView(r.buffer, r.byteOffset, T).getUint16(0, !1),
-                            t = r.slice(T);
+                        let e = new DataView(r.buffer, r.byteOffset, y).getUint16(0, !1),
+                            t = r.slice(y);
                         this.emit("mls-prepare-commit-transition", e, t);
                         break;
                     }
                     case 30: {
-                        let e = new DataView(r.buffer, r.byteOffset, T).getUint16(0, !1),
-                            t = r.slice(T);
+                        let e = new DataView(r.buffer, r.byteOffset, y).getUint16(0, !1),
+                            t = r.slice(y);
                         this.emit("mls-welcome", e, t);
                         break;
                     }
                     default:
-                        this.logger.info("Unhandled op ".concat(t));
+                        this.logger.info(`Unhandled op ${t}`);
                 }
             }),
             (e.onerror = () => this.handleClose(!1, 0, "An error with the websocket occurred")),
@@ -340,11 +292,8 @@ class x extends s.A {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = this.webSocket;
         if (null == n || n.readyState !== WebSocket.OPEN) return;
-        let r = JSON.stringify({
-            op: e,
-            d: t,
-        });
-        c.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(r)), this.emit("send-message", e, t);
+        let r = JSON.stringify({ op: e, d: t });
+        u.default.isLoggingGatewayEvents && this.logger.info(`<~ ${r}`), this.emit("send-message", e, t);
         try {
             n.send(r);
         } catch (e) {}
@@ -368,19 +317,14 @@ class x extends s.A {
         null !== this.token &&
         null !== this.sessionId &&
         this.resumable &&
-        (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= A)
+        (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= E)
             ? (this.doResume(), (this.lastHeartbeatAckTime = e))
             : this.disconnect(!1, 4801, "Cannot resume connection.");
     }
     doResume() {
-        var e, t, n, r;
-        let i = null != (e = this.lastRecvSeqNum) ? e : -1;
+        let e = this.lastRecvSeqNum ?? -1;
         this.logger.info(
-            "[RESUME] resuming session. serverId="
-                .concat(null != (t = this.serverId) ? t : "", " channelId=")
-                .concat(null != (n = this.channelId) ? n : "", " sessionId=")
-                .concat(null != (r = this.sessionId) ? r : "", " seqAck=")
-                .concat(i),
+            `[RESUME] resuming session. serverId=${this.serverId ?? ""} channelId=${this.channelId ?? ""} sessionId=${this.sessionId ?? ""} seqAck=${e}`,
         ),
             this.emit("resuming"),
             (this.connectionState = 3),
@@ -389,33 +333,28 @@ class x extends s.A {
                 session_id: this.sessionId,
                 server_id: this.serverId,
                 channel_id: this.channelId,
-                seq_ack: i,
+                seq_ack: e,
             });
     }
     handleHello(e) {
-        var t, n, r;
-        if (((this.serverVersion = null != (t = e.v) ? t : g), this.serverVersion <= 3)) {
-            let t = d.isPlatformEmbedded ? v : S;
+        if (((this.serverVersion = e.v ?? f), this.serverVersion <= 3)) {
+            let t = d.isPlatformEmbedded ? A : I;
             this.heartbeatInterval = e.heartbeat_interval * t;
         } else
             (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier),
-                d.isPlatformEmbedded ||
-                    (this.heartbeatInterval = Math.min(I, null != (r = this.heartbeatInterval) ? r : NaN));
-        let i = (0, o.tB)() - this.connectionStartTime;
+                d.isPlatformEmbedded || (this.heartbeatInterval = Math.min(T, this.heartbeatInterval ?? NaN));
+        let t = (0, o.tB)() - this.connectionStartTime;
         this.logger.info(
-            "[HELLO] heartbeat interval: "
-                .concat(null != (n = this.heartbeatInterval) ? n : "??", ", version: ")
-                .concat(this.serverVersion, ", took ")
-                .concat(i, " ms"),
+            `[HELLO] heartbeat interval: ${this.heartbeatInterval ?? "??"}, version: ${this.serverVersion}, took ${t} ms`,
         ),
             this.startHeartbeater();
     }
     handleReady(e) {
         this.backoff.succeed();
         let t = (0, o.tB)() - this.connectionStartTime;
-        this.logger.info("[READY] took ".concat(t, " ms")),
+        this.logger.info(`[READY] took ${t} ms`),
             this.serverVersion >= 6 && this.send(16, {}),
-            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, P(e.streams), e.experiments);
+            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, N(e.streams), e.experiments);
     }
     handleResumed(e) {
         this.backoff.succeed();
@@ -428,28 +367,24 @@ class x extends s.A {
             4004 === t || 4015 === t || 4011 === t || 4006 === t)
         )
             return this.disconnect(e, t, n);
-        if (this.backoff.fails > O)
+        if (this.backoff.fails > g)
             this.logger.warn("[WS CLOSED] Backoff exceed. Resetting."), this.disconnect(e, t, n);
         else {
             let r = this.backoff.fail(() => this.reconnect(e, t, n));
             this.logger.warn(
-                "[WS CLOSED] (clean: "
-                    .concat(e.toString(), ", code: ")
-                    .concat(t, ", reason: ")
-                    .concat(n, ") retrying in ")
-                    .concat((r / 1e3).toFixed(2), " seconds."),
+                `[WS CLOSED] (clean: ${e.toString()}, code: ${t}, reason: ${n}) retrying in ${(r / 1e3).toFixed(2)} seconds.`,
             );
         }
     }
     disconnect(e, t, n) {
-        this.logger.warn("[DISCONNECT] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ")")),
+        this.logger.warn(`[DISCONNECT] (${e.toString()}, ${t}, ${n})`),
             this.cleanupWebSocket(),
             this.cleanupState(),
             (this.connectionState = 0),
             this.emit("disconnect", e, t, n);
     }
     reconnect(e, t, n) {
-        this.logger.info("[RECONNECT] wasClean=".concat(e.toString(), " code=").concat(t, " reason=").concat(n)),
+        this.logger.info(`[RECONNECT] wasClean=${e.toString()} code=${t} reason=${n}`),
             this.cleanupWebSocket((e) => e.close(4e3)),
             (this.connectionState = 5),
             this.createWebSocket();
@@ -458,7 +393,7 @@ class x extends s.A {
         this.stopHeartbeater(), this.clearHelloTimeout();
         let t = this.webSocket;
         (this.webSocket = null),
-            null != t && ((t.onopen = b), (t.onmessage = b), (t.onerror = b), (t.onclose = b), null == e || e(t)),
+            null != t && ((t.onopen = h), (t.onmessage = h), (t.onerror = h), (t.onclose = h), e?.(t)),
             this.backoff.cancel();
     }
     cleanupState() {
@@ -474,14 +409,10 @@ class x extends s.A {
         {
             let t = new Uint8Array(e.data),
                 n = null;
-            this.serverVersion >= C && (n = new DataView(t.buffer).getUint16(0, !1));
-            let r = 2 * (this.serverVersion >= C),
+            this.serverVersion >= S && (n = new DataView(t.buffer).getUint16(0, !1));
+            let r = 2 * (this.serverVersion >= S),
                 i = 1;
-            return {
-                op: t[r],
-                seq: n,
-                d: t.subarray(r + i),
-            };
+            return { op: t[r], seq: n, d: t.subarray(r + i) };
         }
     }
     clearHelloTimeout() {
@@ -490,7 +421,7 @@ class x extends s.A {
     handleHeartbeatAck(e) {
         this.logger.info("Heartbeat ACK received");
         let t = null;
-        (t = this.serverVersion >= C ? e.t : e),
+        (t = this.serverVersion >= S ? e.t : e),
             this.emit("ping", (0, o.tB)() - t),
             (this.lastHeartbeatAckTime = (0, o.tB)()),
             (this.heartbeatAck = !0),
@@ -502,11 +433,11 @@ class x extends s.A {
     handleHeartbeatTimeout() {
         this.cleanupWebSocket((e) => e.close(4e3));
         let e = this.backoff.fail(() => this.reconnect(!1, 4800, "Heartbeat timeout."));
-        this.logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."));
+        this.logger.warn(`[HEARTBEAT ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     startHeartbeater() {
         i()(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."),
-            this.logger.info("Starting heartbeat with interval: ".concat(this.heartbeatInterval)),
+            this.logger.info(`Starting heartbeat with interval: ${this.heartbeatInterval}`),
             null !== this.heartbeater && clearInterval(this.heartbeater),
             (this.heartbeatAck = !0),
             (this.heartbeater = setInterval(() => {
@@ -516,14 +447,10 @@ class x extends s.A {
             }, this.heartbeatInterval));
     }
     sendHeartbeat() {
-        if (this.serverVersion >= C) {
-            var e;
-            let t = null != (e = this.lastRecvSeqNum) ? e : -1;
-            this.logger.info("Sending heartbeat with last received sequence number: ".concat(t)),
-                this.send(3, {
-                    t: (0, o.tB)(),
-                    seq_ack: t,
-                });
+        if (this.serverVersion >= S) {
+            let e = this.lastRecvSeqNum ?? -1;
+            this.logger.info(`Sending heartbeat with last received sequence number: ${e}`),
+                this.send(3, { t: (0, o.tB)(), seq_ack: e });
         } else this.logger.info("Sending heartbeat"), this.send(3, (0, o.tB)());
     }
     stopHeartbeater() {
@@ -560,14 +487,14 @@ class x extends s.A {
                 token: a,
                 max_dave_protocol_version: s,
                 video: o,
-                streams: R(l),
+                streams: C(l),
             });
     }
     expeditedHeartbeat(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (null != this.webSocket)
-            this.logger.info("Performing an expedited heartbeat ".concat("" !== t ? "reason: " + t : "")),
+            this.logger.info(`Performing an expedited heartbeat ${"" !== t ? "reason: " + t : ""}`),
                 (this.heartbeatAck = !1),
                 this.sendHeartbeat(),
                 null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout),
@@ -577,8 +504,7 @@ class x extends s.A {
         else {
             if (n) return this.resetBackoff(t);
             this.logger.info(
-                "Expedited heartbeat requested, but is disconnected and a reset was not " +
-                    "requested ".concat("" !== t ? "reason: " + t : ""),
+                `Expedited heartbeat requested, but is disconnected and a reset was not requested ${"" !== t ? "reason: " + t : ""}`,
             );
         }
         return !1;
@@ -588,7 +514,7 @@ class x extends s.A {
         return (
             this.backoff.fails > 0 &&
             null == this.webSocket &&
-            (this.logger.info("Connection backoff reset ".concat("" !== e ? "for reason: " + e : "")),
+            (this.logger.info(`Connection backoff reset ${"" !== e ? "for reason: " + e : ""}`),
             this.backoff.succeed(),
             this.reconnect(!1, 4802, "Reset backoff."),
             !0)
@@ -610,67 +536,33 @@ class x extends s.A {
         null == n
             ? (i = null)
             : "sdp" in n && null != n.sdp && "" !== n.sdp
-              ? ((i = n.sdp),
-                (a = m(_({}, n), {
-                    codecs: N(n.codecs),
-                    rtc_connection_id: t,
-                })))
+              ? ((i = n.sdp), (a = { ...n, codecs: v(n.codecs), rtc_connection_id: t }))
               : "address" in n &&
                 null != n.address &&
                 "" !== n.address &&
                 n.port &&
                 null != n.mode &&
                 "" !== n.mode &&
-                ((i = {
-                    address: n.address,
-                    port: n.port,
-                    mode: n.mode,
-                }),
-                (a = m(_({}, n), {
-                    codecs: N(n.codecs),
-                    rtc_connection_id: t,
-                    experiments: r,
-                }))),
-            this.send(
-                1,
-                _(
-                    {
-                        protocol: e,
-                        data: i,
-                    },
-                    a,
-                ),
-            );
+                ((i = { address: n.address, port: n.port, mode: n.mode }),
+                (a = { ...n, codecs: v(n.codecs), rtc_connection_id: t, experiments: r })),
+            this.send(1, { protocol: e, data: i, ...a });
     }
     updateSession(e) {
-        this.send(14, {
-            codecs: N(e.codecs),
-        });
+        this.send(14, { codecs: v(e.codecs) });
     }
     speaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.send(5, {
-            speaking: this.serverVersion <= 3 ? !!e : e,
-            delay: t,
-            ssrc: n,
-        });
+        this.send(5, { speaking: this.serverVersion <= 3 ? !!e : e, delay: t, ssrc: n });
     }
     video(e, t, n, r) {
-        this.send(12, {
-            audio_ssrc: e,
-            video_ssrc: t,
-            rtx_ssrc: n,
-            streams: R(r),
-        });
+        this.send(12, { audio_ssrc: e, video_ssrc: t, rtx_ssrc: n, streams: C(r) });
     }
     mediaSinkWants(e) {
         this.serverVersion >= 5 && this.send(15, e);
     }
     secureFramesReadyForTransition(e) {
-        this.send(23, {
-            transition_id: e,
-        });
+        this.send(23, { transition_id: e });
     }
     sendMLSKeyPackage(e) {
         this.logger.info("Sending MLS key package"), this.sendBinary(26, new Uint8Array(e));
@@ -679,56 +571,12 @@ class x extends s.A {
         this.logger.info("Sending MLS commit + welcome message"), this.sendBinary(28, new Uint8Array(e));
     }
     flagMLSInvalidCommitWelcome(e) {
-        this.send(31, {
-            transition_id: e,
-        });
+        this.send(31, { transition_id: e });
     }
     noRoute() {
         this.send(32, {});
     }
     setHeartbeatIntervalModifier(e) {
         this.heartbeatIntervalModifier = e;
-    }
-    constructor(e, t = f.x.DEFAULT) {
-        super(),
-            p(this, "url", void 0),
-            p(this, "logger", void 0),
-            p(this, "backoff", new a.A(1e3, 5e3)),
-            p(this, "webSocket", void 0),
-            p(this, "connectionState", void 0),
-            p(this, "heartbeatInterval", void 0),
-            p(this, "helloTimeout", void 0),
-            p(this, "heartbeater", void 0),
-            p(this, "lastHeartbeatAckTime", void 0),
-            p(this, "expeditedHeartbeatTimeout", void 0),
-            p(this, "heartbeatAck", void 0),
-            p(this, "heartbeatIntervalModifier", void 0),
-            p(this, "connectionStartTime", void 0),
-            p(this, "lastRecvSeqNum", void 0),
-            p(this, "sessionId", void 0),
-            p(this, "serverId", void 0),
-            p(this, "channelId", void 0),
-            p(this, "token", void 0),
-            p(this, "resumable", void 0),
-            p(this, "serverVersion", 0),
-            (this.url = e),
-            (this.logger = new l.A("RTCControlSocket(".concat(t, ")"))),
-            this.logger.enableNativeLogger(!0),
-            (this.webSocket = null),
-            (this.connectionState = 0),
-            (this.helloTimeout = null),
-            (this.lastHeartbeatAckTime = null),
-            (this.heartbeatInterval = null),
-            (this.heartbeater = null),
-            (this.heartbeatAck = !0),
-            (this.expeditedHeartbeatTimeout = null),
-            (this.heartbeatIntervalModifier = 1),
-            (this.connectionStartTime = 0),
-            (this.lastRecvSeqNum = null),
-            (this.sessionId = null),
-            (this.serverId = null),
-            (this.channelId = null),
-            (this.token = null),
-            (this.resumable = !1);
     }
 }

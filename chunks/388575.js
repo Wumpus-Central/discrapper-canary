@@ -1,39 +1,16 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(11057),
     i = n(439372),
     a = n(822382);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o extends i.A {
+class s extends i.A {
+    actions = { USER_SETTINGS_PROTO_UPDATE: a.IY, POST_CONNECTION_OPEN: a.IY };
+    _unsubscribeIntlLoadingStore;
     _initialize() {
         this._unsubscribeIntlLoadingStore = (0, r.I)(a.IY);
     }
     _terminate() {
-        var e, t;
-        null == (e = (t = this)._unsubscribeIntlLoadingStore) || e.call(t);
-    }
-    constructor(...e) {
-        super(...e),
-            s(this, "actions", {
-                USER_SETTINGS_PROTO_UPDATE: a.IY,
-                POST_CONNECTION_OPEN: a.IY,
-            }),
-            s(this, "_unsubscribeIntlLoadingStore", void 0);
+        this._unsubscribeIntlLoadingStore?.();
     }
 }
-let l = new o();
+let o = new s();

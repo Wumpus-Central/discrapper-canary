@@ -1,25 +1,18 @@
-n.d(t, {
-    p: () => s,
-});
+"use strict";
+n.d(t, { p: () => s });
 var r = n(73153),
     i = n(661191),
     a = n(652215);
-
 function s(e, t, n) {
     r.h.dispatch({
         type: "MESSAGE_CREATE",
         channelId: e,
-        message: o({
-            channelId: e,
-            requesterUser: t,
-            requestToSpeakTimestamp: n,
-        }),
+        message: o({ channelId: e, requesterUser: t, requestToSpeakTimestamp: n }),
         optimistic: !1,
         sendMessageOptions: {},
         isPushNotification: !1,
     });
 }
-
 function o(e) {
     let { channelId: t, requesterUser: n, requestToSpeakTimestamp: r } = e;
     return {

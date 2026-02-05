@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_c50892",
     Nr: "card_c50892",

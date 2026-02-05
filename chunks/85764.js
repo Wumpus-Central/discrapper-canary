@@ -1,5 +1,5 @@
+"use strict";
 var n = r(724039);
-
 function i() {
     return (i =
         n ||
@@ -114,13 +114,7 @@ t.exports = (function (t) {
                         }),
                     ));
                 var U = M || o,
-                    q = {
-                        className: j,
-                        "data-block": !0,
-                        "data-editor": d,
-                        "data-offset-key": L,
-                        key: D,
-                    };
+                    q = { className: j, "data-block": !0, "data-editor": d, "data-offset-key": L, key: D };
                 void 0 !== I &&
                     (q = (function (t) {
                         for (var e = 1; e < arguments.length; e++) {
@@ -148,28 +142,9 @@ t.exports = (function (t) {
                                 });
                         }
                         return t;
-                    })({}, q, {
-                        contentEditable: I,
-                        suppressContentEditableWarning: !0,
-                    }));
-                var H = s.createElement(
-                    z,
-                    q,
-                    s.createElement(
-                        U,
-                        i({}, R, {
-                            key: D,
-                        }),
-                    ),
-                );
-                k.push({
-                    block: H,
-                    wrapperTemplate: F,
-                    key: D,
-                    offsetKey: L,
-                }),
-                    (x = F ? O.getDepth() : null),
-                    (C = F);
+                    })({}, q, { contentEditable: I, suppressContentEditableWarning: !0 }));
+                var H = s.createElement(z, q, s.createElement(U, i({}, R, { key: D })));
+                k.push({ block: H, wrapperTemplate: F, key: D, offsetKey: L }), (x = F ? O.getDepth() : null), (C = F);
             }
             for (var W = [], V = 0; V < k.length; ) {
                 var G = k[V];
@@ -179,22 +154,13 @@ t.exports = (function (t) {
                     while (V < k.length && k[V].wrapperTemplate === G.wrapperTemplate);
                     var X = s.cloneElement(
                         G.wrapperTemplate,
-                        {
-                            key: G.key + "-wrap",
-                            "data-offset-key": G.offsetKey,
-                        },
+                        { key: G.key + "-wrap", "data-offset-key": G.offsetKey },
                         J,
                     );
                     W.push(X);
                 } else W.push(G.block), V++;
             }
-            return s.createElement(
-                "div",
-                {
-                    "data-contents": "true",
-                },
-                W,
-            );
+            return s.createElement("div", { "data-contents": "true" }, W);
         }),
         e
     );

@@ -1,28 +1,17 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(299855),
-    i = n.n(r),
-    l = n(723702);
-let a = {
-    [l.PlatformTypes.WINDOWS]: {
-        nvidia: ">=397.93.0",
-    },
-};
-
+n.d(t, { A: () => s });
+var i = n(299855),
+    r = n.n(i),
+    a = n(723702);
+let l = { [a.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } };
 function s(e) {
-    let t = a[(0, l.getPlatform)()];
+    let t = l[(0, a.getPlatform)()];
     if (null == t) return !1;
     for (let n of Object.keys(e)) {
-        let r = e[n],
-            l = t[n];
-        if (null == r || null == l || null != r.error) continue;
-        let a = (function (e) {
-            var t, n;
-            return "".concat(null != (t = e.major) ? t : 0, ".").concat(null != (n = e.minor) ? n : 0, ".0");
-        })(r);
-        if (!i().satisfies(a, l)) return !0;
+        let i = e[n],
+            a = t[n];
+        if (null == i || null == a || null != i.error) continue;
+        let l = `${i.major ?? 0}.${i.minor ?? 0}.0`;
+        if (!r().satisfies(l, a)) return !0;
     }
     return !1;
 }

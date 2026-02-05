@@ -1,450 +1,314 @@
-n.d(t, {
-    T: () => R,
-}),
-    n(638769),
-    n(896048),
-    n(733351),
-    n(321073);
+n.d(t, { T: () => w }), n(321073);
 var l = n(627968),
-    r = n(64700),
-    i = n(735438),
-    s = n(837381),
+    i = n(64700),
+    s = n(735438),
+    r = n(837381),
     a = n(311907),
-    o = n(397927),
-    u = n(928039),
-    c = n(485947),
-    d = n(704554),
+    u = n(397927),
+    o = n(928039),
+    d = n(485947),
+    c = n(704554),
     h = n(21119),
     g = n(594831),
-    f = n(616356),
-    p = n(734057),
-    I = n(197305),
-    m = n(994500),
-    E = n(309010),
-    A = n(977997),
-    y = n(607567),
-    S = n(256415),
-    v = n(996439),
-    O = n(810412),
-    b = n(914853),
-    N = n(294809),
-    T = n(406595),
-    _ = n(652215),
-    C = n(895867),
-    x = n(985018),
-    D = n(416001);
-
-function M(e) {
+    I = n(616356),
+    E = n(734057),
+    A = n(197305),
+    f = n(994500),
+    m = n(309010),
+    S = n(977997),
+    p = n(607567),
+    N = n(256415),
+    T = n(996439),
+    _ = n(810412),
+    y = n(914853),
+    C = n(294809),
+    x = n(406595),
+    v = n(652215),
+    M = n(895867),
+    D = n(985018),
+    R = n(416001);
+function U(e) {
     return Array.from(e).sort();
 }
-let j = (0, i.throttle)(
+let O = (0, s.throttle)(
     (e) => {
-        (0, O.Y)(_.uss.FRIENDS, {
-            locked: S.default.isInstanceLocked(),
+        (0, _.Y)(v.uss.FRIENDS, {
+            locked: N.default.isInstanceLocked(),
             shownUserIds: e.shownUserIds,
             liveUserIds: e.liveUserIds,
             contentInventoryIds: [],
         });
     },
     3e3,
-    {
-        leading: !0,
-        trailing: !1,
-    },
+    { leading: !0, trailing: !1 },
 );
-
-function w(e) {
+function G(e) {
     let t = 0x811c9dc5;
     for (let n = 0; n < e.length; n += 1) (t ^= e.charCodeAt(n)), (t = Math.imul(t, 0x1000193));
     return t >>> 0;
 }
-
-function P(e) {
+function b(e) {
     let { title: t } = e;
-    return (0, l.jsx)(c.A, {
-        className: D.uW,
-        children: t,
-    });
+    return (0, l.jsx)(d.A, { className: R.uW, children: t });
 }
-
-function R() {
+function w() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [n, i] = r.useState(""),
-        c = n.trim().toLowerCase(),
-        [S, _] = r.useState(() => new Set()),
-        R = (0, g.qZ)(),
-        U = r.useMemo(() => {
+        [n, s] = i.useState(""),
+        d = n.trim().toLowerCase(),
+        [N, v] = i.useState(() => new Set()),
+        w = (0, g.qZ)(),
+        L = i.useMemo(() => {
             let e = new Map();
-            for (let t of R) e.set(t.channel.id, t.voiceStates);
+            for (let t of w) e.set(t.channel.id, t.voiceStates);
             return e;
-        }, [R]),
-        G = r.useCallback((e) => {
-            _((t) => {
+        }, [w]),
+        k = i.useCallback((e) => {
+            v((t) => {
                 let n = new Set(t);
                 return n.has(e) ? n.delete(e) : n.add(e), n;
             });
         }, []),
-        L = r.useMemo(() => new Set(R.map((e) => e.channel.id)), [R]),
-        [k, F] = r.useState([]);
-    (0, d.RT)(n, R, F, g.MV);
-    let V = r.useRef(null),
-        H = (0, u.A)("friends-widget-voice", V),
-        [Y, W] = (0, a.bG)([T.A], () => T.A.getFavoriteTargetIdsForTab(b.x.VOICE), [], v.D),
-        z = r.useMemo(() => Y.filter((e) => L.has(e)), [Y, L]),
-        { friendVoiceChannelIds: B, recentVoiceChannelIds: K } = (0, g.S4)(),
-        X = r.useMemo(() => B.filter((e) => L.has(e)), [B, L]),
-        Q = r.useMemo(() => K.filter((e) => L.has(e)), [K, L]),
-        Z = (0, a.bG)([E.A], () => E.A.getVoiceChannelId(), []),
-        q = (0, a.bG)(
-            [I.A],
+        F = i.useMemo(() => new Set(w.map((e) => e.channel.id)), [w]),
+        [P, j] = i.useState([]);
+    (0, c.RT)(n, w, j, g.MV);
+    let V = i.useRef(null),
+        H = (0, o.A)("friends-widget-voice", V),
+        [Y, z] = (0, a.bG)([x.A], () => x.A.getFavoriteTargetIdsForTab(y.x.VOICE), [], T.D),
+        W = i.useMemo(() => Y.filter((e) => F.has(e)), [Y, F]),
+        { friendVoiceChannelIds: B, recentVoiceChannelIds: $ } = (0, g.S4)(),
+        X = i.useMemo(() => B.filter((e) => F.has(e)), [B, F]),
+        K = i.useMemo(() => $.filter((e) => F.has(e)), [$, F]),
+        Q = (0, a.bG)([m.A], () => m.A.getVoiceChannelId(), []),
+        Z = (0, a.bG)(
+            [A.A],
             () =>
-                I.A.affinities
-                    .filter((e) => {
-                        var t;
-                        return (null != (t = e.score) ? t : 0) > 0;
-                    })
+                A.A.affinities
+                    .filter((e) => (e.score ?? 0) > 0)
                     .slice(0, 2)
                     .map((e) => e.guildId),
             [],
         ),
-        J = r.useMemo(() => {
+        q = i.useMemo(() => {
             let e, t, n, l;
             return (
                 (t = String((e = new Date()).getDate()).padStart(2, "0")),
                 (n = String(e.getMonth() + 1).padStart(2, "0")),
                 (l = String(e.getFullYear() % 100).padStart(2, "0")),
-                w("".concat(t).concat(n).concat(l))
+                G(`${t}${n}${l}`)
             );
         }, []),
-        $ = r.useMemo(() => new Set(Y), [Y]),
-        ee = r.useMemo(() => X.filter((e) => !$.has(e)), [X, $]),
-        et = r.useMemo(() => Q.filter((e) => !$.has(e)), [Q, $]),
-        en = r.useMemo(() => {
-            var e, t;
-            let n = [],
-                l = new Set(),
-                r = (e) => {
-                    null == e || !L.has(e) || $.has(e) || l.has(e) || (l.add(e), n.push(e));
+        J = i.useMemo(() => new Set(Y), [Y]),
+        ee = i.useMemo(() => X.filter((e) => !J.has(e)), [X, J]),
+        et = i.useMemo(() => K.filter((e) => !J.has(e)), [K, J]),
+        en = i.useMemo(() => {
+            let e = [],
+                t = new Set(),
+                n = (n) => {
+                    null == n || !F.has(n) || J.has(n) || t.has(n) || (t.add(n), e.push(n));
                 };
-            for (let l of (null != Z &&
-                null != (e = null == (t = p.A.getChannel(Z)) ? void 0 : t.isVocal()) &&
-                e &&
-                r(Z),
-            et)) {
-                if (n.length >= 8) break;
-                r(l);
+            for (let t of (null != Q && E.A.getChannel(Q)?.isVocal() && n(Q), et)) {
+                if (e.length >= 8) break;
+                n(t);
             }
-            let i = new Set(q),
-                s = new Set([...$, ...ee]),
-                a = R.filter((e) => {
-                    var t, n, r, a;
-                    let o = e.channel;
-                    if (!(null != (t = null == o || null == (r = o.isVocal) ? void 0 : r.call(o)) && t)) return !1;
-                    let u = null != (n = null == (a = o.getGuildId) ? void 0 : a.call(o)) ? n : null;
-                    return !(null == u || !i.has(u) || s.has(o.id) || l.has(o.id));
-                }).map((e) => {
-                    var t, n, l;
-                    return {
-                        channelId: e.channel.id,
-                        voiceUserCount: null != (t = null == (n = e.voiceStates) ? void 0 : n.length) ? t : 0,
-                        shuffle: ((l = e.channel.id), w("".concat(J, ":").concat(l))),
-                    };
-                }),
-                o = a.filter((e) => e.voiceUserCount > 0),
-                u = a.filter((e) => 0 === e.voiceUserCount);
-            for (let e of (o.sort((e, t) =>
+            let l = new Set(Z),
+                i = new Set([...J, ...ee]),
+                s = w
+                    .filter((e) => {
+                        let n = e.channel;
+                        if (!n?.isVocal?.()) return !1;
+                        let s = n.getGuildId?.() ?? null;
+                        return !(null == s || !l.has(s) || i.has(n.id) || t.has(n.id));
+                    })
+                    .map((e) => {
+                        var t;
+                        return {
+                            channelId: e.channel.id,
+                            voiceUserCount: e.voiceStates?.length ?? 0,
+                            shuffle: ((t = e.channel.id), G(`${q}:${t}`)),
+                        };
+                    }),
+                r = s.filter((e) => e.voiceUserCount > 0),
+                a = s.filter((e) => 0 === e.voiceUserCount);
+            for (let t of (r.sort((e, t) =>
                 e.voiceUserCount !== t.voiceUserCount ? t.voiceUserCount - e.voiceUserCount : e.shuffle - t.shuffle,
             ),
-            u.sort((e, t) => e.shuffle - t.shuffle),
-            [...o, ...u])) {
-                if (n.length >= 8) break;
-                r(e.channelId);
+            a.sort((e, t) => e.shuffle - t.shuffle),
+            [...r, ...a])) {
+                if (e.length >= 8) break;
+                n(t.channelId);
             }
-            return n;
-        }, [R, L, Z, $, ee, et, J, q]),
-        el = r.useMemo(() => {
+            return e;
+        }, [w, F, Q, J, ee, et, q, Z]),
+        el = i.useMemo(() => {
             let e = [];
             return (
-                "" !== c
+                "" !== d
                     ? e.push({
                           kind: "SEARCH_RESULTS",
                           key: "SEARCH_RESULTS",
-                          title: x.intl.string(C.default.DUIbKP),
-                          rows: k.map((e) => ({
-                              channelId: e.channel.id,
-                              voiceStates: e.voiceStates,
-                          })),
-                          length: k.length,
+                          title: D.intl.string(M.default.DUIbKP),
+                          rows: P.map((e) => ({ channelId: e.channel.id, voiceStates: e.voiceStates })),
+                          length: P.length,
                       })
                     : (Y.length > 0 &&
-                          W > 0 &&
+                          z > 0 &&
                           e.push({
                               kind: "FAVORITES",
                               key: "FAVORITES",
-                              title: x.intl.string(C.default.OskevP),
-                              rows: z.map((e) => ({
-                                  channelId: e,
-                                  voiceStates: U.get(e),
-                              })),
-                              length: z.length,
+                              title: D.intl.string(M.default.OskevP),
+                              rows: W.map((e) => ({ channelId: e, voiceStates: L.get(e) })),
+                              length: W.length,
                           }),
                       ee.length > 0 &&
                           e.push({
                               kind: "FRIENDS_IN_VOICE",
                               key: "FRIENDS_IN_VOICE",
-                              title: x.intl.string(C.default["C+ojiQ"]),
-                              rows: ee.map((e) => ({
-                                  channelId: e,
-                                  voiceStates: U.get(e),
-                              })),
+                              title: D.intl.string(M.default["C+ojiQ"]),
+                              rows: ee.map((e) => ({ channelId: e, voiceStates: L.get(e) })),
                               length: ee.length,
                           }),
                       en.length > 0 &&
                           e.push({
                               kind: "SUGGESTED_VOICE_CHANNELS",
                               key: "SUGGESTED_VOICE_CHANNELS",
-                              title: x.intl.string(C.default["9ME4wE"]),
-                              rows: en.map((e) => ({
-                                  channelId: e,
-                                  voiceStates: U.get(e),
-                              })),
+                              title: D.intl.string(M.default["9ME4wE"]),
+                              rows: en.map((e) => ({ channelId: e, voiceStates: L.get(e) })),
                               length: en.length,
                           })),
                 e
             );
-        }, [c, z, Y.length, W, ee, k, en, U]),
-        er = r.useMemo(() => el.map((e) => e.length), [el]),
-        ei = (0, O.Dk)(() => {
+        }, [d, W, Y.length, z, ee, P, en, L]),
+        ei = i.useMemo(() => el.map((e) => e.length), [el]),
+        es = (0, _.Dk)(() => {
             let e = new Set();
             for (let t of el) for (let n of t.rows) e.add(n.channelId);
             return e;
         }, [el]),
-        { shownUserIds: es, liveUserIds: ea } = (0, a.cf)([p.A, f.A], () => {
+        { shownUserIds: er, liveUserIds: ea } = (0, a.cf)([E.A, I.A], () => {
             let e = new Map();
-            for (let t of R) e.set(t.channel.id, t.voiceStates);
+            for (let t of w) e.set(t.channel.id, t.voiceStates);
             let t = new Set(),
                 n = new Set();
-            for (let s of ei) {
-                var l, r, i;
-                let a = p.A.getChannel(s),
-                    o =
-                        null !=
-                        (l =
-                            null != (r = null == a || null == (i = a.getGuildId) ? void 0 : i.call(a))
-                                ? r
-                                : null == a
-                                  ? void 0
-                                  : a.guild_id)
-                            ? l
-                            : null;
-                for (let l of (function (e, t) {
+            for (let l of es) {
+                let i = E.A.getChannel(l),
+                    s = i?.getGuildId?.() ?? i?.guild_id ?? null;
+                for (let i of (function (e, t) {
                     let n = Array.from(
-                        new Set((null != t ? t : Object.values(A.A.getVoiceStatesForChannel(e))).map((e) => e.userId)),
+                        new Set((t ?? Object.values(S.A.getVoiceStatesForChannel(e))).map((e) => e.userId)),
                     );
                     return (
                         n.sort((e, t) => {
-                            var n, l, r, i;
-                            let s = m.A.isFriend(e),
-                                a = m.A.isFriend(t);
-                            return s && !a
+                            let n = f.A.isFriend(e),
+                                l = f.A.isFriend(t);
+                            return n && !l
                                 ? -1
-                                : !s && a
+                                : !n && l
                                   ? 1
-                                  : (null != (n = null == (r = h.A.getUserAffinity(t)) ? void 0 : r.vcProbability)
-                                        ? n
-                                        : 0) -
-                                    (null != (l = null == (i = h.A.getUserAffinity(e)) ? void 0 : i.vcProbability)
-                                        ? l
-                                        : 0);
+                                  : (h.A.getUserAffinity(t)?.vcProbability ?? 0) -
+                                    (h.A.getUserAffinity(e)?.vcProbability ?? 0);
                         }),
                         n.slice(0, 4)
                     );
-                })(s, e.get(s)))
-                    t.add(l), null != o && null != f.A.getStreamForUser(l, o) && n.add(l);
+                })(l, e.get(l)))
+                    t.add(i), null != s && null != I.A.getStreamForUser(i, s) && n.add(i);
             }
-            return {
-                shownUserIds: t,
-                liveUserIds: n,
-            };
-        }, [ei, R]),
-        eo = (0, O.Dk)(() => es, [es]),
-        eu = (0, O.Dk)(() => ea, [ea]);
-    r.useEffect(() => {
-        (0 !== eo.size || 0 !== eu.size) &&
-            j({
-                shownUserIds: M(eo),
-                liveUserIds: M(eu),
-            });
-    }, [eo, eu]);
-    let ec = r.useCallback((e) => el[e], [el]),
-        ed = r.useCallback(
+            return { shownUserIds: t, liveUserIds: n };
+        }, [es, w]),
+        eu = (0, _.Dk)(() => er, [er]),
+        eo = (0, _.Dk)(() => ea, [ea]);
+    i.useEffect(() => {
+        (0 !== eu.size || 0 !== eo.size) && O({ shownUserIds: U(eu), liveUserIds: U(eo) });
+    }, [eu, eo]);
+    let ed = i.useCallback((e) => el[e], [el]),
+        ec = i.useCallback(
             (e) => {
                 let { section: t } = e,
-                    n = ec(t);
+                    n = ed(t);
                 return null == n
                     ? null
                     : (0, l.jsxs)(l.Fragment, {
-                          children: [
-                              (0, l.jsx)(o.AC4, {
-                                  children: n.title,
-                              }),
-                              (0, l.jsx)(P, {
-                                  title: n.title,
-                              }),
-                          ],
+                          children: [(0, l.jsx)(u.AC4, { children: n.title }), (0, l.jsx)(b, { title: n.title })],
                       });
             },
-            [ec],
+            [ed],
         ),
-        eh = r.useCallback(
+        eh = i.useCallback(
             (n) => {
-                let r = ec(n.section);
-                if (null == r) return null;
-                let i = r.rows[n.row];
+                let i = ed(n.section);
                 if (null == i) return null;
-                let s = "".concat(r.key, ":").concat(i.channelId),
-                    a = S.has(i.channelId);
+                let s = i.rows[n.row];
+                if (null == s) return null;
+                let r = `${i.key}:${s.channelId}`,
+                    a = N.has(s.channelId);
                 return (0, l.jsx)(
-                    N.C,
+                    C.C,
                     {
-                        channelId: i.channelId,
-                        listItemId: s,
-                        voiceStates: i.voiceStates,
+                        channelId: s.channelId,
+                        listItemId: r,
+                        voiceStates: s.voiceStates,
                         isExpanded: a,
-                        onToggleExpanded: G,
-                        shouldHighlightIfRecentlyAdded: "FAVORITES" === r.kind,
+                        onToggleExpanded: k,
+                        shouldHighlightIfRecentlyAdded: "FAVORITES" === i.kind,
                         onPrimaryAction: e,
                         onContextMenu: t,
                     },
-                    s,
+                    r,
                 );
             },
-            [S, ec, t, e, G],
+            [N, ed, t, e, k],
         ),
-        eg = r.useCallback(() => 40, []),
-        ef = r.useCallback(
+        eg = i.useCallback(() => 40, []),
+        eI = i.useCallback(
             (e, t) => {
-                let n = ec(e),
-                    l = null == n ? void 0 : n.rows[t];
-                if (null == l || !S.has(l.channelId)) return 50;
-                let r = p.A.getChannel(l.channelId),
-                    i = Math.min((null != r ? y.Ay.getVoiceStatesForChannel(r) : []).length, 25);
-                return i <= 0 ? 50 : 50 + (32 * i + (i - 1) * 2 + 8);
+                let n = ed(e),
+                    l = n?.rows[t];
+                if (null == l || !N.has(l.channelId)) return 50;
+                let i = E.A.getChannel(l.channelId),
+                    s = Math.min((null != i ? p.Ay.getVoiceStatesForChannel(i) : []).length, 25);
+                return s <= 0 ? 50 : 50 + (32 * s + (s - 1) * 2 + 8);
             },
-            [S, ec],
+            [N, ed],
         ),
-        ep = r.useCallback((e) => {
-            var t;
-            i(e), null == (t = V.current) || t.scrollToTop();
+        eE = i.useCallback((e) => {
+            s(e), V.current?.scrollToTop();
         }, []);
     return (0, l.jsxs)("div", {
-        className: D.kL,
+        className: R.kL,
         children: [
             (0, l.jsx)("div", {
-                className: D.MT,
-                children: (0, l.jsx)(o.IWV, {
+                className: R.MT,
+                children: (0, l.jsx)(u.IWV, {
                     query: n,
-                    onChange: ep,
-                    onClear: () => i(""),
-                    placeholder: x.intl.string(C.default.OV3KfO),
+                    onChange: eE,
+                    onClear: () => s(""),
+                    placeholder: D.intl.string(M.default.OV3KfO),
                     size: "md",
                 }),
             }),
-            (0, l.jsx)(s.hD, {
+            (0, l.jsx)(r.hD, {
                 navigator: H,
-                children: (0, l.jsx)(s.PR, {
+                children: (0, l.jsx)(r.PR, {
                     children: (e) => {
-                        let { ref: t, role: n } = e,
-                            r = (function (e, t) {
-                                if (null == e) return {};
-                                var n,
-                                    l,
-                                    r,
-                                    i = {};
-                                if ("u" > typeof Reflect && Reflect.ownKeys) {
-                                    for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                                        (l = n[r]),
-                                            !(t.indexOf(l) >= 0) &&
-                                                Object.prototype.propertyIsEnumerable.call(e, l) &&
-                                                (i[l] = e[l]);
-                                    return i;
-                                }
-                                if (
-                                    ((i = (function (e, t) {
-                                        if (null == e) return {};
-                                        var n,
-                                            l,
-                                            r = {},
-                                            i = Object.getOwnPropertyNames(e);
-                                        for (l = 0; l < i.length; l++)
-                                            (n = i[l]),
-                                                !(t.indexOf(n) >= 0) &&
-                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                    (r[n] = e[n]);
-                                        return r;
-                                    })(e, t)),
-                                    Object.getOwnPropertySymbols)
-                                )
-                                    for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                                        (l = n[r]),
-                                            !(t.indexOf(l) >= 0) &&
-                                                Object.prototype.propertyIsEnumerable.call(e, l) &&
-                                                (i[l] = e[l]);
-                                return i;
-                            })(e, ["ref", "role"]);
-                        return (0, l.jsx)(o.skg, {
+                        let { ref: t, role: n, ...i } = e;
+                        return (0, l.jsx)(u.skg, {
                             children: (e) =>
-                                (0, l.jsx)(
-                                    o.B8B,
-                                    (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                l = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (l = l.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                l.forEach(function (t) {
-                                                    var l;
-                                                    (l = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: l,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = l);
-                                                });
-                                        }
-                                        return e;
-                                    })(
-                                        {
-                                            innerRole: n,
-                                            innerAriaLabel: x.intl.string(x.t.OGiMXJ),
-                                            ref: (e) => {
-                                                var n;
-                                                (V.current = e),
-                                                    (t.current =
-                                                        null != (n = null == e ? void 0 : e.getScrollerNode())
-                                                            ? n
-                                                            : null);
-                                            },
-                                            className: D.p_,
-                                            sectionHeight: eg,
-                                            rowHeight: ef,
-                                            sidebarHeight: 0,
-                                            renderSection: ed,
-                                            renderRow: eh,
-                                            sections: er,
-                                            paddingBottom: 8,
-                                        },
-                                        r,
-                                        e,
-                                    ),
-                                ),
+                                (0, l.jsx)(u.B8B, {
+                                    innerRole: n,
+                                    innerAriaLabel: D.intl.string(D.t.OGiMXJ),
+                                    ref: (e) => {
+                                        (V.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                    },
+                                    className: R.p_,
+                                    sectionHeight: eg,
+                                    rowHeight: eI,
+                                    sidebarHeight: 0,
+                                    renderSection: ec,
+                                    renderRow: eh,
+                                    sections: ei,
+                                    paddingBottom: 8,
+                                    ...i,
+                                    ...e,
+                                }),
                         });
                     },
                 }),

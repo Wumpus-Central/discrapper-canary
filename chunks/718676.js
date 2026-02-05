@@ -1,15 +1,7 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
-n(64700);
-var l = n(397927),
-    i = n(644230);
-let o = () =>
-    (0, r.jsx)("div", {
-        className: i._,
-        children: (0, r.jsx)(l.nvX, {
-            dotRadius: 4,
-            themed: !0,
-        }),
-    });
+"use strict";
+s.d(t, { A: () => a });
+var n = s(627968);
+s(64700);
+var i = s(397927),
+    r = s(644230);
+let a = () => (0, n.jsx)("div", { className: r._, children: (0, n.jsx)(i.nvX, { dotRadius: 4, themed: !0 }) });

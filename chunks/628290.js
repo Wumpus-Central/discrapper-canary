@@ -1,3 +1,4 @@
+"use strict";
 var n = r(954055),
     i = r(595042),
     o = r(869639),
@@ -48,11 +49,7 @@ t.exports = function (t, e) {
             return;
         }
         var B = y.getSelection(),
-            L = B.merge({
-                anchorOffset: k,
-                focusOffset: x,
-                isBackward: !1,
-            }),
+            L = B.merge({ anchorOffset: k, focusOffset: x, isBackward: !1 }),
             R = E.getEntityAt(k),
             N = s(R) ? C.getEntity(R) : null,
             F = "MUTABLE" === (null != N ? N.getMutability() : null),
@@ -64,10 +61,7 @@ t.exports = function (t, e) {
         }
         var j = z.merge({
             selectionBefore: C.getSelectionAfter(),
-            selectionAfter: B.merge({
-                anchorOffset: K,
-                focusOffset: T,
-            }),
+            selectionAfter: B.merge({ anchorOffset: K, focusOffset: T }),
         });
         t.update(o.push(y, j, F ? "spellcheck-change" : "apply-entity"));
     }

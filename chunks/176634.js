@@ -1,19 +1,15 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(64700),
-    i = n(621466),
-    o = n(654108);
-
-function a(e) {
+n.d(t, { A: () => o });
+var i = n(64700),
+    r = n(621466),
+    a = n(654108);
+function o(e) {
     let { onPasteFiles: t, onPasteBackgroundText: n } = e;
-    r.useEffect(() => {
+    i.useEffect(() => {
         let e = (e) => {
-            var r, a;
-            let l = null == (r = e.clipboardData) ? void 0 : r.files;
-            if (null != l && l.length > 0) null != t && (e.preventDefault(), e.stopPropagation(), t(l));
-            else if (null != n && !(0, o.A)((0, i.BF)(e))) {
-                let t = null == (a = e.clipboardData) ? void 0 : a.getData("text");
+            let i = e.clipboardData?.files;
+            if (null != i && i.length > 0) null != t && (e.preventDefault(), e.stopPropagation(), t(i));
+            else if (null != n && !(0, a.A)((0, r.BF)(e))) {
+                let t = e.clipboardData?.getData("text");
                 null != t && (e.preventDefault(), e.stopPropagation(), n(t));
             }
         };

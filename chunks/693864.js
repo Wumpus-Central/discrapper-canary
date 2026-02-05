@@ -1,13 +1,9 @@
-n.d(e, {
-    default: () => r,
-}),
-    n(896048);
+n.d(e, { default: () => r });
 var i = n(627968),
     s = n(64700),
     a = n(158954),
     l = n(397927),
     c = n(985018);
-
 function r(t) {
     let { transitionState: e, onConfirm: n, onClose: r, onDismiss: d } = t,
         [o, u] = s.useState(!1),

@@ -1,5 +1,4 @@
 var o = r(781094);
-
 function n(t) {
     (this.mode = o.MODE_8BIT_BYTE), (this.data = t);
 }

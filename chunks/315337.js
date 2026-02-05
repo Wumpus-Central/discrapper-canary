@@ -1,139 +1,96 @@
-n.d(t, {
-    default: () => w,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    i = n(284009),
-    o = n.n(i),
-    s = n(110259),
-    a = n(158954),
-    c = n(311907),
-    d = n(565787),
-    u = n(397927),
-    f = n(157559),
-    p = n(801264),
-    b = n(521361),
-    g = n(108713),
-    h = n(643501),
-    y = n(985018),
-    v = n(551385),
-    C = n(94939);
-let O = (0, d.k)(b.A);
-
-function j(e) {
-    let { devices: t, selectedDeviceId: n, onSelectDeviceId: l } = e,
-        i = t.map((e) => {
-            let { id: t, name: n } = e;
-            return {
-                value: t,
-                name: n,
-                leadingIcon: O,
-            };
+i.d(t, { default: () => N });
+var l = i(627968),
+    n = i(64700),
+    s = i(284009),
+    a = i.n(s),
+    d = i(110259),
+    r = i(158954),
+    c = i(311907),
+    o = i(565787),
+    u = i(397927),
+    C = i(157559),
+    f = i(801264),
+    h = i(521361),
+    g = i(108713),
+    v = i(643501),
+    m = i(985018),
+    p = i(551385),
+    x = i(94939);
+let j = (0, o.k)(h.A);
+function b(e) {
+    let { devices: t, selectedDeviceId: i, onSelectDeviceId: n } = e,
+        s = t.map((e) => {
+            let { id: t, name: i } = e;
+            return { value: t, name: i, leadingIcon: j };
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsx)(u.z6M, {
-                value: n,
-                options: i,
-                onChange: (e) => l(e),
-            }),
-            (0, r.jsx)(p.A, {
-                children: y.intl.string(y.t.dI4HFq),
-            }),
+            (0, l.jsx)(u.z6M, { value: i, options: s, onChange: (e) => n(e) }),
+            (0, l.jsx)(f.A, { children: m.intl.string(m.t.dI4HFq) }),
         ],
     });
 }
-
-function m() {
-    return (0, r.jsx)("div", {
-        className: v.jK,
-        children: (0, r.jsx)("img", {
-            src: C,
-            width: "189",
-            height: "177",
-            alt: "",
-        }),
+function S() {
+    return (0, l.jsx)("div", {
+        className: p.jK,
+        children: (0, l.jsx)("img", { src: x, width: "189", height: "177", alt: "" }),
     });
 }
-
-function w(e) {
+function N(e) {
     let t,
-        n,
         i,
-        d,
-        { channel: p, platform: b, transitionState: C, onClose: O } = e,
-        w = (0, c.bG)([h.default], () => h.default.getDevicesForPlatform(b), [b]),
-        x = (0, c.bG)([h.default], () => h.default.getLastSelectedDeviceByPlatform(b)),
-        P = l.useMemo(() => Object.values(w), [w]),
-        S = (0, c.bG)([h.default], () => h.default.getFetchingDevices(b)),
-        D = (0, c.bG)([h.default], () => {
-            var e;
-            return null == (e = h.default.getAwaitingRemoteSessionInfo()) ? void 0 : e.deviceId;
-        }),
-        [I, E] = l.useState(!1),
-        [N, R] = l.useState(() => {
-            var e, t;
-            return null != (e = null == (t = w[null != D ? D : ""]) ? void 0 : t.id) ? e : null;
-        });
-    l.useEffect(() => {
-        g.Uc(b);
-    }, [b]),
-        l.useEffect(() => {
-            1 === P.length ? R(P[0].id) : null != x && R(x);
-        }, [P, x]);
-    let k = async () => {
-        let e = w[null != N ? N : ""];
-        o()(null != e, "Cannot transfer without selected device");
+        s,
+        o,
+        { channel: f, platform: h, transitionState: x, onClose: j } = e,
+        N = (0, c.bG)([v.default], () => v.default.getDevicesForPlatform(h), [h]),
+        w = (0, c.bG)([v.default], () => v.default.getLastSelectedDeviceByPlatform(h)),
+        y = n.useMemo(() => Object.values(N), [N]),
+        I = (0, c.bG)([v.default], () => v.default.getFetchingDevices(h)),
+        _ = (0, c.bG)([v.default], () => v.default.getAwaitingRemoteSessionInfo()?.deviceId),
+        [k, A] = n.useState(!1),
+        [D, R] = n.useState(() => N[_ ?? ""]?.id ?? null);
+    n.useEffect(() => {
+        g.Uc(h);
+    }, [h]),
+        n.useEffect(() => {
+            1 === y.length ? R(y[0].id) : null != w && R(w);
+        }, [y, w]);
+    let M = async () => {
+        let e = N[D ?? ""];
+        a()(null != e, "Cannot transfer without selected device");
         try {
-            E(!0), await g.VP(b, e.id, p), O();
+            A(!0), await g.VP(h, e.id, f), j();
         } catch (t) {
-            E(!1),
-                f.A.show({
-                    title: y.intl.string(y.t.QL1y93),
-                    body: y.intl.formatToPlainString(y.t["6ZyNH/"], {
-                        deviceName: e.name,
-                    }),
+            A(!1),
+                C.A.show({
+                    title: m.intl.string(m.t.QL1y93),
+                    body: m.intl.formatToPlainString(m.t["6ZyNH/"], { deviceName: e.name }),
                 });
         }
     };
     return (
-        S
-            ? ((n = y.intl.string(y.t["+d9SH8"])),
-              (t = (0, r.jsx)("div", {
-                  className: v.dc,
-                  children: (0, r.jsx)(u.y$y, {}),
-              })))
-            : 0 === P.length
-              ? ((n = y.intl.string(y.t.OkJf1e)), (i = y.intl.string(y.t["of/l5Z"])), (t = (0, r.jsx)(m, {})))
-              : ((n = y.intl.string(y.t["+d9SH8"])),
-                (i = y.intl.string(y.t["5DtaWg"])),
-                (d = [
-                    {
-                        text: y.intl.string(y.t.FJR4bD),
-                        onClick: k,
-                        loading: I || null != D,
-                        disabled: null == N,
-                    },
-                ]),
-                (t = (0, r.jsx)(j, {
-                    devices: P,
-                    selectedDeviceId: N,
+        I
+            ? ((i = m.intl.string(m.t["+d9SH8"])),
+              (t = (0, l.jsx)("div", { className: p.dc, children: (0, l.jsx)(u.y$y, {}) })))
+            : 0 === y.length
+              ? ((i = m.intl.string(m.t.OkJf1e)), (s = m.intl.string(m.t["of/l5Z"])), (t = (0, l.jsx)(S, {})))
+              : ((i = m.intl.string(m.t["+d9SH8"])),
+                (s = m.intl.string(m.t["5DtaWg"])),
+                (o = [{ text: m.intl.string(m.t.FJR4bD), onClick: M, loading: k || null != _, disabled: null == D }]),
+                (t = (0, l.jsx)(b, {
+                    devices: y,
+                    selectedDeviceId: D,
                     onSelectDeviceId: (e) => {
-                        R(e), (0, g.Jm)(b, e);
+                        R(e), (0, g.Jm)(h, e);
                     },
                 }))),
-        (0, r.jsx)(a.Modal, {
-            title: n,
-            subtitle: i,
-            actions: d,
-            transitionState: C,
-            trackingProps: {
-                impression: {
-                    impressionName: s.ImpressionNames.GAME_CONSOLE_DEVICE_LIST,
-                },
-            },
-            onClose: O,
+        (0, l.jsx)(r.Modal, {
+            title: i,
+            subtitle: s,
+            actions: o,
+            transitionState: x,
+            trackingProps: { impression: { impressionName: d.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
+            onClose: j,
             children: t,
         })
     );

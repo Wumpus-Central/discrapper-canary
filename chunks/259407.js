@@ -1,72 +1,12 @@
-t.d(l, {
-    Ay: () => f,
-    mt: () => g,
-}),
-    t(896048);
+t.d(l, { Ay: () => p, mt: () => m });
 var r,
-    n = t(627968),
-    i = t(64700),
-    s = t(998218),
+    s = t(627968),
+    n = t(64700),
+    i = t(998218),
     a = t(802571);
-
-function o(e) {
-    for (var l = 1; l < arguments.length; l++) {
-        var t = null != arguments[l] ? arguments[l] : {},
-            r = Object.keys(t);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                }),
-            )),
-            r.forEach(function (l) {
-                var r;
-                (r = t[l]),
-                    l in e
-                        ? Object.defineProperty(e, l, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[l] = r);
-            });
-    }
-    return e;
-}
-
-function u(e, l) {
-    if (null == e) return {};
-    var t,
-        r,
-        n,
-        i = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (n = 0, t = Reflect.ownKeys(e); n < t.length; n++)
-            (r = t[n]), !(l.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-        return i;
-    }
-    if (
-        ((i = (function (e, l) {
-            if (null == e) return {};
-            var t,
-                r,
-                n = {},
-                i = Object.getOwnPropertyNames(e);
-            for (r = 0; r < i.length; r++)
-                (t = i[r]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
-            return n;
-        })(e, l)),
-        Object.getOwnPropertySymbols)
-    )
-        for (n = 0, t = Object.getOwnPropertySymbols(e); n < t.length; n++)
-            (r = t[n]), !(l.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-    return i;
-}
-let d = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-
-function c(e, l) {
-    let t = s.A.toURLSafe(null != e ? e : "");
+let o = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
+function d(e, l) {
+    let t = i.A.toURLSafe(e ?? "");
     if (null === t) return "";
     if (null == l) return t.toString();
     for (let e in l) {
@@ -75,106 +15,50 @@ function c(e, l) {
     }
     return t.toString();
 }
-
-function h(e) {
-    let { src: l, autoMute: t } = e,
-        r = u(e, ["src", "autoMute"]),
-        s = i.useRef(null),
-        a = i.useCallback(
+function u(e) {
+    let { src: l, autoMute: t, ...r } = e,
+        i = n.useRef(null),
+        a = n.useCallback(
             (e) => {
-                if (
-                    e.data["x-tiktok-player"] &&
+                e.data["x-tiktok-player"] &&
                     "https://www.tiktok.com" === e.origin &&
-                    "onPlayerReady" === e.data.type
-                ) {
-                    var l, r, n, i;
-                    t &&
-                        (null == (i = s.current) ||
-                            null == (n = i.contentWindow) ||
-                            n.postMessage(
-                                {
-                                    type: "mute",
-                                    "x-tiktok-player": !0,
-                                },
-                                e.origin,
-                            )),
-                        null == (r = s.current) ||
-                            null == (l = r.contentWindow) ||
-                            l.postMessage(
-                                {
-                                    type: "play",
-                                    "x-tiktok-player": !0,
-                                },
-                                e.origin,
-                            );
-                }
+                    "onPlayerReady" === e.data.type &&
+                    (t && i.current?.contentWindow?.postMessage({ type: "mute", "x-tiktok-player": !0 }, e.origin),
+                    i.current?.contentWindow?.postMessage({ type: "play", "x-tiktok-player": !0 }, e.origin));
             },
             [t],
         );
-    i.useEffect(() => (window.addEventListener("message", a), () => window.removeEventListener("message", a)), [a]);
-    let d = c(l, {
-        utm_source: "discord.gg",
+    n.useEffect(() => (window.addEventListener("message", a), () => window.removeEventListener("message", a)), [a]);
+    let o = d(l, { utm_source: "discord.gg" });
+    return (0, s.jsx)(c, { src: o, ref: i, ...r });
+}
+function h(e) {
+    let { src: l, autoMute: t, ...r } = e,
+        n = d(l, { autoplay: "1", auto_play: "1", mute: t ? "1" : void 0 });
+    return (0, s.jsx)(c, { src: n, ...r });
+}
+let c = n.forwardRef(function (e, l) {
+    let { allowFullScreen: t, ...r } = e,
+        n = t ? `${o} allow-fullscreen` : o;
+    return (0, s.jsx)("iframe", {
+        ref: l,
+        className: a.Qu,
+        allow: t ? "autoplay; fullscreen" : "autoplay",
+        frameBorder: 0,
+        scrolling: "no",
+        sandbox: n,
+        allowFullScreen: t,
+        ...r,
     });
-    return (0, n.jsx)(
-        m,
-        o(
-            {
-                src: d,
-                ref: s,
-            },
-            r,
-        ),
-    );
-}
-
-function p(e) {
-    let { src: l, autoMute: t } = e,
-        r = u(e, ["src", "autoMute"]),
-        i = c(l, {
-            autoplay: "1",
-            auto_play: "1",
-            mute: t ? "1" : void 0,
-        });
-    return (0, n.jsx)(
-        m,
-        o(
-            {
-                src: i,
-            },
-            r,
-        ),
-    );
-}
-let m = i.forwardRef(function (e, l) {
-    let [t, ...r] = [e, l],
-        { allowFullScreen: i } = t,
-        s = u(t, ["allowFullScreen"]),
-        [c] = r;
-    return (0, n.jsx)(
-        "iframe",
-        o(
-            {
-                ref: c,
-                className: a.Qu,
-                allow: i ? "autoplay; fullscreen" : "autoplay",
-                frameBorder: 0,
-                scrolling: "no",
-                sandbox: i ? "".concat(d, " allow-fullscreen") : d,
-                allowFullScreen: i,
-            },
-            s,
-        ),
-    );
 });
-var g = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
-
-function f(e) {
+var m = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
+function p(e) {
     switch (e.provider) {
         case "YouTube":
-            return (0, n.jsx)(p, o({}, e));
+            return (0, s.jsx)(h, { ...e });
         case "TikTok":
-            return (0, n.jsx)(h, o({}, e));
+            return (0, s.jsx)(u, { ...e });
         default:
-            return (0, n.jsx)(m, o({}, e));
+            return (0, s.jsx)(c, { ...e });
     }
 }

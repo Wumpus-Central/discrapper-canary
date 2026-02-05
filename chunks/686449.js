@@ -1,23 +1,13 @@
-e.d(t, {
-    A: () => a,
-});
-var i = e(73153),
-    l = e(931260),
-    r = e(543465);
-let a = {
-    update(n) {
-        i.h.dispatch({
-            type: "CHANNEL_COLLAPSE",
-            channelId: n,
-        });
+i.d(t, { A: () => r });
+var n = i(73153),
+    l = i(931260),
+    s = i(543465);
+let r = {
+    update(e) {
+        n.h.dispatch({ type: "CHANNEL_COLLAPSE", channelId: e });
     },
-    toggleCollapseGuild(n) {
-        l.A.saveUserGuildSettings(n, {
-            hide_muted_channels: !r.Ay.isGuildCollapsed(n),
-        }),
-            i.h.dispatch({
-                type: "GUILD_TOGGLE_COLLAPSE_MUTED",
-                guildId: n,
-            });
+    toggleCollapseGuild(e) {
+        l.A.saveUserGuildSettings(e, { hide_muted_channels: !s.Ay.isGuildCollapsed(e) }),
+            n.h.dispatch({ type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: e });
     },
 };

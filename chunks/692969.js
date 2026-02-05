@@ -1,90 +1,23 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(64700),
     i = n(858177),
     a = n(227309),
     s = n(847521),
     o = n(60465),
     l = n(611656);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
 function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function p(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
-        c = (0, i.O)(n),
-        d = r.useMemo(() => (null == c ? n : (0, s.bB)(c) ? a.a7 : n), [c, n]),
-        p = (0, l.Ay)(
-            f(u({}, e), {
-                applicationId: d,
-            }),
-        );
-    return p.shouldOpenGameProfile && null != d
+        u = (0, i.O)(n),
+        c = r.useMemo(() => (null == u ? n : (0, s.bB)(u) ? a.a7 : n), [u, n]),
+        d = (0, l.Ay)({ ...e, applicationId: c });
+    return d.shouldOpenGameProfile && null != c
         ? (n) => {
               n.stopPropagation(),
                   n.preventDefault(),
-                  o.A.openGameProfileModal(
-                      f(u({}, e), {
-                          applicationId: d,
-                          gameProfileModalChecks: p,
-                      }),
-                  ),
-                  null == t || t();
+                  o.A.openGameProfileModal({ ...e, applicationId: c, gameProfileModalChecks: d }),
+                  t?.();
           }
         : void 0;
 }

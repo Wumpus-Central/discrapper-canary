@@ -1,7 +1,3 @@
-n.d(t, {
-    p: () => r,
-});
-let r = {
-    authorIds: [],
-    message: "",
-};
+"use strict";
+n.d(t, { p: () => i });
+let i = { authorIds: [], message: "" };

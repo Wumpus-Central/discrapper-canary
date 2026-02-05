@@ -1,58 +1,45 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(775602),
-    l = n(201805),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
+    r = n(311907),
+    a = n(397927),
+    l = n(775602),
+    o = n(201805),
     c = n(461797),
-    u = n(985018),
-    d = n(428208);
-
-function f(e) {
+    d = n(985018),
+    u = n(428208);
+function _(e) {
     let { preset: t, onShuffle: n } = e,
-        f = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-        p = (0, l.Xf)({
-            useReducedMotion: f,
-        }),
-        { name: _, header: h } = i.useMemo(() => {
+        _ = (0, r.bG)([l.A], () => l.A.useReducedMotion),
+        m = (0, o.Xf)({ useReducedMotion: _ }),
+        { name: A, header: g } = s.useMemo(() => {
             let e = (0, c.Wt)(t);
-            return {
-                name: e.getName(),
-                header: e.getHeaderSrc(),
-            };
+            return { name: e.getName(), header: e.getHeaderSrc() };
         }, [t]);
-    return (0, r.jsxs)("div", {
-        className: d.kL,
+    return (0, i.jsxs)("div", {
+        className: u.kL,
         children: [
-            (0, r.jsx)(s.DUT, {
+            (0, i.jsx)(a.DUT, {
                 onClick: () => {
-                    n(), p.startAnimation(!1);
+                    n(), m.startAnimation(!1);
                 },
-                className: d.x6,
-                "aria-label": u.intl.string(u.t["44yJxh"]),
-                children: p.render(),
+                className: u.x6,
+                "aria-label": d.intl.string(d.t["44yJxh"]),
+                children: m.render(),
             }),
-            (0, r.jsxs)(s.DUT, {
+            (0, i.jsxs)(a.DUT, {
                 onClick: () => {
-                    n(), p.startAnimation(!1);
+                    n(), m.startAnimation(!1);
                 },
-                "aria-label": "".concat(_, ": ").concat(u.intl.string(u.t["44yJxh"])),
-                className: d.Lt,
+                "aria-label": `${A}: ${d.intl.string(d.t["44yJxh"])}`,
+                className: u.Lt,
                 children: [
-                    (0, r.jsx)("img", {
-                        alt: "",
-                        "aria-hidden": !0,
-                        src: h,
-                        className: d.L_,
-                    }),
-                    (0, r.jsx)(s.Text, {
-                        className: d._e,
+                    (0, i.jsx)("img", { alt: "", "aria-hidden": !0, src: g, className: u.L_ }),
+                    (0, i.jsx)(a.Text, {
+                        className: u._e,
                         variant: "text-sm/bold",
                         color: "always-white",
-                        children: _,
+                        children: A,
                     }),
                 ],
             }),

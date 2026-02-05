@@ -1,117 +1,70 @@
-n.d(t, {
-    A: () => E,
-});
-var r = n(627968),
+n.d(t, { A: () => b });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(397927),
-    s = n(442433),
+    r = n(442433),
     o = n(688810),
-    c = n(272613),
-    u = n(398884),
-    d = n(772366),
-    f = n(728321),
-    p = n(260509),
-    h = n(71393),
-    b = n(287809),
-    g = n(531053),
-    m = n(606256),
-    A = n(652215),
-    y = n(819638),
-    O = n(985018),
-    j = n(283237);
-let v = {
-    origin: {
-        x: -16,
-        y: 0,
-    },
-    targetWidth: 48,
-    targetHeight: 48,
-    offset: {
-        x: 0,
-        y: 0,
-    },
-};
-
-function x(e) {
-    (0, s.L3)(e, async () => {
+    d = n(272613),
+    c = n(398884),
+    u = n(772366),
+    h = n(728321),
+    A = n(260509),
+    g = n(71393),
+    m = n(287809),
+    p = n(531053),
+    _ = n(606256),
+    x = n(652215),
+    f = n(819638),
+    E = n(985018),
+    C = n(283237);
+let I = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
+function S(e) {
+    (0, r.L3)(e, async () => {
         let { default: e } = await n.e("17288").then(n.bind(n, 4571));
-        return (t) =>
-            (0, r.jsx)(
-                e,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, t),
-            );
+        return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-
-function E(e) {
+function b(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        s = (0, i.yK)([h.A], () => h.A.getGuildsArray()),
-        E = (0, i.bG)([b.default], () => b.default.getCurrentUser()),
-        _ = l.useMemo(() => s.some((e) => (0, p.bM)(e, E)), [s, E]),
-        C = (0, a.red)((e) => (0, a.fDT)(e, y.fc)),
-        { analyticsLocations: S } = (0, o.Ay)(),
-        I = (0, r.jsx)(m.A, {
+        r = (0, s.yK)([g.A], () => g.A.getGuildsArray()),
+        b = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
+        N = l.useMemo(() => r.some((e) => (0, A.bM)(e, b)), [r, b]),
+        T = (0, a.red)((e) => (0, a.fDT)(e, f.fc)),
+        { analyticsLocations: j } = (0, o.Ay)(),
+        v = (0, i.jsx)(_.A, {
             showPill: !1,
             id: "create-join-button",
             onClick: () => {
-                (0, u.Sn)()
-                    ? (0, d.A)({
-                          analyticsSource: {
-                              page: A.ThZ.CREATE_JOIN_GUILD_MODAL,
-                          },
+                (0, c.Sn)()
+                    ? (0, u.A)({
+                          analyticsSource: { page: x.ThZ.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: A.ThZ.CREATE_JOIN_GUILD_MODAL,
-                              section: A.JJy.GUILD_CAP_UPSELL_MODAL,
+                              page: x.ThZ.CREATE_JOIN_GUILD_MODAL,
+                              section: x.JJy.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: S,
+                          analyticsLocations: j,
                       })
-                    : c.A.openCreateGuildModal({
-                          location: "Guild List",
-                      });
+                    : d.A.openCreateGuildModal({ location: "Guild List" });
             },
-            selected: C,
-            onContextMenu: x,
-            tooltip: O.intl.string(O.t.l5WIbf),
+            selected: T,
+            onContextMenu: S,
+            tooltip: E.intl.string(E.t.l5WIbf),
             icon: a.U1e,
         });
     return t
-        ? I
-        : (0, r.jsx)("div", {
-              className: j.Uq,
-              children: (0, r.jsxs)(f.A, {
-                  tutorialId: _ ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: v,
+        ? v
+        : (0, i.jsx)("div", {
+              className: C.Uq,
+              children: (0, i.jsxs)(h.A, {
+                  tutorialId: N ? "create-more-servers" : "create-first-server",
+                  inlineSpecs: I,
                   position: "right",
                   children: [
-                      I,
+                      v,
                       null != n &&
-                          (0, r.jsx)(g.Ay, {
-                              name: O.intl.string(O.t["45xjM5"]),
+                          (0, i.jsx)(p.Ay, {
+                              name: E.intl.string(E.t["45xjM5"]),
                               targetNode: n,
                               below: !0,
                               noCombine: !0,

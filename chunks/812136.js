@@ -1,160 +1,132 @@
-r.d(t, {
-    F: () => _,
-});
-var n = r(627968);
-r(64700);
-var i = r(503698),
-    o = r.n(i),
-    l = r(417597),
-    s = r(506774),
-    c = r(397927),
-    a = r(775602),
-    d = r(289397),
-    u = r(976860),
-    p = r(491026),
-    f = r(381969),
-    C = r(920814),
-    j = r(305015),
-    b = r(131242),
-    O = r(324269),
-    g = r(634654),
-    h = r(652215),
-    y = r(746080),
-    x = r(985018),
-    m = r(227090);
-
-function v(e) {
+i.d(t, { F: () => A });
+var s = i(627968);
+i(64700);
+var r = i(503698),
+    n = i.n(r),
+    l = i(417597),
+    d = i(506774),
+    a = i(397927),
+    o = i(775602),
+    c = i(289397),
+    C = i(976860),
+    u = i(491026),
+    x = i(381969),
+    h = i(920814),
+    _ = i(305015),
+    p = i(131242),
+    j = i(324269),
+    g = i(634654),
+    m = i(652215),
+    f = i(746080),
+    v = i(985018),
+    L = i(227090);
+function I(e) {
     let {
         icon: t,
-        title: r,
-        body: i,
+        title: i,
+        body: r,
         selected: l,
-        disabled: s = !1,
-        onClick: a,
-        onPreviewDismiss: d,
-        isNew: u = !1,
+        disabled: d = !1,
+        onClick: o,
+        onPreviewDismiss: c,
+        isNew: C = !1,
     } = e;
-    return (0, n.jsxs)(c.sqX, {
-        onClick: s ? void 0 : a,
-        "aria-disabled": s,
-        className: o()(m.Mf, {
-            [m.wH]: l,
-            [m.ac]: s,
-            [m.VH]: !l && null != d,
-        }),
-        "aria-label": r,
+    return (0, s.jsxs)(a.sqX, {
+        onClick: d ? void 0 : o,
+        "aria-disabled": d,
+        className: n()(L.Mf, { [L.wH]: l, [L.ac]: d, [L.VH]: !l && null != c }),
+        "aria-label": i,
         children: [
-            (0, n.jsx)("div", {
-                className: m.zc,
-                children: t,
-            }),
-            (0, n.jsx)(c.hKd, {
-                size: 8,
-                horizontal: !0,
-            }),
-            (0, n.jsxs)("div", {
+            (0, s.jsx)("div", { className: L.zc, children: t }),
+            (0, s.jsx)(a.hKd, { size: 8, horizontal: !0 }),
+            (0, s.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(c.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: l ? "always-white" : "text-strong",
-                        children: r,
-                    }),
-                    (0, n.jsx)(c.Text, {
-                        variant: "text-xs/normal",
-                        color: l ? "always-white" : s ? "text-muted" : "text-strong",
                         children: i,
+                    }),
+                    (0, s.jsx)(a.Text, {
+                        variant: "text-xs/normal",
+                        color: l ? "always-white" : d ? "text-muted" : "text-strong",
+                        children: r,
                     }),
                 ],
             }),
-            u &&
-                (0, n.jsx)(c.LpS, {
-                    color: c.LU0.unsafe_rawColors.BRAND_260.css,
-                    className: m.Ad,
-                    text: x.intl.string(x.t.y2b7CA),
+            C &&
+                (0, s.jsx)(a.LpS, {
+                    color: a.LU0.unsafe_rawColors.BRAND_260.css,
+                    className: L.Ad,
+                    text: v.intl.string(v.t.y2b7CA),
                 }),
-            null != d &&
-                (0, n.jsx)(c.DUT, {
-                    className: m.EP,
-                    onClick: d,
-                    "aria-label": x.intl.string(x.t.WAI6xu),
-                    children: (0, n.jsx)(c.aXh, {
-                        size: "xs",
-                        color: "currentColor",
-                    }),
+            null != c &&
+                (0, s.jsx)(a.DUT, {
+                    className: L.EP,
+                    onClick: c,
+                    "aria-label": v.intl.string(v.t.WAI6xu),
+                    children: (0, s.jsx)(a.aXh, { size: "xs", color: "currentColor" }),
                 }),
         ],
     });
 }
-
-function _(e) {
+function A(e) {
     let { guild: t } = e,
-        r = (0, p.YZ)(t.id, "guild_shop_category_selector"),
-        { selectedTab: i, setSelectedTab: o, categoryTabs: _, handlePreviewDismiss: w } = (0, f.k)(),
-        P = "false" === s.w.get(g.Db, "false"),
-        L = (0, l.bG)([a.A], () => a.A.useReducedMotion),
-        I = _.map((e) => {
+        i = (0, u.YZ)(t.id, "guild_shop_category_selector"),
+        { selectedTab: r, setSelectedTab: n, categoryTabs: A, handlePreviewDismiss: w } = (0, x.k)(),
+        N = "false" === d.w.get(g.Db, "false"),
+        T = (0, l.bG)([o.A], () => o.A.useReducedMotion),
+        R = A.map((e) => {
             switch (e) {
-                case C.B.GUILD_PRODUCTS:
-                    return (0, n.jsx)(
-                        v,
+                case h.B.GUILD_PRODUCTS:
+                    return (0, s.jsx)(
+                        I,
                         {
-                            icon: (0, n.jsx)(j.A, {
-                                width: 20,
-                                height: 20,
-                            }),
-                            title: x.intl.string(x.t.odvTUp),
-                            body: x.intl.string(x.t["0JFpRW"]),
-                            selected: i === C.B.GUILD_PRODUCTS,
-                            onClick: () => o(C.B.GUILD_PRODUCTS),
+                            icon: (0, s.jsx)(_.A, { width: 20, height: 20 }),
+                            title: v.intl.string(v.t.odvTUp),
+                            body: v.intl.string(v.t["0JFpRW"]),
+                            selected: r === h.B.GUILD_PRODUCTS,
+                            onClick: () => n(h.B.GUILD_PRODUCTS),
                         },
                         e,
                     );
-                case C.B.GUILD_ROLE_SUBSCRIPTIONS:
-                    return (0, n.jsx)(
-                        v,
+                case h.B.GUILD_ROLE_SUBSCRIPTIONS:
+                    return (0, s.jsx)(
+                        I,
                         {
-                            icon: (0, n.jsx)(b.A, {
-                                width: 20,
-                                height: 20,
-                            }),
-                            title: x.intl.string(x.t["KzCF/6"]),
-                            body: r
-                                ? x.intl.string(x.t["jqz+ly"])
-                                : x.intl.format(x.t.ycs4oO, {
-                                      openRoleSubPage: () => (0, u.pX)(h.BVt.CHANNEL(t.id, y.VV.ROLE_SUBSCRIPTIONS)),
+                            icon: (0, s.jsx)(p.A, { width: 20, height: 20 }),
+                            title: v.intl.string(v.t["KzCF/6"]),
+                            body: i
+                                ? v.intl.string(v.t["jqz+ly"])
+                                : v.intl.format(v.t.ycs4oO, {
+                                      openRoleSubPage: () => (0, C.pX)(m.BVt.CHANNEL(t.id, f.VV.ROLE_SUBSCRIPTIONS)),
                                   }),
-                            disabled: !r,
-                            selected: i === C.B.GUILD_ROLE_SUBSCRIPTIONS,
-                            onClick: () => o(C.B.GUILD_ROLE_SUBSCRIPTIONS),
+                            disabled: !i,
+                            selected: r === h.B.GUILD_ROLE_SUBSCRIPTIONS,
+                            onClick: () => n(h.B.GUILD_ROLE_SUBSCRIPTIONS),
                         },
                         e,
                     );
-                case C.B.GUILD_PRODUCTS_PREVIEW:
-                    return (0, n.jsx)(
-                        v,
+                case h.B.GUILD_PRODUCTS_PREVIEW:
+                    return (0, s.jsx)(
+                        I,
                         {
-                            icon: P
-                                ? (0, n.jsx)("img", {
-                                      src: L
-                                          ? (0, d.n)("server_products/storefront/question-mark.png")
-                                          : (0, d.n)("server_products/storefront/question-mark.gif"),
-                                      className: m.kz,
+                            icon: N
+                                ? (0, s.jsx)("img", {
+                                      src: T
+                                          ? (0, c.n)("server_products/storefront/question-mark.png")
+                                          : (0, c.n)("server_products/storefront/question-mark.gif"),
+                                      className: L.kz,
                                       alt: "",
                                   })
-                                : (0, n.jsx)(c.okO, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                      height: 20,
-                                  }),
-                            title: x.intl.string(x.t.odvTUp),
-                            body: x.intl.string(x.t["827i8I"]),
-                            selected: i === C.B.GUILD_PRODUCTS_PREVIEW,
+                                : (0, s.jsx)(a.okO, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+                            title: v.intl.string(v.t.odvTUp),
+                            body: v.intl.string(v.t["827i8I"]),
+                            selected: r === h.B.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                o(C.B.GUILD_PRODUCTS_PREVIEW), s.w.set(g.Db, "true");
+                                n(h.B.GUILD_PRODUCTS_PREVIEW), d.w.set(g.Db, "true");
                             },
                             onPreviewDismiss: w,
-                            isNew: P,
+                            isNew: N,
                         },
                         e,
                     );
@@ -162,25 +134,16 @@ function _(e) {
                     return null;
             }
         });
-    return (0, n.jsxs)("div", {
-        className: m.kL,
+    return (0, s.jsxs)("div", {
+        className: L.kL,
         children: [
-            (0, n.jsx)(c.Heading, {
-                variant: "heading-sm/bold",
-                className: m.wx,
-                children: x.intl.string(x.t.GF433I),
-            }),
-            (0, n.jsx)(c.hKd, {
-                size: 12,
-            }),
-            (0, n.jsxs)("div", {
-                className: m.uW,
+            (0, s.jsx)(a.Heading, { variant: "heading-sm/bold", className: L.wx, children: v.intl.string(v.t.GF433I) }),
+            (0, s.jsx)(a.hKd, { size: 12 }),
+            (0, s.jsxs)("div", {
+                className: L.uW,
                 children: [
-                    (0, n.jsx)("div", {
-                        className: m.vR,
-                        children: I,
-                    }),
-                    i === C.B.GUILD_PRODUCTS && (0, n.jsx)(O.default, {}),
+                    (0, s.jsx)("div", { className: L.vR, children: R }),
+                    r === h.B.GUILD_PRODUCTS && (0, s.jsx)(j.default, {}),
                 ],
             }),
         ],

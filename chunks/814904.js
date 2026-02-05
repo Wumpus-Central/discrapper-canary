@@ -1,139 +1,38 @@
-n.d(t, {
-    D: () => p,
-});
+"use strict";
+n.d(t, { D: () => o });
 var r = n(627968);
 n(64700);
-var i = n(408238),
+var i = n(720462),
     a = n(528226);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function u(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let f = () =>
-        (0, r.jsx)("div", {
-            style: {
-                height: 250,
-                width: 250,
-                background: "pink",
-                borderRadius: 6,
-            },
-        }),
-    p = {
+let s = () => (0, r.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
+    o = {
         title: "Contained Hero",
         stories: [
             {
                 name: "ContainedHero",
                 id: "contained-hero",
                 component: (e) => {
-                    let { containerHeight: t, showChildren: n } = e,
-                        s = u(e, ["containerHeight", "showChildren"]),
+                    let { containerHeight: t, showChildren: n, ...o } = e,
                         l = () =>
                             n
                                 ? (0, r.jsxs)(i.A, {
                                       children: [
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
-                                          (0, r.jsx)(f, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
+                                          (0, r.jsx)(s, {}),
                                       ],
                                   })
                                 : null;
                     return (0, r.jsx)("div", {
-                        style: {
-                            height: n ? void 0 : t,
-                        },
-                        children: (0, r.jsx)(
-                            a.A,
-                            c(o({}, s), {
-                                children: l(),
-                            }),
-                        ),
+                        style: { height: n ? void 0 : t },
+                        children: (0, r.jsx)(a.A, { ...o, children: l() }),
                     });
                 },
                 controls: {
@@ -149,21 +48,9 @@ let f = () =>
                         defaultValue:
                             "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
                     },
-                    backgroundColor: {
-                        label: "Background Color",
-                        type: "text",
-                        defaultValue: "#171D55",
-                    },
-                    containerHeight: {
-                        label: "Container Height",
-                        type: "number",
-                        defaultValue: 150,
-                    },
-                    showChildren: {
-                        label: "Show Children",
-                        type: "boolean",
-                        defaultValue: !1,
-                    },
+                    backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
+                    containerHeight: { label: "Container Height", type: "number", defaultValue: 150 },
+                    showChildren: { label: "Show Children", type: "boolean", defaultValue: !1 },
                 },
             },
         ],

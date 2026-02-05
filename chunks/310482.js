@@ -1,65 +1,47 @@
-n.d(e, {
-    default: () => u,
-}),
-    n(896048);
+n.d(e, { default: () => c });
 var a = n(627968),
     i = n(64700),
-    l = n(732955),
-    r = n(397927),
+    r = n(732955),
+    o = n(397927),
     s = n(985018),
-    o = n(945280);
-
-function u(t) {
-    let { onConfirm: e, onClose: n, guildName: u, transitionState: c } = t,
-        [d, m] = i.useState(""),
-        [p, x] = i.useState(null),
+    l = n(945280);
+function c(t) {
+    let { onConfirm: e, onClose: n, guildName: c, transitionState: u } = t,
+        [m, p] = i.useState(""),
+        [d, x] = i.useState(null),
         f = i.useMemo(
             () => [
-                {
-                    text: s.intl.string(s.t["ETE/oC"]),
-                    onClick: n,
-                    variant: "secondary",
-                },
-                {
-                    text: s.intl.string(s.t.l3hWP6),
-                    variant: "critical-primary",
-                    type: "submit",
-                },
+                { text: s.intl.string(s.t["ETE/oC"]), onClick: n, variant: "secondary" },
+                { text: s.intl.string(s.t.l3hWP6), variant: "critical-primary", type: "submit" },
             ],
             [n],
         );
     return (0, a.jsx)("form", {
         onSubmit: function (t) {
-            (t.preventDefault(), d.toLowerCase() !== u.toLowerCase())
-                ? x(s.intl.string(s.t["c2/DS/"]))
-                : (null == e || e(), n());
+            (t.preventDefault(), m.toLowerCase() !== c.toLowerCase()) ? x(s.intl.string(s.t["c2/DS/"])) : (e?.(), n());
         },
-        children: (0, a.jsxs)(l.aFV, {
-            title: s.intl.formatToPlainString(s.t.us7mC1, {
-                name: u,
-            }),
-            subtitle: s.intl.format(s.t["Zuo+Vd"], {
-                name: u,
-            }),
+        children: (0, a.jsxs)(r.aFV, {
+            title: s.intl.formatToPlainString(s.t.us7mC1, { name: c }),
+            subtitle: s.intl.format(s.t["Zuo+Vd"], { name: c }),
             actions: f,
             onClose: n,
-            transitionState: c,
+            transitionState: u,
             children: [
-                (0, a.jsx)(r.ksK, {
+                (0, a.jsx)(o.ksK, {
                     id: "text-entry-confirm",
                     type: "text",
                     label: s.intl.string(s.t.abprOC),
-                    value: d,
+                    value: m,
                     autoComplete: "off",
-                    onChange: m,
+                    onChange: p,
                     autoFocus: !0,
                 }),
-                null != p && "" !== p
-                    ? (0, a.jsx)(r.Text, {
+                null != d && "" !== d
+                    ? (0, a.jsx)(o.Text, {
                           color: "text-feedback-critical",
                           variant: "text-xs/normal",
-                          className: o.z,
-                          children: p,
+                          className: l.z,
+                          children: d,
                       })
                     : null,
             ],

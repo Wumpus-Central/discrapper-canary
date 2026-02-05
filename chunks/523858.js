@@ -1,17 +1,14 @@
-t.d(e, {
-    A: () => s,
-});
-var i = t(627968);
+t.d(n, { A: () => s });
+var o = t(627968);
 t(64700);
-var o = t(748964),
+var i = t(748964),
     r = t(985018);
-
-function s(n) {
-    let { onContinue: e, onClose: t } = n;
-    return (0, i.jsx)(o.s, {
+function s(e) {
+    let { onContinue: n, onClose: t } = e;
+    return (0, o.jsx)(i.s, {
         title: r.intl.string(r.t["8YK70c"]),
         body: r.intl.string(r.t.moyYLf),
         onClose: t,
-        onContinue: e,
+        onContinue: n,
     });
 }

@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => r,
-});
+a.d(t, { A: () => r });
 var i = a(303527);
 let r = {
     ordinalNumber: (0, a(722023).A)({
@@ -31,9 +29,7 @@ let r = {
             wide: /^([1234]|I|II|III|IV)?\.?\s?negyedév/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1|I$/i, /2|II$/i, /3|III/i, /4|IV/i],
-        },
+        parsePatterns: { any: [/1|I$/i, /2|II$/i, /3|III/i, /4|IV/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -67,9 +63,7 @@ let r = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, i.A)({
-        matchPatterns: {
-            any: /^((de|du)\.?|éjfél|délután|dél|reggel|este|éjjel)/i,
-        },
+        matchPatterns: { any: /^((de|du)\.?|éjfél|délután|dél|reggel|este|éjjel)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

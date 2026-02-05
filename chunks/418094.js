@@ -1,3 +1,1 @@
-e.exports = {
-    x: "marker__9d896",
-};
+e.exports = { x: "marker__9d896" };

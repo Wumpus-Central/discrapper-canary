@@ -1,6 +1,5 @@
-n.d(t, {
-    C: () => r,
-});
+"use strict";
+n.d(t, { C: () => r });
 var r = (function (e) {
     return (
         (e[(e.ANNOUNCEMENT_MODAL = 0)] = "ANNOUNCEMENT_MODAL"),

@@ -1,9 +1,6 @@
-n.d(t, {
-    v: () => a,
-});
-var r = n(311907),
-    i = n(207913);
-
-function a() {
-    return (0, r.bG)([i.A], () => i.A.isInitialized());
+E.d(e, { v: () => i });
+var n = E(311907),
+    _ = E(207913);
+function i() {
+    return (0, n.bG)([_.A], () => _.A.isInitialized());
 }

@@ -1,346 +1,197 @@
-n.d(t, {
-    A: () => en,
-}),
-    n(896048),
-    n(321073),
-    n(733351),
-    n(667532);
-var r,
-    i = n(33851),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(450827),
-    c = n(734057),
+"use strict";
+n.d(t, { A: () => ee }), n(321073), n(667532);
+var r = n(33851),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(450827),
+    l = n(734057),
     u = n(696451),
-    d = n(71393),
-    f = n(309010),
-    p = n(351906),
-    _ = n(287809),
-    h = n(248465),
-    m = n(695184),
-    g = n(427262),
-    E = n(822382),
-    b = n(771650),
-    y = n(652215),
-    O = n(926140);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let v = null,
+    c = n(71393),
+    d = n(309010),
+    _ = n(351906),
+    f = n(287809),
+    p = n(248465),
+    h = n(695184),
+    m = n(427262),
+    g = n(822382),
+    E = n(771650),
+    A = n(652215),
+    I = n(926140);
+let T = null,
+    y = new Map(),
     S = new Map(),
-    I = new Map(),
-    T = 10,
+    v = 10,
     C = 3;
-
-function N(e) {
-    let t = (0, E.Wg)(e);
+function b(e) {
+    let t = (0, g.Wg)(e);
     return new Map([
-        [y.LWr.FILTER_FROM, !p.A.hidePersonalInformation],
-        [y.LWr.FILTER_MENTIONS, !p.A.hidePersonalInformation],
-        [y.LWr.FILTER_HAS, !0],
-        [y.LWr.FILTER_BEFORE, !0],
-        [y.LWr.FILTER_AFTER, !0],
-        [y.LWr.FILTER_ON, !0],
-        [y.LWr.FILTER_IN, t],
-        [y.LWr.FILTER_PINNED, !0],
-        [y.LWr.FILTER_AUTHOR_TYPE, !0],
+        [A.LWr.FILTER_FROM, !_.A.hidePersonalInformation],
+        [A.LWr.FILTER_MENTIONS, !_.A.hidePersonalInformation],
+        [A.LWr.FILTER_HAS, !0],
+        [A.LWr.FILTER_BEFORE, !0],
+        [A.LWr.FILTER_AFTER, !0],
+        [A.LWr.FILTER_ON, !0],
+        [A.LWr.FILTER_IN, t],
+        [A.LWr.FILTER_PINNED, !0],
+        [A.LWr.FILTER_AUTHOR_TYPE, !0],
     ]);
 }
-
-function R(e) {
-    let t = [y.LWr.FILTER_HAS];
+function N(e) {
+    let t = [A.LWr.FILTER_HAS];
     return (
-        p.A.hidePersonalInformation || (t.push(y.LWr.FILTER_FROM), t.push(y.LWr.FILTER_MENTIONS)),
-        (0, E.Wg)(e) && t.push(y.LWr.FILTER_IN),
+        _.A.hidePersonalInformation || (t.push(A.LWr.FILTER_FROM), t.push(A.LWr.FILTER_MENTIONS)),
+        (0, g.Wg)(e) && t.push(A.LWr.FILTER_IN),
         t
     );
 }
-
-function w(e) {
-    var t;
-    let n = (0, E.bS)(e),
-        r =
-            null != (t = I.get(n))
-                ? t
-                : {
-                      results: [],
-                      context: l.A.getUserSearchContext(M.bind(null, e)),
-                  };
-    return I.set(n, r), r;
+function R(e) {
+    let t = (0, g.bS)(e),
+        n = S.get(t) ?? { results: [], context: o.A.getUserSearchContext(P.bind(null, e)) };
+    return S.set(t, n), n;
 }
-
-function P(e) {
+function O(e) {
     return {
         searchContext: e,
         query: "",
-        mode: {
-            type: y.o$q.EMPTY,
-            filter: null,
-            token: null,
-        },
+        mode: { type: A.o$q.EMPTY, filter: null, token: null },
         tokens: [],
         cursorScope: null,
         autocompletes: [],
     };
 }
-
 function D(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: s } = e;
-    return (
-        w(t),
-        {
-            searchContext: t,
-            query: n,
-            mode: r,
-            tokens: i,
-            cursorScope: a,
-            autocompletes: s,
-        }
-    );
+    return R(t), { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: s };
 }
-
-function x(e) {
-    let { id: t } = e,
-        n = I.get(t);
-    null != n && (n.context.destroy(), (n.results = []), I.delete(t)), S.delete(t), (v = null);
-}
-
 function L(e) {
-    return null != e && (e === y.LWr.FILTER_FROM || e === y.LWr.FILTER_MENTIONS);
+    let { id: t } = e,
+        n = S.get(t);
+    null != n && (n.context.destroy(), (n.results = []), S.delete(t)), y.delete(t), (T = null);
 }
-
-function j(e) {
-    let t = L(e.filter);
-    return e.type === y.o$q.FILTER_ALL || (e.type === y.o$q.FILTER && t);
+function w(e) {
+    return null != e && (e === A.LWr.FILTER_FROM || e === A.LWr.FILTER_MENTIONS);
 }
-
-function M(e, t) {
+function x(e) {
+    let t = w(e.filter);
+    return e.type === A.o$q.FILTER_ALL || (e.type === A.o$q.FILTER && t);
+}
+function P(e, t) {
     let { results: n } = t,
-        r = (0, E.bS)(e),
-        i = I.get(r),
-        a = S.get(r);
-    if (null == i || null == a || !j(a.mode)) return;
-    i.results = k(n, a.mode.type === y.o$q.FILTER ? T : C);
-    let { query: s, mode: o, tokens: l, cursorScope: c } = a,
-        u = K(e, o, l),
-        d = D({
-            searchContext: e,
-            query: s,
-            mode: o,
-            tokens: l,
-            cursorScope: c,
-            autocompletes: u,
-        });
-    S.set(r, d), et.emitChange();
+        r = (0, g.bS)(e),
+        i = S.get(r),
+        a = y.get(r);
+    if (null == i || null == a || !x(a.mode)) return;
+    i.results = M(n, a.mode.type === A.o$q.FILTER ? v : C);
+    let { query: s, mode: o, tokens: l, cursorScope: u } = a,
+        c = Y(e, o, l),
+        d = D({ searchContext: e, query: s, mode: o, tokens: l, cursorScope: u, autocompletes: c });
+    y.set(r, d), J.emitChange();
 }
-
-function k(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T,
+function M(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v,
         n = [];
     for (let r of e) {
         if (n.length >= t) break;
-        let e = _.default.getUser(r.id);
+        let e = f.default.getUser(r.id);
         if (null == e) continue;
-        let i = g.Ay.getUserTag(e);
-        null != i &&
-            n.push({
-                text: i,
-                user: e,
-            });
+        let i = m.Ay.getUserTag(e);
+        null != i && n.push({ text: i, user: e });
     }
     return n;
 }
-
+function k(e) {
+    i()(T, e) || ((T = e), (0, g.Pe)());
+}
 function U(e) {
-    a()(v, e) || ((v = e), (0, E.Pe)());
-}
-
-function G(e) {
     let { searchContext: t } = e;
-    U(t), Q(t);
+    k(t), q(t);
 }
-
-function V(e) {
+function G(e) {
     let t,
         { searchContext: n, tokens: r, cursorScope: i } = e;
-    U(n);
-    let a = (0, E.lX)(r),
-        s = (0, E.Gk)(i, r),
-        o = (0, E.bS)(n),
-        l = S.get(o),
-        c = !0;
-    if (null != l && a === l.query && (null == l.mode || l.mode.filter === s.filter)) (t = l.autocompletes), (c = !1);
-    else if (j(s)) {
-        var u, d;
-        let e = w(n),
+    k(n);
+    let a = (0, g.lX)(r),
+        s = (0, g.Gk)(i, r),
+        o = (0, g.bS)(n),
+        l = y.get(o),
+        u = !0;
+    if (null != l && a === l.query && (null == l.mode || l.mode.filter === s.filter)) (t = l.autocompletes), (u = !1);
+    else if (x(s)) {
+        let e = R(n),
             i = s.token,
-            a = null == i || null == (u = i.getFullMatch()) ? void 0 : u.trim();
+            a = i?.getFullMatch()?.trim();
         if (null != a && a.length > 0) {
-            let r = (0, E.mt)(n);
-            null != r && m.A.requestMembers(r, a, T),
-                e.context.setQuery({
-                    query: a,
-                    filters: {
-                        guild: null != r ? r : void 0,
-                    },
-                    boosters: (0, h.X3)(O.rD.USER),
-                }),
-                (t = null != (d = null == l ? void 0 : l.autocompletes) ? d : []),
-                (c = !1);
-        } else e.context.clearQuery(), (t = K(n, s, r));
+            let r = (0, g.mt)(n);
+            null != r && h.A.requestMembers(r, a, v),
+                e.context.setQuery({ query: a, filters: { guild: r ?? void 0 }, boosters: (0, p.X3)(I.rD.USER) }),
+                (t = l?.autocompletes ?? []),
+                (u = !1);
+        } else e.context.clearQuery(), (t = Y(n, s, r));
     } else {
-        let e = I.get(o);
-        null != e && (e.context.clearQuery(), (e.results = [])), (t = K(n, s, r));
+        let e = S.get(o);
+        null != e && (e.context.clearQuery(), (e.results = [])), (t = Y(n, s, r));
     }
-    let f = D({
-        searchContext: n,
-        query: a,
-        mode: s,
-        tokens: r,
-        cursorScope: i,
-        autocompletes: t,
-    });
-    return S.set(o, f), c;
+    let c = D({ searchContext: n, query: a, mode: s, tokens: r, cursorScope: i, autocompletes: t });
+    return y.set(o, c), u;
 }
-
-function F(e) {
-    var t, n, r;
-    let { filter: i, currentToken: a, searchContext: s, maxResults: o = T, tokens: l } = e;
-    if (null == i) return null;
-    let c = null,
-        u = null != (t = null == a || null == (n = a.getFullMatch()) ? void 0 : n.trim()) ? t : "",
-        d = 0 === u.length;
-    if ((0, E._B)(s) && L(i) && !d) c = w(s).results;
+function V(e) {
+    let { filter: t, currentToken: n, searchContext: r, maxResults: i = v, tokens: a } = e;
+    if (null == t) return null;
+    let s = null,
+        o = n?.getFullMatch()?.trim() ?? "",
+        l = 0 === o.length;
+    if ((0, g._B)(r) && w(t) && !l) s = R(r).results;
     else {
-        let e = null == (r = b.Ay[i]) ? void 0 : r.getAutocompletions;
-        c =
-            null != e
-                ? e({
-                      query: u,
-                      searchContext: s,
-                      maxResults: o,
-                      tokens: l,
-                  })
-                : [];
+        let e = E.Ay[t]?.getAutocompletions;
+        s = null != e ? e({ query: o, searchContext: r, maxResults: i, tokens: a }) : [];
     }
-    if (null != c && L(i) && (0, b.WL)(u)) {
-        let e = _.default.getCurrentUser();
+    if (null != s && w(t) && (0, E.WL)(o)) {
+        let e = f.default.getCurrentUser();
         null != e &&
-            (c = c.filter((t) => {
+            (s = s.filter((t) => {
                 let { user: n } = t;
-                return (null == n ? void 0 : n.id) !== e.id;
-            })).unshift({
-                text: y.ME,
-                user: e,
-            });
+                return n?.id !== e.id;
+            })).unshift({ text: A.ME, user: e });
     }
-    return null == c || 0 === c.length
-        ? null
-        : {
-              group: i,
-              results: c,
-          };
+    return null == s || 0 === s.length ? null : { group: t, results: s };
 }
-
-function B(e, t) {
+function F(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim(),
-        r = N(t),
-        i = (0, b.gR)(n).filter((e) => null != e.token && !0 === r.get(e.token));
-    return {
-        group: y.x2k.SEARCH_OPTIONS,
-        results: i,
-    };
+        r = b(t),
+        i = (0, E.gR)(n).filter((e) => null != e.token && !0 === r.get(e.token));
+    return { group: A.x2k.SEARCH_OPTIONS, results: i };
 }
-
-function H(e, t, n) {
-    var r;
-    let i = e.token,
-        a = null == i || null == (r = i.getFullMatch()) ? void 0 : r.trim(),
-        s = [];
-    if (null != a && "" !== a) {
-        R(t).forEach((e) => {
+function B(e, t, n) {
+    let r = e.token,
+        i = r?.getFullMatch()?.trim(),
+        a = [];
+    if (null != i && "" !== i) {
+        N(t).forEach((e) => {
             if (null == e) return;
-            let r = F({
-                filter: e,
-                currentToken: i,
-                searchContext: t,
-                maxResults: C,
-                tokens: n,
-            });
-            null != r && s.push(r);
+            let i = V({ filter: e, currentToken: r, searchContext: t, maxResults: C, tokens: n });
+            null != i && a.push(i);
         });
-        let e = Y(i, t);
-        null != e && s.push(e);
+        let e = j(r, t);
+        null != e && a.push(e);
     }
-    return 5 > (0, E.rI)(s) && s.push(B(i, t)), s;
+    return 5 > (0, g.rI)(a) && a.push(F(r, t)), a;
 }
-
-function Y(e, t) {
-    var n, r, i, a, s, o, l, c, u;
-    let d = (null != e ? e.getFullMatch() : "").trim();
-    if (null == d || "" === d) return null;
-    let f =
-            null == (i = b.Ay[y.LWr.FILTER_BEFORE]) ||
-            null == (r = i.getAutocompletions) ||
-            null ==
-                (n = r.call(i, {
-                    query: d,
-                    searchContext: t,
-                    maxResults: 1,
-                }))
-                ? void 0
-                : n[0],
-        p =
-            null == (o = b.Ay[y.LWr.FILTER_ON]) ||
-            null == (s = o.getAutocompletions) ||
-            null ==
-                (a = s.call(o, {
-                    query: d,
-                    searchContext: t,
-                    maxResults: 1,
-                }))
-                ? void 0
-                : a[0],
-        _ =
-            null == (u = b.Ay[y.LWr.FILTER_AFTER]) ||
-            null == (c = u.getAutocompletions) ||
-            null ==
-                (l = c.call(u, {
-                    query: d,
-                    searchContext: t,
-                    maxResults: 1,
-                }))
-                ? void 0
-                : l[0];
-    if (null == f) return null;
-    let h = [f];
-    return (
-        null != p && h.push(p),
-        null != _ && h.push(_),
-        {
-            group: y.x2k.DATES,
-            results: h,
-        }
-    );
+function j(e, t) {
+    let n = (null != e ? e.getFullMatch() : "").trim();
+    if (null == n || "" === n) return null;
+    let r = E.Ay[A.LWr.FILTER_BEFORE]?.getAutocompletions?.({ query: n, searchContext: t, maxResults: 1 })?.[0],
+        i = E.Ay[A.LWr.FILTER_ON]?.getAutocompletions?.({ query: n, searchContext: t, maxResults: 1 })?.[0],
+        a = E.Ay[A.LWr.FILTER_AFTER]?.getAutocompletions?.({ query: n, searchContext: t, maxResults: 1 })?.[0];
+    if (null == r) return null;
+    let s = [r];
+    return null != i && s.push(i), null != a && s.push(a), { group: A.x2k.DATES, results: s };
 }
-
-function W(e) {
-    if (p.A.hidePersonalInformation) return null;
+function H(e) {
+    if (_.A.hidePersonalInformation) return null;
     {
         let t = n(842716).A,
-            r = (0, E.Jl)(e);
+            r = (0, g.Jl)(e);
         if (null == r) return null;
         let i = t.getHistory(r);
         if (null == i) return null;
@@ -348,124 +199,87 @@ function W(e) {
             s = new Set();
         return (
             i.forEach((t) => {
-                let n = e.type === y.I4_.CHANNEL ? (0, E.EH)(t) : t;
-                "" === n ||
-                    s.has(n) ||
-                    (s.add(n),
-                    a.push({
-                        text: n,
-                    }));
+                let n = e.type === A.I4_.CHANNEL ? (0, g.EH)(t) : t;
+                "" === n || s.has(n) || (s.add(n), a.push({ text: n }));
             }),
-            {
-                group: y.x2k.HISTORY,
-                results: a,
-            }
+            { group: A.x2k.HISTORY, results: a }
         );
     }
 }
-
-function K(e, t, n) {
+function Y(e, t, n) {
     switch (t.type) {
-        case y.o$q.FILTER:
-            let r = F({
-                filter: t.filter,
-                currentToken: t.token,
-                searchContext: e,
-                maxResults: T,
-                tokens: n,
-            });
+        case A.o$q.FILTER:
+            let r = V({ filter: t.filter, currentToken: t.token, searchContext: e, maxResults: v, tokens: n });
             return null != r ? [r] : [];
-        case y.o$q.FILTER_ALL:
-            return H(t, e, n);
-        case y.o$q.EMPTY:
+        case A.o$q.FILTER_ALL:
+            return B(t, e, n);
+        case A.o$q.EMPTY:
             let i = [];
-            i.push(B(t.token, e));
+            i.push(F(t.token, e));
             {
-                let t = W(e);
+                let t = H(e);
                 null != t && i.push(t);
             }
             return i;
     }
 }
-
-function z() {
-    (0, E.Pe)();
+function W() {
+    (0, g.Pe)();
 }
-
-function q(e) {
-    let t = S.get(e);
+function K(e) {
+    let t = y.get(e);
     if (null == t) return;
     let { searchContext: n, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: o } = t,
         l = [];
     o.forEach((e) => {
-        e.group !== y.x2k.HISTORY && l.push(e);
+        e.group !== A.x2k.HISTORY && l.push(e);
     });
-    let c = D({
-        searchContext: n,
-        query: r,
-        mode: i,
-        tokens: a,
-        cursorScope: s,
-        autocompletes: l,
-    });
-    S.set(e, c);
+    let u = D({ searchContext: n, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: l });
+    y.set(e, u);
 }
-
-function X(e) {
+function z(e) {
     let { autocompleteStateId: t } = e;
-    q(t);
+    K(t);
 }
-
-function Z() {
-    for (let e of S.keys()) q(e);
+function $() {
+    for (let e of y.keys()) K(e);
 }
-
-function Q(e) {
-    let t = (0, E.bS)(e),
-        n = S.get(t);
+function q(e) {
+    let t = (0, g.bS)(e),
+        n = y.get(t);
     if (null == n) return !1;
     let { query: r, mode: i, tokens: a, cursorScope: s } = n,
-        o = D({
-            searchContext: e,
-            query: r,
-            mode: i,
-            tokens: a,
-            cursorScope: s,
-            autocompletes: K(e, i, a),
-        });
-    S.set(t, o);
+        o = D({ searchContext: e, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: Y(e, i, a) });
+    y.set(t, o);
 }
-
-function $() {
-    return null != v && Q(v);
+function Z() {
+    return null != T && q(T);
 }
-
-function J() {
-    return null != v && Q(v);
+function Q() {
+    return null != T && q(T);
 }
-class ee extends (r = s.Ay.Store) {
+class X extends a.Ay.Store {
+    static displayName = "SearchAutocompleteStore";
     initialize() {
-        this.waitFor(c.A, u.Ay, d.A, f.A, p.A, _.default);
+        this.waitFor(l.A, u.Ay, c.A, d.A, _.A, f.default);
     }
     getState(e) {
-        var t;
-        let n = (0, E.bS)(e);
-        return null != (t = S.get(n)) ? t : P(e);
+        let t = (0, g.bS)(e);
+        return y.get(t) ?? O(e);
     }
     getSelectedSearchContext() {
-        return v;
+        return T;
     }
 }
-A(ee, "displayName", "SearchAutocompleteStore");
-let et = new ee(o.h, {
-        SEARCH_AUTOCOMPLETE_INITIALIZE: G,
-        SEARCH_AUTOCOMPLETE_QUERY_UPDATE: V,
-        SEARCH_EDITOR_STATE_CLEAR: x,
-        CHANNEL_CREATE: z,
-        CHANNEL_DELETE: z,
-        STREAMER_MODE_UPDATE: $,
-        CHANNEL_SELECT: J,
-        LOGOUT: Z,
-        SEARCH_HISTORY_WEB_CLEAR_ITEMS: X,
+let J = new X(s.h, {
+        SEARCH_AUTOCOMPLETE_INITIALIZE: U,
+        SEARCH_AUTOCOMPLETE_QUERY_UPDATE: G,
+        SEARCH_EDITOR_STATE_CLEAR: L,
+        CHANNEL_CREATE: W,
+        CHANNEL_DELETE: W,
+        STREAMER_MODE_UPDATE: Z,
+        CHANNEL_SELECT: Q,
+        LOGOUT: $,
+        SEARCH_HISTORY_WEB_CLEAR_ITEMS: z,
     }),
-    en = et;
+    ee = J;

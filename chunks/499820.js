@@ -1,78 +1,67 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    o = n(397927),
-    a = n(652215),
-    c = n(985018),
-    d = n(291358),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(397927),
+    o = n(652215),
+    d = n(985018),
+    c = n(291358),
     u = n(473169);
 let h = 0,
     p = (e) => {
         switch (e) {
-            case a.G6Q.TOP_LEFT:
-                return c.intl.string(c.t.xlchpU);
-            case a.G6Q.TOP_RIGHT:
-                return c.intl.string(c.t["4uHRHH"]);
-            case a.G6Q.BOTTOM_LEFT:
-                return c.intl.string(c.t.ovWFnD);
-            case a.G6Q.BOTTOM_RIGHT:
-                return c.intl.string(c.t["M/9V75"]);
+            case o.G6Q.TOP_LEFT:
+                return d.intl.string(d.t.xlchpU);
+            case o.G6Q.TOP_RIGHT:
+                return d.intl.string(d.t["4uHRHH"]);
+            case o.G6Q.BOTTOM_LEFT:
+                return d.intl.string(d.t.ovWFnD);
+            case o.G6Q.BOTTOM_RIGHT:
+                return d.intl.string(d.t["M/9V75"]);
             default:
-                return c.intl.string(c.t.AlY4Za);
+                return d.intl.string(d.t.AlY4Za);
         }
     },
-    f = [a.G6Q.DISABLED, a.G6Q.TOP_LEFT, a.G6Q.TOP_RIGHT, a.G6Q.BOTTOM_LEFT, a.G6Q.BOTTOM_RIGHT];
-
-function b(e) {
+    A = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
+function f(e) {
     let { position: t, onChange: n } = e,
-        [s] = r.useState(() => "notification-position-selector-".concat(h++)),
-        b =
-            t === a.G6Q.DISABLED
-                ? c.intl.string(c.t.R6LxVf)
-                : c.intl.formatToPlainString(c.t["XXHDM/"], {
-                      position: p(t),
-                  });
+        [l] = s.useState(() => `notification-position-selector-${h++}`),
+        f =
+            t === o.G6Q.DISABLED
+                ? d.intl.string(d.t.R6LxVf)
+                : d.intl.formatToPlainString(d.t["XXHDM/"], { position: p(t) });
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(o.vN3, {
+            (0, i.jsx)(r.vN3, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)("div", {
-                    className: l()(d.iE, {
-                        [d.wX]: t === a.G6Q.DISABLED,
-                    }),
-                    children: f.map((e) =>
+                    className: a()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
+                    children: A.map((e) =>
                         (0, i.jsxs)(
                             "label",
                             {
-                                className: l()({
-                                    [d.wH]: e === t,
-                                    [d.r9]: e === a.G6Q.DISABLED,
-                                    [d.O3]: e === a.G6Q.TOP_RIGHT,
-                                    [d.lA]: e === a.G6Q.TOP_LEFT,
-                                    [d.oF]: e === a.G6Q.BOTTOM_RIGHT,
-                                    [d.RV]: e === a.G6Q.BOTTOM_LEFT,
+                                className: a()({
+                                    [c.wH]: e === t,
+                                    [c.r9]: e === o.G6Q.DISABLED,
+                                    [c.O3]: e === o.G6Q.TOP_RIGHT,
+                                    [c.lA]: e === o.G6Q.TOP_LEFT,
+                                    [c.oF]: e === o.G6Q.BOTTOM_RIGHT,
+                                    [c.RV]: e === o.G6Q.BOTTOM_LEFT,
                                 }),
                                 children: [
                                     p(e),
-                                    e === a.G6Q.DISABLED
-                                        ? (0, i.jsx)(o.KTN, {
-                                              size: "md",
-                                              color: "currentColor",
-                                              className: d.WO,
-                                          })
+                                    e === o.G6Q.DISABLED
+                                        ? (0, i.jsx)(r.KTN, { size: "md", color: "currentColor", className: c.WO })
                                         : null,
                                     (0, i.jsx)("input", {
                                         type: "radio",
-                                        name: s,
+                                        name: l,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: d.hH,
+                                        className: c.hH,
                                     }),
                                 ],
                             },
@@ -81,13 +70,9 @@ function b(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(o.Text, {
-                variant: "text-sm/normal",
-                className: u.Ot,
-                children: b,
-            }),
+            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: f }),
         ],
     });
 }
-b.Positions = a.G6Q;
-let g = b;
+f.Positions = o.G6Q;
+let g = f;

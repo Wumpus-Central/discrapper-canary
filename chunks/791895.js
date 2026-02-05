@@ -1,3 +1,1 @@
-e.exports = {
-    k: "iconOnlyButton__068c6",
-};
+e.exports = { k: "iconOnlyButton__068c6" };

@@ -1,40 +1,20 @@
-n.d(t, {
-    E: () => s,
-}),
-    n(896048),
-    n(114821),
-    n(339614);
-var r = n(64700),
-    i = n(96337),
-    a = n(518977);
-
-function s() {
-    return r.useMemo(() => {
+n.d(t, { E: () => l });
+var s = n(64700),
+    a = n(96337),
+    i = n(518977);
+function l() {
+    return s.useMemo(() => {
         let e = new Map(
-                i.A.flatMap((e) => {
+                a.A.flatMap((e) => {
                     let { alpha2: t, phoneCountryCodes: n } = e,
-                        r = (0, a.Gw)(t);
-                    return n.map((e) => [
-                        "".concat(t, "-").concat(e),
-                        {
-                            code: e,
-                            alpha2: t,
-                            name: r,
-                        },
-                    ]);
+                        s = (0, i.Gw)(t);
+                    return n.map((e) => [`${t}-${e}`, { code: e, alpha2: t, name: s }]);
                 }),
             ),
             t = Array.from(e.entries()).map((e) => {
-                let [t, { name: n, alpha2: r }] = e;
-                return {
-                    value: t,
-                    label: n,
-                    alpha2: r,
-                };
+                let [t, { name: n, alpha2: s }] = e;
+                return { value: t, label: n, alpha2: s };
             });
-        return {
-            countriesMap: e,
-            countryCodeOptions: t,
-        };
+        return { countriesMap: e, countryCodeOptions: t };
     }, []);
 }

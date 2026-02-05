@@ -1,76 +1,29 @@
-n.d(t, {
-    Ay: () => g,
-    UD: () => _,
-}),
-    n(65821),
-    n(321073),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => h, UD: () => _ }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(817363),
     o = n(946274),
     l = n(563863),
-    c = n(693591);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e) {
+    u = n(693591);
+function c(e) {
     return new Promise((t, n) => {
         if (null != e) {
             let r = new FileReader();
             (r.onload = (e) => {
-                var r;
-                "string" == typeof (null == (r = e.target) ? void 0 : r.result)
-                    ? t(e.target.result)
-                    : n(Error("Failed to read file"));
+                "string" == typeof e.target?.result ? t(e.target.result) : n(Error("Failed to read file"));
             }),
                 r.readAsDataURL(e);
         }
     });
 }
-async function p(e) {
+async function d(e) {
     try {
-        let t = await f(e),
+        let t = await c(e),
             n = new Image();
-        return (
-            (n.src = t),
-            await n.decode(),
-            {
-                image: n,
-                dataURI: t,
-            }
-        );
-    } catch (e) {
+        return (n.src = t), await n.decode(), { image: n, dataURI: t };
+    } catch {
         throw l.o.WRONG_TYPE;
     }
 }
@@ -79,95 +32,68 @@ async function _(e, t) {
     for (let r = 0; r < e.length; r++) {
         let i = e[r];
         try {
-            let { image: e, dataURI: r } = await p(i),
-                a = i.type === c.a.MP4 ? await t(r, i) : await t(r, i, e);
-            null != a &&
-                n.push({
-                    type: a,
-                    filename: i.name,
-                });
+            let { image: e, dataURI: r } = await d(i),
+                a = i.type === u.a.MP4 ? await t(r, i) : await t(r, i, e);
+            null != a && n.push({ type: a, filename: i.name });
         } catch (e) {
-            n.push({
-                type: e,
-                filename: i.name,
-            });
+            n.push({ type: e, filename: i.name });
         }
     }
-    n.length > 0 && h(n);
+    n.length > 0 && f(n);
 }
-let h = (e) => {
+let f = (e) => {
         (0, a.mMO)(async () => {
             let { default: t } = await n.e("84981").then(n.bind(n, 940372));
-            return (n) =>
-                (0, r.jsx)(
-                    t,
-                    d(
-                        {
-                            errors: e,
-                        },
-                        n,
-                    ),
-                );
+            return (n) => (0, r.jsx)(t, { errors: e, ...n });
         });
     },
-    m = i.forwardRef((e, t) => {
+    p = i.forwardRef((e, t) => {
         let {
                 onChange: l,
-                multiple: c = !0,
-                disabled: u,
-                className: f,
-                tabIndex: p = -1,
-                "aria-label": h,
-                filters: m,
-                setLoading: g,
-                title: E,
+                multiple: u = !0,
+                disabled: c,
+                className: d,
+                tabIndex: f = -1,
+                "aria-label": p,
+                filters: h,
+                setLoading: m,
+                title: g,
             } = e,
-            b = i.useRef(null),
-            [y, O] = i.useState(!1);
+            E = i.useRef(null),
+            [A, I] = i.useState(!1);
         i.useEffect(() => {
-            y && A();
-        }, [y]);
-        let A = () => {
-                null !== b.current && ((0, a.OoC)(b.current), (b.current = null));
+            A && T();
+        }, [A]);
+        let T = () => {
+                null !== E.current && ((0, a.OoC)(E.current), (E.current = null));
             },
-            v = async (e) => {
-                null == g || g(!0), await _(e, l), O(!0), null == g || g(!1);
+            y = async (e) => {
+                m?.(!0), await _(e, l), I(!0), m?.(!1);
             },
             S = async (e) => {
-                var t, i, s;
                 if (
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (null == (t = e.currentTarget) ? void 0 : t.files) == null ||
-                        (null == (s = e.currentTarget) || null == (i = s.files) ? void 0 : i.length) === 0)
+                    e.currentTarget?.files == null || e.currentTarget?.files?.length === 0)
                 )
                     return;
-                let o = e.currentTarget.files;
-                b.current = await (0, a.mMO)(async () => {
+                let t = e.currentTarget.files;
+                E.current = await (0, a.mMO)(async () => {
                     let { default: e } = await n.e("17259").then(n.bind(n, 897126));
-                    return (t) =>
-                        (0, r.jsx)(
-                            e,
-                            d(
-                                {
-                                    processFiles: () => v(o),
-                                },
-                                t,
-                            ),
-                        );
+                    return (n) => (0, r.jsx)(e, { processFiles: () => y(t), ...n });
                 });
             };
         return (0, r.jsx)(s.A, {
             ref: t,
             onChange: S,
-            filters: null != m ? m : (0, o.gA)(),
-            multiple: c,
-            disabled: u,
-            className: f,
-            tabIndex: p,
-            "aria-label": h,
-            title: E,
+            filters: h ?? (0, o.gA)(),
+            multiple: u,
+            disabled: c,
+            className: d,
+            tabIndex: f,
+            "aria-label": p,
+            title: g,
         });
     });
-m.displayName = "ImageInputWithModals";
-let g = m;
+p.displayName = "ImageInputWithModals";
+let h = p;

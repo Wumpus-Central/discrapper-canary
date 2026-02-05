@@ -1,37 +1,28 @@
-n.d(t, {
-    A: () => p,
-});
-var l = n(627968);
-n(64700);
-var a = n(984516),
-    r = n(292455),
-    i = n(701508),
-    s = n(979590),
-    c = n(783531),
-    o = n(166393),
-    d = n(985018),
-    u = n(791218);
-let p = function (e) {
-    let { onScroll: t, onSelectApplication: n } = e;
-    return (0, l.jsxs)(c.A, {
+a.d(t, { A: () => h });
+var n = a(627968);
+a(64700);
+var i = a(984516),
+    s = a(292455),
+    l = a(701508),
+    r = a(979590),
+    o = a(783531),
+    c = a(166393),
+    d = a(985018),
+    u = a(791218);
+let h = function (e) {
+    let { onScroll: t, onSelectApplication: a } = e;
+    return (0, n.jsxs)(o.A, {
         onScroll: t,
         children: [
-            (0, l.jsx)(i.A, {
+            (0, n.jsx)(l.A, {
                 title: d.intl.format(d.t.kEcZ97, {}),
                 description: d.intl.string(d.t.XxFts9),
-                children: (0, l.jsx)(r.A, {}),
+                children: (0, n.jsx)(s.A, {}),
             }),
-            (0, l.jsx)(s.A, {
-                children: (0, l.jsxs)("div", {
+            (0, n.jsx)(r.A, {
+                children: (0, n.jsxs)("div", {
                     className: u.h,
-                    children: [
-                        (0, l.jsx)(o.A, {
-                            onSelectApplication: n,
-                        }),
-                        (0, l.jsx)(a.A, {
-                            padding: !0,
-                        }),
-                    ],
+                    children: [(0, n.jsx)(c.A, { onSelectApplication: a }), (0, n.jsx)(i.A, { padding: !0 })],
                 }),
             }),
         ],

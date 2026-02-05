@@ -1,15 +1,10 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(321073),
-    n(896048),
-    n(638769);
+"use strict";
+n.d(t, { A: () => l }), n(321073);
 var r = n(64700),
     i = n(155718),
     a = n(594061),
     s = n(723702),
     o = n(847381);
-
 function l(e) {
     return (
         a.bW.loadIfNecessary(),
@@ -17,11 +12,11 @@ function l(e) {
             let t = [];
             e.forEach((e) => t.push(e.application.id));
             let n = [...t];
-            return n.sort((e, n) => (t.findIndex((t) => t === e) < t.findIndex((e) => e === n) ? -1 : 1)), c(e, n);
+            return n.sort((e, n) => (t.findIndex((t) => t === e) < t.findIndex((e) => e === n) ? -1 : 1)), u(e, n);
         }, [e])
     );
 }
-let c = (e, t) => {
+let u = (e, t) => {
     let n = [...e],
         r = 0;
     return (
@@ -35,14 +30,11 @@ let c = (e, t) => {
         n
             .map((e, t) => [e, t])
             .filter((e) => {
-                var t, n;
-                let [r] = e,
-                    a =
-                        null == (n = r.application.embeddedActivityConfig) ||
-                        null == (t = n.client_platform_config[(0, o.A)((0, s.getOS)())])
-                            ? void 0
-                            : t.label_type;
-                return !!a && (a === i.Hr.NEW || a === i.Hr.UPDATED);
+                let [t] = e,
+                    n =
+                        t.application.embeddedActivityConfig?.client_platform_config[(0, o.A)((0, s.getOS)())]
+                            ?.label_type;
+                return !!n && (n === i.Hr.NEW || n === i.Hr.UPDATED);
             })
             .forEach((e) => {
                 let [t, r] = e,

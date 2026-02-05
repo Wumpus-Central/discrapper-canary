@@ -1,25 +1,8 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153);
+let a = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
         highlight_void_toggleables: "Highlight toggleable components (Checkbox, VoidRadioGroup, Switch)",
@@ -39,40 +22,33 @@ let o = {
         wishlist_user_profile_account_popout_upsell:
             "Show user profile account popout upsell (reset WISHLIST_USER_PROFILE_ACCOUNT_POPOUT_UPSELL DCF as well)",
     },
-    l = {};
-
-function c(e) {
-    !1 === e.value ? delete l[e.toggle] : (l[e.toggle] = e.value);
+    s = {};
+function o(e) {
+    !1 === e.value ? delete s[e.toggle] : (s[e.toggle] = e.value);
 }
-class u extends (r = i.Ay.DeviceSettingsStore) {
+class l extends r.Ay.DeviceSettingsStore {
+    static displayName = "DevToolsDesignTogglesStore";
+    static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
-        return {
-            toggleStates: l,
-        };
+        return { toggleStates: s };
     }
     initialize(e) {
-        for (var t in o) {
-            var n, r;
-            let i = null != (n = null == e || null == (r = e.toggleStates) ? void 0 : r[t]) && n;
-            i && (l[t] = i);
+        for (var t in a) {
+            let n = e?.toggleStates?.[t] ?? !1;
+            n && (s[t] = n);
         }
     }
     get(e) {
-        var t;
-        return null != (t = l[e]) && t;
+        return s[e] ?? !1;
     }
     enabled() {
-        return l;
+        return s;
     }
     allWithDescriptions() {
-        return Object.entries(o).map((e) => {
-            var t;
-            let [n, r] = e;
-            return [n, null != (t = l[n]) && t, r];
+        return Object.entries(a).map((e) => {
+            let [t, n] = e;
+            return [t, s[t] ?? !1, n];
         });
     }
 }
-s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore");
-let d = new u(a.h, {
-    DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c,
-});
+let u = new l(i.h, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: o });

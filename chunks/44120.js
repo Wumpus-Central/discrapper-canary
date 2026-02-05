@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => T });
 var r = n(627968);
 n(64700);
 var i = n(835245),
@@ -9,192 +7,95 @@ var i = n(835245),
     s = n(73153),
     o = n(391048),
     l = n(636099),
-    c = n(769315),
-    u = n(589078),
+    u = n(769315),
+    c = n(589078),
     d = n(979286),
-    f = n(287809),
-    p = n(954571),
-    _ = n(166532),
+    _ = n(287809),
+    f = n(954571),
+    p = n(166532),
     h = n(301518),
     m = n(165823),
     g = n(652215);
-
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function A(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = v(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function v(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let S = "payment-modal",
-    I = "gift-payment-modal",
-    T = new Set([_.pn.REVIEW, _.pn.CONFIRM, _.pn.GIFT_CUSTOMIZATION]);
-
-function C(e) {
+let E = "payment-modal",
+    A = "gift-payment-modal",
+    I = new Set([p.pn.REVIEW, p.pn.CONFIRM, p.pn.GIFT_CUSTOMIZATION]);
+function T(e) {
     let t,
         {
-            skuId: u,
-            analyticsLocations: _,
+            skuId: c,
+            analyticsLocations: p,
             analyticsObject: m,
-            isGift: E = !1,
-            giftMessage: y,
-            giftingOrigin: v,
-            giftRecipient: C,
-            onClose: w,
-            onComplete: P,
-            variantsReturnStyle: D,
+            isGift: T = !1,
+            giftMessage: v,
+            giftingOrigin: C,
+            giftRecipient: b,
+            onClose: N,
+            onComplete: R,
+            variantsReturnStyle: O,
         } = e,
-        x = !1,
+        D = !1,
         L = (0, i.A)(),
-        j = (e) => {
+        w = (e) => {
             t = e;
         },
-        M = E ? I : S,
-        k = f.default.getCurrentUser();
-    if (!(null == k ? void 0 : k.verified))
+        x = T ? A : E,
+        P = _.default.getCurrentUser();
+    if (!P?.verified)
         return void (0, a.mMO)(async () => {
             let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
             return (t) => {
-                let { onClose: n } = t,
-                    i = A(t, ["onClose"]);
-                return (0, r.jsx)(
-                    e,
-                    O(b({}, i), {
-                        onClose: () => {
-                            n(), null == w || w(!1);
-                        },
-                    }),
-                );
+                let { onClose: n, ...i } = t;
+                return (0, r.jsx)(e, {
+                    ...i,
+                    onClose: () => {
+                        n(), N?.(!1);
+                    },
+                });
             };
         });
     s.h.wait(() => {
-        s.h.dispatch({
-            type: "PAYMENT_MODAL_OPEN",
-        });
+        s.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
     });
-    let { enabled: U } = (0, c.ik)({
-            location: "openCollectiblesPaymentModal",
-        }),
-        G = () => {
-            (0, h.S)({
-                checkoutSucceeded: x,
-            }),
-                x ||
-                    p.default.track(g.HAw.PAYMENT_FLOW_CANCELED, {
+    let { enabled: M } = (0, u.ik)({ location: "openCollectiblesPaymentModal" }),
+        k = () => {
+            (0, h.S)({ checkoutSucceeded: D }),
+                D ||
+                    f.default.track(g.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: L,
                         payment_type: g.frM[g.VVm.ONE_TIME],
                         location: m,
-                        is_gift: E,
-                        sku_id: u,
-                        location_stack: _,
+                        is_gift: T,
+                        sku_id: c,
+                        location_stack: p,
                     }),
                 (0, o.ET)(),
                 (0, l.z)(),
-                null == w || w(x),
-                x &&
-                    (0, d.gB)({
-                        variantsReturnStyle: D,
-                    });
+                N?.(D),
+                D && (0, d.gB)({ variantsReturnStyle: O });
         },
-        V = () => {
-            null != t && T.has(t) && (0, a.OoC)(M);
+        U = () => {
+            null != t && I.has(t) && (0, a.OoC)(x);
         },
-        F = {
+        G = {
             loadId: L,
-            skuId: u,
-            analyticsLocations: _,
-            onStepChange: j,
-            modalKey: M,
-            isGift: E,
-            giftMessage: y,
-            giftingOrigin: v,
-            giftRecipient: C,
-            onClose: w,
-            onCloseCallback: G,
-            onCloseRequest: V,
+            skuId: c,
+            analyticsLocations: p,
+            onStepChange: w,
+            modalKey: x,
+            isGift: T,
+            giftMessage: v,
+            giftingOrigin: C,
+            giftRecipient: b,
+            onClose: N,
+            onCloseCallback: k,
+            onCloseRequest: U,
             onComplete: () => {
-                (x = !0), null == P || P();
+                (D = !0), R?.();
             },
         };
-    U ? N(F) : R(F);
+    M ? y(G) : S(G);
 }
-let N = (e) => {
+let y = (e) => {
         let {
             loadId: t,
             skuId: n,
@@ -204,35 +105,24 @@ let N = (e) => {
             isGift: s = !1,
             giftMessage: o,
             giftingOrigin: l,
-            giftRecipient: c,
+            giftRecipient: u,
             onClose: d,
-            onCloseCallback: f,
-            onCloseRequest: p,
-            onComplete: _,
+            onCloseCallback: _,
+            onCloseRequest: f,
+            onComplete: p,
         } = e;
-        return (0, u.Tx)().openCheckoutModal({
+        return (0, c.Tx)().openCheckoutModal({
             loadId: t,
             skuId: n,
             analyticsLocations: r,
-            giftContextProps: {
-                isGift: s,
-                giftMessage: o,
-                giftingOrigin: l,
-                giftRecipient: c,
-            },
+            giftContextProps: { isGift: s, giftMessage: o, giftingOrigin: l, giftRecipient: u },
             onClose: d,
-            onComplete: _,
-            flowSpecificOptions: {
-                onStepChange: i,
-            },
-            openModalOptions: {
-                modalKey: a,
-                onCloseCallback: f,
-                onCloseRequest: p,
-            },
+            onComplete: p,
+            flowSpecificOptions: { onStepChange: i },
+            openModalOptions: { modalKey: a, onCloseCallback: _, onCloseRequest: f },
         });
     },
-    R = (e) => {
+    S = (e) => {
         let {
             loadId: t,
             skuId: n,
@@ -240,41 +130,34 @@ let N = (e) => {
             onStepChange: s,
             modalKey: o,
             isGift: l = !1,
-            giftMessage: c,
-            giftingOrigin: u,
+            giftMessage: u,
+            giftingOrigin: c,
             giftRecipient: d,
-            onClose: f,
-            onCloseCallback: p,
-            onCloseRequest: _,
+            onClose: _,
+            onCloseCallback: f,
+            onCloseRequest: p,
             onComplete: h,
         } = e;
         return (0, a.mMO)(
             async () => (e) => {
-                let { onClose: a, returnRef: o } = e,
-                    p = A(e, ["onClose", "returnRef"]);
-                return (0, r.jsx)(
-                    m.Ay,
-                    O(b({}, p), {
-                        loadId: t,
-                        skuId: n,
-                        isGift: l,
-                        giftMessage: c,
-                        giftingOrigin: u,
-                        analyticsLocations: i,
-                        giftRecipient: d,
-                        onClose: (e) => {
-                            a(), null == f || f(e);
-                        },
-                        onComplete: h,
-                        returnRef: o,
-                        onStepChange: s,
-                    }),
-                );
+                let { onClose: a, returnRef: o, ...f } = e;
+                return (0, r.jsx)(m.Ay, {
+                    ...f,
+                    loadId: t,
+                    skuId: n,
+                    isGift: l,
+                    giftMessage: u,
+                    giftingOrigin: c,
+                    analyticsLocations: i,
+                    giftRecipient: d,
+                    onClose: (e) => {
+                        a(), _?.(e);
+                    },
+                    onComplete: h,
+                    returnRef: o,
+                    onStepChange: s,
+                });
             },
-            {
-                modalKey: o,
-                onCloseCallback: p,
-                onCloseRequest: _,
-            },
+            { modalKey: o, onCloseCallback: f, onCloseRequest: p },
         );
     };

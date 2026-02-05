@@ -1,8 +1,5 @@
-n.d(t, {
-    VQ: () => i,
-    kx: () => r,
-    wp: () => a,
-});
+"use strict";
+n.d(t, { VQ: () => i, kx: () => r, wp: () => a });
 var r = (function (e) {
     return (e.EMOJI = "emoji"), (e.GIF = "gif"), (e.STICKER = "sticker"), (e.SOUNDBOARD = "soundboard"), e;
 })({});

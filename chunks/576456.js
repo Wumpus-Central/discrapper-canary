@@ -1,31 +1,21 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => c });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n(503698),
+    a = n.n(s),
+    r = n(397927),
     o = n(985018),
-    c = n(647586);
-
-function u(e) {
+    d = n(647586);
+function c(e) {
     let { className: t, onJump: n } = e,
-        [i, u] = l.useState(!1);
-    return (0, r.jsx)(s.DUT, {
-        className: a()(c.n, t),
+        [s, c] = l.useState(!1);
+    return (0, i.jsx)(r.DUT, {
+        className: a()(d.n, t),
         onClick: (e) => {
-            u(!0), n(e);
+            c(!0), n(e);
         },
-        children: i
-            ? (0, r.jsx)(s.y$y, {
-                  type: s.y$y.Type.PULSING_ELLIPSIS,
-              })
-            : (0, r.jsx)(s.Text, {
-                  variant: "text-xs/medium",
-                  className: c.Q,
-                  children: o.intl.string(o.t.k5WiPf),
-              }),
+        children: s
+            ? (0, i.jsx)(r.y$y, { type: r.y$y.Type.PULSING_ELLIPSIS })
+            : (0, i.jsx)(r.Text, { variant: "text-xs/medium", className: d.Q, children: o.intl.string(o.t.k5WiPf) }),
     });
 }

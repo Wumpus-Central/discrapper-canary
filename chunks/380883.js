@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => v,
-});
+"use strict";
+r.d(t, { A: () => v });
 var a = r(1139),
     n = r(416886),
     s = r(106526),
@@ -13,7 +12,6 @@ var a = r(1139),
     f = r(790777),
     d = r(1514),
     h = ["getItemString", "keyPath", "labelRenderer", "styling", "value", "valueRenderer", "isCustomNode"];
-
 function p(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -26,7 +24,6 @@ function p(e, t) {
     }
     return r;
 }
-
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -62,14 +59,7 @@ var g = function (e) {
             value: c,
             valueRenderer: p,
         },
-        w = y(
-            y(y({}, v), A),
-            {},
-            {
-                data: c,
-                isCustomNode: g,
-            },
-        );
+        w = y(y(y({}, v), A), {}, { data: c, isCustomNode: g });
     switch (m) {
         case "Object":
         case "Error":

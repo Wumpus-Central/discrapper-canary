@@ -1,10 +1,7 @@
-n.d(t, {
-    S: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { S: () => o });
 var r = n(440703),
     i = n(341915);
-
 function a(e) {
     let t = {};
     for (let n of Object.keys(e)) {

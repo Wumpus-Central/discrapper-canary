@@ -1,3 +1,1 @@
-e.exports = {
-    a: "box_f8c98c",
-};
+e.exports = { a: "box_f8c98c" };

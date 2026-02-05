@@ -266,10 +266,7 @@ e.exports = function (e) {
         r = e.IDENT_RE,
         i = {
             variants: [
-                {
-                    match: t.concat(t.either(...n), t.lookahead(/\s*\(/)),
-                    className: "built_in",
-                },
+                { match: t.concat(t.either(...n), t.lookahead(/\s*\(/)), className: "built_in" },
                 {
                     relevance: 0,
                     match: t.concat(/\b(?!for|if|while)/, r, t.lookahead(/\s*\(/)),
@@ -277,20 +274,8 @@ e.exports = function (e) {
                 },
             ],
         },
-        a = {
-            match: [/new\s+/, r],
-            className: {
-                1: "keyword",
-                2: "class.title",
-            },
-        },
-        s = {
-            relevance: 0,
-            match: [/\./, r],
-            className: {
-                2: "property",
-            },
-        };
+        a = { match: [/new\s+/, r], className: { 1: "keyword", 2: "class.title" } },
+        s = { relevance: 0, match: [/\./, r], className: { 2: "property" } };
     return {
         name: "Processing",
         aliases: ["pde"],
@@ -366,20 +351,8 @@ e.exports = function (e) {
         },
         contains: [
             {
-                variants: [
-                    {
-                        match: [/class/, /\s+/, r, /\s+/, /extends/, /\s+/, r],
-                    },
-                    {
-                        match: [/class/, /\s+/, r],
-                    },
-                ],
-                className: {
-                    1: "keyword",
-                    3: "title.class",
-                    5: "keyword",
-                    7: "title.class.inherited",
-                },
+                variants: [{ match: [/class/, /\s+/, r, /\s+/, /extends/, /\s+/, r] }, { match: [/class/, /\s+/, r] }],
+                className: { 1: "keyword", 3: "title.class", 5: "keyword", 7: "title.class.inherited" },
             },
             a,
             i,

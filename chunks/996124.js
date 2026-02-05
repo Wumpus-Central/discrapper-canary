@@ -1,32 +1,17 @@
-n.d(t, {
-    Q: () => a,
-    _: () => r,
-});
-var i = n(652215),
-    l = n(790782),
-    s = n(985018);
-let r = (e) => [
-        {
-            label: s.intl.string(s.t["HVah/3"]),
-            value: i.orn.ALL_MESSAGES,
-        },
-        {
-            label: s.intl.string(s.t["tu+ZWJ"]),
-            value: i.orn.ONLY_MENTIONS,
-        },
-        {
-            label: s.intl.string(s.t.X4wWUi),
-            value: i.orn.NO_MESSAGES,
-        },
+i.d(t, { Q: () => r, _: () => a });
+var n = i(652215),
+    s = i(790782),
+    l = i(985018);
+let a = (e) => [
+        { label: l.intl.string(l.t["HVah/3"]), value: n.orn.ALL_MESSAGES },
+        { label: l.intl.string(l.t["tu+ZWJ"]), value: n.orn.ONLY_MENTIONS },
+        { label: l.intl.string(l.t.X4wWUi), value: n.orn.NO_MESSAGES },
     ],
-    a = (e) => [
+    r = (e) => [
+        { label: l.intl.string(l.t["HVah/3"]), value: s.e.ALL_MESSAGES },
         {
-            label: s.intl.string(s.t["HVah/3"]),
-            value: l.e.ALL_MESSAGES,
-        },
-        {
-            value: l.e.ONLY_MENTIONS,
-            label: s.intl.string(s.t["tu+ZWJ"]),
-            disabled: (null == e ? void 0 : e.notificationSetting) === i.orn.ALL_MESSAGES,
+            value: s.e.ONLY_MENTIONS,
+            label: l.intl.string(l.t["tu+ZWJ"]),
+            disabled: e?.notificationSetting === n.orn.ALL_MESSAGES,
         },
     ];

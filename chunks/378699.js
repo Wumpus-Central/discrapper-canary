@@ -1,18 +1,8 @@
 e.exports = function (e) {
     let t = "\\[=*\\[",
         n = "\\]=*\\]",
-        r = {
-            begin: t,
-            end: n,
-            contains: ["self"],
-        },
-        i = [
-            e.COMMENT("--(?!" + t + ")", "$"),
-            e.COMMENT("--" + t, n, {
-                contains: [r],
-                relevance: 10,
-            }),
-        ];
+        r = { begin: t, end: n, contains: ["self"] },
+        i = [e.COMMENT("--(?!" + t + ")", "$"), e.COMMENT("--" + t, n, { contains: [r], relevance: 10 })];
     return {
         name: "Lua",
         aliases: ["pluto"],
@@ -29,27 +19,14 @@ e.exports = function (e) {
                 beginKeywords: "function",
                 end: "\\)",
                 contains: [
-                    e.inherit(e.TITLE_MODE, {
-                        begin: "([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*",
-                    }),
-                    {
-                        className: "params",
-                        begin: "\\(",
-                        endsWithParent: !0,
-                        contains: i,
-                    },
+                    e.inherit(e.TITLE_MODE, { begin: "([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*" }),
+                    { className: "params", begin: "\\(", endsWithParent: !0, contains: i },
                 ].concat(i),
             },
             e.C_NUMBER_MODE,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: t,
-                end: n,
-                contains: [r],
-                relevance: 5,
-            },
+            { className: "string", begin: t, end: n, contains: [r], relevance: 5 },
         ]),
     };
 };

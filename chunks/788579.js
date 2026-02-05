@@ -1,65 +1,50 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968),
+n.d(t, { A: () => f });
+var i = n(627968),
     l = n(64700),
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
+    s = n(735438),
+    a = n.n(s),
+    r = n(311907),
     o = n(397927),
-    c = n(262763),
-    u = n(753727),
-    d = n(721592),
-    f = n(406704),
-    p = n(576705),
-    h = n(977997),
-    b = n(203982),
-    g = n(58736),
-    m = n(652215),
-    A = n(985018);
-let y = l.memo(function (e) {
+    d = n(262763),
+    c = n(753727),
+    u = n(721592),
+    h = n(406704),
+    A = n(576705),
+    g = n(977997),
+    m = n(203982),
+    p = n(58736),
+    _ = n(652215),
+    x = n(985018);
+let f = l.memo(function (e) {
     let { channel: t } = e,
-        n = (0, u.A)(),
-        i = (0, s.bG)([h.A], () => h.A.isInChannel(t.id)),
-        y = (0, s.bG)([h.A], () => !a().isEmpty(h.A.getVoiceStatesForChannel(t.id))),
-        O = (0, s.bG)([p.A], () => p.A.can(m.xBc.CONNECT, t)),
-        { needSubscriptionToAccess: j } = (0, d.A)(t.id),
-        v = (0, f.Id)(t),
-        x = l.useCallback(() => {
-            c.A.handleVoiceConnect({
-                channel: t,
-                connected: i,
-                needSubscriptionToAccess: j,
-                locked: !1,
-            });
-        }, [t, i, j]);
+        n = (0, c.A)(),
+        s = (0, r.bG)([g.A], () => g.A.isInChannel(t.id)),
+        f = (0, r.bG)([g.A], () => !a().isEmpty(g.A.getVoiceStatesForChannel(t.id))),
+        E = (0, r.bG)([A.A], () => A.A.can(_.xBc.CONNECT, t)),
+        { needSubscriptionToAccess: C } = (0, u.A)(t.id),
+        I = (0, h.Id)(t),
+        S = l.useCallback(() => {
+            d.A.handleVoiceConnect({ channel: t, connected: s, needSubscriptionToAccess: C, locked: !1 });
+        }, [t, s, C]);
     return (l.useEffect(
         () => (
-            b._.subscribe(m.jej.CALL_START, x),
+            m._.subscribe(_.jej.CALL_START, S),
             () => {
-                b._.unsubscribe(m.jej.CALL_START, x);
+                m._.unsubscribe(_.jej.CALL_START, S);
             }
         ),
-        [x],
+        [S],
     ),
-    f.io.useExperiment(
-        {
-            guildId: t.guild_id,
-            location: "63250c_1",
-        },
-        {
-            autoTrackExposure: !1,
-        },
-    ).enabled &&
+    h.io.useExperiment({ guildId: t.guild_id, location: "63250c_1" }, { autoTrackExposure: !1 }).enabled &&
         !n &&
-        !i &&
-        O &&
-        v &&
+        !s &&
+        E &&
+        I &&
         t.isVocalThread())
-        ? (0, r.jsx)(g.Ay.Icon, {
+        ? (0, i.jsx)(p.Ay.Icon, {
               icon: o._jp,
-              onClick: x,
-              tooltip: y ? A.intl.string(A.t.fdEeb5) : A.intl.string(A.t.focH1t),
+              onClick: S,
+              tooltip: f ? x.intl.string(x.t.fdEeb5) : x.intl.string(x.t.focH1t),
           })
         : null;
 });

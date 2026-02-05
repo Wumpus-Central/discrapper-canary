@@ -1,51 +1,27 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(616093);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = {};
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153),
+    a = n(616093);
+let s = {};
+function o(e) {
     let { labFeature: t, enabled: n } = e;
-    l[t] = n;
+    s[t] = n;
 }
-class u extends (r = i.Ay.DeviceSettingsStore) {
+class l extends r.Ay.DeviceSettingsStore {
+    static displayName = "LabFeatureStore";
+    static persistKey = "LabFeatureStore";
     getUserAgnosticState() {
-        return {
-            toggleStates: l,
-        };
+        return { toggleStates: s };
     }
     initialize(e) {
-        for (var t in s.A) {
-            var n, r;
-            l[t] = null != (n = null == e || null == (r = e.toggleStates) ? void 0 : r[t]) && n;
-        }
+        for (var t in a.A) s[t] = e?.toggleStates?.[t] ?? !1;
     }
     get(e) {
-        var t;
-        return null != (t = l[e]) && t;
+        return s[e] ?? !1;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return (s[e] = t), t;
     }
 }
-o(u, "displayName", "LabFeatureStore"), o(u, "persistKey", "LabFeatureStore");
-let d = new u(a.h, {
-    LAB_FEATURE_TOGGLE: c,
-});
+let u = new l(i.h, { LAB_FEATURE_TOGGLE: o });

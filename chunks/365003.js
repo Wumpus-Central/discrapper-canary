@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(281445);
-
-function a(e, t) {
-    return null == e || e !== r.X.SHOCKBYTE ? null : null != t ? "".concat(t, "/support") : null;
+n.d(t, { A: () => i });
+var a = n(281445);
+function i(e, t) {
+    return null == e || e !== a.X.SHOCKBYTE ? null : null != t ? `${t}/support` : null;
 }

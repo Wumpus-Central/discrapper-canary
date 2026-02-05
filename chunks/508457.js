@@ -1,122 +1,64 @@
-r.d(t, {
-    default: () => b,
-});
-var a = r(627968),
-    n = r(64700),
-    o = r(942381),
-    c = r(397927),
-    i = r(442433),
-    l = r(259788),
-    u = r(985018);
-
+i.d(a, { default: () => p });
+var t = i(627968),
+    r = i(64700),
+    l = i(942381),
+    n = i(397927),
+    u = i(442433),
+    s = i(259788),
+    o = i(985018);
 function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                var a;
-                (a = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
-            });
-    }
-    return e;
-}
-
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, a);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
-        e
-    );
-}
-
-function b(e) {
-    let t,
-        r,
-        { onSelect: b, onClose: f } = e,
-        y =
-            ((t = l.Ay.useState((e) => e.timeToLiveMs, o.x)),
-            (0, a.jsx)(c.aK1, {
+    let a,
+        i,
+        { onSelect: p, onClose: c } = e,
+        d =
+            ((a = s.Ay.useState((e) => e.timeToLiveMs, l.x)),
+            (0, t.jsx)(n.aK1, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Live",
-                control: (e, r) =>
-                    (0, a.jsx)(
-                        c.i42,
-                        s(p({}, e), {
-                            ref: r,
-                            value: t,
-                            maxValue: l.nl,
-                            minValue: l.jc,
-                            renderValue: (e) => "".concat(e, "ms"),
-                            onChange: (e) => (0, l.nj)(e),
-                            "aria-label": "Time To Live",
-                        }),
-                    ),
+                control: (e, i) =>
+                    (0, t.jsx)(n.i42, {
+                        ...e,
+                        ref: i,
+                        value: a,
+                        maxValue: s.nl,
+                        minValue: s.jc,
+                        renderValue: (e) => `${e}ms`,
+                        onChange: (e) => (0, s.nj)(e),
+                        "aria-label": "Time To Live",
+                    }),
             })),
-        O =
-            ((r = l.Ay.useState((e) => e.reappearTimeMs, o.x)),
-            (0, a.jsx)(c.aK1, {
+        m =
+            ((i = s.Ay.useState((e) => e.reappearTimeMs, l.x)),
+            (0, t.jsx)(n.aK1, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Reappear",
-                control: (e, t) =>
-                    (0, a.jsx)(
-                        c.i42,
-                        s(p({}, e), {
-                            ref: t,
-                            value: r,
-                            maxValue: l.J5,
-                            minValue: l.GI,
-                            renderValue: (e) => "".concat(e, "ms"),
-                            onChange: (e) => (0, l.g_)(e),
-                            "aria-label": "Time To Reappear",
-                        }),
-                    ),
+                control: (e, a) =>
+                    (0, t.jsx)(n.i42, {
+                        ...e,
+                        ref: a,
+                        value: i,
+                        maxValue: s.J5,
+                        minValue: s.GI,
+                        renderValue: (e) => `${e}ms`,
+                        onChange: (e) => (0, s.g_)(e),
+                        "aria-label": "Time To Reappear",
+                    }),
             })),
-        j = n.useRef(f);
+        f = r.useRef(c);
     return (
-        n.useEffect(() => {
-            j.current = f;
+        r.useEffect(() => {
+            f.current = c;
         }),
-        n.useEffect(
-            () => () => {
-                var e;
-                return null == (e = j.current) ? void 0 : e.call(j);
-            },
-            [],
-        ),
-        (0, a.jsxs)(c.W1t, {
+        r.useEffect(() => () => f.current?.(), []),
+        (0, t.jsxs)(n.W1t, {
             "data-menu-migrated-auto": !0,
             navId: "overlay-click-zone-debug-context-menu",
-            onClose: i.Z_,
-            "aria-label": u.intl.string(u.t.tPfVWi),
-            onSelect: b,
-            children: [y, O],
+            onClose: u.Z_,
+            "aria-label": o.intl.string(o.t.tPfVWi),
+            onSelect: p,
+            children: [d, m],
         })
     );
 }

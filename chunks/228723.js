@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header__1d5fc",
     Sy: "horizontalAuthBox__1d5fc",

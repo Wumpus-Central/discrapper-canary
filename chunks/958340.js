@@ -1,66 +1,33 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153);
+let a = 0,
+    s = {};
+function o(e) {
+    return (s[e.guildId] = { type: "loading" }), !1;
 }
-let o = 0,
-    l = {};
-
-function c(e) {
-    return (
-        (l[e.guildId] = {
-            type: "loading",
-        }),
-        !1
-    );
+function l(e) {
+    (s[e.guildId] = e.guildInfo), a++;
 }
-
 function u(e) {
-    (l[e.guildId] = e.guildInfo), o++;
+    return (s[e.guildId] = { type: "failed" }), !1;
 }
-
-function d(e) {
-    return (
-        (l[e.guildId] = {
-            type: "failed",
-        }),
-        !1
-    );
-}
-class f extends (r = i.Ay.Store) {
+class c extends r.Ay.Store {
+    static displayName = "BasicGuildStore";
     getGuild(e) {
-        let t = l[e];
+        let t = s[e];
         if (null != t && !("type" in t)) return t;
     }
     isGuildFetching(e) {
-        let t = l[e];
+        let t = s[e];
         return null != t && "type" in t && "loading" === t.type;
     }
     getGuildOrStatus(e) {
-        return l[e];
+        return s[e];
     }
     getVersion() {
-        return o;
+        return a;
     }
 }
-s(f, "displayName", "BasicGuildStore");
-let p = new f(a.h, {
-    BASIC_GUILD_FETCH: c,
-    BASIC_GUILD_FETCH_SUCCESS: u,
-    BASIC_GUILD_FETCH_FAILURE: d,
-});
+let d = new c(i.h, { BASIC_GUILD_FETCH: o, BASIC_GUILD_FETCH_SUCCESS: l, BASIC_GUILD_FETCH_FAILURE: u });

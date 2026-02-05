@@ -1,28 +1,24 @@
-n.d(e, {
-    A: () => b,
-}),
-    n(896048);
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(15285),
-    c = n(194871),
-    o = n(715671),
-    u = n(652215),
-    d = n(985018);
-
-function b(t) {
-    let e = (0, i.bG)([a.Ay], () => a.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
-        [n, b] = (0, i.yK)([c.A], () => [c.A.isUpToDate(t.id, t.branchId), c.A.shouldPatch(t.id, t.branchId)], [
+i.d(n, { A: () => u });
+var l = i(627968);
+i(64700);
+var a = i(311907),
+    e = i(397927),
+    r = i(15285),
+    d = i(194871),
+    c = i(715671),
+    A = i(652215),
+    s = i(985018);
+function u(t) {
+    let n = (0, a.bG)([r.Ay], () => r.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+        [i, u] = (0, a.yK)([d.A], () => [d.A.isUpToDate(t.id, t.branchId), d.A.shouldPatch(t.id, t.branchId)], [
             t.branchId,
             t.id,
         ]);
-    return n && !e && b
-        ? (0, r.jsx)(l.Drp, {
+    return i && !n && u
+        ? (0, l.jsx)(e.Drp, {
               id: "repair",
-              label: d.intl.string(d.t.CKCcdz),
-              action: () => o.repairApplication(t.id, t.branchId, u.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+              label: s.intl.string(s.t.CKCcdz),
+              action: () => c.repairApplication(t.id, t.branchId, A.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
           })
         : null;
 }

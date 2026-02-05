@@ -1,86 +1,63 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(280513),
-    c = n(311907),
-    o = n(397927),
-    d = n(837011),
+    o = n(311907),
+    d = n(397927),
+    c = n(837011),
     u = n(348943),
-    f = n(576055),
+    m = n(576055),
     g = n(997509),
-    b = n(665346),
-    m = n(652215),
-    p = n(985018),
-    x = n(7791);
-
-function h(e) {
-    var t;
-    let { profile: n, canManageGuild: l } = e,
-        h = n.id,
-        j = a.i.VISIBLE.has(n.visibility),
-        O = (0, c.bG)([d.A], () => {
-            var e;
-            return (null == (e = d.A.getProfile(h)) ? void 0 : e.visibility) === u.n.PUBLIC_WITH_RECRUITMENT;
-        }, [h]),
-        y = i.useRef(null);
-    (0, b.A)(y, m.nd0.PROFILE_VISIBILITY);
-    let v = i.useCallback(() => {
-            j
-                ? g.A.updateGuildProfile(h, {
-                      visibility: u.n.RESTRICTED,
-                  })
-                : g.A.updateGuildProfile(h, {
-                      visibility: O ? u.n.PUBLIC_WITH_RECRUITMENT : u.n.PUBLIC,
-                  });
-        }, [h, O, j]),
-        A = i.useCallback(() => {
-            g.A.setSection(m.BEX.ACCESS, m.nd0.ACCESS_DISCOVERABLE);
+    x = n(665346),
+    h = n(652215),
+    _ = n(985018),
+    A = n(7791);
+function p(e) {
+    let { profile: t, canManageGuild: n } = e,
+        l = t.id,
+        p = a.i.VISIBLE.has(t.visibility),
+        f = (0, o.bG)([c.A], () => c.A.getProfile(l)?.visibility === u.n.PUBLIC_WITH_RECRUITMENT, [l]),
+        j = s.useRef(null);
+    (0, x.A)(j, h.nd0.PROFILE_VISIBILITY);
+    let N = s.useCallback(() => {
+            p
+                ? g.A.updateGuildProfile(l, { visibility: u.n.RESTRICTED })
+                : g.A.updateGuildProfile(l, { visibility: f ? u.n.PUBLIC_WITH_RECRUITMENT : u.n.PUBLIC });
+        }, [l, f, p]),
+        E = s.useCallback(() => {
+            g.A.setSection(h.BEX.ACCESS, h.nd0.ACCESS_DISCOVERABLE);
         }, []),
-        E = null == (t = n.features) ? void 0 : t.includes(m.GuildFeatures.DISCOVERABLE);
-    return (0, r.jsxs)("div", {
-        className: x.Im,
-        ref: y,
+        b = t.features?.includes(h.GuildFeatures.DISCOVERABLE);
+    return (0, i.jsxs)("div", {
+        className: A.Im,
+        ref: j,
         children: [
-            (0, r.jsxs)("div", {
-                className: x.fi,
+            (0, i.jsxs)("div", {
+                className: A.fi,
                 children: [
-                    (0, r.jsx)(o.dOG, {
-                        label: p.intl.string(p.t.fjHWen),
-                        description: p.intl.string(p.t.J1YOV6),
-                        checked: !j,
-                        onChange: v,
-                        disabled: E || !l,
+                    (0, i.jsx)(d.dOG, {
+                        label: _.intl.string(_.t.fjHWen),
+                        description: _.intl.string(_.t.J1YOV6),
+                        checked: !p,
+                        onChange: N,
+                        disabled: b || !n,
                     }),
-                    E &&
-                        (0, r.jsx)(o.Text, {
+                    b &&
+                        (0, i.jsx)(d.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: p.intl.format(p.t.R8jY9g, {
-                                accessLink: (e, t) =>
-                                    (0, r.jsx)(
-                                        o.MzZ,
-                                        {
-                                            onClick: A,
-                                            children: e,
-                                        },
-                                        t,
-                                    ),
+                            children: _.intl.format(_.t.R8jY9g, {
+                                accessLink: (e, t) => (0, i.jsx)(d.MzZ, { onClick: E, children: e }, t),
                             }),
                         }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: s()(x.fi, {
-                    [x.Rl]: j,
-                }),
-                children: (0, r.jsx)(f.A, {
-                    guildId: h,
-                    name: null,
-                }),
+            (0, i.jsx)("div", {
+                className: r()(A.fi, { [A.Rl]: p }),
+                children: (0, i.jsx)(m.A, { guildId: l, name: null }),
             }),
         ],
     });

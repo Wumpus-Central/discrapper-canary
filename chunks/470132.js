@@ -1,7 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.Hue = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.Hue = void 0);
 var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
@@ -25,15 +23,9 @@ var n = (function () {
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(768089));
-
 function s(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
-
 function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -41,7 +33,6 @@ function u(e, t) {
 var c = (t.Hue = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
@@ -64,12 +55,7 @@ var c = (t.Hue = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         n(t, [
@@ -106,10 +92,7 @@ var c = (t.Hue = (function (e) {
                                         height: "100%",
                                         borderRadius: this.props.radius,
                                     },
-                                    pointer: {
-                                        position: "absolute",
-                                        left: (100 * this.props.hsl.h) / 360 + "%",
-                                    },
+                                    pointer: { position: "absolute", left: (100 * this.props.hsl.h) / 360 + "%" },
                                     slider: {
                                         marginTop: "1px",
                                         width: "4px",
@@ -121,21 +104,14 @@ var c = (t.Hue = (function (e) {
                                     },
                                 },
                                 vertical: {
-                                    pointer: {
-                                        left: "0px",
-                                        top: -((100 * this.props.hsl.h) / 360) + 100 + "%",
-                                    },
+                                    pointer: { left: "0px", top: -((100 * this.props.hsl.h) / 360) + 100 + "%" },
                                 },
                             },
-                            {
-                                vertical: "vertical" === r,
-                            },
+                            { vertical: "vertical" === r },
                         );
                     return a.default.createElement(
                         "div",
-                        {
-                            style: n.hue,
-                        },
+                        { style: n.hue },
                         a.default.createElement(
                             "div",
                             {
@@ -155,14 +131,10 @@ var c = (t.Hue = (function (e) {
                             ),
                             a.default.createElement(
                                 "div",
-                                {
-                                    style: n.pointer,
-                                },
+                                { style: n.pointer },
                                 this.props.pointer
                                     ? a.default.createElement(this.props.pointer, this.props)
-                                    : a.default.createElement("div", {
-                                          style: n.slider,
-                                      }),
+                                    : a.default.createElement("div", { style: n.slider }),
                             ),
                         ),
                     );

@@ -1,3 +1,1 @@
-i.exports = {
-    Q: "content_c7fee2",
-};
+i.exports = { Q: "content_c7fee2" };

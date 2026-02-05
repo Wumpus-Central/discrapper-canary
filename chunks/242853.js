@@ -1,73 +1,54 @@
-l.d(t, {
-    A: () => x,
-});
-var n = l(627968);
+l.d(t, { A: () => h });
+var s = l(627968);
 l(64700);
 var a = l(503698),
-    s = l.n(a),
-    r = l(158954),
-    i = l(397927),
+    n = l.n(a),
+    i = l(158954),
+    r = l(397927),
     o = l(898985),
-    c = l(922301),
-    d = l(750112),
+    d = l(922301),
+    c = l(750112),
     u = l(750656),
-    f = l(927961),
-    m = l(985018),
-    b = l(880203),
-    p = l(317857);
-
-function x(e) {
+    m = l(927961),
+    _ = l(985018),
+    x = l(880203),
+    g = l(317857);
+function h(e) {
     let { selectedEffectId: t, setSelectedEffectId: l, className: a } = e;
-    return (0, n.jsxs)("div", {
+    return (0, s.jsxs)("div", {
         className: a,
         children: [
-            (0, n.jsxs)(r.DZT, {
+            (0, s.jsxs)(i.DZT, {
                 variant: "heading-md/semibold",
-                className: b.s,
+                className: x.s,
                 children: [
-                    m.intl.string(f.default["1wilM1"]),
-                    (0, n.jsx)(i.tvc, {
-                        size: "xs",
-                        color: i.LU0.colors.TEXT_DEFAULT,
-                    }),
+                    _.intl.string(m.default["1wilM1"]),
+                    (0, s.jsx)(r.tvc, { size: "xs", color: r.LU0.colors.TEXT_DEFAULT }),
                 ],
             }),
-            (0, n.jsx)(r.BJc, {
+            (0, s.jsx)(i.BJc, {
                 direction: "horizontal",
                 align: "center",
                 wrap: !0,
                 gap: 8,
-                children: u.re.map((e) =>
-                    (0, n.jsx)(
-                        g,
-                        {
-                            effectId: e,
-                            selected: e === t,
-                            onClick: () => l(e),
-                        },
-                        e,
-                    ),
-                ),
+                children: u.re.map((e) => (0, s.jsx)(p, { effectId: e, selected: e === t, onClick: () => l(e) }, e)),
             }),
         ],
     });
 }
-
-function g(e) {
+function p(e) {
     let { effectId: t, selected: l, onClick: a } = e,
-        r = (0, o._)(t);
-    return (0, n.jsx)(
-        i.DUT,
+        i = (0, o._)(t);
+    return (0, s.jsx)(
+        r.DUT,
         {
-            className: s()(p.Tw, {
-                [p.wH]: l,
-            }),
+            className: n()(g.Tw, { [g.wH]: l }),
             onClick: a,
-            children: (0, n.jsx)(d.A, {
-                userName: r.name,
-                effectDisplayType: c.G.STATIC,
-                displayNameStyles: r.previewStyles,
-                textClassName: p.tr,
+            children: (0, s.jsx)(c.A, {
+                userName: i.name,
+                effectDisplayType: d.G.STATIC,
+                displayNameStyles: i.previewStyles,
+                textClassName: g.tr,
                 inProfile: !0,
             }),
         },

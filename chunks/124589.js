@@ -1,39 +1,30 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(627968);
-n(64700);
-var l = n(397927),
-    i = n(985018);
-
-function a(e) {
-    let { tabs: t, selectedTab: n, onTabSelect: a, onClose: s } = e;
-    return (0, r.jsx)(l.W1t, {
+a.d(t, { A: () => l });
+var n = a(627968);
+a(64700);
+var i = a(397927),
+    s = a(985018);
+function l(e) {
+    let { tabs: t, selectedTab: a, onTabSelect: l, onClose: r } = e;
+    return (0, n.jsx)(i.W1t, {
         "data-menu-migrated-auto": !0,
         navId: "global-discovery-tabs-overflow-menu",
-        "aria-label": i.intl.string(i.t.riPnr0),
+        "aria-label": s.intl.string(s.t.riPnr0),
         hideScroller: !0,
-        onClose: s,
-        onSelect: s,
-        children: (0, r.jsx)(
-            l.rXV,
+        onClose: r,
+        onSelect: r,
+        children: (0, n.jsx)(
+            i.rXV,
             {
                 children: t.map((e) => {
-                    let { id: t, label: i } = e;
-                    return (0, r.jsx)(
-                        l.Drp,
+                    let { id: t, label: s } = e;
+                    return (0, n.jsx)(
+                        i.Drp,
                         {
                             id: t,
-                            label: i,
-                            icon: t === n ? l.yr3 : void 0,
-                            leadingAccessory:
-                                t === n
-                                    ? {
-                                          type: "icon",
-                                          icon: l.yr3,
-                                      }
-                                    : void 0,
-                            action: () => a(t),
+                            label: s,
+                            icon: t === a ? i.yr3 : void 0,
+                            leadingAccessory: t === a ? { type: "icon", icon: i.yr3 } : void 0,
+                            action: () => l(t),
                         },
                         t,
                     );

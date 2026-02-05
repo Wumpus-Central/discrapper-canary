@@ -1,29 +1,26 @@
-e.d(t, {
-    A: () => b,
-});
-var i = e(627968);
-e(64700);
-var l = e(311907),
-    r = e(477782),
-    a = e(956793),
-    s = e(796774),
-    c = e(984813),
-    o = e(576705),
-    d = e(309010),
-    u = e(652215),
-    A = e(985018);
-
-function b(n, t) {
-    let e = (0, l.bG)([o.A], () => o.A.can(u.xBc.CONNECT, n), [n]),
-        b = (0, l.bG)([d.A], () => d.A.getVoiceChannelId()),
-        h = (0, c.mz)(t),
-        g = b === n.id;
-    return n.isGuildVocal() && e && null != h && !g
-        ? (0, i.jsx)(r.Dr, {
+t.d(n, { A: () => E });
+var i = t(627968);
+t(64700);
+var r = t(311907),
+    l = t(477782),
+    a = t(956793),
+    s = t(796774),
+    u = t(984813),
+    o = t(576705),
+    d = t(309010),
+    c = t(652215),
+    A = t(985018);
+function E(e, n) {
+    let t = (0, r.bG)([o.A], () => o.A.can(c.xBc.CONNECT, e), [e]),
+        E = (0, r.bG)([d.A], () => d.A.getVoiceChannelId()),
+        v = (0, u.mz)(n),
+        g = E === e.id;
+    return e.isGuildVocal() && t && null != v && !g
+        ? (0, i.jsx)(l.Dr, {
               id: "join-muted-custom-join-sound",
               label: A.intl.string(A.t.saLMWc),
               action: () => {
-                  (0, s.CX)(n.id), a.default.selectVoiceChannel(n.id);
+                  (0, s.CX)(e.id), a.default.selectVoiceChannel(e.id);
               },
           })
         : null;

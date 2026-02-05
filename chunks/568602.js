@@ -1,28 +1,15 @@
-n.d(t, {
-    b: () => u,
-}),
-    n(896048);
-var r,
-    i = n(627968),
-    a = n(64700),
-    s = n(735438),
-    o = n.n(s),
-    l = n(775602);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class u extends (r = a.Component) {
+"use strict";
+n.d(t, { b: () => l });
+var r = n(627968),
+    i = n(64700),
+    a = n(735438),
+    s = n.n(a),
+    o = n(775602);
+class l extends i.Component {
+    static defaultProps = { isShaking: !0, intensity: 5 };
+    ref = i.createRef();
+    animationFrame;
+    shouldRenderFrame = !0;
     componentDidMount() {
         this.props.isShaking && this.startShaking();
     }
@@ -40,36 +27,19 @@ class u extends (r = a.Component) {
         let e = this.ref.current;
         null != e && (e.style.transform = "");
     }
+    animate = () => {
+        let { intensity: e, isShaking: t } = this.props;
+        if (!t) return;
+        let n = this.ref.current;
+        if (this.shouldRenderFrame && null != n) {
+            let t = s().random(-e, e, !0),
+                r = s().random(-e, e, !0);
+            n.style.transform = o.A.useReducedMotion ? "" : `translate3d(${t}px,${r}px,0px)`;
+        }
+        (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
+    };
     render() {
         let { className: e, children: t } = this.props;
-        return (0, i.jsx)("div", {
-            className: e,
-            ref: this.ref,
-            children: t,
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            c(this, "ref", a.createRef()),
-            c(this, "animationFrame", void 0),
-            c(this, "shouldRenderFrame", !0),
-            c(this, "animate", () => {
-                let { intensity: e, isShaking: t } = this.props;
-                if (!t) return;
-                let n = this.ref.current;
-                if (this.shouldRenderFrame && null != n) {
-                    let t = o().random(-e, e, !0),
-                        r = o().random(-e, e, !0);
-                    n.style.transform = l.A.useReducedMotion
-                        ? ""
-                        : "translate3d(".concat(t, "px,").concat(r, "px,0px)");
-                }
-                (this.shouldRenderFrame = !this.shouldRenderFrame),
-                    (this.animationFrame = requestAnimationFrame(this.animate));
-            });
+        return (0, r.jsx)("div", { className: e, ref: this.ref, children: t });
     }
 }
-c(u, "defaultProps", {
-    isShaking: !0,
-    intensity: 5,
-});

@@ -1,9 +1,8 @@
+"use strict";
 var r = n(839036)("%Reflect.construct%", !0),
     i = n(173081);
 try {
-    i({}, "", {
-        "[[Get]]": function () {},
-    });
+    i({}, "", { "[[Get]]": function () {} });
 } catch (e) {
     i = null;
 }

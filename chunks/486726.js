@@ -13,11 +13,9 @@ function t(e, t, n, r, i, a, s) {
             r = arguments;
         return new Promise(function (i, a) {
             var s = e.apply(n, r);
-
             function o(e) {
                 t(s, i, a, o, l, "next", e);
             }
-
             function l(e) {
                 t(s, i, a, o, l, "throw", e);
             }

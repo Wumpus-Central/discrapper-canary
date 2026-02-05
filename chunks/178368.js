@@ -1,124 +1,58 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(166403);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153),
+    a = n(166403);
+let s = !1,
+    o = !1,
+    l = {};
+function u() {
+    o = !0;
 }
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = !1,
-    f = !1,
-    p = {};
-
-function _() {
-    f = !0;
-}
-
-function h(e) {
+function c(e) {
     let { guildBoostSlots: t } = e;
-    (p = {}),
+    (l = {}),
         t.forEach((e) => {
-            p[e.id] = e;
+            l[e.id] = e;
         }),
-        (f = !1),
-        (d = !0);
+        (o = !1),
+        (s = !0);
 }
-
-function m(e) {
+function d(e) {
     let { guildBoostSlot: t } = e;
-    p = u(l({}, p), {
-        [t.id]: t,
-    });
+    l = { ...l, [t.id]: t };
 }
-
-function g() {
-    (p = {}), (d = !1), (f = !1);
+function _() {
+    (l = {}), (s = !1), (o = !1);
 }
-
-function E() {
+function f() {
     let e = {};
-    for (let t of Object.values(p)) (e[t.id] = t), (t.subscription = s.A.getSubscriptionById(t.subscriptionId));
-    p = e;
+    for (let t of Object.values(l)) (e[t.id] = t), (t.subscription = a.A.getSubscriptionById(t.subscriptionId));
+    l = e;
 }
-class b extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "GuildBoostSlotStore";
     initialize() {
-        this.syncWith([s.A], E);
+        this.syncWith([a.A], f);
     }
     get hasFetched() {
-        return d;
+        return s;
     }
     get isFetching() {
-        return f;
+        return o;
     }
     get boostSlots() {
-        return p;
+        return l;
     }
     getGuildBoostSlot(e) {
-        return p[e];
+        return l[e];
     }
 }
-o(b, "displayName", "GuildBoostSlotStore");
-let y = new b(a.h, {
-    GUILD_BOOST_SLOTS_FETCH: _,
-    GUILD_BOOST_SLOTS_FETCH_SUCCESS: h,
-    GUILD_BOOST_SLOT_UPDATE_SUCCESS: m,
-    GUILD_BOOST_SLOT_CREATE: m,
-    GUILD_BOOST_SLOT_UPDATE: m,
-    LOGOUT: g,
+let h = new p(i.h, {
+    GUILD_BOOST_SLOTS_FETCH: u,
+    GUILD_BOOST_SLOTS_FETCH_SUCCESS: c,
+    GUILD_BOOST_SLOT_UPDATE_SUCCESS: d,
+    GUILD_BOOST_SLOT_CREATE: d,
+    GUILD_BOOST_SLOT_UPDATE: d,
+    LOGOUT: _,
 });

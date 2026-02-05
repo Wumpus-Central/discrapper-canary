@@ -1,6 +1,5 @@
-n.d(t, {
-    Y: () => a,
-});
+"use strict";
+n.d(t, { Y: () => a });
 var r = n(198768),
     i = n(371926);
 class a {

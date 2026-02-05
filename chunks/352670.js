@@ -1,35 +1,22 @@
-n.d(t, {
-    Y: () => a,
-}),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(747238),
-    n(812715);
-var r = n(64700),
-    i = n(960488),
-    l = n(458518);
-
-function a() {
-    let e = (0, l.o)(),
-        t = (0, i.W6)(),
-        n = r.useRef(null),
-        a = r.useCallback(
-            (r) => {
-                var i;
-                let l = new URLSearchParams(null != (i = n.current) ? i : e);
-                for (let [e, t] of Object.entries(r)) null == t ? l.delete(e) : l.set(e, t);
-                (n.current = l),
-                    t.replace({
-                        search: l.toString(),
-                    }),
+n.d(t, { Y: () => l }), n(323874), n(14289), n(35956);
+var i = n(64700),
+    r = n(960488),
+    a = n(458518);
+function l() {
+    let e = (0, a.o)(),
+        t = (0, r.W6)(),
+        n = i.useRef(null),
+        l = i.useCallback(
+            (i) => {
+                let r = new URLSearchParams(n.current ?? e);
+                for (let [e, t] of Object.entries(i)) null == t ? r.delete(e) : r.set(e, t);
+                (n.current = r),
+                    t.replace({ search: r.toString() }),
                     Promise.resolve().then(() => {
                         n.current = null;
                     });
             },
             [e, t],
         );
-    return [e, a];
+    return [e, l];
 }

@@ -1,158 +1,91 @@
-n.d(t, {
-    A: () => E,
-});
-var r = n(627968);
+n.d(t, { A: () => v });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(456060),
+var l = n(311907),
+    a = n(397927),
+    r = n(456060),
     s = n(793574),
     o = n(688810),
-    c = n(572211),
-    u = n(354287),
-    d = n(112150),
-    p = n(15285),
-    m = n(72432),
-    f = n(616356),
-    g = n(760751),
-    h = n(383501),
-    _ = n(486020),
-    b = n(723702),
-    A = n(661191),
-    y = n(820672),
-    v = n(768349),
-    x = n(426127),
-    O = n(985018);
-
-function E(e) {
-    let { currentUserId: t, message: E, application: j, channel: C, analyticsLocations: I, onView: S } = e,
-        { staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P } = (0, d.f)(j),
-        w = _.Ay.getApplicationIconURL({
-            id: j.id,
-            icon: j.icon,
-        }),
-        R = (0, i.bG)([p.Ay, g.A], () =>
-            p.Ay.getVisibleRunningGames().find((e) => {
+    d = n(572211),
+    c = n(354287),
+    u = n(112150),
+    m = n(15285),
+    _ = n(72432),
+    h = n(616356),
+    p = n(760751),
+    g = n(383501),
+    A = n(486020),
+    f = n(723702),
+    x = n(661191),
+    E = n(820672),
+    C = n(768349),
+    I = n(426127),
+    T = n(985018);
+function v(e) {
+    let { currentUserId: t, message: v, application: N, channel: S, analyticsLocations: b, onView: y } = e,
+        { staticBannerSrc: j, videoBannerSrc: R, bannerAspectRatio: L } = (0, u.f)(N),
+        M = A.Ay.getApplicationIconURL({ id: N.id, icon: N.icon }),
+        O = (0, l.bG)([m.Ay, p.A], () =>
+            m.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
-                if (t === j.id) return !0;
-                let n = g.A.getGameByApplication(j);
+                if (t === N.id) return !0;
+                let n = p.A.getGameByApplication(N);
                 return null != n && t === n.id;
             }),
         ),
-        D = (0, i.bG)([f.A], () => f.A.getCurrentUserActiveStream()),
-        L = (0, i.bG)([h.A], () => h.A.getChannelId()),
-        M = A.default.extractTimestamp(E.id) + y.M < Date.now(),
-        k = (0, r.jsx)(r.Fragment, {
-            children: (0, a.Wf)(E, C, t),
-        }),
-        { analyticsLocations: U } = (0, o.Ay)(I, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        G = O.intl.string(x.default["5+172e"]),
+        P = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        D = (0, l.bG)([g.A], () => g.A.getChannelId()),
+        k = x.default.extractTimestamp(v.id) + E.M < Date.now(),
+        U = (0, i.jsx)(i.Fragment, { children: (0, r.Wf)(v, S, t) }),
+        { analyticsLocations: w } = (0, o.Ay)(b, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
+        G = T.intl.string(I.default["5+172e"]),
         B = !1;
     return (
-        M
-            ? ((G = O.intl.string(x.default.u4QmWl)), (B = !0))
-            : null != D
-              ? ((G = O.intl.string(x.default.P0wwmM)), (B = !0))
-              : L !== C.id
-                ? ((G = O.intl.string(x.default.qRXats)), (B = !0))
-                : null == R && ((G = O.intl.string(x.default["43zohO"])), (B = !0)),
-        (0, r.jsx)(c.h, {
-            header: O.intl.string(x.default.nAyuPp),
-            title: j.name,
-            staticBannerSrc: T,
-            videoBannerSrc: N,
-            bannerAspectRatio: P,
-            iconSrc: null != w ? w : void 0,
-            info: k,
+        k
+            ? ((G = T.intl.string(I.default.u4QmWl)), (B = !0))
+            : null != P
+              ? ((G = T.intl.string(I.default.P0wwmM)), (B = !0))
+              : D !== S.id
+                ? ((G = T.intl.string(I.default.qRXats)), (B = !0))
+                : null == O && ((G = T.intl.string(I.default["43zohO"])), (B = !0)),
+        (0, i.jsx)(d.h, {
+            header: T.intl.string(I.default.nAyuPp),
+            title: N.name,
+            staticBannerSrc: j,
+            videoBannerSrc: R,
+            bannerAspectRatio: L,
+            iconSrc: M ?? void 0,
+            info: U,
             actions:
-                E.author.id === t
+                v.author.id === t
                     ? []
                     : [
                           {
                               label: G,
-                              trackingArea: u.kY.STREAM,
+                              trackingArea: c.kY.STREAM,
                               disabled: B,
                               onClick: () => {
-                                  null != R &&
-                                      ((0, b.isWindows)()
-                                          ? (0, m.A)(R.pid)
-                                          : (0, l.mMO)(async () => {
+                                  null != O &&
+                                      ((0, f.isWindows)()
+                                          ? (0, _.A)(O.pid)
+                                          : (0, a.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
                                                     n.e("48697"),
                                                 ]).then(n.bind(n, 648230));
-                                                return (t) => {
-                                                    var n, i;
-                                                    return (0, r.jsx)(
-                                                        e,
-                                                        ((n = (function (e) {
-                                                            for (var t = 1; t < arguments.length; t++) {
-                                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                                    r = Object.keys(n);
-                                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                                    (r = r.concat(
-                                                                        Object.getOwnPropertySymbols(n).filter(
-                                                                            function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(
-                                                                                    n,
-                                                                                    e,
-                                                                                ).enumerable;
-                                                                            },
-                                                                        ),
-                                                                    )),
-                                                                    r.forEach(function (t) {
-                                                                        var r;
-                                                                        (r = n[t]),
-                                                                            t in e
-                                                                                ? Object.defineProperty(e, t, {
-                                                                                      value: r,
-                                                                                      enumerable: !0,
-                                                                                      configurable: !0,
-                                                                                      writable: !0,
-                                                                                  })
-                                                                                : (e[t] = r);
-                                                                    });
-                                                            }
-                                                            return e;
-                                                        })({}, t)),
-                                                        (i = i =
-                                                            {
-                                                                analyticsLocations: U,
-                                                            }),
-                                                        Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(
-                                                                  n,
-                                                                  Object.getOwnPropertyDescriptors(i),
-                                                              )
-                                                            : (function (e, t) {
-                                                                  var n = Object.keys(e);
-                                                                  if (Object.getOwnPropertySymbols) {
-                                                                      var r = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, r);
-                                                                  }
-                                                                  return n;
-                                                              })(Object(i)).forEach(function (e) {
-                                                                  Object.defineProperty(
-                                                                      n,
-                                                                      e,
-                                                                      Object.getOwnPropertyDescriptor(i, e),
-                                                                  );
-                                                              }),
-                                                        n),
-                                                    );
-                                                };
+                                                return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: w });
                                             }));
                               },
                           },
                       ],
             trackingConfig: {
-                id: j.id,
-                linkType: v.J.REQUEST_TO_STREAM,
-                guildId: C.guild_id,
-                channelId: C.id,
-                messageId: E.id,
-                onView: S,
-                isDeadEnd: M,
+                id: N.id,
+                linkType: C.J.REQUEST_TO_STREAM,
+                guildId: S.guild_id,
+                channelId: S.id,
+                messageId: v.id,
+                onView: y,
+                isDeadEnd: k,
             },
         })
     );

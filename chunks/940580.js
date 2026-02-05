@@ -1,3 +1,4 @@
+"use strict";
 t.exports = [
     "constructor",
     "hasOwnProperty",

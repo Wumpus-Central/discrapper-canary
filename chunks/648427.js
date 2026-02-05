@@ -1,126 +1,71 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048),
-    n(667532);
-var r,
-    i = n(311907),
-    l = n(73153),
+n.d(t, { A: () => E }), n(667532);
+var l = n(311907),
+    i = n(73153),
     s = n(95701),
-    a = n(734057),
-    u = n(696451),
-    o = n(71393);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = [],
-    h = new Set(),
-    f = [],
-    g = new Set();
-
-function I(e) {
-    let { channelId: t, history: n, historySet: r } = e;
-    if (r.has(t)) {
+    r = n(734057),
+    a = n(696451),
+    u = n(71393);
+let o = [],
+    d = new Set(),
+    c = [],
+    h = new Set();
+function g(e) {
+    let { channelId: t, history: n, historySet: l } = e;
+    if (l.has(t)) {
         let e = n.filter((e) => e !== t);
-        return (
-            e.unshift(t),
-            {
-                didChange: !0,
-                history: e,
-                historySet: new Set([...e]),
-            }
-        );
+        return e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) };
     }
     let i = [t, ...n],
-        l = new Set(r);
-    return (l.add(t), i.length > 10)
-        ? ((i.length = 10),
-          {
-              didChange: !0,
-              history: i,
-              historySet: new Set([...i]),
-          })
-        : {
-              didChange: !0,
-              history: i,
-              historySet: l,
-          };
+        s = new Set(l);
+    return (s.add(t), i.length > 10)
+        ? ((i.length = 10), { didChange: !0, history: i, historySet: new Set([...i]) })
+        : { didChange: !0, history: i, historySet: s };
 }
-class A extends (r = i.Ay.PersistedStore) {
+class I extends l.Ay.PersistedStore {
+    static displayName = "RecentVoiceChannelStore";
+    static persistKey = "RecentVoiceChannelStore";
+    static migrations = [
+        (e) =>
+            null == e || "object" != typeof e
+                ? { voiceChannelHistory: [], textChannelHistory: [] }
+                : {
+                      voiceChannelHistory: e.voiceChannelHistory ?? e.channelHistory ?? [],
+                      textChannelHistory: e.textChannelHistory ?? [],
+                  },
+    ];
     initialize(e) {
-        var t, n;
-        this.waitFor(u.Ay, o.A, a.A),
-            (c = null != (t = null == e ? void 0 : e.voiceChannelHistory) ? t : []),
-            (f = null != (n = null == e ? void 0 : e.textChannelHistory) ? n : []),
-            (h = new Set([...c])),
-            (g = new Set([...f]));
+        this.waitFor(a.Ay, u.A, r.A),
+            (o = e?.voiceChannelHistory ?? []),
+            (c = e?.textChannelHistory ?? []),
+            (d = new Set([...o])),
+            (h = new Set([...c]));
     }
     getState() {
-        return {
-            voiceChannelHistory: c,
-            textChannelHistory: f,
-        };
+        return { voiceChannelHistory: o, textChannelHistory: c };
     }
     getVoiceChannelHistory() {
-        return c;
+        return o;
     }
     getTextChannelHistory() {
-        return f;
+        return c;
     }
 }
-d(A, "displayName", "RecentVoiceChannelStore"),
-    d(A, "persistKey", "RecentVoiceChannelStore"),
-    d(A, "migrations", [
-        (e) => {
-            var t, n, r;
-            return null == e || "object" != typeof e
-                ? {
-                      voiceChannelHistory: [],
-                      textChannelHistory: [],
-                  }
-                : {
-                      voiceChannelHistory:
-                          null != (t = null != (n = e.voiceChannelHistory) ? n : e.channelHistory) ? t : [],
-                      textChannelHistory: null != (r = e.textChannelHistory) ? r : [],
-                  };
-        },
-    ]);
-let S = new A(l.h, {
+let E = new I(i.h, {
     POST_CONNECTION_OPEN: function () {
-        (h = new Set([...c])), (g = new Set([...f]));
+        (d = new Set([...o])), (h = new Set([...c]));
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        var t, n;
-        let { channelId: r } = e;
-        if (null == r || !(null != (t = null == (n = a.A.getChannel(r)) ? void 0 : n.isVocal()) && t)) return !1;
-        let i = I({
-            channelId: r,
-            history: c,
-            historySet: h,
-        });
-        return (c = i.history), (h = i.historySet), i.didChange;
+        let { channelId: t } = e;
+        if (null == t || !r.A.getChannel(t)?.isVocal()) return !1;
+        let n = g({ channelId: t, history: o, historySet: d });
+        return (o = n.history), (d = n.historySet), n.didChange;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == t) return !1;
-        let n = a.A.getChannel(t);
+        let n = r.A.getChannel(t);
         if (null == n || n.isVocal() || n.isPrivate() || !(0, s.ke)(n.type)) return !1;
-        let r = I({
-            channelId: t,
-            history: f,
-            historySet: g,
-        });
-        return (f = r.history), (g = r.historySet), r.didChange;
+        let l = g({ channelId: t, history: c, historySet: h });
+        return (c = l.history), (h = l.historySet), l.didChange;
     },
 });

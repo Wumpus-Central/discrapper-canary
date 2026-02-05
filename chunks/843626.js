@@ -1,64 +1,54 @@
-n.d(t, {
-    m: () => g,
-    p: () => u,
-}),
-    n(938796);
-var r = n(665260),
-    i = n(311907),
-    l = n(717125),
-    a = n(734057),
-    o = n(71393),
-    c = n(576705),
-    s = n(652215);
-let d =
-    s.pr7.CROSSPOSTED |
-    s.pr7.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
-    s.pr7.GUILD_FEED_HIDDEN |
-    s.pr7.HAS_SNAPSHOT |
-    s.pr7.HAS_THREAD |
-    s.pr7.IS_CROSSPOST |
-    s.pr7.IS_VOICE_MESSAGE |
-    s.pr7.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
-    s.pr7.SUPPRESS_EMBEDS |
-    s.pr7.SUPPRESS_NOTIFICATIONS |
-    s.pr7.URGENT |
-    s.pr7.IS_COMPONENTS_V2;
-
+n.d(t, { m: () => g, p: () => u }), n(938796);
+var i = n(665260),
+    l = n(311907),
+    a = n(717125),
+    r = n(734057),
+    s = n(71393),
+    o = n(576705),
+    d = n(652215);
+let c =
+    d.pr7.CROSSPOSTED |
+    d.pr7.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
+    d.pr7.GUILD_FEED_HIDDEN |
+    d.pr7.HAS_SNAPSHOT |
+    d.pr7.HAS_THREAD |
+    d.pr7.IS_CROSSPOST |
+    d.pr7.IS_VOICE_MESSAGE |
+    d.pr7.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
+    d.pr7.SUPPRESS_EMBEDS |
+    d.pr7.SUPPRESS_NOTIFICATIONS |
+    d.pr7.URGENT |
+    d.pr7.IS_COMPONENTS_V2;
 function u(e) {
-    var t, n;
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.A,
-        u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.A,
-        g = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.A,
-        p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.A;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.A,
+        l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.A,
+        u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : s.A;
     if (
         null == e ||
         !(
-            e.state !== s.cmJ.SEND_FAILED &&
-            s.MRS.FORWARDABLE.has(e.type) &&
+            e.state !== d.cmJ.SEND_FAILED &&
+            d.MRS.FORWARDABLE.has(e.type) &&
             null == e.poll &&
             null == e.sharedClientTheme &&
             null == e.activity &&
             null == e.call &&
             null == e.activityInstance &&
-            0 === (0, r.VL)(e.flags, d) &&
+            0 === (0, i.VL)(e.flags, c) &&
             1
         )
     )
         return !1;
-    let f = g.getChannel(e.channel_id),
-        y = i.can(s.xBc.READ_MESSAGE_HISTORY, f);
-    if (null != f && !y && !f.isPrivate()) return !1;
-    let b = null == f ? void 0 : f.guild_id;
-    return (
-        !(
-            (null != b &&
-                (null == (n = p.getGuild(b)) ? void 0 : n.features.has(s.GuildFeatures.FORWARDING_DISABLED))) ||
-            (null != b && u.isChannelOrThreadParentGated(b, e.channel_id))
-        ) &&
-        (null == (t = null == f ? void 0 : f.isModeratorReportChannel()) || !t)
+    let g = l.getChannel(e.channel_id),
+        A = t.can(d.xBc.READ_MESSAGE_HISTORY, g);
+    if (null != g && !A && !g.isPrivate()) return !1;
+    let p = g?.guild_id;
+    return !(
+        (null != p && u.getGuild(p)?.features.has(d.GuildFeatures.FORWARDING_DISABLED)) ||
+        (null != p && n.isChannelOrThreadParentGated(p, e.channel_id)) ||
+        g?.isModeratorReportChannel()
     );
 }
-
 function g(e) {
-    return (0, i.bG)([c.A, l.A, a.A, o.A], () => u(e, c.A, l.A, a.A, o.A));
+    return (0, l.bG)([o.A, a.A, r.A, s.A], () => u(e, o.A, a.A, r.A, s.A));
 }

@@ -1,85 +1,29 @@
+"use strict";
 n.d(t, {
-    FZ: () => v,
-    I9: () => E,
-    Iq: () => d,
-    J8: () => h,
-    O3: () => y,
-    OR: () => b,
-    R0: () => m,
-    Us: () => f,
-    VX: () => g,
-    WV: () => O,
-    ig: () => c,
-    o: () => _,
-    tO: () => I,
-    v: () => u,
-    wz: () => A,
-}),
-    n(896048);
+    FZ: () => A,
+    I9: () => p,
+    Iq: () => o,
+    J8: () => d,
+    O3: () => m,
+    OR: () => h,
+    R0: () => _,
+    Us: () => l,
+    VX: () => f,
+    WV: () => g,
+    ig: () => a,
+    o: () => c,
+    tO: () => T,
+    v: () => s,
+    wz: () => E,
+});
 var r = n(927813),
     i = n(985018);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function o(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function l(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let c = 0,
-    u = 13,
-    d = -1,
-    f = -2,
-    p = -3;
-var _ = (function (e) {
+let a = 0,
+    s = 13,
+    o = -1,
+    l = -2,
+    u = -3;
+var c = (function (e) {
         return (
             (e.FEATURED = "featured"),
             (e.GAMING = "gaming"),
@@ -91,7 +35,7 @@ var _ = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    d = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
             (e.GUILDS_BAR = "guilds_bar"),
@@ -102,17 +46,17 @@ var _ = (function (e) {
             e
         );
     })({});
-let m = new Set(["hubs"]),
-    g = [],
-    E = "q",
-    b = "c",
-    y = "l",
-    O = 10 * r.A.Millis.MINUTE;
-var A = (function (e) {
+let _ = new Set(["hubs"]),
+    f = [],
+    p = "q",
+    h = "c",
+    m = "l",
+    g = 10 * r.A.Millis.MINUTE;
+var E = (function (e) {
     return (
-        (e[(e.Clans = p)] = "Clans"),
-        (e[(e.Hub = f)] = "Hub"),
-        (e[(e.Communities = d)] = "Communities"),
+        (e[(e.Clans = u)] = "Clans"),
+        (e[(e.Hub = l)] = "Hub"),
+        (e[(e.Communities = o)] = "Communities"),
         (e[(e.Activity = 1)] = "Activity"),
         (e[(e.Music = 2)] = "Music"),
         (e[(e.Television = 3)] = "Television"),
@@ -121,17 +65,10 @@ var A = (function (e) {
         e
     );
 })({});
-let v = [1, 2, 3, 5, 6],
-    S = ["en-GB"];
-
-function I() {
+let A = [1, 2, 3, 5, 6],
+    I = ["en-GB"];
+function T() {
     return (0, i.getLanguages)()
-        .filter((e) => !S.includes(e.code))
-        .map((e) =>
-            "en-US" === e.code
-                ? l(s({}, e), {
-                      name: i.intl.string(i.t.LQLMGP),
-                  })
-                : e,
-        );
+        .filter((e) => !I.includes(e.code))
+        .map((e) => ("en-US" === e.code ? { ...e, name: i.intl.string(i.t.LQLMGP) } : e));
 }

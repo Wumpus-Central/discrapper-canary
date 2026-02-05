@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,37 +8,15 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !0,
         nameFrom: ["author", "contents"],
         prohibitedProps: [],
-        props: {
-            "aria-checked": null,
-            "aria-posinset": null,
-            "aria-setsize": null,
-            "aria-selected": "false",
-        },
+        props: { "aria-checked": null, "aria-posinset": null, "aria-setsize": null, "aria-selected": "false" },
         relatedConcepts: [
-            {
-                concept: {
-                    name: "item",
-                },
-                module: "XForms",
-            },
-            {
-                concept: {
-                    name: "listitem",
-                },
-                module: "ARIA",
-            },
-            {
-                concept: {
-                    name: "option",
-                },
-                module: "HTML",
-            },
+            { concept: { name: "item" }, module: "XForms" },
+            { concept: { name: "listitem" }, module: "ARIA" },
+            { concept: { name: "option" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: {
-            "aria-selected": "false",
-        },
+        requiredProps: { "aria-selected": "false" },
         superClass: [["roletype", "widget", "input"]],
     });

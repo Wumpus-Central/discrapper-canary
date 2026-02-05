@@ -4,13 +4,7 @@ e.exports = function (e) {
         subLanguage: "xml",
         contains: [
             e.COMMENT("<%#", "%>"),
-            {
-                begin: "<%[%=-]?",
-                end: "[%-]?%>",
-                subLanguage: "ruby",
-                excludeBegin: !0,
-                excludeEnd: !0,
-            },
+            { begin: "<%[%=-]?", end: "[%-]?%>", subLanguage: "ruby", excludeBegin: !0, excludeEnd: !0 },
         ],
     };
 };

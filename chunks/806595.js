@@ -1,5 +1,3 @@
-r.d(t, {
-    $: () => l,
-});
-var n,
-    l = (((n = {}).ROW = "row"), (n.GROUP = "group"), n);
+r.d(t, { $: () => n });
+var s,
+    n = (((s = {}).ROW = "row"), (s.GROUP = "group"), s);

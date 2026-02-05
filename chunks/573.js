@@ -1,140 +1,87 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048),
-    n(747238);
-var l = n(627968),
-    a = n(64700),
-    r = n(935573),
-    i = n(417597),
-    s = n(397927),
-    c = n(919796),
-    o = n(354138),
-    d = n(111042),
-    u = n(651753),
-    p = n(412461),
-    h = n(867333),
-    m = n(487953),
-    b = n(111737),
-    f = n(310419),
-    g = n(435220),
-    x = n(652215),
-    v = n(689917);
-let j = {
-        results: [],
-        totalPages: 0,
-        loadId: "",
-    },
-    A = function (e) {
-        var t;
-        let { categoryId: n, onSelectApplication: A, resetScroll: _ } = e,
-            [y, O] = a.useState(1),
-            S = a.useCallback((e) => {
-                O(e);
+a.d(t, { A: () => v });
+var n = a(627968),
+    i = a(64700),
+    s = a(935573),
+    l = a(417597),
+    r = a(397927),
+    o = a(919796),
+    c = a(354138),
+    d = a(111042),
+    u = a(651753),
+    h = a(412461),
+    m = a(867333),
+    p = a(487953),
+    _ = a(111737),
+    g = a(310419),
+    x = a(435220),
+    A = a(652215),
+    C = a(689917);
+let b = { results: [], totalPages: 0, loadId: "" },
+    v = function (e) {
+        let { categoryId: t, onSelectApplication: a, resetScroll: v } = e,
+            [f, j] = i.useState(1),
+            I = i.useCallback((e) => {
+                j(e);
             }, []);
-        a.useEffect(() => {
-            O(1);
-        }, [n]);
-        let C = a.useMemo(
-                () => ({
-                    query: g.EMPTY_QUERY,
-                    page: y,
-                    pageSize: g.PAGE_SIZE,
-                    categoryId: n,
-                }),
-                [y, n],
+        i.useEffect(() => {
+            j(1);
+        }, [t]);
+        let E = i.useMemo(() => ({ query: x.EMPTY_QUERY, page: f, pageSize: x.PAGE_SIZE, categoryId: t }), [f, t]),
+            S = (0, l.bG)([u.A], () =>
+                u.A.getFetchState({ query: x.EMPTY_QUERY, page: f, pageSize: x.PAGE_SIZE, categoryId: t }),
             ),
-            E = (0, i.bG)([u.A], () =>
-                u.A.getFetchState({
-                    query: g.EMPTY_QUERY,
-                    page: y,
-                    pageSize: g.PAGE_SIZE,
-                    categoryId: n,
-                }),
-            ),
-            I = (0, i.cf)([u.A], () => {
-                var e;
-                return null != (e = u.A.getSearchResults(C)) ? e : j;
-            }),
-            P = null != (t = (0, c.A)(I)) ? t : j,
-            { results: N, totalPages: R, loadId: T } = a.useMemo(() => (E === d.e.FETCHING ? P : I), [E, P, I]),
-            L = a.useMemo(() => (null == N ? void 0 : N.filter((e) => e.type === r.j.APPLICATION)), [N]),
-            D = a.useCallback((e) => {
-                let { page: t, activeCategoryId: n, onSuccessCallback: l, guildId: a, fetchCounts: r } = e;
-                r &&
-                    o.$P({
-                        query: g.EMPTY_QUERY,
-                        guildId: a,
-                    }),
-                    o.$P({
-                        query: g.EMPTY_QUERY,
-                        guildId: a,
-                        options: {
-                            page: t,
-                            pageSize: g.PAGE_SIZE,
-                            categoryId: n,
-                        },
-                        onSuccessCallback: l,
+            N = (0, l.cf)([u.A], () => u.A.getSearchResults(E) ?? b),
+            y = (0, o.A)(N) ?? b,
+            { results: T, totalPages: R, loadId: L } = i.useMemo(() => (S === d.e.FETCHING ? y : N), [S, y, N]),
+            P = i.useMemo(() => T?.filter((e) => e.type === s.j.APPLICATION), [T]),
+            D = i.useCallback((e) => {
+                let { page: t, activeCategoryId: a, onSuccessCallback: n, guildId: i, fetchCounts: s } = e;
+                s && c.$P({ query: x.EMPTY_QUERY, guildId: i }),
+                    c.$P({
+                        query: x.EMPTY_QUERY,
+                        guildId: i,
+                        options: { page: t, pageSize: x.PAGE_SIZE, categoryId: a },
+                        onSuccessCallback: n,
                     });
             }, []);
-        a.useEffect(() => {
-            _(),
-                D({
-                    page: y,
-                    activeCategoryId: n,
-                    onSuccessCallback: () => {},
-                });
-        }, [n, _, D, y]);
-        let w = a.useCallback(
+        i.useEffect(() => {
+            v(), D({ page: f, activeCategoryId: t, onSuccessCallback: () => {} });
+        }, [t, v, D, f]);
+        let O = i.useCallback(
             (e, t) => {
-                (0, p.TR)(x.HAw.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
-                    current_page: f.ev.SEARCH,
+                (0, h.TR)(A.HAw.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                    current_page: g.ev.SEARCH,
                     application_id: e,
-                    load_id: T,
+                    load_id: L,
                     position: t,
                 }),
-                    A(e);
+                    a(e);
             },
-            [T, A],
+            [L, a],
         );
-        return E === d.e.ERROR
-            ? (0, l.jsx)("div", {
-                  className: v.Un,
-                  children: (0, l.jsx)(b.A, {
-                      className: v.z3,
-                  }),
-              })
-            : (0, l.jsxs)(h.A, {
-                  loading: E === d.e.FETCHING,
+        return S === d.e.ERROR
+            ? (0, n.jsx)("div", { className: C.Un, children: (0, n.jsx)(_.A, { className: C.z3 }) })
+            : (0, n.jsxs)(m.A, {
+                  loading: S === d.e.FETCHING,
                   children: [
-                      (0, l.jsx)("div", {
-                          className: v.Qs,
-                          children:
-                              null == L
-                                  ? void 0
-                                  : L.map((e, t) => {
-                                        if (e.type === r.j.APPLICATION) {
-                                            let n = e.data;
-                                            return (0, l.jsx)(
-                                                m.A,
-                                                {
-                                                    application: n,
-                                                    onSelectApplication: (e) => w(e, t),
-                                                },
-                                                n.id,
-                                            );
-                                        }
-                                        return null;
-                                    }),
+                      (0, n.jsx)("div", {
+                          className: C.Qs,
+                          children: P?.map((e, t) => {
+                              if (e.type === s.j.APPLICATION) {
+                                  let a = e.data;
+                                  return (0, n.jsx)(p.A, { application: a, onSelectApplication: (e) => O(e, t) }, a.id);
+                              }
+                              return null;
+                          }),
                       }),
-                      (0, l.jsx)(s.mgR, {
-                          className: v.JV,
-                          totalCount: Math.min(R * g.PAGE_SIZE, g.MAX_PAGES * g.PAGE_SIZE),
-                          pageSize: g.PAGE_SIZE,
+                      (0, n.jsx)(r.mgR, {
+                          className: C.JV,
+                          totalCount: Math.min(R * x.PAGE_SIZE, x.MAX_PAGES * x.PAGE_SIZE),
+                          pageSize: x.PAGE_SIZE,
                           disablePaginationGap: !0,
                           hideMaxPage: !0,
-                          currentPage: y,
-                          onPageChange: S,
+                          currentPage: f,
+                          onPageChange: I,
                       }),
                   ],
               });

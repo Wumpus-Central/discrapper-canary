@@ -1,35 +1,29 @@
-n.d(t, {
-    A: () => P,
-}),
-    n(114821),
-    n(339614),
-    n(896048),
-    n(321073),
-    n(228524);
+"use strict";
+n.d(t, { A: () => L }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(59892),
     s = n(114088),
     o = n(743923),
     l = n(864642),
-    c = n(274361),
-    u = n(816694),
+    u = n(274361),
+    c = n(816694),
     d = n(418522),
-    f = n(150239),
-    p = n(464602),
-    _ = n(623819),
+    _ = n(150239),
+    f = n(464602),
+    p = n(623819),
     h = n(342470),
     m = n(554067),
     g = n(471767),
     E = n(989349),
-    b = n.n(E),
-    y = n(580424),
-    O = n(379418),
-    A = n(773669),
-    v = n(634788),
-    S = n(374803),
-    I = n(985018);
-let T = [
+    A = n.n(E),
+    I = n(580424),
+    T = n(379418),
+    y = n(773669),
+    S = n(634788),
+    v = n(374803),
+    C = n(985018);
+let b = [
         "YYYYMMDD",
         "YYYY-MM-DD",
         "LL",
@@ -65,29 +59,27 @@ let T = [
         "dddd",
         "ddd",
     ],
-    C = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
-    N = [b().ISO_8601, ...T.flatMap((e) => [...C.map((t) => "".concat(e, " ").concat(t)), ...C])];
-
-function R() {
-    let e = A.default.locale;
+    N = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
+    R = [A().ISO_8601, ...b.flatMap((e) => [...N.map((t) => `${e} ${t}`), ...N])];
+function O() {
+    let e = y.default.locale;
     if ("en-US" === e) return a;
     if ("en-GB" === e) return a.GB;
     if ("de" === e) return s;
     if ("fr" === e) return o;
     if ("ja" === e) return l;
-    else if ("nl" === e) return c;
-    else if ("ru" === e) return u;
+    else if ("nl" === e) return u;
+    else if ("ru" === e) return c;
     else if ("it" === e) return d;
-    else if ("uk" === e) return f;
-    else if ("zh-CN" === e) return p;
-    else if ("zh-TW" === e) return _;
+    else if ("uk" === e) return _;
+    else if ("zh-CN" === e) return f;
+    else if ("zh-TW" === e) return p;
     else if (e.startsWith("sv-")) return h;
     else if (e.startsWith("pt-")) return m;
     else if (e.startsWith("es-")) return g;
     else return null;
 }
-
-function w(e, t, n) {
+function D(e, t, n) {
     let r, i, a;
     if (null == n) return {};
     let s = e.clone();
@@ -96,137 +88,78 @@ function w(e, t, n) {
     return (
         o.add(1, n.periodType),
         t.isSame(e, n.periodType)
-            ? ((a = I.intl.string(n.currentName)), t.isSameOrBefore(e) && (i = I.intl.string(n.nextName)))
-            : t.isSame(s, n.periodType) && ((a = I.intl.string(n.previousName)), (i = I.intl.string(n.currentName))),
+            ? ((a = C.intl.string(n.currentName)), t.isSameOrBefore(e) && (i = C.intl.string(n.nextName)))
+            : t.isSame(s, n.periodType) && ((a = C.intl.string(n.previousName)), (i = C.intl.string(n.currentName))),
         null != i && (r = o.unix().toString()),
-        {
-            adjustedTimestamp: r,
-            adjustedDescription: i,
-            unadjustedDescription: a,
-        }
+        { adjustedTimestamp: r, adjustedDescription: i, unadjustedDescription: a }
     );
 }
-let P = {
+let L = {
     autocompleteInputElementType: "timestampMentionInput",
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n) {
-        var r;
-        let i = b()(),
-            a = R(),
-            [s] = null != (r = null == a ? void 0 : a.parse(n, i.toDate())) ? r : [void 0],
-            o = (null == s ? void 0 : s.start) != null && (null == s ? void 0 : s.end) == null && s.text === n,
-            l = o ? b()(s.start.date()) : b()(n, N, !0),
-            c = [],
-            { format: u } = l.creationData();
+        let r = A()(),
+            i = O(),
+            [a] = i?.parse(n, r.toDate()) ?? [void 0],
+            s = a?.start != null && a?.end == null && a.text === n,
+            o = s ? A()(a.start.date()) : A()(n, R, !0),
+            l = [],
+            { format: u } = o.creationData();
         if (
             ("string" != typeof u && (u = void 0),
-            "" !== n || l.isValid() || ((l = i), (u = "YYYYMMDDHHmmss")),
-            l.isValid() && (o || null != u))
+            "" !== n || o.isValid() || ((o = r), (u = "YYYYMMDDHHmmss")),
+            o.isValid() && (s || null != u))
         ) {
             let e;
-            if (o && !s.start.isCertain("hour")) {
+            if (s && !a.start.isCertain("hour")) {
                 let e = 9e5,
-                    t = Math.round(l.valueOf() / e) * e;
-                l = b()(t);
+                    t = Math.round(o.valueOf() / e) * e;
+                o = A()(t);
             }
-            let t = o ? s.start.isCertain("weekday") : null == u ? void 0 : u.includes("d"),
-                n = o
-                    ? s.start.isCertain("day") || s.start.isCertain("month") || s.start.isCertain("year")
-                    : null == u
-                      ? void 0
-                      : u.includes("D"),
-                r = o ? s.start.isCertain("year") : null == u ? void 0 : u.includes("Y"),
-                a = o ? s.start.isCertain("second") : null == u ? void 0 : u.includes("s"),
-                d = l.unix().toString(),
-                f = a ? "S" : "s";
+            let t = s ? a.start.isCertain("weekday") : u?.includes("d"),
+                n = s
+                    ? a.start.isCertain("day") || a.start.isCertain("month") || a.start.isCertain("year")
+                    : u?.includes("D"),
+                i = s ? a.start.isCertain("year") : u?.includes("Y"),
+                c = s ? a.start.isCertain("second") : u?.includes("s"),
+                d = o.unix().toString(),
+                _ = c ? "S" : "s";
             n || t
                 ? t && !n
                     ? (e = {
                           periodType: "week",
-                          previousName: I.t["4uTwgO"],
-                          currentName: I.t["6YiNaP"],
-                          nextName: I.t.HE4jqH,
+                          previousName: C.t["4uTwgO"],
+                          currentName: C.t["6YiNaP"],
+                          nextName: C.t.HE4jqH,
                       })
-                    : r ||
+                    : i ||
                       (e = {
                           periodType: "year",
-                          previousName: I.t.R7VMEE,
-                          currentName: I.t["U8lK/J"],
-                          nextName: I.t.OppVVE,
+                          previousName: C.t.R7VMEE,
+                          currentName: C.t["U8lK/J"],
+                          nextName: C.t.OppVVE,
                       })
-                : (c.push({
-                      mention: {
-                          timestamp: d,
-                          format: a ? "T" : "t",
-                      },
-                      description: I.intl.string(I.t.yHv4oJ),
-                  }),
-                  c.push({}),
+                : (l.push({ mention: { timestamp: d, format: c ? "T" : "t" }, description: C.intl.string(C.t.yHv4oJ) }),
+                  l.push({}),
                   (e = {
                       periodType: "day",
-                      previousName: I.t.ZdDLO0,
-                      currentName: I.t.mbs4NX,
-                      nextName: I.t["EqnX/z"],
+                      previousName: C.t.ZdDLO0,
+                      currentName: C.t.mbs4NX,
+                      nextName: C.t["EqnX/z"],
                   }));
-            let { adjustedTimestamp: p, adjustedDescription: _, unadjustedDescription: h } = w(i, l, e);
-            null != p &&
-                (c.push({
-                    mention: {
-                        timestamp: p,
-                        format: f,
-                    },
-                    description: _,
-                }),
-                c.push({
-                    mention: {
-                        timestamp: p,
-                        format: "f",
-                    },
-                }),
-                c.push({
-                    mention: {
-                        timestamp: p,
-                        format: "F",
-                    },
-                }),
-                c.push({
-                    mention: {
-                        timestamp: p,
-                        format: "R",
-                    },
-                }),
-                c.push({})),
-                c.push({
-                    mention: {
-                        timestamp: d,
-                        format: f,
-                    },
-                    description: h,
-                }),
-                c.push({
-                    mention: {
-                        timestamp: d,
-                        format: "f",
-                    },
-                }),
-                c.push({
-                    mention: {
-                        timestamp: d,
-                        format: "F",
-                    },
-                }),
-                c.push({
-                    mention: {
-                        timestamp: d,
-                        format: "R",
-                    },
-                });
+            let { adjustedTimestamp: f, adjustedDescription: p, unadjustedDescription: h } = D(r, o, e);
+            null != f &&
+                (l.push({ mention: { timestamp: f, format: _ }, description: p }),
+                l.push({ mention: { timestamp: f, format: "f" } }),
+                l.push({ mention: { timestamp: f, format: "F" } }),
+                l.push({ mention: { timestamp: f, format: "R" } }),
+                l.push({})),
+                l.push({ mention: { timestamp: d, format: _ }, description: h }),
+                l.push({ mention: { timestamp: d, format: "f" } }),
+                l.push({ mention: { timestamp: d, format: "F" } }),
+                l.push({ mention: { timestamp: d, format: "R" } });
         }
-        return {
-            results: {
-                mentions: c,
-            },
-        };
+        return { results: { mentions: l } };
     },
     renderResults(e) {
         let {
@@ -238,35 +171,23 @@ let P = {
             } = e,
             l = t.map((e, t) => {
                 let { mention: i, description: a } = e;
-                if (void 0 === i) return (0, r.jsx)(y.Ay.Divider, {}, "divider-".concat(t));
-                let l = (0, O.WA)(i);
+                if (void 0 === i) return (0, r.jsx)(I.Ay.Divider, {}, `divider-${t}`);
+                let l = (0, T.WA)(i);
                 return null == l
                     ? null
                     : (0, r.jsx)(
-                          y.Ay.Timestamp,
-                          {
-                              onClick: o,
-                              onHover: s,
-                              selected: n === t,
-                              index: t,
-                              timestamp: l,
-                              description: a,
-                          },
-                          "timestamp-".concat(t),
+                          I.Ay.Timestamp,
+                          { onClick: o, onHover: s, selected: n === t, index: t, timestamp: l, description: a },
+                          `timestamp-${t}`,
                       );
             }),
-            c = I.t.I4nJDb,
-            u = I.intl.string(I.t.pUP8UM);
+            u = C.t.I4nJDb,
+            c = C.intl.string(C.t.pUP8UM);
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
-                    (0, v.wZ)({
-                        titleWithQuery: c,
-                        titleWithoutQuery: u,
-                        query: a,
-                        getQuery: (e) => "".concat(e),
-                    }),
+                    (0, S.wZ)({ titleWithQuery: u, titleWithoutQuery: c, query: a, getQuery: (e) => `${e}` }),
                     l,
                 ],
             },
@@ -274,21 +195,15 @@ let P = {
         );
     },
     onSelect(e) {
-        var t, n;
         let {
-                results: { mentions: r },
-                index: i,
-                options: a,
+                results: { mentions: t },
+                index: n,
+                options: r,
             } = e,
-            { mention: s } = null != (t = r[i]) ? t : {};
-        if (null == s) return null;
-        let o = (0, O.tf)(s.timestamp, s.format),
-            l = null == (n = (0, O.WA)(s)) ? void 0 : n.formatted;
-        return null == l
-            ? null
-            : (a.replaceInlineInput("timestampMentionInput", l, o),
-              {
-                  type: S.kc.TIMESTAMP,
-              });
+            { mention: i } = t[n] ?? {};
+        if (null == i) return null;
+        let a = (0, T.tf)(i.timestamp, i.format),
+            s = (0, T.WA)(i)?.formatted;
+        return null == s ? null : (r.replaceInlineInput("timestampMentionInput", s, a), { type: v.kc.TIMESTAMP });
     },
 };

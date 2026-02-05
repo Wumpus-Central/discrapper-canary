@@ -1,29 +1,20 @@
-n.d(t, {
-    A: () => c,
-});
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    r = n.n(s),
-    l = n(397927),
-    a = n(338717),
-    o = n(116806);
-let c = (e) => {
-    let { obscureReason: t, iconClassname: n } = e;
+s.d(t, { A: () => d });
+var n = s(627968);
+s(64700);
+var l = s(503698),
+    a = s.n(l),
+    i = s(397927),
+    r = s(338717),
+    o = s(116806);
+let d = (e) => {
+    let { obscureReason: t, iconClassname: s } = e;
     switch (t) {
-        case a.Oc.EXPLICIT_CONTENT:
-        case a.Oc.GORE_CONTENT:
-        case a.Oc.SELF_HARM_CONTENT:
-            return (0, i.jsx)(l.DAq, {
-                className: r()(n, o.x),
-                color: "white",
-            });
-        case a.Oc.SPOILER:
-            return (0, i.jsx)(l.bMW, {
-                size: "md",
-                color: "currentColor",
-                className: n,
-            });
+        case r.Oc.EXPLICIT_CONTENT:
+        case r.Oc.GORE_CONTENT:
+        case r.Oc.SELF_HARM_CONTENT:
+            return (0, n.jsx)(i.DAq, { className: a()(s, o.x), color: "white" });
+        case r.Oc.SPOILER:
+            return (0, n.jsx)(i.bMW, { size: "md", color: "currentColor", className: s });
         default:
             return null;
     }

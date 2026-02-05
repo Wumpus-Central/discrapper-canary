@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -17,14 +18,7 @@ var n = r(64700),
             h = e.className,
             b = "transparent" === o,
             v = function (e, r) {
-                s.qt(e) &&
-                    t(
-                        {
-                            hex: e,
-                            source: "hex",
-                        },
-                        r,
-                    );
+                s.qt(e) && t({ hex: e, source: "hex" }, r);
             },
             g = (0, i.default)(
                 (0, l.A)(
@@ -46,14 +40,8 @@ var n = r(64700),
                                 justifyContent: "center",
                                 position: "relative",
                             },
-                            body: {
-                                padding: "10px",
-                            },
-                            label: {
-                                fontSize: "18px",
-                                color: s.OB(o),
-                                position: "relative",
-                            },
+                            body: { padding: "10px" },
+                            label: { fontSize: "18px", color: s.OB(o), position: "relative" },
                             triangle: {
                                 width: "0px",
                                 height: "0px",
@@ -78,61 +66,27 @@ var n = r(64700),
                                 boxSizing: "border-box",
                             },
                         },
-                        "hide-triangle": {
-                            triangle: {
-                                display: "none",
-                            },
-                        },
+                        "hide-triangle": { triangle: { display: "none" } },
                     },
                     void 0 === f ? {} : f,
                 ),
-                {
-                    "hide-triangle": "hide" === d,
-                },
+                { "hide-triangle": "hide" === d },
             );
         return n.createElement(
             "div",
-            {
-                style: g.card,
-                className: "block-picker " + (void 0 === h ? "" : h),
-            },
-            n.createElement("div", {
-                style: g.triangle,
-            }),
+            { style: g.card, className: "block-picker " + (void 0 === h ? "" : h) },
+            n.createElement("div", { style: g.triangle }),
             n.createElement(
                 "div",
-                {
-                    style: g.head,
-                },
-                b &&
-                    n.createElement(u.xu, {
-                        borderRadius: "6px 6px 0 0",
-                    }),
-                n.createElement(
-                    "div",
-                    {
-                        style: g.label,
-                    },
-                    o,
-                ),
+                { style: g.head },
+                b && n.createElement(u.xu, { borderRadius: "6px 6px 0 0" }),
+                n.createElement("div", { style: g.label }, o),
             ),
             n.createElement(
                 "div",
-                {
-                    style: g.body,
-                },
-                n.createElement(c.A, {
-                    colors: a,
-                    onClick: v,
-                    onSwatchHover: r,
-                }),
-                n.createElement(u.jc, {
-                    style: {
-                        input: g.input,
-                    },
-                    value: o,
-                    onChange: v,
-                }),
+                { style: g.body },
+                n.createElement(c.A, { colors: a, onClick: v, onSwatchHover: r }),
+                n.createElement(u.jc, { style: { input: g.input }, value: o, onChange: v }),
             ),
         );
     };

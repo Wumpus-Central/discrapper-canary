@@ -1,65 +1,57 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(990078),
-    l = n(145497),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(990078),
+    o = n(145497),
     c = n(534400),
-    u = n(743981),
-    d = n(996373);
-
-function f(e) {
-    let { className: t, guildTag: n, guildBadge: a, guildId: f, guildName: p, guildIcon: _, guildIconSize: h } = e,
-        m = i.useRef(null),
-        [g, E] = i.useState(!1);
+    d = n(743981),
+    u = n(996373);
+function _(e) {
+    let { className: t, guildTag: n, guildBadge: r, guildId: _, guildName: m, guildIcon: A, guildIconSize: g } = e,
+        E = s.useRef(null),
+        [h, p] = s.useState(!1);
     return (
-        i.useEffect(() => {
-            let e = m.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth);
+        s.useEffect(() => {
+            let e = E.current;
+            null != e && null != e.offsetWidth && null != e.scrollWidth && p(e.offsetWidth < e.scrollWidth);
         }, []),
-        (0, r.jsxs)("div", {
-            className: s()(d.kL, t),
+        (0, i.jsxs)("div", {
+            className: a()(u.kL, t),
             children: [
-                (0, r.jsxs)("div", {
-                    className: d.v2,
+                (0, i.jsxs)("div", {
+                    className: u.v2,
                     children: [
-                        (0, r.jsx)(l.j, {
-                            guildId: f,
-                            guildName: p,
-                            guildIcon: _,
-                            iconSize: h,
-                            className: d.rr,
+                        (0, i.jsx)(o.j, {
+                            guildId: _,
+                            guildName: m,
+                            guildIcon: A,
+                            iconSize: g,
+                            className: u.rr,
                             animate: !1,
                         }),
-                        (0, r.jsx)("div", {
-                            className: d.zH,
-                            children: (0, r.jsx)(o.m, {
-                                __unsupportedReactNodeAsText: p,
-                                shouldShow: g,
-                                children: (0, r.jsx)("span", {
-                                    ref: m,
-                                    className: d.J5,
-                                    children: p,
-                                }),
+                        (0, i.jsx)("div", {
+                            className: u.zH,
+                            children: (0, i.jsx)(l.m, {
+                                __unsupportedReactNodeAsText: m,
+                                shouldShow: h,
+                                children: (0, i.jsx)("span", { ref: E, className: u.J5, children: m }),
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)("div", {
-                    className: d.I8,
-                    children: (0, r.jsx)(c.o9, {
-                        guildId: f,
-                        className: d.Tc,
+                (0, i.jsx)("div", {
+                    className: u.I8,
+                    children: (0, i.jsx)(c.o9, {
+                        guildId: _,
+                        className: u.Tc,
                         guildTag: n,
-                        guildBadge: a,
-                        badgeSize: u.Sl.SIZE_16,
+                        guildBadge: r,
+                        badgeSize: d.Sl.SIZE_16,
                         textColor: "interactive-text-default",
                         textVariant: "text-sm/semibold",
-                        badgeClassName: d.qS,
+                        badgeClassName: u.qS,
                     }),
                 }),
             ],

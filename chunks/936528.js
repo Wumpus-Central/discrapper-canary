@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     aH: "speaker__708d1",
     EB: "guild__708d1",

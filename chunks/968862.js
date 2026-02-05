@@ -1,10 +1,6 @@
-n.r(t),
-    n.d(t, {
-        default: () => i,
-    }),
-    n(65821);
+"use strict";
+n.r(t), n.d(t, { default: () => i });
 var r = n(652215);
-
 function i(e, t) {
     let n,
         i = new Date();
@@ -40,6 +36,6 @@ function i(e, t) {
                 is_first_load: n.map((e) => e.is_first_load),
             };
         default:
-            throw Error("getClicksteamDrainEvent: Unknown event: ".concat(e));
+            throw Error(`getClicksteamDrainEvent: Unknown event: ${e}`);
     }
 }

@@ -1,20 +1,17 @@
+"use strict";
 function r(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: r, scrollToEnd: i } = e;
-
     function a(e) {
-        var n;
-        return null !=
-            (n = t().find(
+        return (
+            t().find(
                 (t) =>
                     !!(
                         e.compareDocumentPosition(t) &
                         (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)
                     ),
-            ))
-            ? n
-            : null;
+            ) ?? null
+        );
     }
-
     function s(e) {
         let n = t();
         for (let t = n.length - 1; t >= 0; t--) {
@@ -24,34 +21,28 @@ function r(e) {
         }
         return null;
     }
-
     function o() {
-        var e;
-        return null != (e = t()[0]) ? e : null;
+        return t()[0] ?? null;
     }
-
     function l() {
-        var e;
-        let n = t();
-        return null != (e = n[n.length - 1]) ? e : null;
+        let e = t();
+        return e[e.length - 1] ?? null;
     }
     return {
         getNextFocusableElement: async function (e) {
-            let t = (null == e ? void 0 : e.from) || n();
+            let t = e?.from || n();
             if (null == t) return null;
             let i = a(t);
-            return null == i && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), o()) : i;
+            return null == i && e?.wrap ? (await r?.(), o()) : i;
         },
         getPreviousFocusableElement: async function (e) {
-            let t = (null == e ? void 0 : e.from) || n();
+            let t = e?.from || n();
             if (null == t) return null;
             let r = s(t);
-            return null == r && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), l()) : r;
+            return null == r && e?.wrap ? (await i?.(), l()) : r;
         },
         getFirstFocusableElement: o,
         getLastFocusableElement: l,
     };
 }
-n.d(t, {
-    C: () => r,
-});
+n.d(t, { C: () => r });

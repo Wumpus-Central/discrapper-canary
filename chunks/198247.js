@@ -41,9 +41,6 @@
             y: "san kelen",
             yy: "san %d",
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

@@ -1,128 +1,71 @@
-n.d(t, {
-    A: () => S,
-});
+n.d(t, { A: () => I });
 var i = n(64700),
-    r = n(136722),
-    l = n(311907),
-    a = n(58149),
-    o = n(332456),
-    s = n(237774),
-    c = n(815706),
+    l = n(136722),
+    a = n(311907),
+    s = n(58149),
+    r = n(332456),
+    o = n(237774),
+    d = n(815706),
     u = n(734057),
-    d = n(808728),
-    p = n(696451),
-    h = n(71393),
-    f = n(576705),
-    m = n(309010),
-    g = n(967198),
-    y = n(287809),
-    A = n(256415),
-    O = n(9302),
-    E = n(652215);
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-class b extends i.Component {
+    c = n(808728),
+    h = n(696451),
+    A = n(71393),
+    m = n(576705),
+    g = n(309010),
+    p = n(967198),
+    f = n(287809),
+    _ = n(256415),
+    E = n(9302),
+    x = n(652215);
+class S extends i.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
         let {
             selectedGuild: t,
             selectedChannel: n,
             isMemberPending: i,
-            hasPreviewEnabled: r,
-            postableChannelCount: l,
+            hasPreviewEnabled: l,
+            postableChannelCount: a,
         } = this.props;
-        if (null != t && (t !== e.selectedGuild || (i && !e.isMemberPending))) {
-            var d, p;
-            (0, c.z)(
-                E.HAw.GUILD_VIEWED,
-                ((d = v(
-                    {},
-                    i
-                        ? {
-                              is_pending: i,
-                              preview_enabled: r,
-                          }
-                        : {},
-                )),
-                (p = p =
-                    {
-                        postable_channels: l,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(p)).forEach(function (e) {
-                          Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
-                      }),
-                d),
-            ),
-                (0, s.k)(E.HAw.GUILD_VIEWED_CLICKSTREAM, {
-                    guildId: t,
-                });
-        }
-        if (null != n && n !== e.selectedChannel) {
-            let e = (0, o.C)(u.A.getChannel(n), !0);
-            (0, c.z)(E.HAw.CHANNEL_OPENED, v({}, e, (0, a.qL)(n))),
-                (0, s.k)(E.HAw.CHANNEL_OPENED_CLICKSTREAM, {
-                    channelId: n,
-                });
+        if (
+            (null != t &&
+                (t !== e.selectedGuild || (i && !e.isMemberPending)) &&
+                ((0, d.z)(x.HAw.GUILD_VIEWED, {
+                    ...(i ? { is_pending: i, preview_enabled: l } : {}),
+                    postable_channels: a,
+                }),
+                (0, o.k)(x.HAw.GUILD_VIEWED_CLICKSTREAM, { guildId: t })),
+            null != n && n !== e.selectedChannel)
+        ) {
+            let e = (0, r.C)(u.A.getChannel(n), !0);
+            (0, d.z)(x.HAw.CHANNEL_OPENED, { ...e, ...(0, s.qL)(n) }),
+                (0, o.k)(x.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
         }
     }
     render() {
         return null;
     }
 }
-let S = l.Ay.connectStores([g.A, m.A, h.A, y.default, A.default, d.Ay, f.A, p.Ay], () => {
-    var e, t, n;
-    let i = g.A.getGuildId(),
-        l = m.A.getChannelId(i),
-        a = h.A.getGuild(i),
-        o = y.default.getCurrentUser(),
-        s = null != (e = d.Ay.getChannels(null == a ? void 0 : a.id)[d.I6]) ? e : [],
-        c =
-            s.length > 0
-                ? s.filter((e) => {
+let I = a.Ay.connectStores([p.A, g.A, A.A, f.default, _.default, c.Ay, m.A, h.Ay], () => {
+    let e = p.A.getGuildId(),
+        t = g.A.getChannelId(e),
+        n = A.A.getGuild(e),
+        i = f.default.getCurrentUser(),
+        a = c.Ay.getChannels(n?.id)[c.I6] ?? [],
+        s =
+            a.length > 0
+                ? a.filter((e) => {
                       let { channel: t } = e;
-                      return f.A.can(r.kg(E.xBc.SEND_MESSAGES, E.xBc.VIEW_CHANNEL), t);
+                      return m.A.can(l.kg(x.xBc.SEND_MESSAGES, x.xBc.VIEW_CHANNEL), t);
                   }).length
                 : 0,
-        u = null != o && null != i && null != (t = null == (n = p.Ay.getMember(i, o.id)) ? void 0 : n.isPending) && t;
+        r = null != i && null != e && (h.Ay.getMember(e, i.id)?.isPending ?? !1);
     return {
-        selectedGuild: i,
-        selectedChannel: l,
-        locked: A.default.isLocked((0, O.getPID)()),
-        hasPreviewEnabled: null == a ? void 0 : a.features.has(E.GuildFeatures.PREVIEW_ENABLED),
-        isMemberPending: u,
-        postableChannelCount: c,
+        selectedGuild: e,
+        selectedChannel: t,
+        locked: _.default.isLocked((0, E.getPID)()),
+        hasPreviewEnabled: n?.features.has(x.GuildFeatures.PREVIEW_ENABLED),
+        isMemberPending: r,
+        postableChannelCount: s,
     };
-})(b);
+})(S);

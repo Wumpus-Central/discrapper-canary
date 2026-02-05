@@ -1,7 +1,4 @@
-a.r(t),
-    a.d(t, {
-        default: () => s,
-    });
+a.r(t), a.d(t, { default: () => s });
 var n = a(944609),
     r = a(718188),
     i = a(74470),
@@ -14,8 +11,5 @@ let s = {
     formatRelative: i.A,
     localize: o.A,
     match: d.A,
-    options: {
-        weekStartsOn: 0,
-        firstWeekContainsDate: 1,
-    },
+    options: { weekStartsOn: 0, firstWeekContainsDate: 1 },
 };

@@ -1,25 +1,4 @@
-n.d(t, {
-    Ah: () => r,
-    E7: () => u,
-    SC: () => d,
-    XF: () => o,
-    XH: () => c,
-    cT: () => i,
-    ed: () => s,
-    mV: () => a,
-    pD: () => l,
-}),
-    n(896048);
-let r = 32,
-    i = 5,
-    a = "0",
-    s = {
-        width: 424,
-        height: 424,
-        padding: 100,
-    },
-    o = "ctrl+`",
-    l = [],
-    c = "0",
-    u = 6,
-    d = 100;
+"use strict";
+n.d(t, { ed: () => r, pD: () => i });
+let r = { width: 424, height: 424, padding: 100 },
+    i = [];

@@ -1,12 +1,8 @@
-n.d(i, {
-    default: () => r,
-}),
-    n(896048);
+n.d(i, { default: () => r });
 var s = n(627968),
     e = n(64700),
     a = n(732955),
     l = n(985018);
-
 function r(t) {
     let { transitionState: i, onConfirm: n, onClose: r } = t,
         [c, o] = e.useState(!1),
@@ -24,17 +20,8 @@ function r(t) {
         }, [c, n, r]),
         d = e.useMemo(
             () => [
-                {
-                    text: l.intl.string(l.t["ETE/oC"]),
-                    onClick: r,
-                    variant: "secondary",
-                    disabled: c,
-                },
-                {
-                    text: l.intl.string(l.t.MMlhsr),
-                    onClick: u,
-                    loading: c,
-                },
+                { text: l.intl.string(l.t["ETE/oC"]), onClick: r, variant: "secondary", disabled: c },
+                { text: l.intl.string(l.t.MMlhsr), onClick: u, loading: c },
             ],
             [u, c, r],
         );

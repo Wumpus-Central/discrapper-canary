@@ -1,21 +1,12 @@
-n.d(t, {
-    o: () => o,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { o: () => o }), n(321073);
 var r = n(711371);
 let i = 250,
     a = new WeakMap(),
     s = new WeakMap(),
     o = {
-        isMerging(e) {
-            var t;
-            return null == (t = s.get(e)) || t;
-        },
-        isSaving(e) {
-            var t;
-            return null == (t = a.get(e)) || t;
-        },
+        isMerging: (e) => s.get(e) ?? !0,
+        isSaving: (e) => a.get(e) ?? !0,
         withoutMerging(e, t) {
             let n = this.isMerging(e);
             s.set(e, !1);
@@ -40,27 +31,21 @@ let i = 250,
         insertOrMergeEntry(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = o.currentEntry(e);
-            o.isMerging(e) && (null == r ? void 0 : r.mergeable) ? this.mergeEntry(e, n) : this.insertEntry(e, t, n);
+            o.isMerging(e) && r?.mergeable ? this.mergeEntry(e, n) : this.insertEntry(e, t, n);
         },
         insertEntry(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 a = arguments.length > 3 ? arguments[3] : void 0,
                 s = arguments.length > 4 ? arguments[4] : void 0;
-            (s = null != s ? s : e.selection), (a = null != a ? a : r.VW.richValue(e));
+            (s = s ?? e.selection), (a = a ?? r.VW.richValue(e));
             let { history: l } = e,
-                c = o.currentEntry(e);
+                u = o.currentEntry(e);
             for (
-                null != c && (c.mergeable = !1), l.stack.length > 0 && (l.stack.length = l.index + 1);
+                null != u && (u.mergeable = !1), l.stack.length > 0 && (l.stack.length = l.index + 1);
                 l.stack.length >= i;
             )
                 l.stack.shift();
-            l.stack.push({
-                type: t,
-                mergeable: n,
-                createdAt: Date.now(),
-                value: a,
-                selection: s,
-            }),
+            l.stack.push({ type: t, mergeable: n, createdAt: Date.now(), value: a, selection: s }),
                 (l.index = l.stack.length - 1);
         },
         mergeEntry(e) {
@@ -71,16 +56,15 @@ let i = 250,
             null != a && ((a.value = i), (a.selection = n), t || (a.mergeable = !1));
         },
     };
-
 function l(e, t, n, i) {
     let s = e.children,
         l = e.selection,
-        c = o.isSaving(e);
+        u = o.isSaving(e);
     a.set(e, !1);
     try {
         let a = i();
         return (
-            c &&
+            u &&
                 (n
                     ? o.mergeEntry(e)
                     : e.children !== s
@@ -92,6 +76,6 @@ function l(e, t, n, i) {
             a
         );
     } finally {
-        a.set(e, c);
+        a.set(e, u);
     }
 }

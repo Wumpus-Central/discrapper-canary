@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(908289),
@@ -8,25 +7,13 @@ var i = n(908289),
     s = n(939496),
     o = n(993401),
     l = n(996988),
-    c = n(985018);
-
-function u(e) {
+    u = n(985018);
+function c(e) {
     let { activity: t, onAction: n } = e,
-        { themeType: u } = (0, s.E)(),
-        d = u === l.d.MODAL_V2,
-        f = (0, i.A)(t);
-    if (!(0, a.A)(t) || null == f) return null;
-    let p = (e) => (
-        e.stopPropagation(),
-        null == n ||
-            n({
-                action: "PRESS_WATCH_BUTTON",
-            }),
-        window.open(f)
-    );
-    return (0, r.jsx)(o.FD, {
-        text: c.intl.string(c.t.I6JG46),
-        fullWidth: !d,
-        onClick: p,
-    });
+        { themeType: c } = (0, s.E)(),
+        d = c === l.d.MODAL_V2,
+        _ = (0, i.A)(t);
+    if (!(0, a.A)(t) || null == _) return null;
+    let f = (e) => (e.stopPropagation(), n?.({ action: "PRESS_WATCH_BUTTON" }), window.open(_));
+    return (0, r.jsx)(o.FD, { text: u.intl.string(u.t.I6JG46), fullWidth: !d, onClick: f });
 }

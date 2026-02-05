@@ -1,6 +1,5 @@
-n.d(t, {
-    p: () => c,
-});
+"use strict";
+n.d(t, { p: () => u });
 var r = n(627968);
 n(64700);
 var i = n(234096),
@@ -21,39 +20,18 @@ let l = Object.freeze({
             spacing: 10,
             media: () => (0, r.jsx)(s.A, {}),
         },
-        "direct-messages": {
-            popoutPosition: "right",
-        },
-        "create-first-server": {
-            popoutPosition: "right",
-            highPriority: !0,
-        },
+        "direct-messages": { popoutPosition: "right" },
+        "create-first-server": { popoutPosition: "right", highPriority: !0 },
         "organize-by-topic": {
             popoutPosition: "right",
             textAlign: o.YL.CENTER,
             spacing: 8,
             media: () => (0, r.jsx)(i.A, {}),
         },
-        "instant-invite": {
-            popoutPosition: "right",
-            spacing: 24,
-            highPriority: !0,
-        },
-        "whos-online": {
-            spacing: 16,
-            popoutPosition: "left",
-        },
-        "server-settings": {
-            popoutPosition: "bottom",
-            spacing: 10,
-        },
-        "friends-list": {
-            spacing: 8,
-            popoutPosition: "right",
-        },
-        "create-more-servers": {
-            spacing: 8,
-            popoutPosition: "right",
-        },
+        "instant-invite": { popoutPosition: "right", spacing: 24, highPriority: !0 },
+        "whos-online": { spacing: 16, popoutPosition: "left" },
+        "server-settings": { popoutPosition: "bottom", spacing: 10 },
+        "friends-list": { spacing: 8, popoutPosition: "right" },
+        "create-more-servers": { spacing: 8, popoutPosition: "right" },
     }),
-    c = (e) => (e in l ? l[e] : null);
+    u = (e) => (e in l ? l[e] : null);

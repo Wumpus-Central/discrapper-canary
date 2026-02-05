@@ -1,3 +1,1 @@
-e.exports = {
-    M: "flagIcon__45b6e",
-};
+e.exports = { M: "flagIcon__45b6e" };

@@ -1,201 +1,117 @@
-n.d(t, {
-    O: () => z,
-    d: () => G,
-}),
-    n(896048);
+n.d(t, { O: () => P, d: () => G });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    o = n(417597),
-    s = n(205693),
-    c = n(435371),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(417597),
+    o = n(205693),
+    d = n(435371),
     u = n(397927),
-    d = n(827343),
-    p = n(442433),
-    h = n(391973),
-    f = n(401843),
-    m = n(520698),
-    g = n(164617),
-    y = n(402216),
-    A = n(652896),
-    O = n(607407),
-    E = n(534400),
-    v = n(267102),
-    b = n(401901),
-    S = n(203355),
-    x = n(110234),
-    j = n(616356),
-    I = n(961350),
+    c = n(827343),
+    h = n(442433),
+    A = n(391973),
+    m = n(401843),
+    g = n(520698),
+    p = n(164617),
+    f = n(402216),
+    _ = n(652896),
+    E = n(607407),
+    x = n(534400),
+    S = n(267102),
+    I = n(401901),
+    T = n(203355),
+    C = n(110234),
+    v = n(616356),
+    y = n(961350),
     N = n(430452),
-    w = n(287809),
-    T = n(562153),
-    C = n(810412),
-    _ = n(589051),
-    P = n(761661),
-    D = n(652215),
-    R = n(985018),
-    L = n(444638);
-
+    O = n(287809),
+    b = n(562153),
+    j = n(810412),
+    w = n(589051),
+    L = n(761661),
+    R = n(652215),
+    D = n(985018),
+    M = n(444638);
 function k(e) {
     let { participant: t } = e;
-    return (0, i.jsx)(c.m_, {
-        text: R.intl.string(R.t["4EGMWL"]),
+    return (0, i.jsx)(d.m_, {
+        text: D.intl.string(D.t["4EGMWL"]),
         children: (0, i.jsx)(u.DUT, {
-            className: L.IF,
+            className: M.IF,
             onClick: (e) => {
-                (0, f.vN)((0, A._z)(t.stream), !1),
+                (0, m.vN)((0, _._z)(t.stream), !1),
                     e.stopPropagation(),
-                    (0, C.YX)(D.uss.GO_LIVE, {
-                        type: C.Z5.SCREEN_SHARE,
-                        value: C.IP.DISABLED,
-                        userId: t.user.id,
-                    });
+                    (0, j.YX)(R.uss.GO_LIVE, { type: j.Z5.SCREEN_SHARE, value: j.IP.DISABLED, userId: t.user.id });
             },
-            children: (0, i.jsx)(u.GT3, {
-                size: "sm",
-                color: u.LU0.colors.WHITE,
-            }),
+            children: (0, i.jsx)(u.GT3, { size: "sm", color: u.LU0.colors.WHITE }),
         }),
     });
 }
-
-function M(e) {
+function z(e) {
     let { participant: t } = e,
         n = t.user.id,
-        l = (0, o.bG)([N.A], () => {
-            let e = (0, m.A)(t.type);
+        a = (0, r.bG)([N.A], () => {
+            let e = (0, g.A)(t.type);
             return N.A.isLocalMute(t.user.id, e);
         }, [t]),
-        a = (0, o.bG)([I.default], () => I.default.getId()),
-        { hasVideo: p } = (0, x.A)(t, a),
-        h = l && p,
-        f = r.useCallback(() => {
-            d.A.toggleLocalMute(n, s.x.STREAM);
+        s = (0, r.bG)([y.default], () => y.default.getId()),
+        { hasVideo: h } = (0, C.A)(t, s),
+        A = a && h,
+        m = l.useCallback(() => {
+            c.A.toggleLocalMute(n, o.x.STREAM);
         }, [n]);
-    return (0, i.jsx)(c.m_, {
-        text: h ? R.intl.string(R.t.YqAjXy) : R.intl.string(R.t.w4m945),
+    return (0, i.jsx)(d.m_, {
+        text: A ? D.intl.string(D.t.YqAjXy) : D.intl.string(D.t.w4m945),
         children: (0, i.jsx)(u.DUT, {
-            className: L.IF,
+            className: M.IF,
             onClick: (e) => {
                 e.stopPropagation(),
-                    (0, C.YX)(D.uss.GO_LIVE, {
-                        type: C.Z5.AUDIO,
-                        value: h ? C.IP.ENABLED : C.IP.DISABLED,
+                    (0, j.YX)(R.uss.GO_LIVE, {
+                        type: j.Z5.AUDIO,
+                        value: A ? j.IP.ENABLED : j.IP.DISABLED,
                         userId: t.user.id,
                     }),
-                    f();
+                    m();
             },
-            children: h
-                ? (0, i.jsx)(u._RO, {
-                      size: "sm",
-                      color: "currentColor",
-                  })
-                : (0, i.jsx)(u.HKD, {
-                      size: "sm",
-                      color: "currentColor",
-                  }),
+            children: A
+                ? (0, i.jsx)(u._RO, { size: "sm", color: "currentColor" })
+                : (0, i.jsx)(u.HKD, { size: "sm", color: "currentColor" }),
         }),
     });
 }
-
 function V(e, t) {
-    return (r) => {
-        (0, C.YX)(D.uss.GO_LIVE, {
-            type: C.Z5.GO_LIVE,
-            value: C.IP.SETTINGS_OPENED,
-            userId: e.user.id,
-        }),
-            r.stopPropagation(),
-            (0, p.L3)(r, async () => {
-                let { default: r } = await n.e("61361").then(n.bind(n, 663912));
-                return (n) => {
-                    var l, a;
-                    return (0, i.jsx)(
-                        r,
-                        ((l = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = i);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (a = a =
-                            {
-                                stream: e.stream,
-                                exitFullscreen: () => {},
-                                appContext: t,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
-                              }),
-                        l),
-                    );
-                };
+    return (l) => {
+        (0, j.YX)(R.uss.GO_LIVE, { type: j.Z5.GO_LIVE, value: j.IP.SETTINGS_OPENED, userId: e.user.id }),
+            l.stopPropagation(),
+            (0, h.L3)(l, async () => {
+                let { default: l } = await n.e("61361").then(n.bind(n, 663912));
+                return (n) => (0, i.jsx)(l, { ...n, stream: e.stream, exitFullscreen: () => {}, appContext: t });
             });
     };
 }
-
 function U(e) {
-    let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
-        l = (0, v.Us)(),
-        s = n.user,
-        d = (0, o.bG)([w.default], () => {
-            var e;
-            return null != (e = w.default.getUser(s.id)) ? e : s;
-        }, [s]),
-        p = t ? R.intl.string(R.t.tLxK4l) : R.intl.string(R.t.E5RDnK),
-        { enabled: h } = (0, _.QC)("GoLiveTile");
+    let { hasActiveStream: t, participant: n, onEnablePin: l } = e,
+        a = (0, S.Us)(),
+        o = n.user,
+        c = (0, r.bG)([O.default], () => O.default.getUser(o.id) ?? o, [o]),
+        h = t ? D.intl.string(D.t.tLxK4l) : D.intl.string(D.t.E5RDnK),
+        { enabled: A } = (0, w.QC)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", {
-                className: a()(L.MI, {
-                    [L.te]: t,
-                }),
-            }),
+            (0, i.jsx)("div", { className: s()(M.MI, { [M.te]: t }) }),
             !t &&
                 (0, i.jsx)("div", {
-                    className: L.TP,
-                    children: (0, i.jsx)(c.m_, {
-                        text: p,
+                    className: M.TP,
+                    children: (0, i.jsx)(d.m_, {
+                        text: h,
                         children: (0, i.jsxs)(u.DUT, {
-                            className: L.kx,
+                            className: M.kx,
                             onClick: () => {
-                                (0, f.A9)(n.stream, {
-                                    forceMultiple: !0,
-                                    noFocus: !0,
-                                }),
-                                    r(),
-                                    (0, C.YX)(D.uss.GO_LIVE, {
-                                        type: C.Z5.GO_LIVE,
-                                        value: C.IP.ENABLED,
+                                (0, m.A9)(n.stream, { forceMultiple: !0, noFocus: !0 }),
+                                    l(),
+                                    (0, j.YX)(R.uss.GO_LIVE, {
+                                        type: j.Z5.GO_LIVE,
+                                        value: j.IP.ENABLED,
                                         userId: n.user.id,
                                     });
                             },
@@ -203,39 +119,36 @@ function U(e) {
                                 (0, i.jsx)(u.Text, {
                                     variant: "text-sm/semibold",
                                     color: "always-white",
-                                    children: R.intl.string(R.t.I6JG46),
+                                    children: D.intl.string(D.t.I6JG46),
                                 }),
-                                (0, i.jsx)(u.vAm, {
-                                    size: "sm",
-                                    color: "currentColor",
-                                }),
+                                (0, i.jsx)(u.vAm, { size: "sm", color: "currentColor" }),
                             ],
                         }),
                     }),
                 }),
             (0, i.jsxs)("div", {
-                className: L.ne,
+                className: M.ne,
                 children: [
                     (0, i.jsx)("div", {
-                        className: L.fL,
+                        className: M.fL,
                         children: (0, i.jsxs)("div", {
-                            className: L.K8,
+                            className: M.K8,
                             children: [
                                 (0, i.jsx)(u.Text, {
                                     variant: "text-md/medium",
                                     color: "always-white",
-                                    className: L.yb,
-                                    children: T.Ay.getName(n.stream.guildId, n.stream.channelId, s),
+                                    className: M.yb,
+                                    children: b.Ay.getName(n.stream.guildId, n.stream.channelId, o),
                                 }),
-                                (0, i.jsx)(E.Ay, {
-                                    primaryGuild: d.primaryGuild,
-                                    userId: d.id,
-                                    containerClassName: L.Mp,
+                                (0, i.jsx)(x.Ay, {
+                                    primaryGuild: c.primaryGuild,
+                                    userId: c.id,
+                                    containerClassName: M.Mp,
                                     inline: !1,
                                     onShowProfile: () => {
-                                        (0, C.YX)(D.uss.GO_LIVE, {
-                                            type: C.Z5.GO_LIVE,
-                                            value: C.IP.GUILD_PROFILE_OPENED,
+                                        (0, j.YX)(R.uss.GO_LIVE, {
+                                            type: j.Z5.GO_LIVE,
+                                            value: j.IP.GUILD_PROFILE_OPENED,
                                             userId: n.user.id,
                                         });
                                     },
@@ -244,27 +157,19 @@ function U(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: L.FO,
+                        className: M.FO,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    h &&
-                                        (0, i.jsx)(k, {
-                                            participant: n,
-                                        }),
-                                    (0, i.jsx)(M, {
-                                        participant: n,
-                                    }),
-                                    (0, i.jsx)(c.m_, {
-                                        text: R.intl.string(R.t["3D5yo/"]),
+                                    A && (0, i.jsx)(k, { participant: n }),
+                                    (0, i.jsx)(z, { participant: n }),
+                                    (0, i.jsx)(d.m_, {
+                                        text: D.intl.string(D.t["3D5yo/"]),
                                         children: (0, i.jsx)(u.DUT, {
-                                            className: L.IF,
-                                            onClick: V(n, l),
-                                            children: (0, i.jsx)(u.jNK, {
-                                                size: "sm",
-                                                color: "currentColor",
-                                            }),
+                                            className: M.IF,
+                                            onClick: V(n, a),
+                                            children: (0, i.jsx)(u.jNK, { size: "sm", color: "currentColor" }),
                                         }),
                                     }),
                                 ],
@@ -275,68 +180,57 @@ function U(e) {
         ],
     });
 }
-let z = new Set([D.XYD.ENDED, D.XYD.FAILED, D.XYD.PAUSED]),
-    G = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: a } = e,
-            s = (0, o.bG)([j.A], () => j.A.getActiveStreamForUser(t.user.id, t.stream.guildId), [
+let P = new Set([R.XYD.ENDED, R.XYD.FAILED, R.XYD.PAUSED]),
+    G = l.memo(function (e) {
+        let { participant: t, width: n, locked: l, widgetId: a, pinned: s } = e,
+            o = (0, r.bG)([v.A], () => v.A.getActiveStreamForUser(t.user.id, t.stream.guildId), [
                 t.user.id,
                 t.stream.guildId,
             ]),
-            c = (0, v.Us)(),
-            d = null != s && z.has(s.state),
-            p = null != s,
-            f = (0, P.dh)(t.stream),
-            m = (0, P.XG)(t.stream);
-        return (!p && r) || d
+            d = (0, S.Us)(),
+            c = null != o && P.has(o.state),
+            h = null != o,
+            m = (0, L.dh)(t.stream),
+            g = (0, L.XG)(t.stream);
+        return (!h && l) || c
             ? null
             : (0, i.jsxs)("div", {
-                  className: L.Vs,
+                  className: M.Vs,
                   children: [
-                      p &&
-                          !r &&
-                          (0, i.jsx)(y.Ay, {
-                              size: y.Ay.Sizes.SMALL,
-                              className: L.Ok,
-                          }),
-                      p
+                      h && !l && (0, i.jsx)(f.Ay, { size: f.Ay.Sizes.SMALL, className: M.Ok }),
+                      h
                           ? (0, i.jsx)("div", {
-                                className: L.X$,
+                                className: M.X$,
                                 children: (0, i.jsx)(u.sqX, {
-                                    "aria-label": R.intl.formatToPlainString(R.t.gHPz3Q, {
+                                    "aria-label": D.intl.formatToPlainString(D.t.gHPz3Q, {
                                         streamerName: t.user.username,
                                     }),
                                     onClick: () => {},
-                                    onContextMenu: V(t, c),
-                                    className: L.X$,
-                                    style: {
-                                        transform: "scale(".concat(f, ")"),
-                                    },
-                                    children: (0, i.jsx)(S.A, {
+                                    onContextMenu: V(t, d),
+                                    className: M.X$,
+                                    style: { transform: `scale(${m})` },
+                                    children: (0, i.jsx)(T.A, {
                                         participant: t,
                                         width: n,
-                                        fit: null != m ? m : b.$.CONTAIN,
-                                        popoutType: g.N.OVERLAY,
-                                        focused: !r,
+                                        fit: g ?? I.$.CONTAIN,
+                                        popoutType: p.N.OVERLAY,
+                                        focused: !l,
                                         selected: !1,
-                                        wrapperClassName: r ? L.Gq : void 0,
+                                        wrapperClassName: l ? M.Gq : void 0,
                                     }),
                                 }),
                             })
                           : (0, i.jsx)("div", {
-                                className: L.Rh,
-                                children: (0, i.jsx)(O.A, {
-                                    noText: !0,
-                                    className: L.HL,
-                                    stream: t.stream,
-                                }),
+                                className: M.Rh,
+                                children: (0, i.jsx)(E.A, { noText: !0, className: M.HL, stream: t.stream }),
                             }),
-                      r
+                      l
                           ? null
                           : (0, i.jsx)(U, {
                                 participant: t,
-                                hasActiveStream: p,
+                                hasActiveStream: h,
                                 onEnablePin: () => {
-                                    a || (0, h.v0)(l);
+                                    s || (0, A.v0)(a);
                                 },
                             }),
                   ],

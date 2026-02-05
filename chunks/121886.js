@@ -1,6 +1,5 @@
-l.d(t, {
-    K: () => r,
-});
+"use strict";
+s.d(t, { K: () => r });
 var n,
     r =
         (((n = {}).ANIME = "COLLECTIBLES_THEME_ANIME"),

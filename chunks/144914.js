@@ -1,15 +1,11 @@
-n.d(t, {
-    A: () => o,
-    S: () => s,
-});
+"use strict";
+n.d(t, { A: () => o, S: () => s });
 var r = n(674378),
     i = n(723702),
     a = n(837921);
-
 function s() {
     return ((0, i.isWindows)() && "arm64" !== a.Ay.architecture) || (0, i.isMac)();
 }
-
 function o(e) {
     let {
         LibraryApplicationStore: t,

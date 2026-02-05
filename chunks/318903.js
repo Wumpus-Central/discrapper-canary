@@ -1,41 +1,28 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
-    i = n(158954),
-    a = n(199966),
-    s = n(963935),
-    o = n(894858),
-    l = n(590089),
+n.d(t, { A: () => d });
+var i = n(627968),
+    s = n(158954),
+    r = n(199966),
+    a = n(963935),
+    l = n(894858),
+    o = n(590089),
     c = n(191563);
-
-function u(e) {
-    var t, n, u, d;
-    let { node: f } = e,
-        { destinationKey: p } = f,
-        _ = null == (t = f.useSubtitle) ? void 0 : t.call(f),
-        { accessibleDirectory: h } = (0, a._)(),
-        m = h.entry(p),
-        g = (null == m ? void 0 : m.parentPanelKey) != null ? h.get(m.parentPanelKey) : void 0,
-        E = null == (n = f.useTitle) ? void 0 : n.call(f),
-        b = null == g || null == (u = g.useTitle) ? void 0 : u.call(g);
-    if (null == g) return null;
-    let y = (null == (d = g.parent) ? void 0 : d.type) === s.Z6.SIDEBAR_ITEM ? g.parent.icon : void 0;
-    return (0, r.jsx)(l.U, {
-        title: null != E ? E : b,
-        description: _,
+function d(e) {
+    let { node: t } = e,
+        { destinationKey: n } = t,
+        d = t.useSubtitle?.(),
+        { accessibleDirectory: u } = (0, r._)(),
+        _ = u.entry(n),
+        m = _?.parentPanelKey != null ? u.get(_.parentPanelKey) : void 0,
+        A = t.useTitle?.(),
+        g = m?.useTitle?.();
+    if (null == m) return null;
+    let E = m.parent?.type === a.Z6.SIDEBAR_ITEM ? m.parent.icon : void 0;
+    return (0, i.jsx)(o.U, {
+        title: A ?? g,
+        description: d,
         leadingElement:
-            null != y &&
-            (0, r.jsx)("div", {
-                className: c.z,
-                children: (0, r.jsx)(y, {
-                    color: "currentColor",
-                }),
-            }),
-        primaryTrailingElement: (0, r.jsx)(i.uhT, {}),
-        onClick: () =>
-            o.A.setState({
-                requestedTargetKey: p,
-            }),
+            null != E && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(E, { color: "currentColor" }) }),
+        primaryTrailingElement: (0, i.jsx)(s.uhT, {}),
+        onClick: () => l.A.setState({ requestedTargetKey: n }),
     });
 }

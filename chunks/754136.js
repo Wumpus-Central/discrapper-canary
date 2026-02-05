@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Qs: "content_dbba93",
     u1: "spinner_dbba93",

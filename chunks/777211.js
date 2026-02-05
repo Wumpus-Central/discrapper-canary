@@ -1,22 +1,18 @@
-n.d(t, {
-    A: () => _,
-});
+"use strict";
+n.d(t, { A: () => p });
 var r = n(64700),
     i = n(238710),
     a = n(655972),
     s = n.n(a),
     o = 0x3fffffff,
     l = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== n.g ? n.g : {};
-
-function c() {
+function u() {
     var e = "__global_unique_id__";
     return (l[e] = (l[e] || 0) + 1);
 }
-
-function u(e, t) {
+function c(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
-
 function d(e) {
     var t = [];
     return {
@@ -39,16 +35,14 @@ function d(e) {
         },
     };
 }
-
-function f(e) {
+function _(e) {
     return Array.isArray(e) ? e[0] : e;
 }
-
-function p(e, t) {
+function f(e, t) {
     var n,
         a,
-        l = "__create-react-context-" + c() + "__",
-        p = (function (e) {
+        l = "__create-react-context-" + u() + "__",
+        f = (function (e) {
             function n() {
                 var t;
                 return (t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t;
@@ -65,7 +59,7 @@ function p(e, t) {
                         var n,
                             r = this.props.value,
                             i = e.value;
-                        u(r, i)
+                        c(r, i)
                             ? (n = 0)
                             : 0 != (n = ("function" == typeof t ? t(r, i) : o) | 0) && this.emitter.set(e.value, n);
                     }
@@ -76,20 +70,15 @@ function p(e, t) {
                 n
             );
         })(r.Component);
-    ((n = {})[l] = s().object.isRequired), (p.childContextTypes = n);
-    var _ = (function (t) {
+    ((n = {})[l] = s().object.isRequired), (f.childContextTypes = n);
+    var p = (function (t) {
         function n() {
             var e;
             return (
                 (e = t.apply(this, arguments) || this),
-                (e.state = {
-                    value: e.getValue(),
-                }),
+                (e.state = { value: e.getValue() }),
                 (e.onUpdate = function (t, n) {
-                    (e.observedBits & n) != 0 &&
-                        e.setState({
-                            value: e.getValue(),
-                        });
+                    (e.observedBits & n) != 0 && e.setState({ value: e.getValue() });
                 }),
                 e
             );
@@ -113,18 +102,11 @@ function p(e, t) {
                 return this.context[l] ? this.context[l].get() : e;
             }),
             (r.render = function () {
-                return f(this.props.children)(this.state.value);
+                return _(this.props.children)(this.state.value);
             }),
             n
         );
     })(r.Component);
-    return (
-        ((a = {})[l] = s().object),
-        (_.contextTypes = a),
-        {
-            Provider: p,
-            Consumer: _,
-        }
-    );
+    return ((a = {})[l] = s().object), (p.contextTypes = a), { Provider: f, Consumer: p };
 }
-let _ = r.createContext || p;
+let p = r.createContext || f;

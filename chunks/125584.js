@@ -1,11 +1,9 @@
-n.d(t, {
-    f: () => o,
-});
+"use strict";
+n.d(t, { f: () => o });
 var r = n(683760),
     i = n(474090),
     a = n(652215),
     s = n(788868);
-
 function o(e) {
     if (null == e) return a.TbF;
     let t = r.A.getPremiumTypeOverride();

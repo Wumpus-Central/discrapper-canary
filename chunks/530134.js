@@ -1,41 +1,32 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => m });
 var l = n(627968),
-    r = n(64700),
-    a = n(503698),
-    i = n.n(a),
-    s = n(942381),
-    c = n(375499),
-    o = n(151271),
-    d = n(698279),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(942381),
+    o = n(375499),
+    d = n(151271),
+    c = n(698279),
     u = n(111314);
-let m = r.memo(
-    r.forwardRef(function (e, t) {
-        let { disabled: n, type: a, className: m, onClick: h, channel: f } = e,
-            [g, x, b] = (0, o.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], s.x),
-            p = r.useCallback(() => {
-                (0, o.ed)(a, f.id), null == h || h();
-            }, [a, h, f.id]);
+let m = i.memo(
+    i.forwardRef(function (e, t) {
+        let { disabled: n, type: s, className: m, onClick: h, channel: x } = e,
+            [g, f, p] = (0, d.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], r.x),
+            _ = i.useCallback(() => {
+                (0, d.ed)(s, x.id), h?.();
+            }, [s, h, x.id]);
         return n
             ? null
             : (0, l.jsx)("div", {
-                  className: i()(d.VQ, u.UD),
+                  className: a()(c.VQ, u.UD),
                   ref: t,
-                  children: (0, l.jsx)(c.A, {
-                      className: i()(u.Z8, m),
-                      onClick: p,
-                      active: (g === d.kx.GIF || g === d.kx.EMOJI || g === d.kx.STICKER) && x === a && b === f.id,
+                  children: (0, l.jsx)(o.A, {
+                      className: a()(u.Z8, m),
+                      onClick: _,
+                      active: (g === c.kx.GIF || g === c.kx.EMOJI || g === c.kx.STICKER) && f === s && p === x.id,
                       tabIndex: 0,
-                      focusProps: {
-                          offset: {
-                              top: 4,
-                              bottom: 4,
-                              left: -4,
-                              right: -4,
-                          },
-                      },
+                      focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
                   }),
               });
     }),

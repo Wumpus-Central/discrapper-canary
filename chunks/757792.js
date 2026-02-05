@@ -1,14 +1,12 @@
-n.d(t, {
-    P3: () => f,
-    Sg: () => d,
-});
+"use strict";
+n.d(t, { P3: () => _, Sg: () => d });
 var r = n(417597),
     i = n(554146),
     a = n(961350),
     s = n(927813),
     o = n(661191),
     l = n(199773);
-let c = {
+let u = {
         [i.M.MJ_NEW_USER_CHAT_BAR]: 0,
         [i.M.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
         [i.M.SEEN_LAUNCH_WELCOME]: 0,
@@ -42,21 +40,17 @@ let c = {
         [i.M.NITRO_DROP_REWARD]: 0,
         [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
     },
-    u = s.A.Millis.DAY;
-
+    c = s.A.Millis.DAY;
 function d(e) {
     let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cf)([a.default, l.A], () => ({
         userId: a.default.getId(),
         newUserMinAgeRequiredOverridden: l.A.newUserMinAgeRequiredOverridden,
     }));
-    return n ? e : e.filter((e) => p(t, e));
+    return n ? e : e.filter((e) => f(t, e));
 }
-
-function f(e) {
-    return !l.A.newUserMinAgeRequiredOverridden && !p(a.default.getId(), e);
+function _(e) {
+    return !l.A.newUserMinAgeRequiredOverridden && !f(a.default.getId(), e);
 }
-
-function p(e, t) {
-    var n;
-    return null != e && o.default.age(e) >= (null != (n = c[t]) ? n : u);
+function f(e, t) {
+    return null != e && o.default.age(e) >= (u[t] ?? c);
 }

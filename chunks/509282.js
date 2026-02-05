@@ -1,417 +1,309 @@
-n.d(t, {
-    $: () => R,
-    G: () => w,
-}),
-    n(896048),
-    n(938796),
-    n(228524),
-    n(733351);
-var r = n(627968),
-    i = n(64700),
-    l = n(284009),
-    a = n.n(l),
+n.d(t, { $: () => O, G: () => M }), n(938796);
+var i = n(627968),
+    l = n(64700),
+    a = n(284009),
+    r = n.n(a),
     s = n(311907),
     o = n(397927),
-    c = n(996759),
-    u = n(800342),
-    d = n(627363),
-    p = n(587895),
-    m = n(163437),
-    f = n(185438),
-    g = n(734057),
-    h = n(97352),
-    _ = n(31455),
-    b = n(67480),
-    A = n(328968),
-    y = n(954571),
-    v = n(957565),
-    x = n(943775),
-    O = n(997997),
-    E = n(658575),
-    j = n(376374),
-    C = n(652215),
-    I = n(435220),
-    S = n(985018),
-    T = n(159740);
-let N = (0, s.UT)([b.A, A.A, h.A], {
-        getQueryId: C.fic.SKU,
+    d = n(996759),
+    c = n(800342),
+    u = n(627363),
+    m = n(587895),
+    _ = n(163437),
+    h = n(185438),
+    p = n(734057),
+    g = n(97352),
+    A = n(31455),
+    f = n(67480),
+    x = n(328968),
+    E = n(954571),
+    C = n(957565),
+    I = n(943775),
+    T = n(997997),
+    v = n(658575),
+    N = n(376374),
+    S = n(652215),
+    b = n(435220),
+    y = n(985018),
+    j = n(159740);
+let R = (0, s.UT)([f.A, x.A, g.A], {
+        getQueryId: S.fic.SKU,
         get: (e) => {
             if (null == e) return;
-            let t = b.A.get(e),
-                n = A.A.getForSKU(e);
+            let t = f.A.get(e),
+                n = x.A.getForSKU(e);
             if (null == t || null == n) return;
-            let r = h.A.getForSKU(e);
-            return {
-                sku: t,
-                storeListing: n,
-                subscriptionPlan: null != r ? r[0] : void 0,
-            };
+            let i = g.A.getForSKU(e);
+            return { sku: t, storeListing: n, subscriptionPlan: null != i ? i[0] : void 0 };
         },
         load: async (e) => {
-            a()(null != e, "skuId is null"), await (0, u.QB)(e);
+            r()(null != e, "skuId is null"), await (0, c.QB)(e);
         },
     }),
-    P = (0, s.UT)([b.A], {
-        getQueryId: C.fic.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
-        get: (e) => {
-            var t;
-            return null == e ? null : null != (t = b.A.getParentSKU(e)) ? t : null;
-        },
+    L = (0, s.UT)([f.A], {
+        getQueryId: S.fic.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
+        get: (e) => (null == e ? null : (f.A.getParentSKU(e) ?? null)),
         load: async (e, t) => {
-            a()(null != e && null != t, "appId is null"), await (0, u.JI)(t);
+            r()(null != e && null != t, "appId is null"), await (0, c.JI)(t);
         },
     });
-
-function w(e) {
-    let { appId: t, message: l } = e,
-        a = (0, E.G)(t),
-        { data: u } = (0, d.YY)(t),
-        [m, f, h, b] = (0, s.yK)([p.A, _.A, g.A], () => {
-            var e;
-            let n = p.A.getApplication(t),
-                r = null != n ? (0, x.A)(n, 45) : void 0,
-                i = null == (e = g.A.getBasicChannel(l.channel_id)) ? void 0 : e.guild_id;
-            return [_.A.getStoreLayout(t), _.A.getFetchStatus(t), i, r];
-        }, [t, l.channel_id]);
-    i.useEffect(() => {
-        f === _.N.NONE && (0, c.V)(t);
-    }, [t, f]);
-    let A = m.subscriptions.length,
-        v = m.otps.length,
-        j = i.useMemo(
+function M(e) {
+    let { appId: t, message: a } = e,
+        r = (0, v.G)(t),
+        { data: c } = (0, u.YY)(t),
+        [_, h, g, f] = (0, s.yK)([m.A, A.A, p.A], () => {
+            let e = m.A.getApplication(t),
+                n = null != e ? (0, I.A)(e, 45) : void 0,
+                i = p.A.getBasicChannel(a.channel_id)?.guild_id;
+            return [A.A.getStoreLayout(t), A.A.getFetchStatus(t), i, n];
+        }, [t, a.channel_id]);
+    l.useEffect(() => {
+        h === A.N.NONE && (0, d.V)(t);
+    }, [t, h]);
+    let x = _.subscriptions.length,
+        C = _.otps.length,
+        N = l.useMemo(
             () =>
-                A > 0 && v > 0
-                    ? S.intl.formatToPlainString(S.t["jA648+"], {
-                          subCount: A,
-                          itemCount: v,
-                      })
-                    : A > 0
-                      ? S.intl.formatToPlainString(S.t.GSfibA, {
-                            count: A,
-                        })
-                      : v > 0
-                        ? S.intl.formatToPlainString(S.t.j7Go5A, {
-                              count: v,
-                          })
-                        : S.intl.string(S.t.rMA98g),
-            [v, A],
+                x > 0 && C > 0
+                    ? y.intl.formatToPlainString(y.t["jA648+"], { subCount: x, itemCount: C })
+                    : x > 0
+                      ? y.intl.formatToPlainString(y.t.GSfibA, { count: x })
+                      : C > 0
+                        ? y.intl.formatToPlainString(y.t.j7Go5A, { count: C })
+                        : y.intl.string(y.t.rMA98g),
+            [C, x],
         );
-    if (!a || null == u) return null;
-    let N = () => {
+    if (!r || null == c) return null;
+    let R = () => {
         (0, o.mMO)(async () => {
             let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
             return (n) =>
-                (0, r.jsx)(e, {
-                    transitionState: n.transitionState,
-                    onClose: n.onClose,
-                    appId: t,
-                    guildId: h,
-                });
+                (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
     };
-    return (0, r.jsx)(D, {
-        appName: u.name,
-        title: S.intl.formatToPlainString(S.t.XDRjs5, {
-            appName: u.name,
-        }),
-        description: j,
-        link: ""
-            .concat(location.protocol, "//")
-            .concat(location.host)
-            .concat(C.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, I.GlobalDiscoveryAppsSections.STORE)),
+    return (0, i.jsx)(P, {
+        appName: c.name,
+        title: y.intl.formatToPlainString(y.t.XDRjs5, { appName: c.name }),
+        description: N,
+        link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(c.id, b.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, O.K)(t, O.C.STORE_EMBED);
+            (0, T.K)(t, T.C.STORE_EMBED);
         },
-        iconSrc: b,
+        iconSrc: f,
         onIconClick: () => {
-            N(),
-                y.default.track(C.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
-                    application_id: t,
-                    area: "app_icon",
-                });
+            R(), E.default.track(S.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, { application_id: t, area: "app_icon" });
         },
-        children: (0, r.jsx)("div", {
-            className: T.mZ,
-            children: (0, r.jsx)(o.Button, {
+        children: (0, i.jsx)("div", {
+            className: j.mZ,
+            children: (0, i.jsx)(o.Button, {
                 onClick: () => {
-                    N(),
-                        y.default.track(C.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    R(),
+                        E.default.track(S.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: "open_store_button",
                         });
                 },
-                text: S.intl.string(S.t.kRvlKJ),
+                text: y.intl.string(y.t.kRvlKJ),
             }),
         }),
     });
 }
-
-function R(e) {
-    var t, l;
-    let { appId: a, skuId: c, message: u } = e,
+function O(e) {
+    let { appId: t, skuId: a, message: r } = e,
         {
-            parentSku: p,
-            sku: h,
-            subscriptionPlan: _,
-            storeListing: b,
+            parentSku: d,
+            sku: c,
+            subscriptionPlan: m,
+            storeListing: g,
         } = (function (e, t) {
-            var n, r;
-            let { data: i } = N(e),
-                l = null == i ? void 0 : i.sku,
-                a = null == i ? void 0 : i.subscriptionPlan,
-                s = null == i ? void 0 : i.storeListing,
-                { data: o } = P(
-                    e,
-                    null != (n = null == l || null == (r = l.application) ? void 0 : r.id)
-                        ? n
-                        : null == l
-                          ? void 0
-                          : l.applicationId,
-                );
-            return {
-                parentSku: o,
-                sku: (null == l ? void 0 : l.applicationId) === t ? l : null,
-                storeListing: s,
-                subscriptionPlan: a,
-            };
-        })(c, a),
-        { data: A } = (0, d.YY)(null == h ? void 0 : h.applicationId),
-        v = (0, s.bG)([g.A], () => {
-            var e;
-            return null == (e = g.A.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
-        }, [u]),
-        w = i.useMemo(() => (null != A ? (0, x.A)(A, 45) : void 0), [A]),
-        R = (0, E.G)(null != (t = null == A ? void 0 : A.id) ? t : ""),
-        { openModal: L, subscriptionPurchaseButtonState: M } = (0, f.A)({
-            skuId: c,
-            initialSubscribeForGuild: v,
-        });
-    if (!R || null == A || null == h) return null;
-    let k = h.type === C.Puh.SUBSCRIPTION,
-        U = !!k && (0, m.bg)(h.flags),
-        G = () => {
+            let { data: n } = R(e),
+                i = n?.sku,
+                l = n?.subscriptionPlan,
+                a = n?.storeListing,
+                { data: r } = L(e, i?.application?.id ?? i?.applicationId);
+            return { parentSku: r, sku: i?.applicationId === t ? i : null, storeListing: a, subscriptionPlan: l };
+        })(a, t),
+        { data: A } = (0, u.YY)(c?.applicationId),
+        f = (0, s.bG)([p.A], () => p.A.getBasicChannel(r.channel_id)?.guild_id, [r]),
+        x = l.useMemo(() => (null != A ? (0, I.A)(A, 45) : void 0), [A]),
+        C = (0, v.G)(A?.id ?? ""),
+        { openModal: M, subscriptionPurchaseButtonState: O } = (0, h.A)({ skuId: a, initialSubscribeForGuild: f });
+    if (!C || null == A || null == c) return null;
+    let D = c.type === S.Puh.SUBSCRIPTION,
+        k = !!D && (0, _.bg)(c.flags),
+        U = () => {
             (0, o.mMO)(async () => {
                 let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
                 return (t) =>
-                    (0, r.jsx)(e, {
-                        transitionState: t.transitionState,
-                        onClose: t.onClose,
-                        appId: A.id,
-                        guildId: v,
-                    });
+                    (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: f });
             });
         },
-        B = () => {
+        w = () => {
             (0, o.mMO)(async () => {
-                let e = k ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
-                    t = k ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
+                let e = D ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
+                    t = D ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
                 return (n) => {
-                    let i = () => {
-                        n.onClose(), G();
+                    let l = () => {
+                        n.onClose(), U();
                     };
-                    return null != e && null != p
-                        ? (0, r.jsx)(e, {
+                    return null != e && null != d
+                        ? (0, i.jsx)(e, {
                               transitionState: n.transitionState,
                               appId: A.id,
-                              skuId: h.id,
-                              guildId: v,
-                              subscriptionType: U ? "user" : "guild",
+                              skuId: c.id,
+                              guildId: f,
+                              subscriptionType: k ? "user" : "guild",
                               onClose: n.onClose,
-                              onHeaderTitleClick: i,
+                              onHeaderTitleClick: l,
                           })
                         : null != t
-                          ? (0, r.jsx)(t, {
+                          ? (0, i.jsx)(t, {
                                 transitionState: n.transitionState,
                                 appId: A.id,
-                                skuId: c,
+                                skuId: a,
                                 onClose: n.onClose,
-                                onHeaderTitleClick: i,
+                                onHeaderTitleClick: l,
                             })
                           : null;
                 };
             });
         },
-        F = k
-            ? U
-                ? (0, r.jsxs)(r.Fragment, {
+        G = D
+            ? k
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, r.jsx)(o.nys, {
-                              size: "custom",
-                              width: 12,
-                              height: 12,
-                          }),
+                          (0, i.jsx)(o.nys, { size: "custom", width: 12, height: 12 }),
                           " ",
-                          S.intl.string(S.t.wnifjC),
+                          y.intl.string(y.t.wnifjC),
                       ],
                   })
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, r.jsx)(o.RR9, {
-                              size: "custom",
-                              width: 12,
-                              height: 12,
-                          }),
+                          (0, i.jsx)(o.RR9, { size: "custom", width: 12, height: 12 }),
                           " ",
-                          S.intl.string(S.t.NRC3ar),
+                          y.intl.string(y.t.NRC3ar),
                       ],
                   })
-            : null == b || null == (l = b.description)
-              ? void 0
-              : l.trim();
-    "" === F && (F = void 0);
-    let H = () => {
-        y.default.track(C.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+            : g?.description?.trim();
+    "" === G && (G = void 0);
+    let B = () => {
+        E.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: A.id,
-            sku_id: h.id,
+            sku_id: c.id,
             area: "purchase_button",
         });
     };
-    return (0, r.jsx)(D, {
+    return (0, i.jsx)(P, {
         appName: A.name,
-        title: h.name,
-        description: F,
-        link: ""
-            .concat(location.protocol, "//")
-            .concat(location.host)
-            .concat(C.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, I.GlobalDiscoveryAppsSections.STORE)),
+        title: c.name,
+        description: G,
+        link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, b.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, O.K)(A.id, O.C.SKU_EMBED, c);
+            (0, T.K)(A.id, T.C.SKU_EMBED, a);
         },
-        iconSrc: w,
+        iconSrc: x,
         onIconClick: () => {
-            G(),
-                y.default.track(C.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+            U(),
+                E.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: A.id,
-                    sku_id: h.id,
+                    sku_id: c.id,
                     area: "app_icon",
                 });
         },
-        children: (0, r.jsxs)("div", {
-            className: T.w,
+        children: (0, i.jsxs)("div", {
+            className: j.w,
             children: [
-                (0, r.jsx)(o.Button, {
+                (0, i.jsx)(o.Button, {
                     variant: "secondary",
                     onClick: () => {
-                        B(),
-                            y.default.track(C.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                        w(),
+                            E.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: A.id,
-                                sku_id: h.id,
+                                sku_id: c.id,
                                 area: "view_details",
                             });
                     },
-                    text: S.intl.string(S.t.DXYfjO),
+                    text: y.intl.string(y.t.DXYfjO),
                 }),
-                k
-                    ? null != _
-                        ? (0, r.jsx)(j.rc, {
-                              onClick: L,
+                D
+                    ? null != m
+                        ? (0, i.jsx)(N.rc, {
+                              onClick: M,
                               appId: A.id,
-                              subscriptionType: U ? "user" : "guild",
-                              skuId: h.id,
+                              subscriptionType: k ? "user" : "guild",
+                              skuId: c.id,
                               icon: o.U1X,
-                              onHasClicked: H,
-                              subscriptionPlan: _,
-                              state: M,
+                              onHasClicked: B,
+                              subscriptionPlan: m,
+                              state: O,
                           })
-                        : (0, r.jsx)(o.Button, {
-                              variant: "primary",
-                              text: S.intl.string(S.t.uuzaAK),
-                              onClick: B,
-                          })
-                    : (0, r.jsx)(j.$P, {
-                          appId: A.id,
-                          sku: h,
-                          icon: o.U1X,
-                          onHasClicked: H,
-                      }),
+                        : (0, i.jsx)(o.Button, { variant: "primary", text: y.intl.string(y.t.uuzaAK), onClick: w })
+                    : (0, i.jsx)(N.$P, { appId: A.id, sku: c, icon: o.U1X, onHasClicked: B }),
             ],
         }),
     });
 }
-
-function D(e) {
-    let { appName: t, title: n, description: i, link: l, iconSrc: a, onIconClick: s, onLinkCopy: c, children: u } = e;
-    return (0, r.jsxs)("div", {
-        className: T.iE,
+function P(e) {
+    let { appName: t, title: n, description: l, link: a, iconSrc: r, onIconClick: s, onLinkCopy: d, children: c } = e;
+    return (0, i.jsxs)("div", {
+        className: j.iE,
         children: [
-            (0, r.jsxs)("div", {
-                className: T.wx,
+            (0, i.jsxs)("div", {
+                className: j.wx,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: T.qd,
+                    (0, i.jsxs)("div", {
+                        className: j.qd,
                         children: [
-                            (0, r.jsx)(o.U1X, {
-                                size: "xxs",
-                            }),
-                            (0, r.jsx)(o.Text, {
-                                variant: "eyebrow",
-                                color: "text-muted",
-                                children: t,
-                            }),
+                            (0, i.jsx)(o.U1X, { size: "xxs" }),
+                            (0, i.jsx)(o.Text, { variant: "eyebrow", color: "text-muted", children: t }),
                         ],
                     }),
-                    v.p5 &&
-                        (0, r.jsx)(o.K0, {
-                            "aria-label": S.intl.string(S.t.WqhZss),
-                            icon: () =>
-                                (0, r.jsx)(o.qYV, {
-                                    size: "xs",
-                                }),
+                    C.p5 &&
+                        (0, i.jsx)(o.K0, {
+                            "aria-label": y.intl.string(y.t.WqhZss),
+                            icon: () => (0, i.jsx)(o.qYV, { size: "xs" }),
                             size: "sm",
                             onClick: () => {
-                                (0, v.C)(l, () => {
+                                (0, C.C)(a, () => {
                                     (0, o.showToast)(
-                                        (0, o.createToast)(S.intl.string(S.t["L/PwZf"]), o.ToastType.SUCCESS),
+                                        (0, o.createToast)(y.intl.string(y.t["L/PwZf"]), o.ToastType.SUCCESS),
                                     ),
-                                        c();
+                                        d();
                                 });
                             },
                             variant: "icon-only",
                         }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: T.Qs,
+            (0, i.jsxs)("div", {
+                className: j.Qs,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: T.oB,
+                    (0, i.jsxs)("div", {
+                        className: j.oB,
                         children: [
-                            null != a &&
-                                (0, r.jsx)(o.DUT, {
+                            null != r &&
+                                (0, i.jsx)(o.DUT, {
                                     onClick: s,
-                                    children: (0, r.jsx)("img", {
-                                        src: a.href,
-                                        alt: "",
-                                        className: T.Z2,
-                                    }),
+                                    children: (0, i.jsx)("img", { src: r.href, alt: "", className: j.Z2 }),
                                 }),
-                            (0, r.jsxs)("div", {
-                                className: T.Tf,
-                                style:
-                                    null == i
-                                        ? {
-                                              justifyContent: "space-evenly",
-                                          }
-                                        : void 0,
+                            (0, i.jsxs)("div", {
+                                className: j.Tf,
+                                style: null == l ? { justifyContent: "space-evenly" } : void 0,
                                 children: [
-                                    (0, r.jsx)(o.Text, {
-                                        variant: "heading-md/semibold",
-                                        tag: "div",
-                                        children: n,
-                                    }),
-                                    null != i &&
-                                        (0, r.jsx)(o.Text, {
+                                    (0, i.jsx)(o.Text, { variant: "heading-md/semibold", tag: "div", children: n }),
+                                    null != l &&
+                                        (0, i.jsx)(o.Text, {
                                             variant: "heading-md/medium",
                                             color: "text-muted",
                                             tag: "div",
-                                            className: T.h_,
-                                            children: i,
+                                            className: j.h_,
+                                            children: l,
                                         }),
                                 ],
                             }),
                         ],
                     }),
-                    u,
+                    c,
                 ],
             }),
         ],

@@ -1,156 +1,58 @@
-r.d(t, {
-    default: () => f,
-}),
-    r(228524),
-    r(896048);
-var n = r(627968),
-    o = r(64700),
-    l = r(106778),
-    a = r(311907),
-    i = r(397927),
-    c = r(775602),
-    s = r(524246),
-    u = r(14368),
-    p = r(413526);
-
-function f(e) {
-    var t, r;
-    let { title: f, description: b, image: d, button: y } = e,
-        O = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (o = 0, r = Reflect.ownKeys(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-                return l;
-            }
-            if (
-                ((l = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        l = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < l.length; n++)
-                        (r = l[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                    return o;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (o = 0, r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            return l;
-        })(e, ["title", "description", "image", "button"]),
-        m = (0, a.bG)([c.A], () => c.A.useReducedMotion),
-        g = o.useRef(null),
-        j = o.useRef(new l.OH()),
-        [v, h] = o.useState(null);
+t.d(a, { default: () => m });
+var n = t(627968),
+    s = t(64700),
+    i = t(106778),
+    r = t(311907),
+    l = t(397927),
+    d = t(775602),
+    c = t(524246),
+    o = t(14368),
+    u = t(413526);
+function m(e) {
+    let { title: a, description: t, image: m, button: p, ...x } = e,
+        g = (0, r.bG)([d.A], () => d.A.useReducedMotion),
+        f = s.useRef(null),
+        h = s.useRef(new i.OH()),
+        [v, j] = s.useState(null);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(l.Fk, {
-                ref: h,
-                className: p.Lb,
-                environment: j.current,
-            }),
-            (0, n.jsxs)(
-                i.EOs,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                }),
-                            )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: n,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = n);
-                            });
-                    }
-                    return e;
-                })(
-                    {
+            (0, n.jsx)(i.Fk, { ref: j, className: u.Lb, environment: h.current }),
+            (0, n.jsxs)(l.EOs, {
+                "data-migration-pending": !0,
+                className: u.yl,
+                size: l.rIJ.DYNAMIC,
+                ...x,
+                parentComponent: "GuildPowerupActivateModal",
+                children: [
+                    (0, n.jsx)(l.$mQ, {
                         "data-migration-pending": !0,
-                        className: p.yl,
-                        size: i.rIJ.DYNAMIC,
-                    },
-                    O,
-                )),
-                (r = r =
-                    {
-                        parentComponent: "GuildPowerupActivateModal",
-                        children: [
-                            (0, n.jsx)(i.$mQ, {
-                                "data-migration-pending": !0,
-                                className: p._F,
-                                scrollbarType: "none",
-                                children: (0, n.jsxs)("div", {
-                                    className: p.kL,
-                                    ref: g,
+                        className: u._F,
+                        scrollbarType: "none",
+                        children: (0, n.jsxs)("div", {
+                            className: u.kL,
+                            ref: f,
+                            children: [
+                                m,
+                                (0, n.jsxs)("div", {
+                                    className: u.hQ,
                                     children: [
-                                        d,
-                                        (0, n.jsxs)("div", {
-                                            className: p.hQ,
-                                            children: [
-                                                (0, n.jsx)(i.Heading, {
-                                                    variant: "heading-xl/extrabold",
-                                                    children: f,
-                                                }),
-                                                (0, n.jsx)(i.Text, {
-                                                    tag: "span",
-                                                    className: p.h_,
-                                                    variant: "text-sm/normal",
-                                                    children: b,
-                                                }),
-                                                y,
-                                            ],
+                                        (0, n.jsx)(l.Heading, { variant: "heading-xl/extrabold", children: a }),
+                                        (0, n.jsx)(l.Text, {
+                                            tag: "span",
+                                            className: u.h_,
+                                            variant: "text-sm/normal",
+                                            children: t,
                                         }),
+                                        p,
                                     ],
                                 }),
-                            }),
-                            (0, n.jsx)(i.s_y, {
-                                "data-migration-pending": !0,
-                                className: p.VN,
-                                onClick: O.onClose,
-                            }),
-                            !m &&
-                                (0, n.jsx)(s.A, {
-                                    confettiTarget: g.current,
-                                    confettiCanvas: v,
-                                    sprites: (0, u.rA)(),
-                                }),
-                        ],
+                            ],
+                        }),
                     }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                    : (function (e, t) {
-                          var r = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
-                          }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                      }),
-                t),
-            ),
+                    (0, n.jsx)(l.s_y, { "data-migration-pending": !0, className: u.VN, onClick: x.onClose }),
+                    !g && (0, n.jsx)(c.A, { confettiTarget: f.current, confettiCanvas: v, sprites: (0, o.rA)() }),
+                ],
+            }),
         ],
     });
 }

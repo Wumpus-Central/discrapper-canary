@@ -1,3 +1,4 @@
+"use strict";
 var t = "Function.prototype.bind called on incompatible ",
     n = Object.prototype.toString,
     r = Math.max,
@@ -17,30 +18,30 @@ var t = "Function.prototype.bind called on incompatible ",
     };
 e.exports = function (e) {
     var l,
-        c = this;
-    if ("function" != typeof c || n.apply(c) !== i) throw TypeError(t + c);
+        u = this;
+    if ("function" != typeof u || n.apply(u) !== i) throw TypeError(t + u);
     for (
-        var u = s(arguments, 1),
+        var c = s(arguments, 1),
             d = function () {
                 if (this instanceof l) {
-                    var t = c.apply(this, a(u, arguments));
+                    var t = u.apply(this, a(c, arguments));
                     return Object(t) === t ? t : this;
                 }
-                return c.apply(e, a(u, arguments));
+                return u.apply(e, a(c, arguments));
             },
-            f = r(0, c.length - u.length),
-            p = [],
-            _ = 0;
-        _ < f;
-        _++
+            _ = r(0, u.length - c.length),
+            f = [],
+            p = 0;
+        p < _;
+        p++
     )
-        p[_] = "$" + _;
+        f[p] = "$" + p;
     if (
-        ((l = Function("binder", "return function (" + o(p, ",") + "){ return binder.apply(this,arguments); }")(d)),
-        c.prototype)
+        ((l = Function("binder", "return function (" + o(f, ",") + "){ return binder.apply(this,arguments); }")(d)),
+        u.prototype)
     ) {
         var h = function () {};
-        (h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null);
+        (h.prototype = u.prototype), (l.prototype = new h()), (h.prototype = null);
     }
     return l;
 };

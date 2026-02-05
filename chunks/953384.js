@@ -1,78 +1,49 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
-var i,
-    a = n(311907),
-    s = n(73153),
-    o = n(194862),
-    l = n(611010),
-    c = n(927813),
+n.d(t, { A: () => I });
+var i = n(311907),
+    a = n(73153),
+    s = n(194862),
+    o = n(611010),
+    l = n(927813),
     u = n(723702);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = c.A.Millis.DAY,
-    p = new o.A(),
+let c = l.A.Millis.DAY,
+    d = new s.A(),
     _ = "",
-    h = null,
-    m = !1;
-
-function g(e) {
-    var t, n, r, i;
+    f = null,
+    p = !1;
+function h(e) {
     return {
         id: e.id,
         name: e.name,
-        executables: (null != (t = e.executables) ? t : []).map(l.lg),
-        aliases: null != (n = e.aliases) ? n : [],
-        icon: null != (r = e.icon_hash) ? r : void 0,
-        thirdPartySkus: null != (i = e.third_party_skus) ? i : [],
+        executables: (e.executables ?? []).map(o.lg),
+        aliases: e.aliases ?? [],
+        icon: e.icon_hash ?? void 0,
+        thirdPartySkus: e.third_party_skus ?? [],
     };
 }
-
-function E() {
+function m() {
     r = !0;
 }
-
-function b() {
-    (r = !1), (m = !0);
+function g() {
+    (r = !1), (p = !0);
 }
-
-function y(e) {
+function E(e) {
     let { nonGames: t, etag: n } = e;
-    for (let e of (null != n && _ !== n && (p.clear(), (_ = n)), t)) p.set(e.id, g(e));
-    (r = void 0), (h = Date.now()), (m = !0);
+    for (let e of (null != n && _ !== n && (d.clear(), (_ = n)), t)) d.set(e.id, h(e));
+    (r = void 0), (f = Date.now()), (p = !0);
 }
-class O extends (i = a.Ay.PersistedStore) {
+class A extends i.Ay.PersistedStore {
+    static displayName = "NonGameStore";
+    static persistKey = "NonGameStore";
     initialize(e) {
-        var t;
-        null != e && (null != e.etag && (_ = e.etag), null == (t = e.nonGames) || t.forEach((e) => p.set(e.id, e)));
+        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => d.set(e.id, e)));
     }
     getState() {
-        return (0, u.isDesktop)()
-            ? {
-                  etag: _,
-                  nonGames: p.values(),
-              }
-            : {
-                  etag: "",
-                  nonGames: [],
-              };
+        return (0, u.isDesktop)() ? { etag: _, nonGames: d.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
-        return p.values();
+        return d.values();
     }
     get fetching() {
         return !0 === r;
@@ -81,24 +52,19 @@ class O extends (i = a.Ay.PersistedStore) {
         return _;
     }
     get lastFetched() {
-        return h;
-    }
-    get hasAttemptedFetch() {
-        return m;
-    }
-    get ttl() {
         return f;
     }
+    get hasAttemptedFetch() {
+        return p;
+    }
+    get ttl() {
+        return c;
+    }
     getById(e) {
-        return p.get(e);
+        return d.get(e);
     }
     canFetch() {
-        return !r && (null == h || Date.now() >= h + f);
+        return !r && (null == f || Date.now() >= f + c);
     }
 }
-d(O, "displayName", "NonGameStore"), d(O, "persistKey", "NonGameStore");
-let A = new O(s.h, {
-    NON_GAMES_DATABASE_FETCH: E,
-    NON_GAMES_DATABASE_FETCH_FAIL: b,
-    NON_GAMES_DATABASE_UPDATE: y,
-});
+let I = new A(a.h, { NON_GAMES_DATABASE_FETCH: m, NON_GAMES_DATABASE_FETCH_FAIL: g, NON_GAMES_DATABASE_UPDATE: E });

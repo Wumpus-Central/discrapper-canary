@@ -1,5 +1,5 @@
+"use strict";
 var n = r(724039);
-
 function i() {
     return (i =
         n ||
@@ -80,15 +80,7 @@ t.exports = (function (t) {
                     },
                     x = (e.get(S.getType()) || e.get("unstyled")).wrapper;
                 b.push({
-                    block: s.createElement(
-                        o,
-                        i(
-                            {
-                                key: w,
-                            },
-                            k,
-                        ),
-                    ),
+                    block: s.createElement(o, i({ key: w }, k)),
                     wrapperTemplate: x,
                     key: w,
                     offsetKey: a.encode(w, 0, 0),
@@ -104,22 +96,13 @@ t.exports = (function (t) {
                     while (O < b.length && b[O].wrapperTemplate === D.wrapperTemplate);
                     var T = s.cloneElement(
                         D.wrapperTemplate,
-                        {
-                            key: D.key + "-wrap",
-                            "data-offset-key": D.offsetKey,
-                        },
+                        { key: D.key + "-wrap", "data-offset-key": D.offsetKey },
                         K,
                     );
                     E.push(T);
                 } else E.push(D.block), O++;
             }
-            return s.createElement(
-                "div",
-                {
-                    "data-contents": "true",
-                },
-                E,
-            );
+            return s.createElement("div", { "data-contents": "true" }, E);
         }),
         e
     );

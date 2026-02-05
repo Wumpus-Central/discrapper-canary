@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     UP: "eyebrow_a7acae",
     VD: "live_a7acae",

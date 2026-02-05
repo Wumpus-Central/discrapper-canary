@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => _,
-});
+"use strict";
+n.d(t, { A: () => p });
 var r = n(1139),
     i = n(299146),
     a = n(47312);
@@ -8,8 +7,8 @@ n(655972);
 var s = n(427778),
     o = n(946651),
     l = n(64700),
-    c = n(660856),
-    u = n(80292),
+    u = n(660856),
+    c = n(80292),
     d = function (e, t) {
         return (
             e &&
@@ -19,7 +18,7 @@ var s = n(427778),
             })
         );
     },
-    f = function (e, t) {
+    _ = function (e, t) {
         return (
             e &&
             t &&
@@ -28,15 +27,11 @@ var s = n(427778),
             })
         );
     },
-    p = (function (e) {
+    f = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             return (
-                ((t = e.call.apply(e, [this].concat(r)) || this).appliedClasses = {
-                    appear: {},
-                    enter: {},
-                    exit: {},
-                }),
+                ((t = e.call.apply(e, [this].concat(r)) || this).appliedClasses = { appear: {}, enter: {}, exit: {} }),
                 (t.onEnter = function (e, n) {
                     var r = t.resolveArguments(e, n),
                         i = r[0],
@@ -82,11 +77,7 @@ var s = n(427778),
                         a = r ? "" + i + e : n[e],
                         s = r ? a + "-active" : n[e + "Active"],
                         o = r ? a + "-done" : n[e + "Done"];
-                    return {
-                        baseClassName: a,
-                        activeClassName: s,
-                        doneClassName: o,
-                    };
+                    return { baseClassName: a, activeClassName: s, doneClassName: o };
                 }),
                 t
             );
@@ -98,7 +89,7 @@ var s = n(427778),
                 var r = this.getClassNames(t)[n + "ClassName"],
                     i = this.getClassNames("enter").doneClassName;
                 "appear" === t && "done" === n && i && (r += " " + i),
-                    "active" === n && e && (0, u.F)(e),
+                    "active" === n && e && (0, c.F)(e),
                     r && ((this.appliedClasses[t][n] = r), d(e, r));
             }),
             (n.removeClasses = function (e, t) {
@@ -106,13 +97,13 @@ var s = n(427778),
                     r = n.base,
                     i = n.active,
                     a = n.done;
-                (this.appliedClasses[t] = {}), r && f(e, r), i && f(e, i), a && f(e, a);
+                (this.appliedClasses[t] = {}), r && _(e, r), i && _(e, i), a && _(e, a);
             }),
             (n.render = function () {
                 var e = this.props,
                     t = (e.classNames, (0, i.A)(e, ["classNames"]));
                 return l.createElement(
-                    c.Ay,
+                    u.Ay,
                     (0, r.A)({}, t, {
                         onEnter: this.onEnter,
                         onEntered: this.onEntered,
@@ -126,8 +117,5 @@ var s = n(427778),
             t
         );
     })(l.Component);
-(p.defaultProps = {
-    classNames: "",
-}),
-    (p.propTypes = {});
-let _ = p;
+(f.defaultProps = { classNames: "" }), (f.propTypes = {});
+let p = f;

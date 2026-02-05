@@ -1,104 +1,84 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048),
-    n(264879);
+"use strict";
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(92674),
-    o = n(311907),
-    s = n(397927),
+    s = n(311907),
+    o = n(397927),
     l = n(775602),
-    c = n(473145),
-    u = n(963894),
+    u = n(473145),
+    c = n(963894),
     d = n(711624),
-    f = n(652215),
-    p = n(985018),
-    _ = n(870168);
+    _ = n(652215),
+    f = n(985018),
+    p = n(870168);
 let h = 200,
     m = 250,
     g = 36,
     E = 660,
-    y = [f.TVA.NONE, f.TVA.TIER_1, f.TVA.TIER_2, f.TVA.TIER_3];
-
-function b(e) {
-    let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: o } = e,
-        [l, c] = i.useState(o ? r : -1),
-        [u, p] = i.useState(0 === n),
-        [_, m] = i.useState(!1),
-        y = i.useRef(!0);
-
-    function b(e) {
+    A = [_.TVA.NONE, _.TVA.TIER_1, _.TVA.TIER_2, _.TVA.TIER_3];
+function I(e) {
+    let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: s } = e,
+        [l, u] = i.useState(s ? r : -1),
+        [c, f] = i.useState(0 === n),
+        [p, m] = i.useState(!1),
+        A = i.useRef(!0);
+    function I(e) {
         let { widthFactor: t } = e;
         for (let [e, n] of Object.entries(d.p).reverse())
             if (t >= n - g / 2 / E) {
-                c(Number(e));
+                u(Number(e));
                 break;
             }
     }
-    let { widthFactor: O } = (0, s.zhh)({
-        from: {
-            widthFactor: 0,
-        },
-        to: {
-            widthFactor: a ? t : 0,
-        },
-        config: {
-            tension: 15,
-            friction: 7,
-            clamp: !0,
-        },
-        onChange: b,
+    let { widthFactor: T } = (0, o.zhh)({
+        from: { widthFactor: 0 },
+        to: { widthFactor: a ? t : 0 },
+        config: { tension: 15, friction: 7, clamp: !0 },
+        onChange: I,
         onStart: () => {
-            p(!1);
+            f(!1);
         },
         onRest: () => {
-            p(!0),
-                r === f.TVA.TIER_3 &&
+            f(!0),
+                r === _.TVA.TIER_3 &&
                     (m(!0),
                     window.setTimeout(() => {
-                        y.current && m(!1);
+                        A.current && m(!1);
                     }, h));
         },
     });
     return (
         i.useEffect(
             () => () => {
-                y.current = !1;
+                A.current = !1;
             },
             [],
         ),
         {
-            isProgressBarAnimationComplete: u,
-            progressBarFillWidthFactor: O,
+            isProgressBarAnimationComplete: c,
+            progressBarFillWidthFactor: T,
             setShouldFireConfetti: m,
-            shouldFireConfetti: _,
+            shouldFireConfetti: p,
             tierMarkerAnimationPosition: l,
         }
     );
 }
-
-function O(e) {
+function T(e) {
     let { guild: t } = e,
-        n = (0, o.bG)([l.A], () => l.A.useReducedMotion),
-        [s, h] = i.useState(!1),
+        n = (0, s.bG)([l.A], () => l.A.useReducedMotion),
+        [o, h] = i.useState(!1),
         [g, E] = i.useState(0),
-        O = i.useRef(null),
-        v = s || n,
-        { fillFactor: A, totalAvailableBoostsCount: I } = i.useMemo(() => (0, c.$U)(t), [t]),
+        T = i.useRef(null),
+        y = o || n,
+        { fillFactor: S, totalAvailableBoostsCount: v } = i.useMemo(() => (0, u.$U)(t), [t]),
         {
-            progressBarFillWidthFactor: S,
-            isProgressBarAnimationComplete: T,
-            setShouldFireConfetti: C,
-            shouldFireConfetti: N,
-            tierMarkerAnimationPosition: w,
-        } = b({
-            fillFactor: A,
-            isRevealed: v,
-            useReducedMotion: n,
-            premiumTier: t.premiumTier,
-            guildBoostCount: I,
-        });
+            progressBarFillWidthFactor: C,
+            isProgressBarAnimationComplete: b,
+            setShouldFireConfetti: N,
+            shouldFireConfetti: R,
+            tierMarkerAnimationPosition: O,
+        } = I({ fillFactor: S, isRevealed: y, useReducedMotion: n, premiumTier: t.premiumTier, guildBoostCount: v });
     return (
         i.useEffect(() => {
             let e = window.setTimeout(() => {
@@ -109,60 +89,45 @@ function O(e) {
             };
         }, []),
         (0, r.jsxs)("div", {
-            className: _.hr,
+            className: p.hr,
             role: "progressbar",
-            "aria-valuenow": I,
+            "aria-valuenow": v,
             "aria-valuetext":
-                t.premiumTier === f.TVA.NONE
-                    ? p.intl.formatToPlainString(p.t.Ukqm9v, {
-                          numSubscriptionsApplied: I,
-                      })
-                    : p.intl.formatToPlainString(p.t.qWunaU, {
-                          numSubscriptionsApplied: I,
-                          tierName: (0, c.gb)(t.premiumTier, {
-                              useLevels: !1,
-                          }),
+                t.premiumTier === _.TVA.NONE
+                    ? f.intl.formatToPlainString(f.t.Ukqm9v, { numSubscriptionsApplied: v })
+                    : f.intl.formatToPlainString(f.t.qWunaU, {
+                          numSubscriptionsApplied: v,
+                          tierName: (0, u.gb)(t.premiumTier, { useLevels: !1 }),
                       }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.VZ,
+                    className: p.VZ,
                     children: [
                         (0, r.jsx)(a.animated.div, {
-                            className: _.SX,
-                            style: {
-                                width: S.to({
-                                    range: [0, 1],
-                                    output: [0, 100],
-                                }).to((e) => "".concat(e, "%")),
-                            },
+                            className: p.SX,
+                            style: { width: C.to({ range: [0, 1], output: [0, 100] }).to((e) => `${e}%`) },
                         }),
-                        (0, r.jsx)("div", {
-                            className: _.mv,
-                        }),
+                        (0, r.jsx)("div", { className: p.mv }),
                     ],
                 }),
-                y.map((e) =>
+                A.map((e) =>
                     (0, r.jsx)(
                         d.A,
                         {
-                            confettiTriggerRef: O,
+                            confettiTriggerRef: T,
                             guild: t,
-                            isProgressBarAnimationComplete: T,
+                            isProgressBarAnimationComplete: b,
                             setConfettiCount: E,
-                            setShouldFireConfetti: C,
+                            setShouldFireConfetti: N,
                             tier: e,
-                            tierMarkerAnimationPosition: w,
-                            totalAvailableBoostsCount: I,
-                            children: (0, c.gb)(e),
+                            tierMarkerAnimationPosition: O,
+                            totalAvailableBoostsCount: v,
+                            children: (0, u.gb)(e),
                         },
                         e,
                     ),
                 ),
-                (0, r.jsx)(u.A, {
-                    confettiCount: g,
-                    confettiTriggerRef: O,
-                    isFiring: N,
-                }),
+                (0, r.jsx)(c.A, { confettiCount: g, confettiTriggerRef: T, isFiring: R }),
             ],
         })
     );

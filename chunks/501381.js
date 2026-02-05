@@ -1,33 +1,28 @@
-n.d(t, {
-    o: () => d,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { o: () => c });
+var i = n(627968),
+    s = n(64700),
     l = n(158954),
-    s = n(397927),
+    r = n(397927),
     a = n(415951),
-    c = n(985018),
-    o = n(796333);
-
-function d(e) {
+    o = n(985018),
+    d = n(796333);
+function c(e) {
     let { guildId: t } = e,
-        n = i.useCallback(() => {
+        n = s.useCallback(() => {
             a.A.openMemberVerificationPreviewModal(t);
         }, [t]);
-    return (0, r.jsxs)(s.DUT, {
+    return (0, i.jsxs)(r.DUT, {
         onClick: n,
-        className: o.j,
+        className: d.j,
         children: [
-            (0, r.jsx)(l.EYj, {
+            (0, i.jsx)(l.EYj, {
                 tag: "span",
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                children: c.intl.string(c.t.SKNnqq),
+                children: o.intl.string(o.t.SKNnqq),
             }),
-            (0, r.jsx)(s.tfB, {
-                size: "xs",
-                color: "currentColor",
-            }),
+            (0, i.jsx)(r.tfB, { size: "xs", color: "currentColor" }),
         ],
     });
 }

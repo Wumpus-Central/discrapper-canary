@@ -1,46 +1,27 @@
-n.d(t, {
-    A: () => d,
-});
-var a,
-    l = n(311907),
-    i = n(73153);
-
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = {
-        lastSeenInfos: {},
-    },
-    o = s;
-class c extends (a = l.Ay.PersistedStore) {
+n.d(t, { A: () => o });
+var a = n(311907),
+    s = n(73153);
+let i = { lastSeenInfos: {} },
+    l = i;
+class r extends a.Ay.PersistedStore {
+    static displayName = "GuildTagChangedCoachmarkStore";
+    static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        o = null != e ? e : s;
+        l = e ?? i;
     }
     getState() {
-        return o;
+        return l;
     }
     getGuildLastSeenInfo(e) {
-        var t;
-        return null != (t = o.lastSeenInfos[e]) ? t : null;
+        return l.lastSeenInfos[e] ?? null;
     }
 }
-r(c, "displayName", "GuildTagChangedCoachmarkStore"), r(c, "persistKey", "GuildTagChangedCoachmarkStore");
-let d = new c(i.h, {
+let o = new r(s.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
-        o.lastSeenInfos[t] = n;
+        l.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        o = s;
+        l = i;
     },
 });

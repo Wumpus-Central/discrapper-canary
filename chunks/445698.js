@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     bn: "closeIconWrapper__6fd0e",
     ut: "closeIcon__6fd0e",

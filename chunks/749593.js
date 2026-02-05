@@ -1,6 +1,4 @@
-t.d(a, {
-    A: () => n,
-});
+t.d(a, { A: () => n });
 var i = t(981737);
 let n = {
     ordinalNumber: function (e, a) {
@@ -8,11 +6,7 @@ let n = {
         return (null == a ? void 0 : a.unit) === "week" ? t + "\xaa" : t + "\xba";
     },
     era: (0, i.A)({
-        values: {
-            narrow: ["AC", "DC"],
-            abbreviated: ["AC", "DC"],
-            wide: ["antes de cristo", "depois de cristo"],
-        },
+        values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "depois de cristo"] },
         defaultWidth: "wide",
     }),
     quarter: (0, i.A)({

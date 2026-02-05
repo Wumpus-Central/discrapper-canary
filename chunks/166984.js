@@ -1,3 +1,4 @@
+"use strict";
 n(823560);
 var r = n(452162).Object,
     a = (e.exports = function (e, t) {

@@ -1,20 +1,9 @@
-n.d(t, {
-    H6: () => c,
-    Ov: () => d,
-    WK: () => f,
-    nI: () => u,
-    wT: () => o,
-}),
-    n(747238),
-    n(927092),
-    n(212978),
-    n(597227),
+"use strict";
+n.d(t, { H6: () => u, Ov: () => d, WK: () => _, nI: () => c, wT: () => o }),
     n(393431),
-    n(752391),
     n(532706),
     n(42231),
     n(232424),
-    n(757074),
     n(949626),
     n(767709),
     n(65162);
@@ -23,20 +12,14 @@ var r = n(115943),
     a = n(270704);
 n(818348);
 var s = n(985018);
-
 function o(e) {
     return e.name !== a.KO && (e.name !== a.AK || (l(e.darkBackground) && l(e.lightBackground)));
 }
-
 function l(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
-let c = (e) => {
-    var t;
-    return null != (t = a.fc[e]) ? t : a.Wj;
-};
-
-function u(e) {
+let u = (e) => a.fc[e] ?? a.Wj;
+function c(e) {
     let t = i().decode(e),
         n = i().toRGBA8(t)[0],
         r = document.createElement("canvas");
@@ -45,7 +28,6 @@ function u(e) {
         s = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
     return a.putImageData(s, 0, 0), r.toDataURL("image/png");
 }
-
 function d() {
     return {
         mallow: {
@@ -75,11 +57,4 @@ function d() {
         },
     };
 }
-let f = (e) =>
-    null == e
-        ? null
-        : {
-              src: e.asset,
-              palette: c(e.palette),
-              imgAlt: e.label,
-          };
+let _ = (e) => (null == e ? null : { src: e.asset, palette: u(e.palette), imgAlt: e.label });

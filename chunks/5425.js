@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nB: "applicationBody__864b0",
     Zd: "form__864b0",

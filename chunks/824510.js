@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_db5301",
     rf: "body_db5301",

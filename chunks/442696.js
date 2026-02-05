@@ -1,28 +1,26 @@
+"use strict";
 function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-});
+Object.defineProperty(t, "__esModule", { value: !0 });
 var i = n(131981),
     a = n(843455),
     s = r(n(42539)),
     o = n(64700),
     l = r(n(395869)),
-    c = r(n(486726)),
-    u = r(n(960890)),
+    u = r(n(486726)),
+    c = r(n(960890)),
     d = r(n(678456)),
-    f = n(294814),
-    p = n(476575),
-    _ = n(337126),
+    _ = n(294814),
+    f = n(476575),
+    p = n(337126),
     h = r(n(680292)),
     m = n(180224),
     g = r(n(585458)),
     E = r(n(681334)),
-    b = n(111806),
-    y = n(269270);
-
-function O(e, t, n) {
+    A = n(111806),
+    I = n(269270);
+function T(e, t, n) {
     void 0 === n && (n = 1e3),
         i.useLayoutEffect(function () {
             if (t) {
@@ -67,46 +65,19 @@ function O(e, t, n) {
             }
         });
 }
-var A = {
-        default: {
-            tension: 170,
-            friction: 26,
-        },
-        gentle: {
-            tension: 120,
-            friction: 14,
-        },
-        wobbly: {
-            tension: 180,
-            friction: 12,
-        },
-        stiff: {
-            tension: 210,
-            friction: 20,
-        },
-        slow: {
-            tension: 280,
-            friction: 60,
-        },
-        molasses: {
-            tension: 280,
-            friction: 120,
-        },
+var y = {
+        default: { tension: 170, friction: 26 },
+        gentle: { tension: 120, friction: 14 },
+        wobbly: { tension: 180, friction: 12 },
+        stiff: { tension: 210, friction: 20 },
+        slow: { tension: 280, friction: 60 },
+        molasses: { tension: 280, friction: 120 },
     },
-    v = function (e) {
+    S = function (e) {
         return e;
     },
-    S = s(
-        s({}, A.default),
-        {},
-        {
-            mass: 1,
-            damping: 1,
-            easing: v,
-            clamp: !1,
-        },
-    ),
-    I = function () {
+    v = s(s({}, y.default), {}, { mass: 1, damping: 1, easing: S, clamp: !1 }),
+    C = function () {
         (this.tension = void 0),
             (this.friction = void 0),
             (this.frequency = void 0),
@@ -122,12 +93,11 @@ var A = {
             (this.bounce = void 0),
             (this.decay = void 0),
             (this.round = void 0),
-            Object.assign(this, S);
+            Object.assign(this, v);
     };
-
-function T(e, t, n) {
-    for (var r in (n && (C((n = s({}, n)), t), (t = s(s({}, n), t))), C(e, t), Object.assign(e, t), S))
-        null == e[r] && (e[r] = S[r]);
+function b(e, t, n) {
+    for (var r in (n && (N((n = s({}, n)), t), (t = s(s({}, n), t))), N(e, t), Object.assign(e, t), v))
+        null == e[r] && (e[r] = v[r]);
     var i = e.mass,
         o = e.frequency,
         l = e.damping;
@@ -140,8 +110,7 @@ function T(e, t, n) {
         e
     );
 }
-
-function C(e, t) {
+function N(e, t) {
     if (a.is.und(t.decay)) {
         var n = !a.is.und(t.tension) || !a.is.und(t.friction);
         (!n && a.is.und(t.frequency) && a.is.und(t.damping) && a.is.und(t.mass)) ||
@@ -149,34 +118,26 @@ function C(e, t) {
             n && (e.frequency = void 0);
     } else e.duration = void 0;
 }
-var N = [],
-    R = function () {
+var R = [],
+    O = function () {
         (this.changed = !1),
-            (this.values = N),
+            (this.values = R),
             (this.toValues = null),
-            (this.fromValues = N),
+            (this.fromValues = R),
             (this.to = void 0),
             (this.from = void 0),
-            (this.config = new I()),
+            (this.config = new C()),
             (this.immediate = !1),
             (this.onStart = void 0),
             (this.onChange = void 0),
             (this.onRest = []);
     };
-
-function w(e) {
+function D(e) {
     var t = 0;
     if ("u" < typeof Symbol || null == e[Symbol.iterator]) {
-        if (Array.isArray(e) || (e = P(e)))
+        if (Array.isArray(e) || (e = L(e)))
             return function () {
-                return t >= e.length
-                    ? {
-                          done: !0,
-                      }
-                    : {
-                          done: !1,
-                          value: e[t++],
-                      };
+                return t >= e.length ? { done: !0 } : { done: !1, value: e[t++] };
             };
         throw TypeError(
             "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -184,58 +145,55 @@ function w(e) {
     }
     return (t = e[Symbol.iterator]()).next.bind(t);
 }
-
-function P(e, t) {
+function L(e, t) {
     if (e) {
-        if ("string" == typeof e) return D(e, t);
+        if ("string" == typeof e) return w(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
         if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
             return Array.from(e);
-        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return D(e, t);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return w(e, t);
     }
 }
-
-function D(e, t) {
+function w(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
 var x = function (e, t) {
-    return _.useMemoOne(e, t || [{}]);
+    return p.useMemoOne(e, t || [{}]);
 };
-
-function L(e) {
+function P(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return a.is.fun(e) ? e.apply(void 0, n) : e;
 }
-var j = function (e, t) {
+var M = function (e, t) {
         return !0 === e || !!(t && e && (a.is.fun(e) ? e(t) : a.toArray(e).includes(t)));
     },
-    M = function (e, t, n) {
+    k = function (e, t, n) {
         return e && (a.is.fun(e) ? e(t, n) : a.is.arr(e) ? e[t] : s({}, e));
     },
-    k = function (e, t) {
-        return !a.is.und(U(e, t));
-    },
     U = function (e, t) {
+        return !a.is.und(G(e, t));
+    },
+    G = function (e, t) {
         return !0 === e.default ? e[t] : e.default ? e.default[t] : void 0;
     },
-    G = function (e, t, n) {
+    V = function (e, t, n) {
         void 0 === t && (t = []), void 0 === n && (n = {});
-        var r = F;
+        var r = B;
         e.default && !0 !== e.default && (r = Object.keys((e = e.default)));
-        for (var i, s = w(r); !(i = s()).done; ) {
+        for (var i, s = D(r); !(i = s()).done; ) {
             var o = i.value,
                 l = e[o];
             a.is.und(l) || t.includes(o) || (n[o] = l);
         }
         return n;
     },
-    V = function (e, t, n) {
-        return G(t, n, e);
+    F = function (e, t, n) {
+        return V(t, n, e);
     },
-    F = ["pause", "cancel", "config", "immediate", "onDelayEnd", "onProps", "onStart", "onChange", "onRest"],
-    B = {
+    B = ["pause", "cancel", "config", "immediate", "onDelayEnd", "onProps", "onStart", "onChange", "onRest"],
+    j = {
         config: 1,
         from: 1,
         to: 1,
@@ -267,25 +225,21 @@ var j = function (e, t) {
         callId: 1,
         parentId: 1,
     };
-
 function H(e) {
     var t = {},
         n = 0;
     if (
         (a.each(e, function (e, r) {
-            !B[r] && ((t[r] = e), n++);
+            !j[r] && ((t[r] = e), n++);
         }),
         n)
     )
         return t;
 }
-
 function Y(e) {
     var t = H(e);
     if (t) {
-        var n = {
-            to: t,
-        };
+        var n = { to: t };
         return (
             a.each(e, function (e, r) {
                 return r in t || (n[r] = e);
@@ -295,7 +249,6 @@ function Y(e) {
     }
     return s({}, e);
 }
-
 function W(e) {
     var t = a.getFluidConfig(e);
     return t
@@ -303,55 +256,36 @@ function W(e) {
         : a.is.arr(e)
           ? e.map(W)
           : a.isAnimatedString(e)
-            ? p.createStringInterpolator({
-                  range: [0, 1],
-                  output: [e, e],
-              })(1)
+            ? f.createStringInterpolator({ range: [0, 1], output: [e, e] })(1)
             : e;
 }
-
 function K(e, t) {
     var n = t.key,
         r = t.props,
         i = t.state,
         o = t.actions;
     return new Promise(function (t, l) {
-        var c,
-            u,
+        var u,
+            c,
             d = !1,
-            f = j(r.cancel, n);
-
+            _ = M(r.cancel, n);
+        function f() {
+            i.resumeQueue.add(p), c.cancel(), (u = c.time - a.Globals.now());
+        }
         function p() {
-            i.resumeQueue.add(_), u.cancel(), (c = u.time - a.Globals.now());
+            u > 0 ? (i.pauseQueue.add(f), (c = a.Globals.frameLoop.setTimeout(h, u))) : h();
         }
-
-        function _() {
-            c > 0 ? (i.pauseQueue.add(p), (u = a.Globals.frameLoop.setTimeout(h, c))) : h();
-        }
-
         function h() {
-            i.pauseQueue.delete(p), e <= (i.cancelId || 0) && (f = !0);
+            i.pauseQueue.delete(f), e <= (i.cancelId || 0) && (_ = !0);
             try {
-                o.start(
-                    s(
-                        s({}, r),
-                        {},
-                        {
-                            callId: e,
-                            delay: c,
-                            cancel: f,
-                            pause: d,
-                        },
-                    ),
-                    t,
-                );
+                o.start(s(s({}, r), {}, { callId: e, delay: u, cancel: _, pause: d }), t);
             } catch (e) {
                 l(e);
             }
         }
-        f
+        _
             ? h()
-            : ((c = L(r.delay || 0, n)), (d = j(r.pause, n)) ? (i.resumeQueue.add(_), o.pause()) : (o.resume(), _()));
+            : ((u = P(r.delay || 0, n)), (d = M(r.pause, n)) ? (i.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
     });
 }
 var z = function (e, t) {
@@ -364,59 +298,29 @@ var z = function (e, t) {
               : t.every(function (e) {
                       return e.noop;
                   })
-                ? q(e)
-                : X(
+                ? $(e)
+                : q(
                       e,
                       t.every(function (e) {
                           return e.finished;
                       }),
                   );
     },
-    q = function (e, t) {
-        return (
-            void 0 === t && (t = e.get()),
-            {
-                value: t,
-                noop: !0,
-                finished: !0,
-                target: e,
-            }
-        );
+    $ = function (e, t) {
+        return void 0 === t && (t = e.get()), { value: t, noop: !0, finished: !0, target: e };
     },
-    X = function (e, t, n) {
-        return (
-            void 0 === n && (n = e.get()),
-            {
-                value: n,
-                finished: t,
-                target: e,
-            }
-        );
+    q = function (e, t, n) {
+        return void 0 === n && (n = e.get()), { value: n, finished: t, target: e };
     },
     Z = function (e, t) {
-        return (
-            void 0 === t && (t = e.get()),
-            {
-                value: t,
-                cancelled: !0,
-                target: e,
-            }
-        );
+        return void 0 === t && (t = e.get()), { value: t, cancelled: !0, target: e };
     };
-
 function Q(e) {
     var t = 0;
     if ("u" < typeof Symbol || null == e[Symbol.iterator]) {
-        if (Array.isArray(e) || (e = $(e)))
+        if (Array.isArray(e) || (e = X(e)))
             return function () {
-                return t >= e.length
-                    ? {
-                          done: !0,
-                      }
-                    : {
-                          done: !1,
-                          value: e[t++],
-                      };
+                return t >= e.length ? { done: !0 } : { done: !1, value: e[t++] };
             };
         throw TypeError(
             "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -424,8 +328,7 @@ function Q(e) {
     }
     return (t = e[Symbol.iterator]()).next.bind(t);
 }
-
-function $(e, t) {
+function X(e, t) {
     if (e) {
         if ("string" == typeof e) return J(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -434,21 +337,18 @@ function $(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return J(e, t);
     }
 }
-
 function J(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-
 function ee(e, t, n, r) {
     return et.apply(this, arguments);
 }
-
 function et() {
-    return (et = c(
+    return (et = u(
         l.mark(function e(t, n, r, i) {
-            var o, u, d, f, _;
+            var o, c, d, _, p;
             return l.wrap(function (e) {
                 for (;;)
                     switch ((e.prev = e.next)) {
@@ -466,22 +366,22 @@ function et() {
                         case 3:
                             if (
                                 ((o = n.callId),
-                                (u = n.parentId),
+                                (c = n.parentId),
                                 (d = n.onRest),
-                                (f = r.asyncTo),
-                                (_ = r.promise),
-                                !(!u && t === f && !n.reset))
+                                (_ = r.asyncTo),
+                                (p = r.promise),
+                                !(!c && t === _ && !n.reset))
                             ) {
                                 e.next = 7;
                                 break;
                             }
-                            return e.abrupt("return", _);
+                            return e.abrupt("return", p);
                         case 7:
                             return e.abrupt(
                                 "return",
-                                (r.promise = c(
+                                (r.promise = u(
                                     l.mark(function e() {
-                                        var h, m, g, E, b, y, O, A, v;
+                                        var h, m, g, E, A, I, T, y, S;
                                         return l.wrap(
                                             function (e) {
                                                 for (;;)
@@ -490,11 +390,11 @@ function et() {
                                                             return (
                                                                 (r.asyncId = o),
                                                                 (r.asyncTo = t),
-                                                                (h = G(n, ["onRest"])),
+                                                                (h = V(n, ["onRest"])),
                                                                 (E = new Promise(function (e, t) {
                                                                     return (m = e), (g = t);
                                                                 })),
-                                                                (b = function (e) {
+                                                                (A = function (e) {
                                                                     return function () {
                                                                         var t = function (e) {
                                                                             throw (e instanceof er && g(e), e);
@@ -506,32 +406,26 @@ function et() {
                                                                         }
                                                                     };
                                                                 }),
-                                                                (y = function (e) {
+                                                                (I = function (e) {
                                                                     var t =
                                                                         (o <= (r.cancelId || 0) && Z(i)) ||
-                                                                        (o !== r.asyncId && X(i, !1));
+                                                                        (o !== r.asyncId && q(i, !1));
                                                                     if (t) throw ((e.result = t), e);
                                                                 }),
-                                                                (O = b(function (e, t) {
+                                                                (T = A(function (e, t) {
                                                                     var n = new er();
-                                                                    y(n);
-                                                                    var u = a.is.obj(e)
+                                                                    I(n);
+                                                                    var c = a.is.obj(e)
                                                                         ? s({}, e)
-                                                                        : s(
-                                                                              s({}, t),
-                                                                              {},
-                                                                              {
-                                                                                  to: e,
-                                                                              },
-                                                                          );
+                                                                        : s(s({}, t), {}, { to: e });
                                                                     return (
-                                                                        (u.parentId = o),
+                                                                        (c.parentId = o),
                                                                         a.each(h, function (e, t) {
-                                                                            a.is.und(u[t]) && (u[t] = e);
+                                                                            a.is.und(c[t]) && (c[t] = e);
                                                                         }),
-                                                                        i.start(u).then(
+                                                                        i.start(c).then(
                                                                             (function () {
-                                                                                var e = c(
+                                                                                var e = u(
                                                                                     l.mark(function e(t) {
                                                                                         return l.wrap(function (e) {
                                                                                             for (;;)
@@ -540,7 +434,7 @@ function et() {
                                                                                                 ) {
                                                                                                     case 0:
                                                                                                         if (
-                                                                                                            (y(n),
+                                                                                                            (I(n),
                                                                                                             !i.is(
                                                                                                                 "PAUSED",
                                                                                                             ))
@@ -581,8 +475,8 @@ function et() {
                                                                 })),
                                                                 (e.prev = 7),
                                                                 a.is.arr(t)
-                                                                    ? (v = (function () {
-                                                                          var e = c(
+                                                                    ? (S = (function () {
+                                                                          var e = u(
                                                                               l.mark(function e(t) {
                                                                                   var n, r, i;
                                                                                   return l.wrap(function (e) {
@@ -598,7 +492,7 @@ function et() {
                                                                                                   return (
                                                                                                       (i = r.value),
                                                                                                       (e.next = 5),
-                                                                                                      O(i)
+                                                                                                      T(i)
                                                                                                   );
                                                                                               case 5:
                                                                                                   e.next = 1;
@@ -615,12 +509,12 @@ function et() {
                                                                           };
                                                                       })()(t))
                                                                     : a.is.fun(t) &&
-                                                                      (v = Promise.resolve(t(O, i.stop.bind(i)))),
+                                                                      (S = Promise.resolve(t(T, i.stop.bind(i)))),
                                                                 (e.next = 11),
-                                                                Promise.all([v.then(m), E])
+                                                                Promise.all([S.then(m), E])
                                                             );
                                                         case 11:
-                                                            (A = X(i, !0)), (e.next = 21);
+                                                            (y = q(i, !0)), (e.next = 21);
                                                             break;
                                                         case 14:
                                                             if (
@@ -631,7 +525,7 @@ function et() {
                                                                 e.next = 20;
                                                                 break;
                                                             }
-                                                            (A = e.t0.result), (e.next = 21);
+                                                            (y = e.t0.result), (e.next = 21);
                                                             break;
                                                         case 20:
                                                             throw e.t0;
@@ -639,18 +533,18 @@ function et() {
                                                             return (
                                                                 (e.prev = 21),
                                                                 o == r.asyncId &&
-                                                                    ((r.asyncId = u),
-                                                                    (r.asyncTo = u ? f : void 0),
-                                                                    (r.promise = u ? _ : void 0)),
+                                                                    ((r.asyncId = c),
+                                                                    (r.asyncTo = c ? _ : void 0),
+                                                                    (r.promise = c ? p : void 0)),
                                                                 e.finish(21)
                                                             );
                                                         case 24:
                                                             return (
                                                                 a.is.fun(d) &&
-                                                                    p.batchedUpdates(function () {
-                                                                        d(A);
+                                                                    f.batchedUpdates(function () {
+                                                                        d(y);
                                                                     }),
-                                                                e.abrupt("return", A)
+                                                                e.abrupt("return", y)
                                                             );
                                                         case 26:
                                                         case "end":
@@ -672,7 +566,6 @@ function et() {
         }),
     )).apply(this, arguments);
 }
-
 function en(e, t) {
     (e.cancelId = t), (e.asyncId = e.asyncTo = e.promise = void 0);
 }
@@ -709,17 +602,17 @@ var er = (function (e) {
         var n = t.prototype;
         return (
             (n.get = function () {
-                var e = f.getAnimated(this);
+                var e = _.getAnimated(this);
                 return e && e.getValue();
             }),
             (n.to = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                return p.to(this, t);
+                return f.to(this, t);
             }),
             (n.interpolate = function () {
                 m.deprecateInterpolate();
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                return p.to(this, t);
+                return f.to(this, t);
             }),
             (n.addChild = function (e) {
                 this._children.size || this._attach(), this._children.add(e);
@@ -734,40 +627,23 @@ var er = (function (e) {
             (n._attach = function () {}),
             (n._detach = function () {}),
             (n._reset = function () {
-                this._emit({
-                    type: "reset",
-                    parent: this,
-                });
+                this._emit({ type: "reset", parent: this });
             }),
             (n._start = function () {
-                this._emit({
-                    type: "start",
-                    parent: this,
-                });
+                this._emit({ type: "start", parent: this });
             }),
             (n._onChange = function (e, t) {
-                void 0 === t && (t = !1),
-                    this._emit({
-                        type: "change",
-                        parent: this,
-                        value: e,
-                        idle: t,
-                    });
+                void 0 === t && (t = !1), this._emit({ type: "change", parent: this, value: e, idle: t });
             }),
             (n._onPriorityChange = function (e) {
-                this.idle || p.frameLoop.start(this),
-                    this._emit({
-                        type: "priority",
-                        parent: this,
-                        priority: e,
-                    });
+                this.idle || f.frameLoop.start(this), this._emit({ type: "priority", parent: this, priority: e });
             }),
             (n._emit = function (e) {
                 a.each(Array.from(this._children), function (t) {
                     t.onParentChange(e);
                 });
             }),
-            u(t, [
+            c(t, [
                 {
                     key: "priority",
                     get: function () {
@@ -783,35 +659,24 @@ var er = (function (e) {
     })(a.FluidValue),
     eo = "CREATED",
     el = "IDLE",
-    ec = "ACTIVE",
-    eu = "PAUSED",
+    eu = "ACTIVE",
+    ec = "PAUSED",
     ed = "DISPOSED",
-    ef = (function (e) {
+    e_ = (function (e) {
         function t(t, n) {
             var r;
             if (
                 (((r = e.call(this) || this).key = void 0),
-                (r.animation = new R()),
+                (r.animation = new O()),
                 (r.queue = void 0),
                 (r._phase = eo),
-                (r._state = {
-                    pauseQueue: new Set(),
-                    resumeQueue: new Set(),
-                }),
+                (r._state = { pauseQueue: new Set(), resumeQueue: new Set() }),
                 (r._defaultProps = {}),
                 (r._lastCallId = 0),
                 (r._lastToId = 0),
                 !a.is.und(t) || !a.is.und(n))
             ) {
-                var i = a.is.obj(t)
-                    ? s({}, t)
-                    : s(
-                          s({}, n),
-                          {},
-                          {
-                              from: t,
-                          },
-                      );
+                var i = a.is.obj(t) ? s({}, t) : s(s({}, n), {}, { from: t });
                 (i.default = !0), r.start(i);
             }
             return r;
@@ -826,69 +691,69 @@ var er = (function (e) {
                     i = this.animation,
                     s = i.config,
                     o = i.toValues,
-                    l = f.getPayload(i.to);
+                    l = _.getPayload(i.to);
                 if (!l) {
-                    var c = a.getFluidConfig(i.to);
-                    c && (o = a.toArray(c.get()));
+                    var u = a.getFluidConfig(i.to);
+                    u && (o = a.toArray(u.get()));
                 }
                 return (
-                    i.values.forEach(function (c, u) {
-                        if (!c.done) {
-                            var d = l ? l[u].lastPosition : o[u],
-                                f = i.immediate,
-                                p = d;
-                            if (!f) {
-                                if (((p = c.lastPosition), s.tension <= 0)) {
-                                    c.done = !0;
+                    i.values.forEach(function (u, c) {
+                        if (!u.done) {
+                            var d = l ? l[c].lastPosition : o[c],
+                                _ = i.immediate,
+                                f = d;
+                            if (!_) {
+                                if (((f = u.lastPosition), s.tension <= 0)) {
+                                    u.done = !0;
                                     return;
                                 }
-                                var _ = (c.elapsedTime += e),
-                                    h = i.fromValues[u],
+                                var p = (u.elapsedTime += e),
+                                    h = i.fromValues[c],
                                     m =
-                                        null != c.v0
-                                            ? c.v0
-                                            : (c.v0 = a.is.arr(s.velocity) ? s.velocity[u] : s.velocity);
+                                        null != u.v0
+                                            ? u.v0
+                                            : (u.v0 = a.is.arr(s.velocity) ? s.velocity[c] : s.velocity);
                                 if (a.is.und(s.duration))
                                     if (s.decay) {
                                         var g = !0 === s.decay ? 0.998 : s.decay,
-                                            E = Math.exp(-(1 - g) * _);
-                                        (p = h + (m / (1 - g)) * (1 - E)),
-                                            (f = 0.1 > Math.abs(c.lastPosition - p)),
-                                            (b = m * E);
+                                            E = Math.exp(-(1 - g) * p);
+                                        (f = h + (m / (1 - g)) * (1 - E)),
+                                            (_ = 0.1 > Math.abs(u.lastPosition - f)),
+                                            (A = m * E);
                                     } else
                                         for (
-                                            var b = null == c.lastVelocity ? m : c.lastVelocity,
-                                                y =
+                                            var A = null == u.lastVelocity ? m : u.lastVelocity,
+                                                I =
                                                     s.precision ||
                                                     (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))),
-                                                O = s.restVelocity || y / 10,
-                                                A = s.clamp ? 0 : s.bounce,
-                                                v = !a.is.und(A),
-                                                S = h == d ? c.v0 > 0 : h < d,
-                                                I = !1,
-                                                T = 1,
-                                                C = Math.ceil(e / 1),
-                                                N = 0;
-                                            N < C && !(!(Math.abs(b) > O) && (f = Math.abs(d - p) <= y));
-                                            ++N
+                                                T = s.restVelocity || I / 10,
+                                                y = s.clamp ? 0 : s.bounce,
+                                                S = !a.is.und(y),
+                                                v = h == d ? u.v0 > 0 : h < d,
+                                                C = !1,
+                                                b = 1,
+                                                N = Math.ceil(e / 1),
+                                                R = 0;
+                                            R < N && !(!(Math.abs(A) > T) && (_ = Math.abs(d - f) <= I));
+                                            ++R
                                         ) {
-                                            v && (I = p == d || p > d == S) && ((b = -b * A), (p = d));
-                                            var R =
-                                                (-(1e-6 * s.tension) * (p - d) + -(0.001 * s.friction) * b) / s.mass;
-                                            (b += R * T), (p += b * T);
+                                            S && (C = f == d || f > d == v) && ((A = -A * y), (f = d));
+                                            var O =
+                                                (-(1e-6 * s.tension) * (f - d) + -(0.001 * s.friction) * A) / s.mass;
+                                            (A += O * b), (f += A * b);
                                         }
                                 else {
-                                    var w = s.progress || 0;
-                                    s.duration <= 0 ? (w = 1) : (w += (1 - w) * Math.min(1, _ / s.duration)),
-                                        (b = ((p = h + s.easing(w) * (d - h)) - c.lastPosition) / e),
-                                        (f = 1 == w);
+                                    var D = s.progress || 0;
+                                    s.duration <= 0 ? (D = 1) : (D += (1 - D) * Math.min(1, p / s.duration)),
+                                        (A = ((f = h + s.easing(D) * (d - h)) - u.lastPosition) / e),
+                                        (_ = 1 == D);
                                 }
-                                (c.lastVelocity = b),
-                                    Number.isNaN(p) && (console.warn("Got NaN while animating:", t), (f = !0));
+                                (u.lastVelocity = A),
+                                    Number.isNaN(f) && (console.warn("Got NaN while animating:", t), (_ = !0));
                             }
-                            l && !l[u].done && (f = !1),
-                                f ? (c.done = !0) : (n = !1),
-                                c.setValue(p, s.round) && (r = !0);
+                            l && !l[c].done && (_ = !1),
+                                _ ? (u.done = !0) : (n = !1),
+                                u.setValue(f, s.round) && (r = !0);
                         }
                     }),
                     n ? this.finish() : r && this._onChange(this.get()),
@@ -901,24 +766,24 @@ var er = (function (e) {
             (n.set = function (e) {
                 var t = this;
                 return (
-                    p.batchedUpdates(function () {
-                        if ((t._focus(e), t._set(e) && !t.is(ec))) return t._onChange(t.get(), !0);
+                    f.batchedUpdates(function () {
+                        if ((t._focus(e), t._set(e) && !t.is(eu))) return t._onChange(t.get(), !0);
                         t._stop();
                     }),
                     this
                 );
             }),
             (n.pause = function () {
-                ep(this, "pause"),
-                    this.is(eu) ||
-                        ((this._phase = eu),
+                ef(this, "pause"),
+                    this.is(ec) ||
+                        ((this._phase = ec),
                         a.flush(this._state.pauseQueue, function (e) {
                             return e();
                         }));
             }),
             (n.resume = function () {
-                ep(this, "resume"),
-                    this.is(eu) &&
+                ef(this, "resume"),
+                    this.is(ec) &&
                         (this._start(),
                         a.flush(this._state.resumeQueue, function (e) {
                             return e();
@@ -926,21 +791,21 @@ var er = (function (e) {
             }),
             (n.finish = function (e) {
                 var t = this;
-                if ((this.resume(), this.is(ec))) {
+                if ((this.resume(), this.is(eu))) {
                     var n = this.animation;
                     !n.config.decay && a.is.und(e) && (e = n.to),
                         a.is.und(e) || this._set(e),
-                        p.batchedUpdates(function () {
+                        f.batchedUpdates(function () {
                             !n.changed && ((n.changed = !0), n.onStart && n.onStart(t)), t._stop();
                         });
                 }
                 return this;
             }),
             (n.update = function (e) {
-                return ep(this, "update"), (this.queue || (this.queue = [])).push(e), this;
+                return ef(this, "update"), (this.queue || (this.queue = [])).push(e), this;
             }),
             (n.start = (function () {
-                var e = c(
+                var e = u(
                     l.mark(function e(t, n) {
                         var r,
                             i,
@@ -951,20 +816,10 @@ var er = (function (e) {
                                     switch ((e.prev = e.next)) {
                                         case 0:
                                             return (
-                                                ep(this, "start"),
+                                                ef(this, "start"),
                                                 a.is.und(t)
                                                     ? ((r = this.queue || []), (this.queue = []))
-                                                    : (r = [
-                                                          a.is.obj(t)
-                                                              ? t
-                                                              : s(
-                                                                    s({}, n),
-                                                                    {},
-                                                                    {
-                                                                        to: t,
-                                                                    },
-                                                                ),
-                                                      ]),
+                                                    : (r = [a.is.obj(t) ? t : s(s({}, n), {}, { to: t })]),
                                                 (e.next = 4),
                                                 Promise.all(
                                                     r.map(function (e) {
@@ -994,16 +849,14 @@ var er = (function (e) {
                     this.is(ed) ||
                         (en(this._state, this._lastCallId),
                         this._focus(this.get()),
-                        p.batchedUpdates(function () {
+                        f.batchedUpdates(function () {
                             return t._stop(e);
                         })),
                     this
                 );
             }),
             (n.reset = function () {
-                this._update({
-                    reset: !0,
-                });
+                this._update({ reset: !0 });
             }),
             (n.dispose = function () {
                 this.is(ed) || (this.animation && (this.animation.onRest = []), this.stop(), (this._phase = ed));
@@ -1011,7 +864,7 @@ var er = (function (e) {
             (n.onParentChange = function (t) {
                 e.prototype.onParentChange.call(this, t),
                     "change" == t.type
-                        ? !this.is(ec) && (this._reset(), this.is(eu) || this._start())
+                        ? !this.is(eu) && (this._reset(), this.is(ec) || this._start())
                         : "priority" == t.type && (this.priority = t.priority + 1);
             }),
             (n._prepareNode = function (e) {
@@ -1035,28 +888,28 @@ var er = (function (e) {
                 return s;
             }),
             (n._updateNode = function (e) {
-                var t = f.getAnimated(this);
+                var t = _.getAnimated(this);
                 if (!a.is.und(e)) {
                     var n = this._getNodeType(e);
-                    (t && t.constructor === n) || f.setAnimated(this, (t = n.create(e)));
+                    (t && t.constructor === n) || _.setAnimated(this, (t = n.create(e)));
                 }
                 return t;
             }),
             (n._getNodeType = function (e) {
-                var t = f.getAnimated(e);
+                var t = _.getAnimated(e);
                 return t
                     ? t.constructor
                     : a.is.arr(e)
-                      ? f.AnimatedArray
+                      ? _.AnimatedArray
                       : a.isAnimatedString(e)
-                        ? f.AnimatedString
-                        : f.AnimatedValue;
+                        ? _.AnimatedString
+                        : _.AnimatedValue;
             }),
             (n._update = function (e, t) {
                 var n = this,
                     r = this._defaultProps,
                     i = function (t) {
-                        var n = U(e, t);
+                        var n = G(e, t);
                         a.is.und(n) || (r[t] = n), r[t] && (e[t] = r[t]);
                     };
                 i("cancel"), i("pause");
@@ -1088,86 +941,86 @@ var er = (function (e) {
                 if (o || l)
                     if (!(t.callId > this._lastToId)) return n(Z(this));
                     else this._lastToId = t.callId;
-                var c = function (e) {
+                var u = function (e) {
                         return a.is.und(t[e]) ? s[e] : t[e];
                     },
-                    u = e_(c("onDelayEnd"), r);
-                u && u(t, this), t.default && V(s, t, ["pause", "cancel"]);
+                    c = ep(u("onDelayEnd"), r);
+                c && c(t, this), t.default && F(s, t, ["pause", "cancel"]);
                 var d = i.to,
-                    _ = i.from,
+                    p = i.from,
                     h = e.to,
                     m = void 0 === h ? d : h,
                     g = e.from,
-                    E = void 0 === g ? _ : g;
+                    E = void 0 === g ? p : g;
                 if ((l && !o && (m = E), t.reverse)) {
-                    var b = [E, m];
-                    (m = b[0]), (E = b[1]);
+                    var A = [E, m];
+                    (m = A[0]), (E = A[1]);
                 }
-                var y = !a.isEqual(E, _);
-                y && (i.from = E);
-                var O = !a.isEqual(m, d);
-                O && this._focus(m);
-                var A = a.getFluidConfig(m),
-                    v = a.getFluidConfig(E);
-                v && (E = v.get());
-                var S = a.is.arr(t.to) || a.is.fun(t.to),
-                    I = i.config,
-                    C = I.decay,
-                    N = I.velocity;
-                t.config && !S && T(I, L(t.config, r), t.config !== s.config ? L(s.config, r) : void 0);
-                var R = f.getAnimated(this);
-                if (!R || a.is.und(m)) return n(X(this, !0));
-                var w = a.is.und(t.reset) ? l && !t.default : !a.is.und(E) && j(t.reset, r),
-                    P = w ? E : this.get(),
-                    D = W(m),
-                    x = a.is.num(D) || a.is.arr(D) || a.isAnimatedString(D),
-                    M = !S && (!x || j(s.immediate || t.immediate, r));
-                if (O)
-                    if (M) R = this._updateNode(D);
+                var I = !a.isEqual(E, p);
+                I && (i.from = E);
+                var T = !a.isEqual(m, d);
+                T && this._focus(m);
+                var y = a.getFluidConfig(m),
+                    S = a.getFluidConfig(E);
+                S && (E = S.get());
+                var v = a.is.arr(t.to) || a.is.fun(t.to),
+                    C = i.config,
+                    N = C.decay,
+                    R = C.velocity;
+                t.config && !v && b(C, P(t.config, r), t.config !== s.config ? P(s.config, r) : void 0);
+                var O = _.getAnimated(this);
+                if (!O || a.is.und(m)) return n(q(this, !0));
+                var D = a.is.und(t.reset) ? l && !t.default : !a.is.und(E) && M(t.reset, r),
+                    L = D ? E : this.get(),
+                    w = W(m),
+                    x = a.is.num(w) || a.is.arr(w) || a.isAnimatedString(w),
+                    k = !v && (!x || M(s.immediate || t.immediate, r));
+                if (T)
+                    if (k) O = this._updateNode(w);
                     else {
-                        var k = this._getNodeType(m);
-                        if (k !== R.constructor)
+                        var U = this._getNodeType(m);
+                        if (U !== O.constructor)
                             throw Error(
                                 "Cannot animate between " +
-                                    R.constructor.name +
+                                    O.constructor.name +
                                     " and " +
-                                    k.name +
+                                    U.name +
                                     ', as the "to" prop suggests',
                             );
                     }
-                var U = R.constructor,
-                    G = !!A,
-                    F = !1;
-                if (!G) {
-                    var B = w || (this.is(eo) && y);
-                    (O || B) && (G = !(F = a.isEqual(W(P), D))),
-                        (a.isEqual(I.decay, C) && a.isEqual(I.velocity, N)) || (G = !0);
+                var G = O.constructor,
+                    V = !!y,
+                    B = !1;
+                if (!V) {
+                    var j = D || (this.is(eo) && I);
+                    (T || j) && (V = !(B = a.isEqual(W(L), w))),
+                        (a.isEqual(C.decay, N) && a.isEqual(C.velocity, R)) || (V = !0);
                 }
-                if ((F && this.is(ec) && (i.changed && !w ? (G = !0) : G || this._stop()), !S)) {
-                    (G || a.getFluidConfig(d)) &&
-                        ((i.values = R.getPayload()),
-                        (i.toValues = A ? null : U == f.AnimatedString ? [1] : a.toArray(D))),
-                        (i.immediate = M),
-                        (i.onStart = e_(c("onStart"), r)),
-                        (i.onChange = e_(c("onChange"), r));
+                if ((B && this.is(eu) && (i.changed && !D ? (V = !0) : V || this._stop()), !v)) {
+                    (V || a.getFluidConfig(d)) &&
+                        ((i.values = O.getPayload()),
+                        (i.toValues = y ? null : G == _.AnimatedString ? [1] : a.toArray(w))),
+                        (i.immediate = k),
+                        (i.onStart = ep(u("onStart"), r)),
+                        (i.onChange = ep(u("onChange"), r));
                     var H = i.onRest,
-                        Y = w && !t.onRest ? H[0] || a.noop : eh(e_(c("onRest"), r), this);
-                    if (G) {
+                        Y = D && !t.onRest ? H[0] || a.noop : eh(ep(u("onRest"), r), this);
+                    if (V) {
                         i.onRest = [Y, eh(n, this)];
-                        var K = +!w;
+                        var K = +!D;
                         K < H.length &&
-                            p.batchedUpdates(function () {
+                            f.batchedUpdates(function () {
                                 for (; K < H.length; K++) H[K]();
                             });
-                    } else (w || t.onRest) && (i.onRest[0] = Y);
+                    } else (D || t.onRest) && (i.onRest[0] = Y);
                 }
-                var z = e_(c("onProps"), r);
-                if ((z && z(t, this), w && R.setValue(P), S)) n(ee(t.to, t, this._state, this));
-                else if (G) w && (this._phase = el), this._reset(), this._start();
-                else if (this.is(ec) && !O) i.onRest.push(eh(n, this));
+                var z = ep(u("onProps"), r);
+                if ((z && z(t, this), D && O.setValue(L), v)) n(ee(t.to, t, this._state, this));
+                else if (V) D && (this._phase = el), this._reset(), this._start();
+                else if (this.is(eu) && !T) i.onRest.push(eh(n, this));
                 else {
-                    let e = q(this, P),
-                        t = e_(c("onNoopRest"), r);
+                    let e = $(this, L),
+                        t = ep(u("onNoopRest"), r);
                     null != t && t(e), n(e);
                 }
             }),
@@ -1184,7 +1037,7 @@ var er = (function (e) {
             (n._set = function (e) {
                 var t = a.getFluidConfig(e);
                 t && (e = t.get());
-                var n = f.getAnimated(this),
+                var n = _.getAnimated(this),
                     r = n && n.getValue();
                 return n ? n.setValue(e) : this._updateNode(e), !a.isEqual(e, r);
             }),
@@ -1197,8 +1050,8 @@ var er = (function (e) {
             }),
             (n._reset = function () {
                 var t = this.animation;
-                f.getAnimated(this).reset(t.to),
-                    this.is(ec) || (t.changed = !1),
+                _.getAnimated(this).reset(t.to),
+                    this.is(eu) || (t.changed = !1),
                     t.immediate ||
                         (t.fromValues = t.values.map(function (e) {
                             return e.lastPosition;
@@ -1206,13 +1059,13 @@ var er = (function (e) {
                     e.prototype._reset.call(this);
             }),
             (n._start = function () {
-                this.is(ec) ||
-                    ((this._phase = ec),
+                this.is(eu) ||
+                    ((this._phase = eu),
                     e.prototype._start.call(this),
-                    p.skipAnimation ? this.finish() : p.frameLoop.start(this));
+                    f.skipAnimation ? this.finish() : f.frameLoop.start(this));
             }),
             (n._stop = function (e) {
-                if ((this.resume(), this.is(ec))) {
+                if ((this.resume(), this.is(eu))) {
                     (this._phase = el), this._onChange(this.get(), !0);
                     var t = this.animation;
                     a.each(t.values, function (e) {
@@ -1227,11 +1080,11 @@ var er = (function (e) {
                         }));
                 }
             }),
-            u(t, [
+            c(t, [
                 {
                     key: "idle",
                     get: function () {
-                        return !this.is(ec) && !this._state.asyncTo;
+                        return !this.is(eu) && !this._state.asyncTo;
                     },
                 },
                 {
@@ -1243,8 +1096,8 @@ var er = (function (e) {
                 {
                     key: "velocity",
                     get: function () {
-                        var e = f.getAnimated(this);
-                        return e instanceof f.AnimatedValue
+                        var e = _.getAnimated(this);
+                        return e instanceof _.AnimatedValue
                             ? e.lastVelocity || 0
                             : e.getPayload().map(function (e) {
                                   return e.lastVelocity || 0;
@@ -1255,12 +1108,10 @@ var er = (function (e) {
             t
         );
     })(es);
-
-function ep(e, t) {
+function ef(e, t) {
     if (e.is(ed)) throw Error('Cannot call "' + t + '" of disposed "' + e.constructor.name + '" object');
 }
-
-function e_(e, t) {
+function ep(e, t) {
     return a.is.fun(e) ? e : t && e ? e[t] : void 0;
 }
 var eh = function (e, t) {
@@ -1271,15 +1122,14 @@ var eh = function (e, t) {
               else {
                   var i = W(n),
                       s = W(t.get());
-                  e(X(t, a.isEqual(s, i)));
+                  e(q(t, a.isEqual(s, i)));
               }
           }
         : a.noop;
 };
-
 function em(e, t, n) {
     void 0 === t && (t = e.loop), void 0 === n && (n = e.to);
-    var r = L(t);
+    var r = P(t);
     if (r) {
         var i = !0 !== r && Y(r),
             o = (i || e).reverse,
@@ -1300,35 +1150,32 @@ function em(e, t, n) {
         );
     }
 }
-
 function eg(e) {
     var t = (e = Y(e)),
         n = t.to,
         r = t.from,
         i = new Set();
     return (
-        r ? eb(r, i) : delete e.from,
-        a.is.obj(n) ? eb(n, i) : n || delete e.to,
+        r ? eA(r, i) : delete e.from,
+        a.is.obj(n) ? eA(n, i) : n || delete e.to,
         (e.keys = i.size ? Array.from(i) : null),
         e
     );
 }
-
 function eE(e) {
     var t = eg(e);
-    return a.is.und(t.default) && (t.default = G(t, [!0 === t.immediate && "immediate"])), t;
+    return a.is.und(t.default) && (t.default = V(t, [!0 === t.immediate && "immediate"])), t;
 }
-
-function eb(e, t) {
+function eA(e, t) {
     a.each(e, function (e, n) {
         return null != e && t.add(n);
     });
 }
-var ey = ["onStart", "onChange", "onRest"],
-    eO = 1,
-    eA = (function () {
+var eI = ["onStart", "onChange", "onRest"],
+    eT = 1,
+    ey = (function () {
         function e(e, t) {
-            (this.id = eO++),
+            (this.id = eT++),
                 (this.springs = {}),
                 (this.queue = []),
                 (this._flush = void 0),
@@ -1336,15 +1183,8 @@ var ey = ["onStart", "onChange", "onRest"],
                 (this._phase = eo),
                 (this._lastAsyncId = 0),
                 (this._active = new Set()),
-                (this._state = {
-                    pauseQueue: new Set(),
-                    resumeQueue: new Set(),
-                }),
-                (this._events = {
-                    onStart: new Set(),
-                    onChange: new Set(),
-                    onRest: new Map(),
-                }),
+                (this._state = { pauseQueue: new Set(), resumeQueue: new Set() }),
+                (this._events = { onStart: new Set(), onChange: new Set(), onRest: new Map() }),
                 (this._onFrame = this._onFrame.bind(this)),
                 t && (this._flush = t),
                 e && this.start(e);
@@ -1368,7 +1208,7 @@ var ey = ["onStart", "onChange", "onRest"],
             }),
             (t.start = function (e) {
                 var t = e ? a.toArray(e).map(eg) : this.queue;
-                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eR(this, t), ev(this, t));
+                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eO(this, t), eS(this, t));
             }),
             (t.stop = function (e) {
                 if (a.is.und(e))
@@ -1436,8 +1276,8 @@ var ey = ["onStart", "onChange", "onRest"],
                     i = t.onRest,
                     s = this._active.size > 0;
                 s &&
-                    this._phase != ec &&
-                    ((this._phase = ec),
+                    this._phase != eu &&
+                    ((this._phase = eu),
                     a.flush(n, function (t) {
                         return t(e);
                     }));
@@ -1455,9 +1295,9 @@ var ey = ["onStart", "onChange", "onRest"],
             }),
             (t.onParentChange = function (e) {
                 "change" == e.type &&
-                    (this._active[e.idle ? "delete" : "add"](e.parent), p.frameLoop.onFrame(this._onFrame));
+                    (this._active[e.idle ? "delete" : "add"](e.parent), f.frameLoop.onFrame(this._onFrame));
             }),
-            u(e, [
+            c(e, [
                 {
                     key: "idle",
                     get: function () {
@@ -1473,18 +1313,16 @@ var ey = ["onStart", "onChange", "onRest"],
             e
         );
     })();
-
-function ev(e, t) {
+function eS(e, t) {
     return Promise.all(
         t.map(function (t) {
-            return eS(e, t);
+            return ev(e, t);
         }),
     ).then(function (t) {
         return z(e, t);
     });
 }
-
-function eS(e, t, n) {
+function ev(e, t, n) {
     var r = t.to,
         i = t.loop,
         s = t.onRest;
@@ -1492,7 +1330,7 @@ function eS(e, t, n) {
     var o = a.is.arr(r) || a.is.fun(r) ? r : void 0;
     o
         ? ((t.to = void 0), (t.onRest = void 0))
-        : a.each(ey, function (n) {
+        : a.each(eI, function (n) {
               var r = t[n];
               if (a.is.fun(r)) {
                   var i = e._events[n];
@@ -1506,115 +1344,93 @@ function eS(e, t, n) {
                                 a = i.get(r);
                             a
                                 ? (t || (a.finished = !1), n && (a.cancelled = !0))
-                                : i.set(r, {
-                                      value: null,
-                                      finished: t,
-                                      cancelled: n,
-                                  });
+                                : i.set(r, { value: null, finished: t, cancelled: n });
                         });
               }
           });
     var l = (t.keys || Object.keys(e.springs)).map(function (n) {
             return e.springs[n].start(t);
         }),
-        c = e._state;
+        u = e._state;
     return (
         o
             ? l.push(
                   K(++e._lastAsyncId, {
                       props: t,
-                      state: c,
+                      state: u,
                       actions: {
                           pause: a.noop,
                           resume: a.noop,
                           start: function (t, n) {
-                              (t.onRest = s), t.cancel ? k(t, "cancel") && en(c, t.callId) : n(ee(o, t, c, e));
+                              (t.onRest = s), t.cancel ? U(t, "cancel") && en(u, t.callId) : n(ee(o, t, u, e));
                           },
                       },
                   }),
               )
-            : t.keys || !0 !== t.cancel || en(c, e._lastAsyncId),
+            : t.keys || !0 !== t.cancel || en(u, e._lastAsyncId),
         Promise.all(l).then(function (a) {
             var s = z(e, a);
             if (i && s.finished && !(n && s.noop)) {
                 var o = em(t, i, r);
-                if (o) return eR(e, [o]), eS(e, o, !0);
+                if (o) return eO(e, [o]), ev(e, o, !0);
             }
             return s;
         })
     );
 }
-
-function eI(e, t) {
+function eC(e, t) {
     var n = s({}, e.springs);
     return (
         t &&
             a.each(a.toArray(t), function (e) {
                 a.is.und(e.keys) && (e = eg(e)),
-                    a.is.obj(e.to) ||
-                        (e = s(
-                            s({}, e),
-                            {},
-                            {
-                                to: void 0,
-                            },
-                        )),
-                    eN(n, e, function (e) {
-                        return eC(e);
+                    a.is.obj(e.to) || (e = s(s({}, e), {}, { to: void 0 })),
+                    eR(n, e, function (e) {
+                        return eN(e);
                     });
             }),
         n
     );
 }
-
-function eT(e, t) {
+function eb(e, t) {
     a.each(t, function (t, n) {
         e.springs[n] || ((e.springs[n] = t), t.addChild(e));
     });
 }
-
-function eC(e, t) {
-    var n = new ef();
+function eN(e, t) {
+    var n = new e_();
     return (n.key = e), t && n.addChild(t), n;
 }
-
-function eN(e, t, n) {
+function eR(e, t, n) {
     t.keys &&
         a.each(t.keys, function (r) {
             (e[r] || (e[r] = n(r)))._prepareNode(t);
         });
 }
-
-function eR(e, t) {
+function eO(e, t) {
     a.each(t, function (t) {
-        eN(e.springs, t, function (t) {
-            return eC(t, e);
+        eR(e.springs, t, function (t) {
+            return eN(t, e);
         });
     });
 }
-var ew = o.createContext({}),
-    eP = function (e) {
+var eD = o.createContext({}),
+    eL = function (e) {
         var t = e.children,
             n = g(e, ["children"]),
-            r = o.useContext(ew);
+            r = o.useContext(eD);
         n = x(
             function () {
                 return s(s({}, r), n);
             },
             [r, n.pause, n.cancel, n.immediate, n.config],
         );
-        var i = ew.Provider;
-        return o.createElement(
-            i,
-            {
-                value: n,
-            },
-            t,
-        );
+        var i = eD.Provider;
+        return o.createElement(i, { value: n }, t);
     };
-(eP.Provider = ew.Provider), (eP.Consumer = ew.Consumer);
-var eD = function () {
-        return o.useContext(ew);
+(eL.Provider = eD.Provider), (eL.Consumer = eD.Consumer);
+var ew = function () {
+        return o.useContext(eD);
     },
     ex = {
         create: function (e) {
@@ -1625,13 +1441,13 @@ var eD = function () {
                 update: function (t) {
                     return (
                         a.each(e(), function (e, n) {
-                            e.update(M(t, n, e));
+                            e.update(k(t, n, e));
                         }),
                         this
                     );
                 },
                 start: function (t) {
-                    return c(
+                    return u(
                         l.mark(function n() {
                             var r;
                             return l.wrap(function (n) {
@@ -1642,7 +1458,7 @@ var eD = function () {
                                                 (n.next = 2),
                                                 Promise.all(
                                                     e().map(function (e, n) {
-                                                        var r = M(t, n, e);
+                                                        var r = k(t, n, e);
                                                         return e.start(r);
                                                     }),
                                                 )
@@ -1685,115 +1501,108 @@ var eD = function () {
             };
         },
     };
-
-function eL(e, t, n) {
+function eP(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
     var l = o.useRef(0),
-        c = a.useForceUpdate(),
-        u = o.useState(function () {
+        u = a.useForceUpdate(),
+        c = o.useState(function () {
             return {
                 ctrls: [],
                 queue: [],
                 flush: function (e, t) {
-                    var n = eI(e, t);
+                    var n = eC(e, t);
                     return !(l.current > 0) ||
-                        u.queue.length ||
+                        c.queue.length ||
                         Object.keys(n).some(function (t) {
                             return !e.springs[t];
                         })
                         ? new Promise(function (r) {
-                              eT(e, n),
-                                  u.queue.push(function () {
-                                      r(ev(e, t));
+                              eb(e, n),
+                                  c.queue.push(function () {
+                                      r(eS(e, t));
                                   }),
-                                  c();
+                                  u();
                           })
-                        : ev(e, t);
+                        : eS(e, t);
                 },
             };
         })[0],
         d = o.useRef(),
-        f = [].concat(u.ctrls),
-        p = [],
-        _ = a.usePrev(e) || 0,
-        h = f.slice(e, _);
-
+        _ = [].concat(c.ctrls),
+        f = [],
+        p = a.usePrev(e) || 0,
+        h = _.slice(e, p);
     function m(e, n) {
         for (var i = e; i < n; i++) {
-            var a = f[i] || (f[i] = new eA(null, u.flush)),
+            var a = _[i] || (_[i] = new ey(null, c.flush)),
                 s = r ? r(i, a) : t[i];
-            s && ((s = p[i] = eE(s)), 0 == i && ((d.current = s.ref), (s.ref = void 0)));
+            s && ((s = f[i] = eE(s)), 0 == i && ((d.current = s.ref), (s.ref = void 0)));
         }
     }
     x(
         function () {
-            (f.length = e), m(_, e);
+            (_.length = e), m(p, e);
         },
         [e],
     ),
         x(function () {
-            m(0, Math.min(_, e));
+            m(0, Math.min(p, e));
         }, n);
     var g = o.useMemo(function () {
             return ex.create(function () {
-                return u.ctrls;
+                return c.ctrls;
             });
         }, []),
-        E = f.map(function (e, t) {
-            return eI(e, p[t]);
+        E = _.map(function (e, t) {
+            return eC(e, f[t]);
         }),
-        b = eD();
+        A = ew();
     i.useLayoutEffect(function () {
-        l.current++, (u.ctrls = f), d.current && (d.current.current = g);
-        var e = u.queue;
+        l.current++, (c.ctrls = _), d.current && (d.current.current = g);
+        var e = c.queue;
         e.length &&
-            ((u.queue = []),
+            ((c.queue = []),
             a.each(e, function (e) {
                 return e();
             })),
             a.each(h, function (e) {
                 return e.dispose();
             }),
-            a.each(f, function (e, t) {
-                eT(e, E[t]),
-                    e.start({
-                        default: b,
-                    });
-                var n = p[t];
+            a.each(_, function (e, t) {
+                eb(e, E[t]), e.start({ default: A });
+                var n = f[t];
                 n && (d.current ? e.queue.push(n) : e.start(n));
             });
     }),
         a.useOnce(function () {
             return function () {
-                a.each(u.ctrls, function (e) {
+                a.each(c.ctrls, function (e) {
                     return e.dispose();
                 });
             };
         });
-    var y = E.map(function (e) {
+    var I = E.map(function (e) {
         return s({}, e);
     });
-    return r || 3 == arguments.length ? [y, g.start, g.stop] : y;
+    return r || 3 == arguments.length ? [I, g.start, g.stop] : I;
 }
-
-function ej(e, t) {
+function eM(e, t) {
     var n = a.is.fun(e),
-        r = eL(1, n ? e : [e], n ? t || [] : t),
+        r = eP(1, n ? e : [e], n ? t || [] : t),
         i = r[0][0],
         s = r[1],
         o = r[2];
     return n || 2 == arguments.length ? [i, s, o] : i;
 }
-
-function eM(e, t, n) {
+function ek(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
     var s = [],
-        o = eL(
+        o = eP(
             e,
             function (e, n) {
-                return (s[e] = n), M(t, e, n);
+                return (s[e] = n), k(t, e, n);
             },
             n || [{}],
         );
@@ -1801,22 +1610,17 @@ function eM(e, t, n) {
         (i.useLayoutEffect(function () {
             for (var e = a.is.obj(t) && t.reverse, n = 0; n < s.length; n++) {
                 var r = s[n + (e ? 1 : -1)];
-                r &&
-                    s[n]
-                        .update({
-                            to: r.springs,
-                        })
-                        .start();
+                r && s[n].update({ to: r.springs }).start();
             }
         }, n),
         r || 3 == arguments.length)
     ) {
         var l = o[1];
         return (
-            (o[1] = _.useCallbackOne(function (e) {
+            (o[1] = p.useCallbackOne(function (e) {
                 var t = a.is.obj(e) && e.reverse;
                 return l(function (n, r) {
-                    var i = M(e, n, r),
+                    var i = k(e, n, r),
                         a = s[n + (t ? 1 : -1)];
                     return a && (i.to = a.springs), i;
                 });
@@ -1826,22 +1630,21 @@ function eM(e, t, n) {
     }
     return o[0];
 }
-var ek = "mount",
-    eU = "enter",
-    eG = "update",
-    eV = "leave";
-
-function eF(e, t, n) {
+var eU = "mount",
+    eG = "enter",
+    eV = "update",
+    eF = "leave";
+function eB(e, t, n) {
     var r = t.ref,
         l = t.reset,
-        c = t.sort,
-        u = t.trail,
-        d = void 0 === u ? 0 : u,
-        f = t.expires,
-        p = void 0 === f || f,
-        _ = a.toArray(e),
+        u = t.sort,
+        c = t.trail,
+        d = void 0 === c ? 0 : c,
+        _ = t.expires,
+        f = void 0 === _ || _,
+        p = a.toArray(e),
         h = [],
-        m = eB(_, t),
+        m = ej(p, t),
         g = o.useRef(null),
         E = l ? null : g.current;
     i.useLayoutEffect(function () {
@@ -1854,94 +1657,64 @@ function eF(e, t, n) {
                 });
             };
         });
-    var b = [];
+    var A = [];
     if (
         (E &&
             a.each(E, function (e, t) {
-                e.expired ? clearTimeout(e.expirationId) : ~(t = b[t] = m.indexOf(e.key)) && (h[t] = e);
+                e.expired ? clearTimeout(e.expirationId) : ~(t = A[t] = m.indexOf(e.key)) && (h[t] = e);
             }),
-        a.each(_, function (e, t) {
-            h[t] ||
-                (h[t] = {
-                    key: m[t],
-                    item: e,
-                    phase: ek,
-                    ctrl: new eA(),
-                });
+        a.each(p, function (e, t) {
+            h[t] || (h[t] = { key: m[t], item: e, phase: eU, ctrl: new ey() });
         }),
-        b.length)
+        A.length)
     ) {
-        var y = -1;
-        a.each(b, function (e, n) {
+        var I = -1;
+        a.each(A, function (e, n) {
             var r = E[n];
-            ~e
-                ? ((y = h.indexOf(r)),
-                  (h[y] = s(
-                      s({}, r),
-                      {},
-                      {
-                          item: _[e],
-                      },
-                  )))
-                : t.leave && h.splice(++y, 0, r);
+            ~e ? ((I = h.indexOf(r)), (h[I] = s(s({}, r), {}, { item: p[e] }))) : t.leave && h.splice(++I, 0, r);
         });
     }
-    a.is.fun(c) &&
+    a.is.fun(u) &&
         h.sort(function (e, t) {
-            return c(e.item, t.item);
+            return u(e.item, t.item);
         });
-    var O = -d,
-        A = a.useForceUpdate(),
-        v = G(t),
-        S = new Map();
+    var T = -d,
+        y = a.useForceUpdate(),
+        S = V(t),
+        v = new Map();
     a.each(h, function (e, n) {
         var r,
             i,
             o = e.key,
             l = e.phase;
-        if (l == ek) (r = t.enter), (i = eU);
+        if (l == eU) (r = t.enter), (i = eG);
         else {
-            var c = 0 > m.indexOf(o);
-            if (l != eV)
-                if (c) (r = t.leave), (i = eV);
+            var u = 0 > m.indexOf(o);
+            if (l != eF)
+                if (u) (r = t.leave), (i = eF);
                 else {
                     if (!(r = t.update)) return;
-                    i = eG;
+                    i = eV;
                 }
             else {
-                if (c) return;
-                (r = t.enter), (i = eU);
+                if (u) return;
+                (r = t.enter), (i = eG);
             }
         }
-        if (
-            ((r = L(r, e.item, n)),
-            !(r = a.is.obj(r)
-                ? Y(r)
-                : {
-                      to: r,
-                  }).config)
-        ) {
-            var u = t.config || v.config;
-            r.config = L(u, e.item, n);
+        if (((r = P(r, e.item, n)), !(r = a.is.obj(r) ? Y(r) : { to: r }).config)) {
+            var c = t.config || S.config;
+            r.config = P(c, e.item, n);
         }
-        var f = s(
-            s({}, v),
-            {},
-            {
-                delay: (O += d),
-                reset: !1,
-            },
-            r,
-        );
-        i == eU && a.is.und(f.from) && (f.from = L(a.is.und(t.initial) || E ? t.from : t.initial, e.item, n));
-        var _ = f.onRest;
-        f.onRest = f.onNoopRest = function (e) {
+        var _ = s(s({}, S), {}, { delay: (T += d), reset: !1 }, r);
+        i == eG && a.is.und(_.from) && (_.from = P(a.is.und(t.initial) || E ? t.from : t.initial, e.item, n));
+        var p = _.onRest;
+        _.onRest = _.onNoopRest = function (e) {
             var t = g.current,
                 n = t.find(function (e) {
                     return e.key === o;
                 });
             if (n) {
-                if ((a.is.fun(_) && !0 !== e.noop && _(e, n), e.cancelled && n.phase != eG)) {
+                if ((a.is.fun(p) && !0 !== e.noop && p(e, n), e.cancelled && n.phase != eV)) {
                     n.phase = l;
                     return;
                 }
@@ -1949,12 +1722,12 @@ function eF(e, t, n) {
                     var r = t.every(function (e) {
                         return e.ctrl.idle;
                     });
-                    if (n.phase == eV) {
-                        var i = L(p, n.item);
+                    if (n.phase == eF) {
+                        var i = P(f, n.item);
                         if (!1 !== i) {
                             var s = !0 === i ? 0 : i;
                             if (((n.expired = !0), !r && s > 0)) {
-                                s <= 0x7fffffff && (n.expirationId = setTimeout(A, s));
+                                s <= 0x7fffffff && (n.expirationId = setTimeout(y, s));
                                 return;
                             }
                         }
@@ -1963,29 +1736,23 @@ function eF(e, t, n) {
                         t.some(function (e) {
                             return e.expired;
                         }) &&
-                        A();
+                        y();
                 }
             }
         };
-        var h = eI(e.ctrl, f);
-        S.set(e, {
-            phase: i,
-            springs: h,
-            payload: f,
-        });
+        var h = eC(e.ctrl, _);
+        v.set(e, { phase: i, springs: h, payload: _ });
     });
-    var I = eD();
+    var C = ew();
     i.useLayoutEffect(
         function () {
             a.each(h, function (e) {
-                e.ctrl.start({
-                    default: I,
-                });
+                e.ctrl.start({ default: C });
             });
         },
-        [I],
+        [C],
     );
-    var T = o.useMemo(function () {
+    var b = o.useMemo(function () {
         return ex.create(function () {
             return g.current.map(function (e) {
                 return e.ctrl;
@@ -1993,74 +1760,62 @@ function eF(e, t, n) {
         });
     }, []);
     o.useImperativeHandle(r, function () {
-        return T;
+        return b;
     }),
         i.useLayoutEffect(
             function () {
-                a.each(S, function (e, t) {
+                a.each(v, function (e, t) {
                     var n = e.phase,
                         i = e.springs,
                         a = e.payload;
-                    eT(t.ctrl, i),
-                        I.cancel ||
-                            ((t.phase = n),
-                            n == eU &&
-                                t.ctrl.start({
-                                    default: I,
-                                }),
-                            t.ctrl[r ? "update" : "start"](a));
+                    eb(t.ctrl, i),
+                        C.cancel ||
+                            ((t.phase = n), n == eG && t.ctrl.start({ default: C }), t.ctrl[r ? "update" : "start"](a));
                 });
             },
             l ? void 0 : n,
         );
-    var C = function (e) {
+    var N = function (e) {
         return o.createElement(
             o.Fragment,
             null,
             h.map(function (t, n) {
-                var r = e(s({}, (S.get(t) || t.ctrl).springs), t.item, t, n);
+                var r = e(s({}, (v.get(t) || t.ctrl).springs), t.item, t, n);
                 return r && r.type
                     ? o.createElement(
                           r.type,
-                          s({}, r.props, {
-                              key: a.is.str(t.key) || a.is.num(t.key) ? t.key : t.ctrl.id,
-                              ref: r.ref,
-                          }),
+                          s({}, r.props, { key: a.is.str(t.key) || a.is.num(t.key) ? t.key : t.ctrl.id, ref: r.ref }),
                       )
                     : r;
             }),
         );
     };
-    return 3 == arguments.length ? [C, T.start, T.stop] : C;
+    return 3 == arguments.length ? [N, b.start, b.stop] : N;
 }
-
-function eB(e, t) {
+function ej(e, t) {
     var n = t.key,
         r = t.keys,
         i = void 0 === r ? n : r;
     return a.is.und(i) ? e : a.is.fun(i) ? e.map(i) : a.toArray(i);
 }
-
 function eH(e) {
-    return (0, e.children)(ej(g(e, ["children"])));
+    return (0, e.children)(eM(g(e, ["children"])));
 }
-
 function eY(e) {
     var t = e.items,
         n = e.children,
         r = g(e, ["items", "children"]),
-        i = eM(t.length, r);
+        i = ek(t.length, r);
     return t.map(function (e, t) {
         var r = n(e, t);
         return a.is.fun(r) ? r(i[t]) : r;
     });
 }
-
 function eW(e) {
     var t = e.items,
         n = e.children,
         r = g(e, ["items", "children"]);
-    return o.createElement(o.Fragment, null, eF(t, r)(n));
+    return o.createElement(o.Fragment, null, eB(t, r)(n));
 }
 var eK = (function (e) {
         function t(t, n) {
@@ -2071,8 +1826,8 @@ var eK = (function (e) {
                 (r.calc = a.createInterpolator.apply(void 0, n));
             var r,
                 i = r._get(),
-                s = a.is.arr(i) ? f.AnimatedArray : f.AnimatedValue;
-            return f.setAnimated(E(r), s.create(i)), r;
+                s = a.is.arr(i) ? _.AnimatedArray : _.AnimatedValue;
+            return _.setAnimated(E(r), s.create(i)), r;
         }
         d(t, e);
         var n = t.prototype;
@@ -2080,7 +1835,7 @@ var eK = (function (e) {
             (n.advance = function (e) {
                 var t = this._get(),
                     n = this.get();
-                a.isEqual(t, n) || (f.getAnimated(this).setValue(t), this._onChange(t, this.idle));
+                a.isEqual(t, n) || (_.getAnimated(this).setValue(t), this._onChange(t, this.idle));
             }),
             (n._get = function () {
                 var e = a.is.arr(this.source)
@@ -2091,7 +1846,7 @@ var eK = (function (e) {
                 return this.calc.apply(this, e);
             }),
             (n._reset = function () {
-                a.each(f.getPayload(this), function (e) {
+                a.each(_.getPayload(this), function (e) {
                     return e.reset();
                 }),
                     e.prototype._reset.call(this);
@@ -2099,7 +1854,7 @@ var eK = (function (e) {
             (n._start = function () {
                 (this.idle = !1),
                     e.prototype._start.call(this),
-                    p.skipAnimation ? ((this.idle = !0), this.advance()) : p.frameLoop.start(this);
+                    f.skipAnimation ? ((this.idle = !0), this.advance()) : f.frameLoop.start(this);
             }),
             (n._attach = function () {
                 var e = this,
@@ -2130,7 +1885,7 @@ var eK = (function (e) {
                             })),
                             this.idle &&
                                 (this.advance(),
-                                a.each(f.getPayload(this), function (e) {
+                                a.each(_.getPayload(this), function (e) {
                                     e.done = !0;
                                 })))
                       : "priority" == t.type &&
@@ -2146,25 +1901,25 @@ var eK = (function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new eK(e, n);
     },
-    eq = function (e) {
+    e$ = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return m.deprecateInterpolate(), new eK(e, n);
     };
 a.Globals.assign({
-    createStringInterpolator: b.createStringInterpolator,
+    createStringInterpolator: A.createStringInterpolator,
     to: function (e, t) {
         return new eK(e, t);
     },
 });
-var eX = function () {
+var eq = function () {
     return a.Globals.frameLoop.advance();
 };
-Object.keys(y).forEach(function (e) {
+Object.keys(I).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return y[e];
+                return I[e];
             },
         });
 }),
@@ -2187,22 +1942,22 @@ Object.keys(y).forEach(function (e) {
         },
     }),
     (t.BailSignal = er),
-    (t.Controller = eA),
+    (t.Controller = ey),
     (t.FrameValue = es),
     (t.Interpolation = eK),
     (t.Spring = eH),
-    (t.SpringContext = eP),
+    (t.SpringContext = eL),
     (t.SpringHandle = ex),
-    (t.SpringValue = ef),
+    (t.SpringValue = e_),
     (t.Trail = eY),
     (t.Transition = eW),
-    (t.config = A),
+    (t.config = y),
     (t.inferTo = Y),
-    (t.interpolate = eq),
+    (t.interpolate = e$),
     (t.to = ez),
-    (t.update = eX),
-    (t.useChain = O),
-    (t.useSpring = ej),
-    (t.useSprings = eL),
-    (t.useTrail = eM),
-    (t.useTransition = eF);
+    (t.update = eq),
+    (t.useChain = T),
+    (t.useSpring = eM),
+    (t.useSprings = eP),
+    (t.useTrail = ek),
+    (t.useTransition = eB);

@@ -1,15 +1,14 @@
-n.d(e, {
-    K: () => a,
-});
-var i = n(311907),
-    r = n(4227),
-    l = n(623373);
-let a = (t) => {
-    let e = (0, i.bG)([r.A], () => r.A.purchases);
-    return null != t && (0, l.B1)(t)
+"use strict";
+n.d(t, { K: () => s });
+var r = n(311907),
+    i = n(4227),
+    a = n(623373);
+let s = (e) => {
+    let t = (0, r.bG)([i.A], () => i.A.purchases);
+    return null != e && (0, a.B1)(e)
         ? Math.max(
               0,
-              t.variants.findIndex((t) => !e.has(t.skuId)),
+              e.variants.findIndex((e) => !t.has(e.skuId)),
           )
         : 0;
 };

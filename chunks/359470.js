@@ -3,15 +3,10 @@ var a = r(577033),
     s = Object.hasOwnProperty,
     o = Object.create(null);
 for (var i in a) s.call(a, i) && (o[a[i]] = i);
-var c = (e.exports = {
-    to: {},
-    get: {},
-});
-
+var c = (e.exports = { to: {}, get: {} });
 function l(e, t, r) {
     return Math.min(Math.max(t, e), r);
 }
-
 function u(e) {
     var t = Math.round(e).toString(16).toUpperCase();
     return t.length < 2 ? "0" + t : t;
@@ -28,12 +23,7 @@ function u(e) {
         default:
             (t = c.get.rgb(e)), (r = "rgb");
     }
-    return t
-        ? {
-              model: r,
-              value: t,
-          }
-        : null;
+    return t ? { model: r, value: t } : null;
 }),
     (c.get.rgb = function (e) {
         if (!e) return null;

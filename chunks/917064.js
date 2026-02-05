@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(228524);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,36 +7,18 @@ var i = n(503698),
     s = n(397927),
     o = n(985018),
     l = n(463006),
-    c = n(93364);
-
-function u(e) {
+    u = n(93364);
+function c(e) {
     let { className: t } = e;
-    return (0, r.jsx)("img", {
-        className: a()(t, l.Dp),
-        src: c,
-        alt: "",
-    });
+    return (0, r.jsx)("img", { className: a()(t, l.Dp), src: u, alt: "" });
 }
 let d = [
-    {
-        icon: s._Jp,
-        getText: () => o.intl.string(o.t.TZigSO),
-    },
-    {
-        icon: u,
-        getText: () => o.intl.string(o.t.hjQuV2),
-    },
-    {
-        icon: s.iTF,
-        getText: () => o.intl.string(o.t["2RUcaM"]),
-    },
-    {
-        icon: s.C3E,
-        getText: () => o.intl.string(o.t.bJoZKV),
-    },
+    { icon: s._Jp, getText: () => o.intl.string(o.t.TZigSO) },
+    { icon: c, getText: () => o.intl.string(o.t.hjQuV2) },
+    { icon: s.iTF, getText: () => o.intl.string(o.t["2RUcaM"]) },
+    { icon: s.C3E, getText: () => o.intl.string(o.t.bJoZKV) },
 ];
-
-function f(e) {
+function _(e) {
     let { className: t } = e;
     return (0, r.jsxs)("div", {
         className: a()(l.iE, t),
@@ -57,9 +37,7 @@ function f(e) {
                         {
                             className: l.Nr,
                             children: [
-                                (0, r.jsx)(n, {
-                                    className: l.Kk,
-                                }),
+                                (0, r.jsx)(n, { className: l.Kk }),
                                 (0, r.jsx)(s.Text, {
                                     className: l.h_,
                                     color: "text-muted",

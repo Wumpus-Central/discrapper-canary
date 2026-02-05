@@ -1,10 +1,5 @@
-function r(e, t) {
-    var n;
-    let r = null != (n = decodeURIComponent(t).split("/").pop()) ? n : "temp.gif";
-    return "".concat(e, "-").concat(r);
+function l(e, t) {
+    let n = decodeURIComponent(t).split("/").pop() ?? "temp.gif";
+    return `${e}-${n}`;
 }
-n.d(t, {
-    $P: () => r,
-}),
-    n(747238),
-    n(412136);
+n.d(t, { $P: () => l }), n(412136);

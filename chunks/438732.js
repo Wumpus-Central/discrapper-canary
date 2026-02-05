@@ -1,9 +1,6 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(311907),
-    i = n(695515);
-
-function a() {
-    return "adult" === (0, r.bG)([i.A], () => i.A.getAgeGroup());
+n.d(e, { A: () => l });
+var i = n(311907),
+    r = n(695515);
+function l() {
+    return "adult" === (0, i.bG)([r.A], () => r.A.getAgeGroup());
 }

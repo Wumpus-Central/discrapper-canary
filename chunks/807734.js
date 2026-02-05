@@ -1,22 +1,16 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(228524);
+n.d(t, { A: () => u });
 var a = n(64700),
-    l = n(311907),
+    s = n(311907),
     i = n(847599),
-    r = n(787301),
-    s = n(295972),
+    l = n(787301),
+    r = n(295972),
     o = n(36149),
-    c = n(40449),
-    d = n(985018);
+    d = n(40449),
+    c = n(985018);
 let u = function (e) {
     let { onClose: t, onMethodClick: n, classificationId: u } = e,
-        { methods: m, loading: p } = (0, l.cf)([r.A], () => ({
-            methods: r.A.methods,
-            loading: r.A.loading,
-        })),
-        { initiateAgeVerification: h } = (0, o.nn)({
+        { methods: m, loading: h } = (0, s.cf)([l.A], () => ({ methods: l.A.methods, loading: l.A.loading })),
+        { initiateAgeVerification: x } = (0, o.nn)({
             onComplete: t,
             entryPoint: i.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
@@ -24,30 +18,25 @@ let u = function (e) {
         });
     return (
         a.useEffect(() => {
-            null == m && (0, s.DJ)();
+            null == m && (0, r.DJ)();
         }, [m]),
         {
-            ageVerificationMethods:
-                null == m
-                    ? void 0
-                    : m
-                          .map((e) => {
-                              let t = c.uv[e];
-                              if (null == t) return null;
-                              let { title: a, description: l } = t;
-                              return {
-                                  id: e,
-                                  title: d.intl.string(a),
-                                  description: d.intl.string(l),
-                                  onClick: async (t) => {
-                                      (0, i.St)(t, i.WU.EXPRESSIVE_PRIMARY, i._7.METHOD_SELECT, e),
-                                          null == n || n(),
-                                          await h(e);
-                                  },
-                              };
-                          })
-                          .filter((e) => null != e),
-            loading: p,
+            ageVerificationMethods: m
+                ?.map((e) => {
+                    let t = d.uv[e];
+                    if (null == t) return null;
+                    let { title: a, description: s } = t;
+                    return {
+                        id: e,
+                        title: c.intl.string(a),
+                        description: c.intl.string(s),
+                        onClick: async (t) => {
+                            (0, i.St)(t, i.WU.EXPRESSIVE_PRIMARY, i._7.METHOD_SELECT, e), n?.(), await x(e);
+                        },
+                    };
+                })
+                .filter((e) => null != e),
+            loading: h,
         }
     );
 };

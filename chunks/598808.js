@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__9d597",
     Kr: "hasMultipleCards__9d597",

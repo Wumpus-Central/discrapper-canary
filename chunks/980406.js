@@ -1,13 +1,11 @@
-n.d(t, {
-    r: () => s,
-});
-var r = n(975571),
-    i = n(652215),
+"use strict";
+n.d(t, { r: () => r });
+var i = n(975571),
+    s = n(652215),
     l = n(985018);
-
-function s() {
+function r() {
     return l.intl.format(l.t["+ALa7+"], {
-        fullTermsUrl: r.A.getArticleURL(i.MVz.CREATOR_TERMS),
-        creatorRevenuePolicyUrl: r.A.getArticleURL(i.MVz.CREATOR_POLICY),
+        fullTermsUrl: i.A.getArticleURL(s.MVz.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: i.A.getArticleURL(s.MVz.CREATOR_POLICY),
     });
 }

@@ -15,21 +15,11 @@ e.exports = function (e) {
                     {
                         className: "name",
                         begin: /[a-zA-Z\.-]+/,
-                        starts: {
-                            endsWithParent: !0,
-                            relevance: 0,
-                            contains: [e.QUOTE_STRING_MODE],
-                        },
+                        starts: { endsWithParent: !0, relevance: 0, contains: [e.QUOTE_STRING_MODE] },
                     },
                 ],
             },
-            {
-                className: "template-variable",
-                begin: /\{/,
-                end: /\}/,
-                illegal: /;/,
-                keywords: t,
-            },
+            { className: "template-variable", begin: /\{/, end: /\}/, illegal: /;/, keywords: t },
         ],
     };
 };

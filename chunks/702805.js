@@ -1,54 +1,27 @@
-n.d(t, {
-    E: () => a,
-    G9: () => o,
-    LA: () => u,
-    R$: () => c,
-    Ts: () => s,
-    lS: () => d,
-});
+n.d(t, { E: () => s, G9: () => o, LA: () => u, R$: () => d, Ts: () => a, lS: () => c });
 var r = n(73153),
     i = n(60868),
     l = n(308528);
 async function u(e, t, n, l) {
     let u = e.getGuildId();
     if (null != u && t === u && !(await (0, i.n)(e, l, n))) return !1;
-    r.h.dispatch({
-        type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION",
-        id: t,
-        allow: n,
-        deny: l,
-    });
+    r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION", id: t, allow: n, deny: l });
 }
-
 function o(e) {
-    r.h.dispatch({
-        type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION",
-        id: e,
-    });
+    r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id: e });
 }
-
-function a(e) {
-    r.h.dispatch({
-        type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE",
-        advancedMode: e,
-    });
+function s(e) {
+    r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode: e });
 }
-
-function s() {
-    r.h.dispatch({
-        type: "CHANNEL_SETTINGS_PERMISSIONS_INIT",
-    });
+function a() {
+    r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 }
-
-function c(e, t, n) {
-    return d(e, t, [], n);
+function d(e, t, n) {
+    return c(e, t, [], n);
 }
-
-function d(e, t, n, i) {
+function c(e, t, n, i) {
     return (
-        r.h.dispatch({
-            type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING",
-        }),
+        r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" }),
         new Promise((r) => {
             let i = () => {
                 if (0 === t.length && 0 === n.length) return r();
@@ -64,10 +37,7 @@ function d(e, t, n, i) {
             };
             i();
         }).then(() => {
-            r.h.dispatch({
-                type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS",
-                silent: i,
-            });
+            r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: i });
         })
     );
 }

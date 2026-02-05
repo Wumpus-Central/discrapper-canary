@@ -1,84 +1,29 @@
+"use strict";
 n.d(t, {
-    AO: () => g,
-    CW: () => b,
-    Eq: () => _,
+    AO: () => f,
+    CW: () => h,
+    Eq: () => c,
     MW: () => r.iL,
-    P0: () => l,
-    Rj: () => f,
-    UV: () => y,
-    X: () => m,
-    bO: () => h,
-    fs: () => p,
-    h0: () => u,
-    j6: () => E,
-    u0: () => c,
-    uf: () => d,
+    P0: () => i,
+    Rj: () => l,
+    UV: () => m,
+    X: () => _,
+    bO: () => d,
+    fs: () => u,
+    h0: () => s,
+    j6: () => p,
+    u0: () => a,
+    uf: () => o,
 });
-var r = n(873298);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function o(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-var l = (function (e) {
-    return (e.BAD = "bad"), (e.NEUTRAL = "neutral"), (e.GOOD = "good"), e;
-})({});
-let c = 1024;
-var u = (function (e) {
+var r = n(873298),
+    i = (function (e) {
+        return (e.BAD = "bad"), (e.NEUTRAL = "neutral"), (e.GOOD = "good"), e;
+    })({});
+let a = 1024;
+var s = (function (e) {
     return (e.AV = "AV"), (e.SOCIAL = "SOCIAL"), (e.SEARCH = "SEARCH"), (e.SAFETY = "SAFETY"), e;
 })({});
-let d = [
+let o = [
         r.iL.VIDEO_BACKGROUND,
         r.iL.STREAM,
         r.iL.ACTIVITY,
@@ -88,16 +33,10 @@ let d = [
         r.iL.BLOCK_USER,
         r.iL.SEARCH_RESULTS,
         r.iL.AGE_VERIFICATION,
-    ].reduce(
-        (e, t, n) =>
-            o(a({}, e), {
-                [t]: n,
-            }),
-        {},
-    ),
-    f = ["bad", "neutral", "good"],
-    p = 864e13;
-var _ = (function (e) {
+    ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
+    l = ["bad", "neutral", "good"],
+    u = 864e13;
+var c = (function (e) {
         return (
             (e.CONNECTION = "CONNECTION"),
             (e.AUDIO = "AUDIO"),
@@ -108,7 +47,7 @@ var _ = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    d = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.COULD_NOT_CONNECT = "COULD_NOT_CONNECT"),
@@ -120,7 +59,7 @@ var _ = (function (e) {
             e
         );
     })({}),
-    m = (function (e) {
+    _ = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.NO_AUDIO = "NO_AUDIO"),
@@ -142,7 +81,7 @@ var _ = (function (e) {
             e
         );
     })({}),
-    g = (function (e) {
+    f = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.NO_VIDEO = "NO_VIDEO"),
@@ -153,7 +92,7 @@ var _ = (function (e) {
             e
         );
     })({}),
-    E = (function (e) {
+    p = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.COULD_NOT_LOAD = "COULD_NOT_LOAD"),
@@ -169,9 +108,9 @@ var _ = (function (e) {
             e
         );
     })({}),
-    b = (function (e) {
+    h = (function (e) {
         return (e.FREEFORM = "FREEFORM"), (e.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), e;
     })({}),
-    y = (function (e) {
+    m = (function (e) {
         return (e.UNSPECIFIED = "UNSPECIFIED"), (e.SELF = "SELF"), (e.SOMEONE = "SOMEONE"), (e.OTHERS = "OTHERS"), e;
     })({});

@@ -1,10 +1,5 @@
-n.d(t, {
-    QR: () => s,
-    Xd: () => r,
-    uR: () => i,
-    yV: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { QR: () => s, Xd: () => r, uR: () => i, yV: () => a });
 var r = (function (e) {
     return (e[(e.GUILD = 0)] = "GUILD"), (e[(e.GROUP_DM = 1)] = "GROUP_DM"), (e[(e.FRIEND = 2)] = "FRIEND"), e;
 })({});

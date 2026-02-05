@@ -1,13 +1,7 @@
+"use strict";
 function n(t, e, r) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = r),
+        e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r),
         t
     );
 }
@@ -69,10 +63,7 @@ var i = r(630332),
                                     });
                             }
                             return t;
-                        })({}, t, {
-                            treeMap: g(r, i),
-                            directionMap: a.getDirectionMap(r),
-                        }),
+                        })({}, t, { treeMap: g(r, i), directionMap: a.getDirectionMap(r) }),
                     ),
                 );
             }),
@@ -115,11 +106,7 @@ var i = r(630332),
                                               }),
                                       ))
                                     : g(p, f)),
-                                e.merge({
-                                    decorator: f,
-                                    treeMap: _,
-                                    nativelyRenderedContent: null,
-                                });
+                                e.merge({ decorator: f, treeMap: _, nativelyRenderedContent: null });
                             return;
                         }
                         p !== t.getCurrentContent() &&
@@ -149,7 +136,6 @@ var i = r(630332),
                 );
             });
         var t = e.prototype;
-
         function e(t) {
             n(this, "_immutable", void 0), (this._immutable = t);
         }
@@ -191,9 +177,7 @@ var i = r(630332),
                 return this.getImmutable().get("inlineStyleOverride");
             }),
             (e.setInlineStyleOverride = function (t, r) {
-                return e.set(t, {
-                    inlineStyleOverride: r,
-                });
+                return e.set(t, { inlineStyleOverride: r });
             }),
             (t.getCurrentInlineStyle = function () {
                 var t,
@@ -252,13 +236,7 @@ var i = r(630332),
                     i = r.getLength();
                 return e.acceptSelection(
                     t,
-                    new s({
-                        anchorKey: n,
-                        anchorOffset: i,
-                        focusKey: n,
-                        focusOffset: i,
-                        isBackward: !1,
-                    }),
+                    new s({ anchorKey: n, anchorOffset: i, focusKey: n, focusOffset: i, isBackward: !1 }),
                 );
             }),
             (e.moveFocusToEnd = function (t) {
@@ -349,16 +327,9 @@ var i = r(630332),
             e
         );
     })();
-
 function d(t, e, r) {
-    return h.set(t, {
-        selection: e,
-        forceSelection: r,
-        nativelyRenderedContent: null,
-        inlineStyleOverride: null,
-    });
+    return h.set(t, { selection: e, forceSelection: r, nativelyRenderedContent: null, inlineStyleOverride: null });
 }
-
 function g(t, e) {
     return t
         .getBlockMap()
@@ -367,7 +338,6 @@ function g(t, e) {
         })
         .toOrderedMap();
 }
-
 function y(t, e) {
     var r = t
         .getBlockMap()

@@ -1,3 +1,1 @@
-e.exports = {
-    zr: "root_f555ee",
-};
+e.exports = { zr: "root_f555ee" };

@@ -1,3 +1,4 @@
+"use strict";
 var r,
     a,
     o,
@@ -82,7 +83,4 @@ var R = function (e) {
                         : function (e) {
                               setTimeout(F(e), 0);
                           })),
-    (e.exports = {
-        set: b,
-        clear: A,
-    });
+    (e.exports = { set: b, clear: A });

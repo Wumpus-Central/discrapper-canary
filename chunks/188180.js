@@ -1,160 +1,81 @@
-n.d(t, {
-    X: () => _,
-});
+n.d(t, { X: () => g });
 var r = n(627968),
-    o = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    i = n(837381),
-    c = n(397927),
-    s = n(963935),
-    u = n(894858),
-    d = n(942596),
-    b = n(362205),
-    f = n(71862);
-
-function p(e) {
-    var t, n;
-    let { tag: o, onClick: a, active: i, node: s, visibleContent: u, panelKey: b, listItemProps: p, children: _ } = e,
-        { icon: y, StronglyDiscouragedCustomComponent: m, trailing: g, useTitle: h } = s,
-        O = null == h ? void 0 : h();
-    return (0, r.jsxs)(o, {
-        "data-settings-sidebar-item": b,
-        className: f.DB,
+    a = n(64700),
+    o = n(503698),
+    i = n.n(o),
+    l = n(837381),
+    s = n(397927),
+    c = n(963935),
+    _ = n(894858),
+    u = n(942596),
+    d = n(362205),
+    b = n(71862);
+function m(e) {
+    let { tag: t, onClick: n, active: a, node: o, visibleContent: l, panelKey: c, listItemProps: _, children: d } = e,
+        { icon: m, StronglyDiscouragedCustomComponent: g, trailing: p, useTitle: f } = o,
+        x = f?.();
+    return (0, r.jsxs)(t, {
+        "data-settings-sidebar-item": c,
+        className: b.DB,
         children: [
-            (0, r.jsxs)(
-                c.DUT,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, p)),
-                (n = n =
-                    {
-                        className: l()(f.AS, {
-                            [f.vu]: i,
+            (0, r.jsxs)(s.DUT, {
+                ..._,
+                className: i()(b.AS, { [b.vu]: a }),
+                onClick: n,
+                children: [
+                    null != g
+                        ? (0, r.jsx)(g, {})
+                        : (0, r.jsxs)("div", {
+                              className: b.Ly,
+                              children: [
+                                  (0, r.jsx)(m, { color: "currentColor", size: "refresh_sm", className: b.Kk }),
+                                  (0, r.jsx)(s.Text, { variant: "text-md/medium", color: "currentColor", children: x }),
+                              ],
+                          }),
+                    null != p &&
+                        (0, r.jsx)("div", {
+                            className: b.Ly,
+                            children: (0, r.jsx)(u.Z, { trailing: p, visibleContent: l, isSelected: a }),
                         }),
-                        onClick: a,
-                        children: [
-                            null != m
-                                ? (0, r.jsx)(m, {})
-                                : (0, r.jsxs)("div", {
-                                      className: f.Ly,
-                                      children: [
-                                          (0, r.jsx)(y, {
-                                              color: "currentColor",
-                                              size: "refresh_sm",
-                                              className: f.Kk,
-                                          }),
-                                          (0, r.jsx)(c.Text, {
-                                              variant: "text-md/medium",
-                                              color: "currentColor",
-                                              children: O,
-                                          }),
-                                      ],
-                                  }),
-                            null != g &&
-                                (0, r.jsx)("div", {
-                                    className: f.Ly,
-                                    children: (0, r.jsx)(d.Z, {
-                                        trailing: g,
-                                        visibleContent: u,
-                                        isSelected: i,
-                                    }),
-                                }),
-                        ],
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
-            ),
-            _,
+                ],
+            }),
+            d,
         ],
     });
 }
-
-function _(e) {
-    let { node: t, visibleContent: n, hoisted: a = !1 } = e,
-        l = o.useMemo(() => t.layout[0], [t]),
-        c = u.A.useField("currentPanelKey"),
-        d = null != c && c === (null == l ? void 0 : l.key),
-        f = o.useMemo(() => {
-            if (null == l || !(0, s.Iu)(l.layout)) return null;
-            let e = l.layout.filter((e) => null != e.useTitle || null != e.useSubnavLabel);
+function g(e) {
+    let { node: t, visibleContent: n, hoisted: o = !1 } = e,
+        i = a.useMemo(() => t.layout[0], [t]),
+        s = _.A.useField("currentPanelKey"),
+        u = null != s && s === i?.key,
+        b = a.useMemo(() => {
+            if (null == i || !(0, c.Iu)(i.layout)) return null;
+            let e = i.layout.filter((e) => null != e.useTitle || null != e.useSubnavLabel);
             return e.length > 1 ? e : null;
-        }, [l]),
-        _ =
-            null != l
+        }, [i]),
+        g =
+            null != i
                 ? () => {
-                      let e = c === l.key && null != f ? f[0].key : l.key;
-                      u.A.setState({
-                          requestedTargetKey: e,
-                          showNavigationMobile: !1,
-                      });
+                      let e = s === i.key && null != b ? b[0].key : i.key;
+                      _.A.setState({ requestedTargetKey: e, showNavigationMobile: !1 });
                   }
                 : t.onClick,
-        y = o.useMemo(
-            () =>
-                d && null != f
-                    ? (0, r.jsx)(b.A, {
-                          categories: f,
-                      })
-                    : null,
-            [d, f],
-        ),
-        m = a ? "li" : "div";
-    return a
-        ? (0, r.jsx)(p, {
-              tag: m,
-              panelKey: null == l ? void 0 : l.key,
-              onClick: _,
-              active: d,
-              node: t,
-              visibleContent: n,
-              children: y,
-          })
-        : (0, r.jsx)(i.tG, {
+        p = a.useMemo(() => (u && null != b ? (0, r.jsx)(d.A, { categories: b }) : null), [u, b]),
+        f = o ? "li" : "div";
+    return o
+        ? (0, r.jsx)(m, { tag: f, panelKey: i?.key, onClick: g, active: u, node: t, visibleContent: n, children: p })
+        : (0, r.jsx)(l.tG, {
               id: t.key,
               children: (e) =>
-                  (0, r.jsx)(p, {
-                      tag: m,
-                      panelKey: null == l ? void 0 : l.key,
-                      onClick: _,
-                      active: d,
+                  (0, r.jsx)(m, {
+                      tag: f,
+                      panelKey: i?.key,
+                      onClick: g,
+                      active: u,
                       node: t,
                       visibleContent: n,
                       listItemProps: e,
-                      children: y,
+                      children: p,
                   }),
           });
 }

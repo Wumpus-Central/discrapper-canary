@@ -1,58 +1,35 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(64983),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(64983),
     s = n(509536),
     o = n(498642),
-    c = n(652215),
-    u = n(49999),
-    d = n(985018),
-    p = n(98100);
-class f extends i.PureComponent {
+    d = n(652215),
+    c = n(49999),
+    u = n(985018),
+    A = n(98100);
+class h extends r.PureComponent {
+    handleButtonClick = () => {
+        let { guild: e } = this.props;
+        (0, s.K)({ guildId: e.id, location: { section: d.JJy.CHANNEL_NOTICE, object: d.ZSU.SERVER_STATUS_CTA } });
+    };
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
-        return (0, r.jsx)(a.A, {
+        return (0, i.jsx)(l.A, {
             guild: e,
-            onDismissed: () => n(u.i.UNKNOWN),
+            onDismissed: () => n(c.i.UNKNOWN),
             onClick: this.handleButtonClick,
-            message: null == t || t < 30 ? d.intl.string(d.t.hlitVQ) : d.intl.string(d.t.XHtaDD),
-            cta: d.intl.string(d.t["vqb+H1"]),
-            trackingSource: c.kZU.GUILD_SUBSCRIPTION_NOTICE,
-            type: c.n5X.GUILD_BOOSTING,
-            image: p,
+            message: null == t || t < 30 ? u.intl.string(u.t.hlitVQ) : u.intl.string(u.t.XHtaDD),
+            cta: u.intl.string(u.t["vqb+H1"]),
+            trackingSource: d.kZU.GUILD_SUBSCRIPTION_NOTICE,
+            type: d.n5X.GUILD_BOOSTING,
+            image: A,
             imageMarginX: 26,
         });
     }
-    constructor(...e) {
-        super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: n,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = n);
-            })(this, "handleButtonClick", () => {
-                let { guild: e } = this.props;
-                (0, s.K)({
-                    guildId: e.id,
-                    location: {
-                        section: c.JJy.CHANNEL_NOTICE,
-                        object: c.ZSU.SERVER_STATUS_CTA,
-                    },
-                });
-            });
-    }
 }
-let h = l.Ay.connectStores([o.A], (e) => {
+let _ = a.Ay.connectStores([o.A], (e) => {
     let { guild: t } = e;
-    return {
-        memberCount: o.A.getMemberCount(t.id),
-    };
-})(f);
+    return { memberCount: o.A.getMemberCount(t.id) };
+})(h);

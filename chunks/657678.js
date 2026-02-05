@@ -1,3 +1,1 @@
-e.exports = {
-    C: "ticketIcon__0557e",
-};
+e.exports = { C: "ticketIcon__0557e" };

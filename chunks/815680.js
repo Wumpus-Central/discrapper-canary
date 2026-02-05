@@ -1,3 +1,4 @@
+"use strict";
 async function r() {
     return Promise.all([
         Promise.resolve().then(n.bind(n, 985018)),
@@ -33,7 +34,4 @@ async function r() {
         Promise.resolve().then(n.bind(n, 588703)),
     ]);
 }
-n.d(t, {
-    O: () => r,
-}),
-    n(896048);
+n.d(t, { O: () => r });

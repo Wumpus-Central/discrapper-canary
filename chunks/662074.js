@@ -1,30 +1,25 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(115884),
+n.d(t, { A: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(115884),
     s = n(664531),
     o = n(120006),
-    c = n(985018),
-    u = n(97276);
-
-function d() {
-    return (0, r.jsxs)("header", {
-        className: u.wx,
+    d = n(985018),
+    c = n(97276);
+function u() {
+    return (0, i.jsxs)("header", {
+        className: c.wx,
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
-                className: u.DD,
-                children: c.intl.string(c.t.w5uwoI),
+                className: c.DD,
+                children: d.intl.string(d.t.w5uwoI),
             }),
-            (0, r.jsx)(a.A, {}),
+            (0, i.jsx)(l.A, {}),
         ],
     });
 }
-let p = function () {
-    return (0, r.jsxs)(i.Fragment, {
-        children: [(0, r.jsx)(d, {}), (0, s.a)() && (0, r.jsx)(o.A, {})],
-    });
+let A = function () {
+    return (0, i.jsxs)(r.Fragment, { children: [(0, i.jsx)(u, {}), (0, s.a)() && (0, i.jsx)(o.A, {})] });
 };

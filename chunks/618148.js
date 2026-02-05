@@ -1,3 +1,1 @@
-e.exports = {
-    o: "toast_cbb248",
-};
+e.exports = { o: "toast_cbb248" };

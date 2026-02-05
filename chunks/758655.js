@@ -1,201 +1,184 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048),
-    n(938796);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => T }), n(938796);
+var i = n(627968),
+    r = n(64700),
     l = n(284009),
     a = n.n(l),
     s = n(311907),
     o = n(397927),
     c = n(304072),
-    u = n(494230),
-    d = n(369280),
-    p = n(163437),
-    m = n(71393),
-    f = n(156312),
-    b = n(166532),
-    g = n(566980),
-    x = n(69494),
-    j = n(312649),
-    h = n(534479),
-    v = n(482132),
-    y = n(921925),
-    P = n(985018),
-    O = n(820970);
-
-function S(e) {
-    var t, n;
+    d = n(494230),
+    u = n(369280),
+    m = n(163437),
+    p = n(71393),
+    x = n(156312),
+    f = n(166532),
+    h = n(566980),
+    g = n(69494),
+    b = n(312649),
+    j = n(534479),
+    A = n(482132),
+    S = n(921925),
+    v = n(985018),
+    C = n(820970);
+function T(e) {
     let {
-            backButtonEligible: l,
-            prevStep: S,
-            handleStepChange: A,
-            trialFooterMessageOverride: E,
-            reviewWarningMessage: T,
-            planGroup: N,
-            openInvoiceId: C,
-            analyticsData: w,
-            analyticsLocation: k,
-            handleClose: _,
+            backButtonEligible: t,
+            prevStep: n,
+            handleStepChange: l,
+            trialFooterMessageOverride: T,
+            reviewWarningMessage: N,
+            planGroup: E,
+            openInvoiceId: _,
+            analyticsData: P,
+            analyticsLocation: y,
+            handleClose: k,
         } = e,
         {
-            activeSubscription: D,
-            application: I,
-            setUpdatedSubscription: R,
-            contextMetadata: B,
-            currencies: F,
-            paymentSources: U,
-            priceOptions: M,
-            purchaseError: G,
-            purchaseTokenAuthState: L,
-            selectedPlan: H,
-            selectedSku: Y,
-            setCurrency: W,
-            setPaymentSourceId: q,
-            setPurchaseState: V,
-            setPurchaseError: Z,
-            purchaseState: Q,
-            subscriptionMetadataRequest: X,
-            setHasAcceptedTerms: $,
-        } = (0, f.P5)();
-    a()(null != H, "Expected plan to be selected");
-    let z = i.useRef(null),
-        [K, J] = (0, c.A)(!1, 500),
-        ee = null == X ? void 0 : X.guild_id,
-        et = (0, s.bG)([m.A], () => m.A.getGuild(ee), [ee]),
-        [en, er] = i.useState(null),
-        ei = (0, p.bg)(null != (t = null == Y ? void 0 : Y.flags) ? t : 0);
-    i.useEffect(() => {
-        null != G &&
-            null != z.current &&
-            z.current.scrollIntoView({
-                behavior: "smooth",
-            });
-    }, [G]);
-    let el = i.useCallback(
+            activeSubscription: I,
+            application: R,
+            setUpdatedSubscription: w,
+            contextMetadata: D,
+            currencies: B,
+            paymentSources: F,
+            priceOptions: U,
+            purchaseError: M,
+            purchaseTokenAuthState: O,
+            selectedPlan: G,
+            selectedSku: H,
+            setCurrency: L,
+            setPaymentSourceId: Y,
+            setPurchaseState: W,
+            setPurchaseError: q,
+            purchaseState: V,
+            subscriptionMetadataRequest: Z,
+            setHasAcceptedTerms: Q,
+        } = (0, x.P5)();
+    a()(null != G, "Expected plan to be selected");
+    let X = r.useRef(null),
+        [$, z] = (0, c.A)(!1, 500),
+        K = Z?.guild_id,
+        J = (0, s.bG)([p.A], () => p.A.getGuild(K), [K]),
+        [ee, et] = r.useState(null),
+        en = (0, m.bg)(H?.flags ?? 0);
+    r.useEffect(() => {
+        null != M && null != X.current && X.current.scrollIntoView({ behavior: "smooth" });
+    }, [M]);
+    let ei = r.useCallback(
             (e) => {
-                R(e), A(b.pn.CONFIRM);
+                w(e), l(f.pn.CONFIRM);
             },
-            [A, R],
+            [l, w],
         ),
-        ea = i.useRef(null);
-    if (Q === g.h.PURCHASING) return (0, r.jsx)(h.A, {});
-    let es = () => {
-        A(b.pn.ADD_PAYMENT_STEPS);
+        er = r.useRef(null);
+    if (V === h.h.PURCHASING) return (0, i.jsx)(j.A, {});
+    let el = () => {
+        l(f.pn.ADD_PAYMENT_STEPS);
     };
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(x.A, {
-                className: O.jD,
-            }),
-            (0, r.jsxs)(v.dZ, {
+            (0, i.jsx)(g.A, { className: C.jD }),
+            (0, i.jsxs)(A.dZ, {
                 children: [
-                    (0, r.jsx)(y.A, {}),
-                    ei &&
-                        (0, r.jsxs)("div", {
-                            className: O.Uq,
+                    (0, i.jsx)(S.A, {}),
+                    en &&
+                        (0, i.jsxs)("div", {
+                            className: C.Uq,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "eyebrow",
                                     color: "text-default",
-                                    children: P.intl.string(P.t.nf5LOU),
+                                    children: v.intl.string(v.t.nf5LOU),
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: "interactive-text-default",
-                                    children: P.intl.format(P.t.y4n0GS, {
-                                        applicationName: null == I ? void 0 : I.name,
-                                    }),
+                                    children: v.intl.format(v.t.y4n0GS, { applicationName: R?.name }),
                                 }),
                             ],
                         }),
-                    !ei &&
-                        (0, r.jsx)("div", {
-                            className: O.Vw,
-                            children: (0, r.jsx)(o.D0$, {
-                                label: P.intl.string(P.t["5qyruI"]),
-                                children: (0, r.jsxs)("div", {
-                                    className: O.YS,
+                    !en &&
+                        (0, i.jsx)("div", {
+                            className: C.Vw,
+                            children: (0, i.jsx)(o.D0$, {
+                                label: v.intl.string(v.t["5qyruI"]),
+                                children: (0, i.jsxs)("div", {
+                                    className: C.YS,
                                     children: [
-                                        (0, r.jsx)(o.Text, {
+                                        (0, i.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            children: P.intl.string(P.t.dBih7e),
+                                            children: v.intl.string(v.t.dBih7e),
                                         }),
-                                        (0, r.jsx)(o.Text, {
+                                        (0, i.jsx)(o.Text, {
                                             variant: "text-md/normal",
                                             lineClamp: 1,
-                                            children:
-                                                null != (n = null == et ? void 0 : et.name)
-                                                    ? n
-                                                    : P.intl.string(P.t.dtwqPR),
+                                            children: J?.name ?? v.intl.string(v.t.dtwqPR),
                                         }),
                                     ],
                                 }),
                             }),
                         }),
-                    null == D
-                        ? (0, r.jsx)(u.A, {
-                              selectedPlanId: H.id,
-                              planGroup: N,
-                              paymentSources: U,
-                              onPaymentSourceChange: (e) => q(null != e ? e.id : null),
-                              priceOptions: M,
-                              currencies: F,
-                              onCurrencyChange: (e) => W(e),
-                              handlePaymentSourceAdd: () => A(b.pn.ADD_PAYMENT_STEPS),
-                              setHasAcceptedTerms: $,
-                              legalTermsNodeRef: ea,
-                              hasLegalTermsFlash: K,
-                              trialFooterMessageOverride: E,
-                              reviewWarningMessage: T,
-                              metadata: ei ? void 0 : X,
-                              purchaseState: Q,
+                    null == I
+                        ? (0, i.jsx)(d.A, {
+                              selectedPlanId: G.id,
+                              planGroup: E,
+                              paymentSources: F,
+                              onPaymentSourceChange: (e) => Y(null != e ? e.id : null),
+                              priceOptions: U,
+                              currencies: B,
+                              onCurrencyChange: (e) => L(e),
+                              handlePaymentSourceAdd: () => l(f.pn.ADD_PAYMENT_STEPS),
+                              setHasAcceptedTerms: Q,
+                              legalTermsNodeRef: er,
+                              hasLegalTermsFlash: $,
+                              trialFooterMessageOverride: T,
+                              reviewWarningMessage: N,
+                              metadata: en ? void 0 : Z,
+                              purchaseState: V,
                               hideSubscriptionDetails: !0,
-                              handleClose: _,
+                              handleClose: k,
                           })
-                        : (0, r.jsx)(d.A, {
-                              premiumSubscription: D,
-                              paymentSources: U,
-                              priceOptions: M,
-                              onPaymentSourceChange: (e) => q(null != e ? e.id : null),
-                              onPaymentSourceAdd: es,
-                              planId: H.id,
-                              setHasAcceptedTerms: $,
-                              legalTermsNodeRef: ea,
-                              hasLegalTermsFlash: K,
+                        : (0, i.jsx)(u.A, {
+                              premiumSubscription: I,
+                              paymentSources: F,
+                              priceOptions: U,
+                              onPaymentSourceChange: (e) => Y(null != e ? e.id : null),
+                              onPaymentSourceAdd: el,
+                              planId: G.id,
+                              setHasAcceptedTerms: Q,
+                              legalTermsNodeRef: er,
+                              hasLegalTermsFlash: $,
                               onInvoiceError: (e) => {
-                                  er(e);
+                                  et(e);
                               },
-                              planGroup: N,
-                              currencies: F,
-                              onCurrencyChange: (e) => W(e),
-                              hasOpenInvoice: null != C,
-                              purchaseState: Q,
-                              handleClose: _,
+                              planGroup: E,
+                              currencies: B,
+                              onCurrencyChange: (e) => L(e),
+                              hasOpenInvoice: null != _,
+                              purchaseState: V,
+                              handleClose: k,
                           }),
                 ],
             }),
-            (0, r.jsx)(v.UX, {
-                children: (0, r.jsx)(j.A, {
-                    premiumSubscription: null != D ? D : null,
-                    setPurchaseState: V,
-                    onBack: () => null != S && A(S),
-                    onNext: el,
-                    onPurchaseError: (e) => Z(e),
-                    legalTermsNodeRef: ea,
-                    flashLegalTerms: () => J(!0),
-                    analyticsLocation: k,
-                    baseAnalyticsData: w,
-                    flowStartTime: B.startTime,
-                    planGroup: N,
-                    purchaseTokenAuthState: L,
-                    openInvoiceId: C,
-                    metadata: ei ? void 0 : X,
-                    backButtonEligible: l,
-                    invoiceError: en,
-                    disablePurchase: (null == X ? void 0 : X.guild_id) == null && !ei,
-                    onPaymentSourceAdd: es,
+            (0, i.jsx)(A.UX, {
+                children: (0, i.jsx)(b.A, {
+                    premiumSubscription: I ?? null,
+                    setPurchaseState: W,
+                    onBack: () => null != n && l(n),
+                    onNext: ei,
+                    onPurchaseError: (e) => q(e),
+                    legalTermsNodeRef: er,
+                    flashLegalTerms: () => z(!0),
+                    analyticsLocation: y,
+                    baseAnalyticsData: P,
+                    flowStartTime: D.startTime,
+                    planGroup: E,
+                    purchaseTokenAuthState: O,
+                    openInvoiceId: _,
+                    metadata: en ? void 0 : Z,
+                    backButtonEligible: t,
+                    invoiceError: ee,
+                    disablePurchase: Z?.guild_id == null && !en,
+                    onPaymentSourceAdd: el,
                 }),
             }),
         ],

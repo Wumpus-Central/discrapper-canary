@@ -1,28 +1,25 @@
+"use strict";
 function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-});
+Object.defineProperty(t, "__esModule", { value: !0 });
 var i = r(n(585458)),
     a = n(442696),
     s = n(340287),
     o = n(111806),
     l = r(n(165423)),
-    c = n(294814),
-    u = n(843455),
+    u = n(294814),
+    c = n(843455),
     d = r(n(678456)),
-    f = /^--/;
-
-function p(e, t) {
+    _ = /^--/;
+function f(e, t) {
     return null == t || "boolean" == typeof t || "" === t
         ? ""
-        : "number" != typeof t || 0 === t || f.test(e) || (m.hasOwnProperty(e) && m[e])
+        : "number" != typeof t || 0 === t || _.test(e) || (m.hasOwnProperty(e) && m[e])
           ? ("" + t).trim()
           : t + "px";
 }
-var _ = {};
-
+var p = {};
 function h(e, t) {
     if (!e.nodeType || !e.setAttribute) return !1;
     var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
@@ -31,21 +28,21 @@ function h(e, t) {
         s = r.children,
         o = r.scrollTop,
         l = r.scrollLeft,
-        c = i(r, ["style", "children", "scrollTop", "scrollLeft"]),
-        d = Object.values(c),
-        h = Object.keys(c).map(function (t) {
+        u = i(r, ["style", "children", "scrollTop", "scrollLeft"]),
+        d = Object.values(u),
+        h = Object.keys(u).map(function (t) {
             return n || e.hasAttribute(t)
                 ? t
-                : _[t] ||
-                      (_[t] = t.replace(/([A-Z])/g, function (e) {
+                : p[t] ||
+                      (p[t] = t.replace(/([A-Z])/g, function (e) {
                           return "-" + e.toLowerCase();
                       }));
         });
-    u.Globals.frameLoop.onWrite(function () {
+    c.Globals.frameLoop.onWrite(function () {
         for (var t in (void 0 !== s && (e.textContent = s), a))
             if (a.hasOwnProperty(t)) {
-                var n = p(t, a[t]);
-                "float" === t ? (t = "cssFloat") : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
+                var n = f(t, a[t]);
+                "float" === t ? (t = "cssFloat") : _.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
             }
         h.forEach(function (t, n) {
             e.setAttribute(t, d[n]);
@@ -109,22 +106,22 @@ m = Object.keys(m).reduce(function (e, t) {
         e
     );
 }, m);
-var b = /^(matrix|translate|scale|rotate|skew)/,
-    y = /^(translate)/,
-    O = /^(rotate|skew)/,
-    A = function (e, t) {
-        return u.is.num(e) && 0 !== e ? e + t : e;
+var A = /^(matrix|translate|scale|rotate|skew)/,
+    I = /^(translate)/,
+    T = /^(rotate|skew)/,
+    y = function (e, t) {
+        return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    v = function e(t, n) {
-        return u.is.arr(t)
+    S = function e(t, n) {
+        return c.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
               })
-            : u.is.num(t)
+            : c.is.num(t)
               ? t === n
               : parseFloat(t) === n;
     },
-    S = (function (e) {
+    v = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
@@ -140,23 +137,23 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                             "translate3d(" +
                                 e
                                     .map(function (e) {
-                                        return A(e, "px");
+                                        return y(e, "px");
                                     })
                                     .join(",") +
                                 ")",
-                            v(e, 0),
+                            S(e, 0),
                         ];
                     })),
-                u.each(s, function (e, t) {
+                c.each(s, function (e, t) {
                     if ("transform" === t)
                         o.push([e || ""]),
                             l.push(function (e) {
                                 return [e, "" === e];
                             });
-                    else if (b.test(t)) {
-                        if ((delete s[t], u.is.und(e))) return;
-                        var n = y.test(t) ? "px" : O.test(t) ? "deg" : "";
-                        o.push(u.toArray(e)),
+                    else if (A.test(t)) {
+                        if ((delete s[t], c.is.und(e))) return;
+                        var n = I.test(t) ? "px" : T.test(t) ? "deg" : "";
+                        o.push(c.toArray(e)),
                             l.push(
                                 "rotate3d" === t
                                     ? function (e) {
@@ -164,7 +161,7 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                                               r = e[1],
                                               i = e[2],
                                               a = e[3];
-                                          return ["rotate3d(" + t + "," + r + "," + i + "," + A(a, n) + ")", v(a, 0)];
+                                          return ["rotate3d(" + t + "," + r + "," + i + "," + y(a, n) + ")", S(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -172,23 +169,23 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                                                   "(" +
                                                   e
                                                       .map(function (e) {
-                                                          return A(e, n);
+                                                          return y(e, n);
                                                       })
                                                       .join(",") +
                                                   ")",
-                                              v(e, +!!t.startsWith("scale")),
+                                              S(e, +!!t.startsWith("scale")),
                                           ];
                                       },
                             );
                     }
                 }),
-                o.length && (s.transform = new I(o, l)),
+                o.length && (s.transform = new C(o, l)),
                 e.call(this, s) || this
             );
         }
         return d(t, e), t;
-    })(c.AnimatedObject),
-    I = (function (e) {
+    })(u.AnimatedObject),
+    C = (function (e) {
         function t(t, n) {
             var r;
             return (
@@ -210,9 +207,9 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                     t = "",
                     n = !0;
                 return (
-                    u.each(this.inputs, function (r, i) {
-                        var a = u.getFluidValue(r[0]),
-                            s = e.transforms[i](u.is.arr(a) ? a : r.map(u.getFluidValue)),
+                    c.each(this.inputs, function (r, i) {
+                        var a = c.getFluidValue(r[0]),
+                            s = e.transforms[i](c.is.arr(a) ? a : r.map(c.getFluidValue)),
                             o = s[0],
                             l = s[1];
                         (t += " " + o), (n = n && l);
@@ -223,9 +220,9 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
             (n.addChild = function (e) {
                 var t = this;
                 this._children.size ||
-                    u.each(this.inputs, function (e) {
-                        return u.each(e, function (e) {
-                            var n = u.getFluidConfig(e);
+                    c.each(this.inputs, function (e) {
+                        return c.each(e, function (e) {
+                            var n = c.getFluidConfig(e);
                             n && n.addChild(t);
                         });
                     }),
@@ -235,23 +232,23 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                 var t = this;
                 this._children.delete(e),
                     this._children.size ||
-                        u.each(this.inputs, function (e) {
-                            return u.each(e, function (e) {
-                                var n = u.getFluidConfig(e);
+                        c.each(this.inputs, function (e) {
+                            return c.each(e, function (e) {
+                                var n = c.getFluidConfig(e);
                                 n && n.removeChild(t);
                             });
                         });
             }),
             (n.onParentChange = function (e) {
                 "change" == e.type && (this._value = null),
-                    u.each(this._children, function (t) {
+                    c.each(this._children, function (t) {
                         t.onParentChange(e);
                     });
             }),
             t
         );
-    })(u.FluidValue),
-    T = [
+    })(c.FluidValue),
+    b = [
         "a",
         "abbr",
         "address",
@@ -391,10 +388,10 @@ a.Globals.assign({
     createStringInterpolator: o.createStringInterpolator,
     batchedUpdates: s.unstable_batchedUpdates,
 });
-var C = c.createHost(T, {
+var N = u.createHost(b, {
     applyAnimatedValues: h,
     createAnimatedStyle: function (e) {
-        return new S(e);
+        return new v(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
@@ -409,5 +406,5 @@ Object.keys(a).forEach(function (e) {
             },
         });
 }),
-    (t.a = C),
-    (t.animated = C);
+    (t.a = N),
+    (t.animated = N);

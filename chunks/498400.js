@@ -1,111 +1,91 @@
-n.d(t, {
-    A: () => G,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+n.d(t, { A: () => U });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     o = n(397927),
     c = n(73153),
     d = n(384904),
     u = n(73825),
     _ = n(974544),
-    p = n(107834),
-    m = n(793574),
+    m = n(107834),
+    A = n(793574),
     g = n(688810),
-    A = n(86379),
-    f = n(160946),
-    b = n(459793),
-    h = n(726649),
-    E = n(611924),
-    O = n(351906),
-    C = n(287809),
-    x = n(295405),
-    S = n(166403),
-    T = n(954571),
-    I = n(474090),
-    y = n(560138),
-    N = n(694080),
-    j = n(170887),
-    v = n(553081),
+    E = n(86379),
+    h = n(160946),
+    p = n(459793),
+    C = n(726649),
+    x = n(611924),
+    T = n(351906),
+    I = n(287809),
+    S = n(295405),
+    f = n(166403),
+    N = n(954571),
+    b = n(474090),
+    R = n(560138),
+    v = n(694080),
+    O = n(170887),
+    j = n(553081),
     P = n(422936),
-    R = n(234419),
-    D = n(558533),
-    L = n(788868),
-    w = n(652215),
-    M = n(615434);
-let G = function (e) {
-    let { entrypoint: t = L.Mf.UserSettings } = e;
-    (0, E.P)(h.b);
-    let n = (0, A.H)(),
-        { sourceAnalyticsLocations: l, analyticsLocations: G } = (0, g.Ay)(m.A.PREMIUM_MARKETING),
-        U = (0, a.bG)([S.A], () => S.A.hasFetchedSubscriptions()),
-        k = (0, a.bG)([x.A], () => x.A.hasFetchedPaymentSources),
-        B = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
-        H = null == B ? void 0 : B.id,
-        V = (0, R.V)(),
+    y = n(234419),
+    L = n(558533),
+    D = n(788868),
+    M = n(652215),
+    G = n(615434);
+let U = function (e) {
+    let { entrypoint: t = D.Mf.UserSettings } = e;
+    (0, x.P)(C.b);
+    let n = (0, E.H)(),
+        { sourceAnalyticsLocations: r, analyticsLocations: U } = (0, g.Ay)(A.A.PREMIUM_MARKETING),
+        k = (0, l.bG)([f.A], () => f.A.hasFetchedSubscriptions()),
+        B = (0, l.bG)([S.A], () => S.A.hasFetchedPaymentSources),
+        w = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
+        H = w?.id,
+        V = (0, y.V)(),
         F = (0, P.O)(),
-        Y = (0, f.Y)(L.T7),
-        [W, K] = i.useState(!0),
-        z = i.useRef(0),
-        Z = (0, I.YE)(B, L.PremiumTypes.TIER_2),
-        X = (0, j.A)({
-            location: "PremiumHomePage",
-        }),
-        q = (0, a.bG)([y.A], () => y.A.hasFetched);
-    i.useEffect(() => {
+        Y = (0, h.Y)(D.T7),
+        [W, z] = s.useState(!0),
+        K = s.useRef(0),
+        Z = (0, b.YE)(w, D.PremiumTypes.TIER_2),
+        X = (0, O.A)({ location: "PremiumHomePage" }),
+        q = (0, l.bG)([R.A], () => R.A.hasFetched);
+    s.useEffect(() => {
         q || d.xG();
     }, [q]),
-        i.useEffect(() => {
+        s.useEffect(() => {
             c.h.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.hP(), d.$o(), (0, u.zS)(null, null, w.tF5.DISCOVERY)]),
-                    (z.current = Date.now() - e),
-                    K(!1);
+                await Promise.all([d.hP(), d.$o(), (0, u.zS)(null, null, M.tF5.DISCOVERY)]),
+                    (K.current = Date.now() - e),
+                    z(!1);
             });
         }, []),
-        i.useEffect(() => {
+        s.useEffect(() => {
             W ||
-                T.default.track(w.HAw.PREMIUM_MARKETING_PAGE_VIEWED, {
-                    location_stack: l,
-                    load_duration_ms: z.current,
+                N.default.track(M.HAw.PREMIUM_MARKETING_PAGE_VIEWED, {
+                    location_stack: r,
+                    load_duration_ms: K.current,
                 });
-        }, [l, W]),
-        i.useEffect(() => {
-            n && (null != V || null != F) && (0, N.u1)(V, F);
+        }, [r, W]),
+        s.useEffect(() => {
+            n && (null != V || null != F) && (0, v.u1)(V, F);
         }, [n, V, F]);
-    let J = (0, a.bG)([O.A], () => O.A.enabled),
-        Q = t === L.Mf.ApplicationStoreHome,
+    let J = (0, l.bG)([T.A], () => T.A.enabled),
+        Q = t === D.Mf.ApplicationStoreHome,
         $ = J
-            ? (0, r.jsx)(_.A, {})
+            ? (0, i.jsx)(_.A, {})
             : n
-              ? (0, r.jsx)(b.uK, {})
+              ? (0, i.jsx)(p.uK, {})
               : Q && Z
-                ? (0, r.jsx)(g.f5, {
-                      value: G,
-                      children: (0, r.jsx)(v.A, {
-                          userId: H,
-                      }),
-                  })
-                : U && Y && k
+                ? (0, i.jsx)(g.f5, { value: U, children: (0, i.jsx)(j.A, { userId: H }) })
+                : k && Y && B
                   ? null
-                  : (0, r.jsx)("div", {
-                        className: s()(M.kL, M.Lq),
-                        children: (0, r.jsx)(o.y$y, {}),
-                    });
+                  : (0, i.jsx)("div", { className: a()(G.kL, G.Lq), children: (0, i.jsx)(o.y$y, {}) });
     return null != $
-        ? (0, r.jsxs)(r.Fragment, {
-              children: [Q && (0, r.jsx)(p.A, {}), $],
-          })
-        : (0, r.jsxs)(g.f5, {
-              value: G,
-              children: [
-                  Q && !X && (0, r.jsx)(p.A, {}),
-                  (0, r.jsx)(D.A, {
-                      entrypoint: t,
-                  }),
-              ],
+        ? (0, i.jsxs)(i.Fragment, { children: [Q && (0, i.jsx)(m.A, {}), $] })
+        : (0, i.jsxs)(g.f5, {
+              value: U,
+              children: [Q && !X && (0, i.jsx)(m.A, {}), (0, i.jsx)(L.A, { entrypoint: t })],
           });
 };

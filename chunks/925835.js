@@ -15,7 +15,4 @@ IntlMessageFormat.__addLocaleData({
                 : "other";
     },
 }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "ro-MD",
-        parentLocale: "ro",
-    });
+    IntlMessageFormat.__addLocaleData({ locale: "ro-MD", parentLocale: "ro" });

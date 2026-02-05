@@ -1,3 +1,1 @@
-e.exports = {
-    Q: "sectionsContainer_def11f",
-};
+e.exports = { Q: "sectionsContainer_def11f" };

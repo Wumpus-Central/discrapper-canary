@@ -1,26 +1,14 @@
-t.d(l, {
-    A: () => a,
-});
-var n = t(913453),
-    i = t(186272),
-    r = t(518477),
-    s = t(985018);
-
-function a(e) {
-    let { mutualGuilds: l } = (0, n.A)(e),
-        t = null == l ? void 0 : l.length;
+n.d(t, { A: () => r });
+var i = n(913453),
+    s = n(186272),
+    l = n(518477),
+    a = n(985018);
+function r(e) {
+    let { mutualGuilds: t } = (0, i.A)(e),
+        n = t?.length;
     return [
-        {
-            section: r.RP.BOT_INFO,
-            text: s.intl.string(s.t.jGoPJT),
-        },
-        {
-            section: r.RP.MUTUAL_GUILDS,
-            text: (0, i.A)(t),
-        },
-        {
-            section: r.RP.BOT_DATA_ACCESS,
-            text: s.intl.string(s.t.WstFb0),
-        },
+        { section: l.RP.BOT_INFO, text: a.intl.string(a.t.jGoPJT) },
+        { section: l.RP.MUTUAL_GUILDS, text: (0, s.A)(n) },
+        { section: l.RP.BOT_DATA_ACCESS, text: a.intl.string(a.t.WstFb0) },
     ];
 }

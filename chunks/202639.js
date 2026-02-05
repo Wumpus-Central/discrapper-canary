@@ -1,162 +1,109 @@
-n.d(t, {
-    d: () => E,
-});
+"use strict";
+n.d(t, { d: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    o = n(92674),
-    s = n(397927),
+    s = n(92674),
+    o = n(397927),
     l = n(565645),
-    c = n(736653),
-    u = n(766708),
+    u = n(736653),
+    c = n(766708),
     d = n(71393),
-    f = n(857586),
-    p = n(788868),
-    _ = n(985018),
+    _ = n(857586),
+    f = n(788868),
+    p = n(985018),
     h = n(732591);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function E(e) {
+function m(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
-            button: c,
+            button: u,
             buttonAnalyticsObject: m,
             className: E,
-            onSubscribeModalClose: b,
-            position: O = "floating",
-            useGradientBg: v = !1,
-            hoveredNitroLockedSound: A,
+            onSubscribeModalClose: A,
+            position: I = "floating",
+            useGradientBg: T = !1,
+            hoveredNitroLockedSound: y,
         } = e,
-        I = u.r.useConfig({
-            location: "PremiumFloatingPickerUpsell",
-        }).enabled,
-        S = (0, s.zhh)({
+        S = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
+        v = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
-            config: {
-                tension: 120,
-                friction: 14,
-            },
+            config: { tension: 120, friction: 14 },
         }),
-        T = I && null != A,
-        C = (null == A ? void 0 : A.emojiId) != null || (null == A ? void 0 : A.emojiName) != null,
+        C = S && null != y,
+        b = y?.emojiId != null || y?.emojiName != null,
         N = n;
-    if (T) {
-        var w;
-        let e = d.A.getGuild(A.guildId);
-        N = _.intl.format(_.t.eku049, {
-            serverName: null != (w = null == e ? void 0 : e.name) ? w : _.intl.string(_.t.DmIUGK),
-        });
+    if (C) {
+        let e = d.A.getGuild(y.guildId);
+        N = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
     }
-    return (0, r.jsx)(o.animated.div, {
-        style: g({}, S),
+    return (0, r.jsx)(s.animated.div, {
+        style: { ...v },
         className: a()(
             h.Zj,
-            v && h.Me,
-            {
-                [h.tO]: "floating" === O,
-                [h.Kx]: "inline" === O,
-                [h.ik]: "bottom" === O,
-            },
+            T && h.Me,
+            { [h.tO]: "floating" === I, [h.Kx]: "inline" === I, [h.ik]: "bottom" === I },
             E,
         ),
-        children: (0, r.jsxs)(y, {
-            hasPreviewSound: T,
-            useGradientBg: v,
+        children: (0, r.jsxs)(g, {
+            hasPreviewSound: C,
+            useGradientBg: T,
             children: [
-                T &&
+                C &&
                     (0, r.jsxs)("div", {
                         className: h.Ed,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: h.vg,
                                 children: [
-                                    C &&
-                                        (0, r.jsx)(l.A, {
-                                            emojiId: A.emojiId,
-                                            emojiName: A.emojiName,
-                                        }),
-                                    (0, r.jsx)(s.Text, {
+                                    b && (0, r.jsx)(l.A, { emojiId: y.emojiId, emojiName: y.emojiName }),
+                                    (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: A.name,
+                                        children: y.name,
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 className: h.Fr,
-                                children: null != N ? N : n,
+                                children: N ?? n,
                             }),
                         ],
                     }),
-                !T &&
-                    (0, r.jsx)(s.Text, {
-                        variant: null != i ? i : "text-sm/medium",
+                !C &&
+                    (0, r.jsx)(o.Text, {
+                        variant: i ?? "text-sm/medium",
                         color: "text-strong",
                         className: h.tD,
                         children: n,
                     }),
-                "string" == typeof c
-                    ? (0, r.jsx)(f.A, {
+                "string" == typeof u
+                    ? (0, r.jsx)(_.A, {
                           size: "sm",
-                          subscriptionTier: p.pe.TIER_2,
-                          buttonTextOverride: c,
+                          subscriptionTier: f.pe.TIER_2,
+                          buttonTextOverride: u,
                           premiumModalAnalyticsLocation: m,
                           tabIndex: t ? 0 : -1,
-                          onSubscribeModalClose: b,
+                          onSubscribeModalClose: A,
                       })
-                    : c,
+                    : u,
             ],
         }),
     });
 }
-
-function y(e) {
+function g(e) {
     let { hasPreviewSound: t, useGradientBg: n, children: i } = e,
-        o = (0, c.Ay)();
+        s = (0, u.Ay)();
     return n
-        ? (0, r.jsx)(s.hLv, {
+        ? (0, r.jsx)(o.hLv, {
               color: "nitro-pink",
               offsetBottom: -3,
-              className: a()(h.nC, {
-                  [h.Ay]: (0, s.Mwr)(o),
-                  [h.u8]: t,
-              }),
+              className: a()(h.nC, { [h.Ay]: (0, o.Mwr)(s), [h.u8]: t }),
               children: i,
           })
         : i;

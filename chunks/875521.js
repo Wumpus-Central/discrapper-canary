@@ -1,4 +1,3 @@
-n.d(t, {
-    g: () => r,
-});
+"use strict";
+n.d(t, { g: () => r });
 var r = [];

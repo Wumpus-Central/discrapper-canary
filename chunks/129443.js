@@ -1,17 +1,15 @@
-n.d(t, {
-    A: () => o,
-});
+n.d(t, { A: () => d });
 var l = n(478437),
-    r = n(873298),
-    a = n(253932),
-    i = n(17372),
+    a = n(873298),
+    i = n(253932),
+    r = n(17372),
     s = n(985018);
-let o = {
+let d = {
     getTitle: () => s.intl.string(s.t.vJOqMB),
     getDisabledTitle: () => s.intl.string(s.t["B5ZvY+"]),
     getDescription: () => s.intl.string(s.t["43UEUh"]),
-    eligibleReportSubtypes: [i.TS.SUB_SPAM],
+    eligibleReportSubtypes: [r.TS.SUB_SPAM],
     eligibleChannelTypes: [l.r.DM, l.r.GROUP_DM],
-    onApply: () => a.he.updateSetting(r.he.NON_FRIENDS),
-    predicate: () => a.he.getSetting() === r.he.DISABLED,
+    onApply: () => i.he.updateSetting(a.he.NON_FRIENDS),
+    predicate: () => i.he.getSetting() === a.he.DISABLED,
 };

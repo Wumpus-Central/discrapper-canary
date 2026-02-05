@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fX: "userTooltip__6b453",
     my: "avatar__6b453",

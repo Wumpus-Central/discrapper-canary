@@ -1,23 +1,22 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => o });
 var l = n(627968);
 n(64700);
 var i = n(397927),
-    r = n(268761),
-    s = n(985018),
-    a = n(338497);
+    s = n(268761),
+    a = n(985018),
+    r = n(338497);
 let o = (e) => {
-    let { autoArchiveDuration: t, onChange: n, isDisabled: o, helperText: c } = e,
-        d = (0, r.Gk)();
+    let { autoArchiveDuration: t, onChange: n, isDisabled: o, helperText: d } = e,
+        c = (0, s.Gk)();
     return (0, l.jsx)("div", {
-        className: a.gy,
+        className: r.gy,
         children: (0, l.jsx)(i.ZiE, {
             selectionMode: "single",
-            label: s.intl.string(s.t.FGjMZS),
-            helperText: c,
+            label: a.intl.string(a.t.FGjMZS),
+            helperText: d,
             disabled: o,
-            options: d,
+            options: c,
             value: t,
             onSelectionChange: n,
         }),

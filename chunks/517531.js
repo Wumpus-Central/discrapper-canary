@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(258893);
 n(
@@ -9,7 +10,5 @@ n(
             return 0 === t.size;
         }),
     },
-    {
-        difference: o,
-    },
+    { difference: o },
 );

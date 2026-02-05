@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Tz: "stickerPreviews_a4cf0b",
     dp: "stickerPreviewContainer_a4cf0b",

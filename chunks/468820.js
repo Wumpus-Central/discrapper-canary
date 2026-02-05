@@ -1,10 +1,8 @@
-n.d(e, {
-    A: () => _,
-});
+n.d(e, { A: () => _ });
 var i = n(627968),
     a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    r = n(503698),
+    l = n.n(r),
     s = n(397927),
     d = n(235986),
     c = n(450565),
@@ -12,22 +10,15 @@ var i = n(627968),
     m = n(570465),
     p = n(985018),
     C = n(651614);
-
 function g(t) {
-    let { guildTemplate: e, onClick: n, autoFocus: l } = t,
-        r = a.useCallback(() => {
+    let { guildTemplate: e, onClick: n, autoFocus: r } = t,
+        l = a.useCallback(() => {
             n(e);
         }, [e, n]);
-    return (0, i.jsx)(o.A, {
-        icon: c.a[e.id],
-        message: e.label,
-        onClick: r,
-        autoFocus: l,
-    });
+    return (0, i.jsx)(o.A, { icon: c.a[e.id], message: e.label, onClick: l, autoFocus: r });
 }
-
 function _(t) {
-    let { className: e, isNewUser: n, onClose: a, onChooseTemplate: l, onJoin: c } = t,
+    let { className: e, isNewUser: n, onClose: a, onChooseTemplate: r, onJoin: c } = t,
         o = (0, m.p)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -48,54 +39,27 @@ function _(t) {
                         variant: "text-md/normal",
                         children: p.intl.string(p.t["wti/H4"]),
                     }),
-                    null != a &&
-                        (0, i.jsx)(s.s_y, {
-                            "data-migration-pending": !0,
-                            className: C.b,
-                            onClick: a,
-                        }),
+                    null != a && (0, i.jsx)(s.s_y, { "data-migration-pending": !0, className: C.b, onClick: a }),
                 ],
             }),
             (0, i.jsxs)(s.$mQ, {
                 "data-migration-pending": !0,
-                className: r()(C.KA, e),
+                className: l()(C.KA, e),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.CREATE],
-                        onClick: l,
-                        autoFocus: !0,
-                    }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.CREATE], onClick: r, autoFocus: !0 }),
                     (0, i.jsx)(s.Text, {
                         className: C.l8,
                         color: "text-default",
                         variant: "text-xs/bold",
                         children: p.intl.string(p.t.JGDkfg),
                     }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.GAMING],
-                        onClick: l,
-                    }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.FRIENDS],
-                        onClick: l,
-                    }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.STUDY],
-                        onClick: l,
-                    }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.SCHOOL_CLUB],
-                        onClick: l,
-                    }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.LOCAL_COMMUNITY],
-                        onClick: l,
-                    }),
-                    (0, i.jsx)(g, {
-                        guildTemplate: o[m.v.CREATORS],
-                        onClick: l,
-                    }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.GAMING], onClick: r }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.FRIENDS], onClick: r }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.STUDY], onClick: r }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.SCHOOL_CLUB], onClick: r }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.LOCAL_COMMUNITY], onClick: r }),
+                    (0, i.jsx)(g, { guildTemplate: o[m.v.CREATORS], onClick: r }),
                 ],
             }),
             null != c &&

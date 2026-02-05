@@ -1,206 +1,130 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048),
-    n(321073);
-var r = n(627968),
+n.d(t, { A: () => E }), n(321073);
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(397927),
-    s = n(475743),
+    r = n(475743),
     o = n(624458),
-    c = n(408213),
-    u = n(212455),
-    d = n(967198),
-    f = n(636449),
-    p = n(263715),
-    h = n(928568),
-    b = n(842452),
-    g = n(357064),
-    m = n(985018),
-    A = n(971090);
-
-function y(e) {
+    d = n(408213),
+    c = n(212455),
+    u = n(967198),
+    h = n(636449),
+    A = n(263715),
+    g = n(928568),
+    m = n(842452),
+    p = n(357064),
+    _ = n(985018),
+    x = n(971090);
+function f(e) {
     let { onActivate: t, children: n } = e,
         o = l.useRef(null),
-        d = (0, i.bG)([u.A], () => u.A.hasJoinRequestCoackmark()),
-        f = l.useCallback(() => {
-            c.Ay.clearCoachmark();
+        u = (0, s.bG)([c.A], () => c.A.hasJoinRequestCoackmark()),
+        h = l.useCallback(() => {
+            d.Ay.clearCoachmark();
         }, []),
-        p = (0, s.A)(d),
-        h = l.useRef(null);
+        A = (0, r.A)(u),
+        g = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (d && d !== p) {
-                var e, n, r, l, i;
-                t(),
-                    null == (i = h.current) ||
-                        null == (l = i.ref) ||
-                        null == (r = l.current) ||
-                        null == (n = r.layerRef) ||
-                        null == (e = n.current) ||
-                        e.updatePosition();
-            }
-        }, [h, d, p, t]),
-        (0, r.jsxs)("div", {
-            className: A.kL,
+            u && u !== A && (t(), g.current?.ref?.current?.layerRef?.current?.updatePosition());
+        }, [g, u, A, t]),
+        (0, i.jsxs)("div", {
+            className: x.kL,
             children: [
-                (0, r.jsx)(a.YNO, {
-                    ref: h,
+                (0, i.jsx)(a.YNO, {
+                    ref: g,
                     targetElementRef: o,
-                    shouldShow: d,
+                    shouldShow: u,
                     renderPopout: () =>
-                        (0, r.jsxs)("div", {
-                            className: A.jC,
+                        (0, i.jsxs)("div", {
+                            className: x.jC,
                             children: [
-                                (0, r.jsxs)("div", {
-                                    className: A.Bm,
+                                (0, i.jsxs)("div", {
+                                    className: x.Bm,
                                     children: [
-                                        (0, r.jsxs)("div", {
-                                            className: A.q3,
+                                        (0, i.jsxs)("div", {
+                                            className: x.q3,
                                             children: [
-                                                (0, r.jsx)(a.Heading, {
+                                                (0, i.jsx)(a.Heading, {
                                                     variant: "heading-md/medium",
-                                                    children: m.intl.string(m.t["0YV0YE"]),
+                                                    children: _.intl.string(_.t["0YV0YE"]),
                                                 }),
-                                                (0, r.jsx)(a.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: m.intl.string(m.t["0UQVDL"]),
+                                                    children: _.intl.string(_.t["0UQVDL"]),
                                                 }),
                                             ],
                                         }),
-                                        (0, r.jsx)(a.Button, {
+                                        (0, i.jsx)(a.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: m.intl.string(m.t["4r+amb"]),
+                                            text: _.intl.string(_.t["4r+amb"]),
                                             fullWidth: !0,
-                                            onClick: f,
+                                            onClick: h,
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", {
-                                    className: A.ed,
-                                }),
+                                (0, i.jsx)("div", { className: x.ed }),
                             ],
                         }),
                     position: "right",
                     animationPosition: "right",
                     align: "top",
                     spacing: 16,
-                    children: (e) => {
-                        var t, n;
-                        return (0, r.jsx)(
-                            "div",
-                            ((t = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, e)),
-                            (n = n =
-                                {
-                                    className: A.Ne,
-                                    ref: o,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                  }),
-                            t),
-                        );
-                    },
+                    children: (e) => (0, i.jsx)("div", { ...e, className: x.Ne, ref: o }),
                 }),
                 n,
             ],
         })
     );
 }
-
-function O(e) {
+function E(e) {
     let { onActivate: t } = e,
-        [n, O] = l.useState(!1),
-        j = (0, i.bG)([d.A], () => d.A.getGuildId()),
-        v = (0, i.bG)([u.A], () => u.A.hasFetchedRequestToJoinGuilds),
-        x = (0, h.A)(),
-        E = (0, s.A)(j),
-        _ = l.useMemo(() => {
-            let e = (0, p.xW)({
-                folderId: f.U.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: m.intl.string(m.t["scsU+l"]),
+        [n, E] = l.useState(!1),
+        C = (0, s.bG)([u.A], () => u.A.getGuildId()),
+        I = (0, s.bG)([c.A], () => c.A.hasFetchedRequestToJoinGuilds),
+        S = (0, g.A)(),
+        b = (0, r.A)(C),
+        N = l.useMemo(() => {
+            let e = (0, A.xW)({
+                folderId: h.U.PENDING_JOIN_REQUESTS_FOLDER,
+                folderName: _.intl.string(_.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
-            for (let t of x) e.children.push((0, p.EL)(t, e.id));
+            for (let t of S) e.children.push((0, A.EL)(t, e.id));
             return e;
-        }, [x, n]);
+        }, [S, n]);
     l.useEffect(() => {
-        n && !v && o.A.fetchRequestToJoinGuilds();
-    }, [n, v]);
-    let C = null != j && x.includes(j);
+        n && !I && o.A.fetchRequestToJoinGuilds();
+    }, [n, I]);
+    let T = null != C && S.includes(C);
     return (l.useEffect(() => {
-        !n && C && E !== j && O(!0);
-    }, [n, C, E, j]),
-    0 === x.length)
+        !n && T && b !== C && E(!0);
+    }, [n, T, b, C]),
+    0 === S.length)
         ? null
-        : (0, r.jsx)(y, {
+        : (0, i.jsx)(f, {
               onActivate: t,
-              children: (0, r.jsx)(b.A, {
-                  folderNode: _,
+              children: (0, i.jsx)(m.A, {
+                  folderNode: N,
                   expanded: n,
-                  selected: C,
+                  selected: T,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      O(!n), c.Ay.clearCoachmark();
+                      E(!n), d.Ay.clearCoachmark();
                   },
                   folderButtonSize: "icon",
-                  folderButtonContent: (0, r.jsx)("div", {
-                      className: A.rH,
-                      children: (0, r.jsx)(a.Qfk, {
-                          size: "sm",
-                          color: "currentColor",
-                      }),
+                  folderButtonContent: (0, i.jsx)("div", {
+                      className: x.rH,
+                      children: (0, i.jsx)(a.Qfk, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
-                      return e.type !== p.PJ.GUILD
+                      return e.type !== A.PJ.GUILD
                           ? null
-                          : (0, r.jsx)(
-                                g.A,
-                                {
-                                    guildNode: e,
-                                    "aria-setsize": n,
-                                    "aria-posinset": t,
-                                },
-                                e.id,
-                            );
+                          : (0, i.jsx)(p.A, { guildNode: e, "aria-setsize": n, "aria-posinset": t }, e.id);
                   },
               }),
           });

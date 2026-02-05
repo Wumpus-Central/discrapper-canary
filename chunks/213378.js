@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_ef0711",
     DO: "powerupsContainer_ef0711",

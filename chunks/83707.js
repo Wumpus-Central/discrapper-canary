@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 class r {
     refine(e, t) {
         if (t.length < 2) return t;

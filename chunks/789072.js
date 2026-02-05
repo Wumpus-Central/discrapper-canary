@@ -1,8 +1,9 @@
-var t = "u" > typeof navigator && navigator.userAgent.indexOf("AppleWebKit") > -1;
-e.exports = function (e) {
-    return (e = e || document).scrollingElement
-        ? e.scrollingElement
-        : t || "CSS1Compat" !== e.compatMode
-          ? e.body
-          : e.documentElement;
+"use strict";
+var e = "u" > typeof navigator && navigator.userAgent.indexOf("AppleWebKit") > -1;
+t.exports = function (t) {
+    return (t = t || document).scrollingElement
+        ? t.scrollingElement
+        : e || "CSS1Compat" !== t.compatMode
+          ? t.body
+          : t.documentElement;
 };

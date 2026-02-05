@@ -1,88 +1,38 @@
-n.d(t, {
-    p: () => d,
-});
-var r = n(627968);
+n.d(t, { p: () => u });
+var i = n(627968);
 n(64700);
-var i = n(342494),
-    l = n(397927),
-    a = n(88001),
+var r = n(342494),
+    a = n(397927),
+    l = n(88001),
     s = n(49999),
     o = n(519412),
-    c = n(985018),
-    u = n(438705);
-let d = (e) => {
-    let { targetElementRef: t, dismissPopover: d, children: p } = e,
-        f = (0, r.jsx)(i.AM, {
+    d = n(985018),
+    c = n(438705);
+let u = (e) => {
+    let { targetElementRef: t, dismissPopover: u, children: A } = e,
+        h = (0, i.jsx)(r.AM, {
             targetElementRef: t,
-            title: c.intl.format(o.default["c+NBSl"], {
-                premiumGroupProductName: (0, a.DP)(),
-            }),
-            body: c.intl.format(o.default.MuUV5u, {
-                premiumGroupProductName: (0, a.DP)(),
-                totalSeats: a.aw,
-            }),
-            graphic: {
-                type: "image",
-                src: u,
-            },
-            badge: {
-                type: "beta",
-                variant: "expressive",
-            },
+            title: d.intl.format(o.default["c+NBSl"], { premiumGroupProductName: (0, l.DP)() }),
+            body: d.intl.format(o.default.MuUV5u, { premiumGroupProductName: (0, l.DP)(), totalSeats: l.aw }),
+            graphic: { type: "image", src: c },
+            badge: { type: "beta", variant: "expressive" },
             size: "md",
             align: "top",
             position: "right",
-            caretConfig: {
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             actions: [
                 {
-                    text: c.intl.string(o.default["IO+nlU"]),
+                    text: d.intl.string(o.default["IO+nlU"]),
                     onClick: () => {
-                        d(s.i.TAKE_ACTION),
-                            (0, l.mMO)(async () => {
+                        u(s.i.TAKE_ACTION),
+                            (0, a.mMO)(async () => {
                                 let { default: e } = await n.e("91976").then(n.bind(n, 526710));
-                                return (t) =>
-                                    (0, r.jsx)(
-                                        e,
-                                        (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                    r = Object.keys(n);
-                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                    (r = r.concat(
-                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        }),
-                                                    )),
-                                                    r.forEach(function (t) {
-                                                        var r;
-                                                        (r = n[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: r,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0,
-                                                                  })
-                                                                : (e[t] = r);
-                                                    });
-                                            }
-                                            return e;
-                                        })({}, t),
-                                    );
+                                return (t) => (0, i.jsx)(e, { ...t });
                             });
                     },
                 },
             ],
-            onRequestClose: () => d(s.i.USER_DISMISS),
+            onRequestClose: () => u(s.i.USER_DISMISS),
         });
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)("div", {
-                children: p,
-            }),
-            f,
-        ],
-    });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: A }), h] });
 };

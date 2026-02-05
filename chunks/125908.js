@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card__20585",
     GC: "cardBackgroundImage__20585",

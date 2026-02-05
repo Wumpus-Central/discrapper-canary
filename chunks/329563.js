@@ -1,3 +1,4 @@
+"use strict";
 var r = n(626584),
     i = n(279234);
 let a = new r.A("libdiscore");

@@ -1,24 +1,14 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(729426),
     i = n(321034),
     a = n(687658);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o {
+class s {
+    cpuHistogram = new a.d();
+    memoryHistogram = new a.d();
+    startCPU = i.A.getCumulativeCPUUsage();
+    lastCPU = this.startCPU;
+    lastBattery = null;
     getStats() {
         let e = this.cpuHistogram.getReport(),
             t = this.memoryHistogram.getReport(),
@@ -65,9 +55,7 @@ class o {
     }
     async getCurrentBattery() {
         try {
-            let { batteryLevel: e } = await (0, r.S9)({
-                fallback: !1,
-            });
+            let { batteryLevel: e } = await (0, r.S9)({ fallback: !1 });
             return e;
         } catch (e) {
             return null;
@@ -79,22 +67,11 @@ class o {
     async getBatteryLevelStats() {
         let e = await this.getCurrentBattery();
         return null == this.lastBattery || null == e
-            ? {
-                  startBattery: this.lastBattery,
-                  currentBattery: e,
-                  batteryUsageRounded: null,
-              }
+            ? { startBattery: this.lastBattery, currentBattery: e, batteryUsageRounded: null }
             : {
                   startBattery: this.lastBattery,
                   currentBattery: e,
                   batteryUsageRounded: Math.round((e - this.lastBattery) * 1e3) / 1e3,
               };
-    }
-    constructor() {
-        s(this, "cpuHistogram", new a.d()),
-            s(this, "memoryHistogram", new a.d()),
-            s(this, "startCPU", i.A.getCumulativeCPUUsage()),
-            s(this, "lastCPU", this.startCPU),
-            s(this, "lastBattery", null);
     }
 }

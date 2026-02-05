@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(205662),
     a = r(655972),
@@ -18,24 +17,8 @@ var n = r(64700),
                 },
             },
         });
-        return n.createElement("div", {
-            style: t.picker,
-        });
+        return n.createElement("div", { style: t.picker });
     };
-(l.propTypes = {
-    hsl: i().shape({
-        h: i().number,
-        s: i().number,
-        l: i().number,
-        a: i().number,
-    }),
-}),
-    (l.defaultProps = {
-        hsl: {
-            a: 1,
-            h: 249.94,
-            l: 0.2,
-            s: 0.5,
-        },
-    });
+(l.propTypes = { hsl: i().shape({ h: i().number, s: i().number, l: i().number, a: i().number }) }),
+    (l.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
 let s = l;

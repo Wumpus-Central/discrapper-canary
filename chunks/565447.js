@@ -1,135 +1,105 @@
-n.d(t, {
-    A: () => v,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(827734),
+var s = n(503698),
+    l = n.n(s),
+    r = n(827734),
     a = n(397927),
-    c = n(565645),
-    o = n(975807),
-    d = n(263063),
+    o = n(565645),
+    d = n(975807),
+    c = n(263063),
     u = n(860689),
-    f = n(452499),
+    m = n(452499),
     g = n(477470),
-    b = n(35275),
-    m = n(985018),
-    p = n(518863);
-
-function x(e) {
+    x = n(35275),
+    h = n(985018),
+    _ = n(518863);
+function A(e) {
     let { subscribers: t } = e;
-    return (0, r.jsxs)("div", {
-        className: p.D$,
+    return (0, i.jsxs)("div", {
+        className: _.D$,
         children: [
-            (0, r.jsx)("div", {
-                className: p.DM,
-                children: (0, r.jsx)(a.Text, {
-                    variant: "text-md/normal",
-                    color: "always-white",
-                    children: t,
-                }),
+            (0, i.jsx)("div", {
+                className: _.DM,
+                children: (0, i.jsx)(a.Text, { variant: "text-md/normal", color: "always-white", children: t }),
             }),
-            (0, r.jsxs)("div", {
-                className: p.Dn,
+            (0, i.jsxs)("div", {
+                className: _.Dn,
                 children: [
-                    (0, r.jsx)(b.A, {
-                        color: s.A.colors.WHITE.css,
-                    }),
-                    (0, r.jsx)(a.Text, {
+                    (0, i.jsx)(x.A, { color: r.A.colors.WHITE.css }),
+                    (0, i.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "always-white",
-                        children: m.intl.string(m.t["3NNXPW"]),
+                        children: h.intl.string(h.t["3NNXPW"]),
                     }),
                 ],
             }),
         ],
     });
 }
-
-function h(e) {
-    let { guildName: t, guildIcon: n, guildAvatarUrl: i, subscriberCount: l } = e,
-        s = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({
-            name: t,
-            icon: n,
-        });
-    return (0, r.jsxs)("div", {
-        className: p.hz,
+function p(e) {
+    let { guildName: t, guildIcon: n, guildAvatarUrl: s, subscriberCount: l } = e,
+        r = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t, icon: n });
+    return (0, i.jsxs)("div", {
+        className: _.hz,
         children: [
-            (0, r.jsx)(d.A, {
-                className: p.al,
-                iconSrc: i,
-                guild: s,
-                size: d.A.Sizes.LARGE,
-            }),
-            (0, r.jsxs)("div", {
-                className: p.PY,
+            (0, i.jsx)(c.A, { className: _.al, iconSrc: s, guild: r, size: c.A.Sizes.LARGE }),
+            (0, i.jsxs)("div", {
+                className: _.PY,
                 children: [
-                    (0, r.jsx)(a.Heading, {
-                        variant: "heading-lg/semibold",
-                        color: "text-strong",
-                        children: t,
-                    }),
-                    null != l &&
-                        (0, r.jsx)(x, {
-                            subscribers: l,
-                        }),
+                    (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                    null != l && (0, i.jsx)(A, { subscribers: l }),
                 ],
             }),
         ],
     });
 }
-
-function j(e) {
-    let { quote: t, quoteAttribution: n, quoteAttributionTitle: i } = e;
-    return (0, r.jsxs)("div", {
-        className: p.GX,
+function f(e) {
+    let { quote: t, quoteAttribution: n, quoteAttributionTitle: s } = e;
+    return (0, i.jsxs)("div", {
+        className: _.GX,
         children: [
-            (0, r.jsx)(a.Text, {
-                variant: "text-lg/normal",
-                color: "interactive-text-active",
-                children: t,
-            }),
-            (0, r.jsx)(a.Text, {
+            (0, i.jsx)(a.Text, { variant: "text-lg/normal", color: "interactive-text-active", children: t }),
+            (0, i.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "interactive-text-active",
-                children: m.intl.format(m.t.m0b6Kj, {
+                children: h.intl.format(h.t.m0b6Kj, {
                     attributionName: n,
-                    attributionTitle: null != i ? i : m.intl.string(m.t.pclUFJ),
+                    attributionTitle: s ?? h.intl.string(h.t.pclUFJ),
                 }),
             }),
         ],
     });
 }
-
-function O(e) {
-    let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: i } = e,
-        s = null != t && t.length > 0,
-        d = () => {
-            null != i && (0, o.A)(i);
+function j(e) {
+    let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: s } = e,
+        r = null != t && t.length > 0,
+        c = () => {
+            null != s && (0, d.A)(s);
         };
-    return (0, r.jsx)("div", {
-        className: p.AC,
-        children: s
-            ? (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsx)("div", {
+        className: _.AC,
+        children: r
+            ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, r.jsx)(a.Text, {
+                      (0, i.jsx)(a.Text, {
                           variant: "text-xs/semibold",
                           color: "text-strong",
-                          className: p.JE,
-                          children: m.intl.string(m.t.wg53L8),
+                          className: _.JE,
+                          children: h.intl.string(h.t.wg53L8),
                       }),
-                      (0, r.jsxs)("div", {
-                          className: p.lZ,
+                      (0, i.jsxs)("div", {
+                          className: _.lZ,
                           children: [
-                              (0, r.jsxs)("div", {
-                                  className: l()(p.fP, null != n && p.ow),
+                              (0, i.jsxs)("div", {
+                                  className: l()(_.fP, null != n && _.ow),
                                   children: [
                                       t.map((e) =>
-                                          (0, r.jsx)(
-                                              c.A,
+                                          (0, i.jsx)(
+                                              o.A,
                                               {
-                                                  className: p.Zg,
+                                                  className: _.Zg,
                                                   emojiId: e.id,
                                                   emojiName: e.name,
                                                   animated: e.animated,
@@ -138,9 +108,9 @@ function O(e) {
                                           ),
                                       ),
                                       null != n &&
-                                          (0, r.jsx)("div", {
-                                              className: p.Ss,
-                                              children: (0, r.jsxs)(a.Text, {
+                                          (0, i.jsx)("div", {
+                                              className: _.Ss,
+                                              children: (0, i.jsxs)(a.Text, {
                                                   variant: "text-md/semibold",
                                                   color: "text-default",
                                                   children: ["+", n],
@@ -148,13 +118,13 @@ function O(e) {
                                           }),
                                   ],
                               }),
-                              (0, r.jsx)("div", {
-                                  className: p.Yy,
-                                  children: (0, r.jsx)(a.Button, {
+                              (0, i.jsx)("div", {
+                                  className: _.Yy,
+                                  children: (0, i.jsx)(a.Button, {
                                       variant: "secondary",
-                                      disabled: null == i,
-                                      onClick: d,
-                                      text: m.intl.string(m.t.mQ2IGa),
+                                      disabled: null == s,
+                                      onClick: c,
+                                      text: h.intl.string(h.t.mQ2IGa),
                                       fullWidth: !0,
                                   }),
                               }),
@@ -162,81 +132,57 @@ function O(e) {
                       }),
                   ],
               })
-            : (0, r.jsx)("div", {
-                  className: p.Yy,
-                  children: (0, r.jsx)(a.Button, {
+            : (0, i.jsx)("div", {
+                  className: _.Yy,
+                  children: (0, i.jsx)(a.Button, {
                       variant: "secondary",
-                      disabled: null == i,
-                      onClick: d,
-                      text: m.intl.string(m.t.mQ2IGa),
+                      disabled: null == s,
+                      onClick: c,
+                      text: h.intl.string(h.t.mQ2IGa),
                       fullWidth: !0,
                   }),
               }),
     });
 }
-
-function y(e) {
+function N(e) {
     let { highlightedCreatorGuild: t } = e,
-        { guild_id: n, quote: i, quote_attribution: l, quote_attribution_title: s } = t,
-        c = (0, f.A)(n, 4, 60),
-        { isLoading: o, hasAllImperativeDetails: d } = c;
-    if (o)
-        return (0, r.jsx)("div", {
-            className: p.w_,
-            children: (0, r.jsx)(a.y$y, {}),
-        });
-    if (!d) return null;
+        { guild_id: n, quote: s, quote_attribution: l, quote_attribution_title: r } = t,
+        o = (0, m.A)(n, 4, 60),
+        { isLoading: d, hasAllImperativeDetails: c } = o;
+    if (d) return (0, i.jsx)("div", { className: _.w_, children: (0, i.jsx)(a.y$y, {}) });
+    if (!c) return null;
     let {
         guildIcon: u,
         guildName: g,
-        guildAvatarUrl: b,
-        subscriberCount: m,
-        emojisToShow: x,
-        notShownEmojiCount: y,
-        storePageUrl: v,
-    } = c.details;
-    return (0, r.jsxs)("div", {
-        className: p.w_,
+        guildAvatarUrl: x,
+        subscriberCount: h,
+        emojisToShow: A,
+        notShownEmojiCount: N,
+        storePageUrl: E,
+    } = o.details;
+    return (0, i.jsxs)("div", {
+        className: _.w_,
         children: [
-            (0, r.jsx)(h, {
-                guildIcon: u,
-                guildName: g,
-                guildAvatarUrl: b,
-                subscriberCount: m,
-            }),
-            (0, r.jsx)(j, {
-                quote: i,
-                quoteAttribution: l,
-                quoteAttributionTitle: s,
-            }),
-            (0, r.jsx)(O, {
-                emojisToShow: x,
-                notShownEmojiCount: y,
-                storePageUrl: v,
-            }),
+            (0, i.jsx)(p, { guildIcon: u, guildName: g, guildAvatarUrl: x, subscriberCount: h }),
+            (0, i.jsx)(f, { quote: s, quoteAttribution: l, quoteAttributionTitle: r }),
+            (0, i.jsx)(j, { emojisToShow: A, notShownEmojiCount: N, storePageUrl: E }),
         ],
     });
 }
-
-function v(e) {
+function E(e) {
     let { highlightedCreators: t } = e;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         children: [
-            (0, r.jsx)(a.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                children: m.intl.string(m.t["tJp+QV"]),
+                children: h.intl.string(h.t["tJp+QV"]),
             }),
-            (0, r.jsx)(a.hKd, {
-                size: 24,
-            }),
-            (0, r.jsx)(g.A, {
-                carouselClassName: p.g9,
+            (0, i.jsx)(a.hKd, { size: 24 }),
+            (0, i.jsx)(g.A, {
+                carouselClassName: _.g9,
                 items: t,
-                renderItem: (e) =>
-                    (0, r.jsx)(y, {
-                        highlightedCreatorGuild: e,
-                    }),
+                renderItem: (e) => (0, i.jsx)(N, { highlightedCreatorGuild: e }),
                 intervalBetweenAutomaticItemRotations: 7e3,
             }),
         ],

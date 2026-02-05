@@ -1,79 +1,58 @@
-r.d(t, {
-    default: () => f,
-}),
-    r(896048);
+r.d(t, { default: () => j });
 var n = r(627968),
-    l = r(64700),
-    o = r(284009),
-    i = r.n(o),
-    c = r(397927),
-    s = r(10005),
-    a = r(534654),
-    d = r(208993),
-    u = r(842130),
-    p = r(985018),
-    b = r(765488);
-let f = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: o, onClose: f } = e,
-        [y, j] = l.useState(!1),
-        x = l.useCallback(() => {
-            j(!0);
+    s = r(64700),
+    i = r(284009),
+    l = r.n(i),
+    a = r(397927),
+    c = r(10005),
+    d = r(534654),
+    o = r(208993),
+    x = r(842130),
+    u = r(985018),
+    h = r(765488);
+let j = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: i, onClose: j } = e,
+        [m, C] = s.useState(!1),
+        _ = s.useCallback(() => {
+            C(!0);
         }, []),
-        O = l.useCallback(() => {
-            f();
-        }, [f]),
-        h = (0, a.A)(),
-        { declineLinkRequest: m, isDeclineLoading: g } = (0, s.A)({
-            onError: x,
-            onSuccess: O,
-        });
+        b = s.useCallback(() => {
+            j();
+        }, [j]),
+        f = (0, d.A)(),
+        { declineLinkRequest: g, isDeclineLoading: p } = (0, c.A)({ onError: _, onSuccess: b });
     return (
-        i()(h, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
-        (0, n.jsxs)(c.dWK, {
-            transitionState: o,
-            onClose: f,
+        l()(f, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        (0, n.jsxs)(a.dWK, {
+            transitionState: i,
+            onClose: j,
             children: [
-                y &&
-                    (0, n.jsx)(c.wx6, {
-                        type: "critical",
-                        children: p.intl.string(u.default.tJAUyn),
-                    }),
-                (0, n.jsxs)(c.cwr, {
+                m && (0, n.jsx)(a.wx6, { type: "critical", children: u.intl.string(x.default.tJAUyn) }),
+                (0, n.jsxs)(a.cwr, {
                     children: [
-                        (0, n.jsx)(d.A.Header, {
+                        (0, n.jsx)(o.A.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: p.intl.string(u.default.teIRCR),
-                            icon: (0, n.jsx)(c.PGe, {
-                                size: "md",
-                                color: "currentColor",
-                                className: b.u,
-                            }),
+                            header: u.intl.string(x.default.teIRCR),
+                            icon: (0, n.jsx)(a.PGe, { size: "md", color: "currentColor", className: h.u }),
                         }),
-                        (0, n.jsx)(d.A.Content, {
-                            children: (0, n.jsx)(d.A.Notice, {
-                                notice: p.intl.string(u.default.LcM8BS),
-                            }),
+                        (0, n.jsx)(o.A.Content, {
+                            children: (0, n.jsx)(o.A.Notice, { notice: u.intl.string(x.default.LcM8BS) }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(c.H7u, {
+                (0, n.jsx)(a.H7u, {
                     actionsFullWidth: !0,
                     actions: [
-                        {
-                            variant: "secondary",
-                            text: p.intl.string(p.t["ETE/oC"]),
-                            onClick: f,
-                            disabled: g,
-                        },
+                        { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: j, disabled: p },
                         {
                             variant: "critical-primary",
-                            text: p.intl.string(u.default.dKxFcn),
+                            text: u.intl.string(x.default.dKxFcn),
                             onClick: () => {
-                                j(!1), m(r.id);
+                                C(!1), g(r.id);
                             },
-                            disabled: g,
-                            loading: g,
+                            disabled: p,
+                            loading: p,
                         },
                     ],
                 }),

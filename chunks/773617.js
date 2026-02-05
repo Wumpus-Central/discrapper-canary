@@ -1,6 +1,5 @@
-n.d(t, {
-    p: () => r,
-});
+"use strict";
+n.d(t, { p: () => r });
 var r = (function (e) {
     return (
         (e[(e.CROSS_PLATFORM = 0)] = "CROSS_PLATFORM"),

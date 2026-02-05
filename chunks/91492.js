@@ -1,3 +1,1 @@
-e.exports = {
-    _: "blockedIgnoredSettingsNotice__6811a",
-};
+e.exports = { _: "blockedIgnoredSettingsNotice__6811a" };

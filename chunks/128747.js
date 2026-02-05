@@ -1,74 +1,55 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(896048),
-    n(747238),
-    n(812715),
-    n(733351),
-    n(492834),
-    n(321073),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(638769);
+"use strict";
+n.d(t, { A: () => S }), n(321073), n(323874), n(14289), n(35956);
 var r = n(735438),
     i = n.n(r),
-    a = n(280230),
+    a = n(791332),
     s = n.n(a),
-    o = n(219065),
+    o = n(441446),
     l = n(594061),
-    c = n(750808),
-    u = n(808728),
+    u = n(750808),
+    c = n(808728),
     d = n(994500),
-    f = n(287809),
-    p = n(248465),
-    _ = n(695184),
+    _ = n(287809),
+    f = n(248465),
+    p = n(695184),
     h = n(998218),
     m = n(450827),
     g = n(989133),
     E = n(926140);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+let A = 100,
+    I = Object.freeze({}),
+    T = 300;
+function y(e, t) {
+    return t.frecencyBoosters ? (0, f.X3)(e) : {};
 }
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
+class S {
+    query = "";
+    options = I;
+    results = [];
+    _userResults = [];
+    _groupDMResults = [];
+    _textChannelResults = [];
+    _voiceChannelResults = [];
+    _guildResults = [];
+    _applicationResults = [];
+    _linkResults = [];
+    _inAppNavigations = [];
+    _asyncTimeout;
+    userSearchContext;
+    onResultsChange;
+    resultTypes;
+    _userBlacklist = null;
+    _limit;
+    _refetchForSingleCategoryLimit;
+    _refetched = !1;
+    constructor(e, t, n = A, r = I, i = 0) {
+        (this.onResultsChange = e),
+            this.setOptions(r, !0),
+            (this._limit = n),
+            (this._refetchForSingleCategoryLimit = i),
+            this.createSearchContext(),
+            this.setResultTypes(t);
     }
-    return e;
-}
-let O = 100,
-    A = Object.freeze({}),
-    v = 300;
-
-function S(e, t) {
-    return t.frecencyBoosters ? (0, p.X3)(e) : {};
-}
-class I {
     createSearchContext() {
         null == this.userSearchContext &&
             (this.userSearchContext = m.A.getUserSearchContext(this.parseUserResults, this._limit));
@@ -104,15 +85,11 @@ class I {
         return null == this.resultTypes || this.resultTypes.has(e);
     }
     _isAsyncSearch() {
-        var e, t;
-        return (
-            this._include(E.rD.USER) &&
-            (null == (t = this.options) || null == (e = t.userFilters) ? void 0 : e.thread) != null
-        );
+        return this._include(E.rD.USER) && this.options?.userFilters?.thread != null;
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        t ? (this.options = y({}, this.options, e)) : (this.options = e),
+        t ? (this.options = { ...this.options, ...e }) : (this.options = e),
             null != this.options.blacklist
                 ? (this._userBlacklist = Array.from(this.options.blacklist)
                       .map((e) => (e.startsWith("user:") ? e.replace("user:", "") : ""))
@@ -174,7 +151,7 @@ class I {
                 (this._linkResults = this.queryLink(e, this._limit)),
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
-                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, v)))
+                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, T)))
                     : this._include(E.rD.USER) || this.updateAllResults();
         });
     }
@@ -195,12 +172,10 @@ class I {
         this.clear(), this.destroy(), (this.query = ""), this.updateAllResults();
     }
     pause() {
-        var e, t;
-        null == (t = this.userSearchContext) || null == (e = t.unsubscribe) || e.call(t);
+        this.userSearchContext?.unsubscribe?.();
     }
     resume() {
-        var e, t;
-        null == (t = this.userSearchContext) || null == (e = t.subscribe) || e.call(t);
+        this.userSearchContext?.subscribe?.();
     }
     destroy() {
         let { userSearchContext: e } = this;
@@ -208,10 +183,10 @@ class I {
     }
     queryTextChannels(e, t) {
         if (!this._include(E.rD.TEXT_CHANNEL)) return [];
-        let n = S(E.rD.TEXT_CHANNEL, this.options),
+        let n = y(E.rD.TEXT_CHANNEL, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
-            a = null != i ? (e) => !i.has("channel:".concat(e.id)) : void 0;
-        return p.Ay.queryChannels({
+            a = null != i ? (e) => !i.has(`channel:${e.id}`) : void 0;
+        return f.Ay.queryChannels({
             query: e,
             guildId: null,
             limit: t,
@@ -224,90 +199,54 @@ class I {
     queryVoiceChannels(e, t) {
         if (!this._include(E.rD.VOICE_CHANNEL)) return [];
         let { allowSnowflake: n, voiceChannelGuildFilter: r } = this.options,
-            i = S(E.rD.VOICE_CHANNEL, this.options);
-        return p.Ay.queryChannels({
+            i = y(E.rD.VOICE_CHANNEL, this.options);
+        return f.Ay.queryChannels({
             query: e,
             guildId: r,
             limit: t,
             fuzzy: !0,
-            type: u.vM,
+            type: c.vM,
             allowSnowflake: n,
             boosters: i,
         });
     }
     queryGuilds(e, t) {
         if (!this._include(E.rD.GUILD)) return [];
-        let n = S(E.rD.GUILD, this.options),
+        let n = y(E.rD.GUILD, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
-            a = null != i ? (e) => !i.has("guild:".concat(e.id)) : void 0;
-        return p.Ay.queryGuilds({
-            query: e,
-            limit: t,
-            fuzzy: !0,
-            filter: a,
-            boosters: n,
-            allowSnowflake: r,
-        });
+            a = null != i ? (e) => !i.has(`guild:${e.id}`) : void 0;
+        return f.Ay.queryGuilds({ query: e, limit: t, fuzzy: !0, filter: a, boosters: n, allowSnowflake: r });
     }
     queryUsers(e, t, n) {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(E.rD.USER)) return;
         let { allowSnowflake: i, userFilters: a } = this.options,
-            s = S(E.rD.USER, this.options);
-        if ((null == a ? void 0 : a.thread) != null) {
+            s = y(E.rD.USER, this.options);
+        if (a?.thread != null) {
             let t = o.A.getMemberListSections(a.thread),
                 r = [];
             for (let e in t) {
                 let n = t[e];
-                for (let e of n.userIds) {
-                    var l, c, u;
-                    (null == a || !a.friends || d.A.isFriend(e)) &&
-                        ((null != (l = null == (c = this._userBlacklist) ? void 0 : c.includes(e)) && l) ||
-                            r.push({
-                                userId: e,
-                                nick: null == (u = n.usersById[e]) ? void 0 : u.displayName,
-                            }));
-                }
+                for (let e of n.userIds)
+                    (!a?.friends || d.A.isFriend(e)) &&
+                        (this._userBlacklist?.includes(e) || r.push({ userId: e, nick: n.usersById[e]?.displayName }));
             }
-            this._userResults = p.Ay.queryUsers({
-                query: e,
-                users: r,
-                limit: n,
-                boosters: s,
-                allowSnowflake: i,
-            });
+            this._userResults = f.Ay.queryUsers({ query: e, users: r, limit: n, boosters: s, allowSnowflake: i });
             return;
         }
-        void 0 !== t && _.A.requestMembers(t, e, 100),
+        void 0 !== t && p.A.requestMembers(t, e, 100),
             r.setLimit(n),
-            r.setQuery({
-                query: e,
-                filters: a,
-                blacklist: this._userBlacklist,
-                boosters: s,
-            });
+            r.setQuery({ query: e, filters: a, blacklist: this._userBlacklist, boosters: s });
     }
     queryGroupDMs(e, t) {
         if (!this._include(E.rD.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            r = S(E.rD.GROUP_DM, this.options),
-            i = null != n ? (e) => !n.has("channel:".concat(e.id)) : void 0;
-        return p.Ay.queryGroupDMs({
-            query: e,
-            limit: t,
-            fuzzy: !0,
-            filter: i,
-            boosters: r,
-        });
+            r = y(E.rD.GROUP_DM, this.options),
+            i = null != n ? (e) => !n.has(`channel:${e.id}`) : void 0;
+        return f.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, filter: i, boosters: r });
     }
     queryApplications(e, t) {
-        return this._include(E.rD.APPLICATION)
-            ? p.Ay.queryApplications({
-                  query: e,
-                  limit: t,
-                  fuzzy: !0,
-              })
-            : [];
+        return this._include(E.rD.APPLICATION) ? f.Ay.queryApplications({ query: e, limit: t, fuzzy: !0 }) : [];
     }
     queryLink(e, t) {
         let n;
@@ -320,84 +259,40 @@ class I {
         }
         let { pathname: i, hostname: a = "", host: o } = n,
             l = h.A.isDiscordHostname(a) || window.location.host === o;
-        return null !== i && l && h.A.isAppRoute(i)
-            ? [
-                  {
-                      type: E.rD.LINK,
-                      record: c.A.fromPath(i),
-                      score: 1,
-                  },
-              ]
-            : [];
+        return null !== i && l && h.A.isAppRoute(i) ? [{ type: E.rD.LINK, record: u.A.fromPath(i), score: 1 }] : [];
     }
     queryInAppNavigations(e, t) {
         return this._include(E.rD.IN_APP_NAVIGATION)
-            ? p.Ay.queryInAppNavigations({
-                  query: e,
-                  limit: t,
-                  fuzzy: !0,
-              })
+            ? f.Ay.queryInAppNavigations({ query: e, limit: t, fuzzy: !0 })
             : [];
     }
-    constructor(e, t, n = O, r = A, a = 0) {
-        b(this, "query", ""),
-            b(this, "options", A),
-            b(this, "results", []),
-            b(this, "_userResults", []),
-            b(this, "_groupDMResults", []),
-            b(this, "_textChannelResults", []),
-            b(this, "_voiceChannelResults", []),
-            b(this, "_guildResults", []),
-            b(this, "_applicationResults", []),
-            b(this, "_linkResults", []),
-            b(this, "_inAppNavigations", []),
-            b(this, "_asyncTimeout", void 0),
-            b(this, "userSearchContext", void 0),
-            b(this, "onResultsChange", void 0),
-            b(this, "resultTypes", void 0),
-            b(this, "_userBlacklist", null),
-            b(this, "_limit", void 0),
-            b(this, "_refetchForSingleCategoryLimit", void 0),
-            b(this, "_refetched", !1),
-            b(this, "parseUserResults", (e) => {
-                let { results: t } = e;
-                if (!this._include(E.rD.USER)) return;
-                for (let { id: e, score: n, comparator: r } of ((this._userResults = []), t)) {
-                    let t = f.default.getUser(e);
-                    null != t &&
-                        this._userResults.push({
-                            type: E.rD.USER,
-                            record: t,
-                            score: (0, p.zy)(n),
-                            comparator: null != r ? r : void 0,
-                        });
-                }
-                let n = this._willRefetchIfSingleCategoryResults();
-                !n && this._userResults.length > this._limit && (this._userResults.length = this._limit),
-                    n && this.refetchIfSingleCategoryResults(),
-                    this.updateAllResults();
-            }),
-            b(this, "updateAllResults", () => {
-                clearTimeout(this._asyncTimeout),
-                    (this.results = i()([
-                        ...this._userResults,
-                        ...this._groupDMResults,
-                        ...this._textChannelResults,
-                        ...this._voiceChannelResults,
-                        ...this._guildResults,
-                        ...this._linkResults,
-                        ...this._inAppNavigations,
-                    ])
-                        .uniqBy((e) => "".concat(e.type, "-").concat(e.record.id))
-                        .sort(g.A)
-                        .value()),
-                    this.onResultsChange(this.results, this.query);
-            }),
-            (this.onResultsChange = e),
-            this.setOptions(r, !0),
-            (this._limit = n),
-            (this._refetchForSingleCategoryLimit = a),
-            this.createSearchContext(),
-            this.setResultTypes(t);
-    }
+    parseUserResults = (e) => {
+        let { results: t } = e;
+        if (!this._include(E.rD.USER)) return;
+        for (let { id: e, score: n, comparator: r } of ((this._userResults = []), t)) {
+            let t = _.default.getUser(e);
+            null != t &&
+                this._userResults.push({ type: E.rD.USER, record: t, score: (0, f.zy)(n), comparator: r ?? void 0 });
+        }
+        let n = this._willRefetchIfSingleCategoryResults();
+        !n && this._userResults.length > this._limit && (this._userResults.length = this._limit),
+            n && this.refetchIfSingleCategoryResults(),
+            this.updateAllResults();
+    };
+    updateAllResults = () => {
+        clearTimeout(this._asyncTimeout),
+            (this.results = i()([
+                ...this._userResults,
+                ...this._groupDMResults,
+                ...this._textChannelResults,
+                ...this._voiceChannelResults,
+                ...this._guildResults,
+                ...this._linkResults,
+                ...this._inAppNavigations,
+            ])
+                .uniqBy((e) => `${e.type}-${e.record.id}`)
+                .sort(g.A)
+                .value()),
+            this.onResultsChange(this.results, this.query);
+    };
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Tl: "translate_faf9c0",
     ZR: "animatorTop_faf9c0",

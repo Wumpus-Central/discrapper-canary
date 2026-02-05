@@ -1,138 +1,55 @@
-n.d(t, {
-    A: () => A,
-});
+"use strict";
+n.d(t, { A: () => A });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    o = n(311907),
-    s = n(990078),
+    s = n(311907),
+    o = n(990078),
     l = n(709066),
-    c = n(824994),
-    u = n(922301),
+    u = n(824994),
+    c = n(922301),
     d = n(750112),
-    f = n(270574),
-    p = n(351906),
-    _ = n(427262),
+    _ = n(270574),
+    f = n(351906),
+    p = n(427262),
     h = n(985018),
     m = n(479117);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+function g(e) {
+    return e.isSystemUser() ? _.v.SYSTEM_DM : e.bot ? _.v.BOT : null;
 }
-
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = b(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function b(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function O(e) {
-    return e.isSystemUser() ? f.v.SYSTEM_DM : e.bot ? f.v.BOT : null;
-}
-let v = (e) => {
+let E = (e) => {
         let {
                 primary: t,
                 secondary: n,
                 botType: i,
-                botVerified: o,
-                discriminatorClass: u,
-                className: f,
-                usernameClass: p,
-                botClass: _,
+                botVerified: s,
+                discriminatorClass: c,
+                className: _,
+                usernameClass: f,
+                botClass: p,
                 showStreamerModeTooltip: g,
                 displayNameStyles: E,
-                displayNameStylesType: y,
+                displayNameStylesType: A,
             } = e,
-            b = (0, c.W)({
-                location: "DiscordTag",
-            });
+            I = (0, u.W)({ location: "DiscordTag" });
         return (0, r.jsxs)("div", {
-            className: a()(
-                m.pq,
-                {
-                    [m.e8]: b && null != E,
-                },
-                f,
-            ),
+            className: a()(m.pq, { [m.e8]: I && null != E }, _),
             children: [
-                (0, r.jsx)(s.m, {
+                (0, r.jsx)(o.m, {
                     text: h.intl.string(h.t.Br1ls3),
                     shouldShow: g,
                     ariaHidden: !g,
                     children: (0, r.jsx)("span", {
-                        className: a()(m.__invalid_username, p),
+                        className: a()(m.__invalid_username, f),
                         children:
                             null != E
-                                ? (0, r.jsx)(d.A, {
-                                      userName: t,
-                                      displayNameStyles: E,
-                                      effectDisplayType: y,
-                                  })
+                                ? (0, r.jsx)(d.A, { userName: t, displayNameStyles: E, effectDisplayType: A })
                                 : t,
                     }),
                 }),
-                null != n
-                    ? (0, r.jsx)("span", {
-                          className: a()(m.ok, u),
-                          children: n,
-                      })
-                    : void 0,
-                null != i &&
-                    (0, r.jsx)(l.A, {
-                        type: i,
-                        className: a()(m.ok, _),
-                        verified: o,
-                    }),
+                null != n ? (0, r.jsx)("span", { className: a()(m.ok, c), children: n }) : void 0,
+                null != i && (0, r.jsx)(l.A, { type: i, className: a()(m.ok, p), verified: s }),
             ],
         });
     },
@@ -142,65 +59,40 @@ let v = (e) => {
                 nick: n,
                 forceUsername: i,
                 showAccountIdentifier: a,
-                overrideDiscriminator: s,
+                overrideDiscriminator: o,
                 forcePomelo: l,
-                hideBotTag: c = !1,
+                hideBotTag: u = !1,
                 hideDiscriminator: d = !1,
-                displayNameStylesType: h = u.G.PLAIN,
+                displayNameStylesType: h = c.G.PLAIN,
+                ...m
             } = e,
-            m = y(e, [
-                "user",
-                "nick",
-                "forceUsername",
-                "showAccountIdentifier",
-                "overrideDiscriminator",
-                "forcePomelo",
-                "hideBotTag",
-                "hideDiscriminator",
-                "displayNameStylesType",
-            ]),
-            g = (0, o.bG)([p.A], () => p.A.hidePersonalInformation),
-            b = g || d || t.isNonUserBot(),
-            A = t.toString(),
-            I = c ? null : O(t),
+            A = (0, s.bG)([f.A], () => f.A.hidePersonalInformation),
+            I = A || d || t.isNonUserBot(),
+            T = t.toString(),
+            y = u ? null : g(t),
             S = t.isVerifiedBot(),
-            T = _.Ay.getName(t),
-            C = i ? A : null != n ? n : T,
-            N = t.hasUniqueUsername() || l;
-        if (N || C !== A) {
-            let e =
-                    C === A && N && i
-                        ? _.Ay.getUserTag(t, {
-                              forcePomelo: l,
-                          })
-                        : C,
-                n = a && e !== "@".concat(A) ? _.Ay.getUserTag(t) : void 0;
-            return (0, r.jsx)(
-                v,
-                E(
-                    {
-                        primary: e,
-                        secondary: n,
-                        botType: I,
-                        botVerified: S,
-                        showStreamerModeTooltip: g && _.Ay.isNameConcealed(e),
-                        displayNameStyles: C !== A ? t.displayNameStyles : null,
-                        displayNameStylesType: h,
-                    },
-                    m,
-                ),
-            );
+            v = p.Ay.getName(t),
+            C = i ? T : (n ?? v),
+            b = t.hasUniqueUsername() || l;
+        if (b || C !== T) {
+            let e = C === T && b && i ? p.Ay.getUserTag(t, { forcePomelo: l }) : C,
+                n = a && e !== `@${T}` ? p.Ay.getUserTag(t) : void 0;
+            return (0, r.jsx)(E, {
+                primary: e,
+                secondary: n,
+                botType: y,
+                botVerified: S,
+                showStreamerModeTooltip: A && p.Ay.isNameConcealed(e),
+                displayNameStyles: C !== T ? t.displayNameStyles : null,
+                displayNameStylesType: h,
+                ...m,
+            });
         }
-        return (0, r.jsx)(
-            f.A,
-            E(
-                {
-                    name: C,
-                    botType: I,
-                    botVerified: S,
-                    discriminator: b || C !== A ? null : null != s ? s : t.discriminator,
-                },
-                m,
-            ),
-        );
+        return (0, r.jsx)(_.A, {
+            name: C,
+            botType: y,
+            botVerified: S,
+            discriminator: I || C !== T ? null : (o ?? t.discriminator),
+            ...m,
+        });
     };

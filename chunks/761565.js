@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = {
         1: "-inci",
         5: "-inci",
@@ -75,9 +76,6 @@
                 i = e >= 100 ? 100 : null;
             return e + (t[n] || t[r] || t[i]);
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

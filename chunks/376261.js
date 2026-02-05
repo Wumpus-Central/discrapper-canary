@@ -1,11 +1,9 @@
-n.d(t, {
-    T: () => s,
-});
+"use strict";
+n.d(t, { T: () => s });
 var r = n(311907),
     i = n(498642);
 n(424994);
 var a = n(652215);
-
 function s(e) {
     return (0, r.bG)([i.A], () => {
         if (null == e) return;

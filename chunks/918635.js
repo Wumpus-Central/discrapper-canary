@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(664886),
     o = n(999843),
@@ -8,11 +9,7 @@ var r = n(834647),
     u = n(655246),
     d = "No one promise resolved";
 r(
-    {
-        target: "Promise",
-        stat: !0,
-        forced: u,
-    },
+    { target: "Promise", stat: !0, forced: u },
     {
         any: function (e) {
             var t = this,

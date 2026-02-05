@@ -1,92 +1,28 @@
-n.d(t, {
-    A: () => j,
-}),
-    n(896048),
-    n(938796);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(544743),
-    c = n(95701),
+"use strict";
+n.d(t, { A: () => D }), n(938796);
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(544743),
+    l = n(95701),
     u = n(961350);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+let c = {},
+    d = new o.Ay(),
+    _ = new Set();
 function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = {},
-    m = new l.Ay(),
-    g = new Set();
-
-function E(e) {
-    h = a()(h)
+    c = i()(c)
         .reject((t) => t.guildId === e)
         .keyBy("threadId")
         .value();
 }
-
-function b(e) {
-    var t;
-    null == (t = e.threads) || t.forEach(y);
+function p(e) {
+    e.threads?.forEach(h);
 }
-
-function y(e) {
-    c.A_.has(e.type) &&
+function h(e) {
+    l.A_.has(e.type) &&
         null != e.member &&
-        ((h[e.id] = {
+        ((c[e.id] = {
             threadId: e.id,
             guildId: e.guild_id,
             flags: e.member.flags,
@@ -94,62 +30,51 @@ function y(e) {
             muteConfig: e.member.muteConfig,
             joinTimestamp: new Date(e.member.joinTimestamp),
         }),
-        O(e.id));
+        m(e.id));
 }
-
-function O(e) {
-    let t = h[e];
-    m.clearTimer(e),
+function m(e) {
+    let t = c[e];
+    d.clearTimer(e),
         !0 === t.muted
-            ? ((g = new Set(g)).add(e),
-              m.setTimer(e, t.muteConfig, () => {
-                  (h[e].muted = !1), (g = new Set(g)).delete(e), L.emitChange();
-              }) && ((h[e].muted = !1), (g = new Set(g)).delete(e)))
-            : (g = new Set(g)).delete(e);
+            ? ((_ = new Set(_)).add(e),
+              d.setTimer(e, t.muteConfig, () => {
+                  (c[e].muted = !1), (_ = new Set(_)).delete(e), O.emitChange();
+              }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
+            : (_ = new Set(_)).delete(e);
 }
-
-function A(e) {
-    m.reset(),
-        (g = new Set()),
-        (h = {}),
+function g(e) {
+    d.reset(),
+        (_ = new Set()),
+        (c = {}),
         e.guilds.forEach((e) => {
-            b(e);
+            p(e);
         });
 }
-
-function v(e) {
+function E(e) {
     let { joinedThreads: t } = e;
-    h = a()(t)
-        .map((e) =>
-            _(f({}, e), {
-                joinTimestamp: new Date(e.joinTimestamp),
-            }),
-        )
+    c = i()(t)
+        .map((e) => ({ ...e, joinTimestamp: new Date(e.joinTimestamp) }))
         .keyBy("threadId")
         .value();
 }
-
-function S(e) {
+function A(e) {
     let { guild: t } = e;
-    E(t.id), b(t);
+    f(t.id), p(t);
 }
-
 function I(e) {
     let { guild: t } = e;
-    E(t.id);
+    f(t.id);
 }
-
 function T(e) {
     let { channel: t } = e;
-    y(t);
+    h(t);
 }
-
-function C(e) {
+function y(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
         n.forEach((e) => {
-            (h[e.id] = {
+            (c[e.id] = {
                 threadId: e.id,
                 guildId: t,
                 flags: e.flags,
@@ -157,17 +82,16 @@ function C(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                O(e.id);
+                m(e.id);
         });
 }
-
-function N(e) {
+function S(e) {
     let { guildId: t, data: n } = e;
     null != t &&
         n.forEach((e) => {
             let { members: n } = e;
             n.forEach((e) => {
-                (h[e.id] = {
+                (c[e.id] = {
                     threadId: e.id,
                     guildId: t,
                     flags: e.flags,
@@ -175,20 +99,18 @@ function N(e) {
                     muteConfig: e.muteConfig,
                     joinTimestamp: new Date(e.joinTimestamp),
                 }),
-                    O(e.id);
+                    m(e.id);
             });
         });
 }
-
-function R(e) {
+function v(e) {
     let { channel: t } = e;
-    if (!(t.id in h)) return !1;
-    (h = f({}, h)), delete h[t.id];
+    if (!(t.id in c)) return !1;
+    (c = { ...c }), delete c[t.id];
 }
-
-function w(e) {
+function C(e) {
     if (u.default.getId() !== e.userId) return !1;
-    (h[e.id] = {
+    (c[e.id] = {
         threadId: e.id,
         guildId: e.guildId,
         flags: e.flags,
@@ -196,94 +118,83 @@ function w(e) {
         muteConfig: e.muteConfig,
         joinTimestamp: new Date(e.joinTimestamp),
     }),
-        O(e.id);
+        m(e.id);
 }
-
-function P(e) {
+function b(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
     if (u.default.getId() !== n || null === r) return !1;
     i
-        ? (h[t] = {
+        ? (c[t] = {
               threadId: t,
               guildId: r,
               flags: 0,
               muted: !0,
-              muteConfig: {
-                  end_time: void 0,
-              },
+              muteConfig: { end_time: void 0 },
               joinTimestamp: new Date(),
           })
-        : delete h[t];
+        : delete c[t];
 }
-
-function D(e) {
-    var t, n;
-    let r = !1;
+function N(e) {
+    let t = !1;
     return (
-        (null == (t = e.removedMemberIds) ? void 0 : t.includes(u.default.getId())) &&
-            e.id in h &&
-            ((h = f({}, h)), delete h[e.id], (r = !0)),
-        null == (n = e.addedMembers) ||
-            n.forEach((t) => {
-                t.userId === u.default.getId() &&
-                    (((h = f({}, h))[e.id] = {
-                        threadId: e.id,
-                        guildId: e.guildId,
-                        flags: t.flags,
-                        muted: t.muted,
-                        muteConfig: t.muteConfig,
-                        joinTimestamp: new Date(t.joinTimestamp),
-                    }),
-                    O(e.id),
-                    (r = !0));
-            }),
-        r
+        e.removedMemberIds?.includes(u.default.getId()) && e.id in c && ((c = { ...c }), delete c[e.id], (t = !0)),
+        e.addedMembers?.forEach((n) => {
+            n.userId === u.default.getId() &&
+                (((c = { ...c })[e.id] = {
+                    threadId: e.id,
+                    guildId: e.guildId,
+                    flags: n.flags,
+                    muted: n.muted,
+                    muteConfig: n.muteConfig,
+                    joinTimestamp: new Date(n.joinTimestamp),
+                }),
+                m(e.id),
+                (t = !0));
+        }),
+        t
     );
 }
-class x extends (r = s.Ay.Store) {
+class R extends a.Ay.Store {
     initialize() {
         this.waitFor(u.default);
     }
+    static displayName = "JoinedThreadsStore";
     hasJoined(e) {
-        return e in h;
+        return e in c;
     }
     joinTimestamp(e) {
-        var t;
-        return null == (t = h[e]) ? void 0 : t.joinTimestamp;
+        return c[e]?.joinTimestamp;
     }
     flags(e) {
-        var t;
-        return null == (t = h[e]) ? void 0 : t.flags;
+        return c[e]?.flags;
     }
     getInitialOverlayState() {
-        return Object.values(h);
+        return Object.values(c);
     }
     getMuteConfig(e) {
-        var t;
-        return null == (t = h[e]) ? void 0 : t.muteConfig;
+        return c[e]?.muteConfig;
     }
     getMutedThreads() {
-        return g;
+        return _;
     }
     isMuted(e) {
-        return g.has(e);
+        return _.has(e);
     }
 }
-d(x, "displayName", "JoinedThreadsStore");
-let L = new x(o.h, {
-        CONNECTION_OPEN: A,
-        OVERLAY_INITIALIZE: v,
-        GUILD_CREATE: S,
+let O = new R(s.h, {
+        CONNECTION_OPEN: g,
+        OVERLAY_INITIALIZE: E,
+        GUILD_CREATE: A,
         GUILD_DELETE: I,
         THREAD_CREATE: T,
-        THREAD_LIST_SYNC: C,
-        SEARCH_MESSAGES_SUCCESS: N,
-        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
-        LOAD_THREADS_SUCCESS: C,
-        LOAD_ARCHIVED_THREADS_SUCCESS: C,
-        THREAD_DELETE: R,
-        THREAD_MEMBER_UPDATE: w,
-        THREAD_MEMBER_LOCAL_UPDATE: P,
-        THREAD_MEMBERS_UPDATE: D,
+        THREAD_LIST_SYNC: y,
+        SEARCH_MESSAGES_SUCCESS: S,
+        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: S,
+        LOAD_THREADS_SUCCESS: y,
+        LOAD_ARCHIVED_THREADS_SUCCESS: y,
+        THREAD_DELETE: v,
+        THREAD_MEMBER_UPDATE: C,
+        THREAD_MEMBER_LOCAL_UPDATE: b,
+        THREAD_MEMBERS_UPDATE: N,
     }),
-    j = L;
+    D = O;

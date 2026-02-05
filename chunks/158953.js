@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(664886),
     o = n(407057),
@@ -6,10 +7,7 @@ var r = n(834647),
     l = n(965746),
     c = n(517480);
 r(
-    {
-        target: "Reflect",
-        stat: !0,
-    },
+    { target: "Reflect", stat: !0 },
     {
         get: function e(t, n) {
             var r,

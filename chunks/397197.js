@@ -1,23 +1,20 @@
-i.d(e, {
-    A: () => a,
-});
+i.d(e, { A: () => a });
 var s = i(364298),
     n = i(889135);
-
-function r(t, e, i) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = i),
-        t
-    );
-}
 let a = class {
+    img = null;
+    loaded = !1;
+    isFilled = !1;
+    alpha = 0;
+    mx = 0;
+    my = 0;
+    x = 0;
+    y = 0;
+    velX = 0;
+    velY = 0;
+    targetX = 40;
+    targetY = 40;
+    spring = { friction: 60, tension: 100 };
     initialize() {
         (this.img = new Image()),
             (this.img.onload = () => {
@@ -35,6 +32,10 @@ let a = class {
     terminate() {
         (this.img = null), (this.loaded = !1), (this.isFilled = !1), (this.alpha = 0), this.unbind();
     }
+    handleMouseMove = (t) => {
+        let { clientX: e, clientY: i } = t;
+        (this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20);
+    };
     update(t) {
         this.loaded &&
             (!this.isFilled && this.alpha < 1
@@ -57,27 +58,5 @@ let a = class {
     }
     fill() {
         this.isFilled = !0;
-    }
-    constructor() {
-        r(this, "img", null),
-            r(this, "loaded", !1),
-            r(this, "isFilled", !1),
-            r(this, "alpha", 0),
-            r(this, "mx", 0),
-            r(this, "my", 0),
-            r(this, "x", 0),
-            r(this, "y", 0),
-            r(this, "velX", 0),
-            r(this, "velY", 0),
-            r(this, "targetX", 40),
-            r(this, "targetY", 40),
-            r(this, "spring", {
-                friction: 60,
-                tension: 100,
-            }),
-            r(this, "handleMouseMove", (t) => {
-                let { clientX: e, clientY: i } = t;
-                (this.targetX = (e / window.innerWidth) * 20 + 20), (this.targetY = (i / window.innerWidth) * 20 + 20);
-            });
     }
 };

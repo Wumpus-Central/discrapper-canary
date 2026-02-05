@@ -1,14 +1,9 @@
-n.d(t, {
-    t: () => l,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { t: () => l });
+var i = n(627968);
 n(64700);
-var i = n(796416);
-
+var s = n(796416);
 function l(e) {
     let { children: t } = e;
-    return (0, r.jsx)("div", {
-        className: i.Zs,
-        children: t,
-    });
+    return (0, i.jsx)("div", { className: s.Zs, children: t });
 }

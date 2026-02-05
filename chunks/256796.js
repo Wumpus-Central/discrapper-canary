@@ -1,168 +1,88 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(896048),
-    n(733351);
+"use strict";
+n.d(t, { A: () => p });
 var r = n(735438),
     i = n.n(r),
     a = n(73153),
     s = n(736130),
     o = n(594061),
     l = n(822382),
-    c = n(23667),
-    u = n(956467),
+    u = n(23667),
+    c = n(956467),
     d = n(652215);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function m(e) {
+function _(e) {
     if (!Array.isArray(e.pinned)) return;
     let t = e.pinned.some((e) => !0 === e);
     e.pinned = t;
 }
-
-function g(e) {
+function f(e) {
     return e === d.YYv ? null : e;
 }
-let E = {
+let p = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
                 searchTabs: n,
                 searchQueryString: r,
                 pagination: o,
-                trackExactTotalHits: c,
+                trackExactTotalHits: u,
                 getId: d,
-                getLimit: f,
-                onFetchStart: _,
-                onFetchSuccess: h,
-                searchMode: E,
+                getLimit: p,
+                onFetchStart: h,
+                onFetchSuccess: m,
+                searchMode: g,
             } = e,
-            b = (0, l._o)(r),
-            y = (0, l.Zf)(b);
-        m(y);
-        let O = p({}, y, (0, l.nm)(E)),
-            A = (0, l.mt)(t);
-        null != A && (0, l.L5)(O, A);
-        let v = u.A.create({
+            E = (0, l._o)(r),
+            A = (0, l.Zf)(E);
+        _(A);
+        let I = (0, l.nm)(g),
+            T = { ...A, ...I },
+            y = (0, l.mt)(t);
+        null != y && (0, l.L5)(T, y);
+        let S = c.A.create({
             id: (0, l.bS)(t),
             searchContext: t,
-            searchQuery: O,
+            searchQuery: T,
             searchTabs: n,
-            getLimit: f,
+            getLimit: p,
             pagination: o,
-            trackExactTotalHits: c,
+            trackExactTotalHits: u,
         });
-        null == _ ||
-            _({
-                searchContext: t,
-                searchQueryString: r,
-                searchQuery: O,
-            });
-        let S = n.map((e) => d(e));
+        h?.({ searchContext: t, searchQueryString: r, searchQuery: T });
+        let v = n.map((e) => d(e));
         return (
-            a.h.dispatch({
-                type: "SEARCH_MESSAGES_START",
-                ids: S,
-            }),
-            v.fetch(
+            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: v }),
+            S.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
                     a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: g(A),
+                        guildId: f(y),
                         data: r.map((e) => {
-                            var t, r, a;
-                            let [o, l] = e,
-                                c = d(o),
-                                u = l.cursor;
+                            let [t, r] = e,
+                                a = d(t),
+                                o = r.cursor;
                             return {
-                                id: c,
+                                id: a,
                                 analyticsId: n.analytics_id,
-                                totalResults: l.total_results,
-                                cursor: null != u && i().isEmpty(u) ? null : u,
-                                messages: l.messages,
-                                channels: null != (t = l.channels) ? t : [],
-                                threads: null != (r = l.threads) ? r : [],
-                                members: (null != (a = l.members) ? a : []).map((e) => (0, s.A)(e)),
+                                totalResults: r.total_results,
+                                cursor: null != o && i().isEmpty(o) ? null : o,
+                                messages: r.messages,
+                                channels: r.channels ?? [],
+                                threads: r.threads ?? [],
+                                members: (r.members ?? []).map((e) => (0, s.A)(e)),
                                 doingHistoricalIndex: n.doing_deep_historical_index,
                                 documentsIndexed: n.documents_indexed,
                             };
                         }),
                     }),
-                        null == h ||
-                            h({
-                                searchContext: t,
-                                tabEntries: r,
-                            });
+                        m?.({ searchContext: t, tabEntries: r });
                 },
                 () => {
-                    a.h.dispatch({
-                        type: "SEARCH_MESSAGES_INDEXING",
-                        ids: S,
-                    });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: v });
                 },
                 (e) => {
-                    a.h.dispatch({
-                        type: "SEARCH_MESSAGES_FAILURE",
-                        ids: S,
-                        error: e,
-                    });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: v, error: e });
                 },
             ),
             !0
@@ -175,102 +95,65 @@ let E = {
                 pagination: r,
                 searchMode: i,
                 searchEverywhere: o,
-                onFetchStart: u,
+                onFetchStart: c,
             } = e,
             d = (0, l._o)(n),
-            f = h(p({}, (0, l.Zf)(d), (0, l.nm)(i)), {
-                offset: r.offset,
-            }),
-            _ = (0, l.mt)(t);
-        null != _ && (0, l.L5)(f, _), o && (f.search_everywhere = !0);
-        let m = (0, l.bS)(t),
-            E = c.A.create({
-                id: m,
-                searchType: t.type,
-                searchQuery: f,
-            });
-        null == u ||
-            u({
-                searchContext: t,
-                searchQueryString: n,
-                searchQuery: f,
-            }),
-            a.h.dispatch({
-                type: "SEARCH_MESSAGES_START",
-                ids: [m],
-            }),
+            _ = (0, l.Zf)(d),
+            p = (0, l.nm)(i),
+            h = { ..._, ...p, offset: r.offset },
+            m = (0, l.mt)(t);
+        null != m && (0, l.L5)(h, m), o && (h.search_everywhere = !0);
+        let g = (0, l.bS)(t),
+            E = u.A.create({ id: g, searchType: t.type, searchQuery: h });
+        c?.({ searchContext: t, searchQueryString: n, searchQuery: h }),
+            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [g] }),
             E.fetch(
                 (e) => {
-                    var t, n, r;
                     a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: g(_),
+                        guildId: f(m),
                         data: [
                             {
-                                id: m,
+                                id: g,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
-                                threads: null != (t = e.body.threads) ? t : [],
-                                members: (null != (n = e.body.members) ? n : []).map((e) => (0, s.A)(e)),
+                                threads: e.body.threads ?? [],
+                                members: (e.body.members ?? []).map((e) => (0, s.A)(e)),
                                 doingHistoricalIndex: e.body.doing_deep_historical_index,
                                 documentsIndexed: e.body.documents_indexed,
-                                channels: null != (r = e.body.channels) ? r : [],
+                                channels: e.body.channels ?? [],
                                 cursor: null,
                             },
                         ],
                     });
                 },
                 () => {
-                    a.h.dispatch({
-                        type: "SEARCH_MESSAGES_INDEXING",
-                        ids: [m],
-                    });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [g] });
                 },
                 (e) => {
-                    a.h.dispatch({
-                        type: "SEARCH_MESSAGES_FAILURE",
-                        ids: [m],
-                        error: e,
-                    });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [g], error: e });
                 },
             );
     },
     clearSearchRecentMessages: function () {
-        a.h.dispatch({
-            type: "SEARCH_RECENT_MESSAGES_CLEAR",
-        });
+        a.h.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
     },
     clearAllSearchMesssages: function () {
-        a.h.dispatch({
-            type: "SEARCH_MESSAGES_CLEAR_ALL",
-        });
+        a.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
     },
     clearSearchMessages: function (e) {
-        a.h.dispatch({
-            type: "SEARCH_MESSAGES_CLEAR",
-            id: e,
-        });
+        a.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR", id: e });
     },
     initializeAutocomplete: function (e) {
-        a.h.dispatch({
-            type: "SEARCH_AUTOCOMPLETE_INITIALIZE",
-            searchContext: e,
-        });
+        a.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: e });
     },
     updateAutocompleteQuery: function (e) {
         let { searchContext: t, tokens: n, queryString: r, cursorScope: i } = e;
         r.trim().length > 0 && o.bW.loadIfNecessary(),
-            a.h.dispatch({
-                type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
-                searchContext: t,
-                tokens: n,
-                cursorScope: i,
-            });
+            a.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext: t, tokens: n, cursorScope: i });
     },
     markSearchTokensRefreshed: function () {
-        a.h.dispatch({
-            type: "SEARCH_TOKENS_REFRESHED",
-        });
+        a.h.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
     },
 };

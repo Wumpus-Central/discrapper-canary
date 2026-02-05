@@ -1,43 +1,27 @@
-n.d(t, {
-    Z: () => u,
-});
+"use strict";
+n.d(t, { Z: () => c });
 var r = n(64700),
     i = n(311907),
     a = n(287809),
-    o = n(430363),
-    s = n(4149),
+    s = n(430363),
+    o = n(4149),
     l = n(823854);
-
-function c(e) {
+function u(e) {
     return null;
 }
-
-function u(e) {
-    var t, n;
-    let { customStatusActivity: u, statusOwnerId: d, location: f } = e,
-        p = r.useMemo(() => (null == u ? null : (0, s.a)(u)), [u]),
-        _ = null == p || null == d ? null : d === p.senderId ? p.targetId : p.senderId,
-        h = (0, i.bG)([a.default], () => (null != _ ? a.default.getUser(_) : null), [_]),
-        m = (0, i.bG)([l.A], () => (null == d ? null : l.A.getProgressForUserId(d)), [d]);
-    if (!(0, o.Uk)(f))
-        return {
-            presence: null,
-            progress: null,
-            statusTextOverride: null,
-        };
-    let g = c({
-        activity: u,
-        presence: p,
-        statusOwnerId: d,
-        otherUserName:
-            null != (t = null != (n = null == h ? void 0 : h.globalName) ? n : null == h ? void 0 : h.username)
-                ? t
-                : null,
-        progress: m,
+function c(e) {
+    let { customStatusActivity: t, statusOwnerId: n, location: c } = e,
+        d = r.useMemo(() => (null == t ? null : (0, o.a)(t)), [t]),
+        _ = null == d || null == n ? null : n === d.senderId ? d.targetId : d.senderId,
+        f = (0, i.bG)([a.default], () => (null != _ ? a.default.getUser(_) : null), [_]),
+        p = (0, i.bG)([l.A], () => (null == n ? null : l.A.getProgressForUserId(n)), [n]);
+    if (!(0, s.Uk)(c)) return { presence: null, progress: null, statusTextOverride: null };
+    let h = u({
+        activity: t,
+        presence: d,
+        statusOwnerId: n,
+        otherUserName: f?.globalName ?? f?.username ?? null,
+        progress: p,
     });
-    return {
-        presence: p,
-        progress: m,
-        statusTextOverride: g,
-    };
+    return { presence: d, progress: p, statusTextOverride: h };
 }

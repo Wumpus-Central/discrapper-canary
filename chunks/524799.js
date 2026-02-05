@@ -1,46 +1,26 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(998218);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153),
+    a = n(998218);
+let s = new Map(),
+    o = new Set(),
+    l = new Set(),
+    u = new Set();
+function c() {
+    (s = new Map()), (o = new Set()), (l = new Set()), (u = new Set());
 }
-let l = new Map(),
-    c = new Set(),
-    u = new Set(),
-    d = new Set();
-
-function f() {
-    (l = new Map()), (c = new Set()), (u = new Set()), (d = new Set());
-}
-
-function p(e) {
+function d(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
-        c.add(e), u.delete(e);
+        o.add(e), l.delete(e);
     });
 }
-
 function _(e) {
     let { applicationIds: t, supplementalGameData: n } = e,
         r = new Set(t);
     t.forEach((e) => {
-        c.delete(e), u.delete(e);
+        o.delete(e), l.delete(e);
     }),
         n.forEach((e) => {
             let {
@@ -48,94 +28,90 @@ function _(e) {
                 name: n,
                 summary: i,
                 websites: a,
-                themes: s,
-                genres: o,
-                platforms: c,
-                artwork_urls: u,
+                themes: o,
+                genres: l,
+                platforms: u,
+                artwork_urls: c,
                 screenshot_urls: d,
-                icon_hash: f,
-                cover_image_url: p,
-                first_release_date: _,
+                icon_hash: _,
+                cover_image_url: f,
+                first_release_date: p,
                 summary_localized: h,
                 publisher_names: m,
                 developer_names: g,
             } = e;
             r.delete(t),
-                l.set(t, {
+                s.set(t, {
                     applicationId: t,
                     name: n,
                     summary: i,
                     summaryLocalized: h,
                     websites: a,
-                    themes: s,
-                    genres: o,
-                    platforms: c,
-                    artwork: u,
+                    themes: o,
+                    genres: l,
+                    platforms: u,
+                    artwork: c,
                     screenshots: d,
-                    iconHash: f,
-                    coverImageUrl: p,
-                    firstReleaseDate: _,
-                    publishers: null != m ? m : [],
-                    developers: null != g ? g : [],
+                    iconHash: _,
+                    coverImageUrl: f,
+                    firstReleaseDate: p,
+                    publishers: m ?? [],
+                    developers: g ?? [],
                 });
         }),
         r.forEach((e) => {
-            l.has(e) || d.add(e);
+            s.has(e) || u.add(e);
         });
 }
-
-function h(e) {
+function f(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
-        c.delete(e), u.add(e);
+        o.delete(e), l.add(e);
     });
 }
-class m extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "DetectableGameSupplementalStore";
     canFetch(e) {
-        return !c.has(e) && !u.has(e) && !l.has(e) && !d.has(e);
+        return !o.has(e) && !l.has(e) && !s.has(e) && !u.has(e);
     }
     isFetching(e) {
-        return c.has(e);
+        return o.has(e);
     }
     didFetchingFail(e) {
-        return u.has(e);
+        return l.has(e);
     }
     getGame(e) {
-        return l.get(e);
+        return s.get(e);
     }
     getGames(e) {
-        return e.map((e) => l.get(e));
+        return e.map((e) => s.get(e));
     }
     getLocalizedName(e) {
-        var t;
-        return null == (t = l.get(e)) ? void 0 : t.name;
+        return s.get(e)?.name;
     }
     getThemes(e) {
-        var t;
-        return null == (t = l.get(e)) ? void 0 : t.themes;
+        return s.get(e)?.themes;
     }
     getCoverImageUrl(e, t) {
-        var n;
-        let r = null == (n = l.get(e)) ? void 0 : n.coverImageUrl;
-        if (null == r) return null;
-        if (null == t) return r;
-        let i = s.A.toURLSafe(r);
-        return null == i ? r : (i.searchParams.set("size", t.size.toString()), i.toString());
+        let n = s.get(e)?.coverImageUrl;
+        if (null == n) return null;
+        if (null == t) return n;
+        let r = a.A.toURLSafe(n);
+        return null == r ? n : (r.searchParams.set("size", t.size.toString()), r.toString());
     }
     noDataAvailable(e) {
-        return d.has(e);
+        return u.has(e);
     }
     numNoDataAvailable() {
-        return d.size;
+        return u.size;
     }
     numSupplementalGames() {
-        return l.size;
+        return s.size;
     }
 }
-o(m, "displayName", "DetectableGameSupplementalStore");
-let g = new m(a.h, {
-    LOGOUT: f,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH: p,
+let h = new p(i.h, {
+    LOGOUT: c,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH: d,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: _,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: h,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: f,
 });

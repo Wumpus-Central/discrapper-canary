@@ -1,57 +1,20 @@
-n.d(t, {
-    E: () => a,
-});
-var i = n(627968);
+"use strict";
+n.d(t, { E: () => o });
+var s = n(627968);
 n(64700);
-var s = n(158954),
+var i = n(158954),
     r = n(397927),
     l = n(985018);
-
-function o(e) {
-    let { transitionState: t, title: n, body: r, onClose: o } = e;
-    return (0, i.jsx)(s.Modal, {
+function a(e) {
+    let { transitionState: t, title: n, body: r, onClose: a } = e;
+    return (0, s.jsx)(i.Modal, {
         title: n,
-        actions: [
-            {
-                text: l.intl.string(l.t["NX+WJN"]),
-                onClick: o,
-            },
-        ],
+        actions: [{ text: l.intl.string(l.t["NX+WJN"]), onClick: a }],
         transitionState: t,
-        onClose: o,
+        onClose: a,
         subtitle: r,
     });
 }
-
-function a(e) {
-    (0, r.qfG)((t) =>
-        (0, i.jsx)(
-            o,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, t, e),
-        ),
-    );
+function o(e) {
+    (0, r.qfG)((t) => (0, s.jsx)(a, { ...t, ...e }));
 }

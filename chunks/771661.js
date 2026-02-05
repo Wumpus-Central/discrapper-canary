@@ -1,3 +1,2 @@
-e.exports = {
-    y: "divider__44f7f",
-};
+"use strict";
+e.exports = { y: "divider__44f7f" };

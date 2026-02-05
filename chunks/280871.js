@@ -1,22 +1,19 @@
-n.d(t, {
-    A: () => o,
-});
+n.d(t, { A: () => d });
 var l = n(627968),
-    r = n(64700),
-    i = n(397927),
-    s = n(974930),
-    a = n(985018);
-
-function o(e) {
-    let { startDate: t, recurrenceRule: n, onRecurrenceChange: o } = e,
-        c = r.useMemo(() => (0, s.z7)(t, n), [n, t]),
-        u = (0, s.Xx)(t);
-    return (0, l.jsx)(i.l6P, {
-        label: a.intl.string(a.t["59TVxL"]),
+    i = n(64700),
+    s = n(397927),
+    a = n(974930),
+    r = n(985018);
+function d(e) {
+    let { startDate: t, recurrenceRule: n, onRecurrenceChange: d } = e,
+        c = i.useMemo(() => (0, a.z7)(t, n), [n, t]),
+        o = (0, a.Xx)(t);
+    return (0, l.jsx)(s.l6P, {
+        label: r.intl.string(r.t["59TVxL"]),
         required: !0,
         placeholder: "gaming",
-        options: u,
-        onSelectionChange: o,
+        options: o,
+        onSelectionChange: d,
         value: c,
         selectionMode: "single",
         fullWidth: !0,

@@ -1,52 +1,46 @@
-t.d(l, {
-    default: () => S,
-}),
-    t(896048);
-var s = t(627968);
+t.d(s, { default: () => h });
+var l = t(627968);
 t(64700);
 var n = t(158954),
     i = t(417597),
     o = t(397927),
     a = t(843472),
     r = t(997509),
-    u = t(734057),
-    c = t(258671),
+    c = t(734057),
+    u = t(258671),
     d = t(652215),
     g = t(985018),
     _ = t(378720);
-
-function S(e) {
-    let { channelId: l, messageId: t, transitionState: S, onClose: h } = e,
-        F = (0, i.bG)([u.A], () => u.A.getChannel(l)),
-        [b, m] = (0, c.A)(l),
-        f = null == F ? void 0 : F.guild_id;
-    return (0, s.jsx)(n.ConfirmModal, {
+function h(e) {
+    let { channelId: s, messageId: t, transitionState: h, onClose: F } = e,
+        S = (0, i.bG)([c.A], () => c.A.getChannel(s)),
+        [m, C] = (0, u.A)(s),
+        b = S?.guild_id;
+    return (0, l.jsx)(n.ConfirmModal, {
         title: g.intl.string(g.t.aIz1oV),
         confirmText: g.intl.string(g.t["cY+Oob"]),
-        onConfirm: () => a.A.crosspostMessage(l, t),
-        transitionState: S,
-        onClose: h,
+        onConfirm: () => a.A.crosspostMessage(s, t),
+        transitionState: h,
+        onClose: F,
         variant: "primary",
-        children: (0, s.jsx)(o.Text, {
+        children: (0, l.jsx)(o.Text, {
             variant: "text-md/normal",
             className: _.YK,
-            children: m
-                ? (0, s.jsx)(o.y$y, {})
-                : null != b && null != b.guildsFollowing && b.guildsFollowing > 0
-                  ? (0, s.jsxs)(s.Fragment, {
+            children: C
+                ? (0, l.jsx)(o.y$y, {})
+                : null != m && null != m.guildsFollowing && m.guildsFollowing > 0
+                  ? (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, s.jsx)(o.Text, {
+                            (0, l.jsx)(o.Text, {
                                 className: _.YK,
                                 variant: "text-sm/normal",
-                                children: g.intl.format(g.t.GCGrNP, {
-                                    numGuildsFollowing: b.guildsFollowing,
-                                }),
+                                children: g.intl.format(g.t.GCGrNP, { numGuildsFollowing: m.guildsFollowing }),
                             }),
-                            (0, s.jsx)(o.Text, {
+                            (0, l.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.IMhGZz, {
                                     onClick: () => {
-                                        null != f && null != h && (h(), r.A.open(f, d.BEX.ANALYTICS));
+                                        null != b && null != F && (F(), r.A.open(b, d.BEX.ANALYTICS));
                                     },
                                 }),
                             }),

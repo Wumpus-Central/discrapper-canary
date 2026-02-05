@@ -1,6 +1,5 @@
-n.d(t, {
-    h: () => r,
-});
+"use strict";
+n.d(t, { h: () => r });
 var r = (function (e) {
     return (
         (e.GENERAL = "general"),

@@ -1,22 +1,18 @@
-n.d(t, {
-    A: () => o,
-});
+n.d(t, { A: () => o });
 var a = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
-    r = n(397927),
-    s = n(350246);
+var s = n(503698),
+    i = n.n(s),
+    l = n(397927),
+    r = n(350246);
 let o = function (e) {
-    let { allowClicks: t = !1, children: n, withBorder: l = !1 } = e;
-    return (0, a.jsx)(r.M1G, {
-        children: (0, a.jsx)(r.ZpM, {
-            className: i()(s.Rx, {
-                [s.aK]: l,
-            }),
-            outline: l,
+    let { allowClicks: t = !1, children: n, withBorder: s = !1 } = e;
+    return (0, a.jsx)(l.M1G, {
+        children: (0, a.jsx)(l.ZpM, {
+            className: i()(r.Rx, { [r.aK]: s }),
+            outline: s,
             children: (0, a.jsx)("div", {
-                className: s.AZ,
+                className: r.AZ,
                 onClickCapture: t
                     ? void 0
                     : function (e) {

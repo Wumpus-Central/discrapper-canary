@@ -1,54 +1,35 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968),
     i = n(110259),
     a = n(435371),
     s = n(397927),
     o = n(359549),
     l = n(139286),
-    c = n(939496),
-    u = n(993401),
+    u = n(939496),
+    c = n(993401),
     d = n(996988),
-    f = n(985018);
-
-function p(e) {
-    let { application: t, analyticsLocations: n, onAction: p, onClose: _ } = e,
-        { themeType: h } = (0, c.E)(),
-        m = (0, o.A)({
-            application: t,
-            analyticsLocations: n,
-        });
+    _ = n(985018);
+function f(e) {
+    let { application: t, analyticsLocations: n, onAction: f, onClose: p } = e,
+        { themeType: h } = (0, u.E)(),
+        m = (0, o.A)({ application: t, analyticsLocations: n });
     return ((0, l.A)(
-        {
-            name: i.ImpressionNames.CLOUD_PLAY_CTA,
-            type: i.ImpressionTypes.VIEW,
-            properties: {
-                location_stack: n,
-            },
-        },
-        {
-            disableTrack: null == m,
-        },
+        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
+        { disableTrack: null == m },
         [m],
     ),
     null == m)
         ? null
         : (0, r.jsx)(a.m_, {
-              text: f.intl.string(f.t.JVwWva),
+              text: _.intl.string(_.t.JVwWva),
               position: "top",
-              children: (0, r.jsx)(u.FD, {
+              children: (0, r.jsx)(c.FD, {
                   icon: s.hpF,
-                  text: f.intl.string(f.t["jaYS/h"]),
+                  text: _.intl.string(_.t["jaYS/h"]),
                   size: "sm",
                   onClick: (e) => {
-                      e.stopPropagation(),
-                          null == p ||
-                              p({
-                                  action: "PRESS_CLOUD_PLAY_BUTTON",
-                              }),
-                          m(),
-                          null == _ || _();
+                      e.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.();
                   },
                   fullWidth: h !== d.d.MODAL_V2,
               }),

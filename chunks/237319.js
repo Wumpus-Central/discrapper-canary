@@ -1,8 +1,5 @@
-n.d(t, {
-    CH: () => a,
-    H5: () => i,
-    NQ: () => s,
-});
+"use strict";
+n.d(t, { CH: () => a, H5: () => i, NQ: () => s });
 var r = n(64700),
     i = function (e) {
         return (0, r.useEffect)(e, []);
@@ -21,7 +18,6 @@ var r = n(64700),
             }
         );
     };
-
 function s(e) {
     var t = (0, r.useRef)(void 0);
     return (

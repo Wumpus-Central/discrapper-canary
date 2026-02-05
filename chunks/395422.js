@@ -1,28 +1,19 @@
-n.d(t, {
-    Ty: () => u,
-    vU: () => d,
-}),
-    n(747238),
-    n(896048),
-    n(284009);
+"use strict";
+n.d(t, { Ty: () => c, vU: () => d }), n(284009);
 var r = n(954571),
     i = n(988102),
     a = n(652215),
     s = n(985018);
 let o = /^\d+$/,
     l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
-    c = /^[a-zA-Z0-9_\\.]+$/;
-
-function u(e) {
-    return c.test(e) || (e.includes("#") && l.test(e)) ? null : (f(e), s.intl.string(s.t.paDJBM));
+    u = /^[a-zA-Z0-9_\\.]+$/;
+function c(e) {
+    return u.test(e) || (e.includes("#") && l.test(e)) ? null : (_(e), s.intl.string(s.t.paDJBM));
 }
-
 function d(e, t) {
     switch (e) {
         case a.t02.RELATIONSHIP_INCOMING_DISABLED:
-            return s.intl.format(s.t.Oxe6Ur, {
-                discordTag: t,
-            });
+            return s.intl.format(s.t.Oxe6Ur, { discordTag: t });
         case a.t02.TOO_MANY_FRIENDS:
             return s.intl.string(s.t.tnBalD);
         case a.t02.RELATIONSHIP_ALREADY_FRIENDS:
@@ -42,13 +33,12 @@ function d(e, t) {
             return s.intl.string(s.t.paDJBM);
     }
 }
-
-function f(e) {
+function _(e) {
     let [t, n] = e.split("#");
     r.default.track(a.HAw.FRIEND_REQUEST_FAILED, {
         reason: "Invalid Username",
         query: e,
-        discrim_len: (null != n ? n : "").length,
+        discrim_len: (n ?? "").length,
         username_len: t.length,
         is_email_like: i.A.isEmail(e),
         is_invite_like: i.A.isInvite(e),

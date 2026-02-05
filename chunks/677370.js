@@ -1,6 +1,5 @@
-n.d(t, {
-    z: () => r,
-});
+"use strict";
+n.d(t, { z: () => r });
 let r = {
     Spacing: {
         PX_4: 4,

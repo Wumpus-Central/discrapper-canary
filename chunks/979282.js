@@ -1,38 +1,35 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(627968);
+n.d(t, { A: () => l });
+var i = n(627968);
 n(64700);
-var i = n(518620),
-    l = n(901319);
-
-function a(e) {
+var r = n(518620),
+    a = n(901319);
+function l(e) {
     let {
         rows: t,
         renderRow: n,
-        renderSection: a,
+        renderSection: l,
         isVirtualizedList: s,
         hasSearchQuery: o,
-        sectionFilter: c,
-        footer: u,
-        renderSectionFooter: d,
+        sectionFilter: d,
+        footer: c,
+        renderSectionFooter: u,
     } = e;
     return s
-        ? (0, r.jsx)(i.A, {
+        ? (0, i.jsx)(r.A, {
               rows: t,
               renderRow: n,
-              renderSection: a,
-              footer: u,
-              sectionFilter: c,
-              renderSectionFooter: d,
+              renderSection: l,
+              footer: c,
+              sectionFilter: d,
+              renderSectionFooter: u,
           })
-        : (0, r.jsx)(l.A, {
+        : (0, i.jsx)(a.A, {
               rows: t,
               renderRow: n,
-              renderSection: a,
-              sectionFilter: c,
+              renderSection: l,
+              sectionFilter: d,
               hasSearchQuery: o,
-              footer: u,
-              renderSectionFooter: d,
+              footer: c,
+              renderSectionFooter: u,
           });
 }

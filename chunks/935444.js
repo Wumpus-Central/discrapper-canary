@@ -1,6 +1,5 @@
-n.d(t, {
-    mf: () => c,
-});
+"use strict";
+n.d(t, { mf: () => u });
 var r = n(310784),
     i = n.n(r);
 let a = [
@@ -22,36 +21,22 @@ let a = [
     s = [0, 45, 90, 135, 180, 225, 270, 315],
     o = [20, 40, 60, 80],
     l = ["analogous", "complementary", "split-complementary", "triadic"];
-
-function c() {
+function u() {
     let e = o[Math.floor(Math.random() * o.length)],
         t = s[Math.floor(Math.random() * s.length)];
     if ("path1" == (0.2 > Math.random() ? "path1" : "path2")) {
         let n = Math.floor(Math.random() * a.length),
             r = Math.floor(Math.random() * a.length);
         for (; r === n; ) r = Math.floor(Math.random() * a.length);
-        return {
-            type: "gradient",
-            colors: [a[n], a[r]],
-            angle: t,
-            intensity: e,
-            gradientType: "two-color",
-        };
+        return { type: "gradient", colors: [a[n], a[r]], angle: t, intensity: e, gradientType: "two-color" };
     }
     {
         let n = a[Math.floor(Math.random() * a.length)],
             r = l[Math.floor(Math.random() * l.length)];
-        return {
-            type: "gradient",
-            colors: _(n, r),
-            angle: t,
-            intensity: e,
-            gradientType: r,
-        };
+        return { type: "gradient", colors: p(n, r), angle: t, intensity: e, gradientType: r };
     }
 }
-
-function u(e, t, n, r) {
+function c(e, t, n, r) {
     return [
         i()
             .hsl(r - 30, t, n)
@@ -62,26 +47,22 @@ function u(e, t, n, r) {
             .hex(),
     ];
 }
-
 function d(e, t, n, r) {
     let a = (r + 180) % 360,
         s = i().hsl(a, t, n).hex();
     return [e, i().mix(e, s, 0.5).hex(), s];
 }
-
-function f(e, t, n, r) {
+function _(e, t, n, r) {
     let a = (r + 150) % 360,
         s = (r + 210) % 360;
     return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
 }
-
-function p(e, t, n, r) {
+function f(e, t, n, r) {
     let a = (r + 120) % 360,
         s = (r + 240) % 360;
     return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
 }
-
-function _(e, t) {
+function p(e, t) {
     try {
         let n = i()(e),
             r = n.get("hsl.h"),
@@ -89,17 +70,17 @@ function _(e, t) {
             s = n.get("hsl.l");
         switch (t) {
             case "analogous":
-                return u(e, a, s, r);
+                return c(e, a, s, r);
             case "complementary":
                 return d(e, a, s, r);
             case "split-complementary":
-                return f(e, a, s, r);
+                return _(e, a, s, r);
             case "triadic":
-                return p(e, a, s, r);
+                return f(e, a, s, r);
             default:
                 return [e];
         }
-    } catch (t) {
+    } catch {
         return [e];
     }
 }

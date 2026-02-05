@@ -1,117 +1,97 @@
-n.d(t, {
-    A: () => g,
-});
+n.d(t, { A: () => f });
 var a = n(627968);
 n(64700);
-var l = n(311907),
+var s = n(311907),
     i = n(873298),
-    r = n(397927),
-    s = n(775602),
+    l = n(397927),
+    r = n(775602),
     o = n(590180),
-    c = n(4227),
-    d = n(993408),
+    d = n(4227),
+    c = n(993408),
     u = n(841702),
     m = n(544028),
-    p = n(253932),
-    h = n(287809),
-    f = n(850730),
-    x = n(385803),
-    b = n(607335);
-
-function g() {
-    var e, t, n, g, v, j, y, _;
+    h = n(253932),
+    x = n(287809),
+    p = n(850730),
+    g = n(385803),
+    _ = n(607335);
+function f() {
     (0, u.Bf)();
-    let A = (0, l.bG)([h.default], () => h.default.getCurrentUser()),
-        C = p.eh.useSetting(),
-        S = (0, l.bG)([m.A], () => m.A.theme),
-        O = C.backgroundGradientPresetId,
-        E = (0, l.bG)([c.A], () => c.A.purchases),
-        N = (0, d.x9)(E),
-        T = (0, d.$W)(E),
-        I = null == A || null == (v = A.avatarDecoration) ? void 0 : v.skuId,
-        w = null == A || null == (y = A.collectibles) || null == (j = y.nameplate) ? void 0 : j.skuId,
-        k = null != I && null != (e = N.find((e) => e.skuId === I)) ? e : null,
-        P = null != w && null != (t = T.find((e) => e.skuId === w)) ? t : null,
-        R = (0, l.bG)([o.A], () => o.A.getProduct(null == k ? void 0 : k.skuId)),
-        D = (0, l.bG)([o.A], () => o.A.getProduct(null == P ? void 0 : P.skuId)),
-        M = (0, l.bG)([s.A], () => s.A.fontSize),
-        L = (0, l.bG)([s.A], () => s.A.messageGroupSpacing),
-        U = p.Xi.useSetting();
+    let e = (0, s.bG)([x.default], () => x.default.getCurrentUser()),
+        t = h.eh.useSetting(),
+        n = (0, s.bG)([m.A], () => m.A.theme),
+        f = t.backgroundGradientPresetId,
+        v = (0, s.bG)([d.A], () => d.A.purchases),
+        b = (0, c.x9)(v),
+        j = (0, c.$W)(v),
+        A = e?.avatarDecoration?.skuId,
+        C = e?.collectibles?.nameplate?.skuId,
+        S = null != A ? (b.find((e) => e.skuId === A) ?? null) : null,
+        T = null != C ? (j.find((e) => e.skuId === C) ?? null) : null,
+        y = (0, s.bG)([o.A], () => o.A.getProduct(S?.skuId)),
+        N = (0, s.bG)([o.A], () => o.A.getProduct(T?.skuId)),
+        E = (0, s.bG)([r.A], () => r.A.fontSize),
+        I = (0, s.bG)([r.A], () => r.A.messageGroupSpacing),
+        k = h.Xi.useSetting();
     return (
-        (0, f.DB)(),
+        (0, p.DB)(),
         (0, a.jsxs)("div", {
-            className: b.kL,
+            className: _.kL,
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(r.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Randomize customization settings",
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children:
                                 "Randomly sets appearance-related settings. Leaving this tab or closing devtools will reset to your initial state.",
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Theme",
-                            onClick: f.t0,
+                            onClick: p.t0,
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Collectibles",
-                            onClick: f.ZL,
+                            onClick: p.ZL,
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Appearance Settings",
-                            onClick: f.ln,
+                            onClick: p.ln,
                         }),
                     ],
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(r.Heading, {
-                            variant: "heading-lg/semibold",
-                            children: "Current Settings",
-                        }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsx)(l.Heading, { variant: "heading-lg/semibold", children: "Current Settings" }),
+                        (0, a.jsxs)(l.Text, { variant: "text-md/normal", children: ["Theme: ", n] }),
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Theme: ", S],
+                            children: ["Client Theme ID:", " ", null != f ? g.ag[f]?.getName() : "None"],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: [
-                                "Client Theme ID:",
-                                " ",
-                                null != O ? (null == (_ = x.ag[O]) ? void 0 : _.getName()) : "None",
-                            ],
+                            children: ["Avatar Decoration: ", y?.name ?? "None"],
                         }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Avatar Decoration: ", null != (n = null == R ? void 0 : R.name) ? n : "None"],
+                            children: ["Nameplate: ", N?.name ?? "None"],
                         }),
-                        (0, a.jsxs)(r.Text, {
-                            variant: "text-md/normal",
-                            children: ["Nameplate: ", null != (g = null == D ? void 0 : D.name) ? g : "None"],
-                        }),
-                        (0, a.jsxs)(r.Text, {
-                            variant: "text-md/normal",
-                            children: ["Font Size: ", M, "px"],
-                        }),
-                        (0, a.jsxs)(r.Text, {
-                            variant: "text-md/normal",
-                            children: ["Message Spacing: ", L],
-                        }),
-                        (0, a.jsxs)(r.Text, {
+                        (0, a.jsxs)(l.Text, { variant: "text-md/normal", children: ["Font Size: ", E, "px"] }),
+                        (0, a.jsxs)(l.Text, { variant: "text-md/normal", children: ["Message Spacing: ", I] }),
+                        (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "UI Density: ",
-                                U,
+                                k,
                                 " (",
                                 (function (e) {
                                     switch (e) {
@@ -126,7 +106,7 @@ function g() {
                                         default:
                                             return "Unknown";
                                     }
-                                })(U),
+                                })(k),
                                 ")",
                             ],
                         }),

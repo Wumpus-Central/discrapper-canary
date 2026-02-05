@@ -1,23 +1,7 @@
+"use strict";
 let r;
-n.d(t, {
-    h9: () => o,
-}),
-    n(896048);
+n.d(t, { h9: () => s });
 var i = n(626584);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 try {
     r = n(
         Object(
@@ -30,16 +14,18 @@ try {
 } catch (e) {
     r = null;
 }
-let s = new i.A("AssetMap");
-async function o(e) {
-    let t = new l(),
+let a = new i.A("AssetMap");
+async function s(e) {
+    let t = new o(),
         n = Object.entries(e).map((e) => {
             let [n, r] = e;
-            return t.loadRemoteImage(n, r).catch((e) => s.warn("Failed to load canvas asset", e, n, r));
+            return t.loadRemoteImage(n, r).catch((e) => a.warn("Failed to load canvas asset", e, n, r));
         });
     return await Promise.all(n), t;
 }
-class l {
+class o {
+    assets = {};
+    fontManager;
     loadFonts() {
         return Promise.resolve();
     }
@@ -52,8 +38,5 @@ class l {
     }
     has(e) {
         return null != this.assets[e];
-    }
-    constructor() {
-        a(this, "assets", {}), a(this, "fontManager", void 0);
     }
 }

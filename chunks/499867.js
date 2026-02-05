@@ -1,8 +1,5 @@
-n.d(t, {
-    KU: () => a,
-    Zr: () => o,
-    eh: () => i,
-});
+"use strict";
+n.d(t, { KU: () => a, Zr: () => o, eh: () => i });
 let r = new Map(),
     i = (e) => (t, n, r) => {
         let i = r.subscribe;
@@ -26,7 +23,6 @@ let r = new Map(),
             e(t, n, r)
         );
     };
-
 function a(e, t) {
     let n;
     try {
@@ -70,17 +66,14 @@ let s = (e) => (t) => {
                 storage: a(() => localStorage),
                 partialize: (e) => e,
                 version: 0,
-                merge: (e, t) => ({
-                    ...t,
-                    ...e,
-                }),
+                merge: (e, t) => ({ ...t, ...e }),
                 ...t,
             },
-            c = !1,
-            u = new Set(),
+            u = !1,
+            c = new Set(),
             d = new Set(),
-            f = l.storage;
-        if (!f)
+            _ = l.storage;
+        if (!_)
             return e(
                 (...e) => {
                     console.warn(
@@ -91,29 +84,24 @@ let s = (e) => (t) => {
                 r,
                 i,
             );
-        let p = () => {
-                let e = l.partialize({
-                    ...r(),
-                });
-                return f.setItem(l.name, {
-                    state: e,
-                    version: l.version,
-                });
+        let f = () => {
+                let e = l.partialize({ ...r() });
+                return _.setItem(l.name, { state: e, version: l.version });
             },
-            _ = i.setState;
-        i.setState = (e, t) => (_(e, t), p());
-        let h = e((...e) => (n(...e), p()), r, i);
+            p = i.setState;
+        i.setState = (e, t) => (p(e, t), f());
+        let h = e((...e) => (n(...e), f()), r, i);
         i.getInitialState = () => h;
         let m = () => {
             var e, t;
-            if (!f) return;
-            (c = !1),
-                u.forEach((e) => {
+            if (!_) return;
+            (u = !1),
+                c.forEach((e) => {
                     var t;
                     return e(null != (t = r()) ? t : h);
                 });
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
-            return s(f.getItem.bind(f))(l.name)
+            return s(_.getItem.bind(_))(l.name)
                 .then((e) => {
                     if (e)
                         if ("number" != typeof e.version || e.version === l.version) return [!1, e.state];
@@ -131,10 +119,10 @@ let s = (e) => (t) => {
                 .then((e) => {
                     var t;
                     let [i, a] = e;
-                    if ((n((o = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return p();
+                    if ((n((o = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return f();
                 })
                 .then(() => {
-                    null == i || i(o, void 0), (o = r()), (c = !0), d.forEach((e) => e(o));
+                    null == i || i(o, void 0), (o = r()), (u = !0), d.forEach((e) => e(o));
                 })
                 .catch((e) => {
                     null == i || i(void 0, e);
@@ -143,22 +131,18 @@ let s = (e) => (t) => {
         return (
             (i.persist = {
                 setOptions: (e) => {
-                    (l = {
-                        ...l,
-                        ...e,
-                    }),
-                        e.storage && (f = e.storage);
+                    (l = { ...l, ...e }), e.storage && (_ = e.storage);
                 },
                 clearStorage: () => {
-                    null == f || f.removeItem(l.name);
+                    null == _ || _.removeItem(l.name);
                 },
                 getOptions: () => l,
                 rehydrate: () => m(),
-                hasHydrated: () => c,
+                hasHydrated: () => u,
                 onHydrate: (e) => (
-                    u.add(e),
+                    c.add(e),
                     () => {
-                        u.delete(e);
+                        c.delete(e);
                     }
                 ),
                 onFinishHydration: (e) => (

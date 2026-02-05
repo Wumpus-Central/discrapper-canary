@@ -1,16 +1,9 @@
-n.d(t, {
-    E: () => i,
-});
-var r = n(73153);
-
-function i(e, t, n) {
+"use strict";
+n.d(t, { E: () => s });
+var i = n(73153);
+function s(e, t, n) {
     return (
-        r.h.dispatch({
-            type: "GUILD_SETTINGS_WIDGET_UPDATE",
-            guildId: e,
-            enabled: t,
-            channelId: null != n ? n : null,
-        }),
+        i.h.dispatch({ type: "GUILD_SETTINGS_WIDGET_UPDATE", guildId: e, enabled: t, channelId: n ?? null }),
         Promise.resolve(!0)
     );
 }

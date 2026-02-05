@@ -1,20 +1,13 @@
-r.d(t, {
-    A: () => l,
-    W: () => i,
-}),
-    r(747238);
-var a = r(627968);
-r(64700);
-var n = r(960488),
-    s = r(323125);
-
-function i() {
+n.d(t, { A: () => s, W: () => l });
+var i = n(627968);
+n(64700);
+var r = n(960488),
+    a = n(323125);
+function l() {
     let e = location.pathname + location.search;
-    return (0, s.T2)(e, !1);
+    return (0, a.T2)(e, !1);
 }
-r(652215), r(436317);
-let l = function () {
-    return (0, a.jsx)(n.rd, {
-        to: i(),
-    });
+n(652215), n(436317);
+let s = function () {
+    return (0, i.jsx)(r.rd, { to: l() });
 };

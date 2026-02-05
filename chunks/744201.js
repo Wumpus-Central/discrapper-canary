@@ -1,16 +1,7 @@
-l.d(t, {
-    A: () => n,
-});
-var r = l(827734);
-
-function n(e) {
+n.d(t, { A: () => l });
+var r = n(827734);
+function l(e) {
     return e
-        ? {
-              textColor: "text-default",
-              iconColor: r.A.colors.TEXT_DEFAULT,
-          }
-        : {
-              textColor: "text-muted",
-              iconColor: r.A.colors.TEXT_MUTED,
-          };
+        ? { textColor: "text-default", iconColor: r.A.colors.TEXT_DEFAULT }
+        : { textColor: "text-muted", iconColor: r.A.colors.TEXT_MUTED };
 }

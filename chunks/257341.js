@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => p,
-});
+"use strict";
+r.d(t, { A: () => p });
 var a = r(1139),
     n = r(26412),
     s = r(658),
@@ -36,20 +35,15 @@ var a = r(1139),
                         (0, c.A)(this, e)
                     );
                 });
-
         function f(e) {
             var t;
             return (
                 (0, n.A)(this, f),
                 (t = r.call(this, e)),
                 (0, u.A)((0, o.A)(t), "handleClick", function () {
-                    t.setState({
-                        expanded: !t.state.expanded,
-                    });
+                    t.setState({ expanded: !t.state.expanded });
                 }),
-                (t.state = {
-                    expanded: !1,
-                }),
+                (t.state = { expanded: !1 }),
                 t
             );
         }
@@ -68,9 +62,7 @@ var a = r(1139),
                             ? b.createElement("div", t("itemRange", this.state.expanded), s(this.props, r, n))
                             : b.createElement(
                                   "div",
-                                  (0, a.A)({}, t("itemRange", this.state.expanded), {
-                                      onClick: this.handleClick,
-                                  }),
+                                  (0, a.A)({}, t("itemRange", this.state.expanded), { onClick: this.handleClick }),
                                   b.createElement(h.A, {
                                       nodeType: o,
                                       styling: t,

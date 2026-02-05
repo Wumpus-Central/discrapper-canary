@@ -1,134 +1,42 @@
-n.d(t, {
-    W: () => C,
-    X: () => N,
-}),
-    n(114821),
-    n(339614),
-    n(321073),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { W: () => S, X: () => v }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(812729),
     l = n.n(o),
-    c = n(970622),
-    u = n(158954),
+    u = n(970622),
+    c = n(158954),
     d = n(955572),
-    f = n(775602),
-    p = n(298063),
-    _ = n(477782),
+    _ = n(775602),
+    f = n(298063),
+    p = n(477782),
     h = n(900283),
     m = n(225012),
     g = n(885621),
     E = n(658122);
-
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function O(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function v(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
 function A(e) {
     return null == e
         ? []
-        : i.Children.toArray(e).flatMap((e) => {
-              var t;
-              return null == e
-                  ? []
-                  : Array.isArray(e)
-                    ? A(e)
-                    : e.type === i.Fragment
-                      ? null != (t = A(e.props.children))
-                          ? t
-                          : []
-                      : [e];
-          });
+        : i.Children.toArray(e).flatMap((e) =>
+              null == e ? [] : Array.isArray(e) ? A(e) : e.type === i.Fragment ? (A(e.props.children) ?? []) : [e],
+          );
 }
-
 function I(e) {
     return A(e).reduce((e, t) => {
-        var n, r;
-        if (t.type === _.bX)
-            return (
-                e.push({
-                    type: "separator",
-                    navigable: !1,
-                }),
-                e
-            );
-        if (t.type === _.rX) {
+        if (t.type === p.bX) return e.push({ type: "separator", navigable: !1 }), e;
+        if (t.type === p.rX) {
             let n = I(t.props.children);
             return (
                 n.length > 0 &&
-                    (e.push({
-                        type: "groupstart",
-                        length: n.length,
-                        navigable: !1,
-                        props: t.props,
-                    }),
+                    (e.push({ type: "groupstart", length: n.length, navigable: !1, props: t.props }),
                     e.push(...n),
-                    e.push({
-                        type: "groupend",
-                        length: n.length,
-                        navigable: !1,
-                        props: t.props,
-                    })),
+                    e.push({ type: "groupend", length: n.length, navigable: !1, props: t.props })),
                 e
             );
         }
-        if (t.type === _.Dr)
+        if (t.type === p.Dr)
             return (
                 e.push(
                     null != t.props.render
@@ -155,46 +63,14 @@ function I(e) {
                 ),
                 e
             );
-        if (t.type === _.sL)
-            return (
-                e.push({
-                    type: "checkbox",
-                    key: t.props.id,
-                    navigable: !0,
-                    props: t.props,
-                }),
-                e
-            );
-        if (t.type === _.iD)
-            return (
-                e.push({
-                    type: "radio",
-                    key: t.props.id,
-                    navigable: !0,
-                    props: t.props,
-                }),
-                e
-            );
-        else if (t.type === _.fP)
-            return (
-                e.push({
-                    type: "switch",
-                    key: t.props.id,
-                    navigable: !0,
-                    props: t.props,
-                }),
-                e
-            );
-        else if (t.type === _.aK)
+        if (t.type === p.sL) return e.push({ type: "checkbox", key: t.props.id, navigable: !0, props: t.props }), e;
+        if (t.type === p.iD) return e.push({ type: "radio", key: t.props.id, navigable: !0, props: t.props }), e;
+        else if (t.type === p.fP) return e.push({ type: "switch", key: t.props.id, navigable: !0, props: t.props }), e;
+        else if (t.type === p.aK)
             return (
                 e.push(
                     null != t.props.control
-                        ? {
-                              type: "control",
-                              key: t.props.id,
-                              navigable: !0,
-                              props: t.props,
-                          }
+                        ? { type: "control", key: t.props.id, navigable: !0, props: t.props }
                         : {
                               type: "compositecontrol",
                               key: t.props.id,
@@ -206,147 +82,101 @@ function I(e) {
                 e
             );
         throw Error(
-            "Menu API only allows Items and groups of Items as children. Received "
-                .concat(null != (n = null != (r = null == t ? void 0 : t.type) ? r : t) ? n : typeof t, " (")
-                .concat(typeof t, ") instead"),
+            `Menu API only allows Items and groups of Items as children. Received ${t?.type ?? t ?? typeof t} (${typeof t}) instead`,
         );
     }, []);
 }
-
-function S(e) {
+function T(e) {
     return e.reduce(
         (e, t) => (
             t.navigable &&
-                e.push({
-                    key: t.key,
-                    children: "item" === t.type && null != t.children ? S(t.children) : void 0,
-                }),
+                e.push({ key: t.key, children: "item" === t.type && null != t.children ? T(t.children) : void 0 }),
             e
         ),
         [],
     );
 }
-
-function T(e, t, n, i) {
+function y(e, t, n, i) {
     let a = 0,
         s = [];
     return e.reduce((e, o, l) => {
-        let c = s.length > 0 ? s[s.length - 1] : e;
+        let u = s.length > 0 ? s[s.length - 1] : e;
         switch (o.type) {
             case "separator":
-                c.push((0, r.jsx)(m.wv, {}, "separator-".concat(l))), (a = 0);
+                u.push((0, r.jsx)(m.wv, {}, `separator-${l}`)), (a = 0);
                 break;
             case "groupstart":
-                a > 0 && o.length > 0 && (c.push((0, r.jsx)(m.wv, {}, "separator-".concat(l))), (a = 0)), s.push([]);
+                a > 0 && o.length > 0 && (u.push((0, r.jsx)(m.wv, {}, `separator-${l}`)), (a = 0)), s.push([]);
                 break;
             case "groupend":
-                s.length > 0 &&
-                    e.push(
-                        (0, r.jsx)(
-                            m.YJ,
-                            b(
-                                {
-                                    contents: s.pop(),
-                                },
-                                o.props,
-                            ),
-                            "group-".concat(l),
-                        ),
-                    );
+                s.length > 0 && e.push((0, r.jsx)(m.YJ, { contents: s.pop(), ...o.props }, `group-${l}`));
                 break;
             case "item": {
-                let { children: e, childRowHeight: s, onChildrenScroll: l, listClassName: u, subMenuClassName: d } = o,
-                    f = null != e,
-                    p = [...n, o.key],
-                    _ = t.isFocused(p),
-                    h =
-                        null != e
-                            ? {
-                                  "aria-haspopup": !0,
-                              }
-                            : {},
+                let { children: e, childRowHeight: s, onChildrenScroll: l, listClassName: c, subMenuClassName: d } = o,
+                    _ = null != e,
+                    f = [...n, o.key],
+                    p = t.isFocused(f),
+                    h = null != e ? { "aria-haspopup": !0 } : {},
                     g = (0, r.jsx)(
                         m.q7,
-                        v(
-                            b(
-                                {},
-                                o.props,
-                                null != o.label
-                                    ? {
-                                          label: o.label,
-                                      }
-                                    : {
-                                          void_label: o.void_label,
-                                      },
-                            ),
-                            {
-                                hasSubmenu: null != e,
-                                isFocused: _,
-                                menuItemProps: b(
-                                    {},
-                                    t.getItemProps({
-                                        path: p,
-                                        hasSubmenu: f,
-                                    }),
-                                    h,
-                                ),
-                                onClose: i,
-                            },
-                        ),
+                        {
+                            ...o.props,
+                            ...(null != o.label ? { label: o.label } : { void_label: o.void_label }),
+                            hasSubmenu: null != e,
+                            isFocused: p,
+                            menuItemProps: { ...t.getItemProps({ path: f, hasSubmenu: _ }), ...h },
+                            onClose: i,
+                        },
                         o.key,
                     );
-                f
+                _
                     ? null != s
-                        ? c.push(
+                        ? u.push(
                               (0, r.jsx)(
                                   m.t6,
-                                  v(b({}, o.props), {
+                                  {
+                                      ...o.props,
                                       parentItem: g,
-                                      isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({
-                                          path: p,
-                                      }),
-                                      rows: T(e, t, p, i),
+                                      isFocused: p,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: f }),
+                                      rows: y(e, t, f, i),
                                       rowHeight: s,
                                       onScroll: l,
-                                      listClassName: u,
-                                  }),
-                                  "".concat(o.key, "-submenu"),
+                                      listClassName: c,
+                                  },
+                                  `${o.key}-submenu`,
                               ),
                           )
-                        : c.push(
+                        : u.push(
                               (0, r.jsx)(
                                   m.hA,
-                                  v(b({}, o.props), {
+                                  {
+                                      ...o.props,
                                       subMenuClassName: d,
                                       parentItem: g,
-                                      isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({
-                                          path: p,
-                                      }),
-                                      renderSubmenu: () => T(e, t, p, i),
-                                  }),
-                                  "".concat(o.key, "-submenu"),
+                                      isFocused: p,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: f }),
+                                      renderSubmenu: () => y(e, t, f, i),
+                                  },
+                                  `${o.key}-submenu`,
                               ),
                           )
-                    : c.push(g),
+                    : u.push(g),
                     a++;
                 break;
             }
             case "customitem": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.FC,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                                navigable: o.navigable,
-                            }),
+                            menuItemProps: t.getItemProps({ path: e, navigable: o.navigable }),
                             onClose: i,
                             children: o.render,
-                        }),
+                        },
                         o.key,
                     ),
                 ),
@@ -355,16 +185,14 @@ function T(e, t, n, i) {
             }
             case "checkbox": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.H_,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                                role: "menuitemcheckbox",
-                            }),
-                        }),
+                            menuItemProps: t.getItemProps({ path: e, role: "menuitemcheckbox" }),
+                        },
                         o.key,
                     ),
                 ),
@@ -373,16 +201,14 @@ function T(e, t, n, i) {
             }
             case "radio": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.hN,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                                role: "menuitemradio",
-                            }),
-                        }),
+                            menuItemProps: t.getItemProps({ path: e, role: "menuitemradio" }),
+                        },
                         o.key,
                     ),
                 ),
@@ -391,16 +217,14 @@ function T(e, t, n, i) {
             }
             case "switch": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.av,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                                role: "menuitemcheckbox",
-                            }),
-                        }),
+                            menuItemProps: t.getItemProps({ path: e, role: "menuitemcheckbox" }),
+                        },
                         o.key,
                     ),
                 ),
@@ -409,16 +233,15 @@ function T(e, t, n, i) {
             }
             case "control": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.TV,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                            }),
+                            menuItemProps: t.getItemProps({ path: e }),
                             onClose: i,
-                        }),
+                        },
                         o.key,
                     ),
                 ),
@@ -427,17 +250,16 @@ function T(e, t, n, i) {
             }
             case "compositecontrol": {
                 let e = [...n, o.key];
-                c.push(
+                u.push(
                     (0, r.jsx)(
                         m.O1,
-                        v(b({}, o.props), {
+                        {
+                            ...o.props,
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({
-                                path: e,
-                            }),
+                            menuItemProps: t.getItemProps({ path: e }),
                             onClose: i,
                             children: o.children,
-                        }),
+                        },
                         o.key,
                     ),
                 ),
@@ -447,111 +269,81 @@ function T(e, t, n, i) {
         return e;
     }, []);
 }
-
-function C(e) {
-    var t;
+function S(e) {
     let {
-            navId: n,
-            variant: a = "flexible",
-            hideScroller: o = !1,
-            className: _,
-            children: y,
-            onClose: O,
-            onSelect: A,
-            onInteraction: C,
+            navId: t,
+            variant: n = "flexible",
+            hideScroller: a = !1,
+            className: o,
+            children: p,
+            onClose: A,
+            onSelect: S,
+            onInteraction: v,
         } = e,
-        N = I(y),
-        R = S(N),
-        P = i.useRef([]);
-    l()(P.current, R) || (P.current = R);
-    let D = (0, p.Y)("Menu"),
-        x = null == (t = N.find((e) => null != e.key)) ? void 0 : t.key,
-        L = (0, c.A)({
-            navId: n,
-            items: P.current,
-            initialFocusPath: f.A.keyboardModeEnabled && null != x ? [x] : [],
-            closeMenu: O,
-            defaultIsUsingKeyboardNavigation: f.A.keyboardModeEnabled,
+        b = I(p),
+        N = T(b),
+        R = i.useRef([]);
+    l()(R.current, N) || (R.current = N);
+    let O = (0, f.Y)("Menu"),
+        D = b.find((e) => null != e.key)?.key,
+        L = (0, u.A)({
+            navId: t,
+            items: R.current,
+            initialFocusPath: _.A.keyboardModeEnabled && null != D ? [D] : [],
+            closeMenu: A,
+            defaultIsUsingKeyboardNavigation: _.A.keyboardModeEnabled,
         });
     i.useEffect(() => {
-        L.isUsingKeyboardNavigation ? f.A.keyboardModeEnabled || (0, d.uS)() : f.A.keyboardModeEnabled && (0, d.Bm)();
+        L.isUsingKeyboardNavigation ? _.A.keyboardModeEnabled || (0, d.uS)() : _.A.keyboardModeEnabled && (0, d.Bm)();
     }, [L.isUsingKeyboardNavigation]);
-    let j = i.useRef(null);
-    (0, u.tjt)(j);
-    let M = o ? u.d_W : u.IpV,
-        k = i.useMemo(
-            () => ({
-                onSelect: A,
-                onInteraction: C,
-            }),
-            [A, C],
-        );
+    let w = i.useRef(null);
+    (0, c.tjt)(w);
+    let x = a ? c.d_W : c.IpV,
+        P = i.useMemo(() => ({ onSelect: S, onInteraction: v }), [S, v]);
     return (0, r.jsx)(h.x.Provider, {
-        value: k,
-        children: (0, r.jsx)(
-            "div",
-            v(
-                b(
-                    {
-                        className: s()(E.menu, E[a], _),
-                        style: {
-                            "--custom-menu-viewport-padding": D ? "".concat(g.FD, "px") : "".concat(g.vx, "px"),
-                            "--custom-menu-flexible-min-width": D ? "144px" : "188px",
-                        },
-                    },
-                    L.getContainerProps(),
-                ),
-                {
-                    ref: j,
-                    "aria-label": e["aria-label"],
-                    children: (0, r.jsxs)(M, {
-                        className: E.scroller,
-                        children: [
-                            0 === N.length &&
-                                (0, r.jsx)(m.q7, {
-                                    disabled: !0,
-                                    void_label: () => (0, r.jsx)(w, {}),
-                                    menuItemProps: L.getItemProps({
-                                        path: ["empty"],
-                                    }),
-                                    isFocused: !1,
-                                    onFocus: () => {},
-                                    onClose: O,
-                                }),
-                            N.length > 0 && T(N, L, [], O),
-                        ],
-                    }),
-                },
-            ),
-        ),
+        value: P,
+        children: (0, r.jsx)("div", {
+            className: s()(E.menu, E[n], o),
+            style: {
+                "--custom-menu-viewport-padding": O ? `${g.FD}px` : `${g.vx}px`,
+                "--custom-menu-flexible-min-width": O ? "144px" : "188px",
+            },
+            ...L.getContainerProps(),
+            ref: w,
+            "aria-label": e["aria-label"],
+            children: (0, r.jsxs)(x, {
+                className: E.scroller,
+                children: [
+                    0 === b.length &&
+                        (0, r.jsx)(m.q7, {
+                            disabled: !0,
+                            void_label: () => (0, r.jsx)(C, {}),
+                            menuItemProps: L.getItemProps({ path: ["empty"] }),
+                            isFocused: !1,
+                            onFocus: () => {},
+                            onClose: A,
+                        }),
+                    b.length > 0 && y(b, L, [], A),
+                ],
+            }),
+        }),
     });
 }
-
-function N() {
-    return (0, r.jsx)("div", {
-        className: s()(E.menu, E.loader, E.flexible),
-        children: (0, r.jsx)(u.y$y, {}),
-    });
+function v() {
+    return (0, r.jsx)("div", { className: s()(E.menu, E.loader, E.flexible), children: (0, r.jsx)(c.y$y, {}) });
 }
-
-function w() {
+function C() {
     let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
         t = "♫ ⊂(｡◕‿‿◕｡⊂) ♪",
         [n, a] = i.useState(e);
     return (
         i.useEffect(() => {
-            if (f.A.useReducedMotion) return;
+            if (_.A.useReducedMotion) return;
             let n = setInterval(() => {
                 a((n) => (n === e ? t : e));
             }, 700);
             return () => clearInterval(n);
         }, []),
-        (0, r.jsx)("div", {
-            style: {
-                width: "100%",
-                textAlign: "center",
-            },
-            children: n,
-        })
+        (0, r.jsx)("div", { style: { width: "100%", textAlign: "center" }, children: n })
     );
 }

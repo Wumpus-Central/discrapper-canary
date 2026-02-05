@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Df: "shopPageContainer__4485d",
     tV: "giftModalContainer__4485d",

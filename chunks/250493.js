@@ -1,53 +1,41 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
 var i = n(92674),
     a = n(421380),
-    o = n(397927),
-    s = n(263063),
+    s = n(397927),
+    o = n(263063),
     l = n(721923),
-    c = n(652215),
-    u = n(12373);
+    u = n(652215),
+    c = n(12373);
 let d = function (e) {
     let { closeLayer: t, guild: n, isVisible: d } = e,
-        f = (0, o.zhh)({
+        _ = (0, s.zhh)({
             transform: d ? "translateY(-100%)" : "translateY(0%)",
-            config: {
-                tension: 120,
-                friction: 12,
-            },
+            config: { tension: 120, friction: 12 },
         });
     return (0, r.jsx)(i.animated.div, {
-        className: u.iE,
-        style: f,
+        className: c.iE,
+        style: _,
         children: (0, r.jsxs)("div", {
-            className: u.iJ,
+            className: c.iJ,
             children: [
                 (0, r.jsxs)("div", {
-                    className: u.OA,
+                    className: c.OA,
                     children: [
-                        (0, r.jsx)(s.A, {
-                            className: u.$f,
-                            guild: n,
-                            size: s.A.Sizes.SMALL,
-                        }),
-                        (0, r.jsx)(o.Text, {
-                            className: u.J5,
-                            variant: "text-md/semibold",
-                            children: n.name,
-                        }),
+                        (0, r.jsx)(o.A, { className: c.$f, guild: n, size: o.A.Sizes.SMALL }),
+                        (0, r.jsx)(s.Text, { className: c.J5, variant: "text-md/semibold", children: n.name }),
                     ],
                 }),
                 (0, r.jsx)(l.A, {
-                    className: u.lI,
+                    className: c.lI,
                     guild: n,
                     analyticsLocation: {
-                        page: c.liQ.PREMIUM_GUILD_USER_MODAL,
-                        section: c.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
-                        object: c.ZSU.BUTTON_CTA,
-                        objectType: c.AnalyticsObjectTypes.BUY,
+                        page: u.liQ.PREMIUM_GUILD_USER_MODAL,
+                        section: u.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+                        object: u.ZSU.BUTTON_CTA,
+                        objectType: u.AnalyticsObjectTypes.BUY,
                     },
                     closeLayer: t,
                     pauseAnimation: !d,

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     G3: "splashBackground__742a4",
     $k: "centerFlex__742a4",

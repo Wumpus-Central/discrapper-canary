@@ -1,51 +1,35 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(938796);
+"use strict";
+n.d(t, { A: () => C }), n(938796);
 var r = n(392421),
     i = n(562465),
     a = n(73153),
     s = n(157559),
     o = n(465532),
     l = n(58149),
-    c = n(721768),
-    u = n(95701),
+    u = n(721768),
+    c = n(95701),
     d = n(961350),
-    f = n(734057),
-    p = n(576705),
-    _ = n(403362),
+    _ = n(734057),
+    f = n(576705),
+    p = n(403362),
     h = n(45494),
     m = n(152007),
     g = n(780057),
     E = n(707539),
-    b = n(736130),
-    y = n(652215),
-    O = n(746080),
-    A = n(985018);
-
-function v(e, t) {
-    return i.Bo.patch({
-        url: y.Rsh.CHANNEL(e.id),
-        body: t,
-        rejectWithError: !1,
-    }).then(
+    A = n(736130),
+    I = n(652215),
+    T = n(746080),
+    y = n(985018);
+function S(e, t) {
+    return i.Bo.patch({ url: I.Rsh.CHANNEL(e.id), body: t, rejectWithError: !1 }).then(
         (t) => (
-            a.h.dispatch({
-                type: "THREAD_UPDATE",
-                channel: (0, u.UE)(t.body),
-            }),
-            e.isForumPost() &&
-                null != e.parent_id &&
-                a.h.dispatch({
-                    type: "RESORT_THREADS",
-                    channelId: e.parent_id,
-                }),
+            a.h.dispatch({ type: "THREAD_UPDATE", channel: (0, c.UE)(t.body) }),
+            e.isForumPost() && null != e.parent_id && a.h.dispatch({ type: "RESORT_THREADS", channelId: e.parent_id }),
             t
         ),
     );
 }
-
-function S(e, t) {
+function v(e, t) {
     a.h.dispatch({
         type: "THREAD_MEMBER_LOCAL_UPDATE",
         id: e.id,
@@ -54,281 +38,149 @@ function S(e, t) {
         isJoining: t,
     });
 }
-let I = {
+let C = {
     archiveThread(e, t) {
-        let n = {
-            archived: !0,
-        };
-        return t && (n.locked = !0), v(e, n);
+        let n = { archived: !0 };
+        return t && (n.locked = !0), S(e, n);
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
-        return (
-            t && (await this.unarchiveThread(e, !1)),
-            v(e, {
-                locked: !0,
-                archived: t,
-            })
-        );
+        return t && (await this.unarchiveThread(e, !1)), S(e, { locked: !0, archived: t });
     },
     async unlockThread(e) {
         let t = e.isArchivedThread();
-        return (
-            t && (await this.unarchiveThread(e, !0)),
-            v(e, {
-                locked: !1,
-                archived: t,
-            })
-        );
+        return t && (await this.unarchiveThread(e, !0)), S(e, { locked: !1, archived: t });
     },
     async unarchiveThread(e, t) {
-        let n = {
-                archived: !1,
-            },
+        let n = { archived: !1 },
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
-            return await v(e, n);
+            return await S(e, n);
         } catch (e) {
-            var i, a;
             throw (
-                ((null == (i = e.body) ? void 0 : i.code) === y.t02.TOO_MANY_THREADS
+                (e.body?.code === I.t02.TOO_MANY_THREADS
                     ? s.A.show({
-                          title: r ? A.intl.string(A.t.kwyWNX) : A.intl.string(A.t["PeIE/r"]),
-                          body: r ? A.intl.string(A.t.KGaiEK) : A.intl.string(A.t.P0wT5S),
+                          title: r ? y.intl.string(y.t.kwyWNX) : y.intl.string(y.t["PeIE/r"]),
+                          body: r ? y.intl.string(y.t.KGaiEK) : y.intl.string(y.t.P0wT5S),
                       })
-                    : (null == (a = e.body) ? void 0 : a.code) === y.t02.TOO_MANY_ANNOUNCEMENT_THREADS
-                      ? s.A.show({
-                            title: A.intl.string(A.t["PeIE/r"]),
-                            body: A.intl.string(A.t.jDMxz2),
-                        })
+                    : e.body?.code === I.t02.TOO_MANY_ANNOUNCEMENT_THREADS
+                      ? s.A.show({ title: y.intl.string(y.t["PeIE/r"]), body: y.intl.string(y.t.jDMxz2) })
                       : 429 === e.status
                         ? s.A.show({
-                              title: r ? A.intl.string(A.t.kwyWNX) : A.intl.string(A.t["PeIE/r"]),
-                              body: A.intl.string(A.t.Whhv4w),
+                              title: r ? y.intl.string(y.t.kwyWNX) : y.intl.string(y.t["PeIE/r"]),
+                              body: y.intl.string(y.t.Whhv4w),
                           })
-                        : s.A.show({
-                              title: A.intl.string(A.t.j2d6Km),
-                              body: A.intl.string(A.t.fEptJP),
-                          }),
+                        : s.A.show({ title: y.intl.string(y.t.j2d6Km), body: y.intl.string(y.t.fEptJP) }),
                 e)
             );
         }
     },
     async unarchiveThreadIfNecessary(e) {
-        var t;
-        let n = f.A.getChannel(e),
-            r = p.A.can(y.xBc.MANAGE_THREADS, n);
-        null != n &&
-            n.isArchivedThread() &&
-            (r || (null == (t = n.threadMetadata) ? void 0 : t.locked) !== !0) &&
-            (await this.unarchiveThread(n, !1));
+        let t = _.A.getChannel(e),
+            n = f.A.can(I.xBc.MANAGE_THREADS, t);
+        null != t &&
+            t.isArchivedThread() &&
+            (n || t.threadMetadata?.locked !== !0) &&
+            (await this.unarchiveThread(t, !1));
     },
-    setInvitable: (e, t) =>
-        v(e, {
-            invitable: t,
-        }),
+    setInvitable: (e, t) => S(e, { invitable: t }),
     async joinThread(e, t) {
-        e.isForumPost() && S(e, !0);
+        e.isForumPost() && v(e, !0);
         try {
-            return await i.Bo.post({
-                url: y.Rsh.THREAD_MEMBER(e.id),
-                query: {
-                    location: t,
-                },
-                rejectWithError: !1,
-            });
+            return await i.Bo.post({ url: I.Rsh.THREAD_MEMBER(e.id), query: { location: t }, rejectWithError: !1 });
         } catch (t) {
-            var n;
-            if ((null == (n = t.body) ? void 0 : n.code) === y.t02.TOO_MANY_THREAD_MEMBERS) {
+            if (t.body?.code === I.t02.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.A.show({
-                    title: t ? A.intl.string(A.t.EMYJFi) : A.intl.string(A.t.gtdVcs),
-                    body: t ? A.intl.string(A.t.QYyad3) : A.intl.string(A.t.abMwgm),
+                    title: t ? y.intl.string(y.t.EMYJFi) : y.intl.string(y.t.gtdVcs),
+                    body: t ? y.intl.string(y.t.QYyad3) : y.intl.string(y.t.abMwgm),
                 });
-            } else
-                s.A.show({
-                    title: A.intl.string(A.t.j2d6Km),
-                    body: A.intl.string(A.t.fEptJP),
-                });
-            e.isForumPost() && S(e, !1);
+            } else s.A.show({ title: y.intl.string(y.t.j2d6Km), body: y.intl.string(y.t.fEptJP) });
+            e.isForumPost() && v(e, !1);
         }
     },
     async addMember(e, t, n) {
         try {
-            return await i.Bo.post({
-                url: y.Rsh.THREAD_MEMBER(e.id, t),
-                query: {
-                    location: n,
-                },
-                rejectWithError: !1,
-            });
+            return await i.Bo.post({ url: I.Rsh.THREAD_MEMBER(e.id, t), query: { location: n }, rejectWithError: !1 });
         } catch (t) {
-            var r;
-            if ((null == (r = t.body) ? void 0 : r.code) === y.t02.TOO_MANY_THREAD_MEMBERS) {
+            if (t.body?.code === I.t02.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.A.show({
-                    title: t ? A.intl.string(A.t["0yAqqN"]) : A.intl.string(A.t.YErysD),
-                    body: t ? A.intl.string(A.t.QYyad3) : A.intl.string(A.t.abMwgm),
+                    title: t ? y.intl.string(y.t["0yAqqN"]) : y.intl.string(y.t.YErysD),
+                    body: t ? y.intl.string(y.t.QYyad3) : y.intl.string(y.t.abMwgm),
                 });
-            } else
-                s.A.show({
-                    title: A.intl.string(A.t.j2d6Km),
-                    body: A.intl.string(A.t.fEptJP),
-                });
+            } else s.A.show({ title: y.intl.string(y.t.j2d6Km), body: y.intl.string(y.t.fEptJP) });
         }
     },
     leaveThread: (e, t) => (
-        e.isForumPost() && S(e, !1),
-        i.Bo.del({
-            url: y.Rsh.THREAD_MEMBER(e.id),
-            query: {
-                location: t,
-            },
-            rejectWithError: !1,
-        })
+        e.isForumPost() && v(e, !1),
+        i.Bo.del({ url: I.Rsh.THREAD_MEMBER(e.id), query: { location: t }, rejectWithError: !1 })
     ),
     removeMember: (e, t, n) =>
-        i.Bo.del({
-            url: y.Rsh.THREAD_MEMBER(e, t),
-            query: {
-                location: n,
-            },
-            rejectWithError: !1,
-        }),
+        i.Bo.del({ url: I.Rsh.THREAD_MEMBER(e, t), query: { location: n }, rejectWithError: !1 }),
     setAutoArchiveDuration: (e, t) =>
-        i.Bo.patch({
-            url: y.Rsh.CHANNEL(e.id),
-            body: {
-                auto_archive_duration: t,
-            },
-            rejectWithError: !1,
-        }),
+        i.Bo.patch({ url: I.Rsh.CHANNEL(e.id), body: { auto_archive_duration: t }, rejectWithError: !1 }),
     pin(e) {
-        let t = e.flags | O.lx.PINNED;
+        let t = e.flags | T.lx.PINNED;
         this.updateFlags(e, t, e.isArchivedThread());
     },
     unpin(e) {
-        let t = e.flags & ~O.lx.PINNED;
+        let t = e.flags & ~T.lx.PINNED;
         this.updateFlags(e, t);
     },
     async updateFlags(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        a.h.dispatch({
-            type: "THREAD_UPDATE",
-            channel: e.merge({
-                flags: t,
-            }),
-        });
-        let r = {
-            flags: t,
-        };
+        a.h.dispatch({ type: "THREAD_UPDATE", channel: e.merge({ flags: t }) });
+        let r = { flags: t };
         n && (r.archived = !1);
         try {
-            await i.Bo.patch({
-                url: y.Rsh.CHANNEL(e.id),
-                body: r,
-                rejectWithError: !0,
-            });
-        } catch (t) {
-            a.h.dispatch({
-                type: "THREAD_UPDATE",
-                channel: e,
-            });
+            await i.Bo.patch({ url: I.Rsh.CHANNEL(e.id), body: r, rejectWithError: !0 });
+        } catch {
+            a.h.dispatch({ type: "THREAD_UPDATE", channel: e });
         }
     },
     async replacePin(e, t) {
-        let n = e.merge({
-                flags: e.flags & ~O.lx.PINNED,
-            }),
-            r = t.merge({
-                flags: t.flags | O.lx.PINNED,
-            });
-        a.h.dispatch({
-            type: "THREAD_UPDATE",
-            channel: n,
-        }),
-            a.h.dispatch({
-                type: "THREAD_UPDATE",
-                channel: r,
-            }),
+        let n = e.merge({ flags: e.flags & ~T.lx.PINNED }),
+            r = t.merge({ flags: t.flags | T.lx.PINNED });
+        a.h.dispatch({ type: "THREAD_UPDATE", channel: n }),
+            a.h.dispatch({ type: "THREAD_UPDATE", channel: r }),
             await this.unarchiveThreadIfNecessary(e.id),
             await this.unarchiveThreadIfNecessary(t.id);
         try {
             await i.Bo.patch({
-                url: y.Rsh.CHANNEL(e.id),
-                body: {
-                    flags: e.flags & ~O.lx.PINNED,
-                },
+                url: I.Rsh.CHANNEL(e.id),
+                body: { flags: e.flags & ~T.lx.PINNED },
                 rejectWithError: !0,
             });
-        } catch (n) {
-            a.h.dispatch({
-                type: "THREAD_UPDATE",
-                channel: e,
-            }),
-                a.h.dispatch({
-                    type: "THREAD_UPDATE",
-                    channel: t,
-                });
+        } catch {
+            a.h.dispatch({ type: "THREAD_UPDATE", channel: e }), a.h.dispatch({ type: "THREAD_UPDATE", channel: t });
             return;
         }
         try {
-            await i.Bo.patch({
-                url: y.Rsh.CHANNEL(t.id),
-                body: {
-                    flags: t.flags | O.lx.PINNED,
-                },
-                rejectWithError: !0,
-            });
-        } catch (e) {
-            a.h.dispatch({
-                type: "THREAD_UPDATE",
-                channel: t,
-            });
+            await i.Bo.patch({ url: I.Rsh.CHANNEL(t.id), body: { flags: t.flags | T.lx.PINNED }, rejectWithError: !0 });
+        } catch {
+            a.h.dispatch({ type: "THREAD_UPDATE", channel: t });
         }
     },
     openThreadCreationForMobile(e, t, n) {
-        (0, l.zV)(y.HAw.THREAD_CREATION_STARTED, {
-            location: n,
-            channel_id: e.id,
-            guild_id: e.guild_id,
-        }),
-            o.A.changeThreadSettings(e.id, {
-                parentMessageId: t,
-                isPrivate: !1,
-                location: n,
-            }),
-            null == t &&
-                (0, c.Gf)({
-                    channelId: e.id,
-                    command: null,
-                    section: null,
-                });
+        (0, l.zV)(I.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
+            o.A.changeThreadSettings(e.id, { parentMessageId: t, isPrivate: !1, location: n }),
+            null == t && (0, u.Gf)({ channelId: e.id, command: null, section: null });
     },
     async setNotificationSettings(e, t) {
         return (
             (0, E.hs)(e, t),
             m.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")),
-            i.Bo.patch({
-                url: y.Rsh.THREAD_MEMBER_SETTINGS(e.id),
-                body: t,
-                rejectWithError: !1,
-            })
+            i.Bo.patch({ url: I.Rsh.THREAD_MEMBER_SETTINGS(e.id), body: t, rejectWithError: !1 })
         );
     },
     loadArchivedThreads(e) {
         let { guildId: t, channelId: n, sortOrder: r, tagFilter: s, tagSetting: o, offset: l } = e;
         h.A.isLoading(n, r, s, o) ||
-            (a.h.dispatch({
-                type: "LOAD_ARCHIVED_THREADS",
-                channelId: n,
-                sortOrder: r,
-                tagFilter: s,
-                tagSetting: o,
-            }),
+            (a.h.dispatch({ type: "LOAD_ARCHIVED_THREADS", channelId: n, sortOrder: r, tagFilter: s, tagSetting: o }),
             i.Bo.get({
-                url: y.Rsh.THREAD_SEARCH(n),
+                url: I.Rsh.THREAD_SEARCH(n),
                 query: {
                     archived: !0,
                     sort_by: "last_message_time",
@@ -343,7 +195,7 @@ let I = {
             }).then(
                 (e) => {
                     let {
-                        body: { threads: i, members: c, has_more: u, first_messages: d, most_recent_messages: f },
+                        body: { threads: i, members: u, has_more: c, first_messages: d, most_recent_messages: _ },
                     } = e;
                     null == i
                         ? a.h.dispatch({
@@ -363,10 +215,10 @@ let I = {
                               tagSetting: o,
                               threads: i,
                               firstMessages: d,
-                              mostRecentMessages: f,
-                              members: (null != c ? c : []).map((e) => (0, b.A)(e)),
-                              owners: i.map((e) => e.owner).filter(_.Vq),
-                              hasMore: u,
+                              mostRecentMessages: _,
+                              members: (u ?? []).map((e) => (0, A.A)(e)),
+                              owners: i.map((e) => e.owner).filter(p.Vq),
+                              hasMore: c,
                           });
                 },
                 () => {
@@ -384,56 +236,35 @@ let I = {
         let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.n.MATCH_SOME,
             l = null != s && s.size > 0 ? Array.from(s).join(",") : void 0,
             {
-                body: { threads: c, members: u, first_messages: d, most_recent_messages: f },
+                body: { threads: u, members: c, first_messages: d, most_recent_messages: _ },
             } = await i.Bo.get({
-                url: y.Rsh.THREAD_SEARCH(t),
-                query: {
-                    name: n,
-                    tag: l,
-                    tag_setting: o,
-                },
+                url: I.Rsh.THREAD_SEARCH(t),
+                query: { name: n, tag: l, tag_setting: o },
                 rejectWithError: !1,
             });
         return (
             a.h.dispatch({
                 type: "LOAD_THREADS_SUCCESS",
-                threads: c,
-                members: u,
+                threads: u,
+                members: c,
                 guildId: e,
                 firstMessages: d,
-                mostRecentMessages: f,
+                mostRecentMessages: _,
             }),
-            c.map((e) => e.id)
+            u.map((e) => e.id)
         );
     },
     summarizeThread(e, t) {
         if (!(!e.isThread() || g.A.isInProgress()))
             return (
-                a.h.dispatch({
-                    type: "SUMMARIZE_THREAD_START",
-                }),
-                i.Bo.post({
-                    url: y.Rsh.AI_SUMMARIZE_THREAD(e.id),
-                    body: {
-                        ephemeral: null == t || t,
-                    },
-                    rejectWithError: !1,
-                })
+                a.h.dispatch({ type: "SUMMARIZE_THREAD_START" }),
+                i.Bo.post({ url: I.Rsh.AI_SUMMARIZE_THREAD(e.id), body: { ephemeral: t ?? !0 }, rejectWithError: !1 })
                     .then(() => {
-                        a.h.dispatch({
-                            type: "SUMMARIZE_THREAD_SUCCESS",
-                            channelId: e.id,
-                        });
+                        a.h.dispatch({ type: "SUMMARIZE_THREAD_SUCCESS", channelId: e.id });
                     })
                     .catch(() => {
-                        a.h.dispatch({
-                            type: "SUMMARIZE_THREAD_FAILURE",
-                            channelId: e.id,
-                        }),
-                            s.A.show({
-                                title: A.intl.string(A.t.j2d6Km),
-                                body: A.intl.string(A.t.fEptJP),
-                            });
+                        a.h.dispatch({ type: "SUMMARIZE_THREAD_FAILURE", channelId: e.id }),
+                            s.A.show({ title: y.intl.string(y.t.j2d6Km), body: y.intl.string(y.t.fEptJP) });
                     })
             );
     },

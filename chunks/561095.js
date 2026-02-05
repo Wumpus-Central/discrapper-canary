@@ -18,20 +18,11 @@ e.exports = function (e) {
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            {
-                className: "string",
-                begin: '"""',
-                end: '"""',
-                relevance: 5,
-            },
+            { className: "string", begin: '"""', end: '"""', relevance: 5 },
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                className: "meta",
-                begin: "^#",
-                end: "$",
-            },
+            { className: "meta", begin: "^#", end: "$" },
         ],
     };
 };

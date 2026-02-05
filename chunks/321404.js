@@ -1,15 +1,10 @@
-n.d(t, {
-    O: () => a,
-    c: () => s,
-});
-var r = n(311907),
-    l = n(380335),
-    i = n(157550);
-
+l.d(n, { O: () => a, c: () => r });
+var t = l(311907),
+    i = l(380335),
+    s = l(157550);
 function a(e) {
-    return (0, r.bG)([l.A], () => l.A.isMessageRequest(e), [e]);
+    return (0, t.bG)([i.A], () => i.A.isMessageRequest(e), [e]);
 }
-
-function s(e) {
-    return (0, r.bG)([l.A, i.A], () => null != e && (l.A.isMessageRequest(e) || i.A.isSpam(e)));
+function r(e) {
+    return (0, t.bG)([i.A, s.A], () => null != e && (i.A.isMessageRequest(e) || s.A.isSpam(e)));
 }

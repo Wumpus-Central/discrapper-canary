@@ -7,15 +7,7 @@ function t(n, r, i, a) {
     }
     (e.exports = t =
         function (e, n, r, i) {
-            if (n)
-                s
-                    ? s(e, n, {
-                          value: r,
-                          enumerable: !i,
-                          configurable: !i,
-                          writable: !i,
-                      })
-                    : (e[n] = r);
+            if (n) s ? s(e, n, { value: r, enumerable: !i, configurable: !i, writable: !i }) : (e[n] = r);
             else {
                 var a = function (n, r) {
                     t(e, n, function (e) {

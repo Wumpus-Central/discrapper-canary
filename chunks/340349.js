@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n, r) {
         var i = e + " ";
         switch (n) {
@@ -152,9 +153,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

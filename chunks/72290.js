@@ -2,15 +2,12 @@ var t,
     n,
     r,
     i = (e.exports = {});
-
 function a() {
     throw Error("setTimeout has not been defined");
 }
-
 function s() {
     throw Error("clearTimeout has not been defined");
 }
-
 function o(e) {
     if (t === setTimeout) return setTimeout(e, 0);
     if ((t === a || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
@@ -24,7 +21,6 @@ function o(e) {
         }
     }
 }
-
 function l(e) {
     if (n === clearTimeout) return clearTimeout(e);
     if ((n === s || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
@@ -50,37 +46,33 @@ function l(e) {
         n = s;
     }
 })();
-var c = [],
-    u = !1,
+var u = [],
+    c = !1,
     d = -1;
-
-function f() {
-    u && r && ((u = !1), r.length ? (c = r.concat(c)) : (d = -1), c.length && p());
+function _() {
+    c && r && ((c = !1), r.length ? (u = r.concat(u)) : (d = -1), u.length && f());
 }
-
-function p() {
-    if (!u) {
-        var e = o(f);
-        u = !0;
-        for (var t = c.length; t; ) {
-            for (r = c, c = []; ++d < t; ) r && r[d].run();
-            (d = -1), (t = c.length);
+function f() {
+    if (!c) {
+        var e = o(_);
+        c = !0;
+        for (var t = u.length; t; ) {
+            for (r = u, u = []; ++d < t; ) r && r[d].run();
+            (d = -1), (t = u.length);
         }
-        (r = null), (u = !1), l(e);
+        (r = null), (c = !1), l(e);
     }
 }
-
-function _(e, t) {
+function p(e, t) {
     (this.fun = e), (this.array = t);
 }
-
 function h() {}
 (i.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-    c.push(new _(e, t)), 1 !== c.length || u || o(p);
+    u.push(new p(e, t)), 1 !== u.length || c || o(f);
 }),
-    (_.prototype.run = function () {
+    (p.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
     (i.title = "browser"),

@@ -1,48 +1,22 @@
-n.d(t, {
-    H: () => s,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { H: () => i }), n(321073);
 var r = n(143236);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
+class i {
+    emitter = new r.EventEmitter();
+    options;
+    _savedDispatches = {};
+    constructor(e = {}) {
+        this.options = { maxListeners: 100, enableDevtools: !1, ...e };
+        const t = this.options.maxListeners ?? 100;
+        this.emitter.setMaxListeners(t);
     }
-    return e;
-}
-class s {
     safeDispatch(e) {
-        for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         if (!this.hasSubscribers(e)) {
-            let [n] = r;
-            return (this._savedDispatches[e] = null != (t = this._savedDispatches[e]) ? t : []).push(n), this;
+            let [t] = n;
+            return (this._savedDispatches[e] = this._savedDispatches[e] ?? []).push(t), this;
         }
-        return this.dispatch(e, ...r);
+        return this.dispatch(e, ...n);
     }
     dispatch(e, t) {
         let n = Date.now();
@@ -108,27 +82,12 @@ class s {
     }
     dispatchKeyed(e, t) {
         for (var n = arguments.length, r = Array(n > 2 ? n - 2 : 0), i = 2; i < n; i++) r[i - 2] = arguments[i];
-        return this.dispatch("".concat(e, "_").concat(t), ...r);
+        return this.dispatch(`${e}_${t}`, ...r);
     }
     subscribeKeyed(e, t, n) {
-        return this.subscribe("".concat(e, "_").concat(t), n);
+        return this.subscribe(`${e}_${t}`, n);
     }
     unsubscribeKeyed(e, t, n) {
-        return this.unsubscribe("".concat(e, "_").concat(t), n);
-    }
-    constructor(e = {}) {
-        var t;
-        i(this, "emitter", new r.EventEmitter()),
-            i(this, "options", void 0),
-            i(this, "_savedDispatches", {}),
-            (this.options = a(
-                {
-                    maxListeners: 100,
-                    enableDevtools: !1,
-                },
-                e,
-            ));
-        const n = null != (t = this.options.maxListeners) ? t : 100;
-        this.emitter.setMaxListeners(n);
+        return this.unsubscribe(`${e}_${t}`, n);
     }
 }

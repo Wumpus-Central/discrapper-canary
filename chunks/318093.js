@@ -1,28 +1,22 @@
-n.d(t, {
-    f: () => u,
-}),
-    n(65821);
+"use strict";
+n.d(t, { f: () => u });
 var r = n(284009),
     i = n.n(r),
     a = n(626584),
     s = n(936674),
     o = n(354382);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = new a.A("DispatcherWorkScheduler");
+let l = new a.A("DispatcherWorkScheduler");
 class u {
+    _flushTimeoutHandler = null;
+    _flushIdleHandler = null;
+    _nextDispatchTimeout = o.Z4;
+    _workCallbackFn = null;
+    _consecutiveFlushesBeforeQueueEmpty = 0;
+    _isBackgrounded = !1;
+    _enableRequestIdleCallback = !1;
+    _criticalWorkScheduled = !1;
+    telemetry = new s.Kw();
+    _logger = l;
     _trackAppBackgrounded(e) {
         this._isBackgrounded === e ||
             ((this._isBackgrounded = e),
@@ -42,7 +36,7 @@ class u {
     _processWorkCallback(e) {
         if (null == this._workCallbackFn) return;
         if (this._hasExceededMaxConsecutiveFlushes) {
-            c.log("Unable to fully flush work queue after max retries, skipping future deadline."),
+            l.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
                 this.telemetry.measure(s.Wg.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
@@ -60,7 +54,7 @@ class u {
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
                           s.Wg.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
-                          parseInt("".concat(this._consecutiveFlushesBeforeQueueEmpty)),
+                          parseInt(`${this._consecutiveFlushesBeforeQueueEmpty}`),
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
                   (this._criticalWorkScheduled = !1))
@@ -107,17 +101,5 @@ class u {
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
-    }
-    constructor() {
-        l(this, "_flushTimeoutHandler", null),
-            l(this, "_flushIdleHandler", null),
-            l(this, "_nextDispatchTimeout", o.Z4),
-            l(this, "_workCallbackFn", null),
-            l(this, "_consecutiveFlushesBeforeQueueEmpty", 0),
-            l(this, "_isBackgrounded", !1),
-            l(this, "_enableRequestIdleCallback", !1),
-            l(this, "_criticalWorkScheduled", !1),
-            l(this, "telemetry", new s.Kw()),
-            l(this, "_logger", c);
     }
 }

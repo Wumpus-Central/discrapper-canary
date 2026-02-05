@@ -1,1 +1,2 @@
-e.exports = 4294967295;
+"use strict";
+e.exports = 0xffffffff;

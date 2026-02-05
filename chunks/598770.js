@@ -1,156 +1,72 @@
-n.d(t, {
-    A: () => A,
-});
-var r,
-    i = n(989349),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(661191);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => g });
+var r = n(989349),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(661191);
+let l = { lastSeenNewlyAddedEmojiIds: {} },
+    u = l,
+    c = {};
+function d() {
+    (u = l), (c = {});
 }
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
+function _(e) {
+    let { guildId: t, emojiId: n } = e,
+        r = c[t] ?? u.lastSeenNewlyAddedEmojiIds[t];
+    null == r || 0 > o.default.compare(r.id, n)
+        ? (c[t] = { id: n, lastSeen: Date.now(), acknowledged: !0 })
+        : (c[t] = { ...r, acknowledged: !0 });
 }
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
+function f(e) {
+    let { guildId: t, emojiId: n } = e,
+        r = c[t] ?? u.lastSeenNewlyAddedEmojiIds[t];
+    (null == r || 0 > o.default.compare(r.id, n)) && (c[t] = { id: n, lastSeen: Date.now(), acknowledged: !1 });
 }
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
+function p() {
+    for (let e in c) u.lastSeenNewlyAddedEmojiIds[e] = c[e];
 }
-let p = {
-        lastSeenNewlyAddedEmojiIds: {},
-    },
-    _ = p,
-    h = {};
-
-function m() {
-    (_ = p), (h = {});
+function h() {
+    (u = l), p();
 }
-
-function g(e) {
-    var t;
-    let { guildId: n, emojiId: r } = e,
-        i = null != (t = h[n]) ? t : _.lastSeenNewlyAddedEmojiIds[n];
-    null == i || 0 > l.default.compare(i.id, r)
-        ? (h[n] = {
-              id: r,
-              lastSeen: Date.now(),
-              acknowledged: !0,
-          })
-        : (h[n] = f(u({}, i), {
-              acknowledged: !0,
-          }));
-}
-
-function E(e) {
-    var t;
-    let { guildId: n, emojiId: r } = e,
-        i = null != (t = h[n]) ? t : _.lastSeenNewlyAddedEmojiIds[n];
-    (null == i || 0 > l.default.compare(i.id, r)) &&
-        (h[n] = {
-            id: r,
-            lastSeen: Date.now(),
-            acknowledged: !1,
-        });
-}
-
-function b() {
-    for (let e in h) _.lastSeenNewlyAddedEmojiIds[e] = h[e];
-}
-
-function y() {
-    (_ = p), b();
-}
-class O extends (r = s.Ay.PersistedStore) {
-    initialize(e) {
-        _ = null != e ? e : p;
-    }
-    getState() {
-        return _;
-    }
-    getLastSeenEmojiByGuild(e) {
-        return _.lastSeenNewlyAddedEmojiIds[e];
-    }
-    isNewerThanLastSeen(e, t) {
-        if (null == e || null == t) return !1;
-        let n = this.getLastSeenEmojiByGuild(e);
-        if (null == n || l.default.compare(t, n.id) > 0) return !0;
-        {
-            let e = a()(n.lastSeen);
-            return a()().isBefore(e.add(2, "weeks")) && !n.acknowledged;
-        }
-    }
-}
-c(O, "displayName", "NewlyAddedEmojiStore"),
-    c(O, "persistKey", "NewlyAddedEmojiStore"),
-    c(O, "migrations", [
+class m extends a.Ay.PersistedStore {
+    static displayName = "NewlyAddedEmojiStore";
+    static persistKey = "NewlyAddedEmojiStore";
+    static migrations = [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
             for (let e in t) {
                 let r = t[e];
-                n[e] = {
-                    id: r,
-                    lastSeen: Date.now(),
-                    acknowledged: !1,
-                };
+                n[e] = { id: r, lastSeen: Date.now(), acknowledged: !1 };
             }
-            return {
-                lastSeenNewlyAddedEmojiIds: n,
-            };
+            return { lastSeenNewlyAddedEmojiIds: n };
         },
-    ]);
-let A = new O(o.h, {
-    LOGOUT: m,
-    NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
-    NEWLY_ADDED_EMOJI_SEEN_PENDING: E,
-    NEWLY_ADDED_EMOJI_SEEN_UPDATED: b,
-    CLEAR_CACHES: y,
-    CONNECTION_CLOSED: b,
+    ];
+    initialize(e) {
+        u = e ?? l;
+    }
+    getState() {
+        return u;
+    }
+    getLastSeenEmojiByGuild(e) {
+        return u.lastSeenNewlyAddedEmojiIds[e];
+    }
+    isNewerThanLastSeen(e, t) {
+        if (null == e || null == t) return !1;
+        let n = this.getLastSeenEmojiByGuild(e);
+        if (null == n || o.default.compare(t, n.id) > 0) return !0;
+        {
+            let e = i()(n.lastSeen);
+            return i()().isBefore(e.add(2, "weeks")) && !n.acknowledged;
+        }
+    }
+}
+let g = new m(s.h, {
+    LOGOUT: d,
+    NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: _,
+    NEWLY_ADDED_EMOJI_SEEN_PENDING: f,
+    NEWLY_ADDED_EMOJI_SEEN_UPDATED: p,
+    CLEAR_CACHES: h,
+    CONNECTION_CLOSED: p,
 });

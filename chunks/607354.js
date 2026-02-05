@@ -54,9 +54,6 @@
             y: "setahun",
             yy: "%d tahun",
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

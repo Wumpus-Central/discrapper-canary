@@ -1,39 +1,24 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(180662),
-    a = n(52684),
-    o = n(985018);
-let c = {
-    [a.G.END_EARLY]: (e) =>
-        (0, r.jsx)(i.Drp, {
+var l = n(397927),
+    a = n(180662),
+    r = n(52684),
+    s = n(985018);
+let o = {
+    [r.G.END_EARLY]: (e) =>
+        (0, i.jsx)(l.Drp, {
             id: "end-poll-early",
-            label: o.intl.string(o.t.grdwwt),
-            icon: i.O7L,
-            leadingAccessory: {
-                type: "icon",
-                icon: i.O7L,
-            },
+            label: s.intl.string(s.t.grdwwt),
+            icon: l.O7L,
+            leadingAccessory: { type: "icon", icon: l.O7L },
             action: () => {
-                l.A.endPollEarly({
-                    channelId: e.channel_id,
-                    messageId: e.id,
-                });
+                a.A.endPollEarly({ channelId: e.channel_id, messageId: e.id });
             },
-            iconProps: {
-                color: "currentColor",
-            },
+            iconProps: { color: "currentColor" },
         }),
 };
-
-function s(e) {
-    let t = (0, a.A)(e);
-    return 0 === t.length
-        ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: t.map((t) => c[t](e)),
-          });
+function d(e) {
+    let t = (0, r.A)(e);
+    return 0 === t.length ? null : (0, i.jsx)(i.Fragment, { children: t.map((t) => o[t](e)) });
 }

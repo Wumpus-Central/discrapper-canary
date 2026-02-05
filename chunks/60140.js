@@ -1,64 +1,31 @@
-l.d(t, {
-    A: () => y,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(397927),
-    a = l(770178),
-    i = l(765548),
-    o = l(408238),
-    c = l(440938),
-    u = l(590180),
-    d = l(379177),
-    f = l(511265),
-    b = l(313276),
-    g = l(206077),
-    p = l(751304),
-    m = l(561769),
-    h = l(484469),
-    E = l(940622),
-    v = l(758836),
-    A = l(201073);
-
-function x(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(l);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = l[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-let S = (e) => {
-        var t, l;
-        let { cardContainerRef: o, totalCards: c } = (() => {
+"use strict";
+s.d(t, { A: () => L });
+var n = s(627968),
+    r = s(64700),
+    l = s(397927),
+    a = s(770178),
+    i = s(765548),
+    o = s(720462),
+    c = s(440938),
+    d = s(590180),
+    u = s(379177),
+    g = s(511265),
+    m = s(313276),
+    _ = s(206077),
+    h = s(751304),
+    p = s(561769),
+    f = s(484469),
+    E = s(940622),
+    C = s(758836),
+    b = s(201073);
+let A = (e) => {
+        let { cardContainerRef: t, totalCards: s } = (() => {
             let [e, t] = r.useState(1),
-                l = (0, s.rdh)(s.LU0.space.SPACE_XL),
+                s = (0, l.rdh)(l.LU0.space.SPACE_XL),
                 n = (0, i.A)(() => {
-                    (null == o ? void 0 : o.current) == null ||
-                        t(Math.max(1, Math.floor((o.current.offsetWidth + l) / (246 + l))));
+                    o?.current == null || t(Math.max(1, Math.floor((o.current.offsetWidth + s) / (246 + s))));
                 }),
-                o = (0, a.w)(n, [l], {
-                    fireOnMount: !0,
-                    fireOnDepsChange: !0,
-                });
+                o = (0, a.w)(n, [s], { fireOnMount: !0, fireOnDepsChange: !0 });
             return {
                 cardContainerRef: r.useCallback(
                     (e) => {
@@ -69,75 +36,33 @@ let S = (e) => {
                 totalCards: e,
             };
         })();
-        return (0, n.jsx)("div", {
-            className: A.nM,
-            ref: o,
-            children: (0, n.jsx)(
-                _,
-                ((t = x({}, e)),
-                (l = l =
-                    {
-                        totalCards: c,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
-                    : (function (e, t) {
-                          var l = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              l.push.apply(l, n);
-                          }
-                          return l;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
-                      }),
-                t),
-            ),
-        });
+        return (0, n.jsx)("div", { className: b.nM, ref: t, children: (0, n.jsx)(v, { ...e, totalCards: s }) });
     },
-    C = (e) =>
-        (0, n.jsx)("div", {
-            className: A.hm,
-            children: (0, n.jsx)(_, x({}, e)),
-        }),
-    O = (e) =>
-        (0, n.jsx)(o.A, {
-            gap: "xl",
-            children: (0, n.jsx)(_, x({}, e)),
-        }),
-    _ = (e) => {
-        let { heroBlockRecord: t, isLoading: l, products: r, tab: s, totalCards: a } = e,
+    x = (e) => (0, n.jsx)("div", { className: b.hm, children: (0, n.jsx)(v, { ...e }) }),
+    S = (e) => (0, n.jsx)(o.A, { gap: "xl", children: (0, n.jsx)(v, { ...e }) }),
+    v = (e) => {
+        let { heroBlockRecord: t, isLoading: s, products: r, tab: l, totalCards: a } = e,
             i = (0, c.uM)(),
-            o = (0, d.rR)("HeroBlockCards") && t.categorySkuId === v.op,
-            f = (0, d.eJ)("HeroBlockCards");
-        if (l)
-            return (0, n.jsx)(n.Fragment, {
-                children: [...Array(null != a ? a : 4)].map((e, t) => (0, n.jsx)(h.A, {}, t)),
-            });
-        let b = null != a ? r.slice(0, a) : r;
-        return (0, n.jsx)(m.v3.Provider, {
-            value: {
-                rentalDuration: o ? f : void 0,
-                flattenProductVariants: o,
-            },
-            children: b.map((e, t) => {
-                let l = u.A.getCategoryForProduct(e.skuId);
-                return null == e || null == l
+            o = (0, u.rR)("HeroBlockCards") && t.categorySkuId === C.op,
+            g = (0, u.eJ)("HeroBlockCards");
+        if (s) return (0, n.jsx)(n.Fragment, { children: [...Array(a ?? 4)].map((e, t) => (0, n.jsx)(f.A, {}, t)) });
+        let m = null != a ? r.slice(0, a) : r;
+        return (0, n.jsx)(p.v3.Provider, {
+            value: { rentalDuration: o ? g : void 0, flattenProductVariants: o },
+            children: m.map((e, t) => {
+                let s = d.A.getCategoryForProduct(e.skuId);
+                return null == e || null == s
                     ? null
                     : (0, n.jsx)(
                           c.R9,
                           {
-                              newValue: {
-                                  tilePosition: t,
-                                  pageSection: "top 4",
-                                  categoryPosition: 0,
-                              },
+                              newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
                               children: (0, n.jsx)(
-                                  p.A,
+                                  h.A,
                                   {
-                                      skuId: null == e ? void 0 : e.skuId,
-                                      prioritizedCurrency: s === v.G2.ORBS ? m.Hi.ORBS : void 0,
-                                      onClickAnalytics: (0, m.UU)(e, s, i),
+                                      skuId: e?.skuId,
+                                      prioritizedCurrency: l === C.G2.ORBS ? p.Hi.ORBS : void 0,
+                                      onClickAnalytics: (0, p.UU)(e, l, i),
                                   },
                                   e.skuId,
                               ),
@@ -147,53 +72,33 @@ let S = (e) => {
             }),
         });
     },
-    y = (e) => {
+    L = (e) => {
         let t,
-            l,
             s,
+            l,
             a,
-            { heroBlockRecord: i, layout: o, tab: c, isBlockLoading: d = !1 } = e,
-            { products: p } =
-                ((t = (0, b.A)()),
-                (l = r.useMemo(() => (d ? [] : t(i.rankedSkuIds)), [d, t, i.rankedSkuIds])),
-                (s = (0, f.p)()(l)),
-                (a = (0, g.X)(s)),
-                {
-                    products: (0, E.od)(a),
-                }),
-            m = r.useMemo(
+            { heroBlockRecord: i, layout: o, tab: c, isBlockLoading: u = !1 } = e,
+            { products: h } =
+                ((t = (0, m.A)()),
+                (s = r.useMemo(() => (u ? [] : t(i.rankedSkuIds)), [u, t, i.rankedSkuIds])),
+                (l = (0, g.p)()(s)),
+                (a = (0, _.X)(l)),
+                { products: (0, E.od)(a) }),
+            p = r.useMemo(
                 () =>
-                    !d &&
+                    !u &&
                     0 !== i.rankedSkuIds.length &&
-                    !(p.length > 0) &&
-                    i.rankedSkuIds.every((e) => {
-                        var t;
-                        return (null == (t = u.A.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
-                    }),
-                [d, i.rankedSkuIds, p.length],
+                    !(h.length > 0) &&
+                    i.rankedSkuIds.every((e) => d.A.getProduct(e)?.variantGroupStoreListingId != null),
+                [u, i.rankedSkuIds, h.length],
             ),
-            h = d || m;
+            f = u || p;
         switch (o) {
             case "row":
-                return (0, n.jsx)(S, {
-                    heroBlockRecord: i,
-                    isLoading: h,
-                    products: p,
-                    tab: c,
-                });
+                return (0, n.jsx)(A, { heroBlockRecord: i, isLoading: f, products: h, tab: c });
             case "feed":
-                return (0, n.jsx)(C, {
-                    heroBlockRecord: i,
-                    isLoading: h,
-                    products: p,
-                    tab: c,
-                });
+                return (0, n.jsx)(x, { heroBlockRecord: i, isLoading: f, products: h, tab: c });
             case "hscroll":
-                return (0, n.jsx)(O, {
-                    heroBlockRecord: i,
-                    isLoading: h,
-                    products: p,
-                    tab: c,
-                });
+                return (0, n.jsx)(S, { heroBlockRecord: i, isLoading: f, products: h, tab: c });
         }
     };

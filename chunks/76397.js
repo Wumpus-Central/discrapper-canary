@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     filenameContainer: "filenameContainer__41ea0",
     filename: "filename__41ea0",

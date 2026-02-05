@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XG: "scroller__16663",
     U9: "noticeContainer__16663",

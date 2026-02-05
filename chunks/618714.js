@@ -5,6 +5,7 @@
           ? (e.exports = t())
           : (window.idleCallbackShim = t());
 })(function () {
+    "use strict";
     var e,
         t,
         r,
@@ -13,12 +14,12 @@
         s = (a.cancelRequestAnimationFrame && a.requestAnimationFrame) || setTimeout,
         o = a.cancelRequestAnimationFrame || clearTimeout,
         l = [],
-        c = 0,
-        u = !1,
+        u = 0,
+        c = !1,
         d = 7,
-        f = 35,
-        p = 125,
-        _ = 0,
+        _ = 35,
+        f = 125,
+        p = 0,
         h = 0,
         m = 0,
         g = {
@@ -30,11 +31,10 @@
                 return e < 0 ? 0 : e;
             },
         },
-        E = b(function () {
-            (d = 22), (p = 66), (f = 0);
+        E = A(function () {
+            (d = 22), (f = 66), (_ = 0);
         });
-
-    function b(e) {
+    function A(e) {
         var t,
             n,
             r = 99,
@@ -46,55 +46,45 @@
             (n = Date.now()), t || (t = setTimeout(i, r));
         };
     }
-
-    function y() {
-        u && (i && o(i), r && clearTimeout(r), (u = !1));
-    }
-
-    function O() {
-        125 != p && ((d = 7), (p = 125), (f = 35), u && (y(), S())), E();
-    }
-
-    function A() {
-        (i = null), (r = setTimeout(I, 0));
-    }
-
-    function v() {
-        (r = null), s(A);
-    }
-
-    function S() {
-        u ||
-            ((t = p - (Date.now() - h)),
-            (e = Date.now()),
-            (u = !0),
-            f && t < f && (t = f),
-            t > 9 ? (r = setTimeout(v, t)) : ((t = 0), v()));
-    }
-
     function I() {
+        c && (i && o(i), r && clearTimeout(r), (c = !1));
+    }
+    function T() {
+        125 != f && ((d = 7), (f = 125), (_ = 35), c && (I(), v())), E();
+    }
+    function y() {
+        (i = null), (r = setTimeout(C, 0));
+    }
+    function S() {
+        (r = null), s(y);
+    }
+    function v() {
+        c ||
+            ((t = f - (Date.now() - h)),
+            (e = Date.now()),
+            (c = !0),
+            _ && t < _ && (t = _),
+            t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S()));
+    }
+    function C() {
         var n,
             i,
             a,
             s = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e))
+        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e))
             for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
-        l.length ? S() : (c = 0);
+        l.length ? v() : (u = 0);
     }
-
-    function T(e) {
-        return _++, l.push(e), S(), _;
+    function b(e) {
+        return p++, l.push(e), v(), p;
     }
-
-    function C(e) {
+    function N(e) {
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
     if (a.requestIdleCallback && a.cancelIdleCallback)
         try {
-            a.requestIdleCallback(function () {}, {
-                timeout: 0,
-            });
+            a.requestIdleCallback(function () {}, { timeout: 0 });
         } catch (e) {
             !(function (e) {
                 var t, n;
@@ -116,28 +106,22 @@
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = T),
-            (a.cancelIdleCallback = C),
+        (a.requestIdleCallback = b),
+            (a.cancelIdleCallback = N),
             a.document &&
                 document.addEventListener &&
-                (a.addEventListener("scroll", O, !0),
-                a.addEventListener("resize", O),
-                document.addEventListener("focus", O, !0),
-                document.addEventListener("mouseover", O, !0),
+                (a.addEventListener("scroll", T, !0),
+                a.addEventListener("resize", T),
+                document.addEventListener("focus", T, !0),
+                document.addEventListener("mouseover", T, !0),
                 ["click", "keypress", "touchstart", "mousedown"].forEach(function (e) {
-                    document.addEventListener(e, O, {
-                        capture: !0,
-                        passive: !0,
-                    });
+                    document.addEventListener(e, T, { capture: !0, passive: !0 });
                 }),
                 a.MutationObserver &&
-                    new MutationObserver(O).observe(document.documentElement, {
+                    new MutationObserver(T).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0,
                     }));
-    return {
-        request: T,
-        cancel: C,
-    };
+    return { request: b, cancel: N };
 });

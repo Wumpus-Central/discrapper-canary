@@ -1,3 +1,4 @@
+"use strict";
 var n = e(664886),
     o = e(683570),
     s = e(61748),
@@ -15,8 +16,6 @@ t.exports = function () {
             function (t) {
                 return n(e, this);
             },
-            {
-                arity: 1,
-            },
+            { arity: 1 },
         );
 };

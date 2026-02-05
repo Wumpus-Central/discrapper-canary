@@ -1,174 +1,114 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => b });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
-    s = n(554146),
-    a = n(621956),
+    s = n(311907),
+    a = n(554146),
+    r = n(621956),
     o = n(265872),
-    c = n(442433),
-    u = n(688810),
-    d = n(384059),
-    p = n(480890),
-    h = n(160761),
-    f = n(421773),
-    g = n(536432),
-    m = n(674168),
-    b = n(989799),
-    A = n(173660),
-    y = n(430452),
-    _ = n(246356),
-    O = n(709562),
-    j = n(376086),
-    v = n(985018);
-
-function x(e) {
-    let { channel: t, themeable: x, whichPopoutIsOpen: E, setWhichPopoutIsOpen: C } = e,
-        { parentAnalyticsLocation: S } = (0, u.Ay)(),
+    d = n(442433),
+    c = n(688810),
+    u = n(384059),
+    h = n(480890),
+    A = n(160761),
+    g = n(421773),
+    m = n(536432),
+    p = n(674168),
+    _ = n(989799),
+    x = n(173660),
+    f = n(430452),
+    E = n(246356),
+    C = n(709562),
+    I = n(376086),
+    S = n(985018);
+function b(e) {
+    let { channel: t, themeable: b, whichPopoutIsOpen: N, setWhichPopoutIsOpen: T } = e,
+        { parentAnalyticsLocation: j } = (0, c.Ay)(),
         {
-            Component: I,
-            play: N,
-            events: { onMouseEnter: T, onMouseLeave: P },
-        } = (0, a.E)(),
-        w = t.getGuildId(),
-        { mute: R, suppress: D } = (0, A.A)(t),
-        M = (0, i.bG)([y.A], () => y.A.isDeaf()),
-        L = R || D || M,
-        k = (0, g.VE)({
-            isSoundboardButtonDisabled: L,
-        }),
-        [G, U] = (0, h.DP)(k),
-        { analyticsLocations: B } = (0, u.Ay)(),
-        { isHovered: V, setIsHovered: F, onMouseEnter: H, onMouseLeave: K } = (0, f.A)(200, 300);
-
+            Component: v,
+            play: y,
+            events: { onMouseEnter: R, onMouseLeave: O },
+        } = (0, r.E)(),
+        L = t.getGuildId(),
+        { mute: D, suppress: M } = (0, x.A)(t),
+        G = (0, s.bG)([f.A], () => f.A.isDeaf()),
+        U = D || M || G,
+        P = (0, m.VE)({ isSoundboardButtonDisabled: U }),
+        [k, w] = (0, A.DP)(P),
+        { analyticsLocations: V } = (0, c.Ay)(),
+        { isHovered: B, setIsHovered: H, onMouseEnter: F, onMouseLeave: Y } = (0, g.A)(200, 300);
     function W(e) {
-        null != w &&
-            (0, c.L3)(e, async () => {
+        null != L &&
+            (0, d.L3)(e, async () => {
                 let { default: e } = await n.e("51111").then(n.bind(n, 323002));
-                return (t) => {
-                    var n, l;
-                    return (0, r.jsx)(
-                        e,
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })(
-                            {
-                                guildId: w,
-                                sourceAnalyticsLocations: B,
-                            },
-                            t,
-                        )),
-                        (l = l =
-                            {
-                                onInteraction: (0, p.s)("SoundboardContextMenu", S),
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                              }),
-                        n),
-                    );
-                };
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        guildId: L,
+                        sourceAnalyticsLocations: V,
+                        ...t,
+                        onInteraction: (0, h.s)("SoundboardContextMenu", j),
+                    });
             });
     }
-
-    function z() {
-        (0, d.X)(S, d.O.SOUNDBOARD),
-            E === j.P.SOUNDBOARD
-                ? (null == C || C(void 0), K())
-                : (null != E ? (N(), H()) : N(), null == C || C(j.P.SOUNDBOARD));
+    function K() {
+        (0, u.X)(j, u.O.SOUNDBOARD),
+            N === I.P.SOUNDBOARD ? (T?.(void 0), Y()) : (null != N ? (y(), F()) : y(), T?.(I.P.SOUNDBOARD));
     }
-    let Y = l.useRef(null);
-    return (0, r.jsx)(o.Y, {
-        targetElementRef: Y,
-        shouldShow: (V && (E === j.P.SOUNDBOARD || null == E)) || E === j.P.SOUNDBOARD,
+    let z = l.useRef(null);
+    return (0, i.jsx)(o.Y, {
+        targetElementRef: z,
+        shouldShow: (B && (N === I.P.SOUNDBOARD || null == N)) || N === I.P.SOUNDBOARD,
         animation: o.Y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            F(!1), null == C || C(void 0);
+            H(!1), T?.(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return L
+            return U
                 ? null
-                : (0, r.jsx)(_.A, {
-                      children: (0, r.jsx)("div", {
-                          onMouseEnter: H,
-                          onMouseLeave: K,
-                          children: (0, r.jsx)(b.A, {
-                              guildId: w,
+                : (0, i.jsx)(E.A, {
+                      children: (0, i.jsx)("div", {
+                          onMouseEnter: F,
+                          onMouseLeave: Y,
+                          children: (0, i.jsx)(_.A, {
+                              guildId: L,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  G === s.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                  (0, r.jsx)(m.m, {
-                                      onClose: n,
-                                      markAsDismissed: U,
-                                  }),
+                                  k === a.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  (0, i.jsx)(p.m, { onClose: n, markAsDismissed: w }),
                               analyticsSource: "action bar button",
                           }),
                       }),
                   });
         },
         children: () =>
-            (0, r.jsx)(O.l, {
-                ref: Y,
+            (0, i.jsx)(C.l, {
+                ref: z,
                 isTrayButton: !0,
-                themeable: x,
-                label: R
-                    ? v.intl.string(v.t["Ox4/zU"])
-                    : D
-                      ? v.intl.string(v.t["+YBKYI"])
-                      : M
-                        ? v.intl.string(v.t.X1lQli)
+                themeable: b,
+                label: D
+                    ? S.intl.string(S.t["Ox4/zU"])
+                    : M
+                      ? S.intl.string(S.t["+YBKYI"])
+                      : G
+                        ? S.intl.string(S.t.X1lQli)
                         : void 0,
-                iconComponent: I,
-                disabled: L,
+                iconComponent: v,
+                disabled: U,
                 onContextMenu: W,
-                onClick: z,
+                onClick: K,
                 onMouseEnter: (e) => {
-                    T(), "focus" !== e.type && H();
+                    R(), "focus" !== e.type && F();
                 },
                 onMouseLeave: () => {
-                    null == E && (K(), P());
+                    null == N && (Y(), O());
                 },
-                isActive: V || E === j.P.SOUNDBOARD,
-                color: V || E === j.P.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: B || N === I.P.SOUNDBOARD,
+                color: B || N === I.P.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

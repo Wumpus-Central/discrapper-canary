@@ -1,52 +1,47 @@
-n.d(t, {
-    f: () => h,
-});
-var r = n(627968);
+n.d(t, { f: () => g });
+var i = n(627968);
 n(64700);
-var i = n(444802),
-    a = n(975571),
-    s = n(524738),
-    o = n(421248),
-    l = n(42765),
+var s = n(444802),
+    r = n(975571),
+    a = n(524738),
+    l = n(421248),
+    o = n(42765),
     c = n(871930),
-    u = n(355097),
-    d = n(531525),
-    f = n(652215),
-    p = n(985018),
-    _ = n(456144);
-
-function h() {
-    let e = (0, i.WX)(),
+    d = n(355097),
+    u = n(531525),
+    _ = n(652215),
+    m = n(985018),
+    A = n(456144);
+function g() {
+    let e = (0, s.WX)(),
         t = [
             {
-                title: p.intl.string(p.t.GYpoAq),
-                component: o.Z,
+                title: m.intl.string(m.t.GYpoAq),
+                component: l.Z,
                 orientation: "vertical",
-                setting: d.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
+                setting: u.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
             {
-                title: p.intl.string(p.t["16/3Bi"]),
-                component: l.q,
+                title: m.intl.string(m.t["16/3Bi"]),
+                component: o.q,
                 orientation: "vertical",
-                setting: d.H.GORE_MEDIA_REDACTION,
+                setting: u.H.GORE_MEDIA_REDACTION,
             },
         ];
-    return (0, r.jsxs)(c.h, {
-        setting: d.H.SENSITIVE_CONTENT_FILTERS,
-        scrollPosition: u.d1.EXPLICIT_MEDIA_REDACTION_V2,
+    return (0, i.jsxs)(c.h, {
+        setting: u.H.SENSITIVE_CONTENT_FILTERS,
+        scrollPosition: d.d1.EXPLICIT_MEDIA_REDACTION_V2,
         children: [
-            (0, r.jsx)(c._, {
-                header: p.intl.string(p.t["Hj/But"]),
-                description: p.intl.format(p.t.dliU4j, {
-                    learnMoreLink: a.A.getArticleURL(e),
-                }),
+            (0, i.jsx)(c._, {
+                header: m.intl.string(m.t["Hj/But"]),
+                description: m.intl.format(m.t.dliU4j, { learnMoreLink: r.A.getArticleURL(e) }),
             }),
-            (0, r.jsx)(s.A, {
-                parentSetting: d.H.CONTENT_SOCIAL,
-                settingsSection: f.nc_.CONTENT_AND_SOCIAL,
+            (0, i.jsx)(a.A, {
+                parentSetting: u.H.CONTENT_SOCIAL,
+                settingsSection: _.nc_.CONTENT_AND_SOCIAL,
                 tabs: t,
                 orientation: "vertical",
-                tabsClassName: _.v,
+                tabsClassName: A.v,
             }),
         ],
     });

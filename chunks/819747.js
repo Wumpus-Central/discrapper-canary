@@ -1,7 +1,4 @@
-r.r(n),
-    r.d(n, {
-        default: () => t,
-    });
+r.r(n), r.d(n, { default: () => t });
 var t = {
     payButton: "Zahlen",
     "payButton.redirecting": "Umleiten…",

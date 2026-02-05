@@ -1,6 +1,4 @@
-r.d(t, {
-    I: () => n,
-}),
-    r(896048);
-var a,
-    n = (((a = {}).MOBILE = "mobile"), (a.DESKTOP = "desktop"), (a.WEB = "web"), (a.DEVICE_CODE = "device_code"), a);
+"use strict";
+a.d(t, { I: () => r });
+var s,
+    r = (((s = {}).MOBILE = "mobile"), (s.DESKTOP = "desktop"), (s.WEB = "web"), (s.DEVICE_CODE = "device_code"), s);

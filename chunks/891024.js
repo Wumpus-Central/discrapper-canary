@@ -1,12 +1,10 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(311907),
-    i = n(320501),
-    l = n(287809);
-let a = (e) =>
-    (0, r.bG)([i.A, l.default], () => {
+n.d(t, { A: () => l });
+var i = n(311907),
+    r = n(320501),
+    a = n(287809);
+let l = (e) =>
+    (0, i.bG)([r.A, a.default], () => {
         if (null == e) return !1;
-        let t = l.default.getCurrentUser();
-        return null != i.A.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
+        let t = a.default.getCurrentUser();
+        return null != r.A.getMessages(e).findNewest((e) => e.author.id === t?.id);
     });

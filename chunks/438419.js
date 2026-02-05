@@ -1,81 +1,14 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(747238),
-    n(896048),
-    n(591487),
-    n(727858);
-var r = n(280230),
+"use strict";
+n.d(t, { A: () => u });
+var r = n(791332),
     i = n.n(r),
     a = n(508675),
     s = n(7584),
     o = n(690521),
     l = n(704726);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let p = {
-    s: {
-        requiredFirstCharacters: ["~"],
-        match: i().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-    },
-    highlight: {
-        order: l.Ay.order,
-        match: () => null,
-    },
+let u = {
+    s: { requiredFirstCharacters: ["~"], match: i().inlineRegex(/^~~([\s\S]+?)~~(?!_)/) },
+    highlight: { order: l.Ay.order, match: () => null },
     emoji: {
         order: l.Ay.order,
         requiredFirstCharacters: [":"],
@@ -87,15 +20,8 @@ let p = {
             let [t, n] = e,
                 r = s.Ay.convertNameToSurrogate(n);
             return null == r || "" === r
-                ? {
-                      type: "text",
-                      content: t,
-                  }
-                : {
-                      name: ":".concat(n, ":"),
-                      surrogate: r,
-                      src: o.Ay.getURL(r),
-                  };
+                ? { type: "text", content: t }
+                : { name: `:${n}:`, surrogate: r, src: o.Ay.getURL(r) };
         },
     },
     customEmoji: {
@@ -105,16 +31,9 @@ let p = {
         parse(e, t, n) {
             let [r, i, s, o] = e,
                 { guildId: l } = n,
-                c = a.Ay.getDisambiguatedEmojiContext(l).getById(o),
-                u = null == c || c.require_colons;
-            return (
-                null != c && (s = c.name),
-                {
-                    emojiId: o,
-                    name: u ? ":".concat(s, ":") : s,
-                    animated: "a" === i,
-                }
-            );
+                u = a.Ay.getDisambiguatedEmojiContext(l).getById(o),
+                c = null == u || u.require_colons;
+            return null != u && (s = u.name), { emojiId: o, name: c ? `:${s}:` : s, animated: "a" === i };
         },
     },
     text: {
@@ -123,24 +42,11 @@ let p = {
                 n = 0;
             return t.map((e) => {
                 if ("text" === e.type) {
-                    let t = {
-                        index: n,
-                        0: e.text,
-                    };
-                    return (
-                        (n += e.text.length),
-                        {
-                            type: "text",
-                            content: e.text,
-                            originalMatch: t,
-                        }
-                    );
+                    let t = { index: n, 0: e.text };
+                    return (n += e.text.length), { type: "text", content: e.text, originalMatch: t };
                 }
                 {
-                    let t = {
-                        index: n,
-                        0: e.surrogate,
-                    };
+                    let t = { index: n, 0: e.surrogate };
                     return (
                         (n += e.surrogate.length),
                         {
@@ -155,16 +61,13 @@ let p = {
             });
         },
     },
-    looseEm: f(u({}, i().defaultRules.em), {
+    looseEm: {
+        ...i().defaultRules.em,
         match: i().inlineRegex(
             RegExp(
                 "^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)",
             ),
         ),
-        parse: (e, t, n) => ({
-            type: "em",
-            content: t(e[1], n),
-            originalMatch: e,
-        }),
-    }),
+        parse: (e, t, n) => ({ type: "em", content: t(e[1], n), originalMatch: e }),
+    },
 };

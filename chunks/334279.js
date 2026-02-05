@@ -1,8 +1,5 @@
-n.d(t, {
-    I: () => i,
-    j: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { I: () => i, j: () => r });
 var r = (function (e) {
     return (
         (e.PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),

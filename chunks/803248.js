@@ -1,7 +1,5 @@
-n.d(t, {
-    Yq: () => a,
-}),
-    n(65821);
+"use strict";
+n.d(t, { Yq: () => a });
 var r = n(526916),
     i = n(788868);
 let a = Object.freeze({

@@ -1,32 +1,28 @@
-n.d(t, {
-    A: () => c,
-});
-var l = n(627968);
-n(64700);
-var a = n(503698),
-    r = n.n(a),
-    i = n(397927),
-    s = n(650964);
-let c = function (e) {
-    let { tabs: t, onTabSelect: n, selectedTab: a, className: c } = e;
-    return (0, l.jsx)(i.VQ0, {
+a.d(t, { A: () => o });
+var n = a(627968);
+a(64700);
+var i = a(503698),
+    s = a.n(i),
+    l = a(397927),
+    r = a(650964);
+let o = function (e) {
+    let { tabs: t, onTabSelect: a, selectedTab: i, className: o } = e;
+    return (0, n.jsx)(l.VQ0, {
         type: "top-pill",
-        selectedItem: a,
-        onItemSelect: n,
-        className: c,
+        selectedItem: i,
+        onItemSelect: a,
+        className: o,
         children: t.map((e, t) => {
-            let { id: n, label: a, count: c } = e;
-            return (0, l.jsx)(
-                i.VQ0.Item,
+            let { id: a, label: i, count: o } = e;
+            return (0, n.jsx)(
+                l.VQ0.Item,
                 {
-                    id: n,
-                    className: r()(s.V, {
-                        [s.r]: 0 === t,
-                    }),
-                    "aria-label": a,
-                    children: null != c && c > 0 ? "".concat(a, " (").concat(c, ")") : a,
+                    id: a,
+                    className: s()(r.V, { [r.r]: 0 === t }),
+                    "aria-label": i,
+                    children: null != o && o > 0 ? `${i} (${o})` : i,
                 },
-                n,
+                a,
             );
         }),
     });

@@ -1,16 +1,14 @@
-n.d(t, {
-    T: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { T: () => l });
 var r = n(64700),
     i = n(311907),
     a = n(775602),
-    o = n(531685);
-let s = 1e3,
+    s = n(531685);
+let o = 1e3,
     l = (e, t) => {
         let n = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-            l = (0, i.bG)([o.A], () => o.A.isFocused()),
-            [c, u] = r.useState(!1),
+            l = (0, i.bG)([s.A], () => s.A.isFocused()),
+            [u, c] = r.useState(!1),
             d = r.useRef(null);
         return (
             r.useEffect(() => {
@@ -19,9 +17,9 @@ let s = 1e3,
                     i = l && (e || r);
                 i && n
                     ? (d.current = window.setTimeout(() => {
-                          u(!0);
-                      }, s))
-                    : u(i);
+                          c(!0);
+                      }, o))
+                    : c(i);
             }, [l, e, n, t]),
             r.useEffect(
                 () => () => {
@@ -29,8 +27,6 @@ let s = 1e3,
                 },
                 [],
             ),
-            {
-                canAnimate: c,
-            }
+            { canAnimate: u }
         );
     };

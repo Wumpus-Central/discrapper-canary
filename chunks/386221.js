@@ -1,4 +1,5 @@
-(t.createDateTimeFormat = d), (t.createDateTimeFormats = f);
+"use strict";
+(t.createDateTimeFormat = d), (t.createDateTimeFormats = _);
 var n =
         /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     r = /[QxXVOvZASjgFDwWIQqH]/,
@@ -7,17 +8,14 @@ var n =
     s = ["short", "short", "short", "long", "narrow"],
     o = ["weekday", "era", "year", "month", "day"],
     l = ["hour", "minute", "second", "timeZoneName"];
-
-function c(e) {
+function u(e) {
     for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
     return !0;
 }
-
-function u(e) {
+function c(e) {
     for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
     return !0;
 }
-
 function d(e) {
     if (!r.test(e)) {
         var t = {};
@@ -66,8 +64,7 @@ function d(e) {
         );
     }
 }
-
-function f(e) {
+function _(e) {
     var t,
         n,
         r,
@@ -76,11 +73,10 @@ function f(e) {
         s = e.availableFormats,
         o = e.timeFormats,
         l = e.dateFormats,
-        f = e.medium,
+        _ = e.medium,
+        f = [],
         p = [],
-        _ = [],
         h = [];
-
     function m(e, t) {
         var n = Array((e.match(/M/g) || []).length + 1),
             r = Array((e.match(/E/g) || []).length + 1);
@@ -90,16 +86,15 @@ function f(e) {
             t
         );
     }
-    for (t in s) s.hasOwnProperty(t) && (r = d((n = m(t, s[t])))) && (p.push(r), c(r) ? h.push(n) : u(r) && _.push(n));
-    for (i = 0; i < _.length; i += 1)
+    for (t in s) s.hasOwnProperty(t) && (r = d((n = m(t, s[t])))) && (f.push(r), u(r) ? h.push(n) : c(r) && p.push(n));
+    for (i = 0; i < p.length; i += 1)
         for (a = 0; a < h.length; a += 1)
             (r = d(
-                (n = f
-                    .replace("{0}", _[i])
+                (n = _.replace("{0}", p[i])
                     .replace("{1}", h[a])
                     .replace(/^[,\s]+|[,\s]+$/gi, "")),
-            )) && p.push(r);
-    for (t in o) o.hasOwnProperty(t) && (r = d((n = m(t, o[t])))) && p.push(r);
-    for (t in l) l.hasOwnProperty(t) && (r = d((n = m(t, l[t])))) && p.push(r);
-    return p;
+            )) && f.push(r);
+    for (t in o) o.hasOwnProperty(t) && (r = d((n = m(t, o[t])))) && f.push(r);
+    for (t in l) l.hasOwnProperty(t) && (r = d((n = m(t, l[t])))) && f.push(r);
+    return f;
 }

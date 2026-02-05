@@ -1,335 +1,195 @@
-n.d(t, {
-    f: () => L,
-});
+n.d(t, { f: () => M });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(732955),
-    r = n(421380),
-    s = n(397927),
+    l = n(421380),
+    r = n(397927),
     o = n(793574),
-    c = n(979286),
-    d = n(216456),
-    u = n(906822),
-    m = n(341915),
-    p = n(714510),
-    h = n(890687),
-    f = n(651892),
-    x = n(901406),
-    b = n(92246),
-    g = n(792620),
+    d = n(979286),
+    c = n(341915),
+    u = n(714510),
+    m = n(890687),
+    h = n(590202),
+    x = n(971649),
+    p = n(651892),
+    g = n(901406),
+    _ = n(92246),
+    f = n(792620),
     v = n(814793),
-    j = n(753386),
-    y = n(201805),
-    _ = n(545986),
-    A = n(194267),
-    C = n(963713),
-    S = n(758836),
-    O = n(985018),
-    E = n(703653);
-
-function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
-            });
-    }
-    return e;
-}
-
-function T(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function I(e) {
-    let { quest: t, sourceQuestContent: n, taskDetails: l } = e;
+    b = n(753386),
+    j = n(201805),
+    A = n(545986),
+    C = n(194267),
+    S = n(963713),
+    T = n(758836),
+    y = n(985018),
+    N = n(703653);
+function E(e) {
+    let { quest: t, sourceQuestContent: n, taskDetails: s } = e;
     return (0, a.jsx)(i.$nd, {
         variant: "primary",
         fullWidth: !0,
         onClick: () => {
-            var e;
-            let a = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.Cy.ACCEPT_QUEST : d.Cy.WATCH_VIDEO;
-            (0, _.d5)({
-                quest: t,
-                questContent: m.uF.QUEST_BAR_V2,
-                sourceQuestContent: n,
-                sourceQuestContentCTA: a,
-            });
+            let e = t.userStatus?.enrolledAt == null ? h.Cy.ACCEPT_QUEST : h.Cy.WATCH_VIDEO;
+            (0, A.d5)({ quest: t, questContent: c.uF.QUEST_BAR_V2, sourceQuestContent: n, sourceQuestContentCTA: e });
         },
         size: "sm",
-        text: (0, j.WM)(l),
+        text: (0, b.WM)(s),
     });
 }
-let w = (e) => {
+let I = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
-            l = (0, u.go)(),
-            r = (0, f.wr)(t);
+            s = (0, x.go)(),
+            l = (0, p.wr)(t);
         return (0, a.jsx)(i.$nd, {
             size: "sm",
             fullWidth: !0,
             onClick: () =>
-                (0, x.pu)(t, {
-                    content: m.uF.QUEST_BAR_V2,
-                    ctaContent: d.Cy.OPEN_GAME_LINK,
-                    impressionId: l,
+                (0, g.pu)(t, {
+                    content: c.uF.QUEST_BAR_V2,
+                    ctaContent: h.Cy.OPEN_GAME_LINK,
+                    impressionId: s,
                     sourceQuestContent: n,
                 }),
-            text: r,
+            text: l,
         });
     },
     k = (e) => {
-        var t;
-        let { quest: n, sourceQuestContent: l } = e,
-            r = null == (t = (0, u.vU)()) ? void 0 : t.getId();
+        let { quest: t, sourceQuestContent: n } = e,
+            s = (0, x.vU)()?.getId();
         return (0, a.jsx)(i.$nd, {
             fullWidth: !0,
             onClick: () =>
-                (0, x.se)(
+                (0, g.se)(
+                    { quest: t },
                     {
-                        quest: n,
-                    },
-                    {
-                        content: m.uF.QUEST_BAR_V2,
-                        ctaContent: d.Cy.CONNECT_CONSOLE,
-                        impressionId: r,
-                        sourceQuestContent: l,
+                        content: c.uF.QUEST_BAR_V2,
+                        ctaContent: h.Cy.CONNECT_CONSOLE,
+                        impressionId: s,
+                        sourceQuestContent: n,
                     },
                 ),
             size: "sm",
-            text: O.intl.string(O.t.csptqV),
+            text: y.intl.string(y.t.csptqV),
         });
     },
-    P = (e) => {
+    R = (e) => {
         let { quest: t } = e,
-            n = (0, p.NA)({
-                quest: t,
-            }),
-            { launchInGameActivity: l } = (0, h.zW)(t);
+            n = (0, u.NA)({ quest: t }),
+            { launchInGameActivity: s } = (0, m.zW)(t);
         return (0, v.vA)(t)
             ? (0, a.jsx)(i.$nd, {
                   fullWidth: !0,
                   variant: "primary",
-                  icon: (0, _.Oz)(t),
-                  onClick: l,
+                  icon: (0, A.Oz)(t),
+                  onClick: s,
                   size: "sm",
                   text: n,
               })
             : null;
     },
-    R = (e) => {
+    O = (e) => {
         let {
                 quest: t,
                 sourceQuestContent: n,
-                taskDetails: l,
-                popoutTargetElementRef: r,
-                onGameSheetOpened: s,
+                taskDetails: s,
+                popoutTargetElementRef: l,
+                onGameSheetOpened: r,
                 onGameSheetClosed: o,
             } = e,
-            { applications: c } = l;
-        return (0, a.jsx)(A.A, {
+            { applications: d } = s;
+        return (0, a.jsx)(C.A, {
             quest: t,
             sourceQuestContent: n,
-            applications: null != c ? c : [],
-            targetElementRef: r,
-            onGameSheetOpened: s,
+            applications: d ?? [],
+            targetElementRef: l,
+            onGameSheetOpened: r,
             onGameSheetClosed: o,
             children: (e) =>
-                (0, a.jsx)(
-                    i.$nd,
-                    N(
-                        {
-                            variant: "secondary",
-                            fullWidth: !0,
-                            size: "sm",
-                            text: O.intl.string(O.t["93PTEs"]),
-                        },
-                        e,
-                    ),
-                ),
+                (0, a.jsx)(i.$nd, {
+                    variant: "secondary",
+                    fullWidth: !0,
+                    size: "sm",
+                    text: y.intl.string(y.t["93PTEs"]),
+                    ...e,
+                }),
         });
     },
-    D = (e) => {
-        var t;
-        let { quest: n, ctaLabel: s, onClick: d, questContent: u = m.uF.QUEST_BAR_V2, sourceQuestContent: p } = e,
-            h = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    a,
-                    l,
-                    i = {};
-                if ("u" > typeof Reflect && Reflect.ownKeys) {
-                    for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                        (a = n[l]),
-                            !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (i[a] = e[a]);
-                    return i;
-                }
-                if (
-                    ((i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            a,
-                            l = {},
-                            i = Object.getOwnPropertyNames(e);
-                        for (a = 0; a < i.length; a++)
-                            (n = i[a]),
-                                !(t.indexOf(n) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                    (l[n] = e[n]);
-                        return l;
-                    })(e, t)),
-                    Object.getOwnPropertySymbols)
-                )
-                    for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                        (a = n[l]),
-                            !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (i[a] = e[a]);
-                return i;
-            })(e, ["quest", "ctaLabel", "onClick", "questContent", "sourceQuestContent"]),
-            f = (0, y.ix)({
-                quest: n,
-                questContent: u,
-                sourceQuestContent: p,
-            }),
-            x = l.useCallback(
+    w = (e) => {
+        let { quest: t, ctaLabel: n, onClick: r, questContent: u = c.uF.QUEST_BAR_V2, sourceQuestContent: m, ...h } = e,
+            x = (0, j.ix)({ quest: t, questContent: u, sourceQuestContent: m }),
+            p = s.useCallback(
                 (e) => {
-                    var t;
-                    null == d || d(e),
-                        (0, b.ks)(n.config) && (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null
-                            ? (0, c.Cz)({
-                                  tab: S.G2.ORBS,
+                    r?.(e),
+                        (0, _.ks)(t.config) && t.userStatus?.claimedAt != null
+                            ? (0, d.Cz)({
+                                  tab: T.G2.ORBS,
                                   analyticsLocations: [],
                                   analyticsSource: o.A.QUEST_HOME_PAGE,
                               })
-                            : f();
+                            : x();
                 },
-                [d, n.config, null == (t = n.userStatus) ? void 0 : t.claimedAt, f],
+                [r, t.config, t.userStatus?.claimedAt, x],
             );
-        return (0, a.jsx)(
-            i.$nd,
-            T(
-                N(
-                    {
-                        fullWidth: !0,
-                        onClick: x,
-                        text: null != s ? s : O.intl.string(O.t.cfY4PE),
-                    },
-                    h,
-                ),
-                {
-                    size: h.size === r.$n.Sizes.MEDIUM ? "md" : "sm",
-                },
-            ),
-        );
+        return (0, a.jsx)(i.$nd, {
+            fullWidth: !0,
+            onClick: p,
+            text: n ?? y.intl.string(y.t.cfY4PE),
+            ...h,
+            size: h.size === l.$n.Sizes.MEDIUM ? "md" : "sm",
+        });
     },
-    M = (e) => {
-        var t;
+    D = (e) => {
         let {
-                sourceQuestContent: n,
-                awaitingConsoleConnections: i,
-                hasMadeProgress: r,
-                isProgressing: s,
-                activeScreen: o,
-                popoutTargetElementRef: c,
+                sourceQuestContent: t,
+                awaitingConsoleConnections: n,
+                hasMadeProgress: i,
+                isProgressing: l,
+                activeScreen: r,
+                popoutTargetElementRef: o,
             } = e,
-            { quest: d, onGameSheetOpen: u, onGameSheetClose: p, taskDetails: h } = l.useContext(C.T),
-            f = (null == (t = d.userStatus) ? void 0 : t.completedAt) != null,
-            x = (0, g.vv)(d),
-            b = o !== m.X0.SELECT && !r && !s,
-            j = null;
+            { quest: d, onGameSheetOpen: u, onGameSheetClose: m, taskDetails: h } = s.useContext(S.T),
+            x = d.userStatus?.completedAt != null,
+            p = (0, f.vv)(d),
+            g = r !== c.X0.SELECT && !i && !l,
+            _ = null;
         return (
-            f
-                ? (j = (0, a.jsx)(D, {
-                      quest: d,
-                      sourceQuestContent: n,
-                  }))
-                : x
-                  ? (j = (0, a.jsx)(I, {
-                        quest: d,
-                        sourceQuestContent: n,
-                        taskDetails: h,
-                    }))
+            x
+                ? (_ = (0, a.jsx)(w, { quest: d, sourceQuestContent: t }))
+                : p
+                  ? (_ = (0, a.jsx)(E, { quest: d, sourceQuestContent: t, taskDetails: h }))
                   : (0, v.vA)(d)
-                    ? (j = (0, a.jsx)(P, {
-                          quest: d,
-                      }))
-                    : o === m.X0.CONSOLE && i
-                      ? (j = (0, a.jsx)(k, {
-                            quest: d,
-                            sourceQuestContent: n,
-                        }))
-                      : b && (0, v.ui)(d)
-                        ? (j = (0, a.jsx)(R, {
+                    ? (_ = (0, a.jsx)(R, { quest: d }))
+                    : r === c.X0.CONSOLE && n
+                      ? (_ = (0, a.jsx)(k, { quest: d, sourceQuestContent: t }))
+                      : g && (0, v.ui)(d)
+                        ? (_ = (0, a.jsx)(O, {
                               quest: d,
-                              sourceQuestContent: n,
+                              sourceQuestContent: t,
                               taskDetails: h,
-                              popoutTargetElementRef: c,
+                              popoutTargetElementRef: o,
                               onGameSheetOpened: u,
-                              onGameSheetClosed: p,
+                              onGameSheetClosed: m,
                           }))
-                        : b &&
-                          (j = (0, a.jsx)(w, {
-                              quest: d,
-                              sourceQuestContent: n,
-                          })),
-            null == j
-                ? null
-                : (0, a.jsx)("div", {
-                      className: E.lO,
-                      children: j,
-                  })
+                        : g && (_ = (0, a.jsx)(I, { quest: d, sourceQuestContent: t })),
+            null == _ ? null : (0, a.jsx)("div", { className: N.lO, children: _ })
         );
     };
-
-function L(e) {
-    let t = l.useRef(null);
+function M(e) {
+    let t = s.useRef(null);
     return (0, a.jsxs)("div", {
-        className: E.oG,
+        className: N.oG,
         ref: t,
         children: [
             e.showBackButton &&
                 (0, a.jsx)(i.K0, {
                     size: "sm",
-                    "aria-label": O.intl.string(O.t["13/7kX"]),
+                    "aria-label": y.intl.string(y.t["13/7kX"]),
                     onClick: e.onBack,
-                    icon: s.n2b,
+                    icon: r.n2b,
                     variant: "secondary",
                 }),
-            (0, a.jsx)(
-                M,
-                T(N({}, e), {
-                    popoutTargetElementRef: t,
-                }),
-            ),
+            (0, a.jsx)(D, { ...e, popoutTargetElementRef: t }),
         ],
     });
 }

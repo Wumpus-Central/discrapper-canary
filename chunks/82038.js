@@ -1,19 +1,15 @@
-n.d(t, {
-    c: () => A,
-}),
-    n(896048),
-    n(747238);
-var r = n(621466),
-    i = n(158954),
-    l = n(775602),
-    s = n(186111),
-    a = n(430452),
+n.d(t, { c: () => E });
+var i = n(621466),
+    s = n(158954),
+    r = n(775602),
+    a = n(186111),
+    l = n(430452),
     o = n(383501),
     c = n(203982),
     d = n(350535),
     u = n(652215);
 let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    p = new Set([
+    m = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -30,7 +26,7 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "Symbol",
         "SymbolLock",
     ]),
-    m = new Set([
+    A = new Set([
         "F1",
         "F2",
         "F3",
@@ -88,18 +84,17 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "VolumeDown",
         "VolumeMute",
     ]),
-    A = {
+    E = {
         binds: ["any-character"],
         keydown(e, t) {
-            var n;
-            let A = null == (n = (0, r.BF)(e)) ? void 0 : n.activeElement;
-            if ((0, r.Cw)(A) || i.rxt.isActive() || p.has(t) || m.has(t) || g.has(t)) return !1;
-            let f = null != A && "BODY" === A.tagName;
+            let n = (0, i.BF)(e)?.activeElement;
+            if ((0, i.Cw)(n) || s.rxt.isActive() || m.has(t) || A.has(t) || g.has(t)) return !1;
+            let E = null != n && "BODY" === n.tagName;
             return (
                 !(
-                    (l.A.keyboardModeEnabled && !f && !/^[a-zA-Z0-9]$/.test(t)) ||
+                    (r.A.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
                     c._.hasSubscribers(u.jej.MODAL_CLOSE) ||
-                    s.A.hasLayers()
+                    a.A.hasLayers()
                 ) &&
                 ("Tab" === t &&
                 c._.hasSubscribers(u.jej.TEXTAREA_FOCUS) &&
@@ -107,9 +102,9 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                     ? (e.preventDefault(), c._.dispatch(u.jej.TEXTAREA_FOCUS), !1)
                     : !(
                           o.A.isConnected() &&
-                          a.A.getMode() === u.TBI.PUSH_TO_TALK &&
-                          !a.A.isSelfMute() &&
-                          Object.values(a.A.getShortcuts())
+                          l.A.getMode() === u.TBI.PUSH_TO_TALK &&
+                          !l.A.isSelfMute() &&
+                          Object.values(l.A.getShortcuts())
                               .map(d.pi)
                               .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
                       ) &&

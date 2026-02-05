@@ -1,18 +1,11 @@
-n.d(t, {
-    d: () => s,
-});
+"use strict";
+n.d(t, { d: () => o });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(673277);
-let o = () =>
-        (0, r.jsx)("div", {
-            style: {
-                background: "rgba(255, 255, 255, 0.6)",
-                height: 120,
-            },
-        }),
-    s = {
+let s = () => (0, r.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } }),
+    o = {
         name: "Section",
         id: "section",
         component: (e) => {
@@ -27,63 +20,51 @@ let o = () =>
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "red",
-                                },
+                                style: { background: "red" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "orange",
-                                },
+                                style: { background: "orange" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "yellow",
-                                },
+                                style: { background: "yellow" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "green",
-                                },
+                                style: { background: "green" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "blue",
-                                },
+                                style: { background: "blue" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                style: {
-                                    background: "violet",
-                                },
+                                style: { background: "violet" },
                                 children: (0, r.jsx)(a.A, {
                                     verticalMargin: t,
                                     padding: n,
-                                    children: (0, r.jsx)(o, {}),
+                                    children: (0, r.jsx)(s, {}),
                                 }),
                             }),
                         ],
@@ -92,15 +73,7 @@ let o = () =>
             });
         },
         controls: {
-            verticalMargin: {
-                label: "Vertical Margin",
-                type: "number",
-                defaultValue: 16,
-            },
-            padding: {
-                label: "Padding",
-                type: "number",
-                defaultValue: 8,
-            },
+            verticalMargin: { label: "Vertical Margin", type: "number", defaultValue: 16 },
+            padding: { label: "Padding", type: "number", defaultValue: 8 },
         },
     };

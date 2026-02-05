@@ -1,3 +1,4 @@
+"use strict";
 var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
@@ -12,32 +13,24 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var o = n(336258),
     l = n(259126),
-    c = n(110799);
+    u = n(110799);
 e.exports = (function (e) {
     function t(e) {
         i(this, t);
@@ -73,9 +66,7 @@ e.exports = (function (e) {
                             (this._velocity / (1 - this._deceleration)) *
                                 (1 - Math.exp(-(1 - this._deceleration) * (e - this._startTime)));
                     (this._onUpdate(t), 0.1 > Math.abs(this._lastValue - t))
-                        ? this.__debouncedOnEnd({
-                              finished: !0,
-                          })
+                        ? this.__debouncedOnEnd({ finished: !0 })
                         : ((this._lastValue = t),
                           this.__active && (this._animationFrame = l.current(this.onUpdate.bind(this))));
                 },
@@ -83,11 +74,7 @@ e.exports = (function (e) {
             {
                 key: "stop",
                 value: function () {
-                    (this.__active = !1),
-                        c.current(this._animationFrame),
-                        this.__debouncedOnEnd({
-                            finished: !1,
-                        });
+                    (this.__active = !1), u.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
                 },
             },
         ]),

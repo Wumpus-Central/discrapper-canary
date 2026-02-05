@@ -1,3 +1,2 @@
-e.exports = {
-    F: "errorCodeMessage__85414",
-};
+"use strict";
+e.exports = { F: "errorCodeMessage__85414" };

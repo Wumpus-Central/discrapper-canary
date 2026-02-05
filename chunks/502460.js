@@ -1,8 +1,8 @@
+"use strict";
 function r(e) {
     let t = e.getPropertyValue("content");
     return `${e.cssText} content: '${t.replace(/'|"/g, "")}';`;
 }
-
 function i(e) {
     return toArray(e)
         .map((t) => {
@@ -12,7 +12,6 @@ function i(e) {
         })
         .join(" ");
 }
-
 function a(e, t, n) {
     let a = `.${e}:${t}`,
         s = n.cssText ? r(n) : i(n);

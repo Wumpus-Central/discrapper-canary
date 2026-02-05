@@ -1,113 +1,67 @@
-a.d(t, {
-    default: () => v,
-});
-var i = a(627968),
-    n = a(64700),
-    l = a(397927),
-    d = a(930932),
-    c = a(612479),
-    r = a(954571),
-    o = a(545125),
-    f = a(86039),
-    b = a(360469),
-    u = a(652215),
-    s = a(670455),
-    _ = a(985018);
-let p = [b.CS.OTHER, b.CS.ADS, b.CS.NOT_FUN];
-
-function v(e) {
-    var t;
+i.d(e, { default: () => g });
+var n = i(627968),
+    a = i(64700),
+    l = i(397927),
+    _ = i(930932),
+    c = i(612479),
+    o = i(954571),
+    r = i(545125),
+    d = i(86039),
+    s = i(360469),
+    b = i(652215),
+    u = i(670455),
+    m = i(985018);
+let p = [s.CS.OTHER, s.CS.ADS, s.CS.NOT_FUN];
+function g(t) {
     let {
-        channel: v,
+        channel: e,
         embeddedActivityLocation: g,
-        activityApplication: m,
-        onClose: O,
-        transitionState: y,
-        analyticsData: S,
-    } = e;
-    n.useEffect(() => {
-        r.default.track(u.HAw.OPEN_MODAL, {
+        activityApplication: f,
+        onClose: S,
+        transitionState: A,
+        analyticsData: C,
+    } = t;
+    a.useEffect(() => {
+        o.default.track(b.HAw.OPEN_MODAL, {
             type: "Activity Feedback Modal",
-            application_id: m.id,
-            application_name: m.name,
-            game_id: m.id,
+            application_id: f.id,
+            application_name: f.name,
+            game_id: f.id,
             source: "Activity End",
         });
-    }, [m]);
-    let A = (null == (t = m.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
-    return (0, i.jsx)(c.A, {
+    }, [f]);
+    let v = f.embeddedActivityConfig?.displays_advertisements === !0;
+    return (0, n.jsx)(c.A, {
         modalType: "activity",
-        header: _.intl.formatToPlainString(_.t.QXYwoD, {
-            applicationName: m.name,
-        }),
-        body: _.intl.string(_.t["9hk2KF"]),
-        problemTitle: _.intl.string(_.t.g1q5fr),
-        problems: (0, o.A)(!0, A),
+        header: m.intl.formatToPlainString(m.t.QXYwoD, { applicationName: f.name }),
+        body: m.intl.string(m.t["9hk2KF"]),
+        problemTitle: m.intl.string(m.t.g1q5fr),
+        problems: (0, r.A)(!0, v),
         freeformNeededProblems: p,
-        onSubmit: function (e) {
-            var t;
-            let { rating: n, problem: c, dontShowAgain: o, feedback: b } = e;
-            o &&
-                (r.default.track(u.HAw.ACTIVITY_REPORT_DONT_SHOW, {
-                    application_id: m.id,
-                    rating: n,
-                }),
-                (0, d.n3)({
-                    feedbackType: s.MW.ACTIVITY,
-                    location: "ActivityFeedback",
-                })),
-                null == n ||
-                    ((0, f.A)({
-                        problem: null != (t = null == c ? void 0 : c.value) ? t : null,
-                        channel: v,
+        onSubmit: function (t) {
+            let { rating: a, problem: c, dontShowAgain: r, feedback: s } = t;
+            r &&
+                (o.default.track(b.HAw.ACTIVITY_REPORT_DONT_SHOW, { application_id: f.id, rating: a }),
+                (0, _.n3)({ feedbackType: u.MW.ACTIVITY, location: "ActivityFeedback" })),
+                null == a ||
+                    ((0, d.A)({
+                        problem: c?.value ?? null,
+                        channel: e,
                         embeddedActivityLocation: g,
-                        feedback: b,
-                        activityApplication: m,
-                        analyticsData: S,
+                        feedback: s,
+                        activityApplication: f,
+                        analyticsData: C,
                         location: "Activity End",
-                        rating: n,
+                        rating: a,
                     }),
                     null != c &&
                         (0, l.mMO)(async () => {
-                            let { default: e } = await a.e("37836").then(a.bind(a, 845671));
-                            return (t) =>
-                                (0, i.jsx)(
-                                    e,
-                                    (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var a = null != arguments[t] ? arguments[t] : {},
-                                                i = Object.keys(a);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (i = i.concat(
-                                                    Object.getOwnPropertySymbols(a).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                                    }),
-                                                )),
-                                                i.forEach(function (t) {
-                                                    var i;
-                                                    (i = a[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: i,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = i);
-                                                });
-                                        }
-                                        return e;
-                                    })(
-                                        {
-                                            body: _.intl.string(_.t["zuHR+y"]),
-                                        },
-                                        t,
-                                    ),
-                                );
+                            let { default: t } = await i.e("37836").then(i.bind(i, 845671));
+                            return (e) => (0, n.jsx)(t, { body: m.intl.string(m.t["zuHR+y"]), ...e });
                         }));
         },
-        onClose: O,
-        transitionState: y,
-        otherKey: b.CS.OTHER,
+        onClose: S,
+        transitionState: A,
+        otherKey: s.CS.OTHER,
     });
 }

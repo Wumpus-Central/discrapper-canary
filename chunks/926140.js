@@ -1,31 +1,16 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    AT: () => o,
-    X9: () => i,
-    rD: () => s,
-    vB: () => a,
-});
-class i {
+"use strict";
+n.d(t, { AT: () => s, X9: () => r, rD: () => a, vB: () => i });
+class r {
+    id;
+    text;
     constructor(e) {
-        r(this, "id", void 0), r(this, "text", void 0), (this.id = e), (this.text = e);
+        (this.id = e), (this.text = e);
     }
 }
-var a = (function (e) {
+var i = (function (e) {
         return (e.UP = "UP"), (e.DOWN = "DOWN"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.TEXT_CHANNEL = "TEXT_CHANNEL"),
@@ -41,7 +26,7 @@ var a = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (
             (e.USER = "@"), (e.TEXT_CHANNEL = "#"), (e.VOICE_CHANNEL = "!"), (e.GUILD = "*"), (e.APPLICATION = "$"), e
         );

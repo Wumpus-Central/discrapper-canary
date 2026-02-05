@@ -1,11 +1,11 @@
-var r,
-    i = n(214958),
-    a = n.n(i),
-    s = n(604948);
-(window.AudioContext = null != (r = window.AudioContext) ? r : window.webkitAudioContext),
+"use strict";
+var r = n(214958),
+    i = n.n(r),
+    a = n(604948);
+(window.AudioContext = window.AudioContext ?? window.webkitAudioContext),
     null != window.RTCPeerConnection &&
-        "Chrome" === a().name &&
-        52 > (0, s.U)() &&
+        "Chrome" === i().name &&
+        52 > (0, a.U)() &&
         ["createOffer", "createAnswer"].forEach((e) => {
             let t = RTCPeerConnection.prototype[e];
             RTCPeerConnection.prototype[e] = function () {
@@ -21,12 +21,8 @@ var r,
                                     OfferToReceiveVideo: e.offerToReceiveVideo || !1,
                                 },
                                 optional: [
-                                    {
-                                        VoiceActivityDetection: e.voiceActivityDetection || !1,
-                                    },
-                                    {
-                                        IceRestart: e.iceRestart || !1,
-                                    },
+                                    { VoiceActivityDetection: e.voiceActivityDetection || !1 },
+                                    { IceRestart: e.iceRestart || !1 },
                                 ],
                             }),
                         new Promise((n, r) => t.apply(i, [n, r, e]))

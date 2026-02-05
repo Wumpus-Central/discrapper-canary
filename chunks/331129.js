@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     xJ: "sliderContainer__14ad3",
     aw: "slider__14ad3",

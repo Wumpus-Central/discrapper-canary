@@ -1,26 +1,14 @@
-l.d(t, {
-    K: () => i,
-    m: () => n,
-}),
-    l(896048);
-var a = l(943357);
-let i = Object.entries(a.Wn)
+a.d(t, { K: () => i, m: () => n });
+var l = a(943357);
+let i = Object.entries(l.Wn)
         .map((e) => {
-            let [t, l] = e;
-            return {
-                id: l.toString(),
-                label: t,
-                value: l,
-            };
+            let [t, a] = e;
+            return { id: a.toString(), label: t, value: a };
         })
         .filter(function (e) {
             return "string" != typeof e.value;
         }),
-    n = Object.entries(a.Fo).map((e) => {
-        let [t, l] = e;
-        return {
-            id: l,
-            label: t,
-            value: l,
-        };
+    n = Object.entries(l.Fo).map((e) => {
+        let [t, a] = e;
+        return { id: a, label: t, value: a };
     });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     N1: "headerContainer__9abb9",
     b: "closeButton__9abb9",

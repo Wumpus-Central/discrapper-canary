@@ -1,177 +1,84 @@
-n.d(t, {
-    S: () => R,
-    U: () => y,
-});
+n.d(t, { S: () => N, U: () => L });
 var r = n(735438),
-    l = n.n(r),
-    i = n(942381),
+    i = n.n(r),
+    l = n(942381),
     a = n(265690),
     u = n(121894),
-    o = n(198982),
-    s = n(403362),
-    c = n(753738),
-    E = n(627794),
-    A = n(53594),
+    s = n(198982),
+    E = n(403362),
+    o = n(753738),
+    A = n(627794),
+    c = n(53594),
     g = n(137207),
     S = n(789821),
-    f = n(904813),
-    O = n(652215),
-    d = n(985018);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let h = Object.freeze({
-        editingRule: null,
-        hasChanges: !1,
-        isLoading: !1,
-        errorMessage: null,
-    }),
-    _ = (0, a.h)((e, t) => ({
+    d = n(904813),
+    _ = n(652215),
+    h = n(985018);
+let R = Object.freeze({ editingRule: null, hasChanges: !1, isLoading: !1, errorMessage: null }),
+    M = (0, a.h)((e, t) => ({
         editingRule: null,
         hasChanges: !1,
         setEditingRule: (n) => {
-            var r, i;
-            let a = t().editingRule,
-                o = null != n && null != a && n.id === a.id,
-                c = l().cloneDeep(n);
-            null != c &&
-                ((r = p({}, c)),
-                (i = i =
-                    {
-                        actions: c.actions.filter(s.Vq),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                (c = r)),
-                (0, u.r)(() =>
-                    e({
-                        editingRule: c,
-                        hasChanges: o,
-                        errorMessage: null,
-                    }),
-                );
+            let r = t().editingRule,
+                l = null != n && null != r && n.id === r.id,
+                a = i().cloneDeep(n);
+            null != a && (a = { ...a, actions: a.actions.filter(E.Vq) }),
+                (0, u.r)(() => e({ editingRule: a, hasChanges: l, errorMessage: null }));
         },
         createNewEditingRule: (t, n, r) => {
-            let l = p({}, (0, E._I)(t, n), null != r ? r : {});
-            return (
-                (0, u.r)(() =>
-                    e({
-                        editingRule: l,
-                        hasChanges: !1,
-                    }),
-                ),
-                l
-            );
+            let i = { ...(0, A._I)(t, n), ...(r ?? {}) };
+            return (0, u.r)(() => e({ editingRule: i, hasChanges: !1 })), i;
         },
         isLoading: !1,
         errorMessage: null,
         cancelEditingRule: () => {
-            (0, u.r)(() => e(p({}, h)));
+            (0, u.r)(() => e({ ...R }));
         },
         saveRule: async (t, n) => {
-            if (null == t) return (0, u.r)(() => e(p({}, h))), null;
+            if (null == t) return (0, u.r)(() => e({ ...R })), null;
             try {
-                var r, l, i;
-                (0, E.KU)(t) &&
-                    ((t.triggerMetadata.keywordFilter = (0, S.HR)(
-                        (0, S.Uq)(null != (r = t.triggerMetadata.keywordFilter) ? r : []),
-                    )),
-                    (t.triggerMetadata.allowList = (0, S.HR)(
-                        (0, S.Uq)(null != (l = t.triggerMetadata.allowList) ? l : []),
-                    ))),
-                    (0, E.ZG)(t) &&
-                        (t.triggerMetadata.allowList = (0, S.HR)(
-                            (0, S.Uq)(null != (i = t.triggerMetadata.allowList) ? i : []),
-                        )),
-                    (0, A.xG)(t, n),
-                    (0, E.uV)(t);
+                (0, A.KU)(t) &&
+                    ((t.triggerMetadata.keywordFilter = (0, S.HR)((0, S.Uq)(t.triggerMetadata.keywordFilter ?? []))),
+                    (t.triggerMetadata.allowList = (0, S.HR)((0, S.Uq)(t.triggerMetadata.allowList ?? [])))),
+                    (0, A.ZG)(t) &&
+                        (t.triggerMetadata.allowList = (0, S.HR)((0, S.Uq)(t.triggerMetadata.allowList ?? []))),
+                    (0, c.xG)(t, n),
+                    (0, A.uV)(t);
             } catch (t) {
                 return (
-                    t instanceof c.lH
+                    t instanceof o.lH
                         ? (0, u.r)(() => {
-                              e({
-                                  errorMessage: d.intl.string(d.t["4Dxaus"]),
-                                  isLoading: !1,
-                              });
+                              e({ errorMessage: h.intl.string(h.t["4Dxaus"]), isLoading: !1 });
                           })
-                        : t instanceof c.Nr
+                        : t instanceof o.Nr
                           ? (0, u.r)(() => {
-                                e({
-                                    errorMessage: d.intl.string(d.t.hDPEu1),
-                                    isLoading: !1,
-                                });
+                                e({ errorMessage: h.intl.string(h.t.hDPEu1), isLoading: !1 });
                             })
                           : (0, u.r)(() => {
-                                e({
-                                    errorMessage: t.message,
-                                    isLoading: !1,
-                                });
+                                e({ errorMessage: t.message, isLoading: !1 });
                             }),
                     null
                 );
             }
             try {
                 (0, u.r)(() => {
-                    e({
-                        isLoading: !0,
-                    });
+                    e({ isLoading: !0 });
                 });
                 let n = null;
                 return (
-                    (n = (0, E.wC)(t) && !(0, f.R)(t.id) ? await (0, g.Vj)(t) : await (0, g.G6)(t)),
-                    (0, u.r)(() => e(p({}, h))),
+                    (n = (0, A.wC)(t) && !(0, d.R)(t.id) ? await (0, g.Vj)(t) : await (0, g.G6)(t)),
+                    (0, u.r)(() => e({ ...R })),
                     n
                 );
             } catch (n) {
-                let t = new o.LG(n);
+                let t = new s.LG(n);
                 (0, u.r)(() => {
                     e({
                         isLoading: !1,
-                        errorMessage: (function (e) {
-                            if (e.code === O.t02.INVALID_FORM_BODY) {
-                                var t, n;
-                                if (
-                                    (null == (n = e.errors) || null == (t = n.trigger_metadata)
-                                        ? void 0
-                                        : t.regex_patterns) != null
-                                )
-                                    return d.intl.string(d.t.hDPEu1);
-                            }
-                            return e.getAnyErrorMessage();
-                        })(t),
+                        errorMessage:
+                            t.code === _.t02.INVALID_FORM_BODY && t.errors?.trigger_metadata?.regex_patterns != null
+                                ? h.intl.string(h.t.hDPEu1)
+                                : t.getAnyErrorMessage(),
                     });
                 });
             }
@@ -182,9 +89,8 @@ let h = Object.freeze({
             return r(n, e);
         },
     }));
-
-function R() {
-    return _(
+function N() {
+    return M(
         (e) => ({
             hasChanges: e.hasChanges,
             editingRule: e.editingRule,
@@ -194,20 +100,19 @@ function R() {
             saveEditingRule: e.saveEditingRule,
             cancelEditingRule: e.cancelEditingRule,
         }),
-        i.x,
+        l.x,
     );
 }
-
-function y() {
+function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-        t = _(
+        t = M(
             (e) => ({
                 hasChanges: e.hasChanges,
                 editingRule: e.editingRule,
                 setEditingRule: e.setEditingRule,
                 createNewEditingRule: e.createNewEditingRule,
             }),
-            i.x,
+            l.x,
         );
     return null != e && t.setEditingRule(e), t;
 }

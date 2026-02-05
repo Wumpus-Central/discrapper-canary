@@ -1,3 +1,2 @@
-e.exports = {
-    Y: "legacyInputCommandHeader__38272",
-};
+"use strict";
+e.exports = { Y: "legacyInputCommandHeader__38272" };

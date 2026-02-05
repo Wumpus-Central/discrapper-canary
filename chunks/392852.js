@@ -1,4 +1,4 @@
-function n(e) {
+function a(e) {
     return Object.entries(e)
         .filter(function (e) {
             e[0];
@@ -7,26 +7,17 @@ function n(e) {
         })
         .map(function (e) {
             var t = e[0],
-                r = e[1];
-            return encodeURIComponent(t) + "=" + encodeURIComponent(r);
+                n = e[1];
+            return encodeURIComponent(t) + "=" + encodeURIComponent(n);
         })
         .join("&");
 }
-
-function a(e) {
+function r(e) {
     var t = (e && e.ownerDocument) || document,
-        r = t.defaultView || t.parentWindow || window;
-    return {
-        document: t,
-        window: r,
-    };
+        n = t.defaultView || t.parentWindow || window;
+    return { document: t, window: n };
 }
-
 function i(e) {
     return e || document.head;
 }
-r.d(t, {
-    CC: () => a,
-    YK: () => n,
-    yO: () => i,
-});
+n.d(t, { CC: () => r, YK: () => a, yO: () => i });

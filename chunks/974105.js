@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__24a95",
     qq: "emojiContainer__24a95",

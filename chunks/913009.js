@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => c,
-});
+"use strict";
+r.d(t, { A: () => c });
 var n = r(64700),
     o = r(205662),
     a = r(41592),
@@ -28,7 +27,6 @@ var n = r(64700),
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-
 function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -36,7 +34,6 @@ function u(e, t) {
 let c = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, i = Array(o), l = 0; l < o; l++) i[l] = arguments[l];
@@ -63,12 +60,7 @@ let c = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         s(t, [
@@ -86,10 +78,7 @@ let c = (function (e) {
                         r = (0, o.default)(
                             {
                                 default: {
-                                    alpha: {
-                                        absolute: "0px 0px 0px 0px",
-                                        borderRadius: this.props.radius,
-                                    },
+                                    alpha: { absolute: "0px 0px 0px 0px", borderRadius: this.props.radius },
                                     checkboard: {
                                         absolute: "0px 0px 0px 0px",
                                         overflow: "hidden",
@@ -114,15 +103,8 @@ let c = (function (e) {
                                         boxShadow: this.props.shadow,
                                         borderRadius: this.props.radius,
                                     },
-                                    container: {
-                                        position: "relative",
-                                        height: "100%",
-                                        margin: "0 3px",
-                                    },
-                                    pointer: {
-                                        position: "absolute",
-                                        left: 100 * t.a + "%",
-                                    },
+                                    container: { position: "relative", height: "100%", margin: "0 3px" },
+                                    pointer: { position: "absolute", left: 100 * t.a + "%" },
                                     slider: {
                                         width: "4px",
                                         borderRadius: "1px",
@@ -150,35 +132,21 @@ let c = (function (e) {
                                             t.b +
                                             ", 1) 100%)",
                                     },
-                                    pointer: {
-                                        left: 0,
-                                        top: 100 * t.a + "%",
-                                    },
+                                    pointer: { left: 0, top: 100 * t.a + "%" },
                                 },
                                 overwrite: l({}, this.props.style),
                             },
-                            {
-                                vertical: "vertical" === this.props.direction,
-                                overwrite: !0,
-                            },
+                            { vertical: "vertical" === this.props.direction, overwrite: !0 },
                         );
                     return n.createElement(
                         "div",
-                        {
-                            style: r.alpha,
-                        },
+                        { style: r.alpha },
                         n.createElement(
                             "div",
-                            {
-                                style: r.checkboard,
-                            },
-                            n.createElement(i.A, {
-                                renderers: this.props.renderers,
-                            }),
+                            { style: r.checkboard },
+                            n.createElement(i.A, { renderers: this.props.renderers }),
                         ),
-                        n.createElement("div", {
-                            style: r.gradient,
-                        }),
+                        n.createElement("div", { style: r.gradient }),
                         n.createElement(
                             "div",
                             {
@@ -192,14 +160,10 @@ let c = (function (e) {
                             },
                             n.createElement(
                                 "div",
-                                {
-                                    style: r.pointer,
-                                },
+                                { style: r.pointer },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", {
-                                          style: r.slider,
-                                      }),
+                                    : n.createElement("div", { style: r.slider }),
                             ),
                         ),
                     );

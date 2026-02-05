@@ -1,100 +1,41 @@
-n.d(t, {
-    PV: () => c,
-    ro: () => u,
-    xs: () => d,
-});
-var r = n(397927),
-    i = n(927578),
-    a = n(788868),
-    s = n(88001),
-    o = n(519412),
-    l = n(985018);
+i.d(t, { PV: () => c, ro: () => d, xs: () => m });
+var r = i(397927),
+    n = i(927578),
+    s = i(788868),
+    a = i(88001),
+    l = i(519412),
+    o = i(985018);
 let c = [
-        {
-            Icon: r.$yI,
-            getText: () =>
-                l.intl.formatToPlainString(o.default.eP3Ar7, {
-                    totalSeats: s.aw,
-                }),
-        },
-        {
-            Icon: r.tvc,
-            getText: () => l.intl.string(o.default.woz1Kg),
-        },
-        {
-            Icon: r._Jp,
-            getText: () => l.intl.string(o.default.QnbVrt),
-        },
-        {
-            Icon: r.R2l,
-            getText: () => l.intl.string(o.default["409DEa"]),
-        },
-    ],
-    u = [
-        {
-            Icon: r.$yI,
-            getText: () =>
-                l.intl.formatToPlainString(o.default.eP3Ar7, {
-                    totalSeats: s.aw,
-                }),
-        },
-        {
-            Icon: r.JMY,
-            getText: () =>
-                l.intl.formatToPlainString(l.t.p8QVLT, {
-                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, {
-                        useSpace: !1,
-                    }),
-                }),
-        },
-        {
-            Icon: r.it9,
-            getText: () => l.intl.string(l.t["taMwg/"]),
-        },
-        {
-            Icon: r.nm2,
-            getText: () => l.intl.string(l.t.KjrZ8Z),
-        },
-        {
-            Icon: r.Fzq,
-            getText: () => l.intl.string(l.t.W180bY),
-        },
-        {
-            Icon: r._Jp,
-            getText: () =>
-                l.intl.formatToPlainString(o.default.HVCRVf, {
-                    numBoosts: a.M4,
-                }),
-        },
-        {
-            Icon: r.clX,
-            getText: () => l.intl.string(l.t.CNIZfy),
-        },
+        { Icon: r.$yI, getText: () => o.intl.formatToPlainString(l.default.eP3Ar7, { totalSeats: a.aw }) },
+        { Icon: r.tvc, getText: () => o.intl.string(l.default.woz1Kg) },
+        { Icon: r._Jp, getText: () => o.intl.string(l.default.QnbVrt) },
+        { Icon: r.R2l, getText: () => o.intl.string(l.default["409DEa"]) },
     ],
     d = [
+        { Icon: r.$yI, getText: () => o.intl.formatToPlainString(l.default.eP3Ar7, { totalSeats: a.aw }) },
         {
             Icon: r.JMY,
             getText: () =>
-                l.intl.formatToPlainString(l.t.p8QVLT, {
-                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, {
-                        useSpace: !1,
-                    }),
+                o.intl.formatToPlainString(o.t.p8QVLT, {
+                    maxUploadPremium: (0, n.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
+        { Icon: r.it9, getText: () => o.intl.string(o.t["taMwg/"]) },
+        { Icon: r.nm2, getText: () => o.intl.string(o.t.KjrZ8Z) },
+        { Icon: r.Fzq, getText: () => o.intl.string(o.t.W180bY) },
+        { Icon: r._Jp, getText: () => o.intl.formatToPlainString(l.default.HVCRVf, { numBoosts: s.M4 }) },
+        { Icon: r.clX, getText: () => o.intl.string(o.t.CNIZfy) },
+    ],
+    m = [
         {
-            Icon: r.it9,
-            getText: () => l.intl.string(l.t["taMwg/"]),
+            Icon: r.JMY,
+            getText: () =>
+                o.intl.formatToPlainString(o.t.p8QVLT, {
+                    maxUploadPremium: (0, n.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
+                }),
         },
-        {
-            Icon: r.nm2,
-            getText: () => l.intl.string(l.t.KjrZ8Z),
-        },
-        {
-            Icon: r.Fzq,
-            getText: () => l.intl.string(l.t.W180bY),
-        },
-        {
-            Icon: r.clX,
-            getText: () => l.intl.string(l.t.CNIZfy),
-        },
+        { Icon: r.it9, getText: () => o.intl.string(o.t["taMwg/"]) },
+        { Icon: r.nm2, getText: () => o.intl.string(o.t.KjrZ8Z) },
+        { Icon: r.Fzq, getText: () => o.intl.string(o.t.W180bY) },
+        { Icon: r.clX, getText: () => o.intl.string(o.t.CNIZfy) },
     ];

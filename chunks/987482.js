@@ -1,210 +1,116 @@
-n.r(t),
-    n.d(t, {
-        default: () => C,
-    }),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.r(t), n.d(t, { default: () => v });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(481613),
     o = n.n(s),
-    c = n(607399),
-    u = n(247775),
-    d = n(311907),
-    p = n(732955),
+    d = n(607399),
+    c = n(247775),
+    u = n(311907),
+    A = n(732955),
     h = n(397927),
-    g = n(315982),
-    f = n(961350),
-    m = n(287809),
-    A = n(954571),
-    _ = n(53505),
-    b = n(652215),
-    E = n(985018),
-    O = n(386144);
-let y = [
+    _ = n(315982),
+    m = n(961350),
+    p = n(287809),
+    g = n(954571),
+    E = n(53505),
+    f = n(652215),
+    I = n(985018),
+    C = n(386144);
+let N = [
+        { getOs: () => I.intl.string(I.t.NK5ySJ), icon: C.Bt, url: () => (0, E.oW)("osx", !1), platformKey: 0 },
+        { getOs: () => I.intl.string(I.t.OvKGE6), icon: C.KF, url: () => (0, E.oW)("win", !1), platformKey: 1 },
         {
-            getOs: () => E.intl.string(E.t.NK5ySJ),
-            icon: O.Bt,
-            url: () => (0, _.oW)("osx", !1),
-            platformKey: 0,
-        },
-        {
-            getOs: () => E.intl.string(E.t.OvKGE6),
-            icon: O.KF,
-            url: () => (0, _.oW)("win", !1),
-            platformKey: 1,
-        },
-        {
-            getOs: () => E.intl.string(E.t.dJB4PN),
-            icon: O.pS,
+            getOs: () => I.intl.string(I.t.dJB4PN),
+            icon: C.pS,
             url: [
-                {
-                    url: () => (0, _.oW)("linux", !1, "deb"),
-                    getText: () => E.intl.string(E.t.Sodsus),
-                },
-                {
-                    url: () => (0, _.oW)("linux", !1, "tar.gz"),
-                    getText: () => E.intl.string(E.t.G3U6IV),
-                },
+                { url: () => (0, E.oW)("linux", !1, "deb"), getText: () => I.intl.string(I.t.Sodsus) },
+                { url: () => (0, E.oW)("linux", !1, "tar.gz"), getText: () => I.intl.string(I.t.G3U6IV) },
             ],
             platformKey: 2,
         },
     ],
-    I = [
-        {
-            getOs: () => E.intl.string(E.t.wCVyNT),
-            icon: O.s4,
-            url: () => b.AMi.IOS,
-            platformKey: 3,
-        },
-        {
-            getOs: () => E.intl.string(E.t.wuQpJD),
-            icon: O.yA,
-            url: () => b.AMi.ANDROID,
-            platformKey: 4,
-        },
+    T = [
+        { getOs: () => I.intl.string(I.t.wCVyNT), icon: C.s4, url: () => f.AMi.IOS, platformKey: 3 },
+        { getOs: () => I.intl.string(I.t.wuQpJD), icon: C.yA, url: () => f.AMi.ANDROID, platformKey: 4 },
     ],
-    v = (e) => {
-        let { os: t, url: n, onClick: l } = e,
-            a = i.useRef(null),
-            [s, o] = i.useState(!1),
-            c = i.useCallback(
+    S = (e) => {
+        let { os: t, url: n, onClick: a } = e,
+            l = r.useRef(null),
+            [s, o] = r.useState(!1),
+            d = r.useCallback(
                 (e) => {
-                    let { closePopout: i } = e;
+                    let { closePopout: r } = e;
                     return Array.isArray(n)
-                        ? (0, r.jsx)(h.W1t, {
+                        ? (0, i.jsx)(h.W1t, {
                               "data-menu-migrated": !0,
                               navId: "download-app-menu",
-                              "aria-label": E.intl.string(E.t["+1H47t"]),
-                              onClose: i,
+                              "aria-label": I.intl.string(I.t["+1H47t"]),
+                              onClose: r,
                               onSelect: void 0,
                               children: n.map((e) =>
-                                  (0, r.jsx)(
+                                  (0, i.jsx)(
                                       h.Drp,
-                                      {
-                                          id: e.url(),
-                                          label: e.getText(),
-                                          action: () => l(t, e.url()),
-                                      },
+                                      { id: e.url(), label: e.getText(), action: () => a(t, e.url()) },
                                       e.url(),
                                   ),
                               ),
                           })
                         : null;
                 },
-                [t, n, l],
+                [t, n, a],
             );
         return Array.isArray(n)
-            ? (0, r.jsx)(h.YNO, {
-                  renderPopout: c,
-                  targetElementRef: a,
+            ? (0, i.jsx)(h.YNO, {
+                  renderPopout: d,
+                  targetElementRef: l,
                   align: "left",
                   position: "bottom",
                   onRequestOpen: () => o(!0),
                   onRequestClose: () => o(!1),
-                  children: (e) => {
-                      var t, n;
-                      return (0, r.jsx)(
-                          p.$nd,
-                          ((t = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      r = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (r = r.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      r.forEach(function (t) {
-                                          var r;
-                                          (r = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: r,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = r);
-                                      });
-                              }
-                              return e;
-                          })({}, e)),
-                          (n = n =
-                              {
-                                  buttonRef: a,
-                                  text: E.intl.string(E.t["1WjMbC"]),
-                                  variant: "primary",
-                                  size: "sm",
-                                  fullWidth: !0,
-                                  icon: s ? p.jQp : p.g8p,
-                                  iconPosition: "end",
-                              }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var r = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, r);
-                                    }
-                                    return n;
-                                })(Object(n)).forEach(function (e) {
-                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                }),
-                          t),
-                      );
-                  },
+                  children: (e) =>
+                      (0, i.jsx)(A.$nd, {
+                          ...e,
+                          buttonRef: l,
+                          text: I.intl.string(I.t["1WjMbC"]),
+                          variant: "primary",
+                          size: "sm",
+                          fullWidth: !0,
+                          icon: s ? A.jQp : A.g8p,
+                          iconPosition: "end",
+                      }),
               })
-            : (0, r.jsx)(p.$nd, {
-                  text: E.intl.string(E.t["1WjMbC"]),
-                  onClick: () => l(t, n()),
+            : (0, i.jsx)(A.$nd, {
+                  text: I.intl.string(I.t["1WjMbC"]),
+                  onClick: () => a(t, n()),
                   variant: "primary",
                   size: "sm",
                   fullWidth: !0,
                   role: "link",
               });
     },
-    S = (e) => {
-        let { platform: t, onClick: n, onMouseEnter: i, isActive: l } = e,
-            { getOs: s, icon: o, url: c, platformKey: u } = t,
-            d = s(),
-            p = a()(O.Kk, o);
-        return (0, r.jsx)("li", {
-            className: a()(O.iD, {
-                [O.vu]: l,
-            }),
-            onMouseEnter: () => i(u),
-            children: (0, r.jsxs)("div", {
-                className: O.FG,
+    x = (e) => {
+        let { platform: t, onClick: n, onMouseEnter: r, isActive: a } = e,
+            { getOs: s, icon: o, url: d, platformKey: c } = t,
+            u = s(),
+            A = l()(C.Kk, o);
+        return (0, i.jsx)("li", {
+            className: l()(C.iD, { [C.vu]: a }),
+            onMouseEnter: () => r(c),
+            children: (0, i.jsxs)("div", {
+                className: C.FG,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: O.aA,
-                        children: [
-                            (0, r.jsx)("div", {
-                                className: p,
-                            }),
-                            (0, r.jsx)("div", {
-                                className: a()(O.vu, p),
-                            }),
-                        ],
+                    (0, i.jsxs)("div", {
+                        className: C.aA,
+                        children: [(0, i.jsx)("div", { className: A }), (0, i.jsx)("div", { className: l()(C.vu, A) })],
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(h.Heading, {
-                                className: O.$r,
-                                variant: "heading-lg/semibold",
-                                children: d,
-                            }),
-                            (0, r.jsx)("div", {
-                                className: O.l6,
-                                children: (0, r.jsx)(v, {
-                                    os: d,
-                                    url: c,
-                                    onClick: n,
-                                }),
+                            (0, i.jsx)(h.Heading, { className: C.$r, variant: "heading-lg/semibold", children: u }),
+                            (0, i.jsx)("div", {
+                                className: C.l6,
+                                children: (0, i.jsx)(S, { os: u, url: d, onClick: n }),
                             }),
                         ],
                     }),
@@ -212,16 +118,14 @@ let y = [
             }),
         });
     };
-
-function C(e) {
-    let { source: t, onClose: n, transitionState: l } = e,
-        s = (0, d.bG)([m.default], () => m.default.getCurrentUser()),
-        _ = (0, d.bG)([f.default], () => f.default.getFingerprint()),
-        v = null == s || s.isClaimed(),
-        [C, N] = i.useState(
+function v(e) {
+    let { source: t, onClose: n, transitionState: a } = e,
+        s = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
+        E = (0, u.bG)([m.default], () => m.default.getFingerprint()),
+        S = null == s || s.isClaimed(),
+        [v, b] = r.useState(
             (function () {
-                var e;
-                switch (null == (e = o().os) ? void 0 : e.family) {
+                switch (o().os?.family) {
                     case "OS X":
                         return 0;
                     case "Windows":
@@ -242,92 +146,72 @@ function C(e) {
                 }
             })(),
         );
-
-    function T(e, r) {
-        (null != u.getToken() || null != _) &&
-            A.default.track(b.HAw.DOWNLOAD_APP, {
+    function y(e, i) {
+        (null != c.getToken() || null != E) &&
+            g.default.track(f.HAw.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
-                has_e_mail: v,
+                has_e_mail: S,
                 referring_location: t,
                 qr_code: !1,
             }),
-            v ? window.open(r, "_blank") : (n(), g.R());
+            S ? window.open(i, "_blank") : (n(), _.R());
     }
-
-    function j(e) {
-        N(e);
+    function L(e) {
+        b(e);
     }
     return (
-        i.useEffect(() => {
-            A.default.track(b.HAw.OPEN_MODAL, {
-                type: "Download App",
-                source: {
-                    location: t,
-                },
-            });
+        r.useEffect(() => {
+            g.default.track(f.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
         }, [t]),
-        (0, r.jsx)(p.aFV, {
-            title: E.intl.string(E.t["BK8LK+"]),
+        (0, i.jsx)(A.aFV, {
+            title: I.intl.string(I.t["BK8LK+"]),
             actions: void 0,
             onClose: n,
-            transitionState: l,
-            preview: (0, r.jsx)(h.Text, {
-                variant: "text-sm/normal",
-                children: E.intl.format(E.t["RJS+1P"], {}),
-            }),
-            children: (0, r.jsxs)("div", {
-                className: O.kL,
+            transitionState: a,
+            preview: (0, i.jsx)(h.Text, { variant: "text-sm/normal", children: I.intl.format(I.t["RJS+1P"], {}) }),
+            children: (0, i.jsxs)("div", {
+                className: C.kL,
                 children: [
-                    !c.Fr &&
-                        (0, r.jsxs)("div", {
-                            className: O.Fp,
+                    !d.Fr &&
+                        (0, i.jsxs)("div", {
+                            className: C.Fp,
                             children: [
-                                (0, r.jsx)(h.Heading, {
+                                (0, i.jsx)(h.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
-                                    className: O.wx,
-                                    children: E.intl.string(E.t["0KK0bP"]),
+                                    className: C.wx,
+                                    children: I.intl.string(I.t["0KK0bP"]),
                                 }),
-                                (0, r.jsx)("ul", {
-                                    className: a()(O.Bn, O.Fw),
-                                    children: y.map((e) =>
-                                        (0, r.jsx)(
-                                            S,
-                                            {
-                                                isActive: C === e.platformKey,
-                                                platform: e,
-                                                onClick: T,
-                                                onMouseEnter: j,
-                                            },
+                                (0, i.jsx)("ul", {
+                                    className: l()(C.Bn, C.Fw),
+                                    children: N.map((e) =>
+                                        (0, i.jsx)(
+                                            x,
+                                            { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: L },
                                             e.platformKey,
                                         ),
                                     ),
                                 }),
                             ],
                         }),
-                    (0, r.jsxs)("div", {
-                        className: O.Fp,
+                    (0, i.jsxs)("div", {
+                        className: C.Fp,
                         children: [
-                            !c.Fr &&
-                                (0, r.jsx)(h.Heading, {
+                            !d.Fr &&
+                                (0, i.jsx)(h.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
-                                    className: O.wx,
-                                    children: E.intl.string(E.t.RdSNWa),
+                                    className: C.wx,
+                                    children: I.intl.string(I.t.RdSNWa),
                                 }),
-                            (0, r.jsx)("ul", {
-                                className: a()(O.Bn, O.f$),
-                                children: I.map((e) =>
-                                    (0, r.jsx)(
-                                        S,
-                                        {
-                                            isActive: C === e.platformKey,
-                                            platform: e,
-                                            onClick: T,
-                                            onMouseEnter: j,
-                                        },
+                            (0, i.jsx)("ul", {
+                                className: l()(C.Bn, C.f$),
+                                children: T.map((e) =>
+                                    (0, i.jsx)(
+                                        x,
+                                        { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: L },
                                         e.platformKey,
                                     ),
                                 ),

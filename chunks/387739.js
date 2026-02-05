@@ -1,12 +1,10 @@
+"use strict";
 var n = r(116740),
     i = n.Map,
     o = n.OrderedSet,
     a = n.Record,
     s = o(),
-    u = {
-        style: s,
-        entity: null,
-    },
+    u = { style: s, entity: null },
     c = (function (t) {
         function e() {
             return t.apply(this, arguments) || this;
@@ -37,10 +35,7 @@ var n = r(116740),
             }),
             (e.create = function (t) {
                 if (!t) return l;
-                var r = i({
-                        style: s,
-                        entity: null,
-                    }).merge(t),
+                var r = i({ style: s, entity: null }).merge(t),
                     n = f.get(r);
                 if (n) return n;
                 var o = new e(r);

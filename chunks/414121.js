@@ -1,139 +1,41 @@
-n.d(t, {
-    Ay: () => x,
-    Lx: () => A,
-    Zs: () => g,
-});
-var r,
-    i,
-    s,
-    l = n(627968),
-    a = n(64700),
-    o = n(503698),
-    c = n.n(o),
-    u = n(978355),
-    d = n(264869);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-var g = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let f = Object.freeze({
-        SIZE_40: "size-40",
-        SIZE_60: "size-60",
-    }),
-    _ = n(906118);
-class m extends (i = a.PureComponent) {
+"use strict";
+n.d(t, { Ay: () => g, Lx: () => p, Zs: () => d });
+var i,
+    s = n(627968),
+    r = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    o = n(856033),
+    c = n(264869),
+    d = (((i = {}).SIZE_40 = "SIZE_40"), (i.SIZE_60 = "SIZE_60"), i);
+let u = Object.freeze({ SIZE_40: "size-40", SIZE_60: "size-60" }),
+    h = n(906118);
+class _ extends r.PureComponent {
+    static defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
     render() {
-        let e = this.props,
-            { className: t, text: n } = e,
-            r = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i,
-                    s = {};
-                if ("u" > typeof Reflect && Reflect.ownKeys) {
-                    for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-                        (r = n[i]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
-                    return s;
-                }
-                if (
-                    ((s = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            s = Object.getOwnPropertyNames(e);
-                        for (r = 0; r < s.length; r++)
-                            (n = s[r]),
-                                !(t.indexOf(n) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                    (i[n] = e[n]);
-                        return i;
-                    })(e, t)),
-                    Object.getOwnPropertySymbols)
-                )
-                    for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-                        (r = n[i]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
-                return s;
-            })(e, ["className", "text"]);
-        return (0, l.jsx)("div", {
-            style: {
-                width: r.size,
-                height: r.size,
-                backgroundColor: r.bgColor,
-            },
-            className: c()(d.qrCodeContainer, t),
-            children: (0, l.jsx)(
-                u.default,
-                p(
-                    {
-                        value: n,
-                        level: "M",
-                    },
-                    r,
-                ),
-            ),
+        let { className: e, text: t, ...n } = this.props;
+        return (0, s.jsx)("div", {
+            style: { width: n.size, height: n.size, backgroundColor: n.bgColor },
+            className: a()(c.qrCodeContainer, e),
+            children: (0, s.jsx)(o.default, { value: t, level: "M", ...n }),
         });
     }
 }
-h(m, "defaultProps", {
-    size: 128,
-    bgColor: "#ffffff",
-    fgColor: "#000000",
-});
-class A extends (s = a.PureComponent) {
+class p extends r.PureComponent {
+    static defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : "SIZE_40"];
-        return (0, l.jsxs)("div", {
-            className: d.qrCodeOverlayContainer,
+            t = u[e ?? "SIZE_40"];
+        return (0, s.jsxs)("div", {
+            className: c.qrCodeOverlayContainer,
             children: [
-                (0, l.jsx)(m, p({}, this.props)),
-                (0, l.jsx)("div", {
-                    className: d.qrCodeOverlay,
-                    children: (0, l.jsx)("img", {
-                        className: d[t],
-                        src: _,
-                        alt: "",
-                    }),
+                (0, s.jsx)(_, { ...this.props }),
+                (0, s.jsx)("div", {
+                    className: c.qrCodeOverlay,
+                    children: (0, s.jsx)("img", { className: c[t], src: h, alt: "" }),
                 }),
             ],
         });
     }
 }
-h(A, "defaultProps", {
-    size: 144,
-    bgColor: "#ffffff",
-    fgColor: "#000000",
-});
-let x = m;
+let g = _;

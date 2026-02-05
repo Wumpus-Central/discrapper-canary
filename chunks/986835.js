@@ -1,17 +1,8 @@
 let t = (e) => ({
-        IMPORTANT: {
-            scope: "meta",
-            begin: "!important",
-        },
+        IMPORTANT: { scope: "meta", begin: "!important" },
         BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
-        HEXCOLOR: {
-            scope: "number",
-            begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/,
-        },
-        FUNCTION_DISPATCH: {
-            className: "built_in",
-            begin: /[\w-]+(?=\()/,
-        },
+        HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
+        FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]+(?=\()/ },
         ATTRIBUTE_SELECTOR_MODE: {
             scope: "selector-attr",
             begin: /\[/,
@@ -26,10 +17,7 @@ let t = (e) => ({
                 "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
             relevance: 0,
         },
-        CSS_VARIABLE: {
-            className: "attr",
-            begin: /--[A-Za-z_][A-Za-z0-9_-]*/,
-        },
+        CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
     }),
     n = [
         "a",
@@ -790,11 +778,8 @@ let t = (e) => ({
 e.exports = function (e) {
     let o = t(e),
         l = "and or not only",
-        c = {
-            className: "variable",
-            begin: "\\$" + e.IDENT_RE,
-        },
-        u = [
+        u = { className: "variable", begin: "\\$" + e.IDENT_RE },
+        c = [
             "charset",
             "css",
             "debug",
@@ -823,45 +808,23 @@ e.exports = function (e) {
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             o.HEXCOLOR,
-            {
-                begin: "\\.[a-zA-Z][a-zA-Z0-9_-]*" + d,
-                className: "selector-class",
-            },
-            {
-                begin: "#[a-zA-Z][a-zA-Z0-9_-]*" + d,
-                className: "selector-id",
-            },
-            {
-                begin: "\\b(" + n.join("|") + ")" + d,
-                className: "selector-tag",
-            },
-            {
-                className: "selector-pseudo",
-                begin: "&?:(" + i.join("|") + ")" + d,
-            },
-            {
-                className: "selector-pseudo",
-                begin: "&?:(:)?(" + a.join("|") + ")" + d,
-            },
+            { begin: "\\.[a-zA-Z][a-zA-Z0-9_-]*" + d, className: "selector-class" },
+            { begin: "#[a-zA-Z][a-zA-Z0-9_-]*" + d, className: "selector-id" },
+            { begin: "\\b(" + n.join("|") + ")" + d, className: "selector-tag" },
+            { className: "selector-pseudo", begin: "&?:(" + i.join("|") + ")" + d },
+            { className: "selector-pseudo", begin: "&?:(:)?(" + a.join("|") + ")" + d },
             o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "keyword",
                 begin: /@media/,
                 starts: {
                     end: /[{;}]/,
-                    keywords: {
-                        $pattern: /[a-z-]+/,
-                        keyword: l,
-                        attribute: r.join(" "),
-                    },
+                    keywords: { $pattern: /[a-z-]+/, keyword: l, attribute: r.join(" ") },
                     contains: [o.CSS_NUMBER_MODE],
                 },
             },
-            {
-                className: "keyword",
-                begin: "@((-(o|moz|ms|webkit)-)?(" + u.join("|") + "))\\b",
-            },
-            c,
+            { className: "keyword", begin: "@((-(o|moz|ms|webkit)-)?(" + c.join("|") + "))\\b" },
+            u,
             o.CSS_NUMBER_MODE,
             {
                 className: "function",
@@ -869,15 +832,12 @@ e.exports = function (e) {
                 illegal: "[\\n]",
                 returnBegin: !0,
                 contains: [
-                    {
-                        className: "title",
-                        begin: "\\b[a-zA-Z][a-zA-Z0-9_-]*",
-                    },
+                    { className: "title", begin: "\\b[a-zA-Z][a-zA-Z0-9_-]*" },
                     {
                         className: "params",
                         begin: /\(/,
                         end: /\)/,
-                        contains: [o.HEXCOLOR, c, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
+                        contains: [o.HEXCOLOR, u, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
                     },
                 ],
             },
@@ -889,7 +849,7 @@ e.exports = function (e) {
                     end: /;|$/,
                     contains: [
                         o.HEXCOLOR,
-                        c,
+                        u,
                         e.APOS_STRING_MODE,
                         e.QUOTE_STRING_MODE,
                         o.CSS_NUMBER_MODE,

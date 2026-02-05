@@ -1,94 +1,27 @@
+"use strict";
 let r, i;
-n.d(t, {
-    BV: () => k,
-    Fy: () => M,
-    Pf: () => T,
-    Pg: () => D,
-    R0: () => O,
-    sv: () => U,
-}),
-    n(747238),
-    n(812715),
-    n(591487),
-    n(727858);
-var a,
-    s = n(214958),
-    o = n.n(s);
+n.d(t, { BV: () => w, Fy: () => L, Pf: () => T, Pg: () => N, R0: () => m, sv: () => x });
+var a = n(214958),
+    s = n.n(a);
 n(689953);
-var l = n(70298),
-    c = n(175259),
+var o = n(70298),
+    l = n(175259),
     u = n(506774),
-    d = n(362474),
-    f = n(71931),
-    p = n(368849);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let E = "deviceProperties",
-    b = "referralProperties",
-    y = window.DiscordNative;
-if (null != y) {
+    c = n(362474),
+    d = n(71931),
+    _ = n(368849);
+let f = "deviceProperties",
+    p = "referralProperties",
+    h = window.DiscordNative;
+if (null != h) {
     let e,
-        t = y.remoteApp.getVersion(),
-        n = y.process.platform,
-        i = y.os.release,
-        s = y.os.arch,
-        u = y.os.appArch,
-        d = y.remoteApp.getReleaseChannel(),
-        p = (0, c.c)();
+        t = h.remoteApp.getVersion(),
+        n = h.process.platform,
+        i = h.os.release,
+        a = h.os.arch,
+        u = h.os.appArch,
+        c = h.remoteApp.getReleaseChannel(),
+        _ = (0, l.c)();
     switch (n) {
         case "win32":
             e = "Windows";
@@ -106,31 +39,28 @@ if (null != y) {
         ((r = {
             os: e,
             browser: "Discord Client",
-            release_channel: d || "unknown",
+            release_channel: c || "unknown",
             client_version: t,
             os_version: i,
-            os_arch: s,
+            os_arch: a,
             app_arch: u,
-            system_locale: p,
-            has_client_mods: (0, l.b)(),
-            client_launch_id: f.C,
+            system_locale: _,
+            has_client_mods: (0, o.b)(),
+            client_launch_id: d.C,
         }),
-        (null == (a = o().name) ? void 0 : a.toLocaleLowerCase()) === "electron" &&
-            ((r.browser_user_agent = o().ua || ""), (r.browser_version = o().version || "")),
+        s().name?.toLocaleLowerCase() === "electron" &&
+            ((r.browser_user_agent = s().ua || ""), (r.browser_version = s().version || "")),
         "linux" === n)
     ) {
-        let e = y.crashReporter.getMetadata();
+        let e = h.crashReporter.getMetadata();
         (r.window_manager = e.wm),
             (r.distro = e.distro),
             (r.runtime_environment = e.runtime_environment),
             (r.display_server = e.display_server);
     } else
-        "darwin" === n
-            ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
-            : "win32" === n && (r.os_sdk_version = null == i ? void 0 : i.split(".")[2]);
+        "darwin" === n ? (r.os_sdk_version = i?.split(".")[0]) : "win32" === n && (r.os_sdk_version = i?.split(".")[2]);
 }
-
-function O() {
+function m() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -141,15 +71,13 @@ function O() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-
-function A(e, t) {
+function g(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
-    let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
+    let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-
-function v() {
+function E() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
         ? "google"
@@ -161,20 +89,18 @@ function v() {
               ? "duckduckgo"
               : null;
 }
-
-function S() {
+function A() {
     let e = {},
         t = document.referrer,
-        n = v(),
+        n = E(),
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
-        let i = A(t, r);
+        let i = g(t, r);
         i.length > 0 && (e.mp_keyword = i);
     }
     return e;
 }
-
 function I() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
@@ -195,7 +121,6 @@ function I() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-
 function T() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
@@ -205,111 +130,91 @@ function T() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
-
-function C() {
+function y() {
     let e = document.referrer.split("/");
     return e.length >= 3 ? e[2] : "";
 }
-
-function N() {
+function S() {
     try {
         if (__OVERLAY__) return "OVERLAY";
     } catch (e) {}
     return null;
 }
-
-function R() {
+function v() {
     let e = {};
     return (
-        (e.os = O()),
+        (e.os = m()),
         (e.browser = I()),
         (e.device = T()),
-        (e.system_locale = (0, c.c)()),
-        (e.has_client_mods = (0, l.b)()),
+        (e.system_locale = (0, l.c)()),
+        (e.has_client_mods = (0, o.b)()),
         e
     );
 }
-
-function w() {
-    var e, t;
-    return g(
-        h(
-            {},
-            {
-                browser_user_agent: window.navigator.userAgent || "",
-                browser_version: o().version || "",
-            },
-        ),
-        {
-            os_version:
-                null != (e = null === o() || void 0 === o() || null == (t = o().os) ? void 0 : t.version) ? e : "",
-        },
-    );
+function C() {
+    return {
+        ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: s().version || "" },
+        os_version: s()?.os?.version ?? "",
+    };
 }
-let P = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-
-function D(e) {
+let b = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function N(e) {
     let t = {};
     return (
-        P.forEach((n) => {
-            let r = A(e, n);
+        b.forEach((n) => {
+            let r = g(e, n);
             r.length > 0 && (t[n] = r);
         }),
         t
     );
 }
-
-function x() {
+function R() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = C()), (e = h({}, e, D(window.location.href), S()));
+    return (
+        (e.referrer = document.referrer), (e.referring_domain = y()), (e = { ...e, ...N(window.location.href), ...A() })
+    );
 }
-
-function L(e, t) {
+function O(e, t) {
     let n = {};
-    return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
+    return Object.keys(e).map((r) => (n[`${r}${t}`] = e[r])), n;
 }
-
-function j() {
-    let e = u.w.get(E);
-    null == e && ((e = R()), u.w.set(E, e));
-    let t = u.w.get(b);
-    null == t && ((t = x()), u.w.set(b, t));
-    let n = d.u.get(b);
-    return null == n && ((n = L(x(), "_current")), d.u.set(b, n)), h({}, e, w(), t, n);
+function D() {
+    let e = u.w.get(f);
+    null == e && ((e = v()), u.w.set(f, e));
+    let t = u.w.get(p);
+    null == t && ((t = R()), u.w.set(p, t));
+    let n = c.u.get(p);
+    return null == n && ((n = O(R(), "_current")), c.u.set(p, n)), { ...e, ...C(), ...t, ...n };
 }
 if (null == r)
     try {
-        r = j();
+        r = D();
     } catch (e) {
         r = {};
     }
-
-function M(e) {
-    (r = h({}, r, e)), (i = (0, p.q)(r));
+function L(e) {
+    (r = { ...r, ...e }), (i = (0, _.q)(r));
 }
-
-function k() {
+function w() {
     return r;
 }
-
-function U() {
+function x() {
     return i;
 }
-M(
+L(
     (function () {
-        var e, t;
-        let n = {},
-            r = window.GLOBAL_ENV.RELEASE_CHANNEL;
-        r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-        let i = parseInt("488230", 10);
-        isNaN(i) || (n.client_build_number = i);
-        let a = null == y || null == (e = (t = y.remoteApp).getBuildNumber) ? void 0 : e.call(t);
+        let e = {},
+            t = window.GLOBAL_ENV.RELEASE_CHANNEL;
+        t && (null == e.release_channel || "" === e.release_channel) && (e.release_channel = t.split("-")[0]);
+        let n = parseInt("493560", 10);
+        isNaN(n) || (e.client_build_number = n);
+        let r = h?.remoteApp.getBuildNumber?.();
         return (
-            isNaN(a) || (n.native_build_number = a),
-            (n.client_event_source = N()),
-            (n.has_client_mods = (0, l.b)()),
-            (n.client_launch_id = f.C),
-            n
+            isNaN(r) || (e.native_build_number = r),
+            (e.client_event_source = S()),
+            (e.has_client_mods = (0, o.b)()),
+            (e.client_launch_id = d.C),
+            e
         );
     })(),
 );

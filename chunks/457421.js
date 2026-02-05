@@ -1,45 +1,25 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = {},
-    l = "NOT_FETCHED",
-    c = () => {
-        l = "FETCHING";
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153);
+let a = {},
+    s = "NOT_FETCHED",
+    o = () => {
+        s = "FETCHING";
     },
-    u = (e) => {
-        (o = e.marketings.marketingsBySurfaces), (l = "FETCHED");
+    l = (e) => {
+        (a = e.marketings.marketingsBySurfaces), (s = "FETCHED");
     },
-    d = () => {
-        (o = {}), (l = "NOT_FETCHED");
+    u = () => {
+        (a = {}), (s = "NOT_FETCHED");
     };
-class f extends (r = i.Ay.Store) {
+class c extends r.Ay.Store {
+    static displayName = "CollectiblesMarketingsStore";
     getMarketingBySurface(e) {
-        return o[e];
+        return a[e];
     }
     get fetchState() {
-        return l;
+        return s;
     }
 }
-s(f, "displayName", "CollectiblesMarketingsStore");
-let p = new f(a.h, {
-    COLLECTIBLES_MARKETING_FETCH: c,
-    COLLECTIBLES_MARKETING_FETCH_SUCCESS: u,
-    LOGOUT: d,
-});
+let d = new c(i.h, { COLLECTIBLES_MARKETING_FETCH: o, COLLECTIBLES_MARKETING_FETCH_SUCCESS: l, LOGOUT: u });

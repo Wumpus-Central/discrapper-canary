@@ -1,80 +1,58 @@
-n.d(t, {
-    X: () => v,
-    x: () => O,
-}),
-    n(896048);
-var r,
-    i = n(627968);
+"use strict";
+n.d(t, { X: () => T, x: () => A });
+var r = n(627968);
 n(64700);
-var a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(397927),
-    c = n(73153),
+var i = n(503698),
+    a = n.n(i),
+    s = n(311907),
+    o = n(397927),
+    l = n(73153),
     u = n(927057),
-    d = n(734057),
-    f = n(696451),
-    p = n(309010),
-    _ = n(287809),
-    h = n(985018),
-    m = n(785263);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let E = new Set();
-class b extends (r = o.Ay.PersistedStore) {
+    c = n(734057),
+    d = n(696451),
+    _ = n(309010),
+    f = n(287809),
+    p = n(985018),
+    h = n(785263);
+let m = new Set();
+class g extends s.Ay.PersistedStore {
+    static displayName = "PTOStore";
+    static persistKey = "PTOStore";
     initialize(e) {
-        this.waitFor(d.A, f.Ay, p.A, _.default), null != e && (E = new Set(e));
+        this.waitFor(c.A, d.Ay, _.A, f.default), null != e && (m = new Set(e));
     }
     hasId(e) {
-        return E.has(e);
+        return m.has(e);
     }
     getState() {
-        return [...E];
+        return [...m];
     }
 }
-g(b, "displayName", "PTOStore"), g(b, "persistKey", "PTOStore");
-let y = new b(c.h, {}),
-    O = (e) =>
-        (0, o.bG)([f.Ay, _.default, y], () => {
-            let t = _.default.getCurrentUser();
+let E = new g(l.h, {}),
+    A = (e) =>
+        (0, s.bG)([d.Ay, f.default, E], () => {
+            let t = f.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
-            let n = _.default.getUser(e.getRecipientId());
-            if (!(null == n ? void 0 : n.isStaff())) return !1;
-            let r = f.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-            return r ? !y.hasId(n.id) && r : (E.delete(n.id) && y.emitChange(), !1);
+            let n = f.default.getUser(e.getRecipientId());
+            if (!n?.isStaff()) return !1;
+            let r = d.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
+            return r ? !E.hasId(n.id) && r : (m.delete(n.id) && E.emitChange(), !1);
         }),
-    A = () => {
-        let e = p.A.getChannelId();
+    I = () => {
+        let e = _.A.getChannelId();
         if (null == e) return;
-        let t = d.A.getChannel(e);
-        null != t && t.isPrivate() && (E.has(t.getRecipientId()) || (E.add(t.getRecipientId()), y.emitChange()));
+        let t = c.A.getChannel(e);
+        null != t && t.isPrivate() && (m.has(t.getRecipientId()) || (m.add(t.getRecipientId()), E.emitChange()));
     },
-    v = () =>
-        (0, i.jsxs)("div", {
-            className: m.eU,
+    T = () =>
+        (0, r.jsxs)("div", {
+            className: h.eU,
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-sm/medium",
-                    className: s()(m.Qq, m.Fn),
-                    children: h.intl.string(h.t["2UvR1E"]),
+                    className: a()(h.Qq, h.Fn),
+                    children: p.intl.string(p.t["2UvR1E"]),
                 }),
-                (0, i.jsx)("div", {
-                    className: m.o1,
-                    children: (0, i.jsx)(u.x, {
-                        onClick: A,
-                    }),
-                }),
+                (0, r.jsx)("div", { className: h.o1, children: (0, r.jsx)(u.x, { onClick: I }) }),
             ],
         });

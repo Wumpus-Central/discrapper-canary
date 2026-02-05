@@ -1,8 +1,5 @@
-n.d(t, {
-    DynamicGraphicComponent: () => i,
-    Q: () => s,
-    m: () => a,
-});
+"use strict";
+n.d(t, { DynamicGraphicComponent: () => i, Q: () => s, m: () => a });
 var r = n(64700),
     i = (function (e) {
         return (

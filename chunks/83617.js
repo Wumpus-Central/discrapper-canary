@@ -1,57 +1,19 @@
-n.d(t, {
-    Yk: () => b,
-    _w: () => g,
-    c_: () => m,
-    jJ: () => E,
-}),
-    n(896048),
-    n(457529);
+"use strict";
+n.d(t, { Yk: () => g, _w: () => h, c_: () => p, jJ: () => m });
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
     s = n(73153),
     o = n(73825),
     l = n(160946),
-    c = n(97352),
-    u = n(927578),
+    u = n(97352),
+    c = n(927578),
     d = n(652215),
-    f = n(788868);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let h = 10027;
-
-function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.oz];
-    return null == e || c.A.hasPaymentSourceForSKUIds(e, t)
+    _ = n(788868);
+let f = 10027;
+function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.oz];
+    return null == e || u.A.hasPaymentSourceForSKUIds(e, t)
         ? Promise.resolve()
         : new Promise((e, n) => {
               s.h.wait(async () => {
@@ -63,29 +25,24 @@ function m(e) {
               });
           });
 }
-
-function g(e, t, n) {
+function h(e, t, n) {
     let r,
         i = [],
         s = [],
-        o = {
-            purchaseType: n ? d.lid.GIFT : d.lid.DEFAULT,
-        };
+        o = { purchaseType: n ? d.lid.GIFT : d.lid.DEFAULT };
     return (
-        (r = "string" == typeof e ? c.A.get(e) : e),
+        (r = "string" == typeof e ? u.A.get(e) : e),
         a()(r, "subscription plan not loaded"),
-        null != t && c.A.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t),
-        (i = (s = (0, u.pb)(r.id, o)).map((e) => e.currency)).length < 1 && (i = [d.Yri.USD]),
+        null != t && u.A.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t),
+        (i = (s = (0, c.pb)(r.id, o)).map((e) => e.currency)).length < 1 && (i = [d.Yri.USD]),
         i
     );
 }
-
-function E(e, t, n) {
-    let r = c.A.get(e);
-    return a()(null != r, "plan is undefined"), g(r, n, !1).includes(t);
+function m(e, t, n) {
+    let r = u.A.get(e);
+    return a()(null != r, "plan is undefined"), h(r, n, !1).includes(t);
 }
-
-function b(e) {
+function g(e) {
     let {
             initialCurrency: t,
             subscriptionPlanId: n,
@@ -94,56 +51,38 @@ function b(e) {
             skuIDs: s,
             excludeSubscriptionPlansBySKU: o,
         } = e,
-        [u, d] = r.useReducer(
-            (e, t) => _({}, e, t),
-            null != i
-                ? {
-                      paymentSourceId: i,
-                      currency: t,
-                      loaded: !1,
-                  }
-                : {
-                      currency: t,
-                      loaded: !1,
-                  },
+        [c, d] = r.useReducer(
+            (e, t) => ({ ...e, ...t }),
+            null != i ? { paymentSourceId: i, currency: t, loaded: !1 } : { currency: t, loaded: !1 },
         ),
-        f = (0, l.Y)(s),
-        p = JSON.stringify(s),
-        E = r.useRef(s);
+        _ = (0, l.Y)(s),
+        m = JSON.stringify(s),
+        g = r.useRef(s);
     r.useEffect(() => {
-        E.current = s;
+        g.current = s;
     }),
         r.useEffect(() => {
             (async () => {
-                let { current: e } = E;
+                let { current: e } = g;
                 try {
-                    e.length > 0 && !o && (await m(i, e));
+                    e.length > 0 && !o && (await p(i, e));
                 } catch (e) {
-                    if (e.code !== h) throw e;
+                    if (e.code !== f) throw e;
                 }
                 let t = [];
-                null != n && null != c.A.get(n) && (t = g(n, i, a)),
+                null != n && null != u.A.get(n) && (t = h(n, i, a)),
                     t.length > 0
-                        ? d({
-                              paymentSourceId: i,
-                              currency: t[0],
-                              loaded: !0,
-                          })
-                        : d({
-                              paymentSourceId: i,
-                              loaded: !1,
-                          });
+                        ? d({ paymentSourceId: i, currency: t[0], loaded: !0 })
+                        : d({ paymentSourceId: i, loaded: !1 });
             })();
-        }, [i, p, n, a, f, o]);
-    let b = u.paymentSourceId !== i || null == n || !f || !0 !== u.loaded;
+        }, [i, m, n, a, _, o]);
+    let E = c.paymentSourceId !== i || null == n || !_ || !0 !== c.loaded;
     return {
-        hasFetchedSubscriptionPlans: f,
-        priceOptions: u,
+        hasFetchedSubscriptionPlans: _,
+        priceOptions: c,
         setCurrency: (e) => {
-            d({
-                currency: e,
-            });
+            d({ currency: e });
         },
-        currencyLoading: b,
+        currencyLoading: E,
     };
 }

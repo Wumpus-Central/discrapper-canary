@@ -1,22 +1,19 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(73153),
-    i = n(272355),
-    l = n(422258);
-
-function a(e) {
+n.d(t, { A: () => o });
+var i = n(73153),
+    r = n(272355),
+    a = n(422258);
+function l(e) {
     let {
         channel: { id: t },
     } = e;
-    (0, l.i_)(t);
+    (0, a.i_)(t);
 }
-class s extends i.A {
+class s extends r.A {
     _initialize() {
-        r.h.subscribe("CHANNEL_DELETE", a);
+        i.h.subscribe("CHANNEL_DELETE", l);
     }
     _terminate() {
-        r.h.unsubscribe("CHANNEL_DELETE", a);
+        i.h.unsubscribe("CHANNEL_DELETE", l);
     }
 }
 let o = new s();

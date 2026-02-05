@@ -1,6 +1,5 @@
-n.d(t, {
-    F: () => r,
-});
+"use strict";
+n.d(t, { F: () => r });
 var r = (function (e) {
     return (
         (e.BACKGROUND_GRADIENT_PRESET = "backgroundGradientPreset"),

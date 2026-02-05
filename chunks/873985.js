@@ -1,78 +1,52 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(747238);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(927813);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = {
-        preferredRegions: null,
-        lastTestTimestamp: null,
-        lastGeoRankedOrder: null,
-    },
-    d = u,
-    f = +l.A.Millis.HOUR;
-
-function p(e) {
+"use strict";
+n.d(t, { A: () => f });
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(927813);
+let l = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
+    u = l,
+    c = +o.A.Millis.HOUR;
+function d(e) {
     e.latencyRankedRegions.length > 0 &&
-        ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
-        (d.lastTestTimestamp = Date.now());
+        ((u.lastGeoRankedOrder = e.geoRankedRegions), (u.preferredRegions = e.latencyRankedRegions)),
+        (u.lastTestTimestamp = Date.now());
 }
-class _ extends (r = s.Ay.DeviceSettingsStore) {
-    initialize(e) {
-        d = null != e ? e : u;
-    }
-    shouldIncludePreferredRegion() {
-        return null != d.preferredRegions;
-    }
-    getPreferredRegion() {
-        var e, t;
-        return null != (e = null == (t = d.preferredRegions) ? void 0 : t[0]) ? e : null;
-    }
-    getPreferredRegions() {
-        return d.preferredRegions;
-    }
-    getRegion(e) {
-        if (null != e) return e.substr(0, e.search(/\d/));
-    }
-    getUserAgnosticState() {
-        return d;
-    }
-    shouldPerformLatencyTest(e) {
-        var t, n;
-        return (
-            null === d.preferredRegions ||
-            !a().isEqual(e, null != (t = d.lastGeoRankedOrder) ? t : []) ||
-            Date.now() - (null != (n = d.lastTestTimestamp) ? n : 0) >= f
-        );
-    }
-}
-c(_, "displayName", "RTCRegionStore"),
-    c(_, "persistKey", "RTCRegionStore"),
-    c(_, "migrations", [
+class _ extends a.Ay.DeviceSettingsStore {
+    static displayName = "RTCRegionStore";
+    static persistKey = "RTCRegionStore";
+    static migrations = [
         (e) => (
             e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null),
             delete e.preferredRegion,
             e
         ),
-    ]);
-let h = new _(o.h, {
-    RTC_LATENCY_TEST_COMPLETE: p,
-});
+    ];
+    initialize(e) {
+        u = e ?? l;
+    }
+    shouldIncludePreferredRegion() {
+        return null != u.preferredRegions;
+    }
+    getPreferredRegion() {
+        return u.preferredRegions?.[0] ?? null;
+    }
+    getPreferredRegions() {
+        return u.preferredRegions;
+    }
+    getRegion(e) {
+        if (null != e) return e.substr(0, e.search(/\d/));
+    }
+    getUserAgnosticState() {
+        return u;
+    }
+    shouldPerformLatencyTest(e) {
+        return (
+            null === u.preferredRegions ||
+            !i().isEqual(e, u.lastGeoRankedOrder ?? []) ||
+            Date.now() - (u.lastTestTimestamp ?? 0) >= c
+        );
+    }
+}
+let f = new _(s.h, { RTC_LATENCY_TEST_COMPLETE: d });

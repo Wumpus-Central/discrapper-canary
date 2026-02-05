@@ -1,72 +1,15 @@
-n.d(t, {
-    A: () => g,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(827734),
     s = n(116833),
     o = n(397927),
     l = n(301679),
-    c = n(149757),
-    u = n(788868),
+    u = n(149757),
+    c = n(788868),
     d = n(985018);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let m = {
+let _ = {
         bronze: {
             type: "custom",
             start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START,
@@ -108,83 +51,65 @@ let m = {
             end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END,
         },
     },
-    g = (e) => {
+    f = (e) => {
         let {
                 title: t,
                 body: n,
                 showGraphic: a,
                 showActions: f,
-                badgeId: _,
-                showProgress: g,
-                progressCircleText: E,
-                progressCirclePercent: b,
-                progressCircleUrgency: y,
-                delay: O,
-                size: A,
-                gradientColor: v,
-                estimatedTooltipHeight: S,
+                badgeId: p,
+                showProgress: h,
+                progressCircleText: m,
+                progressCirclePercent: g,
+                progressCircleUrgency: E,
+                delay: A,
+                size: I,
+                gradientColor: T,
+                estimatedTooltipHeight: y,
             } = e,
-            I = i.useRef(null),
-            T = i.useRef(null),
+            S = i.useRef(null),
+            v = i.useRef(null),
             C = i.useMemo(
                 () =>
                     ({
-                        bronze: u.Ac.PREMIUM_TENURE_1_MONTH,
-                        silver: u.Ac.PREMIUM_TENURE_3_MONTH,
-                        gold: u.Ac.PREMIUM_TENURE_6_MONTH,
-                        platinum: u.Ac.PREMIUM_TENURE_12_MONTH,
-                        diamond: u.Ac.PREMIUM_TENURE_24_MONTH,
-                        emerald: u.Ac.PREMIUM_TENURE_36_MONTH,
-                        ruby: u.Ac.PREMIUM_TENURE_60_MONTH,
-                        opal: u.Ac.PREMIUM_TENURE_72_MONTH,
-                    })[_],
-                [_],
+                        bronze: c.Ac.PREMIUM_TENURE_1_MONTH,
+                        silver: c.Ac.PREMIUM_TENURE_3_MONTH,
+                        gold: c.Ac.PREMIUM_TENURE_6_MONTH,
+                        platinum: c.Ac.PREMIUM_TENURE_12_MONTH,
+                        diamond: c.Ac.PREMIUM_TENURE_24_MONTH,
+                        emerald: c.Ac.PREMIUM_TENURE_36_MONTH,
+                        ruby: c.Ac.PREMIUM_TENURE_60_MONTH,
+                        opal: c.Ac.PREMIUM_TENURE_72_MONTH,
+                    })[p],
+                [p],
             ),
-            N = null != C ? (0, c.I)(C) : null,
-            R = i.useMemo(() => {
+            b = null != C ? (0, u.I)(C) : null,
+            N = i.useMemo(() => {
                 if (null == C) return "";
-                let e = u.VD[C];
+                let e = c.VD[C];
                 return (d.intl.string(d.t.lG6a5x) + " " + d.intl.string(e.nameUnformatted)).toLocaleUpperCase();
             }, [C]),
-            w = i.useMemo(() => {
-                if (!a || null == N) return;
-                let e = g
-                    ? {
-                          progressCircleText: E,
-                          progressCirclePercent: b,
-                          progressCircleUrgency: y,
-                      }
-                    : {};
+            R = i.useMemo(() => {
+                if (!a || null == b) return;
+                let e = h ? { progressCircleText: m, progressCirclePercent: g, progressCircleUrgency: E } : {};
                 return {
                     type: "dynamic",
                     component: s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                     aspectRatio: "6/4",
-                    props: p(
-                        {
-                            src: N,
-                            alt: R,
-                        },
-                        e,
-                    ),
+                    props: { src: b, alt: N, ...e },
                 };
-            }, [a, N, R, g, E, b, y]),
-            P = {
+            }, [a, b, N, h, m, g, E]),
+            O = {
                 title: t,
                 body: n,
-                graphic: w,
+                graphic: R,
                 actions: i.useMemo(() => {
-                    if (f)
-                        return [
-                            {
-                                text: "Got it",
-                                variant: "primary",
-                            },
-                        ];
+                    if (f) return [{ text: "Got it", variant: "primary" }];
                 }, [f]),
-                delay: O,
-                size: A,
-                gradientColor: i.useMemo(() => ("string" == typeof v && v in m ? m[v] : v), [v]),
-                estimatedTooltipHeight: S,
+                delay: A,
+                size: I,
+                gradientColor: i.useMemo(() => ("string" == typeof T && T in _ ? _[T] : T), [T]),
+                estimatedTooltipHeight: y,
             };
         return (0, r.jsxs)("div", {
             children: [
@@ -203,42 +128,16 @@ let m = {
                         marginTop: "200px",
                     },
                     children: [
-                        (0, r.jsx)(
-                            l.L,
-                            h(
-                                p(
-                                    {
-                                        targetElementRef: I,
-                                    },
-                                    P,
-                                ),
-                                {
-                                    children: (0, r.jsx)(o.Button, {
-                                        buttonRef: I,
-                                        variant: "primary",
-                                        text: "Left",
-                                    }),
-                                },
-                            ),
-                        ),
-                        (0, r.jsx)(
-                            l.L,
-                            h(
-                                p(
-                                    {
-                                        targetElementRef: T,
-                                    },
-                                    P,
-                                ),
-                                {
-                                    children: (0, r.jsx)(o.Button, {
-                                        buttonRef: T,
-                                        variant: "primary",
-                                        text: "Right",
-                                    }),
-                                },
-                            ),
-                        ),
+                        (0, r.jsx)(l.L, {
+                            targetElementRef: S,
+                            ...O,
+                            children: (0, r.jsx)(o.Button, { buttonRef: S, variant: "primary", text: "Left" }),
+                        }),
+                        (0, r.jsx)(l.L, {
+                            targetElementRef: v,
+                            ...O,
+                            children: (0, r.jsx)(o.Button, { buttonRef: v, variant: "primary", text: "Right" }),
+                        }),
                     ],
                 }),
             ],

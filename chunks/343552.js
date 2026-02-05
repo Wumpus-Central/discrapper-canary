@@ -1,27 +1,22 @@
-n.d(t, {
-    b: () => l,
-});
-var r = n(627968),
-    i = n(803805),
-    a = n(11187),
-    s = n(439401),
-    o = n(867525);
-let l = (e, t, n, l, c) => () => {
-    let u = null != t ? t : n;
+t.d(l, { b: () => o });
+var r = t(627968),
+    s = t(803805),
+    n = t(11187),
+    i = t(439401),
+    a = t(867525);
+let o = (e, l, t, o, d) => () => {
+    let u = l ?? t;
     if (null == u) return null;
-    let { url: d, proxyURL: f, width: p, height: _ } = u,
-        h = null != f && "" !== f ? f : d,
-        m = (0, a.mW)({
-            providerName: c,
-            thumbnail: l,
-        });
-    return (0, r.jsx)(s.A, {
-        width: p,
-        height: _,
-        src: h,
-        gifSrc: m,
-        url: null != e && "" !== e ? e : null != f && "" !== f ? f : d,
-        format: null != n ? i.TL.VIDEO : i.TL.IMAGE,
-        className: o.jj,
+    let { url: h, proxyURL: c, width: m, height: p } = u,
+        g = null != c && "" !== c ? c : h,
+        x = (0, n.mW)({ providerName: d, thumbnail: o });
+    return (0, r.jsx)(i.A, {
+        width: m,
+        height: p,
+        src: g,
+        gifSrc: x,
+        url: null != e && "" !== e ? e : null != c && "" !== c ? c : h,
+        format: null != t ? s.TL.VIDEO : s.TL.IMAGE,
+        className: a.jj,
     });
 };

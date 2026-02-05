@@ -1,8 +1,5 @@
-n.d(t, {
-    EG: () => a,
-    X_: () => i,
-    _G: () => r,
-});
+"use strict";
+n.d(t, { EG: () => a, X_: () => i, _G: () => r });
 var r = (function (e) {
     return (
         (e.PERMISSIONS = "Permissions"),

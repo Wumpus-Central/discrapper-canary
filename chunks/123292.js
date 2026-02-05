@@ -1,6 +1,5 @@
-n.d(t, {
-    Q: () => h,
-});
+"use strict";
+n.d(t, { Q: () => u });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,144 +7,37 @@ var i = n(503698),
     s = n(426333),
     o = n(834730),
     l = n(726770);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
 function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = _(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function h(e) {
     let {
-            focusProps: t,
-            lineClamp: n = 1,
-            role: i = "button",
-            text: c,
-            textVariant: d = "text-md/medium",
-            type: _ = "button",
-            variant: h = "primary",
-            buttonRef: m,
-            className: g,
-            style: E,
-        } = e,
-        b = p(e, [
-            "focusProps",
-            "lineClamp",
-            "role",
-            "text",
-            "textVariant",
-            "type",
-            "variant",
-            "buttonRef",
-            "className",
-            "style",
-        ]);
-    return (0, r.jsx)(
-        s.vN,
-        f(u({}, t), {
-            children: (0, r.jsx)(
-                "button",
-                f(
-                    u(
-                        {
-                            className: a()(l.textButton, l[h]),
-                            "data-mana-component": "text-button",
-                            role: i,
-                            type: _,
-                            ref: m,
-                        },
-                        b,
-                    ),
-                    {
-                        children: (0, r.jsx)(o.E, {
-                            tag: "span",
-                            variant: d,
-                            color: "none",
-                            lineClamp: n,
-                            className: l.text,
-                            children: c,
-                        }),
-                    },
-                ),
-            ),
+        focusProps: t,
+        lineClamp: n = 1,
+        role: i = "button",
+        text: u,
+        textVariant: c = "text-md/medium",
+        type: d = "button",
+        variant: _ = "primary",
+        buttonRef: f,
+        className: p,
+        style: h,
+        ...m
+    } = e;
+    return (0, r.jsx)(s.vN, {
+        ...t,
+        children: (0, r.jsx)("button", {
+            className: a()(l.textButton, l[_]),
+            "data-mana-component": "text-button",
+            role: i,
+            type: d,
+            ref: f,
+            ...m,
+            children: (0, r.jsx)(o.E, {
+                tag: "span",
+                variant: c,
+                color: "none",
+                lineClamp: n,
+                className: l.text,
+                children: u,
+            }),
         }),
-    );
+    });
 }

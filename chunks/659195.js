@@ -1,73 +1,62 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
+n.d(t, { A: () => f });
+var i = n(627968),
     l = n(64700),
-    i = n(417597),
-    a = n(397927),
-    s = n(58149),
+    a = n(417597),
+    s = n(397927),
+    r = n(58149),
     o = n(734057),
     c = n(147036),
-    u = n(957565),
-    d = n(975571),
-    f = n(36491),
-    p = n(209100),
-    h = n(652215),
-    b = n(985018),
+    d = n(957565),
+    u = n(975571),
+    h = n(36491),
+    m = n(209100),
+    A = n(652215),
+    p = n(985018),
     g = n(179783);
-
-function m(e) {
+function f(e) {
     let { threadId: t } = e,
-        n = (0, i.bG)([o.A], () => o.A.getChannel(t)),
-        m = (0, i.bG)([o.A], () => o.A.getChannel(null == n ? void 0 : n.parent_id)),
-        A = l.useCallback(() => {
+        n = (0, a.bG)([o.A], () => o.A.getChannel(t)),
+        f = (0, a.bG)([o.A], () => o.A.getChannel(n?.parent_id)),
+        _ = l.useCallback(() => {
             null != n &&
-                null != m &&
-                ((0, s.zV)(h.HAw.MEDIA_POST_SHARE_PROMPT_CLICKED, {
-                    media_post_id: n.id,
-                }),
-                (0, u.C)((0, c.af)(n, m)));
-        }, [n, m]);
-    return (0, r.jsxs)("div", {
+                null != f &&
+                ((0, r.zV)(A.HAw.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, d.C)((0, c.af)(n, f)));
+        }, [n, f]);
+    return (0, i.jsxs)("div", {
         className: g.BQ,
         children: [
-            (0, r.jsx)(p.A, {}),
-            (0, r.jsxs)("div", {
+            (0, i.jsx)(m.A, {}),
+            (0, i.jsxs)("div", {
                 className: g.BB,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: b.intl.string(b.t["5uAO7d"]),
+                        children: p.intl.string(p.t["5uAO7d"]),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: b.intl.format(b.t.WnfPV3, {
-                            helpArticleUrl: d.A.getCreatorSupportArticleURL(h.MVz.MEDIA_CHANNEL),
+                        children: p.intl.format(p.t.WnfPV3, {
+                            helpArticleUrl: u.A.getCreatorSupportArticleURL(A.MVz.MEDIA_CHANNEL),
                         }),
                     }),
-                    (0, r.jsx)(a.hKd, {
-                        size: 4,
-                    }),
-                    (0, r.jsx)(a.Button, {
-                        text: b.intl.string(b.t.C5UQC9),
+                    (0, i.jsx)(s.hKd, { size: 4 }),
+                    (0, i.jsx)(s.Button, {
+                        text: p.intl.string(p.t.C5UQC9),
                         variant: "primary",
-                        icon: a.qYV,
-                        onClick: A,
+                        icon: s.qYV,
+                        onClick: _,
                     }),
                 ],
             }),
-            (0, r.jsx)(a.DUT, {
+            (0, i.jsx)(s.DUT, {
                 className: g.b,
                 onClick: () => {
-                    (0, f.sF)(t);
+                    (0, h.sF)(t);
                 },
-                "aria-label": b.intl.string(b.t["0+xZH0"]),
-                children: (0, r.jsx)(a.PGe, {
-                    color: "currentColor",
-                    size: "xs",
-                }),
+                "aria-label": p.intl.string(p.t["0+xZH0"]),
+                children: (0, i.jsx)(s.PGe, { color: "currentColor", size: "xs" }),
             }),
         ],
     });

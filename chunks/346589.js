@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => c,
-});
+"use strict";
+r.d(t, { A: () => c });
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -31,64 +30,32 @@ var n = r(64700),
                             flexWrap: "wrap",
                             position: "relative",
                         },
-                        swatchWrap: {
-                            width: "16px",
-                            height: "16px",
-                            margin: "0 10px 10px 0",
-                        },
-                        swatch: {
-                            borderRadius: "3px",
-                            boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)",
-                        },
+                        swatchWrap: { width: "16px", height: "16px", margin: "0 10px 10px 0" },
+                        swatch: { borderRadius: "3px", boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)" },
                     },
-                    "no-presets": {
-                        colors: {
-                            display: "none",
-                        },
-                    },
+                    "no-presets": { colors: { display: "none" } },
                 },
-                {
-                    "no-presets": !t || !t.length,
-                },
+                { "no-presets": !t || !t.length },
             ),
             c = function (e, t) {
-                o(
-                    {
-                        hex: e,
-                        source: "hex",
-                    },
-                    t,
-                );
+                o({ hex: e, source: "hex" }, t);
             };
         return n.createElement(
             "div",
-            {
-                style: u.colors,
-                className: "flexbox-fix",
-            },
+            { style: u.colors, className: "flexbox-fix" },
             t.map(function (e) {
-                var t =
-                        "string" == typeof e
-                            ? {
-                                  color: e,
-                              }
-                            : e,
+                var t = "string" == typeof e ? { color: e } : e,
                     r = "" + t.color + (t.title || "");
                 return n.createElement(
                     "div",
-                    {
-                        key: r,
-                        style: u.swatchWrap,
-                    },
+                    { key: r, style: u.swatchWrap },
                     n.createElement(
                         l.rp,
                         s({}, t, {
                             style: u.swatch,
                             onClick: c,
                             onHover: a,
-                            focusStyle: {
-                                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color,
-                            },
+                            focusStyle: { boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color },
                         }),
                     ),
                 );
@@ -96,14 +63,6 @@ var n = r(64700),
         );
     };
 u.propTypes = {
-    colors: a().arrayOf(
-        a().oneOfType([
-            a().string,
-            a().shape({
-                color: a().string,
-                title: a().string,
-            }),
-        ]),
-    ).isRequired,
+    colors: a().arrayOf(a().oneOfType([a().string, a().shape({ color: a().string, title: a().string })])).isRequired,
 };
 let c = u;

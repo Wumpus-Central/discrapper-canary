@@ -1,12 +1,9 @@
-n.d(t, {
-    k: () => o,
-    x: () => s,
-});
-var r = n(417597),
-    i = n(287809),
-    a = n(695515);
-let s = () => {
-        let e = (0, r.bG)([a.A], () => a.A.getSelectedTeenId());
-        return (0, r.bG)([i.default], () => (null !== e ? i.default.getUser(e) : void 0));
+n.d(t, { k: () => l, x: () => a });
+var i = n(417597),
+    s = n(287809),
+    r = n(695515);
+let a = () => {
+        let e = (0, i.bG)([r.A], () => r.A.getSelectedTeenId());
+        return (0, i.bG)([s.default], () => (null !== e ? s.default.getUser(e) : void 0));
     },
-    o = () => (0, r.bG)([a.A], () => a.A.getSelectedTeenId());
+    l = () => (0, i.bG)([r.A], () => r.A.getSelectedTeenId());

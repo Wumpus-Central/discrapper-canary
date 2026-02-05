@@ -1,13 +1,10 @@
-n.d(e, {
-    A: () => o,
-});
+n.d(e, { A: () => o });
 var s = n(627968);
 n(64700);
 var i = n(503698),
     l = n.n(i),
     r = n(397927),
     a = n(186261);
-
 function o(t) {
     let { tips: e, className: n, headerText: i } = t;
     return (0, s.jsxs)("div", {
@@ -15,11 +12,7 @@ function o(t) {
         children: [
             (0, s.jsx)("div", {
                 className: a.oO,
-                children: (0, s.jsx)(r.Heading, {
-                    variant: "heading-lg/bold",
-                    className: a.TK,
-                    children: i,
-                }),
+                children: (0, s.jsx)(r.Heading, { variant: "heading-lg/bold", className: a.TK, children: i }),
             }),
             (0, s.jsx)("ul", {
                 className: a.T6,
@@ -35,13 +28,10 @@ function o(t) {
                                     className: a.VX,
                                     children: e + 1,
                                 }),
-                                (0, s.jsx)(r.Text, {
-                                    variant: "text-sm/medium",
-                                    children: t,
-                                }),
+                                (0, s.jsx)(r.Text, { variant: "text-sm/medium", children: t }),
                             ],
                         },
-                        "safety-tips-".concat(e),
+                        `safety-tips-${e}`,
                     ),
                 ),
             }),

@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     "heading-sm/normal": "heading-sm/normal__0f084",
     fontScaling: "fontScaling__0f084",

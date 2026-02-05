@@ -1,63 +1,44 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(311907),
+var r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     s = n(397927),
     o = n(528767),
-    c = n(790381),
-    u = n(266080),
-    d = n(30529),
-    p = n(544105),
-    f = n(985018),
-    h = n(839549);
-
-function A(e) {
+    d = n(790381),
+    c = n(266080),
+    u = n(30529),
+    A = n(544105),
+    h = n(985018),
+    _ = n(839549);
+function m(e) {
     let { platform: t } = e;
-    return t === p.f$.XBOX
-        ? (0, r.jsx)(u.A, {
-              className: h.Kk,
-          })
-        : t === p.f$.PLAYSTATION
-          ? (0, r.jsx)(c.A, {
-                className: h.Kk,
-            })
+    return t === A.f$.XBOX
+        ? (0, i.jsx)(c.A, { className: _.Kk })
+        : t === A.f$.PLAYSTATION
+          ? (0, i.jsx)(d.A, { className: _.Kk })
           : null;
 }
-
-function g(e) {
+function p(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
-        i = null != n ? (0, d.X)(n.type) : null,
-        c = (0, a.bG)([o.A], () => {
-            var e, n;
-            return null == (n = o.A.getSessionById(null != (e = null == t ? void 0 : t.sessionId) ? e : ""))
-                ? void 0
-                : n.clientInfo.os;
-        }),
-        u = null != i ? i : c;
-    if (null == u || !p.hv.has(u)) return null;
-    let g = null != n,
-        m = g
-            ? u === p.f$.XBOX
-                ? f.intl.string(f.t.UjA4HX)
-                : f.intl.string(f.t.QCw1oW)
-            : u === p.f$.XBOX
-              ? f.intl.format(f.t["ynEs/Y"], {})
-              : f.intl.format(f.t.TZ17Bg, {});
-    return (0, r.jsxs)("div", {
-        className: l()(h.zr, g ? h.jI : h.aW),
+        r = null != n ? (0, u.X)(n.type) : null,
+        d = (0, l.bG)([o.A], () => o.A.getSessionById(t?.sessionId ?? "")?.clientInfo.os),
+        c = r ?? d;
+    if (null == c || !A.hv.has(c)) return null;
+    let p = null != n,
+        g = p
+            ? c === A.f$.XBOX
+                ? h.intl.string(h.t.UjA4HX)
+                : h.intl.string(h.t.QCw1oW)
+            : c === A.f$.XBOX
+              ? h.intl.format(h.t["ynEs/Y"], {})
+              : h.intl.format(h.t.TZ17Bg, {});
+    return (0, i.jsxs)("div", {
+        className: a()(_.zr, p ? _.jI : _.aW),
         children: [
-            (0, r.jsx)(A, {
-                platform: u,
-            }),
-            (0, r.jsx)(s.Text, {
-                color: g ? "text-strong" : "always-white",
-                variant: "text-xs/medium",
-                children: m,
-            }),
+            (0, i.jsx)(m, { platform: c }),
+            (0, i.jsx)(s.Text, { color: p ? "text-strong" : "always-white", variant: "text-xs/medium", children: g }),
         ],
     });
 }

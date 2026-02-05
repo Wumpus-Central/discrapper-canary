@@ -1,21 +1,14 @@
-n.d(t, {
-    Wt: () => a,
-    jB: () => s,
-});
-var r = n(508425),
-    i = n(559949),
-    l = n(985018);
-let s = {
+n.d(t, { Wt: () => l, jB: () => a });
+var i = n(508425),
+    s = n(559949),
+    r = n(985018);
+let a = {
         above_the_clouds: {
             preset: "above_the_clouds",
             themeColors: [752280, 9215590],
             avatarDecorationSkuId: "1144059132517826601",
-            displayNameStyles: {
-                fontId: i.x.CHICLE,
-                effectId: r.z.POP,
-                colors: [959694],
-            },
-            getName: () => l.intl.string(l.t["TFc+iF"]),
+            displayNameStyles: { fontId: s.x.CHICLE, effectId: i.z.POP, colors: [959694] },
+            getName: () => r.intl.string(r.t["TFc+iF"]),
             getHeaderSrc: () => n(702051).A,
             getBannerSrc: (e) => (e ? n(735161).A : n(887e3).A),
         },
@@ -23,12 +16,8 @@ let s = {
             preset: "cyberpunk",
             themeColors: [1967991, 742532],
             avatarDecorationSkuId: null,
-            displayNameStyles: {
-                fontId: i.x.PIXELIFY,
-                effectId: r.z.NEON,
-                colors: [2949343],
-            },
-            getName: () => l.intl.string(l.t["4g+5bq"]),
+            displayNameStyles: { fontId: s.x.PIXELIFY, effectId: i.z.NEON, colors: [2949343] },
+            getName: () => r.intl.string(r.t["4g+5bq"]),
             getHeaderSrc: () => n(272017).A,
             getBannerSrc: (e) => (e ? n(735271).A : n(208574).A),
         },
@@ -36,12 +25,8 @@ let s = {
             preset: "shadow_realm",
             themeColors: [0, 4458504],
             avatarDecorationSkuId: "1144058522808614923",
-            displayNameStyles: {
-                fontId: i.x.NEO_CASTEL,
-                effectId: r.z.TOON,
-                colors: [0xff0000],
-            },
-            getName: () => l.intl.string(l.t.ycg1xj),
+            displayNameStyles: { fontId: s.x.NEO_CASTEL, effectId: i.z.TOON, colors: [0xff0000] },
+            getName: () => r.intl.string(r.t.ycg1xj),
             getHeaderSrc: () => n(863653).A,
             getBannerSrc: (e) => (e ? n(538263).A : n(576974).A),
         },
@@ -49,12 +34,8 @@ let s = {
             preset: "starlit_dream",
             themeColors: [5123751, 590625],
             avatarDecorationSkuId: "1144058844004233369",
-            displayNameStyles: {
-                fontId: i.x.CHERRY_BOMB,
-                effectId: r.z.TOON,
-                colors: [3343795],
-            },
-            getName: () => l.intl.string(l.t["9WLHvr"]),
+            displayNameStyles: { fontId: s.x.CHERRY_BOMB, effectId: i.z.TOON, colors: [3343795] },
+            getName: () => r.intl.string(r.t["9WLHvr"]),
             getHeaderSrc: () => n(434361).A,
             getBannerSrc: (e) => (e ? n(700309).A : n(135572).A),
         },
@@ -62,14 +43,10 @@ let s = {
             preset: "neon_space",
             themeColors: [6094952, 1007678],
             avatarDecorationSkuId: null,
-            displayNameStyles: {
-                fontId: i.x.MUSEO_MODERNO,
-                effectId: r.z.NEON,
-                colors: [28737],
-            },
-            getName: () => l.intl.string(l.t.UdNuqi),
+            displayNameStyles: { fontId: s.x.MUSEO_MODERNO, effectId: i.z.NEON, colors: [28737] },
+            getName: () => r.intl.string(r.t.UdNuqi),
             getHeaderSrc: () => n(301928).A,
             getBannerSrc: (e) => (e ? n(285974).A : n(775627).A),
         },
     },
-    a = (e) => s[e];
+    l = (e) => a[e];

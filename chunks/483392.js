@@ -1,21 +1,10 @@
-n.d(t, {
-    C: () => l,
-});
-var i = n(627968);
+n.d(t, { C: () => s });
+var l = n(627968);
 n(64700);
-var r = n(397927);
-
-function l(e) {
-    let { isCollapsed: t, size: n = "md", className: l } = e;
+var i = n(397927);
+function s(e) {
+    let { isCollapsed: t, size: n = "md", className: s } = e;
     return t
-        ? (0, i.jsx)(r._BQ, {
-              size: n,
-              color: "currentColor",
-              className: l,
-          })
-        : (0, i.jsx)(r.abt, {
-              size: n,
-              color: "currentColor",
-              className: l,
-          });
+        ? (0, l.jsx)(i._BQ, { size: n, color: "currentColor", className: s })
+        : (0, l.jsx)(i.abt, { size: n, color: "currentColor", className: s });
 }

@@ -1,6 +1,5 @@
-n.d(t, {
-    J: () => r,
-});
+"use strict";
+n.d(t, { J: () => r });
 class r {
     *[Symbol.iterator]() {
         yield* this.iterable;

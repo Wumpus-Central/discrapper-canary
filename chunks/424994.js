@@ -1,10 +1,5 @@
-n.d(t, {
-    PA: () => a,
-    UG: () => i,
-    X1: () => r,
-    a4: () => o,
-    s8: () => s,
-});
+"use strict";
+n.d(t, { PA: () => a, UG: () => i, X1: () => r, a4: () => o, s8: () => s });
 var r = (function (e) {
         return (e.GLOBAL_FEED = "global feed"), (e.GAME_PROFILE_FEED = "game profile feed"), e;
     })({}),

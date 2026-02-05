@@ -1,118 +1,98 @@
-n.d(t, {
-    EF: () => y,
-    K5: () => j,
-    L9: () => v,
-    SB: () => h,
-    Vh: () => A,
-    cG: () => O,
-    gz: () => x,
-    uc: () => p,
-}),
-    n(321073),
-    n(896048),
-    n(733351);
-var r = n(64700),
-    i = n(91871),
-    l = n.n(i),
-    s = n(311907),
+"use strict";
+n.d(t, { EF: () => N, K5: () => f, L9: () => E, SB: () => p, Vh: () => b, cG: () => j, gz: () => A, uc: () => _ }),
+    n(321073);
+var i = n(64700),
+    s = n(91871),
+    l = n.n(s),
+    r = n(311907),
     a = n(696451),
-    c = n(287809),
-    o = n(954571),
-    d = n(403362),
+    o = n(287809),
+    d = n(954571),
+    c = n(403362),
     u = n(695184),
-    f = n(427262),
+    m = n(427262),
     g = n(545868),
-    b = n(927573),
-    m = n(652215);
-let p = 50,
-    x = 1e3;
-
-function h(e, t) {
-    let n = (0, s.yK)([a.Ay], () => {
+    x = n(927573),
+    h = n(652215);
+let _ = 50,
+    A = 1e3;
+function p(e, t) {
+    let n = (0, r.yK)([a.Ay], () => {
             let n = a.Ay.getMembers(e);
             return null == t ? n : n.filter(t);
         }, [e, t]),
-        i = (0, s.cf)(
-            [c.default],
+        s = (0, r.cf)(
+            [o.default],
             () =>
                 n.reduce((e, t) => {
-                    let n = c.default.getUser(t.userId);
+                    let n = o.default.getUser(t.userId);
                     return null == n || (e[t.userId] = n), e;
                 }, {}),
             [n],
         );
-    return r.useMemo(() => {
+    return i.useMemo(() => {
         let t = [];
-        for (let l of n) {
-            var r;
-            let n = i[l.userId];
+        for (let i of n) {
+            let n = s[i.userId];
             null != n &&
                 t.push({
-                    name: null != (r = l.nick) ? r : f.Ay.getName(n),
-                    userTag: f.Ay.getUserTag(n),
-                    id: l.userId,
+                    name: i.nick ?? m.Ay.getName(n),
+                    userTag: m.Ay.getUserTag(n),
+                    id: i.userId,
                     avatarSource: n.getAvatarSource(e),
                     avatarURL: n.getAvatarURL(e, 80),
                     bot: n.bot,
                     verifiedBot: n.isVerifiedBot(),
-                    roles: l.roles,
-                    key: l.userId,
+                    roles: i.roles,
+                    key: i.userId,
                     user: n,
                 });
         }
         return t;
-    }, [n, i, e]);
+    }, [n, s, e]);
 }
-
-function j(e, t, n) {
-    let i = r.useRef(n);
+function f(e, t, n) {
+    let s = i.useRef(n);
     return (
-        r.useEffect(() => {
-            i.current = n;
+        i.useEffect(() => {
+            s.current = n;
         }),
-        r.useEffect(() => {
-            (0, g.a)(e, t).catch(i.current);
+        i.useEffect(() => {
+            (0, g.a)(e, t).catch(s.current);
         }, [e, t]),
-        h(
+        p(
             e,
-            r.useCallback((e) => e.roles.includes(t), [t]),
+            i.useCallback((e) => e.roles.includes(t), [t]),
         )
     );
 }
-
-function O(e, t) {
-    let n = r.useRef(!1);
-    r.useEffect(() => {
+function j(e, t) {
+    let n = i.useRef(!1);
+    i.useEffect(() => {
         u.A.requestMembers(e, t, 200),
             "" === t ||
                 n.current ||
-                (o.default.track(m.HAw.SEARCH_STARTED, {
-                    search_type: "Role Members",
-                }),
-                (n.current = !0));
+                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
     }, [e, t]);
 }
-
-function y(e, t) {
+function N(e, t) {
     let n = e.trim().toLowerCase();
     return t.id === n || l()(n, t.name.toLowerCase()) || l()(n, t.userTag.toLowerCase());
 }
-
-function v(e) {
+function E(e) {
     switch (e) {
-        case b.T$.MEMBERS:
+        case x.T$.MEMBERS:
             return "Members";
-        case b.T$.PERMISSIONS:
+        case x.T$.PERMISSIONS:
             return "Permissions";
-        case b.T$.DISPLAY:
+        case x.T$.DISPLAY:
             return "Role Settings";
-        case b.T$.VERIFICATIONS:
+        case x.T$.VERIFICATIONS:
             return "Connections";
         default:
-            (0, d.xb)(e);
+            (0, c.xb)(e);
     }
 }
-
-function A(e, t) {
+function b(e, t) {
     return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

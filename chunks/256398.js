@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 class r {
     acquire(e) {
         return navigator.mediaDevices.getUserMedia(e);

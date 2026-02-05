@@ -1,11 +1,5 @@
-n.d(t, {
-    BV: () => f,
-    Cr: () => u,
-    ME: () => s,
-    YY: () => o,
-    c$: () => c,
-    gN: () => l,
-});
+"use strict";
+n.d(t, { BV: () => _, Cr: () => c, ME: () => s, YY: () => o, c$: () => u, gN: () => l });
 var r = n(323125);
 n(436317);
 var i = n(435220),
@@ -13,25 +7,24 @@ var i = n(435220),
 let s = "@me",
     o = "@favorites",
     l = "@inbox",
-    c = "@guilds-empty-nux",
-    u = [s, o, c, l],
+    u = "@guilds-empty-nux",
+    c = [s, o, u, l],
     d = Object.freeze({
         INDEX: "/",
         APP: "/app",
-        APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => "/app/invite-with-guild-onboarding/".concat(e),
-        APP_WITH_GIFT_CODE: (e) => "/app/gifts/".concat(e),
+        APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
+        APP_WITH_GIFT_CODE: (e) => `/app/gifts/${e}`,
         ACTIVITY: "/activity",
         ACTIVITIES: "/activities",
         ACTIVITIES_HAPPENING_NOW: "/activities/happening-now",
-        ACTIVITY_DETAILS: (e) => "/activities/".concat(e),
+        ACTIVITY_DETAILS: (e) => `/activities/${e}`,
         APPLICATION_LIBRARY: "/library",
         APPLICATION_LIBRARY_INVENTORY: "/library/inventory",
-        APPLICATION_LIBRARY_ACTION: (e, t) => "/library/".concat(e, "/").concat(t),
+        APPLICATION_LIBRARY_ACTION: (e, t) => `/library/${e}/${t}`,
         APPLICATION_LIBRARY_SETTINGS: "/library/settings",
         APPLICATION_STORE: "/store",
-        APPLICATION_STORE_LISTING_SKU: (e, t) => "/store/skus/".concat(e).concat(null != t ? "/".concat(t) : ""),
-        APPLICATION_STORE_LISTING_APPLICATION: (e, t) =>
-            "/store/applications/".concat(e).concat(null != t ? "/".concat(t) : ""),
+        APPLICATION_STORE_LISTING_SKU: (e, t) => `/store/skus/${e}${null != t ? `/${t}` : ""}`,
+        APPLICATION_STORE_LISTING_APPLICATION: (e, t) => `/store/applications/${e}${null != t ? `/${t}` : ""}`,
         BILLING_PREFIX: "/billing",
         BILLING_LOGIN_HANDOFF: "/billing/login/handoff",
         BILLING_PREMIUM_SUBSCRIBE: "/billing/premium/subscribe",
@@ -39,69 +32,67 @@ let s = "@me",
         BILLING_PREMIUM_SWITCH_PLAN: "/billing/premium/switch-plan",
         BILLING_GUILD_SUBSCRIPTIONS_PURCHASE: "/billing/guild-subscriptions/purchase",
         BILLING_PAYMENTS: "/billing/payments",
-        BILLING_PROMOTION_REDEMPTION: (e) => "/billing/promotions/".concat(e),
+        BILLING_PROMOTION_REDEMPTION: (e) => `/billing/promotions/${e}`,
         BILLING_PROMOTION_REDEMPTION_GENERIC: "/billing/promotions",
-        BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION: (e, t) =>
-            "/billing/partner-promotions/".concat(e, "/").concat(t),
+        BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION: (e, t) => `/billing/partner-promotions/${e}/${t}`,
         NOTIFICATIONS: "/notifications",
         FRIENDS: "/channels/@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let r = null == t ? "/channels/".concat(e || s) : "/channels/".concat(e || s, "/").concat(t);
-            return null == n ? r : "".concat(r, "/").concat(n);
+            let r = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
+            return null == n ? r : `${r}/${n}`;
         },
         CHANNEL_THREAD_VIEW: (e, t, n, r) => {
-            let i = "/channels/".concat(e, "/").concat(t, "/threads/").concat(n);
-            return null == r ? i : "".concat(i, "/").concat(r);
+            let i = `/channels/${e}/${t}/threads/${n}`;
+            return null == r ? i : `${i}/${r}`;
         },
         VOICE_CHAT_CHANNEL_PARTIAL: (e, t, n) => {
-            let r = "/voice/".concat(e, "/").concat(t);
-            return null == n ? r : "".concat(r, "/").concat(n);
+            let r = `/voice/${e}/${t}`;
+            return null == n ? r : `${r}/${n}`;
         },
         LOGIN: "/login",
         LOGIN_HANDOFF: "/login/handoff",
         LOGIN_ONE_TIME: "/login/one-time",
         REGISTER: "/register",
         DEFAULT_LOGGED_OUT: "/login",
-        INVITE: (e) => "/invite/".concat(e),
-        INVITE_LOGIN: (e) => "/invite/".concat(e, "/login"),
-        INVITE_REGISTER: (e) => "/invite/".concat(e, "/register"),
-        INVITE_PROXY: (e) => "/invite-proxy/".concat(e),
-        GUILD_TEMPLATE: (e) => "/template/".concat(e),
-        GUILD_TEMPLATE_LOGIN: (e) => "/template/".concat(e, "/login"),
-        GIFT_CODE: (e) => "/gifts/".concat(e),
-        GIFT_CODE_LOGIN: (e) => "/gifts/".concat(e, "/login"),
-        WELCOME: (e, t) =>
-            null != t ? "/welcome/".concat(null != e ? e : s, "/").concat(t) : "/welcome/".concat(null != e ? e : s),
+        INVITE: (e) => `/invite/${e}`,
+        INVITE_LOGIN: (e) => `/invite/${e}/login`,
+        INVITE_REGISTER: (e) => `/invite/${e}/register`,
+        INVITE_PROXY: (e) => `/invite-proxy/${e}`,
+        GUILD_TEMPLATE: (e) => `/template/${e}`,
+        GUILD_TEMPLATE_LOGIN: (e) => `/template/${e}/login`,
+        GIFT_CODE: (e) => `/gifts/${e}`,
+        GIFT_CODE_LOGIN: (e) => `/gifts/${e}/login`,
+        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? s}/${t}` : `/welcome/${e ?? s}`),
         VERIFY: "/verify",
         VERIFY_REQUEST: "/verify-request",
         RESET: "/reset",
         APPS: "/apps",
         ACTIVATE: "/activate",
         ACTIVATE_HANDOFF: "/activate/handoff",
-        CONNECTION_LINK: (e) => "/connections/".concat(e, "/link"),
-        CONNECTION_LINK_AUTHORIZE: (e) => "/connections/".concat(e, "/link-authorize"),
-        CONNECTIONS_SUCCESS: (e) => "/connections/".concat(e, "/success"),
-        CONNECTIONS_ERROR: (e) => "/connections/".concat(e, "/error"),
-        CONNECTIONS: (e) => "/connections/".concat(e),
-        CONNECTIONS_AUTHORIZE_CONTINUE: (e) => "/connections/".concat(e, "/authorize-continue"),
+        CONNECTION_LINK: (e) => `/connections/${e}/link`,
+        CONNECTION_LINK_AUTHORIZE: (e) => `/connections/${e}/link-authorize`,
+        CONNECTIONS_SUCCESS: (e) => `/connections/${e}/success`,
+        CONNECTIONS_ERROR: (e) => `/connections/${e}/error`,
+        CONNECTIONS: (e) => `/connections/${e}`,
+        CONNECTIONS_AUTHORIZE_CONTINUE: (e) => `/connections/${e}/authorize-continue`,
         CONNECT_AUTHORIZE: "/connect/authorize",
         OAUTH2_AUTHORIZE: "/oauth2/authorize",
         OAUTH2_AUTHORIZED: "/oauth2/authorized",
         OAUTH2_ERROR: "/oauth2/error",
-        SETTINGS: (e, t) => "/settings/".concat(e).concat(null != t ? "/".concat(t) : ""),
+        SETTINGS: (e, t) => `/settings/${e}${null != t ? `/${t}` : ""}`,
         SNOWSGIVING: "/snowsgiving",
         PLAYGROUND: (e, t) => {
             let n = "/playground";
-            return null != e && ((n += "/".concat(e)), null != t && (n += "/".concat(t))), n;
+            return null != e && ((n += `/${e}`), null != t && (n += `/${t}`)), n;
         },
-        CHANGELOGS: (e) => "/settings/changelogs".concat(null != e ? "/".concat(e) : ""),
-        USERS: (e) => "/users/".concat(e),
+        CHANGELOGS: (e) => `/settings/changelogs${null != e ? `/${e}` : ""}`,
+        USERS: (e) => `/users/${e}`,
         GUILD_CREATE: "/guilds/create",
         DISABLE_EMAIL_NOTIFICATIONS: "/disable-email-notifications",
         DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS: "/disable-server-highlight-notifications",
-        USER_GUILD_NOTIFICATION_SETTINGS: (e) => "/guilds/".concat(e, "/notification-settings"),
+        USER_GUILD_NOTIFICATION_SETTINGS: (e) => `/guilds/${e}/notification-settings`,
         AUTHORIZE_IP: "/authorize-ip",
         REJECT_IP: "/reject-ip",
         REJECT_MFA: "/reject-mfa",
@@ -119,88 +110,73 @@ let s = "@me",
         QUEST_HOME_V2: "/quest-home",
         GLOBAL_DISCOVERY_SERVERS: "/discovery/servers",
         GLOBAL_DISCOVERY_APPS: "/discovery/applications",
-        GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => "/discovery/applications/categories/".concat(e),
-        GLOBAL_DISCOVERY_APPS_PROFILE: (e) => "/discovery/applications/".concat(e),
-        GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => "/discovery/applications/".concat(e, "/").concat(t),
+        GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
+        GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
+        GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
         GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) =>
-            "/discovery/applications/".concat(e, "/").concat(i.GlobalDiscoveryAppsSections.STORE, "/").concat(t),
+            `/discovery/applications/${e}/${i.GlobalDiscoveryAppsSections.STORE}/${t}`,
         GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
-        GUILD_MEMBER_VERIFICATION: (e) => "/member-verification/".concat(e),
-        GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) =>
-            "/member-verification-for-hub/".concat(e).concat(null != t ? "/".concat(t) : ""),
+        GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
+        GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
         POPOUT_WINDOW: "/popout",
-        UPCOMING_STAGES: (e, t) => "/guild-stages/".concat(e).concat(null != t ? "/".concat(t) : ""),
+        UPCOMING_STAGES: (e, t) => `/guild-stages/${e}${null != t ? `/${t}` : ""}`,
         VERIFY_HUB_EMAIL: "/verify-hub-email",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
         BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
-            "/billing/premium/manage?deep_link_type=".concat(e).concat(null != t ? "&load_id=".concat(t) : ""),
+            `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
         BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, a) =>
-            "/billing/premium/subscribe?plan_id="
-                .concat(e, "&gift=")
-                .concat(t, "&load_id=")
-                .concat(n)
-                .concat(null != r ? "&payment_method_type=".concat(r) : "")
-                .concat(null != i ? "&deep_link_type=".concat(i) : "")
-                .concat(null != a ? "&use_preset_offer=".concat(a) : ""),
+            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != a ? `&use_preset_offer=${a}` : ""}`,
         BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n) =>
-            "/billing/guild-subscriptions/purchase?guild_id="
-                .concat(e)
-                .concat(null != t ? "&deep_link_type=".concat(t) : "")
-                .concat(null != n ? "&load_id=".concat(n) : ""),
-        GUILD_BOOSTING_MARKETING: (e) => "/guilds/".concat(e, "/premium-guild-subscriptions"),
+            `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}`,
+        GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
         GUILD_SETTINGS: (e, t, n) => {
-            let r = "/guilds/".concat(e, "/settings").concat(null != t ? "/".concat(t) : "");
-            return null == n ? r : "".concat(r, "/").concat(n);
+            let r = `/guilds/${e}/settings${null != t ? `/${t}` : ""}`;
+            return null == n ? r : `${r}/${n}`;
         },
         PICK_GUILD_SETTINGS: (e, t, n) => {
-            let r = "/guilds/settings".concat(null != e ? "/".concat(e) : ""),
-                i = null == t ? r : "".concat(r, "/").concat(t);
-            return "".concat(i).concat(null != n ? "?feature=".concat(n) : "");
+            let r = `/guilds/settings${null != e ? `/${e}` : ""}`,
+                i = null == t ? r : `${r}/${t}`;
+            return `${i}${null != n ? `?feature=${n}` : ""}`;
         },
-        GUILD_EVENT_DETAILS: (e, t, n) => "/events/".concat(e, "/").concat(t) + (null != n ? "/".concat(n) : ""),
-        FEATURE: (e) => "/feature/".concat(e),
-        GUILD_FEATURE: (e, t) => "/feature/".concat(e, "/").concat(t),
-        GUILD_JOIN_REQUEST: (e, t) => "/guilds/".concat(e, "/requests/").concat(t),
+        GUILD_EVENT_DETAILS: (e, t, n) => `/events/${e}/${t}` + (null != n ? `/${n}` : ""),
+        FEATURE: (e) => `/feature/${e}`,
+        GUILD_FEATURE: (e, t) => `/feature/${e}/${t}`,
+        GUILD_JOIN_REQUEST: (e, t) => `/guilds/${e}/requests/${t}`,
         MOBILE_WEB_HANDOFF: "/mweb-handoff",
         APPLICATION_DIRECTORY: "/application-directory",
-        APPLICATION_DIRECTORY_PROFILE: (e) => "/application-directory/".concat(e),
-        APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => "/application-directory/".concat(e, "/").concat(t),
-        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) =>
-            "/application-directory/".concat(e, "/").concat(a.h.STORE, "/").concat(t),
+        APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
+        APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
+        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${a.h.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
-        SERVER_SHOP: (e) => "/channels/".concat(e, "/shop"),
+        SERVER_SHOP: (e) => `/channels/${e}/shop`,
         CHANNELS_GAME_SHOP: (e, t, n, r) => {
-            let i = "/channels/".concat(e, "/game-shop");
-            return (
-                (i += "/".concat(null != t ? t : 0)),
-                null != n && ((i += "/".concat(n)), null != r && (i += "/".concat(r))),
-                i
-            );
+            let i = `/channels/${e}/game-shop`;
+            return (i += `/${t ?? 0}`), null != n && ((i += `/${n}`), null != r && (i += `/${r}`)), i;
         },
         GAME_SHOP: (e, t, n) => {
-            let r = "/game-shop/".concat(e);
-            return null != t && ((r += "/".concat(t)), null != n && (r += "/".concat(n))), r;
+            let r = `/game-shop/${e}`;
+            return null != t && ((r += `/${t}`), null != n && (r += `/${n}`)), r;
         },
-        GUILD_PRODUCT: (e, t) => "/channels/".concat(e, "/shop/").concat(t),
+        GUILD_PRODUCT: (e, t) => `/channels/${e}/shop/${t}`,
         REPORT: "/report",
         REPORT_SECOND_LOOK: "/report-review",
         COLLECTIBLES_SHOP: "/shop",
-        COLLECTIBLES_SHOP_WITH_TAB: (e) => "/shop?tab=".concat(e),
-        COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => "/shop/product/".concat(e),
+        COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
+        COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
         NITRO_HOME: "/store",
         ACCOUNT_STANDING: "/account-standing",
-        CHANNEL_SUMMARIES: (e) => "/channels/".concat(e, "/summaries"),
-        CHANNEL_SUMMARY: (e, t) => "/channels/".concat(e, "/summaries/").concat(t),
+        CHANNEL_SUMMARIES: (e) => `/channels/${e}/summaries`,
+        CHANNEL_SUMMARY: (e, t) => `/channels/${e}/summaries/${t}`,
         USER_SUMMARIES: "/users/@me/summaries",
-        QUESTS: (e) => "/quests/".concat(e),
-        ACCOUNT_REVERT: (e) => "/wasntme/".concat(e),
-        POWERUP_STORE: (e) => "/channels/".concat(e, "/boosts"),
+        QUESTS: (e) => `/quests/${e}`,
+        ACCOUNT_REVERT: (e) => `/wasntme/${e}`,
+        POWERUP_STORE: (e) => `/channels/${e}/boosts`,
         CONFERENCE_MODE: "/conference-mode",
-        CONFERENCE_MODE_VOICE: (e, t) => "/conference-mode/voice/".concat(e, "/").concat(t),
-        QUEST_PREVIEW: (e) => "/quest-preview/".concat(e),
-        QUEST_PREVIEW_TOOL_2: (e) => "/quest-home?tab=preview_tool&quest_id=".concat(e),
+        CONFERENCE_MODE_VOICE: (e, t) => `/conference-mode/voice/${e}/${t}`,
+        QUEST_PREVIEW: (e) => `/quest-preview/${e}`,
+        QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    f = (0, r.dN)(d, [":", "?", "@"]);
+    _ = (0, r.dN)(d, [":", "?", "@"]);

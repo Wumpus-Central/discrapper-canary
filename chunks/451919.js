@@ -1,66 +1,55 @@
-n.d(t, {
-    Ay: () => c,
-    Uj: () => d,
-    bG: () => u,
-});
+"use strict";
+n.d(t, { Ay: () => u, Uj: () => d, bG: () => c });
 var r = n(495756),
     i = n(734057),
     a = n(696451),
     s = n(71393),
     o = n(90165);
 let l = 5184e6;
-
-function c(e) {
-    var t, n;
-    let { message: r, userId: i, suppressEveryone: a = !1, suppressRoles: s = !1 } = e;
-    return d({
-        userId: i,
-        channelId: r.channel_id,
-        mentionEveryone: r.mentionEveryone,
-        mentionUsers: r.mentions,
-        mentionRoles: r.mentionRoles,
-        mentionGames: null != (t = null == (n = r.mentionGames) ? void 0 : n.map((e) => e.id)) ? t : [],
-        suppressEveryone: a,
-        suppressRoles: s,
-    });
-}
-
 function u(e) {
-    var t, n, r, i, a, s;
-    let { rawMessage: o, userId: l, suppressEveryone: c = !1, suppressRoles: u = !1 } = e;
+    let { message: t, userId: n, suppressEveryone: r = !1, suppressRoles: i = !1 } = e;
     return d({
-        userId: l,
-        channelId: o.channel_id,
-        mentionEveryone: null != (t = o.mention_everyone) && t,
-        mentionUsers: null != (n = null == (a = o.mentions) ? void 0 : a.map((e) => e.id)) ? n : [],
-        mentionRoles: null != (r = o.mention_roles) ? r : [],
-        mentionGames: null != (i = null == (s = o.mention_games) ? void 0 : s.map((e) => e.id)) ? i : [],
-        suppressEveryone: c,
-        suppressRoles: u,
+        userId: n,
+        channelId: t.channel_id,
+        mentionEveryone: t.mentionEveryone,
+        mentionUsers: t.mentions,
+        mentionRoles: t.mentionRoles,
+        mentionGames: t.mentionGames?.map((e) => e.id) ?? [],
+        suppressEveryone: r,
+        suppressRoles: i,
     });
 }
-
+function c(e) {
+    let { rawMessage: t, userId: n, suppressEveryone: r = !1, suppressRoles: i = !1 } = e;
+    return d({
+        userId: n,
+        channelId: t.channel_id,
+        mentionEveryone: t.mention_everyone ?? !1,
+        mentionUsers: t.mentions?.map((e) => e.id) ?? [],
+        mentionRoles: t.mention_roles ?? [],
+        mentionGames: t.mention_games?.map((e) => e.id) ?? [],
+        suppressEveryone: r,
+        suppressRoles: i,
+    });
+}
 function d(e) {
     let {
         userId: t,
         channelId: n,
-        mentionEveryone: c,
-        mentionUsers: u,
+        mentionEveryone: u,
+        mentionUsers: c,
         mentionRoles: d,
-        mentionGames: f,
-        suppressEveryone: p = !1,
-        suppressRoles: _ = !1,
+        mentionGames: _,
+        suppressEveryone: f = !1,
+        suppressRoles: p = !1,
     } = e;
     if (
-        (c && !p) ||
-        u.includes(t) ||
-        f.some((e) => {
-            var t;
-            return !r.A.getMute(e) && (null != (t = o.A.getLastPlayedDateTime(e)) ? t : 0) > Date.now() - l;
-        })
+        (u && !f) ||
+        c.includes(t) ||
+        _.some((e) => !r.A.getMute(e) && (o.A.getLastPlayedDateTime(e) ?? 0) > Date.now() - l)
     )
         return !0;
-    if (_ || null == d || 0 === d.length) return !1;
+    if (p || null == d || 0 === d.length) return !1;
     let h = i.A.getChannel(n);
     if (null == h) return !1;
     let m = h.getGuildId();

@@ -1,24 +1,18 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(965407),
-    a = n(249700),
-    o = n(652215),
-    c = n(985018);
-
-function s(e, t) {
-    return e.state !== o.cmJ.SEND_FAILED
+var l = n(397927),
+    a = n(965407),
+    r = n(249700),
+    s = n(652215),
+    o = n(985018);
+function d(e, t) {
+    return e.state !== s.cmJ.SEND_FAILED
         ? null
-        : (0, r.jsx)(i.Drp, {
+        : (0, i.jsx)(l.Drp, {
               id: "resend",
-              label: c.intl.string(c.t.lXHojr),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: i.fNY,
-              },
-              action: () => (0, a.A)(t, e, void 0, l.A.getOptions(e.id)),
+              label: o.intl.string(o.t.lXHojr),
+              leadingAccessory: { type: "icon", icon: l.fNY },
+              action: () => (0, r.A)(t, e, void 0, a.A.getOptions(e.id)),
           });
 }

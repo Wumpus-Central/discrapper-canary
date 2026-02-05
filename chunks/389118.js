@@ -1,3 +1,2 @@
-e.exports = {
-    z: "paymentNote__56a21",
-};
+"use strict";
+e.exports = { z: "paymentNote__56a21" };

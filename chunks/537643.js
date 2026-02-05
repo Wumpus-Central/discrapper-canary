@@ -1,64 +1,35 @@
-n.d(t, {
-    I: () => c,
-});
-var r = n(64700),
-    i = n(311907),
-    l = n(139675),
-    a = n(835517),
+n.d(t, { I: () => d });
+var i = n(64700),
+    l = n(311907),
+    a = n(139675),
+    r = n(835517),
     s = n(729394),
     o = n(216184);
-let c = (e) => {
-    let { messageId: t, presenceActivity: n, application: c } = e,
-        { cachedImageURL: u, imageURL: d } = (0, i.cf)(
+let d = (e) => {
+    let { messageId: t, presenceActivity: n, application: d } = e,
+        { cachedImageURL: c, imageURL: u } = (0, l.cf)(
             [o.A],
             () =>
                 ((e) => {
-                    var t, n, r, i;
-                    let { messageId: s, presenceActivity: c, application: u } = e,
-                        d = o.A.getCoverImageURL({
-                            messageId: s,
-                        });
-                    if (null === d)
-                        return {
-                            cachedImageURL: null,
-                            imageURL: null,
-                        };
-                    let p = 600 * (0, a.A)(),
-                        m =
-                            null !=
-                            (t =
-                                null !=
-                                (n =
-                                    null !=
-                                    (r =
-                                        (null == c || null == (i = c.assets) ? void 0 : i.invite_cover_image) != null
-                                            ? (0, l.uD)(c.application_id, c.assets.invite_cover_image, p)
-                                            : null)
-                                        ? r
-                                        : d)
-                                    ? n
-                                    : u.getCoverImageURL(p))
-                                ? t
-                                : null;
-                    return {
-                        cachedImageURL: d,
-                        imageURL: m,
-                    };
-                })({
-                    messageId: t,
-                    presenceActivity: n,
-                    application: c,
-                }),
-            [t, n, c],
+                    let { messageId: t, presenceActivity: n, application: i } = e,
+                        l = o.A.getCoverImageURL({ messageId: t });
+                    if (null === l) return { cachedImageURL: null, imageURL: null };
+                    let s = 600 * (0, r.A)(),
+                        d =
+                            (n?.assets?.invite_cover_image != null
+                                ? (0, a.uD)(n.application_id, n.assets.invite_cover_image, s)
+                                : null) ??
+                            l ??
+                            i.getCoverImageURL(s) ??
+                            null;
+                    return { cachedImageURL: l, imageURL: d };
+                })({ messageId: t, presenceActivity: n, application: d }),
+            [t, n, d],
         );
     return (
-        r.useEffect(() => {
-            u !== d &&
-                s.K({
-                    messageId: t,
-                    coverImageURL: d,
-                });
-        }, [u, d, t]),
-        d
+        i.useEffect(() => {
+            c !== u && s.K({ messageId: t, coverImageURL: u });
+        }, [c, u, t]),
+        u
     );
 };

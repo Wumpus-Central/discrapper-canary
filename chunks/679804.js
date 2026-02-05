@@ -1,60 +1,26 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(734057);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+class i {
+    filterTagIds;
+    sortOrder;
+    layout;
+    tagSetting;
+    setFilterTagIds = (e) => {
+        this.filterTagIds = e;
+    };
+    setSortOrder = (e) => {
+        this.sortOrder = e;
+    };
+    setLayout = (e) => {
+        this.layout = e;
+    };
+    setTagSetting = (e) => {
+        this.tagSetting = e;
+    };
+    getFilterTagIdsAnalytics = () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : []);
+    getSortOrderAnalytics = (e) => this.sortOrder ?? r.A.getChannel(e)?.getDefaultSortOrder();
+    getLayoutAnalytics = (e) => this.layout ?? r.A.getChannel(e)?.getDefaultLayout();
+    getTagSettingAnalytics = (e) => this.tagSetting ?? r.A.getChannel(e)?.getDefaultTagSetting();
 }
-class a {
-    constructor() {
-        i(this, "filterTagIds", void 0),
-            i(this, "sortOrder", void 0),
-            i(this, "layout", void 0),
-            i(this, "tagSetting", void 0),
-            i(this, "setFilterTagIds", (e) => {
-                this.filterTagIds = e;
-            }),
-            i(this, "setSortOrder", (e) => {
-                this.sortOrder = e;
-            }),
-            i(this, "setLayout", (e) => {
-                this.layout = e;
-            }),
-            i(this, "setTagSetting", (e) => {
-                this.tagSetting = e;
-            }),
-            i(this, "getFilterTagIdsAnalytics", () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
-            i(this, "getSortOrderAnalytics", (e) => {
-                var t, n;
-                return null != (t = this.sortOrder)
-                    ? t
-                    : null == (n = r.A.getChannel(e))
-                      ? void 0
-                      : n.getDefaultSortOrder();
-            }),
-            i(this, "getLayoutAnalytics", (e) => {
-                var t, n;
-                return null != (t = this.layout) ? t : null == (n = r.A.getChannel(e)) ? void 0 : n.getDefaultLayout();
-            }),
-            i(this, "getTagSettingAnalytics", (e) => {
-                var t, n;
-                return null != (t = this.tagSetting)
-                    ? t
-                    : null == (n = r.A.getChannel(e))
-                      ? void 0
-                      : n.getDefaultTagSetting();
-            });
-    }
-}
-let s = new a();
+let a = new i();

@@ -1,67 +1,6 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-n.d(t, {
-    MO: () => f,
-    dw: () => d,
-    fZ: () => c,
-    k: () => o,
-    uD: () => l,
-}),
-    n(896048);
-var o = (function (e) {
+"use strict";
+n.d(t, { MO: () => l, dw: () => o, fZ: () => a, k: () => r, uD: () => i });
+var r = (function (e) {
         return (
             (e[(e.CHAT_INPUT = 0)] = "CHAT_INPUT"),
             (e[(e.REACTION = 1)] = "REACTION"),
@@ -70,7 +9,7 @@ var o = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    i = (function (e) {
         return (
             (e[(e.CHAT_INPUT = 0)] = "CHAT_INPUT"),
             (e[(e.VOICE_USER = 1)] = "VOICE_USER"),
@@ -78,7 +17,7 @@ var o = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.LEVEL_1 = 0)] = "LEVEL_1"),
             (e[(e.LEVEL_2 = 1)] = "LEVEL_2"),
@@ -88,7 +27,7 @@ var o = (function (e) {
             e
         );
     })({});
-let u = {
+let s = {
         0: [
             [1, 1e-4],
             [25, 0.05],
@@ -140,35 +79,23 @@ let u = {
             [9001, 1e4],
         ],
     },
-    d = Object.keys(u).reduce(
-        (e, t) =>
-            s(i({}, e), {
-                [t]: u[t].map((e) => {
-                    let [t] = e;
-                    return t;
-                }),
+    o = Object.keys(s).reduce(
+        (e, t) => ({
+            ...e,
+            [t]: s[t].map((e) => {
+                let [t] = e;
+                return t;
             }),
-        {
-            0: [],
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-        },
+        }),
+        { 0: [], 1: [], 2: [], 3: [], 4: [] },
     ),
-    f = Object.keys(u).reduce(
-        (e, t) =>
-            s(i({}, e), {
-                [t]: u[t].map((e) => {
-                    let [t, n] = e;
-                    return n;
-                }),
+    l = Object.keys(s).reduce(
+        (e, t) => ({
+            ...e,
+            [t]: s[t].map((e) => {
+                let [t, n] = e;
+                return n;
             }),
-        {
-            0: [],
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-        },
+        }),
+        { 0: [], 1: [], 2: [], 3: [], 4: [] },
     );

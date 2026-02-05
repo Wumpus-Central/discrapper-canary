@@ -1,8 +1,6 @@
-n.d(t, {
-    O: () => i,
-});
+"use strict";
+n.d(t, { O: () => i });
 var r = n(64700);
-
 function i(e) {
     return "string" == typeof e || "number" == typeof e
         ? e

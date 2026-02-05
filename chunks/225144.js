@@ -1,3 +1,4 @@
-e.exports = function (e, t) {
-    e.setMode("drag"), t.preventDefault();
+"use strict";
+t.exports = function (t, e) {
+    t.setMode("drag"), e.preventDefault();
 };

@@ -1,46 +1,27 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(284009),
-    i = n.n(r),
-    l = n(417597),
-    a = n(71393),
+n.d(t, { A: () => m });
+var i = n(284009),
+    l = n.n(i),
+    a = n(417597),
+    r = n(71393),
     s = n(250627),
     o = n(871109),
-    c = n(935453),
-    u = n(179499),
-    d = n(985018);
-
-function p(e) {
-    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
-        p = (0, l.bG)([o.A], () => o.A.getGuildProduct(n)),
-        m = (0, l.bG)([a.A], () => a.A.getGuild(t), [t]),
-        f = (0, u.A)({
-            guildId: t,
-            productId: n,
-        });
-    return (i()(null != m, "guild cannot be null"), i()(null != p, "guildProductListing cannot be null"), (0, s.BB)(m))
-        ? {
-              variant: "primary",
-              text: d.intl.string(d.t.xUi3BL),
-              disabled: !0,
-          }
-        : p.has_entitlement
-          ? null != p.attachments
-              ? f
-              : {
-                    variant: "secondary",
-                    text: d.intl.string(d.t.RcTOGF),
-                    disabled: !0,
-                }
+    d = n(935453),
+    c = n(179499),
+    u = n(985018);
+function m(e) {
+    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
+        m = (0, a.bG)([o.A], () => o.A.getGuildProduct(n)),
+        _ = (0, a.bG)([r.A], () => r.A.getGuild(t), [t]),
+        h = (0, c.A)({ guildId: t, productId: n });
+    return (l()(null != _, "guild cannot be null"), l()(null != m, "guildProductListing cannot be null"), (0, s.BB)(_))
+        ? { variant: "primary", text: u.intl.string(u.t.xUi3BL), disabled: !0 }
+        : m.has_entitlement
+          ? null != m.attachments
+              ? h
+              : { variant: "secondary", text: u.intl.string(u.t.RcTOGF), disabled: !0 }
           : {
                 variant: "primary",
-                text: d.intl.string(d.t.xUi3BL),
-                onClick: () =>
-                    (0, c.N)({
-                        guildProductListing: p,
-                        guildId: m.id,
-                        sourceAnalyticsLocations: r,
-                    }),
+                text: u.intl.string(u.t.xUi3BL),
+                onClick: () => (0, d.N)({ guildProductListing: m, guildId: _.id, sourceAnalyticsLocations: i }),
             };
 }

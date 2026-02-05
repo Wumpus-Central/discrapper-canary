@@ -1,51 +1,46 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048),
-    n(492834);
-var r = n(64700),
-    i = n(311907),
+n.d(t, { A: () => o });
+var i = n(64700),
+    l = n(311907),
     a = n(654107),
-    s = n(67480),
-    o = n(871123);
-
-function l(e, t) {
-    let n = (0, i.bG)([s.A], () => s.A.get(e)),
-        [l, c] = r.useState(!1),
-        [u, d] = r.useState(!1),
-        f = r.useMemo(() => (0, o.xf)(n), [n]),
-        p = r.useMemo(() => (0, o.fq)(n), [n]);
+    r = n(67480),
+    s = n(871123);
+function o(e, t) {
+    let n = (0, l.bG)([r.A], () => r.A.get(e)),
+        [o, d] = i.useState(!1),
+        [c, u] = i.useState(!1),
+        m = i.useMemo(() => (0, s.xf)(n), [n]),
+        _ = i.useMemo(() => (0, s.fq)(n), [n]);
     return (
-        r.useEffect(() => {
-            if ((null == n ? void 0 : n.id) == null || l || !t) return;
-            if (null == p) return void c(!0);
+        i.useEffect(() => {
+            if (n?.id == null || o || !t) return;
+            if (null == _) return void d(!0);
             let e = new Image();
             return (
-                (e.src = p.toString()),
+                (e.src = _.toString()),
                 (e.onload = () => {
-                    c(!0);
+                    d(!0);
                 }),
                 (e.onerror = () => {
-                    c(!0);
+                    d(!0);
                 }),
                 () => {
                     (e.onerror = null), (e.onload = null), (e.src = "");
                 }
             );
-        }, [p, t, l, null == n ? void 0 : n.id]),
-        r.useEffect(() => {
-            if ((null == n ? void 0 : n.id) == null || u || !t) return;
-            if (null == f) return void d(!0);
+        }, [_, t, o, n?.id]),
+        i.useEffect(() => {
+            if (n?.id == null || c || !t) return;
+            if (null == m) return void u(!0);
             let e = !0;
             return (
-                (0, a.l0)(f.toString()).finally(() => {
-                    e && d(!0);
+                (0, a.l0)(m.toString()).finally(() => {
+                    e && u(!0);
                 }),
                 () => {
                     e = !1;
                 }
             );
-        }, [u, f, t, null == n ? void 0 : n.id]),
-        r.useMemo(() => l && u, [l, u])
+        }, [c, m, t, n?.id]),
+        i.useMemo(() => o && c, [o, c])
     );
 }

@@ -1,215 +1,202 @@
-n.d(t, {
-    F: () => C,
-}),
-    n(65821),
-    n(896048),
-    n(747238);
+"use strict";
+n.d(t, { F: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(562465),
     o = n(732955),
     l = n(397927),
-    c = n(384904),
-    u = n(830382),
+    u = n(384904),
+    c = n(830382),
     d = n(156312),
-    f = n(192087),
-    p = n(295405),
-    _ = n(71532),
+    _ = n(192087),
+    f = n(295405),
+    p = n(71532),
     h = n(252561),
     m = n(689614),
     g = n(652215),
     E = n(818348),
-    b = n(825057);
-let y = (0, m.R)();
-async function O(e) {
-    return (
-        await s.Bo.post({
-            url: g.Rsh.ORDER_SIGN(e),
-            rejectWithError: !0,
-        })
-    ).body;
+    A = n(825057);
+let I = (0, m.R)();
+async function T(e) {
+    return (await s.Bo.post({ url: g.Rsh.ORDER_SIGN(e), rejectWithError: !0 })).body;
 }
-async function A(e) {
-    return (
-        await s.Bo.get({
-            url: g.Rsh.ORDER_UPDATE(e),
-            rejectWithError: !0,
-        })
-    ).body;
+async function y(e) {
+    return (await s.Bo.get({ url: g.Rsh.ORDER_UPDATE(e), rejectWithError: !0 })).body;
 }
-async function v(e, t) {
-    let n = {
-        billing_facet: {
-            payment_source_id: t,
-        },
-    };
-    await s.Bo.patch({
-        url: g.Rsh.ORDER_UPDATE(e),
-        body: n,
-        rejectWithError: !0,
-    });
+async function S(e, t) {
+    let n = { billing_facet: { payment_source_id: t } };
+    await s.Bo.patch({ url: g.Rsh.ORDER_UPDATE(e), body: n, rejectWithError: !0 });
 }
-
-function S(e, t, n, r) {
-    var i;
-    let a = e.billing_facet,
-        s = null == a || null == (i = a.order_signing_deferral_context) ? void 0 : i.payment_redirect_context,
-        o = null == s ? void 0 : s.redirect_url;
-    null != o && window.open(o);
-    let l = 3e3,
-        c = 3e4,
+function v(e, t, n, r) {
+    let i = e.billing_facet,
+        a = i?.order_signing_deferral_context?.payment_redirect_context,
+        s = a?.redirect_url;
+    null != s && window.open(s);
+    let o = 3e3,
+        l = 3e4,
         u = Date.now(),
-        d = null,
-        f = () => {
-            let e = Math.min(l, c - (Date.now() - u));
+        c = null,
+        d = () => {
+            let e = Math.min(o, l - (Date.now() - u));
             e > 0 &&
-                (d = setTimeout(() => {
-                    h().catch((e) => {
+                (c = setTimeout(() => {
+                    p().catch((e) => {
                         let r = e instanceof Error ? e.message : String(e);
-                        n("Failed to poll order status!\nOrder ID: ".concat(t, "\nError: ").concat(r));
+                        n(`Failed to poll order status!
+Order ID: ${t}
+Error: ${r}`);
                     });
                 }, e));
         },
-        p = () => {
-            null != d && clearTimeout(d);
+        _ = () => {
+            null != c && clearTimeout(c);
         },
-        _ = (e) => {
-            n(
-                "Order signing timed out.\nOrder ID: "
-                    .concat(t, "\nStatus: ")
-                    .concat(null != e ? e : "unknown", "\nPlease check the order status manually."),
-            ),
-                p();
+        f = (e) => {
+            n(`Order signing timed out.
+Order ID: ${t}
+Status: ${e ?? "unknown"}
+Please check the order status manually.`),
+                _();
         },
-        h = async () => {
+        p = async () => {
             let e = Date.now() - u;
-            if (e >= c) {
+            if (e >= l) {
                 try {
-                    let e = await A(t);
-                    _(e.status);
+                    let e = await y(t);
+                    f(e.status);
                 } catch (r) {
                     let e = r instanceof Error ? r.message : String(r);
-                    n("Order signing timed out.\nOrder ID: ".concat(t, "\nError: ").concat(e)), p();
+                    n(`Order signing timed out.
+Order ID: ${t}
+Error: ${e}`),
+                        _();
                 }
                 return;
             }
             try {
-                let e = (await A(t)).status;
+                let e = (await y(t)).status;
                 if (2 === e) {
-                    n("Order signed successfully!\nOrder ID: ".concat(t, "\nPayment redirect completed.")),
+                    n(`Order signed successfully!
+Order ID: ${t}
+Payment redirect completed.`),
                         r(null),
-                        p();
+                        _();
                     return;
                 }
                 if (1 === e) {
-                    n("Order signed unsuccessfully\nOrder ID: ".concat(t)), p();
+                    n(`Order signed unsuccessfully
+Order ID: ${t}`),
+                        _();
                     return;
                 }
-                f();
+                d();
             } catch (i) {
                 let r = i instanceof Error ? i.message : String(i);
-                e < c ? f() : (n("Order signing timed out.\nOrder ID: ".concat(t, "\nError: ").concat(r)), p());
+                e < l
+                    ? d()
+                    : (n(`Order signing timed out.
+Order ID: ${t}
+Error: ${r}`),
+                      _());
             }
         };
-    h().catch((e) => {
+    p().catch((e) => {
         let r = e instanceof Error ? e.message : String(e);
-        n("Failed to start polling order status!\nOrder ID: ".concat(t, "\nError: ").concat(r));
+        n(`Failed to start polling order status!
+Order ID: ${t}
+Error: ${r}`);
     });
 }
-
-function I(e, t, n, r) {
+function C(e, t, n, r) {
     (async () => {
-        var i, a, s, o;
         try {
-            let s = e.billing_facet;
-            if (null == s) throw Error("Order does not have billing facet information");
-            let o = s.order_signing_deferral_context;
-            if (null == o) throw Error("Order does not have payment redirect context");
-            let l = o.stripe_3ds_context;
-            if (null == l) throw Error("Order does not have 3DS context information");
-            let c = await (0, _.Cv)();
-            if (null == c) throw Error("Stripe not loaded");
-            let u = l.client_secret;
-            if (null == u || "" === u) throw Error("No client secret found in 3DS context");
-            let { error: d, paymentIntent: f } = await c.confirmCardPayment(u, {
-                payment_method: l.payment_method_id,
-            });
-            if (null != d) throw Error("3DS authentication failed: ".concat(d.message));
-            if (null == f) throw Error("No payment intent returned from 3DS authentication");
-            let p = null != (i = null != (a = e.id) ? a : t) ? i : "Unknown";
-            r(null), n("3DS authentication completed successfully!\nOrder ID: ".concat(p));
+            let i = e.billing_facet;
+            if (null == i) throw Error("Order does not have billing facet information");
+            let a = i.order_signing_deferral_context;
+            if (null == a) throw Error("Order does not have payment redirect context");
+            let s = a.stripe_3ds_context;
+            if (null == s) throw Error("Order does not have 3DS context information");
+            let o = await (0, p.Cv)();
+            if (null == o) throw Error("Stripe not loaded");
+            let l = s.client_secret;
+            if (null == l || "" === l) throw Error("No client secret found in 3DS context");
+            let { error: u, paymentIntent: c } = await o.confirmCardPayment(l, { payment_method: s.payment_method_id });
+            if (null != u) throw Error(`3DS authentication failed: ${u.message}`);
+            if (null == c) throw Error("No payment intent returned from 3DS authentication");
+            let d = e.id ?? t ?? "Unknown";
+            r(null),
+                n(`3DS authentication completed successfully!
+Order ID: ${d}`);
         } catch (a) {
             let r = a instanceof Error ? a.message : String(a),
-                i = null != (s = null != (o = e.id) ? o : t) ? s : "Unknown";
-            n("Failed to complete 3DS!\nOrder ID: ".concat(i, "\nError: ").concat(r));
+                i = e.id ?? t ?? "Unknown";
+            n(`Failed to complete 3DS!
+Order ID: ${i}
+Error: ${r}`);
         }
     })();
 }
-
-function T() {
+function b() {
     let [e, t] = i.useState(!1),
         [n, s] = i.useState(!1),
-        [d, _] = i.useState(null),
-        [m, A] = i.useState(null),
-        [T, C] = i.useState(y.defaultValue),
-        [N, R] = i.useState(null),
-        w = (0, a.bG)([p.A], () => p.A.paymentSources),
-        P = (0, a.bG)([p.A], () => p.A.hasFetchedPaymentSources),
-        D = (0, a.bG)([p.A], () => p.A.defaultPaymentSourceId);
+        [d, p] = i.useState(null),
+        [m, y] = i.useState(null),
+        [b, N] = i.useState(I.defaultValue),
+        [R, O] = i.useState(null),
+        D = (0, a.bG)([f.A], () => f.A.paymentSources),
+        L = (0, a.bG)([f.A], () => f.A.hasFetchedPaymentSources),
+        w = (0, a.bG)([f.A], () => f.A.defaultPaymentSourceId);
     i.useEffect(() => {
-        P || (0, c.$o)();
-    }, [P]),
+        L || (0, u.$o)();
+    }, [L]),
         i.useEffect(() => {
-            null != D && null == N && R(D);
-        }, [D, N]);
+            null != w && null == R && O(w);
+        }, [w, R]);
     let x = i.useRef(null);
     i.useEffect(() => {
         if (null == m || "" === m) {
-            x.current = N;
+            x.current = R;
             return;
         }
-        if (N !== x.current) {
-            if (null == N || "" === N) {
-                x.current = N;
+        if (R !== x.current) {
+            if (null == R || "" === R) {
+                x.current = R;
                 return;
             }
-            v(m, N)
+            S(m, R)
                 .then(() => {
-                    _("Order updated successfully!\nOrder ID: ".concat(m, "\nPayment source changed."));
+                    p(`Order updated successfully!
+Order ID: ${m}
+Payment source changed.`);
                 })
                 .catch((e) => {
                     let t = e instanceof Error ? e.message : String(e);
-                    _("Failed to update order: ".concat(t));
+                    p(`Failed to update order: ${t}`);
                 }),
-                (x.current = N);
+                (x.current = R);
         }
-    }, [m, N]);
-    let L = i.useMemo(
+    }, [m, R]);
+    let P = i.useMemo(
             () =>
-                Object.values(w).map((e) => {
+                Object.values(D).map((e) => {
                     let t = ((e) => {
-                        let t = f.w[e];
+                        let t = _.w[e];
                         return null != t ? t() : String(e);
                     })(e.type);
                     if (e.type === E.he.CARD && "last4" in e) {
-                        var n, r;
-                        let i = null != (n = e.last4) ? n : "",
-                            a = null != (r = e.brand) ? r : "Unknown";
-                        t += " - ****".concat(i, " (").concat(a, ")");
-                    } else null != e.brand && "" !== e.brand && (t += " - ".concat(e.brand));
-                    return {
-                        id: e.id,
-                        value: e.id,
-                        label: t,
-                    };
+                        let n = e.last4 ?? "",
+                            r = e.brand ?? "Unknown";
+                        t += ` - ****${n} (${r})`;
+                    } else null != e.brand && "" !== e.brand && (t += ` - ${e.brand}`);
+                    return { id: e.id, value: e.id, label: t };
                 }),
-            [w],
+            [D],
         ),
-        j = async () => {
-            if (null == N || "" === N) return void _("Please select a payment source first.");
-            if (null == T || "" === T || T === g.dJq) return void _("Please select a SKU ID.");
-            t(!0), _(null), A(null);
+        M = async () => {
+            if (null == R || "" === R) return void p("Please select a payment source first.");
+            if (null == b || "" === b || b === g.dJq) return void p("Please select a SKU ID.");
+            t(!0), p(null), y(null);
             try {
                 let e = "US",
                     t = !1,
@@ -222,62 +209,56 @@ function T() {
                         sound_id: void 0,
                         reward_sku_ids: void 0,
                     },
-                    r = await (0, u.Aj)(T, N, e, t, n);
-                A(r), _("Order created successfully! Order ID: ".concat(r));
+                    r = await (0, c.Aj)(b, R, e, t, n);
+                y(r), p(`Order created successfully! Order ID: ${r}`);
             } catch (t) {
                 let e = t instanceof Error ? t.message : String(t);
-                _("Failed to create order: ".concat(e));
+                p(`Failed to create order: ${e}`);
             } finally {
                 t(!1);
             }
         },
-        M = async () => {
-            if (null == m || "" === m) return void _("No order ID available. Please create an order first.");
+        k = async () => {
+            if (null == m || "" === m) return void p("No order ID available. Please create an order first.");
             s(!0);
             try {
-                let e = await O(m);
+                let e = await T(m);
                 if (null == e.errors) {
-                    _("Order signed successfully! Order ID: ".concat(m)), A(null);
+                    p(`Order signed successfully! Order ID: ${m}`), y(null);
                     return;
                 }
                 let t = e.errors[0];
                 1e3 === t
-                    ? (_(
-                          "Order signing in progress!\nOrder ID: ".concat(
-                              m,
-                              "\nThis order requires additional authentication (3DS).",
-                          ),
-                      ),
-                      I(e, m, _, A))
+                    ? (p(`Order signing in progress!
+Order ID: ${m}
+This order requires additional authentication (3DS).`),
+                      C(e, m, p, y))
                     : 1001 === t
-                      ? (_(
-                            "Order signing in progress!\nOrder ID: ".concat(
-                                m,
-                                "\nThis order requires redirection to complete the payment.\nPolling order status...",
-                            ),
-                        ),
-                        S(e, m, _, A))
-                      : _("Order signing failed\nOrder ID: ".concat(m, "\nError: ").concat(t));
+                      ? (p(`Order signing in progress!
+Order ID: ${m}
+This order requires redirection to complete the payment.
+Polling order status...`),
+                        v(e, m, p, y))
+                      : p(`Order signing failed
+Order ID: ${m}
+Error: ${t}`);
             } catch (t) {
                 let e = t instanceof Error ? t.message : String(t);
-                _("Failed to sign order: ".concat(e));
+                p(`Failed to sign order: ${e}`);
             } finally {
                 s(!1);
             }
         };
     return (0, r.jsxs)(h.wn, {
         children: [
-            (0, r.jsx)(l.Heading, {
-                variant: "heading-xl/semibold",
-                children: "Order SKU Test",
-            }),
+            (0, r.jsx)(l.Heading, { variant: "heading-xl/semibold", children: "Order SKU Test" }),
             (0, r.jsxs)(h.Hq, {
                 label: "Test Order Creation, Signing & 3DS",
                 direction: "vertical",
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        className: b.cW,
+                        className: A.cW,
                         children:
                             "This section tests the orderSKU function, order signing, and 3DS authentication. Select SKU ID and payment source from the dropdowns below. Check the console for detailed logs.",
                     }),
@@ -285,21 +266,15 @@ function T() {
                         label: "Configuration",
                         children: [
                             (0, r.jsx)("div", {
-                                style: {
-                                    marginBottom: "16px",
-                                },
+                                style: { marginBottom: "16px" },
                                 children: (0, r.jsx)(l.l6P, {
                                     selectionMode: "single",
-                                    value: T,
-                                    onSelectionChange: C,
-                                    options: y.options,
+                                    value: b,
+                                    onSelectionChange: N,
+                                    options: I.options,
                                     formatOption: (e) => {
                                         let { value: t, label: n } = e;
-                                        return {
-                                            id: t,
-                                            value: t,
-                                            label: n,
-                                        };
+                                        return { id: t, value: t, label: n };
                                     },
                                     placeholder: "Select a SKU...",
                                     label: "SKU ID",
@@ -307,25 +282,23 @@ function T() {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                style: {
-                                    marginBottom: "16px",
-                                },
+                                style: { marginBottom: "16px" },
                                 children: [
                                     (0, r.jsx)(l.l6P, {
                                         selectionMode: "single",
-                                        value: N,
-                                        onSelectionChange: R,
-                                        options: L,
+                                        value: R,
+                                        onSelectionChange: O,
+                                        options: P,
                                         placeholder: "Select a payment source...",
-                                        disabled: !P,
+                                        disabled: !L,
                                         label: "Payment Source",
                                         clearable: !0,
                                     }),
-                                    !P &&
+                                    !L &&
                                         (0, r.jsx)(l.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            className: b.cW,
+                                            className: A.cW,
                                             children: "Loading payment sources...",
                                         }),
                                 ],
@@ -333,60 +306,57 @@ function T() {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        style: {
-                            display: "flex",
-                            gap: "8px",
-                            marginBottom: "8px",
-                            flexWrap: "wrap",
-                        },
+                        style: { display: "flex", gap: "8px", marginBottom: "8px", flexWrap: "wrap" },
                         children: [
                             (0, r.jsx)(o.$nd, {
                                 variant: "primary",
                                 size: "sm",
                                 text: e ? "Creating Order..." : "Create Order",
-                                onClick: j,
-                                disabled: e || null == N || "" === N || null == T || "" === T || T === g.dJq,
+                                onClick: M,
+                                disabled: e || null == R || "" === R || null == b || "" === b || b === g.dJq,
                             }),
                             (0, r.jsx)(o.$nd, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: n ? "Signing Order..." : "Sign Order",
-                                onClick: M,
+                                onClick: k,
                                 disabled: n || null == m || "" === m,
                             }),
                         ],
                     }),
                     null != d &&
                         (0, r.jsx)("div", {
-                            className: b.cW,
-                            children: d.split("\n").map((e, t) =>
-                                (0, r.jsx)(
-                                    l.Text,
-                                    {
-                                        variant: "text-md/normal",
-                                        style: {
-                                            display: "block",
-                                            marginBottom: t < d.split("\n").length - 1 ? "4px" : "0",
+                            className: A.cW,
+                            children: d
+                                .split("\n")
+                                .map((e, t) =>
+                                    (0, r.jsx)(
+                                        l.Text,
+                                        {
+                                            variant: "text-md/normal",
+                                            style: {
+                                                display: "block",
+                                                marginBottom: t < d.split("\n").length - 1 ? "4px" : "0",
+                                            },
+                                            children: e,
                                         },
-                                        children: e,
-                                    },
-                                    t,
+                                        t,
+                                    ),
                                 ),
-                            ),
                         }),
                 ],
             }),
         ],
     });
 }
-let C = {
+let N = {
     name: "Order SKU",
     component: function () {
         return (0, r.jsx)(d.PaymentContextProvider, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
-            children: (0, r.jsx)(T, {}),
+            children: (0, r.jsx)(b, {}),
         });
     },
     id: "order-sku-test",

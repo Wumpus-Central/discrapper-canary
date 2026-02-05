@@ -1,16 +1,10 @@
-r.d(t, {
-    A: () => a,
-});
-var n = r(311907),
-    l = r(734057),
-    s = r(71393),
-    i = r(309010);
-
+s.d(t, { A: () => a });
+var r = s(311907),
+    i = s(734057),
+    n = s(71393),
+    l = s(309010);
 function a() {
-    let e = (0, n.bG)([i.A, l.A], () => l.A.getChannel(i.A.getVoiceChannelId())),
-        t = null == e ? void 0 : e.getGuildId();
-    return (0, n.bG)([s.A], () => {
-        var e;
-        return null != t ? (null == (e = s.A.getGuild(t)) ? void 0 : e.premiumTier) : null;
-    });
+    let e = (0, r.bG)([l.A, i.A], () => i.A.getChannel(l.A.getVoiceChannelId())),
+        t = e?.getGuildId();
+    return (0, r.bG)([n.A], () => (null != t ? n.A.getGuild(t)?.premiumTier : null));
 }

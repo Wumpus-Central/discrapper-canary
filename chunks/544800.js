@@ -1,3 +1,1 @@
-e.exports = {
-    Y: "spacing_a5537d",
-};
+t.exports = { Y: "spacing_a5537d" };

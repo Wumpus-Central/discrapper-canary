@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     hP: "editorAnimate_cf6da1",
     Fk: "slidein_cf6da1",

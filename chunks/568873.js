@@ -1,27 +1,22 @@
-n.d(t, {
-    A: () => u,
-});
-var i = n(627968);
-n(64700);
-var r = n(311907),
-    s = n(397927),
-    l = n(832712),
-    a = n(543465),
-    o = n(477427),
-    c = n(985018);
-
-function u(e) {
-    let t = (0, r.bG)([a.Ay], () => a.Ay.isMuteScheduledEventsEnabled(e), [e]);
-    return (0, i.jsx)(s.sLh, {
+i.d(t, { A: () => c });
+var n = i(627968);
+i(64700);
+var l = i(311907),
+    s = i(397927),
+    r = i(832712),
+    a = i(543465),
+    d = i(477427),
+    o = i(985018);
+function c(e) {
+    let t = (0, l.bG)([a.Ay], () => a.Ay.isMuteScheduledEventsEnabled(e), [e]);
+    return (0, n.jsx)(s.sLh, {
         id: "mute-events",
-        label: c.intl.string(c.t.ONG3Yz),
+        label: o.intl.string(o.t.ONG3Yz),
         action: () => {
-            var n;
+            var i;
             return (
-                (n = {
-                    mute_scheduled_events: !t,
-                }),
-                void l.A.updateGuildNotificationSettings(e, n, o.G_.mutedEvents(n.mute_scheduled_events))
+                (i = { mute_scheduled_events: !t }),
+                void r.A.updateGuildNotificationSettings(e, i, d.G_.mutedEvents(i.mute_scheduled_events))
             );
         },
         checked: t,

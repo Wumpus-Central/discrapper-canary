@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     menu: "menu_c1e9c4",
     scroller: "scroller_c1e9c4",

@@ -6,12 +6,12 @@ function t(e) {
             : null
         : (t = l.hex6.exec(e))
           ? parseInt(t[1] + "ff", 16) >>> 0
-          : p.hasOwnProperty(e)
-            ? p[e]
+          : f.hasOwnProperty(e)
+            ? f[e]
             : (t = l.rgb.exec(e))
-              ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | 255) >>> 0
+              ? ((u(t[1]) << 24) | (u(t[2]) << 16) | (u(t[3]) << 8) | 255) >>> 0
               : (t = l.rgba.exec(e))
-                ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | d(t[4])) >>> 0
+                ? ((u(t[1]) << 24) | (u(t[2]) << 16) | (u(t[3]) << 8) | d(t[4])) >>> 0
                 : (t = l.hex3.exec(e))
                   ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + "ff", 16) >>> 0
                   : (t = l.hex8.exec(e))
@@ -19,12 +19,11 @@ function t(e) {
                     : (t = l.hex4.exec(e))
                       ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
                       : (t = l.hsl.exec(e))
-                        ? (255 | r(u(t[1]), f(t[2]), f(t[3]))) >>> 0
+                        ? (255 | r(c(t[1]), _(t[2]), _(t[3]))) >>> 0
                         : (t = l.hsla.exec(e))
-                          ? (r(u(t[1]), f(t[2]), f(t[3])) | d(t[4])) >>> 0
+                          ? (r(c(t[1]), _(t[2]), _(t[3])) | d(t[4])) >>> 0
                           : null;
 }
-
 function n(e, t, n) {
     return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
         ? e + (t - e) * 6 * n
@@ -34,7 +33,6 @@ function n(e, t, n) {
             ? e + (t - e) * (2 / 3 - n) * 6
             : e;
 }
-
 function r(e, t, r) {
     var i = r < 0.5 ? r * (1 + t) : r + t - r * t,
         a = 2 * r - i;
@@ -46,11 +44,9 @@ function r(e, t, r) {
 }
 var i = "[-+]?\\d*\\.?\\d+",
     a = i + "%";
-
 function s(e) {
     return Array.prototype.slice.call(e, 0);
 }
-
 function o() {
     return "\\(\\s*(" + s(arguments).join(")\\s*,\\s*(") + ")\\s*\\)";
 }
@@ -64,26 +60,22 @@ var l = {
     hex6: /^#([0-9a-fA-F]{6})$/,
     hex8: /^#([0-9a-fA-F]{8})$/,
 };
-
-function c(e) {
+function u(e) {
     var t = parseInt(e, 10);
     return t < 0 ? 0 : t > 255 ? 255 : t;
 }
-
-function u(e) {
+function c(e) {
     return (((parseFloat(e) % 360) + 360) % 360) / 360;
 }
-
 function d(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-
-function f(e) {
+function _(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var p = {
+var f = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,
     antiquewhite: 0xfaebd7ff,

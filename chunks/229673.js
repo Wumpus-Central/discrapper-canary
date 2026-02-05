@@ -1,57 +1,37 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968);
+n.d(t, { A: () => h });
+var i = n(627968);
 n(64700);
-var i = n(934551),
+var l = n(934551),
     a = n(429913),
-    s = n(769015),
-    o = n(975571),
-    l = n(763754),
-    c = n(447215),
-    u = n(888675),
-    d = n(652215),
-    f = n(985018),
-    p = n(953837);
-
-function _(e) {
-    let { message: t, channel: n, author: _, compact: h } = e,
-        { nick: m } = (0, l.d8)(_, n),
-        g = (0, c.P)({
-            user: _,
-            channelId: n.id,
-            guildId: void 0,
-            messageId: void 0,
-        })(),
-        E = (0, a.h)(t.applicationId);
-    if (null == E) return null;
-    let b = f.intl.format(f.t.m7Lwas, {
-        username: m,
-        usernameHook: g,
-        gameName: E.name,
+    r = n(769015),
+    s = n(975571),
+    o = n(763754),
+    d = n(447215),
+    c = n(888675),
+    u = n(652215),
+    m = n(985018),
+    _ = n(953837);
+function h(e) {
+    let { message: t, channel: n, author: h, compact: p } = e,
+        { nick: g } = (0, o.d8)(h, n),
+        A = (0, d.P)({ user: h, channelId: n.id, guildId: void 0, messageId: void 0 })(),
+        f = (0, a.h)(t.applicationId);
+    if (null == f) return null;
+    let x = m.intl.format(m.t.m7Lwas, {
+        username: g,
+        usernameHook: A,
+        gameName: f.name,
         gameIconHook: (e) =>
-            (0, r.jsxs)("span", {
-                className: p.Y_,
-                children: [
-                    (0, r.jsx)(s.A, {
-                        game: E,
-                        size: s.M.XXSMALL,
-                        className: p.p4,
-                    }),
-                    " ",
-                    e,
-                ],
+            (0, i.jsxs)("span", {
+                className: _.Y_,
+                children: [(0, i.jsx)(r.A, { game: f, size: r.M.XXSMALL, className: _.p4 }), " ", e],
             }),
-        helpdeskArticle: o.A.getArticleURL(d.MVz.SOCIAL_LAYER_CONNECTIONS),
+        helpdeskArticle: s.A.getArticleURL(u.MVz.SOCIAL_LAYER_CONNECTIONS),
     });
-    return (0, r.jsx)(u.A, {
-        iconNode: (0, r.jsx)(i.GameControllerIcon, {
-            size: "sm",
-        }),
-        compact: h,
-        contentClassName: p.Qs,
-        children: (0, r.jsx)("div", {
-            children: b,
-        }),
+    return (0, i.jsx)(c.A, {
+        iconNode: (0, i.jsx)(l.GameControllerIcon, { size: "sm" }),
+        compact: p,
+        contentClassName: _.Qs,
+        children: (0, i.jsx)("div", { children: x }),
     });
 }

@@ -1,16 +1,13 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
-var i = n(311907),
+var l = n(311907),
+    s = n(498400),
     a = n(106922),
-    s = n(142201),
-    o = n(287809),
-    l = n(927578),
-    c = n(788868);
-
-function u() {
-    let e = (0, i.bG)([o.default], () => o.default.getCurrentUser());
-    return (0, l.YE)(e, c.PremiumTypes.TIER_2) ? (0, r.jsx)(a.A, {}) : (0, r.jsx)(s.A, {});
+    r = n(287809),
+    o = n(927578),
+    d = n(788868);
+function c() {
+    let e = (0, l.bG)([r.default], () => r.default.getCurrentUser());
+    return (0, o.YE)(e, d.PremiumTypes.TIER_2) ? (0, i.jsx)(a.A, {}) : (0, i.jsx)(s.A, {});
 }

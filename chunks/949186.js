@@ -1,3 +1,4 @@
+"use strict";
 var r = n(410323),
     i = Error,
     a = r("".replace),

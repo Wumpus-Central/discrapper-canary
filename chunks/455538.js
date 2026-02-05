@@ -1,6 +1,4 @@
-t.d(n, {
-    default: () => d,
-});
+t.d(n, { default: () => d });
 var i = t(627968),
     o = t(64700),
     a = t(397927),
@@ -9,18 +7,10 @@ var i = t(627968),
     r = t(253932),
     s = t(957565),
     u = t(985018);
-
 function d(e) {
     let { imageUrl: n, onSelect: t } = e,
         d = r.Q_.useSetting(),
-        { tidaWebformEnabled: p } = l.A.useExperiment(
-            {
-                location: "RoleIconContextMenu",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
+        { tidaWebformEnabled: p } = l.A.useExperiment({ location: "RoleIconContextMenu" }, { autoTrackExposure: !1 }),
         x = o.useCallback(() => {
             (0, s.C)(n);
         }, [n]);
@@ -37,10 +27,7 @@ function d(e) {
                       label: u.intl.string(u.t["8xHmxo"]),
                       action: x,
                       icon: a.qYV,
-                      leadingAccessory: {
-                          type: "icon",
-                          icon: a.qYV,
-                      },
+                      leadingAccessory: { type: "icon", icon: a.qYV },
                   }),
               }),
           })

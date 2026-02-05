@@ -1,41 +1,9 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-n.d(t, {
-    Ic: () => s,
-    LW: () => a,
-});
-var a = (function (e) {
+"use strict";
+n.d(t, { Ic: () => i, LW: () => r });
+var r = (function (e) {
         return (e.DEFAULT = "AppIcon"), e;
     })({}),
-    s = (function (e) {
+    i = (function (e) {
         return (
             (e.BRAND_DARK = "BrandDarkIcon"),
             (e.BRAND_INVERTED = "BrandInvertedIcon"),
@@ -64,17 +32,3 @@ var a = (function (e) {
             e
         );
     })({});
-i(
-    {},
-    a,
-    s,
-    (function (e) {
-        return (
-            (e.DRIP = "DripIcon"),
-            (e.SLIMY = "SlimyIcon"),
-            (e.ZOMBIE = "ZombieIcon"),
-            (e.CLYDE_STEIN = "ClydeSteinIcon"),
-            e
-        );
-    })({}),
-);

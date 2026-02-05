@@ -1,148 +1,57 @@
-r.d(t, {
-    default: () => b,
-}),
-    r(896048);
-var n = r(627968),
-    o = r(64700),
-    l = r(158954),
-    i = r(311907),
-    c = r(397927),
-    s = r(287809),
-    a = r(725386),
-    u = r(624160),
-    p = r(985018),
-    f = r(480676);
-
-function b(e) {
-    var t, r;
-    let { onClose: b, trackUserProfileEditAction: O } = e,
-        d = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (o = 0, r = Reflect.ownKeys(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-                return l;
-            }
-            if (
-                ((l = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        l = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < l.length; n++)
-                        (r = l[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                    return o;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (o = 0, r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            return l;
-        })(e, ["onClose", "trackUserProfileEditAction"]),
-        y = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
-        g = (function () {
-            let e = (0, a.A)({
-                    location: "UserProfileWidgetAddModal",
-                }),
-                [t, r] = o.useState(e);
+i.d(e, { default: () => f });
+var l = i(627968),
+    n = i(64700),
+    s = i(158954),
+    r = i(311907),
+    a = i(397927),
+    d = i(287809),
+    o = i(725386),
+    u = i(624160),
+    c = i(985018),
+    g = i(480676);
+function f(t) {
+    let { onClose: e, trackUserProfileEditAction: i, ...f } = t,
+        h = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
+        p = (function () {
+            let t = (0, o.A)({ location: "UserProfileWidgetAddModal" }),
+                [e, i] = n.useState(t);
             return (
-                o.useEffect(() => {
-                    e.length > t.length && r(e);
-                }, [e, t]),
-                t
+                n.useEffect(() => {
+                    t.length > e.length && i(t);
+                }, [t, e]),
+                e
             );
         })(),
-        j = g.length > 0,
-        [m, h] = o.useState(!1),
-        w = {
-            onClick: () => b(),
-            text: p.intl.string(p.t.cpT0Cq),
-        },
-        P = o.useCallback(() => {
-            h(!0), b();
-        }, [b]);
-    return null == y
+        x = p.length > 0,
+        [k, m] = n.useState(!1),
+        C = { onClick: () => e(), text: c.intl.string(c.t.cpT0Cq) },
+        b = n.useCallback(() => {
+            m(!0), e();
+        }, [e]);
+    return null == h
         ? null
-        : (0, n.jsx)(
-              l.Modal,
-              ((t = (function (e) {
-                  for (var t = 1; t < arguments.length; t++) {
-                      var r = null != arguments[t] ? arguments[t] : {},
-                          n = Object.keys(r);
-                      "function" == typeof Object.getOwnPropertySymbols &&
-                          (n = n.concat(
-                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                              }),
-                          )),
-                          n.forEach(function (t) {
-                              var n;
-                              (n = r[t]),
-                                  t in e
-                                      ? Object.defineProperty(e, t, {
-                                            value: n,
-                                            enumerable: !0,
-                                            configurable: !0,
-                                            writable: !0,
-                                        })
-                                      : (e[t] = n);
-                          });
-                  }
-                  return e;
-              })(
-                  {
-                      title: p.intl.string(p.t["grUgR+"]),
-                      actions: j ? [] : [w],
-                      size: j ? "md" : "sm",
-                      onClose: b,
-                  },
-                  d,
-              )),
-              (r = r =
-                  {
-                      children: j
-                          ? (0, n.jsx)("ul", {
-                                "aria-label": p.intl.string(p.t["+EIBSA"]),
-                                className: f.f,
-                                children: g.map((e) =>
-                                    (0, n.jsx)(
-                                        u.A,
-                                        {
-                                            widget: e,
-                                            onAddWidget: P,
-                                            loading: m,
-                                            trackUserProfileEditAction: O,
-                                        },
-                                        e.getUniqueKey(),
-                                    ),
-                                ),
-                            })
-                          : (0, n.jsx)(c.Text, {
-                                variant: "text-md/medium",
-                                color: "text-subtle",
-                                children: p.intl.string(p.t["1nkDOs"]),
-                            }),
-                  }),
-              Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                  : (function (e, t) {
-                        var r = Object.keys(e);
-                        if (Object.getOwnPropertySymbols) {
-                            var n = Object.getOwnPropertySymbols(e);
-                            r.push.apply(r, n);
-                        }
-                        return r;
-                    })(Object(r)).forEach(function (e) {
-                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+        : (0, l.jsx)(s.Modal, {
+              title: c.intl.string(c.t["grUgR+"]),
+              actions: x ? [] : [C],
+              size: x ? "md" : "sm",
+              onClose: e,
+              ...f,
+              children: x
+                  ? (0, l.jsx)("ul", {
+                        "aria-label": c.intl.string(c.t["+EIBSA"]),
+                        className: g.f,
+                        children: p.map((t) =>
+                            (0, l.jsx)(
+                                u.A,
+                                { widget: t, onAddWidget: b, loading: k, trackUserProfileEditAction: i },
+                                t.getUniqueKey(),
+                            ),
+                        ),
+                    })
+                  : (0, l.jsx)(a.Text, {
+                        variant: "text-md/medium",
+                        color: "text-subtle",
+                        children: c.intl.string(c.t["1nkDOs"]),
                     }),
-              t),
-          );
+          });
 }

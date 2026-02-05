@@ -1,3 +1,4 @@
+"use strict";
 var r = "object" == typeof document && document.all;
 t.exports =
     void 0 === r && void 0 !== r

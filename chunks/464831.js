@@ -1,23 +1,20 @@
-n.r(t),
-    n.d(t, {
-        default: () => o,
-    });
+"use strict";
+n.r(t), n.d(t, { default: () => o });
 var r = n(29583),
     i = n(998280),
     a = n(618027),
     s = n(98430);
-
 function o(e, t) {
     (0, a.A)(1, arguments);
     var n,
         o,
         l,
-        c,
         u,
+        c,
         d,
+        _,
         f,
-        p,
-        _ = (0, s.q)(),
+        p = (0, s.q)(),
         h = (0, i.A)(
             null !=
                 (n =
@@ -25,17 +22,17 @@ function o(e, t) {
                     (o =
                         null !=
                         (l =
-                            null != (c = null == t ? void 0 : t.weekStartsOn)
-                                ? c
-                                : null == t || null == (u = t.locale) || null == (d = u.options)
+                            null != (u = null == t ? void 0 : t.weekStartsOn)
+                                ? u
+                                : null == t || null == (c = t.locale) || null == (d = c.options)
                                   ? void 0
                                   : d.weekStartsOn)
                             ? l
-                            : _.weekStartsOn)
+                            : p.weekStartsOn)
                         ? o
-                        : null == (f = _.locale) || null == (p = f.options)
+                        : null == (_ = p.locale) || null == (f = _.options)
                           ? void 0
-                          : p.weekStartsOn)
+                          : f.weekStartsOn)
                 ? n
                 : 0,
         );

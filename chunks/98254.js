@@ -1,27 +1,24 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968),
-    i = n(397927),
-    a = n(244242);
-
-function s(e) {
+n.d(t, { A: () => a });
+var i = n(627968),
+    s = n(397927),
+    r = n(244242);
+function a(e) {
     let { node: t } = e,
-        { useValue: n, useTitle: s, useSubtitle: o, useOptions: l, fieldLayout: c, clearable: u } = t,
-        d = t.setValue,
-        f = s(),
-        p = null == o ? void 0 : o(),
-        _ = n(),
-        h = l();
-    return (0, r.jsx)(a.L, {
-        children: (0, r.jsx)(i.l6P, {
+        { useValue: n, useTitle: a, useSubtitle: l, useOptions: o, fieldLayout: c, clearable: d } = t,
+        u = t.setValue,
+        _ = a(),
+        m = l?.(),
+        A = n(),
+        g = o();
+    return (0, i.jsx)(r.L, {
+        children: (0, i.jsx)(s.l6P, {
             selectionMode: "single",
-            label: f,
-            description: p,
-            options: h,
-            value: _,
-            clearable: u,
-            onSelectionChange: d,
+            label: _,
+            description: m,
+            options: g,
+            value: A,
+            clearable: d,
+            onSelectionChange: u,
             layout: c,
             fullWidth: !0,
         }),

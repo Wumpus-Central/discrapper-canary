@@ -1,21 +1,11 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    t: () => i,
-}),
-    n(321073);
-class i {
+"use strict";
+n.d(t, { t: () => r }), n(321073);
+class r {
+    timeline = [];
+    timelineLength;
+    constructor(e = 3e5) {
+        this.timelineLength = e;
+    }
     clear() {
         this.timeline.length = 0;
     }
@@ -43,8 +33,5 @@ class i {
     cull() {
         let e = Date.now() - this.timelineLength;
         for (; this.timeline.length > 0 && this.timeline[0].timestamp < e; ) this.timeline.shift();
-    }
-    constructor(e = 3e5) {
-        r(this, "timeline", []), r(this, "timelineLength", void 0), (this.timelineLength = e);
     }
 }

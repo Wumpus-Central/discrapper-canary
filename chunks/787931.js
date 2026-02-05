@@ -1,10 +1,8 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(473145),
     i = n(927578),
     a = n(788868);
-
 function s(e, t, n, s) {
     if (null == e || (null == e.quality && null == e.guildPremiumTier)) return !0;
     let o = !1;

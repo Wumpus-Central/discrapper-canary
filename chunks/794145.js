@@ -1,36 +1,34 @@
-i.d(e, {
-    V: () => C,
-});
+i.d(e, { V: () => O });
 var n = i(421380),
     l = i(171316),
     s = i(419954),
     r = i(71393),
-    u = i(954571),
-    a = i(115063),
+    a = i(954571),
+    u = i(115063),
     o = i(762183),
-    T = i(253932),
-    A = i(780964),
-    S = i(612025),
-    E = i(445176),
-    d = i(112469),
-    _ = i(997913),
-    I = i(542457),
-    g = i(355097),
-    c = i(652215),
+    d = i(253932),
+    T = i(780964),
+    A = i(612025),
+    S = i(445176),
+    E = i(112469),
+    g = i(997913),
+    _ = i(542457),
+    c = i(355097),
+    I = i(652215),
     N = i(985018);
-let O = (t, e) => {
-        u.default.track(c.HAw.GUILD_DEFAULT_DMS_UPDATED, {
+let C = (t, e) => {
+        a.default.track(I.HAw.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: t,
             applied_to_existing_guilds: e,
         });
     },
-    C = (0, s.zD)(A.X.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
-        useTitle: () => ((0, E.e)() ? N.intl.string(N.t.PMsfcH) : N.intl.string(N.t.RAQUSN)),
+    O = (0, s.zD)(T.X.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
+        useTitle: () => ((0, S.e)() ? N.intl.string(N.t.PMsfcH) : N.intl.string(N.t.RAQUSN)),
         useSubtitle: () => {
-            let t = (0, d.Tx)(),
-                e = (0, d.q9)(),
-                i = (0, E.e)();
-            return t === S.YG
+            let t = (0, E.Tx)(),
+                e = (0, E.q9)(),
+                i = (0, S.e)();
+            return t === A.YG
                 ? i
                     ? N.intl.string(N.t.XXGmuB)
                     : N.intl.string(N.t.wbYDfT)
@@ -41,40 +39,40 @@ let O = (t, e) => {
                     : N.intl.string(N.t.G7c3Xo);
         },
         useValue: () => {
-            let t = (0, d.Tx)(),
-                e = T.$s.useSetting().includes(t),
+            let t = (0, E.Tx)(),
+                e = d.$s.useSetting().includes(t),
                 i = (0, o.K)();
-            return t === S.YG ? !i : !e;
+            return t === A.YG ? !i : !e;
         },
         useDisabled: () => {
             let t = (0, l.uM)();
-            return (0, d.Tx)() === S.YG && t;
+            return (0, E.Tx)() === A.YG && t;
         },
         setValue: (t) => {
-            let e = S.xk.getState().selectedGuildId;
-            if (e === S.YG) {
+            let e = A.xk.getState().selectedGuildId;
+            if (e === A.YG) {
                 var i;
                 (i = !t),
-                    (0, _.O)({
+                    (0, g.O)({
                         header: N.intl.string(N.t["uUr+GR"]),
                         body: N.intl.string(N.t.hjGJBp),
                         confirmText: N.intl.string(N.t.gm1Vej),
                         cancelText: N.intl.string(N.t.p89ACt),
                         confirmButtonColor: n.$n.Colors.BRAND,
                         onConfirm: () => {
-                            T.n6.updateSetting(i), O(i, !1);
+                            d.n6.updateSetting(i), C(i, !1);
                         },
                         onCancel: () => {
-                            T.n6.updateSetting(i), T.$s.updateSetting(i ? r.A.getGuildIds() : []), O(i, !0);
+                            d.n6.updateSetting(i), d.$s.updateSetting(i ? r.A.getGuildIds() : []), C(i, !0);
                         },
                     });
             } else {
-                let i = (0, a.Tb)();
+                let i = (0, u.Tb)();
                 t ? i.delete(e) : i.add(e),
-                    T.$s.updateSetting(Array.from(i)),
-                    u.default.track(c.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: I.m.DIRECT_MESSAGES_TOGGLE,
-                        ingress: g.bf.USER_SETTINGS_PRIVACY_SAFETY,
+                    d.$s.updateSetting(Array.from(i)),
+                    a.default.track(I.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: _.m.DIRECT_MESSAGES_TOGGLE,
+                        ingress: c.bf.USER_SETTINGS_PRIVACY_SAFETY,
                         guild_id: e,
                     });
             }

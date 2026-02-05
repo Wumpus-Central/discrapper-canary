@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,61 +7,48 @@ var i = n(397927),
     s = n(702211),
     o = n(915614),
     l = n(385612),
-    c = n(339984),
-    u = n(996988),
+    u = n(339984),
+    c = n(996988),
     d = n(985018),
-    f = n(560754);
-
-function p(e) {
+    _ = n(560754);
+function f(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: p,
-            canUsePremiumCustomization: _,
+            guildId: f,
+            canUsePremiumCustomization: p,
             pendingBanner: h,
             pendingAccentColor: m,
             isTryItOut: g,
             disabledInputs: E,
-            onUpsellClick: b,
+            onUpsellClick: A,
         } = e,
-        { newestAnalyticsLocation: y } = (0, a.Ay)(),
-        O = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        A = O ? i.R2l : i.tvc,
-        v = (0, s.b)(O),
-        S = () => {
-            if (!O && !v) {
-                null == b || b();
-                return;
-            }
-            (0, l.XD)({
-                uploadType: c.HL.BANNER,
-                analyticsSource: y,
-                guildId: p,
-                isTryItOut: g,
-            });
+        { newestAnalyticsLocation: I } = (0, a.Ay)(),
+        T = p || n?.canUsePremiumProfileCustomization || !1,
+        y = T ? i.R2l : i.tvc,
+        S = (0, s.b)(T),
+        v = () => {
+            T || S ? (0, l.XD)({ uploadType: u.HL.BANNER, analyticsSource: I, guildId: f, isTryItOut: g }) : A?.();
         };
     return (0, r.jsx)(o.A, {
         user: t,
         displayProfile: n,
-        guildId: p,
-        themeType: u.d.POPOUT,
+        guildId: f,
+        themeType: c.d.POPOUT,
         pendingBanner: h,
         pendingAccentColor: m,
-        canUsePremiumProfileCustomization: _,
+        canUsePremiumProfileCustomization: p,
         children:
             !E &&
             (0, r.jsxs)(i.DUT, {
-                onClick: S,
-                className: f.v,
+                onClick: v,
+                className: _.v,
                 children: [
-                    (0, r.jsx)(A, {
-                        size: "xs",
-                        color: "white",
-                    }),
+                    (0, r.jsx)(y, { size: "xs", color: "white" }),
                     (0, r.jsx)(i.Heading, {
                         variant: "text-sm/medium",
                         color: "always-white",
-                        children: O || v ? d.intl.string(d.t.N0bC3P) : d.intl.string(d.t.O1sT5v),
+                        children: T || S ? d.intl.string(d.t.N0bC3P) : d.intl.string(d.t.O1sT5v),
                     }),
                 ],
             }),

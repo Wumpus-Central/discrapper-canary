@@ -1,136 +1,57 @@
-n.d(t, {
-    j: () => b,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(444058),
+n.d(t, { j: () => _ });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(444058),
     o = n(92674),
     c = n(397927),
-    u = n(927813),
-    d = n(985018),
+    d = n(927813),
+    u = n(985018),
     h = n(626228);
-
-function p(e) {
+function m(e) {
     if (null != e) {
         let t = new Date(),
-            {
-                hours: n,
-                minutes: l,
-                seconds: r,
-            } = (0, s.A)({
-                start: t,
-                end: e,
-            });
+            { hours: n, minutes: i, seconds: l } = (0, r.A)({ start: t, end: e });
         return {
             hours: String(n).padStart(2, "0"),
-            minutes: String(l).padStart(2, "0"),
-            seconds: String(r).padStart(2, "0"),
-            countdownString: d.intl.formatToPlainString(d.t.U0Hhr7, {
-                duration: new Date(0, 0, 0, n, l, r),
-            }),
+            minutes: String(i).padStart(2, "0"),
+            seconds: String(l).padStart(2, "0"),
+            countdownString: u.intl.formatToPlainString(u.t.U0Hhr7, { duration: new Date(0, 0, 0, n, i, l) }),
         };
     }
-    return {
-        hours: "",
-        minutes: "",
-        seconds: "",
-        countdownString: "",
-    };
+    return { hours: "", minutes: "", seconds: "", countdownString: "" };
 }
-let f = (e) => {
+let A = (e) => {
         let { digit: t } = e,
             n = (0, c.pnh)(t, {
-                from: {
-                    opacity: 0,
-                    translateY: "-100%",
-                },
-                enter: {
-                    opacity: 1,
-                    translateY: "0%",
-                },
-                leave: {
-                    opacity: 0,
-                    translateY: "100%",
-                },
-                config: {
-                    tension: 210,
-                    friction: 20,
-                    duration: 200,
-                },
+                from: { opacity: 0, translateY: "-100%" },
+                enter: { opacity: 1, translateY: "0%" },
+                leave: { opacity: 0, translateY: "100%" },
+                config: { tension: 210, friction: 20, duration: 200 },
             });
-        return (0, l.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: h.z$,
-            children: n((e, t) => {
-                var n, r;
-                return (0, l.jsx)(o.animated.div, {
-                    style:
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    l = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (l = l.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    l.forEach(function (t) {
-                                        var l;
-                                        (l = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: l,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = l);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (r = r =
-                            {
-                                position: "absolute",
-                                width: "100%",
-                                textAlign: "center",
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var l = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, l);
-                                  }
-                                  return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                              }),
-                        n),
-                    children: (0, l.jsx)(c.Text, {
-                        variant: "text-sm/bold",
-                        children: t,
-                    }),
-                });
-            }),
+            children: n((e, t) =>
+                (0, i.jsx)(o.animated.div, {
+                    style: { ...e, position: "absolute", width: "100%", textAlign: "center" },
+                    children: (0, i.jsx)(c.Text, { variant: "text-sm/bold", children: t }),
+                }),
+            ),
         });
     },
-    m = () => {
-        let [e, t] = r.useState(!1);
-        r.useEffect(() => {
+    p = () => {
+        let [e, t] = l.useState(!1);
+        l.useEffect(() => {
             let e;
             return (
                 !(function n() {
-                    let l = Date.now();
+                    let i = Date.now();
                     e = setTimeout(
                         () => {
                             t((e) => !e), n();
                         },
-                        Math.max(100, (Math.floor(l / u.A.Millis.HALF_SECOND) + 1) * u.A.Millis.HALF_SECOND - l),
+                        Math.max(100, (Math.floor(i / d.A.Millis.HALF_SECOND) + 1) * d.A.Millis.HALF_SECOND - i),
                     );
                 })(),
                 () => {
@@ -138,86 +59,55 @@ let f = (e) => {
                 }
             );
         }, []);
-        let n = (0, c.zhh)({
-            opacity: e ? 0.5 : 1,
-            config: {
-                duration: 100,
-            },
-        });
-        return (0, l.jsxs)(o.animated.div, {
+        let n = (0, c.zhh)({ opacity: e ? 0.5 : 1, config: { duration: 100 } });
+        return (0, i.jsxs)(o.animated.div, {
             style: n,
             className: h.Z5,
-            children: [
-                (0, l.jsx)("div", {
-                    className: h.Cj,
-                }),
-                (0, l.jsx)("div", {
-                    className: h.Cj,
-                }),
-            ],
+            children: [(0, i.jsx)("div", { className: h.Cj }), (0, i.jsx)("div", { className: h.Cj })],
         });
     },
     g = (e) => {
         let { digits: t } = e;
-        return (0, l.jsxs)(l.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, l.jsx)("div", {
-                    className: h.JA,
-                    children: (0, l.jsx)(f, {
-                        digit: t[0],
-                    }),
-                }),
-                (0, l.jsx)("div", {
-                    className: h.JA,
-                    children: (0, l.jsx)(f, {
-                        digit: t[1],
-                    }),
-                }),
+                (0, i.jsx)("div", { className: h.JA, children: (0, i.jsx)(A, { digit: t[0] }) }),
+                (0, i.jsx)("div", { className: h.JA, children: (0, i.jsx)(A, { digit: t[1] }) }),
             ],
         });
     },
-    A = (e) => {
+    f = (e) => {
         let { countdown: t } = e;
-        return (0, l.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: h.eh,
             children: [
-                (0, l.jsx)(g, {
-                    digits: t.hours,
-                }),
-                (0, l.jsx)(m, {}),
-                (0, l.jsx)(g, {
-                    digits: t.minutes,
-                }),
-                (0, l.jsx)(m, {}),
-                (0, l.jsx)(g, {
-                    digits: t.seconds,
-                }),
+                (0, i.jsx)(g, { digits: t.hours }),
+                (0, i.jsx)(p, {}),
+                (0, i.jsx)(g, { digits: t.minutes }),
+                (0, i.jsx)(p, {}),
+                (0, i.jsx)(g, { digits: t.seconds }),
             ],
         });
     };
-
-function b(e) {
-    let { textVariant: t, className: n, catalogUpdateTime: i, isScrolled: s } = e,
-        [o, u] = r.useState(() => p(i));
+function _(e) {
+    let { textVariant: t, className: n, catalogUpdateTime: a, isScrolled: r } = e,
+        [o, d] = l.useState(() => m(a));
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             let e = setInterval(() => {
-                u(() => p(i));
+                d(() => m(a));
             }, 1e3);
             return () => clearInterval(e);
-        }, [i]),
-        (0, l.jsxs)("div", {
-            className: a()(n, h.Pc, {
-                [h.NW]: s,
-            }),
+        }, [a]),
+        (0, i.jsxs)("div", {
+            className: s()(n, h.Pc, { [h.NW]: r }),
             "aria-label": o.countdownString,
             children: [
-                (0, l.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: h.zc,
                     children: [
-                        (0, l.jsx)("div", {
+                        (0, i.jsx)("div", {
                             className: h.PG,
-                            children: (0, l.jsx)(c.O4, {
+                            children: (0, i.jsx)(c.O4, {
                                 size: "custom",
                                 height: 16,
                                 width: 16,
@@ -225,19 +115,14 @@ function b(e) {
                                 colorClass: h.y,
                             }),
                         }),
-                        (0, l.jsx)(c.Text, {
-                            variant: null != t ? t : "text-sm/medium",
+                        (0, i.jsx)(c.Text, {
+                            variant: t ?? "text-sm/medium",
                             color: "text-strong",
-                            children: d.intl.string(d.t.VZsY3r),
+                            children: u.intl.string(u.t.VZsY3r),
                         }),
                     ],
                 }),
-                (0, l.jsx)("div", {
-                    className: h.eh,
-                    children: (0, l.jsx)(A, {
-                        countdown: o,
-                    }),
-                }),
+                (0, i.jsx)("div", { className: h.eh, children: (0, i.jsx)(f, { countdown: o }) }),
             ],
         })
     );

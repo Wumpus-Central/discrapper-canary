@@ -1,172 +1,115 @@
-n.d(t, {
-    A: () => ec,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => es });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(837381),
     o = n(731738),
-    c = n(311907),
-    u = n(554146),
-    d = n(342494),
-    p = n(397927),
-    f = n(944791),
-    h = n(456412),
-    A = n(55400),
-    g = n(964486),
-    m = n(260762),
-    b = n(812771),
-    _ = n(869248),
-    E = n(485947),
-    O = n(726249),
-    y = n(367727),
-    I = n(379848),
-    v = n(742589),
-    S = n(831062),
-    C = n(378570),
-    N = n(138298),
-    T = n(940382),
-    j = n(210714),
-    x = n(544028),
-    P = n(780964),
-    w = n(358776),
-    L = n(840065),
-    R = n(761640),
-    D = n(734057),
+    d = n(311907),
+    c = n(554146),
+    u = n(342494),
+    A = n(397927),
+    h = n(944791),
+    _ = n(456412),
+    m = n(55400),
+    p = n(964486),
+    g = n(260762),
+    E = n(812771),
+    f = n(869248),
+    I = n(485947),
+    C = n(726249),
+    N = n(367727),
+    T = n(379848),
+    S = n(742589),
+    x = n(831062),
+    v = n(378570),
+    b = n(138298),
+    y = n(940382),
+    L = n(210714),
+    O = n(544028),
+    R = n(780964),
+    P = n(358776),
+    j = n(840065),
+    D = n(761640),
+    w = n(734057),
     M = n(186111),
-    k = n(954571),
-    U = n(891024),
-    G = n(321404),
+    U = n(954571),
+    G = n(891024),
+    k = n(321404),
     V = n(643015),
     B = n(336590),
     H = n(471271),
     F = n(957283),
     Y = n(411976),
-    K = n(62112),
-    z = n(790499),
-    W = n(514426),
-    q = n(660564),
-    Q = n(4270),
-    X = n(687599),
-    Z = n(652215),
-    J = n(49999),
-    $ = n(355097),
+    W = n(62112),
+    q = n(790499),
+    z = n(514426),
+    K = n(660564),
+    $ = n(4270),
+    Q = n(687599),
+    X = n(652215),
+    Z = n(49999),
+    J = n(355097),
     ee = n(985018),
     et = n(443416),
     en = n(638990);
-
-function er(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function ei(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function el() {
-    let e = i.useRef(null),
+function ei() {
+    let e = r.useRef(null),
         t = (0, Y.W)(),
-        n = (0, K.A)(),
-        l = (0, B.k)(),
-        c = (0, A.w)(),
-        u = i.useCallback(() => {
-            (0, p.showToast)((0, p.createToast)(ee.intl.string(ee.t["EDYbS+"]), p.ToastType.FAILURE));
+        n = (0, W.A)(),
+        a = (0, B.k)(),
+        d = (0, m.w)(),
+        c = r.useCallback(() => {
+            (0, A.showToast)((0, A.createToast)(ee.intl.string(ee.t["EDYbS+"]), A.ToastType.FAILURE));
         }, []),
-        { rejectAll: d } = (0, H.t)({
-            onError: u,
-        }),
-        f = (0, m.A)("message-requests-list"),
-        { channelId: h } = (0, F.N)(),
-        g = i.useCallback(() => {
-            d(n.map((e) => e.channel.id));
-        }, [n, d]),
-        b = i.useCallback(
+        { rejectAll: u } = (0, H.t)({ onError: c }),
+        h = (0, g.A)("message-requests-list"),
+        { channelId: _ } = (0, F.N)(),
+        p = r.useCallback(() => {
+            u(n.map((e) => e.channel.id));
+        }, [n, u]),
+        E = r.useCallback(
             (e) => {
-                var t, i;
-                let { row: s } = e,
-                    o = n[s],
-                    c = null == (i = n[s + 1]) || null == (t = i.channel) ? void 0 : t.id,
-                    u = o.channel.id;
-                return (0, r.jsx)(
-                    q.A,
+                let { row: t } = e,
+                    r = n[t],
+                    s = n[t + 1]?.channel?.id,
+                    o = r.channel.id;
+                return (0, i.jsx)(
+                    K.A,
                     {
-                        index: s,
-                        className: a()({
-                            [et.wH]: null != h && h === u,
-                            [et.wZ]: null != h && h === c,
-                        }),
-                        channel: o.channel,
-                        user: o.user,
-                        hasSingleMessageRequest: l,
+                        index: t,
+                        className: l()({ [et.wH]: null != _ && _ === o, [et.wZ]: null != _ && _ === s }),
+                        channel: r.channel,
+                        user: r.user,
+                        hasSingleMessageRequest: a,
                     },
-                    u,
+                    o,
                 );
             },
-            [l, n, h],
+            [a, n, _],
         ),
-        _ = i.useCallback(
+        f = r.useCallback(
             () =>
-                (0, r.jsxs)(
-                    E.A,
+                (0, i.jsxs)(
+                    I.A,
                     {
                         className: et.Gf,
                         children: [
                             t > 0
-                                ? ee.intl.formatToPlainString(ee.t.rA4iWY, {
-                                      count: t,
-                                  })
+                                ? ee.intl.formatToPlainString(ee.t.rA4iWY, { count: t })
                                 : ee.intl.string(ee.t.flPU6g),
-                            c && t > 0
-                                ? (0, r.jsxs)(r.Fragment, {
+                            d && t > 0
+                                ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, r.jsx)(p.Text, {
+                                          (0, i.jsx)(A.Text, {
                                               className: et.sg,
                                               variant: "eyebrow",
                                               color: "text-default",
                                               tag: "span",
                                               children: "•",
                                           }),
-                                          (0, r.jsx)(p.QWc, {
-                                              onClick: g,
+                                          (0, i.jsx)(A.QWc, {
+                                              onClick: p,
                                               textVariant: "text-sm/normal",
                                               text: ee.intl.string(ee.t.p6t7RC),
                                               "aria-label": ee.intl.string(ee.t.p6t7RC),
@@ -178,290 +121,208 @@ function el() {
                     },
                     "title",
                 ),
-            [t, g, c],
+            [t, p, d],
         );
-    return (n.length !== t &&
-        S.A.increment({
-            name: o.K.MESSAGE_REQUEST_COUNT_DRIFT,
-        }),
-    0 === n.length)
-        ? (0, r.jsx)(W.A, {
-              section: X.zz.REQUESTS,
-          })
-        : (0, r.jsx)(s.hD, {
-              navigator: f,
-              children: (0, r.jsx)(s.PR, {
+    return (n.length !== t && x.A.increment({ name: o.K.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+        ? (0, i.jsx)(z.A, { section: Q.zz.REQUESTS })
+        : (0, i.jsx)(s.hD, {
+              navigator: h,
+              children: (0, i.jsx)(s.PR, {
                   children: (t) => {
-                      let { ref: i, role: l } = t,
-                          a = (function (e, t) {
-                              if (null == e) return {};
-                              var n,
-                                  r,
-                                  i,
-                                  l = {};
-                              if ("u" > typeof Reflect && Reflect.ownKeys) {
-                                  for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-                                      (r = n[i]),
-                                          !(t.indexOf(r) >= 0) &&
-                                              Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                              (l[r] = e[r]);
-                                  return l;
-                              }
-                              if (
-                                  ((l = (function (e, t) {
-                                      if (null == e) return {};
-                                      var n,
-                                          r,
-                                          i = {},
-                                          l = Object.getOwnPropertyNames(e);
-                                      for (r = 0; r < l.length; r++)
-                                          (n = l[r]),
-                                              !(t.indexOf(n) >= 0) &&
-                                                  Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                  (i[n] = e[n]);
-                                      return i;
-                                  })(e, t)),
-                                  Object.getOwnPropertySymbols)
-                              )
-                                  for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-                                      (r = n[i]),
-                                          !(t.indexOf(r) >= 0) &&
-                                              Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                              (l[r] = e[r]);
-                              return l;
-                          })(t, ["ref", "role"]);
-                      return (0, r.jsx)(
-                          p.B8B,
-                          er(
-                              {
-                                  className: et.p_,
-                                  innerRole: l,
-                                  innerAriaLabel: ee.intl.string(ee.t.e7GWjQ),
-                                  ref: (t) => {
-                                      var n;
-                                      (e.current = t),
-                                          (i.current =
-                                              null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
-                                  },
-                                  paddingTop: 24,
-                                  paddingBottom: 24,
-                                  sectionHeight: 26,
-                                  rowHeight: 73,
-                                  renderSection: _,
-                                  renderRow: b,
-                                  sections: [n.length],
-                                  chunkSize: 30,
-                                  fade: !0,
+                      let { ref: r, role: a, ...l } = t;
+                      return (0, i.jsx)(
+                          A.B8B,
+                          {
+                              className: et.p_,
+                              innerRole: a,
+                              innerAriaLabel: ee.intl.string(ee.t.e7GWjQ),
+                              ref: (t) => {
+                                  (e.current = t), (r.current = t?.getScrollerNode() ?? null);
                               },
-                              a,
-                          ),
+                              paddingTop: 24,
+                              paddingBottom: 24,
+                              sectionHeight: 26,
+                              rowHeight: 73,
+                              renderSection: f,
+                              renderRow: E,
+                              sections: [n.length],
+                              chunkSize: 30,
+                              fade: !0,
+                              ...l,
+                          },
                           "message-requests-list",
                       );
                   },
               }),
           });
 }
-
-function ea(e) {
+function er(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        i = (0, c.bG)([R.Ay], () => R.Ay.getSidebarState(R.fe)),
-        l = (0, c.bG)([D.A], () => D.A.getChannel(null == i ? void 0 : i.channelId));
-    if (null == i || i.type !== T.PE.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
-    let a = t - Z.ItT;
-    return (0, r.jsx)(b.A, {
-        sidebarType: b.X.MessageRequestSidebar,
-        maxWidth: a,
+        r = (0, d.bG)([D.Ay], () => D.Ay.getSidebarState(D.fe)),
+        a = (0, d.bG)([w.A], () => w.A.getChannel(r?.channelId));
+    if (null == r || r.type !== y.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
+    let l = t - X.ItT;
+    return (0, i.jsx)(E.A, {
+        sidebarType: E.X.MessageRequestSidebar,
+        maxWidth: l,
         onWidthChange: n,
-        children: (0, r.jsx)(_.A, {
-            channel: l,
-            baseChannelId: R.fe,
-        }),
+        children: (0, i.jsx)(f.A, { channel: a, baseChannelId: D.fe }),
     });
 }
-let es = (e) => {
+let ea = (e) => {
     let t = (0, V.A)();
-    return (i.useEffect(() => {
-        (0, y.Vh)(u.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+    return (r.useEffect(() => {
+        (0, N.Vh)(c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
-    null == e.targetElementRef.current || M.A.hasLayers() || (0, p.ueM)())
+    null == e.targetElementRef.current || M.A.hasLayers() || (0, A.ueM)())
         ? e.children
-        : (0, r.jsx)(I.Ay, {
-              contentTypes: [u.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
+        : (0, i.jsx)(T.Ay, {
+              contentTypes: [c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
               children: (n) => {
-                  let { visibleContent: i, markAsDismissed: l } = n,
-                      a = {
+                  let { visibleContent: r, markAsDismissed: a } = n,
+                      l = {
                           position: "bottom",
-                          caretConfig: {
-                              position: "top",
-                              align: "center",
-                          },
+                          caretConfig: { position: "top", align: "center" },
                           shouldShow: !0,
-                          onRequestClose: () => l(J.i.USER_DISMISS),
+                          onRequestClose: () => a(Z.i.USER_DISMISS),
                           targetElementRef: e.targetElementRef,
                       };
-                  return i === u.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK
-                      ? (0, r.jsxs)(r.Fragment, {
+                  return r === c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK
+                      ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 e.children,
                                 t
-                                    ? (0, r.jsx)(
-                                          d.AM,
-                                          ei(er({}, a), {
-                                              title: ee.intl.string(ee.t.hRT8tc),
-                                              body: ee.intl.string(ee.t.apPgJG),
-                                              actions: [
-                                                  {
-                                                      text: ee.intl.string(ee.t.LNoAQW),
-                                                      onClick: () => l(J.i.TAKE_ACTION),
+                                    ? (0, i.jsx)(u.AM, {
+                                          ...l,
+                                          title: ee.intl.string(ee.t.hRT8tc),
+                                          body: ee.intl.string(ee.t.apPgJG),
+                                          actions: [
+                                              { text: ee.intl.string(ee.t.LNoAQW), onClick: () => a(Z.i.TAKE_ACTION) },
+                                          ],
+                                      })
+                                    : (0, i.jsx)(u.AM, {
+                                          ...l,
+                                          title: ee.intl.string(ee.t.hRT8tc),
+                                          body: ee.intl.string(ee.t["8JWods"]),
+                                          actions: [
+                                              {
+                                                  text: ee.intl.string(ee.t.JN6EOJ),
+                                                  onClick: (e) => {
+                                                      e.stopPropagation();
+                                                      let t = (0, P.WJ)("MessageRequestCoachmark");
+                                                      (0, j.openUserSettings)(
+                                                          t
+                                                              ? R.X
+                                                                    .CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING
+                                                              : R.X.CONTENT_AND_SOCIAL_PANEL,
+                                                          {
+                                                              section: X.nc_.CONTENT_AND_SOCIAL,
+                                                              scrollPosition: t ? void 0 : J.d1.MESSAGE_REQUESTS_V2,
+                                                          },
+                                                      ),
+                                                          a(Z.i.TAKE_ACTION);
                                                   },
-                                              ],
-                                          }),
-                                      )
-                                    : (0, r.jsx)(
-                                          d.AM,
-                                          ei(er({}, a), {
-                                              title: ee.intl.string(ee.t.hRT8tc),
-                                              body: ee.intl.string(ee.t["8JWods"]),
-                                              actions: [
-                                                  {
-                                                      text: ee.intl.string(ee.t.JN6EOJ),
-                                                      onClick: (e) => {
-                                                          e.stopPropagation();
-                                                          let t = (0, w.WJ)("MessageRequestCoachmark");
-                                                          (0, L.openUserSettings)(
-                                                              t
-                                                                  ? P.X
-                                                                        .CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING
-                                                                  : P.X.CONTENT_AND_SOCIAL_PANEL,
-                                                              {
-                                                                  section: Z.nc_.CONTENT_AND_SOCIAL,
-                                                                  scrollPosition: t ? void 0 : $.d1.MESSAGE_REQUESTS_V2,
-                                                              },
-                                                          ),
-                                                              l(J.i.TAKE_ACTION);
-                                                      },
-                                                  },
-                                                  {
-                                                      text: ee.intl.string(ee.t.LNoAQW),
-                                                      onClick: () => l(J.i.USER_DISMISS),
-                                                      variant: "secondary",
-                                                  },
-                                              ],
-                                          }),
-                                      ),
+                                              },
+                                              {
+                                                  text: ee.intl.string(ee.t.LNoAQW),
+                                                  onClick: () => a(Z.i.USER_DISMISS),
+                                                  variant: "secondary",
+                                              },
+                                          ],
+                                      }),
                             ],
                         })
                       : e.children;
               },
           });
 };
-
-function eo(e) {
+function el(e) {
     let { section: t } = e;
-    return t === X.zz.SPAM ? (0, r.jsx)(Q.A, {}) : (0, r.jsx)(el, {});
+    return t === Q.zz.SPAM ? (0, i.jsx)($.A, {}) : (0, i.jsx)(ei, {});
 }
-let ec = (0, h.A)(function (e) {
+let es = (0, _.A)(function (e) {
     let { width: t } = e,
         n = (0, Y.W)();
-    (0, g.Ay)(() => {
-        f.I(Z.BVt.MESSAGE_REQUESTS),
-            (0, j.d)("message-requests"),
-            k.default.track(Z.HAw.MESSAGE_REQUESTS_VIEWED, {
-                num_message_requests: n,
-            }),
-            S.A.increment({
-                name: o.K.MESSAGE_REQUEST_VIEW,
-            });
+    (0, p.Ay)(() => {
+        h.I(X.BVt.MESSAGE_REQUESTS),
+            (0, L.d)("message-requests"),
+            U.default.track(X.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            x.A.increment({ name: o.K.MESSAGE_REQUEST_VIEW });
     });
-    let l = (0, c.bG)([x.A], () => x.A.theme),
-        s = (0, z.I)(),
-        [u, d] = i.useState(!1),
-        h = (0, c.bG)([R.Ay], () => {
-            let e = R.Ay.getSidebarState(R.fe);
-            return null != e && e.type === T.PE.VIEW_MESSAGE_REQUEST ? e : null;
+    let a = (0, d.bG)([O.A], () => O.A.theme),
+        s = (0, q.I)(),
+        [c, u] = r.useState(!1),
+        _ = (0, d.bG)([D.Ay], () => {
+            let e = D.Ay.getSidebarState(D.fe);
+            return null != e && e.type === y.PE.VIEW_MESSAGE_REQUEST ? e : null;
         }),
-        A = null == h ? void 0 : h.channelId,
-        m = null != h,
-        b = (0, G.c)(A),
-        _ = (0, U.A)(A),
-        E = i.useRef(null);
-    i.useEffect(() => {
-        null != A && !b && _ && m && ((0, C.iN)(A), N.A.closeChannelSidebar(R.fe));
-    }, [A, _, m, b]);
-    let [y, I] = i.useState(X.zz.REQUESTS),
-        P = (e) => {
-            I(e);
+        m = _?.channelId,
+        g = null != _,
+        E = (0, k.c)(m),
+        f = (0, G.A)(m),
+        I = r.useRef(null);
+    r.useEffect(() => {
+        null != m && !E && f && g && ((0, v.iN)(m), b.A.closeChannelSidebar(D.fe));
+    }, [m, f, g, E]);
+    let [N, T] = r.useState(Q.zz.REQUESTS),
+        R = (e) => {
+            T(e);
         };
     return (
-        (0, O.HU)({
-            location: ee.intl.string(ee.t.e7GWjQ),
-        }),
-        (0, r.jsxs)(r.Fragment, {
+        (0, C.HU)({ location: ee.intl.string(ee.t.e7GWjQ) }),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: a()(en.TE, et.kL, {
-                        [en.js]: m,
-                        [en.jl]: m && u,
-                    }),
+                (0, i.jsxs)("div", {
+                    className: l()(en.TE, et.kL, { [en.js]: g, [en.jl]: g && c }),
                     children: [
-                        (0, r.jsx)(p.NPJ, {
-                            theme: l,
+                        (0, i.jsx)(A.NPJ, {
+                            theme: a,
                             children: (e) =>
-                                (0, r.jsxs)(v.A, {
+                                (0, i.jsxs)(S.A, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, r.jsx)(v.A.Icon, {
-                                            icon: p.u6c,
-                                            "aria-hidden": !0,
-                                        }),
-                                        (0, r.jsx)(es, {
-                                            targetElementRef: E,
-                                            children: (0, r.jsx)(v.A.Title, {
-                                                ref: E,
+                                        (0, i.jsx)(S.A.Icon, { icon: A.u6c, "aria-hidden": !0 }),
+                                        (0, i.jsx)(ea, {
+                                            targetElementRef: I,
+                                            children: (0, i.jsx)(S.A.Title, {
+                                                ref: I,
                                                 children: ee.intl.string(ee.t.e7GWjQ),
                                             }),
                                         }),
-                                        (0, r.jsx)(v.A.Divider, {}),
-                                        (0, r.jsxs)(p.VQ0, {
+                                        (0, i.jsx)(S.A.Divider, {}),
+                                        (0, i.jsxs)(A.VQ0, {
                                             "aria-label": ee.intl.string(ee.t.e7GWjQ),
-                                            selectedItem: y,
+                                            selectedItem: N,
                                             type: "top-pill",
-                                            onItemSelect: P,
+                                            onItemSelect: R,
                                             children: [
-                                                (0, r.jsx)(p.VQ0.Item, {
-                                                    id: X.zz.REQUESTS,
+                                                (0, i.jsx)(A.VQ0.Item, {
+                                                    id: Q.zz.REQUESTS,
                                                     className: et.AS,
                                                     children: ee.intl.string(ee.t["7RFcXZ"]),
                                                 }),
-                                                (0, r.jsx)(p.VQ0.Item, {
-                                                    id: X.zz.SPAM,
+                                                (0, i.jsx)(A.VQ0.Item, {
+                                                    id: Q.zz.SPAM,
                                                     className: et.AS,
                                                     children:
                                                         0 === s
                                                             ? ee.intl.string(ee.t.ulKXHp)
-                                                            : ee.intl.formatToPlainString(ee.t["5jtrlZ"], {
-                                                                  count: s,
-                                                              }),
+                                                            : ee.intl.formatToPlainString(ee.t["5jtrlZ"], { count: s }),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
                         }),
-                        (0, r.jsx)("div", {
-                            className: en.Qs,
-                            children: (0, r.jsx)(eo, {
-                                section: y,
-                            }),
-                        }),
+                        (0, i.jsx)("div", { className: en.Qs, children: (0, i.jsx)(el, { section: N }) }),
                     ],
                 }),
-                m &&
-                    (0, r.jsx)(ea, {
+                g &&
+                    (0, i.jsx)(er, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {
-                            d(t);
+                            u(t);
                         },
                     }),
             ],

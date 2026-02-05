@@ -1,25 +1,14 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(635377),
     i = n.n(r);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = 3;
-class o {
+let a = 3;
+class s {
+    _subscriptions = {};
+    _onChange;
+    constructor(e) {
+        this._onChange = e;
+    }
     reset() {
         this._subscriptions = {};
     }
@@ -32,13 +21,7 @@ class o {
         return e;
     }
     _get(e) {
-        var t;
-        return null != (t = this._subscriptions[e])
-            ? t
-            : new (i())({
-                  max: s,
-                  updateAgeOnGet: !0,
-              });
+        return this._subscriptions[e] ?? new (i())({ max: a, updateAgeOnGet: !0 });
     }
     clear(e) {
         e in this._subscriptions && (delete this._subscriptions[e], this._onChange(e, []));
@@ -57,8 +40,5 @@ class o {
         if (!(e in this._subscriptions)) return !1;
         let n = this._subscriptions[e];
         return !!n.has(t) && (n.del(t), this._onChange(e, n.keys()), !0);
-    }
-    constructor(e) {
-        a(this, "_subscriptions", {}), a(this, "_onChange", void 0), (this._onChange = e);
     }
 }

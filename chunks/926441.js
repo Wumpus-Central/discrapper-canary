@@ -1,61 +1,52 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(498419),
-    l = n.n(i),
-    a = n(481613),
-    s = n.n(a),
+n.d(t, { A: () => N });
+var i = n(64700),
+    r = n(498419),
+    a = n.n(r),
+    l = n(481613),
+    s = n.n(l),
     o = n(311907),
-    c = n(800828),
-    u = n(912309),
-    d = n(458294),
-    p = n(803224),
-    f = n(994500),
-    h = n(503509),
-    A = n(723702),
-    g = n(837921),
-    m = n(726249),
-    b = n(652215),
-    _ = n(985018);
-let E = new Set(["Blink", "Gecko", "WebKit"]),
-    O = b.tEg;
-if (A.isPlatformEmbedded) O = (e) => g.Ay.setBadge(e);
-else if (E.has(s().layout)) {
-    let e = new (l())({
-        animation: "none",
-    });
-    O = (t) => {
+    d = n(800828),
+    c = n(912309),
+    u = n(458294),
+    A = n(803224),
+    h = n(994500),
+    _ = n(503509),
+    m = n(723702),
+    p = n(837921),
+    g = n(726249),
+    E = n(652215),
+    f = n(985018);
+let I = new Set(["Blink", "Gecko", "WebKit"]),
+    C = E.tEg;
+if (m.isPlatformEmbedded) C = (e) => p.Ay.setBadge(e);
+else if (I.has(s().layout)) {
+    let e = new (a())({ animation: "none" });
+    C = (t) => {
         try {
-            (0, m.sF)(t), e.badge(-1 === t ? "•" : t);
+            (0, g.sF)(t), e.badge(-1 === t ? "•" : t);
         } catch (e) {}
     };
 }
-
-function y() {
-    let e = (0, o.bG)([h.A], () => h.A.hasIncomingCalls()),
-        t = (0, o.bG)([d.default, f.A, p.A, c.A], () => {
-            let e = d.default.getTotalMentionCount(),
-                t = (0, u.dH)([f.A, c.A]),
-                n = d.default.hasAnyUnread(),
-                r = p.A.getDisableUnreadBadge(),
-                i = e + t;
-            return 0 === i && n && !r && (i = -1), i;
+function N() {
+    let e = (0, o.bG)([_.A], () => _.A.hasIncomingCalls()),
+        t = (0, o.bG)([u.default, h.A, A.A, d.A], () => {
+            let e = u.default.getTotalMentionCount(),
+                t = (0, c.dH)([h.A, d.A]),
+                n = u.default.hasAnyUnread(),
+                i = A.A.getDisableUnreadBadge(),
+                r = e + t;
+            return 0 === r && n && !i && (r = -1), r;
         });
-    r.useEffect(() => {
+    i.useEffect(() => {
         if (!e) return;
-        let t = g.Ay.bounceDock("critical"),
-            n = (0, m.iA)({
-                messages: [_.intl.string(_.t["fk1/bX"])],
-                count: 50,
-            });
+        let t = p.Ay.bounceDock("critical"),
+            n = (0, g.iA)({ messages: [f.intl.string(f.t["fk1/bX"])], count: 50 });
         return () => {
-            null == t || t(), n();
+            t?.(), n();
         };
     }, [e]),
-        r.useEffect(() => {
-            O(t);
+        i.useEffect(() => {
+            C(t);
         }, [t]),
-        r.useEffect(() => () => O(0), []);
+        i.useEffect(() => () => C(0), []);
 }

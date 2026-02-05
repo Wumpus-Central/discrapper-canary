@@ -1,133 +1,64 @@
-n.d(t, {
-    q: () => b,
-}),
-    n(667532);
-var r = n(627968);
+n.d(t, { q: () => p }), n(667532);
+var i = n(627968);
 n(64700);
-var i = n(873298),
-    l = n(935649),
-    s = n(847599),
-    a = n(390248),
+var s = n(873298),
+    r = n(935649),
+    a = n(847599),
+    l = n(390248),
     o = n(444802),
     c = n(278616),
     d = n(771888),
     u = n(171316),
     _ = n(945276),
-    p = n(86689),
-    m = n(639383),
+    m = n(86689),
+    A = n(639383),
     g = n(531525),
-    A = n(985018),
-    f = n(842130);
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b() {
-    var e;
-    let t = null == (e = (0, _.A)()) || e,
-        n = (0, u.uM)(),
-        b = (0, d.G)(),
-        { goreContentGuilds: E, goreContentFriendDm: x, goreContentNonFriendDm: O } = (0, c.g)(),
-        C = (e) => {
+    E = n(985018),
+    h = n(842130);
+function p() {
+    let e = (0, _.A)() ?? !0,
+        t = (0, u.uM)(),
+        n = (0, d.G)(),
+        { goreContentGuilds: p, goreContentFriendDm: C, goreContentNonFriendDm: x } = (0, c.g)(),
+        T = (e) => {
             let t = Object.values(e);
-            (0, a.hK)() && t.includes(i.TO.SHOW)
-                ? l.A.showAgeVerificationGetStartedModal({
-                      entryPoint: s.q1.SENSITIVE_MEDIA_FILTER_SETTINGS,
-                  })
+            (0, l.hK)() && t.includes(s.TO.SHOW)
+                ? r.A.showAgeVerificationGetStartedModal({ entryPoint: a.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
                 : (0, o.qY)(e);
         },
         I = [
-            {
-                value: i.TO.BLUR,
-                label: A.intl.string(A.t.S49Uad),
-            },
-            {
-                value: i.TO.BLOCK,
-                label: A.intl.string(A.t["D/157Y"]),
-            },
+            { value: s.TO.BLUR, label: E.intl.string(E.t.S49Uad) },
+            { value: s.TO.BLOCK, label: E.intl.string(E.t["D/157Y"]) },
         ],
-        T = [
-            {
-                value: i.TO.BLUR,
-                label: A.intl.string(A.t.S49Uad),
-            },
-        ],
-        S = {
-            value: i.TO.SHOW,
-            label: A.intl.string(A.t["5k5OFp"]),
-        };
-    t && (I.unshift(S), T.unshift(S));
-    let j = {
-        isDisabled: b,
-        tooltipText: n ? A.intl.string(f.default["6Af/cw"]) : void 0,
-    };
-    return (0, r.jsxs)(p.E, {
+        S = [{ value: s.TO.BLUR, label: E.intl.string(E.t.S49Uad) }],
+        f = { value: s.TO.SHOW, label: E.intl.string(E.t["5k5OFp"]) };
+    e && (I.unshift(f), S.unshift(f));
+    let N = { isDisabled: n, tooltipText: t ? E.intl.string(h.default["6Af/cw"]) : void 0 };
+    return (0, i.jsxs)(m.E, {
         setting: g.H.GORE_MEDIA_REDACTION,
-        description: A.intl.string(A.t.XgH9eh),
+        description: E.intl.string(E.t.XgH9eh),
         children: [
-            (0, r.jsx)(
-                m.A,
-                h(
-                    {
-                        title: A.intl.string(A.t["+uI23H"]),
-                        value: x,
-                        onChange: (e) =>
-                            C({
-                                goreContentFriendDm: e,
-                            }),
-                        options: I,
-                    },
-                    j,
-                ),
-            ),
-            (0, r.jsx)(
-                m.A,
-                h(
-                    {
-                        title: A.intl.string(A.t["Yh+HX1"]),
-                        value: O,
-                        onChange: (e) =>
-                            C({
-                                goreContentNonFriendDm: e,
-                            }),
-                        options: I,
-                    },
-                    j,
-                ),
-            ),
-            (0, r.jsx)(m.A, {
-                title: A.intl.string(A.t["FP+a42"]),
-                value: E,
-                onChange: (e) =>
-                    C({
-                        goreContentGuilds: e,
-                    }),
-                isDisabled: !t || b,
-                options: T,
-                tooltipText: n ? A.intl.string(f.default["6Af/cw"]) : void 0,
+            (0, i.jsx)(A.A, {
+                title: E.intl.string(E.t["+uI23H"]),
+                value: C,
+                onChange: (e) => T({ goreContentFriendDm: e }),
+                options: I,
+                ...N,
+            }),
+            (0, i.jsx)(A.A, {
+                title: E.intl.string(E.t["Yh+HX1"]),
+                value: x,
+                onChange: (e) => T({ goreContentNonFriendDm: e }),
+                options: I,
+                ...N,
+            }),
+            (0, i.jsx)(A.A, {
+                title: E.intl.string(E.t["FP+a42"]),
+                value: p,
+                onChange: (e) => T({ goreContentGuilds: e }),
+                isDisabled: !e || n,
+                options: S,
+                tooltipText: t ? E.intl.string(h.default["6Af/cw"]) : void 0,
             }),
         ],
     });

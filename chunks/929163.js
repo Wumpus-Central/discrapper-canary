@@ -1,29 +1,17 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(311907),
-    i = n(71393),
-    l = n(175650),
-    a = n(567305),
+n.d(t, { A: () => d });
+var i = n(311907),
+    r = n(71393),
+    a = n(175650),
+    l = n(567305),
     s = n(555325),
     o = n(652215);
-
-function c(e) {
-    let t = (0, r.bG)([i.A], () => i.A.getGuild(e)),
-        n = (0, a._Y)(e),
-        c = (0, a.a0)(),
-        u =
-            (null == t ? void 0 : t.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 &&
-            (null == t ? void 0 : t.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
-        d = (0, s.X9)(t);
-    return (
-        u &&
-            c &&
-            d &&
-            l.ok.trackExposure({
-                guildId: e,
-                location: "ca30d9_1",
-            }),
-        u && c && d && n
-    );
+function d(e) {
+    let t = (0, i.bG)([r.A], () => r.A.getGuild(e)),
+        n = (0, l._Y)(e),
+        d = (0, l.a0)(),
+        c =
+            t?.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) === !0 &&
+            t?.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) === !1,
+        u = (0, s.X9)(t);
+    return c && d && u && a.ok.trackExposure({ guildId: e, location: "ca30d9_1" }), c && d && u && n;
 }

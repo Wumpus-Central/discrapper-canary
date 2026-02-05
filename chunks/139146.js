@@ -1,107 +1,46 @@
-n.d(t, {
-    R: () => I,
-    _: () => S,
-}),
-    n(896048);
+"use strict";
+n.d(t, { R: () => I, _: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(575593),
+    s = n.n(a),
+    o = n(575593),
     l = n(311907),
-    c = n(554146),
-    u = n(435371),
+    u = n(554146),
+    c = n(435371),
     d = n(397927),
-    f = n(379848),
-    p = n(661492),
-    _ = n(287809),
+    _ = n(379848),
+    f = n(661492),
+    p = n(287809),
     h = n(466459),
     m = n(620434),
     g = n(49999),
     E = n(985018),
-    y = n(394236);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function A(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
+    A = n(394236);
 let I = (e) => {
     let {
             product: t,
             iconSize: n = 20,
             className: a,
             enableHoverEffect: l = !1,
-            isCardHovered: c = !0,
-            selectedVariantIndex: u,
+            isCardHovered: u = !0,
+            selectedVariantIndex: c,
         } = e,
-        f = i.useMemo(() => {
-            var e;
-            return t.type === s.R.VARIANTS_GROUP && null != u && (null == (e = t.variants) ? void 0 : e[u]) != null
-                ? t.variants[u]
-                : t;
-        }, [t, u]),
-        _ = f.skuId,
-        { isPurchased: m } = (0, h.h)(f),
+        _ = i.useMemo(
+            () => (t.type === o.R.VARIANTS_GROUP && null != c && t.variants?.[c] != null ? t.variants[c] : t),
+            [t, c],
+        ),
+        p = _.skuId,
+        { isPurchased: m } = (0, h.h)(_),
         g = i.useMemo(() => {
             let e = "6/4";
             switch (t.type) {
-                case s.R.NAMEPLATE:
-                case s.R.AVATAR_DECORATION:
+                case o.R.NAMEPLATE:
+                case o.R.AVATAR_DECORATION:
                     e = "16/9";
                     break;
-                case s.R.BUNDLE:
-                case s.R.PROFILE_EFFECT:
+                case o.R.BUNDLE:
+                case o.R.PROFILE_EFFECT:
                 default:
                     e = "6/4";
             }
@@ -109,69 +48,53 @@ let I = (e) => {
                 type: "dynamic",
                 component: d.Oz7.COLLECTIBLES_PREVIEW,
                 aspectRatio: e,
-                props: {
-                    product: t,
-                    forCollectedModal: !0,
-                },
+                props: { product: t, forCollectedModal: !0 },
             };
         }, [t]);
     return m
         ? null
-        : (0, p.q)(f)
-          ? (0, r.jsx)(S, {
-                skuId: _,
-                className: o()(l && y.FU, a),
+        : (0, f.q)(_)
+          ? (0, r.jsx)(T, { skuId: p, className: s()(l && A.FU, a), iconSize: n, isCardHovered: u, nuxGraphic: g })
+          : (0, r.jsx)(T, {
+                skuId: p,
+                className: s()(A.NY, a),
                 iconSize: n,
-                isCardHovered: c,
-                nuxGraphic: g,
-            })
-          : (0, r.jsx)(S, {
-                skuId: _,
-                className: o()(y.NY, a),
-                iconSize: n,
-                isCardHovered: c,
+                isCardHovered: u,
                 disabled: !0,
                 tooltipOverrideText: E.intl.string(E.t["50TX9k"]),
                 nuxGraphic: g,
             });
 };
-
-function S(e) {
+function T(e) {
     let {
             skuId: t,
             className: a,
-            iconSize: s = 20,
-            disabled: p,
+            iconSize: o = 20,
+            disabled: f,
             isCardHovered: h,
-            tooltipOverrideText: b,
-            nuxGraphic: v,
-            onClick: I,
+            tooltipOverrideText: I,
+            nuxGraphic: T,
+            onClick: y,
         } = e,
-        [S, T] = (0, f.kn)([c.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        C = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
-        N = S === c.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        { reducedMotion: w } = i.useContext(d.CZY),
+        [S, v] = (0, _.kn)([u.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+        C = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
+        b = S === u.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+        { reducedMotion: N } = i.useContext(d.CZY),
         {
             isWishlisted: R,
-            isBusy: P,
+            isBusy: O,
             handleToggle: D,
         } = (0, m.c)({
             currentUser: C,
             skuId: t,
             onAddSuccess: () => {
-                N &&
-                    null != v &&
+                b &&
+                    null != T &&
                     ((0, d.mMO)(async () => {
                         let { default: e } = await n.e("64581").then(n.bind(n, 38884));
-                        return (t) =>
-                            (0, r.jsx)(
-                                e,
-                                A(O({}, t), {
-                                    graphic: v,
-                                }),
-                            );
+                        return (t) => (0, r.jsx)(e, { ...t, graphic: T });
                     }),
-                    T(g.i.USER_DISMISS));
+                    v(g.i.USER_DISMISS));
             },
             onError: () => {
                 (0, d.showToast)((0, d.createToast)(E.intl.string(E.t.F8FvUy), d.ToastType.FAILURE)),
@@ -179,105 +102,86 @@ function S(e) {
             },
         }),
         L = i.useRef(null),
-        [x, M] = i.useState(!1),
-        j = R && !x,
-        k = j ? d.C3E : d.yhu,
-        U = j ? y.Pc : y.i7;
+        [w, x] = i.useState(!1),
+        P = R && !w,
+        M = P ? d.C3E : d.yhu,
+        k = P ? A.Pc : A.i7;
     i.useEffect(() => {
-        M(!1);
+        x(!1);
     }, [t]);
-    let G = i.useCallback(
+    let U = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == I || I(), R || w.enabled ? R && x && M(!1) : M(!0), D();
+                e.stopPropagation(), y?.(), R || N.enabled ? R && w && x(!1) : x(!0), D();
             },
-            [I, D, R, w.enabled, x],
+            [y, D, R, N.enabled, w],
         ),
-        V = R ? E.intl.string(E.t.yr9TTf) : E.intl.string(E.t["8DkMEQ"]),
-        F = !R && !x,
-        B = i.useCallback(
+        G = R ? E.intl.string(E.t.yr9TTf) : E.intl.string(E.t["8DkMEQ"]),
+        V = !R && !w,
+        F = i.useCallback(
             (e) => {
-                e.target === e.currentTarget && x && requestAnimationFrame(() => M(!1));
+                e.target === e.currentTarget && w && requestAnimationFrame(() => x(!1));
             },
-            [x],
+            [w],
         ),
-        H = (e) =>
-            w.enabled
-                ? (0, r.jsx)(k, {
-                      colorClass: null != e ? e : U,
-                      size: "custom",
-                      height: s,
-                      width: s,
-                  })
+        B = (e) =>
+            N.enabled
+                ? (0, r.jsx)(M, { colorClass: e ?? k, size: "custom", height: o, width: o })
                 : (0, r.jsxs)("div", {
-                      className: o()(y.zc, F && y.QX),
+                      className: s()(A.zc, V && A.QX),
                       children: [
                           (0, r.jsx)("span", {
-                              className: o()(y.P0, F && y.bP),
-                              children: (0, r.jsx)(k, {
-                                  colorClass: null != e ? e : U,
-                                  size: "custom",
-                                  height: s,
-                                  width: s,
-                              }),
+                              className: s()(A.P0, V && A.bP),
+                              children: (0, r.jsx)(M, { colorClass: e ?? k, size: "custom", height: o, width: o }),
                           }),
                           (0, r.jsx)("span", {
-                              className: o()(y.Do, x && y.Fb),
-                              onAnimationEnd: B,
-                              children: (0, r.jsx)(d.C3E, {
-                                  size: "custom",
-                                  height: s,
-                                  width: s,
-                              }),
+                              className: s()(A.Do, w && A.Fb),
+                              onAnimationEnd: F,
+                              children: (0, r.jsx)(d.C3E, { size: "custom", height: o, width: o }),
                           }),
                       ],
                   });
     return (h || R) && null != C
-        ? p
-            ? (0, r.jsx)(u.m_, {
-                  text: null != b ? b : V,
-                  "aria-label": null != b ? b : V,
+        ? f
+            ? (0, r.jsx)(c.m_, {
+                  text: I ?? G,
+                  "aria-label": I ?? G,
                   children: (0, r.jsx)(d.DUT, {
-                      className: o()(y.ij, y.NY, a),
+                      className: s()(A.ij, A.NY, a),
                       innerRef: L,
                       onClick: (e) => e.stopPropagation(),
                       "aria-disabled": !0,
-                      children: (0, r.jsx)(k, {
-                          colorClass: y.rM,
-                          size: "custom",
-                          height: s,
-                          width: s,
-                      }),
+                      children: (0, r.jsx)(M, { colorClass: A.rM, size: "custom", height: o, width: o }),
                   }),
               })
-            : N
-              ? (0, r.jsx)(u.un, {
+            : b
+              ? (0, r.jsx)(c.un, {
                     title: E.intl.string(E.t["47Rhc3"]),
                     body: E.intl.string(E.t.PXjA0b),
-                    "aria-label": V,
+                    "aria-label": G,
                     children: (0, r.jsx)(d.DUT, {
-                        className: o()(y.ij, a),
+                        className: s()(A.ij, a),
                         innerRef: L,
-                        onClick: G,
-                        "aria-label": V,
-                        "aria-busy": P,
-                        children: H(),
+                        onClick: U,
+                        "aria-label": G,
+                        "aria-busy": O,
+                        children: B(),
                     }),
                 })
               : (0, r.jsx)(
-                    u.m_,
+                    c.m_,
                     {
-                        text: null != b ? b : V,
-                        "aria-label": null != b ? b : V,
+                        text: I ?? G,
+                        "aria-label": I ?? G,
                         children: (0, r.jsx)(d.DUT, {
-                            className: o()(y.ij, a),
+                            className: s()(A.ij, a),
                             innerRef: L,
-                            onClick: G,
-                            "aria-label": V,
-                            "aria-busy": P,
-                            children: H(),
+                            onClick: U,
+                            "aria-label": G,
+                            "aria-busy": O,
+                            children: B(),
                         }),
                     },
-                    "wishlist-button-hovering-".concat(x || h),
+                    `wishlist-button-hovering-${w || h}`,
                 )
         : null;
 }

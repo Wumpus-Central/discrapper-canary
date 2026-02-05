@@ -1,249 +1,106 @@
-n.d(t, {
-    A: () => T,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(532555);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => T });
+var r = n(311907),
+    i = n(73153),
+    a = n(532555);
+let s = {};
+function o() {
+    s = {};
 }
-
 function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
+    return null == s[e] && (s[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), s[e];
 }
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = {};
-
-function f() {
-    d = {};
-}
-
-function p(e) {
-    return (
-        null == d[e] &&
-            (d[e] = {
-                catalog: {},
-                instances: {},
-                instructions: {},
-                entitlements: {},
-            }),
-        d[e]
-    );
-}
-
-function _(e) {
+function u(e) {
     let { guildId: t, catalog: n } = e;
-    d = u(l({}, d), {
-        [t]: u(l({}, p(t)), {
-            catalog: n,
-            hasFetchedCatalog: !0,
-        }),
-    });
+    s = { ...s, [t]: { ...l(t), catalog: n, hasFetchedCatalog: !0 } };
 }
-
-function h(e) {
+function c(e) {
     let { guildId: t, instances: n } = e;
-    d = u(l({}, d), {
-        [t]: u(l({}, p(t)), {
-            instances: n,
-            hasFetchedInstances: !0,
-        }),
-    });
+    s = { ...s, [t]: { ...l(t), instances: n, hasFetchedInstances: !0 } };
 }
-
-function m(e) {
+function d(e) {
     let { guildId: t, skuId: n, instructions: r } = e;
-    d = u(l({}, d), {
-        [t]: u(l({}, p(t)), {
-            instructions: u(l({}, p(t).instructions), {
-                [n]: r,
-            }),
-        }),
-    });
+    s = { ...s, [t]: { ...l(t), instructions: { ...l(t).instructions, [n]: r } } };
 }
-
-function g(e) {
+function _(e) {
     let { guildId: t, instance: n } = e,
-        r = p(t);
-    d = u(l({}, d), {
-        [t]: u(l({}, r), {
-            instances: u(l({}, r.instances), {
-                [n.id]: n,
-            }),
-        }),
-    });
+        r = l(t);
+    s = { ...s, [t]: { ...r, instances: { ...r.instances, [n.id]: n } } };
 }
-
-function E(e, t) {
-    return Object.values(t).reduce((e, t) => {
-        var n, r, i, a, s;
-        return (
-            e +
-            (null !=
-            (n =
-                null == (s = t.sku) ||
-                null == (a = s.tenant_metadata) ||
-                null == (i = a.guild_monetization) ||
-                null == (r = i.game_server)
-                    ? void 0
-                    : r.boost_price)
-                ? n
-                : 0)
-        );
-    }, 0);
+function f(e, t) {
+    return Object.values(t).reduce(
+        (e, t) => e + (t.sku?.tenant_metadata?.guild_monetization?.game_server?.boost_price ?? 0),
+        0,
+    );
 }
-
-function b(e) {
+function p(e) {
     let { guildId: t, unlockedGameServers: n } = e,
-        r = E(t, n);
-    d = u(l({}, d), {
-        [t]: u(l({}, p(t)), {
-            entitlements: n,
-            appliedBoosts: r,
-        }),
-    });
+        r = f(t, n);
+    s = { ...s, [t]: { ...l(t), entitlements: n, appliedBoosts: r } };
 }
-
-function y(e) {
+function h(e) {
     let { guildId: t, gameServer: n } = e,
-        r = p(t);
-    d = u(l({}, d), {
-        [t]: u(l({}, r), {
-            instances: u(l({}, r.instances), {
-                [n.id]: (0, s.A)(n),
-            }),
-        }),
-    });
+        r = l(t);
+    s = { ...s, [t]: { ...r, instances: { ...r.instances, [n.id]: (0, a.A)(n) } } };
 }
-
-function O(e) {
+function m(e) {
     let { guildId: t, gameServerId: n } = e,
-        r = p(t);
-    delete r.instances[n],
-        (d = u(l({}, d), {
-            [t]: l({}, r),
-        }));
+        r = l(t);
+    delete r.instances[n], (s = { ...s, [t]: { ...r } });
 }
-
-function A(e) {
+function g(e) {
     let { guildId: t, entitlements: n } = e,
-        r = p(t);
+        r = l(t);
     n
-        .filter((e) => {
-            var t, n, r;
-            return (
-                (null == (r = e.sku) || null == (n = r.tenant_metadata) || null == (t = n.guild_monetization)
-                    ? void 0
-                    : t.game_server) != null
-            );
-        })
+        .filter((e) => e.sku?.tenant_metadata?.guild_monetization?.game_server != null)
         .forEach((e) => {
             r.entitlements[e.id] = e;
         }),
-        S(t, r);
+        A(t, r);
 }
-
-function v(e) {
+function E(e) {
     let { guildId: t, entitlements: n } = e,
-        r = p(t);
+        r = l(t);
     n.forEach((e) => {
         delete r.entitlements[e.id];
     }),
-        S(t, r);
+        A(t, r);
 }
-
-function S(e, t) {
-    let n = E(e, t.entitlements);
-    d = u(l({}, d), {
-        [e]: u(l({}, t), {
-            appliedBoosts: n,
-        }),
-    });
+function A(e, t) {
+    let n = f(e, t.entitlements);
+    s = { ...s, [e]: { ...t, appliedBoosts: n } };
 }
-class I extends (r = i.Ay.Store) {
+class I extends r.Ay.Store {
+    static displayName = "GameServerStore";
     getState() {
-        return d;
+        return s;
     }
     getStateForGuild(e) {
-        return null != e ? d[e] : void 0;
+        return null != e ? s[e] : void 0;
     }
     getLowestGameCostForGuild(e) {
-        var t;
         if (null == e) return null;
-        let n = d[e],
-            r = Object.values(null != (t = null == n ? void 0 : n.catalog) ? t : {});
-        return 0 === r.length ? null : Math.min(...r.map((e) => e.baseCost));
+        let t = s[e],
+            n = Object.values(t?.catalog ?? {});
+        return 0 === n.length ? null : Math.min(...n.map((e) => e.baseCost));
     }
     hasFetchedCatalog(e) {
-        var t;
-        return null != e && (null == (t = d[e]) ? void 0 : t.hasFetchedCatalog) === !0;
+        return null != e && s[e]?.hasFetchedCatalog === !0;
     }
     hasFetchedInstances(e) {
-        var t;
-        return null != e && (null == (t = d[e]) ? void 0 : t.hasFetchedInstances) === !0;
+        return null != e && s[e]?.hasFetchedInstances === !0;
     }
 }
-o(I, "displayName", "GameServerStore");
-let T = new I(a.h, {
-    LOGOUT: f,
-    GAME_SERVER_FETCH_CATALOG_SUCCESS: _,
-    GAME_SERVER_FETCH_INSTANCES_SUCCESS: h,
-    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: m,
-    GAME_SERVER_UPDATE_INSTANCE_SUCCESS: g,
-    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: b,
-    GAME_SERVER_CREATE: y,
-    GAME_SERVER_UPDATE: y,
-    GAME_SERVER_DELETE: O,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: A,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: v,
+let T = new I(i.h, {
+    LOGOUT: o,
+    GAME_SERVER_FETCH_CATALOG_SUCCESS: u,
+    GAME_SERVER_FETCH_INSTANCES_SUCCESS: c,
+    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: d,
+    GAME_SERVER_UPDATE_INSTANCE_SUCCESS: _,
+    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: p,
+    GAME_SERVER_CREATE: h,
+    GAME_SERVER_UPDATE: h,
+    GAME_SERVER_DELETE: m,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: g,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: E,
 });

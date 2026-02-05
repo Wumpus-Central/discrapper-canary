@@ -1,35 +1,30 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(397927),
+    s = n(397927),
     a = n(588224),
-    s = n(607567),
+    r = n(607567),
     o = n(652215),
-    c = n(985018),
-    u = n(911855);
-
-function d(e) {
+    d = n(985018),
+    c = n(911855);
+function u(e) {
     let { channel: t } = e,
-        n = (0, l.bG)([s.Ay], () => s.Ay.getVoiceStatesForChannel(t));
-    return (0, r.jsxs)("div", {
-        className: u.zr,
+        n = (0, l.bG)([r.Ay], () => r.Ay.getVoiceStatesForChannel(t));
+    return (0, i.jsxs)("div", {
+        className: c.zr,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: "text-xs/bold",
-                className: u.wx,
-                children: c.intl.format(c.t.e95u3C, {
-                    count: n.length,
-                }),
+                className: c.wx,
+                children: d.intl.format(d.t.e95u3C, { count: n.length }),
             }),
-            (0, r.jsx)(i.HOs, {
-                className: u.XG,
-                children: (0, r.jsx)(a.A, {
+            (0, i.jsx)(s.HOs, {
+                className: c.XG,
+                children: (0, i.jsx)(a.A, {
                     allowDragging: !1,
                     allowPreviews: !1,
-                    className: u.Xk,
+                    className: c.Xk,
                     channel: t,
                     voiceStates: n,
                     collapsed: !1,

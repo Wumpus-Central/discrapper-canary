@@ -1,10 +1,6 @@
-i.d(t, {
-    X: () => n,
-    a: () => s,
-});
+i.d(t, { X: () => s, a: () => n });
 var r = i(927813);
-
-function n(e) {
+function s(e) {
     let t = e / r.A.Millis.MINUTE;
     return t < 5
         ? "0-5min"
@@ -22,11 +18,7 @@ function n(e) {
                     ? "2-3hr"
                     : "3hr+";
 }
-
-function s() {
-    var e;
-    let t = window.Meticulous;
-    return null != t && t.isRunningAsTest && (null == (e = t.replay) ? void 0 : e.isBenchmarkableReplay)
-        ? t.replay
-        : null;
+function n() {
+    let e = window.Meticulous;
+    return null != e && e.isRunningAsTest && e.replay?.isBenchmarkableReplay ? e.replay : null;
 }

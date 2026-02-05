@@ -1,6 +1,4 @@
-i.d(a, {
-    SocialLayerStorefrontItemClaimedSuccessfullyModal: () => S,
-});
+i.d(a, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => S });
 var n = i(627968),
     e = i(64700),
     l = i(158954),
@@ -20,16 +18,13 @@ var n = i(627968),
     j = i(652215),
     h = i(985018),
     k = i(778560);
-
 function S(t) {
     let { transitionState: a, onClose: i, sku: S, application: T, analyticsLocations: L } = t,
         v = (0, m.j)(T),
         { fetched: b, hasAlreadyLinked: g, canStartAuthorization: N, startAuthorization: E } = (0, d.RD)(T),
         y = (0, p.J)(T),
-        { analyticsLocations: I } = (0, o.Ay)(null != L ? L : [], c.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
-        R = (0, x.n)({
-            location: "SocialLayerStorefrontItemClaimedSuccessfullyModal",
-        }),
+        { analyticsLocations: I } = (0, o.Ay)(L ?? [], c.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
+        R = (0, x.n)({ location: "SocialLayerStorefrontItemClaimedSuccessfullyModal" }),
         O = !b || null == v,
         w = e.useRef({
             analyticsLocations: I,
@@ -43,12 +38,7 @@ function S(t) {
         (w.current.isLaunchable = v), (w.current.isApplicationConnected = y), (w.current.canStartAuthorization = N);
     }, [v, y, N]),
         (0, s.Ay)(() => {
-            u.default.track(j.HAw.OPEN_MODAL, {
-                location_stack: I,
-                type: C.e2,
-                sku_id: S.id,
-                application_id: T.id,
-            });
+            u.default.track(j.HAw.OPEN_MODAL, { location_stack: I, type: C.e2, sku_id: S.id, application_id: T.id });
         }),
         e.useEffect(() => {
             if (O) return;
@@ -70,9 +60,7 @@ function S(t) {
                 application_id: i,
                 is_gift: !1,
             }),
-                E({
-                    analyticsLocations: t,
-                });
+                E({ analyticsLocations: t });
         }, [E]),
         M = e.useCallback(() => {
             let { analyticsLocations: t, skuId: a } = w.current;
@@ -97,7 +85,7 @@ function S(t) {
                 sku_id: a,
                 application_id: n,
                 is_gift: !1,
-                is_launchable: null != e && e,
+                is_launchable: e ?? !1,
                 is_application_connected: l,
             }),
                 i();
@@ -106,57 +94,31 @@ function S(t) {
         return (0, n.jsx)(l.dWK, {
             transitionState: a,
             onClose: i,
-            children: (0, n.jsx)(l.cwr, {
-                children: (0, n.jsx)(r.y$y, {}),
-            }),
+            children: (0, n.jsx)(l.cwr, { children: (0, n.jsx)(r.y$y, {}) }),
         });
     if (g) {
         let t =
             v && !y
-                ? {
-                      variant: "primary",
-                      text: h.intl.string(h.t["s+J8Dl"]),
-                      onClick: M,
-                      icon: l.tfB,
-                  }
-                : {
-                      variant: "primary",
-                      text: h.intl.string(h.t.cpT0Cq),
-                      onClick: W,
-                  };
+                ? { variant: "primary", text: h.intl.string(h.t["s+J8Dl"]), onClick: M, icon: l.tfB }
+                : { variant: "primary", text: h.intl.string(h.t.cpT0Cq), onClick: W };
         return (0, n.jsxs)(l.dWK, {
             transitionState: a,
             onClose: i,
             children: [
-                (0, n.jsx)(f.z, {
-                    sku: S,
-                    title: h.intl.string(h.t["5glWta"]),
-                }),
+                (0, n.jsx)(f.z, { sku: S, title: h.intl.string(h.t["5glWta"]) }),
                 (0, n.jsx)(l.cwr, {
                     children: (0, n.jsx)(r.Text, {
                         variant: "text-md/normal",
                         className: k.j,
-                        children: h.intl.formatToPlainString(h.t.W2znvX, {
-                            skuName: S.name,
-                            applicationName: T.name,
-                        }),
+                        children: h.intl.formatToPlainString(h.t.W2znvX, { skuName: S.name, applicationName: T.name }),
                     }),
                 }),
-                (0, n.jsx)(l.H7u, {
-                    actions: [t],
-                    actionsFullWidth: !0,
-                }),
+                (0, n.jsx)(l.H7u, { actions: [t], actionsFullWidth: !0 }),
             ],
         });
     }
     {
-        let t = {
-                variant: "primary",
-                text: h.intl.string(h.t["VDAhr+"]),
-                onClick: D,
-                icon: l.A5T,
-                disabled: !N,
-            },
+        let t = { variant: "primary", text: h.intl.string(h.t["VDAhr+"]), onClick: D, icon: l.A5T, disabled: !N },
             e = R ? h.t.URLMAM : h.t.Qmkje8;
         return (0, n.jsx)(A.m, {
             sku: S,
@@ -166,9 +128,7 @@ function S(t) {
             hasAlreadyLinked: g,
             canStartAuthorization: N,
             primaryCTAButtonProps: t,
-            bodyText: h.intl.formatToPlainString(e, {
-                applicationName: T.name,
-            }),
+            bodyText: h.intl.formatToPlainString(e, { applicationName: T.name }),
             title: h.intl.string(h.t.GPAtvf),
         });
     }

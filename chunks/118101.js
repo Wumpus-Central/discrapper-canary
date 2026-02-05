@@ -1,34 +1,26 @@
-n.d(i, {
-    default: () => l,
-});
-var s = n(627968);
-n(64700);
-var a = n(158954),
-    r = n(956793),
-    c = n(849736),
-    e = n(985018);
-
-function l(t) {
-    let { channel: i, transitionState: n, onClose: l } = t;
-
-    function o() {
-        r.default.disconnect(), l();
+e.d(n, { default: () => o });
+var i = e(627968);
+e(64700);
+var l = e(158954),
+    r = e(956793),
+    a = e(849736),
+    s = e(985018);
+function o(t) {
+    let { channel: n, transitionState: e, onClose: o } = t;
+    function d() {
+        r.default.disconnect(), o();
     }
-    return (0, s.jsx)(a.Modal, {
-        transitionState: n,
-        title: e.intl.string(e.t.pADdJu),
-        subtitle: e.intl.string(e.t.mT7jwN),
-        onClose: l,
+    return (0, i.jsx)(l.Modal, {
+        transitionState: e,
+        title: s.intl.string(s.t.pADdJu),
+        subtitle: s.intl.string(s.t.mT7jwN),
+        onClose: o,
         actions: [
+            { text: s.intl.string(s.t.xTwqz2), onClick: d, variant: "secondary" },
             {
-                text: e.intl.string(e.t.xTwqz2),
-                onClick: o,
-                variant: "secondary",
-            },
-            {
-                text: e.intl.string(e.t["sBP/1s"]),
+                text: s.intl.string(s.t["sBP/1s"]),
                 onClick: function () {
-                    (0, c.OE)(i), o();
+                    (0, a.OE)(n), d();
                 },
                 variant: "critical-primary",
             },

@@ -1,62 +1,53 @@
-e.d(n, {
-    default: () => S,
-}),
-    e(896048);
-var l = e(627968),
-    i = e(64700),
-    r = e(158954),
-    a = e(311907),
-    u = e(397927),
-    s = e(47167),
-    A = e(734057),
-    c = e(808728),
-    d = e(994500),
-    o = e(287809),
-    E = e(239705),
-    N = e(985018);
+n.d(e, { default: () => S });
+var r = n(627968),
+    i = n(64700),
+    l = n(158954),
+    a = n(311907),
+    s = n(397927),
+    A = n(47167),
+    u = n(734057),
+    c = n(808728),
+    d = n(994500),
+    E = n(287809),
+    o = n(239705),
+    N = n(985018);
 let h = (t) => {
-    let { guildId: n, channel: e, onSelectChannel: i } = t,
-        r = (0, a.yK)(
+    let { guildId: e, channel: n, onSelectChannel: i } = t,
+        l = (0, a.yK)(
             [c.Ay],
             () =>
-                c.Ay.getChannels(n)
+                c.Ay.getChannels(e)
                     [c.I6].filter((t) => {
-                        let { channel: n } = t;
-                        return !n.isGuildVocal() && !n.isThread() && !n.isForumLikeChannel();
+                        let { channel: e } = t;
+                        return !e.isGuildVocal() && !e.isThread() && !e.isForumLikeChannel();
                     })
                     .map((t) => {
-                        let { channel: n } = t;
-                        return n;
+                        let { channel: e } = t;
+                        return e;
                     }),
-            [n],
+            [e],
         );
-    return (0, l.jsx)(u.ZiE, {
+    return (0, r.jsx)(s.ZiE, {
         required: !0,
-        value: null == e ? void 0 : e.id,
-        options: r.map((t) => ({
-            id: t.id,
-            value: t.id,
-            label: (0, s.m1)(t, o.default, d.A, !0),
-        })),
+        value: n?.id,
+        options: l.map((t) => ({ id: t.id, value: t.id, label: (0, A.m1)(t, E.default, d.A, !0) })),
         onSelectionChange: (t) => {
-            let n = r.find((n) => n.id === t);
-            i(null != n ? n : void 0);
+            i(l.find((e) => e.id === t) ?? void 0);
         },
         placeholder: N.intl.string(N.t["N+T69y"]),
         selectionMode: "single",
     });
 };
-
 function S(t) {
-    let { action: n, triggerType: e, guildId: s, isEdit: c, onEditChannel: d, onClose: o, transitionState: S } = t,
-        [_, C] = i.useState(n.metadata.channelId),
+    let { action: e, triggerType: n, guildId: A, isEdit: c, onEditChannel: d, onClose: E, transitionState: S } = t,
+        [_, C] = i.useState(e.metadata.channelId),
         [g, H] = i.useState(null),
-        I = (0, a.bG)([A.A], () => A.A.getChannel(_), [_]),
-        L = (0, E.x)(n.type, n, e);
+        I = (0, a.bG)([u.A], () => u.A.getChannel(_), [_]),
+        L = (0, o.x)(e.type, e, n);
     if (null == L) return null;
     let { headerText: T } = L;
-    return (0, l.jsx)(r.Modal, {
-        onClose: o,
+    return (0, r.jsx)(l.Modal, {
+        onClose: E,
         transitionState: S,
         title: T,
         subtitle: N.intl.string(N.t["z/ZF2i"]),
@@ -64,7 +55,7 @@ function S(t) {
             {
                 text: N.intl.string(N.t["ETE/oC"]),
                 onClick: () => {
-                    o();
+                    E();
                 },
                 variant: "secondary",
             },
@@ -75,24 +66,20 @@ function S(t) {
                 },
             },
         ],
-        children: (0, l.jsxs)(u.BJc, {
+        children: (0, r.jsxs)(s.BJc, {
             gap: 8,
             direction: "vertical",
             children: [
-                (0, l.jsx)(h, {
-                    guildId: s,
+                (0, r.jsx)(h, {
+                    guildId: A,
                     channel: I,
                     onSelectChannel: (t) => {
                         null != t && C(t.id);
                     },
                 }),
                 null != g
-                    ? (0, l.jsx)(u.Text, {
-                          color: "text-feedback-critical",
-                          variant: "text-sm/normal",
-                          children: g,
-                      })
-                    : (0, l.jsx)(u.Text, {
+                    ? (0, r.jsx)(s.Text, { color: "text-feedback-critical", variant: "text-sm/normal", children: g })
+                    : (0, r.jsx)(s.Text, {
                           color: "text-muted",
                           variant: "text-sm/normal",
                           children: N.intl.string(N.t["ric+5q"]),

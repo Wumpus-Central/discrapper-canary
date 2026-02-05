@@ -11,41 +11,18 @@ e.exports = function (e) {
         illegal: /;/,
         contains: [
             e.NUMBER_MODE,
-            {
-                className: "string",
-                begin: "'",
-                end: "'",
-                illegal: "\\n",
-            },
-            {
-                className: "string",
-                begin: /"(\\"|\n\\|[^"\n])*"/,
-            },
+            { className: "string", begin: "'", end: "'", illegal: "\\n" },
+            { className: "string", begin: /"(\\"|\n\\|[^"\n])*"/ },
             e.COMMENT('"', "$"),
-            {
-                className: "variable",
-                begin: /[bwtglsav]:[\w\d_]+/,
-            },
+            { className: "variable", begin: /[bwtglsav]:[\w\d_]+/ },
             {
                 begin: [/\b(?:function|function!)/, /\s+/, e.IDENT_RE],
-                className: {
-                    1: "keyword",
-                    3: "title",
-                },
+                className: { 1: "keyword", 3: "title" },
                 end: "$",
                 relevance: 0,
-                contains: [
-                    {
-                        className: "params",
-                        begin: "\\(",
-                        end: "\\)",
-                    },
-                ],
+                contains: [{ className: "params", begin: "\\(", end: "\\)" }],
             },
-            {
-                className: "symbol",
-                begin: /<[\w-]+>/,
-            },
+            { className: "symbol", begin: /<[\w-]+>/ },
         ],
     };
 };

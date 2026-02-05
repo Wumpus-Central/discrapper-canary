@@ -1,6 +1,5 @@
-n.d(t, {
-    o: () => i,
-});
+"use strict";
+n.d(t, { o: () => i });
 var r = n(652215);
 let i = [
     r.HAw.START_SPEAKING,
@@ -10,4 +9,13 @@ let i = [
     r.HAw.EXPERIMENT_USER_TRIGGERED,
     r.HAw.EXPERIMENT_DM_TRIGGERED,
     r.HAw.EXPERIMENT_GUILD_TRIGGERED,
+    r.HAw.DEVICE_EVENT,
+    r.HAw.REACT_SOFT_EXCEPTION,
+    r.HAw.NETWORK_CAPABILITIES_CHANGED,
+    r.HAw.FOREGROUND_SERVICE,
+    r.HAw.APP_LIFECYCLE,
+    r.HAw.UI_LIFECYCLE,
+    r.HAw.TOUCH_EVENT,
+    r.HAw.HTTP_REQUEST,
+    r.HAw.WEBSOCKET_MESSAGE_RECEIVED,
 ];

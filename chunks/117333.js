@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__0a12b",
     zc: "iconContainer__0a12b",

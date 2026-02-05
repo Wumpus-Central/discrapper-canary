@@ -1,94 +1,58 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(321073),
-    n(896048);
+"use strict";
+n.d(t, { A: () => A }), n(321073);
 var r = n(205693),
     i = n(827343),
     a = n(439372),
     s = n(626584),
     o = n(430452),
     l = n(383501),
-    c = n(723702),
-    u = n(842772),
+    u = n(723702),
+    c = n(842772),
     d = n(652215);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let p = "c6_BVC",
-    _ = new s.A("KrispBVCDeviceManager"),
+let _ = "c6_BVC",
+    f = new s.A("KrispBVCDeviceManager"),
+    p = [],
     h = [],
-    m = [],
-    g = {
-        block_list: [],
-        allow_list: [],
-    };
-for (let e of ((0, c.isMac)() ? (g = n(361494)) : (0, c.isWindows)() && (g = n(699248)), g.block_list))
-    "name" in e && m.push(e.name.toLowerCase());
-for (let e of g.allow_list) "name" in e && h.push(e.name.toLowerCase());
-
-function E() {
-    var e;
-    if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !o.A.getKrispModels().includes(p)) return;
-    let t = o.A.getInputDeviceId(),
-        n = o.A.getInputDevices()[t],
-        r = null != l.A.getChannelId();
-    if (null == n) return;
-    let a = null == (e = l.A.getRTCConnection()) ? void 0 : e.getInputDeviceSampleRate(),
-        s = u._.getCurrentConfig(
-            {
-                location: "KrispBVCDeviceManager",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ).allowBVC;
-    if (null != a && a < 16e3) {
+    m = { block_list: [], allow_list: [] };
+for (let e of ((0, u.isMac)() ? (m = n(361494)) : (0, u.isWindows)() && (m = n(699248)), m.block_list))
+    "name" in e && h.push(e.name.toLowerCase());
+for (let e of m.allow_list) "name" in e && p.push(e.name.toLowerCase());
+function g() {
+    if ((!(0, u.isMac)() && !(0, u.isWindows)()) || !o.A.getKrispModels().includes(_)) return;
+    let e = o.A.getInputDeviceId(),
+        t = o.A.getInputDevices()[e],
+        n = null != l.A.getChannelId();
+    if (null == t) return;
+    let r = l.A.getRTCConnection()?.getInputDeviceSampleRate(),
+        a = c._.getCurrentConfig({ location: "KrispBVCDeviceManager" }, { autoTrackExposure: !1 }).allowBVC;
+    if (null != r && r < 16e3) {
         o.A.getKrispModelOverride() &&
-            (_.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.A.setKrispModelOverride(""));
+            (f.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.A.setKrispModelOverride(""));
         return;
     }
-    let d = n.name.toLowerCase();
-    if (m.some((e) => d.includes(e))) {
+    let s = t.name.toLowerCase();
+    if (h.some((e) => s.includes(e))) {
         o.A.getKrispModelOverride() &&
-            (_.info("BVC not compatible with device, disabling BVC."), i.A.setKrispModelOverride(""));
+            (f.info("BVC not compatible with device, disabling BVC."), i.A.setKrispModelOverride(""));
         return;
     }
-    h.some((e) => d.includes(e))
-        ? (r &&
-              u._.trackExposure({
-                  location: "KrispBVCDeviceManager",
-              }),
-          s)
-            ? o.A.getKrispModelOverride() !== p &&
-              (_.info("BVC compatible with device, enabling BVC."), i.A.setKrispModelOverride(p))
+    p.some((e) => s.includes(e))
+        ? (n && c._.trackExposure({ location: "KrispBVCDeviceManager" }), a)
+            ? o.A.getKrispModelOverride() !== _ &&
+              (f.info("BVC compatible with device, enabling BVC."), i.A.setKrispModelOverride(_))
             : i.A.setKrispModelOverride("")
         : o.A.getKrispModelOverride() &&
-          (_.info("Unknown BVC compatibility with device, disabling BVC."), i.A.setKrispModelOverride(""));
+          (f.info("Unknown BVC compatibility with device, disabling BVC."), i.A.setKrispModelOverride(""));
 }
-class b extends a.A {
-    constructor(...e) {
-        super(...e),
-            f(this, "actions", {
-                AUDIO_SET_INPUT_DEVICE: E,
-                MEDIA_ENGINE_DEVICES: E,
-                RTC_CONNECTION_STATE: (e) => {
-                    let { context: t, state: n } = e;
-                    t === r.x.DEFAULT && n === d.S7L.RTC_CONNECTING && E();
-                },
-                AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED: E,
-            });
-    }
+class E extends a.A {
+    actions = {
+        AUDIO_SET_INPUT_DEVICE: g,
+        MEDIA_ENGINE_DEVICES: g,
+        RTC_CONNECTION_STATE: (e) => {
+            let { context: t, state: n } = e;
+            t === r.x.DEFAULT && n === d.S7L.RTC_CONNECTING && g();
+        },
+        AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED: g,
+    };
 }
-let y = new b();
+let A = new E();

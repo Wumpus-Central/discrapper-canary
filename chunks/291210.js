@@ -16,66 +16,28 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             {
                 beginKeywords: "node",
-                starts: {
-                    end: "\\s*([\\w_-]+:)?",
-                    starts: {
-                        className: "title",
-                        end: "\\s*[\\$\\w_][\\w_-]*",
-                    },
-                },
+                starts: { end: "\\s*([\\w_-]+:)?", starts: { className: "title", end: "\\s*[\\$\\w_][\\w_-]*" } },
             },
             {
                 beginKeywords: t,
                 starts: {
                     className: "title",
                     end: "\\s*[\\$\\w_][\\w_-]*",
-                    starts: {
-                        end: "\\s*@?[\\w_][\\w_\\.:-]*",
-                    },
+                    starts: { end: "\\s*@?[\\w_][\\w_\\.:-]*" },
                 },
             },
             {
                 begin: "\\b(" + n.split(" ").join("|") + ")\\s+",
                 keywords: n,
-                starts: {
-                    className: "title",
-                    end: "[\\$\\w_][\\w_-]*",
-                },
+                starts: { className: "title", end: "[\\$\\w_][\\w_-]*" },
             },
-            {
-                beginKeywords: r,
-                starts: {
-                    className: "title",
-                    end: "\\s*([\\w_-]+:)?",
-                },
-            },
+            { beginKeywords: r, starts: { className: "title", end: "\\s*([\\w_-]+:)?" } },
             e.QUOTE_STRING_MODE,
-            {
-                className: "meta",
-                begin: "(ocf|systemd|service|lsb):[\\w_:-]+",
-                relevance: 0,
-            },
-            {
-                className: "number",
-                begin: "\\b\\d+(\\.\\d+)?(ms|s|h|m)?",
-                relevance: 0,
-            },
-            {
-                className: "literal",
-                begin: "[-]?(infinity|inf)",
-                relevance: 0,
-            },
-            {
-                className: "attr",
-                begin: /([A-Za-z$_#][\w_-]+)=/,
-                relevance: 0,
-            },
-            {
-                className: "tag",
-                begin: "</?",
-                end: "/?>",
-                relevance: 0,
-            },
+            { className: "meta", begin: "(ocf|systemd|service|lsb):[\\w_:-]+", relevance: 0 },
+            { className: "number", begin: "\\b\\d+(\\.\\d+)?(ms|s|h|m)?", relevance: 0 },
+            { className: "literal", begin: "[-]?(infinity|inf)", relevance: 0 },
+            { className: "attr", begin: /([A-Za-z$_#][\w_-]+)=/, relevance: 0 },
+            { className: "tag", begin: "</?", end: "/?>", relevance: 0 },
         ],
     };
 };

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     R: "hidden__5ed15",
     YG: "verticalContainer__5ed15",

@@ -1,31 +1,24 @@
-n.d(t, {
-    c: () => f,
-}),
-    n(938796);
+"use strict";
+n.d(t, { c: () => _ }), n(938796);
 var r = n(665260),
     i = n(734057),
     a = n(696451),
     s = n(71393),
     o = n(701785),
     l = n(65995),
-    c = n(707167),
-    u = n(652215),
+    u = n(707167),
+    c = n(652215),
     d = n(340837);
-
-function f(e, t) {
-    var n, f;
-    let p = s.A.getGuild(e),
+function _(e, t) {
+    let n = s.A.getGuild(e),
         _ = i.A.getChannel(t);
     return (
-        null != p &&
+        null != n &&
         null != _ &&
-        (0, c.A)(p) &&
-        p.features.has(u.GuildFeatures.GUILD_SERVER_GUIDE) &&
-        !r.Lt(
-            null != (n = null == (f = a.Ay.getSelfMember(p.id)) ? void 0 : f.flags) ? n : 0,
-            d.D.COMPLETED_HOME_ACTIONS,
-        ) &&
-        o.h.hasMemberAction(p.id, _.id) &&
-        !l.A.hasCompletedActionForChannel(p.id, _.id)
+        (0, u.A)(n) &&
+        n.features.has(c.GuildFeatures.GUILD_SERVER_GUIDE) &&
+        !r.Lt(a.Ay.getSelfMember(n.id)?.flags ?? 0, d.D.COMPLETED_HOME_ACTIONS) &&
+        o.h.hasMemberAction(n.id, _.id) &&
+        !l.A.hasCompletedActionForChannel(n.id, _.id)
     );
 }

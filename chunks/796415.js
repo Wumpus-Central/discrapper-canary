@@ -1,106 +1,37 @@
-r.d(t, {
-    default: () => y,
-});
-var n = r(627968),
-    o = r(397927),
-    l = r(976860),
-    a = r(523084),
-    i = r(225180),
-    c = r(285286),
-    s = r(652215),
-    u = r(746080),
-    p = r(294726),
-    f = r(985018),
-    b = r(413526),
-    d = r(429040);
-
-function y(e) {
-    let { gameServerGame: t, guildId: r, status: y } = e,
-        O = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (o = 0, r = Reflect.ownKeys(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-                return l;
-            }
-            if (
-                ((l = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        l = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < l.length; n++)
-                        (r = l[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                    return o;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (o = 0, r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            return l;
-        })(e, ["gameServerGame", "guildId", "status"]),
-        m = (0, i.A)(t.gameId, "cover");
-    return (0, n.jsx)(
-        a.default,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        }),
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = n);
-                    });
-            }
-            return e;
-        })(
-            {
-                title: f.intl.string("created" === y ? p.default["4lLdBM"] : p.default.VPDgHa),
-                description: f.intl.formatToPlainString(p.default.yL6BiH, {
-                    provider: (0, c.A)(t.provider),
-                }),
-                image: (0, n.jsx)("div", {
-                    className: d.Z,
-                    children: (0, n.jsx)("img", {
-                        className: d.S,
-                        alt: "",
-                        src: null != m ? m : "",
-                    }),
-                }),
-                button: (0, n.jsx)("div", {
-                    "data-button-hoisted-classname-wrapper": !0,
-                    className: b.x6,
-                    children: (0, n.jsx)(o.Button, {
-                        variant: "primary",
-                        text: f.intl.string(p.default.VkItSr),
-                        onClick: () => {
-                            (0, l.pX)(s.BVt.CHANNEL(r, u.VV.GAME_SERVERS)), O.onClose();
-                        },
-                    }),
-                }),
-            },
-            O,
-        ),
-    );
+t.d(a, { default: () => g });
+var n = t(627968),
+    s = t(397927),
+    i = t(976860),
+    r = t(523084),
+    l = t(225180),
+    d = t(285286),
+    c = t(652215),
+    o = t(746080),
+    u = t(294726),
+    m = t(985018),
+    p = t(413526),
+    x = t(429040);
+function g(e) {
+    let { gameServerGame: a, guildId: t, status: g, ...f } = e,
+        h = (0, l.A)(a.gameId, "cover");
+    return (0, n.jsx)(r.default, {
+        title: m.intl.string("created" === g ? u.default["4lLdBM"] : u.default.VPDgHa),
+        description: m.intl.formatToPlainString(u.default.yL6BiH, { provider: (0, d.A)(a.provider) }),
+        image: (0, n.jsx)("div", {
+            className: x.Z,
+            children: (0, n.jsx)("img", { className: x.S, alt: "", src: h ?? "" }),
+        }),
+        button: (0, n.jsx)("div", {
+            "data-button-hoisted-classname-wrapper": !0,
+            className: p.x6,
+            children: (0, n.jsx)(s.Button, {
+                variant: "primary",
+                text: m.intl.string(u.default.VkItSr),
+                onClick: () => {
+                    (0, i.pX)(c.BVt.CHANNEL(t, o.VV.GAME_SERVERS)), f.onClose();
+                },
+            }),
+        }),
+        ...f,
+    });
 }

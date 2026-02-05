@@ -31,86 +31,32 @@ e.exports = function (e) {
         r = "false true",
         i = [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\{/, /\}/, {
-                relevance: 0,
-            }),
-            e.COMMENT(/\(\*/, /\*\)/, {
-                relevance: 10,
-            }),
+            e.COMMENT(/\{/, /\}/, { relevance: 0 }),
+            e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
         ],
-        a = {
-            className: "string",
-            begin: /'/,
-            end: /'/,
-            contains: [
-                {
-                    begin: /''/,
-                },
-            ],
-        },
-        s = {
-            className: "string",
-            begin: /(#\d+)+/,
-        },
-        o = {
-            className: "number",
-            begin: "\\b\\d+(\\.\\d+)?(DT|D|T)",
-            relevance: 0,
-        },
-        l = {
-            className: "string",
-            begin: '"',
-            end: '"',
-        },
-        c = {
+        a = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
+        s = { className: "string", begin: /(#\d+)+/ },
+        o = { className: "number", begin: "\\b\\d+(\\.\\d+)?(DT|D|T)", relevance: 0 },
+        l = { className: "string", begin: '"', end: '"' },
+        u = {
             match: [/procedure/, /\s+/, /[a-zA-Z_][\w@]*/, /\s*/],
-            scope: {
-                1: "keyword",
-                3: "title.function",
-            },
+            scope: { 1: "keyword", 3: "title.function" },
             contains: [
-                {
-                    className: "params",
-                    begin: /\(/,
-                    end: /\)/,
-                    keywords: n,
-                    contains: [a, s, e.NUMBER_MODE],
-                },
+                { className: "params", begin: /\(/, end: /\)/, keywords: n, contains: [a, s, e.NUMBER_MODE] },
                 ...i,
             ],
         },
-        u = ["Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"],
+        c = ["Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"],
         d = {
-            match: [/OBJECT/, /\s+/, t.either(...u), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
+            match: [/OBJECT/, /\s+/, t.either(...c), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
             relevance: 3,
-            scope: {
-                1: "keyword",
-                3: "type",
-                5: "number",
-                7: "title",
-            },
+            scope: { 1: "keyword", 3: "type", 5: "number", 7: "title" },
         };
     return {
         name: "C/AL",
         case_insensitive: !0,
-        keywords: {
-            keyword: n,
-            literal: r,
-        },
+        keywords: { keyword: n, literal: r },
         illegal: /\/\*/,
-        contains: [
-            {
-                match: /[\w]+(?=\=)/,
-                scope: "attribute",
-                relevance: 0,
-            },
-            a,
-            s,
-            o,
-            l,
-            e.NUMBER_MODE,
-            d,
-            c,
-        ],
+        contains: [{ match: /[\w]+(?=\=)/, scope: "attribute", relevance: 0 }, a, s, o, l, e.NUMBER_MODE, d, u],
     };
 };

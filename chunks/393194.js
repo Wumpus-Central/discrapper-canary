@@ -1,51 +1,34 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(397927),
-    a = n(713654),
-    s = n(435470),
+    a = n(397927),
+    s = n(713654),
+    r = n(435470),
     o = n(969043),
     c = n(576967),
-    u = n(314307),
-    d = n(985018),
-    f = n(867384);
-
-function p(e) {
-    var t;
-    let { channel: n } = e,
-        p = (0, s.kt)(n),
-        { firstMessage: h } = (0, l.cf)([o.A], () => o.A.getMessage(n.id)),
-        b = new Set((0, s.zt)(n, p)),
-        g = null != (t = (0, a.gU)(n)) ? t : i.oyn;
-    return (0, r.jsxs)(u.Ay, {
-        channelId: n.id,
-        className: f.kL,
+    d = n(314307),
+    u = n(985018),
+    h = n(867384);
+function m(e) {
+    let { channel: t } = e,
+        n = (0, r.kt)(t),
+        { firstMessage: m } = (0, l.cf)([o.A], () => o.A.getMessage(t.id)),
+        A = new Set((0, r.zt)(t, n)),
+        p = (0, s.gU)(t) ?? a.oyn;
+    return (0, i.jsxs)(d.Ay, {
+        channelId: t.id,
+        className: h.kL,
         children: [
-            (0, r.jsx)("div", {
-                className: f.P0,
-                children: (0, r.jsx)(g, {
-                    className: f.Kk,
-                    strokeWidth: 1.75,
-                }),
-            }),
-            (0, r.jsx)(u.cr, {
-                className: f.wx,
-                children: n.name,
-            }),
-            null == h &&
-                (0, r.jsx)(i.Text, {
+            (0, i.jsx)("div", { className: h.P0, children: (0, i.jsx)(p, { className: h.Kk, strokeWidth: 1.75 }) }),
+            (0, i.jsx)(d.cr, { className: h.wx, children: t.name }),
+            null == m &&
+                (0, i.jsx)(a.Text, {
                     variant: "text-md/normal",
                     color: "text-default",
-                    children: d.intl.string(d.t.mE3KJN),
+                    children: u.intl.string(u.t.mE3KJN),
                 }),
-            (0, r.jsx)(c.A, {
-                appliedTags: b,
-                wrap: n.isModeratorReportChannel(),
-            }),
+            (0, i.jsx)(c.A, { appliedTags: A, wrap: t.isModeratorReportChannel() }),
         ],
     });
 }

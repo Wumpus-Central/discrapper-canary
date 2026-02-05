@@ -1,16 +1,12 @@
-n.d(t, {
-    IR: () => s,
-    fc: () => a,
-    oS: () => l,
-});
-var r,
-    i,
-    l =
-        (((r = {}).GUILD_TEMPLATES = "guild-templates"),
-        (r.CUSTOMIZE_GUILD = "customize-guild"),
-        (r.CHANNEL_PROMPT = "channel-prompt"),
-        (r.JOIN_GUILD = "join-guild"),
-        (r.CREATION_INTENT = "creation-intent"),
-        r),
-    s = (((i = {}).FRIENDS = "FRIENDS"), (i.COMMUNITY = "COMMUNITY"), (i.CLAN = "CLAN"), i);
-let a = "create-guild";
+n.d(t, { IR: () => a, fc: () => l, oS: () => r });
+var i,
+    s,
+    r =
+        (((i = {}).GUILD_TEMPLATES = "guild-templates"),
+        (i.CUSTOMIZE_GUILD = "customize-guild"),
+        (i.CHANNEL_PROMPT = "channel-prompt"),
+        (i.JOIN_GUILD = "join-guild"),
+        (i.CREATION_INTENT = "creation-intent"),
+        i),
+    a = (((s = {}).FRIENDS = "FRIENDS"), (s.COMMUNITY = "COMMUNITY"), (s.CLAN = "CLAN"), s);
+let l = "create-guild";

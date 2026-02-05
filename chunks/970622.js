@@ -1,71 +1,11 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048),
-    n(747238);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(64700),
     i = n(669170),
     a = n(741918),
     s = n(602034);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+let o = "--";
 function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = "--";
-
-function f(e) {
     switch (e.key) {
         case a.D$.ENTER:
         case a.D$.SPACE:
@@ -80,177 +20,130 @@ function f(e) {
             return a.X2.NAVIGATE_OUT;
     }
 }
-
-function p(e, t) {
-    return null != t ? "".concat((0, s.M4)(e, t.join(d))) : e;
+function u(e, t) {
+    return null != t ? `${(0, s.M4)(e, t.join(o))}` : e;
 }
-
-function _(e, t) {
+function c(e, t) {
     return e.getElementById(t);
 }
-
-function h(e) {
+function d(e) {
     return e.tabIndex >= 0;
 }
-
-function m(e) {
+function _(e) {
     let {
             navId: t,
             items: n,
-            initialFocusPath: o,
-            onSelect: c,
-            enabled: m = !0,
-            closeMenu: g,
-            defaultIsUsingKeyboardNavigation: E = !1,
+            initialFocusPath: _,
+            onSelect: f,
+            enabled: p = !0,
+            closeMenu: h,
+            defaultIsUsingKeyboardNavigation: m = !1,
         } = e,
-        b = r.useRef(m);
+        g = r.useRef(p);
     r.useLayoutEffect(() => {
-        b.current = m;
-    }, [m]);
-    let [y, O] = r.useReducer(i.A, {
-            items: n,
-            focusPath: o,
-            focusIndex: -1,
-        }),
-        A = r.useMemo(() => (0, s.nF)(O, 30), [O]);
+        g.current = p;
+    }, [p]);
+    let [E, A] = r.useReducer(i.A, { items: n, focusPath: _, focusIndex: -1 }),
+        I = r.useMemo(() => (0, s.nF)(A, 30), [A]);
     r.useEffect(() => {
-        O({
-            type: i.g.UPDATE_ITEMS,
-            items: n,
-        });
+        A({ type: i.g.UPDATE_ITEMS, items: n });
     }, [n]);
-    let { focusPath: v } = y,
-        [S, I] = r.useState(!1),
-        [T, C] = r.useState(E),
-        [{ onItemFocusMemoizer: N, onItemMouseEnterMemoizer: R }] = r.useState(() => ({
+    let { focusPath: T } = E,
+        [y, S] = r.useState(!1),
+        [v, C] = r.useState(m),
+        [{ onItemFocusMemoizer: b, onItemMouseEnterMemoizer: N }] = r.useState(() => ({
             onItemFocusMemoizer: new s.Lp((e) => () => {
-                I(!0),
-                    O({
-                        type: i.g.SET_FOCUS_PATH,
-                        path: e.split(d),
-                    });
+                S(!0), A({ type: i.g.SET_FOCUS_PATH, path: e.split(o) });
             }),
             onItemMouseEnterMemoizer: new s.Lp((e) => () => {
-                C(!1),
-                    O({
-                        type: i.g.SET_FOCUS_PATH,
-                        path: e.split(d),
-                    });
+                C(!1), A({ type: i.g.SET_FOCUS_PATH, path: e.split(o) });
             }),
         })),
-        w = r.useCallback(
+        R = r.useCallback(
             (e) => {
-                if (!b.current) return;
-                e.key === a.D$.ESCAPE && null != g && (e.stopPropagation(), e.preventDefault(), g());
-                let n = f(e);
+                if (!g.current) return;
+                e.key === a.D$.ESCAPE && null != h && (e.stopPropagation(), e.preventDefault(), h());
+                let n = l(e);
                 switch (n) {
                     case a.X2.NAVIGATE_UP:
                     case a.X2.NAVIGATE_DOWN:
                     case a.X2.NAVIGATE_IN:
                     case a.X2.NAVIGATE_OUT:
-                        e.preventDefault(),
-                            e.stopPropagation(),
-                            C(!0),
-                            A({
-                                type: n,
-                            });
+                        e.preventDefault(), e.stopPropagation(), C(!0), I({ type: n });
                         return;
                     case a.X2.SELECT_FOCUSED_ITEM:
-                        var r;
-                        if (e.repeat || h(e.target)) return;
-                        if (
-                            (e.preventDefault(),
-                            e.stopPropagation(),
-                            C(!1),
-                            A({
-                                type: n,
-                            }),
-                            null != c)
-                        )
-                            return void c(v);
-                        let i = _(null != (r = e.target.ownerDocument) ? r : document, p(t, v));
-                        null == i || i.click();
+                        if (e.repeat || d(e.target)) return;
+                        if ((e.preventDefault(), e.stopPropagation(), C(!1), I({ type: n }), null != f))
+                            return void f(T);
+                        let r = c(e.target.ownerDocument ?? document, u(t, T));
+                        r?.click();
                 }
             },
-            [A, t, v, c, g],
+            [I, t, T, f, h],
         ),
-        P = r.useCallback(() => {
-            S || I(!0);
-        }, [S]),
+        O = r.useCallback(() => {
+            y || S(!0);
+        }, [y]),
         D = r.useCallback(
             (e) => {
-                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && S && I(!1);
+                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && y && S(!1);
             },
-            [S],
+            [y],
         ),
-        x = r.useCallback(() => {
-            O({
-                type: i.g.SET_FOCUS_PATH,
-                path: [],
-            }),
-                I(!1);
+        L = r.useCallback(() => {
+            A({ type: i.g.SET_FOCUS_PATH, path: [] }), S(!1);
         }, []),
-        L = r.useCallback((e) => e.every((e, t) => v[t] === e), [v]),
-        j = r.useCallback(
+        w = r.useCallback((e) => e.every((e, t) => T[t] === e), [T]),
+        x = r.useCallback(
             () => ({
                 role: "menu",
                 id: t,
                 tabIndex: -1,
-                onKeyDown: w,
-                onFocus: P,
+                onKeyDown: R,
+                onFocus: O,
                 onBlur: D,
-                onMouseLeave: x,
-                "aria-activedescendant": v.length > 0 ? (0, s.M4)(t, v.join(d)) : void 0,
+                onMouseLeave: L,
+                "aria-activedescendant": T.length > 0 ? (0, s.M4)(t, T.join(o)) : void 0,
             }),
-            [t, w, P, D, x, v],
+            [t, R, O, D, L, T],
         ),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
                     role: "menu",
                     tabIndex: -1,
-                    "aria-activedescendant": L(n) ? (0, s.M4)(t, v.join(d)) : void 0,
-                    focusIndex: y.focusIndex,
-                    isUsingKeyboardNavigation: T,
+                    "aria-activedescendant": w(n) ? (0, s.M4)(t, T.join(o)) : void 0,
+                    focusIndex: E.focusIndex,
+                    isUsingKeyboardNavigation: v,
                 };
             },
-            [t, v, L, y.focusIndex, T],
+            [t, T, w, E.focusIndex, v],
         ),
-        k = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = "menuitem" } = e,
-                    o = n.join(d);
-                return u(
-                    l(
-                        {},
-                        r
-                            ? {
-                                  "aria-expanded": L(n),
-                                  "aria-haspopup": !0,
-                              }
-                            : {},
-                    ),
-                    {
-                        role: a,
-                        id: (0, s.M4)(t, o),
-                        tabIndex: -1,
-                        onFocus: i ? N.get(o) : () => {},
-                        onMouseEnter: i ? R.get(o) : () => {},
-                    },
-                );
+                    l = n.join(o);
+                return {
+                    ...(r ? { "aria-expanded": w(n), "aria-haspopup": !0 } : {}),
+                    role: a,
+                    id: (0, s.M4)(t, l),
+                    tabIndex: -1,
+                    onFocus: i ? b.get(l) : () => {},
+                    onMouseEnter: i ? N.get(l) : () => {},
+                };
             },
-            [t, L, N, R],
+            [t, w, b, N],
         );
     return r.useMemo(
         () => ({
-            dispatch: A,
-            getContainerProps: j,
-            getSubmenuProps: M,
-            getItemProps: k,
-            isFocused: L,
-            isUsingKeyboardNavigation: T,
+            dispatch: I,
+            getContainerProps: x,
+            getSubmenuProps: P,
+            getItemProps: M,
+            isFocused: w,
+            isUsingKeyboardNavigation: v,
         }),
-        [A, j, M, k, L, T],
+        [I, x, P, M, w, v],
     );
 }

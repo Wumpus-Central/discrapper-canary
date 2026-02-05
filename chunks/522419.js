@@ -1,25 +1,23 @@
-n.d(t, {
-    y: () => c,
-});
+"use strict";
+n.d(t, { y: () => u });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(954571),
-    o = n(105600),
-    s = n(64175),
+    s = n(105600),
+    o = n(64175),
     l = n(652215);
-
-function c(e) {
-    let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
+function u(e) {
+    let { channelId: t, blockedUserIds: u, ignoredUserIds: c } = e;
     (0, i.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("83792"), n.e("94731")]).then(n.bind(n, 876717));
+            let { default: e } = await n.e("24958").then(n.bind(n, 876717));
             return (n) => {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {
                     channelId: t,
-                    blockedUserIds: c,
-                    ignoredUserIds: u,
+                    blockedUserIds: u,
+                    ignoredUserIds: c,
                     transitionState: i,
                     onClose: a,
                 });
@@ -27,13 +25,13 @@ function c(e) {
         },
         {
             onCloseCallback: () => {
-                (0, o.U)(t),
+                (0, s.U)(t),
                     a.default.track(l.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: s.Qi.DISMISS,
+                        action: o.Qi.DISMISS,
                         channel_id: t,
-                        warning_medium: s.W_.MODAL,
-                        blocked_user_ids: c,
-                        ignored_user_ids: u,
+                        warning_medium: o.W_.MODAL,
+                        blocked_user_ids: u,
+                        ignored_user_ids: c,
                     });
             },
         },

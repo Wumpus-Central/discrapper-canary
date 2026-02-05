@@ -1,100 +1,39 @@
-n.d(t, {
-    dL: () => N,
-    eO: () => C,
-    n1: () => T,
-    ud: () => I,
-}),
-    n(896048);
+"use strict";
+n.d(t, { dL: () => v, eO: () => S, n1: () => y, ud: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(835245),
     s = n(635358),
     o = n(417597),
     l = n(397927),
-    c = n(73153),
-    u = n(830382),
+    u = n(73153),
+    c = n(830382),
     d = n(73825),
-    f = n(793574),
-    p = n(688810),
-    _ = n(937008),
+    _ = n(793574),
+    f = n(688810),
+    p = n(937008),
     h = n(156312),
     m = n(491057),
     g = n(546042),
     E = n(97352),
-    b = n(67480),
-    y = n(582658);
-
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                O(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function S(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let I = (e) => {
+    A = n(67480),
+    I = n(582658);
+let T = (e) => {
         let { skuId: t, isGift: n, applicationId: r } = e,
-            { analyticsLocations: l } = (0, p.Ay)(f.A.PAYMENT_FLOW_TEST_PAGE),
-            c = i.useRef(null),
+            { analyticsLocations: l } = (0, f.Ay)(_.A.PAYMENT_FLOW_TEST_PAGE),
+            u = i.useRef(null),
             d = i.useRef(null),
-            [_, h] = i.useState(() => (0, a.A)());
+            [p, h] = i.useState(() => (0, a.A)());
         i.useEffect(() => {
-            (c.current !== t || d.current !== n) && (h((0, a.A)()), (c.current = t), (d.current = n));
+            (u.current !== t || d.current !== n) && (h((0, a.A)()), (u.current = t), (d.current = n));
         }, [t, n]);
-        let [m, g] = (0, o.yK)([b.A], () => [b.A.isFetching(t), b.A.get(t)]);
+        let [m, g] = (0, o.yK)([A.A], () => [A.A.isFetching(t), A.A.get(t)]);
         return (
             i.useEffect(() => {
-                null != g || m || (0, u.EX)(r, t, s.g.VARIANTS_GROUP).catch((e) => {});
+                null != g || m || (0, c.EX)(r, t, s.g.VARIANTS_GROUP).catch((e) => {});
             }, [r, t, g, m]),
             {
-                loadId: _,
+                loadId: p,
                 analyticsLocations: l,
                 handleClose: i.useCallback((e) => {}, []),
                 handleComplete: i.useCallback(() => {}, []),
@@ -105,31 +44,21 @@ let I = (e) => {
             }
         );
     },
-    T = (e) => {
+    y = (e) => {
         let { subscriptionPlanId: t } = e;
         i.useEffect(() => {
-            E.A.isLoadedForPremiumSKUs() || c.h.wait(() => (0, d.zS)());
+            E.A.isLoadedForPremiumSKUs() || u.h.wait(() => (0, d.zS)());
         }, []);
         let n = (0, o.bG)([E.A], () => (null != t ? E.A.get(t) : null));
-        return {
-            isLoadedForPremiumSKUs: (0, o.bG)([E.A], () => E.A.isLoadedForPremiumSKUs()),
-            selectedPlan: n,
-        };
+        return { isLoadedForPremiumSKUs: (0, o.bG)([E.A], () => E.A.isLoadedForPremiumSKUs()), selectedPlan: n };
     },
-    C = (e) =>
+    S = (e) =>
         (0, r.jsxs)("div", {
-            style: {
-                padding: 20,
-            },
+            style: { padding: 20 },
             children: [
-                (0, r.jsx)(l.Text, {
-                    variant: "text-md/normal",
-                    children: e.text,
-                }),
+                (0, r.jsx)(l.Text, { variant: "text-md/normal", children: e.text }),
                 (0, r.jsx)("div", {
-                    style: {
-                        marginTop: 16,
-                    },
+                    style: { marginTop: 16 },
                     children: (0, r.jsx)(l.MzZ, {
                         onClick: () => e.handleStepChange(e.originStep),
                         children: "← Go Back",
@@ -137,7 +66,7 @@ let I = (e) => {
                 }),
             ],
         }),
-    N = (e) => {
+    v = (e) => {
         let {
                 analyticsLocations: t,
                 applicationId: n,
@@ -145,27 +74,19 @@ let I = (e) => {
                 isGift: a,
                 onClose: s,
                 onComplete: o,
-                initialPlanId: c,
-                purchaseType: u,
+                initialPlanId: u,
+                purchaseType: c,
                 stepConfigs: d,
-                loadId: f,
-                excludeSubscriptionPlansBySKU: p,
+                loadId: _,
+                excludeSubscriptionPlansBySKU: f,
                 renderHeader: E,
-                hideErrors: b,
-                disablePurchases: O,
-                paymentContextOverrides: v,
+                hideErrors: A,
+                disablePurchases: T,
+                paymentContextOverrides: y,
             } = e,
-            I = b
-                ? A(
-                      {
-                          purchasePreviewError: null,
-                          purchaseError: null,
-                      },
-                      v,
-                  )
-                : A({}, v);
-        O && (I.disablePurchasesForStorybook = !0);
-        let T = "".concat(i, "-").concat(a, "-").concat(f);
+            S = A ? { purchasePreviewError: null, purchaseError: null, ...y } : { ...y };
+        T && (S.disablePurchasesForStorybook = !0);
+        let v = `${i}-${a}-${_}`;
         return (0, r.jsx)(
             h.PaymentContextProvider,
             {
@@ -174,34 +95,32 @@ let I = (e) => {
                 skuIDs: null != i ? [i] : [],
                 isGift: a,
                 activeSubscription: null,
-                purchaseType: u,
-                excludeSubscriptionPlansBySKU: p,
-                children: (0, r.jsx)(
-                    y.Y,
-                    S(A({}, I), {
-                        children: (0, r.jsx)(m.Qt, {
-                            children: (0, r.jsx)(_.dX, {
-                                isGift: a,
-                                children: (0, r.jsx)(
-                                    g.PaymentModal,
-                                    {
-                                        transitionState: l.ip4.ENTERED,
-                                        onClose: s,
-                                        onComplete: o,
-                                        applicationId: n,
-                                        skuId: i,
-                                        initialPlanId: c,
-                                        analyticsLocations: t,
-                                        hideShadow: !0,
-                                        renderHeader: E,
-                                    },
-                                    T,
-                                ),
-                            }),
+                purchaseType: c,
+                excludeSubscriptionPlansBySKU: f,
+                children: (0, r.jsx)(I.Y, {
+                    ...S,
+                    children: (0, r.jsx)(m.Qt, {
+                        children: (0, r.jsx)(p.dX, {
+                            isGift: a,
+                            children: (0, r.jsx)(
+                                g.PaymentModal,
+                                {
+                                    transitionState: l.ip4.ENTERED,
+                                    onClose: s,
+                                    onComplete: o,
+                                    applicationId: n,
+                                    skuId: i,
+                                    initialPlanId: u,
+                                    analyticsLocations: t,
+                                    hideShadow: !0,
+                                    renderHeader: E,
+                                },
+                                v,
+                            ),
                         }),
                     }),
-                ),
+                }),
             },
-            T,
+            v,
         );
     };

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(530560),
     i = n(632434);
 class a extends r.X {
@@ -21,42 +20,20 @@ class a extends r.X {
         ) {
             let e = t.start.date(),
                 r = n.start.date();
-            n.start.isOnlyWeekdayComponent() &&
-            (0, i.Gw)(r, {
-                day: 7,
-            }) > e
-                ? ((r = (0, i.Gw)(r, {
-                      day: 7,
-                  })),
+            n.start.isOnlyWeekdayComponent() && (0, i.Gw)(r, { day: 7 }) > e
+                ? ((r = (0, i.Gw)(r, { day: 7 })),
                   n.start.imply("day", r.getDate()),
                   n.start.imply("month", r.getMonth() + 1),
                   n.start.imply("year", r.getFullYear()))
-                : t.start.isOnlyWeekdayComponent() &&
-                    (0, i.Gw)(e, {
-                        day: -7,
-                    }) < r
-                  ? ((e = (0, i.Gw)(e, {
-                        day: -7,
-                    })),
+                : t.start.isOnlyWeekdayComponent() && (0, i.Gw)(e, { day: -7 }) < r
+                  ? ((e = (0, i.Gw)(e, { day: -7 })),
                     t.start.imply("day", e.getDate()),
                     t.start.imply("month", e.getMonth() + 1),
                     t.start.imply("year", e.getFullYear()))
-                  : n.start.isDateWithUnknownYear() &&
-                      (0, i.Gw)(r, {
-                          year: 1,
-                      }) > e
-                    ? ((r = (0, i.Gw)(r, {
-                          year: 1,
-                      })),
-                      n.start.imply("year", r.getFullYear()))
-                    : t.start.isDateWithUnknownYear() &&
-                        (0, i.Gw)(e, {
-                            year: -1,
-                        }) < r
-                      ? ((e = (0, i.Gw)(e, {
-                            year: -1,
-                        })),
-                        t.start.imply("year", e.getFullYear()))
+                  : n.start.isDateWithUnknownYear() && (0, i.Gw)(r, { year: 1 }) > e
+                    ? ((r = (0, i.Gw)(r, { year: 1 })), n.start.imply("year", r.getFullYear()))
+                    : t.start.isDateWithUnknownYear() && (0, i.Gw)(e, { year: -1 }) < r
+                      ? ((e = (0, i.Gw)(e, { year: -1 })), t.start.imply("year", e.getFullYear()))
                       : ([n, t] = [t, n]);
         }
         let r = t.clone();

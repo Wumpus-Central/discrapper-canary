@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     let t = {};
     if (((t.error_code = e.code), null != e.errors)) {
@@ -6,16 +7,9 @@ function r(e) {
     }
     return (t.message = e.message), null != e.retryAfter && (t.retry_after = e.retryAfter), t;
 }
-
 function i(e) {
     if (Object.keys(e.fields).length > 0) return e.fields;
-    let t = {
-        message: e.message,
-    };
+    let t = { message: e.message };
     return null != e.retryAfter && (t.retry_after = e.retryAfter), t;
 }
-n.d(t, {
-    W: () => r,
-    p: () => i,
-}),
-    n(896048);
+n.d(t, { W: () => r, p: () => i });

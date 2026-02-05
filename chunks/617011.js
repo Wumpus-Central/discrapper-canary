@@ -1,176 +1,121 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    i = n(732955),
-    c = n(397927),
-    u = n(576705),
-    d = n(867455),
-    h = n(406704),
-    g = n(707539),
-    m = n(836975),
-    f = n(572275),
-    j = n(747926),
-    x = n(37411),
-    v = n(652215),
-    b = n(985018),
-    A = n(204199);
-
-function p(e) {
-    let { channel: t, className: n, onClose: a, context: p } = e,
-        w = (0, o.bG)([u.A], () => u.A.can(v.xBc.READ_MESSAGE_HISTORY, t)),
-        O = (0, h.AI)(t),
-        S = () => {
-            a(), (0, j.Tv)(t, void 0, "Thread Browser Empty State");
+s.d(t, { A: () => w });
+var l = s(627968),
+    n = s(64700),
+    a = s(503698),
+    r = s.n(a),
+    i = s(311907),
+    o = s(732955),
+    d = s(397927),
+    c = s(576705),
+    u = s(867455),
+    h = s(406704),
+    g = s(707539),
+    m = s(836975),
+    x = s(572275),
+    A = s(747926),
+    f = s(37411),
+    j = s(652215),
+    v = s(985018),
+    T = s(204199);
+function w(e) {
+    let { channel: t, className: s, onClose: a, context: w } = e,
+        N = (0, i.bG)([c.A], () => c.A.can(j.xBc.READ_MESSAGE_HISTORY, t)),
+        p = (0, h.AI)(t),
+        y = () => {
+            a(), (0, A.Tv)(t, void 0, "Thread Browser Empty State");
         },
-        T = l.useCallback(
+        b = n.useCallback(
             (e, t) => {
-                a(), (0, j.JA)(e, !t, x.H9.BROWSER);
+                a(), (0, A.JA)(e, !t, f.H9.BROWSER);
             },
             [a],
         ),
-        N = (function (e, t) {
-            let [n, r] = l.useState(""),
-                [a, s] = l.useState(!1),
-                [o, i] = l.useState(!1),
-                [c, u] = l.useState([]),
+        C = (function (e, t) {
+            let [s, l] = n.useState(""),
+                [a, r] = n.useState(!1),
+                [i, o] = n.useState(!1),
+                [d, c] = n.useState([]),
                 h = async () => {
-                    if (null != n && "" !== n && !a) {
-                        s(!0);
+                    if (null != s && "" !== s && !a) {
+                        r(!0);
                         try {
-                            let r = await d.A.searchThreads(e, t, n);
-                            i(!0), u(r);
+                            let l = await u.A.searchThreads(e, t, s);
+                            o(!0), c(l);
                         } finally {
-                            s(!1);
+                            r(!1);
                         }
                     }
                 };
             return {
-                query: n,
+                query: s,
                 setQuery: (e) => {
-                    r(e), 0 === e.length && i(!1);
+                    l(e), 0 === e.length && o(!1);
                 },
                 isLoading: a,
-                hasResults: o,
+                hasResults: i,
                 submit: h,
-                results: c,
+                results: d,
             };
         })(t.guild_id, t.id);
     return (
-        l.useEffect(() => {
+        n.useEffect(() => {
             (0, g.ju)();
         }, []),
-        (0, r.jsx)("div", {
-            className: s()(n, A.kL),
-            children: (0, r.jsx)(c.Fmo, {
-                component: (0, r.jsxs)("div", {
-                    className: A.wx,
+        (0, l.jsx)("div", {
+            className: r()(s, T.kL),
+            children: (0, l.jsx)(d.Fmo, {
+                component: (0, l.jsxs)("div", {
+                    className: T.wx,
                     children: [
-                        (0, r.jsx)(c.ysw, {
-                            size: "md",
-                            color: "currentColor",
-                            className: A.aM,
-                        }),
-                        (0, r.jsx)(c.Heading, {
+                        (0, l.jsx)(d.ysw, { size: "md", color: "currentColor", className: T.aM }),
+                        (0, l.jsx)(d.Heading, {
                             variant: "heading-md/semibold",
-                            className: A.DD,
-                            children: b.intl.string(b.t.E3H5lE),
+                            className: T.DD,
+                            children: v.intl.string(v.t.E3H5lE),
                         }),
-                        w
-                            ? (0, r.jsxs)(r.Fragment, {
-                                  children: [
-                                      (0, r.jsx)("div", {
-                                          className: A.yF,
-                                      }),
-                                      (0, r.jsx)(
-                                          y,
-                                          (function (e) {
-                                              for (var t = 1; t < arguments.length; t++) {
-                                                  var n = null != arguments[t] ? arguments[t] : {},
-                                                      r = Object.keys(n);
-                                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                                      (r = r.concat(
-                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          }),
-                                                      )),
-                                                      r.forEach(function (t) {
-                                                          var r;
-                                                          (r = n[t]),
-                                                              t in e
-                                                                  ? Object.defineProperty(e, t, {
-                                                                        value: r,
-                                                                        enumerable: !0,
-                                                                        configurable: !0,
-                                                                        writable: !0,
-                                                                    })
-                                                                  : (e[t] = r);
-                                                      });
-                                              }
-                                              return e;
-                                          })({}, N),
-                                      ),
-                                  ],
+                        N
+                            ? (0, l.jsxs)(l.Fragment, {
+                                  children: [(0, l.jsx)("div", { className: T.yF }), (0, l.jsx)(S, { ...C })],
                               })
                             : null,
-                        (0, r.jsx)("div", {
-                            className: A.jH,
-                        }),
-                        O
-                            ? (0, r.jsx)("div", {
-                                  className: A.Tf,
-                                  children: (0, r.jsx)(i.$nd, {
+                        (0, l.jsx)("div", { className: T.jH }),
+                        p
+                            ? (0, l.jsx)("div", {
+                                  className: T.Tf,
+                                  children: (0, l.jsx)(o.$nd, {
                                       size: "sm",
                                       onClick: () => {
-                                          a(), (0, j.Tv)(t, void 0, "Thread Browser Toolbar");
+                                          a(), (0, A.Tv)(t, void 0, "Thread Browser Toolbar");
                                       },
-                                      text: b.intl.string(b.t.CumH4u),
+                                      text: v.intl.string(v.t.CumH4u),
                                   }),
                               })
                             : null,
-                        "modal" === p
-                            ? (0, r.jsx)("div", {
-                                  className: A.ut,
-                                  children: (0, r.jsx)(i.JnF, {
-                                      size: "sm",
-                                      onClick: a,
-                                  }),
+                        "modal" === w
+                            ? (0, l.jsx)("div", {
+                                  className: T.ut,
+                                  children: (0, l.jsx)(o.JnF, { size: "sm", onClick: a }),
                               })
                             : null,
                     ],
                 }),
-                children: N.hasResults
-                    ? (0, r.jsx)(m.A, {
-                          channel: t,
-                          startThread: S,
-                          goToThread: T,
-                          threadIds: N.results,
-                      })
-                    : (0, r.jsx)(f.A, {
-                          channel: t,
-                          startThread: S,
-                          goToThread: T,
-                      }),
+                children: C.hasResults
+                    ? (0, l.jsx)(m.A, { channel: t, startThread: y, goToThread: b, threadIds: C.results })
+                    : (0, l.jsx)(x.A, { channel: t, startThread: y, goToThread: b }),
             }),
         })
     );
 }
-
-function y(e) {
-    let { query: t, setQuery: n, submit: l } = e;
-    return (0, r.jsx)(c.IWV, {
+function S(e) {
+    let { query: t, setQuery: s, submit: n } = e;
+    return (0, l.jsx)(d.IWV, {
         size: "sm",
         autoFocus: !0,
         query: t,
-        onChange: (e) => n(e),
-        onClear: () => n(""),
-        onKeyDown: (e) => "Enter" === e.key && l(),
-        placeholder: b.intl.string(b.t.h0JN7Q),
-        "aria-label": b.intl.string(b.t.h0JN7Q),
+        onChange: (e) => s(e),
+        onClear: () => s(""),
+        onKeyDown: (e) => "Enter" === e.key && n(),
+        placeholder: v.intl.string(v.t.h0JN7Q),
+        "aria-label": v.intl.string(v.t.h0JN7Q),
     });
 }

@@ -1,14 +1,13 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(528352),
     i = n(364242),
     a = n(476858),
     s = n(355418);
 let o = RegExp(`(${(0, a.uJ)(r.eB)})\\s*(?:[,-]?\\s*(${r.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`, "i"),
     l = 1,
-    c = 2;
-class u extends s.c {
+    u = 2;
+class c extends s.c {
     innerPattern() {
         return o;
     }
@@ -17,8 +16,8 @@ class u extends s.c {
         n.imply("day", 1);
         let a = t[l],
             s = r.eB[a.toLowerCase()];
-        if ((n.assign("month", s), t[c])) {
-            let e = (0, r.zL)(t[c]);
+        if ((n.assign("month", s), t[u])) {
+            let e = (0, r.zL)(t[u]);
             n.assign("year", e);
         } else {
             let t = (0, i.Y)(e.refDate, 1, s);

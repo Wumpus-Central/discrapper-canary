@@ -1,21 +1,18 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(599941),
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700),
+    s = n(599941),
     l = n(386784);
-
-function s(e) {
-    let t = (0, i.uP)(e),
+function r(e) {
+    let t = (0, s.uP)(e),
         n = (0, l.A)(e);
-    return r.useMemo(() => {
+    return i.useMemo(() => {
         let e = 0;
-        for (let r of t) {
-            let t = null == r ? void 0 : r.role_id;
+        for (let i of t) {
+            let t = i?.role_id;
             if (null != t) {
-                let r = null == n ? void 0 : n[t];
-                null != r && (e += r);
+                let i = n?.[t];
+                null != i && (e += i);
             }
         }
         return e;

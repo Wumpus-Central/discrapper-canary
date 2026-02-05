@@ -80,18 +80,11 @@ e.exports = function (e) {
         r = ["while", "for", "if", "do", "return", "else", "break", "extern", "continue"],
         i = {
             match: [/(surface|displacement|light|volume|imager)/, /\s+/, e.IDENT_RE],
-            scope: {
-                1: "keyword",
-                3: "title.class",
-            },
+            scope: { 1: "keyword", 3: "title.class" },
         };
     return {
         name: "RenderMan RSL",
-        keywords: {
-            keyword: r,
-            built_in: t,
-            type: n,
-        },
+        keywords: { keyword: r, built_in: t, type: n },
         illegal: "</",
         contains: [
             e.C_LINE_COMMENT_MODE,
@@ -99,16 +92,9 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.APOS_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                className: "meta",
-                begin: "#",
-                end: "$",
-            },
+            { className: "meta", begin: "#", end: "$" },
             i,
-            {
-                beginKeywords: "illuminate illuminance gather",
-                end: "\\(",
-            },
+            { beginKeywords: "illuminate illuminance gather", end: "\\(" },
         ],
     };
 };

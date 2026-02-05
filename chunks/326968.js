@@ -1,17 +1,11 @@
-t.d(a, {
-    A: () => o,
-});
+t.d(a, { A: () => o });
 var n = t(981737);
 let o = {
     ordinalNumber: function (e, a) {
         return Number(e) + "\xba";
     },
     era: (0, n.A)({
-        values: {
-            narrow: ["AC", "DC"],
-            abbreviated: ["AC", "DC"],
-            wide: ["antes de cristo", "despu\xe9s de cristo"],
-        },
+        values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "despu\xe9s de cristo"] },
         defaultWidth: "wide",
     }),
     quarter: (0, n.A)({

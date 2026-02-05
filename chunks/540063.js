@@ -1,54 +1,46 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(342494),
-    a = n(793574),
+n.d(t, { A: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(342494),
+    l = n(793574),
     s = n(688810),
     o = n(979286),
-    c = n(758836),
-    u = n(985018),
-    d = n(166805);
-let p = (e) => {
-    let { targetElementRef: t, onRequestClose: n, onClick: p } = e,
-        { analyticsLocations: f } = (0, s.Ay)(a.A.HOME_PAGE_SHOP_TAB),
-        h = i.useRef(n);
+    d = n(758836),
+    c = n(985018),
+    u = n(166805);
+let A = (e) => {
+    let { targetElementRef: t, onRequestClose: n, onClick: A } = e,
+        { analyticsLocations: h } = (0, s.Ay)(l.A.HOME_PAGE_SHOP_TAB),
+        _ = r.useRef(n);
     return (
-        (h.current = n),
-        i.useEffect(
+        (_.current = n),
+        r.useEffect(
             () => () => {
-                var e;
-                null == (e = h.current) || e.call(h);
+                _.current?.();
             },
             [],
         ),
-        (0, r.jsx)(l.AM, {
+        (0, i.jsx)(a.AM, {
             targetElementRef: t,
             position: "right",
             size: "md",
             alignmentStrategy: "edge",
             align: "top",
-            caretConfig: {
-                align: "start",
-            },
-            title: u.intl.string(u.t.epBu6F),
-            body: u.intl.string(u.t["o8+3AX"]),
-            graphic: {
-                type: "image",
-                src: d.A,
-            },
+            caretConfig: { align: "start" },
+            title: c.intl.string(c.t.epBu6F),
+            body: c.intl.string(c.t["o8+3AX"]),
+            graphic: { type: "image", src: u.A },
             gradientColor: "blue",
             actions: [
                 {
-                    text: u.intl.string(u.t.dp9qDi),
+                    text: c.intl.string(c.t.dp9qDi),
                     variant: "primary",
                     onClick: () => {
-                        null == p || p(),
+                        A?.(),
                             (0, o.Cz)({
-                                analyticsLocations: f,
-                                analyticsSource: a.A.HOME_PAGE_SHOP_TAB,
-                                tab: c.G2.HOME,
+                                analyticsLocations: h,
+                                analyticsSource: l.A.HOME_PAGE_SHOP_TAB,
+                                tab: d.G2.HOME,
                             });
                     },
                 },

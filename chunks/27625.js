@@ -1,41 +1,34 @@
-i.d(s, {
-    default: () => c,
-});
-var a = i(627968);
-i(64700);
-var n = i(397927),
-    e = i(975807),
-    r = i(915089),
-    l = i(985018),
-    d = i(36205);
-
-function c(t) {
-    let { href: s, onClose: c, transitionState: o } = t,
-        x = (0, r.GV)();
+s.d(i, { default: () => d });
+var a = s(627968);
+s(64700);
+var n = s(397927),
+    e = s(975807),
+    r = s(915089),
+    l = s(985018),
+    c = s(36205);
+function d(t) {
+    let { href: i, onClose: d, transitionState: o } = t,
+        b = (0, r.GV)();
     return (0, a.jsxs)(n.EOs, {
         "data-migration-pending": !0,
         transitionState: o,
-        "aria-labelledby": x,
+        "aria-labelledby": b,
         parentComponent: "SuspiciousDownloadModal",
         children: [
-            (0, a.jsx)("img", {
-                className: d.Qw,
-                src: i(929279),
-                alt: "",
-            }),
+            (0, a.jsx)("img", { className: c.Qw, src: s(929279), alt: "" }),
             (0, a.jsx)(n.$mQ, {
                 children: (0, a.jsxs)("div", {
-                    className: d.jE,
+                    className: c.jE,
                     children: [
                         (0, a.jsx)(n.Heading, {
-                            id: x,
+                            id: b,
                             variant: "heading-lg/semibold",
-                            className: d.DD,
+                            className: c.DD,
                             children: l.intl.string(l.t.XtDo9Z),
                         }),
                         (0, a.jsx)(n.Text, {
                             variant: "text-md/normal",
-                            className: d.rf,
+                            className: c.rf,
                             children: l.intl.string(l.t.L9yFko),
                         }),
                     ],
@@ -44,16 +37,12 @@ function c(t) {
             (0, a.jsx)(n.jlY, {
                 children: (0, a.jsxs)(n.ButtonGroup, {
                     children: [
-                        (0, a.jsx)(n.Button, {
-                            variant: "primary",
-                            text: l.intl.string(l.t.j7Vi2i),
-                            onClick: c,
-                        }),
+                        (0, a.jsx)(n.Button, { variant: "primary", text: l.intl.string(l.t.j7Vi2i), onClick: d }),
                         (0, a.jsx)(n.Button, {
                             text: l.intl.string(l.t["/bHu89"]),
                             variant: "secondary",
                             onClick: () => {
-                                c(), (0, e.A)(s, !0);
+                                d(), (0, e.A)(i, !0);
                             },
                         }),
                     ],

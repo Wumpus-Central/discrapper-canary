@@ -1,21 +1,17 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => d });
+var i = n(627968),
     l = n(64700),
-    i = n(158954),
+    s = n(158954),
     a = n(607272),
-    s = n(985018),
+    r = n(985018),
     o = n(993169);
-
-function c(e) {
+function d(e) {
     let { userId: t, applicationId: n } = e,
-        [c, u] = l.useState(!1),
-        [d, f] = l.useState(!1),
-        p = l.useCallback(
+        [d, c] = l.useState(!1),
+        [u, h] = l.useState(!1),
+        A = l.useCallback(
             async (e) => {
-                e.stopPropagation(), f(!0);
+                e.stopPropagation(), h(!0);
                 try {
                     await a.A.cancelFriendRequest({
                         userId: t,
@@ -23,14 +19,14 @@ function c(e) {
                         location: "ActionButtonFriendRequest",
                     });
                 } finally {
-                    f(!1);
+                    h(!1);
                 }
             },
             [n, t],
         ),
-        h = l.useCallback(
+        g = l.useCallback(
             async (e) => {
-                e.stopPropagation(), u(!0);
+                e.stopPropagation(), c(!0);
                 try {
                     await a.A.maybeConfirmFriendRequestAccept({
                         userId: t,
@@ -38,29 +34,29 @@ function c(e) {
                         location: "ActionButtonFriendRequest",
                     });
                 } finally {
-                    u(!1);
+                    c(!1);
                 }
             },
             [n, t],
         );
-    return (0, r.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: o.Ze,
-        children: (0, r.jsxs)(i.e2v, {
+        children: (0, i.jsxs)(s.e2v, {
             size: "sm",
             children: [
-                (0, r.jsx)(i.$nd, {
+                (0, i.jsx)(s.$nd, {
                     variant: "active",
-                    onClick: h,
-                    text: s.intl.string(s.t.Zcibdf),
-                    loading: c,
-                    disabled: d,
-                }),
-                (0, r.jsx)(i.$nd, {
-                    variant: "secondary",
-                    onClick: p,
-                    text: s.intl.string(s.t.xuio0C),
+                    onClick: g,
+                    text: r.intl.string(r.t.Zcibdf),
                     loading: d,
-                    disabled: c,
+                    disabled: u,
+                }),
+                (0, i.jsx)(s.$nd, {
+                    variant: "secondary",
+                    onClick: A,
+                    text: r.intl.string(r.t.xuio0C),
+                    loading: u,
+                    disabled: d,
                 }),
             ],
         }),

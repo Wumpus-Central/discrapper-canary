@@ -1,8 +1,8 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "vas\xe1rnap h\xe9tfőn kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
-
     function n(e, t, n, r) {
         var i = e;
         switch (n) {
@@ -33,7 +33,6 @@
         }
         return "";
     }
-
     function r(e) {
         return (e ? "" : "[m\xfalt] ") + "[" + t[this.day()] + "] LT[-kor]";
     }
@@ -90,9 +89,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

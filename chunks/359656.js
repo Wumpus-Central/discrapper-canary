@@ -1,55 +1,37 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => c });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n(503698),
+    a = n.n(s),
+    r = n(397927),
     o = n(183555),
-    c = n(752458);
-
-function u(e) {
-    let { section: t, header: n, items: i, listClassName: u, onExpand: d } = e,
-        { trackUserProfileAction: f } = (0, o.NJ)(),
-        p = l.useId(),
-        [h, b] = l.useState(!1),
-        g = h ? s.abt : s._BQ;
-    return (0, r.jsxs)("section", {
-        className: c.uW,
+    d = n(752458);
+function c(e) {
+    let { section: t, header: n, items: s, listClassName: c, onExpand: u } = e,
+        { trackUserProfileAction: h } = (0, o.NJ)(),
+        A = l.useId(),
+        [g, m] = l.useState(!1),
+        p = g ? r.abt : r._BQ;
+    return (0, i.jsxs)("section", {
+        className: d.uW,
         children: [
-            (0, r.jsxs)(s.DUT, {
-                className: a()(c.wx, c.vk),
-                "aria-controls": p,
-                "aria-expanded": h,
+            (0, i.jsxs)(r.DUT, {
+                className: a()(d.wx, d.vk),
+                "aria-controls": A,
+                "aria-expanded": g,
                 onClick: () => {
-                    b(!h),
-                        h ||
-                            (f({
-                                action: "PRESS_SECTION",
-                                section: t,
-                            }),
-                            null == d || d());
+                    m(!g), g || (h({ action: "PRESS_SECTION", section: t }), u?.());
                 },
                 children: [
-                    (0, r.jsxs)(s.Heading, {
+                    (0, i.jsxs)(r.Heading, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: [n, " — ", i.length],
+                        children: [n, " — ", s.length],
                     }),
-                    (0, r.jsx)(g, {
-                        size: "md",
-                    }),
+                    (0, i.jsx)(p, { size: "md" }),
                 ],
             }),
-            i.length > 0 &&
-                (0, r.jsx)("ul", {
-                    id: p,
-                    hidden: !h,
-                    className: a()(c.p_, u),
-                    children: i,
-                }),
+            s.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !g, className: a()(d.p_, c), children: s }),
         ],
     });
 }

@@ -1,3 +1,1 @@
-e.exports = {
-    L: "toggle_a63120",
-};
+e.exports = { L: "toggle_a63120" };

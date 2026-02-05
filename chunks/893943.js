@@ -1,7 +1,4 @@
-n.d(t, {
-    X: () => r,
-});
-
-function r(e) {
+n.d(t, { X: () => i });
+function i(e) {
     return e.length > 0;
 }

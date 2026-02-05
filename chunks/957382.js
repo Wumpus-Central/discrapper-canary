@@ -1,3 +1,1 @@
-e.exports = {
-    h: "cardList__2357e",
-};
+e.exports = { h: "cardList__2357e" };

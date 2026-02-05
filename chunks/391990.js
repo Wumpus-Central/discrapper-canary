@@ -32,20 +32,11 @@ e.exports = function (e) {
                 beginKeywords: "struct enum service exception",
                 end: /\{/,
                 illegal: /\n/,
-                contains: [
-                    e.inherit(e.TITLE_MODE, {
-                        starts: {
-                            endsWithParent: !0,
-                            excludeEnd: !0,
-                        },
-                    }),
-                ],
+                contains: [e.inherit(e.TITLE_MODE, { starts: { endsWithParent: !0, excludeEnd: !0 } })],
             },
             {
                 begin: "\\b(set|list|map)\\s*<",
-                keywords: {
-                    type: [...t, "set", "list", "map"],
-                },
+                keywords: { type: [...t, "set", "list", "map"] },
                 end: ">",
                 contains: ["self"],
             },

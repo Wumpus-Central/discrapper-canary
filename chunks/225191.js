@@ -1,3 +1,4 @@
+"use strict";
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -10,6 +11,4 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-r.d(t, {
-    A: () => a,
-});
+r.d(t, { A: () => a });

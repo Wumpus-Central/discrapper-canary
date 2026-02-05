@@ -1,65 +1,43 @@
-n.d(t, {
-    Ay: () => _,
-    Be: () => u,
-    Nj: () => d,
-    y3: () => f,
-}),
-    n(747238),
-    n(812715);
-var r,
-    i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    o = n.n(s),
-    l = n(666817);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var u = (function (e) {
-    return (
-        (e.UNKNOWN = "unknown"),
-        (e.VISA = "visa"),
-        (e.DISCOVER = "discover"),
-        (e.MASTERCARD = "mastercard"),
-        (e.AMEX = "amex"),
-        (e.PAYPAL = "paypal"),
-        (e.PAYMENT_REQUEST = "paymentRequest"),
-        (e.G_PAY = "gPay"),
-        (e.DINERS = "diners"),
-        (e.JCB = "jcb"),
-        (e.UNIONPAY = "unionpay"),
-        (e.SOFORT = "sofort"),
-        (e.PRZELEWY24 = "przelewy24"),
-        (e.GIROPAY = "giropay"),
-        (e.PAYSAFECARD = "paysafecard"),
-        (e.GCASH = "gcash"),
-        (e.GRABPAY = "grabpay"),
-        (e.MOMO_WALLET = "momo_wallet"),
-        (e.VENMO = "venmo"),
-        (e.KAKAOPAY = "kakaopay"),
-        (e.GOPAY_WALLET = "gopay_wallet"),
-        (e.BANCONTACT = "bancontact"),
-        (e.EPS = "eps"),
-        (e.IDEAL = "ideal"),
-        (e.CASH_APP = "cash_app"),
-        (e.APPLE = "apple"),
-        (e.APPLE_LIGHT = "apple_light"),
-        e
-    );
-})({});
-
-function d(e) {
+"use strict";
+n.d(t, { Ay: () => _, Be: () => l, Nj: () => u, y3: () => c });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(666817),
+    l = (function (e) {
+        return (
+            (e.UNKNOWN = "unknown"),
+            (e.VISA = "visa"),
+            (e.DISCOVER = "discover"),
+            (e.MASTERCARD = "mastercard"),
+            (e.AMEX = "amex"),
+            (e.PAYPAL = "paypal"),
+            (e.PAYMENT_REQUEST = "paymentRequest"),
+            (e.G_PAY = "gPay"),
+            (e.DINERS = "diners"),
+            (e.JCB = "jcb"),
+            (e.UNIONPAY = "unionpay"),
+            (e.SOFORT = "sofort"),
+            (e.PRZELEWY24 = "przelewy24"),
+            (e.GIROPAY = "giropay"),
+            (e.PAYSAFECARD = "paysafecard"),
+            (e.GCASH = "gcash"),
+            (e.GRABPAY = "grabpay"),
+            (e.MOMO_WALLET = "momo_wallet"),
+            (e.VENMO = "venmo"),
+            (e.KAKAOPAY = "kakaopay"),
+            (e.GOPAY_WALLET = "gopay_wallet"),
+            (e.BANCONTACT = "bancontact"),
+            (e.EPS = "eps"),
+            (e.IDEAL = "ideal"),
+            (e.CASH_APP = "cash_app"),
+            (e.APPLE = "apple"),
+            (e.APPLE_LIGHT = "apple_light"),
+            e
+        );
+    })({});
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -116,30 +94,17 @@ function d(e) {
             return n(511403);
     }
 }
-let f = {
-    SMALL: l.cardIconSmall,
-    MEDIUM: l.cardIconMedium,
-    LARGE: l.cardIconLarge,
-    XLARGE: l.cardIconXLarge,
-};
-class p extends (r = a.PureComponent) {
+let c = { SMALL: o.cardIconSmall, MEDIUM: o.cardIconMedium, LARGE: o.cardIconLarge, XLARGE: o.cardIconXLarge };
+class d extends i.PureComponent {
+    static Types = l;
+    static Sizes = c;
     static getType(e) {
-        return null == e ? "unknown" : u[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : l[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
+    static defaultProps = { size: c.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: t, className: n, size: r } = this.props;
-        return (0, i.jsx)("div", {
-            className: o()(r, l[t], n, {
-                [l.flipped]: e,
-            }),
-            children: t,
-        });
+        let { flipped: e, type: t, className: n, size: i } = this.props;
+        return (0, r.jsx)("div", { className: s()(i, o[t], n, { [o.flipped]: e }), children: t });
     }
 }
-c(p, "Types", u),
-    c(p, "Sizes", f),
-    c(p, "defaultProps", {
-        size: f.SMALL,
-        flipped: !1,
-    });
-let _ = p;
+let _ = d;

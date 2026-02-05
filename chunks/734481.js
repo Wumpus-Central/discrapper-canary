@@ -1,7 +1,5 @@
-n.d(t, {
-    B: () => i,
-    U: () => r,
-});
+"use strict";
+n.d(t, { B: () => i, U: () => r });
 var r = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
     i = (function () {
         function e(e, t) {

@@ -1,6 +1,5 @@
-n.d(t, {
-    z: () => s,
-});
+"use strict";
+n.d(t, { z: () => s });
 var r = n(242874),
     i = n(170887),
     a = n(788868);
@@ -38,11 +37,7 @@ let s = (e, t) => {
                     });
             break;
         case a.o2.STANDARD_BOX:
-            if (
-                (0, i.R)({
-                    location: "GiftAnimationData",
-                })
-            )
+            if ((0, i.R)({ location: "GiftAnimationData" }))
                 switch (t) {
                     case r.oA.IDLE:
                         s = () =>
@@ -212,7 +207,7 @@ let s = (e, t) => {
                     s = () =>
                         n
                             .e("12250")
-                            .then(n.t.bind(n, 553998, 19))
+                            .then(n.t.bind(n, 331617, 19))
                             .then((e) => {
                                 let { default: t } = e;
                                 return t;

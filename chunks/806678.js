@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iM: "buttonSparkleStar1_fc1723",
     bP: "buttonSparkleStar2_fc1723",

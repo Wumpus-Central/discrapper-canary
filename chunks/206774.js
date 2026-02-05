@@ -1,166 +1,97 @@
-n.d(t, {
-    A: () => S,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => v });
+var i = n(627968),
+    s = n(64700),
     l = n(284009),
-    s = n.n(l),
+    r = n.n(l),
     a = n(311907),
-    c = n(397927),
-    o = n(58149),
-    d = n(495273),
+    o = n(397927),
+    d = n(58149),
+    c = n(495273),
     u = n(619006),
-    f = n(576705),
+    m = n(576705),
     g = n(954571),
-    b = n(403362),
-    m = n(642133),
-    p = n(555337),
-    x = n(396816),
-    h = n(856644),
-    j = n(614164),
-    O = n(28495),
-    y = n(869568),
-    v = n(541285),
-    A = n(728713),
-    E = n(927573),
-    N = n(652215),
-    _ = n(326028);
-
-function S(e) {
+    x = n(403362),
+    h = n(642133),
+    _ = n(555337),
+    A = n(396816),
+    p = n(856644),
+    f = n(614164),
+    j = n(28495),
+    N = n(869568),
+    E = n(541285),
+    b = n(728713),
+    T = n(927573),
+    C = n(652215),
+    I = n(326028);
+function v(e) {
     let t,
-        { editRoleId: n, setEditRoleId: l, selectedSection: S, setSelectedSection: T } = e,
-        I = (0, a.bG)([x.A], () => x.A.guild, []);
-    s()(null != I, "guildId cannot be null here");
-    let { role: C, permissionSearchQuery: P } = (0, a.cf)(
-        [x.A],
-        () => ({
-            role: x.A.getRole(n),
-            permissionSearchQuery: x.A.getPermissionSearchQuery(),
-        }),
+        { editRoleId: n, setEditRoleId: l, selectedSection: v, setSelectedSection: S } = e,
+        y = (0, a.bG)([A.A], () => A.A.guild, []);
+    r()(null != y, "guildId cannot be null here");
+    let { role: R, permissionSearchQuery: O } = (0, a.cf)(
+        [A.A],
+        () => ({ role: A.A.getRole(n), permissionSearchQuery: A.A.getPermissionSearchQuery() }),
         [n],
     );
-    i.useEffect(() => {
-        null == C && l(null);
-    }, [C, l]);
-    let w = (0, a.bG)([f.A], () => f.A.getHighestRole(I), [I]),
-        R = (0, a.bG)([f.A], () => !f.A.isRoleHigher(I, w, C)),
-        D = i.useRef(null),
-        G = (0, a.bG)([p.A], () => p.A.getProps().integrations),
-        L = {
-            role: C,
-            editRoleId: n,
-        },
-        k = i.useRef(L);
+    s.useEffect(() => {
+        null == R && l(null);
+    }, [R, l]);
+    let G = (0, a.bG)([m.A], () => m.A.getHighestRole(y), [y]),
+        L = (0, a.bG)([m.A], () => !m.A.isRoleHigher(y, G, R)),
+        D = s.useRef(null),
+        M = (0, a.bG)([_.A], () => _.A.getProps().integrations),
+        k = { role: R, editRoleId: n },
+        U = s.useRef(k);
     if (
-        (i.useEffect(() => {
-            k.current = L;
+        (s.useEffect(() => {
+            U.current = k;
         }),
-        i.useEffect(() => {
-            var e, t;
-            let { role: n, editRoleId: r } = k.current,
-                i = (0, h.L9)(S),
-                l = null != (e = null == (t = m.A.getRoleMemberCount(I.id)) ? void 0 : t[r]) ? e : 0;
-            g.default.track(
-                N.HAw.ROLE_PAGE_VIEWED,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        tab_opened: i,
-                        is_everyone: (0, d.N8)(I.id, r),
-                        role_id: r,
-                        role_mentionable: null == n ? void 0 : n.mentionable,
-                        role_hoist: null == n ? void 0 : n.hoist,
-                        role_permissions: null == n ? void 0 : n.permissions.toString(),
-                        role_num_members: l,
-                    },
-                    (0, o.H$)(I.id),
-                ),
-            );
-        }, [S, I.id, null == C ? void 0 : C.id]),
-        i.useEffect(() => {
-            (null == C ? void 0 : C.id) != null && (0, u.os)(I.id, C.id);
-        }, [I.id, null == C ? void 0 : C.id]),
-        null == C)
+        s.useEffect(() => {
+            let { role: e, editRoleId: t } = U.current,
+                n = (0, p.L9)(v),
+                i = h.A.getRoleMemberCount(y.id)?.[t] ?? 0;
+            g.default.track(C.HAw.ROLE_PAGE_VIEWED, {
+                tab_opened: n,
+                is_everyone: (0, c.N8)(y.id, t),
+                role_id: t,
+                role_mentionable: e?.mentionable,
+                role_hoist: e?.hoist,
+                role_permissions: e?.permissions.toString(),
+                role_num_members: i,
+                ...(0, d.H$)(y.id),
+            });
+        }, [v, y.id, R?.id]),
+        s.useEffect(() => {
+            R?.id != null && (0, u.os)(y.id, R.id);
+        }, [y.id, R?.id]),
+        null == R)
     )
         return null;
-    switch (S) {
-        case E.T$.DISPLAY:
-            t = (0, r.jsx)(O.Ay, {
-                guild: I,
-                role: C,
-                locked: R,
-                highestRole: w,
-                setSelectedSection: T,
-            });
+    switch (v) {
+        case T.T$.DISPLAY:
+            t = (0, i.jsx)(j.Ay, { guild: y, role: R, locked: L, highestRole: G, setSelectedSection: S });
             break;
-        case E.T$.PERMISSIONS:
-            t = (0, r.jsx)(v.Ay, {
-                guild: I,
-                role: C,
-                locked: R,
-                setSelectedSection: T,
-                initialSearchQuery: P,
-            });
+        case T.T$.PERMISSIONS:
+            t = (0, i.jsx)(E.Ay, { guild: y, role: R, locked: L, setSelectedSection: S, initialSearchQuery: O });
             break;
-        case E.T$.VERIFICATIONS:
-            t = (0, r.jsx)(j.A, {
-                guild: I,
-                role: C,
-                locked: R,
-                setSelectedSection: T,
-                integrations: null != G ? G : void 0,
-            });
+        case T.T$.VERIFICATIONS:
+            t = (0, i.jsx)(f.A, { guild: y, role: R, locked: L, setSelectedSection: S, integrations: M ?? void 0 });
             break;
-        case E.T$.MEMBERS:
-            t = (0, r.jsx)(y.Ay, {
-                guild: I,
-                role: C,
-                locked: R,
-                setSelectedSection: T,
-            });
+        case T.T$.MEMBERS:
+            t = (0, i.jsx)(N.Ay, { guild: y, role: R, locked: L, setSelectedSection: S });
             break;
         default:
-            (0, b.xb)(S);
+            (0, x.xb)(v);
     }
-    return (0, r.jsxs)("div", {
-        className: _.MY,
+    return (0, i.jsxs)("div", {
+        className: I.MY,
         children: [
-            (0, r.jsx)(A.A, {
-                guild: I,
-                currentRoleId: n,
-                setCurrentRoleId: l,
-                setSelectedSection: T,
-            }),
-            (0, r.jsx)("div", {
-                className: _.hQ,
+            (0, i.jsx)(b.A, { guild: y, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: S }),
+            (0, i.jsx)("div", {
+                className: I.hQ,
                 ref: D,
-                children: (0, r.jsx)(c.xpW, {
-                    containerRef: D,
-                    children: t,
-                }),
+                children: (0, i.jsx)(o.xpW, { containerRef: D, children: t }),
             }),
         ],
     });

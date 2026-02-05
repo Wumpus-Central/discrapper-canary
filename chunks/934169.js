@@ -1,3 +1,4 @@
+"use strict";
 var n = "(?:[a-z0-9]{5,8}|\\d[a-z0-9]{3})",
     r = "[0-9a-wy-z]",
     i = r + "(?:-[a-z0-9]{2,8})+",
@@ -17,5 +18,5 @@ var n = "(?:[a-z0-9]{5,8}|\\d[a-z0-9]{3})",
     ),
     o = RegExp("^(?!x).*?-(" + n + ")-(?:\\w{4,8}-(?!x-))*\\1\\b", "i"),
     l = RegExp("^(?!x).*?-(" + r + ")-(?:\\w+-(?!x-))*\\1\\b", "i"),
-    c = RegExp("-" + i, "ig");
-(t.expBCP47Syntax = s), (t.expVariantDupes = o), (t.expSingletonDupes = l), (t.expExtSequences = c);
+    u = RegExp("-" + i, "ig");
+(t.expBCP47Syntax = s), (t.expVariantDupes = o), (t.expSingletonDupes = l), (t.expExtSequences = u);

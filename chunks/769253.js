@@ -1,3 +1,2 @@
-e.exports = {
-    l: "appMount__51fd7",
-};
+"use strict";
+e.exports = { l: "appMount__51fd7" };

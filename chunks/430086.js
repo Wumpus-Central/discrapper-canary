@@ -1,48 +1,34 @@
-n.d(t, {
-    Fv: () => p,
-    GY: () => _,
-    M$: () => h,
-    Oc: () => f,
-    kF: () => d,
-});
-var r = n(949645),
-    i = n(265422),
-    a = n(963169),
-    s = n(345942),
-    o = n(309010),
-    l = n(967198),
+n.d(t, { Fv: () => m, GY: () => A, M$: () => g, Oc: () => _, kF: () => u });
+var i = n(949645),
+    s = n(265422),
+    r = n(963169),
+    a = n(345942),
+    l = n(309010),
+    o = n(967198),
     c = n(723702),
-    u = n(652215);
-let d = {
-        binds: ["alt+down"],
-        comboKeysBindGlobal: !0,
-        action: () => ((0, r.A)(), !1),
-    },
-    f = {
-        binds: ["alt+up"],
-        comboKeysBindGlobal: !0,
-        action: () => ((0, r.A)(-1), !1),
-    },
-    p = {
+    d = n(652215);
+let u = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => ((0, i.A)(), !1) },
+    _ = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => ((0, i.A)(-1), !1) },
+    m = {
         binds: ["mod+alt+right"],
         comboKeysBindGlobal: !0,
         action() {
             let e;
-            if (null != l.A.getGuildId()) e = u.ME;
+            if (null != o.A.getGuildId()) e = d.ME;
             else {
-                let t = l.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, i.i)(t, o.A.getChannelId(t)));
+                let t = o.A.getLastSelectedGuildId();
+                null != t && ((e = t), (0, s.i)(t, l.A.getChannelId(t)));
             }
-            return null != e && (0, s.u)(e), !1;
+            return null != e && (0, a.u)(e), !1;
         },
     },
-    _ = {
+    A = {
         binds: (0, c.isMac)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, a.OE)("keybind"), !1),
+        action: () => ((0, r.OE)("keybind"), !1),
     },
-    h = {
+    g = {
         binds: (0, c.isMac)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, a.Qb)("keybind"), !1),
+        action: () => ((0, r.Qb)("keybind"), !1),
     };

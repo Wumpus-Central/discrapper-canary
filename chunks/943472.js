@@ -1,7 +1,4 @@
-n.r(t),
-    n.d(t, {
-        default: () => m,
-    });
+n.r(t), n.d(t, { default: () => f });
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -9,87 +6,79 @@ var r = n(627968),
     a = n(401843),
     o = n(512513),
     u = n(386467),
-    c = n(923917),
-    d = n(574172),
-    h = n(981355),
-    p = n(175203),
-    w = n(461782),
-    b = n(734057),
-    f = n(309010),
-    I = n(313961),
-    O = n(164617),
-    y = n(567987),
-    T = n(806931),
-    C = n(652215),
-    A = n(985018),
-    P = n(732154);
-let L = [o.z];
-
-function m(e) {
+    d = n(923917),
+    c = n(574172),
+    h = n(203736),
+    I = n(175203),
+    T = n(461782),
+    w = n(734057),
+    C = n(309010),
+    p = n(313961),
+    A = n(164617),
+    L = n(567987),
+    E = n(806931),
+    m = n(652215),
+    _ = n(985018),
+    U = n(732154);
+let P = [o.z];
+function f(e) {
     let { windowKey: t, channelId: n, participantId: o } = e,
-        m = (0, i.bG)([b.A], () => b.A.getChannel(n)),
-        E = (0, i.bG)([I.A], () => I.A.getParticipant(n, o), [n, o]),
-        g = null != m && null != E,
-        U = (0, i.bG)([f.A], () => f.A.getVoiceChannelId() === n);
+        f = (0, i.bG)([w.A], () => w.A.getChannel(n)),
+        g = (0, i.bG)([p.A], () => p.A.getParticipant(n, o), [n, o]),
+        y = null != f && null != g,
+        M = (0, i.bG)([C.A], () => C.A.getVoiceChannelId() === n);
     l.useEffect(() => {
-        (g && U) || d.close(t);
-    }, [g, U, t]);
-    let _ = l.useCallback(
+        (y && M) || c.close(t);
+    }, [y, M, t]);
+    let O = l.useCallback(
             (e) => {
                 let { unmountWindow: t } = e;
                 s.A.returnParticipant(n, o), t();
             },
             [n, o],
         ),
-        j = (0, y.E)({
-            channel: m,
-        }),
-        M = l.useCallback(() => {
-            (0, T.Ay)(E) &&
-                (0, a.A9)(E.stream, {
-                    forceMultiple: !0,
-                });
-        }, [E]),
-        v = l.useMemo(
+        b = (0, L.E)({ channel: f }),
+        x = l.useCallback(() => {
+            (0, E.Ay)(g) && (0, a.A9)(g.stream, { forceMultiple: !0 });
+        }, [g]),
+        R = l.useMemo(
             () =>
-                null == E
-                    ? A.intl.string(A.t.lfzt24)
-                    : E.type === T.lp.USER
-                      ? E.user.username
-                      : E.type === T.lp.STREAM
-                        ? A.intl.formatToPlainString(A.t["/DC1y9"], {
-                              username: E.user.username,
-                          })
-                        : A.intl.string(A.t["8vlBo7"]),
-            [E],
+                null == g
+                    ? _.intl.string(_.t.lfzt24)
+                    : g.type === E.lp.USER
+                      ? g.user.username
+                      : g.type === E.lp.STREAM
+                        ? _.intl.formatToPlainString(_.t["/DC1y9"], { username: g.user.username })
+                        : _.intl.string(_.t["8vlBo7"]),
+            [g],
         ),
-        x = (0, h.A)();
-    return (0, r.jsx)(c.A, {
+        S = (0, h.A)();
+    return (0, r.jsx)(d.A, {
         withTitleBar: !0,
-        keybinds: L,
+        keybinds: P,
         windowKey: t,
-        title: v,
+        title: R,
         channelId: n,
-        onBeforeUnload: _,
-        appContext: C.BRT.CALL_TILE_POPOUT,
+        onBeforeUnload: O,
+        appContext: m.BRT.CALL_TILE_POPOUT,
         hideModals: !0,
-        children: g
+        children: y
             ? (0, r.jsx)(u.A.Provider, {
-                  value: m.guild_id,
-                  children: (0, r.jsx)(w.Ay, {
+                  value: f.guild_id,
+                  children: (0, r.jsx)(T.Ay, {
                       timeout: 2e3,
                       children: () =>
-                          (0, r.jsx)(p.Ay, {
-                              className: P.V,
-                              participant: E,
-                              channel: m,
-                              width: x.width,
+                          (0, r.jsx)(I.Ay, {
+                              className: U.V,
+                              participant: g,
+                              channel: f,
+                              width: S.width,
                               inCall: !0,
-                              popoutType: O.N.CALL_TILE,
+                              popoutType: A.N.CALL_TILE,
                               focused: !0,
                               noBorder: !0,
-                              onContextMenu: j,
-                              onClick: M,
+                              onContextMenu: b,
+                              onClick: x,
                           }),
                   }),
               })

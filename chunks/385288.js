@@ -1,3 +1,1 @@
-e.exports = {
-    J: "matureListing__49e1d",
-};
+e.exports = { J: "matureListing__49e1d" };

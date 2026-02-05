@@ -1,16 +1,10 @@
-n.d(t, {
-    D$: () => d,
-    Ml: () => l,
-    S$: () => p,
-    bB: () => c,
-    lu: () => f,
-});
+"use strict";
+n.d(t, { D$: () => d, Ml: () => l, S$: () => f, bB: () => u, lu: () => _ });
 var r = n(73153),
     i = n(308528),
     a = n(734057),
-    o = n(810412),
-    s = n(187667);
-
+    s = n(810412),
+    o = n(187667);
 function l(e) {
     let { channelId: t, source: n, lastActivityAtMs: i = Date.now(), lastMessageId: a } = e;
     return r.h.dispatch({
@@ -21,72 +15,49 @@ function l(e) {
         lastMessageId: a,
     });
 }
-var c = (function (e) {
+var u = (function (e) {
     return (e.CHANNEL = "CHANNEL"), (e.DM_USER = "DM_USER"), e;
 })({});
-async function u(e) {
-    var t;
-    let { userId: n, existingChannelId: r } = e,
-        o = null != (t = null != r ? r : a.A.getDMFromUserId(n)) ? t : null;
-    if (null != o) return o;
+async function c(e) {
+    let { userId: t, existingChannelId: n } = e,
+        r = n ?? a.A.getDMFromUserId(t) ?? null;
+    if (null != r) return r;
     try {
-        return await i.A.getDMChannel(n);
-    } catch (e) {
+        return await i.A.getDMChannel(t);
+    } catch {
         return null;
     }
 }
 async function d(e) {
-    var t;
-    let { target: n, source: i, widgetType: a } = e,
-        l = "CHANNEL" === n.kind ? n.channelId : await u(n);
-    if (null == l) return null;
-    let c = "CHANNEL" === n.kind ? n.guildId : null,
-        d = null != (t = n.messageId) ? t : null,
-        f = s.A.getSelectedChannelId();
+    let { target: t, source: n, widgetType: i } = e,
+        a = "CHANNEL" === t.kind ? t.channelId : await c(t);
+    if (null == a) return null;
+    let l = "CHANNEL" === t.kind ? t.guildId : null,
+        u = t.messageId ?? null,
+        d = o.A.getSelectedChannelId();
     return (
-        null != a &&
-            (null == f
-                ? (0, o.YX)(a, {
-                      type: o.Z5.TEXT_CHAT,
-                      value: o.IP.OPENED_TEXT_CHAT,
-                      secondaryValue: i,
-                  })
-                : f !== l &&
-                  (0, o.YX)(a, {
-                      type: o.Z5.TEXT_CHAT,
-                      value: o.IP.CHANNEL_SELECTED,
-                      secondaryValue: i,
-                  })),
+        null != i &&
+            (null == d
+                ? (0, s.YX)(i, { type: s.Z5.TEXT_CHAT, value: s.IP.OPENED_TEXT_CHAT, secondaryValue: n })
+                : d !== a && (0, s.YX)(i, { type: s.Z5.TEXT_CHAT, value: s.IP.CHANNEL_SELECTED, secondaryValue: n })),
         await r.h.dispatch({
             type: "OVERLAY_TEXT_CHAT_SELECT_CHANNEL",
-            channelId: l,
-            source: i,
-            guildId: c,
-            messageId: d,
+            channelId: a,
+            source: n,
+            guildId: l,
+            messageId: u,
         }),
-        l
+        a
     );
 }
-
-function f(e) {
+function _(e) {
     let { channelId: t, widgetType: n, secondaryValue: i = "remove_channel" } = e;
     return (
-        (0, o.YX)(n, {
-            type: o.Z5.TEXT_CHAT,
-            value: o.IP.CLOSED_TEXT_CHAT,
-            secondaryValue: i,
-        }),
-        r.h.dispatch({
-            type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL",
-            channelId: t,
-        })
+        (0, s.YX)(n, { type: s.Z5.TEXT_CHAT, value: s.IP.CLOSED_TEXT_CHAT, secondaryValue: i }),
+        r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
     );
 }
-
-function p(e) {
+function f(e) {
     let { minimized: t } = e;
-    return r.h.dispatch({
-        type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED",
-        minimized: t,
-    });
+    return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED", minimized: t });
 }

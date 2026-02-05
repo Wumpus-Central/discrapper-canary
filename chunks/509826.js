@@ -1,3 +1,1 @@
-e.exports = {
-    k: "container_ad5cdf",
-};
+e.exports = { k: "container_ad5cdf" };

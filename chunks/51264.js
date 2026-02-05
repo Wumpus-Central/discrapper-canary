@@ -1,68 +1,43 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => p });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(506774),
-    c = n(397927),
-    u = n(521502),
-    d = n(380610),
-    p = n(828184),
-    f = n(985018),
-    h = n(908874);
-let A = "isHideDevBanner",
-    g = () => {
-        var e;
-        let [t, n] = (0, i.useState)((null == (e = o.w.get(A, "false")) ? void 0 : e.toString()) === "true"),
-            l = (0, s.bG)([u.A], () => {
-                var e;
-                return (0, d.kK)()
-                    ? null == (e = u.A.getCurrentBuildOverride().overrides)
-                        ? void 0
-                        : e.discord_web
-                    : null;
-            });
-        if (t) return null;
-        let g = () => {
-                o.w.set(A, !0), n(!0);
+    d = n(397927),
+    c = n(521502),
+    u = n(380610),
+    A = n(828184),
+    h = n(985018),
+    _ = n(908874);
+let m = "isHideDevBanner",
+    p = () => {
+        let [e, t] = (0, r.useState)(o.w.get(m, "false")?.toString() === "true"),
+            n = (0, s.bG)([c.A], () => ((0, u.kK)() ? c.A.getCurrentBuildOverride().overrides?.discord_web : null));
+        if (e) return null;
+        let a = () => {
+                o.w.set(m, !0), t(!0);
             },
-            m = () =>
-                (0, r.jsx)(c.DUT, {
-                    onClick: g,
-                    className: h.b,
-                    "aria-label": f.intl.string(f.t.WAI6xu),
-                    children: (0, r.jsx)(c.PGe, {
-                        size: "md",
-                        color: "currentColor",
-                        className: h.ut,
-                    }),
+            p = () =>
+                (0, i.jsx)(d.DUT, {
+                    onClick: a,
+                    className: _.b,
+                    "aria-label": h.intl.string(h.t.WAI6xu),
+                    children: (0, i.jsx)(d.PGe, { size: "md", color: "currentColor", className: _.ut }),
                 });
-        return null != l
-            ? (0, r.jsxs)("div", {
-                  className: a()(h.Wz, h.DM),
-                  children: [
-                      (0, r.jsx)(p.A, {
-                          className: h.Kk,
-                      }),
-                      f.intl.string(f.t.Wj3LW4),
-                      (0, r.jsx)(m, {}),
-                  ],
+        return null != n
+            ? (0, i.jsxs)("div", {
+                  className: l()(_.Wz, _.DM),
+                  children: [(0, i.jsx)(A.A, { className: _.Kk }), h.intl.string(h.t.Wj3LW4), (0, i.jsx)(p, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
-              ? (0, r.jsxs)("div", {
-                    className: a()(h.Wz, h.mr),
+              ? (0, i.jsxs)("div", {
+                    className: l()(_.Wz, _.mr),
                     children: [
-                        (0, r.jsx)(p.A, {
-                            className: h.Kk,
-                        }),
-                        f.intl.format(f.t.uyrfYF, {
-                            buildNumber: "488230",
-                        }),
-                        (0, r.jsx)(m, {}),
+                        (0, i.jsx)(A.A, { className: _.Kk }),
+                        h.intl.format(h.t.uyrfYF, { buildNumber: "493560" }),
+                        (0, i.jsx)(p, {}),
                     ],
                 })
               : null;

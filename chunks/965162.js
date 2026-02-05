@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, {
     D1: () => g,
     Eo: () => E,
-    Hk: () => y,
-    R4: () => b,
+    Hk: () => I,
+    R4: () => A,
     Uz: () => m,
     _V: () => h,
-    d1: () => u,
+    d1: () => c,
     pR: () => d,
-    wC: () => p,
+    wC: () => f,
 });
 var r = n(58149),
     i = n(734057),
@@ -15,25 +16,20 @@ var r = n(58149),
     s = n(954571),
     o = n(486020),
     l = n(577718),
-    c = n(652215);
-
-function u(e) {
+    u = n(652215);
+function c(e) {
     return null != e && "object" == typeof e && "id" in e && e.type === l.yZ.BACKGROUND;
 }
-
 function d(e) {
     return "number" == typeof e && e in l.ZQ;
 }
-
-function f(e) {
-    return d(e) ? l.wJ.includes(e) : !!u(e) && ((0, o.VI)(e.asset) || (0, o.q6)(e.asset));
+function _(e) {
+    return d(e) ? l.wJ.includes(e) : !!c(e) && ((0, o.VI)(e.asset) || (0, o.q6)(e.asset));
 }
-
-function p(e) {
+function f(e) {
     return null != e ? "Video Background" : "None";
 }
-
-function _(e) {
+function p(e) {
     switch (e) {
         case l.ZQ.OPTION_1:
             return "Cybercity";
@@ -53,82 +49,49 @@ function _(e) {
             return "Wumpice";
     }
 }
-
 function h(e) {
-    return null == e ? "None" : u(e) ? "Custom" : "blur" === e ? "Blur" : "Preset - ".concat(_(e));
+    return null == e ? "None" : c(e) ? "Custom" : "blur" === e ? "Blur" : `Preset - ${p(e)}`;
 }
-
 function m(e, t, n) {
     let o = a.A.getGuildId(),
         l = a.A.getChannelId(),
-        u = i.A.getChannel(l),
+        c = i.A.getChannel(l),
         d = (0, r.JK)(o, l, !0);
-    s.default.track(c.HAw.VIDEO_EFFECT_UPDATED, {
+    s.default.track(u.HAw.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: p(e),
+        effect_type: f(e),
         effect_detail: h(e),
         effect_state: n,
         channel_id: l,
-        channel_type: null == u ? void 0 : u.type,
+        channel_type: c?.type,
         guild_id: o,
         voice_state_count: d.voice_state_count,
         video_stream_count: d.video_stream_count,
         media_session_id: a.A.getMediaSessionId(),
         rtc_connection_id: a.A.getRTCConnectionId(),
-        is_animated: f(e),
+        is_animated: _(e),
     });
 }
-
 function g(e, t, n) {
-    s.default.track(c.HAw.VIDEO_BACKGROUND_ADDED, {
-        is_animated: f(e),
-        is_video: t,
-        is_from_tenor: n,
-    });
+    s.default.track(u.HAw.VIDEO_BACKGROUND_ADDED, { is_animated: _(e), is_video: t, is_from_tenor: n });
 }
-
 function E(e) {
-    s.default.track(c.HAw.VIDEO_BACKGROUND_DELETED, {
-        is_animated: f(e),
-    });
+    s.default.track(u.HAw.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
 }
-
-function b(e) {
+function A(e) {
     return null == e
-        ? {
-              oneofKind: void 0,
-          }
-        : u(e)
-          ? {
-                oneofKind: "customAsset",
-                customAsset: {
-                    id: e.id,
-                    assetHash: e.asset,
-                },
-            }
+        ? { oneofKind: void 0 }
+        : c(e)
+          ? { oneofKind: "customAsset", customAsset: { id: e.id, assetHash: e.asset } }
           : "blur" === e
-            ? {
-                  oneofKind: "blur",
-                  blur: {
-                      useBlur: !0,
-                  },
-              }
-            : {
-                  oneofKind: "presetOption",
-                  presetOption: e,
-              };
+            ? { oneofKind: "blur", blur: { useBlur: !0 } }
+            : { oneofKind: "presetOption", presetOption: e };
 }
-
-function y(e, t) {
+function I(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {
         case "customAsset":
-            return {
-                type: l.yZ.BACKGROUND,
-                id: e.customAsset.id,
-                user_id: t,
-                asset: e.customAsset.assetHash,
-            };
+            return { type: l.yZ.BACKGROUND, id: e.customAsset.id, user_id: t, asset: e.customAsset.assetHash };
         case "blur":
             return e.blur.useBlur ? "blur" : null;
         case "presetOption":

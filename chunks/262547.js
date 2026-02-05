@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Kk: "icon__761e5",
     ao: "focusBlock__761e5",

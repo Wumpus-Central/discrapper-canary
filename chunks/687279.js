@@ -1,25 +1,19 @@
-l.d(t, {
-    A: () => c,
-});
-var i = l(627968);
-l(64700);
-var e = l(397927),
-    a = l(957565),
-    r = l(886393),
-    s = l(985018);
-
-function c(n, t, l) {
+i.d(t, { A: () => c });
+var l = i(627968);
+i(64700);
+var e = i(397927),
+    a = i(957565),
+    r = i(886393),
+    s = i(985018);
+function c(n, t, i) {
     return null != n
-        ? (0, r.A)(n, l, t)
-        : (0, i.jsx)(e.Drp, {
+        ? (0, r.A)(n, i, t)
+        : (0, l.jsx)(e.Drp, {
               id: "channel-copy-link",
               label: s.intl.string(s.t.WqhZss),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: e.qYV,
-              },
+              leadingAccessory: { type: "icon", icon: e.qYV },
               action: () => {
-                  (0, a.C)(null != t ? t : "");
+                  (0, a.C)(t ?? "");
               },
           });
 }

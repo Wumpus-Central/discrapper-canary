@@ -1,107 +1,81 @@
-n.d(t, {
-    A: () => A,
-});
+"use strict";
+n.d(t, { A: () => y });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(311907),
     l = n(397927),
-    c = n(212245),
-    u = n(58149),
+    u = n(212245),
+    c = n(58149),
     d = n(688810),
-    f = n(151271),
-    p = n(631305),
-    _ = n(997509),
+    _ = n(151271),
+    f = n(631305),
+    p = n(997509),
     h = n(931991),
     m = n(71393),
     g = n(473145),
     E = n(652215),
-    b = n(874864),
-    y = n(985018),
-    O = n(476217);
-let A = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: A, setTrackedUpsellViewed: v } = e,
-        { location: S } = (0, c.p)(),
-        { analyticsLocations: I } = (0, d.Ay)(),
-        T = (0, o.bG)([m.A], () => m.A.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.nr)(T),
-        N = null != T && 0 === (0, g.aG)(T.premiumTier) && !T.features.has(E.GuildFeatures.MORE_STICKERS);
+    A = n(874864),
+    I = n(985018),
+    T = n(476217);
+let y = (e) => {
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: y, setTrackedUpsellViewed: S } = e,
+        { location: v } = (0, u.p)(),
+        { analyticsLocations: C } = (0, d.Ay)(),
+        b = (0, o.bG)([m.A], () => m.A.getGuild(n)),
+        { canManageAllExpressions: N } = (0, h.nr)(b),
+        R = null != b && 0 === (0, g.aG)(b.premiumTier) && !b.features.has(E.GuildFeatures.MORE_STICKERS);
     if (
         (i.useEffect(() => {
-            C &&
-                N &&
-                A &&
-                ((0, u.zV)(E.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
-                    location: S,
-                    guild_id: null == T ? void 0 : T.id,
-                    channel_id: null == a ? void 0 : a.id,
+            N &&
+                R &&
+                y &&
+                ((0, c.zV)(E.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                    location: v,
+                    guild_id: b?.id,
+                    channel_id: a?.id,
                     type: "Expression Picker Inline Sticker Upsell",
-                    location_stack: I,
+                    location_stack: C,
                 }),
-                v(!0));
-        }, [N, T, a, S, A, v, I, C]),
-        null == T || !C)
+                S(!0));
+        }, [R, b, a, v, y, S, C, N]),
+        null == b || !N)
     )
         return null;
-    if (N) {
+    if (R) {
         let e = () => {
-            (0, p.A)({
-                analyticsLocations: I,
-                analyticsSourceLocation: S,
-                guild: T,
-                perks: (0, b.q5)(),
-            });
+            (0, f.A)({ analyticsLocations: C, analyticsSourceLocation: v, guild: b, perks: (0, A.q5)() });
         };
         return (0, r.jsxs)("div", {
-            className: s()(O.UX, t),
+            className: s()(T.UX, t),
             children: [
-                (0, r.jsx)(l.vRF, {
-                    size: "md",
-                    color: "currentColor",
-                    className: O.Kk,
-                }),
+                (0, r.jsx)(l.vRF, { size: "md", color: "currentColor", className: T.Kk }),
                 (0, r.jsx)(l.Text, {
                     color: "interactive-text-default",
-                    className: O.rf,
+                    className: T.rf,
                     variant: "text-sm/normal",
-                    children: y.intl.format(y.t.AXWla1, {
-                        count: (0, g.aG)(E.TVA.TIER_1),
-                    }),
+                    children: I.intl.format(I.t.AXWla1, { count: (0, g.aG)(E.TVA.TIER_1) }),
                 }),
-                (0, r.jsx)(l.QWc, {
-                    variant: "primary",
-                    text: y.intl.string(y.t["Gb+BJD"]),
-                    onClick: e,
-                }),
+                (0, r.jsx)(l.QWc, { variant: "primary", text: I.intl.string(I.t["Gb+BJD"]), onClick: e }),
             ],
         });
     }
     {
         let e = () => {
-            (0, f.v8)(), _.A.open(n, E.BEX.STICKERS, S);
+            (0, _.v8)(), p.A.open(n, E.BEX.STICKERS, v);
         };
         return (0, r.jsxs)("div", {
-            className: s()(O.UX, t),
+            className: s()(T.UX, t),
             children: [
-                (0, r.jsx)(l.tEP, {
-                    size: "custom",
-                    color: "currentColor",
-                    className: O.Kk,
-                    width: 20,
-                    height: 20,
-                }),
+                (0, r.jsx)(l.tEP, { size: "custom", color: "currentColor", className: T.Kk, width: 20, height: 20 }),
                 (0, r.jsx)(l.Text, {
                     color: "interactive-text-default",
-                    className: O.rf,
+                    className: T.rf,
                     variant: "text-sm/normal",
-                    children: y.intl.string(y.t.S83wgh),
+                    children: I.intl.string(I.t.S83wgh),
                 }),
-                (0, r.jsx)(l.QWc, {
-                    variant: "primary",
-                    text: y.intl.string(y.t.bwNjug),
-                    onClick: e,
-                }),
+                (0, r.jsx)(l.QWc, { variant: "primary", text: I.intl.string(I.t.bwNjug), onClick: e }),
             ],
         });
     }

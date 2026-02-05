@@ -1,25 +1,19 @@
-r.d(t, {
-    A: () => c,
-});
-var n = r(627968);
-r(64700);
-var o = r(397927),
-    i = r(442433),
-    l = r(391973),
-    a = r(985018);
-
-function c(e, t) {
-    return (0, n.jsx)(
-        o.sLh,
+a.d(e, { A: () => u });
+var i = a(627968);
+a(64700);
+var n = a(397927),
+    o = a(442433),
+    l = a(391973),
+    r = a(985018);
+function u(t, e) {
+    return (0, i.jsx)(
+        n.sLh,
         {
-            label: a.intl.string(a.t.XQQQFE),
-            checked: t,
+            label: r.intl.string(r.t.XQQQFE),
+            checked: e,
             id: "widget-layout-type",
             action: () => {
-                (0, l.cC)(e, {
-                    horizontal: !t,
-                }),
-                    (0, i.Z_)();
+                (0, l.cC)(t, { horizontal: !e }), (0, o.Z_)();
             },
         },
         "widget-layout-type",

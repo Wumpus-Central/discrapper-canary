@@ -1,32 +1,25 @@
-n.d(t, {
-    A: () => o,
-});
+n.d(t, { A: () => d });
 var l = n(627968);
 n(64700);
-var r = n(503698),
-    i = n.n(r),
-    s = n(397927),
-    a = n(751679);
-
-function o(e) {
-    let { steps: t, stepIndex: n, onClick: r } = e;
+var i = n(503698),
+    s = n.n(i),
+    a = n(397927),
+    r = n(751679);
+function d(e) {
+    let { steps: t, stepIndex: n, onClick: i } = e;
     return (0, l.jsx)("div", {
-        className: a.kL,
+        className: r.kL,
         children: t.map((e, t) => {
-            let o = n === t;
+            let d = n === t;
             return (0, l.jsxs)(
-                s.DUT,
+                a.DUT,
                 {
-                    onClick: () => r(t),
-                    className: a._h,
+                    onClick: () => i(t),
+                    className: r._h,
                     children: [
-                        (0, l.jsx)("div", {
-                            className: i()(a.hr, {
-                                [a.YD]: o,
-                            }),
-                        }),
-                        (0, l.jsx)(s.Text, {
-                            color: o ? "text-brand" : "text-muted",
+                        (0, l.jsx)("div", { className: s()(r.hr, { [r.YD]: d }) }),
+                        (0, l.jsx)(a.Text, {
+                            color: d ? "text-brand" : "text-muted",
                             variant: "text-xs/normal",
                             children: e,
                         }),

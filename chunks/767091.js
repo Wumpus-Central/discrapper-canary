@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     emojiButton: "emojiButton__04eed",
     emojiButtonHovered: "emojiButtonHovered__04eed emojiButton__04eed",

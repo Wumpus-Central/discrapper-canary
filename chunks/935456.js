@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     At: "topic__0511a",
     r9: "disabled__0511a",

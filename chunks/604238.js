@@ -1,20 +1,17 @@
-n.d(t, {
-    E: () => h,
-    e: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { E: () => h, e: () => m });
 var r = n(64700),
     i = n(735438),
     a = n(528226),
-    o = n(653793),
-    s = n(261225),
+    s = n(653793),
+    o = n(261225),
     l = n(970488),
-    c = n(720462),
-    u = n(673277),
+    u = n(720462),
+    c = n(673277),
     d = n(304973),
-    f = n(18769),
-    p = n(219561),
-    _ = n(244190);
+    _ = n(18769),
+    f = n(219561),
+    p = n(244190);
 let h = {
         ContainedHero: a.A,
         BasicHero: (e) => {
@@ -22,18 +19,18 @@ let h = {
             return null;
         },
         PromotionalHero: () => null,
-        InteractiveHScroll: c.A,
-        Grid: s.A,
+        InteractiveHScroll: u.A,
+        Grid: o.A,
         GridItem: l.A,
-        Section: u.A,
-        Card: o.A,
+        Section: c.A,
+        Card: s.A,
         FeaturedChip: d.A,
-        FeaturedCollection: f.A,
+        FeaturedCollection: _.A,
         FeaturedProduct: () => null,
-        ShopProductCard: _.A,
-        Stack: p.Kp,
-        Text: p.t,
-        Heading: p.Oo,
+        ShopProductCard: p.A,
+        Stack: f.Kp,
+        Text: f.t,
+        Heading: f.Oo,
     },
     m = (e) => {
         let { overrides: t } = e;

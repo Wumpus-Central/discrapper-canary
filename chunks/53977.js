@@ -1,162 +1,90 @@
-n.d(t, {
-    A: () => b,
-});
-var r = n(627968),
+n.d(t, { A: () => x });
+var i = n(627968),
     l = n(64700),
-    i = n(397927),
-    a = n(566605),
+    a = n(397927),
+    r = n(566605),
     s = n(379848),
     o = n(183555),
-    c = n(357541),
-    u = n(814221),
-    d = n(266713),
-    f = n(985018),
-    p = n(798521);
-
-function b() {
+    d = n(357541),
+    c = n(814221),
+    u = n(266713),
+    g = n(985018),
+    m = n(798521);
+function x() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, o.NJ)(),
-        b = l.useRef(!1),
+        x = l.useRef(!1),
         {
-            suggestions: g,
-            currentUser: m,
-            isLoading: y,
-        } = (0, a.A)({
-            location: "UserProfileModalV2ApplicationWidgetsEmptyState",
-        }),
-        O = null == g ? void 0 : g[0],
-        j = l.useCallback(() => {
-            t({
-                action: "PRESS_ADD_WIDGET",
-            }),
-                (0, i.mMO)(
+            suggestions: f,
+            currentUser: h,
+            isLoading: p,
+        } = (0, r.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
+        _ = f?.[0],
+        A = l.useCallback(() => {
+            t({ action: "PRESS_ADD_WIDGET" }),
+                (0, a.mMO)(
                     async () => {
                         let { default: e } = await n.e("87591").then(n.bind(n, 333114));
-                        return (n) => {
-                            var l, i;
-                            return (0, r.jsx)(
-                                e,
-                                ((l = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, n)),
-                                (i = i =
-                                    {
-                                        trackUserProfileEditAction: t,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                                      }),
-                                l),
-                            );
-                        };
+                        return (n) => (0, i.jsx)(e, { ...n, trackUserProfileEditAction: t });
                     },
-                    {
-                        stackingBehavior: "stack",
-                    },
+                    { stackingBehavior: "stack" },
                 );
         }, [t]);
     if (
         (l.useEffect(() => {
-            y ||
-                null == O ||
-                b.current ||
-                (e({
-                    action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE",
-                    applicationId: O.application.id,
-                }),
-                (b.current = !0));
-        }, [y, e, O]),
-        y)
+            p ||
+                null == _ ||
+                x.current ||
+                (e({ action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE", applicationId: _.application.id }),
+                (x.current = !0));
+        }, [p, e, _]),
+        p)
     )
-        return (0, r.jsx)("div", {
-            className: p.L,
-            children: (0, r.jsx)(i.y$y, {}),
-        });
-    if (null == O) return (0, r.jsx)(d.A, {});
-    let x = (0, r.jsxs)(i.BJc, {
+        return (0, i.jsx)("div", { className: m.L, children: (0, i.jsx)(a.y$y, {}) });
+    if (null == _) return (0, i.jsx)(u.A, {});
+    let I = (0, i.jsxs)(a.BJc, {
         gap: 4,
-        className: p.w,
+        className: m.w,
         children: [
-            (0, r.jsx)(i.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: "heading-md/medium",
                 color: "text-strong",
-                children: f.intl.string(f.t["oqalC+"]),
+                children: g.intl.string(g.t["oqalC+"]),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: f.intl.format(f.t.YnNFWa, {
-                    applicationName: O.application.name,
-                }),
+                children: g.intl.format(g.t.YnNFWa, { applicationName: _.application.name }),
             }),
         ],
     });
-    return (0, r.jsx)(s.Ay, {
-        contentTypes: [O.dismissibleContent],
+    return (0, i.jsx)(s.Ay, {
+        contentTypes: [_.dismissibleContent],
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
-            return t === O.dismissibleContent
-                ? (0, r.jsxs)(i.BJc, {
+            return t === _.dismissibleContent
+                ? (0, i.jsxs)(a.BJc, {
                       gap: 16,
                       align: "center",
                       children: [
-                          (0, r.jsx)(i.hKd, {
-                              size: 32,
-                          }),
-                          x,
-                          (0, r.jsx)(c.A, {
-                              user: m,
-                              application: O.application,
-                              onDismiss: n,
-                          }),
-                          (0, r.jsx)(u.A, {}),
+                          (0, i.jsx)(a.hKd, { size: 32 }),
+                          I,
+                          (0, i.jsx)(d.A, { user: h, application: _.application, onDismiss: n }),
+                          (0, i.jsx)(c.A, {}),
                       ],
                   })
-                : (0, r.jsxs)(i.BJc, {
+                : (0, i.jsxs)(a.BJc, {
                       gap: 32,
                       align: "center",
                       children: [
-                          (0, r.jsx)(i.hKd, {
-                              size: 128,
-                          }),
-                          x,
-                          (0, r.jsx)(i.Button, {
-                              icon: i.j96,
-                              text: f.intl.string(f.t["lBG2s/"]),
+                          (0, i.jsx)(a.hKd, { size: 128 }),
+                          I,
+                          (0, i.jsx)(a.Button, {
+                              icon: a.j96,
+                              text: g.intl.string(g.t["lBG2s/"]),
                               size: "md",
                               color: "secondary",
-                              onClick: j,
+                              onClick: A,
                           }),
                       ],
                   });

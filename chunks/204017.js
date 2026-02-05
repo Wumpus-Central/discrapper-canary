@@ -1,20 +1,13 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(311907),
     i = n(760751),
     a = n(800007);
-
-function o() {
+function s() {
     return (0, r.cf)([i.A], () => {
-        var e, t;
-        let [n, r] = a.Ge,
-            o = i.A.getDetectableGame(n),
-            s = i.A.getDetectableGame(r);
-        return {
-            gameName: null != (e = null == o ? void 0 : o.name) ? e : "Minecraft",
-            gameName2: null != (t = null == s ? void 0 : s.name) ? t : "Hytale",
-        };
+        let [e, t] = a.Ge,
+            n = i.A.getDetectableGame(e),
+            r = i.A.getDetectableGame(t);
+        return { gameName: n?.name ?? "Minecraft", gameName2: r?.name ?? "Hytale" };
     });
 }

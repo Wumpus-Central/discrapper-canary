@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     M0: "bar__84522",
     iz: "commandInfo__84522",

@@ -1,21 +1,18 @@
-n.d(t, {
-    A: () => u,
-});
+n.d(t, { A: () => u });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(397927),
+    l = n.n(i),
+    r = n(397927),
     o = n(936388),
-    c = n(195338),
-    d = n(661251);
-
+    d = n(195338),
+    c = n(661251);
 function u() {
-    let e = l.useRef(null);
+    let e = s.useRef(null);
     return (0, a.jsx)("div", {
         ref: e,
-        className: r()(d.nd, c.n),
-        children: (0, a.jsx)(s.Button, {
+        className: l()(c.nd, d.n),
+        children: (0, a.jsx)(r.Button, {
             variant: "primary",
             size: "sm",
             text: "Reset Uploaded Key Versions Cache",

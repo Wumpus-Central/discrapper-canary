@@ -1,17 +1,8 @@
 let t = (e) => ({
-        IMPORTANT: {
-            scope: "meta",
-            begin: "!important",
-        },
+        IMPORTANT: { scope: "meta", begin: "!important" },
         BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
-        HEXCOLOR: {
-            scope: "number",
-            begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/,
-        },
-        FUNCTION_DISPATCH: {
-            className: "built_in",
-            begin: /[\w-]+(?=\()/,
-        },
+        HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
+        FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]+(?=\()/ },
         ATTRIBUTE_SELECTOR_MODE: {
             scope: "selector-attr",
             begin: /\[/,
@@ -26,10 +17,7 @@ let t = (e) => ({
                 "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
             relevance: 0,
         },
-        CSS_VARIABLE: {
-            className: "attr",
-            begin: /--[A-Za-z_][A-Za-z0-9_-]*/,
-        },
+        CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
     }),
     n = [
         "a",
@@ -790,54 +778,30 @@ let t = (e) => ({
 e.exports = function (e) {
     let o = e.regex,
         l = t(e),
-        c = {
-            begin: /-(webkit|moz|ms|o)-(?=[a-z])/,
-        },
-        u = "and or not only",
+        u = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
+        c = "and or not only",
         d = /@-?\w[\w]*(-\w+)*/,
-        f = "[a-zA-Z-][a-zA-Z0-9_-]*",
-        p = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        _ = "[a-zA-Z-][a-zA-Z0-9_-]*",
+        f = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: "CSS",
         case_insensitive: !0,
         illegal: /[=|'\$]/,
-        keywords: {
-            keyframePosition: "from to",
-        },
-        classNameAliases: {
-            keyframePosition: "selector-tag",
-        },
+        keywords: { keyframePosition: "from to" },
+        classNameAliases: { keyframePosition: "selector-tag" },
         contains: [
             l.BLOCK_COMMENT,
-            c,
+            u,
             l.CSS_NUMBER_MODE,
-            {
-                className: "selector-id",
-                begin: /#[A-Za-z0-9_-]+/,
-                relevance: 0,
-            },
-            {
-                className: "selector-class",
-                begin: "\\." + f,
-                relevance: 0,
-            },
+            { className: "selector-id", begin: /#[A-Za-z0-9_-]+/, relevance: 0 },
+            { className: "selector-class", begin: "\\." + _, relevance: 0 },
             l.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "selector-pseudo",
-                variants: [
-                    {
-                        begin: ":(" + i.join("|") + ")",
-                    },
-                    {
-                        begin: ":(:)?(" + a.join("|") + ")",
-                    },
-                ],
+                variants: [{ begin: ":(" + i.join("|") + ")" }, { begin: ":(:)?(" + a.join("|") + ")" }],
             },
             l.CSS_VARIABLE,
-            {
-                className: "attribute",
-                begin: "\\b(" + s.join("|") + ")\\b",
-            },
+            { className: "attribute", begin: "\\b(" + s.join("|") + ")\\b" },
             {
                 begin: /:/,
                 end: /[;}{]/,
@@ -846,23 +810,13 @@ e.exports = function (e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ...p,
+                    ...f,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
-                        keywords: {
-                            built_in: "url data-uri",
-                        },
-                        contains: [
-                            ...p,
-                            {
-                                className: "string",
-                                begin: /[^)]/,
-                                endsWithParent: !0,
-                                excludeEnd: !0,
-                            },
-                        ],
+                        keywords: { built_in: "url data-uri" },
+                        contains: [...f, { className: "string", begin: /[^)]/, endsWithParent: !0, excludeEnd: !0 }],
                     },
                     l.FUNCTION_DISPATCH,
                 ],
@@ -873,35 +827,18 @@ e.exports = function (e) {
                 relevance: 0,
                 illegal: /:/,
                 contains: [
-                    {
-                        className: "keyword",
-                        begin: d,
-                    },
+                    { className: "keyword", begin: d },
                     {
                         begin: /\s/,
                         endsWithParent: !0,
                         excludeEnd: !0,
                         relevance: 0,
-                        keywords: {
-                            $pattern: /[a-z-]+/,
-                            keyword: u,
-                            attribute: r.join(" "),
-                        },
-                        contains: [
-                            {
-                                begin: /[a-z-]+(?=:)/,
-                                className: "attribute",
-                            },
-                            ...p,
-                            l.CSS_NUMBER_MODE,
-                        ],
+                        keywords: { $pattern: /[a-z-]+/, keyword: c, attribute: r.join(" ") },
+                        contains: [{ begin: /[a-z-]+(?=:)/, className: "attribute" }, ...f, l.CSS_NUMBER_MODE],
                     },
                 ],
             },
-            {
-                className: "selector-tag",
-                begin: "\\b(" + n.join("|") + ")\\b",
-            },
+            { className: "selector-tag", begin: "\\b(" + n.join("|") + ")\\b" },
         ],
     };
 };

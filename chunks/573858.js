@@ -1,6 +1,4 @@
-i.d(t, {
-    i: () => A,
-});
+i.d(e, { i: () => S });
 var n = i(311907),
     l = i(419954),
     s = i(430452),
@@ -10,9 +8,9 @@ var n = i(311907),
     o = i(353444),
     d = i(296169),
     T = i(731854),
-    c = i(985018);
-let A = (0, l.zZ)(r.X.CAMERA_CATEGORY, {
-    useTitle: () => c.intl.string(c.t.uje3P9),
+    A = i(985018);
+let S = (0, l.zZ)(r.X.CAMERA_CATEGORY, {
+    useTitle: () => A.intl.string(A.t.uje3P9),
     usePredicate: () => (0, n.bG)([s.A], () => s.A.supports(T.O5.VIDEO)),
     buildLayout: () => [d.z, u.F, o.s, a.q],
 });

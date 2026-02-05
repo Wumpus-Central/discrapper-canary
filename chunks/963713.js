@@ -1,10 +1,7 @@
-n.d(t, {
-    C: () => r,
-    T: () => i,
-});
+n.d(t, { C: () => l, T: () => i });
 var a = n(627968),
-    l = n(64700);
-let i = l.createContext({
+    s = n(64700);
+let i = s.createContext({
         onCtxMenuClose: () => {},
         onCtxMenuOpen: () => {},
         onCtxMenuSelect: () => {},
@@ -16,37 +13,34 @@ let i = l.createContext({
         quest: null,
         taskDetails: null,
     }),
-    r = (e) => {
+    l = (e) => {
         let {
                 children: t,
                 isExpanded: n,
-                isExpansionAnimationComplete: r,
-                onCtxMenuClose: s,
+                isExpansionAnimationComplete: l,
+                onCtxMenuClose: r,
                 onCtxMenuOpen: o,
-                onCtxMenuSelect: c,
-                onGameSheetOpen: d,
+                onCtxMenuSelect: d,
+                onGameSheetOpen: c,
                 onGameSheetClose: u,
                 collapsedHeight: m,
-                quest: p,
-                taskDetails: h,
+                quest: h,
+                taskDetails: x,
             } = e,
-            f = l.useMemo(
+            p = s.useMemo(
                 () => ({
                     isExpanded: n,
-                    isExpansionAnimationComplete: r,
-                    onCtxMenuClose: s,
+                    isExpansionAnimationComplete: l,
+                    onCtxMenuClose: r,
                     onCtxMenuOpen: o,
-                    onCtxMenuSelect: c,
-                    onGameSheetOpen: d,
+                    onCtxMenuSelect: d,
+                    onGameSheetOpen: c,
                     onGameSheetClose: u,
                     collapsedHeight: m,
-                    quest: p,
-                    taskDetails: h,
+                    quest: h,
+                    taskDetails: x,
                 }),
-                [n, r, s, o, c, d, u, m, p, h],
+                [n, l, r, o, d, c, u, m, h, x],
             );
-        return (0, a.jsx)(i.Provider, {
-            value: f,
-            children: t,
-        });
+        return (0, a.jsx)(i.Provider, { value: p, children: t });
     };

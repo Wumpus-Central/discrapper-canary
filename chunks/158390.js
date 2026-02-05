@@ -1,21 +1,17 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    A: () => i,
-}),
-    n(65821);
-class i {
+"use strict";
+n.d(t, { A: () => r });
+class r {
+    min;
+    max;
+    jitter;
+    _current;
+    _timeoutId;
+    _callback;
+    _fails = 0;
+    constructor(e = 500, t = null, n = !0) {
+        if (e <= 0) throw Error("Backoff min value must be greater than zero or backoff will never back-off.");
+        (this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e);
+    }
     get fails() {
         return this._fails;
     }
@@ -48,19 +44,5 @@ class i {
     }
     cancel() {
         (this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null));
-    }
-    constructor(e = 500, t = null, n = !0) {
-        if (
-            (r(this, "min", void 0),
-            r(this, "max", void 0),
-            r(this, "jitter", void 0),
-            r(this, "_current", void 0),
-            r(this, "_timeoutId", void 0),
-            r(this, "_callback", void 0),
-            r(this, "_fails", 0),
-            e <= 0)
-        )
-            throw Error("Backoff min value must be greater than zero or backoff will never back-off.");
-        (this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e);
     }
 }

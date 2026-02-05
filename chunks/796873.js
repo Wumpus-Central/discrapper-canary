@@ -26,10 +26,10 @@
         var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1e3 * t),
             r = /\\?([a-z])/gi,
             o = function (e, t) {
-                return u[e] ? u[e]() : t;
+                return c[e] ? c[e]() : t;
             },
             l = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            c = [
+            u = [
                 "January",
                 "February",
                 "March",
@@ -43,76 +43,70 @@
                 "November",
                 "December",
             ],
-            u = {
+            c = {
                 d: function () {
-                    return i.pad(u.j(), 2, "0");
+                    return i.pad(c.j(), 2, "0");
                 },
                 D: function () {
-                    return u.l().slice(0, 3);
+                    return c.l().slice(0, 3);
                 },
                 j: function () {
                     return n.getDate();
                 },
                 l: function () {
-                    return l[u.w()];
+                    return l[c.w()];
                 },
                 N: function () {
-                    return u.w() || 7;
+                    return c.w() || 7;
                 },
                 S: function () {
-                    var e = u.j();
-                    return e > 4 && e < 21
-                        ? "th"
-                        : {
-                              1: "st",
-                              2: "nd",
-                              3: "rd",
-                          }[e % 10] || "th";
+                    var e = c.j();
+                    return e > 4 && e < 21 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[e % 10] || "th";
                 },
                 w: function () {
                     return n.getDay();
                 },
                 z: function () {
-                    return (u.L() ? s[u.n()] : a[u.n()]) + u.j() - 1;
+                    return (c.L() ? s[c.n()] : a[c.n()]) + c.j() - 1;
                 },
                 W: function () {
-                    var e = u.z() - u.N() + 1.5;
+                    var e = c.z() - c.N() + 1.5;
                     return i.pad(1 + Math.floor(Math.abs(e) / 7) + +(e % 7 > 3.5), 2, "0");
                 },
                 F: function () {
-                    return c[n.getMonth()];
+                    return u[n.getMonth()];
                 },
                 m: function () {
-                    return i.pad(u.n(), 2, "0");
+                    return i.pad(c.n(), 2, "0");
                 },
                 M: function () {
-                    return u.F().slice(0, 3);
+                    return c.F().slice(0, 3);
                 },
                 n: function () {
                     return n.getMonth() + 1;
                 },
                 t: function () {
-                    return new Date(u.Y(), u.n(), 0).getDate();
+                    return new Date(c.Y(), c.n(), 0).getDate();
                 },
                 L: function () {
-                    return +(1 === new Date(u.Y(), 1, 29).getMonth());
+                    return +(1 === new Date(c.Y(), 1, 29).getMonth());
                 },
                 o: function () {
-                    var e = u.n(),
-                        t = u.W();
-                    return u.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9);
+                    var e = c.n(),
+                        t = c.W();
+                    return c.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9);
                 },
                 Y: function () {
                     return n.getFullYear();
                 },
                 y: function () {
-                    return String(u.Y()).slice(-2);
+                    return String(c.Y()).slice(-2);
                 },
                 a: function () {
                     return n.getHours() > 11 ? "pm" : "am";
                 },
                 A: function () {
-                    return u.a().toUpperCase();
+                    return c.a().toUpperCase();
                 },
                 B: function () {
                     var e = n.getTime() / 1e3,
@@ -122,16 +116,16 @@
                     return e < 0 ? Math.ceil(r) : Math.floor(r);
                 },
                 g: function () {
-                    return u.G() % 12 || 12;
+                    return c.G() % 12 || 12;
                 },
                 G: function () {
                     return n.getHours();
                 },
                 h: function () {
-                    return i.pad(u.g(), 2, "0");
+                    return i.pad(c.g(), 2, "0");
                 },
                 H: function () {
-                    return i.pad(u.G(), 2, "0");
+                    return i.pad(c.G(), 2, "0");
                 },
                 i: function () {
                     return i.pad(n.getMinutes(), 2, "0");
@@ -148,7 +142,7 @@
                     return (e > 0 ? "-" : "+") + i.pad(100 * Math.floor(t / 60) + (t % 60), 4, "0");
                 },
                 P: function () {
-                    var e = u.O();
+                    var e = c.O();
                     return e.substr(0, 3) + ":" + e.substr(3, 2);
                 },
                 Z: function () {
@@ -217,31 +211,21 @@
             if (n < 5184e3 && n > -s) return n >= 0 ? "about a month ago" : "in about a month";
             var o = parseInt(i.date("Y", t), 10),
                 l = parseInt(i.date("Y", e), 10),
-                c = 12 * o + parseInt(i.date("n", t), 10) - (12 * l + parseInt(i.date("n", e), 10));
-            if (c < 12 && c > -12) return c >= 0 ? c + " months ago" : "in " + -c + " months";
-            var u = o - l;
-            return u < 2 && u > -2
-                ? u >= 0
+                u = 12 * o + parseInt(i.date("n", t), 10) - (12 * l + parseInt(i.date("n", e), 10));
+            if (u < 12 && u > -12) return u >= 0 ? u + " months ago" : "in " + -u + " months";
+            var c = o - l;
+            return c < 2 && c > -2
+                ? c >= 0
                     ? "a year ago"
                     : "in a year"
-                : u >= 0
-                  ? u + " years ago"
-                  : "in " + -u + " years";
+                : c >= 0
+                  ? c + " years ago"
+                  : "in " + -c + " years";
         }),
         (i.ordinal = function (e) {
             var t = (e = isNaN((e = parseInt(e, 10))) ? 0 : e) < 0 ? "-" : "",
                 n = (e = Math.abs(e)) % 100;
-            return (
-                t +
-                e +
-                (n > 4 && n < 21
-                    ? "th"
-                    : {
-                          1: "st",
-                          2: "nd",
-                          3: "rd",
-                      }[e % 10] || "th")
-            );
+            return t + e + (n > 4 && n < 21 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[e % 10] || "th");
         }),
         (i.filesize = function (e, t, n, r, a, s) {
             return ((t = void 0 === t ? 1024 : t), e <= 0)
@@ -251,19 +235,19 @@
                   i.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, n, r, a, s));
         }),
         (i.intword = function (e, t, n, r, a, s, o) {
-            (c = (t = t || ["", "K", "M", "B", "T"]).length - 1),
+            (u = (t = t || ["", "K", "M", "B", "T"]).length - 1),
                 (n = n || 1e3),
                 (r = isNaN(r) ? 2 : Math.abs(r)),
                 (a = a || "."),
                 (s = s || ","),
                 (o = o || "");
-            for (var l, c, u = 0; u < t.length; u++)
-                if (e < Math.pow(n, u + 1)) {
-                    c = u;
+            for (var l, u, c = 0; c < t.length; c++)
+                if (e < Math.pow(n, c + 1)) {
+                    u = c;
                     break;
                 }
-            l = e / Math.pow(n, c);
-            var d = t[c] ? o + t[c] : "";
+            l = e / Math.pow(n, u);
+            var d = t[u] ? o + t[u] : "";
             return i.numberFormat(l, r, a, s) + d;
         }),
         (i.linebreaks = function (e) {

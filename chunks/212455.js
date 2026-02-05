@@ -1,34 +1,16 @@
-n.d(t, {
-    A: () => w,
-    j: () => h,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(287809),
-    o = n(860689),
-    l = n(821124);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = null,
+"use strict";
+n.d(t, { A: () => R, j: () => f });
+var r = n(311907),
+    i = n(73153),
+    a = n(287809),
+    s = n(860689),
+    o = n(821124);
+let l = null,
+    u = {},
+    c = !1,
     d = {},
-    f = !1,
-    p = {},
     _ = {};
-
-function h(e) {
+function f(e) {
     return {
         joinRequestId: e.join_request_id,
         guildId: e.guild_id,
@@ -44,150 +26,119 @@ function h(e) {
         interviewChannelId: e.interview_channel_id,
     };
 }
-
-function m(e) {
-    delete d[e], u === e && (u = null);
+function p(e) {
+    delete u[e], l === e && (l = null);
 }
-
-function g(e) {
+function h(e) {
     let { guildJoinRequests: t } = e;
-    (f = !1),
-        (p = {}),
+    (c = !1),
         (d = {}),
+        (u = {}),
         t.forEach((e) => {
             let { guild_id: t } = e;
-            null != t && (d[t] = h(e));
+            null != t && (u[t] = f(e));
         });
 }
-
-function E(e) {
+function m(e) {
     let { request: t, guildId: n } = e;
-    if (null == t) return void m(n);
-    let r = h(t);
-    (0, l.NK)(r) ? m(n) : (d[n] = r);
+    if (null == t) return void p(n);
+    let r = f(t);
+    (0, o.NK)(r) ? p(n) : (u[n] = r);
 }
-
-function b(e) {
+function g(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
-    let r = h(n),
-        i = s.default.getCurrentUser();
+    let r = f(n),
+        i = a.default.getCurrentUser();
     if (null != i && r.userId !== i.id) return !1;
-    (0, l.NK)(r) ? m(t) : (d[t] = r);
+    (0, o.NK)(r) ? p(t) : (u[t] = r);
 }
-
-function y(e) {
+function E(e) {
     let { guildId: t } = e;
-    m(t);
+    p(t);
 }
-
-function O(e) {
-    let { guild: t } = e;
-    m(t.id);
-}
-
 function A(e) {
+    let { guild: t } = e;
+    p(t.id);
+}
+function I(e) {
     let { invite: t } = e,
         { guild: n, join_request: r } = t;
     if (null != n && null != r) {
         let { guild_id: e } = r;
-        d[e] = h(r);
+        u[e] = f(r);
         let { id: t, name: i, icon: a, features: s, splash: o } = n;
-        p[t] = {
-            id: t,
-            name: i,
-            icon: a,
-            features: null != s ? s : [],
-            splash: o,
-        };
+        d[t] = { id: t, name: i, icon: a, features: s ?? [], splash: o };
     }
 }
-
-function v(e) {
+function T(e) {
     let { guilds: t } = e;
-    (f = !0),
+    (c = !0),
         t.forEach((e) => {
             let { id: t, name: n, features: r, icon: i, splash: a } = e;
-            p[t] = {
-                id: t,
-                name: n,
-                features: r,
-                icon: i,
-                splash: a,
-            };
+            d[t] = { id: t, name: n, features: r, icon: i, splash: a };
         });
 }
-
-function S(e) {
+function y(e) {
     let { guildId: t, cooldown: n } = e;
-    _[t] = null != n ? n : 0;
+    _[t] = n ?? 0;
 }
-
-function I(e) {
+function S(e) {
     let { form: t, guildId: n } = e;
-    if ((null == t ? void 0 : t.guild) != null) {
+    if (t?.guild != null) {
         let { id: e, name: r, icon: i, features: a, splash: s } = t.guild;
-        p[n] = {
-            id: e,
-            name: r,
-            icon: i,
-            features: null != a ? a : [],
-            splash: s,
-        };
+        d[n] = { id: e, name: r, icon: i, features: a ?? [], splash: s };
     }
 }
-
-function T(e) {
+function v(e) {
     let { guildId: t } = e;
-    m(t);
+    p(t);
 }
-
 function C(e) {
     let { guildId: t } = e;
-    u = t;
+    l = t;
 }
-
-function N() {
-    u = null;
+function b() {
+    l = null;
 }
-class R extends (r = i.Ay.Store) {
+class N extends r.Ay.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
+    static displayName = "UserGuildJoinRequestStore";
     getRequest(e) {
-        return d[e];
+        return u[e];
     }
     computeGuildIds() {
-        return Object.values(d)
-            .map((e) => (null == e ? void 0 : e.guildId))
+        return Object.values(u)
+            .map((e) => e?.guildId)
             .filter((e) => null != e);
     }
     getJoinRequestGuild(e) {
-        return null != p[e] ? (0, o.yF)(p[e]) : null;
+        return null != d[e] ? (0, s.yF)(d[e]) : null;
     }
     get hasFetchedRequestToJoinGuilds() {
-        return f;
+        return c;
     }
     hasJoinRequestCoackmark() {
-        return null != u;
+        return null != l;
     }
     getCooldown(e) {
         return _[e];
     }
 }
-c(R, "displayName", "UserGuildJoinRequestStore");
-let w = new R(a.h, {
-    CONNECTION_OPEN: g,
-    GUILD_JOIN_REQUEST_UPDATE: b,
-    GUILD_JOIN_REQUEST_CREATE: b,
-    GUILD_JOIN_REQUEST_DELETE: y,
-    USER_GUILD_JOIN_REQUEST_UPDATE: E,
-    GUILD_DELETE: O,
-    USER_JOIN_REQUEST_GUILDS_FETCH: v,
-    MEMBER_VERIFICATION_FORM_UPDATE: I,
-    INVITE_ACCEPT_SUCCESS: A,
-    ACK_APPROVED_GUILD_JOIN_REQUEST: T,
+let R = new N(i.h, {
+    CONNECTION_OPEN: h,
+    GUILD_JOIN_REQUEST_UPDATE: g,
+    GUILD_JOIN_REQUEST_CREATE: g,
+    GUILD_JOIN_REQUEST_DELETE: E,
+    USER_GUILD_JOIN_REQUEST_UPDATE: m,
+    GUILD_DELETE: A,
+    USER_JOIN_REQUEST_GUILDS_FETCH: T,
+    MEMBER_VERIFICATION_FORM_UPDATE: S,
+    INVITE_ACCEPT_SUCCESS: I,
+    ACK_APPROVED_GUILD_JOIN_REQUEST: v,
     USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: C,
-    USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: N,
-    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: S,
+    USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: b,
+    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: y,
 });

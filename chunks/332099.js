@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     G3: "progressCircle__28edc",
     n1: "circle__28edc",

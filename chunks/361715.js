@@ -7,7 +7,4 @@ IntlMessageFormat.__addLocaleData({
         return t || (1 != e && (i || (0 != r && 1 != r))) ? "other" : "one";
     },
 }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "da-GL",
-        parentLocale: "da",
-    });
+    IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });

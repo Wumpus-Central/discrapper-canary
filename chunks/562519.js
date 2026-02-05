@@ -1,25 +1,13 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
-var r = n(362474);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+n.d(t, { A: () => s });
+var i = n(362474);
+class s {
+    _key;
+    _set;
+    constructor(e) {
+        (this._key = `$persisted-set-${e}`), (this._set = new Set()), this._load();
+    }
     _load() {
-        let e = r.u.get(this._key);
+        let e = i.u.get(this._key);
         null != e && (this._set = new Set(e));
     }
     values() {
@@ -36,7 +24,7 @@ class a {
     }
     _persist() {
         let e = Array.from(this._set.values());
-        r.u.set(this._key, e);
+        i.u.set(this._key, e);
     }
     add(e) {
         this._set.add(e),
@@ -46,12 +34,5 @@ class a {
     }
     has(e) {
         return this._set.has(e);
-    }
-    constructor(e) {
-        i(this, "_key", void 0),
-            i(this, "_set", void 0),
-            (this._key = "$persisted-set-".concat(e)),
-            (this._set = new Set()),
-            this._load();
     }
 }

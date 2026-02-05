@@ -1,61 +1,50 @@
-n.d(t, {
-    A: () => b,
-});
-var r,
-    i,
-    l = n(311907),
+"use strict";
+n.d(t, { A: () => m });
+var i = n(311907),
     s = n(73153),
-    a = n(555337),
-    c = n(660496),
-    o = n(652215);
-let d = c.C.OVERVIEW,
-    u = null;
-
-function f(e) {
+    l = n(555337),
+    r = n(660496),
+    a = n(652215);
+let o = r.C.OVERVIEW,
+    d = null;
+function c(e) {
     let { subsection: t } = e;
     switch (t) {
-        case o.nd0.SAFETY_AUTOMOD:
-            d = c.C.AUTOMOD;
+        case a.nd0.SAFETY_AUTOMOD:
+            o = r.C.AUTOMOD;
             break;
-        case o.nd0.SAFETY_DM_AND_SPAM_PROTECTION:
-            d = c.C.DM_AND_SPAM_PROTECTION;
+        case a.nd0.SAFETY_DM_AND_SPAM_PROTECTION:
+            o = r.C.DM_AND_SPAM_PROTECTION;
             break;
-        case o.nd0.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-            d = c.C.CAPTCHA_AND_RAID_PROTECTION;
+        case a.nd0.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
+            o = r.C.CAPTCHA_AND_RAID_PROTECTION;
             break;
-        case o.nd0.SAFETY_PERMISSIONS:
-            d = c.C.PERMISSIONS;
+        case a.nd0.SAFETY_PERMISSIONS:
+            o = r.C.PERMISSIONS;
             break;
-        case o.nd0.SAFETY_OVERVIEW:
+        case a.nd0.SAFETY_OVERVIEW:
         default:
-            d = c.C.OVERVIEW;
+            o = r.C.OVERVIEW;
     }
 }
-class g extends (i = l.Ay.Store) {
+class u extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(l.A);
     }
+    static displayName = "GuildSettingsSafetyStore";
     getCurrentPage() {
-        return d;
+        return o;
     }
 }
-(r = "displayName") in g
-    ? Object.defineProperty(g, r, {
-          value: "GuildSettingsSafetyStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (g[r] = "GuildSettingsSafetyStore");
-let b = new g(s.h, {
+let m = new u(s.h, {
     GUILD_SETTINGS_INIT: function () {
-        if (a.A.getGuildId() === u) return !1;
-        u = a.A.getGuildId();
+        if (l.A.getGuildId() === d) return !1;
+        d = l.A.getGuildId();
     },
-    GUILD_SETTINGS_SET_SECTION: f,
-    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: f,
+    GUILD_SETTINGS_SET_SECTION: c,
+    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: c,
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let { page: t } = e;
-        d = t;
+        o = t;
     },
 });

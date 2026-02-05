@@ -1,14 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(90644),
     i = n(61330),
     a = n(960076),
     s = n(443795),
     o = n(823441),
     l = n(47407);
-
-function c(e) {
+function u(e) {
     return (0, i.A)(e)
         ? l.W + e.name
         : (0, r.A)(e) && null != e.party && null != e.party.id

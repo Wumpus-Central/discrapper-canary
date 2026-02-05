@@ -1,6 +1,5 @@
-n.d(t, {
-    d: () => o,
-});
+"use strict";
+n.d(t, { d: () => o });
 var r = n(77468),
     i = n(723702),
     a = n(783419),
@@ -12,41 +11,25 @@ async function o(e) {
             successRedirect: o,
             handle: l,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        c = arguments.length > 2 ? arguments[2] : void 0,
-        u = 700,
+        u = arguments.length > 2 ? arguments[2] : void 0,
+        c = 700,
         d = 640,
-        f = Math.round(screen.width / 2 - u / 2),
-        p = screen.height > d ? Math.round(screen.height / 2 - d / 2) : 0,
-        _ = null;
+        _ = Math.round(screen.width / 2 - c / 2),
+        f = screen.height > d ? Math.round(screen.height / 2 - d / 2) : 0,
+        p = null;
     (0, i.isDesktop)() ||
-        (_ = window.open(
-            ""
-                .concat(window.location.protocol, "//")
-                .concat(window.location.host)
-                .concat(s.BVt.CONNECTIONS(e), "?loading=true"),
+        (p = window.open(
+            `${window.location.protocol}//${window.location.host}${s.BVt.CONNECTIONS(e)}?loading=true`,
             "authorize",
-            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,top="
-                .concat(p, ",left=")
-                .concat(f, ",width=")
-                .concat(u, ",height=")
-                .concat(d),
+            `scrollbars=yes,resizable=yes,toolbar=no,location=yes,top=${f},left=${_},width=${c},height=${d}`,
         ));
-    let h = c;
+    let h = u;
     if (null == h && e !== a.zR)
         try {
-            let { body: i } = await r.A.authorize(e, {
-                location: t,
-                twoWayLinkType: n,
-                successRedirect: o,
-                handle: l,
-            });
+            let { body: i } = await r.A.authorize(e, { location: t, twoWayLinkType: n, successRedirect: o, handle: l });
             h = i.url;
         } catch (e) {
-            throw (null == _ || _.close(), e);
+            throw (p?.close(), e);
         }
-    if (null == h) {
-        null == _ || _.close();
-        return;
-    }
-    return null != _ ? (_.location.href = h) : window.open(h), h;
+    return null == h ? void p?.close() : (null != p ? (p.location.href = h) : window.open(h), h);
 }

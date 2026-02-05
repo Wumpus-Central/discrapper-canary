@@ -1,9 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(284009),
     i = n.n(r);
-
 function a(e, t) {
     if ((i()(e.length >= t, "Waveform smaller than samples"), e.length === t)) return e;
     let n = e.length / t,

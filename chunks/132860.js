@@ -1,32 +1,19 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r = n(961350),
+n.d(t, { A: () => d });
+var i = n(961350),
     l = n(576705),
-    i = n(607567),
+    s = n(607567),
     a = n(488926),
-    s = n(698441),
+    r = n(698441),
     o = n(219935);
-
-function c(e) {
+function d(e) {
     if (
         !e.isGuildVoice() ||
-        s.Ay.getGuildScheduledEventsByIndex(s.ej.CHANNEL_EVENT_ACTIVE(e.id)).length < 1 ||
+        r.Ay.getGuildScheduledEventsByIndex(r.ej.CHANNEL_EVENT_ACTIVE(e.id)).length < 1 ||
         !l.A.can(o.EN, e)
     )
         return !1;
-    let t = new Set(i.Ay.getVoiceStatesForChannel(e).map((e) => e.user.id)),
-        n = r.default.getId();
-    for (let r of t)
-        if (
-            r !== n &&
-            a.$3({
-                permission: o.EN,
-                user: r,
-                context: e,
-            })
-        )
-            return !1;
+    let t = new Set(s.Ay.getVoiceStatesForChannel(e).map((e) => e.user.id)),
+        n = i.default.getId();
+    for (let i of t) if (i !== n && a.$3({ permission: o.EN, user: i, context: e })) return !1;
     return !0;
 }

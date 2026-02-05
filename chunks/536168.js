@@ -1,18 +1,12 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.CompressedTypes = void 0);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.CompressedTypes = void 0);
 class n {}
 (t.CompressedTypes = n),
     (n._7Z = {
         extension: "7z",
         mimeType: "application/x-7z-compressed",
         description: "7-Zip compressed file",
-        signatures: [
-            {
-                sequence: [55, 122, 188, 175, 39, 28],
-            },
-        ],
+        signatures: [{ sequence: [55, 122, 188, 175, 39, 28] }],
     }),
     (n.LZH = {
         extension: "lzh",
@@ -36,14 +30,8 @@ class n {}
         mimeType: "application/x-rar-compressed",
         description: "Roshal ARchive compressed archive file",
         signatures: [
-            {
-                sequence: [82, 97, 114, 33, 26, 7, 0],
-                description: "Compressed archive v5.00 onwards",
-            },
-            {
-                sequence: [82, 97, 114, 33, 26, 7, 1, 0],
-                description: "Compressed archive v1.50 onwards",
-            },
+            { sequence: [82, 97, 114, 33, 26, 7, 0], description: "Compressed archive v5.00 onwards" },
+            { sequence: [82, 97, 114, 33, 26, 7, 1, 0], description: "Compressed archive v1.50 onwards" },
         ],
     }),
     (n.ZIP = {
@@ -51,15 +39,8 @@ class n {}
         mimeType: "application/zip",
         description: "Compressed archive file",
         signatures: [
-            {
-                sequence: [87, 105, 110, 90, 105, 112],
-                offset: 29152,
-                description: "WinZip compressed archive",
-            },
-            {
-                sequence: [80, 75, 3, 4, 20, 0, 1, 0, 99, 0, 0, 0, 0, 0],
-                description: "ZLock Pro encrypted ZIP",
-            },
+            { sequence: [87, 105, 110, 90, 105, 112], offset: 29152, description: "WinZip compressed archive" },
+            { sequence: [80, 75, 3, 4, 20, 0, 1, 0, 99, 0, 0, 0, 0, 0], description: "ZLock Pro encrypted ZIP" },
             {
                 sequence: [80, 75, 76, 73, 84, 69],
                 offset: 30,

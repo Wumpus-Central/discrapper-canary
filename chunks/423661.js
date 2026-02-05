@@ -1,12 +1,7 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(872863);
-let i = {
-    isHeicFile: a,
-    findHeicOffsets: s,
-};
-
+let i = { isHeicFile: a, findHeicOffsets: s };
 function a(e) {
     if (!e) return !1;
     let t = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
@@ -17,7 +12,6 @@ function a(e) {
         return !1;
     }
 }
-
 function s(e) {
     return (0, r.OH)(e);
 }

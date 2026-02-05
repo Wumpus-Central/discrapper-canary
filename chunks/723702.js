@@ -1,3 +1,4 @@
+"use strict";
 n.r(t),
     n.d(t, {
         PlatformTypes: () => r.fg,

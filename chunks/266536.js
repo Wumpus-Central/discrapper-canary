@@ -1,28 +1,24 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(861382),
     s = n(580424),
     o = n(968011),
     l = n(399777),
-    c = n(253932),
-    u = n(696451),
+    u = n(253932),
+    c = n(696451),
     d = n(374803),
-    f = n(311036);
-let p = {
+    _ = n(311036);
+let f = {
     selectMode: d.SB.TAB_ONLY,
-    stores: [u.Ay],
+    stores: [c.Ay],
     matches(e, t, n, r, i) {
-        var s;
-        let { enabled: u } = (0, o.sA)("MentionSuggestionAutocompletes", {
-            autoTrackExposure: !0,
-        });
+        let { enabled: s } = (0, o.sA)("MentionSuggestionAutocompletes", { autoTrackExposure: !0 });
         return (
-            !(!u || e.isDM()) &&
-            !!c.ng.getSetting() &&
-            !!(null == (s = i.chatInputType.autocomplete) ? void 0 : s.mentionSuggestions) &&
+            !(!s || e.isDM()) &&
+            !!u.ng.getSetting() &&
+            !!i.chatInputType.autocomplete?.mentionSuggestions &&
             i.mentions.user !== d.Vf.DENY &&
             null != i.currentFullWord &&
             !(i.currentFullWord.length < l.$) &&
@@ -31,9 +27,8 @@ let p = {
         );
     },
     queryResults(e, t, n, r) {
-        var i;
-        let a = n.length;
-        return (0, l.W)(e, null != (i = r.currentFullWord) ? i : "", a, {
+        let i = n.length;
+        return (0, l.W)(e, r.currentFullWord ?? "", i, {
             isIdle: r.isEditorIdle,
             currentAutocompleteType: r.currentAutocompleteType,
         });
@@ -44,19 +39,17 @@ let p = {
                 selectedIndex: n,
                 channel: a,
                 options: l,
-                onHover: c,
-                onClick: u,
+                onHover: u,
+                onClick: c,
             } = e,
-            { suggestionDesign: d } = (0, o.sA)("MentionSuggestionAutocompletes", {
-                autoTrackExposure: !1,
-            }),
-            f = t.map((e, t) =>
+            { suggestionDesign: d } = (0, o.sA)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 }),
+            _ = t.map((e, t) =>
                 (0, r.jsx)(
                     s.Ay.UserSuggestion,
                     {
                         guildId: a.guild_id,
-                        onClick: u,
-                        onHover: c,
+                        onClick: c,
+                        onHover: u,
                         selected: n === t,
                         index: t,
                         user: e.user,
@@ -69,13 +62,7 @@ let p = {
                     e.user.id,
                 ),
             );
-        return (0, r.jsx)(
-            i.Fragment,
-            {
-                children: f,
-            },
-            "mention-suggestions",
-        );
+        return (0, r.jsx)(i.Fragment, { children: _ }, "mention-suggestions");
     },
     onSelect(e) {
         let {
@@ -90,12 +77,10 @@ let p = {
             o = t[i];
         return (
             null != o &&
-                a.insertText(n + (0, f.JB)(o.user, s, a.hidePersonalInformation) + r, n + (0, f.z$)(o.user) + r, {
+                a.insertText(n + (0, _.JB)(o.user, s, a.hidePersonalInformation) + r, n + (0, _.z$)(o.user) + r, {
                     replaceFullWord: !0,
                 }),
-            {
-                type: d.kc.MENTION,
-            }
+            { type: d.kc.MENTION }
         );
     },
 };

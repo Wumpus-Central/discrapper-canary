@@ -1,33 +1,21 @@
-n.d(t, {
-    A: () => u,
-});
-var r,
-    i,
-    l = n(311907),
-    a = n(73153);
-let s = "UPDATE_NOT_AVAILABLE";
-
-function o(e) {
-    s = e.type;
+n.d(t, { A: () => o });
+var i = n(311907),
+    r = n(73153);
+let a = "UPDATE_NOT_AVAILABLE";
+function l(e) {
+    a = e.type;
 }
-class c extends (i = l.Ay.Store) {
+class s extends i.Ay.Store {
+    static displayName = "AutoUpdateStore";
     getState() {
-        return s;
+        return a;
     }
 }
-(r = "displayName") in c
-    ? Object.defineProperty(c, r, {
-          value: "AutoUpdateStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (c[r] = "AutoUpdateStore");
-let u = new c(a.h, {
-    CHECKING_FOR_UPDATES: o,
-    UPDATE_NOT_AVAILABLE: o,
-    UPDATE_AVAILABLE: o,
-    UPDATE_MANUALLY: o,
-    UPDATE_ERROR: o,
-    UPDATE_DOWNLOADED: o,
+let o = new s(r.h, {
+    CHECKING_FOR_UPDATES: l,
+    UPDATE_NOT_AVAILABLE: l,
+    UPDATE_AVAILABLE: l,
+    UPDATE_MANUALLY: l,
+    UPDATE_ERROR: l,
+    UPDATE_DOWNLOADED: l,
 });

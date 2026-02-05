@@ -1,273 +1,154 @@
-a.d(t, {
-    default: () => S,
-}),
-    a(321073),
-    a(896048),
-    a(733351);
-var n = a(627968),
-    r = a(64700),
-    l = a(503698),
-    c = a.n(l),
-    i = a(192308),
-    s = a(397927),
-    o = a(843472),
-    d = a(573435),
-    f = a(911269),
-    p = a(619517),
-    u = a(451909),
-    b = a(378570),
-    y = a(223863),
-    h = a(95701),
-    m = a(734057),
-    O = a(31717),
-    g = a(954571),
-    j = a(403362),
-    w = a(661191),
-    x = a(518960),
-    _ = a(372684),
-    v = a(439818),
-    P = a(399925),
-    T = a(74847),
-    E = a(696016),
-    k = a(652215),
-    C = a(381941),
-    A = a(985018),
-    I = a(312396);
-
-function R(e) {
-    var t;
-    let { clips: a } = e,
-        r = a[0],
-        l = r.thumbnail,
-        i = null;
+i.d(t, { default: () => N }), i(321073);
+var a = i(627968),
+    l = i(64700),
+    n = i(503698),
+    s = i.n(n),
+    c = i(192308),
+    o = i(397927),
+    r = i(843472),
+    _ = i(573435),
+    d = i(911269),
+    p = i(619517),
+    h = i(451909),
+    u = i(378570),
+    m = i(223863),
+    f = i(95701),
+    x = i(734057),
+    g = i(31717),
+    w = i(954571),
+    T = i(403362),
+    b = i(661191),
+    y = i(518960),
+    v = i(372684),
+    I = i(439818),
+    k = i(399925),
+    A = i(74847),
+    C = i(696016),
+    P = i(652215),
+    R = i(381941),
+    j = i(985018),
+    E = i(312396);
+function L(e) {
+    let { clips: t } = e,
+        i = t[0],
+        l = i.thumbnail,
+        n = null;
     return (
         "" !== l &&
-            ((i = (0, n.jsx)("div", {
-                className: c()(I.cR, I.JZ),
-                children: (0, n.jsx)(p.Ay, {
-                    className: I.xn,
-                    src: l,
-                    width: 56,
-                    height: 56,
-                }),
+            ((n = (0, a.jsx)("div", {
+                className: s()(E.cR, E.JZ),
+                children: (0, a.jsx)(p.Ay, { className: E.xn, src: l, width: 56, height: 56 }),
             })),
-            a.length > 1 &&
-                (i = (0, n.jsxs)("div", {
-                    className: I.EW,
+            t.length > 1 &&
+                (n = (0, a.jsxs)("div", {
+                    className: E.EW,
                     children: [
-                        (0, n.jsx)(d.Ay, {
-                            mask: d.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                        (0, a.jsx)(_.Ay, {
+                            mask: _.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
-                            children: i,
+                            children: n,
                         }),
-                        (0, n.jsxs)(s.Text, {
-                            className: I.mB,
+                        (0, a.jsxs)(o.Text, {
+                            className: E.mB,
                             variant: "text-xs/semibold",
                             color: "text-default",
-                            children: ["+", a.length - 1],
+                            children: ["+", t.length - 1],
                         }),
                     ],
                 }))),
-        (0, n.jsxs)("div", {
-            className: I.sq,
+        (0, a.jsxs)("div", {
+            className: E.sq,
             children: [
-                (0, n.jsx)("div", {
-                    className: I.FG,
-                    children: (0, n.jsxs)("div", {
-                        className: I.kp,
+                (0, a.jsx)("div", {
+                    className: E.FG,
+                    children: (0, a.jsxs)("div", {
+                        className: E.kp,
                         children: [
-                            (0, n.jsx)(s.SfG, {
-                                size: "custom",
-                                width: 20,
-                                color: s.LU0.colors.TEXT_MUTED,
-                            }),
-                            (0, n.jsx)(s.Text, {
+                            (0, a.jsx)(o.SfG, { size: "custom", width: 20, color: o.LU0.colors.TEXT_MUTED }),
+                            (0, a.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children:
-                                    1 === a.length
-                                        ? null != (t = r.name)
-                                            ? t
-                                            : A.intl.string(A.t.Cyxddp)
-                                        : A.intl.formatToPlainString(A.t.SJ6pPX, {
-                                              count: a.length,
-                                          }),
+                                    1 === t.length
+                                        ? (i.name ?? j.intl.string(j.t.Cyxddp))
+                                        : j.intl.formatToPlainString(j.t.SJ6pPX, { count: t.length }),
                             }),
                         ],
                     }),
                 }),
-                i,
+                n,
             ],
         })
     );
 }
-
-function S(e) {
-    var t, a;
-    let { clips: l, analyticsLocations: c, onClose: d } = e,
-        p = (function (e, t) {
-            if (null == e) return {};
-            var a,
-                n,
-                r,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (r = 0, a = Reflect.ownKeys(e); r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-                return l;
-            }
-            if (
-                ((l = (function (e, t) {
-                    if (null == e) return {};
-                    var a,
-                        n,
-                        r = {},
-                        l = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < l.length; n++)
-                        (a = l[n]),
-                            !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]);
-                    return r;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (r = 0, a = Object.getOwnPropertySymbols(e); r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            return l;
-        })(e, ["clips", "analyticsLocations", "onClose"]),
-        I = r.useCallback(
-            async (e, t, a) => {
-                let { withMessage: n, transitionToDestination: r, closeAfterSend: f } = t;
-                a(!0);
+function N(e) {
+    let { clips: t, analyticsLocations: i, onClose: n, ...s } = e,
+        _ = l.useCallback(
+            async (e, a, l) => {
+                let { withMessage: s, transitionToDestination: _, closeAfterSend: d } = a;
+                l(!0);
                 try {
-                    let t = [],
-                        h = [];
-                    for (let e of l) {
-                        var p;
-                        let a = await (0, P.VO)(e),
-                            n = null != (p = e.name) ? p : (0, E.cM)(w.default.extractTimestamp(e.id)),
-                            r = (0, v.A)(n);
-                        if (e.type === _.nQ.CLIP || e.type === _.nQ.VOICE_CLIP) {
-                            let n = "".concat("" !== r ? r : "clip", ".mp4");
-                            t.push(
-                                new File([a], n, {
-                                    type: "video/mp4",
-                                }),
-                            ),
-                                h.push({
-                                    clip: e,
-                                });
-                        } else if (e.type === _.nQ.SCREENSHOT) {
-                            let e = "".concat("" !== r ? r : "screenshot", ".jpeg");
-                            t.push(
-                                new File([a], e, {
-                                    type: "image/jpeg",
-                                }),
-                            ),
-                                h.push({});
+                    let a = [],
+                        p = [];
+                    for (let e of t) {
+                        let t = await (0, k.VO)(e),
+                            i = e.name ?? (0, C.cM)(b.default.extractTimestamp(e.id)),
+                            l = (0, I.A)(i);
+                        if (e.type === v.nQ.CLIP || e.type === v.nQ.VOICE_CLIP) {
+                            let i = `${"" !== l ? l : "clip"}.mp4`;
+                            a.push(new File([t], i, { type: "video/mp4" })), p.push({ clip: e });
+                        } else if (e.type === v.nQ.SCREENSHOT) {
+                            let e = `${"" !== l ? l : "screenshot"}.jpeg`;
+                            a.push(new File([t], e, { type: "image/jpeg" })), p.push({});
                         }
                     }
-                    let I = (await Promise.all(e.map(y.pk))).filter(j.Vq).filter((e) => (0, T.t)(e));
-                    if (0 === I.length) {
-                        (0, s.showToast)((0, s.createToast)(A.intl.string(A.t.iufib1), s.ToastType.FAILURE)), a(!1);
+                    let f = (await Promise.all(e.map(m.pk))).filter(T.Vq).filter((e) => (0, A.t)(e));
+                    if (0 === f.length) {
+                        (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.iufib1), o.ToastType.FAILURE)), l(!1);
                         return;
                     }
-                    for (let e of (f && d(), I)) {
-                        let a = m.A.getChannel(e);
-                        if (null != a) {
-                            for (let e of ((0, x.R)(t, a, O.C.ChannelMessage, {
-                                filesMetadata: h,
+                    for (let e of (d && n(), f)) {
+                        let l = x.A.getChannel(e);
+                        if (null != l) {
+                            for (let e of ((0, y.R)(a, l, g.C.ChannelMessage, {
+                                filesMetadata: p,
                                 origin: "unknown:clip_share",
                                 requireConfirm: !1,
                             }),
-                            l))
-                                g.default.track(k.HAw.CLIP_SHARED, {
-                                    location_stack: c,
-                                    guild_id: a.guild_id,
-                                    channel_id: a.id,
-                                    channel_type: a.type,
+                            t))
+                                w.default.track(P.HAw.CLIP_SHARED, {
+                                    location_stack: i,
+                                    guild_id: l.guild_id,
+                                    channel_id: l.id,
+                                    channel_type: l.type,
                                     application_id: e.applicationId,
                                     clip_id: e.id,
                                 });
-                            null != n &&
-                                "" !== n.trim() &&
-                                (await o.A.sendMessage(a.id, u.Ay.parse(a, n), !1, {
-                                    location: C.Hx.FORWARDING,
-                                }));
+                            null != s &&
+                                "" !== s.trim() &&
+                                (await r.A.sendMessage(l.id, h.Ay.parse(l, s), !1, { location: R.Hx.FORWARDING }));
                         }
                     }
-                    r &&
-                        1 === I.length &&
-                        ((0, b.iN)(I[0], {
-                            openTextInVoiceIfVoiceChannel: !0,
-                        }),
-                        i.closeAllModals());
+                    _ && 1 === f.length && ((0, u.iN)(f[0], { openTextInVoiceIfVoiceChannel: !0 }), c.closeAllModals());
                 } catch (e) {
-                    (0, s.showToast)((0, s.createToast)(A.intl.string(A.t.iufib1), s.ToastType.FAILURE));
+                    (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.iufib1), o.ToastType.FAILURE));
                 } finally {
-                    a(!1);
+                    l(!1);
                 }
             },
-            [l, c, d],
+            [t, i, n],
         ),
-        S = r.useCallback((e) => {
-            if (e instanceof h.YB && !(0, T.t)(e.id))
-                return {
-                    label: A.intl.string(A.t.iufib1),
-                };
+        p = l.useCallback((e) => {
+            if (e instanceof f.YB && !(0, A.t)(e.id)) return { label: j.intl.string(j.t.iufib1) };
         }, []);
-    return (0, n.jsx)(
-        f.ForwardModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var a = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(a);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(a).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                        }),
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = a[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = n);
-                    });
-            }
-            return e;
-        })({}, p)),
-        (a = a =
-            {
-                onClose: d,
-                customTitle: A.intl.string(A.t.I8lglT),
-                customSubtitle: A.intl.string(A.t.Ey7mOU),
-                customPreview: (0, n.jsx)(R, {
-                    clips: l,
-                }),
-                customSendHandler: I,
-                customValidateDestination: S,
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
-            : (function (e, t) {
-                  var a = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, n);
-                  }
-                  return a;
-              })(Object(a)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
-              }),
-        t),
-    );
+    return (0, a.jsx)(d.ForwardModal, {
+        ...s,
+        onClose: n,
+        customTitle: j.intl.string(j.t.I8lglT),
+        customSubtitle: j.intl.string(j.t.Ey7mOU),
+        customPreview: (0, a.jsx)(L, { clips: t }),
+        customSendHandler: _,
+        customValidateDestination: p,
+    });
 }

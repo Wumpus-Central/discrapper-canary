@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t) {
         var n = e.split("_");
         return t % 10 == 1 && t % 100 != 11
@@ -9,7 +10,6 @@
               ? n[1]
               : n[2];
     }
-
     function n(e, n, r) {
         var i = {
             ss: n ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
@@ -21,7 +21,6 @@
         };
         return "m" === r ? (n ? "хвилина" : "хвилину") : "h" === r ? (n ? "година" : "годину") : e + " " + t(i[r], +e);
     }
-
     function r(e, t) {
         var n = {
             nominative: "неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота".split("_"),
@@ -38,7 +37,6 @@
               ][e.day()]
             : n.nominative;
     }
-
     function i(e) {
         return function () {
             return e + "о" + (11 === this.hours() ? "б" : "") + "] LT";
@@ -122,9 +120,6 @@
                     return e;
             }
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

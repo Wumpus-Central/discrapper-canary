@@ -1,6 +1,4 @@
-i.d(e, {
-    m: () => d,
-});
+i.d(e, { m: () => d });
 var a = i(627968);
 i(64700);
 var n = i(158954),
@@ -9,7 +7,6 @@ var n = i(158954),
     r = i(41032),
     c = i(985018),
     o = i(23337);
-
 function d(t) {
     let {
         sku: e,
@@ -18,18 +15,15 @@ function d(t) {
         transitionState: d,
         onClose: _,
         hasAlreadyLinked: x,
-        canStartAuthorization: p,
+        canStartAuthorization: m,
         bodyText: f,
-        title: m,
+        title: p,
     } = t;
     return (0, a.jsxs)(n.dWK, {
         transitionState: d,
         onClose: _,
         children: [
-            (0, a.jsx)(r.z, {
-                sku: e,
-                title: m,
-            }),
+            (0, a.jsx)(r.z, { sku: e, title: p }),
             (0, a.jsxs)(n.cwr, {
                 children: [
                     (0, a.jsxs)("div", {
@@ -41,13 +35,10 @@ function d(t) {
                                 className: o.jJ,
                                 children: f,
                             }),
-                            (0, a.jsx)(u, {
-                                isConnected: x,
-                                application: i,
-                            }),
+                            (0, a.jsx)(u, { isConnected: x, application: i }),
                         ],
                     }),
-                    !p &&
+                    !m &&
                         !x &&
                         (0, a.jsx)(s.Text, {
                             variant: "text-md/normal",
@@ -61,21 +52,15 @@ function d(t) {
                             children: (0, a.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
-                                children: c.intl.formatToPlainString(c.t.TTj7ME, {
-                                    numDays: 14,
-                                }),
+                                children: c.intl.formatToPlainString(c.t.TTj7ME, { numDays: 14 }),
                             }),
                         }),
                 ],
             }),
-            (0, a.jsx)(n.H7u, {
-                actions: [l],
-                actionsFullWidth: !0,
-            }),
+            (0, a.jsx)(n.H7u, { actions: [l], actionsFullWidth: !0 }),
         ],
     });
 }
-
 function u(t) {
     let { isConnected: e, application: i } = t;
     return e
@@ -89,10 +74,7 @@ function u(t) {
                           children: [
                               (0, a.jsx)("div", {
                                   className: o.I8,
-                                  children: (0, a.jsx)(n.Uzd, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                  }),
+                                  children: (0, a.jsx)(n.Uzd, { size: "xs", color: "currentColor" }),
                               }),
                               (0, a.jsx)(s.Text, {
                                   variant: "text-md/normal",
@@ -104,19 +86,13 @@ function u(t) {
                       }),
                       (0, a.jsx)("div", {
                           className: o.vA,
-                          children: (0, a.jsx)(l.W, {
-                              application: i,
-                              iconSize: 20,
-                          }),
+                          children: (0, a.jsx)(l.W, { application: i, iconSize: 20 }),
                       }),
                   ],
               }),
           })
         : (0, a.jsx)(n.wx6, {
               type: "warning",
-              children: (0, a.jsx)(s.Text, {
-                  variant: "text-sm/medium",
-                  children: c.intl.string(c.t.Plv1Xk),
-              }),
+              children: (0, a.jsx)(s.Text, { variant: "text-sm/medium", children: c.intl.string(c.t.Plv1Xk) }),
           });
 }

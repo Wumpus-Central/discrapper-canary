@@ -1,104 +1,75 @@
-r.d(t, {
-    default: () => y,
-});
-var n = r(627968),
-    s = r(64700),
-    a = r(158954),
-    i = r(311907),
-    l = r(397927),
-    o = r(414121),
-    c = r(266080),
-    f = r(975571),
-    d = r(643501),
-    u = r(271872),
-    p = r(350701),
-    b = r(544105),
-    m = r(652215),
-    g = r(985018),
-    h = r(536518);
-
-function x(e) {
-    let { step: t, instructions: r } = e;
-    return (0, n.jsxs)("div", {
+"use strict";
+s.d(t, { default: () => g });
+var r = s(627968),
+    i = s(64700),
+    n = s(158954),
+    a = s(311907),
+    o = s(397927),
+    l = s(414121),
+    c = s(266080),
+    d = s(975571),
+    u = s(643501),
+    p = s(271872),
+    f = s(350701),
+    m = s(544105),
+    _ = s(652215),
+    x = s(985018),
+    h = s(536518);
+function C(e) {
+    let { step: t, instructions: s } = e;
+    return (0, r.jsxs)("div", {
         className: h.RA,
         children: [
-            (0, n.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: h.RY,
-                children: (0, n.jsx)(l.Text, {
-                    variant: "text-sm/semibold",
-                    className: h.CD,
-                    children: t,
-                }),
+                children: (0, r.jsx)(o.Text, { variant: "text-sm/semibold", className: h.CD, children: t }),
             }),
-            (0, n.jsx)(l.Text, {
-                variant: "text-sm/normal",
-                color: "text-strong",
-                className: h.GA,
-                children: r,
-            }),
+            (0, r.jsx)(o.Text, { variant: "text-sm/normal", color: "text-strong", className: h.GA, children: s }),
         ],
     });
 }
-
-function y(e) {
-    let { channel: t, transitionState: r, onClose: y } = e,
-        O = (0, i.bG)([d.default], () => null != d.default.getRemoteSessionId()),
-        j = (0, u.A)(t, {
-            forQRCode: !0,
-        });
+function g(e) {
+    let { channel: t, transitionState: s, onClose: g } = e,
+        v = (0, a.bG)([u.default], () => null != u.default.getRemoteSessionId()),
+        N = (0, p.A)(t, { forQRCode: !0 });
     return (
-        s.useEffect(() => {
-            O && y();
-        }, [O, y]),
-        s.useEffect(() => {
-            (0, p.A)(t.id, b.f$.XBOX);
+        i.useEffect(() => {
+            v && g();
+        }, [v, g]),
+        i.useEffect(() => {
+            (0, f.A)(t.id, m.f$.XBOX);
         }, [t.id]),
-        (0, n.jsx)(a.Modal, {
-            title: g.intl.string(g.t["f+Aijq"]),
-            subtitle: g.intl.string(g.t.mYFmDY),
+        (0, r.jsx)(n.Modal, {
+            title: x.intl.string(x.t["f+Aijq"]),
+            subtitle: x.intl.string(x.t.mYFmDY),
             actions: [],
-            onClose: y,
-            transitionState: r,
-            children: (0, n.jsxs)("div", {
+            onClose: g,
+            transitionState: s,
+            children: (0, r.jsxs)("div", {
                 className: h.Nr,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: h.O,
                         children: [
-                            (0, n.jsxs)(l.Text, {
+                            (0, r.jsxs)(o.Text, {
                                 variant: "text-lg/semibold",
                                 color: "text-strong",
                                 className: h.RA,
-                                children: [
-                                    (0, n.jsx)(c.A, {
-                                        className: h.Fp,
-                                    }),
-                                    g.intl.string(g.t.ZNlYbK),
-                                ],
+                                children: [(0, r.jsx)(c.A, { className: h.Fp }), x.intl.string(x.t.ZNlYbK)],
                             }),
-                            (0, n.jsx)(x, {
-                                step: 1,
-                                instructions: g.intl.string(g.t.dDtkl9),
-                            }),
-                            (0, n.jsx)(x, {
-                                step: 2,
-                                instructions: g.intl.string(g.t.IWuXjC),
-                            }),
-                            (0, n.jsx)(l.Text, {
+                            (0, r.jsx)(C, { step: 1, instructions: x.intl.string(x.t.dDtkl9) }),
+                            (0, r.jsx)(C, { step: 2, instructions: x.intl.string(x.t.IWuXjC) }),
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/medium",
-                                children: (0, n.jsx)(l.MzZ, {
+                                children: (0, r.jsx)(o.MzZ, {
                                     className: h.C2,
-                                    href: f.A.getArticleURL(m.MVz.XBOX_CONNECTION),
-                                    children: g.intl.string(g.t.hvVgAZ),
+                                    href: d.A.getArticleURL(_.MVz.XBOX_CONNECTION),
+                                    children: x.intl.string(x.t.hvVgAZ),
                                 }),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(o.Ay, {
-                        className: h.JB,
-                        size: 120,
-                        text: j,
-                    }),
+                    (0, r.jsx)(l.Ay, { className: h.JB, size: 120, text: N }),
                 ],
             }),
         })

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(860511),
     i = n(339626),
     a = function (e) {

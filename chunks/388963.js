@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ur: "spoilerContent__299eb",
     R: "hidden__299eb",

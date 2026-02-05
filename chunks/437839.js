@@ -1,46 +1,35 @@
-n.d(t, {
-    A: () => f,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(545428),
-    c = n(985018),
-    u = n(27551);
-
+    u = n(985018),
+    c = n(27551);
 function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
+            (0, r.jsx)("div", { className: c.me }),
             (0, r.jsx)("div", {
-                className: u.me,
-            }),
-            (0, r.jsx)("div", {
-                className: u.kL,
+                className: c.kL,
                 children: (0, r.jsx)("div", {
-                    className: u.UD,
+                    className: c.UD,
                     children: (0, r.jsx)(l.A, {
-                        className: u.x6,
-                        childClassName: s()(u.Z4, {
-                            [u.r9]: n,
-                            [u.xb]: !n,
-                        }),
+                        className: c.x6,
+                        childClassName: s()(c.Z4, { [c.r9]: n, [c.xb]: !n }),
                         onClick: t,
                         disabled: n,
                         isActive: !1,
                         noHover: n,
-                        "aria-label": c.intl.string(c.t.oeb1vg),
-                        children: (0, r.jsx)(o.lX7, {
-                            size: "xs",
-                            color: "currentColor",
-                            className: u.AO,
-                        }),
+                        "aria-label": u.intl.string(u.t.oeb1vg),
+                        children: (0, r.jsx)(o.lX7, { size: "xs", color: "currentColor", className: c.AO }),
                     }),
                 }),
             }),
         ],
     });
 }
-let f = i.memo(d);
+let _ = i.memo(d);

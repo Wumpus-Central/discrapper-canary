@@ -1,3 +1,4 @@
+"use strict";
 var n = e(486816),
     o = e(61748),
     s = e(738538),
@@ -9,9 +10,7 @@ t.exports = function (t) {
             var r = [];
             return (
                 ((r.constructor = {})[i] = function () {
-                    return {
-                        foo: 1,
-                    };
+                    return { foo: 1 };
                 }),
                 1 !== r[t](Boolean).foo
             );

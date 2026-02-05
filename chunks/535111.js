@@ -1,90 +1,65 @@
-n.d(t, {
-    O: () => m,
-});
-var r = n(627968);
+n.d(t, { O: () => _ });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
+    s = n.n(l),
     a = n(397927),
-    s = n(275667),
+    r = n(275667),
     o = n(576437),
-    c = n(408486),
-    u = n(769015),
-    d = n(409626),
-    f = n(692969),
-    p = n(485599),
-    h = n(985018),
-    b = n(237235);
-
-function g(e) {
+    d = n(408486),
+    c = n(769015),
+    u = n(409626),
+    h = n(692969),
+    A = n(485599),
+    g = n(985018),
+    m = n(237235);
+function p(e) {
     let { name: t, applicationId: n } = e,
-        l = (0, f.A)({
+        l = (0, h.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
-            source: d.Ob.RtcPanel,
+            source: u.Ob.RtcPanel,
             trackEntryPointImpression: !0,
         });
-    return (0, r.jsx)(a.DUT, {
+    return (0, i.jsx)(a.DUT, {
         onClick: l,
-        className: i()(null != l && b.On),
-        children: (0, r.jsx)(p.A, {
-            className: b.mO,
-            children: t,
-        }),
+        className: s()(null != l && m.On),
+        children: (0, i.jsx)(A.A, { className: m.mO, children: t }),
     });
 }
-
-function m(e) {
+function _(e) {
     let {
             isStreaming: t,
             application: n,
             game: l,
-            onClickNotSharing: i,
-            isForceShowSharingPopout: d,
-            setIsForceShowSharingPopout: f,
-            ref: p,
-            popoutTargetRef: m,
+            onClickNotSharing: s,
+            isForceShowSharingPopout: u,
+            setIsForceShowSharingPopout: h,
+            ref: A,
+            popoutTargetRef: _,
         } = e,
-        A = null != n ? n.name : null != l ? l.name : h.intl.string(h.t["UQMV/E"]);
+        x = null != n ? n.name : null != l ? l.name : g.intl.string(g.t["UQMV/E"]);
     return (
-        (0, c.z)(),
-        (0, r.jsxs)("div", {
-            className: b.cm,
+        (0, d.z)(),
+        (0, i.jsxs)("div", {
+            className: m.cm,
             children: [
-                (0, r.jsxs)("div", {
-                    className: b.f9,
+                (0, i.jsxs)("div", {
+                    className: m.f9,
                     children: [
-                        (0, r.jsx)(u.A, {
-                            className: b.Gt,
-                            game: n,
-                            pid: null == l ? void 0 : l.pid,
-                            ref: p,
-                        }),
-                        t
-                            ? (0, r.jsx)(a.npA, {
-                                  size: "md",
-                                  color: "currentColor",
-                                  className: b.it,
-                              })
-                            : null,
+                        (0, i.jsx)(c.A, { className: m.Gt, game: n, pid: l?.pid, ref: A }),
+                        t ? (0, i.jsx)(a.npA, { size: "md", color: "currentColor", className: m.it }) : null,
                     ],
                 }),
-                (0, r.jsx)(o.M, {
-                    popoutTargetRef: m,
-                    isForceShowSharingPopout: d,
-                    setIsForceShowSharingPopout: f,
-                    children: (0, r.jsxs)("div", {
-                        className: b.pq,
+                (0, i.jsx)(o.M, {
+                    popoutTargetRef: _,
+                    isForceShowSharingPopout: u,
+                    setIsForceShowSharingPopout: h,
+                    children: (0, i.jsxs)("div", {
+                        className: m.pq,
                         children: [
-                            null != A
-                                ? (0, r.jsx)(g, {
-                                      name: A,
-                                      applicationId: null == n ? void 0 : n.id,
-                                  })
-                                : null,
-                            (0, r.jsx)(s.G, {
-                                onClick: i,
-                            }),
+                            null != x ? (0, i.jsx)(p, { name: x, applicationId: n?.id }) : null,
+                            (0, i.jsx)(r.G, { onClick: s }),
                         ],
                     }),
                 }),

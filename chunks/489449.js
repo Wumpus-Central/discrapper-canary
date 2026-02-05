@@ -1,60 +1,49 @@
-n.d(t, {
-    default: () => w,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    a = n(239947),
-    i = n(158954),
+n.d(t, { default: () => k });
+var l = n(627968),
+    a = n(64700),
+    i = n(239947),
+    r = n(158954),
     o = n(397927),
-    c = n(579872),
-    s = n(139286),
+    s = n(579872),
+    c = n(139286),
     u = n(973431),
-    f = n(969632),
+    m = n(969632),
     d = n(998489),
-    b = n(983081),
-    m = n(57359),
-    p = n(820453),
-    g = n(412136),
-    O = n(412728),
-    j = n(985018),
-    y = n(826701);
-
-function h(e) {
-    let { question: t, onChange: n, error: l, inputRef: a } = e;
-    return (0, r.jsx)(o.fs1, {
-        label: j.intl.string(j.t.WBiKnI),
-        inputRef: a,
-        placeholder: j.intl.string(j.t["/uQqJW"]),
+    f = n(983081),
+    g = n(57359),
+    b = n(820453),
+    p = n(412136),
+    h = n(412728),
+    A = n(985018),
+    C = n(826701);
+function R(e) {
+    let { question: t, onChange: n, error: a, inputRef: i } = e;
+    return (0, l.jsx)(o.fs1, {
+        label: A.intl.string(A.t.WBiKnI),
+        inputRef: i,
+        placeholder: A.intl.string(A.t["/uQqJW"]),
         value: t,
         onChange: n,
-        maxLength: g.jD,
-        error: l,
+        maxLength: p.jD,
+        error: a,
         rows: 1,
         autosize: !0,
         autoFocus: !0,
         showCharacterCount: !0,
     });
 }
-
-function v(e) {
+function j(e) {
     let { selectedDuration: t, onSelect: n } = e,
-        l = (0, b.A)(),
-        a = l[t];
-    return (0, r.jsx)("div", {
-        className: y.p0,
-        children: (0, r.jsx)(o.l6P, {
-            label: j.intl.string(j.t.bGHzxb),
-            "aria-label": j.intl.formatToPlainString(j.t.nXNHNJ, {
-                duration: a,
-            }),
-            options: Object.entries(l).map((e) => {
+        a = (0, f.A)(),
+        i = a[t];
+    return (0, l.jsx)("div", {
+        className: C.p0,
+        children: (0, l.jsx)(o.l6P, {
+            label: A.intl.string(A.t.bGHzxb),
+            "aria-label": A.intl.formatToPlainString(A.t.nXNHNJ, { duration: i }),
+            options: Object.entries(a).map((e) => {
                 let [t, n] = e;
-                return {
-                    id: t.toString(),
-                    label: n,
-                    value: parseInt(t),
-                };
+                return { id: t.toString(), label: n, value: parseInt(t) };
             }),
             value: t,
             onSelectionChange: n,
@@ -63,235 +52,142 @@ function v(e) {
         }),
     });
 }
-
-function w(e) {
-    let { channel: t, transitionState: n, onClose: b, initialQuestion: P, initialAnswers: A, initialDuration: C } = e;
-    (0, s.A)({
-        type: O.z.MODAL,
-        name: a.I.POLL_EDITOR_VIEWED,
-    });
-    let R = l.useRef(null),
-        k = l.useRef([]),
-        E = l.useRef(null),
-        x = l.useCallback((e) => {
-            var t, n;
-            let { indexToRemove: r, numberOfAnswers: l } = e;
-            l === g.FW + 1
-                ? null == (t = E.current) || t.focus()
-                : null == (n = k.current[r === l - 1 ? r - 1 : r + 1]) || n.focusDeleteButton();
+function k(e) {
+    let { channel: t, transitionState: n, onClose: f, initialQuestion: x, initialAnswers: _, initialDuration: w } = e;
+    (0, c.A)({ type: h.z.MODAL, name: i.I.POLL_EDITOR_VIEWED });
+    let E = a.useRef(null),
+        P = a.useRef([]),
+        N = a.useRef(null),
+        I = a.useCallback((e) => {
+            let { indexToRemove: t, numberOfAnswers: n } = e;
+            n === p.FW + 1 ? N.current?.focus() : P.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
         }, []),
         {
             answers: S,
-            question: D,
-            allowMultiSelect: N,
-            setAllowMultiSelect: I,
-            duration: _,
+            question: v,
+            allowMultiSelect: D,
+            setAllowMultiSelect: O,
+            duration: y,
             setDuration: T,
             handleQuestionChange: U,
             handleAnswerTextChange: L,
             handleEmojiSelect: K,
             canAddMoreAnswers: Y,
-            handleRemoveAnswerImage: q,
-            canRemoveMoreAnswers: z,
-            handleAddAnswer: F,
-            handleRemoveAnswer: B,
-            createPollError: G,
-            handleSubmitPoll: W,
-            fieldErrors: M,
-            submitting: V,
-            shouldFocusOnInvalidField: H,
-            setShouldFocusOnInvalidField: Z,
-        } = (0, d.A)(t, b, x, {
-            initialQuestion: P,
-            initialAnswers: A,
-            initialDuration: C,
-        }),
-        { trackPollCreationCancelled: X } = (0, m.I)(S, N),
-        Q = l.useRef(S.length),
-        $ = l.useCallback(() => {
-            X(), b();
-        }, [b, X]),
-        J = l.useCallback(() => {
-            (0, f.Wn)(D, S)
-                ? $()
-                : c.A.show({
-                      title: j.intl.string(j.t.HMrgcp),
-                      body: j.intl.string(j.t["Wxa/j8"]),
-                      confirmText: j.intl.string(j.t.TzJA4g),
+            handleRemoveAnswerImage: B,
+            canRemoveMoreAnswers: W,
+            handleAddAnswer: $,
+            handleRemoveAnswer: q,
+            createPollError: z,
+            handleSubmitPoll: F,
+            fieldErrors: G,
+            submitting: M,
+            shouldFocusOnInvalidField: V,
+            setShouldFocusOnInvalidField: H,
+        } = (0, d.A)(t, f, I, { initialQuestion: x, initialAnswers: _, initialDuration: w }),
+        { trackPollCreationCancelled: Z } = (0, g.I)(S, D),
+        X = a.useRef(S.length),
+        Q = a.useCallback(() => {
+            Z(), f();
+        }, [f, Z]),
+        J = a.useCallback(() => {
+            (0, m.Wn)(v, S)
+                ? Q()
+                : s.A.show({
+                      title: A.intl.string(A.t.HMrgcp),
+                      body: A.intl.string(A.t["Wxa/j8"]),
+                      confirmText: A.intl.string(A.t.TzJA4g),
                       confirmVariant: "critical-primary",
-                      cancelText: j.intl.string(j.t["2BR5R2"]),
+                      cancelText: A.intl.string(A.t["2BR5R2"]),
                       onConfirm: () => {
-                          $();
+                          Q();
                       },
                   });
-        }, [$, S, D]);
-    l.useEffect(() => {
-        (0, o.zbz)(
-            g.sm,
-            (e) => {
-                var n, l;
-                return (0, r.jsx)(
-                    w,
-                    ((n = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (l = l =
-                        {
-                            channel: t,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                          }),
-                    n),
-                );
-            },
-            J,
-        );
+        }, [Q, S, v]);
+    a.useEffect(() => {
+        (0, o.zbz)(p.sm, (e) => (0, l.jsx)(k, { ...e, channel: t }), J);
     }, [J, t]),
-        l.useEffect(() => {
-            if (S.length > Q.current) {
-                var e;
-                null == (e = k.current[S.length - 1]) || e.focusInput();
-            }
-            Q.current = S.length;
+        a.useEffect(() => {
+            S.length > X.current && P.current[S.length - 1]?.focusInput(), (X.current = S.length);
         }, [S.length]),
-        l.useEffect(() => {
-            if (H) {
-                var e, t;
-                if ((null == M ? void 0 : M.question) != null) null == (e = R.current) || e.focus();
+        a.useEffect(() => {
+            if (V) {
+                if (G?.question != null) E.current?.focus();
                 else {
-                    let e = S.findIndex((e) => M["answer-".concat(e.localCreationAnswerId)]);
-                    -1 !== e && (null == (t = k.current[e]) || t.focusInput());
+                    let e = S.findIndex((e) => G[`answer-${e.localCreationAnswerId}`]);
+                    -1 !== e && P.current[e]?.focusInput();
                 }
-                Z(!1);
+                H(!1);
             }
-        }, [M, S, H, Z, k]);
-    let ee = l.useCallback(() => {
-            n === o.ip4.ENTERED && W();
-        }, [W, n]),
-        et = (0, u.A)({
-            disabled: V,
-            onSubmit: ee,
-        }),
-        en = l.useMemo(
-            () => [
-                {
-                    variant: "primary",
-                    onClick: ee,
-                    submitting: V,
-                    text: j.intl.string(j.t.JOj8Zk),
-                },
-            ],
-            [ee, V],
+        }, [G, S, V, H, P]);
+    let ee = a.useCallback(() => {
+            n === o.ip4.ENTERED && F();
+        }, [F, n]),
+        et = (0, u.A)({ disabled: M, onSubmit: ee }),
+        en = a.useMemo(
+            () => [{ variant: "primary", onClick: ee, submitting: M, text: A.intl.string(A.t.JOj8Zk) }],
+            [ee, M],
         );
-    return (0, r.jsx)(i.Modal, {
+    return (0, l.jsx)(r.Modal, {
         transitionState: n,
-        onClose: b,
-        title: j.intl.string(j.t["GD/8X8"]),
+        onClose: f,
+        title: A.intl.string(A.t["GD/8X8"]),
         actions: en,
-        actionBarInput: (0, r.jsx)(o.Checkbox, {
-            checked: N,
-            onChange: (e) => I(e),
-            label: j.intl.string(j.t["Ux+iQU"]),
+        actionBarInput: (0, l.jsx)(o.Checkbox, {
+            checked: D,
+            onChange: (e) => O(e),
+            label: A.intl.string(A.t["Ux+iQU"]),
         }),
-        children: (0, r.jsxs)("div", {
-            className: y.Qs,
+        children: (0, l.jsxs)("div", {
+            className: C.Qs,
             onKeyDown: et,
             children: [
-                null != G &&
-                    (0, r.jsx)(o.wx6, {
-                        type: "critical",
-                        children: G.getAnyErrorMessage(),
-                    }),
-                (0, r.jsx)(h, {
-                    question: D,
-                    onChange: U,
-                    error: null == M ? void 0 : M.question,
-                    inputRef: R,
-                }),
-                (0, r.jsx)(o.hKd, {
-                    size: 26,
-                }),
-                (0, r.jsxs)(o.D0$, {
+                null != z && (0, l.jsx)(o.wx6, { type: "critical", children: z.getAnyErrorMessage() }),
+                (0, l.jsx)(R, { question: v, onChange: U, error: G?.question, inputRef: E }),
+                (0, l.jsx)(o.hKd, { size: 26 }),
+                (0, l.jsxs)(o.D0$, {
                     role: "group",
-                    label: j.intl.string(j.t.oMBfeS),
+                    label: A.intl.string(A.t.oMBfeS),
                     children: [
                         S.map((e, n) =>
-                            (0, r.jsx)(
-                                p.A,
+                            (0, l.jsx)(
+                                b.A,
                                 {
                                     answer: e,
                                     channelId: t.id,
                                     index: n,
                                     isLastAnswer: n === S.length - 1,
                                     onEmojiSelect: K,
-                                    onEmojiRemove: q,
+                                    onEmojiRemove: B,
                                     onAnswerTextChange: L,
-                                    onRemoveAnswer: B,
-                                    addAnswer: F,
+                                    onRemoveAnswer: q,
+                                    addAnswer: $,
                                     submitPoll: ee,
-                                    answerRowRefs: k,
-                                    error: null == M ? void 0 : M["answer-".concat(e.localCreationAnswerId)],
-                                    canRemoveAnswer: z,
+                                    answerRowRefs: P,
+                                    error: G?.[`answer-${e.localCreationAnswerId}`],
+                                    canRemoveAnswer: W,
                                     ref: (e) => {
-                                        k.current[n] = e;
+                                        P.current[n] = e;
                                     },
                                 },
                                 e.localCreationAnswerId,
                             ),
                         ),
                         Y &&
-                            (0, r.jsx)("div", {
-                                className: y.Ox,
-                                children: (0, r.jsx)(o.Button, {
+                            (0, l.jsx)("div", {
+                                className: C.Ox,
+                                children: (0, l.jsx)(o.Button, {
                                     icon: o.j96,
                                     variant: "secondary",
-                                    onClick: F,
-                                    "aria-label": j.intl.string(j.t.B2Uvme),
-                                    buttonRef: E,
-                                    text: j.intl.string(j.t.B2Uvme),
+                                    onClick: $,
+                                    "aria-label": A.intl.string(A.t.B2Uvme),
+                                    buttonRef: N,
+                                    text: A.intl.string(A.t.B2Uvme),
                                 }),
                             }),
                     ],
                 }),
-                (0, r.jsx)(o.hKd, {
-                    size: 18,
-                }),
-                (0, r.jsx)(v, {
-                    selectedDuration: _,
-                    onSelect: T,
-                }),
+                (0, l.jsx)(o.hKd, { size: 18 }),
+                (0, l.jsx)(j, { selectedDuration: y, onSelect: T }),
             ],
         }),
     });

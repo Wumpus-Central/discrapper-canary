@@ -1,3 +1,4 @@
+"use strict";
 var t = Math.ceil,
     n = Math.floor;
 e.exports =

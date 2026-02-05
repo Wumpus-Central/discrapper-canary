@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(457529),
-    n(65821);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(536194);
 let i = (0, n(242133).g)();
 class a {
@@ -11,9 +8,7 @@ class a {
     }
     unpack(e) {
         if ("string" != typeof e)
-            throw Error(
-                "Expected a string to be passed to JSONEncoding.unpack, got ".concat(null == e ? null : typeof e),
-            );
+            throw Error(`Expected a string to be passed to JSONEncoding.unpack, got ${null == e ? null : typeof e}`);
         return JSON.parse(e);
     }
     getName() {

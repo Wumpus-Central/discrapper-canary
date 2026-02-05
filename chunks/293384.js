@@ -1237,16 +1237,12 @@ d.initialize(),
         if (t.getEndPosition() - o < 8)
             return (
                 r.debug("BoxParser", "Not enough data in stream to parse the type and size of the box"),
-                {
-                    code: d.ERR_NOT_ENOUGH_DATA,
-                }
+                { code: d.ERR_NOT_ENOUGH_DATA }
             );
         if (i && i < 8)
             return (
                 r.debug("BoxParser", "Not enough bytes left in the parent box to parse a new box"),
-                {
-                    code: d.ERR_NOT_ENOUGH_DATA,
-                }
+                { code: d.ERR_NOT_ENOUGH_DATA }
             );
         var p = t.readUint32(),
             l = t.readString(4),
@@ -1260,9 +1256,7 @@ d.initialize(),
                 return (
                     t.seek(o),
                     r.debug("BoxParser", "Not enough bytes left in the parent box to parse a UUID box"),
-                    {
-                        code: d.ERR_NOT_ENOUGH_DATA,
-                    }
+                    { code: d.ERR_NOT_ENOUGH_DATA }
                 );
             (a = d.parseUUID(t)), (h += 16), (f = a);
         }
@@ -1271,9 +1265,7 @@ d.initialize(),
                 return (
                     t.seek(o),
                     r.warn("BoxParser", 'Not enough data in stream to parse the extended size of the "' + l + '" box'),
-                    {
-                        code: d.ERR_NOT_ENOUGH_DATA,
-                    }
+                    { code: d.ERR_NOT_ENOUGH_DATA }
                 );
             (p = t.readUint64()), (h += 8);
         } else if (0 === p) {
@@ -1282,52 +1274,24 @@ d.initialize(),
                 return (
                     r.error("BoxParser", "Unlimited box size not supported for type: '" + l + "'"),
                     (s = new d.Box(l, p)),
-                    {
-                        code: d.OK,
-                        box: s,
-                        size: s.size,
-                    }
+                    { code: d.OK, box: s, size: s.size }
                 );
         }
         return 0 !== p && p < h
             ? (r.error("BoxParser", "Box of type " + l + " has an invalid size " + p + " (too small to be a box)"),
-              {
-                  code: d.ERR_NOT_ENOUGH_DATA,
-                  type: l,
-                  size: p,
-                  hdr_size: h,
-                  start: o,
-              })
+              { code: d.ERR_NOT_ENOUGH_DATA, type: l, size: p, hdr_size: h, start: o })
             : 0 !== p && i && p > i
               ? (r.error(
                     "BoxParser",
                     "Box of type '" + l + "' has a size " + p + " greater than its container size " + i,
                 ),
-                {
-                    code: d.ERR_NOT_ENOUGH_DATA,
-                    type: l,
-                    size: p,
-                    hdr_size: h,
-                    start: o,
-                })
+                { code: d.ERR_NOT_ENOUGH_DATA, type: l, size: p, hdr_size: h, start: o })
               : 0 !== p && o + p > t.getEndPosition()
                 ? (t.seek(o),
                   r.info("BoxParser", "Not enough data in stream to parse the entire '" + l + "' box"),
-                  {
-                      code: d.ERR_NOT_ENOUGH_DATA,
-                      type: l,
-                      size: p,
-                      hdr_size: h,
-                      start: o,
-                  })
+                  { code: d.ERR_NOT_ENOUGH_DATA, type: l, size: p, hdr_size: h, start: o })
                 : e
-                  ? {
-                        code: d.OK,
-                        type: l,
-                        size: p,
-                        hdr_size: h,
-                        start: o,
-                    }
+                  ? { code: d.OK, type: l, size: p, hdr_size: h, start: o }
                   : (d[l + "Box"]
                         ? (s = new d[l + "Box"](p))
                         : "uuid" !== l
@@ -1370,11 +1334,7 @@ d.initialize(),
                                   " more bytes than the indicated box data size, seeking backwards",
                           ),
                           0 !== s.size && t.seek(s.start + s.size)),
-                    {
-                        code: d.OK,
-                        box: s,
-                        size: s.size,
-                    });
+                    { code: d.OK, box: s, size: s.size });
     }),
     (d.Box.prototype.parse = function (t) {
         "mdat" != this.type
@@ -2920,10 +2880,7 @@ d.initialize(),
             var d = 1;
             for (13 != h.nalu_type && 12 != h.nalu_type && (d = t.readUint16()), i = 0; i < d; i++) {
                 var p = t.readUint16();
-                h.push({
-                    data: t.readUint8Array(p),
-                    length: p,
-                });
+                h.push({ data: t.readUint8Array(p), length: p });
             }
         }
     }),
@@ -3750,7 +3707,6 @@ var p = function () {};
         function s(t, e, i) {
             return (i = i || "0"), (t += "").length >= e ? t : Array(e - t.length + 1).join(i) + t;
         }
-
         function r(t) {
             var e = Math.floor(t / 3600),
                 i = Math.floor((t - 3600 * e) / 60),
@@ -3997,13 +3953,7 @@ var u = function (t) {
                     (s.duration = i.mdia.mdhd.duration),
                     (s.samples_duration = i.samples_duration),
                     (s.codec = n.getCodec()),
-                    (s.kind =
-                        i.udta && i.udta.kinds.length
-                            ? i.udta.kinds[0]
-                            : {
-                                  schemeURI: "",
-                                  value: "",
-                              }),
+                    (s.kind = i.udta && i.udta.kinds.length ? i.udta.kinds[0] : { schemeURI: "", value: "" }),
                     (s.language = i.mdia.elng ? i.mdia.elng.extended_language : i.mdia.mdhd.languageString),
                     (s.nb_samples = i.samples.length),
                     (s.size = i.samples_size),
@@ -4172,10 +4122,7 @@ var u = function (t) {
                     "ISOFile",
                     "No sample in track, cannot seek! Using time " + r.getDurationString(0, 1) + " and offset: 0",
                 ),
-                {
-                    offset: 0,
-                    time: 0,
-                }
+                { offset: 0, time: 0 }
             );
         for (s = 0; s < i.samples.length; s++) {
             if (((n = i.samples[s]), 0 === s)) (d = 0), (a = n.timescale);
@@ -4205,10 +4152,7 @@ var u = function (t) {
                     " and offset: " +
                     o,
             ),
-            {
-                offset: o,
-                time: t / a,
-            }
+            { offset: o, time: t / a }
         );
     }),
     (u.prototype.seek = function (t, e) {
@@ -4216,10 +4160,7 @@ var u = function (t) {
             s,
             n,
             a = this.moov,
-            o = {
-                offset: 1 / 0,
-                time: 1 / 0,
-            };
+            o = { offset: 1 / 0, time: 1 / 0 };
         if (this.moov) {
             for (n = 0; n < a.traks.length; n++)
                 (i = a.traks[n]),
@@ -4234,10 +4175,7 @@ var u = function (t) {
                         o.offset,
                 ),
                 o.offset === 1 / 0
-                    ? (o = {
-                          offset: this.nextParsePosition,
-                          time: 0,
-                      })
+                    ? (o = { offset: this.nextParsePosition, time: 0 })
                     : (o.offset = this.stream.getEndFilePositionAfter(o.offset)),
                 r.info("ISOFile", "Adjusted seek position (after checking data already in buffer): " + o.offset),
                 o
@@ -4546,7 +4484,6 @@ var u = function (t) {
     }),
     (u.initSampleGroups = function (t, e, i, s, r) {
         var n, a, o, h;
-
         function d(t, e, i) {
             (this.grouping_type = t),
                 (this.grouping_type_parameter = e),
@@ -5011,10 +4948,7 @@ var u = function (t) {
                 for (t = 0; t < n.iref.references.length; t++) {
                     var o = n.iref.references[t];
                     for (e = 0; e < o.references.length; e++)
-                        s[o.from_item_ID].ref_to.push({
-                            type: o.type,
-                            id: o.references[e],
-                        });
+                        s[o.from_item_ID].ref_to.push({ type: o.type, id: o.references[e] });
                 }
             if (n.iprp)
                 for (var h = 0; h < n.iprp.ipmas.length; h++) {
@@ -5146,10 +5080,7 @@ var u = function (t) {
         if (null == (i = e.itemId ? this.getItem(e.itemId) : this.getPrimaryItem())) return null;
         var s = new u();
         s.discardMdatData = !1;
-        var r = {
-            type: i.type,
-            description_boxes: i.properties.boxes,
-        };
+        var r = { type: i.type, description_boxes: i.properties.boxes };
         i.properties.ispe && ((r.width = i.properties.ispe.image_width), (r.height = i.properties.ispe.image_height));
         var n = s.addTrack(r);
         return n ? (s.addSample(n, i.data), s) : null;

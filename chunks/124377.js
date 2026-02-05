@@ -1,3 +1,4 @@
+"use strict";
 var n = r(68055),
     i = r(617179),
     o = r(367932),
@@ -45,9 +46,7 @@ var n = r(68055),
                         });
                 }
                 return t;
-            })({}, c(t, e), {
-                children: [],
-            }));
+            })({}, c(t, e), { children: [] }));
         a ? o[a].children.push(s) : r.push(s);
     },
     f = function (t, e) {
@@ -70,10 +69,7 @@ var n = r(68055),
                 ),
                     l(t, r, n, i);
             }),
-            {
-                blocks: n,
-                entityMap: r,
-            }
+            { blocks: n, entityMap: r }
         );
     },
     p = function (t, e) {
@@ -83,22 +79,12 @@ var n = r(68055),
         return (
             Object.keys(n).forEach(function (e, r) {
                 var n = t.getEntity(o.unstringify(e));
-                i[r] = {
-                    type: n.getType(),
-                    mutability: n.getMutability(),
-                    data: n.getData(),
-                };
+                i[r] = { type: n.getType(), mutability: n.getMutability(), data: n.getData() };
             }),
-            {
-                blocks: r,
-                entityMap: i,
-            }
+            { blocks: r, entityMap: i }
         );
     };
 t.exports = function (t) {
-    var e = {
-        entityMap: {},
-        blocks: [],
-    };
+    var e = { entityMap: {}, blocks: [] };
     return (e = f(t, e)), (e = p(t, e));
 };

@@ -1,95 +1,40 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048),
-    n(747238),
-    n(812715);
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    s = n(34006);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = /[^0-9]/g;
-class c extends i.PureComponent {
+n.d(t, { A: () => c });
+var i = n(627968),
+    s = n(64700),
+    r = n(397927),
+    a = n(34006);
+let l = /[^0-9]/g;
+class o extends s.PureComponent {
+    _inputRef;
+    selectionStart = 0;
     componentDidUpdate(e) {
         let t = this._inputRef;
         e.value !== this.props.value && null != t && t.setSelectionRange(this.selectionStart, this.selectionStart);
     }
+    setRef = (e) => {
+        let { inputRef: t } = this.props;
+        (this._inputRef = e), null != t && t(e);
+    };
+    handleChange = (e, t) => {
+        let { value: n, onChange: i } = this.props,
+            s = this._inputRef;
+        if (e === n || null == s || null == n) return;
+        let r = (0, a.N)(e),
+            o = s.selectionStart;
+        r === n && r.length <= 3 && n.includes("/") && !e.includes("/")
+            ? (r = r.replace(l, ""))
+            : r === n && e.includes("/") && !n.includes("/") && (r += "/"),
+            r.length > e.length && (o += r.length - e.length),
+            (this.selectionStart = o),
+            null != i && i(r, t);
+    };
     render() {
-        var e, t;
-        return (0, r.jsx)(
-            l.ksK,
-            ((e = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            a(e, t, n[t]);
-                        });
-                }
-                return e;
-            })({}, this.props)),
-            (t = t =
-                {
-                    inputMode: "numeric",
-                    onChange: this.handleChange,
-                    inputRef: this.setRef,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(t)).forEach(function (n) {
-                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                  }),
-            e),
-        );
-    }
-    constructor(...e) {
-        super(...e),
-            a(this, "_inputRef", void 0),
-            a(this, "selectionStart", 0),
-            a(this, "setRef", (e) => {
-                let { inputRef: t } = this.props;
-                (this._inputRef = e), null != t && t(e);
-            }),
-            a(this, "handleChange", (e, t) => {
-                let { value: n, onChange: r } = this.props,
-                    i = this._inputRef;
-                if (e === n || null == i || null == n) return;
-                let l = (0, s.N)(e),
-                    a = i.selectionStart;
-                l === n && l.length <= 3 && n.includes("/") && !e.includes("/")
-                    ? (l = l.replace(o, ""))
-                    : l === n && e.includes("/") && !n.includes("/") && (l += "/"),
-                    l.length > e.length && (a += l.length - e.length),
-                    (this.selectionStart = a),
-                    null != r && r(l, t);
-            });
+        return (0, i.jsx)(r.ksK, {
+            ...this.props,
+            inputMode: "numeric",
+            onChange: this.handleChange,
+            inputRef: this.setRef,
+        });
     }
 }
-let d = c;
+let c = o;

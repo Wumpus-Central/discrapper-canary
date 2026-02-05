@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,19 +7,14 @@ var i = n(503698),
     s = n(990078),
     o = n(397927),
     l = n(985018),
-    c = n(31770);
-
-function u(e) {
+    u = n(31770);
+function c(e) {
     let { text: t = l.intl.string(l.t["5AFxuK"]), className: n } = e;
     return (0, r.jsx)(s.m, {
         text: t,
         asContainer: !0,
         children: (0, r.jsx)(o.DUT, {
-            children: (0, r.jsx)(o.tvc, {
-                size: "md",
-                color: "currentColor",
-                className: a()(c.a, n),
-            }),
+            children: (0, r.jsx)(o.tvc, { size: "md", color: "currentColor", className: a()(u.a, n) }),
         }),
     });
 }

@@ -4,7 +4,4 @@ IntlMessageFormat.__addLocaleData({
         return "other";
     },
 }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "ko-KP",
-        parentLocale: "ko",
-    });
+    IntlMessageFormat.__addLocaleData({ locale: "ko-KP", parentLocale: "ko" });

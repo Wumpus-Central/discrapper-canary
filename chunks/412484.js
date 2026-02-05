@@ -1,82 +1,72 @@
-n.d(t, {
-    Ay: () => C,
-    NH: () => N,
-    T: () => I,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { Ay: () => T, NH: () => y, T: () => v });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(481613),
-    o = n.n(s),
-    c = n(837381),
-    u = n(311907),
-    d = n(397927),
-    f = n(73153),
-    p = n(964486),
-    h = n(775602),
-    b = n(928039),
-    g = n(954571),
-    m = n(203982),
-    A = n(723702),
-    y = n(157296),
-    O = n(963702),
-    j = n(792967),
-    v = n(712209),
-    x = n(652215),
-    E = n(985018),
-    _ = n(852570);
-
-function C(e) {
-    var t, n, i, s, y, C, I;
-    let { onJump: N, showTutorial: T, setSeenTutorial: P, closePopout: w } = e,
-        R = l.useRef(null),
-        [D, M] = (0, v.Ay)(R),
-        { loadState: L, channels: G } = D,
-        { maybeLoadMore: k } = M,
-        U = (0, u.bG)([h.A], () => h.A.messageGroupSpacing);
-    (t = R),
+    s = n(503698),
+    a = n.n(s),
+    r = n(481613),
+    o = n.n(r),
+    d = n(837381),
+    c = n(311907),
+    u = n(397927),
+    h = n(73153),
+    A = n(964486),
+    g = n(775602),
+    m = n(928039),
+    p = n(954571),
+    _ = n(203982),
+    x = n(723702),
+    f = n(157296),
+    E = n(963702),
+    C = n(792967),
+    I = n(712209),
+    S = n(652215),
+    b = n(985018),
+    N = n(852570);
+function T(e) {
+    var t, n, s, r, f, T;
+    let { onJump: v, showTutorial: y, setSeenTutorial: R, closePopout: O } = e,
+        L = l.useRef(null),
+        [D, M] = (0, I.Ay)(L),
+        { loadState: G, channels: U } = D,
+        { maybeLoadMore: P } = M,
+        k = (0, c.bG)([g.A], () => g.A.messageGroupSpacing);
+    (t = L),
         (n = D),
-        (i = M),
+        (s = M),
         l.useLayoutEffect(() => {
-            var e;
-            let { scrollToChannelIndex: r } = n;
-            i.clearScrollToChannelIndex();
-            let { current: l } = t;
-            if (null == l || null == r) return;
-            let a = null == (e = l.getScrollerNode()) ? void 0 : e.children;
+            let { scrollToChannelIndex: e } = n;
+            s.clearScrollToChannelIndex();
+            let { current: i } = t;
+            if (null == i || null == e) return;
+            let l = i.getScrollerNode()?.children;
+            if (null == l) return;
+            let a = l[e];
             if (null == a) return;
-            let s = a[r];
-            if (null == s) return;
-            let { scrollTop: o, offsetHeight: c } = l.getScrollerState();
-            (s.offsetTop < o || s.offsetTop > o + c) &&
-                l.scrollTo({
-                    to: s.offsetTop,
-                });
+            let { scrollTop: r, offsetHeight: o } = i.getScrollerState();
+            (a.offsetTop < r || a.offsetTop > r + o) && i.scrollTo({ to: a.offsetTop });
         }),
-        (s = D),
-        (y = M),
+        (r = D),
+        (f = M),
         l.useEffect(() => {
             let e = () => {
-                let e = s.channels.find((e) => !e.collapsed);
-                null != e && y.markChannelRead(e);
+                let e = r.channels.find((e) => !e.collapsed);
+                null != e && f.markChannelRead(e);
             };
             return (
-                m._.subscribe(x.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
+                _._.subscribe(S.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    m._.unsubscribe(x.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    _._.unsubscribe(S.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [y, s.channels]),
-        (C = M),
+        }, [f, r.channels]),
+        (T = M),
         l.useEffect(() => {
             let e = (e) => {
-                ((0, A.isMac)() || (0, A.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
+                ((0, x.isMac)() || (0, x.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
-                    C.undoMarkChannelRead();
+                    T.undoMarkChannelRead();
             };
             return (
                 document.addEventListener("keydown", e),
@@ -84,187 +74,81 @@ function C(e) {
                     document.removeEventListener("keydown", e);
                 }
             );
-        }, [C]),
+        }, [T]),
         l.useEffect(() => {
-            g.default.track(x.HAw.OPEN_POPOUT, {
-                type: "Inbox",
-            });
+            p.default.track(S.HAw.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         l.useEffect(
             () => (
-                f.h.subscribe("CONNECTION_OPEN", w),
+                h.h.subscribe("CONNECTION_OPEN", O),
                 () => {
-                    f.h.unsubscribe("CONNECTION_OPEN", w);
+                    h.h.unsubscribe("CONNECTION_OPEN", O);
                 }
             ),
-            [w],
+            [O],
         ),
-        (0, p.Ay)(
+        (0, A.Ay)(
             () => (
-                m._.subscribe(x.jej.INBOX_MARK_ALL_UNREADS_READ, M.markAllRead),
+                _._.subscribe(S.jej.INBOX_MARK_ALL_UNREADS_READ, M.markAllRead),
                 () => {
-                    m._.unsubscribe(x.jej.INBOX_MARK_ALL_UNREADS_READ, M.markAllRead);
+                    _._.unsubscribe(S.jej.INBOX_MARK_ALL_UNREADS_READ, M.markAllRead);
                 }
             ),
         );
-    let V = (0, b.A)("unreads", R);
-    if (0 === G.length) {
-        return (0, r.jsx)(O.A, {
-            Icon: d.K$s,
-            header: E.intl.string(E.t["6XMM+D"]),
-            tip:
-                (null == (I = o().os) ? void 0 : I.family) === "OS X"
-                    ? E.intl.string(E.t.w9uDOW)
-                    : E.intl.string(E.t.BiUJC6),
-        });
-    }
-    return (0, r.jsx)(c.hD, {
-        navigator: V,
-        children: (0, r.jsx)(c.PR, {
-            children: (e) => {
-                var t, n;
-                let { ref: l } = e,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            l,
-                            i = {};
-                        if ("u" > typeof Reflect && Reflect.ownKeys) {
-                            for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                                (r = n[l]),
-                                    !(t.indexOf(r) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                        (i[r] = e[r]);
-                            return i;
-                        }
-                        if (
-                            ((i = (function (e, t) {
-                                if (null == e) return {};
-                                var n,
-                                    r,
-                                    l = {},
-                                    i = Object.getOwnPropertyNames(e);
-                                for (r = 0; r < i.length; r++)
-                                    (n = i[r]),
-                                        !(t.indexOf(n) >= 0) &&
-                                            Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                            (l[n] = e[n]);
-                                return l;
-                            })(e, t)),
-                            Object.getOwnPropertySymbols)
-                        )
-                            for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                                (r = n[l]),
-                                    !(t.indexOf(r) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                        (i[r] = e[r]);
-                        return i;
-                    })(e, ["ref"]);
-                return (0, r.jsxs)(
-                    d.ChK,
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            ref: (e) => {
-                                var t;
-                                (R.current = e),
-                                    (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
-                            },
-                        },
-                        i,
-                    )),
-                    (n = n =
-                        {
-                            onScroll: L === v.mJ.Done ? void 0 : k,
-                            className: a()(_.XG, "group-spacing-".concat(U)),
-                            children: [
-                                T
-                                    ? (0, r.jsx)(S, {
-                                          setSeenTutorial: P,
-                                      })
-                                    : null,
-                                (0, j.A)(G, M, N),
-                                L === v.mJ.Done
-                                    ? null
-                                    : (0, r.jsx)(d.y$y, {
-                                          className: _.u1,
-                                      }),
-                            ],
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                );
-            },
-        }),
-    });
+    let w = (0, m.A)("unreads", L);
+    return 0 === U.length
+        ? (0, i.jsx)(E.A, {
+              Icon: u.K$s,
+              header: b.intl.string(b.t["6XMM+D"]),
+              tip: o().os?.family === "OS X" ? b.intl.string(b.t.w9uDOW) : b.intl.string(b.t.BiUJC6),
+          })
+        : (0, i.jsx)(d.hD, {
+              navigator: w,
+              children: (0, i.jsx)(d.PR, {
+                  children: (e) => {
+                      let { ref: t, ...n } = e;
+                      return (0, i.jsxs)(u.ChK, {
+                          ref: (e) => {
+                              (L.current = e), (t.current = e?.getScrollerNode() ?? null);
+                          },
+                          ...n,
+                          onScroll: G === I.mJ.Done ? void 0 : P,
+                          className: a()(N.XG, `group-spacing-${k}`),
+                          children: [
+                              y ? (0, i.jsx)(j, { setSeenTutorial: R }) : null,
+                              (0, C.A)(U, M, v),
+                              G === I.mJ.Done ? null : (0, i.jsx)(u.y$y, { className: N.u1 }),
+                          ],
+                      });
+                  },
+              }),
+          });
 }
-
-function S(e) {
+function j(e) {
     let { setSeenTutorial: t } = e;
-    return (0, r.jsxs)("div", {
-        className: _.d$,
+    return (0, i.jsxs)("div", {
+        className: N.d$,
         children: [
-            (0, r.jsx)("div", {
-                className: _.cm,
-                children: (0, r.jsx)(d.K$s, {
-                    size: "md",
-                    color: "currentColor",
-                }),
-            }),
-            (0, r.jsxs)("div", {
+            (0, i.jsx)("div", { className: N.cm, children: (0, i.jsx)(u.K$s, { size: "md", color: "currentColor" }) }),
+            (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(d.Heading, {
-                        className: _.__invalid_tutorialHeader,
+                    (0, i.jsx)(u.Heading, {
+                        className: N.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: E.intl.string(E.t.vZPktJ),
+                        children: b.intl.string(b.t.vZPktJ),
                     }),
-                    (0, r.jsx)(d.Text, {
+                    (0, i.jsx)(u.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: E.intl.string(E.t.vWkIII),
+                        children: b.intl.string(b.t.vWkIII),
                     }),
-                    (0, r.jsx)("div", {
+                    (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: _.dh,
-                        children: (0, r.jsx)(d.Button, {
+                        className: N.dh,
+                        children: (0, i.jsx)(u.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: E.intl.string(E.t["+IrDzN"]),
+                            text: b.intl.string(b.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -273,16 +157,12 @@ function S(e) {
         ],
     });
 }
-
-function I() {
-    return (0, r.jsx)(O.A, {
-        Icon: d.K$s,
+function v() {
+    return (0, i.jsx)(E.A, {
+        Icon: u.K$s,
         disableStars: !0,
-        header: E.intl.string(E.t["KG/ynf"]),
-        tip: E.intl.string(E.t.cvcKzX),
+        header: b.intl.string(b.t["KG/ynf"]),
+        tip: b.intl.string(b.t.cvcKzX),
     });
 }
-let N = () =>
-    (0, r.jsx)(y.A, {
-        onClick: () => m._.dispatch(x.jej.INBOX_MARK_ALL_UNREADS_READ),
-    });
+let y = () => (0, i.jsx)(f.A, { onClick: () => _._.dispatch(S.jej.INBOX_MARK_ALL_UNREADS_READ) });

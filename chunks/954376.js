@@ -1,63 +1,30 @@
-r.d(t, {
-    A: () => o,
-});
-var n = r(627968);
-r(64700);
-var l = r(311907),
-    s = r(397927),
-    a = r(478063),
-    i = r(287809);
-let o = function (e) {
-    let { recipients: t, size: r, status: o, isTyping: c, className: u } = e,
-        d = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l,
-                s = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-                return s;
-            }
-            if (
-                ((s = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        s = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < s.length; n++)
-                        (r = s[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-            return s;
-        })(e, ["recipients", "size", "status", "isTyping", "className"]),
-        h = s.vCh[r],
-        p = (0, l.yK)(
-            [i.default],
+s.d(e, { A: () => r });
+var _ = s(627968);
+s(64700);
+var i = s(311907),
+    a = s(397927),
+    A = s(478063),
+    n = s(287809);
+let r = function (t) {
+    let { recipients: e, size: s, status: r, isTyping: l, className: I, ...E } = t,
+        o = a.vCh[s],
+        d = (0, i.yK)(
+            [n.default],
             () =>
-                t.slice(0, 2).map((e) => {
-                    let t = i.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, h.size, !1);
+                e.slice(0, 2).map((t) => {
+                    let e = n.default.getUser(t);
+                    if (null != e) return e.getAvatarURL(void 0, o.size, !1);
                 }),
-            [t, h.size],
+            [e, o.size],
         );
-    return (0, n.jsx)(a.A, {
-        "aria-label": d["aria-label"],
-        "aria-hidden": d["aria-hidden"],
-        backSrc: p[0],
-        frontSrc: p[1],
-        size: r,
-        status: o,
-        isTyping: null != c && c,
-        className: u,
+    return (0, _.jsx)(A.A, {
+        "aria-label": E["aria-label"],
+        "aria-hidden": E["aria-hidden"],
+        backSrc: d[0],
+        frontSrc: d[1],
+        size: s,
+        status: r,
+        isTyping: l ?? !1,
+        className: I,
     });
 };

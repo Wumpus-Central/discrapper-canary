@@ -1,32 +1,20 @@
-n.d(t, {
-    A: () => f,
-});
-var r,
-    l,
-    i = n(311907),
-    a = n(73153),
-    s = n(857071);
-let o = null,
-    c = null;
-
-function u() {
-    let e = s.A.mostRecentLurkedGuildId();
-    null != e ? ((o = e), (c = null)) : ((c = null != o ? o : null), (o = null));
+n.d(t, { A: () => d });
+var i = n(311907),
+    l = n(73153),
+    a = n(857071);
+let s = null,
+    r = null;
+function o() {
+    let e = a.A.mostRecentLurkedGuildId();
+    null != e ? ((s = e), (r = null)) : ((r = null != s ? s : null), (s = null));
 }
-class d extends (l = i.Ay.Store) {
+class c extends i.Ay.Store {
+    static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([s.A], u);
+        this.syncWith([a.A], o);
     }
     shouldShowPopout(e) {
-        return c === e;
+        return r === e;
     }
 }
-(r = "displayName") in d
-    ? Object.defineProperty(d, r, {
-          value: "LurkerModePopoutStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[r] = "LurkerModePopoutStore");
-let f = new d(a.h);
+let d = new c(l.h);

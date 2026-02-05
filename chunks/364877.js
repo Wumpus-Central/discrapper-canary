@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     p_: "list__920b8",
     KJ: "accountCard__920b8",

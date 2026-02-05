@@ -1,10 +1,10 @@
+"use strict";
 var n = r(797686),
     i = /\./,
     o = /\|\|/,
     a = /\s+\-\s+/,
     s = /^(<=|<|=|>=|~>|~|>|)?\s*(.+)/,
     u = /^(\d*)(.*)/;
-
 function c(t, e) {
     if ("" === (t = t.trim())) return !0;
     var r,
@@ -41,40 +41,27 @@ function c(t, e) {
             return 0 === y(h, v);
     }
 }
-
 function l(t, e) {
     var r = y(t, e);
     return 1 === r || 0 === r;
 }
-
 function f(t) {
     var e = t.split(i),
         r = e[0].match(s);
-    return (
-        r || n(!1),
-        {
-            modifier: r[1],
-            rangeComponents: [r[2]].concat(e.slice(1)),
-        }
-    );
+    return r || n(!1), { modifier: r[1], rangeComponents: [r[2]].concat(e.slice(1)) };
 }
-
 function p(t) {
     return !isNaN(t) && isFinite(t);
 }
-
 function h(t) {
     return !f(t).modifier;
 }
-
 function d(t, e) {
     for (var r = t.length; r < e; r++) t[r] = "0";
 }
-
 function g(t, e) {
     return (typeof t != typeof e && n(!1), t > e) ? 1 : t < e ? -1 : 0;
 }
-
 function y(t, e) {
     for (
         var r = (function (t, e) {

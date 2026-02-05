@@ -1,21 +1,12 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    R: () => i,
-}),
-    n(321073);
-class i {
+"use strict";
+n.d(t, { R: () => r }), n(321073);
+class r {
+    _elements;
+    _createElement;
+    _cleanElement;
+    constructor(e, t) {
+        (this._elements = []), (this._createElement = e), (this._cleanElement = t);
+    }
     getElement() {
         return 0 === this._elements.length ? this._createElement() : this._elements.pop();
     }
@@ -24,13 +15,5 @@ class i {
     }
     clearPool() {
         this._elements.length = 0;
-    }
-    constructor(e, t) {
-        r(this, "_elements", void 0),
-            r(this, "_createElement", void 0),
-            r(this, "_cleanElement", void 0),
-            (this._elements = []),
-            (this._createElement = e),
-            (this._cleanElement = t);
     }
 }

@@ -1,3 +1,1 @@
-t.exports = {
-    K: "icon__49777",
-};
+t.exports = { K: "icon__49777" };

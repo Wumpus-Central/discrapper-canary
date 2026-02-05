@@ -1,9 +1,7 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => a,
-});
+n.d(t, { A: () => a });
 let i = new Uint8Array(16);
-
 function a() {
     if (!r && !(r = "u" > typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto)))
         throw Error(

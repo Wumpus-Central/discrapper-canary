@@ -1,3 +1,2 @@
-e.exports = {
-    J: "canvas__0efdf",
-};
+"use strict";
+e.exports = { J: "canvas__0efdf" };

@@ -1,80 +1,59 @@
-t.a(e, async function (e, r) {
+t.a(e, async function (e, l) {
     try {
-        t.d(n, {
-            z: () => m,
-        });
-        var l = t(627968);
+        t.d(n, { z: () => m });
+        var r = t(627968);
         t(64700);
-        var c = t(223535),
-            a = t(311907),
+        var a = t(223535),
+            s = t(311907),
             i = t(508675),
-            s = t(7584),
-            o = t(930101),
+            c = t(7584),
+            d = t(930101),
             u = t(78377),
-            d = t(690521),
-            h = e([c]);
-
+            o = t(690521),
+            h = e([a]);
         function m(e) {
             let { value: n, type: t } = e,
-                r = (0, c.ER)(),
-                a =
-                    1 === r.length &&
-                    "paragraph" === r[0].type &&
-                    1 === r[0].value.length &&
-                    "emoji" === r[0].value[0].type;
+                l = (0, a.ER)(),
+                s =
+                    1 === l.length &&
+                    "paragraph" === l[0].type &&
+                    1 === l[0].value.length &&
+                    "emoji" === l[0].value[0].type;
             switch (t) {
                 case "unicode":
-                    return (0, l.jsx)(j, {
-                        value: n,
-                        jumboable: a,
-                    });
+                    return (0, r.jsx)(x, { value: n, jumboable: s });
                 case "custom":
-                    return (0, l.jsx)(p, {
-                        value: n,
-                        jumboable: a,
-                    });
+                    return (0, r.jsx)(j, { value: n, jumboable: s });
             }
         }
-
-        function j(e) {
+        function x(e) {
             let { value: n, jumboable: t } = e,
-                r = d.Ay.getURL(n),
-                c = s.Ay.convertSurrogateToName(n),
-                a = (0, u.p)();
-            return (0, l.jsx)(o.H, {
-                node: {
-                    name: c,
-                    src: r,
-                    jumboable: t,
-                },
-                channelId: null == a ? void 0 : a.channelId,
-                messageId: null == a ? void 0 : a.messageId,
+                l = o.Ay.getURL(n),
+                a = c.Ay.convertSurrogateToName(n),
+                s = (0, u.p)();
+            return (0, r.jsx)(d.H, {
+                node: { name: a, src: l, jumboable: t },
+                channelId: s?.channelId,
+                messageId: s?.messageId,
             });
         }
-
-        function p(e) {
-            var n;
-            let { value: t, jumboable: r } = e,
-                c = (0, u.p)(),
-                s = null == c ? void 0 : c.guildId,
-                d = (0, a.bG)([i.Ay], () => i.Ay.getDisambiguatedEmojiContext(s).getById(t.id), [s, t.id]),
-                h = null != (n = null == d ? void 0 : d.name) ? n : t.name;
+        function j(e) {
+            let { value: n, jumboable: t } = e,
+                l = (0, u.p)(),
+                a = l?.guildId,
+                c = (0, s.bG)([i.Ay], () => i.Ay.getDisambiguatedEmojiContext(a).getById(n.id), [a, n.id]),
+                o = c?.name ?? n.name;
             return (
-                null != d && d.require_colons && (h = ":".concat(d.name, ":")),
-                (0, l.jsx)(o.X, {
-                    node: {
-                        name: h,
-                        animated: t.animated,
-                        emojiId: t.id,
-                        jumboable: r,
-                    },
-                    channelId: null == c ? void 0 : c.channelId,
-                    messageId: null == c ? void 0 : c.messageId,
+                null != c && c.require_colons && (o = `:${c.name}:`),
+                (0, r.jsx)(d.X, {
+                    node: { name: o, animated: n.animated, emojiId: n.id, jumboable: t },
+                    channelId: l?.channelId,
+                    messageId: l?.messageId,
                 })
             );
         }
-        (c = (h.then ? (await h)() : h)[0]), r();
+        (a = (h.then ? (await h)() : h)[0]), l();
     } catch (e) {
-        r(e);
+        l(e);
     }
 });

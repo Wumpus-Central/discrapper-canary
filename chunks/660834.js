@@ -1,59 +1,40 @@
-n.d(t, {
-    Ay: () => h,
-    N8: () => p,
-    Q$: () => x,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { Ay: () => p, N8: () => _, Q$: () => A });
+var i = n(627968);
 n(64700);
-var i = n(735438),
+var s = n(735438),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(134413),
-    c = n(221950),
-    o = n(179534),
-    d = n(997509),
+    o = n(221950),
+    d = n(179534),
+    c = n(997509),
     u = n(555337),
-    f = n(652215),
+    m = n(652215),
     g = n(985018),
-    b = n(118856);
-
-function m(e) {
+    x = n(118856);
+function h(e) {
     if (null == e) return !1;
-    let t = e.features.has(f.GuildFeatures.COMMUNITY),
-        n = e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+    let t = e.features.has(m.GuildFeatures.COMMUNITY),
+        n = e.features.has(m.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     return t || n;
 }
-
-function p() {
+function _() {
     let e = u.A.getProps().guild;
-    null != e && (m(e) ? (d.A.close(), (0, c.aZ)(e.id)) : d.A.open(e.id, f.BEX.MEMBERS));
+    null != e && (h(e) ? (c.A.close(), (0, o.aZ)(e.id)) : c.A.open(e.id, m.BEX.MEMBERS));
 }
-
-function x() {
-    let e = m((0, l.bG)([u.A], () => u.A.getProps().guild, []));
-    return (0, r.jsxs)("div", {
-        className: b.q,
+function A() {
+    let e = h((0, l.bG)([u.A], () => u.A.getProps().guild, []));
+    return (0, i.jsxs)("div", {
+        className: x.q,
         children: [
-            (0, r.jsx)("div", {
-                children: g.intl.string(g.t["9Oq93m"]),
-            }),
-            e &&
-                (0, r.jsx)(s.tfB, {
-                    size: "xs",
-                    color: "currentColor",
-                    className: b.w,
-                }),
+            (0, i.jsx)("div", { children: g.intl.string(g.t["9Oq93m"]) }),
+            e && (0, i.jsx)(r.tfB, { size: "xs", color: "currentColor", className: x.w }),
         ],
     });
 }
-
-function h() {
-    var e;
-    let { guild: t } = (0, l.bG)([u.A], () => u.A.getProps(), [], i.isEqual),
-        n = null != (e = null == t ? void 0 : t.id) ? e : f.dJq;
-    return (0, a.fw)(n)
-        ? (0, r.jsx)(o.A, {
-              guildId: n,
-          })
-        : null;
+function p() {
+    let { guild: e } = (0, l.bG)([u.A], () => u.A.getProps(), [], s.isEqual),
+        t = e?.id ?? m.dJq;
+    return (0, a.fw)(t) ? (0, i.jsx)(d.A, { guildId: t }) : null;
 }

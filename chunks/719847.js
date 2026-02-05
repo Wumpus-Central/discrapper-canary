@@ -1,118 +1,79 @@
-e.d(a, {
-    default: () => v,
-}),
-    e(896048);
-var s = e(627968),
-    i = e(64700),
-    c = e(991660),
-    l = e(158954),
-    r = e(311907),
-    n = e(397927),
-    o = e(627363),
-    d = e(587895),
-    p = e(575926),
-    f = e(957565),
-    u = e(997997),
-    b = e(123791),
-    x = e(55926),
-    h = e(816709),
-    _ = e(652215),
-    S = e(435220),
-    j = e(985018),
-    m = e(801059),
-    A = e(22789);
-
+i.d(e, { default: () => v });
+var s = i(627968),
+    r = i(64700),
+    l = i(991660),
+    n = i(158954),
+    C = i(311907),
+    a = i(397927),
+    c = i(627363),
+    o = i(587895),
+    d = i(575926),
+    p = i(957565),
+    _ = i(997997),
+    h = i(123791),
+    u = i(55926),
+    L = i(816709),
+    x = i(652215),
+    f = i(435220),
+    b = i(985018),
+    S = i(801059),
+    g = i(22789);
 function v(t) {
-    let { onClose: a, transitionState: e, appId: v, guildId: C } = t,
-        y = (0, r.bG)([d.A], () => d.A.getApplication(v), [v]),
-        [T, g] = i.useState(() =>
-            d.A.isFetchingApplication(v)
-                ? {
-                      status: 1,
-                  }
-                : {
-                      status: 0,
-                  },
-        );
-    i.useEffect(() => {
-        0 === T.status &&
-            (g({
-                status: 1,
-            }),
-            o.Ay.fetchApplication(v)
+    let { onClose: e, transitionState: i, appId: v, guildId: m } = t,
+        j = (0, C.bG)([o.A], () => o.A.getApplication(v), [v]),
+        [w, A] = r.useState(() => (o.A.isFetchingApplication(v) ? { status: 1 } : { status: 0 }));
+    r.useEffect(() => {
+        0 === w.status &&
+            (A({ status: 1 }),
+            c.Ay.fetchApplication(v)
                 .then(() => {
-                    g({
-                        status: 2,
-                    });
+                    A({ status: 2 });
                 })
                 .catch((t) => {
-                    g({
-                        status: 3,
-                        error: t.message,
-                    });
+                    A({ status: 3, error: t.message });
                 }));
-    }, [v, T.status]);
-    let { subscriptions: E, otps: O } = (0, b.C)(v);
-    if (null == y) return null;
-    let P = j.intl.formatToPlainString(j.t.XDRjs5, {
-            appName: y.name,
-        }),
-        U = (0, s.jsx)("div", {
-            className: m.K,
-            children: (0, s.jsx)(p.h, {}),
-        }),
-        k = f.p5
-            ? (0, s.jsx)(n.K0, {
-                  "aria-label": j.intl.string(j.t.WqhZss),
-                  icon: () =>
-                      (0, s.jsx)(n.qYV, {
-                          size: "sm",
-                      }),
+    }, [v, w.status]);
+    let { subscriptions: V, otps: y } = (0, h.C)(v);
+    if (null == j) return null;
+    let T = b.intl.formatToPlainString(b.t.XDRjs5, { appName: j.name }),
+        P = (0, s.jsx)("div", { className: S.K, children: (0, s.jsx)(d.h, {}) }),
+        D = p.p5
+            ? (0, s.jsx)(a.K0, {
+                  "aria-label": b.intl.string(b.t.WqhZss),
+                  icon: () => (0, s.jsx)(a.qYV, { size: "sm" }),
                   onClick: () => {
-                      let t = ""
-                          .concat(location.protocol, "//")
-                          .concat(location.host)
-                          .concat(_.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, S.GlobalDiscoveryAppsSections.STORE));
-                      (0, f.C)(t, () =>
-                          (0, n.showToast)((0, n.createToast)(j.intl.string(j.t["L/PwZf"]), n.ToastType.SUCCESS)),
+                      let t = `${location.protocol}//${location.host}${x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, f.GlobalDiscoveryAppsSections.STORE)}`;
+                      (0, p.C)(t, () =>
+                          (0, a.showToast)((0, a.createToast)(b.intl.string(b.t["L/PwZf"]), a.ToastType.SUCCESS)),
                       ),
-                          (0, u.K)(v, u.C.STORE_MODAL);
+                          (0, _.K)(v, _.C.STORE_MODAL);
                   },
                   variant: "icon-only",
               })
             : void 0;
-    return (0, s.jsxs)(l.dWK, {
-        transitionState: e,
-        "aria-label": P,
-        onClose: a,
+    return (0, s.jsxs)(n.dWK, {
+        transitionState: i,
+        "aria-label": T,
+        onClose: e,
         size: "xxl",
         children: [
-            (0, s.jsx)(l.rQ0, {
-                leading: U,
-                title: P,
-                trailing: k,
-            }),
-            (0, s.jsx)(c.A, {
+            (0, s.jsx)(n.rQ0, { leading: P, title: T, trailing: D }),
+            (0, s.jsx)(l.A, {
                 children: (0, s.jsx)("main", {
-                    className: A.bodyInner,
-                    children: (0, s.jsx)(x.Mp, {
-                        app: y,
-                        guildId: C,
-                        subscriptions: E,
-                        otps: O,
-                    }),
+                    className: g.bodyInner,
+                    children: (0, s.jsx)(u.Mp, { app: j, guildId: m, subscriptions: V, otps: y }),
                 }),
             }),
-            (0, s.jsx)(l.jlY, {
-                children: (0, s.jsx)(n.Text, {
+            (0, s.jsx)(n.jlY, {
+                children: (0, s.jsx)(a.Text, {
                     variant: "text-md/normal",
                     children:
-                        null != y.termsOfServiceUrl || null != y.privacyPolicyUrl
-                            ? (0, s.jsx)(h.A, {
-                                  termsOfServiceUrl: y.termsOfServiceUrl,
-                                  privacyPolicyUrl: y.privacyPolicyUrl,
+                        null != j.termsOfServiceUrl || null != j.privacyPolicyUrl
+                            ? (0, s.jsx)(L.A, {
+                                  termsOfServiceUrl: j.termsOfServiceUrl,
+                                  privacyPolicyUrl: j.privacyPolicyUrl,
                               })
-                            : j.intl.string(j.t["3ZY+0D"]),
+                            : b.intl.string(b.t["3ZY+0D"]),
                 }),
             }),
         ],

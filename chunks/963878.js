@@ -1,164 +1,134 @@
-n.r(t),
-    n.d(t, {
-        default: () => E,
-    }),
-    n(896048);
+n.r(t), n.d(t, { default: () => w });
 var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
-    c = n(554146),
-    d = n(827734),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
+    d = n(554146),
+    c = n(827734),
     o = n(397927),
     u = n(726249),
-    f = n(826673),
-    b = n(742589),
-    h = n(637248),
-    p = n(760207),
-    g = n(454058),
-    m = n(761640),
-    x = n(71393),
-    A = n(202776),
-    j = n(659069),
-    O = n(539916),
-    C = n(746080),
-    y = n(49999),
-    v = n(985018),
-    _ = n(682628),
-    N = n(638990);
-
-function w(e) {
+    _ = n(826673),
+    h = n(742589),
+    x = n(637248),
+    m = n(760207),
+    A = n(454058),
+    g = n(761640),
+    C = n(71393),
+    f = n(202776),
+    p = n(659069),
+    N = n(539916),
+    j = n(746080),
+    v = n(49999),
+    b = n(985018),
+    I = n(682628),
+    E = n(638990);
+function S(e) {
     let { guild: t } = e,
-        n = (0, A.A)(t);
-    r.useEffect(() => {
-        (0, f.Dr)(c.M.CHANNEL_BROWSER_NEW_BADGE_NUX, {
-            dismissAction: y.i.DISMISS,
-        });
+        n = (0, f.A)(t);
+    i.useEffect(() => {
+        (0, _.Dr)(d.M.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: v.i.DISMISS });
     });
-    let i = n
-            ? v.intl.formatToPlainString(v.t.uqZgYe, {
-                  guildName: t.name,
-              })
-            : v.intl.formatToPlainString(v.t.velJea, {
-                  guildName: t.name,
-              }),
-        a = n ? v.intl.string(v.t.h9mGOP) : v.intl.string(v.t.et6wav);
+    let s = n
+            ? b.intl.formatToPlainString(b.t.uqZgYe, { guildName: t.name })
+            : b.intl.formatToPlainString(b.t.velJea, { guildName: t.name }),
+        a = n ? b.intl.string(b.t.h9mGOP) : b.intl.string(b.t.et6wav);
     return (
-        (0, u.HU)({
-            location: i,
-        }),
-        (0, l.jsxs)(b.A, {
-            className: _.wx,
-            innerClassname: _.MU,
+        (0, u.HU)({ location: s }),
+        (0, l.jsxs)(h.A, {
+            className: I.wx,
+            innerClassname: I.MU,
             hideSearch: !0,
-            channelId: C.VV.CUSTOMIZE_COMMUNITY,
+            channelId: j.VV.CUSTOMIZE_COMMUNITY,
             guildId: t.id,
             children: [
-                (0, l.jsx)(b.A.Icon, {
-                    icon: o.kiI,
-                    "aria-hidden": !0,
-                }),
-                (0, l.jsx)(b.A.Title, {
-                    children: a,
-                }),
+                (0, l.jsx)(h.A.Icon, { icon: o.kiI, "aria-hidden": !0 }),
+                (0, l.jsx)(h.A.Title, { children: a }),
             ],
         })
     );
 }
-
-function E(e) {
+function w(e) {
     let { guildId: t, selectedSection: n } = e,
-        i = (0, s.bG)([x.A], () => x.A.getGuild(t)),
-        c = (0, A.A)(i),
-        [u, f] = r.useState(null != n ? n : O.qC.CUSTOMIZE);
-    r.useEffect(() => {
-        null != n && f(n);
+        s = (0, r.bG)([C.A], () => C.A.getGuild(t)),
+        d = (0, f.A)(s),
+        [u, _] = i.useState(n ?? N.qC.CUSTOMIZE);
+    i.useEffect(() => {
+        null != n && _(n);
     }, [n]),
-        r.useEffect(() => {
-            c || u !== O.qC.CUSTOMIZE || f(O.qC.BROWSE);
-        }, [c, u]);
-    let b = (0, s.bG)([m.Ay], () => m.Ay.getCurrentSidebarChannelId(C.VV.CHANNEL_BROWSER)),
-        y = null != b && u === O.qC.BROWSE,
-        E = (0, s.bG)([g.A], () => g.A.getNewChannelIds(t).size > 0),
-        S = (0, h.RD)(t);
-    return null == i
+        i.useEffect(() => {
+            d || u !== N.qC.CUSTOMIZE || _(N.qC.BROWSE);
+        }, [d, u]);
+    let h = (0, r.bG)([g.Ay], () => g.Ay.getCurrentSidebarChannelId(j.VV.CHANNEL_BROWSER)),
+        v = null != h && u === N.qC.BROWSE,
+        w = (0, r.bG)([A.A], () => A.A.getNewChannelIds(t).size > 0),
+        y = (0, x.RD)(t);
+    return null == s
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(N.TE, {
-                          [N.js]: y,
-                      }),
+                      className: a()(E.TE, { [E.js]: v }),
                       children: [
-                          (0, l.jsx)(w, {
-                              guild: i,
-                          }),
+                          (0, l.jsx)(S, { guild: s }),
                           (0, l.jsxs)("div", {
-                              className: a()(N.Qs, _.kL),
+                              className: a()(E.Qs, I.kL),
                               children: [
-                                  c &&
+                                  d &&
                                       (0, l.jsxs)(o.VQ0, {
-                                          className: _.$H,
+                                          className: I.$H,
                                           type: "top",
                                           look: "brand",
                                           selectedItem: u,
-                                          onItemSelect: (e) => f(e),
+                                          onItemSelect: (e) => _(e),
                                           children: [
                                               (0, l.jsx)(
                                                   o.VQ0.Item,
                                                   {
-                                                      className: _.YU,
-                                                      id: O.qC.CUSTOMIZE,
-                                                      children: v.intl.string(v.t.H2cICW),
+                                                      className: I.YU,
+                                                      id: N.qC.CUSTOMIZE,
+                                                      children: b.intl.string(b.t.H2cICW),
                                                   },
-                                                  O.qC.CUSTOMIZE,
+                                                  N.qC.CUSTOMIZE,
                                               ),
                                               (0, l.jsxs)(
                                                   o.VQ0.Item,
                                                   {
-                                                      className: _.YU,
-                                                      id: O.qC.BROWSE,
-                                                      "aria-label": v.intl.string(v.t.et6wav),
+                                                      className: I.YU,
+                                                      id: N.qC.BROWSE,
+                                                      "aria-label": b.intl.string(b.t.et6wav),
                                                       children: [
-                                                          v.intl.string(v.t.et6wav),
+                                                          b.intl.string(b.t.et6wav),
                                                           (0, l.jsx)(o.LpS, {
-                                                              text: E ? v.intl.string(v.t.psHMa6) : S,
-                                                              color: E
-                                                                  ? d.A.unsafe_rawColors.BRAND_260.css
-                                                                  : d.A.colors.BACKGROUND_MOD_STRONG.css,
-                                                              className: a()({
-                                                                  [_.Ad]: E,
-                                                              }),
+                                                              text: w ? b.intl.string(b.t.psHMa6) : y,
+                                                              color: w
+                                                                  ? c.A.unsafe_rawColors.BRAND_260.css
+                                                                  : c.A.colors.BACKGROUND_MOD_STRONG.css,
+                                                              className: a()({ [I.Ad]: w }),
                                                           }),
                                                       ],
                                                   },
-                                                  O.qC.BROWSE,
+                                                  N.qC.BROWSE,
                                               ),
                                           ],
                                       }),
                                   (() => {
                                       switch (u) {
-                                          case O.qC.CUSTOMIZE:
-                                              return (0, l.jsx)(j.A, {
-                                                  guildId: t,
-                                                  onBrowseChannels: () => f(O.qC.BROWSE),
-                                              });
-                                          case O.qC.BROWSE:
-                                          default:
+                                          case N.qC.CUSTOMIZE:
                                               return (0, l.jsx)(p.A, {
                                                   guildId: t,
+                                                  onBrowseChannels: () => _(N.qC.BROWSE),
                                               });
+                                          case N.qC.BROWSE:
+                                          default:
+                                              return (0, l.jsx)(m.A, { guildId: t });
                                       }
                                   })(),
                               ],
                           }),
                       ],
                   }),
-                  y &&
-                      (0, l.jsx)(p.W, {
-                          channelId: b,
-                      }),
+                  v && (0, l.jsx)(m.W, { channelId: h }),
               ],
           });
 }

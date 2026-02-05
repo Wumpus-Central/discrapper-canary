@@ -1,8 +1,6 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(403396);
-
 function o(e, t) {
     if ("function" != typeof e || (null != t && "function" != typeof t)) throw TypeError("Expected a function");
     var r = function () {

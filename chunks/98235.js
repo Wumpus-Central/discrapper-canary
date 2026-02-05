@@ -1,9 +1,6 @@
-r.d(t, {
-    e: () => o,
-});
+r.d(t, { e: () => o });
 var n = r(321733),
     i = r(64700);
-
 function o(e) {
     var t = e.accept;
     return (0, i.useMemo)(

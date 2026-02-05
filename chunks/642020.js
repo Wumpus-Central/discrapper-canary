@@ -1,12 +1,6 @@
-n.d(t, {
-    DX: () => i,
-    Qi: () => o,
-    cC: () => s,
-    gh: () => r,
-    tB: () => l,
-});
+n.d(t, { DX: () => i, Qi: () => o, cC: () => r, gh: () => l, tB: () => s });
 var a = n(554146);
-let l = [
+let s = [
         a.M.GUILD_POWERUP_PERKS_COACHMARK,
         a.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         a.M.GUILD_POWERUP_NOTIFICATION,
@@ -20,13 +14,12 @@ let l = [
         a.V.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         a.V.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    r = [a.V.ADOPT_CLAN_IDENTITY_NOTICE],
-    s = [
+    l = [a.V.ADOPT_CLAN_IDENTITY_NOTICE],
+    r = [
         a.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         a.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-
 function o(e) {
     switch (e) {
         case a.V.GUILD_POWERUP_LEVEL_1_COACHMARK:

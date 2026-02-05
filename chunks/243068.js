@@ -1,3 +1,4 @@
+"use strict";
 e(840077)(
     "Set",
     function (t) {

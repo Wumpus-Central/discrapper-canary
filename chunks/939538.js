@@ -1,69 +1,63 @@
-n.r(t),
-    n.d(t, {
-        CalendarPicker: () => p,
-        default: () => _,
-    });
+"use strict";
+n.r(t), n.d(t, { CalendarPicker: () => f, default: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(989349),
     s = n.n(a),
     o = n(77967),
     l = n.n(o),
-    c = n(311907),
-    u = n(11057),
+    u = n(311907),
+    c = n(11057),
     d = n(773669),
-    f = n(731880);
-
-function p(e) {
-    var t, n;
+    _ = n(731880);
+function f(e) {
     let {
-            value: a = s()().local(),
-            minDate: o,
-            maxDate: p,
-            onSelect: _,
-            calendarClassName: h,
-            autoFocus: m,
-            onClickOutside: g,
+            value: t = s()().local(),
+            minDate: n,
+            maxDate: a,
+            onSelect: o,
+            calendarClassName: f,
+            autoFocus: p,
+            onClickOutside: h,
         } = e,
-        E = i.useCallback(
+        m = i.useCallback(
             (e, t) => {
-                null == _ || _(s()(e), t);
+                o?.(s()(e), t);
             },
-            [_],
+            [o],
         ),
-        b = i.useMemo(() => a.toDate(), [a]),
-        y = i.useMemo(() => (null == p ? void 0 : p.toDate()), [p]),
-        O = i.useMemo(() => (null == o ? void 0 : o.toDate()), [o]),
-        A = (0, c.bG)([d.default], () => d.default.locale),
-        v = (0, u.QO)(),
-        S = i.useRef(null),
-        I = i.useCallback((e) => {
+        g = i.useMemo(() => t.toDate(), [t]),
+        E = i.useMemo(() => a?.toDate(), [a]),
+        A = i.useMemo(() => n?.toDate(), [n]),
+        I = (0, u.bG)([d.default], () => d.default.locale),
+        T = (0, c.QO)(),
+        y = i.useRef(null),
+        S = i.useCallback((e) => {
             let t = e.currentTarget;
             t.classList.contains("react-datepicker__day") &&
                 setTimeout(() => {
-                    var e, n;
-                    if (null == (e = S.current) ? void 0 : e.contains(t)) return;
-                    let r = null == (n = S.current) ? void 0 : n.querySelector('.react-datepicker__day[tabindex="0"]');
-                    null != r && r.focus();
+                    if (y.current?.contains(t)) return;
+                    let e = y.current?.querySelector('.react-datepicker__day[tabindex="0"]');
+                    null != e && e.focus();
                 }, 100);
         }, []);
     return (0, r.jsx)("div", {
-        ref: S,
-        className: f.Xn,
+        ref: y,
+        className: _.Xn,
         children: (0, r.jsx)(l(), {
-            calendarClassName: h,
-            selected: b,
-            onChange: E,
-            autoFocus: m,
+            calendarClassName: f,
+            selected: g,
+            onChange: m,
+            autoFocus: p,
             fixedHeight: !0,
             inline: !0,
-            locale: A,
-            calendarStartDay: null != (t = null == (n = v.options) ? void 0 : n.weekStartsOn) ? t : 0,
-            maxDate: y,
-            minDate: O,
-            onKeyDown: I,
-            onClickOutside: g,
+            locale: I,
+            calendarStartDay: T.options?.weekStartsOn ?? 0,
+            maxDate: E,
+            minDate: A,
+            onKeyDown: S,
+            onClickOutside: h,
         }),
     });
 }
-let _ = p;
+let p = f;

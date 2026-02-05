@@ -1,66 +1,54 @@
+"use strict";
 n.d(t, {
-    A8: () => E,
-    AT: () => o,
-    Eb: () => A,
-    Iv: () => f,
-    M8: () => h,
-    Qv: () => p,
-    V5: () => _,
-    XN: () => d,
+    A8: () => g,
+    AT: () => s,
+    Eb: () => T,
+    Iv: () => d,
+    M8: () => p,
+    Qv: () => _,
+    V5: () => f,
+    XN: () => c,
     ZU: () => u,
-    d$: () => s,
-    g0: () => c,
-    nY: () => m,
-    qN: () => y,
-    ti: () => v,
-    w$: () => b,
-    wQ: () => O,
-    xw: () => l,
-    yN: () => g,
+    d$: () => a,
+    g0: () => l,
+    nY: () => h,
+    qN: () => A,
+    ti: () => y,
+    w$: () => E,
+    wQ: () => I,
+    xw: () => o,
+    yN: () => m,
 });
 var r = n(110259),
     i = n(652215);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+class a {
+    static TOS_LINK = "https://discord.com/terms";
+    static COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
+    static APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
+    static WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
+    static AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
+    static SPAM_LINK =
+        "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
+    static LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
 }
-class s {}
-a(s, "TOS_LINK", "https://discord.com/terms"),
-    a(s, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"),
-    a(s, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
-    a(s, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"),
-    a(s, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"),
-    a(
-        s,
-        "SPAM_LINK",
-        "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__",
-    ),
-    a(s, "LEARN_MORE_UU_APPEAL_LINK", "https://support.discord.com/hc/articles/360041820932");
-class o {}
-a(o, "CLASSIFICATION_ID", "classification_id"), a(o, "INCIDENT_TIMESTAMP", "incident_time");
-var l = (function (e) {
+class s {
+    static CLASSIFICATION_ID = "classification_id";
+    static INCIDENT_TIMESTAMP = "incident_time";
+}
+var o = (function (e) {
     return (e.POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (e.LEARN_MORE_LINK = "learn_more_link"), e;
 })({});
-class c {}
-a(c, "ICON_TYPE", "icon_type"),
-    a(c, "HEADER", "header"),
-    a(c, "BODY", "body"),
-    a(c, "CTAS", "ctas"),
-    a(c, "TIMESTAMP", "timestamp"),
-    a(c, "THEME", "theme"),
-    a(c, "CLIENT_VERSION_MESSAGE", "client_version_message"),
-    a(c, "LEARN_MORE_LINK", "learn_more_link"),
-    a(c, "CLASSIFICATION_ID", "classification_id");
+class l {
+    static ICON_TYPE = "icon_type";
+    static HEADER = "header";
+    static BODY = "body";
+    static CTAS = "ctas";
+    static TIMESTAMP = "timestamp";
+    static THEME = "theme";
+    static CLIENT_VERSION_MESSAGE = "client_version_message";
+    static LEARN_MORE_LINK = "learn_more_link";
+    static CLASSIFICATION_ID = "classification_id";
+}
 var u = (function (e) {
         return (
             (e[(e.ViewViolationDetail = 0)] = "ViewViolationDetail"),
@@ -74,7 +62,7 @@ var u = (function (e) {
             e
         );
     })({}),
-    d = (function (e) {
+    c = (function (e) {
         return (
             (e[(e.SystemDM = 0)] = "SystemDM"),
             (e[(e.StandingTab = 1)] = "StandingTab"),
@@ -90,7 +78,7 @@ Object.freeze({
     THANKS: i.JJy.APPEAL_INGESTION_THANKS,
     SPAM: i.JJy.APPEAL_INGESTION_SPAM,
 });
-var f = (function (e) {
+var d = (function (e) {
     return (
         (e[(e.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
         (e[(e.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
@@ -99,13 +87,11 @@ var f = (function (e) {
         e
     );
 })({});
-let p = [0, 1, 2, 3],
-    _ = 372,
-    h = 279,
-    m = {
-        impression_group: r.ImpressionGroups.APPEAL_INGESTION,
-    };
-var g = (function (e) {
+let _ = [0, 1, 2, 3],
+    f = 372,
+    p = 279,
+    h = { impression_group: r.ImpressionGroups.APPEAL_INGESTION };
+var m = (function (e) {
     return (
         (e.SPEED_BUMP = "speed-bump"),
         (e.COLLECT_SIGNAL = "collect-signal"),
@@ -115,25 +101,13 @@ var g = (function (e) {
         e
     );
 })({});
-let E = {
-    "speed-bump": {
-        next: "collect-signal",
-        prev: null,
-    },
-    "collect-signal": {
-        next: "confirm-submission",
-        prev: "speed-bump",
-    },
-    "confirm-submission": {
-        next: "request-sent",
-        prev: "collect-signal",
-    },
-    "request-sent": {
-        next: null,
-        prev: null,
-    },
+let g = {
+    "speed-bump": { next: "collect-signal", prev: null },
+    "collect-signal": { next: "confirm-submission", prev: "speed-bump" },
+    "confirm-submission": { next: "request-sent", prev: "collect-signal" },
+    "request-sent": { next: null, prev: null },
 };
-var b = (function (e) {
+var E = (function (e) {
         return (
             (e[(e.USER = 1)] = "USER"),
             (e[(e.GUILD_OWNER = 2)] = "GUILD_OWNER"),
@@ -141,7 +115,7 @@ var b = (function (e) {
             e
         );
     })({}),
-    y = (function (e) {
+    A = (function (e) {
         return (
             (e.LOADING = "loading"),
             (e.ERROR = "error"),
@@ -151,6 +125,6 @@ var b = (function (e) {
             e
         );
     })({});
-let O = 2e3,
-    A = 15e3,
-    v = 5;
+let I = 2e3,
+    T = 15e3,
+    y = 5;

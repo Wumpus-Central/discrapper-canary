@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(675879),
     o = n(798325),
@@ -6,12 +7,7 @@ var r = n(834647),
     l = String.fromCodePoint,
     c = a([].join);
 r(
-    {
-        target: "String",
-        stat: !0,
-        arity: 1,
-        forced: !!l && 1 !== l.length,
-    },
+    { target: "String", stat: !0, arity: 1, forced: !!l && 1 !== l.length },
     {
         fromCodePoint: function (e) {
             for (var t, n = [], r = arguments.length, a = 0; r > a; ) {

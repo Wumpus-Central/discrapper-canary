@@ -1,68 +1,56 @@
-n.d(t, {
-    A: () => b,
-    Y: () => g,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(417597),
-    l = n(397927),
+n.d(t, { A: () => C, Y: () => h });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(417597),
+    o = n(397927),
     c = n(714991),
-    u = n(695515),
-    d = n(397808),
-    f = n(652215),
-    p = n(842130),
-    _ = n(985018),
-    h = n(957415);
-let m = [18, 18, 16, 16, 14, 12, 10];
-
-function g(e) {
-    var t;
-    return null != (t = m[e.length - 1]) ? t : m[m.length - 1];
+    d = n(695515),
+    u = n(397808),
+    _ = n(652215),
+    m = n(842130),
+    A = n(985018),
+    g = n(957415);
+let E = [18, 18, 16, 16, 14, 12, 10];
+function h(e) {
+    return E[e.length - 1] ?? E[E.length - 1];
 }
-let E = i.memo((e) => {
-    let { guildId: t, className: n, customSubtext: i } = e,
-        a = (0, o.bG)([u.A], () => u.A.getGuild(t));
-    if (void 0 === a) return null;
-    let m = a.features.has(f.GuildFeatures.VERIFIED) || a.features.has(f.GuildFeatures.PARTNERED),
-        { name: g } = a;
-    return (0, r.jsxs)("div", {
-        className: s()(h.kL, n),
+let p = s.memo((e) => {
+    let { guildId: t, className: n, customSubtext: s } = e,
+        r = (0, l.bG)([d.A], () => d.A.getGuild(t));
+    if (void 0 === r) return null;
+    let E = r.features.has(_.GuildFeatures.VERIFIED) || r.features.has(_.GuildFeatures.PARTNERED),
+        { name: h } = r;
+    return (0, i.jsxs)("div", {
+        className: a()(g.kL, n),
         children: [
-            (0, r.jsx)(d.A, {
-                guildId: t,
-            }),
-            (0, r.jsxs)("div", {
-                className: h.$z,
+            (0, i.jsx)(u.A, { guildId: t }),
+            (0, i.jsxs)("div", {
+                className: g.$z,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: h.wx,
+                    (0, i.jsxs)("div", {
+                        className: g.wx,
                         children: [
-                            m
-                                ? (0, r.jsx)(c.A, {
-                                      guild: a,
+                            E
+                                ? (0, i.jsx)(c.A, {
+                                      guild: r,
                                       tooltipPosition: "bottom",
-                                      tooltipColor: l.STz.Colors.PRIMARY,
-                                      className: h.n2,
+                                      tooltipColor: o.STz.Colors.PRIMARY,
+                                      className: g.n2,
                                   })
                                 : null,
-                            (0, r.jsx)(l.Text, {
-                                variant: "text-md/semibold",
-                                children: g,
-                            }),
+                            (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: h }),
                         ],
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
                         children:
-                            null != i
-                                ? i
-                                : void 0 !== a.approximateMemberCount
-                                  ? _.intl.format(p.default["5JmNgg"], {
-                                        members: a.approximateMemberCount,
-                                    })
+                            null != s
+                                ? s
+                                : void 0 !== r.approximateMemberCount
+                                  ? A.intl.format(m.default["5JmNgg"], { members: r.approximateMemberCount })
                                   : null,
                     }),
                 ],
@@ -70,5 +58,5 @@ let E = i.memo((e) => {
         ],
     });
 });
-E.displayName = "FamilyCenterActivityGuildRow";
-let b = E;
+p.displayName = "FamilyCenterActivityGuildRow";
+let C = p;

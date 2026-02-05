@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Gq: "authorize__3d3b0",
     g4: "loadingContainer__3d3b0",

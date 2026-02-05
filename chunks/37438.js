@@ -1,16 +1,14 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(420970),
-    i = n(90924),
-    l = n(592653),
-    a = n(652215);
+n.d(t, { A: () => s });
+var i = n(420970),
+    r = n(90924),
+    a = n(592653),
+    l = n(652215);
 let s = {
-    [a.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, r.T)(a.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-        scope: l.WW,
+    [l.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, i.T)(l.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+        scope: a.WW,
         handler(e) {
             let { socket: t } = e;
-            return (0, i.lG)(t.transport), (0, l.Y$)();
+            return (0, r.lG)(t.transport), (0, a.Y$)();
         },
     }),
 };

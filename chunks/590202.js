@@ -1,35 +1,21 @@
-n.d(t, {
-    Cy: () => l,
-    NI: () => s,
-    fF: () => o,
-    jO: () => a,
-});
+"use strict";
+n.d(t, { Cy: () => l, NI: () => s, fF: () => o, jO: () => a });
 var r = n(341915);
 let i = Object.keys(r.uF);
-
 function a(e) {
-    var t;
-    return null != (t = i.find((t) => r.uF[t] === e)) ? t : "";
+    return i.find((t) => r.uF[t] === e) ?? "";
 }
-
 function s(e) {
-    var t, n, r;
-    return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null
+    return e.userStatus?.claimedAt != null
         ? "COMPLETED_CLAIMED"
-        : (null == (n = e.userStatus) ? void 0 : n.completedAt) != null
+        : e.userStatus?.completedAt != null
           ? "COMPLETED"
-          : (null == (r = e.userStatus) ? void 0 : r.enrolledAt) != null
+          : e.userStatus?.enrolledAt != null
             ? "ENROLLED"
             : "NONE";
 }
-
 function o(e, t, n) {
-    return {
-        content_id: e,
-        content_name: a(e),
-        content_position: t,
-        row_index: n,
-    };
+    return { content_id: e, content_name: a(e), content_position: t, row_index: n };
 }
 var l = (function (e) {
     return (

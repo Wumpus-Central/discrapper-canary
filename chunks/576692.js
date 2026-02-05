@@ -1,146 +1,103 @@
-n.d(t, {
-    i: () => o,
-});
-var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(250402);
-
-function o(e) {
+n.d(t, { i: () => u });
+var l = n(627968),
+    i = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(250402);
+function u(e) {
     let {
             size: t,
             lowerBadge: n,
-            lowerBadgeSize: l = {
-                width: 16,
-                height: 16,
-            },
-            children: o,
-            className: u,
-            innerClassName: c,
-            rounded: d = !0,
+            lowerBadgeSize: s = { width: 16, height: 16 },
+            children: u,
+            className: o,
+            innerClassName: d,
+            rounded: c = !0,
             "aria-hidden": h,
         } = e,
-        p = null != n,
-        f = r.useId(),
-        g = "".concat(f, "-lower_badge_masks"),
-        m = "".concat(f, "-shape_mask"),
-        y = "".concat(f, "-stroke_mask"),
-        A = (null == l ? void 0 : l.width) != null ? l.width : 16,
-        v = (null == l ? void 0 : l.height) != null ? l.height : 16,
-        b = {
-            width: t + 8,
-            height: t + 8,
-            x: -4,
-            y: -4,
-        },
-        E = d
-            ? (0, i.jsx)("circle", {
-                  id: m,
-                  cx: t / 2,
-                  cy: t / 2,
-                  r: t / 2,
-              })
-            : (0, i.jsx)("rect", {
-                  id: m,
-                  x: 0,
-                  y: 0,
-                  width: t,
-                  height: t,
-                  rx: 8,
-                  ry: 8,
-              });
-    return (0, i.jsxs)(
+        g = null != n,
+        I = i.useId(),
+        E = `${I}-lower_badge_masks`,
+        A = `${I}-shape_mask`,
+        f = `${I}-stroke_mask`,
+        m = s?.width != null ? s.width : 16,
+        S = s?.height != null ? s.height : 16,
+        p = { width: t + 8, height: t + 8, x: -4, y: -4 },
+        N = c
+            ? (0, l.jsx)("circle", { id: A, cx: t / 2, cy: t / 2, r: t / 2 })
+            : (0, l.jsx)("rect", { id: A, x: 0, y: 0, width: t, height: t, rx: 8, ry: 8 });
+    return (0, l.jsxs)(
         "div",
         {
-            className: a()(u, s.iE),
-            style: {
-                width: t,
-                height: t,
-            },
+            className: r()(o, a.iE),
+            style: { width: t, height: t },
             "aria-hidden": h,
             children: [
-                (0, i.jsxs)("svg", {
-                    width: b.width,
-                    height: b.height,
-                    viewBox: "".concat(b.x, " ").concat(b.y, " ").concat(b.width, " ").concat(b.height),
-                    className: a()(s.JW, s.Pm),
+                (0, l.jsxs)("svg", {
+                    width: p.width,
+                    height: p.height,
+                    viewBox: `${p.x} ${p.y} ${p.width} ${p.height}`,
+                    className: r()(a.JW, a.Pm),
                     overflow: "visible",
                     role: "none",
                     children: [
-                        (0, i.jsxs)("defs", {
+                        (0, l.jsxs)("defs", {
                             children: [
-                                E,
-                                p
-                                    ? (0, i.jsx)("rect", {
-                                          id: g,
-                                          x: t - (A + 4) + 2,
-                                          y: t - (v + 4) + 2,
-                                          width: A + 4,
-                                          height: v + 4,
+                                N,
+                                g
+                                    ? (0, l.jsx)("rect", {
+                                          id: E,
+                                          x: t - (m + 4) + 2,
+                                          y: t - (S + 4) + 2,
+                                          width: m + 4,
+                                          height: S + 4,
                                           rx: t / 4,
                                           ry: t / 4,
                                       })
                                     : null,
                             ],
                         }),
-                        (0, i.jsxs)("mask", {
-                            id: f,
+                        (0, l.jsxs)("mask", {
+                            id: I,
                             fill: "black",
                             x: 0,
                             y: 0,
                             width: t,
                             height: t,
                             children: [
-                                (0, i.jsx)("use", {
-                                    href: "#".concat(m),
-                                    fill: "white",
-                                }),
-                                p
-                                    ? (0, i.jsx)("use", {
-                                          href: "#".concat(g),
-                                          fill: "black",
-                                      })
-                                    : null,
+                                (0, l.jsx)("use", { href: `#${A}`, fill: "white" }),
+                                g ? (0, l.jsx)("use", { href: `#${E}`, fill: "black" }) : null,
                             ],
                         }),
-                        p
-                            ? (0, i.jsxs)("mask", {
-                                  id: y,
+                        g
+                            ? (0, l.jsxs)("mask", {
+                                  id: f,
                                   children: [
-                                      (0, i.jsx)("rect", {
+                                      (0, l.jsx)("rect", {
                                           width: "150%",
                                           height: "150%",
                                           x: "-25%",
                                           y: "-25%",
                                           fill: "white",
                                       }),
-                                      (0, i.jsx)("use", {
-                                          href: "#".concat(g),
-                                          fill: "black",
-                                      }),
+                                      (0, l.jsx)("use", { href: `#${E}`, fill: "black" }),
                                   ],
                               })
                             : null,
-                        (0, i.jsx)("foreignObject", {
-                            mask: "url(#".concat(f, ")"),
+                        (0, l.jsx)("foreignObject", {
+                            mask: `url(#${I})`,
                             x: 0,
                             y: 0,
-                            className: c,
+                            className: d,
                             width: t,
                             height: t,
-                            children: o,
+                            children: u,
                         }),
                     ],
                 }),
-                p
-                    ? (0, i.jsx)("div", {
-                          className: s.H7,
-                          children: n,
-                      })
-                    : null,
+                g ? (0, l.jsx)("div", { className: a.H7, children: n }) : null,
             ],
         },
-        f,
+        I,
     );
 }

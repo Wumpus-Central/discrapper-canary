@@ -1,56 +1,34 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = !1,
-    l = !1;
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153);
+let a = !1,
+    s = !1;
+function o(e) {
     let { muted: t } = e;
-    (o = t), (l = !1);
+    (a = t), (s = !1);
 }
-
-function u(e) {
+function l(e) {
     let { play: t } = e;
-    l = t;
+    s = t;
 }
-
-function d() {
-    l = !1;
+function u() {
+    s = !1;
 }
-class f extends (r = i.Ay.DeviceSettingsStore) {
+class c extends r.Ay.DeviceSettingsStore {
+    static displayName = "StageMusicStore";
+    static persistKey = "StageMusicStore";
     initialize(e) {
-        null != e && (o = e);
+        null != e && (a = e);
     }
     isMuted() {
-        return o;
+        return a;
     }
     shouldPlay() {
-        return l;
+        return s;
     }
     getUserAgnosticState() {
-        return o;
+        return a;
     }
 }
-s(f, "displayName", "StageMusicStore"), s(f, "persistKey", "StageMusicStore");
-let p = new f(a.h, {
-    STAGE_MUSIC_MUTE: c,
-    STAGE_MUSIC_PLAY: u,
-    VOICE_CHANNEL_SELECT: d,
-});
+let d = new c(i.h, { STAGE_MUSIC_MUTE: o, STAGE_MUSIC_PLAY: l, VOICE_CHANNEL_SELECT: u });

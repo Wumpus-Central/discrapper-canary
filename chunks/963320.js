@@ -1,45 +1,41 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(181658),
+"use strict";
+n.d(t, { A: () => a });
+var i = n(64700),
+    s = n(181658),
     l = n(493540),
-    s = n(853922);
-
+    r = n(853922);
 function a(e) {
-    let [t, n] = r.useState(null != e),
-        [a, c] = r.useState(),
-        [o, d] = r.useState(),
-        u = r.useCallback(async (e) => {
-            n(!0), c(void 0);
+    let [t, n] = i.useState(null != e),
+        [a, o] = i.useState(),
+        [d, c] = i.useState(),
+        u = i.useCallback(async (e) => {
+            n(!0), o(void 0);
             try {
-                var t, r, a, o, u;
-                let n = await l.jh(e);
-                d({
-                    isEligibleForMonetization: n.sufficient,
-                    hasSufficientMembers: n.size,
-                    hasEnabled2FA: n.mfa,
-                    meetsServerAgeRequirement: n.age,
-                    meetsOwnerAgeRequirement: n.owner_age,
-                    noRecentViolations: n.safe_environment,
-                    weeklyCommunicators: n.engagement_healthy,
-                    hasMemberRetention: n.retention_healthy,
-                    notNSFW: 0 === Object.keys(n.nsfw_properties).length,
-                    canApply: n.can_apply,
-                    isApplicationPending: (null == (t = n.latest_request) ? void 0 : t.state) === s.h.OPEN,
-                    actionRequired: (null == (r = n.latest_request) ? void 0 : r.state) === s.h.ACTION_REQUIRED,
-                    minimumAgeInDays: n.minimum_age_in_days,
-                    minimumOwnerAgeInYears: n.minimum_owner_age_in_years,
-                    minimumSize: n.minimum_size,
-                    latestRequest: n.latest_request,
-                    rejection: n.rejection,
-                    guildMemberCount: null == (a = n.health_score) ? void 0 : a.guild_size,
-                    communicatorCount: null == (o = n.health_score) ? void 0 : o.communicators,
-                    retentionScore: null == (u = n.health_score) ? void 0 : u.perc_ret_w1,
+                let t = await l.jh(e);
+                c({
+                    isEligibleForMonetization: t.sufficient,
+                    hasSufficientMembers: t.size,
+                    hasEnabled2FA: t.mfa,
+                    meetsServerAgeRequirement: t.age,
+                    meetsOwnerAgeRequirement: t.owner_age,
+                    noRecentViolations: t.safe_environment,
+                    weeklyCommunicators: t.engagement_healthy,
+                    hasMemberRetention: t.retention_healthy,
+                    notNSFW: 0 === Object.keys(t.nsfw_properties).length,
+                    canApply: t.can_apply,
+                    isApplicationPending: t.latest_request?.state === r.h.OPEN,
+                    actionRequired: t.latest_request?.state === r.h.ACTION_REQUIRED,
+                    minimumAgeInDays: t.minimum_age_in_days,
+                    minimumOwnerAgeInYears: t.minimum_owner_age_in_years,
+                    minimumSize: t.minimum_size,
+                    latestRequest: t.latest_request,
+                    rejection: t.rejection,
+                    guildMemberCount: t.health_score?.guild_size,
+                    communicatorCount: t.health_score?.communicators,
+                    retentionScore: t.health_score?.perc_ret_w1,
                 });
             } catch (e) {
-                c(new i.A(e));
+                o(new s.A(e));
             } finally {
                 n(!1);
             }
@@ -47,8 +43,8 @@ function a(e) {
     return {
         error: a,
         loading: t,
-        eligibility: o,
-        refresh: r.useCallback(() => {
+        eligibility: d,
+        refresh: i.useCallback(() => {
             null != e && u(e);
         }, [e, u]),
     };

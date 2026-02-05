@@ -1,17 +1,10 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(960488),
-    l = n(945276),
-    a = n(793998),
+var r = n(960488),
+    a = n(438732),
+    l = n(793998),
     s = n(652215);
-
 function o() {
-    return !1 === (0, l.A)()
-        ? (0, r.jsx)(i.rd, {
-              to: s.BVt.SETTINGS("family-center"),
-          })
-        : (0, r.jsx)(a.A, {});
+    return !1 === (0, a.A)() ? (0, i.jsx)(r.rd, { to: s.BVt.SETTINGS("family-center") }) : (0, i.jsx)(l.A, {});
 }

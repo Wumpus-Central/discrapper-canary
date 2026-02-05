@@ -1,3 +1,4 @@
+"use strict";
 n.r(t),
     n.d(t, {
         Chrono: () => h.u,
@@ -6,12 +7,12 @@ n.r(t),
         ParsingResult: () => m.s4,
         ReferenceWithTimezone: () => m.b5,
         Weekday: () => g.Bw,
-        casual: () => y,
-        createCasualConfiguration: () => S,
-        createConfiguration: () => I,
-        parse: () => A,
-        parseDate: () => v,
-        strict: () => O,
+        casual: () => I,
+        createCasualConfiguration: () => v,
+        createConfiguration: () => C,
+        parse: () => y,
+        parseDate: () => S,
+        strict: () => T,
     });
 var r = n(854724),
     i = n(584823),
@@ -19,45 +20,41 @@ var r = n(854724),
     s = n(225960),
     o = n(972826),
     l = n(381620),
-    c = n(762094),
-    u = n(125659),
+    u = n(762094),
+    c = n(125659),
     d = n(280598),
-    f = n(504927),
-    p = n(749867),
-    _ = n(368072),
+    _ = n(504927),
+    f = n(749867),
+    p = n(368072),
     h = n(880683),
     m = n(374372),
     g = n(322811),
     E = n(774188),
-    b = n(373122);
-let y = new h.u(S()),
-    O = new h.u(I(!0));
-
-function A(e, t, n) {
-    return y.parse(e, t, n);
+    A = n(373122);
+let I = new h.u(v()),
+    T = new h.u(C(!0));
+function y(e, t, n) {
+    return I.parse(e, t, n);
 }
-
-function v(e, t, n) {
-    return y.parseDate(e, t, n);
+function S(e, t, n) {
+    return I.parseDate(e, t, n);
 }
-
-function S() {
-    let e = I(!1);
+function v() {
+    let e = C(!1);
     return (
         e.parsers.unshift(new d.A()),
-        e.parsers.unshift(new f.A()),
-        e.parsers.unshift(new a.A()),
         e.parsers.unshift(new _.A()),
-        e.parsers.unshift(new b.A()),
+        e.parsers.unshift(new a.A()),
+        e.parsers.unshift(new p.A()),
+        e.parsers.unshift(new A.A()),
         e
     );
 }
-
-function I(e = !0) {
-    return (0, u.i)(
+function C(e = !0) {
+    return (0, c.i)(
         {
-            parsers: [new E.A(!0), new r.A(), new i.A(), new p.A(), new s.A(e), new o.A()],
-            refiners: [new c.A(), new l.A()],
+            parsers: [new E.A(!0), new r.A(), new i.A(), new f.A(), new s.A(e), new o.A()],
+            refiners: [new u.A(), new l.A()],
         },
         e,
     );

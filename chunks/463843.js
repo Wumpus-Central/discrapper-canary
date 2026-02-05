@@ -1,3 +1,4 @@
+"use strict";
 var n = e(683570),
     o = e(266818),
     s = n("Map");

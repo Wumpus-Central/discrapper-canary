@@ -1,6 +1,4 @@
-a.d(e, {
-    A: () => p,
-});
+a.d(e, { A: () => p });
 var t = {
         xseconds_other: "sekundė_sekundžių_sekundes",
         xminutes_one: "minutė_minutės_minutę",
@@ -36,76 +34,29 @@ var t = {
                   : r + (o(i) ? d(a)[1] : d(a)[2])
               : r + (o(i) ? d(a)[1] : d(a)[0]);
     };
-
 function o(i) {
     return i % 10 == 0 || (i > 10 && i < 20);
 }
-
 function d(i) {
     return t[i].split("_");
 }
 var u = {
-    lessThanXSeconds: {
-        one: r,
-        other: s,
-    },
-    xSeconds: {
-        one: r,
-        other: s,
-    },
+    lessThanXSeconds: { one: r, other: s },
+    xSeconds: { one: r, other: s },
     halfAMinute: "pusė minutės",
-    lessThanXMinutes: {
-        one: n,
-        other: s,
-    },
-    xMinutes: {
-        one: n,
-        other: s,
-    },
-    aboutXHours: {
-        one: n,
-        other: s,
-    },
-    xHours: {
-        one: n,
-        other: s,
-    },
-    xDays: {
-        one: n,
-        other: s,
-    },
-    aboutXWeeks: {
-        one: n,
-        other: s,
-    },
-    xWeeks: {
-        one: n,
-        other: s,
-    },
-    aboutXMonths: {
-        one: n,
-        other: s,
-    },
-    xMonths: {
-        one: n,
-        other: s,
-    },
-    aboutXYears: {
-        one: n,
-        other: s,
-    },
-    xYears: {
-        one: n,
-        other: s,
-    },
-    overXYears: {
-        one: n,
-        other: s,
-    },
-    almostXYears: {
-        one: n,
-        other: s,
-    },
+    lessThanXMinutes: { one: n, other: s },
+    xMinutes: { one: n, other: s },
+    aboutXHours: { one: n, other: s },
+    xHours: { one: n, other: s },
+    xDays: { one: n, other: s },
+    aboutXWeeks: { one: n, other: s },
+    xWeeks: { one: n, other: s },
+    aboutXMonths: { one: n, other: s },
+    xMonths: { one: n, other: s },
+    aboutXYears: { one: n, other: s },
+    xYears: { one: n, other: s },
+    overXYears: { one: n, other: s },
+    almostXYears: { one: n, other: s },
 };
 let p = function (i, e, a) {
     var r,

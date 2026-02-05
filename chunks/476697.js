@@ -1,10 +1,7 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => a });
 var r = n(874124),
     i = n(753070);
-
 function a(e, t, n) {
     let a = i.yw[e];
     if (null == a) return null;

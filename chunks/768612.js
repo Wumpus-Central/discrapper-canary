@@ -1,4 +1,3 @@
+"use strict";
 function r(e, t) {}
-n.d(t, {
-    n: () => r,
-});
+n.d(t, { n: () => r });

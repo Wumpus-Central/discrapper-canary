@@ -1,51 +1,14 @@
-n.d(t, {
-    A: () => O,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(954571),
-    o = n(961350),
-    l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => E });
+var r = n(311907),
+    i = n(73153),
+    a = n(954571),
+    s = n(961350),
+    o = n(652215);
+function l(e, t) {
+    a.default.track(o.HAw.STREAMER_MODE_TOGGLE, { enabled: e, automatic: t });
 }
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    s.default.track(l.HAw.STREAMER_MODE_TOGGLE, {
-        enabled: e,
-        automatic: t,
-    });
-}
-let f = {
+let u = {
         enabled: !1,
         autoToggle: !0,
         hideInstantInvites: !0,
@@ -54,36 +17,32 @@ let f = {
         disableNotifications: !0,
         enableContentProtection: !1,
     },
-    p = {},
-    _ = u({}, f);
-
+    c = {},
+    d = { ...u };
+function _(e) {
+    let t = c[e];
+    return null == t && (t = c[e] = { ...u }), t;
+}
+function f(e) {
+    e.isSwitchingAccount || (c = {});
+}
+function p(e) {
+    e.userId in c && delete c[e.userId];
+}
 function h(e) {
-    let t = p[e];
-    return null == t && (t = p[e] = u({}, f)), t;
-}
-
-function m(e) {
-    e.isSwitchingAccount || (p = {});
-}
-
-function g(e) {
-    e.userId in p && delete p[e.userId];
-}
-
-function E(e) {
-    let t = u({}, _);
+    let t = { ...d };
     return (
-        (_[e.key] = e.value),
+        (d[e.key] = e.value),
         "enabled" === e.key
-            ? d(e.value, !1)
-            : s.default.track(l.HAw.UPDATE_STREAMER_MODE_SETTINGS, {
-                  enabled: _.enabled,
-                  automatic: _.autoToggle,
-                  disable_notifications: _.disableNotifications,
-                  disable_sounds: _.disableSounds,
-                  hide_instant_invites: _.hideInstantInvites,
-                  hide_personal_info: _.hidePersonalInformation,
-                  enable_content_protection: _.enableContentProtection,
+            ? l(e.value, !1)
+            : a.default.track(o.HAw.UPDATE_STREAMER_MODE_SETTINGS, {
+                  enabled: d.enabled,
+                  automatic: d.autoToggle,
+                  disable_notifications: d.disableNotifications,
+                  disable_sounds: d.disableSounds,
+                  hide_instant_invites: d.hideInstantInvites,
+                  hide_personal_info: d.hidePersonalInformation,
+                  enable_content_protection: d.enableContentProtection,
                   old_enabled: t.enabled,
                   old_automatic: t.autoToggle,
                   old_disable_notifications: t.disableNotifications,
@@ -95,65 +54,60 @@ function E(e) {
         !0
     );
 }
-
-function b(e) {
-    if (!_.autoToggle) return !1;
+function m(e) {
+    if (!d.autoToggle) return !1;
     {
         let t = e.count > 0;
-        return (_.enabled = t), d(t, !0), !0;
+        return (d.enabled = t), l(t, !0), !0;
     }
 }
-class y extends (r = i.Ay.PersistedStore) {
+class g extends r.Ay.PersistedStore {
+    static displayName = "StreamerModeStore";
+    static persistKey = "StreamerModeStore";
+    static migrations = [
+        (e) => {
+            let t = s.default.getId();
+            return null == e || null == t ? {} : { [t]: { ...e } };
+        },
+    ];
     initialize(e) {
-        Object.assign(p, e),
-            this.syncWith([o.default], () => {
-                let e = o.default.getId();
-                _ = null != e ? h(e) : u({}, f);
+        Object.assign(c, e),
+            this.syncWith([s.default], () => {
+                let e = s.default.getId();
+                d = null != e ? _(e) : { ...u };
             });
     }
     getState() {
-        return p;
+        return c;
     }
     getSettings() {
-        return _;
+        return d;
     }
     get enabled() {
-        return _.enabled;
+        return d.enabled;
     }
     get autoToggle() {
-        return _.autoToggle;
+        return d.autoToggle;
     }
     get hideInstantInvites() {
-        return this.enabled && _.hideInstantInvites;
+        return this.enabled && d.hideInstantInvites;
     }
     get hidePersonalInformation() {
-        return this.enabled && _.hidePersonalInformation;
+        return this.enabled && d.hidePersonalInformation;
     }
     get disableSounds() {
-        return this.enabled && _.disableSounds;
+        return this.enabled && d.disableSounds;
     }
     get disableNotifications() {
-        return this.enabled && _.disableNotifications;
+        return this.enabled && d.disableNotifications;
     }
     get enableContentProtection() {
-        return this.enabled && _.enableContentProtection;
+        return this.enabled && d.enableContentProtection;
     }
 }
-c(y, "displayName", "StreamerModeStore"),
-    c(y, "persistKey", "StreamerModeStore"),
-    c(y, "migrations", [
-        (e) => {
-            let t = o.default.getId();
-            return null == e || null == t
-                ? {}
-                : {
-                      [t]: u({}, e),
-                  };
-        },
-    ]);
-let O = new y(a.h, {
-    LOGOUT: m,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: g,
-    STREAMER_MODE_UPDATE: E,
-    RUNNING_STREAMER_TOOLS_CHANGE: b,
+let E = new g(i.h, {
+    LOGOUT: f,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: p,
+    STREAMER_MODE_UPDATE: h,
+    RUNNING_STREAMER_TOOLS_CHANGE: m,
 });

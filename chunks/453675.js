@@ -1,61 +1,41 @@
-n.d(t, {
-    A: () => h,
-});
+n.d(t, { A: () => x });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(397927),
-    r = n(198982),
-    s = n(839214),
+    l = n(198982),
+    r = n(839214),
     o = n(98919),
-    c = n(174768),
-    d = n(137365),
+    d = n(174768),
+    c = n(137365),
     u = n(278274),
     m = n(652215);
-let p = (0, s.D)(() => ({
-    isRecording: !1,
-    isUploading: !1,
-    isSuccess: !1,
-    errorMessage: null,
-}));
-
-function h() {
-    let e = p.useField("isRecording"),
-        t = p.useField("isUploading"),
-        n = p.useField("isSuccess"),
-        s = p.useField("errorMessage"),
-        h = l.useRef([]),
-        f = l.useRef(""),
-        x = l.useCallback(() => {
-            let { results: e, query: t } = c.A.getProps();
-            (h.current !== e || f.current !== t) && ((h.current = e), (f.current = t), (0, d._S)());
+let h = (0, r.D)(() => ({ isRecording: !1, isUploading: !1, isSuccess: !1, errorMessage: null }));
+function x() {
+    let e = h.useField("isRecording"),
+        t = h.useField("isUploading"),
+        n = h.useField("isSuccess"),
+        r = h.useField("errorMessage"),
+        x = s.useRef([]),
+        p = s.useRef(""),
+        g = s.useCallback(() => {
+            let { results: e, query: t } = d.A.getProps();
+            (x.current !== e || p.current !== t) && ((x.current = e), (p.current = t), (0, c._S)());
         }, []);
-    l.useEffect(() => {
-        if (e) return c.A.addChangeListener(x), () => c.A.removeChangeListener(x);
-    }, [x, e]);
-    let b = l.useCallback(async () => {
-        let { isUploading: e } = p.getState();
+    s.useEffect(() => {
+        if (e) return d.A.addChangeListener(g), () => d.A.removeChangeListener(g);
+    }, [g, e]);
+    let _ = s.useCallback(async () => {
+        let { isUploading: e } = h.getState();
         if (!e)
             try {
-                p.setState({
-                    isRecording: !1,
-                    isUploading: !0,
-                    errorMessage: null,
-                    isSuccess: !1,
-                }),
+                h.setState({ isRecording: !1, isUploading: !0, errorMessage: null, isSuccess: !1 }),
                     await (0, o.a)(m.Umv.WEB_APP),
-                    p.setState({
-                        isSuccess: !0,
-                        errorMessage: null,
-                    });
+                    h.setState({ isSuccess: !0, errorMessage: null });
             } catch (t) {
-                let e = new r.LG(t);
-                p.setState({
-                    errorMessage: e.getAnyErrorMessage(),
-                });
+                let e = new l.LG(t);
+                h.setState({ errorMessage: e.getAnyErrorMessage() });
             } finally {
-                p.setState({
-                    isUploading: !1,
-                });
+                h.setState({ isUploading: !1 });
             }
     }, []);
     return (0, a.jsxs)(i.nVY, {
@@ -71,17 +51,14 @@ function h() {
                 children: [
                     (0, a.jsx)(i.Button, {
                         variant: e ? "critical-primary" : "primary",
-                        onClick: () =>
-                            p.setState({
-                                isRecording: !e,
-                            }),
+                        onClick: () => h.setState({ isRecording: !e }),
                         text: e ? "Stop Recording" : "Start Recording",
                     }),
                     (0, a.jsx)(u.q, {
                         isUploading: t,
                         isSuccess: n,
-                        errorMessage: s,
-                        onClick: b,
+                        errorMessage: r,
+                        onClick: _,
                         title: "Upload Session Logs",
                     }),
                 ],

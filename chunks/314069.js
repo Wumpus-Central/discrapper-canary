@@ -1,1 +1,2 @@
-n(308060), (e.exports = n.g.setImmediate);
+"use strict";
+r(308060), (t.exports = r.g.setImmediate);

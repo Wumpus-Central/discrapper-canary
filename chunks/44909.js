@@ -1,26 +1,23 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968),
-    i = n(397927),
-    a = n(244242);
-
-function s(e) {
+n.d(t, { A: () => a });
+var i = n(627968),
+    s = n(397927),
+    r = n(244242);
+function a(e) {
     let { node: t } = e,
-        { useValue: n, setValue: s, useTitle: o, useSubtitle: l, useOptions: c, useBadge: u } = t,
-        d = o(),
-        f = null == l ? void 0 : l(),
-        p = n(),
-        _ = c(),
-        h = null == u ? void 0 : u();
-    return (0, r.jsx)(a.L, {
-        children: (0, r.jsx)(i.z6M, {
-            label: d,
-            description: f,
-            options: _,
-            value: p,
-            badge: h,
-            onChange: (e) => s(e),
+        { useValue: n, setValue: a, useTitle: l, useSubtitle: o, useOptions: c, useBadge: d } = t,
+        u = l(),
+        _ = o?.(),
+        m = n(),
+        A = c(),
+        g = d?.();
+    return (0, i.jsx)(r.L, {
+        children: (0, i.jsx)(s.z6M, {
+            label: u,
+            description: _,
+            options: A,
+            value: m,
+            badge: g,
+            onChange: (e) => a(e),
         }),
     });
 }

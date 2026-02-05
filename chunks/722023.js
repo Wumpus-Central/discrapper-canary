@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     return function (t) {
         var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -7,12 +8,7 @@ function r(e) {
             a = t.match(e.parsePattern);
         if (!a) return null;
         var s = e.valueCallback ? e.valueCallback(a[0]) : a[0];
-        return {
-            value: (s = n.valueCallback ? n.valueCallback(s) : s),
-            rest: t.slice(i.length),
-        };
+        return { value: (s = n.valueCallback ? n.valueCallback(s) : s), rest: t.slice(i.length) };
     };
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

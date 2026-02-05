@@ -1,18 +1,15 @@
-n.d(t, {
-    s: () => O,
-});
+"use strict";
+n.d(t, { s: () => T });
 var r = n(321733),
     i = n(681456),
     a = n(594578),
     s = n(950143),
     o = n(73768),
     l = n(964527);
-
-function c(e, t) {
+function u(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
-function u(e, t) {
+function c(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1),
@@ -21,22 +18,18 @@ function u(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
 function d(e, t, n) {
-    return t && u(e.prototype, t), n && u(e, n), e;
+    return t && c(e.prototype, t), n && c(e, n), e;
 }
-
-function f(e, t) {
-    return g(e) || m(e, t) || _(e, t) || p();
+function _(e, t) {
+    return g(e) || m(e, t) || p(e, t) || f();
 }
-
-function p() {
+function f() {
     throw TypeError(
         "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
     );
 }
-
-function _(e, t) {
+function p(e, t) {
     if (e) {
         if ("string" == typeof e) return h(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -45,13 +38,11 @@ function _(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return h(e, t);
     }
 }
-
 function h(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-
 function m(e, t) {
     if ("u" > typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [],
@@ -76,11 +67,9 @@ function m(e, t) {
         return n;
     }
 }
-
 function g(e) {
     if (Array.isArray(e)) return e;
 }
-
 function E(e) {
     var t = (0, a.Q)().toString();
     switch (e) {
@@ -92,8 +81,7 @@ function E(e) {
             throw Error("Unknown Handler Role: ".concat(e));
     }
 }
-
-function b(e) {
+function A(e) {
     switch (e[0]) {
         case "S":
             return s.z.SOURCE;
@@ -103,21 +91,20 @@ function b(e) {
             (0, r.V)(!1, "Cannot parse handler ID: ".concat(e));
     }
 }
-
-function y(e, t) {
+function I(e, t) {
     var n = e.entries(),
         r = !1;
     do {
         var i = n.next(),
             a = i.done;
-        if (f(i.value, 2)[1] === t) return !0;
+        if (_(i.value, 2)[1] === t) return !0;
         r = !!a;
     } while (!r);
     return !1;
 }
-var O = (function () {
+var T = (function () {
     function e(t) {
-        c(this, e),
+        u(this, e),
             (this.types = new Map()),
             (this.dragSources = new Map()),
             (this.dropTargets = new Map()),
@@ -146,7 +133,7 @@ var O = (function () {
             {
                 key: "containsHandler",
                 value: function (e) {
-                    return y(this.dragSources, e) || y(this.dropTargets, e);
+                    return I(this.dragSources, e) || I(this.dropTargets, e);
                 },
             },
             {
@@ -180,13 +167,13 @@ var O = (function () {
             {
                 key: "isSourceId",
                 value: function (e) {
-                    return b(e) === s.z.SOURCE;
+                    return A(e) === s.z.SOURCE;
                 },
             },
             {
                 key: "isTargetId",
                 value: function (e) {
-                    return b(e) === s.z.TARGET;
+                    return A(e) === s.z.TARGET;
                 },
             },
             {

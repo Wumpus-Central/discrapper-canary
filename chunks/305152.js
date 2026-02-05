@@ -1,3 +1,2 @@
-e.exports = {
-    M: "bar__4930d",
-};
+"use strict";
+e.exports = { M: "bar__4930d" };

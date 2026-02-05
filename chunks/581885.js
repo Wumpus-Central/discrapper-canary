@@ -1,3 +1,1 @@
-e.exports = {
-    u: "section_be87fd",
-};
+e.exports = { u: "section_be87fd" };

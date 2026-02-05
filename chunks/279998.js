@@ -1,3 +1,4 @@
+"use strict";
 var e = {};
 t.exports = function () {
     for (var t; void 0 === t || e.hasOwnProperty(t) || !isNaN(+t); )

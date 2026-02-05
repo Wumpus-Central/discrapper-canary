@@ -1,86 +1,73 @@
-n.d(t, {
-    A: () => S,
-});
+n.d(t, { A: () => v });
 var i = n(627968),
-    r = n(397927),
-    l = n(684013),
-    a = n(966327),
-    s = n(587895),
+    l = n(397927),
+    a = n(684013),
+    s = n(966327),
+    r = n(587895),
     o = n(15285),
-    u = n(769015),
-    c = n(734057),
-    d = n(309010),
+    d = n(769015),
+    u = n(734057),
+    c = n(309010),
     h = n(287809),
-    p = n(562153),
-    f = n(41984),
+    A = n(562153),
+    m = n(41984),
     g = n(589051),
-    m = n(592598),
-    y = n(395011),
-    A = n(222506),
-    v = n(145567),
-    b = n(581730),
-    E = n(672396),
-    O = n(652215),
-    x = n(985018),
-    _ = n(976723);
-
-function S(e, t, n) {
-    var S;
-    if (m.A.isNotificationDisabled(E.KS.NowPlayingNotification)) return null;
-    let I = h.default.getUser(e);
-    if (null == I) return null;
-    let j = d.A.getCurrentlySelectedChannelId(),
-        T = c.A.getChannel(j),
-        C = s.A.getApplication(t),
-        N = o.Ay.getRunningGames().find((e) => e.id === t),
-        w = null != (S = null == N ? void 0 : N.name) ? S : null == C ? void 0 : C.name,
-        P = (0, p.mG)(null == T ? void 0 : T.guild_id, null == T ? void 0 : T.id, I),
-        D = (0, i.jsxs)("div", {
-            className: _.Ql,
+    p = n(592598),
+    f = n(395011),
+    _ = n(222506),
+    E = n(145567),
+    x = n(581730),
+    S = n(672396),
+    I = n(652215),
+    T = n(985018),
+    C = n(976723);
+function v(e, t, n) {
+    if (p.A.isNotificationDisabled(S.KS.NowPlayingNotification)) return null;
+    let v = h.default.getUser(e);
+    if (null == v) return null;
+    let y = c.A.getCurrentlySelectedChannelId(),
+        N = u.A.getChannel(y),
+        O = r.A.getApplication(t),
+        b = o.Ay.getRunningGames().find((e) => e.id === t),
+        j = b?.name ?? O?.name,
+        w = (0, A.mG)(N?.guild_id, N?.id, v),
+        L = (0, i.jsxs)("div", {
+            className: C.Ql,
             children: [
                 (0, i.jsx)("div", {
-                    className: _.bf,
-                    children: (0, i.jsx)(a.A, {
-                        user: I,
-                        "aria-hidden": !0,
-                        size: r._3J.SIZE_24,
-                    }),
+                    className: C.bf,
+                    children: (0, i.jsx)(s.A, { user: v, "aria-hidden": !0, size: l._3J.SIZE_24 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: _.rf,
-                    children: (0, i.jsx)(r.Text, {
+                    className: C.rf,
+                    children: (0, i.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "interactive-text-default",
-                        className: _.G3,
-                        children: x.intl.format(x.t["q7/rgv"], {
-                            username: null != P ? P : I.username,
-                            gameName: w,
+                        className: C.G3,
+                        children: T.intl.format(T.t["q7/rgv"], {
+                            username: w ?? v.username,
+                            gameName: j,
                             gameIcon: () =>
-                                null != C || null != N
-                                    ? (0, i.jsx)(u.A, {
-                                          game: C,
-                                          pid: null == N ? void 0 : N.pid,
-                                          size: u.M.XSMALL,
-                                          className: _.Gt,
-                                      })
+                                null != O || null != b
+                                    ? (0, i.jsx)(d.A, { game: O, pid: b?.pid, size: d.M.XSMALL, className: C.Gt })
                                     : null,
                         }),
                     }),
                 }),
             ],
         }),
-        { trackView: R, trackClick: k } = (0, b.Y9)(E.KS.NowPlayingNotification, {
-            notif_type: E.KS.NowPlayingNotification,
-            notif_user_id: I.id,
+        { trackView: R, trackClick: D } = (0, x.Y9)(S.KS.NowPlayingNotification, {
+            notif_type: S.KS.NowPlayingNotification,
+            notif_user_id: v.id,
             activity_type: n.type,
-            activity_name: null != w ? w : n.name,
+            activity_name: j ?? n.name,
         }),
         { hasChat: M } = (0, g.NI)("nowPlayingNotification");
     return {
-        body: D,
-        className: _.dn,
-        wrapperClassName: _.P6,
-        animationWrapperClassName: _.VG,
+        body: L,
+        className: C.dn,
+        wrapperClassName: C.P6,
+        animationWrapperClassName: C.VG,
         maxBodyLines: 1,
         disableClickableRegions: !M,
         onNotificationShow: () => {
@@ -90,24 +77,20 @@ function S(e, t, n) {
             M &&
                 (async () => {
                     try {
-                        let e = await (0, v.D$)({
-                            target: {
-                                kind: v.bB.DM_USER,
-                                userId: I.id,
-                                messageId: null,
-                            },
-                            source: f.B9.NOTIFICATION_CLICK,
-                            widgetType: O.uss.NOTIFICATIONS,
+                        let e = await (0, E.D$)({
+                            target: { kind: E.bB.DM_USER, userId: v.id, messageId: null },
+                            source: m.B9.NOTIFICATION_CLICK,
+                            widgetType: I.uss.NOTIFICATIONS,
                         });
                         if (null == e) return;
-                        let n = y.A.getTargetPID();
-                        A.A.isInputLocked(n) ? (k("unlock"), l.A.setInputLocked(!1, n)) : k("jump"),
-                            l.A.updateNotificationStatus(t, O.yFH.DISMISSED);
-                    } catch (e) {}
+                        let n = f.A.getTargetPID();
+                        _.A.isInputLocked(n) ? (D("unlock"), a.A.setInputLocked(!1, n)) : D("jump"),
+                            a.A.updateNotificationStatus(t, I.yFH.DISMISSED);
+                    } catch {}
                 })();
         },
         onDismissClick: () => {
-            k("dismiss");
+            D("dismiss");
         },
     };
 }

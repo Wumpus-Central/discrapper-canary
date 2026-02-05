@@ -1,8 +1,5 @@
-n.d(t, {
-    QA: () => p,
-    Rq: () => h,
-    cy: () => _,
-});
+"use strict";
+n.d(t, { QA: () => f, Rq: () => h, cy: () => p });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -10,10 +7,10 @@ var i = n(397927),
     s = n(471107),
     o = n(506326),
     l = n(693879),
-    c = n(583846),
-    u = n(53257),
+    u = n(583846),
+    c = n(53257),
     d = n(652215);
-let f = function (e) {
+let _ = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return t
@@ -28,55 +25,33 @@ let f = function (e) {
               ? i.Uk3
               : i._xR;
 };
-
-function p(e) {
-    var t, n, a, c, d;
-    let { activity: p } = e,
-        _ = null != (t = null == (a = p.timestamps) ? void 0 : a.start) ? t : p.created_at,
-        { now: h } = (0, s.G)();
-    if (null == _ || (0, u.A)(p)) return null;
-    let m = null == (c = p.timestamps) ? void 0 : c.end,
-        g = null != (n = null == (d = p.timestamps) ? void 0 : d.isCountDown) && n,
-        E = f(p, g && null != m && m > h);
+function f(e) {
+    let { activity: t } = e,
+        n = t.timestamps?.start ?? t.created_at,
+        { now: a } = (0, s.G)();
+    if (null == n || (0, c.A)(t)) return null;
+    let u = t.timestamps?.end,
+        d = t.timestamps?.isCountDown ?? !1,
+        f = _(t, d && null != u && u > a);
     return (0, r.jsxs)(o.er, {
         children: [
-            (0, r.jsx)(E, {
-                size: "xxs",
-                color: i.LU0.colors.TEXT_FEEDBACK_POSITIVE,
-            }),
+            (0, r.jsx)(f, { size: "xxs", color: i.LU0.colors.TEXT_FEEDBACK_POSITIVE }),
             (0, r.jsx)(l.z, {
-                entry: {
-                    start: _,
-                    end: m,
-                    isCountDown: g,
-                },
+                entry: { start: n, end: u, isCountDown: d },
                 textColor: "text-feedback-positive",
                 bold: !0,
             }),
         ],
     });
 }
-
-function _(e) {
+function p(e) {
     let { activity: t } = e;
     if ((0, a.A)(t) || null == t.party) return null;
-    let n = (0, c.gF)(t.state, t.party);
-    return null == n
-        ? null
-        : (0, r.jsx)(o.fM, {
-              Icon: i.nFg,
-              text: n,
-          });
+    let n = (0, u.gF)(t.state, t.party);
+    return null == n ? null : (0, r.jsx)(o.fM, { Icon: i.nFg, text: n });
 }
-
 function h(e) {
-    var t;
-    let { activity: n } = e,
-        a = (0, c.kR)(null == (t = n.assets) ? void 0 : t.large_text);
-    return null == a
-        ? null
-        : (0, r.jsx)(o.fM, {
-              Icon: i.Kck,
-              text: a,
-          });
+    let { activity: t } = e,
+        n = (0, u.kR)(t.assets?.large_text);
+    return null == n ? null : (0, r.jsx)(o.fM, { Icon: i.Kck, text: n });
 }

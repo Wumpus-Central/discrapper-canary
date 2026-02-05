@@ -1,85 +1,62 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(747238);
-var l = n(627968),
-    a = n(64700),
-    r = n(311907),
-    i = n(397927),
-    s = n(976860),
-    c = n(961350),
-    o = n(449054),
-    d = n(412461),
-    u = n(933171),
-    p = n(652215),
-    h = n(985018);
-let m = "redirect_to_support_server";
-
-function b(e) {
+a.d(t, { A: () => _ }), a(323874), a(14289), a(35956);
+var n = a(627968),
+    i = a(64700),
+    s = a(311907),
+    l = a(397927),
+    r = a(976860),
+    o = a(961350),
+    c = a(449054),
+    d = a(412461),
+    u = a(933171),
+    h = a(652215),
+    m = a(985018);
+let p = "redirect_to_support_server";
+function _(e) {
     var t;
-    let n,
-        b,
-        f,
-        { application: g, className: x } = e,
-        { onGoToSupportServer: v } =
-            ((t = g),
-            (n = (0, d.DB)()),
-            (b = (0, r.bG)([c.default], () => c.default.getSessionId())),
-            (f = a.useCallback(async () => {
+    let a,
+        _,
+        g,
+        { application: x, className: A } = e,
+        { onGoToSupportServer: C } =
+            ((t = x),
+            (a = (0, d.DB)()),
+            (_ = (0, s.bG)([o.default], () => o.default.getSessionId())),
+            (g = i.useCallback(async () => {
                 try {
-                    var e;
-                    let n = null == t || null == (e = t.guild) ? void 0 : e.id;
-                    if (null != n) {
-                        (0, d.TR)(p.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
+                    let e = t?.guild?.id;
+                    if (null != e) {
+                        (0, d.TR)(h.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                             application_id: t.id,
-                            support_guild_id: n,
+                            support_guild_id: e,
                         });
-                        let e = {
-                            page: p.liQ.APPLICATION_DIRECTORY,
-                        };
-                        await (0, o.Z2)(n, e);
+                        let a = { page: h.liQ.APPLICATION_DIRECTORY };
+                        await (0, c.Z2)(e, a);
                     }
-                } catch (e) {}
+                } catch {}
             }, [t])),
-            a.useEffect(() => {
+            i.useEffect(() => {
                 let e = new URL(location.href);
-                if (null != t && n && null != b && "true" === e.searchParams.get(m)) {
-                    e.searchParams.delete(m);
+                if (null != t && a && null != _ && "true" === e.searchParams.get(p)) {
+                    e.searchParams.delete(p);
                     let t = e.pathname + e.search;
-                    (0, s.bG)(t), f();
+                    (0, r.bG)(t), g();
                 }
-            }, [n, f, b, t]),
+            }, [a, g, _, t]),
             {
-                onGoToSupportServer: a.useCallback(() => {
-                    var e;
-                    null != (null == t || null == (e = t.guild) ? void 0 : e.id) &&
-                        (n
-                            ? f()
-                            : (0, d.jL)({
-                                  [m]: "true",
-                              }));
-                }, [t, f, n]),
+                onGoToSupportServer: i.useCallback(() => {
+                    null != t?.guild?.id && (a ? g() : (0, d.jL)({ [p]: "true" }));
+                }, [t, g, a]),
             });
-    return null != g.guild && g.guild.features.includes(p.GuildFeatures.DISCOVERABLE)
-        ? (0, l.jsxs)("div", {
-              className: x,
+    return null != x.guild && x.guild.features.includes(h.GuildFeatures.DISCOVERABLE)
+        ? (0, n.jsxs)("div", {
+              className: A,
               children: [
-                  (0, l.jsx)(i.Heading, {
+                  (0, n.jsx)(l.Heading, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",
-                      children: h.intl.string(h.t.KJEO27),
+                      children: m.intl.string(m.t.KJEO27),
                   }),
-                  (0, l.jsx)(u.A, {
-                      guild: g.guild,
-                      onClick: v,
-                  }),
+                  (0, n.jsx)(u.A, { guild: x.guild, onClick: C }),
               ],
           })
         : null;

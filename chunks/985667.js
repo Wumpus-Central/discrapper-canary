@@ -1,14 +1,12 @@
-i.d(e, {
-    i: () => T,
-});
+i.d(e, { i: () => d });
 var n = i(311907),
     l = i(827343),
     s = i(419954),
     r = i(430452),
-    u = i(780964),
-    a = i(731854),
+    a = i(780964),
+    u = i(731854),
     o = i(985018);
-let T = (0, s.zD)(u.X.VOICE_QUALITY_OF_SERVICE_SETTING, {
+let d = (0, s.zD)(a.X.VOICE_QUALITY_OF_SERVICE_SETTING, {
     useTitle: () => o.intl.string(o.t.uancuJ),
     useSubtitle: () => o.intl.string(o.t.I1Eoqq),
     useValue: function () {
@@ -18,6 +16,6 @@ let T = (0, s.zD)(u.X.VOICE_QUALITY_OF_SERVICE_SETTING, {
         l.A.setQoS(t);
     },
     usePredicate: function () {
-        return (0, n.bG)([r.A], () => r.A.supports(a.O5.QOS));
+        return (0, n.bG)([r.A], () => r.A.supports(u.O5.QOS));
     },
 });

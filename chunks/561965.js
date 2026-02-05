@@ -1,9 +1,4 @@
-l.d(t, {
-    default: () => x,
-}),
-    l(896048),
-    l(321073),
-    l(733351);
+l.d(t, { default: () => x }), l(321073);
 var n = l(627968),
     r = l(64700),
     i = l(989349),
@@ -23,7 +18,6 @@ var n = l(627968),
     I = l(652215),
     S = l(985018),
     _ = l(443161);
-
 function R(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: o, handleRemoveDateFilter: c } = e,
         h = a()(),
@@ -37,21 +31,11 @@ function R(e) {
                 selectionMode: "single",
                 formatOption: (e) => {
                     let { key: t, value: l, label: n, leading: r, trailing: i } = e;
-                    return {
-                        id: null != t ? t : l,
-                        value: l,
-                        label: n,
-                        leading: r,
-                        trailing: i,
-                    };
+                    return { id: t ?? l, value: l, label: n, leading: r, trailing: i };
                 },
                 options: o,
                 onSelectionChange: (e) => {
-                    null != e &&
-                        r({
-                            query: e,
-                            index: t,
-                        });
+                    null != e && r({ query: e, index: t });
                 },
                 value: l.query,
                 fullWidth: !0,
@@ -59,10 +43,7 @@ function R(e) {
             (0, n.jsx)(u.J3s, {
                 value: l.date,
                 onSelect: (e) => {
-                    i({
-                        date: e,
-                        index: t,
-                    });
+                    i({ date: e, index: t });
                 },
                 minDate: d,
                 maxDate: h,
@@ -72,20 +53,12 @@ function R(e) {
                     c(t);
                 },
                 className: _.tL,
-                "aria-label": S.intl.formatToPlainString(S.t["2LwBlF"], {
-                    filterNumber: t + 1,
-                }),
-                children: (0, n.jsx)(u.ucK, {
-                    size: "md",
-                    color: "currentColor",
-                    className: _.IT,
-                    "aria-hidden": !0,
-                }),
+                "aria-label": S.intl.formatToPlainString(S.t["2LwBlF"], { filterNumber: t + 1 }),
+                children: (0, n.jsx)(u.ucK, { size: "md", color: "currentColor", className: _.IT, "aria-hidden": !0 }),
             }),
         ],
     });
 }
-
 function f(e) {
     let {
             options: t,
@@ -142,7 +115,6 @@ function f(e) {
         ],
     });
 }
-
 function y(e) {
     let {
             label: t,
@@ -168,13 +140,7 @@ function y(e) {
             selectionMode: "multiple",
             formatOption: (e) => {
                 let { key: t, value: l, label: n, leading: r, trailing: i } = e;
-                return {
-                    id: null != t ? t : l,
-                    value: l,
-                    label: n,
-                    leading: r,
-                    trailing: i,
-                };
+                return { id: t ?? l, value: l, label: n, leading: r, trailing: i };
             },
             options: o,
             placeholder: i,
@@ -183,7 +149,7 @@ function y(e) {
                 (!(e.length > a.length) || p(F, e[e.length - 1])) && s(e);
             },
             onFocus: d,
-            onQueryChange: (e) => (null == g ? void 0 : g(e.target.value)),
+            onQueryChange: (e) => g?.(e.target.value),
             closeOnSelect: h,
             customMatchSorter: T,
             onBlur: L,
@@ -191,7 +157,6 @@ function y(e) {
         }),
     });
 }
-
 function m(e) {
     let {
         label: t,
@@ -211,13 +176,7 @@ function m(e) {
             selectionMode: "single",
             formatOption: (e) => {
                 let { key: t, value: l, label: n, leading: r, trailing: i } = e;
-                return {
-                    id: null != t ? t : l,
-                    value: l,
-                    label: n,
-                    leading: r,
-                    trailing: i,
-                };
+                return { id: t ?? l, value: l, label: n, leading: r, trailing: i };
             },
             placeholder: r,
             options: o,
@@ -230,7 +189,6 @@ function m(e) {
         }),
     });
 }
-
 function x(e) {
     let { transitionState: t, onClose: l, searchContext: i } = e,
         a = (0, c.GV)(),
@@ -243,7 +201,7 @@ function x(e) {
             return null != e ? e.username : S.intl.string(S.t.cqpybK);
         }),
         [C, b] = r.useState(L.A.getSearchInputText(i)),
-        v = r.useMemo(() => (0, p._o)(null != C ? C : ""), [C]),
+        v = r.useMemo(() => (0, p._o)(C ?? ""), [C]),
         { prefilledSearchFilters: W, eligibleFilterTokens: N } = (0, T.vj)(v, i),
         O = N.has(I.LWr.FILTER_FROM),
         j = N.has(I.LWr.FILTER_MENTIONS),
@@ -265,13 +223,13 @@ function x(e) {
             query: K,
             setQuery: z,
             setQueryString: Z,
-            handleClearFilter: J,
-            getApplyQueryString: X,
-            handleFocusFilter: G,
-            handleBlurFilter: V,
+            handleClearFilter: $,
+            getApplyQueryString: J,
+            handleFocusFilter: X,
+            handleBlurFilter: G,
         } = (0, T.ps)(i, I.LWr.FILTER_MENTIONS, W[I.LWr.FILTER_MENTIONS]),
         {
-            options: $,
+            options: V,
             query: ee,
             setQuery: et,
             handleClearFilter: el,
@@ -337,7 +295,7 @@ function x(e) {
                 null != e && n.push(e);
             }
             if (j) {
-                let e = X(I.LWr.FILTER_MENTIONS);
+                let e = J(I.LWr.FILTER_MENTIONS);
                 null != e && n.push(e);
             }
             if (A) {
@@ -349,11 +307,8 @@ function x(e) {
                 null != e && n.push(e);
             }
             return null != l && n.push(l), [...n].join(" ");
-        }, [O, w, j, X, A, ec, en, e_, M, ex, eO]),
-        { validateFilter: eM, validateDateFilter: eP } = (0, T.dY)({
-            nonFilterQueryString: P,
-            filterQueryString: eA,
-        }),
+        }, [O, w, j, J, A, ec, en, e_, M, ex, eO]),
+        { validateFilter: eM, validateDateFilter: eP } = (0, T.dY)({ nonFilterQueryString: P, filterQueryString: eA }),
         eQ = r.useMemo(
             () =>
                 !(
@@ -372,7 +327,7 @@ function x(e) {
                 F._.dispatch(I.jej.SEARCH_RESULTS_CLOSE), l();
                 return;
             }
-            let e = "".concat(eA, " ").concat(P).trim();
+            let e = `${eA} ${P}`.trim();
             L.A.dispatchSetSearchQuery({
                 query: e,
                 anchor: 0,
@@ -385,36 +340,22 @@ function x(e) {
         }, [eA, P, l]),
         ek = r.useMemo(() => {
             if (0 === ej) return S.intl.string(S.t.YfwFu1);
-            let e = "(".concat(ej, ")");
-            return "".concat(S.intl.string(S.t.YfwFu1), " ").concat(e);
+            let e = `(${ej})`;
+            return `${S.intl.string(S.t.YfwFu1)} ${e}`;
         }, [ej]),
         eH = r.useCallback(() => {
-            O && q(), j && J(), A && eu(), M && em(), el(), eS(), eN();
-        }, [O, j, el, A, eS, q, J, eu, M, em, eN]);
+            O && q(), j && $(), A && eu(), M && em(), el(), eS(), eN();
+        }, [O, j, el, A, eS, q, $, eu, M, em, eN]);
     return (0, n.jsx)(s.Modal, {
         transitionState: t,
         onClose: l,
         "aria-labelledby": a,
         title: S.intl.string(S.t["F8a0W/"]),
         actions: [
-            {
-                variant: "secondary",
-                text: S.intl.string(S.t["ETE/oC"]),
-                onClick: l,
-            },
-            {
-                variant: "primary",
-                text: S.intl.string(S.t.qDzapn),
-                onClick: eD,
-                disabled: !eQ,
-            },
+            { variant: "secondary", text: S.intl.string(S.t["ETE/oC"]), onClick: l },
+            { variant: "primary", text: S.intl.string(S.t.qDzapn), onClick: eD, disabled: !eQ },
         ],
-        actionBarInput: (0, n.jsx)(u.QWc, {
-            variant: "primary",
-            text: ek,
-            onClick: eH,
-            disabled: 0 === ej,
-        }),
+        actionBarInput: (0, n.jsx)(u.QWc, { variant: "primary", text: ek, onClick: eH, disabled: 0 === ej }),
         children: (0, n.jsxs)("div", {
             className: _.kL,
             children: [
@@ -422,9 +363,7 @@ function x(e) {
                     (0, n.jsx)(y, {
                         label: S.intl.string(S.t.Qz6eOR),
                         sublabel: S.intl.string(S.t["2JyXnO"]),
-                        textPlaceholder: S.intl.formatToPlainString(S.t["V4WMj/"], {
-                            username: x,
-                        }),
+                        textPlaceholder: S.intl.formatToPlainString(S.t["V4WMj/"], { username: x }),
                         value: D,
                         onChange: k,
                         onFocus: B,
@@ -440,9 +379,7 @@ function x(e) {
                     (0, n.jsx)(y, {
                         label: S.intl.string(S.t["kLrM/s"]),
                         sublabel: i.type === I.I4_.DMS ? S.intl.string(S.t["b+abYv"]) : S.intl.string(S.t.x8cC0z),
-                        textPlaceholder: S.intl.formatToPlainString(S.t.K4l507, {
-                            channelName: R,
-                        }),
+                        textPlaceholder: S.intl.formatToPlainString(S.t.K4l507, { channelName: R }),
                         value: ea,
                         onChange: es,
                         onFocus: eh,
@@ -461,7 +398,7 @@ function x(e) {
                     value: ee,
                     onChange: et,
                     onFocus: er,
-                    options: $,
+                    options: V,
                     filter: !1,
                     closeOnSelect: !1,
                     filterType: I.LWr.FILTER_HAS,
@@ -471,19 +408,17 @@ function x(e) {
                     (0, n.jsx)(y, {
                         label: S.intl.string(S.t.HEBnRU),
                         sublabel: S.intl.string(S.t.PdfTqT),
-                        textPlaceholder: S.intl.formatToPlainString(S.t.zka3aJ, {
-                            username: x,
-                        }),
+                        textPlaceholder: S.intl.formatToPlainString(S.t.zka3aJ, { username: x }),
                         value: K,
                         onChange: z,
-                        onFocus: G,
+                        onFocus: X,
                         onSearchChange: Z,
                         options: U,
                         filter: !0,
                         filterType: I.LWr.FILTER_MENTIONS,
                         validateFilter: eM,
                         closeOnSelect: !1,
-                        onBlur: V,
+                        onBlur: G,
                     }),
                 (0, n.jsx)(f, {
                     options: eg,

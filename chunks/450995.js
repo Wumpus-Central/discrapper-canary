@@ -1,9 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(155718),
     i = n(652215);
-
 function a(e) {
     if (null == e) return null;
     let { linkedGames: t = [] } = e,

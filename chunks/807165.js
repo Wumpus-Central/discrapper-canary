@@ -1,101 +1,80 @@
-n.d(t, {
-    A: () => _,
-    W: () => N,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => I, W: () => C });
+var i = n(627968),
+    s = n(64700),
     l = n(284009),
-    s = n.n(l),
+    r = n.n(l),
     a = n(311907),
-    c = n(36525),
-    o = n(686956),
-    d = n(964486),
+    o = n(36525),
+    d = n(686956),
+    c = n(964486),
     u = n(34457),
-    f = n(498642),
+    m = n(498642),
     g = n(403362),
-    b = n(997509),
-    m = n(555337),
-    p = n(636042),
-    x = n(396816),
-    h = n(856644),
-    j = n(206774),
-    O = n(763582),
-    y = n(966851),
-    v = n(927573),
-    A = n(652215);
-
-function E(e) {
-    b.A.selectRole(e);
+    x = n(997509),
+    h = n(555337),
+    _ = n(636042),
+    A = n(396816),
+    p = n(856644),
+    f = n(206774),
+    j = n(763582),
+    N = n(966851),
+    E = n(927573),
+    b = n(652215);
+function T(e) {
+    x.A.selectRole(e);
 }
-let N = () => {
-    let { guild: e } = (0, a.cf)([m.A], () => m.A.getProps()),
-        t = (0, a.bG)([x.A], () => x.A.formState),
-        n = (0, a.bG)([x.A], () => x.A.errorMessage);
-    return (0, r.jsx)(c.A, {
+let C = () => {
+    let { guild: e } = (0, a.cf)([h.A], () => h.A.getProps()),
+        t = (0, a.bG)([A.A], () => A.A.formState),
+        n = (0, a.bG)([A.A], () => A.A.errorMessage);
+    return (0, i.jsx)(o.A, {
         errorMessage: n,
         onSave: () => {
             if (null == e) return;
             let { id: t } = e,
-                n = x.A.editedRoleIds.map((e) => x.A.getRole(e)).filter(g.Vq),
-                r = x.A.getSortDeltas(),
-                i = null,
+                n = A.A.editedRoleIds.map((e) => A.A.getRole(e)).filter(g.Vq),
+                i = A.A.getSortDeltas(),
+                s = null,
                 l = null;
-            x.A.hasRoleConfigurationChanges &&
-                ((l = x.A.editedRoleIdsForConfigurations), (i = x.A.getEditedRoleConnectionConfigurationsMap())),
-                (0, p.JY)(t, n, r, l, i);
+            A.A.hasRoleConfigurationChanges &&
+                ((l = A.A.editedRoleIdsForConfigurations), (s = A.A.getEditedRoleConnectionConfigurationsMap())),
+                (0, _.JY)(t, n, i, l, s);
         },
-        submitting: t === A.XlH.SUBMITTING,
-        onReset: p.Ts,
+        submitting: t === b.XlH.SUBMITTING,
+        onReset: _.Ts,
     });
 };
-
-function _(e) {
+function I(e) {
     let { refToScroller: t } = e,
-        { guild: n, roles: l } = (0, a.cf)(
-            [x.A],
-            () => ({
-                guild: x.A.guild,
-                roles: x.A.roles,
-            }),
-            [],
-        );
-    s()(null != n, "Guild cannot be null here");
-    let c = i.useMemo(() => l.find((e) => (0, u.Oy)(e)), [l]);
-    s()(null != c, "Guild must have an everyone role");
-    let g = i.useMemo(() => l.filter((e) => !(0, u.Oy)(e)), [l]),
-        b = (0, a.bG)([m.A], () => m.A.getSelectedRoleId()),
-        [p, A] = i.useState(g.length > 0);
-    i.useEffect(() => {
-        A(p || g.length > 0);
-    }, [p, g.length]),
-        (0, d.Ay)(() => {
-            let e = f.A.getMemberCount(n.id);
-            null != e && e <= h.gz && o.A.requestMembers(n.id, "", 0, !1);
+        { guild: n, roles: l } = (0, a.cf)([A.A], () => ({ guild: A.A.guild, roles: A.A.roles }), []);
+    r()(null != n, "Guild cannot be null here");
+    let o = s.useMemo(() => l.find((e) => (0, u.Oy)(e)), [l]);
+    r()(null != o, "Guild must have an everyone role");
+    let g = s.useMemo(() => l.filter((e) => !(0, u.Oy)(e)), [l]),
+        x = (0, a.bG)([h.A], () => h.A.getSelectedRoleId()),
+        [_, b] = s.useState(g.length > 0);
+    s.useEffect(() => {
+        b(_ || g.length > 0);
+    }, [_, g.length]),
+        (0, c.Ay)(() => {
+            let e = m.A.getMemberCount(n.id);
+            null != e && e <= p.gz && d.A.requestMembers(n.id, "", 0, !1);
         });
-    let [N, _] = i.useState(v.T$.DISPLAY);
-    return (i.useEffect(() => {
-        null == b && _(v.T$.DISPLAY);
-    }, [b]),
-    null != b)
-        ? (0, r.jsx)(j.A, {
-              editRoleId: b,
-              setEditRoleId: E,
-              selectedSection: N,
-              setSelectedSection: _,
-          })
-        : p
-          ? (0, r.jsx)(y.A, {
-                setEditRoleId: E,
+    let [C, I] = s.useState(E.T$.DISPLAY);
+    return (s.useEffect(() => {
+        null == x && I(E.T$.DISPLAY);
+    }, [x]),
+    null != x)
+        ? (0, i.jsx)(f.A, { editRoleId: x, setEditRoleId: T, selectedSection: C, setSelectedSection: I })
+        : _
+          ? (0, i.jsx)(N.A, {
+                setEditRoleId: T,
                 guild: n,
-                everyoneRole: c,
+                everyoneRole: o,
                 otherRoles: g,
-                setSelectedSection: _,
+                setSelectedSection: I,
                 refToScroller: t,
             })
-          : (0, r.jsx)(O.A, {
-                guild: n,
-                everyoneRole: c,
-                setEditRoleId: E,
-            });
+          : (0, i.jsx)(j.A, { guild: n, everyoneRole: o, setEditRoleId: T });
 }

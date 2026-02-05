@@ -4,10 +4,7 @@ e.exports = function (e) {
         var t = (function (e) {
                 var t = (function () {
                         for (var e = {}, t = Object.keys(a), r = t.length, n = 0; n < r; n++)
-                            e[t[n]] = {
-                                distance: -1,
-                                parent: null,
-                            };
+                            e[t[n]] = { distance: -1, parent: null };
                         return e;
                     })(),
                     r = [e];

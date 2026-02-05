@@ -1,60 +1,42 @@
-n.d(t, {
-    In: () => d,
-    T0: () => p,
-    fY: () => f,
-});
-var r = n(627968);
+n.d(t, { In: () => _, T0: () => A, fY: () => d });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
+var l = n(503698),
+    r = n.n(l),
     s = n(732955),
-    o = n(397927),
-    l = n(818348),
-    c = n(985018),
-    u = n(659039);
-let d = (e) => {
+    a = n(397927),
+    o = n(818348),
+    E = n(985018),
+    c = n(659039);
+let _ = (e) => {
         let { children: t } = e;
-        return (0, r.jsx)(o.Heading, {
+        return (0, i.jsx)(a.Heading, {
             variant: "heading-sm/medium",
             color: "text-strong",
-            className: u.ut,
+            className: c.ut,
             children: t,
         });
     },
-    f = (e) => {
+    d = (e) => {
         let { text: t, onClick: n } = e;
-        return (0, r.jsx)(s.$nd, {
-            onClick: n,
-            text: t,
-            size: "sm",
-            icon: o.tvc,
-            variant: "secondary",
-        });
+        return (0, i.jsx)(s.$nd, { onClick: n, text: t, size: "sm", icon: a.tvc, variant: "secondary" });
     };
-
-function p(e) {
-    let { className: t, ref: n, children: i, onClick: s } = e;
-    return (0, r.jsx)(o.NPJ, {
-        theme: l.NJ.DARKER,
+function A(e) {
+    let { className: t, ref: n, children: l, onClick: s } = e;
+    return (0, i.jsx)(a.NPJ, {
+        theme: o.NJ.DARKER,
         children: (e) =>
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 ref: n,
-                className: a()(u.lm, e, t),
+                className: r()(c.lm, e, t),
                 children: [
-                    (0, r.jsx)("div", {
-                        className: u.qZ,
-                        children: i,
-                    }),
-                    (0, r.jsx)(o.DUT, {
-                        focusProps: {
-                            offset: 6,
-                        },
-                        className: u.b,
+                    (0, i.jsx)("div", { className: c.qZ, children: l }),
+                    (0, i.jsx)(a.DUT, {
+                        focusProps: { offset: 6 },
+                        className: c.b,
                         onClick: s,
-                        "aria-label": c.intl.string(c.t.WAI6xu),
-                        children: (0, r.jsx)(o.PGe, {
-                            size: "sm",
-                        }),
+                        "aria-label": E.intl.string(E.t.WAI6xu),
+                        children: (0, i.jsx)(a.PGe, { size: "sm" }),
                     }),
                 ],
             }),

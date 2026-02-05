@@ -1,10 +1,5 @@
-n.d(t, {
-    eh: () => o,
-    er: () => s,
-    hf: () => a,
-    j0: () => c,
-    tk: () => l,
-});
+"use strict";
+n.d(t, { eh: () => o, er: () => s, hf: () => a, j0: () => u, tk: () => l });
 var r = n(927813),
     i = n(985018);
 let a = 5 * r.A.Millis.SECOND;
@@ -31,32 +26,13 @@ var s = (function (e) {
             e
         );
     })({});
-
-function c() {
+function u() {
     return [
-        {
-            value: "DUPLICATED",
-            label: i.intl.string(i.t.wwXl5h),
-        },
-        {
-            value: "TOO_GENERIC",
-            label: i.intl.string(i.t["t+6knu"]),
-        },
-        {
-            value: "TOO_MANY",
-            label: i.intl.string(i.t.xnKDnv),
-        },
-        {
-            value: "INACCURATE",
-            label: i.intl.string(i.t.JW5VFj),
-        },
-        {
-            value: "NOT_USEFUL",
-            label: i.intl.string(i.t.ZtCNiY),
-        },
-        {
-            value: "OTHER",
-            label: i.intl.string(i.t.BufsKk),
-        },
+        { value: "DUPLICATED", label: i.intl.string(i.t.wwXl5h) },
+        { value: "TOO_GENERIC", label: i.intl.string(i.t["t+6knu"]) },
+        { value: "TOO_MANY", label: i.intl.string(i.t.xnKDnv) },
+        { value: "INACCURATE", label: i.intl.string(i.t.JW5VFj) },
+        { value: "NOT_USEFUL", label: i.intl.string(i.t.ZtCNiY) },
+        { value: "OTHER", label: i.intl.string(i.t.BufsKk) },
     ];
 }

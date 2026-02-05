@@ -1,56 +1,45 @@
-n.d(t, {
-    Ay: () => m,
-    YY: () => f,
-});
-var r = n(73153),
-    i = n(31728),
-    l = n(272355),
-    a = n(227042),
+n.d(t, { Ay: () => g, YY: () => h });
+var i = n(73153),
+    r = n(31728),
+    a = n(272355),
+    l = n(227042),
     s = n(869146),
     o = n(186111),
-    c = n(334463),
-    u = n(91242),
-    d = n(652215);
-let p = null;
-
-function f(e) {
-    return "framepip:".concat(e.applicationId);
+    d = n(334463),
+    c = n(91242),
+    u = n(652215);
+let A = null;
+function h(e) {
+    return `framepip:${e.applicationId}`;
 }
-
-function h() {
-    let e = u.A.getConnectedFrame();
+function _() {
+    let e = c.A.getConnectedFrame();
     if (null == e) {
         let e;
-        return void (null != (e = p) && c.A.isOpen(e) && (r.h.wait(() => i.VN(e)), (p = null)));
+        return void (null != (e = A) && d.A.isOpen(e) && (i.h.wait(() => r.VN(e)), (A = null)));
     }
-    var t = f(e);
-    if (c.A.isOpen(t)) return !1;
-    if (null != p) {
-        let e = p;
-        r.h.wait(() => i.VN(e));
+    var t = h(e);
+    if (d.A.isOpen(t)) return !1;
+    if (null != A) {
+        let e = A;
+        i.h.wait(() => r.VN(e));
     }
-    return r.h.wait(() => i.ho(t, d.o1q.FRAME, {})), void (p = t);
+    return i.h.wait(() => r.ho(t, u.o1q.FRAME, {})), void (A = t);
 }
-
-function A() {
+function m() {
     let e;
-    if (
-        (0, a.A)({
-            LayerStore: o.A,
-            PopoutWindowStore: s.A,
-        })
-    ) {
+    if ((0, l.A)({ LayerStore: o.A, PopoutWindowStore: s.A })) {
         let e;
-        return void (null != (e = p) && c.A.isOpen(e) && r.h.wait(() => i.jD(e)));
+        return void (null != (e = void 0 ?? A) && d.A.isOpen(e) && i.h.wait(() => r.jD(e)));
     }
-    null != (e = p) && c.A.isOpen(e) && r.h.wait(() => i.WU(e));
+    null != (e = void 0 ?? A) && d.A.isOpen(e) && i.h.wait(() => r.WU(e));
 }
-class g extends l.A {
+class p extends a.A {
     _initialize() {
-        u.A.addChangeListener(h), o.A.addChangeListener(A);
+        c.A.addChangeListener(_), o.A.addChangeListener(m);
     }
     _terminate() {
-        u.A.removeChangeListener(h), o.A.removeChangeListener(A);
+        c.A.removeChangeListener(_), o.A.removeChangeListener(m);
     }
 }
-let m = new g();
+let g = new p();

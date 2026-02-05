@@ -1,49 +1,44 @@
-n.d(t, {
-    A0: () => en,
-    Ay: () => ei,
-    NI: () => er,
-    Tb: () => et,
-});
-var r,
-    i,
-    l,
-    s = n(627968),
-    a = n(64700),
+n.d(t, { A0: () => en, Ay: () => es, NI: () => ei, Tb: () => et });
+var i,
+    s,
+    r,
+    a = n(627968),
+    l = n(64700),
     o = n(192308),
     c = n(793574),
     d = n(688810),
     u = n(793943),
     _ = n(259065),
-    p = n(206835),
-    m = n(780964),
+    m = n(206835),
+    A = n(780964),
     g = n(840065),
-    A = n(676279),
-    f = n(975571),
-    h = n(612669),
-    b = n(84483),
-    E = n(88001),
-    x = n(652215),
-    O = n(355097),
-    C = n(519412),
-    I = n(49370),
-    T = n(985018),
-    S = n(520650),
-    j = n(927961),
+    E = n(676279),
+    h = n(975571),
+    p = n(612669),
+    C = n(84483),
+    x = n(88001),
+    T = n(652215),
+    I = n(355097),
+    S = n(519412),
+    f = n(49370),
+    N = n(985018),
+    b = n(520650),
+    R = n(927961),
     v = n(817577),
-    N = n(748222),
-    y = n(743501),
+    O = n(748222),
+    j = n(743501),
     P = n(652700),
-    R = n(282818),
-    D = n(965132),
-    w = n(576765),
-    L = n(88433),
-    M = n(206771),
+    y = n(282818),
+    L = n(965132),
+    D = n(576765),
+    M = n(88433),
+    G = n(206771),
     U = n(533234),
-    G = n(39508),
-    k = n(198962),
-    V = n(636395),
+    k = n(39508),
+    B = n(198962),
+    w = n(636395),
     H = n(871891),
-    B = n(116427),
+    V = n(116427),
     F = n(281146),
     Y = n(324108),
     W = n(158178),
@@ -56,229 +51,155 @@ var r,
     Q = n(437466),
     $ = n(23145),
     ee = n(56582),
-    et = (((r = {}).CONTAINED = "contained"), (r.OVERLAY = "overlay"), r),
-    en = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), i),
-    er =
-        (((l = {}).REFERRAL_PROGRAM = "referralProgram"),
-        (l.SERVER_PROFILES = "serverProfiles"),
-        (l.SHOW_YOUR_STYLE = "showYourStyle"),
-        (l.YOUR_SPACE = "yourSpace"),
-        (l.EMOJIS = "emojis"),
-        (l.NO_LIMITS = "noLimits"),
-        (l.CUSTOM_THEMES = "customThemes"),
-        (l.DISPLAY_NAME_STYLES = "displayNameStyles"),
-        (l.PREMIUM_GROUP = "premiumGroup"),
-        (l.ORB_REWARDS = "orbRewards"),
-        l);
-let ei = () => {
+    et = (((i = {}).CONTAINED = "contained"), (i.OVERLAY = "overlay"), i),
+    en = (((s = {}).SMALL = "small"), (s.MEDIUM = "medium"), (s.LARGE = "large"), s),
+    ei =
+        (((r = {}).REFERRAL_PROGRAM = "referralProgram"),
+        (r.SERVER_PROFILES = "serverProfiles"),
+        (r.SHOW_YOUR_STYLE = "showYourStyle"),
+        (r.YOUR_SPACE = "yourSpace"),
+        (r.EMOJIS = "emojis"),
+        (r.NO_LIMITS = "noLimits"),
+        (r.CUSTOM_THEMES = "customThemes"),
+        (r.DISPLAY_NAME_STYLES = "displayNameStyles"),
+        (r.PREMIUM_GROUP = "premiumGroup"),
+        (r.ORB_REWARDS = "orbRewards"),
+        r);
+let es = () => {
     let { analyticsLocations: e } = (0, d.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
-        t = (0, p.A)({
-            scrollPosition: O._F.TRY_IT_OUT,
-            analyticsLocations: e,
-        }),
-        r = (0, h.O9)(),
-        i = (0, a.useCallback)(() => {
+        t = (0, m.A)({ scrollPosition: I._F.TRY_IT_OUT, analyticsLocations: e }),
+        i = (0, p.O9)(),
+        s = (0, l.useCallback)(() => {
             (0, g.openUserSettings)(
-                m.X.PROFILE_PANEL,
-                {
-                    section: x.nc_.PROFILE_CUSTOMIZATION,
-                    analyticsLocations: e,
-                },
-                () =>
-                    (0, _.L)({
-                        analyticsLocations: e,
-                    }),
+                A.X.PROFILE_PANEL,
+                { section: T.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
+                () => (0, _.L)({ analyticsLocations: e }),
             );
         }, [e]),
-        l = (0, A.TM)(),
-        et = f.A.getArticleURL(x.MVz.REFERRAL_PROGRAM),
+        r = (0, E.TM)(),
+        et = h.A.getArticleURL(T.MVz.REFERRAL_PROGRAM),
         en = {
-            premiumGroup: {
-                thumbnail: v,
-                assetUrl: v,
-            },
-            serverProfiles: {
-                thumbnail: N,
-                assetUrl: l ? $.Ay : ee.Ay,
-            },
-            customThemes: {
-                thumbnail: J.A,
-                assetUrl: l ? q.A : Q.A,
-            },
-            displayNameStyles: {
-                thumbnail: P.A,
-                assetUrl: l ? y.A : R.A,
-            },
-            referralProgram: {
-                thumbnail: V.A,
-                assetUrl: l ? k.A : H.A,
-            },
-            showYourStyle: {
-                thumbnail: F.A,
-                assetUrl: l ? B.A : Y.A,
-            },
-            yourSpace: {
-                thumbnail: z.A,
-                assetUrl: l ? W.A : K.A,
-            },
-            emojis: {
-                thumbnail: w.A,
-                assetUrl: l ? D.A : L.A,
-            },
-            noLimits: {
-                thumbnail: U.A,
-                assetUrl: l ? M.A : G.A,
-            },
-            orbRewards: {
-                thumbnail: X.A,
-                assetUrl: Z.A,
-            },
+            premiumGroup: { thumbnail: v, assetUrl: v },
+            serverProfiles: { thumbnail: O, assetUrl: r ? $.Ay : ee.Ay },
+            customThemes: { thumbnail: J.A, assetUrl: r ? q.A : Q.A },
+            displayNameStyles: { thumbnail: P.A, assetUrl: r ? j.A : y.A },
+            referralProgram: { thumbnail: w.A, assetUrl: r ? B.A : H.A },
+            showYourStyle: { thumbnail: F.A, assetUrl: r ? V.A : Y.A },
+            yourSpace: { thumbnail: z.A, assetUrl: r ? W.A : K.A },
+            emojis: { thumbnail: D.A, assetUrl: r ? L.A : M.A },
+            noLimits: { thumbnail: U.A, assetUrl: r ? G.A : k.A },
+            orbRewards: { thumbnail: X.A, assetUrl: Z.A },
         },
-        er = {
+        ei = {
             name: "serverProfiles",
-            title: T.intl.string(T.t.I9TYMg),
-            description: T.intl.string(T.t.HMSHeH),
-            descriptionCta: T.intl.string(T.t.jVcuVY),
+            title: N.intl.string(N.t.I9TYMg),
+            description: N.intl.string(N.t.HMSHeH),
+            descriptionCta: N.intl.string(N.t.jVcuVY),
             onClick: t,
             previewImage: en.serverProfiles.thumbnail,
             videoUrl: en.serverProfiles.assetUrl,
         },
-        ei = {
+        es = {
             name: "referralProgram",
-            title: T.intl.string(T.t.tPY4o9),
-            description: T.intl.format(T.t.jRPQUH, {
-                learnMoreLink: et,
-            }),
+            title: N.intl.string(N.t.tPY4o9),
+            description: N.intl.format(N.t.jRPQUH, { learnMoreLink: et }),
             previewImage: en.referralProgram.thumbnail,
             videoUrl: en.referralProgram.assetUrl,
         },
-        el = {
+        er = {
             name: "customThemes",
-            title: T.intl.string(S.default.XokIHM),
-            description: T.intl.string(S.default["7esQMC"]),
-            descriptionCta: T.intl.string(T.t.jVcuVY),
+            title: N.intl.string(b.default.XokIHM),
+            description: N.intl.string(b.default["7esQMC"]),
+            descriptionCta: N.intl.string(N.t.jVcuVY),
             previewImage: en.customThemes.thumbnail,
             onClick: () => {
                 (0, u.nf)(u.HP.CUSTOM_THEME);
             },
             videoUrl: en.customThemes.assetUrl,
         },
-        es = {
+        ea = {
             name: "displayNameStyles",
-            title: T.intl.string(j.default.ABtBDQ),
-            description: T.intl.string(j.default.MFNXZh),
-            descriptionCta: T.intl.string(T.t.jVcuVY),
+            title: N.intl.string(R.default.ABtBDQ),
+            description: N.intl.string(R.default.MFNXZh),
+            descriptionCta: N.intl.string(N.t.jVcuVY),
             previewImage: en.displayNameStyles.thumbnail,
-            onClick: i,
-            badgeText: T.intl.string(T.t.y2b7CA).toLocaleUpperCase(),
+            onClick: s,
+            badgeText: N.intl.string(N.t.y2b7CA).toLocaleUpperCase(),
             videoUrl: en.displayNameStyles.assetUrl,
         },
-        ea = {
+        el = {
             name: "premiumGroup",
-            title: T.intl.formatToPlainString(C.default.VFEDDB, {
-                premiumGroupProductName: (0, E.DP)(),
+            title: N.intl.formatToPlainString(S.default.VFEDDB, { premiumGroupProductName: (0, x.DP)() }),
+            description: N.intl.formatToPlainString(S.default.WudmR3, {
+                totalSeats: x.aw,
+                premiumGroupProductName: (0, x.DP)(),
             }),
-            description: T.intl.formatToPlainString(C.default.WudmR3, {
-                totalSeats: E.aw,
-                premiumGroupProductName: (0, E.DP)(),
-            }),
-            descriptionCta: T.intl.string(T.t.hvVgAZ),
+            descriptionCta: N.intl.string(N.t.hvVgAZ),
             previewImage: en.premiumGroup.thumbnail,
             videoUrl: en.premiumGroup.assetUrl,
             onClick: () => {
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e("69595").then(n.bind(n, 526710));
-                    return (t) =>
-                        (0, s.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, t),
-                        );
+                    return (t) => (0, a.jsx)(e, { ...t });
                 });
             },
-            badgeText: T.intl.string(T.t.oW0eUd).toLocaleUpperCase(),
+            badgeText: N.intl.string(N.t.oW0eUd).toLocaleUpperCase(),
             badgeVariant: "expressive",
         },
         eo = {
             name: "showYourStyle",
-            title: T.intl.string(T.t.Ij3Zmv),
-            description: T.intl.string(T.t.UsOUxY),
-            descriptionCta: T.intl.string(T.t.jVcuVY),
+            title: N.intl.string(N.t.Ij3Zmv),
+            description: N.intl.string(N.t.UsOUxY),
+            descriptionCta: N.intl.string(N.t.jVcuVY),
             previewImage: en.showYourStyle.thumbnail,
             onClick: t,
             videoUrl: en.showYourStyle.assetUrl,
         },
         ec = {
             name: "yourSpace",
-            title: T.intl.string(T.t.Wme3nX),
-            description: T.intl.string(T.t["/aAIqV"]),
-            descriptionCta: T.intl.string(T.t.jVcuVY),
+            title: N.intl.string(N.t.Wme3nX),
+            description: N.intl.string(N.t["/aAIqV"]),
+            descriptionCta: N.intl.string(N.t.jVcuVY),
             previewImage: en.yourSpace.thumbnail,
             onClick: () => {
                 {
                     let { openUserSettings: t } = n(840065);
-                    t(m.X.APPEARANCE_PANEL, {
-                        section: x.nc_.APPEARANCE,
-                        analyticsLocations: e,
-                    });
+                    t(A.X.APPEARANCE_PANEL, { section: T.nc_.APPEARANCE, analyticsLocations: e });
                 }
             },
             videoUrl: en.yourSpace.assetUrl,
         },
         ed = {
             name: "emojis",
-            title: T.intl.string(T.t.zY5PPb),
-            description: T.intl.string(T.t.R5Xag2),
+            title: N.intl.string(N.t.zY5PPb),
+            description: N.intl.string(N.t.R5Xag2),
             previewImage: en.emojis.thumbnail,
             videoUrl: en.emojis.assetUrl,
         },
         eu = {
             name: "noLimits",
-            title: T.intl.string(T.t["6b3ydG"]),
-            description: T.intl.string(T.t["Y+IJyg"]),
+            title: N.intl.string(N.t["6b3ydG"]),
+            description: N.intl.string(N.t["Y+IJyg"]),
             previewImage: en.noLimits.thumbnail,
             videoUrl: en.noLimits.assetUrl,
         },
-        { isInTreatment: e_ } = (0, b.uX)("useBentoBoxes"),
-        ep = {
+        { isInTreatment: e_ } = (0, C.uX)("useBentoBoxes"),
+        em = {
             name: "orbRewards",
-            title: T.intl.string(I.default["ZFJ/NU"]),
-            description: T.intl.string(I.default.wMi514),
-            descriptionCta: T.intl.string(T.t.hvVgAZ),
+            title: N.intl.string(f.default["ZFJ/NU"]),
+            description: N.intl.string(f.default.wMi514),
+            descriptionCta: N.intl.string(N.t.hvVgAZ),
             onClick: () => {
-                window.open(f.A.getArticleURL(x.MVz.ORBS_REWARDS_FAQ), "_blank");
+                window.open(h.A.getArticleURL(T.MVz.ORBS_REWARDS_FAQ), "_blank");
             },
             previewImage: en.orbRewards.thumbnail,
             previewImageStyle: "overlay",
             backgroundVideoUrl: en.orbRewards.assetUrl,
-            badgeText: T.intl.string(T.t.oW0eUd).toLocaleUpperCase(),
+            badgeText: N.intl.string(N.t.oW0eUd).toLocaleUpperCase(),
             badgeVariant: "expressive",
         };
     return {
-        whatsNewBoxes: r ? (e_ ? [[ea], [ep, ei]] : [[ea], [er, ei]]) : e_ ? [[ep], [er, ei]] : [[es], [el, ei]],
+        whatsNewBoxes: i ? (e_ ? [[el], [em, es]] : [[el], [ei, es]]) : e_ ? [[em], [ei, es]] : [[ea], [er, es]],
         bestOfBoxes: [[eo], [ec], [ed, eu]],
     };
 };

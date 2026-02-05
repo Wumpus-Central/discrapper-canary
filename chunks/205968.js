@@ -1,3 +1,4 @@
+"use strict";
 function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -14,12 +15,7 @@ function n(t) {
                     (i = e),
                     (o = r[e]),
                     i in n
-                        ? Object.defineProperty(n, i, {
-                              value: o,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
+                        ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
                         : (n[i] = o);
             });
     }
@@ -68,23 +64,17 @@ var c = r(225758),
                         return e.hasOwnProperty(t.key);
                     })
                     .map(function (t) {
-                        return n({}, t, {
-                            key: e[t.key],
-                        });
+                        return n({}, t, { key: e[t.key] });
                     }),
             ),
         );
     },
     k = function (t) {
-        return n({}, t, {
-            key: t.key || h(),
-        });
+        return n({}, t, { key: t.key || h() });
     },
     x = function (t, e, r) {
         var i = e.map(function (t) {
-            return n({}, t, {
-                parentRef: r,
-            });
+            return n({}, t, { parentRef: r });
         });
         return t.concat(i.reverse());
     },
@@ -164,10 +154,5 @@ t.exports = function (t) {
     var e = E(t),
         r = C(t, e),
         n = r.isEmpty() ? new c() : c.createEmpty(r.first().getKey());
-    return new a({
-        blockMap: r,
-        entityMap: e,
-        selectionBefore: n,
-        selectionAfter: n,
-    });
+    return new a({ blockMap: r, entityMap: e, selectionBefore: n, selectionAfter: n });
 };

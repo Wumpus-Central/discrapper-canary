@@ -1,112 +1,61 @@
-n.d(e, {
-    default: () => b,
-}),
-    n(747238);
-var a = n(627968),
-    i = n(64700),
-    r = n(158954),
-    s = n(397927),
-    c = n(450510),
-    o = n(350535),
-    l = n(927421),
-    d = n(985018),
-    u = n(290844);
-
-function b(t) {
-    let { guildId: e, channel: b, keybind: h, transitionState: p, onClose: f } = t,
-        y = i.useCallback(async () => {
-            (0, c.sF)(c._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await f();
-        }, [f]),
-        j = i.useCallback(async () => {
+n.d(e, { default: () => u });
+var i = n(627968),
+    a = n(64700),
+    s = n(158954),
+    d = n(397927),
+    l = n(450510),
+    c = n(350535),
+    r = n(927421),
+    o = n(985018),
+    h = n(290844);
+function u(t) {
+    let { guildId: e, channel: u, keybind: k, transitionState: p, onClose: x } = t,
+        y = a.useCallback(async () => {
+            (0, l.sF)(l._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await x();
+        }, [x]),
+        _ = a.useCallback(async () => {
             await y(),
-                (0, s.mMO)(async () => {
-                    let { default: t } = await n.e("12618").then(n.bind(n, 29681));
-                    return (e) =>
-                        (0, a.jsx)(
-                            t,
-                            (function (t) {
-                                for (var e = 1; e < arguments.length; e++) {
-                                    var n = null != arguments[e] ? arguments[e] : {},
-                                        a = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (a = a.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                            }),
-                                        )),
-                                        a.forEach(function (e) {
-                                            var a;
-                                            (a = n[e]),
-                                                e in t
-                                                    ? Object.defineProperty(t, e, {
-                                                          value: a,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (t[e] = a);
-                                        });
-                                }
-                                return t;
-                            })({}, e),
-                        );
+                (0, d.mMO)(async () => {
+                    let { default: t } = await n.e("90237").then(n.bind(n, 29681));
+                    return (e) => (0, i.jsx)(t, { ...e });
                 });
         }, [y]),
-        k = i.useMemo(
+        j = a.useMemo(
             () => [
-                {
-                    variant: "secondary",
-                    text: d.intl.string(d.t.TJ0N99),
-                    onClick: j,
-                },
-                {
-                    text: d.intl.string(d.t.ZwRzIH),
-                    onClick: y,
-                    variant: "primary",
-                },
+                { variant: "secondary", text: o.intl.string(o.t.TJ0N99), onClick: _ },
+                { text: o.intl.string(o.t.ZwRzIH), onClick: y, variant: "primary" },
             ],
-            [j, y],
+            [_, y],
         );
-    return (0, a.jsxs)(r.Modal, {
+    return (0, i.jsxs)(s.Modal, {
         onClose: y,
-        actions: k,
+        actions: j,
         transitionState: p,
-        title: d.intl.string(d.t.yJeV51),
+        title: o.intl.string(o.t.yJeV51),
         children: [
-            (0, a.jsx)(s.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: "text-md/normal",
-                children: d.intl.format(d.t.fq3Swz, {
-                    keybind: (0, o.dI)(h.shortcut, !0).split(" + "),
+                children: o.intl.format(o.t.fq3Swz, {
+                    keybind: (0, c.dI)(k.shortcut, !0).split(" + "),
                     keybindHook: (t, e) =>
-                        (0, a.jsx)(
+                        (0, i.jsx)(
                             "span",
                             {
-                                className: u.EY,
-                                children: (0, a.jsx)(s.e7I, {
-                                    className: u.d4,
-                                    shortcut: (0, o.dI)(h.shortcut, !1),
-                                }),
+                                className: h.EY,
+                                children: (0, i.jsx)(d.e7I, { className: h.d4, shortcut: (0, c.dI)(k.shortcut, !1) }),
                             },
                             e,
                         ),
-                    openSettingsHook: (t, e) =>
-                        (0, a.jsx)(
-                            s.MzZ,
-                            {
-                                onClick: j,
-                                children: t,
-                            },
-                            e,
-                        ),
+                    openSettingsHook: (t, e) => (0, i.jsx)(d.MzZ, { onClick: _, children: t }, e),
                 }),
             }),
-            (0, a.jsx)("div", {
-                className: u.Rj,
-                children: (0, a.jsx)(l.A, {
+            (0, i.jsx)("div", {
+                className: h.Rj,
+                children: (0, i.jsx)(r.A, {
                     width: 372,
                     height: 316,
                     guildId: e,
-                    channel: b,
+                    channel: u,
                     interactive: !1,
                     keepOpen: !0,
                     onClose: () => {},

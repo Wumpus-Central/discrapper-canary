@@ -1,44 +1,42 @@
-i.d(e, {
-    TC: () => O,
-});
+i.d(e, { TC: () => C });
 var n = i(934551),
     l = i(824552),
     s = i(419954),
     r = i(780964),
-    u = i(358776),
-    a = i(130066),
+    a = i(358776),
+    u = i(130066),
     o = i(601954),
-    T = i(978431),
-    A = i(731542),
-    S = i(674082),
-    E = i(570874),
-    d = i(531525),
-    _ = i(985018);
-let I = (0, s.t_)(r.X.CONTENT_AND_SOCIAL_PANEL, {
-        useTitle: () => _.intl.string(_.t["+o1pDZ"]),
-        StronglyDiscouragedCustomComponent: a.A,
-        usePredicate: () => !(0, u.dk)("ContentAndSocialPanel"),
+    d = i(978431),
+    T = i(731542),
+    A = i(674082),
+    S = i(570874),
+    E = i(531525),
+    g = i(985018);
+let _ = (0, s.t_)(r.X.CONTENT_AND_SOCIAL_PANEL, {
+        useTitle: () => g.intl.string(g.t["+o1pDZ"]),
+        StronglyDiscouragedCustomComponent: u.A,
+        usePredicate: () => !(0, a.dk)("ContentAndSocialPanel"),
         buildLayout: () => [],
     }),
-    g = (0, s.dT)(r.X.CONTENT_AND_SOCIAL_MAIN_TAB, {
-        getTitle: () => _.intl.string(_.t["/7xJCF"]),
-        buildLayout: () => [T.e, E.q, A.N, S.Y],
+    c = (0, s.dT)(r.X.CONTENT_AND_SOCIAL_MAIN_TAB, {
+        getTitle: () => g.intl.string(g.t["/7xJCF"]),
+        buildLayout: () => [d.e, S.q, T.N, A.Y],
     }),
-    c = (0, s.dT)(r.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB, {
+    I = (0, s.dT)(r.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB, {
         initialize: () => {
             l.A.fetch();
         },
-        getTitle: () => _.intl.string(_.t.YpCiMt),
+        getTitle: () => g.intl.string(g.t.YpCiMt),
         buildLayout: () => [o.j],
     }),
     N = (0, s.t_)(r.X.CONTENT_AND_SOCIAL_PANEL, {
-        useTitle: () => _.intl.string(_.t["+o1pDZ"]),
-        usePredicate: () => (0, u.dk)("ContentAndSocialPanel"),
-        buildLayout: () => [g, c],
+        useTitle: () => g.intl.string(g.t["+o1pDZ"]),
+        usePredicate: () => (0, a.dk)("ContentAndSocialPanel"),
+        buildLayout: () => [c, I],
     }),
-    O = (0, s.i4)(r.X.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(_.t["+o1pDZ"]),
-        getLegacySearchKey: () => ((0, u.WJ)("ContentAndSocialPanel") ? void 0 : d.H.CONTENT_SOCIAL),
+    C = (0, s.i4)(r.X.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
+        useTitle: () => g.intl.string(g.t["+o1pDZ"]),
+        getLegacySearchKey: () => ((0, a.WJ)("ContentAndSocialPanel") ? void 0 : E.H.CONTENT_SOCIAL),
         icon: n.ShieldUserIcon,
-        buildLayout: () => ((0, u.WJ)("ContentAndSocialPanel") ? [N] : [I]),
+        buildLayout: () => ((0, a.WJ)("ContentAndSocialPanel") ? [N] : [_]),
     });

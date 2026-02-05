@@ -1,33 +1,23 @@
-n.d(t, {
-    jP: () => s,
-}),
-    n(733351),
-    n(747238),
-    n(346084);
-var i = n(696451),
-    r = n(994500),
-    l = n(240248),
-    a = n(427262);
-
-function o(e) {
-    return (0, l.sS)(e.toLocaleLowerCase()).trim();
+n.d(t, { jP: () => u }), n(346084);
+var l = n(696451),
+    i = n(994500),
+    s = n(240248),
+    r = n(427262);
+function a(e) {
+    return (0, s.sS)(e.toLocaleLowerCase()).trim();
 }
-
-function s(e) {
+function u(e) {
     let t = {},
-        n = r.A.getNickname(e.id);
-    null != n && (t[n] = o(n).split(" "));
-    let l = a.Ay.getGlobalName(e);
+        n = i.A.getNickname(e.id);
+    null != n && (t[n] = a(n).split(" "));
+    let s = r.Ay.getGlobalName(e);
     return (
-        null != l && null == t[l] && (t[l] = o(l).split(" ")),
-        (t[e.username] = o(e.username).split(" ")),
-        i.Ay.getNicknames(e.id).forEach((e) => {
-            null == t[e] && (t[e] = o(e).split(" "));
+        null != s && null == t[s] && (t[s] = a(s).split(" ")),
+        (t[e.username] = a(e.username).split(" ")),
+        l.Ay.getNicknames(e.id).forEach((e) => {
+            null == t[e] && (t[e] = a(e).split(" "));
         }),
-        {
-            names: t,
-            nick: n,
-        }
+        { names: t, nick: n }
     );
 }
 n(652215);

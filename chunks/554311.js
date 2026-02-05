@@ -1,98 +1,78 @@
-n.d(t, {
-    Un: () => p,
-    Xm: () => v,
-    qo: () => h,
-    tX: () => _,
-}),
-    n(65821),
-    n(896048),
-    n(321073);
-var l = n(311907),
-    r = n(15285),
-    a = n(760751),
-    i = n(242286),
-    u = n(661191),
-    o = n(9302),
-    d = n(833551),
-    s = n(243612);
-let c = new u.SnowflakeSequence(),
+n.d(t, { Un: () => v, Xm: () => p, qo: () => _, tX: () => y }), n(321073);
+var a = n(311907),
+    l = n(15285),
+    i = n(760751),
+    r = n(242286),
+    s = n(661191),
+    u = n(9302),
+    o = n(833551),
+    d = n(243612);
+let c = new s.SnowflakeSequence(),
     m = {};
-
 function g(e) {
-    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [d.default];
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default];
     for (let n of Object.values(t.getClosedTrackedGamesHistory()))
         if (n.applicationId === e.id || n.gameName === e.name) return n;
     return null;
 }
-
 function f(e) {
-    var t, n, l, a, i;
-    let [u, o] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Ay, d.default],
-        s = g(e, [o]),
-        c = null != e.name && null != (t = u.getGameForName(e.name)) ? t : void 0;
+    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Ay, o.default],
+        a = g(e, [n]),
+        i = null != e.name ? (t.getGameForName(e.name) ?? void 0) : void 0;
     return {
         gameId: e.id,
         gameName: e.name,
-        gamePid: null != (n = null != (l = null == c ? void 0 : c.pid) ? l : null == s ? void 0 : s.pid) ? n : void 0,
-        fullscreenType:
-            null !=
-            (a = null != (i = null == c ? void 0 : c.fullscreenType) ? i : null == s ? void 0 : s.fullscreenType)
-                ? a
-                : void 0,
-        trackedGame: null != s ? s : void 0,
+        gamePid: i?.pid ?? a?.pid ?? void 0,
+        fullscreenType: i?.fullscreenType ?? a?.fullscreenType ?? void 0,
+        trackedGame: a ?? void 0,
         persistentGame: e,
-        runningGame: c,
+        runningGame: i,
     };
 }
-
-function v(e) {
-    var t, n, l;
-    let [a, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Ay, d.default],
-        u = g(e, [i]);
+function p(e) {
+    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Ay, o.default],
+        a = g(e, [n]);
     return {
         gameId: e.id,
         gameName: e.name,
-        gamePid: null != (t = null == u ? void 0 : u.pid) ? t : void 0,
-        fullscreenType: null != (n = null == u ? void 0 : u.fullscreenType) ? n : void 0,
-        trackedGame: null != u ? u : void 0,
-        runningGame: null != e.name && null != (l = a.getGameForName(e.name)) ? l : void 0,
+        gamePid: a?.pid ?? void 0,
+        fullscreenType: a?.fullscreenType ?? void 0,
+        trackedGame: a ?? void 0,
+        runningGame: null != e.name ? (t.getGameForName(e.name) ?? void 0) : void 0,
     };
 }
-
-function y(e) {
-    var t, n;
-    let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.A];
+function h(e) {
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.A];
     if (null != e.gameId) {
-        let t = l.getDetectableGame(e.gameId);
-        if (null != t) return t;
+        let n = t.getDetectableGame(e.gameId);
+        if (null != n) return n;
     }
-    let r = null != (t = e.runningGame) ? t : e.persistentGame;
-    if (null != r) {
-        let e = l.getGameByGameData(r);
+    let n = e.runningGame ?? e.persistentGame;
+    if (null != n) {
+        let e = t.getGameByGameData(n);
         if (null != e) return e;
     }
     if (null != e.gameName) {
-        let t = l.getGameByName(e.gameName);
-        if (null != t) return t;
+        let n = t.getGameByName(e.gameName);
+        if (null != n) return n;
     }
     if (null == e.gameName) return null;
-    let i =
-        null != (n = e.gameId)
-            ? n
-            : (function (e) {
-                  if (null != m[e]) return m[e];
-                  let t = Date.now(),
-                      n = null;
-                  try {
-                      c.willOverflowNext() && c.reset(), (n = u.default.fromTimestampWithSequence(t, c));
-                  } catch (e) {
-                      c.reset(), (n = u.default.fromTimestampWithSequence(t, c));
-                  }
-                  if (null == n) throw Error("Failed to generate snowflake id");
-                  return (m[e] = n), n;
-              })(e.gameName);
+    let a =
+        e.gameId ??
+        (function (e) {
+            if (null != m[e]) return m[e];
+            let t = Date.now(),
+                n = null;
+            try {
+                c.willOverflowNext() && c.reset(), (n = s.default.fromTimestampWithSequence(t, c));
+            } catch {
+                c.reset(), (n = s.default.fromTimestampWithSequence(t, c));
+            }
+            if (null == n) throw Error("Failed to generate snowflake id");
+            return (m[e] = n), n;
+        })(e.gameName);
     return {
-        id: u.default.cast(i),
+        id: s.default.cast(a),
         name: e.gameName,
         description: void 0,
         icon: void 0,
@@ -110,85 +90,78 @@ function y(e) {
         linkedApplications: void 0,
     };
 }
-
-function p() {
-    return (0, l.yK)([a.A, r.Ay, d.default], () => {
-        let e = a.A.games,
+function v() {
+    return (0, a.yK)([i.A, l.Ay, o.default], () => {
+        let e = i.A.games,
             t = e.reduce((e, t) => ((e[t.id] = t), e), {});
         return [
             ...e,
-            ...r.Ay.getGamesSeen(!1).reduce((e, n) => {
-                let l = n.id;
-                if (null != l && null != t[l]) return e;
-                let i = y(f(n, [r.Ay, d.default]), [a.A]);
-                if (null != i) {
-                    if (null != t[i.id]) return e;
-                    e.push(i);
+            ...l.Ay.getGamesSeen(!1).reduce((e, n) => {
+                let a = n.id;
+                if (null != a && null != t[a]) return e;
+                let r = h(f(n, [l.Ay, o.default]), [i.A]);
+                if (null != r) {
+                    if (null != t[r.id]) return e;
+                    e.push(r);
                 }
                 return e;
             }, []),
         ];
     }, []);
 }
-
-function h(e) {
-    return (0, l.bG)([a.A], () => (null == e ? null : y(e, [a.A])), [e]);
+function _(e) {
+    return (0, a.bG)([i.A], () => (null == e ? null : h(e, [i.A])), [e]);
 }
-
-function _() {
-    let e = (0, s.b4)(),
-        t = (0, l.bG)([i.default], () => i.default.getFocusedPID()),
-        n = null != t ? t : (0, o.getPID)(),
-        a = (0, l.bG)([d.default], () => d.default.getTrackedGameByPid(n), [n]),
-        u = (0, l.bG)([r.Ay], () => r.Ay.getVisibleGame()),
-        c = (0, l.bG)([r.Ay], () => r.Ay.getGamesSeen(!1)[0]);
-    return (0, l.bG)([r.Ay, d.default], () => {
+function y() {
+    let e = (0, d.b4)(),
+        t = (0, a.bG)([r.default], () => r.default.getFocusedPID()) ?? (0, u.getPID)(),
+        n = (0, a.bG)([o.default], () => o.default.getTrackedGameByPid(t), [t]),
+        i = (0, a.bG)([l.Ay], () => l.Ay.getVisibleGame()),
+        s = (0, a.bG)([l.Ay], () => l.Ay.getGamesSeen(!1)[0]);
+    return (0, a.bG)([l.Ay, o.default], () => {
         switch (!0) {
-            case null != a:
+            case null != n:
                 return (function (e) {
-                    var t, n, l;
-                    let [a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Ay];
+                    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Ay];
                     return {
-                        gameId: null != (t = e.applicationId) ? t : void 0,
-                        gameName: null != (n = e.gameName) ? n : void 0,
+                        gameId: e.applicationId ?? void 0,
+                        gameName: e.gameName ?? void 0,
                         gamePid: e.pid,
                         fullscreenType: e.fullscreenType,
                         trackedGame: e,
-                        runningGame: null != e.gameName && null != (l = a.getGameForName(e.gameName)) ? l : void 0,
+                        runningGame: null != e.gameName ? (t.getGameForName(e.gameName) ?? void 0) : void 0,
                     };
-                })(a, [r.Ay]);
+                })(n, [l.Ay]);
             case null != e:
                 return (function (e) {
-                    var t, n;
-                    let [l, a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Ay, d.default],
-                        i = l.getGameForName(e.name),
-                        u = null == i ? void 0 : i.pid;
+                    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Ay, o.default],
+                        a = t.getGameForName(e.name),
+                        i = a?.pid;
                     return {
                         gameId: e.id,
                         gameName: e.name,
-                        gamePid: null == i ? void 0 : i.pid,
-                        fullscreenType: null != (t = null == i ? void 0 : i.fullscreenType) ? t : void 0,
-                        runningGame: null != i ? i : void 0,
-                        trackedGame: null != u && null != (n = a.getTrackedGameByPid(u)) ? n : void 0,
+                        gamePid: a?.pid,
+                        fullscreenType: a?.fullscreenType ?? void 0,
+                        runningGame: a ?? void 0,
+                        trackedGame: null != i ? (n.getTrackedGameByPid(i) ?? void 0) : void 0,
                     };
-                })(e, [r.Ay, d.default]);
-            case null != u:
+                })(e, [l.Ay, o.default]);
+            case null != i:
                 return (function (e) {
-                    var t;
-                    let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [d.default];
+                    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default];
                     return {
                         gameId: e.id,
                         gameName: e.name,
                         gamePid: e.pid,
                         fullscreenType: e.fullscreenType,
-                        trackedGame: null != (t = g(e, [n])) ? t : void 0,
+                        trackedGame: g(e, [t]) ?? void 0,
                         runningGame: e,
                     };
-                })(u, [d.default]);
-            case null != c:
-                return f(c, [r.Ay, d.default]);
+                })(i, [o.default]);
+            case null != s:
+                return f(s, [l.Ay, o.default]);
             default:
                 return null;
         }
-    }, [e, a, u, c]);
+    }, [e, n, i, s]);
 }

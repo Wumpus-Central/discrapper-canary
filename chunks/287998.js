@@ -1,14 +1,11 @@
-n.d(t, {
-    b: () => l,
-});
+"use strict";
+n.d(t, { b: () => l });
 var r = n(99478),
     i = n(142922);
 let a = 1911;
-
 function s(e) {
     return "minguo" === e.era ? e.year + a : 1 - e.year + a;
 }
-
 function o(e) {
     let t = e - a;
     return t > 0 ? ["minguo", t] : ["before_minguo", 1 - t];
@@ -20,7 +17,7 @@ class l extends i.FG {
         return new (0, r.ng)(this, n, a, t.month, t.day);
     }
     toJulianDay(e) {
-        return super.toJulianDay(c(e));
+        return super.toJulianDay(u(e));
     }
     getEras() {
         return ["before_minguo", "minguo"];
@@ -33,7 +30,7 @@ class l extends i.FG {
         return "before_minguo" === e.era;
     }
     getDaysInMonth(e) {
-        return super.getDaysInMonth(c(e));
+        return super.getDaysInMonth(u(e));
     }
     getYearsInEra(e) {
         return "before_minguo" === e.era ? 9999 : 9999 - a;
@@ -42,8 +39,7 @@ class l extends i.FG {
         super(...e), (this.identifier = "roc");
     }
 }
-
-function c(e) {
+function u(e) {
     let [t, n] = (0, i.f5)(s(e));
     return new (0, r.ng)(t, n, e.month, e.day);
 }

@@ -1,6 +1,5 @@
-n.d(t, {
-    G: () => r,
-});
+"use strict";
+n.d(t, { G: () => r });
 var r = (function (e) {
     return (
         (e.RULE_NAME = "rule_name"),

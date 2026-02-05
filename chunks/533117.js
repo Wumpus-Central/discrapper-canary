@@ -1,162 +1,84 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(321073),
-    n(896048);
-var l,
-    r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => f }), n(321073);
+var i = n(311907),
+    l = n(73153),
     a = n(7584),
     s = n(287809),
-    o = n(690521),
-    c = n(134753),
-    u = n(666717);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
+    r = n(690521),
+    o = n(134753),
+    c = n(666717);
 n(824217);
-let p = {},
-    b = {},
-    g = {},
+let d = {},
+    u = {},
+    h = {},
     m = !0,
-    h = null;
-
-function A(e) {
-    if (null == b[e]) {
+    A = null;
+function p(e) {
+    if (null == u[e]) {
         let t = s.default.getUser(e);
         if (null == t) return;
         let n = t.getAvatarURL(null, 80),
-            l = new Image();
-        (l.src = n), (b[e] = l);
+            i = new Image();
+        (i.src = n), (u[e] = i);
     }
 }
-class y extends (l = r.Ay.Store) {
+class g extends i.Ay.Store {
     initialize() {
         this.waitFor(s.default);
     }
+    static displayName = "SharedCanvasStore";
     get visibleOverlayCanvas() {
         return m;
     }
     getDrawables(e) {
-        return null != p[e] ? p[e] : [];
+        return null != d[e] ? d[e] : [];
     }
     getAvatarImage(e) {
-        return b[e];
+        return u[e];
     }
     getEmojiImage(e) {
-        return g[e];
+        return h[e];
     }
     getDrawMode() {
-        return h;
+        return A;
     }
 }
-d(y, "displayName", "SharedCanvasStore");
-let _ = new y(i.h, {
+let f = new g(l.h, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
-        let { lineId: t, newPoints: n, userId: l, streamerId: r } = e,
-            i = p[r];
-        if (null == i)
-            p[r] = [
-                {
-                    type: c.Z.LINE,
-                    id: t,
-                    userId: l,
-                    points: n,
-                },
-            ];
+        let { lineId: t, newPoints: n, userId: i, streamerId: l } = e,
+            a = d[l];
+        if (null == a) d[l] = [{ type: o.Z.LINE, id: t, userId: i, points: n }];
         else {
-            let e = i.find((e) => e.id === t);
-            null == e
-                ? i.push({
-                      type: c.Z.LINE,
-                      id: t,
-                      userId: l,
-                      points: n,
-                  })
-                : (0, u.PA)(e) && e.points.push(...n);
+            let e = a.find((e) => e.id === t);
+            null == e ? a.push({ type: o.Z.LINE, id: t, userId: i, points: n }) : (0, c.PA)(e) && e.points.push(...n);
         }
-        A(l);
+        p(i);
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
-        var t, n, l, r, i;
-        let { emojiHose: s, streamerId: u, userId: d } = e,
-            b =
-                ((r = f({}, s)),
-                (i = i =
-                    {
-                        type: c.Z.EMOJI_HOSE,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                r);
-        if (null == p[u]) p[u] = [b];
+        let { emojiHose: t, streamerId: n, userId: i } = e,
+            l = { ...t, type: o.Z.EMOJI_HOSE };
+        if (null == d[n]) d[n] = [l];
         else {
-            let e = p[u].findIndex((e) => e.id === s.id);
-            e >= 0 ? (p[u][e] = f({}, p[u][e], b)) : p[u].push(b);
+            let e = d[n].findIndex((e) => e.id === t.id);
+            e >= 0 ? (d[n][e] = { ...d[n][e], ...l }) : d[n].push(l);
         }
-        let m = null != (t = null != (n = s.emojiId) ? n : s.emojiName) ? t : "";
-        if (null == g[m]) {
-            let e = null != s.emojiName ? a.Ay.convertNameToSurrogate(s.emojiName) : null;
-            (g[m] = new Image()),
-                (g[m].src = (0, o.Ez)(
-                    {
-                        id: s.emojiId,
-                        name: null != (l = null != e ? e : s.emojiName) ? l : "",
-                        animated: !1,
-                    },
-                    48,
-                ));
+        let s = t.emojiId ?? t.emojiName ?? "";
+        if (null == h[s]) {
+            let e = null != t.emojiName ? a.Ay.convertNameToSurrogate(t.emojiName) : null;
+            (h[s] = new Image()),
+                (h[s].src = (0, r.Ez)({ id: t.emojiId, name: e ?? t.emojiName ?? "", animated: !1 }, 48));
         }
-        A(d);
+        p(i);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;
-        if (null != p[n]) {
+        if (null != d[n]) {
             let e = new Set();
-            t.forEach((t) => e.add(t.id)), (p[n] = p[n].filter((t) => !e.has(t.id)));
+            t.forEach((t) => e.add(t.id)), (d[n] = d[n].filter((t) => !e.has(t.id)));
         }
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        h = t;
+        A = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;

@@ -1,22 +1,19 @@
-n.d(t, {
-    C: () => a,
-});
-var r = n(652215),
-    i = n(985018);
-
+n.d(t, { C: () => a });
+var i = n(652215),
+    l = n(985018);
 function a(e) {
     switch (e) {
-        case r.yTV.DESKTOP:
-            return i.intl.string(i.t.aqN8U9);
-        case r.yTV.IOS:
-            return i.intl.string(i.t.CyQ5ia);
-        case r.yTV.ANDROID:
-            return i.intl.string(i.t.fMs6uW);
-        case r.yTV.XBOX:
-            return i.intl.string(i.t.o0hjdt);
-        case r.yTV.PS4:
-        case r.yTV.PS5:
-            return i.intl.string(i.t["R/1GpG"]);
+        case i.yTV.DESKTOP:
+            return l.intl.string(l.t.aqN8U9);
+        case i.yTV.IOS:
+            return l.intl.string(l.t.CyQ5ia);
+        case i.yTV.ANDROID:
+            return l.intl.string(l.t.fMs6uW);
+        case i.yTV.XBOX:
+            return l.intl.string(l.t.o0hjdt);
+        case i.yTV.PS4:
+        case i.yTV.PS5:
+            return l.intl.string(l.t["R/1GpG"]);
         default:
             return;
     }

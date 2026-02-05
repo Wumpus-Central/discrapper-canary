@@ -1,53 +1,30 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
+n.d(t, { A: () => a });
 var i = n(64700),
-    r = n(131346),
-    l = n(744818);
-
+    l = n(131346),
+    s = n(522437);
 function a(e) {
-    let { type: t, index: n, optionId: a, onDragStart: s, onDragComplete: o, onDragReset: c } = e,
-        [d, u] = i.useState(!1),
-        [, b] = (0, r.i)({
+    let { type: t, index: n, optionId: a, onDragStart: r, onDragComplete: o, onDragReset: d } = e,
+        [c, u] = i.useState(!1),
+        [, m] = (0, l.i)({
             type: t,
-            item: () => (
-                s(a),
-                {
-                    id: a,
-                    position: n,
-                }
-            ),
-            canDrag: () => d,
-            collect: (e) => ({
-                isDragging: e.isDragging(),
-            }),
+            item: () => (r(a), { id: a, position: n }),
+            canDrag: () => c,
+            collect: (e) => ({ isDragging: e.isDragging() }),
             end: (e, t) => {
                 let n = t.getDropResult();
-                null == n ? c() : o(n.optionId);
+                null == n ? d() : o(n.optionId);
             },
         }),
-        [{ dragSourcePosition: f }, p] = (0, l.H)({
+        [{ dragSourcePosition: g }, x] = (0, s.H)({
             accept: t,
             canDrop: () => !0,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop()
-                    ? {
-                          dragSourcePosition: t.position,
-                      }
-                    : {
-                          dragSourcePosition: null,
-                      };
+                    ? { dragSourcePosition: t.position }
+                    : { dragSourcePosition: null };
             },
-            drop: () => ({
-                optionId: a,
-            }),
+            drop: () => ({ optionId: a }),
         });
-    return {
-        drag: b,
-        dragSourcePosition: f,
-        drop: p,
-        setIsDraggable: u,
-    };
+    return { drag: m, dragSourcePosition: g, drop: x, setIsDraggable: u };
 }

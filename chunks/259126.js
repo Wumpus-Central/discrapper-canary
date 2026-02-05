@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     current: function (e) {
         return n.g.requestAnimationFrame(e);

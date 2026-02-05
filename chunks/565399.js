@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,10 +8,7 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author", "contents"],
         prohibitedProps: [],
-        props: {
-            "aria-expanded": null,
-            "aria-haspopup": null,
-        },
+        props: { "aria-expanded": null, "aria-haspopup": null },
         relatedConcepts: [],
         requireContextRole: ["group", "tree"],
         requiredContextRole: ["group", "tree"],

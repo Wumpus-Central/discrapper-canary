@@ -1,13 +1,6 @@
 e.exports = function (e) {
-    let t = {
-            className: "number",
-            begin: "[1-9][0-9]*",
-            relevance: 0,
-        },
-        n = {
-            className: "symbol",
-            begin: ":[^\\]]+",
-        };
+    let t = { className: "number", begin: "[1-9][0-9]*", relevance: 0 },
+        n = { className: "symbol", begin: ":[^\\]]+" };
     return {
         name: "TP",
         keywords: {
@@ -96,37 +89,17 @@ e.exports = function (e) {
                 end: "\\]",
                 contains: ["self", t, e.QUOTE_STRING_MODE, n],
             },
-            {
-                className: "keyword",
-                begin: "/(PROG|ATTR|MN|POS|END)\\b",
-            },
-            {
-                className: "keyword",
-                begin: "(CALL|RUN|POINT_LOGIC|LBL)\\b",
-            },
-            {
-                className: "keyword",
-                begin: "\\b(ACC|CNT|Skip|Offset|PSPD|RT_LD|AP_LD|Tool_Offset)",
-            },
-            {
-                className: "number",
-                begin: "\\d+(sec|msec|mm/sec|cm/min|inch/min|deg/sec|mm|in|cm)?\\b",
-                relevance: 0,
-            },
+            { className: "keyword", begin: "/(PROG|ATTR|MN|POS|END)\\b" },
+            { className: "keyword", begin: "(CALL|RUN|POINT_LOGIC|LBL)\\b" },
+            { className: "keyword", begin: "\\b(ACC|CNT|Skip|Offset|PSPD|RT_LD|AP_LD|Tool_Offset)" },
+            { className: "number", begin: "\\d+(sec|msec|mm/sec|cm/min|inch/min|deg/sec|mm|in|cm)?\\b", relevance: 0 },
             e.COMMENT("//", "[;$]"),
             e.COMMENT("!", "[;$]"),
             e.COMMENT("--eg:", "$"),
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: "'",
-                end: "'",
-            },
+            { className: "string", begin: "'", end: "'" },
             e.C_NUMBER_MODE,
-            {
-                className: "variable",
-                begin: "\\$[A-Za-z0-9_]+",
-            },
+            { className: "variable", begin: "\\$[A-Za-z0-9_]+" },
         ],
     };
 };

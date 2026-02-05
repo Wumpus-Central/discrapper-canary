@@ -1,24 +1,14 @@
-n.d(t, {
-    A: () => o,
-    F: () => l,
-});
-var r = n(311907),
-    i = n(87001),
-    a = n(641376),
-    s = n(652215);
-
-function o(e) {
+n.d(t, { A: () => r, F: () => o });
+var i = n(311907),
+    l = n(87001),
+    s = n(641376),
+    a = n(652215);
+function r(e) {
     let { location: t, options: n } = e,
-        r = l(),
-        { showKeybindIndicators: i } = a.A.useExperiment(
-            {
-                location: t,
-            },
-            n,
-        );
-    return i && r;
+        i = o(),
+        { showKeybindIndicators: l } = s.A.useExperiment({ location: t }, n);
+    return l && i;
 }
-
-function l() {
-    return !(0, r.bG)([i.A], () => i.A.getWindowVisible(s.MLl.ACTIVITY_POPOUT));
+function o() {
+    return !(0, i.bG)([l.A], () => l.A.getWindowVisible(a.MLl.ACTIVITY_POPOUT));
 }

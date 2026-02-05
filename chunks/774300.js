@@ -1,17 +1,17 @@
-n.d(t, {
-    A: () => _,
-    F: () => E,
-});
+n.d(t, { A: () => d, F: () => c });
 var l,
     r = n(308528),
     a = n(843472),
     i = n(626584),
     s = n(734057),
     o = n(927813),
-    c = n(513391);
+    E = n(513391);
 let u = +o.A.Millis.SECOND + 10;
-var E = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
-class d extends c.A {
+var c = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
+class _ extends E.A {
+    constructor() {
+        super(new i.A("InviteQueue"), u);
+    }
     _sendInvite(e, t, n, l, r) {
         a.A.sendInvite(e.id, t, n, l).then(
             () => r(null, !0),
@@ -35,8 +35,5 @@ class d extends c.A {
                 );
         }
     }
-    constructor() {
-        super(new i.A("InviteQueue"), u);
-    }
 }
-let _ = new d();
+let d = new _();

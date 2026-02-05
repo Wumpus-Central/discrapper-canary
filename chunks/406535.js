@@ -1,7 +1,5 @@
-n.d(t, {
-    Y: () => i,
-    i: () => r,
-});
+"use strict";
+n.d(t, { Y: () => i, i: () => r });
 var r = (function (e) {
         return (
             (e[(e.USE_NEW_NOTIFICATIONS = 16)] = "USE_NEW_NOTIFICATIONS"),

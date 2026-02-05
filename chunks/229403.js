@@ -1,17 +1,16 @@
-n.d(t, {
-    A: () => _,
-});
+"use strict";
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(397927),
     o = n(493405),
     l = n(812745),
-    c = n(70142),
-    u = n(825755),
+    u = n(70142),
+    c = n(825755),
     d = n(985018),
-    f = n(666491);
-class p extends i.PureComponent {
+    _ = n(666491);
+class f extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && o.fB();
     }
@@ -20,7 +19,7 @@ class p extends i.PureComponent {
     }
     componentWillUnmount() {
         o._b().then(() => {
-            null != c.A.getClient() && o.DD();
+            null != u.A.getClient() && o.DD();
         });
     }
     render() {
@@ -29,38 +28,31 @@ class p extends i.PureComponent {
         return (0, r.jsxs)("div", {
             className: t,
             children: [
-                (0, r.jsx)(l.Ay, {
-                    type: l.Ay.Types.VENMO,
-                    size: l.y3.MEDIUM,
-                    className: f.Z,
-                }),
+                (0, r.jsx)(l.Ay, { type: l.Ay.Types.VENMO, size: l.y3.MEDIUM, className: _.Z }),
                 i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(s.Heading, {
                                   variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
-                                  className: f.y,
-                                  children: d.intl.format(d.t.DowIre, {
-                                      venmoUsername: e,
-                                  }),
+                                  className: _.y,
+                                  children: d.intl.format(d.t.DowIre, { venmoUsername: e }),
                               }),
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/medium",
-                                  className: f.y,
+                                  className: _.y,
                                   children: d.intl.string(d.t.kmEvnR),
                               }),
                           ],
                       })
                     : (0, r.jsx)(s.Text, {
                           variant: "text-md/medium",
-                          className: f.y,
+                          className: _.y,
                           children: null == n ? d.intl.string(d.t["2ouZDU"]) : d.intl.string(d.t.mIL6Jb),
                       }),
             ],
         });
     }
 }
-let _ = a.Ay.connectStores([c.A, u.A], () => ({
-    venmoUsername: u.A.venmoUsername,
-    venmoClient: c.A.getVenmoClient(),
-}))(p);
+let p = a.Ay.connectStores([u.A, c.A], () => ({ venmoUsername: c.A.venmoUsername, venmoClient: u.A.getVenmoClient() }))(
+    f,
+);

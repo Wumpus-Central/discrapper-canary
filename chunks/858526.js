@@ -1,21 +1,18 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => l });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(179690),
-    s = n(985018);
-
-function o() {
-    return (0, r.jsx)(i.D0$, {
-        label: s.intl.string(s.t.EPVq00),
-        description: s.intl.string(s.t["8aDa1t"]),
-        children: (0, r.jsx)(i.Button, {
+var s = n(397927),
+    r = n(179690),
+    a = n(985018);
+function l() {
+    return (0, i.jsx)(s.D0$, {
+        label: a.intl.string(a.t.EPVq00),
+        description: a.intl.string(a.t["8aDa1t"]),
+        children: (0, i.jsx)(s.Button, {
             variant: "primary",
             size: "sm",
-            text: s.intl.string(s.t.cDgKte),
-            onClick: a.Ay.enableMFA,
+            text: a.intl.string(a.t.cDgKte),
+            onClick: r.Ay.enableMFA,
         }),
     });
 }

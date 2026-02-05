@@ -1,6 +1,3 @@
-n.d(t, {
-    W: () => r,
-});
-let r = {
-    immediate: !0,
-};
+"use strict";
+n.d(t, { W: () => r });
+let r = { immediate: !0 };

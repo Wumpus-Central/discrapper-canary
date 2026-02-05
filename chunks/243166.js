@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,40 +7,29 @@ var i = n(503698),
     s = n(435371),
     o = n(397927),
     l = n(183555),
-    c = n(612630),
-    u = n(518477),
+    u = n(612630),
+    c = n(518477),
     d = n(985018),
-    f = n(90460);
-
-function p(e) {
+    _ = n(90460);
+function f(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
-        { note: p } = (0, c.A)(t),
-        _ = null != p && "" !== p,
-        h = _ ? o.ueQ : o.i2Q,
-        m = _ ? d.intl.string(d.t["gs+qcM"]) : d.intl.string(d.t["1ZZtts"]),
-        g = _ ? p : d.intl.string(d.t["1ZZtts"]),
+        { note: f } = (0, u.A)(t),
+        p = null != f && "" !== f,
+        h = p ? o.ueQ : o.i2Q,
+        m = p ? d.intl.string(d.t["gs+qcM"]) : d.intl.string(d.t["1ZZtts"]),
+        g = p ? f : d.intl.string(d.t["1ZZtts"]),
         { trackUserProfileAction: E } = (0, l.NJ)(),
-        b = () => {
-            E({
-                action: "PRESS_ADD_NOTE",
-            }),
-                null == i ||
-                    i({
-                        tabSection: u.RP.USER_INFO,
-                        scrollTarget: u.bk.NOTE,
-                    });
+        A = () => {
+            E({ action: "PRESS_ADD_NOTE" }), i?.({ tabSection: c.RP.USER_INFO, scrollTarget: c.bk.NOTE });
         };
     return (0, r.jsx)(s.m_, {
         asContainer: !0,
         text: g,
         children: (0, r.jsx)(o.DUT, {
             "aria-label": m,
-            onClick: b,
-            className: a()(f.x, n && f.R),
-            children: (0, r.jsx)(h, {
-                size: "xs",
-                color: "currentColor",
-            }),
+            onClick: A,
+            className: a()(_.x, n && _.R),
+            children: (0, r.jsx)(h, { size: "xs", color: "currentColor" }),
         }),
     });
 }

@@ -1,47 +1,45 @@
-n.d(t, {
-    F: () => l,
-});
+"use strict";
+n.d(t, { F: () => l });
 var r = n(90727),
     i = n(391898),
     a = n(734481),
     s = n(222367),
     o = n(551253);
-
 function l(e) {
-    for (var t = [], n = "", o = Object.keys(e), l = Object.keys(r.lp), u = 0; u < o.length; u++)
-        if ("tzid" !== o[u] && (0, i.mK)(l, o[u])) {
-            var d = o[u].toUpperCase(),
-                f = e[o[u]],
-                p = "";
-            if (!(!(0, i.Wo)(f) || ((0, i.cy)(f) && !f.length))) {
+    for (var t = [], n = "", o = Object.keys(e), l = Object.keys(r.lp), c = 0; c < o.length; c++)
+        if ("tzid" !== o[c] && (0, i.mK)(l, o[c])) {
+            var d = o[c].toUpperCase(),
+                _ = e[o[c]],
+                f = "";
+            if (!(!(0, i.Wo)(_) || ((0, i.cy)(_) && !_.length))) {
                 switch (d) {
                     case "FREQ":
-                        p = r.p3.FREQUENCIES[e.freq];
+                        f = r.p3.FREQUENCIES[e.freq];
                         break;
                     case "WKST":
-                        p = (0, i.Et)(f) ? new a.B(f).toString() : f.toString();
+                        f = (0, i.Et)(_) ? new a.B(_).toString() : _.toString();
                         break;
                     case "BYWEEKDAY":
                         (d = "BYDAY"),
-                            (p = (0, i.$r)(f)
+                            (f = (0, i.$r)(_)
                                 .map(function (e) {
                                     return e instanceof a.B ? e : (0, i.cy)(e) ? new a.B(e[0], e[1]) : new a.B(e);
                                 })
                                 .toString());
                         break;
                     case "DTSTART":
-                        n = c(f, e.tzid);
+                        n = u(_, e.tzid);
                         break;
                     case "UNTIL":
-                        p = (0, s.w)(f, !e.tzid);
+                        f = (0, s.w)(_, !e.tzid);
                         break;
                     default:
-                        if ((0, i.cy)(f)) {
-                            for (var _ = [], h = 0; h < f.length; h++) _[h] = String(f[h]);
-                            p = _.toString();
-                        } else p = String(f);
+                        if ((0, i.cy)(_)) {
+                            for (var p = [], h = 0; h < _.length; h++) p[h] = String(_[h]);
+                            f = p.toString();
+                        } else f = String(_);
                 }
-                p && t.push([d, p]);
+                f && t.push([d, f]);
             }
         }
     var m = t
@@ -61,7 +59,6 @@ function l(e) {
             .join("\n")
     );
 }
-
-function c(e, t) {
+function u(e, t) {
     return e ? "DTSTART" + new o.x(new Date(e), t).toString() : "";
 }

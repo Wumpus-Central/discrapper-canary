@@ -1,145 +1,123 @@
-n.d(t, {
-    i: () => A,
-}),
-    n(896048),
-    n(321073);
-var r = n(64700),
-    i = n(311907),
-    l = n(919796),
-    a = n(4106),
+n.d(t, { i: () => m }), n(321073);
+var i = n(64700),
+    r = n(311907),
+    a = n(919796),
+    l = n(4106),
     s = n(105971),
     o = n(800319),
-    c = n(883344),
-    u = n(596720),
-    d = n(859524),
-    p = n(639040),
-    f = n(567061),
-    h = n(118972);
-
-function A(e) {
+    d = n(883344),
+    c = n(596720),
+    u = n(859524),
+    A = n(639040),
+    h = n(567061),
+    _ = n(118972);
+function m(e) {
     let { showDot: t, notificationItem: n } = e,
-        [A, g] = r.useState(!1),
-        { unreadItems: m, readItems: b, allUnreadItemsHydrated: _ } = (0, p.A)(),
-        E = (0, i.bG)([c.A], () => c.A.getVersion(), []),
-        O = (0, i.bG)([c.A], () => !(c.A.isFirstPageHydrated() && E > 0));
-    r.useEffect(() => {
-        null != c.A.getLoadId() &&
-            s.k.trackFeedShown({
-                homeSessionId: "gravity",
-            });
-    }, [E]);
-    let y = (0, i.bG)([c.A], () => c.A.isRefreshing(), []),
-        I = (0, i.bG)([c.A], () => c.A.isHydrating(), []),
-        [v, S] = r.useState([]),
-        { loadId: C, lastScrollEventTimestamp: N } = (0, i.cf)([c.A], () => ({
-            loadId: c.A.getLoadId(),
-            lastScrollEventTimestamp: c.A.lastScrollEvent(),
+        [m, p] = i.useState(!1),
+        { unreadItems: g, readItems: E, allUnreadItemsHydrated: f } = (0, A.A)(),
+        I = (0, r.bG)([d.A], () => d.A.getVersion(), []),
+        C = (0, r.bG)([d.A], () => !(d.A.isFirstPageHydrated() && I > 0));
+    i.useEffect(() => {
+        null != d.A.getLoadId() && s.k.trackFeedShown({ homeSessionId: "gravity" });
+    }, [I]);
+    let N = (0, r.bG)([d.A], () => d.A.isRefreshing(), []),
+        T = (0, r.bG)([d.A], () => d.A.isHydrating(), []),
+        [S, x] = i.useState([]),
+        { loadId: v, lastScrollEventTimestamp: b } = (0, r.cf)([d.A], () => ({
+            loadId: d.A.getLoadId(),
+            lastScrollEventTimestamp: d.A.lastScrollEvent(),
         })),
-        T = v
-            .filter((e) => {
-                let { item: t } = e;
-                return !o.P.has(t.data.kind);
-            })
+        y = S.filter((e) => {
+            let { item: t } = e;
+            return !o.P.has(t.data.kind);
+        })
             .map((e) => {
                 let { item: t } = e;
                 return t.id;
             })
             .pop(),
-        j = (0, l.A)(T);
-    r.useEffect(() => {
-        if (y || O || null == j || null == T || T === j) return;
+        L = (0, a.A)(y);
+    i.useEffect(() => {
+        if (N || C || null == L || null == y || y === L) return;
         let e = Date.now();
-        e - N > h.N && (a.A.gravityScrollEvent(e), s.k.trackFeedFirstScrollStarted());
-    }, [y, N, j, T, C, O]);
-    let x = r.useCallback(
+        e - b > _.N && (l.A.gravityScrollEvent(e), s.k.trackFeedFirstScrollStarted());
+    }, [N, b, L, y, v, C]);
+    let O = i.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
-                if ((t.some((e) => "end" === e.item.data.kind) && g(!0), 0 === t.length)) return;
-                S(t);
+                if ((t.some((e) => "end" === e.item.data.kind) && p(!0), 0 === t.length)) return;
+                x(t);
                 let n = [],
-                    r = (0, d.P0)(t),
-                    i = Date.now();
-                for (let e = r.length - 1; e >= 0; e--) {
-                    let t = r[e];
-                    null != t &&
-                        n.push({
-                            id: t.id,
-                            type: (0, u.xG)(t),
-                            timestamp: i++,
-                        });
+                    i = (0, u.P0)(t),
+                    r = Date.now();
+                for (let e = i.length - 1; e >= 0; e--) {
+                    let t = i[e];
+                    null != t && n.push({ id: t.id, type: (0, c.xG)(t), timestamp: r++ });
                 }
-                n.length > 0 && a.A.ackGravityItems(n, !0),
+                n.length > 0 && l.A.ackGravityItems(n, !0),
                     s.k.trackItemShortImpression(
                         t,
-                        r.map((e) => ({
-                            id: e.id,
-                            type: (0, u.xG)(e),
-                        })),
-                        E,
+                        i.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
+                        I,
                     );
             },
-            [E, g],
+            [I, p],
         ),
-        P = r.useCallback(
+        R = i.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if (0 === t.length) return;
-                let n = (0, d.P0)(t);
+                let n = (0, u.P0)(t);
                 s.k.trackItemLongImpression(
                     t,
-                    n.map((e) => ({
-                        id: e.id,
-                        type: (0, u.xG)(e),
-                    })),
-                    E,
+                    n.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
+                    I,
                 ),
-                    a.A.triggerItemsLongImpression(
+                    l.A.triggerItemsLongImpression(
                         t
                             .filter((e) => {
                                 let { item: t } = e;
                                 return !o.P.has(t.data.kind);
                             })
                             .map((e) => {
-                                var t, n;
-                                let { item: r, index: i } = e;
+                                let { item: t, index: n } = e;
                                 return {
-                                    itemId: r.id,
-                                    itemType: (0, d.px)(r),
+                                    itemId: t.id,
+                                    itemType: (0, u.px)(t),
                                     triggerType: "list",
-                                    itemFeedIndex: i,
-                                    itemScore: null != (t = r.score) ? t : null,
-                                    itemChannelType: null != (n = r.channelType) ? n : null,
+                                    itemFeedIndex: n,
+                                    itemScore: t.score ?? null,
+                                    itemChannelType: t.channelType ?? null,
                                     isInitiallyVisible: !1,
                                 };
                             }),
                     );
             },
-            [E],
+            [I],
         ),
-        w = r.useCallback((e) => {
+        P = i.useCallback((e) => {
             let { viewableItems: t } = e;
-            a.A.startItemsDwell(
+            l.A.startItemsDwell(
                 t
                     .filter((e) => {
                         let { item: t } = e;
                         return !o.P.has(t.data.kind);
                     })
                     .map((e) => {
-                        var t, n;
-                        let { item: r, index: i } = e;
+                        let { item: t, index: n } = e;
                         return {
-                            itemId: r.id,
-                            itemType: (0, d.px)(r),
+                            itemId: t.id,
+                            itemType: (0, u.px)(t),
                             triggerType: "list",
-                            itemFeedIndex: i,
-                            itemScore: null != (t = r.score) ? t : null,
-                            itemChannelType: null != (n = r.channelType) ? n : null,
+                            itemFeedIndex: n,
+                            itemScore: t.score ?? null,
+                            itemChannelType: t.channelType ?? null,
                             isInitiallyVisible: !1,
                         };
                     }),
             );
         }, []),
-        L = r.useMemo(
+        j = i.useMemo(
             () => [
                 {
                     viewabilityConfig: {
@@ -147,7 +125,7 @@ function A(e) {
                         viewAreaCoveragePercentThreshold: 100,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: x,
+                    onViewableItemsChanged: O,
                 },
                 {
                     viewabilityConfig: {
@@ -155,7 +133,7 @@ function A(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 1e3,
                     },
-                    onViewableItemsChanged: P,
+                    onViewableItemsChanged: R,
                 },
                 {
                     viewabilityConfig: {
@@ -163,80 +141,51 @@ function A(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: w,
+                    onViewableItemsChanged: P,
                 },
             ],
-            [x, P, w],
+            [O, R, P],
         );
-    r.useEffect(() => {
-        a.A.openICYMITab();
+    i.useEffect(() => {
+        l.A.openICYMITab();
     }, []);
-    let R = (0, f.E)(t),
-        { data: D, stickyHeaderIndices: M } = r.useMemo(() => {
+    let D = (0, h.E)(t),
+        { data: w, stickyHeaderIndices: M } = i.useMemo(() => {
             let e = [];
             return (
-                O &&
+                C &&
                     null != n &&
-                    n.type === u.Mm.CUSTOM_STATUS &&
+                    n.type === c.Mm.CUSTOM_STATUS &&
                     e.push({
                         id: n.id,
                         timestamp: Date.now(),
-                        data: {
-                            kind: "contentInventory",
-                            content: (0, d.YM)(n).activity,
-                        },
+                        data: { kind: "contentInventory", content: (0, u.YM)(n).activity },
                         score: n.score,
                         unread: !0,
                     }),
-                O
-                    ? e.push({
-                          id: "loading",
-                          timestamp: 0,
-                          unread: !1,
-                          data: {
-                              kind: "loading",
-                          },
-                      })
-                    : (m.forEach((t) => {
-                          (0, d.yx)(t) || e.push(t);
+                C
+                    ? e.push({ id: "loading", timestamp: 0, unread: !1, data: { kind: "loading" } })
+                    : (g.forEach((t) => {
+                          (0, u.yx)(t) || e.push(t);
                       }),
-                      _ &&
-                          e.push({
-                              id: "end",
-                              timestamp: 0,
-                              unread: !1,
-                              data: {
-                                  kind: "end",
-                              },
+                      f && e.push({ id: "end", timestamp: 0, unread: !1, data: { kind: "end" } }),
+                      E.length > 0 &&
+                          E.forEach((t) => {
+                              (0, u.yx)(t) || e.push(t);
                           }),
-                      b.length > 0 &&
-                          b.forEach((t) => {
-                              (0, d.yx)(t) || e.push(t);
-                          }),
-                      I &&
-                          e.push({
-                              id: "bottomLoading",
-                              timestamp: 0,
-                              unread: !1,
-                              data: {
-                                  kind: "bottomLoading",
-                              },
-                          })),
-                {
-                    data: e,
-                    stickyHeaderIndices: [],
-                }
+                      T && e.push({ id: "bottomLoading", timestamp: 0, unread: !1, data: { kind: "bottomLoading" } })),
+                { data: e, stickyHeaderIndices: [] }
             );
-        }, [O, n, m, _, b, I]);
+        }, [C, n, g, f, E, T]);
     return {
-        data: D,
-        loading: O,
-        version: E,
-        visibleItemIds: v,
-        endVisible: A,
-        isRefreshing: y,
-        handleOnRefresh: R,
+        data: w,
+        loading: C,
+        version: I,
+        visibleItemIds: S,
+        endVisible: m,
+        isRefreshing: N,
+        handleOnRefresh: D,
         stickyHeaderIndices: M,
-        viewabilityConfigCallbackPairs: L,
+        viewabilityConfigCallbackPairs: j,
     };
 }

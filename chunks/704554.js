@@ -1,158 +1,106 @@
-r.d(t, {
-    RT: () => o,
-}),
-    r(896048),
-    r(693327),
-    r(554719),
-    r(680155),
-    r(323874),
-    r(14289),
-    r(35956),
-    r(733351);
-var n = r(64700),
-    a = r(812729),
-    c = r.n(a),
-    l = r(735438),
-    u = r(403362),
-    s = r(379078);
-let i = new Worker(new URL("/assets/" + r.u("83450"), r.b));
-
-function o(e, t, r, a) {
-    let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        d = n.useRef(null),
-        f = n.useRef(null),
-        m = n.useRef(r),
-        { searchStringGenerator: x } = a,
+n.d(t, { RT: () => d }), n(323874), n(14289), n(35956);
+var a = n(64700),
+    l = n(812729),
+    i = n.n(l),
+    r = n(735438),
+    s = n(403362),
+    u = n(379078);
+let o = new Worker(new URL("/assets/" + n.u("83450"), n.b));
+function d(e, t, n, l) {
+    let d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        c = a.useRef(null),
+        m = a.useRef(null),
+        g = a.useRef(n),
+        { searchStringGenerator: f } = l,
+        p = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                [n, l] = a.useState(e),
+                r = a.useRef(e);
+            return (
+                a.useEffect(() => {
+                    r.current = e;
+                }, [e]),
+                a.useEffect(() => {
+                    l((e) => {
+                        let t = r.current;
+                        return i()(e, t) ? e : t;
+                    });
+                }, t),
+                n
+            );
+        })(t.map(f), [t, f, ...d]),
         h = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [r, a] = n.useState(e),
-                l = n.useRef(e);
+                [n, l] = a.useState(e),
+                r = a.useRef(e);
             return (
-                n.useEffect(() => {
-                    l.current = e;
+                a.useEffect(() => {
+                    r.current = e;
                 }, [e]),
-                n.useEffect(() => {
-                    a((e) => {
-                        let t = l.current;
-                        return c()(e, t) ? e : t;
+                a.useEffect(() => {
+                    l((e) => {
+                        let t = r.current;
+                        return i()(e, t) ? e : t;
                     });
                 }, t),
-                r
-            );
-        })(t.map(x), [t, x, ...o]),
-        b = (function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [r, a] = n.useState(e),
-                l = n.useRef(e);
-            return (
-                n.useEffect(() => {
-                    l.current = e;
-                }, [e]),
-                n.useEffect(() => {
-                    a((e) => {
-                        let t = l.current;
-                        return c()(e, t) ? e : t;
-                    });
-                }, t),
-                r
+                n
             );
         })(t, [t]);
-    n.useEffect(() => {
-        m.current = r;
-    }, [r]);
-    let g = n.useMemo(() => {
-        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: r = !0, maxSearchResults: n = -1 } = a;
+    a.useEffect(() => {
+        g.current = n;
+    }, [n]);
+    let v = a.useMemo(() => {
+        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0, maxSearchResults: a = -1 } = l;
         return (
-            (f.current = (0, l.throttle)(
-                async (e, t, r) => {
-                    if ("" === e.trim()) return void (n > 0 ? m.current(t.slice(0, n)) : m.current(t));
-                    d.current = (0, l.uniqueId)();
-                    let c = await (function (e, t, r, n) {
-                        var a;
-                        let c = null != (a = n.promiseUuid) ? a : (0, l.uniqueId)(),
+            (m.current = (0, r.throttle)(
+                async (e, t, n) => {
+                    if ("" === e.trim()) return void (a > 0 ? g.current(t.slice(0, a)) : g.current(t));
+                    c.current = (0, r.uniqueId)();
+                    let i = await (function (e, t, n, a) {
+                        let l = a.promiseUuid ?? (0, r.uniqueId)(),
                             {
-                                searchType: o = s.n.FUZZY,
-                                sortType: d = s.r.NONE,
-                                jaroWinklerSearchThreshold: f = 0.85,
+                                searchType: i = u.n.FUZZY,
+                                sortType: d = u.r.NONE,
+                                jaroWinklerSearchThreshold: c = 0.85,
                                 maxSearchResults: m = -1,
-                            } = n;
-                        return new Promise((n) => {
-                            let a = (t) => {
+                            } = a;
+                        return new Promise((a) => {
+                            let r = (t) => {
                                 let {
-                                    data: { id: r, foundItemIndexes: l },
+                                    data: { id: n, foundItemIndexes: i },
                                 } = t;
-                                c === r &&
-                                    (n(l.map((t) => e[t]).filter(u.Vq)),
-                                    null == i || i.removeEventListener("message", a));
+                                l === n && (a(i.map((t) => e[t]).filter(s.Vq)), o?.removeEventListener("message", r));
                             };
-                            null == i || i.addEventListener("message", a),
-                                null == i ||
-                                    i.postMessage({
-                                        id: c,
-                                        searchTerm: t,
-                                        searchStrings: r,
-                                        searchType: o,
-                                        sortType: d,
-                                        jaroWinklerSearchThreshold: f,
-                                        maxSearchResults: m,
-                                    });
+                            o?.addEventListener("message", r),
+                                o?.postMessage({
+                                    id: l,
+                                    searchTerm: t,
+                                    searchStrings: n,
+                                    searchType: i,
+                                    sortType: d,
+                                    jaroWinklerSearchThreshold: c,
+                                    maxSearchResults: m,
+                                });
                         });
-                    })(
-                        t,
-                        e,
-                        r,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        }),
-                                    )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: n,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = n);
-                                    });
-                            }
-                            return e;
-                        })(
-                            {
-                                promiseUuid: d.current,
-                            },
-                            a,
-                        ),
-                    );
-                    null != d.current && m.current(c);
+                    })(t, e, n, { promiseUuid: c.current, ...l });
+                    null != c.current && g.current(i);
                 },
                 e,
-                {
-                    leading: t,
-                    trailing: r,
-                },
+                { leading: t, trailing: n },
             )),
-            f.current
+            m.current
         );
-    }, [a]);
+    }, [l]);
     return (
-        n.useEffect(() => {
-            g(e, b, h);
-        }, [g, e, b, h, ...o]),
-        n.useEffect(
+        a.useEffect(() => {
+            v(e, h, p);
+        }, [v, e, h, p, ...d]),
+        a.useEffect(
             () => () => {
-                null != f.current && f.current.cancel(), (f.current = null), (d.current = null);
+                null != m.current && m.current.cancel(), (m.current = null), (c.current = null);
             },
-            [h, r, a],
+            [p, n, l],
         ),
-        g
+        v
     );
 }

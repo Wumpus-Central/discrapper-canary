@@ -1,3 +1,1 @@
-e.exports = {
-    U: "premiumChannelIcon__15e7f",
-};
+e.exports = { U: "premiumChannelIcon__15e7f" };

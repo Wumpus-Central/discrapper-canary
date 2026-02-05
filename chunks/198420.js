@@ -1,15 +1,11 @@
-n.d(t, {
-    c: () => s,
-    h: () => a,
-});
+"use strict";
+n.d(t, { c: () => s, h: () => a });
 var r = n(858662),
     i = n(585790);
-
 function a(e, t) {
     var n = new i.x(r.l[e]);
     return n.loadDataTransfer(t), n;
 }
-
 function s(e) {
     if (!e) return null;
     var t = Array.prototype.slice.call(e.types || []);

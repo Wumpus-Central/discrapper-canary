@@ -1,189 +1,107 @@
 r.d(t, {
-    CT: () => H,
+    CT: () => w,
     H3: () => D,
-    Ht: () => W,
-    KD: () => P,
-    Ky: () => M,
-    TT: () => w,
-    _2: () => z,
-    dY: () => G,
-    ps: () => N,
-    u2: () => F,
-    vj: () => U,
-    wf: () => q,
+    Ht: () => M,
+    KD: () => O,
+    Ky: () => W,
+    TT: () => F,
+    _2: () => U,
+    dY: () => q,
+    ps: () => v,
+    u2: () => j,
+    vj: () => H,
+    wf: () => P,
 }),
-    r(733351),
-    r(896048),
     r(321073),
-    r(667532),
-    r(747238);
-var n = r(627968),
-    l = r(64700),
-    s = r(735438),
+    r(667532);
+var s = r(627968),
+    n = r(64700),
+    l = r(735438),
     a = r(989349),
     i = r.n(a),
     o = r(835245),
-    c = r(311907),
-    u = r(397927),
+    u = r(311907),
+    c = r(397927),
     d = r(157559),
     h = r(713654),
-    p = r(734057),
-    f = r(287809),
-    g = r(403362),
-    S = r(562153),
-    E = r(427262),
-    y = r(256796),
-    _ = r(692986),
+    _ = r(734057),
+    S = r(287809),
+    E = r(403362),
+    g = r(562153),
+    p = r(427262),
+    f = r(256796),
+    A = r(692986),
     m = r(822382),
-    A = r(893162),
-    b = r(771650),
-    O = r(907745),
-    R = r(315059),
-    v = r(652215),
-    x = r(985018);
-
-function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
-        e
-    );
-}
-
-function j(e) {
-    let { searchContext: t, filter: r, queryString: n } = e,
-        s = (0, c.bG)([_.A], () => _.A.getState(t), [t], c.My),
-        a = l.useMemo(() => {
-            let e = s.autocompletes[0];
+    R = r(893162),
+    y = r(771650),
+    T = r(907745),
+    x = r(315059),
+    I = r(652215),
+    L = r(985018);
+function b(e) {
+    let { searchContext: t, filter: r, queryString: s } = e,
+        l = (0, u.bG)([A.A], () => A.A.getState(t), [t], u.My),
+        a = n.useMemo(() => {
+            let e = l.autocompletes[0];
             return null != e && e.group === r ? e.results : [];
-        }, [s.autocompletes, r]),
-        i = l.useMemo(() => {
-            let e = b.Ay[r].key;
-            return "".concat(e, " ").concat(n);
-        }, [r, n]),
-        o = l.useCallback(() => {
+        }, [l.autocompletes, r]),
+        i = n.useMemo(() => {
+            let e = y.Ay[r].key;
+            return `${e} ${s}`;
+        }, [r, s]),
+        o = n.useCallback(() => {
             let e = (0, m._o)(i),
                 r = (0, m.zZ)(e, i.length - 1, i.length - 1);
-            y.A.updateAutocompleteQuery({
-                searchContext: t,
-                tokens: e,
-                cursorScope: r,
-                queryString: i,
-            });
+            f.A.updateAutocompleteQuery({ searchContext: t, tokens: e, cursorScope: r, queryString: i });
         }, [t, i]),
-        u = l.useCallback(() => {
+        c = n.useCallback(() => {
             o();
         }, [o]);
     return (
-        l.useEffect(() => {
-            n.trim().length > 0 && o();
-        }, [i, t, o, n]),
-        {
-            filterAutocompleteResults: a,
-            handleFocusFilter: u,
-            autocompleteStoreState: s,
-        }
+        n.useEffect(() => {
+            s.trim().length > 0 && o();
+        }, [i, t, o, s]),
+        { filterAutocompleteResults: a, handleFocusFilter: c, autocompleteStoreState: l }
     );
 }
-
-function L(e) {
-    let { user: t, guildId: r, channelId: n } = e,
-        l = S.Ay.getName(r, n, t),
-        s = t.getAvatarURL(r, (0, u.FT9)(u._3J.SIZE_24));
-    return {
-        value: t.id,
-        label: l,
-        key: t.id,
-        id: t.id,
-        leading: {
-            type: "avatar",
-            src: s,
-        },
-        trailing: t.username,
-    };
+function N(e) {
+    let { user: t, guildId: r, channelId: s } = e,
+        n = g.Ay.getName(r, s, t),
+        l = t.getAvatarURL(r, (0, c.FT9)(c._3J.SIZE_24));
+    return { value: t.id, label: n, key: t.id, id: t.id, leading: { type: "avatar", src: l }, trailing: t.username };
 }
-
-function N(e, t) {
+function v(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        n = l.useMemo(() => (0, m.mt)(e), [e]),
-        s = l.useMemo(() => (0, m._b)(e), [e]),
-        [a, i] = l.useState(r),
-        [o, c] = l.useState(""),
+        s = n.useMemo(() => (0, m.mt)(e), [e]),
+        l = n.useMemo(() => (0, m._b)(e), [e]),
+        [a, i] = n.useState(r),
+        [o, u] = n.useState(""),
         {
-            filterAutocompleteResults: u,
+            filterAutocompleteResults: c,
             handleFocusFilter: d,
             autocompleteStoreState: h,
-        } = j({
-            searchContext: e,
-            filter: t,
-            queryString: o,
-        }),
-        p = l.useMemo(() => {
+        } = b({ searchContext: e, filter: t, queryString: o }),
+        _ = n.useMemo(() => {
             let e = [],
                 t = new Set();
-            if (u.length > 0)
-                u.forEach((r) => {
-                    let l = r.user,
-                        a = L({
-                            user: l,
-                            guildId: n,
-                            channelId: s,
-                        });
-                    t.add(l.id), e.push(a);
+            if (c.length > 0)
+                c.forEach((r) => {
+                    let n = r.user,
+                        a = N({ user: n, guildId: s, channelId: l });
+                    t.add(n.id), e.push(a);
                 });
             else {
                 let { tokens: r } = h,
-                    l = r[r.length - 1];
+                    n = r[r.length - 1];
                 if (
-                    null != l &&
-                    (l.type === v.LWr.ANSWER_USERNAME_FROM || l.type === v.LWr.ANSWER_USERNAME_MENTIONS) &&
-                    (0, b.sC)(l)
+                    null != n &&
+                    (n.type === I.LWr.ANSWER_USERNAME_FROM || n.type === I.LWr.ANSWER_USERNAME_MENTIONS) &&
+                    (0, y.sC)(n)
                 ) {
-                    let r = l.getData("userId"),
-                        a = f.default.getUser(r);
+                    let r = n.getData("userId"),
+                        a = S.default.getUser(r);
                     if (null != a) {
-                        let r = L({
-                            user: a,
-                            guildId: n,
-                            channelId: s,
-                        });
+                        let r = N({ user: a, guildId: s, channelId: l });
                         t.add(a.id), e.push(r);
                     }
                 }
@@ -192,118 +110,90 @@ function N(e, t) {
                 a.length > 0 &&
                     a.forEach((r) => {
                         if (t.has(r)) return;
-                        let l = f.default.getUser(r);
-                        if (null == l) return;
-                        let a = L({
-                            user: l,
-                            guildId: n,
-                            channelId: s,
-                        });
+                        let n = S.default.getUser(r);
+                        if (null == n) return;
+                        let a = N({ user: n, guildId: s, channelId: l });
                         t.add(r), e.unshift(a);
                     }),
                 e
             );
-        }, [h, u, a, n, s]),
-        S = l.useCallback(() => {
-            i([]), c("");
+        }, [h, c, a, s, l]),
+        g = n.useCallback(() => {
+            i([]), u("");
         }, []),
-        y = l.useCallback(() => {
-            c("");
+        f = n.useCallback(() => {
+            u("");
         }, []),
-        _ = l.useCallback(
+        A = n.useCallback(
             (e) => {
                 if (0 === a.length) return null;
-                let t = b.Ay[e];
+                let t = y.Ay[e];
                 return a
                     .map((e) => {
-                        let r = f.default.getUser(e);
+                        let r = S.default.getUser(e);
                         if (null == r) return null;
-                        let n = E.Ay.getUserTag(r);
-                        return "" === n ? null : "".concat(t.key, " ").concat(n);
+                        let s = p.Ay.getUserTag(r);
+                        return "" === s ? null : `${t.key} ${s}`;
                     })
-                    .filter(g.Vq)
+                    .filter(E.Vq)
                     .join(" ");
             },
             [a],
         );
     return {
-        options: p,
+        options: _,
         query: a,
         setQuery: i,
-        setQueryString: c,
-        handleClearFilter: S,
-        getApplyQueryString: _,
+        setQueryString: u,
+        handleClearFilter: g,
+        getApplyQueryString: A,
         handleFocusFilter: d,
-        handleBlurFilter: y,
+        handleBlurFilter: f,
     };
 }
-
 function C(e) {
     let t,
         { channel: r } = e;
     if (r.isDM()) {
         let e = r.getRecipientId(),
-            n = f.default.getUser(e);
-        null != n &&
-            (t = {
-                type: "avatar",
-                src: n.getAvatarURL(null, (0, u.FT9)(u._3J.SIZE_20)),
-            });
+            s = S.default.getUser(e);
+        null != s && (t = { type: "avatar", src: s.getAvatarURL(null, (0, c.FT9)(c._3J.SIZE_20)) });
     } else
         t = r.isGroupDM()
-            ? (0, n.jsx)(R.A, {
-                  channel: r,
-                  avatarSize: u._3J.SIZE_20,
-                  iconSize: "refresh_sm",
-              })
+            ? (0, s.jsx)(x.A, { channel: r, avatarSize: c._3J.SIZE_20, iconSize: "refresh_sm" })
             : (0, h.gU)(r);
-    return {
-        value: r.id,
-        label: (0, m.E3)(r),
-        key: r.id,
-        id: r.id,
-        leading: t,
-    };
+    return { value: r.id, label: (0, m.E3)(r), key: r.id, id: r.id, leading: t };
 }
-
-function w(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        [r, n] = l.useState(t),
-        [s, a] = l.useState(""),
+        [r, s] = n.useState(t),
+        [l, a] = n.useState(""),
         {
             filterAutocompleteResults: i,
             handleFocusFilter: o,
-            autocompleteStoreState: c,
-        } = j({
-            searchContext: e,
-            filter: v.LWr.FILTER_IN,
-            queryString: s,
-        }),
-        u = l.useMemo(() => {
+            autocompleteStoreState: u,
+        } = b({ searchContext: e, filter: I.LWr.FILTER_IN, queryString: l }),
+        c = n.useMemo(() => {
             let t = [],
-                n = new Set();
+                s = new Set();
             if (i.length > 0)
                 i.forEach((e) => {
                     let r = e.channel,
-                        l = C({
-                            channel: r,
-                        });
-                    n.add(r.id), t.push(l);
+                        n = C({ channel: r });
+                    s.add(r.id), t.push(n);
                 });
             else {
-                let { tokens: r } = c,
-                    l = r[r.length - 1];
-                if (null != l && l.type === v.LWr.ANSWER_IN && (0, b.Yd)(l, e)) {
-                    let e = l.getData("channelIds");
+                let { tokens: r } = u,
+                    n = r[r.length - 1];
+                if (null != n && n.type === I.LWr.ANSWER_IN && (0, y.Yd)(n, e)) {
+                    let e = n.getData("channelIds");
                     null != e &&
                         e.length > 0 &&
                         e.forEach((e) => {
-                            let r = p.A.getChannel(e);
+                            let r = _.A.getChannel(e);
                             if (null != r) {
-                                let e = C({
-                                    channel: r,
-                                });
-                                n.add(r.id), t.push(e);
+                                let e = C({ channel: r });
+                                s.add(r.id), t.push(e);
                             }
                         });
                 }
@@ -311,555 +201,429 @@ function w(e) {
             return (
                 r.length > 0 &&
                     r.forEach((e) => {
-                        if (n.has(e)) return;
-                        let r = p.A.getChannel(e);
+                        if (s.has(e)) return;
+                        let r = _.A.getChannel(e);
                         if (null == r) return;
-                        let l = C({
-                            channel: r,
-                        });
-                        n.add(e), t.unshift(l);
+                        let n = C({ channel: r });
+                        s.add(e), t.unshift(n);
                     }),
                 t
             );
-        }, [c, i, r, e]),
-        d = l.useCallback(() => {
-            n([]), a("");
+        }, [u, i, r, e]),
+        d = n.useCallback(() => {
+            s([]), a("");
         }, []),
-        h = l.useCallback(() => {
+        h = n.useCallback(() => {
             a("");
         }, []),
-        f = l.useCallback(
+        S = n.useCallback(
             (e) => {
                 if (0 === r.length) return null;
-                let t = b.Ay[e];
+                let t = y.Ay[e];
                 return r
                     .map((e) => {
-                        let r = p.A.getChannel(e);
+                        let r = _.A.getChannel(e);
                         if (null == r) return;
-                        let n = (0, m.E3)(r),
-                            l = (0, m.TZ)(n);
-                        return "".concat(t.key, " ").concat(l);
+                        let s = (0, m.E3)(r),
+                            n = (0, m.TZ)(s);
+                        return `${t.key} ${n}`;
                     })
                     .join(" ");
             },
             [r],
         );
     return {
-        options: u,
+        options: c,
         query: r,
-        setQuery: n,
+        setQuery: s,
         setQueryString: a,
         handleClearFilter: d,
-        getApplyQueryString: f,
+        getApplyQueryString: S,
         handleFocusFilter: o,
         handleBlurFilter: h,
     };
 }
-
-function P(e) {
+function O(e) {
     switch (e) {
-        case x.intl.string(x.t.ZNR2fi):
-            return u.qYV;
-        case x.intl.string(x.t["20uQR3"]):
-            return u.JD7;
-        case x.intl.string(x.t.L4lxyE):
-            return u.YRe;
-        case x.intl.string(x.t["AV/v6i"]):
-            return u.oSV;
-        case x.intl.string(x.t.XM9XGP):
-            return u.npA;
-        case x.intl.string(x.t.TNLcpx):
-            return u.xfq;
-        case x.intl.string(x.t.F8Wf0e):
-            return u.JMI;
-        case x.intl.string(x.t.PJgX2h):
-            return u.tEP;
-        case x.intl.string(x.t.nrpA5E):
-            return u.tuI;
+        case L.intl.string(L.t.ZNR2fi):
+            return c.qYV;
+        case L.intl.string(L.t["20uQR3"]):
+            return c.JD7;
+        case L.intl.string(L.t.L4lxyE):
+            return c.YRe;
+        case L.intl.string(L.t["AV/v6i"]):
+            return c.oSV;
+        case L.intl.string(L.t.XM9XGP):
+            return c.npA;
+        case L.intl.string(L.t.TNLcpx):
+            return c.xfq;
+        case L.intl.string(L.t.F8Wf0e):
+            return c.JMI;
+        case L.intl.string(L.t.PJgX2h):
+            return c.tEP;
+        case L.intl.string(L.t.nrpA5E):
+            return c.tuI;
         default:
             return null;
     }
 }
-
-function F(e) {
+function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        [r, n] = l.useState(t),
-        { filterAutocompleteResults: s, handleFocusFilter: a } = j({
+        [r, s] = n.useState(t),
+        { filterAutocompleteResults: l, handleFocusFilter: a } = b({
             searchContext: e,
-            filter: v.LWr.FILTER_HAS,
+            filter: I.LWr.FILTER_HAS,
             queryString: "",
         }),
-        i = l.useMemo(() => {
-            if (0 === s.length && 0 === r.length) return [];
+        i = n.useMemo(() => {
+            if (0 === l.length && 0 === r.length) return [];
             let e = [],
                 t = new Set();
             return (
                 r.length > 0 &&
                     r.forEach((r) => {
-                        t.add(r),
-                            e.push({
-                                value: r,
-                                label: r,
-                                key: r,
-                                id: r,
-                                leading: P(r),
-                            });
+                        t.add(r), e.push({ value: r, label: r, key: r, id: r, leading: O(r) });
                     }),
-                s.length > 0 &&
-                    s.forEach((r) => {
-                        let { text: n } = r;
-                        t.has(n) ||
-                            (e.push({
-                                value: n,
-                                label: n,
-                                key: n,
-                                id: n,
-                                leading: P(n),
-                            }),
-                            t.add(n));
+                l.length > 0 &&
+                    l.forEach((r) => {
+                        let { text: s } = r;
+                        t.has(s) || (e.push({ value: s, label: s, key: s, id: s, leading: O(s) }), t.add(s));
                     }),
                 e
             );
-        }, [s, r]),
-        o = l.useCallback(() => {
-            n([]);
+        }, [l, r]),
+        o = n.useCallback(() => {
+            s([]);
         }, []),
-        c = l.useCallback(
+        u = n.useCallback(
             (e) => {
                 if (0 === r.length) return null;
-                let t = b.Ay[e];
-                return r.map((e) => "".concat(t.key, " ").concat(e)).join(" ");
+                let t = y.Ay[e];
+                return r.map((e) => `${t.key} ${e}`).join(" ");
             },
             [r],
         );
-    return {
-        options: i,
-        query: r,
-        setQuery: n,
-        handleClearFilter: o,
-        getApplyQueryString: c,
-        handleFocusFilter: a,
-    };
+    return { options: i, query: r, setQuery: s, handleClearFilter: o, getApplyQueryString: u, handleFocusFilter: a };
 }
 let k = () =>
-    l.useMemo(() => {
-        var e, t, r;
-        let n = b.Ay[v.LWr.FILTER_BEFORE],
-            l = b.Ay[v.LWr.FILTER_AFTER],
-            s = b.Ay[v.LWr.FILTER_ON];
+    n.useMemo(() => {
+        let e = y.Ay[I.LWr.FILTER_BEFORE],
+            t = y.Ay[I.LWr.FILTER_AFTER],
+            r = y.Ay[I.LWr.FILTER_ON];
         return {
-            beforeFilter: null != (e = null == n ? void 0 : n.key) ? e : "".concat(x.intl.string(x.t["qZ+7BA"]), ":"),
-            afterFilter: null != (t = null == l ? void 0 : l.key) ? t : "".concat(x.intl.string(x.t.KSDx7M), ":"),
-            duringFilter: null != (r = null == s ? void 0 : s.key) ? r : "".concat(x.intl.string(x.t.h2NzSd), ":"),
+            beforeFilter: e?.key ?? `${L.intl.string(L.t["qZ+7BA"])}:`,
+            afterFilter: t?.key ?? `${L.intl.string(L.t.KSDx7M)}:`,
+            duringFilter: r?.key ?? `${L.intl.string(L.t.h2NzSd)}:`,
         };
     }, []);
-
-function M() {
+function W() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-        [t, r] = l.useState(e),
-        n = l.useCallback(() => (0, o.A)(), []),
-        s = l.useCallback((e) => e.date.isValid(), []),
-        a = l.useMemo(() => t.filter(s), [t, s]),
-        { beforeFilter: c, afterFilter: u, duringFilter: d } = k(),
-        h = l.useCallback(
-            () => ({
-                query: c,
-                date: i()(),
-                id: n(),
-            }),
-            [c, n],
-        ),
-        p = l.useMemo(
+        [t, r] = n.useState(e),
+        s = n.useCallback(() => (0, o.A)(), []),
+        l = n.useCallback((e) => e.date.isValid(), []),
+        a = n.useMemo(() => t.filter(l), [t, l]),
+        { beforeFilter: u, afterFilter: c, duringFilter: d } = k(),
+        h = n.useCallback(() => ({ query: u, date: i()(), id: s() }), [u, s]),
+        _ = n.useMemo(
             () => [
-                {
-                    key: "Before",
-                    label: x.intl.string(x.t["ptL/DP"]),
-                    value: c,
-                },
-                {
-                    key: "After",
-                    label: x.intl.string(x.t.waQeEV),
-                    value: u,
-                },
-                {
-                    key: "During",
-                    label: x.intl.string(x.t.LT5TnZ),
-                    value: d,
-                },
+                { key: "Before", label: L.intl.string(L.t["ptL/DP"]), value: u },
+                { key: "After", label: L.intl.string(L.t.waQeEV), value: c },
+                { key: "During", label: L.intl.string(L.t.LT5TnZ), value: d },
             ],
-            [c, u, d],
+            [u, c, d],
         ),
-        f = l.useCallback((e) => {
-            let { query: t, index: n } = e;
+        S = n.useCallback((e) => {
+            let { query: t, index: s } = e;
             r((e) => {
                 let r = [...e];
-                return (
-                    (r[n] = I(T({}, r[n]), {
-                        query: t,
-                    })),
-                    r
-                );
+                return (r[s] = { ...r[s], query: t }), r;
             });
         }, []),
-        g = l.useCallback((e) => {
-            let { date: t, index: n } = e;
+        E = n.useCallback((e) => {
+            let { date: t, index: s } = e;
             r((e) => {
                 let r = [...e];
-                return (
-                    (r[n] = I(T({}, r[n]), {
-                        date: t,
-                    })),
-                    r
-                );
+                return (r[s] = { ...r[s], date: t }), r;
             });
         }, []),
-        S = l.useCallback(() => {
+        g = n.useCallback(() => {
             r((e) => [...e, h()]);
         }, [h]),
-        E = l.useCallback((e) => {
+        p = n.useCallback((e) => {
             r((t) => {
                 let r = [...t];
                 return r.splice(e, 1), r;
             });
         }, []),
-        y = l.useCallback(() => {
+        f = n.useCallback(() => {
             r([]);
         }, []),
-        _ = l.useCallback(
+        A = n.useCallback(
             () =>
                 0 === a.length
                     ? null
                     : a
                           .map((e) => {
                               let { query: t, date: r } = e,
-                                  n = r.format(v.ump);
-                              return "".concat(t, " ").concat(n);
+                                  s = r.format(I.ump);
+                              return `${t} ${s}`;
                           })
                           .join(" "),
             [a],
         );
     return {
-        options: p,
+        options: _,
         dates: t,
         validDates: a,
-        handleDateQueryChange: f,
-        handleDateChange: g,
-        handleAddDateFilter: S,
-        handleRemoveDateFilter: E,
-        handleClearDateFilter: y,
-        getDateQueryString: _,
+        handleDateQueryChange: S,
+        handleDateChange: E,
+        handleAddDateFilter: g,
+        handleRemoveDateFilter: p,
+        handleClearDateFilter: f,
+        getDateQueryString: A,
     };
 }
-
-function W(e) {
+function M(e) {
     switch (e) {
-        case x.intl.string(x.t.tPZo4p):
-            return u.nys;
-        case x.intl.string(x.t.JL7sRS):
-            return u.CnV;
-        case x.intl.string(x.t.WjkIKU):
-            return u.XC7;
+        case L.intl.string(L.t.tPZo4p):
+            return c.nys;
+        case L.intl.string(L.t.JL7sRS):
+            return c.CnV;
+        case L.intl.string(L.t.WjkIKU):
+            return c.XC7;
     }
 }
-
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        [r, n] = l.useState(t),
-        { filterAutocompleteResults: s, handleFocusFilter: a } = j({
+        [r, s] = n.useState(t),
+        { filterAutocompleteResults: l, handleFocusFilter: a } = b({
             searchContext: e,
-            filter: v.LWr.FILTER_AUTHOR_TYPE,
+            filter: I.LWr.FILTER_AUTHOR_TYPE,
             queryString: "",
         }),
-        i = l.useMemo(() => {
-            if (0 === s.length && 0 === r.length) return [];
+        i = n.useMemo(() => {
+            if (0 === l.length && 0 === r.length) return [];
             let e = [],
                 t = new Set();
             return (
                 r.length > 0 &&
                     r.forEach((r) => {
-                        t.add(r),
-                            e.push({
-                                value: r,
-                                label: r,
-                                key: r,
-                                id: r,
-                                leading: W(r),
-                            });
+                        t.add(r), e.push({ value: r, label: r, key: r, id: r, leading: M(r) });
                     }),
-                s.length > 0 &&
-                    s.forEach((r) => {
-                        let { text: n } = r;
-                        t.has(n) ||
-                            (e.push({
-                                value: n,
-                                label: n,
-                                key: n,
-                                id: n,
-                                leading: W(n),
-                            }),
-                            t.add(n));
+                l.length > 0 &&
+                    l.forEach((r) => {
+                        let { text: s } = r;
+                        t.has(s) || (e.push({ value: s, label: s, key: s, id: s, leading: M(s) }), t.add(s));
                     }),
                 e
             );
-        }, [s, r]),
-        o = l.useCallback(() => {
-            n([]);
+        }, [l, r]),
+        o = n.useCallback(() => {
+            s([]);
         }, []),
-        c = l.useCallback(
+        u = n.useCallback(
             (e) => {
                 if (0 === r.length) return null;
-                let t = b.Ay[e];
-                return r.map((e) => "".concat(t.key, " ").concat(e)).join(" ");
+                let t = y.Ay[e];
+                return r.map((e) => `${t.key} ${e}`).join(" ");
             },
             [r],
         );
-    return {
-        options: i,
-        query: r,
-        setQuery: n,
-        handleClearFilter: o,
-        getApplyQueryString: c,
-        handleFocusFilter: a,
-    };
+    return { options: i, query: r, setQuery: s, handleClearFilter: o, getApplyQueryString: u, handleFocusFilter: a };
 }
-
-function H(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        [r, n] = l.useState(t),
-        s = l.useMemo(() => {
-            var t, n, l;
-            let s =
-                null !=
-                (t =
-                    null == (n = (l = b.Ay[v.LWr.FILTER_PINNED]).getAutocompletions)
-                        ? void 0
-                        : n.call(l, {
-                              query: "",
-                              maxResults: 10,
-                              searchContext: e,
-                          }))
-                    ? t
-                    : [];
-            if (0 === s.length && null === r) return [];
-            let a = [];
+        [r, s] = n.useState(t),
+        l = n.useMemo(() => {
+            let t =
+                y.Ay[I.LWr.FILTER_PINNED].getAutocompletions?.({ query: "", maxResults: 10, searchContext: e }) ?? [];
+            if (0 === t.length && null === r) return [];
+            let s = [];
             return (
-                s.length > 0 &&
-                    s.forEach((e) => {
+                t.length > 0 &&
+                    t.forEach((e) => {
                         let { text: t } = e;
-                        a.push({
-                            value: t,
-                            label: t,
-                            key: t,
-                        });
+                        s.push({ value: t, label: t, key: t });
                     }),
-                a
+                s
             );
         }, [e, r]),
-        a = l.useCallback(() => {
-            n(null);
+        a = n.useCallback(() => {
+            s(null);
         }, []),
-        i = l.useCallback(
+        i = n.useCallback(
             (e) => {
                 if (null === r) return null;
-                let t = b.Ay[e];
-                return "".concat(t.key, " ").concat(r);
+                let t = y.Ay[e];
+                return `${t.key} ${r}`;
             },
             [r],
         );
-    return {
-        options: s,
-        query: r,
-        setQuery: n,
-        handleClearFilter: a,
-        getApplyQueryString: i,
-    };
+    return { options: l, query: r, setQuery: s, handleClearFilter: a, getApplyQueryString: i };
 }
-
-function U(e, t) {
-    let { beforeFilter: r, afterFilter: n, duringFilter: s } = k(),
-        a = (0, A.R)(t);
-    return l.useMemo(() => {
+function H(e, t) {
+    let { beforeFilter: r, afterFilter: s, duringFilter: l } = k(),
+        a = (0, R.R)(t);
+    return n.useMemo(() => {
         let t = {
-                [v.LWr.FILTER_FROM]: [],
-                [v.LWr.FILTER_MENTIONS]: [],
-                [v.LWr.FILTER_HAS]: [],
-                [v.LWr.FILTER_IN]: [],
-                [v.LWr.FILTER_ON]: [],
-                [v.LWr.FILTER_BEFORE]: [],
-                [v.LWr.FILTER_AFTER]: [],
-                [v.LWr.FILTER_PINNED]: null,
-                [v.LWr.FILTER_AUTHOR_TYPE]: [],
+                [I.LWr.FILTER_FROM]: [],
+                [I.LWr.FILTER_MENTIONS]: [],
+                [I.LWr.FILTER_HAS]: [],
+                [I.LWr.FILTER_IN]: [],
+                [I.LWr.FILTER_ON]: [],
+                [I.LWr.FILTER_BEFORE]: [],
+                [I.LWr.FILTER_AFTER]: [],
+                [I.LWr.FILTER_PINNED]: null,
+                [I.LWr.FILTER_AUTHOR_TYPE]: [],
             },
-            l = [],
-            c = 0;
+            n = [],
+            u = 0;
         e.forEach((e) => {
-            if (v.T2E.test(e.type))
+            if (I.T2E.test(e.type))
                 switch (e.type) {
-                    case v.LWr.ANSWER_USERNAME_FROM:
-                        if (a.has(v.LWr.FILTER_FROM)) {
-                            let r = t[v.LWr.FILTER_FROM],
-                                n = e.getData("userId");
-                            r.push(n), (c += 1);
+                    case I.LWr.ANSWER_USERNAME_FROM:
+                        if (a.has(I.LWr.FILTER_FROM)) {
+                            let r = t[I.LWr.FILTER_FROM],
+                                s = e.getData("userId");
+                            r.push(s), (u += 1);
                         }
                         break;
-                    case v.LWr.ANSWER_USERNAME_MENTIONS:
-                        if (a.has(v.LWr.FILTER_MENTIONS)) {
-                            let r = t[v.LWr.FILTER_MENTIONS],
-                                n = e.getData("userId");
-                            r.push(n), (c += 1);
+                    case I.LWr.ANSWER_USERNAME_MENTIONS:
+                        if (a.has(I.LWr.FILTER_MENTIONS)) {
+                            let r = t[I.LWr.FILTER_MENTIONS],
+                                s = e.getData("userId");
+                            r.push(s), (u += 1);
                         }
                         break;
-                    case v.LWr.ANSWER_HAS:
-                        let u = t[v.LWr.FILTER_HAS],
+                    case I.LWr.ANSWER_HAS:
+                        let c = t[I.LWr.FILTER_HAS],
                             d = e.getData("has");
-                        u.push(d), (c += 1);
+                        c.push(d), (u += 1);
                         break;
-                    case v.LWr.ANSWER_IN:
-                        if (a.has(v.LWr.FILTER_IN)) {
-                            var h;
-                            let r = t[v.LWr.FILTER_IN],
-                                n = null != (h = e.getData("channelIds")) ? h : [];
-                            r.push(...n), (c += 1);
+                    case I.LWr.ANSWER_IN:
+                        if (a.has(I.LWr.FILTER_IN)) {
+                            let r = t[I.LWr.FILTER_IN],
+                                s = e.getData("channelIds") ?? [];
+                            r.push(...s), (u += 1);
                         }
                         break;
-                    case v.LWr.ANSWER_BEFORE:
-                        let p = t[v.LWr.FILTER_BEFORE],
-                            f = e.getData("end"),
-                            g = {
-                                query: r,
-                                date: i()(f),
-                                id: (0, o.A)(),
-                            };
-                        p.push(g), l.push(g), (c += 1);
+                    case I.LWr.ANSWER_BEFORE:
+                        let h = t[I.LWr.FILTER_BEFORE],
+                            _ = e.getData("end"),
+                            S = { query: r, date: i()(_), id: (0, o.A)() };
+                        h.push(S), n.push(S), (u += 1);
                         break;
-                    case v.LWr.ANSWER_ON:
-                        let S = t[v.LWr.FILTER_ON],
-                            E = e.getData("start"),
-                            y = {
-                                query: s,
-                                date: i()(E),
-                                id: (0, o.A)(),
-                            };
-                        S.push(y), l.push(y), (c += 1);
+                    case I.LWr.ANSWER_ON:
+                        let E = t[I.LWr.FILTER_ON],
+                            g = e.getData("start"),
+                            p = { query: l, date: i()(g), id: (0, o.A)() };
+                        E.push(p), n.push(p), (u += 1);
                         break;
-                    case v.LWr.ANSWER_AFTER:
-                        let _ = t[v.LWr.FILTER_AFTER],
-                            m = e.getData("start"),
-                            A = {
-                                query: n,
-                                date: i()(m),
-                                id: (0, o.A)(),
-                            };
-                        _.push(A), l.push(A), (c += 1);
+                    case I.LWr.ANSWER_AFTER:
+                        let f = t[I.LWr.FILTER_AFTER],
+                            A = e.getData("start"),
+                            m = { query: s, date: i()(A), id: (0, o.A)() };
+                        f.push(m), n.push(m), (u += 1);
                         break;
-                    case v.LWr.ANSWER_PINNED:
-                        let b = t[v.LWr.FILTER_PINNED],
-                            O = e.getData("pinned").toString();
-                        null === b ? (b = O) : "true" !== b && "true" === O && (b = O),
-                            (t[v.LWr.FILTER_PINNED] = b),
-                            (c += 1);
+                    case I.LWr.ANSWER_PINNED:
+                        let R = t[I.LWr.FILTER_PINNED],
+                            y = e.getData("pinned").toString();
+                        null === R ? (R = y) : "true" !== R && "true" === y && (R = y),
+                            (t[I.LWr.FILTER_PINNED] = R),
+                            (u += 1);
                         break;
-                    case v.LWr.ANSWER_AUTHOR_TYPE:
-                        if (a.has(v.LWr.FILTER_AUTHOR_TYPE)) {
-                            let r = t[v.LWr.FILTER_AUTHOR_TYPE],
-                                n = e.getData("author_type");
-                            r.push(n), (c += 1);
+                    case I.LWr.ANSWER_AUTHOR_TYPE:
+                        if (a.has(I.LWr.FILTER_AUTHOR_TYPE)) {
+                            let r = t[I.LWr.FILTER_AUTHOR_TYPE],
+                                s = e.getData("author_type");
+                            r.push(s), (u += 1);
                         }
                 }
         });
-        let u = {
-            [v.LWr.FILTER_FROM]: t[v.LWr.FILTER_FROM],
-            [v.LWr.FILTER_MENTIONS]: t[v.LWr.FILTER_MENTIONS],
-            [v.LWr.FILTER_HAS]: t[v.LWr.FILTER_HAS],
-            [v.LWr.FILTER_IN]: t[v.LWr.FILTER_IN],
-            dateFilters: l,
-            [v.LWr.FILTER_AUTHOR_TYPE]: t[v.LWr.FILTER_AUTHOR_TYPE],
-            [v.LWr.FILTER_PINNED]: t[v.LWr.FILTER_PINNED],
+        let c = {
+            [I.LWr.FILTER_FROM]: t[I.LWr.FILTER_FROM],
+            [I.LWr.FILTER_MENTIONS]: t[I.LWr.FILTER_MENTIONS],
+            [I.LWr.FILTER_HAS]: t[I.LWr.FILTER_HAS],
+            [I.LWr.FILTER_IN]: t[I.LWr.FILTER_IN],
+            dateFilters: n,
+            [I.LWr.FILTER_AUTHOR_TYPE]: t[I.LWr.FILTER_AUTHOR_TYPE],
+            [I.LWr.FILTER_PINNED]: t[I.LWr.FILTER_PINNED],
         };
-        return {
-            allPrefilledSearchFilters: t,
-            totalFilters: c,
-            prefilledSearchFilters: u,
-            eligibleFilterTokens: a,
-        };
-    }, [e, r, n, s, a]);
+        return { allPrefilledSearchFilters: t, totalFilters: u, prefilledSearchFilters: c, eligibleFilterTokens: a };
+    }, [e, r, s, l, a]);
 }
-
-function q(e, t) {
-    return e === t || (0, s.isEqual)(e, t);
+function P(e, t) {
+    return e === t || (0, l.isEqual)(e, t);
 }
-
-function z(e, t) {
-    var r, n;
+function U(e, t) {
     if (e.length !== t.length) return !1;
-    let l = new Map();
+    let r = new Map();
     for (let t of e) {
-        let e = "".concat(t.query, ":").concat(t.date.valueOf()),
-            n = null != (r = l.get(e)) ? r : 0;
-        l.set(e, n + 1);
+        let e = `${t.query}:${t.date.valueOf()}`,
+            s = r.get(e) ?? 0;
+        r.set(e, s + 1);
     }
     for (let e of t) {
-        let t = "".concat(e.query, ":").concat(e.date.valueOf()),
-            r = null != (n = l.get(t)) ? n : 0;
-        if (0 === r) return !1;
-        l.set(t, r - 1);
+        let t = `${e.query}:${e.date.valueOf()}`,
+            s = r.get(t) ?? 0;
+        if (0 === s) return !1;
+        r.set(t, s - 1);
     }
-    for (let e of l.values()) if (0 !== e) return !1;
+    for (let e of r.values()) if (0 !== e) return !1;
     return !0;
 }
-
-function G(e) {
+function q(e) {
     let { nonFilterQueryString: t, filterQueryString: r } = e,
-        n = +(r.length > 0),
-        s = +(t.length > 0),
-        a = O.E2 - t.length - s - n,
-        i = l.useCallback(
+        s = +(r.length > 0),
+        l = +(t.length > 0),
+        a = T.E2 - t.length - l - s,
+        i = n.useCallback(
             (e) => {
                 let { newFilterString: t } = e;
                 return r.length + t.length > a;
             },
             [r.length, a],
         ),
-        o = l.useMemo(() => r.length + 18 > a, [r.length, a]),
-        c = l.useCallback(() => {
+        o = n.useMemo(() => r.length + 18 > a, [r.length, a]),
+        u = n.useCallback(() => {
             d.A.show({
-                title: x.intl.string(x.t.nOqJcX),
-                body: x.intl.string(x.t.zzAcsv),
-                confirmText: x.intl.string(x.t["qcYY+/"]),
+                title: L.intl.string(L.t.nOqJcX),
+                body: L.intl.string(L.t.zzAcsv),
+                confirmText: L.intl.string(L.t["qcYY+/"]),
             });
         }, []);
     return {
-        validateFilter: l.useCallback(
+        validateFilter: n.useCallback(
             (e, t) =>
                 !i({
                     newFilterString: (function (e, t) {
                         let r,
-                            n = b.Ay[e];
+                            s = y.Ay[e];
                         switch (e) {
-                            case v.LWr.FILTER_FROM:
-                            case v.LWr.FILTER_MENTIONS:
-                                let l = f.default.getUser(t);
-                                r = null == l ? t : "".concat(l.username);
+                            case I.LWr.FILTER_FROM:
+                            case I.LWr.FILTER_MENTIONS:
+                                let n = S.default.getUser(t);
+                                r = null == n ? t : `${n.username}`;
                                 break;
-                            case v.LWr.FILTER_IN:
-                                let s = p.A.getChannel(t);
-                                if (null == s) r = t;
+                            case I.LWr.FILTER_IN:
+                                let l = _.A.getChannel(t);
+                                if (null == l) r = t;
                                 else {
-                                    let e = (0, m.E3)(s);
+                                    let e = (0, m.E3)(l);
                                     r = (0, m.TZ)(e);
                                 }
                                 break;
-                            case v.LWr.FILTER_HAS:
-                            case v.LWr.FILTER_PINNED:
-                            case v.LWr.FILTER_AUTHOR_TYPE:
+                            case I.LWr.FILTER_HAS:
+                            case I.LWr.FILTER_PINNED:
+                            case I.LWr.FILTER_AUTHOR_TYPE:
                             default:
                                 r = t;
                         }
-                        return n.key + " " + r;
+                        return s.key + " " + r;
                     })(e, t),
-                }) || (c(), !1),
-            [i, c],
+                }) || (u(), !1),
+            [i, u],
         ),
-        validateDateFilter: l.useCallback(() => !o || (c(), !1), [o, c]),
+        validateDateFilter: n.useCallback(() => !o || (u(), !1), [o, u]),
     };
 }

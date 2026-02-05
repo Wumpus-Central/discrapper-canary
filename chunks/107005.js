@@ -1,62 +1,44 @@
-n.d(t, {
-    Z: () => d,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(379848),
-    o = n(49999),
-    l = n(985018),
+n.d(t, { Z: () => u });
+var i = n(627968),
+    s = n(64700),
+    r = n(397927),
+    a = n(379848),
+    l = n(49999),
+    o = n(985018),
     c = n(784001);
-let u = (e) => {
+let d = (e) => {
         let { markAsDismissed: t } = e;
         return (
-            i.useEffect(() => t(o.i.UNKNOWN), [t]),
-            (0, r.jsx)(a.LpS, {
-                className: c.Ad,
-                text: l.intl.string(l.t.y2b7CA),
-            })
+            s.useEffect(() => t(l.i.UNKNOWN), [t]),
+            (0, i.jsx)(r.LpS, { className: c.Ad, text: o.intl.string(o.t.y2b7CA) })
         );
     },
-    d = (e) => {
-        let { title: t, body: n, img: i, newIndicatorDismissibleContent: o, onClick: d } = e;
-        return (0, r.jsxs)("div", {
+    u = (e) => {
+        let { title: t, body: n, img: s, newIndicatorDismissibleContent: l, onClick: u } = e;
+        return (0, i.jsxs)("div", {
             className: c.kL,
             children: [
-                i,
-                (0, r.jsxs)("div", {
+                s,
+                (0, i.jsxs)("div", {
                     className: c.FS,
                     children: [
-                        (0, r.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             className: c.TK,
                             children: [
-                                (0, r.jsx)(s.Ay, {
-                                    contentTypes: [o],
+                                (0, i.jsx)(a.Ay, {
+                                    contentTypes: [l],
                                     children: (e) => {
                                         let { visibleContent: t, markAsDismissed: n } = e;
-                                        return t === o
-                                            ? (0, r.jsx)(u, {
-                                                  markAsDismissed: n,
-                                              })
-                                            : null;
+                                        return t === l ? (0, i.jsx)(d, { markAsDismissed: n }) : null;
                                     },
                                 }),
-                                (0, r.jsx)(a.Text, {
-                                    variant: "text-md/semibold",
-                                    children: t,
-                                }),
+                                (0, i.jsx)(r.Text, { variant: "text-md/semibold", children: t }),
                             ],
                         }),
-                        (0, r.jsx)(a.Text, {
-                            variant: "text-xs/normal",
-                            children: n,
-                        }),
+                        (0, i.jsx)(r.Text, { variant: "text-xs/normal", children: n }),
                     ],
                 }),
-                (0, r.jsx)(a.Button, {
-                    text: l.intl.string(l.t.vD60Pv),
-                    onClick: d,
-                }),
+                (0, i.jsx)(r.Button, { text: o.intl.string(o.t.vD60Pv), onClick: u }),
             ],
         });
     };

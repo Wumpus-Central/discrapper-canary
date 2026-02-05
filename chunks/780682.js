@@ -1,3 +1,1 @@
-e.exports = {
-    u: "goLiveGridContainer__466c6",
-};
+e.exports = { u: "goLiveGridContainer__466c6" };

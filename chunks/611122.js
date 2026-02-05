@@ -1,5 +1,6 @@
-e.exports = {
-    notEmptyKey: function (e) {
-        return null != e && "" != e;
+"use strict";
+t.exports = {
+    notEmptyKey: function (t) {
+        return null != t && "" != t;
     },
 };

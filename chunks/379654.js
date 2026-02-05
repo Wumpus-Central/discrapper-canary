@@ -1,116 +1,56 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(321073),
-    n(896048);
+"use strict";
+n.d(t, { A: () => h }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(688810),
     s = n(850046),
     o = n(183555),
     l = n(633075),
-    c = n(289173),
-    u = n(80330),
+    u = n(289173),
+    c = n(80330),
     d = n(139730),
-    f = n(783256),
-    p = n(518477),
-    _ = n(985018);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function g(e) {
+    _ = n(783256),
+    f = n(518477),
+    p = n(985018);
+function h(e) {
     let { user: t, widgets: n = [], onOpenUserProfileModal: h } = e,
-        g = i.useMemo(() => n.filter((e) => e instanceof l.R), [n]),
-        E = i.useMemo(() => g.map((e) => e.applicationId), [g]),
-        { analyticsLocations: y } = (0, a.Ay)(),
-        { trackUserProfileAction: b } = (0, o.NJ)(),
-        O = (0, s.A)(t.id, E),
-        v = i.useCallback(() => {
-            null == h ||
-                h({
-                    tabSection: p.RP.WIDGETS,
-                });
+        m = i.useMemo(() => n.filter((e) => e instanceof l.R), [n]),
+        g = i.useMemo(() => m.map((e) => e.applicationId), [m]),
+        { analyticsLocations: E } = (0, a.Ay)(),
+        { trackUserProfileAction: A } = (0, o.NJ)(),
+        I = (0, s.A)(t.id, g),
+        T = i.useCallback(() => {
+            h?.({ tabSection: f.RP.WIDGETS });
         }, [h]),
-        A = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 let t = !1,
                     i = [];
                 for (let a of n)
                     a instanceof l.R
-                        ? null != O[a.applicationId] &&
+                        ? null != I[a.applicationId] &&
                           i.push(
                               (0, r.jsx)(
                                   d.A,
-                                  m(
-                                      {
-                                          previewData: O[a.applicationId],
-                                          onClick: v,
-                                      },
-                                      e,
-                                  ),
-                                  "application-widget-".concat(a.applicationId),
+                                  { previewData: I[a.applicationId], onClick: T, ...e },
+                                  `application-widget-${a.applicationId}`,
                               ),
                           )
-                        : a instanceof c.Yy &&
+                        : a instanceof u.Yy &&
                           !t &&
-                          (i.push(
-                              (0, r.jsx)(
-                                  f.A,
-                                  m(
-                                      {
-                                          widgets: n,
-                                          onClick: v,
-                                      },
-                                      e,
-                                  ),
-                                  "collection-breadcrumb",
-                              ),
-                          ),
+                          (i.push((0, r.jsx)(_.A, { widgets: n, onClick: T, ...e }, "collection-breadcrumb")),
                           (t = !0));
                 return i;
             },
-            [O, v, n],
+            [I, T, n],
         );
     return 0 === n.length
         ? null
-        : (0, r.jsx)(u.A, {
-              renderCards: A,
-              heading: _.intl.string(_.t.Y55Tua),
+        : (0, r.jsx)(c.A, {
+              renderCards: y,
+              heading: p.intl.string(p.t.Y55Tua),
               onExpand: () => {
-                  b({
-                      action: "PRESS_SHOW_MORE_WIDGETS",
-                      analyticsLocations: y,
-                  }),
-                      v();
+                  A({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: E }), T();
               },
           });
 }

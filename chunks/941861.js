@@ -1,9 +1,6 @@
-n.d(t, {
-    R: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { R: () => i });
 var r = n(64700);
-
 function i() {
     let e = window,
         [t, n] = r.useState(e.document.hasFocus());

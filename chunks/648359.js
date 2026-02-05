@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Tg: "textArea__89a34",
     Xl: "resizeable__89a34",

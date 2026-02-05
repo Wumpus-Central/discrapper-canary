@@ -1,71 +1,55 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => m });
+var i = n(627968),
+    l = n(64700),
     a = n(311907),
-    s = n(397927),
-    o = n(857182),
-    l = n(572957),
-    c = n(419056),
-    u = n(985018),
-    d = n(420779);
-let f = (e) => {
+    r = n(397927),
+    s = n(857182),
+    o = n(572957),
+    d = n(419056),
+    c = n(985018),
+    u = n(420779);
+let m = (e) => {
     let { channelId: t, messageId: n } = e,
-        f = (0, a.bG)([l.A], () => l.A.shouldShowBump(n), [n]),
-        p = i.useCallback(() => {
-            o.A.dismissPublishBump(n), (0, c.A)(t, n);
+        m = (0, a.bG)([o.A], () => o.A.shouldShowBump(n), [n]),
+        _ = l.useCallback(() => {
+            s.A.dismissPublishBump(n), (0, d.A)(t, n);
         }, [t, n]),
-        _ = i.useCallback(() => {
-            o.A.dismissPublishBump(n);
+        h = l.useCallback(() => {
+            s.A.dismissPublishBump(n);
         }, [n]),
-        h = i.useCallback(() => {
-            o.A.permanentlyHidePublishBump(t);
+        p = l.useCallback(() => {
+            s.A.permanentlyHidePublishBump(t);
         }, [t]);
-    return f
-        ? (0, r.jsxs)("div", {
-              className: d.kL,
+    return m
+        ? (0, i.jsxs)("div", {
+              className: u.kL,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: d.mp,
+                  (0, i.jsxs)("div", {
+                      className: u.mp,
                       children: [
-                          (0, r.jsx)(s.koX, {
-                              size: "xs",
-                              color: "currentColor",
-                              className: d.Kk,
-                          }),
-                          (0, r.jsx)(s.Heading, {
+                          (0, i.jsx)(r.koX, { size: "xs", color: "currentColor", className: u.Kk }),
+                          (0, i.jsx)(r.Heading, {
                               variant: "heading-sm/normal",
-                              className: d.dS,
-                              children: u.intl.string(u.t.hasZoU),
+                              className: u.dS,
+                              children: c.intl.string(c.t.hasZoU),
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, i.jsx)(r.Text, {
                               color: "text-brand",
-                              className: d.mk,
+                              className: u.mk,
                               variant: "text-sm/normal",
-                              children: (0, r.jsx)(s.DUT, {
-                                  onClick: p,
-                                  children: u.intl.string(u.t.MFGE51),
-                              }),
+                              children: (0, i.jsx)(r.DUT, { onClick: _, children: c.intl.string(c.t.MFGE51) }),
                           }),
-                          (0, r.jsx)(s.DUT, {
-                              onClick: _,
-                              children: (0, r.jsx)(s.aXh, {
-                                  size: "xs",
-                                  color: "currentColor",
-                                  className: d.ut,
-                              }),
+                          (0, i.jsx)(r.DUT, {
+                              onClick: h,
+                              children: (0, i.jsx)(r.aXh, { size: "xs", color: "currentColor", className: u.ut }),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, i.jsx)(r.Text, {
                       color: "text-muted",
-                      className: d.qx,
+                      className: u.qx,
                       variant: "text-sm/normal",
-                      children: (0, r.jsx)(s.DUT, {
-                          onClick: h,
-                          children: u.intl.string(u.t.efSkDm),
-                      }),
+                      children: (0, i.jsx)(r.DUT, { onClick: p, children: c.intl.string(c.t.efSkDm) }),
                   }),
               ],
           })

@@ -1,3 +1,4 @@
+"use strict";
 var n = r(265930),
     i = r(116740),
     o = i.List,
@@ -6,37 +7,15 @@ var n = r(265930),
     u = function () {
         return !0;
     },
-    c = s({
-        start: null,
-        end: null,
-    }),
-    l = s({
-        start: null,
-        end: null,
-        decoratorKey: null,
-        leaves: null,
-    });
-
+    c = s({ start: null, end: null }),
+    l = s({ start: null, end: null, decoratorKey: null, leaves: null });
 function f(t, e) {
     return t === e;
 }
 t.exports = {
     generate: function (t, e, r) {
         var i = e.getLength();
-        if (!i)
-            return o.of(
-                new l({
-                    start: 0,
-                    end: 0,
-                    decoratorKey: null,
-                    leaves: o.of(
-                        new c({
-                            start: 0,
-                            end: 0,
-                        }),
-                    ),
-                }),
-            );
+        if (!i) return o.of(new l({ start: 0, end: 0, decoratorKey: null, leaves: o.of(new c({ start: 0, end: 0 })) }));
         var s = [],
             p = r ? r.getDecorations(e, t) : o(a(null, i)),
             h = e.getCharacterList();
@@ -61,12 +40,7 @@ t.exports = {
                                 f,
                                 u,
                                 function (t, e) {
-                                    a.push(
-                                        new c({
-                                            start: t + i,
-                                            end: e + i,
-                                        }),
-                                    );
+                                    a.push(new c({ start: t + i, end: e + i }));
                                 },
                             ),
                             o(a)),

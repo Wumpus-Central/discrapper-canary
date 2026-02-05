@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
 var i = n(833349),
@@ -8,25 +7,17 @@ var i = n(833349),
     s = n(939496),
     o = n(993401),
     l = n(652215),
-    c = n(996988),
-    u = n(985018);
-
+    u = n(996988),
+    c = n(985018);
 function d(e) {
     let { user: t, activity: n, onAction: d } = e,
-        { themeType: f } = (0, s.E)(),
-        p = f === c.d.MODAL_V2;
+        { themeType: _ } = (0, s.E)(),
+        f = _ === u.d.MODAL_V2;
     if (!(0, i.A)(n, l.jUm.INSTANCE)) return null;
-    let _ = (e) => {
+    let p = (e) => {
         e.stopPropagation(),
-            null == d ||
-                d({
-                    action: "PRESS_NOTIFY_BUTTON",
-                }),
+            d?.({ action: "PRESS_NOTIFY_BUTTON" }),
             new a.A("UserActivityActions").log("notify", t.id, n);
     };
-    return (0, r.jsx)(o.FD, {
-        text: u.intl.string(u.t.vwl1PK),
-        fullWidth: !p,
-        onClick: _,
-    });
+    return (0, r.jsx)(o.FD, { text: c.intl.string(c.t.vwl1PK), fullWidth: !f, onClick: p });
 }

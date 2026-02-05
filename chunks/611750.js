@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(780940),
     o = n(976467).CONSTRUCTOR,
@@ -8,12 +9,7 @@ var r = n(834647),
     u = i && i.prototype;
 if (
     (r(
-        {
-            target: "Promise",
-            proto: !0,
-            forced: o,
-            real: !0,
-        },
+        { target: "Promise", proto: !0, forced: o, real: !0 },
         {
             catch: function (e) {
                 return this.then(void 0, e);
@@ -23,8 +19,5 @@ if (
     !a && l(i))
 ) {
     var d = s("Promise").prototype.catch;
-    u.catch !== d &&
-        c(u, "catch", d, {
-            unsafe: !0,
-        });
+    u.catch !== d && c(u, "catch", d, { unsafe: !0 });
 }

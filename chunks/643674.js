@@ -1,190 +1,117 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => h }), n(321073);
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(565645),
-    c = n(375499),
-    o = n(937773),
-    d = n(460760),
+    o = n(375499),
+    d = n(937773),
+    c = n(460760),
     u = n(555337),
-    f = n(307731),
+    m = n(307731),
     g = n(985018);
-let b = (e) => {
-        var t;
+let x = (e) => {
         let {
-                reason: n = "",
-                emoji_name: d,
-                onSetReason: g,
-                onSelectEmoji: b,
-                onClearPressed: m,
-                reasonMinLength: p,
-                reasonMaxLength: x,
-                placeholder: h,
-                position: j,
+                reason: t = "",
+                emoji_name: n,
+                onSetReason: c,
+                onSelectEmoji: g,
+                onClearPressed: x,
+                reasonMinLength: h,
+                reasonMaxLength: _,
+                placeholder: A,
+                position: p,
             } = e,
-            O = i.useRef(null),
-            [y, v] = i.useState(!1),
-            A = (0, l.bG)([u.A], () => u.A.isGuildMetadataLoaded()),
-            E = (0, r.jsx)(s.YNO, {
-                targetElementRef: O,
+            f = s.useRef(null),
+            [j, N] = s.useState(!1),
+            E = (0, l.bG)([u.A], () => u.A.isGuildMetadataLoaded()),
+            b = (0, i.jsx)(r.YNO, {
+                targetElementRef: f,
                 onRequestClose: () => {
-                    v(!1);
+                    N(!1);
                 },
-                shouldShow: y,
+                shouldShow: j,
                 position: "right",
                 align: "top",
-                animation: s.YNO.Animation.NONE,
+                animation: r.YNO.Animation.NONE,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, r.jsx)(o.A, {
-                        pickerIntention: f.b_.COMMUNITY_CONTENT,
+                    return (0, i.jsx)(d.A, {
+                        pickerIntention: m.b_.COMMUNITY_CONTENT,
                         closePopout: t,
                         onSelectEmoji: (e) => {
-                            let { emoji: n, willClose: r } = e;
-                            null != n && b(n), r && t();
+                            let { emoji: n, willClose: i } = e;
+                            null != n && g(n), i && t();
                         },
                     });
                 },
                 children: () =>
-                    (0, r.jsx)(c.A, {
+                    (0, i.jsx)(o.A, {
                         active: !1,
                         onClick: () => {
-                            v(!0);
+                            N(!0);
                         },
                         tabIndex: 0,
-                        renderButtonContents:
-                            null != d
-                                ? () =>
-                                      (0, r.jsx)(a.A, {
-                                          emojiName: d,
-                                          animated: !1,
-                                      })
-                                : null,
-                        ref: O,
+                        renderButtonContents: null != n ? () => (0, i.jsx)(a.A, { emojiName: n, animated: !1 }) : null,
+                        ref: f,
                     }),
             });
-        return (0, r.jsx)(
-            s.ksK,
+        return (0, i.jsx)(
+            r.ksK,
             {
-                placeholder: h,
-                value: n,
-                minLength: p,
-                maxLength: x,
-                defaultDirty: (null == n ? void 0 : n.length) > 0,
-                leading: {
-                    type: "emoji",
-                    button: E,
-                },
+                placeholder: A,
+                value: t,
+                minLength: h,
+                maxLength: _,
+                defaultDirty: t?.length > 0,
+                leading: { type: "emoji", button: b },
                 onChange: (e) => {
-                    g(e);
+                    c(e);
                 },
-                clearable: {
-                    show: (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d,
-                },
-                onClear: m,
+                clearable: { show: (t?.length ?? 0) > 0 || null != n },
+                onClear: x,
             },
-            "text-input-".concat(j, "-").concat(A),
+            `text-input-${p}-${E}`,
         );
     },
-    m = (e) => {
-        let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
+    h = (e) => {
+        let { reasonMinLength: t, reasonMaxLength: n, guildId: s, reasons: l } = e,
             a = [
                 g.intl.string(g.t["9dhBGo"]),
                 g.intl.string(g.t["8RmhKF"]),
                 g.intl.string(g.t["2t0V83"]),
                 g.intl.string(g.t.l8WqCR),
             ],
-            c = [];
+            o = [];
         for (let e = 0; e < 4; e++)
-            c.push(
-                (0, r.jsx)(
-                    b,
-                    (function (e, t) {
-                        return (
-                            (t = null != t ? t : {}),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(t)).forEach(function (n) {
-                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                                  }),
-                            e
-                        );
-                    })(
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })(
-                            {
-                                position: e,
-                                placeholder: a[e],
-                            },
-                            l[e],
-                        ),
-                        {
-                            onSetReason: (t) => {
-                                let n = [...l],
-                                    r = Object.assign({}, l[e], {
-                                        reason: t,
-                                    });
-                                (n[e] = r), (0, d.MA)(i, n);
-                            },
-                            onSelectEmoji: (t) => {
-                                let n = [...l],
-                                    r = Object.assign({}, l[e], {
-                                        emoji_name: t.optionallyDiverseSequence,
-                                    });
-                                (n[e] = r), (0, d.MA)(i, n);
-                            },
-                            onClearPressed: () => {
-                                let t = [...l],
-                                    n = {
-                                        reason: "",
-                                        emoji_name: null,
-                                    };
-                                (t[e] = n), (0, d.MA)(i, t);
-                            },
-                            reasonMinLength: t,
-                            reasonMaxLength: n,
+            o.push(
+                (0, i.jsx)(
+                    x,
+                    {
+                        position: e,
+                        placeholder: a[e],
+                        ...l[e],
+                        onSetReason: (t) => {
+                            let n = [...l],
+                                i = Object.assign({}, l[e], { reason: t });
+                            (n[e] = i), (0, c.MA)(s, n);
                         },
-                    ),
+                        onSelectEmoji: (t) => {
+                            let n = [...l],
+                                i = Object.assign({}, l[e], { emoji_name: t.optionallyDiverseSequence });
+                            (n[e] = i), (0, c.MA)(s, n);
+                        },
+                        onClearPressed: () => {
+                            let t = [...l],
+                                n = { reason: "", emoji_name: null };
+                            (t[e] = n), (0, c.MA)(s, t);
+                        },
+                        reasonMinLength: t,
+                        reasonMaxLength: n,
+                    },
                     "reasonListItem-" + e,
                 ),
             );
-        return (0, r.jsx)(s.BJc, {
-            gap: 16,
-            children: c,
-        });
+        return (0, i.jsx)(r.BJc, { gap: 16, children: o });
     };

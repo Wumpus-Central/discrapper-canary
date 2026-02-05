@@ -1,115 +1,98 @@
-n.d(t, {
-    I: () => b,
-    p: () => y,
-}),
-    n(938796);
+n.d(t, { I: () => f, p: () => E }), n(938796);
 var l = n(627968),
-    r = n(64700),
-    i = n(821418),
-    s = n(665260),
-    a = n(311907),
-    o = n(421380),
+    i = n(64700),
+    s = n(821418),
+    a = n(665260),
+    r = n(311907),
+    d = n(421380),
     c = n(397927),
-    u = n(416052),
-    d = n(967198),
-    g = n(351906),
-    x = n(954571),
+    o = n(416052),
+    u = n(967198),
+    x = n(351906),
+    h = n(954571),
     m = n(735547),
-    h = n(299827),
-    j = n(172799),
-    v = n(652215),
-    p = n(985018),
-    f = n(912579);
-let b = a.Ay.connectStores([g.A], () => ({
-        hideValue: g.A.hideInstantInvites,
-    }))((e) => {
-        let { value: t, autoFocus: n, hideValue: r, onCopy: i, disabled: s } = e;
-        return (0, l.jsx)(u.A, {
+    g = n(299827),
+    v = n(172799),
+    j = n(652215),
+    A = n(985018),
+    N = n(912579);
+let f = r.Ay.connectStores([x.A], () => ({ hideValue: x.A.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: i, onCopy: s, disabled: a } = e;
+        return (0, l.jsx)(o.A, {
             value: t,
-            hideMessage: r ? p.intl.string(p.t["6HzNgZ"]) : null,
-            buttonColor: o.$n.Colors.BRAND,
-            onCopy: i,
+            hideMessage: i ? A.intl.string(A.t["6HzNgZ"]) : null,
+            buttonColor: d.$n.Colors.BRAND,
+            onCopy: s,
             autoFocus: n,
-            disabled: s,
+            disabled: a,
         });
     }),
-    y = (e) => {
+    E = (e) => {
         let {
                 guild: t,
                 noInvitesAvailable: n,
-                showFriends: a,
-                onClose: o,
-                modalState: u,
-                isApplicationBypassToggleEnabled: g,
-                setInviteFlags: y,
-                copyValue: O,
-                changePage: A,
-                inviteChannel: N,
-                source: E,
-                code: C,
-                guildScheduledEvent: P,
+                showFriends: r,
+                onClose: d,
+                modalState: o,
+                isApplicationBypassToggleEnabled: x,
+                setInviteFlags: E,
+                copyValue: p,
+                changePage: C,
+                inviteChannel: T,
+                source: y,
+                code: b,
+                guildScheduledEvent: I,
                 disabled: S,
-                application: T,
+                application: G,
             } = e,
-            { maxAge: w, maxUses: I, networkError: D, showVanityURL: k, flags: G } = u,
-            R = r.useCallback(() => {
-                x.default.track(v.HAw.COPY_INSTANT_INVITE, {
-                    server: d.A.getGuildId(),
-                    channel: null == N ? void 0 : N.id,
-                    channel_type: null == N ? void 0 : N.type,
-                    location: E,
-                    code: C,
-                    guild_scheduled_event_id: null == P ? void 0 : P.id,
-                    application_id: null == T ? void 0 : T.id,
+            { maxAge: k, maxUses: _, networkError: R, showVanityURL: D, flags: M } = o,
+            P = i.useCallback(() => {
+                h.default.track(j.HAw.COPY_INSTANT_INVITE, {
+                    server: u.A.getGuildId(),
+                    channel: T?.id,
+                    channel_type: T?.type,
+                    location: y,
+                    code: b,
+                    guild_scheduled_event_id: I?.id,
+                    application_id: G?.id,
                 });
-            }, [null == T ? void 0 : T.id, N, E, C, P]);
+            }, [G?.id, T, y, b, I]);
         return (0, l.jsxs)(c.BJc, {
             gap: 16,
             children: [
-                (0, l.jsx)(b, {
-                    value: O,
-                    autoFocus: a,
-                    onCopy: R,
-                    disabled: S,
-                }),
-                g &&
+                (0, l.jsx)(f, { value: p, autoFocus: r, onCopy: P, disabled: S }),
+                x &&
                     (0, l.jsx)(c.dOG, {
-                        checked: (0, s.Lt)(G, i.Q.IS_APPLICATION_BYPASS),
-                        onChange: (e) => y((0, s.lA)(G, i.Q.IS_APPLICATION_BYPASS, e)),
+                        checked: (0, a.Lt)(M, s.Q.IS_APPLICATION_BYPASS),
+                        onChange: (e) => E((0, a.lA)(M, s.Q.IS_APPLICATION_BYPASS, e)),
                         disabled: S,
-                        label: p.intl.string(p.t["1i1bUl"]),
-                        description: p.intl.string(p.t["jvd/LF"]),
+                        label: A.intl.string(A.t["1i1bUl"]),
+                        description: A.intl.string(A.t["jvd/LF"]),
                     }),
-                n || k
+                n || D
                     ? null
                     : (0, l.jsxs)(c.Text, {
                           variant: "text-xs/normal",
-                          className: f.PJ,
+                          className: N.PJ,
                           children: [
-                              (0, m.Be)(w, I),
+                              (0, m.Be)(k, _),
                               " ",
-                              a
+                              r
                                   ? (0, l.jsx)(c.MzZ, {
-                                        onClick: () => A(j.QR.SETTINGS),
-                                        children: p.intl.string(p.t["VNe8P/"]),
+                                        onClick: () => C(v.QR.SETTINGS),
+                                        children: A.intl.string(A.t["VNe8P/"]),
                                     })
                                   : null,
                           ],
                       }),
-                !n && a && k
+                !n && r && D
                     ? (0, l.jsxs)(c.Text, {
                           variant: "text-xs/normal",
-                          className: f.PJ,
-                          children: [p.intl.string(p.t["0M2U95"]), " "],
+                          className: N.PJ,
+                          children: [A.intl.string(A.t["0M2U95"]), " "],
                       })
                     : null,
-                null != D
-                    ? (0, l.jsx)(h.X, {
-                          guild: t,
-                          error: D,
-                          onClose: o,
-                      })
-                    : null,
+                null != R ? (0, l.jsx)(g.X, { guild: t, error: R, onClose: d }) : null,
             ],
         });
     };

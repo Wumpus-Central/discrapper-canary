@@ -1,62 +1,38 @@
-n.d(t, {
-    A: () => G,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => G });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(31728),
     o = n(933958),
     l = n(216418),
-    c = n(969151),
-    u = n(108959),
+    u = n(969151),
+    c = n(108959),
     d = n(449571),
-    f = n(313961),
-    p = n(71855),
-    _ = n(91242),
+    _ = n(313961),
+    f = n(71855),
+    p = n(91242),
     h = n(210954),
     m = n(26113),
     g = n(205297),
     E = n(699426),
-    b = n(923917),
-    y = n(869146),
-    O = n(544028),
-    A = n(964404),
-    v = n(806911),
-    S = n(734057),
-    I = n(334463),
-    T = n(309010),
-    C = n(531685),
-    N = n(403362),
-    R = n(652215),
-    w = n(5867),
-    P = n(806931),
-    D = n(165610),
+    A = n(923917),
+    I = n(869146),
+    T = n(544028),
+    y = n(964404),
+    S = n(806911),
+    v = n(734057),
+    C = n(334463),
+    b = n(309010),
+    N = n(531685),
+    R = n(403362),
+    O = n(652215),
+    D = n(5867),
+    L = n(806931),
+    w = n(165610),
     x = n(315253);
-
-function L(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let j = {
-        [R.o1q.VIDEO]: v.A,
-        [R.o1q.ACTIVITY]: d.A,
-        [R.o1q.FRAME]: h.A,
-        [R.o1q.HAVEN]: m.A,
-    },
-    M = {
-        minWidth: P.mn[P.R8.VIDEO],
-        maxWidth: P.cF[P.R8.VIDEO],
-    },
+let P = { [O.o1q.VIDEO]: S.A, [O.o1q.ACTIVITY]: d.A, [O.o1q.FRAME]: h.A, [O.o1q.HAVEN]: m.A },
+    M = { minWidth: L.mn[L.R8.VIDEO], maxWidth: L.cF[L.R8.VIDEO] },
     k = [];
 class U extends i.PureComponent {
     render() {
@@ -69,23 +45,23 @@ class U extends i.PureComponent {
                 theme: s,
                 dockedRect: o,
                 appContext: l,
-                roundCorners: c,
-                getDockedRectPositionY: u,
+                roundCorners: u,
+                getDockedRectPositionY: c,
                 windowSize: d,
-                inPopoutWindow: f,
-                activityPIPWindow: p,
-                chatOpen: _,
+                inPopoutWindow: _,
+                activityPIPWindow: f,
+                chatOpen: p,
                 callChatSidebarWidth: h,
             } = this.props,
             m = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
-            b = "" !== m ? parseInt(m, 10) : R.MdR,
-            y = d.width - b - (_ ? h : 0),
-            O = null != p,
-            A = !f && O && _ && y < 550;
+            A = "" !== m ? parseInt(m, 10) : O.MdR,
+            I = d.width - A - (p ? h : 0),
+            T = null != f,
+            y = !_ && T && p && I < 550;
         return (0, r.jsxs)(E.ic, {
             children: [
                 (0, r.jsx)(g.A, {
-                    pictureInPictureComponents: j,
+                    pictureInPictureComponents: P,
                     selectedPIPWindow: e,
                     pipWindows: t,
                     pipWidth: n,
@@ -96,112 +72,79 @@ class U extends i.PureComponent {
                     onWindowMove: this.handleWindowMove,
                     onWindowResize: this.handleWindowResize,
                     appContext: l,
-                    roundCorners: c,
+                    roundCorners: u,
                     resizeConfig: M,
-                    getDockedRectPositionY: u,
+                    getDockedRectPositionY: c,
                 }),
-                (0, r.jsx)(E.Md, {
-                    className: A ? x.ah : void 0,
-                }),
+                (0, r.jsx)(E.Md, { className: y ? x.ah : void 0 }),
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            L(this, "handleWindowMove", (e, t) => {
-                s.tw(e, t);
-            }),
-            L(this, "handleWindowResize", (e) => {
-                s.EB(e, P.R8.VIDEO);
-            });
-    }
+    handleWindowMove = (e, t) => {
+        s.tw(e, t);
+    };
+    handleWindowResize = (e) => {
+        s.EB(e, L.R8.VIDEO);
+    };
 }
-let G = a.Ay.connectStores([y.A, o.Ay, C.A, O.A, S.A, T.A, I.A, f.A, A.Ay, _.A], (e) => {
-    var t, n, r, i, a, s, d, h;
-    let m,
-        { popoutWindowKey: g, popoutWindowHasTitleBar: E = !1 } = e,
-        v = y.A.getWindowOpen(R.MLl.CHANNEL_CALL_POPOUT),
-        x = y.A.getWindowOpen(R.MLl.ACTIVITY_POPOUT),
-        L = o.Ay.getCurrentEmbeddedActivity(),
-        j = (0, c.H)(null == L ? void 0 : L.location),
-        M = null != L && !(0, u.A)(j, S.A, T.A),
-        U = o.Ay.getActivityPanelMode(),
-        G = M && U === w.Gd.PANEL,
-        V = null != L && null != j && (null == (n = f.A.getSelectedParticipant(j)) ? void 0 : n.type) === P.lp.ACTIVITY,
-        F = _.A.getConnectedFrame(),
-        B = _.A.getFrameLayoutMode() === D.y.FOCUSED,
-        H = null != g,
-        Y = H ? y.A.getWindow(g) : null,
-        W = !!H && y.A.isWindowFullScreen(g),
-        K = C.A.windowSize();
-    H &&
-        (K =
-            null == Y
-                ? K
-                : {
-                      width: Y.innerWidth,
-                      height: Y.innerHeight,
-                  });
-    let z = H ? R.BRT.POPOUT : R.BRT.APP,
-        q = (e) =>
-            H &&
-            (0, b.q)({
-                withTitleBar: E,
-                isFullScreen: W,
-            })
-                ? e -
-                  (0, p.LI)({
-                      isPopoutWindow: H,
-                  })
-                : e;
-    m =
-        (null != L && x) || (H && M) || (H && null != F)
+let G = a.Ay.connectStores([I.A, o.Ay, N.A, T.A, v.A, b.A, C.A, _.A, y.Ay, p.A], (e) => {
+    let t,
+        { popoutWindowKey: n, popoutWindowHasTitleBar: r = !1 } = e,
+        i = I.A.getWindowOpen(O.MLl.CHANNEL_CALL_POPOUT),
+        a = I.A.getWindowOpen(O.MLl.ACTIVITY_POPOUT),
+        s = o.Ay.getCurrentEmbeddedActivity(),
+        d = (0, u.H)(s?.location),
+        h = null != s && !(0, c.A)(d, v.A, b.A),
+        m = o.Ay.getActivityPanelMode(),
+        g = h && m === D.Gd.PANEL,
+        E = null != s && null != d && _.A.getSelectedParticipant(d)?.type === L.lp.ACTIVITY,
+        S = p.A.getConnectedFrame(),
+        x = p.A.getFrameLayoutMode() === w.y.FOCUSED,
+        P = null != n,
+        M = P ? I.A.getWindow(n) : null,
+        U = !!P && I.A.isWindowFullScreen(n),
+        G = N.A.windowSize();
+    P && (G = null == M ? G : { width: M.innerWidth, height: M.innerHeight });
+    let V = P ? O.BRT.POPOUT : O.BRT.APP,
+        F = (e) => (P && (0, A.q)({ withTitleBar: r, isFullScreen: U }) ? e - (0, f.LI)({ isPopoutWindow: P }) : e);
+    t =
+        (null != s && a) || (P && h) || (P && null != S)
             ? null
-            : H || !v || M || null != F
-              ? null != L && G
-                  ? null != (r = I.A.pipActivityWindow)
-                      ? r
-                      : I.A.pipVideoWindow
-                  : null != F && B
-                    ? null != (i = null != (a = I.A.pipFrameWindow) ? a : I.A.pipVideoWindow)
-                        ? i
-                        : I.A.pipActivityWindow
-                    : null !=
-                        (s =
-                            null != (d = null != (h = I.A.pipHavenWindow) ? h : I.A.pipVideoWindow)
-                                ? d
-                                : I.A.pipActivityWindow)
-                      ? s
-                      : I.A.pipFrameWindow
+            : P || !i || h || null != S
+              ? null != s && g
+                  ? (C.A.pipActivityWindow ?? C.A.pipVideoWindow)
+                  : null != S && x
+                    ? (C.A.pipFrameWindow ?? C.A.pipVideoWindow ?? C.A.pipActivityWindow)
+                    : (C.A.pipHavenWindow ?? C.A.pipVideoWindow ?? C.A.pipActivityWindow ?? C.A.pipFrameWindow)
               : null;
-    let X = Array.from(I.A.pipWindows.values()),
-        Z = I.A.pipWidth(P.R8.VIDEO),
-        Q = X.find((e) => e.component === R.o1q.VIDEO),
-        $ = X.find((e) => e.component === R.o1q.ACTIVITY),
-        J = X.find((e) => e.component === R.o1q.FRAME),
-        ee = [X.find((e) => e.component === R.o1q.HAVEN), Q, $, J].filter(N.Vq),
-        et = A.Ay.callChatSidebarWidth,
-        en = T.A.getVoiceChannelId(),
-        er = T.A.getChannelId() === en,
-        ei = null != en && f.A.getChatOpen(en),
-        ea = G || V,
-        es = ea && null != L && (0, l.q)(L.applicationId),
-        eo = !ea && null != m && er && ei;
+    let B = Array.from(C.A.pipWindows.values()),
+        j = C.A.pipWidth(L.R8.VIDEO),
+        H = B.find((e) => e.component === O.o1q.VIDEO),
+        Y = B.find((e) => e.component === O.o1q.ACTIVITY),
+        W = B.find((e) => e.component === O.o1q.FRAME),
+        K = [B.find((e) => e.component === O.o1q.HAVEN), H, Y, W].filter(R.Vq),
+        z = y.Ay.callChatSidebarWidth,
+        $ = b.A.getVoiceChannelId(),
+        q = b.A.getChannelId() === $,
+        Z = null != $ && _.A.getChatOpen($),
+        Q = g || E,
+        X = Q && null != s && (0, l.q)(s.applicationId),
+        J = !Q && null != t && q && Z;
     return {
-        selectedPIPWindow: m,
-        pipWindows: 0 === ee.length ? k : ee,
-        pipWidth: Z,
-        maxX: K.width - (eo ? et : 0),
-        maxY: K.height,
-        theme: O.A.theme,
-        dockedRect: I.A.getDockedRect(null != (t = null == m ? void 0 : m.id) ? t : ""),
-        getDockedRectPositionY: q,
-        appContext: z,
-        roundCorners: !es,
-        windowSize: K,
-        inPopoutWindow: H,
-        activityPIPWindow: $,
-        chatOpen: ei,
-        callChatSidebarWidth: et,
+        selectedPIPWindow: t,
+        pipWindows: 0 === K.length ? k : K,
+        pipWidth: j,
+        maxX: G.width - (J ? z : 0),
+        maxY: G.height,
+        theme: T.A.theme,
+        dockedRect: C.A.getDockedRect(t?.id ?? ""),
+        getDockedRectPositionY: F,
+        appContext: V,
+        roundCorners: !X,
+        windowSize: G,
+        inPopoutWindow: P,
+        activityPIPWindow: Y,
+        chatOpen: Z,
+        callChatSidebarWidth: z,
     };
 })(U);

@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(65821),
-    n(73153);
+"use strict";
+n.d(t, { A: () => _ }), n(73153);
 var r = n(439372);
 n(354138);
 var i = n(292572),
@@ -12,10 +9,9 @@ var s = n(128391);
 n(299091);
 var o = n(167189),
     l = n(254160),
-    c = n(833291);
-
-function u(e) {
-    let t = (0, c.Ay)(e.content);
+    u = n(833291);
+function c(e) {
+    let t = (0, u.Ay)(e.content);
     null != t &&
         0 !== t.length &&
         t.forEach((e) => {
@@ -40,12 +36,12 @@ function u(e) {
             else if (t === o.I.APP_OAUTH2_LINK);
             else if (t === o.I.COLLECTIBLES_SHOP);
             else if (t === o.I.EXPERIMENT);
-            else throw Error("Unknown coded link type: ".concat(t));
+            else throw Error(`Unknown coded link type: ${t}`);
         });
 }
 class d extends r.A {
     constructor() {
-        super(), (0, s.A)(this, u);
+        super(), (0, s.A)(this, c);
     }
 }
-let f = new d();
+let _ = new d();

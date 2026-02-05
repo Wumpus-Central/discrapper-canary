@@ -1,111 +1,85 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => T,
-}),
-    n(896048),
-    n(65821);
-var i,
-    a = n(311907),
-    s = n(73153),
-    o = n(773669),
-    l = n(60717),
-    c = n(403362);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = {},
-    f = {},
-    p = {},
+n.d(t, { A: () => v });
+var i = n(311907),
+    a = n(73153),
+    s = n(773669),
+    o = n(60717),
+    l = n(403362);
+let u = {},
+    c = {},
+    d = {},
     _ = {},
-    h = new Set();
-
-function m(e) {
+    f = new Set();
+function p(e) {
     let t = e.id,
         n = e.sku.id,
-        r = d[t],
-        i = l.A.createFromServer(e);
+        r = u[t],
+        i = o.A.createFromServer(e);
     (null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()) ||
-        (!1 === e.published ? (null == p[n] && (p[n] = new Set()), p[n].add(t)) : (_[n] = t),
-        (d[t] = i),
-        h.delete(e.sku.id));
+        (!1 === e.published ? (null == d[n] && (d[n] = new Set()), d[n].add(t)) : (_[n] = t),
+        (u[t] = i),
+        f.delete(e.sku.id));
 }
-
-function g(e, t) {
-    return "".concat(e, ":").concat(t);
+function h(e, t) {
+    return `${e}:${t}`;
 }
-
-function E(e) {
+function m(e) {
     let { storeListings: t } = e;
-    for (let e of t) m(e);
+    for (let e of t) p(e);
 }
-
-function b(e) {
+function g(e) {
     let { storeListing: t, channelId: n } = e;
     if (null != n) {
-        let e = l.A.createFromServer(t);
-        (f[g(n, e.skuId)] = e), (_[e.skuId] = e.id);
-    } else m(t);
+        let e = o.A.createFromServer(t);
+        (c[h(n, e.skuId)] = e), (_[e.skuId] = e.id);
+    } else p(t);
 }
-
-function y(e) {
+function E(e) {
     let { giftCode: t } = e;
     if (null == t.store_listing) return !1;
-    m(t.store_listing);
+    p(t.store_listing);
 }
-
-function O(e) {
-    let { skuId: t } = e;
-    h.add(t);
-}
-
 function A(e) {
     let { skuId: t } = e;
-    h.delete(t);
+    f.add(t);
 }
-
-function v() {
-    (d = {}), (_ = {}), (p = {}), (f = {}), (h = new Set());
+function I(e) {
+    let { skuId: t } = e;
+    f.delete(t);
 }
-
-function S() {
-    if (r === o.default.locale) return !1;
-    v(), (r = o.default.locale);
+function T() {
+    (u = {}), (_ = {}), (d = {}), (c = {}), (f = new Set());
 }
-class I extends (i = a.Ay.Store) {
+function y() {
+    if (r === s.default.locale) return !1;
+    T(), (r = s.default.locale);
+}
+class S extends i.Ay.Store {
+    static displayName = "StoreListingStore";
     initialize() {
-        this.waitFor(o.default), this.syncWith([o.default], S), (r = o.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], y), (r = s.default.locale);
     }
     get(e) {
-        return d[e];
+        return u[e];
     }
     getForSKU(e, t) {
         let n = _[e];
-        return null != t ? f[g(t, e)] : null != n ? d[n] : null;
+        return null != t ? c[h(t, e)] : null != n ? u[n] : null;
     }
     getUnpublishedForSKU(e) {
-        let t = p[e];
+        let t = d[e];
         return null == t
             ? []
             : Array.from(t)
-                  .map((e) => d[e])
-                  .filter(c.Vq);
+                  .map((e) => u[e])
+                  .filter(l.Vq);
     }
     getForChannel(e, t) {
-        return f[g(e, t)];
+        return c[h(e, t)];
     }
     isFetchingForSKU(e) {
-        return h.has(e);
+        return f.has(e);
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: r, isTestMode: i } = e;
@@ -121,13 +95,12 @@ class I extends (i = a.Ay.Store) {
         return null != n ? this.getForSKU(n) : null;
     }
 }
-u(I, "displayName", "StoreListingStore");
-let T = new I(s.h, {
-    STORE_LISTINGS_FETCH_START: O,
-    STORE_LISTINGS_FETCH_FAIL: A,
-    STORE_LISTINGS_FETCH_SUCCESS: E,
-    STORE_LISTING_FETCH_SUCCESS: b,
-    USER_SETTINGS_PROTO_UPDATE: S,
-    APPLICATION_STORE_CLEAR_DATA: v,
-    GIFT_CODE_RESOLVE_SUCCESS: y,
+let v = new S(a.h, {
+    STORE_LISTINGS_FETCH_START: A,
+    STORE_LISTINGS_FETCH_FAIL: I,
+    STORE_LISTINGS_FETCH_SUCCESS: m,
+    STORE_LISTING_FETCH_SUCCESS: g,
+    USER_SETTINGS_PROTO_UPDATE: y,
+    APPLICATION_STORE_CLEAR_DATA: T,
+    GIFT_CODE_RESOLVE_SUCCESS: E,
 });

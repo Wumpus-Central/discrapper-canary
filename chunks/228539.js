@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     T8: "positionLayer__08434",
     sj: "positionLayerDefaultAlignLeft__08434",

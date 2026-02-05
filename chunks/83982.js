@@ -1,147 +1,127 @@
-n.d(t, {
-    A: () => M,
-    s: () => L,
-});
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+n.d(t, { A: () => k, s: () => w });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
     o = n(990078),
     c = n(397927),
-    u = n(367513),
-    d = n(684339),
-    f = n(313961),
-    p = n(520698),
-    b = n(164617),
-    g = n(958713),
-    m = n(525505),
-    h = n(991701),
-    A = n(401901),
-    y = n(869146),
-    _ = n(854627),
-    E = n(530804),
-    v = n(961350),
-    O = n(696451),
-    x = n(430452),
-    S = n(531685),
-    N = n(562153),
-    C = n(51082),
-    j = (n(729365), n(566566)),
-    T = n(289552),
-    I = n(652215),
-    w = n(731854),
-    R = n(985018),
-    P = n(707511);
-let D = c._3J.SIZE_80,
-    k = c._3J.SIZE_40;
-
-function L(e) {
+    d = n(367513),
+    u = n(684339),
+    h = n(313961),
+    m = n(520698),
+    A = n(164617),
+    p = n(958713),
+    g = n(525505),
+    f = n(991701),
+    _ = n(401901),
+    E = n(869146),
+    C = n(854627),
+    x = n(530804),
+    S = n(961350),
+    T = n(696451),
+    I = n(430452),
+    N = n(531685),
+    v = n(562153),
+    y = n(51082),
+    b = (n(729365), n(566566)),
+    R = n(289552),
+    j = n(652215),
+    M = n(731854),
+    D = n(985018),
+    O = n(707511);
+let L = c._3J.SIZE_80,
+    P = c._3J.SIZE_40;
+function w(e) {
     let { channelId: t, participant: n } = e;
-    return (0, E.uy)(t, n.id)
-        ? (0, l.jsx)(o.m, {
-              text: R.intl.string(R.t.HFwRpk),
+    return (0, x.uy)(t, n.id)
+        ? (0, i.jsx)(o.m, {
+              text: D.intl.string(D.t.HFwRpk),
               position: "bottom",
-              children: (0, l.jsx)("div", {
-                  className: P.bG,
-                  children: (0, l.jsx)(c.EpV, {
-                      color: c.LU0.colors.STATUS_WARNING_BACKGROUND,
-                  }),
+              children: (0, i.jsx)("div", {
+                  className: O.bG,
+                  children: (0, i.jsx)(c.EpV, { color: c.LU0.colors.STATUS_WARNING_BACKGROUND }),
               }),
           })
-        : (0, l.jsx)(T.A, {
-              userId: n.user.id,
-          });
+        : (0, i.jsx)(R.A, { userId: n.user.id });
 }
-
-function M(e) {
+function k(e) {
     let {
             participant: t,
             channel: n,
-            inCall: i,
+            inCall: a,
             width: o,
             selected: c,
-            popoutType: E,
-            fit: T,
-            onVideoResize: L,
-            blocked: M,
+            popoutType: x,
+            fit: R,
+            onVideoResize: w,
+            blocked: k,
             ignored: U,
-            noVideoRender: V = !1,
+            noVideoRender: G = !1,
             pulseSpeakingIndicator: F = !1,
-            paused: G = !1,
+            paused: H = !1,
         } = e,
-        H = x.A.getVideoComponent(),
-        B = (0, s.bG)([v.default], () => v.default.getId()),
-        { user: Y, streamId: W, speaking: z } = t,
-        K = Y.id === B,
-        X = (0, C.Ay)(t),
-        Z = (0, s.bG)([S.A], () => S.A.isFocused()),
-        J = (0, s.bG)([y.A], () => y.A.getWindowFocused(I.MLl.CHANNEL_CALL_POPOUT)),
-        q = (0, s.bG)([x.A], () => null != Y.id && x.A.isLocalVideoDisabled(Y.id, (0, p.A)(t.type)), [Y.id, t.type]),
-        Q = (0, s.bG)([O.Ay], () => O.Ay.isGuestOrLurker(n.guild_id, Y.id)),
-        $ = N.Ay.getName(n.getGuildId(), n.id, Y) + (Q ? " ".concat(R.intl.string(R.t["pFO/Ph"])) : ""),
-        ee = z && (J || Z),
-        et = o < 124 ? k : D,
-        { avatarSrc: en, avatarDecorationSrc: el } = (0, _.A)({
-            userId: Y.id,
+        B = I.A.getVideoComponent(),
+        V = (0, r.bG)([S.default], () => S.default.getId()),
+        { user: W, streamId: K, speaking: z } = t,
+        Y = W.id === V,
+        q = (0, y.Ay)(t),
+        J = (0, r.bG)([N.A], () => N.A.isFocused()),
+        $ = (0, r.bG)([E.A], () => E.A.getWindowFocused(j.MLl.CHANNEL_CALL_POPOUT)),
+        Z = (0, r.bG)([I.A], () => null != W.id && I.A.isLocalVideoDisabled(W.id, (0, m.A)(t.type)), [W.id, t.type]),
+        X = (0, r.bG)([T.Ay], () => T.Ay.isGuestOrLurker(n.guild_id, W.id)),
+        Q = v.Ay.getName(n.getGuildId(), n.id, W) + (X ? ` ${D.intl.string(D.t["pFO/Ph"])}` : ""),
+        ee = z && ($ || J),
+        et = o < 124 ? P : L,
+        { avatarSrc: en, avatarDecorationSrc: ei } = (0, C.A)({
+            userId: W.id,
             guildId: n.guild_id,
             size: et,
             animateOnHover: !ee,
         }),
-        er = (0, s.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
-        ei = (0, m.A)(w.x.DEFAULT, t.user.id),
-        ea = (0, g.A)(t.user.id),
-        es = {
-            channel: n,
-            selectedParticipant: er,
-            user: Y,
-        },
-        eo = r.useRef(es);
-    return (r.useEffect(() => {
-        eo.current = es;
+        el = (0, r.bG)([h.A], () => h.A.getSelectedParticipant(n.id)),
+        ea = (0, g.A)(M.x.DEFAULT, t.user.id),
+        es = (0, p.A)(t.user.id),
+        er = { channel: n, selectedParticipant: el, user: W },
+        eo = l.useRef(er);
+    return (l.useEffect(() => {
+        eo.current = er;
     }),
-    r.useEffect(() => {
+    l.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
-        e.isGuildStageVoice() && !X && (null == t ? void 0 : t.id) === n.id && u.A.selectParticipant(e.id, null);
-    }, [X]),
-    i && !q && !V && X && !c && null != H && x.A.supports(w.O5.VIDEO))
-        ? null != ei && null == ea
-            ? (0, l.jsx)(j.A, {
-                  avError: ei,
-                  userId: t.id,
-                  width: o,
-                  selected: c,
-              })
-            : (0, l.jsx)(
-                  A.A,
+        e.isGuildStageVoice() && !q && t?.id === n.id && d.A.selectParticipant(e.id, null);
+    }, [q]),
+    a && !Z && !G && q && !c && null != B && I.A.supports(M.O5.VIDEO))
+        ? null != ea && null == es
+            ? (0, i.jsx)(b.A, { avError: ea, userId: t.id, width: o, selected: c })
+            : (0, i.jsx)(
+                  _.A,
                   {
-                      onResize: L,
-                      wrapperClassName: E !== b.N.CALL_TILE ? P.tN : void 0,
-                      className: P.Qs,
-                      mirror: K,
-                      streamId: W,
-                      videoComponent: H,
-                      fit: T,
-                      videoSpinnerContext: Y.id === B ? d.u.SELF_VIDEO : d.u.REMOTE_VIDEO,
-                      paused: G,
-                      userId: Y.id,
+                      onResize: w,
+                      wrapperClassName: x !== A.N.CALL_TILE ? O.tN : void 0,
+                      className: O.Qs,
+                      mirror: Y,
+                      streamId: K,
+                      videoComponent: B,
+                      fit: R,
+                      videoSpinnerContext: W.id === V ? u.u.SELF_VIDEO : u.u.REMOTE_VIDEO,
+                      paused: H,
+                      userId: W.id,
                   },
-                  W,
+                  K,
               )
-        : (0, l.jsx)("div", {
-              className: a()(P.Qs, {
-                  [P.Kx]: M || U,
-              }),
-              children: (0, l.jsx)(h.A, {
-                  "aria-label": $,
-                  avatarDecoration: el,
-                  backgroundSrc: Y.getAvatarURL(n.guild_id, 80),
+        : (0, i.jsx)("div", {
+              className: s()(O.Qs, { [O.Kx]: k || U }),
+              children: (0, i.jsx)(f.A, {
+                  "aria-label": Q,
+                  avatarDecoration: ei,
+                  backgroundSrc: W.getAvatarURL(n.guild_id, 80),
                   guildId: n.guild_id,
                   pulseSpeakingIndicator: F,
                   size: et,
                   speaking: z,
                   src: en,
-                  userId: Y.id,
+                  userId: W.id,
               }),
           });
 }

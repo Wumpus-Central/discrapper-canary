@@ -1,6 +1,5 @@
-n.d(t, {
-    Y: () => l,
-});
+"use strict";
+n.d(t, { Y: () => l });
 var r = n(254326),
     i = n(919301),
     a = n(672541),
@@ -25,8 +24,5 @@ let l = {
         purchaseType: o.VVm.ONE_TIME,
         TENANT_CHECKOUT_FLOW_CONFIG: i.WT,
     },
-    [s.C.PREMIUM_CHECKOUT]: {
-        implemented: !1,
-        flowType: s.C.PREMIUM_CHECKOUT,
-    },
+    [s.C.PREMIUM_CHECKOUT]: { implemented: !1, flowType: s.C.PREMIUM_CHECKOUT },
 };

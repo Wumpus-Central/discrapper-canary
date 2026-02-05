@@ -1,129 +1,47 @@
-n.d(t, {
-    Y: () => p,
-});
+"use strict";
+n.d(t, { Y: () => o });
 var r = n(627968);
 n(64700);
 var i = n(827734),
     a = n(996682),
     s = n(27989);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = f(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let p = (e) => {
-    var t, n;
-    let { size: o = "md", width: c, height: f, color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]),
-        m = (0, s.J)(o),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
-    return (0, r.jsxs)(
-        "svg",
-        u(l({}, (0, a.A)(h)), {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: g,
-            height: E,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, r.jsx)("path", {
-                    fill: "string" == typeof p ? p : p.css,
-                    d: "M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
-                    className: _,
-                }),
-                (0, r.jsx)("path", {
-                    fill: "string" == typeof p ? p : p.css,
-                    d: "M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1c.35 0 .7.02 1.04.07.4.05.53.56.26.87a5.45 5.45 0 0 0-1.3 3.54 7.63 7.63 0 0 0 1.72 4.64c.26.35.03.88-.4.88H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z",
-                    className: _,
-                }),
-                (0, r.jsx)("path", {
-                    fill: "string" == typeof p ? p : p.css,
-                    fillRule: "evenodd",
-                    d: "M19.87 21.73c.9-.7 3.13-2.7 3.13-5.25a3.5 3.5 0 0 0-7 0c0 2.56 2.24 4.55 3.13 5.25.22.17.52.17.74 0ZM19.5 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z",
-                    clipRule: "evenodd",
-                    className: _,
-                }),
-            ],
-        }),
-    );
+let o = (e) => {
+    let {
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
+        } = e,
+        d = (0, s.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
+    return (0, r.jsxs)("svg", {
+        ...(0, a.A)(c),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: _,
+        height: f,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, r.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
+                d: "M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
+                className: u,
+            }),
+            (0, r.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
+                d: "M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1c.35 0 .7.02 1.04.07.4.05.53.56.26.87a5.45 5.45 0 0 0-1.3 3.54 7.63 7.63 0 0 0 1.72 4.64c.26.35.03.88-.4.88H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z",
+                className: u,
+            }),
+            (0, r.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
+                fillRule: "evenodd",
+                d: "M19.87 21.73c.9-.7 3.13-2.7 3.13-5.25a3.5 3.5 0 0 0-7 0c0 2.56 2.24 4.55 3.13 5.25.22.17.52.17.74 0ZM19.5 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z",
+                clipRule: "evenodd",
+                className: u,
+            }),
+        ],
+    });
 };

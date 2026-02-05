@@ -1,153 +1,128 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(843282),
-    o = n(397927),
-    l = n(915089),
+n.d(t, { A: () => T }), n(321073);
+var i = n(627968),
+    s = n(64700),
+    r = n(311907),
+    a = n(843282),
+    l = n(397927),
+    o = n(915089),
     c = n(145497),
-    u = n(685073),
-    d = n(534400),
-    f = n(128450),
-    p = n(193658),
-    _ = n(287809),
-    h = n(581781),
-    m = n(743981),
-    g = n(355097),
-    E = n(985018),
-    b = n(86267);
-let y = (0, l.Ld)(),
-    O = i.memo(function (e) {
-        let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: l } = e,
-            O = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            A = (0, a.bG)([_.default], () => {
-                var e;
-                return (0, u.Zo)(null == (e = _.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
-            }),
-            v = void 0 !== n ? n : A,
-            S = i.useMemo(
-                () =>
-                    t.reduce((e, t) => {
-                        var n;
-                        return (
-                            (null == (n = t.profile) ? void 0 : n.tag) != null &&
-                                e.push({
-                                    label: t.name,
-                                    value: t.id,
-                                }),
-                            e
-                        );
-                    }, []),
+    d = n(685073),
+    u = n(534400),
+    _ = n(128450),
+    m = n(193658),
+    A = n(287809),
+    g = n(581781),
+    E = n(743981),
+    h = n(355097),
+    p = n(985018),
+    C = n(86267);
+let x = (0, o.Ld)(),
+    T = s.memo(function (e) {
+        let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
+            T = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            I = (0, r.bG)([A.default], () => (0, d.Zo)(A.default.getCurrentUser()?.primaryGuild).guildId),
+            S = void 0 !== n ? n : I,
+            f = s.useMemo(
+                () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
                 [t],
             ),
-            I = i.useCallback(
+            N = s.useCallback(
                 (e) => {
-                    var t, n, i;
                     if (null == e) return null;
-                    let a = O.get(e.value);
-                    if (null == a) return null;
-                    let s = null == (n = a.profile) ? void 0 : n.tag;
-                    return null == s
+                    let t = T.get(e.value);
+                    if (null == t) return null;
+                    let n = t.profile?.tag;
+                    return null == n
                         ? null
-                        : (0, r.jsx)(h.A, {
-                              guildTag: s,
-                              guildBadge: null != (t = null == (i = a.profile) ? void 0 : i.badge) ? t : void 0,
-                              guildId: a.id,
+                        : (0, i.jsx)(g.A, {
+                              guildTag: n,
+                              guildBadge: t.profile?.badge ?? void 0,
+                              guildId: t.id,
                               guildName: e.label,
-                              guildIcon: a.icon,
+                              guildIcon: t.icon,
                               guildIconSize: 32,
                           });
                 },
-                [O],
+                [T],
             ),
-            T = i.useCallback(
+            b = s.useCallback(
                 (e) => {
-                    var t;
                     if (null == e) return null;
-                    let n = O.get(e.value);
-                    return null == n || null == (null == (t = n.profile) ? void 0 : t.tag)
+                    let t = T.get(e.value);
+                    return null == t || null == t.profile?.tag
                         ? null
-                        : (0, r.jsx)(c.j, {
-                              guildId: n.id,
-                              guildName: n.name,
-                              guildIcon: n.icon,
+                        : (0, i.jsx)(c.j, {
+                              guildId: t.id,
+                              guildName: t.name,
+                              guildIcon: t.icon,
                               iconSize: 32,
                               animate: !1,
                           });
                 },
-                [O],
+                [T],
             ),
-            C = i.useCallback(
+            R = s.useCallback(
                 (e) => {
-                    var t, n, i;
                     if (null == e) return null;
-                    let a = O.get(e.value);
-                    if (null == a) return null;
-                    let s = null == (n = a.profile) ? void 0 : n.tag;
-                    return null == s
+                    let t = T.get(e.value);
+                    if (null == t) return null;
+                    let n = t.profile?.tag;
+                    return null == n
                         ? null
-                        : (0, r.jsx)(d.o9, {
-                              guildId: a.id,
-                              guildTag: s,
-                              guildBadge: null != (t = null == (i = a.profile) ? void 0 : i.badge) ? t : void 0,
-                              badgeSize: m.Sl.SIZE_16,
+                        : (0, i.jsx)(u.o9, {
+                              guildId: t.id,
+                              guildTag: n,
+                              guildBadge: t.profile?.badge ?? void 0,
+                              badgeSize: E.Sl.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
                 },
-                [O],
+                [T],
             ),
-            N = i.useCallback(
+            v = s.useCallback(
                 (e) => {
                     let t = e[0];
-                    return null == t
-                        ? null
-                        : (0, r.jsx)(r.Fragment, {
-                              children: I(t),
-                          });
+                    return null == t ? null : (0, i.jsx)(i.Fragment, { children: N(t) });
                 },
-                [I],
+                [N],
             ),
-            R = i.useCallback(
+            O = s.useCallback(
                 (e) => {
-                    null == l || l(e);
+                    o?.(e);
                 },
-                [l],
+                [o],
             ),
-            w = i.useCallback((e) => e === v, [v]),
-            P = i.useCallback((e) => e, []),
-            D = i.useCallback(() => {
-                null == l || l(null);
-            }, [l]),
-            x = i.useRef(null);
+            j = s.useCallback((e) => e === S, [S]),
+            P = s.useCallback((e) => e, []),
+            y = s.useCallback(() => {
+                o?.(null);
+            }, [o]),
+            L = s.useRef(null);
         return (
-            (0, p.A)(x, g._F.GUILD_TAG),
-            (0, r.jsxs)(f.A, {
-                title: E.intl.string(E.t.Pdd1nd),
-                titleId: y,
-                ref: x,
+            (0, m.A)(L, h._F.GUILD_TAG),
+            (0, i.jsxs)(_.A, {
+                title: p.intl.string(p.t.Pdd1nd),
+                titleId: x,
+                ref: L,
                 children: [
-                    (0, r.jsx)(o.Text, {
-                        className: b.VA,
+                    (0, i.jsx)(l.Text, {
+                        className: C.VA,
                         variant: "text-sm/normal",
-                        children: E.intl.string(E.t.mlZ6Jx),
+                        children: p.intl.string(p.t.mlZ6Jx),
                     }),
-                    (0, r.jsx)(s.Pw, {
-                        className: b.Lt,
-                        optionClassName: b.S0,
-                        isSelected: w,
-                        options: S,
-                        select: R,
-                        renderLeading: T,
-                        renderTrailing: C,
-                        renderOptionValue: N,
+                    (0, i.jsx)(a.Pw, {
+                        className: C.Lt,
+                        optionClassName: C.S0,
+                        isSelected: j,
+                        options: f,
+                        select: O,
+                        renderLeading: b,
+                        renderTrailing: R,
+                        renderOptionValue: v,
                         serialize: P,
-                        clear: D,
-                        clearable: null != v,
+                        clear: y,
+                        clearable: null != S,
                         maxVisibleItems: 8,
                         "data-migration-pending": !0,
                     }),

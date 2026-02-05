@@ -1,3 +1,2 @@
-e.exports = {
-    m: "daa9a1a4ccb6e910",
-};
+"use strict";
+e.exports = { m: "emojiIcon_ff168a" };

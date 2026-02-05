@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => r });
 let r = {
     makeMemoizer: function (e) {
         let t = new Map();

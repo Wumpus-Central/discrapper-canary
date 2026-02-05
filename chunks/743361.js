@@ -1,40 +1,37 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => g });
 var r = n(735438),
     i = n.n(r),
     a = n(314116),
     s = n(308528),
     o = n(843472),
     l = n(155718),
-    c = n(47167),
-    u = n(994500),
+    u = n(47167),
+    c = n(994500),
     d = n(287809),
-    f = n(392054),
-    p = n(73510),
-    _ = n(652215),
+    _ = n(392054),
+    f = n(73510),
+    p = n(652215),
     h = n(985018);
-
 function m(e) {
     switch (e) {
-        case _.Z86.GIF.title:
-        case _.Z86.TENOR.title:
+        case p.Z86.GIF.title:
+        case p.Z86.TENOR.title:
             return h.intl.string(h.t["0vrCgJ"]);
         default:
             return "";
     }
 }
 let g = [
-    ...i()(_.Z86)
+    ...i()(p.Z86)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
             type: l.kc.CHAT,
-            inputType: f.y$.BUILT_IN_INTEGRATION,
-            applicationId: p.Ik.BUILT_IN,
+            inputType: _.y$.BUILT_IN_INTEGRATION,
+            applicationId: f.Ik.BUILT_IN,
             get untranslatedDescription() {
                 return m(e.title);
             },
@@ -42,7 +39,7 @@ let g = [
                 return m(e.title);
             },
             options:
-                e.type === _.p_j.GIF
+                e.type === p.p_j.GIF
                     ? [
                           {
                               name: "query",
@@ -67,8 +64,8 @@ let g = [
         untranslatedName: "leave",
         displayName: "leave",
         type: l.kc.CHAT,
-        inputType: f.y$.BUILT_IN,
-        applicationId: p.Ik.BUILT_IN,
+        inputType: _.y$.BUILT_IN,
+        applicationId: f.Ik.BUILT_IN,
         get untranslatedDescription() {
             return h.intl.string(h.t["26C4oi"]);
         },
@@ -94,38 +91,24 @@ let g = [
             return null != t && t.isGroupDM();
         },
         execute: (e, t) => {
-            var n, r;
-            let { channel: i } = t;
-            if (null == i) return;
-            let l = (0, c.m1)(i, d.default, u.A),
-                f = h.intl.formatToPlainString(h.t.hJ5Ap4, {
-                    name: l,
-                }),
-                p = h.intl.format(h.t.SSIVOu, {
-                    name: l,
-                }),
-                _ = null != (n = null == (r = e.find((e) => "silent" === e.name)) ? void 0 : r.value) && n;
-            async function m() {
-                if (null != i)
+            let { channel: n } = t;
+            if (null == n) return;
+            let r = (0, u.m1)(n, d.default, c.A),
+                i = h.intl.formatToPlainString(h.t.hJ5Ap4, { name: r }),
+                l = h.intl.format(h.t.SSIVOu, { name: r }),
+                _ = e.find((e) => "silent" === e.name)?.value ?? !1;
+            async function f() {
+                if (null != n)
                     try {
-                        await s.A.closePrivateChannel(i.id, void 0, _);
+                        await s.A.closePrivateChannel(n.id, void 0, _);
                     } catch (e) {
-                        o.A.sendBotMessage(i.id, h.intl.string(h.t["YOsuT/"]));
+                        o.A.sendBotMessage(n.id, h.intl.string(h.t["YOsuT/"]));
                     }
             }
-            i.isManaged() &&
-                ((f = h.intl.formatToPlainString(h.t.hVGjEW, {
-                    name: l,
-                })),
-                (p = h.intl.format(h.t.IK1Qvs, {
-                    name: l,
-                }))),
-                (0, a.A)({
-                    title: f,
-                    subtitle: p,
-                    confirmText: h.intl.string(h.t["26C4oi"]),
-                    onConfirm: m,
-                });
+            n.isManaged() &&
+                ((i = h.intl.formatToPlainString(h.t.hVGjEW, { name: r })),
+                (l = h.intl.format(h.t.IK1Qvs, { name: r }))),
+                (0, a.A)({ title: i, subtitle: l, confirmText: h.intl.string(h.t["26C4oi"]), onConfirm: f });
         },
     },
     {
@@ -133,8 +116,8 @@ let g = [
         untranslatedName: "sticker",
         displayName: "sticker",
         type: l.kc.CHAT,
-        inputType: f.y$.BUILT_IN_INTEGRATION,
-        applicationId: p.Ik.BUILT_IN,
+        inputType: _.y$.BUILT_IN_INTEGRATION,
+        applicationId: f.Ik.BUILT_IN,
         get untranslatedDescription() {
             return h.intl.string(h.t.GUH9II);
         },
@@ -155,7 +138,7 @@ let g = [
                 required: !0,
             },
         ],
-        integrationType: _.p_j.STICKER,
+        integrationType: p.p_j.STICKER,
         integrationTitle: "sticker",
     },
 ];

@@ -1,24 +1,13 @@
-n.d(t, {
-    o: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { o: () => a });
 var r = n(758255),
     i = n(383682);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s {
+class a {
+    primary;
+    extended;
+    constructor(e, t) {
+        (this.primary = new i.K(e)), (this.extended = new i.K(t));
+    }
     get totalLength() {
         return this.primary.length + this.extended.length;
     }
@@ -75,11 +64,5 @@ class s {
     }
     allValues() {
         return r.c(this.extended.values(), this.primary.values());
-    }
-    constructor(e, t) {
-        a(this, "primary", void 0),
-            a(this, "extended", void 0),
-            (this.primary = new i.K(e)),
-            (this.extended = new i.K(t));
     }
 }

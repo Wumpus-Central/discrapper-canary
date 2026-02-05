@@ -1,6 +1,5 @@
-n.d(t, {
-    X: () => o,
-});
+"use strict";
+n.d(t, { X: () => o });
 var r = n(65412),
     i = n(82180),
     a = n(124651),
@@ -23,9 +22,7 @@ class o {
             if (i.oneofKind !== e.localName) continue;
             let a =
                     "scalar" == e.kind || "enum" == e.kind
-                        ? Object.assign(Object.assign({}, t), {
-                              emitDefaultValues: !0,
-                          })
+                        ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 })
                         : t,
                 o = this.field(e, i[e.localName], a);
             (0, s.vA)(void 0 !== o), (n[t.useProtoFieldName ? e.name : e.jsonName] = o);
@@ -117,46 +114,46 @@ class o {
     }
     scalar(e, t, n, o, l) {
         if (void 0 === t) return void (0, s.vA)(o);
-        let c = l || o;
+        let u = l || o;
         switch (e) {
             case a.LN.INT32:
             case a.LN.SFIXED32:
             case a.LN.SINT32:
-                if (0 === t) return c ? 0 : void 0;
+                if (0 === t) return u ? 0 : void 0;
                 return (0, s.bn)(t), t;
             case a.LN.FIXED32:
             case a.LN.UINT32:
-                if (0 === t) return c ? 0 : void 0;
+                if (0 === t) return u ? 0 : void 0;
                 return (0, s.e1)(t), t;
             case a.LN.FLOAT:
                 (0, s.wO)(t);
             case a.LN.DOUBLE:
-                if (0 === t) return c ? 0 : void 0;
+                if (0 === t) return u ? 0 : void 0;
                 if (((0, s.vA)("number" == typeof t), Number.isNaN(t))) return "NaN";
                 if (t === 1 / 0) return "Infinity";
                 if (t === -1 / 0) return "-Infinity";
                 return t;
             case a.LN.STRING:
-                if ("" === t) return c ? "" : void 0;
+                if ("" === t) return u ? "" : void 0;
                 return (0, s.vA)("string" == typeof t), t;
             case a.LN.BOOL:
-                if (!1 === t) return !c && void 0;
+                if (!1 === t) return !u && void 0;
                 return (0, s.vA)("boolean" == typeof t), t;
             case a.LN.UINT64:
             case a.LN.FIXED64:
                 (0, s.vA)("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
-                let u = i.e.from(t);
-                if (u.isZero() && !c) return;
-                return u.toString();
+                let c = i.e.from(t);
+                if (c.isZero() && !u) return;
+                return c.toString();
             case a.LN.INT64:
             case a.LN.SFIXED64:
             case a.LN.SINT64:
                 (0, s.vA)("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
                 let d = i.h.from(t);
-                if (d.isZero() && !c) return;
+                if (d.isZero() && !u) return;
                 return d.toString();
             case a.LN.BYTES:
-                if (((0, s.vA)(t instanceof Uint8Array), !t.byteLength)) return c ? "" : void 0;
+                if (((0, s.vA)(t instanceof Uint8Array), !t.byteLength)) return u ? "" : void 0;
                 return (0, r.C)(t);
         }
     }

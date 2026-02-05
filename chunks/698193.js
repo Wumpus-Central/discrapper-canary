@@ -1,233 +1,139 @@
-e.d(t, {
-    default: () => z,
-});
-var i = e(627968);
-e(64700);
-var l = e(311907),
-    r = e(397927),
-    a = e(442433),
-    s = e(847767),
-    c = e(358367),
-    o = e(468389),
-    d = e(793574),
-    u = e(50268),
-    A = e(515610),
-    b = e(133238),
-    g = e(795144),
-    h = e(979807),
-    j = e(671470),
-    v = e(690953),
-    p = e(508654),
-    x = e(24661),
-    f = e(769591),
-    y = e(446600),
-    C = e(533957),
-    m = e(886393),
-    V = e(477190),
-    O = e(307623),
-    E = e(317910),
-    G = e(173682),
-    X = e(475777),
-    N = e(848977),
-    S = e(995102),
-    _ = e(288104),
-    L = e(661504),
-    P = e(969128),
-    w = e(304694),
-    T = e(217754),
-    k = e(417925),
-    D = e(671483),
-    I = e(217563),
-    M = e(788408),
-    B = e(652215),
-    U = e(985018);
-
-function Z(n) {
-    for (var t = 1; t < arguments.length; t++) {
-        var e = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(e);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(e).filter(function (n) {
-                    return Object.getOwnPropertyDescriptor(e, n).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = e[t]),
-                    t in n
-                        ? Object.defineProperty(n, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (n[t] = i);
-            });
-    }
-    return n;
-}
-
+i.d(t, { default: () => w });
+var e = i(627968);
+i(64700);
+var l = i(311907),
+    r = i(397927),
+    a = i(442433),
+    s = i(847767),
+    d = i(358367),
+    c = i(468389),
+    o = i(793574),
+    A = i(50268),
+    u = i(515610),
+    h = i(133238),
+    g = i(795144),
+    x = i(979807),
+    C = i(671470),
+    j = i(690953),
+    b = i(508654),
+    v = i(24661),
+    p = i(769591),
+    V = i(446600),
+    G = i(533957),
+    m = i(886393),
+    E = i(477190),
+    y = i(307623),
+    X = i(317910),
+    N = i(173682),
+    _ = i(475777),
+    f = i(848977),
+    L = i(995102),
+    S = i(288104),
+    O = i(661504),
+    T = i(969128),
+    k = i(304694),
+    D = i(217754),
+    I = i(417925),
+    M = i(671483),
+    P = i(217563),
+    B = i(788408),
+    U = i(652215),
+    Z = i(985018);
 function H(n) {
-    let { channel: t, guild: e, onSelect: s } = n,
-        c = t.isGuildStageVoice(),
-        d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        A = (0, m.A)(t),
-        v = (0, p.Qs)(t.id),
-        C = (0, x.A)(null == v ? void 0 : v.id, e, t),
-        V = (0, T.A)(t, d),
-        O = (0, b.m)(t),
-        X = (0, b.y)(t),
-        N = (0, g.A)(t),
-        S = (0, h.A)(t),
-        P = (0, j.A)(t),
-        D = (0, G.A)(t),
-        I = (0, _.A)(t),
-        B = (0, E.A)(t),
-        Z = (0, M.A)(t, e),
-        H = (0, u.A)({
-            id: t.id,
-            label: U.intl.string(U.t.gFHI3k),
-        }),
-        Y = (0, w.A)(t),
-        z = (0, o.A)(t),
-        F = (0, f.os)("ChannelListVoiceContextMenuFavorite"),
-        Q = (0, L.Ay)(t),
-        R = (0, k.A)();
-    return (0, i.jsxs)(r.W1t, {
+    let { channel: t, guild: i, onSelect: s } = n,
+        d = t.isGuildStageVoice(),
+        o = (0, l.bG)([V.A], () => (d ? V.A.getStageInstanceByChannel(t.id) : void 0), [d, t.id]),
+        u = (0, m.A)(t),
+        j = (0, b.Qs)(t.id),
+        G = (0, v.A)(j?.id, i, t),
+        E = (0, D.A)(t, o),
+        y = (0, h.m)(t),
+        _ = (0, h.y)(t),
+        f = (0, g.A)(t),
+        L = (0, x.A)(t),
+        T = (0, C.A)(t),
+        M = (0, N.A)(t),
+        P = (0, S.A)(t),
+        U = (0, X.A)(t),
+        H = (0, B.A)(t, i),
+        Y = (0, A.A)({ id: t.id, label: Z.intl.string(Z.t.gFHI3k) }),
+        w = (0, k.A)(t),
+        z = (0, c.A)(t),
+        F = (0, p.os)("ChannelListVoiceContextMenuFavorite"),
+        Q = (0, O.Ay)(t),
+        R = (0, I.A)();
+    return (0, e.jsxs)(r.W1t, {
         "data-menu-migrated": !0,
         navId: "channel-context",
         onClose: a.Z_,
-        "aria-label": U.intl.string(U.t.Xm41aV),
+        "aria-label": Z.intl.string(Z.t.Xm41aV),
         onSelect: s,
         children: [
-            (0, i.jsx)(r.rXV, {
-                children: null != v ? C : V,
-            }),
-            (0, i.jsxs)(r.rXV, {
-                children: [S, P, N, O],
-            }),
-            (0, i.jsxs)(r.rXV, {
-                children: [D, F ? Q : I, B],
-            }),
-            (0, i.jsx)(r.rXV, {
-                children: z,
-            }),
-            (0, i.jsxs)(r.rXV, {
-                children: [Z, A],
-            }),
-            (0, i.jsx)(r.rXV, {
-                children: X,
-            }),
-            (0, i.jsx)(r.rXV, {
-                children: Y,
-            }),
-            (0, i.jsxs)(r.rXV, {
-                children: [H, R],
-            }),
+            (0, e.jsx)(r.rXV, { children: null != j ? G : E }),
+            (0, e.jsxs)(r.rXV, { children: [L, T, f, y] }),
+            (0, e.jsxs)(r.rXV, { children: [M, F ? Q : P, U] }),
+            (0, e.jsx)(r.rXV, { children: z }),
+            (0, e.jsxs)(r.rXV, { children: [H, u] }),
+            (0, e.jsx)(r.rXV, { children: _ }),
+            (0, e.jsx)(r.rXV, { children: w }),
+            (0, e.jsxs)(r.rXV, { children: [Y, R] }),
         ],
     });
 }
-
 function Y(n) {
-    let { channel: t, guild: e, onSelect: s } = n,
-        c = t.isGuildStageVoice(),
-        d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        A = (0, N.A)(t),
+    let { channel: t, guild: i, onSelect: s } = n,
+        d = t.isGuildStageVoice(),
+        o = (0, l.bG)([V.A], () => (d ? V.A.getStageInstanceByChannel(t.id) : void 0), [d, t.id]),
+        u = (0, f.A)(t),
         g = (0, m.A)(t),
-        h = (0, p.Qs)(t.id),
-        j = (0, x.A)(null == h ? void 0 : h.id, e, t),
-        B = (0, T.A)(t, d),
-        Z = (0, b.m)(t),
-        H = (0, b.y)(t),
-        Y = (0, G.A)(t),
-        z = (0, _.A)(t),
-        F = (0, E.A)(t),
-        Q = (0, X.A)(t, e, d),
-        R = (0, M.A)(t, e),
-        W = (0, D.A)(t, e),
-        q = (0, I.A)(t, e.id),
-        K = (0, C.A)(t, e),
-        J = (0, V.A)(t, e),
-        $ = (0, O.A)(t),
-        nn = (0, u.A)({
-            id: t.id,
-            label: U.intl.string(U.t.gFHI3k),
-        }),
-        nt = (0, w.A)(t),
-        ne = (0, o.A)(t),
-        ni = (0, P.A)(t),
-        nl = (0, v.A)(t),
-        nr = (0, S.Ay)(t),
-        na = (0, f.os)("ChannelListVoiceContextMenuNormal"),
-        ns = (0, L.Ay)(t),
-        nc = (0, k.A)();
-    return (0, i.jsxs)(r.W1t, {
+        x = (0, b.Qs)(t.id),
+        C = (0, v.A)(x?.id, i, t),
+        U = (0, D.A)(t, o),
+        H = (0, h.m)(t),
+        Y = (0, h.y)(t),
+        w = (0, N.A)(t),
+        z = (0, S.A)(t),
+        F = (0, X.A)(t),
+        Q = (0, _.A)(t, i, o),
+        R = (0, B.A)(t, i),
+        W = (0, M.A)(t, i),
+        q = (0, P.A)(t, i.id),
+        K = (0, G.A)(t, i),
+        J = (0, E.A)(t, i),
+        $ = (0, y.A)(t),
+        nn = (0, A.A)({ id: t.id, label: Z.intl.string(Z.t.gFHI3k) }),
+        nt = (0, k.A)(t),
+        ni = (0, c.A)(t),
+        ne = (0, T.A)(t),
+        nl = (0, j.A)(t),
+        nr = (0, L.Ay)(t),
+        na = (0, p.os)("ChannelListVoiceContextMenuNormal"),
+        ns = (0, O.Ay)(t),
+        nd = (0, I.A)();
+    return (0, e.jsxs)(r.W1t, {
         "data-menu-migrated": !0,
         navId: "channel-context",
         onClose: a.Z_,
-        "aria-label": U.intl.string(U.t.Xm41aV),
+        "aria-label": Z.intl.string(Z.t.Xm41aV),
         onSelect: s,
         children: [
-            (0, i.jsx)(r.rXV, {
-                children: null != h ? j : B,
-            }),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [A, Z],
-                },
-                "mark-as-read-or-favorite",
-            ),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [Q, ne, ni, g],
-                },
-                "channel-actions",
-            ),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [q, R, W, Y, nl, nt],
-                },
-                "voice-actions",
-            ),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [nr, na ? ns : z],
-                },
-                "notifications",
-            ),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [F, K, J, $],
-                },
-                "admin-actions",
-            ),
-            (0, i.jsx)(r.rXV, {
-                children: H,
-            }),
-            (0, i.jsxs)(
-                r.rXV,
-                {
-                    children: [nn, nc],
-                },
-                "developer-actions",
-            ),
+            (0, e.jsx)(r.rXV, { children: null != x ? C : U }),
+            (0, e.jsxs)(r.rXV, { children: [u, H] }, "mark-as-read-or-favorite"),
+            (0, e.jsxs)(r.rXV, { children: [Q, ni, ne, g] }, "channel-actions"),
+            (0, e.jsxs)(r.rXV, { children: [q, R, W, w, nl, nt] }, "voice-actions"),
+            (0, e.jsxs)(r.rXV, { children: [nr, na ? ns : z] }, "notifications"),
+            (0, e.jsxs)(r.rXV, { children: [F, K, J, $] }, "admin-actions"),
+            (0, e.jsx)(r.rXV, { children: Y }),
+            (0, e.jsxs)(r.rXV, { children: [nn, nd] }, "developer-actions"),
         ],
     });
 }
-let z = (0, c.A)(
+let w = (0, d.A)(
     (0, s.A)(
         function (n) {
-            return (0, A.A)() ? (0, i.jsx)(H, Z({}, n)) : (0, i.jsx)(Y, Z({}, n));
+            return (0, u.A)() ? (0, e.jsx)(H, { ...n }) : (0, e.jsx)(Y, { ...n });
         },
-        {
-            object: B.ZSU.CONTEXT_MENU,
-        },
+        { object: U.ZSU.CONTEXT_MENU },
     ),
-    [d.A.CONTEXT_MENU, d.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
+    [o.A.CONTEXT_MENU, o.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

@@ -1,119 +1,71 @@
-n.d(t, {
-    default: () => f,
-});
-var r = n(627968),
-    l = n(64700),
-    i = n(33851),
-    o = n.n(i),
-    a = n(417597),
-    s = n(397927),
-    c = n(70738),
-    u = n(266047),
-    d = n(221950),
-    C = n(652215),
-    m = n(985018);
-let p = [
-    c.mF.ORDER_BY_GUILD_JOINED_AT_DESC,
-    c.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
-    c.mF.ORDER_BY_USER_ID_DESC,
-    c.mF.ORDER_BY_USER_ID_ASC,
+l.d(t, { default: () => h });
+var n = l(627968),
+    i = l(64700),
+    s = l(33851),
+    a = l.n(s),
+    r = l(417597),
+    o = l(397927),
+    C = l(70738),
+    d = l(266047),
+    c = l(221950),
+    u = l(652215),
+    m = l(985018);
+let x = [
+    C.mF.ORDER_BY_GUILD_JOINED_AT_DESC,
+    C.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
+    C.mF.ORDER_BY_USER_ID_DESC,
+    C.mF.ORDER_BY_USER_ID_ASC,
 ];
-
-function f(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, a.bG)([u.A], () => u.A.getSearchStateByGuildId(t), [t], o()),
-        f = l.useCallback(
+function h(e) {
+    let { guildId: t, onClose: l } = e,
+        s = (0, r.bG)([d.A], () => d.A.getSearchStateByGuildId(t), [t], a()),
+        h = i.useCallback(
             (e) => {
-                var n, r;
-                (0, d.Ld)(
-                    t,
-                    ((n = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, i)),
-                    (r = r =
-                        {
-                            selectedSort: e,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    n),
-                );
+                (0, c.Ld)(t, { ...s, selectedSort: e });
             },
-            [t, i],
+            [t, s],
         );
-    return (0, r.jsx)(s.W1t, {
+    return (0, n.jsx)(o.W1t, {
         "data-menu-migrated": !0,
         navId: "members-table-sort-menu",
         onClose: () => {
-            null == n || n();
+            l?.();
         },
         "aria-label": m.intl.string(m.t["u/7Rdc"]),
-        onSelect: C.tEg,
-        children: (0, r.jsx)(s.rXV, {
-            children: p.map((e) => {
+        onSelect: u.tEg,
+        children: (0, n.jsx)(o.rXV, {
+            children: x.map((e) => {
                 var t;
-                let n = (function (e) {
+                let l = (function (e) {
                     switch (e) {
-                        case c.mF.ORDER_BY_GUILD_JOINED_AT_DESC:
+                        case C.mF.ORDER_BY_GUILD_JOINED_AT_DESC:
                             return m.intl.string(m.t.V7zCwB);
-                        case c.mF.ORDER_BY_GUILD_JOINED_AT_ASC:
+                        case C.mF.ORDER_BY_GUILD_JOINED_AT_ASC:
                             return m.intl.string(m.t.l2Zaet);
-                        case c.mF.ORDER_BY_USER_ID_DESC:
+                        case C.mF.ORDER_BY_USER_ID_DESC:
                             return m.intl.string(m.t.xMA6RG);
-                        case c.mF.ORDER_BY_USER_ID_ASC:
+                        case C.mF.ORDER_BY_USER_ID_ASC:
                             return m.intl.string(m.t.bUKkZx);
                         default:
                             return null;
                     }
                 })(e);
                 return (
-                    null != n &&
-                    (0, r.jsx)(
-                        s.iDA,
+                    null != l &&
+                    (0, n.jsx)(
+                        o.iDA,
                         {
-                            id: "members-table-sort-".concat(e),
-                            label: n,
+                            id: `members-table-sort-${e}`,
+                            label: l,
                             checked:
-                                (t = i.selectedSort) === c.mF.ORDER_BY_UNSPECIFIED || null == t
-                                    ? e === c.mF.ORDER_BY_GUILD_JOINED_AT_DESC
+                                (t = s.selectedSort) === C.mF.ORDER_BY_UNSPECIFIED || null == t
+                                    ? e === C.mF.ORDER_BY_GUILD_JOINED_AT_DESC
                                     : e === t,
                             disabled: !1,
-                            action: () => f(e),
+                            action: () => h(e),
                             group: "members-table-sort",
                         },
-                        "members-table-sort-".concat(e),
+                        `members-table-sort-${e}`,
                     )
                 );
             }),

@@ -1,126 +1,100 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(747238),
-    n(812715),
-    n(866193);
+"use strict";
+n.d(t, { A: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(56121),
     s = n(205327),
     o = n(311907),
     l = n(210528),
-    c = n(287809),
-    u = n(121090),
+    u = n(287809),
+    c = n(121090),
     d = n(403362),
-    f = n(562153),
-    p = n(583846),
-    _ = n(405310),
+    _ = n(562153),
+    f = n(583846),
+    p = n(405310),
     h = n(434200),
     m = n(176563),
     g = n(620708),
     E = n(506326),
-    b = n(910692),
-    y = n(18282),
-    O = n(652215),
-    A = n(272984),
-    v = n(985018);
-
-function S(e) {
-    if (e === a.j.WEEK) return v.t.SjOZfm;
+    A = n(910692),
+    I = n(18282),
+    T = n(652215),
+    y = n(272984),
+    S = n(985018);
+function v(e) {
+    if (e === a.j.WEEK) return S.t.SjOZfm;
 }
-let I = (e, t, n, r) => {
-        let i = S(r),
-            a = f.Ay.getName(t.guild_id, t.id, n),
+let C = (e, t, n, r) => {
+        let i = v(r),
+            a = _.Ay.getName(t.guild_id, t.id, n),
             s = e.extra.artist.name;
-        return v.intl
-            .formatToMarkdownString(i, {
-                artist: s,
-                userName: a,
-            })
-            .replaceAll("*", "");
+        return S.intl.formatToMarkdownString(i, { artist: s, userName: a }).replaceAll("*", "");
     },
-    T = (e, t) =>
-        v.intl.formatToPlainString(v.t.Osmpr9, {
-            username: t.username,
-            artist: e.extra.artist.name,
-        }),
-    C = (e) => {
-        let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: f } = e,
-            { parent_title: S, provider: C, image_url: N } = n.extra.media,
-            R = n.extra.artist.name,
-            w = (0, o.bG)([c.default], () => c.default.getUser(n.author_id)),
-            { primaryColor: P, secondaryColor: D } = (0, m.A)(N),
-            x = (0, p.TQ)(n),
-            L = i.useCallback(() => {
-                if (null == t || null == w || !(0, d.S1)(x, g.wE)) return;
-                let e = I(n, t, w, x);
-                return (0, _.Lu)({
-                    user: w,
+    b = (e, t) => S.intl.formatToPlainString(S.t.Osmpr9, { username: t.username, artist: e.extra.artist.name }),
+    N = (e) => {
+        let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: _ } = e,
+            { parent_title: v, provider: N, image_url: R } = n.extra.media,
+            O = n.extra.artist.name,
+            D = (0, o.bG)([u.default], () => u.default.getUser(n.author_id)),
+            { primaryColor: L, secondaryColor: w } = (0, m.A)(R),
+            x = (0, f.TQ)(n),
+            P = i.useCallback(() => {
+                if (null == t || null == D || !(0, d.S1)(x, g.wE)) return;
+                let e = C(n, t, D, x);
+                return (0, p.Lu)({
+                    user: D,
                     channel: t,
-                    mediaImageSrc: N,
-                    artist: R,
+                    mediaImageSrc: R,
+                    artist: O,
                     description: e,
-                    colors: [P, D],
-                    badges: (0, _.KR)(n),
+                    colors: [L, w],
+                    badges: (0, p.KR)(n),
                 });
-            }, [N, R, t, n, P, x, D, w]),
-            j = (0, h.A)(O.fg2.SPOTIFY);
-        if (null == w || !(0, d.S1)(x, g.wE)) return null;
-        let M = () => {
-                let e = A.M0.ALBUM,
+            }, [R, O, t, n, L, x, w, D]),
+            M = (0, h.A)(T.fg2.SPOTIFY);
+        if (null == D || !(0, d.S1)(x, g.wE)) return null;
+        let k = () => {
+                let e = y.M0.ALBUM,
                     t = l.A.isProtocolRegistered()
-                        ? A.RQ.PLAYER_OPEN(e, n.extra.media.external_parent_id)
-                        : A.RQ.WEB_OPEN(e, n.extra.media.external_parent_id);
+                        ? y.RQ.PLAYER_OPEN(e, n.extra.media.external_parent_id)
+                        : y.RQ.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
             },
-            k = () => {
-                let e = A.M0.ARTIST,
+            U = () => {
+                let e = y.M0.ARTIST,
                     t = l.A.isProtocolRegistered()
-                        ? A.RQ.PLAYER_OPEN(e, n.extra.artist.external_id)
-                        : A.RQ.WEB_OPEN(e, n.extra.artist.external_id);
+                        ? y.RQ.PLAYER_OPEN(e, n.extra.artist.external_id)
+                        : y.RQ.WEB_OPEN(e, n.extra.artist.external_id);
                 window.open(t);
             };
-        return (0, r.jsxs)(b.YN, {
+        return (0, r.jsxs)(A.YN, {
             children: [
-                (0, r.jsx)(b.BC, {
-                    onClickTitle: M,
-                    onClickSubtitle: k,
-                    onClickThumbnail: M,
+                (0, r.jsx)(A.BC, {
+                    onClickTitle: k,
+                    onClickSubtitle: U,
+                    onClickThumbnail: k,
                     channel: t,
                     entry: n,
                     headerIcons:
-                        C === s.X.SPOTIFY
-                            ? (0, r.jsx)(y.A, {
-                                  onClick: j,
-                                  Icon: u.A,
-                                  "aria-label": v.intl.string(v.t["0ZB/XE"]),
-                              })
+                        N === s.X.SPOTIFY
+                            ? (0, r.jsx)(I.A, { onClick: M, Icon: c.A, "aria-label": S.intl.string(S.t["0ZB/XE"]) })
                             : null,
-                    userDescription: v.t.CcVI1T,
-                    title: S,
-                    subtitle: R,
+                    userDescription: S.t.CcVI1T,
+                    title: v,
+                    subtitle: O,
                     badges: (0, r.jsx)(E.mG, {
                         location: E.N5.POPOUT,
-                        children: g.$u.map((e, t) =>
-                            (0, r.jsx)(
-                                e,
-                                {
-                                    entry: n,
-                                },
-                                t,
-                            ),
-                        ),
+                        children: g.$u.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                     }),
                 }),
-                (0, r.jsx)(b.Eh, {
-                    children: (0, r.jsx)(b.fD, {
+                (0, r.jsx)(A.Eh, {
+                    children: (0, r.jsx)(A.fD, {
                         onReaction: a,
-                        onVoiceChannelPreview: f,
-                        user: w,
+                        onVoiceChannelPreview: _,
+                        user: D,
                         channel: t,
-                        generateReactionImage: L,
-                        reactionImageAltText: T(n, w),
+                        generateReactionImage: P,
+                        reactionImageAltText: b(n, D),
                         entry: n,
                     }),
                 }),

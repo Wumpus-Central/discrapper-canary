@@ -1,3 +1,4 @@
+"use strict";
 var n = e(675879),
     o = e(918078),
     s = e(57284),
@@ -25,7 +26,4 @@ var n = e(675879),
                     : ((n - 55296) << 10) + (f - 56320) + 65536;
         };
     };
-t.exports = {
-    codeAt: f(!1),
-    charAt: f(!0),
-};
+t.exports = { codeAt: f(!1), charAt: f(!0) };

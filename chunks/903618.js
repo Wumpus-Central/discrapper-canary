@@ -1,47 +1,43 @@
-n.d(t, {
-    A: () => E,
-});
+"use strict";
+n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(788868),
     o = n(298116),
     l = n(134839),
-    c = n(974704),
-    u = n(703707),
+    u = n(974704),
+    c = n(703707),
     d = n(460024),
-    f = n(889056),
-    p = n(579401),
-    _ = n(991564),
+    _ = n(889056),
+    f = n(579401),
+    p = n(991564),
     h = n(336417),
     m = n(790193);
 let g = {
-        [s.o2.STANDARD_BOX]: f,
-        [s.o2.CAKE]: p,
-        [s.o2.CHEST]: _,
+        [s.o2.STANDARD_BOX]: _,
+        [s.o2.CAKE]: f,
+        [s.o2.CHEST]: p,
         [s.o2.COFFEE]: h,
         [s.o2.SNOWGLOBE]: "",
         [s.o2.BOX]: "",
         [s.o2.CUP]: "",
-        [s.o2.SEASONAL_CAKE]: c,
-        [s.o2.SEASONAL_CHEST]: u,
+        [s.o2.SEASONAL_CAKE]: u,
+        [s.o2.SEASONAL_CHEST]: c,
         [s.o2.SEASONAL_COFFEE]: d,
         [s.o2.SEASONAL_STANDARD_BOX]: l,
         [s.o2.NITROWEEN_STANDARD]: m.A,
     },
     E = i.forwardRef(function (e, t) {
-        let { isSelected: n, giftStyle: i, setSelectedGiftStyle: s, onFocus: l, onBlur: c } = e;
+        let { isSelected: n, giftStyle: i, setSelectedGiftStyle: s, onFocus: l, onBlur: u } = e;
         return (0, r.jsx)(a.DUT, {
             className: o.x6,
             innerRef: t,
             onClick: () => s(i),
             onFocus: l,
-            onBlur: c,
+            onBlur: u,
             children: (0, r.jsx)("img", {
-                style: {
-                    width: "100%",
-                    height: "100%",
-                },
+                style: { width: "100%", height: "100%" },
                 alt: "",
                 src: g[i],
                 className: n ? o.MY : o.dk,

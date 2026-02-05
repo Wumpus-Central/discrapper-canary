@@ -1,71 +1,47 @@
-l.d(t, {
-    A: () => o,
-});
-var n = l(627968),
-    a = l(503698),
-    i = l.n(a),
+l.d(a, { A: () => b });
+var t = l(627968),
+    n = l(503698),
+    i = l.n(n),
     r = l(388108),
-    s = l(397927),
-    u = l(124480),
-    d = l(670455),
-    O = l(792935);
-let b = {
-    [d.P0.BAD]: {
-        face: O.qx,
-        "animated-face": "Emoji Neg",
-        thumb: O.Se,
-    },
-    [d.P0.NEUTRAL]: {
-        face: O.ZK,
-        "animated-face": "Emoji Mid",
-    },
-    [d.P0.GOOD]: {
-        face: O.kf,
-        "animated-face": "Emoji Happy",
-        thumb: O.dE,
-    },
+    d = l(397927),
+    s = l(124480),
+    u = l(670455),
+    E = l(792935);
+let O = {
+    [u.P0.BAD]: { face: E.qx, "animated-face": "Emoji Neg", thumb: E.Se },
+    [u.P0.NEUTRAL]: { face: E.ZK, "animated-face": "Emoji Mid" },
+    [u.P0.GOOD]: { face: E.kf, "animated-face": "Emoji Happy", thumb: E.dE },
 };
-
-function o(e) {
-    let { ratingOptions: t = d.Rj, emojiKind: l = "face", textLabels: a, selectedRating: o, onChangeRating: c } = e;
-    return null != a
-        ? (0, n.jsx)("div", {
-              className: O.xu,
-              children: (0, n.jsx)(u.A, {
-                  options: t.map((e) => ({
-                      label: (0, n.jsxs)("div", {
-                          className: O.SG,
-                          children: [
-                              (0, n.jsx)("div", {
-                                  className: b[e][l],
-                              }),
-                              a[e],
-                          ],
+function b(e) {
+    let { ratingOptions: a = u.Rj, emojiKind: l = "face", textLabels: n, selectedRating: b, onChangeRating: v } = e;
+    return null != n
+        ? (0, t.jsx)("div", {
+              className: E.xu,
+              children: (0, t.jsx)(s.A, {
+                  options: a.map((e) => ({
+                      label: (0, t.jsxs)("div", {
+                          className: E.SG,
+                          children: [(0, t.jsx)("div", { className: O[e][l] }), n[e]],
                       }),
                       value: e,
-                      className: i()(O.qq, o === e ? O.wH : null),
+                      className: i()(E.qq, b === e ? E.wH : null),
                   })),
-                  onClick: (e) => c(e.value),
+                  onClick: (e) => v(e.value),
               }),
           })
-        : (0, n.jsx)("div", {
-              className: i()(O.Bo, O.gm),
-              children: t.map((e) =>
-                  (0, n.jsx)(
-                      s.DUT,
+        : (0, t.jsx)("div", {
+              className: i()(E.Bo, E.gm),
+              children: a.map((e) =>
+                  (0, t.jsx)(
+                      d.DUT,
                       {
-                          onClick: () => c(e),
+                          onClick: () => v(e),
                           "aria-label": e,
-                          className: O.qq,
+                          className: E.qq,
                           children:
                               "animated-face" === l
-                                  ? (0, n.jsx)(r.i, {
-                                        className: i()(O.Ld, o === e ? O.wH : null),
-                                        artboard: b[e][l],
-                                    })
-                                  : (0, n.jsx)("div", {
-                                        className: i()(b[e][l], o === e ? O.wH : null),
-                                    }),
+                                  ? (0, t.jsx)(r.i, { className: i()(E.Ld, b === e ? E.wH : null), artboard: O[e][l] })
+                                  : (0, t.jsx)("div", { className: i()(O[e][l], b === e ? E.wH : null) }),
                       },
                       e,
                   ),

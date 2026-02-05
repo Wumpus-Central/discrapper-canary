@@ -1,7 +1,6 @@
+"use strict";
 var r = n(933373);
-
 function i() {}
-
 function a() {}
 (a.resetWarningCache = i),
     (e.exports = function () {
@@ -13,7 +12,6 @@ function a() {}
                 throw ((o.name = "Invariant Violation"), o);
             }
         }
-
         function t() {
             return e;
         }

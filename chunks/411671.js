@@ -1,12 +1,6 @@
-n.d(t, {
-    y: () => i,
-});
-var r = n(290349);
-
-function i(e, t) {
-    var n;
-    return (
-        t.owner_user_id === e ||
-        (null === (n = t.members.find((t) => t.user.id === e)) || void 0 === n ? void 0 : n.role) === r.D.ADMIN
-    );
+"use strict";
+n.d(t, { y: () => s });
+var i = n(290349);
+function s(e, t) {
+    return t.owner_user_id === e || t.members.find((t) => t.user.id === e)?.role === i.D.ADMIN;
 }

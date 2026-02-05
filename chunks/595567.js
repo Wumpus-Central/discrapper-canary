@@ -1,11 +1,9 @@
-n.d(t, {
-    Q: () => o,
-});
-var r = n(627968),
+n.d(t, { Q: () => o });
+var i = n(627968),
     l = n(64700),
-    i = n(435371),
+    s = n(435371),
     a = n(93055),
-    s = n(985018);
+    r = n(985018);
 let o = l.memo(function (e) {
     let { "aria-label": t = !1, children: n } = e,
         o = (function () {
@@ -25,17 +23,15 @@ let o = l.memo(function (e) {
             );
         })();
     return o
-        ? (0, r.jsx)(i.m_, {
+        ? (0, i.jsx)(s.m_, {
               forceOpen: o,
               hideOnClick: !0,
               spacing: 12,
               position: "right",
               align: "center",
-              text: s.intl.string(s.t["4tSWQg"]),
+              text: r.intl.string(r.t["4tSWQg"]),
               "aria-label": t,
-              children: (0, r.jsx)("div", {
-                  children: n,
-              }),
+              children: (0, i.jsx)("div", { children: n }),
           })
         : n;
 });

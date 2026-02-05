@@ -1,46 +1,30 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(23339),
-    a = n(417597),
-    s = n(397927),
-    o = n(260509),
-    l = n(695515),
+var s = n(23339),
+    r = n(417597),
+    a = n(397927),
+    l = n(260509),
+    o = n(695515),
     c = n(254847),
-    u = n(432882);
-let d = (e) => {
+    d = n(432882);
+let u = (e) => {
     let { guildId: t } = e,
-        n = (0, a.bG)([l.A], () => l.A.getGuild(t));
+        n = (0, r.bG)([o.A], () => o.A.getGuild(t));
     if (void 0 === n) return null;
-    let { name: d } = n,
-        f = (0, o.Iv)(n, 40, !0),
-        p = null,
-        _ = 10;
+    let { name: u } = n,
+        _ = (0, l.Iv)(n, 40, !0),
+        m = null,
+        A = 10;
     return (
-        null == n.icon && null != d && ((p = (0, i.oN)(d)), (_ = (0, c.Y)(p))),
-        (0, r.jsx)("div", {
-            className: u.k,
-            children: (0, r.jsxs)("div", {
-                style: {
-                    fontSize: _,
-                },
+        null == n.icon && null != u && ((m = (0, s.oN)(u)), (A = (0, c.Y)(m))),
+        (0, i.jsx)("div", {
+            className: d.k,
+            children: (0, i.jsxs)("div", {
+                style: { fontSize: A },
                 children: [
-                    null != p
-                        ? (0, r.jsx)("div", {
-                              className: u.X,
-                              "aria-hidden": !0,
-                              children: p,
-                          })
-                        : null,
-                    null != f
-                        ? (0, r.jsx)(s.euF, {
-                              src: f,
-                              size: s._3J.SIZE_40,
-                              "aria-hidden": !0,
-                          })
-                        : null,
+                    null != m ? (0, i.jsx)("div", { className: d.X, "aria-hidden": !0, children: m }) : null,
+                    null != _ ? (0, i.jsx)(a.euF, { src: _, size: a._3J.SIZE_40, "aria-hidden": !0 }) : null,
                 ],
             }),
         })

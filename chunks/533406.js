@@ -1,206 +1,124 @@
-n.d(t, {
-    a: () => b,
-});
+"use strict";
+n.d(t, { a: () => m });
 var r = n(627968),
     i = n(835245),
     a = n(397927),
-    o = n(391048),
-    s = n(636099),
+    s = n(391048),
+    o = n(636099),
     l = n(769315),
-    c = n(589078),
-    u = n(954571),
+    u = n(589078),
+    c = n(954571),
     d = n(832163),
-    f = n(179935),
-    p = n(556808),
-    _ = n(652215);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let y = "slayer-payment-modal";
-
-function b(e, t) {
-    let { isGift: n, giftRecipient: r, giftingOrigin: a, additionalUserIds: c } = t,
-        { analyticsLocations: h, guildId: m } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        g = (0, f.T)({
-            location: "openSocialLayerStorefrontPaymentModal",
-        }),
-        E = d.A.getSKUEligibility(e.id);
-    if (!n && null != m && g && (null == E || "checking" === E || "ineligible" === E))
-        return void (0, p.L)({
-            guildId: m,
+    _ = n(179935),
+    f = n(556808),
+    p = n(652215);
+let h = "slayer-payment-modal";
+function m(e, t) {
+    let { isGift: n, giftRecipient: r, giftingOrigin: a, additionalUserIds: u } = t,
+        { analyticsLocations: A, guildId: I } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        T = (0, _.T)({ location: "openSocialLayerStorefrontPaymentModal" }),
+        y = d.A.getSKUEligibility(e.id);
+    if (!n && null != I && T && (null == y || "checking" === y || "ineligible" === y))
+        return void (0, f.L)({
+            guildId: I,
             skuId: e.id,
             onContinue: () =>
-                b(
+                m(
                     e,
-                    {
-                        isGift: n,
-                        giftRecipient: r,
-                        giftingOrigin: a,
-                        additionalUserIds: c,
-                    },
-                    {
-                        analyticsLocations: h,
-                        guildId: m,
-                    },
+                    { isGift: n, giftRecipient: r, giftingOrigin: a, additionalUserIds: u },
+                    { analyticsLocations: A, guildId: I },
                 ),
         });
-    let A = !1,
-        I = (0, i.A)(),
-        { enabled: S } = (0, l.ik)({
-            location: "openCollectiblesPaymentModal",
-        }),
-        T = () => {
-            A ||
-                u.default.track(_.HAw.PAYMENT_FLOW_CANCELED, {
-                    load_id: I,
-                    payment_type: _.frM[_.VVm.ONE_TIME],
+    let S = !1,
+        v = (0, i.A)(),
+        { enabled: C } = (0, l.ik)({ location: "openCollectiblesPaymentModal" }),
+        b = () => {
+            S ||
+                c.default.track(p.HAw.PAYMENT_FLOW_CANCELED, {
+                    load_id: v,
+                    payment_type: p.frM[p.VVm.ONE_TIME],
                     is_gift: n,
                     sku_id: e.id,
                     application_id: e.applicationId,
-                    location_stack: h,
+                    location_stack: A,
                     sku_product_line: e.productLine,
                 }),
-                (0, o.ET)(),
-                (0, s.z)(),
-                (0, p.l)();
+                (0, s.ET)(),
+                (0, o.z)(),
+                (0, f.l)();
         },
-        C = () => {
-            A = !0;
+        N = () => {
+            S = !0;
         },
-        N = {
-            loadId: I,
+        R = {
+            loadId: v,
             skuId: e.id,
             applicationId: e.applicationId,
-            analyticsLocations: null != h ? h : [],
+            analyticsLocations: A ?? [],
             isGift: n,
             giftRecipient: r,
             giftingOrigin: a,
-            additionalUserIds: c,
-            onCloseCallback: T,
-            onComplete: C,
-            modalKey: y,
+            additionalUserIds: u,
+            onCloseCallback: b,
+            onComplete: N,
+            modalKey: h,
         };
-    S ? O(N) : v(N);
+    C ? g(R) : E(R);
 }
-let O = (e) => {
+let g = (e) => {
         let {
             loadId: t,
             applicationId: n,
             skuId: r,
             analyticsLocations: i,
             isGift: a,
-            giftRecipient: o,
-            giftingOrigin: s,
+            giftRecipient: s,
+            giftingOrigin: o,
             onCloseCallback: l,
-            onComplete: u,
+            onComplete: c,
             modalKey: d,
         } = e;
-        return (0, c.KY)().openCheckoutModal({
+        return (0, u.KY)().openCheckoutModal({
             loadId: t,
             applicationId: n,
             skuId: r,
             analyticsLocations: i,
-            onComplete: u,
-            giftContextProps: {
-                isGift: a,
-                giftRecipient: o,
-                giftingOrigin: s,
-            },
-            openModalOptions: {
-                modalKey: d,
-                onCloseCallback: l,
-            },
+            onComplete: c,
+            giftContextProps: { isGift: a, giftRecipient: s, giftingOrigin: o },
+            openModalOptions: { modalKey: d, onCloseCallback: l },
         });
     },
-    v = (e) => {
+    E = (e) => {
         let {
             loadId: t,
             applicationId: i,
-            skuId: o,
-            analyticsLocations: s,
+            skuId: s,
+            analyticsLocations: o,
             isGift: l,
-            giftRecipient: c,
-            giftingOrigin: u,
+            giftRecipient: u,
+            giftingOrigin: c,
             additionalUserIds: d,
-            onCloseCallback: f,
-            onComplete: p,
-            modalKey: _,
+            onCloseCallback: _,
+            onComplete: f,
+            modalKey: p,
         } = e;
         return (0, a.mMO)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 317042));
                 return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        E(m({}, n), {
-                            loadId: t,
-                            applicationId: i,
-                            skuId: o,
-                            analyticsLocations: s,
-                            isGift: l,
-                            giftRecipient: c,
-                            additionalUserIds: d,
-                            giftingOrigin: u,
-                            onComplete: p,
-                        }),
-                    );
+                    (0, r.jsx)(e, {
+                        ...n,
+                        loadId: t,
+                        applicationId: i,
+                        skuId: s,
+                        analyticsLocations: o,
+                        isGift: l,
+                        giftRecipient: u,
+                        additionalUserIds: d,
+                        giftingOrigin: c,
+                        onComplete: f,
+                    });
             },
-            {
-                onCloseCallback: f,
-                modalKey: _,
-            },
+            { onCloseCallback: _, modalKey: p },
         );
     };

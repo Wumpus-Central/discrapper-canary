@@ -1,12 +1,13 @@
+"use strict";
 n.d(t, {
     CV: () => a,
-    E9: () => b,
-    EB: () => c,
+    E9: () => A,
+    EB: () => u,
     Pl: () => E,
     eB: () => s,
-    fp: () => _,
-    k8: () => p,
-    lT: () => f,
+    fp: () => p,
+    k8: () => f,
+    lT: () => _,
     zL: () => h,
 });
 var r = n(476858),
@@ -133,7 +134,7 @@ let a = {
         dertigste: 30,
         eenendertigste: 31,
     },
-    c = {
+    u = {
         sec: "second",
         second: "second",
         seconden: "second",
@@ -159,8 +160,7 @@ let a = {
         jr: "year",
         jaren: "year",
     },
-    u = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`;
-
+    c = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`;
 function d(e) {
     let t = e.toLowerCase();
     return void 0 !== o[t]
@@ -171,33 +171,29 @@ function d(e) {
             ? 0.5
             : parseFloat(t.replace(",", "."));
 }
-let f = `(?:${(0, r.uJ)(l)}|[0-9]{1,2}(?:ste|de)?)`;
-
-function p(e) {
+let _ = `(?:${(0, r.uJ)(l)}|[0-9]{1,2}(?:ste|de)?)`;
+function f(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt((t = t.replace(/(?:ste|de)$/i, "")));
 }
-let _ = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
-
+let p = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
 function h(e) {
     if (/voor Christus/i.test(e)) return -parseInt((e = e.replace(/voor Christus/i, "")));
     if (/na Christus/i.test(e)) return parseInt((e = e.replace(/na Christus/i, "")));
     let t = parseInt(e);
     return (0, i.D)(t);
 }
-let m = `(${u})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
+let m = `(${c})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
     g = RegExp(m, "i"),
     E = (0, r.mb)("(?:(?:binnen|in)\\s*)?", m);
-
-function b(e) {
+function A(e) {
     let t = {},
         n = e,
         r = g.exec(n);
-    for (; r; ) y(t, r), (n = n.substring(r[0].length)), (r = g.exec(n));
+    for (; r; ) I(t, r), (n = n.substring(r[0].length)), (r = g.exec(n));
     return t;
 }
-
-function y(e, t) {
+function I(e, t) {
     let n = d(t[1]);
-    e[c[t[2].toLowerCase()]] = n;
+    e[u[t[2].toLowerCase()]] = n;
 }

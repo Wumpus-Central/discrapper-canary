@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => r,
-});
+a.d(t, { A: () => r });
 var n = a(303527);
 let r = {
     ordinalNumber: (0, a(722023).A)({
@@ -17,21 +15,13 @@ let r = {
             wide: /^(기원전|서기)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^(bc|기원전)/i, /^(ad|서기)/i],
-        },
+        parsePatterns: { any: [/^(bc|기원전)/i, /^(ad|서기)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, n.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^q[1234]/i,
-            wide: /^[1234]사?분기/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234]사?분기/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -44,9 +34,7 @@ let r = {
             wide: /^(1[012]|[123456789])월/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^1월?$/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/],
-        },
+        parsePatterns: { any: [/^1월?$/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/] },
         defaultParseWidth: "any",
     }),
     day: (0, n.A)({
@@ -57,15 +45,11 @@ let r = {
             wide: /^[일월화수목금토]요일/,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^일/, /^월/, /^화/, /^수/, /^목/, /^금/, /^토/],
-        },
+        parsePatterns: { any: [/^일/, /^월/, /^화/, /^수/, /^목/, /^금/, /^토/] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, n.A)({
-        matchPatterns: {
-            any: /^(am|pm|오전|오후|자정|정오|아침|저녁|밤)/i,
-        },
+        matchPatterns: { any: /^(am|pm|오전|오후|자정|정오|아침|저녁|밤)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

@@ -2,7 +2,6 @@ var r = n(916511),
     i = n(987307),
     a = n(326583),
     s = n(255159);
-
 function o(t) {
     var n = "function" == typeof Map ? new Map() : void 0;
     return (
@@ -14,18 +13,12 @@ function o(t) {
                     if (n.has(e)) return n.get(e);
                     n.set(e, t);
                 }
-
                 function t() {
                     return s(e, arguments, r(this).constructor);
                 }
                 return (
                     (t.prototype = Object.create(e.prototype, {
-                        constructor: {
-                            value: t,
-                            enumerable: !1,
-                            writable: !0,
-                            configurable: !0,
-                        },
+                        constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                     })),
                     i(t, e)
                 );

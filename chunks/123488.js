@@ -1,24 +1,22 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(73153),
-    c = n(447696),
-    o = n(403362),
-    d = n(555337),
+    o = n(447696),
+    d = n(403362),
+    c = n(555337),
     u = n(92911);
-let f = () => {
-    let { guild: e } = (0, l.bG)([d.A], () => d.A.getProps()),
-        [t, n] = i.useState(0);
+let m = () => {
+    let { guild: e } = (0, l.bG)([c.A], () => c.A.getProps()),
+        [t, n] = s.useState(0);
     switch (
-        (i.useEffect(() => {
+        (s.useEffect(() => {
             null != e &&
                 a.h.wait(() => {
-                    (0, c.Fy)(e.id).then(() => {
+                    (0, o.Fy)(e.id).then(() => {
                         n(1);
                     });
                 });
@@ -26,14 +24,10 @@ let f = () => {
         t)
     ) {
         case 0:
-            return (0, r.jsx)(s.y$y, {
-                type: s.y$y.Type.SPINNING_CIRCLE,
-            });
+            return (0, i.jsx)(r.y$y, { type: r.y$y.Type.SPINNING_CIRCLE });
         case 1:
-            return (0, r.jsx)(u.A, {
-                guild: e,
-            });
+            return (0, i.jsx)(u.A, { guild: e });
         default:
-            return (0, o.xb)(t);
+            return (0, d.xb)(t);
     }
 };

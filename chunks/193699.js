@@ -1,56 +1,51 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(397927),
+var r = n(503698),
+    a = n.n(r),
+    l = n(397927),
     s = n(290595),
     o = n(755395),
-    c = n(780964),
-    u = n(840065),
-    d = n(652215),
-    p = n(49999),
-    f = n(985018),
-    h = n(786983);
-
-function A(e) {
+    d = n(780964),
+    c = n(840065),
+    u = n(652215),
+    A = n(49999),
+    h = n(985018),
+    _ = n(786983);
+function m(e) {
     let { className: t, markAsDismissed: n } = e;
-    return (0, r.jsxs)(o.A, {
-        className: l()(h.Nr, t),
+    return (0, i.jsxs)(o.A, {
+        className: a()(_.Nr, t),
         children: [
-            (0, r.jsx)(a.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: "heading-md/semibold",
-                className: h.wx,
-                children: f.intl.string(f.t.HcbnMM),
+                className: _.wx,
+                children: h.intl.string(h.t.HcbnMM),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: "text-sm/normal",
-                children: f.intl.format(f.t.NkFrzN, {
+                children: h.intl.format(h.t.NkFrzN, {
                     onPrivacyClick: () => {
-                        (0, u.openUserSettings)(c.X.DATA_AND_PRIVACY_PANEL, {
-                            section: d.nc_.DATA_AND_PRIVACY,
-                        });
+                        (0, c.openUserSettings)(d.X.DATA_AND_PRIVACY_PANEL, { section: u.nc_.DATA_AND_PRIVACY });
                     },
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: h.UD,
+            (0, i.jsxs)("div", {
+                className: _.UD,
                 children: [
-                    (0, r.jsx)(a.Button, {
+                    (0, i.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
                         fullWidth: !0,
-                        text: f.intl.string(f.t.ebojgD),
-                        onClick: () => (0, s.U)([d.YAq.PERSONALIZATION], []),
+                        text: h.intl.string(h.t.ebojgD),
+                        onClick: () => (0, s.U)([u.YAq.PERSONALIZATION], []),
                     }),
-                    (0, r.jsx)(a.Button, {
+                    (0, i.jsx)(l.Button, {
                         variant: "secondary",
                         size: "sm",
                         fullWidth: !0,
-                        text: f.intl.string(f.t.f3Pet9),
-                        onClick: () => n(p.i.DISMISS),
+                        text: h.intl.string(h.t.f3Pet9),
+                        onClick: () => n(A.i.DISMISS),
                     }),
                 ],
             }),

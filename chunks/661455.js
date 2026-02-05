@@ -1,139 +1,88 @@
-n.d(t, {
-    O: () => D,
-    default: () => E,
-    n: () => x,
-});
-var r = n(627968);
+n.d(t, { O: () => I, default: () => D, n: () => x });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(442433),
-    o = n(847767),
-    a = n(358367),
+var l = n(397927),
+    a = n(442433),
+    r = n(847767),
+    d = n(358367),
     s = n(793574),
-    c = n(734337),
+    o = n(734337),
     u = n(855187),
-    d = n(479335),
-    b = n(470743),
-    f = n(50268),
-    g = n(961350),
-    A = n(239211),
-    p = n(399476),
-    j = n(301541),
-    O = n(198229),
-    v = n(243949),
-    m = n(972432),
-    y = n(652215),
-    h = n(985018);
-
+    c = n(479335),
+    A = n(470743),
+    g = n(50268),
+    E = n(961350),
+    _ = n(239211),
+    b = n(399476),
+    f = n(301541),
+    m = n(198229),
+    C = n(243949),
+    h = n(972432),
+    M = n(652215),
+    S = n(985018);
 function x(e) {
-    let { isOwnSettings: t, userId: n, channelId: l, guildId: o, context: a } = e,
-        s = (0, v.A)({
+    let { isOwnSettings: t, userId: n, channelId: a, guildId: r, context: d } = e,
+        s = (0, C.A)({
             userId: n,
-            guildId: o,
-            channelId: l,
+            guildId: r,
+            channelId: a,
             showGuildProfile: !0,
-            icon: i.nys,
-            label: h.intl.string(h.t.iXAna6),
+            icon: l.nys,
+            label: S.intl.string(S.t.iXAna6),
         }),
-        d = (0, j.A)(n, a, i.oyn),
-        f = (0, m.A)(n),
-        g = (0, O.A)(n),
-        A = (0, c.A)(n),
-        p = (0, u.A)(n),
-        y = (0, b.A)();
-    return [
-        (0, r.jsxs)(i.rXV, {
-            children: [s, d],
-        }),
-        (0, r.jsxs)(i.rXV, {
-            children: [f, g, A, p, t && y],
-        }),
-    ];
+        c = (0, f.A)(n, d, l.oyn),
+        g = (0, h.A)(n),
+        E = (0, m.A)(n),
+        _ = (0, o.A)(n),
+        b = (0, u.A)(n),
+        M = (0, A.A)();
+    return [(0, i.jsxs)(l.rXV, { children: [s, c] }), (0, i.jsxs)(l.rXV, { children: [g, E, _, b, t && M] })];
 }
-
-function D(e, t, n) {
-    let l = (0, d.u)({
-            userId: e.id,
-            channelId: t,
-            guildId: n,
-            minimal: !0,
-        }),
-        o = (0, f.A)({
-            id: e.id,
-            label: h.intl.string(h.t["/AXYnE"]),
-        }),
-        a = (0, p.A)({
-            user: e,
-            guildId: n,
-            channelId: t,
-            location: "GuildVoiceUserContextMenu",
-        }),
-        s = (0, A.A)({
-            user: e,
-            guildId: n,
-            channelId: t,
-            location: "GuildVoiceUserContextMenu",
-        }),
-        c = (0, r.jsxs)(i.rXV, {
-            children: [l, o],
-        });
-    return [
-        (0, r.jsxs)(i.rXV, {
-            children: [a, s],
-        }),
-        c,
-    ];
+function I(e, t, n) {
+    let a = (0, c.u)({ userId: e.id, channelId: t, guildId: n, minimal: !0 }),
+        r = (0, g.A)({ id: e.id, label: S.intl.string(S.t["/AXYnE"]) }),
+        d = (0, b.A)({ user: e, guildId: n, channelId: t, location: "GuildVoiceUserContextMenu" }),
+        s = (0, _.A)({ user: e, guildId: n, channelId: t, location: "GuildVoiceUserContextMenu" }),
+        o = (0, i.jsxs)(l.rXV, { children: [a, r] });
+    return [(0, i.jsxs)(l.rXV, { children: [d, s] }), o];
 }
-let E = (0, a.A)(
-    (0, o.A)(
+let D = (0, d.A)(
+    (0, r.A)(
         function (e) {
-            let { user: t, channel: n, onSelect: o, onInteraction: a, context: s } = e,
-                c = n.id,
+            let { user: t, channel: n, onSelect: r, onInteraction: d, context: s } = e,
+                o = n.id,
                 u = t.isNonUserBot(),
-                d = t.id === g.default.getId(),
-                b = x({
-                    isOwnSettings: d,
-                    userId: t.id,
-                    channelId: c,
-                    context: s,
-                }),
-                A = D(t, c),
-                p = (0, f.A)({
-                    id: t.id,
-                    label: h.intl.string(h.t["/AXYnE"]),
-                });
-            return (0, r.jsx)(i.W1t, {
+                c = t.id === E.default.getId(),
+                A = x({ isOwnSettings: c, userId: t.id, channelId: o, context: s }),
+                _ = I(t, o),
+                b = (0, g.A)({ id: t.id, label: S.intl.string(S.t["/AXYnE"]) });
+            return (0, i.jsx)(l.W1t, {
                 "data-menu-migrated-auto": !0,
                 navId: "user-context",
-                onClose: l.Z_,
-                "aria-label": h.intl.string(h.t.liqwPJ),
-                onSelect: o,
-                onInteraction: a,
+                onClose: a.Z_,
+                "aria-label": S.intl.string(S.t.liqwPJ),
+                onSelect: r,
+                onInteraction: d,
                 variant: "fixed",
                 children:
                     !u &&
-                    (0, r.jsxs)(r.Fragment, {
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            b,
-                            !d &&
-                                (0, r.jsx)(i.rXV, {
-                                    children: (0, r.jsx)(i.Drp, {
+                            A,
+                            !c &&
+                                (0, i.jsx)(l.rXV, {
+                                    children: (0, i.jsx)(l.Drp, {
                                         id: "more-options",
-                                        label: h.intl.string(h.t.PdRCRg),
-                                        children: A,
+                                        label: S.intl.string(S.t.PdRCRg),
+                                        children: _,
                                     }),
                                 }),
-                            d &&
-                                (0, r.jsx)(i.rXV, {
-                                    children: p,
-                                }),
+                            c && (0, i.jsx)(l.rXV, { children: b }),
                         ],
                     }),
             });
         },
-        {
-            object: y.ZSU.CONTEXT_MENU,
-        },
+        { object: M.ZSU.CONTEXT_MENU },
     ),
     [s.A.VOICE_USER],
 );

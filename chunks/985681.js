@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rs: "mainContainer_c5e6a1",
     Ji: "ruleIconContainer_c5e6a1",

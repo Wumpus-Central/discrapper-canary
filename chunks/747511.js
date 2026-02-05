@@ -1,6 +1,5 @@
-n.d(t, {
-    n: () => i,
-});
+"use strict";
+n.d(t, { n: () => i });
 var r = n(63514),
     i = function (e) {
         if ((0, r.dK)(e)) return 1 / 0;

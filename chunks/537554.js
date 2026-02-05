@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(999843),
     o = n(280173),
@@ -7,12 +8,7 @@ var r = n(834647),
     c = i.has,
     u = i.set;
 r(
-    {
-        target: "Map",
-        proto: !0,
-        real: !0,
-        forced: !0,
-    },
+    { target: "Map", proto: !0, real: !0, forced: !0 },
     {
         update: function (e, t) {
             var n = o(this),

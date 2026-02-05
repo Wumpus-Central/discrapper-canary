@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,47 +7,34 @@ var i = n(503698),
     s = n(3026),
     o = n(397927),
     l = n(939496),
-    c = n(996988),
-    u = n(380297);
-
+    u = n(996988),
+    c = n(380297);
 function d(e) {
-    let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
-        { themeType: p } = (0, l.E)();
-    return (null == t || "" === t) && null == f
+    let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: _ } = e,
+        { themeType: f } = (0, l.E)();
+    return (null == t || "" === t) && null == _
         ? null
         : null == t || "" === t
-          ? (0, r.jsx)("div", {
-                className: a()(u.Si, u.ys),
-                children: f,
-            })
+          ? (0, r.jsx)("div", { className: a()(c.Si, c.ys), children: _ })
           : (0, r.jsxs)("div", {
-                className: u.wx,
+                className: c.wx,
                 children: [
                     (0, r.jsxs)(o.Text, {
-                        className: u.TK,
-                        variant: p === c.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                        className: c.TK,
+                        variant: f === u.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
                         color: "text-strong",
                         id: n,
                         children: [
-                            (0, r.jsx)(s.A, {
-                                children: t,
-                            }),
+                            (0, r.jsx)(s.A, { children: t }),
                             null != d &&
                                 (0, r.jsx)("div", {
-                                    className: u.tV,
-                                    style: {
-                                        maskImage: "url(".concat(d.whiteSVG, ")"),
-                                        WebkitMaskImage: "url(".concat(d.whiteSVG, ")"),
-                                    },
+                                    className: c.tV,
+                                    style: { maskImage: `url(${d.whiteSVG})`, WebkitMaskImage: `url(${d.whiteSVG})` },
                                 }),
                             i,
                         ],
                     }),
-                    null != f &&
-                        (0, r.jsx)("div", {
-                            className: u.Si,
-                            children: f,
-                        }),
+                    null != _ && (0, r.jsx)("div", { className: c.Si, children: _ }),
                 ],
             });
 }

@@ -1,10 +1,5 @@
-n.d(t, {
-    HP: () => a,
-    Jp: () => c,
-    fy: () => o,
-    nf: () => l,
-    xv: () => s,
-});
+"use strict";
+n.d(t, { HP: () => a, Jp: () => u, fy: () => o, nf: () => l, xv: () => s });
 var r = n(353640),
     i = n(121894),
     a = (function (e) {
@@ -24,25 +19,14 @@ var r = n(353640),
             e
         );
     })({});
-let o = (0, r.v)(() => ({
-    activePanel: null,
-    metadata: null,
-}));
-
+let o = (0, r.v)(() => ({ activePanel: null, metadata: null }));
 function l(e, t) {
     (0, i.r)(() => {
-        o.setState({
-            activePanel: e,
-            metadata: null != t ? t : null,
-        });
+        o.setState({ activePanel: e, metadata: t ?? null });
     });
 }
-
-function c() {
+function u() {
     (0, i.r)(() => {
-        o.setState({
-            activePanel: null,
-            metadata: null,
-        });
+        o.setState({ activePanel: null, metadata: null });
     });
 }

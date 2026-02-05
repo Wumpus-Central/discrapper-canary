@@ -1,56 +1,49 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(157559),
-    o = n(384904),
-    s = n(73825),
+    s = n(384904),
+    o = n(73825),
     l = n(166403),
-    c = n(954571),
-    u = n(927578),
+    u = n(954571),
+    c = n(927578),
     d = n(652215),
-    f = n(985018);
-let p = "guild-boost-purchase-modal";
-async function _(e) {
+    _ = n(985018);
+let f = "guild-boost-purchase-modal";
+async function p(e) {
     let {
             analyticsLocations: t,
-            analyticsLocation: _,
+            analyticsLocation: p,
             analyticsSourceLocation: h,
             guildId: m,
             closeLayer: g,
             onCloseModal: E,
-            totalNumberOfSlotsToAssign: y = 1,
-            disablePremiumUpsell: b,
-            onSubscribeComplete: O,
-            onSubscriptionConfirmation: v,
-            inPopout: A,
-            applicationId: I,
-            intent: S,
+            totalNumberOfSlotsToAssign: A = 1,
+            disablePremiumUpsell: I,
+            onSubscribeComplete: T,
+            onSubscriptionConfirmation: y,
+            inPopout: S,
+            applicationId: v,
+            intent: C,
         } = e,
-        T = A ? i.KX8 : i.SYi,
-        C = l.A.getPremiumTypeSubscription();
-    if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
+        b = S ? i.KX8 : i.SYi,
+        N = l.A.getPremiumTypeSubscription();
+    if (null != N && N.isPurchasedExternally && null != N.paymentGateway) {
         null != g && g(),
             a.A.show({
-                title: f.intl.formatToPlainString(f.t["rTk9v/"], {
-                    paymentGatewayName: d.qmC[C.paymentGateway],
-                }),
-                body: f.intl.format(f.t.NY03WF, {
-                    paymentGatewayName: d.qmC[C.paymentGateway],
-                    subscriptionManagementLink: (0, u.tW)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                title: _.intl.formatToPlainString(_.t["rTk9v/"], { paymentGatewayName: d.qmC[N.paymentGateway] }),
+                body: _.intl.format(_.t.NY03WF, {
+                    paymentGatewayName: d.qmC[N.paymentGateway],
+                    subscriptionManagementLink: (0, c.tW)(N.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
     }
-    Promise.all([(0, o.$o)(), (0, s.zS)()]);
-    let N = () => {
-        c.default.track(d.HAw.MODAL_DISMISSED, {
-            type: d.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
-            location: _,
-        });
+    Promise.all([(0, s.$o)(), (0, o.zS)()]);
+    let R = () => {
+        u.default.track(d.HAw.MODAL_DISMISSED, { type: d.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: p });
     };
     await (0, i.mMO)(
         async () => {
@@ -62,29 +55,29 @@ async function _(e) {
                 return (0, r.jsx)(e, {
                     transitionState: i,
                     onClose: (e) => {
-                        a(), null == E || E(e);
+                        a(), E?.(e);
                     },
                     analyticsLocations: t,
-                    analyticsLocation: _,
-                    analyticsSourceLocation: null != h ? h : _,
+                    analyticsLocation: p,
+                    analyticsSourceLocation: h ?? p,
                     guildId: m,
-                    totalNumberOfSlotsToAssign: y,
+                    totalNumberOfSlotsToAssign: A,
                     closeGuildPerksModal: g,
-                    disablePremiumUpsell: b,
-                    onSubscriptionConfirmation: v,
-                    onSubscribeComplete: O,
-                    applicationId: I,
-                    intent: S,
+                    disablePremiumUpsell: I,
+                    onSubscriptionConfirmation: y,
+                    onSubscribeComplete: T,
+                    applicationId: v,
+                    intent: C,
                 });
             };
         },
         {
-            modalKey: p,
-            onCloseCallback: N,
+            modalKey: f,
+            onCloseCallback: R,
             onCloseRequest: () => {
-                (0, i.OoC)(p), null == E || E(!1);
+                (0, i.OoC)(f), E?.(!1);
             },
-            contextKey: T,
+            contextKey: b,
         },
     );
 }

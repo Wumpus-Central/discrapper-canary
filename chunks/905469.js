@@ -1,30 +1,27 @@
-n.d(t, {
-    l: () => o,
-});
+"use strict";
+n.d(t, { l: () => o });
 var r = n(236705),
     i = n(607399),
     a = n(855522);
-
 function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     if (null != a.A.Messages.SELF_XSS_HEADER)
         if (
             (console.log(
-                "%c".concat(a.A.Messages.SELF_XSS_HEADER),
+                `%c${a.A.Messages.SELF_XSS_HEADER}`,
                 "color: #5865f2; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;",
             ),
-            console.log("%c".concat(a.A.Messages.SELF_XSS_LINE_1), "font-size: 16px;"),
-            console.log("%c".concat(a.A.Messages.SELF_XSS_LINE_2), "font-size: 18px; font-weight: bold; color: red;"),
+            console.log(`%c${a.A.Messages.SELF_XSS_LINE_1}`, "font-size: 16px;"),
+            console.log(`%c${a.A.Messages.SELF_XSS_LINE_2}`, "font-size: 18px; font-weight: bold; color: red;"),
             e >= 4)
         ) {
-            console.log("%c".concat(a.A.Messages.SELF_XSS_LINE_3), "font-size: 16px;");
+            console.log(`%c${a.A.Messages.SELF_XSS_LINE_3}`, "font-size: 16px;");
             let e = a.A.Messages.SELF_XSS_LINE_4.format({
-                url: "".concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/jobs"),
+                url: `${location.protocol}${window.GLOBAL_ENV.MARKETING_ENDPOINT}/jobs`,
             });
-            console.log("%c".concat(e), "font-size: 16px;");
+            console.log(`%c${e}`, "font-size: 16px;");
         } else setTimeout(() => s(e + 1), 1e3);
 }
-
 function o(e, t) {
     if (null != t && "0.0.0" === t.remoteApp.getVersion()) return;
     let n = new r.$();

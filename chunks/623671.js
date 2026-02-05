@@ -1,7 +1,5 @@
-n.d(t, {
-    d: () => g,
-    w: () => _,
-});
+"use strict";
+n.d(t, { d: () => g, w: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,107 +7,79 @@ var i = n(503698),
     s = n(435371),
     o = n(397927),
     l = n(573435),
-    c = n(263577),
-    u = n(662010),
+    u = n(263577),
+    c = n(662010),
     d = n(985018),
-    f = n(541567);
-let p = {
-    none: void 0,
-    default: f.cH,
-    crunchyroll: a()(f.cH, f.sl),
-};
-var _ = (function (e) {
+    _ = n(541567);
+let f = { none: void 0, default: _.cH, crunchyroll: a()(_.cH, _.sl) };
+var p = (function (e) {
     return (e.SIZE_60 = "size-60"), (e.SIZE_72 = "size-72"), (e.SIZE_100 = "size-100"), e;
 })({});
 let h = {
-    "size-60": {
-        imageSize: 60,
-        smallImageSize: 24,
-        mask: l.hW.CONTENT_IMAGE_60,
-    },
-    "size-72": {
-        imageSize: 72,
-        smallImageSize: 32,
-        mask: l.hW.CONTENT_IMAGE_72,
-    },
-    "size-100": {
-        imageSize: 100,
-        smallImageSize: 32,
-        mask: l.hW.CONTENT_IMAGE_100,
-    },
+    "size-60": { imageSize: 60, smallImageSize: 24, mask: l.hW.CONTENT_IMAGE_60 },
+    "size-72": { imageSize: 72, smallImageSize: 32, mask: l.hW.CONTENT_IMAGE_72 },
+    "size-100": { imageSize: 100, smallImageSize: 32, mask: l.hW.CONTENT_IMAGE_100 },
 };
-
 function m(e) {
     let { children: t, onClick: n } = e;
-    return null == n
-        ? t
-        : (0, r.jsx)(o.DUT, {
-              onClick: n,
-              className: f.vk,
-              children: t,
-          });
+    return null == n ? t : (0, r.jsx)(o.DUT, { onClick: n, className: _.vk, children: t });
 }
-
 function g(e) {
-    var t, n, i;
-    let { image: o, smallImage: _, aspectRatio: g, onClick: E, size: b, className: y } = e,
-        { imageSize: O, smallImageSize: A, mask: v } = h[b];
-    if (null == o)
-        return (0, r.jsx)(c.V, {
+    let { image: t, smallImage: n, aspectRatio: i, onClick: o, size: p, className: g } = e,
+        { imageSize: E, smallImageSize: A, mask: I } = h[p];
+    if (null == t)
+        return (0, r.jsx)(u.V, {
             src: void 0,
             alt: d.intl.string(d.t["2B/phM"]),
-            size: O,
-            className: a()(f.fO, p[null != g ? g : "default"], y),
+            size: E,
+            className: a()(_.fO, f[i ?? "default"], g),
             constrain: "width",
         });
-    let S = (0, r.jsx)(c.V, {
-        src: o.src,
-        alt: null != (t = null != (n = o.alt) ? n : o.text) ? t : d.intl.string(d.t["2B/phM"]),
-        size: O,
-        className: a()(f.fO, p[null != g ? g : "default"]),
+    let T = (0, r.jsx)(u.V, {
+        src: t.src,
+        alt: t.alt ?? t.text ?? d.intl.string(d.t["2B/phM"]),
+        size: E,
+        className: a()(_.fO, f[i ?? "default"]),
         constrain: "width",
     });
     return (0, r.jsxs)("div", {
-        className: a()(f.B_, y),
+        className: a()(_.B_, g),
         children: [
             (0, r.jsx)(m, {
-                onClick: E,
-                children: (0, r.jsx)(u.O, {
-                    href: o.url,
+                onClick: o,
+                children: (0, r.jsx)(c.O, {
+                    href: t.url,
                     children:
-                        null != _
+                        null != n
                             ? (0, r.jsx)(s.m_, {
-                                  text: o.text,
+                                  text: t.text,
                                   asContainer: !0,
                                   children: (0, r.jsx)(l.Ay, {
-                                      className: f.ZS,
-                                      mask: v,
-                                      width: O,
-                                      height: O,
-                                      children: S,
+                                      className: _.ZS,
+                                      mask: I,
+                                      width: E,
+                                      height: E,
+                                      children: T,
                                   }),
                               })
                             : (0, r.jsx)(s.m_, {
-                                  text: o.text,
-                                  children: (0, r.jsx)("div", {
-                                      className: f.ZS,
-                                      children: S,
-                                  }),
+                                  text: t.text,
+                                  children: (0, r.jsx)("div", { className: _.ZS, children: T }),
                               }),
                 }),
             }),
-            null != _ &&
-                (0, r.jsx)(u.O, {
-                    href: _.url,
+            null != n &&
+                (0, r.jsx)(c.O, {
+                    href: n.url,
                     children: (0, r.jsx)(s.m_, {
-                        text: _.text,
+                        text: n.text,
                         children: (0, r.jsx)("div", {
-                            className: f.gn,
-                            children: (0, r.jsx)(c.V, {
-                                src: _.src,
-                                alt: null != (i = _.alt) ? i : _.text,
+                            className: _.gn,
+                            children: (0, r.jsx)(u.V, {
+                                src: n.src,
+                                alt: n.alt ?? n.text,
                                 size: A,
-                                className: f.fO,
+                                className: _.fO,
                                 constrain: "width",
                             }),
                         }),

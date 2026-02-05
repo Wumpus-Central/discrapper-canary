@@ -1,6 +1,1 @@
-e.exports = {
-    oZ: "circleIconButton__5bc7e",
-    wH: "selected__5bc7e",
-    sF: "circleIcon__5bc7e",
-    Io: "pill__5bc7e",
-};
+e.exports = { oZ: "circleIconButton__5bc7e", wH: "selected__5bc7e", sF: "circleIcon__5bc7e", Io: "pill__5bc7e" };

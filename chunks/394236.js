@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ij: "wishlistButton__979b1",
     NY: "disabledButton__979b1",

@@ -1,17 +1,18 @@
+"use strict";
 var r = n(693655),
     i = n(410323),
     a = n(304880),
     s = n(627),
     o = URLSearchParams,
     l = o.prototype,
-    c = i(l.append),
-    u = i(l.delete),
+    u = i(l.append),
+    c = i(l.delete),
     d = i(l.forEach),
-    f = i([].push),
-    p = new o("a=1&a=2&b=3");
-p.delete("a", 1),
-    p.delete("b", void 0),
-    p + "" != "a=2" &&
+    _ = i([].push),
+    f = new o("a=1&a=2&b=3");
+f.delete("a", 1),
+    f.delete("b", void 0),
+    f + "" != "a=2" &&
         r(
             l,
             "delete",
@@ -19,21 +20,15 @@ p.delete("a", 1),
                 var t,
                     n = arguments.length,
                     r = n < 2 ? void 0 : arguments[1];
-                if (n && void 0 === r) return u(this, e);
+                if (n && void 0 === r) return c(this, e);
                 var i = [];
                 d(this, function (e, t) {
-                    f(i, {
-                        key: t,
-                        value: e,
-                    });
+                    _(i, { key: t, value: e });
                 }),
                     s(n, 1);
-                for (var o = a(e), l = a(r), p = 0, _ = 0, h = !1, m = i.length; p < m; )
-                    (t = i[p++]), h || t.key === o ? ((h = !0), u(this, t.key)) : _++;
-                for (; _ < m; ) ((t = i[_++]).key !== o || t.value !== l) && c(this, t.key, t.value);
+                for (var o = a(e), l = a(r), f = 0, p = 0, h = !1, m = i.length; f < m; )
+                    (t = i[f++]), h || t.key === o ? ((h = !0), c(this, t.key)) : p++;
+                for (; p < m; ) ((t = i[p++]).key !== o || t.value !== l) && u(this, t.key, t.value);
             },
-            {
-                enumerable: !0,
-                unsafe: !0,
-            },
+            { enumerable: !0, unsafe: !0 },
         );

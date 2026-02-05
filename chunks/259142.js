@@ -1,67 +1,48 @@
-r.d(t, {
-    default: () => O,
-});
-var n = r(627968);
-r(64700);
-var o = r(284009),
-    a = r.n(o),
-    c = r(158954),
-    l = r(311907),
-    i = r(397927),
-    s = r(871109),
-    d = r(59375),
-    u = r(94733),
-    p = r(985018),
-    b = r(14036);
-
-function f(e) {
-    let { attachment: t, guildId: r, productId: o } = e;
+e.d(a, { default: () => x });
+var n = e(627968);
+e(64700);
+var i = e(284009),
+    s = e.n(i),
+    l = e(158954),
+    o = e(311907),
+    d = e(397927),
+    r = e(871109),
+    c = e(59375),
+    u = e(94733),
+    m = e(985018),
+    f = e(14036);
+function h(t) {
+    let { attachment: a, guildId: e, productId: i } = t;
     return (0, n.jsxs)("li", {
-        className: b.k,
+        className: f.k,
         children: [
-            (0, n.jsx)(d.A, {
-                attachment: t,
-            }),
+            (0, n.jsx)(c.A, { attachment: a }),
             (0, n.jsx)(u.A, {
-                className: b.i,
-                icon: i.s3U,
+                className: f.i,
+                icon: d.s3U,
                 text: void 0,
-                guildId: r,
-                productId: o,
-                attachmentId: t.id,
+                guildId: e,
+                productId: i,
+                attachmentId: a.id,
             }),
         ],
     });
 }
-
-function O(e) {
-    var t;
-    let { guildId: r, productId: o, onClose: i, transitionState: d } = e,
-        u = (0, l.bG)([s.A], () => s.A.getGuildProduct(o));
-    a()(null != u, "guildProductListing cannot be null");
-    let b = null != (t = u.attachments) ? t : [];
-    return (0, n.jsx)(c.Modal, {
+function x(t) {
+    let { guildId: a, productId: e, onClose: i, transitionState: d } = t,
+        c = (0, o.bG)([r.A], () => r.A.getGuildProduct(e));
+    s()(null != c, "guildProductListing cannot be null");
+    let u = c.attachments ?? [];
+    return (0, n.jsx)(l.Modal, {
         size: "md",
         transitionState: d,
-        "aria-label": p.intl.string(p.t["3jaCac"]),
-        title: u.name,
-        subtitle: p.intl.format(p.t["6dOuaP"], {
-            count: u.attachments_count,
-        }),
+        "aria-label": m.intl.string(m.t["3jaCac"]),
+        title: c.name,
+        subtitle: m.intl.format(m.t["6dOuaP"], { count: c.attachments_count }),
         actions: [],
         onClose: i,
         children: (0, n.jsx)("ul", {
-            children: b.map((e) =>
-                (0, n.jsx)(
-                    f,
-                    {
-                        guildId: r,
-                        productId: u.id,
-                        attachment: e,
-                    },
-                    e.id,
-                ),
-            ),
+            children: u.map((t) => (0, n.jsx)(h, { guildId: a, productId: c.id, attachment: t }, t.id)),
         }),
     });
 }

@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(944899),
     o = Object.prototype.hasOwnProperty;
 let a = function (e) {

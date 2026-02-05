@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     jv: "categoryList__3ad28",
     _0: "stickerCategory__3ad28",

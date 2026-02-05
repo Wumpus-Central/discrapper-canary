@@ -1,25 +1,25 @@
+"use strict";
 n.d(t, {
     DG: () => m,
-    Iv: () => f,
-    Rb: () => p,
+    Iv: () => _,
+    Rb: () => f,
     af: () => g,
-    bM: () => _,
+    bM: () => p,
     do: () => d,
     kn: () => E,
     ok: () => h,
-    uA: () => u,
-    vI: () => c,
-    wh: () => y,
-}),
-    n(896048);
+    uA: () => c,
+    vI: () => u,
+    wh: () => A,
+});
 var r = n(867051),
     i = n(329972),
     a = n(486020),
-    o = n(661191),
-    s = n(240248),
+    s = n(661191),
+    o = n(240248),
     l = n(652215);
-let c = "Guild",
-    u = new Set([l.ftr.EXPLICIT, l.ftr.AGE_RESTRICTED]),
+let u = "Guild",
+    c = new Set([l.ftr.EXPLICIT, l.ftr.AGE_RESTRICTED]),
     d = Object.freeze({
         mfaLevel: l.EkJ.NONE,
         preferredLocale: "en-US",
@@ -59,50 +59,33 @@ let c = "Guild",
         premiumFeatures: null,
         moderatorReporting: null,
     });
-
-function f(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return a.Ay.getGuildIconURL({
-        id: e.id,
-        size: t,
-        icon: e.icon,
-        canAnimate: n,
-        lossless: r,
-    });
+    return a.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: r });
 }
-
-function p(e) {
-    return (0, s.oN)(e.name);
+function f(e) {
+    return (0, o.oN)(e.name);
 }
-
-function _(e, t) {
+function p(e, t) {
     let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
-
 function h(e, t) {
-    return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && _(e, t);
+    return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && p(e, t);
 }
-
 function m(e) {
     return null == e.joinedAt;
 }
-
 function g(e) {
-    return o.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+    return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
-
 function E(e, t) {
     return (0, r.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
-
-function y(e) {
-    var t;
+function A(e) {
     return (
         null != e &&
-        ((0, i.v)("guild_record")
-            ? u.has(e.nsfwLevel)
-            : u.has(null != (t = e.ownerConfiguredContentLevel) ? t : l.ftr.DEFAULT))
+        ((0, i.v)("guild_record") ? c.has(e.nsfwLevel) : c.has(e.ownerConfiguredContentLevel ?? l.ftr.DEFAULT))
     );
 }

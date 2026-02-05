@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header__5dac8",
     aX: "back__5dac8",

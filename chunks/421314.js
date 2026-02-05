@@ -1,35 +1,24 @@
-n.d(t, {
-    $: () => c,
-    p: () => l,
-}),
-    n(747238);
+"use strict";
+n.d(t, { $: () => u, p: () => l });
 var r = n(397927),
     i = n(486020),
     a = n(339143),
     s = n(80569),
     o = n(608640);
-
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (!(0, a.W)()) {
-        var t;
-        (0, r.OoC)(s.y), null == (t = e.onClose) || t.call(e);
+        (0, r.OoC)(s.y), e.onClose?.();
         return;
     }
     (0, o.J)({
         onConfirm: () => {
-            var t;
-            (0, r.OoC)(s.y), null == (t = e.onClose) || t.call(e);
+            (0, r.OoC)(s.y), e.onClose?.();
         },
     });
 }
-async function c(e) {
-    let t = i.Ay.getEmojiURL({
-            id: e.id,
-            animated: e.animated,
-            size: 128,
-            forcePNG: !0,
-        }),
+async function u(e) {
+    let t = i.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 128, forcePNG: !0 }),
         n = await fetch(t),
         r = await n.blob(),
         a = r.type;
@@ -41,9 +30,7 @@ async function c(e) {
               : e.animated
                 ? "image/gif"
                 : "image/png");
-    let s = new File([r], "".concat(e.name, ".").concat(a.split("/")[1]), {
-        type: a,
-    });
+    let s = new File([r], `${e.name}.${a.split("/")[1]}`, { type: a });
     return {
         data: await new Promise((e, t) => {
             let n = new FileReader();

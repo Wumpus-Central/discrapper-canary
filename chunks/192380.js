@@ -1,166 +1,121 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048),
-    n(492834);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(883344),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(883344),
     s = n(859524),
     o = n(567061),
-    c = n(519028),
-    u = n(285545),
-    d = n(673310),
-    p = n(884801),
-    f = n(739954);
-let h = function (e) {
+    d = n(519028),
+    c = n(285545),
+    u = n(673310),
+    A = n(884801),
+    h = n(739954);
+let _ = function (e) {
     let { scrollContainerRef: t } = e,
-        n = (0, l.bG)([a.A], () => a.A.notificationItem(), []),
-        { showDot: h } = (0, c.A)(),
-        A = i.useRef(null),
-        [g, m] = i.useState(!1),
+        n = (0, a.bG)([l.A], () => l.A.notificationItem(), []),
+        { showDot: _ } = (0, d.A)(),
+        m = r.useRef(null),
+        [p, g] = r.useState(!1),
         {
-            data: b,
-            loading: _,
-            isRefreshing: E,
-            handleOnRefresh: O,
-            viewabilityConfigCallbackPairs: y,
-        } = (0, u.i)({
-            showDot: h,
-            notificationItem: n,
-        }),
-        I = (0, o.E)();
-    i.useEffect(
+            data: E,
+            loading: f,
+            isRefreshing: I,
+            handleOnRefresh: C,
+            viewabilityConfigCallbackPairs: N,
+        } = (0, c.i)({ showDot: _, notificationItem: n }),
+        T = (0, o.E)();
+    r.useEffect(
         () => () => {
-            I();
+            T();
         },
-        [I],
+        [T],
     );
-    let v = (0, l.bG)([a.A], () => a.A.hasNewContent(), []),
-        S = (0, l.bG)([a.A], () => a.A.isHydrating(), []),
-        C = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
-        { registerItemRef: N } = (0, p.N)(b, C, t),
-        T = i.useMemo(() => b.some((e) => "end" === e.data.kind), [b]),
-        j = i.useCallback(() => {
-            if (T) return;
+    let S = (0, a.bG)([l.A], () => l.A.hasNewContent(), []),
+        x = (0, a.bG)([l.A], () => l.A.isHydrating(), []),
+        v = r.useMemo(() => N[0].onViewableItemsChanged, [N]),
+        { registerItemRef: b } = (0, A.N)(E, v, t),
+        y = r.useMemo(() => E.some((e) => "end" === e.data.kind), [E]),
+        L = r.useCallback(() => {
+            if (y) return;
             let e = t.current;
             null == e ||
                 !(e.scrollHeight - e.scrollTop - e.clientHeight < 300) ||
-                g ||
-                _ ||
-                S ||
-                (m(!0),
+                p ||
+                f ||
+                x ||
+                (g(!0),
                 (0, s._x)().finally(() => {
                     setTimeout(() => {
-                        m(!1);
+                        g(!1);
                     }, 300);
                 }));
-        }, [_, g, S, T, t]);
-    i.useEffect(() => {
+        }, [f, p, x, y, t]);
+    r.useEffect(() => {
         let e = t.current;
         if (null != e)
             return (
-                e.addEventListener("scroll", j),
+                e.addEventListener("scroll", L),
                 () => {
-                    e.removeEventListener("scroll", j);
+                    e.removeEventListener("scroll", L);
                 }
             );
-    }, [j, t]);
-    let x = i.useCallback(() => {
-            var e;
-            null == (e = t.current) ||
-                e.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                });
+    }, [L, t]);
+    let O = r.useCallback(() => {
+            t.current?.scrollTo({ top: 0, behavior: "smooth" });
         }, [t]),
-        P = i.useCallback(() => {
-            O(), x();
-        }, [O, x]),
-        w = i.useCallback(
+        R = r.useCallback(() => {
+            C(), O();
+        }, [C, O]),
+        P = r.useCallback(
             (e) =>
                 "loading" === e.data.kind
-                    ? (0, r.jsx)(
+                    ? (0, i.jsx)(
                           "div",
                           {
-                              style: {
-                                  padding: "32px",
-                                  textAlign: "center",
-                              },
-                              children: (0, r.jsx)("div", {
-                                  children: "Loading ICYMI feed...",
-                              }),
+                              style: { padding: "32px", textAlign: "center" },
+                              children: (0, i.jsx)("div", { children: "Loading ICYMI feed..." }),
                           },
                           e.id,
                       )
                     : "bottomLoading" === e.data.kind
-                      ? (0, r.jsx)(
+                      ? (0, i.jsx)(
                             "div",
                             {
-                                style: {
-                                    padding: "16px",
-                                    textAlign: "center",
-                                },
-                                children: (0, r.jsx)("div", {
-                                    children: "Loading more...",
-                                }),
+                                style: { padding: "16px", textAlign: "center" },
+                                children: (0, i.jsx)("div", { children: "Loading more..." }),
                             },
                             e.id,
                         )
                       : "end" === e.data.kind
-                        ? (0, r.jsx)(
+                        ? (0, i.jsx)(
                               "div",
                               {
-                                  style: {
-                                      padding: "32px",
-                                      textAlign: "center",
-                                      color: "#949ba4",
-                                  },
-                                  children: (0, r.jsx)("div", {
-                                      children: "You're all caught up!",
-                                  }),
+                                  style: { padding: "32px", textAlign: "center", color: "#949ba4" },
+                                  children: (0, i.jsx)("div", { children: "You're all caught up!" }),
                               },
                               e.id,
                           )
-                        : (0, r.jsx)(
+                        : (0, i.jsx)(
                               "div",
-                              {
-                                  ref: (t) => N(e.id, t),
-                                  "data-item-id": e.id,
-                                  children: (0, r.jsx)(d.A, {
-                                      item: e,
-                                  }),
-                              },
+                              { ref: (t) => b(e.id, t), "data-item-id": e.id, children: (0, i.jsx)(u.A, { item: e }) },
                               e.id,
                           ),
-            [N],
+            [b],
         );
-    return _ && 0 === b.length
-        ? (0, r.jsx)("div", {
-              style: {
-                  padding: "32px",
-                  textAlign: "center",
-              },
-              children: (0, r.jsx)("div", {
-                  children: "Loading ICYMI feed...",
-              }),
+    return f && 0 === E.length
+        ? (0, i.jsx)("div", {
+              style: { padding: "32px", textAlign: "center" },
+              children: (0, i.jsx)("div", { children: "Loading ICYMI feed..." }),
           })
-        : (0, r.jsxs)("div", {
-              className: f.k,
+        : (0, i.jsxs)("div", {
+              className: h.k,
               children: [
-                  v &&
-                      !E &&
-                      (0, r.jsx)("div", {
-                          style: {
-                              position: "sticky",
-                              top: 0,
-                              zIndex: 10,
-                              padding: "8px",
-                              textAlign: "center",
-                          },
-                          children: (0, r.jsx)("button", {
-                              onClick: P,
+                  S &&
+                      !I &&
+                      (0, i.jsx)("div", {
+                          style: { position: "sticky", top: 0, zIndex: 10, padding: "8px", textAlign: "center" },
+                          children: (0, i.jsx)("button", {
+                              onClick: R,
                               style: {
                                   background: "#5865f2",
                                   color: "white",
@@ -174,22 +129,17 @@ let h = function (e) {
                               children: "New content available",
                           }),
                       }),
-                  (0, r.jsxs)("div", {
-                      ref: A,
-                      className: f.j,
+                  (0, i.jsxs)("div", {
+                      ref: m,
+                      className: h.j,
                       children: [
-                          b.map((e) => w(e)),
-                          !T &&
-                              (g || S) &&
-                              (0, r.jsx)("div", {
-                                  style: {
-                                      padding: "16px",
-                                      textAlign: "center",
-                                  },
-                                  children: (0, r.jsx)("div", {
-                                      style: {
-                                          color: "#949ba4",
-                                      },
+                          E.map((e) => P(e)),
+                          !y &&
+                              (p || x) &&
+                              (0, i.jsx)("div", {
+                                  style: { padding: "16px", textAlign: "center" },
+                                  children: (0, i.jsx)("div", {
+                                      style: { color: "#949ba4" },
                                       children: "Loading more...",
                                   }),
                               }),

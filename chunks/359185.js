@@ -8,29 +8,14 @@ e.exports = function (e) {
                     begin: /[\w-]+ *=/,
                     returnBegin: !0,
                     relevance: 0,
-                    contains: [
-                        {
-                            className: "attr",
-                            begin: /[\w-]+/,
-                        },
-                    ],
+                    contains: [{ className: "attr", begin: /[\w-]+/ }],
                 },
             ],
             relevance: 0,
         },
-        n = {
-            className: "function",
-            begin: /:[\w\-.]+/,
-            relevance: 0,
-        },
-        r = {
-            className: "string",
-            begin: /\B([\/.])[\w\-.\/=]+/,
-        },
-        i = {
-            className: "params",
-            begin: /--[\w\-=\/]+/,
-        };
+        n = { className: "function", begin: /:[\w\-.]+/, relevance: 0 },
+        r = { className: "string", begin: /\B([\/.])[\w\-.\/=]+/ },
+        i = { className: "params", begin: /--[\w\-=\/]+/ };
     return {
         name: "JBoss CLI",
         aliases: ["wildfly-cli"],

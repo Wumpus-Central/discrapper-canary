@@ -1,5 +1,4 @@
 var i = a(264572).Buffer;
-
 function r(t, e, a, i) {
     if (((null == t ? void 0 : t.startsWith("/")) && (t = t.substr(1)), "string" == typeof e || e instanceof Date)) {
         let r = new Date(e),
@@ -41,7 +40,6 @@ function r(t, e, a, i) {
         return r.format("YYYYMMDD") + (a ? "" : "T" + r.format("HHmmss") + (i || t ? "" : "Z"));
     }
 }
-
 function n(t) {
     return String(t)
         .replace(/[\\;,"]/g, function (t) {
@@ -49,25 +47,19 @@ function n(t) {
         })
         .replace(/(?:\r\n|\r|\n)/g, "\\n");
 }
-
 function s(t) {
     return null != t && null != t._isAMomentObject;
 }
-
 function o(t) {
     return s(t) && "function" == typeof t.tz;
 }
-
 function d(t) {
     return "object" == typeof t && null !== t && !(t instanceof Date) && !s(t) && !l(t);
 }
-
 function l(t) {
     return "object" == typeof t && null !== t && "function" == typeof t.toJSDate;
 }
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.toDurationString =
         e.toJSON =
         e.isRRule =
@@ -128,11 +120,7 @@ Object.defineProperty(e, "__esModule", {
                 return [t, e];
             });
         else {
-            if ("string" != typeof e || "string" != typeof a)
-                return t.x.map((t) => ({
-                    key: t[0],
-                    value: t[1],
-                }));
+            if ("string" != typeof e || "string" != typeof a) return t.x.map((t) => ({ key: t[0], value: t[1] }));
             if ("X-" !== e.substr(0, 2)) throw Error("Key has to start with `X-`!");
             t.x.push([e, a]);
         }
@@ -146,22 +134,9 @@ Object.defineProperty(e, "__esModule", {
         if ("string" == typeof e) {
             let t = e.match(/^(.+) ?<([^>]+)>$/);
             t
-                ? (a = {
-                      name: t[1].trim(),
-                      email: t[2].trim(),
-                  })
-                : e.includes("@") &&
-                  (a = {
-                      name: e.trim(),
-                      email: e.trim(),
-                  });
-        } else
-            "object" == typeof e &&
-                (a = {
-                    name: e.name,
-                    email: e.email,
-                    mailto: e.mailto,
-                });
+                ? (a = { name: t[1].trim(), email: t[2].trim() })
+                : e.includes("@") && (a = { name: e.trim(), email: e.trim() });
+        } else "object" == typeof e && (a = { name: e.name, email: e.email, mailto: e.mailto });
         if (a || "string" != typeof e) {
             if (!a)
                 throw Error(

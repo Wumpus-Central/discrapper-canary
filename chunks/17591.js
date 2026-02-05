@@ -1,11 +1,9 @@
-n.d(t, {
-    V: () => o,
-});
+"use strict";
+n.d(t, { V: () => o });
 var r = n(287809),
     i = n(508675),
     a = n(354430),
     s = n(451731);
-
 function o(e) {
     if (null == e || null == r.default.getCurrentUser()) return;
     let t = i.Ay.getTopEmojisMetadata(e);

@@ -1,123 +1,73 @@
-n.d(t, {
-    A: () => P,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => P }), n(321073);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(960488),
-    o = n(311907),
-    s = n(314116),
-    c = n(397927),
-    u = n(71393),
-    E = n(967198),
+var l = n(503698),
+    r = n.n(l),
+    s = n(960488),
+    a = n(311907),
+    o = n(314116),
+    E = n(397927),
+    c = n(71393),
+    _ = n(967198),
     d = n(624458),
-    _ = n(202384),
-    A = n(513461),
+    A = n(202384),
+    u = n(513461),
     T = n(709977),
     I = n(212455),
-    O = n(652215),
-    N = n(746080),
-    p = n(985018),
-    R = n(121615),
-    S = n(1624);
+    N = n(652215),
+    R = n(746080),
+    S = n(985018),
+    O = n(121615),
+    C = n(1624);
 let P = () => {
-    var e, t;
-    let i = (0, o.bG)([E.A], () => E.A.getGuildId(), []),
-        P = (0, o.bG)([u.A], () => u.A.getGuild(i), [i]),
-        y = (0, o.bG)([I.A], () => (null != i ? I.A.getRequest(i) : null), [i]),
-        m = (0, a.zy)(),
-        f =
-            (null == (t = (0, a.B6)(m.pathname, O.BVt.CHANNEL(null == P ? void 0 : P.id, N.VV.GUILD_ONBOARDING)))
-                ? void 0
-                : t.isExact) === !0;
-    if (null == P || !(0, T.Qd)(P) || f) return null;
-    let C = null != (e = null == y ? void 0 : y.applicationStatus) ? e : A.B5.STARTED,
-        g = null,
-        D = null,
-        h = null,
-        b = [R.lm, S.lm];
-    switch (C) {
-        case A.B5.SUBMITTED:
-            (g = p.intl.string(p.t["5iLvSx"])),
-                (D = p.intl.string(p.t.mqtdmQ)),
-                (h = () => {
-                    (0, s.A)({
-                        title: p.intl.string(p.t.aIz1oV),
-                        subtitle: p.intl.string(p.t["13tjTU"]),
+    let e = (0, a.bG)([_.A], () => _.A.getGuildId(), []),
+        t = (0, a.bG)([c.A], () => c.A.getGuild(e), [e]),
+        l = (0, a.bG)([I.A], () => (null != e ? I.A.getRequest(e) : null), [e]),
+        P = (0, s.zy)(),
+        D = (0, s.B6)(P.pathname, N.BVt.CHANNEL(t?.id, R.VV.GUILD_ONBOARDING))?.isExact === !0;
+    if (null == t || !(0, T.Qd)(t) || D) return null;
+    let p = l?.applicationStatus ?? u.B5.STARTED,
+        m = null,
+        U = null,
+        M = null,
+        h = [O.lm, C.lm];
+    switch (p) {
+        case u.B5.SUBMITTED:
+            (m = S.intl.string(S.t["5iLvSx"])),
+                (U = S.intl.string(S.t.mqtdmQ)),
+                (M = () => {
+                    (0, o.A)({
+                        title: S.intl.string(S.t.aIz1oV),
+                        subtitle: S.intl.string(S.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: p.intl.string(p.t["cY+Oob"]),
-                        onConfirm: () => d.A.removeGuildJoinRequest(P.id),
+                        confirmText: S.intl.string(S.t["cY+Oob"]),
+                        onConfirm: () => d.A.removeGuildJoinRequest(t.id),
                     });
                 });
             break;
-        case A.B5.REJECTED:
-            (g = p.intl.string(p.t.lk30cY)),
-                (D = p.intl.string(p.t["8RrsHr"])),
-                (h = () => {
-                    (0, c.mMO)(async () => {
+        case u.B5.REJECTED:
+            (m = S.intl.string(S.t.lk30cY)),
+                (U = S.intl.string(S.t["8RrsHr"])),
+                (M = () => {
+                    (0, E.mMO)(async () => {
                         let { default: e } = await n.e("37548").then(n.bind(n, 856103));
-                        return (t) =>
-                            (0, r.jsx)(
-                                e,
-                                (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        guildId: P.id,
-                                    },
-                                    t,
-                                ),
-                            );
+                        return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
                 }),
-                b.push(R.z3);
+                h.push(O.z3);
             break;
         default:
-            (g = p.intl.string(p.t.G5YKXP)),
-                (D = p.intl.string(p.t["r8/DT+"])),
-                (h = () => {
-                    (0, _.Ze)(P.id);
+            (m = S.intl.string(S.t.G5YKXP)),
+                (U = S.intl.string(S.t["r8/DT+"])),
+                (M = () => {
+                    (0, A.Ze)(t.id);
                 });
     }
-    return (0, r.jsxs)("div", {
-        className: l()(...b),
+    return (0, i.jsxs)("div", {
+        className: r()(...h),
         children: [
-            (0, r.jsx)(c.Text, {
-                className: R.wx,
-                variant: "text-sm/normal",
-                children: g,
-            }),
-            (0, r.jsx)(c.Button, {
-                variant: "overlay-primary",
-                size: "sm",
-                onClick: h,
-                text: D,
-            }),
+            (0, i.jsx)(E.Text, { className: O.wx, variant: "text-sm/normal", children: m }),
+            (0, i.jsx)(E.Button, { variant: "overlay-primary", size: "sm", onClick: M, text: U }),
         ],
     });
 };

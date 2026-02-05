@@ -1,303 +1,177 @@
-n.d(t, {
-    ApplicationCommandShareModal: () => S,
-}),
-    n(896048);
+n.d(t, { ApplicationCommandShareModal: () => C });
 var l = n(627968),
-    r = n(64700),
-    i = n(158954),
+    i = n(64700),
+    s = n(158954),
     a = n(397927),
-    s = n(155718),
-    o = n(429913),
-    u = n(223863),
+    r = n(155718),
+    u = n(429913),
+    o = n(223863),
     c = n(151054),
     d = n(734057),
-    f = n(71393),
-    b = n(403362),
-    p = n(264322),
-    m = n(545152),
-    h = n(382731),
+    m = n(71393),
+    h = n(403362),
+    b = n(264322),
+    f = n(545152),
+    x = n(382731),
     g = n(392449),
-    y = n(293588),
-    x = n(985018),
-    v = n(116106),
-    j = n(119390);
-let A = [s.kc.CHAT],
-    O = () => {
-        (0, a.OoC)(y.C);
+    p = n(293588),
+    A = n(985018),
+    _ = n(116106),
+    v = n(119390);
+let y = [r.kc.CHAT],
+    S = () => {
+        (0, a.OoC)(p.C);
     };
-
-function S(e) {
+function C(e) {
     var t;
     let {
             applicationId: n,
-            channel: s,
-            command: y,
-            onClose: S,
-            requireLaunchChannel: w,
-            onShareResult: P,
-            previewMessage: C,
+            channel: r,
+            command: p,
+            onClose: C,
+            requireLaunchChannel: j,
+            onShareResult: N,
+            previewMessage: T,
+            ...L
         } = e,
-        N = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                l,
-                r,
-                i = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                    (l = n[r]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (i[l] = e[l]);
-                return i;
-            }
-            if (
-                ((i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        l,
-                        r = {},
-                        i = Object.getOwnPropertyNames(e);
-                    for (l = 0; l < i.length; l++)
-                        (n = i[l]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-                    return r;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                    (l = n[r]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (i[l] = e[l]);
-            return i;
-        })(e, [
-            "applicationId",
-            "channel",
-            "command",
-            "onClose",
-            "requireLaunchChannel",
-            "onShareResult",
-            "previewMessage",
-        ]),
-        T = r.useMemo(() => (null == s ? null : (0, u._5)(s.id)), [s]),
-        [E, D] = r.useState(!1),
-        { commands: _, loading: L } =
-            ((t = r.useMemo(
-                () =>
-                    null == s
-                        ? {
-                              type: "contextless",
-                          }
-                        : {
-                              type: "channel",
-                              channel: s,
-                          },
-                [s],
-            )),
-            (0, p.ZA)(
-                t,
-                {
-                    commandTypes: A,
-                },
-                {
-                    applicationId: n,
-                    allowFetch: !0,
-                    allowApplicationState: !0,
-                },
-            )),
-        k = r.useRef(0),
-        [M, I] = r.useState(w && null != T ? [T] : []),
-        R = M.length,
-        F = R >= 5,
-        [z, G] = r.useState(""),
-        { results: q, updateSearchText: H } = (0, c.R)({
-            selectedDestinations: M,
-            originDestination: null != T ? T : void 0,
+        D = i.useMemo(() => (null == r ? null : (0, o._5)(r.id)), [r]),
+        [k, w] = i.useState(!1),
+        { commands: E, loading: P } =
+            ((t = i.useMemo(() => (null == r ? { type: "contextless" } : { type: "channel", channel: r }), [r])),
+            (0, b.ZA)(t, { commandTypes: y }, { applicationId: n, allowFetch: !0, allowApplicationState: !0 })),
+        M = i.useRef(0),
+        [F, z] = i.useState(j && null != D ? [D] : []),
+        I = F.length,
+        G = I >= 5,
+        [R, q] = i.useState(""),
+        { results: H, updateSearchText: U } = (0, c.R)({
+            selectedDestinations: F,
+            originDestination: D ?? void 0,
             includeMissingDMs: !0,
         }),
-        U = r.useCallback(
+        B = i.useCallback(
             (e) => {
-                G(e), H(e);
+                q(e), U(e);
             },
-            [H],
+            [U],
         ),
-        B = r.useCallback(() => (P(!1), S()), [P, S]),
-        [J] = (0, o.A)([n]),
-        Q = r.useCallback(() => {
-            G("");
-        }, [G]),
-        V = r.useRef(null);
-    r.useEffect(() => {
-        if ("" === z) {
-            var e;
-            null == (e = V.current) || e.focus();
-        }
-    }, [z]);
-    let W = r.useCallback(
+        J = i.useCallback(() => (N(!1), C()), [N, C]),
+        [O] = (0, u.A)([n]),
+        Q = i.useCallback(() => {
+            q("");
+        }, [q]),
+        W = i.useRef(null);
+    i.useEffect(() => {
+        "" === R && W.current?.focus();
+    }, [R]);
+    let V = i.useCallback(
             (e) => {
-                I((t) => {
+                z((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return F ? t : (G(""), H(""), (k.current += 1), [e, ...t]);
+                    if (-1 === n) return G ? t : (q(""), U(""), (M.current += 1), [e, ...t]);
                     let l = [...t];
-                    return l.splice(n, 1), (k.current += 1), l;
+                    return l.splice(n, 1), (M.current += 1), l;
                 });
             },
-            [F, H],
+            [G, U],
         ),
-        [K, Z] = r.useMemo(() => {
-            if (L) return [null, !1];
-            let e = _.find((e) => e.untranslatedName === y.name);
+        [Z, X] = i.useMemo(() => {
+            if (P) return [null, !1];
+            let e = E.find((e) => e.untranslatedName === p.name);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [y, _, L]),
-        X = r.useCallback(
+        }, [p, E, P]),
+        Y = i.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === K) return;
-                D(!0);
-                let n = (await Promise.all(e.map(u.pk))).filter(b.Vq);
-                t && (P(!0), O()),
+                if (null === Z) return;
+                w(!0);
+                let n = (await Promise.all(e.map(o.pk))).filter(h.Vq);
+                t && (N(!0), S()),
                     n.forEach(async (e) => {
-                        var t, n;
-                        let l = d.A.getChannel(e);
-                        if (null == l) return;
-                        let r =
-                                null !=
-                                (t =
-                                    null == (n = y.options)
-                                        ? void 0
-                                        : n.reduce(
-                                              (e, t) => (
-                                                  (e[t.name] = [
-                                                      {
-                                                          type: "text",
-                                                          text: t.value,
-                                                      },
-                                                  ]),
-                                                  e
-                                              ),
-                                              {},
-                                          ))
-                                    ? t
-                                    : {},
-                            i = f.A.getGuild(null == l ? void 0 : l.guild_id);
-                        null !=
-                            (await (0, m.A)({
-                                command: K,
-                                optionValues: r,
-                                context: {
-                                    channel: l,
-                                    guild: i,
-                                },
-                            })) &&
-                            (0, a.showToast)((0, a.createToast)(x.intl.string(x.t["5WjJcl"]), a.ToastType.MESSAGE));
+                        let t = d.A.getChannel(e);
+                        if (null == t) return;
+                        let n =
+                                p.options?.reduce((e, t) => ((e[t.name] = [{ type: "text", text: t.value }]), e), {}) ??
+                                {},
+                            l = m.A.getGuild(t?.guild_id);
+                        null != (await (0, f.A)({ command: Z, optionValues: n, context: { channel: t, guild: l } })) &&
+                            (0, a.showToast)((0, a.createToast)(A.intl.string(A.t["5WjJcl"]), a.ToastType.MESSAGE));
                     }),
-                    P(!0),
-                    O();
+                    N(!0),
+                    S();
             },
-            [P, K, y.options],
+            [N, Z, p.options],
         ),
-        Y = r.useCallback(() => {
-            X(M, {
-                closeAfterSend: !0,
-            });
-        }, [X, M]);
-    if (L)
-        return (0, l.jsx)(i.Modal, {
-            title: x.intl.string(x.t.fuFvwx),
-            "aria-label": x.intl.string(x.t.fuFvwx),
-            transitionState: N.transitionState,
-            onClose: S,
+        $ = i.useCallback(() => {
+            Y(F, { closeAfterSend: !0 });
+        }, [Y, F]);
+    if (P)
+        return (0, l.jsx)(s.Modal, {
+            title: A.intl.string(A.t.fuFvwx),
+            "aria-label": A.intl.string(A.t.fuFvwx),
+            transitionState: L.transitionState,
+            onClose: C,
             actions: [],
-            children: (0, l.jsx)(a.y$y, {
-                className: v.dc,
-            }),
+            children: (0, l.jsx)(a.y$y, { className: _.dc }),
         });
-    if (Z)
-        return (0, l.jsx)(i.Modal, {
-            title: x.intl.string(x.t.fuFvwx),
-            "aria-label": x.intl.string(x.t.fuFvwx),
-            transitionState: N.transitionState,
-            onClose: S,
-            actions: [
-                {
-                    text: x.intl.string(x.t.cpT0Cq),
-                    onClick: S,
-                    variant: "primary",
-                },
-            ],
-            children: x.intl.string(x.t.yAk8ZT),
+    if (X)
+        return (0, l.jsx)(s.Modal, {
+            title: A.intl.string(A.t.fuFvwx),
+            "aria-label": A.intl.string(A.t.fuFvwx),
+            transitionState: L.transitionState,
+            onClose: C,
+            actions: [{ text: A.intl.string(A.t.cpT0Cq), onClick: C, variant: "primary" }],
+            children: A.intl.string(A.t.yAk8ZT),
         });
-    let $ =
-            q.length > 0
+    let K =
+            H.length > 0
                 ? (0, l.jsx)(g.z, {
-                      rowData: q,
-                      handleToggleDestination: W,
-                      selectedDestinations: M,
-                      disableSelection: F,
-                      originDestination: T,
+                      rowData: H,
+                      handleToggleDestination: V,
+                      selectedDestinations: F,
+                      disableSelection: G,
+                      originDestination: D,
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)("img", {
-                              className: v.BJ,
-                              src: j,
-                              alt: "",
-                          }),
+                          (0, l.jsx)("img", { className: _.BJ, src: v, alt: "" }),
                           (0, l.jsx)(a.Text, {
                               variant: "text-md/normal",
                               color: "text-muted",
-                              children: x.intl.string(x.t.V6nAfF),
+                              children: A.intl.string(A.t.V6nAfF),
                           }),
                       ],
                   }),
-        ee = x.intl.format(x.t.hajTkz, {
-            appName: null == J ? void 0 : J.name,
-        });
-    null == J && (ee = x.intl.string(x.t.fuFvwx));
-    let et = x.intl.format(x.t["DF+q2l"], {
-        appName: null == J ? void 0 : J.name,
-    });
+        ee = A.intl.format(A.t.hajTkz, { appName: O?.name });
+    null == O && (ee = A.intl.string(A.t.fuFvwx));
+    let et = A.intl.format(A.t["DF+q2l"], { appName: O?.name });
     return (
-        F &&
-            (et = x.intl.format(x.t["/KhyPe"], {
-                count: 5,
-            })),
-        (0, l.jsx)(i.Modal, {
+        G && (et = A.intl.format(A.t["/KhyPe"], { count: 5 })),
+        (0, l.jsx)(s.Modal, {
             title: ee.toString(),
             subtitle: et,
             "aria-label": ee.toString(),
-            transitionState: N.transitionState,
-            onClose: B,
+            transitionState: L.transitionState,
+            onClose: J,
             size: "md",
             actions: [
-                {
-                    text: x.intl.string(x.t.cpT0Cq),
-                    onClick: B,
-                    variant: "secondary",
-                },
-                {
-                    text: x.intl.string(x.t.TXNS7S),
-                    onClick: Y,
-                    disabled: 0 === R || E,
-                    variant: "primary",
-                },
+                { text: A.intl.string(A.t.cpT0Cq), onClick: J, variant: "secondary" },
+                { text: A.intl.string(A.t.TXNS7S), onClick: $, disabled: 0 === I || k, variant: "primary" },
             ],
-            preview:
-                void 0 !== C
-                    ? (0, l.jsx)(h.h, {
-                          previewMessage: C,
-                      })
-                    : null,
+            preview: void 0 !== T ? (0, l.jsx)(x.h, { previewMessage: T }) : null,
             input: (0, l.jsx)(a.IWV, {
-                ref: V,
-                query: z,
-                onChange: U,
+                ref: W,
+                query: R,
+                onChange: B,
                 onClear: Q,
-                placeholder: x.intl.string(x.t["5h0QOP"]),
-                "aria-label": x.intl.string(x.t["5h0QOP"]),
+                placeholder: A.intl.string(A.t["5h0QOP"]),
+                "aria-label": A.intl.string(A.t["5h0QOP"]),
                 autoFocus: !0,
             }),
-            children: $,
+            children: K,
         })
     );
 }

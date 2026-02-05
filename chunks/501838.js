@@ -1,34 +1,23 @@
-n.d(t, {
-    K6: () => c,
-    gT: () => d,
-    hJ: () => p,
-    l1: () => u,
-    ok: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { K6: () => u, gT: () => d, hJ: () => f, l1: () => c, ok: () => _ });
 var r = n(311907),
     i = n(517164),
     a = n(20805),
     s = n(15285),
     o = n(622543),
     l = n(290863);
-
-function c(e) {
+function u(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)(
         [i.A],
         () =>
-            t.some((e) => {
-                var t;
-                return null == (t = i.A.getUserOutbox(e))
-                    ? void 0
-                    : t.entries.some((e) => null != e && (0, a.zD)(e) && n.has(e.extra.application_id));
-            }),
+            t.some((e) =>
+                i.A.getUserOutbox(e)?.entries.some((e) => null != e && (0, a.zD)(e) && n.has(e.extra.application_id)),
+            ),
         [n, t],
     );
 }
-
-function u(e) {
+function c(e) {
     let { userIds: t, guildIdsWithGameStores: n } = e;
     return (0, r.bG)([o.A], () => {
         for (let e of t) {
@@ -40,7 +29,6 @@ function u(e) {
         return !1;
     }, [n, t]);
 }
-
 function d(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)([l.A], () => {
@@ -49,13 +37,11 @@ function d(e) {
         return !1;
     }, [n, t]);
 }
-
-function f(e) {
+function _(e) {
     let { gameIds: t } = e;
     return (0, r.bG)([s.Ay], () => s.Ay.getGamesSeen(!1, !1).some((e) => null != e.id && t.has(e.id)), [t]);
 }
-
-function p(e) {
+function f(e) {
     let { gameIds: t } = e;
     return (0, r.bG)(
         [s.Ay],

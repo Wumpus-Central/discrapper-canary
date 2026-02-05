@@ -1,8 +1,5 @@
-n.d(t, {
-    L: () => l,
-    q: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { L: () => l, q: () => o });
 var r = n(281445),
     i = n(390544);
 let a = [
@@ -11,18 +8,9 @@ let a = [
         name: "GameServer #1",
         cost: 3,
         specifications: [
-            {
-                title: "2",
-                description: "GB",
-            },
-            {
-                title: "1",
-                description: "vCPU",
-            },
-            {
-                title: "25",
-                description: "GB",
-            },
+            { title: "2", description: "GB" },
+            { title: "1", description: "vCPU" },
+            { title: "25", description: "GB" },
         ],
     },
     {
@@ -30,18 +18,9 @@ let a = [
         name: "GameServer #2",
         cost: 6,
         specifications: [
-            {
-                title: "2",
-                description: "GB",
-            },
-            {
-                title: "1",
-                description: "vCPU",
-            },
-            {
-                title: "25",
-                description: "GB",
-            },
+            { title: "2", description: "GB" },
+            { title: "1", description: "vCPU" },
+            { title: "25", description: "GB" },
         ],
     },
     {
@@ -49,22 +28,12 @@ let a = [
         name: "GameServer #3",
         cost: 12,
         specifications: [
-            {
-                title: "2",
-                description: "GB",
-            },
-            {
-                title: "1",
-                description: "vCPU",
-            },
-            {
-                title: "25",
-                description: "GB",
-            },
+            { title: "2", description: "GB" },
+            { title: "1", description: "vCPU" },
+            { title: "25", description: "GB" },
         ],
     },
 ];
-
 function s(e, t) {
     return {
         id: e,

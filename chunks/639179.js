@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Zo: "premiumCards_ac86f6",
     Nr: "card_ac86f6",

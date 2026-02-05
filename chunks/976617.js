@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     option: "alt",
     command: "meta",

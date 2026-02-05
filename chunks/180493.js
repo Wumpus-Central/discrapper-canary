@@ -1,98 +1,65 @@
-i.d(n, {
-    default: () => h,
-}),
-    i(896048);
-var l = i(627968),
-    e = i(64700),
-    a = i(284009),
-    s = i.n(a),
-    r = i(158954),
-    d = i(397927),
-    o = i(608461),
-    c = i(627363),
-    u = i(130771),
-    p = i(269927),
-    g = i(985018);
-
+n.d(i, { default: () => h });
+var e = n(627968),
+    l = n(64700),
+    a = n(284009),
+    s = n.n(a),
+    r = n(158954),
+    d = n(397927),
+    c = n(608461),
+    o = n(627363),
+    u = n(130771),
+    p = n(269927),
+    g = n(985018);
 function h(t) {
-    var n, i;
-    let { transitionState: a, application: h, onClose: m } = t,
-        [x, v] = e.useState(null == h || null == (n = h.team) ? void 0 : n.id),
-        { teams: C } = (0, u.A)(),
-        b = e.useMemo(
+    let { transitionState: i, application: n, onClose: a } = t,
+        [h, m] = l.useState(n?.team?.id),
+        { teams: x } = (0, u.A)(),
+        C = l.useMemo(
             () =>
-                C.filter((t) => t.payout_account_status === p.y.ACTIVE).map((t) => ({
-                    id: t.id,
-                    label: t.name,
-                    value: t.id,
-                })),
-            [C],
+                x
+                    .filter((t) => t.payout_account_status === p.y.ACTIVE)
+                    .map((t) => ({ id: t.id, label: t.name, value: t.id })),
+            [x],
         ),
-        y = (null == h || null == (i = h.team) ? void 0 : i.id) !== x,
-        [A, { loading: f, error: j }] = (0, o.A)(c.Ay.transferApplication),
-        k = async () => {
-            s()(null != h, "no application"),
-                s()(null != x, "no team selected"),
-                null !=
-                    (await A({
-                        applicationId: h.id,
-                        teamId: x,
-                    })) && m();
+        b = n?.team?.id !== h,
+        [v, { loading: y, error: A }] = (0, c.A)(o.Ay.transferApplication),
+        f = async () => {
+            s()(null != n, "no application"),
+                s()(null != h, "no team selected"),
+                null != (await v({ applicationId: n.id, teamId: h })) && a();
         },
-        I = (null == h ? void 0 : h.team) != null;
-    return (0, l.jsxs)(r.Modal, {
-        transitionState: a,
-        title: I ? g.intl.string(g.t["4TveVv"]) : g.intl.string(g.t.feBUAV),
-        subtitle: I ? g.intl.string(g.t.c7HS0n) : g.intl.string(g.t.atZ50I),
-        onClose: m,
+        j = n?.team != null;
+    return (0, e.jsxs)(r.Modal, {
+        transitionState: i,
+        title: j ? g.intl.string(g.t["4TveVv"]) : g.intl.string(g.t.feBUAV),
+        subtitle: j ? g.intl.string(g.t.c7HS0n) : g.intl.string(g.t.atZ50I),
+        onClose: a,
         actions: [
-            {
-                variant: "secondary",
-                text: g.intl.string(g.t["ETE/oC"]),
-                onClick: m,
-            },
-            {
-                variant: "critical-primary",
-                text: g.intl.string(g.t["R3BPH+"]),
-                loading: f,
-                disabled: !y,
-                onClick: k,
-            },
+            { variant: "secondary", text: g.intl.string(g.t["ETE/oC"]), onClick: a },
+            { variant: "critical-primary", text: g.intl.string(g.t["R3BPH+"]), loading: y, disabled: !b, onClick: f },
         ],
         children: [
-            I
-                ? (0, l.jsxs)(d.po8, {
+            j
+                ? (0, e.jsxs)(d.po8, {
                       messageType: d.YCn.WARNING,
                       children: [
                           g.intl.string(g.t.Caz8nL),
-                          (0, l.jsx)(d.hKd, {
-                              size: 4,
-                          }),
-                          (0, l.jsx)(d.Text, {
-                              variant: "text-sm/normal",
-                              children: g.intl.string(g.t.u4ddHZ),
-                          }),
+                          (0, e.jsx)(d.hKd, { size: 4 }),
+                          (0, e.jsx)(d.Text, { variant: "text-sm/normal", children: g.intl.string(g.t.u4ddHZ) }),
                       ],
                   })
                 : null,
-            null != j
-                ? (0, l.jsx)(d.wx6, {
-                      type: "critical",
-                      children: j.message,
-                  })
-                : null,
-            (0, l.jsx)(d.hKd, {
-                size: 16,
-            }),
-            (0, l.jsx)(d.l6P, {
+            null != A ? (0, e.jsx)(d.wx6, { type: "critical", children: A.message }) : null,
+            (0, e.jsx)(d.hKd, { size: 16 }),
+            (0, e.jsx)(d.l6P, {
                 selectionMode: "single",
-                label: I ? g.intl.string(g.t.xZ6ZL6) : g.intl.string(g.t.bfmKdK),
+                label: j ? g.intl.string(g.t.xZ6ZL6) : g.intl.string(g.t.bfmKdK),
                 required: !0,
-                options: b,
+                options: C,
                 placeholder: g.intl.string(g.t.QXf93A),
-                value: x,
-                disabled: 0 === b.length,
-                onSelectionChange: v,
+                value: h,
+                disabled: 0 === C.length,
+                onSelectionChange: m,
             }),
         ],
     });

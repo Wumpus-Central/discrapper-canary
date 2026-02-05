@@ -1,29 +1,27 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(311907),
     i = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s extends r.Ay.Store {
+class a extends r.Ay.Store {
+    guildIds = new Set();
     allGuildIds() {
         return this.guildIds;
     }
     isMember(e) {
         return this.guildIds.has(e);
+    }
+    constructor() {
+        super(
+            i.h,
+            {
+                CACHE_LOADED: (e) => this.handleCacheLoaded(e),
+                CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
+                CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
+                GUILD_CREATE: (e) => this.handleGuildCreate(e),
+                GUILD_DELETE: (e) => this.handleGuildDelete(e),
+            },
+            i.A.Early,
+        );
     }
     handleConnectionOpen(e) {
         this.guildIds = new Set([...e.guilds.map((e) => e.id), ...e.unavailableGuilds]);
@@ -40,19 +38,5 @@ class s extends r.Ay.Store {
     handleGuildDelete(e) {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
-    constructor() {
-        super(
-            i.h,
-            {
-                CACHE_LOADED: (e) => this.handleCacheLoaded(e),
-                CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
-                CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
-                GUILD_CREATE: (e) => this.handleGuildCreate(e),
-                GUILD_DELETE: (e) => this.handleGuildDelete(e),
-            },
-            i.A.Early,
-        ),
-            a(this, "guildIds", new Set());
-    }
 }
-let o = new s();
+let s = new a();

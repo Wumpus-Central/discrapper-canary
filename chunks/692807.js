@@ -1,15 +1,10 @@
-var r = n(869639);
-e.exports = function (e) {
-    var t = e.getSelection(),
-        n = t.getStartKey();
-    return r.set(e, {
-        selection: t.merge({
-            anchorKey: n,
-            anchorOffset: 0,
-            focusKey: n,
-            focusOffset: 0,
-            isBackward: !1,
-        }),
+"use strict";
+var n = r(869639);
+t.exports = function (t) {
+    var e = t.getSelection(),
+        r = e.getStartKey();
+    return n.set(t, {
+        selection: e.merge({ anchorKey: r, anchorOffset: 0, focusKey: r, focusOffset: 0, isBackward: !1 }),
         forceSelection: !0,
     });
 };

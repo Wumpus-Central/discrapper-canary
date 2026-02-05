@@ -1,229 +1,96 @@
-r.d(e, {
-    default: () => _,
-}),
-    r(896048);
+r.d(e, { default: () => w });
 var n = r(627968),
-    o = r(64700),
-    i = r(158954),
-    l = r(964486),
-    a = r(954571),
-    c = r(96304),
-    s = r(677185),
-    u = r(788868),
-    p = r(88001),
-    f = r(652215),
-    O = r(519412),
-    m = r(985018);
-
-function b(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                }),
-            )),
-            n.forEach(function (e) {
-                var n;
-                (n = r[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = n);
-            });
-    }
-    return t;
-}
-
-function d(t, e) {
-    return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var r = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(t);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(e)).forEach(function (r) {
-                  Object.defineProperty(t, r, Object.getOwnPropertyDescriptor(e, r));
-              }),
-        t
-    );
-}
-
-function y(t, e) {
-    if (null == t) return {};
-    var r,
-        n,
-        o,
-        i = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (o = 0, r = Reflect.ownKeys(t); o < r.length; o++)
-            (n = r[o]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
-        return i;
-    }
-    if (
-        ((i = (function (t, e) {
-            if (null == t) return {};
-            var r,
-                n,
-                o = {},
-                i = Object.getOwnPropertyNames(t);
-            for (n = 0; n < i.length; n++)
-                (r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
-            return o;
-        })(t, e)),
-        Object.getOwnPropertySymbols)
-    )
-        for (o = 0, r = Object.getOwnPropertySymbols(t); o < r.length; o++)
-            (n = r[o]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
-    return i;
-}
-let P = {
-        1: "what_you_lose",
-        2: "confirmation",
+    i = r(64700),
+    o = r(158954),
+    a = r(964486),
+    l = r(954571),
+    s = r(96304),
+    u = r(677185),
+    c = r(788868),
+    d = r(88001),
+    m = r(652215),
+    _ = r(519412),
+    p = r(985018);
+let P = { 1: "what_you_lose", 2: "confirmation" },
+    f = (t) => {
+        let { onClose: e, currentUser: r, onNext: i, ...a } = t;
+        return (0, n.jsx)(o.Modal, {
+            title: p.intl.formatToPlainString(_.default["4e7WtF"], { premiumGroupProductName: (0, d.DP)() }),
+            subtitle: p.intl.formatToPlainString(_.default["3kVEg0"], { cooldownMonths: d.wl }),
+            onClose: e,
+            ...a,
+            actions: [
+                { text: p.intl.string(_.default.UFHNtO), variant: "secondary", onClick: e },
+                { text: p.intl.string(p.t["3PatSz"]), variant: "primary", onClick: i },
+            ],
+            children: (0, n.jsx)(s.l, {
+                currentUser: r,
+                premiumType: c.PremiumTypes.TIER_2,
+                onClose: e,
+                isDowngrade: !1,
+                isPremiumRebrand: !0,
+            }),
+        });
+    },
+    C = (t) => {
+        let { onClose: e, onConfirm: r, isRemovingUser: i, ...a } = t;
+        return (0, n.jsx)(o.Modal, {
+            size: "md",
+            title: p.intl.formatToPlainString(_.default.IrvJHs, { premiumGroupProductName: (0, d.DP)() }),
+            subtitle: p.intl.formatToPlainString(_.default.cQDYKU, {
+                premiumGroupProductName: (0, d.DP)(),
+                cooldownMonths: d.wl,
+            }),
+            onClose: e,
+            actions: [
+                { text: p.intl.string(_.default.UFHNtO), variant: "secondary", onClick: e },
+                { text: p.intl.string(p.t["cY+Oob"]), variant: "critical-primary", onClick: r, loading: i },
+            ],
+            ...a,
+        });
     },
     w = (t) => {
-        let { onClose: e, currentUser: r, onNext: o } = t,
-            l = y(t, ["onClose", "currentUser", "onNext"]);
-        return (0, n.jsx)(
-            i.Modal,
-            d(
-                b(
-                    {
-                        title: m.intl.formatToPlainString(O.default["4e7WtF"], {
-                            premiumGroupProductName: (0, p.DP)(),
-                        }),
-                        subtitle: m.intl.formatToPlainString(O.default["3kVEg0"], {
-                            cooldownMonths: p.wl,
-                        }),
-                        onClose: e,
-                    },
-                    l,
-                ),
-                {
-                    actions: [
-                        {
-                            text: m.intl.string(O.default.UFHNtO),
-                            variant: "secondary",
-                            onClick: e,
-                        },
-                        {
-                            text: m.intl.string(m.t["3PatSz"]),
-                            variant: "primary",
-                            onClick: o,
-                        },
-                    ],
-                    children: (0, n.jsx)(c.l, {
-                        currentUser: r,
-                        premiumType: u.PremiumTypes.TIER_2,
-                        onClose: e,
-                        isDowngrade: !1,
-                        isPremiumRebrand: !0,
-                    }),
-                },
-            ),
-        );
-    },
-    g = (t) => {
-        let { onClose: e, onConfirm: r, isRemovingUser: o } = t,
-            l = y(t, ["onClose", "onConfirm", "isRemovingUser"]);
-        return (0, n.jsx)(
-            i.Modal,
-            b(
-                {
-                    size: "md",
-                    title: m.intl.formatToPlainString(O.default.IrvJHs, {
-                        premiumGroupProductName: (0, p.DP)(),
-                    }),
-                    subtitle: m.intl.formatToPlainString(O.default.cQDYKU, {
-                        premiumGroupProductName: (0, p.DP)(),
-                        cooldownMonths: p.wl,
-                    }),
-                    onClose: e,
-                    actions: [
-                        {
-                            text: m.intl.string(O.default.UFHNtO),
-                            variant: "secondary",
-                            onClick: e,
-                        },
-                        {
-                            text: m.intl.string(m.t["cY+Oob"]),
-                            variant: "critical-primary",
-                            onClick: r,
-                            loading: o,
-                        },
-                    ],
-                },
-                l,
-            ),
-        );
-    },
-    _ = (t) => {
-        let { premiumGroupSubscriptionId: e, currentUser: r, onClose: i } = t,
-            c = y(t, ["premiumGroupSubscriptionId", "currentUser", "onClose"]),
-            [u, p] = o.useState(1),
-            [O, m] = o.useState(!1),
-            _ = o.useRef(0),
-            j = o.useRef(0);
-        (0, l.Ay)(() => {
+        let { premiumGroupSubscriptionId: e, currentUser: r, onClose: o, ...s } = t,
+            [c, d] = i.useState(1),
+            [_, p] = i.useState(!1),
+            w = i.useRef(0),
+            E = i.useRef(0);
+        (0, a.Ay)(() => {
             let t = Date.now();
-            (_.current = t),
-                (j.current = t),
-                a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, {
-                    subscription_id: e,
-                });
+            (w.current = t),
+                (E.current = t),
+                l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: e });
         });
-        let C = (t, r) => {
-                a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
+        let M = (t, r) => {
+                l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
                     subscription_id: e,
                     from_step: P[t],
                     to_step: r,
-                    step_duration_ms: Date.now() - j.current,
-                    flow_duration_ms: Date.now() - _.current,
+                    step_duration_ms: Date.now() - E.current,
+                    flow_duration_ms: Date.now() - w.current,
                 }),
-                    (j.current = Date.now());
-            },
-            E = async () => {
-                C(u, null), await i();
+                    (E.current = Date.now());
             },
             R = async () => {
-                m(!0),
-                    (await (0, s.oO)(e, r.id)).ok &&
-                        (a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, {
-                            subscription_id: e,
-                        }),
-                        i()),
-                    m(!1);
+                M(c, null), await o();
+            },
+            T = async () => {
+                p(!0),
+                    (await (0, u.oO)(e, r.id)).ok &&
+                        (l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: e }),
+                        o()),
+                    p(!1);
             };
-        return 1 === u
-            ? (0, n.jsx)(
-                  w,
-                  d(b({}, c), {
-                      onNext: () => {
-                          C(u, P[2]), p(2);
-                      },
-                      currentUser: r,
-                      onClose: E,
-                  }),
-              )
-            : 2 === u
-              ? (0, n.jsx)(
-                    g,
-                    d(b({}, c), {
-                        onConfirm: R,
-                        onClose: E,
-                        isRemovingUser: O,
-                    }),
-                )
+        return 1 === c
+            ? (0, n.jsx)(f, {
+                  ...s,
+                  onNext: () => {
+                      M(c, P[2]), d(2);
+                  },
+                  currentUser: r,
+                  onClose: R,
+              })
+            : 2 === c
+              ? (0, n.jsx)(C, { ...s, onConfirm: T, onClose: R, isRemovingUser: _ })
               : null;
     };

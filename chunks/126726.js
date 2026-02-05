@@ -1,3 +1,4 @@
+"use strict";
 var r = n(308227),
     a = n(414123),
     o = Object.getOwnPropertyDescriptor;

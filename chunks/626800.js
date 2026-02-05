@@ -1,3 +1,4 @@
+"use strict";
 var r = n(581070)(),
     i = n(906046)("Object.prototype.toString"),
     a = function (e) {

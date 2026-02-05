@@ -1,7 +1,5 @@
-n.d(t, {
-    i: () => r,
-    m: () => i,
-});
+"use strict";
+n.d(t, { i: () => r, m: () => i });
 var r = (function (e) {
         return (
             (e.PRIMARY = "primary"),

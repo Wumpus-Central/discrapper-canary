@@ -1,8 +1,5 @@
-n.d(t, {
-    n: () => r,
-    o: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { n: () => r, o: () => i });
 var r = (function (e) {
     return (
         (e.STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP"),

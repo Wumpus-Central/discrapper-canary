@@ -6,29 +6,10 @@ e.exports = function (e) {
             className: "attribute",
             begin: t.concat("^", r, "(?=\\:\\s)"),
             starts: {
-                contains: [
-                    {
-                        className: "punctuation",
-                        begin: /: /,
-                        relevance: 0,
-                        starts: {
-                            end: "$",
-                            relevance: 0,
-                        },
-                    },
-                ],
+                contains: [{ className: "punctuation", begin: /: /, relevance: 0, starts: { end: "$", relevance: 0 } }],
             },
         },
-        a = [
-            i,
-            {
-                begin: "\\n\\n",
-                starts: {
-                    subLanguage: [],
-                    endsWithParent: !0,
-                },
-            },
-        ];
+        a = [i, { begin: "\\n\\n", starts: { subLanguage: [], endsWithParent: !0 } }];
     return {
         name: "HTTP",
         aliases: ["https"],
@@ -38,50 +19,22 @@ e.exports = function (e) {
                 begin: "^(?=" + n + " \\d{3})",
                 end: /$/,
                 contains: [
-                    {
-                        className: "meta",
-                        begin: n,
-                    },
-                    {
-                        className: "number",
-                        begin: "\\b\\d{3}\\b",
-                    },
+                    { className: "meta", begin: n },
+                    { className: "number", begin: "\\b\\d{3}\\b" },
                 ],
-                starts: {
-                    end: /\b\B/,
-                    illegal: /\S/,
-                    contains: a,
-                },
+                starts: { end: /\b\B/, illegal: /\S/, contains: a },
             },
             {
                 begin: "(?=^[A-Z]+ (.*?) " + n + "$)",
                 end: /$/,
                 contains: [
-                    {
-                        className: "string",
-                        begin: " ",
-                        end: " ",
-                        excludeBegin: !0,
-                        excludeEnd: !0,
-                    },
-                    {
-                        className: "meta",
-                        begin: n,
-                    },
-                    {
-                        className: "keyword",
-                        begin: "[A-Z]+",
-                    },
+                    { className: "string", begin: " ", end: " ", excludeBegin: !0, excludeEnd: !0 },
+                    { className: "meta", begin: n },
+                    { className: "keyword", begin: "[A-Z]+" },
                 ],
-                starts: {
-                    end: /\b\B/,
-                    illegal: /\S/,
-                    contains: a,
-                },
+                starts: { end: /\b\B/, illegal: /\S/, contains: a },
             },
-            e.inherit(i, {
-                relevance: 0,
-            }),
+            e.inherit(i, { relevance: 0 }),
         ],
     };
 };

@@ -1,6 +1,5 @@
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-});
+"use strict";
+Object.defineProperty(e, "__esModule", { value: !0 });
 var o =
         Object.assign ||
         function (t) {
@@ -13,13 +12,8 @@ var o =
     n = u(r(223108)),
     i = r(64700),
     a = u(i);
-
 function u(t) {
-    return t && t.__esModule
-        ? t
-        : {
-              default: t,
-          };
+    return t && t.__esModule ? t : { default: t };
 }
 var s = {
         bgColor: n.default.oneOfType([n.default.object, n.default.string]).isRequired,
@@ -46,27 +40,13 @@ var s = {
             })(t, ["bgColor", "bgD", "fgD", "fgColor", "size", "title", "viewBoxSize"]);
         return a.default.createElement(
             "svg",
-            o({}, h, {
-                height: s,
-                ref: e,
-                viewBox: "0 0 " + f + " " + f,
-                width: s,
-            }),
+            o({}, h, { height: s, ref: e, viewBox: "0 0 " + f + " " + f, width: s }),
             l ? a.default.createElement("title", null, l) : null,
-            a.default.createElement("path", {
-                d: n,
-                fill: r,
-            }),
-            a.default.createElement("path", {
-                d: i,
-                fill: u,
-            }),
+            a.default.createElement("path", { d: n, fill: r }),
+            a.default.createElement("path", { d: i, fill: u }),
         );
     });
 (l.displayName = "QRCodeSvg"),
     (l.propTypes = s),
-    (l.defaultProps = {
-        title: void 0,
-        xmlns: "http://www.w3.org/2000/svg",
-    }),
+    (l.defaultProps = { title: void 0, xmlns: "http://www.w3.org/2000/svg" }),
     (e.default = l);

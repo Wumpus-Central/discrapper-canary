@@ -1,109 +1,74 @@
-a.d(n, {
-    default: () => p,
-}),
-    a(896048);
-var e = a(627968),
-    i = a(64700),
-    l = a(158954),
-    s = a(397927),
-    o = a(843472),
-    c = a(855057),
-    r = a(309010),
-    d = a(954571),
-    u = a(652215),
-    h = a(381941),
-    g = a(985018),
-    j = a(787790);
-
-function p(t) {
+n.d(a, { default: () => g });
+var e = n(627968),
+    i = n(64700),
+    l = n(158954),
+    s = n(397927),
+    o = n(843472),
+    c = n(855057),
+    r = n(309010),
+    d = n(954571),
+    u = n(652215),
+    C = n(381941),
+    _ = n(985018),
+    h = n(787790);
+function g(t) {
     let {
-            transitionState: n,
-            onClose: a,
-            onGIFSelected: p,
-            hideFavorites: C = !1,
-            modalTitle: E = g.intl.string(g.t["0VinIJ"]),
-            defaultText: b = g.intl.string(g.t.OrwKgi),
-            giftIntentType: N,
-            analyticsLocationHistory: S,
+            transitionState: a,
+            onClose: n,
+            onGIFSelected: g,
+            hideFavorites: j = !1,
+            modalTitle: p = _.intl.string(_.t["0VinIJ"]),
+            defaultText: E = _.intl.string(_.t.OrwKgi),
+            giftIntentType: m,
+            analyticsLocationHistory: N,
         } = t,
-        [k, I] = i.useState(null),
-        [T, v] = i.useState(""),
-        _ = i.useCallback(
+        [S, k] = i.useState(null),
+        [I, T] = i.useState(""),
+        f = i.useCallback(
             (t) => {
-                I(t), null == p || p(t);
+                k(t), g?.(t);
             },
-            [p],
+            [g],
         ),
-        f = i.useCallback(async () => {
-            if (null != k) {
+        v = i.useCallback(async () => {
+            if (null != S) {
                 let t = r.A.getChannelId();
                 null != t &&
-                    ("" !== T &&
+                    ("" !== I &&
                         (await o.A.sendMessage(
                             t,
-                            {
-                                content: T,
-                                tts: !1,
-                                invalidEmojis: [],
-                                validNonShortcutEmojis: [],
-                            },
+                            { content: I, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                             !0,
-                            {
-                                location: h.Hx.GIFTING,
-                            },
+                            { location: C.Hx.GIFTING },
                         )),
                     await o.A.sendMessage(
                         t,
-                        {
-                            content: k.url,
-                            tts: !1,
-                            invalidEmojis: [],
-                            validNonShortcutEmojis: [],
-                        },
+                        { content: S.url, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                         !0,
-                        {
-                            location: h.Hx.GIFTING,
-                        },
+                        { location: C.Hx.GIFTING },
                     ),
-                    null != N &&
-                        d.default.track(u.HAw.GIFT_INTENT_MESSAGE_SENT, {
-                            gift_intent_type: N,
-                            location_stack: S,
-                        }),
-                    await a());
+                    null != m &&
+                        d.default.track(u.HAw.GIFT_INTENT_MESSAGE_SENT, { gift_intent_type: m, location_stack: N }),
+                    await n());
             }
-        }, [k, T, a, N, S]);
+        }, [S, I, n, m, N]);
     return (0, e.jsx)(l.Modal, {
-        transitionState: n,
-        onClose: a,
-        title: E,
-        input: (0, e.jsx)(s.fs1, {
-            value: T,
-            onChange: (t) => v(t),
-            placeholder: b,
-        }),
+        transitionState: a,
+        onClose: n,
+        title: p,
+        input: (0, e.jsx)(s.fs1, { value: I, onChange: (t) => T(t), placeholder: E }),
         actions: [
-            {
-                variant: "secondary",
-                text: g.intl.string(g.t["ETE/oC"]),
-                onClick: a,
-            },
-            {
-                variant: "primary",
-                text: g.intl.string(g.t.TXNS7S),
-                onClick: f,
-                loading: !1,
-                disabled: null == k,
-            },
+            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
+            { variant: "primary", text: _.intl.string(_.t.TXNS7S), onClick: v, loading: !1, disabled: null == S },
         ],
         children: (0, e.jsx)(c.A, {
-            hideFavorites: C,
-            onSelectGIF: _,
-            selectedGIF: k,
-            initialQuery: g.intl.string(g.t.jrtJi4),
-            className: j.jT,
-            headerClassName: j.Hc,
-            contentClassName: j.jE,
+            hideFavorites: j,
+            onSelectGIF: f,
+            selectedGIF: S,
+            initialQuery: _.intl.string(_.t.jrtJi4),
+            className: h.jT,
+            headerClassName: h.Hc,
+            contentClassName: h.jE,
         }),
     });
 }

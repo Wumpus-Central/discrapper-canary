@@ -8,13 +8,7 @@ var r = n(412013).default;
         if (!isNaN(e.length))
             return {
                 next: function () {
-                    return (
-                        e && n >= e.length && (e = void 0),
-                        {
-                            value: e && e[n++],
-                            done: !e,
-                        }
-                    );
+                    return e && n >= e.length && (e = void 0), { value: e && e[n++], done: !e };
                 },
             };
     }

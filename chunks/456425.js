@@ -1,294 +1,166 @@
-n.d(t, {
-    $: () => V,
-}),
-    n(747238);
-var r = n(627968),
+n.d(t, { $: () => V });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(397927),
-    s = n(565645),
+    r = n(565645),
     o = n(730134),
-    c = n(688810),
-    u = n(587895),
-    d = n(22007),
-    f = n(46054),
-    p = n(102876),
-    h = n(657331),
-    b = n(253932),
-    g = n(427157),
-    m = n(287809),
-    A = n(954571),
-    y = n(661191),
-    O = n(998218),
-    j = n(245205),
-    v = n(322387),
-    x = n(995273),
-    E = n(96511),
-    _ = n(160098),
-    C = n(429604),
-    S = n(9905),
-    I = n(717607),
-    N = n(457404),
-    T = n(652215),
-    P = n(985018),
-    w = n(993169),
-    R = n(213398),
-    D = n(537997);
-
-function M(e) {
-    var t, n, l, i, s;
-    let { item: c } = e,
-        u = null == (n = c.message) ? void 0 : n.content;
-    if (null == u) return (0, r.jsx)("div", {});
-    let d =
-            null != (t = m.default.getUser(null == (i = c.message) || null == (l = i.author) ? void 0 : l.id))
-                ? t
-                : new g.A(null == (s = c.message) ? void 0 : s.author),
-        p = f.A.parse(u);
-    return (0, r.jsxs)("div", {
-        className: w.PI,
+    d = n(688810),
+    c = n(587895),
+    u = n(22007),
+    h = n(46054),
+    A = n(102876),
+    g = n(657331),
+    m = n(253932),
+    p = n(427157),
+    _ = n(287809),
+    x = n(954571),
+    f = n(661191),
+    E = n(998218),
+    C = n(245205),
+    I = n(322387),
+    S = n(995273),
+    b = n(96511),
+    N = n(160098),
+    T = n(429604),
+    j = n(9905),
+    v = n(717607),
+    y = n(457404),
+    R = n(652215),
+    O = n(985018),
+    L = n(993169),
+    D = n(213398),
+    M = n(537997);
+function G(e) {
+    let { item: t } = e,
+        n = t.message?.content;
+    if (null == n) return (0, i.jsx)("div", {});
+    let l = _.default.getUser(t.message?.author?.id) ?? new p.A(t.message?.author),
+        s = h.A.parse(n);
+    return (0, i.jsxs)("div", {
+        className: L.PI,
         children: [
-            (0, r.jsx)(o.A, {
-                user: d,
-                size: a._3J.SIZE_24,
-            }),
-            (0, r.jsx)(a.Text, {
-                className: w.Bp,
-                variant: "text-sm/normal",
-                lineClamp: 2,
-                children: p,
-            }),
+            (0, i.jsx)(o.A, { user: l, size: a._3J.SIZE_24 }),
+            (0, i.jsx)(a.Text, { className: L.Bp, variant: "text-sm/normal", lineClamp: 2, children: s }),
         ],
     });
 }
-
-function L(e) {
+function U(e) {
     let {
         item: { callout: t },
     } = e;
     if (null == t) return null;
-    let n = f.A.parse(t);
-    return (0, r.jsx)("div", {
-        className: w.CD,
-        children: (0, r.jsx)(a.Text, {
-            variant: "text-sm/normal",
-            lineClamp: 2,
-            children: n,
-        }),
+    let n = h.A.parse(t);
+    return (0, i.jsx)("div", {
+        className: L.CD,
+        children: (0, i.jsx)(a.Text, { variant: "text-sm/normal", lineClamp: 2, children: n }),
     });
 }
-
-function G(e) {
+function P(e) {
     let { item: t } = e,
-        n = D,
-        l = P.intl.string(P.t.SJTHJb);
+        n = M,
+        l = O.intl.string(O.t.SJTHJb);
     return (
-        t.completed && ((n = R), (l = P.intl.string(P.t.f6RTAM))),
-        (0, r.jsxs)("div", {
-            className: w.AE,
+        t.completed && ((n = D), (l = O.intl.string(O.t.f6RTAM))),
+        (0, i.jsxs)("div", {
+            className: L.AE,
             children: [
-                (0, r.jsx)("img", {
-                    className: w.kv,
-                    alt: "",
-                    src: n,
-                }),
-                (0, r.jsx)(a.Text, {
-                    className: w.mc,
-                    variant: "text-xs/bold",
-                    color: "text-default",
-                    children: l,
-                }),
+                (0, i.jsx)("img", { className: L.kv, alt: "", src: n }),
+                (0, i.jsx)(a.Text, { className: L.mc, variant: "text-xs/bold", color: "text-default", children: l }),
             ],
         })
     );
 }
-
 function k(e) {
     let { applicationId: t } = e,
-        n = (0, i.bG)([u.A], () => u.A.getApplication(t));
-    return null == n
-        ? (0, r.jsx)("div", {})
-        : (0, r.jsx)(
-              p.A,
-              {
-                  application: n,
-              },
-              n.id,
-          );
+        n = (0, s.bG)([c.A], () => c.A.getApplication(t));
+    return null == n ? (0, i.jsx)("div", {}) : (0, i.jsx)(A.A, { application: n }, n.id);
 }
-let U = l.memo(function (e) {
-        var t;
-        let { item: i, ackedBeforeId: o } = e,
-            { analyticsLocations: u } = (0, c.Ay)(),
-            p = (0, C.t)(i, o),
-            b = l.useCallback(async () => {
-                if ((p || (0, j.R7)(i), null != i.item_enum && i.item_enum === v.r_.FIND_FRIENDS))
+let w = l.memo(function (e) {
+        let { item: t, ackedBeforeId: s } = e,
+            { analyticsLocations: o } = (0, d.Ay)(),
+            c = (0, T.t)(t, s),
+            A = l.useCallback(async () => {
+                if ((c || (0, C.R7)(t), null != t.item_enum && t.item_enum === I.r_.FIND_FRIENDS))
                     return void (0, a.mMO)(async () => {
                         let { default: e } = await n.e("67248").then(n.bind(n, 911539));
-                        return (t) =>
-                            (0, r.jsx)(
-                                e,
-                                (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        source: "Notification Center",
-                                    },
-                                    t,
-                                ),
-                            );
+                        return (t) => (0, i.jsx)(e, { source: "Notification Center", ...t });
                     });
-                if (null != i.deeplink) {
-                    let t = O.A.safeParseWithQuery(i.deeplink);
-                    if (null == t) return;
-                    let n = t.hostname,
-                        r = t.path;
-                    if (null == n || null == r) return;
-                    if (O.A.isDiscordHostname(n)) {
-                        let t = r.match("^/users/(\\d+)");
-                        if (null != t && 2 === t.length) {
-                            var e;
-                            (0, h.openUserProfileModal)({
-                                userId: t[1],
-                                messageId: null == (e = i.message) ? void 0 : e.id,
-                                sourceAnalyticsLocations: u,
-                            });
-                        } else await (0, d.A)(r);
+                if (null != t.deeplink) {
+                    let e = E.A.safeParseWithQuery(t.deeplink);
+                    if (null == e) return;
+                    let n = e.hostname,
+                        i = e.path;
+                    if (null == n || null == i) return;
+                    if (E.A.isDiscordHostname(n)) {
+                        let e = i.match("^/users/(\\d+)");
+                        null != e && 2 === e.length
+                            ? (0, g.openUserProfileModal)({
+                                  userId: e[1],
+                                  messageId: t.message?.id,
+                                  sourceAnalyticsLocations: o,
+                              })
+                            : await (0, u.A)(i);
                     }
-                    A.default.track(T.HAw.NOTIFICATION_CENTER_ACTION, {
-                        action_type: v.e1.CLICKED,
-                        notification_center_id: i.id,
-                        item_type: i.type,
-                        acked: p,
+                    x.default.track(R.HAw.NOTIFICATION_CENTER_ACTION, {
+                        action_type: I.e1.CLICKED,
+                        notification_center_id: t.id,
+                        item_type: t.type,
+                        acked: c,
                     });
                 }
-            }, [i, p, u]),
-            g = null;
-        i.type === v.Uo.INCOMING_FRIEND_REQUESTS && null != i.other_user
-            ? (g = (0, r.jsx)(I.A, {
-                  userId: i.other_user.id,
-              }))
-            : i.type === v.Uo.INCOMING_GAME_FRIEND_REQUESTS &&
-              null != i.other_user &&
-              (g = (0, r.jsx)(I.A, {
-                  userId: i.other_user.id,
-                  applicationId: i.applicationId,
-              }));
-        let m = null != i.local_id,
-            _ = (0, E.A)({
-                item: i,
-                renderApplication: (e) =>
-                    (0, r.jsx)(k, {
-                        applicationId: e,
-                    }),
-            }),
-            { emoji_id: P, emoji_name: R } = i,
-            D =
-                null != P || null != R
-                    ? (0, r.jsx)(s.A, {
-                          className: w.Zg,
-                          emojiId: P,
-                          emojiName: R,
-                      })
-                    : null;
-        return (0, r.jsxs)("div", {
-            className: w.nM,
+            }, [t, c, o]),
+            m = null;
+        t.type === I.Uo.INCOMING_FRIEND_REQUESTS && null != t.other_user
+            ? (m = (0, i.jsx)(v.A, { userId: t.other_user.id }))
+            : t.type === I.Uo.INCOMING_GAME_FRIEND_REQUESTS &&
+              null != t.other_user &&
+              (m = (0, i.jsx)(v.A, { userId: t.other_user.id, applicationId: t.applicationId }));
+        let p = null != t.local_id,
+            _ = (0, b.A)({ item: t, renderApplication: (e) => (0, i.jsx)(k, { applicationId: e }) }),
+            { emoji_id: N, emoji_name: O } = t,
+            D = null != N || null != O ? (0, i.jsx)(r.A, { className: L.Zg, emojiId: N, emojiName: O }) : null;
+        return (0, i.jsxs)("div", {
+            className: L.nM,
             children: [
-                (0, r.jsxs)(a.sqX, {
-                    className: w.u4,
-                    focusProps: {
-                        offset: 4,
-                    },
+                (0, i.jsxs)(a.sqX, {
+                    className: L.u4,
+                    focusProps: { offset: 4 },
                     "aria-label": _,
-                    onClick: b,
+                    onClick: A,
                     children: [
-                        p
-                            ? null
-                            : (0, r.jsx)("div", {
-                                  className: w.gy,
-                              }),
-                        (0, r.jsx)(S.J, {
-                            item: i,
-                        }),
-                        (0, r.jsxs)("div", {
-                            className: w.rf,
+                        c ? null : (0, i.jsx)("div", { className: L.gy }),
+                        (0, i.jsx)(j.J, { item: t }),
+                        (0, i.jsxs)("div", {
+                            className: L.rf,
                             children: [
-                                "lifecycle_item" === i.type &&
-                                    null != i.item_enum &&
-                                    (0, r.jsx)(G, {
-                                        item: i,
-                                    }),
-                                (0, r.jsxs)(a.Text, {
+                                "lifecycle_item" === t.type && null != t.item_enum && (0, i.jsx)(P, { item: t }),
+                                (0, i.jsxs)(a.Text, {
                                     variant: "text-md/normal",
-                                    color: p ? "text-muted" : "text-default",
-                                    children: ["string" != typeof _ ? _ : f.A.parse(_), D],
+                                    color: c ? "text-muted" : "text-default",
+                                    children: ["string" != typeof _ ? _ : h.A.parse(_), D],
                                 }),
-                                (null == (t = i.message) ? void 0 : t.content) != null
-                                    ? (0, r.jsx)(M, {
-                                          item: i,
-                                      })
-                                    : null,
-                                null != i.callout
-                                    ? (0, r.jsx)(L, {
-                                          item: i,
-                                      })
-                                    : null,
-                                (0, r.jsx)(a.Text, {
+                                t.message?.content != null ? (0, i.jsx)(G, { item: t }) : null,
+                                null != t.callout ? (0, i.jsx)(U, { item: t }) : null,
+                                (0, i.jsx)(a.Text, {
                                     variant: "text-xs/medium",
-                                    color: p ? "text-muted" : "text-default",
-                                    children: (0, x.jb)(y.default.extractTimestamp(i.id)),
+                                    color: c ? "text-muted" : "text-default",
+                                    children: (0, S.jb)(f.default.extractTimestamp(t.id)),
                                 }),
-                                g,
+                                m,
                             ],
                         }),
                     ],
                 }),
-                m
-                    ? null
-                    : (0, r.jsx)(N.e, {
-                          item: i,
-                      }),
+                p ? null : (0, i.jsx)(y.e, { item: t }),
             ],
         });
     }),
     V = l.memo(function (e) {
         let { items: t } = e,
-            n = b.ns.useSetting();
+            n = m.ns.useSetting();
         return (
-            (0, _.q)(t),
-            (0, r.jsx)(r.Fragment, {
-                children: t.map((e) =>
-                    (0, r.jsx)(
-                        U,
-                        {
-                            item: e,
-                            ackedBeforeId: n,
-                        },
-                        e.id,
-                    ),
-                ),
-            })
+            (0, N.q)(t),
+            (0, i.jsx)(i.Fragment, { children: t.map((e) => (0, i.jsx)(w, { item: e, ackedBeforeId: n }, e.id)) })
         );
     });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header__5be3e",
     rf: "body__5be3e",

@@ -1,39 +1,32 @@
-n.d(t, {
-    c: () => d,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { c: () => c });
+var i = n(627968),
+    s = n(64700),
     l = n(397927),
-    s = n(975571),
+    r = n(975571),
     a = n(997509),
-    c = n(652215),
-    o = n(985018);
-
-function d(e) {
+    o = n(652215),
+    d = n(985018);
+function c(e) {
     let { features: t, canManageGuild: n } = e,
-        d = i.useCallback(
+        c = s.useCallback(
             (e) => {
                 let n = new Set(t);
                 e
-                    ? n.add(c.GuildFeatures.SUMMARIES_ENABLED_BY_USER)
-                    : n.delete(c.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
-                    a.A.updateGuild({
-                        features: n,
-                    });
+                    ? n.add(o.GuildFeatures.SUMMARIES_ENABLED_BY_USER)
+                    : n.delete(o.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
+                    a.A.updateGuild({ features: n });
             },
             [t],
         );
-    return (0, r.jsx)(l.nVY, {
-        label: o.intl.string(o.t.FOYxgr),
-        description: o.intl.format(o.t["c6Cy/h"], {
-            helpdeskArticle: s.A.getArticleURL(c.MVz.CONVERSATION_SUMMARIES),
-        }),
-        children: (0, r.jsx)(l.dOG, {
-            label: o.intl.string(o.t.vmEDQs),
+    return (0, i.jsx)(l.nVY, {
+        label: d.intl.string(d.t.FOYxgr),
+        description: d.intl.format(d.t["c6Cy/h"], { helpdeskArticle: r.A.getArticleURL(o.MVz.CONVERSATION_SUMMARIES) }),
+        children: (0, i.jsx)(l.dOG, {
+            label: d.intl.string(d.t.vmEDQs),
             badge: "beta",
-            checked: t.has(c.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
-            onChange: d,
+            checked: t.has(o.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
+            onChange: c,
             disabled: !n,
         }),
     });

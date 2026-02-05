@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(308227),
     s = e(664886),
@@ -67,9 +68,7 @@ var n = e(834647),
                 g(
                     $({}, "a", {
                         get: function () {
-                            return $(this, "a", {
-                                value: 7,
-                            }).a;
+                            return $(this, "a", { value: 7 }).a;
                         },
                     }),
                 ).a
@@ -79,25 +78,14 @@ var n = e(834647),
             : $,
     tc = function (t, r) {
         var e = (te[t] = g(H));
-        return (
-            W(e, {
-                type: U,
-                tag: t,
-                description: r,
-            }),
-            c || (e.description = r),
-            e
-        );
+        return W(e, { type: U, tag: t, description: r }), c || (e.description = r), e;
     },
     ta = function (t, r, e) {
         t === V && ta(tn, r, e), v(t);
         var n = h(r);
         return (v(e), p(te, n))
             ? (e.enumerable
-                  ? (p(t, G) && t[G][n] && (t[G][n] = !1),
-                    (e = g(e, {
-                        enumerable: d(0, !1),
-                    })))
+                  ? (p(t, G) && t[G][n] && (t[G][n] = !1), (e = g(e, { enumerable: d(0, !1) })))
                   : (p(t, G) || $(t, G, d(1, g(null))), (t[G][n] = !0)),
               tu(t, n, e))
             : $(t, n, e);
@@ -166,15 +154,7 @@ var n = e(834647),
                         ti(n, r, i);
                     }
                 };
-            return (
-                c &&
-                    ts &&
-                    tu(V, r, {
-                        configurable: !0,
-                        set: e,
-                    }),
-                tc(r, t)
-            );
+            return c && ts && tu(V, r, { configurable: !0, set: e }), tc(r, t);
         })[B]),
         "toString",
         function () {
@@ -200,31 +180,13 @@ var n = e(834647),
                 return J(this).description;
             },
         }),
-        u ||
-            T(V, "propertyIsEnumerable", tp, {
-                unsafe: !0,
-            }))),
-    n(
-        {
-            global: !0,
-            constructor: !0,
-            wrap: !0,
-            forced: !a,
-            sham: !a,
-        },
-        {
-            Symbol: K,
-        },
-    ),
+        u || T(V, "propertyIsEnumerable", tp, { unsafe: !0 }))),
+    n({ global: !0, constructor: !0, wrap: !0, forced: !a, sham: !a }, { Symbol: K }),
     z(b(to), function (t) {
         R(t);
     }),
     n(
-        {
-            target: U,
-            stat: !0,
-            forced: !a,
-        },
+        { target: U, stat: !0, forced: !a },
         {
             useSetter: function () {
                 ts = !0;
@@ -235,12 +197,7 @@ var n = e(834647),
         },
     ),
     n(
-        {
-            target: "Object",
-            stat: !0,
-            forced: !a,
-            sham: !c,
-        },
+        { target: "Object", stat: !0, forced: !a, sham: !c },
         {
             create: function (t, r) {
                 return void 0 === r ? g(t) : tf(g(t), r);
@@ -250,16 +207,7 @@ var n = e(834647),
             getOwnPropertyDescriptor: tl,
         },
     ),
-    n(
-        {
-            target: "Object",
-            stat: !0,
-            forced: !a,
-        },
-        {
-            getOwnPropertyNames: tv,
-        },
-    ),
+    n({ target: "Object", stat: !0, forced: !a }, { getOwnPropertyNames: tv }),
     C(),
     N(K, U),
     (F[G] = !0);

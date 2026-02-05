@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Zs: "metricsContainer_cd734c",
     D9: "totalMembersIcon_cd734c",

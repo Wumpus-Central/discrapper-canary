@@ -1,50 +1,43 @@
-n.d(t, {
-    c: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { c: () => u });
 var r = n(64700),
     i = n(311907),
     a = n(688810),
-    o = n(622543),
-    s = n(808247),
+    s = n(622543),
+    o = n(808247),
     l = n(594832);
-
-function c(e) {
-    let { currentUser: t, skuId: n, onAddSuccess: c, onRemoveSuccess: u, onError: d } = e,
-        { analyticsLocations: f } = (0, a.Ay)(),
-        p = (0, i.bG)([o.A], () => (null != t ? o.A.getFirstWishlistId(t.id) : null)),
-        _ = (0, l.rJ)(p, n),
+function u(e) {
+    let { currentUser: t, skuId: n, onAddSuccess: u, onRemoveSuccess: c, onError: d } = e,
+        { analyticsLocations: _ } = (0, a.Ay)(),
+        f = (0, i.bG)([s.A], () => (null != t ? s.A.getFirstWishlistId(t.id) : null)),
+        p = (0, l.rJ)(f, n),
         [h, m] = r.useState(null),
         [g, E] = r.useState(!1),
-        y = null !== h ? h : _;
+        A = null !== h ? h : p;
     r.useEffect(() => {
         m(null), E(!1);
     }, [n]);
-    let b = r.useCallback(async () => {
+    let I = r.useCallback(async () => {
         if (null != t && !g)
-            if ((E(!0), y && null != p)) {
+            if ((E(!0), A && null != f)) {
                 m(!1);
                 try {
-                    await s.A.removeSkuFromWishlist(p, n, f), null == u || u();
+                    await o.A.removeSkuFromWishlist(f, n, _), c?.();
                 } catch (e) {
-                    null == d || d(e);
+                    d?.(e);
                 } finally {
                     m(null), E(!1);
                 }
             } else {
                 m(!0);
                 try {
-                    await s.A.addSkuToWishlist(n, f), null == c || c();
+                    await o.A.addSkuToWishlist(n, _), u?.();
                 } catch (e) {
-                    null == d || d(e);
+                    d?.(e);
                 } finally {
                     m(null), E(!1);
                 }
             }
-    }, [t, g, y, p, n, f, c, u, d]);
-    return {
-        isWishlisted: y,
-        isBusy: g,
-        handleToggle: b,
-    };
+    }, [t, g, A, f, n, _, u, c, d]);
+    return { isWishlisted: A, isBusy: g, handleToggle: I };
 }

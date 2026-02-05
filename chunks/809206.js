@@ -1,10 +1,7 @@
+"use strict";
 var n = r(797686),
     i = /\.textClipping$/,
-    o = {
-        "text/plain": !0,
-        "text/html": !0,
-        "text/rtf": !0,
-    };
+    o = { "text/plain": !0, "text/html": !0, "text/rtf": !0 };
 t.exports = function (t, e) {
     var a = 0,
         s = [];

@@ -1,39 +1,21 @@
-n.d(t, {
-    y: () => a,
-});
+"use strict";
+n.d(t, { y: () => i });
 var r = n(651162);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
-    static fromServer(e) {
-        return new a(e);
-    }
+class i {
+    title;
+    body;
+    categoryStoreListingId;
+    bannerTextColor;
+    disableCta;
+    bannerURL;
+    bannerAnimatedURL;
+    logoURL;
+    ctaText;
+    ctaRoute;
+    isDismissible;
+    dismissibleContentVersion;
     constructor(e) {
-        i(this, "title", void 0),
-            i(this, "body", void 0),
-            i(this, "categoryStoreListingId", void 0),
-            i(this, "bannerTextColor", void 0),
-            i(this, "disableCta", void 0),
-            i(this, "bannerURL", void 0),
-            i(this, "bannerAnimatedURL", void 0),
-            i(this, "logoURL", void 0),
-            i(this, "ctaText", void 0),
-            i(this, "ctaRoute", void 0),
-            i(this, "isDismissible", void 0),
-            i(this, "dismissibleContentVersion", void 0),
-            (this.type = r.g.WIDE_BANNER),
+        (this.type = r.g.WIDE_BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.categoryStoreListingId = e.category_store_listing_id),
@@ -46,5 +28,8 @@ class a {
             (this.ctaRoute = e.cta_route),
             (this.isDismissible = e.is_dismissible),
             (this.dismissibleContentVersion = e.dismissible_content_version);
+    }
+    static fromServer(e) {
+        return new i(e);
     }
 }

@@ -1,6 +1,5 @@
-n.d(t, {
-    a: () => o,
-});
+"use strict";
+n.d(t, { a: () => o });
 var r = n(99478),
     i = n(142922);
 let a = 78,
@@ -11,22 +10,22 @@ class o extends i.FG {
             n,
             o,
             l = super.fromJulianDay(e),
-            c = l.year - a,
-            u = e - (0, i.rG)(l.era, l.year, 1, 1);
+            u = l.year - a,
+            c = e - (0, i.rG)(l.era, l.year, 1, 1);
         if (
-            (u < s
-                ? (c--, (u += (t = (0, i.U_)(l.year - 1) ? 31 : 30) + 155 + 90 + 10))
-                : ((t = (0, i.U_)(l.year) ? 31 : 30), (u -= s)),
-            u < t)
+            (c < s
+                ? (u--, (c += (t = (0, i.U_)(l.year - 1) ? 31 : 30) + 155 + 90 + 10))
+                : ((t = (0, i.U_)(l.year) ? 31 : 30), (c -= s)),
+            c < t)
         )
-            (n = 1), (o = u + 1);
+            (n = 1), (o = c + 1);
         else {
-            let e = u - t;
+            let e = c - t;
             e < 155
                 ? ((n = Math.floor(e / 31) + 2), (o = (e % 31) + 1))
                 : ((e -= 155), (n = Math.floor(e / 30) + 7), (o = (e % 30) + 1));
         }
-        return new (0, r.ng)(this, c, n, o);
+        return new (0, r.ng)(this, u, n, o);
     }
     toJulianDay(e) {
         let t,

@@ -1,9 +1,5 @@
-n.d(t, {
-    Uf: () => m,
-    XG: () => g,
-    fs: () => h,
-}),
-    n(228524);
+"use strict";
+n.d(t, { Uf: () => m, XG: () => g, fs: () => h });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -11,39 +7,31 @@ var i = n(397927),
     s = n(166532),
     o = n(19311),
     l = n(482132),
-    c = n(910804),
-    u = n(376747),
+    u = n(910804),
+    c = n(376747),
     d = n(985018),
-    f = n(123346),
-    p = n(938430),
-    _ = n(234275);
+    _ = n(123346),
+    f = n(938430),
+    p = n(234275);
 let h = (e) => {
         let { step: t, onClose: n } = e,
-            o = (0, a.A)(u.T);
+            o = (0, a.A)(c.T);
         return t === s.pn.CONFIRM || t === s.pn.BENEFITS
             ? (0, r.jsx)("div", {})
             : (0, r.jsxs)("div", {
-                  className: f.N1,
+                  className: _.N1,
                   children: [
                       !o &&
                           (0, r.jsx)("div", {
-                              className: f.oZ,
+                              className: _.oZ,
                               "aria-hidden": "true",
-                              children: (0, r.jsx)("img", {
-                                  src: _,
-                                  alt: "",
-                                  className: f.F0,
-                              }),
+                              children: (0, r.jsx)("img", { src: p, alt: "", className: _.F0 }),
                           }),
                       (0, r.jsx)(i.DUT, {
-                          className: f.G3,
+                          className: _.G3,
                           onClick: () => n(),
                           "aria-label": d.intl.string(d.t.cpT0Cq),
-                          children: (0, r.jsx)(i.PGe, {
-                              size: "md",
-                              color: "currentColor",
-                              className: f.ut,
-                          }),
+                          children: (0, r.jsx)(i.PGe, { size: "md", color: "currentColor", className: _.ut }),
                       }),
                   ],
               });
@@ -61,57 +49,35 @@ let h = (e) => {
         return null == a
             ? null
             : (0, r.jsx)("div", {
-                  className: f.RP,
-                  children: (0, r.jsxs)(c.$K, {
+                  className: _.RP,
+                  children: (0, r.jsxs)(u.$K, {
                       children: [
-                          (0, r.jsx)(c.KF, {
-                              application: a,
-                              asset: t,
-                          }),
-                          (0, r.jsx)(c.kj, {
-                              children: s,
-                          }),
-                          (0, r.jsx)(c.ri, {}),
-                          (0, r.jsx)(c.Mx, {
-                              title: o,
-                              description: l,
-                          }),
-                          (0, r.jsx)(c.iH, {
-                              applicationId: a.id,
-                              storeListingBenefits: n,
-                              skuBenefits: i,
-                          }),
+                          (0, r.jsx)(u.KF, { application: a, asset: t }),
+                          (0, r.jsx)(u.kj, { children: s }),
+                          (0, r.jsx)(u.ri, {}),
+                          (0, r.jsx)(u.Mx, { title: o, description: l }),
+                          (0, r.jsx)(u.iH, { applicationId: a.id, storeListingBenefits: n, skuBenefits: i }),
                       ],
                   }),
               });
     };
-
 function g(e) {
     let { tierName: t, onConfirm: n, subscription: a } = e;
     return (0, r.jsxs)("div", {
-        className: f.NV,
+        className: _.NV,
         children: [
-            (0, r.jsx)("img", {
-                src: p,
-                alt: "",
-                width: 300,
-                height: 126,
-            }),
+            (0, r.jsx)("img", { src: f, alt: "", width: 300, height: 126 }),
             (0, r.jsx)(i.Heading, {
-                className: f.i1,
+                className: _.i1,
                 variant: "heading-xl/extrabold",
                 color: "text-strong",
-                children: d.intl.format(d.t.wLFT6z, {
-                    tier: t,
-                }),
+                children: d.intl.format(d.t.wLFT6z, { tier: t }),
             }),
             (0, r.jsx)(i.Text, {
-                className: f.sT,
+                className: _.sT,
                 variant: "text-md/medium",
                 color: "text-default",
-                children: d.intl.format(d.t.OsAK9h, {
-                    timestamp: null == a ? void 0 : a.currentPeriodEnd,
-                }),
+                children: d.intl.format(d.t.OsAK9h, { timestamp: a?.currentPeriodEnd }),
             }),
             (0, r.jsx)(l.UX, {
                 children: (0, r.jsx)(o.A, {

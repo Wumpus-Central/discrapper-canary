@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => i,
-});
+n.d(t, { A: () => i });
 var a = n(722023),
     r = n(303527);
 let i = {
@@ -18,22 +16,13 @@ let i = {
             wide: /^(紀元[前後]|西暦)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            narrow: [/^B/i, /^A/i],
-            any: [/^(紀元前)/i, /^(西暦|紀元後)/i],
-        },
+        parsePatterns: { narrow: [/^B/i, /^A/i], any: [/^(紀元前)/i, /^(西暦|紀元後)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, r.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^Q[1234]/i,
-            wide: /^第[1234一二三四１２３４]四半期/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i],
-        },
+        parsePatterns: { any: [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -46,9 +35,7 @@ let i = {
             wide: /^([123456789]|1[012])月/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/],
-        },
+        parsePatterns: { any: [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/] },
         defaultParseWidth: "any",
     }),
     day: (0, r.A)({
@@ -59,15 +46,11 @@ let i = {
             wide: /^[日月火水木金土]曜日/,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/],
-        },
+        parsePatterns: { any: [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, r.A)({
-        matchPatterns: {
-            any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i,
-        },
+        matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

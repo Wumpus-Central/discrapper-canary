@@ -1,23 +1,17 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(496431),
-    s = n(405269),
-    o = n(985018);
-let l = function (e) {
+var s = n(397927),
+    r = n(496431),
+    a = n(405269),
+    l = n(985018);
+let o = function (e) {
     let { className: t, cooldown: n } = e,
-        l = (0, a.A)(n);
-    return (0, r.jsx)(i.Text, {
+        o = (0, r.A)(n);
+    return (0, i.jsx)(s.Text, {
         className: t,
         variant: "text-sm/medium",
         color: "text-muted",
-        children: (0, s.uN)(l, {
-            days: o.t.WUTPDc,
-            hours: o.t.c1qodV,
-            minutes: o.t["2+A3dv"],
-        }),
+        children: (0, a.uN)(o, { days: l.t.WUTPDc, hours: l.t.c1qodV, minutes: l.t["2+A3dv"] }),
     });
 };

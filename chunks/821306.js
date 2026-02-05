@@ -1,40 +1,28 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
+n.d(t, { A: () => h });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(311907),
+    l = n.n(i),
+    r = n(311907),
     o = n(397927),
-    c = n(263834),
-    d = n(865116),
+    d = n(263834),
+    c = n(865116),
     u = n(759136),
     m = n(661251);
-
-function p(e) {
+function h(e) {
     let { devSettingsCategory: t } = e,
-        n = (0, s.bG)([d.Ay], () => d.Ay.allByCategory(t), [t], s.My),
-        i = l.useMemo(
+        n = (0, r.bG)([c.Ay], () => c.Ay.allByCategory(t), [t], r.My),
+        i = s.useMemo(
             () =>
                 n.map((e) => {
-                    let [t, n, { label: l }] = e;
+                    let [t, n, { label: s }] = e;
                     return (0, a.jsx)(
                         o.dOG,
-                        {
-                            label: l,
-                            description: t,
-                            checked: n,
-                            onChange: (e) => (0, c.L)(t, e),
-                        },
+                        { label: s, description: t, checked: n, onChange: (e) => (0, d.L)(t, e) },
                         t,
                     );
                 }),
             [n],
         );
-    return (0, a.jsx)("div", {
-        className: r()(m.nd, u.n),
-        children: i,
-    });
+    return (0, a.jsx)("div", { className: l()(m.nd, u.n), children: i });
 }

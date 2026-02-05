@@ -1,95 +1,61 @@
 n.d(t, {
-    ES: () => f,
-    kf: () => m,
-    oQ: () => d,
+    ES: () => _,
+    kf: () => E,
+    oQ: () => u,
     p7: () => c,
-    qz: () => p,
-    sM: () => u,
-    up: () => h,
-    yH: () => g,
-    yr: () => _,
+    qz: () => m,
+    sM: () => d,
+    up: () => g,
+    yH: () => h,
+    yr: () => A,
 });
-var r = n(406935),
-    i = n(52133),
-    a = n(195667),
-    s = n(253932),
-    o = n(656402),
-    l = n(652215);
-let c = (0, a.r)("textAndImages", "explicitContentSettings", s.Iv, s.Vv, {
-        comparator: i.A,
-    }),
-    u = (0, a.r)(
+var i = n(406935),
+    s = n(52133),
+    r = n(195667),
+    a = n(253932),
+    l = n(656402),
+    o = n(652215);
+let c = (0, r.r)("textAndImages", "explicitContentSettings", a.Iv, a.Vv, { comparator: s.A }),
+    d = (0, r.r)(
         "textAndImages",
         "explicitContentFilter",
-        (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.value) ? t : o.Je.NON_FRIENDS;
-        },
-        (e) =>
-            r.ZQ.create({
-                value: e,
-            }),
+        (e) => e?.value ?? l.Je.NON_FRIENDS,
+        (e) => i.ZQ.create({ value: e }),
     ),
-    d = (0, a.r)("textAndImages", "goreContentSettings", s.NF, s._8, {
-        comparator: i.A,
-    }),
-    f = (0, a.r)(
+    u = (0, r.r)("textAndImages", "goreContentSettings", a.NF, a._8, { comparator: s.A }),
+    _ = (0, r.r)(
         "privacy",
         "defaultMessageRequestRestricted",
-        (e) => (null == e ? void 0 : e.value),
-        (e) =>
-            r._t.create({
-                value: e,
-            }),
+        (e) => e?.value,
+        (e) => i._t.create({ value: e }),
     ),
-    p = (0, a.r)(
+    m = (0, r.r)(
         "privacy",
         "defaultGuildsRestricted",
-        (e) => null != e && e,
+        (e) => e ?? !1,
         (e) => e,
     ),
-    _ = (0, a.r)(
+    A = (0, r.r)(
         "privacy",
         "defaultGuildsRestrictedV2",
-        (e) => (null == e ? void 0 : e.value),
-        (e) =>
-            r._t.create({
-                value: e,
-            }),
+        (e) => e?.value,
+        (e) => i._t.create({ value: e }),
     ),
-    h = (0, a.r)(
+    g = (0, r.r)(
         "privacy",
         "friendSourceFlags",
-        (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.value) ? t : l.yKI;
-        },
-        (e) =>
-            r.ZQ.create({
-                value: e,
-            }),
+        (e) => e?.value ?? o.yKI,
+        (e) => i.ZQ.create({ value: e }),
     ),
-    m = (0, a.r)(
+    E = (0, r.r)(
         "privacy",
         "dropsOptedOut",
-        (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.value) && t;
-        },
-        (e) =>
-            r._t.create({
-                value: e,
-            }),
+        (e) => e?.value ?? !1,
+        (e) => i._t.create({ value: e }),
     ),
-    g = (0, a.r)(
+    h = (0, r.r)(
         "privacy",
         "quests3PDataOptedOut",
-        (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.value) && t;
-        },
-        (e) =>
-            r._t.create({
-                value: e,
-            }),
+        (e) => e?.value ?? !1,
+        (e) => i._t.create({ value: e }),
     );

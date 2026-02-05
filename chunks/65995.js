@@ -1,132 +1,58 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let u = {},
-    d = {},
-    f = new Set();
-
-function p(e) {
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153);
+let a = {},
+    s = {},
+    o = new Set();
+function l(e) {
     let { guildId: t, channelId: n } = e;
-    d = c(o({}, d), {
-        [t]: c(o({}, d[t]), {
-            [n]: !0,
-        }),
-    });
+    s = { ...s, [t]: { ...s[t], [n]: !0 } };
 }
-
-function _(e) {
+function u(e) {
     let { memberActions: t, guildId: n } = e;
     if (null == t) {
-        d[n] = u;
+        s[n] = a;
         return;
     }
-    (d[n] = t), f.delete(n);
+    (s[n] = t), o.delete(n);
 }
-
-function h(e) {
+function c(e) {
     let { guildId: t } = e;
-    f.add(t);
+    o.add(t);
 }
-
-function m(e) {
+function d(e) {
     let { guildId: t } = e;
-    f.delete(t);
+    o.delete(t);
 }
-
-function g(e) {
+function _(e) {
     let { guild: t } = e;
-    if (null == d[t.id]) return !1;
-    delete d[t.id];
+    if (null == s[t.id]) return !1;
+    delete s[t.id];
 }
-
-function E(e) {
+function f(e) {
     let { guildId: t } = e;
-    if (null == d[t]) return !1;
-    delete d[t];
+    if (null == s[t]) return !1;
+    delete s[t];
 }
-class b extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "GuildOnboardingMemberActionStore";
     getCompletedActions(e) {
-        return null == e ? null : d[e];
+        return null == e ? null : s[e];
     }
     hasCompletedActionForChannel(e, t) {
         let n = this.getCompletedActions(e);
         return null != n && null != n[t];
     }
     getState(e) {
-        return null == e
-            ? {}
-            : {
-                  completedActions: d[e],
-                  loading: f.has(e),
-              };
+        return null == e ? {} : { completedActions: s[e], loading: o.has(e) };
     }
 }
-s(b, "displayName", "GuildOnboardingMemberActionStore");
-let y = new b(a.h, {
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: _,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,
-    GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: E,
-    COMPLETE_NEW_MEMBER_ACTION: p,
-    GUILD_DELETE: g,
+let h = new p(i.h, {
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: c,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: u,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: d,
+    GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: f,
+    COMPLETE_NEW_MEMBER_ACTION: l,
+    GUILD_DELETE: _,
 });

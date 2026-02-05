@@ -1,3 +1,1 @@
-e.exports = {
-    j: "flash__03436",
-};
+e.exports = { j: "flash__03436" };

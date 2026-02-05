@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_c66e86",
     XI: "action_c66e86",

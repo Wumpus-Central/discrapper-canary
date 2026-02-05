@@ -1,76 +1,38 @@
-n.d(t, {
-    V1: () => x,
-    rF: () => O,
-    yC: () => C,
-    yh: () => E,
-}),
-    n(896048);
-var r,
-    i,
-    a,
-    o,
-    s = n(627968),
-    l = n(64700),
-    c = n(503698),
-    u = n.n(c),
-    d = n(92674),
-    f = n(615300),
-    p = n(397927),
-    _ = n(531726);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var m = (function (e) {
-    return (
-        (e.NORMAL = "normal"),
-        (e.SPEED_START = "speed_start"),
-        (e.SPEED_LOOP = "speed_loop"),
-        (e.FINISH = "finish"),
-        (e.IDLE = "idle"),
-        e
-    );
-})(m || {});
-let g = {
-    normal: {
-        BEG: 0,
-        END: 600,
-        shouldForcePlayAfter: !0,
-    },
-    speed_start: {
-        BEG: 601,
-        END: 636,
-    },
-    speed_loop: {
-        BEG: 637,
-        END: 668,
-    },
-    finish: {
-        BEG: 669,
-        END: 870,
-    },
-    idle: {
-        BEG: 871,
-        END: 878,
-    },
+"use strict";
+n.d(t, { V1: () => O, rF: () => m, yC: () => y, yh: () => f });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(92674),
+    l = n(615300),
+    u = n(397927),
+    c = n(531726),
+    d = (function (e) {
+        return (
+            (e.NORMAL = "normal"),
+            (e.SPEED_START = "speed_start"),
+            (e.SPEED_LOOP = "speed_loop"),
+            (e.FINISH = "finish"),
+            (e.IDLE = "idle"),
+            e
+        );
+    })(d || {});
+let _ = {
+    normal: { BEG: 0, END: 600, shouldForcePlayAfter: !0 },
+    speed_start: { BEG: 601, END: 636 },
+    speed_loop: { BEG: 637, END: 668 },
+    finish: { BEG: 669, END: 870 },
+    idle: { BEG: 871, END: 878 },
 };
-class E extends (r = l.PureComponent) {
+class f extends i.PureComponent {
+    static Scenes = d;
     static getNextScene(e) {
         switch (e) {
-            case E.Scenes.SPEED_START:
-                return E.Scenes.SPEED_LOOP;
-            case E.Scenes.FINISH:
-                return E.Scenes.IDLE;
+            case f.Scenes.SPEED_START:
+                return f.Scenes.SPEED_LOOP;
+            case f.Scenes.FINISH:
+                return f.Scenes.IDLE;
             default:
                 return e;
         }
@@ -89,24 +51,23 @@ class E extends (r = l.PureComponent) {
             className: e,
             nextScene: t,
             onScenePlay: n,
-            onSceneComplete: r,
-            pause: i,
-            pauseWhileUnfocused: a,
+            onSceneComplete: i,
+            pause: a,
+            pauseWhileUnfocused: o,
         } = this.props;
-        return (0, s.jsx)(p.tvC, {
-            className: u()(_.AI, e),
+        return (0, r.jsx)(u.tvC, {
+            className: s()(c.AI, e),
             importData: this.importDefault,
-            nextScene: i ? "idle" : t,
-            sceneSegments: g,
+            nextScene: a ? "idle" : t,
+            sceneSegments: _,
             onScenePlay: n,
-            onSceneComplete: r,
-            pauseWhileUnfocused: a,
-            pause: i,
+            onSceneComplete: i,
+            pauseWhileUnfocused: o,
+            pause: a,
         });
     }
 }
-h(E, "Scenes", m);
-var y = (function (e) {
+var p = (function (e) {
     return (
         (e.NORMAL = "normal"),
         (e.SPEED_START = "speed_start"),
@@ -115,37 +76,22 @@ var y = (function (e) {
         (e.IDLE = "idle"),
         e
     );
-})(y || {});
-let b = {
-    normal: {
-        BEG: 0,
-        END: 600,
-        shouldForcePlayAfter: !0,
-    },
-    speed_start: {
-        BEG: 601,
-        END: 636,
-    },
-    speed_loop: {
-        BEG: 637,
-        END: 668,
-    },
-    finish: {
-        BEG: 669,
-        END: 870,
-    },
-    idle: {
-        BEG: 871,
-        END: 878,
-    },
+})(p || {});
+let h = {
+    normal: { BEG: 0, END: 600, shouldForcePlayAfter: !0 },
+    speed_start: { BEG: 601, END: 636 },
+    speed_loop: { BEG: 637, END: 668 },
+    finish: { BEG: 669, END: 870 },
+    idle: { BEG: 871, END: 878 },
 };
-class O extends (i = l.PureComponent) {
+class m extends i.PureComponent {
+    static Scenes = p;
     static getNextScene(e) {
         switch (e) {
-            case O.Scenes.SPEED_START:
-                return O.Scenes.SPEED_LOOP;
-            case O.Scenes.FINISH:
-                return O.Scenes.IDLE;
+            case m.Scenes.SPEED_START:
+                return m.Scenes.SPEED_LOOP;
+            case m.Scenes.FINISH:
+                return m.Scenes.IDLE;
             default:
                 return e;
         }
@@ -164,24 +110,23 @@ class O extends (i = l.PureComponent) {
             className: e,
             nextScene: t,
             onScenePlay: n,
-            onSceneComplete: r,
-            pause: i,
-            pauseWhileUnfocused: a,
+            onSceneComplete: i,
+            pause: a,
+            pauseWhileUnfocused: o,
         } = this.props;
-        return (0, s.jsx)(p.tvC, {
-            className: u()(_.AI, e),
+        return (0, r.jsx)(u.tvC, {
+            className: s()(c.AI, e),
             importData: this.importDefault,
-            nextScene: i ? "idle" : t,
-            sceneSegments: b,
+            nextScene: a ? "idle" : t,
+            sceneSegments: h,
             onScenePlay: n,
-            onSceneComplete: r,
-            pauseWhileUnfocused: a,
-            pause: i,
+            onSceneComplete: i,
+            pauseWhileUnfocused: o,
+            pause: a,
         });
     }
 }
-h(O, "Scenes", y);
-var v = (function (e) {
+var g = (function (e) {
     return (
         (e.IDLE_ENTRY = "idle_entry"),
         (e.IDLE_LOOP = "idle_loop"),
@@ -192,39 +137,17 @@ var v = (function (e) {
         (e.ERROR = "error"),
         e
     );
-})(v || {});
-let A = {
-    idle_entry: {
-        BEG: 0,
-        END: 50,
-    },
-    idle_loop: {
-        BEG: 50,
-        END: 230,
-        shouldForcePlayAfter: !0,
-    },
-    boost_start: {
-        BEG: 230,
-        END: 275,
-    },
-    boost_loop: {
-        BEG: 275,
-        END: 290,
-    },
-    boost_end: {
-        BEG: 386,
-        END: 455,
-    },
-    victory: {
-        BEG: 470,
-        END: 525,
-    },
-    error: {
-        BEG: 290,
-        END: 375,
-    },
+})(g || {});
+let E = {
+    idle_entry: { BEG: 0, END: 50 },
+    idle_loop: { BEG: 50, END: 230, shouldForcePlayAfter: !0 },
+    boost_start: { BEG: 230, END: 275 },
+    boost_loop: { BEG: 275, END: 290 },
+    boost_end: { BEG: 386, END: 455 },
+    victory: { BEG: 470, END: 525 },
+    error: { BEG: 290, END: 375 },
 };
-class I extends l.PureComponent {
+class A extends i.PureComponent {
     getStyle(e) {
         let { animation: t } = this.props;
         return {
@@ -235,71 +158,49 @@ class I extends l.PureComponent {
                         outputRange: e ? ["100%", "0%"] : ["0%", "-100%"],
                     }),
                 },
-                {
-                    translateY: t.y.interpolate({
-                        inputRange: [0, 1],
-                        outputRange: ["100%", "0%"],
-                    }),
-                },
+                { translateY: t.y.interpolate({ inputRange: [0, 1], outputRange: ["100%", "0%"] }) },
             ],
         };
     }
     render() {
         let { className: e } = this.props;
-        return (0, s.jsxs)("div", {
-            className: _.I5,
+        return (0, r.jsxs)("div", {
+            className: c.I5,
             children: [
-                (0, s.jsx)(f.A.div, {
-                    className: e,
-                    style: this.getStyle(!1),
-                }),
-                (0, s.jsx)(f.A.div, {
-                    className: e,
-                    style: this.getStyle(!0),
-                }),
+                (0, r.jsx)(l.A.div, { className: e, style: this.getStyle(!1) }),
+                (0, r.jsx)(l.A.div, { className: e, style: this.getStyle(!0) }),
             ],
         });
     }
 }
-let S = Object.freeze({
-        IDLE_ENTRY: {
-            toValue: 1,
-            duration: 1500,
-        },
-        IDLE_LOOP: {
-            toValue: 1,
-            duration: 6e3,
-            easing: f.A.Easing.linear,
-        },
-        BOOST_START: {
-            toValue: 0,
-            duration: 2e3,
-            delay: 500,
-        },
-        ERROR: {
-            toValue: 1,
-            duration: 1500,
-            delay: 1e3,
-        },
+let I = Object.freeze({
+        IDLE_ENTRY: { toValue: 1, duration: 1500 },
+        IDLE_LOOP: { toValue: 1, duration: 6e3, easing: l.A.Easing.linear },
+        BOOST_START: { toValue: 0, duration: 2e3, delay: 500 },
+        ERROR: { toValue: 1, duration: 1500, delay: 1e3 },
     }),
     T = 1.2;
-class C extends (a = l.PureComponent) {
+class y extends i.PureComponent {
+    static Scenes = g;
     static getNextScene(e) {
         switch (e) {
-            case C.Scenes.IDLE_ENTRY:
-                return C.Scenes.IDLE_LOOP;
-            case C.Scenes.BOOST_START:
-                return C.Scenes.BOOST_LOOP;
-            case C.Scenes.BOOST_END:
-                return C.Scenes.VICTORY;
-            case C.Scenes.VICTORY:
-                return C.Scenes.IDLE_ENTRY;
-            case C.Scenes.ERROR:
-                return C.Scenes.IDLE_LOOP;
+            case y.Scenes.IDLE_ENTRY:
+                return y.Scenes.IDLE_LOOP;
+            case y.Scenes.BOOST_START:
+                return y.Scenes.BOOST_LOOP;
+            case y.Scenes.BOOST_END:
+                return y.Scenes.VICTORY;
+            case y.Scenes.VICTORY:
+                return y.Scenes.IDLE_ENTRY;
+            case y.Scenes.ERROR:
+                return y.Scenes.IDLE_LOOP;
             default:
                 return e;
         }
     }
+    backgroundAnimation = new l.A.ValueXY({ x: 0, y: 0 });
+    foregroundAnimation = new l.A.ValueXY({ x: 0, y: 0 });
+    didUnmount = !1;
     componentWillUnmount() {
         this.didUnmount = !0;
     }
@@ -313,13 +214,9 @@ class C extends (a = l.PureComponent) {
             });
     }
     animateEntry(e) {
-        f.A.parallel([
-            f.A.timing(this.foregroundAnimation.y, {
-                toValue: e.toValue,
-                duration: e.duration,
-                delay: e.delay || 0,
-            }),
-            f.A.timing(this.backgroundAnimation.y, {
+        l.A.parallel([
+            l.A.timing(this.foregroundAnimation.y, { toValue: e.toValue, duration: e.duration, delay: e.delay || 0 }),
+            l.A.timing(this.backgroundAnimation.y, {
                 toValue: e.toValue,
                 duration: e.duration * T,
                 delay: e.delay || 0,
@@ -327,188 +224,110 @@ class C extends (a = l.PureComponent) {
         ]).start();
     }
     animateIdleEntry() {
-        this.animateEntry(S.IDLE_ENTRY);
+        this.animateEntry(I.IDLE_ENTRY);
     }
     animateError() {
-        this.animateEntry(S.ERROR);
+        this.animateEntry(I.ERROR);
     }
     animateIdleLoop() {
         this.animateIdleLoopBackground(), this.animateIdleLoopForeground();
     }
+    animateIdleLoopBackground = () => {
+        this.didUnmount ||
+            (this.backgroundAnimation.x.setValue(0),
+            l.A.timing(this.backgroundAnimation.x, {
+                toValue: I.IDLE_LOOP.toValue,
+                duration: I.IDLE_LOOP.duration * T,
+                easing: l.A.Easing.linear,
+            }).start(this.animateIdleLoopBackground));
+    };
+    animateIdleLoopForeground = () => {
+        this.didUnmount ||
+            (this.foregroundAnimation.x.setValue(0),
+            l.A.timing(this.foregroundAnimation.x, {
+                toValue: I.IDLE_LOOP.toValue,
+                duration: I.IDLE_LOOP.duration,
+                easing: I.IDLE_LOOP.easing,
+            }).start(this.animateIdleLoopForeground));
+    };
     animateBoostStart() {
-        f.A.parallel([
-            f.A.timing(this.foregroundAnimation.y, {
-                toValue: S.BOOST_START.toValue,
-                duration: S.BOOST_START.duration,
-                delay: S.BOOST_START.delay,
+        l.A.parallel([
+            l.A.timing(this.foregroundAnimation.y, {
+                toValue: I.BOOST_START.toValue,
+                duration: I.BOOST_START.duration,
+                delay: I.BOOST_START.delay,
             }),
-            f.A.timing(this.backgroundAnimation.y, {
-                toValue: S.BOOST_START.toValue,
-                duration: S.BOOST_START.duration * T,
-                delay: S.BOOST_START.delay,
+            l.A.timing(this.backgroundAnimation.y, {
+                toValue: I.BOOST_START.toValue,
+                duration: I.BOOST_START.duration * T,
+                delay: I.BOOST_START.delay,
             }),
         ]).start();
     }
+    handleScenePlay = (e) => {
+        switch (e) {
+            case "idle_entry":
+                this.animateIdleEntry(), this.animateIdleLoop();
+                break;
+            case "error":
+                this.animateError();
+                break;
+            case "boost_start":
+                this.animateBoostStart();
+        }
+        let { onScenePlay: t } = this.props;
+        null != t && t(e);
+    };
     render() {
-        let { className: e, nextScene: t, pause: n, onSceneComplete: r } = this.props;
-        return (0, s.jsxs)("div", {
-            className: u()(_.nv, e),
+        let { className: e, nextScene: t, pause: n, onSceneComplete: i } = this.props;
+        return (0, r.jsxs)("div", {
+            className: s()(c.nv, e),
             children: [
                 n
-                    ? (0, s.jsxs)("div", {
-                          className: _.I5,
-                          children: [
-                              (0, s.jsx)("div", {
-                                  className: _.RK,
-                              }),
-                              (0, s.jsx)("div", {
-                                  className: _.aM,
-                              }),
-                          ],
+                    ? (0, r.jsxs)("div", {
+                          className: c.I5,
+                          children: [(0, r.jsx)("div", { className: c.RK }), (0, r.jsx)("div", { className: c.aM })],
                       })
-                    : (0, s.jsxs)(s.Fragment, {
+                    : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(I, {
-                                  className: _.RK,
-                                  animation: this.backgroundAnimation,
-                              }),
-                              (0, s.jsx)(I, {
-                                  className: _.aM,
-                                  animation: this.foregroundAnimation,
-                              }),
+                              (0, r.jsx)(A, { className: c.RK, animation: this.backgroundAnimation }),
+                              (0, r.jsx)(A, { className: c.aM, animation: this.foregroundAnimation }),
                           ],
                       }),
-                (0, s.jsx)(p.tvC, {
-                    className: _.AI,
+                (0, r.jsx)(u.tvC, {
+                    className: c.AI,
                     importData: this.importData,
                     nextScene: n ? "idle_loop" : t,
-                    sceneSegments: A,
+                    sceneSegments: E,
                     onScenePlay: this.handleScenePlay,
-                    onSceneComplete: r,
+                    onSceneComplete: i,
                     pauseWhileUnfocused: !1,
                     pause: n,
                 }),
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            h(
-                this,
-                "backgroundAnimation",
-                new f.A.ValueXY({
-                    x: 0,
-                    y: 0,
-                }),
-            ),
-            h(
-                this,
-                "foregroundAnimation",
-                new f.A.ValueXY({
-                    x: 0,
-                    y: 0,
-                }),
-            ),
-            h(this, "didUnmount", !1),
-            h(this, "animateIdleLoopBackground", () => {
-                this.didUnmount ||
-                    (this.backgroundAnimation.x.setValue(0),
-                    f.A.timing(this.backgroundAnimation.x, {
-                        toValue: S.IDLE_LOOP.toValue,
-                        duration: S.IDLE_LOOP.duration * T,
-                        easing: f.A.Easing.linear,
-                    }).start(this.animateIdleLoopBackground));
-            }),
-            h(this, "animateIdleLoopForeground", () => {
-                this.didUnmount ||
-                    (this.foregroundAnimation.x.setValue(0),
-                    f.A.timing(this.foregroundAnimation.x, {
-                        toValue: S.IDLE_LOOP.toValue,
-                        duration: S.IDLE_LOOP.duration,
-                        easing: S.IDLE_LOOP.easing,
-                    }).start(this.animateIdleLoopForeground));
-            }),
-            h(this, "handleScenePlay", (e) => {
-                switch (e) {
-                    case "idle_entry":
-                        this.animateIdleEntry(), this.animateIdleLoop();
-                        break;
-                    case "error":
-                        this.animateError();
-                        break;
-                    case "boost_start":
-                        this.animateBoostStart();
-                }
-                let { onScenePlay: t } = this.props;
-                null != t && t(e);
-            });
-    }
 }
-h(C, "Scenes", v);
-var N = (function (e) {
+var S = (function (e) {
     return (e.ENTRY = "entry"), (e.IDLE = "idle"), (e.STARS = "stars"), (e.ERROR = "error"), (e.SUCCESS = "success"), e;
-})(N || {});
-let w = {
-        entry: {
-            BEG: 0,
-            END: 180,
-        },
-        idle: {
-            BEG: 180,
-            END: 360,
-            shouldForcePlayAfter: !0,
-        },
-        stars: {
-            BEG: 180,
-            END: 360,
-            shouldForcePlayAfter: !0,
-        },
-        error: {
-            BEG: 360,
-            END: 540,
-        },
-        success: {
-            BEG: 540,
-            END: 778,
-        },
+})(S || {});
+let v = {
+        entry: { BEG: 0, END: 180 },
+        idle: { BEG: 180, END: 360, shouldForcePlayAfter: !0 },
+        stars: { BEG: 180, END: 360, shouldForcePlayAfter: !0 },
+        error: { BEG: 360, END: 540 },
+        success: { BEG: 540, END: 778 },
     },
-    R = Object.freeze({
-        WHITE: "#ebf0f7",
-        PINK: "#fa6ef6",
-    }),
-    P = [
-        {
-            left: 29,
-            top: 100,
-            color: R.WHITE,
-        },
-        {
-            left: 245,
-            top: 11,
-            color: R.PINK,
-        },
-        {
-            left: 393,
-            top: 22,
-            color: R.WHITE,
-        },
-        {
-            left: 74,
-            top: 30,
-            color: R.PINK,
-        },
-        {
-            left: 188,
-            top: 9,
-            color: R.WHITE,
-        },
-        {
-            left: 379,
-            top: 97,
-            color: R.PINK,
-        },
+    C = Object.freeze({ WHITE: "#ebf0f7", PINK: "#fa6ef6" }),
+    b = [
+        { left: 29, top: 100, color: C.WHITE },
+        { left: 245, top: 11, color: C.PINK },
+        { left: 393, top: 22, color: C.WHITE },
+        { left: 74, top: 30, color: C.PINK },
+        { left: 188, top: 9, color: C.WHITE },
+        { left: 379, top: 97, color: C.PINK },
     ],
-    D = Object.freeze({
+    N = Object.freeze({
         SCALE_INITIAL: 0,
         SCALE_MIDDLE: 1,
         SCALE_END: 0,
@@ -522,71 +341,57 @@ let w = {
         DURATION_END: 250,
         SIZE_MIN: 7,
         SIZE_MAX: 15,
-        EASING_MIDDLE: f.A.Easing.bezier(0.3, 0.01, 0, 0.99),
-        EASING_END: f.A.Easing.bezier(0, -0.01, 0.99, 0),
+        EASING_MIDDLE: l.A.Easing.bezier(0.3, 0.01, 0, 0.99),
+        EASING_END: l.A.Easing.bezier(0, -0.01, 0.99, 0),
     });
-
-function L(e) {
+function R(e) {
     let { animate: t } = e,
-        [n, r] = l.useState(0),
-        i = (0, p.mX6)(
-            P.length,
-            P.map((e, i) => {
-                let a = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
-                    o = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
+        [n, a] = i.useState(0),
+        s = (0, u.mX6)(
+            b.length,
+            b.map((e, r) => {
+                let i = r > 0 ? N.DELAY_STAGGER * r + Math.random() * (N.DELAY_MAX - N.DELAY_MIN) + N.DELAY_MIN : 0,
+                    s = Math.random() * (N.SIZE_MAX - N.SIZE_MIN) + N.SIZE_MIN;
                 return {
                     from: {
-                        scale: D.SCALE_INITIAL,
-                        rotate: D.ROTATE_INITIAL,
+                        scale: N.SCALE_INITIAL,
+                        rotate: N.ROTATE_INITIAL,
                         top: e.top,
                         left: e.left,
-                        width: o,
-                        height: o,
+                        width: s,
+                        height: s,
                     },
                     to: async (e) => {
                         t
                             ? (await e({
-                                  scale: D.SCALE_MIDDLE,
-                                  rotate: D.ROTATE_MIDDLE,
-                                  delay: a,
-                                  config: {
-                                      duration: D.DURATION_MIDDLE,
-                                      easing: D.EASING_MIDDLE,
-                                  },
+                                  scale: N.SCALE_MIDDLE,
+                                  rotate: N.ROTATE_MIDDLE,
+                                  delay: i,
+                                  config: { duration: N.DURATION_MIDDLE, easing: N.EASING_MIDDLE },
                               }),
                               await e({
-                                  scale: D.SCALE_END,
-                                  rotate: D.ROTATE_END,
-                                  config: {
-                                      duration: D.DURATION_END,
-                                      easing: D.EASING_END,
-                                  },
+                                  scale: N.SCALE_END,
+                                  rotate: N.ROTATE_END,
+                                  config: { duration: N.DURATION_END, easing: N.EASING_END },
                               }),
-                              await e({
-                                  scale: D.SCALE_INITIAL,
-                                  rotate: D.ROTATE_INITIAL,
-                                  immediate: !0,
-                              }),
-                              i === P.length - 1 && r(n + 1))
-                            : await e({
-                                  scale: D.SCALE_INITIAL,
-                                  rotate: D.ROTATE_INITIAL,
-                              });
+                              await e({ scale: N.SCALE_INITIAL, rotate: N.ROTATE_INITIAL, immediate: !0 }),
+                              r === b.length - 1 && a(n + 1))
+                            : await e({ scale: N.SCALE_INITIAL, rotate: N.ROTATE_INITIAL });
                     },
                 };
             }),
         );
-    return (0, s.jsx)(s.Fragment, {
-        children: i.map((e, t) => {
-            let n = P[t];
-            return (0, s.jsx)(
-                d.animated.svg,
+    return (0, r.jsx)(r.Fragment, {
+        children: s.map((e, t) => {
+            let n = b[t];
+            return (0, r.jsx)(
+                o.animated.svg,
                 {
                     style: e,
-                    className: _.Sw,
+                    className: c.Sw,
                     xmlns: "http://www.w3.org/2000/svg",
                     viewBox: "0 0 12.14 12.24",
-                    children: (0, s.jsx)("path", {
+                    children: (0, r.jsx)("path", {
                         d: "M5.62 10.22l-4 1.9a1.17 1.17 0 01-1.5-.5 1.7 1.7 0 010-1l1.9-4a.91.91 0 000-1l-1.9-4a1.14 1.14 0 01.5-1.5 1.39 1.39 0 01.9 0l4 1.9a.91.91 0 001 0l4-1.9a1.14 1.14 0 011.5.5 1.39 1.39 0 010 .9l-1.9 4a.91.91 0 000 1l1.9 4a1.17 1.17 0 01-.5 1.5 1.7 1.7 0 01-1 0l-4-1.9a1 1 0 00-.9.1z",
                         fill: n.color,
                     }),
@@ -596,7 +401,8 @@ function L(e) {
         }),
     });
 }
-class x extends (o = l.PureComponent) {
+class O extends i.PureComponent {
+    static Scenes = S;
     static getNextScene(e) {
         switch (e) {
             case "entry":
@@ -621,28 +427,25 @@ class x extends (o = l.PureComponent) {
             className: e,
             nextScene: t,
             pause: n,
-            onScenePlay: r,
-            onSceneComplete: i,
-            pauseWhileUnfocused: a,
+            onScenePlay: i,
+            onSceneComplete: a,
+            pauseWhileUnfocused: o,
         } = this.props;
-        return (0, s.jsxs)("div", {
-            className: u()(_.JL, e),
+        return (0, r.jsxs)("div", {
+            className: s()(c.JL, e),
             children: [
-                (0, s.jsx)(p.tvC, {
-                    className: _.i_,
+                (0, r.jsx)(u.tvC, {
+                    className: c.i_,
                     importData: this.importData,
                     nextScene: n ? "idle" : t,
-                    sceneSegments: w,
-                    onScenePlay: r,
-                    onSceneComplete: i,
-                    pauseWhileUnfocused: a,
+                    sceneSegments: v,
+                    onScenePlay: i,
+                    onSceneComplete: a,
+                    pauseWhileUnfocused: o,
                     pause: n,
                 }),
-                (0, s.jsx)(L, {
-                    animate: !n && "stars" === t,
-                }),
+                (0, r.jsx)(R, { animate: !n && "stars" === t }),
             ],
         });
     }
 }
-h(x, "Scenes", N);

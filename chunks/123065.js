@@ -1,35 +1,32 @@
-n.d(e, {
-    A: () => p,
-});
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(258057),
-    c = n(15285),
-    o = n(568004),
-    u = n(194871),
-    d = n(715671),
-    b = n(652215),
-    s = n(985018);
-
-function p(t) {
-    let e = (0, i.bG)([c.Ay], () => c.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
-        n = (0, i.bG)([u.A], () => u.A.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
-        p = (0, i.bG)([o.A], () => o.A.getTargetManifests(t.id, t.branchId), [t.branchId, t.id]);
-    return n
-        ? e
+i.d(n, { A: () => b });
+var l = i(627968);
+i(64700);
+var a = i(311907),
+    e = i(397927),
+    r = i(258057),
+    d = i(15285),
+    c = i(568004),
+    A = i(194871),
+    s = i(715671),
+    u = i(652215),
+    o = i(985018);
+function b(t) {
+    let n = (0, a.bG)([d.Ay], () => d.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+        i = (0, a.bG)([A.A], () => A.A.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        b = (0, a.bG)([c.A], () => c.A.getTargetManifests(t.id, t.branchId), [t.branchId, t.id]);
+    return i
+        ? n
             ? null
-            : (0, r.jsx)(l.Drp, {
+            : (0, l.jsx)(e.Drp, {
                   id: "uninstall",
-                  label: s.intl.string(s.t.DwgfOM),
-                  action: () => (0, a.z)(t.id, t.branchId, b.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+                  label: o.intl.string(o.t.DwgfOM),
+                  action: () => (0, r.z)(t.id, t.branchId, u.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
               })
-        : null == p
+        : null == b
           ? null
-          : (0, r.jsx)(l.Drp, {
+          : (0, l.jsx)(e.Drp, {
                 id: "install",
-                label: s.intl.string(s.t["N+XVnt"]),
-                action: () => d.installApplication(t.id, t.branchId, b.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+                label: o.intl.string(o.t["N+XVnt"]),
+                action: () => s.installApplication(t.id, t.branchId, u.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
             });
 }

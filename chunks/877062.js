@@ -1,10 +1,8 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(481613),
     i = n.n(r),
     a = n(72290);
-
 function s(e, t) {
     if (!e.startsWith("discord:")) return (location.href = e), a.nextTick(() => t(!0));
     let { body: n } = document;
@@ -17,14 +15,11 @@ function s(e, t) {
         "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && a.nextTick(() => t(!1));
     }
     window.setTimeout(() => {
-        var e;
-        (null != (e = null == r ? void 0 : r.parentElement) ? e : null) !== null && n.removeChild(r);
+        (r?.parentElement ?? null) !== null && n.removeChild(r);
     }, 1e3);
 }
-
 function o(e, t) {
     let n = !1;
-
     function r() {
         n = !0;
     }
@@ -34,20 +29,16 @@ function o(e, t) {
             window.removeEventListener("blur", r), t(n);
         }, 1e3);
 }
-
 function l(e, t) {
     t(!1);
 }
-
-function c(e, t) {
+function u(e, t) {
     (location.href = e), a.nextTick(() => t(!0));
 }
-let u = {
+let c = {
     launch: (function () {
-        var e, t;
-        return (null == (e = i().os) ? void 0 : e.family) === "Android" ||
-            (null == (t = i().os) ? void 0 : t.family) === "iOS"
-            ? c
+        return i().os?.family === "Android" || i().os?.family === "iOS"
+            ? u
             : "Gecko" === i().layout
               ? s
               : null != i().ua && -1 !== i().ua.indexOf("Valve Steam GameOverlay")

@@ -1,10 +1,8 @@
-n.d(t, {
-    v: () => l,
-});
+"use strict";
+n.d(t, { v: () => l });
 var r = n(64700),
     i = n(93023);
 let a = (e) => e;
-
 function s(e, t = a) {
     let n = r.useSyncExternalStore(
         e.subscribe,

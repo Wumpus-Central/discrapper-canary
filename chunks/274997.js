@@ -1,114 +1,25 @@
-n.d(t, {
-    p: () => f,
-});
+"use strict";
+n.d(t, { p: () => s });
 var r = n(627968);
 n(64700);
 var i = n(996682),
     a = n(27989);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function u(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let f = (e) => {
-    var t, n;
-    let { size: s = "md", width: l, height: d, color: f = "#4E5058", colorClass: p = "" } = e,
-        _ = u(e, ["size", "width", "height", "color", "colorClass"]),
-        h = (0, a.J)(s),
-        m = null != (t = null == h ? void 0 : h.width) ? t : l,
-        g = null != (n = null == h ? void 0 : h.height) ? n : d;
-    return (0, r.jsx)(
-        "svg",
-        c(o({}, (0, i.A)(_)), {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: m,
-            height: g,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: (0, r.jsx)("path", {
-                fill: "string" == typeof f ? f : f.css,
-                d: "M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.64 11.12L2.22 22h1.72l6.68-7.77L15.96 22h5.82l-7.92-11.53Zm-2.36 2.75-.78-1.11L4.57 3.3h2.65l4.97 7.11.77 1.1 6.46 9.25h-2.65l-5.27-7.54Z",
-                className: p,
-            }),
+let s = (e) => {
+    let { size: t = "md", width: n, height: s, color: o = "#4E5058", colorClass: l = "", ...u } = e,
+        c = (0, a.J)(t),
+        d = c?.width ?? n,
+        _ = c?.height ?? s;
+    return (0, r.jsx)("svg", {
+        ...(0, i.A)(u),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: d,
+        height: _,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: (0, r.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
+            d: "M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.64 11.12L2.22 22h1.72l6.68-7.77L15.96 22h5.82l-7.92-11.53Zm-2.36 2.75-.78-1.11L4.57 3.3h2.65l4.97 7.11.77 1.1 6.46 9.25h-2.65l-5.27-7.54Z",
+            className: l,
         }),
-    );
+    });
 };

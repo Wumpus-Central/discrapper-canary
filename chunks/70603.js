@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 let { createLoader: r } = n(932433),
     i = r(
         {
@@ -33,7 +32,7 @@ let { createLoader: r } = n(932433),
             tr: () => n.e("1750").then(n.t.bind(n, 793845, 19)),
             uk: () => n.e("89668").then(n.t.bind(n, 627471, 19)),
             vi: () => n.e("39451").then(n.t.bind(n, 880406, 19)),
-            "zh-CN": () => n.e("25636").then(n.t.bind(n, 405564, 19)),
+            "zh-CN": () => n.e("25636").then(n.t.bind(n, 183183, 19)),
             "zh-TW": () => n.e("50348").then(n.t.bind(n, 885735, 19)),
             "en-US": () => n.e("3457").then(n.bind(n, 264696)),
         },

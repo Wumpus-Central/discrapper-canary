@@ -1,138 +1,111 @@
-n.d(e, {
-    JD: () => E,
-    Jz: () => g,
-    S_: () => N,
-    fv: () => f,
-    i_: () => _,
-    od: () => S,
-    p0: () => h,
-    w6: () => A,
-}),
-    n(896048);
+n.d(t, { JD: () => h, Jz: () => c, S_: () => v, fv: () => _, i_: () => f, od: () => g, p0: () => C, w6: () => E });
 var i = n(873298),
-    r = n(594061),
-    l = n(734057),
+    l = n(594061),
+    r = n(734057),
     a = n(576705),
-    s = n(661191),
-    o = n(181079),
-    d = n(818348);
-
-function u() {
-    let t = o.A.getFavoriteChannels(),
-        e = 1;
-    for (let n in t) e = Math.max(e, t[n].order);
-    return e + 1;
+    u = n(661191),
+    d = n(181079),
+    s = n(818348);
+function o() {
+    let e = d.A.getFavoriteChannels(),
+        t = 1;
+    for (let n in e) t = Math.max(t, e[n].order);
+    return t + 1;
 }
-
-function c(t) {
-    for (let e in t) {
-        let n = t[e];
+function A(e) {
+    for (let t in e) {
+        let n = e[t];
         if (null == n) {
-            delete t[e];
+            delete e[t];
             continue;
         }
         if (n.type === i.Ip.CATEGORY) continue;
-        let r = l.A.getChannel(e);
-        if (null == r || (!r.isPrivate() && !a.A.can(d.xB.VIEW_CHANNEL, r))) {
-            delete t[e];
+        let l = r.A.getChannel(t);
+        if (null == l || (!l.isPrivate() && !a.A.can(s.xB.VIEW_CHANNEL, l))) {
+            delete e[t];
             continue;
         }
     }
 }
-
-function g(t, e) {
-    o.A.isFavorite(t) ||
-        r.wc.updateAsync(
+function c(e, t) {
+    d.A.isFavorite(e) ||
+        l.wc.updateAsync(
             "favorites",
             (n) => {
-                (n.favoriteChannels[t] = i.wL.create({
+                (n.favoriteChannels[e] = i.wL.create({
                     nickname: "",
                     type: i.Ip.REFERENCE_ORIGINAL,
-                    position: u(),
-                    parentId: null != e ? e : "0",
+                    position: o(),
+                    parentId: t ?? "0",
                 })),
-                    c(n.favoriteChannels);
+                    A(n.favoriteChannels);
             },
-            r.Sb.FREQUENT_USER_ACTION,
+            l.Sb.FREQUENT_USER_ACTION,
         );
 }
-
-function _(t) {
-    let e = o.A.getFavorite(t);
-    null != e &&
-        r.wc.updateAsync(
+function f(e) {
+    let t = d.A.getFavorite(e);
+    null != t &&
+        l.wc.updateAsync(
             "favorites",
             (n) => {
-                if ((delete n.favoriteChannels[t], e.type === i.Ip.CATEGORY))
-                    for (let e in n.favoriteChannels)
-                        n.favoriteChannels[e].parentId === t && (n.favoriteChannels[e].parentId = "0");
-                c(n.favoriteChannels);
+                if ((delete n.favoriteChannels[e], t.type === i.Ip.CATEGORY))
+                    for (let t in n.favoriteChannels)
+                        n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
+                A(n.favoriteChannels);
             },
-            r.Sb.INFREQUENT_USER_ACTION,
+            l.Sb.INFREQUENT_USER_ACTION,
         );
 }
-
-function A(t, e) {
-    o.A.isFavorite(t) &&
-        r.wc.updateAsync(
+function E(e, t) {
+    d.A.isFavorite(e) &&
+        l.wc.updateAsync(
             "favorites",
             (n) => {
-                n.favoriteChannels[t].nickname = null != e ? e : "";
+                n.favoriteChannels[e].nickname = t ?? "";
             },
-            r.Sb.INFREQUENT_USER_ACTION,
+            l.Sb.INFREQUENT_USER_ACTION,
         );
 }
-
-function S(t) {
-    let e = s.default.fromTimestamp(Date.now());
-    r.wc.updateAsync(
+function g(e) {
+    let t = u.default.fromTimestamp(Date.now());
+    l.wc.updateAsync(
         "favorites",
         (n) => {
-            n.favoriteChannels[e] = i.wL.create({
-                nickname: t,
-                type: i.Ip.CATEGORY,
-                position: u(),
-                parentId: "0",
-            });
+            n.favoriteChannels[t] = i.wL.create({ nickname: e, type: i.Ip.CATEGORY, position: o(), parentId: "0" });
         },
-        r.Sb.FREQUENT_USER_ACTION,
+        l.Sb.FREQUENT_USER_ACTION,
     );
 }
-
-function f(t) {
-    _(t);
+function _(e) {
+    f(e);
 }
-
-function N(t) {
-    r.wc.updateAsync(
-        "favorites",
-        (e) => {
-            for (let i of t)
-                if ((null != i.position && (e.favoriteChannels[i.id].position = i.position), void 0 !== i.parent_id)) {
-                    var n;
-                    e.favoriteChannels[i.id].parentId = null != (n = i.parent_id) ? n : "0";
-                }
-        },
-        r.Sb.FREQUENT_USER_ACTION,
-    );
-}
-
-function E(t, e) {
-    r.wc.updateAsync(
-        "favorites",
-        (n) => {
-            n.favoriteChannels[t].parentId = null != e ? e : "0";
-        },
-        r.Sb.FREQUENT_USER_ACTION,
-    );
-}
-
-function h() {
-    r.wc.updateAsync(
+function v(e) {
+    l.wc.updateAsync(
         "favorites",
         (t) => {
-            t.muted = !t.muted;
+            for (let n of e)
+                null != n.position && (t.favoriteChannels[n.id].position = n.position),
+                    void 0 !== n.parent_id && (t.favoriteChannels[n.id].parentId = n.parent_id ?? "0");
         },
-        r.Sb.INFREQUENT_USER_ACTION,
+        l.Sb.FREQUENT_USER_ACTION,
+    );
+}
+function h(e, t) {
+    l.wc.updateAsync(
+        "favorites",
+        (n) => {
+            n.favoriteChannels[e].parentId = t ?? "0";
+        },
+        l.Sb.FREQUENT_USER_ACTION,
+    );
+}
+function C() {
+    l.wc.updateAsync(
+        "favorites",
+        (e) => {
+            e.muted = !e.muted;
+        },
+        l.Sb.INFREQUENT_USER_ACTION,
     );
 }

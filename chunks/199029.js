@@ -1,54 +1,48 @@
-r.d(t, {
-    o: () => i,
-}),
-    r(896048);
-var n = r(627968),
-    a = r(64700),
-    l = r(77555),
-    o = r(151054),
-    s = r(457417),
-    c = r(848193);
-let i = () => {
+n.d(t, { o: () => c });
+var a = n(627968),
+    l = n(64700),
+    r = n(77555),
+    s = n(151054),
+    o = n(457417),
+    i = n(848193);
+let c = () => {
     let {
             selectedDestinations: e,
             maxDestinations: t,
-            searchText: r,
-            message: i,
+            searchText: n,
+            message: c,
             channel: u,
             updateSelectShareDestinations: d,
-        } = (0, s.Vw)(),
-        { results: f, updateSearchText: b } = (0, o.R)({
-            selectedDestinations: e,
-            includeMissingDMs: !0,
-        });
-    (0, a.useEffect)(() => {
-        b(r);
-    }, [b, r]);
-    let p = (0, a.useCallback)(
+        } = (0, o.Vw)(),
+        { results: _, updateSearchText: h } = (0, s.R)({ selectedDestinations: e, includeMissingDMs: !0 });
+    (0, l.useEffect)(() => {
+        h(n);
+    }, [h, n]);
+    let f = (0, l.useCallback)(
             (t) => {
-                let r = e.findIndex((e) => {
-                    let { type: r, id: n } = e;
-                    return r === t.type && n === t.id;
+                let n = e.findIndex((e) => {
+                    let { type: n, id: a } = e;
+                    return n === t.type && a === t.id;
                 });
-                if (-1 !== r) {
+                if (-1 !== n) {
                     let t = [...e];
-                    t.splice(r, 1), d(t);
+                    t.splice(n, 1), d(t);
                     return;
                 }
                 d([...e, t]);
             },
             [e, d],
         ),
-        g = e.length >= t;
-    return (0, n.jsx)(l.z, {
+        p = e.length >= t;
+    return (0, a.jsx)(r.z, {
         paddingBottom: 16,
         paddingTop: 16,
-        rowData: f,
-        message: i,
+        rowData: _,
+        message: c,
         originChannel: u,
-        handleToggleDestination: p,
+        handleToggleDestination: f,
         selectedDestinations: e,
-        disableSelection: g,
-        rowClassName: c.q,
+        disableSelection: p,
+        rowClassName: i.q,
     });
 };

@@ -1,48 +1,35 @@
-t.d(n, {
-    default: () => d,
-});
-var r = t(627968);
+t.d(e, { default: () => u });
+var i = t(627968);
 t(64700);
-var c = t(397927),
-    i = t(442433),
-    l = t(358367),
-    a = t(793574),
-    o = t(50268),
-    u = t(307623),
-    s = t(317910),
-    b = t(475777),
-    A = t(985018);
-let d = (0, l.A)(
-    function (e) {
-        let { channel: n, guild: t, onSelect: l } = e,
-            a = (0, s.A)(n),
-            d = (0, b.A)(n, t),
-            p = (0, u.A)(n),
-            E = (0, o.A)({
-                id: n.id,
-                label: A.intl.string(A.t.gFHI3k),
-            });
-        return (0, r.jsxs)(c.W1t, {
+var r = t(397927),
+    l = t(442433),
+    a = t(358367),
+    c = t(793574),
+    s = t(50268),
+    A = t(307623),
+    o = t(317910),
+    d = t(475777),
+    E = t(985018);
+let u = (0, a.A)(
+    function (n) {
+        let { channel: e, guild: t, onSelect: a } = n,
+            c = (0, o.A)(e),
+            u = (0, d.A)(e, t),
+            _ = (0, A.A)(e),
+            p = (0, s.A)({ id: e.id, label: E.intl.string(E.t.gFHI3k) });
+        return (0, i.jsxs)(r.W1t, {
             "data-menu-migrated-auto": !0,
             navId: "channel-context",
-            onClose: i.Z_,
-            "aria-label": A.intl.string(A.t.Xm41aV),
-            onSelect: l,
+            onClose: l.Z_,
+            "aria-label": E.intl.string(E.t.Xm41aV),
+            onSelect: a,
             children: [
-                (0, r.jsx)(c.rXV, {
-                    children: a,
-                }),
-                (0, r.jsx)(c.rXV, {
-                    children: d,
-                }),
-                (0, r.jsx)(c.rXV, {
-                    children: p,
-                }),
-                (0, r.jsx)(c.rXV, {
-                    children: E,
-                }),
+                (0, i.jsx)(r.rXV, { children: c }),
+                (0, i.jsx)(r.rXV, { children: u }),
+                (0, i.jsx)(r.rXV, { children: _ }),
+                (0, i.jsx)(r.rXV, { children: p }),
             ],
         });
     },
-    [a.A.CONTEXT_MENU, a.A.CHANNEL_LIST_STORE_CHANNEL_MENU],
+    [c.A.CONTEXT_MENU, c.A.CHANNEL_LIST_STORE_CHANNEL_MENU],
 );

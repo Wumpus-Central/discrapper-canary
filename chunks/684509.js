@@ -1,76 +1,52 @@
-n.d(t, {
-    A: () => b,
-});
-var i = n(627968);
-n(64700);
-var r = n(397927),
-    s = n(837057),
-    l = n(310419),
-    a = n(997509),
-    o = n(5298),
-    c = n(266648),
-    u = n(267102),
-    d = n(652215),
-    g = n(488995),
-    p = n(985018);
-
-function b(e) {
-    let t = (0, u.aL)(),
-        n = (0, o.A)(e);
-    if (__OVERLAY__ || !n) return null;
-    let b = (n) => {
-        a.A.open(e.id, n), t.dispatch(d.jej.POPOUT_CLOSE), (0, r.s7G)();
+i.d(t, { A: () => E });
+var n = i(627968);
+i(64700);
+var l = i(397927),
+    s = i(837057),
+    r = i(310419),
+    a = i(997509),
+    d = i(5298),
+    o = i(266648),
+    c = i(267102),
+    u = i(652215),
+    A = i(488995),
+    g = i(985018);
+function E(e) {
+    let t = (0, c.aL)(),
+        i = (0, d.A)(e);
+    if (__OVERLAY__ || !i) return null;
+    let E = (i) => {
+        a.A.open(e.id, i), t.dispatch(u.jej.POPOUT_CLOSE), (0, l.s7G)();
     };
-    return (0, i.jsx)(r.Drp, {
+    return (0, n.jsx)(l.Drp, {
         id: "guild-settings",
-        label: p.intl.string(p.t["154/bL"]),
-        action: () => b(),
-        children: (0, c.P)(e).map((t) => {
-            let { section: n, label: a } = t;
+        label: g.intl.string(g.t["154/bL"]),
+        action: () => E(),
+        children: (0, o.P)(e).map((t) => {
+            let { section: i, label: a } = t;
             if (null == a) return null;
-            switch (n) {
-                case d.BEX.DELETE:
+            switch (i) {
+                case u.BEX.DELETE:
                     return null;
-                case d.BEX.COMMUNITY:
-                    return (0, i.jsx)(
-                        r.Drp,
+                case u.BEX.COMMUNITY:
+                    return (0, n.jsx)(l.Drp, { id: i, action: () => E(i), label: g.intl.string(g.t.nRtNqn) }, i);
+                case u.BEX.APP_DIRECTORY:
+                    return (0, n.jsx)(
+                        l.Drp,
                         {
-                            id: n,
-                            action: () => b(n),
-                            label: p.intl.string(p.t.nRtNqn),
-                        },
-                        n,
-                    );
-                case d.BEX.APP_DIRECTORY:
-                    return (0, i.jsx)(
-                        r.Drp,
-                        {
-                            id: n,
+                            id: i,
                             action: () => {
                                 (0, s.transitionToGlobalDiscovery)({
-                                    tab: g.GlobalDiscoveryTab.APPS,
-                                    newSessionState: {
-                                        guildId: e.id,
-                                        entrypoint: {
-                                            name: l.sW.GUILD_HEADER_POPOUT,
-                                        },
-                                    },
+                                    tab: A.GlobalDiscoveryTab.APPS,
+                                    newSessionState: { guildId: e.id, entrypoint: { name: r.sW.GUILD_HEADER_POPOUT } },
                                 });
                             },
                             void_label: a,
                         },
-                        n,
+                        i,
                     );
                 default:
-                    return (0, i.jsx)(
-                        r.Drp,
-                        {
-                            id: n,
-                            action: () => b(n),
-                            void_label: a,
-                        },
-                        n,
-                    );
+                    return (0, n.jsx)(l.Drp, { id: i, action: () => E(i), void_label: a }, i);
             }
         }),
     });

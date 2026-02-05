@@ -1,256 +1,129 @@
-r.d(t, {
-    default: () => L,
-});
-var n = r(627968),
-    s = r(64700),
-    c = r(503698),
-    i = r.n(c),
-    l = r(311907),
-    a = r(421380),
-    o = r(397927),
-    d = r(73153),
-    f = r(384904),
-    u = r(73825),
-    p = r(160946),
-    b = r(156312),
-    m = r(166532),
-    y = r(422936),
-    j = r(234419),
-    O = r(465794),
-    x = r(811611),
-    g = r(632638),
-    P = r(901017),
-    _ = r(773669),
-    h = r(295405),
-    v = r(252424),
-    E = r(927578),
-    S = r(580630),
-    k = r(652215),
-    C = r(788868),
-    N = r(985018),
-    w = r(158057);
-let I = (e) => {
-        let { locale: t } = e;
-        return (0, n.jsxs)(n.Fragment, {
+s.d(n, { default: () => A });
+var i = s(627968),
+    r = s(64700),
+    t = s(503698),
+    l = s.n(t),
+    c = s(311907),
+    o = s(421380),
+    a = s(397927),
+    d = s(73153),
+    _ = s(384904),
+    u = s(73825),
+    m = s(160946),
+    p = s(156312),
+    x = s(166532),
+    f = s(422936),
+    j = s(234419),
+    g = s(465794),
+    h = s(811611),
+    k = s(632638),
+    C = s(901017),
+    y = s(773669),
+    P = s(295405),
+    E = s(252424),
+    I = s(927578),
+    v = s(580630),
+    N = s(652215),
+    S = s(788868),
+    b = s(985018),
+    M = s(158057);
+let L = (e) => {
+        let { locale: n } = e;
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsx)(P.A, {
-                    icon: o.tEP,
-                    iconClassName: w.xy,
-                    description: N.intl.string(N.t.uAfKTe),
-                }),
-                (0, n.jsx)(P.A, {
-                    icon: o.vRF,
-                    iconClassName: w.Jx,
-                    description: N.intl.formatToPlainString(N.t.sWnv5M, {
-                        numGuildSubscriptions: C.M4,
-                        discountPercent: (0, v.l9)(t, C.oX / 100),
+                (0, i.jsx)(C.A, { icon: a.tEP, iconClassName: M.xy, description: b.intl.string(b.t.uAfKTe) }),
+                (0, i.jsx)(C.A, {
+                    icon: a.vRF,
+                    iconClassName: M.Jx,
+                    description: b.intl.formatToPlainString(b.t.sWnv5M, {
+                        numGuildSubscriptions: S.M4,
+                        discountPercent: (0, E.l9)(n, S.oX / 100),
                     }),
                 }),
-                (0, n.jsx)(P.A, {
-                    icon: o.nm2,
-                    iconClassName: w.Zr,
-                    description: N.intl.string(N.t.pqHIf7),
-                }),
+                (0, i.jsx)(C.A, { icon: a.nm2, iconClassName: M.Zr, description: b.intl.string(b.t.pqHIf7) }),
             ],
         });
     },
     R = (e) => {
-        let { trialOffer: t, discountOffer: s, isLoading: c, price: a, onClose: d } = e,
-            f = (0, l.bG)([_.default], () => _.default.locale),
-            u = null != t || null != s;
-        return (0, n.jsxs)("div", {
-            className: w.iE,
+        let { trialOffer: n, discountOffer: r, isLoading: t, price: o, onClose: d } = e,
+            _ = (0, c.bG)([y.default], () => y.default.locale),
+            u = null != n || null != r;
+        return (0, i.jsxs)("div", {
+            className: M.iE,
             children: [
-                (0, n.jsx)(o.s_y, {
-                    "data-migration-pending": !0,
-                    onClick: d,
-                    className: w.b,
-                }),
-                u &&
-                    (0, n.jsx)(x.Vq, {
-                        className: w.Fg,
-                    }),
-                (0, n.jsx)("img", {
-                    className: i()(w.c8, {
-                        [w.mk]: u,
-                    }),
-                    src: r(377191),
-                    alt: "",
-                }),
-                c
-                    ? (0, n.jsx)(o.y$y, {})
-                    : (0, n.jsxs)(n.Fragment, {
+                (0, i.jsx)(a.s_y, { "data-migration-pending": !0, onClick: d, className: M.b }),
+                u && (0, i.jsx)(h.Vq, { className: M.Fg }),
+                (0, i.jsx)("img", { className: l()(M.c8, { [M.mk]: u }), src: s(377191), alt: "" }),
+                t
+                    ? (0, i.jsx)(a.y$y, {})
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, n.jsx)(o.Text, {
+                              (0, i.jsx)(a.Text, {
                                   variant: "text-md/normal",
-                                  className: w.R_,
+                                  className: M.R_,
                                   children:
-                                      null == a
-                                          ? (0, n.jsx)(o.y$y, {
-                                                type: o.y$y.Type.PULSING_ELLIPSIS,
-                                            })
-                                          : N.intl.format(N.t.TBsJfQ, {
-                                                monthlyPrice: (0, S.$g)(a.amount, a.currency),
+                                      null == o
+                                          ? (0, i.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS })
+                                          : b.intl.format(b.t.TBsJfQ, {
+                                                monthlyPrice: (0, v.$g)(o.amount, o.currency),
                                             }),
                               }),
-                              (0, n.jsx)("div", {
-                                  className: w.md,
-                                  children: (0, n.jsx)(I, {
-                                      locale: f,
-                                  }),
-                              }),
+                              (0, i.jsx)("div", { className: M.md, children: (0, i.jsx)(L, { locale: _ }) }),
                           ],
                       }),
             ],
         });
     },
-    M = (e) => {
-        let { trialOffer: t, discountOffer: r, onClose: s } = e,
-            c = {
-                section: k.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
-            };
-        return (0, n.jsxs)(o.jlY, {
+    T = (e) => {
+        let { trialOffer: n, discountOffer: s, onClose: r } = e,
+            t = { section: N.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+        return (0, i.jsxs)(a.jlY, {
             "data-migration-pending": !0,
-            className: w.qr,
+            className: M.qr,
             children: [
-                (0, n.jsx)(o.Button, {
-                    variant: "secondary",
-                    size: "sm",
-                    text: N.intl.string(N.t.cpT0Cq),
-                    onClick: s,
-                }),
-                (0, n.jsx)(O.A, {
-                    textOptions: {
-                        textOverride: null != t || null != r ? N.intl.string(N.t["Gd/XHF"]) : void 0,
-                    },
-                    premiumModalAnalyticsLocation: c,
-                    subscriptionTier: C.pe.TIER_2,
-                    size: a.$n.Sizes.SMALL,
-                    color: a.$n.Colors.GREEN,
+                (0, i.jsx)(a.Button, { variant: "secondary", size: "sm", text: b.intl.string(b.t.cpT0Cq), onClick: r }),
+                (0, i.jsx)(g.A, {
+                    textOptions: { textOverride: null != n || null != s ? b.intl.string(b.t["Gd/XHF"]) : void 0 },
+                    premiumModalAnalyticsLocation: t,
+                    subscriptionTier: S.pe.TIER_2,
+                    size: o.$n.Sizes.SMALL,
+                    color: o.$n.Colors.GREEN,
                     onClick: () => {
-                        s();
+                        r();
                     },
                 }),
             ],
         });
     };
-
-function L(e) {
-    var t, r;
-    let { onClose: c } = e,
-        i = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                s,
-                c = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (s = 0, r = Reflect.ownKeys(e); s < r.length; s++)
-                    (n = r[s]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
-                return c;
-            }
-            if (
-                ((c = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        s = {},
-                        c = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < c.length; n++)
-                        (r = c[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
-                    return s;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (s = 0, r = Object.getOwnPropertySymbols(e); s < r.length; s++)
-                    (n = r[s]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
-            return c;
-        })(e, ["onClose"]),
-        a = (0, p.Y)(),
-        O = (0, l.bG)([h.A], () => h.A.hasFetchedPaymentSources),
-        x = a && O,
-        P = (0, j.V)(),
-        _ = (0, y.O)();
-    s.useEffect(() => {
+function A(e) {
+    let { onClose: n, ...s } = e,
+        t = (0, m.Y)(),
+        l = (0, c.bG)([P.A], () => P.A.hasFetchedPaymentSources),
+        o = t && l,
+        g = (0, j.V)(),
+        h = (0, f.O)();
+    r.useEffect(() => {
         d.h.wait(() => {
-            (0, f.$o)(), (0, u.zS)(null, null, k.tF5.DISCOVERY);
+            (0, _.$o)(), (0, u.zS)(null, null, N.tF5.DISCOVERY);
         });
     }, []);
-    let v = x ? E.Ay.getDefaultPrice(C.gD.PREMIUM_MONTH_TIER_2) : null;
-    return (0, n.jsx)(b.PaymentContextProvider, {
+    let C = o ? I.Ay.getDefaultPrice(S.gD.PREMIUM_MONTH_TIER_2) : null;
+    return (0, i.jsx)(p.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, n.jsx)(
-            o.EOs,
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                            }),
-                        )),
-                        n.forEach(function (t) {
-                            var n;
-                            (n = r[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: n,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = n);
-                        });
-                }
-                return e;
-            })(
-                {
-                    "data-migration-pending": !0,
-                },
-                i,
-            )),
-            (r = r =
-                {
-                    "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-                    parentComponent: "StickerPackPremiumUpsellModal",
-                    children: (0, n.jsx)(g.A, {
-                        hideBreadcrumbs: !0,
-                        body: (0, n.jsx)(R, {
-                            trialOffer: P,
-                            discountOffer: _,
-                            isLoading: !x,
-                            price: v,
-                            onClose: c,
-                        }),
-                        footer: (0, n.jsx)(M, {
-                            trialOffer: P,
-                            discountOffer: _,
-                            onClose: c,
-                        }),
-                        steps: [m.pn.PREMIUM_UPSELL],
-                        currentStep: m.pn.PREMIUM_UPSELL,
-                    }),
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                : (function (e, t) {
-                      var r = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
-                      }
-                      return r;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                  }),
-            t),
-        ),
+        children: (0, i.jsx)(a.EOs, {
+            "data-migration-pending": !0,
+            ...s,
+            "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
+            parentComponent: "StickerPackPremiumUpsellModal",
+            children: (0, i.jsx)(k.A, {
+                hideBreadcrumbs: !0,
+                body: (0, i.jsx)(R, { trialOffer: g, discountOffer: h, isLoading: !o, price: C, onClose: n }),
+                footer: (0, i.jsx)(T, { trialOffer: g, discountOffer: h, onClose: n }),
+                steps: [x.pn.PREMIUM_UPSELL],
+                currentStep: x.pn.PREMIUM_UPSELL,
+            }),
+        }),
     });
 }

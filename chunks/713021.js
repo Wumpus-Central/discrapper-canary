@@ -1,148 +1,39 @@
-n.d(t, {
-    Ay: () => A,
-    dx: () => h,
-    k0: () => _,
-});
-var r,
-    i = n(635377),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = p(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-var _ = (function (e) {
-    return (e.VOICE_MESSAGE = "voice_message"), e;
-})({});
-let h = (e, t) => "".concat(e, "-").concat(t),
-    m = 25,
-    g = {
-        rates: {
-            voice_message: 1,
-        },
-        positions: new (a())({
-            max: m,
-        }),
-    },
-    E = c({}, g);
-
-function b(e) {
+"use strict";
+n.d(t, { Ay: () => h, dx: () => l, k0: () => o });
+var r = n(635377),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = (function (e) {
+        return (e.VOICE_MESSAGE = "voice_message"), e;
+    })({});
+let l = (e, t) => `${e}-${t}`,
+    u = 25,
+    c = { rates: { voice_message: 1 }, positions: new (i())({ max: u }) },
+    d = { ...c };
+function _(e) {
     let { rate: t, playbackType: n } = e;
-    E = d(c({}, E), {
-        rates: d(c({}, E.rates), {
-            [n]: t,
-        }),
-    });
+    d = { ...d, rates: { ...d.rates, [n]: t } };
 }
-
-function y(e) {
+function f(e) {
     let { cacheKey: t, position: n, duration: r } = e;
-    n > 0.5 && n < 0.95 * r ? E.positions.set(t, n) : E.positions.del(t);
+    n > 0.5 && n < 0.95 * r ? d.positions.set(t, n) : d.positions.del(t);
 }
-class O extends (r = s.Ay.DeviceSettingsStore) {
+class p extends a.Ay.DeviceSettingsStore {
+    static displayName = "MediaPlaybackStore";
+    static persistKey = "MediaPlaybackStore";
     initialize(e) {
-        let t = null != e ? e : {},
-            { positions: n } = t;
-        (E = c({}, g, f(t, ["positions"]))), null != n && E.positions.load(n);
+        let { positions: t, ...n } = e ?? {};
+        (d = { ...c, ...n }), null != t && d.positions.load(t);
     }
     getUserAgnosticState() {
-        return {
-            rates: E.rates,
-            positions: E.positions.dump(),
-        };
+        return { rates: d.rates, positions: d.positions.dump() };
     }
     getPlaybackRate(e) {
-        var t;
-        return null != (t = E.rates[e]) ? t : 1;
+        return d.rates[e] ?? 1;
     }
     getPlaybackPosition(e) {
-        var t;
-        return null != (t = E.positions.get(e)) ? t : 0;
+        return d.positions.get(e) ?? 0;
     }
 }
-l(O, "displayName", "MediaPlaybackStore"), l(O, "persistKey", "MediaPlaybackStore");
-let A = new O(o.h, {
-    MEDIA_PLAYBACK_RATE_UPDATE: b,
-    MEDIA_PLAYBACK_POSITION_UPDATE: y,
-});
+let h = new p(s.h, { MEDIA_PLAYBACK_RATE_UPDATE: _, MEDIA_PLAYBACK_POSITION_UPDATE: f });

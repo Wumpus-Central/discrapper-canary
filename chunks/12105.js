@@ -1,38 +1,30 @@
-n.d(e, {
-    A: () => s,
-}),
-    n(228524);
-var r = n(627968);
+n.d(e, { A: () => a });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(286965);
-
-function s(t) {
-    let { heroImage: e, children: n, header: s, description: l } = t;
-    return (0, r.jsxs)(r.Fragment, {
+var s = n(397927),
+    r = n(286965);
+function a(t) {
+    let { heroImage: e, children: n, header: a, description: l } = t;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            void 0 !== e &&
-                (0, r.jsx)("div", {
-                    className: a.c8,
-                    children: e,
-                }),
-            (0, r.jsxs)(i.$mQ, {
+            void 0 !== e && (0, i.jsx)("div", { className: r.c8, children: e }),
+            (0, i.jsxs)(s.$mQ, {
                 "data-migration-pending": !0,
-                className: a.rf,
+                className: r.rf,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: a.FS,
+                    (0, i.jsxs)("div", {
+                        className: r.FS,
                         children: [
-                            (0, r.jsx)(i.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                children: s,
+                                children: a,
                             }),
                             null != l &&
-                                (0, r.jsx)(i.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-md/medium",
                                     color: "text-default",
-                                    className: a.h_,
+                                    className: r.h_,
                                     children: l,
                                 }),
                         ],

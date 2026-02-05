@@ -16,26 +16,12 @@ e.exports = function (e) {
                         begin: t.either(/Index: /, /^index/, /={3,}/, /^-{3}/, /^\*{3} /, /^\+{3}/, /^diff --git/),
                         end: /$/,
                     },
-                    {
-                        match: /^\*{15}$/,
-                    },
+                    { match: /^\*{15}$/ },
                 ],
             },
-            {
-                className: "addition",
-                begin: /^\+/,
-                end: /$/,
-            },
-            {
-                className: "deletion",
-                begin: /^-/,
-                end: /$/,
-            },
-            {
-                className: "addition",
-                begin: /^!/,
-                end: /$/,
-            },
+            { className: "addition", begin: /^\+/, end: /$/ },
+            { className: "deletion", begin: /^-/, end: /$/ },
+            { className: "addition", begin: /^!/, end: /$/ },
         ],
     };
 };

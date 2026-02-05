@@ -1,117 +1,100 @@
-n.d(t, {
-    F: () => y,
-    t: () => v,
-});
-var r = n(64700),
-    i = n(311907),
-    l = n(735991),
-    a = n(297486),
+n.d(t, { F: () => E, t: () => C });
+var i = n(64700),
+    l = n(311907),
+    a = n(735991),
+    r = n(297486),
     s = n(837057),
     o = n(310419),
-    c = n(734057),
-    u = n(576705),
-    d = n(309010),
-    p = n(967198),
-    m = n(692848),
-    f = n(204776),
-    g = n(354287),
-    h = n(652215),
-    _ = n(488995),
-    b = n(985018);
-
-function A(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
-        s = (0, f.Ie)({
-            customInstallUrl: n,
-            installParams: r,
-            integrationTypesConfig: a,
-        }),
-        o = (0, i.bG)([p.A], () => {
-            var e;
-            return null != (e = p.A.getGuildId()) ? e : void 0;
-        }),
-        m = (0, i.bG)([c.A, u.A, d.A], () => {
-            let e = c.A.getChannel(d.A.getChannelId());
-            return null != e && (e.isPrivate() || u.A.can(h.xBc.SEND_MESSAGES, e));
+    d = n(734057),
+    c = n(576705),
+    u = n(309010),
+    m = n(967198),
+    _ = n(692848),
+    h = n(204776),
+    p = n(354287),
+    g = n(652215),
+    A = n(488995),
+    f = n(985018);
+function x(e) {
+    let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
+        s = (0, h.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),
+        o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
+        _ = (0, l.bG)([d.A, c.A, u.A], () => {
+            let e = d.A.getChannel(u.A.getChannelId());
+            return null != e && (e.isPrivate() || c.A.can(g.xBc.SEND_MESSAGES, e));
         }, []),
-        g = (0, l.V1)(e, o) && m;
+        p = (0, a.V1)(e, o) && _;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
-        installParams: r,
-        integrationTypesConfig: a,
-        canViewApp: t || g,
-        canOpenAppLauncher: g,
+        installParams: i,
+        integrationTypesConfig: r,
+        canViewApp: t || p,
+        canOpenAppLauncher: p,
         isInstallable: s,
         selectedGuildId: o,
     };
 }
-
-function y(e, t) {
+function E(e, t) {
     let {
         canViewApp: n,
-        canOpenAppLauncher: i,
-        isInstallable: l,
-        customInstallUrl: c,
-        installParams: u,
-        integrationTypesConfig: d,
-        selectedGuildId: p,
-    } = A(e);
-    return r.useMemo(
+        canOpenAppLauncher: l,
+        isInstallable: a,
+        customInstallUrl: d,
+        installParams: c,
+        integrationTypesConfig: u,
+        selectedGuildId: m,
+    } = x(e);
+    return i.useMemo(
         () =>
             n
                 ? () => {
-                      (null == t || t(), i)
-                          ? (0, a.hg)(e.id)
+                      (t?.(), l)
+                          ? (0, r.hg)(e.id)
                           : (0, s.transitionToGlobalDiscovery)({
-                                tab: _.GlobalDiscoveryTab.APPS,
+                                tab: A.GlobalDiscoveryTab.APPS,
                                 applicationId: e.id,
-                                newSessionState: {
-                                    entrypoint: {
-                                        name: o.sW.APPLICATION_MESSAGE_EMBED,
-                                    },
-                                },
+                                newSessionState: { entrypoint: { name: o.sW.APPLICATION_MESSAGE_EMBED } },
                             });
                   }
-                : l
+                : a
                   ? () => {
-                        null == t || t(),
-                            (0, m.o)({
+                        t?.(),
+                            (0, _.o)({
                                 applicationId: e.id,
-                                customInstallUrl: c,
-                                installParams: u,
-                                integrationTypesConfig: d,
-                                guildId: p,
+                                customInstallUrl: d,
+                                installParams: c,
+                                integrationTypesConfig: u,
+                                guildId: m,
                                 source: "app_message_embed",
                             });
                     }
                   : void 0,
-        [e.id, i, n, c, u, d, l, t, p],
+        [e.id, l, n, d, c, u, a, t, m],
     );
 }
-
-function v(e) {
-    let { canViewApp: t, isInstallable: n } = A(e),
-        i = y(e);
-    return r.useMemo(
+function C(e) {
+    let { canViewApp: t, isInstallable: n } = x(e),
+        l = E(e);
+    return i.useMemo(
         () =>
-            t && null != i
+            t && null != l
                 ? {
-                      label: b.intl.string(b.t.hvVgAZ),
-                      trackingArea: g.kY.VIEW,
+                      label: f.intl.string(f.t.hvVgAZ),
+                      trackingArea: p.kY.VIEW,
                       onClick() {
-                          i();
+                          l();
                       },
                   }
-                : n && null != i
+                : n && null != l
                   ? {
-                        label: b.intl.string(b.t.NgXl3C),
-                        trackingArea: g.kY.ADD_APP,
+                        label: f.intl.string(f.t.NgXl3C),
+                        trackingArea: p.kY.ADD_APP,
                         onClick() {
-                            i();
+                            l();
                         },
                     }
                   : void 0,
-        [t, n, i],
+        [t, n, l],
     );
 }

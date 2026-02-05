@@ -1,107 +1,77 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(733351);
-var r = n(627968);
+n.d(t, { A: () => v });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    o = n(311907),
-    a = n(990078),
-    c = n(397927),
-    s = n(822123),
-    d = n(649963),
+    a = n.n(l),
+    r = n(311907),
+    s = n(990078),
+    o = n(397927),
+    d = n(822123),
+    c = n(649963),
     u = n(815807),
-    f = n(406704),
-    g = n(253932),
+    g = n(406704),
+    A = n(253932),
     p = n(576705),
-    b = n(486020),
-    m = n(690521),
+    m = n(486020),
+    f = n(690521),
     y = n(652215),
-    O = n(307731),
-    A = n(985018),
-    v = n(852620);
-let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
-
-function h(e) {
+    h = n(307731),
+    E = n(985018),
+    S = n(852620);
+let _ = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+function b(e) {
     let { emoji: t, isFocused: n } = e,
-        { animated: l, src: o, surrogates: c } = t;
+        { animated: l, src: r, surrogates: o } = t;
     return (
-        null == o && null != t.id
-            ? (o = b.Ay.getEmojiURL({
-                  id: t.id,
-                  animated: !!l,
-                  size: 20,
-              }))
-            : null == o && (o = m.Ay.getURL(c)),
-        (0, r.jsx)(a.m, {
-            text: (0, m.N)(t),
+        null == r && null != t.id
+            ? (r = m.Ay.getEmojiURL({ id: t.id, animated: !!l, size: 20 }))
+            : null == r && (r = f.Ay.getURL(o)),
+        (0, i.jsx)(s.m, {
+            text: (0, f.N)(t),
             hideOnClick: !0,
             spacing: 16,
             forceOpen: n,
-            children: (0, r.jsx)("div", {
-                "aria-label": A.intl.formatToPlainString(A.t["/iYSo6"], {
-                    emojiName: t.name,
-                }),
-                className: i()(v.x6, {
-                    [v.in]: n,
-                }),
+            children: (0, i.jsx)("div", {
+                "aria-label": E.intl.formatToPlainString(E.t["/iYSo6"], { emojiName: t.name }),
+                className: a()(S.x6, { [S.in]: n }),
                 children:
-                    null == o || "" === o.trim()
-                        ? (0, r.jsx)("span", {
-                              className: i()("emoji", "emoji-text", v.Kk),
-                              children: c,
-                          })
-                        : (0, r.jsx)("img", {
-                              className: v.Kk,
-                              src: o,
-                              alt: "",
-                          }),
+                    null == r || "" === r.trim()
+                        ? (0, i.jsx)("span", { className: a()("emoji", "emoji-text", S.Kk), children: o })
+                        : (0, i.jsx)("img", { className: S.Kk, src: r, alt: "" }),
             }),
         })
     );
 }
-
-function E(e, t) {
-    let n = (0, s.D6)(t.guild_id).filter((e) => {
-        var n;
-        return (
-            !(e.useSpriteSheet && j.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
-            !m.Ay.isEmojiPremiumLocked({
-                emoji: e,
-                channel: t,
-                intention: O.b_.REACTION,
-            })
-        );
-    });
+function v(e, t) {
+    let n = (0, d.D6)(t.guild_id).filter(
+        (e) =>
+            !(e.useSpriteSheet && _.indexOf(e.uniqueName ?? "") >= 0) &&
+            !f.Ay.isEmojiPremiumLocked({ emoji: e, channel: t, intention: h.b_.REACTION }),
+    );
     n.length > 4 && (n.length = 4);
-    let l = g.jW.useSetting(),
-        i = (0, f.Id)(t);
-    return (0, o.bG)([p.A], () => l && i && (t.isPrivate() || p.A.can(y.xBc.ADD_REACTIONS, t)), [t, i, l]) &&
+    let l = A.jW.useSetting(),
+        a = (0, g.Id)(t);
+    return (0, r.bG)([p.A], () => l && a && (t.isPrivate() || p.A.can(y.xBc.ADD_REACTIONS, t)), [t, a, l]) &&
         n.length > 0
-        ? (0, r.jsx)(c.rXV, {
-              className: v.iE,
-              children: n.map((n, l) => {
-                  var i;
-                  return (0, r.jsx)(
-                      c.Drp,
+        ? (0, i.jsx)(o.rXV, {
+              className: S.iE,
+              children: n.map((n, l) =>
+                  (0, i.jsx)(
+                      o.Drp,
                       {
-                          id: "quickreact-".concat(null != (i = n.id) ? i : l),
+                          id: `quickreact-${n.id ?? l}`,
                           render: (e) => {
                               let { isFocused: t } = e;
-                              return (0, r.jsx)(h, {
-                                  emoji: n,
-                                  isFocused: t,
-                              });
+                              return (0, i.jsx)(b, { emoji: n, isFocused: t });
                           },
                           action: () => {
-                              (0, d.BB)(t.id, e.id, (0, u.jq)(n), d.qN.MESSAGE_CONTEXT_MENU);
+                              (0, c.BB)(t.id, e.id, (0, u.jq)(n), c.qN.MESSAGE_CONTEXT_MENU);
                           },
                           dontCloseOnActionIfHoldingShiftKey: !0,
                       },
                       l,
-                  );
-              }),
+                  ),
+              ),
           })
         : null;
 }

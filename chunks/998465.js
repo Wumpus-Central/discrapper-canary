@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yD: "guildStatus_f9f04c",
     $f: "guildIcon_f9f04c",

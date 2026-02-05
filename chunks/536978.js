@@ -1,11 +1,9 @@
-e.exports = function (e) {
-    return e.Window && e instanceof e.Window
+"use strict";
+t.exports = function (t) {
+    return t.Window && t instanceof t.Window
         ? {
-              x: e.pageXOffset || e.document.documentElement.scrollLeft,
-              y: e.pageYOffset || e.document.documentElement.scrollTop,
+              x: t.pageXOffset || t.document.documentElement.scrollLeft,
+              y: t.pageYOffset || t.document.documentElement.scrollTop,
           }
-        : {
-              x: e.scrollLeft,
-              y: e.scrollTop,
-          };
+        : { x: t.scrollLeft, y: t.scrollTop };
 };

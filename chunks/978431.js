@@ -1,24 +1,21 @@
-i.d(e, {
-    e: () => S,
-});
+i.d(e, { e: () => S });
 var n = i(419954),
     l = i(780964),
     s = i(380587),
     r = i(589641),
-    u = i(660353),
-    a = i(360055),
+    a = i(660353),
+    u = i(360055),
     o = i(319436),
-    T = i(317014),
-    A = i(39218),
-    d = i(985018);
+    d = i(317014),
+    T = i(39218),
+    A = i(985018);
 let S = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
-    useTitle: () => d.intl.string(d.t.xVRG4P),
+    useTitle: () => A.intl.string(A.t.xVRG4P),
     useInlineNotice: function () {
-        var t;
-        let e = (0, r.I)(),
-            i = (0, s.aK)(),
-            n = (0, s.m3)();
-        return null != (t = null != e ? e : i) ? t : n;
+        let t = (0, r.I)(),
+            e = (0, s.aK)(),
+            i = (0, s.m3)();
+        return t ?? e ?? i;
     },
-    buildLayout: () => [o.v, A.x, T.t, u.u, a.a],
+    buildLayout: () => [o.v, T.x, d.t, a.u, u.a],
 });

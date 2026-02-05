@@ -1,10 +1,8 @@
-n.d(t, {
-    T: () => u,
-});
+"use strict";
+n.d(t, { T: () => c });
 var r = n(317374),
     i = n(681456),
     a = n(988440);
-
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -17,7 +15,6 @@ function s(e, t) {
     }
     return n;
 }
-
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -33,21 +30,13 @@ function o(e) {
     }
     return e;
 }
-
 function l(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var c = {
+var u = {
     itemType: null,
     item: null,
     sourceId: null,
@@ -56,9 +45,8 @@ var c = {
     didDrop: !1,
     isSourcePublic: null,
 };
-
-function u() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
+function c() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = t.payload;
     switch (t.type) {
@@ -76,40 +64,14 @@ function u() {
                 },
             );
         case r.BS:
-            return o(
-                o({}, e),
-                {},
-                {
-                    isSourcePublic: !0,
-                },
-            );
+            return o(o({}, e), {}, { isSourcePublic: !0 });
         case r.l6:
-            return o(
-                o({}, e),
-                {},
-                {
-                    targetIds: n.targetIds,
-                },
-            );
+            return o(o({}, e), {}, { targetIds: n.targetIds });
         case i.v4:
             if (-1 === e.targetIds.indexOf(n.targetId)) return e;
-            return o(
-                o({}, e),
-                {},
-                {
-                    targetIds: (0, a.FF)(e.targetIds, n.targetId),
-                },
-            );
+            return o(o({}, e), {}, { targetIds: (0, a.FF)(e.targetIds, n.targetId) });
         case r.q2:
-            return o(
-                o({}, e),
-                {},
-                {
-                    dropResult: n.dropResult,
-                    didDrop: !0,
-                    targetIds: [],
-                },
-            );
+            return o(o({}, e), {}, { dropResult: n.dropResult, didDrop: !0, targetIds: [] });
         case r.dU:
             return o(
                 o({}, e),

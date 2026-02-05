@@ -1,71 +1,64 @@
-n.d(t, {
-    A: () => j,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => f });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(311907),
+var s = n(503698),
+    l = n.n(s),
+    r = n(311907),
     a = n(397927),
-    c = n(291661),
-    o = n(685073),
-    d = n(534400),
+    o = n(291661),
+    d = n(685073),
+    c = n(534400),
     u = n(514661),
-    f = n(71393),
+    m = n(71393),
     g = n(287809),
-    b = n(562153),
-    m = n(29086),
-    p = n(583970),
-    x = n(985018),
-    h = n(908742);
-
-function j(e) {
-    var t, n;
-    let { guildId: i } = e,
-        j = (0, s.bG)([f.A], () => f.A.getGuild(i)),
-        O = (0, s.bG)([g.default], () => g.default.getCurrentUser()),
-        { onAdoptTag: y, isAdopting: v } = (0, u.A)(i),
-        A =
-            (null == O || null == (t = O.primaryGuild) ? void 0 : t.identityGuildId) === i &&
-            (null == O || null == (n = O.primaryGuild) ? void 0 : n.identityEnabled) === !0;
-    if (null != O && null != j && (0, o.q0)(j))
-        return (0, r.jsxs)("div", {
-            className: h.kL,
+    x = n(562153),
+    h = n(29086),
+    _ = n(583970),
+    A = n(985018),
+    p = n(908742);
+function f(e) {
+    let { guildId: t } = e,
+        n = (0, r.bG)([m.A], () => m.A.getGuild(t)),
+        s = (0, r.bG)([g.default], () => g.default.getCurrentUser()),
+        { onAdoptTag: f, isAdopting: j } = (0, u.A)(t),
+        N = s?.primaryGuild?.identityGuildId === t && s?.primaryGuild?.identityEnabled === !0;
+    if (null != s && null != n && (0, d.q0)(n))
+        return (0, i.jsxs)("div", {
+            className: p.kL,
             children: [
-                (0, r.jsx)(a.Text, {
-                    className: h.uW,
+                (0, i.jsx)(a.Text, {
+                    className: p.uW,
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: A ? x.intl.string(p.default["6xBCpG"]) : x.intl.string(p.default.eSRKez),
+                    children: N ? A.intl.string(_.default["6xBCpG"]) : A.intl.string(_.default.eSRKez),
                 }),
-                (0, r.jsx)("div", {
-                    className: h.yF,
-                }),
-                (0, r.jsxs)("div", {
-                    className: l()(h.uW, h.rf),
+                (0, i.jsx)("div", { className: p.yF }),
+                (0, i.jsxs)("div", {
+                    className: l()(p.uW, p.rf),
                     children: [
-                        (0, r.jsx)(m.V, {
-                            avatar: (0, r.jsx)(c.A, {
-                                user: O,
-                                guildId: i,
+                        (0, i.jsx)(h.V, {
+                            avatar: (0, i.jsx)(o.A, {
+                                user: s,
+                                guildId: t,
                                 avatarSize: a._3J.SIZE_40,
                                 "aria-hidden": !0,
                             }),
-                            decorations: (0, r.jsx)(d.o9, {
-                                guildId: j.id,
-                                guildBadge: j.profile.badge,
-                                guildTag: j.profile.tag,
+                            decorations: (0, i.jsx)(c.o9, {
+                                guildId: n.id,
+                                guildBadge: n.profile.badge,
+                                guildTag: n.profile.tag,
                                 inline: !1,
                             }),
-                            username: b.Ay.getName(i, null, O),
-                            message: x.intl.string(x.t["6OSasb"]),
+                            username: x.Ay.getName(t, null, s),
+                            message: A.intl.string(A.t["6OSasb"]),
                         }),
-                        (0, r.jsx)(a.Button, {
+                        (0, i.jsx)(a.Button, {
                             variant: "primary",
-                            text: x.intl.string(x.t.cQDYRu),
-                            onClick: y,
-                            loading: v,
-                            disabled: A,
+                            text: A.intl.string(A.t.cQDYRu),
+                            onClick: f,
+                            loading: j,
+                            disabled: N,
                             fullWidth: !0,
                         }),
                     ],

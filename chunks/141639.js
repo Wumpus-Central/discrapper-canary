@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(652215);
-
 function i(e) {
-    return (null == e ? void 0 : e.platform) === r.yTV.PS4 || (null == e ? void 0 : e.platform) === r.yTV.PS5;
+    return e?.platform === r.yTV.PS4 || e?.platform === r.yTV.PS5;
 }

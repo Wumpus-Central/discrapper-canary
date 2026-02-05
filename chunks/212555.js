@@ -1,98 +1,55 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(747238),
-    n(896048),
-    n(321073);
-var r = n(627968);
+n.d(t, { A: () => c }), n(321073);
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(597864),
-    a = n(880652),
+var l = n(397927),
+    a = n(597864),
+    r = n(880652),
     s = n(710871);
-
 function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function c(e) {
-    let { question: t, questionId: n, value: a, onValueChange: o } = e,
-        { selectedChoice: c, textInputs: u } = ((e) => {
-            if (null == e || "" === e)
-                return {
-                    selectedChoice: null,
-                    textInputs: {},
-                };
+    let { question: t, questionId: n, value: r, onValueChange: o } = e,
+        { selectedChoice: d, textInputs: c } = ((e) => {
+            if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
             let t = e.split(":TEXT:", 2),
                 n = t[0],
-                r = {};
-            return (
-                t.length > 1 && (r[n] = t[1]),
-                {
-                    selectedChoice: n,
-                    textInputs: r,
-                }
-            );
-        })(a),
-        d = (e) => {
-            var r;
-            let i = u[e];
+                i = {};
+            return t.length > 1 && (i[n] = t[1]), { selectedChoice: n, textInputs: i };
+        })(r),
+        u = (e) => {
+            let i = c[e];
             null == i || "" === i
                 ? o(n, e)
-                : null != t.Choices && (null == (r = t.Choices[e]) ? void 0 : r.TextEntry) === "true"
-                  ? o(n, "".concat(e, ":TEXT:").concat(i))
+                : null != t.Choices && t.Choices[e]?.TextEntry === "true"
+                  ? o(n, `${e}:TEXT:${i}`)
                   : o(n, e);
         },
-        p = (e, t) => {
-            o(n, null != t && "" !== t ? "".concat(e, ":TEXT:").concat(t) : e);
+        m = (e, t) => {
+            o(n, null != t && "" !== t ? `${e}:TEXT:${t}` : e);
         };
     return null == t.Choices
-        ? (0, r.jsx)("div", {
+        ? (0, i.jsx)("div", {
               className: s.kL,
-              children: (0, r.jsx)(i.Text, {
+              children: (0, i.jsx)(l.Text, {
                   variant: "text-sm/medium",
                   className: s.WN,
                   children: "No choices available for this question",
               }),
           })
-        : (0, r.jsx)("div", {
+        : (0, i.jsx)("div", {
               className: s.kL,
-              children: (0, r.jsx)("div", {
+              children: (0, i.jsx)("div", {
                   className: s.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
-                      return (0, r.jsx)(
-                          l.B,
+                      return (0, i.jsx)(
+                          a.B,
                           {
                               choiceId: t,
                               choice: n,
-                              isSelected: c === t,
-                              onSelectionChange: d,
+                              isSelected: d === t,
+                              onSelectionChange: u,
                               inputType: "radio",
-                              textInputValue: u[t],
-                              onTextInputChange: p,
+                              textInputValue: c[t],
+                              onTextInputChange: m,
                           },
                           t,
                       );
@@ -100,94 +57,62 @@ function c(e) {
               }),
           });
 }
-
-function u(e) {
-    let { question: t, questionId: n, value: a, onValueChange: c } = e,
-        { selectedChoices: u, textInputs: d } = ((e) => {
-            if (null == e || "" === e)
-                return {
-                    selectedChoices: [],
-                    textInputs: {},
-                };
+function d(e) {
+    let { question: t, questionId: n, value: r, onValueChange: o } = e,
+        { selectedChoices: d, textInputs: c } = ((e) => {
+            if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
             let t = e.split(","),
                 n = [],
-                r = {};
+                i = {};
             return (
                 t.forEach((e) => {
                     let t = e.split(":TEXT:", 2),
-                        i = t[0];
-                    n.push(i), t.length > 1 && (r[i] = t[1]);
+                        l = t[0];
+                    n.push(l), t.length > 1 && (i[l] = t[1]);
                 }),
-                {
-                    selectedChoices: n,
-                    textInputs: r,
-                }
+                { selectedChoices: n, textInputs: i }
             );
-        })(a),
-        p = (e, t) =>
+        })(r),
+        u = (e, t) =>
             e
                 .map((e) => {
                     let n = t[e];
-                    return null != n && "" !== n ? "".concat(e, ":TEXT:").concat(n) : e;
+                    return null != n && "" !== n ? `${e}:TEXT:${n}` : e;
                 })
                 .join(","),
         m = (e) => {
-            let t = u.includes(e) ? u.filter((t) => t !== e) : [...u, e],
-                r = o({}, d);
-            t.includes(e) || delete r[e], c(n, p(t, r));
+            let t = d.includes(e) ? d.filter((t) => t !== e) : [...d, e],
+                i = { ...c };
+            t.includes(e) || delete i[e], o(n, u(t, i));
         },
-        f = (e, t) => {
-            var r, i;
-            c(
-                n,
-                p(
-                    u,
-                    ((r = o({}, d)),
-                    (i = i =
-                        {
-                            [e]: t,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    r),
-                ),
-            );
+        _ = (e, t) => {
+            o(n, u(d, { ...c, [e]: t }));
         };
     return null == t.Choices || 0 === Object.keys(t.Choices).length
-        ? (0, r.jsx)("div", {
+        ? (0, i.jsx)("div", {
               className: s.kL,
-              children: (0, r.jsx)(i.Text, {
+              children: (0, i.jsx)(l.Text, {
                   variant: "text-sm/medium",
                   className: s.WN,
                   children: "No choices available for this question",
               }),
           })
-        : (0, r.jsx)("div", {
+        : (0, i.jsx)("div", {
               className: s.kL,
-              children: (0, r.jsx)("div", {
+              children: (0, i.jsx)("div", {
                   className: s.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
-                      return (0, r.jsx)(
-                          l.B,
+                      return (0, i.jsx)(
+                          a.B,
                           {
                               choiceId: t,
                               choice: n,
-                              isSelected: u.includes(t),
+                              isSelected: d.includes(t),
                               onSelectionChange: m,
                               inputType: "checkbox",
-                              textInputValue: d[t],
-                              onTextInputChange: f,
+                              textInputValue: c[t],
+                              onTextInputChange: _,
                           },
                           t,
                       );
@@ -195,20 +120,9 @@ function u(e) {
               }),
           });
 }
-
-function d(e) {
-    let { question: t, questionId: n, value: i, onValueChange: l } = e;
-    return t.Selector === a.BO.SINGLE_ANSWER
-        ? (0, r.jsx)(c, {
-              question: t,
-              questionId: n,
-              value: i,
-              onValueChange: l,
-          })
-        : (0, r.jsx)(u, {
-              question: t,
-              questionId: n,
-              value: i,
-              onValueChange: l,
-          });
+function c(e) {
+    let { question: t, questionId: n, value: l, onValueChange: a } = e;
+    return t.Selector === r.BO.SINGLE_ANSWER
+        ? (0, i.jsx)(o, { question: t, questionId: n, value: l, onValueChange: a })
+        : (0, i.jsx)(d, { question: t, questionId: n, value: l, onValueChange: a });
 }

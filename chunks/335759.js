@@ -1,32 +1,20 @@
-n.d(t, {
-    Q: () => a,
-    w: () => s,
-});
-var r = n(562465),
-    i = n(198982),
-    l = n(652215);
-async function a(e) {
-    let { channelId: t, messageId: n, answerIds: a } = e;
+n.d(t, { Q: () => r, w: () => s });
+var i = n(562465),
+    l = n(198982),
+    a = n(652215);
+async function r(e) {
+    let { channelId: t, messageId: n, answerIds: r } = e;
     try {
-        await r.Bo.put({
-            url: l.Rsh.POLL_ANSWERS(t, n),
-            body: {
-                answer_ids: a,
-            },
-            rejectWithError: !1,
-        });
+        await i.Bo.put({ url: a.Rsh.POLL_ANSWERS(t, n), body: { answer_ids: r }, rejectWithError: !1 });
     } catch (e) {
-        throw new i.LG(e);
+        throw new l.LG(e);
     }
 }
 async function s(e) {
     let { channelId: t, messageId: n } = e;
     try {
-        await r.Bo.post({
-            url: l.Rsh.POLL_EXPIRE(t, n),
-            rejectWithError: !1,
-        });
+        await i.Bo.post({ url: a.Rsh.POLL_EXPIRE(t, n), rejectWithError: !1 });
     } catch (e) {
-        throw new i.LG(e);
+        throw new l.LG(e);
     }
 }

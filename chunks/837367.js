@@ -1,12 +1,9 @@
-function r(e) {
+n.d(t, { q: () => i });
+function i(e) {
     let t,
         n = !1;
     return function () {
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
-        return n || ((n = !0), (t = e(...i))), t;
+        for (var i = arguments.length, s = Array(i), r = 0; r < i; r++) s[r] = arguments[r];
+        return n || ((n = !0), (t = e(...s))), t;
     };
 }
-n.d(t, {
-    q: () => r,
-}),
-    n(896048);

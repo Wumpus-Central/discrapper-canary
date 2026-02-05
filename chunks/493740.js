@@ -1,144 +1,137 @@
+"use strict";
 n.d(t, {
-    DG: () => U,
-    G3: () => S,
+    DG: () => G,
+    G3: () => v,
     GS: () => h,
     He: () => m,
-    II: () => R,
-    JK: () => _,
-    OW: () => b,
-    Pm: () => M,
-    Qz: () => k,
+    II: () => O,
+    JK: () => p,
+    OW: () => A,
+    Pm: () => k,
+    Qz: () => U,
     RM: () => Y,
-    T7: () => I,
-    Uc: () => V,
-    WQ: () => D,
-    Zc: () => j,
-    _V: () => C,
+    T7: () => C,
+    Uc: () => F,
+    WQ: () => w,
+    Zc: () => M,
+    _V: () => N,
     _w: () => x,
-    aE: () => N,
-    cS: () => v,
-    gQ: () => p,
+    aE: () => R,
+    cS: () => S,
+    gQ: () => f,
     ii: () => g,
-    lx: () => O,
-    nI: () => A,
-    nh: () => y,
-    sj: () => w,
-    u6: () => G,
-    x: () => L,
+    lx: () => T,
+    nI: () => y,
+    nh: () => I,
+    sj: () => D,
+    u6: () => V,
+    x: () => P,
     z0: () => E,
-    zL: () => T,
-}),
-    n(457529);
+    zL: () => b,
+});
 var r = n(83790),
     i = n(626584),
     a = n(125584),
     s = n(124856),
     o = n(276767),
     l = n(594579),
-    c = n(788868);
-let u = new i.A("ProductCatalog.tsx");
-
+    u = n(788868);
+let c = new i.A("ProductCatalog.tsx");
 function d(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
-        let n = c.u0[t.premiumType];
+        let n = u.u0[t.premiumType];
         if (null == n)
-            return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = F[n];
+            return c.warn(`Cannot find the corresponding SKU to the user's premium type ${t.premiumType}`), !1;
+        let r = B[n];
         if (null == r)
             return (
-                u.warn(
-                    "Cannot find the corresponding product catalog entry to the user's SKU "
-                        .concat(n, " and premium type ")
-                        .concat(t.premiumType),
+                c.warn(
+                    `Cannot find the corresponding product catalog entry to the user's SKU ${n} and premium type ${t.premiumType}`,
                 ),
                 !1
             );
         return r.skuFeatures.includes(e);
     } catch (e) {
-        var n;
-        u.error(
-            "Error while retrieving user's feature access: ".concat(null != (n = e.message) ? n : JSON.stringify(e)),
-        );
+        c.error(`Error while retrieving user's feature access: ${e.message ?? JSON.stringify(e)}`);
     }
     return !1;
 }
-class f extends s.A {
+class _ extends s.A {
     constructor(e, t) {
         super(e, (e) => d(this, e), t);
     }
 }
-let p = new f(r.w.ANIMATED_EMOJIS),
-    _ = new f(r.w.EMOJIS_EVERYWHERE),
-    h = new f(r.w.STICKERS_EVERYWHERE),
-    m = new f(r.w.SOUNDBOARD_EVERYWHERE),
-    g = new f(r.w.CUSTOM_CALL_SOUNDS),
-    E = new f(r.w.PREMIUM_VOICE_FILTERS),
-    b = new f(r.w.ANIMATED_AVATAR),
-    y = new f(r.w.CUSTOM_DISCRIMINATOR),
-    O = new f(r.w.PREMIUM_GUILD_MEMBER_PROFILE),
-    A = new f("profileBadges"),
-    v = new f(r.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
-    S = new f("collectibles"),
-    I = new f("appIcons"),
-    T = new f(r.w.CLIENT_THEMES),
-    C = new f("boostDiscount"),
-    N = new f("freeBoosts"),
-    R = new f(r.w.STREAM_MID_QUALITY),
-    w = new f(r.w.STREAM_HIGH_QUALITY),
-    P = new f(r.w.CUSTOM_NOTIFICATION_SOUNDS),
-    D = new f("fancyVoiceChannelReactions"),
-    x = new f("installPremiumApplications"),
-    L = new f("redeemPremiumPerks"),
-    j = new f(r.w.VIDEO_FILTER_ASSETS);
+let f = new _(r.w.ANIMATED_EMOJIS),
+    p = new _(r.w.EMOJIS_EVERYWHERE),
+    h = new _(r.w.STICKERS_EVERYWHERE),
+    m = new _(r.w.SOUNDBOARD_EVERYWHERE),
+    g = new _(r.w.CUSTOM_CALL_SOUNDS),
+    E = new _(r.w.PREMIUM_VOICE_FILTERS),
+    A = new _(r.w.ANIMATED_AVATAR),
+    I = new _(r.w.CUSTOM_DISCRIMINATOR),
+    T = new _(r.w.PREMIUM_GUILD_MEMBER_PROFILE),
+    y = new _("profileBadges"),
+    S = new _(r.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+    v = new _("collectibles"),
+    C = new _("appIcons"),
+    b = new _(r.w.CLIENT_THEMES),
+    N = new _("boostDiscount"),
+    R = new _("freeBoosts"),
+    O = new _(r.w.STREAM_MID_QUALITY),
+    D = new _(r.w.STREAM_HIGH_QUALITY),
+    L = new _(r.w.CUSTOM_NOTIFICATION_SOUNDS),
+    w = new _("fancyVoiceChannelReactions"),
+    x = new _("installPremiumApplications"),
+    P = new _("redeemPremiumPerks"),
+    M = new _(r.w.VIDEO_FILTER_ASSETS);
 new s.A(r.w.INCREASED_FILE_UPLOAD_SIZE, a.f);
-let M = new f(r.w.INCREASED_GUILD_LIMIT),
-    k = new f(r.w.INCREASED_MESSAGE_LENGTH),
-    U = new f("increasedVideoUploadQuality"),
-    G = new f("uploadLargeFiles"),
-    V = new f("warpPrivateBrowsing"),
-    F = Object.freeze({
-        [c.pe.TIER_0]: new l.A(c.pe.TIER_0, [p, _, h, A, j, U, G, I]),
-        [c.pe.TIER_1]: new l.A(c.pe.TIER_1, [p, _, b, y, A, C, R, D, U, G, I]),
-        [c.pe.TIER_2]: new l.A(c.pe.TIER_2, [
+let k = new _(r.w.INCREASED_GUILD_LIMIT),
+    U = new _(r.w.INCREASED_MESSAGE_LENGTH),
+    G = new _("increasedVideoUploadQuality"),
+    V = new _("uploadLargeFiles"),
+    F = new _("warpPrivateBrowsing"),
+    B = Object.freeze({
+        [u.pe.TIER_0]: new l.A(u.pe.TIER_0, [f, p, h, y, M, G, V, C]),
+        [u.pe.TIER_1]: new l.A(u.pe.TIER_1, [f, p, A, I, y, N, O, w, G, V, C]),
+        [u.pe.TIER_2]: new l.A(u.pe.TIER_2, [
+            f,
             p,
-            _,
             h,
             m,
             g,
-            b,
-            y,
-            O,
             A,
-            v,
+            I,
             T,
-            C,
+            y,
+            S,
+            b,
             N,
             R,
-            w,
+            O,
             D,
+            w,
             x,
-            L,
-            j,
+            P,
             M,
             k,
             U,
             G,
-            I,
-            S,
-            P,
-            E,
             V,
+            C,
+            v,
+            L,
+            E,
+            F,
         ]),
     }),
-    B = [C, N, V],
-    H = [V];
-
+    j = [N, R, F],
+    H = [F];
 function Y(e, t, n) {
     return (
         !(
             (0, o.Z)("canUserUse", t) ||
-            (null != t && t.isPremiumWithFractionalPremiumOnly() && B.includes(e)) ||
+            (null != t && t.isPremiumWithFractionalPremiumOnly() && j.includes(e)) ||
             (n && H.includes(e))
         ) && e.getFeatureValue(t)
     );

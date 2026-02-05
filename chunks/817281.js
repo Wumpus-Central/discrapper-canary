@@ -1,74 +1,54 @@
-n.d(t, {
-    Ay: () => b,
-    u_: () => E,
-    um: () => h,
-});
+"use strict";
+n.d(t, { Ay: () => A, u_: () => E, um: () => h });
 var r = n(873298),
     i = n(406935),
     a = n(582754),
     s = n(73153),
     o = n(47671),
     l = n(284016),
-    c = n(973654),
-    u = n(544028),
+    u = n(973654),
+    c = n(544028),
     d = n(253932),
-    f = n(594061),
-    p = n(652215),
-    _ = n(185928);
-
+    _ = n(594061),
+    f = n(652215),
+    p = n(185928);
 function h(e) {
-    return f.wc.updateAsync(
+    return _.wc.updateAsync(
         "guildFolders",
         (t) => {
             t.folders = e.map((e) => {
-                let t = r.ak.create({
-                    guildIds: e.guildIds,
-                });
+                let t = r.ak.create({ guildIds: e.guildIds });
                 return (
-                    null != e.folderId &&
-                        (t.id = i.j1.create({
-                            value: String(e.folderId),
-                        })),
-                    null != e.folderColor &&
-                        (t.color = i.ol.create({
-                            value: String(e.folderColor),
-                        })),
+                    null != e.folderId && (t.id = i.j1.create({ value: String(e.folderId) })),
+                    null != e.folderColor && (t.color = i.ol.create({ value: String(e.folderColor) })),
                     null != e.folderName &&
                         "" !== e.folderName &&
-                        (t.name = i.hU.create({
-                            value: String(e.folderName),
-                        })),
+                        (t.name = i.hU.create({ value: String(e.folderName) })),
                     t
                 );
             });
         },
-        f.Sb.FREQUENT_USER_ACTION,
+        _.Sb.FREQUENT_USER_ACTION,
     );
 }
-
 function m(e) {
     switch (e) {
-        case p.NJ8.DARK:
+        case f.NJ8.DARK:
             return r.Sx.DARK;
-        case p.NJ8.LIGHT:
+        case f.NJ8.LIGHT:
             return r.Sx.LIGHT;
-        case p.NJ8.DARKER:
+        case f.NJ8.DARKER:
             return r.Sx.DARKER;
-        case p.NJ8.MIDNIGHT:
+        case f.NJ8.MIDNIGHT:
             return r.Sx.MIDNIGHT;
         default:
             return r.Sx.DARK;
     }
 }
-
 function g(e) {
     return {
         backgroundGradientPresetId:
-            null != e.backgroundGradientPresetId
-                ? i.ZQ.create({
-                      value: e.backgroundGradientPresetId,
-                  })
-                : void 0,
+            null != e.backgroundGradientPresetId ? i.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
         customUserThemeSettings:
             null != e.customUserThemeSettings
                 ? {
@@ -80,34 +60,20 @@ function g(e) {
                 : void 0,
     };
 }
-
 function E(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
-        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Sb.INFREQUENT_USER_ACTION,
-        u = "system" === r ? _.Q_.ON : _.Q_.OFF,
-        d = null != i ? i : u;
+        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION,
+        c = "system" === r ? p.Q_.ON : p.Q_.OFF,
+        d = null != i ? i : c;
     if (
-        (s.h.dispatch({
-            type: "UNSYNCED_USER_SETTINGS_UPDATE",
-            settings: {
-                useSystemTheme: d,
-            },
-        }),
-        null == t &&
-            "system" !== r &&
-            (0, a.Mw)(r) &&
-            (0, c.NA)({
-                [_.Fc.DARK]: r,
-            }),
+        (s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: d } }),
+        null == t && "system" !== r && (0, a.Mw)(r) && (0, u.NA)({ [p.Fc.DARK]: r }),
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
                     settings: {
-                        clientThemeSettings: {
-                            backgroundGradientPresetId: t,
-                            customUserThemeSettings: n,
-                        },
+                        clientThemeSettings: { backgroundGradientPresetId: t, customUserThemeSettings: n },
                         theme: "system" === r ? void 0 : r,
                     },
                 },
@@ -115,30 +81,21 @@ function E(e) {
         }),
         l.A.shouldSync("appearance"))
     )
-        return f.wc.updateAsync(
+        return _.wc.updateAsync(
             "appearance",
             (e) => {
                 (e.theme = m(r)),
-                    (e.clientThemeSettings = g({
-                        backgroundGradientPresetId: t,
-                        customUserThemeSettings: n,
-                    }));
+                    (e.clientThemeSettings = g({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
             },
             o,
         );
 }
-let b = {
+let A = {
     overrideLocale(e) {
-        s.h.dispatch({
-            type: "USER_SETTINGS_LOCALE_OVERRIDE",
-            locale: e,
-        });
+        s.h.dispatch({ type: "USER_SETTINGS_LOCALE_OVERRIDE", locale: e });
     },
     updatedUnsyncedSettings(e) {
-        s.h.dispatch({
-            type: "UNSYNCED_USER_SETTINGS_UPDATE",
-            settings: e,
-        });
+        s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: e });
     },
     setShouldSyncTextSettings(e) {
         s.h.dispatch({
@@ -162,7 +119,6 @@ let b = {
         });
     },
     setShouldSyncAppearanceSettings(e) {
-        var t;
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -171,10 +127,8 @@ let b = {
                     settings: e
                         ? {}
                         : {
-                              theme: u.A.theme,
-                              clientThemeSettings: {
-                                  backgroundGradientPresetId: null == (t = o.A.gradientPreset) ? void 0 : t.id,
-                              },
+                              theme: c.A.theme,
+                              clientThemeSettings: { backgroundGradientPresetId: o.A.gradientPreset?.id },
                               developerMode: d.Q_.getSetting(),
                           },
                 },
@@ -182,46 +136,32 @@ let b = {
         });
     },
     applySettingsOverride(e) {
-        s.h.dispatch({
-            type: "USER_SETTINGS_OVERRIDE_APPLY",
-            settings: e,
-        });
+        s.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_APPLY", settings: e });
     },
     clearSettingsOverride() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        s.h.dispatch({
-            type: "USER_SETTINGS_OVERRIDE_CLEAR",
-            settings: t,
-        });
+        s.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: t });
     },
     updateLocale: (e) =>
-        f.wc.updateAsync(
+        _.wc.updateAsync(
             "localization",
             (t) => {
-                t.locale = i.hU.create({
-                    value: e,
-                });
+                t.locale = i.hU.create({ value: e });
             },
-            f.Sb.INFREQUENT_USER_ACTION,
+            _.Sb.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
-            changes: {
-                appearance: {
-                    settings: {
-                        theme: e,
-                    },
-                },
-            },
+            changes: { appearance: { settings: { theme: e } } },
         }),
             l.A.shouldSync("appearance") &&
-                f.wc.updateAsync(
+                _.wc.updateAsync(
                     "appearance",
                     (t) => {
                         t.theme = m(e);
                     },
-                    f.Sb.INFREQUENT_USER_ACTION,
+                    _.Sb.INFREQUENT_USER_ACTION,
                 );
     },
 };

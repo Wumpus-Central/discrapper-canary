@@ -1,53 +1,43 @@
-n.d(t, {
-    A: () => S,
-});
-var l = n(627968),
-    i = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    o = n(311907),
-    s = n(397927),
+n.d(t, { A: () => T });
+var i = n(627968),
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(311907),
+    o = n(397927),
     c = n(966327),
-    u = n(386467),
-    d = n(449859),
-    p = n(943220),
-    f = n(734057),
-    b = n(572855),
-    O = n(358731),
-    m = n(597351),
-    y = n(985018),
-    E = n(70438);
-let g = i.memo(function (e) {
+    d = n(386467),
+    u = n(449859),
+    m = n(943220),
+    _ = n(734057),
+    p = n(572855),
+    E = n(358731),
+    A = n(597351),
+    f = n(985018),
+    S = n(70438);
+let h = a.memo(function (e) {
     let { message: t } = e,
-        n = (0, o.bG)([f.A], () => f.A.getChannel(t.channel_id));
+        n = (0, r.bG)([_.A], () => _.A.getChannel(t.channel_id));
     return null == n
         ? null
-        : (0, l.jsx)(O.Ay, {
+        : (0, i.jsx)(E.Ay, {
               children: (e) =>
-                  (0, l.jsxs)(u.A.Provider, {
+                  (0, i.jsxs)(d.A.Provider, {
                       value: n.guild_id,
                       children: [
-                          (0, l.jsx)(c.A, {
-                              user: t.author,
-                              size: s._3J.SIZE_40,
-                              className: a()(E.Du, e),
-                          }),
-                          (0, l.jsxs)("div", {
-                              className: a()(E.cy, e),
+                          (0, i.jsx)(c.A, { user: t.author, size: o._3J.SIZE_40, className: l()(S.Du, e) }),
+                          (0, i.jsxs)("div", {
+                              className: l()(S.cy, e),
                               children: [
-                                  (0, l.jsx)(s.M1G, {
-                                      children: (0, l.jsx)("div", {
-                                          className: E.mG,
-                                          children: (0, l.jsx)(p.A, {
-                                              className: E.fh,
-                                              message: t,
-                                              channel: n,
-                                          }),
+                                  (0, i.jsx)(o.M1G, {
+                                      children: (0, i.jsx)("div", {
+                                          className: S.mG,
+                                          children: (0, i.jsx)(m.A, { className: S.fh, message: t, channel: n }),
                                       }),
                                   }),
-                                  (0, l.jsx)(d.A, {
+                                  (0, i.jsx)(u.A, {
                                       timestamp: t.timestamp,
-                                      className: E.vE,
+                                      className: S.vE,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -56,30 +46,22 @@ let g = i.memo(function (e) {
                   }),
           });
 });
-
-function S(e) {
-    var t;
-    let { item: n, hideMediaOptions: i, onClose: r } = e,
-        o = null == (t = n.sourceMetadata) ? void 0 : t.message;
-    return (0, l.jsxs)("div", {
-        className: E.XV,
+function T(e) {
+    let { item: t, hideMediaOptions: n, onClose: a } = e,
+        s = t.sourceMetadata?.message;
+    return (0, i.jsxs)("div", {
+        className: S.XV,
         children: [
-            null != o &&
-                (0, l.jsx)(g, {
-                    message: o,
-                }),
-            (0, l.jsx)(b.A, {
-                item: n,
-                hideMediaOptions: i,
-            }),
-            (0, l.jsx)(O.Ay, {
-                mode: O.nY.PINNED,
+            null != s && (0, i.jsx)(h, { message: s }),
+            (0, i.jsx)(p.A, { item: t, hideMediaOptions: n }),
+            (0, i.jsx)(E.Ay, {
+                mode: E.nY.PINNED,
                 children: (e) =>
-                    (0, l.jsx)(m.A, {
-                        onClick: r,
-                        icon: s.PGe,
-                        tooltip: y.intl.string(y.t.cpT0Cq),
-                        className: a()(E.b, e),
+                    (0, i.jsx)(A.A, {
+                        onClick: a,
+                        icon: o.PGe,
+                        tooltip: f.intl.string(f.t.cpT0Cq),
+                        className: l()(S.b, e),
                     }),
             }),
         ],

@@ -1,47 +1,19 @@
-n.d(t, {
-    Lc: () => a,
-    wv: () => i,
-});
+"use strict";
+n.d(t, { Lc: () => a, wv: () => i });
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2024-01_inappropriate_conversation_warning",
     label: "Inappropriate Conversation Warning",
-    defaultConfig: {
-        enabled: !1,
-    },
-    treatments: [
-        {
-            id: 1,
-            label: "Enable Inappropriate Conversation Warning",
-            config: {
-                enabled: !0,
-            },
-        },
-    ],
+    defaultConfig: { enabled: !1 },
+    treatments: [{ id: 1, label: "Enable Inappropriate Conversation Warning", config: { enabled: !0 } }],
 });
-
 function i(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.getCurrentConfig(
-            {
-                location: t,
-            },
-            {
-                autoTrackExposure: n,
-            },
-        );
+        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return i;
 }
-
 function a(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.useExperiment(
-            {
-                location: t,
-            },
-            {
-                autoTrackExposure: n,
-            },
-        );
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
     return i;
 }

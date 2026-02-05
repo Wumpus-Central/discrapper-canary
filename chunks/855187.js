@@ -1,108 +1,37 @@
-n.d(t, {
-    A: () => _,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(311907),
     a = n(397927),
-    o = n(952572),
-    s = n(961350),
+    s = n(952572),
+    o = n(961350),
     l = n(430452),
-    c = n(985018);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function _(e, t) {
-    let u = (0, a.k34)(),
-        { videoEnabled: f, hasVideoDevice: _ } = (0, i.cf)([l.A], () => ({
+    u = n(985018);
+function c(e, t) {
+    let c = (0, a.k34)(),
+        { videoEnabled: d, hasVideoDevice: _ } = (0, i.cf)([l.A], () => ({
             videoEnabled: l.A.isVideoEnabled(),
             hasVideoDevice: l.A.isVideoAvailable(),
         })),
-        h = (0, i.bG)([s.default], () => s.default.getId() === e),
-        m = (0, o.A)();
-
-    function g() {
+        f = (0, i.bG)([o.default], () => o.default.getId() === e),
+        p = (0, s.A)();
+    function h() {
         (0, a.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("95782"), n.e("82277")]).then(n.bind(n, 308229));
-                return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        p(d({}, t), {
-                            videoEnabled: f,
-                        }),
-                    );
+                return (t) => (0, r.jsx)(e, { ...t, videoEnabled: d });
             },
-            {
-                modalKey: "camera-preview",
-                contextKey: null != t ? (0, a.TId)(t) : u,
-            },
+            { modalKey: "camera-preview", contextKey: null != t ? (0, a.TId)(t) : c },
         );
     }
-    return (!f || m) && h && _
+    return (!d || p) && f && _
         ? (0, r.jsx)(a.Drp, {
               id: "change-video-background",
-              label: f ? c.intl.string(c.t.mZKxHb) : c.intl.string(c.t["vkV93/"]),
-              action: g,
-              icon: f ? a.fBX : a.bMW,
-              leadingAccessory: {
-                  type: "icon",
-                  icon: f ? a.fBX : a.bMW,
-              },
+              label: d ? u.intl.string(u.t.mZKxHb) : u.intl.string(u.t["vkV93/"]),
+              action: h,
+              icon: d ? a.fBX : a.bMW,
+              leadingAccessory: { type: "icon", icon: d ? a.fBX : a.bMW },
           })
         : null;
 }

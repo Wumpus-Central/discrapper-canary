@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     g: "keybindHint__46002",
     L5: "keybindHintText__46002",

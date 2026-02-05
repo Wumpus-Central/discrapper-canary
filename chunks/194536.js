@@ -1,3 +1,2 @@
-e.exports = {
-    m: "qrCodeWrapper__944ec",
-};
+"use strict";
+e.exports = { m: "qrCodeWrapper__944ec" };

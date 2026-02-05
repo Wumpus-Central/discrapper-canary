@@ -1,159 +1,79 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    l = n(64700),
-    i = n(33851),
-    o = n.n(i),
-    a = n(417597),
-    s = n(565787),
-    c = n(397927),
-    u = n(530347),
-    d = n(504049),
-    C = n(266047),
-    m = n(221950),
-    p = n(652215),
-    f = n(985018);
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function j(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = (0, s.k)(u.A);
-
-function h(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, a.bG)([C.A], () => C.A.getSearchStateByGuildId(t), [t], o()),
-        s = (0, d.Tj)(t),
-        u = l.useCallback(() => {
-            i.requireUnusualDmActivity || s(d.Zp.UNUSUAL_DM_ACTIVITY),
-                (0, m.Ld)(
-                    t,
-                    j(b({}, i), {
-                        requireUnusualDmActivity: !i.requireUnusualDmActivity,
-                    }),
-                );
-        }, [t, i, s]),
-        h = l.useCallback(() => {
-            i.requireCommunicationDisabled || s(d.Zp.COMMUNICATION_DISABLED),
-                (0, m.Ld)(
-                    t,
-                    j(b({}, i), {
-                        requireCommunicationDisabled: !i.requireCommunicationDisabled,
-                    }),
-                );
-        }, [t, i, s]),
-        x = l.useCallback(() => {
-            i.requireUnusualAccountActivity || s(d.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, m.Ld)(
-                    t,
-                    j(b({}, i), {
-                        requireUnusualAccountActivity: !i.requireUnusualAccountActivity,
-                    }),
-                );
-        }, [t, i, s]),
-        y = l.useCallback(() => {
-            i.requireUsernameQuarantined || s(d.Zp.USERNAME_QUARANTINED),
-                (0, m.Ld)(
-                    t,
-                    j(b({}, i), {
-                        requireUsernameQuarantined: !i.requireUsernameQuarantined,
-                    }),
-                );
-        }, [t, i, s]);
-    return (0, r.jsx)(c.W1t, {
+l.d(t, { A: () => _ });
+var n = l(627968),
+    i = l(64700),
+    s = l(33851),
+    a = l.n(s),
+    r = l(417597),
+    o = l(565787),
+    C = l(397927),
+    d = l(530347),
+    c = l(504049),
+    u = l(266047),
+    m = l(221950),
+    x = l(652215),
+    h = l(985018);
+let g = (0, o.k)(d.A);
+function _(e) {
+    let { guildId: t, onClose: l } = e,
+        s = (0, r.bG)([u.A], () => u.A.getSearchStateByGuildId(t), [t], a()),
+        o = (0, c.Tj)(t),
+        d = i.useCallback(() => {
+            s.requireUnusualDmActivity || o(c.Zp.UNUSUAL_DM_ACTIVITY),
+                (0, m.Ld)(t, { ...s, requireUnusualDmActivity: !s.requireUnusualDmActivity });
+        }, [t, s, o]),
+        _ = i.useCallback(() => {
+            s.requireCommunicationDisabled || o(c.Zp.COMMUNICATION_DISABLED),
+                (0, m.Ld)(t, { ...s, requireCommunicationDisabled: !s.requireCommunicationDisabled });
+        }, [t, s, o]),
+        H = i.useCallback(() => {
+            s.requireUnusualAccountActivity || o(c.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
+                (0, m.Ld)(t, { ...s, requireUnusualAccountActivity: !s.requireUnusualAccountActivity });
+        }, [t, s, o]),
+        p = i.useCallback(() => {
+            s.requireUsernameQuarantined || o(c.Zp.USERNAME_QUARANTINED),
+                (0, m.Ld)(t, { ...s, requireUsernameQuarantined: !s.requireUsernameQuarantined });
+        }, [t, s, o]);
+    return (0, n.jsx)(C.W1t, {
         "data-menu-migrated": !0,
         navId: "member-safety-flags",
-        onClose: n,
-        "aria-label": f.intl.string(f.t.k9m8Rg),
-        onSelect: p.tEg,
-        children: (0, r.jsxs)(c.rXV, {
+        onClose: l,
+        "aria-label": h.intl.string(h.t.k9m8Rg),
+        onSelect: x.tEg,
+        children: (0, n.jsxs)(C.rXV, {
             children: [
-                (0, r.jsx)(c.sLh, {
+                (0, n.jsx)(C.sLh, {
                     id: "toggle-require-unusual-dm-activity",
-                    label: f.intl.string(f.t.ZRnON3),
-                    leftIcon: c.EF8,
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: c.EF8,
-                    },
-                    action: u,
-                    checked: i.requireUnusualDmActivity,
+                    label: h.intl.string(h.t.ZRnON3),
+                    leftIcon: C.EF8,
+                    leadingAccessory: { type: "icon", icon: C.EF8 },
+                    action: d,
+                    checked: s.requireUnusualDmActivity,
                 }),
-                (0, r.jsx)(c.sLh, {
+                (0, n.jsx)(C.sLh, {
                     id: "toggle-require-communication-disabled",
-                    label: f.intl.string(f.t.z3wbj8),
-                    leftIcon: c.gQi,
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: c.gQi,
-                    },
-                    action: h,
-                    checked: i.requireCommunicationDisabled,
+                    label: h.intl.string(h.t.z3wbj8),
+                    leftIcon: C.gQi,
+                    leadingAccessory: { type: "icon", icon: C.gQi },
+                    action: _,
+                    checked: s.requireCommunicationDisabled,
                 }),
-                (0, r.jsxs)(r.Fragment, {
+                (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, r.jsx)(c.sLh, {
+                        (0, n.jsx)(C.sLh, {
                             id: "toggle-require-unusual-account-activity",
-                            label: f.intl.string(f.t.DIQsD9),
+                            label: h.intl.string(h.t.DIQsD9),
                             leftIcon: g,
-                            leadingAccessory: {
-                                type: "icon",
-                                icon: g,
-                            },
-                            action: x,
-                            checked: i.requireUnusualAccountActivity,
+                            leadingAccessory: { type: "icon", icon: g },
+                            action: H,
+                            checked: s.requireUnusualAccountActivity,
                         }),
-                        (0, r.jsx)(c.sLh, {
+                        (0, n.jsx)(C.sLh, {
                             id: "toggle-require-username-quarantined",
-                            label: f.intl.string(f.t.Jloklk),
-                            leftIcon: c._mZ,
-                            leadingAccessory: {
-                                type: "icon",
-                                icon: c._mZ,
-                            },
-                            action: y,
-                            checked: i.requireUsernameQuarantined,
+                            label: h.intl.string(h.t.Jloklk),
+                            leftIcon: C._mZ,
+                            leadingAccessory: { type: "icon", icon: C._mZ },
+                            action: p,
+                            checked: s.requireUsernameQuarantined,
                         }),
                     ],
                 }),

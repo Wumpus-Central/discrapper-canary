@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     hP: "videoHeight__94748",
     CS: "animated__94748",

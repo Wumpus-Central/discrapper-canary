@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(600975),
     i = n(688151);
 let a = (0, r.C)({
@@ -8,23 +7,9 @@ let a = (0, r.C)({
     kind: "guild",
     label: "Expand Voice Invite Suggestions",
     commonTriggerPoint: i.$G.VOICE_CALL,
-    defaultConfig: {
-        totalSuggestions: 5,
-    },
+    defaultConfig: { totalSuggestions: 5 },
     treatments: [
-        {
-            id: 1,
-            label: "Control",
-            config: {
-                totalSuggestions: 5,
-            },
-        },
-        {
-            id: 2,
-            label: "More Suggestions (10)",
-            config: {
-                totalSuggestions: 10,
-            },
-        },
+        { id: 0, label: "Control", config: { totalSuggestions: 5 } },
+        { id: 1, label: "More Suggestions (10)", config: { totalSuggestions: 10 } },
     ],
 });

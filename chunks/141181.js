@@ -4,116 +4,115 @@ var r = n(292528),
     s = n(984982),
     o = n(356769),
     l = n(208007),
-    c = n(968294),
-    u = n(885606),
+    u = n(968294),
+    c = n(885606),
     d = n(801777),
-    f = n(765405),
-    p = n(790318),
-    _ = n(261010),
+    _ = n(765405),
+    f = n(790318),
+    p = n(261010),
     h = n(405706),
     m = n(720492),
     g = n(788640),
     E = n(926226),
-    b = n(758513),
-    y = n(232405),
-    O = n(646344),
-    A = n(641315),
-    v = n(750615),
-    S = 1,
-    I = 2,
-    T = 4,
-    C = "[object Arguments]",
-    N = "[object Array]",
-    R = "[object Boolean]",
-    w = "[object Date]",
-    P = "[object Error]",
-    D = "[object Function]",
+    A = n(758513),
+    I = n(232405),
+    T = n(646344),
+    y = n(641315),
+    S = n(750615),
+    v = 1,
+    C = 2,
+    b = 4,
+    N = "[object Arguments]",
+    R = "[object Array]",
+    O = "[object Boolean]",
+    D = "[object Date]",
+    L = "[object Error]",
+    w = "[object Function]",
     x = "[object GeneratorFunction]",
-    L = "[object Map]",
-    j = "[object Number]",
-    M = "[object Object]",
-    k = "[object RegExp]",
-    U = "[object Set]",
-    G = "[object String]",
-    V = "[object Symbol]",
-    F = "[object WeakMap]",
-    B = "[object ArrayBuffer]",
+    P = "[object Map]",
+    M = "[object Number]",
+    k = "[object Object]",
+    U = "[object RegExp]",
+    G = "[object Set]",
+    V = "[object String]",
+    F = "[object Symbol]",
+    B = "[object WeakMap]",
+    j = "[object ArrayBuffer]",
     H = "[object DataView]",
     Y = "[object Float32Array]",
     W = "[object Float64Array]",
     K = "[object Int8Array]",
     z = "[object Int16Array]",
-    q = "[object Int32Array]",
-    X = "[object Uint8Array]",
+    $ = "[object Int32Array]",
+    q = "[object Uint8Array]",
     Z = "[object Uint8ClampedArray]",
     Q = "[object Uint16Array]",
-    $ = "[object Uint32Array]",
+    X = "[object Uint32Array]",
     J = {};
-
-function ee(e, t, n, N, R, w) {
-    var P,
-        L = t & S,
-        j = t & I,
-        k = t & T;
-    if ((n && (P = R ? n(e, N, R, w) : n(e)), void 0 !== P)) return P;
-    if (!O(e)) return e;
-    var U = E(e);
-    if (U) {
-        if (((P = h(e)), !L)) return c(e, P);
+function ee(e, t, n, R, O, D) {
+    var L,
+        P = t & v,
+        M = t & C,
+        U = t & b;
+    if ((n && (L = O ? n(e, R, O, D) : n(e)), void 0 !== L)) return L;
+    if (!T(e)) return e;
+    var G = E(e);
+    if (G) {
+        if (((L = h(e)), !P)) return u(e, L);
     } else {
-        var G = _(e),
-            V = G == D || G == x;
-        if (b(e)) return l(e, L);
-        if (G == M || G == C || (V && !R)) {
-            if (((P = j || V ? {} : g(e)), !L)) return j ? d(e, o(P, e)) : u(e, s(P, e));
+        var V = p(e),
+            F = V == w || V == x;
+        if (A(e)) return l(e, P);
+        if (V == k || V == N || (F && !O)) {
+            if (((L = M || F ? {} : g(e)), !P)) return M ? d(e, o(L, e)) : c(e, s(L, e));
         } else {
-            if (!J[G]) return R ? e : {};
-            P = m(e, G, L);
+            if (!J[V]) return O ? e : {};
+            L = m(e, V, P);
         }
     }
-    w || (w = new r());
-    var F = w.get(e);
-    if (F) return F;
-    w.set(e, P),
-        A(e)
+    D || (D = new r());
+    var B = D.get(e);
+    if (B) return B;
+    D.set(e, L),
+        y(e)
             ? e.forEach(function (r) {
-                  P.add(ee(r, t, n, r, e, w));
+                  L.add(ee(r, t, n, r, e, D));
               })
-            : y(e) &&
+            : I(e) &&
               e.forEach(function (r, i) {
-                  P.set(i, ee(r, t, n, i, e, w));
+                  L.set(i, ee(r, t, n, i, e, D));
               });
-    var B = k ? (j ? p : f) : j ? keysIn : v,
-        H = U ? void 0 : B(e);
+    var j = U ? (M ? f : _) : M ? keysIn : S,
+        H = G ? void 0 : j(e);
     return (
         i(H || e, function (r, i) {
-            H && (r = e[(i = r)]), a(P, i, ee(r, t, n, i, e, w));
+            H && (r = e[(i = r)]), a(L, i, ee(r, t, n, i, e, D));
         }),
-        P
+        L
     );
 }
-(J[C] =
-    J[N] =
-    J[B] =
-    J[H] =
+(J[N] =
     J[R] =
-    J[w] =
+    J[j] =
+    J[H] =
+    J[O] =
+    J[D] =
     J[Y] =
     J[W] =
     J[K] =
     J[z] =
-    J[q] =
-    J[L] =
-    J[j] =
+    J[$] =
+    J[P] =
     J[M] =
     J[k] =
     J[U] =
     J[G] =
     J[V] =
-    J[X] =
+    J[F] =
+    J[q] =
     J[Z] =
     J[Q] =
-    J[$] =
+    J[X] =
         !0),
-    (J[P] = J[D] = J[F] = !1),
+    (J[L] = J[w] = J[B] = !1),
     (e.exports = ee);

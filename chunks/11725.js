@@ -1,107 +1,64 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(827734),
+var s = n(827734),
     l = n(397927),
-    s = n(774474),
+    r = n(774474),
     a = n(985018),
-    c = n(233593);
-let o = (e) => {
+    o = n(233593);
+let d = (e) => {
     let {
             title: t,
             subtext: n = a.intl.string(a.t.jHpxwo),
-            localizedNumber: o,
-            isTrendingUp: d,
+            localizedNumber: d,
+            isTrendingUp: c,
             isTrendingDown: u,
-            tooltipText: f,
+            tooltipText: m,
         } = e,
         g =
-            null != f
-                ? (0, r.jsx)(l.STz, {
-                      text: f,
+            null != m
+                ? (0, i.jsx)(l.STz, {
+                      text: m,
                       position: "top",
-                      "aria-label": "string" == typeof f ? f : t,
-                      children: (e) =>
-                          (0, r.jsx)(
-                              l.mir,
-                              (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })(
-                                  {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: c.G,
-                                  },
-                                  e,
-                              ),
-                          ),
+                      "aria-label": "string" == typeof m ? m : t,
+                      children: (e) => (0, i.jsx)(l.mir, { size: "xs", color: "currentColor", className: o.G, ...e }),
                   })
                 : null;
-    return (0, r.jsxs)("div", {
-        className: c.Tp,
+    return (0, i.jsxs)("div", {
+        className: o.Tp,
         children: [
-            (0, r.jsxs)(l.Text, {
-                variant: "text-md/medium",
-                className: c.tG,
-                children: [t, g],
-            }),
-            (0, r.jsx)("div", {
-                className: c.yz,
-                children: (0, r.jsx)(l.Text, {
-                    className: null != o ? c.MB : c.WY,
+            (0, i.jsxs)(l.Text, { variant: "text-md/medium", className: o.tG, children: [t, g] }),
+            (0, i.jsx)("div", {
+                className: o.yz,
+                children: (0, i.jsx)(l.Text, {
+                    className: null != d ? o.MB : o.WY,
                     variant: "text-lg/semibold",
-                    children: null != o ? o : a.intl.string(a.t.jHpxwo),
+                    children: null != d ? d : a.intl.string(a.t.jHpxwo),
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: c.BP,
+            (0, i.jsxs)("div", {
+                className: o.BP,
                 children: [
-                    d
-                        ? (0, r.jsx)(s.A, {
-                              className: c.Tz,
-                              color: i.A.unsafe_rawColors.GREEN_360.css,
+                    c
+                        ? (0, i.jsx)(r.A, {
+                              className: o.Tz,
+                              color: s.A.unsafe_rawColors.GREEN_360.css,
                               "aria-label": a.intl.string(a.t["8mcccd"]),
                               width: 14,
                               height: 12,
                           })
                         : null,
                     u
-                        ? (0, r.jsx)(s.A, {
-                              className: c.AL,
-                              color: i.A.unsafe_rawColors.RED_400.css,
+                        ? (0, i.jsx)(r.A, {
+                              className: o.AL,
+                              color: s.A.unsafe_rawColors.RED_400.css,
                               "aria-label": a.intl.string(a.t.NLl6Q3),
                               width: 14,
                               height: 12,
                           })
                         : null,
-                    (0, r.jsx)(l.Text, {
-                        variant: "text-xs/normal",
-                        children: n,
-                    }),
+                    (0, i.jsx)(l.Text, { variant: "text-xs/normal", children: n }),
                 ],
             }),
         ],

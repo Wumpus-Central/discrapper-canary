@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,21 +8,8 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author", "contents"],
         prohibitedProps: [],
-        props: {
-            "aria-colindex": null,
-            "aria-colspan": null,
-            "aria-rowindex": null,
-            "aria-rowspan": null,
-        },
-        relatedConcepts: [
-            {
-                concept: {
-                    constraints: ["descendant of table"],
-                    name: "td",
-                },
-                module: "HTML",
-            },
-        ],
+        props: { "aria-colindex": null, "aria-colspan": null, "aria-rowindex": null, "aria-rowspan": null },
+        relatedConcepts: [{ concept: { constraints: ["descendant of table"], name: "td" }, module: "HTML" }],
         requireContextRole: ["row"],
         requiredContextRole: ["row"],
         requiredOwnedElements: [],

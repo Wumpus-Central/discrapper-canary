@@ -1,3 +1,4 @@
+"use strict";
 var r = n(439619),
     i = r("%Object.preventExtensions%", !0),
     a = r("%Object.isExtensible%", !0),

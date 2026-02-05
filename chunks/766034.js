@@ -1,41 +1,41 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(446912),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u });
 var r = n(626584),
     i = n(71393),
     a = n(403362),
     s = n(723176);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = new r.A("GuildVersions");
-class c {
+let o = new r.A("GuildVersions");
+class l {
+    pending = new Map();
+    committed = new Map();
     async getCommittedVersions() {
         try {
             let e = s.A.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
-            return Object.fromEntries(null != t ? t : []);
+            return Object.fromEntries(t ?? []);
         } catch (e) {
-            return l.warn("couldn't load guild versions", e), {};
+            return o.warn("couldn't load guild versions", e), {};
         }
     }
     remove(e, t) {
         this.deleteWith(e), this.commit(t);
     }
+    actions = {
+        BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
+        CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
+        CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
+        CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
+        CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+        GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
+        GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
+        GUILD_EMOJIS_UPDATE: (e, t) => this.handleGuildEmojisUpdate(e, t),
+        GUILD_ROLE_CREATE: (e, t) => this.handleGuildRoleChange(e, t),
+        GUILD_ROLE_DELETE: (e, t) => this.handleGuildRoleDelete(e, t),
+        GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
+        GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
+        GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
+    };
     handleBackgroundSync(e, t) {
         for (let n of e.guilds)
             "unavailable" !== n.data_mode && this.updateWith(n.id, [n]),
@@ -49,7 +49,6 @@ class c {
     handleGuildCreate(e, t) {
         let n = e.guild,
             r = e.guild.id;
-
         function i(e) {
             switch (e.op) {
                 case "full_sync":
@@ -83,12 +82,7 @@ class c {
         this.updateWith(e.guildId, [e.role]), this.commit(t);
     }
     handleGuildRoleDelete(e, t) {
-        this.updateWith(e.guildId, [
-            {
-                version: e.version,
-            },
-        ]),
-            this.commit(t);
+        this.updateWith(e.guildId, [{ version: e.version }]), this.commit(t);
     }
     handleGuildEmojisUpdate(e, t) {
         this.updateWith(e.guildId, e.emojis), this.commit(t);
@@ -116,18 +110,14 @@ class c {
         this.pending.set(e, null);
     }
     updateWith(e, t) {
-        var n, r;
         if (0 === t.length) return;
-        let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
-            a = this.computeLatestVersion(i, t);
-        a > i && this.pending.set(e, a);
+        let n = Math.max(this.committed.get(e) ?? 0, this.pending.get(e) ?? 0),
+            r = this.computeLatestVersion(n, t);
+        r > n && this.pending.set(e, r);
     }
     computeLatestVersion(e, t) {
         let n = e;
-        for (let e of t) {
-            var r;
-            n = Math.max(n, null != (r = e.version) ? r : 0);
-        }
+        for (let e of t) n = Math.max(n, e.version ?? 0);
         return n;
     }
     commit(e) {
@@ -135,33 +125,10 @@ class c {
             let t = s.A.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
-                    ? (t.put({
-                          id: e,
-                          version: n,
-                      }),
-                      this.committed.set(e, n))
+                    ? (t.put({ id: e, version: n }), this.committed.set(e, n))
                     : (t.delete(e), this.committed.delete(e));
             this.pending.clear();
         }
     }
-    constructor() {
-        o(this, "pending", new Map()),
-            o(this, "committed", new Map()),
-            o(this, "actions", {
-                BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-                CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
-                CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
-                CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-                GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-                GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
-                GUILD_EMOJIS_UPDATE: (e, t) => this.handleGuildEmojisUpdate(e, t),
-                GUILD_ROLE_CREATE: (e, t) => this.handleGuildRoleChange(e, t),
-                GUILD_ROLE_DELETE: (e, t) => this.handleGuildRoleDelete(e, t),
-                GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
-                GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
-                GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
-            });
-    }
 }
-let u = new c();
+let u = new l();

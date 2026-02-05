@@ -1,243 +1,191 @@
-n.d(t, {
-    default: () => M,
-}),
-    n(65821),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(735438),
-    s = n.n(l),
-    a = n(158954),
+n.d(t, { default: () => G });
+var i = n(627968),
+    s = n(64700),
+    r = n(735438),
+    a = n.n(r),
+    l = n(158954),
     o = n(311907),
     c = n(397927),
     d = n(384904),
     u = n(923408),
     _ = n(793574),
-    p = n(688810),
-    m = n(531260),
+    m = n(688810),
+    A = n(531260),
     g = n(235986),
-    A = n(543767),
-    f = n(253390),
-    h = n(735164),
-    b = n(683433),
-    E = n(692440),
-    x = n(178368),
-    O = n(97352),
-    C = n(166403),
-    I = n(473145),
-    T = n(927578),
-    S = n(580630),
-    j = n(802790),
+    E = n(543767),
+    h = n(253390),
+    p = n(735164),
+    C = n(683433),
+    x = n(692440),
+    T = n(178368),
+    I = n(97352),
+    S = n(166403),
+    f = n(473145),
+    N = n(927578),
+    b = n(580630),
+    R = n(802790),
     v = n(788868),
-    N = n(818348),
-    y = n(985018),
+    O = n(818348),
+    j = n(985018),
     P = n(397415);
-
-function R(e) {
+function y(e) {
     let {
             premiumSubscription: t,
             fractionalPremiumInfo: n,
-            isInventory: i,
-            onNext: l,
-            onClose: s,
+            isInventory: s,
+            onNext: r,
+            onClose: a,
             transitionState: o,
         } = e,
-        c = y.intl.format(y.t.otHdfR, {
-            endDate: t.currentPeriodEnd,
-        });
+        c = j.intl.format(j.t.otHdfR, { endDate: t.currentPeriodEnd });
     t.isPurchasedExternally && null != t.paymentGateway
-        ? (c = y.intl.format(y.t.HbpFLg, {
-              paymentGatewayName: N.qm[t.paymentGateway],
-              subscriptionManagementLink: (0, T.tW)(t.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+        ? (c = j.intl.format(j.t.HbpFLg, {
+              paymentGatewayName: O.qm[t.paymentGateway],
+              subscriptionManagementLink: (0, N.tW)(t.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
           }))
         : t.isPausedForFractionalPremium
-          ? (c = y.intl.format(y.t.Hzqe6y, {
-                expirationDate: n.endsAt.toDate(),
-            }))
-          : i &&
-            (c = y.intl.format(y.t.gXSnul, {
-                endDate: t.currentPeriodEnd,
-            }));
-    let d = i ? y.intl.string(y.t.iIoSd6) : y.intl.string(y.t.Skzv0u),
+          ? (c = j.intl.format(j.t.Hzqe6y, { expirationDate: n.endsAt.toDate() }))
+          : s && (c = j.intl.format(j.t.gXSnul, { endDate: t.currentPeriodEnd }));
+    let d = s ? j.intl.string(j.t.iIoSd6) : j.intl.string(j.t.Skzv0u),
         u = t.isPurchasedExternally
             ? []
             : [
-                  {
-                      variant: "secondary",
-                      text: y.intl.string(y.t["ETE/oC"]),
-                      onClick: s,
-                  },
-                  {
-                      variant: "primary",
-                      text: y.intl.string(y.t.PDTjLN),
-                      onClick: l,
-                  },
+                  { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: a },
+                  { variant: "primary", text: j.intl.string(j.t.PDTjLN), onClick: r },
               ];
-    return (0, r.jsx)(a.Modal, {
+    return (0, i.jsx)(l.Modal, {
         transitionState: o,
-        onClose: s,
+        onClose: a,
         size: "sm",
         title: d,
         actions: u,
-        children: (0, r.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: P.rf,
-            children: [
-                (0, r.jsx)("div", {
-                    className: P.OC,
-                }),
-                (0, r.jsx)("div", {
-                    children: c,
-                }),
-            ],
+            children: [(0, i.jsx)("div", { className: P.OC }), (0, i.jsx)("div", { children: c })],
         }),
     });
 }
-async function D(e, t, n, r) {
-    let i,
-        l,
-        a =
-            null != r
-                ? r
-                : ((i = Object.values(x.A.boostSlots)),
+async function L(e, t, n, i) {
+    let s,
+        r,
+        l =
+            null != i
+                ? i
+                : ((s = Object.values(T.A.boostSlots)),
                   null !=
-                  (l = s().sortBy(
-                      i.filter((e) => !(0, I.I5)(e)),
+                  (r = a().sortBy(
+                      s.filter((e) => !(0, f.I5)(e)),
                       (e) => [
                           null != e.premiumGuildSubscription,
                           null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null,
                       ],
                   )[0])
-                      ? l.id
+                      ? r.id
                       : null);
-    if (null == a) throw Error("No slot to cancel");
-    let o = (0, T.aE)(e, t);
-    await (0, u.HJ)(a),
+    if (null == l) throw Error("No slot to cancel");
+    let o = (0, N.aE)(e, t);
+    await (0, u.HJ)(l),
         await (0, d.nV)(
             e,
-            {
-                items: o,
-            },
-            {
-                amount: 0,
-                currency: e.currency,
-            },
-            (0, T.UC)(o, e.currency, e.paymentSourceId),
+            { items: o },
+            { amount: 0, currency: e.currency },
+            (0, N.UC)(o, e.currency, e.paymentSourceId),
             n,
         );
 }
-
-function w(e) {
-    var t, n, l;
-    let { premiumSubscription: s, guildBoostSlotId: a, fractionalPremiumInfo: d, onBack: u, onNext: m, onClose: x } = e,
-        [C, I] = i.useState(!1),
-        [N, R] = i.useState(null),
-        [w, L] = i.useMemo(() => {
+function D(e) {
+    let { premiumSubscription: t, guildBoostSlotId: n, fractionalPremiumInfo: r, onBack: a, onNext: l, onClose: d } = e,
+        [u, A] = s.useState(!1),
+        [T, S] = s.useState(null),
+        [f, O] = s.useMemo(() => {
             try {
-                return [(0, f.v)(s, -1), !1];
-            } catch (e) {
+                return [(0, h.v)(t, -1), !1];
+            } catch {
                 return [[], !0];
             }
-        }, [s]),
-        M = i.useRef(x);
-    i.useEffect(() => {
-        M.current = x;
+        }, [t]),
+        y = s.useRef(d);
+    s.useEffect(() => {
+        y.current = d;
     }),
-        i.useEffect(() => {
-            L && M.current();
-        }, [L]);
-    let { premiumSubscriptionPlan: U, premiumGuildPlan: G } = (0, o.cf)([O.A], () => {
-            let e = O.A.get(s.planId);
+        s.useEffect(() => {
+            O && y.current();
+        }, [O]);
+    let { premiumSubscriptionPlan: D, premiumGuildPlan: M } = (0, o.cf)([I.A], () => {
+            let e = I.A.get(t.planId);
             return {
                 premiumSubscriptionPlan: e,
                 premiumGuildPlan:
-                    null != e ? O.A.getForSkuAndInterval((0, T.mH)(v.pe.GUILD), e.interval, e.intervalCount) : null,
+                    null != e ? I.A.getForSkuAndInterval((0, N.mH)(v.pe.GUILD), e.interval, e.intervalCount) : null,
             };
         }),
-        { analyticsLocations: k } = (0, p.Ay)(),
-        [V] = (0, A.Kq)({
-            subscriptionId: s.id,
+        { analyticsLocations: G } = (0, m.Ay)(),
+        [U] = (0, E.Kq)({
+            subscriptionId: t.id,
             renewal: !0,
-            currency: s.currency,
-            paymentSourceId: s.paymentSourceId,
-            analyticsLocations: k,
+            currency: t.currency,
+            paymentSourceId: t.paymentSourceId,
+            analyticsLocations: G,
             analyticsLocation: _.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
-        H = null != G ? (0, T.Om)(s, null != (t = null == (n = w[0]) ? void 0 : n.quantity) ? t : 0, G.id) : null,
-        [B] = (0, A.Kq)({
-            subscriptionId: s.id,
-            items: H,
+        k = null != M ? (0, N.Om)(t, f[0]?.quantity ?? 0, M.id) : null,
+        [B] = (0, E.Kq)({
+            subscriptionId: t.id,
+            items: k,
             renewal: !0,
-            analyticsLocations: k,
+            analyticsLocations: G,
             analyticsLocation: _.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         });
-    if (null == B || null == U || null == G || null == V) return (0, r.jsx)(c.y$y, {});
-    let F =
-            (s.items.some((e) => {
+    if (null == B || null == D || null == M || null == U) return (0, i.jsx)(c.y$y, {});
+    let w =
+            (t.items.some((e) => {
                 let { planId: t } = e;
                 return !v.pW.has(t);
             }) &&
-                null == s.renewalMutations) ||
-            (null == (l = s.renewalMutations)
-                ? void 0
-                : l.items.find((e) => {
-                      let { planId: t } = e;
-                      return !v.pW.has(t);
-                  })) != null,
-        Y = w.some((e) => {
+                null == t.renewalMutations) ||
+            t.renewalMutations?.items.find((e) => {
+                let { planId: t } = e;
+                return !v.pW.has(t);
+            }) != null,
+        H = f.some((e) => {
             let { planId: t } = e;
             return v.pW.has(t);
         }),
-        W = F || Y ? B.total - V.total : -V.total,
-        { interval: z, intervalCount: K } = U,
-        Z = y.intl.format(y.t["0W23cu"], {
-            endDate: B.subscriptionPeriodStart,
-        });
+        V = w || H ? B.total - U.total : -U.total,
+        { interval: F, intervalCount: Y } = D,
+        W = j.intl.format(j.t["0W23cu"], { endDate: B.subscriptionPeriodStart });
     return (
-        s.isPausedForFractionalPremium &&
-            d.fetched &&
-            (Z = y.intl.format(y.t.eb0xgS, {
-                expirationDate: d.endsAt.toDate(),
-            })),
-        (0, r.jsxs)(r.Fragment, {
+        t.isPausedForFractionalPremium &&
+            r.fetched &&
+            (W = j.intl.format(j.t.eb0xgS, { expirationDate: r.endsAt.toDate() })),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(j.A, {
-                    "data-migration-pending": !0,
-                    onClose: x,
-                }),
-                (0, r.jsxs)(c.$mQ, {
+                (0, i.jsx)(R.A, { "data-migration-pending": !0, onClose: d }),
+                (0, i.jsxs)(c.$mQ, {
                     "data-migration-pending": !0,
                     className: P.rf,
                     children: [
-                        null !== N &&
-                            (0, r.jsx)("div", {
+                        null !== T &&
+                            (0, i.jsx)("div", {
                                 className: P.z3,
-                                children: (0, r.jsx)(c.wx6, {
-                                    type: "critical",
-                                    children: N,
-                                }),
+                                children: (0, i.jsx)(c.wx6, { type: "critical", children: T }),
                             }),
-                        (0, r.jsx)("div", {
-                            children: Z,
-                        }),
-                        (0, r.jsxs)(h.Yx, {
+                        (0, i.jsx)("div", { children: W }),
+                        (0, i.jsxs)(p.Yx, {
                             className: P.S,
                             children: [
-                                (0, r.jsx)(h.Xd, {
-                                    children: y.intl.string(y.t.iqhIp4),
-                                }),
-                                (0, r.jsx)(h.oR, {
-                                    label: y.intl.format(y.t["Vg+LRr"], {
-                                        subscriptionCount: 1,
-                                    }),
-                                    value: (0, S.CE)((0, S.$g)(W, s.currency), z, K),
+                                (0, i.jsx)(p.Xd, { children: j.intl.string(j.t.iqhIp4) }),
+                                (0, i.jsx)(p.oR, {
+                                    label: j.intl.format(j.t["Vg+LRr"], { subscriptionCount: 1 }),
+                                    value: (0, b.CE)((0, b.$g)(V, t.currency), F, Y),
                                     className: P.Au,
                                 }),
-                                null != H && H.length > 0
-                                    ? (0, r.jsxs)("div", {
+                                null != k && k.length > 0
+                                    ? (0, i.jsxs)("div", {
                                           children: [
-                                              (0, r.jsx)(h.pK, {}),
-                                              (0, r.jsx)(E.m0, {
-                                                  premiumSubscription: s,
+                                              (0, i.jsx)(p.pK, {}),
+                                              (0, i.jsx)(x.m0, {
+                                                  premiumSubscription: t,
                                                   renewalInvoice: B,
                                                   isUpdate: !0,
                                               }),
@@ -248,121 +196,93 @@ function w(e) {
                         }),
                     ],
                 }),
-                (0, r.jsxs)(c.jlY, {
+                (0, i.jsxs)(c.jlY, {
                     "data-migration-pending": !0,
                     align: g.A.Align.CENTER,
                     justify: g.A.Justify.BETWEEN,
                     children: [
-                        (0, r.jsx)(c.Button, {
+                        (0, i.jsx)(c.Button, {
                             variant: "critical-primary",
-                            text: y.intl.string(y.t["/AS/gM"]),
-                            disabled: C,
+                            text: j.intl.string(j.t["/AS/gM"]),
+                            disabled: u,
                             onClick: async () => {
                                 try {
-                                    I(!0), R(null), await D(s, w, k, a), m();
+                                    A(!0), S(null), await L(t, f, G, n), l();
                                 } catch (e) {
-                                    R(y.intl.string(y.t["5mlOCW"])), I(!1);
+                                    S(j.intl.string(j.t["5mlOCW"])), A(!1);
                                 }
                             },
                         }),
-                        (0, r.jsx)(b.A, {
-                            onClick: u,
-                        }),
+                        (0, i.jsx)(C.A, { onClick: a }),
                     ],
                 }),
             ],
         })
     );
 }
-
-function L(e) {
-    let { premiumSubscription: t, fractionalPremiumInfo: n, onClose: i, transitionState: l } = e,
-        s = t.currentPeriodEnd;
-    t.isPausedForFractionalPremium && (s = n.endsAt.toDate());
-    let o = [
-        {
-            variant: "primary",
-            text: y.intl.string(y.t.BddRzS),
-            onClick: i,
-        },
-    ];
-    return (0, r.jsx)(a.Modal, {
-        transitionState: l,
-        onClose: i,
+function M(e) {
+    let { premiumSubscription: t, fractionalPremiumInfo: n, onClose: s, transitionState: r } = e,
+        a = t.currentPeriodEnd;
+    t.isPausedForFractionalPremium && (a = n.endsAt.toDate());
+    let o = [{ variant: "primary", text: j.intl.string(j.t.BddRzS), onClick: s }];
+    return (0, i.jsx)(l.Modal, {
+        transitionState: r,
+        onClose: s,
         size: "sm",
-        title: y.intl.string(y.t["fZzV/B"]),
+        title: j.intl.string(j.t["fZzV/B"]),
         actions: o,
-        children: (0, r.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: P.rf,
             children: [
-                (0, r.jsx)("div", {
-                    className: P.OC,
-                }),
-                (0, r.jsx)("div", {
-                    children: y.intl.format(y.t["H+z0ns"], {
-                        endDate: s,
-                    }),
-                }),
+                (0, i.jsx)("div", { className: P.OC }),
+                (0, i.jsx)("div", { children: j.intl.format(j.t["H+z0ns"], { endDate: a }) }),
             ],
         }),
     });
 }
-
-function M(e) {
+function G(e) {
     let t,
-        { guildBoostSlot: n, transitionState: l, onClose: s } = e;
-    i.useEffect(() => {
-        C.A.hasFetchedSubscriptions() || (0, d.hP)();
+        { guildBoostSlot: n, transitionState: r, onClose: a } = e;
+    s.useEffect(() => {
+        S.A.hasFetchedSubscriptions() || (0, d.hP)();
     }, []);
-    let a = (0, o.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
-        u = (0, m.A)(),
-        [g, A] = i.useState(1),
-        { analyticsLocations: f } = (0, p.Ay)(_.A.GUILD_BOOST_CANCELLATION_MODAL);
-    if (null == a)
-        t = (0, r.jsx)(c.$mQ, {
-            "data-migration-pending": !0,
-            children: (0, r.jsx)(c.y$y, {}),
-        });
+    let l = (0, o.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
+        u = (0, A.A)(),
+        [g, E] = s.useState(1),
+        { analyticsLocations: h } = (0, m.Ay)(_.A.GUILD_BOOST_CANCELLATION_MODAL);
+    if (null == l) t = (0, i.jsx)(c.$mQ, { "data-migration-pending": !0, children: (0, i.jsx)(c.y$y, {}) });
     else
         switch (g) {
             case 1:
-                t = (0, r.jsx)(R, {
-                    premiumSubscription: a,
+                t = (0, i.jsx)(y, {
+                    premiumSubscription: l,
                     fractionalPremiumInfo: u,
                     isInventory: null == n.premiumGuildSubscription,
-                    onNext: () => A(2),
-                    onClose: s,
-                    transitionState: l,
+                    onNext: () => E(2),
+                    onClose: a,
+                    transitionState: r,
                 });
                 break;
             case 2:
-                t = (0, r.jsx)(c.EOs, {
+                t = (0, i.jsx)(c.EOs, {
                     "data-migration-pending": !0,
-                    transitionState: l,
+                    transitionState: r,
                     parentComponent: "GuildBoostSlotCancellationModal",
-                    children: (0, r.jsx)(w, {
-                        premiumSubscription: a,
+                    children: (0, i.jsx)(D, {
+                        premiumSubscription: l,
                         guildBoostSlotId: n.id,
                         fractionalPremiumInfo: u,
-                        onBack: () => A(1),
-                        onNext: () => A(3),
-                        onClose: s,
+                        onBack: () => E(1),
+                        onNext: () => E(3),
+                        onClose: a,
                     }),
                 });
                 break;
             case 3:
-                t = (0, r.jsx)(L, {
-                    premiumSubscription: a,
-                    fractionalPremiumInfo: u,
-                    onClose: s,
-                    transitionState: l,
-                });
+                t = (0, i.jsx)(M, { premiumSubscription: l, fractionalPremiumInfo: u, onClose: a, transitionState: r });
                 break;
             default:
-                throw Error("Unexpected step: ".concat(g));
+                throw Error(`Unexpected step: ${g}`);
         }
-    return (0, r.jsx)(p.f5, {
-        value: f,
-        children: t,
-    });
+    return (0, i.jsx)(m.f5, { value: h, children: t });
 }

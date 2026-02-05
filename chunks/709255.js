@@ -1,41 +1,33 @@
-n.d(t, {
-    A: () => j,
-});
-var l = n(627968),
+n.d(t, { A: () => b });
+var a = n(627968),
     i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(311907),
-    u = n(435371),
-    o = n(397927),
-    d = n(363487),
-    c = n(890942),
+    l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    d = n(435371),
+    u = n(397927),
+    c = n(363487),
+    o = n(890942),
     m = n(522055),
-    v = n(225180),
+    g = n(225180),
     f = n(146995),
-    g = n(333354),
-    b = n(985018),
+    _ = n(333354),
+    v = n(985018),
     p = n(276079);
-
-function _(e) {
+function x(e) {
     let { guildId: t, gameInstance: n, cost: i } = e;
-    return (0, l.jsx)(u.un, {
-        "aria-label": b.intl.string(g.default.TZsu1U),
-        title: b.intl.string(g.default.TZsu1U),
-        body: b.intl.formatToPlainString(g.default["5HQUzD"], {
-            boostCount: i,
-        }),
-        children: (0, l.jsx)("div", {
+    return (0, a.jsx)(d.un, {
+        "aria-label": v.intl.string(_.default.TZsu1U),
+        title: v.intl.string(_.default.TZsu1U),
+        body: v.intl.formatToPlainString(_.default["5HQUzD"], { boostCount: i }),
+        children: (0, a.jsx)("div", {
             className: p.vI,
-            children: (0, l.jsx)(o.Button, {
-                icon: {
-                    type: "icon",
-                    asset: o.x8N,
-                },
+            children: (0, a.jsx)(u.Button, {
+                icon: { type: "icon", asset: u.x8N },
                 text: i.toString(),
                 variant: "secondary",
                 size: "sm",
-                "aria-label": b.intl.string(g.default.TZsu1U),
+                "aria-label": v.intl.string(_.default.TZsu1U),
                 onClick: (e) => {
                     e.stopPropagation(), (0, f.m)(t, n);
                 },
@@ -43,62 +35,32 @@ function _(e) {
         }),
     });
 }
-
-function j(e) {
-    var t, n, a, u;
-    let { guildId: f, gameInstance: j, onClick: x } = e,
-        E = (0, s.bG)([m.A], () => m.A.getStateForGuild(f)),
-        h = i.useMemo(() => {
-            var e;
-            return null == E || null == (e = E.entitlements) ? void 0 : e[j.entitlementId];
-        }, [null == E ? void 0 : E.entitlements, j.entitlementId]),
-        y = (null == h ? void 0 : h.ends_at) != null,
-        A =
-            null == h ||
-            null == (u = h.sku) ||
-            null == (a = u.tenant_metadata) ||
-            null == (n = a.guild_monetization) ||
-            null == (t = n.game_server)
-                ? void 0
-                : t.boost_price,
-        S = (0, v.A)(j.gameId, "icon"),
-        O = (0, d.A)(f);
-    return null == A
+function b(e) {
+    let { guildId: t, gameInstance: n, onClick: l } = e,
+        d = (0, r.bG)([m.A], () => m.A.getStateForGuild(t)),
+        f = i.useMemo(() => d?.entitlements?.[n.entitlementId], [d?.entitlements, n.entitlementId]),
+        b = f?.ends_at != null,
+        j = f?.sku?.tenant_metadata?.guild_monetization?.game_server?.boost_price,
+        A = (0, g.A)(n.gameId, "icon"),
+        E = (0, c.A)(t);
+    return null == j
         ? null
-        : (0, l.jsxs)(o.DUT, {
-              className: r()(p.LO, {
-                  [p.r9]: !O,
-              }),
-              onClick: O ? () => x(j) : void 0,
-              "aria-disabled": !O,
+        : (0, a.jsxs)(u.DUT, {
+              className: s()(p.LO, { [p.r9]: !E }),
+              onClick: E ? () => l(n) : void 0,
+              "aria-disabled": !E,
               children: [
-                  (0, l.jsx)("img", {
-                      className: p.Sl,
-                      alt: "",
-                      src: S,
-                  }),
-                  (0, l.jsxs)("div", {
+                  (0, a.jsx)("img", { className: p.Sl, alt: "", src: A }),
+                  (0, a.jsxs)("div", {
                       className: p.FS,
                       children: [
-                          (0, l.jsx)(o.Heading, {
-                              variant: "heading-sm/semibold",
-                              children: j.name,
-                          }),
-                          y
-                              ? (0, l.jsx)(c.P5, {
-                                    dateString: h.ends_at,
-                                })
-                              : (0, l.jsx)(c.TG, {
-                                    text: b.intl.string(g.default.FFLkmx),
-                                }),
+                          (0, a.jsx)(u.Heading, { variant: "heading-sm/semibold", children: n.name }),
+                          b
+                              ? (0, a.jsx)(o.P5, { dateString: f.ends_at })
+                              : (0, a.jsx)(o.TG, { text: v.intl.string(_.default.FFLkmx) }),
                       ],
                   }),
-                  O &&
-                      (0, l.jsx)(_, {
-                          guildId: f,
-                          gameInstance: j,
-                          cost: A,
-                      }),
+                  E && (0, a.jsx)(x, { guildId: t, gameInstance: n, cost: j }),
               ],
           });
 }

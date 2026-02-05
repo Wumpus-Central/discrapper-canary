@@ -1,32 +1,28 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
-    a = n(775602),
-    s = n(590180),
-    o = n(898461),
-    l = n(207803),
+n.d(t, { A: () => A });
+var i = n(64700),
+    s = n(311907),
+    r = n(775602),
+    a = n(590180),
+    l = n(898461),
+    o = n(207803),
     c = n(954571),
-    u = n(461797),
-    d = n(652215);
-let f = Object.keys(u.jB),
-    p = (e) => {
-        let t = null == e ? f : f.filter((t) => t !== e);
+    d = n(461797),
+    u = n(652215);
+let _ = Object.keys(d.jB),
+    m = (e) => {
+        let t = null == e ? _ : _.filter((t) => t !== e);
         return t[Math.floor(Math.random() * t.length)];
     };
-
-function _() {
-    let e = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-        [t, n] = (0, r.useState)(p()),
+function A() {
+    let e = (0, s.bG)([r.A], () => r.A.useReducedMotion),
+        [t, n] = (0, i.useState)(m()),
         {
-            banner: f,
-            themeColors: _,
-            avatarDecorationSkuId: h,
-            displayNameStyles: m,
-        } = (0, r.useMemo)(() => {
-            let n = (0, u.Wt)(t);
+            banner: _,
+            themeColors: A,
+            avatarDecorationSkuId: g,
+            displayNameStyles: E,
+        } = (0, i.useMemo)(() => {
+            let n = (0, d.Wt)(t);
             return {
                 banner: n.getBannerSrc(e),
                 themeColors: n.themeColors,
@@ -34,27 +30,16 @@ function _() {
                 displayNameStyles: n.displayNameStyles,
             };
         }, [t, e]),
-        g = (0, i.bG)([s.A], () => {
-            let e = s.A.getProduct(h);
-            return (0, o.T)(null == e ? void 0 : e.items[0]) ? e.items[0] : null;
+        h = (0, s.bG)([a.A], () => {
+            let e = a.A.getProduct(g);
+            return (0, l.T)(e?.items[0]) ? e.items[0] : null;
         });
-    (0, r.useEffect)(() => {
-        (0, l.w5)({
-            banner: f,
-            themeColors: _,
-            avatarDecoration: g,
-            displayNameStyles: m,
-        });
-    }, [f, _, g, m]);
-    let E = (0, r.useCallback)(() => {
-        let e = p(t);
-        n(e),
-            c.default.track(d.HAw.TRY_IT_OUT_PRESET_SHUFFLED, {
-                preset: e,
-            });
+    (0, i.useEffect)(() => {
+        (0, o.w5)({ banner: _, themeColors: A, avatarDecoration: h, displayNameStyles: E });
+    }, [_, A, h, E]);
+    let p = (0, i.useCallback)(() => {
+        let e = m(t);
+        n(e), c.default.track(u.HAw.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
     }, [t]);
-    return {
-        preset: t,
-        onShuffle: E,
-    };
+    return { preset: t, onShuffle: p };
 }

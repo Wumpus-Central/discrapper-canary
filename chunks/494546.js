@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(683570),
     o = n(978887),
@@ -5,11 +6,7 @@ var r = n(834647),
     s = n(633555),
     l = a("URL");
 r(
-    {
-        target: "URL",
-        stat: !0,
-        forced: !s,
-    },
+    { target: "URL", stat: !0, forced: !s },
     {
         parse: function (e) {
             var t = o(arguments.length, 1),

@@ -1,52 +1,39 @@
-n.d(t, {
-    default: () => d,
-});
-var r = n(627968);
-n(64700);
-var c = n(397927),
-    i = n(442433),
-    o = n(358367),
-    l = n(793574),
-    a = n(50268),
-    u = n(533957),
-    s = n(477190),
-    b = n(307623),
-    p = n(317910),
-    O = n(475777),
-    y = n(985018);
-let d = (0, o.A)(
-    function (e) {
-        let { channel: t, guild: n, onSelect: o } = e,
-            l = (0, p.A)(t),
-            d = (0, O.A)(t, n),
-            f = (0, u.A)(t, n),
-            A = (0, s.A)(t, n),
-            j = (0, b.A)(t),
-            E = (0, a.A)({
-                id: t.id,
-                label: y.intl.string(y.t.gFHI3k),
-            });
-        return (0, r.jsxs)(c.W1t, {
+t.d(e, { default: () => p });
+var l = t(627968);
+t(64700);
+var r = t(397927),
+    a = t(442433),
+    i = t(358367),
+    c = t(793574),
+    d = t(50268),
+    A = t(533957),
+    s = t(477190),
+    u = t(307623),
+    o = t(317910),
+    E = t(475777),
+    _ = t(985018);
+let p = (0, i.A)(
+    function (n) {
+        let { channel: e, guild: t, onSelect: i } = n,
+            c = (0, o.A)(e),
+            p = (0, E.A)(e, t),
+            h = (0, A.A)(e, t),
+            b = (0, s.A)(e, t),
+            x = (0, u.A)(e),
+            D = (0, d.A)({ id: e.id, label: _.intl.string(_.t.gFHI3k) });
+        return (0, l.jsxs)(r.W1t, {
             "data-menu-migrated": !0,
             navId: "channel-context",
-            onClose: i.Z_,
-            "aria-label": y.intl.string(y.t.Xm41aV),
-            onSelect: o,
+            onClose: a.Z_,
+            "aria-label": _.intl.string(_.t.Xm41aV),
+            onSelect: i,
             children: [
-                (0, r.jsx)(c.rXV, {
-                    children: l,
-                }),
-                (0, r.jsxs)(c.rXV, {
-                    children: [d, f, A],
-                }),
-                (0, r.jsx)(c.rXV, {
-                    children: j,
-                }),
-                (0, r.jsx)(c.rXV, {
-                    children: E,
-                }),
+                (0, l.jsx)(r.rXV, { children: c }),
+                (0, l.jsxs)(r.rXV, { children: [p, h, b] }),
+                (0, l.jsx)(r.rXV, { children: x }),
+                (0, l.jsx)(r.rXV, { children: D }),
             ],
         });
     },
-    [l.A.CONTEXT_MENU, l.A.CHANNEL_ACTIVITY_FEED_VOICE_MENU],
+    [c.A.CONTEXT_MENU, c.A.CHANNEL_ACTIVITY_FEED_VOICE_MENU],
 );

@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.".split("_"),
         n = "jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_");
     return e.defineLocale("fy", {
@@ -51,9 +52,6 @@
         ordinal: function (e) {
             return e + (1 === e || 8 === e || e >= 20 ? "ste" : "de");
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

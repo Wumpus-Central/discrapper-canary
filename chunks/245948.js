@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     i1: "previewContainer__50f14",
     Ug: "giftInfoContainer__50f14",

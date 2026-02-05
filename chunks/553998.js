@@ -1,254 +1,138 @@
-r.d(t, {
-    default: () => P,
-}),
-    r(228524);
-var n = r(627968),
-    o = r(64700),
-    s = r(397927),
+r.d(s, { default: () => I });
+var t = r(627968),
+    n = r(64700),
+    a = r(397927),
     i = r(793574),
     l = r(688810),
-    c = r(156312),
-    a = r(166532),
-    p = r(632638),
-    d = r(901017),
+    o = r(156312),
+    c = r(166532),
+    d = r(632638),
+    p = r(901017),
     u = r(473145),
-    b = r(721923),
-    j = r(652215),
-    m = r(985018),
-    f = r(942609),
-    y = r(473169);
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-let x = "premium-guild-subscription-upsell-modal-header";
-
-function O(e) {
-    let { title: t, subtitle: r, image: o } = e;
-    return (0, n.jsxs)("div", {
-        className: f.wx,
+    x = r(721923),
+    m = r(652215),
+    _ = r(985018),
+    j = r(942609),
+    h = r(473169);
+let g = "premium-guild-subscription-upsell-modal-header";
+function k(e) {
+    let { title: s, subtitle: r, image: n } = e;
+    return (0, t.jsxs)("div", {
+        className: j.wx,
         children: [
-            (0, n.jsx)(s.Heading, {
+            (0, t.jsx)(a.Heading, {
                 variant: "heading-xl/semibold",
-                id: x,
+                id: g,
                 color: "text-strong",
-                className: y.QB,
-                children: t,
+                className: h.QB,
+                children: s,
             }),
-            (0, n.jsx)(s.Text, {
-                variant: "text-md/normal",
-                className: f.o4,
-                children: r,
-            }),
-            o,
+            (0, t.jsx)(a.Text, { variant: "text-md/normal", className: j.o4, children: r }),
+            n,
         ],
     });
 }
-let h = (e) => {
-        let { onClose: t, perks: r, perkIntro: o = m.intl.string(m.t.Dr3GoS), headerProps: i } = e;
-        return (0, n.jsxs)("div", {
-            className: f.iE,
+let b = (e) => {
+        let { onClose: s, perks: r, perkIntro: n = _.intl.string(_.t.Dr3GoS), headerProps: i } = e;
+        return (0, t.jsxs)("div", {
+            className: j.iE,
             children: [
-                (0, n.jsx)(s.s_y, {
+                (0, t.jsx)(a.s_y, {
                     "data-migration-pending": !0,
-                    className: f.b,
+                    className: j.b,
                     onClick: () => {
-                        t();
+                        s();
                     },
                 }),
-                (0, n.jsx)(_, {
-                    headerProps: i,
-                    perkIntro: o,
-                }),
-                (0, n.jsx)("div", {
-                    className: f.md,
-                    children: r.map((e, t) => {
-                        let { icon: r, iconClassName: o, description: s, color: i } = e;
-                        return (0, n.jsx)(
-                            d.A,
-                            {
-                                icon: r,
-                                iconClassName: o,
-                                description: s,
-                                color: i,
-                            },
-                            t,
-                        );
+                (0, t.jsx)(v, { headerProps: i, perkIntro: n }),
+                (0, t.jsx)("div", {
+                    className: j.md,
+                    children: r.map((e, s) => {
+                        let { icon: r, iconClassName: n, description: a, color: i } = e;
+                        return (0, t.jsx)(p.A, { icon: r, iconClassName: n, description: a, color: i }, s);
                     }),
-                }),
-            ],
-        });
-    },
-    _ = (e) => {
-        let { headerProps: t, perkIntro: i } = e;
-        return (0, n.jsxs)(o.Fragment, {
-            children: [
-                null != t
-                    ? (0, n.jsx)(O, g({}, t))
-                    : (0, n.jsx)("img", {
-                          className: f.c8,
-                          src: r(69522),
-                          alt: m.intl.string(m.t.PkcaAH),
-                      }),
-                (0, n.jsx)(s.Text, {
-                    variant: "text-md/normal",
-                    className: f.R_,
-                    children: i,
                 }),
             ],
         });
     },
     v = (e) => {
-        let { guild: t, targetBoostedGuildTier: r, onClose: o, analyticsSourceLocation: i } = e,
+        let { headerProps: s, perkIntro: i } = e;
+        return (0, t.jsxs)(n.Fragment, {
+            children: [
+                null != s
+                    ? (0, t.jsx)(k, { ...s })
+                    : (0, t.jsx)("img", { className: j.c8, src: r(69522), alt: _.intl.string(_.t.PkcaAH) }),
+                (0, t.jsx)(a.Text, { variant: "text-md/normal", className: j.R_, children: i }),
+            ],
+        });
+    },
+    C = (e) => {
+        let { guild: s, targetBoostedGuildTier: r, onClose: n, analyticsSourceLocation: i } = e,
             l = {
-                section: j.JJy.PREMIUM_GUILD_UPSELL_MODAL,
-                object: j.ZSU.BUTTON_CTA,
+                section: m.JJy.PREMIUM_GUILD_UPSELL_MODAL,
+                object: m.ZSU.BUTTON_CTA,
                 objectType: null != r ? (0, u.k1)(r) : null,
             };
-        return (0, n.jsxs)(s.jlY, {
-            className: f.qr,
+        return (0, t.jsxs)(a.jlY, {
+            className: j.qr,
             "data-migration-pending": !0,
             children: [
-                (0, n.jsx)(s.Button, {
+                (0, t.jsx)(a.Button, {
                     variant: "secondary",
                     size: "sm",
-                    text: m.intl.string(m.t.cpT0Cq),
+                    text: _.intl.string(_.t.cpT0Cq),
                     onClick: () => {
-                        o();
+                        n();
                     },
                 }),
-                (0, n.jsx)(b.A, {
+                (0, t.jsx)(x.A, {
                     analyticsLocation: l,
                     analyticsSourceLocation: i,
-                    guild: t,
+                    guild: s,
                     targetBoostedGuildTier: r,
                     onClose: () => {
-                        o();
+                        n();
                     },
                 }),
             ],
         });
     };
-
-function P(e) {
-    var t, r;
+function I(e) {
     let {
-            analyticsSourceLocation: o,
-            guild: d,
-            targetBoostedGuildTier: u,
-            perks: b,
-            perkIntro: j,
-            headerProps: m,
-            onClose: f,
+            analyticsSourceLocation: s,
+            guild: r,
+            targetBoostedGuildTier: n,
+            perks: p,
+            perkIntro: u,
+            headerProps: x,
+            onClose: m,
+            ..._
         } = e,
-        y = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o,
-                s = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (o = 0, r = Reflect.ownKeys(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-                return s;
-            }
-            if (
-                ((s = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        s = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < s.length; n++)
-                        (r = s[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                    return o;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (o = 0, r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-            return s;
-        })(e, [
-            "analyticsSourceLocation",
-            "guild",
-            "targetBoostedGuildTier",
-            "perks",
-            "perkIntro",
-            "headerProps",
-            "onClose",
-        ]),
-        { analyticsLocations: O } = (0, l.Ay)(i.A.ACTIVITY_DIRECTORY);
-    return (0, n.jsx)(l.f5, {
-        value: O,
-        children: (0, n.jsx)(c.PaymentContextProvider, {
+        { analyticsLocations: j } = (0, l.Ay)(i.A.ACTIVITY_DIRECTORY);
+    return (0, t.jsx)(l.f5, {
+        value: j,
+        children: (0, t.jsx)(o.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
             skuIDs: [],
-            children: (0, n.jsx)(
-                s.EOs,
-                ((t = g({}, y)),
-                (r = r =
-                    {
-                        "aria-labelledby": x,
-                        "data-migration-pending": !0,
-                        parentComponent: "GuildBoostingUpsellModal",
-                        children: (0, n.jsx)(p.A, {
-                            hideBreadcrumbs: !0,
-                            body: (0, n.jsx)(h, {
-                                onClose: f,
-                                perks: b,
-                                perkIntro: j,
-                                headerProps: m,
-                            }),
-                            footer: (0, n.jsx)(v, {
-                                guild: d,
-                                targetBoostedGuildTier: u,
-                                onClose: f,
-                                analyticsSourceLocation: o,
-                            }),
-                            steps: [a.pn.PREMIUM_GUILD_UPSELL],
-                            currentStep: a.pn.PREMIUM_GUILD_UPSELL,
-                        }),
+            children: (0, t.jsx)(a.EOs, {
+                ..._,
+                "aria-labelledby": g,
+                "data-migration-pending": !0,
+                parentComponent: "GuildBoostingUpsellModal",
+                children: (0, t.jsx)(d.A, {
+                    hideBreadcrumbs: !0,
+                    body: (0, t.jsx)(b, { onClose: m, perks: p, perkIntro: u, headerProps: x }),
+                    footer: (0, t.jsx)(C, {
+                        guild: r,
+                        targetBoostedGuildTier: n,
+                        onClose: m,
+                        analyticsSourceLocation: s,
                     }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                    : (function (e, t) {
-                          var r = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
-                          }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                      }),
-                t),
-            ),
+                    steps: [c.pn.PREMIUM_GUILD_UPSELL],
+                    currentStep: c.pn.PREMIUM_GUILD_UPSELL,
+                }),
+            }),
         }),
     });
 }

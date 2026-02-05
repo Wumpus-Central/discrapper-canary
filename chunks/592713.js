@@ -1,116 +1,46 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => f });
 var r = n(73153),
     i = n(439372),
     a = n(696451),
     s = n(287809),
     o = n(316031);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = 1e4,
-    p = null,
-    _ = () => {
+let l = 1e4,
+    u = null,
+    c = () => {
         let e = a.Ay.getCommunicationDisabledUserMap();
         Object.keys(e).forEach((t) => {
             let n = t,
                 r = (0, a.DL)(n),
                 i = (0, a.vg)(n),
                 s = e[n];
-            (0, o.n)(s) || h(r, i);
+            (0, o.n)(s) || d(r, i);
         });
     },
-    h = (e, t) => {
-        var n, i, l, u, f, p;
-        let _ = a.Ay.getMember(e, t),
-            h = s.default.getUser(t);
-        if (null == _ || null == h || (0, o.Z)(_)) return;
-        let m = d(c({}, _), {
+    d = (e, t) => {
+        let n = a.Ay.getMember(e, t),
+            i = s.default.getUser(t);
+        if (null == n || null == i || (0, o.Z)(n)) return;
+        let l = {
+            ...n,
             guildId: e,
-            nick: null != (n = _.nick) ? n : h.username,
-            avatar: null != (i = _.avatar) ? i : void 0,
-            avatarDecoration: null != _.avatarDecoration ? c({}, _.avatarDecoration) : void 0,
-            premiumSince: null != (l = _.premiumSince) ? l : void 0,
-            isPending: null != (u = _.isPending) && u,
-            user: d(c({}, h), {
-                email: null != (f = h.email) ? f : void 0,
-                phone: null != (p = h.phone) ? p : void 0,
-            }),
+            nick: n.nick ?? i.username,
+            avatar: n.avatar ?? void 0,
+            avatarDecoration: null != n.avatarDecoration ? { ...n.avatarDecoration } : void 0,
+            premiumSince: n.premiumSince ?? void 0,
+            isPending: n.isPending ?? !1,
+            user: { ...i, email: i.email ?? void 0, phone: i.phone ?? void 0 },
             communicationDisabledUntil: null,
-        });
-        r.h.dispatch(
-            c(
-                {
-                    type: "GUILD_MEMBER_UPDATE",
-                },
-                m,
-            ),
-        );
+        };
+        r.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
     };
-class m extends i.A {
+class _ extends i.A {
     _initialize() {
-        p = setInterval(() => _(), f);
+        u = setInterval(() => c(), l);
     }
     _terminate() {
-        clearInterval(p);
+        clearInterval(u);
     }
-    constructor(...e) {
-        super(...e), l(this, "clearGuildMemberTimeout", h);
-    }
+    clearGuildMemberTimeout = d;
 }
-let g = new m();
+let f = new _();

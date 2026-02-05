@@ -1,6 +1,4 @@
-i.d(n, {
-    A: () => a,
-});
+i.d(n, { A: () => a });
 var e = i(303527);
 let a = {
     ordinalNumber: (0, i(722023).A)({
@@ -17,9 +15,7 @@ let a = {
             wide: /^(trước Công Nguyên|sau Công Nguyên)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^t/i, /^s/i],
-        },
+        parsePatterns: { any: [/^t/i, /^s/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, e.A)({
@@ -29,9 +25,7 @@ let a = {
             wide: /^quý ([1234]|i{1,3}v?)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/(1|i)$/i, /(2|ii)$/i, /(3|iii)$/i, /(4|iv)$/i],
-        },
+        parsePatterns: { any: [/(1|i)$/i, /(2|ii)$/i, /(3|iii)$/i, /(4|iv)$/i] },
         defaultParseWidth: "any",
         valueCallback: function (t) {
             return t + 1;

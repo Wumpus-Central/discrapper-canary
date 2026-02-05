@@ -1,28 +1,16 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    K: () => i,
-}),
-    n(228524),
-    n(896048),
-    n(264879);
-class i {
+"use strict";
+n.d(t, { K: () => r });
+class r {
+    items;
+    limit;
     get length() {
         return this.items.size;
     }
     get capacity() {
         return this.limit;
+    }
+    constructor(e) {
+        (this.items = new Map()), (this.limit = e);
     }
     [Symbol.iterator]() {
         return this.items.entries();
@@ -60,8 +48,5 @@ class i {
     }
     oldestKey() {
         return this.items.keys().next().value;
-    }
-    constructor(e) {
-        r(this, "items", void 0), r(this, "limit", void 0), (this.items = new Map()), (this.limit = e);
     }
 }

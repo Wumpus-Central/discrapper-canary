@@ -1,6 +1,4 @@
-t.d(a, {
-    A: () => i,
-});
+t.d(a, { A: () => i });
 var n = t(722023),
     o = t(303527);
 let i = {
@@ -25,15 +23,9 @@ let i = {
         defaultParseWidth: "any",
     }),
     quarter: (0, o.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^T[1234]/i,
-            wide: /^[1234](º)? trimestre/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](º)? trimestre/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;

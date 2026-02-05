@@ -1,54 +1,26 @@
+"use strict";
 var n;
-
 function r(e) {
     for (let t = 0; t < e.length; t++) e[t] = a(e[t]);
     return !0;
 }
-
 function i(e) {
     let [t, i, a, s, o] = e;
-    for (let e in a)
-        r(a[e]),
-            (a[e] = {
-                value: a[e],
-            });
+    for (let e in a) r(a[e]), (a[e] = { value: a[e] });
     return t === n.Plural
-        ? {
-              type: t,
-              value: i,
-              options: a,
-              offset: s,
-              pluralType: o,
-          }
-        : {
-              type: t,
-              value: i,
-              options: a,
-              offset: s,
-          };
+        ? { type: t, value: i, options: a, offset: s, pluralType: o }
+        : { type: t, value: i, options: a, offset: s };
 }
-
 function a(e) {
-    if ("string" == typeof e)
-        return {
-            type: 0,
-            value: e,
-        };
+    if ("string" == typeof e) return { type: 0, value: e };
     let [a] = e;
     switch (a) {
         case n.Argument:
-            return {
-                type: a,
-                value: e[1],
-            };
+            return { type: a, value: e[1] };
         case n.Number:
         case n.Date:
         case n.Time:
-            return {
-                type: a,
-                value: e[1],
-                style: e[2],
-            };
+            return { type: a, value: e[1], style: e[2] };
         case n.Select:
         case n.Plural:
             return i(e);
@@ -56,22 +28,12 @@ function a(e) {
             return t.FORMAT_JS_POUND;
         case n.Tag: {
             let [t, n, i, a] = e;
-            return (
-                r(i),
-                null != a && r(a),
-                {
-                    type: t,
-                    value: n,
-                    children: i,
-                    control: a,
-                }
-            );
+            return r(i), null != a && r(a), { type: t, value: n, children: i, control: a };
         }
         default:
             throw Error(`FormatJS keyless JSON encountered an unknown type: ${a}`);
     }
 }
-
 function s(e) {
     return "string" == typeof e
         ? a(e)
@@ -83,7 +45,6 @@ function s(e) {
               ? (r(e), e)
               : a(e);
 }
-
 function o(e) {
     if (Array.isArray(e)) return e.map((e) => o(e));
     switch (e.type) {
@@ -111,13 +72,10 @@ function o(e) {
             return [e.type, e.value, o(e.children), o(e.control)];
     }
 }
-
 function l(e) {
     return "string" == typeof e || (!!Array.isArray(e) && (Array.isArray(e[0]) || "string" == typeof e[0]));
 }
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FORMAT_JS_POUND = t.FormatJsNodeType = void 0),
     (t.hydrateFormatJsAst = s),
     (t.compressFormatJsToAst = o),
@@ -133,6 +91,4 @@ Object.defineProperty(t, "__esModule", {
             (e[(e.Pound = 7)] = "Pound"),
             (e[(e.Tag = 8)] = "Tag");
     })(n || (t.FormatJsNodeType = n = {})),
-    (t.FORMAT_JS_POUND = Object.freeze({
-        type: 7,
-    }));
+    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));

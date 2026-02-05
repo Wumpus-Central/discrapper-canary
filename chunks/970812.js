@@ -1,72 +1,56 @@
-n.d(t, {
-    A: () => M,
-}),
-    n(896048);
+n.d(t, { A: () => L });
 var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    o = n(172218),
-    s = n(311907),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(172218),
+    o = n(311907),
     u = n(775602),
     c = n(383501),
     d = n(531685),
     h = n(25639),
-    f = n(962762);
-let g = "ease-in-out",
-    p = [8, 16, 11, 13, 6],
-    b = Array.from(
-        {
-            length: 5,
-        },
-        (e, t) => t,
-    ),
-    m = [2, 2, 5, 2, 2],
-    y = [3, 3, 10, 6, 3],
-    v = [3, 3, 7, 12, 6],
-    O = [3, 3, 5, 10, 16],
-    j = [3, 3, 8, 13, 7],
-    E = [4, 6, 12, 9, 6],
-    N = [6, 10, 9, 16, 8],
-    A = 6.67 / 8,
-    S =
+    g = n(962762);
+let f = "ease-in-out",
+    m = [8, 16, 11, 13, 6],
+    p = Array.from({ length: 5 }, (e, t) => t),
+    N = [2, 2, 5, 2, 2],
+    A = [3, 3, 10, 6, 3],
+    E = [3, 3, 7, 12, 6],
+    x = [3, 3, 5, 10, 16],
+    T = [3, 3, 8, 13, 7],
+    v = [4, 6, 12, 9, 6],
+    b = [6, 10, 9, 16, 8],
+    S = 6.67 / 8,
+    R =
         "M16.5 18H16a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-.5v-.5a2.5 2.5 0 0 0-5 0v.5Zm3.5 0v-.5a1 1 0 1 0-2 0v.5h2Z",
-    x = "translate("
-        .concat(12.33 - 15 * A, ", ")
-        .concat(1 - 15.5 * A, ") scale(")
-        .concat(A, ")");
-
-function T(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p,
+    y = `translate(${12.33 - 15 * S}, ${1 - 15.5 * S}) scale(${S})`;
+function C(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m,
         l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
-        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 16;
-    for (let i = 0; i < 5; i++) {
-        let a = n[i],
-            o = D(-t, t);
-        e[i] = Math.max(l, Math.min(r, a + o));
+        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 16;
+    for (let a = 0; a < 5; a++) {
+        let s = n[a],
+            r = D(-t, t);
+        e[a] = Math.max(l, Math.min(i, s + r));
     }
     return e;
 }
-
 function D(e, t) {
     return Math.random() * (t - e) + e;
 }
-let w = {
+let M = {
     [h.s.GENTLE_AMBIENT]: {
         firstState: "burst",
-        transitionConfig: {
-            durationMs: 180,
-            timingFunction: g,
-        },
+        transitionConfig: { durationMs: 180, timingFunction: f },
         states: {
             burst: {
-                getHeights: (e) => T(e, 4),
+                getHeights: (e) => C(e, 4),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 3),
+                getHeights: (e) => C(e, 3),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(1e3, 3e3),
                 getNextState: () => "burst",
@@ -75,10 +59,7 @@ let w = {
     },
     [h.s.GENTLE_AMBIENT_WITH_INTRO]: {
         firstState: "introSilent",
-        transitionConfig: {
-            durationMs: 100,
-            timingFunction: g,
-        },
+        transitionConfig: { durationMs: 100, timingFunction: f },
         states: {
             introSilent: {
                 getHeights: (e) =>
@@ -93,49 +74,49 @@ let w = {
                 getNextState: () => "waveBuildCenter",
             },
             waveBuildCenter: {
-                getHeights: (e) => T(e, 3, m),
+                getHeights: (e) => C(e, 3, N),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "waveBuildRight1",
             },
             waveBuildRight1: {
-                getHeights: (e) => T(e, 4, y, 1),
+                getHeights: (e) => C(e, 4, A, 1),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "waveBuildRight2",
             },
             waveBuildRight2: {
-                getHeights: (e) => T(e, 4, v, 1),
+                getHeights: (e) => C(e, 4, E, 1),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "wavePeakRight",
             },
             wavePeakRight: {
-                getHeights: (e) => T(e, 4, O, 1),
+                getHeights: (e) => C(e, 4, x, 1),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "waveReturnLeft1",
             },
             waveReturnLeft1: {
-                getHeights: (e) => T(e, 5, j),
+                getHeights: (e) => C(e, 5, T),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "waveReturnLeft2",
             },
             waveReturnLeft2: {
-                getHeights: (e) => T(e, 5, E),
+                getHeights: (e) => C(e, 5, v),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(32, 64),
                 getNextState: () => "burst",
             },
             burst: {
-                getHeights: (e) => T(e, 4),
+                getHeights: (e) => C(e, 4),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 3),
+                getHeights: (e) => C(e, 3),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(1e3, 3e3),
                 getNextState: () => "burst",
@@ -144,19 +125,16 @@ let w = {
     },
     [h.s.HIGH_CONTRAST]: {
         firstState: "burst",
-        transitionConfig: {
-            durationMs: 120,
-            timingFunction: g,
-        },
+        transitionConfig: { durationMs: 120, timingFunction: f },
         states: {
             burst: {
-                getHeights: (e) => T(e, 7, N),
+                getHeights: (e) => C(e, 7, b),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 4, N),
+                getHeights: (e) => C(e, 4, b),
                 getAnimationDelay: () => D(64, 128),
                 getStateDuration: () => D(1e3, 3e3),
                 getNextState: () => "burst",
@@ -164,163 +142,89 @@ let w = {
         },
     },
 };
-
-function P(e) {
-    let { iconSize: t = 20, locked: n = !1, maskId: r } = e;
+function j(e) {
+    let { iconSize: t = 20, locked: n = !1, maskId: i } = e;
     return n
         ? (0, l.jsx)("defs", {
               children: (0, l.jsxs)("mask", {
-                  id: r,
+                  id: i,
                   children: [
-                      (0, l.jsx)("rect", {
-                          width: t,
-                          height: t,
-                          fill: "white",
-                      }),
-                      (0, l.jsx)("rect", {
-                          x: 11.33,
-                          y: 0,
-                          width: 8.67,
-                          height: 9.5,
-                          fill: "black",
-                          rx: 1,
-                      }),
+                      (0, l.jsx)("rect", { width: t, height: t, fill: "white" }),
+                      (0, l.jsx)("rect", { x: 11.33, y: 0, width: 8.67, height: 9.5, fill: "black", rx: 1 }),
                   ],
               }),
           })
         : null;
 }
-
-function R(e) {
+function I(e) {
     let t,
         n,
-        i,
+        a,
         {
             color: u = "currentColor",
             className: c,
-            animationStyle: g = h.s.GENTLE_AMBIENT,
-            iconSize: p = 20,
-            locked: m = !1,
+            animationStyle: f = h.s.GENTLE_AMBIENT,
+            iconSize: m = 20,
+            locked: N = !1,
         } = e,
-        y = r.useId(),
-        v = (0, s.bG)([d.A], () => d.A.isAppFocused()),
-        [O, j] = r.useState(!1),
-        E = r.useCallback((e) => {
-            j((t) => (t !== e ? e : t));
+        A = i.useId(),
+        E = (0, o.bG)([d.A], () => d.A.isAppFocused()),
+        [x, T] = i.useState(!1),
+        v = i.useCallback((e) => {
+            T((t) => (t !== e ? e : t));
         }, []),
-        N = (0, o.K)(E, 0.15),
-        A = r.useRef([, , , , ,].fill(0)),
-        T = w[g],
-        D = !v || !O,
-        R = (p - 18) / 2,
-        C = D ? 0 : T.transitionConfig.durationMs,
-        M = r.useRef(null),
-        I = r.useMemo(
+        b = (0, r.K)(v, 0.15),
+        S = i.useRef([, , , , ,].fill(0)),
+        C = M[f],
+        D = !E || !x,
+        I = (m - 18) / 2,
+        _ = D ? 0 : C.transitionConfig.durationMs,
+        L = i.useRef(null),
+        w = i.useMemo(
             () => ({
                 transitionProperty: "transform",
-                transitionDuration: "".concat(C, "ms"),
-                transitionTimingFunction: T.transitionConfig.timingFunction,
+                transitionDuration: `${_}ms`,
+                transitionTimingFunction: C.transitionConfig.timingFunction,
             }),
-            [T.transitionConfig.timingFunction, C],
+            [C.transitionConfig.timingFunction, _],
         ),
-        _ = r.useMemo(() => {
-            var e, t;
-            return (
-                (e = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (l = l.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            l.forEach(function (t) {
-                                var l;
-                                (l = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: l,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = l);
-                            });
-                    }
-                    return e;
-                })({}, I)),
-                (t = t =
-                    {
-                        width: 2,
-                        height: 16,
-                        backgroundColor: u,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
-                          }
-                          return n;
-                      })(Object(t)).forEach(function (n) {
-                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                      }),
-                e
-            );
-        }, [I, u]),
-        L = r.useMemo(
-            () => ({
-                left: R,
-                top: (p - 16) / 2,
-                width: 18,
-                height: 16,
-                columnGap: 2,
-            }),
-            [p, R, 18],
-        ),
-        k = r.useCallback(
+        k = i.useMemo(() => ({ ...w, width: 2, height: 16, backgroundColor: u }), [w, u]),
+        G = i.useMemo(() => ({ left: I, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, I, 18]),
+        O = i.useCallback(
             (e) => {
-                let t = M.current;
+                let t = L.current;
                 if (null == t) return;
                 let n = t.children;
                 for (let t = 0; t < 5; t++) {
                     let l = n.item(t);
                     if (null == l) continue;
-                    let r = e[t],
-                        i = Math.max(2, Math.min(16, "number" == typeof r && Number.isFinite(r) ? r : 2)) / 16;
-                    l.style.transform = "scaleY(".concat(i, ")");
+                    let i = e[t],
+                        a = Math.max(2, Math.min(16, "number" == typeof i && Number.isFinite(i) ? i : 2)) / 16;
+                    l.style.transform = `scaleY(${a})`;
                 }
             },
-            [M],
+            [L],
         );
-    r.useLayoutEffect(() => {
-        D || k(T.states[T.firstState].getHeights(A.current));
-    }, [k, T, D]),
-        (t = r.useRef(T.firstState)),
-        (n = r.useRef(null)),
-        (i = !D),
-        r.useEffect(() => {
-            if (!i) return;
-            (t.current = T.firstState), (n.current = null);
+    i.useLayoutEffect(() => {
+        D || O(C.states[C.firstState].getHeights(S.current));
+    }, [O, C, D]),
+        (t = i.useRef(C.firstState)),
+        (n = i.useRef(null)),
+        (a = !D),
+        i.useEffect(() => {
+            if (!a) return;
+            (t.current = C.firstState), (n.current = null);
             let e = null,
                 l = !1;
-            n.current = {
-                now: Date.now(),
-                stateEnterTime: Date.now(),
-                stateEndTime: 0,
-            };
-            let r = n.current,
-                a = (e) => {
-                    r.stateEnterTime = r.now;
+            n.current = { now: Date.now(), stateEnterTime: Date.now(), stateEndTime: 0 };
+            let i = n.current,
+                s = (e) => {
+                    i.stateEnterTime = i.now;
                     let t = e.getStateDuration();
-                    r.stateEndTime = t > 0 ? r.now + t : 0;
+                    i.stateEndTime = t > 0 ? i.now + t : 0;
                 },
-                o = (t) => {
-                    s(),
+                r = (t) => {
+                    o(),
                         l ||
                             (e = setTimeout(
                                 () => {
@@ -329,183 +233,122 @@ function R(e) {
                                 Math.max(0, t),
                             ));
                 },
-                s = () => {
+                o = () => {
                     null != e && (clearTimeout(e), (e = null));
                 },
                 u = () => {
                     if (l) return;
-                    (e = null), (r.now = Date.now());
+                    (e = null), (i.now = Date.now());
                     let n = t.current,
-                        i = T.states[n];
-                    if (null == i) {
-                        (t.current = T.firstState), o(0);
+                        a = C.states[n];
+                    if (null == a) {
+                        (t.current = C.firstState), r(0);
                         return;
                     }
                     try {
-                        let e = i.getHeights(A.current);
-                        k(e);
+                        let e = a.getHeights(S.current);
+                        O(e);
                     } catch (e) {
                         l = !0;
                         return;
                     }
-                    if (0 === r.stateEndTime || r.now >= r.stateEndTime) {
-                        let e = i.getNextState();
+                    if (0 === i.stateEndTime || i.now >= i.stateEndTime) {
+                        let e = a.getNextState();
                         t.current = e;
-                        let n = T.states[e];
-                        null != n && a(n);
+                        let n = C.states[e];
+                        null != n && s(n);
                     }
-                    o(i.getAnimationDelay());
+                    r(a.getAnimationDelay());
                 },
-                c = T.states[t.current];
+                c = C.states[t.current];
             return (
-                null != c && a(c),
-                o(0),
+                null != c && s(c),
+                r(0),
                 () => {
-                    (l = !0), s();
+                    (l = !0), o();
                 }
             );
-        }, [k, i, T, A]);
-    let G = m ? "url(#".concat(y, ")") : void 0;
+        }, [O, a, C, S]);
+    let P = N ? `url(#${A})` : void 0;
     return (0, l.jsx)("span", {
-        ref: N,
-        className: a()(c, f.Aj),
+        ref: b,
+        className: s()(c, g.Aj),
         children: (0, l.jsxs)("svg", {
-            width: p,
-            height: p,
-            viewBox: "0 0 ".concat(p, " ").concat(p),
+            width: m,
+            height: m,
+            viewBox: `0 0 ${m} ${m}`,
             fill: "none",
             children: [
-                (0, l.jsx)(P, {
-                    iconSize: p,
-                    locked: m,
-                    maskId: y,
-                }),
+                (0, l.jsx)(j, { iconSize: m, locked: N, maskId: A }),
                 (0, l.jsx)("g", {
-                    mask: G,
+                    mask: P,
                     children: (0, l.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: p,
-                        height: p,
+                        width: m,
+                        height: m,
                         children: (0, l.jsx)("div", {
-                            className: f.FH,
+                            className: g.FH,
                             children: (0, l.jsx)("div", {
-                                ref: M,
-                                className: f.Gb,
-                                style: L,
-                                children: b.map((e) =>
-                                    (0, l.jsx)(
-                                        "div",
-                                        {
-                                            className: f.M0,
-                                            style: _,
-                                        },
-                                        e,
-                                    ),
-                                ),
+                                ref: L,
+                                className: g.Gb,
+                                style: G,
+                                children: p.map((e) => (0, l.jsx)("div", { className: g.M0, style: k }, e)),
                             }),
                         }),
                     }),
                 }),
-                m &&
-                    (0, l.jsx)("path", {
-                        d: S,
-                        transform: x,
-                        fill: u,
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                    }),
+                N && (0, l.jsx)("path", { d: R, transform: y, fill: u, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-
-function C(e) {
-    let { color: t = "currentColor", className: n, iconSize: i = 20, locked: a = !1 } = e,
-        o = r.useId(),
-        s = (i - 18) / 2,
-        u = a ? "url(#".concat(o, ")") : void 0;
+function _(e) {
+    let { color: t = "currentColor", className: n, iconSize: a = 20, locked: s = !1 } = e,
+        r = i.useId(),
+        o = (a - 18) / 2,
+        u = s ? `url(#${r})` : void 0;
     return (0, l.jsx)("span", {
         className: n,
-        style: {
-            display: "inline-flex",
-            pointerEvents: "none",
-            contain: "strict",
-            width: i,
-            height: i,
-        },
+        style: { display: "inline-flex", pointerEvents: "none", contain: "strict", width: a, height: a },
         children: (0, l.jsxs)("svg", {
-            width: i,
-            height: i,
-            viewBox: "0 0 ".concat(i, " ").concat(i),
+            width: a,
+            height: a,
+            viewBox: `0 0 ${a} ${a}`,
             fill: "none",
             children: [
-                (0, l.jsx)(P, {
-                    iconSize: i,
-                    locked: a,
-                    maskId: o,
-                }),
+                (0, l.jsx)(j, { iconSize: a, locked: s, maskId: r }),
                 (0, l.jsx)("g", {
                     mask: u,
-                    children: p.map((e, n) => {
-                        let r = (i - e) / 2;
-                        return (0, l.jsx)(
-                            "rect",
-                            {
-                                x: s + 4 * n,
-                                y: r,
-                                width: 2,
-                                height: e,
-                                rx: 1,
-                                fill: t,
-                            },
-                            n,
-                        );
+                    children: m.map((e, n) => {
+                        let i = (a - e) / 2;
+                        return (0, l.jsx)("rect", { x: o + 4 * n, y: i, width: 2, height: e, rx: 1, fill: t }, n);
                     }),
                 }),
-                a &&
-                    (0, l.jsx)("path", {
-                        d: S,
-                        transform: x,
-                        fill: t,
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                    }),
+                s && (0, l.jsx)("path", { d: R, transform: y, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-
-function M(e) {
+function L(e) {
     let {
             color: t = "currentColor",
             className: n,
-            iconSize: i = 20,
-            animationStyle: a = h.s.GENTLE_AMBIENT,
-            locked: o = !1,
+            iconSize: a = 20,
+            animationStyle: s = h.s.GENTLE_AMBIENT,
+            locked: r = !1,
         } = e,
-        d = (0, s.bG)([u.A], () => u.A.useReducedMotion),
-        f = (0, s.bG)([c.A], () => c.A.isConnected()),
-        [g, p] = r.useState(f);
-    return (r.useEffect(() => {
-        if (f) {
-            let e = setTimeout(() => p(!0), 800);
+        d = (0, o.bG)([u.A], () => u.A.useReducedMotion),
+        g = (0, o.bG)([c.A], () => c.A.isConnected()),
+        [f, m] = i.useState(g);
+    return (i.useEffect(() => {
+        if (g) {
+            let e = setTimeout(() => m(!0), 800);
             return () => clearTimeout(e);
         }
-        p(!1);
-    }, [f]),
-    d || g)
-        ? (0, l.jsx)(C, {
-              color: t,
-              className: n,
-              iconSize: i,
-              locked: o,
-          })
-        : (0, l.jsx)(R, {
-              color: t,
-              className: n,
-              animationStyle: a,
-              iconSize: i,
-              locked: o,
-          });
+        m(!1);
+    }, [g]),
+    d || f)
+        ? (0, l.jsx)(_, { color: t, className: n, iconSize: a, locked: r })
+        : (0, l.jsx)(I, { color: t, className: n, animationStyle: s, iconSize: a, locked: r });
 }

@@ -1,61 +1,32 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => p });
 var r = n(439372),
     i = n(287809),
     a = n(936926),
-    o = n(390660);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = 6e4,
-    c = !1,
+    s = n(390660);
+let o = 6e4,
+    l = !1,
     u = null;
-
-function d() {
-    var e, t, n;
+function c() {
     return (
-        !!(0, a.Eq)({
-            location: "RestrictedHoursManager",
-        }) &&
-        null !=
-            (e =
-                null == (n = i.default.getCurrentUser()) || null == (t = n.restrictedSchedule)
-                    ? void 0
-                    : t.isInRestrictedHours()) &&
-        e
+        !!(0, a.Eq)({ location: "RestrictedHoursManager" }) &&
+        (i.default.getCurrentUser()?.restrictedSchedule?.isInRestrictedHours() ?? !1)
     );
 }
-
-function f() {
-    let e = d();
-    e !== c && ((c = e) ? (0, o.u)() : (0, o.k)());
+function d() {
+    let e = c();
+    e !== l && ((l = e) ? (0, s.u)() : (0, s.k)());
 }
-
-function p() {
-    f();
+function _() {
+    d();
 }
-class _ extends r.A {
+class f extends r.A {
+    stores = new Map().set(i.default, _);
     _initialize() {
-        (c = d()) && (0, o.u)(), (u = setInterval(f, l));
+        (l = c()) && (0, s.u)(), (u = setInterval(d, o));
     }
     _terminate() {
-        null != u && (clearInterval(u), (u = null)), (0, o.k)(), (c = !1);
-    }
-    constructor(...e) {
-        super(...e), s(this, "stores", new Map().set(i.default, p));
+        null != u && (clearInterval(u), (u = null)), (0, s.k)(), (l = !1);
     }
 }
-let h = new _();
+let p = new f();

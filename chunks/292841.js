@@ -1,15 +1,10 @@
-n.d(t, {
-    I: () => a,
-});
+"use strict";
+n.d(t, { I: () => a });
 var r = n(64700);
 let i = 1e3;
-
 function a(e) {
     let { keyboardDelegate: t, selectionManager: n, onTypeSelect: a } = e,
-        o = (0, r.useRef)({
-            search: "",
-            timeout: void 0,
-        }).current,
+        o = (0, r.useRef)({ search: "", timeout: void 0 }).current,
         l = (e) => {
             let r = s(e.key);
             if (
@@ -35,13 +30,8 @@ function a(e) {
                     }, i));
             }
         };
-    return {
-        typeSelectProps: {
-            onKeyDownCapture: t.getKeyForSearch ? l : void 0,
-        },
-    };
+    return { typeSelectProps: { onKeyDownCapture: t.getKeyForSearch ? l : void 0 } };
 }
-
 function s(e) {
     return 1 !== e.length && /^[A-Z]/i.test(e) ? "" : e;
 }

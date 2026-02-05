@@ -1,3 +1,1 @@
-e.exports = {
-    Kk: "icon_fbdcfd",
-};
+e.exports = { Kk: "icon_fbdcfd" };

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function () {
     (this.input = null),
         (this.next_in = 0),

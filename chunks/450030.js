@@ -1,4 +1,5 @@
-var t = /([A-Z])/g;
-e.exports = function (e) {
-    return e.replace(t, "-$1").toLowerCase();
+"use strict";
+var e = /([A-Z])/g;
+t.exports = function (t) {
+    return t.replace(e, "-$1").toLowerCase();
 };

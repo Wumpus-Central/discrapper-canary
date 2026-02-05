@@ -1,7 +1,5 @@
-n.d(t, {
-    P: () => i,
-    b: () => r,
-});
+"use strict";
+n.d(t, { P: () => i, b: () => r });
 var r = (function (e) {
         return (
             (e.COZY = "cozy"),

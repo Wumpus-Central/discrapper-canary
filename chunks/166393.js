@@ -1,84 +1,71 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048);
-var l = n(627968),
-    a = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(172218),
-    c = n(724002),
-    o = n(287174),
-    d = n(487899),
-    u = n(239314),
-    p = n(311907),
-    h = n(397927),
-    m = n(111162),
-    b = n(354138),
-    f = n(111042),
-    g = n(412461),
-    x = n(867333),
-    v = n(487953),
-    j = n(111737),
-    A = n(652215),
-    _ = n(789113);
-let y = o.K.APPLICATION_DIRECTORY;
-
-function O(e) {
-    let { collection: t, index: n, onSelectApplication: r } = e,
-        c = (function (e) {
-            let { collectionId: t, index: n } = e,
-                [l, r] = a.useState(!1),
-                i = (0, s.K)((e) => {
-                    e && r(!0);
+a.d(t, { A: () => E });
+var n = a(627968),
+    i = a(64700),
+    s = a(503698),
+    l = a.n(s),
+    r = a(172218),
+    o = a(724002),
+    c = a(287174),
+    d = a(487899),
+    u = a(239314),
+    h = a(311907),
+    m = a(397927),
+    p = a(111162),
+    _ = a(354138),
+    g = a(111042),
+    x = a(412461),
+    A = a(867333),
+    C = a(487953),
+    b = a(111737),
+    v = a(652215),
+    f = a(789113);
+let j = c.K.APPLICATION_DIRECTORY;
+function I(e) {
+    let { collection: t, index: a, onSelectApplication: s } = e,
+        o = (function (e) {
+            let { collectionId: t, index: a } = e,
+                [n, s] = i.useState(!1),
+                l = (0, r.K)((e) => {
+                    e && s(!0);
                 });
             return (
-                a.useEffect(() => {
-                    l &&
-                        (0, g.TR)(A.HAw.APP_DIRECTORY_COLLECTION_VIEWED, {
-                            collection_id: t,
-                            collection_position: n,
-                        });
-                }, [l, t, n]),
-                i
+                i.useEffect(() => {
+                    n && (0, x.TR)(v.HAw.APP_DIRECTORY_COLLECTION_VIEWED, { collection_id: t, collection_position: a });
+                }, [n, t, a]),
+                l
             );
-        })({
-            collectionId: t.id,
-            index: n,
-        }),
-        o = a.useCallback(
-            (e, l) => {
-                (0, g.TR)(A.HAw.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+        })({ collectionId: t.id, index: a }),
+        c = i.useCallback(
+            (e, n) => {
+                (0, x.TR)(v.HAw.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
-                    item_position: l,
-                    collection_position: n,
+                    item_position: n,
+                    collection_position: a,
                     application_id: e,
                 }),
-                    r(e);
+                    s(e);
             },
-            [t.id, n, r],
+            [t.id, a, s],
         );
-    return (0, l.jsxs)("div", {
-        ref: c,
+    return (0, n.jsxs)("div", {
+        ref: o,
         children: [
-            (0, l.jsx)(h.Heading, {
-                className: i()(_.Gf, {
-                    [_.SH]: 0 === n,
-                }),
+            (0, n.jsx)(m.Heading, {
+                className: l()(f.Gf, { [f.SH]: 0 === a }),
                 variant: "heading-lg/semibold",
                 color: "text-strong",
                 children: t.title,
             }),
-            (0, l.jsx)("div", {
-                className: _.Qs,
+            (0, n.jsx)("div", {
+                className: f.Qs,
                 children: t.application_directory_collection_items.map((e, t) =>
                     e.type !== d.L.APPLICATION || null == e.application
                         ? null
-                        : (0, l.jsx)(
-                              v.A,
+                        : (0, n.jsx)(
+                              C.A,
                               {
                                   application: e.application,
-                                  onSelectApplication: () => o(e.application.id, t),
+                                  onSelectApplication: () => c(e.application.id, t),
                                   showCategory: !0,
                               },
                               e.id,
@@ -88,50 +75,19 @@ function O(e) {
         ],
     });
 }
-let S = function (e) {
+let E = function (e) {
     let { onSelectApplication: t } = e,
-        n = (0, p.bG)([m.default], () => m.default.onlyShowPreviewAppCollections) ? c.W.PREVIEW : c.W.ACTIVE,
-        r = (0, p.bG)([f.A], () =>
-            f.A.getFetchState({
-                surface: y,
-                activeState: n,
-            }),
-        ),
-        i = (0, p.bG)([f.A], () =>
-            f.A.getCollections({
-                surface: y,
-                activeState: n,
-            }),
-        );
-    a.useEffect(() => {
-        b.An({
-            surface: y,
-            activeState: n,
-        });
-    }, [n]);
-    let s = a.useMemo(() => (null == i ? void 0 : i.filter((e) => e.type !== u.Y.GALLERY)), [i]);
-    return r === f.e.ERROR
-        ? (0, l.jsx)("div", {
-              className: _.Un,
-              children: (0, l.jsx)(j.A, {
-                  className: _.z3,
-              }),
-          })
-        : (0, l.jsx)(x.A, {
-              loading: r === f.e.FETCHING,
-              children:
-                  null == s
-                      ? void 0
-                      : s.map((e, n) =>
-                            (0, l.jsx)(
-                                O,
-                                {
-                                    collection: e,
-                                    index: n,
-                                    onSelectApplication: t,
-                                },
-                                n,
-                            ),
-                        ),
+        a = (0, h.bG)([p.default], () => p.default.onlyShowPreviewAppCollections) ? o.W.PREVIEW : o.W.ACTIVE,
+        s = (0, h.bG)([g.A], () => g.A.getFetchState({ surface: j, activeState: a })),
+        l = (0, h.bG)([g.A], () => g.A.getCollections({ surface: j, activeState: a }));
+    i.useEffect(() => {
+        _.An({ surface: j, activeState: a });
+    }, [a]);
+    let r = i.useMemo(() => l?.filter((e) => e.type !== u.Y.GALLERY), [l]);
+    return s === g.e.ERROR
+        ? (0, n.jsx)("div", { className: f.Un, children: (0, n.jsx)(b.A, { className: f.z3 }) })
+        : (0, n.jsx)(A.A, {
+              loading: s === g.e.FETCHING,
+              children: r?.map((e, a) => (0, n.jsx)(I, { collection: e, index: a, onSelectApplication: t }, a)),
           });
 };

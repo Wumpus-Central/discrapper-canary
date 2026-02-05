@@ -1,74 +1,54 @@
-n.d(t, {
-    A: () => b,
-    V: () => g,
-});
-var r,
-    i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(827734),
-    c = n(319060),
-    u = n(765671),
-    d = n(371664),
-    p = n(240248),
-    f = n(477412);
-let m = (0, p.xI)(c.A.GRADIENT_PROGRESS_NOTCH_WIDTH);
-var g = (((r = {}).BLACK = "BLACK"), (r.GRAY = "GRAY"), r);
-let y = {
-    BLACK: f.Ql,
-    GRAY: f.wm,
-};
-
-function _(e) {
-    return Math.round(e / m) * m;
+i.d(t, { A: () => x, V: () => v });
+var n,
+    s = i(627968),
+    l = i(64700),
+    a = i(503698),
+    r = i.n(a),
+    o = i(827734),
+    c = i(319060),
+    u = i(765671),
+    d = i(371664),
+    h = i(240248),
+    m = i(477412);
+let p = (0, h.xI)(c.A.GRADIENT_PROGRESS_NOTCH_WIDTH);
+var v = (((n = {}).BLACK = "BLACK"), (n.GRAY = "GRAY"), n);
+let g = { BLACK: m.Ql, GRAY: m.wm };
+function f(e) {
+    return Math.round(e / p) * p;
 }
-
-function b(e) {
+function x(e) {
     let {
             notchBackground: t,
-            progress: n,
-            gradientStart: r = o.A.unsafe_rawColors.YELLOW_260.css,
+            progress: i,
+            gradientStart: n = o.A.unsafe_rawColors.YELLOW_260.css,
             gradientEnd: a = o.A.unsafe_rawColors.GREEN_360.css,
             className: c,
-            notchClassName: p,
-            children: m,
+            notchClassName: h,
+            children: p,
         } = e,
-        { ref: g, width: b } = (0, u.Ay)(),
-        A = l.useMemo(() => (null != b ? _(b) : 0), [b]),
-        h = l.useMemo(() => {
-            let e = Math.abs(_((A * (100 - Math.max(0, Math.min(100, n)))) / 100) - A);
-            return {
-                transform: "translateX(".concat(e, "px)"),
-            };
-        }, [n, A]),
-        v = l.useMemo(
-            () => ({
-                width: "".concat(A, "px"),
-                background: n <= 0 ? "none" : "linear-gradient(to right, ".concat(r, ", ").concat(a, ")"),
-            }),
-            [a, r, n, A],
+        { ref: v, width: x } = (0, u.Ay)(),
+        _ = l.useMemo(() => (null != x ? f(x) : 0), [x]),
+        A = l.useMemo(() => {
+            let e = Math.abs(f((_ * (100 - Math.max(0, Math.min(100, i)))) / 100) - _);
+            return { transform: `translateX(${e}px)` };
+        }, [i, _]),
+        T = l.useMemo(
+            () => ({ width: `${_}px`, background: i <= 0 ? "none" : `linear-gradient(to right, ${n}, ${a})` }),
+            [a, n, i, _],
         );
-    return (0, i.jsxs)("div", {
-        className: f.iE,
-        ref: g,
+    return (0, s.jsxs)("div", {
+        className: m.iE,
+        ref: v,
         children: [
-            (0, i.jsxs)("div", {
-                className: s()(f.kL, c),
-                style: v,
+            (0, s.jsxs)("div", {
+                className: r()(m.kL, c),
+                style: T,
                 children: [
-                    (0, i.jsx)("div", {
-                        className: f.qB,
-                        style: h,
-                    }),
-                    0 !== A &&
-                        (0, i.jsx)(d.A, {
-                            width: A,
-                            className: s()(f.DR, y[t], p),
-                        }),
+                    (0, s.jsx)("div", { className: m.qB, style: A }),
+                    0 !== _ && (0, s.jsx)(d.A, { width: _, className: r()(m.DR, g[t], h) }),
                 ],
             }),
-            m,
+            p,
         ],
     });
 }

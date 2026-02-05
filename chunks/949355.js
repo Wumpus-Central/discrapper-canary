@@ -1,20 +1,13 @@
-n.d(t, {
-    FZ: () => h,
-    Um: () => d,
-}),
-    n(734808),
-    n(896048),
-    n(228524),
-    n(321073),
-    n(65821);
+"use strict";
+n.d(t, { FZ: () => h, Um: () => d }), n(321073);
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(324281),
     o = n(21953),
     l = n(406935),
-    c = n(335871),
-    u = (function (e) {
+    u = n(335871),
+    c = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.USER = 1)] = "USER"),
@@ -34,10 +27,10 @@ var r = n(852015),
             e
         );
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e[(e.ENABLED = 0)] = "ENABLED"), (e[(e.DISABLED = 1)] = "DISABLED"), e;
     })({}),
-    p = (function (e) {
+    f = (function (e) {
         return (
             (e[(e.FULL = 0)] = "FULL"),
             (e[(e.FORCE_CONTROL = 3)] = "FORCE_CONTROL"),
@@ -46,7 +39,7 @@ var r = n(852015),
             e
         );
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.HOLDOUT = 1)] = "HOLDOUT"), e;
     })({}),
     h = (function (e) {
@@ -80,6 +73,69 @@ var r = n(852015),
         );
     })({});
 class E extends s.G {
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.Experiment", [
+            { no: 1, name: "id", kind: "scalar", T: 6 },
+            { no: 2, name: "name", kind: "scalar", T: 9 },
+            { no: 3, name: "created_at", kind: "message", T: () => u.D },
+            { no: 4, name: "creator_id", kind: "scalar", T: 6 },
+            { no: 5, name: "version", kind: "scalar", T: 5 },
+            { no: 6, name: "edited_at", kind: "message", T: () => u.D },
+            { no: 7, name: "editor_id", kind: "scalar", T: 6 },
+            { no: 8, name: "title", kind: "scalar", T: 9 },
+            { no: 9, name: "description", kind: "scalar", T: 9 },
+            { no: 10, name: "hypothesis", kind: "message", T: () => l.hU },
+            { no: 11, name: "tech_spec_link", kind: "message", T: () => l.hU },
+            { no: 12, name: "revision", kind: "scalar", T: 5 },
+            { no: 13, name: "hash_key", kind: "scalar", T: 9 },
+            {
+                no: 14,
+                name: "unit_type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", c],
+            },
+            { no: 15, name: "variations", kind: "message", repeat: 1, T: () => I },
+            { no: 16, name: "rules", kind: "message", repeat: 1, T: () => o.jO },
+            { no: 18, name: "phase", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Phase", g] },
+            {
+                no: 19,
+                name: "surfaces",
+                kind: "enum",
+                repeat: 1,
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Surface", d],
+            },
+            { no: 20, name: "owning_team_id", kind: "scalar", T: 9 },
+            { no: 21, name: "cached_notification_channel_id", kind: "scalar", T: 6 },
+            {
+                no: 22,
+                name: "exposure_tracking",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", _],
+            },
+            {
+                no: 25,
+                name: "assignment_mode",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", f],
+            },
+            { no: 23, name: "enable_edit_raw_json_ui", kind: "scalar", T: 8 },
+            { no: 24, name: "winning_variation_id", kind: "scalar", T: 5 },
+            { no: 34, name: "extra_outcome_context", kind: "scalar", T: 9 },
+            {
+                no: 26,
+                name: "type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", p],
+            },
+            { no: 27, name: "is_template", kind: "scalar", T: 8 },
+            { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 },
+            { no: 29, name: "engine_feature_flags", kind: "scalar", repeat: 2, T: 9 },
+            { no: 30, name: "debug_config", kind: "message", T: () => v },
+            { no: 31, name: "expected_end_date", kind: "message", T: () => u.D },
+            { no: 32, name: "is_automated_change", kind: "scalar", T: 8 },
+            { no: 33, name: "archive_at", kind: "message", T: () => u.D },
+        ]);
+    }
     create(e) {
         let t = {
             id: "0",
@@ -110,16 +166,13 @@ class E extends s.G {
             isAutomatedChange: !1,
         };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -131,7 +184,7 @@ class E extends s.G {
                     a.name = e.string();
                     break;
                 case 3:
-                    a.createdAt = c.D.internalBinaryRead(e, e.uint32(), n, a.createdAt);
+                    a.createdAt = u.D.internalBinaryRead(e, e.uint32(), n, a.createdAt);
                     break;
                 case 4:
                     a.creatorId = e.fixed64().toString();
@@ -140,7 +193,7 @@ class E extends s.G {
                     a.version = e.int32();
                     break;
                 case 6:
-                    a.editedAt = c.D.internalBinaryRead(e, e.uint32(), n, a.editedAt);
+                    a.editedAt = u.D.internalBinaryRead(e, e.uint32(), n, a.editedAt);
                     break;
                 case 7:
                     a.editorId = e.fixed64().toString();
@@ -167,7 +220,7 @@ class E extends s.G {
                     a.unitType = e.int32();
                     break;
                 case 15:
-                    a.variations.push(y.internalBinaryRead(e, e.uint32(), n));
+                    a.variations.push(I.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
                     a.rules.push(o.jO.internalBinaryRead(e, e.uint32(), n));
@@ -216,25 +269,23 @@ class E extends s.G {
                     a.engineFeatureFlags.push(e.string());
                     break;
                 case 30:
-                    a.debugConfig = S.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
+                    a.debugConfig = v.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
                     break;
                 case 31:
-                    a.expectedEndDate = c.D.internalBinaryRead(e, e.uint32(), n, a.expectedEndDate);
+                    a.expectedEndDate = u.D.internalBinaryRead(e, e.uint32(), n, a.expectedEndDate);
                     break;
                 case 32:
                     a.isAutomatedChange = e.bool();
                     break;
                 case 33:
-                    a.archiveAt = c.D.internalBinaryRead(e, e.uint32(), n, a.archiveAt);
+                    a.archiveAt = u.D.internalBinaryRead(e, e.uint32(), n, a.archiveAt);
                     break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
-                    let u = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, u);
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let c = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, c);
             }
         }
         return a;
@@ -242,10 +293,10 @@ class E extends s.G {
     internalBinaryWrite(e, t, n) {
         "0" !== e.id && t.tag(1, r.O0.Bit64).fixed64(e.id),
             "" !== e.name && t.tag(2, r.O0.LengthDelimited).string(e.name),
-            e.createdAt && c.D.internalBinaryWrite(e.createdAt, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
+            e.createdAt && u.D.internalBinaryWrite(e.createdAt, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.creatorId && t.tag(4, r.O0.Bit64).fixed64(e.creatorId),
             0 !== e.version && t.tag(5, r.O0.Varint).int32(e.version),
-            e.editedAt && c.D.internalBinaryWrite(e.editedAt, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+            e.editedAt && u.D.internalBinaryWrite(e.editedAt, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.editorId && t.tag(7, r.O0.Bit64).fixed64(e.editorId),
             "" !== e.title && t.tag(8, r.O0.LengthDelimited).string(e.title),
             "" !== e.description && t.tag(9, r.O0.LengthDelimited).string(e.description),
@@ -256,7 +307,7 @@ class E extends s.G {
             "" !== e.hashKey && t.tag(13, r.O0.LengthDelimited).string(e.hashKey),
             0 !== e.unitType && t.tag(14, r.O0.Varint).int32(e.unitType);
         for (let i = 0; i < e.variations.length; i++)
-            y.internalBinaryWrite(e.variations[i], t.tag(15, r.O0.LengthDelimited).fork(), n).join();
+            I.internalBinaryWrite(e.variations[i], t.tag(15, r.O0.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
             o.jO.internalBinaryWrite(e.rules[i], t.tag(16, r.O0.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, r.O0.Varint).int32(e.phase), e.surfaces.length)) {
@@ -282,243 +333,42 @@ class E extends s.G {
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
             t.tag(29, r.O0.LengthDelimited).string(e.engineFeatureFlags[n]);
-        e.debugConfig && S.internalBinaryWrite(e.debugConfig, t.tag(30, r.O0.LengthDelimited).fork(), n).join(),
+        e.debugConfig && v.internalBinaryWrite(e.debugConfig, t.tag(30, r.O0.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
-                c.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.O0.LengthDelimited).fork(), n).join(),
+                u.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isAutomatedChange && t.tag(32, r.O0.Varint).bool(e.isAutomatedChange),
-            e.archiveAt && c.D.internalBinaryWrite(e.archiveAt, t.tag(33, r.O0.LengthDelimited).fork(), n).join();
+            e.archiveAt && u.D.internalBinaryWrite(e.archiveAt, t.tag(33, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.discord_experimentation.v1.Experiment", [
-            {
-                no: 1,
-                name: "id",
-                kind: "scalar",
-                T: 6,
-            },
-            {
-                no: 2,
-                name: "name",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 3,
-                name: "created_at",
-                kind: "message",
-                T: () => c.D,
-            },
-            {
-                no: 4,
-                name: "creator_id",
-                kind: "scalar",
-                T: 6,
-            },
-            {
-                no: 5,
-                name: "version",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 6,
-                name: "edited_at",
-                kind: "message",
-                T: () => c.D,
-            },
-            {
-                no: 7,
-                name: "editor_id",
-                kind: "scalar",
-                T: 6,
-            },
-            {
-                no: 8,
-                name: "title",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 9,
-                name: "description",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 10,
-                name: "hypothesis",
-                kind: "message",
-                T: () => l.hU,
-            },
-            {
-                no: 11,
-                name: "tech_spec_link",
-                kind: "message",
-                T: () => l.hU,
-            },
-            {
-                no: 12,
-                name: "revision",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 13,
-                name: "hash_key",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 14,
-                name: "unit_type",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", u],
-            },
-            {
-                no: 15,
-                name: "variations",
-                kind: "message",
-                repeat: 1,
-                T: () => y,
-            },
-            {
-                no: 16,
-                name: "rules",
-                kind: "message",
-                repeat: 1,
-                T: () => o.jO,
-            },
-            {
-                no: 18,
-                name: "phase",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Phase", g],
-            },
-            {
-                no: 19,
-                name: "surfaces",
-                kind: "enum",
-                repeat: 1,
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Surface", d],
-            },
-            {
-                no: 20,
-                name: "owning_team_id",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 21,
-                name: "cached_notification_channel_id",
-                kind: "scalar",
-                T: 6,
-            },
-            {
-                no: 22,
-                name: "exposure_tracking",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", f],
-            },
-            {
-                no: 25,
-                name: "assignment_mode",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", p],
-            },
-            {
-                no: 23,
-                name: "enable_edit_raw_json_ui",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 24,
-                name: "winning_variation_id",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 34,
-                name: "extra_outcome_context",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 26,
-                name: "type",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", _],
-            },
-            {
-                no: 27,
-                name: "is_template",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 28,
-                name: "field_numbers_to_copy",
-                kind: "scalar",
-                repeat: 1,
-                T: 5,
-            },
-            {
-                no: 29,
-                name: "engine_feature_flags",
-                kind: "scalar",
-                repeat: 2,
-                T: 9,
-            },
-            {
-                no: 30,
-                name: "debug_config",
-                kind: "message",
-                T: () => S,
-            },
-            {
-                no: 31,
-                name: "expected_end_date",
-                kind: "message",
-                T: () => c.D,
-            },
-            {
-                no: 32,
-                name: "is_automated_change",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 33,
-                name: "archive_at",
-                kind: "message",
-                T: () => c.D,
-            },
-        ]);
-    }
 }
 new E();
-class b extends s.G {
+class A extends s.G {
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.Variation", [
+            { no: 1, name: "id", kind: "scalar", T: 5 },
+            { no: 2, name: "label", kind: "scalar", T: 9 },
+            { no: 3, name: "target_allocation", kind: "scalar", T: 5 },
+            { no: 4, name: "buckets", kind: "message", repeat: 1, T: () => y },
+            {
+                no: 5,
+                name: "type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", h],
+            },
+            { no: 6, name: "configuration", kind: "message", T: () => l.hU },
+        ]);
+    }
     create(e) {
-        let t = {
-            id: 0,
-            label: "",
-            targetAllocation: 0,
-            buckets: [],
-            type: 0,
-        };
+        let t = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -533,7 +383,7 @@ class b extends s.G {
                     a.targetAllocation = e.int32();
                     break;
                 case 4:
-                    a.buckets.push(A.internalBinaryRead(e, e.uint32(), n));
+                    a.buckets.push(y.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 5:
                     a.type = e.int32();
@@ -544,9 +394,7 @@ class b extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
                     !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -558,74 +406,38 @@ class b extends s.G {
             "" !== e.label && t.tag(2, r.O0.LengthDelimited).string(e.label),
             0 !== e.targetAllocation && t.tag(3, r.O0.Varint).int32(e.targetAllocation);
         for (let i = 0; i < e.buckets.length; i++)
-            A.internalBinaryWrite(e.buckets[i], t.tag(4, r.O0.LengthDelimited).fork(), n).join();
+            y.internalBinaryWrite(e.buckets[i], t.tag(4, r.O0.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, r.O0.Varint).int32(e.type),
             e.configuration &&
                 l.hU.internalBinaryWrite(e.configuration, t.tag(6, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
+}
+let I = new A();
+class T extends s.G {
     constructor() {
-        super("discord_protos.discord_experimentation.v1.Variation", [
-            {
-                no: 1,
-                name: "id",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 2,
-                name: "label",
-                kind: "scalar",
-                T: 9,
-            },
+        super("discord_protos.discord_experimentation.v1.Bucket", [
+            { no: 1, name: "start", kind: "scalar", T: 5 },
+            { no: 2, name: "stop", kind: "scalar", T: 5 },
             {
                 no: 3,
-                name: "target_allocation",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 4,
-                name: "buckets",
-                kind: "message",
-                repeat: 1,
-                T: () => A,
-            },
-            {
-                no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", h],
-            },
-            {
-                no: 6,
-                name: "configuration",
-                kind: "message",
-                T: () => l.hU,
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", m],
             },
         ]);
     }
-}
-let y = new b();
-class O extends s.G {
     create(e) {
-        let t = {
-            start: 0,
-            stop: 0,
-            type: 0,
-        };
+        let t = { start: 0, stop: 0, type: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -642,9 +454,7 @@ class O extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
                     !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -658,31 +468,19 @@ class O extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
+}
+let y = new T();
+class S extends s.G {
     constructor() {
-        super("discord_protos.discord_experimentation.v1.Bucket", [
-            {
-                no: 1,
-                name: "start",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 2,
-                name: "stop",
-                kind: "scalar",
-                T: 5,
-            },
-            {
-                no: 3,
-                name: "type",
-                kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", m],
-            },
+        super("discord_protos.discord_experimentation.v1.DebugConfig", [
+            { no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 },
+            { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 },
+            { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 },
+            { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 },
+            { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 },
+            { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 },
         ]);
     }
-}
-let A = new O();
-class v extends s.G {
     create(e) {
         let t = {
             enableDecisionLogging: !1,
@@ -693,16 +491,13 @@ class v extends s.G {
             decisionLogSampleRate: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -728,9 +523,7 @@ class v extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
                     !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -747,45 +540,5 @@ class v extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.discord_experimentation.v1.DebugConfig", [
-            {
-                no: 1,
-                name: "enable_decision_logging",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 2,
-                name: "metrics_sample_rate",
-                kind: "scalar",
-                T: 1,
-            },
-            {
-                no: 3,
-                name: "log_context_on_failure",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 4,
-                name: "log_raw_headers",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 5,
-                name: "tag_filter_metrics",
-                kind: "scalar",
-                T: 8,
-            },
-            {
-                no: 6,
-                name: "decision_log_sample_rate",
-                kind: "scalar",
-                T: 1,
-            },
-        ]);
-    }
 }
-let S = new v();
+let v = new S();

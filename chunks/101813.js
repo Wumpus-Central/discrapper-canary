@@ -1,4 +1,5 @@
-var t = /\r\n?|\n/g;
-e.exports = function (e) {
-    return e.split(t);
+"use strict";
+var e = /\r\n?|\n/g;
+t.exports = function (t) {
+    return t.split(e);
 };

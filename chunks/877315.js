@@ -1,15 +1,12 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(652896),
-    i = n(279250),
-    a = n(652215),
-    s = n(985018);
-
-function o(e, t, n, o) {
-    return null == t || t.state === a.XYD.ENDED || (0, r._z)(t) !== (0, r._z)(e)
-        ? (0, i.CT)(o)
-        : t.ownerId === n
-          ? s.intl.string(s.t.XvBdeT)
-          : s.intl.string(s.t["JH1SJ+"]);
+i.d(t, { A: () => s });
+var n = i(652896),
+    a = i(279250),
+    l = i(652215),
+    r = i(985018);
+function s(e, t, i, s) {
+    return null == t || t.state === l.XYD.ENDED || (0, n._z)(t) !== (0, n._z)(e)
+        ? (0, a.CT)(s)
+        : t.ownerId === i
+          ? r.intl.string(r.t.XvBdeT)
+          : r.intl.string(r.t["JH1SJ+"]);
 }

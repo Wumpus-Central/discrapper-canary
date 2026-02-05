@@ -1,56 +1,33 @@
-n.d(e, {
-    A: () => r,
-});
-var i = n(502075),
-    l = n(985018);
-
-function r(t) {
-    let { isEndStream: e } = t;
+i.d(n, { A: () => a });
+var l = i(502075),
+    e = i(985018);
+function a(t) {
+    let { isEndStream: n } = t;
     return [
         {
             id: "black-screen",
-            value: i.pj.BLACK_SCREEN,
-            label: e ? l.intl.string(l.t["0X5Zbq"]) : l.intl.string(l.t.fxiRNr),
+            value: l.pj.BLACK_SCREEN,
+            label: n ? e.intl.string(e.t["0X5Zbq"]) : e.intl.string(e.t.fxiRNr),
         },
-        {
-            id: "blurry",
-            value: i.pj.BLURRY,
-            label: e ? l.intl.string(l.t.VVPQyy) : l.intl.string(l.t.E8jTMN),
-        },
-        {
-            id: "lagging",
-            value: i.pj.LAGGING,
-            label: e ? l.intl.string(l.t.ObEHd4) : l.intl.string(l.t.VoSJEQ),
-        },
+        { id: "blurry", value: l.pj.BLURRY, label: n ? e.intl.string(e.t.VVPQyy) : e.intl.string(e.t.E8jTMN) },
+        { id: "lagging", value: l.pj.LAGGING, label: n ? e.intl.string(e.t.ObEHd4) : e.intl.string(e.t.VoSJEQ) },
         {
             id: "out-of-sync",
-            value: i.pj.OUT_OF_SYNC,
-            label: e ? l.intl.string(l.t.mYmwD3) : l.intl.string(l.t["+NluQm"]),
+            value: l.pj.OUT_OF_SYNC,
+            label: n ? e.intl.string(e.t.mYmwD3) : e.intl.string(e.t["+NluQm"]),
         },
         {
             id: "audio-missing",
-            value: i.pj.AUDIO_MISSING,
-            label: e ? l.intl.string(l.t["Xwv41+"]) : l.intl.string(l.t.G2egzT),
+            value: l.pj.AUDIO_MISSING,
+            label: n ? e.intl.string(e.t["Xwv41+"]) : e.intl.string(e.t.G2egzT),
         },
         {
             id: "audio-poor",
-            value: i.pj.AUDIO_POOR,
-            label: e ? l.intl.string(l.t["fHey+d"]) : l.intl.string(l.t.aHOfIo),
+            value: l.pj.AUDIO_POOR,
+            label: n ? e.intl.string(e.t["fHey+d"]) : e.intl.string(e.t.aHOfIo),
         },
-        {
-            id: "stream-stopped",
-            value: i.pj.STREAM_STOPPED,
-            label: l.intl.string(l.t.uEoqQp),
-        },
-        {
-            id: "vibes-off",
-            value: i.pj.VIBES_OFF,
-            label: l.intl.string(l.t["++JLL0"]),
-        },
-        {
-            id: "other",
-            value: i.pj.OTHER,
-            label: l.intl.string(l.t.emlT91),
-        },
+        { id: "stream-stopped", value: l.pj.STREAM_STOPPED, label: e.intl.string(e.t.uEoqQp) },
+        { id: "vibes-off", value: l.pj.VIBES_OFF, label: e.intl.string(e.t["++JLL0"]) },
+        { id: "other", value: l.pj.OTHER, label: e.intl.string(e.t.emlT91) },
     ];
 }

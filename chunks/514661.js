@@ -1,22 +1,18 @@
-d.d(a, {
-    A: () => f,
-}),
-    d(896048);
-var c = d(64700),
-    b = d(933725),
-    t = d(849841);
-
-function f(e, a) {
-    let [d, f] = c.useState(!1),
-        n = c.useCallback(async () => {
-            null != e && (f(!0), await (0, b.m)(e, !0), f(!1)), null == a || a();
-        }, [e, a]),
-        r = (0, t.A)(e);
+n.d(t, { A: () => l });
+var a = n(64700),
+    s = n(933725),
+    i = n(849841);
+function l(e, t) {
+    let [n, l] = a.useState(!1),
+        r = a.useCallback(async () => {
+            null != e && (l(!0), await (0, s.m)(e, !0), l(!1)), t?.();
+        }, [e, t]),
+        o = (0, i.A)(e);
     return {
-        isAdopting: d,
-        onAdoptTag: n,
-        onEditProfile: c.useCallback(() => {
-            null == a || a(), r();
-        }, [r, a]),
+        isAdopting: n,
+        onAdoptTag: r,
+        onEditProfile: a.useCallback(() => {
+            t?.(), o();
+        }, [o, t]),
     };
 }

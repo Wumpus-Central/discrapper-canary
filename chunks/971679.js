@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(675879),
     s = e(999843),
@@ -24,11 +25,7 @@ var n = e(834647),
             );
         });
 n(
-    {
-        target: "Map",
-        stat: !0,
-        forced: a || x,
-    },
+    { target: "Map", stat: !0, forced: a || x },
     {
         groupBy: function (t, r) {
             i(t), s(r);

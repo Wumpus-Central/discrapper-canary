@@ -1,10 +1,8 @@
-n.d(t, {
-    i: () => y,
-});
+"use strict";
+n.d(t, { i: () => I });
 var r = n(384623),
     i = n(12543),
     a = n(438767);
-
 function s(e) {
     return (s =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -17,11 +15,9 @@ function s(e) {
                       : typeof e;
               })(e);
 }
-
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -31,23 +27,14 @@ function l(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
-function c(e, t, n) {
+function u(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
-
-function u(e, t) {
+function c(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            writable: !0,
-            configurable: !0,
-        },
-    })),
+    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
         t && d(e, t);
 }
-
 function d(e, t) {
     return (d =
         Object.setPrototypeOf ||
@@ -55,25 +42,21 @@ function d(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-
-function f(e) {
+function _(e) {
     var t = h();
     return function () {
         var n,
             r = m(e);
-        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), p(this, n);
+        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), f(this, n);
     };
 }
-
-function p(e, t) {
-    return t && ("object" === s(t) || "function" == typeof t) ? t : _(e);
+function f(e, t) {
+    return t && ("object" === s(t) || "function" == typeof t) ? t : p(e);
 }
-
-function _(e) {
+function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-
 function h() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
@@ -83,7 +66,6 @@ function h() {
         return !1;
     }
 }
-
 function m(e) {
     return (m = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -91,39 +73,30 @@ function m(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-
 function g(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
 var E = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    b = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    y = (function (e) {
-        u(n, e);
-        var t = f(n);
-
+    A = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+    I = (function (e) {
+        c(n, e);
+        var t = _(n);
         function n() {
             var e;
             o(this, n);
             for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
             return (
-                g(_((e = t.call.apply(t, [this].concat(i)))), "priority", 90),
-                g(_(e), "subPriority", 1),
-                g(_(e), "incompatibleTokens", ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"]),
+                g(p((e = t.call.apply(t, [this].concat(i)))), "priority", 90),
+                g(p(e), "subPriority", 1),
+                g(p(e), "incompatibleTokens", ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"]),
                 e
             );
         }
         return (
-            c(n, [
+            u(n, [
                 {
                     key: "parse",
                     value: function (e, t, n) {
@@ -131,9 +104,7 @@ var E = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
                             case "d":
                                 return (0, r.P2)(a.h.date, e);
                             case "do":
-                                return n.ordinalNumber(e, {
-                                    unit: "date",
-                                });
+                                return n.ordinalNumber(e, { unit: "date" });
                             default:
                                 return (0, r.ym)(t.length, e);
                         }
@@ -145,7 +116,7 @@ var E = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
                         var n = e.getUTCFullYear(),
                             i = (0, r.iz)(n),
                             a = e.getUTCMonth();
-                        return i ? t >= 1 && t <= b[a] : t >= 1 && t <= E[a];
+                        return i ? t >= 1 && t <= A[a] : t >= 1 && t <= E[a];
                     },
                 },
                 {

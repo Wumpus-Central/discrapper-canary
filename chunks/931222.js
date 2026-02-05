@@ -1,49 +1,28 @@
-n.d(t, {
-    L: () => c,
-}),
-    n(896048),
-    n(321073),
-    n(667532);
-var r = n(64700),
-    i = n(311907),
-    l = n(499118),
-    a = n(351022),
+n.d(t, { L: () => d }), n(321073), n(667532);
+var i = n(64700),
+    r = n(311907),
+    a = n(499118),
+    l = n(351022),
     s = n(282026),
     o = n(324580);
-
-function c() {
+function d() {
     let e = s.A.useField("fetchedQuery"),
         t = s.A.useField("resultsInitialCategoryId"),
         n = s.A.useField("languageCode"),
-        c = (0, i.bG)([a.A], () => {
-            if (null == t) return 0;
-            let r = a.A.getTotal({
-                categoryId: t,
-                query: e,
-                languageCode: n,
-            });
-            return null != r ? r : 0;
-        }),
-        u = (0, i.bG)([a.A], () => {
-            let t = a.A.getTotal({
-                categoryId: o.Iq,
-                query: e,
-                languageCode: n,
-            });
-            return null != t ? t : 0;
-        }),
-        d = (0, i.bG)([l.A], () => l.A.getVisibleTabs());
-    return r.useMemo(() => {
-        if (null == d) return null;
-        if (null == t) return d;
+        d = (0, r.bG)([l.A], () => (null == t ? 0 : (l.A.getTotal({ categoryId: t, query: e, languageCode: n }) ?? 0))),
+        c = (0, r.bG)([l.A], () => l.A.getTotal({ categoryId: o.Iq, query: e, languageCode: n }) ?? 0),
+        u = (0, r.bG)([a.A], () => a.A.getVisibleTabs());
+    return i.useMemo(() => {
+        if (null == u) return null;
+        if (null == t) return u;
         let e = [],
             n = new Set();
-        for (let [t, r] of d) n.add(t), e.push([t, r]);
-        let r = !1;
+        for (let [t, i] of u) n.add(t), e.push([t, i]);
+        let i = !1;
         return (
-            n.has(o.Iq) || (n.add(o.Iq), e.unshift([o.Iq, u]), (r = !0)),
-            n.has(t) || (n.add(t), e.push([t, c]), (r = !0)),
-            r ? e : d
+            n.has(o.Iq) || (n.add(o.Iq), e.unshift([o.Iq, c]), (i = !0)),
+            n.has(t) || (n.add(t), e.push([t, d]), (i = !0)),
+            i ? e : u
         );
-    }, [d, t, u, c]);
+    }, [u, t, c, d]);
 }

@@ -1,171 +1,100 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(228524);
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var s = n(397927),
     l = n(58149),
-    s = n(688810),
+    r = n(688810),
     a = n(753838),
-    c = n(201275),
-    o = n(631305),
-    d = n(657048),
+    o = n(201275),
+    d = n(631305),
+    c = n(657048),
     u = n(636042),
-    f = n(652215),
+    m = n(652215),
     g = n(874864),
-    b = n(985018),
-    m = n(636997);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+    x = n(985018),
+    h = n(636997);
+let _ = function (e) {
+    let { guild: t, disabled: _, role: A } = e,
+        p = (0, o.qE)(t.id, A),
+        { analyticsLocations: f } = (0, r.Ay)(),
+        j = t.features.has(m.GuildFeatures.ROLE_ICONS),
+        N = (e) => {
+            j ||
+                ((0, l.zV)(m.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    location: { ...e, section: m.JJy.CUSTOM_ROLE_ICONS_TOOLTIP },
+                    guild_id: t?.id,
+                    location_stack: f,
                 }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function x(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = function (e) {
-    let { guild: t, disabled: h, role: j } = e,
-        O = (0, c.qE)(t.id, j),
-        { analyticsLocations: y } = (0, s.Ay)(),
-        v = t.features.has(f.GuildFeatures.ROLE_ICONS),
-        A = (e) => {
-            v ||
-                ((0, l.zV)(f.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: x(p({}, e), {
-                        section: f.JJy.CUSTOM_ROLE_ICONS_TOOLTIP,
-                    }),
-                    guild_id: null == t ? void 0 : t.id,
-                    location_stack: y,
-                }),
-                (0, o.A)({
-                    analyticsLocations: y,
+                (0, d.A)({
+                    analyticsLocations: f,
                     analyticsSourceLocation: {
-                        page: f.liQ.GUILD_SETTINGS,
-                        section: f.JJy.GUILD_ROLE_EDIT_UPSELL_MODAL,
-                        object: f.ZSU.BADGE,
+                        page: m.liQ.GUILD_SETTINGS,
+                        section: m.JJy.GUILD_ROLE_EDIT_UPSELL_MODAL,
+                        object: m.ZSU.BADGE,
                     },
                     guild: t,
                     perks: (0, g.$_)(),
                 }));
         },
-        E = (0, r.jsx)(a.A, {
-            className: m.Jz,
+        E = (0, i.jsx)(a.A, {
+            className: h.Jz,
             guild: t,
-            guildFeature: f.GuildFeatures.ROLE_ICONS,
+            guildFeature: m.GuildFeatures.ROLE_ICONS,
             tooltipPosition: "top",
-            hideTooltip: v,
-            onClick: () =>
-                A({
-                    object: f.ZSU.LEARN_MORE,
-                    objectType: f.AnalyticsObjectTypes.TIER_2,
-                }),
+            hideTooltip: j,
+            onClick: () => N({ object: m.ZSU.LEARN_MORE, objectType: m.AnalyticsObjectTypes.TIER_2 }),
         });
-    return (0, r.jsxs)("div", {
-        className: m.kL,
+    return (0, i.jsxs)("div", {
+        className: h.kL,
         children: [
-            (0, r.jsxs)(i.zEo, {
-                className: m.Hc,
-                children: [
-                    (0, r.jsx)("div", {
-                        children: b.intl.string(b.t.B9grJw),
-                    }),
-                    E,
-                ],
+            (0, i.jsxs)(s.zEo, {
+                className: h.Hc,
+                children: [(0, i.jsx)("div", { children: x.intl.string(x.t.B9grJw) }), E],
             }),
-            (0, r.jsx)(i.ayl, {
-                className: m.h_,
-                children: b.intl.string(b.t.I3YQeV),
-            }),
-            (0, r.jsxs)("div", {
-                className: m.Mw,
+            (0, i.jsx)(s.ayl, { className: h.h_, children: x.intl.string(x.t.I3YQeV) }),
+            (0, i.jsxs)("div", {
+                className: h.Mw,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: m.i1,
+                    (0, i.jsx)("div", {
+                        className: h.i1,
                         children:
-                            null != O
-                                ? (0, r.jsx)(
-                                      d.A,
-                                      x(p({}, O), {
-                                          className: m.s1,
-                                          enableTooltip: !1,
-                                      }),
-                                  )
-                                : (0, r.jsx)(i.XGR, {
+                            null != p
+                                ? (0, i.jsx)(c.A, { ...p, className: h.s1, enableTooltip: !1 })
+                                : (0, i.jsx)(s.XGR, {
                                       size: "custom",
                                       color: "currentColor",
                                       width: 24,
                                       height: 24,
-                                      className: m.VH,
+                                      className: h.VH,
                                   }),
                     }),
-                    (0, r.jsx)(i.Button, {
+                    (0, i.jsx)(s.Button, {
                         onClick: () =>
-                            t.features.has(f.GuildFeatures.ROLE_ICONS)
-                                ? void (0, i.mMO)(async () => {
+                            t.features.has(m.GuildFeatures.ROLE_ICONS)
+                                ? void (0, s.mMO)(async () => {
                                       let { default: e } = await n.e("64939").then(n.bind(n, 836774));
                                       return (n) =>
-                                          (0, r.jsx)(
-                                              e,
-                                              x(p({}, n), {
-                                                  guildId: t.id,
-                                                  onUploadIcon: (e) => (0, u.n3)(j.id, e, null),
-                                                  onSelectUnicodeEmoji: (e) => (0, u.n3)(j.id, null, e),
-                                              }),
-                                          );
+                                          (0, i.jsx)(e, {
+                                              ...n,
+                                              guildId: t.id,
+                                              onUploadIcon: (e) => (0, u.n3)(A.id, e, null),
+                                              onSelectUnicodeEmoji: (e) => (0, u.n3)(A.id, null, e),
+                                          });
                                   })
-                                : A({
-                                      object: f.ZSU.UPLOAD_IMAGE,
-                                  }),
+                                : N({ object: m.ZSU.UPLOAD_IMAGE }),
                         variant: "primary",
-                        disabled: h,
-                        text: b.intl.string(b.t.mD1oGB),
+                        disabled: _,
+                        text: x.intl.string(x.t.mD1oGB),
                     }),
-                    null != O
-                        ? (0, r.jsx)(i.Button, {
+                    null != p
+                        ? (0, i.jsx)(s.Button, {
                               onClick: () => {
-                                  (0, u.n3)(j.id, null, null);
+                                  (0, u.n3)(A.id, null, null);
                               },
                               variant: "critical-secondary",
-                              disabled: h,
-                              text: b.intl.string(b.t["uY+Nk/"]),
+                              disabled: _,
+                              text: x.intl.string(x.t["uY+Nk/"]),
                           })
                         : null,
                 ],

@@ -1,144 +1,112 @@
 n.d(t, {
     AR: () => S,
-    JJ: () => f,
-    KU: () => E,
-    PZ: () => R,
-    X3: () => _,
+    JJ: () => d,
+    KU: () => A,
+    PZ: () => L,
+    X3: () => N,
     ZG: () => g,
-    _I: () => O,
-    nl: () => y,
-    r3: () => A,
-    uV: () => p,
-    wC: () => h,
-    wk: () => d,
-}),
-    n(896048),
-    n(65821);
+    _I: () => _,
+    nl: () => f,
+    r3: () => c,
+    uV: () => R,
+    wC: () => M,
+    wk: () => h,
+});
 var r = n(168186),
-    l = n(961350),
-    i = n(372598),
+    i = n(961350),
+    l = n(372598),
     a = n(753738),
     u = n(928348),
-    o = n(53594),
-    s = n(411335),
-    c = n(985018);
-let E = (e) => (null == e ? void 0 : e.triggerType) === s.uh.KEYWORD,
-    A = (e) => (null == e ? void 0 : e.triggerType) === s.uh.ML_SPAM,
-    g = (e) => (null == e ? void 0 : e.triggerType) === s.uh.DEFAULT_KEYWORD_LIST,
-    S = (e) => (null == e ? void 0 : e.triggerType) === s.uh.MENTION_SPAM,
-    f = (e) => (null == e ? void 0 : e.triggerType) === s.uh.USER_PROFILE;
-
-function O(e, t) {
-    let n = o.i$[t],
-        r = (0, o.kT)(t, e),
+    s = n(53594),
+    E = n(411335),
+    o = n(985018);
+let A = (e) => e?.triggerType === E.uh.KEYWORD,
+    c = (e) => e?.triggerType === E.uh.ML_SPAM,
+    g = (e) => e?.triggerType === E.uh.DEFAULT_KEYWORD_LIST,
+    S = (e) => e?.triggerType === E.uh.MENTION_SPAM,
+    d = (e) => e?.triggerType === E.uh.USER_PROFILE;
+function _(e, t) {
+    let n = s.i$[t],
+        r = (0, s.kT)(t, e),
         a = {
-            id: "".concat(e, "-").concat(t, "-new-rule"),
+            id: `${e}-${t}-new-rule`,
             name: n.getDefaultRuleName(),
             guildId: e,
             eventType: n.eventType,
             triggerType: t,
             triggerMetadata: r,
             enabled: !0,
-            creatorId: l.default.getId(),
-            actions: (0, i.dL)(n),
+            creatorId: i.default.getId(),
+            actions: (0, l.dL)(n),
             position: 0,
             exemptChannels: new Set(),
             exemptRoles: new Set(),
         };
-    if (h(a)) throw Error(c.intl.string(c.t["A/nX8D"]));
-    let s = (0, u.p3)(e, t);
-    return s > 0 && (a.name += " ".concat(s + 1)), a;
+    if (M(a)) throw Error(o.intl.string(o.t["A/nX8D"]));
+    let E = (0, u.p3)(e, t);
+    return E > 0 && (a.name += ` ${E + 1}`), a;
 }
-
-function d(e, t) {
-    if (e.length > t)
-        throw Error(
-            c.intl.formatToPlainString(c.t.mee4qd, {
-                limit: t,
-            }),
-        );
+function h(e, t) {
+    if (e.length > t) throw Error(o.intl.formatToPlainString(o.t.mee4qd, { limit: t }));
     e.forEach((e) => {
-        if (e.length > s.kS || e.length < s.Ku)
-            throw new a.lH(
-                c.intl.formatToPlainString(c.t.rbRvGe, {
-                    keyword: e,
-                    max: s.kS,
-                    min: s.Ku,
-                }),
-            );
+        if (e.length > E.kS || e.length < E.Ku)
+            throw new a.lH(o.intl.formatToPlainString(o.t.rbRvGe, { keyword: e, max: E.kS, min: E.Ku }));
     });
 }
-
-function p(e) {
-    if (E(e)) {
-        var t, n;
-        let r = null != (t = e.triggerMetadata.keywordFilter) ? t : [],
-            l = null != (n = e.triggerMetadata.regexPatterns) ? n : [];
-        if (0 === r.length && 0 === l.length) throw Error(c.intl.string(c.t.kz2Av3));
-        if ((d(r, s.bV), l.length > s.qm))
-            throw Error(
-                c.intl.formatToPlainString(c.t.tDjhF1, {
-                    limit: s.qm,
-                }),
-            );
-        l.forEach((e) => {
-            if (e.length > s.$5 || e.length < s.zs)
-                throw new a.Nr(
-                    c.intl.formatToPlainString(c.t.WR0m9w, {
-                        regex: e,
-                        max: s.$5,
-                        min: s.zs,
-                    }),
-                );
+function R(e) {
+    if (A(e)) {
+        let t = e.triggerMetadata.keywordFilter ?? [],
+            n = e.triggerMetadata.regexPatterns ?? [];
+        if (0 === t.length && 0 === n.length) throw Error(o.intl.string(o.t.kz2Av3));
+        h(t, E.bV);
+        if (n.length > E.qm) throw Error(o.intl.formatToPlainString(o.t.tDjhF1, { limit: E.qm }));
+        n.forEach((e) => {
+            if (e.length > E.$5 || e.length < E.zs)
+                throw new a.Nr(o.intl.formatToPlainString(o.t.WR0m9w, { regex: e, max: E.$5, min: E.zs }));
         });
     }
-    if (0 === e.actions.length) throw Error(c.intl.string(c.t["t+gj5V"]));
+    if (0 === e.actions.length) throw Error(o.intl.string(o.t["t+gj5V"]));
 }
-
-function h(e) {
-    var t;
-    return (0, r.hT)(null != (t = null == e ? void 0 : e.id) ? t : "INVALID_SNOWFLAKE");
+function M(e) {
+    return (0, r.hT)(e?.id ?? "INVALID_SNOWFLAKE");
 }
-
-function _(e) {
+function N(e) {
     switch (e) {
-        case s.Mc.MESSAGE_SEND:
-            return c.intl.string(c.t.NlQW4P);
-        case s.Mc.GUILD_MEMBER_JOIN_OR_UPDATE:
-            return c.intl.string(c.t["Q+68IX"]);
+        case E.Mc.MESSAGE_SEND:
+            return o.intl.string(o.t.NlQW4P);
+        case E.Mc.GUILD_MEMBER_JOIN_OR_UPDATE:
+            return o.intl.string(o.t["Q+68IX"]);
         default:
-            return c.intl.string(c.t.SP9BBx);
+            return o.intl.string(o.t.SP9BBx);
     }
 }
-
-function R(e) {
+function L(e) {
     switch (e) {
-        case s.AH.BLOCK_MESSAGE:
-            return c.intl.string(c.t.d1ab8n);
-        case s.AH.FLAG_TO_CHANNEL:
-            return c.intl.string(c.t["Y+VmvU"]);
-        case s.AH.USER_COMMUNICATION_DISABLED:
-            return c.intl.string(c.t["6WPxY2"]);
-        case s.AH.QUARANTINE_USER:
-            return c.intl.string(c.t.NPO8ee);
+        case E.AH.BLOCK_MESSAGE:
+            return o.intl.string(o.t.d1ab8n);
+        case E.AH.FLAG_TO_CHANNEL:
+            return o.intl.string(o.t["Y+VmvU"]);
+        case E.AH.USER_COMMUNICATION_DISABLED:
+            return o.intl.string(o.t["6WPxY2"]);
+        case E.AH.QUARANTINE_USER:
+            return o.intl.string(o.t.NPO8ee);
         default:
-            return c.intl.string(c.t.SP9BBx);
+            return o.intl.string(o.t.SP9BBx);
     }
 }
-
-function y(e) {
+function f(e) {
     switch (e) {
-        case s.uh.KEYWORD:
-            return c.intl.string(c.t.ffR2cM);
-        case s.uh.ML_SPAM:
-            return c.intl.string(c.t["puF/Os"]);
-        case s.uh.DEFAULT_KEYWORD_LIST:
-            return c.intl.string(c.t.LnGhZv);
-        case s.uh.MENTION_SPAM:
-            return c.intl.string(c.t.pX7i6n);
-        case s.uh.USER_PROFILE:
-            return c.intl.string(c.t.q1L2v8);
+        case E.uh.KEYWORD:
+            return o.intl.string(o.t.ffR2cM);
+        case E.uh.ML_SPAM:
+            return o.intl.string(o.t["puF/Os"]);
+        case E.uh.DEFAULT_KEYWORD_LIST:
+            return o.intl.string(o.t.LnGhZv);
+        case E.uh.MENTION_SPAM:
+            return o.intl.string(o.t.pX7i6n);
+        case E.uh.USER_PROFILE:
+            return o.intl.string(o.t.q1L2v8);
         default:
-            return c.intl.string(c.t.SP9BBx);
+            return o.intl.string(o.t.SP9BBx);
     }
 }

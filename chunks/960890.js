@@ -1,5 +1,4 @@
 var r = n(42265);
-
 function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var i = t[n];
@@ -10,14 +9,7 @@ function i(e, t) {
     }
 }
 (e.exports = function (e, t, n) {
-    return (
-        t && i(e.prototype, t),
-        n && i(e, n),
-        Object.defineProperty(e, "prototype", {
-            writable: !1,
-        }),
-        e
-    );
+    return t && i(e.prototype, t), n && i(e, n), Object.defineProperty(e, "prototype", { writable: !1 }), e;
 }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports);

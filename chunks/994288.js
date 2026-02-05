@@ -1,152 +1,97 @@
-n.d(e, {
-    default: () => N,
-});
-var r = n(627968),
-    i = n(64700),
-    o = n(110259),
-    l = n(311907),
-    s = n(397927),
-    c = n(49229),
-    a = n(389245),
-    d = n(662502),
-    u = n(632738),
-    f = n(994500),
-    O = n(954571),
-    p = n(975571),
-    m = n(562153),
-    g = n(143547),
-    j = n(235627),
-    x = n(652215),
-    b = n(985018),
-    y = n(107724);
-
-function I(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                }),
-            )),
-            r.forEach(function (e) {
-                var r;
-                (r = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = r);
-            });
-    }
-    return t;
-}
-
-function E(t, e) {
-    return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
-              }),
-        t
-    );
-}
-
+e.d(i, { default: () => A });
+var n = e(627968),
+    s = e(64700),
+    r = e(110259),
+    l = e(311907),
+    a = e(397927),
+    c = e(49229),
+    o = e(389245),
+    d = e(662502),
+    x = e(632738),
+    m = e(994500),
+    u = e(954571),
+    N = e(975571),
+    I = e(562153),
+    f = e(143547),
+    j = e(235627),
+    g = e(652215),
+    E = e(985018),
+    _ = e(107724);
 function h(t) {
-    let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: c, guildId: d, channelId: h } = t,
-        N = (0, l.bG)([f.A], () => f.A.isIgnored(e.id));
-    return (0, r.jsxs)("div", {
-        className: y.kL,
+    let { user: i, onBlock: e, onIgnore: s, location: r, disallowIgnore: c, guildId: d, channelId: h } = t,
+        A = (0, l.bG)([m.A], () => m.A.isIgnored(i.id));
+    return (0, n.jsxs)("div", {
+        className: _.kL,
         children: [
-            (0, r.jsxs)("div", {
-                className: y.RS,
+            (0, n.jsxs)("div", {
+                className: _.RS,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: y.zc,
+                    (0, n.jsxs)("div", {
+                        className: _.zc,
                         children: [
-                            (0, r.jsx)(s.euF, {
-                                size: s._3J.SIZE_56,
-                                src: e.getAvatarURL(void 0, 64),
+                            (0, n.jsx)(a.euF, {
+                                size: a._3J.SIZE_56,
+                                src: i.getAvatarURL(void 0, 64),
                                 "aria-hidden": !0,
                             }),
-                            (0, r.jsx)("div", {
-                                className: y.Kk,
-                                children: (0, r.jsx)(s.KTN, {}),
-                            }),
+                            (0, n.jsx)("div", { className: _.Kk, children: (0, n.jsx)(a.KTN, {}) }),
                         ],
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(s.Heading, {
+                            (0, n.jsx)(a.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
-                                children: b.intl.format(b.t.CIbzHR, {
-                                    username: m.Ay.getName(d, h, e),
-                                }),
+                                children: E.intl.format(E.t.CIbzHR, { username: I.Ay.getName(d, h, i) }),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, n.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: b.intl.string(b.t.S70jou),
+                                children: E.intl.string(E.t.S70jou),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)(a.A, {}),
-            c || N
+            (0, n.jsx)(o.A, {}),
+            c || A
                 ? null
-                : (0, r.jsxs)("div", {
-                      className: y.l_,
+                : (0, n.jsxs)("div", {
+                      className: _.l_,
                       children: [
-                          (0, r.jsx)(u.Y0, {
-                              title: b.intl.string(b.t["+BJTcB"]),
-                              children: (0, r.jsx)(u.PQ, {
-                                  title: b.intl.string(b.t.hC8tcc),
-                                  description: b.intl.string(b.t.If89rE),
+                          (0, n.jsx)(x.Y0, {
+                              title: E.intl.string(E.t["+BJTcB"]),
+                              children: (0, n.jsx)(x.PQ, {
+                                  title: E.intl.string(E.t.hC8tcc),
+                                  description: E.intl.string(E.t.If89rE),
                                   titleVariant: "text-md/medium",
                                   descriptionVariant: "text-xs/medium",
-                                  buttonText: b.intl.string(b.t.mxJOd9),
+                                  buttonText: E.intl.string(E.t.mxJOd9),
                                   onButtonPress: () => {
-                                      O.default.track(x.HAw.USER_REMEDIATION_ACTION, {
+                                      u.default.track(g.HAw.USER_REMEDIATION_ACTION, {
                                           action: j.p.GOTO_IGNORE,
-                                          location: o,
+                                          location: r,
                                       }),
-                                          (0, s.s7G)(),
-                                          (0, s.qfG)((t) =>
-                                              (0, r.jsx)(
-                                                  g.default,
-                                                  E(I({}, t), {
-                                                      user: e,
-                                                      guildId: d,
-                                                      channelId: h,
-                                                      onIgnore: i,
-                                                      onBlock: n,
-                                                      location: o,
-                                                  }),
-                                              ),
+                                          (0, a.s7G)(),
+                                          (0, a.qfG)((t) =>
+                                              (0, n.jsx)(f.default, {
+                                                  ...t,
+                                                  user: i,
+                                                  guildId: d,
+                                                  channelId: h,
+                                                  onIgnore: s,
+                                                  onBlock: e,
+                                                  location: r,
+                                              }),
                                           );
                                   },
                               }),
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(a.Text, {
                               variant: "text-sm/medium",
-                              className: y.FV,
-                              children: b.intl.format(b.t.DJN6eZ, {
-                                  articleLink: p.A.getArticleURL(x.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                              className: _.FV,
+                              children: E.intl.format(E.t.DJN6eZ, {
+                                  articleLink: N.A.getArticleURL(g.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
                               }),
                           }),
                       ],
@@ -154,99 +99,40 @@ function h(t) {
         ],
     });
 }
-
-function N(t) {
+function A(t) {
     let {
-            user: e,
-            onBlock: n,
-            onCancel: l,
-            onIgnore: a,
-            location: u = "ContextMenu",
-            disallowIgnore: f,
-            guildId: p,
-            channelId: m,
-        } = t,
-        g = (function (t, e) {
-            if (null == t) return {};
-            var n,
-                r,
-                i,
-                o = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (i = 0, n = Reflect.ownKeys(t); i < n.length; i++)
-                    (r = n[i]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
-                return o;
-            }
-            if (
-                ((o = (function (t, e) {
-                    if (null == t) return {};
-                    var n,
-                        r,
-                        i = {},
-                        o = Object.getOwnPropertyNames(t);
-                    for (r = 0; r < o.length; r++)
-                        (n = o[r]),
-                            !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
-                    return i;
-                })(t, e)),
-                Object.getOwnPropertySymbols)
-            )
-                for (i = 0, n = Object.getOwnPropertySymbols(t); i < n.length; i++)
-                    (r = n[i]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
-            return o;
-        })(t, ["user", "onBlock", "onCancel", "onIgnore", "location", "disallowIgnore", "guildId", "channelId"]);
+        user: i,
+        onBlock: e,
+        onCancel: l,
+        onIgnore: o,
+        location: x = "ContextMenu",
+        disallowIgnore: m,
+        guildId: N,
+        channelId: I,
+        ...f
+    } = t;
     return (
-        i.useLayoutEffect(
+        s.useLayoutEffect(
             () => () => {
-                O.default.track(x.HAw.USER_REMEDIATION_ACTION, {
-                    action: j.p.DISMISS_BLOCK,
-                    location: u,
-                });
+                u.default.track(g.HAw.USER_REMEDIATION_ACTION, { action: j.p.DISMISS_BLOCK, location: x });
             },
-            [u],
+            [x],
         ),
-        (0, r.jsx)(
-            s.VoidConfirmModal,
-            E(
-                I(
-                    {
-                        confirmText: b.intl.string(b.t.l4Emac),
-                        cancelText: b.intl.string(b.t["ETE/oC"]),
-                        onCancel: () => {
-                            O.default.track(x.HAw.USER_REMEDIATION_ACTION, {
-                                action: j.p.CANCEL_BLOCK,
-                                location: u,
-                            }),
-                                null == l || l();
-                        },
-                        onConfirm: () => {
-                            null == n || n(),
-                                c.A.blockUser(e.id, {
-                                    location: u,
-                                }).then(() => {
-                                    O.default.track(x.HAw.BLOCK_USER_CONFIRMED),
-                                        d.A.showBlockSuccessToast(e.id, null != m ? m : void 0);
-                                });
-                        },
-                        impression: {
-                            impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION,
-                        },
-                    },
-                    g,
-                ),
-                {
-                    children: (0, r.jsx)(h, {
-                        user: e,
-                        guildId: p,
-                        channelId: m,
-                        onBlock: n,
-                        onIgnore: a,
-                        disallowIgnore: f,
-                    }),
-                },
-            ),
-        )
+        (0, n.jsx)(a.VoidConfirmModal, {
+            confirmText: E.intl.string(E.t.l4Emac),
+            cancelText: E.intl.string(E.t["ETE/oC"]),
+            onCancel: () => {
+                u.default.track(g.HAw.USER_REMEDIATION_ACTION, { action: j.p.CANCEL_BLOCK, location: x }), l?.();
+            },
+            onConfirm: () => {
+                e?.(),
+                    c.A.blockUser(i.id, { location: x }).then(() => {
+                        u.default.track(g.HAw.BLOCK_USER_CONFIRMED), d.A.showBlockSuccessToast(i.id, I ?? void 0);
+                    });
+            },
+            impression: { impressionName: r.ImpressionNames.BLOCK_USER_CONFIRMATION },
+            ...f,
+            children: (0, n.jsx)(h, { user: i, guildId: N, channelId: I, onBlock: e, onIgnore: o, disallowIgnore: m }),
+        })
     );
 }

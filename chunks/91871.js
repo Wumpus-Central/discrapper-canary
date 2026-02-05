@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function (e, t) {
     var n = t.length,
         r = e.length;

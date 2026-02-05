@@ -1,8 +1,6 @@
+"use strict";
 let r;
-n.d(t, {
-    r: () => s,
-}),
-    n(65821);
+n.d(t, { r: () => s });
 var i = n(283639),
     a = n(913589);
 try {
@@ -26,10 +24,10 @@ async function s(e) {
             t = n(684266).A,
             i = document.createElement("canvas"),
             l = new e(i, o),
-            c = new t(),
-            u = new a.A(l, c);
-        r(u.canvas);
-        let d = await u.export(s);
+            u = new t(),
+            c = new a.A(l, u);
+        r(c.canvas);
+        let d = await c.export(s);
         return i.remove(), d;
     }
 }

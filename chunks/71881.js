@@ -2,21 +2,11 @@ e.exports = function (e) {
     let t = {
             className: "variable",
             variants: [
-                {
-                    begin: "\\$\\(" + e.UNDERSCORE_IDENT_RE + "\\)",
-                    contains: [e.BACKSLASH_ESCAPE],
-                },
-                {
-                    begin: /\$[@%<?\^\+\*]/,
-                },
+                { begin: "\\$\\(" + e.UNDERSCORE_IDENT_RE + "\\)", contains: [e.BACKSLASH_ESCAPE] },
+                { begin: /\$[@%<?\^\+\*]/ },
             ],
         },
-        n = {
-            className: "string",
-            begin: /"/,
-            end: /"/,
-            contains: [e.BACKSLASH_ESCAPE, t],
-        },
+        n = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, t] },
         r = {
             className: "variable",
             begin: /\$\([\w-]+\s/,
@@ -27,24 +17,9 @@ e.exports = function (e) {
             },
             contains: [t, n],
         },
-        i = {
-            begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)",
-        },
-        a = {
-            className: "meta",
-            begin: /^\.PHONY:/,
-            end: /$/,
-            keywords: {
-                $pattern: /[\.\w]+/,
-                keyword: ".PHONY",
-            },
-        },
-        s = {
-            className: "section",
-            begin: /^[^\s]+:/,
-            end: /$/,
-            contains: [t],
-        };
+        i = { begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)" },
+        a = { className: "meta", begin: /^\.PHONY:/, end: /$/, keywords: { $pattern: /[\.\w]+/, keyword: ".PHONY" } },
+        s = { className: "section", begin: /^[^\s]+:/, end: /$/, contains: [t] };
     return {
         name: "Makefile",
         aliases: ["mk", "mak", "make"],

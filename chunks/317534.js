@@ -1,3 +1,2 @@
-e.exports = {
-    i: "wrapper_a35ace",
-};
+"use strict";
+e.exports = { i: "wrapper_a35ace" };

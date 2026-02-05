@@ -1,29 +1,26 @@
-n.d(t, {
-    A: () => i,
-});
-var r = n(507698);
-
-function i(e) {
+n.d(t, { A: () => r });
+var i = n(507698);
+function r(e) {
     let {
         userId: t,
         nick: n,
-        guildId: i,
-        avatar: l,
-        avatarDecoration: a,
+        guildId: r,
+        avatar: a,
+        avatarDecoration: l,
         banner: s,
         bio: o,
-        pronouns: c,
-        colorString: u,
+        pronouns: d,
+        colorString: c,
     } = e;
     return {
         user_id: t,
         nick: n,
-        guild_id: i,
-        avatar: l,
-        avatar_decoration_data: (0, r.Xq)(a),
+        guild_id: r,
+        avatar: a,
+        avatar_decoration_data: (0, i.Xq)(l),
         banner: s,
         bio: o,
-        pronouns: c,
-        color_string: u,
+        pronouns: d,
+        color_string: c,
     };
 }

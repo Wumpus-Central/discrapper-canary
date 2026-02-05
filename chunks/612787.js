@@ -1,11 +1,8 @@
-n.d(t, {
-    Q: () => m,
-    s: () => h,
-});
+"use strict";
+n.d(t, { Q: () => m, s: () => h });
 var r = n(64700),
     i = n(768239),
     a = n(923870);
-
 function s() {
     return (s =
         Object.assign ||
@@ -17,33 +14,28 @@ function s() {
             return e;
         }).apply(this, arguments);
 }
-
 function o(e, t) {
-    return f(e) || d(e, t) || c(e, t) || l();
+    return _(e) || d(e, t) || u(e, t) || l();
 }
-
 function l() {
     throw TypeError(
         "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
     );
 }
-
-function c(e, t) {
+function u(e, t) {
     if (e) {
-        if ("string" == typeof e) return u(e, t);
+        if ("string" == typeof e) return c(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
         if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
             return Array.from(e);
-        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return u(e, t);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return c(e, t);
     }
 }
-
-function u(e, t) {
+function c(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-
 function d(e, t) {
     if ("u" > typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [],
@@ -68,16 +60,14 @@ function d(e, t) {
         return n;
     }
 }
-
-function f(e) {
+function _(e) {
     if (Array.isArray(e)) return e;
 }
-
-function p(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,8 +75,7 @@ function p(e, t) {
     }
     return i;
 }
-
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -98,28 +87,14 @@ function _(e, t) {
 var h = (0, r.createContext)(null),
     m = function (e) {
         var t = e.portal,
-            n = p(e, ["portal"]),
+            n = f(e, ["portal"]),
             l = o((0, r.useState)(null), 2),
-            c = l[0],
-            u = l[1];
+            u = l[0],
+            c = l[1];
         return r.createElement(
             h.Provider,
-            {
-                value: null != t ? t : c,
-            },
-            r.createElement(
-                i.Q,
-                s(
-                    {
-                        backend: a.e,
-                    },
-                    n,
-                ),
-            ),
-            t
-                ? null
-                : r.createElement("div", {
-                      ref: u,
-                  }),
+            { value: null != t ? t : u },
+            r.createElement(i.Q, s({ backend: a.e }, n)),
+            t ? null : r.createElement("div", { ref: c }),
         );
     };

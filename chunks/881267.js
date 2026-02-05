@@ -1,106 +1,78 @@
-n.d(e, {
-    PlaygroundEmbed: () => S,
-}),
-    n(896048),
-    n(747238);
+n.d(l, { PlaygroundEmbed: () => C });
 var t = n(627968),
     o = n(64700),
-    u = n(934551),
+    r = n(934551),
     i = n(158954),
-    r = n(311907),
+    u = n(311907),
     a = n(349288),
     s = n(571356),
     d = n(732955),
     c = n(398590),
     f = n(287809),
-    m = n(944771),
-    h = n(3258),
+    h = n(944771),
+    m = n(3258),
     p = n(836156),
     g = n(652215),
     x = n(565003);
-let v = {
-        mana: {
-            name: "Mana",
-            icon: u.PotionIcon,
-            defaultSubtitle: "Explore the Mana Design System",
-        },
-        revenue: {
-            name: "Revenue",
-            icon: u.BillIcon,
-            defaultSubtitle: "Explore Revenue Components",
-        },
-        void: {
-            name: "Void",
-            icon: u.PotionIcon,
-            defaultSubtitle: "Explore the Void Design System",
-        },
+let S = {
+        mana: { name: "Mana", icon: r.PotionIcon, defaultSubtitle: "Explore the Mana Design System" },
+        revenue: { name: "Revenue", icon: r.BillIcon, defaultSubtitle: "Explore Revenue Components" },
+        void: { name: "Void", icon: r.PotionIcon, defaultSubtitle: "Explore the Void Design System" },
     },
-    b = null;
-
-function S(l) {
-    var e, n;
-    let S = (0, r.bG)([f.default], () => {
-            let l = f.default.getCurrentUser();
-            return (null == l ? void 0 : l.isStaff()) || (null == l ? void 0 : l.isStaffPersonal());
+    y = null;
+function C(e) {
+    let l = (0, u.bG)([f.default], () => {
+            let e = f.default.getCurrentUser();
+            return e?.isStaff() || e?.isStaffPersonal();
         }),
-        y = o.useMemo(() => {
-            let e;
-            return null == (e = l.url.match(p.S)) || null == e[1] ? null : e[1].toLowerCase();
-        }, [l.url]),
+        n = o.useMemo(() => {
+            let l;
+            return null == (l = e.url.match(p.S)) || null == l[1] ? null : l[1].toLowerCase();
+        }, [e.url]),
         C =
-            null != y
+            null != n
                 ? (function () {
-                      if (null == b)
-                          for (let l of ((b = new Map()), m.componentPlaygroundConfigs))
-                              for (let e of l.collections) b.set(e.id.toLowerCase(), e);
-                      return b;
-                  })().get(y)
+                      if (null == y)
+                          for (let e of ((y = new Map()), h.componentPlaygroundConfigs))
+                              for (let l of e.collections) y.set(l.id.toLowerCase(), l);
+                      return y;
+                  })().get(n)
                 : null,
-        P = null != y ? v[y] : null,
-        j = o.useMemo(() => {
-            var e;
-            let n;
+        P = null != n ? S[n] : null,
+        b = o.useMemo(() => {
+            let l;
             if (null == C) return;
-            let t = null == (n = l.url.match(p.S)) ? null : null != (e = n[3]) ? e : null;
-            if (null != t)
-                for (let l of C.groups) {
-                    let e = l.stories.find((l) => l.id === t);
-                    if (null != e) return e;
+            let n = null == (l = e.url.match(p.S)) ? null : (l[3] ?? null);
+            if (null != n)
+                for (let e of C.groups) {
+                    let l = e.stories.find((e) => e.id === n);
+                    if (null != l) return l;
                 }
-        }, [l.url, C]),
-        w = null != (e = null == j ? void 0 : j.name) ? e : null != C ? "".concat(C.name, " Playground") : "Playground",
-        E =
-            null != j && null != j.docs
-                ? (0, t.jsx)(a.Anchor, {
-                      href: j.docs,
-                      children: "Documentation",
-                  })
+        }, [e.url, C]),
+        j = b?.name ?? (null != C ? `${C.name} Playground` : "Playground"),
+        v =
+            null != b && null != b.docs
+                ? (0, t.jsx)(a.Anchor, { href: b.docs, children: "Documentation" })
                 : null != P
                   ? P.defaultSubtitle
                   : "Explore Components",
-        z = o.useCallback(() => {
+        w = o.useCallback(() => {
             null != C &&
-                (null != j
-                    ? h.PlaygroundStore.setState({
-                          selectedCollection: C.id,
-                          selectedStory: j.id,
-                      })
-                    : h.PlaygroundStore.setState({
-                          selectedCollection: C.id,
-                          selectedStory: null,
-                      }),
+                (null != b
+                    ? m.PlaygroundStore.setState({ selectedCollection: C.id, selectedStory: b.id })
+                    : m.PlaygroundStore.setState({ selectedCollection: C.id, selectedStory: null }),
                 (0, c.id)(g.zgK.COMPONENT_PLAYGROUND));
-        }, [j, C]);
-    if (!S || null == C) return null;
-    let k = null != (n = null == P ? void 0 : P.icon) ? n : u.PotionIcon;
+        }, [b, C]);
+    if (!l || null == C) return null;
+    let E = P?.icon ?? r.PotionIcon;
     return (0, t.jsx)("div", {
         className: x.z,
-        "data-has-story": null != j,
+        "data-has-story": null != b,
         children: (0, t.jsxs)(i.BJc, {
-            direction: null == j ? "vertical" : "horizontal",
-            align: null == j ? "start" : "center",
+            direction: null == b ? "vertical" : "horizontal",
+            align: null == b ? "start" : "center",
             gap: 12,
-            justify: null == j ? "end" : "space-between",
+            justify: null == b ? "end" : "space-between",
             children: [
                 (0, t.jsx)("div", {
                     className: x.w,
@@ -109,32 +81,19 @@ function S(l) {
                         align: "start",
                         gap: 8,
                         children: [
-                            (0, t.jsx)(k, {
-                                size: "lg",
-                            }),
+                            (0, t.jsx)(E, { size: "lg" }),
                             (0, t.jsxs)(i.BJc, {
                                 direction: "vertical",
                                 gap: 0,
                                 children: [
-                                    (0, t.jsx)(s.E, {
-                                        variant: "text-md/semibold",
-                                        children: w,
-                                    }),
-                                    (0, t.jsx)(s.E, {
-                                        variant: "text-sm/normal",
-                                        children: E,
-                                    }),
+                                    (0, t.jsx)(s.E, { variant: "text-md/semibold", children: j }),
+                                    (0, t.jsx)(s.E, { variant: "text-sm/normal", children: v }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, t.jsx)(d.$nd, {
-                    size: "sm",
-                    onClick: z,
-                    text: "Open Playground",
-                    fullWidth: null == j,
-                }),
+                (0, t.jsx)(d.$nd, { size: "sm", onClick: w, text: "Open Playground", fullWidth: null == b }),
             ],
         }),
     });

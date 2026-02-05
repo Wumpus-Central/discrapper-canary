@@ -1,57 +1,49 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
+n.d(t, { A: () => x });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(824552),
+    a = n(64700),
+    i = n(311907),
+    r = n(824552),
     s = n(933958),
-    o = n(869003),
-    c = n(58149),
-    d = n(632738),
-    u = n(546183),
+    d = n(869003),
+    o = n(58149),
+    u = n(632738),
+    c = n(546183),
     m = n(652215),
-    b = n(985018);
-let p = (e) => {
+    _ = n(985018);
+let x = (e) => {
     let { application: t, reportId: n } = e,
-        [p, x] = r.useState(!1),
-        g = (0, a.bG)([u.default], () => u.default.getNewestTokenForApplication(t.id));
-    r.useEffect(() => {
-        null != g && x(!0);
-    }, [g]);
-    let f = r.useRef(!1);
-    r.useEffect(() => {
-        f.current || (i.A.fetch(), (f.current = !0));
+        [x, g] = a.useState(!1),
+        h = (0, i.bG)([c.default], () => c.default.getNewestTokenForApplication(t.id));
+    a.useEffect(() => {
+        null != h && g(!0);
+    }, [h]);
+    let p = a.useRef(!1);
+    a.useEffect(() => {
+        p.current || (r.A.fetch(), (p.current = !0));
     }, []);
-    let v = (0, a.bG)([s.Ay], () => s.Ay.getSelfEmbeddedActivities()),
-        h = r.useCallback(() => {
+    let A = (0, i.bG)([s.Ay], () => s.Ay.getSelfEmbeddedActivities()),
+        b = a.useCallback(() => {
             if (
-                (x(!1),
-                c.Ay.trackWithMetadata(m.HAw.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
+                (g(!1),
+                o.Ay.trackWithMetadata(m.HAw.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n,
                 }),
-                null == g)
+                null == h)
             )
                 return;
-            i.A.delete(g.id);
-            let e = v.get(t.id);
-            null != e &&
-                o.A.leaveActivity({
-                    location: e.location,
-                    applicationId: t.id,
-                    showFeedback: !1,
-                });
-        }, [t.id, g, v, n]);
+            r.A.delete(h.id);
+            let e = A.get(t.id);
+            null != e && d.A.leaveActivity({ location: e.location, applicationId: t.id, showFeedback: !1 });
+        }, [t.id, h, A, n]);
     return null == t
         ? null
-        : (0, l.jsx)(d.PQ, {
-              title: b.intl.string(b.t.ygG62M),
-              description: b.intl.string(b.t.S51EKg),
-              buttonText: p ? b.intl.string(b.t.xXpoGV) : b.intl.string(b.t.JsiUnL),
-              buttonDisabled: !p,
-              onButtonPress: h,
-              buttonVariant: p ? "critical-primary" : "secondary",
+        : (0, l.jsx)(u.PQ, {
+              title: _.intl.string(_.t.ygG62M),
+              description: _.intl.string(_.t.S51EKg),
+              buttonText: x ? _.intl.string(_.t.xXpoGV) : _.intl.string(_.t.JsiUnL),
+              buttonDisabled: !x,
+              onButtonPress: b,
+              buttonVariant: x ? "critical-primary" : "secondary",
           });
 };

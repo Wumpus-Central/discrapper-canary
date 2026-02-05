@@ -1,11 +1,12 @@
+"use strict";
 n.d(t, {
     DisableCommunicationDuration: () => s,
-    MO: () => c,
+    MO: () => u,
     Rv: () => d,
-    aZ: () => f,
+    aZ: () => _,
     getFriendlyDurationString: () => o,
-    hl: () => p,
-    hs: () => u,
+    hl: () => f,
+    hs: () => c,
     ny: () => l,
 });
 var r = n(975571),
@@ -22,33 +23,20 @@ var r = n(975571),
             e
         );
     })({});
-
 function o(e) {
     switch (e) {
         case 60:
-            return a.intl.formatToPlainString(a.t["4zv/jq"], {
-                secs: 60,
-            });
+            return a.intl.formatToPlainString(a.t["4zv/jq"], { secs: 60 });
         case 300:
-            return a.intl.formatToPlainString(a.t.opVZ9q, {
-                mins: 5,
-            });
+            return a.intl.formatToPlainString(a.t.opVZ9q, { mins: 5 });
         case 600:
-            return a.intl.formatToPlainString(a.t.opVZ9q, {
-                mins: 10,
-            });
+            return a.intl.formatToPlainString(a.t.opVZ9q, { mins: 10 });
         case 3600:
-            return a.intl.formatToPlainString(a.t.xCjYxK, {
-                hours: 1,
-            });
+            return a.intl.formatToPlainString(a.t.xCjYxK, { hours: 1 });
         case 86400:
-            return a.intl.formatToPlainString(a.t["k2UNz+"], {
-                days: 1,
-            });
+            return a.intl.formatToPlainString(a.t["k2UNz+"], { days: 1 });
         case 604800:
-            return a.intl.formatToPlainString(a.t.EmoBD2, {
-                weeks: 1,
-            });
+            return a.intl.formatToPlainString(a.t.EmoBD2, { weeks: 1 });
         default:
             return;
     }
@@ -57,16 +45,11 @@ let l = () =>
         Object.keys(s)
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
-                var t;
-                let n = null != (t = o(s[e])) ? t : "";
-                return {
-                    id: e,
-                    label: n,
-                    value: s[e],
-                };
+                let t = o(s[e]) ?? "";
+                return { id: e, label: t, value: s[e] };
             }),
-    c = r.A.getArticleURL(i.MVz.DISABLE_GUILD_COMMUNICATION),
-    u = "GuildCommunicationDisabledDismissedGuilds",
+    u = r.A.getArticleURL(i.MVz.DISABLE_GUILD_COMMUNICATION),
+    c = "GuildCommunicationDisabledDismissedGuilds",
     d = "Set Communication Disabled Modal",
-    f = "Clear Communication Disabled Modal",
-    p = 512;
+    _ = "Clear Communication Disabled Modal",
+    f = 512;

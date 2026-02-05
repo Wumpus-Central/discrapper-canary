@@ -1,136 +1,69 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(735438),
-    l = n.n(i),
-    s = n(397927),
-    a = n(310953),
+var s = n(735438),
+    r = n.n(s),
+    a = n(397927),
+    l = n(310953),
     o = n(366811),
     c = n(808728),
     d = n(967198),
     u = n(711014),
     _ = n(645959),
-    p = n(203982),
-    m = n(265422),
+    m = n(203982),
+    A = n(265422),
     g = n(652215),
-    A = n(790782);
-
-function f(e, t) {
+    E = n(790782);
+function h(e, t) {
     return [
-        {
-            resourceId: e,
-            type: A.P.GUILD_EVENT,
-        },
+        { resourceId: e, type: E.P.GUILD_EVENT },
         ...(e === g.ME
             ? _.A.getPrivateChannelIds()
-            : (0, a.A)(e, {
-                  withVoiceChannels: t,
-                  withCurrentVoiceChannel: !0,
-              }).map((e) => e.id)),
+            : (0, l.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
-let h = l().throttle(function (e, t) {
-    var i, l, a;
-    let _,
-        A,
-        h,
+let p = r().throttle(function (e, t) {
+    var s;
+    let r,
+        l,
+        _,
         {
-            channelPredicate: b = () => !0,
-            guildPredicate: E = () => !0,
-            guildFeaturePredicate: x = () => !1,
-            ensureChatIsVisible: O = () => !1,
-            withVoiceChannels: C = !1,
+            channelPredicate: E = () => !0,
+            guildPredicate: p = () => !0,
+            guildFeaturePredicate: C = () => !1,
+            ensureChatIsVisible: x = () => !1,
+            withVoiceChannels: T = !1,
         } = t,
-        I = null != (i = o.A.getState().guildId) ? i : g.ME,
-        T = o.A.getState().channelId,
-        S =
-            ((a = I),
-            (A = (_ = [g.ME, ...u.Ay.getFlattenedGuildIds()]).indexOf(a)),
+        I = o.A.getState().guildId ?? g.ME,
+        S = o.A.getState().channelId,
+        f =
+            ((s = I),
+            (l = (r = [g.ME, ...u.Ay.getFlattenedGuildIds()]).indexOf(s)),
             e > 0
-                ? _.slice(A).concat(_.slice(0, A), a)
-                : (_.splice(A, 0, a), _.slice(A + 1).concat(_.slice(0, A + 1)))),
-        j = e > 0 ? 0 : S.length - 1,
-        v = f(I, C),
-        N = v.indexOf(T) + e;
+                ? r.slice(l).concat(r.slice(0, l), s)
+                : (r.splice(l, 0, s), r.slice(l + 1).concat(r.slice(0, l + 1)))),
+        N = e > 0 ? 0 : f.length - 1,
+        b = h(I, T),
+        R = b.indexOf(S) + e;
     for (; null != I && "" !== I; ) {
-        if (((h = v[N]), E(I)))
-            for (; null != h && "" !== h; ) {
-                if ("string" == typeof h) {
-                    if (b(I, h)) return (0, m.i)(I, h, !1, O(I, h));
-                } else if ("object" == typeof h && x(h.resourceId, h.type))
+        if (((_ = b[R]), p(I)))
+            for (; null != _ && "" !== _; ) {
+                if ("string" == typeof _) {
+                    if (E(I, _)) return (0, A.i)(I, _, !1, x(I, _));
+                } else if ("object" == typeof _ && C(_.resourceId, _.type))
                     return (
-                        I !== d.A.getGuildId() && (0, m.i)(I, null == (l = c.Ay.getDefaultChannel(I)) ? void 0 : l.id),
-                        (0, s.mMO)(async () => {
+                        I !== d.A.getGuildId() && (0, A.i)(I, c.Ay.getDefaultChannel(I)?.id),
+                        (0, a.mMO)(async () => {
                             let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("27728")]).then(
                                 n.bind(n, 926956),
                             );
-                            return (t) =>
-                                (0, r.jsx)(
-                                    e,
-                                    (function (e, t) {
-                                        return (
-                                            (t = null != t ? t : {}),
-                                            Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                                                : (function (e, t) {
-                                                      var n = Object.keys(e);
-                                                      if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(e);
-                                                          n.push.apply(n, r);
-                                                      }
-                                                      return n;
-                                                  })(Object(t)).forEach(function (n) {
-                                                      Object.defineProperty(
-                                                          e,
-                                                          n,
-                                                          Object.getOwnPropertyDescriptor(t, n),
-                                                      );
-                                                  }),
-                                            e
-                                        );
-                                    })(
-                                        (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                    r = Object.keys(n);
-                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                    (r = r.concat(
-                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        }),
-                                                    )),
-                                                    r.forEach(function (t) {
-                                                        var r;
-                                                        (r = n[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: r,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0,
-                                                                  })
-                                                                : (e[t] = r);
-                                                    });
-                                            }
-                                            return e;
-                                        })({}, t),
-                                        {
-                                            guildId: I,
-                                        },
-                                    ),
-                                );
+                            return (t) => (0, i.jsx)(e, { ...t, guildId: I });
                         })
                     );
-                (N += e), (h = v[N]);
+                (R += e), (_ = b[R]);
             }
-        if (((j += e), null == (I = S[j]) || "" === I)) break;
-        (v = f(I, C)), (N = e < 0 ? v.length - 1 : 0);
+        if (((N += e), null == (I = f[N]) || "" === I)) break;
+        (b = h(I, T)), (R = e < 0 ? b.length - 1 : 0);
     }
-    p._.dispatch(g.jej.SHAKE_APP, {
-        duration: 200,
-        intensity: 2,
-    });
+    m._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, g.ugG);

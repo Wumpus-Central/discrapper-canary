@@ -1,27 +1,13 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    l = n(73153),
+n.d(t, { A: () => u });
+var i = n(311907),
+    r = n(73153),
     a = n(198982);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = new Map();
-class c {
+let l = new Map();
+class s {
+    isInitialFetchComplete = !1;
+    isFetching = !1;
+    error = null;
+    counts = null;
     handleSearchCountStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -31,25 +17,17 @@ class c {
     handleSearchCountFailure(e) {
         (this.error = new a.LG(e)), (this.isFetching = !1);
     }
-    constructor() {
-        s(this, "isInitialFetchComplete", !1),
-            s(this, "isFetching", !1),
-            s(this, "error", null),
-            s(this, "counts", null);
-    }
 }
-
-function u(e) {
-    var t;
-    let n = null != (t = o.get(e)) ? t : new c();
-    return o.set(e, n), n;
+function o(e) {
+    let t = l.get(e) ?? new s();
+    return l.set(e, t), t;
 }
-
 function d(e, t) {
-    let n = o.get(e);
+    let n = l.get(e);
     return null != n ? t(n) : null;
 }
-class p extends (r = i.Ay.Store) {
+class c extends i.Ay.Store {
+    static displayName = "GlobalDiscoveryServersSearchCountStore";
     getIsInitialFetchComplete(e) {
         return d(e, (e) => e.isInitialFetchComplete);
     }
@@ -60,28 +38,27 @@ class p extends (r = i.Ay.Store) {
         return d(e, (e) => e.counts);
     }
 }
-s(p, "displayName", "GlobalDiscoveryServersSearchCountStore");
-let f = new p(l.h, {
+let u = new c(r.h, {
     CONNECTION_OPEN: function () {
-        o.clear();
+        l.clear();
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
         let { query: t } = e;
-        u(t).handleSearchCountStart();
+        o(t).handleSearchCountStart();
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t, categoryCounts: n } = e;
-        u(t).handleSearchCountSuccess(n);
+        o(t).handleSearchCountSuccess(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
         let { query: t, error: n } = e;
-        u(t).handleSearchCountFailure(n);
+        o(t).handleSearchCountFailure(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
         let { ignoreQueries: t } = e,
             n = new Set(t);
-        o.forEach((e, t) => {
-            n.has(t) || o.delete(t);
+        l.forEach((e, t) => {
+            n.has(t) || l.delete(t);
         });
     },
 });

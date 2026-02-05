@@ -1,34 +1,25 @@
-n.d(t, {
-    W: () => u,
-    g: () => d,
-});
-var r,
-    i = n(612200),
-    l = n(323073),
-    a = n(398884),
+n.d(t, { W: () => c, g: () => u });
+var i,
+    l = n(612200),
+    a = n(323073),
+    r = n(398884),
     s = n(772366),
     o = n(652215),
-    c = n(204925),
-    u =
-        (((r = {}).PROCEED = "PROCEED"),
-        (r.AGE_GATE_SHOWN = "AGE_GATE_SHOWN"),
-        (r.GUILD_CAP_SHOWN = "GUILD_CAP_SHOWN"),
-        r);
-
-function d(e) {
-    let { guild: t, isMember: n, analyticsLocations: r } = e;
-    return null != t && !n && (0, l.xq)() && (0, l.zS)(t)
-        ? ((0, i.yO)(c.w_.NSFW_SERVER_INVITE_EMBED), "AGE_GATE_SHOWN")
-        : (0, a.Sn)()
+    d = n(204925),
+    c =
+        (((i = {}).PROCEED = "PROCEED"),
+        (i.AGE_GATE_SHOWN = "AGE_GATE_SHOWN"),
+        (i.GUILD_CAP_SHOWN = "GUILD_CAP_SHOWN"),
+        i);
+function u(e) {
+    let { guild: t, isMember: n, analyticsLocations: i } = e;
+    return null != t && !n && (0, a.xq)() && (0, a.zS)(t)
+        ? ((0, l.yO)(d.w_.NSFW_SERVER_INVITE_EMBED), "AGE_GATE_SHOWN")
+        : (0, r.Sn)()
           ? ((0, s.A)({
-                analyticsSource: {
-                    page: o.liQ.INVITE_EMBED,
-                },
-                analyticsLocation: {
-                    page: o.liQ.INVITE_EMBED,
-                    section: o.JJy.GUILD_CAP_UPSELL_MODAL,
-                },
-                analyticsLocations: r,
+                analyticsSource: { page: o.liQ.INVITE_EMBED },
+                analyticsLocation: { page: o.liQ.INVITE_EMBED, section: o.JJy.GUILD_CAP_UPSELL_MODAL },
+                analyticsLocations: i,
             }),
             "GUILD_CAP_SHOWN")
           : "PROCEED";

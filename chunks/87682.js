@@ -20,35 +20,17 @@ e.exports = function (e) {
             "WSP",
         ],
         i = e.COMMENT(/;/, /$/),
-        a = {
-            scope: "symbol",
-            match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/,
-        },
-        s = {
-            scope: "symbol",
-            match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/,
-        },
-        o = {
-            scope: "symbol",
-            match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/,
-        },
-        l = {
-            scope: "symbol",
-            match: /%[si](?=".*")/,
-        };
+        a = { scope: "symbol", match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/ },
+        s = { scope: "symbol", match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/ },
+        o = { scope: "symbol", match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/ },
+        l = { scope: "symbol", match: /%[si](?=".*")/ };
     return {
         name: "Augmented Backus-Naur Form",
         illegal: /[!@#$^&',?+~`|:]/,
         keywords: r,
         contains: [
-            {
-                scope: "operator",
-                match: /=\/?/,
-            },
-            {
-                scope: "attribute",
-                match: t.concat(n, /(?=\s*=)/),
-            },
+            { scope: "operator", match: /=\/?/ },
+            { scope: "attribute", match: t.concat(n, /(?=\s*=)/) },
             i,
             a,
             s,

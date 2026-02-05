@@ -1,6 +1,5 @@
-n.d(t, {
-    g: () => r,
-});
+"use strict";
+n.d(t, { g: () => r });
 var r = (function (e) {
     return (
         (e[(e.HERO = 0)] = "HERO"),

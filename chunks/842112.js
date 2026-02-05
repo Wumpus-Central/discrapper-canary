@@ -1,106 +1,54 @@
-r.d(t, {
-    default: () => u,
-});
-var n = r(627968);
-r(64700);
-var l = r(311907),
-    o = r(397927),
-    i = r(442433),
-    c = r(686956),
-    a = r(383394),
-    s = r(711014),
-    d = r(567035),
-    b = r(652215),
-    p = r(985018);
-
-function u(e) {
-    let { folderId: t, folderName: u, folderColor: f, unread: y, onSelect: O } = e,
-        j = (0, l.bG)([s.Ay], () => s.Ay.getGuildFolderById(t), [t]),
-        g = (0, l.bG)([a.A], () => a.A.getExpandedFolders().size > 0);
-    return (0, n.jsxs)(o.W1t, {
+t.d(l, { default: () => b });
+var r = t(627968);
+t(64700);
+var d = t(311907),
+    i = t(397927),
+    n = t(442433),
+    a = t(686956),
+    s = t(383394),
+    o = t(711014),
+    c = t(567035),
+    u = t(652215),
+    p = t(985018);
+function b(e) {
+    let { folderId: l, folderName: b, folderColor: f, unread: h, onSelect: x } = e,
+        g = (0, d.bG)([o.Ay], () => o.Ay.getGuildFolderById(l), [l]),
+        A = (0, d.bG)([s.A], () => s.A.getExpandedFolders().size > 0);
+    return (0, r.jsxs)(i.W1t, {
         "data-menu-migrated": !0,
         navId: "guild-context",
         "aria-label": p.intl.string(p.t.HpQykc),
-        onClose: i.Z_,
-        onSelect: O,
+        onClose: n.Z_,
+        onSelect: x,
         children: [
-            (0, n.jsx)(o.rXV, {
-                children: (0, n.jsx)(o.Drp, {
+            (0, r.jsx)(i.rXV, {
+                children: (0, r.jsx)(i.Drp, {
                     id: "mark-folder-read",
                     label: p.intl.string(p.t.thzRJA),
                     action: function () {
-                        if (null == j) return;
-                        let { guildIds: e } = j;
-                        (0, d.A)(e, b.JJy.GUILD_LIST);
+                        if (null == g) return;
+                        let { guildIds: e } = g;
+                        (0, c.A)(e, u.JJy.GUILD_LIST);
                     },
-                    disabled: !y,
+                    disabled: !h,
                 }),
             }),
-            (0, n.jsxs)(o.rXV, {
+            (0, r.jsxs)(i.rXV, {
                 children: [
-                    (0, n.jsx)(o.Drp, {
+                    (0, r.jsx)(i.Drp, {
                         id: "folder-settings",
                         label: p.intl.string(p.t.Dx7im5),
                         action: () =>
-                            (0, o.mMO)(async () => {
-                                let { default: e } = await r.e("99116").then(r.bind(r, 672551));
-                                return (r) => {
-                                    var l, o;
-                                    return (0, n.jsx)(
-                                        e,
-                                        ((l = (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var r = null != arguments[t] ? arguments[t] : {},
-                                                    n = Object.keys(r);
-                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                    (n = n.concat(
-                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                                        }),
-                                                    )),
-                                                    n.forEach(function (t) {
-                                                        var n;
-                                                        (n = r[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: n,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0,
-                                                                  })
-                                                                : (e[t] = n);
-                                                    });
-                                            }
-                                            return e;
-                                        })({}, r)),
-                                        (o = o =
-                                            {
-                                                folderId: t,
-                                                folderName: u,
-                                                folderColor: f,
-                                            }),
-                                        Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                                            : (function (e, t) {
-                                                  var r = Object.keys(e);
-                                                  if (Object.getOwnPropertySymbols) {
-                                                      var n = Object.getOwnPropertySymbols(e);
-                                                      r.push.apply(r, n);
-                                                  }
-                                                  return r;
-                                              })(Object(o)).forEach(function (e) {
-                                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                                              }),
-                                        l),
-                                    );
-                                };
+                            (0, i.mMO)(async () => {
+                                let { default: e } = await t.e("99116").then(t.bind(t, 672551));
+                                return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: b, folderColor: f });
                             }),
                     }),
-                    g &&
-                        (0, n.jsx)(o.Drp, {
+                    A &&
+                        (0, r.jsx)(i.Drp, {
                             id: "folder-collapse",
                             label: p.intl.string(p.t.rCPsbo),
-                            action: () => c.A.collapseAllFolders(),
+                            action: () => a.A.collapseAllFolders(),
                         }),
                 ],
             }),

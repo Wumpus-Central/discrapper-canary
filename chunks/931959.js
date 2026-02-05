@@ -1,141 +1,66 @@
-n.d(t, {
-    A: () => T,
-}),
-    n(321073);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(283047),
-    c = n(617617),
+"use strict";
+n.d(t, { A: () => T }), n(321073);
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(283047),
+    l = n(617617),
     u = n(927813),
-    d = n(679382),
-    f = n(355097);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = {
-    pendingUsages: [],
-};
+    c = n(679382),
+    d = n(355097);
+let _ = { pendingUsages: [] };
 u.A.Millis.DAY;
-let E = 20,
-    b = new l.A({
+let f = 20,
+    p = new o.A({
         computeBonus: () => 100,
-        lookupKey: (e) => d.A.getStickerById(e),
+        lookupKey: (e) => c.A.getStickerById(e),
         afterCompute: () => {},
-        numFrequentlyItems: E,
+        numFrequentlyItems: f,
     }),
-    y = () => {
-        d.A.isLoaded && b.compute();
+    h = () => {
+        c.A.isLoaded && p.compute();
     },
-    O = (e) => {
+    m = (e) => {
         let { stickerIds: t } = e;
-        null == t ||
-            t.forEach((e) => {
-                b.track(e),
-                    g.pendingUsages.push({
-                        key: e,
-                        timestamp: Date.now(),
-                    });
-            }),
-            y();
+        t?.forEach((e) => {
+            p.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() });
+        }),
+            h();
     },
-    A = () => {
-        y();
+    g = () => {
+        h();
     };
-
-function v() {
-    var e;
-    let t = null == (e = c.A.frecencyWithoutFetchingLatest.stickerFrecency) ? void 0 : e.stickers;
-    if (null == t) return !1;
-    b.overwriteHistory(
-        a().mapValues(t, (e) =>
-            m(_({}, e), {
-                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
-            }),
-        ),
-        g.pendingUsages,
+function E() {
+    let e = l.A.frecencyWithoutFetchingLatest.stickerFrecency?.stickers;
+    if (null == e) return !1;
+    p.overwriteHistory(
+        i().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        _.pendingUsages,
     );
 }
-
-function S(e) {
+function A(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    if (t !== f.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    g.pendingUsages = [];
+    if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    _.pendingUsages = [];
 }
-class I extends (r = s.Ay.PersistedStore) {
+class I extends a.Ay.PersistedStore {
+    static displayName = "StickersPersistedStore";
+    static persistKey = "StickersPersistedStoreV2";
     initialize(e) {
-        this.waitFor(d.A, c.A), null != e && (g = e), this.syncWith([d.A], A), this.syncWith([c.A], v);
+        this.waitFor(c.A, l.A), null != e && (_ = e), this.syncWith([c.A], g), this.syncWith([l.A], E);
     }
     getState() {
-        return g;
+        return _;
     }
     hasPendingUsage() {
-        return g.pendingUsages.length > 0;
+        return _.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return b;
+        return p;
     }
 }
-p(I, "displayName", "StickersPersistedStore"), p(I, "persistKey", "StickersPersistedStoreV2");
-let T = new I(o.h, {
-    STICKER_TRACK_USAGE: O,
-    USER_SETTINGS_PROTO_UPDATE: S,
-});
+let T = new I(s.h, { STICKER_TRACK_USAGE: m, USER_SETTINGS_PROTO_UPDATE: A });

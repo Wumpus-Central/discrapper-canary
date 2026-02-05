@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => l,
-});
+"use strict";
+n.d(t, { A: () => l });
 var r = n(64700),
     i = n(311907),
     a = n(73153),
@@ -12,11 +11,7 @@ let l = () => {
         r.useEffect(() => {
             let t = async () => {
                 let e = await s.Ay.getAssets();
-                null != e &&
-                    a.h.dispatch({
-                        type: "HAVEN_GOT_ASSETS",
-                        assets: e.body,
-                    });
+                null != e && a.h.dispatch({ type: "HAVEN_GOT_ASSETS", assets: e.body });
             };
             null == e && t();
         }, [e]),

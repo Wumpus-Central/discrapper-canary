@@ -1,424 +1,327 @@
-l.d(t, {
-    A: () => G,
-}),
-    l(638769);
-var r = l(627968),
-    n = l(64700),
-    s = l(503698),
-    i = l.n(s),
-    a = l(311907),
-    d = l(843282),
-    c = l(435371),
-    o = l(397927),
-    u = l(801264),
-    f = l(975571),
-    b = l(307600),
-    m = l(665171),
-    x = l(397400),
-    j = l(588591),
-    v = l(695667),
-    g = l(27023),
-    p = l(548392),
-    h = l(298009),
-    N = l(638529),
-    _ = l(928873),
-    S = l(12663),
-    O = l(285286),
-    E = l(800007),
-    y = l(652215),
-    A = l(294726),
-    T = l(985018),
-    w = l(513246);
-
-function P(e) {
-    let { plan: t, selected: l, className: n } = e;
+n.d(t, { A: () => M });
+var l = n(627968),
+    r = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    a = n(311907),
+    d = n(843282),
+    c = n(435371),
+    o = n(397927),
+    u = n(801264),
+    m = n(975571),
+    x = n(307600),
+    g = n(665171),
+    _ = n(397400),
+    f = n(588591),
+    h = n(695667),
+    j = n(27023),
+    N = n(548392),
+    p = n(298009),
+    v = n(638529),
+    S = n(928873),
+    b = n(12663),
+    E = n(285286),
+    C = n(800007),
+    A = n(652215),
+    T = n(294726),
+    I = n(985018),
+    G = n(513246);
+function R(e) {
+    let { plan: t, selected: n, className: r } = e;
     return null == t
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, r.jsxs)("div", {
-                      className: i()(w.NV, n),
+                  (0, l.jsxs)("div", {
+                      className: s()(G.NV, r),
                       children: [
-                          (0, r.jsx)("span", {
-                              children: t.name,
-                          }),
-                          (0, r.jsxs)("div", {
-                              className: w._A,
+                          (0, l.jsx)("span", { children: t.name }),
+                          (0, l.jsxs)("div", {
+                              className: G._A,
                               children: [
-                                  (0, r.jsx)(o._Jp, {
-                                      size: "xs",
-                                      color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                  }),
-                                  (0, r.jsx)(o.Text, {
+                                  (0, l.jsx)(o._Jp, { size: "xs", color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, l.jsx)(o.Text, {
                                       variant: "text-xs/medium",
-                                      children: T.intl.format(A.default.kOMlHs, {
-                                          boostCount: t.cost,
-                                      }),
+                                      children: I.intl.format(T.default.kOMlHs, { boostCount: t.cost }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  !l &&
-                      (0, r.jsx)("div", {
-                          className: w.S6,
-                      }),
+                  !n && (0, l.jsx)("div", { className: G.S6 }),
               ],
           });
 }
-
-function R(e) {
-    let { region: t, selected: l, disabled: n, className: s } = e,
-        { pingText: a, pingCircleStyle: d } = (0, N.b)(t.pingUrl);
+function k(e) {
+    let { region: t, selected: n, disabled: r, className: i } = e,
+        { pingText: a, pingCircleStyle: d } = (0, v.b)(t.pingUrl);
     return null == t
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, r.jsxs)("div", {
-                      className: i()(
-                          w.NV,
-                          {
-                              [w.r9]: n,
-                          },
-                          s,
-                      ),
+                  (0, l.jsxs)("div", {
+                      className: s()(G.NV, { [G.r9]: r }, i),
                       children: [
-                          (0, r.jsx)("span", {
-                              children: t.name,
-                          }),
-                          (0, r.jsx)("div", {
-                              className: w._A,
-                              children: n
-                                  ? (0, r.jsx)("span", {
-                                        children: T.intl.string(A.default.aCyHe2),
-                                    })
+                          (0, l.jsx)("span", { children: t.name }),
+                          (0, l.jsx)("div", {
+                              className: G._A,
+                              children: r
+                                  ? (0, l.jsx)("span", { children: I.intl.string(T.default.aCyHe2) })
                                   : "" !== t.pingUrl
-                                    ? (0, r.jsxs)(r.Fragment, {
+                                    ? (0, l.jsxs)(l.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", {
-                                                  className: i()(w.Jg, d),
-                                              }),
-                                              (0, r.jsx)(o.Text, {
-                                                  variant: "text-xs/medium",
-                                                  children: a,
-                                              }),
+                                              (0, l.jsx)("div", { className: s()(G.Jg, d) }),
+                                              (0, l.jsx)(o.Text, { variant: "text-xs/medium", children: a }),
                                           ],
                                       })
                                     : null,
                           }),
                       ],
                   }),
-                  !l &&
-                      (0, r.jsx)("div", {
-                          className: w.S6,
-                      }),
+                  !n && (0, l.jsx)("div", { className: G.S6 }),
               ],
           });
 }
-
-function G() {
+function M() {
     let {
         guildId: e,
         currentGame: t,
-        regionId: l,
-        gameServerInstance: s,
-        setRegionId: i,
-        name: N,
-        setName: G,
-        planId: I,
-        setPlanId: k,
-        planCost: M,
-        stepLoading: U,
-        error: V,
-        gameProvider: C,
-    } = (0, g.bv)();
-    (0, x.SX)(e, null == s ? void 0 : s.id, null == s ? "create" : "edit"),
-        n.useEffect(() => {
-            (0, m.Jr)(e);
+        regionId: n,
+        gameServerInstance: i,
+        setRegionId: s,
+        name: v,
+        setName: M,
+        planId: U,
+        setPlanId: w,
+        planCost: O,
+        stepLoading: V,
+        error: y,
+        gameProvider: L,
+    } = (0, j.bv)();
+    (0, _.SX)(e, i?.id, null == i ? "create" : "edit"),
+        r.useEffect(() => {
+            (0, g.Jr)(e);
         }, [e]);
-    let K = (0, a.bG)([j.A], () => j.A.getRegions()),
-        L = (0, a.bG)([j.A], () => j.A.getRegionState()),
-        D = n.useMemo(() => {
-            var e;
-            return null !=
-                (e = K.sort((e, t) => (0, S.A)(e, t, L)).map((e) => ({
+    let K = (0, a.bG)([f.A], () => f.A.getRegions()),
+        H = (0, a.bG)([f.A], () => f.A.getRegionState()),
+        P = r.useMemo(
+            () =>
+                K.sort((e, t) => (0, b.A)(e, t, H)).map((e) => ({
                     value: e,
                     label: e.name,
                     disabled: !0 !== e.enabled,
-                })))
-                ? e
-                : [];
-        }, [L, K]),
-        H = n.useMemo(() => K.some((e) => "" !== e.pingUrl), [K]),
-        F = n.useMemo(() => {
-            var e;
-            return null !=
-                (e =
-                    null == t
-                        ? void 0
-                        : t.plans.map((e) => ({
-                              value: e,
-                              label: e.name,
-                          })))
-                ? e
-                : [];
-        }, [t]),
-        z = (0, h.A)(),
-        { isValid: W, errors: Q } = (0, h.u)(N),
-        Y = null != s,
-        B = (0, _.A)(s),
-        Z = (0, O.A)(C),
-        q = null != C && null != E.eh[C] ? E.eh[C] : "";
+                })) ?? [],
+            [H, K],
+        ),
+        F = r.useMemo(() => K.some((e) => "" !== e.pingUrl), [K]),
+        W = r.useMemo(() => t?.plans.map((e) => ({ value: e, label: e.name })) ?? [], [t]),
+        z = (0, p.A)(),
+        { isValid: B, errors: D } = (0, p.u)(v),
+        Q = null != i,
+        Y = (0, S.A)(i),
+        Z = (0, E.A)(L),
+        q = null != L && null != C.eh[L] ? C.eh[L] : "";
     return null == t
-        ? (0, r.jsx)("div", {
-              className: w.dc,
-              children: (0, r.jsx)(o.y$y, {
-                  type: o.tVU.SPINNING_CIRCLE,
-              }),
-          })
-        : (0, r.jsxs)("div", {
-              className: w.kL,
+        ? (0, l.jsx)("div", { className: G.dc, children: (0, l.jsx)(o.y$y, { type: o.tVU.SPINNING_CIRCLE }) })
+        : (0, l.jsxs)("div", {
+              className: G.kL,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: w.hQ,
+                  (0, l.jsxs)("div", {
+                      className: G.hQ,
                       children: [
-                          (0, r.jsxs)("div", {
-                              className: w.V1,
+                          (0, l.jsxs)("div", {
+                              className: G.V1,
                               children: [
-                                  (0, r.jsxs)("div", {
-                                      className: w.hd,
+                                  (0, l.jsxs)("div", {
+                                      className: G.hd,
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: w.bV,
+                                          (0, l.jsxs)("div", {
+                                              className: G.bV,
                                               children: [
-                                                  (0, r.jsx)(o.Heading, {
-                                                      className: w.TK,
+                                                  (0, l.jsx)(o.Heading, {
+                                                      className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: T.intl.string(A.default.rOMEZd),
+                                                      children: I.intl.string(T.default.rOMEZd),
                                                   }),
-                                                  (0, r.jsx)(c.m_, {
+                                                  (0, l.jsx)(c.m_, {
                                                       position: "top",
-                                                      text: T.intl.string(A.default.THJY1n),
-                                                      children: (0, r.jsx)(o.cBN, {
-                                                          className: w.GI,
-                                                          size: "xs",
-                                                      }),
+                                                      text: I.intl.string(T.default.THJY1n),
+                                                      children: (0, l.jsx)(o.cBN, { className: G.GI, size: "xs" }),
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)(o.ksK, {
-                                              value: N,
-                                              onChange: G,
-                                              placeholder: T.intl.string(A.default.ElVYr3),
-                                              maxLength: E.XF,
-                                              disabled: U || !B,
-                                              error: Q.name,
+                                          (0, l.jsx)(o.ksK, {
+                                              value: v,
+                                              onChange: M,
+                                              placeholder: I.intl.string(T.default.ElVYr3),
+                                              maxLength: C.XF,
+                                              disabled: V || !Y,
+                                              error: D.name,
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsxs)("div", {
-                                      className: w.hd,
+                                  (0, l.jsxs)("div", {
+                                      className: G.hd,
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: w.bV,
+                                          (0, l.jsxs)("div", {
+                                              className: G.bV,
                                               children: [
-                                                  (0, r.jsx)(o.Heading, {
-                                                      className: w.TK,
+                                                  (0, l.jsx)(o.Heading, {
+                                                      className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: T.intl.string(A.default.nB5OZ4),
+                                                      children: I.intl.string(T.default.nB5OZ4),
                                                   }),
-                                                  (0, r.jsx)(c.m_, {
+                                                  (0, l.jsx)(c.m_, {
                                                       position: "top",
-                                                      text: T.intl.string(
-                                                          null != s ? A.default["7mX0gE"] : A.default["61N+P6"],
+                                                      text: I.intl.string(
+                                                          null != i ? T.default["7mX0gE"] : T.default["61N+P6"],
                                                       ),
-                                                      children: (0, r.jsx)(o.cBN, {
-                                                          className: w.GI,
-                                                          size: "xs",
-                                                      }),
+                                                      children: (0, l.jsx)(o.cBN, { className: G.GI, size: "xs" }),
                                                   }),
-                                                  !Y &&
-                                                      H &&
-                                                      (0, r.jsx)("div", {
-                                                          className: w.Ow,
-                                                          children: (0, r.jsx)(c.m_, {
+                                                  !Q &&
+                                                      F &&
+                                                      (0, l.jsx)("div", {
+                                                          className: G.Ow,
+                                                          children: (0, l.jsx)(c.m_, {
                                                               asContainer: !0,
                                                               position: "top",
-                                                              text: T.intl.string(A.default.kGkE7a),
-                                                              children: (0, r.jsx)(o.DUT, {
-                                                                  className: w.GI,
-                                                                  onClick: () => (0, m.KH)(),
-                                                                  children: (0, r.jsx)(o.fNY, {
-                                                                      size: "xs",
-                                                                  }),
+                                                              text: I.intl.string(T.default.kGkE7a),
+                                                              children: (0, l.jsx)(o.DUT, {
+                                                                  className: G.GI,
+                                                                  onClick: () => (0, g.KH)(),
+                                                                  children: (0, l.jsx)(o.fNY, { size: "xs" }),
                                                               }),
                                                           }),
                                                       }),
                                               ],
                                           }),
-                                          Y
-                                              ? (0, r.jsx)(o.ksK, {
-                                                    value: null == s ? void 0 : s.regionName,
+                                          Q
+                                              ? (0, l.jsx)(o.ksK, {
+                                                    value: i?.regionName,
                                                     disabled: !0,
-                                                    placeholder: T.intl.string(A.default["k+RTIm"]),
+                                                    placeholder: I.intl.string(T.default["k+RTIm"]),
                                                 })
-                                              : (0, r.jsx)(d.Pw, {
+                                              : (0, l.jsx)(d.Pw, {
                                                     serialize: (e) => e.id,
-                                                    isSelected: (e) => e.id === l,
-                                                    isDisabled: U || Y || !B,
-                                                    options: D,
-                                                    optionClassName: w.uK,
-                                                    select: (e) => i(e.id),
-                                                    placeholder: T.intl.string(A.default["k+RTIm"]),
-                                                    renderOptionLabel: (e) => {
-                                                        var t;
-                                                        return (0, r.jsx)(R, {
+                                                    isSelected: (e) => e.id === n,
+                                                    isDisabled: V || Q || !Y,
+                                                    options: P,
+                                                    optionClassName: G.uK,
+                                                    select: (e) => s(e.id),
+                                                    placeholder: I.intl.string(T.default["k+RTIm"]),
+                                                    renderOptionLabel: (e) =>
+                                                        (0, l.jsx)(k, {
                                                             region: e.value,
-                                                            selected: e.value.id === l,
-                                                            disabled: null != (t = e.disabled) && t,
-                                                        });
-                                                    },
-                                                    renderOptionValue: (e) => {
-                                                        var t;
-                                                        return null == e[0]
+                                                            selected: e.value.id === n,
+                                                            disabled: e.disabled ?? !1,
+                                                        }),
+                                                    renderOptionValue: (e) =>
+                                                        null == e[0]
                                                             ? null
-                                                            : (0, r.jsx)(R, {
+                                                            : (0, l.jsx)(k, {
                                                                   region: e[0].value,
-                                                                  selected: e[0].value.id === l,
-                                                                  disabled: null != (t = e[0].disabled) && t,
-                                                                  className: w.Uq,
-                                                              });
-                                                    },
+                                                                  selected: e[0].value.id === n,
+                                                                  disabled: e[0].disabled ?? !1,
+                                                                  className: G.Uq,
+                                                              }),
                                                     "data-migration-pending": !0,
                                                 }),
                                       ],
                                   }),
-                                  (0, r.jsxs)("div", {
-                                      className: w.hd,
+                                  (0, l.jsxs)("div", {
+                                      className: G.hd,
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: w.bV,
+                                          (0, l.jsxs)("div", {
+                                              className: G.bV,
                                               children: [
-                                                  (0, r.jsx)(o.Heading, {
-                                                      className: w.TK,
+                                                  (0, l.jsx)(o.Heading, {
+                                                      className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: T.intl.string(A.default["K+zMYp"]),
+                                                      children: I.intl.string(T.default["K+zMYp"]),
                                                   }),
-                                                  (0, r.jsx)(c.m_, {
+                                                  (0, l.jsx)(c.m_, {
                                                       position: "top",
-                                                      text: T.intl.string(A.default["/wD5IM"]),
-                                                      children: (0, r.jsx)(o.cBN, {
-                                                          className: w.GI,
-                                                          size: "xs",
-                                                      }),
+                                                      text: I.intl.string(T.default["/wD5IM"]),
+                                                      children: (0, l.jsx)(o.cBN, { className: G.GI, size: "xs" }),
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)(d.Pw, {
+                                          (0, l.jsx)(d.Pw, {
                                               serialize: (e) => e.id,
-                                              isSelected: (e) => e.id === I,
-                                              isDisabled: U || !B,
-                                              options: F,
-                                              optionClassName: w.uK,
-                                              select: (e) => k(e.id),
-                                              placeholder: T.intl.string(A.default.JdMW0i),
-                                              renderOptionValue: (e) => {
-                                                  var t, l, n;
-                                                  return (0, r.jsx)(P, {
-                                                      plan: null == (t = e[0]) ? void 0 : t.value,
-                                                      selected:
-                                                          (null == (n = e[0]) || null == (l = n.value)
-                                                              ? void 0
-                                                              : l.id) === I,
-                                                      className: w.Uq,
-                                                  });
-                                              },
-                                              renderOptionLabel: (e) =>
-                                                  (0, r.jsx)(P, {
-                                                      plan: e.value,
-                                                      selected: e.value.id === I,
+                                              isSelected: (e) => e.id === U,
+                                              isDisabled: V || !Y,
+                                              options: W,
+                                              optionClassName: G.uK,
+                                              select: (e) => w(e.id),
+                                              placeholder: I.intl.string(T.default.JdMW0i),
+                                              renderOptionValue: (e) =>
+                                                  (0, l.jsx)(R, {
+                                                      plan: e[0]?.value,
+                                                      selected: e[0]?.value?.id === U,
+                                                      className: G.Uq,
                                                   }),
+                                              renderOptionLabel: (e) =>
+                                                  (0, l.jsx)(R, { plan: e.value, selected: e.value.id === U }),
                                               "data-migration-pending": !0,
                                           }),
                                       ],
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", {
-                              className: w.sA,
-                              children: (0, r.jsx)(v.A, {}),
-                          }),
+                          (0, l.jsx)("div", { className: G.sA, children: (0, l.jsx)(h.A, {}) }),
                       ],
                   }),
-                  null != s &&
-                      0 !== M &&
-                      (0, r.jsx)(u.A, {
-                          className: w.et,
-                          children: (0, r.jsx)(o.Text, {
+                  null != i &&
+                      0 !== O &&
+                      (0, l.jsx)(u.A, {
+                          className: G.et,
+                          children: (0, l.jsx)(o.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  M < 0
-                                      ? T.intl.format(A.default.SorKas, {
-                                            boostCount: Math.abs(M),
-                                        })
-                                      : T.intl.format(A.default.n2wpym, {
-                                            boostCount: M,
-                                        }),
+                                  O < 0
+                                      ? I.intl.format(T.default.SorKas, { boostCount: Math.abs(O) })
+                                      : I.intl.format(T.default.n2wpym, { boostCount: O }),
                           }),
                       }),
-                  !B &&
-                      (0, r.jsx)(u.A, {
-                          className: w.et,
+                  !Y &&
+                      (0, l.jsx)(u.A, {
+                          className: G.et,
                           look: u.k.WARNING,
-                          children: (0, r.jsx)(o.Text, {
+                          children: (0, l.jsx)(o.Text, {
                               variant: "text-xs/medium",
-                              children: T.intl.string(A.default["/JNPWb"]),
+                              children: I.intl.string(T.default["/JNPWb"]),
                           }),
                       }),
-                  (null == t ? void 0 : t.early_access) === !0 &&
-                      !Y &&
-                      (0, r.jsx)(u.A, {
-                          className: w.et,
+                  t?.early_access === !0 &&
+                      !Q &&
+                      (0, l.jsx)(u.A, {
+                          className: G.et,
                           look: u.k.INFO,
-                          children: (0, r.jsx)(o.Text, {
+                          children: (0, l.jsx)(o.Text, {
                               variant: "text-xs/medium",
-                              children: T.intl.format(A.default.TnoBGX, {
-                                  gameName: t.name,
-                              }),
+                              children: I.intl.format(T.default.TnoBGX, { gameName: t.name }),
                           }),
                       }),
-                  (0, r.jsx)(o.Text, {
+                  (0, l.jsx)(o.Text, {
                       variant: "text-xs/medium",
                       color: "text-muted",
                       children:
-                          null != C &&
-                          T.intl.format(Y ? A.default.num0a6 : A.default.p5KZDr, {
+                          null != L &&
+                          I.intl.format(Q ? T.default.num0a6 : T.default.p5KZDr, {
                               provider: Z,
-                              termsOfServiceUrl: () =>
-                                  (0, b.h)({
-                                      href: q,
-                                  }),
-                              helpCenterUrl: f.A.getArticleURL(y.MVz.GAME_SERVER_HOSTING),
+                              termsOfServiceUrl: () => (0, x.h)({ href: q }),
+                              helpCenterUrl: m.A.getArticleURL(A.MVz.GAME_SERVER_HOSTING),
                           }),
                   }),
-                  null != V &&
-                      (0, r.jsx)(o.Text, {
-                          variant: "text-xs/medium",
-                          color: "text-feedback-critical",
-                          children: V,
-                      }),
-                  (0, r.jsxs)(p.N4, {
-                      step: E.HS.SERVER_SETTINGS,
-                      className: w.xQ,
-                      children: [
-                          (0, r.jsx)(p.AI, {}),
-                          (0, r.jsx)(p.cp, {
-                              disabled: !z || !W,
-                          }),
-                      ],
+                  null != y &&
+                      (0, l.jsx)(o.Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: y }),
+                  (0, l.jsxs)(N.N4, {
+                      step: C.HS.SERVER_SETTINGS,
+                      className: G.xQ,
+                      children: [(0, l.jsx)(N.AI, {}), (0, l.jsx)(N.cp, { disabled: !z || !B })],
                   }),
               ],
           });

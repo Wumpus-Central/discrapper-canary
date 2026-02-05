@@ -1,6 +1,5 @@
-r.d(t, {
-    J: () => a,
-});
+"use strict";
+r.d(t, { J: () => a });
 var n = {},
     o = function (e, t, r, n) {
         if ("u" < typeof document && !n) return null;

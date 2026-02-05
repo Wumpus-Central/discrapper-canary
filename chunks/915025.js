@@ -1,14 +1,11 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.runtimeHashMessageKey = o);
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.runtimeHashMessageKey = o);
 let r = n(618830),
     i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
     a = (() => {
         let e = new Uint8Array(4);
         return !((new Uint32Array(e.buffer)[0] = 1) & e[0]);
     })();
-
 function s(e) {
     e = BigInt(e);
     let t = [],
@@ -17,7 +14,6 @@ function s(e) {
     let r = new Uint8Array(t);
     return a ? r : r.reverse();
 }
-
 function o(e) {
     let t = s((0, r.hash)(e, 0));
     return [

@@ -1,3 +1,2 @@
-e.exports = {
-    r: "popIn_c7da74",
-};
+"use strict";
+e.exports = { r: "popIn_c7da74" };

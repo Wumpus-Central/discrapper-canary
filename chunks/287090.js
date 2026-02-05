@@ -1,6 +1,4 @@
-n.d(e, {
-    A: () => i,
-});
+n.d(e, { A: () => i });
 var t = n(303527);
 let i = {
     ordinalNumber: (0, n(722023).A)({
@@ -17,21 +15,13 @@ let i = {
             wide: /^(Prije Krista|prije nove ere|Poslije Krista|nova era)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^pr/i, /^(po|nova)/i],
-        },
+        parsePatterns: { any: [/^pr/i, /^(po|nova)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, t.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^[1234]\.\s?kv\.?/i,
-            wide: /^[1234]\. kvartal/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]\.\s?kv\.?/i, wide: /^[1234]\. kvartal/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (o) {
             return o + 1;
@@ -92,9 +82,7 @@ let i = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, t.A)({
-        matchPatterns: {
-            any: /^(am|pm|ponoc|ponoć|(po)?podne|navecer|navečer|noću|poslije podne|ujutro)/i,
-        },
+        matchPatterns: { any: /^(am|pm|ponoc|ponoć|(po)?podne|navecer|navečer|noću|poslije podne|ujutro)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

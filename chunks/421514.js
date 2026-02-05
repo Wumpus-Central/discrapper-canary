@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     YS: "profileEffectContainer_a84142",
     Zp: "profileEffectBackground_a84142",

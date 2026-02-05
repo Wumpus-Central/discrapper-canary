@@ -1,83 +1,62 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
-    l = n(827343),
-    a = n(800828),
+n.d(t, { A: () => N });
+var i = n(64700),
+    r = n(311907),
+    a = n(827343),
+    l = n(800828),
     s = n(912309),
     o = n(780964),
-    c = n(840065),
-    u = n(458294),
-    d = n(430452),
-    p = n(803224),
-    f = n(383501),
-    h = n(994500),
-    A = n(485296),
-    g = n(723702),
-    m = n(837921),
-    b = n(652215);
-let _ = (0, g.isMac)() ? null : "DEFAULT";
-class E extends r.PureComponent {
+    d = n(840065),
+    c = n(458294),
+    u = n(430452),
+    A = n(803224),
+    h = n(383501),
+    _ = n(994500),
+    m = n(485296),
+    p = n(723702),
+    g = n(837921),
+    E = n(652215);
+let f = (0, p.isMac)() ? null : "DEFAULT";
+class I extends i.PureComponent {
+    getIcon = () => {
+        let { deafened: e, muted: t, speaking: n, connected: i, unread: r } = this.props,
+            a = f;
+        return (0, p.isMac)() && !i
+            ? a
+            : (0, p.isLinux)() || !i
+              ? (r && (a = "UNREAD"), a)
+              : (a = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED");
+    };
     componentDidMount() {
-        m.Ay.setSystemTrayIcon(this.getIcon());
+        g.Ay.setSystemTrayIcon(this.getIcon());
     }
     componentDidUpdate() {
-        m.Ay.setSystemTrayIcon(this.getIcon());
+        g.Ay.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        m.Ay.setSystemTrayIcon(_);
+        g.Ay.setSystemTrayIcon(f);
     }
     render() {
         return null;
     }
-    constructor(...e) {
-        super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: n,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = n);
-            })(this, "getIcon", () => {
-                let { deafened: e, muted: t, speaking: n, connected: r, unread: i } = this.props,
-                    l = _;
-                return (0, g.isMac)() && !r
-                    ? l
-                    : (0, g.isLinux)() || !r
-                      ? (i && (l = "UNREAD"), l)
-                      : (l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED");
-            });
-    }
 }
-let O = () => null;
-g.isPlatformEmbedded &&
-    (m.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () =>
-        l.A.toggleSelfMute({
-            location: "System Tray",
-        }),
-    ),
-    m.Ay.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.A.toggleSelfDeaf()),
-    m.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-        (0, c.openUserSettings)(o.X.VOICE_AND_VIDEO_PANEL, {
-            section: b.nc_.VOICE,
-        });
+let C = () => null;
+p.isPlatformEmbedded &&
+    (g.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () => a.A.toggleSelfMute({ location: "System Tray" })),
+    g.Ay.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => a.A.toggleSelfDeaf()),
+    g.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
+        (0, d.openUserSettings)(o.X.VOICE_AND_VIDEO_PANEL, { section: E.nc_.VOICE });
     }),
-    (O = i.Ay.connectStores([f.A, d.A, A.A, u.default, h.A, p.A, a.A], () => {
-        let e = u.default.getTotalMentionCount(),
-            t = u.default.hasAnyUnread(),
-            n = (0, s.dH)([h.A, a.A]),
-            r = !p.A.getDisableUnreadBadge() && !!(t || e + n > 0);
+    (C = r.Ay.connectStores([h.A, u.A, m.A, c.default, _.A, A.A, l.A], () => {
+        let e = c.default.getTotalMentionCount(),
+            t = c.default.hasAnyUnread(),
+            n = (0, s.dH)([_.A, l.A]),
+            i = !A.A.getDisableUnreadBadge() && !!(t || e + n > 0);
         return {
-            connected: f.A.isConnected(),
-            speaking: A.A.isCurrentUserSpeaking(),
-            muted: d.A.isSelfMute() || d.A.isSelfMutedTemporarily(),
-            deafened: d.A.isSelfDeaf(),
-            unread: r,
+            connected: h.A.isConnected(),
+            speaking: m.A.isCurrentUserSpeaking(),
+            muted: u.A.isSelfMute() || u.A.isSelfMutedTemporarily(),
+            deafened: u.A.isSelfDeaf(),
+            unread: i,
         };
-    })(E)));
-let y = O;
+    })(I)));
+let N = C;

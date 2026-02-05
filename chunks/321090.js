@@ -1,95 +1,63 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(77729),
-    o = n(626584),
-    l = n(837921),
-    c = n(41984),
+"use strict";
+n.d(t, { A: () => R });
+var r = n(311907),
+    i = n(73153),
+    a = n(77729),
+    s = n(626584),
+    o = n(837921),
+    l = n(41984),
     u = n(680243),
-    d = n(672396);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let p = new o.A("OverlayV3NativeGPUBoostManager"),
+    c = n(672396);
+let d = new s.A("OverlayV3NativeGPUBoostManager"),
     _ = new Set(),
-    h = !1,
-    m = !1;
-
-function g(e, t) {
-    t ? _.add(e) : _.delete(e), O();
+    f = !1,
+    p = !1;
+function h(e, t) {
+    t ? _.add(e) : _.delete(e), A();
 }
-
-function E(e) {
-    (m = e), O();
+function m(e) {
+    (p = e), A();
 }
-
-function b() {
-    _.clear(), O();
+function g() {
+    _.clear(), A();
 }
-
-function y() {
-    return !m && _.size > 0;
+function E() {
+    return !p && _.size > 0;
 }
-async function O() {
-    var e, t, n;
+async function A() {
     try {
-        let n = y();
-        if (h === n || !d.OX) return;
-        let r = await (null === s.A ||
-        void 0 === s.A ||
-        null == (t = s.A.processUtils) ||
-        null == (e = t.getGpuProcessId)
-            ? void 0
-            : e.call(t));
-        if (null == r) return;
-        l.Ay.SetGPUBoostEnabledByPid(r, n) && (h = n), R.emitChange();
+        let e = E();
+        if (f === e || !c.OX) return;
+        let t = await a.A?.processUtils?.getGpuProcessId?.();
+        if (null == t) return;
+        o.Ay.SetGPUBoostEnabledByPid(t, e) && (f = e), N.emitChange();
     } catch (e) {
-        (null == (n = e.message) ? void 0 : n.includes("IPC method called after context was released")) && b(),
-            p.error("Error during GPU boost request flush:", e);
+        e.message?.includes("IPC method called after context was released") && g(),
+            d.error("Error during GPU boost request flush:", e);
     }
 }
-
-function A(e) {
-    g(e.reason, e.enabled);
-}
-
-function v(e) {
-    let { enabled: t, mode: n } = e;
-    n === c.x7.DisabledGPUBoost && E(t), n === c.x7.ForceGPUBoost && g(c.y7.DEV_FORCED_GPU_BOOST, t);
-}
-
-function S() {
-    b();
-}
-
 function I(e) {
-    g(c.y7.OVERLAY_UNLOCKED, !e.locked);
+    h(e.reason, e.enabled);
 }
-
-function T() {
-    l.Ay.IsHardwareAcceleratedGPUSchedulingEnabled() && g(c.y7.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
-        g(c.y7.OVERLAY_RENDERING, !0);
+function T(e) {
+    let { enabled: t, mode: n } = e;
+    n === l.x7.DisabledGPUBoost && m(t), n === l.x7.ForceGPUBoost && h(l.y7.DEV_FORCED_GPU_BOOST, t);
 }
-
+function y() {
+    g();
+}
+function S(e) {
+    h(l.y7.OVERLAY_UNLOCKED, !e.locked);
+}
+function v() {
+    o.Ay.IsHardwareAcceleratedGPUSchedulingEnabled() && h(l.y7.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
+        h(l.y7.OVERLAY_RENDERING, !0);
+}
 function C() {
-    b();
+    g();
 }
-class N extends (r = i.Ay.Store) {
+class b extends r.Ay.Store {
+    static displayName = "Overlay-v3-Native-GPU-Boost-Store";
     initialize() {
         this.waitFor(u.A);
     }
@@ -97,24 +65,23 @@ class N extends (r = i.Ay.Store) {
         return _;
     }
     isGPUBoosted() {
-        return h;
+        return f;
     }
     getIsDisabledGPUBoost() {
-        return m;
+        return p;
     }
 }
-f(N, "displayName", "Overlay-v3-Native-GPU-Boost-Store");
-let R = new N(
-        a.h,
-        __OVERLAY__ || !d.OX
+let N = new b(
+        i.h,
+        __OVERLAY__ || !c.OX
             ? {}
             : {
-                  OVERLAY_SET_GPU_BOOST_REQUESTED: A,
-                  OVERLAY_RENDER_DEBUG_MODE: v,
-                  OVERLAY_CRASHED: S,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: T,
+                  OVERLAY_SET_GPU_BOOST_REQUESTED: I,
+                  OVERLAY_RENDER_DEBUG_MODE: T,
+                  OVERLAY_CRASHED: y,
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: v,
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: C,
-                  OVERLAY_SET_INPUT_LOCKED: I,
+                  OVERLAY_SET_INPUT_LOCKED: S,
               },
     ),
-    w = R;
+    R = N;

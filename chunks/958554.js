@@ -1,3 +1,4 @@
+"use strict";
 var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
@@ -12,40 +13,30 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var o = n(698380),
     l = n(87805),
-    c = n(731841),
-    u = n(82322);
+    u = n(731841),
+    c = n(82322);
 n(336258);
 var d = n(972535),
-    f = n.g.Set || n(576655);
-
-function p(e) {
-    var t = new f();
-
+    _ = n.g.Set || n(576655);
+function f(e) {
+    var t = new _();
     function n(e) {
         "function" == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
     }
@@ -124,7 +115,7 @@ e.exports = (function (e) {
             {
                 key: "interpolate",
                 value: function (e) {
-                    return new c(this, u.create(e));
+                    return new u(this, c.create(e));
                 },
             },
             {
@@ -163,10 +154,8 @@ e.exports = (function (e) {
             {
                 key: "_updateValue",
                 value: function (e) {
-                    for (var t in ((this._value = e), p(this), this._listeners))
-                        this._listeners[t]({
-                            value: this.__getValue(),
-                        });
+                    for (var t in ((this._value = e), f(this), this._listeners))
+                        this._listeners[t]({ value: this.__getValue() });
                 },
             },
         ]),

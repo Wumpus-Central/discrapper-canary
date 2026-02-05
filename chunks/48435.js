@@ -1,199 +1,102 @@
-n.d(t, {
-    H: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { H: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(827343),
     o = n(954571),
     l = n(74848),
-    c = n(652215),
-    u = n(731854),
+    u = n(652215),
+    c = n(731854),
     d = n(985018);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function m(e) {
+function _(e) {
     return {
-        [u.oh.AUDIO_INPUT]: {
+        [c.oh.AUDIO_INPUT]: {
             setDevice: s.A.setInputDevice,
             getLabel: () => d.intl.string(d.t.ElbIXN),
-            getLocation: (e) => "".concat(e, ".useInputDeviceMenuItems"),
+            getLocation: (e) => `${e}.useInputDeviceMenuItems`,
         },
-        [u.oh.AUDIO_OUTPUT]: {
+        [c.oh.AUDIO_OUTPUT]: {
             setDevice: s.A.setOutputDevice,
             getLabel: () => d.intl.string(d.t["6Ww0iH"]),
-            getLocation: (e) => "".concat(e, ".useOutputDeviceMenuItems"),
+            getLocation: (e) => `${e}.useOutputDeviceMenuItems`,
         },
-        [u.oh.VIDEO_INPUT]: {
+        [c.oh.VIDEO_INPUT]: {
             setDevice: s.A.setVideoDevice,
             getLabel: () => d.intl.string(d.t.F122Gz),
-            getLocation: (e) => "".concat(e, ".useVideoDeviceMenuItems"),
+            getLocation: (e) => `${e}.useVideoDeviceMenuItems`,
         },
     }[e];
 }
-
-function g(e) {
-    var t;
+function f(e) {
     let {
-            deviceType: n,
-            analyticsLocations: s,
-            asSubmenu: u = !1,
-            onDeviceSelect: f,
-            showAllDevices: _ = !1,
-            selectedDeviceId: g,
-            menuGroupOverrideProps: E,
-            menuItemOverrideProps: y,
-            computeMenuRadioItemOverrideProps: b,
+            deviceType: t,
+            analyticsLocations: n,
+            asSubmenu: s = !1,
+            onDeviceSelect: c,
+            showAllDevices: f = !1,
+            selectedDeviceId: p,
+            menuGroupOverrideProps: h,
+            menuItemOverrideProps: m,
+            computeMenuRadioItemOverrideProps: g,
         } = e,
-        { setDevice: O, getLabel: v, getLocation: A } = m(n),
-        [I, S] = i.useState(_),
-        T = A(s[s.length - 1]),
-        [C, N] = (0, l.tR)(n, {
-            location: T,
-        }),
-        w = I ? C.concat(N) : C,
-        { id: R, name: P } = (0, l.x5)(n),
-        D = null != g ? g : R,
-        x = i.useMemo(
+        { setDevice: E, getLabel: A, getLocation: I } = _(t),
+        [T, y] = i.useState(f),
+        S = I(n[n.length - 1]),
+        [v, C] = (0, l.tR)(t, { location: S }),
+        b = T ? v.concat(C) : v,
+        { id: N, name: R } = (0, l.x5)(t),
+        O = p ?? N,
+        D = i.useMemo(
             () =>
-                C.concat(N).find((e) => {
+                v.concat(C).find((e) => {
                     let { id: t } = e;
-                    return t === D;
+                    return t === O;
                 }),
-            [C, N, D],
+            [v, C, O],
         ),
-        L = w.map((e) => {
-            let t,
-                { id: i, disabled: o, name: c } = e,
-                u = c,
-                d = (0, l.d)(c);
+        L = b.map((e) => {
+            let i,
+                { id: s, disabled: o, name: u } = e,
+                d = u,
+                _ = (0, l.d)(u);
             return (
-                null != d && ((u = d.prefix), (t = d.subName)),
+                null != _ && ((d = _.prefix), (i = _.subName)),
                 (0, r.jsx)(
                     a.iDA,
-                    p(
-                        {
-                            id: "".concat(n, "-").concat(i),
-                            group: "".concat(n, "-devices"),
-                            disabled: o,
-                            label: u,
-                            subtext: t,
-                            checked: i === D,
-                            action: () => {
-                                var e;
-                                (null == (e = null == f ? void 0 : f(i)) || e) &&
-                                    O(i, {
-                                        analyticsLocations: s,
-                                    });
-                            },
+                    {
+                        id: `${t}-${s}`,
+                        group: `${t}-devices`,
+                        disabled: o,
+                        label: d,
+                        subtext: i,
+                        checked: s === O,
+                        action: () => {
+                            (c?.(s) ?? !0) && E(s, { analyticsLocations: n });
                         },
-                        null == b ? void 0 : b(i),
-                    ),
-                    "".concat(n, "-").concat(i),
+                        ...g?.(s),
+                    },
+                    `${t}-${s}`,
                 )
             );
         }),
-        j = (0, r.jsx)(a.Drp, {
+        w = (0, r.jsx)(a.Drp, {
             id: "SHOW_MORE",
             label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
             action: () => {
-                S(!0),
-                    o.default.track(c.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
-                        device_type: n,
-                        location: T,
-                        shown_device_count: C.length,
-                        hidden_device_count: N.length,
-                        location_stack: s,
+                y(!0),
+                    o.default.track(u.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                        device_type: t,
+                        location: S,
+                        shown_device_count: v.length,
+                        hidden_device_count: C.length,
+                        location_stack: n,
                     });
             },
         }),
-        M = !I && (null == N ? void 0 : N.length) > 0;
-    return u
-        ? (0, r.jsxs)(
-              a.Drp,
-              h(
-                  p(
-                      {
-                          id: "".concat(n, "-devices"),
-                          label: v(),
-                          subtext: null != (t = null == x ? void 0 : x.name) ? t : P,
-                      },
-                      y,
-                  ),
-                  {
-                      children: [L, M && j],
-                  },
-              ),
-          )
-        : (0, r.jsxs)(
-              a.rXV,
-              h(
-                  p(
-                      {
-                          label: v(),
-                      },
-                      E,
-                  ),
-                  {
-                      children: [L, M && j],
-                  },
-              ),
-          );
+        x = !T && C?.length > 0;
+    return s
+        ? (0, r.jsxs)(a.Drp, { id: `${t}-devices`, label: A(), subtext: D?.name ?? R, ...m, children: [L, x && w] })
+        : (0, r.jsxs)(a.rXV, { label: A(), ...h, children: [L, x && w] });
 }

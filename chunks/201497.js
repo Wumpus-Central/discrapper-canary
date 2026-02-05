@@ -1,52 +1,13 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(457529),
-    n(65821);
-var r,
-    i,
-    l,
+n.d(t, { A: () => S });
+var i,
+    r,
     a,
-    s = n(627968),
-    o = n(64700);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    return u(
-        {
-            "@type": e,
-        },
-        (function e(t) {
+    l = n(627968),
+    s = n(64700);
+function o(e, t) {
+    return {
+        "@type": e,
+        ...(function e(t) {
             return (
                 Object.keys(t).forEach((n) => {
                     null == t[n] ? delete t[n] : "object" == typeof t[n] && (t[n] = e(t[n]));
@@ -64,17 +25,21 @@ function d(e, t) {
                 return t;
             })(t),
         ),
-    );
+    };
 }
-
-function p(e) {
-    return d("Thing", e);
+function d(e) {
+    return o("Thing", e);
 }
-
-function f(e) {
-    return d("Product", e);
+function c(e) {
+    return o("Organization", e);
 }
-f.Image = function (e) {
+function u(e) {
+    return o("Product", e);
+}
+function A(e) {
+    return o("ItemPage", e);
+}
+u.Image = function (e) {
     if (null == e) return null;
     let t = e.filter((e) => null != e && "" !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
@@ -85,69 +50,58 @@ var h =
         (i.REFURBISHED = "http://schema.org/RefurbishedCondition"),
         (i.USED = "http://schema.org/UsedCondition"),
         i),
-    A =
-        (((l = A || {}).DISCONTINUED = "http://schema.org/Discontinued"),
-        (l.IN_STOCK = "http://schema.org/InStock"),
-        (l.IN_STORE_ONLY = "http://schema.org/InStoreOnly"),
-        (l.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability"),
-        (l.ONLINE_ONLY = "http://schema.org/OnlineOnly"),
-        (l.OUT_OF_STOCK = "http://schema.org/OutOfStock"),
-        (l.PREORDER = "http://schema.org/PreOrder"),
-        (l.PRESALE = "http://schema.org/PreSale"),
-        (l.SOLD_OUT = "http://schema.org/SoldOut"),
-        l);
-
+    _ =
+        (((r = _ || {}).DISCONTINUED = "http://schema.org/Discontinued"),
+        (r.IN_STOCK = "http://schema.org/InStock"),
+        (r.IN_STORE_ONLY = "http://schema.org/InStoreOnly"),
+        (r.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability"),
+        (r.ONLINE_ONLY = "http://schema.org/OnlineOnly"),
+        (r.OUT_OF_STOCK = "http://schema.org/OutOfStock"),
+        (r.PREORDER = "http://schema.org/PreOrder"),
+        (r.PRESALE = "http://schema.org/PreSale"),
+        (r.SOLD_OUT = "http://schema.org/SoldOut"),
+        r);
+function m(e) {
+    return o("Offer", e);
+}
+(m.ItemConditions = h), (m.ItemAvailability = _);
+var p = (((a = p || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
 function g(e) {
-    return d("Offer", e);
+    return o("QuantitativeValue", e);
 }
-(g.ItemConditions = h), (g.ItemAvailability = A);
-var m = (((a = m || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
-
-function b(e) {
-    return d("QuantitativeValue", e);
+function E(e) {
+    return o("UnitPriceSpecification", e);
 }
-b.UnitCodes = m;
-class _ extends (r = o.Component) {
+function f(e) {
+    return o("AggregateOffer", e);
+}
+function I(e) {
+    return o("Person", e);
+}
+function C(e) {
+    return o("Rating", e);
+}
+function N(e) {
+    return o("AggregateRating", e);
+}
+g.UnitCodes = p;
+class T extends s.Component {
+    static Thing = d;
+    static Brand = d;
+    static Person = I;
+    static Organization = c;
+    static ItemPage = A;
+    static Product = u;
+    static Offer = m;
+    static Rating = C;
+    static AggregateRating = N;
+    static AggregateOffer = f;
+    static QuantitativeValue = g;
+    static UnitPriceSpecification = E;
     render() {
         let { debug: e, data: t } = this.props,
-            n = JSON.stringify(
-                u(
-                    {
-                        "@context": "http://schema.org",
-                    },
-                    t,
-                ),
-            );
-        return (0, s.jsx)("script", {
-            type: "application/ld+json",
-            children: n,
-        });
+            n = JSON.stringify({ "@context": "http://schema.org", ...t });
+        return (0, l.jsx)("script", { type: "application/ld+json", children: n });
     }
 }
-c(_, "Thing", p),
-    c(_, "Brand", p),
-    c(_, "Person", function (e) {
-        return d("Person", e);
-    }),
-    c(_, "Organization", function (e) {
-        return d("Organization", e);
-    }),
-    c(_, "ItemPage", function (e) {
-        return d("ItemPage", e);
-    }),
-    c(_, "Product", f),
-    c(_, "Offer", g),
-    c(_, "Rating", function (e) {
-        return d("Rating", e);
-    }),
-    c(_, "AggregateRating", function (e) {
-        return d("AggregateRating", e);
-    }),
-    c(_, "AggregateOffer", function (e) {
-        return d("AggregateOffer", e);
-    }),
-    c(_, "QuantitativeValue", b),
-    c(_, "UnitPriceSpecification", function (e) {
-        return d("UnitPriceSpecification", e);
-    });
-let E = _;
+let S = T;

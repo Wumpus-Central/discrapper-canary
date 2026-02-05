@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     return (r = Object.setPrototypeOf
         ? Object.setPrototypeOf.bind()
@@ -5,6 +6,4 @@ function r(e, t) {
               return (e.__proto__ = t), e;
           })(e, t);
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

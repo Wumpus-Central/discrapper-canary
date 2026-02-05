@@ -1,14 +1,6 @@
 e.exports = function (e) {
-    let t = {
-            className: "variable",
-            begin: /\$[\w\d#@][\w\d_]*/,
-            relevance: 0,
-        },
-        n = {
-            className: "variable",
-            begin: /<(?!\/)/,
-            end: />/,
-        };
+    let t = { className: "variable", begin: /\$[\w\d#@][\w\d_]*/, relevance: 0 },
+        n = { className: "variable", begin: /<(?!\/)/, end: />/ };
     return {
         name: "Packet Filter config",
         aliases: ["pf.conf"],

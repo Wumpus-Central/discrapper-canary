@@ -1,121 +1,99 @@
-n.r(t), n(896048), n(680155), n(323874), n(14289), n(35956), n(142703);
-var r,
-    i,
-    a,
-    s,
-    o,
-    l = n(627968);
+"use strict";
+n.r(t), n(323874), n(14289), n(35956), n(142703);
+var r = n(627968);
 n(140595), n(64700);
-var c = n(507240),
-    u = n(284009),
-    d = n.n(u),
-    f = n(999212),
-    p = n(242120),
-    _ = n(716680),
-    h = n(908379),
-    m = n(46460),
-    g = n(557042),
-    E = n(8917),
-    b = n(728458),
-    y = n(975571),
-    O = n(769341),
-    A = n(837921),
-    v = n(763685),
-    S = n(184849),
+var i = n(507240),
+    a = n(284009),
+    s = n.n(a),
+    o = n(999212),
+    l = n(242120),
+    u = n(716680),
+    c = n(908379),
+    d = n(46460),
+    _ = n(557042),
+    f = n(8917),
+    p = n(728458),
+    h = n(975571),
+    m = n(769341),
+    g = n(837921),
+    E = n(763685),
+    A = n(184849),
     I = n(723702),
     T = n(976860),
-    C = n(350723),
-    N = n(913934),
-    R = n(451988),
-    w = n(77729),
-    P = n(772432),
-    D = n(975616),
-    x = n(617590),
-    L = n(111162),
-    j = n(769253),
-    M = n(639723),
-    k = n(626584),
-    U = n(927813),
-    G = n(316501),
-    V = n(338816);
-L.default.cssDebuggingEnabled && n.e("42592").then(n.t.bind(n, 196995, 19)), (0, G.pF)();
-let F = 5 * U.A.Millis.MINUTE,
-    B = document.getElementById("app-mount");
-d()(null != B, "Could not find app-mount"), (B.className = __OVERLAY__ ? "" : j.l);
-let H = (0, c.createRoot)(B),
-    Y = {
-        "/oauth2/authorize": S.A,
-        "/one-time": V.A,
-    };
-
-function W(e, t, n) {
-    var r;
-    let i = null != n ? new URLSearchParams(n) : null;
-    (null != (r = Y[t]) && r.call(Y, i)) || (0, T.pX)(t);
+    y = n(350723),
+    S = n(913934),
+    v = n(451988),
+    C = n(77729),
+    b = n(772432),
+    N = n(975616),
+    R = n(617590),
+    O = n(111162),
+    D = n(769253),
+    L = n(639723),
+    w = n(626584),
+    x = n(927813),
+    P = n(316501),
+    M = n(338816);
+O.default.cssDebuggingEnabled && n.e("42592").then(n.t.bind(n, 196995, 19)), (0, P.pF)();
+let k = 5 * x.A.Millis.MINUTE,
+    U = document.getElementById("app-mount");
+s()(null != U, "Could not find app-mount"), (U.className = __OVERLAY__ ? "" : D.l);
+let G = (0, i.createRoot)(U),
+    V = { "/oauth2/authorize": A.A, "/one-time": M.A };
+function F(e, t, n) {
+    let r = null != n ? new URLSearchParams(n) : null;
+    V[t]?.(r) || (0, T.pX)(t);
 }
-let K = (e) =>
-    H.render(
-        (0, l.jsx)(D.e, {
-            children: (0, l.jsx)(P.A, {
-                children: (0, l.jsx)(e, {}),
-            }),
-        }),
-    );
-if (null != w.A) {
-    null == (r = w.A.setUncaughtExceptionHandler) ||
-        r.call(w.A, (e, t) => {
-            setImmediate(() => {
-                throw (b.A.captureCrash(e), e);
-            });
-        }),
-        A.Ay.appLoaded();
-    let e = null == (i = (a = w.A.remoteApp).getVersion) ? void 0 : i.call(a),
-        t = null == (s = (o = w.A.remoteApp).getBuildNumber) ? void 0 : s.call(o),
-        n = {};
-    null != w.A.remoteApp.getModuleVersions && (n = w.A.remoteApp.getModuleVersions()),
-        b.A.setExtra({
-            hostVersion: e,
-            moduleVersions: n,
-        }),
-        b.A.setTags({
-            nativeBuildNumber: null == t ? void 0 : t.toString(),
+let B = (e) => G.render((0, r.jsx)(N.e, { children: (0, r.jsx)(b.A, { children: (0, r.jsx)(e, {}) }) }));
+if (null != C.A) {
+    C.A.setUncaughtExceptionHandler?.((e, t) => {
+        setImmediate(() => {
+            throw (p.A.captureCrash(e), e);
         });
-    let l = Object.keys(n)
+    }),
+        g.Ay.appLoaded();
+    let e = C.A.remoteApp.getVersion?.(),
+        t = C.A.remoteApp.getBuildNumber?.(),
+        n = {};
+    null != C.A.remoteApp.getModuleVersions && (n = C.A.remoteApp.getModuleVersions()),
+        p.A.setExtra({ hostVersion: e, moduleVersions: n }),
+        p.A.setTags({ nativeBuildNumber: t?.toString() });
+    let r = Object.keys(n)
         .filter((e) => null != n[e])
-        .map((e) => "".concat(e, ": ").concat(n[e]))
+        .map((e) => `${e}: ${n[e]}`)
         .join(", ");
-    new k.A().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(l, ", build: ").concat(t)),
-        A.Ay.pauseFrameEvictor(),
-        A.Ay.initializeExitHook(),
-        A.Ay.initializeWERHandler();
+    new w.A().log(`[NATIVE INFO] host ${e}, modules: ${r}, build: ${t}`),
+        g.Ay.pauseFrameEvictor(),
+        g.Ay.initializeExitHook(),
+        g.Ay.initializeWERHandler();
 }
-if (((0, N.M)(window), __OVERLAY__)) K(f.A.Overlay);
-else if (null != window.require && null == window.DiscordNative) K(f.A.OutdatedClient);
+if (((0, S.M)(window), __OVERLAY__)) B(o.A.Overlay);
+else if (null != window.require && null == window.DiscordNative) B(o.A.OutdatedClient);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), I.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => A.Ay.beforeUnload()),
-            A.Ay.on("HELP_OPEN", () => window.open(y.A.getCommunityURL()));
-        let e = new R.J_(F, () => A.Ay.purgeMemory());
-        A.Ay.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), A.Ay.setFocused(!1), (0, C.XC)(window, !1);
+        (window.onbeforeunload = () => g.Ay.beforeUnload()),
+            g.Ay.on("HELP_OPEN", () => window.open(h.A.getCommunityURL()));
+        let e = new v.J_(k, () => g.Ay.purgeMemory());
+        g.Ay.on("MAIN_WINDOW_BLUR", () => {
+            e.delay(), g.Ay.setFocused(!1), (0, y.XC)(window, !1);
         }),
-            A.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), A.Ay.setFocused(!0), (0, C.XC)(window, !0);
+            g.Ay.on("MAIN_WINDOW_FOCUS", () => {
+                e.cancel(), g.Ay.setFocused(!0), (0, y.XC)(window, !0);
             }),
-            A.Ay.on("MAIN_WINDOW_PATH", W),
-            A.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, C.R)(window);
+            g.Ay.on("MAIN_WINDOW_PATH", F),
+            g.Ay.on("MAIN_WINDOW_HIDDEN", () => {
+                (0, y.R)(window);
             });
     }
-    m.A.initialize(),
-        p.A.initialize(),
-        _.A.init(),
-        E.A.init(),
-        M.A.init(),
-        h.A.initialize(),
-        O.A.initialize(),
-        v.A.initialize(),
-        g.n(),
-        (0, x.wP)(),
-        K(f.A.App);
+    d.A.initialize(),
+        l.A.initialize(),
+        u.A.init(),
+        f.A.init(),
+        L.A.init(),
+        c.A.initialize(),
+        m.A.initialize(),
+        E.A.initialize(),
+        _.n(),
+        (0, R.wP)(),
+        B(o.A.App);
 }

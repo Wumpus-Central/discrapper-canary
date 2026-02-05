@@ -1,3 +1,4 @@
+"use strict";
 var r = n(771161),
     i = RangeError;
 e.exports = function (e, t) {

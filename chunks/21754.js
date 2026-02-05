@@ -1,7 +1,4 @@
-e.d(n, {
-    default: () => g,
-}),
-    e(896048);
+e.d(n, { default: () => C });
 var l = e(627968),
     a = e(64700),
     i = e(158954),
@@ -13,86 +10,68 @@ var l = e(627968),
     c = e(576470),
     h = e(287809),
     p = e(954571),
-    f = e(870136),
-    m = e(200700),
-    v = e(652215),
-    y = e(985018),
-    b = e(330432);
-
-function g(t) {
-    var n, e;
-    let { guildId: g, userId: C, anaylticsLocations: w, transitionState: x, onClose: A } = t,
-        { analyticsLocations: k } = (0, d.Ay)(),
-        D = null != (n = null != (e = null == w ? void 0 : w[0]) ? e : null == k ? void 0 : k[0]) ? n : null,
-        T = (0, s.bG)([h.default], () => h.default.getUser(C), [C]),
-        [_, S] = (0, f.Ay)(C, g),
-        [U, E] = a.useState(!1),
-        O = a.useCallback(async () => {
-            if (null != T) {
-                E(!0);
+    m = e(870136),
+    f = e(200700),
+    y = e(652215),
+    v = e(985018),
+    g = e(330432);
+function C(t) {
+    let { guildId: n, userId: e, anaylticsLocations: C, transitionState: b, onClose: w } = t,
+        { analyticsLocations: x } = (0, d.Ay)(),
+        A = C?.[0] ?? x?.[0] ?? null,
+        k = (0, s.bG)([h.default], () => h.default.getUser(e), [e]),
+        [D, _] = (0, m.Ay)(e, n),
+        [T, S] = a.useState(!1),
+        U = a.useCallback(async () => {
+            if (null != k) {
+                S(!0);
                 try {
-                    await o.A.setCommunicationDisabledDuration(g, C, null, null, D),
-                        (0, r.showToast)((0, r.createToast)(y.intl.string(y.t["/Mmbfv"]), r.ToastType.SUCCESS)),
-                        A();
+                    await o.A.setCommunicationDisabledDuration(n, e, null, null, A),
+                        (0, r.showToast)((0, r.createToast)(v.intl.string(v.t["/Mmbfv"]), r.ToastType.SUCCESS)),
+                        w();
                 } catch (t) {
-                    (0, r.showToast)((0, r.createToast)(y.intl.string(y.t.epyCuh), r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(v.intl.string(v.t.epyCuh), r.ToastType.FAILURE));
                 } finally {
-                    E(!1);
+                    S(!1);
                 }
             }
-        }, [g, T, C, A, D]),
-        j = a.useCallback(() => {
-            S || A();
-        }, [S, A]);
+        }, [n, k, e, w, A]),
+        E = a.useCallback(() => {
+            _ || w();
+        }, [_, w]);
     return ((0, u.Ay)(() => {
-        null != T &&
-            p.default.track(v.HAw.OPEN_MODAL, {
-                type: m.Rv,
-                guild_id: g,
-                other_user_id: T.id,
-            });
+        null != k && p.default.track(y.HAw.OPEN_MODAL, { type: f.Rv, guild_id: n, other_user_id: k.id });
     }),
     a.useEffect(() => {
-        (null == T || null == g) && A();
+        (null == k || null == n) && w();
     }),
-    null == T || null == g)
+    null == k || null == n)
         ? null
         : (0, l.jsx)(i.Modal, {
-              transitionState: x,
-              onClose: A,
-              title: y.intl.string(y.t["+ZD3ou"]),
-              subtitle: y.intl.format(y.t["t+abNU"], {
-                  username: T.username,
+              transitionState: b,
+              onClose: w,
+              title: v.intl.string(v.t["+ZD3ou"]),
+              subtitle: v.intl.format(v.t["t+abNU"], {
+                  username: k.username,
                   countdown: (t) =>
-                      null == _
+                      null == D
                           ? null
                           : (0, l.jsx)(c.A, {
-                                className: b.q,
-                                deadline: new Date(_),
-                                onInterval: j,
+                                className: g.q,
+                                deadline: new Date(D),
+                                onInterval: E,
                                 showUnits: !0,
                                 stopAtOneSec: !0,
                             }),
               }),
               actions: [
-                  {
-                      text: y.intl.string(y.t["ETE/oC"]),
-                      onClick: A,
-                      variant: "secondary",
-                  },
-                  {
-                      text: y.intl.string(y.t.qXtNtS),
-                      onClick: O,
-                      loading: U,
-                      variant: "critical-primary",
-                  },
+                  { text: v.intl.string(v.t["ETE/oC"]), onClick: w, variant: "secondary" },
+                  { text: v.intl.string(v.t.qXtNtS), onClick: U, loading: T, variant: "critical-primary" },
               ],
               children: (0, l.jsx)(r.Text, {
                   variant: "text-md/normal",
                   color: "interactive-text-default",
-                  children: y.intl.format(y.t.KtENkK, {
-                      link: m.MO,
-                  }),
+                  children: v.intl.format(v.t.KtENkK, { link: f.MO }),
               }),
           });
 }

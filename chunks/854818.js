@@ -1,63 +1,53 @@
-n.d(t, {
-    e: () => u,
-}),
-    n(321073),
-    n(747238);
-var r = n(627968);
-n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(397927),
-    i = n(496431),
-    o = n(985018),
-    c = n(487604);
-let u = (e) => {
+"use strict";
+s.d(t, { e: () => d }), s(321073);
+var n = s(627968);
+s(64700);
+var r = s(503698),
+    l = s.n(r),
+    a = s(397927),
+    i = s(496431),
+    o = s(985018),
+    c = s(487604);
+let d = (e) => {
     let t,
-        n,
-        { endDate: l, size: u = "md", className: d, showSeconds: g = !1 } = e,
-        { days: f, hours: m, minutes: p, seconds: _ } = (0, i.A)(l),
-        b =
-            ((n = [(t = (e) => "".concat(e.toString().padStart(2, "0")))(f), t(m), t(p)]),
-            g && n.push(t(_)),
-            n.join(":"));
-    return (0, r.jsxs)("div", {
-        className: s()(c.kL, d),
+        s,
+        { endDate: r, size: d = "md", className: u, showSeconds: g = !1 } = e,
+        { days: m, hours: _, minutes: h, seconds: p } = (0, i.A)(r),
+        f = ((s = [(t = (e) => `${e.toString().padStart(2, "0")}`)(m), t(_), t(h)]), g && s.push(t(p)), s.join(":"));
+    return (0, n.jsxs)("div", {
+        className: l()(c.kL, u),
         role: "timer",
         children: [
-            b.split("").map((e, t) =>
-                ":" === e
-                    ? (0, r.jsx)(
-                          a.Text,
-                          {
-                              color: "none",
-                              variant: "md" === u ? "heading-lg/extrabold" : "heading-xxl/extrabold",
-                              className: c.eC,
-                              "aria-hidden": !0,
-                              tag: "div",
-                              children: e,
-                          },
-                          t,
-                      )
-                    : (0, r.jsx)(
-                          a.Text,
-                          {
-                              color: "always-white",
-                              variant: "md" === u ? "heading-md/bold" : "heading-xl/bold",
-                              className: c.ai,
-                              "aria-hidden": !0,
-                              tag: "div",
-                              children: e,
-                          },
-                          t,
-                      ),
-            ),
-            (0, r.jsx)(a.AC4, {
-                children: o.intl.format(o.t.j6IyVe, {
-                    days: f,
-                    hours: m,
-                    minutes: p,
-                }),
-            }),
+            f
+                .split("")
+                .map((e, t) =>
+                    ":" === e
+                        ? (0, n.jsx)(
+                              a.Text,
+                              {
+                                  color: "none",
+                                  variant: "md" === d ? "heading-lg/extrabold" : "heading-xxl/extrabold",
+                                  className: c.eC,
+                                  "aria-hidden": !0,
+                                  tag: "div",
+                                  children: e,
+                              },
+                              t,
+                          )
+                        : (0, n.jsx)(
+                              a.Text,
+                              {
+                                  color: "always-white",
+                                  variant: "md" === d ? "heading-md/bold" : "heading-xl/bold",
+                                  className: c.ai,
+                                  "aria-hidden": !0,
+                                  tag: "div",
+                                  children: e,
+                              },
+                              t,
+                          ),
+                ),
+            (0, n.jsx)(a.AC4, { children: o.intl.format(o.t.j6IyVe, { days: m, hours: _, minutes: h }) }),
         ],
     });
 };

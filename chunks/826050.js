@@ -1,136 +1,82 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
-var r,
-    l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(615300),
-    c = n(451988),
-    u = n(397927),
-    d = n(203982),
-    f = n(652215),
-    p = n(985018),
-    h = n(792728);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let g = {
-    friction: 15,
-    tension: 100,
-};
-class m extends (r = i.PureComponent) {
+n.d(t, { A: () => p });
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(615300),
+    o = n(451988),
+    d = n(397927),
+    c = n(203982),
+    u = n(652215),
+    h = n(985018),
+    A = n(792728);
+let g = { friction: 15, tension: 100 };
+class m extends l.PureComponent {
+    state = { shown: !1, translateY: new r.A.Value(0) };
+    static contextType = d.CZY;
+    rootRef = l.createRef();
+    focusTimeout = new o.Ep();
     componentDidMount() {
-        this.setState({
-            shown: !0,
-        }),
-            d._.subscribe(f.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), c._.subscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d._.unsubscribe(f.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), c._.unsubscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
         e || this.springTo(0);
     }
+    handleResultFocus = (e) => {
+        let { node: t } = e;
+        this.focusTimeout.start(1, () => {
+            if (this.props.hasQuery && null != t && null != this.rootRef.current) {
+                let { top: e } = this.rootRef.current.getBoundingClientRect(),
+                    { top: n } = t.getBoundingClientRect(),
+                    i = Math.abs(e - n);
+                this.springTo(i - 118 + 9);
+            } else this.springTo(0);
+        });
+    };
     springTo(e) {
         let { reducedMotion: t } = this.context;
-        !0 !== t.enabled &&
-            o.A.spring(
-                this.state.translateY,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                b(e, t, n[t]);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        toValue: Math.min(e, 250),
-                    },
-                    g,
-                ),
-            ).start();
+        !0 !== t.enabled && r.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...g }).start();
     }
     renderArrowGroup(e) {
-        return (0, l.jsxs)("div", {
-            className: s()(h.XN, e),
+        return (0, i.jsxs)("div", {
+            className: a()(A.XN, e),
             children: [
-                (0, l.jsx)(o.A.div, {
-                    className: s()(h.Hf, h.xM),
+                (0, i.jsx)(r.A.div, {
+                    className: a()(A.Hf, A.xM),
                     style: this.getStyle(),
-                    children: (0, l.jsx)("img", {
-                        alt: "",
-                        src: n(824829),
-                        className: h.D6,
-                    }),
+                    children: (0, i.jsx)("img", { alt: "", src: n(824829), className: A.D6 }),
                 }),
-                (0, l.jsx)("div", {
-                    className: s()(h.Hf, h.JM),
-                    children: (0, l.jsx)("img", {
-                        alt: "",
-                        src: n(162206),
-                        className: h.D6,
-                    }),
+                (0, i.jsx)("div", {
+                    className: a()(A.Hf, A.JM),
+                    children: (0, i.jsx)("img", { alt: "", src: n(162206), className: A.D6 }),
                 }),
-                (0, l.jsx)("div", {
-                    className: s()(h.Hf, h.QJ),
-                    children: (0, l.jsx)("img", {
-                        alt: "",
-                        src: n(298607),
-                        className: h.D6,
-                    }),
+                (0, i.jsx)("div", {
+                    className: a()(A.Hf, A.QJ),
+                    children: (0, i.jsx)("img", { alt: "", src: n(298607), className: A.D6 }),
                 }),
             ],
         });
     }
     renderContent() {
-        return (0, l.jsxs)("div", {
-            className: h.fi,
+        return (0, i.jsxs)("div", {
+            className: A.fi,
             children: [
-                (0, l.jsx)("div", {
-                    className: h.Iv,
-                    children: p.intl.string(p.t.Mp0IGK),
-                }),
-                (0, l.jsx)("div", {
-                    className: h.kp,
-                    children: p.intl.string(p.t["3CbpwH"]),
-                }),
+                (0, i.jsx)("div", { className: A.Iv, children: h.intl.string(h.t.Mp0IGK) }),
+                (0, i.jsx)("div", { className: A.kp, children: h.intl.string(h.t["3CbpwH"]) }),
             ],
         });
     }
     render() {
         let { hasQuery: e } = this.props,
             { shown: t } = this.state;
-        return (0, l.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             ref: this.rootRef,
-            className: s()(h.d$, {
-                [h.SP]: t,
-                [h.tG]: e,
-            }),
-            children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.pG)],
+            className: a()(A.d$, { [A.SP]: t, [A.tG]: e }),
+            children: [this.renderContent(), this.renderArrowGroup(A.__invalid_left), this.renderArrowGroup(A.pG)],
         });
     }
     getStyle() {
@@ -143,35 +89,12 @@ class m extends (r = i.PureComponent) {
                       {
                           translateY: this.state.translateY.interpolate({
                               inputRange: [0, 250],
-                              outputRange: ["0px", "".concat(250, "px")],
+                              outputRange: ["0px", "250px"],
                           }),
                       },
-                      {
-                          translateZ: 0,
-                      },
+                      { translateZ: 0 },
                   ],
               };
     }
-    constructor(...e) {
-        super(...e),
-            b(this, "state", {
-                shown: !1,
-                translateY: new o.A.Value(0),
-            }),
-            b(this, "rootRef", i.createRef()),
-            b(this, "focusTimeout", new c.Ep()),
-            b(this, "handleResultFocus", (e) => {
-                let { node: t } = e;
-                this.focusTimeout.start(1, () => {
-                    if (this.props.hasQuery && null != t && null != this.rootRef.current) {
-                        let { top: e } = this.rootRef.current.getBoundingClientRect(),
-                            { top: n } = t.getBoundingClientRect(),
-                            r = Math.abs(e - n);
-                        this.springTo(r - 118 + 9);
-                    } else this.springTo(0);
-                });
-            });
-    }
 }
-b(m, "contextType", u.CZY);
-let A = m;
+let p = m;

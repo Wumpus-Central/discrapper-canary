@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(954571),
     i = n(998218),
     a = n(988102),
@@ -13,50 +11,35 @@ let l = [
         let t = i.A.safeParseWithQuery(e);
         if (null == t) return null;
         let n = (0, s.vu)(t.path);
-        return null == n
-            ? null
-            : c({
-                  guildId: n.guildId,
-                  channelId: n.channelId,
-                  messageId: n.messageId,
-              });
+        return null == n ? null : u({ guildId: n.guildId, channelId: n.channelId, messageId: n.messageId });
     },
     (e) => (a.A.isDiscoveryLink(e) ? "Discord Discovery Link" : null),
 ];
-
-function c(e) {
+function u(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId
         ? "Discord Message Link"
         : null != e.guildId && null != e.channelId
           ? "Discord Channel Link"
           : "Unknown";
 }
-
-function u(e) {
+function c(e) {
     for (let t of l) {
         let n = t(e);
         if (null != n) return n;
     }
     return "Unknown";
 }
-
 function d(e, t) {
-    return null == t && null == e ? "Unknown" : null == t ? u(e) : c(t);
+    return null == t && null == e ? "Unknown" : null == t ? c(e) : u(t);
 }
-let f = {
+let _ = {
     trackDiscordLinkClicked: function (e) {
-        r.default.track(o.HAw.LINK_CLICKED, {
-            is_discord_link: !0,
-            discord_link_type: c(e),
-        });
+        r.default.track(o.HAw.LINK_CLICKED, { is_discord_link: !0, discord_link_type: u(e) });
     },
     trackLinkClicked: function (e, t) {
         if (null == e && null == t) return;
         let n = i.A.isDiscordUrl(e, !0) || null != t;
-        r.default.track(o.HAw.LINK_CLICKED, {
-            is_discord_link: n,
-            discord_link_type: n ? d(e, t) : null,
-        });
+        r.default.track(o.HAw.LINK_CLICKED, { is_discord_link: n, discord_link_type: n ? d(e, t) : null });
     },
     trackAnnouncementMessageLinkClicked: function (e) {
         let { messageId: t, channelId: n, guildId: i, sourceChannelId: a, sourceGuildId: s } = e;

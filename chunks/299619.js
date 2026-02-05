@@ -1,96 +1,10 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(663675),
     s = n(621466);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = f(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function p(e) {
+function o(e) {
     e.removeAttribute("src"),
         Array.from(e.children).forEach((e) => {
             (0, s.vq)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")),
@@ -100,108 +14,68 @@ function p(e) {
         e.load();
     } catch (e) {}
 }
-let _ = (e) => {
+let l = (e) => {
         let {
                 alt: t,
                 externalRef: n,
                 autoPlay: s,
-                playOnHover: o,
-                onPlayError: c,
-                responsive: u,
-                mediaLayoutType: f,
+                playOnHover: l,
+                onPlayError: u,
+                responsive: c,
+                mediaLayoutType: d,
                 useReducedMotion: _,
+                ...f
             } = e,
-            h = d(e, [
-                "alt",
-                "externalRef",
-                "autoPlay",
-                "playOnHover",
-                "onPlayError",
-                "responsive",
-                "mediaLayoutType",
-                "useReducedMotion",
-            ]),
-            m = !_ && !o && s,
-            g = i.useRef(null);
-
+            p = !_ && !l && s,
+            h = i.useRef(null);
+        function m() {
+            l &&
+                h?.current?.play()?.catch((e) => {
+                    if (null != u) u(e);
+                    else throw e;
+                });
+        }
+        function g() {
+            l && h?.current?.pause();
+        }
         function E() {
-            var e, t;
-            o &&
-                (null == g ||
-                    null == (t = g.current) ||
-                    null == (e = t.play()) ||
-                    e.catch((e) => {
-                        if (null != c) c(e);
-                        else throw e;
-                    }));
-        }
-
-        function b() {
-            var e;
-            o && (null == g || null == (e = g.current) || e.pause());
-        }
-
-        function y() {
-            return f === a.d.MOSAIC
-                ? {
-                      width: "100%",
-                      height: "100%",
-                      maxHeight: "inherit",
-                      objectFit: "contain",
-                  }
-                : u
-                  ? O()
+            return d === a.d.MOSAIC
+                ? { width: "100%", height: "100%", maxHeight: "inherit", objectFit: "contain" }
+                : c
+                  ? A()
                   : {};
         }
-
-        function O() {
-            return {
-                maxWidth: h.width,
-                maxHeight: h.height,
-                width: "100%",
-                height: "100%",
-            };
+        function A() {
+            return { maxWidth: f.width, maxHeight: f.height, width: "100%", height: "100%" };
         }
         return (
             i.useLayoutEffect(
                 () => () => {
-                    let { current: e } = g;
-                    null != e && p(e);
+                    let { current: e } = h;
+                    null != e && o(e);
                 },
                 [],
             ),
             i.useLayoutEffect(
                 () => (
-                    "function" == typeof n ? (n(null), n(g.current)) : null != n && (n.current = g.current),
+                    "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
                     () => {
                         "function" == typeof n ? n(null) : null != n && (n.current = null);
                     }
                 ),
-                [n, g],
+                [n, h],
             ),
-            (0, r.jsx)(
-                "video",
-                l(
-                    {
-                        "aria-label": t,
-                        ref: g,
-                        autoPlay: m,
-                        onMouseEnter: E,
-                        onMouseLeave: b,
-                        onFocus: E,
-                        onBlur: b,
-                        style: y(),
-                    },
-                    h,
-                ),
-            )
+            (0, r.jsx)("video", {
+                "aria-label": t,
+                ref: h,
+                autoPlay: p,
+                onMouseEnter: m,
+                onMouseLeave: g,
+                onFocus: m,
+                onBlur: g,
+                style: E(),
+                ...f,
+            })
         );
     },
-    h = i.forwardRef((e, t) =>
-        (0, r.jsx)(
-            _,
-            u(l({}, e), {
-                externalRef: t,
-            }),
-        ),
-    );
+    u = i.forwardRef((e, t) => (0, r.jsx)(l, { ...e, externalRef: t }));

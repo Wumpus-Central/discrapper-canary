@@ -1,32 +1,21 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    l,
-    i = n(311907),
-    a = n(73153);
-let s = {};
-class o extends (l = i.Ay.Store) {
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(73153);
+let a = {};
+class s extends i.Ay.Store {
+    static displayName = "ChannelFollowerStatsStore";
     getFollowerStatsForChannel(e) {
-        return s[e];
+        return a[e];
     }
 }
-(r = "displayName") in o
-    ? Object.defineProperty(o, r, {
-          value: "ChannelFollowerStatsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (o[r] = "ChannelFollowerStatsStore");
-let c = new o(a.h, {
+let r = new s(l.h, {
     CONNECTION_OPEN: function () {
-        s = {};
+        a = {};
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
         let { channelId: t, stats: n } = e;
         (n = null != n ? n : {}),
-            (s[t] = {
+            (a[t] = {
                 loadingStatus: "succeeded",
                 lastFetched: Date.now(),
                 channelsFollowing: n.channels_following,
@@ -39,7 +28,7 @@ let c = new o(a.h, {
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        s[t] = {
+        a[t] = {
             loadingStatus: "failed",
             lastFetched: Date.now(),
             channelsFollowing: 0,

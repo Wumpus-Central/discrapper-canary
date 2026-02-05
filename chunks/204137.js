@@ -1,3 +1,2 @@
-e.exports = {
-    n: "havenPipWrapper__3bbd0",
-};
+"use strict";
+e.exports = { n: "havenPipWrapper__3bbd0" };

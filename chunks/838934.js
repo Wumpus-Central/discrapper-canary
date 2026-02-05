@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_dca174",
     vK: "banner_dca174",

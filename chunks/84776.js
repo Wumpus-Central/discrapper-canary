@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     var t = new Date(
         Date.UTC(
@@ -12,6 +13,4 @@ function r(e) {
     );
     return t.setUTCFullYear(e.getFullYear()), e.getTime() - t.getTime();
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

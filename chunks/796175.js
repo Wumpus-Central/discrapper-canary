@@ -1,59 +1,55 @@
-n.d(t, {
-    default: () => U,
-});
-var r = n(627968);
-n(64700);
-var l = n(311907),
-    i = n(397927),
-    a = n(827343),
-    o = n(442433),
-    c = n(956793),
-    s = n(401843),
-    u = n(820284),
-    d = n(793574),
-    p = n(688810),
-    b = n(810845),
-    g = n(854182),
-    f = n(666328),
-    A = n(74329),
-    h = n(304006),
-    j = n(479335),
-    m = n(845885),
-    O = n(274372),
-    v = n(915618),
-    y = n(572164),
-    I = n(399925),
-    x = n(643501),
-    S = n(670470),
-    w = n(972432),
-    C = n(471993),
-    P = n(616356),
-    E = n(961350),
-    V = n(734057),
-    G = n(430452),
-    T = n(287809),
-    k = n(652896),
-    D = n(652215),
-    M = n(731854),
-    X = n(985018);
-
-function _(e) {
-    return (0, l.bG)([P.A], () => {
-        let t = P.A.getActiveStreamForApplicationStream(e);
-        return null != t && (0, k._z)(t) === (0, k._z)(e);
+t.d(n, { default: () => P });
+var l = t(627968);
+t(64700);
+var i = t(311907),
+    r = t(397927),
+    a = t(827343),
+    s = t(442433),
+    o = t(956793),
+    d = t(401843),
+    c = t(820284),
+    u = t(793574),
+    A = t(688810),
+    g = t(810845),
+    h = t(854182),
+    p = t(666328),
+    f = t(74329),
+    I = t(304006),
+    m = t(479335),
+    x = t(845885),
+    b = t(274372),
+    C = t(915618),
+    j = t(572164),
+    S = t(399925),
+    v = t(643501),
+    V = t(670470),
+    G = t(972432),
+    E = t(471993),
+    w = t(616356),
+    T = t(961350),
+    M = t(734057),
+    y = t(430452),
+    X = t(287809),
+    _ = t(652896),
+    k = t(652215),
+    U = t(731854),
+    z = t(985018);
+function F(e) {
+    return (0, i.bG)([w.A], () => {
+        let n = w.A.getActiveStreamForApplicationStream(e);
+        return null != n && (0, _._z)(n) === (0, _._z)(e);
     });
 }
-
-function U(e) {
-    let t,
-        n,
+function P(e) {
+    let n,
+        t,
+        w,
         P,
-        U,
-        z,
-        F,
         R,
+        D,
         N,
         L,
+        O,
         B,
         J,
         Q,
@@ -66,215 +62,140 @@ function U(e) {
             onInteraction: H,
             minimal: $ = !1,
         } = e,
-        ee = (0, l.cf)([T.default], () => {
-            var e;
-            return (null == W ? void 0 : W.ownerId) === (null == (e = T.default.getCurrentUser()) ? void 0 : e.id);
-        }),
-        et = (function (e) {
-            let t = _(e),
-                n = (0, v.A)(G.A),
-                a = (0, y.Et)(),
-                o = e.ownerId === E.default.getId(),
-                { enableViewerClipping: c, ignoreSenderPreference: s } = S.A.useExperiment(
-                    {
-                        location: "StreamContextMenu",
-                    },
-                    {
-                        autoTrackExposure: !1,
-                    },
+        ee = (0, i.cf)([X.default], () => W?.ownerId === X.default.getCurrentUser()?.id),
+        en = (function (e) {
+            let n = F(e),
+                t = (0, C.A)(y.A),
+                a = (0, j.Et)(),
+                s = e.ownerId === T.default.getId(),
+                { enableViewerClipping: o, ignoreSenderPreference: d } = V.A.useExperiment(
+                    { location: "StreamContextMenu" },
+                    { autoTrackExposure: !1 },
                 ),
-                u = (0, l.bG)([O.A], () => O.A.getIsAtMaxSaveClipOperations()),
-                d = (0, l.bG)([O.A], () => O.A.isViewerClippingAllowedForUser(e.ownerId)) || s;
-            return n && c && t
-                ? (0, r.jsx)(i.Drp, {
+                c = (0, i.bG)([b.A], () => b.A.getIsAtMaxSaveClipOperations()),
+                u = (0, i.bG)([b.A], () => b.A.isViewerClippingAllowedForUser(e.ownerId)) || d;
+            return t && o && n
+                ? (0, l.jsx)(r.Drp, {
                       id: "clip-stream",
-                      disabled: !a || !(o || d) || u,
-                      label: X.intl.string(X.t.U4URzP),
-                      action: () => (o ? (0, I.l0)() : (0, I.yd)((0, k._z)(e))),
+                      disabled: !a || !(s || u) || c,
+                      label: z.intl.string(z.t.U4URzP),
+                      action: () => (s ? (0, S.l0)() : (0, S.yd)((0, _._z)(e))),
                   })
                 : null;
         })(W),
-        en = _(W),
-        er = ((t = _(W)), (n = (0, w.A)(W.ownerId, M.x.STREAM)), t ? n : null),
-        el =
-            ((U = (0, l.bG)([x.default], () => null != x.default.getRemoteSessionId())),
-            (z = (0, l.bG)([V.A], () => V.A.getChannel(W.channelId), [W.channelId])),
-            (F = _(W)),
-            ((P = (N = null != (R = T.default.getCurrentUser()) && W.ownerId === R.id)
-                ? X.intl.string(X.t.S5anIc)
-                : F
-                  ? X.intl.string(X.t.q3O3J8)
-                  : X.intl.string(X.t["7Xq/nV"])),
-            U || (!N && F && (null == z ? void 0 : z.isGuildStageVoice())))
+        et = F(W),
+        el = ((n = F(W)), (t = (0, G.A)(W.ownerId, U.x.STREAM)), n ? t : null),
+        ei =
+            ((P = (0, i.bG)([v.default], () => null != v.default.getRemoteSessionId())),
+            (R = (0, i.bG)([M.A], () => M.A.getChannel(W.channelId), [W.channelId])),
+            (D = F(W)),
+            ((w = (L = null != (N = X.default.getCurrentUser()) && W.ownerId === N.id)
+                ? z.intl.string(z.t.S5anIc)
+                : D
+                  ? z.intl.string(z.t.q3O3J8)
+                  : z.intl.string(z.t["7Xq/nV"])),
+            P || (!L && D && R?.isGuildStageVoice()))
                 ? null
-                : (0, r.jsx)(i.Drp, {
+                : (0, l.jsx)(r.Drp, {
                       id: "watch",
-                      label: P,
-                      action: F
+                      label: w,
+                      action: D
                           ? function () {
-                                (0, s.vN)((0, k._z)(W));
+                                (0, d.vN)((0, _._z)(W));
                             }
                           : function () {
-                                c.default.selectVoiceChannel(W.channelId), (0, s.A9)(W);
+                                o.default.selectVoiceChannel(W.channelId), (0, d.A9)(W);
                             },
-                      icon: $ && F && i.GT3,
-                      leadingAccessory:
-                          $ && F
-                              ? {
-                                    type: "icon",
-                                    icon: i.GT3,
-                                }
-                              : void 0,
+                      icon: $ && D && r.GT3,
+                      leadingAccessory: $ && D ? { type: "icon", icon: r.GT3 } : void 0,
                   })),
-        ei =
-            ((L = _(W)),
-            (B = (0, l.bG)([G.A], () => G.A.isLocalMute(W.ownerId, M.x.STREAM))),
-            (Q = null != (J = T.default.getCurrentUser()) && W.ownerId === J.id),
-            !L || Q
+        er =
+            ((O = F(W)),
+            (B = (0, i.bG)([y.A], () => y.A.isLocalMute(W.ownerId, U.x.STREAM))),
+            (Q = null != (J = X.default.getCurrentUser()) && W.ownerId === J.id),
+            !O || Q
                 ? null
-                : (0, r.jsx)(i.sLh, {
+                : (0, l.jsx)(r.sLh, {
                       id: "mute",
-                      label: X.intl.string(X.t.sWmtI6),
+                      label: z.intl.string(z.t.sWmtI6),
                       action: function () {
-                          a.A.toggleLocalMute(W.ownerId, M.x.STREAM);
+                          a.A.toggleLocalMute(W.ownerId, U.x.STREAM);
                       },
                       checked: B,
                   })),
         ea = (function (e) {
-            let t = _(e),
-                n = e.ownerId === E.default.getId(),
-                o = G.A.supports(M.O5.SIDECHAIN_COMPRESSION),
-                c = (0, l.bG)([G.A], () => G.A.getSidechainCompression()),
-                s = (0, l.bG)([G.A], () => G.A.getSidechainCompressionStrength()),
-                { analyticsLocations: u } = (0, p.Ay)();
-            return !n && t && o
-                ? (0, r.jsxs)(i.rXV, {
+            let n = F(e),
+                t = e.ownerId === T.default.getId(),
+                s = y.A.supports(U.O5.SIDECHAIN_COMPRESSION),
+                o = (0, i.bG)([y.A], () => y.A.getSidechainCompression()),
+                d = (0, i.bG)([y.A], () => y.A.getSidechainCompressionStrength()),
+                { analyticsLocations: c } = (0, A.Ay)();
+            return !t && n && s
+                ? (0, l.jsxs)(r.rXV, {
                       children: [
-                          (0, r.jsx)(i.sLh, {
+                          (0, l.jsx)(r.sLh, {
                               id: "sidechain-compression",
-                              label: X.intl.string(X.t["/jwMtn"]),
-                              subtext: X.intl.string(X.t.zlA23F),
-                              action: () =>
-                                  a.A.setSidechainCompression(!c, {
-                                      analyticsLocations: u,
-                                  }),
-                              checked: c,
+                              label: z.intl.string(z.t["/jwMtn"]),
+                              subtext: z.intl.string(z.t.zlA23F),
+                              action: () => a.A.setSidechainCompression(!o, { analyticsLocations: c }),
+                              checked: o,
                           }),
-                          (0, r.jsx)(i.aK1, {
+                          (0, l.jsx)(r.aK1, {
                               id: "sidechain-parameters",
-                              label: X.intl.string(X.t.fhEzfj),
-                              control: (e, t) => {
-                                  var n, l;
-                                  return (0, r.jsx)(
-                                      i.i42,
-                                      ((n = (function (e) {
-                                          for (var t = 1; t < arguments.length; t++) {
-                                              var n = null != arguments[t] ? arguments[t] : {},
-                                                  r = Object.keys(n);
-                                              "function" == typeof Object.getOwnPropertySymbols &&
-                                                  (r = r.concat(
-                                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                      }),
-                                                  )),
-                                                  r.forEach(function (t) {
-                                                      var r;
-                                                      (r = n[t]),
-                                                          t in e
-                                                              ? Object.defineProperty(e, t, {
-                                                                    value: r,
-                                                                    enumerable: !0,
-                                                                    configurable: !0,
-                                                                    writable: !0,
-                                                                })
-                                                              : (e[t] = r);
-                                                  });
-                                          }
-                                          return e;
-                                      })({}, e)),
-                                      (l = l =
-                                          {
-                                              ref: t,
-                                              value: s,
-                                              maxValue: 100,
-                                              onChange: (e) =>
-                                                  a.A.setSidechainCompressionStrength(e, {
-                                                      analyticsLocations: u,
-                                                  }),
-                                              "aria-label": X.intl.string(X.t.fhEzfj),
-                                          }),
-                                      Object.getOwnPropertyDescriptors
-                                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                                          : (function (e, t) {
-                                                var n = Object.keys(e);
-                                                if (Object.getOwnPropertySymbols) {
-                                                    var r = Object.getOwnPropertySymbols(e);
-                                                    n.push.apply(n, r);
-                                                }
-                                                return n;
-                                            })(Object(l)).forEach(function (e) {
-                                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
-                                            }),
-                                      n),
-                                  );
-                              },
+                              label: z.intl.string(z.t.fhEzfj),
+                              control: (e, n) =>
+                                  (0, l.jsx)(r.i42, {
+                                      ...e,
+                                      ref: n,
+                                      value: d,
+                                      maxValue: 100,
+                                      onChange: (e) =>
+                                          a.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
+                                      "aria-label": z.intl.string(z.t.fhEzfj),
+                                  }),
                           }),
                       ],
                   })
                 : null;
         })(W),
-        eo = (0, A.A)(W, Z, q),
-        ec = (0, f.A)(W.channelId, W.ownerId),
-        es = (0, g.A)(W.channelId),
-        eu = (0, b.A)(W.channelId, (0, k._z)(W)),
-        ed = (0, l.bG)([V.A], () => V.A.getChannel(W.channelId), [W.channelId]),
-        ep = (0, h.h)({
+        es = (0, f.A)(W, Z, q),
+        eo = (0, p.A)(W.channelId, W.ownerId),
+        ed = (0, h.A)(W.channelId),
+        ec = (0, g.A)(W.channelId, (0, _._z)(W)),
+        eu = (0, i.bG)([M.A], () => M.A.getChannel(W.channelId), [W.channelId]),
+        eA = (0, I.h)({ stream: W, channelId: W.channelId }),
+        eg = (0, m.u)({ userId: W.ownerId, channelId: W.channelId, guildId: W.guildId, minimal: $ }),
+        { analyticsLocations: eh } = (0, A.Ay)(u.A.STREAM_CONTEXT_MENU),
+        ep = (0, x.E)({
             stream: W,
-            channelId: W.channelId,
-        }),
-        eb = (0, j.u)({
-            userId: W.ownerId,
-            channelId: W.channelId,
-            guildId: W.guildId,
-            minimal: $,
-        }),
-        { analyticsLocations: eg } = (0, p.Ay)(d.A.STREAM_CONTEXT_MENU),
-        ef = (0, m.E)({
-            stream: W,
-            handleGoLive: () => (0, C.A)(W.guildId, W.channelId, eg),
+            handleGoLive: () => (0, E.A)(W.guildId, W.channelId, eh),
             minimal: $,
             appContext: Z,
         });
     return $
-        ? (0, r.jsx)(p.f5, {
-              value: eg,
-              children: (0, r.jsxs)(i.W1t, {
+        ? (0, l.jsx)(A.f5, {
+              value: eh,
+              children: (0, l.jsxs)(r.W1t, {
                   "data-menu-migrated-auto": !0,
                   navId: "stream-context",
-                  onClose: o.Z_,
-                  "aria-label": X.intl.string(X.t.Gl3Q30),
+                  onClose: s.Z_,
+                  "aria-label": z.intl.string(z.t.Gl3Q30),
                   variant: "fixed",
                   onSelect: K,
                   onInteraction: H,
                   children: [
-                      (0, r.jsx)(i.rXV, {
-                          children: ee ? ef : el,
-                      }),
-                      (0, r.jsxs)(i.rXV, {
-                          children: [ei, er],
-                      }),
-                      (0, r.jsx)(i.rXV, {
-                          children: eu,
-                      }),
+                      (0, l.jsx)(r.rXV, { children: ee ? ep : ei }),
+                      (0, l.jsxs)(r.rXV, { children: [er, el] }),
+                      (0, l.jsx)(r.rXV, { children: ec }),
                       ea,
-                      en
-                          ? (0, r.jsxs)(r.Fragment, {
+                      et
+                          ? (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, r.jsx)(i.bXX, {}),
-                                    (0, r.jsxs)(i.Drp, {
+                                    (0, l.jsx)(r.bXX, {}),
+                                    (0, l.jsxs)(r.Drp, {
                                         id: "more-options",
-                                        label: X.intl.string(X.t.PdRCRg),
-                                        children: [ec, ep, eb, eo],
+                                        label: z.intl.string(z.t.PdRCRg),
+                                        children: [eo, eA, eg, es],
                                     }),
                                 ],
                             })
@@ -282,33 +203,23 @@ function U(e) {
                   ],
               }),
           })
-        : (0, r.jsx)(u.A, {
+        : (0, l.jsx)(c.A, {
               context: Y,
-              object: D.ZSU.CONTEXT_MENU,
-              children: (0, r.jsxs)(i.W1t, {
+              object: k.ZSU.CONTEXT_MENU,
+              children: (0, l.jsxs)(r.W1t, {
                   "data-menu-migrated-auto": !0,
                   navId: "stream-context",
-                  onClose: o.Z_,
-                  "aria-label": X.intl.string(X.t.Gl3Q30),
+                  onClose: s.Z_,
+                  "aria-label": z.intl.string(z.t.Gl3Q30),
                   variant: "flexible",
                   onSelect: K,
                   onInteraction: H,
                   children: [
-                      (0, r.jsx)(i.rXV, {
-                          children: (0, r.jsxs)(r.Fragment, {
-                              children: [el, et, ei, ep, eb],
-                          }),
-                      }),
-                      (0, r.jsx)(i.rXV, {
-                          children: er,
-                      }),
-                      (0, r.jsx)(i.rXV, {
-                          children: eu,
-                      }),
+                      (0, l.jsx)(r.rXV, { children: (0, l.jsxs)(l.Fragment, { children: [ei, en, er, eA, eg] }) }),
+                      (0, l.jsx)(r.rXV, { children: el }),
+                      (0, l.jsx)(r.rXV, { children: ec }),
                       ea,
-                      (0, r.jsxs)(i.rXV, {
-                          children: [(null == ed ? void 0 : ed.isGuildStageVoice()) ? null : es, ec, en && eo],
-                      }),
+                      (0, l.jsxs)(r.rXV, { children: [eu?.isGuildStageVoice() ? null : ed, eo, et && es] }),
                   ],
               }),
           });

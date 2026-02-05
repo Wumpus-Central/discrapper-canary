@@ -1,53 +1,31 @@
-n.d(t, {
-    Q: () => d,
-}),
-    n(896048),
-    n(321073),
-    n(667532);
+n.d(t, { Q: () => c }), n(321073), n(667532);
 var i = n(64700),
-    r = n(168186),
-    l = n(808728),
+    l = n(168186),
+    s = n(808728),
     a = n(576705),
-    s = n(633334),
+    r = n(633334),
     o = n(652215),
-    c = n(985018);
-
-function d(e) {
+    d = n(985018);
+function c(e) {
     let t = i.useMemo(() => {
-            let t = l.Ay.getChannels(e),
-                n = [...t[l.I6]];
-            n.push(...t[l.vM].filter((e) => e.channel.isGuildVocal()));
+            let t = s.Ay.getChannels(e),
+                n = [...t[s.I6]];
+            n.push(...t[s.vM].filter((e) => e.channel.isGuildVocal()));
             let i = n.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
                 canManage: a.A.can(o.xBc.MANAGE_ROLES, e.channel),
             }));
-            return (
-                i.unshift({
-                    id: (0, r.Ap)(e),
-                    name: c.intl.string(c.t["7YqSGx"]),
-                    canManage: !0,
-                }),
-                i
-            );
+            return i.unshift({ id: (0, l.Ap)(e), name: d.intl.string(d.t["7YqSGx"]), canManage: !0 }), i;
         }, [e]),
-        [n, d] = i.useState(""),
-        b = i.useMemo(() => {
+        [n, c] = i.useState(""),
+        m = i.useMemo(() => {
             var e;
             let i = (e = n).startsWith("#") ? e.substr(1) : e;
-            return (0, s.I)(t, u, i);
+            return (0, r.I)(t, u, i);
         }, [t, n]);
-    return {
-        query: n,
-        results: b,
-        setQuery: d,
-        unfilteredCount: t.length,
-    };
+    return { query: n, results: m, setQuery: c, unfilteredCount: t.length };
 }
-
 function u(e) {
-    return {
-        id: e.id,
-        names: [e.name],
-    };
+    return { id: e.id, names: [e.name] };
 }

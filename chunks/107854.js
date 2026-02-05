@@ -1,129 +1,39 @@
-n.d(t, {
-    getApplicationPaymentSteps: () => m,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { getApplicationPaymentSteps: () => m });
+var i = n(627968);
 n(64700);
-var i = n(166532),
+var r = n(166532),
     l = n(735305),
     a = n(721252),
     s = n(924076),
     o = n(984742),
     c = n(155301),
-    u = n(758655),
-    d = n(985018);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
+    d = n(758655),
+    u = n(985018);
 function m(e) {
     let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {
             key: null,
+            renderStep: (e) => (0, i.jsx)(c.A, { initialStep: n ? r.pn.BENEFITS : r.pn.REVIEW, guildId: t, ...e }),
+        },
+        {
+            key: r.pn.BENEFITS,
+            renderStep: (e) => (0, i.jsx)(s.A, { ...e }),
+            options: { useBreadcrumbLabel: () => u.intl.string(u.t["5LD2+B"]) },
+        },
+        {
+            key: r.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) =>
-                (0, r.jsx)(
-                    c.A,
-                    p(
-                        {
-                            initialStep: n ? i.pn.BENEFITS : i.pn.REVIEW,
-                            guildId: t,
-                        },
-                        e,
-                    ),
-                ),
-        },
-        {
-            key: i.pn.BENEFITS,
-            renderStep: (e) => (0, r.jsx)(s.A, p({}, e)),
-            options: {
-                useBreadcrumbLabel: () => d.intl.string(d.t["5LD2+B"]),
-            },
-        },
-        {
-            key: i.pn.ADD_PAYMENT_STEPS,
-            renderStep: (e) => {
-                var t, n;
-                return (0, r.jsx)(
-                    l.x,
-                    ((t = p({}, e)),
-                    (n = n =
-                        {
-                            breadcrumbSteps: [i.pn.ADD_PAYMENT_STEPS, i.pn.REVIEW, i.pn.CONFIRM],
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                );
-            },
-            options: {
-                renderHeader: !0,
-            },
+                (0, i.jsx)(l.x, { ...e, breadcrumbSteps: [r.pn.ADD_PAYMENT_STEPS, r.pn.REVIEW, r.pn.CONFIRM] }),
+            options: { renderHeader: !0 },
         },
         ...a.hh,
         {
-            key: i.pn.REVIEW,
+            key: r.pn.REVIEW,
             renderStep: (e) =>
-                (0, r.jsx)(
-                    u.A,
-                    p(
-                        {
-                            backButtonEligible: !!n || void 0,
-                            prevStep: n ? i.pn.BENEFITS : void 0,
-                        },
-                        e,
-                    ),
-                ),
-            options: {
-                renderHeader: !0,
-                useBreadcrumbLabel: () => d.intl.string(d.t.QBnNHq),
-            },
+                (0, i.jsx)(d.A, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
+            options: { renderHeader: !0, useBreadcrumbLabel: () => u.intl.string(u.t.QBnNHq) },
         },
-        {
-            key: i.pn.CONFIRM,
-            renderStep: (e) =>
-                (0, r.jsx)(
-                    o.A,
-                    p(
-                        {
-                            showBenefits: !n,
-                        },
-                        e,
-                    ),
-                ),
-        },
+        { key: r.pn.CONFIRM, renderStep: (e) => (0, i.jsx)(o.A, { showBenefits: !n, ...e }) },
     ];
 }

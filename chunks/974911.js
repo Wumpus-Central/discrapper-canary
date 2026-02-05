@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     pR: "toggleExpandColumn__35651",
     nn: "toggleExpandCell__35651",

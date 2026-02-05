@@ -1,82 +1,41 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
+    s = n.n(l),
     a = n(387780);
-let s = () =>
-        (0, r.jsx)("div", {
-            className: a.jH,
-        }),
-    o = () =>
-        (0, r.jsx)("div", {
-            className: a.L1,
-        }),
-    c = (e) => {
+let r = () => (0, i.jsx)("div", { className: a.jH }),
+    o = () => (0, i.jsx)("div", { className: a.L1 }),
+    d = (e) => {
         let { width: t } = e;
-        return (0, r.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: a.Ix,
             children: [
-                (0, r.jsx)("div", {
-                    className: a.p,
-                }),
-                (0, r.jsx)("div", {
-                    className: a.HA,
-                    style: {
-                        width: "".concat(t, "px"),
-                    },
-                }),
+                (0, i.jsx)("div", { className: a.p }),
+                (0, i.jsx)("div", { className: a.HA, style: { width: `${t}px` } }),
             ],
         });
     },
-    u = (e) => {
+    c = (e) => {
         let { withBannerPadding: t } = e;
-        return (0, r.jsxs)("div", {
-            className: i()(a.kL, {
-                [a.o5]: t,
-            }),
+        return (0, i.jsxs)("div", {
+            className: s()(a.kL, { [a.o5]: t }),
             children: [
-                (0, r.jsx)(o, {}),
-                (0, r.jsx)(c, {
-                    width: 100,
-                }),
-                (0, r.jsx)(c, {
-                    width: 74,
-                }),
-                (0, r.jsx)(c, {
-                    width: 100,
-                }),
-                (0, r.jsx)(c, {
-                    width: 70,
-                }),
-                (0, r.jsx)(c, {
-                    width: 112,
-                }),
-                (0, r.jsx)(c, {
-                    width: 175,
-                }),
-                (0, r.jsx)(s, {}),
-                (0, r.jsx)(o, {}),
-                (0, r.jsx)(c, {
-                    width: 100,
-                }),
-                (0, r.jsx)(c, {
-                    width: 74,
-                }),
-                (0, r.jsx)(c, {
-                    width: 100,
-                }),
-                (0, r.jsx)(c, {
-                    width: 70,
-                }),
-                (0, r.jsx)(c, {
-                    width: 112,
-                }),
-                (0, r.jsx)(c, {
-                    width: 56,
-                }),
+                (0, i.jsx)(o, {}),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 74 }),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 70 }),
+                (0, i.jsx)(d, { width: 112 }),
+                (0, i.jsx)(d, { width: 175 }),
+                (0, i.jsx)(r, {}),
+                (0, i.jsx)(o, {}),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 74 }),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 70 }),
+                (0, i.jsx)(d, { width: 112 }),
+                (0, i.jsx)(d, { width: 56 }),
             ],
         });
     };

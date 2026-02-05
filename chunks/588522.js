@@ -1,9 +1,6 @@
-n.d(t, {
-    B: () => i,
-    O: () => r,
-});
+"use strict";
+n.d(t, { B: () => i, O: () => r });
 let r = globalThis;
-
 function i(e, t, n) {
     let i = n || r,
         a = (i.__SENTRY__ = i.__SENTRY__ || {}),

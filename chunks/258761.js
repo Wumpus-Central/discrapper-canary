@@ -1,3 +1,2 @@
-e.exports = {
-    Rh: "selectedGames_eb5373",
-};
+"use strict";
+e.exports = { Rh: "selectedGames_eb5373" };

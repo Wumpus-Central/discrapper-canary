@@ -1,3 +1,4 @@
+"use strict";
 var r =
         (this && this.__createBinding) ||
         (Object.create
@@ -21,9 +22,7 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     i(n(231445), t),
     i(n(448041), t),
     i(n(997182), t),

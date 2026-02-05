@@ -1,98 +1,42 @@
-n.d(t, {
-    MO: () => c,
-    NB: () => u,
-    n4: () => _,
-    qi: () => h,
-    vg: () => p,
-}),
-    n(321073),
-    n(896048);
+"use strict";
+n.d(t, { MO: () => a, NB: () => s, n4: () => c, qi: () => d, vg: () => u }), n(321073);
 var r = n(696451),
     i = n(70738);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function o(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function l(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let c = [12, 25, 50, 100],
-    u = 7,
-    d = 5,
-    f = 250;
-
-function p() {
+let a = [12, 25, 50, 100],
+    s = 7,
+    o = 5,
+    l = 250;
+function u() {
     return {
-        pageSize: c[0],
+        pageSize: a[0],
         currentPage: 1,
         continuationToken: null,
         sort: i.mF.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null,
     };
 }
-
-function _(e) {
-    return Math.max(e.pageSize * d, f);
+function c(e) {
+    return Math.max(e.pageSize * o, l);
 }
-class h {
+class d {
+    guildId;
+    _sortedMemberIds;
+    _paginationState;
+    _version;
+    _cachedPaginationChunks;
+    constructor(e, t) {
+        (this.guildId = e), (this._paginationState = u()), (this._version = 0);
+        const [n, r] = this._initPaginationFromRawMembers(t);
+        (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);
+    }
     reset() {
-        (this._paginationState = p()),
+        (this._paginationState = u()),
             (this._sortedMemberIds = []),
             (this._cachedPaginationChunks = {}),
             (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
-        var t;
-        return (null != (t = this._cachedPaginationChunks[this._paginationState.currentPage]) ? t : []).includes(e);
+        return (this._cachedPaginationChunks[this._paginationState.currentPage] ?? []).includes(e);
     }
     isMemberInAnyChunk(e) {
         return this._sortedMemberIds.includes(e);
@@ -105,6 +49,10 @@ class h {
             );
         return [t, n];
     }
+    _reduceMemberIdsToPaginationChunks = (e, t, n) => {
+        let r = Math.floor(n / this._paginationState.pageSize) + 1;
+        return null == e[r] && (e[r] = []), e[r].push(t), e;
+    };
     _buildPaginationFromMemberIds(e) {
         return e.reduce(this._reduceMemberIdsToPaginationChunks, {});
     }
@@ -121,28 +69,24 @@ class h {
     updatePaginationToken(e) {
         return (
             e !== this._paginationState.continuationToken &&
-            ((this._paginationState = l(s({}, this._paginationState), {
-                continuationToken: e,
-            })),
-            !0)
+            ((this._paginationState = { ...this._paginationState, continuationToken: e }), !0)
         );
     }
     _calculateNewPageFromPageSizeChange(e, t) {
         let { currentPage: n, pageSize: r } = this._paginationState;
-        return e * r <= this._sortedMemberIds.length ? Math.max(Math.ceil((r / e) * (null != t ? t : n)), 1) : 1;
+        return e * r <= this._sortedMemberIds.length ? Math.max(Math.ceil((r / e) * (t ?? n)), 1) : 1;
     }
     updatePaginationState(e) {
         let t = !1;
-        if (null != e.pageSize && e.pageSize !== this._paginationState.pageSize) {
-            var n;
-            (t = !0),
-                (e.currentPage = this._calculateNewPageFromPageSizeChange(
-                    null != (n = e.pageSize) ? n : this._paginationState.pageSize,
-                    e.currentPage,
-                ));
-        }
         return (
-            (this._paginationState = s({}, this._paginationState, e)),
+            null != e.pageSize &&
+                e.pageSize !== this._paginationState.pageSize &&
+                ((t = !0),
+                (e.currentPage = this._calculateNewPageFromPageSizeChange(
+                    e.pageSize ?? this._paginationState.pageSize,
+                    e.currentPage,
+                ))),
+            (this._paginationState = { ...this._paginationState, ...e }),
             t && this._rebuildPaginationChunksFromStoredMembers(),
             [!0, t]
         );
@@ -161,8 +105,7 @@ class h {
         let i = this._sortedMemberIds[e],
             a = r.Ay.getMember(this.guildId, i);
         for (; null == a && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); )
-            (i = this._sortedMemberIds[e]),
-                (null == (a = r.Ay.getMember(this.guildId, i)) ? void 0 : a.joinedAt) == null && (a = null);
+            (i = this._sortedMemberIds[e]), (a = r.Ay.getMember(this.guildId, i)), a?.joinedAt == null && (a = null);
         return a;
     }
     getElasticSearchPagination() {
@@ -173,21 +116,5 @@ class h {
     }
     get version() {
         return this._version;
-    }
-    constructor(e, t) {
-        a(this, "guildId", void 0),
-            a(this, "_sortedMemberIds", void 0),
-            a(this, "_paginationState", void 0),
-            a(this, "_version", void 0),
-            a(this, "_cachedPaginationChunks", void 0),
-            a(this, "_reduceMemberIdsToPaginationChunks", (e, t, n) => {
-                let r = Math.floor(n / this._paginationState.pageSize) + 1;
-                return null == e[r] && (e[r] = []), e[r].push(t), e;
-            }),
-            (this.guildId = e),
-            (this._paginationState = p()),
-            (this._version = 0);
-        const [n, r] = this._initPaginationFromRawMembers(t);
-        (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);
     }
 }

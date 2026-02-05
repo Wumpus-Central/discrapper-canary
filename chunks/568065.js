@@ -1,54 +1,45 @@
+"use strict";
 n.d(t, {
-    At: () => P,
+    At: () => L,
     Fq: () => g,
-    G0: () => N,
-    HO: () => y,
+    G0: () => R,
+    HO: () => A,
     On: () => m,
-    Pn: () => R,
+    Pn: () => D,
     Wb: () => d,
-    YV: () => v,
-    a8: () => _,
-    aH: () => T,
-    b_: () => I,
-    mB: () => p,
-    o2: () => f,
-    o9: () => u,
+    YV: () => y,
+    a8: () => p,
+    aH: () => b,
+    b_: () => v,
+    mB: () => f,
+    o2: () => _,
+    o9: () => c,
     oN: () => E,
-    q: () => S,
-    r9: () => C,
-    sy: () => O,
-    w$: () => b,
-    wr: () => A,
+    q: () => C,
+    r9: () => N,
+    sy: () => T,
+    w$: () => I,
+    wr: () => S,
     y7: () => h,
-    yG: () => w,
-    z0: () => D,
+    yG: () => O,
+    z0: () => w,
 }),
-    n(896048),
     n(64700);
 var r = n(512750),
     i = n(554146),
     a = n(473145),
-    o = n(488803),
-    s = n(788868),
+    s = n(488803),
+    o = n(788868),
     l = n(652215),
-    c = n(985018),
-    u = (function (e) {
+    u = n(985018),
+    c = (function (e) {
         return (e.PERK = "perk"), (e.LEVEL = "level"), e;
     })({});
 let d = "1340102344645283891",
-    f = new Set([r.ec, r.RV, r.YG]),
-    p = "525479941211684874",
-    _ = {
-        [l.TVA.TIER_1]: r.ec,
-        [l.TVA.TIER_2]: r.RV,
-        [l.TVA.TIER_3]: r.YG,
-        [l.TVA.NONE]: void 0,
-    },
-    h = {
-        [r.ec]: l.TVA.TIER_1,
-        [r.RV]: l.TVA.TIER_2,
-        [r.YG]: l.TVA.TIER_3,
-    },
+    _ = new Set([r.ec, r.RV, r.YG]),
+    f = "525479941211684874",
+    p = { [l.TVA.TIER_1]: r.ec, [l.TVA.TIER_2]: r.RV, [l.TVA.TIER_3]: r.YG, [l.TVA.NONE]: void 0 },
+    h = { [r.ec]: l.TVA.TIER_1, [r.RV]: l.TVA.TIER_2, [r.YG]: l.TVA.TIER_3 },
     m = {
         [l.TVA.TIER_1]: i.V.GUILD_POWERUP_LEVEL_1_COACHMARK,
         [l.TVA.TIER_2]: i.V.GUILD_POWERUP_LEVEL_2_COACHMARK,
@@ -57,96 +48,47 @@ let d = "1340102344645283891",
     },
     g = "guild_powerup_modal",
     E = [[r.SL], [r.aN], [r.FB], [r.OJ, r.jF]],
-    y = new Set([r.SL, r.aN, r.FB, r.OJ, r.jF]);
+    A = new Set([r.SL, r.aN, r.FB, r.OJ, r.jF]);
 r.aN;
-let b = () => ({
-        [l.GuildFeatures.VIDEO_BITRATE_ENHANCED]: {
-            perkIcon: a.TP.STREAM,
-            description: c.intl.string(c.t.y4ft4D),
-        },
+let I = () => ({
+        [l.GuildFeatures.VIDEO_BITRATE_ENHANCED]: { perkIcon: a.TP.STREAM, description: u.intl.string(u.t.y4ft4D) },
         [l.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
-                bitrate: s.TG[l.TVA.TIER_1].limits.bitrate / 1e3,
-            }),
+            description: u.intl.formatToPlainString(u.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_1].limits.bitrate / 1e3 }),
         },
-        [l.GuildFeatures.INVITE_SPLASH]: {
-            perkIcon: a.TP.CUSTOMIZATION,
-            description: c.intl.string(c.t.Qwlpov),
-        },
-        [l.GuildFeatures.ANIMATED_ICON]: {
-            perkIcon: a.TP.ANIMATED,
-            description: c.intl.string(c.t.PbAyub),
-        },
+        [l.GuildFeatures.INVITE_SPLASH]: { perkIcon: a.TP.CUSTOMIZATION, description: u.intl.string(u.t.Qwlpov) },
+        [l.GuildFeatures.ANIMATED_ICON]: { perkIcon: a.TP.ANIMATED, description: u.intl.string(u.t.PbAyub) },
         [l.GuildFeatures.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
-                bitrate: s.TG[l.TVA.TIER_2].limits.bitrate / 1e3,
-            }),
+            description: u.intl.formatToPlainString(u.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_2].limits.bitrate / 1e3 }),
         },
-        [l.GuildFeatures.ROLE_ICONS]: {
-            perkIcon: a.TP.CUSTOM_ROLE_ICON,
-            description: c.intl.string(c.t["6PV6Qc"]),
-        },
+        [l.GuildFeatures.ROLE_ICONS]: { perkIcon: a.TP.CUSTOM_ROLE_ICON, description: u.intl.string(u.t["6PV6Qc"]) },
         [l.GuildFeatures.MAX_FILE_SIZE_50_MB]: {
             perkIcon: a.TP.UPLOAD,
-            description: c.intl.formatToPlainString(c.t.aFRl53, {
-                uploadSizeLimit: c.intl.string(c.t.M6qV8j),
-            }),
+            description: u.intl.formatToPlainString(u.t.aFRl53, { uploadSizeLimit: u.intl.string(u.t.M6qV8j) }),
         },
-        [l.GuildFeatures.BANNER]: {
-            perkIcon: a.TP.CUSTOMIZATION,
-            description: c.intl.string(c.t["1a5rjl"]),
-        },
-        [l.GuildFeatures.ANIMATED_BANNER]: {
-            perkIcon: a.TP.ANIMATED,
-            description: c.intl.string(c.t["1+Vmh9"]),
-        },
+        [l.GuildFeatures.BANNER]: { perkIcon: a.TP.CUSTOMIZATION, description: u.intl.string(u.t["1a5rjl"]) },
+        [l.GuildFeatures.ANIMATED_BANNER]: { perkIcon: a.TP.ANIMATED, description: u.intl.string(u.t["1+Vmh9"]) },
         [l.GuildFeatures.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
-                bitrate: s.TG[l.TVA.TIER_3].limits.bitrate / 1e3,
-            }),
+            description: u.intl.formatToPlainString(u.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_3].limits.bitrate / 1e3 }),
         },
-        [l.GuildFeatures.VANITY_URL]: {
-            perkIcon: a.TP.VANITY,
-            description: c.intl.string(c.t["5XZKy/"]),
-        },
+        [l.GuildFeatures.VANITY_URL]: { perkIcon: a.TP.VANITY, description: u.intl.string(u.t["5XZKy/"]) },
         [l.GuildFeatures.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.TP.UPLOAD,
-            description: c.intl.formatToPlainString(c.t.aFRl53, {
-                uploadSizeLimit: c.intl.string(c.t.yMOW8D),
-            }),
+            description: u.intl.formatToPlainString(u.t.aFRl53, { uploadSizeLimit: u.intl.string(u.t.yMOW8D) }),
         },
     }),
-    O = {
-        [l.GuildFeatures.VANITY_URL]: {
-            boostPrice: 5,
-            includedInLevel: l.TVA.TIER_3,
-        },
-        [l.GuildFeatures.GUILD_TAGS]: {
-            boostPrice: 3,
-        },
-        [l.GuildFeatures.ENHANCED_ROLE_COLORS]: {
-            boostPrice: 3,
-        },
-        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: {
-            boostPrice: 3,
-        },
-        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: {
-            boostPrice: 5,
-        },
+    T = {
+        [l.GuildFeatures.VANITY_URL]: { boostPrice: 5, includedInLevel: l.TVA.TIER_3 },
+        [l.GuildFeatures.GUILD_TAGS]: { boostPrice: 3 },
+        [l.GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
     },
-    v = {
-        [l.GuildFeatures.GAME_SERVERS]: {
-            boostPrice: 3,
-            isEnabled: (e) => (0, o.TS)(e, "GuildPowerupsConstants"),
-        },
-    },
-    A = {
-        [r.FB]: l.TVA.TIER_3,
-    };
-var I = (function (e) {
+    y = { [l.GuildFeatures.GAME_SERVERS]: { boostPrice: 3, isEnabled: (e) => (0, s.TS)(e, "GuildPowerupsConstants") } },
+    S = { [r.FB]: l.TVA.TIER_3 };
+var v = (function (e) {
         return (
             (e.INACTIVE = "inactive"),
             (e.POWERUP_ACTIVATED = "powerup_activated"),
@@ -155,7 +97,7 @@ var I = (function (e) {
             e
         );
     })({}),
-    S = (function (e) {
+    C = (function (e) {
         return (
             (e[(e.VANITY_URL = 1)] = "VANITY_URL"),
             (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
@@ -163,22 +105,18 @@ var I = (function (e) {
             e
         );
     })({});
-let T = new Set([r.OJ, r.jF]),
-    C = {
-        1: new Set([r.FB]),
-        2: T,
-        3: new Set(),
-    },
-    N = "powerupId";
-var w = (function (e) {
+let b = new Set([r.OJ, r.jF]),
+    N = { 1: new Set([r.FB]), 2: b, 3: new Set() },
+    R = "powerupId";
+var O = (function (e) {
         return (e[(e.AVAILABLE = 0)] = "AVAILABLE"), (e[(e.SPENT = 1)] = "SPENT"), (e[(e.TOTAL = 2)] = "TOTAL"), e;
     })({}),
-    R = (function (e) {
+    D = (function (e) {
         return (e[(e.LEVEL = 0)] = "LEVEL"), (e[(e.PERK = 1)] = "PERK"), e;
     })({}),
-    P = (function (e) {
+    L = (function (e) {
         return (e.START = "start"), (e.MIDDLE = "middle"), (e.END = "end"), e;
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.FULL = "full"), (e.HALF = "half"), (e.NONE = "none"), e;
     })({});

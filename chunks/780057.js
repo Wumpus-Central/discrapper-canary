@@ -1,51 +1,25 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => c });
+var r = n(311907),
+    i = n(73153);
+let a = !1;
+function s() {
+    a = !1;
 }
-let o = !1;
-
+function o() {
+    a = !0;
+}
 function l() {
-    o = !1;
+    a = !1;
 }
-
-function c() {
-    o = !0;
-}
-
-function u() {
-    o = !1;
-}
-class d extends (r = i.Ay.Store) {
+class u extends r.Ay.Store {
+    static displayName = "ThreadSummaryStore";
+    summaryInProgress = !1;
     initialize() {
-        l();
+        s();
     }
     isInProgress() {
-        return o;
-    }
-    constructor(...e) {
-        super(...e), s(this, "summaryInProgress", !1);
+        return a;
     }
 }
-s(d, "displayName", "ThreadSummaryStore");
-let f = new d(a.h, {
-    SUMMARIZE_THREAD_START: c,
-    SUMMARIZE_THREAD_SUCCESS: u,
-    SUMMARIZE_THREAD_FAILURE: u,
-});
+let c = new u(i.h, { SUMMARIZE_THREAD_START: o, SUMMARIZE_THREAD_SUCCESS: l, SUMMARIZE_THREAD_FAILURE: l });

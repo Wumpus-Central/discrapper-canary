@@ -1,85 +1,51 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(536194);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+"use strict";
+n.d(t, { A: () => f });
+var r = n(311907),
+    i = n(73153),
+    a = n(536194);
 n(436317);
-let l = new Set(),
-    c = {};
-
+let s = new Set(),
+    o = {};
+function l(e) {
+    let { location: t } = e;
+    if (s.has(t)) return !1;
+    s.add(t);
+}
 function u(e) {
-    let { location: t } = e;
-    if (l.has(t)) return !1;
-    l.add(t);
-}
-
-function d(e) {
     let { location: t, enabled: n } = e;
-    c[t] = n;
+    o[t] = n;
 }
-
-function f(e) {
+function c(e) {
     let { location: t } = e;
-    if (null == c[t]) return !1;
-    delete c[t];
+    if (null == o[t]) return !1;
+    delete o[t];
 }
-
-function p(e) {
+function d(e) {
     let { hiddenHotspots: t } = e;
-    l = new Set(t);
+    s = new Set(t);
 }
-class _ extends (r = i.Ay.PersistedStore) {
+class _ extends r.Ay.PersistedStore {
+    static displayName = "HotspotStore";
+    static persistKey = "hotspots";
+    static migrations = [(e) => ({ hiddenHotspots: e ?? [], hotspotOverrides: {} })];
     initialize(e) {
         null != e &&
-            (Array.isArray(e.hiddenHotspots) && (l = new Set(e.hiddenHotspots)),
-            null != e.hotspotOverrides && (c = e.hotspotOverrides));
+            (Array.isArray(e.hiddenHotspots) && (s = new Set(e.hiddenHotspots)),
+            null != e.hotspotOverrides && (o = e.hotspotOverrides));
     }
     hasHotspot(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = !t && c[e];
-        return !s.P.isDisallowPopupsSet() && (n || !l.has(e));
+            n = !t && o[e];
+        return !a.P.isDisallowPopupsSet() && (n || !s.has(e));
     }
     hasHiddenHotspot(e) {
-        return l.has(e);
+        return s.has(e);
     }
     getHotspotOverride(e) {
-        return c[e];
+        return o[e];
     }
     getState() {
-        return {
-            hiddenHotspots: l,
-            hotspotOverrides: c,
-        };
+        return { hiddenHotspots: s, hotspotOverrides: o };
     }
 }
-o(_, "displayName", "HotspotStore"),
-    o(_, "persistKey", "hotspots"),
-    o(_, "migrations", [
-        (e) => ({
-            hiddenHotspots: null != e ? e : [],
-            hotspotOverrides: {},
-        }),
-    ]);
-let h = new _(a.h, {
-    OVERLAY_INITIALIZE: p,
-    HOTSPOT_HIDE: u,
-    HOTSPOT_OVERRIDE_SET: d,
-    HOTSPOT_OVERRIDE_CLEAR: f,
-});
+let f = new _(i.h, { OVERLAY_INITIALIZE: d, HOTSPOT_HIDE: l, HOTSPOT_OVERRIDE_SET: u, HOTSPOT_OVERRIDE_CLEAR: c });

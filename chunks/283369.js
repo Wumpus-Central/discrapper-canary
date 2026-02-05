@@ -1,37 +1,33 @@
-var r = n(387739),
-    i = n(116740).Map;
-
-function a(e, t, n, a) {
-    var s = e.getBlockMap(),
-        o = t.getStartKey(),
-        l = t.getStartOffset(),
-        c = t.getEndKey(),
-        u = t.getEndOffset(),
-        d = s
-            .skipUntil(function (e, t) {
-                return t === o;
+"use strict";
+var n = r(387739),
+    i = r(116740).Map;
+function o(t, e, r, o) {
+    var a = t.getBlockMap(),
+        s = e.getStartKey(),
+        u = e.getStartOffset(),
+        c = e.getEndKey(),
+        l = e.getEndOffset(),
+        f = a
+            .skipUntil(function (t, e) {
+                return e === s;
             })
-            .takeUntil(function (e, t) {
-                return t === c;
+            .takeUntil(function (t, e) {
+                return e === c;
             })
-            .concat(i([[c, s.get(c)]]))
-            .map(function (e, t) {
-                o === c ? ((i = l), (s = u)) : ((i = t === o ? l : 0), (s = t === c ? u : e.getLength()));
-                for (var i, s, d, f = e.getCharacterList(); i < s; )
-                    (d = f.get(i)), (f = f.set(i, a ? r.applyStyle(d, n) : r.removeStyle(d, n))), i++;
-                return e.set("characterList", f);
+            .concat(i([[c, a.get(c)]]))
+            .map(function (t, e) {
+                s === c ? ((i = u), (a = l)) : ((i = e === s ? u : 0), (a = e === c ? l : t.getLength()));
+                for (var i, a, f, p = t.getCharacterList(); i < a; )
+                    (f = p.get(i)), (p = p.set(i, o ? n.applyStyle(f, r) : n.removeStyle(f, r))), i++;
+                return t.set("characterList", p);
             });
-    return e.merge({
-        blockMap: s.merge(d),
-        selectionBefore: t,
-        selectionAfter: t,
-    });
+    return t.merge({ blockMap: a.merge(f), selectionBefore: e, selectionAfter: e });
 }
-e.exports = {
-    add: function (e, t, n) {
-        return a(e, t, n, !0);
+t.exports = {
+    add: function (t, e, r) {
+        return o(t, e, r, !0);
     },
-    remove: function (e, t, n) {
-        return a(e, t, n, !1);
+    remove: function (t, e, r) {
+        return o(t, e, r, !1);
     },
 };

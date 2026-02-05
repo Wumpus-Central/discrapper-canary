@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Xn: "shaker_e5f3a9",
     zr: "root_e5f3a9",

@@ -1,6 +1,4 @@
-n.d(i, {
-    default: () => u,
-});
+n.d(i, { default: () => u });
 var a = n(627968),
     e = n(158954),
     l = n(311907),
@@ -11,9 +9,7 @@ var a = n(627968),
 let c = o.A.getArticleURL(p.MVz.MISSING_ENTITLEMENT),
     u = l.Ay.connectStores([r.A], (t) => {
         let { applicationId: i } = t;
-        return {
-            application: r.A.getApplication(i),
-        };
+        return { application: r.A.getApplication(i) };
     })(function (t) {
         let { application: i, transitionState: n, onClose: l } = t;
         return (0, a.jsx)(e.Modal, {
@@ -22,25 +18,12 @@ let c = o.A.getArticleURL(p.MVz.MISSING_ENTITLEMENT),
             onClose: l,
             title:
                 null != i
-                    ? s.intl.formatToPlainString(s.t.N2mILu, {
-                          applicationName: i.name,
-                      })
+                    ? s.intl.formatToPlainString(s.t.N2mILu, { applicationName: i.name })
                     : s.intl.string(s.t.nS8PUT),
             subtitle:
                 null != i
-                    ? s.intl.format(s.t["MM/7qx"], {
-                          applicationName: i.name,
-                          supportArticleURL: c,
-                      })
-                    : s.intl.format(s.t["IfQUx+"], {
-                          supportArticleURL: c,
-                      }),
-            actions: [
-                {
-                    text: s.intl.string(s.t.BddRzS),
-                    onClick: l,
-                    variant: "primary",
-                },
-            ],
+                    ? s.intl.format(s.t["MM/7qx"], { applicationName: i.name, supportArticleURL: c })
+                    : s.intl.format(s.t["IfQUx+"], { supportArticleURL: c }),
+            actions: [{ text: s.intl.string(s.t.BddRzS), onClick: l, variant: "primary" }],
         });
     });

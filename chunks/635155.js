@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -11,18 +10,8 @@ t(697509)(r, "__esModule", {
         prohibitedProps: ["aria-label", "aria-labelledby"],
         props: {},
         relatedConcepts: [
-            {
-                concept: {
-                    name: "span",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    name: "div",
-                },
-                module: "HTML",
-            },
+            { concept: { name: "span" }, module: "HTML" },
+            { concept: { name: "div" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

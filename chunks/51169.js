@@ -1,16 +1,17 @@
-var r = n(573750),
-    i = n(797686),
-    a = r.isBrowser("IE <= 9");
-e.exports = function (e) {
-    var t,
-        n = null;
+"use strict";
+var n = r(573750),
+    i = r(797686),
+    o = n.isBrowser("IE <= 9");
+t.exports = function (t) {
+    var e,
+        r = null;
     return (
-        !a &&
+        !o &&
             document.implementation &&
             document.implementation.createHTMLDocument &&
-            ((t = document.implementation.createHTMLDocument("foo")).documentElement || i(!1),
-            (t.documentElement.innerHTML = e),
-            (n = t.getElementsByTagName("body")[0])),
-        n
+            ((e = document.implementation.createHTMLDocument("foo")).documentElement || i(!1),
+            (e.documentElement.innerHTML = t),
+            (r = e.getElementsByTagName("body")[0])),
+        r
     );
 };

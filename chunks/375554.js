@@ -1,3 +1,1 @@
-e.exports = {
-    R: "heading_b12e66",
-};
+e.exports = { R: "heading_b12e66" };

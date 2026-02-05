@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Lo: "editCard_a25a68",
     $M: "toggled_a25a68",

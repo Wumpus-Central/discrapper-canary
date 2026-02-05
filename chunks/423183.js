@@ -1,28 +1,23 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(311907),
-    i = n(469993),
-    l = n(260509),
-    a = n(71393),
+n.d(t, { A: () => d });
+var i = n(311907),
+    r = n(469993),
+    a = n(260509),
+    l = n(71393),
     s = n(287809),
     o = n(652215);
-
-function c(e) {
-    var t;
-    let n = (0, r.bG)([a.A], () => a.A.getGuild(e)),
-        c = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        u = null != n && (0, l.bM)(n, c),
-        d = (0, i.oS)();
+function d(e) {
+    let t = (0, i.bG)([l.A], () => l.A.getGuild(e)),
+        n = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
+        d = null != t && (0, a.bM)(t, n),
+        c = (0, r.oS)();
     return (
-        u &&
-        null != (t = null == n ? void 0 : n.features.has(o.GuildFeatures.COMMUNITY)) &&
-        t &&
         d &&
+        (t?.features.has(o.GuildFeatures.COMMUNITY) ?? !1) &&
+        c &&
         !(
-            (null == n ? void 0 : n.features.has(o.GuildFeatures.CREATOR_MONETIZABLE)) ||
-            (null == n ? void 0 : n.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) ||
-            (null == n ? void 0 : n.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_DISABLED))
+            t?.features.has(o.GuildFeatures.CREATOR_MONETIZABLE) ||
+            t?.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL) ||
+            t?.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)
         )
     );
 }

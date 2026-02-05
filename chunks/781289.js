@@ -1,106 +1,45 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(417597),
+var s = n(417597),
     l = n(397927),
-    s = n(465932),
+    r = n(465932),
     a = n(250627),
-    c = n(71393),
-    o = n(599941),
-    d = n(311750),
+    o = n(71393),
+    d = n(599941),
+    c = n(311750),
     u = n(985018);
-
-function f(e) {
-    let { guildId: t, allPeriods: f } = e,
-        g = (0, i.bG)([c.A], () => c.A.getGuild(t)),
-        b = (0, o.uP)(t, {
-            includeSoftDeleted: !0,
+function m(e) {
+    let { guildId: t, allPeriods: m } = e,
+        g = (0, s.bG)([o.A], () => o.A.getGuild(t)),
+        x = (0, d.uP)(t, { includeSoftDeleted: !0 }),
+        h = (0, a.fZ)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: _ } = (0, r.nq)(t),
+        A = m.filter((e) => {
+            let t = Object.values(e.ppgs ?? {})[0];
+            return t?.status === c.U1.OPEN || t?.status === c.U1.PAYOUT_DEFERRED;
         }),
-        m = (0, a.fZ)(t, {
-            publishedOnly: !1,
-        }),
-        { allowSelfRemoveMonetization: p } = (0, s.nq)(t),
-        x = f.filter((e) => {
-            var t;
-            let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
-            return (
-                (null == n ? void 0 : n.status) === d.U1.OPEN ||
-                (null == n ? void 0 : n.status) === d.U1.PAYOUT_DEFERRED
-            );
-        }),
-        h = b.length > 0,
-        j = m.length > 0,
-        O = x.length > 0;
+        p = x.length > 0,
+        f = h.length > 0,
+        j = A.length > 0;
     return null == g
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, r.jsx)(l.Text, {
+                  (0, i.jsx)(l.Text, {
                       variant: "text-sm/normal",
-                      children: u.intl.format(u.t.fvOn6J, {
-                          guildName: g.name,
-                      }),
+                      children: u.intl.format(u.t.fvOn6J, { guildName: g.name }),
                   }),
-                  (0, r.jsx)(l.hKd, {
-                      size: 16,
-                  }),
-                  (0, r.jsx)(l.Button, {
+                  (0, i.jsx)(l.hKd, { size: 16 }),
+                  (0, i.jsx)(l.Button, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSo),
-                      disabled: !p || h || j || O,
+                      disabled: !_ || p || f || j,
                       onClick: () => {
                           (0, l.mMO)(async () => {
                               let { default: e } = await n.e("43224").then(n.bind(n, 201291));
-                              return (t) => {
-                                  var n, i;
-                                  return (0, r.jsx)(
-                                      e,
-                                      ((n = (function (e) {
-                                          for (var t = 1; t < arguments.length; t++) {
-                                              var n = null != arguments[t] ? arguments[t] : {},
-                                                  r = Object.keys(n);
-                                              "function" == typeof Object.getOwnPropertySymbols &&
-                                                  (r = r.concat(
-                                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                      }),
-                                                  )),
-                                                  r.forEach(function (t) {
-                                                      var r;
-                                                      (r = n[t]),
-                                                          t in e
-                                                              ? Object.defineProperty(e, t, {
-                                                                    value: r,
-                                                                    enumerable: !0,
-                                                                    configurable: !0,
-                                                                    writable: !0,
-                                                                })
-                                                              : (e[t] = r);
-                                                  });
-                                          }
-                                          return e;
-                                      })({}, t)),
-                                      (i = i =
-                                          {
-                                              guild: g,
-                                          }),
-                                      Object.getOwnPropertyDescriptors
-                                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                          : (function (e, t) {
-                                                var n = Object.keys(e);
-                                                if (Object.getOwnPropertySymbols) {
-                                                    var r = Object.getOwnPropertySymbols(e);
-                                                    n.push.apply(n, r);
-                                                }
-                                                return n;
-                                            })(Object(i)).forEach(function (e) {
-                                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                            }),
-                                      n),
-                                  );
-                              };
+                              return (t) => (0, i.jsx)(e, { ...t, guild: g });
                           });
                       },
                   }),

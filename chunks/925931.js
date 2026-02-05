@@ -1,22 +1,16 @@
-n.d(t, {
-    g: () => s,
-});
-var r = n(927813),
+n.d(t, { g: () => r });
+var i = n(927813),
     l = n(427262),
-    i = n(985018);
-let a = +r.A.Millis.DAY;
-
-function s(e) {
-    var t, n, r;
-    if ((0, l.mv)(e.user)) return i.intl.string(i.t.VaCdhQ);
-    let s = null == (t = e.member) ? void 0 : t.joinedAt;
-    return null == s
-        ? i.intl.string(i.t.CQmzib)
+    s = n(985018);
+let a = +i.A.Millis.DAY;
+function r(e) {
+    if ((0, l.mv)(e.user)) return s.intl.string(s.t.VaCdhQ);
+    let t = e.member?.joinedAt;
+    return null == t
+        ? s.intl.string(s.t.CQmzib)
         : null != e.member && e.member.roles.length > 0
-          ? null != (n = null == (r = e.role) ? void 0 : r.name)
-              ? n
-              : i.intl.string(i.t["97/NdO"])
-          : new Date().getTime() - Date.parse(s) < a
-            ? i.intl.string(i.t.IKE48n)
-            : i.intl.string(i.t.u0gUWt);
+          ? (e.role?.name ?? s.intl.string(s.t["97/NdO"]))
+          : new Date().getTime() - Date.parse(t) < a
+            ? s.intl.string(s.t.IKE48n)
+            : s.intl.string(s.t.u0gUWt);
 }

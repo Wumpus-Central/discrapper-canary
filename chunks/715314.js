@@ -1,80 +1,58 @@
-n.d(t, {
-    A: () => g,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153);
+let a = {},
+    s = null,
+    o = null;
+function l(e, t) {
+    null == t ? e in a && delete a[e] : null != e && (a[e] = t);
 }
-let o = {},
-    l = null,
-    c = null;
-
-function u(e, t) {
-    null == t ? e in o && delete o[e] : null != e && (o[e] = t);
-}
-
-function d(e) {
+function u(e) {
     let { required_actions: t, user_id: n } = e;
-    u((l = n), t);
+    l((s = n), t);
 }
-
-function f(e) {
+function c(e) {
     let { user: t } = e;
-    c = t.id;
+    o = t.id;
 }
-
-function p(e) {
+function d(e) {
     let { userId: t } = e;
-    u(t, null);
+    l(t, null);
 }
-
 function _(e) {
     let { isSwitchingAccount: t } = e;
-    t || null == c || u(c, null);
+    t || null == o || l(o, null);
 }
-
-function h(e) {
+function f(e) {
     let { userId: t } = e;
-    u(t, null);
+    l(t, null);
 }
-class m extends (r = i.Ay.PersistedStore) {
+class p extends r.Ay.PersistedStore {
+    static displayName = "LoginRequiredActionStore";
+    static persistKey = "LoginRequiredActionStore";
     initialize(e) {
-        null != e && (o = e);
+        null != e && (a = e);
     }
     requiredActions(e) {
-        var t;
-        return null != (t = o[e]) ? t : null;
+        return a[e] ?? null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
         return null != n && t.reduce((e, t) => e || n.includes(t), !1);
     }
     wasLoginAttemptedInSession(e) {
-        return l === e;
+        return s === e;
     }
     getState() {
-        return o;
+        return a;
     }
 }
-s(m, "displayName", "LoginRequiredActionStore"), s(m, "persistKey", "LoginRequiredActionStore");
-let g = new m(a.h, {
-    LOGIN_ATTEMPTED: d,
-    CONNECTION_OPEN: f,
-    CURRENT_USER_UPDATE: f,
+let h = new p(i.h, {
+    LOGIN_ATTEMPTED: u,
+    CONNECTION_OPEN: c,
+    CURRENT_USER_UPDATE: c,
     LOGOUT: _,
-    PASSWORD_UPDATED: p,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: h,
+    PASSWORD_UPDATED: d,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: f,
 });

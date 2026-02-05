@@ -1,11 +1,5 @@
-n.d(t, {
-    Bl: () => f,
-    M5: () => l,
-    Qb: () => s,
-    gz: () => c,
-    ip: () => d,
-    j$: () => u,
-});
+"use strict";
+n.d(t, { Bl: () => _, M5: () => l, Qb: () => s, gz: () => u, ip: () => d, j$: () => c });
 var r = n(600975),
     i = n(652215),
     a = n(349828);
@@ -13,103 +7,35 @@ let s = (0, r.C)({
     kind: "guild",
     id: "2025-06_vanity_url_perk",
     label: "Vanity URL Standalone Perk",
-    defaultConfig: {
-        enabled: !1,
-        rollbackEnabled: !1,
-    },
+    defaultConfig: { enabled: !1, rollbackEnabled: !1 },
     treatments: [
         {
             id: 1,
             label: "Enable ability to purchase Vanity URL Standalone Perk",
-            config: {
-                enabled: !0,
-                rollbackEnabled: !1,
-            },
+            config: { enabled: !0, rollbackEnabled: !1 },
         },
-        {
-            id: 2,
-            label: "Rollback UI for Vanity URL Standalone Perk",
-            config: {
-                enabled: !0,
-                rollbackEnabled: !0,
-            },
-        },
+        { id: 2, label: "Rollback UI for Vanity URL Standalone Perk", config: { enabled: !0, rollbackEnabled: !0 } },
     ],
 });
-
 function o(e) {
     return null != e && e !== a.V && e !== i.YYv;
 }
-
 function l(e, t) {
     let n = o(e);
-    return s.useExperiment(
-        {
-            guildId: e,
-            location: t,
-        },
-        {
-            disable: !n,
-            autoTrackExposure: !1,
-        },
-    ).enabled;
+    return s.useExperiment({ guildId: e, location: t }, { disable: !n, autoTrackExposure: !1 }).enabled;
 }
-
-function c(e, t) {
+function u(e, t) {
     let n = o(e),
-        r = s.useExperiment(
-            {
-                guildId: e,
-                location: t,
-            },
-            {
-                disable: !n,
-                autoTrackExposure: !1,
-            },
-        );
+        r = s.useExperiment({ guildId: e, location: t }, { disable: !n, autoTrackExposure: !1 });
     return r.enabled && !r.rollbackEnabled;
 }
-
-function u(e, t) {
+function c(e, t) {
     let n = o(e);
-    return s.useExperiment(
-        {
-            guildId: e,
-            location: t,
-        },
-        {
-            disable: !n,
-            autoTrackExposure: !1,
-        },
-    ).rollbackEnabled;
+    return s.useExperiment({ guildId: e, location: t }, { disable: !n, autoTrackExposure: !1 }).rollbackEnabled;
 }
-
 function d(e, t) {
-    return (
-        !!o(e) &&
-        s.getCurrentConfig(
-            {
-                guildId: e,
-                location: t,
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ).rollbackEnabled
-    );
+    return !!o(e) && s.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }).rollbackEnabled;
 }
-
-function f(e, t) {
-    return (
-        !!o(e) &&
-        s.getCurrentConfig(
-            {
-                guildId: e,
-                location: t,
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ).enabled
-    );
+function _(e, t) {
+    return !!o(e) && s.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled;
 }

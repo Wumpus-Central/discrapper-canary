@@ -1,6 +1,4 @@
-e.d(n, {
-    default: () => s,
-});
+e.d(n, { default: () => s });
 var i = e(627968);
 e(64700);
 var a = e(397927),
@@ -8,7 +6,6 @@ var a = e(397927),
     r = e(987384),
     o = e(965162),
     l = e(985018);
-
 function s(t) {
     let { onSelect: n, backgroundOption: e, optionIsInUse: s } = t;
     return (0, i.jsx)(a.W1t, {

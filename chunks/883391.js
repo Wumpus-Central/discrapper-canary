@@ -1,71 +1,57 @@
-n.d(t, {
-    A: () => T,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => b });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(492462),
     o = n(311907),
-    c = n(421380),
-    u = n(397927),
-    d = n(686956),
-    p = n(800342),
-    f = n(490415),
-    h = n(481859),
-    A = n(235986),
-    g = n(263063),
-    m = n(857071),
-    b = n(976860),
-    _ = n(345942),
-    E = n(71393),
-    O = n(860689),
-    y = n(590858),
-    I = n(652215),
-    v = n(985018),
-    S = n(811911);
-
-function C(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class N extends i.PureComponent {
+    d = n(421380),
+    c = n(397927),
+    u = n(686956),
+    A = n(800342),
+    h = n(490415),
+    _ = n(481859),
+    m = n(235986),
+    p = n(263063),
+    g = n(857071),
+    E = n(976860),
+    f = n(345942),
+    I = n(71393),
+    C = n(860689),
+    N = n(590858),
+    T = n(652215),
+    S = n(985018),
+    x = n(811911);
+class v extends r.PureComponent {
+    handleJoinOrView = async () => {
+        let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
+            r = () => (0, f.u)(e.id);
+        if (i) (0, A.S5)(t).then(r);
+        else if (n) r();
+        else
+            try {
+                await u.A.joinGuild(e.id, { lurker: !0, source: T.Q4z.APPLICATION_STORE }), r();
+            } catch {}
+    };
+    handleLogin = () => {
+        let e = { redirect_to: T.BVt.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+        (0, E.pX)(T.BVt.LOGIN, { search: (0, s.stringify)(e), source: "verified_guild_invite" });
+    };
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
             ? null
-            : (0, r.jsxs)(A.A, {
-                  className: S.Fj,
-                  align: A.A.Align.CENTER,
+            : (0, i.jsxs)(m.A, {
+                  className: x.Fj,
+                  align: m.A.Align.CENTER,
                   children: [
-                      (0, r.jsx)("div", {
-                          className: S.JX,
+                      (0, i.jsx)("div", { className: x.JX }),
+                      (0, i.jsx)("span", {
+                          className: x.WI,
+                          children: S.intl.format(S.t["LC+S+m"], { membersOnline: t }),
                       }),
-                      (0, r.jsx)("span", {
-                          className: S.WI,
-                          children: v.intl.format(v.t["LC+S+m"], {
-                              membersOnline: t,
-                          }),
-                      }),
-                      (0, r.jsx)("div", {
-                          className: S.Li,
-                      }),
-                      (0, r.jsx)("span", {
-                          className: S.WI,
-                          children: v.intl.format(v.t.zRl6XR, {
-                              count: e,
-                          }),
-                      }),
+                      (0, i.jsx)("div", { className: x.Li }),
+                      (0, i.jsx)("span", { className: x.WI, children: S.intl.format(S.t.zRl6XR, { count: e }) }),
                   ],
               });
     }
@@ -74,75 +60,59 @@ class N extends i.PureComponent {
             guild: e,
             inChannel: t,
             isInGuild: n,
-            isLurking: i,
-            isAuthenticated: l,
+            isLurking: r,
+            isAuthenticated: a,
             className: s,
             pageSize: o,
         } = this.props;
         if (t && n) return null;
-        let d = (0, O.rx)(e),
-            p = v.intl.string(v.t.pxwdrA),
-            f = this.handleJoinOrView,
-            m = c.$n.Looks.FILLED,
-            b = c.$n.Colors.PRIMARY;
+        let u = (0, C.rx)(e),
+            A = S.intl.string(S.t.pxwdrA),
+            h = this.handleJoinOrView,
+            g = d.$n.Looks.FILLED,
+            E = d.$n.Colors.PRIMARY;
         return (
-            l
+            a
                 ? n
-                    ? ((m = c.$n.Looks.OUTLINED),
-                      (b = S.yh),
-                      (p = (0, r.jsxs)(A.A, {
-                          align: A.A.Align.CENTER,
+                    ? ((g = d.$n.Looks.OUTLINED),
+                      (E = x.yh),
+                      (A = (0, i.jsxs)(m.A, {
+                          align: m.A.Align.CENTER,
                           children: [
-                              (0, r.jsx)("div", {
-                                  children: v.intl.string(v.t.cEnaWx),
-                              }),
-                              (0, r.jsx)(u.A9s, {
-                                  size: "md",
-                                  color: "currentColor",
-                                  className: S.BW,
-                              }),
+                              (0, i.jsx)("div", { children: S.intl.string(S.t.cEnaWx) }),
+                              (0, i.jsx)(c.A9s, { size: "md", color: "currentColor", className: x.BW }),
                           ],
                       })))
-                    : i && t && (p = v.intl.string(v.t.XpeFYr))
-                : ((p = v.intl.string(v.t.dKhVQN)), (f = this.handleLogin)),
-            (0, r.jsxs)("div", {
-                className: a()(s, o === y.q.SMALL ? S.T8 : S.vm),
+                    : r && t && (A = S.intl.string(S.t.XpeFYr))
+                : ((A = S.intl.string(S.t.dKhVQN)), (h = this.handleLogin)),
+            (0, i.jsxs)("div", {
+                className: l()(s, o === N.q.SMALL ? x.T8 : x.vm),
                 children: [
-                    (0, r.jsx)(h.A, {
-                        children: v.intl.string(v.t.s1KcLo),
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: S.Qs,
+                    (0, i.jsx)(_.A, { children: S.intl.string(S.t.s1KcLo) }),
+                    (0, i.jsxs)("div", {
+                        className: x.Qs,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: S.pq,
+                            (0, i.jsxs)("div", {
+                                className: x.pq,
                                 children: [
-                                    (0, r.jsx)(g.A, {
-                                        guild: d,
-                                        active: !0,
-                                        size: g.A.Sizes.LARGE,
-                                        className: S.$f,
-                                    }),
-                                    (0, r.jsxs)("div", {
-                                        className: S.aV,
+                                    (0, i.jsx)(p.A, { guild: u, active: !0, size: p.A.Sizes.LARGE, className: x.$f }),
+                                    (0, i.jsxs)("div", {
+                                        className: x.aV,
                                         children: [
-                                            (0, r.jsx)("div", {
-                                                className: S.UU,
-                                                children: e.name,
-                                            }),
+                                            (0, i.jsx)("div", { className: x.UU, children: e.name }),
                                             this.renderMemberInfo(),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(c.$n, {
-                                size: c.$n.Sizes.SMALL,
-                                className: S.hP,
+                            (0, i.jsx)(d.$n, {
+                                size: d.$n.Sizes.SMALL,
+                                className: x.hP,
                                 fullWidth: !0,
-                                color: b,
-                                look: m,
-                                onClick: f,
-                                children: p,
+                                color: E,
+                                look: g,
+                                onClick: h,
+                                children: A,
                             }),
                         ],
                     }),
@@ -150,40 +120,11 @@ class N extends i.PureComponent {
             })
         );
     }
-    constructor(...e) {
-        super(...e),
-            C(this, "handleJoinOrView", async () => {
-                let { guild: e, skuId: t, isInGuild: n, isLurking: r } = this.props,
-                    i = () => (0, _.u)(e.id);
-                if (r) (0, p.S5)(t).then(i);
-                else if (n) i();
-                else
-                    try {
-                        await d.A.joinGuild(e.id, {
-                            lurker: !0,
-                            source: I.Q4z.APPLICATION_STORE,
-                        }),
-                            i();
-                    } catch (e) {}
-            }),
-            C(this, "handleLogin", () => {
-                let e = {
-                    redirect_to: I.BVt.APPLICATION_STORE_LISTING_SKU(this.props.skuId),
-                };
-                (0, b.pX)(I.BVt.LOGIN, {
-                    search: (0, s.stringify)(e),
-                    source: "verified_guild_invite",
-                });
-            });
-    }
 }
-let T = (0, f.A)(
-    o.Ay.connectStores([E.A, m.A], (e) => {
+let b = (0, h.A)(
+    o.Ay.connectStores([I.A, g.A], (e) => {
         let { guild: t } = e,
-            n = m.A.isLurking(t.id);
-        return {
-            isInGuild: null != E.A.getGuild(t.id) && !n,
-            isLurking: n,
-        };
-    })(N),
+            n = g.A.isLurking(t.id);
+        return { isInGuild: null != I.A.getGuild(t.id) && !n, isLurking: n };
+    })(v),
 );

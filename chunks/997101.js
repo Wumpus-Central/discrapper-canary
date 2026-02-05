@@ -1,8 +1,5 @@
-n.d(t, {
-    M: () => i,
-    d: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { M: () => i, d: () => r });
 var r = (function (e) {
     return (
         (e.AD = "AD"),

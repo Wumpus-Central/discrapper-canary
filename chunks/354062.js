@@ -1,96 +1,72 @@
-r.d(t, {
-    A: () => M,
-}),
-    r(747238),
-    r(896048),
-    r(638769);
-var n = r(627968),
-    l = r(64700),
-    s = r(503698),
-    i = r.n(s),
-    a = r(299855),
-    c = r.n(a),
-    o = r(141931),
-    d = r(311907),
-    f = r(397927),
-    u = r(77729),
-    h = r(15285),
-    p = r(843402),
-    x = r(674966),
-    j = r(859703),
-    m = r(157257),
-    g = r(975571),
-    b = r(723702),
-    v = r(290805),
-    y = r(429432),
-    S = r(830012),
-    A = r(905552),
-    _ = r(688465),
-    O = r(207975),
-    C = r(502075),
-    w = r(765682),
-    E = r(191850),
-    N = r(985018),
-    I = r(146896);
-
-function T(e, t, r, n) {
-    let l = (0, b.isWindows)() ? (0, A.A)(h.Ay, m.A) : null,
-        s = h.Ay.getRunningGames(),
-        i = null == r ? void 0 : r.split(":")[1],
+s.d(t, { A: () => U });
+var r = s(627968),
+    i = s(64700),
+    n = s(503698),
+    l = s.n(n),
+    a = s(299855),
+    o = s.n(a),
+    c = s(141931),
+    d = s(311907),
+    u = s(397927),
+    f = s(77729),
+    h = s(15285),
+    x = s(843402),
+    p = s(674966),
+    m = s(859703),
+    _ = s(157257),
+    g = s(975571),
+    j = s(723702),
+    v = s(290805),
+    A = s(429432),
+    S = s(830012),
+    C = s(905552),
+    y = s(688465),
+    b = s(207975),
+    w = s(502075),
+    I = s(765682),
+    E = s(191850),
+    N = s(985018),
+    O = s(146896);
+function T(e, t, s, r) {
+    let i = (0, j.isWindows)() ? (0, C.A)(h.Ay, _.A) : null,
+        n = h.Ay.getRunningGames(),
+        l = s?.split(":")[1],
         a = e.id.split(":")[1];
-    if (null != i && i === a) return 0;
+    if (null != l && l === a) return 0;
     if (null != t && t === e.id) return 5;
-    if (null != l && (0, S.A)(e.id, l.windowHandle)) return 4;
-    if (null != s.find((t) => (0, S.A)(e.id, t.windowHandle))) return 3;
-    let c = null == n ? void 0 : n[a];
-    return null != c && C.F2.has(c) ? 2 : 1;
+    if (null != i && (0, S.A)(e.id, i.windowHandle)) return 4;
+    if (null != n.find((t) => (0, S.A)(e.id, t.windowHandle))) return 3;
+    let o = r?.[a];
+    return null != o && w.F2.has(o) ? 2 : 1;
 }
-
 function R(e) {
     let { source: t } = e;
-    return t.id.startsWith(o.fS.SCREEN)
-        ? (0, n.jsx)(f.kN9, {
-              size: "xs",
-          })
-        : t.id.startsWith(o.fS.WINDOW)
+    return t.id.startsWith(c.fS.SCREEN)
+        ? (0, r.jsx)(u.kN9, { size: "xs" })
+        : t.id.startsWith(c.fS.WINDOW)
           ? null != t.icon && "" !== t.icon
-              ? (0, n.jsx)("img", {
-                    src: t.icon,
-                    className: I.pI,
-                    alt: "",
-                })
-              : (0, n.jsx)(f.WxK, {
-                    size: "xs",
-                })
-          : (0, n.jsx)(f.npA, {
-                size: "xs",
-            });
+              ? (0, r.jsx)("img", { src: t.icon, className: O.pI, alt: "" })
+              : (0, r.jsx)(u.WxK, { size: "xs" })
+          : (0, r.jsx)(u.npA, { size: "xs" });
 }
-
-function P(e) {
-    let { source: t, selected: r, onClick: l } = e,
-        { url: s, name: a } = t;
-    return (0, n.jsxs)(f.DUT, {
-        onClick: () => l(t),
-        className: i()(I.sP, {
-            [I.Lv]: r,
-        }),
+function M(e) {
+    let { source: t, selected: s, onClick: i } = e,
+        { url: n, name: a } = t;
+    return (0, r.jsxs)(u.DUT, {
+        onClick: () => i(t),
+        className: l()(O.sP, { [O.Lv]: s }),
         children: [
-            (0, n.jsx)("div", {
-                className: I.ji,
-                children: (0, n.jsxs)("div", {
-                    className: I.KG,
+            (0, r.jsx)("div", {
+                className: O.ji,
+                children: (0, r.jsxs)("div", {
+                    className: O.KG,
                     children: [
-                        (0, n.jsx)("img", {
-                            src: s,
-                            className: I.f5,
-                            alt: "",
-                        }),
-                        (0, n.jsx)("div", {
-                            className: I.qe,
-                            children: (0, n.jsx)("div", {
-                                className: I.K3,
-                                children: (0, n.jsx)(f.Text, {
+                        (0, r.jsx)("img", { src: n, className: O.f5, alt: "" }),
+                        (0, r.jsx)("div", {
+                            className: O.qe,
+                            children: (0, r.jsx)("div", {
+                                className: O.K3,
+                                children: (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
                                     children: N.intl.string(N.t.z7WGhv),
@@ -100,143 +76,111 @@ function P(e) {
                     ],
                 }),
             }),
-            (0, n.jsxs)("div", {
-                className: I.Uw,
+            (0, r.jsxs)("div", {
+                className: O.Uw,
                 children: [
-                    (0, n.jsx)(R, {
-                        source: t,
-                    }),
-                    (0, n.jsx)(f.Text, {
-                        variant: "text-sm/medium",
-                        className: I.VZ,
-                        children: a,
-                    }),
+                    (0, r.jsx)(R, { source: t }),
+                    (0, r.jsx)(u.Text, { variant: "text-sm/medium", className: O.VZ, children: a }),
                 ],
             }),
         ],
     });
 }
-
-function M(e) {
+function U(e) {
     let { onClick: t } = e,
         [
             {
-                windowSources: r,
-                deviceSources: s,
-                screenSources: i,
+                windowSources: s,
+                deviceSources: n,
+                screenSources: l,
                 sourceType: a,
-                fetchingSources: m,
+                fetchingSources: _,
                 selectedSource: g,
-                discordSourceId: A,
-                hasPermission: C,
+                discordSourceId: C,
+                hasPermission: w,
             },
-        ] = (0, _.tS)(),
-        { smarterSourceOrdering: E } = (0, y.s)({
-            location: "GoLiveSourceGrid",
-        }),
+        ] = (0, y.tS)(),
+        { smarterSourceOrdering: E } = (0, A.s)({ location: "GoLiveSourceGrid" }),
         R = (0, d.bG)([h.Ay], () => h.Ay.getRunningGames()),
-        M = (0, d.cf)([h.Ay], () => {
+        U = (0, d.cf)([h.Ay], () => {
             let e = h.Ay.getCandidateGames(),
                 t = {};
-            for (let r of e) null != r.windowHandle && (t[r.windowHandle] = r.exeName);
+            for (let s of e) null != s.windowHandle && (t[s.windowHandle] = s.exeName);
             return t;
         }),
-        U = (0, d.bG)([j.A], () => j.A.quests),
-        L = (0, O.A)(U, R, r);
-    l.useEffect(() => ((0, p.a2)(), p.e0), []);
-    let G = l.useMemo(
-        () =>
-            E
-                ? [...r].sort(
-                      (e, t) =>
-                          T(t, null == L ? void 0 : L.source.id, A, M) - T(e, null == L ? void 0 : L.source.id, A, M),
-                  )
-                : r,
-        [L, E, r, A, M],
+        L = (0, d.bG)([m.A], () => m.A.quests),
+        D = (0, b.A)(L, R, s);
+    i.useEffect(() => ((0, x.a2)(), x.e0), []);
+    let P = i.useMemo(
+        () => (E ? [...s].sort((e, t) => T(t, D?.source.id, C, U) - T(e, D?.source.id, C, U)) : s),
+        [D, E, s, C, U],
     );
-    if (m) {
-        if (!1 === C) {
+    if (_) {
+        if (!1 === w) {
             let e = !1;
-            if ((0, b.isMac)()) {
-                var k, F;
-                let t =
-                    null === u.A || void 0 === u.A || null == (F = u.A.remoteApp) || null == (k = F.getVersion)
-                        ? void 0
-                        : k.call(F);
-                e = !v.M || "0.0.0" === t || c().satisfies(t, "0.0.363");
+            if ((0, j.isMac)()) {
+                let t = f.A?.remoteApp?.getVersion?.();
+                e = !v.M || "0.0.0" === t || o().satisfies(t, "0.0.363");
             }
-            return (0, n.jsxs)("div", {
-                className: I.Ye,
+            return (0, r.jsxs)("div", {
+                className: O.Ye,
                 children: [
-                    (0, n.jsxs)(f.Text, {
-                        className: I.kc,
+                    (0, r.jsxs)(u.Text, {
+                        className: O.kc,
                         variant: "text-md/normal",
                         color: "text-feedback-critical",
-                        children: [N.intl.string(N.t["kW5h/W"]), (0, n.jsx)("br", {}), N.intl.string(N.t["5Jvu1R"])],
+                        children: [N.intl.string(N.t["kW5h/W"]), (0, r.jsx)("br", {}), N.intl.string(N.t["5Jvu1R"])],
                     }),
                     e &&
-                        (0, n.jsx)(f.Button, {
+                        (0, r.jsx)(u.Button, {
                             text: N.intl.string(N.t["XgZk+u"]),
                             onClick: () => {
-                                x.A.openSettings(w.iL.SCREEN_RECORDING);
+                                p.A.openSettings(I.iL.SCREEN_RECORDING);
                             },
                         }),
                 ],
             });
         }
-        return (0, n.jsx)("div", {
-            className: I.Lq,
-            children: (0, n.jsx)(f.y$y, {}),
-        });
+        return (0, r.jsx)("div", { className: O.Lq, children: (0, r.jsx)(u.y$y, {}) });
     }
-    let Z = [];
-    return ((Z = a === o.fS.WINDOW ? G : a === o.fS.SCREEN ? i : s), a === o.fS.CAMERA && 0 === Z.length)
-        ? (0, n.jsx)(D, {})
-        : (0, n.jsx)("div", {
-              className: I.zr,
-              children: Z.map((e) =>
-                  (0, n.jsx)(
-                      P,
+    let F = [];
+    return ((F = a === c.fS.WINDOW ? P : a === c.fS.SCREEN ? l : n), a === c.fS.CAMERA && 0 === F.length)
+        ? (0, r.jsx)(G, {})
+        : (0, r.jsx)("div", {
+              className: O.zr,
+              children: F.map((e) =>
+                  (0, r.jsx)(
+                      M,
                       {
                           onClick: t,
                           source: e,
-                          selected:
-                              null != g && "windowHandle" in g
-                                  ? (0, S.A)(e.id, g.windowHandle)
-                                  : (null == g ? void 0 : g.id) === e.id,
+                          selected: null != g && "windowHandle" in g ? (0, S.A)(e.id, g.windowHandle) : g?.id === e.id,
                       },
                       e.id,
                   ),
               ),
           });
 }
-
-function D() {
-    return (0, n.jsxs)("div", {
-        className: I.p$,
+function G() {
+    return (0, r.jsxs)("div", {
+        className: O.p$,
         children: [
-            (0, n.jsx)(f.npA, {
-                size: "md",
-                color: f.LU0.colors.ICON_MUTED,
-                className: I.Dw,
-            }),
-            (0, n.jsx)(f.Text, {
+            (0, r.jsx)(u.npA, { size: "md", color: u.LU0.colors.ICON_MUTED, className: O.Dw }),
+            (0, r.jsx)(u.Text, {
                 variant: "text-lg/medium",
                 color: "text-strong",
-                className: I.jU,
+                className: O.jU,
                 children: N.intl.string(E.default["/z3YaZ"]),
             }),
-            (0, n.jsx)(f.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                className: I.C3,
+                className: O.C3,
                 children: N.intl.string(E.default.agwSGA),
             }),
-            (0, n.jsx)(f.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: "text-sm/semibold",
-                children: N.intl.format(E.default.xpVzr3, {
-                    helpdeskURL: g.A.getArticleURL(0x53d41ade17),
-                }),
+                children: N.intl.format(E.default.xpVzr3, { helpdeskURL: g.A.getArticleURL(0x53d41ade17) }),
             }),
         ],
     });

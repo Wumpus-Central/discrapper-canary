@@ -1,90 +1,66 @@
-n.d(t, {
-    default: () => h,
-}),
-    n(228524);
-var a = n(627968),
-    l = n(64700),
-    s = n(731738),
-    i = n(158954),
-    c = n(417597),
-    r = n(397927),
-    d = n(831062),
-    o = n(754302),
-    f = n(632738),
+n.d(e, { default: () => h });
+var s = n(627968),
+    a = n(64700),
+    i = n(731738),
+    c = n(158954),
+    r = n(417597),
+    l = n(397927),
+    o = n(831062),
+    d = n(754302),
+    _ = n(632738),
     u = n(349435),
     x = n(665909),
-    _ = n(299921),
-    m = n(652215),
-    p = n(985018),
+    m = n(299921),
+    p = n(652215),
+    g = n(985018),
     T = n(546);
-
-function h(e) {
+function h(t) {
     let {
-            transitionState: t,
+            transitionState: e,
             onClose: n,
             channelId: h,
-            warningId: g,
-            senderId: v,
+            warningId: b,
+            senderId: f,
             description: y,
             safetyTipRows: j,
-            actionRows: N,
-            learnMore: A,
-        } = e,
-        E = (0, c.bG)([u.Ay], () => u.Ay.getChannelSafetyWarning(h, g));
+            actionRows: A,
+            learnMore: N,
+        } = t,
+        E = (0, r.bG)([u.Ay], () => u.Ay.getChannelSafetyWarning(h, b));
     return (
-        l.useEffect(() => {
-            (0, x.mO)(m.HAw.SAFETY_WARNING_MODAL_VIEWED, {
+        a.useEffect(() => {
+            (0, x.mO)(p.HAw.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: h,
-                warningId: g,
-                senderId: v,
-                warningType: null == E ? void 0 : E.type,
+                warningId: b,
+                senderId: f,
+                warningType: E?.type,
             }),
-                d.A.increment({
-                    name: s.K.SAFETY_WARNING_MODAL_VIEW,
-                });
-        }, [h, g, v, E]),
-        (0, a.jsx)(i.ExpressiveModal, {
+                o.A.increment({ name: i.K.SAFETY_WARNING_MODAL_VIEW });
+        }, [h, b, f, E]),
+        (0, s.jsx)(c.ExpressiveModal, {
             onClose: n,
-            transitionState: t,
-            graphic: {
-                type: "image",
-                src: T.A,
-            },
+            transitionState: e,
+            graphic: { type: "image", src: T.A },
             gradientColor: "blue",
-            title: p.intl.string(p.t.lyt43P),
+            title: g.intl.string(g.t.lyt43P),
             subtitle: y,
             actions: [],
-            children: (0, a.jsxs)(r.BJc, {
+            children: (0, s.jsxs)(l.BJc, {
                 gap: 24,
                 children: [
-                    (0, a.jsxs)(r.BJc, {
-                        gap: 8,
-                        children: [
-                            (0, a.jsx)(o.q, {
-                                children: j,
-                            }),
-                            null != A ? A : null,
-                        ],
-                    }),
-                    (0, a.jsxs)(r.BJc, {
+                    (0, s.jsxs)(l.BJc, { gap: 8, children: [(0, s.jsx)(d.q, { children: j }), N ?? null] }),
+                    (0, s.jsxs)(l.BJc, {
                         gap: 4,
                         children: [
-                            (0, a.jsx)(r.Text, {
+                            (0, s.jsx)(l.Text, {
                                 variant: "eyebrow",
                                 color: "text-default",
-                                children: p.intl.string(p.t.K5FKtc),
+                                children: g.intl.string(g.t.K5FKtc),
                             }),
-                            (0, a.jsx)(f.Y0, {
-                                children: N,
-                            }),
+                            (0, s.jsx)(_.Y0, { children: A }),
                         ],
                     }),
-                    (0, a.jsx)(_.A, {
-                        channelId: h,
-                        warningId: g,
-                        senderId: v,
-                        safetyWarning: E,
-                    }),
+                    (0, s.jsx)(m.A, { channelId: h, warningId: b, senderId: f, safetyWarning: E }),
                 ],
             }),
         })

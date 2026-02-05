@@ -1,3 +1,1 @@
-e.exports = {
-    p: "noResultsContainer__9c6d0",
-};
+e.exports = { p: "noResultsContainer__9c6d0" };

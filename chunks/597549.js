@@ -1,3 +1,4 @@
+"use strict";
 var n = r(954055),
     i = r(869639),
     o = r(868361),
@@ -20,7 +21,6 @@ var n = r(954055),
 t.exports = function (t, e) {
     var r = e.which,
         o = t._latestEditorState;
-
     function u(r) {
         var n = t.props[r];
         return !!n && (n(e), !0);

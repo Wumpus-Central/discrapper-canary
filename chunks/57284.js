@@ -1,3 +1,4 @@
+"use strict";
 var n = e(781544),
     o = String;
 t.exports = function (t) {

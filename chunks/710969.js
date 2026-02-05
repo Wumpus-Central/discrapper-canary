@@ -1,122 +1,59 @@
+"use strict";
 n.d(t, {
-    Gp: () => P,
+    Gp: () => N,
     HN: () => I,
-    Ic: () => y,
-    Kc: () => C,
-    L4: () => w,
-    Li: () => N,
-    RF: () => L,
-    ZG: () => v,
-    gO: () => E,
-    if: () => b,
-    r$: () => x,
+    Ic: () => h,
+    Kc: () => S,
+    L4: () => C,
+    Li: () => v,
+    RF: () => O,
+    ZG: () => E,
+    gO: () => p,
+    if: () => m,
+    r$: () => D,
     t6: () => A,
-    v1: () => O,
-    vZ: () => D,
-    vc: () => m,
-    vy: () => g,
-    xn: () => S,
-    yI: () => R,
-}),
-    n(896048);
+    v1: () => g,
+    vZ: () => R,
+    vc: () => _,
+    vy: () => f,
+    xn: () => T,
+    yI: () => b,
+});
 var r = n(665260),
     i = n(773669),
     a = n(728458),
-    o = n(859703),
-    s = n(341915),
+    s = n(859703),
+    o = n(341915),
     l = n(302654),
-    c = n(654487),
-    u = n(652215);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+    u = n(654487),
+    c = n(652215);
+let d = 2592e6;
+function _(e, t, n) {
+    let r = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
+        i = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
+        a = r.get(e);
+    if (null != a) return a;
+    let s = i.get(e)?.replacementId;
+    if (null != s) return r.get(s);
 }
-
 function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
+    return Object.keys(u.TY).includes(o.uF[e]);
 }
-
 function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
+    if (!f(t)) return !1;
+    let n = o.uF[t];
+    return (0, r.Lt)(e.dismissedQuestContent, u.TY[n]);
 }
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = 2592e6;
-
-function m(e, t, n) {
-    var r;
-    let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
-        a = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
-        o = i.get(e);
-    if (null != o) return o;
-    let s = null == (r = a.get(e)) ? void 0 : r.replacementId;
-    if (null != s) return i.get(s);
-}
-
-function g(e) {
-    return Object.keys(c.TY).includes(s.uF[e]);
-}
-
-function E(e, t) {
-    if (!g(t)) return !1;
-    let n = s.uF[t];
-    return (0, r.Lt)(e.dismissedQuestContent, c.TY[n]);
-}
-
-function y(e) {
+function h(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
-
-function b(e) {
-    if (!y(e)) return !1;
-    let t = Date.now() - h,
+function m(e) {
+    if (!h(e)) return !1;
+    let t = Date.now() - d,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-
-function O(e) {
+function g(e) {
     let t = null,
         n = Date.now();
     for (let r of e) {
@@ -125,43 +62,31 @@ function O(e) {
     }
     return t;
 }
-
-function v(e) {
-    let t =
-        arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {
-                  dateStyle: "short",
-              };
+function E(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(i.default.locale, t);
 }
-
 function A(e, t, n) {
     let r = t.get(n);
     if (null == r) return;
     let i = e.get(r.quest.id);
-    if (null != i && !y(i)) return i;
+    if (null != i && !h(i)) return i;
 }
-
 function I(e) {
     return {
-        [s.uF.QUEST_BAR]: s.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [s.uF.QUEST_BAR_V2]: s.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [s.uF.QUEST_BAR_MOBILE]: s.yW.MOBILE_HOME_DOCK_AREA,
+        [o.uF.QUEST_BAR]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        [o.uF.QUEST_BAR_V2]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        [o.uF.QUEST_BAR_MOBILE]: o.yW.MOBILE_HOME_DOCK_AREA,
     }[e];
 }
-
-function S(e) {
-    let t = I(e);
-    return null != t && c.J6.has(t);
-}
-
 function T(e) {
-    let { enableNewRequestBehavior: t } = l.A.getConfig({
-        location: "getQuestDeliveryDataForPlacement",
-    });
+    let t = I(e);
+    return null != t && u.J6.has(t);
+}
+function y(e) {
+    let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" });
     if (t) {
-        let t = o.A.questAdDecisionByPlacement.get(e);
+        let t = s.A.questAdDecisionByPlacement.get(e);
         return null == t
             ? null
             : {
@@ -175,7 +100,7 @@ function T(e) {
               };
     }
     {
-        let t = o.A.questToDeliverForPlacement.get(e);
+        let t = s.A.questToDeliverForPlacement.get(e);
         return null == t
             ? null
             : {
@@ -189,68 +114,47 @@ function T(e) {
               };
     }
 }
-
-function C(e, t) {
-    var n;
-    let r = I(t);
-    if (null == r) return c.K3;
-    let { adDecisionData: i, questId: a } = null != (n = T(r)) ? n : {};
-    return null != i && a === e ? i : c.K3;
+function S(e, t) {
+    let n = I(t);
+    if (null == n) return u.K3;
+    let { adDecisionData: r, questId: i } = y(n) ?? {};
+    return null != r && i === e ? r : u.K3;
 }
-
-function N(e) {
-    var t;
+function v(e) {
+    let t = I(e);
+    if (null != t) return y(t)?.metadataRaw;
+}
+function C(e) {
+    let t = I(e);
+    if (null != t) return y(t)?.metadataSealed;
+}
+function b(e, t) {
     let n = I(e);
-    if (null != n) return null == (t = T(n)) ? void 0 : t.metadataRaw;
-}
-
-function w(e) {
-    var t;
-    let n = I(e);
-    if (null != n) return null == (t = T(n)) ? void 0 : t.metadataSealed;
-}
-
-function R(e, t) {
-    var n;
-    let r = I(e);
-    if (null == r) return;
-    let { trafficMetadataRaw: i, questId: a } = null != (n = T(r)) ? n : {};
-    if (null != i && a === t) return i;
+    if (null == n) return;
+    let { trafficMetadataRaw: r, questId: i } = y(n) ?? {};
+    if (null != r && i === t) return r;
     if (null != t) {
-        let e = o.A.getQuest(t);
-        return null == e ? void 0 : e.trafficMetadataRaw;
+        let e = s.A.getQuest(t);
+        return e?.trafficMetadataRaw;
     }
 }
-
-function P(e, t) {
-    var n;
-    let r = I(e);
-    if (null == r) return;
-    let { trafficMetadataSealed: i, questId: a } = null != (n = T(r)) ? n : {};
-    if (null != i && a === t) return i;
+function N(e, t) {
+    let n = I(e);
+    if (null == n) return;
+    let { trafficMetadataSealed: r, questId: i } = y(n) ?? {};
+    if (null != r && i === t) return r;
     if (null != t) {
-        let e = o.A.getQuest(t);
-        return null == e ? void 0 : e.trafficMetadataSealed;
+        let e = s.A.getQuest(t);
+        return e?.trafficMetadataSealed;
     }
 }
-
-function D(e) {
-    var t;
-    let n = I(e);
-    if (null != n) return null == (t = T(n)) ? void 0 : t.adContext;
+function R(e) {
+    let t = I(e);
+    if (null != t) return y(t)?.adContext;
 }
-
-function L(e, t) {
-    a.A.captureException(
-        e,
-        _(f({}, t), {
-            tags: _(f({}, null == t ? void 0 : t.tags), {
-                app_context: "quests",
-            }),
-        }),
-    );
+function O(e, t) {
+    a.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-
-function x() {
-    return window.location.pathname.startsWith(u.BVt.QUEST_HOME);
+function D() {
+    return window.location.pathname.startsWith(c.BVt.QUEST_HOME);
 }

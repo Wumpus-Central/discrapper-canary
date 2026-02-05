@@ -1,3 +1,4 @@
+"use strict";
 t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
@@ -67,14 +68,7 @@ t.exports = (function (t) {
             return this.getIsBackward() ? this.getAnchorOffset() : this.getFocusOffset();
         }),
         (e.createEmpty = function (t) {
-            return new e({
-                anchorKey: t,
-                anchorOffset: 0,
-                focusKey: t,
-                focusOffset: 0,
-                isBackward: !1,
-                hasFocus: !1,
-            });
+            return new e({ anchorKey: t, anchorOffset: 0, focusKey: t, focusOffset: 0, isBackward: !1, hasFocus: !1 });
         }),
         e
     );

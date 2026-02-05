@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     is: "gameArtHero__15328",
     zc: "iconContainer__15328",

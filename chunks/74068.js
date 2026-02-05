@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => o,
-});
+"use strict";
+n.d(t, { A: () => o });
 var r = n(627968),
     i = n(64700),
     a = n(453771),
@@ -14,12 +13,12 @@ class o extends i.PureComponent {
             className: i,
             playable: o,
             volume: l,
-            renderLinkComponent: c,
-            onVolumeChange: u,
+            renderLinkComponent: u,
+            onVolumeChange: c,
             onVolumeShow: d,
-            onVolumeHide: f,
-            autoMute: p,
-            onMute: _,
+            onVolumeHide: _,
+            autoMute: f,
+            onMute: p,
             mimeType: h,
             onPlay: m,
         } = this.props;
@@ -32,12 +31,12 @@ class o extends i.PureComponent {
             className: i,
             playable: o,
             volume: l,
-            onMute: _,
-            autoMute: p,
-            onVolumeChange: u,
+            onMute: p,
+            autoMute: f,
+            onVolumeChange: c,
             onVolumeShow: d,
-            onVolumeHide: f,
-            renderLinkComponent: c,
+            onVolumeHide: _,
+            renderLinkComponent: u,
             mimeType: h,
             onPlay: m,
         });

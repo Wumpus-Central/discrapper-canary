@@ -1,26 +1,20 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(54570),
-    o = n(8880),
-    c = n(985018);
-
-function s(e, t) {
-    let n = (0, i.bG)([o.A], () => o.A.isSpeakingMessage(t.id, e.id), [t, e]);
+var l = n(311907),
+    a = n(397927),
+    r = n(54570),
+    s = n(8880),
+    o = n(985018);
+function d(e, t) {
+    let n = (0, l.bG)([s.A], () => s.A.isSpeakingMessage(t.id, e.id), [t, e]);
     return "" === e.content
         ? null
-        : (0, r.jsx)(l.Drp, {
+        : (0, i.jsx)(a.Drp, {
               id: "tts",
-              label: n ? c.intl.string(c.t.CJ30BP) : c.intl.string(c.t.yGLjXF),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: l._Ft,
-              },
-              icon: l._Ft,
-              action: () => (n ? (0, a.pr)() : (0, a.kP)(t, e)),
+              label: n ? o.intl.string(o.t.CJ30BP) : o.intl.string(o.t.yGLjXF),
+              leadingAccessory: { type: "icon", icon: a._Ft },
+              icon: a._Ft,
+              action: () => (n ? (0, r.pr)() : (0, r.kP)(t, e)),
           });
 }

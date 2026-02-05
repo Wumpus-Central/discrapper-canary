@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,12 +13,8 @@ let l = (e) => {
         onClick: n,
         className: a()(o.r, t),
         "aria-label": i,
-        children: (0, r.jsx)(s.PGe, {
-            size: "xs",
-            color: "currentColor",
-            colorClass: o.M,
-        }),
+        children: (0, r.jsx)(s.PGe, { size: "xs", color: "currentColor", colorClass: o.M }),
     });
 };
 l.displayName = "DismissButton";
-let c = l;
+let u = l;

@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => i,
-});
+n.d(t, { A: () => i });
 var a = n(303527);
 let i = {
     ordinalNumber: (0, n(722023).A)({
@@ -11,27 +9,15 @@ let i = {
         },
     }),
     era: (0, a.A)({
-        matchPatterns: {
-            narrow: /^(前)/i,
-            abbreviated: /^(前)/i,
-            wide: /^(公元前|公元)/i,
-        },
+        matchPatterns: { narrow: /^(前)/i, abbreviated: /^(前)/i, wide: /^(公元前|公元)/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^(前)/i, /^(公元)/i],
-        },
+        parsePatterns: { any: [/^(前)/i, /^(公元)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, a.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^第[一二三四]刻/i,
-            wide: /^第[一二三四]刻钟/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^第[一二三四]刻/i, wide: /^第[一二三四]刻钟/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/(1|一)/i, /(2|二)/i, /(3|三)/i, /(4|四)/i],
-        },
+        parsePatterns: { any: [/(1|一)/i, /(2|二)/i, /(3|三)/i, /(4|四)/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -84,15 +70,11 @@ let i = {
             wide: /^星期[一二三四五六日]/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/日/i, /一/i, /二/i, /三/i, /四/i, /五/i, /六/i],
-        },
+        parsePatterns: { any: [/日/i, /一/i, /二/i, /三/i, /四/i, /五/i, /六/i] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, a.A)({
-        matchPatterns: {
-            any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨|)/i,
-        },
+        matchPatterns: { any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨|)/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

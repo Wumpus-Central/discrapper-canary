@@ -1,12 +1,10 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(311907),
+n.d(t, { A: () => r });
+var i = n(311907),
     l = n(806621),
-    i = n(320501),
-    a = n(652215);
-let s = (e, t) => {
+    a = n(320501),
+    s = n(652215);
+let r = (e, t) => {
     let n = (0, l.r)(t),
-        s = (0, r.bG)([i.A], () => i.A.getMessages(t.id).length > 0, [t]);
-    return null != e && e.hasFlag(a.nhx.QUARANTINED) && n && !s;
+        r = (0, i.bG)([a.A], () => a.A.getMessages(t.id).length > 0, [t]);
+    return null != e && e.hasFlag(s.nhx.QUARANTINED) && n && !r;
 };

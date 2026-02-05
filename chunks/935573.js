@@ -1,6 +1,5 @@
-n.d(t, {
-    j: () => r,
-});
+"use strict";
+n.d(t, { j: () => r });
 var r = (function (e) {
     return (
         (e[(e.APPLICATION = 1)] = "APPLICATION"),

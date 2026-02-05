@@ -1,78 +1,58 @@
-n.d(t, {
-    A: () => f,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(92674),
     a = n(311907),
-    o = n(397927),
-    s = n(775602),
+    s = n(397927),
+    o = n(775602),
     l = n(985018),
-    c = n(798516),
-    u = n(910200);
+    u = n(798516),
+    c = n(910200);
 let d = () =>
         (0, r.jsxs)("div", {
-            className: u.oR,
+            className: c.oR,
             children: [
-                (0, r.jsx)(o.y$y, {
-                    type: o.tVU.SPINNING_CIRCLE_SIMPLE,
-                    className: c.S,
-                }),
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.y$y, { type: s.tVU.SPINNING_CIRCLE_SIMPLE, className: u.S }),
+                (0, r.jsx)(s.Text, {
                     color: "text-strong",
                     variant: "text-md/normal",
                     children: l.intl.string(l.t["5z/hlE"]),
                 }),
             ],
         }),
-    f = (e) => {
-        let { shown: t, sent: n, className: c } = e,
-            u = (0, a.bG)([s.A], () => s.A.useReducedMotion),
-            f = (0, o.pnh)(
+    _ = (e) => {
+        let { shown: t, sent: n, className: u } = e,
+            c = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+            _ = (0, s.pnh)(
                 t,
                 {
-                    from: {
-                        transform: u ? "translateY(0)" : "translateY(16px)",
-                        opacity: 0,
-                    },
-                    enter: {
-                        transform: "translateY(0)",
-                        opacity: 1,
-                    },
-                    leave: {
-                        transform: u ? "translateY(0)" : "translateY(16px)",
-                        opacity: 0,
-                    },
-                    config: {
-                        mass: 1,
-                        tension: 500,
-                        friction: 18,
-                        clamp: !0,
-                    },
+                    from: { transform: c ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                    enter: { transform: "translateY(0)", opacity: 1 },
+                    leave: { transform: c ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                    config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
                     delay: 200,
                 },
                 "animate-always",
             );
         return (0, r.jsx)(r.Fragment, {
-            children: f(
+            children: _(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(i.animated.div, {
-                        className: c,
+                        className: u,
                         style: e,
                         children: n
-                            ? (0, r.jsx)(o.y8, {
+                            ? (0, r.jsx)(s.y8, {
                                   message: l.intl.string(l.t.fjcCk5),
-                                  type: o.ToastType.SUCCESS,
+                                  type: s.ToastType.SUCCESS,
                                   id: "success_message_toast",
                               })
-                            : (0, r.jsx)(o.y8, {
+                            : (0, r.jsx)(s.y8, {
                                   message: "",
-                                  type: o.ToastType.CUSTOM,
+                                  type: s.ToastType.CUSTOM,
                                   id: "custom_loading_message_toast",
-                                  options: {
-                                      component: (0, r.jsx)(d, {}),
-                                  },
+                                  options: { component: (0, r.jsx)(d, {}) },
                               }),
                     }),
             ),

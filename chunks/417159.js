@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     i = r(550835);
 t.exports = (function (t) {
@@ -20,17 +21,13 @@ t.exports = (function (t) {
             });
             return n.createElement(
                 "div",
-                {
-                    className: t,
-                },
+                { className: t },
                 n.createElement(
                     "div",
                     {
                         className: i("public/DraftEditorPlaceholder/inner"),
                         id: this.props.accessibilityID,
-                        style: {
-                            whiteSpace: "pre-wrap",
-                        },
+                        style: { whiteSpace: "pre-wrap" },
                     },
                     this.props.text,
                 ),

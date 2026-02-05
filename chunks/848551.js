@@ -1,302 +1,197 @@
-n.d(t, {
-    Ay: () => h,
-    E: () => b,
-    JR: () => p,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => h, E: () => p, JR: () => _ });
 var l = n(627968),
-    r = n(64700),
-    a = n(461771),
-    i = n(741918),
-    s = n(602034);
-let c = "data-grid-item-id",
-    o = "data-grid-section",
-    d = "data-grid-prev-section-boundary",
-    u = new Set([i.D$.UP, i.D$.DOWN, i.D$.LEFT, i.D$.RIGHT]);
-
+    i = n(64700),
+    s = n(461771),
+    a = n(741918),
+    r = n(602034);
+let o = "data-grid-item-id",
+    d = "data-grid-section",
+    c = "data-grid-prev-section-boundary",
+    u = new Set([a.D$.UP, a.D$.DOWN, a.D$.LEFT, a.D$.RIGHT]);
 function m(e) {
     let { section: t, column: n, row: l } = e,
-        r = "[".concat(o, '="').concat(t, '"]'),
-        a = "[".concat("aria-colindex", '="').concat(n, '"]'),
-        i = "[".concat("aria-rowindex", '="').concat(l, '"]');
-    return "".concat(r).concat(a).concat(i);
+        i = `[${d}="${t}"]`,
+        s = `[aria-colindex="${n}"]`,
+        a = `[aria-rowindex="${l}"]`;
+    return `${i}${s}${a}`;
 }
-
 function h(e) {
     let { id: t, isEnabled: n, setFocus: l } = e,
-        o = r.useRef(null),
-        h = r.useRef(!1),
-        f = r.useRef(null),
-        g = r.useRef(n);
-    r.useLayoutEffect(() => {
+        d = i.useRef(null),
+        h = i.useRef(!1),
+        x = i.useRef(null),
+        g = i.useRef(n);
+    i.useLayoutEffect(() => {
         g.current = n;
     }, [n]);
-    let x = r.useCallback((e) => {
-            var t;
-            return (null != (t = f.current) ? t : document).querySelector(e);
-        }, []),
-        b = r.useCallback(
+    let f = i.useCallback((e) => (x.current ?? document).querySelector(e), []),
+        p = i.useCallback(
             (e, t) => {
                 g.current && l(e, t);
             },
             [l],
         ),
-        p = r.useCallback((e) => {
-            if (g.current) {
-                var t;
-                null == (t = document.querySelector(e)) || t.focus();
-            }
+        _ = i.useCallback((e) => {
+            g.current && document.querySelector(e)?.focus();
         }, []),
-        j = r.useCallback(
+        j = i.useCallback(
             (e) => {
-                o.current = e;
-                let n = (0, s.Mz)(e, c),
-                    l = (0, s.HP)(e);
-                b(n, l), (0, a.T)(t, l, !0);
+                d.current = e;
+                let n = (0, r.Mz)(e, o),
+                    l = (0, r.HP)(e);
+                p(n, l), (0, s.T)(t, l, !0);
             },
-            [t, b],
+            [t, p],
         ),
-        [v, y] = r.useState(!1),
-        A = r.useRef(v);
-    r.useLayoutEffect(() => {
-        A.current = v;
-    }, [v]),
-        r.useLayoutEffect(() => {
-            let e = f.current;
+        [b, v] = i.useState(!1),
+        A = i.useRef(b);
+    i.useLayoutEffect(() => {
+        A.current = b;
+    }, [b]),
+        i.useLayoutEffect(() => {
+            let e = x.current;
             if (null != e)
                 return (
                     e.addEventListener("focusin", n),
                     e.addEventListener("focusout", l),
-                    e.addEventListener("focus", r),
-                    e.addEventListener("scroll", a, {
-                        passive: !0,
-                    }),
+                    e.addEventListener("focus", i),
+                    e.addEventListener("scroll", s, { passive: !0 }),
                     () => {
                         e.removeEventListener("focusin", n),
                             e.removeEventListener("focusout", l),
-                            e.removeEventListener("focus", r),
-                            e.removeEventListener("scroll", a);
+                            e.removeEventListener("focus", i),
+                            e.removeEventListener("scroll", s);
                     }
                 );
-
             function n() {
-                y(!0);
+                v(!0);
             }
-
             function l(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
-                    (y(!1),
+                    (v(!1),
                     requestAnimationFrame(() => {
-                        let e = o.current;
-                        null !== e && null == x((0, s.Mz)(e, c)) && p((0, s.Mz)(t, "data-grid-id"));
+                        let e = d.current;
+                        null !== e && null == f((0, r.Mz)(e, o)) && _((0, r.Mz)(t, "data-grid-id"));
                     }));
             }
-
-            function r() {
-                let e = f.current;
+            function i() {
+                let e = x.current;
                 if (A.current || null == e) return;
             }
-
-            function a() {
+            function s() {
                 h.current = !0;
             }
-        }, [t, b, p, j, x]);
-    let C = r.useCallback(
+        }, [t, p, _, j, f]);
+    let C = i.useCallback(
             (e) => {
-                var t, n;
                 if (!g.current) return;
-                let l = o.current,
-                    r = f.current;
-                if (null == l) return;
-                let a = (0, s.Mz)(l, c),
-                    h = null == r ? void 0 : r.querySelector(a);
-                if (null == h) return;
-                let b = parseInt(null != (t = h.getAttribute("data-grid-section")) ? t : ""),
-                    p = parseInt(h.getAttribute("aria-rowindex")),
-                    v = parseInt(h.getAttribute("aria-colindex"));
+                let t = d.current,
+                    n = x.current;
+                if (null == t) return;
+                let l = (0, r.Mz)(t, o),
+                    i = n?.querySelector(l);
+                if (null == i) return;
+                let s = parseInt(i.getAttribute("data-grid-section") ?? ""),
+                    h = parseInt(i.getAttribute("aria-rowindex")),
+                    p = parseInt(i.getAttribute("aria-colindex"));
                 switch ((u.has(e.key) && (e.stopPropagation(), e.preventDefault()), e.key)) {
-                    case i.D$.RIGHT: {
-                        let e = x(
-                            m({
-                                section: b,
-                                row: p,
-                                column: v + 1,
-                            }),
-                        );
+                    case a.D$.RIGHT: {
+                        let e = f(m({ section: s, row: h, column: p + 1 }));
                         if (null != e) {
-                            let t = e.getAttribute(c);
+                            let t = e.getAttribute(o);
                             null != t && j(t);
                         }
                         return;
                     }
-                    case i.D$.LEFT: {
-                        let e = x(
-                            m({
-                                section: b,
-                                row: p,
-                                column: v - 1,
-                            }),
-                        );
+                    case a.D$.LEFT: {
+                        let e = f(m({ section: s, row: h, column: p - 1 }));
                         if (null != e) {
-                            let t = e.getAttribute(c);
+                            let t = e.getAttribute(o);
                             null != t && j(t);
                         }
                         return;
                     }
-                    case i.D$.DOWN: {
-                        let e = x(
-                            m({
-                                section: b,
-                                row: p + 1,
-                                column: v,
-                            }),
-                        );
-                        if (
-                            (null == e &&
-                                (e = x(
-                                    m({
-                                        section: b + 1,
-                                        row: 0,
-                                        column: v,
-                                    }),
-                                )),
-                            null != e)
-                        ) {
-                            let t = e.getAttribute(c);
+                    case a.D$.DOWN: {
+                        let e = f(m({ section: s, row: h + 1, column: p }));
+                        if ((null == e && (e = f(m({ section: s + 1, row: 0, column: p }))), null != e)) {
+                            let t = e.getAttribute(o);
                             null != t && j(t);
                         }
                         return;
                     }
-                    case i.D$.UP: {
+                    case a.D$.UP: {
                         let e;
-                        if (0 === p) {
-                            let t = parseInt(h.getAttribute(d));
-                            null ==
-                                (e = x(
-                                    m({
-                                        section: b - 1,
-                                        row: t,
-                                        column: v,
-                                    }),
-                                )) &&
-                                (e = x(
-                                    m({
-                                        section: b - 1,
-                                        row: t - 1,
-                                        column: v,
-                                    }),
-                                ));
-                        } else
-                            e = x(
-                                m({
-                                    section: b,
-                                    row: p - 1,
-                                    column: v,
-                                }),
-                            );
+                        if (0 === h) {
+                            let t = parseInt(i.getAttribute(c));
+                            null == (e = f(m({ section: s - 1, row: t, column: p }))) &&
+                                (e = f(m({ section: s - 1, row: t - 1, column: p })));
+                        } else e = f(m({ section: s, row: h - 1, column: p }));
                         if (null != e) {
-                            let t = e.getAttribute(c);
+                            let t = e.getAttribute(o);
                             null != t && j(t);
                         }
                         return;
                     }
-                    case i.D$.SPACE:
-                    case i.D$.ENTER: {
+                    case a.D$.SPACE:
+                    case a.D$.ENTER: {
                         if (e.repeat) return;
-                        let t = o.current;
+                        let t = d.current;
                         if (null != t) {
-                            let l = x((0, s.Mz)(t, c)),
-                                r = null != (n = null == l ? void 0 : l.ownerDocument) ? n : document,
-                                a = l === r.activeElement;
-                            null != l && a && (e.preventDefault(), e.stopPropagation(), null == l || l.click());
+                            let n = f((0, r.Mz)(t, o)),
+                                l = n?.ownerDocument ?? document,
+                                i = n === l.activeElement;
+                            null != n && i && (e.preventDefault(), e.stopPropagation(), n?.click());
                         }
                     }
                 }
             },
-            [x, j],
+            [f, j],
         ),
-        O = r.useCallback(
+        T = i.useCallback(
             (e) => {
-                o.current = null != e ? (0, s.t$)(t, e) : null;
+                d.current = null != e ? (0, r.t$)(t, e) : null;
             },
             [t],
         );
-    return r.useMemo(
-        () => ({
-            id: t,
-            containerProps: {
-                onKeyDown: C,
-                ref: f,
-            },
-            setFocus: O,
-        }),
-        [t, C, O],
-    );
+    return i.useMemo(() => ({ id: t, containerProps: { onKeyDown: C, ref: x }, setFocus: T }), [t, C, T]);
 }
-let f = {
-        id: "NO_LIST",
-        onKeyDown() {},
-        ref: r.createRef(),
-    },
-    g = r.createContext({
-        id: "NO_LIST",
-        setFocus() {},
-    }),
-    x = r.createContext(f);
-
-function b(e) {
-    let { id: t, section: n, row: l, column: i, boundaries: u } = e,
-        [m, h] = r.useState(0 === l && 0 === i ? 0 : -1),
-        { id: f, setFocus: x } = r.useContext(g),
-        b = r.useCallback(() => x(t), [t, x]);
+let x = { id: "NO_LIST", onKeyDown() {}, ref: i.createRef() },
+    g = i.createContext({ id: "NO_LIST", setFocus() {} }),
+    f = i.createContext(x);
+function p(e) {
+    let { id: t, section: n, row: l, column: a, boundaries: u } = e,
+        [m, h] = i.useState(0 === l && 0 === a ? 0 : -1),
+        { id: x, setFocus: f } = i.useContext(g),
+        p = i.useCallback(() => f(t), [t, f]);
     return (
-        r.useLayoutEffect(
+        i.useLayoutEffect(
             () =>
-                (0, a.e)(f, (e) => {
+                (0, s.e)(x, (e) => {
                     h(e === t ? 0 : -1);
                 }),
-            [t, f],
+            [t, x],
         ),
         {
-            [c]: (0, s.t$)(f, t),
-            [o]: n,
-            [d]: u[n],
+            [o]: (0, r.t$)(x, t),
+            [d]: n,
+            [c]: u[n],
             role: "gridcell",
             "aria-rowindex": l,
-            "aria-colindex": i,
+            "aria-colindex": a,
             tabIndex: m,
-            onFocus: b,
+            onFocus: p,
         }
     );
 }
-
-function p(e) {
+function _(e) {
     let { children: t, navigator: n } = e,
         {
-            id: a,
-            setFocus: i,
-            containerProps: { onKeyDown: s, ref: c },
+            id: s,
+            setFocus: a,
+            containerProps: { onKeyDown: r, ref: o },
         } = n,
-        o = r.useMemo(
-            () => ({
-                id: a,
-                setFocus: i,
-            }),
-            [a, i],
-        ),
-        d = r.useMemo(
-            () => ({
-                onKeyDown: s,
-                ref: c,
-                id: a,
-            }),
-            [s, c, a],
-        );
-    return (0, l.jsx)(x.Provider, {
-        value: d,
-        children: (0, l.jsx)(g.Provider, {
-            value: o,
-            children: t,
-        }),
-    });
+        d = i.useMemo(() => ({ id: s, setFocus: a }), [s, a]),
+        c = i.useMemo(() => ({ onKeyDown: r, ref: o, id: s }), [r, o, s]);
+    return (0, l.jsx)(f.Provider, { value: c, children: (0, l.jsx)(g.Provider, { value: d, children: t }) });
 }

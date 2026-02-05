@@ -1,297 +1,154 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(938796),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => j }), n(938796);
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(665260),
+    s = n(503698),
+    a = n.n(s),
+    r = n(665260),
     o = n(158954),
-    c = n(314116),
-    u = n(397927),
-    d = n(687709),
-    f = n(843472),
-    p = n(47167),
-    h = n(12351),
-    b = n(386467),
-    g = n(928658),
-    m = n(226698),
-    A = n(994500),
-    y = n(287809),
-    O = n(628691),
-    j = n(636922),
-    v = n(652215),
-    x = n(985018),
-    E = n(641131),
-    _ = n(378720);
-
-function C(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+    d = n(314116),
+    c = n(397927),
+    u = n(687709),
+    h = n(843472),
+    A = n(47167),
+    g = n(12351),
+    m = n(386467),
+    p = n(928658),
+    _ = n(226698),
+    x = n(994500),
+    f = n(287809),
+    E = n(628691),
+    C = n(636922),
+    I = n(652215),
+    S = n(985018),
+    b = n(641131),
+    N = n(378720);
+class T extends l.PureComponent {
+    state = { report: !1, resolveFlag: !1 };
+    handleDelete = () => {
+        let { report: e, resolveFlag: t } = this.state,
+            { channel: n, message: i, moderatorReportData: l } = this.props,
+            { moderatorReportChannelId: s, isFlagResolved: a } = l ?? {};
         e
-    );
-}
-
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                C(e, t, n[t]);
-            });
-    }
-    return e;
-}
-class I extends l.PureComponent {
+            ? (0, p.V2)(i, "message_delete_alert", () =>
+                  h.A.deleteMessage(n.id, i.id).then(() => {
+                      null != s && (t && !a && _.A.resolveFlag(s), this.props.onClose?.());
+                  }),
+              )
+            : h.A.deleteMessage(n.id, i.id).then(() => {
+                  null != s && (t && !a && _.A.resolveFlag(s), this.props.onClose?.());
+              });
+    };
+    handleDeleteMana = () => {
+        this.handleDelete(), this.props.onClose?.();
+    };
+    handleToggleReport = (e) => {
+        this.setState({ report: e });
+    };
+    handleToggleResolveFlag = (e) => {
+        this.setState({ resolveFlag: e });
+    };
     render() {
         let e,
             t,
             { report: n, resolveFlag: l } = this.state,
-            i = this.props,
-            { channel: a, message: c, showContextMenuHint: d, moderatorReportData: f } = i,
-            p = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    l,
-                    i = {};
-                if ("u" > typeof Reflect && Reflect.ownKeys) {
-                    for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                        (r = n[l]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-                    return i;
-                }
-                if (
-                    ((i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            l = {},
-                            i = Object.getOwnPropertyNames(e);
-                        for (r = 0; r < i.length; r++)
-                            (n = i[r]),
-                                !(t.indexOf(n) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                    (l[n] = e[n]);
-                        return l;
-                    })(e, t)),
-                    Object.getOwnPropertySymbols)
-                )
-                    for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                        (r = n[l]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
-                return i;
-            })(i, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            g = a.type === v.rbe.GUILD_ANNOUNCEMENT && (0, s.Lt)(c.flags, v.pr7.CROSSPOSTED);
-        d &&
-            (e = (0, r.jsx)(h.A, {
-                className: _.Vc,
-                children: x.intl.format(x.t.IxY7E6, {}),
-            })),
-            (0, O.AR)(c) &&
-                (t = (0, r.jsx)("div", {
-                    className: _.Vc,
-                    children: (0, r.jsx)(u.dOG, {
-                        label: x.intl.string(x.t.x0jzo9),
+            { channel: s, message: a, showContextMenuHint: d, moderatorReportData: u, ...h } = this.props,
+            A = s.type === I.rbe.GUILD_ANNOUNCEMENT && (0, r.Lt)(a.flags, I.pr7.CROSSPOSTED);
+        d && (e = (0, i.jsx)(g.A, { className: N.Vc, children: S.intl.format(S.t.IxY7E6, {}) })),
+            (0, E.AR)(a) &&
+                (t = (0, i.jsx)("div", {
+                    className: N.Vc,
+                    children: (0, i.jsx)(c.dOG, {
+                        label: S.intl.string(S.t.x0jzo9),
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let m = g ? x.intl.string(x.t["2kHABX"]) : x.intl.string(x.t.AMvpS4),
-            A = (0, r.jsxs)(r.Fragment, {
+        let p = A ? S.intl.string(S.t["2kHABX"]) : S.intl.string(S.t.AMvpS4),
+            _ = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)("div", {
-                        className: _.iU,
-                        children: (0, r.jsx)(j.A, {
-                            channel: a,
-                            message: c,
-                            disableInteraction: !0,
-                        }),
+                    (0, i.jsx)("div", {
+                        className: N.iU,
+                        children: (0, i.jsx)(C.A, { channel: s, message: a, disableInteraction: !0 }),
                     }),
                     t,
                     e,
                 ],
             });
-        if ((null == f ? void 0 : f.moderatorReportChannelId) != null) {
-            var y, C;
-            let { isFlagResolved: e } = f;
-            return (0, r.jsx)(b.A.Provider, {
-                value: a.guild_id,
-                children: (0, r.jsx)(
-                    o.Modal,
-                    ((y = S(
-                        {
-                            title: x.intl.string(x.t.MWMcg7),
-                            subtitle: m,
-                            actions: [
-                                {
-                                    variant: "critical-primary",
-                                    text: x.intl.string(x.t.oyYWHE),
-                                    onClick: this.handleDelete,
-                                },
-                            ],
-                            actionBarInput: e
-                                ? void 0
-                                : (0, r.jsx)(u.Checkbox, {
-                                      checked: l,
-                                      label: x.intl.string(E.default["8yIKem"]),
-                                      onChange: (e) => this.handleToggleResolveFlag(e),
-                                  }),
-                        },
-                        p,
-                    )),
-                    (C = C =
-                        {
-                            children: A,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(y, Object.getOwnPropertyDescriptors(C))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(C)).forEach(function (e) {
-                              Object.defineProperty(y, e, Object.getOwnPropertyDescriptor(C, e));
+        if (u?.moderatorReportChannelId != null) {
+            let { isFlagResolved: e } = u;
+            return (0, i.jsx)(m.A.Provider, {
+                value: s.guild_id,
+                children: (0, i.jsx)(o.Modal, {
+                    title: S.intl.string(S.t.MWMcg7),
+                    subtitle: p,
+                    actions: [
+                        { variant: "critical-primary", text: S.intl.string(S.t.oyYWHE), onClick: this.handleDelete },
+                    ],
+                    actionBarInput: e
+                        ? void 0
+                        : (0, i.jsx)(c.Checkbox, {
+                              checked: l,
+                              label: S.intl.string(b.default["8yIKem"]),
+                              onChange: (e) => this.handleToggleResolveFlag(e),
                           }),
-                    y),
-                ),
+                    ...h,
+                    children: _,
+                }),
             });
         }
-        return (0, r.jsx)(b.A.Provider, {
-            value: a.guild_id,
-            children: (0, r.jsx)(o.Modal, {
-                title: g ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
-                subtitle: m,
+        return (0, i.jsx)(m.A.Provider, {
+            value: s.guild_id,
+            children: (0, i.jsx)(o.Modal, {
+                title: A ? S.intl.string(S.t.aIz1oV) : S.intl.string(S.t.MWMcg7),
+                subtitle: p,
                 actions: [
-                    {
-                        text: x.intl.string(x.t["ETE/oC"]),
-                        onClick: p.onClose,
-                        variant: "secondary",
-                    },
-                    {
-                        text: x.intl.string(x.t.oyYWHE),
-                        onClick: this.handleDeleteMana,
-                        variant: "critical-primary",
-                    },
+                    { text: S.intl.string(S.t["ETE/oC"]), onClick: h.onClose, variant: "secondary" },
+                    { text: S.intl.string(S.t.oyYWHE), onClick: this.handleDeleteMana, variant: "critical-primary" },
                 ],
-                onClose: p.onClose,
-                transitionState: p.transitionState,
-                children: A,
+                onClose: h.onClose,
+                transitionState: h.transitionState,
+                children: _,
             }),
         });
     }
-    constructor(...e) {
-        super(...e),
-            C(this, "state", {
-                report: !1,
-                resolveFlag: !1,
-            }),
-            C(this, "handleDelete", () => {
-                let { report: e, resolveFlag: t } = this.state,
-                    { channel: n, message: r, moderatorReportData: l } = this.props,
-                    { moderatorReportChannelId: i, isFlagResolved: a } = null != l ? l : {};
-                e
-                    ? (0, g.V2)(r, "message_delete_alert", () =>
-                          f.A.deleteMessage(n.id, r.id).then(() => {
-                              if (null != i) {
-                                  var e, n;
-                                  t && !a && m.A.resolveFlag(i), null == (e = (n = this.props).onClose) || e.call(n);
-                              }
-                          }),
-                      )
-                    : f.A.deleteMessage(n.id, r.id).then(() => {
-                          if (null != i) {
-                              var e, n;
-                              t && !a && m.A.resolveFlag(i), null == (e = (n = this.props).onClose) || e.call(n);
-                          }
-                      });
-            }),
-            C(this, "handleDeleteMana", () => {
-                var e, t;
-                this.handleDelete(), null == (e = (t = this.props).onClose) || e.call(t);
-            }),
-            C(this, "handleToggleReport", (e) => {
-                this.setState({
-                    report: e,
-                });
-            }),
-            C(this, "handleToggleResolveFlag", (e) => {
-                this.setState({
-                    resolveFlag: e,
-                });
-            });
-    }
 }
-let N = {
+let j = {
     confirmPin: function (e, t) {
         let n,
-            l = (0, p.m1)(e, y.default, A.A);
-        (n = e.isPrivate()
-            ? x.intl.string(x.t.hMRngA)
-            : x.intl.formatToPlainString(x.t["3IRluI"], {
-                  channelName: l,
-              })),
-            (0, c.A)({
-                title: x.intl.string(x.t.bKMaZX),
+            l = (0, A.m1)(e, f.default, x.A);
+        (n = e.isPrivate() ? S.intl.string(S.t.hMRngA) : S.intl.formatToPlainString(S.t["3IRluI"], { channelName: l })),
+            (0, d.A)({
+                title: S.intl.string(S.t.bKMaZX),
                 subtitle: n,
-                confirmText: x.intl.string(x.t.rOQ5BX),
+                confirmText: S.intl.string(S.t.rOQ5BX),
                 variant: "primary",
                 onConfirm: () => {
-                    d.A.pinMessage(e, t.id);
+                    u.A.pinMessage(e, t.id);
                 },
-                cancelText: x.intl.string(x.t["ETE/oC"]),
-                children: (0, r.jsx)("div", {
-                    className: _.iU,
-                    children: (0, r.jsx)(j.A, {
-                        channel: e,
-                        message: t,
-                        animateAvatar: !1,
-                        disableInteraction: !0,
-                    }),
+                cancelText: S.intl.string(S.t["ETE/oC"]),
+                children: (0, i.jsx)("div", {
+                    className: N.iU,
+                    children: (0, i.jsx)(C.A, { channel: e, message: t, animateAvatar: !1, disableInteraction: !0 }),
                 }),
             });
     },
     confirmUnpin: function (e, t) {
-        (0, c.A)({
-            title: x.intl.string(x.t.CFF2vL),
-            subtitle: x.intl.string(x.t.NjEPp7),
-            confirmText: x.intl.string(x.t.lAU5jB),
+        (0, d.A)({
+            title: S.intl.string(S.t.CFF2vL),
+            subtitle: S.intl.string(S.t.NjEPp7),
+            confirmText: S.intl.string(S.t.lAU5jB),
             variant: "critical",
             onConfirm: () => {
-                d.A.unpinMessage(e, t.id);
+                u.A.unpinMessage(e, t.id);
             },
-            cancelText: x.intl.string(x.t["ETE/oC"]),
-            children: (0, r.jsxs)(r.Fragment, {
+            cancelText: S.intl.string(S.t["ETE/oC"]),
+            children: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)("div", {
-                        className: a()(_.iU, _.YK),
-                        children: (0, r.jsx)(j.A, {
-                            channel: e,
-                            message: t,
-                            disableInteraction: !0,
-                        }),
+                    (0, i.jsx)("div", {
+                        className: a()(N.iU, N.YK),
+                        children: (0, i.jsx)(C.A, { channel: e, message: t, disableInteraction: !0 }),
                     }),
-                    (0, r.jsx)(h.A, {
-                        children: x.intl.format(x.t.oCVB3Y, {}),
-                    }),
+                    (0, i.jsx)(g.A, { children: S.intl.format(S.t.oCVB3Y, {}) }),
                 ],
             }),
         });
@@ -299,31 +156,20 @@ let N = {
     confirmDelete: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0;
-        (0, u.qfG)((i) =>
-            (0, r.jsx)(
-                I,
-                S(
-                    {
-                        channel: e,
-                        message: t,
-                        showContextMenuHint: n,
-                        moderatorReportData: l,
-                    },
-                    i,
-                ),
-            ),
+        (0, c.qfG)((s) =>
+            (0, i.jsx)(T, { channel: e, message: t, showContextMenuHint: n, moderatorReportData: l, ...s }),
         );
     },
     confirmEdit: function (e, t, n) {
-        (0, c.A)({
-            title: x.intl.string(x.t.aIz1oV),
-            subtitle: x.intl.string(x.t.grBcM8),
-            confirmText: x.intl.string(x.t["cY+Oob"]),
+        (0, d.A)({
+            title: S.intl.string(S.t.aIz1oV),
+            subtitle: S.intl.string(S.t.grBcM8),
+            confirmText: S.intl.string(S.t["cY+Oob"]),
             variant: "primary",
             onConfirm: () => {
-                f.A.editMessage(e, t, n);
+                h.A.editMessage(e, t, n);
             },
-            cancelText: x.intl.string(x.t["ETE/oC"]),
+            cancelText: S.intl.string(S.t["ETE/oC"]),
         });
     },
 };

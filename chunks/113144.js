@@ -1,3 +1,4 @@
+"use strict";
 var t = {
         childContextTypes: !0,
         contextTypes: !0,
@@ -8,14 +9,7 @@ var t = {
         propTypes: !0,
         type: !0,
     },
-    n = {
-        name: !0,
-        length: !0,
-        prototype: !0,
-        caller: !0,
-        arguments: !0,
-        arity: !0,
-    },
+    n = { name: !0, length: !0, prototype: !0, caller: !0, arguments: !0, arity: !0 },
     r = "function" == typeof Object.getOwnPropertySymbols;
 e.exports = function (e, i, a) {
     if ("string" != typeof i) {

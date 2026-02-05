@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -38,18 +39,10 @@ var n = r(64700),
                                 borderRadius: "2px 2px 0 0",
                                 overflow: "hidden",
                             },
-                            Saturation: {
-                                radius: "2px 2px 0 0",
-                            },
-                            body: {
-                                padding: "16px 16px 12px",
-                            },
-                            controls: {
-                                display: "flex",
-                            },
-                            color: {
-                                width: "32px",
-                            },
+                            Saturation: { radius: "2px 2px 0 0" },
+                            body: { padding: "16px 16px 12px" },
+                            controls: { display: "flex" },
+                            color: { width: "32px" },
                             swatch: {
                                 marginTop: "6px",
                                 width: "16px",
@@ -65,118 +58,58 @@ var n = r(64700),
                                 background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
                                 zIndex: "2",
                             },
-                            toggles: {
-                                flex: "1",
-                            },
-                            hue: {
-                                height: "10px",
-                                position: "relative",
-                                marginBottom: "8px",
-                            },
-                            Hue: {
-                                radius: "2px",
-                            },
-                            alpha: {
-                                height: "10px",
-                                position: "relative",
-                            },
-                            Alpha: {
-                                radius: "2px",
-                            },
+                            toggles: { flex: "1" },
+                            hue: { height: "10px", position: "relative", marginBottom: "8px" },
+                            Hue: { radius: "2px" },
+                            alpha: { height: "10px", position: "relative" },
+                            Alpha: { radius: "2px" },
                         },
                         disableAlpha: {
-                            color: {
-                                width: "22px",
-                            },
-                            alpha: {
-                                display: "none",
-                            },
-                            hue: {
-                                marginBottom: "0px",
-                            },
-                            swatch: {
-                                width: "10px",
-                                height: "10px",
-                                marginTop: "0px",
-                            },
+                            color: { width: "22px" },
+                            alpha: { display: "none" },
+                            hue: { marginBottom: "0px" },
+                            swatch: { width: "10px", height: "10px", marginTop: "0px" },
                         },
                     },
                     void 0 === v ? {} : v,
                 ),
-                {
-                    disableAlpha: o,
-                },
+                { disableAlpha: o },
             );
         return n.createElement(
             "div",
-            {
-                style: y.picker,
-                className: "chrome-picker " + (void 0 === g ? "" : g),
-            },
+            { style: y.picker, className: "chrome-picker " + (void 0 === g ? "" : g) },
             n.createElement(
                 "div",
-                {
-                    style: y.saturation,
-                },
-                n.createElement(s.VI, {
-                    style: y.Saturation,
-                    hsl: d,
-                    hsv: f,
-                    pointer: p.A,
-                    onChange: r,
-                }),
+                { style: y.saturation },
+                n.createElement(s.VI, { style: y.Saturation, hsl: d, hsv: f, pointer: p.A, onChange: r }),
             ),
             n.createElement(
                 "div",
-                {
-                    style: y.body,
-                },
+                { style: y.body },
                 n.createElement(
                     "div",
-                    {
-                        style: y.controls,
-                        className: "flexbox-fix",
-                    },
+                    { style: y.controls, className: "flexbox-fix" },
                     n.createElement(
                         "div",
-                        {
-                            style: y.color,
-                        },
+                        { style: y.color },
                         n.createElement(
                             "div",
-                            {
-                                style: y.swatch,
-                            },
-                            n.createElement("div", {
-                                style: y.active,
-                            }),
-                            n.createElement(s.xu, {
-                                renderers: b,
-                            }),
+                            { style: y.swatch },
+                            n.createElement("div", { style: y.active }),
+                            n.createElement(s.xu, { renderers: b }),
                         ),
                     ),
                     n.createElement(
                         "div",
-                        {
-                            style: y.toggles,
-                        },
+                        { style: y.toggles },
                         n.createElement(
                             "div",
-                            {
-                                style: y.hue,
-                            },
-                            n.createElement(s.RG, {
-                                style: y.Hue,
-                                hsl: d,
-                                pointer: c.A,
-                                onChange: r,
-                            }),
+                            { style: y.hue },
+                            n.createElement(s.RG, { style: y.Hue, hsl: d, pointer: c.A, onChange: r }),
                         ),
                         n.createElement(
                             "div",
-                            {
-                                style: y.alpha,
-                            },
+                            { style: y.alpha },
                             n.createElement(s.ry, {
                                 style: y.Alpha,
                                 rgb: a,
@@ -188,14 +121,7 @@ var n = r(64700),
                         ),
                     ),
                 ),
-                n.createElement(u.A, {
-                    rgb: a,
-                    hsl: d,
-                    hex: h,
-                    view: x,
-                    onChange: r,
-                    disableAlpha: o,
-                }),
+                n.createElement(u.A, { rgb: a, hsl: d, hex: h, view: x, onChange: r, disableAlpha: o }),
             ),
         );
     };
@@ -205,9 +131,5 @@ var n = r(64700),
     styles: a().object,
     defaultView: a().oneOf(["hex", "rgb", "hsl"]),
 }),
-    (d.defaultProps = {
-        width: 225,
-        disableAlpha: !1,
-        styles: {},
-    }),
+    (d.defaultProps = { width: 225, disableAlpha: !1, styles: {} }),
     (0, s.Q$)(d);

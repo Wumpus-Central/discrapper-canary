@@ -39,24 +39,12 @@ e.exports = function (e) {
                 .join("|"),
         ),
         r = [
-            {
-                begin: /\^{6}[0-9a-f]{6}/,
-            },
-            {
-                begin: /\^{5}[0-9a-f]{5}/,
-            },
-            {
-                begin: /\^{4}[0-9a-f]{4}/,
-            },
-            {
-                begin: /\^{3}[0-9a-f]{3}/,
-            },
-            {
-                begin: /\^{2}[0-9a-f]{2}/,
-            },
-            {
-                begin: /\^{2}[\u0000-\u007f]/,
-            },
+            { begin: /\^{6}[0-9a-f]{6}/ },
+            { begin: /\^{5}[0-9a-f]{5}/ },
+            { begin: /\^{4}[0-9a-f]{4}/ },
+            { begin: /\^{3}[0-9a-f]{3}/ },
+            { begin: /\^{2}[0-9a-f]{2}/ },
+            { begin: /\^{2}[\u0000-\u007f]/ },
         ],
         i = [
             {
@@ -64,116 +52,46 @@ e.exports = function (e) {
                 begin: /\\/,
                 relevance: 0,
                 contains: [
-                    {
-                        endsParent: !0,
-                        begin: t,
-                    },
-                    {
-                        endsParent: !0,
-                        begin: n,
-                    },
-                    {
-                        endsParent: !0,
-                        variants: r,
-                    },
-                    {
-                        endsParent: !0,
-                        relevance: 0,
-                        variants: [
-                            {
-                                begin: /[a-zA-Z@]+/,
-                            },
-                            {
-                                begin: /[^a-zA-Z@]?/,
-                            },
-                        ],
-                    },
+                    { endsParent: !0, begin: t },
+                    { endsParent: !0, begin: n },
+                    { endsParent: !0, variants: r },
+                    { endsParent: !0, relevance: 0, variants: [{ begin: /[a-zA-Z@]+/ }, { begin: /[^a-zA-Z@]?/ }] },
                 ],
             },
-            {
-                className: "params",
-                relevance: 0,
-                begin: /#+\d?/,
-            },
-            {
-                variants: r,
-            },
-            {
-                className: "built_in",
-                relevance: 0,
-                begin: /[$&^_]/,
-            },
-            {
-                className: "meta",
-                begin: /% ?!(T[eE]X|tex|BIB|bib)/,
-                end: "$",
-                relevance: 10,
-            },
-            e.COMMENT("%", "$", {
-                relevance: 0,
-            }),
+            { className: "params", relevance: 0, begin: /#+\d?/ },
+            { variants: r },
+            { className: "built_in", relevance: 0, begin: /[$&^_]/ },
+            { className: "meta", begin: /% ?!(T[eE]X|tex|BIB|bib)/, end: "$", relevance: 10 },
+            e.COMMENT("%", "$", { relevance: 0 }),
         ],
-        a = {
-            begin: /\{/,
-            end: /\}/,
-            relevance: 0,
-            contains: ["self", ...i],
-        },
-        s = e.inherit(a, {
-            relevance: 0,
-            endsParent: !0,
-            contains: [a, ...i],
-        }),
-        o = {
-            begin: /\s+/,
-            relevance: 0,
-        },
+        a = { begin: /\{/, end: /\}/, relevance: 0, contains: ["self", ...i] },
+        s = e.inherit(a, { relevance: 0, endsParent: !0, contains: [a, ...i] }),
+        o = { begin: /\s+/, relevance: 0 },
         l = [s],
-        c = [
-            {
-                begin: /\[/,
-                end: /\]/,
-                endsParent: !0,
-                relevance: 0,
-                contains: [a, ...i],
-            },
-        ],
-        u = function (e, t) {
-            return {
-                contains: [o],
-                starts: {
-                    relevance: 0,
-                    contains: e,
-                    starts: t,
-                },
-            };
+        u = [{ begin: /\[/, end: /\]/, endsParent: !0, relevance: 0, contains: [a, ...i] }],
+        c = function (e, t) {
+            return { contains: [o], starts: { relevance: 0, contains: e, starts: t } };
         },
         d = function (e, t) {
             return {
                 begin: "\\\\" + e + "(?![a-zA-Z@:_])",
-                keywords: {
-                    $pattern: /\\[a-zA-Z]+/,
-                    keyword: "\\" + e,
-                },
+                keywords: { $pattern: /\\[a-zA-Z]+/, keyword: "\\" + e },
                 relevance: 0,
                 contains: [o],
                 starts: t,
             };
         },
-        f = function (t, n) {
+        _ = function (t, n) {
             return e.inherit(
                 {
                     begin: "\\\\begin(?=[ 	]*(\\r?\\n[ 	]*)?\\{" + t + "\\})",
-                    keywords: {
-                        $pattern: /\\[a-zA-Z]+/,
-                        keyword: "\\begin",
-                    },
+                    keywords: { $pattern: /\\[a-zA-Z]+/, keyword: "\\begin" },
                     relevance: 0,
                 },
-                u(l, n),
+                c(l, n),
             );
         },
-        p = (t = "string") =>
+        f = (t = "string") =>
             e.END_SAME_AS_BEGIN({
                 className: t,
                 begin: /(.|\r?\n)/,
@@ -182,11 +100,8 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 endsParent: !0,
             }),
-        _ = function (e) {
-            return {
-                className: "string",
-                end: "(?=\\\\end\\{" + e + "\\})",
-            };
+        p = function (e) {
+            return { className: "string", end: "(?=\\\\end\\{" + e + "\\})" };
         },
         h = (e = "string") => ({
             relevance: 0,
@@ -198,14 +113,7 @@ e.exports = function (e) {
                         className: e,
                         end: /(?=\})/,
                         endsParent: !0,
-                        contains: [
-                            {
-                                begin: /\{/,
-                                end: /\}/,
-                                relevance: 0,
-                                contains: ["self"],
-                            },
-                        ],
+                        contains: [{ begin: /\{/, end: /\}/, relevance: 0, contains: ["self"] }],
                     },
                 ],
             },
@@ -214,43 +122,20 @@ e.exports = function (e) {
         name: "LaTeX",
         aliases: ["tex"],
         contains: [
-            ...["verb", "lstinline"].map((e) =>
-                d(e, {
-                    contains: [p()],
-                }),
-            ),
-            d(
-                "mint",
-                u(l, {
-                    contains: [p()],
-                }),
-            ),
-            d(
-                "mintinline",
-                u(l, {
-                    contains: [h(), p()],
-                }),
-            ),
-            d("url", {
-                contains: [h("link"), h("link")],
-            }),
-            d("hyperref", {
-                contains: [h("link")],
-            }),
-            d(
-                "href",
-                u(c, {
-                    contains: [h("link")],
-                }),
-            ),
+            ...["verb", "lstinline"].map((e) => d(e, { contains: [f()] })),
+            d("mint", c(l, { contains: [f()] })),
+            d("mintinline", c(l, { contains: [h(), f()] })),
+            d("url", { contains: [h("link"), h("link")] }),
+            d("hyperref", { contains: [h("link")] }),
+            d("href", c(u, { contains: [h("link")] })),
             ...[].concat(
                 ...["", "\\*"].map((e) => [
-                    f("verbatim" + e, _("verbatim" + e)),
-                    f("filecontents" + e, u(l, _("filecontents" + e))),
-                    ...["", "B", "L"].map((t) => f(t + "Verbatim" + e, u(c, _(t + "Verbatim" + e)))),
+                    _("verbatim" + e, p("verbatim" + e)),
+                    _("filecontents" + e, c(l, p("filecontents" + e))),
+                    ...["", "B", "L"].map((t) => _(t + "Verbatim" + e, c(u, p(t + "Verbatim" + e)))),
                 ]),
             ),
-            f("minted", u(c, u(l, _("minted")))),
+            _("minted", c(u, c(l, p("minted")))),
             ...i,
         ],
     };

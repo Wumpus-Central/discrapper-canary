@@ -1,3 +1,1 @@
-e.exports = {
-    W: "subtext__339d0",
-};
+e.exports = { W: "subtext__339d0" };

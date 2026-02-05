@@ -1,3 +1,4 @@
+"use strict";
 function a(e) {
     return e && e.__esModule ? e.default : e;
 }

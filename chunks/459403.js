@@ -1,6 +1,5 @@
-n.d(t, {
-    _: () => i,
-});
+"use strict";
+n.d(t, { _: () => i });
 var r = n(508602);
 let i = (e) => {
     let { type: t } = e;

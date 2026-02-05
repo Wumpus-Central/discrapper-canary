@@ -1,113 +1,45 @@
-n.d(t, {
-    A: () => R,
-}),
-    n(896048),
-    n(747238),
-    n(812715);
+"use strict";
+n.d(t, { A: () => S });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(253018),
     l = n(442433),
-    c = n(267102),
-    u = n(723702),
+    u = n(267102),
+    c = n(723702),
     d = n(728458),
-    f = n(408018),
-    p = n(186306),
-    _ = n(654821),
+    _ = n(408018),
+    f = n(186306),
+    p = n(654821),
     h = n(35277),
     m = n(711371),
     g = n(492375),
     E = n(249431),
-    b = n(652215),
-    y = n(618273),
-    O = n(206314);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
+    A = n(652215),
+    I = n(618273),
+    T = n(206314);
+class y extends i.PureComponent {
+    containerRef = i.createRef();
+    state;
+    constructor(e) {
+        super(e),
+            (this.renderElement = this.renderElement.bind(this)),
+            (this.renderLeaf = this.renderLeaf.bind(this)),
+            (this.handleOnChange = this.handleOnChange.bind(this)),
+            (this.handleKeyDown = this.handleKeyDown.bind(this)),
+            (this.handleKeyUp = this.handleKeyUp.bind(this)),
+            (this.handleBeforeInput = this.handleBeforeInput.bind(this)),
+            (this.handleCompositionStart = this.handleCompositionStart.bind(this)),
+            (this.handleCompositionEnd = this.handleCompositionEnd.bind(this)),
+            (this.handleFocusCapture = this.handleFocusCapture.bind(this)),
+            (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
+            (this.handleContextMenu = this.handleContextMenu.bind(this)),
+            (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
+            m.VW.isEditorEmpty(e.editor)
+                ? (this.state = { initialValue: (0, _.N3)().richValue, showPlaceholder: !0 })
+                : (this.state = { initialValue: m.VW.richValue(e.editor), showPlaceholder: !1 });
     }
-    return e;
-}
-
-function S(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function T(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = C(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function C(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-class N extends i.PureComponent {
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
     }
@@ -120,178 +52,102 @@ class N extends i.PureComponent {
         this.props.editor.events.removeListener("onChange", this.handleOnChange);
     }
     componentDidCatch(e, t) {
-        d.A.captureException(e, {
-            extra: t,
-        }),
-            this.setState({
-                initialValue: [...this.props.editor.children],
-            });
+        d.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
     }
     renderElement(e) {
-        var t;
-        let { guildId: n, channelId: i, renderExtraElement: a } = this.props,
-            { attributes: s, children: o } = e;
-        "rtl" === s.dir &&
-            (s.style = I(v({}, s.style), {
-                textAlign: "right",
-            }));
-        let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, g.A)(e, n, i);
-        return null != l
-            ? l
-            : (0, r.jsx)(
-                  "div",
-                  I(v({}, s), {
-                      children: o,
-                  }),
-              );
+        let { guildId: t, channelId: n, renderExtraElement: i } = this.props,
+            { attributes: a, children: s } = e;
+        "rtl" === a.dir && (a.style = { ...a.style, textAlign: "right" });
+        let o = i?.(e) ?? (0, g.A)(e, t, n);
+        return null != o ? o : (0, r.jsx)("div", { ...a, children: s });
     }
     renderLeaf(e) {
-        var t;
-        let { editor: n, renderExtraLeaf: i } = this.props,
-            { attributes: a, children: s } = e,
-            o = null != (t = null == i ? void 0 : i(e)) ? t : (0, E.A)(n, e);
-        return null != o
-            ? o
-            : (0, r.jsx)(
-                  "span",
-                  I(v({}, a), {
-                      children: s,
-                  }),
-              );
+        let { editor: t, renderExtraLeaf: n } = this.props,
+            { attributes: i, children: a } = e,
+            s = n?.(e) ?? (0, E.A)(t, e);
+        return null != s ? s : (0, r.jsx)("span", { ...i, children: a });
     }
     handleOnChange() {
-        var e, t;
-        let { editor: n } = this.props,
-            r = m.VW.isEditorEmpty(n) && null == n.composition;
+        let { editor: e } = this.props,
+            t = m.VW.isEditorEmpty(e) && null == e.composition;
         if (
-            (r !== this.state.showPlaceholder &&
-                this.setState({
-                    showPlaceholder: r,
-                }),
-            null == (e = (t = this.props).onChange) || e.call(t, m.VW.richValue(n)),
+            (t !== this.state.showPlaceholder && this.setState({ showPlaceholder: t }),
+            this.props.onChange?.(m.VW.richValue(e)),
             !1 === this.props.canFocus)
         ) {
-            let e = o.rL.findDocumentOrShadowRoot(n).getSelection();
-            null != e && this.isSelectionPartiallyInside(e) && (null == e || e.removeAllRanges());
+            let t = o.rL.findDocumentOrShadowRoot(e).getSelection();
+            null != t && this.isSelectionPartiallyInside(t) && t?.removeAllRanges();
         }
     }
     handleKeyDown(e) {
-        var t, n;
         if (null != this.props.editor.composition) {
             e.preventDefault(), e.stopPropagation();
             return;
         }
-        null == (t = (n = this.props).onKeyDown) || t.call(n, e);
+        this.props.onKeyDown?.(e);
     }
     handleKeyUp(e) {
-        var t, n;
         if (null != this.props.editor.composition) {
             e.preventDefault(), e.stopPropagation();
             return;
         }
-        null == (t = (n = this.props).onKeyUp) || t.call(n, e);
+        this.props.onKeyUp?.(e);
     }
     handleBeforeInput(e) {
-        var t;
-        let { editor: n } = this.props,
-            r = o.rL.findDocumentOrShadowRoot(n).getSelection(),
-            i = null != r && r.rangeCount > 0 ? r.getRangeAt(0) : null,
-            a = null != (t = e.getTargetRanges()[0]) ? t : null;
-        if (null == n.composition) {
+        let { editor: t } = this.props,
+            n = o.rL.findDocumentOrShadowRoot(t).getSelection(),
+            r = null != n && n.rangeCount > 0 ? n.getRangeAt(0) : null,
+            i = e.getTargetRanges()[0] ?? null;
+        if (null == t.composition) {
             if (
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
-                (null == a && (a = i), null != a)
+                (null == i && (i = r), null != i)
             ) {
-                let t = m.VW.toSlateRange(n, a, {
-                    exactMatch: !1,
-                    suppressThrow: !0,
-                });
-                null != t &&
+                let n = m.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
+                null != n &&
                     null != e.data &&
-                    (m.ZF.isExpanded(t)
-                        ? p.o.withSingleEntry(n, () => {
-                              (n.selection = t), n.deleteFragment(), n.insertText(e.data), e.preventDefault();
+                    (m.ZF.isExpanded(n)
+                        ? f.o.withSingleEntry(t, () => {
+                              (t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault();
                           })
-                        : (n.insertText(e.data), e.preventDefault()));
+                        : (t.insertText(e.data), e.preventDefault()));
             }
-            if (e.inputType.startsWith("deleteContent") && null != i && !i.collapsed) {
-                let t = m.VW.toSlateRange(n, i, {
-                    exactMatch: !0,
-                    suppressThrow: !0,
-                });
-                null != t &&
-                    m.ZF.isExpanded(t) &&
-                    ((n.selection = t),
-                    n.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
+            if (e.inputType.startsWith("deleteContent") && null != r && !r.collapsed) {
+                let n = m.VW.toSlateRange(t, r, { exactMatch: !0, suppressThrow: !0 });
+                null != n &&
+                    m.ZF.isExpanded(n) &&
+                    ((t.selection = n),
+                    t.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
             }
         }
     }
     handleCompositionStart() {
-        var e, t;
-        let { editor: n } = this.props,
-            r = {
-                insertedPrefix: !1,
-                startedInsideInline: !1,
-            };
-        this.state.showPlaceholder &&
-            this.setState({
-                showPlaceholder: !1,
-            });
-        let i = null != n.selection && m.ZF.isCollapsed(n.selection) ? m.VW.leaf(n, n.selection.anchor.path) : null;
-        if (null == i) {
-            n.composition = r;
+        let { editor: e } = this.props,
+            t = { insertedPrefix: !1, startedInsideInline: !1 };
+        this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
+        let n = null != e.selection && m.ZF.isCollapsed(e.selection) ? m.VW.leaf(e, e.selection.anchor.path) : null;
+        if (null == n) {
+            e.composition = t;
             return;
         }
         if (
             (null !=
-                (null != n.selection && m.ZF.isCollapsed(n.selection)
-                    ? m.VW.above(n, {
-                          at: i[1],
-                          match: (e) => m.VW.isInline(n, e),
-                          mode: "lowest",
-                      })
-                    : null) && (r.startedInsideInline = !0),
-            m.VW.isEditorEmpty(n))
+                (null != e.selection && m.ZF.isCollapsed(e.selection)
+                    ? m.VW.above(e, { at: n[1], match: (t) => m.VW.isInline(e, t), mode: "lowest" })
+                    : null) && (t.startedInsideInline = !0),
+            m.VW.isEditorEmpty(e))
         ) {
-            h.b.insertNodes(
-                n,
-                {
-                    text: "\uFEFF",
-                },
-                {
-                    select: !0,
-                },
-            ),
-                (r.insertedPrefix = !0),
-                (n.composition = r);
+            h.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t);
             return;
         }
-        let a = o.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
-            s =
-                (null != (e = null == a ? void 0 : a.rangeCount) ? e : 0) > 0
-                    ? null == a
-                        ? void 0
-                        : a.getRangeAt(0)
-                    : null;
-        if (
-            null ==
-                (null != s
-                    ? m.VW.toSlateRange(n, s, {
-                          exactMatch: !0,
-                          suppressThrow: !0,
-                      })
-                    : null) &&
-            null != s
-        ) {
-            let e = m.VW.toSlateRange(n, s, {
-                exactMatch: !1,
-                suppressThrow: !0,
-            });
-            (n.selection = null),
-                null != e ? h.b.select(n, e) : h.b.select(n, null != (t = n.selection) ? t : m.VW.end(n, []));
+        let r = o.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
+            i = (r?.rangeCount ?? 0) > 0 ? r?.getRangeAt(0) : null;
+        if (null == (null != i ? m.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
+            let t = m.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
+            (e.selection = null), null != t ? h.b.select(e, t) : h.b.select(e, e.selection ?? m.VW.end(e, []));
         }
-        n.composition = r;
+        e.composition = t;
     }
     handleCompositionEnd(e) {
         let { editor: t } = this.props;
@@ -302,19 +158,14 @@ class N extends i.PureComponent {
                 n = m.AS.leaf(t, e);
             m.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                h.b.delete(t, {
-                    unit: "offset",
-                    distance: n.text.length,
-                    reverse: !0,
-                }),
-                    m.VW.insertText(t, e);
+                h.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), m.VW.insertText(t, e);
             });
         }
         t.composition = null;
     }
     handleFocusCapture(e) {
         let { onFocus: t } = this.props;
-        null == t || t(e);
+        t?.(e);
     }
     handleBlurCapture(e) {
         let { editor: t, onBlur: n } = this.props,
@@ -322,11 +173,11 @@ class N extends i.PureComponent {
             i = o.rL.findDocumentOrShadowRoot(this.props.editor),
             a = i.getElementById("textarea-context"),
             s = i.getElementById("slate-toolbar");
-        if (null != r && !(0, _.hasDomParent)(r, a) && !(0, _.hasDomParent)(r, s)) {
+        if (null != r && !(0, p.hasDomParent)(r, a) && !(0, p.hasDomParent)(r, s)) {
             let e = o.rL.findDocumentOrShadowRoot(t).getSelection();
             null != e && this.isSelectionEscaping(e) && e.removeAllRanges();
         }
-        null == n || n(e);
+        n?.(e);
     }
     isSelectionPartiallyInside(e) {
         let t = this.containerRef.current;
@@ -337,7 +188,7 @@ class N extends i.PureComponent {
                     a = r.endContainer,
                     s = r.startOffset,
                     o = r.endOffset;
-                if ((0, _.hasDomParent)(i, t) || (!(0, _.isDOMRangeCollapsed)(i, s, a, o) && (0, _.hasDomParent)(a, t)))
+                if ((0, p.hasDomParent)(i, t) || (!(0, p.isDOMRangeCollapsed)(i, s, a, o) && (0, p.hasDomParent)(a, t)))
                     return !0;
             }
         return !1;
@@ -352,16 +203,16 @@ class N extends i.PureComponent {
                     s = a.startContainer,
                     o = a.endContainer,
                     l = a.startOffset,
-                    c = a.endOffset;
-                if ((0, _.hasDomParent)(s, t)) {
+                    u = a.endOffset;
+                if ((0, p.hasDomParent)(s, t)) {
                     if (r) return !0;
                     n = !0;
                 } else {
                     if (n) return !0;
                     r = !0;
                 }
-                if (!(0, _.isDOMRangeCollapsed)(s, l, o, c))
-                    if ((0, _.hasDomParent)(s, t)) {
+                if (!(0, p.isDOMRangeCollapsed)(s, l, o, u))
+                    if ((0, p.hasDomParent)(s, t)) {
                         if (r) return !0;
                         n = !0;
                     } else {
@@ -376,140 +227,80 @@ class N extends i.PureComponent {
             i = e.pageY,
             a = window.innerHeight,
             s = null != i && null != a && i < a / 2 ? "top" : "bottom";
-        if (u.isPlatformEmbedded) {
-            let i = (0, c.zd)();
+        if (c.isPlatformEmbedded) {
+            let i = (0, u.zd)();
             (0, l.L3)(
                 e,
                 async () => {
                     let { default: e } = await n.e("58127").then(n.bind(n, 446514));
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            I(v({}, n), {
-                                editor: t,
-                                text: m.VW.getSelectedText(t, !0),
-                            }),
-                        );
+                    return (n) => (0, r.jsx)(e, { ...n, editor: t, text: m.VW.getSelectedText(t, !0) });
                 },
-                {
-                    align: s,
-                    enableSpellCheck: i === b.BRT.APP,
-                },
+                { align: s, enableSpellCheck: i === A.BRT.APP },
             );
         } else blur();
     }
     handlePasteCapture(e) {
         let { editor: t, onPaste: n, readOnly: r } = this.props;
-        null == n || n(e),
+        n?.(e),
             e.isDefaultPrevented() ||
                 e.isPropagationStopped() ||
                 r ||
                 (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation());
     }
     render() {
-        let e = this.props,
-            {
-                editor: t,
-                className: n,
-                containerClassName: i,
-                canFocus: a,
-                autoFocus: l,
-                placeholder: c,
-                decorate: u,
-                channelId: d,
-                guildId: f,
-                onChange: p,
-                onFocus: _,
-                onBlur: h,
-                onKeyDown: m,
-                onKeyUp: g,
-                renderExtraElement: E,
-                renderExtraLeaf: b,
-            } = e,
-            A = T(e, [
-                "editor",
-                "className",
-                "containerClassName",
-                "canFocus",
-                "autoFocus",
-                "placeholder",
-                "decorate",
-                "channelId",
-                "guildId",
-                "onChange",
-                "onFocus",
-                "onBlur",
-                "onKeyDown",
-                "onKeyUp",
-                "renderExtraElement",
-                "renderExtraLeaf",
-            ]);
+        let {
+            editor: e,
+            className: t,
+            containerClassName: n,
+            canFocus: i,
+            autoFocus: a,
+            placeholder: l,
+            decorate: u,
+            channelId: c,
+            guildId: d,
+            onChange: _,
+            onFocus: f,
+            onBlur: p,
+            onKeyDown: h,
+            onKeyUp: m,
+            renderExtraElement: g,
+            renderExtraLeaf: E,
+            ...A
+        } = this.props;
         return (0, r.jsxs)("div", {
             ref: this.containerRef,
-            className: i,
+            className: n,
             children: [
                 this.state.showPlaceholder
-                    ? (0, r.jsx)("div", {
-                          className: s()(y.q, n),
-                          "aria-hidden": !0,
-                          children: c,
-                      })
+                    ? (0, r.jsx)("div", { className: s()(I.q, t), "aria-hidden": !0, children: l })
                     : null,
                 (0, r.jsx)(o.A, {
-                    editor: t,
+                    editor: e,
                     value: [...this.state.initialValue],
-                    children: (0, r.jsx)(
-                        o.Fo,
-                        I(v({}, A), {
-                            className: s()(O.PT, y.E, n),
-                            decorate: u,
-                            renderElement: this.renderElement,
-                            renderLeaf: this.renderLeaf,
-                            onFocusCapture: this.handleFocusCapture,
-                            onBlurCapture: this.handleBlurCapture,
-                            onContextMenu: this.handleContextMenu,
-                            onKeyDown: this.handleKeyDown,
-                            onKeyUp: this.handleKeyUp,
-                            onDOMBeforeInput: this.handleBeforeInput,
-                            onCompositionStart: this.handleCompositionStart,
-                            onCompositionEnd: this.handleCompositionEnd,
-                            onPasteCapture: this.handlePasteCapture,
-                            autoFocus: l && !1 !== a,
-                            autoCorrect: "off",
-                            "data-can-focus": !1 !== a,
-                            "aria-label": c,
-                            "aria-multiline": !0,
-                        }),
-                    ),
+                    children: (0, r.jsx)(o.Fo, {
+                        ...A,
+                        className: s()(T.PT, I.E, t),
+                        decorate: u,
+                        renderElement: this.renderElement,
+                        renderLeaf: this.renderLeaf,
+                        onFocusCapture: this.handleFocusCapture,
+                        onBlurCapture: this.handleBlurCapture,
+                        onContextMenu: this.handleContextMenu,
+                        onKeyDown: this.handleKeyDown,
+                        onKeyUp: this.handleKeyUp,
+                        onDOMBeforeInput: this.handleBeforeInput,
+                        onCompositionStart: this.handleCompositionStart,
+                        onCompositionEnd: this.handleCompositionEnd,
+                        onPasteCapture: this.handlePasteCapture,
+                        autoFocus: a && !1 !== i,
+                        autoCorrect: "off",
+                        "data-can-focus": !1 !== i,
+                        "aria-label": l,
+                        "aria-multiline": !0,
+                    }),
                 }),
             ],
         });
     }
-    constructor(e) {
-        super(e),
-            A(this, "containerRef", i.createRef()),
-            A(this, "state", void 0),
-            (this.renderElement = this.renderElement.bind(this)),
-            (this.renderLeaf = this.renderLeaf.bind(this)),
-            (this.handleOnChange = this.handleOnChange.bind(this)),
-            (this.handleKeyDown = this.handleKeyDown.bind(this)),
-            (this.handleKeyUp = this.handleKeyUp.bind(this)),
-            (this.handleBeforeInput = this.handleBeforeInput.bind(this)),
-            (this.handleCompositionStart = this.handleCompositionStart.bind(this)),
-            (this.handleCompositionEnd = this.handleCompositionEnd.bind(this)),
-            (this.handleFocusCapture = this.handleFocusCapture.bind(this)),
-            (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
-            (this.handleContextMenu = this.handleContextMenu.bind(this)),
-            (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            m.VW.isEditorEmpty(e.editor)
-                ? (this.state = {
-                      initialValue: (0, f.N3)().richValue,
-                      showPlaceholder: !0,
-                  })
-                : (this.state = {
-                      initialValue: m.VW.richValue(e.editor),
-                      showPlaceholder: !1,
-                  });
-    }
 }
-let R = N;
+let S = y;

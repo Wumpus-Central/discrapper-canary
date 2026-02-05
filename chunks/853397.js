@@ -1,186 +1,81 @@
-n.d(t, {
-    Zt: () => v,
-    yo: () => A,
-});
+"use strict";
+n.d(t, { Zt: () => E, yo: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
-    o = n(793574),
-    s = n(688810),
+    s = n(793574),
+    o = n(688810),
     l = n(239211),
-    c = n(34245),
-    u = n(399476),
+    u = n(34245),
+    c = n(399476),
     d = n(889460),
-    f = n(865784),
-    p = n(183555),
-    _ = n(993401),
+    _ = n(865784),
+    f = n(183555),
+    p = n(993401),
     h = n(518477),
     m = n(985018);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function O(e) {
-    let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: y } = e,
-        { trackUserProfileAction: b, context: O } = (0, p.NJ)(),
-        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, s.Ay)(o.A.USER_PROFILE_OVERFLOW_MENU),
-        I = null != O && O.showGuildProfile ? n : void 0,
-        S = {
+function g(e) {
+    let { user: t, guildId: n, viewProfileItem: i, appContext: p, popoutTargetRef: g, children: E } = e,
+        { trackUserProfileAction: A, context: I } = (0, f.NJ)(),
+        { analyticsLocations: T, newestAnalyticsLocation: y } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        S = null != I && I.showGuildProfile ? n : void 0,
+        v = {
             action: h.pt.PRESS_OPTIONS,
             icon: a.jNK,
             tooltipText: m.intl.string(m.t["UKOtz+"]),
             "aria-label": m.intl.string(m.t["UKOtz+"]),
         },
-        T = (0, d.A)({
+        C = (0, d.A)({
             user: t,
             guildId: n,
-            onAction: () =>
-                b({
-                    action: "PRESS_INVITE_TO_SERVER",
-                    analyticsLocations: v,
-                }),
+            onAction: () => A({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: T }),
         }),
-        C = (0, l.A)({
+        b = (0, l.A)({
             user: t,
             guildId: n,
-            location: A,
+            location: y,
             color: "danger",
-            appContext: _,
-            onBlock: () =>
-                b({
-                    action: "BLOCK",
-                    analyticsLocations: v,
-                }),
-            onIgnore: () =>
-                b({
-                    action: "IGNORE",
-                    analyticsLocations: v,
-                }),
-            onUnblock: () =>
-                b({
-                    action: "UNBLOCK",
-                    analyticsLocations: v,
-                }),
+            appContext: p,
+            onBlock: () => A({ action: "BLOCK", analyticsLocations: T }),
+            onIgnore: () => A({ action: "IGNORE", analyticsLocations: T }),
+            onUnblock: () => A({ action: "UNBLOCK", analyticsLocations: T }),
         }),
         N = [
-            [i, T],
-            [
-                (0, u.A)({
-                    user: t,
-                    guildId: n,
-                    location: A,
-                    appContext: _,
-                    onBlock: () =>
-                        b({
-                            action: "BLOCK",
-                            analyticsLocations: v,
-                        }),
-                    onIgnore: () =>
-                        b({
-                            action: "IGNORE",
-                            analyticsLocations: v,
-                        }),
-                    onUnignore: () =>
-                        b({
-                            action: "UNIGNORE",
-                            analyticsLocations: v,
-                        }),
-                }),
-                C,
-                (0, f.A)({
-                    user: t,
-                    guildId: n,
-                    location: A,
-                    appContext: _,
-                    color: "danger",
-                    onAction: () =>
-                        b({
-                            action: "REPORT",
-                            analyticsLocations: v,
-                        }),
-                }),
-                (0, f.M)({
-                    user: t,
-                    guildId: n,
-                    location: A,
-                    appContext: _,
-                    color: "danger",
-                    onAction: () =>
-                        b({
-                            action: "REPORT",
-                            analyticsLocations: v,
-                        }),
-                }),
-            ],
+            [i, C],
             [
                 (0, c.A)({
                     user: t,
-                    guildId: I,
-                    onSuccess: () =>
-                        b({
-                            action: "COPY_USER_ID",
-                            analyticsLocations: v,
-                        }),
+                    guildId: n,
+                    location: y,
+                    appContext: p,
+                    onBlock: () => A({ action: "BLOCK", analyticsLocations: T }),
+                    onIgnore: () => A({ action: "IGNORE", analyticsLocations: T }),
+                    onUnignore: () => A({ action: "UNIGNORE", analyticsLocations: T }),
+                }),
+                b,
+                (0, _.A)({
+                    user: t,
+                    guildId: n,
+                    location: y,
+                    appContext: p,
+                    color: "danger",
+                    onAction: () => A({ action: "REPORT", analyticsLocations: T }),
+                }),
+                (0, _.M)({
+                    user: t,
+                    guildId: n,
+                    location: y,
+                    appContext: p,
+                    color: "danger",
+                    onAction: () => A({ action: "REPORT", analyticsLocations: T }),
                 }),
             ],
+            [(0, u.A)({ user: t, guildId: S, onSuccess: () => A({ action: "COPY_USER_ID", analyticsLocations: T }) })],
         ];
     return N.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(s.f5, {
-              value: v,
+        : (0, r.jsx)(o.f5, {
+              value: T,
               children: (0, r.jsx)(a.YNO, {
                   targetElementRef: g,
                   renderPopout: (e) => {
@@ -191,58 +86,18 @@ function O(e) {
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": m.intl.string(m.t.AXIHpV),
-                          children: N.map((e, t) =>
-                              (0, r.jsx)(
-                                  a.rXV,
-                                  {
-                                      children: e.map((e) => e),
-                                  },
-                                  t,
-                              ),
-                          ),
+                          children: N.map((e, t) => (0, r.jsx)(a.rXV, { children: e.map((e) => e) }, t)),
                       });
                   },
-                  children: (e) => y(E({}, e, S)),
+                  children: (e) => E({ ...e, ...v }),
               }),
           });
 }
-
-function v(e) {
+function E(e) {
     let t = i.useRef(null);
-    return (0, r.jsx)(
-        O,
-        b(E({}, e), {
-            popoutTargetRef: t,
-            children: (e) =>
-                (0, r.jsx)(
-                    _.q3,
-                    E(
-                        {
-                            buttonRef: t,
-                        },
-                        e,
-                    ),
-                ),
-        }),
-    );
+    return (0, r.jsx)(g, { ...e, popoutTargetRef: t, children: (e) => (0, r.jsx)(p.q3, { buttonRef: t, ...e }) });
 }
-
 function A(e) {
     let t = i.useRef(null);
-    return (0, r.jsx)(
-        O,
-        b(E({}, e), {
-            popoutTargetRef: t,
-            children: (e) =>
-                (0, r.jsx)(
-                    _.br,
-                    E(
-                        {
-                            buttonRef: t,
-                        },
-                        e,
-                    ),
-                ),
-        }),
-    );
+    return (0, r.jsx)(g, { ...e, popoutTargetRef: t, children: (e) => (0, r.jsx)(p.br, { buttonRef: t, ...e }) });
 }

@@ -1,34 +1,22 @@
-s.r(a),
-    s.d(a, {
-        default: () => m,
-    });
-var n = s(627968),
-    l = s(503698),
-    t = s.n(l),
-    c = s(960488),
-    i = s(573648),
-    r = s(950198),
-    d = s(985018),
-    u = s(53046);
-
-function m() {
-    let { type: e } = (0, c.g)(),
-        a = (0, r.mw)(e);
-    if (null == a) return null;
-    let s = i.A.get(a);
-    return (0, n.jsxs)(r.mP, {
-        platformType: a,
+l.r(s), l.d(s, { default: () => o });
+var n = l(627968),
+    i = l(503698),
+    a = l.n(i),
+    t = l(960488),
+    r = l(573648),
+    c = l(950198),
+    d = l(985018),
+    u = l(53046);
+function o() {
+    let { type: e } = (0, t.g)(),
+        s = (0, c.mw)(e);
+    if (null == s) return null;
+    let l = r.A.get(s);
+    return (0, n.jsxs)(c.mP, {
+        platformType: s,
         children: [
-            (0, n.jsx)("div", {
-                className: u.i,
-                children: d.intl.format(d.t.RzEB5v, {
-                    name: s.name,
-                }),
-            }),
-            (0, n.jsx)("div", {
-                className: t()(u.i, u.z),
-                children: d.intl.string(d.t["Q+lNwZ"]),
-            }),
+            (0, n.jsx)("div", { className: u.i, children: d.intl.format(d.t.RzEB5v, { name: l.name }) }),
+            (0, n.jsx)("div", { className: a()(u.i, u.z), children: d.intl.string(d.t["Q+lNwZ"]) }),
         ],
     });
 }

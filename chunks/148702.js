@@ -1,34 +1,31 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(752238),
+    s = n.n(a),
+    o = n(752238),
     l = n(781992);
-
-function c(e) {
+function u(e) {
     let { value: t, onChange: n } = e,
         a = "json",
-        c = i.useRef(null),
-        [u, d] = i.useState("");
+        u = i.useRef(null),
+        [c, d] = i.useState("");
     i.useEffect(() => {
-        if (null != t && s.default.hasLanguage(a)) {
-            let e = s.default.highlight(a, t, !0);
+        if (null != t && o.default.hasLanguage(a)) {
+            let e = o.default.highlight(a, t, !0);
             null != e ? d(e.value + "\n") : d(t + "\n");
         } else d(t + "\n");
     }, [t, a]);
-    let f = (e) => {
+    let _ = (e) => {
             n(e.target.value);
         },
-        p = (e) => {
+        f = (e) => {
             let t = e.target,
                 n = t.previousElementSibling;
             null != n && ((n.scrollTop = t.scrollTop), (n.scrollLeft = t.scrollLeft));
         },
-        _ = (e) => {
+        p = (e) => {
             if ("Tab" === e.key) {
                 e.preventDefault();
                 let r = e.target,
@@ -38,22 +35,22 @@ function c(e) {
                     let e = t.lastIndexOf("\n", i - 1) + 1,
                         r = t.indexOf("\n", i),
                         a = t.substring(e, -1 === r ? t.length : r),
-                        o = 0;
+                        s = 0;
                     for (let e = 0; e < Math.min(2, a.length); e++)
-                        if (" " === a[e]) o++;
+                        if (" " === a[e]) s++;
                         else break;
-                    o > 0 &&
-                        (n(t.substring(0, e) + t.substring(e + o)),
+                    s > 0 &&
+                        (n(t.substring(0, e) + t.substring(e + s)),
                         setTimeout(() => {
-                            if (null != c.current) {
-                                let t = Math.max(e, i - o);
-                                c.current.selectionStart = c.current.selectionEnd = t;
+                            if (null != u.current) {
+                                let t = Math.max(e, i - s);
+                                u.current.selectionStart = u.current.selectionEnd = t;
                             }
                         }, 0));
                 } else
                     n(t.substring(0, i) + "  " + t.substring(a)),
                         setTimeout(() => {
-                            null != c.current && (c.current.selectionStart = c.current.selectionEnd = i + 2);
+                            null != u.current && (u.current.selectionStart = u.current.selectionEnd = i + 2);
                         }, 0);
             }
         };
@@ -64,19 +61,17 @@ function c(e) {
                 className: l.c5,
                 "aria-hidden": "true",
                 children: (0, r.jsx)("code", {
-                    className: o()("hljs", a),
-                    dangerouslySetInnerHTML: {
-                        __html: null != u ? u : "",
-                    },
+                    className: s()("hljs", a),
+                    dangerouslySetInnerHTML: { __html: c ?? "" },
                 }),
             }),
             (0, r.jsx)("textarea", {
-                ref: c,
+                ref: u,
                 className: l.mW,
                 value: t,
-                onChange: f,
-                onScroll: p,
-                onKeyDown: _,
+                onChange: _,
+                onScroll: f,
+                onKeyDown: p,
                 spellCheck: !1,
                 autoCapitalize: "off",
                 autoComplete: "off",

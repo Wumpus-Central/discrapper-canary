@@ -1,34 +1,26 @@
-r.d(t, {
-    A: () => u,
-});
-var n = r(562465),
-    s = r(47167),
-    a = r(71393),
-    i = r(430452),
-    l = r(994500),
-    o = r(287809),
-    c = r(544105),
-    f = r(652215),
-    d = r(985018);
-
-function u(e, t) {
-    var r;
-    let { nonce: u, forQRCode: p } = t,
-        b = e.getGuildId(),
-        m = a.A.getGuild(b),
-        g = (0, c.hw)({
-            guildId: null != b ? b : f.D0I,
+"use strict";
+s.d(t, { A: () => p });
+var r = s(562465),
+    i = s(47167),
+    n = s(71393),
+    a = s(430452),
+    o = s(994500),
+    l = s(287809),
+    c = s(544105),
+    d = s(652215),
+    u = s(985018);
+function p(e, t) {
+    let { nonce: s, forQRCode: p } = t,
+        f = e.getGuildId(),
+        m = n.A.getGuild(f),
+        _ = (0, c.hw)({
+            guildId: f ?? d.D0I,
             channelId: e.id,
-            channelName: (0, s.m1)(e, o.default, l.A),
-            guildName: null != (r = null == m ? void 0 : m.name) ? r : d.intl.string(d.t.LJpTRF),
-            muted: i.A.isSelfMute(),
-            deafened: i.A.isSelfDeaf(),
-            nonce: u,
+            channelName: (0, i.m1)(e, l.default, o.A),
+            guildName: m?.name ?? u.intl.string(u.t.LJpTRF),
+            muted: a.A.isSelfMute(),
+            deafened: a.A.isSelfDeaf(),
+            nonce: s,
         });
-    return p
-        ? ""
-              .concat((0, n.TP)())
-              .concat(f.Rsh.XBOX_HANDOFF, "?")
-              .concat(g.toString())
-        : "".concat(c.Gp, "?").concat(g.toString());
+    return p ? `${(0, r.TP)()}${d.Rsh.XBOX_HANDOFF}?${_.toString()}` : `${c.Gp}?${_.toString()}`;
 }

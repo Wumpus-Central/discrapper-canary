@@ -1,29 +1,10 @@
-n.d(t, {
-    E: () => i,
-});
-let r = (0, n(600975).C)({
+"use strict";
+n.d(t, { E: () => s });
+let i = (0, n(600975).C)({
         kind: "user",
         label: "Pomelo Suggestions",
         id: "2023-04_pomelo_suggestions",
-        defaultConfig: {
-            enabled: !1,
-        },
-        treatments: [
-            {
-                id: 1,
-                label: "enabled",
-                config: {
-                    enabled: !0,
-                },
-            },
-        ],
+        defaultConfig: { enabled: !1 },
+        treatments: [{ id: 1, label: "enabled", config: { enabled: !0 } }],
     }),
-    i = () =>
-        r.getCurrentConfig(
-            {
-                location: "1907ae_1",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ).enabled;
+    s = () => i.getCurrentConfig({ location: "1907ae_1" }, { autoTrackExposure: !1 }).enabled;

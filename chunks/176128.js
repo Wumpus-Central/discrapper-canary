@@ -1,14 +1,10 @@
-n.d(t, {
-    Jp: () => s,
-    qo: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Jp: () => s, qo: () => a });
 var r = n(860689),
     i = n(652215),
     a = (function (e) {
         return (e.PUBLIC = "PUBLIC"), (e.INVITE_ONLY = "INVITE_ONLY"), (e.APPLY_TO_JOIN = "APPLY_TO_JOIN"), e;
     })({});
-
 function s(e) {
     let t = new Set(e.features),
         n = "INVITE_ONLY";
@@ -19,11 +15,8 @@ function s(e) {
           (n = "APPLY_TO_JOIN");
     let a = o(e),
         s = 0;
-    if (a) {
-        var l;
-        s = null != (l = (0, r.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ? l : 0;
-    }
-    let c = (0, r.fh)(e) ? e.premiumTier : i.TVA.NONE;
+    a && (s = ((0, r.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ?? 0);
+    let l = (0, r.fh)(e) ? e.premiumTier : i.TVA.NONE;
     return {
         verified: t.has(i.GuildFeatures.VERIFIED),
         partnered: t.has(i.GuildFeatures.PARTNERED),
@@ -32,10 +25,9 @@ function s(e) {
         visibility: n,
         premium: a,
         premiumSubscriberCount: s,
-        premiumTier: c,
+        premiumTier: l,
     };
 }
-
 function o(e) {
     return (
         null != e &&

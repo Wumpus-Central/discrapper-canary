@@ -1,14 +1,15 @@
+"use strict";
 var r = n(257943),
     i = n(804272),
     a = n(516549),
     s = n(101968),
     o = n(706598),
     l = TypeError,
-    c = Object.defineProperty,
-    u = Object.getOwnPropertyDescriptor,
+    u = Object.defineProperty,
+    c = Object.getOwnPropertyDescriptor,
     d = "enumerable",
-    f = "configurable",
-    p = "writable";
+    _ = "configurable",
+    f = "writable";
 t.f = r
     ? a
         ? function (e, t, n) {
@@ -16,25 +17,21 @@ t.f = r
                   (s(e),
                   (t = o(t)),
                   s(n),
-                  "function" == typeof e && "prototype" === t && "value" in n && p in n && !n[p])
+                  "function" == typeof e && "prototype" === t && "value" in n && f in n && !n[f])
               ) {
-                  var r = u(e, t);
+                  var r = c(e, t);
                   r &&
-                      r[p] &&
+                      r[f] &&
                       ((e[t] = n.value),
-                      (n = {
-                          configurable: f in n ? n[f] : r[f],
-                          enumerable: d in n ? n[d] : r[d],
-                          writable: !1,
-                      }));
+                      (n = { configurable: _ in n ? n[_] : r[_], enumerable: d in n ? n[d] : r[d], writable: !1 }));
               }
-              return c(e, t, n);
+              return u(e, t, n);
           }
-        : c
+        : u
     : function (e, t, n) {
           if ((s(e), (t = o(t)), s(n), i))
               try {
-                  return c(e, t, n);
+                  return u(e, t, n);
               } catch (e) {}
           if ("get" in n || "set" in n) throw new l("Accessors not supported");
           return "value" in n && (e[t] = n.value), e;

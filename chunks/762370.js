@@ -1,31 +1,22 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(735438),
-    i = n.n(r),
-    l = n(311907),
-    a = n(734057),
-    o = n(696451),
-    s = n(317525),
-    c = n(576705),
-    u = n(488926),
-    d = n(652215);
-
-function f(e, t) {
-    return (0, l.bG)([c.A, a.A, o.Ay, s.A], () => {
-        var n;
+i.d(t, { A: () => m });
+var n = i(735438),
+    a = i.n(n),
+    l = i(311907),
+    r = i(734057),
+    s = i(696451),
+    o = i(317525),
+    d = i(576705),
+    c = i(488926),
+    u = i(652215);
+function m(e, t) {
+    return (0, l.bG)([d.A, r.A, s.Ay, o.A], () => {
         if (null == t) return !1;
-        let r = a.A.getChannel(t);
-        if (null == r) return !1;
-        let l = c.A.can(d.xBc.SEND_MESSAGES, r),
-            f = o.Ay.getMember(r.guild_id, e),
-            p = i().keyBy(s.A.getManyRoles(r.guild_id, null != (n = null == f ? void 0 : f.roles) ? n : []), "id"),
-            m = u.$3({
-                permission: d.xBc.STREAM,
-                user: e,
-                context: r,
-                roles: p,
-            });
-        return l && m;
+        let i = r.A.getChannel(t);
+        if (null == i) return !1;
+        let n = d.A.can(u.xBc.SEND_MESSAGES, i),
+            l = s.Ay.getMember(i.guild_id, e),
+            m = a().keyBy(o.A.getManyRoles(i.guild_id, l?.roles ?? []), "id"),
+            _ = c.$3({ permission: u.xBc.STREAM, user: e, context: i, roles: m });
+        return n && _;
     });
 }

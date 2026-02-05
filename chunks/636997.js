@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__05e8e",
     Hc: "formTitle__05e8e",

@@ -1,52 +1,32 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(736666);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = {
-    lastInitAttemptMayHaveCrashed: !1,
-};
-class c extends (r = i.Ay.PersistedStore) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153),
+    a = n(736666);
+let s = { lastInitAttemptMayHaveCrashed: !1 };
+class o extends r.Ay.PersistedStore {
+    static displayName = "VoiceFilterPersistedStore";
+    static persistKey = "VoiceFilterPersistedStore";
     initialize(e) {
-        null != e && (l = e);
+        null != e && (s = e);
     }
     getState() {
-        return l;
+        return s;
     }
     getLastInitAttemptMayHaveCrashed() {
-        return l.lastInitAttemptMayHaveCrashed;
+        return s.lastInitAttemptMayHaveCrashed;
     }
 }
-
-function u(e) {
+function l(e) {
     let { state: t } = e;
     switch (t) {
-        case s.R.LOADING:
-            l.lastInitAttemptMayHaveCrashed = !0;
+        case a.R.LOADING:
+            s.lastInitAttemptMayHaveCrashed = !0;
             break;
-        case s.R.LOADED:
-        case s.R.FAILED:
-        case s.R.UNSUPPORTED:
-            l.lastInitAttemptMayHaveCrashed = !1;
+        case a.R.LOADED:
+        case a.R.FAILED:
+        case a.R.UNSUPPORTED:
+            s.lastInitAttemptMayHaveCrashed = !1;
     }
 }
-o(c, "displayName", "VoiceFilterPersistedStore"), o(c, "persistKey", "VoiceFilterPersistedStore");
-let d = new c(a.h, {
-    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: u,
-});
+let u = new o(i.h, { VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: l });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__83b1d",
     o1: "actions__83b1d",

@@ -9,14 +9,8 @@ e.exports = function (e) {
                 end: ";",
                 relevance: 0,
                 contains: [
-                    {
-                        className: "variable",
-                        begin: /\.[a-zA-Z-_]+/,
-                    },
-                    {
-                        className: "keyword",
-                        begin: /\(optional\)/,
-                    },
+                    { className: "variable", begin: /\.[a-zA-Z-_]+/ },
+                    { className: "keyword", begin: /\(optional\)/ },
                 ],
             },
         };
@@ -26,12 +20,7 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: "import",
         contains: [
-            {
-                begin: "^facet " + t,
-                end: /\}/,
-                keywords: "facet",
-                contains: [n, e.HASH_COMMENT_MODE],
-            },
+            { begin: "^facet " + t, end: /\}/, keywords: "facet", contains: [n, e.HASH_COMMENT_MODE] },
             {
                 begin: "^\\s*instance of " + t,
                 end: /\}/,
@@ -39,11 +28,7 @@ e.exports = function (e) {
                 illegal: /\S/,
                 contains: ["self", n, e.HASH_COMMENT_MODE],
             },
-            {
-                begin: "^" + t,
-                end: /\}/,
-                contains: [n, e.HASH_COMMENT_MODE],
-            },
+            { begin: "^" + t, end: /\}/, contains: [n, e.HASH_COMMENT_MODE] },
             e.HASH_COMMENT_MODE,
         ],
     };

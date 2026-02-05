@@ -1,66 +1,31 @@
-r.d(t, {
-    A: () => o,
-});
-var n = r(627968),
-    l = r(64700),
-    s = r(505312),
-    i = r(397927),
-    a = r(744086),
-    c = r(985018);
-
-function o(e) {
+s.d(t, { A: () => c });
+var r = s(627968),
+    i = s(64700),
+    n = s(505312),
+    l = s(397927),
+    a = s(744086),
+    o = s(985018);
+function c(e) {
     let { align: t = "left" } = e,
-        r = l.useRef(null),
-        o = (0, s.w)();
-    return (0, n.jsx)(i.YNO, {
-        targetElementRef: r,
+        s = i.useRef(null),
+        c = (0, n.w)();
+    return (0, r.jsx)(l.YNO, {
+        targetElementRef: s,
         position: "top",
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(a.Ay, {
-                onClose: t,
-                onSelect: void 0,
-            });
+            return (0, r.jsx)(a.Ay, { onClose: t, onSelect: void 0 });
         },
         children: (e) =>
-            (0, n.jsx)(
-                i.K0,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                }),
-                            )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: n,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = n);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        buttonRef: r,
-                        size: "md",
-                        variant: "secondary",
-                        icon: o.Component,
-                        "aria-label": c.intl.string(c.t["+1H47t"]),
-                    },
-                    e,
-                    o.events,
-                ),
-            ),
+            (0, r.jsx)(l.K0, {
+                buttonRef: s,
+                size: "md",
+                variant: "secondary",
+                icon: c.Component,
+                "aria-label": o.intl.string(o.t["+1H47t"]),
+                ...e,
+                ...c.events,
+            }),
     });
 }

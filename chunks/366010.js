@@ -1,13 +1,9 @@
-n.d(t, {
-    M: () => a,
-    q: () => i,
-});
+"use strict";
+n.d(t, { M: () => a, q: () => i });
 var r = n(680049);
-
 function i(e) {
     return e === r.NJ.LIGHT;
 }
-
 function a(e) {
     switch (e) {
         case r.NJ.DARK:

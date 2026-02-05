@@ -1,76 +1,57 @@
-n.d(t, {
-    f: () => m,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(386181),
+n.d(t, { f: () => A });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(386181),
     o = n(650682),
     c = n(934551),
     d = n(827734),
     u = n(397927),
     _ = n(590089),
-    p = n(747625);
-
-function m(e) {
+    m = n(747625);
+function A(e) {
     let {
             ref: t,
             title: n,
-            collapsedSubtitle: l,
-            isExpanded: m,
+            collapsedSubtitle: r,
+            isExpanded: A,
             onExpandedChange: g,
-            children: A,
-            animate: f = !0,
+            children: E,
+            animate: h = !0,
         } = e,
-        b = i.useRef(null),
-        [h, E] = i.useState(null),
-        O = m && null != h;
+        p = s.useRef(null),
+        [C, x] = s.useState(null),
+        T = A && null != C;
     return (
-        i.useLayoutEffect(() => {
-            null != b.current && null == h && E(b.current.clientHeight);
-        }, [h]),
-        (0, r.jsxs)(a.EN, {
+        s.useLayoutEffect(() => {
+            null != p.current && null == C && x(p.current.clientHeight);
+        }, [C]),
+        (0, i.jsxs)(l.EN, {
             ref: t,
-            isExpanded: m,
+            isExpanded: A,
             onExpandedChange: g,
             children: [
-                (0, r.jsx)(_.U, {
-                    ref: b,
-                    style:
-                        null != h
-                            ? {
-                                  minHeight: h,
-                              }
-                            : void 0,
+                (0, i.jsx)(_.U, {
+                    ref: p,
+                    style: null != C ? { minHeight: C } : void 0,
                     title: n,
-                    description: O ? void 0 : l,
-                    secondaryTrailingElement: (0, r.jsx)(u.vN3, {
-                        children: (0, r.jsx)(o.$, {
+                    description: T ? void 0 : r,
+                    secondaryTrailingElement: (0, i.jsx)(u.vN3, {
+                        children: (0, i.jsx)(o.$, {
                             slot: "trigger",
-                            className: p.bW,
-                            children: (0, r.jsx)(c.ChevronLargeUpIcon, {
-                                className: s()(p.Kk, {
-                                    [p.kX]: !m,
-                                }),
+                            className: m.bW,
+                            children: (0, i.jsx)(c.ChevronLargeUpIcon, {
+                                className: a()(m.Kk, { [m.kX]: !A }),
                                 color: d.A.colors.ICON_STRONG,
                             }),
                         }),
                     }),
-                    onClick: () => g(!m),
+                    onClick: () => g(!A),
                 }),
-                (0, r.jsx)(a.kS, {
-                    className: s()(p.nd, {
-                        [p.t5]: !f,
-                    }),
-                    children: (0, r.jsx)(u.BJc, {
-                        gap: 16,
-                        padding: {
-                            top: 16,
-                        },
-                        children: A,
-                    }),
+                (0, i.jsx)(l.kS, {
+                    className: a()(m.nd, { [m.t5]: !h }),
+                    children: (0, i.jsx)(u.BJc, { gap: 16, padding: { top: 16 }, children: E }),
                 }),
             ],
         })

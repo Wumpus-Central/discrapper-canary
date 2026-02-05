@@ -1,51 +1,28 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(653741);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153),
+    a = n(653741);
+let s = null;
+function o(e) {
+    s = null != e.regionalFeatureConfig ? a.wN.fromConnectionOpen(e.regionalFeatureConfig) : null;
 }
-let l = null;
-
-function c(e) {
-    l = null != e.regionalFeatureConfig ? s.wN.fromConnectionOpen(e.regionalFeatureConfig) : null;
-}
-class u extends (r = i.Ay.Store) {
+class l extends r.Ay.Store {
+    static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
-        return l;
+        return s;
     }
     isFeatureAgeGated(e) {
-        var t;
-        return null != (t = null == l ? void 0 : l.isFeatureAgeGated(e)) && t;
+        return s?.isFeatureAgeGated(e) ?? !1;
     }
     isSettingTeenByDefault(e) {
-        var t;
-        return null != (t = null == l ? void 0 : l.isFeatureTeenByDefault(e)) && t;
+        return s?.isFeatureTeenByDefault(e) ?? !1;
     }
     hasAgeGatedFeatures() {
-        var e;
-        return null != (e = null == l ? void 0 : l.hasAgeGatedFeatures()) && e;
+        return s?.hasAgeGatedFeatures() ?? !1;
     }
     hasTeenDefaults() {
-        var e;
-        return null != (e = null == l ? void 0 : l.hasTeenDefaults()) && e;
+        return s?.hasTeenDefaults() ?? !1;
     }
 }
-o(u, "displayName", "RegionalFeatureConfigStore");
-let d = new u(a.h, {
-    CONNECTION_OPEN: c,
-});
+let u = new l(i.h, { CONNECTION_OPEN: o });

@@ -1,29 +1,20 @@
-r.d(t, {
-    A: () => c,
-}),
-    r(801541);
-var n = r(627968);
-r(64700);
-var i = r(889137),
-    s = r(963334),
-    a = r(871210),
-    o = r(565478),
-    l = r(885168);
-
-function c(e) {
-    let { username: t, oneClickFlow: r = !1 } = e,
-        c = (0, o.W)((0, a.h_)(t), !0, !1, r);
-    if (null == c) return null;
-    let u = (0, i.YW)(c.type)
-        .with(s.q.RATE_LIMIT, () => "info")
-        .with(s.q.ERROR, () => "error")
-        .with(s.q.AVAILABLE, () => "success")
-        .with(s.q.INTERNAL_ERROR, () => null)
+i.d(t, { A: () => d }), i(801541);
+var n = i(627968);
+i(64700);
+var s = i(889137),
+    a = i(963334),
+    r = i(871210),
+    l = i(565478),
+    o = i(885168);
+function d(e) {
+    let { username: t, oneClickFlow: i = !1 } = e,
+        d = (0, l.W)((0, r.h_)(t), !0, !1, i);
+    if (null == d) return null;
+    let u = (0, s.YW)(d.type)
+        .with(a.q.RATE_LIMIT, () => "info")
+        .with(a.q.ERROR, () => "error")
+        .with(a.q.AVAILABLE, () => "success")
+        .with(a.q.INTERNAL_ERROR, () => null)
         .exhaustive();
-    return null == u
-        ? null
-        : (0, n.jsx)(l.A, {
-              type: u,
-              children: c.message,
-          });
+    return null == u ? null : (0, n.jsx)(o.A, { type: u, children: d.message });
 }

@@ -1,18 +1,5 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i() {
+"use strict";
+function r() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -25,22 +12,22 @@ function i() {
         background_install_ms_total: 0,
     };
 }
-
-function a(e) {
+function i(e) {
     return "host" === e;
 }
-n.d(t, {
-    A: () => s,
-});
-class s {
+n.d(t, { A: () => a });
+class a {
+    _installingModules = {};
+    _downloadingModules = {};
+    _report;
+    constructor() {
+        this._report = r();
+    }
     handleDownloadingModule(e) {
-        if (!a(e.name)) {
+        if (!i(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
-            this._downloadingModules[e.name] = {
-                startTime: BigInt(e.now),
-                foreground: e.foreground,
-            };
+            this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
         }
     }
     _updateReportField(e, t, n) {
@@ -57,24 +44,24 @@ class s {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (a(e.name)) return;
+        if (i(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
         let n = t.foreground ? "foreground" : "background",
-            r = "".concat(n, "_download_ms_").concat(e.name),
-            i = "".concat(n, "_bytes_").concat(e.name),
+            r = `${n}_download_ms_${e.name}`,
+            a = `${n}_bytes_${e.name}`,
             s = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1e6)),
             o = !1 === e.receivedBytes ? 0 : e.receivedBytes;
         t.foreground
             ? ((this._report.foreground_download_ms_total += s), (this._report.foreground_bytes_total += o))
             : ((this._report.background_download_ms_total += s), (this._report.background_bytes_total += o)),
             this.incrementReportField(r, s),
-            this.incrementReportField(i, o),
+            this.incrementReportField(a, o),
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!a(e.name)) {
+        if (!i(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -86,19 +73,19 @@ class s {
         }
     }
     handleInstalledModule(e) {
-        if (a(e.name)) return;
+        if (i(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
-            r = "".concat(n, "_install_ms_").concat(e.name),
-            i = "min_version_".concat(e.name),
-            s = "max_version_".concat(e.name),
+            r = `${n}_install_ms_${e.name}`,
+            a = `min_version_${e.name}`,
+            s = `max_version_${e.name}`,
             o = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1e6));
         t.foreground
             ? (this._report.foreground_install_ms_total += o)
             : (this._report.background_install_ms_total += o),
             this.incrementReportField(r, o),
-            this.setReportFieldMinimum(i, t.oldVersion),
+            this.setReportFieldMinimum(a, t.oldVersion),
             e.succeeded
                 ? (!0 === e.delta ? this._report.num_delta_installed++ : this._report.num_full_installed++,
                   this.setReportFieldMaximum(s, t.newVersion))
@@ -124,7 +111,7 @@ class s {
         return this._report;
     }
     reset() {
-        this._report = i();
+        this._report = r();
     }
     submissionReady() {
         return (
@@ -137,11 +124,5 @@ class s {
             !(Object.keys(this._installingModules).length > 0) &&
             !(Object.keys(this._downloadingModules).length > 0)
         );
-    }
-    constructor() {
-        r(this, "_installingModules", {}),
-            r(this, "_downloadingModules", {}),
-            r(this, "_report", void 0),
-            (this._report = i());
     }
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     uR: "collapseable__217b7",
     $M: "toggled__217b7",

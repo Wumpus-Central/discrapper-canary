@@ -1,12 +1,9 @@
+"use strict";
 var r;
-
 function i(e) {
     return e < r.HOURLY;
 }
-n.d(t, {
-    d: () => i,
-    j: () => r,
-}),
+n.d(t, { d: () => i, j: () => r }),
     (function (e) {
         (e[(e.YEARLY = 0)] = "YEARLY"),
             (e[(e.MONTHLY = 1)] = "MONTHLY"),

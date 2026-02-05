@@ -1,62 +1,34 @@
-n.d(t, {
-    Fr: () => u,
-    JX: () => d,
-    YR: () => o,
-    eM: () => s,
-    kq: () => c,
-}),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
-var l = n(976860),
-    a = n(767599),
-    r = n(310419),
-    i = n(652215);
-let s = () => {
-        let e = {
-            previousView: (0, r.R4)(),
-        };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS, {
-            state: e,
-        });
-    },
-    c = (e) => {
-        let { categoryId: t } = e,
-            n = {
-                previousView: (0, r.R4)(),
-            };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t), {
-            state: n,
-        });
+a.d(t, { Fr: () => u, JX: () => d, YR: () => c, eM: () => r, kq: () => o }), a(323874), a(14289), a(35956);
+var n = a(976860),
+    i = a(767599),
+    s = a(310419),
+    l = a(652215);
+let r = () => {
+        let e = { previousView: (0, s.R4)() };
+        (0, n.pX)(l.BVt.GLOBAL_DISCOVERY_APPS, { state: e });
     },
     o = (e) => {
+        let { categoryId: t } = e,
+            a = { previousView: (0, s.R4)() };
+        (0, n.pX)(l.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: a });
+    },
+    c = (e) => {
         let { applicationId: t } = e,
-            n = {
-                previousView: (0, r.R4)(),
-            };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t), {
-            state: n,
-        });
+            a = { previousView: (0, s.R4)() };
+        (0, n.pX)(l.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: a });
     },
     d = function () {
-        let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            s = {
-                previousView: (0, r.R4)(),
-            },
-            c = new URLSearchParams();
-        null != e && "" !== e && c.set("q", e),
-            null != t && t !== a.lj && c.set("category_id", t.toString()),
-            null != n && n > 1 && c.set("page", n.toString()),
-            (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, {
-                state: s,
-                search: c.toString(),
-            });
+        let { query: e, categoryId: t, page: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            r = { previousView: (0, s.R4)() },
+            o = new URLSearchParams();
+        null != e && "" !== e && o.set("q", e),
+            null != t && t !== i.lj && o.set("category_id", t.toString()),
+            null != a && a > 1 && o.set("page", a.toString()),
+            (0, n.pX)(l.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, { state: r, search: o.toString() });
     },
     u = (e) => {
         let {
             location: { state: t },
-        } = (0, l.JK)();
-        (0, l.bG)(e, t);
+        } = (0, n.JK)();
+        (0, n.bG)(e, t);
     };

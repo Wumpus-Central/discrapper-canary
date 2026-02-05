@@ -1,135 +1,100 @@
-l.d(t, {
-    A: () => h,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    i = l(311907),
-    o = l(397927),
-    c = l(773669),
-    u = l(954571),
-    d = l(440938),
-    f = l(365491),
-    b = l(758836),
-    g = l(652215),
-    p = l(985018),
-    m = l(450331);
-
-function h(e) {
-    let { handleTransition: t, selectedTab: l, isNarrow: s, hasText: h } = e,
-        { searchQuery: E, onSetSearchQuery: v } = (0, f.v)(),
-        [A, x] = r.useState(""),
-        S = (0, d.uM)(),
-        C = (0, i.bG)([c.default], () => c.default.locale),
-        O = r.useRef(null),
-        [_, y] = r.useState(!1);
+"use strict";
+s.d(t, { A: () => f });
+var n = s(627968),
+    r = s(64700),
+    l = s(503698),
+    a = s.n(l),
+    i = s(311907),
+    o = s(397927),
+    c = s(773669),
+    d = s(954571),
+    u = s(440938),
+    g = s(365491),
+    m = s(758836),
+    _ = s(652215),
+    h = s(985018),
+    p = s(450331);
+function f(e) {
+    let { handleTransition: t, selectedTab: s, isNarrow: l, hasText: f } = e,
+        { searchQuery: E, onSetSearchQuery: C } = (0, g.v)(),
+        [b, A] = r.useState(""),
+        x = (0, u.uM)(),
+        S = (0, i.bG)([c.default], () => c.default.locale),
+        v = r.useRef(null),
+        [L, T] = r.useState(!1);
     r.useEffect(() => {
         let e = setTimeout(() => {
-            v(A);
+            C(b);
         }, 250);
         return () => clearTimeout(e);
-    }, [A, v]),
+    }, [b, C]),
         r.useEffect(() => {
-            x(E);
+            A(E);
         }, [E]),
         r.useEffect(() => {
-            y(s && h);
-        }, [s, h]);
-    let j = r.useCallback(
+            T(l && f);
+        }, [l, f]);
+    let I = r.useCallback(
             (e) => {
-                "Enter" === e.key && v(A);
+                "Enter" === e.key && C(b);
             },
-            [A, v],
+            [b, C],
         ),
-        L = r.useCallback(
+        O = r.useCallback(
             (e) => {
-                u.default.track(g.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == S ? void 0 : S.sessionId,
-                    page_section: null == S ? void 0 : S.pageSection,
-                    page_category: null == S ? void 0 : S.pageCategory,
-                    page_index: null == S ? void 0 : S.pageIndex,
-                    page_size: null == S ? void 0 : S.pageSize,
+                d.default.track(_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: x?.sessionId,
+                    page_section: x?.pageSection,
+                    page_category: x?.pageCategory,
+                    page_index: x?.pageIndex,
+                    page_size: x?.pageSize,
                     cta_name: e,
-                    page_type: l,
+                    page_type: s,
                 });
             },
-            [l, S],
+            [s, x],
         ),
-        T = r.useCallback(() => {
-            l !== b.G2.CATALOG && t(b.G2.CATALOG),
-                L(b.uY.SEARCH_ICON),
-                y(!0),
-                setTimeout(() => {
-                    var e;
-                    return null == (e = O.current) ? void 0 : e.focus();
-                });
-        }, [l, t, L]),
-        I = r.useCallback(() => {
-            l !== b.G2.CATALOG && t(b.G2.CATALOG), L(b.uY.SEARCH_BAR);
-        }, [l, t, L]),
+        y = r.useCallback(() => {
+            s !== m.G2.CATALOG && t(m.G2.CATALOG), O(m.uY.SEARCH_ICON), T(!0), setTimeout(() => v.current?.focus());
+        }, [s, t, O]),
+        j = r.useCallback(() => {
+            s !== m.G2.CATALOG && t(m.G2.CATALOG), O(m.uY.SEARCH_BAR);
+        }, [s, t, O]),
         N = r.useCallback(() => {
-            x(""), v(""), L(b.uY.SEARCH_BAR_CLEAR), s && y(!1);
-        }, [v, L, s]),
+            A(""), C(""), O(m.uY.SEARCH_BAR_CLEAR), l && T(!1);
+        }, [C, O, l]),
         k = r.useCallback(() => {
-            s && "" === A && y(!1);
-        }, [s, A]),
-        R = s && !_,
-        P = (0, n.jsx)(o.DUT, {
-            className: m.qc,
-            onClick: T,
-            children: (0, n.jsx)(o.$p$, {
-                size: "sm",
-                color: o.LU0.colors.INTERACTIVE_ICON_DEFAULT,
-            }),
+            l && "" === b && T(!1);
+        }, [l, b]),
+        R = l && !L,
+        B = (0, n.jsx)(o.DUT, {
+            className: p.qc,
+            onClick: y,
+            children: (0, n.jsx)(o.$p$, { size: "sm", color: o.LU0.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        D = (0, n.jsx)(o.IWV, {
+        P = (0, n.jsx)(o.IWV, {
             size: "sm",
-            ref: O,
-            onKeyDown: j,
-            query: A,
-            onChange: x,
+            ref: v,
+            onKeyDown: I,
+            query: b,
+            onChange: A,
             onClear: N,
             onBlur: k,
-            placeholder: "en-US" === C ? p.intl.string(p.t.arz34K) : p.intl.string(p.t["hIt/Nm"]),
+            placeholder: "en-US" === S ? h.intl.string(h.t.arz34K) : h.intl.string(h.t["hIt/Nm"]),
         }),
-        w = {
-            "--custom-search-bar-width": "".concat(b.rr, "px"),
-            "--custom-search-bar-icon-width": "".concat(b.Dy, "px"),
-        };
-    if (R)
-        return (0, n.jsx)("div", {
-            style: w,
-            children: P,
-        });
-    let B = a()(m.ON, {
-        [m.Nz]: _,
-    });
-    return _
+        M = { "--custom-search-bar-width": `${m.rr}px`, "--custom-search-bar-icon-width": `${m.Dy}px` };
+    if (R) return (0, n.jsx)("div", { style: M, children: B });
+    let D = a()(p.ON, { [p.Nz]: L });
+    return L
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)("div", {
-                      className: m.j8,
-                      style: w,
-                      children: P,
-                  }),
-                  (0, n.jsx)(o.DUT, {
-                      className: B,
-                      style: w,
-                      onClick: I,
-                      ignoreKeyPress: !0,
-                      children: D,
-                  }),
+                  (0, n.jsx)("div", { className: p.j8, style: M, children: B }),
+                  (0, n.jsx)(o.DUT, { className: D, style: M, onClick: j, ignoreKeyPress: !0, children: P }),
               ],
           })
         : (0, n.jsx)("div", {
-              className: B,
-              style: w,
-              children: (0, n.jsx)(o.DUT, {
-                  ignoreKeyPress: !0,
-                  onClick: I,
-                  children: D,
-              }),
+              className: D,
+              style: M,
+              children: (0, n.jsx)(o.DUT, { ignoreKeyPress: !0, onClick: j, children: P }),
           });
 }

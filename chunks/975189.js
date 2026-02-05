@@ -1,129 +1,87 @@
-n.d(t, {
-    v: () => T,
-});
+"use strict";
+n.d(t, { v: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(284009),
     s = n.n(a),
     o = n(417597),
     l = n(73153),
-    c = n(775602),
-    u = n(590180),
+    u = n(775602),
+    c = n(590180),
     d = n(306710),
-    f = n(524246),
-    p = n(14368),
-    _ = n(61750),
+    _ = n(524246),
+    f = n(14368),
+    p = n(61750),
     h = n(937008),
     m = n(156312),
     g = n(972607),
     E = n(482132),
-    b = n(921925),
-    y = n(758836),
-    O = n(788868),
-    A = n(985018);
-
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+    A = n(921925),
+    I = n(758836),
+    T = n(788868),
+    y = n(985018);
 function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function I(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         {
             skusById: a,
             selectedSkuId: l,
-            application: c,
+            application: u,
             paymentError: d,
-            purchaseError: f,
-            purchasePreviewError: p,
+            purchaseError: _,
+            purchasePreviewError: f,
             appliedUserDiscounts: h,
         } = (0, m.P5)(),
-        g = (0, o.bG)([u.A], () => u.A.getProduct(l)),
-        O = i.useRef(!1);
-    s()(null != l, "Expected selectedSkuId"), s()(null != c, "Expected application");
-    let v = a[l];
-    s()(null != v, "Expected sku");
-    let S = null != d || null != f || null != p,
-        I =
+        g = (0, o.bG)([c.A], () => c.A.getProduct(l)),
+        T = i.useRef(!1);
+    s()(null != l, "Expected selectedSkuId"), s()(null != u, "Expected application");
+    let S = a[l];
+    s()(null != S, "Expected sku");
+    let v = null != d || null != _ || null != f,
+        C =
             h.length > 0
-                ? A.intl.formatToPlainString(A.t.VuV3Td, {
-                      discountOfferAmount: h[0].discount.amount,
-                  })
+                ? y.intl.formatToPlainString(y.t.VuV3Td, { discountOfferAmount: h[0].discount.amount })
                 : void 0;
     return (i.useEffect(() => {
         null == g ||
-            S ||
-            O.current ||
-            ((O.current = !0),
-            (0, _.A)({
+            v ||
+            T.current ||
+            ((T.current = !0),
+            (0, p.A)({
                 product: g,
-                overrideTitle: I,
+                overrideTitle: C,
                 analyticsLocations: n,
                 onCloseCallback: t,
-                purchaseType: y.gs.FIAT,
+                purchaseType: I.gs.FIAT,
             }));
-    }, [g, n, t, S, I]),
-    S)
-        ? (0, r.jsx)(E.dZ, {
-              children: (0, r.jsx)(b.A, {}),
-          })
+    }, [g, n, t, v, C]),
+    v)
+        ? (0, r.jsx)(E.dZ, { children: (0, r.jsx)(A.A, {}) })
         : null;
 }
-
-function T(e) {
+function v(e) {
     let {
             isGift: t,
             giftCode: n,
             selectedGiftStyle: a,
             hasSentMessage: s,
-            giftRecipient: _,
+            giftRecipient: p,
             giftMessageError: E,
-            isSendingMessage: b,
-            giftingOrigin: y,
+            isSendingMessage: A,
+            giftingOrigin: I,
         } = (0, h.Pv)(),
-        A = (0, o.bG)([c.A], () => c.A.useReducedMotion),
+        y = (0, o.bG)([u.A], () => u.A.useReducedMotion),
         v = i.useRef(null),
-        { selectedSkuId: T } = (0, m.P5)(),
-        C = (0, o.bG)([u.A], () => u.A.getProduct(T)),
-        { confettiColors: N } = (0, d.A)(null == C ? void 0 : C.styles);
+        { selectedSkuId: C } = (0, m.P5)(),
+        b = (0, o.bG)([c.A], () => c.A.getProduct(C)),
+        { confettiColors: N } = (0, d.A)(b?.styles);
     return (
         i.useEffect(() => {
             t &&
-                null != _ &&
-                null != T &&
-                (y === O.vQ.USER_PROFILE_WISHLIST || y === O.vQ.DM_CHANNEL_WISHLIST) &&
-                l.h.dispatch({
-                    type: "WISHLIST_GIFT_SENT",
-                    skuId: T,
-                    recipientId: _.id,
-                });
-        }, [t, _, T, y]),
+                null != p &&
+                null != C &&
+                (I === T.vQ.USER_PROFILE_WISHLIST || I === T.vQ.DM_CHANNEL_WISHLIST) &&
+                l.h.dispatch({ type: "WISHLIST_GIFT_SENT", skuId: C, recipientId: p.id });
+        }, [t, p, C, I]),
         t
             ? (0, r.jsxs)("div", {
                   ref: v,
@@ -133,20 +91,20 @@ function T(e) {
                           onClose: e.handleClose,
                           selectedGiftStyle: a,
                           hasSentMessage: s,
-                          giftRecipient: _,
+                          giftRecipient: p,
                           giftMessageError: E,
-                          isSendingMessage: b,
+                          isSendingMessage: A,
                       }),
                       !e.hideConfetti &&
-                          !A &&
-                          (0, r.jsx)(f.A, {
+                          !y &&
+                          (0, r.jsx)(_.A, {
                               confettiTarget: v.current,
                               confettiCanvas: e.confettiCanvas,
-                              sprites: (0, p.rA)(null == C ? void 0 : C.categorySkuId),
-                              colors: null == N ? void 0 : N.map((e) => e.toHexString()),
+                              sprites: (0, f.rA)(b?.categorySkuId),
+                              colors: N?.map((e) => e.toHexString()),
                           }),
                   ],
               })
-            : (0, r.jsx)(I, S({}, e))
+            : (0, r.jsx)(S, { ...e })
     );
 }

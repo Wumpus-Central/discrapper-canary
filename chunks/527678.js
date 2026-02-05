@@ -1,88 +1,56 @@
-n.d(t, {
-    Ay: () => _,
-    CP: () => j,
-    X$: () => v,
-    _k: () => T,
-    e_: () => x,
-    kP: () => b,
-}),
-    n(896048);
-var l = n(73153),
-    r = n(157559),
-    i = n(181658),
-    s = n(709977),
+n.d(t, { Ay: () => p, CP: () => D, X$: () => j, _k: () => O, e_: () => f, kP: () => G });
+var i = n(73153),
+    l = n(157559),
+    s = n(181658),
+    r = n(709977),
     a = n(591552),
-    o = n(713125),
-    c = n(961973),
-    d = n(967305),
+    d = n(713125),
+    o = n(961973),
+    c = n(967305),
     u = n(529942),
     m = n(209700),
-    g = n(734057),
-    f = n(71393),
-    h = n(403362),
-    N = n(997509),
-    I = n(863694),
-    p = n(107795),
-    O = n(400812),
-    S = n(746080),
-    E = n(539916),
-    A = n(985018);
-
-function x(e) {
-    l.h.dispatch({
-        type: "GUILD_SETTINGS_ONBOARDING_STEP",
-        step: e,
-    });
+    N = n(734057),
+    h = n(71393),
+    I = n(403362),
+    g = n(997509),
+    A = n(863694),
+    E = n(107795),
+    S = n(400812),
+    x = n(746080),
+    _ = n(539916),
+    T = n(985018);
+function f(e) {
+    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_STEP", step: e });
 }
-
-function _(e) {
-    null != e &&
-        l.h.dispatch({
-            type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED",
-            upsellType: e,
-        });
+function p(e) {
+    null != e && i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED", upsellType: e });
 }
-async function j(e, t) {
+async function D(e, t) {
     let n = a.A.getEnabled(e),
-        s = Array.from(I.A.editedDefaultChannelIds).filter((e) => null != g.A.getChannel(e)),
-        [o] = (0, c.ui)(e, [...s]);
-    if (n && t === E.SD.ONBOARDING_DEFAULT && o.length < E.Kd)
-        return void r.A.show({
-            title: A.intl.string(A.t.iLdiqY),
-            body: A.intl.string(A.t.JOT74c),
-        });
+        r = Array.from(A.A.editedDefaultChannelIds).filter((e) => null != N.A.getChannel(e)),
+        [d] = (0, o.ui)(e, [...r]);
+    if (n && t === _.SD.ONBOARDING_DEFAULT && d.length < _.Kd)
+        return void l.A.show({ title: T.intl.string(T.t.iLdiqY), body: T.intl.string(T.t.JOT74c) });
     try {
-        await (0, p.YN)(e, {
-            mode: t,
-        });
+        await (0, E.YN)(e, { mode: t });
     } catch (n) {
-        var d;
-        let { fieldName: e, error: t } = null != (d = new i.A(n).getAnyErrorMessageAndField()) ? d : {};
-        r.A.show({
-            title: A.intl.string(A.t.iLdiqY),
-            body: [e, t].filter(h.Vq).join(": "),
-        });
+        let { fieldName: e, error: t } = new s.A(n).getAnyErrorMessageAndField() ?? {};
+        l.A.show({ title: T.intl.string(T.t.iLdiqY), body: [e, t].filter(I.Vq).join(": ") });
     }
-    l.h.dispatch({
-        type: "GUILD_SETTINGS_ONBOARDING_SET_MODE",
-        guildId: e,
-        mode: t,
-    });
+    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_SET_MODE", guildId: e, mode: t });
 }
-
-function T(e, t) {
-    let n = O.kd.findIndex((e) => e === t);
-    -1 !== n && n !== O.kd.length - 1 && x(O.kd[n + 1]);
+function O(e, t) {
+    let n = S.kd.findIndex((e) => e === t);
+    -1 !== n && n !== S.kd.length - 1 && f(S.kd[n + 1]);
 }
-
-function b(e, t) {
-    let n = O.kd.findIndex((e) => e === t);
-    -1 !== n && 0 !== n && x(O.kd[n - 1]);
+function G(e, t) {
+    let n = S.kd.findIndex((e) => e === t);
+    -1 !== n && 0 !== n && f(S.kd[n - 1]);
 }
-async function v(e) {
-    let t = f.A.getGuild(e);
+async function j(e) {
+    let t = h.A.getGuild(e);
     null != t &&
-        (N.A.close(),
+        (g.A.close(),
         (0, u.Tk)(t.id, {
             type: m._.NEW_MEMBER,
             roles: {},
@@ -90,16 +58,9 @@ async function v(e) {
             optInEnabled: !1,
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
-            memberOptions: {
-                isPending: (0, s.Qd)(t),
-                flags: 0,
-            },
+            memberOptions: { isPending: (0, r.Qd)(t), flags: 0 },
         }),
-        o.Ay.resetOnboardingStatus(t.id),
-        (0, d.Jg)(t.id),
-        await (0, d.default)({
-            guildId: t.id,
-            isPreview: !0,
-            returnChannelId: S.VV.GUILD_HOME,
-        }));
+        d.Ay.resetOnboardingStatus(t.id),
+        (0, c.Jg)(t.id),
+        await (0, c.default)({ guildId: t.id, isPreview: !0, returnChannelId: x.VV.GUILD_HOME }));
 }

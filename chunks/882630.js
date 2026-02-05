@@ -1,7 +1,6 @@
 function t(e) {
     if (e) return n(e);
 }
-
 function n(e) {
     for (var n in t.prototype) e[n] = t.prototype[n];
     return e;

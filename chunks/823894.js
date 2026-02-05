@@ -1,11 +1,5 @@
-n.d(t, {
-    BJ: () => l,
-    GX: () => r,
-    LD: () => i,
-    Ny: () => o,
-    lq: () => a,
-    vX: () => s,
-});
+"use strict";
+n.d(t, { BJ: () => l, GX: () => r, LD: () => i, Ny: () => o, lq: () => a, vX: () => s });
 let r = "sticker-picker-tab-panel",
     i = "sticker-picker-tab",
     a = "sticker-picker-grid",

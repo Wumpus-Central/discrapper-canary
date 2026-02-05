@@ -61,223 +61,81 @@ e.exports = function (e) {
             ],
             literal: ["true", "false", "nil"],
         },
-        s = {
-            className: "doctag",
-            begin: "@[A-Za-z]+",
-        },
-        o = {
-            begin: "#<",
-            end: ">",
-        },
+        s = { className: "doctag", begin: "@[A-Za-z]+" },
+        o = { begin: "#<", end: ">" },
         l = [
-            e.COMMENT("#", "$", {
-                contains: [s],
-            }),
-            e.COMMENT("^=begin", "^=end", {
-                contains: [s],
-                relevance: 10,
-            }),
+            e.COMMENT("#", "$", { contains: [s] }),
+            e.COMMENT("^=begin", "^=end", { contains: [s], relevance: 10 }),
             e.COMMENT("^__END__", e.MATCH_NOTHING_RE),
         ],
+        u = { className: "subst", begin: /#\{/, end: /\}/, keywords: a },
         c = {
-            className: "subst",
-            begin: /#\{/,
-            end: /\}/,
-            keywords: a,
-        },
-        u = {
             className: "string",
-            contains: [e.BACKSLASH_ESCAPE, c],
+            contains: [e.BACKSLASH_ESCAPE, u],
             variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                },
-                {
-                    begin: /"/,
-                    end: /"/,
-                },
-                {
-                    begin: /`/,
-                    end: /`/,
-                },
-                {
-                    begin: /%[qQwWx]?\(/,
-                    end: /\)/,
-                },
-                {
-                    begin: /%[qQwWx]?\[/,
-                    end: /\]/,
-                },
-                {
-                    begin: /%[qQwWx]?\{/,
-                    end: /\}/,
-                },
-                {
-                    begin: /%[qQwWx]?</,
-                    end: />/,
-                },
-                {
-                    begin: /%[qQwWx]?\//,
-                    end: /\//,
-                },
-                {
-                    begin: /%[qQwWx]?%/,
-                    end: /%/,
-                },
-                {
-                    begin: /%[qQwWx]?-/,
-                    end: /-/,
-                },
-                {
-                    begin: /%[qQwWx]?\|/,
-                    end: /\|/,
-                },
-                {
-                    begin: /\B\?(\\\d{1,3})/,
-                },
-                {
-                    begin: /\B\?(\\x[A-Fa-f0-9]{1,2})/,
-                },
-                {
-                    begin: /\B\?(\\u\{?[A-Fa-f0-9]{1,6}\}?)/,
-                },
-                {
-                    begin: /\B\?(\\M-\\C-|\\M-\\c|\\c\\M-|\\M-|\\C-\\M-)[\x20-\x7e]/,
-                },
-                {
-                    begin: /\B\?\\(c|C-)[\x20-\x7e]/,
-                },
-                {
-                    begin: /\B\?\\?\S/,
-                },
+                { begin: /'/, end: /'/ },
+                { begin: /"/, end: /"/ },
+                { begin: /`/, end: /`/ },
+                { begin: /%[qQwWx]?\(/, end: /\)/ },
+                { begin: /%[qQwWx]?\[/, end: /\]/ },
+                { begin: /%[qQwWx]?\{/, end: /\}/ },
+                { begin: /%[qQwWx]?</, end: />/ },
+                { begin: /%[qQwWx]?\//, end: /\// },
+                { begin: /%[qQwWx]?%/, end: /%/ },
+                { begin: /%[qQwWx]?-/, end: /-/ },
+                { begin: /%[qQwWx]?\|/, end: /\|/ },
+                { begin: /\B\?(\\\d{1,3})/ },
+                { begin: /\B\?(\\x[A-Fa-f0-9]{1,2})/ },
+                { begin: /\B\?(\\u\{?[A-Fa-f0-9]{1,6}\}?)/ },
+                { begin: /\B\?(\\M-\\C-|\\M-\\c|\\c\\M-|\\M-|\\C-\\M-)[\x20-\x7e]/ },
+                { begin: /\B\?\\(c|C-)[\x20-\x7e]/ },
+                { begin: /\B\?\\?\S/ },
                 {
                     begin: t.concat(/<<[-~]?'?/, t.lookahead(/(\w+)(?=\W)[^\n]*\n(?:[^\n]*\n)*?\s*\1\b/)),
                     contains: [
-                        e.END_SAME_AS_BEGIN({
-                            begin: /(\w+)/,
-                            end: /(\w+)/,
-                            contains: [e.BACKSLASH_ESCAPE, c],
-                        }),
+                        e.END_SAME_AS_BEGIN({ begin: /(\w+)/, end: /(\w+)/, contains: [e.BACKSLASH_ESCAPE, u] }),
                     ],
                 },
             ],
         },
         d = "[1-9](_?[0-9])*|0",
-        f = "[0-9](_?[0-9])*",
-        p = {
+        _ = "[0-9](_?[0-9])*",
+        f = {
             className: "number",
             relevance: 0,
             variants: [
-                {
-                    begin: `\\b(${d})(\\.(${f}))?([eE][+-]?(${f})|r)?i?\\b`,
-                },
-                {
-                    begin: "\\b0[dD][0-9](_?[0-9])*r?i?\\b",
-                },
-                {
-                    begin: "\\b0[bB][0-1](_?[0-1])*r?i?\\b",
-                },
-                {
-                    begin: "\\b0[oO][0-7](_?[0-7])*r?i?\\b",
-                },
-                {
-                    begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b",
-                },
-                {
-                    begin: "\\b0(_?[0-7])+r?i?\\b",
-                },
+                { begin: `\\b(${d})(\\.(${_}))?([eE][+-]?(${_})|r)?i?\\b` },
+                { begin: "\\b0[dD][0-9](_?[0-9])*r?i?\\b" },
+                { begin: "\\b0[bB][0-1](_?[0-1])*r?i?\\b" },
+                { begin: "\\b0[oO][0-7](_?[0-7])*r?i?\\b" },
+                { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b" },
+                { begin: "\\b0(_?[0-7])+r?i?\\b" },
             ],
         },
-        _ = {
+        p = {
             variants: [
-                {
-                    match: /\(\)/,
-                },
-                {
-                    className: "params",
-                    begin: /\(/,
-                    end: /(?=\))/,
-                    excludeBegin: !0,
-                    endsParent: !0,
-                    keywords: a,
-                },
+                { match: /\(\)/ },
+                { className: "params", begin: /\(/, end: /(?=\))/, excludeBegin: !0, endsParent: !0, keywords: a },
             ],
         },
-        h = {
-            match: [/(include|extend)\s+/, i],
-            scope: {
-                2: "title.class",
-            },
-            keywords: a,
-        },
+        h = { match: [/(include|extend)\s+/, i], scope: { 2: "title.class" }, keywords: a },
         m = [
-            u,
+            c,
             {
-                variants: [
-                    {
-                        match: [/class\s+/, i, /\s+<\s+/, i],
-                    },
-                    {
-                        match: [/\b(class|module)\s+/, i],
-                    },
-                ],
-                scope: {
-                    2: "title.class",
-                    4: "title.class.inherited",
-                },
+                variants: [{ match: [/class\s+/, i, /\s+<\s+/, i] }, { match: [/\b(class|module)\s+/, i] }],
+                scope: { 2: "title.class", 4: "title.class.inherited" },
                 keywords: a,
             },
             h,
-            {
-                relevance: 0,
-                match: [i, /\.new[. (]/],
-                scope: {
-                    1: "title.class",
-                },
-            },
-            {
-                relevance: 0,
-                match: /\b[A-Z][A-Z_0-9]+\b/,
-                className: "variable.constant",
-            },
-            {
-                relevance: 0,
-                match: r,
-                scope: "title.class",
-            },
-            {
-                match: [/def/, /\s+/, n],
-                scope: {
-                    1: "keyword",
-                    3: "title.function",
-                },
-                contains: [_],
-            },
-            {
-                begin: e.IDENT_RE + "::",
-            },
-            {
-                className: "symbol",
-                begin: e.UNDERSCORE_IDENT_RE + "(!|\\?)?:",
-                relevance: 0,
-            },
-            {
-                className: "symbol",
-                begin: ":(?!\\s)",
-                contains: [
-                    u,
-                    {
-                        begin: n,
-                    },
-                ],
-                relevance: 0,
-            },
-            p,
-            {
-                className: "variable",
-                begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])",
-            },
+            { relevance: 0, match: [i, /\.new[. (]/], scope: { 1: "title.class" } },
+            { relevance: 0, match: /\b[A-Z][A-Z_0-9]+\b/, className: "variable.constant" },
+            { relevance: 0, match: r, scope: "title.class" },
+            { match: [/def/, /\s+/, n], scope: { 1: "keyword", 3: "title.function" }, contains: [p] },
+            { begin: e.IDENT_RE + "::" },
+            { className: "symbol", begin: e.UNDERSCORE_IDENT_RE + "(!|\\?)?:", relevance: 0 },
+            { className: "symbol", begin: ":(?!\\s)", contains: [c, { begin: n }], relevance: 0 },
+            f,
+            { className: "variable", begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])" },
             {
                 className: "params",
                 begin: /\|(?!=)/,
@@ -293,52 +151,27 @@ e.exports = function (e) {
                 contains: [
                     {
                         className: "regexp",
-                        contains: [e.BACKSLASH_ESCAPE, c],
+                        contains: [e.BACKSLASH_ESCAPE, u],
                         illegal: /\n/,
                         variants: [
-                            {
-                                begin: "/",
-                                end: "/[a-z]*",
-                            },
-                            {
-                                begin: /%r\{/,
-                                end: /\}[a-z]*/,
-                            },
-                            {
-                                begin: "%r\\(",
-                                end: "\\)[a-z]*",
-                            },
-                            {
-                                begin: "%r!",
-                                end: "![a-z]*",
-                            },
-                            {
-                                begin: "%r\\[",
-                                end: "\\][a-z]*",
-                            },
+                            { begin: "/", end: "/[a-z]*" },
+                            { begin: /%r\{/, end: /\}[a-z]*/ },
+                            { begin: "%r\\(", end: "\\)[a-z]*" },
+                            { begin: "%r!", end: "![a-z]*" },
+                            { begin: "%r\\[", end: "\\][a-z]*" },
                         ],
                     },
                 ].concat(o, l),
                 relevance: 0,
             },
         ].concat(o, l);
-    (c.contains = m), (_.contains = m);
+    (u.contains = m), (p.contains = m);
     let g = [
-        {
-            begin: /^\s*=>/,
-            starts: {
-                end: "$",
-                contains: m,
-            },
-        },
+        { begin: /^\s*=>/, starts: { end: "$", contains: m } },
         {
             className: "meta.prompt",
             begin: "^([>?]>|[\\w#]+\\(\\w+\\):\\d+:\\d+[>*]|(\\w+-)?\\d+\\.\\d+\\.\\d+(p\\d+)?[^\\d][^>]+>)(?=[ ])",
-            starts: {
-                end: "$",
-                keywords: a,
-                contains: m,
-            },
+            starts: { end: "$", keywords: a, contains: m },
         },
     ];
     return (
@@ -348,14 +181,7 @@ e.exports = function (e) {
             aliases: ["rb", "gemspec", "podspec", "thor", "irb"],
             keywords: a,
             illegal: /\/\*/,
-            contains: [
-                e.SHEBANG({
-                    binary: "ruby",
-                }),
-            ]
-                .concat(g)
-                .concat(l)
-                .concat(m),
+            contains: [e.SHEBANG({ binary: "ruby" })].concat(g).concat(l).concat(m),
         }
     );
 };

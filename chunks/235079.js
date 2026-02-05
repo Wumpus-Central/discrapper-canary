@@ -1,7 +1,5 @@
-n.d(t, {
-    L: () => i,
-    i: () => r,
-});
+"use strict";
+n.d(t, { L: () => i, i: () => r });
 var r = (function (e) {
     return (
         (e.CLASSIC = "classic"),

@@ -1,7 +1,5 @@
-n.d(t, {
-    z: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { z: () => r });
 let r = {
     Modules: {
         channels: {
@@ -49,38 +47,18 @@ let r = {
             },
         },
         chat: {
-            AVATAR_SIZE: {
-                resolve: () => 40,
-            },
-            INPUT_ICON_SIZE: {
-                resolve: () => 20,
-            },
-            MARKUP_LINE_HEIGHT: {
-                resolve: () => "1.375rem",
-            },
-            RESIZE_HANDLE_WIDTH: {
-                resolve: () => 8,
-            },
+            AVATAR_SIZE: { resolve: () => 40 },
+            INPUT_ICON_SIZE: { resolve: () => 20 },
+            MARKUP_LINE_HEIGHT: { resolve: () => "1.375rem" },
+            RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
         },
         control: {
-            INPUT_HEIGHT_MD: {
-                resolve: () => 40,
-            },
-            INPUT_HEIGHT_SM: {
-                resolve: () => 32,
-            },
-            ITEM_HEIGHT_MD: {
-                resolve: () => 40,
-            },
-            ITEM_HEIGHT_SM: {
-                resolve: () => 32,
-            },
+            INPUT_HEIGHT_MD: { resolve: () => 40 },
+            INPUT_HEIGHT_SM: { resolve: () => 32 },
+            ITEM_HEIGHT_MD: { resolve: () => 40 },
+            ITEM_HEIGHT_SM: { resolve: () => 32 },
         },
-        form: {
-            INPUT_HEIGHT: {
-                resolve: () => 44,
-            },
-        },
+        form: { INPUT_HEIGHT: { resolve: () => 44 } },
         guildbar: {
             AVATAR_SIZE: {
                 resolve(e) {
@@ -118,46 +96,19 @@ let r = {
             },
         },
         icon: {
-            SIZE_LG: {
-                resolve: () => 32,
-            },
-            SIZE_MD: {
-                resolve: () => 24,
-            },
-            SIZE_SM: {
-                resolve: () => 18,
-            },
-            SIZE_XS: {
-                resolve: () => 16,
-            },
-            SIZE_XXS: {
-                resolve: () => 12,
-            },
+            SIZE_LG: { resolve: () => 32 },
+            SIZE_MD: { resolve: () => 24 },
+            SIZE_SM: { resolve: () => 18 },
+            SIZE_XS: { resolve: () => 16 },
+            SIZE_XXS: { resolve: () => 12 },
         },
         modal: {
-            HORIZONTAL_PADDING: {
-                resolve: () => 24,
-            },
-            VERTICAL_PADDING: {
-                resolve: () => 16,
-            },
-            WIDTH_LARGE: {
-                resolve: () => 800,
-            },
-            WIDTH_MEDIUM: {
-                resolve: () => 602,
-            },
-            WIDTH_SMALL: {
-                resolve: () => 442,
-            },
+            HORIZONTAL_PADDING: { resolve: () => 24 },
+            VERTICAL_PADDING: { resolve: () => 16 },
+            WIDTH_LARGE: { resolve: () => 800 },
+            WIDTH_MEDIUM: { resolve: () => 602 },
+            WIDTH_SMALL: { resolve: () => 442 },
         },
-        select: {
-            MAX_WIDTH: {
-                resolve: () => 248,
-            },
-            OPTION_HEIGHT: {
-                resolve: () => 40,
-            },
-        },
+        select: { MAX_WIDTH: { resolve: () => 248 }, OPTION_HEIGHT: { resolve: () => 40 } },
     },
 };

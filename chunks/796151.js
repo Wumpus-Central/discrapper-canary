@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__6e9f8",
     AN: "childWrapper__6e9f8",

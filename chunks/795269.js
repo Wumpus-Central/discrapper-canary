@@ -1,10 +1,5 @@
-n.d(t, {
-    Lj: () => m,
-    R: () => _,
-    at: () => p,
-    ir: () => h,
-    rm: () => g,
-});
+"use strict";
+n.d(t, { Lj: () => m, R: () => p, at: () => f, ir: () => h, rm: () => g });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,11 +7,11 @@ var i = n(503698),
     s = n(827734),
     o = n(397927),
     l = n(511484),
-    c = n(349563),
-    u = n(788868),
+    u = n(349563),
+    c = n(788868),
     d = n(985018),
-    f = n(639179),
-    p = (function (e) {
+    _ = n(639179),
+    f = (function (e) {
         return (
             (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = "PREMIUM_TIER_0_WHITE_FILL"),
             (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = "PREMIUM_TIER_0_GRADIENT_FILL"),
@@ -29,27 +24,26 @@ var i = n(503698),
             e
         );
     })({});
-
-function _(e) {
+function p(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: s, gap: l = !0 } = e;
     return (0, r.jsxs)("div", {
-        className: a()(n, f.Yu, {
-            [f.XW]: 1 === i,
-            [f.Rc]: 3 === i,
-            [f.WY]: 4 === i,
-            [f.mY]: 5 === i,
-            [f.ZC]: 6 === i,
-            [f.u0]: 7 === i,
-            [f._p]: l,
+        className: a()(n, _.Yu, {
+            [_.XW]: 1 === i,
+            [_.Rc]: 3 === i,
+            [_.WY]: 4 === i,
+            [_.mY]: 5 === i,
+            [_.ZC]: 6 === i,
+            [_.u0]: 7 === i,
+            [_._p]: l,
         }),
         children: [
             (0, r.jsx)(o.Text, {
                 variant: "text-xs/bold",
-                className: a()(f.xG, {
-                    [f.wV]: 0 !== i && 2 !== i,
-                    [f.Xm]: 0 === i,
-                    [f.X3]: 2 === i || 6 === i,
-                    [f.kC]: 7 === i,
+                className: a()(_.xG, {
+                    [_.wV]: 0 !== i && 2 !== i,
+                    [_.Xm]: 0 === i,
+                    [_.X3]: 2 === i || 6 === i,
+                    [_.kC]: 7 === i,
                 }),
                 children: t,
             }),
@@ -57,7 +51,6 @@ function _(e) {
         ],
     });
 }
-
 function h(e) {
     let t,
         { text: n, className: i, colorOptions: o = 2, isPillOnBorder: l = !0 } = e;
@@ -66,86 +59,49 @@ function h(e) {
             t = s.A.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
             break;
         case 3:
-            t = "url(#".concat(c.Bp, ")");
+            t = `url(#${u.Bp})`;
             break;
         case 4:
         case 5:
-            t = "url(#".concat(c.G5, ")");
+            t = `url(#${u.G5})`;
             break;
         default:
             t = "white";
     }
     return l
         ? (0, r.jsxs)("div", {
-              className: a()(i, f.ls),
+              className: a()(i, _.ls),
               children: [
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.QX,
-                      color: t,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.J0,
-                      color: t,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.QC,
-                      color: t,
-                  }),
-                  (0, r.jsx)(_, {
-                      text: n,
-                      colorOptions: o,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.JF,
-                      color: t,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.Cm,
-                      color: t,
-                  }),
+                  (0, r.jsx)(u.zF, { foreground: _.QX, color: t }),
+                  (0, r.jsx)(u.zF, { foreground: _.J0, color: t }),
+                  (0, r.jsx)(u.zF, { foreground: _.QC, color: t }),
+                  (0, r.jsx)(p, { text: n, colorOptions: o }),
+                  (0, r.jsx)(u.zF, { foreground: _.JF, color: t }),
+                  (0, r.jsx)(u.zF, { foreground: _.Cm, color: t }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: a()(i, f.ls),
+              className: a()(i, _.ls),
               children: [
-                  (0, r.jsx)(_, {
-                      text: n,
-                      colorOptions: o,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.QX,
-                      style: {
-                          marginLeft: 4,
-                          marginBottom: -6,
-                      },
-                      color: t,
-                  }),
-                  (0, r.jsx)(c.zF, {
-                      foreground: f.J0,
-                      color: t,
-                  }),
+                  (0, r.jsx)(p, { text: n, colorOptions: o }),
+                  (0, r.jsx)(u.zF, { foreground: _.QX, style: { marginLeft: 4, marginBottom: -6 }, color: t }),
+                  (0, r.jsx)(u.zF, { foreground: _.J0, color: t }),
               ],
           });
 }
-
 function m(e, t) {
-    return t === u.pe.TIER_0
+    return t === c.pe.TIER_0
         ? d.intl.string(d.t.IBYG5U)
-        : e === u.PremiumTypes.TIER_0
+        : e === c.PremiumTypes.TIER_0
           ? d.intl.string(d.t.qYKftX)
           : null;
 }
-
 function g(e, t, n, r, i) {
-    if (null != n && (0, l.U9)(n, u.pe.TIER_2) && void 0 !== n.discount.amount)
-        return e
-            ? d.intl.string(d.t.EyjDRE)
-            : d.intl.formatToPlainString(d.t.iiLbvu, {
-                  percent: n.discount.amount,
-              });
-    if (i === u.pe.TIER_2) {
+    if (null != n && (0, l.U9)(n, c.pe.TIER_2) && void 0 !== n.discount.amount)
+        return e ? d.intl.string(d.t.EyjDRE) : d.intl.formatToPlainString(d.t.iiLbvu, { percent: n.discount.amount });
+    if (i === c.pe.TIER_2) {
         let e = d.intl.string(d.t.IBYG5U);
-        return (null == r ? void 0 : r.trial_id) === u.Dw && (e = d.intl.string(d.t.gtNqJQ)), e;
+        return r?.trial_id === c.Dw && (e = d.intl.string(d.t.gtNqJQ)), e;
     }
-    return t === u.PremiumTypes.TIER_2 ? d.intl.string(d.t.qYKftX) : e ? d.intl.string(d.t.EyjDRE) : null;
+    return t === c.PremiumTypes.TIER_2 ? d.intl.string(d.t.qYKftX) : e ? d.intl.string(d.t.EyjDRE) : null;
 }

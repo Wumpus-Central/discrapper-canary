@@ -1,115 +1,81 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048),
-    n(321073);
-var r = n(339048),
-    i = n(830382),
-    l = n(800342),
-    a = n(10716),
+n.d(t, { A: () => p }), n(321073);
+var i = n(339048),
+    r = n(830382),
+    a = n(800342),
+    l = n(10716),
     s = n(143582),
     o = n(147964),
-    c = n(636401),
-    u = n(994717),
-    d = n(613057),
-    p = n(652215);
-async function f(e, t) {
-    let n = t.filter((e) => e.type === p.Puh.SUBSCRIPTION_GROUP),
-        r = await Promise.all(n.map(async (t) => await (0, s.vz)(e, t.id))),
-        i = [];
+    d = n(636401),
+    c = n(994717),
+    u = n(613057),
+    A = n(652215);
+async function h(e, t) {
+    let n = t.filter((e) => e.type === A.Puh.SUBSCRIPTION_GROUP),
+        i = await Promise.all(n.map(async (t) => await (0, s.vz)(e, t.id))),
+        r = [];
     return (
-        r.forEach((e) => {
+        i.forEach((e) => {
             if (null == e) return null;
             let n = e.subscription_listings;
             if (null == n) return null;
-            let r = [];
+            let i = [];
             n.forEach((e) => {
                 e.subscription_plans.forEach((n) => {
-                    var i;
-                    let l = null == n ? void 0 : n.price,
+                    let r = n?.price,
                         a = t.find((e) => e.id === n.sku_id);
                     if (null == a) return;
-                    let s = {
+                    let l = {
                         id: n.sku_id,
                         name: a.name,
                         type: a.type,
-                        price: {
-                            amount: l,
-                            currency: p.Yri.USD,
-                        },
+                        price: { amount: r, currency: A.Yri.USD },
                         application_id: e.application_id,
                         flags: e.sku_flags,
-                        release_date: null != (i = a.release_date) ? i : null,
+                        release_date: a.release_date ?? null,
                     };
-                    r.push(s);
+                    i.push(l);
                 });
             }),
-                r.filter((e) => (null == e ? void 0 : e.price) != null).forEach((e) => i.push(e));
+                i.filter((e) => e?.price != null).forEach((e) => r.push(e));
         }),
-        i
+        r
     );
 }
-async function h(e) {
+async function _(e) {
     let { socket: t } = e;
-    (0, u.C)(t.transport);
+    (0, c.C)(t.transport);
     let n = t.application.id;
-    if (null == n)
-        throw new c.A(
-            {
-                errorCode: p.Lw6.INVALID_COMMAND,
-            },
-            "No application.",
-        );
-    if (o.A.inTestModeForApplication(n) || a.A.inDevModeForApplication(n)) {
-        let e = await i.O1(n, !1),
-            t = await f(n, e);
+    if (null == n) throw new d.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
+    if (o.A.inTestModeForApplication(n) || l.A.inDevModeForApplication(n)) {
+        let e = await r.O1(n, !1),
+            t = await h(n, e);
         return [...e.filter((e) => null != e.price), ...t];
     }
-    let r = await l.JI(n);
+    let i = await a.JI(n);
     return [
-        ...r
-            .filter((e) => e.sku.type !== p.Puh.SUBSCRIPTION_GROUP)
+        ...i
+            .filter((e) => e.sku.type !== A.Puh.SUBSCRIPTION_GROUP)
             .map((e) => e.sku)
             .filter((e) => null != e.price),
-        ...(await f(
+        ...(await h(
             n,
-            r.map((e) => e.sku),
+            i.map((e) => e.sku),
         )),
     ];
 }
-
-function A(e) {
+function m(e) {
     let { socket: t } = e;
-    (0, u.C)(t.transport);
+    (0, c.C)(t.transport);
     let n = t.application.id;
-    if (null == n)
-        throw new c.A(
-            {
-                errorCode: p.Lw6.INVALID_COMMAND,
-            },
-            "No application.",
-        );
-    return r.LM(n);
+    if (null == n) throw new d.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
+    return i.LM(n);
 }
-let g = {
-    [p.e$_.GET_SKUS]: {
-        [d.sm.ANY]: [d.VH, d.hj],
-        handler: h,
-    },
-    [p.e$_.GET_ENTITLEMENTS]: {
-        [d.sm.ANY]: [d.VH, d.hj],
-        handler: A,
-    },
-    [p.e$_.GET_SKUS_EMBEDDED]: {
-        [d.sm.ANY]: [d.VH, d.hj],
-        handler: async (e) => ({
-            skus: await h(e),
-        }),
-    },
-    [p.e$_.GET_ENTITLEMENTS_EMBEDDED]: {
-        [d.sm.ANY]: [d.VH, d.hj],
-        handler: async (e) => ({
-            entitlements: await A(e),
-        }),
+let p = {
+    [A.e$_.GET_SKUS]: { [u.sm.ANY]: [u.VH, u.hj], handler: _ },
+    [A.e$_.GET_ENTITLEMENTS]: { [u.sm.ANY]: [u.VH, u.hj], handler: m },
+    [A.e$_.GET_SKUS_EMBEDDED]: { [u.sm.ANY]: [u.VH, u.hj], handler: async (e) => ({ skus: await _(e) }) },
+    [A.e$_.GET_ENTITLEMENTS_EMBEDDED]: {
+        [u.sm.ANY]: [u.VH, u.hj],
+        handler: async (e) => ({ entitlements: await m(e) }),
     },
 };

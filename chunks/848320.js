@@ -1,3 +1,4 @@
+"use strict";
 var r,
     a,
     o,
@@ -46,9 +47,7 @@ if (!_) {
                 }))
         : ((a = !0),
           (o = g.createTextNode("")),
-          new v(C).observe(o, {
-              characterData: !0,
-          }),
+          new v(C).observe(o, { characterData: !0 }),
           (r = function () {
               o.data = a = !a;
           })),

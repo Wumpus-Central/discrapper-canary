@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(65821);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(743445),
     i = n(407876),
     a = n(358579),
@@ -11,12 +9,7 @@ class o extends i.A {
         super.upload(e);
         let t = new Promise((e, t) => {
                 this.once("error", (e, n, r, i) => {
-                    t({
-                        file: e,
-                        code: n,
-                        responseBody: r,
-                        reason: i,
-                    });
+                    t({ file: e, code: n, responseBody: r, reason: i });
                 }),
                     this.once("complete", () => {
                         this._errored || e(this.files);
@@ -32,23 +25,10 @@ class o extends i.A {
             this.setUploadingTextForUI(), await (0, a.A)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (a) {
             let e = this.files.find((e) => e.status === r.jP.ERROR),
-                t = null == e ? void 0 : e.error,
+                t = e?.error,
                 n = a instanceof Error ? a.message : String(a),
-                i = {
-                    type: s.ty.ERROR_SOURCE_UNKNOWN,
-                    msg: n,
-                };
-            throw (
-                (this._handleError({
-                    code: t,
-                    reason: i,
-                }),
-                {
-                    file: this._file,
-                    code: t,
-                    reason: i,
-                })
-            );
+                i = { type: s.ty.ERROR_SOURCE_UNKNOWN, msg: n };
+            throw (this._handleError({ code: t, reason: i }), { file: this._file, code: t, reason: i });
         }
         return this._handleComplete(), this.files;
     }

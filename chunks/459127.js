@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     formText: "formText_ddd181",
     default: "default_ddd181 formText_ddd181",

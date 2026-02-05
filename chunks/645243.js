@@ -1,10 +1,7 @@
-n.d(t, {
-    O: () => a,
-}),
-    n(65821);
+"use strict";
+n.d(t, { O: () => a });
 var r = n(723702),
     i = n(652215);
-
 function a() {
     switch ((0, r.getPlatform)()) {
         case r.PlatformTypes.WINDOWS:

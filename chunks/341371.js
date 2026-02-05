@@ -1,37 +1,23 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i,
-    s = n(311907),
-    l = n(73153);
-let a = !1,
-    o = null,
-    c = null;
-class u extends (i = s.Ay.Store) {
+"use strict";
+n.d(t, { A: () => c });
+var i = n(311907),
+    s = n(73153);
+let r = !1,
+    l = null,
+    a = null;
+class o extends i.Ay.Store {
+    static displayName = "HubEmailVerificationStore";
     getState() {
-        return {
-            verifySuccess: a,
-            verifyErrors: o,
-            redirectGuildId: c,
-        };
+        return { verifySuccess: r, verifyErrors: l, redirectGuildId: a };
     }
 }
-(r = "displayName") in u
-    ? Object.defineProperty(u, r, {
-          value: "HubEmailVerificationStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (u[r] = "HubEmailVerificationStore");
-let d = new u(l.h, {
+let c = new o(s.h, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
-        (a = !0), (o = null), (c = t);
+        (r = !0), (l = null), (a = t);
     },
     HUB_VERIFY_EMAIL_FAILURE: function (e) {
         let { errors: t } = e;
-        (a = !1), (o = t);
+        (r = !1), (l = t);
     },
 });

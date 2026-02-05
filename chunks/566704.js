@@ -1,38 +1,34 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(492834);
-var r = n(64700),
-    a = n(927813),
-    l = n(218394),
-    i = n(665171);
-let s = 30 * a.A.Millis.SECOND,
-    c = 5 * a.A.Millis.SECOND;
-
-function o(e) {
-    let t = (0, l.j)();
-    r.useEffect(() => {
+n.d(t, { A: () => d });
+var a = n(64700),
+    i = n(927813),
+    s = n(218394),
+    r = n(665171);
+let l = 30 * i.A.Millis.SECOND,
+    o = 5 * i.A.Millis.SECOND;
+function d(e) {
+    let t = (0, s.j)();
+    a.useEffect(() => {
         if (null == e) return;
         let n = !0,
-            r = null,
-            a = 0,
-            l = () =>
+            a = null,
+            i = 0,
+            s = () =>
                 setTimeout(
                     () => {
                         t &&
-                            ((r = new AbortController()),
-                            (0, i.cq)(e, !1, r.signal)
-                                .then(() => (a = 0))
-                                .catch(() => (a = Math.min(a + 1, 4)))
+                            ((a = new AbortController()),
+                            (0, r.cq)(e, !1, a.signal)
+                                .then(() => (i = 0))
+                                .catch(() => (i = Math.min(i + 1, 4)))
                                 .finally(() => {
-                                    n && (o = l());
+                                    n && (d = s());
                                 }));
                     },
-                    s * Math.pow(2, a) + Math.random() * c,
+                    l * Math.pow(2, i) + Math.random() * o,
                 ),
-            o = l();
+            d = s();
         return () => {
-            (n = !1), null == r || r.abort(), clearTimeout(o);
+            (n = !1), a?.abort(), clearTimeout(d);
         };
     }, [e, t]);
 }

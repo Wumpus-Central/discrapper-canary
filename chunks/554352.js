@@ -1,12 +1,8 @@
-n.d(t, {
-    $$: () => a,
-    kr: () => i,
-    mS: () => s,
-});
+"use strict";
+n.d(t, { $$: () => a, kr: () => i, mS: () => s });
 var r = n(64700),
     i = r.createContext(),
     a = r.createContext();
-
 function s(e) {
     var t = e.children,
         n = r.useState(null),
@@ -18,20 +14,8 @@ function s(e) {
             l.current = !0;
         };
     }, []);
-    var c = r.useCallback(function (e) {
+    var u = r.useCallback(function (e) {
         l.current || o(e);
     }, []);
-    return r.createElement(
-        i.Provider,
-        {
-            value: s,
-        },
-        r.createElement(
-            a.Provider,
-            {
-                value: c,
-            },
-            t,
-        ),
-    );
+    return r.createElement(i.Provider, { value: s }, r.createElement(a.Provider, { value: u }, t));
 }

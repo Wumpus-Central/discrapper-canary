@@ -1,36 +1,37 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(938796);
+"use strict";
+n.d(t, { A: () => d }), n(938796);
 var r = n(989349),
     i = n.n(r),
     a = n(665260),
     s = n(315069),
     o = n(835095),
     l = n(832946),
-    c = n(788868);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = Object.freeze({
+    u = n(788868);
+let c = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class f extends s.A {
+class d extends s.A {
+    userId;
+    code;
+    skuId;
+    applicationId;
+    uses;
+    maxUses;
+    expiresAt;
+    redeemed;
+    storeListingId;
+    subscriptionPlanId;
+    subscriptionPlan;
+    revoked;
+    entitlementBranches;
+    flags;
+    subscriptionTrial;
+    promotion;
+    giftStyle;
     static createFromServer(e) {
-        return new f({
+        return new d({
             userId: null != e.user ? e.user.id : null,
             code: e.code,
             skuId: e.sku_id,
@@ -58,59 +59,8 @@ class f extends s.A {
             promotion: null != e.promotion ? o.A.createFromServer(e.promotion) : null,
         });
     }
-    isExpired() {
-        let e = this.expiresAt;
-        return null != e && i()().isAfter(e);
-    }
-    get hasMultipleCopies() {
-        return this.maxUses > 1;
-    }
-    get isClaimed() {
-        return this.uses >= this.maxUses;
-    }
-    get remainingUses() {
-        return this.maxUses - this.uses;
-    }
-    get isSubscription() {
-        return null != this.subscriptionPlanId;
-    }
-    get premiumSubscriptionType() {
-        return (this.isSubscription && c.WN[this.skuId]) || null;
-    }
-    get isSelfRedeemable() {
-        return !(0, a.Lt)(this.flags, d.NOT_SELF_REDEEMABLE);
-    }
-    get isExistingPremiumSubscriptionDisallowed() {
-        return (0, a.Lt)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
-    }
-    get analyticsData() {
-        return {
-            gift_code: this.code,
-            gift_code_max_uses: this.maxUses,
-        };
-    }
-    toString() {
-        return this.code;
-    }
     constructor(e) {
         super(),
-            u(this, "userId", void 0),
-            u(this, "code", void 0),
-            u(this, "skuId", void 0),
-            u(this, "applicationId", void 0),
-            u(this, "uses", void 0),
-            u(this, "maxUses", void 0),
-            u(this, "expiresAt", void 0),
-            u(this, "redeemed", void 0),
-            u(this, "storeListingId", void 0),
-            u(this, "subscriptionPlanId", void 0),
-            u(this, "subscriptionPlan", void 0),
-            u(this, "revoked", void 0),
-            u(this, "entitlementBranches", void 0),
-            u(this, "flags", void 0),
-            u(this, "subscriptionTrial", void 0),
-            u(this, "promotion", void 0),
-            u(this, "giftStyle", void 0),
             (this.userId = e.userId),
             (this.code = e.code),
             (this.skuId = e.skuId),
@@ -128,5 +78,36 @@ class f extends s.A {
             (this.subscriptionTrial = e.subscriptionTrial),
             (this.promotion = e.promotion),
             (this.giftStyle = e.giftStyle);
+    }
+    isExpired() {
+        let e = this.expiresAt;
+        return null != e && i()().isAfter(e);
+    }
+    get hasMultipleCopies() {
+        return this.maxUses > 1;
+    }
+    get isClaimed() {
+        return this.uses >= this.maxUses;
+    }
+    get remainingUses() {
+        return this.maxUses - this.uses;
+    }
+    get isSubscription() {
+        return null != this.subscriptionPlanId;
+    }
+    get premiumSubscriptionType() {
+        return (this.isSubscription && u.WN[this.skuId]) || null;
+    }
+    get isSelfRedeemable() {
+        return !(0, a.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
+    }
+    get isExistingPremiumSubscriptionDisallowed() {
+        return (0, a.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    }
+    get analyticsData() {
+        return { gift_code: this.code, gift_code_max_uses: this.maxUses };
+    }
+    toString() {
+        return this.code;
     }
 }

@@ -1,205 +1,108 @@
-n.d(t, {
-    A: () => w,
-}),
-    n(896048),
-    n(733351);
+"use strict";
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(3203),
     l = n(397927),
-    c = n(308528),
-    u = n(688810),
+    u = n(308528),
+    c = n(688810),
     d = n(355622),
-    f = n(408018),
-    p = n(133343),
-    _ = n(195880),
+    _ = n(408018),
+    f = n(133343),
+    p = n(195880),
     h = n(45787),
     m = n(95701),
     g = n(562153),
     E = n(183555),
-    b = n(448613),
-    y = n(633572),
-    O = n(652215),
-    A = n(788868),
-    v = n(985018),
-    S = n(787288);
-
-function I(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                I(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function C(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function N(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let R = (0, m.createChannelRecord)({
-    id: "1",
-    type: O.rbe.DM,
-});
-
-function w(e) {
-    let { user: t, guildId: a, channelId: m, onClose: O, disableAutoFocus: I = !1, upsell: C = !1 } = e,
-        { newestAnalyticsLocation: w, analyticsLocations: P } = (0, u.Ay)(),
+    A = n(448613),
+    I = n(633572),
+    T = n(652215),
+    y = n(788868),
+    S = n(985018),
+    v = n(787288);
+let C = (0, m.createChannelRecord)({ id: "1", type: T.rbe.DM });
+function b(e) {
+    let { user: t, guildId: a, channelId: m, onClose: T, disableAutoFocus: b = !1, upsell: N = !1 } = e,
+        { newestAnalyticsLocation: R, analyticsLocations: O } = (0, c.Ay)(),
         { trackUserProfileAction: D } = (0, E.NJ)(),
-        [x, L] = i.useState(""),
-        [j, M] = i.useState((0, f.x7)(x)),
-        k = i.useRef(!1),
+        [L, w] = i.useState(""),
+        [x, P] = i.useState((0, _.x7)(L)),
+        M = i.useRef(!1),
+        k = i.useRef(null),
         U = i.useRef(null),
-        G = i.useRef(null),
-        { Component: V } = (0, o.V)(),
-        F = i.useMemo(
-            () =>
-                N(T({}, d.oU.USER_PROFILE), {
-                    disableAutoFocus: I,
-                }),
-            [I],
-        ),
-        B = i.useCallback(async () => {
+        { Component: G } = (0, o.V)(),
+        V = i.useMemo(() => ({ ...d.oU.USER_PROFILE, disableAutoFocus: b }), [b]),
+        F = i.useCallback(async () => {
             (0, h.xs)(t.id),
-                await c.A.openPrivateChannel({
-                    recipientIds: [t.id],
-                }),
+                await u.A.openPrivateChannel({ recipientIds: [t.id] }),
                 (0, l.mMO)(async () => {
                     let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                     return (t) =>
-                        (0, r.jsx)(
-                            e,
-                            N(T({}, t), {
-                                giftIntentType: A.np.FRIEND_ANNIVERSARY,
-                                analyticsLocationHistory: P,
-                            }),
-                        );
+                        (0, r.jsx)(e, { ...t, giftIntentType: y.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: O });
                 });
-        }, [t.id, P]),
-        H = i.useCallback(
+        }, [t.id, O]),
+        B = i.useCallback(
             () =>
                 (0, r.jsxs)("div", {
-                    className: S.Uo,
+                    className: v.Uo,
                     children: [
                         (0, r.jsx)(l.K0, {
                             size: "sm",
                             variant: "icon-only",
-                            icon: V,
-                            "aria-label": v.intl.string(v.t.I61IsE),
-                            onClick: B,
+                            icon: G,
+                            "aria-label": S.intl.string(S.t.I61IsE),
+                            onClick: F,
                         }),
-                        (0, r.jsx)(y.A, {
-                            user: t,
-                            analyticsLocations: P,
-                        }),
+                        (0, r.jsx)(I.A, { user: t, analyticsLocations: O }),
                     ],
                 }),
-            [V, B, t, P],
+            [G, F, t, O],
         );
-    return (0, r.jsx)(p.Ay, {
-        className: s()(S.kL, {
-            [S.UX]: C,
-        }),
-        editorClassName: S.EN,
-        type: F,
-        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], {
-            name: g.Ay.getName(a, m, t),
-        }),
-        channel: R,
-        textValue: x,
-        richValue: j,
+    return (0, r.jsx)(f.Ay, {
+        className: s()(v.kL, { [v.UX]: N }),
+        editorClassName: v.EN,
+        type: V,
+        placeholder: S.intl.formatToPlainString(S.t["0ZQw/X"], { name: g.Ay.getName(a, m, t) }),
+        channel: C,
+        textValue: L,
+        richValue: x,
         onChange: (e, t, n) => {
-            t !== x && (L(t), M(n));
+            t !== L && (w(t), P(n));
         },
-        focused: k.current,
+        focused: M.current,
         onFocus: () => {
-            k.current = !0;
+            M.current = !0;
         },
         onBlur: () => {
-            k.current = !1;
+            M.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e,
                 r = n.trim();
-            if ("" === r)
-                return {
-                    shouldClear: !1,
-                    shouldRefocus: !0,
-                };
-            (U.current !== r || null == G.current) && ((U.current = r), (G.current = (0, _.m)()));
+            if ("" === r) return { shouldClear: !1, shouldRefocus: !0 };
+            (k.current !== r || null == U.current) && ((k.current = r), (U.current = (0, p.m)()));
             try {
-                var i;
                 return (
-                    D({
-                        action: "SEND_DIRECT_MESSAGE",
-                    }),
-                    await (0, b.p)({
+                    D({ action: "SEND_DIRECT_MESSAGE" }),
+                    await (0, A.p)({
                         userId: t.id,
                         content: r,
                         openChannel: !0,
                         whenReady: !0,
-                        location: w,
-                        nonce: null != (i = G.current) ? i : void 0,
+                        location: R,
+                        nonce: U.current ?? void 0,
                     }),
+                    (k.current = null),
                     (U.current = null),
-                    (G.current = null),
-                    null == O || O(),
-                    {
-                        shouldClear: !0,
-                        shouldRefocus: !1,
-                    }
+                    T?.(),
+                    { shouldClear: !0, shouldRefocus: !1 }
                 );
-            } catch (e) {
-                return {
-                    shouldClear: !1,
-                    shouldRefocus: !1,
-                };
+            } catch {
+                return { shouldClear: !1, shouldRefocus: !1 };
             }
         },
-        renderButtons: C ? H : void 0,
+        renderButtons: N ? B : void 0,
     });
 }

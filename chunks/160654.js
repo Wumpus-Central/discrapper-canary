@@ -1,3 +1,1 @@
-e.exports = {
-    tp: "table_b4ec0b",
-};
+e.exports = { tp: "table_b4ec0b" };

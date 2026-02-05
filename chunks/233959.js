@@ -1,23 +1,21 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(111162),
-    i = n(84002),
-    l = n(603265),
-    a = n(652215);
+n.d(t, { A: () => s });
+var i = n(111162),
+    r = n(84002),
+    a = n(603265),
+    l = n(652215);
 let s = (e) => {
-    let { origin: t, postMessageToRPCClient: n, frameId: s, version: o, encoding: c, logger: u, postClose: d } = e;
-    return new l.A({
+    let { origin: t, postMessageToRPCClient: n, frameId: s, version: o, encoding: d, logger: c, postClose: u } = e;
+    return new a.A({
         origin: t,
         postMessageToRPCClient: n,
         frameId: s,
         version: o,
-        encoding: c,
-        logger: u,
-        postClose: d,
+        encoding: d,
+        logger: c,
+        postClose: u,
         onSendingToRPCClient: (e, t) => {
-            (r.default.isLoggingOverlayEvents || (e.cmd !== a.e$_.OVERLAY && e.evt !== a.ZE4.OVERLAY)) &&
-                u.info("Socket Emit: ".concat(t), (0, i.A)(e));
+            (i.default.isLoggingOverlayEvents || (e.cmd !== l.e$_.OVERLAY && e.evt !== l.ZE4.OVERLAY)) &&
+                c.info(`Socket Emit: ${t}`, (0, r.A)(e));
         },
     });
 };

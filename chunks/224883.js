@@ -1,12 +1,8 @@
-i.d(t, {
-    default: () => a,
-}),
-    i(457529);
+i.d(t, { default: () => a });
 var l = i(627968);
 i(64700);
 var n = i(158954),
     s = i(397927);
-
 function a(e) {
     let { clip: t, onClose: i, transitionState: a } = e;
     return (0, l.jsx)(n.Modal, {
@@ -14,13 +10,7 @@ function a(e) {
         onClose: i,
         title: "Clip Debug",
         size: "md",
-        actions: [
-            {
-                text: "Close",
-                variant: "secondary",
-                onClick: i,
-            },
-        ],
+        actions: [{ text: "Close", variant: "secondary", onClick: i }],
         children: (0, l.jsxs)(s.nVY, {
             label: "Decision",
             children: [

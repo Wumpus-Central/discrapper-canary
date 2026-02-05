@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(683570),
     s = e(512008),
@@ -7,11 +8,7 @@ var n = e(834647),
     a = u("string-to-symbol-registry"),
     f = u("symbol-to-string-registry");
 n(
-    {
-        target: "Symbol",
-        stat: !0,
-        forced: !c,
-    },
+    { target: "Symbol", stat: !0, forced: !c },
     {
         for: function (t) {
             var r = i(t);

@@ -1,6 +1,5 @@
-n.d(t, {
-    Cl: () => r,
-});
+"use strict";
+n.d(t, { Cl: () => r });
 var r = function () {
     return (r =
         Object.assign ||

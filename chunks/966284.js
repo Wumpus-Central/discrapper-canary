@@ -1,6 +1,4 @@
-n.d(t, {
-    Z: () => a,
-});
+n.d(t, { Z: () => a });
 class a {
     static getSiteKey(e) {
         return null != e
@@ -10,19 +8,19 @@ class a {
               : "6LdtfVMqAAAAAMurhtf2pDhK0oqD4eLqeQPh025y";
     }
     static loadRecaptchaScript(e, t, n) {
-        if (null != document.getElementById("recaptcha-script-".concat(this.getSiteKey(e)))) {
-            null != t && (null == n || n("recaptcha-element-exists-callback"), t());
+        if (null != document.getElementById(`recaptcha-script-${this.getSiteKey(e)}`)) {
+            null != t && (n?.("recaptcha-element-exists-callback"), t());
             return;
         }
         let a = document.createElement("script");
-        (a.src = "https://www.google.com/recaptcha/enterprise.js?render=".concat(this.getSiteKey(e))),
-            (a.id = "recaptcha-script-".concat(this.getSiteKey(e))),
+        (a.src = `https://www.google.com/recaptcha/enterprise.js?render=${this.getSiteKey(e)}`),
+            (a.id = `recaptcha-script-${this.getSiteKey(e)}`),
             (a.async = !0),
             (a.defer = !0),
             document.body.appendChild(a),
             null != t &&
                 (a.onload = () => {
-                    null == n || n("recaptcha-script-onload-callback"), t();
+                    n?.("recaptcha-script-onload-callback"), t();
                 });
     }
 }

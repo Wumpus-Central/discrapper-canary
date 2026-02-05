@@ -8,33 +8,25 @@ var s,
                   return e && "function" == typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
               };
 (s = function (e) {
+    "use strict";
     function i(e, i) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return i && ((void 0 === i ? "undefined" : t(i)) === "object" || "function" == typeof i) ? i : e;
     }
-
     function s(e, i) {
         if ("function" != typeof i && null !== i)
             throw TypeError(
                 "Super expression must either be null or a function, not " + (void 0 === i ? "undefined" : t(i)),
             );
         (e.prototype = Object.create(i && i.prototype, {
-            constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
         })),
             i && (Object.setPrototypeOf ? Object.setPrototypeOf(e, i) : (e.__proto__ = i));
     }
-
     function r(e, i) {
         if (!(e instanceof i)) throw TypeError("Cannot call a class as a function");
     }
-    Object.defineProperty(e, "__esModule", {
-        value: !0,
-    }),
+    Object.defineProperty(e, "__esModule", { value: !0 }),
         (e.newStemmer = function (e) {
             var i = new {
                 arabic: _,

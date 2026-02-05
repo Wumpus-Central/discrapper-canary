@@ -1,106 +1,62 @@
-n.d(t, {
-    $t: () => m,
-    AX: () => d,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(65821);
-var l = n(64700),
-    i = n(835245),
-    a = n(602674),
-    r = n(236972),
-    s = n(335416);
-let u = new Worker(new URL("/assets/" + n.u("58777"), n.b)),
-    o = (0, a.v)();
-async function c(e) {
+l.d(t, { $t: () => f, AX: () => c }), l(323874), l(14289), l(35956);
+var n = l(64700),
+    a = l(835245),
+    i = l(602674),
+    s = l(236972),
+    r = l(335416);
+let u = new Worker(new URL("/assets/" + l.u("58777"), l.b)),
+    o = (0, i.v)();
+async function d(e) {
     if (null == o) throw Error("Failed to create audio context");
     let t = await e.arrayBuffer();
     return (await o.decodeAudioData(t)).getChannelData(0);
 }
-
-function d(e) {
-    let [t, n] = l.useState(null),
-        [i, a] = l.useState(null);
+function c(e) {
+    let [t, l] = n.useState(null),
+        [a, i] = n.useState(null);
     return (
-        l.useEffect(() => {
+        n.useEffect(() => {
             if (null == e) return;
-            let t = (0, s.Ux)(e);
-            t !== i && (a(t), n(null), c(e).then(n));
-        }, [i, e]),
+            let t = (0, r.Ux)(e);
+            t !== a && (i(t), l(null), d(e).then(l));
+        }, [a, e]),
         t
     );
 }
-let f = (function (e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-})({}, s.Jh);
-
-function m(e, t, n) {
-    let [a, o] = l.useState(null),
-        [c, d] = l.useState(null),
-        [m, g] = l.useState(1),
-        { setMaxVolume: h } = (0, r.L)(),
-        v = l.useCallback(
+let m = { ...r.Jh };
+function f(e, t, l) {
+    let [i, o] = n.useState(null),
+        [d, c] = n.useState(null),
+        [f, h] = n.useState(1),
+        { setMaxVolume: g } = (0, s.L)(),
+        x = n.useCallback(
             (e, t) => {
-                var l;
-                d(null),
-                    ((l = t.offsetWidth),
+                var n;
+                c(null),
+                    ((n = t.offsetWidth),
                     new Promise((t) => {
-                        let a = (0, i.A)(),
-                            r = (e) => {
+                        let i = (0, a.A)(),
+                            s = (e) => {
                                 let {
-                                    data: { waveform: n, id: l, normalizedVolumeMultipler: i },
+                                    data: { waveform: l, id: n, normalizedVolumeMultipler: a },
                                 } = e;
-                                a === l && (t(n), g(i)), null == u || u.removeEventListener("message", r);
+                                i === n && (t(l), h(a)), u?.removeEventListener("message", s);
                             };
-                        null == u || u.addEventListener("message", r),
-                            null == u ||
-                                u.postMessage({
-                                    id: a,
-                                    options: n,
-                                    config: f,
-                                    width: l,
-                                    rawBufferData: e,
-                                });
-                    })).then(d);
+                        u?.addEventListener("message", s),
+                            u?.postMessage({ id: i, options: l, config: m, width: n, rawBufferData: e });
+                    })).then(c);
             },
-            [n],
+            [l],
         );
     return (
-        l.useEffect(() => {
+        n.useEffect(() => {
             if (null == e || null == t) return;
-            let l = (0, s.HL)(e, n);
-            a !== l && (o(l), v(e, t));
-        }, [e, v, t, n, a]),
-        l.useEffect(() => {
-            h(m);
-        }, [m, h]),
-        c
+            let n = (0, r.HL)(e, l);
+            i !== n && (o(n), x(e, t));
+        }, [e, x, t, l, i]),
+        n.useEffect(() => {
+            g(f);
+        }, [f, g]),
+        d
     );
 }

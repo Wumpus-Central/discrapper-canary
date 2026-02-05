@@ -1,39 +1,26 @@
-n.d(t, {
-    A: () => b,
-    B: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => f, B: () => A });
 var i = n(627968);
 n(64700);
-var r = n(554146),
-    s = n(397927),
-    l = n(684013),
-    o = n(684748),
-    a = n(160761),
-    c = n(994322),
-    d = n(672396),
+var s = n(554146),
+    l = n(397927),
+    a = n(684013),
+    r = n(684748),
+    o = n(160761),
+    d = n(994322),
+    c = n(672396),
     u = n(49999),
     h = n(985018),
     p = n(199563);
-
-function f() {
-    let e = (0, c.A)({
-            location: "Overlay",
-            options: {
-                autoTrackExposure: !1,
-            },
-        }),
-        [t, n] = (0, a.DP)(e ? [r.M.OVERLAY_KEYBIND_NOTIFICATION] : []);
-    return {
-        showKeybindIndicators: null != t && e,
-        dismissKeybindNotification: n,
-    };
+function A() {
+    let e = (0, d.A)({ location: "Overlay", options: { autoTrackExposure: !1 } }),
+        [t, n] = (0, o.DP)(e ? [s.M.OVERLAY_KEYBIND_NOTIFICATION] : []);
+    return { showKeybindIndicators: null != t && e, dismissKeybindNotification: n };
 }
-
-function b(e) {
+function f(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: r } = (0, o.Y)(d.KS.KeybindIndicatorsNotification, {
-            notif_type: d.KS.KeybindIndicatorsNotification,
+        { trackView: n, trackClick: s } = (0, r.Y)(c.KS.KeybindIndicatorsNotification, {
+            notif_type: c.KS.KeybindIndicatorsNotification,
         });
     return {
         icon: null,
@@ -42,21 +29,13 @@ function b(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: p.z,
-                    children: (0, i.jsx)(s.cNw, {
-                        size: "custom",
-                        color: "currentColor",
-                        height: 28,
-                        width: 28,
-                    }),
+                    children: (0, i.jsx)(l.cNw, { size: "custom", color: "currentColor", height: 28, width: 28 }),
                 }),
-                (0, i.jsx)(s.Text, {
-                    variant: "text-sm/normal",
-                    children: h.intl.string(h.t.EFRNtK),
-                }),
+                (0, i.jsx)(l.Text, { variant: "text-sm/normal", children: h.intl.string(h.t.EFRNtK) }),
             ],
         }),
         onDismissClick: (e, n) => {
-            r("dismiss"), t(u.i.DISMISS), l.A.updateNotificationStatus(n);
+            s("dismiss"), t(u.i.DISMISS), a.A.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(u.i.AUTO_DISMISS), n();

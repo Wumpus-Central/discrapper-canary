@@ -1,4 +1,3 @@
-n.d(t, {
-    O: () => r,
-});
+"use strict";
+n.d(t, { O: () => r });
 let r = globalThis;

@@ -1,27 +1,23 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(735438),
     i = n(430452),
     a = n(977997),
     s = n(607567),
     o = n(731854);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c {
+class l {
+    userId;
+    channelId;
+    maxVoiceStateCount = 1;
+    totalParticipants = new Set();
+    speaking = o.ME.NONE;
+    maxListenerCount = 0;
+    totalListeners = new Set();
+    maxSpeakerCount = 0;
+    totalSpeakers = {};
+    constructor(e, t) {
+        (this.userId = e), this.setChannelId(t);
+    }
     updateVoiceStates(e, t) {
         t === this.channelId
             ? (this.totalParticipants.add(e),
@@ -85,18 +81,5 @@ class c {
             (this.totalListeners = new Set()),
             (this.maxSpeakerCount = 0),
             (this.totalSpeakers = {});
-    }
-    constructor(e, t) {
-        l(this, "userId", void 0),
-            l(this, "channelId", void 0),
-            l(this, "maxVoiceStateCount", 1),
-            l(this, "totalParticipants", new Set()),
-            l(this, "speaking", o.ME.NONE),
-            l(this, "maxListenerCount", 0),
-            l(this, "totalListeners", new Set()),
-            l(this, "maxSpeakerCount", 0),
-            l(this, "totalSpeakers", {}),
-            (this.userId = e),
-            this.setChannelId(t);
     }
 }

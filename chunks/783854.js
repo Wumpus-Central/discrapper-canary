@@ -1,21 +1,7 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    T: () => a,
-}),
-    n(65821);
-class i {
+"use strict";
+n.d(t, { T: () => i });
+class r {
+    callback = null;
     raise(e) {
         throw e;
     }
@@ -24,63 +10,37 @@ class i {
     }
     databaseOpen(e, t, n) {
         let r = 'kv_storage: platform "web" is not supported at this time.';
-        if (null == n ? void 0 : n.synchronous) throw Error(r);
-        return this.reply({
-            requestId: e,
-            synchronous: !1,
-            ok: !1,
-            data: r,
-        });
+        if (n?.synchronous) throw Error(r);
+        return this.reply({ requestId: e, synchronous: !1, ok: !1, data: r });
     }
     databaseList(e, t) {
-        return this.reply({
-            requestId: e,
-            synchronous: null == t ? void 0 : t.synchronous,
-            ok: !0,
-            data: [],
-        });
+        return this.reply({ requestId: e, synchronous: t?.synchronous, ok: !0, data: [] });
     }
     databaseDelete(e, t, n) {
-        return this.reply({
-            requestId: e,
-            synchronous: null == n ? void 0 : n.synchronous,
-            ok: !0,
-            data: void 0,
-        });
+        return this.reply({ requestId: e, synchronous: n?.synchronous, ok: !0, data: void 0 });
     }
     databaseOptimize(e, t, n) {
-        return this.reply({
-            requestId: e,
-            synchronous: null == n ? void 0 : n.synchronous,
-            ok: !0,
-            data: void 0,
-        });
+        return this.reply({ requestId: e, synchronous: n?.synchronous, ok: !0, data: void 0 });
     }
     reply(e) {
         if (e.synchronous) return e.data;
         if (null != e.requestId) {
-            var t, n;
-            let r = 0;
-            null == (t = (n = this).callback) ||
-                t.call(
-                    n,
-                    {
-                        id: e.requestId,
-                        ok: e.ok,
-                        data: e.data,
-                        timings: {
-                            queueTimeNanoseconds: 0,
-                            executionTimeNanoseconds: 0,
-                            materializationTimeNanoseconds: 0,
-                            totalTimeNanoseconds: 0,
-                        },
+            let t = 0;
+            this.callback?.(
+                {
+                    id: e.requestId,
+                    ok: e.ok,
+                    data: e.data,
+                    timings: {
+                        queueTimeNanoseconds: 0,
+                        executionTimeNanoseconds: 0,
+                        materializationTimeNanoseconds: 0,
+                        totalTimeNanoseconds: 0,
                     },
-                    r,
-                );
+                },
+                t,
+            );
         }
     }
-    constructor() {
-        r(this, "callback", null);
-    }
 }
-let a = new i();
+let i = new r();

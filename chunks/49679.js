@@ -1,9 +1,9 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
-
     function r(e, t, n, r) {
         var a = "";
         switch (n) {
@@ -38,7 +38,6 @@
         }
         return i(e, r) + " " + a;
     }
-
     function i(e, r) {
         return e < 10 ? (r ? n[e] : t[e]) : e;
     }
@@ -88,9 +87,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

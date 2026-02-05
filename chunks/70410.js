@@ -1,17 +1,6 @@
 e.exports = function (e) {
-    let t = {
-            className: "string",
-            begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/,
-        },
-        n = {
-            className: "string",
-            variants: [
-                {
-                    begin: '"',
-                    end: '"',
-                },
-            ],
-        },
+    let t = { className: "string", begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/ },
+        n = { className: "string", variants: [{ begin: '"', end: '"' }] },
         r = {
             className: "function",
             beginKeywords: "def",

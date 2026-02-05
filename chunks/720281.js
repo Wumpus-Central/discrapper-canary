@@ -1,49 +1,45 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(311907),
+var s = n(311907),
     l = n(990078),
-    s = n(397927),
+    r = n(397927),
     a = n(615900),
-    c = n(260509),
-    o = n(287809),
-    d = n(985018),
+    o = n(260509),
+    d = n(287809),
+    c = n(985018),
     u = n(552873);
-
-function f(e) {
+function m(e) {
     let { guild: t } = e,
-        n = (0, i.bG)([o.default], () => {
-            let e = o.default.getCurrentUser();
-            return (0, c.bM)(t, e);
+        n = (0, s.bG)([d.default], () => {
+            let e = d.default.getCurrentUser();
+            return (0, o.bM)(t, e);
         });
-    return (0, r.jsxs)(s.BJc, {
+    return (0, i.jsxs)(r.BJc, {
         gap: 24,
         className: u.k,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                children: d.intl.string(d.t.Ms33Ds),
+                children: c.intl.string(c.t.Ms33Ds),
             }),
-            (0, r.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                children: d.intl.string(d.t.xK7oic),
+                children: c.intl.string(c.t.xK7oic),
             }),
-            (0, r.jsx)(l.m, {
-                text: d.intl.string(d.t.VAIHXQ),
+            (0, i.jsx)(l.m, {
+                text: c.intl.string(c.t.VAIHXQ),
                 shouldShow: !n,
-                children: (0, r.jsx)("div", {
-                    children: (0, r.jsx)(s.Button, {
+                children: (0, i.jsx)("div", {
+                    children: (0, i.jsx)(r.Button, {
                         variant: "primary",
-                        text: d.intl.string(d.t.ZXeJbS),
+                        text: c.intl.string(c.t.ZXeJbS),
                         disabled: !n,
                         onClick: () => {
-                            (0, a.h)(t.id, {
-                                demonetized: !0,
-                            });
+                            (0, a.h)(t.id, { demonetized: !0 });
                         },
                     }),
                 }),

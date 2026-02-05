@@ -1,208 +1,109 @@
-n.d(t, {
-    A: () => Y,
-}),
-    n(228524),
-    n(864466),
-    n(443073),
-    n(896048);
+"use strict";
+n.d(t, { A: () => F });
 var r = n(627968),
     i = n(64700),
     a = n(284009),
     s = n.n(a),
     o = n(735438),
     l = n.n(o),
-    c = n(311907),
-    u = n(827734),
+    u = n(311907),
+    c = n(827734),
     d = n(990078),
-    f = n(582754),
-    p = n(421380),
-    _ = n(397927),
+    _ = n(582754),
+    f = n(421380),
+    p = n(397927),
     h = n(686956),
     m = n(730134),
     g = n(736653),
     E = n(573648),
-    b = n(58149),
-    y = n(688810),
-    O = n(709066),
-    A = n(657331),
-    v = n(427157),
-    S = n(696451),
-    I = n(954571),
-    T = n(370480),
-    C = n(633452),
-    N = n(600260),
-    R = n(63104),
-    w = n(355971),
-    P = n(293260),
-    D = n(783419),
+    A = n(58149),
+    I = n(688810),
+    T = n(709066),
+    y = n(657331),
+    S = n(427157),
+    v = n(696451),
+    C = n(954571),
+    b = n(370480),
+    N = n(633452),
+    R = n(600260),
+    O = n(63104),
+    D = n(355971),
+    L = n(293260),
+    w = n(783419),
     x = n(652215),
-    L = n(518477),
-    j = n(985018),
-    M = n(628972);
-
-function k(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
+    P = n(518477),
+    M = n(985018),
+    k = n(628972);
 function U(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                k(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function G(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function V(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : G(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function F(e) {
     let t,
         { connectionType: n, connectionMetadataField: i, operator: a, value: s, description: o } = e;
     if (null != o)
         switch (a) {
-            case D.so.LESS_THAN:
-                t = j.intl.format(j.t["2p7dA3"], {
-                    description: o,
-                    count: Math.max(0, Number(s) - 1),
-                });
+            case w.so.LESS_THAN:
+                t = M.intl.format(M.t["2p7dA3"], { description: o, count: Math.max(0, Number(s) - 1) });
                 break;
-            case D.so.GREATER_THAN:
-                t = j.intl.format(j.t["2p7dA3"], {
-                    description: o,
-                    count: Math.max(0, Number(s) + 1),
-                });
+            case w.so.GREATER_THAN:
+                t = M.intl.format(M.t["2p7dA3"], { description: o, count: Math.max(0, Number(s) + 1) });
                 break;
             default:
                 t = o;
         }
-    else
-        t = (0, T.RP)({
-            connectionType: n,
-            connectionMetadataField: i,
-            operator: a,
-            value: s,
-        });
+    else t = (0, b.RP)({ connectionType: n, connectionMetadataField: i, operator: a, value: s });
     return null == t
         ? null
         : (0, r.jsxs)("div", {
-              className: M.wL,
+              className: k.wL,
               children: [
-                  (0, r.jsx)(_.A9s, {
-                      size: "md",
-                      color: "currentColor",
-                      className: M.D$,
-                  }),
-                  (0, r.jsx)(_.Text, {
-                      variant: "text-xs/medium",
-                      color: "text-strong",
-                      children: t,
-                  }),
+                  (0, r.jsx)(p.A9s, { size: "md", color: "currentColor", className: k.D$ }),
+                  (0, r.jsx)(p.Text, { variant: "text-xs/medium", color: "text-strong", children: t }),
               ],
           });
 }
-
-function B(e) {
+function G(e) {
     let { eligibilityStates: t } = e,
         n = (0, g.Ay)(),
-        i = (0, _.rdh)(u.A.unsafe_rawColors.GREEN_330).hex(),
-        a = l().groupBy(t, (e) =>
-            "".concat(e.connection_type).concat(null != e.application_id ? ":".concat(e.application_id) : ""),
-        );
+        i = (0, p.rdh)(c.A.unsafe_rawColors.GREEN_330).hex(),
+        a = l().groupBy(t, (e) => `${e.connection_type}${null != e.application_id ? `:${e.application_id}` : ""}`);
     return (0, r.jsx)(r.Fragment, {
         children: Object.keys(a).map((e) => {
-            var t, o;
-            let l,
-                c = a[e],
-                u = c.filter((e) => null != e.operator),
-                d = c.find((e) => null != e.application),
-                p = E.A.get(e),
-                h = null == d ? void 0 : d.application,
-                g = (null == h ? void 0 : h.bot) != null ? new v.A(h.bot) : null;
+            let t,
+                o = a[e],
+                l = o.filter((e) => null != e.operator),
+                u = o.find((e) => null != e.application),
+                c = E.A.get(e),
+                d = u?.application,
+                f = d?.bot != null ? new S.A(d.bot) : null;
             return (
-                T.iC.includes(null != (t = null == h ? void 0 : h.id) ? t : "")
-                    ? (l = (0, r.jsx)(w.A, {
-                          className: M.AO,
-                          color: i,
-                          size: 16,
-                      }))
-                    : null != g &&
-                      (l = (0, r.jsx)(O.A, {
-                          className: M.AO,
-                          verified: g.isVerifiedBot(),
-                      })),
+                b.iC.includes(d?.id ?? "")
+                    ? (t = (0, r.jsx)(D.A, { className: k.AO, color: i, size: 16 }))
+                    : null != f && (t = (0, r.jsx)(T.A, { className: k.AO, verified: f.isVerifiedBot() })),
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: M.sV,
+                        className: k.sV,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: M.ei,
+                                className: k.ei,
                                 children: [
-                                    null != p
+                                    null != c
                                         ? (0, r.jsx)("img", {
-                                              src: (0, f.Mw)(n) ? p.icon.darkSVG : p.icon.lightSVG,
+                                              src: (0, _.Mw)(n) ? c.icon.darkSVG : c.icon.lightSVG,
                                               alt: "",
-                                              className: M.j$,
+                                              className: k.j$,
                                           })
                                         : null,
-                                    null != g
-                                        ? (0, r.jsx)(m.A, {
-                                              user: g,
-                                              size: _._3J.SIZE_20,
-                                              className: M.j$,
-                                          })
+                                    null != f
+                                        ? (0, r.jsx)(m.A, { user: f, size: p._3J.SIZE_20, className: k.j$ })
                                         : null,
-                                    (0, r.jsx)(_.Text, {
+                                    (0, r.jsx)(p.Text, {
                                         variant: "text-sm/medium",
                                         color: "interactive-text-active",
-                                        children:
-                                            null != (o = null == p ? void 0 : p.name) ? o : null == h ? void 0 : h.name,
+                                        children: c?.name ?? d?.name,
                                     }),
-                                    l,
+                                    t,
                                 ],
                             }),
-                            u.map((e) => {
+                            l.map((e) => {
                                 let {
                                     connection_type: t,
                                     connection_metadata_field: n,
@@ -215,7 +116,7 @@ function B(e) {
                                     s()(null != i, "operator is null"),
                                     s()(null != a, "value is null"),
                                     (0, r.jsx)(
-                                        F,
+                                        U,
                                         {
                                             connectionType: t,
                                             connectionMetadataField: n,
@@ -223,7 +124,7 @@ function B(e) {
                                             value: a,
                                             description: o,
                                         },
-                                        "".concat(t, ":").concat(n, ":").concat(i, ":").concat(a),
+                                        `${t}:${n}:${i}:${a}`,
                                     )
                                 );
                             }),
@@ -235,8 +136,7 @@ function B(e) {
         }),
     });
 }
-
-function H(e) {
+function V(e) {
     let t,
         {
             onGetRolesClicked: n,
@@ -244,66 +144,49 @@ function H(e) {
             eligibilityStates: s,
             userId: o,
             roleId: l,
-            channelId: u,
+            channelId: c,
             guildId: d,
         } = e;
     i.useEffect(() => {
-        I.default.track(
-            x.HAw.PASSPORT_ROLE_POPOUT_VIEWED,
-            U(
-                {
-                    other_user_id: o,
-                    role_id: l,
-                },
-                (0, b.Ou)(u),
-                (0, b.H$)(d),
-            ),
-        );
-    }, [o, l, u, d]);
-    let f = (0, c.bG)([S.Ay], () => {
-        var e, t;
-        return null != (e = null == (t = S.Ay.getSelfMember(d)) ? void 0 : t.roles.includes(l)) && e;
-    }, [d, l]);
+        C.default.track(x.HAw.PASSPORT_ROLE_POPOUT_VIEWED, {
+            other_user_id: o,
+            role_id: l,
+            ...(0, A.Ou)(c),
+            ...(0, A.H$)(d),
+        });
+    }, [o, l, c, d]);
+    let _ = (0, u.bG)([v.Ay], () => v.Ay.getSelfMember(d)?.roles.includes(l) ?? !1, [d, l]);
     return (
         (t =
             1 === s.length && 1 === s[0].length
-                ? j.intl.string(j.t.jDym4E)
+                ? M.intl.string(M.t.jDym4E)
                 : 1 === s.length
-                  ? j.intl.format(j.t["0eBj3x"], {})
-                  : j.intl.format(j.t.D7uftB, {})),
+                  ? M.intl.format(M.t["0eBj3x"], {})
+                  : M.intl.format(M.t.D7uftB, {})),
         (0, r.jsxs)("div", {
-            className: M.SW,
+            className: k.SW,
             children: [
                 (0, r.jsx)("div", {
-                    className: M.oT,
-                    children: (0, r.jsx)(_.Text, {
+                    className: k.oT,
+                    children: (0, r.jsx)(p.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
-                        className: M.Io,
+                        className: k.Io,
                         children: t,
                     }),
                 }),
-                (0, r.jsx)("div", {
-                    className: M.jf,
-                    children: (0, r.jsx)(B, {
-                        eligibilityStates: s.flat(),
-                    }),
-                }),
+                (0, r.jsx)("div", { className: k.jf, children: (0, r.jsx)(G, { eligibilityStates: s.flat() }) }),
                 (0, r.jsxs)("div", {
-                    className: M.UD,
+                    className: k.UD,
                     children: [
-                        f
+                        _
                             ? null
-                            : (0, r.jsx)(p.$n, {
-                                  className: M.wz,
-                                  onClick: n,
-                                  children: j.intl.string(j.t.T1t1WV),
-                              }),
-                        (0, r.jsx)(p.$n, {
-                            className: M.lQ,
-                            color: p.$n.Colors.PRIMARY,
+                            : (0, r.jsx)(f.$n, { className: k.wz, onClick: n, children: M.intl.string(M.t.T1t1WV) }),
+                        (0, r.jsx)(f.$n, {
+                            className: k.lQ,
+                            color: f.$n.Colors.PRIMARY,
                             onClick: a,
-                            children: j.intl.string(j.t.hgKDnG),
+                            children: M.intl.string(M.t.hgKDnG),
                         }),
                     ],
                 }),
@@ -311,43 +194,41 @@ function H(e) {
         })
     );
 }
-
-function Y(e) {
+function F(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
-        { analyticsLocations: l } = (0, y.Ay)(),
-        u = (0, N.A)(a, t, o.id, !0),
-        f = (0, c.bG)([C.A], () => C.A.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
-        [p, m] = i.useState(null == f),
+        { analyticsLocations: l } = (0, I.Ay)(),
+        c = (0, R.A)(a, t, o.id, !0),
+        _ = (0, u.bG)([N.A], () => N.A.getGuildRoleConnectionEligibility(c?.id)),
+        [f, m] = i.useState(null == _),
         g = i.useRef(null);
-    if (null == u) return null;
+    if (null == c) return null;
     async function E() {
-        s()(null != u, "visibleConnectionsRole is null"),
-            p && null == f && (await h.A.fetchGuildRoleConnectionsEligibility(a.id, u.id), m(!1));
+        s()(null != c, "visibleConnectionsRole is null"),
+            f && null == _ && (await h.A.fetchGuildRoleConnectionsEligibility(a.id, c.id), m(!1));
     }
-
-    function b() {
+    function A() {
         return Promise.resolve((e) => {
             let { closePopout: i } = e;
-            return null == f
+            return null == _
                 ? (0, r.jsx)(r.Fragment, {})
-                : (s()(null != u, "visibleConnectionsRole is null"),
-                  (0, r.jsx)(H, {
-                      eligibilityStates: f,
+                : (s()(null != c, "visibleConnectionsRole is null"),
+                  (0, r.jsx)(V, {
+                      eligibilityStates: _,
                       userId: t,
-                      roleId: u.id,
+                      roleId: c.id,
                       channelId: o.id,
                       guildId: a.id,
                       onGetRolesClicked: () => {
-                          (0, P.c0)(a.id);
+                          (0, L.c0)(a.id);
                       },
                       onOpenProfile: () => {
-                          (0, A.openUserProfileModal)({
+                          (0, y.openUserProfileModal)({
                               userId: t,
                               messageId: n,
                               guildId: a.id,
                               channelId: o.id,
-                              roleId: u.id,
-                              scrollTarget: L.bk.CONNECTIONS,
+                              roleId: c.id,
+                              scrollTarget: P.bk.CONNECTIONS,
                               sourceAnalyticsLocations: l,
                           }),
                               i();
@@ -355,42 +236,29 @@ function Y(e) {
                   }));
         });
     }
-    return (0, r.jsx)(_.QCx, {
+    return (0, r.jsx)(p.QCx, {
         targetElementRef: g,
         onRequestOpen: E,
-        renderPopout: b,
+        renderPopout: A,
         align: "top",
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(d.m, {
-                text: j.intl.string(j.t.Wpsnar),
-                children: (0, r.jsxs)(
-                    "div",
-                    V(
-                        U(
-                            {
-                                ref: g,
-                                className: M.qS,
-                            },
-                            e,
-                        ),
-                        {
-                            children: [
-                                (0, r.jsx)(R.A, {
-                                    className: M.f7,
-                                    size: 16,
-                                    color: u.colorString,
-                                }),
-                                (0, r.jsx)(_.Text, {
-                                    variant: "text-xs/bold",
-                                    color: "text-strong",
-                                    className: M.S3,
-                                    children: u.name,
-                                }),
-                            ],
-                        },
-                    ),
-                ),
+                text: M.intl.string(M.t.Wpsnar),
+                children: (0, r.jsxs)("div", {
+                    ref: g,
+                    className: k.qS,
+                    ...e,
+                    children: [
+                        (0, r.jsx)(O.A, { className: k.f7, size: 16, color: c.colorString }),
+                        (0, r.jsx)(p.Text, {
+                            variant: "text-xs/bold",
+                            color: "text-strong",
+                            className: k.S3,
+                            children: c.name,
+                        }),
+                    ],
+                }),
             }),
     });
 }

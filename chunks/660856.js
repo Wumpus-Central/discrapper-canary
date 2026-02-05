@@ -1,6 +1,5 @@
-n.d(t, {
-    Ay: () => g,
-});
+"use strict";
+n.d(t, { Ay: () => g });
 var r = n(299146),
     i = n(47312);
 n(655972);
@@ -8,12 +7,12 @@ var a = n(64700),
     s = n(340287),
     o = n(181729),
     l = n(167782),
-    c = n(80292),
-    u = "unmounted",
+    u = n(80292),
+    c = "unmounted",
     d = "exited",
-    f = "entering",
-    p = "entered",
-    _ = "exiting",
+    _ = "entering",
+    f = "entered",
+    p = "exiting",
     h = (function (e) {
         function t(t, n) {
             var r,
@@ -24,23 +23,17 @@ var a = n(64700),
                 (i.appearStatus = null),
                 t.in
                     ? s
-                        ? ((r = d), (i.appearStatus = f))
-                        : (r = p)
-                    : (r = t.unmountOnExit || t.mountOnEnter ? u : d),
-                (i.state = {
-                    status: r,
-                }),
+                        ? ((r = d), (i.appearStatus = _))
+                        : (r = f)
+                    : (r = t.unmountOnExit || t.mountOnEnter ? c : d),
+                (i.state = { status: r }),
                 (i.nextCallback = null),
                 i
             );
         }
         (0, i.A)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
-                return e.in && t.status === u
-                    ? {
-                          status: d,
-                      }
-                    : null;
+                return e.in && t.status === c ? { status: d } : null;
             });
         var n = t.prototype;
         return (
@@ -51,7 +44,7 @@ var a = n(64700),
                 var t = null;
                 if (e !== this.props) {
                     var n = this.state.status;
-                    this.props.in ? n !== f && n !== p && (t = f) : (n === f || n === p) && (t = _);
+                    this.props.in ? n !== _ && n !== f && (t = _) : (n === _ || n === f) && (t = p);
                 }
                 this.updateStatus(!1, t);
             }),
@@ -68,28 +61,19 @@ var a = n(64700),
                     null != r &&
                         "number" != typeof r &&
                         ((e = r.exit), (t = r.enter), (n = void 0 !== r.appear ? r.appear : t)),
-                    {
-                        exit: e,
-                        enter: t,
-                        appear: n,
-                    }
+                    { exit: e, enter: t, appear: n }
                 );
             }),
             (n.updateStatus = function (e, t) {
                 if ((void 0 === e && (e = !1), null !== t))
-                    if ((this.cancelNextCallback(), t === f)) {
+                    if ((this.cancelNextCallback(), t === _)) {
                         if (this.props.unmountOnExit || this.props.mountOnEnter) {
                             var n = this.props.nodeRef ? this.props.nodeRef.current : s.findDOMNode(this);
-                            n && (0, c.F)(n);
+                            n && (0, u.F)(n);
                         }
                         this.performEnter(e);
                     } else this.performExit();
-                else
-                    this.props.unmountOnExit &&
-                        this.state.status === d &&
-                        this.setState({
-                            status: u,
-                        });
+                else this.props.unmountOnExit && this.state.status === d && this.setState({ status: c });
             }),
             (n.performEnter = function (e) {
                 var t = this,
@@ -98,36 +82,21 @@ var a = n(64700),
                     i = this.props.nodeRef ? [r] : [s.findDOMNode(this), r],
                     a = i[0],
                     l = i[1],
-                    c = this.getTimeouts(),
-                    u = r ? c.appear : c.enter;
+                    u = this.getTimeouts(),
+                    c = r ? u.appear : u.enter;
                 (e || n) && !o.A.disabled
                     ? (this.props.onEnter(a, l),
-                      this.safeSetState(
-                          {
-                              status: f,
-                          },
-                          function () {
-                              t.props.onEntering(a, l),
-                                  t.onTransitionEnd(u, function () {
-                                      t.safeSetState(
-                                          {
-                                              status: p,
-                                          },
-                                          function () {
-                                              t.props.onEntered(a, l);
-                                          },
-                                      );
+                      this.safeSetState({ status: _ }, function () {
+                          t.props.onEntering(a, l),
+                              t.onTransitionEnd(c, function () {
+                                  t.safeSetState({ status: f }, function () {
+                                      t.props.onEntered(a, l);
                                   });
-                          },
-                      ))
-                    : this.safeSetState(
-                          {
-                              status: p,
-                          },
-                          function () {
-                              t.props.onEntered(a);
-                          },
-                      );
+                              });
+                      }))
+                    : this.safeSetState({ status: f }, function () {
+                          t.props.onEntered(a);
+                      });
             }),
             (n.performExit = function () {
                 var e = this,
@@ -135,33 +104,18 @@ var a = n(64700),
                     n = this.getTimeouts(),
                     r = this.props.nodeRef ? void 0 : s.findDOMNode(this);
                 !t || o.A.disabled
-                    ? this.safeSetState(
-                          {
-                              status: d,
-                          },
-                          function () {
-                              e.props.onExited(r);
-                          },
-                      )
+                    ? this.safeSetState({ status: d }, function () {
+                          e.props.onExited(r);
+                      })
                     : (this.props.onExit(r),
-                      this.safeSetState(
-                          {
-                              status: _,
-                          },
-                          function () {
-                              e.props.onExiting(r),
-                                  e.onTransitionEnd(n.exit, function () {
-                                      e.safeSetState(
-                                          {
-                                              status: d,
-                                          },
-                                          function () {
-                                              e.props.onExited(r);
-                                          },
-                                      );
+                      this.safeSetState({ status: p }, function () {
+                          e.props.onExiting(r),
+                              e.onTransitionEnd(n.exit, function () {
+                                  e.safeSetState({ status: d }, function () {
+                                      e.props.onExited(r);
                                   });
-                          },
-                      ));
+                              });
+                      }));
             }),
             (n.cancelNextCallback = function () {
                 null !== this.nextCallback && (this.nextCallback.cancel(), (this.nextCallback = null));
@@ -197,7 +151,7 @@ var a = n(64700),
             }),
             (n.render = function () {
                 var e = this.state.status;
-                if (e === u) return null;
+                if (e === c) return null;
                 var t = this.props,
                     n = t.children,
                     i =
@@ -236,16 +190,13 @@ var a = n(64700),
                         ]));
                 return a.createElement(
                     l.A.Provider,
-                    {
-                        value: null,
-                    },
+                    { value: null },
                     "function" == typeof n ? n(e, i) : a.cloneElement(a.Children.only(n), i),
                 );
             }),
             t
         );
     })(a.Component);
-
 function m() {}
 (h.contextType = l.A),
     (h.propTypes = {}),
@@ -263,9 +214,9 @@ function m() {}
         onExiting: m,
         onExited: m,
     }),
-    (h.UNMOUNTED = u),
+    (h.UNMOUNTED = c),
     (h.EXITED = d),
-    (h.ENTERING = f),
-    (h.ENTERED = p),
-    (h.EXITING = _);
+    (h.ENTERING = _),
+    (h.ENTERED = f),
+    (h.EXITING = p);
 let g = h;

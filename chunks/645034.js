@@ -1,27 +1,20 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(896048);
-var l = n(64700),
-    a = n(198982);
-
-function i(e, t) {
-    let [n, i] = l.useState(!1),
-        [c, r] = l.useState(null);
+t.d(n, { A: () => d });
+var i = t(64700),
+    l = t(198982);
+function d(e, n) {
+    let [t, d] = i.useState(!1),
+        [r, s] = i.useState(null);
     return [
         async () => {
-            i(!0), r(null);
+            d(!0), s(null);
             try {
-                let t = await e();
-                return i(!1), r(null), t;
-            } catch (n) {
-                let e = new a.LG(n);
-                return null == t || t(e), r(e), i(!1), null;
+                let n = await e();
+                return d(!1), s(null), n;
+            } catch (t) {
+                let e = new l.LG(t);
+                return n?.(e), s(e), d(!1), null;
             }
         },
-        {
-            loading: n,
-            error: c,
-        },
+        { loading: t, error: r },
     ];
 }

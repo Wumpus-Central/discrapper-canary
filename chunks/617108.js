@@ -1,54 +1,46 @@
-n.d(t, {
-    A: () => T,
-});
-var r = n(627968);
+n.d(t, { A: () => T });
+var i = n(627968);
 n(64700);
-var i = n(496431),
-    l = n(793574),
-    a = n(688810),
-    o = n(532794),
-    s = n(954571),
-    c = n(422936),
-    u = n(635995),
-    E = n(915516),
+var l = n(496431),
+    r = n(793574),
+    s = n(688810),
+    a = n(532794),
+    o = n(954571),
+    E = n(422936),
+    c = n(635995),
+    _ = n(915516),
     d = n(788868),
-    _ = n(652215),
-    A = n(985018);
+    A = n(652215),
+    u = n(985018);
 let T = function (e) {
-    var t;
-    let { dismissCurrentNotice: n, subscriptionTier: T } = e,
-        { analyticsLocations: I } = (0, a.Ay)(l.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        O = (0, c.O)(),
-        N = (0, i.A)(null != O && null != O.expires_at ? Date.parse(O.expires_at) : 0);
-    return null == O ||
-        (null == (t = O.discount) ? void 0 : t.plan_ids.some((e) => d.hd[e].skuId !== T)) ||
-        null == O.expires_at ||
+    let { dismissCurrentNotice: t, subscriptionTier: n } = e,
+        { analyticsLocations: T } = (0, s.Ay)(r.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+        I = (0, E.O)(),
+        N = (0, l.A)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
+    return null == I ||
+        I.discount?.plan_ids.some((e) => d.hd[e].skuId !== n) ||
+        null == I.expires_at ||
         Object.values(N).every((e) => 0 === e)
         ? null
-        : (0, r.jsxs)(u.T0, {
+        : (0, i.jsxs)(c.T0, {
               onClick: () => {
-                  n(),
-                      s.default.track(_.HAw.APP_NOTICE_CLOSED, {
-                          notice_type: _.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
-                      });
+                  t(), o.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING });
               },
               children: [
-                  (0, r.jsx)(u.In, {
-                      children: (0, E.rn)(N, Number(O.discount.amount)),
-                  }),
-                  (0, r.jsx)(u.fY, {
+                  (0, i.jsx)(c.In, { children: (0, _.rn)(N, Number(I.discount.amount)) }),
+                  (0, i.jsx)(c.fY, {
                       onClick: () => {
-                          (0, o.A)({
-                              subscriptionTier: T,
-                              analyticsLocations: I,
+                          (0, a.A)({
+                              subscriptionTier: n,
+                              analyticsLocations: T,
                               analyticsObject: {
-                                  page: _.liQ.IN_APP,
-                                  section: _.JJy.NOTIFICATION_BAR,
-                                  object: _.ZSU.BUTTON_CTA,
+                                  page: A.liQ.IN_APP,
+                                  section: A.JJy.NOTIFICATION_BAR,
+                                  object: A.ZSU.BUTTON_CTA,
                               },
                           });
                       },
-                      text: A.intl.string(A.t.zLXssK),
+                      text: u.intl.string(u.t.zLXssK),
                   }),
               ],
           });

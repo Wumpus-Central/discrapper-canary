@@ -1,45 +1,20 @@
-n.d(t, {
-    AY: () => u,
-    Sw: () => o,
-    _N: () => c,
-    k7: () => s,
-});
-var r = n(608299),
-    l = n(565150),
-    a = n(31717),
-    i = n(214162);
+n.d(t, { AY: () => u, Sw: () => o, _N: () => s, k7: () => c });
+var l = n(608299),
+    a = n(565150),
+    i = n(31717),
+    r = n(214162);
 async function o(e, t, n) {
-    let r = (0, i.$P)(t, n),
-        l = await fetch(n);
-    return (
-        c(
-            e,
-            t,
-            new File([await l.blob()], r, {
-                type: "image/gif",
-            }),
-        ),
-        n
-    );
+    let l = (0, r.$P)(t, n),
+        a = await fetch(n);
+    return s(e, t, new File([await a.blob()], l, { type: "image/gif" })), n;
 }
-
-function c(e, t, n) {
-    let i = {
-        id: t,
-        channelId: e,
-        file: n,
-        platform: l.xz.WEB,
-        origin: "unknown:poll_attachment",
-    };
-    r.A.addFile({
-        file: i,
-        channelId: e,
-        draftType: a.C.Poll,
-    });
+function s(e, t, n) {
+    let r = { id: t, channelId: e, file: n, platform: a.xz.WEB, origin: "unknown:poll_attachment" };
+    l.A.addFile({ file: r, channelId: e, draftType: i.C.Poll });
 }
-async function s(e, t, n) {
-    r.A.remove(e, t, a.C.Poll);
+async function c(e, t, n) {
+    l.A.remove(e, t, i.C.Poll);
 }
 async function u(e) {
-    r.A.clearAll(e, a.C.Poll);
+    l.A.clearAll(e, i.C.Poll);
 }

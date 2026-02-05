@@ -1,56 +1,41 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(228524);
+n.d(t, { A: () => o });
 var l = n(627968);
 n(64700);
-var r = n(397927),
-    i = n(985018),
-    a = n(137898);
-
+var i = n(397927),
+    a = n(985018),
+    r = n(137898);
 function o(e) {
-    let { displayName: t, description: n, icon: o, isLoading: c, isConnected: s, canConnect: u, onConnect: d } = e;
+    let { displayName: t, description: n, icon: o, isLoading: s, isConnected: c, canConnect: u, onConnect: d } = e;
     return (0, l.jsxs)("div", {
-        className: a.Nr,
+        className: r.Nr,
         children: [
             (0, l.jsxs)("div", {
-                className: a.hu,
+                className: r.hu,
                 children: [
-                    (0, l.jsx)("div", {
-                        className: a.Kk,
-                        children: o,
-                    }),
+                    (0, l.jsx)("div", { className: r.Kk, children: o }),
                     (0, l.jsxs)("div", {
-                        className: a.P_,
+                        className: r.P_,
                         children: [
-                            (0, l.jsx)(r.Text, {
-                                variant: "text-md/medium",
-                                color: "text-strong",
-                                children: t,
-                            }),
+                            (0, l.jsx)(i.Text, { variant: "text-md/medium", color: "text-strong", children: t }),
                             null != n &&
                                 n.length > 0 &&
-                                (0, l.jsx)(r.Text, {
-                                    variant: "text-sm/medium",
-                                    color: "text-muted",
-                                    children: n,
-                                }),
+                                (0, l.jsx)(i.Text, { variant: "text-sm/medium", color: "text-muted", children: n }),
                         ],
                     }),
                 ],
             }),
-            c
-                ? (0, l.jsx)(r.y$y, {})
-                : s
+            s
+                ? (0, l.jsx)(i.y$y, {})
+                : c
                   ? (0, l.jsxs)("div", {
-                        className: a.ul,
+                        className: r.ul,
                         children: [
-                            (0, l.jsx)(r.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 color: "text-feedback-positive",
-                                children: i.intl.string(i.t["LV+CXH"]),
+                                children: a.intl.string(a.t["LV+CXH"]),
                             }),
-                            (0, l.jsx)(r.yr3, {
+                            (0, l.jsx)(i.yr3, {
                                 size: "custom",
                                 width: 20,
                                 height: 20,
@@ -58,11 +43,11 @@ function o(e) {
                             }),
                         ],
                     })
-                  : (0, l.jsx)(r.Button, {
+                  : (0, l.jsx)(i.Button, {
                         variant: "primary",
                         size: "sm",
                         onClick: d,
-                        text: i.intl.string(i.t.S0W8Z5),
+                        text: a.intl.string(a.t.S0W8Z5),
                         disabled: !u,
                     }),
         ],

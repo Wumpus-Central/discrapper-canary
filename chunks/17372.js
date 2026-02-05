@@ -1,10 +1,5 @@
-n.d(t, {
-    TS: () => s,
-    Wb: () => o,
-    Yw: () => i,
-    t0: () => r,
-    tY: () => a,
-});
+"use strict";
+n.d(t, { TS: () => s, Wb: () => o, Yw: () => i, t0: () => r, tY: () => a });
 var r = (function (e) {
         return (
             (e.GUILD = "guild"),

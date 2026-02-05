@@ -1,50 +1,31 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    s = n(641324),
-    a = n(577806),
+n.d(t, { A: () => c });
+var i = n(627968),
+    s = n(64700),
+    r = n(397927),
+    a = n(641324),
+    l = n(577806),
     o = n(279423);
-let c = i.memo(function (e) {
+let c = s.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useTitleTrailingIcon: i, useSubnavLabel: c, useSubtitle: d, layout: u, useInlineNotice: _ } = t,
-        p = null == n ? void 0 : n(),
-        m = null == i ? void 0 : i(),
-        g = null == d ? void 0 : d(),
-        A = null == _ ? void 0 : _();
-    return (0, r.jsxs)(r.Fragment, {
+        { useTitle: n, useTitleTrailingIcon: s, useSubnavLabel: c, useSubtitle: d, layout: u, useInlineNotice: _ } = t,
+        m = n?.(),
+        A = s?.(),
+        g = d?.(),
+        E = _?.(),
+        h = null != n || null != c;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != p &&
-                (0, r.jsx)(a._, {
-                    title: p,
-                    titleTrailingIcon: m,
-                    subtitle: g,
-                }),
-            (0, r.jsx)("div", {
-                "data-settings-category-key": null != n || null != c ? t.key : void 0,
+            null != m && (0, i.jsx)(l._, { title: m, titleTrailingIcon: A, subtitle: g }),
+            (0, i.jsx)("div", {
+                "data-settings-category-key": h ? t.key : void 0,
                 "aria-hidden": !0,
-                style: {
-                    height: 1,
-                },
+                style: { height: 1 },
             }),
-            (0, r.jsxs)(l.BJc, {
-                gap: 16,
+            (0, i.jsxs)(r.BJc, {
+                gap: "md",
                 children: [
-                    null != A &&
-                        (0, r.jsx)(o.A, {
-                            notice: A,
-                        }),
-                    u.map((e) =>
-                        (0, r.jsx)(
-                            s.A,
-                            {
-                                node: e,
-                            },
-                            e.key,
-                        ),
-                    ),
+                    null != E && (0, i.jsx)(o.A, { notice: E }),
+                    u.map((e) => (0, i.jsx)(a.A, { node: e }, e.key)),
                 ],
             }),
         ],

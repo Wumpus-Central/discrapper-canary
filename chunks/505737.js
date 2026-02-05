@@ -1,3 +1,4 @@
+"use strict";
 var t = {
     animationIterationCount: !0,
     borderImageOutset: !0,
@@ -41,7 +42,6 @@ var t = {
     strokeOpacity: !0,
     strokeWidth: !0,
 };
-
 function n(e, t) {
     return e + t.charAt(0).toUpperCase() + t.substring(1);
 }
@@ -61,48 +61,14 @@ var i = t,
             backgroundPositionY: !0,
             backgroundRepeat: !0,
         },
-        backgroundPosition: {
-            backgroundPositionX: !0,
-            backgroundPositionY: !0,
-        },
-        border: {
-            borderWidth: !0,
-            borderStyle: !0,
-            borderColor: !0,
-        },
-        borderBottom: {
-            borderBottomWidth: !0,
-            borderBottomStyle: !0,
-            borderBottomColor: !0,
-        },
-        borderLeft: {
-            borderLeftWidth: !0,
-            borderLeftStyle: !0,
-            borderLeftColor: !0,
-        },
-        borderRight: {
-            borderRightWidth: !0,
-            borderRightStyle: !0,
-            borderRightColor: !0,
-        },
-        borderTop: {
-            borderTopWidth: !0,
-            borderTopStyle: !0,
-            borderTopColor: !0,
-        },
-        font: {
-            fontStyle: !0,
-            fontVariant: !0,
-            fontWeight: !0,
-            fontSize: !0,
-            lineHeight: !0,
-            fontFamily: !0,
-        },
-        outline: {
-            outlineWidth: !0,
-            outlineStyle: !0,
-            outlineColor: !0,
-        },
+        backgroundPosition: { backgroundPositionX: !0, backgroundPositionY: !0 },
+        border: { borderWidth: !0, borderStyle: !0, borderColor: !0 },
+        borderBottom: { borderBottomWidth: !0, borderBottomStyle: !0, borderBottomColor: !0 },
+        borderLeft: { borderLeftWidth: !0, borderLeftStyle: !0, borderLeftColor: !0 },
+        borderRight: { borderRightWidth: !0, borderRightStyle: !0, borderRightColor: !0 },
+        borderTop: { borderTopWidth: !0, borderTopStyle: !0, borderTopColor: !0 },
+        font: { fontStyle: !0, fontVariant: !0, fontWeight: !0, fontSize: !0, lineHeight: !0, fontFamily: !0 },
+        outline: { outlineWidth: !0, outlineStyle: !0, outlineColor: !0 },
     },
     s = !!("u" > typeof window && window.document && window.document.createElement),
     o = {
@@ -113,38 +79,36 @@ var i = t,
         isInWorker: !s,
     },
     l = i;
-
-function c(e, t, n) {
+function u(e, t, n) {
     return null == t || "boolean" == typeof t || "" === t
         ? ""
         : n || "number" != typeof t || 0 === t || (l.hasOwnProperty(e) && l[e])
           ? ("" + t).trim()
           : t + "px";
 }
-
-function u(e) {
+function c(e) {
     return function () {
         return e;
     };
 }
 var d = function () {};
-(d.thatReturns = u),
-    (d.thatReturnsFalse = u(!1)),
-    (d.thatReturnsTrue = u(!0)),
-    (d.thatReturnsNull = u(null)),
+(d.thatReturns = c),
+    (d.thatReturnsFalse = c(!1)),
+    (d.thatReturnsTrue = c(!0)),
+    (d.thatReturnsNull = c(null)),
     (d.thatReturnsThis = function () {
         return this;
     }),
     (d.thatReturnsArgument = function (e) {
         return e;
     });
-var f = !1;
+var _ = !1;
 if (o.canUseDOM) {
-    var p = document.createElement("div").style;
+    var f = document.createElement("div").style;
     try {
-        p.font = "";
+        f.font = "";
     } catch (e) {
-        f = !0;
+        _ = !0;
     }
 }
 e.exports = {
@@ -154,12 +118,12 @@ e.exports = {
         for (var i in t)
             if (t.hasOwnProperty(i)) {
                 var s = 0 === i.indexOf("--"),
-                    o = c(i, t[i], s);
+                    o = u(i, t[i], s);
                 if (("float" === i && (i = "cssFloat"), s)) r.setProperty(i, o);
                 else if (o) r[i] = o;
                 else {
-                    var l = f && a[i];
-                    if (l) for (var u in l) r[u] = "";
+                    var l = _ && a[i];
+                    if (l) for (var c in l) r[c] = "";
                     else r[i] = "";
                 }
             }

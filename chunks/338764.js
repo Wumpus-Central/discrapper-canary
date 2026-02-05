@@ -1,49 +1,74 @@
-i.d(e, {
-    A: () => O,
-});
-var s,
-    n = i(627968),
-    r = i(64700),
+i.d(e, { A: () => I });
+var s = i(627968),
+    n = i(64700),
     a = i(503698),
     h = i.n(a),
     l = i(827734),
-    o = i(319060),
-    c = i(397927),
+    r = i(319060),
+    o = i(397927),
     d = i(203982),
-    u = i(240248),
+    c = i(240248),
     p = i(397197),
-    f = i(109764),
+    u = i(109764),
     m = i(574902),
-    g = i(852431),
-    v = i(652215),
+    v = i(852431),
+    g = i(652215),
     w = i(917686);
-
-function b(t, e, i) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = i),
-        t
-    );
-}
-let y = (0, u.xI)(o.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    x = 1 / 120;
-class E extends (s = r.Component) {
+let E = (0, c.xI)(r.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    f = 1 / 120;
+class x extends n.Component {
+    width = 0;
+    height = 0;
+    canvas;
+    canvasContext;
+    children = [];
+    wave;
+    ratio = 0;
+    _lastTick = 0;
+    _isPlaying = !1;
+    _reqAnimId = null;
+    _pauseTimeout;
+    constructor(t) {
+        super(t), (this.wave = new m.A(this.updateWaveState)), (this.children = [new p.A(), new u.A(), this.wave]);
+    }
+    static defaultProps = { embedded: !1 };
     componentDidMount() {
         this.initialize();
     }
     componentDidUpdate(t) {
         let { waveState: e } = this.props;
-        e === g.go.FILLING && e !== t.waveState && this.waveFill();
+        e === v.go.FILLING && e !== t.waveState && this.waveFill();
     }
     componentWillUnmount() {
         this.terminate();
     }
+    setCanvas = (t) => {
+        if (null == t) return;
+        (this.canvas = t), (this.canvasContext = this.canvas.getContext("2d"));
+        let e = window.devicePixelRatio ?? 1,
+            i =
+                this.canvasContext.webkitBackingStorePixelRatio ||
+                this.canvasContext.mozBackingStorePixelRatio ||
+                this.canvasContext.msBackingStorePixelRatio ||
+                this.canvasContext.oBackingStorePixelRatio ||
+                this.canvasContext.backingStorePixelRatio ||
+                1;
+        (this.ratio = e / i), this.resizeCanvas();
+    };
+    resizeCanvas = () => {
+        (this.width = window.innerWidth), (this.height = window.innerHeight);
+        let { canvas: t, canvasContext: e, width: i, height: s, ratio: n } = this;
+        null != t &&
+            null != e &&
+            ((t.width = i * n),
+            (t.height = s * n),
+            (t.style.width = i + "px"),
+            (t.style.height = s + "px"),
+            e.scale(n, n)),
+            i <= E ? this.pause() : this.play(),
+            this.wave.resizeWave(),
+            this.renderAnimation();
+    };
     initialize() {
         this.children.forEach((t) => t.initialize()),
             this.bindEvents(),
@@ -58,22 +83,45 @@ class E extends (s = r.Component) {
             window.addEventListener("blur", this.delayedPause, !1),
             window.addEventListener("focus", this.play, !1),
             document.addEventListener("visibilitychange", this.handleVisibilityChange, !1),
-            d._.subscribe(v.jej.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+            d._.subscribe(g.jej.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
     unbindEvents() {
         window.removeEventListener("resize", this.resizeCanvas, !1),
             window.removeEventListener("blur", this.delayedPause, !1),
             window.removeEventListener("focus", this.play, !1),
             document.removeEventListener("visibilitychange", this.handleVisibilityChange, !1),
-            d._.unsubscribe(v.jej.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+            d._.unsubscribe(g.jej.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
+    handleVisibilityChange = () => {
+        document.hidden ? this.delayedPause() : this.play();
+    };
+    play = () => {
+        clearTimeout(this._pauseTimeout), this._isPlaying || ((this._isPlaying = !0), this.run());
+    };
+    pause = () => {
+        clearTimeout(this._pauseTimeout),
+            (this._isPlaying = !1),
+            null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId),
+            (this._reqAnimId = null),
+            this.advanceTransitionalState();
+    };
+    delayedPause = () => {
+        clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4e3));
+    };
     advanceTransitionalState() {
         let { waveState: t } = this.props;
-        (t === g.go.INITIAL || t === g.go.FILLING) && this.updateWaveState(t + 1);
+        (t === v.go.INITIAL || t === v.go.FILLING) && this.updateWaveState(t + 1);
     }
     waveFill() {
-        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(g.go.FILLED);
+        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(v.go.FILLED);
     }
+    updateWaveState = (t) => {
+        let { updateWaveState: e } = this.props;
+        e(t);
+    };
+    handleWaveEmphasize = () => {
+        this.wave.emphasize();
+    };
     updateAnimation(t) {
         this.children.forEach((e) => e.update(t));
     }
@@ -83,136 +131,33 @@ class E extends (s = r.Component) {
         null != e &&
             ((e.fillStyle = t), e.fillRect(0, 0, this.width, this.height), this.children.forEach((t) => t.render(e)));
     }
+    run = () => {
+        if (!this._isPlaying) return;
+        if (0 === this._lastTick) {
+            (this._lastTick = Date.now()), (this._reqAnimId = requestAnimationFrame(this.run));
+            return;
+        }
+        let t = Date.now(),
+            e = Math.min((t - this._lastTick) / 1e3, 8 * f);
+        for (; e > 0; ) {
+            let t = e < f ? e : f;
+            this.updateAnimation(t), (e -= t);
+        }
+        this.renderAnimation(), (this._lastTick = t), (this._reqAnimId = requestAnimationFrame(this.run));
+    };
     render() {
         let { waveState: t, hideFallback: e, embedded: i } = this.props;
-        return (0, n.jsx)(c.CZY.Consumer, {
-            children: (s) => {
-                let { reducedMotion: r } = s;
-                return r.enabled
-                    ? (0, n.jsx)("div", {
-                          className: h()(w.s9, {
-                              [w.F9]: i,
-                              [w.RK]: !e && t >= g.go.ENTERED,
-                          }),
-                      })
-                    : (0, n.jsx)("canvas", {
-                          className: h()(w.Ji, {
-                              [w.F9]: i,
-                          }),
-                          ref: this.setCanvas,
-                      });
+        return (0, s.jsx)(o.CZY.Consumer, {
+            children: (n) => {
+                let { reducedMotion: a } = n;
+                return a.enabled
+                    ? (0, s.jsx)("div", { className: h()(w.s9, { [w.F9]: i, [w.RK]: !e && t >= v.go.ENTERED }) })
+                    : (0, s.jsx)("canvas", { className: h()(w.Ji, { [w.F9]: i }), ref: this.setCanvas });
             },
         });
     }
-    constructor(t) {
-        super(t),
-            b(this, "width", 0),
-            b(this, "height", 0),
-            b(this, "canvas", void 0),
-            b(this, "canvasContext", void 0),
-            b(this, "children", []),
-            b(this, "wave", void 0),
-            b(this, "ratio", 0),
-            b(this, "_lastTick", 0),
-            b(this, "_isPlaying", !1),
-            b(this, "_reqAnimId", null),
-            b(this, "_pauseTimeout", void 0),
-            b(this, "setCanvas", (t) => {
-                var e;
-                if (null == t) return;
-                (this.canvas = t), (this.canvasContext = this.canvas.getContext("2d"));
-                let i = null != (e = window.devicePixelRatio) ? e : 1,
-                    s =
-                        this.canvasContext.webkitBackingStorePixelRatio ||
-                        this.canvasContext.mozBackingStorePixelRatio ||
-                        this.canvasContext.msBackingStorePixelRatio ||
-                        this.canvasContext.oBackingStorePixelRatio ||
-                        this.canvasContext.backingStorePixelRatio ||
-                        1;
-                (this.ratio = i / s), this.resizeCanvas();
-            }),
-            b(this, "resizeCanvas", () => {
-                (this.width = window.innerWidth), (this.height = window.innerHeight);
-                let { canvas: t, canvasContext: e, width: i, height: s, ratio: n } = this;
-                null != t &&
-                    null != e &&
-                    ((t.width = i * n),
-                    (t.height = s * n),
-                    (t.style.width = i + "px"),
-                    (t.style.height = s + "px"),
-                    e.scale(n, n)),
-                    i <= y ? this.pause() : this.play(),
-                    this.wave.resizeWave(),
-                    this.renderAnimation();
-            }),
-            b(this, "handleVisibilityChange", () => {
-                document.hidden ? this.delayedPause() : this.play();
-            }),
-            b(this, "play", () => {
-                clearTimeout(this._pauseTimeout), this._isPlaying || ((this._isPlaying = !0), this.run());
-            }),
-            b(this, "pause", () => {
-                clearTimeout(this._pauseTimeout),
-                    (this._isPlaying = !1),
-                    null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId),
-                    (this._reqAnimId = null),
-                    this.advanceTransitionalState();
-            }),
-            b(this, "delayedPause", () => {
-                clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4e3));
-            }),
-            b(this, "updateWaveState", (t) => {
-                let { updateWaveState: e } = this.props;
-                e(t);
-            }),
-            b(this, "handleWaveEmphasize", () => {
-                this.wave.emphasize();
-            }),
-            b(this, "run", () => {
-                if (!this._isPlaying) return;
-                if (0 === this._lastTick) {
-                    (this._lastTick = Date.now()), (this._reqAnimId = requestAnimationFrame(this.run));
-                    return;
-                }
-                let t = Date.now(),
-                    e = Math.min((t - this._lastTick) / 1e3, 8 * x);
-                for (; e > 0; ) {
-                    let t = e < x ? e : x;
-                    this.updateAnimation(t), (e -= t);
-                }
-                this.renderAnimation(), (this._lastTick = t), (this._reqAnimId = requestAnimationFrame(this.run));
-            }),
-            (this.wave = new m.A(this.updateWaveState)),
-            (this.children = [new p.A(), new f.A(), this.wave]);
-    }
 }
-b(E, "defaultProps", {
-    embedded: !1,
-});
-let O = (t) => {
-    let e = (0, c.rdh)(l.A.unsafe_rawColors.PRIMARY_630).hex();
-    return (0, n.jsx)(
-        E,
-        (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var i = null != arguments[e] ? arguments[e] : {},
-                    s = Object.keys(i);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (s = s.concat(
-                        Object.getOwnPropertySymbols(i).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(i, t).enumerable;
-                        }),
-                    )),
-                    s.forEach(function (e) {
-                        b(t, e, i[e]);
-                    });
-            }
-            return t;
-        })(
-            {
-                canvasFillStyle: e,
-            },
-            t,
-        ),
-    );
+let I = (t) => {
+    let e = (0, o.rdh)(l.A.unsafe_rawColors.PRIMARY_630).hex();
+    return (0, s.jsx)(x, { canvasFillStyle: e, ...t });
 };

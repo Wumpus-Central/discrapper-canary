@@ -1,26 +1,15 @@
-r.d(t, {
-    P: () => u,
-});
+r.d(t, { P: () => u });
 var n = r(816885),
     i = r(611886),
     o = r(251874);
-
 function a(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
 var u = (function () {
     var e;
-
     function t(e) {
         var r = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");

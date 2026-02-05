@@ -1,65 +1,53 @@
-let r, l, a, i, s;
-n.d(t, {
-    A: () => j,
-    Z: () => y,
-});
+let i, l, a, r, s;
+n.d(t, { A: () => x, Z: () => A });
 var o,
-    c,
-    u,
     d = n(284009),
-    m = n.n(d),
-    f = n(311907),
-    p = n(73153),
-    h = n(843472),
-    b = n(155718),
-    g = n(706727),
-    x = n(927813),
-    y =
+    c = n.n(d),
+    u = n(311907),
+    m = n(73153),
+    _ = n(843472),
+    h = n(155718),
+    p = n(706727),
+    g = n(927813),
+    A =
         (((o = {})[(o.IN_FLIGHT = 0)] = "IN_FLIGHT"),
         (o[(o.ERRORED = 1)] = "ERRORED"),
         (o[(o.SUCCEEDED = 2)] = "SUCCEEDED"),
         o);
-class v extends (u = f.Ay.Store) {
+class f extends u.Ay.Store {
+    static displayName = "InteractionModalStore";
     getModalState(e) {
-        return e !== r ? null : l;
+        return e !== i ? null : l;
     }
 }
-(c = "displayName") in v
-    ? Object.defineProperty(v, c, {
-          value: "InteractionModalStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (v[c] = "InteractionModalStore");
-let j = new v(p.h, {
+let x = new f(m.h, {
     LOGOUT: function () {
-        return (r = null), (l = null), (a = null), (i = null), (s = null), !0;
+        return (i = null), (l = null), (a = null), (r = null), (s = null), !0;
     },
     INTERACTION_MODAL_CREATE: function (e) {
         let { nonce: t } = e;
-        return t === s && (h.A.deleteMessage(i, a, !0), (a = null), (i = null), (s = null)), !1;
+        return t === s && (_.A.deleteMessage(r, a, !0), (a = null), (r = null), (s = null)), !1;
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (e) {
         let { nonce: t } = e;
-        return t === s && (h.A.deleteMessage(i, a, !0), (a = null), (i = null), (s = null)), !1;
+        return t === s && (_.A.deleteMessage(r, a, !0), (a = null), (r = null), (s = null)), !1;
     },
     INTERACTION_QUEUE: function (e) {
-        let { messageId: t, nonce: n, data: o, preflight: c } = e;
+        let { messageId: t, nonce: n, data: o, preflight: d } = e;
         switch (o.interactionType) {
-            case b.G4.APPLICATION_COMMAND:
-                return (a = t), (i = o.channelId), (s = n), !1;
-            case b.G4.MODAL_SUBMIT:
-                m()(null == r || 1 === l || 2 === l, "cannot submit multiple modals at once"), (r = n), (l = 0);
+            case h.G4.APPLICATION_COMMAND:
+                return (a = t), (r = o.channelId), (s = n), !1;
+            case h.G4.MODAL_SUBMIT:
+                c()(null == i || 1 === l || 2 === l, "cannot submit multiple modals at once"), (i = n), (l = 0);
                 let u = (e) => {
                     setTimeout(() => {
-                        r === n && 0 === l && (0, g.C1)(n);
+                        i === n && 0 === l && (0, p.C1)(n);
                     }, e);
                 };
                 return (
-                    null != c
-                        ? (u(2 * x.A.Millis.MINUTE), c.then(() => u(10 * x.A.Millis.SECOND)).catch(() => (0, g.C1)(n)))
-                        : u(10 * x.A.Millis.SECOND),
+                    null != d
+                        ? (u(2 * g.A.Millis.MINUTE), d.then(() => u(10 * g.A.Millis.SECOND)).catch(() => (0, p.C1)(n)))
+                        : u(10 * g.A.Millis.SECOND),
                     !0
                 );
             default:
@@ -68,10 +56,10 @@ let j = new v(p.h, {
     },
     INTERACTION_SUCCESS: function (e) {
         let { nonce: t } = e;
-        return null != t && t === r && ((l = 2), !0);
+        return null != t && t === i && ((l = 2), !0);
     },
     INTERACTION_FAILURE: function (e) {
         let { nonce: t } = e;
-        return null != t && t === r && ((l = 1), !0);
+        return null != t && t === i && ((l = 1), !0);
     },
 });

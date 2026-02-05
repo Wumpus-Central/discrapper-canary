@@ -1,33 +1,24 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(155718),
     o = n(985018),
     l = n(530255);
-
-function c(e) {
+function u(e) {
     let { labelType: t, collapsed: n = !1 } = e,
-        c = t === s.Hr.NEW ? o.intl.string(o.t.y2b7CA) : o.intl.string(o.t["/qdhkk"]),
-        u = t === s.Hr.NEW ? l.Ph : l.O5,
-        [d, f] = i.useState(n ? "" : c);
+        u = t === s.Hr.NEW ? o.intl.string(o.t.y2b7CA) : o.intl.string(o.t["/qdhkk"]),
+        c = t === s.Hr.NEW ? l.Ph : l.O5,
+        [d, _] = i.useState(n ? "" : u);
     return (i.useEffect(() => {
         n
-            ? f("")
+            ? _("")
             : t === s.Hr.NEW
-              ? f(o.intl.string(o.t.y2b7CA))
-              : t === s.Hr.UPDATED && f(o.intl.string(o.t["/qdhkk"]));
+              ? _(o.intl.string(o.t.y2b7CA))
+              : t === s.Hr.UPDATED && _(o.intl.string(o.t["/qdhkk"]));
     }, [n, t]),
     t === s.Hr.NONE)
         ? null
-        : (0, r.jsx)(a.LpS, {
-              className: u,
-              disableColor: !0,
-              text: (0, r.jsx)("span", {
-                  children: d,
-              }),
-          });
+        : (0, r.jsx)(a.LpS, { className: c, disableColor: !0, text: (0, r.jsx)("span", { children: d }) });
 }

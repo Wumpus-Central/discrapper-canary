@@ -1,34 +1,26 @@
-n.d(t, {
-    d: () => s,
-    p: () => a,
-});
-var r = n(369543);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var a = (function (e) {
-    return (e.STREAM = "stream"), (e.PAUSE = "pause"), (e.STOP = "stop"), e;
-})({});
+"use strict";
+n.d(t, { d: () => s, p: () => a });
+var r = n(118356),
+    i = n(369543),
+    a = (function (e) {
+        return (e.STREAM = "stream"), (e.PAUSE = "pause"), (e.STOP = "stop"), e;
+    })({});
 class s {
+    callback;
+    active;
+    application;
+    sound;
+    logger;
+    constructor(e) {
+        (this.callback = e),
+            (this.active = !1),
+            (this.application = null),
+            (this.sound = !0),
+            (this.logger = new r.Vy("StreamDirector"));
+    }
     onStreamBegin(e, t, n) {
-        let i = (0, r.M)(e, t);
-        (this.sound = n),
-            null == i || null == i.windowHandle
-                ? this.callback({
-                      type: "stop",
-                  })
-                : this._stream(i);
+        let r = (0, i.M)(e, t);
+        (this.sound = n), null == r || null == r.windowHandle ? this.callback({ type: "stop" }) : this._stream(r);
     }
     onStreamKilled() {
         this._kill();
@@ -40,29 +32,30 @@ class s {
         this._update(e);
     }
     onCaptureEnd(e, t) {
-        var n;
-        (null == (n = this.application) ? void 0 : n.windowHandle) === t && this._update(e);
+        this.application?.windowHandle === t && this._update(e);
     }
     onCaptureLegacyEnd(e) {
-        var t;
-        return (null == (t = this.application) ? void 0 : t.windowHandle) != null
+        return this.application?.windowHandle != null
             ? this.onCaptureEnd(e, this.application.windowHandle)
             : this._stop();
     }
     _update(e) {
-        let t = (0, r.w)(e, this.application);
+        let t = (0, i.w)(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop();
     }
     _stream(e) {
-        var t;
-        let n = (null == (t = this.application) ? void 0 : t.windowHandle) !== e.windowHandle;
+        let t = this.application?.windowHandle !== e.windowHandle;
         (this.active = !0),
+            t &&
+                this.logger.info(
+                    `Stream window changed from ${this.application?.windowHandle} to ${e.windowHandle} for application ${e.applicationId}, executableName ${e.executableName}`,
+                ),
             (this.application = Object.assign({}, e)),
-            n &&
+            t &&
                 this.callback({
                     type: "stream",
-                    sourceId: "window:".concat(this.application.windowHandle),
+                    sourceId: `window:${this.application.windowHandle}`,
                     sound: this.sound,
                 });
     }
@@ -70,27 +63,9 @@ class s {
         (this.active = !1), (this.application = null);
     }
     _stop() {
-        this.active &&
-            (this._kill(),
-            this.callback({
-                type: "stop",
-            }));
+        this.active && (this._kill(), this.callback({ type: "stop" }));
     }
     _pause() {
-        this.active &&
-            ((this.application.windowHandle = null),
-            this.callback({
-                type: "pause",
-            }));
-    }
-    constructor(e) {
-        i(this, "callback", void 0),
-            i(this, "active", void 0),
-            i(this, "application", void 0),
-            i(this, "sound", void 0),
-            (this.callback = e),
-            (this.active = !1),
-            (this.application = null),
-            (this.sound = !0);
+        this.active && ((this.application.windowHandle = null), this.callback({ type: "pause" }));
     }
 }

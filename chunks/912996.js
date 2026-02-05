@@ -1,25 +1,10 @@
-n.d(t, {
-    A: () => c,
-});
-var i,
-    s = n(311907),
-    r = n(73153);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(73153);
 let a = {};
-class o extends (i = s.Ay.PersistedStore) {
+class s extends i.Ay.PersistedStore {
+    static displayName = "ActivityInviteEducationStore";
+    static persistKey = "ActivityInviteEducationExperimentStore";
     initialize(e) {
         Object.assign(a, e);
     }
@@ -30,8 +15,7 @@ class o extends (i = s.Ay.PersistedStore) {
         return !0 !== a[e];
     }
 }
-l(o, "displayName", "ActivityInviteEducationStore"), l(o, "persistKey", "ActivityInviteEducationExperimentStore");
-let c = new o(r.h, {
+let r = new s(l.h, {
     ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
         return (a[e.key] = e.value), !0;
     },

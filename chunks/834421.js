@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -18,30 +17,12 @@ t(697509)(r, "__esModule", {
             "aria-required": null,
         },
         relatedConcepts: [
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "type",
-                            value: "checkbox",
-                        },
-                    ],
-                    name: "input",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    name: "option",
-                },
-                module: "ARIA",
-            },
+            { concept: { attributes: [{ name: "type", value: "checkbox" }], name: "input" }, module: "HTML" },
+            { concept: { name: "option" }, module: "ARIA" },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: {
-            "aria-checked": null,
-        },
+        requiredProps: { "aria-checked": null },
         superClass: [["roletype", "widget", "input"]],
     });

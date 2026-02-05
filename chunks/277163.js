@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => p,
-});
+"use strict";
+r.d(t, { A: () => p });
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -24,7 +23,6 @@ var n = r(64700),
     c = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             var r = (function (e, t) {
@@ -34,32 +32,15 @@ var n = r(64700),
             return (
                 (r.toggleViews = function () {
                     "hex" === r.state.view
-                        ? r.setState({
-                              view: "rgb",
-                          })
+                        ? r.setState({ view: "rgb" })
                         : "rgb" === r.state.view
-                          ? r.setState({
-                                view: "hsl",
-                            })
+                          ? r.setState({ view: "hsl" })
                           : "hsl" === r.state.view &&
-                            (1 === r.props.hsl.a
-                                ? r.setState({
-                                      view: "hex",
-                                  })
-                                : r.setState({
-                                      view: "rgb",
-                                  }));
+                            (1 === r.props.hsl.a ? r.setState({ view: "hex" }) : r.setState({ view: "rgb" }));
                 }),
                 (r.handleChange = function (e, t) {
                     e.hex
-                        ? a.qt(e.hex) &&
-                          r.props.onChange(
-                              {
-                                  hex: e.hex,
-                                  source: "hex",
-                              },
-                              t,
-                          )
+                        ? a.qt(e.hex) && r.props.onChange({ hex: e.hex, source: "hex" }, t)
                         : e.r || e.g || e.b
                           ? r.props.onChange(
                                 {
@@ -102,24 +83,13 @@ var n = r(64700),
                 (r.hideHighlight = function (e) {
                     e.currentTarget.style.background = "transparent";
                 }),
-                1 !== e.hsl.a && "hex" === e.view
-                    ? (r.state = {
-                          view: "rgb",
-                      })
-                    : (r.state = {
-                          view: e.view,
-                      }),
+                1 !== e.hsl.a && "hex" === e.view ? (r.state = { view: "rgb" }) : (r.state = { view: e.view }),
                 r
             );
         }
         return (
             (t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0,
-                },
+                constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
             u(
@@ -132,28 +102,11 @@ var n = r(64700),
                                 t = (0, o.default)(
                                     {
                                         default: {
-                                            wrap: {
-                                                paddingTop: "16px",
-                                                display: "flex",
-                                            },
-                                            fields: {
-                                                flex: "1",
-                                                display: "flex",
-                                                marginLeft: "-6px",
-                                            },
-                                            field: {
-                                                paddingLeft: "6px",
-                                                width: "100%",
-                                            },
-                                            alpha: {
-                                                paddingLeft: "6px",
-                                                width: "100%",
-                                            },
-                                            toggle: {
-                                                width: "32px",
-                                                textAlign: "right",
-                                                position: "relative",
-                                            },
+                                            wrap: { paddingTop: "16px", display: "flex" },
+                                            fields: { flex: "1", display: "flex", marginLeft: "-6px" },
+                                            field: { paddingLeft: "6px", width: "100%" },
+                                            alpha: { paddingLeft: "6px", width: "100%" },
+                                            toggle: { width: "32px", textAlign: "right", position: "relative" },
                                             icon: {
                                                 marginRight: "-4px",
                                                 marginTop: "12px",
@@ -197,11 +150,7 @@ var n = r(64700),
                                                 borderRadius: "5px",
                                             },
                                         },
-                                        disableAlpha: {
-                                            alpha: {
-                                                display: "none",
-                                            },
-                                        },
+                                        disableAlpha: { alpha: { display: "none" } },
                                     },
                                     this.props,
                                     this.state,
@@ -211,20 +160,12 @@ var n = r(64700),
                                 "hex" === this.state.view
                                     ? (r = n.createElement(
                                           "div",
-                                          {
-                                              style: t.fields,
-                                              className: "flexbox-fix",
-                                          },
+                                          { style: t.fields, className: "flexbox-fix" },
                                           n.createElement(
                                               "div",
-                                              {
-                                                  style: t.field,
-                                              },
+                                              { style: t.field },
                                               n.createElement(l.jc, {
-                                                  style: {
-                                                      input: t.input,
-                                                      label: t.label,
-                                                  },
+                                                  style: { input: t.input, label: t.label },
                                                   label: "hex",
                                                   value: this.props.hex,
                                                   onChange: this.handleChange,
@@ -234,20 +175,12 @@ var n = r(64700),
                                     : "rgb" === this.state.view
                                       ? (r = n.createElement(
                                             "div",
-                                            {
-                                                style: t.fields,
-                                                className: "flexbox-fix",
-                                            },
+                                            { style: t.fields, className: "flexbox-fix" },
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "r",
                                                     value: this.props.rgb.r,
                                                     onChange: this.handleChange,
@@ -255,14 +188,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "g",
                                                     value: this.props.rgb.g,
                                                     onChange: this.handleChange,
@@ -270,14 +198,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "b",
                                                     value: this.props.rgb.b,
                                                     onChange: this.handleChange,
@@ -285,14 +208,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.alpha,
-                                                },
+                                                { style: t.alpha },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "a",
                                                     value: this.props.rgb.a,
                                                     arrowOffset: 0.01,
@@ -303,20 +221,12 @@ var n = r(64700),
                                       : "hsl" === this.state.view &&
                                         (r = n.createElement(
                                             "div",
-                                            {
-                                                style: t.fields,
-                                                className: "flexbox-fix",
-                                            },
+                                            { style: t.fields, className: "flexbox-fix" },
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "h",
                                                     value: Math.round(this.props.hsl.h),
                                                     onChange: this.handleChange,
@@ -324,14 +234,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "s",
                                                     value: Math.round(100 * this.props.hsl.s) + "%",
                                                     onChange: this.handleChange,
@@ -339,14 +244,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.field,
-                                                },
+                                                { style: t.field },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "l",
                                                     value: Math.round(100 * this.props.hsl.l) + "%",
                                                     onChange: this.handleChange,
@@ -354,14 +254,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                {
-                                                    style: t.alpha,
-                                                },
+                                                { style: t.alpha },
                                                 n.createElement(l.jc, {
-                                                    style: {
-                                                        input: t.input,
-                                                        label: t.label,
-                                                    },
+                                                    style: { input: t.input, label: t.label },
                                                     label: "a",
                                                     value: this.props.hsl.a,
                                                     arrowOffset: 0.01,
@@ -371,16 +266,11 @@ var n = r(64700),
                                         )),
                                 n.createElement(
                                     "div",
-                                    {
-                                        style: t.wrap,
-                                        className: "flexbox-fix",
-                                    },
+                                    { style: t.wrap, className: "flexbox-fix" },
                                     r,
                                     n.createElement(
                                         "div",
-                                        {
-                                            style: t.toggle,
-                                        },
+                                        { style: t.toggle },
                                         n.createElement(
                                             "div",
                                             {
@@ -407,11 +297,7 @@ var n = r(64700),
                     {
                         key: "getDerivedStateFromProps",
                         value: function (e, t) {
-                            return 1 !== e.hsl.a && "hex" === t.view
-                                ? {
-                                      view: "rgb",
-                                  }
-                                : null;
+                            return 1 !== e.hsl.a && "hex" === t.view ? { view: "rgb" } : null;
                         },
                     },
                 ],
@@ -419,7 +305,5 @@ var n = r(64700),
             t
         );
     })(n.Component);
-c.defaultProps = {
-    view: "hex",
-};
+c.defaultProps = { view: "hex" };
 let p = c;

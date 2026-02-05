@@ -1,106 +1,86 @@
-r.d(t, {
-    A: () => p,
-}),
-    r(896048);
-var n,
-    l,
-    s = r(311907),
-    a = r(73153),
-    i = r(921242);
-let o = new Map(),
-    c = !1;
-
-function u(e) {
-    var t;
-    let r =
-        null != (t = o.get(e))
-            ? t
-            : {
-                  editorState: null,
-                  showBlockedResults: !1,
-                  showNoResultsAlt: !1,
-                  searchResultsQueryString: null,
-                  searchResultsQuery: null,
-                  searchResultsOffset: null,
-                  searchMode: i.z,
-              };
-    return o.set(e, r), r;
+r.d(t, { A: () => d });
+var s = r(311907),
+    n = r(73153),
+    l = r(921242);
+let a = new Map(),
+    i = !1;
+function o(e) {
+    let t = a.get(e) ?? {
+        editorState: null,
+        showBlockedResults: !1,
+        showNoResultsAlt: !1,
+        searchResultsQueryString: null,
+        searchResultsQuery: null,
+        searchResultsOffset: null,
+        searchMode: l.z,
+    };
+    return a.set(e, t), t;
 }
-
-function d(e, t) {
-    let r = o.get(e);
+function u(e, t) {
+    let r = a.get(e);
     return null == r ? null : t(r);
 }
-class h extends (n = s.Ay.Store) {
+class c extends s.Ay.Store {
+    static displayName = "SearchQueryStore";
     getEditorState(e) {
-        return d(e, (e) => e.editorState);
+        return u(e, (e) => e.editorState);
     }
     shouldShowBlockedResults(e) {
-        var t;
-        return null != (t = d(e, (e) => e.showBlockedResults)) && t;
+        return u(e, (e) => e.showBlockedResults) ?? !1;
     }
     shouldShowNoResultsAlt(e) {
-        var t;
-        return null != (t = d(e, (e) => e.showNoResultsAlt)) && t;
+        return u(e, (e) => e.showNoResultsAlt) ?? !1;
     }
     getSearchResultsQueryString(e) {
-        return d(e, (e) => e.searchResultsQueryString);
+        return u(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return d(e, (e) => e.searchResultsQuery);
+        return u(e, (e) => e.searchResultsQuery);
     }
     getSearchMode(e) {
-        return d(e, (e) => e.searchMode);
+        return u(e, (e) => e.searchMode);
     }
     getSearchResultsOffset(e) {
-        return d(e, (e) => e.searchResultsOffset);
+        return u(e, (e) => e.searchResultsOffset);
     }
     getIsSearchTokensInitialized() {
-        return c;
+        return i;
     }
     getSearchStateIds() {
-        return Array.from(o.keys());
+        return Array.from(a.keys());
     }
 }
-(l = "displayName") in h
-    ? Object.defineProperty(h, l, {
-          value: "SearchQueryStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (h[l] = "SearchQueryStore");
-let p = new h(a.h, {
+let d = new c(n.h, {
     SEARCH_RESULTS_QUERY_UPDATE: function (e) {
-        let { id: t, queryString: r, query: n, offset: l } = e,
-            s = u(t);
-        (s.searchResultsQueryString = r), (s.searchResultsQuery = n), (s.searchResultsOffset = null != l ? l : 0);
+        let { id: t, queryString: r, query: s, offset: n } = e,
+            l = o(t);
+        (l.searchResultsQueryString = r), (l.searchResultsQuery = s), (l.searchResultsOffset = n ?? 0);
     },
     SEARCH_EDITOR_STATE_CLEAR: function (e) {
         let { id: t } = e;
-        return o.delete(t);
+        return a.delete(t);
     },
     SEARCH_ENSURE_SEARCH_STATE: function (e) {
         let { id: t } = e;
-        u(t);
+        o(t);
     },
     SEARCH_EDITOR_STATE_CHANGE: function (e) {
         let { id: t, editorState: r } = e;
-        u(t).editorState = r;
+        o(t).editorState = r;
     },
     SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
         let { id: t, showBlocked: r } = e;
-        u(t).showBlockedResults = r;
+        o(t).showBlockedResults = r;
     },
     SEARCH_SET_SHOW_NO_RESULTS_ALT: function (e) {
         let { id: t } = e;
-        u(t).showNoResultsAlt = 0.05 > Math.random();
+        o(t).showNoResultsAlt = 0.05 > Math.random();
     },
     SEARCH_SEARCH_MODE_UPDATE: function (e) {
         let { id: t, searchMode: r } = e;
-        u(t).searchMode = r;
+        o(t).searchMode = r;
     },
     SEARCH_TOKENS_REFRESHED: function () {
-        c = !0;
+        i = !0;
     },
 });

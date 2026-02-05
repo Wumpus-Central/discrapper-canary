@@ -1,4 +1,1 @@
-e.exports = {
-    UV: "fakeInput__66efc",
-    lF: "audioTrimmer__66efc",
-};
+e.exports = { UV: "fakeInput__66efc", lF: "audioTrimmer__66efc" };

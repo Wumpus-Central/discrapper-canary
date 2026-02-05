@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Oy: "upsellButton_b21bbb",
     pU: "editVanityUrlCard_b21bbb",

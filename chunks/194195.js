@@ -1,49 +1,42 @@
-t.d(e, {
-    default: () => b,
-});
-var a = t(627968);
-t(64700);
-var r = t(397927),
-    c = t(442433),
-    i = t(398590),
-    l = t(358367),
-    s = t(793574),
-    o = t(50268),
-    u = t(976860),
-    A = t(317910),
-    d = t(985018);
-let b = (0, l.A)(
+e.d(a, { default: () => h });
+var t = e(627968);
+e(64700);
+var i = e(397927),
+    l = e(442433),
+    c = e(398590),
+    r = e(358367),
+    s = e(793574),
+    A = e(50268),
+    d = e(976860),
+    u = e(317910),
+    o = e(985018);
+let h = (0, r.A)(
     function (n) {
-        let { channel: e, onSelect: t } = n,
-            l = (0, A.A)(e),
-            s = (0, o.A)({
-                id: e.id,
-                label: d.intl.string(d.t.gFHI3k),
-            });
-        return (0, a.jsxs)(r.W1t, {
+        let { channel: a, onSelect: e } = n,
+            r = (0, u.A)(a),
+            s = (0, A.A)({ id: a.id, label: o.intl.string(o.t.gFHI3k) });
+        return (0, t.jsxs)(i.W1t, {
             "data-menu-migrated-auto": !0,
             navId: "channel-context",
-            onClose: c.Z_,
-            "aria-label": d.intl.string(d.t.Xm41aV),
-            onSelect: t,
+            onClose: l.Z_,
+            "aria-label": o.intl.string(o.t.Xm41aV),
+            onSelect: e,
             children: [
-                (0, a.jsxs)(r.rXV, {
+                (0, t.jsxs)(i.rXV, {
                     children: [
-                        l,
-                        e.isCategory()
+                        r,
+                        a.isCategory()
                             ? null
-                            : (0, a.jsx)(r.Drp, {
+                            : (0, t.jsx)(i.Drp, {
                                   id: "jump-to-channel",
-                                  label: d.intl.string(d.t.bQIM40),
+                                  label: o.intl.string(o.t.bQIM40),
                                   action: () => {
-                                      (0, u.uh)(e.guild_id, e.id), (0, i.jH)();
+                                      (0, d.uh)(a.guild_id, a.id), (0, c.jH)();
                                   },
                               }),
                     ],
                 }),
-                (0, a.jsx)(r.rXV, {
-                    children: s,
-                }),
+                (0, t.jsx)(i.rXV, { children: s }),
             ],
         });
     },

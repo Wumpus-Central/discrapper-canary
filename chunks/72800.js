@@ -1,40 +1,30 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(417597),
     o = n(379848),
-    c = n(967198),
-    u = n(533550),
-    d = n(49999),
-    p = n(826898);
-let f = i.memo(function (e) {
+    d = n(967198),
+    c = n(533550),
+    u = n(49999),
+    A = n(826898);
+let h = r.memo(function (e) {
     let { state: t, markAsDismissed: n } = e,
-        { name: l, guildId: s, boundingRect: o } = t,
-        c = i.useMemo(() => null, [l, s, n]);
-    return null == c
+        { name: a, guildId: s, boundingRect: o } = t,
+        d = r.useMemo(() => null, [a, s, n]);
+    return null == d
         ? null
-        : (0, r.jsx)("div", {
-              className: a()(p.UX, (null == o || o.y < 0) && p.R),
-              style:
-                  null == o
-                      ? {}
-                      : {
-                            top: o.top,
-                            left: o.right - o.x,
-                        },
-              children: c,
+        : (0, i.jsx)("div", {
+              className: l()(A.UX, (null == o || o.y < 0) && A.R),
+              style: null == o ? {} : { top: o.top, left: o.right - o.x },
+              children: d,
           });
 });
-
-function h() {
-    let e = (0, s.bG)([c.A], () => c.A.getGuildId()),
-        t = (0, u.RX)(e),
-        [n, i] = (0, o.kn)(
+function _() {
+    let e = (0, s.bG)([d.A], () => d.A.getGuildId()),
+        t = (0, c.RX)(e),
+        [n, r] = (0, o.kn)(
             Object.values(t)
                 .filter((e) => {
                     let { disabled: t } = e;
@@ -44,17 +34,11 @@ function h() {
                     let { name: t } = e;
                     return t;
                 }),
-            d.m.SIDEBAR,
+            u.m.SIDEBAR,
         );
     if (null == n) return null;
-    let l = t[n];
-    return null == l
+    let a = t[n];
+    return null == a
         ? null
-        : (0, r.jsx)("div", {
-              className: p.kL,
-              children: (0, r.jsx)(f, {
-                  state: l,
-                  markAsDismissed: i,
-              }),
-          });
+        : (0, i.jsx)("div", { className: A.kL, children: (0, i.jsx)(h, { state: a, markAsDismissed: r }) });
 }

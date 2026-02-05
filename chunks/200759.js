@@ -1,15 +1,13 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(990078),
     s = n(397927),
     o = n(351001),
     l = n(226884),
-    c = n(985018),
-    u = n(58855);
-
+    u = n(985018),
+    c = n(58855);
 function d(e) {
     let { guild: t, message: n } = e,
         d = i.useRef(null);
@@ -23,11 +21,7 @@ function d(e) {
               position: "right",
               renderPopout: (e) => {
                   let { closePopout: i } = e;
-                  return (0, r.jsx)(l.A, {
-                      guild: t,
-                      message: n,
-                      onClose: i,
-                  });
+                  return (0, r.jsx)(l.A, { guild: t, message: n, onClose: i });
               },
               children: (e) => {
                   let { onClick: t } = e;
@@ -36,9 +30,9 @@ function d(e) {
                       tag: "span",
                       innerRef: d,
                       children: (0, r.jsx)(a.m, {
-                          text: c.intl.string(c.t["v/OYd2"]),
+                          text: u.intl.string(u.t["v/OYd2"]),
                           children: (0, r.jsx)("div", {
-                              className: u.C,
+                              className: c.C,
                               children: (0, r.jsx)(s.NVf, {
                                   size: "custom",
                                   color: "currentColor",

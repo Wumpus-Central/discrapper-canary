@@ -1,63 +1,52 @@
-n.d(e, {
-    A: () => c,
-});
-var i,
-    l,
-    r = n(311907),
-    a = n(873298),
-    o = n(73153),
-    u = n(761821);
+n.d(e, { A: () => E });
+var i = n(311907),
+    r = n(873298),
+    l = n(73153),
+    a = n(761821);
 let s = !1,
-    d = {},
-    E = {};
-class _ extends (l = r.Ay.Store) {
+    o = {},
+    d = {};
+class u extends i.Ay.Store {
+    static displayName = "FamilyCenterControlledSettingsStore";
     getSettings(t) {
-        return d[t];
+        return o[t];
     }
     getControlledSettings(t) {
-        return d[t];
+        return o[t];
     }
     hasSettingsForUser(t) {
-        return null != d[t];
+        return null != o[t];
     }
     getConsents(t) {
-        return E[t];
+        return d[t];
     }
     hasConsented(t, e) {
         if (null == t) return !1;
-        let n = E[t];
+        let n = d[t];
         return null != n && null != n[e] && n[e].consented;
     }
     get isLoading() {
         return s;
     }
 }
-(i = "displayName") in _
-    ? Object.defineProperty(_, i, {
-          value: "FamilyCenterControlledSettingsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (_[i] = "FamilyCenterControlledSettingsStore");
-let c = new _(o.h, {
+let E = new u(l.h, {
     FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: function () {
         s = !0;
     },
     FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: function (t) {
         let { userId: e, settings: n, consents: i } = t;
-        null != n && (d[e] = (0, u.Gd)(n)), null != i && (E[e] = i), (s = !1);
+        null != n && (o[e] = (0, a.Gd)(n)), null != i && (d[e] = i), (s = !1);
     },
     FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: function (t) {
         let { userId: e, consents: n } = t;
-        E[e] = n;
+        d[e] = n;
     },
     FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function (t) {
         let { userId: e, settings: n } = t,
-            i = (0, u.Gd)(n);
-        d[e] = (0, u.RK)(a.nT, d[e], i);
+            i = (0, a.Gd)(n);
+        o[e] = (0, a.RK)(r.nT, o[e], i);
     },
     LOGOUT: function () {
-        (d = {}), (E = {}), (s = !1);
+        (o = {}), (d = {}), (s = !1);
     },
 });

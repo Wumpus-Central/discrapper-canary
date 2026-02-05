@@ -1,3 +1,4 @@
+"use strict";
 var n = e(683570),
     o = e(675879),
     s = n("Symbol"),

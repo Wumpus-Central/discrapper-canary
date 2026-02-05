@@ -1,8 +1,5 @@
-n.d(t, {
-    T: () => i,
-    g: () => r,
-}),
-    n(64700);
+"use strict";
+n.d(t, { T: () => i, g: () => r }), n(64700);
 var r = (function (e) {
     return (
         (e[(e.WHAT_YOU_LOSE = 1)] = "WHAT_YOU_LOSE"),

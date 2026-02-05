@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     VH: "preview__3299f",
     Sl: "image__3299f",

@@ -13,15 +13,12 @@ function t(e) {
     else if (arguments.length > 0) for (var r = 0, i = arguments.length; r < i; r++) n.push(arguments[r]);
     return n;
 }
-
 function n(e, t) {
     (e.tail = new i(t, e.tail, null, e)), e.head || (e.head = e.tail), e.length++;
 }
-
 function r(e, t) {
     (e.head = new i(t, null, e.head, e)), e.tail || (e.tail = e.head), e.length++;
 }
-
 function i(e, t, n, r) {
     if (!(this instanceof i)) return new i(e, t, n, r);
     (this.list = r),

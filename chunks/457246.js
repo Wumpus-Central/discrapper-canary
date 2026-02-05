@@ -1,69 +1,53 @@
-n.d(t, {
-    f: () => d,
-});
-var r = n(627968),
+n.d(t, { f: () => u });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(397927),
-    s = n(534963),
+    r = n(534963),
     o = n(470710),
-    c = n(717518),
-    u = n(985018);
-
-function d(e) {
-    let t = (0, i.bG)([o.A], () => o.A.getCall(e), [e]),
-        n = (0, i.bG)([c.A], () => c.A.getRegions(null));
+    d = n(717518),
+    c = n(985018);
+function u(e) {
+    let t = (0, s.bG)([o.A], () => o.A.getCall(e), [e]),
+        n = (0, s.bG)([d.A], () => d.A.getRegions(null));
     l.useEffect(() => {
-        null == n && s.A.fetchRegions(null);
+        null == n && r.A.fetchRegions(null);
     }, [n]);
-    let d = l.useMemo(() => {
-            var e;
-            return null != t && t.regionUpdated && null != n && null != t.region
-                ? null !=
-                  (e = n.find((e) => {
-                      let { id: n } = e;
-                      return n === t.region;
-                  }))
-                    ? e
-                    : {
-                          name: t.region,
-                          id: t.region,
-                      }
-                : {
-                      id: "automatic",
-                      name: u.intl.string(u.t.JEmsap),
-                  };
-        }, [t, n]),
-        f = l.useCallback(
+    let u = l.useMemo(
+            () =>
+                null != t && t.regionUpdated && null != n && null != t.region
+                    ? (n.find((e) => {
+                          let { id: n } = e;
+                          return n === t.region;
+                      }) ?? { name: t.region, id: t.region })
+                    : { id: "automatic", name: c.intl.string(c.t.JEmsap) },
+            [t, n],
+        ),
+        h = l.useCallback(
             (e) => {
-                null != t && s.A.changeCallRegion(t.channelId, e.id);
+                null != t && r.A.changeCallRegion(t.channelId, e.id);
             },
             [t],
         ),
-        p = l.useMemo(
+        A = l.useMemo(
             () =>
                 null == n || 0 === n.length
                     ? null
                     : n.map((e) => {
                           let { id: t, name: n } = e;
-                          return (0, r.jsx)(
+                          return (0, i.jsx)(
                               a.iDA,
                               {
-                                  id: "region-".concat(t),
+                                  id: `region-${t}`,
                                   group: "region-select",
                                   label: n,
-                                  checked: t === d.id,
-                                  action: () => f(e),
+                                  checked: t === u.id,
+                                  action: () => h(e),
                               },
-                              "region-".concat(t),
+                              `region-${t}`,
                           );
                       }),
-            [n, d, f],
+            [n, u, h],
         );
-    return (0, r.jsx)(a.Drp, {
-        id: "region-select",
-        label: u.intl.string(u.t.w8gMqh),
-        subtext: d.name,
-        children: p,
-    });
+    return (0, i.jsx)(a.Drp, { id: "region-select", label: c.intl.string(c.t.w8gMqh), subtext: u.name, children: A });
 }

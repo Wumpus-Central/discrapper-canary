@@ -1,11 +1,8 @@
+"use strict";
 function r(e) {
-    var t, n;
-    null == (n = i()) || null == (t = n.reportEvent) || t.call(n, e);
+    i()?.reportEvent?.(e);
 }
-
 function i() {
     return "u" > typeof window ? window.__DISCORD_DEVTOOLS : null;
 }
-n.d(t, {
-    HF: () => r,
-});
+n.d(t, { HF: () => r });

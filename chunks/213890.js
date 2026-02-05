@@ -1,3 +1,2 @@
-e.exports = {
-    Y: "tabBarItem_e32080",
-};
+"use strict";
+e.exports = { Y: "tabBarItem_e32080" };

@@ -1,12 +1,8 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(643479);
 let i = [6, 7, 99],
-    a = {
-        get: s,
-    };
-
+    a = { get: s };
 function s(e, t, n) {
     if (o(t)) {
         t.type = "image/jpeg";
@@ -18,7 +14,6 @@ function s(e, t, n) {
     }
     return t;
 }
-
 function o(e) {
     return (
         e &&

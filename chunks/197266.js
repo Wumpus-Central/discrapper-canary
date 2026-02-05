@@ -1,3 +1,1 @@
-e.exports = {
-    Z: "discriminatorChangeWarning_b404ff",
-};
+e.exports = { Z: "discriminatorChangeWarning_b404ff" };

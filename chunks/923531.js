@@ -1,116 +1,97 @@
 n.d(e, {
     $h: () => g,
     Is: () => S,
-    Mo: () => f,
+    Mo: () => I,
     VE: () => p,
-    aq: () => T,
+    aq: () => c,
     cV: () => E,
-    fq: () => y,
-    hO: () => N,
+    fq: () => h,
+    hO: () => f,
     i6: () => _,
-    jp: () => d,
+    jp: () => u,
     k5: () => C,
-    kN: () => I,
-    mV: () => c,
+    kN: () => N,
+    mV: () => T,
     u7: () => A,
-}),
-    n(896048),
-    n(638769);
+});
 var i = n(989349),
-    l = n.n(i),
-    r = n(899847),
+    r = n.n(i),
+    l = n(899847),
     a = n(695515),
-    o = n(191627),
-    u = n(842130),
-    s = n(985018);
-let d = () => ({
-        today: s.intl.string(u.default.VjIAQQ),
-        yesterday: s.intl.string(u.default["2a8xHY"]),
-        days: u.default.Xt6oND,
+    s = n(191627),
+    o = n(842130),
+    d = n(985018);
+let u = () => ({
+        today: d.intl.string(o.default.VjIAQQ),
+        yesterday: d.intl.string(o.default["2a8xHY"]),
+        days: o.default.Xt6oND,
     }),
     E = (t) =>
         t
             ? {
-                  today: s.intl.string(u.default["2AtcIs"]),
-                  yesterday: s.intl.string(u.default.stOECr),
-                  days: u.default.n8n5Ba,
+                  today: d.intl.string(o.default["2AtcIs"]),
+                  yesterday: d.intl.string(o.default.stOECr),
+                  days: o.default.n8n5Ba,
               }
             : {
-                  today: s.intl.string(u.default.g1ZX6m),
-                  yesterday: s.intl.string(u.default.s3qSVt),
-                  days: u.default.f1UJiC,
+                  today: d.intl.string(o.default.g1ZX6m),
+                  yesterday: d.intl.string(o.default.s3qSVt),
+                  days: o.default.f1UJiC,
               },
     _ = (t, e, n) => {
-        let i = l()().diff(l()(t), "s"),
-            r = e(),
-            a = l()(t).format("LL");
+        let i = r()().diff(r()(t), "s"),
+            l = e(),
+            a = r()(t).format("LL");
         return i < 86400
-            ? r.today
+            ? l.today
             : i < 172800
-              ? r.yesterday
-              : s.intl.formatToPlainString(r.days, {
-                    days: Math.min(Math.floor(i / 86400), null != n ? n : 999),
-                });
+              ? l.yesterday
+              : d.intl.formatToPlainString(l.days, { days: Math.min(Math.floor(i / 86400), n ?? 999) });
     },
-    c = (t, e) => {
-        let n = l()().diff(l()(t), "s"),
+    T = (t, e) => {
+        let n = r()().diff(r()(t), "s"),
             i = e(),
-            r = l()(t).format("LL");
+            l = r()(t).format("LL");
         return n < 60
             ? i.seconds
             : n < 3600
-              ? s.intl.formatToPlainString(i.minutes, {
-                    count: Math.floor(n / 60),
-                })
+              ? d.intl.formatToPlainString(i.minutes, { count: Math.floor(n / 60) })
               : n < 86400
-                ? s.intl.formatToPlainString(i.hours, {
-                      count: Math.floor(n / 3600),
-                  })
+                ? d.intl.formatToPlainString(i.hours, { count: Math.floor(n / 3600) })
                 : n < 172800
                   ? i.yesterday
                   : n < 604800
-                    ? s.intl.formatToPlainString(i.days, {
-                          count: Math.floor(n / 86400),
-                      })
-                    : s.intl.formatToPlainString(i.date, {
-                          date: r,
-                      });
+                    ? d.intl.formatToPlainString(i.days, { count: Math.floor(n / 86400) })
+                    : d.intl.formatToPlainString(i.date, { date: l });
     },
-    T = (t) =>
-        t.display_type === o.NV.USER_ADD ||
-        t.display_type === o.NV.USER_INTERACTION ||
-        t.display_type === o.NV.USER_CALLED,
-    S = (t) => t.display_type === o.NV.GUILD_ADD || t.display_type === o.NV.GUILD_INTERACTION,
-    A = (t) => t.display_type === o.NV.PURCHASES,
+    c = (t) =>
+        t.display_type === s.NV.USER_ADD ||
+        t.display_type === s.NV.USER_INTERACTION ||
+        t.display_type === s.NV.USER_CALLED,
+    S = (t) => t.display_type === s.NV.GUILD_ADD || t.display_type === s.NV.GUILD_INTERACTION,
+    A = (t) => t.display_type === s.NV.PURCHASES,
     C = (t) => {
-        for (let e of Object.values(o.NV)) if (e.toString() === t) return e;
+        for (let e of Object.values(s.NV)) if (e.toString() === t) return e;
     },
-    f = () => {
-        let t = I();
+    I = () => {
+        let t = N();
         return 0 === t.size ? [] : Array.from(t.entries()).sort((t, e) => t[1].priority - e[1].priority);
     },
-    I = () => new Map(o.ly),
-    N = (t) => {
+    N = () => new Map(s.ly),
+    f = (t) => {
         let e = Math.floor(t / 60),
             n = t % 60;
-        return e > 0 ? "".concat(e, "h ").concat(n, "m") : "".concat(n, "m");
+        return e > 0 ? `${e}h ${n}m` : `${n}m`;
     },
     p = () => {
         if (a.A.getAreLinkedUsersProcessed()) return a.A.getLinkedUsers();
-        r.Ay.fetchLinkedUsers();
+        l.Ay.fetchLinkedUsers();
     },
     g = () =>
-        Object.values(a.A.getLinkedUsers()).some((t) => t.link_status === o.Ef.ACTIVE && t.link_type === o.QM.PARENT),
-    y = (t, e) =>
+        Object.values(a.A.getLinkedUsers()).some((t) => t.link_status === s.Ef.ACTIVE && t.link_type === s.QM.PARENT),
+    h = (t, e) =>
         e > 0 && 0 === t
-            ? s.intl.formatToPlainString(u.default["L/Cj7S"], {
-                  callCount: e,
-              })
+            ? d.intl.formatToPlainString(o.default["L/Cj7S"], { callCount: e })
             : t > 0 && 0 === e
-              ? s.intl.formatToPlainString(u.default["6X1F0i"], {
-                    messageCount: t,
-                })
-              : s.intl.formatToPlainString(u.default.IYqGMG, {
-                    messageCount: t,
-                    callCount: e,
-                });
+              ? d.intl.formatToPlainString(o.default["6X1F0i"], { messageCount: t })
+              : d.intl.formatToPlainString(o.default.IYqGMG, { messageCount: t, callCount: e });

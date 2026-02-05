@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function () {
     (this.text = 0),
         (this.time = 0),

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card__73069",
     rj: "outline__73069",

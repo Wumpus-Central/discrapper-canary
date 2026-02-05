@@ -1,12 +1,9 @@
-n.d(t, {
-    w: () => a,
-});
+"use strict";
+n.d(t, { w: () => a });
 var r = n(64700);
-
 function i() {
     return void 0 !== window.ResizeObserver;
 }
-
 function a(e) {
     let { ref: t, box: n, onResize: a } = e;
     (0, r.useEffect)(() => {
@@ -24,9 +21,7 @@ function a(e) {
                     e.length && a();
                 });
                 return (
-                    t.observe(e, {
-                        box: n,
-                    }),
+                    t.observe(e, { box: n }),
                     () => {
                         e && t.unobserve(e);
                     }

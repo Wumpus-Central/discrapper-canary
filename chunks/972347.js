@@ -1,23 +1,8 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(143236);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+class i {
+    emitter = new r.EventEmitter();
     on(e, t) {
         this.emitter.on(e, t);
     }
@@ -46,8 +31,5 @@ class a {
     }
     listenerCount(e) {
         return this.emitter.listenerCount(e);
-    }
-    constructor() {
-        i(this, "emitter", new r.EventEmitter());
     }
 }

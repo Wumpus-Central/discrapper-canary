@@ -1,52 +1,25 @@
-n.d(t, {
-    X: () => u,
-    x: () => d,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { X: () => c, x: () => u });
+var i = n(627968),
+    l = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(865513);
-let l = {
-        SIZE: {
-            default: void 0,
-            reduced: o.k2,
-        },
-        COLOR: {
-            default: void 0,
-            muted: o.JF,
-        },
-        WEIGHT: {
-            default: void 0,
-            reduced: o.Xj,
-        },
+    r = n.n(a),
+    s = n(865513);
+let o = {
+        SIZE: { default: void 0, reduced: s.k2 },
+        COLOR: { default: void 0, muted: s.JF },
+        WEIGHT: { default: void 0, reduced: s.Xj },
     },
-    c = i.createContext({
-        className: void 0,
-        size: "default",
-        color: "default",
-        weight: "default",
-    });
-
-function u() {
-    return i.useContext(c);
+    d = l.createContext({ className: void 0, size: "default", color: "default", weight: "default" });
+function c() {
+    return l.useContext(d);
 }
-
-function d(e) {
-    let { children: t, size: n, color: a, weight: d } = e,
-        f = u(),
-        p = i.useMemo(() => {
-            let e = {
-                    className: void 0,
-                    size: null != n ? n : f.size,
-                    color: null != a ? a : f.color,
-                    weight: null != d ? d : f.weight,
-                },
-                t = s()(l.SIZE[e.size], l.COLOR[e.color], l.WEIGHT[e.weight]);
-            return "" !== t && (e.className = s()(o.zr, t)), e;
-        }, [n, a, d, f]);
-    return (0, r.jsx)(c.Provider, {
-        value: p,
-        children: t,
-    });
+function u(e) {
+    let { children: t, size: n, color: a, weight: u } = e,
+        g = c(),
+        m = l.useMemo(() => {
+            let e = { className: void 0, size: n ?? g.size, color: a ?? g.color, weight: u ?? g.weight },
+                t = r()(o.SIZE[e.size], o.COLOR[e.color], o.WEIGHT[e.weight]);
+            return "" !== t && (e.className = r()(s.zr, t)), e;
+        }, [n, a, u, g]);
+    return (0, i.jsx)(d.Provider, { value: m, children: t });
 }

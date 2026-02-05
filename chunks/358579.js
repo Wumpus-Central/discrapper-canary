@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(65821),
-    n(896048);
+"use strict";
+n.d(t, { A: () => a });
 var r = n(743445),
     i = n(652215);
 async function a(e) {
@@ -31,10 +28,10 @@ async function a(e) {
                         a("complete");
                     }),
                         e.on("error", () => {
-                            s(Error("File ".concat(e.id, " failed to upload")));
+                            s(Error(`File ${e.id} failed to upload`));
                         }),
                         e.on("progress", (e, t) => {
-                            null == n || n(e, t);
+                            n?.(e, t);
                         });
                 }),
         );

@@ -1,14 +1,15 @@
+"use strict";
 n.d(t, {
     Hi: () => d,
     LQ: () => i,
-    OE: () => u,
+    OE: () => c,
     VH: () => o,
     W_: () => l,
-    XK: () => c,
+    XK: () => u,
     hj: () => s,
     kw: () => a,
     sm: () => r,
-    z4: () => f,
+    z4: () => _,
 });
 var r = (function (e) {
     return (e.ANY = "$any"), (e.ALL = "$all"), e;
@@ -18,7 +19,7 @@ let i = "RPC_PRIVATE_SCOPE",
     s = "RPC_LOCAL_SCOPE",
     o = "RPC_AUTHENTICATED_SCOPE",
     l = "RPC_EMBEDDED_APP_SCOPE";
-var c = (function (e) {
+var u = (function (e) {
     return (
         (e.USER_SETTINGS = "USER_SETTINGS"),
         (e.CHANGELOG = "CHANGELOG"),
@@ -40,8 +41,7 @@ var c = (function (e) {
         e
     );
 })({});
-
-function u(e) {
+function c(e) {
     switch (e) {
         case "USER_SETTINGS":
             return "settings";
@@ -97,6 +97,6 @@ var d = (function (e) {
             e
         );
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e.IPC = "ipc"), (e.WEBSOCKET = "ws"), (e.HTTP = "http"), (e.POST_MESSAGE = "post_message"), e;
     })({});

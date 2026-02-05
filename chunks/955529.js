@@ -1,11 +1,8 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(64700),
     i = n(311907),
     a = n(97352);
-
 function s() {
     let [e, t] = r.useState(void 0),
         [n, s] = r.useState(void 0),

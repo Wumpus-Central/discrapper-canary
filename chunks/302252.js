@@ -1,142 +1,81 @@
-n.d(t, {
-    default: () => p,
-});
-var a = n(627968);
-n(64700);
-var i = n(110259),
-    o = n(397927),
-    l = n(930932),
-    r = n(382935),
-    d = n(131935),
-    s = n(954571),
-    c = n(652215),
-    u = n(670455),
-    b = n(985018),
-    f = n(716829);
-
-function p(e) {
-    let { onClose: t, transitionState: p, analyticsData: _ } = e,
-        m = b.intl.string(b.t.Ss6tlb),
-        g = b.intl.string(b.t.tLi4cR),
-        v = {
-            impressionName: i.ImpressionNames.VOICE_FEEDBACK_MODAL,
-            impressionProperties: {
-                rtc_connection_id: _.rtc_connection_id,
-                media_session_id: _.media_session_id,
-            },
-        },
+i.d(t, { default: () => b });
+var n = i(627968);
+i(64700);
+var o = i(110259),
+    a = i(397927),
+    l = i(930932),
+    s = i(382935),
+    _ = i(131935),
+    r = i(954571),
+    c = i(652215),
+    d = i(670455),
+    u = i(985018),
+    m = i(716829);
+function b(e) {
+    let { onClose: t, transitionState: b, analyticsData: p } = e,
+        g = u.intl.string(u.t.Ss6tlb),
+        v = u.intl.string(u.t.tLi4cR),
         O = {
-            value: u.Eq.CONNECTION,
-            label: b.intl.string(f.default.FVhMw6),
-            problemsHeader: b.intl.string(b.t.FJmoxF),
+            impressionName: o.ImpressionNames.VOICE_FEEDBACK_MODAL,
+            impressionProperties: { rtc_connection_id: p.rtc_connection_id, media_session_id: p.media_session_id },
+        },
+        f = {
+            value: d.Eq.CONNECTION,
+            label: u.intl.string(m.default.FVhMw6),
+            problemsHeader: u.intl.string(u.t.FJmoxF),
             problemOptions: (0, l.A_)(),
-            freeformConfig: {
-                value: u.bO.FREEFORM,
-                label: b.intl.string(b.t.emlT91),
-            },
-        },
-        y = {
-            value: u.Eq.AUDIO,
-            label: b.intl.string(f.default.PL2l6A),
-            problemsHeader: b.intl.string(b.t.FJmoxF),
-            problemOptions: (0, l.Op)({
-                isMobile: !1,
-            }),
-            freeformConfig: {
-                value: u.X.FREEFORM,
-                label: b.intl.string(b.t.emlT91),
-            },
-        },
-        E = {
-            value: u.Eq.VIDEO,
-            label: b.intl.string(f.default["0WFzPh"]),
-            problemsHeader: b.intl.string(b.t.FJmoxF),
-            problemOptions: (0, l.de)(),
-            freeformConfig: {
-                value: u.AO.FREEFORM,
-                label: b.intl.string(b.t.emlT91),
-            },
+            freeformConfig: { value: d.bO.FREEFORM, label: u.intl.string(u.t.emlT91) },
         },
         A = {
-            value: u.Eq.PEOPLE,
-            label: b.intl.string(f.default.Moa3W9),
-            problemsHeader: b.intl.string(b.t.FJmoxF),
+            value: d.Eq.AUDIO,
+            label: u.intl.string(m.default.PL2l6A),
+            problemsHeader: u.intl.string(u.t.FJmoxF),
+            problemOptions: (0, l.Op)({ isMobile: !1 }),
+            freeformConfig: { value: d.X.FREEFORM, label: u.intl.string(u.t.emlT91) },
+        },
+        E = {
+            value: d.Eq.VIDEO,
+            label: u.intl.string(m.default["0WFzPh"]),
+            problemsHeader: u.intl.string(u.t.FJmoxF),
+            problemOptions: (0, l.de)(),
+            freeformConfig: { value: d.AO.FREEFORM, label: u.intl.string(u.t.emlT91) },
+        },
+        F = {
+            value: d.Eq.PEOPLE,
+            label: u.intl.string(m.default.Moa3W9),
+            problemsHeader: u.intl.string(u.t.FJmoxF),
             problemOptions: (0, l.TK)(),
-            freeformConfig: {
-                value: u.CW.FREEFORM,
-                label: b.intl.string(b.t.emlT91),
-            },
+            freeformConfig: { value: d.CW.FREEFORM, label: u.intl.string(u.t.emlT91) },
         };
-    return (0, a.jsx)(r.A, {
+    return (0, n.jsx)(s.A, {
         onMount: () => {
-            s.default.track(c.HAw.OPEN_MODAL, {
-                type: "voice",
-                source: "Feedback Modal",
-            });
+            r.default.track(c.HAw.OPEN_MODAL, { type: "voice", source: "Feedback Modal" });
         },
         onSubmit: function (e) {
-            var t, i;
-            let { dontShowAgain: r, rating: s, feedback: f, category: p, problem: m } = e;
-            r &&
-                (0, l.n3)({
-                    feedbackType: u.MW.VOICE,
-                    location: "VoiceCallFeedbackModal",
-                }),
-                null == s ||
-                    ((0, d.A)(c.HAw.CALL_REPORT_PROBLEM, {
-                        rating: s,
-                        category: p,
-                        reasonDescription: null != (t = null == m ? void 0 : m.value) ? t : null,
-                        variant: null != (i = null == m ? void 0 : m.variant) ? i : null,
-                        feedback: f,
-                        analyticsData: _,
+            let { dontShowAgain: t, rating: o, feedback: s, category: r, problem: m } = e;
+            t && (0, l.n3)({ feedbackType: d.MW.VOICE, location: "VoiceCallFeedbackModal" }),
+                null == o ||
+                    ((0, _.A)(c.HAw.CALL_REPORT_PROBLEM, {
+                        rating: o,
+                        category: r,
+                        reasonDescription: m?.value ?? null,
+                        variant: m?.variant ?? null,
+                        feedback: s,
+                        analyticsData: p,
                     }),
                     null != m &&
-                        (0, o.mMO)(async () => {
-                            let { default: e } = await n.e("37836").then(n.bind(n, 845671));
-                            return (t) =>
-                                (0, a.jsx)(
-                                    e,
-                                    (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                a = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (a = a.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                a.forEach(function (t) {
-                                                    var a;
-                                                    (a = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: a,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = a);
-                                                });
-                                        }
-                                        return e;
-                                    })(
-                                        {
-                                            body: b.intl.string(b.t["d9+vQ8"]),
-                                        },
-                                        t,
-                                    ),
-                                );
+                        (0, a.mMO)(async () => {
+                            let { default: e } = await i.e("37836").then(i.bind(i, 845671));
+                            return (t) => (0, n.jsx)(e, { body: u.intl.string(u.t["d9+vQ8"]), ...t });
                         }));
         },
         onClose: t,
-        ratingHeader: m,
+        ratingHeader: g,
         ratingEmojiKind: "face",
-        ratingBody: g,
-        categoriesHeader: b.intl.string(f.default.tq8598),
-        optionsTree: [O, y, E, A],
-        impression: v,
-        transitionState: p,
+        ratingBody: v,
+        categoriesHeader: u.intl.string(m.default.tq8598),
+        optionsTree: [f, A, E, F],
+        impression: O,
+        transitionState: b,
     });
 }

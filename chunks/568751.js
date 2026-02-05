@@ -1,116 +1,107 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(735438),
-    l = n.n(s),
-    c = n(158954),
-    u = n(311907),
+    s = n.n(a),
+    o = n(735438),
+    l = n.n(o),
+    u = n(158954),
+    c = n(311907),
     d = n(52133),
-    f = n(342952),
-    p = n(435371),
-    _ = n(793574),
+    _ = n(342952),
+    f = n(435371),
+    p = n(793574),
     h = n(688810),
     m = n(594832),
     g = n(146423),
     E = n(662349),
-    y = n(287809),
-    b = n(403362),
-    O = n(533406),
-    v = n(788868),
-    A = n(778712),
-    I = n(985018),
-    S = n(526295);
-let T = 3;
-
-function C(e) {
+    A = n(287809),
+    I = n(403362),
+    T = n(533406),
+    y = n(788868),
+    S = n(778712),
+    v = n(985018),
+    C = n(526295);
+let b = 3;
+function N(e) {
     let {
             sku: t,
             source: n,
             hideIcon: a,
-            guildId: s,
-            channelId: C,
-            userIdsForGifting: N,
-            userIdsForRecommendation: w,
-            style: R,
-            contextContainerClassName: P,
+            guildId: o,
+            channelId: N,
+            userIdsForGifting: R,
+            userIdsForRecommendation: O,
+            style: D,
+            contextContainerClassName: L,
         } = e,
-        [D, L] = i.useState(l().uniq(N)),
-        [x, M] = i.useState(!1),
-        [j, k] = i.useState(l().uniq(w)),
-        { analyticsLocations: U } = (0, h.Ay)(
-            _.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
-            _.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+        [w, x] = i.useState(l().uniq(R)),
+        [P, M] = i.useState(!1),
+        [k, U] = i.useState(l().uniq(O)),
+        { analyticsLocations: G } = (0, h.Ay)(
+            p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
+            p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        k((e) => {
-            let t = l().uniq(w);
+        U((e) => {
+            let t = l().uniq(O);
             return (0, d.v)(e, t) ? e : t;
         });
-    }, [w]),
+    }, [O]),
         i.useEffect(() => {
-            L((e) => {
-                let t = l().uniq(N);
+            x((e) => {
+                let t = l().uniq(R);
                 return (0, d.v)(e, t) ? e : t;
             });
-        }, [N]);
-    let G = (0, u.bG)([y.default], () => (1 === D.length ? y.default.getUser(D[0]) : void 0), [D]),
-        F = (0, u.yK)([y.default], () => j.map((e) => y.default.getUser(e)).filter(b.Vq), [j]),
-        V = i.useCallback(() => {
-            (0, O.a)(
+        }, [R]);
+    let V = (0, c.bG)([A.default], () => (1 === w.length ? A.default.getUser(w[0]) : void 0), [w]),
+        F = (0, c.yK)([A.default], () => k.map((e) => A.default.getUser(e)).filter(I.Vq), [k]),
+        B = i.useCallback(() => {
+            (0, T.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: G,
-                    additionalUserIds: D.length > 1 ? D : void 0,
-                    giftingOrigin: v.vQ.SHOP_PAGE,
+                    giftRecipient: V,
+                    additionalUserIds: w.length > 1 ? w : void 0,
+                    giftingOrigin: y.vQ.SHOP_PAGE,
                 },
-                {
-                    analyticsLocations: U,
-                },
+                { analyticsLocations: G },
             );
-        }, [t, G, D, U]);
+        }, [t, V, w, G]);
     return (0, r.jsxs)("div", {
-        className: o()(S.kL, R),
+        className: s()(C.kL, D),
         children: [
             (0, r.jsx)(g.A, {
                 sku: t,
-                user: G,
-                onClick: V,
-                cardStyle: S.Ui,
+                user: V,
+                onClick: B,
+                cardStyle: C.Ui,
                 onHoverOrFocusChange: M,
-                children: (0, r.jsx)(E.l, {
-                    sku: t,
-                    onClick: V,
-                    isHoveringOrFocusing: x,
-                }),
+                children: (0, r.jsx)(E.l, { sku: t, onClick: B, isHoveringOrFocusing: P }),
             }),
             !a &&
-                (0, r.jsx)(p.m_, {
-                    text: n === m.uS.POPULAR ? I.intl.string(I.t["DP0o+u"]) : I.intl.string(I.t["OnWY3/"]),
+                (0, r.jsx)(f.m_, {
+                    text: n === m.uS.POPULAR ? v.intl.string(v.t["DP0o+u"]) : v.intl.string(v.t["OnWY3/"]),
                     position: "top",
                     children: (0, r.jsx)("div", {
-                        className: o()(S.RL, P),
+                        className: s()(C.RL, L),
                         children:
                             n === m.uS.POPULAR || 0 === F.length
                                 ? (0, r.jsx)("div", {
-                                      className: S.fd,
-                                      children: (0, r.jsx)(c.Y3C, {
+                                      className: C.fd,
+                                      children: (0, r.jsx)(u.Y3C, {
                                           size: "sm",
                                           color: "currentColor",
-                                          className: S.I$,
+                                          className: C.I$,
                                       }),
                                   })
-                                : (0, r.jsx)(f.I, {
+                                : (0, r.jsx)(_.I, {
                                       users: F,
-                                      guildId: null != s ? s : void 0,
-                                      channelId: null != C ? C : void 0,
-                                      maxUsers: T,
-                                      size: A._3.SIZE_20,
+                                      guildId: o ?? void 0,
+                                      channelId: N ?? void 0,
+                                      maxUsers: b,
+                                      size: S._3.SIZE_20,
                                   }),
                     }),
                 }),

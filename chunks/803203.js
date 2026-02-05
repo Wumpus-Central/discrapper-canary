@@ -1,68 +1,42 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var i = n(627968),
-    l = n(64700),
-    r = n(311907),
-    o = n(73153),
-    a = n(775602),
-    s = n(649963),
-    u = n(253932),
-    c = n(900210),
-    d = n(297494),
-    p = n(211180),
-    h = n(60317),
-    m = n(859751),
-    f = n(113520);
-let g = l.memo(function (e) {
-    let { channelId: t, messageId: n, emoji: g, useChatFontScaling: b, color: y, count: O, emojiSize: v } = e,
-        j = (0, r.bG)([c.A], () => c.A.getEffectForEmojiId(t, n, g)),
-        A = l.useMemo(
-            () =>
-                (0, h.eT)(g, y, t, {
-                    key: j,
-                    messageId: n,
-                }),
-            [y, j, g, t, n],
-        ),
-        [T, E] = l.useState(!1),
-        I = (0, r.bG)([a.A], () => a.A.useReducedMotion),
+i.d(t, { A: () => A });
+var n = i(627968),
+    l = i(64700),
+    a = i(311907),
+    r = i(73153),
+    o = i(775602),
+    s = i(649963),
+    u = i(253932),
+    d = i(900210),
+    c = i(297494),
+    h = i(211180),
+    m = i(60317),
+    p = i(859751),
+    g = i(113520);
+let A = l.memo(function (e) {
+    let { channelId: t, messageId: i, emoji: A, useChatFontScaling: f, color: T, count: E, emojiSize: I } = e,
+        x = (0, a.bG)([d.A], () => d.A.getEffectForEmojiId(t, i, A)),
+        N = l.useMemo(() => (0, m.eT)(A, T, t, { key: x, messageId: i }), [T, x, A, t, i]),
+        [v, R] = l.useState(!1),
+        j = (0, a.bG)([o.A], () => o.A.useReducedMotion),
         S = u.Sf.useSetting(),
-        x = l.useCallback(() => {
-            o.h.dispatch({
-                type: "BURST_REACTION_EFFECT_CLEAR",
-                channelId: t,
-                messageId: n,
-                emoji: g,
-            });
-        }, [g, t, n]);
+        b = l.useCallback(() => {
+            r.h.dispatch({ type: "BURST_REACTION_EFFECT_CLEAR", channelId: t, messageId: i, emoji: A });
+        }, [A, t, i]);
     return (l.useEffect(() => {
         let e = () => {
-            if (T) return;
-            let e = (0, d.H4)("".concat(Date.now()).concat(t).concat(n).concat(g.name)) % 10;
-            (e += O > 4 ? 4 : O - 1) > 7 &&
-                (E(!0),
-                (0, s.on)({
-                    channelId: t,
-                    messageId: n,
-                    emoji: g,
-                    key: c.W.RANDOM,
-                }));
+            if (v) return;
+            let e = (0, c.H4)(`${Date.now()}${t}${i}${A.name}`) % 10;
+            (e += E > 4 ? 4 : E - 1) > 7 &&
+                (R(!0), (0, s.on)({ channelId: t, messageId: i, emoji: A, key: d.W.RANDOM }));
         };
-        if (T || (I && !S) || !S) return;
+        if (v || (j && !S) || !S) return;
         e();
-        let i = setInterval(e, 5e3);
+        let n = setInterval(e, 5e3);
         return () => {
-            clearInterval(i);
+            clearInterval(n);
         };
-    }, [S, t, O, g, g.name, T, n, I]),
-    null == j)
+    }, [S, t, E, A, A.name, v, i, j]),
+    null == x)
         ? null
-        : (0, i.jsx)(p.A, {
-              className: (b ? f : m).effect,
-              effect: A,
-              onComplete: x,
-              emojiSize: v,
-          });
+        : (0, n.jsx)(h.A, { className: (f ? g : p).effect, effect: N, onComplete: b, emojiSize: I });
 });

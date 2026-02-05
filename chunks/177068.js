@@ -1,47 +1,32 @@
-n.d(t, {
-    DX: () => p,
-    MS: () => f,
-}),
-    n(65821);
+"use strict";
+n.d(t, { DX: () => _, MS: () => d });
 var r = n(488428),
     i = n(562465),
     a = n(626584),
     s = n(927813),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = 5e3,
+let l = 5e3,
     u = 5;
-class d {
+class c {
+    indexingPollId;
+    searchId;
+    searchType;
+    query;
+    retryDelay;
+    isCanceled = !1;
+    constructor(e, t, n) {
+        (this.searchId = e), (this.searchType = t), (this.query = n);
+    }
     async fetch(e, t, n) {
         if (!this.isCanceled)
             try {
-                let i = await this.makeRequest({
-                    rejectWithError: !1,
-                });
-                if (null == i || this.isCanceled) return;
-                if (200 === i.status) e(i);
-                else if (202 === i.status) {
-                    var r;
-                    if (
-                        ((this.query.attempts = (null != (r = this.query.attempts) ? r : 0) + 1),
-                        this.query.attempts > u)
-                    )
-                        return;
-                    let a = parseInt(i.headers["retry-after"]);
-                    (this.retryDelay = isNaN(a) || 0 === a ? c : a * s.A.Millis.SECOND), this.retryLater(e, t, n), t(i);
+                let r = await this.makeRequest({ rejectWithError: !1 });
+                if (null == r || this.isCanceled) return;
+                if (200 === r.status) e(r);
+                else if (202 === r.status) {
+                    if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > u)) return;
+                    let i = parseInt(r.headers["retry-after"]);
+                    (this.retryDelay = isNaN(i) || 0 === i ? l : i * s.A.Millis.SECOND), this.retryLater(e, t, n), t(r);
                 }
             } catch (e) {
                 new a.A("SearchFetcher").error(e), n(e);
@@ -54,19 +39,8 @@ class d {
         null != this.indexingPollId && clearTimeout(this.indexingPollId),
             (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
     }
-    constructor(e, t, n) {
-        l(this, "indexingPollId", void 0),
-            l(this, "searchId", void 0),
-            l(this, "searchType", void 0),
-            l(this, "query", void 0),
-            l(this, "retryDelay", void 0),
-            l(this, "isCanceled", !1),
-            (this.searchId = e),
-            (this.searchType = t),
-            (this.query = n);
-    }
 }
-class f extends d {
+class d extends c {
     getEndpoint() {
         switch (this.searchType) {
             case o.I4_.FAVORITES:
@@ -78,7 +52,7 @@ class f extends d {
                 if (null == this.searchId || "" === this.searchId) return;
                 return o.Rsh.SEARCH_CHANNEL(this.searchId);
             default:
-                throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType));
+                throw Error(`[SearchFetcher] Unhandled search type: ${this.searchType}`);
         }
     }
     makeRequest(e) {
@@ -86,15 +60,14 @@ class f extends d {
             n = this.getEndpoint();
         return null == n
             ? null
-            : i.Bo.get({
-                  url: n,
-                  query: r.stringify(this.query),
-                  oldFormErrors: !0,
-                  rejectWithError: t,
-              });
+            : i.Bo.get({ url: n, query: r.stringify(this.query), oldFormErrors: !0, rejectWithError: t });
     }
 }
-class p extends d {
+class _ extends c {
+    payload;
+    constructor(e, t, n, r) {
+        super(e, t, n), (this.payload = r);
+    }
     getEndpoint() {
         switch (this.searchType) {
             case o.I4_.DMS:
@@ -108,22 +81,12 @@ class p extends d {
                 if (null == this.searchId || "" === this.searchId) return;
                 return o.Rsh.SEARCH_TABS_CHANNEL(this.searchId);
             default:
-                throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType));
+                throw Error(`[SearchFetcher] Unhandled search type: ${this.searchType}`);
         }
     }
     makeRequest(e) {
         let { rejectWithError: t } = e,
             n = this.getEndpoint();
-        return null == n
-            ? null
-            : i.Bo.post({
-                  url: n,
-                  body: this.payload,
-                  oldFormErrors: !0,
-                  rejectWithError: t,
-              });
-    }
-    constructor(e, t, n, r) {
-        super(e, t, n), l(this, "payload", void 0), (this.payload = r);
+        return null == n ? null : i.Bo.post({ url: n, body: this.payload, oldFormErrors: !0, rejectWithError: t });
     }
 }

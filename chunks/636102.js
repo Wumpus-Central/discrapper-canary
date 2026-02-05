@@ -1,3 +1,4 @@
+"use strict";
 var r =
         (this && this.__createBinding) ||
         (Object.create
@@ -21,13 +22,9 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
-    (t.validateFileType = void 0);
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.validateFileType = void 0);
 let a = n(835986),
     s = n(817762);
-
 function o(e) {
     return e.some((e) => "MP4" === e) ? ["M4V"] : e.some((e) => "AAC" === e) ? ["M4A"] : [];
 }
@@ -64,20 +61,20 @@ i(n(524016), t),
             e.length > 0 && (i = i.concat(e));
         }
         let l = [],
-            c = [];
+            u = [];
         for (let e of i) {
             let t = a.FileTypes.getSignaturesByName(e);
             (l = l.concat(t)),
                 a.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(e.toLowerCase()) &&
-                    c.push(a.FileTypes.getInfoByName(e));
+                    u.push(a.FileTypes.getInfoByName(e));
         }
-        let u = (0, s.getFileChunk)(e, (null == n ? void 0 : n.chunkSize) || 64),
-            d = a.FileTypes.detectSignature(u, l);
+        let c = (0, s.getFileChunk)(e, (null == n ? void 0 : n.chunkSize) || 64),
+            d = a.FileTypes.detectSignature(c, l);
         if (!d) return !1;
-        if (c.length > 0) {
-            let e = c.filter((e) => e.signatures.includes(d));
+        if (u.length > 0) {
+            let e = u.filter((e) => e.signatures.includes(d));
             if (e.length > 0) {
-                let t = a.FileTypes.detectTypeByAdditionalCheck(u, e);
+                let t = a.FileTypes.detectTypeByAdditionalCheck(c, e);
                 return !!t && i.some((e) => e.toLowerCase() === t);
             }
         }

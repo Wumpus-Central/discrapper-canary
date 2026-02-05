@@ -1,3 +1,4 @@
+"use strict";
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -10,10 +11,7 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-t.d(r, {
-    A: () => i,
-});
-
+t.d(r, { A: () => i });
 function l(e) {
     var r = (function (e, r) {
         if ("object" != a(e) || !e) return e;
@@ -37,12 +35,7 @@ var o,
             if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
             (t = void 0),
                 (r = l((r = "items"))) in this
-                    ? Object.defineProperty(this, r, {
-                          value: t,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
+                    ? Object.defineProperty(this, r, { value: t, enumerable: !0, configurable: !0, writable: !0 })
                     : (this[r] = t),
                 (this.items = a);
         }),
@@ -102,8 +95,6 @@ var o,
                     Object.defineProperty(e, l(a.key), a);
             }
         })(o.prototype, s),
-        Object.defineProperty(o, "prototype", {
-            writable: !1,
-        }),
+        Object.defineProperty(o, "prototype", { writable: !1 }),
         o);
 let i = "u" < typeof Set ? Set : n;

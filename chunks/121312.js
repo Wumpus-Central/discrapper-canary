@@ -32,11 +32,9 @@ var r = {
     "./zh-CN.json": "593221",
     "./zh-TW.json": "567721",
 };
-
 function i(e) {
     return n(a(e));
 }
-
 function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");

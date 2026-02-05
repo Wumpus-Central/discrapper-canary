@@ -1,192 +1,120 @@
-n.d(t, {
-    A: () => x,
-});
+n.d(t, { A: () => u });
 var l = n(627968);
 n(64700);
-var r = n(989349),
-    i = n.n(r),
-    s = n(397927),
-    a = n(974930),
-    o = n(280871),
+var i = n(989349),
+    s = n.n(i),
+    a = n(397927),
+    r = n(974930),
+    d = n(280871),
     c = n(985018),
-    u = n(659621);
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function x(e) {
+    o = n(659621);
+function u(e) {
     let {
         className: t,
         onScheduleChange: n,
-        onRecurrenceChange: r,
-        onTimeChange: x,
-        timeSelected: m = !0,
+        onRecurrenceChange: i,
+        onTimeChange: u,
+        timeSelected: x = !0,
         schedule: h,
-        recurrenceRule: j,
-        showEndDate: v = !1,
-        requireEndDate: p = !1,
-        disableStartDateTime: f = !1,
+        recurrenceRule: m,
+        showEndDate: g = !1,
+        requireEndDate: v = !1,
+        disableStartDateTime: j = !1,
     } = e;
     if (null == h) return null;
-    let b = null,
-        y = h.startDate,
-        O = i()(),
-        A = i()().add(a.IS, "days"),
-        N = i()().add(a.Xy, "days");
-    null != j && (A.add(a.Ze, "years"), N.add(a.Ze, "years"));
-    let E = (e) => {
-        n(
-            g(d({}, h), {
-                endDate: e,
-            }),
-        );
+    let A = null,
+        N = h.startDate,
+        f = s()(),
+        E = s()().add(r.IS, "days"),
+        p = s()().add(r.Xy, "days");
+    null != m && (E.add(r.Ze, "years"), p.add(r.Ze, "years"));
+    let C = (e) => {
+        n({ ...h, endDate: e });
     };
     return (
-        v &&
-            (b =
-                null != h.endDate || p
+        g &&
+            (A =
+                null != h.endDate || v
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsxs)("div", {
-                                  className: u.U,
+                                  className: o.U,
                                   children: [
-                                      (0, l.jsx)(s.J3s, {
+                                      (0, l.jsx)(a.J3s, {
                                           label: c.intl.string(c.t.CTLgZJ),
-                                          required: p,
+                                          required: v,
                                           value: h.endDate,
-                                          onSelect: E,
+                                          onSelect: C,
                                           minDate: h.startDate,
-                                          maxDate: N,
+                                          maxDate: p,
                                       }),
-                                      (0, l.jsx)(s.czz, {
+                                      (0, l.jsx)(a.czz, {
                                           label: c.intl.string(c.t.j2RuXF),
-                                          required: p,
+                                          required: v,
                                           value: h.endDate,
-                                          onChange: E,
+                                          onChange: C,
                                       }),
                                   ],
                               }),
-                              p
+                              v
                                   ? null
                                   : (0, l.jsxs)(l.Fragment, {
                                         children: [
-                                            (0, l.jsx)(s.QWc, {
+                                            (0, l.jsx)(a.QWc, {
                                                 onClick: () => {
-                                                    E(void 0);
+                                                    C(void 0);
                                                 },
                                                 text: c.intl.string(c.t.petdfk),
                                                 size: "sm",
                                             }),
-                                            (0, l.jsx)(s.hKd, {
-                                                size: 24,
-                                            }),
+                                            (0, l.jsx)(a.hKd, { size: 24 }),
                                         ],
                                     }),
                           ],
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(s.QWc, {
+                              (0, l.jsx)(a.QWc, {
                                   onClick: () => {
-                                      E(i()(h.startDate).add(1, "hour"));
+                                      C(s()(h.startDate).add(1, "hour"));
                                   },
                                   text: c.intl.string(c.t.ncdPcn),
                                   size: "sm",
                               }),
-                              (0, l.jsx)(s.hKd, {
-                                  size: 24,
-                              }),
+                              (0, l.jsx)(a.hKd, { size: 24 }),
                           ],
                       })),
         (0, l.jsxs)("div", {
             className: t,
             children: [
                 (0, l.jsxs)("div", {
-                    className: u.U,
+                    className: o.U,
                     children: [
-                        (0, l.jsx)(s.J3s, {
+                        (0, l.jsx)(a.J3s, {
                             label: c.intl.string(c.t.kKOIwJ),
                             required: !0,
                             value: h.startDate,
                             onSelect: (e) => {
-                                n(
-                                    g(d({}, h), {
-                                        startDate: e,
-                                    }),
-                                );
+                                n({ ...h, startDate: e });
                             },
-                            minDate: O,
-                            maxDate: A,
-                            disabled: f,
+                            minDate: f,
+                            maxDate: E,
+                            disabled: j,
                         }),
-                        (0, l.jsx)(s.czz, {
+                        (0, l.jsx)(a.czz, {
                             label: c.intl.string(c.t["6dGmCD"]),
                             required: !0,
                             value: h.startDate,
                             onChange: (e) => {
-                                e.isValid() &&
-                                    (null == x || x(!0),
-                                    n(
-                                        g(d({}, h), {
-                                            startDate: e,
-                                        }),
-                                    ));
+                                e.isValid() && (u?.(!0), n({ ...h, startDate: e }));
                             },
-                            hideValue: !m,
-                            disabled: f,
+                            hideValue: !x,
+                            disabled: j,
                         }),
                     ],
                 }),
-                b,
-                null != y &&
-                    null != r &&
-                    (0, l.jsx)(o.A, {
-                        onRecurrenceChange: r,
-                        startDate: y,
-                        recurrenceRule: j,
-                    }),
+                A,
+                null != N && null != i && (0, l.jsx)(d.A, { onRecurrenceChange: i, startDate: N, recurrenceRule: m }),
             ],
         })
     );

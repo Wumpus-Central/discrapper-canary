@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -24,14 +23,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "type",
-                        },
-                        {
-                            constraints: ["undefined"],
-                            name: "list",
-                        },
+                        { constraints: ["undefined"], name: "type" },
+                        { constraints: ["undefined"], name: "list" },
                     ],
                     name: "input",
                 },
@@ -40,14 +33,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "email",
-                        },
+                        { constraints: ["undefined"], name: "list" },
+                        { name: "type", value: "email" },
                     ],
                     name: "input",
                 },
@@ -56,14 +43,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "tel",
-                        },
+                        { constraints: ["undefined"], name: "list" },
+                        { name: "type", value: "tel" },
                     ],
                     name: "input",
                 },
@@ -72,14 +53,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "text",
-                        },
+                        { constraints: ["undefined"], name: "list" },
+                        { name: "type", value: "text" },
                     ],
                     name: "input",
                 },
@@ -88,31 +63,15 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "url",
-                        },
+                        { constraints: ["undefined"], name: "list" },
+                        { name: "type", value: "url" },
                     ],
                     name: "input",
                 },
                 module: "HTML",
             },
-            {
-                concept: {
-                    name: "input",
-                },
-                module: "XForms",
-            },
-            {
-                concept: {
-                    name: "textarea",
-                },
-                module: "HTML",
-            },
+            { concept: { name: "input" }, module: "XForms" },
+            { concept: { name: "textarea" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

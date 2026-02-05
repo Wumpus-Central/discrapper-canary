@@ -1,3 +1,4 @@
+"use strict";
 function e(e, t) {
     let n = (e.ownerDocument.defaultView || window).getComputedStyle(e).getPropertyValue(t);
     return n ? parseFloat(n.replace("px", "")) : 0;

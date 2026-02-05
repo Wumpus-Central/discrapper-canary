@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(453669),
     s = e(712192),
@@ -14,11 +15,7 @@ var n = e(834647),
     x = Array,
     d = Math.max;
 n(
-    {
-        target: "Array",
-        proto: !0,
-        forced: !y,
-    },
+    { target: "Array", proto: !0, forced: !y },
     {
         slice: function (t, r) {
             var e,

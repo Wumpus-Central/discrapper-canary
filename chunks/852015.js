@@ -1,16 +1,10 @@
+"use strict";
 var r, i;
-n.d(t, {
-    O0: () => i,
-    f$: () => r,
-}),
+n.d(t, { O0: () => i, f$: () => r }),
     (function (e) {
         (e.symbol = Symbol.for("protobuf-ts/unknown")),
             (e.onRead = (n, r, i, a, s) => {
-                (t(r) ? r[e.symbol] : (r[e.symbol] = [])).push({
-                    no: i,
-                    wireType: a,
-                    data: s,
-                });
+                (t(r) ? r[e.symbol] : (r[e.symbol] = [])).push({ no: i, wireType: a, data: s });
             }),
             (e.onWrite = (t, n, r) => {
                 for (let { no: t, wireType: i, data: a } of e.list(n)) r.tag(t, i).raw(a);

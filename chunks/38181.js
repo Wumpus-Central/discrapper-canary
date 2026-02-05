@@ -1,42 +1,23 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = [],
-    l = null;
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153);
+let a = [],
+    s = null;
+function o(e) {
     let { categories: t } = e;
-    (o = t), (l = Date.now());
+    (a = t), (s = Date.now());
 }
-class u extends (r = i.Ay.Store) {
+class l extends r.Ay.Store {
+    static displayName = "ApplicationDirectoryCategoriesStore";
     getLastFetchTimeMs() {
-        return l;
+        return s;
     }
     getCategories() {
-        return o;
+        return a;
     }
     getCategory(e) {
-        return o.find((t) => t.id === e);
+        return a.find((t) => t.id === e);
     }
 }
-s(u, "displayName", "ApplicationDirectoryCategoriesStore");
-let d = new u(a.h, {
-    APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: c,
-});
+let u = new l(i.h, { APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: o });

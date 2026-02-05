@@ -1,95 +1,62 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(397927),
+n.d(t, { A: () => p }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(397927),
     s = n(830382),
     o = n(707606),
-    c = n(587895),
-    u = n(742589),
-    d = n(976860),
-    p = n(67480),
-    f = n(652215),
-    h = n(190323);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class g extends i.PureComponent {
+    d = n(587895),
+    c = n(742589),
+    u = n(976860),
+    A = n(67480),
+    h = n(652215),
+    _ = n(190323);
+class m extends r.PureComponent {
     componentDidMount() {
         let { sku: e, primarySkuId: t, isFetchingPrimarySku: n } = this.props;
         null == t || n || null == e || (0, s.EX)(e.applicationId, t);
     }
+    handleClick = (e) => {
+        let { sku: t } = this.props;
+        (0, u.pX)(e.id, {
+            state: {
+                analyticsSource: {
+                    object: h.ZSU.NAVIGATION_LINK,
+                    section: h.JJy.NAVIGATION,
+                    page: null == t ? h.liQ.STORE_DIRECTORY_BROWSE : h.liQ.STORE_LISTING,
+                },
+            },
+        });
+    };
+    renderCustomBreadcrumb = (e, t) =>
+        (0, i.jsx)(c.A.Title, { className: t ? null : _.Q, muted: !t, children: e.label });
     render() {
         let { sku: e, primarySku: t } = this.props,
             n = [],
-            i = null;
+            r = null;
         if (null != e) {
-            let r = f.BVt.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-            (i = r),
-                null != t &&
-                    n.push({
-                        id: f.BVt.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
-                        label: t.name,
-                    }),
-                n.push({
-                    id: r,
-                    label: e.name,
-                });
+            let i = h.BVt.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
+            (r = i),
+                null != t && n.push({ id: h.BVt.APPLICATION_STORE_LISTING_SKU(t.id, t.slug), label: t.name }),
+                n.push({ id: i, label: e.name });
         }
-        return (0, r.jsx)(a.BIu, {
+        return (0, i.jsx)(l.BIu, {
             renderCustomBreadcrumb: this.renderCustomBreadcrumb,
             onBreadcrumbClick: this.handleClick,
             breadcrumbs: n,
-            activeId: i,
+            activeId: r,
         });
     }
-    constructor(...e) {
-        super(...e),
-            A(this, "handleClick", (e) => {
-                let { sku: t } = this.props;
-                (0, d.pX)(e.id, {
-                    state: {
-                        analyticsSource: {
-                            object: f.ZSU.NAVIGATION_LINK,
-                            section: f.JJy.NAVIGATION,
-                            page: null == t ? f.liQ.STORE_DIRECTORY_BROWSE : f.liQ.STORE_LISTING,
-                        },
-                    },
-                });
-            }),
-            A(this, "renderCustomBreadcrumb", (e, t) =>
-                (0, r.jsx)(u.A.Title, {
-                    className: t ? null : h.Q,
-                    muted: !t,
-                    children: e.label,
-                }),
-            );
-    }
 }
-let m = (0, o.A)(
-    l.Ay.connectStores([c.A, p.A], (e) => {
+let p = (0, o.A)(
+    a.Ay.connectStores([d.A, A.A], (e) => {
         let { sku: t } = e,
-            n = null != t ? c.A.getApplication(t.applicationId) : null,
-            r = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;
+            n = null != t ? d.A.getApplication(t.applicationId) : null,
+            i = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;
         return {
-            primarySkuId: r,
-            isFetchingPrimarySku: null != r && p.A.isFetching(r),
-            primarySku: null != r ? p.A.get(r) : null,
+            primarySkuId: i,
+            isFetchingPrimarySku: null != i && A.A.isFetching(i),
+            primarySku: null != i ? A.A.get(i) : null,
         };
-    })(g),
+    })(m),
 );

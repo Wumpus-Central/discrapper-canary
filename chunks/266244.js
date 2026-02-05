@@ -1,49 +1,41 @@
-n.d(t, {
-    A: () => g,
-});
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968),
-    r = n(64700),
-    s = n(311907),
-    l = n(828100),
-    o = n(355205),
-    a = n(793322),
-    c = n(366811),
-    d = n(256415),
+    s = n(64700),
+    l = n(311907),
+    a = n(828100),
+    r = n(355205),
+    o = n(793322),
+    d = n(366811),
+    c = n(256415),
     u = n(9302),
     h = n(652215),
     p = n(985018),
-    f = n(165386);
-let b = () => (0, a.WU)("DM_SEARCH"),
-    g = r.memo(function () {
-        let e = (0, s.bG)([d.default], () => (d.default.isLocked((0, u.getPID)()) ? "true" : "false")),
-            t = (0, c.A)((e) => {
+    A = n(165386);
+let f = () => (0, o.WU)("DM_SEARCH"),
+    g = s.memo(function () {
+        let e = (0, l.bG)([c.default], () => (c.default.isLocked((0, u.getPID)()) ? "true" : "false")),
+            t = (0, d.A)((e) => {
                 let { channelId: t } = e;
                 return t;
             });
         return (0, i.jsxs)("div", {
-            className: f.AB,
+            className: A.AB,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.ON,
+                    className: A.ON,
                     children: (0, i.jsx)("button", {
                         type: "button",
-                        className: f.lU,
-                        onClick: b,
+                        className: A.lU,
+                        onClick: f,
                         children: p.intl.string(p.t.LzcpeZ),
                     }),
                 }),
-                (0, i.jsx)(l.A, {
-                    padding: 8,
-                    theme: h.NJ8.DARK,
-                    version: e,
-                    selectedChannelId: t,
-                }),
+                (0, i.jsx)(a.A, { padding: 8, theme: h.NJ8.DARK, version: e, selectedChannelId: t }),
                 (0, i.jsx)("section", {
-                    className: f.C3,
+                    className: A.C3,
                     "aria-label": p.intl.string(p.t.StREWK),
-                    children: (0, i.jsx)(o.A, {
-                        guildId: null,
-                    }),
+                    children: (0, i.jsx)(r.A, { guildId: null }),
                 }),
             ],
         });

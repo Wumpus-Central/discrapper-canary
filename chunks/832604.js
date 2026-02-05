@@ -1,15 +1,10 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(64700),
     i = n(635377),
     a = n.n(i),
     s = n(306044);
-let o = new (a())({
-    max: 1e3,
-});
-
+let o = new (a())({ max: 1e3 });
 function l(e, t) {
     let [n, i] = r.useState();
     return (
@@ -27,7 +22,7 @@ function l(e, t) {
                                 if (r) return;
                                 if (0 !== t || null == n.icon || "" === n.icon || null == n.name || "" === n.name)
                                     return void i(void 0);
-                                let a = "data:image/png;base64,".concat(n.icon);
+                                let a = `data:image/png;base64,${n.icon}`;
                                 o.set(e, a), i(a);
                             });
                     })
@@ -39,6 +34,6 @@ function l(e, t) {
                 }
             );
         }, [e, t]),
-        null != t ? t : n
+        t ?? n
     );
 }

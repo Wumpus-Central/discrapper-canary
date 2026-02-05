@@ -18,43 +18,15 @@ e.exports = function (e) {
             e.COMMENT("[;#](?!\\s*$)", "$"),
             e.C_BLOCK_COMMENT_MODE,
             e.QUOTE_STRING_MODE,
-            {
-                className: "string",
-                begin: "'",
-                end: "[^\\\\]'",
-                relevance: 0,
-            },
-            {
-                className: "title",
-                begin: "\\|",
-                end: "\\|",
-                illegal: "\\n",
-                relevance: 0,
-            },
-            {
-                className: "number",
-                variants: [
-                    {
-                        begin: "0x[0-9a-f]+",
-                    },
-                    {
-                        begin: "\\b-?\\d+",
-                    },
-                ],
-                relevance: 0,
-            },
+            { className: "string", begin: "'", end: "[^\\\\]'", relevance: 0 },
+            { className: "title", begin: "\\|", end: "\\|", illegal: "\\n", relevance: 0 },
+            { className: "number", variants: [{ begin: "0x[0-9a-f]+" }, { begin: "\\b-?\\d+" }], relevance: 0 },
             {
                 className: "symbol",
                 variants: [
-                    {
-                        begin: "^\\s*[a-z_\\.\\$][a-z0-9_\\.\\$]+:",
-                    },
-                    {
-                        begin: "^\\s*[0-9]+:",
-                    },
-                    {
-                        begin: "[0-9]+[bf]",
-                    },
+                    { begin: "^\\s*[a-z_\\.\\$][a-z0-9_\\.\\$]+:" },
+                    { begin: "^\\s*[0-9]+:" },
+                    { begin: "[0-9]+[bf]" },
                 ],
                 relevance: 0,
             },

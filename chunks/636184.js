@@ -1,166 +1,101 @@
-n.d(t, {
-    h: () => E,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { h: () => v });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(158954),
     o = n(311907),
-    c = n(582754),
-    u = n(397927),
-    d = n(308528),
-    p = n(854627),
-    m = n(12901),
-    f = n(954571),
-    g = n(975571),
-    h = n(427262),
-    _ = n(326084),
-    b = n(851746),
-    A = n(652215),
-    y = n(985018),
-    v = n(185914),
-    x = n(299148);
-let O = (e) => {
-        let { recipient: t, status: n, onClose: i } = e,
-            { avatarSrc: l, eventHandlers: s } = (0, p.A)({
-                userId: null == t ? void 0 : t.id,
-                size: u._3J.SIZE_56,
-            }),
-            o = h.Ay.getName(t),
-            c = n === _.o.FAIL;
-        return (0, r.jsxs)("div", {
-            className: v.w4,
+    d = n(582754),
+    c = n(397927),
+    u = n(308528),
+    m = n(854627),
+    _ = n(12901),
+    h = n(954571),
+    p = n(975571),
+    g = n(427262),
+    A = n(326084),
+    f = n(851746),
+    x = n(652215),
+    E = n(985018),
+    C = n(185914),
+    I = n(299148);
+let T = (e) => {
+        let { recipient: t, status: n, onClose: l } = e,
+            { avatarSrc: a, eventHandlers: s } = (0, m.A)({ userId: t?.id, size: c._3J.SIZE_56 }),
+            o = g.Ay.getName(t),
+            d = n === A.o.FAIL;
+        return (0, i.jsxs)("div", {
+            className: C.w4,
             children: [
-                (0, r.jsx)(
-                    u.euF,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            imageClassName: a()({
-                                [v.jN]: c,
-                            }),
-                            src: l,
-                            "aria-label": o,
-                            size: u._3J.SIZE_32,
-                        },
-                        s,
-                    ),
-                ),
-                c
-                    ? (0, r.jsxs)(r.Fragment, {
+                (0, i.jsx)(c.euF, {
+                    imageClassName: r()({ [C.jN]: d }),
+                    src: a,
+                    "aria-label": o,
+                    size: c._3J.SIZE_32,
+                    ...s,
+                }),
+                d
+                    ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.Text, {
-                                  className: v.E0,
+                              (0, i.jsx)(c.Text, {
+                                  className: C.E0,
                                   variant: "text-md/medium",
                                   color: "text-strong",
                                   children: o,
                               }),
-                              (0, r.jsx)(u.Text, {
+                              (0, i.jsx)(c.Text, {
                                   variant: "text-md/medium",
-                                  className: v.nT,
+                                  className: C.nT,
                                   color: "text-strong",
-                                  children: y.intl.format(y.t.RO3T4B, {
-                                      userName: o,
-                                  }),
+                                  children: E.intl.format(E.t.RO3T4B, { userName: o }),
                               }),
                           ],
                       })
-                    : (0, r.jsx)(u.Text, {
+                    : (0, i.jsx)(c.Text, {
                           variant: "text-md/medium",
-                          className: v.Pm,
+                          className: C.Pm,
                           color: "text-strong",
                           children: o,
                       }),
-                (0, r.jsx)(u.Button, {
+                (0, i.jsx)(c.Button, {
                     variant: "secondary",
                     size: "sm",
-                    text: y.intl.string(y.t["g33r/P"]),
-                    icon: u.oyn,
+                    text: E.intl.string(E.t["g33r/P"]),
+                    icon: c.oyn,
                     onClick: () => {
                         var e;
-                        return (
-                            (e = t.id),
-                            void ((0, m.default)(),
-                            d.A.openPrivateChannel({
-                                recipientIds: e,
-                            }),
-                            i())
-                        );
+                        return (e = t.id), void ((0, _.default)(), u.A.openPrivateChannel({ recipientIds: e }), l());
                     },
                 }),
             ],
         });
     },
-    E = (e) => {
-        let { results: t, onClose: n, isReminderConfirmation: l } = e,
-            a = (0, o.bG)([b.A], () => b.A.getReferralsRemaining());
-        f.default.track(A.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-        let { reducedMotion: d } = i.useContext(c.CZ);
-        return null === a
-            ? (0, r.jsx)(u.y$y, {})
-            : (0, r.jsx)(s.ExpressiveModal, {
-                  graphic: d.enabled
-                      ? {
-                            src: x.A,
-                            type: "image",
-                        }
-                      : {
-                            rive: u.lBW,
-                            type: "rive",
-                        },
+    v = (e) => {
+        let { results: t, onClose: n, isReminderConfirmation: a } = e,
+            r = (0, o.bG)([f.A], () => f.A.getReferralsRemaining());
+        h.default.track(x.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        let { reducedMotion: u } = l.useContext(d.CZ);
+        return null === r
+            ? (0, i.jsx)(c.y$y, {})
+            : (0, i.jsx)(s.ExpressiveModal, {
+                  graphic: u.enabled ? { src: I.A, type: "image" } : { rive: c.lBW, type: "rive" },
                   gradientColor: "nitro-pink",
                   title:
-                      0 === t.filter((e) => e.status === _.o.SUCCESS).length
-                          ? y.intl.string(y.t["7VBEue"])
-                          : !0 === l
-                            ? y.intl.string(y.t.GP5lbq)
-                            : y.intl.string(y.t.tKCltd),
+                      0 === t.filter((e) => e.status === A.o.SUCCESS).length
+                          ? E.intl.string(E.t["7VBEue"])
+                          : !0 === a
+                            ? E.intl.string(E.t.GP5lbq)
+                            : E.intl.string(E.t.tKCltd),
                   subtitle:
-                      !0 === l
-                          ? y.intl.format(y.t["4gJJfD"], {
-                                helpdeskArticle: g.A.getArticleURL(A.MVz.REFERRAL_PROGRAM),
-                            })
-                          : y.intl.format(y.t.AwGSWl, {
-                                helpdeskArticle: g.A.getArticleURL(A.MVz.REFERRAL_PROGRAM),
-                            }),
+                      !0 === a
+                          ? E.intl.format(E.t["4gJJfD"], { helpdeskArticle: p.A.getArticleURL(x.MVz.REFERRAL_PROGRAM) })
+                          : E.intl.format(E.t.AwGSWl, { helpdeskArticle: p.A.getArticleURL(x.MVz.REFERRAL_PROGRAM) }),
                   onClose: n,
                   transitionState: s.ip4.ENTERED,
-                  children: (0, r.jsx)("div", {
-                      className: v.Hz,
+                  children: (0, i.jsx)("div", {
+                      className: C.Hz,
                       children: t.map((e) =>
-                          (0, r.jsx)(
-                              O,
-                              {
-                                  recipient: e.recipient,
-                                  status: e.status,
-                                  onClose: n,
-                              },
-                              e.recipient.id,
-                          ),
+                          (0, i.jsx)(T, { recipient: e.recipient, status: e.status, onClose: n }, e.recipient.id),
                       ),
                   }),
               });

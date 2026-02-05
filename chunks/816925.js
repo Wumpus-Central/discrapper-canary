@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ft: "keywordTextAreaContainer__4546e",
     cC: "keywordTextArea__4546e",

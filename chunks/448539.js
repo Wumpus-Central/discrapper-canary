@@ -1,12 +1,8 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(64700),
     i = n(340287);
-let a = Object.freeze({
-    box: "border-box",
-});
-
+let a = Object.freeze({ box: "border-box" });
 function s(e) {
     let { ref: t, onUpdate: n, resizeObserver: s, listenerMap: o, key: l } = e;
     (0, r.useLayoutEffect)(() => {

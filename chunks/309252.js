@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isvalidColorString =
         t.red =
         t.getContrastingColor =
@@ -10,13 +9,8 @@ Object.defineProperty(t, "__esModule", {
             void 0);
 var n = a(r(330443)),
     o = a(r(440745));
-
 function a(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
 t.simpleCheckForValidColor = function (e) {
     var t = 0,
@@ -61,25 +55,10 @@ var i = (t.toState = function (e, t) {
               : "#fff";
     }),
     (t.red = {
-        hsl: {
-            a: 1,
-            h: 0,
-            l: 0.5,
-            s: 1,
-        },
+        hsl: { a: 1, h: 0, l: 0.5, s: 1 },
         hex: "#ff0000",
-        rgb: {
-            r: 255,
-            g: 0,
-            b: 0,
-            a: 1,
-        },
-        hsv: {
-            h: 0,
-            s: 1,
-            v: 1,
-            a: 1,
-        },
+        rgb: { r: 255, g: 0, b: 0, a: 1 },
+        hsv: { h: 0, s: 1, v: 1, a: 1 },
     }),
     (t.isvalidColorString = function (e, t) {
         var r = e.replace("\xb0", "");

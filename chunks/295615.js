@@ -1,18 +1,14 @@
-n.d(t, {
-    default: () => l,
-}),
-    n(228524);
+n.d(t, { default: () => l });
 var d = n(627968),
     i = n(64700),
     h = n(397927),
-    r = n(638633),
-    s = n(842130),
+    s = n(638633),
+    r = n(842130),
     b = n(985018),
     a = n(143335);
-
 function l(e) {
     let { onClose: t } = e,
-        n = (0, r.A)();
+        n = (0, s.A)();
     return (
         i.useEffect(() => {
             n || t();
@@ -25,13 +21,13 @@ function l(e) {
                     (0, d.jsx)(h.Heading, {
                         variant: "heading-xl/semibold",
                         className: a.DD,
-                        children: b.intl.string(s.default.ujnPZZ),
+                        children: b.intl.string(r.default.ujnPZZ),
                     }),
                     (0, d.jsx)(h.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         className: a.h_,
-                        children: b.intl.string(s.default.VfqJvY),
+                        children: b.intl.string(r.default.VfqJvY),
                     }),
                 ],
             }),

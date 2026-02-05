@@ -1,3 +1,1 @@
-t.exports = {
-    z: "error__77bc8",
-};
+t.exports = { z: "error__77bc8" };

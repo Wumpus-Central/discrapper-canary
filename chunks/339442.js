@@ -1,38 +1,30 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(757036),
-    s = n(128450),
-    o = n(180020),
-    l = n(652215),
+var s = n(397927),
+    r = n(757036),
+    a = n(128450),
+    l = n(180020),
+    o = n(652215),
     c = n(788868),
-    u = n(985018),
-    d = n(93448);
-
-function f(e) {
-    var t, n;
-    let f = (0, a.L)(c.PremiumTypes.TIER_2);
-    return (0, r.jsxs)(s.A, {
+    d = n(985018),
+    u = n(93448);
+function _(e) {
+    let t = (0, r.L)(c.PremiumTypes.TIER_2);
+    return (0, i.jsxs)(a.A, {
         errors: e.errors,
         disabled: e.disabled,
-        title: u.intl.string(u.t["9AjdkD"]),
+        title: d.intl.string(d.t["9AjdkD"]),
         children: [
-            (0, r.jsx)("div", {
-                children: (0, r.jsx)(i.ksK, {
+            (0, i.jsx)("div", {
+                children: (0, i.jsx)(s.ksK, {
                     placeholder: e.placeholder,
-                    maxLength: l.zzC,
+                    maxLength: o.zzC,
                     onChange: e.onGlobalNameChange,
-                    value: null != (t = null != (n = e.pendingGlobalName) ? n : e.currentGlobalName) ? t : "",
+                    value: e.pendingGlobalName ?? e.currentGlobalName ?? "",
                 }),
             }),
-            f &&
-                (0, r.jsx)(o.A, {
-                    user: e.user,
-                    className: d.F,
-                }),
+            t && (0, i.jsx)(l.A, { user: e.user, className: u.F }),
         ],
     });
 }

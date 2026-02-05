@@ -1,6 +1,4 @@
-n.d(e, {
-    A: () => i,
-});
+n.d(e, { A: () => i });
 var t = {
     lessThanXSeconds: {
         one: {
@@ -12,11 +10,7 @@ var t = {
         other: "manje od {{count}} sekundi",
     },
     xSeconds: {
-        one: {
-            standalone: "1 sekunda",
-            withPrepositionAgo: "1 sekunde",
-            withPrepositionIn: "1 sekundu",
-        },
+        one: { standalone: "1 sekunda", withPrepositionAgo: "1 sekunde", withPrepositionIn: "1 sekundu" },
         dual: "{{count}} sekunde",
         other: "{{count}} sekundi",
     },
@@ -31,92 +25,52 @@ var t = {
         other: "manje od {{count}} minuta",
     },
     xMinutes: {
-        one: {
-            standalone: "1 minuta",
-            withPrepositionAgo: "1 minute",
-            withPrepositionIn: "1 minutu",
-        },
+        one: { standalone: "1 minuta", withPrepositionAgo: "1 minute", withPrepositionIn: "1 minutu" },
         dual: "{{count}} minute",
         other: "{{count}} minuta",
     },
     aboutXHours: {
-        one: {
-            standalone: "oko 1 sat",
-            withPrepositionAgo: "oko 1 sat",
-            withPrepositionIn: "oko 1 sat",
-        },
+        one: { standalone: "oko 1 sat", withPrepositionAgo: "oko 1 sat", withPrepositionIn: "oko 1 sat" },
         dual: "oko {{count}} sata",
         other: "oko {{count}} sati",
     },
     xHours: {
-        one: {
-            standalone: "1 sat",
-            withPrepositionAgo: "1 sat",
-            withPrepositionIn: "1 sat",
-        },
+        one: { standalone: "1 sat", withPrepositionAgo: "1 sat", withPrepositionIn: "1 sat" },
         dual: "{{count}} sata",
         other: "{{count}} sati",
     },
     xDays: {
-        one: {
-            standalone: "1 dan",
-            withPrepositionAgo: "1 dan",
-            withPrepositionIn: "1 dan",
-        },
+        one: { standalone: "1 dan", withPrepositionAgo: "1 dan", withPrepositionIn: "1 dan" },
         dual: "{{count}} dana",
         other: "{{count}} dana",
     },
     aboutXWeeks: {
-        one: {
-            standalone: "oko 1 tjedan",
-            withPrepositionAgo: "oko 1 tjedan",
-            withPrepositionIn: "oko 1 tjedan",
-        },
+        one: { standalone: "oko 1 tjedan", withPrepositionAgo: "oko 1 tjedan", withPrepositionIn: "oko 1 tjedan" },
         dual: "oko {{count}} tjedna",
         other: "oko {{count}} tjedana",
     },
     xWeeks: {
-        one: {
-            standalone: "1 tjedan",
-            withPrepositionAgo: "1 tjedan",
-            withPrepositionIn: "1 tjedan",
-        },
+        one: { standalone: "1 tjedan", withPrepositionAgo: "1 tjedan", withPrepositionIn: "1 tjedan" },
         dual: "{{count}} tjedna",
         other: "{{count}} tjedana",
     },
     aboutXMonths: {
-        one: {
-            standalone: "oko 1 mjesec",
-            withPrepositionAgo: "oko 1 mjesec",
-            withPrepositionIn: "oko 1 mjesec",
-        },
+        one: { standalone: "oko 1 mjesec", withPrepositionAgo: "oko 1 mjesec", withPrepositionIn: "oko 1 mjesec" },
         dual: "oko {{count}} mjeseca",
         other: "oko {{count}} mjeseci",
     },
     xMonths: {
-        one: {
-            standalone: "1 mjesec",
-            withPrepositionAgo: "1 mjesec",
-            withPrepositionIn: "1 mjesec",
-        },
+        one: { standalone: "1 mjesec", withPrepositionAgo: "1 mjesec", withPrepositionIn: "1 mjesec" },
         dual: "{{count}} mjeseca",
         other: "{{count}} mjeseci",
     },
     aboutXYears: {
-        one: {
-            standalone: "oko 1 godinu",
-            withPrepositionAgo: "oko 1 godinu",
-            withPrepositionIn: "oko 1 godinu",
-        },
+        one: { standalone: "oko 1 godinu", withPrepositionAgo: "oko 1 godinu", withPrepositionIn: "oko 1 godinu" },
         dual: "oko {{count}} godine",
         other: "oko {{count}} godina",
     },
     xYears: {
-        one: {
-            standalone: "1 godina",
-            withPrepositionAgo: "1 godine",
-            withPrepositionIn: "1 godinu",
-        },
+        one: { standalone: "1 godina", withPrepositionAgo: "1 godine", withPrepositionIn: "1 godinu" },
         dual: "{{count}} godine",
         other: "{{count}} godina",
     },

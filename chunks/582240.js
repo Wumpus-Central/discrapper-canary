@@ -1,226 +1,113 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(896048);
+n.d(t, { A: () => C });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(311907),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
     o = n(391973),
-    u = n(684013),
-    c = n(964486),
-    d = n(555528),
+    d = n(684013),
+    u = n(964486),
+    c = n(555528),
     h = n(531685),
-    p = n(5463),
-    f = n(365971),
+    A = n(5463),
+    m = n(365971),
     g = n(41984),
-    m = n(129537),
-    y = n(127242),
-    A = n(968898),
-    v = n(481484),
-    b = n(545807),
-    E = n(652215),
-    O = n(121834);
-
-function x(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let S = [],
-    I = r.memo(function (e) {
+    p = n(129537),
+    f = n(127242),
+    _ = n(968898),
+    E = n(481484),
+    x = n(545807),
+    S = n(652215),
+    I = n(121834);
+let T = [],
+    C = l.memo(function (e) {
         let {
                 widget: t,
                 renderWidget: n,
-                renderTitle: l,
-                renderButtons: I,
-                resizeValidation: j,
-                containerRenderGate: T,
-                className: C,
-                dragContainerClassName: N,
+                renderTitle: a,
+                renderButtons: C,
+                resizeValidation: v,
+                containerRenderGate: y,
+                className: N,
+                dragContainerClassName: O,
             } = e,
-            w = (0, s.bG)([d.A], () => d.A.getWidgetConfig(t.type), [t.type]),
-            P = (0, A.RE)(t.id, A.X1),
-            D = (0, v.A)(),
-            [R, k] = r.useState(() => {
-                var e;
-                return null != (e = null == T ? void 0 : T.stores) ? e : S;
-            });
-        (0, c.Ay)(() => {
-            var e;
-            k(null != (e = null == T ? void 0 : T.stores) ? e : S);
+            b = (0, r.bG)([c.A], () => c.A.getWidgetConfig(t.type), [t.type]),
+            j = (0, _.RE)(t.id, _.X1),
+            w = (0, E.A)(),
+            [L, R] = l.useState(() => y?.stores ?? T);
+        (0, u.Ay)(() => {
+            R(y?.stores ?? T);
         });
-        let M = (0, s.bG)(R, () => {
-                var e;
-                return (
-                    null ==
-                        (e =
-                            null == T
-                                ? void 0
-                                : T.shouldRender({
-                                      widget: t,
-                                      locked: D,
-                                  })) || e
-                );
-            }, [T, D, t]),
-            L = (0, b.A)(),
-            U = (0, s.bG)([h.A], () => h.A.windowSize((0, f.Q2)(L))),
-            G = r.useCallback((e, t, n, i, r) => {
-                let l = h.A.windowSize((0, f.Q2)((0, b.b)())),
-                    a = (0, p.NO)(n, l),
-                    s = (0, p.R9)(i, l);
-                (0, o.uD)(t),
-                    (0, o.Ju)({
-                        widgetId: t,
-                        anchor: a,
-                        size: s,
-                    });
-                let c = e === m.P.MOVE,
-                    g = (0, p.Ly)(n, l.width, l.height, r.width, r.height);
-                u.A.track(E.HAw.OVERLAY_LAYOUT_UPDATED, {
-                    was_resized: !c,
-                    was_dragged: c,
-                    widget_type: d.A.getWidgetType(t),
-                    window_width: l.width,
-                    window_height: l.height,
-                    widget_width: r.width,
-                    widget_height: r.height,
+        let D = (0, r.bG)(L, () => y?.shouldRender({ widget: t, locked: w }) ?? !0, [y, w, t]),
+            M = (0, x.A)(),
+            k = (0, r.bG)([h.A], () => h.A.windowSize((0, m.Q2)(M))),
+            z = l.useCallback((e, t, n, i, l) => {
+                let a = h.A.windowSize((0, m.Q2)((0, x.b)())),
+                    s = (0, A.NO)(n, a),
+                    r = (0, A.R9)(i, a);
+                (0, o.uD)(t), (0, o.Ju)({ widgetId: t, anchor: s, size: r });
+                let u = e === p.P.MOVE,
+                    g = (0, A.Ly)(n, a.width, a.height, l.width, l.height);
+                d.A.track(S.HAw.OVERLAY_LAYOUT_UPDATED, {
+                    was_resized: !u,
+                    was_dragged: u,
+                    widget_type: c.A.getWidgetType(t),
+                    window_width: a.width,
+                    window_height: a.height,
+                    widget_width: l.width,
+                    widget_height: l.height,
                     widget_left: g.left,
                     widget_top: g.top,
                 });
             }, []),
-            V = r.useCallback((e) => {
+            V = l.useCallback((e) => {
                 (0, o.uD)(e);
             }, []),
-            { id: z, pinned: F, zIndex: H, size: Y, anchor: K, minSize: W } = t,
-            B = r.useMemo(() => (0, p.fd)(Y, U), [Y, U]),
-            Z = (0, p.Nv)(K, U),
-            {
-                resizeX: X,
-                resizeY: J,
-                dragAnywhere: Q,
-                constrainAutoSizeToExplicitResizeEvents: q,
-            } = null != w ? w : {},
-            $ = !D,
-            ee = F || !D,
-            et = r.useMemo(
-                () => ({
-                    minX: 0,
-                    minY: 0,
-                    maxX: U.width,
-                    maxY: U.height,
-                }),
-                [U],
+            { id: U, pinned: P, zIndex: G, size: H, anchor: Y, minSize: F } = t,
+            W = l.useMemo(() => (0, A.fd)(H, k), [H, k]),
+            K = (0, A.Nv)(Y, k),
+            { resizeX: Z, resizeY: B, dragAnywhere: X, constrainAutoSizeToExplicitResizeEvents: J } = b ?? {},
+            Q = !w,
+            q = P || !w,
+            $ = l.useMemo(() => ({ minX: 0, minY: 0, maxX: k.width, maxY: k.height }), [k]),
+            ee = l.useCallback(
+                (e) => n({ ...e, widget: t, dragging: null != e.dragOperation, className: N }),
+                [t, n, N],
             ),
-            en = r.useCallback(
+            et = l.useCallback(
                 (e) =>
-                    n(
-                        _(x({}, e), {
-                            widget: t,
-                            dragging: null != e.dragOperation,
-                            className: C,
-                        }),
-                    ),
-                [t, n, C],
-            ),
-            ei = r.useCallback(
-                (e) =>
-                    null != l || null != I
-                        ? (0, i.jsxs)("div", {
-                              className: a()(O.vJ, P && O.vw),
-                              children: [null == l ? void 0 : l(t), null == I ? void 0 : I(t, e)],
-                          })
+                    null != a || null != C
+                        ? (0, i.jsxs)("div", { className: s()(I.vJ, j && I.vw), children: [a?.(t), C?.(t, e)] })
                         : null,
-                [t, l, P, I],
+                [t, a, j, C],
             ),
-            er = (0, s.bG)([y.A], () => y.A.hasRenderDebugMode(g.x7.WidgetAreas)),
-            el = r.useMemo(() => {
-                if (null != j)
-                    return (e) =>
-                        j(
-                            _(x({}, e), {
-                                widget: t,
-                            }),
-                        );
-            }, [j, t]);
-        return M
-            ? (0, i.jsx)(m.A, {
-                  className: a()(
-                      {
-                          [O.Yz]: er,
-                          [O.xu]: er && !F,
-                          [O.E]: er && F,
-                      },
-                      N,
-                  ),
-                  id: z,
-                  size: B,
-                  anchor: Z,
-                  container: et,
-                  minSize:
-                      null != W
-                          ? W
-                          : {
-                                width: 0,
-                                height: 0,
-                            },
-                  hidden: !ee,
-                  locked: D,
-                  resizeX: null != X && X,
-                  resizeY: null != J && J,
-                  style: {
-                      zIndex: H,
-                  },
-                  dragAnywhere: null != Q && Q,
-                  constrainAutoSizeToExplicitResizeEvents: null != q && q,
-                  active: $,
-                  onUpdate: G,
+            en = (0, r.bG)([f.A], () => f.A.hasRenderDebugMode(g.x7.WidgetAreas)),
+            ei = l.useMemo(() => {
+                if (null != v) return (e) => v({ ...e, widget: t });
+            }, [v, t]);
+        return D
+            ? (0, i.jsx)(p.A, {
+                  className: s()({ [I.Yz]: en, [I.xu]: en && !P, [I.E]: en && P }, O),
+                  id: U,
+                  size: W,
+                  anchor: K,
+                  container: $,
+                  minSize: F ?? { width: 0, height: 0 },
+                  hidden: !q,
+                  locked: w,
+                  resizeX: Z ?? !1,
+                  resizeY: B ?? !1,
+                  style: { zIndex: G },
+                  dragAnywhere: X ?? !1,
+                  constrainAutoSizeToExplicitResizeEvents: J ?? !1,
+                  active: Q,
+                  onUpdate: z,
                   onClick: V,
-                  targetWindow: L,
-                  forceShowExtras: P,
-                  renderExtras: ei,
-                  resizeValidation: el,
-                  children: en,
+                  targetWindow: M,
+                  forceShowExtras: j,
+                  renderExtras: et,
+                  resizeValidation: ei,
+                  children: ee,
               })
             : null;
     });

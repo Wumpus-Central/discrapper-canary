@@ -1,40 +1,21 @@
-e.d(s, {
-    default: () => c,
-});
-var a = e(627968),
+e.d(s, { default: () => c });
+var r = e(627968),
     i = e(64700),
-    n = e(732955),
-    r = e(563863),
-    d = e(985018),
-    l = e(267322);
+    a = e(732955),
+    n = e(563863),
+    l = e(985018),
+    o = e(267322);
 let c = (t) => {
     let { transitionState: s, errors: e, onClose: c } = t,
-        o = i.useMemo(
-            () => [
-                {
-                    variant: "secondary",
-                    text: d.intl.string(d.t["NX+WJN"]),
-                    onClick: c,
-                },
-            ],
-            [c],
-        );
-    return (0, a.jsx)(n.aFV, {
-        title: d.intl.string(d.t.AUIsQU),
+        d = i.useMemo(() => [{ variant: "secondary", text: l.intl.string(l.t["NX+WJN"]), onClick: c }], [c]);
+    return (0, r.jsx)(a.aFV, {
+        title: l.intl.string(l.t.AUIsQU),
         transitionState: s,
         onClose: c,
-        actions: o,
-        children: (0, a.jsx)("div", {
-            className: l.s,
-            children: e.map((t) =>
-                (0, a.jsx)(
-                    r.A,
-                    {
-                        error: t,
-                    },
-                    t.filename,
-                ),
-            ),
+        actions: d,
+        children: (0, r.jsx)("div", {
+            className: o.s,
+            children: e.map((t) => (0, r.jsx)(n.A, { error: t }, t.filename)),
         }),
     });
 };

@@ -1,14 +1,9 @@
-n.d(t, {
-    KL: () => u,
-    f1: () => l,
-    fi: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { KL: () => c, f1: () => l, fi: () => u });
 var r = n(311907),
     i = n(996439),
     a = n(800828),
     s = n(652215);
-
 function o(e, t) {
     let [n] = (0, r.bG)(
         [a.A],
@@ -18,16 +13,13 @@ function o(e, t) {
     );
     return n;
 }
-
 function l(e) {
     return o(e, s.eA$.FRIEND);
 }
-
-function c(e) {
+function u(e) {
     return o(e, s.eA$.PENDING_INCOMING);
 }
-
-function u(e, t) {
+function c(e, t) {
     let [n] = (0, r.bG)(
         [a.A],
         () => {

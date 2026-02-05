@@ -1,86 +1,67 @@
-r.d(t, {
-    A: () => O,
-}),
-    r(896048),
-    r(228524);
-var n = r(627968),
-    o = r(64700),
-    s = r(503698),
-    c = r.n(s),
-    i = r(397927),
-    l = r(470934),
-    a = r(998418),
-    d = r(813847),
-    u = r(890942),
-    p = r(490557),
-    b = r(439156),
-    x = r(220628),
-    f = r(867060),
-    j = r(985018),
-    m = r(235545);
-
-function O(e) {
-    let { canUseBoosts: t, guildId: r, powerup: s } = e,
-        [O, y] = o.useState(!1),
-        v = (0, a.Ay)(r, s),
-        g = (0, d.e)(s, v, !1),
-        h = (0, a.dy)(v),
-        { disabled: w } = (0, l.A)(r, s, h),
-        { onActivate: P, error: I } = (0, x.A)(r, s);
-    (0, f.A)(I);
-    let _ = !t || w,
-        A = h && !_,
-        N = (0, n.jsxs)(n.Fragment, {
+t.d(s, { A: () => _ });
+var a = t(627968),
+    i = t(64700),
+    r = t(503698),
+    n = t.n(r),
+    d = t(397927),
+    o = t(470934),
+    l = t(998418),
+    c = t(813847),
+    x = t(890942),
+    u = t(490557),
+    p = t(439156),
+    m = t(220628),
+    v = t(867060),
+    h = t(985018),
+    j = t(235545);
+function _(e) {
+    let { canUseBoosts: s, guildId: t, powerup: r } = e,
+        [_, g] = i.useState(!1),
+        C = (0, l.Ay)(t, r),
+        I = (0, c.e)(r, C, !1),
+        A = (0, l.dy)(C),
+        { disabled: f } = (0, o.A)(t, r, A),
+        { onActivate: N, error: k } = (0, m.A)(t, r);
+    (0, v.A)(k);
+    let b = !s || f,
+        T = A && !b,
+        w = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsx)("div", {
-                    className: c()(m._W, {
-                        [m.vu]: h,
-                    }),
-                    children: (0, n.jsx)(p.l, {
-                        powerup: s,
-                        isHovering: !_ && O,
-                    }),
+                (0, a.jsx)("div", {
+                    className: n()(j._W, { [j.vu]: A }),
+                    children: (0, a.jsx)(u.l, { powerup: r, isHovering: !b && _ }),
                 }),
-                (0, n.jsxs)("div", {
-                    className: m.xQ,
+                (0, a.jsxs)("div", {
+                    className: j.xQ,
                     children: [
-                        (0, n.jsxs)("div", {
-                            className: m.U7,
+                        (0, a.jsxs)("div", {
+                            className: j.U7,
                             children: [
-                                (0, n.jsx)("div", {
-                                    children: (0, n.jsx)(i.Text, {
+                                (0, a.jsx)("div", {
+                                    children: (0, a.jsx)(d.Text, {
                                         variant: "text-sm/medium",
-                                        color: (h || O) && !_ ? "text-strong" : "text-subtle",
-                                        children: s.description,
+                                        color: (A || _) && !b ? "text-strong" : "text-subtle",
+                                        children: r.description,
                                     }),
                                 }),
-                                (0, n.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     children: [
-                                        (null == g ? void 0 : g.type) === "expiring" &&
-                                            (0, n.jsx)(u.P5, {
-                                                dateString: g.expiringAt,
-                                            }),
-                                        (null == g ? void 0 : g.type) === "removing" &&
-                                            (0, n.jsx)(u.Yq, {
-                                                removingAt: g.removingAt,
-                                            }),
-                                        (null == g ? void 0 : g.type) === "active" &&
-                                            (0, n.jsx)(u.TG, {
-                                                text: g.statusText,
-                                            }),
-                                        null == g &&
-                                            (0, n.jsxs)("div", {
-                                                className: m.II,
+                                        I?.type === "expiring" && (0, a.jsx)(x.P5, { dateString: I.expiringAt }),
+                                        I?.type === "removing" && (0, a.jsx)(x.Yq, { removingAt: I.removingAt }),
+                                        I?.type === "active" && (0, a.jsx)(x.TG, { text: I.statusText }),
+                                        null == I &&
+                                            (0, a.jsxs)("div", {
+                                                className: j.II,
                                                 children: [
-                                                    (0, n.jsx)(i._Jp, {
+                                                    (0, a.jsx)(d._Jp, {
                                                         size: "sm",
-                                                        color: i.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                        color: d.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                     }),
-                                                    (0, n.jsx)(i.Text, {
+                                                    (0, a.jsx)(d.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "text-subtle",
-                                                        children: j.intl.formatToPlainString(j.t.t2Wbo1, {
-                                                            required: s.cost,
+                                                        children: h.intl.formatToPlainString(h.t.t2Wbo1, {
+                                                            required: r.cost,
                                                             decorator: "",
                                                         }),
                                                     }),
@@ -90,42 +71,26 @@ function O(e) {
                                 }),
                             ],
                         }),
-                        A &&
-                            (0, n.jsx)(b.A, {
-                                compact: !0,
-                                iconSize: "md",
-                                guildId: r,
-                                powerup: s,
-                                className: m.Rm,
-                            }),
+                        T && (0, a.jsx)(p.A, { compact: !0, iconSize: "md", guildId: t, powerup: r, className: j.Rm }),
                     ],
                 }),
             ],
         });
-    return h
-        ? (0, n.jsx)("div", {
-              className: c()(m.nK, m.RO, {
-                  [m.r9]: _,
-              }),
-              onMouseEnter: () => y(!0),
-              onMouseLeave: () => y(!1),
-              children: N,
+    return A
+        ? (0, a.jsx)("div", {
+              className: n()(j.nK, j.RO, { [j.r9]: b }),
+              onMouseEnter: () => g(!0),
+              onMouseLeave: () => g(!1),
+              children: w,
           })
-        : (0, n.jsx)(i.DUT, {
-              className: c()(m.nK, {
-                  [m.r9]: _,
-              }),
-              onMouseEnter: () => y(!0),
-              onMouseLeave: () => y(!1),
-              "aria-disabled": _,
+        : (0, a.jsx)(d.DUT, {
+              className: n()(j.nK, { [j.r9]: b }),
+              onMouseEnter: () => g(!0),
+              onMouseLeave: () => g(!1),
+              "aria-disabled": b,
               onClick: (e) => {
-                  e.stopPropagation(),
-                      _ ||
-                          null == P ||
-                          P({
-                              shouldCloseAllModals: !1,
-                          });
+                  e.stopPropagation(), b || N?.({ shouldCloseAllModals: !1 });
               },
-              children: N,
+              children: w,
           });
 }

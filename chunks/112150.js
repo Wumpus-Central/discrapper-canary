@@ -1,52 +1,29 @@
-n.d(t, {
-    f: () => c,
-});
-var r = n(64700),
-    i = n(435582),
+n.d(t, { f: () => d });
+var i = n(64700),
+    l = n(435582),
     a = n(283488),
-    s = n(735991),
-    o = n(486020),
-    l = n(572211);
-
-function c(e) {
+    r = n(735991),
+    s = n(486020),
+    o = n(572211);
+function d(e) {
     let { bot: t } = e,
-        n = (0, s.Ag)(e),
-        { url: c } = (0, a.A)({
-            applicationId: n ? e.id : void 0,
-            size: 600,
-            names: ["embedded_cover"],
-        });
-    return r.useMemo(() => {
-        let r,
+        n = (0, r.Ag)(e),
+        { url: d } = (0, a.A)({ applicationId: n ? e.id : void 0, size: 600, names: ["embedded_cover"] });
+    return i.useMemo(() => {
+        let i,
             a,
-            u = l.u.BOT;
+            c = o.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            (r = (0, o.z)({
-                id: t.id,
-                banner: e,
-                size: 512,
-                canAnimate: !1,
-            })),
-                (0, o.VI)(e) &&
-                    null == c &&
-                    (a = (0, o.z)({
-                        id: t.id,
-                        banner: e,
-                        size: 512,
-                        canAnimate: !0,
-                    }));
+            (i = (0, s.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
+                (0, s.VI)(e) && null == d && (a = (0, s.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 }));
         }
         if (n) {
-            let t = (0, s.Cx)(e);
-            null != c && ((r = c), (u = l.u.ACTIVITY));
-            let n = null == t ? void 0 : t.activity_preview_video_asset_id;
-            null != n && ((a = (0, i.A)(e.id, n)), (u = l.u.ACTIVITY));
+            let t = (0, r.Cx)(e);
+            null != d && ((i = d), (c = o.u.ACTIVITY));
+            let n = t?.activity_preview_video_asset_id;
+            null != n && ((a = (0, l.A)(e.id, n)), (c = o.u.ACTIVITY));
         }
-        return {
-            staticBannerSrc: r,
-            videoBannerSrc: a,
-            bannerAspectRatio: u,
-        };
-    }, [c, t, n, e]);
+        return { staticBannerSrc: i, videoBannerSrc: a, bannerAspectRatio: c };
+    }, [d, t, n, e]);
 }

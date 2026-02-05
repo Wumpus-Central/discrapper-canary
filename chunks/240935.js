@@ -1,74 +1,52 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var i,
-    s = n(311907),
-    r = n(73153),
-    l = n(734057),
-    o = n(309010),
+"use strict";
+n.d(t, { A: () => g });
+var s = n(311907),
+    i = n(73153),
+    r = n(734057),
+    l = n(309010),
     a = n(543465);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = {},
-    c = {},
+let o = {},
+    d = {},
     h = {};
-
-function g() {
-    let e = o.A.getChannelId();
+function c() {
+    let e = l.A.getChannelId();
     if (null == e) return;
-    let t = l.A.getChannel(e);
+    let t = r.A.getChannel(e);
     if (null == t || null == t.guild_id) return;
     let n = t.guild_id;
     if (
         (null == h[e] && (h[e] = 0),
         t.isThread() || (a.Ay.isOptInEnabled(n) && !a.Ay.isChannelOrParentOptedIn(n, t.id)))
     ) {
-        delete h[e], null != u[n] && u[n].delete(e);
+        delete h[e], null != o[n] && o[n].delete(e);
         return;
     }
-    return (h[e]++, null == u[n] && (u[n] = new Set()), a.Ay.isFavorite(n, e))
-        ? void u[n].delete(e)
-        : (null == c[n] || !c[n].has(e)) && h[e] > 50
-          ? (u[n].add(e), !0)
+    return (h[e]++, null == o[n] && (o[n] = new Set()), a.Ay.isFavorite(n, e))
+        ? void o[n].delete(e)
+        : (null == d[n] || !d[n].has(e)) && h[e] > 50
+          ? (o[n].add(e), !0)
           : void 0;
 }
-class p extends (i = s.Ay.PersistedStore) {
+class u extends s.Ay.PersistedStore {
+    static displayName = "FavoritesSuggestionStore";
+    static persistKey = "FavoritesSuggestionStore";
     initialize(e) {
-        var t, n;
-        if ((this.waitFor(l.A, o.A, a.Ay), this.syncWith([o.A], g), null == e)) return;
-        let { suggestedChannels: i, dismissedSuggestions: s, channelOpensByChannelId: r } = e;
-        if (null != i) for (let e in i) (t = new Set(i[e])), (u[e] = void 0 !== t ? t : new Set());
-        if (null != s) for (let e in s) (n = new Set(s[e])), (c[e] = void 0 !== n ? n : new Set());
-        h = null != r ? r : {};
+        if ((this.waitFor(r.A, l.A, a.Ay), this.syncWith([l.A], c), null == e)) return;
+        let { suggestedChannels: t, dismissedSuggestions: n, channelOpensByChannelId: s } = e;
+        if (null != t) for (let e in t) o[e] = new Set(t[e]) ?? new Set();
+        if (null != n) for (let e in n) d[e] = new Set(n[e]) ?? new Set();
+        h = s ?? {};
     }
     getSuggestedChannelId(e) {
         return null;
     }
     getState() {
-        return {
-            suggestedChannels: {},
-            dismissedSuggestions: {},
-            channelOpensByChannelId: {},
-        };
+        return { suggestedChannels: {}, dismissedSuggestions: {}, channelOpensByChannelId: {} };
     }
 }
-d(p, "displayName", "FavoritesSuggestionStore"), d(p, "persistKey", "FavoritesSuggestionStore");
-let f = new p(r.h, {
+let g = new u(i.h, {
     DISMISS_FAVORITE_SUGGESTION: function (e) {
         let { guildId: t, channelId: n } = e;
-        return null == c[t] && (c[t] = new Set()), c[t].add(n), u[t].delete(n), !0;
+        return null == d[t] && (d[t] = new Set()), d[t].add(n), o[t].delete(n), !0;
     },
 });

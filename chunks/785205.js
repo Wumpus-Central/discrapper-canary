@@ -1,6 +1,5 @@
-n.d(t, {
-    p: () => s,
-});
+"use strict";
+n.d(t, { p: () => s });
 var r = n(627968);
 n(64700);
 var i = n(156312),
@@ -12,14 +11,8 @@ let s = (e) => {
         skuIDs: [],
         activeSubscription: null,
         children: [
-            (0, r.jsx)(a.dZ, {
-                children: t,
-            }),
-            (0, r.jsx)(a.Ay, {
-                header: null,
-                isLargeModal: !1,
-                isDynamicModal: !0,
-            }),
+            (0, r.jsx)(a.dZ, { children: t }),
+            (0, r.jsx)(a.Ay, { header: null, isLargeModal: !1, isDynamicModal: !0 }),
         ],
     });
 };

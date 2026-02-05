@@ -17,37 +17,19 @@ e.exports = function (e) {
             "string",
             "bytes",
         ],
-        r = {
-            match: [/(message|enum|service)\s+/, e.IDENT_RE],
-            scope: {
-                1: "keyword",
-                2: "title.class",
-            },
-        };
+        r = { match: [/(message|enum|service)\s+/, e.IDENT_RE], scope: { 1: "keyword", 2: "title.class" } };
     return {
         name: "Protocol Buffers",
         aliases: ["proto"],
-        keywords: {
-            keyword: t,
-            type: n,
-            literal: ["true", "false"],
-        },
+        keywords: { keyword: t, type: n, literal: ["true", "false"] },
         contains: [
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             r,
-            {
-                className: "function",
-                beginKeywords: "rpc",
-                end: /[{;]/,
-                excludeEnd: !0,
-                keywords: "rpc returns",
-            },
-            {
-                begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/,
-            },
+            { className: "function", beginKeywords: "rpc", end: /[{;]/, excludeEnd: !0, keywords: "rpc returns" },
+            { begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/ },
         ],
     };
 };

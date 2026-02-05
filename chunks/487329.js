@@ -1,3 +1,2 @@
-e.exports = {
-    q: "product__7c3bf",
-};
+"use strict";
+e.exports = { q: "product__7c3bf" };

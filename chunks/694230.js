@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     vK: "banner__97f37",
     Vk: "hasTrialOffer__97f37",

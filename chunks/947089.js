@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ZF: "qrLogin_e16417",
     vP: "qrLoginInner_e16417",

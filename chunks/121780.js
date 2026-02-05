@@ -1,38 +1,17 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(518977);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153),
+    a = n(518977);
+let s = null;
+function o(e) {
+    let { countryCode: t } = e;
+    null != t && (s = (0, a.XF)(t) ?? (0, a.rE)());
 }
-let l = null;
-
-function c(e) {
-    var t;
-    let { countryCode: n } = e;
-    null != n && (l = null != (t = (0, s.XF)(n)) ? t : (0, s.rE)());
-}
-class u extends (r = i.Ay.Store) {
+class l extends r.Ay.Store {
+    static displayName = "LocationMetadataStore";
     getCountryCode() {
-        return l;
+        return s;
     }
 }
-o(u, "displayName", "LocationMetadataStore");
-let d = new u(a.h, {
-    CONNECTION_OPEN: c,
-    SET_LOCATION_METADATA: c,
-});
+let u = new l(i.h, { CONNECTION_OPEN: o, SET_LOCATION_METADATA: o });

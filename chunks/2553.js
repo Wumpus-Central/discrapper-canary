@@ -1,15 +1,10 @@
-n.d(t, {
-    A: () => i,
-});
-var l = n(23658),
-    r = n(453771),
-    a = n(985018);
-
-function i(e) {
-    (0, l.openUploadError)({
-        title: a.intl.string(a.t["/tGlcj"]),
-        help: a.intl.formatToPlainString(a.t.fxEKdS, {
-            maxSize: (0, r.Hb)(e),
-        }),
+t.d(e, { A: () => i });
+var n = t(23658),
+    a = t(453771),
+    r = t(985018);
+function i(A) {
+    (0, n.openUploadError)({
+        title: r.intl.string(r.t["/tGlcj"]),
+        help: r.intl.formatToPlainString(r.t.fxEKdS, { maxSize: (0, a.Hb)(A) }),
     });
 }

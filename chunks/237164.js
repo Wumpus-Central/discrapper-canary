@@ -1,15 +1,12 @@
+"use strict";
 var r = n(691262),
     i = n(264048),
     a = n(698982),
     s = n(415922);
-
 function o(e, t, n) {
     var r = "string" == typeof e ? o.__parse(e) : e;
     if (!(r && "messageFormatPattern" === r.type)) throw TypeError("A message must be provided as a String or AST.");
-    (n = this._mergeFormats(o.formats, n)),
-        i.defineProperty(this, "_locale", {
-            value: this._resolveLocale(t),
-        });
+    (n = this._mergeFormats(o.formats, n)), i.defineProperty(this, "_locale", { value: this._resolveLocale(t) });
     var a = this._findPluralRuleFunction(this._locale),
         s = this._compilePattern(r, t, n, a),
         l = this;
@@ -21,65 +18,22 @@ function o(e, t, n) {
     i.defineProperty(o, "formats", {
         enumerable: !0,
         value: {
-            number: {
-                currency: {
-                    style: "currency",
-                },
-                percent: {
-                    style: "percent",
-                },
-            },
+            number: { currency: { style: "currency" }, percent: { style: "percent" } },
             date: {
-                short: {
-                    month: "numeric",
-                    day: "numeric",
-                    year: "2-digit",
-                },
-                medium: {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                },
-                long: {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                },
-                full: {
-                    weekday: "long",
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                },
+                short: { month: "numeric", day: "numeric", year: "2-digit" },
+                medium: { month: "short", day: "numeric", year: "numeric" },
+                long: { month: "long", day: "numeric", year: "numeric" },
+                full: { weekday: "long", month: "long", day: "numeric", year: "numeric" },
             },
             time: {
-                short: {
-                    hour: "numeric",
-                    minute: "numeric",
-                },
-                medium: {
-                    hour: "numeric",
-                    minute: "numeric",
-                    second: "numeric",
-                },
-                long: {
-                    hour: "numeric",
-                    minute: "numeric",
-                    second: "numeric",
-                    timeZoneName: "short",
-                },
-                full: {
-                    hour: "numeric",
-                    minute: "numeric",
-                    second: "numeric",
-                    timeZoneName: "short",
-                },
+                short: { hour: "numeric", minute: "numeric" },
+                medium: { hour: "numeric", minute: "numeric", second: "numeric" },
+                long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
+                full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
             },
         },
     }),
-    i.defineProperty(o, "__localeData__", {
-        value: i.objCreate(null),
-    }),
+    i.defineProperty(o, "__localeData__", { value: i.objCreate(null) }),
     i.defineProperty(o, "__addLocaleData", {
         value: function (e) {
             if (!(e && e.locale))
@@ -87,18 +41,10 @@ function o(e, t, n) {
             o.__localeData__[e.locale.toLowerCase()] = e;
         },
     }),
-    i.defineProperty(o, "__parse", {
-        value: s.default.parse,
-    }),
-    i.defineProperty(o, "defaultLocale", {
-        enumerable: !0,
-        writable: !0,
-        value: void 0,
-    }),
+    i.defineProperty(o, "__parse", { value: s.default.parse }),
+    i.defineProperty(o, "defaultLocale", { enumerable: !0, writable: !0, value: void 0 }),
     (o.prototype.resolvedOptions = function () {
-        return {
-            locale: this._locale,
-        };
+        return { locale: this._locale };
     }),
     (o.prototype._compilePattern = function (e, t, n, r) {
         return new a.default(t, n, r).compile(e);

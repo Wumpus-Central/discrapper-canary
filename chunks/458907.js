@@ -1,52 +1,45 @@
-n.d(t, {
-    T: () => u,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { T: () => u });
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(460760),
-    c = n(997590),
-    o = n(324580),
-    d = n(985018);
-
+    o = n(997590),
+    d = n(324580),
+    c = n(985018);
 function u(e) {
-    let { label: t, description: n, guildId: u, guildMetadata: f, isDisabled: g, clearable: b = !0 } = e,
-        m = (0, l.yK)([c.A], () => c.A.getPrimaryCategories()),
-        p = i.useCallback(
+    let { label: t, description: n, guildId: u, guildMetadata: m, isDisabled: g, clearable: x = !0 } = e,
+        h = (0, l.yK)([o.A], () => o.A.getPrimaryCategories()),
+        _ = s.useCallback(
             (e) => {
-                (0, a.GX)(u, null != e ? e : o.ig);
+                (0, a.GX)(u, e ?? d.ig);
             },
             [u],
         ),
-        x = i.useMemo(
+        A = s.useMemo(
             () =>
-                m.map((e) => {
+                h.map((e) => {
                     let { categoryId: t, name: n } = e;
-                    return {
-                        id: t.toString(),
-                        value: t,
-                        label: n,
-                    };
+                    return { id: t.toString(), value: t, label: n };
                 }),
-            [m],
+            [h],
         );
-    return 0 === m.length
-        ? (0, r.jsx)(s.y$y, {})
-        : (0, r.jsx)(
-              s.ZiE,
+    return 0 === h.length
+        ? (0, i.jsx)(r.y$y, {})
+        : (0, i.jsx)(
+              r.ZiE,
               {
                   selectionMode: "single",
-                  value: f.primaryCategoryId === o.ig ? null : f.primaryCategoryId,
+                  value: m.primaryCategoryId === d.ig ? null : m.primaryCategoryId,
                   label: t,
                   description: n,
-                  placeholder: d.intl.string(d.t.XqMe3N),
-                  options: x,
-                  onSelectionChange: p,
+                  placeholder: c.intl.string(c.t.XqMe3N),
+                  options: A,
+                  onSelectionChange: _,
                   disabled: g,
-                  clearable: b,
+                  clearable: x,
               },
-              x.length,
+              A.length,
           );
 }

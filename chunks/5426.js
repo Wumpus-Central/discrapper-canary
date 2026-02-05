@@ -1,3 +1,4 @@
+"use strict";
 var r = n(841873);
 e.exports = n.v(t, e.id, "bdd631c3d636df5b", {
     "./libdiscore_wasm_bg.js": {

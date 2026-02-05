@@ -1,28 +1,17 @@
-n.d(t, {
-    H: () => o,
-});
-var r = n(873298),
-    i = n(419954),
-    l = n(253932),
-    s = n(780964),
-    a = n(985018);
-let o = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
-    useSearchTerms: () => [a.intl.string(a.t.dyamEI), a.intl.string(a.t.p8NOwi), a.intl.string(a.t["+o/sOo"])],
-    useTitle: () => a.intl.string(a.t.dyamEI),
-    useValue: () => l.PZ.useSetting(),
-    setValue: (e) => l.PZ.updateSetting(e),
+n.d(t, { H: () => o });
+var i = n(873298),
+    s = n(419954),
+    r = n(253932),
+    a = n(780964),
+    l = n(985018);
+let o = (0, s.Qx)(a.X.TIME_FORMAT_SETTING, {
+    useSearchTerms: () => [l.intl.string(l.t.dyamEI), l.intl.string(l.t.p8NOwi), l.intl.string(l.t["+o/sOo"])],
+    useTitle: () => l.intl.string(l.t.dyamEI),
+    useValue: () => r.PZ.useSetting(),
+    setValue: (e) => r.PZ.updateSetting(e),
     useOptions: () => [
-        {
-            name: a.intl.string(a.t.FMWYvb),
-            value: r.PZ.AUTO,
-        },
-        {
-            name: a.intl.string(a.t.p8NOwi),
-            value: r.PZ.H12,
-        },
-        {
-            name: a.intl.string(a.t["+o/sOo"]),
-            value: r.PZ.H23,
-        },
+        { name: l.intl.string(l.t.FMWYvb), value: i.PZ.AUTO },
+        { name: l.intl.string(l.t.p8NOwi), value: i.PZ.H12 },
+        { name: l.intl.string(l.t["+o/sOo"]), value: i.PZ.H23 },
     ],
 });

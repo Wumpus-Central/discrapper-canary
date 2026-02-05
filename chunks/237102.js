@@ -78,9 +78,6 @@
         postformat: function (e) {
             return e.replace(/,/g, "،");
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

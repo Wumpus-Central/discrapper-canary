@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => h,
-    U: () => _,
-});
+"use strict";
+n.d(t, { A: () => h, U: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,53 +7,44 @@ var i = n(503698),
     s = n(582754),
     o = n(421380),
     l = n(397927),
-    c = n(736653),
-    u = n(783420),
+    u = n(736653),
+    c = n(783420),
     d = n(788868),
-    f = n(985018),
-    p = n(194597);
-let _ = (e) => (e === d.pe.TIER_0 ? f.intl.string(f.t.rk4Uu8) : f.intl.string(f.t.Ve9Ge6)),
+    _ = n(985018),
+    f = n(194597);
+let p = (e) => (e === d.pe.TIER_0 ? _.intl.string(_.t.rk4Uu8) : _.intl.string(_.t.Ve9Ge6)),
     h = (e) => {
         let {
                 className: t,
                 textOptions: n,
                 color: i,
                 look: d,
-                hideIcon: f,
+                hideIcon: _,
                 subscriptionTier: h,
                 premiumModalAnalyticsLocation: m,
                 giftMessage: g,
                 onClick: E,
             } = e,
-            b = (0, c.Ay)(),
-            y = _(h);
-        return (0, r.jsx)(u.A, {
+            A = (0, u.Ay)(),
+            I = p(h);
+        return (0, r.jsx)(c.A, {
             isGift: !0,
             subscriptionTier: h,
             premiumModalAnalyticsLocation: m,
             giftMessage: g,
             onClick: E,
             children: (e) => {
-                var c;
                 let { onClick: u } = e;
                 return (0, r.jsxs)(o.$n, {
                     "data-migration-pending": !0,
-                    innerClassName: p.Nq,
-                    color: null != i ? i : (0, s.Mw)(b) ? o.XD.WHITE : o.XD.BRAND,
-                    look: null != d ? d : o.pR.OUTLINED,
-                    className: a()(t, p.xP),
+                    innerClassName: f.Nq,
+                    color: i ?? ((0, s.Mw)(A) ? o.XD.WHITE : o.XD.BRAND),
+                    look: d ?? o.pR.OUTLINED,
+                    className: a()(t, f.xP),
                     onClick: u,
                     children: [
-                        !f &&
-                            (0, r.jsx)(l.okO, {
-                                size: "md",
-                                color: "currentColor",
-                                className: p.ez,
-                            }),
-                        (0, r.jsx)("span", {
-                            className: a()(p._d, null == n ? void 0 : n.textClassName),
-                            children: null != (c = null == n ? void 0 : n.textOverride) ? c : y,
-                        }),
+                        !_ && (0, r.jsx)(l.okO, { size: "md", color: "currentColor", className: f.ez }),
+                        (0, r.jsx)("span", { className: a()(f._d, n?.textClassName), children: n?.textOverride ?? I }),
                     ],
                 });
             },

@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     if (null == e) return window;
     if ("[object Window]" !== e.toString()) {
@@ -6,6 +7,4 @@ function r(e) {
     }
     return e;
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

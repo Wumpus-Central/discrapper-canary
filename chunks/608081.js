@@ -129,46 +129,17 @@ e.exports = function (e) {
                 "Charts",
             ]),
         },
-        n = {
-            className: "string",
-            begin: '"',
-            end: '"',
-            illegal: "\\n",
-        },
-        r = {
-            className: "string",
-            begin: "'",
-            end: "'",
-            illegal: "\\n",
-        },
-        i = {
-            className: "string",
-            begin: "<<",
-            end: ">>",
-        },
-        a = {
-            className: "number",
-            begin: "[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?",
-        },
-        s = {
-            beginKeywords: "import",
-            end: "$",
-            keywords: t,
-            contains: [n],
-        },
+        n = { className: "string", begin: '"', end: '"', illegal: "\\n" },
+        r = { className: "string", begin: "'", end: "'", illegal: "\\n" },
+        i = { className: "string", begin: "<<", end: ">>" },
+        a = { className: "number", begin: "[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?" },
+        s = { beginKeywords: "import", end: "$", keywords: t, contains: [n] },
         o = {
             className: "function",
             begin: /[a-z][^\n]*->/,
             returnBegin: !0,
             end: /->/,
-            contains: [
-                e.inherit(e.TITLE_MODE, {
-                    starts: {
-                        endsWithParent: !0,
-                        keywords: t,
-                    },
-                }),
-            ],
+            contains: [e.inherit(e.TITLE_MODE, { starts: { endsWithParent: !0, keywords: t } })],
         };
     return {
         name: "XL",

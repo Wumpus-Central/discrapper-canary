@@ -1,77 +1,29 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(517905),
+n.d(t, { A: () => o });
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(517905),
     s = n(480601);
 let o = function (e) {
     let { className: t, guildId: n } = e,
-        o = i.useRef(null),
-        c = i.useCallback((e, t) => {
+        o = r.useRef(null),
+        d = r.useCallback((e, t) => {
             e.stopPropagation(), t.onClick(e);
         }, []);
-    return (0, r.jsx)(a.A, {
+    return (0, i.jsx)(l.A, {
         guildId: n,
         position: "left",
         targetElementRef: o,
-        children: (e) => {
-            var n, i;
-            return (0, r.jsx)(
-                l.DUT,
-                ((n = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (i = i =
-                    {
-                        innerRef: o,
-                        className: t,
-                        onClick: (t) => c(t, e),
-                        children: (0, r.jsx)("div", {
-                            className: s.K,
-                            children: (0, r.jsx)(l._Xm, {
-                                size: "xs",
-                                color: "currentColor",
-                            }),
-                        }),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                n),
-            );
-        },
+        children: (e) =>
+            (0, i.jsx)(a.DUT, {
+                ...e,
+                innerRef: o,
+                className: t,
+                onClick: (t) => d(t, e),
+                children: (0, i.jsx)("div", {
+                    className: s.K,
+                    children: (0, i.jsx)(a._Xm, { size: "xs", color: "currentColor" }),
+                }),
+            }),
     });
 };

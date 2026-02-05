@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => i,
-});
+"use strict";
+r.d(t, { A: () => i });
 var n = r(728272),
     o = r(341539),
     a = Object.prototype.hasOwnProperty;

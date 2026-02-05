@@ -1,7 +1,5 @@
-n.d(t, {
-    V: () => r,
-    q: () => i,
-});
+"use strict";
+n.d(t, { V: () => r, q: () => i });
 let r = "https://support.discord.com/hc/en-us/articles/35974746352023";
 var i = (function (e) {
     return (

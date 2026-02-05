@@ -1,114 +1,90 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(747238);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    s = n.n(i),
+n.d(t, { A: () => E });
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(417597),
-    o = n(397927),
-    c = n(686956),
-    d = n(775602),
+    d = n(397927),
+    o = n(686956),
+    c = n(775602),
     u = n(569944),
     m = n(576622),
-    g = n(71393),
-    f = n(287809),
-    h = n(562153),
-    N = n(427262),
-    I = n(680235);
-
-function p(e) {
+    N = n(71393),
+    h = n(287809),
+    I = n(562153),
+    g = n(427262),
+    A = n(680235);
+function E(e) {
     var t, n;
-    let i,
-        { guildId: p, welcomeMessage: O, className: S } = e,
-        E = (0, a.bG)([g.A], () => g.A.getGuild(p)),
-        A = (0, a.bG)([d.A], () => d.A.useReducedMotion),
-        x = (0, a.bG)([f.default], () => f.default.getUser(null == O ? void 0 : O.authorIds[0])),
-        _ = r.useMemo(() => (null != E && null != x && (0, u.c)(E, x) ? x : null), [E, x]),
-        j = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
-        T = r.useMemo(() => {
-            var e;
-            return null != (e = null == O ? void 0 : O.authorIds) ? e : [];
-        }, [O]);
-    r.useEffect(() => {
-        c.A.requestMembersById(p, T);
-    }, [p, T]),
-        r.useEffect(() => {
-            null != _ &&
-                (0, m.A)(_.id, _.getAvatarURL(p, 48), {
-                    guildId: p,
-                });
-        }, [_, p]);
-    let b = h.Ay.useName(p, null, _),
-        v = (0, N.tx)(j);
-    if (null == _ || null == j || null == O) return null;
-    let D = null != E && E.ownerId === _.id;
-    return (0, l.jsxs)(o.ZpM, {
-        className: s()(I.fr, S),
+    let s,
+        { guildId: E, welcomeMessage: S, className: x } = e,
+        _ = (0, a.bG)([N.A], () => N.A.getGuild(E)),
+        T = (0, a.bG)([c.A], () => c.A.useReducedMotion),
+        f = (0, a.bG)([h.default], () => h.default.getUser(S?.authorIds[0])),
+        p = l.useMemo(() => (null != _ && null != f && (0, u.c)(_, f) ? f : null), [_, f]),
+        D = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
+        O = l.useMemo(() => S?.authorIds ?? [], [S]);
+    l.useEffect(() => {
+        o.A.requestMembersById(E, O);
+    }, [E, O]),
+        l.useEffect(() => {
+            null != p && (0, m.A)(p.id, p.getAvatarURL(E, 48), { guildId: E });
+        }, [p, E]);
+    let G = I.Ay.useName(E, null, p),
+        j = (0, g.tx)(D);
+    if (null == p || null == D || null == S) return null;
+    let v = null != _ && _.ownerId === p.id;
+    return (0, i.jsxs)(d.ZpM, {
+        className: r()(A.fr, x),
         children: [
-            (0, l.jsx)("div", {
-                className: I.oJ,
-            }),
-            A
-                ? (0, l.jsx)(o.euF, {
-                      src: _.getAvatarURL(p, 48),
-                      size: o._3J.SIZE_48,
-                      className: I.my,
-                      "aria-label": _.username,
+            (0, i.jsx)("div", { className: A.oJ }),
+            T
+                ? (0, i.jsx)(d.euF, {
+                      src: p.getAvatarURL(E, 48),
+                      size: d._3J.SIZE_48,
+                      className: A.my,
+                      "aria-label": p.username,
                   })
-                : (0, l.jsx)(o.JsQ, {
-                      src: _.getAvatarURL(p, 48),
-                      size: o._3J.SIZE_48,
-                      className: I.my,
-                      "aria-label": _.username,
+                : (0, i.jsx)(d.JsQ, {
+                      src: p.getAvatarURL(E, 48),
+                      size: d._3J.SIZE_48,
+                      className: A.my,
+                      "aria-label": p.username,
                   }),
-            (0, l.jsx)("div", {
-                className: I.uh,
-            }),
-            (0, l.jsxs)("div", {
-                className: I.H0,
+            (0, i.jsx)("div", { className: A.uh }),
+            (0, i.jsxs)("div", {
+                className: A.H0,
                 children: [
-                    (0, l.jsxs)("div", {
-                        className: I.HO,
+                    (0, i.jsxs)("div", {
+                        className: A.HO,
                         children: [
-                            (0, l.jsx)(o.Text, {
-                                variant: "text-sm/semibold",
-                                color: "text-strong",
-                                children: b,
-                            }),
-                            D
-                                ? (0, l.jsx)(o.pw5, {
-                                      size: "xxs",
-                                      color: "currentColor",
-                                      className: I.Dd,
-                                  })
-                                : null,
+                            (0, i.jsx)(d.Text, { variant: "text-sm/semibold", color: "text-strong", children: G }),
+                            v ? (0, i.jsx)(d.pw5, { size: "xxs", color: "currentColor", className: A.Dd }) : null,
                         ],
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: "text-md/medium",
                         children:
-                            ((t = null == O ? void 0 : O.message),
-                            (n = null != v ? v : j.username),
-                            (i = t.split(/\[@username\]/g)),
-                            (0, l.jsx)("span", {
-                                children: i.map((e, t) =>
-                                    (0, l.jsxs)(
-                                        r.Fragment,
+                            ((t = S?.message),
+                            (n = j ?? D.username),
+                            (s = t.split(/\[@username\]/g)),
+                            (0, i.jsx)("span", {
+                                children: s.map((e, t) =>
+                                    (0, i.jsxs)(
+                                        l.Fragment,
                                         {
                                             children: [
                                                 e,
-                                                t < i.length - 1
-                                                    ? (0, l.jsx)(o.Text, {
+                                                t < s.length - 1
+                                                    ? (0, i.jsx)(d.Text, {
                                                           tag: "span",
                                                           variant: "text-md/semibold",
-                                                          children: "@".concat(n),
+                                                          children: `@${n}`,
                                                       })
                                                     : null,
                                             ],
                                         },
-                                        "username-".concat(t),
+                                        `username-${t}`,
                                     ),
                                 ),
                             })),

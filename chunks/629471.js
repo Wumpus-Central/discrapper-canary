@@ -1,7 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
-
-function r(e) {
+n.d(t, { A: () => i });
+function i(e) {
     return e.object().unknown(!0);
 }

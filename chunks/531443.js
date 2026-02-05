@@ -1,37 +1,31 @@
-n.d(t, {
-    G: () => c,
-});
+n.d(t, { G: () => o });
 var r = n(141711),
-    l = n(118356),
-    o = n(740644),
-    i = n(497329);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let a = new l.Vy("SimpleMuxWrapper");
-class c {
+    s = n(118356),
+    i = n(740644),
+    l = n(497329);
+let a = new s.Vy("SimpleMuxWrapper");
+class o {
+    isMonitoring = !1;
+    videoElement;
+    config;
+    sessionId;
+    hlsInstance;
+    constructor(e) {
+        (this.config = e),
+            (this.videoElement = e.videoElement),
+            (this.sessionId = l.C.generateSessionId()),
+            (this.hlsInstance = e.hlsInstance);
+    }
     initialize() {
-        var e;
-        let t = {
-            debug: null != (e = this.config.debug) && e,
+        let e = {
+            debug: this.config.debug ?? !1,
             disableCookies: !0,
             respectDoNotTrack: !0,
-            data: o.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
+            data: i.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
-        null != this.hlsInstance && ((t.hlsjs = this.hlsInstance), (t.Hls = this.hlsInstance.constructor));
+        null != this.hlsInstance && ((e.hlsjs = this.hlsInstance), (e.Hls = this.hlsInstance.constructor));
         try {
-            r.A.monitor(this.videoElement, t), (this.isMonitoring = !0);
+            r.A.monitor(this.videoElement, e), (this.isMonitoring = !0);
         } catch (e) {
             a.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
         }
@@ -56,16 +50,5 @@ class c {
     }
     getSessionId() {
         return this.sessionId;
-    }
-    constructor(e) {
-        s(this, "isMonitoring", !1),
-            s(this, "videoElement", void 0),
-            s(this, "config", void 0),
-            s(this, "sessionId", void 0),
-            s(this, "hlsInstance", void 0),
-            (this.config = e),
-            (this.videoElement = e.videoElement),
-            (this.sessionId = i.C.generateSessionId()),
-            (this.hlsInstance = e.hlsInstance);
     }
 }

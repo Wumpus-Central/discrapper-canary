@@ -1,6 +1,5 @@
-n.d(t, {
-    y: () => i,
-});
+"use strict";
+n.d(t, { y: () => i });
 let r = (e) => {
         let t,
             n = new Set(),
@@ -13,12 +12,7 @@ let r = (e) => {
                 }
             },
             i = () => t,
-            a = {
-                setState: r,
-                getState: i,
-                getInitialState: () => s,
-                subscribe: (e) => (n.add(e), () => n.delete(e)),
-            },
+            a = { setState: r, getState: i, getInitialState: () => s, subscribe: (e) => (n.add(e), () => n.delete(e)) },
             s = (t = e(r, i, a));
         return a;
     },

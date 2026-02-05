@@ -1,32 +1,16 @@
-n.d(t, {
-    v: () => o,
-});
-var r = n(562465),
-    i = n(73153),
-    a = n(74396),
-    s = n(652215);
-
-function o() {
-    a.A.isFetching() ||
-        (i.h.dispatch({
-            type: "SAVED_CUSTOM_THEMES_FETCH_START",
-        }),
-        r.Bo.get({
-            url: s.Rsh.USERS_ME_CUSTOM_THEMES,
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        })
+n.d(t, { v: () => l });
+var i = n(562465),
+    s = n(73153),
+    r = n(74396),
+    a = n(652215);
+function l() {
+    r.A.isFetching() ||
+        (s.h.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" }),
+        i.Bo.get({ url: a.Rsh.USERS_ME_CUSTOM_THEMES, oldFormErrors: !0, rejectWithError: !0 })
             .then((e) => {
-                var t, n;
-                i.h.dispatch({
-                    type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS",
-                    themes: null != (t = null == (n = e.body) ? void 0 : n.custom_themes) ? t : [],
-                });
+                s.h.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: e.body?.custom_themes ?? [] });
             })
             .catch((e) => {
-                i.h.dispatch({
-                    type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE",
-                    error: e,
-                });
+                s.h.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error: e });
             }));
 }

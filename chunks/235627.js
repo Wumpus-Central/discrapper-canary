@@ -1,7 +1,5 @@
-n.d(t, {
-    p: () => i,
-    w: () => r,
-});
+"use strict";
+n.d(t, { p: () => i, w: () => r });
 var r = (function (e) {
         return (e[(e.SPAM = 1)] = "SPAM"), (e[(e.IGNORED = 2)] = "IGNORED"), e;
     })({}),

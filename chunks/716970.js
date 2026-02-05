@@ -1,8 +1,6 @@
-n.d(t, {
-    C: () => l,
-});
+n.d(t, { C: () => s });
 var a,
-    l =
+    s =
         (((a = {}).DEFAULT = "default"),
         (a.DEFAULT_WITH_ORB_SHELF = "default_with_orb_shelf"),
         (a.DEFAULT_WITH_JJK_SHELF = "default_with_jjk_shelf"),

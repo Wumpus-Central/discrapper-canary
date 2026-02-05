@@ -1,74 +1,59 @@
-n.d(t, {
-    A: () => x,
-});
-var r,
-    i,
-    l = n(635377),
-    s = n.n(l),
-    a = n(311907),
-    c = n(73153),
-    o = n(950762),
-    d = n(967198),
-    u = n(927813);
-let f = {},
-    g = {},
-    b = 0,
-    m = new (s())({
-        max: 5,
-        maxAge: u.A.Millis.HOUR,
-    });
-class p extends (i = a.Ay.Store) {
+"use strict";
+n.d(t, { A: () => h });
+var i = n(635377),
+    s = n.n(i),
+    l = n(311907),
+    r = n(73153),
+    a = n(950762),
+    o = n(967198),
+    d = n(927813);
+let c = {},
+    u = {},
+    m = 0,
+    g = new (s())({ max: 5, maxAge: d.A.Millis.HOUR });
+class x extends l.Ay.Store {
+    static displayName = "GuildSettingsEmojiStore";
     initialize() {
-        this.waitFor(d.A);
+        this.waitFor(o.A);
     }
     isUploadingEmoji() {
-        return b > 0;
+        return m > 0;
     }
     getEmojiRevision(e) {
-        var t;
-        return null != (t = f[e]) ? t : 0;
+        return c[e] ?? 0;
     }
     getEmojis(e) {
-        return g[e];
+        return u[e];
     }
     getEmojiRawAsset(e) {
-        return m.get(e);
+        return g.get(e);
     }
 }
-(r = "displayName") in p
-    ? Object.defineProperty(p, r, {
-          value: "GuildSettingsEmojiStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (p[r] = "GuildSettingsEmojiStore");
-let x = new p(c.h, {
+let h = new x(r.h, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;
-        g[t] = g[t].filter((e) => e.id !== n);
+        u[t] = u[t].filter((e) => e.id !== n);
     },
     EMOJI_FETCH_SUCCESS: function (e) {
         let { guildId: t, emojis: n } = e;
-        g[t] = n.map((e) => new o.A(e));
+        u[t] = n.map((e) => new a.A(e));
     },
     EMOJI_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        g[t] = [];
+        u[t] = [];
     },
     EMOJI_UPLOAD_START: function () {
-        b++;
+        m++;
     },
     EMOJI_UPLOAD_STOP: function () {
-        b--;
+        m--;
     },
     EMOJI_CACHE_RAW_EMOJI_ASSET: function (e) {
         let { emojiId: t, userImage: n } = e;
-        m.set(t, n);
+        g.set(t, n);
     },
     GUILD_EMOJIS_UPDATE: function (e) {
-        var t;
-        let { guildId: n } = e;
-        f[n] = (null != (t = f[n]) ? t : 0) + 1;
+        let { guildId: t } = e;
+        c[t] = (c[t] ?? 0) + 1;
     },
 });

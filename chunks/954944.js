@@ -1,73 +1,27 @@
 e.exports = function (e) {
     let t = e.regex,
         n = /([-a-zA-Z$._][\w$.-]*)/,
-        r = {
-            className: "type",
-            begin: /\bi\d+(?=\s|\b)/,
-        },
-        i = {
-            className: "operator",
-            relevance: 0,
-            begin: /=/,
-        },
-        a = {
-            className: "punctuation",
-            relevance: 0,
-            begin: /,/,
-        },
+        r = { className: "type", begin: /\bi\d+(?=\s|\b)/ },
+        i = { className: "operator", relevance: 0, begin: /=/ },
+        a = { className: "punctuation", relevance: 0, begin: /,/ },
         s = {
             className: "number",
             variants: [
-                {
-                    begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/,
-                },
-                {
-                    begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/,
-                },
+                { begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ },
+                { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ },
             ],
             relevance: 0,
         },
-        o = {
-            className: "symbol",
-            variants: [
-                {
-                    begin: /^\s*[a-z]+:/,
-                },
-            ],
-            relevance: 0,
-        },
-        l = {
-            className: "variable",
-            variants: [
-                {
-                    begin: t.concat(/%/, n),
-                },
-                {
-                    begin: /%\d+/,
-                },
-                {
-                    begin: /#\d+/,
-                },
-            ],
-        },
-        c = {
+        o = { className: "symbol", variants: [{ begin: /^\s*[a-z]+:/ }], relevance: 0 },
+        l = { className: "variable", variants: [{ begin: t.concat(/%/, n) }, { begin: /%\d+/ }, { begin: /#\d+/ }] },
+        u = {
             className: "title",
             variants: [
-                {
-                    begin: t.concat(/@/, n),
-                },
-                {
-                    begin: /@\d+/,
-                },
-                {
-                    begin: t.concat(/!/, n),
-                },
-                {
-                    begin: t.concat(/!\d+/, n),
-                },
-                {
-                    begin: /!\d+/,
-                },
+                { begin: t.concat(/@/, n) },
+                { begin: /@\d+/ },
+                { begin: t.concat(/!/, n) },
+                { begin: t.concat(/!\d+/, n) },
+                { begin: /!\d+/ },
             ],
         };
     return {
@@ -79,22 +33,10 @@ e.exports = function (e) {
         },
         contains: [
             r,
-            e.COMMENT(/;\s*$/, null, {
-                relevance: 0,
-            }),
+            e.COMMENT(/;\s*$/, null, { relevance: 0 }),
             e.COMMENT(/;/, /$/),
-            {
-                className: "string",
-                begin: /"/,
-                end: /"/,
-                contains: [
-                    {
-                        className: "char.escape",
-                        match: /\\\d\d/,
-                    },
-                ],
-            },
-            c,
+            { className: "string", begin: /"/, end: /"/, contains: [{ className: "char.escape", match: /\\\d\d/ }] },
+            u,
             a,
             i,
             l,

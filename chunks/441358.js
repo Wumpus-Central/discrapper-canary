@@ -1,392 +1,297 @@
-n.d(t, {
-    default: () => D,
-}),
-    n(896048),
-    n(733351);
-var r = n(627968),
-    l = n(64700),
-    i = n(503698),
-    o = n.n(i),
-    a = n(111956),
-    s = n.n(a),
-    c = n(33851),
-    u = n.n(c),
-    d = n(417597),
-    C = n(397927),
-    m = n(71393),
-    p = n(351906),
-    f = n(509402),
-    b = n(282054),
-    j = n(266047),
-    g = n(221950),
-    h = n(11541),
-    x = n(836968),
-    y = n(652215),
-    O = n(985018),
-    v = n(653952),
-    _ = n(658122);
-
-function H(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let A = [
-    h.UP.DISCOVERY,
-    h.UP.VANITY_URL,
-    h.UP.BOT,
-    h.UP.HUB,
-    h.UP.MANUAL_MEMBER_VERIFICATION,
-    h.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL,
+l.d(t, { default: () => V });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(111956),
+    o = l.n(r),
+    C = l(33851),
+    d = l.n(C),
+    c = l(417597),
+    u = l(397927),
+    m = l(71393),
+    x = l(351906),
+    h = l(509402),
+    g = l(282054),
+    _ = l(266047),
+    H = l(221950),
+    p = l(11541),
+    f = l(836968),
+    j = l(652215),
+    v = l(985018),
+    b = l(653952),
+    A = l(658122);
+let L = [
+    p.UP.DISCOVERY,
+    p.UP.VANITY_URL,
+    p.UP.BOT,
+    p.UP.HUB,
+    p.UP.MANUAL_MEMBER_VERIFICATION,
+    p.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL,
 ];
-
-function S(e) {
-    let { type: t, text: n, size: l, vanityUrl: i, isFocused: a } = e,
-        s = null != l ? l : 16,
-        c = (function (e, t) {
+function N(e) {
+    let { type: t, text: l, size: i, vanityUrl: s, isFocused: r } = e,
+        o = i ?? 16,
+        C = (function (e, t) {
             switch (e) {
-                case h.UP.BOT:
-                    return (0, r.jsx)(C.CnV, {
+                case p.UP.BOT:
+                    return (0, n.jsx)(u.CnV, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
-                case h.UP.INTEGRATION:
-                    return (0, r.jsx)(C.XC7, {
+                case p.UP.INTEGRATION:
+                    return (0, n.jsx)(u.XC7, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
-                case h.UP.DISCOVERY:
-                    return (0, r.jsx)(C.QGJ, {
+                case p.UP.DISCOVERY:
+                    return (0, n.jsx)(u.QGJ, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
-                case h.UP.HUB:
-                    return (0, r.jsx)(C.Pfh, {
+                case p.UP.HUB:
+                    return (0, n.jsx)(u.Pfh, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
-                case h.UP.INVITE:
-                case h.UP.VANITY_URL:
-                    return (0, r.jsx)(C.qYV, {
+                case p.UP.INVITE:
+                case p.UP.VANITY_URL:
+                    return (0, n.jsx)(u.qYV, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
-                case h.UP.MANUAL_MEMBER_VERIFICATION:
-                    return (0, r.jsx)(f.A, {
-                        className: v.Kk,
-                        height: t,
-                        width: t,
-                    });
-                case h.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL:
-                    return (0, r.jsx)(C._xR, {
+                case p.UP.MANUAL_MEMBER_VERIFICATION:
+                    return (0, n.jsx)(h.A, { className: b.Kk, height: t, width: t });
+                case p.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL:
+                    return (0, n.jsx)(u._xR, {
                         size: "custom",
                         color: "currentColor",
-                        className: v.Kk,
+                        className: b.Kk,
                         height: t,
                         width: t,
                     });
                 default:
                     return null;
             }
-        })(t, s),
-        u = (0, h.CI)(t, i);
-    return (0, r.jsxs)("div", {
-        className: v.$E,
-        "aria-label": u,
+        })(t, o),
+        d = (0, p.CI)(t, s);
+    return (0, n.jsxs)("div", {
+        className: b.$E,
+        "aria-label": d,
         children: [
-            null != c ? c : null,
-            (0, r.jsx)(C.Text, {
-                variant: 12 === s ? "text-xs/medium" : "text-sm/medium",
-                className: o()(v.QK, {
-                    [v.in]: a,
-                }),
-                children: n,
+            null != C ? C : null,
+            (0, n.jsx)(u.Text, {
+                variant: 12 === o ? "text-xs/medium" : "text-sm/medium",
+                className: a()(b.QK, { [b.in]: r }),
+                children: l,
             }),
         ],
     });
 }
-
-function D(e) {
-    var t;
-    let { guildId: n, onClose: i } = e,
-        a = (0, d.bG)([j.A], () => j.A.getSearchStateByGuildId(n), [n], u()),
-        { inviteCodes: c } = (0, x.N)(n),
-        f = (0, d.bG)([m.A], () => m.A.getGuild(n)),
-        D = null != (t = null == f ? void 0 : f.vanityURLCode) ? t : null,
-        [N, L] = l.useState(!1),
-        { selectedSourceInviteCode: P, selectedJoinSourceType: R } = a,
-        V = null != R && R !== h.UP.UNSPECIFIED,
-        E = (0, d.bG)([p.A], () => p.A.hideInstantInvites, []);
-    E && (c = []);
-    let M = l.useMemo(
+function V(e) {
+    let { guildId: t, onClose: l } = e,
+        s = (0, c.bG)([_.A], () => _.A.getSearchStateByGuildId(t), [t], d()),
+        { inviteCodes: r } = (0, f.N)(t),
+        C = (0, c.bG)([m.A], () => m.A.getGuild(t)),
+        h = C?.vanityURLCode ?? null,
+        [V, R] = i.useState(!1),
+        { selectedSourceInviteCode: M, selectedJoinSourceType: D } = s,
+        S = null != D && D !== p.UP.UNSPECIFIED,
+        I = (0, c.bG)([x.A], () => x.A.hideInstantInvites, []);
+    I && (r = []);
+    let E = i.useMemo(
         () =>
-            s()((e) => {
-                let t = e.trim();
-                (0, g.Ld)(n, {
-                    selectedSourceInviteCode: "" !== t ? t : void 0,
-                    selectedJoinSourceType: void 0,
-                });
+            o()((e) => {
+                let l = e.trim();
+                (0, H.Ld)(t, { selectedSourceInviteCode: "" !== l ? l : void 0, selectedJoinSourceType: void 0 });
             }, 300),
-        [n],
+        [t],
     );
-    l.useEffect(
+    i.useEffect(
         () => () => {
-            M.cancel();
+            E.cancel();
         },
-        [M],
+        [E],
     );
-    let I = l.useCallback(
+    let y = i.useCallback(
             (e) => {
-                let t = e.trim();
-                (0, g.Ld)(n, {
-                    selectedSourceInviteCode: "" !== t ? t : void 0,
-                    selectedJoinSourceType: void 0,
-                });
+                let l = e.trim();
+                (0, H.Ld)(t, { selectedSourceInviteCode: "" !== l ? l : void 0, selectedJoinSourceType: void 0 });
             },
-            [n],
+            [t],
         ),
-        T = l.useCallback(
+        T = i.useCallback(
             (e) => {
-                e === R
-                    ? (0, g.Ld)(n, {
-                          selectedSourceInviteCode: void 0,
-                          selectedJoinSourceType: void 0,
-                      })
-                    : (0, g.Ld)(n, {
-                          selectedSourceInviteCode: null,
-                          selectedJoinSourceType: e,
-                      }),
-                    L(!1);
+                e === D
+                    ? (0, H.Ld)(t, { selectedSourceInviteCode: void 0, selectedJoinSourceType: void 0 })
+                    : (0, H.Ld)(t, { selectedSourceInviteCode: null, selectedJoinSourceType: e }),
+                    R(!1);
             },
-            [n, R],
+            [t, D],
         ),
-        Z = l.useCallback(
+        w = i.useCallback(
             (e) => {
-                (0, g.Ld)(n, {
-                    selectedSourceInviteCode: e,
-                    selectedJoinSourceType: void 0,
-                }),
-                    M(e);
+                (0, H.Ld)(t, { selectedSourceInviteCode: e, selectedJoinSourceType: void 0 }), E(e);
             },
-            [n, M],
+            [t, E],
         );
-    return (0, r.jsx)(C.W1t, {
+    return (0, n.jsx)(u.W1t, {
         "data-menu-needs-migration": !0,
         navId: "members-table-join-method-menu",
         onClose: () => {
-            i();
+            l();
         },
-        "aria-label": O.intl.string(O.t["u/7Rdc"]),
-        onSelect: y.tEg,
-        children: N
-            ? (0, r.jsxs)(C.rXV, {
+        "aria-label": v.intl.string(v.t["u/7Rdc"]),
+        onSelect: j.tEg,
+        children: V
+            ? (0, n.jsxs)(u.rXV, {
                   children: [
-                      (0, r.jsx)(C.Drp, {
+                      (0, n.jsx)(u.Drp, {
                           id: "back",
-                          action: () => L(!1),
+                          action: () => R(!1),
                           render: (e) =>
-                              (0, r.jsxs)(
-                                  "span",
-                                  w(H({}, e), {
-                                      className: v.RX,
-                                      children: [
-                                          (0, r.jsx)(C.n2b, {
-                                              size: "custom",
-                                              color: "currentColor",
-                                              width: 16,
-                                              height: 16,
-                                              className: v.__invalid_caret,
-                                          }),
-                                          (0, r.jsx)(C.Text, {
-                                              variant: "eyebrow",
-                                              color: "text-strong",
-                                              children: O.intl.string(O.t["Kz/cho"]),
-                                          }),
-                                      ],
-                                  }),
-                              ),
+                              (0, n.jsxs)("span", {
+                                  ...e,
+                                  className: b.RX,
+                                  children: [
+                                      (0, n.jsx)(u.n2b, {
+                                          size: "custom",
+                                          color: "currentColor",
+                                          width: 16,
+                                          height: 16,
+                                          className: b.__invalid_caret,
+                                      }),
+                                      (0, n.jsx)(u.Text, {
+                                          variant: "eyebrow",
+                                          color: "text-strong",
+                                          children: v.intl.string(v.t["Kz/cho"]),
+                                      }),
+                                  ],
+                              }),
                       }),
-                      A.map((e) =>
-                          (0, r.jsx)(
-                              C.iDA,
+                      L.map((e) =>
+                          (0, n.jsx)(
+                              u.iDA,
                               {
-                                  id: "join-source-type-option-".concat(e),
+                                  id: `join-source-type-option-${e}`,
                                   void_label: (t) =>
-                                      (0, r.jsx)(
-                                          S,
-                                          w(H({}, t), {
-                                              type: e,
-                                              vanityUrl: D,
-                                              text: (0, h.CI)(e, D, E),
-                                          }),
-                                      ),
-                                  checked: R === e,
+                                      (0, n.jsx)(N, { ...t, type: e, vanityUrl: h, text: (0, p.CI)(e, h, I) }),
+                                  checked: D === e,
                                   disabled: !1,
                                   action: () => T(e),
                                   group: "join-source-type-options",
                               },
-                              "join-source-type-option-".concat(e),
+                              `join-source-type-option-${e}`,
                           ),
                       ),
                   ],
               })
-            : (0, r.jsxs)(C.rXV, {
+            : (0, n.jsxs)(u.rXV, {
                   children: [
-                      (0, r.jsx)(
-                          C.aK1,
+                      (0, n.jsx)(
+                          u.aK1,
                           {
                               id: "members-table-invite-code-search",
                               control: (e, t) =>
-                                  (0, r.jsx)(
-                                      C.VPO,
-                                      w(H({}, e), {
-                                          query: null != P ? P : "",
-                                          onChange: Z,
-                                          ref: t,
-                                          placeholder: O.intl.string(O.t.YwJnGz),
-                                      }),
-                                  ),
+                                  (0, n.jsx)(u.VPO, {
+                                      ...e,
+                                      query: M ?? "",
+                                      onChange: w,
+                                      ref: t,
+                                      placeholder: v.intl.string(v.t.YwJnGz),
+                                  }),
                           },
                           "invite-code-filter-search",
                       ),
-                      (0, r.jsx)(C.bXX, {}),
-                      (0, r.jsx)(
-                          C.iDA,
+                      (0, n.jsx)(u.bXX, {}),
+                      (0, n.jsx)(
+                          u.iDA,
                           {
                               id: "join-source-type-option-all",
-                              label: O.intl.string(O.t.an9Ry3),
-                              checked: null == P && null == R,
+                              label: v.intl.string(v.t.an9Ry3),
+                              checked: null == M && null == D,
                               disabled: !1,
                               action: () => T(null),
                               group: "join-source-type-options",
                           },
                           "join-source-type-option-all",
                       ),
-                      c.map((e) =>
-                          (0, r.jsx)(
-                              C.iDA,
+                      r.map((e) =>
+                          (0, n.jsx)(
+                              u.iDA,
                               {
-                                  id: "join-source-type-option-".concat(e),
-                                  void_label: (t) =>
-                                      (0, r.jsx)(
-                                          S,
-                                          w(H({}, t), {
-                                              type: h.UP.INVITE,
-                                              vanityUrl: D,
-                                              text: e,
-                                          }),
-                                      ),
-                                  checked: P === e,
+                                  id: `join-source-type-option-${e}`,
+                                  void_label: (t) => (0, n.jsx)(N, { ...t, type: p.UP.INVITE, vanityUrl: h, text: e }),
+                                  checked: M === e,
                                   disabled: !1,
-                                  action: () => I(e),
+                                  action: () => y(e),
                                   group: "join-source-type-options",
                               },
-                              "join-source-type-option-".concat(e),
+                              `join-source-type-option-${e}`,
                           ),
                       ),
-                      (0, r.jsx)(C.bXX, {}),
-                      (0, r.jsx)(
-                          C.Drp,
+                      (0, n.jsx)(u.bXX, {}),
+                      (0, n.jsx)(
+                          u.Drp,
                           {
                               id: "other-join-methods",
-                              action: () => L(!0),
+                              action: () => R(!0),
                               render: (e) =>
-                                  (0, r.jsxs)("div", {
-                                      className: o()(v.RI, v.RX),
+                                  (0, n.jsxs)("div", {
+                                      className: a()(b.RI, b.RX),
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: _.label,
+                                          (0, n.jsxs)("div", {
+                                              className: A.label,
                                               children: [
-                                                  (0, r.jsx)(C.Text, {
+                                                  (0, n.jsx)(u.Text, {
                                                       variant: "text-sm/medium",
-                                                      className: o()(v.__invalid_selectedRadio, v.QK, {
-                                                          [v.in]: e.isFocused,
+                                                      className: a()(b.__invalid_selectedRadio, b.QK, {
+                                                          [b.in]: e.isFocused,
                                                       }),
-                                                      children: O.intl.string(O.t["Kz/cho"]),
+                                                      children: v.intl.string(v.t["Kz/cho"]),
                                                   }),
-                                                  V
-                                                      ? (0, r.jsx)("div", {
-                                                            className: v.TF,
-                                                            children: (0, r.jsx)(
-                                                                S,
-                                                                w(H({}, e), {
-                                                                    size: 12,
-                                                                    text: (0, h.CI)(R, D, E),
-                                                                    type: R,
-                                                                    vanityUrl: D,
-                                                                }),
-                                                            ),
+                                                  S
+                                                      ? (0, n.jsx)("div", {
+                                                            className: b.TF,
+                                                            children: (0, n.jsx)(N, {
+                                                                ...e,
+                                                                size: 12,
+                                                                text: (0, p.CI)(D, h, I),
+                                                                type: D,
+                                                                vanityUrl: h,
+                                                            }),
                                                         })
                                                       : null,
                                               ],
                                           }),
-                                          V
-                                              ? (0, r.jsx)(b.A, {
-                                                    background: v.__invalid_radio,
-                                                    foreground: v.QE,
+                                          S
+                                              ? (0, n.jsx)(g.A, {
+                                                    background: b.__invalid_radio,
+                                                    foreground: b.QE,
                                                     width: 16,
                                                     height: 16,
                                                 })
-                                              : (0, r.jsx)(C._BQ, {
+                                              : (0, n.jsx)(u._BQ, {
                                                     size: "custom",
                                                     color: "currentColor",
                                                     width: 16,
                                                     height: 16,
-                                                    className: v.__invalid_caret,
+                                                    className: b.__invalid_caret,
                                                 }),
                                       ],
                                   }),

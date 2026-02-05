@@ -1,110 +1,56 @@
-n.d(t, {
-    A: () => O,
-});
-var r = n(627968),
+n.d(t, { A: () => E });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(397927),
-    s = n(688810),
+    r = n(688810),
     o = n(274372),
-    c = n(572164),
-    u = n(399925),
-    d = n(670470),
-    f = n(709562),
-    p = n(616356),
-    h = n(961350),
-    b = n(313961),
-    g = n(384059),
-    m = n(806931),
-    A = n(985018),
-    y = n(342910);
-
-function O(e) {
+    d = n(572164),
+    c = n(399925),
+    u = n(670470),
+    h = n(709562),
+    A = n(616356),
+    g = n(961350),
+    m = n(313961),
+    p = n(384059),
+    _ = n(806931),
+    x = n(985018),
+    f = n(342910);
+function E(e) {
     let { channel: t } = e,
-        { parentAnalyticsLocation: n } = (0, s.Ay)(),
-        O = (0, i.bG)([b.A], () => b.A.getSelectedParticipant(t.id)),
-        j = (null == O ? void 0 : O.type) === m.lp.STREAM,
-        v = (0, i.bG)([p.A], () => (j ? p.A.getActiveStreamForStreamKey(O.id) : null)),
-        { ignoreSenderPreference: x } = d.A.useExperiment(
-            {
-                location: "ActionBarClipsButton",
-            },
-            {
-                autoTrackExposure: !1,
-            },
+        { parentAnalyticsLocation: n } = (0, r.Ay)(),
+        E = (0, s.bG)([m.A], () => m.A.getSelectedParticipant(t.id)),
+        C = E?.type === _.lp.STREAM,
+        I = (0, s.bG)([A.A], () => (C ? A.A.getActiveStreamForStreamKey(E.id) : null)),
+        { ignoreSenderPreference: S } = u.A.useExperiment(
+            { location: "ActionBarClipsButton" },
+            { autoTrackExposure: !1 },
         ),
-        { viewerClippingAllowed: E, isAtMaxSavingClipOperations: _ } = (0, i.cf)([o.A], () => ({
-            viewerClippingAllowed: null != v && (o.A.isViewerClippingAllowedForUser(v.ownerId) || x),
+        { viewerClippingAllowed: b, isAtMaxSavingClipOperations: N } = (0, s.cf)([o.A], () => ({
+            viewerClippingAllowed: null != I && (o.A.isViewerClippingAllowedForUser(I.ownerId) || S),
             isAtMaxSavingClipOperations: o.A.getIsAtMaxSaveClipOperations(),
         })),
-        C = (0, c.Et)(),
-        S = (null == v ? void 0 : v.ownerId) === h.default.getId(),
-        I = !C || !(S || E) || _ || null == O,
-        N = l.useCallback((e) => {
-            var t, n;
-            return (0, r.jsx)(
-                a.xpe,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (n = n =
-                    {
-                        color: "currentColor",
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
-            );
-        }, []);
-    return (0, r.jsx)(f.A, {
-        className: y.g,
+        T = (0, d.Et)(),
+        j = I?.ownerId === g.default.getId(),
+        v = !T || !(j || b) || N || null == E,
+        y = l.useCallback((e) => (0, i.jsx)(a.xpe, { ...e, color: "currentColor" }), []);
+    return (0, i.jsx)(h.A, {
+        className: f.g,
         onClick: () => {
-            I || ((0, g.X)(n, g.O.CLIP), S ? (0, u.l0)() : (0, u.yd)(O.id));
+            v || ((0, p.X)(n, p.O.CLIP), j ? (0, c.l0)() : (0, c.yd)(E.id));
         },
-        disabled: I,
-        iconComponent: N,
+        disabled: v,
+        iconComponent: y,
         label:
-            null == v
-                ? A.intl.string(A.t.eg5qtV)
-                : S || E
-                  ? C
-                      ? _
+            null == I
+                ? x.intl.string(x.t.eg5qtV)
+                : j || b
+                  ? T
+                      ? N
                           ? void 0
-                          : A.intl.string(A.t.U4URzP)
-                      : A.intl.string(A.t.wSS1yN)
-                  : A.intl.string(A.t.aRifJX),
+                          : x.intl.string(x.t.U4URzP)
+                      : x.intl.string(x.t.wSS1yN)
+                  : x.intl.string(x.t.aRifJX),
         grow: !1,
     });
 }

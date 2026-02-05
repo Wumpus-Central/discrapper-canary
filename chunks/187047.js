@@ -1,16 +1,17 @@
-var r,
-    i = n(198668),
-    a = n(116740),
-    s = n(670200),
-    o = a.OrderedMap;
-e.exports = {
-    getDirectionMap: function (e, t) {
-        r ? r.reset() : (r = new i());
-        var n = e.getBlockMap(),
-            l = n.valueSeq().map(function (e) {
-                return s(r).getDirection(e.getText());
+"use strict";
+var n,
+    i = r(198668),
+    o = r(116740),
+    a = r(670200),
+    s = o.OrderedMap;
+t.exports = {
+    getDirectionMap: function (t, e) {
+        n ? n.reset() : (n = new i());
+        var r = t.getBlockMap(),
+            u = r.valueSeq().map(function (t) {
+                return a(n).getDirection(t.getText());
             }),
-            c = o(n.keySeq().zip(l));
-        return null != t && a.is(t, c) ? t : c;
+            c = s(r.keySeq().zip(u));
+        return null != e && o.is(e, c) ? e : c;
     },
 };

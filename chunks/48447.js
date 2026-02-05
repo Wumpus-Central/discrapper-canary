@@ -1,3 +1,1 @@
-e.exports = {
-    S: "CTAMessage_e887d4",
-};
+e.exports = { S: "CTAMessage_e887d4" };

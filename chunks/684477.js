@@ -1,126 +1,49 @@
-n.d(t, {
-    E: () => b,
-});
+"use strict";
+n.d(t, { E: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(235986),
     s = n(156312),
     o = n(166532),
     l = n(482132),
-    c = n(866485),
-    u = n(981036),
+    u = n(866485),
+    c = n(981036),
     d = n(985018),
-    f = n(34873);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = (e) => (0, r.jsx)(E, _({}, e)),
-    E = (e) => {
+    _ = n(34873);
+let f = (e) => (0, r.jsx)(p, { ...e }),
+    p = (e) => {
         let {
                 paymentModalStepProps: { handleStepChange: t },
                 unifiedStepProps: n,
             } = e,
             {
-                layout: c,
-                renderStepBody: p,
-                renderLeftColumn: h,
-                renderRightColumn: g,
-                primaryCTAButtonProps: E,
-                onBackClick: b,
+                layout: u,
+                renderStepBody: f,
+                renderLeftColumn: p,
+                renderRightColumn: h,
+                primaryCTAButtonProps: m,
+                onBackClick: g,
             } = n,
-            { hasPaymentSources: y } = (0, s.P5)(),
-            O = y ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-            A = i.useCallback(() => t(O), [t, O]),
-            v = i.useMemo(
+            { hasPaymentSources: E } = (0, s.P5)(),
+            A = E ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
+            I = i.useCallback(() => t(A), [t, A]),
+            T = i.useMemo(
                 () =>
-                    "custom-step-body" === c
-                        ? p()
-                        : "two-column" === c
-                          ? (0, r.jsxs)("div", {
-                                className: f.D,
-                                children: [h(), g()],
-                            })
+                    "custom-step-body" === u
+                        ? f()
+                        : "two-column" === u
+                          ? (0, r.jsxs)("div", { className: _.D, children: [p(), h()] })
                           : null,
-                [c, p, h, g],
+                [u, f, p, h],
             ),
-            S = i.useMemo(
-                () =>
-                    m(_({}, E), {
-                        onClick: A,
-                        text: d.intl.string(d.t.XiOHRX),
-                    }),
-                [E, A],
-            );
+            y = i.useMemo(() => ({ ...m, onClick: I, text: d.intl.string(d.t.XiOHRX) }), [m, I]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(l.dZ, {
-                    children: v,
-                }),
+                (0, r.jsx)(l.dZ, { children: T }),
                 (0, r.jsx)(l.UX, {
-                    children: (0, r.jsx)(u.cy, {
-                        onBackClick: b,
-                        primaryCTAButtonProps: S,
-                        align: a.A.Align.CENTER,
-                    }),
+                    children: (0, r.jsx)(c.cy, { onBackClick: g, primaryCTAButtonProps: y, align: a.A.Align.CENTER }),
                 }),
             ],
         });
     },
-    b = (0, c.R)({
-        step: o.pn.GIFT_CUSTOMIZATION,
-        renderStep: g,
-        DirectStepComponent: E,
-    });
+    h = (0, u.R)({ step: o.pn.GIFT_CUSTOMIZATION, renderStep: f, DirectStepComponent: p });

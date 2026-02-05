@@ -1,121 +1,92 @@
-l.d(t, {
-    A: () => h,
-});
-var n = l(627968),
-    a = l(64700),
-    r = l(397927),
+l.d(t, { A: () => h });
+var a = l(627968),
+    n = l(64700),
+    s = l(397927),
     i = l(256905),
-    s = l(372684),
+    r = l(372684),
     o = l(563076),
     u = l(516094),
     c = l(584794),
     d = l(429364),
     m = l(327742);
-
 function h(e) {
     let { transitionState: t, clip: l } = e,
         {
             applicationAudioEnabled: h,
             voiceAudioEnabled: p,
-            soundboardAudioEnabled: v,
-            cropStart: f,
-            cropEnd: b,
-            videoPlayerRef: g,
-            videoURL: j,
-            audioTracks: x,
+            soundboardAudioEnabled: f,
+            cropStart: g,
+            cropEnd: v,
+            videoPlayerRef: x,
+            videoURL: b,
+            audioTracks: j,
         } = (0, d.T)(),
-        y = l.type === s.nQ.SCREENSHOT;
-    a.useEffect(() => {
-        if (!y) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
-
+        C = l.type === r.nQ.SCREENSHOT;
+    n.useEffect(() => {
+        if (!C) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
         function e(e) {
-            var t, l;
-            if ((null == (t = document.activeElement) ? void 0 : t.tagName) === "INPUT") return;
-            let n = g.current;
-            if (null == n) return;
-            let a = null == (l = g.current) ? void 0 : l.videoElement;
-            if (null == a) return;
-            let r = (0, c.A)(a.duration, e.shiftKey),
-                i = !1;
+            if (document.activeElement?.tagName === "INPUT") return;
+            let t = x.current;
+            if (null == t) return;
+            let l = x.current?.videoElement;
+            if (null == l) return;
+            let a = (0, c.A)(l.duration, e.shiftKey),
+                n = !1;
             switch (e.key) {
                 case " ":
-                    (i = !0), a.paused ? n.play() : n.pause();
+                    (n = !0), l.paused ? t.play() : t.pause();
                     break;
                 case "ArrowLeft":
-                    (i = !0), n.seek(Math.max(f, a.currentTime - r));
+                    (n = !0), t.seek(Math.max(g, l.currentTime - a));
                     break;
                 case "ArrowRight":
-                    (i = !0), n.seek(Math.min(b, a.currentTime + r));
+                    (n = !0), t.seek(Math.min(v, l.currentTime + a));
             }
-            i && (e.stopPropagation(), e.preventDefault());
+            n && (e.stopPropagation(), e.preventDefault());
         }
-    }, [g, y, l.type, f, b]);
-    let C = a.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
-        k = a.useCallback(() => {
-            var e;
+    }, [x, C, l.type, g, v]);
+    let N = n.useMemo(() => j.filter((e) => e.trackName.includes(":voice")), [j]),
+        k = n.useCallback(() => {
             (0, i.R)(
                 {
-                    items: [
-                        {
-                            type: "IMAGE",
-                            url: l.thumbnail,
-                            proxyUrl: l.thumbnail,
-                            alt: null != (e = l.name) ? e : "",
-                        },
-                    ],
+                    items: [{ type: "IMAGE", url: l.thumbnail, proxyUrl: l.thumbnail, alt: l.name ?? "" }],
                     startingIndex: 0,
                     location: "ClipsEditModal",
                 },
                 "stack",
             );
         }, [l.thumbnail, l.name]);
-    if (y) {
-        var N;
-        return (0, n.jsx)("div", {
+    if (C)
+        return (0, a.jsx)("div", {
             className: m.OJ,
             children:
-                t !== r.ip4.ENTERED
-                    ? (0, n.jsx)("div", {
-                          className: m.dc,
-                          children: (0, n.jsx)(r.y$y, {}),
-                      })
-                    : (0, n.jsx)("div", {
+                t !== s.ip4.ENTERED
+                    ? (0, a.jsx)("div", { className: m.dc, children: (0, a.jsx)(s.y$y, {}) })
+                    : (0, a.jsx)("div", {
                           className: m.zT,
-                          children: (0, n.jsx)(r.DUT, {
+                          children: (0, a.jsx)(s.DUT, {
                               className: m.xS,
                               onClick: k,
-                              children: (0, n.jsx)("img", {
-                                  className: m.V_,
-                                  src: l.thumbnail,
-                                  alt: null != (N = l.name) ? N : "",
-                              }),
+                              children: (0, a.jsx)("img", { className: m.V_, src: l.thumbnail, alt: l.name ?? "" }),
                           }),
                       }),
         });
-    }
-    let E = null == j || 0 === x.length || t !== r.ip4.ENTERED;
-    return (0, n.jsx)("div", {
+    let y = null == b || 0 === j.length || t !== s.ip4.ENTERED;
+    return (0, a.jsx)("div", {
         className: m.OJ,
-        children: E
-            ? (0, n.jsx)("div", {
-                  className: m.dc,
-                  children: (0, n.jsx)(r.y$y, {}),
-              })
-            : (0, n.jsxs)("div", {
+        children: y
+            ? (0, a.jsx)("div", { className: m.dc, children: (0, a.jsx)(s.y$y, {}) })
+            : (0, a.jsxs)("div", {
                   className: m.zT,
                   children: [
-                      (0, n.jsx)(o.A, {
+                      (0, a.jsx)(o.A, {
                           applicationAudioEnabled: h,
                           voiceAudioEnabled: p,
-                          soundboardAudioEnabled: v,
-                          ref: g,
+                          soundboardAudioEnabled: f,
+                          ref: x,
                           clip: l,
                       }),
-                      (0, n.jsx)(u.A, {
-                          sourceURL: j,
-                          clip: l,
-                          voiceAudioTracks: C,
-                      }),
+                      (0, a.jsx)(u.A, { sourceURL: b, clip: l, voiceAudioTracks: N }),
                   ],
               }),
     });

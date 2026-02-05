@@ -1,37 +1,34 @@
-n.d(t, {
-    b: () => d,
-});
+n.d(t, { b: () => c });
 var i = n(397927),
-    s = n(723702),
-    l = n(360619),
-    r = n(682262),
-    a = n(531525),
+    l = n(723702),
+    s = n(360619),
+    a = n(682262),
+    r = n(531525),
     o = n(857266),
-    c = n(985018);
-
-function d() {
-    let e = (0, r.b_)(),
-        t = (0, l.AC)(a.H.GAMES),
+    d = n(985018);
+function c() {
+    let e = (0, a.b_)(),
+        t = (0, s.AC)(r.H.GAMES),
         n = [
             {
                 id: o.J.MY_GAMES,
-                title: c.intl.string(c.t["5DMgp9"]),
+                title: d.intl.string(d.t["5DMgp9"]),
                 icon: i.LVO,
-                predicate: () => !s.isPlatformEmbedded,
-                setting: a.H.GAMES_MY_GAMES,
+                predicate: () => !l.isPlatformEmbedded,
+                setting: r.H.GAMES_MY_GAMES,
             },
             {
                 id: o.J.OVERLAY,
-                title: c.intl.string(c.t.bNqkD9),
+                title: d.intl.string(d.t.bNqkD9),
                 icon: i.vH5,
                 predicate: () => !e,
-                setting: a.H.GAMES_OVERLAY,
+                setting: r.H.GAMES_OVERLAY,
             },
             {
                 id: o.J.ACTIVITY_PRIVACY,
-                title: c.intl.string(c.t.Cq98yL),
+                title: d.intl.string(d.t.Cq98yL),
                 icon: i.gXB,
-                setting: a.H.GAMES_ACTIVITY_PRIVACY,
+                setting: r.H.GAMES_ACTIVITY_PRIVACY,
             },
         ].filter((e) => null == e.predicate || !e.predicate());
     if (null != t && t.size > 0) {

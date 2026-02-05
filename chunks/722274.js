@@ -1,44 +1,29 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(465794),
-    s = n(795269),
-    o = n(652215),
-    l = n(985018),
+var s = n(397927),
+    r = n(465794),
+    a = n(795269),
+    l = n(652215),
+    o = n(985018),
     c = n(82652),
-    u = n(888283);
-let d = () => {
-    let e = {
-        section: o.JJy.REVERSE_TRIAL_BANNER,
-    };
-    return (0, r.jsxs)("div", {
+    d = n(888283);
+let u = () => {
+    let e = { section: l.JJy.REVERSE_TRIAL_BANNER };
+    return (0, i.jsxs)("div", {
         className: c.vK,
         children: [
-            (0, r.jsx)(s.R, {
-                text: l.intl.string(l.t.qYKftX),
-                className: c.Io,
-            }),
-            (0, r.jsx)("img", {
-                src: u,
-                width: 64,
-                height: 64,
-                alt: "",
-                className: c._u,
-            }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)(a.R, { text: o.intl.string(o.t.qYKftX), className: c.Io }),
+            (0, i.jsx)("img", { src: d, width: 64, height: 64, alt: "", className: c._u }),
+            (0, i.jsx)("div", {
                 className: c.IP,
-                children: (0, r.jsx)(i.Text, {
+                children: (0, i.jsx)(s.Text, {
                     color: "text-subtle",
                     variant: "text-sm/normal",
-                    children: l.intl.format(l.t.uu1WAa, {
-                        weeks: 1,
-                    }),
+                    children: o.intl.format(o.t.uu1WAa, { weeks: 1 }),
                 }),
             }),
-            (0, r.jsx)(a.A, {
+            (0, i.jsx)(r.A, {
                 premiumModalAnalyticsLocation: e,
                 showGradient: !0,
                 className: c.aA,

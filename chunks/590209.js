@@ -1,14 +1,12 @@
-n.d(t, {
-    yq: () => c,
-});
+"use strict";
+n.d(t, { yq: () => u });
 var r = n(311907),
     i = n(626584),
     a = n(242286),
     s = n(256415),
     o = n(41984),
     l = n(833551);
-
-function c() {
+function u() {
     return (0, r.bG)([l.default, a.default, s.default], () => {
         if (__OVERLAY__) return s.default.isInstanceLocked();
         let e = l.default.getOverlayRenderingTrackedGames();

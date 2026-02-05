@@ -1,189 +1,96 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(734057),
-    o = n(320501),
-    l = n(661191);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let p = {},
-    _ = {},
-    h = {};
-
-function m(e) {
+"use strict";
+n.d(t, { A: () => y });
+var r = n(311907),
+    i = n(73153),
+    a = n(734057),
+    s = n(320501),
+    o = n(661191);
+let l = {},
+    u = {},
+    c = {};
+function d(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
-    (p[t.id] = {
-        channel: t,
-        message: n,
-        shouldMention: r,
-        showMentionToggle: i,
-    }),
-        (h[t.id] = a);
+    (l[t.id] = { channel: t, message: n, shouldMention: r, showMentionToggle: i }), (c[t.id] = a);
 }
-
-function g(e) {
+function _(e) {
     let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
-    _[t.id] = {
-        channelId: t.id,
-        messageId: n,
-        shouldMention: r,
-        showMentionToggle: i,
-    };
+    u[t.id] = { channelId: t.id, messageId: n, shouldMention: r, showMentionToggle: i };
 }
-
-function E(e) {
+function f(e) {
     let { channelId: t, shouldMention: n } = e;
-    t in p &&
-        (p[t] = f(u({}, p[t]), {
-            shouldMention: n,
-        })),
-        t in _ &&
-            (_[t] = f(u({}, _[t]), {
-                shouldMention: n,
-            }));
+    t in l && (l[t] = { ...l[t], shouldMention: n }), t in u && (u[t] = { ...u[t], shouldMention: n });
 }
-
-function b(e) {
+function p(e) {
     let { channelId: t } = e;
-    delete p[t], delete _[t];
+    delete l[t], delete u[t];
 }
-
-function y(e) {
-    var t, n, r;
-    let { id: i, channelId: a } = e;
-    if ((null == (n = p[a]) || null == (t = n.message) ? void 0 : t.id) === i) delete p[a], delete h[a];
+function h(e) {
+    let { id: t, channelId: n } = e;
+    if (l[n]?.message?.id === t) delete l[n], delete c[n];
     else {
-        if ((null == (r = _[a]) ? void 0 : r.messageId) !== i) return !1;
-        delete _[a], delete h[a];
+        if (u[n]?.messageId !== t) return !1;
+        delete u[n], delete c[n];
     }
 }
-
-function O(e) {
+function m(e) {
     if (null == e) return !1;
-    let t = _[e];
+    let t = u[e];
     if (null == t) return !1;
-    let n = o.A.getMessage(e, t.messageId),
-        r = s.A.getChannel(t.channelId);
+    let n = s.A.getMessage(e, t.messageId),
+        r = a.A.getChannel(t.channelId);
     if (null == n || null == r) return !1;
-    (p[e] = {
-        channel: r,
-        message: n,
-        shouldMention: t.shouldMention,
-        showMentionToggle: t.showMentionToggle,
-    }),
-        delete _[e];
+    (l[e] = { channel: r, message: n, shouldMention: t.shouldMention, showMentionToggle: t.showMentionToggle }),
+        delete u[e];
 }
-
-function A(e) {
+function g(e) {
     let { channelId: t } = e;
-    O(t);
+    m(t);
 }
-
-function v(e) {
+function E(e) {
     let { channelId: t } = e;
-    O(t);
+    m(t);
 }
-
-function S() {
-    l.default.keys(_).forEach((e) => {
-        null == s.A.getChannel(e) && delete _[e];
+function A() {
+    o.default.keys(u).forEach((e) => {
+        null == a.A.getChannel(e) && delete u[e];
     });
 }
-
 function I() {
-    (p = {}), (_ = {}), (h = {});
+    (l = {}), (u = {}), (c = {});
 }
-class T extends (r = i.Ay.PersistedStore) {
+class T extends r.Ay.PersistedStore {
+    static displayName = "PendingReplyStore";
+    static persistKey = "PendingReplyStore";
+    static migrations = [(e) => e ?? {}];
     getState() {
         let e = {};
-        for (let [t, n] of l.default.entries(p))
+        for (let [t, n] of o.default.entries(l))
             e[t] = {
                 channelId: t,
                 messageId: n.message.id,
                 shouldMention: n.shouldMention,
                 showMentionToggle: n.showMentionToggle,
             };
-        return u({}, _, e);
+        return { ...u, ...e };
     }
     initialize(e) {
-        this.waitFor(o.A, s.A), (_ = null != e ? e : {});
+        this.waitFor(s.A, a.A), (u = e ?? {});
     }
     getPendingReply(e) {
-        return p[e];
+        return l[e];
     }
     getPendingReplyActionSource(e) {
-        return h[e];
+        return c[e];
     }
 }
-c(T, "displayName", "PendingReplyStore"),
-    c(T, "persistKey", "PendingReplyStore"),
-    c(T, "migrations", [(e) => (null != e ? e : {})]);
-let C = new T(a.h, {
-    CREATE_PENDING_REPLY: m,
-    CREATE_SHALLOW_PENDING_REPLY: g,
-    SET_PENDING_REPLY_SHOULD_MENTION: E,
-    DELETE_PENDING_REPLY: b,
-    CONNECTION_OPEN: S,
+let y = new T(i.h, {
+    CREATE_PENDING_REPLY: d,
+    CREATE_SHALLOW_PENDING_REPLY: _,
+    SET_PENDING_REPLY_SHOULD_MENTION: f,
+    DELETE_PENDING_REPLY: p,
+    CONNECTION_OPEN: A,
     LOGOUT: I,
-    MESSAGE_DELETE: y,
-    CHANNEL_SELECT: A,
-    LOAD_MESSAGES_SUCCESS: v,
+    MESSAGE_DELETE: h,
+    CHANNEL_SELECT: g,
+    LOAD_MESSAGES_SUCCESS: E,
 });

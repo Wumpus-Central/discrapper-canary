@@ -1,13 +1,11 @@
-n.d(t, {
-    X: () => s,
-});
-var r = n(775602),
-    i = n(203982),
-    a = n(652215);
-let s = {
+n.d(t, { X: () => a });
+var i = n(775602),
+    s = n(203982),
+    r = n(652215);
+let a = {
     binds: ["return"],
     action() {
-        if (!r.A.keyboardModeEnabled && i._.hasSubscribers(a.jej.MODAL_SUBMIT))
-            return i._.dispatch(a.jej.MODAL_SUBMIT), !1;
+        if (!i.A.keyboardModeEnabled && s._.hasSubscribers(r.jej.MODAL_SUBMIT))
+            return s._.dispatch(r.jej.MODAL_SUBMIT), !1;
     },
 };

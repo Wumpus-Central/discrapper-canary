@@ -1,9 +1,7 @@
-n.d(t, {
-    J: () => a,
-});
+"use strict";
+n.d(t, { J: () => a });
 var r = n(157559),
     i = n(985018);
-
 function a(e) {
     let { onConfirm: t } = e;
     return r.A.show({

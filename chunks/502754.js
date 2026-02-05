@@ -1,201 +1,115 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(321073);
-var r = n(627968),
+n.d(t, { A: () => T }), n(321073);
+var i = n(627968),
     l = n(64700),
-    i = n(989349),
-    a = n.n(i),
-    s = n(837381),
+    s = n(989349),
+    a = n.n(s),
+    r = n(837381),
     o = n(397927),
-    c = n(559149),
-    u = n(857069),
-    d = n(694318),
-    f = n(813516),
-    p = n(906141),
-    h = n(253932),
-    b = n(961350),
-    g = n(287809),
-    m = n(405269),
-    A = n(576456),
-    y = n(712209),
-    O = n(652215),
-    j = n(985018),
-    v = n(359884);
-let x = {
-        left: 4,
-        right: -12,
-    },
-    E = [O.lAJ.THREAD_CREATED];
-
-function _(e) {
-    var t, n, i;
-    let { channel: a, message: c, compact: u, isGroupStart: d, treatSpam: f, gotoChannel: h } = e,
-        b = (0, s.rm)(null != (t = c.id) ? t : ""),
-        g = l.useCallback(
+    d = n(559149),
+    c = n(857069),
+    u = n(694318),
+    h = n(813516),
+    A = n(906141),
+    g = n(253932),
+    m = n(961350),
+    p = n(287809),
+    _ = n(405269),
+    x = n(576456),
+    f = n(712209),
+    E = n(652215),
+    C = n(985018),
+    I = n(359884);
+let S = { left: 4, right: -12 },
+    b = [E.lAJ.THREAD_CREATED];
+function N(e) {
+    let { channel: t, message: n, compact: s, isGroupStart: a, treatSpam: d, gotoChannel: c } = e,
+        u = (0, r.rm)(n.id ?? ""),
+        h = l.useCallback(
             (e) => {
-                if ("ArrowLeft" === e.key) {
-                    var t;
-                    null == (t = document.querySelector('[data-recents-channel="'.concat(a.id, '"]'))) || t.focus();
-                }
+                "ArrowLeft" === e.key && document.querySelector(`[data-recents-channel="${t.id}"]`)?.focus();
             },
-            [a.id],
+            [t.id],
         ),
-        m = E.includes(c.type);
-    return (0, r.jsx)(o.vN3, {
-        offset: x,
-        children: (0, r.jsxs)(
+        g = b.includes(n.type);
+    return (0, i.jsx)(o.vN3, {
+        offset: S,
+        children: (0, i.jsxs)(
             "div",
-            ((n = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
-                {
-                    className: v.zC,
-                    onKeyDown: g,
-                },
-                b,
-            )),
-            (i = i =
-                {
-                    children: [
-                        !m &&
-                            (0, r.jsx)(A.A, {
-                                className: v.nn,
-                                onJump: (e) => h(e, c.id),
-                            }),
-                        (0, r.jsx)(p.A, {
-                            id: c.id,
-                            message: c,
-                            channel: a,
-                            className: v.iU,
-                            compact: u,
-                            animateAvatar: !1,
-                            isGroupStart: d,
-                            onKeyDown: g,
-                            treatSpam: f,
-                        }),
-                    ],
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(i)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                  }),
-            n),
-            c.id,
+            {
+                className: I.zC,
+                onKeyDown: h,
+                ...u,
+                children: [
+                    !g && (0, i.jsx)(x.A, { className: I.nn, onJump: (e) => c(e, n.id) }),
+                    (0, i.jsx)(A.A, {
+                        id: n.id,
+                        message: n,
+                        channel: t,
+                        className: I.iU,
+                        compact: s,
+                        animateAvatar: !1,
+                        isGroupStart: a,
+                        onKeyDown: h,
+                        treatSpam: d,
+                    }),
+                ],
+            },
+            n.id,
         ),
     });
 }
-
-function C(e) {
-    var t, n;
-    let { channel: l, channelRecord: i, gotoChannel: s } = e,
-        { enabled: p } = c.A.useExperiment(
-            {
-                location: "20e3b0_1",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
-        A = h.hH.useSetting(),
-        x = (0, d.iJ)(i),
-        E = !1,
-        C = 0 === l.messages.length || a()(l.messages[0].timestamp).isSame(a()(), "day"),
-        S = null != (t = null == (n = g.default.getUser(b.default.getId())) ? void 0 : n.hasFlag(O.nhx.SPAMMER)) && t,
-        I = [];
-    if (!l.collapsed) {
+function T(e) {
+    let { channel: t, channelRecord: n, gotoChannel: l } = e,
+        { enabled: s } = d.A.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        r = g.hH.useSetting(),
+        A = (0, u.iJ)(n),
+        x = !1,
+        S = 0 === t.messages.length || a()(t.messages[0].timestamp).isSame(a()(), "day"),
+        b = p.default.getUser(m.default.getId())?.hasFlag(E.nhx.SPAMMER) ?? !1,
+        T = [];
+    if (!t.collapsed) {
         let e = null,
-            t = null,
-            n = l.messages.slice(0, y.sz);
-        n.forEach((n) => {
-            if (!C && (null == e || !e.isSame(n.timestamp, "day"))) {
-                let t = (0, m.i$)(n.timestamp, "LL");
-                I.push(
-                    (0, r.jsx)(
-                        f.A,
-                        {
-                            className: v.yF,
-                            children: t,
-                        },
-                        t,
-                    ),
-                ),
-                    (e = a()(n.timestamp));
+            d = null,
+            g = t.messages.slice(0, f.sz);
+        g.forEach((t) => {
+            if (!S && (null == e || !e.isSame(t.timestamp, "day"))) {
+                let n = (0, _.i$)(t.timestamp, "LL");
+                T.push((0, i.jsx)(h.A, { className: I.yF, children: n }, n)), (e = a()(t.timestamp));
             }
-            let l = null == t || (0, u.A)(i, t, n);
-            (t = n),
-                (E = E || (0, d.kf)(n)),
-                I.push(
-                    (0, r.jsx)(
-                        _,
+            let o = null == d || (0, c.A)(n, d, t);
+            (d = t),
+                (x = x || (0, u.kf)(t)),
+                T.push(
+                    (0, i.jsx)(
+                        N,
                         {
-                            channel: i,
-                            message: n,
-                            compact: A,
-                            isGroupStart: l,
-                            treatSpam: !S && p && (0, d.kf)(n) && x,
-                            gotoChannel: s,
+                            channel: n,
+                            message: t,
+                            compact: r,
+                            isGroupStart: o,
+                            treatSpam: !b && s && (0, u.kf)(t) && A,
+                            gotoChannel: l,
                         },
-                        n.id,
+                        t.id,
                     ),
                 );
         }),
-            l.messages.length >= y.sz &&
-                I.push(
-                    (0, r.jsx)(
+            t.messages.length >= f.sz &&
+                T.push(
+                    (0, i.jsx)(
                         "div",
                         {
-                            className: v.Gr,
-                            children: (0, r.jsx)(o.QWc, {
+                            className: I.Gr,
+                            children: (0, i.jsx)(o.QWc, {
                                 variant: "primary",
-                                text: "".concat(j.intl.string(j.t["9OB9hq"]), " ›"),
-                                onClick: (e) => s(e, n[n.length - 1].id),
+                                text: `${C.intl.string(C.t["9OB9hq"])} \u203A`,
+                                onClick: (e) => l(e, g[g.length - 1].id),
                             }),
                         },
                         "view-all",
                     ),
                 ),
-            0 === I.length && (I = [(0, r.jsx)(o.y$y, {}, "spinner")]);
+            0 === T.length && (T = [(0, i.jsx)(o.y$y, {}, "spinner")]);
     }
-    return (
-        E &&
-            x &&
-            c.A.trackExposure({
-                location: "20e3b0_2",
-            }),
-        (0, r.jsx)("div", {
-            className: v.DZ,
-            children: I,
-        })
-    );
+    return x && A && d.A.trackExposure({ location: "20e3b0_2" }), (0, i.jsx)("div", { className: I.DZ, children: T });
 }

@@ -1,37 +1,34 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968),
+    s = n(64700),
     l = n(417597),
-    s = n(397927),
+    r = n(397927),
     a = n(965033),
-    c = n(576705),
-    o = n(652215),
-    d = n(985018),
+    o = n(576705),
+    d = n(652215),
+    c = n(985018),
     u = n(993013);
-
-function f(e) {
+function m(e) {
     let { guild: t } = e,
-        n = (0, l.bG)([c.A], () => null != t && c.A.can(o.xBc.MANAGE_GUILD, t), [t]),
-        f = t.features.has(o.GuildFeatures.COMMUNITY),
-        [g, b] = i.useState(t.features.has(o.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        m = i.useCallback(
+        n = (0, l.bG)([o.A], () => null != t && o.A.can(d.xBc.MANAGE_GUILD, t), [t]),
+        m = t.features.has(d.GuildFeatures.COMMUNITY),
+        [g, x] = s.useState(t.features.has(d.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        h = s.useCallback(
             async (e) => {
-                b(e), await (0, a.qH)(t, e);
+                x(e), await (0, a.qH)(t, e);
             },
             [t],
         );
-    return f
+    return m
         ? null
-        : (0, r.jsx)("div", {
+        : (0, i.jsx)("div", {
               className: u.k,
-              children: (0, r.jsx)(s.dOG, {
-                  label: d.intl.string(d.t.jDarmy),
-                  description: d.intl.string(d.t["/ee7yK"]),
+              children: (0, i.jsx)(r.dOG, {
+                  label: c.intl.string(c.t.jDarmy),
+                  description: c.intl.string(c.t["/ee7yK"]),
                   checked: g,
-                  onChange: m,
+                  onChange: h,
                   disabled: !n,
               }),
           });

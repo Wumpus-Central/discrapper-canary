@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Qs: "content_a36dee",
     qB: "progress_a36dee",

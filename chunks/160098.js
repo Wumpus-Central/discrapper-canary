@@ -1,26 +1,21 @@
-n.d(t, {
-    q: () => s,
-}),
-    n(896048),
-    n(321073);
-var r = n(64700),
+n.d(t, { q: () => r }), n(321073);
+var i = n(64700),
     l = n(429913),
-    i = n(322387);
+    s = n(322387);
 let a = new Set([
-    i.Uo.INCOMING_GAME_FRIEND_REQUESTS,
-    i.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-    i.Uo.INCOMING_FRIEND_REQUESTS,
-    i.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+    s.Uo.INCOMING_GAME_FRIEND_REQUESTS,
+    s.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+    s.Uo.INCOMING_FRIEND_REQUESTS,
+    s.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ]);
-
-function s(e) {
-    let t = r.useMemo(() => {
+function r(e) {
+    let t = i.useMemo(() => {
         let t = new Set(),
             n = [];
         return (
             e.forEach((e) => {
-                let { applicationId: r, type: l } = e;
-                !a.has(l) || null == r || t.has(r) || (t.add(r), n.push(r));
+                let { applicationId: i, type: l } = e;
+                !a.has(l) || null == i || t.has(i) || (t.add(i), n.push(i));
             }),
             n
         );

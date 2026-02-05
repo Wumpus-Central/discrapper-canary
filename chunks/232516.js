@@ -1,17 +1,15 @@
-t.d(i, {
-    A: () => c,
-});
-var n = t(627968);
-t(64700);
-var s = t(937008),
-    l = t(672525),
-    r = t(802246),
-    a = t(788868),
-    o = t(751690);
-let c = function (e) {
-    let { onSelectSku: i, priceOptions: t, giftRecipient: c, onWishlistItemClick: d } = e,
-        { claimableRewards: u } = (0, s.Pv)(),
-        m = null != u && u.length > 0;
+i.d(t, { A: () => u });
+var n = i(627968);
+i(64700);
+var r = i(937008),
+    l = i(672525),
+    s = i(802246),
+    a = i(788868),
+    o = i(751690);
+let u = function (e) {
+    let { onSelectSku: t, priceOptions: i, giftRecipient: u, onWishlistItemClick: d } = e,
+        { claimableRewards: c } = (0, r.Pv)(),
+        m = null != c && c.length > 0;
     return (0, n.jsxs)("div", {
         className: o.H,
         children: [
@@ -19,23 +17,20 @@ let c = function (e) {
                 className: o.u,
                 children: [
                     (0, n.jsx)(l.D3, {
-                        onClick: () => i(a.pe.TIER_2),
+                        onClick: () => t(a.pe.TIER_2),
                         isGift: !0,
-                        priceOptions: t,
+                        priceOptions: i,
                         showPromotionalGiftBanner: m,
                     }),
                     (0, n.jsx)(l.Ls, {
-                        onClick: () => i(a.pe.TIER_0),
+                        onClick: () => t(a.pe.TIER_0),
                         isGift: !0,
-                        priceOptions: t,
+                        priceOptions: i,
                         removeTopMargin: !0,
                     }),
                 ],
             }),
-            (0, n.jsx)(r.A, {
-                giftRecipient: c,
-                onWishlistItemClick: d,
-            }),
+            (0, n.jsx)(s.A, { giftRecipient: u, onWishlistItemClick: d }),
         ],
     });
 };

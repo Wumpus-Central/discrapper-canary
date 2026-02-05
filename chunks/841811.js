@@ -1,218 +1,112 @@
-n.d(t, {
-    default: () => E,
-    j: () => C,
-}),
-    n(896048),
-    n(228524);
+n.d(t, { default: () => N, j: () => I });
 var i = n(627968),
-    r = n(64700),
-    l = n(158954),
-    s = n(311907),
+    l = n(64700),
+    s = n(158954),
+    r = n(311907),
     a = n(397927),
     o = n(702805),
-    u = n(198982),
-    c = n(155718),
-    h = n(845202),
-    d = n(86944),
-    p = n(734057),
-    g = n(71393),
-    b = n(488926),
-    m = n(233993),
-    f = n(737045),
-    O = n(985018),
-    A = n(138695);
-
-function C(e, t) {
-    return {
-        id: e,
-        type: t,
-        deny: b.x3,
-        allow: m.QY,
-    };
+    d = n(198982),
+    h = n(155718),
+    u = n(845202),
+    c = n(86944),
+    g = n(734057),
+    p = n(71393),
+    m = n(488926),
+    A = n(233993),
+    C = n(737045),
+    E = n(985018),
+    b = n(138695);
+function I(e, t) {
+    return { id: e, type: t, deny: m.x3, allow: A.QY };
 }
-
-function E(e) {
-    var t, n;
-    let { channelId: b, onClose: E } = e,
-        I = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r,
-                l = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                    (i = n[r]),
-                        !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (l[i] = e[i]);
-                return l;
-            }
-            if (
-                ((l = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        l = Object.getOwnPropertyNames(e);
-                    for (i = 0; i < l.length; i++)
-                        (n = l[i]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-                    return r;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                    (i = n[r]),
-                        !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (l[i] = e[i]);
-            return l;
-        })(e, ["channelId", "onClose"]),
-        y = (0, s.bG)([p.A], () => p.A.getChannel(b)),
-        v = (0, s.bG)([g.A], () => g.A.getGuild(null == y ? void 0 : y.getGuildId())),
-        [S, N] = r.useState(""),
-        [x, j] = r.useState({}),
-        [T, _] = r.useState(!1),
-        [P, G] = r.useState(null),
-        w = r.useRef(null),
-        { roles: U, members: L, getRichTag: R } = (0, d.K)(v, y, m.QY, S),
-        D = h.A.useSections({
-            roles: U,
-            members: L,
-        });
-    if (null == y || null == v) return null;
-    let M = async () => {
-        _(!0);
+function N(e) {
+    let { channelId: t, onClose: n, ...m } = e,
+        N = (0, r.bG)([g.A], () => g.A.getChannel(t)),
+        S = (0, r.bG)([p.A], () => p.A.getGuild(N?.getGuildId())),
+        [x, f] = l.useState(""),
+        [O, T] = l.useState({}),
+        [_, v] = l.useState(!1),
+        [G, U] = l.useState(null),
+        L = l.useRef(null),
+        { roles: R, members: y, getRichTag: M } = (0, c.K)(S, N, A.QY, x),
+        j = u.A.useSections({ roles: R, members: y });
+    if (null == N || null == S) return null;
+    let D = async () => {
+        v(!0);
         try {
             let e;
-            await ((e = Object.values(x)
+            await ((e = Object.values(O)
                 .filter((e) => {
                     let { row: t } = e;
                     return null != t.id;
                 })
                 .map((e) => {
                     let { row: t } = e;
-                    return t.rowType === f.T6.ROLE ? C(t.id, c.r2.ROLE) : C(t.id, c.r2.MEMBER);
+                    return t.rowType === C.T6.ROLE ? I(t.id, h.r2.ROLE) : I(t.id, h.r2.MEMBER);
                 })),
-            (0, o.R$)(y.id, e, !0)),
-                E();
+            (0, o.R$)(N.id, e, !0)),
+                n();
         } catch (t) {
-            let e = new u.LG(t);
-            _(!1), G(e);
+            let e = new d.LG(t);
+            v(!1), U(e);
         }
     };
-    return (0, i.jsx)(h.A.Provider, {
-        listRef: w,
-        query: S,
-        setQuery: N,
-        pendingAdditions: x,
-        setPendingAdditions: j,
-        roles: U,
-        members: L,
-        getRichTag: R,
-        children: (0, i.jsx)(
-            l.Modal,
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({}, I)),
-            (n = n =
-                {
-                    title: O.intl.string(O.t.dMJ3Y6),
-                    onClose: E,
-                    input: (0, i.jsxs)("div", {
-                        children: [
-                            (0, i.jsxs)(a.Text, {
-                                className: A.HA,
-                                variant: "text-lg/normal",
-                                color: "text-default",
-                                children: [
-                                    (0, i.jsx)(a.qux, {
-                                        className: A.p,
-                                        size: "sm",
-                                        color: "currentColor",
-                                    }),
-                                    y.name,
-                                ],
-                            }),
-                            y.isGuildStageVoice() &&
-                                (0, i.jsx)(a.Text, {
-                                    color: "text-default",
-                                    className: A.h_,
-                                    variant: "text-sm/normal",
-                                    children: O.intl.string(O.t.f7VbhF),
-                                }),
-                            (0, i.jsx)(h.A.SearchBox, {
-                                placeholderText: O.intl.string(O.t.iezLLn),
-                            }),
-                            (0, i.jsx)(a.Text, {
-                                className: A.W$,
-                                variant: "text-xs/normal",
-                                children: O.intl.string(O.t.rwFx85),
-                            }),
-                            null != P
-                                ? (0, i.jsx)(a.Text, {
-                                      className: A.W$,
-                                      variant: "text-xs/normal",
-                                      color: "text-feedback-critical",
-                                      children: P.getAnyErrorMessage(),
-                                  })
-                                : null,
-                        ],
+    return (0, i.jsx)(u.A.Provider, {
+        listRef: L,
+        query: x,
+        setQuery: f,
+        pendingAdditions: O,
+        setPendingAdditions: T,
+        roles: R,
+        members: y,
+        getRichTag: M,
+        children: (0, i.jsx)(s.Modal, {
+            ...m,
+            title: E.intl.string(E.t.dMJ3Y6),
+            onClose: n,
+            input: (0, i.jsxs)("div", {
+                children: [
+                    (0, i.jsxs)(a.Text, {
+                        className: b.HA,
+                        variant: "text-lg/normal",
+                        color: "text-default",
+                        children: [(0, i.jsx)(a.qux, { className: b.p, size: "sm", color: "currentColor" }), N.name],
                     }),
-                    listProps: {
-                        ref: w,
-                        sectionHeight: h.A.SECTION_HEIGHT,
-                        renderSection: h.A.renderSection,
-                        rowHeight: h.A.ROW_HEIGHT,
-                        renderRow: h.A.renderRow,
-                        sections: D,
-                    },
-                    actions: [
-                        {
-                            variant: "secondary",
-                            text: O.intl.string(O.t["ETE/oC"]),
-                            onClick: E,
-                        },
-                        {
-                            variant: "primary",
-                            text: O.intl.string(O.t.OYkgVk),
-                            onClick: M,
-                            loading: T,
-                        },
-                    ],
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, i);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t),
-        ),
+                    N.isGuildStageVoice() &&
+                        (0, i.jsx)(a.Text, {
+                            color: "text-default",
+                            className: b.h_,
+                            variant: "text-sm/normal",
+                            children: E.intl.string(E.t.f7VbhF),
+                        }),
+                    (0, i.jsx)(u.A.SearchBox, { placeholderText: E.intl.string(E.t.iezLLn) }),
+                    (0, i.jsx)(a.Text, {
+                        className: b.W$,
+                        variant: "text-xs/normal",
+                        children: E.intl.string(E.t.rwFx85),
+                    }),
+                    null != G
+                        ? (0, i.jsx)(a.Text, {
+                              className: b.W$,
+                              variant: "text-xs/normal",
+                              color: "text-feedback-critical",
+                              children: G.getAnyErrorMessage(),
+                          })
+                        : null,
+                ],
+            }),
+            listProps: {
+                ref: L,
+                sectionHeight: u.A.SECTION_HEIGHT,
+                renderSection: u.A.renderSection,
+                rowHeight: u.A.ROW_HEIGHT,
+                renderRow: u.A.renderRow,
+                sections: j,
+            },
+            actions: [
+                { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: n },
+                { variant: "primary", text: E.intl.string(E.t.OYkgVk), onClick: D, loading: _ },
+            ],
+        }),
     });
 }

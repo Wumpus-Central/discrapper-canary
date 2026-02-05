@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     b: "closeButton__47998",
     Qw: "art__47998",

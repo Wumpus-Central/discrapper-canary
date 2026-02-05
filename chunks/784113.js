@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 class r {
     setActive(e) {
         return Promise.resolve();

@@ -1,17 +1,11 @@
-i.d(t, {
-    A: () => a,
-});
+i.d(t, { A: () => a });
 var n = i(981737);
 let a = {
     ordinalNumber: function (e, t) {
         return String(e);
     },
     era: (0, n.A)({
-        values: {
-            narrow: ["B", "คศ"],
-            abbreviated: ["BC", "ค.ศ."],
-            wide: ["ปีก่อนคริสตกาล", "คริสต์ศักราช"],
-        },
+        values: { narrow: ["B", "คศ"], abbreviated: ["BC", "ค.ศ."], wide: ["ปีก่อนคริสตกาล", "คริสต์ศักราช"] },
         defaultWidth: "wide",
     }),
     quarter: (0, n.A)({

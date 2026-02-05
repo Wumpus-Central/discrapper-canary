@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     let { isInline: t, isVoid: n } = e;
     return (
@@ -6,6 +7,4 @@ function r(e) {
         e
     );
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

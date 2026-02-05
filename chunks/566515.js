@@ -1,12 +1,9 @@
-t.d(r, {
-    A: () => o,
-});
+"use strict";
+t.d(r, { A: () => o });
 var a = Object.prototype.toString;
-
 function l(e) {
     return "function" == typeof e || "[object Function]" === a.call(e);
 }
-
 function o(e, r) {
     var t,
         a,

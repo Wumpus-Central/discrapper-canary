@@ -1,3 +1,4 @@
+"use strict";
 var r = n(249759),
     i = n(45804),
     a = n(381265);
@@ -7,9 +8,7 @@ e.exports = function () {
     return (
         a(
             Promise,
-            {
-                allSettled: e,
-            },
+            { allSettled: e },
             {
                 allSettled: function () {
                     return Promise.allSettled !== e;

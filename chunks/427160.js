@@ -1,146 +1,142 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(321073);
-var l = n(64700),
-    r = n(451988),
-    i = n(827734),
-    a = n(397927),
-    s = n(654107),
+n.d(t, { A: () => g }), n(321073);
+var i = n(64700),
+    l = n(451988),
+    a = n(827734),
+    s = n(397927),
+    r = n(654107),
     o = n(977997),
     c = n(318937),
-    u = n(533117),
-    d = n(134753),
-    f = n(666717),
-    p = n(921652),
-    b = n(139831);
+    d = n(533117),
+    u = n(134753),
+    h = n(666717),
+    m = n(921652),
+    A = n(139831);
 n(824217);
-let g = 1e3 / 60;
-
-function m(e, t, n, m) {
-    let h = (0, a.rdh)(i.A.unsafe_rawColors.BRAND_500).hex(),
-        A = (0, a.rdh)(i.A.unsafe_rawColors.BLACK).hex(),
-        y = (0, a.rdh)(i.A.unsafe_rawColors.WHITE).hex(),
-        _ = l.useRef({}),
-        E = l.useRef(new r.IX()),
-        v = l.useCallback(
+let p = 1e3 / 60;
+function g(e, t, n, g) {
+    let f = (0, s.rdh)(a.A.unsafe_rawColors.BRAND_500).hex(),
+        _ = (0, s.rdh)(a.A.unsafe_rawColors.BLACK).hex(),
+        E = (0, s.rdh)(a.A.unsafe_rawColors.WHITE).hex(),
+        C = i.useRef({}),
+        x = i.useRef(new l.IX()),
+        S = i.useCallback(
             (t) => {
-                let n = u.A.getDrawables(t);
-                (0, f.iV)(e),
+                let n = d.A.getDrawables(t);
+                (0, h.iV)(e),
                     (function (e) {
                         let {
                             canvasRef: t,
                             drawables: n,
-                            fallbackColor: l,
-                            linesDrawnAt: r,
-                            streamerId: i,
-                            channelId: a,
-                            outlineColorDark: s,
-                            outlineColorLight: u,
+                            fallbackColor: i,
+                            linesDrawnAt: l,
+                            streamerId: a,
+                            channelId: s,
+                            outlineColorDark: r,
+                            outlineColorLight: d,
                         } = e;
                         if (0 === n.length) return;
-                        let f = t.current;
-                        if (null == f) return;
-                        let g = f.getContext("2d");
-                        if (null == g) return;
-                        let { width: m, height: h } = f.getBoundingClientRect(),
-                            A = [];
+                        let h = t.current;
+                        if (null == h) return;
+                        let p = h.getContext("2d");
+                        if (null == p) return;
+                        let { width: g, height: f } = h.getBoundingClientRect(),
+                            _ = [];
                         n.forEach((e) => {
-                            null == o.A.getVoiceStateForChannel(a, e.userId)
-                                ? A.push(e)
+                            null == o.A.getVoiceStateForChannel(s, e.userId)
+                                ? _.push(e)
                                 : (function (e) {
                                       let {
                                           drawable: t,
                                           context: n,
-                                          canvasWidth: l,
-                                          canvasHeight: r,
-                                          fallbackColor: i,
-                                          outlineColorDark: a,
-                                          outlineColorLight: s,
+                                          canvasWidth: i,
+                                          canvasHeight: l,
+                                          fallbackColor: a,
+                                          outlineColorDark: s,
+                                          outlineColorLight: r,
                                           linesDrawnAt: o,
                                           streamerId: c,
-                                          deadDrawables: u,
+                                          deadDrawables: d,
                                       } = e;
                                       switch (t.type) {
-                                          case d.Z.LINE:
-                                              return (0, b.A)({
+                                          case u.Z.LINE:
+                                              return (0, A.A)({
                                                   line: t,
                                                   context: n,
-                                                  canvasWidth: l,
-                                                  canvasHeight: r,
-                                                  fallbackColor: i,
-                                                  outlineColorDark: a,
-                                                  outlineColorLight: s,
+                                                  canvasWidth: i,
+                                                  canvasHeight: l,
+                                                  fallbackColor: a,
+                                                  outlineColorDark: s,
+                                                  outlineColorLight: r,
                                                   linesDrawnAt: o,
-                                                  deadDrawables: u,
+                                                  deadDrawables: d,
                                               });
-                                          case d.Z.EMOJI_HOSE:
-                                              return (0, p.A)({
+                                          case u.Z.EMOJI_HOSE:
+                                              return (0, m.A)({
                                                   emojiHose: t,
                                                   context: n,
-                                                  canvasWidth: l,
-                                                  canvasHeight: r,
-                                                  fallbackColor: i,
-                                                  outlineColorDark: a,
-                                                  outlineColorLight: s,
+                                                  canvasWidth: i,
+                                                  canvasHeight: l,
+                                                  fallbackColor: a,
+                                                  outlineColorDark: s,
+                                                  outlineColorLight: r,
                                                   streamerId: c,
-                                                  deadDrawables: u,
+                                                  deadDrawables: d,
                                               });
                                       }
                                   })({
                                       drawable: e,
-                                      context: g,
-                                      canvasWidth: m,
-                                      canvasHeight: h,
-                                      fallbackColor: l,
-                                      outlineColorDark: s,
-                                      outlineColorLight: u,
-                                      linesDrawnAt: r,
-                                      deadDrawables: A,
-                                      streamerId: i,
+                                      context: p,
+                                      canvasWidth: g,
+                                      canvasHeight: f,
+                                      fallbackColor: i,
+                                      outlineColorDark: r,
+                                      outlineColorLight: d,
+                                      linesDrawnAt: l,
+                                      deadDrawables: _,
+                                      streamerId: a,
                                   });
                         }),
-                            A.length > 0 && (0, c.Nm)(A, i);
+                            _.length > 0 && (0, c.Nm)(_, a);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: h,
-                        linesDrawnAt: _,
+                        fallbackColor: f,
+                        linesDrawnAt: C,
                         streamerId: t,
-                        outlineColorDark: A,
-                        outlineColorLight: y,
-                        channelId: m,
+                        outlineColorDark: _,
+                        outlineColorLight: E,
+                        channelId: g,
                     });
             },
-            [e, m, h, A, y],
+            [e, g, f, _, E],
         );
-    l.useEffect(() => {
+    i.useEffect(() => {
         let t = new ResizeObserver(() => {
             let t = e.current;
             if (null == t) return;
-            let { width: l, height: r } = t.getBoundingClientRect();
-            (t.width = l * window.devicePixelRatio), (t.height = r * window.devicePixelRatio), v(n);
+            let { width: i, height: l } = t.getBoundingClientRect();
+            (t.width = i * window.devicePixelRatio), (t.height = l * window.devicePixelRatio), S(n);
         });
         return null != e.current && t.observe(e.current), () => t.disconnect();
-    }, [e, v, n]);
-    let O = l.useCallback(() => {
-        let t = u.A.getDrawables(n),
-            l = p.m.getState().particles,
-            r = t.length > 0 || Object.keys(l).length > 0;
-        r &&
-            null == E.current._ref &&
-            (null == E.current._ref
-                ? (v(n), E.current.start(g, () => v(n)))
-                : r || null == E.current._ref || (E.current.stop(), (0, f.iV)(e)));
-    }, [e, v, n]);
-    l.useEffect(() => {
-        let e = E.current;
+    }, [e, S, n]);
+    let T = i.useCallback(() => {
+        let t = d.A.getDrawables(n),
+            i = m.m.getState().particles,
+            l = t.length > 0 || Object.keys(i).length > 0;
+        l &&
+            null == x.current._ref &&
+            (null == x.current._ref
+                ? (S(n), x.current.start(p, () => S(n)))
+                : l || null == x.current._ref || (x.current.stop(), (0, h.iV)(e)));
+    }, [e, S, n]);
+    i.useEffect(() => {
+        let e = x.current;
         return (
-            u.A.addChangeListener(O),
-            O(),
-            (0, s.l0)(t.getAvatarURL(null, 80)),
+            d.A.addChangeListener(T),
+            T(),
+            (0, r.l0)(t.getAvatarURL(null, 80)),
             () => {
-                u.A.removeChangeListener(O), e.stop();
+                d.A.removeChangeListener(T), e.stop();
             }
         );
     });

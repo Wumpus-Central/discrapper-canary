@@ -1,50 +1,23 @@
-l.d(t, {
-    A: () => f,
-});
-var n = l(627968);
-l(64700);
-var r = l(503698),
-    s = l.n(r),
-    a = l(311907),
-    i = l(653887),
-    o = l(775602),
-    c = l(607470),
-    u = l(531685),
-    d = l(402314);
-let f = (e) => {
-    let { bannerStatic: t, bannerAnimated: l, bannerRive: r, isResponsive: f = !1, eventTargetRef: b } = e,
-        g = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-        p = (0, a.bG)([u.A], () => u.A.isFocused()),
-        m = null != l && !g && p;
+"use strict";
+s.d(t, { A: () => g });
+var n = s(627968);
+s(64700);
+var r = s(503698),
+    l = s.n(r),
+    a = s(311907),
+    i = s(653887),
+    o = s(775602),
+    c = s(607470),
+    d = s(531685),
+    u = s(402314);
+let g = (e) => {
+    let { bannerStatic: t, bannerAnimated: s, bannerRive: r, isResponsive: g = !1, eventTargetRef: m } = e,
+        _ = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        h = (0, a.bG)([d.A], () => d.A.isFocused()),
+        p = null != s && !_ && h;
     return null != r
-        ? (0, n.jsx)(i._, {
-              src: r,
-              fit: "fit-width",
-              eventTargetRef: b,
-          })
-        : m
-          ? (0, n.jsx)(c.A, {
-                className: s()(
-                    {
-                        [d.no]: f,
-                    },
-                    d.BW,
-                    d.ud,
-                ),
-                src: l,
-                autoPlay: !0,
-                loop: !0,
-            })
-          : (0, n.jsx)("div", {
-                className: s()(
-                    {
-                        [d.no]: f,
-                    },
-                    d.BW,
-                    d._e,
-                ),
-                style: {
-                    backgroundImage: "url(".concat(t, ")"),
-                },
-            });
+        ? (0, n.jsx)(i._, { src: r, fit: "fit-width", eventTargetRef: m })
+        : p
+          ? (0, n.jsx)(c.A, { className: l()({ [u.no]: g }, u.BW, u.ud), src: s, autoPlay: !0, loop: !0 })
+          : (0, n.jsx)("div", { className: l()({ [u.no]: g }, u.BW, u._e), style: { backgroundImage: `url(${t})` } });
 };

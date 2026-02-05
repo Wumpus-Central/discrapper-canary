@@ -1,77 +1,56 @@
+"use strict";
 let r, i;
-n.d(t, {
-    A: () => O,
-});
-var a,
-    s = n(311907),
-    o = n(506774),
-    l = n(73153),
-    c = n(734057),
+n.d(t, { A: () => A });
+var a = n(311907),
+    s = n(506774),
+    o = n(73153),
+    l = n(734057),
     u = n(71393);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = "hideSuppressWarning",
-    p = !1,
+let c = "hideSuppressWarning",
+    d = !1,
     _ = !0,
-    h = !1;
-
-function m(e) {
-    (r = e.sessionId), (p = !1);
+    f = !1;
+function p(e) {
+    (r = e.sessionId), (d = !1);
 }
-
-function g() {
+function h() {
     (r = null), (i = null), (_ = !0);
 }
-
-function E(e) {
+function m(e) {
     let { voiceStates: t } = e;
     return t.reduce(
         (e, t) =>
             r !== t.sessionId
                 ? e
-                : (p !== t.suppress && (_ = !(p = t.suppress)),
-                  i !== t.channelId && ((i = t.channelId), (_ = !p)),
-                  (h || null == t.channelId) && (_ = !0),
+                : (d !== t.suppress && (_ = !(d = t.suppress)),
+                  i !== t.channelId && ((i = t.channelId), (_ = !d)),
+                  (f || null == t.channelId) && (_ = !0),
                   !0),
         !1,
     );
 }
-
-function b(e) {
+function g(e) {
     let { forever: t } = e;
-    (_ = !0), t && ((h = !0), o.w.set(f, h));
+    (_ = !0), t && ((f = !0), s.w.set(c, f));
 }
-class y extends (a = s.Ay.Store) {
+class E extends a.Ay.Store {
+    static displayName = "PermissionSpeakStore";
     initialize() {
-        this.waitFor(c.A, u.A), (h = o.w.get(f) || h);
+        this.waitFor(l.A, u.A), (f = s.w.get(c) || f);
     }
     isAFKChannel() {
-        let e = c.A.getChannel(i);
+        let e = l.A.getChannel(i);
         if (null == e) return !1;
         let t = u.A.getGuild(e.getGuildId());
         return null != t && e.id === t.afkChannelId;
     }
     shouldShowWarning() {
-        var e;
-        return !(null == (e = c.A.getChannel(i)) ? void 0 : e.isGuildStageVoice()) && !_;
+        return !l.A.getChannel(i)?.isGuildStageVoice() && !_;
     }
 }
-d(y, "displayName", "PermissionSpeakStore");
-let O = new y(l.h, {
-    CONNECTION_OPEN: m,
-    CONNECTION_CLOSED: g,
-    VOICE_STATE_UPDATES: E,
-    PERMISSION_CLEAR_SUPPRESS_WARNING: b,
+let A = new E(o.h, {
+    CONNECTION_OPEN: p,
+    CONNECTION_CLOSED: h,
+    VOICE_STATE_UPDATES: m,
+    PERMISSION_CLEAR_SUPPRESS_WARNING: g,
 });

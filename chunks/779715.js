@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     n2: "guildBadge_d69818",
     Z2: "appIcon_d69818",

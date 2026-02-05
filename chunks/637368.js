@@ -1,66 +1,49 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048);
-var l = n(627968),
-    i = n(64700),
-    a = n(397927),
-    r = n(102597),
-    s = n(904054),
-    u = n(236972),
-    o = n(667920),
-    c = n(997098),
-    d = n(985018),
-    f = n(214606);
-let m = i.memo(function (e) {
-    let { sound: t, volume: n, disabled: m } = e,
-        [g, h] = i.useState(!1),
-        v = i.useRef(null),
-        { file: b, audio: x, loadAudioFromFile: p } = (0, u.L)(),
-        j = i.useMemo(() => (0, r.A)(t.soundId), [t]);
+l.d(t, { A: () => f });
+var n = l(627968),
+    a = l(64700),
+    i = l(397927),
+    s = l(102597),
+    r = l(904054),
+    u = l(236972),
+    o = l(667920),
+    d = l(997098),
+    c = l(985018),
+    m = l(214606);
+let f = a.memo(function (e) {
+    let { sound: t, volume: l, disabled: f } = e,
+        [h, g] = a.useState(!1),
+        x = a.useRef(null),
+        { file: v, audio: j, loadAudioFromFile: p } = (0, u.L)(),
+        N = a.useMemo(() => (0, s.A)(t.soundId), [t]);
     return (
-        i.useEffect(() => {
-            null == v.current && (v.current = (0, o.a)(j, t.name).then(p));
-        }, [j, p, t.name]),
-        (0, l.jsxs)("div", {
-            className: f.i1,
+        a.useEffect(() => {
+            null == x.current && (x.current = (0, o.a)(N, t.name).then(p));
+        }, [N, p, t.name]),
+        (0, n.jsxs)("div", {
+            className: m.i1,
             children: [
-                (0, l.jsx)(a.DUT, {
-                    onClick: m
+                (0, n.jsx)(i.DUT, {
+                    onClick: f
                         ? void 0
                         : function () {
-                              null != x &&
-                                  (x.paused
-                                      ? ((x.volume = (0, s.A)(n)),
-                                        (x.currentTime = 0),
-                                        x.play(),
-                                        h(!0),
-                                        x.addEventListener("ended", () => h(!1), {
-                                            once: !0,
-                                        }))
-                                      : (x.pause(), h(!1)));
+                              null != j &&
+                                  (j.paused
+                                      ? ((j.volume = (0, r.A)(l)),
+                                        (j.currentTime = 0),
+                                        j.play(),
+                                        g(!0),
+                                        j.addEventListener("ended", () => g(!1), { once: !0 }))
+                                      : (j.pause(), g(!1)));
                           },
-                    className: f.Rr,
-                    "aria-label": g ? d.intl.string(d.t.hHBkuG) : d.intl.string(d.t.RscU7I),
-                    children: g
-                        ? (0, l.jsx)(a.wFz, {
-                              size: "xs",
-                              color: "currentColor",
-                              className: f.uZ,
-                          })
-                        : (0, l.jsx)(a.udU, {
-                              size: "xs",
-                              color: "currentColor",
-                              className: f.uZ,
-                          }),
+                    className: m.Rr,
+                    "aria-label": h ? c.intl.string(c.t.hHBkuG) : c.intl.string(c.t.RscU7I),
+                    children: h
+                        ? (0, n.jsx)(i.wFz, { size: "xs", color: "currentColor", className: m.uZ })
+                        : (0, n.jsx)(i.udU, { size: "xs", color: "currentColor", className: m.uZ }),
                 }),
-                (0, l.jsx)("div", {
-                    className: f.FU,
-                    children: (0, l.jsx)(c.A, {
-                        className: f.ou,
-                        file: b,
-                        audio: x,
-                    }),
+                (0, n.jsx)("div", {
+                    className: m.FU,
+                    children: (0, n.jsx)(d.A, { className: m.ou, file: v, audio: j }),
                 }),
             ],
         })

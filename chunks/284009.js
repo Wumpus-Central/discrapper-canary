@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function (e, t, n, r, i, a, s, o) {
     if (!e) {
         var l;
@@ -6,11 +7,11 @@ e.exports = function (e, t, n, r, i, a, s, o) {
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var c = [n, r, i, a, s, o],
-                u = 0;
+            var u = [n, r, i, a, s, o],
+                c = 0;
             (l = Error(
                 t.replace(/%s/g, function () {
-                    return c[u++];
+                    return u[c++];
                 }),
             )).name = "Invariant Violation";
         }

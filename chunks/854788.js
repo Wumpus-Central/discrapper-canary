@@ -1,47 +1,42 @@
-n.d(t, {
-    A: () => p,
-});
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(412461),
-    s = n(310419),
-    c = n(656106),
-    o = n(652215),
-    d = n(985018),
-    u = n(101386);
-
-function p(e) {
-    let { application: t, className: n } = e,
-        p = a.useCallback((e) => {
-            (0, i.TR)(o.HAw.APP_DIRECTORY_CATEGORY_CLICKED, {
+a.d(t, { A: () => h });
+var n = a(627968),
+    i = a(64700),
+    s = a(397927),
+    l = a(412461),
+    r = a(310419),
+    o = a(656106),
+    c = a(652215),
+    d = a(985018),
+    u = a(101386);
+function h(e) {
+    let { application: t, className: a } = e,
+        h = i.useCallback((e) => {
+            (0, l.TR)(c.HAw.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
-                current_page: s.ev.APPLICATION,
+                current_page: r.ev.APPLICATION,
             }),
-                (0, c.JX)({
-                    categoryId: e.id,
-                });
+                (0, o.JX)({ categoryId: e.id });
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null
-        : (0, l.jsxs)("div", {
-              className: n,
+        : (0, n.jsxs)("div", {
+              className: a,
               children: [
-                  (0, l.jsx)(r.Heading, {
+                  (0, n.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",
                       children: d.intl.string(d.t.s7iald),
                   }),
-                  (0, l.jsx)("div", {
+                  (0, n.jsx)("div", {
                       className: u.L,
                       children: t.categories.map((e) =>
-                          (0, l.jsx)(
-                              r.DUT,
+                          (0, n.jsx)(
+                              s.DUT,
                               {
                                   className: u.c,
-                                  onClick: () => p(e),
-                                  children: (0, l.jsx)(r.Text, {
+                                  onClick: () => h(e),
+                                  children: (0, n.jsx)(s.Text, {
                                       variant: "text-sm/semibold",
                                       color: "redesign-button-tertiary-text",
                                       children: e.name,

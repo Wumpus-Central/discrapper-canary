@@ -1,26 +1,10 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r,
-    l = n(311907),
-    i = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(73153);
 let s = {};
-class o extends (r = l.Ay.PersistedStore) {
+class a extends i.Ay.PersistedStore {
+    static displayName = "GuildPromptsStore";
+    static persistKey = "GuildPromptsStore";
     initialize(e) {
         for (let t in e) {
             let n = e[t];
@@ -35,12 +19,11 @@ class o extends (r = l.Ay.PersistedStore) {
         return s;
     }
 }
-a(o, "displayName", "GuildPromptsStore"), a(o, "persistKey", "GuildPromptsStore");
-let c = new o(i.h, {
+let r = new a(l.h, {
     GUILD_PROMPT_VIEWED: function (e) {
         let { prompt: t, guildId: n } = e,
-            r = s[n];
-        return null == r ? ((s[n] = new Set()), s[n].add(t), !0) : !r.has(t) && (r.add(t), !0);
+            i = s[n];
+        return null == i ? ((s[n] = new Set()), s[n].add(t), !0) : !i.has(t) && (i.add(t), !0);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;

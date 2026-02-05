@@ -1,26 +1,23 @@
-e.d(t, {
-    M: () => h,
-});
-var g = e(627968);
-e(64700);
-var r = e(534400),
-    v = e(81461),
-    f = e(743981),
-    B = e(197827);
-
-function h(A) {
-    let t = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
-    return (0, g.jsx)("div", {
-        className: B.fC,
-        children: (0, g.jsx)(r.o9, {
+g.d(v, { M: () => H });
+var B = g(627968);
+g(64700);
+var C = g(534400),
+    h = g(81461),
+    f = g(743981),
+    Q = g(197827);
+function H(A) {
+    let v = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
+    return (0, B.jsx)("div", {
+        className: Q.fC,
+        children: (0, B.jsx)(C.o9, {
             guildId: A.guildId,
-            textClassName: B.em,
-            guildTag: t,
+            textClassName: Q.em,
+            guildTag: v,
             guildBadge:
                 "string" == typeof A.badge
                     ? A.badge
-                    : (0, g.jsx)(v.J, {
-                          className: B.i6,
+                    : (0, B.jsx)(h.J, {
+                          className: Q.i6,
                           badge: A.badge,
                           width: f.Sl.SIZE_12,
                           height: f.Sl.SIZE_12,

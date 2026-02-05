@@ -1,11 +1,12 @@
-var r = n(552597);
-e.exports = function (e) {
-    var t = e.getSelection();
-    if (!t.rangeCount) return null;
-    var n = r(t.getRangeAt(0)),
-        i = n.top,
-        a = n.right,
-        s = n.bottom,
-        o = n.left;
-    return 0 === i && 0 === a && 0 === s && 0 === o ? null : n;
+"use strict";
+var n = r(552597);
+t.exports = function (t) {
+    var e = t.getSelection();
+    if (!e.rangeCount) return null;
+    var r = n(e.getRangeAt(0)),
+        i = r.top,
+        o = r.right,
+        a = r.bottom,
+        s = r.left;
+    return 0 === i && 0 === o && 0 === a && 0 === s ? null : r;
 };

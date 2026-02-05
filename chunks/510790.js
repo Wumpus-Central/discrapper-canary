@@ -1,150 +1,123 @@
-n.d(t, {
-    f: () => C,
-}),
-    n(747238);
-var r = n(627968),
-    i = n(64700),
-    l = n(735438),
-    a = n(110259),
+n.d(t, { f: () => S });
+var i = n(627968),
+    l = n(64700),
+    a = n(735438),
+    r = n(110259),
     s = n(239947),
     o = n(934551),
-    c = n(97808),
-    u = n(732955),
-    d = n(397927),
-    p = n(139286),
-    m = n(520117),
-    f = n(793943),
-    g = n(763754),
-    h = n(973654),
-    _ = n(954571),
-    b = n(467135),
-    A = n(644235),
-    y = n(153469),
-    v = n(652215),
-    x = n(520650),
-    O = n(985018),
-    E = n(294456);
-let j = (e) => e.map((e) => "#".concat(e)),
-    C = (e) => {
+    d = n(97808),
+    c = n(732955),
+    u = n(397927),
+    m = n(139286),
+    _ = n(520117),
+    h = n(793943),
+    p = n(763754),
+    g = n(973654),
+    A = n(954571),
+    f = n(467135),
+    x = n(644235),
+    E = n(153469),
+    C = n(652215),
+    I = n(520650),
+    T = n(985018),
+    v = n(294456);
+let N = (e) => e.map((e) => `#${e}`),
+    S = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            { setAll: i } = (0, b.ko)();
+            { setAll: l } = (0, f.ko)();
         return void 0 === n
             ? null
-            : (0, r.jsxs)("div", {
-                  className: E.kL,
+            : (0, i.jsxs)("div", {
+                  className: v.kL,
                   children: [
-                      (0, r.jsx)(I, {
-                          message: t,
-                      }),
-                      (0, r.jsx)(u.$nd, {
-                          text: O.intl.string(O.t.SKNnqq),
+                      (0, i.jsx)(b, { message: t }),
+                      (0, i.jsx)(c.$nd, {
+                          text: T.intl.string(T.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
-                              _.default.track(v.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
-                                  (0, f.nf)(f.HP.CUSTOM_THEME, {
-                                      from: f.xv.SHARE_MESSAGE,
-                                  }),
-                                  i({
-                                      colors: j(n.colors),
+                              A.default.track(C.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
+                                  (0, h.nf)(h.HP.CUSTOM_THEME, { from: h.xv.SHARE_MESSAGE }),
+                                  l({
+                                      colors: N(n.colors),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, h.GQ)((0, A.PC)(n.base_theme));
+                                  (0, g.GQ)((0, x.PC)(n.base_theme));
                           },
                       }),
                   ],
               });
     },
-    I = (e) => {
+    b = (e) => {
         let t,
             n,
-            u,
-            { message: f } = e,
-            { sharedClientTheme: h } = f,
-            _ = (0, g.Ay)(f),
-            b = i.useMemo(
+            c,
+            { message: h } = e,
+            { sharedClientTheme: g } = h,
+            A = (0, p.Ay)(h),
+            f = l.useMemo(
                 () =>
-                    (0, l.once)(() => {
-                        (0, p.x)({
-                            type: a.ImpressionTypes.VIEW,
-                            name: s.I.CUSTOM_THEME_SHARE,
-                            properties: {},
-                        });
+                    (0, a.once)(() => {
+                        (0, m.x)({ type: r.ImpressionTypes.VIEW, name: s.I.CUSTOM_THEME_SHARE, properties: {} });
                     }),
                 [],
             ),
-            A = (0, m.A)({
+            x = (0, _.A)({
                 onVisible: () => {
-                    b();
+                    f();
                 },
                 threshold: 1,
                 minTimeVisibleMs: 200,
             }),
-            v = i.useMemo(() => {
-                var e;
-                return void 0 === h ? "" : (0, y.V9)(j(h.colors), null != (e = h.gradient_angle) ? e : 0);
-            }, [h]);
-        return void 0 === h
+            C = l.useMemo(() => (void 0 === g ? "" : (0, E.V9)(N(g.colors), g.gradient_angle ?? 0)), [g]);
+        return void 0 === g
             ? null
-            : (0, r.jsxs)("div", {
-                  className: E.pS,
-                  ref: A,
+            : (0, i.jsxs)("div", {
+                  className: v.pS,
+                  ref: x,
                   children: [
-                      (0, r.jsx)("div", {
-                          className: E.sl,
-                          style: {
-                              background: "".concat(v),
-                          },
-                      }),
-                      (0, r.jsxs)("div", {
-                          className: E.Ix,
+                      (0, i.jsx)("div", { className: v.sl, style: { background: `${C}` } }),
+                      (0, i.jsxs)("div", {
+                          className: v.Ix,
                           children: [
-                              (0, r.jsxs)(d.Heading, {
+                              (0, i.jsxs)(u.Heading, {
                                   variant: "heading-md/semibold",
-                                  className: E.qP,
-                                  children: [O.intl.string(x.default.KSBBpC), " ", (0, r.jsx)(o.NitroWheelIcon, {})],
+                                  className: v.qP,
+                                  children: [T.intl.string(I.default.KSBBpC), " ", (0, i.jsx)(o.NitroWheelIcon, {})],
                               }),
-                              (0, r.jsx)(d.Text, {
+                              (0, i.jsx)(u.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
-                                  className: E.Tb,
+                                  className: v.Tb,
                                   children:
-                                      ((t = "".concat(
-                                          O.intl.format(x.default.fQPSEf, {
-                                              username: "__USERNAME__",
-                                          }),
-                                      )),
-                                      (n = f.author),
-                                      (u = _.nick),
-                                      t.split(" ").map((e, t) =>
-                                          "__USERNAME__" !== e
-                                              ? (0, r.jsxs)(
-                                                    i.Fragment,
-                                                    {
-                                                        children: [e, " "],
-                                                    },
-                                                    t,
-                                                )
-                                              : (0, r.jsxs)(
-                                                    "span",
-                                                    {
-                                                        className: E.H,
-                                                        children: [
-                                                            (0, r.jsx)(c.eu, {
-                                                                "aria-label": u,
-                                                                src: n.getAvatarURL(null, 20),
-                                                                size: d._3J.SIZE_20,
-                                                            }),
-                                                            " ",
-                                                            u,
-                                                            " ",
-                                                        ],
-                                                    },
-                                                    t,
-                                                ),
-                                      )),
+                                      ((t = `${T.intl.format(I.default.fQPSEf, { username: "__USERNAME__" })}`),
+                                      (n = h.author),
+                                      (c = A.nick),
+                                      t
+                                          .split(" ")
+                                          .map((e, t) =>
+                                              "__USERNAME__" !== e
+                                                  ? (0, i.jsxs)(l.Fragment, { children: [e, " "] }, t)
+                                                  : (0, i.jsxs)(
+                                                        "span",
+                                                        {
+                                                            className: v.H,
+                                                            children: [
+                                                                (0, i.jsx)(d.eu, {
+                                                                    "aria-label": c,
+                                                                    src: n.getAvatarURL(null, 20),
+                                                                    size: u._3J.SIZE_20,
+                                                                }),
+                                                                " ",
+                                                                c,
+                                                                " ",
+                                                            ],
+                                                        },
+                                                        t,
+                                                    ),
+                                          )),
                               }),
                           ],
                       }),

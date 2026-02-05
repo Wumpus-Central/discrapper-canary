@@ -1,3 +1,4 @@
+"use strict";
 var r,
     i = n(906046),
     a = n(581070)(),
@@ -5,15 +6,12 @@ var r,
     o = n(267768);
 if (a) {
     var l = i("RegExp.prototype.exec"),
-        c = {},
-        u = function () {
-            throw c;
+        u = {},
+        c = function () {
+            throw u;
         },
-        d = {
-            toString: u,
-            valueOf: u,
-        };
-    "symbol" == typeof Symbol.toPrimitive && (d[Symbol.toPrimitive] = u),
+        d = { toString: c, valueOf: c };
+    "symbol" == typeof Symbol.toPrimitive && (d[Symbol.toPrimitive] = c),
         (r = function (e) {
             if (!e || "object" != typeof e) return !1;
             var t = o(e, "lastIndex");
@@ -21,14 +19,14 @@ if (a) {
             try {
                 l(e, d);
             } catch (e) {
-                return e === c;
+                return e === u;
             }
         });
 } else {
-    var f = i("Object.prototype.toString"),
-        p = "[object RegExp]";
+    var _ = i("Object.prototype.toString"),
+        f = "[object RegExp]";
     r = function (e) {
-        return !!e && ("object" == typeof e || "function" == typeof e) && f(e) === p;
+        return !!e && ("object" == typeof e || "function" == typeof e) && _(e) === f;
     };
 }
 e.exports = r;

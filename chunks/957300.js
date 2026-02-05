@@ -1,43 +1,29 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var s = n(397927),
     l = n(801358);
-
-function s(e) {
-    let { step: t, header: n, children: s } = e;
-    return (0, r.jsxs)("div", {
+function r(e) {
+    let { step: t, header: n, children: r } = e;
+    return (0, i.jsxs)("div", {
         className: l.eX,
         children: [
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: l.A1,
-                children: (0, r.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: l.xR,
-                    children: (0, r.jsx)(i.Text, {
-                        className: l.qZ,
-                        variant: "text-sm/bold",
-                        children: t,
-                    }),
+                    children: (0, i.jsx)(s.Text, { className: l.qZ, variant: "text-sm/bold", children: t }),
                 }),
             }),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: l.H7,
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: l.__invalid_triggerHeaderContainer,
-                        children: (0, r.jsx)(i.Text, {
-                            className: l.wy,
-                            variant: "text-sm/normal",
-                            children: n,
-                        }),
+                        children: (0, i.jsx)(s.Text, { className: l.wy, variant: "text-sm/normal", children: n }),
                     }),
-                    null != s &&
-                        (0, r.jsx)("div", {
-                            className: l.Dx,
-                            children: s,
-                        }),
+                    null != r && (0, i.jsx)("div", { className: l.Dx, children: r }),
                 ],
             }),
         ],

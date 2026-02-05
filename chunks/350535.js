@@ -1,177 +1,104 @@
+"use strict";
 n.d(t, {
-    Cy: () => C,
-    OH: () => k,
-    Qd: () => T,
-    Xt: () => G,
-    Z0: () => A,
-    _$: () => S,
-    dI: () => U,
-    pi: () => M,
-    sg: () => V,
+    Cy: () => S,
+    OH: () => x,
+    Qd: () => y,
+    Xt: () => M,
+    Z0: () => E,
+    _$: () => I,
+    dI: () => P,
+    pi: () => w,
+    sg: () => k,
 }),
-    n(896048),
-    n(747238),
-    n(812715),
-    n(65821),
-    n(321073),
-    n(733351);
+    n(321073);
 var r = n(695497),
     i = n.n(r),
     a = n(735438),
     s = n.n(a),
     o = n(775121),
     l = n(403362),
-    c = n(723702),
-    u = n(316501),
+    u = n(723702),
+    c = n(316501),
     d = n(650583);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let m = __OVERLAY__ ? d.Nu : (0, c.isLinux)() ? d.C8 : (0, c.isMac)() ? d.V8 : (0, c.isWindows)() ? d.Nu : {},
-    g = s().invert(d.C8);
-(g["223"] = "`"), Object.freeze(g);
-let E = Object.freeze(s().invert(d.V8)),
-    b = s().invert(d.Nu);
-(b["223"] = "`"), Object.freeze(b);
-let y = s().invert(null != m ? m : {});
-
-function O(e) {
+let _ = __OVERLAY__ ? d.Nu : (0, u.isLinux)() ? d.C8 : (0, u.isMac)() ? d.V8 : (0, u.isWindows)() ? d.Nu : {},
+    f = s().invert(d.C8);
+(f["223"] = "`"), Object.freeze(f);
+let p = Object.freeze(s().invert(d.V8)),
+    h = s().invert(d.Nu);
+(h["223"] = "`"), Object.freeze(h);
+let m = s().invert(_ ?? {});
+function g(e) {
     return "+" === e ? "plus" : e;
 }
-
-function A(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S();
-    return t === d.g$.BROWSER ? i()(e) : m[e];
+function E(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I();
+    return t === d.g$.BROWSER ? i()(e) : _[e];
 }
-
-function v(e, t, n) {
-    if ((null != n && n !== d.g$.WINDOWS) || !u.Kh.has(e)) return t;
-    let r = (0, u.Ze)().get("Backquote");
-    if (t === r) return O(t);
-    let i = {
-            key: r,
-            code: "Backquote",
-            keyCode: e,
-        },
-        a = (0, u.sv)(i);
-    return "\\" === t && "`" === r ? t : null == a ? O(null != r ? r : t) : O(a.key);
+function A(e, t, n) {
+    if ((null != n && n !== d.g$.WINDOWS) || !c.Kh.has(e)) return t;
+    let r = (0, c.Ze)().get("Backquote");
+    if (t === r) return g(t);
+    let i = { key: r, code: "Backquote", keyCode: e },
+        a = (0, c.sv)(i);
+    return "\\" === t && "`" === r ? t : null == a ? g(r ?? t) : g(a.key);
 }
-
-function S() {
-    return (0, c.isLinux)()
+function I() {
+    return (0, u.isLinux)()
         ? d.g$.LINUX
-        : (0, c.isMac)()
+        : (0, u.isMac)()
           ? d.g$.MACOS
-          : (0, c.isWindows)()
+          : (0, u.isWindows)()
             ? d.g$.WINDOWS
             : __OVERLAY__
               ? d.g$.WINDOWS
               : d.g$.BROWSER;
 }
-
-function I(e) {
+function T(e) {
     let t,
         [, n, r] = e;
     switch (r) {
         case d.g$.LINUX:
-            t = g["" + n];
+            t = f["" + n];
             break;
         case d.g$.MACOS:
-            t = E["" + n];
+            t = p["" + n];
             break;
         case d.g$.WINDOWS:
-            t = b["" + n];
+            t = h["" + n];
             break;
         case d.g$.BROWSER: {
             let e = i()(n);
             if (null == e) return null;
-            t = N(e);
+            t = v(e);
             break;
         }
         default:
-            t = y["" + n];
+            t = m["" + n];
     }
     return null != t ? t : null;
 }
-
-function T(e) {
+function y(e) {
     let [, t, n] = e,
-        r = I(e);
-    if (null != r) return v(t, r, n);
-    let i = (0, u.Pk)(t);
-    return null != i ? v(i.keyCode, i.key, n) : null;
+        r = T(e);
+    if (null != r) return A(t, r, n);
+    let i = (0, c.Pk)(t);
+    return null != i ? A(i.keyCode, i.key, n) : null;
 }
-
-function C(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
+function S(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY,
-        r = R(e, t, n);
+        r = C(e, t, n);
     if (null != r) return r;
-    let i = (0, u.Q_)(e);
+    let i = (0, c.Q_)(e);
     return null != i ? i.keyCode : null;
 }
-
-function N(e) {
+function v(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
-
-function R(e) {
+function C(e) {
     let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
     if (null == e) return null;
     let a = r === d.zY.KEYBOARD_KEY || r === d.zY.KEYBOARD_MODIFIER_KEY;
@@ -186,10 +113,10 @@ function R(e) {
             t = "+" === e ? d.Nu.plus : d.Nu[e];
             break;
         case a && n === d.g$.BROWSER:
-            t = i()(N(e));
+            t = i()(v(e));
             break;
         case a:
-            t = m[e];
+            t = _[e];
             break;
         case r === d.zY.MOUSE_BUTTON:
             t = parseInt(e.replace("MOUSE", ""), 10);
@@ -198,12 +125,12 @@ function R(e) {
             t = parseInt(e.replace("GAMEPAD", ""), 10);
             break;
         default:
-            throw Error("Unrecognized DeviceType ".concat(r, "."));
+            throw Error(`Unrecognized DeviceType ${r}.`);
     }
     return null != t ? t : null;
 }
-(0, c.isMac)() || (y["223"] = "`"), Object.freeze(y);
-let w = [
+(0, u.isMac)() || (m["223"] = "`"), Object.freeze(m);
+let b = [
         ["META", "⌘"],
         ["CMD", "⌘"],
         ["RIGHT META", "RIGHT ⌘"],
@@ -229,58 +156,38 @@ let w = [
         ["TAB", "⇥"],
         ["SPACE", "␣"],
     ],
-    P = (e) => {
-        for (let [t, n] of w) if (t === e.toUpperCase()) return n;
+    N = (e) => {
+        for (let [t, n] of b) if (t === e.toUpperCase()) return n;
         return e;
     },
-    D = (e) => {
-        for (let [t, n] of w) if (n === e.toUpperCase()) return t.toLowerCase();
+    R = (e) => {
+        for (let [t, n] of b) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    x = /shift|meta|ctrl|alt$/;
-
-function L(e) {
+    O = /shift|meta|ctrl|alt$/;
+function D(e) {
     return "meta" === e || "shift" === e || "alt" === e || "ctrl" === e;
 }
-
-function j(e) {
+function L(e) {
     return e + "Key";
 }
-
-function M(e) {
-    let t = {
-        keyCode: 0,
-        key: "",
-        code: "",
-        metaKey: !1,
-        shiftKey: !1,
-        altKey: !1,
-        ctrlKey: !1,
-    };
+function w(e) {
+    let t = { keyCode: 0, key: "", code: "", metaKey: !1, shiftKey: !1, altKey: !1, ctrlKey: !1 };
     return null == e
         ? []
         : e.reduce((e, n) => {
-              let r = T(n),
-                  i = p({}, t);
-              if (null == r)
-                  return (
-                      e.push(
-                          h(p({}, i), {
-                              combo: n,
-                          }),
-                      ),
-                      e
-                  );
-              if (x.test(r) && L(r)) return (t[j(r)] = !0), e.map((e) => ((e[j(r)] = !0), e));
+              let r = y(n),
+                  i = { ...t };
+              if (null == r) return e.push({ ...i, combo: n }), e;
+              if (O.test(r) && D(r)) return (t[L(r)] = !0), e.map((e) => ((e[L(r)] = !0), e));
               {
-                  let t = C(r, d.g$.BROWSER);
+                  let t = S(r, d.g$.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
 }
-
-function k(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
+function x(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, "")
@@ -289,46 +196,41 @@ function k(e) {
         .split("+")
         .map((e) => e.trim().replace("plus", "+"))
         .reduce((e, r) => {
-            let i = C(D(r), t, n);
+            let i = S(R(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
-
-function U(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .map((e) => {
                 let [t, n, r] = e,
-                    i = "number" == typeof r ? r : S();
-                if (t === d.zY.KEYBOARD_KEY || t === d.zY.KEYBOARD_MODIFIER_KEY) {
-                    var a;
-                    return null != (a = T(null != i ? [t, n, i] : [t, n])) ? a : "UNK".concat(n);
-                }
-                return t === d.zY.MOUSE_BUTTON
-                    ? "mouse".concat(n)
-                    : t === d.zY.GAMEPAD_BUTTON
-                      ? "gamepad".concat(n)
-                      : "dev".concat(t, ",").concat(n);
+                    i = "number" == typeof r ? r : I();
+                return t === d.zY.KEYBOARD_KEY || t === d.zY.KEYBOARD_MODIFIER_KEY
+                    ? (y(null != i ? [t, n, i] : [t, n]) ?? `UNK${n}`)
+                    : t === d.zY.MOUSE_BUTTON
+                      ? `mouse${n}`
+                      : t === d.zY.GAMEPAD_BUTTON
+                        ? `gamepad${n}`
+                        : `dev${t},${n}`;
             })
             .filter(l.Vq);
     return t
-        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(P) : r).join(" + ").toUpperCase()
+        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(N) : r).join(" + ").toUpperCase()
         : r.join("+");
 }
-
-function G(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return (
         e.length === t.length &&
         e.every((e, r) => {
             let [i, a, s] = e,
-                [o, l, c] = t[r];
-            return i === o && a === l && (!n || s === c);
+                [o, l, u] = t[r];
+            return i === o && a === l && (!n || s === u);
         })
     );
 }
-
-function V(e) {
+function k(e) {
     return (
         null != e &&
         "object" == typeof e &&

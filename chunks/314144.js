@@ -1,88 +1,86 @@
+"use strict";
 var r,
     i,
     a,
     s,
     o = n(860511),
     l = n(985848),
-    c = n(221015),
-    u = n(339626),
+    u = n(221015),
+    c = n(339626),
     d = n(210140),
-    f = n(503628),
-    p = n(469520),
-    _ = n(192819),
+    _ = n(503628),
+    f = n(469520),
+    p = n(192819),
     h = n(447280),
     m = n(627),
     g = n(705333),
     E = n(13570),
-    b = o.setImmediate,
-    y = o.clearImmediate,
-    O = o.process,
-    A = o.Dispatch,
-    v = o.Function,
-    S = o.MessageChannel,
-    I = o.String,
-    T = 0,
-    C = {},
-    N = "onreadystatechange";
-f(function () {
+    A = o.setImmediate,
+    I = o.clearImmediate,
+    T = o.process,
+    y = o.Dispatch,
+    S = o.Function,
+    v = o.MessageChannel,
+    C = o.String,
+    b = 0,
+    N = {},
+    R = "onreadystatechange";
+_(function () {
     r = o.location;
 });
-var R = function (e) {
-        if (d(C, e)) {
-            var t = C[e];
-            delete C[e], t();
+var O = function (e) {
+        if (d(N, e)) {
+            var t = N[e];
+            delete N[e], t();
         }
     },
-    w = function (e) {
+    D = function (e) {
         return function () {
-            R(e);
+            O(e);
         };
     },
-    P = function (e) {
-        R(e.data);
+    L = function (e) {
+        O(e.data);
     },
-    D = function (e) {
-        o.postMessage(I(e), r.protocol + "//" + r.host);
+    w = function (e) {
+        o.postMessage(C(e), r.protocol + "//" + r.host);
     };
-(b && y) ||
-    ((b = function (e) {
+(A && I) ||
+    ((A = function (e) {
         m(arguments.length, 1);
-        var t = u(e) ? e : v(e),
-            n = _(arguments, 1);
+        var t = c(e) ? e : S(e),
+            n = p(arguments, 1);
         return (
-            (C[++T] = function () {
+            (N[++b] = function () {
                 l(t, void 0, n);
             }),
-            i(T),
-            T
+            i(b),
+            b
         );
     }),
-    (y = function (e) {
-        delete C[e];
+    (I = function (e) {
+        delete N[e];
     }),
     E
         ? (i = function (e) {
-              O.nextTick(w(e));
+              T.nextTick(D(e));
           })
-        : A && A.now
+        : y && y.now
           ? (i = function (e) {
-                A.now(w(e));
+                y.now(D(e));
             })
-          : S && !g
-            ? ((s = (a = new S()).port2), (a.port1.onmessage = P), (i = c(s.postMessage, s)))
-            : o.addEventListener && u(o.postMessage) && !o.importScripts && r && "file:" !== r.protocol && !f(D)
-              ? ((i = D), o.addEventListener("message", P, !1))
+          : v && !g
+            ? ((s = (a = new v()).port2), (a.port1.onmessage = L), (i = u(s.postMessage, s)))
+            : o.addEventListener && c(o.postMessage) && !o.importScripts && r && "file:" !== r.protocol && !_(w)
+              ? ((i = w), o.addEventListener("message", L, !1))
               : (i =
-                    N in h("script")
+                    R in h("script")
                         ? function (e) {
-                              p.appendChild(h("script"))[N] = function () {
-                                  p.removeChild(this), R(e);
+                              f.appendChild(h("script"))[R] = function () {
+                                  f.removeChild(this), O(e);
                               };
                           }
                         : function (e) {
-                              setTimeout(w(e), 0);
+                              setTimeout(D(e), 0);
                           })),
-    (e.exports = {
-        set: b,
-        clear: y,
-    });
+    (e.exports = { set: A, clear: I });

@@ -1,16 +1,9 @@
-n.d(t, {
-    A: () => s,
-});
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(880355);
-let s = a.forwardRef(function (e, t) {
-    let { onScroll: n, children: a } = e;
-    return (0, l.jsx)(r.T7Y, {
-        onScroll: n,
-        className: i.X,
-        ref: t,
-        children: a,
-    });
+a.d(t, { A: () => r });
+var n = a(627968),
+    i = a(64700),
+    s = a(397927),
+    l = a(880355);
+let r = i.forwardRef(function (e, t) {
+    let { onScroll: a, children: i } = e;
+    return (0, n.jsx)(s.T7Y, { onScroll: a, className: l.X, ref: t, children: i });
 });

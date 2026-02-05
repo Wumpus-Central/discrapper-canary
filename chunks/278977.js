@@ -1,49 +1,38 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(985018),
-    l = n(150669),
+var s = n(503698),
+    r = n.n(s),
+    a = n(397927),
+    l = n(985018),
+    o = n(150669),
     c = n(274216);
-let u = (e) => {
+let d = (e) => {
     let { className: t, onBackClick: n } = e;
-    return (0, r.jsxs)("div", {
-        className: a()(l.kL, t),
+    return (0, i.jsxs)("div", {
+        className: r()(o.kL, t),
         "data-testid": "all-perks-hero-header",
         children: [
-            (0, r.jsx)("img", {
-                src: c,
-                alt: "",
-                className: l.NC,
-            }),
-            (0, r.jsxs)("div", {
-                className: l.yG,
+            (0, i.jsx)("img", { src: c, alt: "", className: o.NC }),
+            (0, i.jsxs)("div", {
+                className: o.yG,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: l.FY,
-                        children: (0, r.jsxs)(s.DUT, {
+                    (0, i.jsx)("div", {
+                        className: o.FY,
+                        children: (0, i.jsxs)(a.DUT, {
                             onClick: n,
-                            className: l.Gv,
-                            children: [
-                                (0, r.jsx)(s.n2b, {
-                                    color: "currentColor",
-                                }),
-                                o.intl.string(o.t["13/7kX"]),
-                            ],
+                            className: o.Gv,
+                            children: [(0, i.jsx)(a.n2b, { color: "currentColor" }), l.intl.string(l.t["13/7kX"])],
                         }),
                     }),
-                    (0, r.jsx)("div", {
-                        className: l.__invalid_contentContainer,
-                        children: (0, r.jsx)("div", {
-                            className: l.Qs,
-                            children: (0, r.jsx)(s.Heading, {
+                    (0, i.jsx)("div", {
+                        className: o.__invalid_contentContainer,
+                        children: (0, i.jsx)("div", {
+                            className: o.Qs,
+                            children: (0, i.jsx)(a.Heading, {
                                 variant: "display-lg",
                                 color: "always-white",
-                                children: o.intl.string(o.t["hqjDX/"]),
+                                children: l.intl.string(l.t["hqjDX/"]),
                             }),
                         }),
                     }),

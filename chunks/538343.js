@@ -1,37 +1,18 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048),
-    n(321073),
-    n(65821),
-    n(667532);
+"use strict";
+n.d(t, { A: () => A }), n(321073), n(667532);
 var r = n(311907),
     i = n(626584),
     a = n(877166),
     s = n(175306),
     o = n(878374),
     l = n(932170),
-    c = n(936674),
-    u = n(354382);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = new i.A("GatewaySocket"),
-    p = new Set(["INITIAL_GUILD", "READY"]),
-    _ = new Set(["READY", "INITIAL_GUILD"]),
-    h = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
-    m = new Set([
+    u = n(936674),
+    c = n(354382);
+let d = new i.A("GatewaySocket"),
+    _ = new Set(["INITIAL_GUILD", "READY"]),
+    f = new Set(["READY", "INITIAL_GUILD"]),
+    p = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
+    h = new Set([
         "READY",
         "INITIAL_GUILD",
         "READY_SUPPLEMENTAL",
@@ -47,27 +28,32 @@ let f = new i.A("GatewaySocket"),
         "MEDIA_ENGINE_PERMISSION",
         "SESSIONS_REPLACE",
     ]),
-    g = {};
-
-function E(e, t) {
-    var n;
-    let [r, i] = null != (n = g[e]) ? n : [0, 0];
-    g[e] = [(r * i + t) / (i + 1), i + 1];
+    m = {};
+function g(e, t) {
+    let [n, r] = m[e] ?? [0, 0];
+    m[e] = [(n * r + t) / (r + 1), r + 1];
 }
-
-function b(e, t, n) {
-    var r;
+function E(e, t, n) {
     if (null == n) return !1;
-    let i = e[t],
-        a = e.length - 1,
-        s = t < a ? e[t + 1] : null,
-        o = null != (r = null == n ? void 0 : n.timeRemaining()) ? r : 0,
-        l = null != n && o <= 0,
-        c = i.type === (null == s ? void 0 : s.type),
-        u = t === a;
-    return !!l && !c && !u;
+    let r = e[t],
+        i = e.length - 1,
+        a = t < i ? e[t + 1] : null,
+        s = n?.timeRemaining() ?? 0,
+        o = null != n && s <= 0,
+        l = r.type === a?.type,
+        u = t === i;
+    return !!o && !l && !u;
 }
-class y {
+class A {
+    socket;
+    scheduler = (0, o.a)();
+    queue = [];
+    paused = !0;
+    resumeAnalytics = (0, l.Qo)();
+    getDispatchHandler = null;
+    constructor(e) {
+        this.socket = e;
+    }
     hasStuffToDispatchNow() {
         return this.queue.length > 0 && 2 === this.queue[0].status;
     }
@@ -83,33 +69,20 @@ class y {
     }
     receiveDispatch(e, t, n) {
         if (null == this.getDispatchHandler) throw Error("getDispatchHandler needs to be passed in first!");
-        let r = {
-            data: e,
-            type: t,
-            compressionAnalytics: n,
-            status: 0,
-            preloadPromise: null,
-            preloadedData: null,
-        };
+        let r = { data: e, type: t, compressionAnalytics: n, status: 0, preloadPromise: null, preloadedData: null };
         this.queue.push(r), this.maybePreload(r) || this.scheduleFlush(t);
     }
     maybePreload(e) {
-        if (this.paused && !p.has(e.type)) return !1;
+        if (this.paused && !_.has(e.type)) return !1;
         if (0 === e.status) {
-            var t;
-            let n = null == (t = this.getDispatchHandler(e.type)) ? void 0 : t.preload(e.data);
-            if (((e.status = null == n ? 2 : 1), (e.preloadPromise = n), null != n))
+            let t = this.getDispatchHandler(e.type)?.preload(e.data);
+            if (((e.status = null == t ? 2 : 1), (e.preloadPromise = t), null != t))
                 return (
-                    n
+                    t
                         .then((t) => {
                             (e.preloadedData = t), (e.status = 2), this.scheduleFlush(e.type);
                         })
-                        .catch((t) =>
-                            this.socket.resetSocketOnDispatchError({
-                                error: t,
-                                action: e.type,
-                            }),
-                        ),
+                        .catch((t) => this.socket.resetSocketOnDispatchError({ error: t, action: e.type })),
                     !0
                 );
         }
@@ -117,13 +90,25 @@ class y {
     }
     scheduleFlush(e) {
         !this.paused &&
-            (_.has(e)
+            (f.has(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
-            m.has(e) && this.scheduler.markCriticalWorkScheduled());
+            h.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
+    flush = (e) => {
+        if (this.paused) return !0;
+        let t = performance.now(),
+            n = 0;
+        for (; n < this.queue.length && 2 === this.queue[n].status; n++);
+        if (0 === n) return !0;
+        let r = this.queue.splice(0, n),
+            i = this.dispatchMultiple(r, e);
+        i && this.scheduler.telemetry.timeEnd(u.YE.TIME_TO_QUEUE_EMPTY);
+        let a = performance.now() - t;
+        return a > c.zO && !i && d.log(`Dispatched ${r.length} messages in ${a}ms`), i;
+    };
     getDispatchTimings() {
-        return g;
+        return m;
     }
     getSchedulerTelemetry() {
         return this.scheduler.telemetry;
@@ -141,7 +126,7 @@ class y {
         if (0 === e.length) return !0;
         let n = "none",
             i = !1;
-        this.scheduler.telemetry.measure(c.Wg.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
+        this.scheduler.telemetry.measure(u.Wg.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
         try {
             let o = [];
             this.socket.connectionState === s.A.RESUMING && r.Ay.Emitter.pause(150);
@@ -150,13 +135,13 @@ class y {
                 (r.Ay.Emitter.batched(() => {
                     for (let r = 0; r < e.length; r++) {
                         let a = e[r];
-                        (n = a.type), (i = i || h.has(a.type));
+                        (n = a.type), (i = i || p.has(a.type));
                         let s = performance.now();
-                        if ((this.dispatchOne(a), (l = performance.now() - s), E(a.type, l), b(e, r, t))) {
+                        if ((this.dispatchOne(a), (l = performance.now() - s), g(a.type, l), E(e, r, t))) {
                             (o = e.slice(r + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&
-                                    this.scheduler.telemetry.timeTrack(c.YE.TIME_OVER_DEADLINE, t.timeSinceExpiration);
+                                    this.scheduler.telemetry.timeTrack(u.YE.TIME_OVER_DEADLINE, t.timeSinceExpiration);
                             break;
                         }
                     }
@@ -166,72 +151,41 @@ class y {
                 o.length > 0)
             )
                 return (
-                    this.scheduler.telemetry.measure(c.Wg.COUNT_DISPATCHES_LEFT_AFTER_YIELD, o.length),
+                    this.scheduler.telemetry.measure(u.Wg.COUNT_DISPATCHES_LEFT_AFTER_YIELD, o.length),
                     this.queue.unshift(...o),
                     this.scheduler.requestWorkTimeout(this.flush, !0),
                     !1
                 );
         } catch (e) {
-            this.socket.resetSocketOnDispatchError({
-                error: e,
-                action: n,
-            });
+            this.socket.resetSocketOnDispatchError({ error: e, action: n });
         }
         return !0;
     }
     dispatchOne(e) {
-        var t, n, r;
-        let { data: i, type: o, compressionAnalytics: c, preloadedData: u } = e,
-            d = performance.now();
+        let { data: t, type: n, compressionAnalytics: r, preloadedData: i } = e,
+            o = performance.now();
         if (this.socket.connectionState === s.A.RESUMING) {
-            let e = d - this.resumeAnalytics.lastUpdateTime;
+            let e = o - this.resumeAnalytics.lastUpdateTime;
             0 === this.resumeAnalytics.numEvents
                 ? (this.resumeAnalytics.initialWaitTime = e)
                 : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e),
                 (this.resumeAnalytics.totalWaitTime += e),
-                (this.resumeAnalytics.lastUpdateTime = d),
+                (this.resumeAnalytics.lastUpdateTime = o),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((a.A.flush(o, i), "READY" === o)) {
-            let e = (0, l.Js)(i);
-            null == (t = this.getDispatchHandler(o)) || t.dispatch(i, o, u), (0, l.Lh)(this.socket, i, d, c, e);
+        if ((a.A.flush(n, t), "READY" === n)) {
+            let e = (0, l.Js)(t);
+            this.getDispatchHandler(n)?.dispatch(t, n, i), (0, l.Lh)(this.socket, t, o, r, e);
         } else
-            "RESUMED" === o
-                ? (null == (n = this.getDispatchHandler(o)) || n.dispatch(i, o, u),
+            "RESUMED" === n
+                ? (this.getDispatchHandler(n)?.dispatch(t, n, i),
                   (0, l.Gx)(this.resumeAnalytics),
                   this.socket.handleResumeDispatched(),
                   (this.resumeAnalytics = (0, l.Qo)()))
-                : null == (r = this.getDispatchHandler(o)) || r.dispatch(i, o, u);
-        this.socket.connectionState === s.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - d);
+                : this.getDispatchHandler(n)?.dispatch(t, n, i);
+        this.socket.connectionState === s.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
     clear() {
         (this.paused = !1), (this.queue.length = 0);
-    }
-    constructor(e) {
-        d(this, "socket", void 0),
-            d(this, "scheduler", void 0),
-            d(this, "queue", void 0),
-            d(this, "paused", void 0),
-            d(this, "resumeAnalytics", void 0),
-            d(this, "getDispatchHandler", void 0),
-            d(this, "flush", void 0),
-            (this.socket = e),
-            (this.scheduler = (0, o.a)()),
-            (this.queue = []),
-            (this.paused = !0),
-            (this.resumeAnalytics = (0, l.Qo)()),
-            (this.getDispatchHandler = null),
-            (this.flush = (e) => {
-                if (this.paused) return !0;
-                let t = performance.now(),
-                    n = 0;
-                for (; n < this.queue.length && 2 === this.queue[n].status; n++);
-                if (0 === n) return !0;
-                let r = this.queue.splice(0, n),
-                    i = this.dispatchMultiple(r, e);
-                i && this.scheduler.telemetry.timeEnd(c.YE.TIME_TO_QUEUE_EMPTY);
-                let a = performance.now() - t;
-                return a > u.zO && !i && f.log("Dispatched ".concat(r.length, " messages in ").concat(a, "ms")), i;
-            });
     }
 }

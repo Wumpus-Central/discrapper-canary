@@ -1,18 +1,16 @@
-i.d(e, {
-    x: () => A,
-});
+i.d(e, { x: () => T });
 var n = i(311907),
     l = i(286237),
     s = i(515183),
     r = i(592598),
-    u = i(682763),
-    a = i(419954),
+    a = i(682763),
+    u = i(419954),
     o = i(780964),
-    T = i(985018);
-let A = (0, a.zD)(o.X.OVERLAY_LIMITED_INTERACTION_OVERRIDE_SETTING, {
+    d = i(985018);
+let T = (0, u.zD)(o.X.OVERLAY_LIMITED_INTERACTION_OVERRIDE_SETTING, {
     usePredicate: () => {
         let { runningGameApplication: t } = (0, l.A)();
-        return (null == t ? void 0 : t.id) != null;
+        return t?.id != null;
     },
     useDisabled: () => {
         let { runningGame: t } = (0, l.A)();
@@ -20,15 +18,15 @@ let A = (0, a.zD)(o.X.OVERLAY_LIMITED_INTERACTION_OVERRIDE_SETTING, {
     },
     useValue: () => {
         let { runningGame: t, runningGameApplication: e } = (0, l.A)(),
-            i = null == e ? void 0 : e.id,
-            u = (0, n.bG)([r.A], () => r.A.isLimitedInteractionOverrideEnabled(i)),
-            a = null != t && (0, s.qJ)(t.pid);
-        return u || a;
+            i = e?.id,
+            a = (0, n.bG)([r.A], () => r.A.isLimitedInteractionOverrideEnabled(i)),
+            u = null != t && (0, s.qJ)(t.pid);
+        return a || u;
     },
     setValue: (t) => {
         let { runningGameApplication: e } = (0, l.b)();
-        null != e && (0, u.x8)(e.id, t);
+        null != e && (0, a.x8)(e.id, t);
     },
-    useTitle: () => T.intl.string(T.t.wgVQND),
-    useSubtitle: () => T.intl.string(T.t["5SsyF5"]),
+    useTitle: () => d.intl.string(d.t.wgVQND),
+    useSubtitle: () => d.intl.string(d.t["5SsyF5"]),
 });

@@ -1,34 +1,30 @@
-n.d(t, {
-    l: () => f,
-});
+"use strict";
+n.d(t, { l: () => _ });
 var r = n(989349),
     i = n.n(r),
     a = n(311907),
     s = n(295405),
     o = n(97352),
     l = n(166403),
-    c = n(927578),
-    u = n(652215),
+    u = n(927578),
+    c = n(652215),
     d = n(818348);
-
-function f() {
+function _() {
     let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
-        t = (0, a.bG)([o.A], () =>
-            null != e && null != e.planIdFromItems ? o.A.get(null == e ? void 0 : e.planIdFromItems) : null,
-        ),
+        t = (0, a.bG)([o.A], () => (null != e && null != e.planIdFromItems ? o.A.get(e?.planIdFromItems) : null)),
         n = (0, a.bG)(
             [s.A],
             () => (null != e && null != e.paymentSourceId ? s.A.getPaymentSource(e.paymentSourceId) : null),
             [e],
         ),
         r = null != n && d.AD.has(n.type),
-        f = (null == e ? void 0 : e.status) === u.Dmq.PAST_DUE ? i()().diff(i()(e.currentPeriodStart), "days") : 0;
+        _ = e?.status === c.Dmq.PAST_DUE ? i()().diff(i()(e.currentPeriodStart), "days") : 0;
     return (
-        !!(null != e && null != t && (0, c.xq)(t.id)) &&
+        !!(null != e && null != t && (0, u.xq)(t.id)) &&
         r &&
-        f >= 0 &&
-        f <= (0, c.ji)(e).days &&
-        e.status === u.Dmq.PAST_DUE &&
+        _ >= 0 &&
+        _ <= (0, u.ji)(e).days &&
+        e.status === c.Dmq.PAST_DUE &&
         !e.isPurchasedExternally
     );
 }

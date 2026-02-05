@@ -1,84 +1,62 @@
-n.d(t, {
-    B: () => p,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { B: () => _ });
+var i = n(627968),
+    s = n(64700),
     l = n(397927),
-    s = n(688810),
+    r = n(688810),
     a = n(664007),
-    c = n(486020),
-    o = n(695800),
-    d = n(652215),
+    o = n(486020),
+    d = n(695800),
+    c = n(652215),
     u = n(874864),
-    f = n(339984),
+    m = n(339984),
     g = n(478644),
-    b = n(985018),
-    m = n(664991);
-
-function p(e) {
+    x = n(985018),
+    h = n(664991);
+function _(e) {
     let { guild: t, canManageGuild: n } = e,
-        p = t.features.has(d.GuildFeatures.BANNER),
-        x = t.features.has(d.GuildFeatures.ANIMATED_BANNER),
-        h = p && n,
-        { analyticsLocations: j } = (0, s.Ay)(),
-        O = i.useCallback(
+        _ = t.features.has(c.GuildFeatures.BANNER),
+        A = t.features.has(c.GuildFeatures.ANIMATED_BANNER),
+        p = _ && n,
+        { analyticsLocations: f } = (0, r.Ay)(),
+        j = s.useCallback(
             (e, n) => {
-                (0, o.fI)(t, j, e, n);
+                (0, d.fI)(t, f, e, n);
             },
-            [j, t],
+            [f, t],
         ),
-        y = i.useCallback(
+        N = s.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, o.p_)({
+                    (0, d.p_)({
                         guild: t,
-                        analyticsLocations: j,
-                        analyticsSection: d.JJy.GUILD_BANNER,
-                        analyticsObject: d.ZSU.UPLOAD_IMAGE,
+                        analyticsLocations: f,
+                        analyticsSection: c.JJy.GUILD_BANNER,
+                        analyticsObject: c.ZSU.UPLOAD_IMAGE,
                         perks: (0, u.QR)(),
                     });
             },
-            [j, t],
+            [f, t],
         ),
-        v = (0, r.jsx)(a.A, {
+        E = (0, i.jsx)(a.A, {
             image: t.banner,
-            makeURL: (e) =>
-                null != e
-                    ? c.Ay.getGuildBannerURL(
-                          {
-                              id: t.id,
-                              banner: e,
-                          },
-                          x,
-                      )
-                    : null,
-            disabled: !h,
-            onChange: O,
-            hint: b.intl.string(b.t.uPvxqJ),
+            makeURL: (e) => (null != e ? o.Ay.getGuildBannerURL({ id: t.id, banner: e }, A) : null),
+            disabled: !p,
+            onChange: j,
+            hint: x.intl.string(x.t.uPvxqJ),
             onOpenImageSelectModal: () =>
-                (0, o.Nn)({
-                    uploadType: f.HL.GUILD_BANNER,
+                (0, d.Nn)({
+                    uploadType: m.HL.GUILD_BANNER,
                     maxFileSizeBytes: g.j,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return O(t, n);
+                        return j(t, n);
                     },
-                    analyticsLocation: {
-                        page: d.liQ.GUILD_SETTINGS,
-                        section: d.JJy.GUILD_BANNER,
-                    },
-                    analyticsLocations: j,
+                    analyticsLocation: { page: c.liQ.GUILD_SETTINGS, section: c.JJy.GUILD_BANNER },
+                    analyticsLocations: f,
                 }),
-            enabled: h,
+            enabled: p,
         });
-    return p
-        ? v
-        : (0, r.jsx)(l.DUT, {
-              "aria-hidden": !0,
-              tabIndex: -1,
-              className: m.U,
-              onClick: y,
-              children: v,
-          });
+    return _ ? E : (0, i.jsx)(l.DUT, { "aria-hidden": !0, tabIndex: -1, className: h.U, onClick: N, children: E });
 }

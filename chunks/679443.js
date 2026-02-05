@@ -1,3 +1,4 @@
+"use strict";
 var n = r(181038),
     i = r(797686),
     o = "֐־׀׃׆׈-׏א-ת׫-ׯװ-ײ׳-״׵-׿߀-߉ߊ-ߪߴ-ߵߺ߻-߿ࠀ-ࠕࠚࠤࠨ࠮-࠯࠰-࠾࠿ࡀ-ࡘ࡜-࡝࡞࡟-࢟‏יִײַ-ﬨשׁ-זּ﬷טּ-לּ﬽מּ﬿נּ-סּ﭂ףּ-פּ﭅צּ-ﭏ",
@@ -9,23 +10,19 @@ var n = r(181038),
             "]",
     ),
     u = RegExp("[" + o + a + "]");
-
 function c(t) {
     var e = s.exec(t);
     return null == e ? null : e[0];
 }
-
 function l(t) {
     var e = c(t);
     return null == e ? n.NEUTRAL : u.exec(e) ? n.RTL : n.LTR;
 }
-
 function f(t, e) {
     if (((e = e || n.NEUTRAL), !t.length)) return e;
     var r = l(t);
     return r === n.NEUTRAL ? e : r;
 }
-
 function p(t, e) {
     return e || (e = n.getGlobalDir()), n.isStrong(e) || i(!1), f(t, e);
 }

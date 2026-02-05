@@ -1,15 +1,5 @@
-n.d(t, {
-    Ay: () => r,
-}),
-    n(311907),
-    n(961350),
-    n(430452);
-var l = n(806931);
-
-function r(e) {
-    var t, n;
-    return (
-        e.type !== l.lp.ACTIVITY &&
-        ((0, l.Ay)(e) ? null != e.streamId : null != (t = null == (n = e.voiceState) ? void 0 : n.selfVideo) && t)
-    );
+n.d(t, { Ay: () => l }), n(311907), n(961350), n(430452);
+var i = n(806931);
+function l(e) {
+    return e.type !== i.lp.ACTIVITY && ((0, i.Ay)(e) ? null != e.streamId : (e.voiceState?.selfVideo ?? !1));
 }

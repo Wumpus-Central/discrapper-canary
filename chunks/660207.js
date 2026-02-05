@@ -1,8 +1,4 @@
-r.r(t),
-    r.d(t, {
-        default: () => s,
-    }),
-    r(896048);
+r.r(t), r.d(t, { default: () => s });
 var u = r(627968),
     n = r(64700),
     d = r(76788);
@@ -88,9 +84,6 @@ let s = n.forwardRef(function (e, t) {
                     }
                 );
         }, [m, o]),
-        (0, u.jsx)("div", {
-            ref: p,
-            className: r,
-        })
+        (0, u.jsx)("div", { ref: p, className: r })
     );
 });

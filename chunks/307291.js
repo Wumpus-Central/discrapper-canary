@@ -1,4 +1,1 @@
-e.exports = {
-    wP: "linkIcon__22275",
-    yO: "linkAnchor__22275",
-};
+e.exports = { wP: "linkIcon__22275", yO: "linkAnchor__22275" };

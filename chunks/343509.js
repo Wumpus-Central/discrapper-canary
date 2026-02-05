@@ -1,76 +1,41 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(73153),
     i = n(439372),
     a = n(927813),
     s = n(966597),
     o = n(85109);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = null;
-
+let l = null;
 function u(e) {
     let { enabled: t } = s.A.getCurrentConfig(
-        {
-            location: "MessageRemindersNotificationManager",
-        },
-        {
-            autoTrackExposure: !1,
-        },
+        { location: "MessageRemindersNotificationManager" },
+        { autoTrackExposure: !1 },
     );
-    t &&
-        (r.h.dispatch({
-            type: "MESSAGE_REMINDER_DUE",
-            savedMessage: e,
-        }),
-        d());
+    t && (r.h.dispatch({ type: "MESSAGE_REMINDER_DUE", savedMessage: e }), c());
 }
-
-function d() {
-    var e;
-    let { enabled: t } = s.A.getCurrentConfig(
-        {
-            location: "MessageRemindersNotificationManager",
-        },
-        {
-            autoTrackExposure: !1,
-        },
+function c() {
+    let { enabled: e } = s.A.getCurrentConfig(
+        { location: "MessageRemindersNotificationManager" },
+        { autoTrackExposure: !1 },
     );
-    if (!t) return;
-    null != c && clearTimeout(c);
-    let n = o.A.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
-    if ((null == n || null == (e = n.saveData) ? void 0 : e.dueAt) == null) {
-        c = null;
+    if (!e) return;
+    null != l && clearTimeout(l);
+    let t = o.A.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    if (t?.saveData?.dueAt == null) {
+        l = null;
         return;
     }
-    let r = Date.now() + a.A.Millis.WEEK;
-    n.saveData.dueAt.getTime() > r || (c = setTimeout(() => u(n), n.saveData.dueAt.getTime() - Date.now()));
+    let n = Date.now() + a.A.Millis.WEEK;
+    t.saveData.dueAt.getTime() > n || (l = setTimeout(() => u(t), t.saveData.dueAt.getTime() - Date.now()));
 }
-class f extends i.A {
-    constructor(...e) {
-        super(...e),
-            l(this, "actions", {
-                SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
-                SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
-                SAVED_MESSAGE_DELETE: () => this.handleUpdates(),
-            }),
-            l(this, "handleUpdates", () => {
-                d();
-            });
-    }
+class d extends i.A {
+    actions = {
+        SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
+        SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
+        SAVED_MESSAGE_DELETE: () => this.handleUpdates(),
+    };
+    handleUpdates = () => {
+        c();
+    };
 }
-let p = new f();
+let _ = new d();

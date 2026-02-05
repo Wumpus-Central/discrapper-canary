@@ -1,22 +1,9 @@
-n.d(t, {
-    A: () => s,
-});
-var i = n(627968);
-n(64700);
-var l = n(397927),
-    r = n(725177),
-    a = n(523418);
-
-function s() {
-    return (0, a.b)().map((e) =>
-        (0, i.jsx)(
-            l.Drp,
-            {
-                id: e.id,
-                label: e.title,
-                action: () => (0, r.A)(e.id),
-            },
-            e.id,
-        ),
-    );
+t.d(n, { A: () => r });
+var l = t(627968);
+t(64700);
+var i = t(397927),
+    a = t(725177),
+    s = t(523418);
+function r() {
+    return (0, s.b)().map((e) => (0, l.jsx)(i.Drp, { id: e.id, label: e.title, action: () => (0, a.A)(e.id) }, e.id));
 }

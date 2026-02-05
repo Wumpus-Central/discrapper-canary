@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -23,14 +22,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "email",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "email" },
                     ],
                     name: "input",
                 },
@@ -39,14 +32,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "search",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "search" },
                     ],
                     name: "input",
                 },
@@ -55,14 +42,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "tel",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "tel" },
                     ],
                     name: "input",
                 },
@@ -71,14 +52,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "text",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "text" },
                     ],
                     name: "input",
                 },
@@ -87,14 +62,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "url",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "url" },
                     ],
                     name: "input",
                 },
@@ -103,14 +72,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["set"],
-                            name: "list",
-                        },
-                        {
-                            name: "type",
-                            value: "url",
-                        },
+                        { constraints: ["set"], name: "list" },
+                        { name: "type", value: "url" },
                     ],
                     name: "input",
                 },
@@ -119,14 +82,8 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "multiple",
-                        },
-                        {
-                            constraints: ["undefined"],
-                            name: "size",
-                        },
+                        { constraints: ["undefined"], name: "multiple" },
+                        { constraints: ["undefined"], name: "size" },
                     ],
                     name: "select",
                 },
@@ -135,32 +92,18 @@ t(697509)(r, "__esModule", {
             {
                 concept: {
                     attributes: [
-                        {
-                            constraints: ["undefined"],
-                            name: "multiple",
-                        },
-                        {
-                            name: "size",
-                            value: 1,
-                        },
+                        { constraints: ["undefined"], name: "multiple" },
+                        { name: "size", value: 1 },
                     ],
                     name: "select",
                 },
                 module: "HTML",
             },
-            {
-                concept: {
-                    name: "select",
-                },
-                module: "XForms",
-            },
+            { concept: { name: "select" }, module: "XForms" },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: {
-            "aria-controls": null,
-            "aria-expanded": "false",
-        },
+        requiredProps: { "aria-controls": null, "aria-expanded": "false" },
         superClass: [["roletype", "widget", "input"]],
     });

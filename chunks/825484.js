@@ -1,84 +1,57 @@
-n.d(t, {
-    e: () => s,
-}),
-    n(747238),
-    n(812715),
-    n(896048);
+"use strict";
+n.d(t, { e: () => o });
 var r = n(627968),
     i = n(64700),
     a = n(331322),
-    o = n(977067);
-
-function s(e) {
+    s = n(977067);
+function o(e) {
     let {
             size: t = "md",
             direction: n = "horizontal",
-            justify: s,
-            align: c,
-            padding: u,
+            justify: o,
+            align: u,
+            padding: c,
             className: d,
-            children: f,
-            wrap: p = !0,
-            fullWidth: _ = !1,
+            children: _,
+            wrap: f = !0,
+            fullWidth: p = !1,
             fullWidthContainer: h = !1,
         } = e,
-        m = i.useMemo(
-            () => ({
-                size: t,
-                fullWidth: _,
-            }),
-            [t, _],
-        ),
+        m = i.useMemo(() => ({ size: t, fullWidth: p }), [t, p]),
         g = i.useRef(null),
-        E = l(g, n, p),
-        y = n;
+        E = l(g, n, f),
+        A = n;
     return (
-        E && (y = n.replace("horizontal", "vertical")),
+        E && (A = n.replace("horizontal", "vertical")),
         (0, r.jsx)(a.B, {
-            direction: y,
+            direction: A,
             gap: 8,
-            justify: s,
-            align: c,
-            wrap: p,
-            padding: u,
+            justify: o,
+            align: u,
+            wrap: f,
+            padding: c,
             className: d,
-            fullWidth: !!h || _,
+            fullWidth: !!h || p,
             ref: g,
-            children: (0, r.jsx)(o.Z.Provider, {
-                value: m,
-                children: f,
-            }),
+            children: (0, r.jsx)(s.Z.Provider, { value: m, children: _ }),
         })
     );
 }
-
 function l(e, t, n) {
     let [r, a] = i.useState(null);
     return (
         i.useLayoutEffect(() => {
             if (null == e.current || !n || t.includes("vertical")) return;
-
             function r() {
-                var t, n;
-                let r = Array.from(
-                    null !=
-                        (t =
-                            null == (n = e.current)
-                                ? void 0
-                                : n.querySelectorAll('[data-mana-component="button"] [data-text-variant]'))
-                        ? t
-                        : [],
+                let t = Array.from(
+                    e.current?.querySelectorAll('[data-mana-component="button"] [data-text-variant]') ?? [],
                 ).some((e) => e.scrollWidth > e.clientWidth);
-                a((e) => e || r);
+                a((e) => e || t);
             }
             let i = new MutationObserver(r);
             return (
                 r(),
-                i.observe(e.current, {
-                    childList: !0,
-                    subtree: !0,
-                    characterData: !0,
-                }),
+                i.observe(e.current, { childList: !0, subtree: !0, characterData: !0 }),
                 () => {
                     i.disconnect();
                 }

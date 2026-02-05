@@ -1,15 +1,13 @@
-n.d(t, {
-    D: () => d,
-});
+"use strict";
+n.d(t, { D: () => d });
 var r = n(56636),
     i = n(90727),
     a = n(222367),
     s = n(391898),
     o = n(211169),
     l = n(201348),
-    c = n(727049);
-
-function u(e) {
+    u = n(727049);
+function c(e) {
     var t = this;
     return function (n) {
         if ((void 0 !== n && (t["_".concat(e)] = n), void 0 !== t["_".concat(e)])) return t["_".concat(e)];
@@ -24,8 +22,8 @@ var d = (function (e) {
         void 0 === t && (t = !1);
         var n = e.call(this, {}, t) || this;
         return (
-            (n.dtstart = u.apply(n, ["dtstart"])),
-            (n.tzid = u.apply(n, ["tzid"])),
+            (n.dtstart = c.apply(n, ["dtstart"])),
+            (n.tzid = c.apply(n, ["tzid"])),
             (n._rrule = []),
             (n._rdate = []),
             (n._exrule = []),
@@ -39,16 +37,16 @@ var d = (function (e) {
             return (0, o.V)(e, this._rrule, this._exrule, this._rdate, this._exdate, this.tzid());
         }),
         (t.prototype.rrule = function (e) {
-            f(e, this._rrule);
+            _(e, this._rrule);
         }),
         (t.prototype.exrule = function (e) {
-            f(e, this._exrule);
+            _(e, this._exrule);
         }),
         (t.prototype.rdate = function (e) {
-            p(e, this._rdate);
+            f(e, this._rdate);
         }),
         (t.prototype.exdate = function (e) {
-            p(e, this._exdate);
+            f(e, this._exdate);
         }),
         (t.prototype.rrules = function () {
             return this._rrule.map(function (e) {
@@ -73,13 +71,7 @@ var d = (function (e) {
         (t.prototype.valueOf = function () {
             var e = [];
             return (
-                !this._rrule.length &&
-                    this._dtstart &&
-                    (e = e.concat(
-                        (0, c.F)({
-                            dtstart: this._dtstart,
-                        }),
-                    )),
+                !this._rrule.length && this._dtstart && (e = e.concat((0, u.F)({ dtstart: this._dtstart }))),
                 this._rrule.forEach(function (t) {
                     e = e.concat(t.toString().split("\n"));
                 }),
@@ -96,8 +88,8 @@ var d = (function (e) {
                             }),
                     );
                 }),
-                this._rdate.length && e.push(_("RDATE", this._rdate, this.tzid())),
-                this._exdate.length && e.push(_("EXDATE", this._exdate, this.tzid())),
+                this._rdate.length && e.push(p("RDATE", this._rdate, this.tzid())),
+                this._exdate.length && e.push(p("EXDATE", this._exdate, this.tzid())),
                 e
             );
         }),
@@ -125,18 +117,15 @@ var d = (function (e) {
         t
     );
 })(i.p3);
-
-function f(e, t) {
+function _(e, t) {
     if (!(e instanceof i.p3)) throw TypeError(String(e) + " is not RRule instance");
     (0, s.mK)(t.map(String), String(e)) || t.push(e);
 }
-
-function p(e, t) {
+function f(e, t) {
     if (!(e instanceof Date)) throw TypeError(String(e) + " is not Date instance");
     (0, s.mK)(t.map(Number), Number(e)) || (t.push(e), (0, a.di)(t));
 }
-
-function _(e, t, n) {
+function p(e, t, n) {
     var r = !n || "UTC" === n.toUpperCase(),
         i = r ? "".concat(e, ":") : "".concat(e, ";TZID=").concat(n, ":"),
         s = t

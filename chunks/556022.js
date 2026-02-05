@@ -1,10 +1,5 @@
-n.d(t, {
-    m: () => s,
-}),
-    n(896048),
-    n(591487),
-    n(727858),
-    n(747238);
+"use strict";
+n.d(t, { m: () => s });
 var r = n(998218);
 let i = new Set(n(468983)),
     a = {
@@ -12,35 +7,33 @@ let i = new Set(n(468983)),
         "bitbucket.org": RegExp("/downloads\\S*/[^/]*"),
         "gitlab.com": RegExp("/downloads\\S*/[^/]*"),
     };
-
 function s(e) {
-    var t, n;
-    let { pathname: s, hostname: o } = null != (t = r.A.toURLSafe(e)) ? t : {};
-    if (null == o) return null;
-    let l = a[o];
-    if ((null != l && null != s && !l.test(s)) || null == s) return null;
-    let c = s;
+    let { pathname: t, hostname: n } = r.A.toURLSafe(e) ?? {};
+    if (null == n) return null;
+    let s = a[n];
+    if ((null != s && null != t && !s.test(t)) || null == t) return null;
+    let o = t;
     try {
-        c = decodeURIComponent(s);
+        o = decodeURIComponent(t);
     } catch (e) {}
-    let u = c.split("/"),
-        d = null,
-        f = 0;
-    for (let e = u.length - 1; e >= 0; e--) {
-        let t = u[e];
+    let l = o.split("/"),
+        u = null,
+        c = 0;
+    for (let e = l.length - 1; e >= 0; e--) {
+        let t = l[e];
         if ("" !== t && "." !== t) {
             if (".." === t) {
-                f++;
+                c++;
                 continue;
             }
-            if (f > e) break;
-            d = u[e - f];
+            if (c > e) break;
+            u = l[e - c];
             break;
         }
     }
-    if (null == d) return null;
-    let p = d.split(".");
-    if (p.length < 2) return null;
-    let _ = null == (n = p.pop()) ? void 0 : n.toLowerCase();
+    if (null == u) return null;
+    let d = u.split(".");
+    if (d.length < 2) return null;
+    let _ = d.pop()?.toLowerCase();
     return null != _ && i.has(_) ? _ : null;
 }

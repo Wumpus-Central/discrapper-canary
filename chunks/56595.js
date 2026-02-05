@@ -1,7 +1,5 @@
+"use strict";
 function r(e) {
-    var t, n;
-    return null != (t = null == (n = e.moderatorReporting) ? void 0 : n.moderatorReportingEnabled) && t;
+    return e.moderatorReporting?.moderatorReportingEnabled ?? !1;
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

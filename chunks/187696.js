@@ -1,46 +1,29 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(901517),
-    l = n(397244),
-    a = n(714114),
+var r = n(901517),
+    a = n(397244),
+    l = n(714114),
     s = n(729551),
     o = n(427262),
-    c = n(985018),
-    u = n(893750);
-let d = function (e) {
-    let { hovered: t, activities: n, applicationStream: d, status: p, user: f, userIgnored: h } = e,
-        { voiceActivityStatusEnabled: A } = (0, i.G)({
-            location: "StatusText",
-        }),
-        { voiceChannel: g } = (0, a.A)({
-            userId: null == f ? void 0 : f.id,
-        }),
-        m = A ? g : void 0;
-    return h
-        ? (0, r.jsx)("div", {
-              className: u.Q,
-              children: c.intl.string(c.t.tFY5Zb),
-          })
-        : (0, l.A)({
+    d = n(985018),
+    c = n(893750);
+let u = function (e) {
+    let { hovered: t, activities: n, applicationStream: u, status: A, user: h, userIgnored: _ } = e,
+        { voiceActivityStatusEnabled: m } = (0, r.G)({ location: "StatusText" }),
+        { voiceChannel: p } = (0, l.A)({ userId: h?.id }),
+        g = m ? p : void 0;
+    return _
+        ? (0, i.jsx)("div", { className: c.Q, children: d.intl.string(d.t.tFY5Zb) })
+        : (0, a.A)({ activities: n, status: A, applicationStream: u, voiceChannel: g })
+          ? (0, i.jsx)(s.A, {
+                textClassName: c.q,
                 activities: n,
-                status: p,
-                applicationStream: d,
-                voiceChannel: m,
-            })
-          ? (0, r.jsx)(s.A, {
-                textClassName: u.q,
-                activities: n,
-                applicationStream: d,
-                voiceChannel: m,
+                applicationStream: u,
+                voiceChannel: g,
                 animateEmoji: t,
-                user: f,
+                user: h,
                 textSize: "sm",
             })
-          : (0, r.jsx)("div", {
-                className: u.Q,
-                children: (0, o.MU)(p),
-            });
+          : (0, i.jsx)("div", { className: c.Q, children: (0, o.MU)(A) });
 };

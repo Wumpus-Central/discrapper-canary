@@ -1,24 +1,11 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(747238);
-var r = n(280230),
+"use strict";
+n.d(t, { A: () => o });
+var r = n(791332),
     i = n.n(r);
 let a =
     /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/;
-
 function s(e, t) {
-    return {
-        type: "attachmentLink",
-        content: [
-            {
-                type: "text",
-                content: e,
-            },
-        ],
-        attachmentUrl: t,
-        attachmentName: e,
-    };
+    return { type: "attachmentLink", content: [{ type: "text", content: e }], attachmentUrl: t, attachmentName: e };
 }
 let o = {
     attachmentLink: {

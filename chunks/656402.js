@@ -1,9 +1,5 @@
-n.d(t, {
-    Je: () => a,
-    uH: () => i,
-    xY: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Je: () => a, uH: () => i, xY: () => s });
 var r = n(873298),
     i = (function (e) {
         return (

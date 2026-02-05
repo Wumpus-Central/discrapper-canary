@@ -1,70 +1,48 @@
-n.d(t, {
-    v: () => c,
-});
+"use strict";
+n.d(t, { v: () => u });
 var r = n(64700),
     i = n(803082),
     a = n(339241),
     s = n(96441),
     o = n(8321),
     l = n(757260);
-
-function c(e, t, n) {
-    let c = (0, a.KZ)({
-            ...e,
-            value: t.isSelected,
-        }),
-        { isInvalid: u, validationErrors: d, validationDetails: f } = c.displayValidation,
+function u(e, t, n) {
+    let u = (0, a.KZ)({ ...e, value: t.isSelected }),
+        { isInvalid: c, validationErrors: d, validationDetails: _ } = u.displayValidation,
         {
-            labelProps: p,
-            inputProps: _,
+            labelProps: f,
+            inputProps: p,
             isSelected: h,
             isPressed: m,
             isDisabled: g,
             isReadOnly: E,
-        } = (0, l.e)(
-            {
-                ...e,
-                isInvalid: u,
-            },
-            t,
-            n,
-        );
-    (0, s.X)(e, c, n);
-    let { isIndeterminate: b, isRequired: y, validationBehavior: O = "aria" } = e;
+        } = (0, l.e)({ ...e, isInvalid: c }, t, n);
+    (0, s.X)(e, u, n);
+    let { isIndeterminate: A, isRequired: I, validationBehavior: T = "aria" } = e;
     (0, r.useEffect)(() => {
-        n.current && (n.current.indeterminate = !!b);
+        n.current && (n.current.indeterminate = !!A);
     });
-    let { pressProps: A } = (0, o.d)({
+    let { pressProps: y } = (0, o.d)({
         isDisabled: g || E,
         onPress() {
             let { [a.Lf]: t } = e,
-                { commitValidation: n } = t || c;
+                { commitValidation: n } = t || u;
             n();
         },
     });
     return {
         labelProps: (0, i.v)(
-            p,
-            A,
-            (0, r.useMemo)(
-                () => ({
-                    onMouseDown: (e) => e.preventDefault(),
-                }),
-                [],
-            ),
+            f,
+            y,
+            (0, r.useMemo)(() => ({ onMouseDown: (e) => e.preventDefault() }), []),
         ),
-        inputProps: {
-            ..._,
-            checked: h,
-            "aria-required": (y && "aria" === O) || void 0,
-            required: y && "native" === O,
-        },
+        inputProps: { ...p, checked: h, "aria-required": (I && "aria" === T) || void 0, required: I && "native" === T },
         isSelected: h,
         isPressed: m,
         isDisabled: g,
         isReadOnly: E,
-        isInvalid: u,
+        isInvalid: c,
         validationErrors: d,
-        validationDetails: f,
+        validationDetails: _,
     };
 }

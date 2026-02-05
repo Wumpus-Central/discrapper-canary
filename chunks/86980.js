@@ -1,6 +1,5 @@
-n.d(t, {
-    j: () => b,
-});
+"use strict";
+n.d(t, { j: () => A });
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -8,45 +7,41 @@ var i = n(284009),
     s = n(397927),
     o = n(800342),
     l = n(73825),
-    c = n(851907),
-    u = n(160946),
+    u = n(851907),
+    c = n(160946),
     d = n(342098),
-    f = n(216678),
-    p = n(869146),
-    _ = n(143582),
+    _ = n(216678),
+    f = n(869146),
+    p = n(143582),
     h = n(490744),
     m = n(67480),
     g = n(652215);
-
 function E(e) {
-    let t = (0, c.LU)({
-            applicationId: e,
-        }),
-        n = null != t ? p.A.getWindow(t) : void 0;
+    let t = (0, u.LU)({ applicationId: e }),
+        n = null != t ? f.A.getWindow(t) : void 0;
     return null == n || n.closed ? s.SYi : s.KX8;
 }
-async function b(e) {
+async function A(e) {
     let { applicationId: t, skuId: n, initialPlanId: r, analyticsLocations: i, analyticsLocationObject: s } = e,
-        c = m.A.get(n);
-    if (null == c) {
+        u = m.A.get(n);
+    if (null == u) {
         let e = (await (0, o.JI)(t)).find((e) => e.sku.id === n);
         a()(null != e, "Could not find store listing for sku"),
-            e.sku.type === g.Puh.SUBSCRIPTION_GROUP && (await (0, _.vz)(t, e.id));
+            e.sku.type === g.Puh.SUBSCRIPTION_GROUP && (await (0, p.vz)(t, e.id));
     }
-    (c = null != c ? c : m.A.get(n)),
-        a()(null != c && c.applicationId === t, "SKU must belong to application"),
-        c.type !== g.Puh.SUBSCRIPTION || (0, u.B)([c.id]) || (await (0, l.ur)(c.id));
+    (u = u ?? m.A.get(n)),
+        a()(null != u && u.applicationId === t, "SKU must belong to application"),
+        u.type !== g.Puh.SUBSCRIPTION || (0, c.B)([u.id]) || (await (0, l.ur)(u.id));
     let d = E(t);
-    if (c.type !== g.Puh.SUBSCRIPTION)
+    if (u.type !== g.Puh.SUBSCRIPTION)
         return new Promise((e, r) => {
             let a = (t) => {
-                    var n;
-                    e(null != (n = null == t ? void 0 : t.entitlements) ? n : []);
+                    e(t?.entitlements ?? []);
                 },
                 o = (e) => {
                     e || r();
                 };
-            (0, f.A)({
+            (0, _.A)({
                 applicationId: t,
                 skuId: n,
                 analyticsLocationObject: s,
@@ -56,15 +51,10 @@ async function b(e) {
                 onClose: o,
             });
         });
-    await y(t, n, r, s, i);
+    await I(t, n, r, s, i);
 }
-
-function y(e, t, n, i, a) {
-    let s = (e, t, n) =>
-        (0, r.jsx)(h.fs, {
-            step: n,
-            onClose: () => t(!1),
-        });
+function I(e, t, n, i, a) {
+    let s = (e, t, n) => (0, r.jsx)(h.fs, { step: n, onClose: () => t(!1) });
     return (0, d.l)({
         applicationId: e,
         skuId: t,

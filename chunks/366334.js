@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(228524);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,44 +7,39 @@ var i = n(503698),
     s = n(397927),
     o = n(659612),
     l = n(898612),
-    c = n(232492),
-    u = n(53605);
-
+    u = n(232492),
+    c = n(53605);
 function d(e) {
     let { benefit: t, guildId: n } = e,
-        i = (0, c.A)(n, t.ref_id),
-        d = (0, r.jsx)(o.A, {
-            guildId: n,
-            emojiId: t.emoji_id,
-            emojiName: t.emoji_name,
-        }),
-        f =
+        i = (0, u.A)(n, t.ref_id),
+        d = (0, r.jsx)(o.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name }),
+        _ =
             null != i
                 ? (0, r.jsx)(s.DUT, {
-                      className: u.__invalid_channelLink,
+                      className: c.__invalid_channelLink,
                       onClick: i.navigateToChannel,
                       "aria-label": i.ariaLabel,
                       role: "link",
                       children: (0, r.jsx)(s.Text, {
                           variant: "text-md/medium",
                           color: "text-strong",
-                          className: a()(u.UU, u.F$),
+                          className: a()(c.UU, c.F$),
                           children: (0, l.A)(t),
                       }),
                   })
                 : (0, r.jsx)(s.Text, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      className: u.UU,
+                      className: c.UU,
                       children: (0, l.A)(t),
                   });
     return (0, r.jsxs)("div", {
-        className: u.kL,
+        className: c.kL,
         children: [
             (0, r.jsxs)("div", {
-                className: u.op,
+                className: c.op,
                 children: [
-                    f,
+                    _,
                     (0, r.jsx)(s.Text, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
@@ -54,10 +47,7 @@ function d(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: u.qq,
-                children: d,
-            }),
+            (0, r.jsx)("div", { className: c.qq, children: d }),
         ],
     });
 }

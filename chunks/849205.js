@@ -1,77 +1,65 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
 var l = n(417597),
-    i = n(990078),
-    s = n(397927),
-    a = n(73392),
+    s = n(990078),
+    a = n(397927),
+    r = n(73392),
     o = n(665691),
-    c = n(290863),
-    u = n(994500),
-    d = n(287809),
-    p = n(427262),
-    h = n(742589),
+    d = n(290863),
+    c = n(994500),
+    u = n(287809),
+    h = n(427262),
+    A = n(742589),
     g = n(985018),
-    f = n(638990);
-
-function m(e) {
+    m = n(638990);
+function p(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
-        m = (0, l.bG)([d.default], () => d.default.getUser(t)),
-        b = (0, l.bG)([c.A], () => c.A.getStatus(t)),
-        A = (0, l.bG)([c.A], () => c.A.isMobileOnline(t)),
-        y = (0, l.bG)([c.A], () => c.A.isVROnline(t)),
-        O = (0, l.bG)([u.A], () => u.A.getNickname(t)),
-        j = p.Ay.useUserTag(m),
-        x = (0, a.a)({
-            displayNameStyles: null == m ? void 0 : m.displayNameStyles,
-        }),
-        _ = (0, o.bG)({
-            channelId: e.channel.id,
-        });
-    return (0, r.jsxs)(r.Fragment, {
+        p = (0, l.bG)([u.default], () => u.default.getUser(t)),
+        _ = (0, l.bG)([d.A], () => d.A.getStatus(t)),
+        x = (0, l.bG)([d.A], () => d.A.isMobileOnline(t)),
+        f = (0, l.bG)([d.A], () => d.A.isVROnline(t)),
+        E = (0, l.bG)([c.A], () => c.A.getNickname(t)),
+        C = h.Ay.useUserTag(p),
+        I = (0, r.a)({ displayNameStyles: p?.displayNameStyles }),
+        S = (0, o.bG)({ channelId: e.channel.id });
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(s.AC4, {
-                children: g.intl.string(g.t.EJRzg7),
-            }),
-            null != m &&
+            (0, i.jsx)(a.AC4, { children: g.intl.string(g.t.EJRzg7) }),
+            null != p &&
                 !n &&
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(s.euF, {
-                        status: b,
-                        isMobile: A,
-                        isVR: y,
-                        className: f.my,
-                        size: s._3J.SIZE_20,
-                        "aria-label": p.Ay.getName(m),
-                        src: m.getAvatarURL(void 0, 20),
+                (0, i.jsx)("div", {
+                    children: (0, i.jsx)(a.euF, {
+                        status: _,
+                        isMobile: x,
+                        isVR: f,
+                        className: m.my,
+                        size: a._3J.SIZE_20,
+                        "aria-label": h.Ay.getName(p),
+                        src: p.getAvatarURL(void 0, 20),
                     }),
                 }),
-            (0, r.jsx)(h.A.Title, {
+            (0, i.jsx)(A.A.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
-                className: null != e.handleClick ? f.or : null,
-                children: (0, r.jsxs)(r.Fragment, {
+                className: null != e.handleClick ? m.or : null,
+                children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(i.m, {
-                            text: j,
+                        (0, i.jsx)(s.m, {
+                            text: C,
                             position: "bottom",
-                            children: (0, r.jsx)("span", {
-                                className: x,
-                                children: null != O ? O : p.Ay.getName(m),
-                            }),
+                            children: (0, i.jsx)("span", { className: I, children: E ?? h.Ay.getName(p) }),
                         }),
-                        _ &&
-                            (0, r.jsx)(i.m, {
+                        S &&
+                            (0, i.jsx)(s.m, {
                                 text: g.intl.string(g.t.QyZ4Td),
-                                children: (0, r.jsx)(s.m5V, {
+                                children: (0, i.jsx)(a.m5V, {
                                     size: "xs",
                                     "aria-label": g.intl.string(g.t.VHXh8a),
-                                    color: s.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
-                                    className: f.vW,
+                                    color: a.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
+                                    className: m.vW,
                                 }),
                             }),
                     ],

@@ -1,42 +1,20 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = new Map();
-
-function l(e) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153);
+let a = new Map();
+function s(e) {
     let { channelId: t, enabled: n } = e;
-    o.set(t, n);
+    a.set(t, n);
 }
-
-function c(e) {
+function o(e) {
     let { channelId: t } = e;
-    o.delete(t);
+    a.delete(t);
 }
-class u extends (r = i.Ay.Store) {
+class l extends r.Ay.Store {
+    static displayName = "ThreadsAlsoSendToChannelStore";
     getAlsoSendToChannel(e) {
-        return !!o.has(e) && o.get(e);
+        return !!a.has(e) && a.get(e);
     }
 }
-s(u, "displayName", "ThreadsAlsoSendToChannelStore");
-let d = new u(a.h, {
-    SET_THREADS_ALSO_SEND_TO_CHANNEL: l,
-    CREATE_PENDING_SCHEDULED_MESSAGE: c,
-});
+let u = new l(i.h, { SET_THREADS_ALSO_SEND_TO_CHANNEL: s, CREATE_PENDING_SCHEDULED_MESSAGE: o });

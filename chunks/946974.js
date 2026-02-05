@@ -1,4 +1,2 @@
-n.d(t, {
-    P: () => r,
-});
-let r = "KEYBOARD_SHORTCUT_MODAL_KEY";
+n.d(t, { P: () => i });
+let i = "KEYBOARD_SHORTCUT_MODAL_KEY";

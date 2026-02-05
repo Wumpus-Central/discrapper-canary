@@ -1,14 +1,9 @@
-r.d(t, {
-    DS: () => d,
-    jG: () => c,
-    ke: () => u,
-});
+"use strict";
+r.d(t, { DS: () => d, jG: () => c, ke: () => u });
 var n = r(201672);
-
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function i(e, t) {
     for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -18,21 +13,12 @@ function i(e, t) {
             Object.defineProperty(e, n.key, n);
     }
 }
-
 function a(e, t, r) {
     return t && i(e.prototype, t), r && i(e, r), e;
 }
-
 function s(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
@@ -75,9 +61,7 @@ var c = (function () {
         e
     );
 })();
-s(c, "empty", {
-    dispose: n.lQ,
-});
+s(c, "empty", { dispose: n.lQ });
 var u = (function () {
         function e() {
             o(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);

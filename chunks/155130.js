@@ -1,49 +1,33 @@
-n.d(t, {
-    W: () => v,
-});
+"use strict";
+n.d(t, { W: () => S });
 var r = n(755325);
-
 function i(e, t, n) {
     a(e, t), t.set(e, n);
 }
-
 function a(e, t) {
     if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
 }
-
 function s(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-
 function o(e, t) {
-    var n = u(e, t, "get");
+    var n = c(e, t, "get");
     return l(e, n);
 }
-
 function l(e, t) {
     return t.get ? t.get.call(e) : t.value;
 }
-
-function c(e, t, n) {
-    var r = u(e, t, "set");
+function u(e, t, n) {
+    var r = c(e, t, "set");
     return d(e, r, n), n;
 }
-
-function u(e, t, n) {
+function c(e, t, n) {
     if (!t.has(e)) throw TypeError("attempted to " + n + " private field on non-instance");
     return t.get(e);
 }
-
 function d(e, t, n) {
     if (t.set) t.set.call(e, n);
     else {
@@ -51,40 +35,25 @@ function d(e, t, n) {
         t.value = n;
     }
 }
-var f = new WeakMap(),
+var _ = new WeakMap(),
+    f = new WeakMap(),
     p = new WeakMap(),
-    _ = new WeakMap(),
     h = new WeakMap(),
     m = new WeakMap(),
     g = new WeakMap(),
     E = new WeakMap(),
-    b = new WeakMap(),
-    y = new WeakMap(),
-    O = new WeakMap(),
-    A = new WeakMap();
-class v {
+    A = new WeakMap(),
+    I = new WeakMap(),
+    T = new WeakMap(),
+    y = new WeakMap();
+class S {
     constructor(e, t, n) {
         if (
-            (i(this, f, {
-                writable: !0,
-                value: void 0,
-            }),
-            i(this, p, {
-                writable: !0,
-                value: void 0,
-            }),
-            i(this, _, {
-                writable: !0,
-                value: void 0,
-            }),
-            i(this, h, {
-                writable: !0,
-                value: void 0,
-            }),
-            i(this, m, {
-                writable: !0,
-                value: void 0,
-            }),
+            (i(this, _, { writable: !0, value: void 0 }),
+            i(this, f, { writable: !0, value: void 0 }),
+            i(this, p, { writable: !0, value: void 0 }),
+            i(this, h, { writable: !0, value: void 0 }),
+            i(this, m, { writable: !0, value: void 0 }),
             i(this, g, {
                 writable: !0,
                 value: (e, t, n) => {
@@ -108,11 +77,11 @@ class v {
                                 "\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx",
                             ),
                         );
-                    if (o(this, _)[s])
+                    if (o(this, p)[s])
                         throw Error(
                             "You must specify a unique 'id' property in your Backend entry:\n        "
                                 .concat(JSON.stringify(n), " (conflicts with: ")
-                                .concat(JSON.stringify(o(this, _)[s]), ")"),
+                                .concat(JSON.stringify(o(this, p)[s]), ")"),
                         );
                     return {
                         id: s,
@@ -125,78 +94,71 @@ class v {
             }),
             s(this, "setup", () => {
                 if ("u" > typeof window) {
-                    if (v.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
-                    (v.isSetUp = !0), o(this, E).call(this, window), o(this, _)[o(this, f)].instance.setup();
+                    if (S.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
+                    (S.isSetUp = !0), o(this, E).call(this, window), o(this, p)[o(this, _)].instance.setup();
                 }
             }),
             s(this, "teardown", () => {
                 "u" > typeof window &&
-                    ((v.isSetUp = !1), o(this, b).call(this, window), o(this, _)[o(this, f)].instance.teardown());
+                    ((S.isSetUp = !1), o(this, A).call(this, window), o(this, p)[o(this, _)].instance.teardown());
             }),
-            s(this, "connectDragSource", (e, t, n) => o(this, A).call(this, "connectDragSource", e, t, n)),
-            s(this, "connectDragPreview", (e, t, n) => o(this, A).call(this, "connectDragPreview", e, t, n)),
-            s(this, "connectDropTarget", (e, t, n) => o(this, A).call(this, "connectDropTarget", e, t, n)),
-            s(this, "profile", () => o(this, _)[o(this, f)].instance.profile()),
-            s(this, "previewEnabled", () => o(this, _)[o(this, f)].preview),
-            s(this, "previewsList", () => o(this, p)),
+            s(this, "connectDragSource", (e, t, n) => o(this, y).call(this, "connectDragSource", e, t, n)),
+            s(this, "connectDragPreview", (e, t, n) => o(this, y).call(this, "connectDragPreview", e, t, n)),
+            s(this, "connectDropTarget", (e, t, n) => o(this, y).call(this, "connectDropTarget", e, t, n)),
+            s(this, "profile", () => o(this, p)[o(this, _)].instance.profile()),
+            s(this, "previewEnabled", () => o(this, p)[o(this, _)].preview),
+            s(this, "previewsList", () => o(this, f)),
             s(this, "backendsList", () => o(this, h)),
             i(this, E, {
                 writable: !0,
                 value: (e) => {
                     o(this, h).forEach((t) => {
-                        t.transition && e.addEventListener(t.transition.event, o(this, y));
+                        t.transition && e.addEventListener(t.transition.event, o(this, I));
                     });
                 },
             }),
-            i(this, b, {
+            i(this, A, {
                 writable: !0,
                 value: (e) => {
                     o(this, h).forEach((t) => {
-                        t.transition && e.removeEventListener(t.transition.event, o(this, y));
+                        t.transition && e.removeEventListener(t.transition.event, o(this, I));
                     });
                 },
             }),
-            i(this, y, {
+            i(this, I, {
                 writable: !0,
                 value: (e) => {
-                    let t = o(this, f);
+                    let t = o(this, _);
                     if (
                         (o(this, h).some(
                             (t) =>
-                                !!(t.id !== o(this, f) && t.transition && t.transition.check(e)) &&
-                                (c(this, f, t.id), !0),
+                                !!(t.id !== o(this, _) && t.transition && t.transition.check(e)) &&
+                                (u(this, _, t.id), !0),
                         ),
-                        o(this, f) !== t)
+                        o(this, _) !== t)
                     ) {
                         var n;
-                        o(this, _)[t].instance.teardown(),
+                        o(this, p)[t].instance.teardown(),
                             Object.keys(o(this, m)).forEach((e) => {
                                 let t = o(this, m)[e];
-                                t.unsubscribe(), (t.unsubscribe = o(this, O).call(this, t.func, ...t.args));
+                                t.unsubscribe(), (t.unsubscribe = o(this, T).call(this, t.func, ...t.args));
                             }),
-                            o(this, p).backendChanged(this);
-                        let r = o(this, _)[o(this, f)];
+                            o(this, f).backendChanged(this);
+                        let r = o(this, p)[o(this, _)];
                         if ((r.instance.setup(), r.skipDispatchOnTransition)) return;
                         let i = new e.constructor(e.type, e);
                         null == (n = e.target) || n.dispatchEvent(i);
                     }
                 },
             }),
-            i(this, O, {
-                writable: !0,
-                value: (e, t, n, r) => o(this, _)[o(this, f)].instance[e](t, n, r),
-            }),
-            i(this, A, {
+            i(this, T, { writable: !0, value: (e, t, n, r) => o(this, p)[o(this, _)].instance[e](t, n, r) }),
+            i(this, y, {
                 writable: !0,
                 value: (e, t, n, r) => {
                     let i = "".concat(e, "_").concat(t),
-                        a = o(this, O).call(this, e, t, n, r);
+                        a = o(this, T).call(this, e, t, n, r);
                     return (
-                        (o(this, m)[i] = {
-                            func: e,
-                            args: [t, n, r],
-                            unsubscribe: a,
-                        }),
+                        (o(this, m)[i] = { func: e, args: [t, n, r], unsubscribe: a }),
                         () => {
                             o(this, m)[i].unsubscribe(), delete o(this, m)[i];
                         }
@@ -208,15 +170,15 @@ class v {
             throw Error(
                 "You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx",
             );
-        c(this, p, new r.V()),
-            c(this, _, {}),
-            c(this, h, []),
+        u(this, f, new r.V()),
+            u(this, p, {}),
+            u(this, h, []),
             n.backends.forEach((n) => {
                 let r = o(this, g).call(this, e, t, n);
-                (o(this, _)[r.id] = r), o(this, h).push(r);
+                (o(this, p)[r.id] = r), o(this, h).push(r);
             }),
-            c(this, f, o(this, h)[0].id),
-            c(this, m, {});
+            u(this, _, o(this, h)[0].id),
+            u(this, m, {});
     }
 }
-s(v, "isSetUp", !1);
+s(S, "isSetUp", !1);

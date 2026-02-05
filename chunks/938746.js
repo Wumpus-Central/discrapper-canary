@@ -1,155 +1,123 @@
-s.d(e, {
-    A: () => h,
-}),
-    s(896048),
-    s(733351);
+"use strict";
+s.d(e, { A: () => h });
 var n = s(627968),
-    r = s(64700),
-    a = s(253018),
+    a = s(64700),
+    r = s(253018),
     i = s(311907),
-    l = s(562465),
-    c = s(397927),
+    c = s(562465),
+    l = s(397927),
     o = s(147087),
-    u = s(773669),
-    p = s(186306),
+    p = s(773669),
+    u = s(186306),
     g = s(323350),
     d = s(711371),
     b = s(652215),
     f = s(985018),
     x = s(623116);
-
 function h(t) {
     let e = (0, o.b)(),
         { selection: h } = t,
-        y =
-            null != h
-                ? (0, g.WO)(d.VW.richValue(t), {
-                      mode: "plain",
-                      range: h,
-                      preventEmojiSurrogates: !1,
-                  })
-                : "",
-        m = r.useCallback(
+        m = null != h ? (0, g.WO)(d.VW.richValue(t), { mode: "plain", range: h, preventEmojiSurrogates: !1 }) : "",
+        T = a.useCallback(
             (e) => {
-                a.rL.focus(t),
-                    p.o.withSingleEntry(t, () => {
+                r.rL.focus(t),
+                    u.o.withSingleEntry(t, () => {
                         t.deleteFragment(), t.insertText(e);
                     });
             },
             [t],
         ),
         S = (function (t, e) {
-            let [s, a] = r.useState(!1),
-                i = r.useCallback(async () => {
+            let [s, r] = a.useState(!1),
+                i = a.useCallback(async () => {
                     if (!s) {
-                        a(!0), (0, c.showToast)((0, c.createToast)(f.intl.string(f.t.p54KYY), c.ToastType.AI));
+                        r(!0), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.p54KYY), l.ToastType.AI));
                         try {
-                            let s = await l.Bo.post({
+                            let s = await c.Bo.post({
                                 url: b.Rsh.AI_FIX_GRAMMAR,
-                                body: {
-                                    content: t,
-                                },
+                                body: { content: t },
                                 rejectWithError: !1,
                             });
                             s.ok &&
                                 s.body &&
                                 (e(s.body.content),
-                                (0, c.showToast)((0, c.createToast)(f.intl.string(f.t.mxQpUY), c.ToastType.SUCCESS)));
+                                (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.mxQpUY), l.ToastType.SUCCESS)));
                         } finally {
-                            a(!1);
+                            r(!1);
                         }
                     }
                 }, [s, t, e]);
-            return (0, n.jsx)(c.Drp, {
+            return (0, n.jsx)(l.Drp, {
                 id: "fix-grammar",
                 label: s ? f.intl.string(f.t.p54KYY) : f.intl.string(f.t.fCpOHj),
-                icon: c.Dud,
+                icon: l.Dud,
                 action: i,
                 disabled: s,
             });
-        })(y, m),
-        T = (function (t, e) {
-            let [a, o] = r.useState(!1),
-                p = (0, i.bG)([u.default], () => u.default.locale),
-                g = r.useCallback(
+        })(m, T),
+        y = (function (t, e) {
+            let [r, o] = a.useState(!1),
+                u = (0, i.bG)([p.default], () => p.default.locale),
+                g = a.useCallback(
                     async (s, n) => {
-                        if (a) return;
-                        let r = null != s ? s : p;
+                        if (r) return;
+                        let a = s ?? u;
                         o(!0);
-                        let i = null != n ? n : r;
-                        (0, c.showToast)(
-                            (0, c.createToast)(
-                                f.intl.formatToPlainString(f.t.Znl8Z8, {
-                                    targetLanguage: i,
-                                }),
-                                c.ToastType.AI,
+                        let i = n ?? a;
+                        (0, l.showToast)(
+                            (0, l.createToast)(
+                                f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: i }),
+                                l.ToastType.AI,
                             ),
                         );
                         try {
-                            let s = await l.Bo.post({
+                            let s = await c.Bo.post({
                                 url: b.Rsh.AI_TRANSLATE,
-                                body: {
-                                    content: t,
-                                    locale: r,
-                                },
+                                body: { content: t, locale: a },
                                 rejectWithError: !1,
                             });
                             s.ok &&
                                 s.body &&
                                 (e(s.body.content),
-                                (0, c.showToast)(
-                                    (0, c.createToast)(
-                                        f.intl.formatToPlainString(f.t.FtVUqm, {
-                                            targetLanguage: i,
-                                        }),
-                                        c.ToastType.SUCCESS,
+                                (0, l.showToast)(
+                                    (0, l.createToast)(
+                                        f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: i }),
+                                        l.ToastType.SUCCESS,
                                     ),
                                 ));
                         } finally {
                             o(!1);
                         }
                     },
-                    [a, p, t, e],
+                    [r, u, t, e],
                 ),
                 d = (0, f.getAvailableLocales)().map((t) => {
                     let e;
                     try {
-                        e = s(579832)("./".concat(t.value, ".png"));
+                        e = s(579832)(`./${t.value}.png`);
                     } catch (t) {
                         e = s(432706);
                     }
                     return (0, n.jsx)(
-                        c.Drp,
+                        l.Drp,
                         {
-                            id: "translate-".concat(t.value),
+                            id: `translate-${t.value}`,
                             label: t.name,
-                            icon: () =>
-                                (0, n.jsx)("img", {
-                                    alt: "",
-                                    src: e,
-                                    className: x.M,
-                                }),
-                            leadingAccessory: {
-                                type: "image",
-                                src: e,
-                            },
+                            icon: () => (0, n.jsx)("img", { alt: "", src: e, className: x.M }),
+                            leadingAccessory: { type: "image", src: e },
                             action: () => g(t.value, t.name),
-                            disabled: a,
+                            disabled: r,
                         },
                         t.value,
                     );
                 });
-            return (0, n.jsx)(c.Drp, {
+            return (0, n.jsx)(l.Drp, {
                 id: "translate",
-                label: a ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
+                label: r ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
                 action: () => g(),
-                disabled: a,
+                disabled: r,
                 children: d,
             });
-        })(y, m);
-    return "" !== y.trim() && e
-        ? (0, n.jsxs)(n.Fragment, {
-              children: [S, T],
-          })
-        : null;
+        })(m, T);
+    return "" !== m.trim() && e ? (0, n.jsxs)(n.Fragment, { children: [S, y] }) : null;
 }

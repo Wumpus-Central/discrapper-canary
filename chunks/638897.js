@@ -1,173 +1,95 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => E });
 var r = n(64700),
     i = n(27867),
     a = n(311907),
     s = n(258363),
     o = n(861382),
     l = n(355622),
-    c = n(711371),
-    u = n(696451),
+    u = n(711371),
+    c = n(696451),
     d = n(576705),
-    f = n(351906),
-    p = n(287809),
-    _ = n(31498),
+    _ = n(351906),
+    f = n(287809),
+    p = n(31498),
     h = n(986719),
     m = n(652215),
     g = n(307731);
-
 function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function A(e, t, n) {
-    var E, y, A, v, S, I, T, C, N, R, w;
-    let { channel: P, type: D } = e,
-        [x, L] = r.useState(() => (0, _.Ur)()),
-        j = (0, i.A)(),
-        M = (0, a.bG)([u.Ay, p.default], () => {
-            var e, t;
-            let n = p.default.getCurrentUser();
-            return (
-                null !=
-                    (e =
-                        null != P.guild_id && null != n
-                            ? null == (t = u.Ay.getMember(P.guild_id, n.id))
-                                ? void 0
-                                : t.isPending
-                            : null) && e
-            );
+    let { channel: E, type: A } = e,
+        [I, T] = r.useState(() => (0, p.Ur)()),
+        y = (0, i.A)(),
+        S = (0, a.bG)([c.Ay, f.default], () => {
+            let e = f.default.getCurrentUser();
+            return (null != E.guild_id && null != e ? c.Ay.getMember(E.guild_id, e.id)?.isPending : null) ?? !1;
         }),
-        { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cf)(
-            [d.A, f.A],
+        { canMentionEveryone: v, hidePersonalInformation: C } = (0, a.cf)(
+            [d.A, _.A],
             () => ({
-                canMentionEveryone: P.isPrivate() || M || D === l.oU.RULES_INPUT || d.A.can(m.xBc.MENTION_EVERYONE, P),
-                hidePersonalInformation: f.A.hidePersonalInformation,
+                canMentionEveryone: E.isPrivate() || S || A === l.oU.RULES_INPUT || d.A.can(m.xBc.MENTION_EVERYONE, E),
+                hidePersonalInformation: _.A.hidePersonalInformation,
             }),
-            [P, D, M],
+            [E, A, S],
         ),
-        { activeCommand: G, activeCommandOption: V } = (0, a.cf)([o.A], () => ({
-            activeCommand: o.A.getActiveCommand(P.id),
-            activeCommandOption: o.A.getActiveOption(P.id),
+        { activeCommand: b, activeCommandOption: N } = (0, a.cf)([o.A], () => ({
+            activeCommand: o.A.getActiveCommand(E.id),
+            activeCommandOption: o.A.getActiveOption(E.id),
         })),
-        F = (0, h.A)({
+        R = (0, h.A)({
             navId: "channel-autocomplete",
             scrollerRef: n,
-            state: x,
-            onFocus: (e) => K.setSelectedIndex(e),
+            state: I,
+            onFocus: (e) => x.setSelectedIndex(e),
         }),
-        B = null == (S = e.editorRef.current) ? void 0 : S.getCurrentWord(),
-        H = null == (I = e.editorRef.current) ? void 0 : I.getSlateEditor(),
-        Y = null;
-    null != H && (Y = null != (R = null == (w = c.VW.getSelectedParentOfType(H, _.mk)) ? void 0 : w[0]) ? R : null);
-    let W = O(b({}, e), {
-            navigator: F,
-            activeCommand: G,
-            activeCommandOption: V,
-            activeInlineAutocompleteInput: Y,
-            canMentionUsers: null != (E = null == (T = D.users) ? void 0 : T.allowMentioning) && E,
-            canMentionEveryone: k,
-            hidePersonalInformation: U,
-            hideMentionDescription: D === l.oU.RULES_INPUT,
-            emojiIntention: D === l.oU.RULES_INPUT ? g.b_.COMMUNITY_CONTENT : g.b_.CHAT,
-            currentWord: null != (y = null == B ? void 0 : B.word) ? y : "",
-            currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            currentFullWord: null != (A = null == B ? void 0 : B.fullWord) ? A : "",
+        O = e.editorRef.current?.getCurrentWord(),
+        D = e.editorRef.current?.getSlateEditor(),
+        L = null;
+    null != D && (L = u.VW.getSelectedParentOfType(D, p.mk)?.[0] ?? null);
+    let w = {
+            ...e,
+            navigator: R,
+            activeCommand: b,
+            activeCommandOption: N,
+            activeInlineAutocompleteInput: L,
+            canMentionUsers: A.users?.allowMentioning ?? !1,
+            canMentionEveryone: v,
+            hidePersonalInformation: C,
+            hideMentionDescription: A === l.oU.RULES_INPUT,
+            emojiIntention: A === l.oU.RULES_INPUT ? g.b_.COMMUNITY_CONTENT : g.b_.CHAT,
+            currentWord: O?.word ?? "",
+            currentWordIsAtStart: O?.isAtStart === !0,
+            currentFullWord: O?.fullWord ?? "",
             optionText:
-                null != V
-                    ? (0, s.AA)(
-                          {
-                              [V.name]:
-                                  null !=
-                                  (v = null == (C = e.editorRef.current) ? void 0 : C.getCurrentCommandOptionValue())
-                                      ? v
-                                      : [],
-                          },
-                          V.name,
-                      )
+                null != N
+                    ? (0, s.getString)({ [N.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, N.name)
                     : "",
-        }),
-        [K] = r.useState(() => new _.Ay(W));
+        },
+        [x] = r.useState(() => new p.Ay(w));
     return (
         r.useEffect(() => {
-            K.updateProps(W);
+            x.updateProps(w);
         }),
-        r.useImperativeHandle(t, () => K, [K]),
+        r.useImperativeHandle(t, () => x, [x]),
         r.useEffect(() => {
-            let e = (e) => L(e);
+            let e = (e) => T(e);
             return (
-                K.on("change", e),
-                K.on("update", j),
+                x.on("change", e),
+                x.on("update", y),
                 () => {
-                    K.off("change", e), K.off("update", j);
+                    x.off("change", e), x.off("update", y);
                 }
             );
-        }, [j, K]),
+        }, [y, x]),
         r.useEffect(() => {
-            var e;
-            let t = null == (e = x.query) ? void 0 : e.typeInfo.stores;
-            if (null != t) {
-                let e = () => K.queryResults();
-                for (let n of t) n.addChangeListener(e);
+            let e = I.query?.typeInfo.stores;
+            if (null != e) {
+                let t = () => x.queryResults();
+                for (let n of e) n.addChangeListener(t);
                 return () => {
-                    for (let n of t) n.removeChangeListener(e);
+                    for (let n of e) n.removeChangeListener(t);
                 };
             }
-        }, [K, null == (N = x.query) ? void 0 : N.typeInfo]),
-        [x, K, F]
+        }, [x, I.query?.typeInfo]),
+        [I, x, R]
     );
 }

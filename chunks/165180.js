@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     button: "button_a22cb0",
     buttonChildrenWrapper: "buttonChildrenWrapper_a22cb0",

@@ -1,9 +1,6 @@
-n.d(t, {
-    j: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { j: () => i });
 var r = n(317097);
-
 function i(e) {
     let { backgroundColor: t, colors: n } = e,
         [i, a] = n,

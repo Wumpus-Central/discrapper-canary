@@ -1,77 +1,41 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r,
-    i = n(627968),
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968),
     s = n(64700),
-    l = n(218681),
-    a = n(92674),
-    o = n(397927);
-let c = null != (r = window.ResizeObserver) ? r : l.t;
-
-function u(e) {
-    let { show: t, children: n, top: r = 0, bottom: l = 0 } = e,
-        { ref: u, height: d } = (() => {
+    r = n(218681),
+    l = n(92674),
+    a = n(397927);
+let o = window.ResizeObserver ?? r.t;
+function c(e) {
+    let { show: t, children: n, top: r = 0, bottom: c = 0 } = e,
+        { ref: d, height: u } = (() => {
             let e = s.useRef(null),
                 [t, n] = s.useState(0),
-                r = s.useMemo(
+                i = s.useMemo(
                     () =>
-                        new c((e) => {
+                        new o((e) => {
                             let [t] = e;
                             return n(t.contentRect.height);
                         }),
                     [],
                 );
             return (
-                s.useLayoutEffect(() => (null != e.current && r.observe(e.current), () => r.disconnect()), [r]),
-                {
-                    ref: e,
-                    height: t,
-                }
+                s.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]),
+                { ref: e, height: t }
             );
         })(),
-        h = (0, o.zhh)({
-            from: {
-                height: 0,
-                paddingBottom: "0px",
-                marginTop: "0px",
-            },
-            to: {
-                height: t ? d : 0,
-                paddingBottom: t ? "".concat(l, "px") : "0px",
-                marginTop: t ? "".concat(r, "px") : "0px",
-            },
-            config: {
-                tension: 170,
-                friction: 26,
-            },
+        h = (0, a.zhh)({
+            from: { height: 0, paddingBottom: "0px", marginTop: "0px" },
+            to: { height: t ? u : 0, paddingBottom: t ? `${c}px` : "0px", marginTop: t ? `${r}px` : "0px" },
+            config: { tension: 170, friction: 26 },
         }),
-        p = (0, o.zhh)({
-            from: {
-                opacity: 0,
-            },
-            to: {
-                opacity: +!!t,
-            },
-            config: {
-                duration: 200,
-                easing: t ? (e) => e ** 4 : (e) => e * (2 - e),
-            },
+        _ = (0, a.zhh)({
+            from: { opacity: 0 },
+            to: { opacity: +!!t },
+            config: { duration: 200, easing: t ? (e) => e ** 4 : (e) => e * (2 - e) },
         });
-    return (0, i.jsx)(a.animated.div, {
-        style: {
-            overflow: "hidden",
-            height: h.height,
-            paddingBottom: h.paddingBottom,
-            marginTop: h.marginTop,
-        },
-        children: (0, i.jsx)(a.animated.div, {
-            style: {
-                opacity: p.opacity,
-            },
-            ref: u,
-            children: n,
-        }),
+    return (0, i.jsx)(l.animated.div, {
+        style: { overflow: "hidden", height: h.height, paddingBottom: h.paddingBottom, marginTop: h.marginTop },
+        children: (0, i.jsx)(l.animated.div, { style: { opacity: _.opacity }, ref: d, children: n }),
     });
 }

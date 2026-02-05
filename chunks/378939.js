@@ -1,47 +1,26 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(562465),
     i = n(73153),
     a = n(652215);
 let s = {
     setGuildFilter(e) {
         let { guildFilter: t, roleFilter: n, everyoneFilter: r } = e;
-        i.h.dispatch({
-            type: "SET_RECENT_MENTIONS_FILTER",
-            guildFilter: t,
-            roleFilter: n,
-            everyoneFilter: r,
-        });
+        i.h.dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter: t, roleFilter: n, everyoneFilter: r });
     },
     clearMentions() {
-        i.h.dispatch({
-            type: "CLEAR_MENTIONS",
-        });
+        i.h.dispatch({ type: "CLEAR_MENTIONS" });
     },
     truncateMentions(e) {
-        i.h.dispatch({
-            type: "TRUNCATE_MENTIONS",
-            size: e,
-        });
+        i.h.dispatch({ type: "TRUNCATE_MENTIONS", size: e });
     },
     fetchRecentMentions(e) {
-        let { before: t, limit: n = a.Ue3, guildId: s = null, roles: o = !0, everyone: l = !0, feature: c } = e;
+        let { before: t, limit: n = a.Ue3, guildId: s = null, roles: o = !0, everyone: l = !0, feature: u } = e;
         return (
-            i.h.dispatch({
-                type: "LOAD_RECENT_MENTIONS",
-                guildId: s,
-            }),
+            i.h.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId: s }),
             r.Bo.get({
                 url: a.Rsh.MENTIONS,
-                query: {
-                    before: t,
-                    limit: n,
-                    guild_id: s,
-                    roles: o,
-                    everyone: l,
-                    feature: c,
-                },
+                query: { before: t, limit: n, guild_id: s, roles: o, everyone: l, feature: u },
                 retries: 2,
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -56,28 +35,16 @@ let s = {
                     });
                 },
                 () => {
-                    i.h.dispatch({
-                        type: "LOAD_RECENT_MENTIONS_FAILURE",
-                    });
+                    i.h.dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
                 },
             )
         );
     },
     deleteRecentMention(e) {
-        r.Bo.del({
-            url: a.Rsh.MENTIONS_MESSAGE_ID(e),
-            retries: 2,
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        }),
-            i.h.dispatch({
-                type: "RECENT_MENTION_DELETE",
-                id: e,
-            });
+        r.Bo.del({ url: a.Rsh.MENTIONS_MESSAGE_ID(e), retries: 2, oldFormErrors: !0, rejectWithError: !0 }),
+            i.h.dispatch({ type: "RECENT_MENTION_DELETE", id: e });
     },
     setRecentMentionsStale() {
-        i.h.dispatch({
-            type: "SET_RECENT_MENTIONS_STALE",
-        });
+        i.h.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
     },
 };

@@ -349,84 +349,38 @@ e.exports = function (e) {
             "wishart",
             "wishart_cholesky",
         ],
-        o = e.COMMENT(/\/\*/, /\*\//, {
-            relevance: 0,
-            contains: [
-                {
-                    scope: "doctag",
-                    match: /@(return|param)/,
-                },
-            ],
-        }),
+        o = e.COMMENT(/\/\*/, /\*\//, { relevance: 0, contains: [{ scope: "doctag", match: /@(return|param)/ }] }),
         l = {
             scope: "meta",
             begin: /#include\b/,
             end: /$/,
-            contains: [
-                {
-                    match: /[a-z][a-z-._]+/,
-                    scope: "string",
-                },
-                e.C_LINE_COMMENT_MODE,
-            ],
+            contains: [{ match: /[a-z][a-z-._]+/, scope: "string" }, e.C_LINE_COMMENT_MODE],
         },
-        c = ["lower", "upper", "offset", "multiplier"];
+        u = ["lower", "upper", "offset", "multiplier"];
     return {
         name: "Stan",
         aliases: ["stanfuncs"],
-        keywords: {
-            $pattern: e.IDENT_RE,
-            title: n,
-            type: i,
-            keyword: r,
-            built_in: a,
-        },
+        keywords: { $pattern: e.IDENT_RE, title: n, type: i, keyword: r, built_in: a },
         contains: [
             e.C_LINE_COMMENT_MODE,
             l,
             e.HASH_COMMENT_MODE,
             o,
-            {
-                scope: "built_in",
-                match: /\s(pi|e|sqrt2|log2|log10)(?=\()/,
-                relevance: 0,
-            },
-            {
-                match: t.concat(/[<,]\s*/, t.either(...c), /\s*=/),
-                keywords: c,
-            },
-            {
-                scope: "keyword",
-                match: /\btarget(?=\s*\+=)/,
-            },
-            {
-                match: [/~\s*/, t.either(...s), /(?:\(\))/, /\s*T(?=\s*\[)/],
-                scope: {
-                    2: "built_in",
-                    4: "keyword",
-                },
-            },
+            { scope: "built_in", match: /\s(pi|e|sqrt2|log2|log10)(?=\()/, relevance: 0 },
+            { match: t.concat(/[<,]\s*/, t.either(...u), /\s*=/), keywords: u },
+            { scope: "keyword", match: /\btarget(?=\s*\+=)/ },
+            { match: [/~\s*/, t.either(...s), /(?:\(\))/, /\s*T(?=\s*\[)/], scope: { 2: "built_in", 4: "keyword" } },
             {
                 scope: "built_in",
                 keywords: s,
                 begin: t.concat(/\w*/, t.either(...s), /(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/),
             },
-            {
-                begin: [/~/, /\s*/, t.concat(t.either(...s), /(?=\s*[\(.*\)])/)],
-                scope: {
-                    3: "built_in",
-                },
-            },
+            { begin: [/~/, /\s*/, t.concat(t.either(...s), /(?=\s*[\(.*\)])/)], scope: { 3: "built_in" } },
             {
                 begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...s) + ")\b)"],
-                scope: {
-                    2: "title.function",
-                },
+                scope: { 2: "title.function" },
             },
-            {
-                scope: "title.function",
-                begin: /\w*(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/,
-            },
+            { scope: "title.function", begin: /\w*(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/ },
             {
                 scope: "number",
                 match: t.concat(
@@ -435,11 +389,7 @@ e.exports = function (e) {
                 ),
                 relevance: 0,
             },
-            {
-                scope: "string",
-                begin: /"/,
-                end: /"/,
-            },
+            { scope: "string", begin: /"/, end: /"/ },
         ],
     };
 };

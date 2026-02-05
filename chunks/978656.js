@@ -1,16 +1,28 @@
-n.d(t, {
-    s: () => u,
-}),
-    n(734808),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { s: () => c });
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(324281),
     o = n(414525),
     l = n(453360);
-class c extends s.G {
+class u extends s.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", [
+            { no: 1, name: "header", kind: "scalar", T: 9 },
+            { no: 2, name: "desktop_body", kind: "scalar", T: 9 },
+            { no: 3, name: "mobile_body", kind: "scalar", T: 9 },
+            { no: 4, name: "avatar_asset", kind: "message", T: () => l.i },
+            { no: 5, name: "banner_asset_url", kind: "scalar", T: 9 },
+            { no: 6, name: "background_asset_url", kind: "scalar", T: 9 },
+            { no: 7, name: "card_asset_url", kind: "scalar", T: 9 },
+            { no: 8, name: "gradient", kind: "message", T: () => o.H },
+            { no: 9, name: "banner_asset", kind: "message", T: () => l.i },
+            { no: 10, name: "background_asset", kind: "message", T: () => l.i },
+            { no: 11, name: "card_asset", kind: "message", T: () => l.i },
+            { no: 12, name: "mobile_banner_asset", kind: "message", T: () => l.i },
+        ]);
+    }
     create(e) {
         let t = {
             header: "",
@@ -21,16 +33,13 @@ class c extends s.G {
             cardAssetUrl: "",
         };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -74,11 +83,9 @@ class c extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
-                    let c = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, c);
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let u = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, u);
             }
         }
         return a;
@@ -101,81 +108,5 @@ class c extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", [
-            {
-                no: 1,
-                name: "header",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 2,
-                name: "desktop_body",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 3,
-                name: "mobile_body",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 4,
-                name: "avatar_asset",
-                kind: "message",
-                T: () => l.i,
-            },
-            {
-                no: 5,
-                name: "banner_asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 6,
-                name: "background_asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 7,
-                name: "card_asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 8,
-                name: "gradient",
-                kind: "message",
-                T: () => o.H,
-            },
-            {
-                no: 9,
-                name: "banner_asset",
-                kind: "message",
-                T: () => l.i,
-            },
-            {
-                no: 10,
-                name: "background_asset",
-                kind: "message",
-                T: () => l.i,
-            },
-            {
-                no: 11,
-                name: "card_asset",
-                kind: "message",
-                T: () => l.i,
-            },
-            {
-                no: 12,
-                name: "mobile_banner_asset",
-                kind: "message",
-                T: () => l.i,
-            },
-        ]);
-    }
 }
-let u = new c();
+let c = new u();

@@ -1,3 +1,1 @@
-e.exports = {
-    _: "loadingWrapper__5a143",
-};
+e.exports = { _: "loadingWrapper__5a143" };

@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(205662),
     a = r(26802),
@@ -18,7 +17,6 @@ var n = r(64700),
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -26,7 +24,6 @@ function l(e, t) {
 let s = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, i = Array(o), s = 0; s < o; s++) i[s] = arguments[s];
@@ -49,12 +46,7 @@ let s = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         i(t, [
@@ -91,10 +83,7 @@ let s = (function (e) {
                                         height: "100%",
                                         borderRadius: this.props.radius,
                                     },
-                                    pointer: {
-                                        position: "absolute",
-                                        left: (100 * this.props.hsl.h) / 360 + "%",
-                                    },
+                                    pointer: { position: "absolute", left: (100 * this.props.hsl.h) / 360 + "%" },
                                     slider: {
                                         marginTop: "1px",
                                         width: "4px",
@@ -106,21 +95,14 @@ let s = (function (e) {
                                     },
                                 },
                                 vertical: {
-                                    pointer: {
-                                        left: "0px",
-                                        top: -((100 * this.props.hsl.h) / 360) + 100 + "%",
-                                    },
+                                    pointer: { left: "0px", top: -((100 * this.props.hsl.h) / 360) + 100 + "%" },
                                 },
                             },
-                            {
-                                vertical: "vertical" === r,
-                            },
+                            { vertical: "vertical" === r },
                         );
                     return n.createElement(
                         "div",
-                        {
-                            style: a.hue,
-                        },
+                        { style: a.hue },
                         n.createElement(
                             "div",
                             {
@@ -140,14 +122,10 @@ let s = (function (e) {
                             ),
                             n.createElement(
                                 "div",
-                                {
-                                    style: a.pointer,
-                                },
+                                { style: a.pointer },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", {
-                                          style: a.slider,
-                                      }),
+                                    : n.createElement("div", { style: a.slider }),
                             ),
                         ),
                     );

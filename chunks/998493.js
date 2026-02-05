@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, {
     CV: () => a,
     E9: () => m,
@@ -5,9 +6,9 @@ n.d(t, {
     Pl: () => h,
     eB: () => s,
     fp: () => d,
-    nj: () => c,
-    zL: () => f,
-    zp: () => u,
+    nj: () => u,
+    zL: () => _,
+    zp: () => c,
 });
 var r = n(476858),
     i = n(364242);
@@ -123,9 +124,8 @@ let a = {
         jahren: "year",
         jahres: "year",
     },
-    c = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`;
-
-function u(e) {
+    u = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`;
+function c(e) {
     let t = e.toLowerCase();
     if (void 0 !== o[t]) return o[t];
     if ("ein" === t || "einer" === t || "einem" === t || "einen" === t || "eine" === t) return 1;
@@ -137,26 +137,23 @@ function u(e) {
 }
 let d =
     "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
-
-function f(e) {
+function _(e) {
     if (/v/i.test(e)) return -parseInt(e.replace(/[^0-9]+/gi, ""));
     if (/n/i.test(e) || /z/i.test(e)) return parseInt(e.replace(/[^0-9]+/gi, ""));
     let t = parseInt(e);
     return (0, i.D)(t);
 }
-let p = `(${c})\\s{0,5}(${(0, r.uJ)(l)})\\s{0,5}`,
-    _ = RegExp(p, "i"),
-    h = (0, r.mb)("", p);
-
+let f = `(${u})\\s{0,5}(${(0, r.uJ)(l)})\\s{0,5}`,
+    p = RegExp(f, "i"),
+    h = (0, r.mb)("", f);
 function m(e) {
     let t = {},
         n = e,
-        r = _.exec(n);
-    for (; r; ) g(t, r), (n = n.substring(r[0].length)), (r = _.exec(n));
+        r = p.exec(n);
+    for (; r; ) g(t, r), (n = n.substring(r[0].length)), (r = p.exec(n));
     return t;
 }
-
 function g(e, t) {
-    let n = u(t[1]);
+    let n = c(t[1]);
     e[l[t[2].toLowerCase()]] = n;
 }

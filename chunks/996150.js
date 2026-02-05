@@ -1,3 +1,1 @@
-e.exports = {
-    V: "multiLineTitleHack__53030",
-};
+e.exports = { V: "multiLineTitleHack__53030" };

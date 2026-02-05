@@ -1,3 +1,2 @@
-e.exports = {
-    q: "footer__8e8b5",
-};
+"use strict";
+e.exports = { q: "footer__8e8b5" };

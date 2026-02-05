@@ -1,6 +1,5 @@
-n.d(t, {
-    R: () => r,
-});
+"use strict";
+n.d(t, { R: () => r });
 var r = (function (e) {
     return (
         (e[(e.DESKTOP_SHOP_BUTTON = 0)] = "DESKTOP_SHOP_BUTTON"),

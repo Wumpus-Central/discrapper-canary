@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => l,
-});
+"use strict";
+r.d(t, { A: () => l });
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -12,28 +11,10 @@ let l = function (e) {
         s = e.hex,
         u = e.hsv,
         c = function (e, r) {
-            if (e.hex)
-                a.qt(e.hex) &&
-                    t(
-                        {
-                            hex: e.hex,
-                            source: "hex",
-                        },
-                        r,
-                    );
+            if (e.hex) a.qt(e.hex) && t({ hex: e.hex, source: "hex" }, r);
             else if (e.rgb) {
                 var n = e.rgb.split(",");
-                a.Zk(e.rgb, "rgb") &&
-                    t(
-                        {
-                            r: n[0],
-                            g: n[1],
-                            b: n[2],
-                            a: 1,
-                            source: "rgb",
-                        },
-                        r,
-                    );
+                a.Zk(e.rgb, "rgb") && t({ r: n[0], g: n[1], b: n[2], a: 1, source: "rgb" }, r);
             } else if (e.hsv) {
                 var o = e.hsv.split(",");
                 a.Zk(e.hsv, "hsv") &&
@@ -41,15 +22,7 @@ let l = function (e) {
                     (o[1] = o[1].replace("%", "")),
                     (o[0] = o[0].replace("\xb0", "")),
                     1 == o[1] ? (o[1] = 0.01) : 1 == o[2] && (o[2] = 0.01),
-                    t(
-                        {
-                            h: Number(o[0]),
-                            s: Number(o[1]),
-                            v: Number(o[2]),
-                            source: "hsv",
-                        },
-                        r,
-                    ));
+                    t({ h: Number(o[0]), s: Number(o[1]), v: Number(o[2]), source: "hsv" }, r));
             } else if (e.hsl) {
                 var i = e.hsl.split(",");
                 a.Zk(e.hsl, "hsl") &&
@@ -57,36 +30,15 @@ let l = function (e) {
                     (i[1] = i[1].replace("%", "")),
                     (i[0] = i[0].replace("\xb0", "")),
                     1 == h[1] ? (h[1] = 0.01) : 1 == h[2] && (h[2] = 0.01),
-                    t(
-                        {
-                            h: Number(i[0]),
-                            s: Number(i[1]),
-                            v: Number(i[2]),
-                            source: "hsl",
-                        },
-                        r,
-                    ));
+                    t({ h: Number(i[0]), s: Number(i[1]), v: Number(i[2]), source: "hsl" }, r));
             }
         },
         p = (0, o.default)({
             default: {
-                wrap: {
-                    display: "flex",
-                    height: "100px",
-                    marginTop: "4px",
-                },
-                fields: {
-                    width: "100%",
-                },
-                column: {
-                    paddingTop: "10px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                },
-                double: {
-                    padding: "0px 4.4px",
-                    boxSizing: "border-box",
-                },
+                wrap: { display: "flex", height: "100px", marginTop: "4px" },
+                fields: { width: "100%" },
+                column: { paddingTop: "10px", display: "flex", justifyContent: "space-between" },
+                double: { padding: "0px 4.4px", boxSizing: "border-box" },
                 input: {
                     width: "100%",
                     height: "38px",
@@ -139,10 +91,7 @@ let l = function (e) {
                     top: "-6px",
                     fontFamily: "Roboto,Arial,sans-serif",
                 },
-                single: {
-                    flexGrow: "1",
-                    margin: "0px 4.4px",
-                },
+                single: { flexGrow: "1", margin: "0px 4.4px" },
             },
         }),
         d = r.r + ", " + r.g + ", " + r.b,
@@ -150,25 +99,15 @@ let l = function (e) {
         h = Math.round(u.h) + "\xb0, " + Math.round(100 * u.s) + "%, " + Math.round(100 * u.v) + "%";
     return n.createElement(
         "div",
-        {
-            style: p.wrap,
-            className: "flexbox-fix",
-        },
+        { style: p.wrap, className: "flexbox-fix" },
         n.createElement(
             "div",
-            {
-                style: p.fields,
-            },
+            { style: p.fields },
             n.createElement(
                 "div",
-                {
-                    style: p.double,
-                },
+                { style: p.double },
                 n.createElement(i.jc, {
-                    style: {
-                        input: p.input,
-                        label: p.label,
-                    },
+                    style: { input: p.input, label: p.label },
                     label: "hex",
                     value: s,
                     onChange: c,
@@ -176,19 +115,12 @@ let l = function (e) {
             ),
             n.createElement(
                 "div",
-                {
-                    style: p.column,
-                },
+                { style: p.column },
                 n.createElement(
                     "div",
-                    {
-                        style: p.single,
-                    },
+                    { style: p.single },
                     n.createElement(i.jc, {
-                        style: {
-                            input: p.input2,
-                            label: p.label2,
-                        },
+                        style: { input: p.input2, label: p.label2 },
                         label: "rgb",
                         value: d,
                         onChange: c,
@@ -196,14 +128,9 @@ let l = function (e) {
                 ),
                 n.createElement(
                     "div",
-                    {
-                        style: p.single,
-                    },
+                    { style: p.single },
                     n.createElement(i.jc, {
-                        style: {
-                            input: p.input2,
-                            label: p.label2,
-                        },
+                        style: { input: p.input2, label: p.label2 },
                         label: "hsv",
                         value: h,
                         onChange: c,
@@ -211,14 +138,9 @@ let l = function (e) {
                 ),
                 n.createElement(
                     "div",
-                    {
-                        style: p.single,
-                    },
+                    { style: p.single },
                     n.createElement(i.jc, {
-                        style: {
-                            input: p.input2,
-                            label: p.label2,
-                        },
+                        style: { input: p.input2, label: p.label2 },
                         label: "hsl",
                         value: f,
                         onChange: c,

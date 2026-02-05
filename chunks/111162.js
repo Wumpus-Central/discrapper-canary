@@ -1,76 +1,36 @@
-n.r(t),
-    n.d(t, {
-        default: () => I,
-    }),
-    n(938796);
-var r,
-    i = n(158390),
-    a = n(247775),
-    s = n(311907),
-    o = n(562465),
-    l = n(506774),
-    c = n(73153),
+"use strict";
+n.r(t), n.d(t, { default: () => y }), n(938796);
+var r = n(158390),
+    i = n(247775),
+    a = n(311907),
+    s = n(562465),
+    o = n(506774),
+    l = n(73153),
     u = n(926919),
-    d = n(927813),
-    f = n(728458),
-    p = n(652215);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let m = (() => {
-        let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
+    c = n(927813),
+    d = n(728458),
+    _ = n(652215);
+let f = (() => {
+        let e = `${location.protocol}//${location.host}/__development/source_maps`,
             t = null,
-            n = new i.A(5 * d.A.Millis.SECOND, +d.A.Millis.MINUTE, !0),
-            r = () => {
-                o.Bo.put({
+            n = new r.A(5 * c.A.Millis.SECOND, +c.A.Millis.MINUTE, !0),
+            a = () => {
+                s.Bo.put({
                     url: e,
-                    headers: {
-                        Authorization: a.getToken(),
-                    },
+                    headers: { Authorization: i.getToken() },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(
                     (e) => {
                         401 === e.status || 403 === e.status
-                            ? ((t = null),
-                              (0, u.x)({
-                                  sourceMapsEnabled: !1,
-                              }))
+                            ? ((t = null), (0, u.x)({ sourceMapsEnabled: !1 }))
                             : 200 !== e.status
-                              ? (t = setTimeout(r, n.fail()))
+                              ? (t = setTimeout(a, n.fail()))
                               : (n.succeed(),
-                                (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * d.A.Millis.SECOND * 0.75)));
+                                (t = setTimeout(a, e.body.sourceMapCookieTTLSeconds * c.A.Millis.SECOND * 0.75)));
                     },
                     () => {
-                        t = setTimeout(r, n.fail());
+                        t = setTimeout(a, n.fail());
                     },
                 );
             };
@@ -78,22 +38,20 @@ let m = (() => {
             set: (n) => {
                 n !== (null != t) &&
                     (n
-                        ? (t = setTimeout(r, 0))
+                        ? (t = setTimeout(a, 0))
                         : (clearTimeout(t),
                           (t = null),
-                          o.Bo.del({
+                          s.Bo.del({
                               url: e,
-                              headers: {
-                                  Authorization: a.getToken(),
-                              },
+                              headers: { Authorization: i.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0,
                           })));
             },
         };
     })(),
-    g = "DeveloperOptionsStore",
-    E = {
+    p = "DeveloperOptionsStore",
+    h = {
         trace: !1,
         canary: !1,
         logGatewayEvents: !1,
@@ -115,107 +73,95 @@ let m = (() => {
         personaForceIdVerificationFail: !1,
         personaDisableModularPilotTestTemplate: !1,
     },
-    b = h({}, E);
-
-function y(e) {
-    (b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.w.set(g, b);
+    m = { ...h };
+function g(e) {
+    (m = { ...h, ...m, ...e }), f.set(m.sourceMapsEnabled), o.w.set(p, m);
 }
-
-function O(e) {
+function E(e) {
     let { settings: t } = e;
-    y(t);
+    g(t);
 }
-
 function A(e) {
-    y(E);
+    g(h);
 }
-
-function v(e) {
-    var t;
-    let n = ((null != (t = e.user.flags) ? t : 0) & p.nhx.STAFF) === p.nhx.STAFF,
-        r = n || null != e.user.personal_connection_id;
-    n && m.set(b.sourceMapsEnabled),
-        f.A.setTags({
-            isStaff: r.toString(),
-        });
+function I(e) {
+    let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
+        n = t || null != e.user.personal_connection_id;
+    t && f.set(m.sourceMapsEnabled), d.A.setTags({ isStaff: n.toString() });
 }
-class S extends (r = s.Ay.Store) {
+class T extends a.Ay.Store {
+    static displayName = "DeveloperOptionsStore";
     initialize() {
-        let e = l.w.get(g);
-        null != e && (b = h({}, E, e));
+        let e = o.w.get(p);
+        null != e && (m = { ...h, ...e });
     }
     get isTracingRequests() {
-        return b.trace;
+        return m.trace;
     }
     get isForcedCanary() {
-        return b.canary;
+        return m.canary;
     }
     get isLoggingGatewayEvents() {
-        return b.logGatewayEvents;
+        return m.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return b.logOverlayEvents;
+        return m.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return b.logAnalyticsEvents;
+        return m.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return b.axeEnabled;
+        return m.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return b.cssDebuggingEnabled;
+        return m.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return b.layoutDebuggingEnabled;
+        return m.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return b.sourceMapsEnabled;
+        return m.sourceMapsEnabled;
     }
     get isBugReporterEnabled() {
-        return b.bugReporterEnabled;
+        return m.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return b.idleStatusIndicatorEnabled;
+        return m.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return b.onlyShowPreviewAppCollections;
+        return m.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return b.disableAppCollectionsCache;
+        return m.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return b.isStreamInfoOverlayEnabled;
+        return m.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return b.preventPopoutClose;
+        return m.preventPopoutClose;
     }
     get logKeyboardMismatches() {
-        return b.logKeyboardMismatches;
+        return m.logKeyboardMismatches;
     }
     get alertStartupMetrics() {
-        return b.alertStartupMetrics;
+        return m.alertStartupMetrics;
     }
     get personaForceFaeFail() {
-        return b.personaForceFaeFail;
+        return m.personaForceFaeFail;
     }
     get personaForceIdVerificationFail() {
-        return b.personaForceIdVerificationFail;
+        return m.personaForceIdVerificationFail;
     }
     get personaDisableModularPilotTestTemplate() {
-        return b.personaDisableModularPilotTestTemplate;
+        return m.personaDisableModularPilotTestTemplate;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(b).map((e) => b[e]),
-            Object.keys(b)
-                .filter((e) => b[e])
+            Object.keys(m).map((e) => m[e]),
+            Object.keys(m)
+                .filter((e) => m[e])
                 .join(",")
         );
     }
 }
-_(S, "displayName", "DeveloperOptionsStore");
-let I = new S(c.h, {
-    LOGOUT: A,
-    CONNECTION_OPEN: v,
-    DEVELOPER_OPTIONS_UPDATE_SETTINGS: O,
-});
+let y = new T(l.h, { LOGOUT: A, CONNECTION_OPEN: I, DEVELOPER_OPTIONS_UPDATE_SETTINGS: E });

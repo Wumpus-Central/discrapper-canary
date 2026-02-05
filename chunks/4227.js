@@ -1,71 +1,55 @@
+"use strict";
 let r, i, a;
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var s,
-    o = n(735438),
-    l = n(311907),
-    c = n(73153);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = new Map(),
-    f = d,
-    p = !1,
+n.d(t, { A: () => T });
+var s = n(735438),
+    o = n(311907),
+    l = n(73153);
+let u = new Map(),
+    c = u,
+    d = !1,
     _ = !1,
-    h = (e) => {
-        (p = !0), (i = void 0);
+    f = (e) => {
+        (d = !0), (i = void 0);
     },
-    m = (e) => {
+    p = (e) => {
         let { error: t } = e;
-        (f = d), (p = !1), (i = t), (_ = !0);
+        (c = u), (d = !1), (i = t), (_ = !0);
     },
-    g = (e) => {
+    h = (e) => {
         0 === e.purchases.length
-            ? (f = d)
-            : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))),
+            ? (c = u)
+            : (0, s.isEqual)([...c.values()], e.purchases) || (c = new Map(e.purchases.map((e) => [e.skuId, e]))),
             (_ = !0),
-            (p = !1),
+            (d = !1),
             (i = void 0);
     },
-    E = (e) => {
+    m = (e) => {
         (r = e.skuId), (a = void 0);
     },
-    b = (e) => {
+    g = (e) => {
         null == e.purchases || 0 === e.purchases.length
-            ? (f = d)
-            : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))),
+            ? (c = u)
+            : (0, s.isEqual)([...c.values()], e.purchases) || (c = new Map(e.purchases.map((e) => [e.skuId, e]))),
             (r = void 0),
             (a = void 0);
     },
-    y = (e) => {
+    E = (e) => {
         let { error: t, skuId: n } = e;
         (r = n), (a = t);
     },
-    O = (e) => {
-        (f = d), (p = !1), (r = void 0), (i = void 0), (a = void 0), (_ = !1);
+    A = (e) => {
+        (c = u), (d = !1), (r = void 0), (i = void 0), (a = void 0), (_ = !1);
     };
-class A extends (s = l.Ay.Store) {
+class I extends o.Ay.Store {
+    static displayName = "CollectiblesPurchaseStore";
     get isFetching() {
-        return p;
+        return d;
     }
     get isClaiming() {
         return r;
     }
     get purchases() {
-        return f;
+        return c;
     }
     get fetchError() {
         return i;
@@ -77,19 +61,18 @@ class A extends (s = l.Ay.Store) {
         return _;
     }
     getPurchase(e) {
-        return null != e ? f.get(e) : void 0;
+        return null != e ? c.get(e) : void 0;
     }
     getPurchases(e) {
-        return e.map((e) => f.get(e)).filter((e) => null != e);
+        return e.map((e) => c.get(e)).filter((e) => null != e);
     }
 }
-u(A, "displayName", "CollectiblesPurchaseStore");
-let v = new A(c.h, {
-    COLLECTIBLES_PURCHASES_FETCH: h,
-    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
-    COLLECTIBLES_PURCHASES_FETCH_FAILURE: m,
-    COLLECTIBLES_CLAIM: E,
-    COLLECTIBLES_CLAIM_SUCCESS: b,
-    COLLECTIBLES_CLAIM_FAILURE: y,
-    LOGOUT: O,
+let T = new I(l.h, {
+    COLLECTIBLES_PURCHASES_FETCH: f,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: h,
+    COLLECTIBLES_PURCHASES_FETCH_FAILURE: p,
+    COLLECTIBLES_CLAIM: m,
+    COLLECTIBLES_CLAIM_SUCCESS: g,
+    COLLECTIBLES_CLAIM_FAILURE: E,
+    LOGOUT: A,
 });

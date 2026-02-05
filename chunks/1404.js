@@ -1,130 +1,67 @@
-n.d(t, {
-    D: () => d,
-}),
-    n(896048);
-var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(837381),
-    o = n(193663),
-    u = n(576420),
-    c = n(783346);
-
-function d(e) {
-    var t, n;
+n.d(t, { D: () => c });
+var l = n(627968),
+    i = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(837381),
+    u = n(193663),
+    o = n(576420),
+    d = n(783346);
+function c(e) {
     let {
-            listItemId: l,
-            isVisuallyOffline: d = !1,
-            recentlyAddedTimestampMs: h = null,
-            outerRef: p,
-            leftIndicator: f,
+            listItemId: t,
+            isVisuallyOffline: n = !1,
+            recentlyAddedTimestampMs: s = null,
+            outerRef: c,
+            leftIndicator: h,
             avatar: g,
-            primaryText: m,
-            secondaryText: y,
+            primaryText: I,
+            secondaryText: E,
             rightActions: A,
-            onClick: v,
-            onContextMenu: b,
-            onMouseEnter: E,
-            onMouseLeave: O,
-            className: x,
-            rowInnerClassName: _,
+            onClick: f,
+            onContextMenu: m,
+            onMouseEnter: S,
+            onMouseLeave: p,
+            className: N,
+            rowInnerClassName: T,
         } = e,
-        S = (0, s.rm)(l),
-        [I, j] = r.useState(!1),
-        T = r.useRef(null),
-        [C, N] = r.useState(!1);
+        _ = (0, a.rm)(t),
+        [y, C] = i.useState(!1),
+        x = i.useRef(null),
+        [v, M] = i.useState(!1);
     return (
-        r.useEffect(() => {
-            if (null == h || T.current === h) return;
-            T.current = h;
+        i.useEffect(() => {
+            if (null == s || x.current === s) return;
+            x.current = s;
             let e = Date.now();
-            h > e || e - h > u.WS || N(!0);
-        }, [h]),
-        (0, i.jsxs)("div", {
-            ref: p,
-            className: a()(c.nM, x, {
-                [c.SS]: d,
-            }),
+            s > e || e - s > o.WS || M(!0);
+        }, [s]),
+        (0, l.jsxs)("div", {
+            ref: c,
+            className: r()(d.nM, N, { [d.SS]: n }),
             onAnimationEnd: (e) => {
-                "friendsWidgetRowRecentlyAdded" === e.animationName && N(!1);
+                "friendsWidgetRowRecentlyAdded" === e.animationName && M(!1);
             },
             children: [
-                null != f
-                    ? (0, i.jsx)("div", {
-                          className: c.oT,
-                          children: f,
-                      })
-                    : null,
-                (0, i.jsx)(
-                    o.A,
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: i,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = i);
-                                });
-                        }
-                        return e;
-                    })(
-                        {
-                            innerClassName: a()(c.bL, _),
-                            className: C ? c.fc : void 0,
-                            onClick: v,
-                            onContextMenu: b,
-                            onMouseEnter: (e) => {
-                                j(!0), null == E || E(e);
-                            },
-                            onMouseLeave: (e) => {
-                                j(!1), null == O || O(e);
-                            },
-                            avatar: g,
-                            name: m,
-                            subText: y,
-                            hovered: I,
-                        },
-                        S,
-                    )),
-                    (n = n =
-                        {
-                            children:
-                                null != A
-                                    ? (0, i.jsx)("div", {
-                                          className: c.cm,
-                                          children: A(I),
-                                      })
-                                    : null,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                ),
+                null != h ? (0, l.jsx)("div", { className: d.oT, children: h }) : null,
+                (0, l.jsx)(u.A, {
+                    innerClassName: r()(d.bL, T),
+                    className: v ? d.fc : void 0,
+                    onClick: f,
+                    onContextMenu: m,
+                    onMouseEnter: (e) => {
+                        C(!0), S?.(e);
+                    },
+                    onMouseLeave: (e) => {
+                        C(!1), p?.(e);
+                    },
+                    avatar: g,
+                    name: I,
+                    subText: E,
+                    hovered: y,
+                    ..._,
+                    children: null != A ? (0, l.jsx)("div", { className: d.cm, children: A(y) }) : null,
+                }),
             ],
         })
     );

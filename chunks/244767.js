@@ -1,3 +1,4 @@
+"use strict";
 var n = r(414501),
     i = r(387739),
     o = r(68055),
@@ -111,12 +112,7 @@ t.exports = (function (t) {
             var i = Array.isArray(t) ? t : t.contentBlocks,
                 o = n.createFromArray(i),
                 a = o.isEmpty() ? new u() : u.createEmpty(o.first().getKey());
-            return new e({
-                blockMap: o,
-                entityMap: r || s,
-                selectionBefore: a,
-                selectionAfter: a,
-            });
+            return new e({ blockMap: o, entityMap: r || s, selectionBefore: a, selectionAfter: a });
         }),
         (e.createFromText = function (t) {
             var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : /\r\n?|\n/g,
@@ -135,11 +131,4 @@ t.exports = (function (t) {
         }),
         e
     );
-})(
-    d({
-        entityMap: null,
-        blockMap: null,
-        selectionBefore: null,
-        selectionAfter: null,
-    }),
-);
+})(d({ entityMap: null, blockMap: null, selectionBefore: null, selectionAfter: null }));

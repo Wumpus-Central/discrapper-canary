@@ -1,42 +1,22 @@
-n.d(t, {
-    Ay: () => c,
-    tT: () => l,
-    uM: () => u,
-});
+"use strict";
+n.d(t, { Ay: () => u, tT: () => l, uM: () => c });
 var r = n(562465),
     i = n(73153),
     a = n(895944),
-    o = n(26508),
-    s = n(652215);
+    s = n(26508),
+    o = n(652215);
 async function l() {
-    i.h.dispatch({
-        type: "PROGRAM_REWARDS_FETCH",
-    });
+    i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH" });
     try {
-        var e;
-        let t =
-            null !=
-            (e = (
-                await r.Bo.get({
-                    url: s.Rsh.PROGRAM_REWARDS,
-                    rejectWithError: !0,
-                })
-            ).body.rewards)
-                ? e
-                : [];
-        i.h.dispatch({
-            type: "PROGRAM_REWARDS_FETCH_SUCCESS",
-            programRewards: t,
-        });
+        let e = (await r.Bo.get({ url: o.Rsh.PROGRAM_REWARDS, rejectWithError: !0 })).body.rewards ?? [];
+        i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_SUCCESS", programRewards: e });
     } catch (e) {
-        i.h.dispatch({
-            type: "PROGRAM_REWARDS_FETCH_FAILURE",
-        });
+        i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_FAILURE" });
     }
 }
-async function c() {
+async function u() {
     a.A.shouldFetch() && (await l());
 }
-async function u() {
-    (0, o.T0)("ProgramRewardsActionCreators") && (0, o.mY)() && (await l());
+async function c() {
+    (0, s.T0)("ProgramRewardsActionCreators") && (0, s.mY)() && (await l());
 }

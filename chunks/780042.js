@@ -1,90 +1,61 @@
-n.d(t, {
-    A: () => O,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(92674),
+    s = n.n(a),
+    o = n(92674),
     l = n(311907),
-    c = n(554146),
-    u = n(459192),
+    u = n(554146),
+    c = n(459192),
     d = n(397927),
-    f = n(775602),
-    p = n(379848),
-    _ = n(287809),
+    _ = n(775602),
+    f = n(379848),
+    p = n(287809),
     h = n(927578),
     m = n(49999),
     g = n(985018),
     E = n(500320);
-let y = {
-        tension: 750,
-        mass: 2.5,
-        friction: 70,
-    },
-    b = 20;
-
-function O(e) {
+let A = { tension: 750, mass: 2.5, friction: 70 },
+    I = 20;
+function T(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
-        O = (0, l.bG)([f.A], () => f.A.useReducedMotion),
-        v = _.default.getCurrentUser(),
-        A = null == v || (0, h.TW)(v) ? [c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [I, S] = (0, p.kn)(A),
-        [T, C] = i.useState(!1),
-        [N, w] = (0, d.zhh)(() => ({})),
-        R = (0, s.animated)(d.it9);
-
-    function P() {
-        w({
-            from: {
-                rotate: t ? "360deg" : "0deg",
-            },
-            to: {
-                rotate: t ? "0deg" : "360deg",
-            },
-            config: y,
-        }),
-            null == n || n(),
-            C(!1);
+        T = (0, l.bG)([_.A], () => _.A.useReducedMotion),
+        y = p.default.getCurrentUser(),
+        S = null == y || (0, h.TW)(y) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [v, C] = (0, f.kn)(S),
+        [b, N] = i.useState(!1),
+        [R, O] = (0, d.zhh)(() => ({})),
+        D = (0, o.animated)(d.it9);
+    function L() {
+        O({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: A }), n?.(), N(!1);
     }
     i.useEffect(() => {
-        let e = I === c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (S(m.i.DISMISS), setTimeout(() => C(e), 200));
-    }, [I, S]);
-    let D = T ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
-        L = T ? g.intl.string(g.t.ORK94p) : void 0;
-    return (0, r.jsx)(u.u, {
+        let e = v === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (C(m.i.DISMISS), setTimeout(() => N(e), 200));
+    }, [v, C]);
+    let w = b ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
+        x = b ? g.intl.string(g.t.ORK94p) : void 0;
+    return (0, r.jsx)(c.u, {
         position: "top",
-        title: L,
-        body: D,
-        asset: (0, r.jsx)(d.tvc, {
-            size: "md",
-            color: "currentColor",
-        }),
+        title: x,
+        body: w,
+        asset: (0, r.jsx)(d.tvc, { size: "md", color: "currentColor" }),
         assetSize: 20,
-        forceOpen: T,
+        forceOpen: b,
         children: (0, r.jsxs)("div", {
-            "aria-label": D,
+            "aria-label": w,
             children: [
-                (0, r.jsx)("input", {
-                    className: E.Qg,
-                    checked: t,
-                    onChange: P,
-                    id: a,
-                    type: "checkbox",
-                }),
+                (0, r.jsx)("input", { className: E.Qg, checked: t, onChange: L, id: a, type: "checkbox" }),
                 (0, r.jsxs)("label", {
                     htmlFor: a,
-                    className: o()(E.Pf, {
-                        [E.wM]: t,
-                    }),
+                    className: s()(E.Pf, { [E.wM]: t }),
                     children: [
-                        (0, r.jsx)(R, {
-                            style: O ? void 0 : N,
+                        (0, r.jsx)(D, {
+                            style: T ? void 0 : R,
                             size: "custom",
-                            width: b,
-                            height: b,
+                            width: I,
+                            height: I,
                             color: t ? "white" : "currentColor",
                             className: E.Kk,
                         }),

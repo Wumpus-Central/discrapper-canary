@@ -1,23 +1,21 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(64700),
     i = n(110259),
     a = n(311907),
     s = n(139286),
     o = n(989837),
     l = n(520117);
-let c = 1e3;
-
-function u(e) {
+let u = 1e3;
+function c(e) {
     let {
             applicationId: t,
             applicationFlags: n,
-            sectionName: u,
+            sectionName: c,
             sectionPosition: d,
-            sectionOverallPosition: f,
-            promotionalLabel: p,
-            numFriendsWhoPlay: _,
+            sectionOverallPosition: _,
+            promotionalLabel: f,
+            numFriendsWhoPlay: p,
         } = e,
         h = (0, a.bG)([o.A], () => o.A.entrypoint()),
         m = r.useCallback(() => {
@@ -27,21 +25,15 @@ function u(e) {
                 properties: {
                     application_id: t,
                     application_flags: n,
-                    section_name: u,
+                    section_name: c,
                     section_position: d,
-                    section_overall_position: f,
+                    section_overall_position: _,
                     source: h,
-                    promotional_label: p,
-                    num_friends_who_play: _,
+                    promotional_label: f,
+                    num_friends_who_play: p,
                 },
             });
-        }, [_]),
+        }, [p]),
         g = 0.5;
-    return {
-        trackItemImpressionRef: (0, l.A)({
-            onVisible: m,
-            threshold: g,
-            minTimeVisibleMs: c,
-        }),
-    };
+    return { trackItemImpressionRef: (0, l.A)({ onVisible: m, threshold: g, minTimeVisibleMs: u }) };
 }

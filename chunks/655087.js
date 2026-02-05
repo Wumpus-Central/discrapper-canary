@@ -1,10 +1,3 @@
-n.d(t, {
-    A: () => r,
-});
-let r = {
-    getRawThermalState() {},
-    useRawThermalState() {},
-    addListener: (e) => ({
-        remove: () => {},
-    }),
-};
+"use strict";
+n.d(t, { A: () => r });
+let r = { getRawThermalState() {}, useRawThermalState() {}, addListener: (e) => ({ remove: () => {} }) };

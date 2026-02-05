@@ -1,82 +1,34 @@
-r.d(t, {
-    A: () => i,
-}),
-    r(896048);
-var n = r(835245),
-    l = r(822382);
-
-function s(e, t, r) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
-        e
-    );
+r.d(t, { A: () => a });
+var s = r(835245),
+    n = r(822382);
+function l() {
+    return { sessionId: (0, s.A)(), searchQueryId: null };
 }
-
-function a() {
-    return {
-        sessionId: (0, n.A)(),
-        searchQueryId: null,
-    };
-}
-class i {
+class a {
+    sessions = new Map();
     getSession(e) {
-        var t;
-        return null != (t = this.sessions.get((0, l.bS)(e))) ? t : null;
+        return this.sessions.get((0, n.bS)(e)) ?? null;
     }
     setSession(e, t) {
-        var r;
-        let n = (0, l.bS)(e),
-            i = null != (r = this.sessions.get(n)) ? r : a();
-        this.sessions.set(
-            n,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                            }),
-                        )),
-                        n.forEach(function (t) {
-                            s(e, t, r[t]);
-                        });
-                }
-                return e;
-            })({}, i, t),
-        );
+        let r = (0, n.bS)(e),
+            s = this.sessions.get(r) ?? l();
+        this.sessions.set(r, { ...s, ...t });
     }
     deleteSession(e) {
-        this.sessions.delete((0, l.bS)(e));
+        this.sessions.delete((0, n.bS)(e));
     }
     getSessionId(e) {
-        var t, r;
-        return null != (t = null == (r = this.getSession(e)) ? void 0 : r.sessionId) ? t : null;
+        return this.getSession(e)?.sessionId ?? null;
     }
     getQueryId(e) {
-        var t, r;
-        return null != (t = null == (r = this.getSession(e)) ? void 0 : r.searchQueryId) ? t : null;
+        return this.getSession(e)?.searchQueryId ?? null;
     }
     refreshQueryId(e) {
-        this.setSession(e, {
-            searchQueryId: (0, n.A)(),
-        });
+        this.setSession(e, { searchQueryId: (0, s.A)() });
     }
     initialize(e) {
-        for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), l = 1; l < t; l++) r[l - 1] = arguments[l];
-        this._initialize(e, ...r),
-            this.setSession(e, {
-                sessionId: (0, n.A)(),
-                searchQueryId: null,
-            });
+        for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), n = 1; n < t; n++) r[n - 1] = arguments[n];
+        this._initialize(e, ...r), this.setSession(e, { sessionId: (0, s.A)(), searchQueryId: null });
     }
     terminate(e) {
         this._terminate(e), this.deleteSession(e);
@@ -84,9 +36,6 @@ class i {
     transferSession(e, t) {
         this._transferSession(e, t);
         let r = this.getSession(e);
-        this.sessions.set((0, l.bS)(t), null != r ? r : a()), this.deleteSession(e);
-    }
-    constructor() {
-        s(this, "sessions", new Map());
+        this.sessions.set((0, n.bS)(t), r ?? l()), this.deleteSession(e);
     }
 }

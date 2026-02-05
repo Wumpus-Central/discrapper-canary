@@ -1,15 +1,12 @@
-n.d(t, {
-    r: () => o,
-});
-var r = n(253932),
-    i = n(954571),
-    a = n(652215),
-    s = n(406535);
-
-function o(e) {
-    r.Bh.updateSetting(e),
-        i.default.track(a.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-            update_type: s.Y.ACCOUNT,
-            voice_activity_notifications: e,
+i.d(e, { r: () => a });
+var n = i(253932),
+    l = i(954571),
+    s = i(652215),
+    r = i(406535);
+function a(t) {
+    n.Bh.updateSetting(t),
+        l.default.track(s.HAw.NOTIFICATION_SETTINGS_UPDATED, {
+            update_type: r.Y.ACCOUNT,
+            voice_activity_notifications: t,
         });
 }

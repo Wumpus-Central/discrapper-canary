@@ -1,239 +1,198 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(147925),
-    u = n(927813),
-    o = n(236972),
-    c = n(667920),
-    d = n(381106),
-    f = n(335416),
-    m = n(872088);
-let g = i.memo(function (e) {
-    let { playing: t, onPausePlayback: n, onPlaybackChange: a, onChangePosition: g, disabled: h = !1 } = e,
-        v = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    l = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (l = l.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    l.forEach(function (t) {
-                        var l;
-                        (l = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: l,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = l);
-                    });
-            }
-            return e;
-        })({}, f.Jh),
-        { audio: b } = (0, o.L)(),
-        x = null != b,
-        p = i.useRef(null),
-        j = i.useRef(null),
-        y = i.useRef(null),
-        [w, N] = i.useState(0),
-        [O, A] = i.useState(0),
-        [C, S] = i.useState(0),
-        [P, E] = i.useState(!1),
-        [M, k] = i.useState(!1),
-        [T, D] = i.useState(!1),
-        [I, F] = i.useState(0),
-        [L, R] = i.useState(-1),
-        U = i.useMemo(() => I / v.fineTuningScale, [v.fineTuningScale, I]);
-    i.useEffect(() => {
-        if (null == b) return;
-        let e = b.duration * u.A.Millis.SECOND;
-        N(0), A(0), S(e), F(e);
-    }, [b]);
-    let _ = i.useCallback(
+l.d(t, { A: () => h });
+var n = l(627968),
+    a = l(64700),
+    i = l(503698),
+    s = l.n(i),
+    r = l(147925),
+    u = l(927813),
+    o = l(236972),
+    d = l(667920),
+    c = l(381106),
+    m = l(335416),
+    f = l(872088);
+let h = a.memo(function (e) {
+    let { playing: t, onPausePlayback: l, onPlaybackChange: i, onChangePosition: h, disabled: g = !1 } = e,
+        x = { ...m.Jh },
+        { audio: v } = (0, o.L)(),
+        j = null != v,
+        p = a.useRef(null),
+        N = a.useRef(null),
+        b = a.useRef(null),
+        [y, C] = a.useState(0),
+        [A, w] = a.useState(0),
+        [S, M] = a.useState(0),
+        [E, T] = a.useState(!1),
+        [k, P] = a.useState(!1),
+        [D, I] = a.useState(!1),
+        [O, F] = a.useState(0),
+        [L, R] = a.useState(-1),
+        U = a.useMemo(() => O / x.fineTuningScale, [x.fineTuningScale, O]);
+    a.useEffect(() => {
+        if (null == v) return;
+        let e = v.duration * u.A.Millis.SECOND;
+        C(0), w(0), M(e), F(e);
+    }, [v]);
+    let _ = a.useCallback(
             (e, t) => {
-                if ((n(), 0 === e.button))
+                if ((l(), 0 === e.button))
                     switch (t) {
                         case 0:
-                            E(!0);
+                            T(!0);
                             break;
                         case 1:
-                            k(!0);
+                            P(!0);
                             break;
                         case 2:
-                            D(!0);
+                            I(!0);
                     }
             },
-            [n],
+            [l],
         ),
-        J = i.useCallback((e) => {
+        J = a.useCallback((e) => {
             switch (e) {
                 case 0:
-                    E(!1);
+                    T(!1);
                     break;
                 case 1:
-                    k(!1);
+                    P(!1);
                     break;
                 case 2:
-                    D(!1);
+                    I(!1);
             }
             R(-1);
         }, []),
-        G = i.useCallback(
+        $ = a.useCallback(
             (e) => {
-                if (null == b || !P) return;
+                if (null == v || !E) return;
                 let t = parseInt(e.target.value),
-                    n = t > C ? C : t;
-                a((0, c.fP)(n)), N(n), A(n);
+                    l = t > S ? S : t;
+                i((0, d.fP)(l)), C(l), w(l);
             },
-            [b, a, C, P],
+            [v, i, S, E],
         ),
-        V = i.useCallback(
+        G = a.useCallback(
             (e) => {
-                if (null == b || !M) return;
+                if (null == v || !k) return;
                 let t = parseInt(e.target.value);
-                t < w ? (a((0, c.fP)(w)), A(w)) : t > C ? (a((0, c.fP)(C)), A(C)) : (a((0, c.fP)(t)), A(t));
+                t < y ? (i((0, d.fP)(y)), w(y)) : t > S ? (i((0, d.fP)(S)), w(S)) : (i((0, d.fP)(t)), w(t));
             },
-            [b, a, C, M, w],
+            [v, i, S, k, y],
         ),
-        z = i.useCallback(
+        V = a.useCallback(
             (e) => {
-                if (null == b || !T) return;
+                if (null == v || !D) return;
                 let t = parseInt(e.target.value),
-                    n = t > w ? t : w;
-                a((0, c.fP)(w)), A(w), S(n);
+                    l = t > y ? t : y;
+                i((0, d.fP)(y)), w(y), M(l);
             },
-            [b, a, T, w],
+            [v, i, D, y],
         );
     return (
-        i.useEffect(() => {
-            null != g &&
-                x &&
-                g({
-                    startPositionMs: w,
-                    endPositionMs: C,
-                    playheadPositionMs: O,
-                });
-        }, [w, C, g, x, O]),
-        i.useEffect(() => {
+        a.useEffect(() => {
+            null != h && j && h({ startPositionMs: y, endPositionMs: S, playheadPositionMs: A });
+        }, [y, S, h, j, A]),
+        a.useEffect(() => {
             let e;
-            if (null != b)
+            if (null != v)
                 return (
                     t &&
                         (e = setInterval(() => {
-                            b.currentTime < (0, c.fP)(C)
-                                ? b.currentTime >= (0, c.fP)(O) && A(b.currentTime * u.A.Millis.SECOND)
-                                : (n((0, c.fP)(w)), A(w));
+                            v.currentTime < (0, d.fP)(S)
+                                ? v.currentTime >= (0, d.fP)(A) && w(v.currentTime * u.A.Millis.SECOND)
+                                : (l((0, d.fP)(y)), w(y));
                         }, 16)),
                     () => {
                         clearInterval(e);
                     }
                 );
-        }, [b, C, n, O, t, w]),
-        i.useEffect(() => {
-            if (v.fineTuningDelay <= 0) return;
+        }, [v, S, l, A, t, y]),
+        a.useEffect(() => {
+            if (x.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-                P && w == w && -1 === L ? R(w) : T && C == C && -1 === L ? R(C) : M && O == O && -1 === L && R(O);
-            }, v.fineTuningDelay);
+                E && y == y && -1 === L ? R(y) : D && S == S && -1 === L ? R(S) : k && A == A && -1 === L && R(A);
+            }, x.fineTuningDelay);
             return () => {
                 clearTimeout(e);
             };
-        }, [v.fineTuningDelay, T, C, L, M, O, P, w]),
-        (0, l.jsxs)("div", {
-            className: r()(m.IO, {
-                [m.J_]: x,
-            }),
+        }, [x.fineTuningDelay, D, S, L, k, A, E, y]),
+        (0, n.jsxs)("div", {
+            className: s()(f.IO, { [f.J_]: j }),
             children: [
-                (0, l.jsxs)("div", {
-                    className: m.Rn,
+                (0, n.jsxs)("div", {
+                    className: f.Rn,
                     children: [
-                        (0, l.jsxs)("div", {
-                            className: m.Dn,
+                        (0, n.jsxs)("div", {
+                            className: f.Dn,
                             children: [
-                                (0, l.jsx)("input", {
+                                (0, n.jsx)("input", {
                                     ref: p,
-                                    className: r()(m.Os, m.YT),
+                                    className: s()(f.Os, f.YT),
                                     type: "range",
-                                    min: (0, c.Y0)(L, U, I),
-                                    max: (0, c.gP)(L, U, I),
-                                    value: w,
-                                    onChange: G,
+                                    min: (0, d.Y0)(L, U, O),
+                                    max: (0, d.gP)(L, U, O),
+                                    value: y,
+                                    onChange: $,
                                     onMouseDown: (e) => _(e, 0),
                                     onMouseUp: () => J(0),
-                                    disabled: !x || h,
+                                    disabled: !j || g,
                                 }),
-                                (0, l.jsx)("input", {
-                                    ref: y,
-                                    className: r()(m.Os, m.BC),
+                                (0, n.jsx)("input", {
+                                    ref: b,
+                                    className: s()(f.Os, f.BC),
                                     type: "range",
-                                    min: (0, c.Y0)(L, U, I),
-                                    max: (0, c.gP)(L, U, I),
-                                    value: C,
-                                    onChange: z,
+                                    min: (0, d.Y0)(L, U, O),
+                                    max: (0, d.gP)(L, U, O),
+                                    value: S,
+                                    onChange: V,
                                     onMouseDown: (e) => _(e, 2),
                                     onMouseUp: () => J(2),
-                                    disabled: !x || h,
+                                    disabled: !j || g,
                                 }),
                             ],
                         }),
-                        (0, l.jsx)("div", {
-                            className: m.__invalid_handlePlayheadTrack,
-                            children: (0, l.jsx)("input", {
-                                ref: j,
-                                className: r()(m.Os, m.GO),
+                        (0, n.jsx)("div", {
+                            className: f.__invalid_handlePlayheadTrack,
+                            children: (0, n.jsx)("input", {
+                                ref: N,
+                                className: s()(f.Os, f.GO),
                                 type: "range",
-                                min: (0, c.Y0)(L, U, I),
-                                max: (0, c.gP)(L, U, I),
-                                value: O,
-                                onChange: V,
+                                min: (0, d.Y0)(L, U, O),
+                                max: (0, d.gP)(L, U, O),
+                                value: A,
+                                onChange: G,
                                 onMouseDown: (e) => _(e, 1),
                                 onMouseUp: () => J(1),
-                                disabled: !x || h,
+                                disabled: !j || g,
                             }),
                         }),
                     ],
                 }),
-                (0, l.jsxs)("div", {
-                    className: m.wo,
+                (0, n.jsxs)("div", {
+                    className: f.wo,
                     children: [
-                        (0, l.jsxs)("div", {
-                            className: r()(m.Wm, {
-                                [m.Em]: P,
-                                [m.z6]: T,
-                            }),
-                            style: {
-                                left: "".concat((0, c.y)(w, L, U, I), "%"),
-                                right: "".concat((0, c.N7)(C, L, U, I), "%"),
-                            },
+                        (0, n.jsxs)("div", {
+                            className: s()(f.Wm, { [f.Em]: E, [f.z6]: D }),
+                            style: { left: `${(0, d.y)(y, L, U, O)}%`, right: `${(0, d.N7)(S, L, U, O)}%` },
                             children: [
-                                (0, l.jsx)("div", {
-                                    className: r()(m.P, m.RC),
-                                    children: (0, l.jsx)("div", {
-                                        className: r()(m.Xd, m.__invalid_start),
-                                        children: (0, l.jsx)(s.A, {
-                                            direction: s.A.Directions.RIGHT,
-                                            className: m.OD,
+                                (0, n.jsx)("div", {
+                                    className: s()(f.P, f.RC),
+                                    children: (0, n.jsx)("div", {
+                                        className: s()(f.Xd, f.__invalid_start),
+                                        children: (0, n.jsx)(r.A, {
+                                            direction: r.A.Directions.RIGHT,
+                                            className: f.OD,
                                             width: 16,
                                             height: 16,
                                         }),
                                     }),
                                 }),
-                                (0, l.jsx)("div", {
-                                    className: r()(m.P, m.SE),
-                                    children: (0, l.jsx)("div", {
-                                        className: r()(m.Xd, m.__invalid_end),
-                                        children: (0, l.jsx)(s.A, {
-                                            direction: s.A.Directions.LEFT,
-                                            className: m.OD,
+                                (0, n.jsx)("div", {
+                                    className: s()(f.P, f.SE),
+                                    children: (0, n.jsx)("div", {
+                                        className: s()(f.Xd, f.__invalid_end),
+                                        children: (0, n.jsx)(r.A, {
+                                            direction: r.A.Directions.LEFT,
+                                            className: f.OD,
                                             width: 16,
                                             height: 16,
                                         }),
@@ -241,26 +200,18 @@ let g = i.memo(function (e) {
                                 }),
                             ],
                         }),
-                        (0, l.jsx)("div", {
-                            className: m.i0,
-                            children: (0, l.jsx)("div", {
-                                className: r()(m.lG, {
-                                    [m.cB]: M || P || T || t,
-                                }),
-                                style: {
-                                    left: "".concat((0, c.y)(O, L, U, I), "%"),
-                                },
+                        (0, n.jsx)("div", {
+                            className: f.i0,
+                            children: (0, n.jsx)("div", {
+                                className: s()(f.lG, { [f.cB]: k || E || D || t }),
+                                style: { left: `${(0, d.y)(A, L, U, O)}%` },
                             }),
                         }),
                     ],
                 }),
-                (0, l.jsx)("div", {
-                    className: m.FU,
-                    children: (0, l.jsx)(d.A, {
-                        fineTuning: L,
-                        fineTuningResolution: U,
-                        duration: I,
-                    }),
+                (0, n.jsx)("div", {
+                    className: f.FU,
+                    children: (0, n.jsx)(c.A, { fineTuning: L, fineTuningResolution: U, duration: O }),
                 }),
             ],
         })

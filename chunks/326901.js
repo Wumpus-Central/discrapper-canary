@@ -1,38 +1,23 @@
-n.d(t, {
-    V: () => a,
-});
+"use strict";
+n.d(t, { V: () => i });
 var r = n(488430);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
-    static fromServer(e) {
-        return new a(e);
-    }
+class i {
+    title;
+    body;
+    asset;
+    popoutAsset;
+    version;
+    revertTextColor;
     constructor(e) {
-        i(this, "title", void 0),
-            i(this, "body", void 0),
-            i(this, "asset", void 0),
-            i(this, "popoutAsset", void 0),
-            i(this, "version", void 0),
-            i(this, "revertTextColor", void 0),
-            (this.type = r.G.BANNER),
+        (this.type = r.G.BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.asset = e.asset),
             (this.popoutAsset = e.popout_asset),
             (this.version = e.version),
             (this.revertTextColor = e.revert_text_color);
+    }
+    static fromServer(e) {
+        return new i(e);
     }
 }

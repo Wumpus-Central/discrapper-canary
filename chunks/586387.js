@@ -1,6 +1,4 @@
-n.d(t, {
-    Ay: () => U,
-});
+n.d(t, { Ay: () => k });
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -8,88 +6,42 @@ var r = n(503698),
     i = n(417597),
     s = n(990078),
     o = n(397927),
-    c = n(308528),
+    E = n(308528),
     u = n(688810),
-    E = n(316031),
-    d = n(991982),
-    _ = n(838111),
+    c = n(316031),
+    _ = n(991982),
+    d = n(838111),
     g = n(351001),
     A = n(504049),
     T = n(534400),
-    f = n(961350),
-    h = n(696451),
-    I = n(71393),
-    O = n(576705),
-    N = n(290863),
-    m = n(461213),
-    S = n(287809),
-    p = n(957565),
-    b = n(562153),
-    G = n(427262),
-    R = n(743981),
-    D = n(985018),
-    L = n(186891);
-
-function x(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function C(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
+    I = n(961350),
+    N = n(696451),
+    h = n(71393),
+    m = n(576705),
+    S = n(290863),
+    G = n(461213),
+    O = n(287809),
+    C = n(957565),
+    R = n(562153),
+    L = n(427262),
+    D = n(743981),
+    f = n(985018),
+    x = n(186891);
 function M(e) {
     let { user: t, guildId: n, onClose: r } = e,
         a = t.id,
-        s = (0, i.bG)([m.A, N.A, f.default], () => (a === f.default.getId() ? m.A.getStatus() : N.A.getStatus(a, n)), [
+        s = (0, i.bG)([G.A, S.A, I.default], () => (a === I.default.getId() ? G.A.getStatus() : S.A.getStatus(a, n)), [
             a,
             n,
         ]);
     return (0, l.jsxs)("div", {
-        className: L.mY,
+        className: x.mY,
         children: [
             (0, l.jsxs)("div", {
-                className: L.FD,
+                className: x.FD,
                 children: [
                     (0, l.jsx)("div", {
-                        className: L.Wn,
+                        className: x.Wn,
                         children: (0, l.jsx)(o.euF, {
                             src: t.getAvatarURL(n, 48),
                             "aria-label": t.username,
@@ -98,34 +50,34 @@ function M(e) {
                         }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: L.oS,
+                        className: x.oS,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: L.K$,
+                                className: x.K$,
                                 children: [
                                     (0, l.jsx)(o.Text, {
                                         variant: "text-lg/medium",
                                         children: (0, l.jsx)(o.gyj, {
-                                            name: b.Ay.getName(n, null, t),
+                                            name: R.Ay.getName(n, null, t),
                                             colorString: o.LU0.colors.TEXT_STRONG.css,
                                             colorStrings: null,
                                         }),
                                     }),
                                     (0, l.jsx)(T.Ay, {
-                                        primaryGuild: null == t ? void 0 : t.primaryGuild,
-                                        userId: null == t ? void 0 : t.id,
+                                        primaryGuild: t?.primaryGuild,
+                                        userId: t?.id,
                                         contextGuildId: n,
-                                        badgeSize: R.Sl.SIZE_16,
+                                        badgeSize: D.Sl.SIZE_16,
                                         textVariant: "heading-md/semibold",
-                                        className: L.Dz,
-                                        containerClassName: L.UL,
+                                        className: x.Dz,
+                                        containerClassName: x.UL,
                                     }),
                                 ],
                             }),
                             (0, l.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: G.Ay.getUserTag(t),
+                                children: L.Ay.getUserTag(t),
                             }),
                         ],
                     }),
@@ -135,129 +87,66 @@ function M(e) {
                 variant: "text-md/medium",
                 color: "text-default",
                 children: (0, l.jsx)(o.DUT, {
-                    className: L.d4,
+                    className: x.d4,
                     onClick: r,
-                    children: (0, l.jsx)(o.PGe, {
-                        size: "md",
-                        color: "currentColor",
-                    }),
+                    children: (0, l.jsx)(o.PGe, { size: "md", color: "currentColor" }),
                 }),
             }),
         ],
     });
 }
-
-function v(e) {
-    let { tag: t = "div", text: n, disabled: r, children: i, onClick: c } = e,
-        u = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                l,
-                r,
-                a = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                    (l = n[r]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (a[l] = e[l]);
-                return a;
-            }
-            if (
-                ((a = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        l,
-                        r = {},
-                        a = Object.getOwnPropertyNames(e);
-                    for (l = 0; l < a.length; l++)
-                        (n = a[l]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-                    return r;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                    (l = n[r]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (a[l] = e[l]);
-            return a;
-        })(e, ["tag", "text", "disabled", "children", "onClick"]);
+function p(e) {
+    let { tag: t = "div", text: n, disabled: r, children: i, onClick: E, ...u } = e;
     return (0, l.jsx)(s.m, {
         text: n,
-        children: (0, l.jsx)(
-            o.DUT,
-            C(x({}, u), {
-                tag: t,
-                "aria-label": n,
-                className: a()(L.YB, {
-                    [L.aA]: r,
-                }),
-                onClick: r ? void 0 : c,
-                children: (0, l.jsx)("div", {
-                    className: L.MU,
-                    children: i,
-                }),
-            }),
-        ),
+        children: (0, l.jsx)(o.DUT, {
+            ...u,
+            tag: t,
+            "aria-label": n,
+            className: a()(x.YB, { [x.aA]: r }),
+            onClick: r ? void 0 : E,
+            children: (0, l.jsx)("div", { className: x.MU, children: i }),
+        }),
     });
 }
-
-function j(e) {
+function U(e) {
     let { user: t, member: r, guildId: a, moderatorReportId: s } = e,
-        T = (0, i.bG)([I.A], () => I.A.getGuild(a)),
+        T = (0, i.bG)([h.A], () => h.A.getGuild(a)),
         {
-            canKickUser: h,
-            canBanUser: N,
-            canModerateMembers: m,
+            canKickUser: N,
+            canBanUser: S,
+            canModerateMembers: G,
         } = (0, i.cf)(
-            [O.A, S.default, I.A],
+            [m.A, O.default, h.A],
             () => ({
                 canKickUser: (0, g.L7)(t, T),
                 canBanUser: (0, g.EZ)(t, T),
-                canModerateMembers: null != T && (0, _.b)(T.id, t.id, [S.default, I.A, O.A]),
+                canModerateMembers: null != T && (0, d.b)(T.id, t.id, [O.default, h.A, m.A]),
             }),
             [t, T],
         ),
-        b = (0, E.Z)(r),
-        { analyticsLocations: G, newestAnalyticsLocation: R } = (0, u.Ay)(),
-        M = (0, A.$9)(a, {
-            targetUserId: t.id,
-            location: R,
-            locations: G,
-        }),
-        j = (0, i.bG)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
+        R = (0, c.Z)(r),
+        { analyticsLocations: L, newestAnalyticsLocation: D } = (0, u.Ay)(),
+        M = (0, A.$9)(a, { targetUserId: t.id, location: D, locations: L }),
+        U = (0, i.bG)([I.default], () => I.default.getId() === t?.id);
     return (0, l.jsxs)("div", {
-        className: L.E_,
+        className: x.E_,
         children: [
-            (0, l.jsx)(v, {
-                disabled: j,
-                text: D.intl.string(D.t["g33r/P"]),
+            (0, l.jsx)(p, {
+                disabled: U,
+                text: f.intl.string(f.t["g33r/P"]),
                 onClick: () => {
-                    c.A.openPrivateChannel({
-                        recipientIds: t.id,
-                    });
+                    E.A.openPrivateChannel({ recipientIds: t.id });
                 },
-                children: (0, l.jsx)(o.oyn, {
-                    size: "custom",
-                    color: "currentColor",
-                    width: 24,
-                    height: 24,
-                }),
+                children: (0, l.jsx)(o.oyn, { size: "custom", color: "currentColor", width: 24, height: 24 }),
             }),
-            (0, l.jsx)(v, {
-                disabled: !h,
-                text: D.intl.string(D.t["3glT6Z"]),
+            (0, l.jsx)(p, {
+                disabled: !N,
+                text: f.intl.string(f.t["3glT6Z"]),
                 onClick: () => {
                     (0, o.mMO)(async () => {
                         let { default: e } = await n.e("40243").then(n.bind(n, 324785));
-                        return (n) =>
-                            (0, l.jsx)(
-                                e,
-                                C(x({}, n), {
-                                    location: R,
-                                    guildId: a,
-                                    user: t,
-                                    modReportId: s,
-                                }),
-                            );
+                        return (n) => (0, l.jsx)(e, { ...n, location: D, guildId: a, user: t, modReportId: s });
                     });
                 },
                 children: (0, l.jsx)(o.Nxw, {
@@ -267,22 +156,13 @@ function j(e) {
                     color: o.LU0.colors.TEXT_DEFAULT.css,
                 }),
             }),
-            (0, l.jsx)(v, {
-                disabled: !N,
-                text: D.intl.string(D.t["5MBJ5M"]),
+            (0, l.jsx)(p, {
+                disabled: !S,
+                text: f.intl.string(f.t["5MBJ5M"]),
                 onClick: () => {
                     (0, o.mMO)(async () => {
                         let { default: e } = await n.e("2504").then(n.bind(n, 333179));
-                        return (n) =>
-                            (0, l.jsx)(
-                                e,
-                                C(x({}, n), {
-                                    location: R,
-                                    guildId: a,
-                                    user: t,
-                                    modReportId: s,
-                                }),
-                            );
+                        return (n) => (0, l.jsx)(e, { ...n, location: D, guildId: a, user: t, modReportId: s });
                     });
                 },
                 children: (0, l.jsx)(o.wI0, {
@@ -292,22 +172,13 @@ function j(e) {
                     color: o.LU0.colors.TEXT_DEFAULT.css,
                 }),
             }),
-            (0, l.jsx)(v, {
-                disabled: !m,
-                text: b ? D.intl.string(D.t.N86XcP) : D.intl.string(D.t.kTlLrz),
+            (0, l.jsx)(p, {
+                disabled: !G,
+                text: R ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.kTlLrz),
                 onClick: () => {
-                    b
-                        ? (0, d.Y)({
-                              guildId: r.guildId,
-                              userId: r.userId,
-                              anaylticsLocations: G,
-                          })
-                        : (0, d.R)({
-                              guildId: r.guildId,
-                              userId: r.userId,
-                              anaylticsLocations: G,
-                              modReportId: s,
-                          });
+                    R
+                        ? (0, _.Y)({ guildId: r.guildId, userId: r.userId, anaylticsLocations: L })
+                        : (0, _.R)({ guildId: r.guildId, userId: r.userId, anaylticsLocations: L, modReportId: s });
                 },
                 children: (0, l.jsx)(o.gQi, {
                     size: "custom",
@@ -316,12 +187,12 @@ function j(e) {
                     color: o.LU0.colors.TEXT_DEFAULT.css,
                 }),
             }),
-            (0, l.jsx)(v, {
-                text: D.intl.string(D.t.IHTjzA),
+            (0, l.jsx)(p, {
+                text: f.intl.string(f.t.IHTjzA),
                 onClick: () => {
-                    M(A.Nj.COPY_ID), (0, p.C)(t.id);
+                    M(A.Nj.COPY_ID), (0, C.C)(t.id);
                 },
-                disabled: !p.p5,
+                disabled: !C.p5,
                 children: (0, l.jsx)(o.L9S, {
                     size: "custom",
                     width: 24,
@@ -332,27 +203,17 @@ function j(e) {
         ],
     });
 }
-
-function U(e) {
+function k(e) {
     let { userId: t, guildId: n, onClose: r, moderatorReportId: a } = e,
-        s = (0, i.bG)([S.default], () => S.default.getUser(t), [t]),
-        o = (0, i.bG)([h.Ay], () => h.Ay.getMember(n, t), [n, t]);
+        s = (0, i.bG)([O.default], () => O.default.getUser(t), [t]),
+        o = (0, i.bG)([N.Ay], () => N.Ay.getMember(n, t), [n, t]);
     return null == s || null == o
         ? null
         : (0, l.jsxs)("div", {
-              className: L.kL,
+              className: x.kL,
               children: [
-                  (0, l.jsx)(M, {
-                      user: s,
-                      guildId: n,
-                      onClose: r,
-                  }),
-                  (0, l.jsx)(j, {
-                      user: s,
-                      member: o,
-                      guildId: n,
-                      moderatorReportId: a,
-                  }),
+                  (0, l.jsx)(M, { user: s, guildId: n, onClose: r }),
+                  (0, l.jsx)(U, { user: s, member: o, guildId: n, moderatorReportId: a }),
               ],
           });
 }

@@ -1,47 +1,40 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048),
-    n(321073);
-var r = n(64700),
-    i = n(85109),
-    a = n(470654);
-
-function s() {
-    return i.A.getSavedMessages().map((e) => e.saveData);
+r.d(t, { A: () => i }), r(321073);
+var s = r(64700),
+    n = r(85109),
+    l = r(470654);
+function a() {
+    return n.A.getSavedMessages().map((e) => e.saveData);
 }
-
-function o() {
-    let [e, t] = r.useState(s),
-        n = r.useRef(i.A.getIsStale());
+function i() {
+    let [e, t] = s.useState(a),
+        r = s.useRef(n.A.getIsStale());
     return (
-        r.useEffect(() => {
-            let e = i.A.getLastChanged();
-
-            function r() {
-                let r = i.A.getLastChanged();
-                if (e !== r) {
-                    if (((e = r), n.current && !i.A.getIsStale())) {
-                        (n.current = !1), t(s());
+        s.useEffect(() => {
+            let e = n.A.getLastChanged();
+            function s() {
+                let s = n.A.getLastChanged();
+                if (e !== s) {
+                    if (((e = s), r.current && !n.A.getIsStale())) {
+                        (r.current = !1), t(a());
                         return;
                     }
                     t((e) => {
                         let t = [...e],
-                            n = new Map(i.A.getSavedMessages().map((e) => [e.saveData.messageId, e]));
-                        for (let r of e) n.has(r.messageId) ? n.delete(r.messageId) : t.splice(t.indexOf(r), 1);
-                        for (let e of n.values()) t.push(e.saveData);
+                            r = new Map(n.A.getSavedMessages().map((e) => [e.saveData.messageId, e]));
+                        for (let s of e) r.has(s.messageId) ? r.delete(s.messageId) : t.splice(t.indexOf(s), 1);
+                        for (let e of r.values()) t.push(e.saveData);
                         return t;
                     });
                 }
             }
             return (
-                i.A.addChangeListener(r),
+                n.A.addChangeListener(s),
                 () => {
-                    i.A.removeChangeListener(r);
+                    n.A.removeChangeListener(s);
                 }
             );
         }, []),
-        (0, a.A)(),
+        (0, l.A)(),
         e
     );
 }

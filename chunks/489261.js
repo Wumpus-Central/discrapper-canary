@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });
 var a = {
     lastWeek: "'i' EEEE's kl.' p",
     yesterday: "'ig\xe5r kl.' p",

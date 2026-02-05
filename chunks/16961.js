@@ -1,11 +1,8 @@
-n.d(t, {
-    G: () => a,
-});
-var r = n(723702),
+n.d(t, { G: () => a });
+var i = n(723702),
     l = n(837921),
-    i = n(652215);
-
+    s = n(652215);
 function a() {
-    let e = r.isPlatformEmbedded && l.Ay.supportsFeature(i.BYE.POPOUT_WINDOWS);
-    return !r.isPlatformEmbedded || e;
+    let e = i.isPlatformEmbedded && l.Ay.supportsFeature(s.BYE.POPOUT_WINDOWS);
+    return !i.isPlatformEmbedded || e;
 }

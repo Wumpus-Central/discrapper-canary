@@ -1,7 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
-r = {
-    Empty: "Tyhj\xe4",
-};
+r = { Empty: "Tyhj\xe4" };

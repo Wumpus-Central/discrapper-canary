@@ -1,7 +1,4 @@
-s.d(e, {
-    default: () => p,
-}),
-    s(896048);
+s.d(e, { default: () => p });
 var a = s(627968),
     n = s(64700),
     i = s(110259),
@@ -10,7 +7,6 @@ var a = s(627968),
     o = s(181658),
     c = s(985018),
     u = s(222872);
-
 function p(t) {
     let {
             transitionState: e,
@@ -57,29 +53,13 @@ function p(t) {
         onSubmit: A,
         children: (0, a.jsx)(r.ExpressiveModal, {
             transitionState: e,
-            trackingProps: {
-                impression: T,
-                impressionType: i.ImpressionTypes.MODAL,
-            },
-            graphic: {
-                src: u,
-                type: "image",
-            },
+            trackingProps: { impression: T, impressionType: i.ImpressionTypes.MODAL },
+            graphic: { src: u, type: "image" },
             title: d,
             subtitle: c.intl.string(c.t.SZJowy),
             actions: [
-                {
-                    text: c.intl.string(c.t["ETE/oC"]),
-                    onClick: g,
-                    variant: "secondary",
-                    disabled: M,
-                },
-                {
-                    text: h,
-                    variant: x,
-                    loading: M,
-                    type: "submit",
-                },
+                { text: c.intl.string(c.t["ETE/oC"]), onClick: g, variant: "secondary", disabled: M },
+                { text: h, variant: x, loading: M, type: "submit" },
             ],
             onClose: g,
             children: (0, a.jsxs)(l.BJc, {
@@ -92,11 +72,7 @@ function p(t) {
                         onChange: w,
                         inputRef: v,
                     }),
-                    (0, a.jsx)(r.QWc, {
-                        textVariant: "text-sm/normal",
-                        text: c.intl.string(c.t.K0NPQ6),
-                        onClick: j,
-                    }),
+                    (0, a.jsx)(r.QWc, { textVariant: "text-sm/normal", text: c.intl.string(c.t.K0NPQ6), onClick: j }),
                 ],
             }),
         }),

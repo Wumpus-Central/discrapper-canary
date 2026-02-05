@@ -1,56 +1,36 @@
 n.r(r),
-    n.d(r, {
-        default: () => t,
-    }),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
+    n.d(r, { default: () => t }),
     n(323874),
     n(14289),
     n(35956),
-    n(65821),
-    n(927092),
-    n(212978),
-    n(24457),
     n(393431),
-    n(752391),
     n(532706),
     n(42231),
     n(232424),
-    n(757074),
     n(949626),
     n(767709),
     n(65162),
-    n(440738),
-    n(201528),
-    n(298793),
-    n(777220),
-    n(834879),
-    n(648691),
-    n(797484),
-    n(321073),
-    n(734808);
+    n(321073);
 let t = async function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     var r,
         t,
-        i,
         a,
+        i,
         o,
+        s,
         u,
         c,
-        s,
-        l,
         f,
-        h,
+        l,
         d,
         b,
+        h,
         m,
         p,
-        g,
-        v,
         w,
+        v,
+        g,
         A,
         y = "";
     try {
@@ -58,73 +38,63 @@ let t = async function () {
             ".",
             "file:///ci/build/discord/discord/discord_app/modules/image_cropping/web/webp/libwebp/webp_wasm.js",
         ).href;
-    } catch (e) {}
+    } catch {}
     r = async (e) => {
-        var r = await fetch(e, {
-            credentials: "same-origin",
-        });
+        var r = await fetch(e, { credentials: "same-origin" });
         if (r.ok) return r.arrayBuffer();
         throw Error(r.status + " : " + r.url);
     };
     var P = console.log.bind(console),
         _ = console.error.bind(console),
-        I = !1,
-        W = !1;
-
+        W = !1,
+        I = !1;
     function E() {
-        var r = w.buffer;
-        (e.HEAP8 = u = new Int8Array(r)),
-            (e.HEAP16 = s = new Int16Array(r)),
-            (e.HEAPU8 = c = new Uint8Array(r)),
+        var r = g.buffer;
+        (e.HEAP8 = s = new Int8Array(r)),
+            (e.HEAP16 = c = new Int16Array(r)),
+            (e.HEAPU8 = u = new Uint8Array(r)),
             (e.HEAPU16 = new Uint16Array(r)),
-            (e.HEAP32 = l = new Int32Array(r)),
-            (e.HEAPU32 = f = new Uint32Array(r)),
-            (e.HEAPF32 = h = new Float32Array(r)),
-            (e.HEAPF64 = d = new Float64Array(r)),
-            (b = new BigInt64Array(r)),
+            (e.HEAP32 = f = new Int32Array(r)),
+            (e.HEAPU32 = l = new Uint32Array(r)),
+            (e.HEAPF32 = d = new Float32Array(r)),
+            (e.HEAPF64 = b = new Float64Array(r)),
+            (h = new BigInt64Array(r)),
             new BigUint64Array(r);
     }
-
     function R(r) {
-        null == (n = e.onAbort) || n.call(e, r),
-            _((r = "Aborted(" + r + ")")),
-            (I = !0),
-            (r += ". Build with -sASSERTIONS for more info.");
-        var n,
-            t = new WebAssembly.RuntimeError(r);
-        throw (null == o || o(t), t);
+        e.onAbort?.(r), _((r = "Aborted(" + r + ")")), (W = !0), (r += ". Build with -sASSERTIONS for more info.");
+        var n = new WebAssembly.RuntimeError(r);
+        throw (o?.(n), n);
     }
     async function k(e) {
-        if (!i)
+        if (!a)
             try {
                 var n = await r(e);
                 return new Uint8Array(n);
-            } catch (e) {}
-        if (e == m && i) return new Uint8Array(i);
+            } catch {}
+        if (e == m && a) return new Uint8Array(a);
         if (t) return t(e);
         throw "both async and sync fetching of the wasm failed";
     }
-    async function U(e, r) {
+    async function C(e, r) {
         try {
             var n = await k(e);
             return await WebAssembly.instantiate(n, r);
         } catch (e) {
-            _("failed to asynchronously prepare wasm: ".concat(e)), R(e);
+            _(`failed to asynchronously prepare wasm: ${e}`), R(e);
         }
     }
-    async function C(e, r, n) {
+    async function S(e, r, n) {
         if (!e)
             try {
-                var t = fetch(r, {
-                    credentials: "same-origin",
-                });
+                var t = fetch(r, { credentials: "same-origin" });
                 return await WebAssembly.instantiateStreaming(t, n);
             } catch (e) {
-                _("wasm streaming compile failed: ".concat(e)), _("falling back to ArrayBuffer instantiation");
+                _(`wasm streaming compile failed: ${e}`), _("falling back to ArrayBuffer instantiation");
             }
-        return U(r, n);
+        return C(r, n);
     }
-    async function F() {
+    async function U() {
         function r(r, n) {
             var t;
             return (
@@ -150,100 +120,97 @@ let t = async function () {
                 (e._malloc = t.y),
                 (e._free = t.z),
                 (p = t.A),
-                (g = t.B),
+                (w = t.B),
                 (v = t.C),
-                (w = t.d),
+                (g = t.d),
                 t.__indirect_function_table,
                 E(),
                 A
             );
         }
-        var t = {
-            a: J,
-        };
+        var t = { a: q };
         return e.instantiateWasm
-            ? new Promise((n, i) => {
+            ? new Promise((n, a) => {
                   e.instantiateWasm(t, (e, t) => {
                       n(r(e, t));
                   });
               })
-            : (null != m ||
-                  (m = (function () {
-                      if (e.locateFile) {
-                          var r;
-                          return (r = "webp_wasm.wasm"), e.locateFile ? e.locateFile(r, y) : y + r;
-                      }
-                      return new URL(n(14927), n.b).href;
-                  })()),
-              r((await C(i, m, t)).instance));
+            : ((m ??= (function () {
+                  if (e.locateFile) {
+                      var r;
+                      return (r = "webp_wasm.wasm"), e.locateFile ? e.locateFile(r, y) : y + r;
+                  }
+                  return new URL(n(14927), n.b).href;
+              })()),
+              r((await S(a, m, t)).instance));
     }
-    var S = (r) => {
+    var x = (r) => {
             for (; r.length > 0; ) r.shift()(e);
         },
-        x = [],
-        B = (e) => x.push(e),
+        F = [],
+        B = (e) => F.push(e),
         D = [],
-        T = (e) => D.push(e),
-        H = () => v(),
+        H = (e) => D.push(e),
+        T = () => v(),
         M = (e, r) => Math.ceil(e / r) * r,
         G = (e) => {
-            var r = w.buffer.byteLength;
+            var r = g.buffer.byteLength;
             try {
-                return w.grow(((e - r + 65535) / 65536) | 0), E(), 1;
+                return g.grow(((e - r + 65535) / 65536) | 0), E(), 1;
             } catch (e) {}
         },
         N = [null, [], []],
         V = globalThis.TextDecoder && new TextDecoder(),
-        L = function (e) {
+        $ = function (e) {
             let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
                 n = arguments.length > 2 ? arguments[2] : void 0,
                 t = arguments.length > 3 ? arguments[3] : void 0;
-            var i = ((e, r, n, t) => {
-                var i = r + n;
-                if (t) return i;
-                for (; e[r] && !(r >= i); ) ++r;
+            var a = ((e, r, n, t) => {
+                var a = r + n;
+                if (t) return a;
+                for (; e[r] && !(r >= a); ) ++r;
                 return r;
             })(e, r, n, t);
-            if (i - r > 16 && e.buffer && V) return V.decode(e.subarray(r, i));
-            for (var a = ""; r < i; ) {
+            if (a - r > 16 && e.buffer && V) return V.decode(e.subarray(r, a));
+            for (var i = ""; r < a; ) {
                 var o = e[r++];
                 if (!(128 & o)) {
-                    a += String.fromCharCode(o);
+                    i += String.fromCharCode(o);
+                    continue;
+                }
+                var s = 63 & e[r++];
+                if ((224 & o) == 192) {
+                    i += String.fromCharCode(((31 & o) << 6) | s);
                     continue;
                 }
                 var u = 63 & e[r++];
-                if ((224 & o) == 192) {
-                    a += String.fromCharCode(((31 & o) << 6) | u);
-                    continue;
-                }
-                var c = 63 & e[r++];
                 if (
                     (o =
                         (240 & o) == 224
-                            ? ((15 & o) << 12) | (u << 6) | c
-                            : ((7 & o) << 18) | (u << 12) | (c << 6) | (63 & e[r++])) < 65536
+                            ? ((15 & o) << 12) | (s << 6) | u
+                            : ((7 & o) << 18) | (s << 12) | (u << 6) | (63 & e[r++])) < 65536
                 )
-                    a += String.fromCharCode(o);
+                    i += String.fromCharCode(o);
                 else {
-                    var s = o - 65536;
-                    a += String.fromCharCode(55296 | (s >> 10), 56320 | (1023 & s));
+                    var c = o - 65536;
+                    i += String.fromCharCode(55296 | (c >> 10), 56320 | (1023 & c));
                 }
             }
-            return a;
+            return i;
         },
-        O = (e, r) => {
+        L = (e, r) => {
             var n = N[e];
-            0 === r || 10 === r ? ((1 === e ? P : _)(L(n)), (n.length = 0)) : n.push(r);
+            0 === r || 10 === r ? ((1 === e ? P : _)($(n)), (n.length = 0)) : n.push(r);
         },
-        j = (e, r, n) => (e ? L(c, e, r, n) : ""),
-        z = (r) => e["_" + r],
-        q = (e, r, n, t, i) => {
-            var a = {
+        O = (e, r, n) => (e ? $(u, e, r, n) : ""),
+        j = (r) => e["_" + r],
+        z = (e, r, n, t, a) => {
+            var i = {
                     string: (e) => {
                         var r,
                             n,
                             t,
-                            i = 0;
+                            a = 0;
                         return (
                             null != e &&
                                 0 !== e &&
@@ -261,75 +228,75 @@ let t = async function () {
                                         }
                                         return r;
                                     })((r = e)) + 1),
-                                (t = g(n)),
+                                (t = w(n)),
                                 ((e, r, n, t) => {
                                     if (t > 0) {
-                                        for (var i = n + t - 1, a = 0; a < e.length; ++a) {
-                                            var o = e.codePointAt(a);
+                                        for (var a = n + t - 1, i = 0; i < e.length; ++i) {
+                                            var o = e.codePointAt(i);
                                             if (o <= 127) {
-                                                if (n >= i) break;
+                                                if (n >= a) break;
                                                 r[n++] = o;
                                             } else if (o <= 2047) {
-                                                if (n + 1 >= i) break;
+                                                if (n + 1 >= a) break;
                                                 (r[n++] = 192 | (o >> 6)), (r[n++] = 128 | (63 & o));
                                             } else if (o <= 65535) {
-                                                if (n + 2 >= i) break;
+                                                if (n + 2 >= a) break;
                                                 (r[n++] = 224 | (o >> 12)),
                                                     (r[n++] = 128 | ((o >> 6) & 63)),
                                                     (r[n++] = 128 | (63 & o));
                                             } else {
-                                                if (n + 3 >= i) break;
+                                                if (n + 3 >= a) break;
                                                 (r[n++] = 240 | (o >> 18)),
                                                     (r[n++] = 128 | ((o >> 12) & 63)),
                                                     (r[n++] = 128 | ((o >> 6) & 63)),
                                                     (r[n++] = 128 | (63 & o)),
-                                                    a++;
+                                                    i++;
                                             }
                                         }
                                         return (r[n] = 0);
                                     }
-                                })(r, c, t, n),
-                                (i = t)),
-                            i
+                                })(r, u, t, n),
+                                (a = t)),
+                            a
                         );
                     },
                     array: (e) => {
                         let r;
-                        var n = ((r = e.length), g(r));
-                        return u.set(e, n), n;
+                        var n = ((r = e.length), w(r));
+                        return s.set(e, n), n;
                     },
                 },
-                o = z(e),
-                s = [],
-                l = 0;
+                o = j(e),
+                c = [],
+                f = 0;
             if (t)
-                for (var f = 0; f < t.length; f++) {
-                    var h = a[n[f]];
-                    h ? (0 === l && (l = H()), (s[f] = h(t[f]))) : (s[f] = t[f]);
+                for (var l = 0; l < t.length; l++) {
+                    var d = i[n[l]];
+                    d ? (0 === f && (f = T()), (c[l] = d(t[l]))) : (c[l] = t[l]);
                 }
-            var d = o(...s);
+            var b = o(...c);
             return (function (e) {
-                return 0 !== l && p(l), "string" === r ? j(e) : "boolean" === r ? !!e : e;
-            })(d);
+                return 0 !== f && p(f), "string" === r ? O(e) : "boolean" === r ? !!e : e;
+            })(b);
         };
     if (
         (e.noExitRuntime && e.noExitRuntime,
         e.print && (P = e.print),
         e.printErr && (_ = e.printErr),
-        e.wasmBinary && (i = e.wasmBinary),
+        e.wasmBinary && (a = e.wasmBinary),
         e.arguments && e.arguments,
         e.thisProgram && e.thisProgram,
         e.preInit)
     )
         for ("function" == typeof e.preInit && (e.preInit = [e.preInit]); e.preInit.length > 0; ) e.preInit.shift()();
-    (e.ccall = q),
+    (e.ccall = z),
         (e.cwrap = (e, r, n, t) => {
-            var i = !n || n.every((e) => "number" === e || "boolean" === e);
-            return "string" !== r && i && !t
-                ? z(e)
+            var a = !n || n.every((e) => "number" === e || "boolean" === e);
+            return "string" !== r && a && !t
+                ? j(e)
                 : function () {
-                      for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
-                      return q(e, r, n, a, t);
+                      for (var a = arguments.length, i = Array(a), o = 0; o < a; o++) i[o] = arguments[o];
+                      return z(e, r, n, i, t);
                   };
         }),
         (e.setValue = function (e, r) {
@@ -337,28 +304,28 @@ let t = async function () {
             switch ((n.endsWith("*") && (n = "*"), n)) {
                 case "i1":
                 case "i8":
-                    u[e] = r;
+                    s[e] = r;
                     break;
                 case "i16":
-                    s[e >> 1] = r;
+                    c[e >> 1] = r;
                     break;
                 case "i32":
-                    l[e >> 2] = r;
-                    break;
-                case "i64":
-                    b[e >> 3] = BigInt(r);
-                    break;
-                case "float":
-                    h[e >> 2] = r;
-                    break;
-                case "double":
-                    d[e >> 3] = r;
-                    break;
-                case "*":
                     f[e >> 2] = r;
                     break;
+                case "i64":
+                    h[e >> 3] = BigInt(r);
+                    break;
+                case "float":
+                    d[e >> 2] = r;
+                    break;
+                case "double":
+                    b[e >> 3] = r;
+                    break;
+                case "*":
+                    l[e >> 2] = r;
+                    break;
                 default:
-                    R("invalid type for setValue: ".concat(n));
+                    R(`invalid type for setValue: ${n}`);
             }
         }),
         (e.getValue = function (e) {
@@ -366,27 +333,27 @@ let t = async function () {
             switch ((r.endsWith("*") && (r = "*"), r)) {
                 case "i1":
                 case "i8":
-                    return u[e];
+                    return s[e];
                 case "i16":
-                    return s[e >> 1];
+                    return c[e >> 1];
                 case "i32":
-                    return l[e >> 2];
-                case "i64":
-                    return b[e >> 3];
-                case "float":
-                    return h[e >> 2];
-                case "double":
-                    return d[e >> 3];
-                case "*":
                     return f[e >> 2];
+                case "i64":
+                    return h[e >> 3];
+                case "float":
+                    return d[e >> 2];
+                case "double":
+                    return b[e >> 3];
+                case "*":
+                    return l[e >> 2];
                 default:
-                    R("invalid type for getValue: ".concat(r));
+                    R(`invalid type for getValue: ${r}`);
             }
         }),
-        (e.UTF8ToString = j);
-    var J = {
+        (e.UTF8ToString = O);
+    var q = {
         c: (e) => {
-            var r = c.length;
+            var r = u.length;
             if ((e >>>= 0) > 0x80000000) return !1;
             for (var n = 1; n <= 4; n *= 2) {
                 var t = r * (1 + 0.2 / n);
@@ -396,40 +363,38 @@ let t = async function () {
         },
         b: (e) => 52,
         a: (e, r, n, t) => {
-            for (var i = 0, a = 0; a < n; a++) {
-                var o = f[r >> 2],
-                    u = f[(r + 4) >> 2];
+            for (var a = 0, i = 0; i < n; i++) {
+                var o = l[r >> 2],
+                    s = l[(r + 4) >> 2];
                 r += 8;
-                for (var s = 0; s < u; s++) O(e, c[o + s]);
-                i += u;
+                for (var c = 0; c < s; c++) L(e, u[o + c]);
+                a += s;
             }
-            return (f[t >> 2] = i), 0;
+            return (l[t >> 2] = a), 0;
         },
     };
-    if (((A = await F()), e.preRun))
-        for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length; ) T(e.preRun.shift());
-
-    function K() {
-        var r;
-        if (((e.calledRun = !0), !I)) {
-            if (((W = !0), A.e(), null == a || a(e), null == (r = e.onRuntimeInitialized) || r.call(e), e.postRun))
+    if (((A = await U()), e.preRun))
+        for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length; ) H(e.preRun.shift());
+    function J() {
+        if (((e.calledRun = !0), !W)) {
+            if (((I = !0), A.e(), i?.(e), e.onRuntimeInitialized?.(), e.postRun))
                 for ("function" == typeof e.postRun && (e.postRun = [e.postRun]); e.postRun.length; )
                     B(e.postRun.shift());
-            S(x);
+            x(F);
         }
     }
     return (
-        S(D),
+        x(D),
         e.setStatus
             ? (e.setStatus("Running..."),
               setTimeout(() => {
-                  setTimeout(() => e.setStatus(""), 1), K();
+                  setTimeout(() => e.setStatus(""), 1), J();
               }, 1))
-            : K(),
-        W
+            : J(),
+        I
             ? e
             : new Promise((e, r) => {
-                  (a = e), (o = r);
+                  (i = e), (o = r);
               })
     );
 };

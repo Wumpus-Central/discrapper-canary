@@ -1,9 +1,6 @@
-n.d(t, {
-    v: () => l,
-});
+n.d(t, { v: () => s });
 let a = null;
-
-function l() {
+function s() {
     if (null == a)
         try {
             a = new AudioContext();

@@ -1,84 +1,78 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(990078),
-    s = n(421380),
-    o = n(397927),
-    l = n(203982),
-    c = n(652215),
-    u = n(985018),
-    d = n(614221);
-let f = function (e) {
-    var t;
+t.d(e, { A: () => c });
+var n = t(627968),
+    a = t(64700),
+    r = t(990078),
+    i = t(421380),
+    l = t(397927),
+    s = t(203982),
+    o = t(652215),
+    d = t(985018),
+    u = t(614221);
+let c = function (A) {
     let {
-            message: n,
-            errorMessage: f,
-            submitting: p,
-            onReset: _,
-            onSave: h,
-            onSaveText: m,
-            onResetText: g,
-            onSaveButtonColor: E,
-            disabled: b,
-            saveButtonTooltip: y,
-        } = e,
-        O = i.useRef(null),
-        [A, v] = i.useState(!1);
+            message: e,
+            errorMessage: t,
+            submitting: c,
+            onReset: g,
+            onSave: q,
+            onSaveText: p,
+            onResetText: f,
+            onSaveButtonColor: m,
+            disabled: h,
+            saveButtonTooltip: C,
+        } = A,
+        v = a.useRef(null),
+        [U, V] = a.useState(!1);
     return (
-        i.useEffect(() => {
-            function e() {
-                v(!0), setTimeout(() => v(!1), 1e3);
+        a.useEffect(() => {
+            function A() {
+                V(!0), setTimeout(() => V(!1), 1e3);
             }
             return (
-                l._.subscribe(c.jej.EMPHASIZE_NOTICE, e),
+                s._.subscribe(o.jej.EMPHASIZE_NOTICE, A),
                 () => {
-                    l._.unsubscribe(c.jej.EMPHASIZE_NOTICE, e);
+                    s._.unsubscribe(o.jej.EMPHASIZE_NOTICE, A);
                 }
             );
         }, []),
-        (0, r.jsx)("div", {
-            className: d.kL,
-            "data-emphasized": A,
-            children: (0, r.jsx)("div", {
-                className: d.nP,
-                ref: O,
-                children: (0, r.jsxs)(o.xpW, {
-                    containerRef: O,
+        (0, n.jsx)("div", {
+            className: u.kL,
+            "data-emphasized": U,
+            children: (0, n.jsx)("div", {
+                className: u.nP,
+                ref: v,
+                children: (0, n.jsxs)(l.xpW, {
+                    containerRef: v,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: d.Xk,
-                            children: (0, r.jsx)("div", {
-                                className: d.iU,
-                                children: null != (t = null != f ? f : n) ? t : u.intl.string(u.t.GP7JLE),
+                        (0, n.jsx)("div", {
+                            className: u.Xk,
+                            children: (0, n.jsx)("div", {
+                                className: u.iU,
+                                children: t ?? e ?? d.intl.string(d.t.GP7JLE),
                             }),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: d.o1,
+                        (0, n.jsxs)("div", {
+                            className: u.o1,
                             children: [
-                                null != _ &&
-                                    (0, r.jsx)(s.$n, {
-                                        className: d.WA,
-                                        size: s.$n.Sizes.SMALL,
-                                        color: s.$n.Colors.PRIMARY,
-                                        look: s.$n.Looks.LINK,
-                                        onClick: _,
-                                        children: (0, r.jsx)("span", {
-                                            children: null != g ? g : u.intl.string(u.t.yBZMsQ),
-                                        }),
+                                null != g &&
+                                    (0, n.jsx)(i.$n, {
+                                        className: u.WA,
+                                        size: i.$n.Sizes.SMALL,
+                                        color: i.$n.Colors.PRIMARY,
+                                        look: i.$n.Looks.LINK,
+                                        onClick: g,
+                                        children: (0, n.jsx)("span", { children: f ?? d.intl.string(d.t.yBZMsQ) }),
                                     }),
-                                null != h
-                                    ? (0, r.jsx)(a.m, {
-                                          text: y,
-                                          children: (0, r.jsx)(s.$n, {
-                                              size: s.$n.Sizes.SMALL,
-                                              color: null != E ? E : s.$n.Colors.GREEN,
-                                              submitting: p,
-                                              disabled: b,
-                                              onClick: h,
-                                              children: null != m ? m : u.intl.string(u.t.K344S7),
+                                null != q
+                                    ? (0, n.jsx)(r.m, {
+                                          text: C,
+                                          children: (0, n.jsx)(i.$n, {
+                                              size: i.$n.Sizes.SMALL,
+                                              color: m ?? i.$n.Colors.GREEN,
+                                              submitting: c,
+                                              disabled: h,
+                                              onClick: q,
+                                              children: p ?? d.intl.string(d.t.K344S7),
                                           }),
                                       })
                                     : null,

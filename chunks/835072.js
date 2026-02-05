@@ -1,20 +1,18 @@
-n.d(t, {
-    A: () => p,
-    f: () => f,
-});
+"use strict";
+n.d(t, { A: () => f, f: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(934551),
     a = n(765379),
-    o = n(82149),
-    s = n(412242),
+    s = n(82149),
+    o = n(412242),
     l = n(566903),
-    c = n(864436),
-    u = n(200041),
+    u = n(864436),
+    c = n(200041),
     d = n(652215);
-let f = function (e) {
+let _ = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, o.Cy)(e)
+    return (0, s.Cy)(e)
         ? i.StageIcon
         : (0, a.A)(e)
           ? t
@@ -30,37 +28,29 @@ let f = function (e) {
                   ? i.GameControllerIcon
                   : null;
 };
-
-function p(e) {
+function f(e) {
     let {
             activity: t,
             textVariant: n,
             textClassName: i,
             iconClassName: a,
-            hideIcon: o = !1,
+            hideIcon: s = !1,
             hideText: d = !1,
-            hideTooltip: p = !1,
-            canTruncate: _ = !0,
+            hideTooltip: f = !1,
+            canTruncate: p = !0,
         } = e,
-        { descriptiveTextEnabled: h } = (0, s.n)({
-            location: "PresenceActivityStatusWithCombinedTooltip",
-        }),
+        { descriptiveTextEnabled: h } = (0, o.n)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
         { text: m, tooltip: g } = (0, l.A)(t, h),
-        E = f(t),
-        y = null != E && !o;
-    return (0, r.jsx)(u.A, {
-        icon: y
-            ? (0, r.jsx)(c.A, {
-                  icon: E,
-                  className: a,
-              })
-            : void 0,
-        text: null != m ? m : "",
+        E = _(t),
+        A = null != E && !s;
+    return (0, r.jsx)(c.A, {
+        icon: A ? (0, r.jsx)(u.A, { icon: E, className: a }) : void 0,
+        text: m ?? "",
         textVariant: n,
         textClassName: i,
-        hideTooltip: p,
-        canTruncate: _,
-        "aria-label": null != g ? g : "",
+        hideTooltip: f,
+        canTruncate: p,
+        "aria-label": g ?? "",
         hideText: d,
     });
 }

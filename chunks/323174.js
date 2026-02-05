@@ -152,15 +152,9 @@ e.exports = function (e) {
             relevance: 10,
         },
         i = "[A-Za-z_][A-Za-z0-9_'-]*",
-        a = {
-            scope: "symbol",
-            match: RegExp(`<${i}(/${i})*>`),
-        },
+        a = { scope: "symbol", match: RegExp(`<${i}(/${i})*>`) },
         s = "[A-Za-z0-9_\\+\\.-]+",
-        o = {
-            scope: "symbol",
-            match: RegExp(`(\\.\\.|\\.|~)?/(${s})?(/${s})*(?=[\\s;])`),
-        },
+        o = { scope: "symbol", match: RegExp(`(\\.\\.|\\.|~)?/(${s})?(/${s})*(?=[\\s;])`) },
         l = t.either(
             "==",
             "=",
@@ -182,134 +176,60 @@ e.exports = function (e) {
             "\\*",
             "&&",
         ),
-        c = {
-            scope: "operator",
-            match: t.concat(l, /(?!-)/),
-            relevance: 0,
-        },
-        u = {
-            scope: "number",
-            match: RegExp(`${e.NUMBER_RE}(?!-)`),
-            relevance: 0,
-        },
+        u = { scope: "operator", match: t.concat(l, /(?!-)/), relevance: 0 },
+        c = { scope: "number", match: RegExp(`${e.NUMBER_RE}(?!-)`), relevance: 0 },
         d = {
             variants: [
-                {
-                    scope: "operator",
-                    beforeMatch: /\s/,
-                    begin: /-(?!>)/,
-                },
-                {
-                    begin: [RegExp(`${e.NUMBER_RE}`), /-/, /(?!>)/],
-                    beginScope: {
-                        1: "number",
-                        2: "operator",
-                    },
-                },
-                {
-                    begin: [l, /-/, /(?!>)/],
-                    beginScope: {
-                        1: "operator",
-                        2: "operator",
-                    },
-                },
+                { scope: "operator", beforeMatch: /\s/, begin: /-(?!>)/ },
+                { begin: [RegExp(`${e.NUMBER_RE}`), /-/, /(?!>)/], beginScope: { 1: "number", 2: "operator" } },
+                { begin: [l, /-/, /(?!>)/], beginScope: { 1: "operator", 2: "operator" } },
             ],
             relevance: 0,
         },
-        f = {
+        _ = {
             beforeMatch: /(^|\{|;)\s*/,
             begin: RegExp(`${i}(\\.${i})*\\s*=(?!=)`),
             returnBegin: !0,
             relevance: 0,
-            contains: [
-                {
-                    scope: "attr",
-                    match: RegExp(`${i}(\\.${i})*(?=\\s*=)`),
-                    relevance: 0.2,
-                },
-            ],
+            contains: [{ scope: "attr", match: RegExp(`${i}(\\.${i})*(?=\\s*=)`), relevance: 0.2 }],
         },
-        p = {
-            scope: "subst",
-            begin: /\$\{/,
-            end: /\}/,
-            keywords: n,
-        },
-        _ = {
-            scope: "char.escape",
-            match: /\\(?!\$)./,
-        },
+        f = { scope: "subst", begin: /\$\{/, end: /\}/, keywords: n },
+        p = { scope: "char.escape", match: /\\(?!\$)./ },
         h = {
             scope: "string",
             variants: [
                 {
                     begin: "''",
                     end: "''",
-                    contains: [
-                        {
-                            scope: "char.escape",
-                            match: /''\$/,
-                        },
-                        p,
-                        {
-                            scope: "char.escape",
-                            match: /'''/,
-                        },
-                        _,
-                    ],
+                    contains: [{ scope: "char.escape", match: /''\$/ }, f, { scope: "char.escape", match: /'''/ }, p],
                 },
-                {
-                    begin: '"',
-                    end: '"',
-                    contains: [
-                        {
-                            scope: "char.escape",
-                            match: /\\\$/,
-                        },
-                        p,
-                        _,
-                    ],
-                },
+                { begin: '"', end: '"', contains: [{ scope: "char.escape", match: /\\\$/ }, f, p] },
             ],
         },
-        m = {
-            scope: "params",
-            match: RegExp(`${i}\\s*:(?=\\s)`),
-        },
+        m = { scope: "params", match: RegExp(`${i}\\s*:(?=\\s)`) },
         g = [
-            u,
+            c,
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            e.COMMENT(/\/\*\*(?!\/)/, /\*\//, {
-                subLanguage: "markdown",
-                relevance: 0,
-            }),
+            e.COMMENT(/\/\*\*(?!\/)/, /\*\//, { subLanguage: "markdown", relevance: 0 }),
             r,
             h,
             a,
             o,
             m,
-            f,
+            _,
             d,
-            c,
+            u,
         ];
     return (
-        (p.contains = g),
+        (f.contains = g),
         {
             name: "Nix",
             aliases: ["nixos"],
             keywords: n,
             contains: g.concat([
-                {
-                    scope: "meta.prompt",
-                    match: /^nix-repl>(?=\s)/,
-                    relevance: 10,
-                },
-                {
-                    scope: "meta",
-                    beforeMatch: /\s+/,
-                    begin: /:([a-z]+|\?)/,
-                },
+                { scope: "meta.prompt", match: /^nix-repl>(?=\s)/, relevance: 10 },
+                { scope: "meta", beforeMatch: /\s+/, begin: /:([a-z]+|\?)/ },
             ]),
         }
     );

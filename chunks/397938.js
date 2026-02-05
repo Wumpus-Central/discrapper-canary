@@ -1,207 +1,134 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => N });
+var i = n(627968),
     l = n(64700),
-    i = n(837381),
-    s = n(311907),
-    a = n(827734),
+    s = n(837381),
+    a = n(311907),
+    r = n(827734),
     o = n(397927),
-    c = n(941971),
-    u = n(900848),
-    d = n(371911),
-    p = n(222823),
-    h = n(309010),
-    f = n(287809),
-    g = n(851109),
-    m = n(394953),
-    b = n(355216),
-    A = n(596540),
-    y = n(879221);
+    d = n(941971),
+    c = n(900848),
+    u = n(371911),
+    h = n(222823),
+    A = n(309010),
+    g = n(287809),
+    m = n(851109),
+    p = n(394953),
+    _ = n(355216),
+    x = n(596540),
+    f = n(879221);
 n(445368);
-var _ = n(652215),
-    O = n(790782),
-    j = n(626600);
-
-function v() {
-    let e = (0, s.bG)([f.default], () => f.default.getCurrentUser());
-    return (0, s.bG)(
-        [p.Ay],
-        () => (null == e ? void 0 : e.id) != null && p.Ay.getMentionCount(e.id, O.P.NOTIFICATION_CENTER) > 0,
-    );
+var E = n(652215),
+    C = n(790782),
+    I = n(626600);
+function S() {
+    let e = (0, a.bG)([g.default], () => g.default.getCurrentUser());
+    return (0, a.bG)([h.Ay], () => e?.id != null && h.Ay.getMentionCount(e.id, C.P.NOTIFICATION_CENTER) > 0);
 }
-
-function x(e) {
-    var t, n;
-    let { onClick: d, selectedOverride: p = !1, popoutProps: f, ref: A } = e,
-        O = (0, i.Vd)("notifications-inbox"),
-        [x, E] = l.useState(!1),
-        C = (0, m.lI)(),
-        S = p || C,
-        { notificationCenterVariant: I } = (0, g.X8)({
-            location: "NotificationsInboxButtonInner",
-        }),
+function b(e) {
+    let { onClick: t, selectedOverride: n = !1, popoutProps: u, ref: h } = e,
+        g = (0, s.Vd)("notifications-inbox"),
+        [x, C] = l.useState(!1),
+        b = (0, p.lI)(),
+        N = n || b,
+        { notificationCenterVariant: T } = (0, m.X8)({ location: "NotificationsInboxButtonInner" }),
         {
-            badge: N,
-            badgeDimensions: T,
-            unreadChannelsCount: P,
+            badge: j,
+            badgeDimensions: v,
+            unreadChannelsCount: y,
         } = (function (e) {
-            let { notificationCenterVariant: t } = (0, g.X8)({
-                    location: "NotificationsInboxButtonInner",
-                }),
-                { unreadChannelIds: n } = (0, m.U4)(),
-                l = v(),
-                { badge: i, dimensions: s } = (0, b.ux)({
-                    isSelected: e,
-                });
-            return t === g.U5.LEGACY
+            let { notificationCenterVariant: t } = (0, m.X8)({ location: "NotificationsInboxButtonInner" }),
+                { unreadChannelIds: n } = (0, p.U4)(),
+                l = S(),
+                { badge: s, dimensions: a } = (0, _.ux)({ isSelected: e });
+            return t === m.U5.LEGACY
                 ? {
                       badge: l
-                          ? (0, r.jsx)(o.SC0, {
-                                style: {
-                                    height: 13,
-                                    width: 13,
-                                    position: "relative",
-                                },
-                                color: a.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                          ? (0, i.jsx)(o.SC0, {
+                                style: { height: 13, width: 13, position: "relative" },
+                                color: r.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                             })
                           : null,
                       unreadChannelsCount: 0,
-                      badgeDimensions: {
-                          height: 13,
-                          width: 13,
-                      },
+                      badgeDimensions: { height: 13, width: 13 },
                   }
-                : {
-                      badge: i,
-                      unreadChannelsCount: n.length,
-                      badgeDimensions: s,
-                  };
-        })(S),
-        w = I === g.U5.LEGACY ? o.K$s : o.XFE,
-        R = (0, s.bG)([h.A], () => h.A.getChannelId()),
-        D = l.useMemo(() => {
-            if (I === g.U5.SIDEBAR) return _.BVt.CHANNEL(_.gNP, R);
-        }, [I, R]);
-    return (0, r.jsxs)(u.c, {
-        ref: A,
+                : { badge: s, unreadChannelsCount: n.length, badgeDimensions: a };
+        })(N),
+        R = T === m.U5.LEGACY ? o.K$s : o.XFE,
+        O = (0, a.bG)([A.A], () => A.A.getChannelId()),
+        L = l.useMemo(() => {
+            if (T === m.U5.SIDEBAR) return E.BVt.CHANNEL(E.gNP, O);
+        }, [T, O]);
+    return (0, i.jsxs)(c.c, {
+        ref: h,
         children: [
-            (0, r.jsx)(c.A, {
-                selected: S && I === g.U5.SIDEBAR,
-                hovered: x && I === g.U5.SIDEBAR,
-                unread: P > 0,
-                className: j.Io,
-                disabled: I === g.U5.LEGACY,
+            (0, i.jsx)(d.A, {
+                selected: N && T === m.U5.SIDEBAR,
+                hovered: x && T === m.U5.SIDEBAR,
+                unread: y > 0,
+                className: I.Io,
+                disabled: T === m.U5.LEGACY,
             }),
-            (0, r.jsx)(y.A, {
-                children: (0, r.jsx)(o.Qk9, {
-                    selected: S || x,
-                    lowerBadge: N,
-                    lowerBadgeSize: T,
-                    children: (0, r.jsx)(
-                        o.jlP,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, O, f)),
-                        (n = n =
-                            {
-                                onClick: d,
-                                to: D,
-                                selected: S || x,
-                                onMouseEnter: () => E(!0),
-                                onMouseLeave: () => E(!1),
-                                children: (0, r.jsx)(w, {
-                                    size: "custom",
-                                    color: "currentColor",
-                                    className: j.iZ,
-                                    width: 20,
-                                    height: 20,
-                                }),
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t),
-                    ),
+            (0, i.jsx)(f.A, {
+                children: (0, i.jsx)(o.Qk9, {
+                    selected: N || x,
+                    lowerBadge: j,
+                    lowerBadgeSize: v,
+                    children: (0, i.jsx)(o.jlP, {
+                        ...g,
+                        ...u,
+                        onClick: t,
+                        to: L,
+                        selected: N || x,
+                        onMouseEnter: () => C(!0),
+                        onMouseLeave: () => C(!1),
+                        children: (0, i.jsx)(R, {
+                            size: "custom",
+                            color: "currentColor",
+                            className: I.iZ,
+                            width: 20,
+                            height: 20,
+                        }),
+                    }),
                 }),
             }),
         ],
     });
 }
-
-function E() {
+function N() {
     let e = l.useRef(null),
-        { notificationCenterVariant: t } = (0, g.X8)({
-            location: "NotificationsInboxButton",
-        }),
-        n = v(),
-        i = (0, b.HN)();
-    return t === g.U5.SIDEBAR
-        ? (0, r.jsx)(x, {
-              onClick: i,
-          })
-        : t === g.U5.POPOUT
-          ? (0, r.jsx)(A.A, {
+        { notificationCenterVariant: t } = (0, m.X8)({ location: "NotificationsInboxButton" }),
+        n = S(),
+        s = (0, _.HN)();
+    return t === m.U5.SIDEBAR
+        ? (0, i.jsx)(b, { onClick: s })
+        : t === m.U5.POPOUT
+          ? (0, i.jsx)(x.A, {
                 targetElementRef: e,
                 popoutPosition: "right",
                 popoutAlign: "bottom",
                 children: (t, n, l) =>
-                    (0, r.jsx)(x, {
+                    (0, i.jsx)(b, {
                         ref: e,
                         selectedOverride: n,
                         onClick: () => {
-                            i(), t();
+                            s(), t();
                         },
                         popoutProps: l,
                     }),
             })
-          : t === g.U5.LEGACY
-            ? (0, r.jsx)(d.C, {
+          : t === m.U5.LEGACY
+            ? (0, i.jsx)(u.C, {
                   spacing: 0,
-                  badgeState: {
-                      badgeForYou: n,
-                  },
+                  badgeState: { badgeForYou: n },
                   targetElementRef: e,
                   popoutPosition: "right",
                   popoutAlign: "top",
                   children: (t, n, l) =>
-                      (0, r.jsx)(x, {
+                      (0, i.jsx)(b, {
                           ref: e,
                           selectedOverride: n,
                           onClick: () => {
-                              i(), t();
+                              s(), t();
                           },
                           popoutProps: l,
                       }),

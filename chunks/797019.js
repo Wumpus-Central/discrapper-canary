@@ -1,32 +1,13 @@
-n.d(t, {
-    y: () => i,
-});
+"use strict";
+n.d(t, { y: () => i });
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2025-03_obscured_message_loaded_analytics",
     label: "Obscured message loaded analytics",
-    defaultConfig: {
-        enabled: !1,
-    },
-    treatments: [
-        {
-            id: 1,
-            label: "Enables the experiment",
-            config: {
-                enabled: !0,
-            },
-        },
-    ],
+    defaultConfig: { enabled: !1 },
+    treatments: [{ id: 1, label: "Enables the experiment", config: { enabled: !0 } }],
 });
-
 function i() {
-    let { enabled: e } = r.getCurrentConfig(
-        {
-            location: "686da2_1",
-        },
-        {
-            autoTrackExposure: !0,
-        },
-    );
+    let { enabled: e } = r.getCurrentConfig({ location: "686da2_1" }, { autoTrackExposure: !0 });
     return e;
 }

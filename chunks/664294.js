@@ -3,7 +3,6 @@ var n = decodeURIComponent,
     r = encodeURIComponent,
     i = /; */,
     a = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
-
 function s(e, t) {
     if ("string" != typeof e) throw TypeError("argument str must be a string");
     var r = {},
@@ -22,7 +21,6 @@ function s(e, t) {
         r
     );
 }
-
 function o(e, t, n) {
     var i = n || {},
         s = i.encode || r;
@@ -31,9 +29,9 @@ function o(e, t, n) {
     if (o && !a.test(o)) throw TypeError("argument val is invalid");
     var l = [e + "=" + o];
     if (null != i.maxAge) {
-        var c = i.maxAge - 0;
-        if (isNaN(c)) throw Error("maxAge should be a Number");
-        l.push("Max-Age=" + Math.floor(c));
+        var u = i.maxAge - 0;
+        if (isNaN(u)) throw Error("maxAge should be a Number");
+        l.push("Max-Age=" + Math.floor(u));
     }
     if (i.domain) {
         if (!a.test(i.domain)) throw TypeError("option domain is invalid");
@@ -51,7 +49,6 @@ function o(e, t, n) {
         l.join("; ")
     );
 }
-
 function l(e, t) {
     try {
         return t(e);

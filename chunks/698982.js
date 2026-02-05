@@ -1,19 +1,16 @@
+"use strict";
 function n(e, t, n) {
     (this.locales = e), (this.formats = t), (this.pluralFn = n);
 }
-
 function r(e) {
     this.id = e;
 }
-
 function i(e, t, n, r, i) {
     (this.id = e), (this.useOrdinal = t), (this.offset = n), (this.options = r), (this.pluralFn = i);
 }
-
 function a(e, t, n, r) {
     (this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = r);
 }
-
 function s(e, t) {
     (this.id = e), (this.options = t);
 }
@@ -62,29 +59,11 @@ function s(e, t) {
             l = this.pluralFn;
         switch (t.type) {
             case "numberFormat":
-                return (
-                    (n = a.number[t.style]),
-                    {
-                        id: e.id,
-                        format: new Intl.NumberFormat(o, n).format,
-                    }
-                );
+                return (n = a.number[t.style]), { id: e.id, format: new Intl.NumberFormat(o, n).format };
             case "dateFormat":
-                return (
-                    (n = a.date[t.style]),
-                    {
-                        id: e.id,
-                        format: new Intl.DateTimeFormat(o, n).format,
-                    }
-                );
+                return (n = a.date[t.style]), { id: e.id, format: new Intl.DateTimeFormat(o, n).format };
             case "timeFormat":
-                return (
-                    (n = a.time[t.style]),
-                    {
-                        id: e.id,
-                        format: new Intl.DateTimeFormat(o, n).format,
-                    }
-                );
+                return (n = a.time[t.style]), { id: e.id, format: new Intl.DateTimeFormat(o, n).format };
             case "pluralFormat":
                 return (n = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, n, l);
             case "selectFormat":

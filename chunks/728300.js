@@ -1,72 +1,62 @@
-r(65821);
-var o = r(346915),
-    a = r(100846);
-r(140667);
-var n = r(339984);
-async function i(e) {
+var a = t(346915),
+    o = t(100846);
+t(140667);
+var i = t(339984);
+async function n(e) {
     let {
-        data: t,
-        x: r,
-        y: i,
+        data: r,
+        x: t,
+        y: n,
         width: l,
-        height: c,
-        imageRotation: s = 0,
-        resizeWidth: f = null,
-        resizeHeight: u = null,
-        format: m,
+        height: s,
+        imageRotation: f = 0,
+        resizeWidth: c = null,
+        resizeHeight: m = null,
+        format: u,
     } = e;
     try {
         let e;
         (e =
-            "webp" === m
-                ? await (0, a.a6)({
-                      webp: t,
-                      x: r,
-                      y: i,
+            "webp" === u
+                ? await (0, o.a6)({
+                      webp: r,
+                      x: t,
+                      y: n,
                       width: l,
-                      height: c,
-                      imageRotation: s,
-                      resizeWidth: f,
-                      resizeHeight: u,
+                      height: s,
+                      imageRotation: f,
+                      resizeWidth: c,
+                      resizeHeight: m,
                   })
-                : await (0, o.N)({
-                      gif: t,
-                      x: r,
-                      y: i,
+                : await (0, a.N)({
+                      gif: r,
+                      x: t,
+                      y: n,
                       width: l,
-                      height: c,
-                      imageRotation: s,
-                      resizeWidth: f,
-                      resizeHeight: u,
+                      height: s,
+                      imageRotation: f,
+                      resizeWidth: c,
+                      resizeHeight: m,
                   })),
-            self.postMessage({
-                type: n.lA.CROP_ANIMATED_IMAGE_COMPLETE,
-                result: e,
-            });
-    } catch (r) {
-        let e = r instanceof Error ? r.message : String(r),
-            t = r instanceof Error ? r.stack : void 0;
-        self.postMessage({
-            type: n.lA.CROP_ANIMATED_IMAGE_ERROR,
-            error: {
-                message: e,
-                stack: t,
-            },
-        });
+            self.postMessage({ type: i.lA.CROP_ANIMATED_IMAGE_COMPLETE, result: e });
+    } catch (t) {
+        let e = t instanceof Error ? t.message : String(t),
+            r = t instanceof Error ? t.stack : void 0;
+        self.postMessage({ type: i.lA.CROP_ANIMATED_IMAGE_ERROR, error: { message: e, stack: r } });
     }
 }
 self.addEventListener("message", (e) => {
-    let { data: t } = e;
-    t.type === n.lA.CROP_ANIMATED_IMAGE_START &&
-        i({
-            data: t.data,
-            x: t.x,
-            y: t.y,
-            width: t.width,
-            height: t.height,
-            imageRotation: t.imageRotation,
-            resizeWidth: t.resizeWidth,
-            resizeHeight: t.resizeHeight,
-            format: t.format,
+    let { data: r } = e;
+    r.type === i.lA.CROP_ANIMATED_IMAGE_START &&
+        n({
+            data: r.data,
+            x: r.x,
+            y: r.y,
+            width: r.width,
+            height: r.height,
+            imageRotation: r.imageRotation,
+            resizeWidth: r.resizeWidth,
+            resizeHeight: r.resizeHeight,
+            format: r.format,
         });
 });

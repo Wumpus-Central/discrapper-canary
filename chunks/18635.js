@@ -1,191 +1,132 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(747238),
-    n(812715);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => O }), n(323874), n(14289), n(35956);
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(960488),
     o = n(311907),
-    c = n(397927),
-    u = n(73153),
-    d = n(944791),
-    p = n(711950),
+    d = n(397927),
+    c = n(73153),
+    u = n(944791),
+    A = n(711950),
     h = n(726249),
-    g = n(915089),
+    _ = n(915089),
     m = n(346084),
-    f = n(742589),
-    A = n(95550),
-    _ = n(608881),
-    b = n(210714),
-    E = n(544028),
-    O = n(595623),
-    y = n(912309),
-    I = n(662074),
-    v = n(265990),
-    S = n(652215),
-    C = n(204925),
-    N = n(985018),
-    T = n(790367);
-
-function j() {
-    return (0, r.jsx)("div", {
-        className: T.N3,
-        children: (0, r.jsx)(A.Ay, {
-            tooltip: N.intl.string(N.t["HfOgA/"]),
-        }),
+    p = n(742589),
+    g = n(95550),
+    E = n(608881),
+    f = n(210714),
+    I = n(544028),
+    C = n(595623),
+    N = n(912309),
+    T = n(662074),
+    S = n(265990),
+    x = n(652215),
+    v = n(204925),
+    b = n(985018),
+    y = n(790367);
+function L() {
+    return (0, i.jsx)("div", {
+        className: y.N3,
+        children: (0, i.jsx)(g.Ay, { tooltip: b.intl.string(b.t["HfOgA/"]) }),
     });
 }
-let x = function (e) {
+let O = function (e) {
     let { initialSection: t } = e,
         n = (0, s.zy)(),
-        l = (0, s.W6)();
-    i.useEffect(() => {
+        a = (0, s.W6)();
+    r.useEffect(() => {
         "true" === new URLSearchParams(n.search).get("confirm-age") &&
-            u.h
-                .dispatch({
-                    type: "AGE_GATE_MODAL_OPEN",
-                    source: C.w_.DEEP_LINK_PROMPT,
-                })
-                .then(() => {
-                    l.replace(S.BVt.ME);
-                });
-    }, [l, n]),
-        i.useEffect(() => {
-            d.I(S.BVt.FRIENDS), (0, b.d)("friends");
-        }, []);
-    let A = (0, o.bG)([E.A], () => E.A.theme),
-        x = (0, y.kX)(),
-        { section: P, rows: w } = (0, o.cf)([O.Ay], () => O.Ay.getState()),
-        L = (0, o.bG)([m.A], () => m.A.getSuggestionCount()),
-        R = i.useMemo(() => w.getRelationshipCounts(), [w]);
-    i.useEffect(() => {
-        null != t && p.A.setInitialSection(t),
-            0 === R[S.eA$.FRIEND] &&
-                0 === R[S.eA$.PENDING_INCOMING] &&
-                0 === R[S.eA$.PENDING_OUTGOING] &&
-                0 === R[S.eA$.BLOCKED] &&
-                p.A.transitionToSection(S.m3P.ADD_FRIEND);
-    }, [t, R]);
-    let D = (e) => {
-            p.A.transitionToSection(e, {
-                explicit: !0,
+            c.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: v.w_.DEEP_LINK_PROMPT }).then(() => {
+                a.replace(x.BVt.ME);
             });
+    }, [a, n]),
+        r.useEffect(() => {
+            u.I(x.BVt.FRIENDS), (0, f.d)("friends");
+        }, []);
+    let g = (0, o.bG)([I.A], () => I.A.theme),
+        O = (0, N.kX)(),
+        { section: R, rows: P } = (0, o.cf)([C.Ay], () => C.Ay.getState()),
+        j = (0, o.bG)([m.A], () => m.A.getSuggestionCount()),
+        D = r.useMemo(() => P.getRelationshipCounts(), [P]);
+    r.useEffect(() => {
+        null != t && A.A.setInitialSection(t),
+            0 === D[x.eA$.FRIEND] &&
+                0 === D[x.eA$.PENDING_INCOMING] &&
+                0 === D[x.eA$.PENDING_OUTGOING] &&
+                0 === D[x.eA$.BLOCKED] &&
+                A.A.transitionToSection(x.m3P.ADD_FRIEND);
+    }, [t, D]);
+    let w = (e) => {
+            A.A.transitionToSection(e, { explicit: !0 });
         },
-        M = (0, g.GV)(),
-        k = (0, g.GV)(),
-        U = [
+        M = (0, _.GV)(),
+        U = (0, _.GV)(),
+        G = [
             {
-                id: S.m3P.ONLINE,
-                show: w.filter(S.m3P.ONLINE).length > 0,
-                content: N.intl.string(N.t.b9w3bO),
-                className: T.AS,
+                id: x.m3P.ONLINE,
+                show: P.filter(x.m3P.ONLINE).length > 0,
+                content: b.intl.string(b.t.b9w3bO),
+                className: y.AS,
+            },
+            { id: x.m3P.ALL, show: D[x.eA$.FRIEND] > 0, content: b.intl.string(b.t.PfjFjR), className: y.AS },
+            {
+                id: x.m3P.PENDING,
+                show: P.filter(x.m3P.PENDING).length > 0,
+                content: (0, i.jsxs)(i.Fragment, {
+                    children: [b.intl.string(b.t.p6IHGE), O > 0 && (0, i.jsx)(d.hVq, { count: O, className: y.qS })],
+                }),
+                ariaLabel: b.intl.formatToPlainString(b.t.OAC0Z4, { count: O.toString() }),
+                className: y.AS,
             },
             {
-                id: S.m3P.ALL,
-                show: R[S.eA$.FRIEND] > 0,
-                content: N.intl.string(N.t.PfjFjR),
-                className: T.AS,
+                id: x.m3P.SUGGESTIONS,
+                show: j > 0,
+                content: (0, i.jsxs)(i.Fragment, {
+                    children: [b.intl.string(b.t["8rSi1/"]), (0, i.jsx)(d.hVq, { count: j, className: y.qS })],
+                }),
+                ariaLabel: b.intl.formatToPlainString(b.t.AbMQp7, { count: j.toString() }),
+                className: y.AS,
             },
             {
-                id: S.m3P.PENDING,
-                show: w.filter(S.m3P.PENDING).length > 0,
-                content: (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        N.intl.string(N.t.p6IHGE),
-                        x > 0 &&
-                            (0, r.jsx)(c.hVq, {
-                                count: x,
-                                className: T.qS,
-                            }),
-                    ],
-                }),
-                ariaLabel: N.intl.formatToPlainString(N.t.OAC0Z4, {
-                    count: x.toString(),
-                }),
-                className: T.AS,
-            },
-            {
-                id: S.m3P.SUGGESTIONS,
-                show: L > 0,
-                content: (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        N.intl.string(N.t["8rSi1/"]),
-                        (0, r.jsx)(c.hVq, {
-                            count: L,
-                            className: T.qS,
-                        }),
-                    ],
-                }),
-                ariaLabel: N.intl.formatToPlainString(N.t.AbMQp7, {
-                    count: L.toString(),
-                }),
-                className: T.AS,
-            },
-            {
-                id: S.m3P.ADD_FRIEND,
+                id: x.m3P.ADD_FRIEND,
                 show: !0,
-                content: (0, r.jsx)("span", {
-                    children: N.intl.string(N.t.j0wbE5),
-                }),
-                ariaLabel: N.intl.string(N.t.j0wbE5),
-                className: a()(T.AS, T.GU),
+                content: (0, i.jsx)("span", { children: b.intl.string(b.t.j0wbE5) }),
+                ariaLabel: b.intl.string(b.t.j0wbE5),
+                className: l()(y.AS, y.GU),
             },
         ],
-        G = null,
-        V = (0, r.jsx)("div", {
-            className: T.Xl,
-            children: (0, r.jsx)(_.A, {}),
-        });
+        k = null,
+        V = (0, i.jsx)("div", { className: y.Xl, children: (0, i.jsx)(E.A, {}) });
     return (
-        (G =
-            P === S.m3P.ADD_FRIEND
-                ? (0, r.jsx)(I.A, {})
-                : (0, r.jsx)(v.A, {
-                      titleId: k,
-                  })),
-        (0, r.jsxs)("main", {
-            className: T.kL,
-            "aria-label": N.intl.string(N.t.TdEu5X),
+        (k = R === x.m3P.ADD_FRIEND ? (0, i.jsx)(T.A, {}) : (0, i.jsx)(S.A, { titleId: U })),
+        (0, i.jsxs)("main", {
+            className: y.kL,
+            "aria-label": b.intl.string(b.t.TdEu5X),
             children: [
-                (0, r.jsx)(h.HI, {
-                    location: N.intl.string(N.t.TdEu5X),
-                }),
-                (0, r.jsx)(c.NPJ, {
-                    theme: A,
+                (0, i.jsx)(h.HI, { location: b.intl.string(b.t.TdEu5X) }),
+                (0, i.jsx)(d.NPJ, {
+                    theme: g,
                     children: (e) =>
-                        (0, r.jsxs)(f.A, {
+                        (0, i.jsxs)(p.A, {
                             className: e,
-                            toolbar: (0, r.jsx)(j, {}),
+                            toolbar: (0, i.jsx)(L, {}),
                             role: "navigation",
                             "aria-labelledby": M,
                             scrollable: !0,
                             children: [
-                                (0, r.jsx)(f.A.Icon, {
-                                    icon: c.$yI,
-                                    "aria-hidden": !0,
-                                }),
-                                (0, r.jsx)(f.A.Title, {
-                                    id: M,
-                                    children: N.intl.string(N.t.TdEu5X),
-                                }),
-                                (0, r.jsx)(f.A.Divider, {}),
-                                (0, r.jsx)(c.VQ0, {
-                                    "aria-label": N.intl.string(N.t.TdEu5X),
-                                    selectedItem: P,
+                                (0, i.jsx)(p.A.Icon, { icon: d.$yI, "aria-hidden": !0 }),
+                                (0, i.jsx)(p.A.Title, { id: M, children: b.intl.string(b.t.TdEu5X) }),
+                                (0, i.jsx)(p.A.Divider, {}),
+                                (0, i.jsx)(d.VQ0, {
+                                    "aria-label": b.intl.string(b.t.TdEu5X),
+                                    selectedItem: R,
                                     type: "top-pill",
-                                    onItemSelect: D,
-                                    className: T.$H,
-                                    children: U.filter((e) => e.show).map((e) =>
-                                        (0, r.jsx)(
-                                            c.VQ0.Item,
+                                    onItemSelect: w,
+                                    className: y.$H,
+                                    children: G.filter((e) => e.show).map((e) =>
+                                        (0, i.jsx)(
+                                            d.VQ0.Item,
                                             {
                                                 id: e.id,
                                                 className: e.className,
@@ -199,15 +140,10 @@ let x = function (e) {
                             ],
                         }),
                 }),
-                (0, r.jsxs)("div", {
-                    className: T.MJ,
+                (0, i.jsxs)("div", {
+                    className: y.MJ,
                     children: [
-                        (0, r.jsx)(c.VQ0.Panel, {
-                            id: P,
-                            className: T.UL,
-                            "aria-labelledby": k,
-                            children: G,
-                        }),
+                        (0, i.jsx)(d.VQ0.Panel, { id: R, className: y.UL, "aria-labelledby": U, children: k }),
                         V,
                     ],
                 }),

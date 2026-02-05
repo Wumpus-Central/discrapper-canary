@@ -1,12 +1,11 @@
+"use strict";
 var n = e(61748)("iterator"),
     o = !1;
 try {
     var s = 0,
         i = {
             next: function () {
-                return {
-                    done: !!s++,
-                };
+                return { done: !!s++ };
             },
             return: function () {
                 o = !0;
@@ -31,9 +30,7 @@ t.exports = function (t, r) {
         (s[n] = function () {
             return {
                 next: function () {
-                    return {
-                        done: (e = !0),
-                    };
+                    return { done: (e = !0) };
                 },
             };
         }),

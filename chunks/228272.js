@@ -1,38 +1,34 @@
-n.d(t, {
-    A: () => d,
-    i: () => u,
-});
+"use strict";
+n.d(t, { A: () => c, i: () => u });
 var r = n(972347),
     i = n(118356),
     a = n(277738),
     s = n(201327),
     o = n(731854);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = new i.Vy("Output");
+let l = new i.Vy("Output");
 var u = (function (e) {
     return (e.InteractionRequired = "interactionrequired"), (e.Speaking = "speaking"), (e.Video = "video"), e;
 })({});
-class d extends r.A {
+class c extends r.A {
+    id;
+    _speakingFlags = o.ME.NONE;
+    _mute = !1;
+    _volume = o.Hz;
+    sinkId = null;
+    audioElement = null;
+    stream = new MediaStream();
+    videoStreamId = null;
+    levelNode = null;
+    streamSourceNode = null;
+    audioContext;
+    constructor(e, t) {
+        super(), (this.id = e), (this.audioContext = t);
+    }
     play() {
-        var e;
-        null == (e = this.audioElement) || e.play();
+        this.audioElement?.play();
     }
     destroy() {
-        var e;
-        null == (e = this.audioElement) || e.pause(),
+        this.audioElement?.pause(),
             null != this.videoStreamId && (0, s.it)(this.videoStreamId),
             null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)),
             null != this.levelNode &&
@@ -59,7 +55,7 @@ class d extends r.A {
                     }),
                     null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode);
             } catch (e) {
-                c.warn("Output#Failed to setup speaking indicator: ".concat(e));
+                l.warn(`Output#Failed to setup speaking indicator: ${e}`);
             }
         }
         return (
@@ -116,21 +112,5 @@ class d extends r.A {
             let t = this.sinkId;
             null != t && a.gY && e.setSinkId(t);
         }
-    }
-    constructor(e, t) {
-        super(),
-            l(this, "id", void 0),
-            l(this, "_speakingFlags", o.ME.NONE),
-            l(this, "_mute", !1),
-            l(this, "_volume", o.Hz),
-            l(this, "sinkId", null),
-            l(this, "audioElement", null),
-            l(this, "stream", new MediaStream()),
-            l(this, "videoStreamId", null),
-            l(this, "levelNode", null),
-            l(this, "streamSourceNode", null),
-            l(this, "audioContext", void 0),
-            (this.id = e),
-            (this.audioContext = t);
     }
 }

@@ -1,44 +1,36 @@
-n.d(e, {
-    A: () => A,
-});
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(15285),
-    c = n(134861),
-    o = n(189081),
-    u = n(194871),
-    d = n(144914),
-    b = n(715671),
-    s = n(651743),
-    p = n(985018);
-
-function A(t, e) {
-    let n = (0, i.bG)([a.Ay], () => a.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
-        A = (0, i.bG)(
-            [o.A, s.A, u.A, c.A],
+i.d(n, { A: () => h });
+var l = i(627968);
+i(64700);
+var a = i(311907),
+    e = i(397927),
+    r = i(15285),
+    d = i(134861),
+    c = i(189081),
+    A = i(194871),
+    s = i(144914),
+    u = i(715671),
+    o = i(651743),
+    b = i(985018);
+function h(t, n) {
+    let i = (0, a.bG)([r.Ay], () => r.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+        h = (0, a.bG)(
+            [c.A, o.A, A.A, d.A],
             () =>
-                (0, d.A)({
-                    LibraryApplicationStore: o.A,
-                    LaunchableGameStore: s.A,
-                    DispatchApplicationStore: u.A,
-                    ConnectedAppsStore: c.A,
+                (0, s.A)({
+                    LibraryApplicationStore: c.A,
+                    LaunchableGameStore: o.A,
+                    DispatchApplicationStore: A.A,
+                    ConnectedAppsStore: d.A,
                     applicationId: t.id,
                     branchId: t.branchId,
                 }),
             [t.branchId, t.id],
         );
-    return n || !A
+    return i || !h
         ? null
-        : (0, r.jsx)(l.Drp, {
+        : (0, l.jsx)(e.Drp, {
               id: "launch",
-              label: p.intl.string(p.t.XKUw8m),
-              action: () =>
-                  b.playApplication(t.id, t, {
-                      analyticsParams: {
-                          location: e,
-                      },
-                  }),
+              label: b.intl.string(b.t.XKUw8m),
+              action: () => u.playApplication(t.id, t, { analyticsParams: { location: n } }),
           });
 }

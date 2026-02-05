@@ -1,21 +1,17 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    A: () => i,
-}),
-    n(321073);
+n.d(t, { A: () => i }), n(321073);
 class i {
+    _capacity;
+    _tokenCount;
+    _queue;
+    _intervalPeriod;
+    _intervalID;
+    constructor(e, t) {
+        (this._capacity = e),
+            (this._tokenCount = e),
+            (this._queue = []),
+            (this._intervalPeriod = t / e),
+            (this._intervalID = null);
+    }
     _processQueue() {
         setTimeout(() => {
             if (this._queue.length > 0 && this._tokenCount > 0) {
@@ -23,7 +19,7 @@ class i {
                     null == this._intervalID &&
                         (this._intervalID = setInterval(() => this._iterate(), this._intervalPeriod));
                 let e = this._queue.shift();
-                null == e || e(), this._processQueue();
+                e?.resolve(), this._processQueue();
             }
         }, 0);
     }
@@ -34,21 +30,21 @@ class i {
                 (clearInterval(this._intervalID), (this._intervalID = null)),
             this._processQueue();
     }
-    process() {
-        return new Promise((e) => {
-            this._queue.push(e), this._processQueue();
+    process(e) {
+        return new Promise((t, n) => {
+            if (e?.aborted) return void n(Error("Already aborted"));
+            let i = { resolve: t, signal: e };
+            this._queue.push(i),
+                e &&
+                    e.addEventListener(
+                        "abort",
+                        () => {
+                            let e = this._queue.indexOf(i);
+                            e >= 0 && this._queue.splice(e, 1), n(Error("Aborted"));
+                        },
+                        { once: !0 },
+                    ),
+                this._processQueue();
         });
-    }
-    constructor(e, t) {
-        r(this, "_capacity", void 0),
-            r(this, "_tokenCount", void 0),
-            r(this, "_queue", void 0),
-            r(this, "_intervalPeriod", void 0),
-            r(this, "_intervalID", void 0),
-            (this._capacity = e),
-            (this._tokenCount = e),
-            (this._queue = []),
-            (this._intervalPeriod = t / e),
-            (this._intervalID = null);
     }
 }

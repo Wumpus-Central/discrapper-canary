@@ -1,7 +1,5 @@
-n.d(t, {
-    gj: () => r,
-    ou: () => i,
-});
+"use strict";
+n.d(t, { gj: () => r, ou: () => i });
 var r = (function (e) {
     return (
         (e.SELECT_PLAN = "select_plan"),
@@ -19,7 +17,6 @@ var r = (function (e) {
         e
     );
 })({});
-
 function i(e) {
     if (null != e) {
         if (e.hasCardError()) return "credit_card_information";

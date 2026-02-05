@@ -1,3 +1,4 @@
+"use strict";
 var r = n(123166),
     i = n(503628),
     a = n(860511).String;

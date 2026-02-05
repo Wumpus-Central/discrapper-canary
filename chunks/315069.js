@@ -1,65 +1,8 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
-class o {
+"use strict";
+n.d(t, { A: () => r });
+class r {
     toJS() {
-        return i({}, this);
+        return { ...this };
     }
     set(e, t) {
         let n = this,
@@ -67,11 +10,7 @@ class o {
         return t instanceof Date && r instanceof Date && t.getTime() === r.getTime()
             ? this
             : r !== t
-              ? new this.constructor(
-                    s(i({}, this), {
-                        [e]: t,
-                    }),
-                )
+              ? new this.constructor({ ...this, [e]: t })
               : this;
     }
     merge(e) {
@@ -79,19 +18,19 @@ class o {
             n = null;
         for (let r in e) {
             if (!e.hasOwnProperty(r)) continue;
-            let a = t[r],
-                s = e[r];
-            (s instanceof Date && a instanceof Date && s.getTime() === a.getTime()) ||
-                (a !== s && (null == n && (n = i({}, this)), (n[r] = e[r])));
+            let i = t[r],
+                a = e[r];
+            (a instanceof Date && i instanceof Date && a.getTime() === i.getTime()) ||
+                (i !== a && (null == n && (n = { ...this }), (n[r] = e[r])));
         }
         return null != n ? new this.constructor(n) : this;
     }
     update(e, t, n) {
         null == n && ((n = t), (t = void 0));
-        let r = this,
-            a = r[e];
+        let i = this,
+            a = i[e];
         return (
-            a instanceof o || (a instanceof Array ? (a = [...a]) : a instanceof Object && (a = i({}, a))),
+            a instanceof r || (a instanceof Array ? (a = [...a]) : a instanceof Object && (a = { ...a })),
             void 0 === a && (a = t),
             this.set(e, n(a))
         );

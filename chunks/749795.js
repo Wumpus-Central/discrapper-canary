@@ -1,80 +1,59 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(709066),
-    l = n(763754),
-    c = n(643204),
-    u = n(809115),
-    d = n(888675),
-    f = n(705751),
-    p = n(985018),
-    _ = n(234054);
-
-function h(e) {
-    let { message: t, compact: n, usernameHook: i } = e,
-        h = (0, l.Ay)(t),
-        m = i(h),
+var l = n(503698),
+    a = n.n(l),
+    r = n(397927),
+    s = n(709066),
+    o = n(763754),
+    d = n(643204),
+    c = n(809115),
+    u = n(888675),
+    m = n(705751),
+    _ = n(985018),
+    h = n(234054);
+function p(e) {
+    let { message: t, compact: n, usernameHook: l } = e,
+        p = (0, o.Ay)(t),
+        g = l(p),
         {
-            avatarSrc: g,
-            eventHandlers: { onMouseEnter: E, onMouseLeave: b },
-        } = (0, u.a)(!0);
-    return (0, r.jsx)("div", {
-        onMouseEnter: E,
-        onMouseLeave: b,
-        children: (0, r.jsx)(d.A, {
-            className: a()(_.rs, {
-                [_.oE]: n,
-            }),
-            iconNode: n
-                ? null
-                : (0, r.jsx)(u.l, {
-                      src: g,
-                  }),
-            iconContainerClassName: _.zc,
+            avatarSrc: A,
+            eventHandlers: { onMouseEnter: f, onMouseLeave: x },
+        } = (0, c.a)(!0);
+    return (0, i.jsx)("div", {
+        onMouseEnter: f,
+        onMouseLeave: x,
+        children: (0, i.jsx)(u.A, {
+            className: a()(h.rs, { [h.oE]: n }),
+            iconNode: n ? null : (0, i.jsx)(c.l, { src: A }),
+            iconContainerClassName: h.zc,
             compact: n,
-            children: (0, r.jsxs)("div", {
-                className: a()(_.Qs, {
-                    [_.oE]: n,
-                }),
+            children: (0, i.jsxs)("div", {
+                className: a()(h.Qs, { [h.oE]: n }),
                 children: [
-                    (0, r.jsx)(c.ix, {
+                    (0, i.jsx)(d.ix, {
                         message: t,
-                        messageClassname: _.he,
-                        className: a()(_.QV, _.he, {
-                            [_.oE]: n,
-                        }),
-                        username: (0, r.jsxs)("div", {
-                            className: _.he,
+                        messageClassname: h.he,
+                        className: a()(h.QV, h.he, { [h.oE]: n }),
+                        username: (0, i.jsxs)("div", {
+                            className: h.he,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
-                                    className: _.Xh,
-                                    children: p.intl.string(p.t.hG1StD),
+                                    className: h.Xh,
+                                    children: _.intl.string(_.t.hG1StD),
                                 }),
-                                (0, r.jsx)(o.A, {
-                                    type: f.nu.SYSTEM_DM,
-                                    className: _.Al,
-                                }),
+                                (0, i.jsx)(s.A, { type: m.nu.SYSTEM_DM, className: h.Al }),
                             ],
                         }),
                         compact: n,
                         showTimestamp: !0,
                     }),
-                    (0, r.jsx)("div", {
-                        className: a()(_.__invalid_messageContent, {
-                            [_.oE]: n,
-                        }),
-                        children: p.intl.format(p.t.qntXNQ, {
-                            username: h.nick,
-                            usernameHook: m,
-                        }),
+                    (0, i.jsx)("div", {
+                        className: a()(h.__invalid_messageContent, { [h.oE]: n }),
+                        children: _.intl.format(_.t.qntXNQ, { username: p.nick, usernameHook: g }),
                     }),
                 ],
             }),

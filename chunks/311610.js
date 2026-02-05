@@ -1,3 +1,4 @@
+"use strict";
 var n = r(617179),
     i = r(27395),
     o = r(116740),
@@ -24,47 +25,28 @@ var n = r(617179),
         return t.withMutations(function (t) {
             c(l, t, function (t) {
                 var e = t.getChildKeys();
-                return t.merge({
-                    children: e.delete(e.indexOf(a)),
-                });
+                return t.merge({ children: e.delete(e.indexOf(a)) });
             }),
                 c(p, t, function (t) {
-                    return t.merge({
-                        nextSibling: f,
-                    });
+                    return t.merge({ nextSibling: f });
                 }),
                 c(f, t, function (t) {
-                    return t.merge({
-                        prevSibling: p,
-                    });
+                    return t.merge({ prevSibling: p });
                 }),
                 c(d, t, function (t) {
-                    return t.merge({
-                        prevSibling: a,
-                    });
+                    return t.merge({ prevSibling: a });
                 }),
                 c(g, t, function (t) {
-                    return t.merge({
-                        nextSibling: a,
-                    });
+                    return t.merge({ nextSibling: a });
                 }),
                 c(h, t, function (t) {
                     var e = t.getChildKeys(),
                         r = e.indexOf(s),
                         n = e.toArray();
-                    return (
-                        n.splice(o ? r + 1 : 0 !== r ? r - 1 : 0, 0, a),
-                        t.merge({
-                            children: u(n),
-                        })
-                    );
+                    return n.splice(o ? r + 1 : 0 !== r ? r - 1 : 0, 0, a), t.merge({ children: u(n) });
                 }),
                 c(a, t, function (t) {
-                    return t.merge({
-                        nextSibling: d,
-                        prevSibling: g,
-                        parent: h,
-                    });
+                    return t.merge({ nextSibling: d, prevSibling: g, parent: h });
                 });
         });
     };
@@ -119,9 +101,6 @@ t.exports = function (t, e, r, o) {
     return t.merge({
         blockMap: l(m, e, r, o, p),
         selectionBefore: t.getSelectionAfter(),
-        selectionAfter: t.getSelectionAfter().merge({
-            anchorKey: c,
-            focusKey: c,
-        }),
+        selectionAfter: t.getSelectionAfter().merge({ anchorKey: c, focusKey: c }),
     });
 };

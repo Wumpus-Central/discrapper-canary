@@ -1,94 +1,72 @@
-e.d(n, {
-    default: () => f,
-});
-var o = e(627968);
-e(64700);
-var i = e(397927),
-    a = e(889058),
-    s = e(441124),
-    d = e(280978),
-    r = e(318085),
-    c = e(995605),
-    l = e(711905),
-    b = e(25765),
-    p = e(689588);
-
-function f(t) {
-    let { transitionState: n, onClose: e, analyticsLocation: f, platformType: A } = t,
+n.d(e, { default: () => b });
+var o = n(627968);
+n(64700);
+var i = n(397927),
+    r = n(889058),
+    s = n(441124),
+    a = n(280978),
+    c = n(318085),
+    l = n(995605),
+    d = n(711905),
+    _ = n(25765),
+    p = n(689588);
+function b(t) {
+    let { transitionState: e, onClose: n, analyticsLocation: b, platformType: C } = t,
         {
-            slide: T,
-            gotoNext: g,
-            gotoError: C,
-            handleWaitingForConnection: h,
-            handleAuthToken: N,
-            expectedCallbackState: _,
-            callbackData: u,
+            slide: A,
+            gotoNext: T,
+            gotoError: h,
+            handleWaitingForConnection: g,
+            handleAuthToken: u,
+            expectedCallbackState: N,
+            callbackData: f,
             errorCode: I,
-        } = (0, a.m)(f, A);
+        } = (0, r.m)(b, C);
     return (0, o.jsx)(i.EOs, {
         "data-migration-pending": !0,
         className: p.yl,
-        transitionState: n,
+        transitionState: e,
         disableTrack: !0,
         parentComponent: "PlayStationLinkModal",
         children: (0, o.jsxs)(i.tN_, {
-            activeSlide: T,
+            activeSlide: A,
             width: 408,
             children: [
                 (0, o.jsx)(i.q7S, {
-                    id: b.N.LANDING,
-                    children: (0, o.jsx)(r.g, {
-                        platformType: A,
-                        onContinue: g,
-                        onClose: e,
-                    }),
+                    id: _.N.LANDING,
+                    children: (0, o.jsx)(c.g, { platformType: C, onContinue: T, onClose: n }),
                 }),
                 (0, o.jsx)(i.q7S, {
-                    id: b.N.PRE_CONNECT,
-                    children: (0, o.jsx)(c.o, {
-                        platformType: A,
+                    id: _.N.PRE_CONNECT,
+                    children: (0, o.jsx)(l.o, {
+                        platformType: C,
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: h,
-                        onAuthToken: N,
-                        onError: C,
-                        onClose: e,
+                        onWaitingForConnection: g,
+                        onAuthToken: u,
+                        onError: h,
+                        onClose: n,
                     }),
                 }),
                 (0, o.jsx)(i.q7S, {
-                    id: b.N.PRE_CONNECT_WAITING,
-                    children: (0, o.jsx)(c.o, {
-                        platformType: A,
+                    id: _.N.PRE_CONNECT_WAITING,
+                    children: (0, o.jsx)(l.o, {
+                        platformType: C,
                         isWaitingForConnection: !0,
-                        expectedCallbackState: _,
-                        onAuthToken: N,
-                        onError: C,
-                        onClose: e,
+                        expectedCallbackState: N,
+                        onAuthToken: u,
+                        onError: h,
+                        onClose: n,
                     }),
                 }),
                 (0, o.jsx)(i.q7S, {
-                    id: b.N.DISCORD_CONSENT,
-                    children: (0, o.jsx)(s.V, {
-                        platformType: A,
-                        authToken: u,
-                        onContinue: g,
-                        onError: C,
-                        onClose: e,
-                    }),
+                    id: _.N.DISCORD_CONSENT,
+                    children: (0, o.jsx)(s.V, { platformType: C, authToken: f, onContinue: T, onError: h, onClose: n }),
                 }),
                 (0, o.jsx)(i.q7S, {
-                    id: b.N.ERROR,
-                    children: (0, o.jsx)(d.B, {
-                        onContinue: g,
-                        onClose: e,
-                        errorCode: I,
-                    }),
+                    id: _.N.ERROR,
+                    children: (0, o.jsx)(a.B, { onContinue: T, onClose: n, errorCode: I }),
                 }),
-                (0, o.jsx)(i.q7S, {
-                    id: b.N.SUCCESS,
-                    children: (0, o.jsx)(l.c, {
-                        onClose: e,
-                    }),
-                }),
+                (0, o.jsx)(i.q7S, { id: _.N.SUCCESS, children: (0, o.jsx)(d.c, { onClose: n }) }),
             ],
         }),
     });

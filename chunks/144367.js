@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t, n) {
     let r,
         i = n,
@@ -36,6 +37,4 @@ function r(e, t, n) {
         }
     }
 }
-n.d(t, {
-    x: () => r,
-});
+n.d(t, { x: () => r });

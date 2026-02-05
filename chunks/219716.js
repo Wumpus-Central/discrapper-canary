@@ -1,163 +1,83 @@
-r.d(t, {
-    A: () => b,
-}),
-    r(114821),
-    r(339614);
-var n = r(627968),
-    s = r(64700),
-    i = r(503698),
-    a = r.n(i),
-    l = r(91871),
-    o = r.n(l),
-    c = r(735438),
-    u = r.n(c),
-    d = r(96337),
-    h = r(397927),
-    p = r(235986),
-    f = r(518977),
-    y = r(985018),
-    m = r(492933),
-    g = r(976092);
-
-function O(e, t, r) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
-        e
-    );
-}
-class b extends s.PureComponent {
+s.d(t, { A: () => E });
+var r = s(627968),
+    n = s(64700),
+    a = s(503698),
+    i = s.n(a),
+    l = s(91871),
+    o = s.n(l),
+    h = s(735438),
+    c = s.n(h),
+    d = s(96337),
+    u = s(397927),
+    p = s(235986),
+    m = s(518977),
+    C = s(985018),
+    A = s(492933),
+    g = s(976092);
+class E extends n.PureComponent {
+    constructor(e) {
+        super(e), (this.state = { query: "" });
+    }
     renderItems() {
         let { query: e } = this.state,
             t = d.A.flatMap((e, t) => {
-                let { alpha2: r, phoneCountryCodes: s, name: i } = e,
-                    a = (0, f.Gw)(r);
-                return s.map((e) => ({
-                    key: "".concat(t, "-").concat(e),
-                    name: i,
-                    translatedName: a,
-                    countryData: {
-                        name: i,
-                        alpha2: r,
-                        code: e,
-                    },
-                    children: (0, n.jsxs)(p.A, {
-                        className: m.kw,
+                let { alpha2: s, phoneCountryCodes: n, name: a } = e,
+                    i = (0, m.Gw)(s);
+                return n.map((e) => ({
+                    key: `${t}-${e}`,
+                    name: a,
+                    translatedName: i,
+                    countryData: { name: a, alpha2: s, code: e },
+                    children: (0, r.jsxs)(p.A, {
+                        className: A.kw,
                         justify: p.A.Justify.CENTER,
                         align: p.A.Align.CENTER,
                         children: [
-                            (0, n.jsx)(p.A.Child, {
-                                className: m.GL,
-                                children: a,
-                            }),
-                            (0, n.jsx)(p.A.Child, {
-                                className: m.kf,
-                                grow: 0,
-                                shrink: 0,
-                                children: e,
-                            }),
+                            (0, r.jsx)(p.A.Child, { className: A.GL, children: i }),
+                            (0, r.jsx)(p.A.Child, { className: A.kf, grow: 0, shrink: 0, children: e }),
                         ],
                     }),
                 }));
             }),
-            r = u()(t)
+            s = c()(t)
                 .filter(
                     (t) =>
                         0 === e.length ||
                         o()(e.toLowerCase(), t.name.toLowerCase()) ||
                         o()(e.toLowerCase(), t.translatedName.toLowerCase()),
                 )
-                .map((e) => {
-                    var t, r;
-                    return (0, s.createElement)(
-                        h.i6n.Item,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        }),
-                                    )),
-                                    n.forEach(function (t) {
-                                        O(e, t, r[t]);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (r = r =
-                            {
-                                key: e.key,
-                                onClick: () => this.onClick(e.countryData),
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                            : (function (e, t) {
-                                  var r = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      r.push.apply(r, n);
-                                  }
-                                  return r;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                              }),
-                        t),
-                    );
-                })
+                .map((e) =>
+                    (0, n.createElement)(u.i6n.Item, { ...e, key: e.key, onClick: () => this.onClick(e.countryData) }),
+                )
                 .value();
-        return 0 === r.length
-            ? (0, n.jsx)(h.i6n.Empty, {
-                  children: y.intl.string(y.t.PoWNfe),
-              })
-            : (0, n.jsx)(h.ArX, {
-                  className: m.Dm,
-                  children: r,
-              });
+        return 0 === s.length
+            ? (0, r.jsx)(u.i6n.Empty, { children: C.intl.string(C.t.PoWNfe) })
+            : (0, r.jsx)(u.ArX, { className: A.Dm, children: s });
     }
     render() {
         let { className: e } = this.props;
-        return (0, n.jsxs)(h.i6n, {
-            className: a()(m.eQ, g.Cw, e),
+        return (0, r.jsxs)(u.i6n, {
+            className: i()(A.eQ, g.Cw, e),
             children: [
-                (0, n.jsx)(h.i6n.SearchBar, {
+                (0, r.jsx)(u.i6n.SearchBar, {
                     query: this.state.query,
-                    placeholder: y.intl.string(y.t.hGOODh),
+                    placeholder: C.intl.string(C.t.hGOODh),
                     onChange: this.onChangeQuery,
                     onClear: this.onClearQuery,
                     autoComplete: "off",
                 }),
-                (0, n.jsx)(h.i6n.Divider, {}),
+                (0, r.jsx)(u.i6n.Divider, {}),
                 this.renderItems(),
             ],
         });
     }
-    constructor(e) {
-        super(e),
-            O(this, "onChangeQuery", (e) => {
-                this.setState({
-                    query: e,
-                });
-            }),
-            O(this, "onClearQuery", () => {
-                this.setState({
-                    query: "",
-                });
-            }),
-            O(this, "onClick", (e) => {
-                var t, r;
-                null == (t = (r = this.props).onClick) || t.call(r, e);
-            }),
-            (this.state = {
-                query: "",
-            });
-    }
+    onChangeQuery = (e) => {
+        this.setState({ query: e });
+    };
+    onClearQuery = () => {
+        this.setState({ query: "" });
+    };
+    onClick = (e) => {
+        this.props.onClick?.(e);
+    };
 }

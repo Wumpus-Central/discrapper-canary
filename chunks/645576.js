@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Dc: "member__5d473",
     Hz: "memberInner__5d473",

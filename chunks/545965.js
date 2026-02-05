@@ -1,3 +1,2 @@
-e.exports = {
-    S: "image__7d7b6",
-};
+"use strict";
+e.exports = { S: "image__7d7b6" };

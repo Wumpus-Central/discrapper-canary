@@ -1,99 +1,37 @@
 e.exports = function (e) {
     let t = e.regex,
         n = {},
-        r = {
-            begin: /\$\{/,
-            end: /\}/,
-            contains: [
-                "self",
-                {
-                    begin: /:-/,
-                    contains: [n],
-                },
-            ],
-        };
+        r = { begin: /\$\{/, end: /\}/, contains: ["self", { begin: /:-/, contains: [n] }] };
     Object.assign(n, {
         className: "variable",
-        variants: [
-            {
-                begin: t.concat(/\$[\w\d#@][\w\d_]*/, "(?![\\w\\d])(?![$])"),
-            },
-            r,
-        ],
+        variants: [{ begin: t.concat(/\$[\w\d#@][\w\d_]*/, "(?![\\w\\d])(?![$])") }, r],
     });
-    let i = {
-            className: "subst",
-            begin: /\$\(/,
-            end: /\)/,
-            contains: [e.BACKSLASH_ESCAPE],
-        },
-        a = e.inherit(e.COMMENT(), {
-            match: [/(^|\s)/, /#.*$/],
-            scope: {
-                2: "comment",
-            },
-        }),
+    let i = { className: "subst", begin: /\$\(/, end: /\)/, contains: [e.BACKSLASH_ESCAPE] },
+        a = e.inherit(e.COMMENT(), { match: [/(^|\s)/, /#.*$/], scope: { 2: "comment" } }),
         s = {
             begin: /<<-?\s*(?=\w+)/,
-            starts: {
-                contains: [
-                    e.END_SAME_AS_BEGIN({
-                        begin: /(\w+)/,
-                        end: /(\w+)/,
-                        className: "string",
-                    }),
-                ],
-            },
+            starts: { contains: [e.END_SAME_AS_BEGIN({ begin: /(\w+)/, end: /(\w+)/, className: "string" })] },
         },
-        o = {
-            className: "string",
-            begin: /"/,
-            end: /"/,
-            contains: [e.BACKSLASH_ESCAPE, n, i],
-        };
+        o = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, n, i] };
     i.contains.push(o);
-    let l = {
-            match: /\\"/,
-        },
-        c = {
-            className: "string",
-            begin: /'/,
-            end: /'/,
-        },
-        u = {
-            match: /\\'/,
-        },
+    let l = { match: /\\"/ },
+        u = { className: "string", begin: /'/, end: /'/ },
+        c = { match: /\\'/ },
         d = {
             begin: /\$?\(\(/,
             end: /\)\)/,
-            contains: [
-                {
-                    begin: /\d+#[0-9a-f]+/,
-                    className: "number",
-                },
-                e.NUMBER_MODE,
-                n,
-            ],
+            contains: [{ begin: /\d+#[0-9a-f]+/, className: "number" }, e.NUMBER_MODE, n],
         },
-        f = ["fish", "bash", "zsh", "sh", "csh", "ksh", "tcsh", "dash", "scsh"],
-        p = e.SHEBANG({
-            binary: `(${f.join("|")})`,
-            relevance: 10,
-        }),
-        _ = {
+        _ = ["fish", "bash", "zsh", "sh", "csh", "ksh", "tcsh", "dash", "scsh"],
+        f = e.SHEBANG({ binary: `(${_.join("|")})`, relevance: 10 }),
+        p = {
             className: "function",
             begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
             returnBegin: !0,
-            contains: [
-                e.inherit(e.TITLE_MODE, {
-                    begin: /\w[\w\d_]*/,
-                }),
-            ],
+            contains: [e.inherit(e.TITLE_MODE, { begin: /\w[\w\d_]*/ })],
             relevance: 0,
         },
-        h = {
-            match: /(\/[a-z._-]+)+/,
-        };
+        h = { match: /(\/[a-z._-]+)+/ };
     return {
         name: "Bash",
         aliases: ["sh", "zsh"],
@@ -333,6 +271,6 @@ e.exports = function (e) {
                 "yes",
             ],
         },
-        contains: [p, e.SHEBANG(), _, d, a, s, h, o, l, c, u, n],
+        contains: [f, e.SHEBANG(), p, d, a, s, h, o, l, u, c, n],
     };
 };

@@ -1,40 +1,38 @@
-var r = n(557939),
-    i = n(633228),
-    a = n(732376),
-    s = n(503199),
-    o = n(273761),
-    l = n(581390),
-    c = n(120394),
-    u = Array,
-    d = Math.max,
+"use strict";
+var n = r(557939),
+    o = r(633228),
+    i = r(732376),
+    a = r(503199),
+    s = r(273761),
+    c = r(581390),
+    u = r(120394),
+    d = Array,
+    p = Math.max,
     f = Math.min;
-r(
-    {
-        target: "Array",
-        proto: !0,
-    },
+n(
+    { target: "Array", proto: !0 },
     {
         toSpliced: function (e, t) {
-            var n,
-                r,
-                i,
-                p,
-                _ = l(this),
-                h = s(_),
-                m = o(e, h),
+            var r,
+                n,
+                o,
+                l,
+                h = c(this),
+                v = a(h),
+                y = s(e, v),
                 g = arguments.length,
-                E = 0;
+                b = 0;
             for (
-                0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))),
-                    p = u((i = a(h + n - r)));
-                E < m;
-                E++
+                0 === g ? (r = n = 0) : 1 === g ? ((r = 0), (n = v - y)) : ((r = g - 2), (n = f(p(u(t), 0), v - y))),
+                    l = d((o = i(v + r - n)));
+                b < y;
+                b++
             )
-                p[E] = _[E];
-            for (; E < m + n; E++) p[E] = arguments[E - m + 2];
-            for (; E < i; E++) p[E] = _[E + r - n];
-            return p;
+                l[b] = h[b];
+            for (; b < y + r; b++) l[b] = arguments[b - y + 2];
+            for (; b < o; b++) l[b] = h[b + n - r];
+            return l;
         },
     },
 ),
-    i("toSpliced");
+    o("toSpliced");

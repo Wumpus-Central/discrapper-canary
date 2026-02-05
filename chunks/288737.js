@@ -1,43 +1,21 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(315069);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a extends r.A {
-    isVoiceMuted() {
-        return this.selfMute || this.mute || this.suppress || null != this.requestToSpeakTimestamp;
-    }
-    isVoiceDeafened() {
-        return this.selfDeaf || this.deaf;
-    }
+class i extends r.A {
+    userId;
+    channelId;
+    sessionId;
+    mute;
+    deaf;
+    selfMute;
+    selfDeaf;
+    selfVideo;
+    selfStream;
+    suppress;
+    requestToSpeakTimestamp;
+    discoverable;
     constructor(e) {
-        var t;
         super(),
-            i(this, "userId", void 0),
-            i(this, "channelId", void 0),
-            i(this, "sessionId", void 0),
-            i(this, "mute", void 0),
-            i(this, "deaf", void 0),
-            i(this, "selfMute", void 0),
-            i(this, "selfDeaf", void 0),
-            i(this, "selfVideo", void 0),
-            i(this, "selfStream", void 0),
-            i(this, "suppress", void 0),
-            i(this, "requestToSpeakTimestamp", void 0),
-            i(this, "discoverable", void 0),
             (this.userId = e.userId || ""),
             (this.channelId = e.channelId || null),
             (this.sessionId = e.sessionId || null),
@@ -49,6 +27,12 @@ class a extends r.A {
             (this.selfStream = e.selfStream || !1),
             (this.suppress = e.suppress || !1),
             (this.requestToSpeakTimestamp = e.requestToSpeakTimestamp),
-            (this.discoverable = null == (t = e.discoverable) || t);
+            (this.discoverable = e.discoverable ?? !0);
+    }
+    isVoiceMuted() {
+        return this.selfMute || this.mute || this.suppress || null != this.requestToSpeakTimestamp;
+    }
+    isVoiceDeafened() {
+        return this.selfDeaf || this.deaf;
     }
 }

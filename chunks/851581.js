@@ -1,126 +1,49 @@
-n.d(t, {
-    w: () => y,
-}),
-    n(457529),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(49463),
-    o = n(954571),
-    l = n(723702),
-    c = n(837921);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = {
-    hashes: {},
-};
-async function h() {
-    if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
-    await c.Ay.ensureModule("discord_media");
-    let e = c.Ay.requireModule("discord_media");
+"use strict";
+n.d(t, { w: () => h });
+var r = n(311907),
+    i = n(73153),
+    a = n(49463),
+    s = n(954571),
+    o = n(723702),
+    l = n(837921);
+let u = { hashes: {} };
+async function c() {
+    if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
+    await l.Ay.ensureModule("discord_media");
+    let e = l.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) || [];
 }
-async function m() {
+async function d() {
     try {
-        let t = (await h()).filter((e) => _.hashes[e.name] !== e.hash);
-        for (let { name: n, hash: r, data: i } of t) {
-            var e;
-            let t = p(d({}, i), {
-                gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)),
-            });
-            o.default.track(n, t),
-                ((_ = {
-                    hashes: d({}, _.hashes),
-                }).hashes[n] = r);
+        let e = (await c()).filter((e) => u.hashes[e.name] !== e.hash);
+        for (let { name: t, hash: n, data: r } of e) {
+            let e = { ...r, gpus: r.gpus?.map((e) => JSON.stringify(e)) };
+            s.default.track(t, e), ((u = { hashes: { ...u.hashes } }).hashes[t] = n);
         }
-        t.length > 0 && b.emitChange();
+        e.length > 0 && p.emitChange();
     } catch (e) {}
 }
-
-function g() {
-    return m(), !1;
+function _() {
+    return d(), !1;
 }
-class E extends (r = i.Ay.PersistedStore) {
+class f extends r.Ay.PersistedStore {
+    static displayName = "SystemAnalyticsStore";
+    static persistKey = "SystemAnalyticsStore";
     initialize(e) {
-        (_ =
-            null != e && "object" == typeof e.hashes
-                ? e
-                : {
-                      hashes: {},
-                  }),
-            this.waitFor(s.A);
+        (u = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A);
     }
     getState() {
-        return _;
+        return u;
     }
     async info() {
         try {
-            let e = (await h()).find((e) => "hardware_detected" === e.name);
+            let e = (await c()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-u(E, "displayName", "SystemAnalyticsStore"), u(E, "persistKey", "SystemAnalyticsStore");
-let b = new E(a.h, {
-    START_SESSION: g,
-});
-
-function y() {
-    return b.info();
+let p = new f(i.h, { START_SESSION: _ });
+function h() {
+    return p.info();
 }

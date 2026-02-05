@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 class r {
     constructor(e) {
         if (i(e)) throw Error("DataView: Passed buffer type is unsupported.");
@@ -19,7 +18,6 @@ class r {
         return t ? this.buffer.readInt32LE(e) : this.buffer.readInt32BE(e);
     }
 }
-
 function i(e) {
     return (
         "object" != typeof e ||

@@ -1,13 +1,10 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    a = n(833336),
-    s = n(412820),
-    o = n(645789);
-
-function l() {
-    return (0, i.bG)([a.A], () => a.A.showNotice()) ? (0, r.jsx)(s.A, {}) : (0, r.jsx)(o.A, {});
+var l = n(311907),
+    s = n(833336),
+    a = n(412820),
+    r = n(645789);
+function o() {
+    return (0, l.bG)([s.A], () => s.A.showNotice()) ? (0, i.jsx)(a.A, {}) : (0, i.jsx)(r.A, {});
 }

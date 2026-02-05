@@ -1,98 +1,26 @@
-n.d(t, {
-    Ay: () => y,
-    Le: () => m,
-    Tz: () => A,
-    jp: () => O,
-    ko: () => h,
-}),
-    n(896048),
-    n(733351),
-    n(747238),
-    n(812715),
-    n(380610);
+"use strict";
+n.d(t, { Ay: () => h, Le: () => _, Tz: () => A, jp: () => g, ko: () => d }), n(380610);
 var r = n(833291);
 n(100392);
 var i = n(46054),
     a = n(659674),
-    o = n(728458),
-    s = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
+    s = n(728458),
+    o = n(652215);
+let l = 30,
+    u = new Set([o.Auw.IMAGE, o.Auw.GIFV]),
+    c = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = 30,
-    p = new Set([s.Auw.IMAGE, s.Auw.GIFV]),
-    _ = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-
-function h(e, t) {
-    var n;
-    let r = m({
-            channelId: e.channel_id,
-            messageId: e.id,
-            renderOptions: t,
-        }),
-        i = null != e.webhookId;
-    return d(c({}, r), {
-        allowLinks: i || r.allowLinks,
-        allowEmojiLinks: i,
+    let n = _({ channelId: e.channel_id, messageId: e.id, renderOptions: t }),
+        r = null != e.webhookId;
+    return {
+        ...n,
+        allowLinks: r || n.allowLinks,
+        allowEmojiLinks: r,
         mentionChannels: e.mentionChannels,
-        soundboardSounds: null != (n = e.soundboardSounds) ? n : [],
-    });
+        soundboardSounds: e.soundboardSounds ?? [],
+    };
 }
-
-function m(e) {
+function _(e) {
     let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
@@ -119,53 +47,37 @@ function m(e) {
         textColor: r.textColor,
     };
 }
-
-function g(e, t, n) {
+function f(e, t, n) {
     let {
             toAST: r = !1,
             hideSimpleEmbedContent: i = !0,
             formatInline: a = !1,
-            postProcessor: o,
-            contentMessage: s,
+            postProcessor: s,
+            contentMessage: o,
         } = n,
         l = !1,
-        c = !1,
-        u = (null != s ? s : t).content,
-        d = e(
-            u,
+        u = !1,
+        c = (o ?? t).content,
+        _ = e(
+            c,
             !0,
-            h(t, n),
+            d(t, n),
             (e, n, r) => (
-                (c = null != r && r),
+                (u = r ?? !1),
                 Array.isArray(e) || (e = [e]),
-                c &&
-                    (e = [
-                        {
-                            type: "text",
-                            content: u,
-                            originalMatch: {
-                                index: 0,
-                                0: u,
-                            },
-                        },
-                    ]),
-                i && (e = w(e, (null != s ? s : t).embeds)),
+                u && (e = [{ type: "text", content: c, originalMatch: { index: 0, 0: c } }]),
+                i && (e = C(e, (o ?? t).embeds)),
                 a || (e = I(e, n)),
-                (e = E(e)),
-                t.embeds.length > 0 && (l = T(e, n)),
-                a && (e = R(e)),
-                null != o && (e = o(e, n)),
+                (e = p(e)),
+                t.embeds.length > 0 && (l = y(e, n)),
+                a && (e = b(e)),
+                null != s && (e = s(e, n)),
                 e
             ),
         );
-    return {
-        hasSpoilerEmbeds: l,
-        hasBailedAst: c,
-        content: d,
-    };
+    return { hasSpoilerEmbeds: l, hasBailedAst: u, content: _ };
 }
-
-function E(e) {
+function p(e) {
     let t = e.some((e) => "link" !== e.type);
     return e.filter((e) => {
         let n = "link" === e.type,
@@ -173,13 +85,11 @@ function E(e) {
         return !(n && i && !t);
     });
 }
-
-function y(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return g(t.formatInline ? i.A.parseInlineReply : i.A.parse, e, t);
+    return f(t.formatInline ? i.A.parseInlineReply : i.A.parse, e, t);
 }
-
-function b(e, t) {
+function m(e, t) {
     arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     let { content: n, guildId: r, channelId: i } = t;
     return e(
@@ -208,13 +118,11 @@ function b(e, t) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
-
-function O(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return b(e, t, n);
+    return m(e, t, n);
 }
-
-function v(e, t, n, r) {
+function E(e, t, n, r) {
     return e(
         t,
         !0,
@@ -239,18 +147,15 @@ function v(e, t, n, r) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
-
 function A(e, t, n) {
-    return v(i.A.parseAutoModerationSystemMessage, e, t, n);
+    return E(i.A.parseAutoModerationSystemMessage, e, t, n);
 }
-
 function I(e, t) {
     return t
-        ? S(e)
-        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = S(e[0].content)), e);
+        ? T(e)
+        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
 }
-
-function S(e) {
+function T(e) {
     if (
         e.some(
             (e) =>
@@ -264,58 +169,50 @@ function S(e) {
     let t = 0;
     return (
         e.forEach((e) => {
-            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > f))
+            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > l))
                 return !1;
         }),
-        t > f ||
+        t > l ||
             e.forEach((e) => {
                 e.jumboable = !0;
             }),
         e
     );
 }
-
-function T(e, t) {
-    return t ? N(e) : "paragraph" === e[0].type && e[0].content instanceof Array && N(e[0].content);
+function y(e, t) {
+    return t ? v(e) : "paragraph" === e[0].type && e[0].content instanceof Array && v(e[0].content);
 }
-
-function C(e, t) {
-    if (e instanceof Array) return e.some((e) => C(e, t));
+function S(e, t) {
+    if (e instanceof Array) return e.some((e) => S(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? C(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => C(e, t));
+          ? S(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => S(e, t));
 }
-
-function N(e) {
-    return C(e, (e) =>
-        "spoiler" === e.type ? C(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function v(e) {
+    return S(e, (e) =>
+        "spoiler" === e.type ? S(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
-
-function w(e, t) {
+function C(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
-    return ("link" === n.type || "attachmentLink" === n.type) && p.has(r.type) && (0, a.NV)(r) ? [] : e;
+    return ("link" === n.type || "attachmentLink" === n.type) && u.has(r.type) && (0, a.NV)(r) ? [] : e;
 }
-
-function R(e) {
+function b(e) {
     return (
         e.forEach((e) => {
-            _.has(e.type) &&
+            c.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? R(e.content)
+                    ? b(e.content)
                     : "string" == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, " "))
-                      : o.A.captureMessage(
-                            "AST node type:"
-                                .concat(e.type, " with content typeof ")
-                                .concat(typeof e.content, ". Keys ")
-                                .concat(Object.keys(e)),
+                      : s.A.captureMessage(
+                            `AST node type:${e.type} with content typeof ${typeof e.content}. Keys ${Object.keys(e)}`,
                         ));
         }),
         e

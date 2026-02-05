@@ -1,86 +1,56 @@
-l.d(t, {
-    A: () => m,
-}),
-    l(896048),
-    l(228524);
-var r = l(627968),
-    n = l(64700),
-    i = l(311907),
-    s = l(990078),
-    o = l(397927),
-    a = l(775602),
-    u = l(600941),
-    d = l(890942),
-    c = l(744201),
-    f = l(271484),
-    p = l(628743);
-
-function m(e) {
-    var t, l, m;
-    let { guildId: v, group: A, powerups: g } = e,
-        [x, b] = n.useState(!1),
-        h = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-        j = (0, f.A)(A, v),
-        _ =
-            !h && x
-                ? null == j || null == (l = j.image)
-                    ? void 0
-                    : l.animatedUrl
-                : null == j || null == (m = j.image)
-                  ? void 0
-                  : m.staticUrl,
-        E = (0, u.A)({
-            guildId: v,
-            powerups: g,
-        }),
-        { textColor: y } = (0, c.A)(null != (t = null == E ? void 0 : E.isActive) && t);
-    if (null == E || null == j) return null;
-    let { status: I, cost: S, costDecorator: w } = E;
+n.d(t, { A: () => A });
+var r = n(627968),
+    l = n(64700),
+    i = n(311907),
+    s = n(990078),
+    o = n(397927),
+    a = n(775602),
+    u = n(600941),
+    d = n(890942),
+    c = n(744201),
+    p = n(271484),
+    m = n(628743);
+function A(e) {
+    let { guildId: t, group: n, powerups: A } = e,
+        [_, g] = l.useState(!1),
+        f = (0, i.bG)([a.A], () => a.A.useReducedMotion),
+        x = (0, p.A)(n, t),
+        h = !f && _ ? x?.image?.animatedUrl : x?.image?.staticUrl,
+        v = (0, u.A)({ guildId: t, powerups: A }),
+        { textColor: j } = (0, c.A)(v?.isActive ?? !1);
+    if (null == v || null == x) return null;
+    let { status: b, cost: E, costDecorator: I } = v;
     return (0, r.jsxs)(d.NI, {
-        label: j.title,
-        isActive: (null == I ? void 0 : I.type) === "active",
-        isWarning: (null == I ? void 0 : I.type) === "expiring",
-        badge: j.badge,
-        onClick: () => j.openModal(g),
-        onMouseOver: () => b(!0),
-        onMouseLeave: () => b(!1),
+        label: x.title,
+        isActive: b?.type === "active",
+        isWarning: b?.type === "expiring",
+        badge: x.badge,
+        onClick: () => x.openModal(A),
+        onMouseOver: () => g(!0),
+        onMouseLeave: () => g(!1),
         children: [
-            (0, r.jsx)("img", {
-                alt: "",
-                src: _,
-                className: p.S,
-            }),
+            (0, r.jsx)("img", { alt: "", src: h, className: m.S }),
             (0, r.jsx)(d.Ft, {
-                title: j.title,
-                textColor: y,
-                footer: (0, r.jsx)(d.$L, {
-                    status: I,
-                    cost: S,
-                    costDecorator: w,
-                }),
+                title: x.title,
+                textColor: j,
+                footer: (0, r.jsx)(d.$L, { status: b, cost: E, costDecorator: I }),
                 children: (0, r.jsx)(o.Text, {
-                    className: p.h,
-                    color: y,
+                    className: m.h,
+                    color: j,
                     variant: "text-sm/medium",
-                    children: j.description,
+                    children: x.description,
                 }),
             }),
             (0, r.jsx)(d.kd, {
                 children:
-                    (null == j ? void 0 : j.viewCtaTooltip) != null
+                    x?.viewCtaTooltip != null
                         ? (0, r.jsx)(s.m, {
                               asContainer: !0,
-                              text: j.viewCtaTooltip,
+                              text: x.viewCtaTooltip,
                               delay: 100,
-                              children: (0, r.jsx)(o.Button, {
-                                  text: j.viewCta,
-                                  fullWidth: !0,
-                              }),
+                              children: (0, r.jsx)(o.Button, { text: x.viewCta, fullWidth: !0 }),
                           })
-                        : (0, r.jsx)(o.Button, {
-                              text: j.viewCta,
-                              fullWidth: !0,
-                          }),
+                        : (0, r.jsx)(o.Button, { text: x.viewCta, fullWidth: !0 }),
             }),
         ],
     });

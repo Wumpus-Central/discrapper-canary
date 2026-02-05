@@ -1,11 +1,5 @@
-n.d(t, {
-    Gb: () => r,
-    TF: () => i,
-    W_: () => s,
-    n7: () => o,
-    no: () => a,
-}),
-    n(985018);
+"use strict";
+n.d(t, { Gb: () => r, TF: () => i, W_: () => s, n7: () => o, no: () => a }), n(985018);
 var r = (function (e) {
         return (
             (e.BUG = "BUG"),
@@ -28,7 +22,6 @@ var r = (function (e) {
             e
         );
     })({});
-
 function s(e) {
     return e.includes("LEGITIMATE_ACTIVITY")
         ? "LEGITIMATE_ACTIVITY"

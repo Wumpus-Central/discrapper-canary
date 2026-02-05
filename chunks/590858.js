@@ -1,7 +1,2 @@
-n.d(t, {
-    q: () => l,
-});
-let l = Object.freeze({
-    SMALL: "small",
-    LARGE: "large",
-});
+a.d(t, { q: () => n });
+let n = Object.freeze({ SMALL: "small", LARGE: "large" });

@@ -1,26 +1,15 @@
-n.d(t, {
-    A: () => u,
-});
-var r,
-    i,
-    l = n(311907),
-    a = n(73153),
-    s = n(576705),
-    o = n(652215);
-class c extends (i = l.Ay.Store) {
+n.d(t, { A: () => o });
+var i = n(311907),
+    r = n(73153),
+    a = n(576705),
+    l = n(652215);
+class s extends i.Ay.Store {
+    static displayName = "GuildBoostingNoticeStore";
     initialize() {
-        this.waitFor(s.A), this.syncWith([s.A], o.tEg);
+        this.waitFor(a.A), this.syncWith([a.A], l.tEg);
     }
     channelNoticePredicate(e, t) {
-        return Date.now() - t >= o.D2K && s.A.can(o.xBc.MANAGE_GUILD, e);
+        return Date.now() - t >= l.D2K && a.A.can(l.xBc.MANAGE_GUILD, e);
     }
 }
-(r = "displayName") in c
-    ? Object.defineProperty(c, r, {
-          value: "GuildBoostingNoticeStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (c[r] = "GuildBoostingNoticeStore");
-let u = new c(a.h);
+let o = new s(r.h);

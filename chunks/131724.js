@@ -1,65 +1,37 @@
-n.d(t, {
-    D: () => p,
-    M: () => _,
-});
-var r = n(723702),
-    i = n(850670),
+n.d(t, { D: () => _, M: () => h });
+var i = n(723702),
+    l = n(850670),
     a = n(206589),
-    s = n(125017),
-    o = n(625248),
-    l = n(833349),
-    c = n(287613),
-    u = n(659051),
-    d = n(702631),
-    f = n(652215);
-
-function p(e) {
-    var t;
+    r = n(125017),
+    s = n(625248),
+    o = n(833349),
+    d = n(287613),
+    c = n(659051),
+    u = n(702631),
+    m = n(652215);
+function _(e) {
     let {
-        presenceActivity: n,
-        currentUserPresenceActivity: l,
-        currentUserId: p,
+        presenceActivity: t,
+        currentUserPresenceActivity: n,
+        currentUserId: o,
         message: _,
         application: h,
-        isEmbeddedApplication: m,
+        isEmbeddedApplication: p,
         isFrameApplication: g,
-        isGameLaunchable: E,
+        isGameLaunchable: A,
     } = e;
-    if (_.author.id === p || !(0, u.A)(n, _, h.id))
-        return {
-            canJoin: !1,
-            remoteJoinPlatform: null,
-        };
-    let b = (0, s._)(n);
-    if (!(0, c.A)(b) || (0, d.U)(b) || (0, a.w)(l, n) || (0, i.v)(_))
-        return {
-            canJoin: !1,
-            remoteJoinPlatform: null,
-        };
-    if (m && g)
-        return {
-            canJoin: !0,
-            remoteJoinPlatform: null,
-        };
-    if ((null == (t = _.activity) ? void 0 : t.type) === f.xL.JOIN && null != n) {
-        let e = (0, o.l)(n);
-        if (null != e)
-            return {
-                canJoin: !0,
-                remoteJoinPlatform: e,
-            };
+    if (_.author.id === o || !(0, c.A)(t, _, h.id)) return { canJoin: !1, remoteJoinPlatform: null };
+    let f = (0, r._)(t);
+    if (!(0, d.A)(f) || (0, u.U)(f) || (0, a.w)(n, t) || (0, l.v)(_)) return { canJoin: !1, remoteJoinPlatform: null };
+    if (p && g) return { canJoin: !0, remoteJoinPlatform: null };
+    if (_.activity?.type === m.xL.JOIN && null != t) {
+        let e = (0, s.l)(t);
+        if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
     }
-    return (0, r.platformSupportsActivityJoin)() && E
-        ? {
-              canJoin: !0,
-              remoteJoinPlatform: null,
-          }
-        : {
-              canJoin: !1,
-              remoteJoinPlatform: null,
-          };
+    return (0, i.platformSupportsActivityJoin)() && A
+        ? { canJoin: !0, remoteJoinPlatform: null }
+        : { canJoin: !1, remoteJoinPlatform: null };
 }
-
-function _(e, t, n, i) {
-    return !(null == e || !(0, u.A)(e, n, i.id) || !(0, l.A)(e, f.jUm.SYNC) || !r.isPlatformEmbedded || (0, a.w)(t, e));
+function h(e, t, n, l) {
+    return !(null == e || !(0, c.A)(e, n, l.id) || !(0, o.A)(e, m.jUm.SYNC) || !i.isPlatformEmbedded || (0, a.w)(t, e));
 }

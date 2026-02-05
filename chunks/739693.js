@@ -1,109 +1,86 @@
-n.d(t, {
-    default: () => _,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(158954),
-    s = n(311907),
-    a = n(397927),
+n.d(t, { default: () => m });
+var i = n(627968),
+    s = n(64700),
+    r = n(158954),
+    a = n(311907),
+    l = n(397927),
     o = n(631670),
     c = n(836602),
     d = n(592074),
     u = n(652215),
-    p = n(985018);
-
-function _(e) {
-    var t, n, _, m;
-    let { transitionState: g, onSuccess: f, onClose: b, requirementsUpdated: h } = e,
-        [A, E] = i.useState(""),
-        [x, O] = i.useState(""),
-        [C, y] = i.useState(""),
-        [j, T] = i.useState(null),
-        [v, S] = i.useState(null),
-        { formState: I, errors: N } = (0, s.cf)([c.A], () => ({
+    _ = n(985018);
+function m(e) {
+    let { transitionState: t, onSuccess: n, onClose: m, requirementsUpdated: A } = e,
+        [g, E] = s.useState(""),
+        [h, p] = s.useState(""),
+        [C, x] = s.useState(""),
+        [T, I] = s.useState(null),
+        [S, f] = s.useState(null),
+        { formState: N, errors: b } = (0, a.cf)([c.A], () => ({
             formState: c.A.getFormState(),
             errors: c.A.getErrors(),
         })),
-        P = i.useRef(null);
-    async function R(e) {
+        R = s.useRef(null);
+    async function v(e) {
         e.preventDefault(), (0, o.x8)();
         let t = !1;
         if (
-            ("" === x ? (T(p.intl.string(p.t["/7/oPU"])), (t = !0)) : T(null),
-            x !== C ? (S(p.intl.string(p.t["IEKYZ/"])), (t = !0)) : S(null),
+            ("" === h ? (I(_.intl.string(_.t["/7/oPU"])), (t = !0)) : I(null),
+            h !== C ? (f(_.intl.string(_.t["IEKYZ/"])), (t = !0)) : f(null),
             t)
         )
             return;
-        let n = await (0, o.yu)({
-            password: A,
-            newPassword: x,
-        });
-        if (null == n ? void 0 : n.ok) f();
-        else {
-            var r;
-            (null == n || null == (r = n.body) ? void 0 : r.username) != null && (0, d.E)();
-        }
+        let i = await (0, o.yu)({ password: g, newPassword: h });
+        i?.ok ? n() : i?.body?.username != null && (0, d.E)();
     }
     return (
-        i.useEffect(() => {
-            if (g === a.ip4.ENTERED) {
-                var e;
-                null == (e = P.current) || e.focus();
-            }
-        }, [g]),
-        (0, r.jsx)("form", {
-            onSubmit: R,
-            children: (0, r.jsx)(l.Modal, {
-                transitionState: g,
-                onClose: b,
-                title: p.intl.string(p.t.geta79),
-                subtitle: h ? p.intl.string(p.t["37iHbZ"]) : p.intl.string(p.t.iOurYj),
+        s.useEffect(() => {
+            t === l.ip4.ENTERED && R.current?.focus();
+        }, [t]),
+        (0, i.jsx)("form", {
+            onSubmit: v,
+            children: (0, i.jsx)(r.Modal, {
+                transitionState: t,
+                onClose: m,
+                title: _.intl.string(_.t.geta79),
+                subtitle: A ? _.intl.string(_.t["37iHbZ"]) : _.intl.string(_.t.iOurYj),
                 actions: [
-                    {
-                        variant: "secondary",
-                        text: p.intl.string(p.t["ETE/oC"]),
-                        onClick: b,
-                    },
+                    { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: m },
                     {
                         variant: "primary",
-                        text: p.intl.string(p.t.i4jeWR),
-                        loading: I === u.XlH.SUBMITTING,
+                        text: _.intl.string(_.t.i4jeWR),
+                        loading: N === u.XlH.SUBMITTING,
                         type: "submit",
                     },
                 ],
-                children: (0, r.jsxs)(a.BJc, {
+                children: (0, i.jsxs)(l.BJc, {
                     gap: 20,
                     children: [
-                        (0, r.jsx)(a.ksK, {
-                            label: p.intl.string(p.t.WBqMRQ),
-                            error: null == N || null == (_ = N.password) ? void 0 : _[0],
+                        (0, i.jsx)(l.ksK, {
+                            label: _.intl.string(_.t.WBqMRQ),
+                            error: b?.password?.[0],
                             type: "password",
-                            value: A,
+                            value: g,
                             onChange: E,
-                            inputRef: P,
+                            inputRef: R,
                             autoComplete: "current-password",
                             required: !0,
                         }),
-                        (0, r.jsx)(a.ksK, {
-                            label: p.intl.string(p.t["8dM4FO"]),
-                            error:
-                                null !=
-                                (t = null != (n = null == N || null == (m = N.new_password) ? void 0 : m[0]) ? n : j)
-                                    ? t
-                                    : void 0,
+                        (0, i.jsx)(l.ksK, {
+                            label: _.intl.string(_.t["8dM4FO"]),
+                            error: b?.new_password?.[0] ?? T ?? void 0,
                             type: "password",
-                            value: x,
-                            onChange: O,
+                            value: h,
+                            onChange: p,
                             autoComplete: "new-password",
                             required: !0,
                         }),
-                        (0, r.jsx)(a.ksK, {
-                            label: p.intl.string(p.t.iQG2KC),
-                            error: null != v ? v : void 0,
+                        (0, i.jsx)(l.ksK, {
+                            label: _.intl.string(_.t.iQG2KC),
+                            error: S ?? void 0,
                             type: "password",
                             value: C,
-                            onChange: y,
+                            onChange: x,
                             autoComplete: "new-password",
                             required: !0,
                         }),

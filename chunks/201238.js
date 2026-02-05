@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = {
         ss: "sekundė_sekundžių_sekundes",
         m: "minutė_minutės_minutę",
@@ -14,23 +15,18 @@
         y: "metai_metų_metus",
         yy: "metai_metų_metus",
     };
-
     function n(e, t, n, r) {
         return t ? "kelios sekundės" : r ? "kelių sekundžių" : "kelias sekundes";
     }
-
     function r(e, t, n, r) {
         return t ? a(n)[0] : r ? a(n)[1] : a(n)[2];
     }
-
     function i(e) {
         return e % 10 == 0 || (e > 10 && e < 20);
     }
-
     function a(e) {
         return t[e].split("_");
     }
-
     function s(e, t, n, s) {
         var o = e + " ";
         return 1 === e
@@ -102,9 +98,6 @@
         ordinal: function (e) {
             return e + "-oji";
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

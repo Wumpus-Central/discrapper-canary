@@ -1,23 +1,21 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(64700),
     i = n(861382),
     a = n(35277),
     s = n(407315),
     o = n(113001),
     l = n(652215);
-
-function c(e) {
+function u(e) {
     let {
         editor: t,
         channel: n,
-        disableEnterToSubmit: c,
-        onKeyDown: u,
+        disableEnterToSubmit: u,
+        onKeyDown: c,
         onKeyUp: d,
-        onTab: f,
-        onEnter: p,
-        allowNewLines: _,
+        onTab: _,
+        onEnter: f,
+        allowNewLines: p,
         submit: h,
         hideAutocomplete: m,
         moveSelection: g,
@@ -25,7 +23,6 @@ function c(e) {
     return {
         handleKeyDown: r.useCallback(
             (e) => {
-                var r;
                 switch (e.which) {
                     case l.Ks6.ARROW_UP:
                         if (g(-1)) return void e.preventDefault();
@@ -34,28 +31,16 @@ function c(e) {
                         if (g(1)) return void e.preventDefault();
                         break;
                     case l.Ks6.P:
-                        if (
-                            (0, o.j)(e, {
-                                ctrl: !0,
-                            }) &&
-                            g(-1)
-                        )
-                            return void e.preventDefault();
+                        if ((0, o.j)(e, { ctrl: !0 }) && g(-1)) return void e.preventDefault();
                         break;
                     case l.Ks6.N:
-                        if (
-                            (0, o.j)(e, {
-                                ctrl: !0,
-                            }) &&
-                            g(1)
-                        )
-                            return void e.preventDefault();
+                        if ((0, o.j)(e, { ctrl: !0 }) && g(1)) return void e.preventDefault();
                         break;
                     case l.Ks6.ESCAPE:
-                        null == m || m();
+                        m?.();
                         break;
                     case l.Ks6.TAB:
-                        if ((0, o.j)(e, {}) && (null == f ? void 0 : f())) {
+                        if ((0, o.j)(e, {}) && _?.()) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
@@ -67,25 +52,25 @@ function c(e) {
                         }
                         break;
                     case l.Ks6.ENTER:
-                        if ((0, o.j)(e, {}) && (null == p ? void 0 : p(e))) {
+                        if ((0, o.j)(e, {}) && f?.(e)) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
                 }
-                if ((null == (r = t.onKeyDown) ? void 0 : r.call(t, e)) === !0) {
+                if (t.onKeyDown?.(e) === !0) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
                 e.which !== l.Ks6.ENTER ||
-                    ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, s.Q9)(t)) && _) ||
+                    ((e.altKey || e.shiftKey || (u && !e.ctrlKey) || (0, s.Q9)(t)) && p) ||
                     (e.preventDefault(), e.stopPropagation(), h()),
-                    null == u || u(e);
+                    c?.(e);
             },
-            [_, n.id, c, t, m, g, p, u, f, h],
+            [p, n.id, u, t, m, g, f, c, _, h],
         ),
         handleKeyUp: r.useCallback(
             (e) => {
-                null == d || d(e);
+                d?.(e);
             },
             [d],
         ),

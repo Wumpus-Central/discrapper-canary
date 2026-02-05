@@ -1,3 +1,4 @@
+"use strict";
 var n = e(414123),
     o = e(890084),
     s = e(4505),
@@ -22,11 +23,7 @@ r.f = n
                   n &&
                       n[v] &&
                       ((t[r] = e.value),
-                      (e = {
-                          configurable: l in e ? e[l] : n[l],
-                          enumerable: p in e ? e[p] : n[p],
-                          writable: !1,
-                      }));
+                      (e = { configurable: l in e ? e[l] : n[l], enumerable: p in e ? e[p] : n[p], writable: !1 }));
               }
               return a(t, r, e);
           }

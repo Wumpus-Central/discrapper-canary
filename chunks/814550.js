@@ -1,8 +1,5 @@
-n.d(t, {
-    f: () => s,
-    u: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { f: () => s, u: () => l });
 var r = n(64700),
     i = n(735438),
     a = n(860923),
@@ -24,20 +21,20 @@ let o = {
     l = (e) => {
         let [t, n] = r.useState("idle"),
             [s, l] = r.useState(),
-            c = (0, a.A)(),
-            u = r.useMemo(() => (null == c ? void 0 : c.characters[e]), [c, e]),
+            u = (0, a.A)(),
+            c = r.useMemo(() => u?.characters[e], [u, e]),
             d = r.useCallback(() => {
-                if (null == u) return s;
-                let e = u[t];
+                if (null == c) return s;
+                let e = c[t];
                 return (0, i.sample)(e);
-            }, [s, u, t]);
+            }, [s, c, t]);
         r.useEffect(() => {
             l(d());
-        }, [c, e, d]),
+        }, [u, e, d]),
             r.useEffect(() => {
                 l(() => d());
             }, [t]);
-        let f = () => {
+        let _ = () => {
                 let e = 10,
                     n = !1,
                     r = 0,
@@ -45,14 +42,14 @@ let o = {
                 for (; !n && r < e; ) r += 1;
                 return i;
             },
-            p = (e) => (e === t ? t : o[e].includes(t) ? (n(e), e) : t);
+            f = (e) => (e === t ? t : o[e].includes(t) ? (n(e), e) : t);
         return {
             animationState: t,
-            updateAnimationState: p,
+            updateAnimationState: f,
             asset: s,
             setAsset: l,
             sampleAsset: d,
-            findAnimationTree: f,
-            characterAssets: u,
+            findAnimationTree: _,
+            characterAssets: c,
         };
     };

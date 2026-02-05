@@ -1,252 +1,140 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(747238);
+"use strict";
+n.d(t, { A: () => O });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(90644),
-    c = n(793574),
-    u = n(688810),
+    u = n(793574),
+    c = n(688810),
     d = n(939341),
-    f = n(623671),
-    p = n(365185),
-    _ = n(915089),
+    _ = n(623671),
+    f = n(365185),
+    p = n(915089),
     h = n(172710),
     m = n(92240),
     g = n(257367),
     E = n(317572),
-    b = n(939496),
-    y = n(282197),
-    O = n(584904),
-    A = n(351638),
-    v = n(531648),
-    S = n(753713),
-    I = n(646648),
-    T = n(8738),
-    C = n(996988),
-    N = n(380297);
-
-function R(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function w(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                R(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function P(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function D(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function x(e) {
-    let { user: t, currentUser: n, activity: a, className: R, onClose: P } = e,
-        x = (0, _.GV)(),
-        L = (0, _.GV)(),
-        { themeType: j } = (0, b.E)(),
-        M = (0, p.A)({
-            activity: a,
-            user: t,
-        }),
-        k = (0, E.A)(a),
-        U = null != k.text && "" !== k.text,
-        { largeImage: G } = (0, d.XN)(a),
-        { analyticsLocations: V } = (0, u.Ay)(c.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        F = (0, m.A)({
-            display: "live",
-            user: t,
-            activity: a,
-            entry: M,
-            analyticsLocations: V,
-        }),
-        B = (0, g.A)({
-            userId: t.id,
-            onAction: F,
-        });
+    A = n(939496),
+    I = n(282197),
+    T = n(584904),
+    y = n(351638),
+    S = n(531648),
+    v = n(753713),
+    C = n(646648),
+    b = n(8738),
+    N = n(996988),
+    R = n(380297);
+function O(e) {
+    let { user: t, currentUser: n, activity: a, className: O, onClose: D } = e,
+        L = (0, p.GV)(),
+        w = (0, p.GV)(),
+        { themeType: x } = (0, A.E)(),
+        P = (0, f.A)({ activity: a, user: t }),
+        M = (0, E.A)(a),
+        k = null != M.text && "" !== M.text,
+        { largeImage: U } = (0, d.XN)(a),
+        { analyticsLocations: G } = (0, c.Ay)(u.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        V = (0, m.A)({ display: "live", user: t, activity: a, entry: P, analyticsLocations: G }),
+        F = (0, g.A)({ userId: t.id, onAction: V });
     if (!(0, l.A)(a)) return null;
-    let H = () => {
-            var e, n;
-            let l = null != (e = null == (n = a.state) ? void 0 : n.split("; ")) ? e : [];
-            return 0 === l.length
+    let B = () => {
+            let e = a.state?.split("; ") ?? [];
+            return 0 === e.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(v.A, {
+                  ? (0, r.jsx)(S.A, { variant: "text-xs/normal", text: e.join(", ") })
+                  : (0, r.jsx)(S.A, {
                         variant: "text-xs/normal",
-                        text: l.join(", "),
-                    })
-                  : (0, r.jsx)(v.A, {
-                        variant: "text-xs/normal",
-                        text: l.map((e, n) =>
+                        text: e.map((n, l) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(o.DUT, {
-                                            className: s()(N.sd, N.mG),
+                                            className: s()(R.sd, R.mG),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
-                                                    F({
-                                                        action: "OPEN_SPOTIFY_ARTIST",
-                                                    }),
-                                                    (0, h.mN)(a, t.id, n);
+                                                    V({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                    (0, h.mN)(a, t.id, l);
                                             },
-                                            children: e,
+                                            children: n,
                                         }),
-                                        n < l.length - 1 ? ", " : "",
+                                        l < e.length - 1 ? ", " : "",
                                     ],
                                 },
-                                n,
+                                l,
                             ),
                         ),
                     });
         },
-        Y = () => {
+        j = () => {
             let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
-            return null == t || null == n
-                ? null
-                : (0, r.jsx)(S.A, {
-                      start: t,
-                      end: n,
-                  });
+            return null == t || null == n ? null : (0, r.jsx)(v.A, { start: t, end: n });
         },
-        W = () =>
+        H = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
-                      className: N.o1,
-                      children: (0, r.jsx)(I.A, {
-                          user: t,
-                          activity: a,
-                          onAction: F,
-                      }),
+                      className: R.o1,
+                      children: (0, r.jsx)(C.A, { user: t, activity: a, onAction: V }),
                   });
-    return (0, r.jsx)(u.f5, {
-        value: V,
-        children: (0, r.jsxs)(O.A, {
-            ref: B,
-            className: s()(N.Nr, R),
-            onAction: F,
-            onClose: P,
-            "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
+    return (0, r.jsx)(c.f5, {
+        value: G,
+        children: (0, r.jsxs)(T.A, {
+            ref: F,
+            className: s()(R.Nr, O),
+            onAction: V,
+            onClose: D,
+            "aria-labelledby": k ? `${w} ${L}` : L,
             children: [
-                (0, r.jsx)(
-                    A.A,
-                    D(
-                        w(
-                            {
-                                textId: L,
-                            },
-                            k,
-                        ),
-                        {
-                            contextMenu: (0, r.jsx)(T.A, {
-                                display: "live",
-                                user: t,
-                                activity: a,
-                                entry: M,
-                                onClose: P,
-                            }),
-                        },
-                    ),
-                ),
+                (0, r.jsx)(y.A, {
+                    textId: w,
+                    ...M,
+                    contextMenu: (0, r.jsx)(b.A, { display: "live", user: t, activity: a, entry: P, onClose: D }),
+                }),
                 (0, r.jsx)("div", {
-                    className: N.rf,
+                    className: R.rf,
                     children: (0, r.jsxs)("div", {
-                        className: N.Qs,
+                        className: R.Qs,
                         children: [
-                            (0, r.jsx)(f.d, {
-                                image: G,
-                                size: j === C.d.MODAL_V2 ? f.w.SIZE_100 : f.w.SIZE_60,
-                                className: N.mM,
+                            (0, r.jsx)(_.d, {
+                                image: U,
+                                size: x === N.d.MODAL_V2 ? _.w.SIZE_100 : _.w.SIZE_60,
+                                className: R.mM,
                                 onClick: (e) => {
-                                    e.stopPropagation(),
-                                        F({
-                                            action: "OPEN_SPOTIFY_ALBUM",
-                                        }),
-                                        (0, h.QX)(a, t.id);
+                                    e.stopPropagation(), V({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.QX)(a, t.id);
                                 },
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.zH,
+                                className: R.zH,
                                 children: [
                                     (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(v.Q, {
+                                            (0, r.jsx)(S.Q, {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    F({
-                                                        action: "OPEN_SPOTIFY_TRACK",
-                                                    }),
-                                                        (0, h.Mp)(a);
+                                                    V({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.Mp)(a);
                                                 },
-                                                id: x,
+                                                id: L,
                                             }),
-                                            H(),
+                                            B(),
                                         ],
                                     }),
-                                    (0, r.jsx)(y.A, {
-                                        user: t,
-                                        activity: a,
-                                        className: N.jp,
-                                    }),
-                                    Y(),
-                                    j === C.d.MODAL_V2 && W(),
+                                    (0, r.jsx)(I.A, { user: t, activity: a, className: R.jp }),
+                                    j(),
+                                    x === N.d.MODAL_V2 && H(),
                                 ],
                             }),
-                            j === C.d.MODAL && W(),
+                            x === N.d.MODAL && H(),
                         ],
                     }),
                 }),
-                j !== C.d.MODAL && j !== C.d.MODAL_V2 && W(),
+                x !== N.d.MODAL && x !== N.d.MODAL_V2 && H(),
             ],
         }),
     });

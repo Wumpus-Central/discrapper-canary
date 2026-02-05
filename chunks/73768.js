@@ -1,10 +1,6 @@
-n.d(t, {
-    Mv: () => a,
-    kV: () => s,
-    v2: () => o,
-});
+"use strict";
+n.d(t, { Mv: () => a, kV: () => s, v2: () => o });
 var r = n(321733);
-
 function i(e) {
     return (i =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -17,19 +13,16 @@ function i(e) {
                       : typeof e;
               })(e);
 }
-
 function a(e) {
     (0, r.V)("function" == typeof e.canDrag, "Expected canDrag to be a function."),
         (0, r.V)("function" == typeof e.beginDrag, "Expected beginDrag to be a function."),
         (0, r.V)("function" == typeof e.endDrag, "Expected endDrag to be a function.");
 }
-
 function s(e) {
     (0, r.V)("function" == typeof e.canDrop, "Expected canDrop to be a function."),
         (0, r.V)("function" == typeof e.hover, "Expected hover to be a function."),
         (0, r.V)("function" == typeof e.drop, "Expected beginDrag to be a function.");
 }
-
 function o(e, t) {
     t && Array.isArray(e)
         ? e.forEach(function (e) {

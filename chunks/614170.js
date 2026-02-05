@@ -1,158 +1,87 @@
-t.d(n, {
-    A: () => O,
-}),
-    t(228524);
-var r = t(627968);
+t.d(n, { A: () => k });
+var i = t(627968);
 t(64700);
 var l = t(311907),
-    i = t(857071),
-    s = t(69407),
-    a = t(446600),
+    a = t(857071),
+    r = t(69407),
+    s = t(446600),
     c = t(734057),
     o = t(71393),
-    u = t(576705),
-    d = t(383501),
-    m = t(287809),
-    g = t(707592),
+    d = t(576705),
+    u = t(383501),
+    g = t(287809),
+    A = t(707592),
     h = t(698441),
-    j = t(485394),
+    m = t(485394),
     x = t(961022),
-    v = t(794782),
-    p = t(9448),
-    f = t(974930),
-    b = t(691012),
-    A = t(895202),
-    y = t(482857),
-    C = t(652215);
-
-function O(e) {
-    var n, t, O;
-    let { guildEvent: N, truncate: k, onActionTaken: E, className: P, isNew: w } = e,
+    C = t(794782),
+    v = t(9448),
+    p = t(974930),
+    N = t(691012),
+    E = t(895202),
+    f = t(482857),
+    j = t(652215);
+function k(e) {
+    let { guildEvent: n, truncate: t, onActionTaken: k, className: y, isNew: G } = e,
         {
-            id: G,
-            guild_id: T,
-            channel_id: S,
-            creator_id: I,
-            name: M,
-            description: _,
-            entity_type: D,
-            image: R,
-            recurrence_rule: U,
-        } = N,
-        B = (0, f.G3)(N),
-        L = (0, l.bG)([h.Ay], () => h.Ay.isInterestedInEventRecurrence(G, B), [G, B]),
-        z = (0, l.bG)([i.A], () => i.A.isLurking(T), [T]),
-        V = (0, l.bG)([a.A], () => a.A.getStageInstanceByChannel(S), [S]),
-        q = (0, l.bG)([o.A], () => o.A.getGuild(T), [T]),
-        J = (0, l.bG)([c.A], () => c.A.getChannel(S), [S]),
-        K = (0, l.bG)([m.default], () => m.default.getUser(I), [I]),
-        { speakers: F } = (0, x.A)({
-            id: S,
-            data: {
-                guild: null,
-                instance: V,
-                speakers: [],
-                participantCount: 0,
-            },
-            context: {
-                guildId: T,
-                instance: V,
-            },
+            id: _,
+            guild_id: I,
+            channel_id: b,
+            creator_id: T,
+            name: P,
+            description: L,
+            entity_type: S,
+            image: M,
+            recurrence_rule: w,
+        } = n,
+        D = (0, p.G3)(n),
+        B = (0, l.bG)([h.Ay], () => h.Ay.isInterestedInEventRecurrence(_, D), [_, D]),
+        U = (0, l.bG)([a.A], () => a.A.isLurking(I), [I]),
+        R = (0, l.bG)([s.A], () => s.A.getStageInstanceByChannel(b), [b]),
+        V = (0, l.bG)([o.A], () => o.A.getGuild(I), [I]),
+        O = (0, l.bG)([c.A], () => c.A.getChannel(b), [b]),
+        K = (0, l.bG)([g.default], () => g.default.getUser(T), [T]),
+        { speakers: H } = (0, x.A)({
+            id: b,
+            data: { guild: null, instance: R, speakers: [], participantCount: 0 },
+            context: { guildId: I, instance: R },
         }),
-        H = (0, l.bG)([d.A], () => d.A.getChannelId()),
-        W = (0, h.Fd)(N),
-        X = H === S && null != H && W,
-        Z = F.filter((e) => e.type === s.wY.VOICE),
-        Q = Z.length,
-        Y = (0, l.bG)([u.A], () => u.A.can(C.xBc.CONNECT, J), [J]),
-        $ = (0, j.Ay)(N),
-        ee = null != q,
-        en = (0, y.A)({
-            guild: q,
-            channel: J,
-            guildScheduledEvent: N,
-            isActive: W,
-            recurrenceId: B,
-            onActionTaken: E,
-        }),
-        et = z
-            ? void 0
-            : (e) =>
-                  (0, g.uR)({
-                      eventId: G,
-                      recurrenceId: e,
-                  });
-    return (0, r.jsx)(
-        A.A,
-        ((t = (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    r = Object.keys(t);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (n) {
-                        var r;
-                        (r = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[n] = r);
-                    });
-            }
-            return e;
-        })(
-            {
-                guild: q,
-                channel: J,
-                creator: K,
-                name: M,
-                entityType: D,
-                description: null != _ ? _ : void 0,
-                location: null != (n = (0, p.oF)(N)) ? n : void 0,
-                imageSource: null != R ? (0, b.A)(N) : void 0,
-                imageLocation: A.c.THUMBNAIL,
-                isActive: W,
-                isUserLurking: z,
-                isJoined: X,
-                isMember: ee,
-                speakers: Z,
-                canConnect: Y,
-                speakerCount: Q,
-                rsvped: L,
-                canInvite: $,
-            },
-            en,
-        )),
-        (O = O =
-            {
-                className: P,
-                onClick: et,
-                truncate: k,
-                isNew: w,
-                guildEvent: N,
-                recurrenceRule: (0, v.Sn)(U),
-                recurrenceId: B,
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(O))
-            : (function (e, n) {
-                  var t = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
-                  }
-                  return t;
-              })(Object(O)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(O, e));
-              }),
-        t),
-    );
+        J = (0, l.bG)([u.A], () => u.A.getChannelId()),
+        z = (0, h.Fd)(n),
+        q = J === b && null != J && z,
+        F = H.filter((e) => e.type === r.wY.VOICE),
+        X = F.length,
+        W = (0, l.bG)([d.A], () => d.A.can(j.xBc.CONNECT, O), [O]),
+        Q = (0, m.Ay)(n),
+        Y = null != V,
+        Z = (0, f.A)({ guild: V, channel: O, guildScheduledEvent: n, isActive: z, recurrenceId: D, onActionTaken: k }),
+        $ = U ? void 0 : (e) => (0, A.uR)({ eventId: _, recurrenceId: e });
+    return (0, i.jsx)(E.A, {
+        guild: V,
+        channel: O,
+        creator: K,
+        name: P,
+        entityType: S,
+        description: L ?? void 0,
+        location: (0, v.oF)(n) ?? void 0,
+        imageSource: null != M ? (0, N.A)(n) : void 0,
+        imageLocation: E.c.THUMBNAIL,
+        isActive: z,
+        isUserLurking: U,
+        isJoined: q,
+        isMember: Y,
+        speakers: F,
+        canConnect: W,
+        speakerCount: X,
+        rsvped: B,
+        canInvite: Q,
+        ...Z,
+        className: y,
+        onClick: $,
+        truncate: t,
+        isNew: G,
+        guildEvent: n,
+        recurrenceRule: (0, C.Sn)(w),
+        recurrenceId: D,
+    });
 }

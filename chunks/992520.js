@@ -1,15 +1,12 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048);
-var r = n(944181),
-    a = n(685357),
-    l = n(597807),
-    o = n(763424),
-    i = n(292177);
+r.d(t, { A: () => u });
+var n = r(944181),
+    a = r(685357),
+    l = r(597807),
+    i = r(763424),
+    o = r(292177);
 let u = {
     id: "aria-allowed-attributes",
-    selector: i.vN,
+    selector: o.vN,
     tags: ["wcag2a", "wcag412"],
     metadata: {
         description: "Only use supported ARIA attributes",
@@ -17,14 +14,14 @@ let u = {
     },
     check: function (e) {
         let t = (0, a.Lw)(e),
-            n = r.roles.get(t);
-        if (null == n) return o.o;
-        for (let r of i.ye)
-            if (e.hasAttribute(r) && !n.props.hasOwnProperty(r)) {
-                if ("aria-expanded" === r && e.hasAttribute("aria-controls")) continue;
-                if (!(0, l.z)(e)) return o.o;
-                return "'".concat(t, "' does not support the ").concat(r, " attribute");
+            r = n.roles.get(t);
+        if (null == r) return i.o;
+        for (let n of o.ye)
+            if (e.hasAttribute(n) && !r.props.hasOwnProperty(n)) {
+                if ("aria-expanded" === n && e.hasAttribute("aria-controls")) continue;
+                if (!(0, l.z)(e)) return i.o;
+                return `'${t}' does not support the ${n} attribute`;
             }
-        return o.o;
+        return i.o;
     },
 };

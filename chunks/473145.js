@@ -1,31 +1,28 @@
+"use strict";
 n.d(t, {
-    $U: () => W,
-    Cp: () => I,
-    D$: () => x,
+    $U: () => Y,
+    Cp: () => v,
+    D$: () => w,
     I5: () => F,
-    Nc: () => L,
+    Nc: () => x,
     Os: () => V,
-    P7: () => P,
+    P7: () => D,
     Qu: () => N,
-    Ry: () => T,
-    TP: () => y,
+    Ry: () => C,
+    TP: () => A,
     Ys: () => R,
     aG: () => S,
-    ax: () => v,
+    ax: () => y,
     fA: () => U,
-    fi: () => A,
-    gb: () => C,
-    k1: () => w,
+    fi: () => T,
+    gb: () => b,
+    k1: () => O,
     kN: () => B,
     sN: () => G,
     tO: () => k,
     yA: () => M,
-    yS: () => D,
-}),
-    n(264879),
-    n(65821),
-    n(896048),
-    n(638769);
+    yS: () => L,
+});
 var r = n(735438),
     i = n.n(r);
 n(989349);
@@ -33,31 +30,21 @@ var a = n(336934),
     s = n(923408),
     o = n(864310),
     l = n(434564),
-    c = n(71393),
-    u = n(287809),
+    u = n(71393),
+    c = n(287809),
     d = n(178368),
-    f = n(166403);
+    _ = n(166403);
 n(255438), n(403362), n(975571);
-var p = n(927578);
+var f = n(927578);
 n(728458);
-var _ = n(652215),
-    h = n(307731),
-    m = n(788868),
-    g = n(88001),
-    E = n(985018),
-    b = n(519412);
-Object.freeze({
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 6,
-    5: 9,
-    6: 12,
-    7: 15,
-    8: 18,
-    9: 24,
-});
-var y = (function (e) {
+var p = n(652215);
+n(307731);
+var h = n(788868),
+    m = n(88001),
+    g = n(985018),
+    E = n(519412);
+Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
+var A = (function (e) {
     return (
         (e[(e.EMOJI = 1)] = "EMOJI"),
         (e[(e.AUDIO = 2)] = "AUDIO"),
@@ -73,198 +60,148 @@ var y = (function (e) {
         e
     );
 })({});
-let O = [_.TVA.NONE, _.TVA.TIER_1, _.TVA.TIER_2, _.TVA.TIER_3],
-    A = O.slice().reverse(),
-    v = (e) => {
-        var t;
-        return e === _.TVA.NONE ? _.TVA.TIER_1 : null == (t = j.find((t) => t.tier === e)) ? void 0 : t.nextTier;
-    },
+let I = [p.TVA.NONE, p.TVA.TIER_1, p.TVA.TIER_2, p.TVA.TIER_3],
+    T = I.slice().reverse(),
+    y = (e) => (e === p.TVA.NONE ? p.TVA.TIER_1 : P.find((t) => t.tier === e)?.nextTier),
     S = (e, t) =>
-        null != t && t.features.has(_.GuildFeatures.MORE_STICKERS) && e === _.TVA.TIER_3
+        null != t && t.features.has(p.GuildFeatures.MORE_STICKERS) && e === p.TVA.TIER_3
             ? a.K.MAX_STICKER_SLOTS
-            : m.d8[e],
-    I = (e) => m.nk[e],
-    T = (e) => {
-        if (e === _.TVA.NONE) return m.y7[e];
-        let t = O[O.indexOf(e) - 1];
-        return m.y7[e] - m.y7[t];
+            : h.d8[e],
+    v = (e) => h.nk[e],
+    C = (e) => {
+        if (e === p.TVA.NONE) return h.y7[e];
+        let t = I[I.indexOf(e) - 1];
+        return h.y7[e] - h.y7[t];
     };
-
-function C(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
-        case _.TVA.NONE:
-            return n ? E.intl.string(E.t.LcKgJd) : E.intl.string(E.t.mx8j2m);
-        case _.TVA.TIER_1:
-            return E.intl.string(E.t.nzXtaS);
-        case _.TVA.TIER_2:
-            return E.intl.string(E.t["h33/uW"]);
-        case _.TVA.TIER_3:
-            return E.intl.string(E.t.BfF6ED);
+        case p.TVA.NONE:
+            return n ? g.intl.string(g.t.LcKgJd) : g.intl.string(g.t.mx8j2m);
+        case p.TVA.TIER_1:
+            return g.intl.string(g.t.nzXtaS);
+        case p.TVA.TIER_2:
+            return g.intl.string(g.t["h33/uW"]);
+        case p.TVA.TIER_3:
+            return g.intl.string(g.t.BfF6ED);
         default:
             throw Error("Not a valid tier type");
     }
 }
-
 function N(e) {
     switch (e) {
-        case _.TVA.NONE:
-            return E.intl.string(E.t.LcKgJd);
-        case _.TVA.TIER_1:
-            return E.intl.string(E.t.xRjU1V);
-        case _.TVA.TIER_2:
-            return E.intl.string(E.t.C7e2Bo);
-        case _.TVA.TIER_3:
-            return E.intl.string(E.t.avGxmk);
+        case p.TVA.NONE:
+            return g.intl.string(g.t.LcKgJd);
+        case p.TVA.TIER_1:
+            return g.intl.string(g.t.xRjU1V);
+        case p.TVA.TIER_2:
+            return g.intl.string(g.t.C7e2Bo);
+        case p.TVA.TIER_3:
+            return g.intl.string(g.t.avGxmk);
         default:
             throw Error("Not a valid tier type");
     }
 }
 let R = i().memoize((e) =>
-        m.TG[_.TVA.TIER_1].features.includes(e)
-            ? _.TVA.TIER_1
-            : m.TG[_.TVA.TIER_2].features.includes(e)
-              ? _.TVA.TIER_2
-              : m.TG[_.TVA.TIER_3].features.includes(e)
-                ? _.TVA.TIER_3
+        h.TG[p.TVA.TIER_1].features.includes(e)
+            ? p.TVA.TIER_1
+            : h.TG[p.TVA.TIER_2].features.includes(e)
+              ? p.TVA.TIER_2
+              : h.TG[p.TVA.TIER_3].features.includes(e)
+                ? p.TVA.TIER_3
                 : null,
     ),
-    w = (e) =>
-        e === _.TVA.NONE
-            ? _.AnalyticsObjectTypes.NONE
-            : e === _.TVA.TIER_1
-              ? _.AnalyticsObjectTypes.TIER_1
-              : e === _.TVA.TIER_2
-                ? _.AnalyticsObjectTypes.TIER_2
-                : e === _.TVA.TIER_3
-                  ? _.AnalyticsObjectTypes.TIER_3
+    O = (e) =>
+        e === p.TVA.NONE
+            ? p.AnalyticsObjectTypes.NONE
+            : e === p.TVA.TIER_1
+              ? p.AnalyticsObjectTypes.TIER_1
+              : e === p.TVA.TIER_2
+                ? p.AnalyticsObjectTypes.TIER_2
+                : e === p.TVA.TIER_3
+                  ? p.AnalyticsObjectTypes.TIER_3
                   : null;
-
-function P(e) {
-    var t;
-    let n = null == (t = c.A.getGuild(e)) ? void 0 : t.premiumTier;
-    return null != n ? n : _.TVA.NONE;
+function D(e) {
+    return u.A.getGuild(e)?.premiumTier ?? p.TVA.NONE;
 }
-
-function D(e, t) {
+function L(e, t) {
     return null == t || (null != e && e >= t);
 }
-
-function x(e) {
+function w(e) {
     return i()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-
-function L(e) {
+function x(e) {
     let { fractionalState: t } = e,
-        n = f.A.getPremiumTypeSubscription(),
-        r = u.default.getCurrentUser();
+        n = _.A.getPremiumTypeSubscription(),
+        r = c.default.getCurrentUser();
     d.A.hasFetched || d.A.isFetching || (0, s.CD)();
-    let i = x(d.A.boostSlots),
-        a = null == n ? void 0 : n.isPausedOrPausePending,
+    let i = w(d.A.boostSlots),
+        a = n?.isPausedOrPausePending,
         o = i.length > 0;
-    if (a && t === m.xc.NONE && !o) return E.intl.string(E.t.mOWsF1);
-    if (null == r ? void 0 : r.isPremiumGroupMember())
-        return E.intl.formatToPlainString(b.default["5xN/C1"], {
-            premiumGroupProductName: (0, g.DP)(),
-        });
-    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: c } = Object.values(d.A.boostSlots).reduce(
+    if (a && t === h.xc.NONE && !o) return g.intl.string(g.t.mOWsF1);
+    if (r?.isPremiumGroupMember())
+        return g.intl.formatToPlainString(E.default["5xN/C1"], { premiumGroupProductName: (0, m.DP)() });
+    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: u } = Object.values(d.A.boostSlots).reduce(
         (e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
-        {
-            numAvailableGuildBoostSlots: 0,
-            numCanceledGuildBoostSlots: 0,
-        },
+        { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 },
     );
     if (null == n || l > 0) return null;
-    if (n.status === _.Dmq.PAST_DUE) return E.intl.string(E.t.De4Vm6);
-    if (n.status === _.Dmq.ACCOUNT_HOLD) return E.intl.string(E.t.JakNQ8);
-    if (c > 0) return E.intl.string(E.t.x25mZR);
+    if (n.status === p.Dmq.PAST_DUE) return g.intl.string(g.t.De4Vm6);
+    if (n.status === p.Dmq.ACCOUNT_HOLD) return g.intl.string(g.t.JakNQ8);
+    if (u > 0) return g.intl.string(g.t.x25mZR);
     if (null == n.renewalMutations) return null;
-    let h = p.bx(n.renewalMutations.additionalPlans);
-    return p.bx(n.additionalPlans) > h ? E.intl.string(E.t.x25mZR) : E.intl.string(E.t["W/bb8f"]);
+    let A = f.bx(n.renewalMutations.additionalPlans);
+    return f.bx(n.additionalPlans) > A ? g.intl.string(g.t.x25mZR) : g.intl.string(g.t["W/bb8f"]);
 }
-let j = [
-    {
-        tier: _.TVA.TIER_3,
-        amount: _.M2T[_.TVA.TIER_3],
-        nextTier: null,
-    },
-    {
-        tier: _.TVA.TIER_2,
-        amount: _.M2T[_.TVA.TIER_2],
-        nextTier: _.TVA.TIER_3,
-    },
-    {
-        tier: _.TVA.TIER_1,
-        amount: _.M2T[_.TVA.TIER_1],
-        nextTier: _.TVA.TIER_2,
-    },
+let P = [
+    { tier: p.TVA.TIER_3, amount: p.M2T[p.TVA.TIER_3], nextTier: null },
+    { tier: p.TVA.TIER_2, amount: p.M2T[p.TVA.TIER_2], nextTier: p.TVA.TIER_3 },
+    { tier: p.TVA.TIER_1, amount: p.M2T[p.TVA.TIER_1], nextTier: p.TVA.TIER_2 },
 ];
-
 function M(e, t) {
-    let n = I(t),
-        r = O.indexOf(t);
+    let n = v(t),
+        r = I.indexOf(t);
     if (-1 === r) return 0;
-    let i = O[r - 1],
+    let i = I[r - 1],
         a = null != i ? S(i) : 0,
         s = S(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
-
 function k(e, t, n) {
-    return -1 === O.indexOf(n) ? 0 : Math.max(0, U(e) - t.length);
+    return -1 === I.indexOf(n) ? 0 : Math.max(0, U(e) - t.length);
 }
-
 function U(e) {
-    var t, n;
-    let r = m.OW + (null != (t = null == (n = e.premiumFeatures) ? void 0 : n.additionalSoundSlots) ? t : 0);
-    return Math.max(e.features.has(_.GuildFeatures.MORE_SOUNDBOARD) ? m.xs : m.OW, r);
+    let t = h.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
+    return Math.max(e.features.has(p.GuildFeatures.MORE_SOUNDBOARD) ? h.xs : h.OW, t);
 }
-
 function G(e) {
-    var t, n;
-    let r = h.Xn + (null != (t = null == (n = e.premiumFeatures) ? void 0 : n.additionalEmojiSlots) ? t : 0);
-    return Math.max(e.features.has(_.GuildFeatures.MORE_EMOJI) ? h.EQ : h.Xn, r);
+    let t = 50 + (e.premiumFeatures?.additionalEmojiSlots ?? 0);
+    return Math.max(e.features.has(p.GuildFeatures.MORE_EMOJI) ? 200 : 50, t);
 }
-
 function V(e, t) {
     let n = (0, o.Z)(e.id).available;
-    return Math.max(0, _.M2T[t] - n);
+    return Math.max(0, p.M2T[t] - n);
 }
-
 function F(e) {
-    var t;
-    return (null == (t = e.subscription) ? void 0 : t.status) === _.Dmq.CANCELED || e.canceled;
+    return e.subscription?.status === p.Dmq.CANCELED || e.canceled;
 }
-
 function B(e) {
-    var t;
-    return null != (t = A.find((t) => e >= _.M2T[t])) ? t : _.TVA.NONE;
+    return T.find((t) => e >= p.M2T[t]) ?? p.TVA.NONE;
 }
-
-function H(e) {
-    var t;
-    return null != (t = O.find((t) => e < _.M2T[t])) ? t : _.TVA.TIER_3;
+function j(e) {
+    return I.find((t) => e < p.M2T[t]) ?? p.TVA.TIER_3;
 }
-let Y = {
-    [_.TVA.NONE]: 0,
-    [_.TVA.TIER_1]: 1 / 3,
-    [_.TVA.TIER_2]: 2 / 3,
-    [_.TVA.TIER_3]: 1,
-};
-
-function W(e) {
+let H = { [p.TVA.NONE]: 0, [p.TVA.TIER_1]: 1 / 3, [p.TVA.TIER_2]: 2 / 3, [p.TVA.TIER_3]: 1 };
+function Y(e) {
     let t = (0, l.G)(e.id),
         n = B(t),
-        r = H(t),
-        i = _.M2T[n],
-        a = (t - i) / (_.M2T[r] - i),
-        s = Y[n],
-        o = Y[r];
-    return {
-        fillFactor: n === _.TVA.TIER_3 ? 1 : a * (o - s) + s,
-        totalAvailableBoostsCount: t,
-    };
+        r = j(t),
+        i = p.M2T[n],
+        a = (t - i) / (p.M2T[r] - i),
+        s = H[n],
+        o = H[r];
+    return { fillFactor: n === p.TVA.TIER_3 ? 1 : a * (o - s) + s, totalAvailableBoostsCount: t };
 }

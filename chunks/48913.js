@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_b4589b",
     iJ: "innerWrapper_b4589b",

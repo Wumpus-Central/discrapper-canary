@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     S0: "inlineElement__1464f",
     Cj: "inlineVoid__1464f",

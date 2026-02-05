@@ -1,115 +1,52 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
+n.d(t, { A: () => h });
+var i = n(627968),
     l = n(64700),
-    i = n(934551),
+    s = n(934551),
     a = n(397927),
-    s = n(145331),
+    r = n(145331),
     o = n(670455),
-    c = n(985018),
-    u = n(508134);
-
-function d(e) {
+    d = n(985018),
+    c = n(508134);
+function u(e) {
     let { rating: t, onClick: n } = e,
-        s = t === o.P0.BAD ? i.ThumbsDownIcon : i.ThumbsUpIcon,
-        c = l.useCallback(() => {
+        r = t === o.P0.BAD ? s.ThumbsDownIcon : s.ThumbsUpIcon,
+        d = l.useCallback(() => {
             n(t);
         }, [n, t]);
-    return (0, r.jsx)(a.DUT, {
-        onClick: c,
-        className: u.zc,
-        children: (0, r.jsx)(s, {
-            size: "md",
-            color: "currentColor",
-            className: u.Kk,
-        }),
+    return (0, i.jsx)(a.DUT, {
+        onClick: d,
+        className: c.zc,
+        children: (0, i.jsx)(r, { size: "md", color: "currentColor", className: c.Kk }),
     });
 }
-let f = function (e) {
-    let { searchContext: t, dismissFeedbackEntrypoint: i } = e;
+let h = function (e) {
+    let { searchContext: t, dismissFeedbackEntrypoint: s } = e;
     l.useEffect(() => {
-        (0, s.J$)({
-            searchContext: t,
-        });
+        (0, r.J$)({ searchContext: t });
     }, [t]);
-    let f = l.useCallback(
+    let h = l.useCallback(
         (e) => {
-            i(),
+            s(),
                 (0, a.mMO)(async () => {
                     let { default: l } = await n.e("66536").then(n.bind(n, 306088));
-                    return (n) => {
-                        var i, a;
-                        return (0, r.jsx)(
-                            l,
-                            ((i = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, n)),
-                            (a = a =
-                                {
-                                    searchContext: t,
-                                    rating: e,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            i),
-                        );
-                    };
+                    return (n) => (0, i.jsx)(l, { ...n, searchContext: t, rating: e });
                 });
         },
-        [i, t],
+        [s, t],
     );
-    return (0, r.jsxs)("div", {
-        className: u.kL,
+    return (0, i.jsxs)("div", {
+        className: c.kL,
         children: [
-            (0, r.jsx)(a.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-strong",
-                children: c.intl.string(c.t["I+4OJC"]),
+                children: d.intl.string(d.t["I+4OJC"]),
             }),
-            (0, r.jsxs)("div", {
-                className: u.Pt,
+            (0, i.jsxs)("div", {
+                className: c.Pt,
                 children: [
-                    (0, r.jsx)(d, {
-                        rating: o.P0.GOOD,
-                        onClick: f,
-                    }),
-                    (0, r.jsx)(d, {
-                        rating: o.P0.BAD,
-                        onClick: f,
-                    }),
+                    (0, i.jsx)(u, { rating: o.P0.GOOD, onClick: h }),
+                    (0, i.jsx)(u, { rating: o.P0.BAD, onClick: h }),
                 ],
             }),
         ],

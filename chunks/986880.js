@@ -1,105 +1,95 @@
-let r;
-n.d(t, {
-    Ay: () => I,
-});
-var i = n(73153),
-    l = n(31728),
-    a = n(272355),
+let i;
+n.d(t, { Ay: () => T });
+var r = n(73153),
+    a = n(31728),
+    l = n(272355),
     s = n(87001),
     o = n(734057),
-    c = n(186111),
-    u = n(334463),
-    d = n(383501),
-    p = n(309010),
-    f = n(967198),
-    h = n(977997),
-    A = n(998740),
-    g = n(652215);
-
-function m(e) {
-    return "haven:".concat(e);
+    d = n(186111),
+    c = n(334463),
+    u = n(383501),
+    A = n(309010),
+    h = n(967198),
+    _ = n(977997),
+    m = n(998740),
+    p = n(652215);
+function g(e) {
+    return `haven:${e}`;
 }
-
-function b() {
-    let e = r;
-    if (null == e) return !1;
-    let t = m(e);
-    if (!u.A.isOpen(t)) return !1;
-    let n = u.A.pipHavenWindow;
-    if (null == n || n.id !== t) return (r = null), !1;
-    i.h.wait(() => l.VN(t)), (r = null);
-}
-
-function _() {
-    return c.A.hasLayers();
-}
-
 function E() {
+    let e = i;
+    if (null == e) return !1;
+    let t = g(e);
+    if (!c.A.isOpen(t)) return !1;
+    let n = c.A.pipHavenWindow;
+    if (null == n || n.id !== t) return (i = null), !1;
+    r.h.wait(() => a.VN(t)), (i = null);
+}
+function f() {
+    return d.A.hasLayers();
+}
+function I() {
     let e,
         t,
-        n = d.A.getChannelId(),
-        a = null != n ? o.A.getChannel(n) : null;
+        n = u.A.getChannelId(),
+        l = null != n ? o.A.getChannel(n) : null;
     if (
-        ((e = d.A.getChannelId()),
-        (t = p.A.getChannelId()),
-        null == e || !A.A.isUserConnected(e) || e === t || s.A.getWindowOpen(g.MLl.CHANNEL_CALL_POPOUT) || 0)
+        ((e = u.A.getChannelId()),
+        (t = A.A.getChannelId()),
+        null == e || !m.A.isUserConnected(e) || e === t || s.A.getWindowOpen(p.MLl.CHANNEL_CALL_POPOUT) || 0)
     )
-        return b();
-    if (null != a && A.A.isUserConnected(a.id)) {
-        if (r !== a.id) {
-            let e = m(a.id);
-            if (u.A.isOpen(e)) return !1;
-            if (null != r) {
-                let e = r;
-                i.h.wait(() => l.VN(e));
+        return E();
+    if (null != l && m.A.isUserConnected(l.id)) {
+        if (i !== l.id) {
+            let e = g(l.id);
+            if (c.A.isOpen(e)) return !1;
+            if (null != i) {
+                let e = i;
+                r.h.wait(() => a.VN(e));
             }
             return (
-                i.h.wait(() => {
-                    l.ho(e, g.o1q.HAVEN, {
-                        channel: a,
-                    }),
-                        _() && l.jD(e);
+                r.h.wait(() => {
+                    a.ho(e, p.o1q.HAVEN, { channel: l }), f() && a.jD(e);
                 }),
-                (r = a.id),
+                (i = l.id),
                 !0
             );
         }
         return !1;
     }
-    return b();
+    return E();
 }
-
-function O() {
-    if (_()) {
-        let e = r;
+function C() {
+    if (f()) {
+        let e = void 0 ?? i;
         if (null == e) return;
-        let t = m(e);
-        u.A.isOpen(t) && i.h.wait(() => l.jD(t));
+        let t = g(e);
+        c.A.isOpen(t) && r.h.wait(() => a.jD(t));
         return;
     }
-    let e = r;
+    let e = void 0 ?? i;
     if (null == e) return;
-    let t = m(e);
-    u.A.isOpen(t) && i.h.wait(() => l.WU(t));
+    let t = g(e);
+    c.A.isOpen(t) && r.h.wait(() => a.WU(t));
 }
-class y extends a.A {
+class N extends l.A {
     _initialize() {
-        p.A.addChangeListener(E),
-            f.A.addChangeListener(E),
-            d.A.addChangeListener(E),
-            h.A.addChangeListener(E),
-            c.A.addChangeListener(O),
-            A.A.addChangeListener(E),
-            s.A.addChangeListener(E);
+        A.A.addChangeListener(I),
+            h.A.addChangeListener(I),
+            u.A.addChangeListener(I),
+            _.A.addChangeListener(I),
+            d.A.addChangeListener(C),
+            m.A.addChangeListener(I),
+            s.A.addChangeListener(I);
     }
     _terminate() {
-        p.A.removeChangeListener(E),
-            f.A.removeChangeListener(E),
-            d.A.removeChangeListener(E),
-            h.A.removeChangeListener(E),
-            c.A.removeChangeListener(O),
-            A.A.removeChangeListener(E),
-            s.A.removeChangeListener(E);
+        A.A.removeChangeListener(I),
+            h.A.removeChangeListener(I),
+            u.A.removeChangeListener(I),
+            _.A.removeChangeListener(I),
+            d.A.removeChangeListener(C),
+            m.A.removeChangeListener(I),
+            s.A.removeChangeListener(I);
     }
 }
-let I = new y();
+let T = new N();

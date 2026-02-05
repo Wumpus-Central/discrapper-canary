@@ -1,20 +1,14 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    A: () => i,
-});
-class i {
+"use strict";
+n.d(t, { A: () => r });
+class r {
+    val;
+    loading = !1;
+    loaded = !1;
+    param;
+    loader;
+    constructor(e) {
+        this.loader = e;
+    }
     setParams(e) {
         this.param !== e && ((this.param = e), (this.loading = !1), (this.loaded = !1));
     }
@@ -28,13 +22,5 @@ class i {
             this.loader(e).then((t) => {
                 e === this.param && ((this.val = t), (this.loading = !1), (this.loaded = !0));
             });
-    }
-    constructor(e) {
-        r(this, "val", void 0),
-            r(this, "loading", !1),
-            r(this, "loaded", !1),
-            r(this, "param", void 0),
-            r(this, "loader", void 0),
-            (this.loader = e);
     }
 }

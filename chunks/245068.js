@@ -1,35 +1,31 @@
-n.d(t, {
-    X: () => E,
-});
+"use strict";
+n.d(t, { X: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(582754),
     l = n(397927),
-    c = n(736653),
-    u = n(550111),
+    u = n(736653),
+    c = n(550111),
     d = n(331402),
-    f = n(442759),
-    p = n(940622),
-    _ = n(929283),
+    _ = n(442759),
+    f = n(940622),
+    p = n(929283),
     h = n(650906),
     m = n(180171),
     g = n(989099);
 let E = i.memo(function (e) {
     let { product: t, isHighlighted: n, user: i, forCollectedModal: a } = e,
-        { firstProfileEffect: E, firstAvatarDecoration: b, firstNameplate: y } = (0, f.f5)(t),
-        O = (0, p.br)(b),
-        A = (0, c.Ay)(),
-        v = (0, o.qB)(A),
-        S = null != y && null != b && null != E,
-        I = S ? l._3J.SIZE_72 : l._3J.SIZE_80,
-        T = v ? g : m;
+        { firstProfileEffect: E, firstAvatarDecoration: A, firstNameplate: I } = (0, _.f5)(t),
+        T = (0, f.br)(A),
+        y = (0, u.Ay)(),
+        S = (0, o.qB)(y),
+        v = null != I && null != A && null != E,
+        C = v ? l._3J.SIZE_72 : l._3J.SIZE_80,
+        b = S ? g : m;
     return (0, r.jsxs)("div", {
-        className: s()(h.kL, {
-            [h.ib]: !S,
-            [h.c$]: S,
-        }),
+        className: s()(h.kL, { [h.ib]: !v, [h.c$]: v }),
         children: [
             null != E &&
                 (0, r.jsx)("div", {
@@ -42,26 +38,26 @@ let E = i.memo(function (e) {
                         withScaleAnimation: a,
                     }),
                 }),
-            S &&
+            v &&
                 (0, r.jsx)("div", {
                     className: h.M4,
-                    children: (0, r.jsx)(u.A, {
+                    children: (0, r.jsx)(c.A, {
                         user: i,
-                        nameplate: y,
+                        nameplate: I,
                         isHighlighted: n,
                         showPlaceholderUser: !n,
-                        pendingAvatarDecoration: O,
+                        pendingAvatarDecoration: T,
                     }),
                 }),
-            null != O &&
+            null != T &&
                 (0, r.jsx)("div", {
                     className: h._P,
-                    children: (0, r.jsx)(_.i, {
-                        item: O,
+                    children: (0, r.jsx)(p.i, {
+                        item: T,
                         user: i,
-                        avatarSize: I,
+                        avatarSize: C,
                         isHighlighted: n,
-                        avatarPlaceholderSrc: T,
+                        avatarPlaceholderSrc: b,
                         className: h.my,
                     }),
                 }),

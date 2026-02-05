@@ -127,49 +127,19 @@ e.exports = function (e) {
             built_in: ["stdin", "stdout", "stderr", "result"],
         },
         contains: [
-            {
-                className: "meta",
-                begin: /\{\./,
-                end: /\.\}/,
-                relevance: 10,
-            },
-            {
-                className: "string",
-                begin: /[a-zA-Z]\w*"/,
-                end: /"/,
-                contains: [
-                    {
-                        begin: /""/,
-                    },
-                ],
-            },
-            {
-                className: "string",
-                begin: /([a-zA-Z]\w*)?"""/,
-                end: /"""/,
-            },
+            { className: "meta", begin: /\{\./, end: /\.\}/, relevance: 10 },
+            { className: "string", begin: /[a-zA-Z]\w*"/, end: /"/, contains: [{ begin: /""/ }] },
+            { className: "string", begin: /([a-zA-Z]\w*)?"""/, end: /"""/ },
             e.QUOTE_STRING_MODE,
-            {
-                className: "type",
-                begin: /\b[A-Z]\w+\b/,
-                relevance: 0,
-            },
+            { className: "type", begin: /\b[A-Z]\w+\b/, relevance: 0 },
             {
                 className: "number",
                 relevance: 0,
                 variants: [
-                    {
-                        begin: /\b(0[xX][0-9a-fA-F][_0-9a-fA-F]*)('?[iIuU](8|16|32|64))?/,
-                    },
-                    {
-                        begin: /\b(0o[0-7][_0-7]*)('?[iIuUfF](8|16|32|64))?/,
-                    },
-                    {
-                        begin: /\b(0(b|B)[01][_01]*)('?[iIuUfF](8|16|32|64))?/,
-                    },
-                    {
-                        begin: /\b(\d[_\d]*)('?[iIuUfF](8|16|32|64))?/,
-                    },
+                    { begin: /\b(0[xX][0-9a-fA-F][_0-9a-fA-F]*)('?[iIuU](8|16|32|64))?/ },
+                    { begin: /\b(0o[0-7][_0-7]*)('?[iIuUfF](8|16|32|64))?/ },
+                    { begin: /\b(0(b|B)[01][_01]*)('?[iIuUfF](8|16|32|64))?/ },
+                    { begin: /\b(\d[_\d]*)('?[iIuUfF](8|16|32|64))?/ },
                 ],
             },
             e.HASH_COMMENT_MODE,

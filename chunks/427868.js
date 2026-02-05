@@ -1,38 +1,26 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968),
+n.d(t, { A: () => c });
+var i = n(627968),
     l = n(64700),
-    i = n(607399),
-    a = n(397927),
-    s = n(194085),
+    a = n(607399),
+    s = n(397927),
+    r = n(194085),
     o = n(985018);
-
 function c(e) {
-    let { channel: t, message: n, togglePopout: c, renderEmojiPicker: u, shouldShow: d } = e,
-        f = l.useRef(null);
-    return (0, r.jsx)(a.YNO, {
-        targetElementRef: f,
-        animation: a.YNO.Animation.FADE,
+    let { channel: t, message: n, togglePopout: c, renderEmojiPicker: d, shouldShow: u } = e,
+        h = l.useRef(null);
+    return (0, i.jsx)(s.YNO, {
+        targetElementRef: h,
+        animation: s.YNO.Animation.FADE,
         renderPopout: (e) => {
-            let { closePopout: r } = e;
-            return u(t, n, r, !1);
+            let { closePopout: i } = e;
+            return d(t, n, i, !1);
         },
-        shouldShow: d,
+        shouldShow: u,
         onRequestClose: c,
-        position: i.Fr ? "top" : "left",
-        align: i.Fr ? "center" : "top",
+        position: a.Fr ? "top" : "left",
+        align: a.Fr ? "center" : "top",
         clickTrap: !0,
         children: () =>
-            (0, r.jsx)(
-                s.qv,
-                {
-                    ref: f,
-                    label: o.intl.string(o.t.lfIHs4),
-                    icon: a.nm2,
-                    onClick: c,
-                },
-                "add-reaction",
-            ),
+            (0, i.jsx)(r.qv, { ref: h, label: o.intl.string(o.t.lfIHs4), icon: s.nm2, onClick: c }, "add-reaction"),
     });
 }

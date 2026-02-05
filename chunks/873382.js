@@ -1,6 +1,5 @@
-n.d(t, {
-    v: () => r,
-});
+"use strict";
+n.d(t, { v: () => r });
 let r = {
     bg: async () => (await n.e("6651").then(n.bind(n, 450294))).default,
     cs: async () => (await n.e("86440").then(n.bind(n, 562715))).default,

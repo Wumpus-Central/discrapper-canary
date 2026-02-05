@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Se: "upload_aa605f",
     BN: "smallActionBar_aa605f",

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(108591),
     i = n(739305),
     a = i.aTypedArray,

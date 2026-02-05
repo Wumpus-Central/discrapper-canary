@@ -1,11 +1,5 @@
-n.d(t, {
-    CV: () => a,
-    E9: () => d,
-    Pl: () => g,
-    d2: () => E,
-    eB: () => s,
-    zL: () => y,
-});
+"use strict";
+n.d(t, { CV: () => a, E9: () => d, Pl: () => g, d2: () => E, eB: () => s, zL: () => I });
 var r = n(476858),
     i = n(364242);
 let a = {
@@ -133,7 +127,7 @@ let a = {
         hundra: 100,
         tusen: 1e3,
     },
-    c = {
+    u = {
         sek: "second",
         sekund: "second",
         sekunder: "second",
@@ -154,7 +148,7 @@ let a = {
         kvartаl: "quarter",
         kvartal: "quarter",
     },
-    u = {
+    c = {
         sekund: "second",
         sekunder: "second",
         minut: "minute",
@@ -170,33 +164,29 @@ let a = {
         år: "year",
         kvartal: "quarter",
     };
-
 function d(e) {
     let t = {},
         n = e,
         r = h.exec(n);
-    for (; r; ) f(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
+    for (; r; ) _(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
     return t;
 }
-
-function f(e, t) {
-    let n = b(t[1]);
-    e[c[t[2].toLowerCase()]] = n;
+function _(e, t) {
+    let n = A(t[1]);
+    e[u[t[2].toLowerCase()]] = n;
 }
-let p = `(?:${(0, r.uJ)(l)}|\\d+)`;
-(0, r.uJ)(o), (0, r.uJ)(c);
-let _ = `(${p})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
-    h = RegExp(_, "i"),
-    m = `(${p})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
-    g = (0, r.mb)("", _),
+let f = `(?:${(0, r.uJ)(l)}|\\d+)`;
+(0, r.uJ)(o), (0, r.uJ)(u);
+let p = `(${f})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
+    h = RegExp(p, "i"),
+    m = `(${f})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
+    g = (0, r.mb)("", p),
     E = (0, r.mb)("", m);
-
-function b(e) {
+function A(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt(t);
 }
-
-function y(e) {
+function I(e) {
     if (/\d+/.test(e)) {
         let t = parseInt(e);
         return t < 100 && (t = (0, i.D)(t)), t;

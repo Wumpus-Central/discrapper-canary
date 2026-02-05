@@ -1,8 +1,6 @@
+"use strict";
 let r;
-n.d(t, {
-    n: () => o,
-}),
-    n(457529);
+n.d(t, { n: () => o });
 var i = n(973117);
 try {
     r = window.sessionStorage;
@@ -10,7 +8,6 @@ try {
 try {
     delete window.sessionStorage;
 } catch (e) {}
-
 function a() {
     let e = "test";
     try {

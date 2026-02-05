@@ -1,37 +1,35 @@
-n.d(t, {
-    y: () => S,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { y: () => v });
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(397927),
+    r = n(397927),
     a = n(460760),
-    c = n(408213),
-    o = n(840387),
-    d = n(71393),
+    o = n(408213),
+    d = n(840387),
+    c = n(71393),
     u = n(975571),
-    f = n(555337),
+    m = n(555337),
     g = n(523386),
-    b = n(818191),
-    m = n(564864),
-    p = n(915417),
-    x = n(147988),
-    h = n(366846),
-    j = n(306846),
-    O = n(493781),
-    y = n(894222),
-    v = n(652215),
-    A = n(985018),
-    E = n(771661);
-
-function N(e) {
+    x = n(818191),
+    h = n(564864),
+    _ = n(915417),
+    A = n(147988),
+    p = n(366846),
+    f = n(306846),
+    j = n(493781),
+    N = n(894222),
+    E = n(652215),
+    b = n(985018),
+    T = n(771661);
+function C(e) {
     let { pendingState: t } = e,
-        n = i.useRef(!1),
-        l = i.useCallback(
+        n = s.useRef(!1),
+        l = s.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, g.$)(e), (0, b.i)(e), (0, a.Mu)(), (0, a.mo)(e);
+                        await (0, g.$)(e), (0, x.i)(e), (0, a.Mu)(), (0, a.mo)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -39,17 +37,12 @@ function N(e) {
             [n],
         );
     switch (t.joinType) {
-        case y.J.INVITE:
-            return (0, r.jsx)(h.D, {
-                requireTerms: t.requireTerms,
-                rules: t.termRules,
-            });
-        case y.J.APPLY:
-            return (0, r.jsx)(p.g, {
-                pendingFields: t.pendingVerificationFields,
-            });
-        case y.J.DISCOVERABLE:
-            return (0, r.jsx)(x.t, {
+        case N.J.INVITE:
+            return (0, i.jsx)(p.D, { requireTerms: t.requireTerms, rules: t.termRules });
+        case N.J.APPLY:
+            return (0, i.jsx)(_.g, { pendingFields: t.pendingVerificationFields });
+        case N.J.DISCOVERABLE:
+            return (0, i.jsx)(A.t, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -57,85 +50,60 @@ function N(e) {
             });
     }
 }
-
-function _(e) {
+function I(e) {
     let { guildId: t } = e,
-        { nsfwLevel: n, ownerConfiguredContentLevel: a } = (0, l.cf)([d.A], () => {
-            var e, n;
-            return {
-                nsfwLevel: null == (e = d.A.getGuild(t)) ? void 0 : e.nsfwLevel,
-                ownerConfiguredContentLevel: null == (n = d.A.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel,
-            };
-        }),
-        c = (0, l.bG)([j.A], () => {
-            var e;
-            return null == (e = j.A.pendingState) ? void 0 : e.isAgeRestricted;
-        }),
-        o = i.useCallback(
+        { nsfwLevel: n, ownerConfiguredContentLevel: a } = (0, l.cf)([c.A], () => ({
+            nsfwLevel: c.A.getGuild(t)?.nsfwLevel,
+            ownerConfiguredContentLevel: c.A.getGuild(t)?.ownerConfiguredContentLevel,
+        })),
+        o = (0, l.bG)([f.A], () => f.A.pendingState?.isAgeRestricted),
+        d = s.useCallback(
             (e) => {
-                m.A.setIsAgeRestricted(t, e);
+                h.A.setIsAgeRestricted(t, e);
             },
             [t],
         ),
-        f = n === v.ftr.AGE_RESTRICTED && a !== v.ftr.AGE_RESTRICTED;
-    return (0, r.jsx)(s.dOG, {
-        label: A.intl.string(A.t.N9xEJF),
-        description: A.intl.format(A.t.iyQQ62, {
-            helpArticleLink: u.A.getArticleURL(v.MVz.NSFW_SERVER_AGE_RESTRICTION),
+        m = n === E.ftr.AGE_RESTRICTED && a !== E.ftr.AGE_RESTRICTED;
+    return (0, i.jsx)(r.dOG, {
+        label: b.intl.string(b.t.N9xEJF),
+        description: b.intl.format(b.t.iyQQ62, {
+            helpArticleLink: u.A.getArticleURL(E.MVz.NSFW_SERVER_AGE_RESTRICTION),
         }),
-        checked: c,
-        onChange: o,
-        disabled: f,
+        checked: o,
+        onChange: d,
+        disabled: m,
     });
 }
-
-function S() {
-    let e = (0, l.bG)([f.A], () => f.A.getProps().guild),
-        t = (0, l.bG)([j.A], () => j.A.pendingState),
-        n = (0, o.Z)();
-    i.useEffect(() => {
-        (null == e ? void 0 : e.id) != null && c.Ay.fetchVerificationForm(e.id);
-    }, [null == e ? void 0 : e.id]);
-    let a = i.useCallback(
+function v() {
+    let e = (0, l.bG)([m.A], () => m.A.getProps().guild),
+        t = (0, l.bG)([f.A], () => f.A.pendingState),
+        n = (0, d.Z)();
+    s.useEffect(() => {
+        e?.id != null && o.Ay.fetchVerificationForm(e.id);
+    }, [e?.id]);
+    let a = s.useCallback(
         (t) => {
-            (null == e ? void 0 : e.id) != null && m.A.setSelectedJoinType(e.id, t);
+            e?.id != null && h.A.setSelectedJoinType(e.id, t);
         },
-        [null == e ? void 0 : e.id],
+        [e?.id],
     );
     if (null == e || null == t) return null;
-    let { joinType: d } = t;
-    return (0, r.jsxs)(s.BJc, {
+    let { joinType: c } = t;
+    return (0, i.jsxs)(r.BJc, {
         gap: 32,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, i.jsx)(r.Heading, {
                 color: "text-strong",
                 variant: "heading-lg/semibold",
-                children: A.intl.string(A.t.YJlvBM),
+                children: b.intl.string(b.t.YJlvBM),
             }),
-            (0, r.jsx)(O.G, {
-                onTypePicked: a,
-                activeType: d,
-                guild: e,
-            }),
-            (0, r.jsx)("div", {
-                className: E.y,
-            }),
+            (0, i.jsx)(j.G, { onTypePicked: a, activeType: c, guild: e }),
+            (0, i.jsx)("div", { className: T.y }),
             !n &&
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(_, {
-                            guildId: e.id,
-                        }),
-                        (0, r.jsx)("div", {
-                            className: E.y,
-                        }),
-                    ],
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(I, { guildId: e.id }), (0, i.jsx)("div", { className: T.y })],
                 }),
-            (0, r.jsx)("div", {
-                children: (0, r.jsx)(N, {
-                    pendingState: t,
-                }),
-            }),
+            (0, i.jsx)("div", { children: (0, i.jsx)(C, { pendingState: t }) }),
         ],
     });
 }

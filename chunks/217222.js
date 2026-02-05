@@ -1,16 +1,11 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u });
 var r = n(789459),
     i = n(73153),
     a = n(380610),
     s = n(961350),
     o = n(954571);
 class l extends r.A {
-    initialize(e) {
-        this.waitFor(s.default), this.loadStoredState(e, (0, a.DI)());
-    }
     constructor() {
         super(
             i.h,
@@ -38,5 +33,8 @@ class l extends r.A {
             }),
             (this.surface = "discord_app");
     }
+    initialize(e) {
+        this.waitFor(s.default), this.loadStoredState(e, (0, a.DI)());
+    }
 }
-let c = new l();
+let u = new l();

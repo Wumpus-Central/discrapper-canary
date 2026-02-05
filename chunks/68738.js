@@ -1,71 +1,22 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(638769);
+n.d(t, { A: () => p });
 var a = n(627968),
-    l = n(64700),
-    r = n(397927),
-    i = n(442433),
-    s = n(611010),
+    s = n(64700),
+    i = n(397927),
+    l = n(442433),
+    r = n(611010),
     o = n(734057),
-    c = n(71393),
-    d = n(287809),
+    d = n(71393),
+    c = n(287809),
     u = n(815907),
     m = n(661251);
-
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let x = {
+let h = {
         ClipsContextMenu: async () => {
             let { default: e } = await n.e("44751").then(n.bind(n, 575538));
-            return (t) => (0, a.jsx)(e, p({}, t));
+            return (t) => (0, a.jsx)(e, { ...t });
         },
         ActivityPopoutHeaderOverflowMenu: async () => {
             let { default: e } = await n.e("33648").then(n.bind(n, 246323)),
-                t = new s.kJ({
+                t = new r.kJ({
                     id: "123456789",
                     name: "Test Activity",
                     icon: null,
@@ -82,25 +33,12 @@ let x = {
                     parentId: void 0,
                     connectionEntrypointUrl: void 0,
                 });
-            return () =>
-                (0, a.jsx)(e, {
-                    application: t,
-                    channelId: "987654321",
-                    onClose: i.Z_,
-                });
+            return () => (0, a.jsx)(e, { application: t, channelId: "987654321", onClose: l.Z_ });
         },
         GuildChannelListContextMenu: async () => {
             let { default: e } = await n.e("10758").then(n.bind(n, 455557)),
-                t = Object.values(c.A.getGuilds())[0];
-            return null == t
-                ? () => null
-                : (n) =>
-                      (0, a.jsx)(
-                          e,
-                          h(p({}, n), {
-                              guild: t,
-                          }),
-                      );
+                t = Object.values(d.A.getGuilds())[0];
+            return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, guild: t });
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
@@ -119,245 +57,157 @@ let x = {
                     n.e("35894"),
                     n.e("50796"),
                     n.e("24202"),
-                    n.e("11810"),
                     n.e("8458"),
+                    n.e("11810"),
                     n.e("39048"),
                     n.e("17537"),
                     n.e("2155"),
                     n.e("36290"),
-                    n.e("59735"),
                     n.e("54469"),
                     n.e("59461"),
                 ]).then(n.bind(n, 544676)),
-                t = Object.values(c.A.getGuilds())[0];
-            return null == t
-                ? () => null
-                : (n) =>
-                      (0, a.jsx)(
-                          e,
-                          h(p({}, n), {
-                              guild: t,
-                          }),
-                      );
+                t = Object.values(d.A.getGuilds())[0];
+            return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, guild: t });
         },
         GuildFolderContextMenu: async () => {
             let { default: e } = await n.e("32857").then(n.bind(n, 842112));
-            return (t) =>
-                (0, a.jsx)(
-                    e,
-                    h(p({}, t), {
-                        folderId: 1,
-                        folderColor: void 0,
-                        folderName: void 0,
-                        unread: !1,
-                    }),
-                );
+            return (t) => (0, a.jsx)(e, { ...t, folderId: 1, folderColor: void 0, folderName: void 0, unread: !1 });
         },
         DeveloperContextMenu: async () => {
             let { default: e } = await n.e("15687").then(n.bind(n, 646938));
-            return (t) =>
-                (0, a.jsx)(
-                    e,
-                    h(p({}, t), {
-                        id: "123456789",
-                        label: "Copy Test ID",
-                    }),
-                );
+            return (t) => (0, a.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
         UserSettingsCogContextMenu: async () => {
             let { default: e } = await n.e("95153").then(n.bind(n, 50120)),
-                t = d.default.getCurrentUser();
+                t = c.default.getCurrentUser();
             return null == t
                 ? () => null
-                : (n) =>
-                      (0, a.jsx)(
-                          e,
-                          h(p({}, n), {
-                              user: t,
-                              webBuildOverride: null,
-                              premiumSubscription: null,
-                          }),
-                      );
+                : (n) => (0, a.jsx)(e, { ...n, user: t, webBuildOverride: null, premiumSubscription: null });
         },
         ExpressionPickerContextMenu: async () => {
             let { default: e } = await n.e("46132").then(n.bind(n, 233503));
-            return (t) => (0, a.jsx)(e, p({}, t));
+            return (t) => (0, a.jsx)(e, { ...t });
         },
         ForumTagContextMenu: async () => {
             let { default: e } = await n.e("32612").then(n.bind(n, 960015)),
-                t = {
-                    id: "123456789",
-                    name: "Test Forum Tag",
-                };
-            return () =>
-                (0, a.jsx)(e, {
-                    tag: t,
-                });
+                t = { id: "123456789", name: "Test Forum Tag" };
+            return () => (0, a.jsx)(e, { tag: t });
         },
         GuildRoleConnectionsModalContextMenu: async () => {
             let { default: e } = await n.e("68001").then(n.bind(n, 699896));
             return (t) =>
-                (0, a.jsx)(
-                    e,
-                    h(p({}, t), {
-                        roleId: "123456789",
-                        onLeaveRole: () => {
-                            console.log("Leave role clicked"), (0, i.Z_)();
-                        },
-                    }),
-                );
+                (0, a.jsx)(e, {
+                    ...t,
+                    roleId: "123456789",
+                    onLeaveRole: () => {
+                        console.log("Leave role clicked"), (0, l.Z_)();
+                    },
+                });
         },
         StaffOnlyEntryDebugMenu: async () => {
-            var e;
-            let { default: t } = await n.e("89346").then(n.bind(n, 949881)),
-                { ContentInventoryEntryType: l } = await Promise.resolve().then(n.bind(n, 681154)),
-                { ContentInventoryAuthorType: r } = await Promise.resolve().then(n.bind(n, 6161)),
-                i = d.default.getCurrentUser(),
-                s = {
+            let { default: e } = await n.e("89346").then(n.bind(n, 949881)),
+                { ContentInventoryEntryType: t } = await Promise.resolve().then(n.bind(n, 681154)),
+                { ContentInventoryAuthorType: s } = await Promise.resolve().then(n.bind(n, 6161)),
+                i = c.default.getCurrentUser(),
+                l = {
                     id: "mock-entry-123",
-                    author_id: null != (e = null == i ? void 0 : i.id) ? e : "123456789",
-                    author_type: r.USER,
-                    content_type: l.PLAYED_GAME,
+                    author_id: i?.id ?? "123456789",
+                    author_type: s.USER,
+                    content_type: t.PLAYED_GAME,
                     participants: [],
                     traits: [],
-                    extra: {
-                        type: "played_game_extra",
-                        game_name: "Test Game",
-                        application_id: "123456789",
-                    },
+                    extra: { type: "played_game_extra", game_name: "Test Game", application_id: "123456789" },
                 };
-            return () =>
-                (0, a.jsx)(t, {
-                    entry: s,
-                    requestId: "mock-request-123",
-                });
+            return () => (0, a.jsx)(e, { entry: l, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([n.e("10614"), n.e("11810"), n.e("23342")]).then(
                     n.bind(n, 892921),
                 ),
-                t = Object.values(c.A.getGuilds())[0];
+                t = Object.values(d.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (n) =>
-                      (0, a.jsx)(
-                          e,
-                          h(p({}, n), {
-                              addFormField: (e) => {
-                                  console.log("Add form field:", e), (0, i.Z_)();
-                              },
-                              guild: t,
-                              allowTerms: !0,
-                          }),
-                      );
+                      (0, a.jsx)(e, {
+                          ...n,
+                          addFormField: (e) => {
+                              console.log("Add form field:", e), (0, l.Z_)();
+                          },
+                          guild: t,
+                          allowTerms: !0,
+                      });
         },
         ChannelListThreadContextMenu: async () => {
             let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("73545")]).then(n.bind(n, 44536)),
-                t = c.A.getGuilds(),
-                l = null;
+                t = d.A.getGuilds(),
+                s = null;
             for (let e of Object.values(t)) {
                 for (let t of Object.values(o.A.getMutableGuildChannelsForGuild(e.id))) {
                     let e = o.A.getAllThreadsForParent(t.id);
                     if (e.length > 0) {
-                        l = e[0];
+                        s = e[0];
                         break;
                     }
                 }
-                if (null != l) break;
+                if (null != s) break;
             }
-            return null == l
+            return null == s
                 ? (console.log("No thread channel found for ChannelListThreadContextMenu"), () => null)
-                : (t) =>
-                      (0, a.jsx)(
-                          e,
-                          h(p({}, t), {
-                              channel: l,
-                          }),
-                      );
+                : (t) => (0, a.jsx)(e, { ...t, channel: s });
         },
         MembersTableSortContextMenu: async () => {
             let { default: e } = await n.e("73091").then(n.bind(n, 779662)),
-                t = Object.values(c.A.getGuilds())[0];
-            return null == t
-                ? () => null
-                : () =>
-                      (0, a.jsx)(e, {
-                          guildId: t.id,
-                          onClose: i.Z_,
-                      });
+                t = Object.values(d.A.getGuilds())[0];
+            return null == t ? () => null : () => (0, a.jsx)(e, { guildId: t.id, onClose: l.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
             let { default: e } = await n.e("21539").then(n.bind(n, 441358)),
-                t = Object.values(c.A.getGuilds())[0];
-            return null == t
-                ? () => null
-                : () =>
-                      (0, a.jsx)(e, {
-                          guildId: t.id,
-                          onClose: i.Z_,
-                      });
+                t = Object.values(d.A.getGuilds())[0];
+            return null == t ? () => null : () => (0, a.jsx)(e, { guildId: t.id, onClose: l.Z_ });
         },
     },
-    g = {
-        GuildShopSortOptions: l.lazy(async () => {
+    x = {
+        GuildShopSortOptions: s.lazy(async () => {
             let { default: e } = await n.e("50974").then(n.bind(n, 324269)),
                 { default: t } = await n.e("55197").then(n.bind(n, 558060));
-            return {
-                default: () =>
-                    (0, a.jsx)(t, {
-                        defaultSortOption: void 0,
-                        children: (0, a.jsx)(e, {}),
-                    }),
-            };
+            return { default: () => (0, a.jsx)(t, { defaultSortOption: void 0, children: (0, a.jsx)(e, {}) }) };
         }),
     };
-
-function f() {
-    let e = l.useMemo(
+function p() {
+    let e = s.useMemo(
+            () =>
+                Object.keys(h)
+                    .map((e) => ({ label: e, value: e, id: e }))
+                    .sort((e, t) => e.label.localeCompare(t.label)),
+            [],
+        ),
+        t = s.useMemo(
             () =>
                 Object.keys(x)
-                    .map((e) => ({
-                        label: e,
-                        value: e,
-                        id: e,
-                    }))
+                    .map((e) => ({ label: e, value: e, id: e }))
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
-        t = l.useMemo(
-            () =>
-                Object.keys(g)
-                    .map((e) => ({
-                        label: e,
-                        value: e,
-                        id: e,
-                    }))
-                    .sort((e, t) => e.label.localeCompare(t.label)),
-            [],
-        ),
-        [n, s] = l.useState(null),
-        [o, c] = l.useState(null),
-        d = l.useCallback(
+        [n, r] = s.useState(null),
+        [o, d] = s.useState(null),
+        c = s.useCallback(
             (e) => {
-                null != n && (0, i.L3)(e, x[n]);
+                null != n && (0, l.L3)(e, h[n]);
             },
             [n],
         ),
-        p = null != o ? g[o] : null;
-    return (0, a.jsx)(r.IpV, {
+        p = null != o ? x[o] : null;
+    return (0, a.jsx)(i.IpV, {
         className: m.nd,
-        children: (0, a.jsxs)(r.BJc, {
+        children: (0, a.jsxs)(i.BJc, {
             className: u.l$,
             gap: 16,
             children: [
-                (0, a.jsxs)(r.BJc, {
+                (0, a.jsxs)(i.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(r.Text, {
-                            variant: "eyebrow",
-                            children: "Context Menus",
-                        }),
-                        (0, a.jsx)(r.Text, {
+                        (0, a.jsx)(i.Text, { variant: "eyebrow", children: "Context Menus" }),
+                        (0, a.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
@@ -365,35 +215,27 @@ function f() {
                         }),
                     ],
                 }),
-                (0, a.jsxs)(r.BJc, {
+                (0, a.jsxs)(i.BJc, {
                     direction: "horizontal",
                     gap: 8,
                     align: "end",
                     children: [
-                        (0, a.jsx)(r.ZiE, {
+                        (0, a.jsx)(i.ZiE, {
                             label: "Open a Context Menu",
                             placeholder: "Select a menu",
                             options: e,
                             value: n,
-                            onSelectionChange: s,
+                            onSelectionChange: r,
                             selectionMode: "single",
                         }),
-                        (0, a.jsx)(r.Button, {
-                            variant: "primary",
-                            text: "Open",
-                            disabled: null == n,
-                            onClick: d,
-                        }),
+                        (0, a.jsx)(i.Button, { variant: "primary", text: "Open", disabled: null == n, onClick: c }),
                     ],
                 }),
-                (0, a.jsxs)(r.BJc, {
+                (0, a.jsxs)(i.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(r.Text, {
-                            variant: "eyebrow",
-                            children: "Popout Menus",
-                        }),
-                        (0, a.jsx)(r.Text, {
+                        (0, a.jsx)(i.Text, { variant: "eyebrow", children: "Popout Menus" }),
+                        (0, a.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
@@ -401,22 +243,22 @@ function f() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(r.BJc, {
+                (0, a.jsx)(i.BJc, {
                     direction: "horizontal",
                     gap: 8,
                     align: "end",
-                    children: (0, a.jsx)(r.ZiE, {
+                    children: (0, a.jsx)(i.ZiE, {
                         label: "Render a Popout Menu",
                         placeholder: "Select a popout",
                         options: t,
                         value: o,
-                        onSelectionChange: c,
+                        onSelectionChange: d,
                         selectionMode: "single",
                     }),
                 }),
                 null != p &&
-                    (0, a.jsx)(l.Suspense, {
-                        fallback: (0, a.jsx)(r.Text, {
+                    (0, a.jsx)(s.Suspense, {
+                        fallback: (0, a.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: "Loading...",

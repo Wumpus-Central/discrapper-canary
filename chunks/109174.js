@@ -1,20 +1,9 @@
-a.d(t, {
-    A: () => c,
-});
-var s = a(627968);
-a(64700);
-var n = a(119995),
-    i = a(457976);
-
-function c(e) {
-    let { rewardName: t, children: a } = e;
-    return (0, s.jsxs)("div", {
-        className: i.k,
-        children: [
-            (0, s.jsx)(n.r, {
-                rewardName: t,
-            }),
-            a,
-        ],
-    });
+n.d(t, { A: () => r });
+var s = n(627968);
+n(64700);
+var i = n(119995),
+    a = n(457976);
+function r(e) {
+    let { rewardName: t, children: n } = e;
+    return (0, s.jsxs)("div", { className: a.k, children: [(0, s.jsx)(i.r, { rewardName: t }), n] });
 }

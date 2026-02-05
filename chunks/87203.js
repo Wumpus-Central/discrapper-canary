@@ -1,56 +1,49 @@
-n.d(t, {
-    s: () => m,
-});
-var r = n(827343),
-    i = n(168943),
-    l = n(63995),
-    a = n(69407),
+n.d(t, { s: () => g });
+var i = n(827343),
+    r = n(168943),
+    a = n(63995),
+    l = n(69407),
     s = n(96566),
     o = n(405018),
-    c = n(222692),
-    u = n(442353),
-    d = n(734057),
-    p = n(430452),
-    f = n(383501),
-    h = n(287809),
-    A = n(652215),
-    g = n(731854);
-
-function m() {
-    var e, t;
-    if (!(0, i.L)()) return;
-    let n = p.A.isVideoEnabled(),
-        m = Object.values(p.A.getVideoDevices())[0],
-        b = !1 === (null == (e = null == m ? void 0 : m.disabled) || e),
-        _ = p.A.supportsInApp(g.O5.VIDEO) && p.A.supportsInApp(g.O5.DESKTOP_CAPTURE),
-        E = d.A.getChannel(f.A.getChannelId()),
-        O = null == (t = h.default.getCurrentUser()) ? void 0 : t.id;
-    if (null == E || null == O) return;
-    let { reachedLimit: y } = (0, o.M)(E);
-    if (!y) {
+    d = n(222692),
+    c = n(442353),
+    u = n(734057),
+    A = n(430452),
+    h = n(383501),
+    _ = n(287809),
+    m = n(652215),
+    p = n(731854);
+function g() {
+    if (!(0, r.L)()) return;
+    let e = A.A.isVideoEnabled(),
+        t = Object.values(A.A.getVideoDevices())[0],
+        n = !1 === (t?.disabled ?? !0),
+        g = A.A.supportsInApp(p.O5.VIDEO) && A.A.supportsInApp(p.O5.DESKTOP_CAPTURE),
+        E = u.A.getChannel(h.A.getChannelId()),
+        f = _.default.getCurrentUser()?.id;
+    if (null == E || null == f) return;
+    let { reachedLimit: I } = (0, o.M)(E);
+    if (!I) {
         if (E.isGuildStageVoice()) {
-            let e = l.A.getMutableParticipants(E.id, a.ip.SPEAKER),
-                t =
-                    null == e
-                        ? void 0
-                        : e.find((e) => {
-                              let { user: t } = e;
-                              return t.id === O;
-                          });
-            if (!(0, s.Bw)(E.guild_id) || !_ || null == t || t.voiceState.suppress) return;
+            let e = a.A.getMutableParticipants(E.id, l.ip.SPEAKER),
+                t = e?.find((e) => {
+                    let { user: t } = e;
+                    return t.id === f;
+                });
+            if (!(0, s.Bw)(E.guild_id) || !g || null == t || t.voiceState.suppress) return;
         }
         return (
-            n
-                ? r.A.setVideoEnabled(!1)
-                : !n && b
-                  ? (0, u.A)(
+            e
+                ? i.A.setVideoEnabled(!1)
+                : !e && n
+                  ? (0, c.A)(
                         () => {
-                            r.A.setVideoEnabled(!0);
+                            i.A.setVideoEnabled(!0);
                         },
-                        A.BRT.APP,
+                        m.BRT.APP,
                         !0,
                     )
-                  : b || (0, c.A)(),
+                  : n || (0, d.A)(),
             !1
         );
     }

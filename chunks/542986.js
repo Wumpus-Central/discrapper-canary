@@ -1,47 +1,37 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(311907),
-    i = n(73153),
-    l = n(686956);
-let a = {},
+n.d(t, { A: () => u });
+var i = n(311907),
+    r = n(73153),
+    a = n(686956);
+let l = {},
     s = 0;
-
 function o(e) {
-    var t, n;
-    return null != (t = null == (n = a[e]) ? void 0 : n.fetchState) ? t : 0;
+    return l[e]?.fetchState ?? 0;
 }
-
-function c() {
-    a = {};
+function d() {
+    l = {};
 }
-class u extends r.Ay.Store {
+class c extends i.Ay.Store {
     isFetchingFriendsForGuild(e) {
         return 1 === o(e);
     }
     fetchFriendMembersIfNotFetched(e, t) {
         0 === o(e) &&
-            ((a[e] = {
-                fetchState: 1,
-                foundMembers: 0,
-                notFoundMembers: 0,
-            }),
+            ((l[e] = { fetchState: 1, foundMembers: 0, notFoundMembers: 0 }),
             (s = t.length),
-            l.A.requestMembersById(e, t, !1));
+            a.A.requestMembersById(e, t, !1));
     }
 }
-let d = new u(i.h, {
-    CONNECTION_OPEN: c,
-    LOGOUT: c,
-    RELATIONSHIP_ADD: c,
-    RELATIONSHIP_REMOVE: c,
+let u = new c(r.h, {
+    CONNECTION_OPEN: d,
+    LOGOUT: d,
+    RELATIONSHIP_ADD: d,
+    RELATIONSHIP_REMOVE: d,
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
-        var t, n;
-        let r = e.chunks[0],
-            { guildId: i } = r;
-        1 === o(i) &&
-            ((a[i].foundMembers += r.members.length),
-            (a[i].notFoundMembers += null != (t = null == (n = r.notFound) ? void 0 : n.length) ? t : 0),
-            a[i].foundMembers + a[i].notFoundMembers >= s && (a[i].fetchState = 2));
+        let t = e.chunks[0],
+            { guildId: n } = t;
+        1 === o(n) &&
+            ((l[n].foundMembers += t.members.length),
+            (l[n].notFoundMembers += t.notFound?.length ?? 0),
+            l[n].foundMembers + l[n].notFoundMembers >= s && (l[n].fetchState = 2));
     },
 });

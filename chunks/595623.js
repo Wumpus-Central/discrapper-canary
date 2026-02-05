@@ -1,149 +1,69 @@
-i.d(t, {
-    Ay: () => V,
-}),
-    i(321073),
-    i(896048);
-var s,
-    n = i(735438),
-    r = i.n(n),
-    o = i(311907),
-    a = i(73153),
-    l = i(49229),
-    u = i(315069),
-    c = i(49463),
-    h = i(217222),
-    p = i(346084),
-    d = i(800828),
-    m = i(275759),
-    A = i(616356),
-    y = i(696451),
-    N = i(71393),
-    f = i(290863),
-    g = i(994500),
-    O = i(287809),
-    v = i(652215),
-    I = i(788868);
-
-function E(e, t, i) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = i),
-        e
-    );
+s.d(t, { Ay: () => $ }), s(321073);
+var i = s(735438),
+    n = s.n(i),
+    a = s(311907),
+    r = s(73153),
+    l = s(49229),
+    o = s(315069),
+    u = s(49463),
+    h = s(217222),
+    c = s(346084),
+    A = s(800828),
+    m = s(275759),
+    d = s(616356),
+    p = s(696451),
+    N = s(71393),
+    I = s(290863),
+    E = s(994500),
+    y = s(287809),
+    g = s(652215),
+    f = s(788868);
+function C(e) {
+    let t = y.default.getUser(e);
+    return { user: t, usernameLower: null != t ? t.username.toLowerCase() : null };
 }
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var i = null != arguments[t] ? arguments[t] : {},
-            s = Object.keys(i);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (s = s.concat(
-                Object.getOwnPropertySymbols(i).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(i, e).enumerable;
-                }),
-            )),
-            s.forEach(function (t) {
-                E(e, t, i[t]);
-            });
-    }
-    return e;
-}
-
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var i = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var s = Object.getOwnPropertySymbols(e);
-                      i.push.apply(i, s);
-                  }
-                  return i;
-              })(Object(t)).forEach(function (i) {
-                  Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
-              }),
-        e
-    );
-}
-
-function P(e) {
-    let t = O.default.getUser(e);
-    return {
-        user: t,
-        usernameLower: null != t ? t.username.toLowerCase() : null,
-    };
-}
-
 function D(e) {
     return {
-        status: f.A.getStatus(e),
-        isMobile: f.A.isMobileOnline(e),
-        isVR: f.A.isVROnline(e),
-        activities: f.A.getActivities(e),
-        applicationStream: A.A.getAnyStreamForUser(e),
+        status: I.A.getStatus(e),
+        isMobile: I.A.isMobileOnline(e),
+        isVR: I.A.isVROnline(e),
+        activities: I.A.getActivities(e),
+        applicationStream: d.A.getAnyStreamForUser(e),
     };
 }
-
-function S(e) {
+function L(e) {
     let t = [];
     return (
-        r()(y.Ay.memberOf(e))
+        n()(p.Ay.memberOf(e))
             .map(N.A.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
                 null != e && t.push(e);
             }),
-        {
-            mutualGuildsLength: t.length,
-            mutualGuilds: t.slice(0, 5),
-        }
+        { mutualGuildsLength: t.length, mutualGuilds: t.slice(0, 5) }
     );
 }
-class C extends u.A {
-    get comparator() {
-        var e, t, i, s, n;
-        return [
-            this.type,
-            null !=
-            (e =
-                null != (t = null == (i = this.nickname) ? void 0 : i.toLowerCase())
-                    ? t
-                    : null == (n = this.user) || null == (s = n.globalName)
-                      ? void 0
-                      : s.toLowerCase())
-                ? e
-                : this.usernameLower,
-        ];
-    }
+class w extends o.A {
+    key;
+    userId;
+    type;
+    status;
+    isMobile;
+    isVR;
+    activities;
+    applicationStream;
+    user;
+    usernameLower;
+    mutualGuildsLength;
+    mutualGuilds;
+    nickname;
+    spam;
+    giftIntentType;
+    ignoredUser;
+    applicationId;
+    isGameRelationship;
     constructor(e) {
-        var t;
         super(),
-            E(this, "key", void 0),
-            E(this, "userId", void 0),
-            E(this, "type", void 0),
-            E(this, "status", void 0),
-            E(this, "isMobile", void 0),
-            E(this, "isVR", void 0),
-            E(this, "activities", void 0),
-            E(this, "applicationStream", void 0),
-            E(this, "user", void 0),
-            E(this, "usernameLower", void 0),
-            E(this, "mutualGuildsLength", void 0),
-            E(this, "mutualGuilds", void 0),
-            E(this, "nickname", void 0),
-            E(this, "spam", void 0),
-            E(this, "giftIntentType", void 0),
-            E(this, "ignoredUser", void 0),
-            E(this, "applicationId", void 0),
-            E(this, "isGameRelationship", void 0),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -161,135 +81,114 @@ class C extends u.A {
             (this.giftIntentType = e.giftIntentType),
             (this.ignoredUser = e.ignoredUser),
             (this.applicationId = e.applicationId),
-            (this.isGameRelationship = null != (t = e.isGameRelationship) && t);
+            (this.isGameRelationship = e.isGameRelationship ?? !1);
+    }
+    get comparator() {
+        return [this.type, this.nickname?.toLowerCase() ?? this.user?.globalName?.toLowerCase() ?? this.usernameLower];
     }
 }
-class j {
+class G {
+    _rows;
+    constructor(e = []) {
+        this._rows = e;
+    }
     reset() {
         let e = new Set(),
-            t = Array.from(g.A.getMutableRelationships().entries()).map((t) => {
-                let [i, s] = t;
+            t = Array.from(E.A.getMutableRelationships().entries()).map((t) => {
+                let [s, i] = t;
                 return (
-                    s === v.eA$.FRIEND && e.add(i),
-                    new C(
-                        w(
-                            b(
-                                {
-                                    key: i,
-                                    type: s,
-                                    userId: i,
-                                    nickname: g.A.getNickname(i),
-                                },
-                                P(i),
-                                D(i),
-                                S(i),
-                            ),
-                            {
-                                spam: g.A.isSpam(i),
-                                ignoredUser: g.A.isIgnored(i),
-                                giftIntentType:
-                                    s === v.eA$.FRIEND && m.Ay.getFriendAnniversaries().includes(i)
-                                        ? I.np.FRIEND_ANNIVERSARY
-                                        : void 0,
-                                applicationId: g.A.getOriginApplicationId(i),
-                            },
-                        ),
-                    )
+                    i === g.eA$.FRIEND && e.add(s),
+                    new w({
+                        key: s,
+                        type: i,
+                        userId: s,
+                        nickname: E.A.getNickname(s),
+                        ...C(s),
+                        ...D(s),
+                        ...L(s),
+                        spam: E.A.isSpam(s),
+                        ignoredUser: E.A.isIgnored(s),
+                        giftIntentType:
+                            i === g.eA$.FRIEND && m.Ay.getFriendAnniversaries().includes(s)
+                                ? f.np.FRIEND_ANNIVERSARY
+                                : void 0,
+                        applicationId: E.A.getOriginApplicationId(s),
+                    })
                 );
             }),
-            i = [],
-            s = d.A.getGameRelationships().values(),
-            n = new Set();
-        s.forEach((t) => {
-            let { id: s, applicationId: r, type: o } = t;
-            (o === v.eA$.FRIEND && e.has(s)) ||
-                (o === v.eA$.FRIEND && n.has(s)) ||
-                (o === v.eA$.FRIEND && n.add(s),
-                i.push(
-                    new C(
-                        w(
-                            b(
-                                {
-                                    key: "".concat(s, "-").concat(r),
-                                    type: o,
-                                    userId: s,
-                                    applicationId: r,
-                                    nickname: g.A.getNickname(s),
-                                },
-                                P(s),
-                                D(s),
-                                S(s),
-                            ),
-                            {
-                                spam: g.A.isSpam(s),
-                                ignoredUser: g.A.isIgnored(s),
-                                isGameRelationship: !0,
-                            },
-                        ),
-                    ),
+            s = [],
+            i = A.A.getGameRelationships().values(),
+            a = new Set();
+        i.forEach((t) => {
+            let { id: i, applicationId: n, type: r } = t;
+            (r === g.eA$.FRIEND && e.has(i)) ||
+                (r === g.eA$.FRIEND && a.has(i)) ||
+                (r === g.eA$.FRIEND && a.add(i),
+                s.push(
+                    new w({
+                        key: `${i}-${n}`,
+                        type: r,
+                        userId: i,
+                        applicationId: n,
+                        nickname: E.A.getNickname(i),
+                        ...C(i),
+                        ...D(i),
+                        ...L(i),
+                        spam: E.A.isSpam(i),
+                        ignoredUser: E.A.isIgnored(i),
+                        isGameRelationship: !0,
+                    }),
                 ));
         });
-        let o = r().map(
-            p.A.getSuggestions(),
+        let r = n().map(
+            c.A.getSuggestions(),
             (e) =>
-                new C(
-                    b(
-                        {
-                            key: e.key,
-                            userId: e.key,
-                            type: 99,
-                            nickname: e.name,
-                        },
-                        P(e.key),
-                        D(e.key),
-                        S(e.key),
-                    ),
-                ),
+                new w({ key: e.key, userId: e.key, type: 99, nickname: e.name, ...C(e.key), ...D(e.key), ...L(e.key) }),
         );
-        return new j(r().concat(t, i, o));
+        return new G(n().concat(t, s, r));
     }
     clone() {
-        return new j(this._rows);
+        return new G(this._rows);
     }
     update(e) {
         let t = !1;
-        for (let i = 0; i < this._rows.length; i++) {
-            let s = this._rows[i],
-                n = s.merge(e(s.userId));
-            (t = t || n !== s), (this._rows[i] = n);
+        for (let s = 0; s < this._rows.length; s++) {
+            let i = this._rows[s],
+                n = i.merge(e(i.userId));
+            (t = t || n !== i), (this._rows[s] = n);
         }
         return t;
     }
     filter(e, t) {
-        return r()(this._rows)
+        return n()(this._rows)
             .filter((e) => {
                 if (null == e.user) return !1;
                 if (null != t && "" !== t) {
-                    let i = t.toLowerCase();
+                    let s = t.toLowerCase();
                     return [e.usernameLower, e.nickname, e.user.globalName]
-                        .map((e) => (null == e ? void 0 : e.toLowerCase()))
-                        .some((e) => (null == e ? void 0 : e.includes(i)));
+                        .map((e) => e?.toLowerCase())
+                        .some((e) => e?.includes(s));
                 }
                 return !0;
             })
             .filter((t) => {
                 switch (e) {
-                    case v.m3P.ONLINE:
-                        return t.type === v.eA$.FRIEND && t.status !== v.clD.OFFLINE;
-                    case v.m3P.PENDING:
+                    case g.m3P.ONLINE:
+                        return t.type === g.eA$.FRIEND && t.status !== g.clD.OFFLINE;
+                    case g.m3P.PENDING:
                         return (
-                            (t.type === v.eA$.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
-                            t.type === v.eA$.PENDING_OUTGOING
+                            (t.type === g.eA$.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
+                            t.type === g.eA$.PENDING_OUTGOING
                         );
-                    case v.m3P.SPAM:
-                        return t.type === v.eA$.PENDING_INCOMING && t.spam;
-                    case v.m3P.PENDING_IGNORED:
-                        return t.type === v.eA$.PENDING_INCOMING && t.ignoredUser;
-                    case v.m3P.SUGGESTIONS:
+                    case g.m3P.SPAM:
+                        return t.type === g.eA$.PENDING_INCOMING && t.spam;
+                    case g.m3P.PENDING_IGNORED:
+                        return t.type === g.eA$.PENDING_INCOMING && t.ignoredUser;
+                    case g.m3P.SUGGESTIONS:
                         return 99 === t.type;
-                    case v.m3P.ALL:
+                    case g.m3P.ALL:
                     default:
-                        return t.type === v.eA$.FRIEND;
+                        return t.type === g.eA$.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -297,11 +196,11 @@ class j {
     }
     getRelationshipCounts() {
         let e = {
-            [v.eA$.FRIEND]: 0,
-            [v.eA$.PENDING_INCOMING]: 0,
-            [v.eA$.PENDING_OUTGOING]: 0,
+            [g.eA$.FRIEND]: 0,
+            [g.eA$.PENDING_INCOMING]: 0,
+            [g.eA$.PENDING_OUTGOING]: 0,
             99: 0,
-            [v.eA$.BLOCKED]: 0,
+            [g.eA$.BLOCKED]: 0,
         };
         return (
             this._rows.forEach((t) => {
@@ -310,75 +209,64 @@ class j {
             e
         );
     }
-    constructor(e = []) {
-        E(this, "_rows", void 0), (this._rows = e);
-    }
 }
-let L = !0,
-    G = !1,
-    R = v.m3P.ONLINE,
-    k = new j(),
-    _ = !0,
-    M = !1;
-
-function F() {
+let S = !0,
+    v = !1,
+    R = g.m3P.ONLINE,
+    _ = new G(),
+    O = !0,
+    P = !1;
+function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (R !== v.m3P.ONLINE && R !== v.m3P.ADD_FRIEND)) && !G && ((L = !1), (G = !0), l.A.fetchRelationships());
+    S && (e || (R !== g.m3P.ONLINE && R !== g.m3P.ADD_FRIEND)) && !v && ((S = !1), (v = !0), l.A.fetchRelationships());
 }
-
-function x() {
-    if (((L = !0), _ ? (G = !1) : F(), (k = k.reset()), M)) return;
-    let e = k.getRelationshipCounts();
-    R = 0 === e[v.eA$.FRIEND] ? (0 !== e[v.eA$.PENDING_INCOMING] ? v.m3P.PENDING : v.m3P.ADD_FRIEND) : v.m3P.ONLINE;
+function M() {
+    if (((S = !0), O ? (v = !1) : k(), (_ = _.reset()), P)) return;
+    let e = _.getRelationshipCounts();
+    R = 0 === e[g.eA$.FRIEND] ? (0 !== e[g.eA$.PENDING_INCOMING] ? g.m3P.PENDING : g.m3P.ADD_FRIEND) : g.m3P.ONLINE;
 }
-
-function T() {
-    k = _ ? new j() : k.reset();
+function F() {
+    _ = O ? new G() : _.reset();
 }
-
-function U(e) {
+function x(e) {
     return function () {
-        return !_ && !!k.update(e) && ((k = k.clone()), !0);
+        return !O && !!_.update(e) && ((_ = _.clone()), !0);
     };
 }
-class $ extends (s = o.Ay.Store) {
+class T extends a.Ay.Store {
+    static displayName = "FriendsStore";
     initialize() {
-        this.waitFor(h.A, A.A, c.A, p.A, d.A, y.Ay, N.A, m.Ay, f.A, g.A, O.default),
-            this.syncWith([g.A], T),
-            this.syncWith([d.A], T),
-            this.syncWith([p.A], T),
-            this.syncWith([m.Ay], T),
-            this.syncWith([O.default], U(P)),
-            this.syncWith([f.A, A.A], U(D)),
-            x();
+        this.waitFor(h.A, d.A, u.A, c.A, A.A, p.Ay, N.A, m.Ay, I.A, E.A, y.default),
+            this.syncWith([E.A], F),
+            this.syncWith([A.A], F),
+            this.syncWith([c.A], F),
+            this.syncWith([m.Ay], F),
+            this.syncWith([y.default], x(C)),
+            this.syncWith([I.A, d.A], x(D)),
+            M();
     }
     getState() {
-        return {
-            fetching: G,
-            section: R,
-            rows: k,
-        };
+        return { fetching: v, section: R, rows: _ };
     }
 }
-E($, "displayName", "FriendsStore");
-let V = new $(a.h, {
+let $ = new T(r.h, {
     CONNECTION_OPEN: function () {
-        x();
+        M();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (R = e.section), F();
+        (R = e.section), k();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (_ = null != t), T(), !_;
+        return (O = null != t), F(), !O;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        G = !1;
+        v = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (L = !0), (G = !0);
+        (S = !0), (v = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (R = e.section), (M = !0);
+        (R = e.section), (P = !0);
     },
 });

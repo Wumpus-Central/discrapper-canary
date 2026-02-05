@@ -1,22 +1,18 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(311907),
-    i = n(961350),
-    l = n(622543),
-    a = n(61881);
-
+n.d(t, { A: () => s });
+var i = n(311907),
+    r = n(961350),
+    a = n(622543),
+    l = n(61881);
 function s(e) {
-    let t = (0, r.bG)([i.default], () => {
-            let t = i.default.getId();
+    let t = (0, i.bG)([r.default], () => {
+            let t = r.default.getId();
             return null != e && t === e;
         }, [e]),
-        n = (0, r.bG)([a.A], () => a.A.getPendingWidgets()),
-        s = (0, r.yK)([l.A], () => {
-            var t;
+        n = (0, i.bG)([l.A], () => l.A.getPendingWidgets()),
+        s = (0, i.yK)([a.A], () => {
             if (null == e) return [];
-            let n = l.A.getUserProfile(e);
-            return null != (t = null == n ? void 0 : n.widgets) ? t : [];
+            let t = a.A.getUserProfile(e);
+            return t?.widgets ?? [];
         }, [e]);
     return t && null !== n ? n : s;
 }

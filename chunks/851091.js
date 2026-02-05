@@ -1,72 +1,51 @@
-n.d(t, {
-    A: () => x,
-});
-var l = n(627968);
-n(64700);
-var i = n(284009),
-    s = n.n(i),
-    a = n(158954),
-    r = n(397927),
-    c = n(263063),
-    d = n(976860),
-    o = n(985018),
-    u = n(100135);
-
+l.d(t, { A: () => x });
+var i = l(627968);
+l(64700);
+var s = l(284009),
+    a = l.n(s),
+    n = l(158954),
+    r = l(397927),
+    c = l(263063),
+    d = l(976860),
+    o = l(985018),
+    u = l(100135);
 function x(e) {
-    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: i, onClose: x } = e;
+    let { directoryGuildName: t, guildToAdd: l, isExistingGuildFlow: s, onClose: x } = e;
     return (
-        s()(null != n, "Missing guild in Hub add guild confirmation"),
-        (0, l.jsxs)(l.Fragment, {
+        a()(null != l, "Missing guild in Hub add guild confirmation"),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, l.jsx)(a.cwr, {
-                    children: (0, l.jsxs)("div", {
+                (0, i.jsx)(n.cwr, {
+                    children: (0, i.jsxs)("div", {
                         className: u.Qs,
                         children: [
-                            (0, l.jsx)(c.A, {
-                                guild: n,
-                                size: c.A.Sizes.XLARGE,
-                                active: !0,
-                            }),
-                            (0, l.jsx)(r.Heading, {
+                            (0, i.jsx)(c.A, { guild: l, size: c.A.Sizes.XLARGE, active: !0 }),
+                            (0, i.jsx)(r.Heading, {
                                 className: u.DD,
                                 variant: "heading-xl/semibold",
                                 children: o.intl.string(o.t.CueiPY),
                             }),
-                            (0, l.jsx)(r.Text, {
+                            (0, i.jsx)(r.Text, {
                                 color: "text-default",
                                 variant: "text-md/normal",
-                                children: i
-                                    ? o.intl.formatToPlainString(o.t.R7Pqn5, {
-                                          guildName: t,
-                                      })
-                                    : o.intl.formatToPlainString(o.t.eIxPSv, {
-                                          guildName: t,
-                                      }),
+                                children: s
+                                    ? o.intl.formatToPlainString(o.t.R7Pqn5, { guildName: t })
+                                    : o.intl.formatToPlainString(o.t.eIxPSv, { guildName: t }),
                             }),
                         ],
                     }),
                 }),
-                (0, l.jsx)(a.H7u, {
+                (0, i.jsx)(n.H7u, {
                     actionsFullWidth: !0,
-                    actions: i
-                        ? [
-                              {
-                                  text: o.intl.string(o.t["X0WK+6"]),
-                                  variant: "primary",
-                                  onClick: x,
-                              },
-                          ]
+                    actions: s
+                        ? [{ text: o.intl.string(o.t["X0WK+6"]), variant: "primary", onClick: x }]
                         : [
-                              {
-                                  text: o.intl.string(o.t["X/VABv"]),
-                                  variant: "secondary",
-                                  onClick: x,
-                              },
+                              { text: o.intl.string(o.t["X/VABv"]), variant: "secondary", onClick: x },
                               {
                                   text: o.intl.string(o.t.DymAQt),
                                   variant: "primary",
                                   onClick: () => {
-                                      (0, d.uh)(n.id), null == x || x();
+                                      (0, d.uh)(l.id), x?.();
                                   },
                               },
                           ],

@@ -1,23 +1,15 @@
-n.d(t, {
-    U: () => a,
-});
-var r = n(627968),
-    i = n(5661),
-    l = n(161319),
-    s = n(74019);
-let a = (e) => {
+n.d(t, { U: () => l });
+var i = n(627968),
+    s = n(5661),
+    r = n(161319),
+    a = n(74019);
+let l = (e) => {
     let { percentage: t, isFNUserWithNoStandardSub: n } = e;
-    return (0, r.jsxs)("div", {
-        className: s.k,
+    return (0, i.jsxs)("div", {
+        className: a.k,
         children: [
-            !1 === n &&
-                (0, r.jsx)(l.PR, {
-                    percentage: t,
-                }),
-            (0, r.jsx)("div", {
-                className: s.Z,
-                children: (0, r.jsx)(i.G, {}),
-            }),
+            !1 === n && (0, i.jsx)(r.PR, { percentage: t }),
+            (0, i.jsx)("div", { className: a.Z, children: (0, i.jsx)(s.G, {}) }),
         ],
     });
 };

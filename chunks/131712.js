@@ -1,34 +1,29 @@
-n.d(t, {
-    Z: () => l,
-});
+"use strict";
+n.d(t, { Z: () => l });
 var r = n(339241),
     i = n(492313),
     a = n(64700);
 let s = Math.round(1e10 * Math.random()),
     o = 0;
-
 function l(e) {
     var t, n;
     let l = (0, a.useMemo)(() => e.name || `radio-group-${s}-${++o}`, [e.name]),
-        [c, u] = (0, i.P)(e.value, null != (t = e.defaultValue) ? t : null, e.onChange),
-        [d] = (0, a.useState)(c),
-        [f, p] = (0, a.useState)(null),
-        _ = (0, r.KZ)({
-            ...e,
-            value: c,
-        }),
+        [u, c] = (0, i.P)(e.value, null != (t = e.defaultValue) ? t : null, e.onChange),
+        [d] = (0, a.useState)(u),
+        [_, f] = (0, a.useState)(null),
+        p = (0, r.KZ)({ ...e, value: u }),
         h = (t) => {
-            e.isReadOnly || e.isDisabled || (u(t), _.commitValidation());
+            e.isReadOnly || e.isDisabled || (c(t), p.commitValidation());
         },
-        m = _.displayValidation.isInvalid;
+        m = p.displayValidation.isInvalid;
     return {
-        ..._,
+        ...p,
         name: l,
-        selectedValue: c,
+        selectedValue: u,
         defaultSelectedValue: void 0 !== e.value ? d : null != (n = e.defaultValue) ? n : null,
         setSelectedValue: h,
-        lastFocusedValue: f,
-        setLastFocusedValue: p,
+        lastFocusedValue: _,
+        setLastFocusedValue: f,
         isDisabled: e.isDisabled || !1,
         isReadOnly: e.isReadOnly || !1,
         isRequired: e.isRequired || !1,

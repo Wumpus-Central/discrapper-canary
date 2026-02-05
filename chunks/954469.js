@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     uW: "section__07d82",
     X$: "sectionImage__07d82",

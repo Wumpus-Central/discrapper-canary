@@ -1,42 +1,39 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(308528),
-    a = n(928658),
-    s = n(623075),
+    a = n(308528),
+    s = n(928658),
+    r = n(623075),
     o = n(977347),
     c = n(985018);
-
-function u(e) {
+function d(e) {
     let {
             otherUserId: t,
             channel: n,
-            buttonText: u,
-            buttonSize: d = "sm",
-            navigateAwayOnReportSuccess: f = !0,
-            onReportClick: p,
-            onReportSubmit: h,
-            onMouseEnter: b,
+            buttonText: d,
+            buttonSize: u = "sm",
+            navigateAwayOnReportSuccess: h = !0,
+            onReportClick: m,
+            onReportSubmit: A,
+            onMouseEnter: p,
             onMouseLeave: g,
         } = e,
-        m = (0, s.V)(t),
-        A = (0, o.D)(n.id, t);
-    if (!m || null == A) return null;
-    let y = () => {
-        null == h || h(), i.A.closePrivateChannel(n.id, f);
+        f = (0, r.V)(t),
+        _ = (0, o.D)(n.id, t);
+    if (!f || null == _) return null;
+    let E = () => {
+        A?.(), a.A.closePrivateChannel(n.id, h);
     };
-    return (0, r.jsx)(l.Button, {
-        size: d,
+    return (0, i.jsx)(l.Button, {
+        size: u,
         variant: "critical-primary",
-        disabled: null == A,
+        disabled: null == _,
         onClick: () => {
-            null == p || p(), (0, a.b8)(A, y);
+            m?.(), (0, s.b8)(_, E);
         },
-        onMouseEnter: b,
+        onMouseEnter: p,
         onMouseLeave: g,
-        text: null != u ? u : c.intl.string(c.t.HHZmDn),
+        text: null != d ? d : c.intl.string(c.t.HHZmDn),
     });
 }

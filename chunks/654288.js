@@ -1,121 +1,93 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(747238),
-    n(812715),
-    n(866193);
+"use strict";
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(397927),
     o = n(773669),
     l = n(287809),
-    c = n(307600),
-    u = n(562153),
+    u = n(307600),
+    c = n(562153),
     d = n(998218),
-    f = n(939341),
-    p = n(583846),
-    _ = n(342652),
+    _ = n(939341),
+    f = n(583846),
+    p = n(342652),
     h = n(434200),
     m = n(176563),
     g = n(514243),
     E = n(506326),
-    b = n(910692),
-    y = n(18282),
-    O = n(652215),
-    A = n(985018);
-let v = (e, t, n) => {
-        let r = A.t.LHF6D9,
-            i = u.Ay.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+    A = n(910692),
+    I = n(18282),
+    T = n(652215),
+    y = n(985018);
+let S = (e, t, n) => {
+        let r = y.t.LHF6D9,
+            i = c.Ay.getName(t?.guild_id, t?.id, n),
             a = e.extra.media_title;
-        return A.intl
-            .formatToMarkdownString(r, {
-                mediaTitle: a,
-                userName: i,
-                episodeDescription: e.extra.media_subtitle,
-            })
+        return y.intl
+            .formatToMarkdownString(r, { mediaTitle: a, userName: i, episodeDescription: e.extra.media_subtitle })
             .replaceAll("*", "");
     },
-    S = (e, t) =>
-        A.intl.formatToPlainString(A.t.kCbfbN, {
-            username: t.username,
-            activity: e.extra.media_title,
-        }),
-    I = (e) => {
-        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: I } = e,
-            T = (0, a.bG)([l.default], () => l.default.getUser(n.author_id)),
-            { largeImage: C } = (0, f.nO)({
-                entry: n,
-            }),
-            { primaryColor: N, secondaryColor: R } = (0, m.A)(null == C ? void 0 : C.src),
-            w = (0, a.bG)([o.default], () => o.default.locale),
-            P = (0, h.A)(O.fg2.CRUNCHYROLL),
-            D = (0, p.kR)(n.extra.media_assets_large_text),
+    v = (e, t) => y.intl.formatToPlainString(y.t.kCbfbN, { username: t.username, activity: e.extra.media_title }),
+    C = (e) => {
+        let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: C } = e,
+            b = (0, a.bG)([l.default], () => l.default.getUser(n.author_id)),
+            { largeImage: N } = (0, _.nO)({ entry: n }),
+            { primaryColor: R, secondaryColor: O } = (0, m.A)(N?.src),
+            D = (0, a.bG)([o.default], () => o.default.locale),
+            L = (0, h.A)(T.fg2.CRUNCHYROLL),
+            w = (0, f.kR)(n.extra.media_assets_large_text),
             x = i.useCallback(
                 (e) => {
-                    if (null != T && (null == C ? void 0 : C.src) != null)
-                        return (0, _.z)({
+                    if (null != b && N?.src != null)
+                        return (0, p.z)({
                             entry: n,
-                            mediaImageSrc: null == C ? void 0 : C.src,
-                            avatarSrc: T.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                            description: v(n, t, T),
-                            timestamp: (0, p.As)(n, w),
-                            episodeDescription: D,
-                            colors: [N, R],
+                            mediaImageSrc: N?.src,
+                            avatarSrc: b.getAvatarURL(t?.guild_id, 128),
+                            description: S(n, t, b),
+                            timestamp: (0, f.As)(n, D),
+                            episodeDescription: w,
+                            colors: [R, O],
                             channelId: e,
                         });
                 },
-                [t, n, D, w, null == C ? void 0 : C.src, N, R, T],
+                [t, n, w, D, N?.src, R, O, b],
             ),
-            L = () => {
+            P = () => {
                 if (null == n.extra.url) return;
                 let e = d.A.safeParseWithQuery(n.extra.url);
-                null != e &&
-                    null != e.protocol &&
-                    null != e.hostname &&
-                    (0, c.h)({
-                        href: d.A.format(e),
-                        trusted: !1,
-                    });
+                null != e && null != e.protocol && null != e.hostname && (0, u.h)({ href: d.A.format(e), trusted: !1 });
             };
-        return null == T
+        return null == b
             ? null
-            : (0, r.jsxs)(b.YN, {
+            : (0, r.jsxs)(A.YN, {
                   children: [
-                      (0, r.jsx)(b.BC, {
+                      (0, r.jsx)(A.BC, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, p.JM)(n) ? A.t["LH+Z3y"] : A.t.YuKgml,
+                          userDescription: (0, f.JM)(n) ? y.t["LH+Z3y"] : y.t.YuKgml,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
-                          headerIcons: (0, r.jsx)(y.A, {
-                              onClick: P,
+                          headerIcons: (0, r.jsx)(I.A, {
+                              onClick: L,
                               Icon: s.kwD,
-                              "aria-label": A.intl.string(A.t.jdJYXw),
+                              "aria-label": y.intl.string(y.t.jdJYXw),
                           }),
                           badges: (0, r.jsx)(E.mG, {
                               location: E.N5.POPOUT,
-                              children: g.R.map((e, t) =>
-                                  (0, r.jsx)(
-                                      e,
-                                      {
-                                          entry: n,
-                                      },
-                                      t,
-                                  ),
-                              ),
+                              children: g.R.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                           }),
-                          onClickTitle: L,
-                          onClickThumbnail: L,
+                          onClickTitle: P,
+                          onClickThumbnail: P,
                       }),
-                      (0, r.jsx)(b.Eh, {
-                          children: (0, r.jsx)(b.fD, {
-                              onReaction: u,
-                              onVoiceChannelPreview: I,
-                              user: T,
+                      (0, r.jsx)(A.Eh, {
+                          children: (0, r.jsx)(A.fD, {
+                              onReaction: c,
+                              onVoiceChannelPreview: C,
+                              user: b,
                               channel: t,
                               generateReactionImage: x,
-                              reactionImageAltText: S(n, T),
+                              reactionImageAltText: v(n, b),
                               entry: n,
                           }),
                       }),

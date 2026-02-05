@@ -1,15 +1,16 @@
+"use strict";
 n.d(t, {
     ES: () => s,
     Fd: () => l,
-    Gt: () => f,
+    Gt: () => _,
     Hx: () => E,
-    N0: () => u,
+    N0: () => c,
     VP: () => m,
     ZG: () => g,
-    _W: () => _,
+    _W: () => p,
     k8: () => d,
-    mZ: () => c,
-    q4: () => p,
+    mZ: () => u,
+    q4: () => f,
     qh: () => a,
     ty: () => h,
     y5: () => o,
@@ -33,12 +34,12 @@ let a = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1,
     }),
-    c = 16,
     u = 16,
+    c = 16,
     d = 32,
-    f = 64,
-    p = "---new-messages-bar",
-    _ = "SPOILER_";
+    _ = 64,
+    f = "---new-messages-bar",
+    p = "SPOILER_";
 var h = (function (e) {
     return (
         (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
@@ -51,12 +52,8 @@ var h = (function (e) {
         e
     );
 })({});
-let m = 209715200,
-    g = {
-        timeout: 60 * i.A.Millis.SECOND,
-        retries: 3,
-        backoff: new r.A(),
-    };
+let m = 0xc800000,
+    g = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
 var E = (function (e) {
     return (
         (e.PUSH_NOTIFICATION = "push_notification"),

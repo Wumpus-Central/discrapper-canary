@@ -1,92 +1,28 @@
-n.d(t, {
-    EL: () => p,
-    PJ: () => u,
-    xW: () => _,
-    zF: () => f,
-}),
-    n(896048),
-    n(864466),
-    n(443073);
+"use strict";
+n.d(t, { EL: () => u, PJ: () => s, xW: () => c, zF: () => l });
 var r = n(284009),
     i = n.n(r),
-    a = n(735438);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-var u = (function (e) {
-    return (e.ROOT = "root"), (e.FOLDER = "folder"), (e.GUILD = "guild"), e;
-})({});
-
-function d() {
+    a = n(735438),
+    s = (function (e) {
+        return (e.ROOT = "root"), (e.FOLDER = "folder"), (e.GUILD = "guild"), e;
+    })({});
+function o() {
     return Math.floor(0x100000000 * Math.random());
 }
-class f {
+class l {
+    root;
+    nodes;
+    version;
+    constructor() {
+        (this.root = { type: "root", children: [] }), (this.nodes = {}), (this.version = 0);
+    }
     getSnapshot() {
         let e = {};
         for (let t in this.nodes) {
             let n = this.nodes[t];
-            e[t] = c(o({}, n), {
-                children: void 0,
-                childrenIds: n.children.map((e) => e.id),
-            });
+            e[t] = { ...n, children: void 0, childrenIds: n.children.map((e) => e.id) };
         }
-        return {
-            rootChildrenIds: this.root.children.map((e) => e.id),
-            nodes: e,
-        };
+        return { rootChildrenIds: this.root.children.map((e) => e.id), nodes: e };
     }
     loadSnapshot(e) {
         for (let t in ((this.nodes = e.nodes), this.nodes)) {
@@ -102,13 +38,11 @@ class f {
             a = r.children.indexOf(t);
         i()(
             "folder" !== e.type || "folder" !== r.type,
-            "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(r.id, ")"),
+            `[GUILDS TREE] Tried moving a folder (${e.id}) inside of another folder (${r.id})`,
         ),
             i()(
                 a >= 0,
-                "[GUILDS TREE] target node ("
-                    .concat(t.id, ") did not exist within its specified parent (")
-                    .concat(t.parentId, ")"),
+                `[GUILDS TREE] target node (${t.id}) did not exist within its specified parent (${t.parentId})`,
             );
         let s = +!!n;
         return (
@@ -127,7 +61,7 @@ class f {
         return (
             i()("root" !== e.type, "[GUILDS TREE] Tried adding another root node into the tree"),
             i()(null != e.id, "[GUILDS TREE] Tried adding a node without an id"),
-            i()(null == this.nodes[e.id], "[GUILDS TREE] Tried adding a node that already exists (".concat(e.id, ")")),
+            i()(null == this.nodes[e.id], `[GUILDS TREE] Tried adding a node that already exists (${e.id})`),
             (this.nodes[e.id] = e),
             this.version++,
             this.moveInto(e, t, n)
@@ -152,9 +86,7 @@ class f {
         return (
             i()(
                 r >= 0,
-                "[GUILDS TREE] existing node ("
-                    .concat(e.id, ") did not exist within its specified parent (")
-                    .concat(e.parentId, ")"),
+                `[GUILDS TREE] existing node (${e.id}) did not exist within its specified parent (${e.parentId})`,
             ),
             (n.children = [...n.children]),
             n.children.splice(r, 1, t),
@@ -170,14 +102,9 @@ class f {
         return (0, a.clone)(e);
     }
     convertToFolder(e) {
-        let t = d();
-        for (; null != this.getNode(t); ) t = d();
-        let n = {
-            type: "folder",
-            id: t,
-            expanded: !1,
-            children: [],
-        };
+        let t = o();
+        for (; null != this.getNode(t); ) t = o();
+        let n = { type: "folder", id: t, expanded: !1, children: [] };
         return this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n;
     }
     allNodes() {
@@ -202,53 +129,29 @@ class f {
         let t = null != e.parentId ? this.nodes[e.parentId] : this.root;
         i()(
             null != t,
-            "[GUILDS TREE] source node ("
-                .concat(e.id, ") had a parent id (")
-                .concat(e.parentId, ") which doesn't exist in the tree"),
+            `[GUILDS TREE] source node (${e.id}) had a parent id (${e.parentId}) which doesn't exist in the tree`,
         );
         let n = t.children;
         i()(
             null != n,
-            "[GUILDS TREE] source node ("
-                .concat(e.id, ") had a parent id (")
-                .concat(e.parentId, ") which contains no children"),
+            `[GUILDS TREE] source node (${e.id}) had a parent id (${e.parentId}) which contains no children`,
         ),
             (t.children = n.filter((t) => t !== e)),
             (e.parentId = void 0),
             this.version++;
     }
-    constructor() {
-        s(this, "root", void 0),
-            s(this, "nodes", void 0),
-            s(this, "version", void 0),
-            (this.root = {
-                type: "root",
-                children: [],
-            }),
-            (this.nodes = {}),
-            (this.version = 0);
-    }
 }
-
-function p(e, t) {
-    return {
-        type: "guild",
-        id: e,
-        parentId: t,
-        children: [],
-        unavailable: !1,
-    };
+function u(e, t) {
+    return { type: "guild", id: e, parentId: t, children: [], unavailable: !1 };
 }
-
-function _(e, t, n) {
-    var r, i, a;
+function c(e, t, n) {
     return {
         type: "folder",
         id: e.folderId,
         parentId: t,
-        name: null != (r = e.folderName) ? r : void 0,
-        color: null != (i = e.folderColor) ? i : void 0,
-        expanded: null != n ? n : null != (a = e.expanded) && a,
+        name: e.folderName ?? void 0,
+        color: e.folderColor ?? void 0,
+        expanded: null != n ? n : (e.expanded ?? !1),
         children: [],
     };
 }

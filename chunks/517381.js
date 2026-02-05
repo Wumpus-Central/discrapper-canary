@@ -1,31 +1,24 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048),
-    n(321073);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(198982),
-    o = n(141468),
-    l = n(815807),
-    c = n(961350),
+"use strict";
+n.d(t, { A: () => L }), n(321073);
+var r = n(311907),
+    i = n(73153),
+    a = n(198982),
+    s = n(141468),
+    o = n(815807),
+    l = n(961350),
     u = n(994500);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class f {
+class c {
+    isIndexing = !1;
+    isHistoricalIndexing = !1;
+    isFetching = !1;
+    analyticsId = null;
+    error = null;
+    messages = null;
+    documentsIndexed = 0;
+    totalResults = null;
+    messageIds = new Set();
+    isInitialFetchComplete = !1;
+    cursor = null;
     handleSearchStart() {
         (this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null);
     }
@@ -41,212 +34,179 @@ class f {
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
             (this.isHistoricalIndexing = !1),
-            (this.error = new s.LG(e)),
+            (this.error = new a.LG(e)),
             (this.analyticsId = null),
             (this.documentsIndexed = 0);
     }
     handleSearchSuccess(e, t) {
-        var n;
-        let { analyticsId: r, cursor: i, totalResults: a, doingHistoricalIndex: s, documentsIndexed: o } = e;
-        (this.analyticsId = r),
+        let { analyticsId: n, cursor: r, totalResults: i, doingHistoricalIndex: a, documentsIndexed: s } = e;
+        (this.analyticsId = n),
             (this.isFetching = !1),
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
-            (this.isHistoricalIndexing = s),
+            (this.isHistoricalIndexing = a),
             (this.error = null),
-            (this.documentsIndexed = o),
-            (this.cursor = i);
-        let l = [...(null != (n = this.messages) ? n : [])],
-            c = [];
+            (this.documentsIndexed = s),
+            (this.cursor = r);
+        let o = [...(this.messages ?? [])],
+            l = [];
         return (
             t.forEach((e) => {
-                this.messageIds.has(e.id) || (this.messageIds.add(e.id), l.push(e), c.push(e));
+                this.messageIds.has(e.id) || (this.messageIds.add(e.id), o.push(e), l.push(e));
             }),
-            (this.messages = l),
-            (this.totalResults = a),
-            c
+            (this.messages = o),
+            (this.totalResults = i),
+            l
         );
     }
-    constructor() {
-        d(this, "isIndexing", !1),
-            d(this, "isHistoricalIndexing", !1),
-            d(this, "isFetching", !1),
-            d(this, "analyticsId", null),
-            d(this, "error", null),
-            d(this, "messages", null),
-            d(this, "documentsIndexed", 0),
-            d(this, "totalResults", null),
-            d(this, "messageIds", new Set()),
-            d(this, "isInitialFetchComplete", !1),
-            d(this, "cursor", null);
-    }
 }
-let p = new Map(),
+let d = new Map(),
     _ = new Map(),
-    h = new Map();
-
-function m(e) {
-    var t;
-    return null != (t = p.get(e)) ? t : new f();
+    f = new Map();
+function p(e) {
+    return d.get(e) ?? new c();
 }
-
-function g(e) {
-    let t = m(e);
-    return p.set(e, t), t;
+function h(e) {
+    let t = p(e);
+    return d.set(e, t), t;
 }
-
-function E(e, t) {
+function m(e, t) {
     let n = _.get(e);
     if (null == n) return !1;
     let r = t(n);
     return _.set(e, r), !0;
 }
-
-function b(e, t) {
-    return t(m(e));
+function g(e, t) {
+    return t(p(e));
 }
-
-function y() {
-    (p = new Map()), (_ = new Map()), (h = new Map());
+function E() {
+    (d = new Map()), (_ = new Map()), (f = new Map());
 }
-
-function O(e) {
+function A(e) {
     e.ids.forEach((e) => {
-        g(e).handleSearchStart();
+        h(e).handleSearchStart();
     });
 }
-
-function A(e) {
+function I(e) {
     e.data.forEach((e) => {
-        let t = g(e.id),
+        let t = h(e.id),
             n = e.messages.map((e) => {
                 let [t] = e;
-                return (0, o.rh)(t);
+                return (0, s.rh)(t);
             });
         t.handleSearchSuccess(e, n).forEach((e) => {
-            var t;
             _.set(e.id, e);
-            let n = null != (t = h.get(e.id)) ? t : 0;
-            h.set(e.id, n + 1);
+            let t = f.get(e.id) ?? 0;
+            f.set(e.id, t + 1);
         });
     });
 }
-
-function v(e) {
+function T(e) {
     let t = e.message.id;
     if (null == t) return !1;
     let n = _.get(t);
     if (null == n) return !1;
-    let r = (0, o.IU)(n, e.message);
+    let r = (0, s.IU)(n, e.message);
     _.set(t, r);
 }
-
-function S(e) {
+function y(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
-    if (!(0, l.vp)(e)) return !1;
-    let a = c.default.getId() === r;
-    return E(n, (n) => {
+    if (!(0, o.vp)(e)) return !1;
+    let a = l.default.getId() === r;
+    return m(n, (n) => {
         let { reactionType: r } = e;
         return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, a, e.colors, r) : n.removeReaction(i, a, r);
     });
 }
-
-function I(e) {
+function S(e) {
     let { messageId: t, reactions: n } = e,
-        r = c.default.getId();
-    return E(t, (e) => e.addReactionBatch(n, r));
+        r = l.default.getId();
+    return m(t, (e) => e.addReactionBatch(n, r));
 }
-
-function T(e) {
+function v(e) {
     let { messageId: t } = e;
-    return E(t, (e) => e.set("reactions", []));
+    return m(t, (e) => e.set("reactions", []));
 }
-
 function C(e) {
     let { messageId: t, emoji: n } = e;
-    return E(t, (e) => e.removeReactionsForEmoji(n));
+    return m(t, (e) => e.removeReactionsForEmoji(n));
 }
-
-function N(e) {
+function b(e) {
     e.ids.forEach((e) => {
-        g(e).handleSearchIndexing();
+        h(e).handleSearchIndexing();
     });
 }
-
-function R(e) {
+function N(e) {
     e.ids.forEach((t) => {
-        g(t).handleSearchFailure(e.error);
+        h(t).handleSearchFailure(e.error);
     });
 }
-
-function w(e) {
-    let t = p.get(e.id);
+function R(e) {
+    let t = d.get(e.id);
     if (null == t) return !1;
     t.messageIds.forEach((e) => {
-        var t;
-        let n = null != (t = h.get(e)) ? t : 0;
-        n <= 1 ? (_.delete(e), h.delete(e)) : h.set(e, n - 1);
+        let t = f.get(e) ?? 0;
+        t <= 1 ? (_.delete(e), f.delete(e)) : f.set(e, t - 1);
     }),
-        p.delete(e.id);
+        d.delete(e.id);
 }
-
-function P(e) {
-    (p = new Map()), (_ = new Map()), (h = new Map());
+function O(e) {
+    (d = new Map()), (_ = new Map()), (f = new Map());
 }
-class D extends (r = i.Ay.Store) {
+class D extends r.Ay.Store {
+    static displayName = "SearchMessageStore";
     initialize() {
-        this.waitFor(c.default, u.A);
+        this.waitFor(l.default, u.A);
     }
     getMessage(e) {
         return _.get(e);
     }
     getTotalCount(e) {
-        return b(e, (e) => e.totalResults);
+        return g(e, (e) => e.totalResults);
     }
     getIsInitialFetchComplete(e) {
-        return b(e, (e) => e.isInitialFetchComplete);
+        return g(e, (e) => e.isInitialFetchComplete);
     }
     getIsIndexing(e) {
-        return b(e, (e) => e.isIndexing);
+        return g(e, (e) => e.isIndexing);
     }
     getIsHistoricalIndexing(e) {
-        return b(e, (e) => e.isHistoricalIndexing);
+        return g(e, (e) => e.isHistoricalIndexing);
     }
     getDocumentsIndexed(e) {
-        return b(e, (e) => e.documentsIndexed);
+        return g(e, (e) => e.documentsIndexed);
     }
     getIsFetching(e) {
-        return b(e, (e) => e.isFetching);
+        return g(e, (e) => e.isFetching);
     }
     getError(e) {
-        return b(e, (e) => e.error);
+        return g(e, (e) => e.error);
     }
     getMessages(e) {
-        return b(e, (e) => e.messages);
+        return g(e, (e) => e.messages);
     }
     getCursor(e) {
-        return b(e, (e) => e.cursor);
+        return g(e, (e) => e.cursor);
     }
     getAnalyticsId(e) {
-        return b(e, (e) => e.analyticsId);
+        return g(e, (e) => e.analyticsId);
     }
     hasSearchState(e) {
-        return p.has(e);
+        return d.has(e);
     }
 }
-d(D, "displayName", "SearchMessageStore");
-let x = new D(a.h, {
-    SEARCH_MESSAGES_START: O,
-    SEARCH_MESSAGES_SUCCESS: A,
-    SEARCH_MESSAGES_INDEXING: N,
-    SEARCH_MESSAGES_FAILURE: R,
-    SEARCH_MESSAGES_CLEAR: w,
-    SEARCH_MESSAGES_CLEAR_ALL: P,
-    MESSAGE_UPDATE: v,
-    MESSAGE_REACTION_ADD: S,
-    MESSAGE_REACTION_ADD_MANY: I,
-    MESSAGE_REACTION_REMOVE: S,
-    MESSAGE_REACTION_REMOVE_ALL: T,
+let L = new D(i.h, {
+    SEARCH_MESSAGES_START: A,
+    SEARCH_MESSAGES_SUCCESS: I,
+    SEARCH_MESSAGES_INDEXING: b,
+    SEARCH_MESSAGES_FAILURE: N,
+    SEARCH_MESSAGES_CLEAR: R,
+    SEARCH_MESSAGES_CLEAR_ALL: O,
+    MESSAGE_UPDATE: T,
+    MESSAGE_REACTION_ADD: y,
+    MESSAGE_REACTION_ADD_MANY: S,
+    MESSAGE_REACTION_REMOVE: y,
+    MESSAGE_REACTION_REMOVE_ALL: v,
     MESSAGE_REACTION_REMOVE_EMOJI: C,
-    CONNECTION_OPEN: y,
+    CONNECTION_OPEN: E,
 });

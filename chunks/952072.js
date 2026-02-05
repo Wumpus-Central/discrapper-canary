@@ -1,9 +1,8 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(481613),
-    i = n.n(r),
-    s = n(547830);
+"use strict";
+n.d(t, { A: () => l });
+var i = n(481613),
+    s = n.n(i),
+    r = n(547830);
 let l = {
     dump(e) {
         let t;
@@ -14,16 +13,10 @@ let l = {
                 usedJSHeapSize: performance.memory.usedJSHeapSize,
             }),
             e({
-                browser: {
-                    name: i().name,
-                    version: i().version,
-                },
-                os: {
-                    name: i().os.family,
-                    version: i().os.version,
-                },
+                browser: { name: s().name, version: s().version },
+                os: { name: s().os.family, version: s().os.version },
                 memory: t,
             });
     },
-    getTimeSinceNavigationStart: () => Date.now() - s.fL,
+    getTimeSinceNavigationStart: () => Date.now() - r.fL,
 };

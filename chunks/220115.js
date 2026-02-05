@@ -1,5 +1,5 @@
+"use strict";
 var n = r(724039);
-
 function i() {
     return (i =
         n ||
@@ -38,12 +38,7 @@ t.exports = (function (t) {
             })((e = t.call.apply(t, [this].concat(a)) || this))),
             (i = void 0),
             (n = "_node") in r
-                ? Object.defineProperty(r, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
+                ? Object.defineProperty(r, n, { value: i, enumerable: !0, configurable: !0, writable: !0 })
                 : (r[n] = i),
             e
         );
@@ -134,13 +129,7 @@ t.exports = (function (t) {
                             entityKey: E,
                             offsetKey: w,
                         };
-                    return s.createElement(
-                        b,
-                        i({}, S, D, {
-                            key: w,
-                        }),
-                        y,
-                    );
+                    return s.createElement(b, i({}, S, D, { key: w }), y);
                 })
                 .toArray();
         }),

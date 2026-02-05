@@ -1,30 +1,26 @@
-n.d(t, {
-    default: () => j,
-}),
-    n(896048);
+n.d(t, { default: () => h });
 var s = n(627968),
     i = n(64700),
     a = n(397927),
     r = n(829219),
     l = n(890687),
-    c = n(92246),
-    d = n(646764),
-    o = n(109174),
+    o = n(92246),
+    c = n(646764),
+    d = n(109174),
     u = n(524728),
     m = n(654487),
     x = n(985018),
-    f = n(322956);
-
-function h(e) {
+    _ = n(322956);
+function f(e) {
     let { quest: t, rewardName: n, location: i, sourceQuestContent: r } = e;
     return (0, s.jsxs)("div", {
-        className: f.hQ,
+        className: _.hQ,
         children: [
             (0, s.jsx)("div", {
-                className: f.tE,
-                children: (0, s.jsx)(d.A, {
+                className: _.tE,
+                children: (0, s.jsx)(c.A, {
                     autoplay: !0,
-                    className: f.Qq,
+                    className: _.Qq,
                     learnMoreStyle: null,
                     quest: t,
                     questContent: i,
@@ -32,20 +28,18 @@ function h(e) {
                 }),
             }),
             (0, s.jsxs)("div", {
-                className: f.dD,
+                className: _.dD,
                 children: [
                     (0, s.jsx)(a.Heading, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        className: f.R_,
+                        className: _.R_,
                         children: x.intl.string(x.t["0/Yz+Y"]),
                     }),
                     (0, s.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: x.intl.format(x.t["v1u/zq"], {
-                            rewardName: n,
-                        }),
+                        children: x.intl.format(x.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
             }),
@@ -59,41 +53,39 @@ function h(e) {
         ],
     });
 }
-
-function j(e) {
-    var t, n;
-    let { initialQuest: a, onClose: d, transitionState: x, location: f, sourceQuestContent: j } = e,
-        g = null != (t = (0, l.C5)(a.id)) ? t : a,
-        v = i.useMemo(() => (0, c.f)(g.config), [g]),
-        N = (null == (n = g.userStatus) ? void 0 : n.claimedAt) != null,
-        b = !g.preview && !N,
-        [p, _] = i.useState(b ? "loading" : "claimed");
+function h(e) {
+    let { initialQuest: t, onClose: n, transitionState: a, location: c, sourceQuestContent: x } = e,
+        _ = (0, l.C5)(t.id) ?? t,
+        h = i.useMemo(() => (0, o.f)(_.config), [_]),
+        g = _.userStatus?.claimedAt != null,
+        j = !_.preview && !g,
+        [C, v] = i.useState(j ? "loading" : "claimed");
     i.useEffect(() => {
-        if (b) {
-            let e = (0, c.$s)(g.config);
-            (0, r.Oq)(g.id, e, f)
-                .then(() => _("claimed"))
-                .catch(() => _("error"));
+        if (j) {
+            let e = (0, o.$s)(_.config);
+            (0, r.Oq)(_.id, e, c)
+                .then(() => v("claimed"))
+                .catch(() => v("error"));
         }
-    }, [g, f, b]);
-    let y = "error" === p || null == v;
+    }, [_, c, j]);
+    let N = "error" === C || null == h;
     return (0, s.jsx)(u.A, {
-        onClose: d,
-        transitionState: x,
-        quest: g,
-        sourceQuestContent: j,
+        onClose: n,
+        transitionState: a,
+        quest: _,
+        sourceQuestContent: x,
         location: m.rE.INGAME_REWARD_MODAL,
-        isRewardContentLoading: "loading" === p,
-        rewardContentHasError: y,
-        rewardContent: y
+        isRewardContentLoading: "loading" === C,
+        rewardContentHasError: N,
+        rewardContent: N
             ? null
-            : (0, s.jsx)(o.A, {
-                  rewardName: v.messages.name,
-                  children: (0, s.jsx)(h, {
-                      quest: g,
-                      rewardName: v.messages.name,
-                      location: f,
-                      sourceQuestContent: j,
+            : (0, s.jsx)(d.A, {
+                  rewardName: h.messages.name,
+                  children: (0, s.jsx)(f, {
+                      quest: _,
+                      rewardName: h.messages.name,
+                      location: c,
+                      sourceQuestContent: x,
                   }),
               }),
     });

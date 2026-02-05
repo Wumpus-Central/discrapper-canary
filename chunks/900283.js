@@ -1,7 +1,5 @@
-n.d(t, {
-    Q: () => i,
-    x: () => a,
-});
+"use strict";
+n.d(t, { Q: () => i, x: () => a });
 var r = n(64700),
     i = (function (e) {
         return (
@@ -15,6 +13,4 @@ var r = n(64700),
             e
         );
     })({});
-let a = r.createContext({
-    onSelect: void 0,
-});
+let a = r.createContext({ onSelect: void 0 });

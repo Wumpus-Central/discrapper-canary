@@ -1,20 +1,7 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    u: () => i,
-});
-class i {
+"use strict";
+n.d(t, { u: () => r });
+class r {
+    timeoutId = null;
     schedule(e, t) {
         this.unschedule(),
             (this.timeoutId = setTimeout(() => {
@@ -26,8 +13,5 @@ class i {
     }
     scheduled() {
         return null !== this.timeoutId;
-    }
-    constructor() {
-        r(this, "timeoutId", null);
     }
 }

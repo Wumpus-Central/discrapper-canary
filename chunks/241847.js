@@ -1,91 +1,35 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(311907),
-    a = n(397927),
-    s = n(915089),
+n.d(t, { A: () => T });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
+    s = n(397927),
+    r = n(915089),
     o = n(383501),
     c = n(977997),
-    u = n(572487),
-    d = n(798286),
-    f = n(83942),
-    p = n(259374),
-    b = n(763845),
-    g = n(857341),
-    m = n(603266),
-    h = n(985018),
-    A = n(78875);
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
+    d = n(572487),
+    u = n(798286),
+    h = n(83942),
+    m = n(259374),
+    A = n(763845),
+    p = n(857341),
+    g = n(603266),
+    f = n(985018),
+    _ = n(78875);
 function E(e) {
-    let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
-        a = (0, i.cf)([u.A], () => ({
-            connectionState: u.A.getConnectionState(t),
-            hostname: u.A.getHostname(t),
-            averagePing: u.A.getAveragePing(t),
-            lastPing: u.A.getLastPing(t),
-            pings: u.A.getPings(),
-            outboundLossRate: u.A.getOutboundLossRate(t),
+    let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
+        s = (0, a.cf)([d.A], () => ({
+            connectionState: d.A.getConnectionState(t),
+            hostname: d.A.getHostname(t),
+            averagePing: d.A.getAveragePing(t),
+            lastPing: d.A.getLastPing(t),
+            pings: d.A.getPings(),
+            outboundLossRate: d.A.getOutboundLossRate(t),
         }));
-    return (0, l.jsx)(
-        b.A,
-        _(y({}, a), {
-            closePopout: r,
-            connectionTypeText: n,
-        }),
-    );
+    return (0, i.jsx)(A.A, { ...s, closePopout: l, connectionTypeText: n });
 }
-
-function v(e) {
+function C(e) {
     let { closePopout: t, connectionTypeText: n } = e,
-        r = (0, i.cf)([o.A], () => ({
+        l = (0, a.cf)([o.A], () => ({
             connectionState: o.A.getState(),
             hostname: o.A.getHostname(),
             averagePing: o.A.getAveragePing(),
@@ -93,109 +37,75 @@ function v(e) {
             outboundLossRate: o.A.getOutboundLossRate(),
             pings: o.A.getPings(),
         }));
-    return (0, l.jsx)(
-        b.A,
-        _(y({}, r), {
-            closePopout: t,
-            connectionTypeText: n,
-        }),
-    );
+    return (0, i.jsx)(A.A, { ...l, closePopout: t, connectionTypeText: n });
 }
-
-function O(e) {
-    let { channelId: t, isOverlay: n, lobbyId: r, closePopout: i } = e,
-        a = (0, p.k)({
-            channelId: t,
-        })
-            ? h.intl.string(h.t["3BogKe"])
-            : h.intl.string(h.t.ETIVvg);
-    return n
-        ? (0, l.jsx)(E, {
-              lobbyId: r,
-              closePopout: i,
-              connectionTypeText: a,
-          })
-        : (0, l.jsx)(v, {
-              closePopout: i,
-              connectionTypeText: a,
-          });
-}
-
 function x(e) {
-    let t = (0, i.bG)([c.A], () => c.A.hasVideo(e.channelId)),
-        [n, o] = r.useState(m.Rj.RTC_DEBUG_PANEL),
-        u = (0, s.GV)(),
-        p = r.useMemo(() => {
+    let { channelId: t, isOverlay: n, lobbyId: l, closePopout: a } = e,
+        s = (0, m.k)({ channelId: t }) ? f.intl.string(f.t["3BogKe"]) : f.intl.string(f.t.ETIVvg);
+    return n
+        ? (0, i.jsx)(E, { lobbyId: l, closePopout: a, connectionTypeText: s })
+        : (0, i.jsx)(C, { closePopout: a, connectionTypeText: s });
+}
+function S(e) {
+    let t = (0, a.bG)([c.A], () => c.A.hasVideo(e.channelId)),
+        [n, o] = l.useState(g.Rj.RTC_DEBUG_PANEL),
+        d = (0, r.GV)(),
+        m = l.useMemo(() => {
             switch (n) {
-                case m.Rj.RTC_DEBUG_PANEL:
-                    return (0, l.jsx)(O, y({}, e));
-                case m.Rj.RTC_SECURE_FRAMES:
-                    return (0, l.jsx)(g.A, {
-                        channelId: e.channelId,
-                    });
+                case g.Rj.RTC_DEBUG_PANEL:
+                    return (0, i.jsx)(x, { ...e });
+                case g.Rj.RTC_SECURE_FRAMES:
+                    return (0, i.jsx)(p.A, { channelId: e.channelId });
             }
         }, [e, n]);
-    r.useEffect(() => {
-        (0, d.Hg)({
-            channelId: e.channelId,
-            selectedTab: n,
-        });
+    l.useEffect(() => {
+        (0, u.Hg)({ channelId: e.channelId, selectedTab: n });
     }, [e.channelId, n]);
-    let b = (0, f.c)();
+    let A = (0, h.c)();
     return (
-        r.useEffect(() => {
-            b && o(m.Rj.RTC_DEBUG_PANEL);
-        }, [b]),
-        (0, l.jsxs)("div", {
-            className: A.kL,
+        l.useEffect(() => {
+            A && o(g.Rj.RTC_DEBUG_PANEL);
+        }, [A]),
+        (0, i.jsxs)("div", {
+            className: _.kL,
             children: [
-                (0, l.jsx)(a.Heading, {
-                    className: A.DD,
+                (0, i.jsx)(s.Heading, {
+                    className: _.DD,
                     variant: "heading-lg/bold",
                     color: "text-strong",
-                    children: t ? h.intl.string(h.t.IlHdW8) : h.intl.string(h.t.WsOisp),
+                    children: t ? f.intl.string(f.t.IlHdW8) : f.intl.string(f.t.WsOisp),
                 }),
-                (0, l.jsxs)(a.VQ0, {
-                    className: A.vR,
+                (0, i.jsxs)(s.VQ0, {
+                    className: _.vR,
                     selectedItem: n,
                     type: "top",
                     look: "brand",
                     onItemSelect: o,
                     children: [
-                        (0, l.jsx)(a.VQ0.Item, {
-                            id: m.Rj.RTC_DEBUG_PANEL,
-                            className: A.YU,
-                            children: h.intl.string(h.t.MBY1Pm),
+                        (0, i.jsx)(s.VQ0.Item, {
+                            id: g.Rj.RTC_DEBUG_PANEL,
+                            className: _.YU,
+                            children: f.intl.string(f.t.MBY1Pm),
                         }),
-                        b
+                        A
                             ? null
-                            : (0, l.jsx)(a.VQ0.Item, {
-                                  id: m.Rj.RTC_SECURE_FRAMES,
-                                  className: A.YU,
-                                  children: h.intl.string(h.t.zC6o3s),
+                            : (0, i.jsx)(s.VQ0.Item, {
+                                  id: g.Rj.RTC_SECURE_FRAMES,
+                                  className: _.YU,
+                                  children: f.intl.string(f.t.zC6o3s),
                               }),
                     ],
                 }),
-                (0, l.jsx)(a.VQ0.Panel, {
-                    id: n,
-                    "aria-labelledby": u,
-                    children: p,
-                }),
+                (0, i.jsx)(s.VQ0.Panel, { id: n, "aria-labelledby": d, children: m }),
             ],
         })
     );
 }
-
-function S(e) {
-    return (0, p.k)({
-        channelId: e.channelId,
-    })
-        ? (0, l.jsx)(x, y({}, e))
-        : (0, l.jsx)("div", {
-              className: A.L3,
-              children: (0, l.jsx)("section", {
-                  className: A.J8,
-                  children: (0, l.jsx)(O, y({}, e)),
-              }),
+function T(e) {
+    return (0, m.k)({ channelId: e.channelId })
+        ? (0, i.jsx)(S, { ...e })
+        : (0, i.jsx)("div", {
+              className: _.L3,
+              children: (0, i.jsx)("section", { className: _.J8, children: (0, i.jsx)(x, { ...e }) }),
           });
 }

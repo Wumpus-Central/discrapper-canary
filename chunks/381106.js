@@ -1,20 +1,14 @@
-n.d(t, {
-    A: () => s,
-});
-var l = n(627968),
-    i = n(64700),
-    a = n(236972),
-    r = n(997098);
-let s = i.memo(function (e) {
-    let { fineTuning: t, fineTuningResolution: n, duration: i } = e,
-        { file: s, audio: u } = (0, a.L)();
-    return (0, l.jsx)(r.A, {
-        file: s,
+l.d(t, { A: () => r });
+var n = l(627968),
+    a = l(64700),
+    i = l(236972),
+    s = l(997098);
+let r = a.memo(function (e) {
+    let { fineTuning: t, fineTuningResolution: l, duration: a } = e,
+        { file: r, audio: u } = (0, i.L)();
+    return (0, n.jsx)(s.A, {
+        file: r,
         audio: u,
-        waveformSettings: {
-            fineTuning: t,
-            fineTuningResolution: n,
-            duration: i,
-        },
+        waveformSettings: { fineTuning: t, fineTuningResolution: l, duration: a },
     });
 });

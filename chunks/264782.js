@@ -1,118 +1,40 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => p });
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153);
+let o = {},
+    l = {};
+function u(e) {
+    let { applicationId: t } = e;
+    o = { ...o, [t]: 1 };
 }
-
 function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = {},
-    p = {};
-
-function _(e) {
     let { applicationId: t } = e;
-    f = d(c({}, f), {
-        [t]: 1,
-    });
+    o = { ...o, [t]: 2 };
 }
-
-function h(e) {
-    let { applicationId: t } = e;
-    f = d(c({}, f), {
-        [t]: 2,
-    });
-}
-
-function m(e) {
+function d(e) {
     let { applicationId: t, assets: n } = e;
-    if (null != n) {
-        var r;
-        p[t] = {
-            assets: null != (r = a().keyBy(n, "name")) ? r : {},
-            lastUpdated: Date.now(),
-        };
-    } else delete p[t];
+    null != n ? (l[t] = { assets: i().keyBy(n, "name") ?? {}, lastUpdated: Date.now() }) : delete l[t];
 }
-
-function g(e) {
+function _(e) {
     let { assets: t } = e,
-        n = c({}, f);
+        n = { ...o };
     for (let e in t) {
-        var r;
-        let i = t[e];
-        (n[e] = 2),
-            (p[e] = {
-                assets: null != (r = a().keyBy(i, "name")) ? r : {},
-                lastUpdated: Date.now(),
-            });
+        let r = t[e];
+        (n[e] = 2), (l[e] = { assets: i().keyBy(r, "name") ?? {}, lastUpdated: Date.now() });
     }
-    f = n;
+    o = n;
 }
-class E extends (r = s.Ay.Store) {
+class f extends a.Ay.Store {
+    static displayName = "ApplicationAssetsStore";
     getApplicationAssetFetchState(e) {
-        var t;
-        return null != (t = f[e]) ? t : 0;
+        return o[e] ?? 0;
     }
     getFetchingIds() {
         return [
-            ...Object.entries(f)
+            ...Object.entries(o)
                 .filter((e) => {
                     let [, t] = e;
                     return 1 === t;
@@ -124,14 +46,13 @@ class E extends (r = s.Ay.Store) {
         ];
     }
     getApplicationAssets(e) {
-        return p[e];
+        return l[e];
     }
 }
-l(E, "displayName", "ApplicationAssetsStore");
-let b = new E(o.h, {
-    APPLICATION_ASSETS_FETCH: _,
-    APPLICATION_ASSETS_FETCH_SUCCESS: h,
-    APPLICATION_ASSETS_UPDATE: m,
-    EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: g,
-    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: g,
+let p = new f(s.h, {
+    APPLICATION_ASSETS_FETCH: u,
+    APPLICATION_ASSETS_FETCH_SUCCESS: c,
+    APPLICATION_ASSETS_UPDATE: d,
+    EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: _,
+    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: _,
 });

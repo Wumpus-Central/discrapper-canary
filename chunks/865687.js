@@ -1,3 +1,2 @@
-e.exports = {
-    $: "productCardBadge_b8a6bd",
-};
+"use strict";
+e.exports = { $: "productCardBadge_b8a6bd" };

@@ -1,95 +1,92 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
+n.d(t, { A: () => v });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(934551),
+    l = n.n(i),
+    r = n(934551),
     o = n(311907),
-    c = n(397927),
-    d = n(238193),
+    d = n(397927),
+    c = n(238193),
     u = n(624622),
     m = n(844330),
-    p = n(961350),
-    h = n(372022);
-let f = [
-        s.UserIcon,
-        s.ShieldIcon,
-        s.GiftIcon,
-        s.AchievementsIcon,
-        s.PiggyBankIcon,
-        s.TreehouseIcon,
-        s.SpeedometerIcon,
-        s.CompassIcon,
-        s.SignPostIcon,
-        s.CarIcon,
-        s.TrainIcon,
-        s.TeacupIcon,
-        s.InventoryIcon,
-        s.FoodIcon,
-        s.BurgerIcon,
-        s.MagicDoorIcon,
-        s.PawPrintIcon,
-        s.RecordPlayerIcon,
-        s.SettingsIcon,
+    h = n(961350),
+    x = n(372022);
+let p = [
+        r.UserIcon,
+        r.ShieldIcon,
+        r.GiftIcon,
+        r.AchievementsIcon,
+        r.PiggyBankIcon,
+        r.TreehouseIcon,
+        r.SpeedometerIcon,
+        r.CompassIcon,
+        r.SignPostIcon,
+        r.CarIcon,
+        r.TrainIcon,
+        r.TeacupIcon,
+        r.InventoryIcon,
+        r.FoodIcon,
+        r.BurgerIcon,
+        r.MagicDoorIcon,
+        r.PawPrintIcon,
+        r.RecordPlayerIcon,
+        r.SettingsIcon,
     ],
-    x = [
+    g = [
         "text-default",
         "text-feedback-positive",
         "text-feedback-warning",
         "text-feedback-info",
         "text-feedback-critical",
     ],
-    b = () => {
-        let [e, t] = l.useState(""),
-            [n, i] = l.useState(""),
-            [r, s] = l.useState(!1);
+    _ = () => {
+        let [e, t] = s.useState(""),
+            [n, i] = s.useState(""),
+            [l, r] = s.useState(!1);
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)("form", {
                     onSubmit: async (a) => {
-                        a.preventDefault(), s(!0);
+                        a.preventDefault(), r(!0);
                         try {
-                            await (0, d.gs)(e, n), t(""), i("");
+                            await (0, c.gs)(e, n), t(""), i("");
                         } finally {
-                            s(!1);
+                            r(!1);
                         }
                     },
-                    children: (0, a.jsxs)(c.BJc, {
+                    children: (0, a.jsxs)(d.BJc, {
                         direction: "vertical",
                         align: "center",
                         gap: 8,
                         children: [
-                            (0, a.jsxs)(c.BJc, {
+                            (0, a.jsxs)(d.BJc, {
                                 direction: "horizontal",
                                 align: "center",
                                 gap: 4,
                                 children: [
-                                    (0, a.jsx)(c.ksK, {
+                                    (0, a.jsx)(d.ksK, {
                                         fullWidth: !0,
                                         value: e,
                                         onChange: t,
                                         placeholder: "Pool ID",
-                                        disabled: r,
+                                        disabled: l,
                                     }),
-                                    (0, a.jsx)(c.ksK, {
+                                    (0, a.jsx)(d.ksK, {
                                         type: "password",
                                         fullWidth: !0,
                                         value: n,
                                         onChange: i,
                                         placeholder: "Password",
-                                        disabled: r,
+                                        disabled: l,
                                     }),
                                 ],
                             }),
-                            (0, a.jsxs)(c.BJc, {
+                            (0, a.jsxs)(d.BJc, {
                                 direction: "horizontal",
                                 align: "center",
                                 gap: 4,
                                 children: [
-                                    (0, a.jsx)(c.Button, {
+                                    (0, a.jsx)(d.Button, {
                                         type: "button",
                                         size: "md",
                                         fullWidth: !0,
@@ -98,108 +95,88 @@ let f = [
                                         onClick: () => {
                                             t(""), i("");
                                         },
-                                        disabled: 0 === e.length || 0 === n.length || r,
+                                        disabled: 0 === e.length || 0 === n.length || l,
                                     }),
-                                    (0, a.jsx)(c.Button, {
+                                    (0, a.jsx)(d.Button, {
                                         type: "submit",
                                         size: "md",
                                         fullWidth: !0,
                                         variant: "primary",
                                         text: "Add Pool",
-                                        disabled: 0 === e.length || 0 === n.length || r,
-                                        loading: r,
+                                        disabled: 0 === e.length || 0 === n.length || l,
+                                        loading: l,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, a.jsx)(c.cGx, {
-                    gap: 4,
-                }),
+                (0, a.jsx)(d.cGx, { gap: 4 }),
             ],
         });
     },
-    g = (e) => {
+    f = (e) => {
         let { pool: t } = e,
             { id: n, summary: i } = t,
-            b = u.A.getUsersForPool(n),
-            g = (0, o.bG)([p.default], () => p.default.getId()),
-            v = f[Number(n) % f.length],
-            j = x[Number(n) % x.length],
-            y = l.useCallback(() => {
-                (0, d.cD)(n);
+            _ = u.A.getUsersForPool(n),
+            f = (0, o.bG)([h.default], () => h.default.getId()),
+            v = p[Number(n) % p.length],
+            b = g[Number(n) % g.length],
+            j = s.useCallback(() => {
+                (0, c.cD)(n);
             }, [n]);
-        return (0, a.jsx)(c.BJc, {
+        return (0, a.jsx)(d.BJc, {
             direction: "horizontal",
             align: "start",
             justify: "space-between",
             children: (0, a.jsx)(m.A, {
-                icon: (0, a.jsx)(c.Text, {
+                icon: (0, a.jsx)(d.Text, {
                     variant: "text-md/medium",
-                    color: j,
-                    className: h.td,
-                    children: (0, a.jsx)(v, {
-                        size: "custom",
-                        width: 24,
-                        height: 24,
-                        color: "currentColor",
-                    }),
+                    color: b,
+                    className: x.td,
+                    children: (0, a.jsx)(v, { size: "custom", width: 24, height: 24, color: "currentColor" }),
                 }),
                 title: i,
-                className: h.JC,
-                subtitle: "".concat(b.length, " users"),
-                children: (0, a.jsxs)(c.BJc, {
+                className: x.JC,
+                subtitle: `${_.length} users`,
+                children: (0, a.jsxs)(d.BJc, {
                     direction: "vertical",
                     gap: 4,
-                    padding: {
-                        left: 24,
-                        right: 8,
-                        bottom: 16,
-                    },
+                    padding: { left: 24, right: 8, bottom: 16 },
                     fullWidth: !1,
                     children: [
-                        b.map((e, n) =>
+                        _.map((e, n) =>
                             (0, a.jsxs)(
-                                l.Fragment,
+                                s.Fragment,
                                 {
                                     children: [
-                                        0 !== n &&
-                                            (0, a.jsx)(c.cGx, {
-                                                gap: 4,
-                                            }),
+                                        0 !== n && (0, a.jsx)(d.cGx, { gap: 4 }),
                                         (0, a.jsx)(
-                                            c.DUT,
+                                            d.DUT,
                                             {
                                                 onClick: (n) => {
-                                                    n.stopPropagation(), (0, d.sl)(t.id, e.id);
+                                                    n.stopPropagation(), (0, c.sl)(t.id, e.id);
                                                 },
-                                                "aria-disabled": g === e.id,
-                                                className: r()(h.vk, {
-                                                    [h.Pe]: g === e.id,
-                                                }),
+                                                "aria-disabled": f === e.id,
+                                                className: l()(x.vk, { [x.Pe]: f === e.id }),
                                                 children: (0, a.jsxs)(
-                                                    c.BJc,
+                                                    d.BJc,
                                                     {
                                                         direction: "horizontal",
                                                         align: "center",
                                                         justify: "space-between",
                                                         gap: 8,
-                                                        padding: {
-                                                            right: 8,
-                                                        },
+                                                        padding: { right: 8 },
                                                         fullWidth: !1,
                                                         children: [
-                                                            (0, a.jsxs)(c.BJc, {
+                                                            (0, a.jsxs)(d.BJc, {
                                                                 direction: "horizontal",
                                                                 align: "center",
                                                                 gap: 8,
                                                                 fullWidth: !1,
-                                                                className: r()({
-                                                                    [h.WP]: g === e.id,
-                                                                }),
+                                                                className: l()({ [x.WP]: f === e.id }),
                                                                 children: [
-                                                                    (0, a.jsx)(s.UserIcon, {
+                                                                    (0, a.jsx)(r.UserIcon, {
                                                                         size: "custom",
                                                                         width: 20,
                                                                         height: 20,
@@ -207,31 +184,31 @@ let f = [
                                                                     }),
                                                                     (0, a.jsxs)("div", {
                                                                         children: [
-                                                                            (0, a.jsx)(c.Text, {
+                                                                            (0, a.jsx)(d.Text, {
                                                                                 variant: "text-sm/normal",
                                                                                 color: "text-default",
                                                                                 children: e.username,
                                                                             }),
-                                                                            (0, a.jsx)(c.Text, {
+                                                                            (0, a.jsx)(d.Text, {
                                                                                 variant: "text-xs/normal",
                                                                                 color: "text-muted",
-                                                                                className: h.c1,
+                                                                                className: x.c1,
                                                                                 children: e.email,
                                                                             }),
                                                                         ],
                                                                     }),
                                                                 ],
                                                             }),
-                                                            g === e.id
-                                                                ? (0, a.jsx)(c.Text, {
+                                                            f === e.id
+                                                                ? (0, a.jsx)(d.Text, {
                                                                       variant: "text-sm/normal",
                                                                       color: "text-feedback-positive",
-                                                                      children: (0, a.jsx)(s.CircleCheckIcon, {
+                                                                      children: (0, a.jsx)(r.CircleCheckIcon, {
                                                                           size: "sm",
                                                                           color: "currentColor",
                                                                       }),
                                                                   })
-                                                                : (0, a.jsx)(c._BQ, {
+                                                                : (0, a.jsx)(d._BQ, {
                                                                       size: "sm",
                                                                       color: "currentColor",
                                                                   }),
@@ -248,13 +225,13 @@ let f = [
                             ),
                         ),
                         (0, a.jsx)("div", {
-                            className: h.UD,
-                            children: (0, a.jsx)(c.Button, {
-                                icon: s.TrashIcon,
+                            className: x.UD,
+                            children: (0, a.jsx)(d.Button, {
+                                icon: r.TrashIcon,
                                 text: "",
                                 size: "sm",
                                 variant: "secondary",
-                                onClick: y,
+                                onClick: j,
                             }),
                         }),
                     ],
@@ -262,34 +239,16 @@ let f = [
             }),
         });
     };
-
 function v() {
-    let e = (0, o.yK)([u.A], () => {
-        var e;
-        return null != (e = u.A.getPools()) ? e : [];
-    });
-    return (0, a.jsxs)(c.BJc, {
+    let e = (0, o.yK)([u.A], () => u.A.getPools() ?? []);
+    return (0, a.jsxs)(d.BJc, {
         padding: 16,
         gap: 16,
         fullWidth: !1,
-        className: h.kL,
+        className: x.kL,
         children: [
-            (0, a.jsx)(b, {}),
-            (0, a.jsx)(c.HOs, {
-                className: h.Ik,
-                children:
-                    null == e
-                        ? void 0
-                        : e.map((e) =>
-                              (0, a.jsx)(
-                                  g,
-                                  {
-                                      pool: e,
-                                  },
-                                  e.id,
-                              ),
-                          ),
-            }),
+            (0, a.jsx)(_, {}),
+            (0, a.jsx)(d.HOs, { className: x.Ik, children: e?.map((e) => (0, a.jsx)(f, { pool: e }, e.id)) }),
         ],
     });
 }

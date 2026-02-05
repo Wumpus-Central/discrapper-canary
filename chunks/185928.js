@@ -1,10 +1,5 @@
-n.d(t, {
-    Fc: () => s,
-    Q_: () => a,
-    dP: () => l,
-    nD: () => c,
-    qj: () => o,
-});
+"use strict";
+n.d(t, { Fc: () => s, Q_: () => a, dP: () => l, nD: () => u, qj: () => o });
 var r = n(873298),
     i = n(652215),
     a = (function (e) {
@@ -14,11 +9,7 @@ var r = n(873298),
         return (e.DARK = "dark"), (e.LIGHT = "light"), (e.NO_PREFERENCE = "unknown"), e;
     })({});
 i.NJ8.DARKER, i.NJ8.LIGHT, i.NJ8.DARKER, i.NJ8.DARK, i.NJ8.LIGHT, i.NJ8.DARK;
-let o = {
-    dark: i.NJ8.DARKER,
-    light: i.NJ8.LIGHT,
-    unknown: i.NJ8.DARKER,
-};
+let o = { dark: i.NJ8.DARKER, light: i.NJ8.LIGHT, unknown: i.NJ8.DARKER };
 r.Sx.UNSET,
     i.NJ8.DARK,
     r.Sx.DARK,
@@ -36,7 +27,7 @@ let l = {
         [r.Sx.LIGHT]: i.NJ8.LIGHT,
         [r.Sx.MIDNIGHT]: i.NJ8.MIDNIGHT,
     },
-    c = {
+    u = {
         [r.Sx.UNSET]: i.NJ8.DARKER,
         [r.Sx.DARK]: i.NJ8.DARKER,
         [r.Sx.DARKER]: i.NJ8.DARKER,

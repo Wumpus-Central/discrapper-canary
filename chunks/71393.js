@@ -1,120 +1,44 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => h });
 var r = n(357758),
     i = n(867051),
     a = n(548965),
-    o = n(942269),
-    s = n(260509),
+    s = n(942269),
+    o = n(260509),
     l = n(860689),
-    c = n(661191),
-    u = n(961350),
+    u = n(661191),
+    c = n(961350),
     d = n(652215),
-    f = n(349828);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function g(e) {
+    _ = n(349828);
+function f(e) {
     let t = e;
-    return (0, i.yE)(
-        s.vI,
-        m(_({}, t), {
-            features: (0, r.y)(t.features),
-            joinedAt: null != t.joinedAt ? new Date(t.joinedAt) : null,
-            premiumProgressBarEnabledUserUpdatedAt:
-                null != t.premiumProgressBarEnabledUserUpdatedAt
-                    ? new Date(t.premiumProgressBarEnabledUserUpdatedAt)
-                    : null,
-        }),
-    );
+    return (0, i.yE)(o.vI, {
+        ...t,
+        features: (0, r.y)(t.features),
+        joinedAt: null != t.joinedAt ? new Date(t.joinedAt) : null,
+        premiumProgressBarEnabledUserUpdatedAt:
+            null != t.premiumProgressBarEnabledUserUpdatedAt
+                ? new Date(t.premiumProgressBarEnabledUserUpdatedAt)
+                : null,
+    });
 }
-class E extends o.yW {
+class p extends s.yW {
+    static displayName = "GuildStore";
+    database = this.addKVDatabase("guilds", f);
     stateWrapper() {
         return this.database;
     }
+    getGuild = (e) => {
+        if (null != e) return e === d.YYv ? _._ : this.database.get(e);
+    };
+    getGuilds = this.database.memoized((e) => ({ ...e }));
+    getGuildsArray = this.database.memoized((e) => Object.values(e));
+    getGuildIds = this.database.memoized((e) => u.default.keys(e));
     getGuildCount() {
         return this.database.length();
     }
-    constructor(...e) {
-        super(...e),
-            p(this, "database", this.addKVDatabase("guilds", g)),
-            p(this, "getGuild", (e) => {
-                if (null != e) return e === d.YYv ? f._ : this.database.get(e);
-            }),
-            p(
-                this,
-                "getGuilds",
-                this.database.memoized((e) => _({}, e)),
-            ),
-            p(
-                this,
-                "getGuildsArray",
-                this.database.memoized((e) => Object.values(e)),
-            ),
-            p(
-                this,
-                "getGuildIds",
-                this.database.memoized((e) => c.default.keys(e)),
-            );
-    }
 }
-p(E, "displayName", "GuildStore");
-let y = new E(
+let h = new p(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -168,11 +92,11 @@ let y = new E(
         },
         GUILD_MEMBER_ADD: (e, t) => {
             let { guildId: n, joinedAt: r, user: i } = e,
-                a = u.default.getId(),
-                o = t.get(n);
-            if (a !== i.id || null == o) return;
+                a = c.default.getId(),
+                s = t.get(n);
+            if (a !== i.id || null == s) return;
             let l = "string" == typeof r ? new Date(r) : r;
-            l !== o.joinedAt && null != l && t.set(n, (0, s.kn)(o, l));
+            l !== s.joinedAt && null != l && t.set(n, (0, o.kn)(s, l));
         },
     },
     a.P4.getCachedBridgedStoreMode(),

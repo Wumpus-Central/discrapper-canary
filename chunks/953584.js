@@ -1,29 +1,12 @@
-n.d(t, {
-    Ay: () => c,
-    FM: () => u,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => l, FM: () => u });
 var r = n(311907),
     i = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = 10;
-class o extends r.il {
+let a = 10;
+class s extends r.il {
+    videoStatsEnabled = new Map();
     isVideoStatsEnabled(e) {
-        var t;
-        return null != (t = this.videoStatsEnabled.get(e)) && t;
+        return this.videoStatsEnabled.get(e) ?? !1;
     }
     toggleVideoStats(e) {
         let t = this.isVideoStatsEnabled(e);
@@ -37,9 +20,9 @@ class o extends r.il {
         if (
             (this.videoStatsEnabled.has(e) && this.videoStatsEnabled.delete(e),
             this.videoStatsEnabled.set(e, t),
-            this.videoStatsEnabled.size > s)
+            this.videoStatsEnabled.size > a)
         ) {
-            let e = this.videoStatsEnabled.size - s,
+            let e = this.videoStatsEnabled.size - a,
                 t = this.videoStatsEnabled.keys();
             for (let n = 0; n < e; n++) {
                 let e = t.next().value;
@@ -51,13 +34,9 @@ class o extends r.il {
     clearVideoStats(e) {
         this.videoStatsEnabled.delete(e) && this.emitChange();
     }
-    constructor(...e) {
-        super(...e), a(this, "videoStatsEnabled", new Map());
-    }
 }
-let l = new o(i.h, {}),
-    c = l;
-
+let o = new s(i.h, {}),
+    l = o;
 function u(e) {
-    l.toggleVideoStats(e);
+    o.toggleVideoStats(e);
 }

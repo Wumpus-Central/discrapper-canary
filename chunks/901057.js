@@ -1,67 +1,57 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968);
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(990078),
-    a = n(397927),
+var l = n(311907),
+    a = n(990078),
+    r = n(397927),
     s = n(367513),
     o = n(956793),
-    c = n(47167),
-    u = n(332173),
-    d = n(976860),
-    p = n(95701),
-    m = n(734057),
-    f = n(71393),
-    g = n(994500),
-    h = n(287809),
-    _ = n(147036),
-    b = n(449054),
-    A = n(652215);
-
-function y(e) {
-    let { channel: t, onClick: n, beforeTransition: y, className: v, openChatWithoutConnecting: x } = e,
-        O = (0, i.bG)([h.default, g.A], () => (null == t ? "" : (0, c.m1)(t, h.default, g.A)), [t]);
-    return (0, r.jsx)(l.m, {
+    d = n(47167),
+    c = n(332173),
+    u = n(976860),
+    m = n(95701),
+    _ = n(734057),
+    h = n(71393),
+    p = n(994500),
+    g = n(287809),
+    A = n(147036),
+    f = n(449054),
+    x = n(652215);
+function E(e) {
+    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: I } = e,
+        T = (0, l.bG)([g.default, p.A], () => (null == t ? "" : (0, d.m1)(t, g.default, p.A)), [t]);
+    return (0, i.jsx)(a.m, {
         "data-pending-richtooltip-migration": !0,
-        __unsupportedReactNodeAsText: O,
+        __unsupportedReactNodeAsText: T,
         position: "top",
-        children: (0, r.jsx)(u.A, {
+        children: (0, i.jsx)(c.A, {
             role: "link",
-            className: v,
+            className: C,
             onClick: (e) => {
                 e.stopPropagation(),
                     null != n
                         ? n()
-                        : (null != y && y(),
-                          (0, a.s7G)(),
+                        : (null != E && E(),
+                          (0, r.s7G)(),
                           (function (e, t) {
                               let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                               if (null == e || null == t) return;
-                              let r = f.A.getGuild(e);
-                              if ((null == r ? void 0 : r.joinedAt) == null)
-                                  return b.Z2(
-                                      e,
-                                      {},
-                                      {
-                                          channelId: t,
-                                      },
-                                  );
-                              let i = m.A.getChannel(t);
-                              if (null != i && (0, p.ay)(i.type)) {
+                              let i = h.A.getGuild(e);
+                              if (i?.joinedAt == null) return f.Z2(e, {}, { channelId: t });
+                              let l = _.A.getChannel(t);
+                              if (null != l && (0, m.ay)(l.type)) {
                                   if (n) {
-                                      s.A.updateChatOpen(i.id, !0), (0, d.pX)(A.BVt.CHANNEL(e, t));
+                                      s.A.updateChatOpen(l.id, !0), (0, u.pX)(x.BVt.CHANNEL(e, t));
                                       return;
                                   }
-                                  o.default.selectVoiceChannel(i.id);
+                                  o.default.selectVoiceChannel(l.id);
                                   return;
                               }
-                              (0, d.pX)(A.BVt.CHANNEL(e, t));
-                          })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, x));
+                              (0, u.pX)(x.BVt.CHANNEL(e, t));
+                          })(t?.guild_id, t?.id, I));
             },
-            iconType: (0, _.QG)(t),
-            children: O,
+            iconType: (0, A.QG)(t),
+            children: T,
         }),
     });
 }

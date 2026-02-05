@@ -1,8 +1,6 @@
-n.d(t, {
-    n: () => i,
-});
+"use strict";
+n.d(t, { n: () => i });
 let r = "https://cdn.discordapp.com/assets";
-
 function i(e) {
-    return "".concat(r, "/").concat(e);
+    return `${r}/${e}`;
 }

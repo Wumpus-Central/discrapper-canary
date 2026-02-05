@@ -1,3 +1,2 @@
-e.exports = {
-    $: "warning__490eb",
-};
+"use strict";
+e.exports = { $: "warning__490eb" };

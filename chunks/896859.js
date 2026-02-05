@@ -2,19 +2,12 @@ e.exports = function (e) {
     return {
         name: "Backus–Naur Form",
         contains: [
-            {
-                className: "attribute",
-                begin: /</,
-                end: />/,
-            },
+            { className: "attribute", begin: /</, end: />/ },
             {
                 begin: /::=/,
                 end: /$/,
                 contains: [
-                    {
-                        begin: /</,
-                        end: />/,
-                    },
+                    { begin: /</, end: />/ },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                     e.APOS_STRING_MODE,

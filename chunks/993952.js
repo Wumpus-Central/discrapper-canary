@@ -1,153 +1,102 @@
-n.d(t, {
-    A: () => A,
-    X: () => m,
-});
-var r = n(627968);
+n.d(t, { A: () => x, X: () => _ });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
+    s = n.n(l),
     a = n(284009),
-    s = n.n(a),
+    r = n.n(a),
     o = n(311907),
-    c = n(397927),
-    u = n(698441),
-    d = n(520006),
-    f = n(71393),
-    p = n(576705),
-    h = n(652215),
-    b = n(985018),
-    g = n(669486);
-
-function m(e) {
+    d = n(397927),
+    c = n(698441),
+    u = n(520006),
+    h = n(71393),
+    A = n(576705),
+    g = n(652215),
+    m = n(985018),
+    p = n(669486);
+function _(e) {
     let {
         guild: t,
         channel: l,
-        streamUserId: i,
+        streamUserId: s,
         applicationId: a,
-        appContext: s,
+        appContext: r,
         exitFullScreen: o,
-        analyticsLocation: u,
-        guildScheduledEvent: d,
+        analyticsLocation: c,
+        guildScheduledEvent: u,
     } = e;
-    null == o || o(),
-        (0, c.mMO)(
+    o?.(),
+        (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("42821")]).then(
+                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
                     n.bind(n, 234355),
                 );
-                return (n) => {
-                    var s, o;
-                    return (0, r.jsx)(
-                        e,
-                        ((s = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (o = o =
-                            {
-                                guild: t,
-                                channel: l,
-                                streamUserId: i,
-                                applicationId: a,
-                                analyticsLocation: u,
-                                source: l.isGuildStageVoice() ? h.PE1.STAGE_CHANNEL : h.PE1.STREAM_INVITE,
-                                guildScheduledEvent: d,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(o))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(o, e));
-                              }),
-                        s),
-                    );
-                };
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        ...n,
+                        guild: t,
+                        channel: l,
+                        streamUserId: s,
+                        applicationId: a,
+                        analyticsLocation: c,
+                        source: l.isGuildStageVoice() ? g.PE1.STAGE_CHANNEL : g.PE1.STREAM_INVITE,
+                        guildScheduledEvent: u,
+                    });
             },
-            {
-                modalKey: "stream-invite-modal",
-                contextKey: s === h.BRT.POPOUT ? c.KX8 : c.SYi,
-            },
+            { modalKey: "stream-invite-modal", contextKey: r === g.BRT.POPOUT ? d.KX8 : d.SYi },
         );
 }
-
-function A(e) {
+function x(e) {
     let {
             stream: t,
             applicationId: n,
             channel: l,
             exitFullScreen: a,
-            appContext: A,
-            analyticsLocation: y,
-            className: O,
-            size: j = "sm",
+            appContext: x,
+            analyticsLocation: f,
+            className: E,
+            size: C = "sm",
         } = e,
-        v = null == l ? void 0 : l.getGuildId(),
-        x = null == l ? void 0 : l.id,
-        E = (0, o.bG)([f.A], () => (null != v ? f.A.getGuild(v) : null), [v]),
-        _ = (0, o.bG)([u.Ay], () => u.Ay.getActiveEventByChannel(x), [x]);
-    if (!(null != E && null != l && p.A.can(h.xBc.CREATE_INSTANT_INVITE, l))) return null;
-    let C = b.intl.string(b.t.VINpSK);
+        I = l?.getGuildId(),
+        S = l?.id,
+        b = (0, o.bG)([h.A], () => (null != I ? h.A.getGuild(I) : null), [I]),
+        N = (0, o.bG)([c.Ay], () => c.Ay.getActiveEventByChannel(S), [S]);
+    if (!(null != b && null != l && A.A.can(g.xBc.CREATE_INSTANT_INVITE, l))) return null;
+    let T = m.intl.string(m.t.VINpSK);
     return (
-        null != t ? (C = b.intl.string(b.t["6VQaqd"])) : null != n && (C = b.intl.string(b.t["OzOM/q"])),
-        (0, r.jsxs)(r.Fragment, {
+        null != t ? (T = m.intl.string(m.t["6VQaqd"])) : null != n && (T = m.intl.string(m.t["OzOM/q"])),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)("div", {
-                    className: i()(O, g.uX),
-                    children: (0, r.jsx)(c.Button, {
-                        size: j,
+                (0, i.jsx)("div", {
+                    className: s()(E, p.uX),
+                    children: (0, i.jsx)(d.Button, {
+                        size: C,
                         variant: "secondary",
-                        text: C,
+                        text: T,
                         onClick: () => {
-                            s()(null != E, "guild cannot be null"),
-                                s()(null != l, "channel cannot be null"),
-                                m({
-                                    guild: E,
+                            r()(null != b, "guild cannot be null"),
+                                r()(null != l, "channel cannot be null"),
+                                _({
+                                    guild: b,
                                     channel: l,
-                                    streamUserId: null == t ? void 0 : t.ownerId,
+                                    streamUserId: t?.ownerId,
                                     applicationId: n,
-                                    appContext: A,
+                                    appContext: x,
                                     exitFullScreen: a,
-                                    analyticsLocation: y,
-                                    guildScheduledEvent: _,
+                                    analyticsLocation: f,
+                                    guildScheduledEvent: N,
                                 });
                         },
                     }),
                 }),
-                (0, r.jsx)(d.A, {
+                (0, i.jsx)(u.A, {
                     channel: l,
                     stream: t,
-                    appContext: A,
-                    className: i()(O, g.gb),
+                    appContext: x,
+                    className: s()(E, p.gb),
                     exitFullScreen: a,
-                    analyticsLocation: y,
-                    guildScheduledEvent: _,
+                    analyticsLocation: f,
+                    guildScheduledEvent: N,
                 }),
             ],
         })

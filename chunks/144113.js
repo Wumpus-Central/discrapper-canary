@@ -1,6 +1,4 @@
-i.d(n, {
-    A: () => a,
-});
+i.d(n, { A: () => a });
 var e = {
     lastWeek: "eeee 'tuần trước v\xe0o l\xfac' p",
     yesterday: "'h\xf4m qua v\xe0o l\xfac' p",

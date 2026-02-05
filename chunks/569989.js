@@ -1,35 +1,17 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    a = n(63104),
-    s = n(579733);
-
+    a = n.n(l),
+    s = n(63104),
+    r = n(579733);
 function o(e) {
     let t,
-        { className: n, children: l, verified: o, roleColor: c, roleName: u } = e;
+        { className: n, children: l, verified: o, roleColor: c, roleName: d } = e;
     return (
         (t = o
-            ? (0, r.jsx)(a.A, {
-                  size: 12,
-                  color: c,
-                  className: s.TS,
-              })
-            : (0, r.jsx)("div", {
-                  className: s.yY,
-                  style: {
-                      backgroundColor: c,
-                  },
-              })),
-        (0, r.jsxs)("div", {
-            className: i()(n, s.JC),
-            style: {
-                "--custom-role-label-color": c,
-            },
-            children: [t, u, l],
-        })
+            ? (0, i.jsx)(s.A, { size: 12, color: c, className: r.TS })
+            : (0, i.jsx)("div", { className: r.yY, style: { backgroundColor: c } })),
+        (0, i.jsxs)("div", { className: a()(n, r.JC), style: { "--custom-role-label-color": c }, children: [t, d, l] })
     );
 }

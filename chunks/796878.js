@@ -1,57 +1,39 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
-var i = n(877624),
-    l = n(990078),
-    a = n(397927),
+var r = n(877624),
+    a = n(990078),
+    l = n(397927),
     s = n(549996),
     o = n(807098),
-    c = n(542780);
-
-function u(e) {
+    d = n(542780);
+function c(e) {
     let { children: t } = e,
-        n = (0, s.c)(i.C.PREMIUM_TAB_TOOLTIP),
-        u =
+        n = (0, s.c)(r.C.PREMIUM_TAB_TOOLTIP),
+        c =
             null != n && "premiumTabTooltip" === n.properties.properties.oneofKind
                 ? n.properties.properties.premiumTabTooltip
                 : null,
-        d = (0, o.T)(null == u ? void 0 : u.asset);
-    if (null == u) return t;
-    let p = (0, r.jsxs)("div", {
-        className: c.$e,
+        u = (0, o.T)(c?.asset);
+    if (null == c) return t;
+    let A = (0, i.jsxs)("div", {
+        className: d.$e,
         children: [
-            null != d &&
-                (0, r.jsx)("img", {
-                    className: c.NC,
-                    src: d,
-                    alt: "",
-                }),
-            (0, r.jsxs)("div", {
-                className: c.Vm,
+            null != u && (0, i.jsx)("img", { className: d.NC, src: u, alt: "" }),
+            (0, i.jsxs)("div", {
+                className: d.Vm,
                 children: [
-                    (0, r.jsx)(a.Heading, {
-                        variant: "heading-md/bold",
-                        color: "text-strong",
-                        children: u.header,
-                    }),
-                    (0, r.jsx)(a.Text, {
-                        variant: "text-sm/normal",
-                        color: "text-subtle",
-                        children: u.body,
-                    }),
+                    (0, i.jsx)(l.Heading, { variant: "heading-md/bold", color: "text-strong", children: c.header }),
+                    (0, i.jsx)(l.Text, { variant: "text-sm/normal", color: "text-subtle", children: c.body }),
                 ],
             }),
         ],
     });
-    return (0, r.jsx)(l.m, {
-        __unsupportedReactNodeAsText: p,
+    return (0, i.jsx)(a.m, {
+        __unsupportedReactNodeAsText: A,
         position: "right",
-        "aria-label": u.header,
+        "aria-label": c.header,
         asContainer: !0,
-        children: (0, r.jsx)("div", {
-            children: t,
-        }),
+        children: (0, i.jsx)("div", { children: t }),
     });
 }

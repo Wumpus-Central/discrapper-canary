@@ -1,6 +1,4 @@
-n.d(e, {
-    A: () => o,
-});
+n.d(e, { A: () => o });
 var s = n(627968);
 n(64700);
 var i = n(889229),
@@ -9,10 +7,5 @@ var i = n(889229),
     a = n(985018);
 let o = function () {
     let t = (0, r.RU)();
-    return (0, s.jsx)(l.A, {
-        children: (0, s.jsx)(i.A, {
-            tips: t,
-            headerText: a.intl.string(a.t["0QSL1C"]),
-        }),
-    });
+    return (0, s.jsx)(l.A, { children: (0, s.jsx)(i.A, { tips: t, headerText: a.intl.string(a.t["0QSL1C"]) }) });
 };

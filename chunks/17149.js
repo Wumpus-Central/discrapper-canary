@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_d7a3d0",
     $s: "headerActions_d7a3d0",

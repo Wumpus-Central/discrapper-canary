@@ -1,35 +1,24 @@
-n.d(t, {
-    A: () => d,
-});
-var l,
-    r,
-    i = n(311907),
-    a = n(73153);
-let s = {},
-    o = {};
-class c extends (r = i.Ay.Store) {
+i.d(t, { A: () => c });
+var l = i(311907),
+    a = i(73153);
+let n = {},
+    s = {};
+class r extends l.Ay.Store {
+    static displayName = "GameProfileStore";
     getSimilarGames(e) {
-        return s[e];
+        return n[e];
     }
     getSimilarGamesError(e) {
-        return o[e];
+        return s[e];
     }
 }
-(l = "displayName") in c
-    ? Object.defineProperty(c, l, {
-          value: "GameProfileStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (c[l] = "GameProfileStore");
-let d = new c(a.h, {
+let c = new r(a.h, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-        let { applicationId: t, games: n } = e;
-        s[t] = n;
+        let { applicationId: t, games: i } = e;
+        n[t] = i;
     },
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
-        let { applicationId: t, error: n } = e;
-        o[t] = n;
+        let { applicationId: t, error: i } = e;
+        s[t] = i;
     },
 });

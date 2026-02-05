@@ -1,71 +1,53 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
 var l = n(398590),
-    i = n(114212),
-    a = n(345942),
+    a = n(114212),
+    r = n(345942),
     s = n(183555),
     o = n(913453),
-    c = n(51943),
-    u = n(782505),
-    d = n(515054),
-    f = n(828151);
-
-function p(e) {
+    d = n(51943),
+    c = n(782505),
+    u = n(515054),
+    g = n(828151);
+function m(e) {
     let { user: t, onClose: n } = e,
-        { trackUserProfileAction: p } = (0, s.NJ)(),
-        { mutualGuilds: b, isFetching: g } = (0, o.A)(t);
-    return (0, r.jsx)(d.K, {
-        className: f.XG,
+        { trackUserProfileAction: m } = (0, s.NJ)(),
+        { mutualGuilds: x, isFetching: f } = (0, o.A)(t);
+    return (0, i.jsx)(u.K, {
+        className: g.XG,
         fade: !0,
         children:
-            null == b && g
-                ? Array.from({
-                      length: 10,
-                  }).map((e, t) =>
-                      (0, r.jsxs)(
+            null == x && f
+                ? Array.from({ length: 10 }).map((e, t) =>
+                      (0, i.jsxs)(
                           "div",
                           {
-                              className: f.Y7,
+                              className: g.Y7,
                               children: [
-                                  (0, r.jsx)(i.FQ, {
-                                      width: 40,
-                                      opacity: 0.08,
-                                  }),
-                                  (0, r.jsx)(i.FQ, {
-                                      width: 135,
-                                      opacity: 0.08,
-                                  }),
+                                  (0, i.jsx)(a.FQ, { width: 40, opacity: 0.08 }),
+                                  (0, i.jsx)(a.FQ, { width: 135, opacity: 0.08 }),
                               ],
                           },
                           t,
                       ),
                   )
-                : (null != b || g) && (null == b ? void 0 : b.length) !== 0
-                  ? null == b
-                      ? void 0
-                      : b.map((e) => {
-                            let { guild: i, nick: s } = e;
-                            return (0, r.jsx)(
-                                c.A,
-                                {
-                                    user: t,
-                                    guild: i,
-                                    nick: s,
-                                    onSelect: () => {
-                                        p({
-                                            action: "PRESS_MUTUAL_GUILD",
-                                        }),
-                                            (0, a.u)(i.id),
-                                            n(),
-                                            (0, l.jH)();
-                                    },
+                : (null != x || f) && x?.length !== 0
+                  ? x?.map((e) => {
+                        let { guild: a, nick: s } = e;
+                        return (0, i.jsx)(
+                            d.A,
+                            {
+                                user: t,
+                                guild: a,
+                                nick: s,
+                                onSelect: () => {
+                                    m({ action: "PRESS_MUTUAL_GUILD" }), (0, r.u)(a.id), n(), (0, l.jH)();
                                 },
-                                i.id,
-                            );
-                        })
-                  : (0, r.jsx)(u.jB, {}),
+                            },
+                            a.id,
+                        );
+                    })
+                  : (0, i.jsx)(c.jB, {}),
     });
 }

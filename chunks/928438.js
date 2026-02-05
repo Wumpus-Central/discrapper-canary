@@ -1,3 +1,1 @@
-e.exports = {
-    M: "clipPill_d762d7",
-};
+e.exports = { M: "clipPill_d762d7" };

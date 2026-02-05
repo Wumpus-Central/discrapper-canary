@@ -1,9 +1,6 @@
-n.d(t, {
-    G: () => a,
-});
-var r = n(311907),
-    i = n(787392);
-
-function a() {
-    return (0, r.yK)([i.A], () => i.A.getUserIds());
+n.d(t, { G: () => r });
+var i = n(311907),
+    s = n(787392);
+function r() {
+    return (0, i.yK)([s.A], () => s.A.getUserIds());
 }

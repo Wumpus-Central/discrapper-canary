@@ -1,403 +1,129 @@
-l.d(t, {
-    A_: () => E,
-    Op: () => g,
-    TK: () => j,
-    de: () => p,
-    ed: () => c,
-    n3: () => f,
-    wq: () => h,
-}),
-    l(321073);
-var n = l(735438),
-    a = l.n(n),
+l.d(a, { A_: () => o, Op: () => f, TK: () => N, de: () => c, ed: () => O, n3: () => b, wq: () => g }), l(321073);
+var t = l(735438),
+    n = l.n(t),
     i = l(253932),
     r = l(954571),
-    s = l(670455),
-    u = l(652215),
-    d = l(716829),
-    O = l(985018);
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(l);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = l[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function o(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var l = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      l.push.apply(l, n);
-                  }
-                  return l;
-              })(Object(t)).forEach(function (l) {
-                  Object.defineProperty(e, l, Object.getOwnPropertyDescriptor(t, l));
-              }),
-        e
-    );
-}
-let c = (e, t) => {
-    let l = a().shuffle(e),
-        n = l.findIndex((e) => e.value === t);
-    if (n > -1) {
-        let e = l[n];
-        l.splice(n, 1), l.push(e);
+    d = l(670455),
+    s = l(652215),
+    u = l(716829),
+    E = l(985018);
+let O = (e, a) => {
+    let l = n().shuffle(e),
+        t = l.findIndex((e) => e.value === a);
+    if (t > -1) {
+        let e = l[t];
+        l.splice(t, 1), l.push(e);
     }
     return l;
 };
-
-function f(e) {
-    let { feedbackType: t, location: l } = e;
-    r.default.track(u.HAw.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
-        feedback_type: s.MW[t],
-        opted_out_until: s.fs,
-    }),
-        i.Yt.updateSetting((e) =>
-            o(b({}, e), {
-                [t]: o(b({}, e[t]), {
-                    optOutExpiryTime: s.fs,
-                }),
-            }),
-        );
+function b(e) {
+    let { feedbackType: a, location: l } = e;
+    r.default.track(s.HAw.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, { feedback_type: d.MW[a], opted_out_until: d.fs }),
+        i.Yt.updateSetting((e) => ({ ...e, [a]: { ...e[a], optOutExpiryTime: d.fs } }));
 }
-
 function v(e) {
     return e
         .filter((e) => {
-            let { disabled: t } = e;
-            return !t;
+            let { disabled: a } = e;
+            return !a;
         })
         .map((e) => {
-            let { disabled: t } = e;
-            return (function (e, t) {
-                if (null == e) return {};
-                var l,
-                    n,
-                    a,
-                    i = {};
-                if ("u" > typeof Reflect && Reflect.ownKeys) {
-                    for (a = 0, l = Reflect.ownKeys(e); a < l.length; a++)
-                        (n = l[a]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                    return i;
-                }
-                if (
-                    ((i = (function (e, t) {
-                        if (null == e) return {};
-                        var l,
-                            n,
-                            a = {},
-                            i = Object.getOwnPropertyNames(e);
-                        for (n = 0; n < i.length; n++)
-                            (l = i[n]),
-                                !(t.indexOf(l) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, l) &&
-                                    (a[l] = e[l]);
-                        return a;
-                    })(e, t)),
-                    Object.getOwnPropertySymbols)
-                )
-                    for (a = 0, l = Object.getOwnPropertySymbols(e); a < l.length; a++)
-                        (n = l[a]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                return i;
-            })(e, ["disabled"]);
+            let { disabled: a, ...l } = e;
+            return l;
         });
 }
-
-function E() {
+function o() {
     return v([
-        {
-            variant: s.UV.SELF,
-            value: s.bO.COULD_NOT_CONNECT,
-            label: O.intl.string(d.default.gMHKDJ),
-        },
-        {
-            value: s.bO.HIGH_TTC,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.y06Ayn),
-        },
-        {
-            value: s.bO.HIGH_LATENCY,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.y5k8Jq),
-        },
-        {
-            value: s.bO.ROBOT_VOICE,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.f2914v),
-        },
-        {
-            value: s.bO.DESYNC,
-            variant: s.UV.UNSPECIFIED,
-            label: O.intl.string(d.default["zk+QL1"]),
-        },
-        {
-            value: s.bO.CUTTING,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.K5vYQA),
-        },
+        { variant: d.UV.SELF, value: d.bO.COULD_NOT_CONNECT, label: E.intl.string(u.default.gMHKDJ) },
+        { value: d.bO.HIGH_TTC, variant: d.UV.SELF, label: E.intl.string(u.default.y06Ayn) },
+        { value: d.bO.HIGH_LATENCY, variant: d.UV.SELF, label: E.intl.string(u.default.y5k8Jq) },
+        { value: d.bO.ROBOT_VOICE, variant: d.UV.SOMEONE, label: E.intl.string(u.default.f2914v) },
+        { value: d.bO.DESYNC, variant: d.UV.UNSPECIFIED, label: E.intl.string(u.default["zk+QL1"]) },
+        { value: d.bO.CUTTING, variant: d.UV.SOMEONE, label: E.intl.string(u.default.K5vYQA) },
     ]);
 }
-
+function f(e) {
+    let { isMobile: a } = e;
+    return v([
+        { value: d.X.NO_AUDIO, variant: d.UV.SELF, label: E.intl.string(u.default["GWypH+"]) },
+        { value: d.X.NO_AUDIO, variant: d.UV.OTHERS, label: E.intl.string(u.default.ftSvQ0) },
+        { value: d.X.LOW_QUALITY_AUDIO, variant: d.UV.OTHERS, label: E.intl.string(u.default["1DnNRO"]) },
+        { value: d.X.ROBOT_VOICE, variant: d.UV.SOMEONE, label: E.intl.string(u.default.yGe0BL) },
+        { value: d.X.ECHO, variant: d.UV.OTHERS, label: E.intl.string(u.default.Q5Dsaz) },
+        { value: d.X.TOO_QUIET_OR_LOUD, variant: d.UV.SOMEONE, label: E.intl.string(u.default["1o77I3"]) },
+        { value: d.X.CUTTING, variant: d.UV.SOMEONE, label: E.intl.string(u.default.RK9DUi) },
+        { value: d.X.DELAYED, variant: d.UV.UNSPECIFIED, label: E.intl.string(u.default.RGRgmM) },
+        { value: d.X.BACKGROUND_NOISE, variant: d.UV.SOMEONE, label: E.intl.string(u.default["anHk1/"]) },
+        { value: d.X.UNABLE_TO_FIND_DEVICE, variant: d.UV.SELF, label: E.intl.string(u.default["05VSjm"]) },
+        { value: d.X.COMPLAINTS, variant: d.UV.OTHERS, label: E.intl.string(u.default.kbbtwi) },
+        {
+            value: d.X.TROUBLE_WITH_SPEAKERPHONE,
+            variant: d.UV.SELF,
+            label: E.intl.string(u.default["4qlGrO"]),
+            disabled: !a,
+        },
+        { value: d.X.NO_GAME_AUDIO, variant: d.UV.SELF, label: E.intl.string(u.default["2IG95D"]) },
+    ]);
+}
+function c() {
+    return v([
+        { value: d.AO.NO_VIDEO, variant: d.UV.SELF, label: E.intl.string(u.default["Bh+02d"]) },
+        { value: d.AO.NO_VIDEO, variant: d.UV.SOMEONE, label: E.intl.string(u.default["R+wqwU"]) },
+        { value: d.AO.FREEZING_OR_HITCHING, variant: d.UV.SOMEONE, label: E.intl.string(u.default["8I/GUL"]) },
+        { value: d.AO.BLURRY_OR_PIXELATED, variant: d.UV.SOMEONE, label: E.intl.string(u.default.k7Idoz) },
+        { value: d.AO.UNABLE_TO_ENABLE_DEVICE, variant: d.UV.SELF, label: E.intl.string(u.default.QbC6La) },
+        { value: d.AO.DESYNC, variant: d.UV.UNSPECIFIED, label: E.intl.string(u.default.vRDE5O) },
+    ]);
+}
 function g(e) {
-    let { isMobile: t } = e;
+    let { isStreamer: a } = e;
     return v([
+        { value: d.j6.COULD_NOT_LOAD, variant: d.UV.SELF, label: E.intl.string(u.default["w+kiDF"]), disabled: !a },
+        { value: d.j6.BLACK_SCREEN, variant: d.UV.SELF, label: E.intl.string(u.default.RRZZZb), disabled: !a },
         {
-            value: s.X.NO_AUDIO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["GWypH+"]),
+            value: d.j6.FREEZING_OR_HITCHING,
+            variant: d.UV.SELF,
+            label: E.intl.string(u.default["3PKSkd"]),
+            disabled: !a,
         },
+        { value: d.j6.LAG, variant: d.UV.SELF, label: E.intl.string(u.default.iMxexK), disabled: !a },
         {
-            value: s.X.NO_AUDIO,
-            variant: s.UV.OTHERS,
-            label: O.intl.string(d.default.ftSvQ0),
+            value: d.j6.BLURRY_OR_PIXELATED,
+            variant: d.UV.SELF,
+            label: E.intl.string(u.default["8ceyQy"]),
+            disabled: !a,
         },
+        { value: d.j6.NO_AUDIO, variant: d.UV.SELF, label: E.intl.string(u.default.HaZSC3), disabled: !a },
+        { value: d.j6.BAD_AUDIO, variant: d.UV.SELF, label: E.intl.string(u.default["zIC+8Y"]), disabled: !a },
         {
-            value: s.X.LOW_QUALITY_AUDIO,
-            variant: s.UV.OTHERS,
-            label: O.intl.string(d.default["1DnNRO"]),
+            value: d.j6.STOPPED_UNEXPECTEDLY,
+            variant: d.UV.SELF,
+            label: E.intl.string(u.default["/nlKuG"]),
+            disabled: !a,
         },
+        { value: d.j6.DESYNC, variant: d.UV.SELF, label: E.intl.string(u.default.JS6akP), disabled: !a },
+        { value: d.j6.NO_GAME_AUDIO, variant: d.UV.SELF, label: E.intl.string(u.default.TaIrh5), disabled: !a },
+        { value: d.j6.COULD_NOT_LOAD, variant: d.UV.SOMEONE, label: E.intl.string(u.default.jU9Zs8), disabled: a },
+        { value: d.j6.BLACK_SCREEN, variant: d.UV.SOMEONE, label: E.intl.string(u.default.aml28x), disabled: a },
         {
-            value: s.X.ROBOT_VOICE,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.yGe0BL),
+            value: d.j6.FREEZING_OR_HITCHING,
+            variant: d.UV.SOMEONE,
+            label: E.intl.string(u.default.V3EeCH),
+            disabled: a,
         },
+        { value: d.j6.LAG, variant: d.UV.SOMEONE, label: E.intl.string(u.default.hi1Y39), disabled: a },
+        { value: d.j6.BLURRY_OR_PIXELATED, variant: d.UV.SOMEONE, label: E.intl.string(u.default.qdBn3L), disabled: a },
+        { value: d.j6.NO_AUDIO, variant: d.UV.SOMEONE, label: E.intl.string(u.default.DOOlop), disabled: a },
+        { value: d.j6.BAD_AUDIO, variant: d.UV.SOMEONE, label: E.intl.string(u.default.k7bdGE), disabled: a },
         {
-            value: s.X.ECHO,
-            variant: s.UV.OTHERS,
-            label: O.intl.string(d.default.Q5Dsaz),
+            value: d.j6.STOPPED_UNEXPECTEDLY,
+            variant: d.UV.SOMEONE,
+            label: E.intl.string(u.default.jPD998),
+            disabled: a,
         },
-        {
-            value: s.X.TOO_QUIET_OR_LOUD,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default["1o77I3"]),
-        },
-        {
-            value: s.X.CUTTING,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.RK9DUi),
-        },
-        {
-            value: s.X.DELAYED,
-            variant: s.UV.UNSPECIFIED,
-            label: O.intl.string(d.default.RGRgmM),
-        },
-        {
-            value: s.X.BACKGROUND_NOISE,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default["anHk1/"]),
-        },
-        {
-            value: s.X.UNABLE_TO_FIND_DEVICE,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["05VSjm"]),
-        },
-        {
-            value: s.X.COMPLAINTS,
-            variant: s.UV.OTHERS,
-            label: O.intl.string(d.default.kbbtwi),
-        },
-        {
-            value: s.X.TROUBLE_WITH_SPEAKERPHONE,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["4qlGrO"]),
-            disabled: !t,
-        },
-        {
-            value: s.X.NO_GAME_AUDIO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["2IG95D"]),
-        },
+        { value: d.j6.DESYNC, variant: d.UV.SOMEONE, label: E.intl.string(u.default.JfAvQp), disabled: a },
     ]);
 }
-
-function p() {
-    return v([
-        {
-            value: s.AO.NO_VIDEO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["Bh+02d"]),
-        },
-        {
-            value: s.AO.NO_VIDEO,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default["R+wqwU"]),
-        },
-        {
-            value: s.AO.FREEZING_OR_HITCHING,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default["8I/GUL"]),
-        },
-        {
-            value: s.AO.BLURRY_OR_PIXELATED,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.k7Idoz),
-        },
-        {
-            value: s.AO.UNABLE_TO_ENABLE_DEVICE,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.QbC6La),
-        },
-        {
-            value: s.AO.DESYNC,
-            variant: s.UV.UNSPECIFIED,
-            label: O.intl.string(d.default.vRDE5O),
-        },
-    ]);
-}
-
-function h(e) {
-    let { isStreamer: t } = e;
-    return v([
-        {
-            value: s.j6.COULD_NOT_LOAD,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["w+kiDF"]),
-            disabled: !t,
-        },
-        {
-            value: s.j6.BLACK_SCREEN,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.RRZZZb),
-            disabled: !t,
-        },
-        {
-            value: s.j6.FREEZING_OR_HITCHING,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["3PKSkd"]),
-            disabled: !t,
-        },
-        {
-            value: s.j6.LAG,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.iMxexK),
-            disabled: !t,
-        },
-        {
-            value: s.j6.BLURRY_OR_PIXELATED,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["8ceyQy"]),
-            disabled: !t,
-        },
-        {
-            value: s.j6.NO_AUDIO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.HaZSC3),
-            disabled: !t,
-        },
-        {
-            value: s.j6.BAD_AUDIO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["zIC+8Y"]),
-            disabled: !t,
-        },
-        {
-            value: s.j6.STOPPED_UNEXPECTEDLY,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default["/nlKuG"]),
-            disabled: !t,
-        },
-        {
-            value: s.j6.DESYNC,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.JS6akP),
-            disabled: !t,
-        },
-        {
-            value: s.j6.NO_GAME_AUDIO,
-            variant: s.UV.SELF,
-            label: O.intl.string(d.default.TaIrh5),
-            disabled: !t,
-        },
-        {
-            value: s.j6.COULD_NOT_LOAD,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.jU9Zs8),
-            disabled: t,
-        },
-        {
-            value: s.j6.BLACK_SCREEN,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.aml28x),
-            disabled: t,
-        },
-        {
-            value: s.j6.FREEZING_OR_HITCHING,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.V3EeCH),
-            disabled: t,
-        },
-        {
-            value: s.j6.LAG,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.hi1Y39),
-            disabled: t,
-        },
-        {
-            value: s.j6.BLURRY_OR_PIXELATED,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.qdBn3L),
-            disabled: t,
-        },
-        {
-            value: s.j6.NO_AUDIO,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.DOOlop),
-            disabled: t,
-        },
-        {
-            value: s.j6.BAD_AUDIO,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.k7bdGE),
-            disabled: t,
-        },
-        {
-            value: s.j6.STOPPED_UNEXPECTEDLY,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.jPD998),
-            disabled: t,
-        },
-        {
-            value: s.j6.DESYNC,
-            variant: s.UV.SOMEONE,
-            label: O.intl.string(d.default.JfAvQp),
-            disabled: t,
-        },
-    ]);
-}
-
-function j() {
-    return v([
-        {
-            value: s.CW.TOXIC_OR_INAPPROPRIATE,
-            variant: s.UV.OTHERS,
-            label: O.intl.string(d.default.PLBRzF),
-        },
-    ]);
+function N() {
+    return v([{ value: d.CW.TOXIC_OR_INAPPROPRIATE, variant: d.UV.OTHERS, label: E.intl.string(u.default.PLBRzF) }]);
 }

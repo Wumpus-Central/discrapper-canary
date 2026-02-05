@@ -1,3 +1,4 @@
+"use strict";
 function a(e, t) {
     var r = null == e ? null : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (null != r) {
@@ -25,6 +26,4 @@ function a(e, t) {
         return i;
     }
 }
-r.d(t, {
-    A: () => a,
-});
+r.d(t, { A: () => a });

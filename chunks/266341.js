@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     grid: "grid__1b670",
     columns1: "columns1__1b670",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_d71b96",
     jr: "headerBar_d71b96",

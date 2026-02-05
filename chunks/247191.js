@@ -1,133 +1,102 @@
-n.d(e, {
-    A: () => _,
-}),
-    n(228524),
-    n(747238);
+n.d(e, { A: () => G });
 var l = n(627968);
 n(64700);
-var r = n(931773),
-    i = n.n(r),
-    u = n(989349),
-    o = n.n(u),
-    a = n(492462),
-    c = n(311907),
-    s = n(397927),
-    d = n(77729),
-    g = n(451909),
-    y = n(71393),
-    f = n(723702),
-    b = n(698441),
-    p = n(563312),
-    A = n(794782),
-    v = n(974930),
-    E = n(988794),
-    O = n(652215),
-    m = n(985018);
-let j = "YYYYMMDDTHHmmss",
-    h = "YYYY-MM-DDTHH:mm:ss",
-    D = /RRULE:.*/;
-
-function _(t, e, n, r) {
-    var u, _, w;
-    let N,
-        G = (0, c.bG)([b.Ay], () => b.Ay.isActive(t)),
-        S = (0, p.nh)(null != t ? t : "", r),
-        P = (0, c.bG)([b.Ay], () => b.Ay.getGuildScheduledEvent(t), [t]),
-        x = (0, c.bG)([y.A], () => y.A.getGuild(e), [e]);
-    if (G || null == S || null == P) return null;
-    N =
-        P.entity_type === E.Ps.EXTERNAL
-            ? P.entity_metadata.location
-            : null != n && null != x
-              ? m.intl.formatToPlainString(m.t["2t8L04"], {
-                    channelName: n.name,
-                    guildName: x.name,
-                })
-              : m.intl.string(m.t.VSgOVg);
-    let T = o()(P.scheduled_start_time),
-        C = null != P.scheduled_end_time ? o()(P.scheduled_end_time) : T,
-        I =
-            null != P.description && "" !== P.description
-                ? g.Ay.unparse(P.description, null != (u = null == n ? void 0 : n.id) ? u : O.dJq, !0)
-                : "",
-        L = (0, A.Sn)(P.recurrence_rule),
-        U = null != L ? (0, v.X7)(L) : null,
-        { startTime: V, endTime: M } = S,
-        R = null != (_ = o()(V)) ? _ : T,
-        B = null != (w = o()(null != M ? M : V)) ? w : T,
-        k = () => {
-            let t = i()();
-            t.createEvent({
-                start: T,
-                end: C,
-                summary: P.name,
-                description: I,
-                location: N,
-                repeating: U,
-            }),
-                f.isPlatformEmbedded
-                    ? d.A.fileManager.saveWithDialog(t.toString(), "discord-event.ics")
+var i = n(931773),
+    r = n.n(i),
+    a = n(989349),
+    d = n.n(a),
+    s = n(492462),
+    u = n(311907),
+    o = n(397927),
+    c = n(77729),
+    E = n(451909),
+    A = n(71393),
+    g = n(723702),
+    _ = n(698441),
+    h = n(563312),
+    T = n(794782),
+    f = n(974930),
+    y = n(988794),
+    m = n(652215),
+    v = n(985018);
+let p = "YYYYMMDDTHHmmss",
+    N = "YYYY-MM-DDTHH:mm:ss",
+    S = /RRULE:.*/;
+function G(t, e, n, i) {
+    let a,
+        G = (0, u.bG)([_.Ay], () => _.Ay.isActive(t)),
+        D = (0, h.nh)(t ?? "", i),
+        b = (0, u.bG)([_.Ay], () => _.Ay.getGuildScheduledEvent(t), [t]),
+        I = (0, u.bG)([A.A], () => A.A.getGuild(e), [e]);
+    if (G || null == D || null == b) return null;
+    a =
+        b.entity_type === y.Ps.EXTERNAL
+            ? b.entity_metadata.location
+            : null != n && null != I
+              ? v.intl.formatToPlainString(v.t["2t8L04"], { channelName: n.name, guildName: I.name })
+              : v.intl.string(v.t.VSgOVg);
+    let C = d()(b.scheduled_start_time),
+        x = null != b.scheduled_end_time ? d()(b.scheduled_end_time) : C,
+        w = null != b.description && "" !== b.description ? E.Ay.unparse(b.description, n?.id ?? m.dJq, !0) : "",
+        O = (0, T.Sn)(b.recurrence_rule),
+        R = null != O ? (0, f.X7)(O) : null,
+        { startTime: j, endTime: L } = D,
+        U = d()(j) ?? C,
+        P = d()(L ?? j) ?? C,
+        V = () => {
+            let t = r()();
+            t.createEvent({ start: C, end: x, summary: b.name, description: w, location: a, repeating: R }),
+                g.isPlatformEmbedded
+                    ? c.A.fileManager.saveWithDialog(t.toString(), "discord-event.ics")
                     : window.open(t.toURL(), "_blank");
         };
-    return (0, l.jsxs)(s.Drp, {
-        id: m.intl.string(m.t.k5pvjo),
-        label: m.intl.string(m.t.k5pvjo),
-        action: k,
+    return (0, l.jsxs)(o.Drp, {
+        id: v.intl.string(v.t.k5pvjo),
+        label: v.intl.string(v.t.k5pvjo),
+        action: V,
         children: [
-            (0, l.jsx)(s.Drp, {
-                id: m.intl.string(m.t.JKSLRH),
-                label: m.intl.string(m.t.JKSLRH),
+            (0, l.jsx)(o.Drp, {
+                id: v.intl.string(v.t.JKSLRH),
+                label: v.intl.string(v.t.JKSLRH),
                 action: () => {
-                    var t;
-                    let e = null == U ? void 0 : U.toString(),
-                        n = {
-                            text: P.name,
-                            dates: "".concat(T.format(j), "/").concat(C.format(j)),
-                            details: I,
+                    let t = R?.toString(),
+                        e = {
+                            text: b.name,
+                            dates: `${C.format(p)}/${x.format(p)}`,
+                            details: w,
                             action: "TEMPLATE",
-                            location: N,
-                            recur: null != e ? (null == (t = D.exec(e)) ? void 0 : t[0]) : void 0,
+                            location: a,
+                            recur: null != t ? S.exec(t)?.[0] : void 0,
                         },
-                        l = "https://calendar.google.com/calendar/render?".concat((0, a.stringify)(n));
-                    window.open(l, "_blank");
+                        n = `https://calendar.google.com/calendar/render?${(0, s.stringify)(e)}`;
+                    window.open(n, "_blank");
                 },
             }),
-            (0, l.jsx)(s.Drp, {
-                id: m.intl.string(m.t.nrBYSe),
-                label: m.intl.string(m.t.nrBYSe),
-                action: k,
-            }),
-            (0, l.jsx)(s.Drp, {
-                id: m.intl.string(m.t.odzaCd),
-                label: m.intl.string(m.t.odzaCd),
+            (0, l.jsx)(o.Drp, { id: v.intl.string(v.t.nrBYSe), label: v.intl.string(v.t.nrBYSe), action: V }),
+            (0, l.jsx)(o.Drp, {
+                id: v.intl.string(v.t.odzaCd),
+                label: v.intl.string(v.t.odzaCd),
                 action: () => {
-                    let t = {
-                            v: 60,
-                            title: P.name,
-                            st: R.format(j),
-                            et: B.format(j),
-                            desc: I,
-                            in_loc: N,
-                        },
-                        e = "https://calendar.yahoo.com/?".concat((0, a.stringify)(t));
+                    let t = { v: 60, title: b.name, st: U.format(p), et: P.format(p), desc: w, in_loc: a },
+                        e = `https://calendar.yahoo.com/?${(0, s.stringify)(t)}`;
                     window.open(e, "_blank");
                 },
             }),
-            (0, l.jsx)(s.Drp, {
-                id: m.intl.string(m.t.rQe8EE),
-                label: m.intl.string(m.t.rQe8EE),
+            (0, l.jsx)(o.Drp, {
+                id: v.intl.string(v.t.rQe8EE),
+                label: v.intl.string(v.t.rQe8EE),
                 action: () => {
                     let t = {
                             path: "/calendar/action/compose",
                             rru: "addevent",
-                            startdt: R.format(h),
-                            enddt: B.format(h),
-                            subject: P.name,
-                            body: I,
-                            location: N,
+                            startdt: U.format(N),
+                            enddt: P.format(N),
+                            subject: b.name,
+                            body: w,
+                            location: a,
                             allday: !1,
                         },
-                        e = "https://outlook.live.com/calendar/0/deeplink/compose?".concat((0, a.stringify)(t));
+                        e = `https://outlook.live.com/calendar/0/deeplink/compose?${(0, s.stringify)(t)}`;
                     window.open(e, "_blank");
                 },
             }),

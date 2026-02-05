@@ -1828,7 +1828,7 @@ var r = {
     "./1f4f5.svg": "242930",
     "./1f4f6.svg": "336065",
     "./1f4f7.svg": "200528",
-    "./1f4f8.svg": "388999",
+    "./1f4f8.svg": "611380",
     "./1f4f9.svg": "625174",
     "./1f4fa.svg": "883150",
     "./1f4fb.svg": "612269",
@@ -3838,11 +3838,9 @@ var r = {
     "./ae.svg": "352196",
     "./e50a.svg": "516897",
 };
-
 function i(e) {
     return n(a(e));
 }
-
 function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");

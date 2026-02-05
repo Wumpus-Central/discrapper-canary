@@ -1,3 +1,4 @@
+"use strict";
 n.r(
     (e.exports = {
         iconButton: "iconButton_aa66d3",

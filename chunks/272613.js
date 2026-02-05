@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 let r = {
     openCreateGuildModal: (e) => {
         Promise.all([n.e("86746"), n.e("52081")])

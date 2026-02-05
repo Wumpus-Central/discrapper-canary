@@ -1,3 +1,1 @@
-e.exports = {
-    z: "navigatorIcon__15430",
-};
+e.exports = { z: "navigatorIcon__15430" };

@@ -1,48 +1,35 @@
-n.d(t, {
-    OB: () => c,
-    Pf: () => u,
-    Tr: () => o,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { OB: () => u, Pf: () => c, Tr: () => o });
 var r = n(310784),
     i = n.n(r);
 let a = 3,
     s = 100,
-    o = {
-        NonText: 3,
-        Text: 4.5,
-        HighContrastText: 7,
-    };
-
+    o = { NonText: 3, Text: 4.5, HighContrastText: 7 };
 function l(e) {
     let [t, n, r, i] = e.rgba();
-    return "rgba(".concat(t, ", ").concat(n, ", ").concat(r, ", ").concat(i, ")");
+    return `rgba(${t}, ${n}, ${r}, ${i})`;
 }
-
-function c(e) {
-    var t, n, r;
-    let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        u = null != (t = c.contrastRatio) ? t : o.NonText,
-        d = null != (n = c.tolerance) ? n : a,
-        f = i()(null != (r = c.base) ? r : e),
-        p = i()(e),
-        _ = f.luminance(),
-        h = p,
-        m = u,
-        g = u + d,
-        E = i().contrast(f, p),
-        b = s;
-    for (; b-- > 0; ) {
-        let e = E < m,
-            t = E > g;
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = t.contrastRatio ?? o.NonText,
+        r = t.tolerance ?? a,
+        u = i()(t.base ?? e),
+        c = i()(e),
+        d = u.luminance(),
+        _ = c,
+        f = n,
+        p = n + r,
+        h = i().contrast(u, c),
+        m = s;
+    for (; m-- > 0; ) {
+        let e = h < f,
+            t = h > p;
         if (!e && !t) break;
-        let n = h.luminance() > _;
-        (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (E = i().contrast(f, h));
+        let n = _.luminance() > d;
+        (_ = (t && n) || (e && !n) ? _.darken() : _.brighten()), (h = i().contrast(u, _));
     }
-    return l(h);
+    return l(_);
 }
-
-function u(e, t) {
+function c(e, t) {
     return l(i()(e).brighten(t));
 }

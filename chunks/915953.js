@@ -1,62 +1,53 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(244242);
-
-function o(e) {
+n.d(t, { A: () => l });
+var i = n(627968),
+    s = n(64700),
+    r = n(397927),
+    a = n(244242);
+function l(e) {
     let { node: t } = e,
         {
             setValue: n,
-            getInitialValue: o,
-            minValue: l,
+            getInitialValue: l,
+            minValue: o,
             maxValue: c,
-            useDefaultValue: u,
-            useTitle: d,
-            useSubtitle: f,
-            useHintText: p,
-            useDisabled: _,
-            onValueRender: h,
-            asValueChanges: m,
-            markers: g,
-            onMarkerRender: E,
-            stickToMarkers: b,
-            fieldLayout: y,
+            useDefaultValue: d,
+            useTitle: u,
+            useSubtitle: _,
+            useHintText: m,
+            useDisabled: A,
+            onValueRender: g,
+            asValueChanges: E,
+            markers: h,
+            onMarkerRender: p,
+            stickToMarkers: C,
+            fieldLayout: x,
         } = t,
-        [O] = i.useState(() => o()),
-        A = d(),
-        v = null == f ? void 0 : f(),
-        S = null == p ? void 0 : p(),
-        I = null == _ ? void 0 : _(),
-        T = null == u ? void 0 : u();
-    return (0, r.jsxs)(s.L, {
+        [T] = s.useState(() => l()),
+        I = u(),
+        S = _?.(),
+        f = m?.(),
+        N = A?.(),
+        b = d?.();
+    return (0, i.jsxs)(a.L, {
         children: [
-            (0, r.jsx)(a.Apm, {
-                label: A,
-                description: v,
-                disabled: I,
-                initialValue: O,
-                minValue: l,
+            (0, i.jsx)(r.Apm, {
+                label: I,
+                description: S,
+                disabled: N,
+                initialValue: T,
+                minValue: o,
                 maxValue: c,
-                defaultValue: T,
-                onValueRender: h,
-                asValueChanges: m,
+                defaultValue: b,
+                onValueRender: g,
+                asValueChanges: E,
                 onValueChange: n,
                 orientation: "horizontal",
-                markers: g,
-                onMarkerRender: E,
-                stickToMarkers: b,
-                layout: y,
+                markers: h,
+                onMarkerRender: p,
+                stickToMarkers: C,
+                layout: x,
             }),
-            null != S &&
-                (0, r.jsx)(a.Text, {
-                    variant: "text-xs/normal",
-                    color: "text-muted",
-                    children: S,
-                }),
+            null != f && (0, i.jsx)(r.Text, { variant: "text-xs/normal", color: "text-muted", children: f }),
         ],
     });
 }

@@ -1,10 +1,7 @@
-n.d(t, {
-    iP: () => a,
-    pA: () => s,
-});
+"use strict";
+n.d(t, { iP: () => a, pA: () => s });
 let r = 7e3,
     i = null;
-
 function a(e, t = "assertive", n = r) {
     i
         ? i.announce(e, t, n)
@@ -15,7 +12,6 @@ function a(e, t = "assertive", n = r) {
                     (null == i ? void 0 : i.isAttached()) && (null == i || i.announce(e, t, n));
                 }, 100));
 }
-
 function s(e) {
     i && i.clear(e);
 }

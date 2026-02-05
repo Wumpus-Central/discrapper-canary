@@ -1,103 +1,64 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048);
+n.d(t, { A: () => T });
 var a = n(627968),
-    l = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(311907),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(311907),
     o = n(873298),
-    c = n(397927),
-    d = n(824552),
+    d = n(397927),
+    c = n(824552),
     u = n(793574),
     m = n(688810),
-    p = n(975460),
-    h = n(362490),
-    x = n(587895),
+    h = n(975460),
+    x = n(362490),
+    p = n(587895),
     g = n(429913),
-    f = n(15285),
-    b = n(905552),
+    _ = n(15285),
+    f = n(905552),
     v = n(253932),
-    j = n(546183),
-    _ = n(157257),
-    y = n(661251),
-    A = n(508474);
-let C = [
-    {
-        id: "unset",
-        label: "Unset",
-        value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
-    },
-    {
-        id: "all",
-        label: "All",
-        value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
-    },
-    {
-        id: "usersWithGame",
-        label: "Users With Game",
-        value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
-    },
-    {
-        id: "none",
-        label: "None",
-        value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
-    },
+    b = n(546183),
+    j = n(157257),
+    A = n(661251),
+    C = n(508474);
+let S = [
+    { id: "unset", label: "Unset", value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET },
+    { id: "all", label: "All", value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL },
+    { id: "usersWithGame", label: "Users With Game", value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME },
+    { id: "none", label: "None", value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE },
 ];
-
-function S() {
+function T() {
     var e;
     let t,
         n,
-        r = l.useRef(null),
+        i = s.useRef(null),
         { analyticsLocations: o } = (0, m.Ay)(u.A.DEV_TOOLS),
-        S = v.TA.useSetting(),
-        [O, E] = l.useState(""),
-        T = (0, s.bG)([f.Ay, _.A], () => (0, b.A)(f.Ay, _.A)),
-        N = (0, g.h)(O),
-        w = (0, s.yK)([x.A], () => {
-            var e, t;
-            return null !=
-                (e =
-                    null == N || null == (t = N.linkedGames)
-                        ? void 0
-                        : t.map((e) => x.A.getApplication(e.id)).filter((e) => null != e))
-                ? e
-                : [];
-        }),
-        I = (0, h.RD)(N, {
-            allowedFlows: [h._M.RPC],
-        }),
-        k = (0, h.RD)(N, {
-            allowedFlows: [h._M.WEB],
-        }),
-        P = (0, h.RD)(N),
-        { canDeauthorize: R, deauthorize: D } =
-            ((e = null == N ? void 0 : N.id),
-            (t = (0, s.bG)([j.default], () => j.default.getNewestTokenForApplication(e))),
-            (n = l.useCallback(() => {
-                null != t && d.A.delete(t.id);
+        T = v.TA.useSetting(),
+        [y, N] = s.useState(""),
+        E = (0, r.bG)([_.Ay, j.A], () => (0, f.A)(_.Ay, j.A)),
+        I = (0, g.h)(y),
+        k = (0, r.yK)([p.A], () => I?.linkedGames?.map((e) => p.A.getApplication(e.id)).filter((e) => null != e) ?? []),
+        R = (0, x.RD)(I, { allowedFlows: [x._M.RPC] }),
+        O = (0, x.RD)(I, { allowedFlows: [x._M.WEB] }),
+        w = (0, x.RD)(I),
+        { canDeauthorize: D, deauthorize: M } =
+            ((e = I?.id),
+            (t = (0, r.bG)([b.default], () => b.default.getNewestTokenForApplication(e))),
+            (n = s.useCallback(() => {
+                null != t && c.A.delete(t.id);
             }, [t])),
-            {
-                canDeauthorize: null != t,
-                deauthorize: n,
-            });
+            { canDeauthorize: null != t, deauthorize: n });
     return (0, a.jsxs)("div", {
-        ref: r,
-        className: i()(y.nd, A.n),
+        ref: i,
+        className: l()(A.nd, C.n),
         children: [
             (0, a.jsxs)("div", {
-                className: A.k,
+                className: C.k,
                 children: [
-                    (0, a.jsx)(c.Heading, {
-                        variant: "heading-lg/normal",
-                        children: "Settings",
-                    }),
-                    (0, a.jsx)(c.l6P, {
+                    (0, a.jsx)(d.Heading, { variant: "heading-lg/normal", children: "Settings" }),
+                    (0, a.jsx)(d.l6P, {
                         label: "Receive DMs In Game",
-                        options: C,
-                        value: S,
+                        options: S,
+                        value: T,
                         onSelectionChange: v.TA.updateSetting,
                         selectionMode: "single",
                         fullWidth: !0,
@@ -105,90 +66,64 @@ function S() {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: A.k,
+                className: C.k,
                 children: [
-                    (0, a.jsx)(c.Heading, {
-                        variant: "heading-lg/normal",
-                        children: "Application",
-                    }),
-                    (0, a.jsx)(c.ksK, {
-                        label: "Application ID",
-                        value: O,
-                        onChange: E,
-                    }),
-                    null != T && null != T.id
-                        ? (0, a.jsx)(c.Button, {
-                              onClick: () => E(T.id),
+                    (0, a.jsx)(d.Heading, { variant: "heading-lg/normal", children: "Application" }),
+                    (0, a.jsx)(d.ksK, { label: "Application ID", value: y, onChange: N }),
+                    null != E && null != E.id
+                        ? (0, a.jsx)(d.Button, {
+                              onClick: () => N(E.id),
                               variant: "primary",
-                              text: "Use detected game: ".concat(T.name, " (").concat(T.id, ")"),
+                              text: `Use detected game: ${E.name} (${E.id})`,
                           })
                         : null,
-                    (0, a.jsxs)(c.Text, {
+                    (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
-                        children: ["Application Name: ", null != N ? N.name : "N/A"],
+                        children: ["Application Name: ", null != I ? I.name : "N/A"],
                     }),
-                    (0, a.jsxs)(c.Text, {
+                    (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
                         children: [
                             "Linked Games:",
                             " ",
-                            w.length > 0
-                                ? w
-                                      .map((e) => {
-                                          var t;
-                                          return (null == (t = (0, p.t)(N)) ? void 0 : t.id) === e.id
-                                              ? "".concat(e.name, "*")
-                                              : e.name;
-                                      })
-                                      .join(", ")
+                            k.length > 0
+                                ? k.map((e) => ((0, h.t)(I)?.id === e.id ? `${e.name}*` : e.name)).join(", ")
                                 : "N/A",
                         ],
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: A.k,
+                className: C.k,
                 children: [
-                    (0, a.jsx)(c.Heading, {
-                        variant: "heading-lg/normal",
-                        children: "Authorization",
-                    }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !P.canStartAuthorization,
-                        onClick: () =>
-                            P.startAuthorization({
-                                analyticsLocations: o,
-                            }),
+                    (0, a.jsx)(d.Heading, { variant: "heading-lg/normal", children: "Authorization" }),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !w.canStartAuthorization,
+                        onClick: () => w.startAuthorization({ analyticsLocations: o }),
                         variant: "primary",
                         text: "Start Authorization",
                     }),
-                    (0, a.jsx)(c.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children:
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !I.canStartAuthorization,
-                        onClick: () =>
-                            I.startAuthorization({
-                                analyticsLocations: o,
-                            }),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !R.canStartAuthorization,
+                        onClick: () => R.startAuthorization({ analyticsLocations: o }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !k.canStartAuthorization,
-                        onClick: () =>
-                            k.startAuthorization({
-                                analyticsLocations: o,
-                            }),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !O.canStartAuthorization,
+                        onClick: () => O.startAuthorization({ analyticsLocations: o }),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !R,
-                        onClick: D,
+                    (0, a.jsx)(d.Button, {
+                        disabled: !D,
+                        onClick: M,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

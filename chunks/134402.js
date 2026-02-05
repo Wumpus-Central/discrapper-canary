@@ -1,10 +1,4 @@
-e.d(n, {
-    B6: () => A,
-    Ix: () => m,
-    W6: () => R,
-    XZ: () => d,
-    y: () => g,
-});
+e.d(n, { B6: () => A, Ix: () => d, W6: () => g, XZ: () => m, y: () => x });
 var r = e(238710),
     i = e(64700);
 e(655972), e(830845);
@@ -22,14 +16,12 @@ var l = e(725664),
         return (n.displayName = t), n;
     },
     h = v("Router-History"),
-    d = v("Router"),
-    m = (function (t) {
+    m = v("Router"),
+    d = (function (t) {
         function n(n) {
             var e;
             return (
-                ((e = t.call(this, n) || this).state = {
-                    location: n.history.location,
-                }),
+                ((e = t.call(this, n) || this).state = { location: n.history.location }),
                 (e._isMounted = !1),
                 (e._pendingLocation = null),
                 n.staticContext ||
@@ -41,12 +33,7 @@ var l = e(725664),
         }
         (0, r.A)(n, t),
             (n.computeRootMatch = function (t) {
-                return {
-                    path: "/",
-                    url: "/",
-                    params: {},
-                    isExact: "/" === t,
-                };
+                return { path: "/", url: "/", params: {}, isExact: "/" === t };
             });
         var e = n.prototype;
         return (
@@ -56,22 +43,16 @@ var l = e(725664),
                     this.unlisten && this.unlisten(),
                     this.props.staticContext ||
                         (this.unlisten = this.props.history.listen(function (n) {
-                            t._isMounted &&
-                                t.setState({
-                                    location: n,
-                                });
+                            t._isMounted && t.setState({ location: n });
                         })),
-                    this._pendingLocation &&
-                        this.setState({
-                            location: this._pendingLocation,
-                        });
+                    this._pendingLocation && this.setState({ location: this._pendingLocation });
             }),
             (e.componentWillUnmount = function () {
                 this.unlisten && (this.unlisten(), (this._isMounted = !1), (this._pendingLocation = null));
             }),
             (e.render = function () {
                 return i.createElement(
-                    d.Provider,
+                    m.Provider,
                     {
                         value: {
                             history: this.props.history,
@@ -80,10 +61,7 @@ var l = e(725664),
                             staticContext: this.props.staticContext,
                         },
                     },
-                    i.createElement(h.Provider, {
-                        children: this.props.children || null,
-                        value: this.props.history,
-                    }),
+                    i.createElement(h.Provider, { children: this.props.children || null, value: this.props.history }),
                 );
             }),
             n
@@ -92,13 +70,8 @@ var l = e(725664),
 i.Component, i.Component;
 var y = {},
     C = 0;
-
 function A(t, n) {
-    void 0 === n && (n = {}),
-        ("string" == typeof n || Array.isArray(n)) &&
-            (n = {
-                path: n,
-            });
+    void 0 === n && (n = {}), ("string" == typeof n || Array.isArray(n)) && (n = { path: n });
     var e = n,
         r = e.path,
         i = e.exact,
@@ -115,16 +88,9 @@ function A(t, n) {
                     r = y[e] || (y[e] = {});
                 if (r[t]) return r[t];
                 var i = [],
-                    o = {
-                        regexp: s()(t, i, n),
-                        keys: i,
-                    };
+                    o = { regexp: s()(t, i, n), keys: i };
                 return C < 1e4 && ((r[t] = o), C++), o;
-            })(e, {
-                end: o,
-                strict: c,
-                sensitive: l,
-            }),
+            })(e, { end: o, strict: c, sensitive: l }),
             i = r.regexp,
             a = r.keys,
             u = i.exec(t);
@@ -145,29 +111,19 @@ function A(t, n) {
     }, null);
 }
 i.Component;
-
-function g(t) {
+function x(t) {
     var n = "withRouter(" + (t.displayName || t.name) + ")",
         e = function (n) {
             var e = n.wrappedComponentRef,
                 r = (0, l.A)(n, ["wrappedComponentRef"]);
-            return i.createElement(d.Consumer, null, function (n) {
-                return (
-                    n || (0, a.A)(!1),
-                    i.createElement(
-                        t,
-                        (0, c.A)({}, r, n, {
-                            ref: e,
-                        }),
-                    )
-                );
+            return i.createElement(m.Consumer, null, function (n) {
+                return n || (0, a.A)(!1), i.createElement(t, (0, c.A)({}, r, n, { ref: e }));
             });
         };
     return (e.displayName = n), (e.WrappedComponent = t), f()(e, t);
 }
 i.Component, i.Component;
-var x = i.useContext;
-
-function R() {
-    return x(h);
+var R = i.useContext;
+function g() {
+    return R(h);
 }

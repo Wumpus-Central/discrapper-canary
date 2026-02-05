@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 let r = 32;
-
 function i(e, t) {
-    return "".concat(e.toLowerCase().padEnd(r, "!")).concat(t.id);
+    return `${e.toLowerCase().padEnd(r, "!")}${t.id}`;
 }

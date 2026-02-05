@@ -1,51 +1,36 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(321073),
-    n(896048),
-    n(638769);
-var r,
-    i,
-    l = n(311907),
+n.d(t, { A: () => c }), n(321073);
+var i = n(311907),
     s = n(73153),
-    a = n(380098);
-let o = [];
-
-function c(e) {
+    r = n(380098);
+let a = [];
+function l(e) {
     let { payment: t } = e,
-        n = a.A.createFromServer(t),
-        r = o.findIndex((e) => e.id === t.id);
-    -1 === r ? (o.push(n), o.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (o[r] = n), (o = [...o]);
+        n = r.A.createFromServer(t),
+        i = a.findIndex((e) => e.id === t.id);
+    -1 === i ? (a.push(n), a.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (a[i] = n), (a = [...a]);
 }
-class d extends (r = l.Ay.Store) {
+class o extends i.Ay.Store {
+    static displayName = "PaymentStore";
     getPayment(e) {
-        return o.find((t) => t.id === e);
+        return a.find((t) => t.id === e);
     }
     getPayments() {
-        return o;
+        return a;
     }
 }
-(i = "displayName") in d
-    ? Object.defineProperty(d, i, {
-          value: "PaymentStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[i] = "PaymentStore");
-let u = new d(s.h, {
+let c = new o(s.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of t) {
-            let t = a.A.createFromServer(e),
-                n = o.findIndex((t) => t.id === e.id);
-            -1 !== n ? (o[n] = t) : o.push(t);
+            let t = r.A.createFromServer(e),
+                n = a.findIndex((t) => t.id === e.id);
+            -1 !== n ? (a[n] = t) : a.push(t);
         }
-        o.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (o = [...o]);
+        a.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (a = [...a]);
     },
-    PAYMENT_UPDATE: c,
-    BILLING_PAYMENT_FETCH_SUCCESS: c,
+    PAYMENT_UPDATE: l,
+    BILLING_PAYMENT_FETCH_SUCCESS: l,
     LOGOUT: function () {
-        o = [];
+        a = [];
     },
 });

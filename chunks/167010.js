@@ -1,38 +1,28 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(985018),
-    a = n(578368),
+var r = n(397927),
+    a = n(985018),
+    l = n(578368),
     s = n(330766);
-
 function o() {
-    return (0, r.jsx)("div", {
-        className: a.kL,
-        children: (0, r.jsxs)("div", {
-            className: a.Qs,
+    return (0, i.jsx)("div", {
+        className: l.kL,
+        children: (0, i.jsxs)("div", {
+            className: l.Qs,
             children: [
-                (0, r.jsx)("img", {
-                    src: s,
-                    alt: l.intl.string(l.t.MvLOqp),
-                }),
-                (0, r.jsx)(i.hKd, {
-                    size: 12,
-                }),
-                (0, r.jsx)(i.Heading, {
-                    className: a.wx,
+                (0, i.jsx)("img", { src: s, alt: a.intl.string(a.t.MvLOqp) }),
+                (0, i.jsx)(r.hKd, { size: 12 }),
+                (0, i.jsx)(r.Heading, {
+                    className: l.wx,
                     variant: "heading-lg/semibold",
-                    children: l.intl.string(l.t.t18lFj),
+                    children: a.intl.string(a.t.t18lFj),
                 }),
-                (0, r.jsx)(i.hKd, {
-                    size: 8,
-                }),
-                (0, r.jsx)(i.Text, {
+                (0, i.jsx)(r.hKd, { size: 8 }),
+                (0, i.jsx)(r.Text, {
                     color: "text-default",
                     variant: "text-sm/normal",
-                    children: l.intl.string(l.t.TvGJgk),
+                    children: a.intl.string(a.t.TvGJgk),
                 }),
             ],
         }),

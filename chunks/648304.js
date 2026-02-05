@@ -1,13 +1,11 @@
-n.d(t, {
-    a: () => l,
-});
+"use strict";
+n.d(t, { a: () => l });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(769015),
     s = n(985018),
     o = n(365282);
-
 function l(e) {
     let { applications: t } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -27,10 +25,7 @@ function l(e) {
                             {
                                 className: o.nM,
                                 children: [
-                                    (0, r.jsx)(a.A, {
-                                        game: e,
-                                        size: a.M.XXSMALL,
-                                    }),
+                                    (0, r.jsx)(a.A, { game: e, size: a.M.XXSMALL }),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",

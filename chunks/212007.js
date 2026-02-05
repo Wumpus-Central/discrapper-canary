@@ -1,85 +1,26 @@
-n.d(t, {
-    T: () => o,
-});
-var r = n(353640),
-    l = n(499867),
-    a = n(121894);
-let s = (0, r.v)(
-        (0, l.Zr)(
+s.d(t, { T: () => i });
+var l = s(353640),
+    n = s(499867),
+    a = s(121894);
+let r = (0, l.v)(
+        (0, n.Zr)(
             (e, t) => ({
                 channelShowResolvedFlags: {},
-                setShowResolvedFlags: (t, n) =>
+                setShowResolvedFlags: (t, s) =>
                     (0, a.r)(() => {
-                        e((e) => {
-                            var r, l;
-                            return {
-                                channelShowResolvedFlags:
-                                    ((r = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, e.channelShowResolvedFlags)),
-                                    (l = l =
-                                        {
-                                            [t]: n,
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(l)).forEach(function (e) {
-                                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
-                                          }),
-                                    r),
-                            };
-                        });
+                        e((e) => ({ channelShowResolvedFlags: { ...e.channelShowResolvedFlags, [t]: s } }));
                     }),
-                getShowResolvedFlags: (e) => {
-                    var n;
-                    return null == (n = t().channelShowResolvedFlags[e]) || n;
-                },
+                getShowResolvedFlags: (e) => t().channelShowResolvedFlags[e] ?? !0,
             }),
-            {
-                name: "report-to-mod-channel-storage",
-                storage: (0, l.KU)(() => localStorage),
-            },
+            { name: "report-to-mod-channel-storage", storage: (0, n.KU)(() => localStorage) },
         ),
     ),
-    o = (e) => {
-        var t;
-        let n = s();
+    i = (e) => {
+        let t = r();
         return null == e
-            ? {
-                  showResolvedFlags: !0,
-                  setShowResolvedFlags: () => {},
-              }
+            ? { showResolvedFlags: !0, setShowResolvedFlags: () => {} }
             : {
-                  showResolvedFlags: null == (t = n.getShowResolvedFlags(e)) || t,
-                  setShowResolvedFlags: (t) => n.setShowResolvedFlags(e, t),
+                  showResolvedFlags: t.getShowResolvedFlags(e) ?? !0,
+                  setShowResolvedFlags: (s) => t.setShowResolvedFlags(e, s),
               };
     };

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     _$: "creatorBenefitsContainer__02e4c",
     Ku: "creatorBenefitCard__02e4c " + n(980197).Nr,

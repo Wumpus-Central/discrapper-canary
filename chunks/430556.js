@@ -1,3 +1,1 @@
-e.exports = {
-    k: "container__757e8",
-};
+e.exports = { k: "container__757e8" };

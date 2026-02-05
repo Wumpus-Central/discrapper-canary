@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(723702);
-
 function i() {
     let e = "";
     return (
@@ -13,6 +11,6 @@ function i() {
               : (0, r.isLinux)()
                 ? (e = "platform-linux")
                 : (0, r.isWeb)() && (e = "platform-web"),
-        __OVERLAY__ ? "".concat(e, " platform-overlay") : e
+        __OVERLAY__ ? `${e} platform-overlay` : e
     );
 }

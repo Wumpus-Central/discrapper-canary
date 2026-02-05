@@ -1,3 +1,1 @@
-e.exports = {
-    q: "headerTitle__450f6",
-};
+e.exports = { q: "headerTitle__450f6" };

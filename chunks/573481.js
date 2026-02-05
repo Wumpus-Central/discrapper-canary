@@ -1,29 +1,20 @@
-a.d(l, {
-    A: () => d,
-}),
-    a(896048);
-var t = a(812729),
-    s = a.n(t),
-    n = a(311907),
-    i = a(505527),
-    r = a(956703),
-    o = a(652215);
-
-function d(e) {
-    var l, a;
-    let { channelId: t, messageId: d, reaction: c } = e,
-        u = (0, n.bG)(
+l.d(t, { A: () => c });
+var s = l(812729),
+    a = l.n(s),
+    n = l(311907),
+    i = l(505527),
+    r = l(956703),
+    o = l(652215);
+function c(e) {
+    let { channelId: t, messageId: l, reaction: s } = e,
+        c = (0, n.bG)(
             [r.A],
             () => {
-                var e;
-                let l = r.A.getReactions(t, d, c.emoji, o.WxW, i.v.VOTE);
-                return Array.from(null != (e = null == l ? void 0 : l.values()) ? e : []);
+                let e = r.A.getReactions(t, l, s.emoji, o.WxW, i.v.VOTE);
+                return Array.from(e?.values() ?? []);
             },
-            [t, d, c.emoji],
-            s(),
+            [t, l, s.emoji],
+            a(),
         );
-    return {
-        reactors: u,
-        hasMore: (null != (l = null == (a = c.count_details) ? void 0 : a.vote) ? l : 0) > u.length,
-    };
+    return { reactors: c, hasMore: (s.count_details?.vote ?? 0) > c.length };
 }

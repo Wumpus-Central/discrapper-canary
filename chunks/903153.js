@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(205662),
     a = r(891253),
@@ -22,7 +21,6 @@ var n = r(64700),
 let s = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
@@ -50,12 +48,7 @@ let s = (function (e) {
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         l(t, [
@@ -98,10 +91,7 @@ let s = (function (e) {
                                         background: "hsl(" + this.props.hsl.h + ",100%, 50%)",
                                         borderRadius: this.props.radius,
                                     },
-                                    white: {
-                                        absolute: "0px 0px 0px 0px",
-                                        borderRadius: this.props.radius,
-                                    },
+                                    white: { absolute: "0px 0px 0px 0px", borderRadius: this.props.radius },
                                     black: {
                                         absolute: "0px 0px 0px 0px",
                                         boxShadow: this.props.shadow,
@@ -123,17 +113,9 @@ let s = (function (e) {
                                         transform: "translate(-2px, -2px)",
                                     },
                                 },
-                                custom: {
-                                    color: r,
-                                    white: a,
-                                    black: i,
-                                    pointer: l,
-                                    circle: s,
-                                },
+                                custom: { color: r, white: a, black: i, pointer: l, circle: s },
                             },
-                            {
-                                custom: !!this.props.style,
-                            },
+                            { custom: !!this.props.style },
                         );
                     return n.createElement(
                         "div",
@@ -153,24 +135,14 @@ let s = (function (e) {
                         ),
                         n.createElement(
                             "div",
-                            {
-                                style: u.white,
-                                className: "saturation-white",
-                            },
-                            n.createElement("div", {
-                                style: u.black,
-                                className: "saturation-black",
-                            }),
+                            { style: u.white, className: "saturation-white" },
+                            n.createElement("div", { style: u.black, className: "saturation-black" }),
                             n.createElement(
                                 "div",
-                                {
-                                    style: u.pointer,
-                                },
+                                { style: u.pointer },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", {
-                                          style: u.circle,
-                                      }),
+                                    : n.createElement("div", { style: u.circle }),
                             ),
                         ),
                     );

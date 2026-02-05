@@ -1,69 +1,42 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(260509),
-    o = n(696451),
-    l = n(71393),
-    c = n(287809),
+"use strict";
+n.d(t, { A: () => C });
+var r = n(311907),
+    i = n(73153),
+    a = n(260509),
+    s = n(696451),
+    o = n(71393),
+    l = n(287809),
     u = n(652215);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = [],
-    p = {},
+let c = [],
+    d = {},
     _ = null;
-
-function h(e) {
-    let t = new Set([...(null != e ? e : [])]);
-    return [...f].reduce((e, n) => (t.has(n) ? e : m(n) || e), !1);
+function f(e) {
+    let t = new Set([...(e ?? [])]);
+    return [...c].reduce((e, n) => (t.has(n) ? e : p(n) || e), !1);
 }
-
-function m(e) {
-    let t = f.indexOf(e);
+function p(e) {
+    let t = c.indexOf(e);
     if (t > -1) {
-        let n = [...f];
-        return n.splice(t, 1), (f = n), delete p[e], !0;
+        let n = [...c];
+        return n.splice(t, 1), (c = n), delete d[e], !0;
     }
     return !1;
 }
-
+function h(e) {
+    return !(e === u.ME || c.includes(e)) && ((c = [...c, e]), !0);
+}
+function m(e, t) {
+    null != t && (d[e] = t);
+}
 function g(e) {
-    return !(e === u.ME || f.includes(e)) && ((f = [...f, e]), !0);
-}
-
-function E(e, t) {
-    null != t && (p[e] = t);
-}
-
-function b(e) {
     let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: a } = e;
     if (n) {
-        switch ((g(t), E(t, a), r)) {
+        switch ((h(t), m(t, a), r)) {
             case u.Q4z.MOBILE_GUILD_DISCOVERY:
-                _ = {
-                    type: u.Q4z.MOBILE_GUILD_DISCOVERY,
-                };
+                _ = { type: u.Q4z.MOBILE_GUILD_DISCOVERY };
                 break;
             case u.Q4z.DIRECTORY_ENTRY:
-                _ = {
-                    type: u.Q4z.DIRECTORY_ENTRY,
-                    directoryChannelId: i,
-                };
+                _ = { type: u.Q4z.DIRECTORY_ENTRY, directoryChannelId: i };
                 break;
             default:
                 _ = null;
@@ -72,72 +45,65 @@ function b(e) {
     }
     return !1;
 }
-
-function y(e) {
+function E(e) {
     let { guild: t } = e;
-    return !!(null != t.joined_at && f.includes(t.id)) && (m(t.id), (_ = null), !0);
+    return !!(null != t.joined_at && c.includes(t.id)) && (p(t.id), (_ = null), !0);
 }
-
-function O(e) {
-    var t;
-    let { guildId: n, joinedAt: r, user: i } = e,
-        a = i.id === (null == (t = c.default.getCurrentUser()) ? void 0 : t.id),
-        s = null == r;
-    return !!a && !s && !!f.includes(n) && (m(n), (_ = null), !0);
-}
-
 function A(e) {
-    let { guild: t } = e;
-    return !!f.includes(t.id) && (m(t.id), (_ = null), !0);
+    let { guildId: t, joinedAt: n, user: r } = e,
+        i = r.id === l.default.getCurrentUser()?.id,
+        a = null == n;
+    return !!i && !a && !!c.includes(t) && (p(t), (_ = null), !0);
 }
-
-function v(e) {
+function I(e) {
+    let { guild: t } = e;
+    return !!c.includes(t.id) && (p(t.id), (_ = null), !0);
+}
+function T(e) {
     let { ignoredGuildIds: t } = e,
-        n = h(t);
+        n = f(t);
     return n && (_ = null), n;
 }
-
-function S(e) {
+function y(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
-    return g(t), (_ = n), !0;
+    return h(t), (_ = n), !0;
 }
-
-function I() {
-    f = l.A.getGuildsArray()
-        .filter((e) => (0, s.DG)(e))
+function S() {
+    c = o.A.getGuildsArray()
+        .filter((e) => (0, a.DG)(e))
         .map((e) => e.id);
 }
-class T extends (r = i.Ay.Store) {
+class v extends r.Ay.Store {
+    static displayName = "LurkingStore";
     initialize() {
-        this.waitFor(o.Ay, l.A, c.default);
+        this.waitFor(s.Ay, o.A, l.default);
     }
     lurkingGuildIds() {
-        return f;
+        return c;
     }
     mostRecentLurkedGuildId() {
-        return 0 === f.length ? null : f[f.length - 1];
+        return 0 === c.length ? null : c[c.length - 1];
     }
     isLurking(e) {
-        let t = l.A.getGuild(e);
+        let t = o.A.getGuild(e);
         if (null == t) return !1;
-        let n = o.Ay.isCurrentUserGuest(e),
-            r = (0, s.DG)(t);
+        let n = s.Ay.isCurrentUserGuest(e),
+            r = (0, a.DG)(t);
         return !!(!n && r);
     }
     getLurkingSource() {
         return _;
     }
     getLoadId(e) {
-        return null != e ? p[e] : null;
+        return null != e ? d[e] : null;
     }
 }
-d(T, "displayName", "LurkingStore");
-let C = new T(a.h, {
-    CONNECTION_OPEN: I,
-    GUILD_JOIN: b,
-    GUILD_STOP_LURKING: v,
-    GUILD_STOP_LURKING_FAILURE: S,
-    GUILD_CREATE: y,
-    GUILD_DELETE: A,
-    GUILD_MEMBER_ADD: O,
+let C = new v(i.h, {
+    CONNECTION_OPEN: S,
+    GUILD_JOIN: g,
+    GUILD_STOP_LURKING: T,
+    GUILD_STOP_LURKING_FAILURE: y,
+    GUILD_CREATE: E,
+    GUILD_DELETE: I,
+    GUILD_MEMBER_ADD: A,
 });

@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(321073);
+"use strict";
+n.d(t, { A: () => d }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(861382),
@@ -9,14 +7,9 @@ var i = n(861382),
     s = n(634788),
     o = n(374803),
     l = n(985018);
-let c = {
-    results: {
-        commandOptions: [],
-    },
-};
-
-function u(e) {
-    return "".concat(e.displayName, ":");
+let u = { results: { commandOptions: [] } };
+function c(e) {
+    return `${e.displayName}:`;
 }
 let d = {
     stores: [i.A],
@@ -24,19 +17,10 @@ let d = {
     matches: (e, t, n, r, a) => !(r || null == i.A.getActiveCommand(e.id) || null != i.A.getActiveOption(e.id)),
     queryResults(e, t, n, r, a) {
         let s = i.A.getActiveCommand(e.id);
-        if ((null == s ? void 0 : s.options) == null) return c;
+        if (s?.options == null) return u;
         let o = i.A.getOptionStates(e.id),
-            l = s.options.filter((e) => {
-                var t;
-                return e.displayName.startsWith(n) && !(null == (t = o[e.name]) ? void 0 : t.hasValue);
-            });
-        return 0 === l.length
-            ? c
-            : {
-                  results: {
-                      commandOptions: l,
-                  },
-              };
+            l = s.options.filter((e) => e.displayName.startsWith(n) && !o[e.name]?.hasValue);
+        return 0 === l.length ? u : { results: { commandOptions: l } };
     },
     renderResults(e) {
         let {
@@ -44,21 +28,21 @@ let d = {
                 selectedIndex: n,
                 query: i,
                 onHover: o,
-                onClick: c,
+                onClick: u,
             } = e,
-            u = [],
+            c = [],
             d = [];
         t.forEach((e) => {
-            (e.required ? u : d).push(e);
+            (e.required ? c : d).push(e);
         });
-        let f =
-                u.length > 0
+        let _ =
+                c.length > 0
                     ? (0, s.GM)({
                           query: i,
                           selectedIndex: n,
-                          autocompletes: u,
+                          autocompletes: c,
                           onHover: o,
-                          onClick: c,
+                          onClick: u,
                           titleWithQuery: l.t["iO/jnA"],
                           titleWithoutQuery: l.intl.string(l.t["7II2G3"]),
                           Component: a.Ay.Generic,
@@ -71,16 +55,16 @@ let d = {
                           key: "required-options",
                       })
                     : null,
-            p =
+            f =
                 d.length > 0
                     ? (0, s.GM)({
                           query: i,
                           selectedIndex: n,
                           autocompletes: d,
                           onHover: o,
-                          onClick: c,
+                          onClick: u,
                           titleWithQuery: l.t.pg0anB,
-                          titleWithoutQuery: u.length > 0 ? l.intl.string(l.t.TpDXm4) : l.intl.string(l.t["+1H47t"]),
+                          titleWithoutQuery: c.length > 0 ? l.intl.string(l.t.TpDXm4) : l.intl.string(l.t["+1H47t"]),
                           Component: a.Ay.Generic,
                           getProps: (e, t) => ({
                               key: t.toString(),
@@ -89,12 +73,10 @@ let d = {
                           }),
                           getQuery: (e) => e,
                           key: "optional-options",
-                          indexOffset: u.length,
+                          indexOffset: c.length,
                       })
                     : null;
-        return (0, r.jsxs)(r.Fragment, {
-            children: [f, p],
-        });
+        return (0, r.jsxs)(r.Fragment, { children: [_, f] });
     },
     onSelect(e) {
         let {
@@ -103,11 +85,6 @@ let d = {
                 options: r,
             } = e,
             i = t[n];
-        return (
-            r.insertText(u(i)),
-            {
-                type: o.kc.COMMAND_OPTION,
-            }
-        );
+        return r.insertText(c(i)), { type: o.kc.COMMAND_OPTION };
     },
 };

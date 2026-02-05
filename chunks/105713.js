@@ -1,180 +1,83 @@
-n.d(t, {
-    Ay: () => w,
-    Gq: () => R,
-    WE: () => N,
-    qn: () => T,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => C, Gq: () => v, WE: () => S, qn: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(311907),
     l = n(827734),
-    c = n(990078),
-    u = n(397927),
+    u = n(990078),
+    c = n(397927),
     d = n(967198),
-    f = n(287809),
-    p = n(824744),
-    _ = n(927578),
+    _ = n(287809),
+    f = n(824744),
+    p = n(927578),
     h = n(704591),
     m = n(14400),
-    g = n(277044),
-    E = n(980504),
-    b = n(985018),
-    y = n(331129),
-    O = n(125049);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function S(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
+    g = n(277044);
+n(980504);
+var E = n(985018),
+    A = n(331129),
+    I = n(125049);
 function T() {
     let { volume: e, onVolumeChange: t } = (0, m.A)();
-    return (0, r.jsxs)(u.DUT, {
-        className: y.xJ,
+    return (0, r.jsxs)(c.DUT, {
+        className: A.xJ,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, r.jsx)(u.Text, {
-                variant: "text-sm/normal",
-                children: b.intl.string(b.t["2JbvKw"]),
-            }),
-            (0, r.jsx)(u.Apm, {
-                onValueChange: t,
-                className: y.aw,
-                initialValue: (0, p.M)(e),
-                maxValue: 100,
-            }),
+            (0, r.jsx)(c.Text, { variant: "text-sm/normal", children: E.intl.string(E.t["2JbvKw"]) }),
+            (0, r.jsx)(c.Apm, { onValueChange: t, className: A.aw, initialValue: (0, f.M)(e), maxValue: 100 }),
         ],
     });
 }
-
-function C(e) {
+function y(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, h.tj)({
-            location: "SoundmojiBanner",
-        }),
-        a = (0, o.bG)([f.default], () => _.Ay.canUseSoundboardEverywhere(f.default.getCurrentUser())),
+        i = (0, h.tj)({ location: "SoundmojiBanner" }),
+        a = (0, o.bG)([_.default], () => p.Ay.canUseSoundboardEverywhere(_.default.getCurrentUser())),
         s = (0, o.bG)([d.A], () => d.A.getGuildId());
-    return n || a || t.guildId === E.mV || t.guildId === s || !i
-        ? (0, r.jsx)(u.LpS, {
-              text: "BETA",
-              color: l.A.colors.BACKGROUND_BRAND.css,
-              className: y.aZ,
-          })
+    return n || a || "0" === t.guildId || t.guildId === s || !i
+        ? (0, r.jsx)(c.LpS, { text: "BETA", color: l.A.colors.BACKGROUND_BRAND.css, className: A.aZ })
         : (0, r.jsxs)("div", {
-              className: y.Mq,
+              className: A.Mq,
               children: [
-                  (0, r.jsx)("div", {
-                      className: y.Nh,
-                  }),
+                  (0, r.jsx)("div", { className: A.Nh }),
                   (0, r.jsxs)("div", {
-                      className: y.Pc,
+                      className: A.Pc,
                       children: [
-                          (0, r.jsx)(u.tvc, {
-                              size: "xxs",
-                              color: "white",
-                              className: y.aJ,
-                          }),
-                          (0, r.jsx)(u.Text, {
+                          (0, r.jsx)(c.tvc, { size: "xxs", color: "white", className: A.aJ }),
+                          (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
                               color: "always-white",
-                              className: y.sD,
-                              children: b.intl.string(b.t["BMw+7I"]),
+                              className: A.sD,
+                              children: E.intl.string(E.t["BMw+7I"]),
                           }),
-                          (0, r.jsx)(u.LpS, {
-                              text: "BETA",
-                              color: l.A.colors.BACKGROUND_BRAND.css,
-                              className: y.KD,
-                          }),
+                          (0, r.jsx)(c.LpS, { text: "BETA", color: l.A.colors.BACKGROUND_BRAND.css, className: A.KD }),
                       ],
                   }),
               ],
           });
 }
-
-function N(e) {
+function S(e) {
     let { sound: t } = e;
     return (0, r.jsxs)("div", {
-        className: s()(y.op, y.kX),
+        className: s()(A.op, A.kX),
         children: [
-            (0, r.jsx)(C, {
-                sound: t,
-            }),
+            (0, r.jsx)(y, { sound: t }),
             (0, r.jsxs)("div", {
-                className: y.Br,
+                className: A.Br,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: y.tn,
+                        className: A.tn,
                         children: [
-                            (0, r.jsx)(u.JMI, {
-                                size: "sm",
-                                className: y.nR,
-                            }),
-                            (0, r.jsx)(u.Text, {
-                                variant: "text-md/semibold",
-                                color: "text-strong",
-                                children: t.name,
-                            }),
+                            (0, r.jsx)(c.JMI, { size: "sm", className: A.nR }),
+                            (0, r.jsx)(c.Text, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: y.tn,
-                        children: (0, r.jsx)(u.Text, {
+                        className: A.tn,
+                        children: (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: b.intl.string(b.t.D6eYmf),
+                            children: E.intl.string(E.t.D6eYmf),
                         }),
                     }),
                 ],
@@ -182,106 +85,79 @@ function N(e) {
         ],
     });
 }
-
-function R(e) {
+function v(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: o, clickableClassName: l } = e,
-        [d, f] = i.useState(!1),
-        [p, _] = i.useState(String(Date.now())),
+        [d, _] = i.useState(!1),
+        [f, p] = i.useState(String(Date.now())),
         h = i.useCallback(
             (e) => {
-                e.stopPropagation(), f(!d);
+                e.stopPropagation(), _(!d);
             },
             [d],
         ),
         m = i.useCallback(() => {
-            _(String(Date.now()));
+            p(String(Date.now()));
         }, []),
         g = i.useRef(null);
     i.useEffect(() => {
-        var e, t;
-        d ? null == (e = g.current) || e.focus() : null == (t = g.current) || t.blur(), null == o || o(d);
+        d ? g.current?.focus() : g.current?.blur(), o?.(d);
     }, [d, o]);
     let E = !d;
-    return (0, r.jsx)(u.YNO, {
+    return (0, r.jsx)(c.YNO, {
         targetElementRef: g,
         renderPopout: (e) =>
-            (0, r.jsx)(u.DUT, {
+            (0, r.jsx)(c.DUT, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(
-                    I(v({}, e), {
-                        refreshPosition: m,
-                    }),
-                ),
+                children: t({ ...e, refreshPosition: m }),
             }),
         align: "center",
         nudgeAlignIntoViewport: !0,
         position: n,
         shouldShow: d,
-        onRequestClose: () => f(!1),
+        onRequestClose: () => _(!1),
         animationPosition: "bottom",
-        positionKey: p,
+        positionKey: f,
         scrollBehavior: "close",
         children: (e) =>
-            (0, r.jsx)(c.m, {
+            (0, r.jsx)(u.m, {
                 onTooltipHide: () => {
-                    E && (null == o || o(!1));
+                    E && o?.(!1);
                 },
                 onTooltipShow: () => {
-                    E && (null == o || o(!0));
+                    E && o?.(!0);
                 },
                 text: a,
                 position: "top",
                 shouldShow: E,
-                children: (0, r.jsx)(
-                    u.DUT,
-                    I(v({}, e), {
-                        innerRef: g,
-                        "aria-label": a,
-                        onClick: h,
-                        className: l,
-                        children: s,
-                    }),
-                ),
+                children: (0, r.jsx)(c.DUT, {
+                    ...e,
+                    innerRef: g,
+                    "aria-label": a,
+                    onClick: h,
+                    className: l,
+                    children: s,
+                }),
             }),
     });
 }
-
-function w(e) {
+function C(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(R, {
+            (0, r.jsx)(v, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(T, {}),
-                tooltipText: b.intl.string(b.t["19lt24"]),
+                tooltipText: E.intl.string(E.t["19lt24"]),
                 position: "top",
-                children: (0, r.jsx)(u.HKD, {
-                    size: "md",
-                    color: "currentColor",
-                    className: O.Wo,
-                }),
+                children: (0, r.jsx)(c.HKD, { size: "md", color: "currentColor", className: I.Wo }),
             }),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(v, {
                 setTooltipShowing: i,
-                renderPopout: (e) =>
-                    (0, r.jsx)(
-                        g.A,
-                        v(
-                            {
-                                sound: t,
-                                channel: n,
-                            },
-                            e,
-                        ),
-                    ),
-                tooltipText: b.intl.string(b.t["KVbJU/"]),
+                renderPopout: (e) => (0, r.jsx)(g.A, { sound: t, channel: n, ...e }),
+                tooltipText: E.intl.string(E.t["KVbJU/"]),
                 position: "right",
-                children: (0, r.jsx)(u.mir, {
-                    size: "md",
-                    color: "currentColor",
-                    className: O.Wo,
-                }),
+                children: (0, r.jsx)(c.mir, { size: "md", color: "currentColor", className: I.Wo }),
             }),
         ],
     });

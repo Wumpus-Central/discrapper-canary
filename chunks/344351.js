@@ -1,6 +1,5 @@
-n.d(t, {
-    T: () => r,
-});
+"use strict";
+n.d(t, { T: () => r });
 var r = (function (e) {
     return (
         (e.GUILD_CHANNEL = "gc"),

@@ -3,18 +3,11 @@ var i,
     n =
         (this && this.__importDefault) ||
         function (t) {
-            return t && t.__esModule
-                ? t
-                : {
-                      default: t,
-                  };
+            return t && t.__esModule ? t : { default: t };
         };
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
-    (e.ICalCalendarMethod = void 0);
+Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalCalendarMethod = void 0);
 let s = a(778090),
-    o = n(a(594597)),
+    o = n(a(816978)),
     d = a(362185),
     l = a(362185);
 ((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH"),
@@ -82,9 +75,7 @@ let s = a(778090),
             return void 0 === t
                 ? (null == (e = this.data.timezone) ? void 0 : e.name) || null
                 : ("string" == typeof t
-                      ? (this.data.timezone = {
-                            name: t,
-                        })
+                      ? (this.data.timezone = { name: t })
                       : null === t
                         ? (this.data.timezone = null)
                         : (this.data.timezone = t),
@@ -138,9 +129,7 @@ let s = a(778090),
             );
         }
         toBlob() {
-            return new Blob([this.toString()], {
-                type: "text/calendar",
-            });
+            return new Blob([this.toString()], { type: "text/calendar" });
         }
         toURL() {
             return URL.createObjectURL(this.toBlob());

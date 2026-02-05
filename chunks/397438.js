@@ -1,115 +1,71 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(617617);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let u = {},
-    d = {};
-
-function f() {
-    var e, t, n, r, i, a;
-    let s = o.A.settings;
+"use strict";
+n.d(t, { A: () => g });
+var r = n(311907),
+    i = n(506774),
+    a = n(73153),
+    s = n(617617);
+let o = {},
+    l = {};
+function u() {
+    let e = s.A.settings;
     return {
-        gifAutoPlay: null == (t = s.textAndImages) || null == (e = t.gifAutoPlay) ? void 0 : e.value,
-        animateEmoji: null == (r = s.textAndImages) || null == (n = r.animateEmoji) ? void 0 : n.value,
-        animateStickers: null == (a = s.textAndImages) || null == (i = a.animateStickers) ? void 0 : i.value,
+        gifAutoPlay: e.textAndImages?.gifAutoPlay?.value,
+        animateEmoji: e.textAndImages?.animateEmoji?.value,
+        animateStickers: e.textAndImages?.animateStickers?.value,
     };
 }
-
-function p() {
-    return (d = f()), !1;
+function c() {
+    return (l = u()), !1;
 }
-
+function d() {
+    o = {};
+}
 function _() {
-    u = {};
+    o = {};
 }
-
+function f(e) {
+    let { settings: t } = e;
+    o = { ...o, ...t };
+}
+function p(e) {
+    let { settings: t } = e;
+    for (let e of t) delete o[e];
+}
 function h() {
-    u = {};
-}
-
-function m(e) {
-    let { settings: t } = e;
-    u = c({}, u, t);
-}
-
-function g(e) {
-    let { settings: t } = e;
-    for (let e of t) delete u[e];
-}
-
-function E() {
-    let e = f(),
+    let e = u(),
         t = !1;
     for (let n in e) {
         let r = n;
-        e[r] !== d[r] && (delete u[r], (t = !0));
+        e[r] !== l[r] && (delete o[r], (t = !0));
     }
     return t;
 }
-class b extends (r = i.Ay.PersistedStore) {
+class m extends r.Ay.PersistedStore {
+    static displayName = "UserSettingsOverridesStore";
+    static persistKey = "UserSettingsOverridesStore";
+    static migrations = [
+        () => {
+            let e = i.w.get("UserSettingsStoreOverrides") ?? {};
+            return i.w.remove("UserSettingsStoreOverrides"), e;
+        },
+    ];
     initialize(e) {
-        (u = null != e ? e : {}), this.syncWith([o.A], p);
+        (o = e ?? {}), this.syncWith([s.A], c);
     }
     getState() {
-        return u;
+        return o;
     }
     getAppliedOverrideReasonKey(e) {
-        var t;
-        return null == (t = u[e]) ? void 0 : t.reasonKey;
+        return o[e]?.reasonKey;
     }
     getOverride(e) {
-        return u[e];
+        return o[e];
     }
 }
-l(b, "displayName", "UserSettingsOverridesStore"),
-    l(b, "persistKey", "UserSettingsOverridesStore"),
-    l(b, "migrations", [
-        () => {
-            var e;
-            let t = null != (e = a.w.get("UserSettingsStoreOverrides")) ? e : {};
-            return a.w.remove("UserSettingsStoreOverrides"), t;
-        },
-    ]);
-let y = new b(s.h, {
-    USER_SETTINGS_PROTO_UPDATE: E,
-    USER_SETTINGS_OVERRIDE_APPLY: m,
-    USER_SETTINGS_OVERRIDE_CLEAR: g,
-    LOGOUT: _,
-    LOGIN_SUCCESS: h,
+let g = new m(a.h, {
+    USER_SETTINGS_PROTO_UPDATE: h,
+    USER_SETTINGS_OVERRIDE_APPLY: f,
+    USER_SETTINGS_OVERRIDE_CLEAR: p,
+    LOGOUT: d,
+    LOGIN_SUCCESS: _,
 });

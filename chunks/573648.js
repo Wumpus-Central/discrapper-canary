@@ -1,10 +1,5 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(747238),
-    n(812715),
-    n(866193),
-    n(638769);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(735438),
     i = n.n(r),
     a = n(374994),
@@ -26,7 +21,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://www.twitch.tv/".concat(encodeURIComponent(t));
+                return `https://www.twitch.tv/${encodeURIComponent(t)}`;
             },
             domains: ["twitch.tv", "twitch.com"],
         },
@@ -45,7 +40,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://www.youtube.com/channel/".concat(encodeURIComponent(t));
+                return `https://www.youtube.com/channel/${encodeURIComponent(t)}`;
             },
             domains: ["youtube.com", "youtu.be"],
         },
@@ -77,7 +72,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://bsky.app/profile/".concat(encodeURIComponent(t).replaceAll("%3A", ":"));
+                return `https://bsky.app/profile/${encodeURIComponent(t).replaceAll("%3A", ":")}`;
             },
             isFederated: !0,
             hasMetadata: !0,
@@ -111,7 +106,7 @@ let l = [
             enabled: !1,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "skype:".concat(encodeURIComponent(t), "?userinfo");
+                return `skype:${encodeURIComponent(t)}?userinfo`;
             },
         },
         {
@@ -143,7 +138,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://steamcommunity.com/profiles/".concat(encodeURIComponent(t));
+                return `https://steamcommunity.com/profiles/${encodeURIComponent(t)}`;
             },
             hasMetadata: !0,
         },
@@ -163,7 +158,7 @@ let l = [
             domains: ["reddit.com"],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://www.reddit.com/u/".concat(encodeURIComponent(t));
+                return `https://www.reddit.com/u/${encodeURIComponent(t)}`;
             },
             hasMetadata: !0,
         },
@@ -197,7 +192,7 @@ let l = [
             enabled: !1,
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://twitter.com/".concat(encodeURIComponent(t));
+                return `https://twitter.com/${encodeURIComponent(t)}`;
             },
             domains: ["twitter.com"],
             hasMetadata: !0,
@@ -217,7 +212,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://x.com/".concat(encodeURIComponent(t));
+                return `https://x.com/${encodeURIComponent(t)}`;
             },
             domains: ["x.com"],
             hasMetadata: !0,
@@ -237,7 +232,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://open.spotify.com/user/".concat(encodeURIComponent(t));
+                return `https://open.spotify.com/user/${encodeURIComponent(t)}`;
             },
         },
         {
@@ -284,7 +279,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://github.com/".concat(encodeURIComponent(t));
+                return `https://github.com/${encodeURIComponent(t)}`;
             },
             domains: ["github.com"],
         },
@@ -356,7 +351,7 @@ let l = [
             enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://roblox.com/users/".concat(encodeURIComponent(t), "/profile");
+                return `https://roblox.com/users/${encodeURIComponent(t)}/profile`;
             },
         },
         {
@@ -388,7 +383,7 @@ let l = [
             hasMetadata: !0,
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://www.ebay.com/usr/".concat(encodeURIComponent(t));
+                return `https://www.ebay.com/usr/${encodeURIComponent(t)}`;
             },
         },
         {
@@ -407,7 +402,7 @@ let l = [
             domains: ["tiktok.com"],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://www.tiktok.com/@".concat(encodeURIComponent(t));
+                return `https://www.tiktok.com/@${encodeURIComponent(t)}`;
             },
         },
         {
@@ -425,7 +420,7 @@ let l = [
             domains: ["instagram.com"],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
-                return "https://www.instagram.com/".concat(encodeURIComponent(t));
+                return `https://www.instagram.com/${encodeURIComponent(t)}`;
             },
         },
         {
@@ -474,7 +469,7 @@ let l = [
             },
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
-                return "https://".concat(t, "/");
+                return `https://${t}/`;
             },
             enabled: !0,
         },
@@ -505,27 +500,22 @@ let l = [
             enabled: !1,
         },
     ],
-    c = i().keyBy(l, "type"),
-    u = {};
+    u = i().keyBy(l, "type"),
+    c = {};
 l.forEach((e) => {
-    var t;
-    null == (t = e.domains) ||
-        t.forEach((t) => {
-            u[t] = e;
-        });
+    e.domains?.forEach((t) => {
+        c[t] = e;
+    });
 });
 let d = {
-    get(e) {
-        var t;
-        return null != (t = c[e]) ? t : null;
-    },
+    get: (e) => u[e] ?? null,
     getByUrl(e) {
         let t = s.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return u[n.startsWith("www.") ? n.slice(4) : n];
+        return c[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
     map: (e) => l.map(e),
     filter(e) {
         let t = l.filter(e);

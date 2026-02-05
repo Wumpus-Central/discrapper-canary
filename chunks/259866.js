@@ -1,61 +1,54 @@
-n.d(t, {
-    Mj: () => m,
-    mU: () => p,
-    tB: () => b,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { Mj: () => h, mU: () => _, tB: () => x });
+var i = n(627968),
+    s = n(64700),
     l = n(417597),
-    s = n(314116),
+    r = n(314116),
     a = n(397927),
-    c = n(591552),
-    o = n(961973),
-    d = n(527678),
+    o = n(591552),
+    d = n(961973),
+    c = n(527678),
     u = n(655943),
-    f = n(539916),
+    m = n(539916),
     g = n(985018);
-
-function b(e, t) {
-    let n = (0, l.yK)([u.A], () => (0, o.G4)(e, t, u.A.editedOnboardingPrompts));
-    return [(0, l.yK)([u.A], () => (0, o.G4)(e, t, u.A.editedOnboardingPrompts, o.VU)), n];
+function x(e, t) {
+    let n = (0, l.yK)([u.A], () => (0, d.G4)(e, t, u.A.editedOnboardingPrompts));
+    return [(0, l.yK)([u.A], () => (0, d.G4)(e, t, u.A.editedOnboardingPrompts, d.VU)), n];
 }
-
-function m(e) {
-    let t = (0, l.bG)([c.A], () => c.A.isAdvancedMode(e)),
-        [n] = [(0, l.yK)([c.A], () => (0, o.G4)(e, c.A.getDefaultChannelIds(e), c.A.getOnboardingPrompts(e), o.VU))];
-    return !!t && n.length >= f.Kd;
+function h(e) {
+    let t = (0, l.bG)([o.A], () => o.A.isAdvancedMode(e)),
+        [n] = [(0, l.yK)([o.A], () => (0, d.G4)(e, o.A.getDefaultChannelIds(e), o.A.getOnboardingPrompts(e), d.VU))];
+    return !!t && n.length >= m.Kd;
 }
-
-function p(e) {
+function _(e) {
     let { guildId: t, className: n } = e,
-        o = (0, l.bG)([c.A], () => c.A.isAdvancedMode(t)),
-        u = i.useCallback(() => {
-            let e = o ? f.SD.ONBOARDING_DEFAULT : f.SD.ONBOARDING_ADVANCED;
-            o
-                ? (0, s.A)({
+        d = (0, l.bG)([o.A], () => o.A.isAdvancedMode(t)),
+        u = s.useCallback(() => {
+            let e = d ? m.SD.ONBOARDING_DEFAULT : m.SD.ONBOARDING_ADVANCED;
+            d
+                ? (0, r.A)({
                       title: g.intl.string(g.t["49+ONj"]),
                       subtitle: g.intl.string(g.t.TLkoOt),
                       variant: "primary",
                       confirmText: g.intl.string(g.t.R9GHya),
-                      onConfirm: () => (0, d.CP)(t, e),
+                      onConfirm: () => (0, c.CP)(t, e),
                   })
-                : (0, s.A)({
+                : (0, r.A)({
                       title: g.intl.string(g.t.YB9xUF),
                       subtitle: g.intl.string(g.t.BcGGVn),
                       variant: "primary",
                       confirmText: g.intl.string(g.t.ts6u6r),
-                      onConfirm: () => (0, d.CP)(t, e),
+                      onConfirm: () => (0, c.CP)(t, e),
                   });
-        }, [t, o]);
-    return (0, r.jsx)("div", {
+        }, [t, d]);
+    return (0, i.jsx)("div", {
         className: n,
-        children: (0, r.jsx)(a.MzZ, {
+        children: (0, i.jsx)(a.MzZ, {
             onClick: u,
-            children: (0, r.jsx)(a.Text, {
+            children: (0, i.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
-                children: o ? g.intl.string(g.t.OmpxWy) : g.intl.string(g.t.ozsQBC),
+                children: d ? g.intl.string(g.t.OmpxWy) : g.intl.string(g.t.ozsQBC),
             }),
         }),
     });

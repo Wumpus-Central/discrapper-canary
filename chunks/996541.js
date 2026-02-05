@@ -1,3 +1,2 @@
-e.exports = {
-    bI: "countryFlagEmoji_ebbc17",
-};
+"use strict";
+e.exports = { bI: "countryFlagEmoji_ebbc17" };

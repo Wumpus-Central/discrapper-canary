@@ -109,157 +109,77 @@ e.exports = function (e) {
         s = ["then", "unless", "until", "loop", "by", "when", "and", "or", "is", "isnt", "not"],
         o = ["var", "const", "let", "function", "static"],
         l = (e) => (t) => !e.includes(t),
-        c = {
-            keyword: t.concat(s).filter(l(o)),
-            literal: n.concat(a),
-            built_in: r.concat(i),
-        },
-        u = "[A-Za-z$_][0-9A-Za-z$_]*",
-        d = {
-            className: "subst",
-            begin: /#\{/,
-            end: /\}/,
-            keywords: c,
-        },
-        f = [
+        u = { keyword: t.concat(s).filter(l(o)), literal: n.concat(a), built_in: r.concat(i) },
+        c = "[A-Za-z$_][0-9A-Za-z$_]*",
+        d = { className: "subst", begin: /#\{/, end: /\}/, keywords: u },
+        _ = [
             e.BINARY_NUMBER_MODE,
-            e.inherit(e.C_NUMBER_MODE, {
-                starts: {
-                    end: "(\\s*/)?",
-                    relevance: 0,
-                },
-            }),
+            e.inherit(e.C_NUMBER_MODE, { starts: { end: "(\\s*/)?", relevance: 0 } }),
             {
                 className: "string",
                 variants: [
-                    {
-                        begin: /'''/,
-                        end: /'''/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        begin: /'/,
-                        end: /'/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                    {
-                        begin: /"""/,
-                        end: /"""/,
-                        contains: [e.BACKSLASH_ESCAPE, d],
-                    },
-                    {
-                        begin: /"/,
-                        end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE, d],
-                    },
+                    { begin: /'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE] },
+                    { begin: /'/, end: /'/, contains: [e.BACKSLASH_ESCAPE] },
+                    { begin: /"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, d] },
+                    { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, d] },
                 ],
             },
             {
                 className: "regexp",
                 variants: [
-                    {
-                        begin: "///",
-                        end: "///",
-                        contains: [d, e.HASH_COMMENT_MODE],
-                    },
-                    {
-                        begin: "//[gim]{0,3}(?=\\W)",
-                        relevance: 0,
-                    },
-                    {
-                        begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/,
-                    },
+                    { begin: "///", end: "///", contains: [d, e.HASH_COMMENT_MODE] },
+                    { begin: "//[gim]{0,3}(?=\\W)", relevance: 0 },
+                    { begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/ },
                 ],
             },
-            {
-                begin: "@" + u,
-            },
+            { begin: "@" + c },
             {
                 subLanguage: "javascript",
                 excludeBegin: !0,
                 excludeEnd: !0,
                 variants: [
-                    {
-                        begin: "```",
-                        end: "```",
-                    },
-                    {
-                        begin: "`",
-                        end: "`",
-                    },
+                    { begin: "```", end: "```" },
+                    { begin: "`", end: "`" },
                 ],
             },
         ];
-    d.contains = f;
-    let p = e.inherit(e.TITLE_MODE, {
-            begin: u,
-        }),
-        _ = "(\\(.*\\)\\s*)?\\B[-=]>",
+    d.contains = _;
+    let f = e.inherit(e.TITLE_MODE, { begin: c }),
+        p = "(\\(.*\\)\\s*)?\\B[-=]>",
         h = {
             className: "params",
             begin: "\\([^\\(]",
             returnBegin: !0,
-            contains: [
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    keywords: c,
-                    contains: ["self"].concat(f),
-                },
-            ],
+            contains: [{ begin: /\(/, end: /\)/, keywords: u, contains: ["self"].concat(_) }],
         },
         m = {
-            variants: [
-                {
-                    match: [/class\s+/, u, /\s+extends\s+/, u],
-                },
-                {
-                    match: [/class\s+/, u],
-                },
-            ],
-            scope: {
-                2: "title.class",
-                4: "title.class.inherited",
-            },
-            keywords: c,
+            variants: [{ match: [/class\s+/, c, /\s+extends\s+/, c] }, { match: [/class\s+/, c] }],
+            scope: { 2: "title.class", 4: "title.class.inherited" },
+            keywords: u,
         };
     return {
         name: "CoffeeScript",
         aliases: ["coffee", "cson", "iced"],
-        keywords: c,
+        keywords: u,
         illegal: /\/\*/,
         contains: [
-            ...f,
+            ..._,
             e.COMMENT("###", "###"),
             e.HASH_COMMENT_MODE,
             {
                 className: "function",
-                begin: "^\\s*" + u + "\\s*=\\s*" + _,
+                begin: "^\\s*" + c + "\\s*=\\s*" + p,
                 end: "[-=]>",
                 returnBegin: !0,
-                contains: [p, h],
+                contains: [f, h],
             },
             {
                 begin: /[:\(,=]\s*/,
                 relevance: 0,
-                contains: [
-                    {
-                        className: "function",
-                        begin: _,
-                        end: "[-=]>",
-                        returnBegin: !0,
-                        contains: [h],
-                    },
-                ],
+                contains: [{ className: "function", begin: p, end: "[-=]>", returnBegin: !0, contains: [h] }],
             },
             m,
-            {
-                begin: u + ":",
-                end: ":",
-                returnBegin: !0,
-                returnEnd: !0,
-                relevance: 0,
-            },
+            { begin: c + ":", end: ":", returnBegin: !0, returnEnd: !0, relevance: 0 },
         ],
     };
 };

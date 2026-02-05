@@ -1,10 +1,5 @@
+"use strict";
 function r() {
-    return {
-        rowGroupProps: {
-            role: "rowgroup",
-        },
-    };
+    return { rowGroupProps: { role: "rowgroup" } };
 }
-n.d(t, {
-    T: () => r,
-});
+n.d(t, { T: () => r });

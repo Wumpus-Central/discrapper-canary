@@ -1,8 +1,8 @@
+"use strict";
 var n = r(1140),
     i = r(505122),
     o = r(586348),
     a = r(797686);
-
 function s(t, e) {
     for (var r = 1 / 0, n = 1 / 0, i = -1 / 0, o = -1 / 0, a = 0; a < t.length; a++) {
         var s = t[a];

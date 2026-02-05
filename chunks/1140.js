@@ -1,18 +1,15 @@
+"use strict";
 var n = r(797686),
     i = /[\uD800-\uDFFF]/;
-
 function o(t) {
     return 55296 <= t && t <= 57343;
 }
-
 function a(t) {
     return i.test(t);
 }
-
 function s(t, e) {
     return 1 + o(t.charCodeAt(e));
 }
-
 function u(t, e, r) {
     if (((e = e || 0), (r = void 0 === r ? 1 / 0 : r || 0), !a(t))) return t.substr(e, r);
     var n = t.length;

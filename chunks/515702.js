@@ -1,6 +1,5 @@
-n.d(t, {
-    p: () => i,
-});
+"use strict";
+n.d(t, { p: () => i });
 let r = new Map();
 class i {
     format(e) {
@@ -20,25 +19,15 @@ class i {
         let n = this.formatter.formatToParts(e),
             r = this.formatter.formatToParts(t);
         return [
-            ...n.map((e) => ({
-                ...e,
-                source: "startRange",
-            })),
-            {
-                type: "literal",
-                value: " – ",
-                source: "shared",
-            },
-            ...r.map((e) => ({
-                ...e,
-                source: "endRange",
-            })),
+            ...n.map((e) => ({ ...e, source: "startRange" })),
+            { type: "literal", value: " – ", source: "shared" },
+            ...r.map((e) => ({ ...e, source: "endRange" })),
         ];
     }
     resolvedOptions() {
         let e = this.formatter.resolvedOptions();
         return (
-            u() &&
+            c() &&
                 (this.resolvedHourCycle || (this.resolvedHourCycle = d(e.locale, this.options)),
                 (e.hourCycle = this.resolvedHourCycle),
                 (e.hour12 = "h11" === this.resolvedHourCycle || "h12" === this.resolvedHourCycle)),
@@ -50,23 +39,10 @@ class i {
         (this.formatter = s(e, t)), (this.options = t);
     }
 }
-let a = {
-    true: {
-        ja: "h11",
-    },
-    false: {},
-};
-
+let a = { true: { ja: "h11" }, false: {} };
 function s(e, t = {}) {
     if ("boolean" == typeof t.hour12 && l()) {
-        let n =
-                a[
-                    String(
-                        (t = {
-                            ...t,
-                        }).hour12,
-                    )
-                ][e.split("-")[0]],
+        let n = a[String((t = { ...t }).hour12)][e.split("-")[0]],
             r = t.hour12 ? "h12" : "h23";
         (t.hourCycle = null != n ? n : r), delete t.hour12;
     }
@@ -82,41 +58,27 @@ function s(e, t = {}) {
     return r.set(n, i), i;
 }
 let o = null;
-
 function l() {
     return (
         null == o &&
             (o =
                 "24" ===
-                new Intl.DateTimeFormat("en-US", {
-                    hour: "numeric",
-                    hour12: !1,
-                }).format(new Date(2020, 2, 3, 0))),
+                new Intl.DateTimeFormat("en-US", { hour: "numeric", hour12: !1 }).format(new Date(2020, 2, 3, 0))),
         o
     );
 }
-let c = null;
-
-function u() {
+let u = null;
+function c() {
     return (
-        null == c &&
-            (c =
-                "h12" ===
-                new Intl.DateTimeFormat("fr", {
-                    hour: "numeric",
-                    hour12: !1,
-                }).resolvedOptions().hourCycle),
-        c
+        null == u &&
+            (u = "h12" === new Intl.DateTimeFormat("fr", { hour: "numeric", hour12: !1 }).resolvedOptions().hourCycle),
+        u
     );
 }
-
 function d(e, t) {
     if (!t.timeStyle && !t.hour) return;
     e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, "");
-    let n = s((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), {
-            ...t,
-            timeZone: void 0,
-        }),
+    let n = s((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), { ...t, timeZone: void 0 }),
         r = parseInt(n.formatToParts(new Date(2020, 2, 3, 0)).find((e) => "hour" === e.type).value, 10),
         i = parseInt(n.formatToParts(new Date(2020, 2, 3, 23)).find((e) => "hour" === e.type).value, 10);
     if (0 === r && 23 === i) return "h23";

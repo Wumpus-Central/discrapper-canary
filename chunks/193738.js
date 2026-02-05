@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => f,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,25 +7,22 @@ var i = n(311907),
     s = n(961350),
     o = n(994500),
     l = n(697250),
-    c = n(102951),
-    u = n(652215),
+    u = n(102951),
+    c = n(652215),
     d = n(996988);
-
-function f(e) {
+function _(e) {
     let { user: t, themeType: n } = e,
-        { newestAnalyticsLocation: f } = (0, a.Ay)(),
-        p = (0, i.bG)([s.default], () => s.default.getId() === t.id),
-        _ = (0, i.bG)([o.A], () => o.A.getRelationshipType(t.id)),
+        { newestAnalyticsLocation: _ } = (0, a.Ay)(),
+        f = (0, i.bG)([s.default], () => s.default.getId() === t.id),
+        p = (0, i.bG)([o.A], () => o.A.getRelationshipType(t.id)),
         {
             gameFriends: h,
             hasOutgoingPendingGameFriends: m,
             hasIncomingPendingGameFriends: g,
-        } = (0, c.J)({
-            userId: t.id,
-        }),
+        } = (0, u.J)({ userId: t.id }),
         E = h.length > 0 || m || g;
-    if (null == t || t.bot || p || _ === u.eA$.BLOCKED) return null;
-    if (_ === u.eA$.NONE && E)
+    if (null == t || t.bot || f || p === c.eA$.BLOCKED) return null;
+    if (p === c.eA$.NONE && E)
         return n === d.d.MODAL
             ? null
             : (0, r.jsx)(l.VI, {
@@ -34,23 +30,16 @@ function f(e) {
                   gameFriends: h,
                   hasOutgoingPendingGameFriends: m,
                   hasIncomingPendingGameFriends: g,
-                  analyticsLocation: f,
+                  analyticsLocation: _,
               });
-    switch (_) {
-        case u.eA$.FRIEND:
-        case u.eA$.PENDING_INCOMING:
-        case u.eA$.PENDING_OUTGOING:
-            if (n === d.d.MODAL && _ !== u.eA$.FRIEND) return null;
-            return (0, r.jsx)(l.bc, {
-                user: t,
-                relationshipType: _,
-                analyticsLocation: f,
-            });
+    switch (p) {
+        case c.eA$.FRIEND:
+        case c.eA$.PENDING_INCOMING:
+        case c.eA$.PENDING_OUTGOING:
+            if (n === d.d.MODAL && p !== c.eA$.FRIEND) return null;
+            return (0, r.jsx)(l.bc, { user: t, relationshipType: p, analyticsLocation: _ });
         default:
             if (n === d.d.MODAL) return null;
-            return (0, r.jsx)(l.SE, {
-                userId: t.id,
-                analyticsLocation: f,
-            });
+            return (0, r.jsx)(l.SE, { userId: t.id, analyticsLocation: _ });
     }
 }

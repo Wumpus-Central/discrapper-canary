@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
 r = {
     dateRange: (e) => `${e.startDate} \u{625}\u{644}\u{649} ${e.endDate}`,

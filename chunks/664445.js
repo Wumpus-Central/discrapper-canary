@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fq: "ripple_c6367b",
     nM: "row_c6367b",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Du: "stepBody_b44961",
     fx: "invoiceSpinner_b44961",

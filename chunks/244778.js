@@ -1,228 +1,148 @@
-n.d(t, {
-    A: () => Y,
-}),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+n.d(t, { A: () => F }), n(321073);
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     o = n(582754),
     c = n(421380),
     d = n(397927),
     u = n(736653),
     _ = n(793574),
-    p = n(688810),
-    m = n(531260),
+    m = n(688810),
+    A = n(531260),
     g = n(160946),
-    A = n(287809),
-    f = n(166403),
-    h = n(927578),
-    b = n(40185),
-    E = n(89366),
-    x = n(411268),
-    O = n(422936),
-    C = n(234419),
-    I = n(863156),
-    T = n(194509),
-    S = n(396375),
-    j = n(511484),
+    E = n(287809),
+    h = n(166403),
+    p = n(927578),
+    C = n(40185),
+    x = n(89366),
+    T = n(411268),
+    I = n(422936),
+    S = n(234419),
+    f = n(863156),
+    N = n(194509),
+    b = n(396375),
+    R = n(511484),
     v = n(231265),
-    N = n(795269),
-    y = n(38720),
+    O = n(795269),
+    j = n(38720),
     P = n(788868),
-    R = n(985018),
-    D = n(562628),
-    w = n(196093),
-    L = n(979653),
-    M = n(255631),
+    y = n(985018),
+    L = n(562628),
+    D = n(196093),
+    M = n(979653),
+    G = n(255631),
     U = n(193023);
-
-function G(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
 let k = () => {
         let e = (0, v._)();
-        return (0, r.jsx)(N.ir, {
-            text: e,
-            className: D.QR,
-            colorOptions: N.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
-        });
+        return (0, i.jsx)(O.ir, { text: e, className: L.QR, colorOptions: O.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL });
     },
-    V = () =>
-        (0, r.jsx)("div", {
-            className: D.Wm,
-            children: (0, r.jsx)(d.Heading, {
-                className: D.uC,
+    B = () =>
+        (0, i.jsx)("div", {
+            className: L.Wm,
+            children: (0, i.jsx)(d.Heading, {
+                className: L.uC,
                 variant: "heading-deprecated-12/extrabold",
-                children: R.intl.string(R.t["o/oRJB"]),
+                children: y.intl.string(y.t["o/oRJB"]),
             }),
         }),
-    H = (e) => {
+    w = (e) => {
         let t,
-            { premiumType: n, isPremiumGroup: i } = e,
-            l = (0, u.Ay)();
-        if (i)
+            { premiumType: n, isPremiumGroup: s } = e,
+            r = (0, u.Ay)();
+        if (s)
             if (n === P.PremiumTypes.TIER_0)
-                return (0, r.jsx)(d.Heading, {
+                return (0, i.jsx)(d.Heading, {
                     variant: "display-md",
-                    className: D.dW,
-                    children: R.intl.string(R.t.tUbSDK),
+                    className: L.dW,
+                    children: y.intl.string(y.t.tUbSDK),
                 });
             else
-                return (0, r.jsx)(d.Heading, {
+                return (0, i.jsx)(d.Heading, {
                     variant: "display-md",
-                    className: D.dW,
-                    children: R.intl.string(R.t.Ipxkog),
+                    className: L.dW,
+                    children: y.intl.string(y.t.Ipxkog),
                 });
-        t = n === P.PremiumTypes.TIER_0 ? ((0, o.Mw)(l) ? w : L) : (0, o.Mw)(l) ? M : U;
-        let s = (0, h.Dd)(n);
-        return (0, r.jsx)("img", {
-            src: t,
-            className: D.wm,
-            alt: s,
-        });
+        t = n === P.PremiumTypes.TIER_0 ? ((0, o.Mw)(r) ? D : M) : (0, o.Mw)(r) ? G : U;
+        let a = (0, p.Dd)(n);
+        return (0, i.jsx)("img", { src: t, className: L.wm, alt: a });
     },
-    B = (e) => {
-        let { label: t, column1: n, column2: i } = e;
-        return (0, r.jsxs)("tr", {
-            className: s()(D.U1, D.YI, D.Y9),
+    H = (e) => {
+        let { label: t, column1: n, column2: s } = e;
+        return (0, i.jsxs)("tr", {
+            className: a()(L.U1, L.YI, L.Y9),
             children: [
-                (0, r.jsx)("th", {
-                    scope: "col",
-                    className: D.Cr,
-                    children: t,
-                }),
-                (0, r.jsx)("th", {
-                    scope: "col",
-                    className: D.e4,
-                    children: n,
-                }),
-                (0, r.jsx)("th", {
-                    scope: "col",
-                    className: s()(D.e4, D.Y9),
-                    children: i,
-                }),
+                (0, i.jsx)("th", { scope: "col", className: L.Cr, children: t }),
+                (0, i.jsx)("th", { scope: "col", className: L.e4, children: n }),
+                (0, i.jsx)("th", { scope: "col", className: a()(L.e4, L.Y9), children: s }),
             ],
         });
     },
-    F = (e) => {
+    V = (e) => {
         let {
             label: t,
             column1: n,
-            column2: i,
-            withBottomBorder: l = !0,
-            withTopBorderRadius: a = !1,
+            column2: s,
+            withBottomBorder: r = !0,
+            withTopBorderRadius: l = !1,
             withBottomBorderRadius: o = !1,
             buttonsRow: c = !1,
             shortRow: d = !1,
         } = e;
-        return (0, r.jsxs)("tr", {
-            className: s()(D.nM, {
-                [D.EE]: c,
-                [D.Y9]: a,
-                [D.kS]: o,
-                [D.YI]: l,
-                [D.vs]: d,
-            }),
+        return (0, i.jsxs)("tr", {
+            className: a()(L.nM, { [L.EE]: c, [L.Y9]: l, [L.kS]: o, [L.YI]: r, [L.vs]: d }),
             children: [
-                (0, r.jsx)("th", {
-                    scope: "row",
-                    className: D.nx,
-                    children: t,
-                }),
-                (0, r.jsx)("td", {
-                    className: s()(D.Hn, {
-                        [D.SD]: c,
-                    }),
-                    children: n,
-                }),
-                (0, r.jsx)("td", {
-                    className: s()(D.Hn, {
-                        [D.Y9]: a,
-                        [D.kS]: o,
-                        [D.SD]: c,
-                    }),
-                    children: i,
-                }),
+                (0, i.jsx)("th", { scope: "row", className: L.nx, children: t }),
+                (0, i.jsx)("td", { className: a()(L.Hn, { [L.SD]: c }), children: n }),
+                (0, i.jsx)("td", { className: a()(L.Hn, { [L.Y9]: l, [L.kS]: o, [L.SD]: c }), children: s }),
             ],
         });
     },
-    Y = (e) => {
-        var t;
-        let n,
+    F = (e) => {
+        let t,
             {
-                className: l,
-                hideCTAs: v = !1,
-                headingOverride: w,
-                hidePill: L = !1,
+                className: n,
+                hideCTAs: r = !1,
+                headingOverride: v,
+                hidePill: D = !1,
                 selectedPlanColumnClassName: M,
-                selectedPlanTier: U = P.PremiumTypes.TIER_2,
+                selectedPlanTier: G = P.PremiumTypes.TIER_2,
             } = e,
-            { analyticsLocations: Y } = (0, p.Ay)(_.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-            W = (0, a.bG)([f.A], () => f.A.hasFetchedSubscriptions()),
-            z = (0, g.Y)(P.T7),
-            K = (0, u.Ay)(),
-            Z = (0, o.qB)(K),
-            X = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
-            q = null != X && X.isPremiumWithPremiumGroup(),
-            J = (0, h.YE)(X, P.PremiumTypes.TIER_2),
-            Q = (0, C.V)(),
-            $ = null == Q || null == (t = Q.subscription_trial) ? void 0 : t.sku_id,
-            ee = (0, E.Us)(),
-            et = (0, O.O)(),
-            en = null != et && (0, j.U9)(et, P.pe.TIER_2),
-            er = (0, j.N1)(P.gD.PREMIUM_MONTH_TIER_2),
-            ei = "".concat(er, "/").concat((0, h.FJ)(P.WT.MONTH)),
-            el = (0, h.JM)(P.gD.PREMIUM_MONTH_TIER_0),
-            es = (0, h.JM)(P.gD.PREMIUM_MONTH_TIER_2),
-            ea = (0, m.A)(),
-            eo = (0, y.R)(el, es, en, ei, ea.fractionalState),
-            ec = (0, b.cg)(),
-            { enabled: ed } = x.K.useExperiment({
-                location: "PlanComparisonTable",
-            });
-        if (!W || !z) return null;
-        let eu = ed ? R.intl.string(R.t.XXENra) : R.intl.string(R.t.ED4UVD),
-            e_ = {
-                label: (0, r.jsx)(d.Heading, {
-                    className: D.__invalid_textColor,
+            { analyticsLocations: U } = (0, m.Ay)(_.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+            F = (0, l.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
+            Y = (0, g.Y)(P.T7),
+            W = (0, u.Ay)(),
+            z = (0, o.qB)(W),
+            K = (0, l.bG)([E.default], () => E.default.getCurrentUser()),
+            Z = null != K && K.isPremiumWithPremiumGroup(),
+            X = (0, p.YE)(K, P.PremiumTypes.TIER_2),
+            q = (0, S.V)(),
+            J = q?.subscription_trial?.sku_id,
+            Q = (0, x.Us)(),
+            $ = (0, I.O)(),
+            ee = null != $ && (0, R.U9)($, P.pe.TIER_2),
+            et = (0, R.N1)(P.gD.PREMIUM_MONTH_TIER_2),
+            en = `${et}/${(0, p.FJ)(P.WT.MONTH)}`,
+            ei = (0, p.JM)(P.gD.PREMIUM_MONTH_TIER_0),
+            es = (0, p.JM)(P.gD.PREMIUM_MONTH_TIER_2),
+            er = (0, A.A)(),
+            ea = (0, j.R)(ei, es, ee, en, er.fractionalState),
+            el = (0, C.cg)(),
+            { enabled: eo } = T.K.useExperiment({ location: "PlanComparisonTable" });
+        if (!F || !Y) return null;
+        let ec = eo ? y.intl.string(y.t.XXENra) : y.intl.string(y.t.ED4UVD),
+            ed = {
+                label: (0, i.jsx)(d.Heading, {
+                    className: L.__invalid_textColor,
                     variant: "heading-lg/extrabold",
-                    children: eu,
+                    children: ec,
                 }),
-                column1: (0, r.jsx)(H, {
-                    premiumType: P.PremiumTypes.TIER_0,
-                    isPremiumGroup: q,
-                }),
-                column2: (0, r.jsx)(H, {
-                    premiumType: P.PremiumTypes.TIER_2,
-                    isPremiumGroup: q,
-                }),
+                column1: (0, i.jsx)(w, { premiumType: P.PremiumTypes.TIER_0, isPremiumGroup: Z }),
+                column2: (0, i.jsx)(w, { premiumType: P.PremiumTypes.TIER_2, isPremiumGroup: Z }),
             };
-        v
-            ? eo.push({
+        r
+            ? ea.push({
                   label: null,
                   column1: null,
                   column2: null,
@@ -231,141 +151,95 @@ let k = () => {
                   buttonsRow: !1,
                   shortRow: !0,
               })
-            : eo.push({
+            : ea.push({
                   label: null,
-                  column1: (0, r.jsxs)(r.Fragment, {
+                  column1: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          $ === P.pe.TIER_2 || ec
-                              ? (0, r.jsx)(S.A, {
-                                    className: D.x6,
+                          J === P.pe.TIER_2 || el
+                              ? (0, i.jsx)(b.A, {
+                                    className: L.x6,
                                     subscriptionTier: P.pe.TIER_0,
                                     showIcon: !1,
                                     look: c.pR.OUTLINED,
-                                    color: Z ? c.XD.BRAND : c.XD.WHITE,
+                                    color: z ? c.XD.BRAND : c.XD.WHITE,
                                 })
-                              : (0, r.jsx)(S.A, {
-                                    className: D.x6,
-                                    subscriptionTier: P.pe.TIER_0,
-                                    showIcon: !1,
-                                }),
-                          ee === P.PremiumTypes.TIER_2 || null != $
+                              : (0, i.jsx)(b.A, { className: L.x6, subscriptionTier: P.pe.TIER_0, showIcon: !1 }),
+                          Q === P.PremiumTypes.TIER_2 || null != J
                               ? null
-                              : (0, r.jsx)(T.A, {
-                                    className: D.x6,
-                                    subscriptionTier: P.pe.TIER_0,
-                                }),
+                              : (0, i.jsx)(N.A, { className: L.x6, subscriptionTier: P.pe.TIER_0 }),
                       ],
                   }),
-                  column2: (0, r.jsxs)(r.Fragment, {
+                  column2: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          $ === P.pe.TIER_0
-                              ? (0, r.jsx)(S.A, {
-                                    className: D.x6,
+                          J === P.pe.TIER_0
+                              ? (0, i.jsx)(b.A, {
+                                    className: L.x6,
                                     subscriptionTier: P.pe.TIER_2,
                                     showIcon: !1,
                                     look: c.pR.OUTLINED,
-                                    color: Z ? c.XD.BRAND : c.XD.WHITE,
+                                    color: z ? c.XD.BRAND : c.XD.WHITE,
                                 })
-                              : (0, r.jsx)(S.A, {
-                                    className: D.x6,
+                              : (0, i.jsx)(b.A, {
+                                    className: L.x6,
                                     subscriptionTier: P.pe.TIER_2,
                                     showIcon: !1,
-                                    hasActivePromotion: ec,
+                                    hasActivePromotion: el,
                                 }),
-                          ee === P.PremiumTypes.TIER_0 || null != $
+                          Q === P.PremiumTypes.TIER_0 || null != J
                               ? null
-                              : (0, r.jsx)(T.A, {
-                                    className: D.x6,
-                                    subscriptionTier: P.pe.TIER_2,
-                                }),
+                              : (0, i.jsx)(N.A, { className: L.x6, subscriptionTier: P.pe.TIER_2 }),
                       ],
                   }),
                   withBottomBorder: !1,
                   withBottomBorderRadius: !0,
-                  buttonsRow: null == $,
+                  buttonsRow: null == J,
               }),
-            (n = L
+            (t = D
                 ? null
-                : null != $ || null != ee
-                  ? (0, r.jsx)(N.ir, {
-                        text: null != $ ? R.intl.string(R.t.IBYG5U) : R.intl.string(R.t.ce1v3V),
-                        className: D.ls,
+                : null != J || null != Q
+                  ? (0, i.jsx)(O.ir, {
+                        text: null != J ? y.intl.string(y.t.IBYG5U) : y.intl.string(y.t.ce1v3V),
+                        className: L.ls,
                         colorOptions:
-                            $ === P.pe.TIER_0
-                                ? Z
-                                    ? N.at.PREMIUM_TIER_0_GRADIENT_FILL
-                                    : N.at.PREMIUM_TIER_0_WHITE_FILL
-                                : Z
-                                  ? J
-                                      ? N.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL
-                                      : N.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
-                                  : N.at.PREMIUM_TIER_2_WHITE_FILL,
+                            J === P.pe.TIER_0
+                                ? z
+                                    ? O.at.PREMIUM_TIER_0_GRADIENT_FILL
+                                    : O.at.PREMIUM_TIER_0_WHITE_FILL
+                                : z
+                                  ? X
+                                      ? O.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                      : O.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                                  : O.at.PREMIUM_TIER_2_WHITE_FILL,
                     })
-                  : ec
-                    ? (0, r.jsx)(k, {})
-                    : (0, r.jsx)(V, {}));
-        let ep = $ === P.pe.TIER_0 || ee === P.PremiumTypes.TIER_0 || U === P.PremiumTypes.TIER_0;
-        return (0, r.jsx)(p.f5, {
-            value: Y,
-            children: (0, r.jsxs)("div", {
-                className: s()(D.zr, l),
+                  : el
+                    ? (0, i.jsx)(k, {})
+                    : (0, i.jsx)(B, {}));
+        let eu = J === P.pe.TIER_0 || Q === P.PremiumTypes.TIER_0 || G === P.PremiumTypes.TIER_0;
+        return (0, i.jsx)(m.f5, {
+            value: U,
+            children: (0, i.jsxs)("div", {
+                className: a()(L.zr, n),
                 "data-testid": "v2-marketing-page-comparison-table",
                 children: [
-                    (0, r.jsx)(d.Heading, {
-                        className: s()(D.Qw, D.__invalid_textColor),
+                    (0, i.jsx)(d.Heading, {
+                        className: a()(L.Qw, L.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: null != w ? w : R.intl.string(R.t.FIbMh9),
+                        children: v ?? y.intl.string(y.t.FIbMh9),
                     }),
-                    q &&
-                        (0, r.jsx)(I.A, {
-                            premiumGroupRole: X.premiumGroupRole,
-                            className: D.vg,
-                        }),
-                    (0, r.jsxs)("div", {
-                        className: D.wY,
+                    Z && (0, i.jsx)(f.A, { premiumGroupRole: K.premiumGroupRole, className: L.vg }),
+                    (0, i.jsxs)("div", {
+                        className: L.wY,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: s()(M, {
-                                    [D.A9]: ep,
-                                    [D.ce]: !ep && !q,
-                                }),
-                                children: !ep && n,
+                            (0, i.jsx)("div", {
+                                className: a()(M, { [L.A9]: eu, [L.ce]: !eu && !Z }),
+                                children: !eu && t,
                             }),
-                            (0, r.jsxs)("table", {
-                                className: D.tp,
+                            (0, i.jsxs)("table", {
+                                className: L.tp,
                                 children: [
-                                    (0, r.jsx)("thead", {
-                                        children: (0, r.jsx)(B, G({}, e_)),
-                                    }),
-                                    (0, r.jsx)("tbody", {
-                                        children: eo.map((e, t) => {
-                                            var n, r;
-                                            return (0, i.createElement)(
-                                                F,
-                                                ((n = G({}, e)),
-                                                (r = r =
-                                                    {
-                                                        key: t,
-                                                    }),
-                                                Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                                                    : (function (e, t) {
-                                                          var n = Object.keys(e);
-                                                          if (Object.getOwnPropertySymbols) {
-                                                              var r = Object.getOwnPropertySymbols(e);
-                                                              n.push.apply(n, r);
-                                                          }
-                                                          return n;
-                                                      })(Object(r)).forEach(function (e) {
-                                                          Object.defineProperty(
-                                                              n,
-                                                              e,
-                                                              Object.getOwnPropertyDescriptor(r, e),
-                                                          );
-                                                      }),
-                                                n),
-                                            );
-                                        }),
+                                    (0, i.jsx)("thead", { children: (0, i.jsx)(H, { ...ed }) }),
+                                    (0, i.jsx)("tbody", {
+                                        children: ea.map((e, t) => (0, s.createElement)(V, { ...e, key: t })),
                                     }),
                                 ],
                             }),

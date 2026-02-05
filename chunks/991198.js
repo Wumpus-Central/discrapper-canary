@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     S: "invoiceTable__25766",
     ac: "invoiceRow__25766",

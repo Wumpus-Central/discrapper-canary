@@ -27,97 +27,45 @@ e.exports = function (e) {
                 "ac asnp cat cd CFS chdir clc clear clhy cli clp cls clv cnsn compare copy cp cpi cpp curl cvpa dbp del diff dir dnsn ebp echo|0 epal epcsv epsn erase etsn exsn fc fhx fl ft fw gal gbp gc gcb gci gcm gcs gdr gerr ghy gi gin gjb gl gm gmo gp gps gpv group gsn gsnp gsv gtz gu gv gwmi h history icm iex ihy ii ipal ipcsv ipmo ipsn irm ise iwmi iwr kill lp ls man md measure mi mount move mp mv nal ndr ni nmo npssc nsn nv ogv oh popd ps pushd pwd r rbp rcjb rcsn rd rdr ren ri rjb rm rmdir rmo rni rnp rp rsn rsnp rujb rv rvpa rwmi sajb sal saps sasv sbp sc scb select set shcm si sl sleep sls sort sp spjb spps spsv start stz sujb sv swmi tee trcm type wget where wjb write",
         },
         a = /\w[\w\d]*((-)[\w\d]+)*/,
-        s = {
-            begin: "`[\\s\\S]",
-            relevance: 0,
-        },
+        s = { begin: "`[\\s\\S]", relevance: 0 },
         o = {
             className: "variable",
-            variants: [
-                {
-                    begin: /\$\B/,
-                },
-                {
-                    className: "keyword",
-                    begin: /\$this/,
-                },
-                {
-                    begin: /\$[\w\d][\w\d_:]*/,
-                },
-            ],
+            variants: [{ begin: /\$\B/ }, { className: "keyword", begin: /\$this/ }, { begin: /\$[\w\d][\w\d_:]*/ }],
         },
-        l = {
-            className: "literal",
-            begin: /\$(null|true|false)\b/,
+        l = { className: "literal", begin: /\$(null|true|false)\b/ },
+        u = {
+            className: "string",
+            variants: [
+                { begin: /"/, end: /"/ },
+                { begin: /@"/, end: /^"@/ },
+            ],
+            contains: [s, o, { className: "variable", begin: /\$[A-z]/, end: /[^A-z]/ }],
         },
         c = {
             className: "string",
             variants: [
-                {
-                    begin: /"/,
-                    end: /"/,
-                },
-                {
-                    begin: /@"/,
-                    end: /^"@/,
-                },
-            ],
-            contains: [
-                s,
-                o,
-                {
-                    className: "variable",
-                    begin: /\$[A-z]/,
-                    end: /[^A-z]/,
-                },
-            ],
-        },
-        u = {
-            className: "string",
-            variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                },
-                {
-                    begin: /@'/,
-                    end: /^'@/,
-                },
+                { begin: /'/, end: /'/ },
+                { begin: /@'/, end: /^'@/ },
             ],
         },
         d = {
             className: "doctag",
             variants: [
-                {
-                    begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/,
-                },
+                { begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/ },
                 {
                     begin: /\.(parameter|forwardhelptargetname|forwardhelpcategory|remotehelprunspace|externalhelp)\s+\S+/,
                 },
             ],
         },
-        f = e.inherit(e.COMMENT(null, null), {
+        _ = e.inherit(e.COMMENT(null, null), {
             variants: [
-                {
-                    begin: /#/,
-                    end: /$/,
-                },
-                {
-                    begin: /<#/,
-                    end: /#>/,
-                },
+                { begin: /#/, end: /$/ },
+                { begin: /<#/, end: /#>/ },
             ],
             contains: [d],
         }),
+        f = { className: "built_in", variants: [{ begin: "(".concat(n, ")+(-)[\\w\\d]+") }] },
         p = {
-            className: "built_in",
-            variants: [
-                {
-                    begin: "(".concat(n, ")+(-)[\\w\\d]+"),
-                },
-            ],
-        },
-        _ = {
             className: "class",
             beginKeywords: "class enum",
             end: /\s*[{]/,
@@ -133,57 +81,25 @@ e.exports = function (e) {
             returnBegin: !0,
             relevance: 0,
             contains: [
-                {
-                    begin: "function",
-                    relevance: 0,
-                    className: "keyword",
-                },
-                {
-                    className: "title",
-                    begin: a,
-                    relevance: 0,
-                },
-                {
-                    begin: /\(/,
-                    end: /\)/,
-                    className: "params",
-                    relevance: 0,
-                    contains: [o],
-                },
+                { begin: "function", relevance: 0, className: "keyword" },
+                { className: "title", begin: a, relevance: 0 },
+                { begin: /\(/, end: /\)/, className: "params", relevance: 0, contains: [o] },
             ],
         },
         m = {
             begin: /using\s/,
             end: /$/,
             returnBegin: !0,
-            contains: [
-                c,
-                u,
-                {
-                    className: "keyword",
-                    begin: /(using|assembly|command|module|namespace|type)/,
-                },
-            ],
+            contains: [u, c, { className: "keyword", begin: /(using|assembly|command|module|namespace|type)/ }],
         },
         g = {
             variants: [
-                {
-                    className: "operator",
-                    begin: "(".concat(r, ")\\b"),
-                },
-                {
-                    className: "literal",
-                    begin: /(-){1,2}[\w\d-]+/,
-                    relevance: 0,
-                },
+                { className: "operator", begin: "(".concat(r, ")\\b") },
+                { className: "literal", begin: /(-){1,2}[\w\d-]+/, relevance: 0 },
             ],
         },
-        E = {
-            className: "selector-tag",
-            begin: /@\B/,
-            relevance: 0,
-        },
-        b = {
+        E = { className: "selector-tag", begin: /@\B/, relevance: 0 },
+        A = {
             className: "function",
             begin: /\[.*\]\s*[\w]+[ ]??\(/,
             end: /$/,
@@ -196,13 +112,11 @@ e.exports = function (e) {
                     endsParent: !0,
                     relevance: 0,
                 },
-                e.inherit(e.TITLE_MODE, {
-                    endsParent: !0,
-                }),
+                e.inherit(e.TITLE_MODE, { endsParent: !0 }),
             ],
         },
-        y = [b, f, s, e.NUMBER_MODE, c, u, p, o, l, E],
-        O = {
+        I = [A, _, s, e.NUMBER_MODE, u, c, f, o, l, E],
+        T = {
             begin: /\[/,
             end: /\]/,
             excludeBegin: !0,
@@ -210,27 +124,19 @@ e.exports = function (e) {
             relevance: 0,
             contains: [].concat(
                 "self",
-                y,
-                {
-                    begin: "(" + t.join("|") + ")",
-                    className: "built_in",
-                    relevance: 0,
-                },
-                {
-                    className: "type",
-                    begin: /[\.\w\d]+/,
-                    relevance: 0,
-                },
+                I,
+                { begin: "(" + t.join("|") + ")", className: "built_in", relevance: 0 },
+                { className: "type", begin: /[\.\w\d]+/, relevance: 0 },
             ),
         };
     return (
-        b.contains.unshift(O),
+        A.contains.unshift(T),
         {
             name: "PowerShell",
             aliases: ["pwsh", "ps", "ps1"],
             case_insensitive: !0,
             keywords: i,
-            contains: y.concat(_, h, m, g, O),
+            contains: I.concat(p, h, m, g, T),
         }
     );
 };

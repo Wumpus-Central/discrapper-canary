@@ -1,23 +1,20 @@
+"use strict";
 n.d(t, {
     CV: () => s,
-    E9: () => A,
+    E9: () => y,
     EB: () => d,
-    Pl: () => O,
+    Pl: () => T,
     Wp: () => o,
     eB: () => l,
     fp: () => g,
     k8: () => h,
-    lT: () => _,
+    lT: () => p,
     pW: () => a,
     zL: () => E,
 });
 var r = n(476858),
     i = n(364242);
-let a = {
-        leftBoundary: "([^\\p{L}\\p{N}_]|^)",
-        rightBoundary: "(?=[^\\p{L}\\p{N}_]|$)",
-        flags: "iu",
-    },
+let a = { leftBoundary: "([^\\p{L}\\p{N}_]|^)", rightBoundary: "(?=[^\\p{L}\\p{N}_]|$)", flags: "iu" },
     s = {
         воскресенье: 0,
         воскресенья: 0,
@@ -110,7 +107,7 @@ let a = {
         дек: 12,
         "дек.": 12,
     },
-    c = {
+    u = {
         один: 1,
         одна: 1,
         одной: 1,
@@ -141,7 +138,7 @@ let a = {
         двенадцать: 12,
         двенадцати: 12,
     },
-    u = {
+    c = {
         первое: 1,
         первого: 1,
         второе: 2,
@@ -263,12 +260,11 @@ let a = {
         годика: "year",
         годиков: "year",
     },
-    f = `(?:${(0, r.uJ)(c)}|[0-9]+|[0-9]+\\.[0-9]+|пол|несколько|пар(?:ы|у)|\\s{0,3})`;
-
-function p(e) {
+    _ = `(?:${(0, r.uJ)(u)}|[0-9]+|[0-9]+\\.[0-9]+|пол|несколько|пар(?:ы|у)|\\s{0,3})`;
+function f(e) {
     let t = e.toLowerCase();
-    return void 0 !== c[t]
-        ? c[t]
+    return void 0 !== u[t]
+        ? u[t]
         : t.match(/несколько/)
           ? 3
           : t.match(/пол/)
@@ -279,15 +275,13 @@ function p(e) {
                 ? 1
                 : parseFloat(t);
 }
-let _ = `(?:${(0, r.uJ)(u)}|[0-9]{1,2}(?:го|ого|е|ое)?)`;
-
+let p = `(?:${(0, r.uJ)(c)}|[0-9]{1,2}(?:го|ого|е|ое)?)`;
 function h(e) {
     let t = e.toLowerCase();
-    return void 0 !== u[t] ? u[t] : parseInt(t);
+    return void 0 !== c[t] ? c[t] : parseInt(t);
 }
 let m = "(?:\\s+(?:году|года|год|г|г.))?",
     g = `(?:[1-9][0-9]{0,3}${m}\\s*(?:н.э.|до н.э.|н. э.|до н. э.)|[1-2][0-9]{3}${m}|[5-9][0-9]${m})`;
-
 function E(e) {
     if ((/(год|года|г|г.)/i.test(e) && (e = e.replace(/(год|года|г|г.)/i, "")), /(до н.э.|до н. э.)/i.test(e)))
         return -parseInt((e = e.replace(/(до н.э.|до н. э.)/i, "")));
@@ -295,19 +289,17 @@ function E(e) {
     let t = parseInt(e);
     return (0, i.D)(t);
 }
-let b = `(${f})\\s{0,3}(${(0, r.uJ)(d)})`,
-    y = RegExp(b, "i"),
-    O = (0, r.mb)("(?:(?:около|примерно)\\s{0,3})?", b);
-
-function A(e) {
+let A = `(${_})\\s{0,3}(${(0, r.uJ)(d)})`,
+    I = RegExp(A, "i"),
+    T = (0, r.mb)("(?:(?:около|примерно)\\s{0,3})?", A);
+function y(e) {
     let t = {},
         n = e,
-        r = y.exec(n);
-    for (; r; ) v(t, r), (n = n.substring(r[0].length).trim()), (r = y.exec(n));
+        r = I.exec(n);
+    for (; r; ) S(t, r), (n = n.substring(r[0].length).trim()), (r = I.exec(n));
     return t;
 }
-
-function v(e, t) {
-    let n = p(t[1]);
+function S(e, t) {
+    let n = f(t[1]);
     e[d[t[2].toLowerCase()]] = n;
 }

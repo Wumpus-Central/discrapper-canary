@@ -1,88 +1,57 @@
-a.d(t, {
-    default: () => u,
-});
-var n = a(627968),
-    i = a(64700),
-    l = a(397927),
-    s = a(975807),
-    d = a(95035),
-    r = a(400492),
-    o = a(985018),
-    p = a(654923);
+n.d(e, { default: () => b });
+var i = n(627968),
+    o = n(64700),
+    a = n(397927),
+    l = n(975807),
+    s = n(95035),
+    r = n(400492),
+    d = n(985018),
+    p = n(654923);
 let c = [
-    {
-        preBold: "That's pretty...",
-        bold: "fly!",
-    },
-    {
-        preBold: "On Point will make sure to",
-        bold: " tick ",
-        postBold: "a look at it!",
-    },
-    {
-        preBold: "You're...un",
-        bold: "bee ",
-        postBold: "lievable!",
-    },
+    { preBold: "That's pretty...", bold: "fly!" },
+    { preBold: "On Point will make sure to", bold: " tick ", postBold: "a look at it!" },
+    { preBold: "You're...un", bold: "bee ", postBold: "lievable!" },
 ];
-
-function b(e) {
-    let { punConfig: t } = e;
-    return (0, n.jsxs)(n.Fragment, {
-        children: [
-            t.preBold,
-            (0, n.jsx)("b", {
-                children: (0, n.jsx)("i", {
-                    children: t.bold,
-                }),
-            }),
-            t.postBold,
-        ],
+function u(t) {
+    let { punConfig: e } = t;
+    return (0, i.jsxs)(i.Fragment, {
+        children: [e.preBold, (0, i.jsx)("b", { children: (0, i.jsx)("i", { children: e.bold }) }), e.postBold],
     });
 }
-
-function u(e) {
-    let { transitionState: t, onClose: a, asanaTask: u } = e;
-    i.useEffect(() => {
+function b(t) {
+    let { transitionState: e, onClose: n, asanaTask: b } = t;
+    o.useEffect(() => {
         (0, r.Ak)("success", 0.1);
     }, []);
-    let h = i.useRef(c[Math.floor(Math.random() * c.length)]).current;
-    return (0, n.jsx)(l.EOs, {
+    let m = o.useRef(c[Math.floor(Math.random() * c.length)]).current;
+    return (0, i.jsx)(a.EOs, {
         "data-migration-pending": !0,
         className: p.Nk,
-        transitionState: t,
-        "aria-label": o.intl.string(o.t.mCCdwi),
+        transitionState: e,
+        "aria-label": d.intl.string(d.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
-        children: (0, n.jsxs)(l.$mQ, {
+        children: (0, i.jsxs)(a.$mQ, {
             "data-migration-pending": !0,
-            style: {
-                overflow: "hidden",
-                paddingRight: "0px",
-            },
+            style: { overflow: "hidden", paddingRight: "0px" },
             className: p.jE,
             paddingFix: !1,
             children: [
-                (0, n.jsx)(l.s_y, {
+                (0, i.jsx)(a.s_y, {
                     "data-migration-pending": !0,
                     onClick: () => {
-                        null == a || a();
+                        n?.();
                     },
                     className: p.b,
                 }),
-                (0, n.jsxs)(l.Text, {
+                (0, i.jsxs)(a.Text, {
                     className: p.KP,
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",
-                        (0, n.jsx)(d.A, {
-                            onClick: () => (0, s.A)(u.permalink_url),
-                            children: "bug",
-                        }),
+                        (0, i.jsx)(s.A, { onClick: () => (0, l.A)(b.permalink_url), children: "bug" }),
                         "!",
-                        (0, n.jsx)("br", {}),
-                        (0, n.jsx)(b, {
-                            punConfig: h,
-                        }),
+                        (0, i.jsx)("br", {}),
+                        (0, i.jsx)(u, { punConfig: m }),
                     ],
                 }),
             ],

@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     return function (t) {
         var n,
@@ -6,32 +7,25 @@ function r(e) {
             o = (s && e.matchPatterns[s]) || e.matchPatterns[e.defaultMatchWidth],
             l = t.match(o);
         if (!l) return null;
-        var c = l[0],
-            u = (s && e.parsePatterns[s]) || e.parsePatterns[e.defaultParseWidth],
-            d = Array.isArray(u)
-                ? a(u, function (e) {
-                      return e.test(c);
+        var u = l[0],
+            c = (s && e.parsePatterns[s]) || e.parsePatterns[e.defaultParseWidth],
+            d = Array.isArray(c)
+                ? a(c, function (e) {
+                      return e.test(u);
                   })
-                : i(u, function (e) {
-                      return e.test(c);
+                : i(c, function (e) {
+                      return e.test(u);
                   });
         return (
             (n = e.valueCallback ? e.valueCallback(d) : d),
-            {
-                value: (n = r.valueCallback ? r.valueCallback(n) : n),
-                rest: t.slice(c.length),
-            }
+            { value: (n = r.valueCallback ? r.valueCallback(n) : n), rest: t.slice(u.length) }
         );
     };
 }
-
 function i(e, t) {
     for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
 }
-
 function a(e, t) {
     for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

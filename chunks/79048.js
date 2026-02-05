@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Kk: "icon__5c799",
     oD: "channelsWrapper__5c799",

@@ -1,19 +1,13 @@
-i.d(l, {
-    default: () => a,
-});
+i.d(l, { default: () => a });
 var e = i(627968),
     t = i(64700),
     s = i(397927),
     r = i(442433),
     u = i(50268),
     c = i(985018);
-
 function a(n) {
     let { id: l, role: i, handleDeletePermission: a } = n,
-        d = (0, u.A)({
-            id: l,
-            label: null == i ? c.intl.string(c.t["/AXYnE"]) : c.intl.string(c.t.sMsaLg),
-        });
+        d = (0, u.A)({ id: l, label: null == i ? c.intl.string(c.t["/AXYnE"]) : c.intl.string(c.t.sMsaLg) });
     return (
         t.useEffect(() => {
             null == a && null == d && (0, r.Z_)();
@@ -32,17 +26,11 @@ function a(n) {
                             color: "danger",
                             label: null == i ? c.intl.string(c.t.hXfRwD) : c.intl.string(c.t["T+3Adg"]),
                             icon: s.ucK,
-                            leadingAccessory: {
-                                type: "icon",
-                                icon: s.ucK,
-                            },
+                            leadingAccessory: { type: "icon", icon: s.ucK },
                             action: a,
                         }),
                     }),
-                null != d &&
-                    (0, e.jsx)(s.rXV, {
-                        children: d,
-                    }),
+                null != d && (0, e.jsx)(s.rXV, { children: d }),
             ],
         })
     );

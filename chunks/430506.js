@@ -1,234 +1,183 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(321073);
-var r = n(627968),
-    l = n(64700),
-    a = n(158954),
-    i = n(311907),
-    o = n(827734),
-    s = n(397927),
-    c = n(565645),
-    u = n(222713),
-    d = n(57882),
-    p = n(7584),
-    m = n(263063),
-    f = n(71393),
-    O = n(486020),
-    b = n(985018),
-    y = n(622865),
-    h = n(450740),
-    j = n(756362),
-    g = n(626715),
-    A = n(427401);
-
-function v(e) {
+n.d(t, { A: () => f }), n(321073);
+var l = n(627968),
+    a = n(64700),
+    r = n(158954),
+    s = n(311907),
+    i = n(827734),
+    o = n(397927),
+    d = n(565645),
+    c = n(222713),
+    u = n(57882),
+    m = n(7584),
+    p = n(263063),
+    A = n(71393),
+    h = n(486020),
+    C = n(985018),
+    E = n(622865),
+    x = n(450740),
+    N = n(756362),
+    I = n(626715),
+    _ = n(427401);
+function f(e) {
     let { checkpointData: t } = e,
         {
             cardId: n,
-            numMessagesSent: v = 0,
-            totalVoiceMinutes: E = 0,
-            numEmojisSent: C = 0,
-            topEmoji: x,
-            topGame: N,
-            topGuild: I,
-            powerLevel: P,
-            powerLevelPercentile: S,
+            numMessagesSent: f = 0,
+            totalVoiceMinutes: g = 0,
+            numEmojisSent: T = 0,
+            topEmoji: v,
+            topGame: j,
+            topGuild: S,
+            powerLevel: O,
+            powerLevelPercentile: R,
         } = t,
-        _ = new Intl.NumberFormat(b.intl.currentLocale, {
+        y = new Intl.NumberFormat(C.intl.currentLocale, {
             notation: "compact",
             compactDisplay: "short",
             maximumFractionDigits: 2,
-        }).format(v),
-        T = new Intl.NumberFormat(b.intl.currentLocale, {
+        }).format(f),
+        b = new Intl.NumberFormat(C.intl.currentLocale, {
             notation: "compact",
             compactDisplay: "short",
             maximumFractionDigits: 2,
-        }).format(C),
-        R = (0, d.oO)(E),
-        w = (0, d.OW)(n),
-        D = u.f[n],
-        L = (0, s.rdh)(D.primaryColor).hex(),
-        k = (0, s.rdh)(D.secondaryColor).hex({
-            opacity: 0.2,
-        }),
-        U = (0, i.bG)([f.A], () => f.A.getGuild(null == I ? void 0 : I.guildId)),
-        M = new Intl.NumberFormat(b.intl.currentLocale, {
-            notation: "compact",
-            compactDisplay: "short",
-        }),
-        H = (0, d._V)(null != S ? S : 0),
-        K = (0, l.useMemo)(() => {
+        }).format(T),
+        P = (0, u.oO)(g),
+        L = (0, u.OW)(n),
+        D = c.f[n],
+        U = (0, o.rdh)(D.primaryColor).hex(),
+        k = (0, o.rdh)(D.secondaryColor).hex({ opacity: 0.2 }),
+        w = (0, s.bG)([A.A], () => A.A.getGuild(S?.guildId)),
+        M = new Intl.NumberFormat(C.intl.currentLocale, { notation: "compact", compactDisplay: "short" }),
+        H = (0, u._V)(R ?? 0),
+        K = (0, a.useMemo)(() => {
             let e = [];
-            e.push(A);
-            for (let t = 0; t < 8; t++) e.push(g);
-            return e.push(j), e;
+            e.push(_);
+            for (let t = 0; t < 8; t++) e.push(I);
+            return e.push(N), e;
         }, []);
-    return (0, r.jsxs)("div", {
-        className: h.kL,
-        style: {
-            backgroundColor: L,
-        },
+    return (0, l.jsxs)("div", {
+        className: x.kL,
+        style: { backgroundColor: U },
         children: [
-            (0, r.jsxs)("div", {
-                className: h.Nr,
+            (0, l.jsxs)("div", {
+                className: x.Nr,
                 children: [
-                    (0, r.jsx)("img", {
-                        src: w,
-                        alt: "",
-                        className: h.LY,
-                        style: {
-                            backgroundColor: L,
-                        },
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: h.M1,
+                    (0, l.jsx)("img", { src: L, alt: "", className: x.LY, style: { backgroundColor: U } }),
+                    (0, l.jsxs)("div", {
+                        className: x.M1,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: h.dJ,
+                            (0, l.jsxs)("div", {
+                                className: x.dJ,
                                 children: [
-                                    (0, r.jsx)(a.oyn, {
-                                        color: o.A.colors.BLACK,
-                                        size: "xs",
-                                    }),
-                                    (0, r.jsx)(a.EYj, {
-                                        variant: "text-sm/medium",
-                                        className: h.KA,
-                                        children: _,
-                                    }),
+                                    (0, l.jsx)(r.oyn, { color: i.A.colors.BLACK, size: "xs" }),
+                                    (0, l.jsx)(r.EYj, { variant: "text-sm/medium", className: x.KA, children: y }),
                                 ],
                             }),
-                            (0, r.jsxs)("div", {
-                                className: h.dJ,
+                            (0, l.jsxs)("div", {
+                                className: x.dJ,
                                 children: [
-                                    (0, r.jsx)(a.cNw, {
-                                        color: o.A.colors.BLACK,
-                                        size: "xs",
-                                    }),
-                                    (0, r.jsx)(a.EYj, {
-                                        variant: "text-sm/medium",
-                                        className: h.KA,
-                                        children: R,
-                                    }),
+                                    (0, l.jsx)(r.cNw, { color: i.A.colors.BLACK, size: "xs" }),
+                                    (0, l.jsx)(r.EYj, { variant: "text-sm/medium", className: x.KA, children: P }),
                                 ],
                             }),
-                            (0, r.jsxs)("div", {
-                                className: h.dJ,
+                            (0, l.jsxs)("div", {
+                                className: x.dJ,
                                 children: [
-                                    (0, r.jsx)(a.nm2, {
-                                        color: o.A.colors.BLACK,
-                                        size: "xs",
-                                    }),
-                                    (0, r.jsx)(a.EYj, {
-                                        variant: "text-sm/medium",
-                                        className: h.KA,
-                                        children: T,
-                                    }),
+                                    (0, l.jsx)(r.nm2, { color: i.A.colors.BLACK, size: "xs" }),
+                                    (0, l.jsx)(r.EYj, { variant: "text-sm/medium", className: x.KA, children: b }),
                                 ],
                             }),
-                            (0, r.jsx)("div", {
-                                className: h.dJ,
+                            (0, l.jsx)("div", {
+                                className: x.dJ,
                                 children:
-                                    null == x
-                                        ? (0, r.jsxs)(r.Fragment, {
+                                    null == v
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  (0, r.jsx)(a._7Z, {
-                                                      color: o.A.colors.BLACK,
-                                                      size: "xs",
-                                                  }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                  (0, l.jsx)(r._7Z, { color: i.A.colors.BLACK, size: "xs" }),
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
-                                                      children: b.intl.string(y.default["fn+gnp"]),
+                                                      className: x.KA,
+                                                      children: C.intl.string(E.default["fn+gnp"]),
                                                   }),
                                               ],
                                           })
-                                        : (0, r.jsxs)(r.Fragment, {
+                                        : (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  (0, r.jsx)(c.A, {
-                                                      emojiId: x.emojiId,
-                                                      emojiName: x.emojiName,
-                                                      className: h.iY,
+                                                  (0, l.jsx)(d.A, {
+                                                      emojiId: v.emojiId,
+                                                      emojiName: v.emojiName,
+                                                      className: x.iY,
                                                   }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
+                                                      className: x.KA,
                                                       children:
-                                                          null == x.emojiId
-                                                              ? p.Ay.convertSurrogateToName(x.emojiName)
-                                                              : ":".concat(x.emojiName, ":"),
+                                                          null == v.emojiId
+                                                              ? m.Ay.convertSurrogateToName(v.emojiName)
+                                                              : `:${v.emojiName}:`,
                                                   }),
                                               ],
                                           }),
                             }),
-                            (0, r.jsx)("div", {
-                                className: h.dJ,
+                            (0, l.jsx)("div", {
+                                className: x.dJ,
                                 children:
-                                    null == N
-                                        ? (0, r.jsxs)(r.Fragment, {
+                                    null == j
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  (0, r.jsx)(a._7Z, {
-                                                      color: o.A.colors.BLACK,
-                                                      size: "xs",
-                                                  }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                  (0, l.jsx)(r._7Z, { color: i.A.colors.BLACK, size: "xs" }),
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
-                                                      children: b.intl.string(y.default["26V/4h"]),
+                                                      className: x.KA,
+                                                      children: C.intl.string(E.default["26V/4h"]),
                                                   }),
                                               ],
                                           })
-                                        : (0, r.jsxs)(r.Fragment, {
+                                        : (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  (0, r.jsx)("img", {
-                                                      src: O.Ay.getApplicationIconURL({
-                                                          id: N.applicationId,
-                                                          icon: N.applicationImageId,
+                                                  (0, l.jsx)("img", {
+                                                      src: h.Ay.getApplicationIconURL({
+                                                          id: j.applicationId,
+                                                          icon: j.applicationImageId,
                                                       }),
                                                       alt: "",
-                                                      className: h.iY,
+                                                      className: x.iY,
                                                   }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
-                                                      children: N.applicationName,
+                                                      className: x.KA,
+                                                      children: j.applicationName,
                                                   }),
                                               ],
                                           }),
                             }),
-                            (0, r.jsx)("div", {
-                                className: h.dJ,
+                            (0, l.jsx)("div", {
+                                className: x.dJ,
                                 children:
-                                    null == I
-                                        ? (0, r.jsxs)(r.Fragment, {
+                                    null == S
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  (0, r.jsx)(a._7Z, {
-                                                      color: o.A.colors.BLACK,
-                                                      size: "xs",
-                                                  }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                  (0, l.jsx)(r._7Z, { color: i.A.colors.BLACK, size: "xs" }),
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
-                                                      children: b.intl.string(y.default.eoLmk1),
+                                                      className: x.KA,
+                                                      children: C.intl.string(E.default.eoLmk1),
                                                   }),
                                               ],
                                           })
-                                        : (0, r.jsxs)(r.Fragment, {
+                                        : (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  null != U
-                                                      ? (0, r.jsx)(m.A, {
-                                                            guild: U,
-                                                            size: m.A.Sizes.SMOL,
-                                                            className: h.iY,
+                                                  null != w
+                                                      ? (0, l.jsx)(p.A, {
+                                                            guild: w,
+                                                            size: p.A.Sizes.SMOL,
+                                                            className: x.iY,
                                                         })
-                                                      : (0, r.jsx)(a.RR9, {
-                                                            color: o.A.colors.BLACK,
-                                                            size: "xs",
-                                                        }),
-                                                  (0, r.jsx)(a.EYj, {
+                                                      : (0, l.jsx)(r.RR9, { color: i.A.colors.BLACK, size: "xs" }),
+                                                  (0, l.jsx)(r.EYj, {
                                                       variant: "text-sm/medium",
-                                                      className: h.KA,
-                                                      children: I.guildName,
+                                                      className: x.KA,
+                                                      children: S.guildName,
                                                   }),
                                               ],
                                           }),
@@ -237,54 +186,34 @@ function v(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: h.qr,
-                style: {
-                    backgroundColor: k,
-                },
-                children: (0, r.jsx)(a.DZT, {
+            (0, l.jsx)("div", {
+                className: x.qr,
+                style: { backgroundColor: k },
+                children: (0, l.jsx)(r.DZT, {
                     variant: "display-sm",
-                    className: h.DD,
-                    children: b.intl.string(y.default["CdU/PF"]),
+                    className: x.DD,
+                    children: C.intl.string(E.default["CdU/PF"]),
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: h.hC,
-                style: {
-                    backgroundColor: L,
-                },
+            (0, l.jsxs)("div", {
+                className: x.hC,
+                style: { backgroundColor: U },
                 children: [
-                    (0, r.jsx)("div", {
-                        className: h.TO,
+                    (0, l.jsx)("div", {
+                        className: x.TO,
                         children: K.map((e, t) =>
-                            (0, r.jsx)(
+                            (0, l.jsx)(
                                 "img",
-                                {
-                                    className: h.mG,
-                                    src: e,
-                                    width: 4,
-                                    alt: "",
-                                    style: {
-                                        opacity: t >= H ? 0.3 : 1,
-                                    },
-                                },
+                                { className: x.mG, src: e, width: 4, alt: "", style: { opacity: t >= H ? 0.3 : 1 } },
                                 t,
                             ),
                         ),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: h.JA,
+                    (0, l.jsxs)("div", {
+                        className: x.JA,
                         children: [
-                            (0, r.jsx)(a.EYj, {
-                                variant: "text-xs/normal",
-                                className: h.KA,
-                                children: "LVL",
-                            }),
-                            (0, r.jsx)(a.EYj, {
-                                variant: "text-xs/bold",
-                                className: h.KA,
-                                children: M.format(null != P ? P : 0),
-                            }),
+                            (0, l.jsx)(r.EYj, { variant: "text-xs/normal", className: x.KA, children: "LVL" }),
+                            (0, l.jsx)(r.EYj, { variant: "text-xs/bold", className: x.KA, children: M.format(O ?? 0) }),
                         ],
                     }),
                 ],

@@ -1,22 +1,13 @@
-n.d(t, {
-    FW: () => a,
-    Lu: () => s,
-    TU: () => u,
-    dv: () => l,
-    fT: () => d,
-    jD: () => o,
-    kx: () => c,
-    sm: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { FW: () => a, Lu: () => s, TU: () => c, dv: () => l, fT: () => d, jD: () => o, kx: () => u, sm: () => i });
 var r = n(698279);
 let i = "POLL_CREATION_MODAL_KEY",
     a = 1,
     s = 10,
     o = 300,
     l = 55,
-    c = 3,
-    u = 50;
+    u = 3,
+    c = 50;
 var d = (function (e) {
     return (
         (e[(e.ONE_HOUR = 1)] = "ONE_HOUR"),

@@ -1,218 +1,117 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(311907),
-    c = n(990078),
-    o = n(397927),
-    d = n(736653),
+    o = n(990078),
+    d = n(397927),
+    c = n(736653),
     u = n(573648),
-    f = n(587895),
+    m = n(587895),
     g = n(599119),
-    b = n(923121),
-    m = n(539916),
-    p = n(985018),
-    x = n(931136);
-
-function h(e) {
-    let { connection: t, index: l, onDragStart: h, onDragReset: j, onDragComplete: O, draggingId: y } = e,
-        v = (0, d.Ay)(),
+    x = n(923121),
+    h = n(539916),
+    _ = n(985018),
+    A = n(931136);
+function p(e) {
+    let { connection: t, index: l, onDragStart: p, onDragReset: f, onDragComplete: j, draggingId: N } = e,
+        E = (0, c.Ay)(),
         {
-            drag: A,
-            drop: E,
-            dragSourcePosition: N,
-            setIsDraggable: _,
+            drag: b,
+            drop: T,
+            dragSourcePosition: C,
+            setIsDraggable: I,
         } = (0, g.A)({
             type: "ONBOARDING_CONNECTION_CARD",
             index: l,
             optionId: t.id,
-            onDragStart: () => h(t.id),
-            onDragComplete: (e) => O(e),
-            onDragReset: () => j(),
+            onDragStart: () => p(t.id),
+            onDragComplete: (e) => j(e),
+            onDragReset: () => f(),
         }),
-        S = i.useCallback(() => {
-            (0, b.zN)(l);
+        v = s.useCallback(() => {
+            (0, x.zN)(l);
         }, [l]),
-        T = i.useCallback(() => {
-            (0, o.mMO)(async () => {
+        S = s.useCallback(() => {
+            (0, d.mMO)(async () => {
                 let { default: e } = await n.e("90194").then(n.bind(n, 566857));
-                return (n) => {
-                    var i, s;
-                    return (0, r.jsx)(
-                        e,
-                        ((i = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (s = s =
-                            {
-                                connection: t,
-                                index: l,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                              }),
-                        i),
-                    );
-                };
+                return (n) => (0, i.jsx)(e, { ...n, connection: t, index: l });
             });
         }, [t, l]),
-        I = t.connection_type === m.wZ.APPLICATION,
-        C = t.application_id,
-        P = (0, a.bG)([f.A], () => (I && null != C ? f.A.getApplication(C) : null), [I, C]),
-        w = i.useMemo(
+        y = t.connection_type === h.wZ.APPLICATION,
+        R = t.application_id,
+        O = (0, a.bG)([m.A], () => (y && null != R ? m.A.getApplication(R) : null), [y, R]),
+        G = s.useMemo(
             () =>
                 (function (e, t, n) {
-                    var r, i, l;
-                    if (e.connection_type === m.wZ.APPLICATION && null != e.application_id) {
-                        if (null != n)
-                            return {
-                                name: n.name,
-                                icon: null != (r = n.getIconURL(128)) ? r : null,
-                            };
+                    if (e.connection_type === h.wZ.APPLICATION && null != e.application_id) {
+                        if (null != n) return { name: n.name, icon: n.getIconURL(128) ?? null };
                     } else if (null != e.provider_id) {
                         let n = u.A.get(e.provider_id);
                         return null != n
-                            ? {
-                                  name: n.name,
-                                  icon:
-                                      "light" === t
-                                          ? null == (i = n.icon)
-                                              ? void 0
-                                              : i.lightPNG
-                                          : null == (l = n.icon)
-                                            ? void 0
-                                            : l.darkPNG,
-                              }
-                            : {
-                                  name: "Unknown Platform",
-                                  icon: null,
-                              };
+                            ? { name: n.name, icon: "light" === t ? n.icon?.lightPNG : n.icon?.darkPNG }
+                            : { name: "Unknown Platform", icon: null };
                     }
-                    return {
-                        name: p.intl.string(p.t.kFlgsx),
-                        icon: null,
-                    };
-                })(t, v, P),
-            [t, v, P],
+                    return { name: _.intl.string(_.t.kFlgsx), icon: null };
+                })(t, E, O),
+            [t, E, O],
         );
-    return (0, r.jsxs)("div", {
-        className: s()(x.Nr, {
-            [x.A]: null != N && l < N,
-            [x.Ze]: null != N && l > N,
-        }),
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
+    return (0, i.jsxs)("div", {
+        className: r()(A.Nr, { [A.A]: null != C && l < C, [A.Ze]: null != C && l > C }),
+        onMouseEnter: () => I(!0),
+        onMouseLeave: () => I(!1),
         ref: (e) => {
-            A(E(e));
+            b(T(e));
         },
         children: [
-            (0, r.jsx)("div", {
-                className: x.BU,
-                children: (0, r.jsx)(o.WP0, {
-                    size: "sm",
-                    color: "currentColor",
-                }),
-            }),
-            (0, r.jsxs)("div", {
-                className: x.hu,
+            (0, i.jsx)("div", { className: A.BU, children: (0, i.jsx)(d.WP0, { size: "sm", color: "currentColor" }) }),
+            (0, i.jsxs)("div", {
+                className: A.hu,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: x.Kk,
+                    (0, i.jsx)("div", {
+                        className: A.Kk,
                         children:
-                            null != w.icon
-                                ? (0, r.jsx)("img", {
-                                      src: w.icon,
-                                      alt: "",
-                                      width: 40,
-                                      height: 40,
-                                  })
-                                : (0, r.jsx)(o._xR, {
-                                      size: "custom",
-                                      width: 40,
-                                      height: 40,
-                                      color: "currentColor",
-                                  }),
+                            null != G.icon
+                                ? (0, i.jsx)("img", { src: G.icon, alt: "", width: 40, height: 40 })
+                                : (0, i.jsx)(d._xR, { size: "custom", width: 40, height: 40, color: "currentColor" }),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: x.P_,
+                    (0, i.jsxs)("div", {
+                        className: A.P_,
                         children: [
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-md/medium",
-                                color: "text-strong",
-                                children: w.name,
-                            }),
-                            (0, r.jsx)(o.Text, {
+                            (0, i.jsx)(d.Text, { variant: "text-md/medium", color: "text-strong", children: G.name }),
+                            (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children:
                                     null != t.description && t.description.length > 0
                                         ? t.description
-                                        : p.intl.string(p.t["4nNtsP"]),
+                                        : _.intl.string(_.t["4nNtsP"]),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: x.o1,
+            (0, i.jsxs)("div", {
+                className: A.o1,
                 children: [
-                    (0, r.jsx)(c.m, {
-                        text: p.intl.string(p.t.bt75uw),
-                        children: (0, r.jsx)(o.DUT, {
-                            className: x.r9,
-                            onClick: T,
-                            "aria-label": p.intl.string(p.t.bt75uw),
-                            children: (0, r.jsx)(o.R2l, {
-                                size: "xs",
-                                color: "currentColor",
-                            }),
+                    (0, i.jsx)(o.m, {
+                        text: _.intl.string(_.t.bt75uw),
+                        children: (0, i.jsx)(d.DUT, {
+                            className: A.r9,
+                            onClick: S,
+                            "aria-label": _.intl.string(_.t.bt75uw),
+                            children: (0, i.jsx)(d.R2l, { size: "xs", color: "currentColor" }),
                         }),
                     }),
-                    (0, r.jsx)(c.m, {
-                        text: p.intl.string(p.t.N86XcP),
-                        children: (0, r.jsx)(o.DUT, {
-                            className: x.DT,
-                            onClick: S,
-                            "aria-label": p.intl.string(p.t.N86XcP),
-                            children: (0, r.jsx)(o.ucK, {
-                                size: "xs",
-                                color: "currentColor",
-                            }),
+                    (0, i.jsx)(o.m, {
+                        text: _.intl.string(_.t.N86XcP),
+                        children: (0, i.jsx)(d.DUT, {
+                            className: A.DT,
+                            onClick: v,
+                            "aria-label": _.intl.string(_.t.N86XcP),
+                            children: (0, i.jsx)(d.ucK, { size: "xs", color: "currentColor" }),
                         }),
                     }),
                 ],

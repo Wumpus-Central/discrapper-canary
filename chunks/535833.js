@@ -1,6 +1,5 @@
-n.d(t, {
-    D: () => r,
-});
+"use strict";
+n.d(t, { D: () => r });
 let r = [
     "api_connection_error",
     "api_error",

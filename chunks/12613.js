@@ -1,39 +1,26 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
+n.d(t, { A: () => s });
 var l = n(627968);
 n(64700);
-var r = n(158954),
-    a = n(746305);
-let i = (e) => {
-        let { onChange: t, label: n, subtitle: i, selected: s } = e;
+var a = n(158954),
+    i = n(746305);
+let r = (e) => {
+        let { onChange: t, label: n, subtitle: r, selected: s } = e;
         return (0, l.jsx)("div", {
-            className: a.y,
-            children: (0, l.jsx)(r.Sc0, {
-                checked: s,
-                onChange: t,
-                label: n,
-                description: i,
-            }),
+            className: i.y,
+            children: (0, l.jsx)(a.Sc0, { checked: s, onChange: t, label: n, description: r }),
         });
     },
     s = (e) => {
-        let { element: t, state: n, onChange: r } = e;
-        if ((null == t ? void 0 : t.type) !== "checkbox") return null;
-        let { data: a } = t;
+        let { element: t, state: n, onChange: a } = e;
+        if (t?.type !== "checkbox") return null;
+        let { data: i } = t;
         return (0, l.jsx)("div", {
-            children: a.map((e, t) => {
-                let [a, s, o] = e;
+            children: i.map((e, t) => {
+                let [i, s, d] = e;
                 return (0, l.jsx)(
-                    i,
-                    {
-                        onChange: () => r(a, s),
-                        selected: a in n,
-                        label: s,
-                        subtitle: o,
-                    },
-                    "".concat(t, "+button"),
+                    r,
+                    { onChange: () => a(i, s), selected: i in n, label: s, subtitle: d },
+                    `${t}+button`,
                 );
             }),
         });

@@ -1,89 +1,30 @@
-r.d(t, {
-    default: () => u,
-});
-var n = r(627968),
-    o = r(64700),
-    c = r(397927),
-    a = r(442433),
-    i = r(545059);
-
-function u(e) {
-    let { groupId: t, onSelect: u } = e,
-        l = o.useCallback(() => {
-            (0, c.mMO)(async () => {
-                let { default: e } = await r.e("51080").then(r.bind(r, 519528));
-                return (r) => {
-                    var o, c;
-                    return (0, n.jsx)(
-                        e,
-                        ((o = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        }),
-                                    )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: n,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = n);
-                                    });
-                            }
-                            return e;
-                        })({}, r)),
-                        (c = c =
-                            {
-                                groupId: t,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
-                            : (function (e, t) {
-                                  var r = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      r.push.apply(r, n);
-                                  }
-                                  return r;
-                              })(Object(c)).forEach(function (e) {
-                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
-                              }),
-                        o),
-                    );
-                };
+a.d(t, { default: () => o });
+var l = a(627968),
+    n = a(64700),
+    r = a(397927),
+    d = a(442433),
+    u = a(545059);
+function o(e) {
+    let { groupId: t, onSelect: o } = e,
+        i = n.useCallback(() => {
+            (0, r.mMO)(async () => {
+                let { default: e } = await a.e("51080").then(a.bind(a, 519528));
+                return (a) => (0, l.jsx)(e, { ...a, groupId: t });
             }),
-                (0, a.Z_)();
+                (0, d.Z_)();
         }, [t]),
-        p = o.useCallback(() => {
-            i.A.deleteGroup(t), (0, a.Z_)();
+        s = n.useCallback(() => {
+            u.A.deleteGroup(t), (0, d.Z_)();
         }, [t]);
-    return (0, n.jsxs)(c.W1t, {
+    return (0, l.jsxs)(r.W1t, {
         "data-menu-migrated": !0,
         "aria-label": "Group Context Menu",
         navId: "group-context-menu",
-        onClose: a.Z_,
-        onSelect: u,
+        onClose: d.Z_,
+        onSelect: o,
         children: [
-            (0, n.jsx)(c.Drp, {
-                id: "edit",
-                label: "Edit Group",
-                action: l,
-            }),
-            (0, n.jsx)(c.Drp, {
-                id: "delete",
-                label: "Delete Group",
-                action: p,
-                color: "danger",
-            }),
+            (0, l.jsx)(r.Drp, { id: "edit", label: "Edit Group", action: i }),
+            (0, l.jsx)(r.Drp, { id: "delete", label: "Delete Group", action: s, color: "danger" }),
         ],
     });
 }

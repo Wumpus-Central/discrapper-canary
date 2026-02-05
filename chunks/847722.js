@@ -1,6 +1,5 @@
-n.d(t, {
-    default: () => y7,
-});
+"use strict";
+n.d(t, { default: () => y7 });
 var r,
     a,
     o = n(664326),
@@ -111,7 +110,7 @@ var r,
     e2 = n.n(e1),
     e4 = n(207110),
     e8 = n.n(e4),
-    e3 = n(804998),
+    e3 = n(582617),
     e6 = n.n(e3),
     e5 = n(954785),
     e9 = n.n(e5),
@@ -437,10 +436,7 @@ var r,
         "trustly.description1": "Pay directly from any of your bank accounts, backed by bank-level security",
         "trustly.description2": "No cards, no app download, no registration",
     },
-    tf = Object.freeze({
-        __proto__: null,
-        default: th,
-    }),
+    tf = Object.freeze({ __proto__: null, default: th }),
     tm = "en-US",
     ty = {
         ar: function () {
@@ -524,7 +520,6 @@ var r,
             return n.e("23291").then(n.bind(n, 127830));
         },
     };
-
 function tv(e, t) {
     var n = c()(e);
     if (d()) {
@@ -537,7 +532,6 @@ function tv(e, t) {
     }
     return n;
 }
-
 function tg(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -558,7 +552,6 @@ function tg(e) {
 var tb = function (e) {
     return e.toLowerCase().substring(0, 2);
 };
-
 function tA(e) {
     var t = e.replace("_", "-");
     if (/([a-z]{2})([-])([A-Z]{2})/.test(t)) return t;
@@ -570,7 +563,6 @@ function tA(e) {
     var i = [a.toLowerCase(), o.toUpperCase()].join("-");
     return 5 === i.length ? i : null;
 }
-
 function t_(e) {
     var t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
@@ -658,41 +650,18 @@ var tk = function (e, t) {
         TND: 1e3,
     },
     tN = {
-        RSD: {
-            minimumFractionDigits: 2,
-        },
-        AFN: {
-            minimumFractionDigits: 2,
-        },
-        ALL: {
-            minimumFractionDigits: 2,
-        },
-        IRR: {
-            minimumFractionDigits: 2,
-        },
-        LAK: {
-            minimumFractionDigits: 2,
-        },
-        LBP: {
-            minimumFractionDigits: 2,
-        },
-        MMK: {
-            minimumFractionDigits: 2,
-        },
-        SOS: {
-            minimumFractionDigits: 2,
-        },
-        SYP: {
-            minimumFractionDigits: 2,
-        },
-        YER: {
-            minimumFractionDigits: 2,
-        },
-        IQD: {
-            minimumFractionDigits: 3,
-        },
+        RSD: { minimumFractionDigits: 2 },
+        AFN: { minimumFractionDigits: 2 },
+        ALL: { minimumFractionDigits: 2 },
+        IRR: { minimumFractionDigits: 2 },
+        LAK: { minimumFractionDigits: 2 },
+        LBP: { minimumFractionDigits: 2 },
+        MMK: { minimumFractionDigits: 2 },
+        SOS: { minimumFractionDigits: 2 },
+        SYP: { minimumFractionDigits: 2 },
+        YER: { minimumFractionDigits: 2 },
+        IQD: { minimumFractionDigits: 3 },
     };
-
 function tx(e, t) {
     var n = c()(e);
     if (d()) {
@@ -705,7 +674,6 @@ function tx(e, t) {
     }
     return n;
 }
-
 function tP(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -727,7 +695,6 @@ var tR = function (e, t) {
     var n = tS[t] || 100;
     return ee()(String(e), 10) / n;
 };
-
 function tF(e, t) {
     var n = c()(e);
     if (d()) {
@@ -792,10 +759,7 @@ var tO = (function () {
                             var n =
                                     arguments.length > 2 && void 0 !== arguments[2]
                                         ? arguments[2]
-                                        : {
-                                              values: {},
-                                              count: 0,
-                                          },
+                                        : { values: {}, count: 0 },
                                 r = "".concat(t, "__plural"),
                                 a = function (e) {
                                     var n;
@@ -821,14 +785,7 @@ var tO = (function () {
                                 o = tR(a, n),
                                 i = t.replace("_", "-"),
                                 s = tN[n] ? tP(tP({}, r), tN[n]) : r,
-                                l = tP(
-                                    {
-                                        style: "currency",
-                                        currency: n,
-                                        currencyDisplay: "symbol",
-                                    },
-                                    s,
-                                );
+                                l = tP({ style: "currency", currency: n, currencyDisplay: "symbol" }, s);
                             try {
                                 return o.toLocaleString(i, l);
                             } catch (e) {
@@ -857,11 +814,7 @@ var tO = (function () {
                             }
                             return e;
                         })(
-                            {
-                                year: "numeric",
-                                month: "2-digit",
-                                day: "2-digit",
-                            },
+                            { year: "numeric", month: "2-digit", day: "2-digit" },
                             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         );
                         return new Date(e).toLocaleDateString(this.locale, t);
@@ -907,14 +860,12 @@ var tO = (function () {
                     });
             });
     });
-
 function tM() {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
         var t = (16 * Math.random()) | 0;
         return ("x" == e ? t : (3 & t) | 8).toString(16);
     });
 }
-
 function tT(e, t) {
     var n = c()(e);
     if (d()) {
@@ -927,7 +878,6 @@ function tT(e, t) {
     }
     return n;
 }
-
 function tB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -958,14 +908,7 @@ var tD = (function () {
             (0, w.A)(this, "_parentInstance", void 0),
             (0, w.A)(this, "resources", void 0),
             (this.props = this.formatProps(
-                tB(
-                    tB({}, this.constructor.defaultProps),
-                    {},
-                    {
-                        setStatusAutomatically: !0,
-                    },
-                    t,
-                ),
+                tB(tB({}, this.constructor.defaultProps), {}, { setStatusAutomatically: !0 }, t),
             )),
             (this._parentInstance = this.props._parentInstance),
             (this._node = null),
@@ -1006,27 +949,13 @@ var tD = (function () {
                         tB(
                             tB(
                                 tB(
-                                    tB(
-                                        {},
-                                        e && {
-                                            riskData: {
-                                                clientData: e,
-                                            },
-                                        },
-                                    ),
-                                    n && {
-                                        order: {
-                                            orderData: n.orderData,
-                                            pspReference: n.pspReference,
-                                        },
-                                    },
+                                    tB({}, e && { riskData: { clientData: e } }),
+                                    n && { order: { orderData: n.orderData, pspReference: n.pspReference } },
                                 ),
                                 r,
                             ),
                             {},
-                            {
-                                clientStateDataIndicator: !0,
-                            },
+                            { clientStateDataIndicator: !0 },
                         )
                     );
                 },
@@ -1125,28 +1054,14 @@ var tL,
     tY = el.fF.diffed,
     tQ = el.fF.__c,
     tZ = el.fF.unmount;
-
 function tJ(e, t) {
     el.fF.__h && el.fF.__h(tj, e, tH || t), (tH = 0);
-    var n =
-        tj.__H ||
-        (tj.__H = {
-            __: [],
-            __h: [],
-        });
-    return (
-        e >= n.__.length &&
-            n.__.push({
-                __V: tW,
-            }),
-        n.__[e]
-    );
+    var n = tj.__H || (tj.__H = { __: [], __h: [] });
+    return e >= n.__.length && n.__.push({ __V: tW }), n.__[e];
 }
-
 function tX(e) {
     return (tH = 1), t0(nn, e);
 }
-
 function t0(e, t, n) {
     var r = tJ(tV++, 2);
     if (
@@ -1199,33 +1114,26 @@ function t0(e, t, n) {
     }
     return r.__N || r.__;
 }
-
 function t1(e, t) {
     var n = tJ(tV++, 3);
     !el.fF.__s && nt(n.__H, t) && ((n.__ = e), (n.i = t), tj.__H.__h.push(n));
 }
-
 function t2(e, t) {
     var n = tJ(tV++, 4);
     !el.fF.__s && nt(n.__H, t) && ((n.__ = e), (n.i = t), tj.__h.push(n));
 }
-
 function t4(e) {
     return (
         (tH = 5),
         t8(function () {
-            return {
-                current: e,
-            };
+            return { current: e };
         }, [])
     );
 }
-
 function t8(e, t) {
     var n = tJ(tV++, 7);
     return nt(n.__H, t) ? ((n.__V = e()), (n.i = t), (n.__h = e), n.__V) : n.__;
 }
-
 function t3(e, t) {
     return (
         (tH = 8),
@@ -1234,13 +1142,11 @@ function t3(e, t) {
         }, t)
     );
 }
-
 function t6(e) {
     var t = tj.context[e.__c],
         n = tJ(tV++, 9);
     return (n.c = e), t ? (null == n.__ && ((n.__ = !0), t.sub(tj)), t.props.value) : e.__;
 }
-
 function t5() {
     for (var e; (e = tz.shift()); )
         if (e.__P && e.__H)
@@ -1323,18 +1229,15 @@ function t5() {
             t && el.fF.__e(t, n.__v));
     });
 var t9 = "function" == typeof requestAnimationFrame;
-
 function t7(e) {
     var t = tj,
         n = e.__c;
     "function" == typeof n && ((e.__c = void 0), n()), (tj = t);
 }
-
 function ne(e) {
     var t = tj;
     (e.__c = e.__()), (tj = t);
 }
-
 function nt(e, t) {
     return (
         !e ||
@@ -1344,13 +1247,11 @@ function nt(e, t) {
         })
     );
 }
-
 function nn(e, t) {
     return "function" == typeof t ? t(e) : t;
 }
 var nr = "https://checkoutshopper-live.adyen.com/checkoutshopper/",
     na = ["resourceContext", "extension"];
-
 function no(e, t) {
     var n = c()(e);
     if (d()) {
@@ -1363,7 +1264,6 @@ function no(e, t) {
     }
     return n;
 }
-
 function ni(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -1421,13 +1321,7 @@ var ns = (function () {
                         i = (0, _.A)(e, na);
                     return function (e) {
                         var n = ni(
-                            {
-                                extension: o,
-                                resourceContext: r,
-                                imageFolder: "logos/",
-                                parentFolder: "",
-                                name: e,
-                            },
+                            { extension: o, resourceContext: r, imageFolder: "logos/", parentFolder: "", name: e },
                             i,
                         );
                         return t.returnImage(n);
@@ -1441,28 +1335,14 @@ var ns = (function () {
                     key: "getImage",
                     value: function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        return this.getImageUrl(
-                            ni(
-                                ni({}, e),
-                                {},
-                                {
-                                    resourceContext: this.resourceContext,
-                                },
-                            ),
-                        );
+                        return this.getImageUrl(ni(ni({}, e), {}, { resourceContext: this.resourceContext }));
                     },
                 },
             ]),
             e
         );
     })(),
-    nl = (0, el.q6)({
-        i18n: new tO(),
-        loadingContext: "",
-        commonProps: {},
-        resources: new ns(),
-    });
-
+    nl = (0, el.q6)({ i18n: new tO(), loadingContext: "", commonProps: {}, resources: new ns() });
 function nc() {
     return t6(nl);
 }
@@ -1488,7 +1368,6 @@ var nu = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -1496,21 +1375,13 @@ var nu = (function (e) {
         return (
             (t = n.call.apply(n, M()((e = [this])).call(e, o))),
             (0, w.A)((0, ea.A)(t), "onClick", function (e) {
-                e.preventDefault(),
-                    t.props.disabled ||
-                        t.props.onClick(e, {
-                            complete: t.complete,
-                        });
+                e.preventDefault(), t.props.disabled || t.props.onClick(e, { complete: t.complete });
             }),
             (0, w.A)((0, ea.A)(t), "complete", function () {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e3;
-                t.setState({
-                    completed: !0,
-                }),
+                t.setState({ completed: !0 }),
                     eu()(function () {
-                        t.setState({
-                            completed: !1,
-                        });
+                        t.setState({ completed: !1 });
                     }, e);
             }),
             t
@@ -1560,56 +1431,30 @@ var nu = (function (e) {
                             ),
                         ),
                         v = {
-                            loading: (0, el.h)(tK, {
-                                size: "medium",
-                            }),
+                            loading: (0, el.h)(tK, { size: "medium" }),
                             redirect: (0, el.h)(
                                 "span",
-                                {
-                                    className: "adyen-checkout__button__content",
-                                },
-                                (0, el.h)(tK, {
-                                    size: "medium",
-                                    inline: !0,
-                                }),
+                                { className: "adyen-checkout__button__content" },
+                                (0, el.h)(tK, { size: "medium", inline: !0 }),
                                 h.get("payButton.redirecting"),
                             ),
                             default: (0, el.h)(
                                 "span",
-                                {
-                                    className: "adyen-checkout__button__content",
-                                },
+                                { className: "adyen-checkout__button__content" },
                                 f,
-                                (0, el.h)(
-                                    "span",
-                                    {
-                                        className: "adyen-checkout__button__text",
-                                    },
-                                    c,
-                                ),
+                                (0, el.h)("span", { className: "adyen-checkout__button__text" }, c),
                             ),
                         },
                         g = v[u] || v.default;
                     return i
                         ? (0, el.h)(
                               "a",
-                              {
-                                  className: y,
-                                  href: i,
-                                  disabled: o,
-                                  target: this.props.target,
-                                  rel: this.props.rel,
-                              },
+                              { className: y, href: i, disabled: o, target: this.props.target, rel: this.props.rel },
                               g,
                           )
                         : (0, el.h)(
                               "button",
-                              {
-                                  className: y,
-                                  type: "button",
-                                  disabled: o,
-                                  onClick: this.onClick,
-                              },
+                              { className: y, type: "button", disabled: o, onClick: this.onClick },
                               g,
                               "loading" !== u && "redirect" !== u && this.props.children,
                           );
@@ -1630,9 +1475,7 @@ var nu = (function (e) {
 });
 var nd = function (e, t) {
         return null != t && t.value && null != t && t.currency
-            ? e.amount(t.value, t.currency, {
-                  currencyDisplay: t.currencyDisplay || "symbol",
-              })
+            ? e.amount(t.value, t.currency, { currencyDisplay: t.currencyDisplay || "symbol" })
             : "";
     },
     np = function (e, t) {
@@ -1641,13 +1484,7 @@ var nd = function (e, t) {
     },
     nh = function (e) {
         var t = e.label;
-        return (0, el.h)(
-            "span",
-            {
-                className: "checkout-secondary-button__text",
-            },
-            t,
-        );
+        return (0, el.h)("span", { className: "checkout-secondary-button__text" }, t);
     },
     nf = ["amount", "secondaryAmount", "classNameModifiers", "label"],
     nm = function (e) {
@@ -1667,9 +1504,7 @@ var nd = function (e, t) {
                 !p && !l && o && i && c()(i).length
                     ? ((r = (n =
                           i && null != i && i.value && null != i && i.currency
-                              ? d.amount(i.value, i.currency, {
-                                    currencyDisplay: i.currencyDisplay || "symbol",
-                                })
+                              ? d.amount(i.value, i.currency, { currencyDisplay: i.currencyDisplay || "symbol" })
                               : "").length
                           ? "/ "
                           : ""),
@@ -1682,10 +1517,7 @@ var nd = function (e, t) {
                 classNameModifiers: M()((a = [])).call(a, (0, H.A)(void 0 === s ? [] : s), ["pay"]),
                 label: l || h,
             }),
-            f &&
-                (0, el.h)(nh, {
-                    label: f,
-                }),
+            f && (0, el.h)(nh, { label: f }),
         );
     },
     ny = ["action", "resultCode", "sessionData", "order", "sessionResult"],
@@ -1711,7 +1543,6 @@ var nd = function (e, t) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e, t, a) {
             var o;
             return (
@@ -1725,13 +1556,11 @@ var nd = function (e, t) {
         }
         return (0, C.A)(r);
     })((0, eh.A)(Error));
-
 function ng() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = arguments.length > 1 ? arguments[1] : void 0;
     return Object.prototype.hasOwnProperty.call(e, t);
 }
-
 function nb(e, t) {
     var n = c()(e);
     if (d()) {
@@ -1744,7 +1573,6 @@ function nb(e, t) {
     }
     return n;
 }
-
 function nA(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -1790,7 +1618,6 @@ var n_ = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t, a, o, i, s, l, c, u, d, p;
             return (
@@ -1810,9 +1637,7 @@ var n_ = (function (e) {
                     );
                 }),
                 (0, w.A)((0, ea.A)(p), "handleOrder", function (e) {
-                    p.updateParent({
-                        order: e.order,
-                    }),
+                    p.updateParent({ order: e.order }),
                         p.props.onPaymentCompleted && p.props.onPaymentCompleted(e, p.elementRef);
                 }),
                 (0, w.A)((0, ea.A)(p), "handleFinalResult", function (e) {
@@ -1874,12 +1699,7 @@ var n_ = (function (e) {
                     key: "onChange",
                     value: function () {
                         var e = this.isValid,
-                            t = {
-                                data: this.data,
-                                errors: this.state.errors,
-                                valid: this.state.valid,
-                                isValid: e,
-                            };
+                            t = { data: this.data, errors: this.state.errors, valid: this.state.valid, isValid: e };
                         return this.props.onChange && this.props.onChange(t, this.elementRef), e && this.onValid(), t;
                     },
                 },
@@ -1889,13 +1709,7 @@ var n_ = (function (e) {
                         var e = this;
                         this.props.isInstantPayment && this.elementRef.closeActivePaymentMethod(),
                             (this.props.setStatusAutomatically && this.setElementStatus("loading"), this.props.onSubmit)
-                                ? this.props.onSubmit(
-                                      {
-                                          data: this.data,
-                                          isValid: this.isValid,
-                                      },
-                                      this.elementRef,
-                                  )
+                                ? this.props.onSubmit({ data: this.data, isValid: this.isValid }, this.elementRef)
                                 : this._parentInstance.session
                                   ? (this.props.beforeSubmit
                                         ? new (B())(function (t, n) {
@@ -1918,9 +1732,7 @@ var n_ = (function (e) {
                 {
                     key: "onValid",
                     value: function () {
-                        var e = {
-                            data: this.data,
-                        };
+                        var e = { data: this.data };
                         return this.props.onValid && this.props.onValid(e, this.elementRef), e;
                     },
                 },
@@ -2000,9 +1812,7 @@ var n_ = (function (e) {
                             nA(
                                 nA(nA({}, this.elementRef.props), t),
                                 {},
-                                {
-                                    onAdditionalDetails: this.handleAdditionalDetails,
-                                },
+                                { onAdditionalDetails: this.handleAdditionalDetails },
                             ),
                         );
                         return n ? (this.unmount(), n.mount(this._node)) : null;
@@ -2102,7 +1912,6 @@ var n_ = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -2175,9 +1984,7 @@ var n_ = (function (e) {
                             src: r,
                             width: a,
                             height: o,
-                            style: {
-                                border: 0,
-                            },
+                            style: { border: 0 },
                             frameBorder: "0",
                             title: c,
                             referrerpolicy: "origin",
@@ -2221,13 +2028,7 @@ var nC = function (e, t, n) {
         };
     },
     nw = "deviceFingerprint",
-    nS = {
-        result: {
-            type: nw,
-            value: "df-timedOut",
-        },
-        errorCode: "timeout",
-    },
+    nS = { result: { type: nw, value: "df-timedOut" }, errorCode: "timeout" },
     nN = {
         timeout: "iframe loading timed out",
         wrongOrigin: "Result did not come from the expected origin",
@@ -2297,7 +2098,6 @@ var nC = function (e, t, n) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t;
             return (
@@ -2344,9 +2144,7 @@ var nC = function (e, t, n) {
                         var t = e.dfpURL;
                         return (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout-risk__device-fingerprint",
-                            },
+                            { className: "adyen-checkout-risk__device-fingerprint" },
                             (0, el.h)(nk, {
                                 name: "dfIframe",
                                 src: t,
@@ -2382,7 +2180,6 @@ var nC = function (e, t, n) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t, a, o;
             return (
@@ -2408,14 +2205,9 @@ var nC = function (e, t, n) {
                     key: "setStatusComplete",
                     value: function (e) {
                         var t = this;
-                        this.setState(
-                            {
-                                status: "complete",
-                            },
-                            function () {
-                                t.props.onComplete(e);
-                            },
-                        );
+                        this.setState({ status: "complete" }, function () {
+                            t.props.onComplete(e);
+                        });
                     },
                 },
                 {
@@ -2429,11 +2221,7 @@ var nC = function (e, t, n) {
                                   "div",
                                   {
                                       className: "adyen-checkout-risk__device-fingerprint--wrapper",
-                                      style: {
-                                          position: "absolute",
-                                          width: 0,
-                                          height: 0,
-                                      },
+                                      style: { position: "absolute", width: 0, height: 0 },
                                   },
                                   (0, el.h)(nR, {
                                       loadingContext: r,
@@ -2459,10 +2247,7 @@ var nC = function (e, t, n) {
             r
         );
     })();
-(0, w.A)(nF, "defaultProps", {
-    onComplete: function () {},
-    onError: function () {},
-});
+(0, w.A)(nF, "defaultProps", { onComplete: function () {}, onError: function () {} });
 var nO = {
     decode: function (e) {
         return (
@@ -2485,7 +2270,6 @@ var nO = {
         return !!e && !(e.length % 4) && window.btoa(window.atob(e)) === e;
     },
 };
-
 function nE(e, t) {
     var n = c()(e);
     if (d()) {
@@ -2498,7 +2282,6 @@ function nE(e, t) {
     }
     return n;
 }
-
 function nI(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -2538,7 +2321,6 @@ var nM = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         (0, k.A)(this, r),
             (t = n.call(this, e)),
@@ -2553,12 +2335,7 @@ var nM = (function (e) {
                         (0, w.A)(n, "components", e.components),
                         n),
                     );
-                t.setState({
-                    data: r,
-                    isValid: !0,
-                }),
-                    t.props.risk.onComplete(t.data),
-                    t.cleanUp();
+                t.setState({ data: r, isValid: !0 }), t.props.risk.onComplete(t.data), t.cleanUp();
             }),
             (0, w.A)((0, ea.A)(t), "onError", function (e) {
                 t.props.risk.onError(e), t.cleanUp();
@@ -2571,17 +2348,13 @@ var nM = (function (e) {
         var t,
             a = (0, w.A)({}, nw, null);
         return (
-            t.setState({
-                data: a,
-            }),
+            t.setState({ data: a }),
             !0 === t.props.risk.enabled &&
                 (document.querySelector(t.props.risk.node)
                     ? ((t.nodeRiskContainer = document.createElement("div")),
                       document.querySelector(t.props.risk.node).appendChild(t.nodeRiskContainer),
                       t.mount(t.nodeRiskContainer))
-                    : t.onError({
-                          message: "RiskModule node was not found",
-                      })),
+                    : t.onError({ message: "RiskModule node was not found" })),
             t
         );
     }
@@ -2590,13 +2363,7 @@ var nM = (function (e) {
             {
                 key: "formatProps",
                 value: function (e) {
-                    return nI(
-                        nI({}, e),
-                        {},
-                        {
-                            risk: nI(nI({}, r.defaultProps.risk), e.risk),
-                        },
-                    );
+                    return nI(nI({}, e), {}, { risk: nI(nI({}, r.defaultProps.risk), e.risk) });
                 },
             },
             {
@@ -2609,12 +2376,7 @@ var nM = (function (e) {
                 key: "data",
                 get: function () {
                     if (this.isValid) {
-                        var e = nI(
-                            {
-                                version: "1.0.0",
-                            },
-                            this.state.data,
-                        );
+                        var e = nI({ version: "1.0.0" }, this.state.data);
                         return nO.encode(j()(e));
                     }
                     return !1;
@@ -2643,7 +2405,6 @@ var nM = (function (e) {
         r
     );
 })();
-
 function nT(e) {
     var t,
         n = e.children,
@@ -2663,32 +2424,14 @@ function nT(e) {
                             return "adyen-checkout__fieldset--".concat(e);
                         }),
                     ),
-                    [
-                        {
-                            "adyen-checkout__fieldset--readonly": void 0 !== i && i,
-                        },
-                    ],
+                    [{ "adyen-checkout__fieldset--readonly": void 0 !== i && i }],
                 ),
             ),
         },
-        o &&
-            (0, el.h)(
-                "legend",
-                {
-                    className: "adyen-checkout__fieldset__title",
-                },
-                s.get(o),
-            ),
-        (0, el.h)(
-            "div",
-            {
-                className: "adyen-checkout__fieldset__fields",
-            },
-            n,
-        ),
+        o && (0, el.h)("legend", { className: "adyen-checkout__fieldset__title" }, s.get(o)),
+        (0, el.h)("div", { className: "adyen-checkout__fieldset__fields" }, n),
     );
 }
-
 function nB() {
     var e = nc().resources;
     return t3(function (t) {
@@ -2697,12 +2440,7 @@ function nB() {
 }
 (0, w.A)(nM, "type", "risk"),
     (0, w.A)(nM, "defaultProps", {
-        risk: {
-            enabled: !0,
-            onComplete: function () {},
-            onError: function () {},
-            node: "body",
-        },
+        risk: { enabled: !0, onComplete: function () {}, onError: function () {}, node: "body" },
     });
 var nD = function (e) {
         var t,
@@ -2711,13 +2449,7 @@ var nD = function (e) {
             a = e.alt,
             o = e.height,
             i = e.width,
-            s =
-                null ==
-                (t = nB()({
-                    imageFolder: "components/",
-                }))
-                    ? void 0
-                    : t(n);
+            s = null == (t = nB()({ imageFolder: "components/" })) ? void 0 : t(n);
         return (0, el.h)("img", {
             className: ep()("adyen-checkout__icon", void 0 === r ? "" : r),
             alt: void 0 === a ? "" : a,
@@ -2823,7 +2555,6 @@ var nX,
             )
         );
     };
-
 function rg(e, t) {
     var n = c()(e);
     if (d()) {
@@ -2836,7 +2567,6 @@ function rg(e, t) {
     }
     return n;
 }
-
 function rb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -2921,22 +2651,8 @@ var rA = function (e) {
                             d,
                         ),
                     "function" == typeof d && d(),
-                    p &&
-                        (0, el.h)(
-                            "span",
-                            {
-                                className: "adyen-checkout__label-adornment--end",
-                            },
-                            p,
-                        ),
-                    s &&
-                        (0, el.h)(
-                            "span",
-                            {
-                                className: "adyen-checkout__helper-text",
-                            },
-                            s,
-                        ),
+                    p && (0, el.h)("span", { className: "adyen-checkout__label-adornment--end" }, p),
+                    s && (0, el.h)("span", { className: "adyen-checkout__helper-text" }, s),
                 );
             },
             [d, i],
@@ -2965,20 +2681,11 @@ var rA = function (e) {
                         J()((n = (0, el.v2)(t))).call(n, function (e) {
                             var t = rb(
                                 rb(
-                                    {
-                                        isValid: u,
-                                        onFocusHandler: D,
-                                        onBlurHandler: L,
-                                        isInvalid: !!i,
-                                    },
-                                    h && {
-                                        uniqueId: x.current,
-                                    },
+                                    { isValid: u, onFocusHandler: D, onBlurHandler: L, isInvalid: !!i },
+                                    h && { uniqueId: x.current },
                                 ),
                                 {},
-                                {
-                                    addContextualElement: A,
-                                },
+                                { addContextualElement: A },
                             );
                             return (0, el.Ob)(e, t);
                         }),
@@ -2989,9 +2696,7 @@ var rA = function (e) {
                                     className:
                                         "adyen-checkout-input__inline-validation adyen-checkout-input__inline-validation--loading",
                                 },
-                                (0, el.h)(tK, {
-                                    size: "small",
-                                }),
+                                (0, el.h)(tK, { size: "small" }),
                             ),
                         u &&
                             !1 !== g &&
@@ -3001,10 +2706,7 @@ var rA = function (e) {
                                     className:
                                         "adyen-checkout-input__inline-validation adyen-checkout-input__inline-validation--valid",
                                 },
-                                (0, el.h)(nD, {
-                                    type: "checkmark",
-                                    alt: null == C ? void 0 : C.get("field.valid"),
-                                }),
+                                (0, el.h)(nD, { type: "checkmark", alt: null == C ? void 0 : C.get("field.valid") }),
                             ),
                         i &&
                             (0, el.h)(
@@ -3013,25 +2715,16 @@ var rA = function (e) {
                                     className:
                                         "adyen-checkout-input__inline-validation adyen-checkout-input__inline-validation--invalid",
                                 },
-                                (0, el.h)(nD, {
-                                    type: "field_error",
-                                    alt: null == C ? void 0 : C.get("error.title"),
-                                }),
+                                (0, el.h)(nD, { type: "field_error", alt: null == C ? void 0 : C.get("error.title") }),
                             ),
                     ),
                     A &&
                         (0, el.h)(
                             "span",
                             (0, er.A)(
-                                {
-                                    className: "adyen-checkout__error-text",
-                                },
-                                N && {
-                                    id: M()((r = "".concat(x.current))).call(r, re),
-                                },
-                                {
-                                    "aria-hidden": N ? null : "true",
-                                },
+                                { className: "adyen-checkout__error-text" },
+                                N && { id: M()((r = "".concat(x.current))).call(r, re) },
+                                { "aria-hidden": N ? null : "true" },
                             ),
                             i && "string" == typeof i && i.length ? i : null,
                         ),
@@ -3059,19 +2752,7 @@ var rA = function (e) {
                         "adyen-checkout__label--disabled": a,
                     }),
                 };
-            return s
-                ? (0, el.h)(
-                      "label",
-                      (0, er.A)(
-                          {},
-                          d,
-                          !l && {
-                              htmlFor: o && i,
-                          },
-                      ),
-                      c,
-                  )
-                : u(d, c, i);
+            return s ? (0, el.h)("label", (0, er.A)({}, d, !l && { htmlFor: o && i }), c) : u(d, c, i);
         }, []);
     return (0, el.h)(
         "div",
@@ -3082,10 +2763,7 @@ var rA = function (e) {
                 J()(r).call(r, function (e) {
                     return "adyen-checkout__field--".concat(e);
                 }),
-                {
-                    "adyen-checkout__field--error": i,
-                    "adyen-checkout__field--valid": u,
-                },
+                { "adyen-checkout__field--error": i, "adyen-checkout__field--valid": u },
             ),
         },
         (0, el.h)(
@@ -3122,11 +2800,7 @@ var r_ = function (e) {
             r = t.registrationNumber;
         return (0, el.h)(
             nT,
-            {
-                classNameModifiers: ["companyDetails"],
-                label: "companyDetails",
-                readonly: !0,
-            },
+            { classNameModifiers: ["companyDetails"], label: "companyDetails", readonly: !0 },
             n && "".concat(n, " "),
             r && "".concat(r, " "),
         );
@@ -3169,7 +2843,6 @@ var rN = {
         modes: ["blur"],
     },
 };
-
 function rx(e, t) {
     var n = c()(e);
     if (d()) {
@@ -3182,7 +2855,6 @@ function rx(e, t) {
     }
     return n;
 }
-
 function rP(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -3203,22 +2875,7 @@ function rP(e) {
 var rR = function (e) {
         var t = e.name,
             n = e.registrationNumber;
-        return rP(
-            {},
-            (t || n) && {
-                company: rP(
-                    rP(
-                        {},
-                        t && {
-                            name: t,
-                        },
-                    ),
-                    n && {
-                        registrationNumber: n,
-                    },
-                ),
-            },
-        );
+        return rP({}, (t || n) && { company: rP(rP({}, t && { name: t }), n && { registrationNumber: n }) });
     },
     rF = (function () {
         function e(t, n, r, a) {
@@ -3245,7 +2902,6 @@ var rR = function (e) {
             e
         );
     })();
-
 function rO(e, t) {
     var n = c()(e);
     if (d()) {
@@ -3258,7 +2914,6 @@ function rO(e, t) {
     }
     return n;
 }
-
 function rE(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -3373,7 +3028,6 @@ var rI = (function () {
             e
         );
     })();
-
 function rT(e, t) {
     var n = c()(e);
     if (d()) {
@@ -3386,7 +3040,6 @@ function rT(e, t) {
     }
     return n;
 }
-
 function rB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -3444,7 +3097,6 @@ var rD = function (e, t) {
             e,
         );
     };
-
 function rV(e) {
     var t = e.schema,
         n = e.defaultData,
@@ -3460,18 +3112,7 @@ function rV(e) {
                 };
             var t,
                 o,
-                i = r(
-                    {
-                        key: e,
-                        value: n[e],
-                        mode: "blur",
-                    },
-                    {
-                        state: {
-                            data: n,
-                        },
-                    },
-                ),
+                i = r({ key: e, value: n[e], mode: "blur" }, { state: { data: n } }),
                 s = (0, K.A)(i, 2),
                 l = s[0],
                 c = s[1];
@@ -3497,22 +3138,10 @@ function rV(e) {
                     fieldProblems: rB(rB({}, e.fieldProblems), {}, (0, w.A)({}, t, s)),
                 };
             },
-            {
-                data: {},
-                valid: {},
-                errors: {},
-                fieldProblems: {},
-            },
+            { data: {}, valid: {}, errors: {}, fieldProblems: {} },
         );
-    return {
-        schema: t,
-        data: i.data,
-        valid: i.valid,
-        errors: i.errors,
-        fieldProblems: i.fieldProblems,
-    };
+    return { schema: t, data: i.data, valid: i.valid, errors: i.errors, fieldProblems: i.fieldProblems };
 }
-
 function rj(e) {
     var t = e.rules,
         n = void 0 === t ? {} : t,
@@ -3537,17 +3166,7 @@ function rj(e) {
                 i = null == a ? void 0 : a[n],
                 s = i && "formatterFn" in i ? i.formatterFn : i,
                 l = s && "function" == typeof s ? s(null != r ? r : "", t) : r;
-            return [
-                l,
-                d.validate(
-                    {
-                        key: n,
-                        value: l,
-                        mode: o,
-                    },
-                    t,
-                ),
-            ];
+            return [l, d.validate({ key: n, value: l, mode: o }, t)];
         },
         h = t0(
             function (e, t) {
@@ -3563,29 +3182,11 @@ function rj(e) {
                     d = c || e.schema;
                 switch (n) {
                     case "setData":
-                        return rB(
-                            rB({}, e),
-                            {},
-                            {
-                                data: rB(rB({}, e.data), {}, (0, w.A)({}, r, a)),
-                            },
-                        );
+                        return rB(rB({}, e), {}, { data: rB(rB({}, e.data), {}, (0, w.A)({}, r, a)) });
                     case "setValid":
-                        return rB(
-                            rB({}, e),
-                            {},
-                            {
-                                valid: rB(rB({}, e.valid), {}, (0, w.A)({}, r, a)),
-                            },
-                        );
+                        return rB(rB({}, e), {}, { valid: rB(rB({}, e.valid), {}, (0, w.A)({}, r, a)) });
                     case "setErrors":
-                        return rB(
-                            rB({}, e),
-                            {},
-                            {
-                                errors: rB(rB({}, e.errors), {}, (0, w.A)({}, r, a)),
-                            },
-                        );
+                        return rB(rB({}, e), {}, { errors: rB(rB({}, e.errors), {}, (0, w.A)({}, r, a)) });
                     case "setFieldProblems":
                         return null !=
                             (b =
@@ -3625,16 +3226,7 @@ function rj(e) {
                             ? b
                             : e;
                     case "updateField":
-                        var h = p(
-                                {
-                                    key: r,
-                                    value: a,
-                                    mode: o,
-                                },
-                                {
-                                    state: e,
-                                },
-                            ),
+                        var h = p({ key: r, value: a, mode: o }, { state: e }),
                             f = (0, K.A)(h, 2),
                             m = f[0],
                             y = f[1],
@@ -3683,12 +3275,7 @@ function rj(e) {
                             S,
                             N,
                             x,
-                            R = rV({
-                                schema: i,
-                                defaultData: s,
-                                processField: p,
-                                fieldProblems: u,
-                            }),
+                            R = rV({ schema: i, defaultData: s, processField: p, fieldProblems: u }),
                             F = P()((C = e.schema)).call(C, function (e) {
                                 return !E()(i).call(i, e);
                             }),
@@ -3696,39 +3283,16 @@ function rj(e) {
                                 var n;
                                 return !E()((n = e.schema)).call(n, t);
                             }),
-                            I = {
-                                data: rD(e.data, O),
-                                errors: rD(e.errors, O),
-                                valid: rD(e.valid, O),
-                            },
+                            I = { data: rD(e.data, O), errors: rD(e.errors, O), valid: rD(e.valid, O) },
                             M = rL(rD(e.data, F), O, null, R.data, null == (S = e.local) ? void 0 : S.data),
                             T = rL(rD(e.valid, F), O, !1, R.valid, null == (N = e.local) ? void 0 : N.valid),
                             B = rL(rD(e.errors, F), O, null, R.errors, null == (x = e.local) ? void 0 : x.errors);
-                        return rB(
-                            rB({}, e),
-                            {},
-                            {
-                                schema: i,
-                                data: M,
-                                valid: T,
-                                errors: B,
-                                local: I,
-                            },
-                        );
+                        return rB(rB({}, e), {}, { schema: i, data: M, valid: T, errors: B, local: I });
                     case "validateForm":
                         var D = $()(d).call(
                             d,
                             function (t, n) {
-                                var r = p(
-                                        {
-                                            key: n,
-                                            value: e.data[n],
-                                            mode: "blur",
-                                        },
-                                        {
-                                            state: e,
-                                        },
-                                    ),
+                                var r = p({ key: n, value: e.data[n], mode: "blur" }, { state: e }),
                                     a = (0, K.A)(r, 2)[1];
                                 return {
                                     valid: rB(
@@ -3743,29 +3307,14 @@ function rj(e) {
                                     ),
                                 };
                             },
-                            {
-                                valid: e.valid,
-                                errors: e.errors,
-                            },
+                            { valid: e.valid, errors: e.errors },
                         );
-                        return rB(
-                            rB({}, e),
-                            {},
-                            {
-                                valid: D.valid,
-                                errors: D.errors,
-                            },
-                        );
+                        return rB(rB({}, e), {}, { valid: D.valid, errors: D.errors });
                     default:
                         throw Error("Undefined useForm action");
                 }
             },
-            {
-                defaultData: i,
-                schema: null != u ? u : [],
-                processField: p,
-                fieldProblems: l,
-            },
+            { defaultData: i, schema: null != u ? u : [], processField: p, fieldProblems: l },
             rV,
         ),
         f = (0, K.A)(h, 2),
@@ -3791,48 +3340,26 @@ function rj(e) {
             });
         }, []),
         b = t3(function (e, t) {
-            return y({
-                type: "setErrors",
-                key: e,
-                value: t,
-            });
+            return y({ type: "setErrors", key: e, value: t });
         }, []),
         A = t3(function (e, t) {
-            return y({
-                type: "setValid",
-                key: e,
-                value: t,
-            });
+            return y({ type: "setValid", key: e, value: t });
         }, []),
         _ = t3(function (e, t) {
-            return y({
-                type: "setData",
-                key: e,
-                value: t,
-            });
+            return y({ type: "setData", key: e, value: t });
         }, []),
         k = t3(
             function (e) {
-                return y({
-                    type: "setSchema",
-                    schema: e,
-                    defaultData: i,
-                });
+                return y({ type: "setSchema", schema: e, defaultData: i });
             },
             [m.schema],
         ),
         C = t3(function (e) {
-            return y({
-                type: "mergeForm",
-                formValue: e,
-            });
+            return y({ type: "mergeForm", formValue: e });
         }, []),
         S = t3(
             function (e) {
-                return y({
-                    type: "setFieldProblems",
-                    fieldProblems: e,
-                });
+                return y({ type: "setFieldProblems", fieldProblems: e });
             },
             [m.schema],
         );
@@ -3847,12 +3374,7 @@ function rj(e) {
             handleChangeFor: function (e, t) {
                 return function (n) {
                     var r = n.target ? ("checkbox" === n.target.type ? !m.data[e] : n.target.value) : n;
-                    y({
-                        type: "updateField",
-                        key: e,
-                        value: r,
-                        mode: t,
-                    });
+                    y({ type: "updateField", key: e, value: r, mode: t });
                 };
             },
             triggerValidation: g,
@@ -3873,7 +3395,6 @@ function rj(e) {
 }
 var rU = ["onCreateRef"],
     rq = ["classNameModifiers", "uniqueId", "isInvalid", "isValid"];
-
 function rK(e) {
     var t,
         n = e.onCreateRef,
@@ -3935,10 +3456,7 @@ function rK(e) {
             "adyen-checkout__input",
             ["adyen-checkout__input--".concat(u)],
             h,
-            {
-                "adyen-checkout__input--invalid": i,
-                "adyen-checkout__input--valid": s,
-            },
+            { "adyen-checkout__input--invalid": i, "adyen-checkout__input--valid": s },
             J()(o).call(o, function (e) {
                 return "adyen-checkout__input--".concat(e);
             }),
@@ -3947,48 +3465,31 @@ function rK(e) {
     var k = (0, _.A)(r, rq);
     return (0, el.h)(
         "input",
-        (0, er.A)(
-            {
-                id: d,
-            },
-            k,
-            {
-                "aria-required": k.required,
-                type: u,
-                className: A,
-                readOnly: void 0 === l ? null : l,
-                spellCheck: c,
-                autoCorrect: a,
-                "aria-describedby": M()((t = "".concat(d))).call(t, re),
-                "aria-invalid": i,
-                onInput: m,
-                onBlur: g,
-                onFocus: b,
-                onKeyUp: v,
-                onKeyPress: y,
-                disabled: p,
-                ref: f,
-            },
-        ),
+        (0, er.A)({ id: d }, k, {
+            "aria-required": k.required,
+            type: u,
+            className: A,
+            readOnly: void 0 === l ? null : l,
+            spellCheck: c,
+            autoCorrect: a,
+            "aria-describedby": M()((t = "".concat(d))).call(t, re),
+            "aria-invalid": i,
+            onInput: m,
+            onBlur: g,
+            onFocus: b,
+            onKeyUp: v,
+            onKeyPress: y,
+            disabled: p,
+            ref: f,
+        }),
     );
 }
-
 function rH(e) {
     return (0, el.h)(
         rK,
-        (0, er.A)(
-            {
-                classNameModifiers: ["large"],
-            },
-            e,
-            {
-                "aria-required": e.required,
-                type: "text",
-            },
-        ),
+        (0, er.A)({ classNameModifiers: ["large"] }, e, { "aria-required": e.required, type: "text" }),
     );
 }
-
 function rz(e, t) {
     var n = c()(e);
     if (d()) {
@@ -4001,7 +3502,6 @@ function rz(e, t) {
     }
     return n;
 }
-
 function rW(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -4019,12 +3519,8 @@ function rW(e) {
     }
     return e;
 }
-rK.defaultProps = {
-    type: "text",
-    classNameModifiers: [],
-};
+rK.defaultProps = { type: "text", classNameModifiers: [] };
 var rG = ["name", "registrationNumber"];
-
 function r$(e) {
     var t,
         n = e.label,
@@ -4033,11 +3529,7 @@ function r$(e) {
         o = e.requiredFields,
         i = e.visibility,
         s = nc().i18n,
-        l = rj({
-            schema: o,
-            rules: rW(rW({}, rN), e.validationRules),
-            defaultData: e.data,
-        }),
+        l = rj({ schema: o, rules: rW(rW({}, rN), e.validationRules), defaultData: e.data }),
         u = l.handleChangeFor,
         d = l.triggerValidation,
         p = l.data,
@@ -4062,30 +3554,17 @@ function r$(e) {
         t1(
             function () {
                 var t = rR(p);
-                e.onChange({
-                    data: t,
-                    valid: h,
-                    errors: f,
-                    isValid: m,
-                });
+                e.onChange({ data: t, valid: h, errors: f, isValid: m });
             },
             [p, h, f, m],
         ),
         "hidden" === i
             ? null
             : "readOnly" === i
-              ? (0, el.h)(
-                    r_,
-                    (0, er.A)({}, e, {
-                        data: p,
-                    }),
-                )
+              ? (0, el.h)(r_, (0, er.A)({}, e, { data: p }))
               : (0, el.h)(
                     nT,
-                    {
-                        classNameModifiers: [r],
-                        label: r,
-                    },
+                    { classNameModifiers: [r], label: r },
                     E()(o).call(o, "name") &&
                         (0, el.h)(
                             rA,
@@ -4142,11 +3621,7 @@ var rY = function (e) {
             o = t.telephoneNumber;
         return (0, el.h)(
             nT,
-            {
-                classNameModifiers: ["personalDetails"],
-                label: "personalDetails",
-                readonly: !0,
-            },
+            { classNameModifiers: ["personalDetails"], label: "personalDetails", readonly: !0 },
             n && "".concat(n, " "),
             r && "".concat(r, " "),
             a && (0, el.h)(el.FK, null, (0, el.h)("br", null), a),
@@ -4256,7 +3731,6 @@ var rY = function (e) {
             modes: ["blur"],
         },
     };
-
 function r2(e, t) {
     var n = c()(e);
     if (d()) {
@@ -4269,7 +3743,6 @@ function r2(e, t) {
     }
     return n;
 }
-
 function r4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -4300,38 +3773,16 @@ var r8 = function (e) {
                 r4(
                     {},
                     (t || n) && {
-                        shopperName: r4(
-                            r4(
-                                r4(
-                                    {},
-                                    t && {
-                                        firstName: t,
-                                    },
-                                ),
-                                n && {
-                                    lastName: n,
-                                },
-                            ),
-                            r && {
-                                gender: r,
-                            },
-                        ),
+                        shopperName: r4(r4(r4({}, t && { firstName: t }), n && { lastName: n }), r && { gender: r }),
                     },
                 ),
-                a && {
-                    dateOfBirth: r0(a),
-                },
+                a && { dateOfBirth: r0(a) },
             ),
-            o && {
-                shopperEmail: o,
-            },
+            o && { shopperEmail: o },
         ),
-        i && {
-            telephoneNumber: i,
-        },
+        i && { telephoneNumber: i },
     );
 };
-
 function r3(e) {
     var t = e.items,
         n = e.name,
@@ -4343,17 +3794,12 @@ function r3(e) {
         l = null == i ? void 0 : i.replace(/[0-9]/g, "").substring(0, eF()(i).call(i, "-"));
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__radio_group",
-        },
+        { className: "adyen-checkout__radio_group" },
         J()(t).call(t, function (t) {
             var i = rv(l);
             return (0, el.h)(
                 "div",
-                {
-                    key: t.id,
-                    className: "adyen-checkout__radio_group__input-wrapper",
-                },
+                { key: t.id, className: "adyen-checkout__radio_group__input-wrapper" },
                 (0, el.h)("input", {
                     id: i,
                     type: "radio",
@@ -4371,9 +3817,7 @@ function r3(e) {
                             "adyen-checkout__label__text",
                             "adyen-checkout__radio_group__label",
                             e.className,
-                            {
-                                "adyen-checkout__radio_group__label--invalid": o,
-                            },
+                            { "adyen-checkout__radio_group__label--invalid": o },
                         ]),
                         htmlFor: i,
                     },
@@ -4383,7 +3827,6 @@ function r3(e) {
         }),
     );
 }
-
 function r6(e) {
     var t = t8(rJ, []);
     return (0, el.h)(
@@ -4392,9 +3835,7 @@ function r6(e) {
             {},
             e,
             t
-                ? {
-                      type: "date",
-                  }
+                ? { type: "date" }
                 : {
                       onInput: function (t) {
                           var n = t.target.value;
@@ -4405,26 +3846,12 @@ function r6(e) {
         ),
     );
 }
-
 function r5(e) {
-    return (0, el.h)(
-        rK,
-        (0, er.A)({}, e, {
-            type: "email",
-            autoCapitalize: "off",
-        }),
-    );
+    return (0, el.h)(rK, (0, er.A)({}, e, { type: "email", autoCapitalize: "off" }));
 }
-
 function r9(e) {
-    return (0, el.h)(
-        rK,
-        (0, er.A)({}, e, {
-            type: "tel",
-        }),
-    );
+    return (0, el.h)(rK, (0, er.A)({}, e, { type: "tel" }));
 }
-
 function r7(e, t) {
     var n = c()(e);
     if (d()) {
@@ -4437,7 +3864,6 @@ function r7(e, t) {
     }
     return n;
 }
-
 function ae(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -4455,16 +3881,12 @@ function ae(e) {
     }
     return e;
 }
-r3.defaultProps = {
-    onChange: function () {},
-    items: [],
-};
+r3.defaultProps = { onChange: function () {}, items: [] };
 var at,
     an,
     ar,
     aa,
     ao = ["firstName", "lastName", "gender", "dateOfBirth", "shopperEmail", "telephoneNumber"];
-
 function ai(e) {
     var t,
         n = e.label,
@@ -4476,11 +3898,7 @@ function ai(e) {
         l = t4({});
     c()(l.current).length || null == (t = e.setComponentRef) || t.call(e, l.current);
     var u = t8(rJ, []),
-        d = rj({
-            schema: o,
-            rules: ae(ae({}, r1), e.validationRules),
-            defaultData: e.data,
-        }),
+        d = rj({ schema: o, rules: ae(ae({}, r1), e.validationRules), defaultData: e.data }),
         p = d.handleChangeFor,
         h = d.triggerValidation,
         f = d.data,
@@ -4506,33 +3924,20 @@ function ai(e) {
         t1(
             function () {
                 var t = r8(f);
-                e.onChange({
-                    data: t,
-                    valid: m,
-                    errors: y,
-                    isValid: v,
-                });
+                e.onChange({ data: t, valid: m, errors: y, isValid: v });
             },
             [f, m, y, v],
         ),
         "hidden" === i
             ? null
             : "readOnly" === i
-              ? (0, el.h)(
-                    rY,
-                    (0, er.A)({}, e, {
-                        data: f,
-                    }),
-                )
+              ? (0, el.h)(rY, (0, er.A)({}, e, { data: f }))
               : (0, el.h)(
                     el.FK,
                     null,
                     (0, el.h)(
                         nT,
-                        {
-                            classNameModifiers: ["personalDetails"],
-                            label: void 0 === n ? "" : n,
-                        },
+                        { classNameModifiers: ["personalDetails"], label: void 0 === n ? "" : n },
                         E()(o).call(o, "firstName") &&
                             (0, el.h)(
                                 rA,
@@ -4588,14 +3993,8 @@ function ai(e) {
                                     name: b("gender"),
                                     value: f.gender,
                                     items: [
-                                        {
-                                            id: "MALE",
-                                            name: "male",
-                                        },
-                                        {
-                                            id: "FEMALE",
-                                            name: "female",
-                                        },
+                                        { id: "MALE", name: "male" },
+                                        { id: "FEMALE", name: "female" },
                                     ],
                                     classNameModifiers: ["gender"],
                                     onInput: g("input"),
@@ -4708,11 +4107,7 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 ],
             ],
         },
-        BR: {
-            hasDataset: !0,
-            labels: (0, w.A)({}, ap, "state"),
-            placeholders: (0, w.A)({}, ap, "select.state"),
-        },
+        BR: { hasDataset: !0, labels: (0, w.A)({}, ap, "state"), placeholders: (0, w.A)({}, ap, "select.state") },
         CA: {
             hasDataset: !0,
             labels:
@@ -4787,12 +4182,7 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
             ],
         },
     },
-    am = {
-        default: {
-            labels: (0, w.A)({}, au, "zipCode"),
-            schema: [au],
-        },
-    },
+    am = { default: { labels: (0, w.A)({}, au, "zipCode"), schema: [au] } },
     ay = c()(af),
     av = function (e) {
         var t = e.data,
@@ -4805,11 +4195,7 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
             l = t.country;
         return (0, el.h)(
             nT,
-            {
-                classNameModifiers: [n],
-                label: n,
-                readonly: !0,
-            },
+            { classNameModifiers: [n], label: n, readonly: !0 },
             !!r && r,
             a && ", ".concat(a, ","),
             (0, el.h)("br", null),
@@ -4843,29 +4229,15 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 return r ? r(e) : e;
             },
         },
-        street: {
-            formatterFn: aA,
-        },
-        houseNumberOrName: {
-            formatterFn: aA,
-        },
-        city: {
-            formatterFn: aA,
-        },
+        street: { formatterFn: aA },
+        houseNumberOrName: { formatterFn: aA },
+        city: { formatterFn: aA },
     },
     ak = {
-        AT: {
-            postalCode: ag(4),
-        },
-        AU: {
-            postalCode: ag(4),
-        },
-        BE: {
-            postalCode: ag(4),
-        },
-        BG: {
-            postalCode: ag(4),
-        },
+        AT: { postalCode: ag(4) },
+        AU: { postalCode: ag(4) },
+        BE: { postalCode: ag(4) },
+        BG: { postalCode: ag(4) },
         BR: {
             postalCode: {
                 formatterFn: function (e) {
@@ -4877,45 +4249,16 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 maxlength: 9,
             },
         },
-        CA: {
-            postalCode: {
-                format: "A9A 9A9 or A9A9A9",
-                maxlength: 7,
-            },
-        },
-        CH: {
-            postalCode: ag(4),
-        },
-        CY: {
-            postalCode: ag(4),
-        },
-        CZ: {
-            postalCode: {
-                format: "999 99",
-                maxlength: 6,
-            },
-        },
-        DE: {
-            postalCode: ag(5),
-        },
-        DK: {
-            postalCode: {
-                format: "9999",
-                maxlength: 7,
-            },
-        },
-        EE: {
-            postalCode: ag(5),
-        },
-        ES: {
-            postalCode: ag(5),
-        },
-        FI: {
-            postalCode: ag(5),
-        },
-        FR: {
-            postalCode: ag(5),
-        },
+        CA: { postalCode: { format: "A9A 9A9 or A9A9A9", maxlength: 7 } },
+        CH: { postalCode: ag(4) },
+        CY: { postalCode: ag(4) },
+        CZ: { postalCode: { format: "999 99", maxlength: 6 } },
+        DE: { postalCode: ag(5) },
+        DK: { postalCode: { format: "9999", maxlength: 7 } },
+        EE: { postalCode: ag(5) },
+        ES: { postalCode: ag(5) },
+        FI: { postalCode: ag(5) },
+        FR: { postalCode: ag(5) },
         GB: {
             postalCode: {
                 formatterFn: function (e) {
@@ -4925,78 +4268,22 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 maxlength: 8,
             },
         },
-        GR: {
-            postalCode: {
-                format: "999 99",
-                maxlength: 6,
-            },
-        },
-        HR: {
-            postalCode: {
-                format: "[1-5]9999",
-                maxlength: 5,
-            },
-        },
-        HU: {
-            postalCode: ag(4),
-        },
-        IE: {
-            postalCode: {
-                format: "A99 A999",
-                maxlength: 8,
-            },
-        },
-        IS: {
-            postalCode: ag(3),
-        },
-        IT: {
-            postalCode: ag(5),
-        },
-        LI: {
-            postalCode: ag(4),
-        },
-        LT: {
-            postalCode: {
-                format: "9999 or 99999 or LT-99999",
-                maxlength: 8,
-            },
-        },
-        LU: {
-            postalCode: ag(4),
-        },
-        LV: {
-            postalCode: {
-                format: "9999 or LV-9999",
-                maxlength: 7,
-            },
-        },
-        MC: {
-            postalCode: {
-                format: "980NN",
-                maxlength: 5,
-            },
-        },
-        MT: {
-            postalCode: {
-                format: "AA99 or AAA99 or AA9999 or AAA9999",
-                maxlength: 8,
-            },
-        },
-        MY: {
-            postalCode: ag(5),
-        },
-        NL: {
-            postalCode: {
-                format: "9999AA",
-                maxlength: 7,
-            },
-        },
-        NZ: {
-            postalCode: ag(4),
-        },
-        NO: {
-            postalCode: ag(4),
-        },
+        GR: { postalCode: { format: "999 99", maxlength: 6 } },
+        HR: { postalCode: { format: "[1-5]9999", maxlength: 5 } },
+        HU: { postalCode: ag(4) },
+        IE: { postalCode: { format: "A99 A999", maxlength: 8 } },
+        IS: { postalCode: ag(3) },
+        IT: { postalCode: ag(5) },
+        LI: { postalCode: ag(4) },
+        LT: { postalCode: { format: "9999 or 99999 or LT-99999", maxlength: 8 } },
+        LU: { postalCode: ag(4) },
+        LV: { postalCode: { format: "9999 or LV-9999", maxlength: 7 } },
+        MC: { postalCode: { format: "980NN", maxlength: 5 } },
+        MT: { postalCode: { format: "AA99 or AAA99 or AA9999 or AAA9999", maxlength: 8 } },
+        MY: { postalCode: ag(5) },
+        NL: { postalCode: { format: "9999AA", maxlength: 7 } },
+        NZ: { postalCode: ag(4) },
+        NO: { postalCode: ag(4) },
         PL: {
             postalCode: {
                 formatterFn: function (e) {
@@ -5017,33 +4304,12 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 maxlength: 8,
             },
         },
-        RO: {
-            postalCode: ag(6),
-        },
-        SI: {
-            postalCode: {
-                format: "9999 or SI-9999",
-                maxlength: 7,
-            },
-        },
-        SE: {
-            postalCode: ag(5),
-        },
-        SG: {
-            postalCode: ag(6),
-        },
-        SK: {
-            postalCode: {
-                format: "99999 or SK-99999",
-                maxlength: 8,
-            },
-        },
-        JP: {
-            postalCode: {
-                format: "999-9999",
-                maxlength: 8,
-            },
-        },
+        RO: { postalCode: ag(6) },
+        SI: { postalCode: { format: "9999 or SI-9999", maxlength: 7 } },
+        SE: { postalCode: ag(5) },
+        SG: { postalCode: ag(6) },
+        SK: { postalCode: { format: "99999 or SK-99999", maxlength: 8 } },
+        JP: { postalCode: { format: "999-9999", maxlength: 8 } },
         US: {
             postalCode: {
                 formatterFn: function (e) {
@@ -5056,9 +4322,7 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
         },
     },
     aC = function (e) {
-        return {
-            pattern: new RegExp("\\d{".concat(e, "}")),
-        };
+        return { pattern: new RegExp("\\d{".concat(e, "}")) };
     },
     aw = function (e, t, n) {
         if (t) {
@@ -5066,9 +4330,7 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
                 ((n.postalCode.errorMessage = {
                     translationKey: "invalidFormatExpects",
                     translationObject: {
-                        values: {
-                            format: (null == (r = ak[t]) ? void 0 : r.postalCode.format) || null,
-                        },
+                        values: { format: (null == (r = ak[t]) ? void 0 : r.postalCode.format) || null },
                     },
                 }),
                 rC(e))
@@ -5084,72 +4346,38 @@ var as = ["street", "houseNumberOrName", "postalCode", "city", "stateOrProvince"
     aS = {
         AT: aC(4),
         AU: aC(4),
-        BE: {
-            pattern: /(?:(?:[1-9])(?:\d{3}))/,
-        },
+        BE: { pattern: /(?:(?:[1-9])(?:\d{3}))/ },
         BG: aC(4),
-        BR: {
-            pattern: /^\d{5}-?\d{3}$/,
-        },
-        CA: {
-            pattern: /(?:[ABCEGHJ-NPRSTVXY]\d[A-Z][ -]?\d[A-Z]\d)/,
-        },
-        CH: {
-            pattern: /[1-9]\d{3}/,
-        },
+        BR: { pattern: /^\d{5}-?\d{3}$/ },
+        CA: { pattern: /(?:[ABCEGHJ-NPRSTVXY]\d[A-Z][ -]?\d[A-Z]\d)/ },
+        CH: { pattern: /[1-9]\d{3}/ },
         CY: aC(4),
-        CZ: {
-            pattern: /\d{3}\s?\d{2}/,
-        },
+        CZ: { pattern: /\d{3}\s?\d{2}/ },
         DE: aC(5),
         DK: aC(4),
         EE: aC(5),
-        ES: {
-            pattern: /(?:0[1-9]|[1-4]\d|5[0-2])\d{3}/,
-        },
+        ES: { pattern: /(?:0[1-9]|[1-4]\d|5[0-2])\d{3}/ },
         FI: aC(5),
         FR: aC(5),
-        GB: {
-            pattern: /^([A-Za-z][A-Ha-hK-Yk-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$/,
-        },
+        GB: { pattern: /^([A-Za-z][A-Ha-hK-Yk-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$/ },
         GE: aC(4),
-        GR: {
-            pattern: /^\d{3}\s{0,1}\d{2}$/,
-        },
-        HR: {
-            pattern: /^([1-5])[0-9]{4}$/,
-        },
+        GR: { pattern: /^\d{3}\s{0,1}\d{2}$/ },
+        HR: { pattern: /^([1-5])[0-9]{4}$/ },
         HU: aC(4),
-        IE: {
-            pattern: /(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}/,
-        },
+        IE: { pattern: /(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}/ },
         IS: aC(3),
         IT: aC(5),
         LI: aC(4),
-        LT: {
-            pattern: /^(LT-\d{5})$/,
-        },
+        LT: { pattern: /^(LT-\d{5})$/ },
         LU: aC(4),
-        LV: {
-            pattern: /^(LV-)[0-9]{4}$/,
-        },
-        MC: {
-            pattern: /^980\d{2}$/,
-        },
-        MT: {
-            pattern: /^[A-Za-z]{3}\d{4}$/,
-        },
+        LV: { pattern: /^(LV-)[0-9]{4}$/ },
+        MC: { pattern: /^980\d{2}$/ },
+        MT: { pattern: /^[A-Za-z]{3}\d{4}$/ },
         MY: aC(5),
-        NL: {
-            pattern: /(?:NL-)?(?:[1-9]\d{3} ?(?:[A-EGHJ-NPRTVWXZ][A-EGHJ-NPRSTVWXZ]|S[BCEGHJ-NPRTVWXZ]))/,
-        },
+        NL: { pattern: /(?:NL-)?(?:[1-9]\d{3} ?(?:[A-EGHJ-NPRTVWXZ][A-EGHJ-NPRSTVWXZ]|S[BCEGHJ-NPRTVWXZ]))/ },
         NO: aC(4),
-        PL: {
-            pattern: /^\d{2}[-]{0,1}\d{3}$/,
-        },
-        PT: {
-            pattern: /^([1-9]\d{3})([- ]?(\d{3})? *)$/,
-        },
+        PL: { pattern: /^\d{2}[-]{0,1}\d{3}$/ },
+        PT: { pattern: /^([1-9]\d{3})([- ]?(\d{3})? *)$/ },
         RO: aC(6),
         SI: aC(4),
         SE: aC(5),
@@ -5229,25 +4457,19 @@ if (aI)
             function (e) {
                 return e && W()(aM).call(aM, Object.prototype.toString.call(e)) > -1;
             };
-
 function aB(e) {
     if (("string" != typeof e && (e = String(e)), /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(e) || "" === e))
         throw TypeError('Invalid character in header field name: "' + e + '"');
     return e.toLowerCase();
 }
-
 function aD(e) {
     return "string" != typeof e && (e = String(e)), e;
 }
-
 function aL(e) {
     var t = {
         next: function () {
             var t = e.shift();
-            return {
-                done: void 0 === t,
-                value: t,
-            };
+            return { done: void 0 === t, value: t };
         },
     };
     return (
@@ -5258,7 +4480,6 @@ function aL(e) {
         t
     );
 }
-
 function aV(e) {
     if (((this.map = {}), e instanceof aV))
         N()(e).call(
@@ -5287,12 +4508,10 @@ function aV(e) {
         );
     }
 }
-
 function aj(e) {
     if (e.bodyUsed) return B().reject(TypeError("Already read"));
     e.bodyUsed = !0;
 }
-
 function aU(e) {
     return new (B())(function (t, n) {
         (e.onload = function () {
@@ -5303,19 +4522,16 @@ function aU(e) {
             });
     });
 }
-
 function aq(e) {
     var t = new FileReader(),
         n = aU(t);
     return t.readAsArrayBuffer(e), n;
 }
-
 function aK(e) {
     if (em()(e)) return em()(e).call(e, 0);
     var t = new Uint8Array(e.byteLength);
     return t.set(new Uint8Array(e)), t.buffer;
 }
-
 function aH() {
     return (
         (this.bodyUsed = !1),
@@ -5452,7 +4668,6 @@ function aH() {
     }),
     aF && (aV.prototype[eL()] = eq()(aV.prototype));
 var az = ["DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT"];
-
 function aW(e, t) {
     if (!(this instanceof aW))
         throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
@@ -5489,7 +4704,6 @@ function aW(e, t) {
             : (this.url += (/\?/.test(this.url) ? "&" : "?") + "_=" + new Date().getTime());
     }
 }
-
 function aG(e) {
     var t,
         n = new FormData();
@@ -5505,7 +4719,6 @@ function aG(e) {
         n
     );
 }
-
 function a$(e, t) {
     if (!(this instanceof a$))
         throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
@@ -5519,9 +4732,7 @@ function a$(e, t) {
         this._initBody(e);
 }
 (aW.prototype.clone = function () {
-    return new aW(this, {
-        body: this._bodyInit,
-    });
+    return new aW(this, { body: this._bodyInit });
 }),
     aH.call(aW.prototype),
     aH.call(a$.prototype),
@@ -5534,21 +4745,13 @@ function a$(e, t) {
         });
     }),
     (a$.error = function () {
-        var e = new a$(null, {
-            status: 0,
-            statusText: "",
-        });
+        var e = new a$(null, { status: 0, statusText: "" });
         return (e.type = "error"), e;
     });
 var aY = [301, 302, 303, 307, 308];
 a$.redirect = function (e, t) {
     if (-1 === W()(aY).call(aY, t)) throw RangeError("Invalid status code");
-    return new a$(null, {
-        status: t,
-        headers: {
-            location: e,
-        },
-    });
+    return new a$(null, { status: t, headers: { location: e } });
 };
 var aQ = aP.DOMException;
 try {
@@ -5561,7 +4764,6 @@ try {
     }).prototype = eW()(Error.prototype)),
         (aQ.prototype.constructor = aQ);
 }
-
 function aZ(e, t) {
     return new (B())(function (n, r) {
         var a = new aW(e, t);
@@ -5570,7 +4772,6 @@ function aZ(e, t) {
             i,
             s,
             l = new XMLHttpRequest();
-
         function c() {
             l.abort();
         }
@@ -5691,7 +4892,6 @@ var aJ = "u" > typeof window && "fetch" in window ? window.fetch : aZ,
         "onOrderCreated",
         "setStatusAutomatically",
     ];
-
 function a1(e, t) {
     var n = c()(e);
     if (d()) {
@@ -5704,7 +4904,6 @@ function a1(e, t) {
     }
     return n;
 }
-
 function a2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -5722,7 +4921,6 @@ function a2(e) {
     }
     return e;
 }
-
 function a4(e, t) {
     var n,
         r,
@@ -5749,9 +4947,7 @@ function a4(e, t) {
                 redirect: "follow",
                 referrerPolicy: "no-referrer-when-downgrade",
             },
-            t && {
-                body: j()(t),
-            },
+            t && { body: j()(t) },
         ),
         f = M()((r = "".concat(void 0 === c ? aX : c))).call(r, p);
     return aJ(f, h)
@@ -5799,7 +4995,6 @@ function a4(e, t) {
             a8(e.errorMessage || M()((n = "Call to ".concat(f, " failed. Error= "))).call(n, t), l);
         });
 }
-
 function a8(e, t) {
     switch (t) {
         case "silent":
@@ -5813,20 +5008,9 @@ function a8(e, t) {
             throw new nv("NETWORK_ERROR", e);
     }
 }
-
 function a3(e, t) {
-    return a4(
-        a2(
-            a2({}, e),
-            {},
-            {
-                method: "POST",
-            },
-        ),
-        t,
-    );
+    return a4(a2(a2({}, e), {}, { method: "POST" }), t);
 }
-
 function a6(e, t, n) {
     var r;
     return a4(
@@ -5843,14 +5027,11 @@ function a6(e, t, n) {
                 },
             ),
             {},
-            {
-                method: "GET",
-            },
+            { method: "GET" },
         ),
         void 0,
     );
 }
-
 function a5(e) {
     var t,
         n = e.backgroundUrl,
@@ -5873,15 +5054,7 @@ function a5(e) {
         },
         g = ep().apply(
             void 0,
-            M()(
-                (t = [
-                    [void 0 === a ? "" : a],
-                    "adyen-checkout__image",
-                    {
-                        "adyen-checkout__image--loaded": f,
-                    },
-                ]),
-            ).call(
+            M()((t = [[void 0 === a ? "" : a], "adyen-checkout__image", { "adyen-checkout__image--loaded": f }])).call(
                 t,
                 (0, H.A)(
                     J()(i).call(i, function (e) {
@@ -5896,20 +5069,7 @@ function a5(e) {
             (e.src = r || l), (e.onload = v), m(!!e.complete);
         }, []),
         r
-            ? (0, el.h)(
-                  "div",
-                  (0, er.A)(
-                      {
-                          style: {
-                              backgroundUrl: r,
-                          },
-                      },
-                      e,
-                      {
-                          className: g,
-                      },
-                  ),
-              )
+            ? (0, el.h)("div", (0, er.A)({ style: { backgroundUrl: r } }, e, { className: g }))
             : (0, el.h)(
                   "img",
                   (0, er.A)({}, e, {
@@ -5924,34 +5084,17 @@ function a5(e) {
     );
 }
 var a9 = ["filterable", "toggleButtonRef"];
-
 function a7(e) {
     var t = e.filterable,
         n = e.toggleButtonRef,
         r = (0, _.A)(e, a9);
     return t
-        ? (0, el.h)(
-              "div",
-              (0, er.A)({}, r, {
-                  ref: n,
-              }),
-          )
+        ? (0, el.h)("div", (0, er.A)({}, r, { ref: n }))
         : (0, el.h)(
               "button",
-              (0, er.A)(
-                  {
-                      id: r.id,
-                      "aria-describedby": r.ariaDescribedBy,
-                      type: "button",
-                  },
-                  r,
-                  {
-                      ref: n,
-                  },
-              ),
+              (0, er.A)({ id: r.id, "aria-describedby": r.ariaDescribedBy, type: "button" }, r, { ref: n }),
           );
 }
-
 function oe(e) {
     var t,
         n = nc().i18n,
@@ -5977,9 +5120,7 @@ function oe(e) {
         a7,
         {
             className: ep()(
-                ((t = {
-                    "adyen-checkout__dropdown__button": !0,
-                }),
+                ((t = { "adyen-checkout__dropdown__button": !0 }),
                 (0, w.A)(t, "Select-module_adyen-checkout__dropdown__button__yTyqq", !0),
                 (0, w.A)(t, "adyen-checkout__dropdown__button--readonly", i),
                 (0, w.A)(t, "adyen-checkout__dropdown__button--active", s),
@@ -6001,11 +5142,7 @@ function oe(e) {
                   null,
                   !s &&
                       a.icon &&
-                      (0, el.h)(a5, {
-                          className: "adyen-checkout__dropdown__button__icon",
-                          src: a.icon,
-                          alt: a.name,
-                      }),
+                      (0, el.h)(a5, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
                   (0, el.h)("input", {
                       value: c,
                       "aria-autocomplete": "list",
@@ -6031,9 +5168,7 @@ function oe(e) {
                       a.secondaryText &&
                       (0, el.h)(
                           "span",
-                          {
-                              className: "adyen-checkout__dropdown__button__secondary-text",
-                          },
+                          { className: "adyen-checkout__dropdown__button__secondary-text" },
                           a.secondaryText,
                       ),
               )
@@ -6041,24 +5176,12 @@ function oe(e) {
                   el.FK,
                   null,
                   a.icon &&
-                      (0, el.h)(a5, {
-                          className: "adyen-checkout__dropdown__button__icon",
-                          src: a.icon,
-                          alt: a.name,
-                      }),
-                  (0, el.h)(
-                      "span",
-                      {
-                          className: "adyen-checkout__dropdown__button__text",
-                      },
-                      l,
-                  ),
+                      (0, el.h)(a5, { className: "adyen-checkout__dropdown__button__icon", src: a.icon, alt: a.name }),
+                  (0, el.h)("span", { className: "adyen-checkout__dropdown__button__text" }, l),
                   a.secondaryText &&
                       (0, el.h)(
                           "span",
-                          {
-                              className: "adyen-checkout__dropdown__button__secondary-text",
-                          },
+                          { className: "adyen-checkout__dropdown__button__secondary-text" },
                           a.secondaryText,
                       ),
               ),
@@ -6090,37 +5213,14 @@ var ot = ["item", "active", "selected"],
                 role: "option",
                 id: "listItem-".concat(t.id),
             },
-            t.icon &&
-                (0, el.h)(a5, {
-                    className: "adyen-checkout__dropdown__element__icon",
-                    alt: t.name,
-                    src: t.icon,
-                }),
-            (0, el.h)(
-                "span",
-                {
-                    className: "adyen-checkout__dropdown__element__text",
-                },
-                t.name,
-            ),
+            t.icon && (0, el.h)(a5, { className: "adyen-checkout__dropdown__element__icon", alt: t.name, src: t.icon }),
+            (0, el.h)("span", { className: "adyen-checkout__dropdown__element__text" }, t.name),
             t.secondaryText &&
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout__dropdown__element__secondary-text",
-                    },
-                    t.secondaryText,
-                ),
-            r &&
-                (0, el.h)(nD, {
-                    type: "checkmark",
-                    height: 14,
-                    width: 14,
-                }),
+                (0, el.h)("span", { className: "adyen-checkout__dropdown__element__secondary-text" }, t.secondaryText),
+            r && (0, el.h)(nD, { type: "checkmark", height: 14, width: 14 }),
         );
     },
     or = ["selected", "active", "filteredItems", "showList"];
-
 function oa(e) {
     var t,
         n = e.selected,
@@ -6133,9 +5233,7 @@ function oa(e) {
         "ul",
         {
             className: ep()(
-                ((t = {
-                    "adyen-checkout__dropdown__list": !0,
-                }),
+                ((t = { "adyen-checkout__dropdown__list": !0 }),
                 (0, w.A)(t, "Select-module_adyen-checkout__dropdown__list__YtEzj", !0),
                 (0, w.A)(t, "adyen-checkout__dropdown__list--active", o),
                 (0, w.A)(t, "Select-module_adyen-checkout__dropdown__list--active__Gegw2", o),
@@ -6158,9 +5256,7 @@ function oa(e) {
               })
             : (0, el.h)(
                   "div",
-                  {
-                      className: "adyen-checkout__dropdown__element adyen-checkout__dropdown__element--no-options",
-                  },
+                  { className: "adyen-checkout__dropdown__element adyen-checkout__dropdown__element--no-options" },
                   s.get("select.noOptionsFound"),
               ),
     );
@@ -6176,7 +5272,6 @@ var oo = "ArrowDown",
             o = e.offsetTop - t.offsetTop + e.clientHeight - r > t.scrollTop + t.clientHeight;
         (a || o) && (t.scrollTop = e.offsetTop - t.offsetTop - t.clientHeight / 2 - r + e.clientHeight / 2);
     };
-
 function oc(e) {
     var t,
         n,
@@ -6261,18 +5356,9 @@ function oc(e) {
                           ? Y
                           : F
                             ? Z[0]
-                            : {
-                                  id: f,
-                              }) &&
+                            : { id: f }) &&
                     !t.disabled &&
-                    (p({
-                        target: {
-                            value: t.id,
-                            name: m,
-                        },
-                    }),
-                    k && W(null),
-                    ee());
+                    (p({ target: { value: t.id, name: m } }), k && W(null), ee());
         },
         ea = function (e) {
             switch (e.key) {
@@ -6409,7 +5495,6 @@ function oc(e) {
         )
     );
 }
-
 function ou(e) {
     var t = e.classNameModifiers,
         n = e.label,
@@ -6469,7 +5554,6 @@ function ou(e) {
             : null
     );
 }
-
 function od(e) {
     var t = e.allowedCountries,
         n = void 0 === t ? [] : t,
@@ -6531,7 +5615,6 @@ function od(e) {
             : null
     );
 }
-
 function op(e) {
     var t,
         n = nc().i18n,
@@ -6585,14 +5668,7 @@ function op(e) {
         default:
             return (0, el.h)(
                 rA,
-                {
-                    label: b,
-                    classNameModifiers: a,
-                    errorMessage: _,
-                    isValid: s[l],
-                    name: l,
-                    i18n: n,
-                },
+                { label: b, classNameModifiers: a, errorMessage: _, isValid: s[l], name: l, i18n: n },
                 (0, el.h)(rH, {
                     name: l,
                     classNameModifiers: a,
@@ -6607,7 +5683,6 @@ function op(e) {
             );
     }
 }
-
 function oh(e, t) {
     var n = c()(e);
     if (d()) {
@@ -6620,7 +5695,6 @@ function oh(e, t) {
     }
     return n;
 }
-
 function of(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -6760,7 +5834,6 @@ var om = (function () {
                 }, n));
         };
     };
-
 function ov(e) {
     var t,
         n = e.onAddressLookup,
@@ -6789,19 +5862,13 @@ function ov(e) {
                             switch ((e.prev = e.next)) {
                                 case 0:
                                     new (B())(function (e, r) {
-                                        n(t, {
-                                            resolve: e,
-                                            reject: r,
-                                        });
+                                        n(t, { resolve: e, reject: r });
                                     })
                                         .then(function (e) {
                                             y(e),
                                                 p(
                                                     J()(e).call(e, function (e) {
-                                                        return {
-                                                            id: e.id,
-                                                            name: e.name,
-                                                        };
+                                                        return { id: e.id, name: e.name };
                                                     }),
                                                 ),
                                                 A("");
@@ -6835,9 +5902,7 @@ function ov(e) {
         null,
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__address-search adyen-checkout__field-group",
-            },
+            { className: "adyen-checkout__address-search adyen-checkout__field-group" },
             (0, el.h)(
                 rA,
                 {
@@ -6867,9 +5932,7 @@ function ov(e) {
             !l &&
                 (0, el.h)(
                     "span",
-                    {
-                        className: "adyen-checkout__address-search__manual-add",
-                    },
+                    { className: "adyen-checkout__address-search__manual-add" },
                     (0, el.h)(
                         "button",
                         {
@@ -6884,7 +5947,6 @@ function ov(e) {
         ),
     );
 }
-
 function og(e, t) {
     var n = c()(e);
     if (d()) {
@@ -6897,7 +5959,6 @@ function og(e, t) {
     }
     return n;
 }
-
 function ob(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -6915,7 +5976,6 @@ function ob(e) {
     }
     return e;
 }
-
 function oA(e) {
     var t,
         n,
@@ -6951,12 +6011,7 @@ function oA(e) {
         S = C[1],
         x = !!e.onAddressLookup,
         R = !e.onAddressLookup || y || A,
-        F = rj({
-            schema: h,
-            defaultData: e.data,
-            rules: ob(ob({}, ax(p)), e.validationRules),
-            formatters: a_,
-        }),
+        F = rj({ schema: h, defaultData: e.data, rules: ob(ob({}, ax(p)), e.validationRules), formatters: a_ }),
         O = F.data,
         I = F.errors,
         T = F.valid,
@@ -6974,13 +6029,7 @@ function oA(e) {
         (t1(
             function () {
                 var e = p.countryHasDataset(O.country) ? "" : "N/A",
-                    t = ob(
-                        ob({}, O),
-                        {},
-                        {
-                            stateOrProvince: e,
-                        },
-                    );
+                    t = ob(ob({}, O), {}, { stateOrProvince: e });
                 N()(i).call(i, function (e) {
                     var n;
                     D(e, "input")(null != (n = t[e]) ? n : "");
@@ -7010,23 +6059,14 @@ function oA(e) {
                         },
                         {},
                     );
-                e.onChange({
-                    data: n,
-                    valid: T,
-                    errors: I,
-                    isValid: B,
-                });
+                e.onChange({ data: n, valid: T, errors: I, isValid: B });
             },
             [O, T, I, B],
         ),
         "hidden" === s)
     )
         return null;
-    if ("readOnly" === s)
-        return (0, el.h)(av, {
-            data: O,
-            label: o,
-        });
+    if ("readOnly" === s) return (0, el.h)(av, { data: O, label: o });
     var U = function (t, n) {
             var r,
                 a = n.classNameModifiers;
@@ -7055,10 +6095,7 @@ function oA(e) {
         null,
         (0, el.h)(
             nT,
-            {
-                classNameModifiers: [o || "address"],
-                label: o,
-            },
+            { classNameModifiers: [o || "address"], label: o },
             x &&
                 (0, el.h)(ov, {
                     onAddressLookup: e.onAddressLookup,
@@ -7083,16 +6120,12 @@ function oA(e) {
                         return e instanceof Array
                             ? (0, el.h)(
                                   "div",
-                                  {
-                                      className: "adyen-checkout__field-group",
-                                  },
+                                  { className: "adyen-checkout__field-group" },
                                   J()(e).call(e, function (e) {
                                       var t = (0, K.A)(e, 2),
                                           n = t[0],
                                           r = t[1];
-                                      return U(n, {
-                                          classNameModifiers: ["col-".concat(r)],
-                                      });
+                                      return U(n, { classNameModifiers: ["col-".concat(r)] });
                                   }),
                               )
                             : U(e, {});
@@ -7113,7 +6146,6 @@ oA.defaultProps = {
 };
 var o_ = ["classNameModifiers", "label", "isInvalid", "onChange"],
     ok = ["uniqueId", "addContextualElement"];
-
 function oC(e) {
     var t,
         n = e.classNameModifiers,
@@ -7127,50 +6159,27 @@ function oC(e) {
         u = (0, _.A)(s, ok);
     return (0, el.h)(
         "label",
-        {
-            className: "adyen-checkout__checkbox",
-            htmlFor: l,
-        },
+        { className: "adyen-checkout__checkbox", htmlFor: l },
         (0, el.h)(
             "input",
-            (0, er.A)(
-                {
-                    id: l,
-                },
-                u,
-                c && {
-                    "aria-describedby": M()((t = "".concat(l))).call(t, re),
-                },
-                {
-                    className: ep()([
-                        "adyen-checkout__checkbox__input",
-                        [s.className],
-                        {
-                            "adyen-checkout__checkbox__input--invalid": o,
-                        },
-                        J()(r).call(r, function (e) {
-                            return "adyen-checkout__input--".concat(e);
-                        }),
-                    ]),
-                    type: "checkbox",
-                    onChange: i,
-                },
-            ),
+            (0, er.A)({ id: l }, u, c && { "aria-describedby": M()((t = "".concat(l))).call(t, re) }, {
+                className: ep()([
+                    "adyen-checkout__checkbox__input",
+                    [s.className],
+                    { "adyen-checkout__checkbox__input--invalid": o },
+                    J()(r).call(r, function (e) {
+                        return "adyen-checkout__input--".concat(e);
+                    }),
+                ]),
+                type: "checkbox",
+                onChange: i,
+            }),
         ),
-        (0, el.h)(
-            "span",
-            {
-                className: "adyen-checkout__checkbox__label",
-            },
-            a,
-        ),
+        (0, el.h)("span", { className: "adyen-checkout__checkbox__label" }, a),
     );
 }
-oC.defaultProps = {
-    onChange: function () {},
-};
+oC.defaultProps = { onChange: function () {} };
 var ow = ["errorMessage", "label", "onChange", "i18n"];
-
 function oS(e) {
     var t,
         n,
@@ -7254,426 +6263,90 @@ var oN = ["companyDetails", "personalDetails", "billingAddress", "deliveryAddres
         return null;
     },
     oR = {
-        AD: {
-            length: 24,
-            structure: "F04F04A12",
-            example: "AD9912345678901234567890",
-        },
-        AE: {
-            length: 23,
-            structure: "F03F16",
-            example: "AE993331234567890123456",
-        },
-        AL: {
-            length: 28,
-            structure: "F08A16",
-            example: "AL47212110090000000235698741",
-        },
-        AT: {
-            length: 20,
-            structure: "F05F11",
-            example: "AT611904300234573201",
-        },
-        AZ: {
-            length: 28,
-            structure: "U04A20",
-            example: "AZ21NABZ00000000137010001944",
-        },
-        BA: {
-            length: 20,
-            structure: "F03F03F08F02",
-            example: "BA391290079401028494",
-        },
-        BE: {
-            length: 16,
-            structure: "F03F07F02",
-            example: "BE68 5390 0754 7034",
-        },
-        BG: {
-            length: 22,
-            structure: "U04F04F02A08",
-            example: "BG80BNBG96611020345678",
-        },
-        BH: {
-            length: 22,
-            structure: "U04A14",
-            example: "BH67BMAG00001299123456",
-        },
-        BR: {
-            length: 29,
-            structure: "F08F05F10U01A01",
-            example: "BR9700360305000010009795493P1",
-        },
-        CH: {
-            length: 21,
-            structure: "F05A12",
-            example: "CH9300762011623852957",
-        },
-        CR: {
-            length: 22,
-            structure: "F04F14",
-            example: "CR72012300000171549015",
-        },
-        CY: {
-            length: 28,
-            structure: "F03F05A16",
-            example: "CY17002001280000001200527600",
-        },
-        CZ: {
-            length: 24,
-            structure: "F04F06F10",
-            example: "CZ6508000000192000145399",
-        },
-        DE: {
-            length: 22,
-            structure: "F08F10",
-            example: "DE00123456789012345678",
-        },
-        DK: {
-            length: 18,
-            structure: "F04F09F01",
-            example: "DK5000400440116243",
-        },
-        DO: {
-            length: 28,
-            structure: "U04F20",
-            example: "DO28BAGR00000001212453611324",
-        },
-        EE: {
-            length: 20,
-            structure: "F02F02F11F01",
-            example: "EE382200221020145685",
-        },
-        ES: {
-            length: 24,
-            structure: "F04F04F01F01F10",
-            example: "ES9121000418450200051332",
-        },
-        FI: {
-            length: 18,
-            structure: "F06F07F01",
-            example: "FI2112345600000785",
-        },
-        FO: {
-            length: 18,
-            structure: "F04F09F01",
-            example: "FO6264600001631634",
-        },
-        FR: {
-            length: 27,
-            structure: "F05F05A11F02",
-            example: "FR1420041010050500013M02606",
-        },
-        GB: {
-            length: 22,
-            structure: "U04F06F08",
-            example: "GB29NWBK60161331926819",
-        },
-        GE: {
-            length: 22,
-            structure: "U02F16",
-            example: "GE29NB0000000101904917",
-        },
-        GI: {
-            length: 23,
-            structure: "U04A15",
-            example: "GI75NWBK000000007099453",
-        },
-        GL: {
-            length: 18,
-            structure: "F04F09F01",
-            example: "GL8964710001000206",
-        },
-        GR: {
-            length: 27,
-            structure: "F03F04A16",
-            example: "GR1601101250000000012300695",
-        },
-        GT: {
-            length: 28,
-            structure: "A04A20",
-            example: "GT82TRAJ01020000001210029690",
-        },
-        HR: {
-            length: 21,
-            structure: "F07F10",
-            example: "HR1210010051863000160",
-        },
-        HU: {
-            length: 28,
-            structure: "F03F04F01F15F01",
-            example: "HU42117730161111101800000000",
-        },
-        IE: {
-            length: 22,
-            structure: "U04F06F08",
-            example: "IE29AIBK93115212345678",
-        },
-        IL: {
-            length: 23,
-            structure: "F03F03F13",
-            example: "IL620108000000099999999",
-        },
-        IS: {
-            length: 26,
-            structure: "F04F02F06F10",
-            example: "IS140159260076545510730339",
-        },
-        IT: {
-            length: 27,
-            structure: "U01F05F05A12",
-            example: "IT60X0542811101000000123456",
-        },
-        KW: {
-            length: 30,
-            structure: "U04A22",
-            example: "KW81CBKU0000000000001234560101",
-        },
-        KZ: {
-            length: 20,
-            structure: "F03A13",
-            example: "KZ86125KZT5004100100",
-        },
-        LB: {
-            length: 28,
-            structure: "F04A20",
-            example: "LB62099900000001001901229114",
-        },
-        LC: {
-            length: 32,
-            structure: "U04F24",
-            example: "LC07HEMM000100010012001200013015",
-        },
-        LI: {
-            length: 21,
-            structure: "F05A12",
-            example: "LI21088100002324013AA",
-        },
-        LT: {
-            length: 20,
-            structure: "F05F11",
-            example: "LT121000011101001000",
-        },
-        LU: {
-            length: 20,
-            structure: "F03A13",
-            example: "LU280019400644750000",
-        },
-        LV: {
-            length: 21,
-            structure: "U04A13",
-            example: "LV80BANK0000435195001",
-        },
-        MC: {
-            length: 27,
-            structure: "F05F05A11F02",
-            example: "MC5811222000010123456789030",
-        },
-        MD: {
-            length: 24,
-            structure: "U02A18",
-            example: "MD24AG000225100013104168",
-        },
-        ME: {
-            length: 22,
-            structure: "F03F13F02",
-            example: "ME25505000012345678951",
-        },
-        MK: {
-            length: 19,
-            structure: "F03A10F02",
-            example: "MK07250120000058984",
-        },
-        MR: {
-            length: 27,
-            structure: "F05F05F11F02",
-            example: "MR1300020001010000123456753",
-        },
-        MT: {
-            length: 31,
-            structure: "U04F05A18",
-            example: "MT84MALT011000012345MTLCAST001S",
-        },
-        MU: {
-            length: 30,
-            structure: "U04F02F02F12F03U03",
-            example: "MU17BOMM0101101030300200000MUR",
-        },
-        NL: {
-            length: 18,
-            structure: "U04F10",
-            example: "NL99BANK0123456789",
-        },
-        NO: {
-            length: 15,
-            structure: "F04F06F01",
-            example: "NO9386011117947",
-        },
-        PK: {
-            length: 24,
-            structure: "U04A16",
-            example: "PK36SCBL0000001123456702",
-        },
-        PL: {
-            length: 28,
-            structure: "F08F16",
-            example: "PL00123456780912345678901234",
-        },
-        PS: {
-            length: 29,
-            structure: "U04A21",
-            example: "PS92PALS000000000400123456702",
-        },
-        PT: {
-            length: 25,
-            structure: "F04F04F11F02",
-            example: "PT50000201231234567890154",
-        },
-        RO: {
-            length: 24,
-            structure: "U04A16",
-            example: "RO49AAAA1B31007593840000",
-        },
-        RS: {
-            length: 22,
-            structure: "F03F13F02",
-            example: "RS35260005601001611379",
-        },
-        SA: {
-            length: 24,
-            structure: "F02A18",
-            example: "SA0380000000608010167519",
-        },
-        SE: {
-            length: 24,
-            structure: "F03F16F01",
-            example: "SE4550000000058398257466",
-        },
-        SI: {
-            length: 19,
-            structure: "F05F08F02",
-            example: "SI56263300012039086",
-        },
-        SK: {
-            length: 24,
-            structure: "F04F06F10",
-            example: "SK3112000000198742637541",
-        },
-        SM: {
-            length: 27,
-            structure: "U01F05F05A12",
-            example: "SM86U0322509800000000270100",
-        },
-        ST: {
-            length: 25,
-            structure: "F08F11F02",
-            example: "ST68000100010051845310112",
-        },
-        TL: {
-            length: 23,
-            structure: "F03F14F02",
-            example: "TL380080012345678910157",
-        },
-        TN: {
-            length: 24,
-            structure: "F02F03F13F02",
-            example: "TN5910006035183598478831",
-        },
-        TR: {
-            length: 26,
-            structure: "F05F01A16",
-            example: "TR330006100519786457841326",
-        },
-        VG: {
-            length: 24,
-            structure: "U04F16",
-            example: "VG96VPVG0000012345678901",
-        },
-        XK: {
-            length: 20,
-            structure: "F04F10F02",
-            example: "XK051212012345678906",
-        },
-        AO: {
-            length: 25,
-            structure: "F21",
-            example: "AO69123456789012345678901",
-        },
-        BF: {
-            length: 27,
-            structure: "F23",
-            example: "BF2312345678901234567890123",
-        },
-        BI: {
-            length: 16,
-            structure: "F12",
-            example: "BI41123456789012",
-        },
-        BJ: {
-            length: 28,
-            structure: "F24",
-            example: "BJ39123456789012345678901234",
-        },
-        CI: {
-            length: 28,
-            structure: "U01F23",
-            example: "CI17A12345678901234567890123",
-        },
-        CM: {
-            length: 27,
-            structure: "F23",
-            example: "CM9012345678901234567890123",
-        },
-        CV: {
-            length: 25,
-            structure: "F21",
-            example: "CV30123456789012345678901",
-        },
-        DZ: {
-            length: 24,
-            structure: "F20",
-            example: "DZ8612345678901234567890",
-        },
-        IR: {
-            length: 26,
-            structure: "F22",
-            example: "IR861234568790123456789012",
-        },
-        JO: {
-            length: 30,
-            structure: "A04F22",
-            example: "JO15AAAA1234567890123456789012",
-        },
-        MG: {
-            length: 27,
-            structure: "F23",
-            example: "MG1812345678901234567890123",
-        },
-        ML: {
-            length: 28,
-            structure: "U01F23",
-            example: "ML15A12345678901234567890123",
-        },
-        MZ: {
-            length: 25,
-            structure: "F21",
-            example: "MZ25123456789012345678901",
-        },
-        QA: {
-            length: 29,
-            structure: "U04A21",
-            example: "QA30AAAA123456789012345678901",
-        },
-        SN: {
-            length: 28,
-            structure: "U01F23",
-            example: "SN52A12345678901234567890123",
-        },
-        UA: {
-            length: 29,
-            structure: "F25",
-            example: "UA511234567890123456789012345",
-        },
+        AD: { length: 24, structure: "F04F04A12", example: "AD9912345678901234567890" },
+        AE: { length: 23, structure: "F03F16", example: "AE993331234567890123456" },
+        AL: { length: 28, structure: "F08A16", example: "AL47212110090000000235698741" },
+        AT: { length: 20, structure: "F05F11", example: "AT611904300234573201" },
+        AZ: { length: 28, structure: "U04A20", example: "AZ21NABZ00000000137010001944" },
+        BA: { length: 20, structure: "F03F03F08F02", example: "BA391290079401028494" },
+        BE: { length: 16, structure: "F03F07F02", example: "BE68 5390 0754 7034" },
+        BG: { length: 22, structure: "U04F04F02A08", example: "BG80BNBG96611020345678" },
+        BH: { length: 22, structure: "U04A14", example: "BH67BMAG00001299123456" },
+        BR: { length: 29, structure: "F08F05F10U01A01", example: "BR9700360305000010009795493P1" },
+        CH: { length: 21, structure: "F05A12", example: "CH9300762011623852957" },
+        CR: { length: 22, structure: "F04F14", example: "CR72012300000171549015" },
+        CY: { length: 28, structure: "F03F05A16", example: "CY17002001280000001200527600" },
+        CZ: { length: 24, structure: "F04F06F10", example: "CZ6508000000192000145399" },
+        DE: { length: 22, structure: "F08F10", example: "DE00123456789012345678" },
+        DK: { length: 18, structure: "F04F09F01", example: "DK5000400440116243" },
+        DO: { length: 28, structure: "U04F20", example: "DO28BAGR00000001212453611324" },
+        EE: { length: 20, structure: "F02F02F11F01", example: "EE382200221020145685" },
+        ES: { length: 24, structure: "F04F04F01F01F10", example: "ES9121000418450200051332" },
+        FI: { length: 18, structure: "F06F07F01", example: "FI2112345600000785" },
+        FO: { length: 18, structure: "F04F09F01", example: "FO6264600001631634" },
+        FR: { length: 27, structure: "F05F05A11F02", example: "FR1420041010050500013M02606" },
+        GB: { length: 22, structure: "U04F06F08", example: "GB29NWBK60161331926819" },
+        GE: { length: 22, structure: "U02F16", example: "GE29NB0000000101904917" },
+        GI: { length: 23, structure: "U04A15", example: "GI75NWBK000000007099453" },
+        GL: { length: 18, structure: "F04F09F01", example: "GL8964710001000206" },
+        GR: { length: 27, structure: "F03F04A16", example: "GR1601101250000000012300695" },
+        GT: { length: 28, structure: "A04A20", example: "GT82TRAJ01020000001210029690" },
+        HR: { length: 21, structure: "F07F10", example: "HR1210010051863000160" },
+        HU: { length: 28, structure: "F03F04F01F15F01", example: "HU42117730161111101800000000" },
+        IE: { length: 22, structure: "U04F06F08", example: "IE29AIBK93115212345678" },
+        IL: { length: 23, structure: "F03F03F13", example: "IL620108000000099999999" },
+        IS: { length: 26, structure: "F04F02F06F10", example: "IS140159260076545510730339" },
+        IT: { length: 27, structure: "U01F05F05A12", example: "IT60X0542811101000000123456" },
+        KW: { length: 30, structure: "U04A22", example: "KW81CBKU0000000000001234560101" },
+        KZ: { length: 20, structure: "F03A13", example: "KZ86125KZT5004100100" },
+        LB: { length: 28, structure: "F04A20", example: "LB62099900000001001901229114" },
+        LC: { length: 32, structure: "U04F24", example: "LC07HEMM000100010012001200013015" },
+        LI: { length: 21, structure: "F05A12", example: "LI21088100002324013AA" },
+        LT: { length: 20, structure: "F05F11", example: "LT121000011101001000" },
+        LU: { length: 20, structure: "F03A13", example: "LU280019400644750000" },
+        LV: { length: 21, structure: "U04A13", example: "LV80BANK0000435195001" },
+        MC: { length: 27, structure: "F05F05A11F02", example: "MC5811222000010123456789030" },
+        MD: { length: 24, structure: "U02A18", example: "MD24AG000225100013104168" },
+        ME: { length: 22, structure: "F03F13F02", example: "ME25505000012345678951" },
+        MK: { length: 19, structure: "F03A10F02", example: "MK07250120000058984" },
+        MR: { length: 27, structure: "F05F05F11F02", example: "MR1300020001010000123456753" },
+        MT: { length: 31, structure: "U04F05A18", example: "MT84MALT011000012345MTLCAST001S" },
+        MU: { length: 30, structure: "U04F02F02F12F03U03", example: "MU17BOMM0101101030300200000MUR" },
+        NL: { length: 18, structure: "U04F10", example: "NL99BANK0123456789" },
+        NO: { length: 15, structure: "F04F06F01", example: "NO9386011117947" },
+        PK: { length: 24, structure: "U04A16", example: "PK36SCBL0000001123456702" },
+        PL: { length: 28, structure: "F08F16", example: "PL00123456780912345678901234" },
+        PS: { length: 29, structure: "U04A21", example: "PS92PALS000000000400123456702" },
+        PT: { length: 25, structure: "F04F04F11F02", example: "PT50000201231234567890154" },
+        RO: { length: 24, structure: "U04A16", example: "RO49AAAA1B31007593840000" },
+        RS: { length: 22, structure: "F03F13F02", example: "RS35260005601001611379" },
+        SA: { length: 24, structure: "F02A18", example: "SA0380000000608010167519" },
+        SE: { length: 24, structure: "F03F16F01", example: "SE4550000000058398257466" },
+        SI: { length: 19, structure: "F05F08F02", example: "SI56263300012039086" },
+        SK: { length: 24, structure: "F04F06F10", example: "SK3112000000198742637541" },
+        SM: { length: 27, structure: "U01F05F05A12", example: "SM86U0322509800000000270100" },
+        ST: { length: 25, structure: "F08F11F02", example: "ST68000100010051845310112" },
+        TL: { length: 23, structure: "F03F14F02", example: "TL380080012345678910157" },
+        TN: { length: 24, structure: "F02F03F13F02", example: "TN5910006035183598478831" },
+        TR: { length: 26, structure: "F05F01A16", example: "TR330006100519786457841326" },
+        VG: { length: 24, structure: "U04F16", example: "VG96VPVG0000012345678901" },
+        XK: { length: 20, structure: "F04F10F02", example: "XK051212012345678906" },
+        AO: { length: 25, structure: "F21", example: "AO69123456789012345678901" },
+        BF: { length: 27, structure: "F23", example: "BF2312345678901234567890123" },
+        BI: { length: 16, structure: "F12", example: "BI41123456789012" },
+        BJ: { length: 28, structure: "F24", example: "BJ39123456789012345678901234" },
+        CI: { length: 28, structure: "U01F23", example: "CI17A12345678901234567890123" },
+        CM: { length: 27, structure: "F23", example: "CM9012345678901234567890123" },
+        CV: { length: 25, structure: "F21", example: "CV30123456789012345678901" },
+        DZ: { length: 24, structure: "F20", example: "DZ8612345678901234567890" },
+        IR: { length: 26, structure: "F22", example: "IR861234568790123456789012" },
+        JO: { length: 30, structure: "A04F22", example: "JO15AAAA1234567890123456789012" },
+        MG: { length: 27, structure: "F23", example: "MG1812345678901234567890123" },
+        ML: { length: 28, structure: "U01F23", example: "ML15A12345678901234567890123" },
+        MZ: { length: 25, structure: "F21", example: "MZ25123456789012345678901" },
+        QA: { length: 29, structure: "U04A21", example: "QA30AAAA123456789012345678901" },
+        SN: { length: 28, structure: "U01F23", example: "SN52A12345678901234567890123" },
+        UA: { length: 29, structure: "F25", example: "UA511234567890123456789012345" },
     },
     oF = function (e) {
         var t;
@@ -7724,7 +6397,6 @@ var oN = ["companyDetails", "personalDetails", "billingAddress", "deliveryAddres
     oM = function (e) {
         return em()(e).call(e, 0, 2);
     };
-
 function oT(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     (this.status = e), (this.code = t);
@@ -7770,7 +6442,6 @@ var oB = function (e) {
     oL = function (e) {
         return !rC(e) || null;
     };
-
 function oV(e, t) {
     var n = c()(e);
     if (d()) {
@@ -7783,7 +6454,6 @@ function oV(e, t) {
     }
     return n;
 }
-
 function oj(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -7806,11 +6476,7 @@ var oU = {
         errorMessage: "ach.accountHolderNameField.invalid",
         error: "ach.accountHolderNameField.invalid",
     },
-    oq = {
-        isValid: !1,
-        errorMessage: "sepaDirectDebit.ibanField.invalid",
-        error: "sepaDirectDebit.ibanField.invalid",
-    },
+    oq = { isValid: !1, errorMessage: "sepaDirectDebit.ibanField.invalid", error: "sepaDirectDebit.ibanField.invalid" },
     oK = (function (e) {
         (0, eo.A)(r, el.uA);
         var t,
@@ -7833,7 +6499,6 @@ var oU = {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t, a, o, i;
             if (
@@ -7842,37 +6507,23 @@ var oU = {
                 (0, w.A)((0, ea.A)(i), "ibanNumber", void 0),
                 (0, w.A)((0, ea.A)(i), "setData", function (e, t, n) {
                     i.setState(function (n) {
-                        return {
-                            data: oj(oj({}, n.data), {}, (0, w.A)({}, e, t)),
-                        };
+                        return { data: oj(oj({}, n.data), {}, (0, w.A)({}, e, t)) };
                     }, n);
                 }),
                 (0, w.A)((0, ea.A)(i), "setError", function (e, t, n) {
                     i.setState(function (n) {
-                        return {
-                            errors: oj(oj({}, n.errors), {}, (0, w.A)({}, e, t)),
-                        };
+                        return { errors: oj(oj({}, n.errors), {}, (0, w.A)({}, e, t)) };
                     }, n);
                 }),
                 (0, w.A)((0, ea.A)(i), "setValid", function (e, t, n) {
                     i.setState(function (n) {
-                        return {
-                            valid: oj(oj({}, n.valid), {}, (0, w.A)({}, e, t)),
-                        };
+                        return { valid: oj(oj({}, n.valid), {}, (0, w.A)({}, e, t)) };
                     }, n);
                 }),
                 (0, w.A)((0, ea.A)(i), "handleHolderInput", function (e) {
                     i.setState(
                         function (t) {
-                            return {
-                                data: oj(
-                                    oj({}, t.data),
-                                    {},
-                                    {
-                                        ownerName: e,
-                                    },
-                                ),
-                            };
+                            return { data: oj(oj({}, t.data), {}, { ownerName: e }) };
                         },
                         function () {
                             var e = oL(i.state.data.ownerName);
@@ -7898,28 +6549,9 @@ var oU = {
                     i.setState(
                         function (e) {
                             return {
-                                data: oj(
-                                    oj({}, e.data),
-                                    {},
-                                    {
-                                        ibanNumber: n,
-                                        countryCode: a,
-                                    },
-                                ),
-                                errors: oj(
-                                    oj({}, e.errors),
-                                    {},
-                                    {
-                                        iban: "invalid" === r ? oq : null,
-                                    },
-                                ),
-                                valid: oj(
-                                    oj({}, e.valid),
-                                    {},
-                                    {
-                                        iban: "valid" === r,
-                                    },
-                                ),
+                                data: oj(oj({}, e.data), {}, { ibanNumber: n, countryCode: a }),
+                                errors: oj(oj({}, e.errors), {}, { iban: "invalid" === r ? oq : null }),
+                                valid: oj(oj({}, e.valid), {}, { iban: "valid" === r }),
                             };
                         },
                         function () {
@@ -7954,10 +6586,7 @@ var oU = {
             if (i.state.data.ibanNumber || i.state.data.ownerName) {
                 var l = i.props.holderName ? oL(i.state.data.ownerName) : "",
                     c = (i.state.data.ibanNumber ? "valid" === oD(i.state.data.ibanNumber).status : "") && l,
-                    u = {
-                        data: i.state.data,
-                        isValid: c,
-                    };
+                    u = { data: i.state.data, isValid: c };
                 i.props.onChange(u);
             }
             return i;
@@ -7967,9 +6596,7 @@ var oU = {
                 {
                     key: "setStatus",
                     value: function (e) {
-                        this.setState({
-                            status: e,
-                        });
+                        this.setState({ status: e });
                     },
                 },
                 {
@@ -7977,11 +6604,7 @@ var oU = {
                     value: function () {
                         var e = !this.props.holderName || oL(this.state.data.ownerName),
                             t = "valid" === oD(this.state.data.ibanNumber).status && e,
-                            n = {
-                                data: this.state.data,
-                                isValid: t,
-                                errors: this.state.errors,
-                            };
+                            n = { data: this.state.data, isValid: t, errors: this.state.errors };
                         this.props.onChange(n);
                     },
                 },
@@ -8006,10 +6629,7 @@ var oU = {
                             l = nc().i18n;
                         return (0, el.h)(
                             nT,
-                            {
-                                classNameModifiers: ["iban-input"],
-                                label: this.props.label,
-                            },
+                            { classNameModifiers: ["iban-input"], label: this.props.label },
                             this.props.holderName &&
                                 (0, el.h)(
                                     rA,
@@ -8069,10 +6689,7 @@ var oU = {
                                     spellcheck: !1,
                                 }),
                             ),
-                            this.props.showPayButton &&
-                                this.props.payButton({
-                                    status: this.state.status,
-                                }),
+                            this.props.showPayButton && this.props.payButton({ status: this.state.status }),
                         );
                     },
                 },
@@ -8080,7 +6697,6 @@ var oU = {
             r
         );
     })();
-
 function oH(e, t) {
     var n = c()(e);
     if (d()) {
@@ -8204,11 +6820,7 @@ var oz = function (e) {
                                     y = l(r, o, s);
                                 y && (f = M()((m = "".concat(y, ": "))).call(m, u));
                             }
-                            e.push({
-                                field: r,
-                                errorMessage: f,
-                                errorCode: c,
-                            }),
+                            e.push({ field: r, errorMessage: f, errorCode: c }),
                                 i &&
                                     e2()(e).call(e, function (e, t) {
                                         return W()(i).call(i, e.field) - W()(i).call(i, t.field);
@@ -8227,27 +6839,11 @@ var oz = function (e) {
                 var v = J()(m).call(m, function (e) {
                     return e.field;
                 });
-                return {
-                    currentErrorsSortedByLayout: m,
-                    action: rf,
-                    fieldToFocus: v[0],
-                };
+                return { currentErrorsSortedByLayout: m, action: rf, fieldToFocus: v[0] };
             }
-            return (
-                null == d || d.setMessages(null),
-                {
-                    currentErrorsSortedByLayout: m,
-                    action: rm,
-                }
-            );
+            return null == d || d.setMessages(null), { currentErrorsSortedByLayout: m, action: rm };
         }
-        return (
-            null == d || d.setMessages(null),
-            {
-                currentErrorsSortedByLayout: m,
-                action: "none",
-            }
-        );
+        return null == d || d.setMessages(null), { currentErrorsSortedByLayout: m, action: "none" };
     },
     o$ = (0, el.q6)({
         srPanel: null,
@@ -8290,7 +6886,6 @@ var oz = function (e) {
             null == o || o.focus();
         }
     };
-
 function o1(e) {
     var t = t4();
     return (
@@ -8303,7 +6898,6 @@ function o1(e) {
         t.current
     );
 }
-
 function o2(e, t, n) {
     var r,
         a = n || "id";
@@ -8321,16 +6915,9 @@ function o2(e, t, n) {
 }
 var o4 = function () {
         var e = nc().i18n;
-        return (0, el.h)(
-            "p",
-            {
-                className: "adyen-checkout-form-instruction",
-            },
-            e.get("form.instruction"),
-        );
+        return (0, el.h)("p", { className: "adyen-checkout-form-instruction" }, e.get("form.instruction"));
     },
     o8 = ["companyDetails", "personalDetails", "bankAccount", "billingAddress", "deliveryAddress"];
-
 function o3(e, t) {
     var n = c()(e);
     if (d()) {
@@ -8343,7 +6930,6 @@ function o3(e, t) {
     }
     return n;
 }
-
 function o6(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -8361,12 +6947,7 @@ function o6(e) {
     }
     return e;
 }
-var o5 = {
-    isValid: !1,
-    errorMessage: "consent.checkbox.invalid",
-    error: "consent.checkbox.invalid",
-};
-
+var o5 = { isValid: !1, errorMessage: "consent.checkbox.invalid", error: "consent.checkbox.invalid" };
 function o9(e) {
     var t,
         n,
@@ -8381,12 +6962,7 @@ function o9(e) {
         d = l.setSRMessagesFromStrings,
         p = l.clearSRPanel,
         h = l.shouldMoveFocusSR,
-        f =
-            null == u
-                ? void 0
-                : u({
-                      fieldTypeMappingFn: oP,
-                  }),
+        f = null == u ? void 0 : u({ fieldTypeMappingFn: oP }),
         m = t8(function () {
             return new om();
         }, []),
@@ -8415,14 +6991,7 @@ function o9(e) {
                 return !g[e];
             }),
         x = "editable" === a.deliveryAddress && "hidden" !== a.billingAddress,
-        R = tX(
-            o6(
-                o6({}, e.data),
-                C && {
-                    consentCheckbox: !1,
-                },
-            ),
-        ),
+        R = tX(o6(o6({}, e.data), C && { consentCheckbox: !1 })),
         F = (0, K.A)(R, 2),
         O = F[0],
         I = F[1],
@@ -8447,14 +7016,7 @@ function o9(e) {
             N()(oN).call(oN, function (e) {
                 k[e].current && k[e].current.showValidation();
             }),
-            L(
-                o6(
-                    {},
-                    C && {
-                        consentCheckbox: O.consentCheckbox ? null : o5,
-                    },
-                ),
-            );
+            L(o6({}, C && { consentCheckbox: O.consentCheckbox ? null : o5 }));
     }),
         (i.current.setStatus = Y);
     var et = o1(X);
@@ -8535,15 +7097,7 @@ function o9(e) {
                           ? void 0
                           : y.country,
                 ),
-                Y =
-                    null == f
-                        ? void 0
-                        : f({
-                              errors: L,
-                              isValidating: s.current,
-                              layout: W,
-                              countrySpecificLabels: G,
-                          }),
+                Y = null == f ? void 0 : f({ errors: L, isValidating: s.current, layout: W, countrySpecificLabels: G }),
                 Q = null == Y ? void 0 : Y.currentErrorsSortedByLayout;
             switch ((ee(Q), null == Y ? void 0 : Y.action)) {
                 case rf:
@@ -8557,12 +7111,7 @@ function o9(e) {
                         X = null == Z ? void 0 : Z[0];
                     X ? d("shopperEmail.invalid" === X.errorCode ? X.errorMessage : null) : p();
             }
-            e.onChange({
-                data: w,
-                errors: D,
-                valid: U,
-                isValid: b && k,
-            });
+            e.onChange({ data: w, errors: D, valid: U, isValid: b && k });
         },
         [O, g],
     );
@@ -8581,9 +7130,7 @@ function o9(e) {
     };
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__open-invoice",
-        },
+        { className: "adyen-checkout__open-invoice" },
         e.showFormInstruction && (0, el.h)(o4, null),
         g.companyDetails &&
             (0, el.h)(r$, {
@@ -8625,11 +7172,7 @@ function o9(e) {
         x &&
             (0, el.h)(
                 rA,
-                {
-                    name: "separateDeliveryAddress",
-                    useLabelElement: !1,
-                    addContextualElement: !1,
-                },
+                { name: "separateDeliveryAddress", useLabelElement: !1, addContextualElement: !1 },
                 (0, el.h)(oC, {
                     label: o.get("separateDeliveryAddress"),
                     checked: g.deliveryAddress,
@@ -8637,13 +7180,7 @@ function o9(e) {
                     name: "separateDeliveryAddress",
                     onChange: function () {
                         b(function (e) {
-                            return o6(
-                                o6({}, e),
-                                {},
-                                {
-                                    deliveryAddress: !g.deliveryAddress,
-                                },
-                            );
+                            return o6(o6({}, e), {}, { deliveryAddress: !g.deliveryAddress });
                         });
                     },
                 }),
@@ -8666,31 +7203,13 @@ function o9(e) {
                 onChange: function (e) {
                     var t = e.target.checked;
                     I(function (e) {
-                        return o6(
-                            o6({}, e),
-                            {},
-                            {
-                                consentCheckbox: t,
-                            },
-                        );
+                        return o6(o6({}, e), {}, { consentCheckbox: t });
                     }),
                         q(function (e) {
-                            return o6(
-                                o6({}, e),
-                                {},
-                                {
-                                    consentCheckbox: t,
-                                },
-                            );
+                            return o6(o6({}, e), {}, { consentCheckbox: t });
                         }),
                         L(function (e) {
-                            return o6(
-                                o6({}, e),
-                                {},
-                                {
-                                    consentCheckbox: !t,
-                                },
-                            );
+                            return o6(o6({}, e), {}, { consentCheckbox: !t });
                         });
                 },
                 i18n: o,
@@ -8725,17 +7244,12 @@ var o7 = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
             for (var a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
             return (
-                (t = n.call.apply(n, M()((e = [this])).call(e, o))),
-                (0, w.A)((0, ea.A)(t), "state", {
-                    loaded: !1,
-                }),
-                t
+                (t = n.call.apply(n, M()((e = [this])).call(e, o))), (0, w.A)((0, ea.A)(t), "state", { loaded: !1 }), t
             );
         }
         return (
@@ -8746,13 +7260,9 @@ var o7 = (function (e) {
                         var e = this;
                         this.props.i18n
                             ? this.props.i18n.loaded.then(function () {
-                                  e.setState({
-                                      loaded: !0,
-                                  });
+                                  e.setState({ loaded: !0 });
                               })
-                            : this.setState({
-                                  loaded: !0,
-                              }),
+                            : this.setState({ loaded: !0 }),
                             (this.props.i18n && this.props.loadingContext && this.props.resources) ||
                                 console.error(
                                     "CoreProvider - WARNING core provider is missing one of the following: i18n, loadingContext or resources",
@@ -8784,23 +7294,18 @@ var o7 = (function (e) {
         );
     })(),
     ie = Object.prototype.toString;
-
 function it(e) {
     return "object" === (0, A.A)(e) && null !== e && "[object Array]" === Object.prototype.toString.call(e);
 }
-
 function ir(e) {
     return null != e;
 }
-
 function ia(e) {
     return !1 !== e && ir(e);
 }
-
 function io(e) {
     return !!e && "object" === (0, A.A)(e);
 }
-
 function ii() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     var r = t.shift();
@@ -8820,11 +7325,7 @@ var is = function (e) {
             value: {
                 srPanel: t,
                 setSRMessagesFromObjects: function (e) {
-                    return ii(oG, {
-                        SRPanelRef: t,
-                        i18n: r,
-                        fieldTypeMappingFn: e.fieldTypeMappingFn,
-                    });
+                    return ii(oG, { SRPanelRef: t, i18n: r, fieldTypeMappingFn: e.fieldTypeMappingFn });
                 },
                 setSRMessagesFromStrings: function (e) {
                     t.setMessages(e);
@@ -8838,7 +7339,6 @@ var is = function (e) {
         n,
     );
 };
-
 function il(e, t) {
     var n = c()(e);
     if (d()) {
@@ -8851,7 +7351,6 @@ function il(e, t) {
     }
     return n;
 }
-
 function ic(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -8891,7 +7390,6 @@ var iu = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -8920,20 +7418,8 @@ var iu = (function (e) {
                                 ic({}, e.data),
                                 {},
                                 {
-                                    billingAddress: ic(
-                                        ic({}, e.data.billingAddress),
-                                        {},
-                                        {
-                                            country: n,
-                                        },
-                                    ),
-                                    deliveryAddress: ic(
-                                        ic({}, e.data.deliveryAddress),
-                                        {},
-                                        {
-                                            country: n,
-                                        },
-                                    ),
+                                    billingAddress: ic(ic({}, e.data.billingAddress), {}, { country: n }),
+                                    deliveryAddress: ic(ic({}, e.data.deliveryAddress), {}, { country: n }),
                                 },
                             ),
                         },
@@ -8954,14 +7440,7 @@ var iu = (function (e) {
                         ic(
                             ic(
                                 ic(
-                                    ic(
-                                        {
-                                            paymentMethod: {
-                                                type: this.constructor.type,
-                                            },
-                                        },
-                                        void 0 === r ? {} : r,
-                                    ),
+                                    ic({ paymentMethod: { type: this.constructor.type } }, void 0 === r ? {} : r),
                                     void 0 === n ? {} : n,
                                 ),
                                 i && {
@@ -8972,13 +7451,9 @@ var iu = (function (e) {
                                     },
                                 },
                             ),
-                            a && {
-                                billingAddress: a,
-                            },
+                            a && { billingAddress: a },
                         ),
-                        (o || a) && {
-                            deliveryAddress: o || a,
-                        },
+                        (o || a) && { deliveryAddress: o || a },
                     );
                 },
             },
@@ -8987,30 +7462,17 @@ var iu = (function (e) {
                 value: function () {
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             is,
-                            {
-                                srPanel: this.props.modules.srPanel,
-                            },
+                            { srPanel: this.props.modules.srPanel },
                             (0, el.h)(
                                 o9,
-                                (0, er.A)(
-                                    {
-                                        setComponentRef: this.setComponentRef,
-                                    },
-                                    this.props,
-                                    this.state,
-                                    {
-                                        onChange: this.setState,
-                                        onSubmit: this.submit,
-                                        payButton: this.payButton,
-                                    },
-                                ),
+                                (0, er.A)({ setComponentRef: this.setComponentRef }, this.props, this.state, {
+                                    onChange: this.setState,
+                                    onSubmit: this.submit,
+                                    payButton: this.payButton,
+                                }),
                             ),
                         ),
                     );
@@ -9020,7 +7482,6 @@ var iu = (function (e) {
         r
     );
 })();
-
 function id(e) {
     var t = nc().i18n,
         n = t.get("paymentConditions"),
@@ -9035,33 +7496,16 @@ function id(e) {
               o,
               (0, el.h)(
                   "a",
-                  {
-                      className: "adyen-checkout__link",
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                      href: e.url,
-                  },
+                  { className: "adyen-checkout__link", target: "_blank", rel: "noopener noreferrer", href: e.url },
                   n,
               ),
               i,
           )
-        : (0, el.h)(
-              "span",
-              {
-                  className: "adyen-checkout__checkbox__label",
-              },
-              t.get("privacyPolicy"),
-          );
+        : (0, el.h)("span", { className: "adyen-checkout__checkbox__label" }, t.get("privacyPolicy"));
 }
 (0, w.A)(iu, "defaultProps", {
     onChange: function () {},
-    data: {
-        companyDetails: {},
-        personalDetails: {},
-        billingAddress: {},
-        deliveryAddress: {},
-        bankAccount: {},
-    },
+    data: { companyDetails: {}, personalDetails: {}, billingAddress: {}, deliveryAddress: {}, bankAccount: {} },
     visibility: {
         companyDetails: "hidden",
         personalDetails: "editable",
@@ -9072,7 +7516,6 @@ function id(e) {
     showFormInstruction: !0,
 });
 var ip = ["BE", "NL"];
-
 function ih(e, t) {
     var n = c()(e);
     if (d()) {
@@ -9085,7 +7528,6 @@ function ih(e, t) {
     }
     return n;
 }
-
 function im(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -9125,7 +7567,6 @@ var iy = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -9160,7 +7601,6 @@ var iy = (function (e) {
         r
     );
 })();
-
 function iv(e, t) {
     var n = c()(e);
     if (d()) {
@@ -9173,7 +7613,6 @@ function iv(e, t) {
     }
     return n;
 }
-
 function ig(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -9214,7 +7653,6 @@ var ib = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -9239,7 +7677,6 @@ var ib = (function (e) {
         r
     );
 })();
-
 function iA() {
     var e = tE(window, "screen.colorDepth") || "",
         t = !!tE(window, "navigator.javaEnabled") && window.navigator.javaEnabled(),
@@ -9260,12 +7697,7 @@ function iA() {
 (0, w.A)(ib, "type", "afterpay_b2b"),
     (0, w.A)(ib, "defaultProps", {
         onChange: function () {},
-        data: {
-            companyDetails: {},
-            personalDetails: {},
-            billingAddress: {},
-            deliveryAddress: {},
-        },
+        data: { companyDetails: {}, personalDetails: {}, billingAddress: {}, deliveryAddress: {} },
         visibility: {
             companyDetails: "editable",
             personalDetails: "editable",
@@ -9274,14 +7706,9 @@ function iA() {
         },
         showFormInstruction: !0,
     });
-var i_ = {
-        EU: "EUR",
-        UK: "GBP",
-        US: "USD",
-    },
+var i_ = { EU: "EUR", UK: "GBP", US: "USD" },
     ik = ["en_GB", "de_DE", "fr_FR", "it_IT", "es_ES"],
     iC = ["en_US"];
-
 function iw(e, t) {
     var n = c()(e);
     if (d()) {
@@ -9294,7 +7721,6 @@ function iw(e, t) {
     }
     return n;
 }
-
 function iS(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -9312,7 +7738,6 @@ function iS(e) {
     }
     return e;
 }
-
 function iN(e, t, n) {
     var r;
     return a3(
@@ -9323,7 +7748,6 @@ function iN(e, t, n) {
         n,
     );
 }
-
 function ix(e, t) {
     var n = c()(e);
     if (d()) {
@@ -9336,7 +7760,6 @@ function ix(e, t) {
     }
     return n;
 }
-
 function iP(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -9354,7 +7777,6 @@ function iP(e) {
     }
     return e;
 }
-
 function iR(e) {
     var t,
         n,
@@ -9392,10 +7814,7 @@ function iR(e) {
             (p = e.recurringMetadata),
             (h = e.configuration.storeId),
             (m = (f = "ProcessOrder" === s)
-                ? {
-                      amount: String(tR((a = e.amount).value, a.currency)),
-                      currencyCode: a.currency,
-                  }
+                ? { amount: String(tR((a = e.amount).value, a.currency)), currencyCode: a.currency }
                 : null),
             iS(
                 iS(
@@ -9407,23 +7826,10 @@ function iR(e) {
                                     chargePermissionType: d,
                                     webCheckoutDetails: iS(
                                         iS(
-                                            iS(
-                                                {},
-                                                f
-                                                    ? {
-                                                          checkoutResultReturnUrl: c,
-                                                      }
-                                                    : {
-                                                          checkoutReviewReturnUrl: c,
-                                                      },
-                                            ),
-                                            i && {
-                                                checkoutCancelUrl: i,
-                                            },
+                                            iS({}, f ? { checkoutResultReturnUrl: c } : { checkoutReviewReturnUrl: c }),
+                                            i && { checkoutCancelUrl: i },
                                         ),
-                                        f && {
-                                            checkoutMode: s,
-                                        },
+                                        f && { checkoutMode: s },
                                     ),
                                 },
                                 f && {
@@ -9435,33 +7841,18 @@ function iR(e) {
                                     },
                                 },
                             ),
-                            p && {
-                                recurringMetadata: p,
-                            },
+                            p && { recurringMetadata: p },
                         ),
-                        u && {
-                            merchantMetadata: u,
-                        },
+                        u && { merchantMetadata: u },
                     ),
-                    l && {
-                        deliverySpecifications: l,
-                    },
+                    l && { deliverySpecifications: l },
                 ),
-                o && {
-                    addressDetails: o,
-                },
+                o && { addressDetails: o },
             )),
         x = iS(
             iS(
-                iS(
-                    {},
-                    e.buttonColor && {
-                        buttonColor: e.buttonColor,
-                    },
-                ),
-                e.design && {
-                    design: "noTagline" === e.design ? "C0001" : null,
-                },
+                iS({}, e.buttonColor && { buttonColor: e.buttonColor }),
+                e.design && { design: "noTagline" === e.design ? "C0001" : null },
             ),
             {},
             {
@@ -9484,20 +7875,8 @@ function iR(e) {
         };
     return (
         (this.initCheckout = function () {
-            var e = {
-                payloadJSON: j()(N),
-                publicKeyId: _.publicKeyId,
-                signature: w,
-            };
-            b.Pay.initCheckout(
-                iP(
-                    iP({}, x),
-                    {},
-                    {
-                        createCheckoutSessionConfig: e,
-                    },
-                ),
-            );
+            var e = { payloadJSON: j()(N), publicKeyId: _.publicKeyId, signature: w };
+            b.Pay.initCheckout(iP(iP({}, x), {}, { createCheckoutSessionConfig: e }));
         }),
         t1(function () {
             var t,
@@ -9507,9 +7886,7 @@ function iR(e) {
                     loadingContext: g,
                     path: M()((t = "".concat("v1/AmazonPayUtility/signString", "?clientKey="))).call(t, n),
                 },
-                {
-                    stringToSign: j()(N),
-                },
+                { stringToSign: j()(N) },
             )
                 .then(function (t) {
                     if (null == t || !t.signature) return console.error("Could not get AmazonPay signature");
@@ -9520,14 +7897,10 @@ function iR(e) {
                 });
         }, []),
         e.showPayButton
-            ? (0, el.h)("div", {
-                  className: "adyen-checkout__amazonpay__button",
-                  id: "amazonPayButton",
-              })
+            ? (0, el.h)("div", { className: "adyen-checkout__amazonpay__button", id: "amazonPayButton" })
             : null
     );
 }
-
 function iF(e) {
     var t = nc().i18n,
         n = e.amazonRef,
@@ -9550,7 +7923,6 @@ function iF(e) {
         )
     );
 }
-
 function iO(e) {
     var t = this,
         n = nc(),
@@ -9600,7 +7972,6 @@ function iO(e) {
         })
     );
 }
-
 function iE(e) {
     var t = nc().i18n;
     return (0, el.h)(
@@ -9670,7 +8041,6 @@ var iI = (0, C.A)(function e(t) {
         (this.attributes = a),
         (this.dataAttributes = o);
 });
-
 function iM(e) {
     var t,
         n,
@@ -9707,34 +8077,23 @@ function iM(e) {
         "pending" === o
             ? (0, el.h)(
                   "div",
-                  {
-                      className: "adyen-checkout__amazonpay",
-                  },
+                  { className: "adyen-checkout__amazonpay" },
                   (0, el.h)(
                       "div",
-                      {
-                          className: "adyen-checkout__amazonpay__status adyen-checkout__amazonpay__status--pending",
-                      },
+                      { className: "adyen-checkout__amazonpay__status adyen-checkout__amazonpay__status--pending" },
                       (0, el.h)(tK, null),
                   ),
               )
             : e.showSignOutButton
               ? (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__amazonpay",
-                    },
-                    (0, el.h)(iE, {
-                        amazonRef: window.amazon,
-                        onSignOut: e.onSignOut,
-                    }),
+                    { className: "adyen-checkout__amazonpay" },
+                    (0, el.h)(iE, { amazonRef: window.amazon, onSignOut: e.onSignOut }),
                 )
               : e.amazonCheckoutSessionId
                 ? (0, el.h)(
                       "div",
-                      {
-                          className: "adyen-checkout__amazonpay",
-                      },
+                      { className: "adyen-checkout__amazonpay" },
                       e.showOrderButton &&
                           (0, el.h)(iO, {
                               amazonCheckoutSessionId: e.amazonCheckoutSessionId,
@@ -9756,16 +8115,8 @@ function iM(e) {
                   )
                 : (0, el.h)(
                       "div",
-                      {
-                          className: "adyen-checkout__amazonpay",
-                      },
-                      (0, el.h)(
-                          iR,
-                          (0, er.A)({}, e, {
-                              amazonRef: window.amazon,
-                              ref: s,
-                          }),
-                      ),
+                      { className: "adyen-checkout__amazonpay" },
+                      (0, el.h)(iR, (0, er.A)({}, e, { amazonRef: window.amazon, ref: s })),
                   )
     );
 }
@@ -9788,7 +8139,6 @@ var iT = {
         return e();
     },
 };
-
 function iB(e, t) {
     var n = c()(e);
     if (d()) {
@@ -9801,7 +8151,6 @@ function iB(e, t) {
     }
     return n;
 }
-
 function iD(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -9841,7 +8190,6 @@ var iL = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -9867,14 +8215,7 @@ var iL = (function (e) {
                 value: function () {
                     var e = this.props.amazonCheckoutSessionId;
                     return {
-                        paymentMethod: iD(
-                            {
-                                type: r.type,
-                            },
-                            e && {
-                                checkoutSessionId: e,
-                            },
-                        ),
+                        paymentMethod: iD({ type: r.type }, e && { checkoutSessionId: e }),
                         browserInfo: this.browserInfo,
                     };
                 },
@@ -9945,13 +8286,7 @@ var iL = (function (e) {
                         n = this.props.onSubmit;
                     return this.componentRef && this.componentRef.submit
                         ? this.componentRef.submit()
-                        : (void 0 === n ? function () {} : n)(
-                              {
-                                  data: e,
-                                  isValid: t,
-                              },
-                              this,
-                          );
+                        : (void 0 === n ? function () {} : n)({ data: e, isValid: t }, this);
                 },
             },
             {
@@ -9960,11 +8295,7 @@ var iL = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             iM,
                             (0, er.A)(
@@ -10027,7 +8358,6 @@ var iV = {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             return (0, k.A)(this, r), n.apply(this, arguments);
         }
@@ -10059,7 +8389,6 @@ var iV = {
             r
         );
     })();
-
 function iU(e, t) {
     var n = c()(e);
     if (d()) {
@@ -10072,7 +8401,6 @@ function iU(e, t) {
     }
     return n;
 }
-
 function iq(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -10090,11 +8418,7 @@ function iq(e) {
     }
     return e;
 }
-(0, w.A)(ij, "defaultProps", {
-    onClick: function () {},
-    buttonColor: "black",
-    buttonType: "plain",
-});
+(0, w.A)(ij, "defaultProps", { onClick: function () {}, buttonColor: "black", buttonType: "plain" });
 var iK = (function () {
         function e(t, n) {
             var r = this;
@@ -10252,11 +8576,7 @@ var iK = (function () {
         return {
             countryCode: t,
             currencyCode: n.currency,
-            total: {
-                label: r.totalPriceLabel,
-                amount: a,
-                type: r.totalPriceStatus,
-            },
+            total: { label: r.totalPriceLabel, amount: a, type: r.totalPriceStatus },
             lineItems: r.lineItems,
             shippingMethods: r.shippingMethods,
             shippingType: r.shippingType,
@@ -10271,7 +8591,6 @@ var iK = (function () {
             applicationData: r.applicationData,
         };
     };
-
 function iW(e, t) {
     var n = c()(e);
     if (d()) {
@@ -10284,7 +8603,6 @@ function iW(e, t) {
     }
     return n;
 }
-
 function iG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -10325,7 +8643,6 @@ var i$ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function a(e) {
         var t, n, o, i;
         return (
@@ -10399,14 +8716,7 @@ var i$ = (function (e) {
             {
                 key: "formatData",
                 value: function () {
-                    return {
-                        paymentMethod: iG(
-                            {
-                                type: a.type,
-                            },
-                            this.state,
-                        ),
-                    };
+                    return { paymentMethod: iG({ type: a.type }, this.state) };
                 },
             },
             {
@@ -10425,49 +8735,31 @@ var i$ = (function (e) {
                         i = n.onPaymentMethodSelected,
                         s = n.onShippingMethodSelected,
                         l = n.onShippingContactSelected,
-                        c = new iK(
-                            iz(
-                                iG(
-                                    {
-                                        companyName: this.props.configuration.merchantName,
-                                    },
-                                    this.props,
-                                ),
-                            ),
-                            {
-                                version: r,
-                                onError: function (e) {
-                                    t.handleError(
-                                        new nv("ERROR", "ApplePay - Something went wrong on ApplePayService", {
-                                            cause: e,
-                                        }),
-                                    );
-                                },
-                                onCancel: function (e) {
-                                    t.handleError(
-                                        new nv("CANCEL", "ApplePay UI dismissed", {
-                                            cause: e,
-                                        }),
-                                    );
-                                },
-                                onPaymentMethodSelected: i,
-                                onShippingMethodSelected: s,
-                                onShippingContactSelected: l,
-                                onValidateMerchant: o || this.validateMerchant,
-                                onPaymentAuthorized: function (n, r, o) {
-                                    var i;
-                                    null != o &&
-                                        null != (i = o.payment) &&
-                                        null != (i = i.token) &&
-                                        i.paymentData &&
-                                        t.setState({
-                                            applePayToken: btoa(j()(o.payment.token.paymentData)),
-                                        }),
-                                        (0, ey.A)((0, es.A)(a.prototype), "submit", t).call(t),
-                                        e(n, r, o);
-                                },
+                        c = new iK(iz(iG({ companyName: this.props.configuration.merchantName }, this.props)), {
+                            version: r,
+                            onError: function (e) {
+                                t.handleError(
+                                    new nv("ERROR", "ApplePay - Something went wrong on ApplePayService", { cause: e }),
+                                );
                             },
-                        );
+                            onCancel: function (e) {
+                                t.handleError(new nv("CANCEL", "ApplePay UI dismissed", { cause: e }));
+                            },
+                            onPaymentMethodSelected: i,
+                            onShippingMethodSelected: s,
+                            onShippingContactSelected: l,
+                            onValidateMerchant: o || this.validateMerchant,
+                            onPaymentAuthorized: function (n, r, o) {
+                                var i;
+                                null != o &&
+                                    null != (i = o.payment) &&
+                                    null != (i = i.token) &&
+                                    i.paymentData &&
+                                    t.setState({ applePayToken: btoa(j()(o.payment.token.paymentData)) }),
+                                    (0, ey.A)((0, es.A)(a.prototype), "submit", t).call(t),
+                                    e(n, r, o);
+                            },
+                        });
                     return new (B())(function (e, n) {
                         return t.props.onClick(e, n);
                     })
@@ -10590,7 +8882,6 @@ var i$ = (function (e) {
         a
     );
 })();
-
 function iY(e, t) {
     var n = c()(e);
     if (d()) {
@@ -10603,7 +8894,6 @@ function iY(e, t) {
     }
     return n;
 }
-
 function iQ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -10623,17 +8913,11 @@ function iQ(e) {
 }
 (0, w.A)(i$, "type", "applepay"),
     (0, w.A)(i$, "defaultProps", {
-        amount: {
-            currency: "USD",
-            value: 0,
-        },
+        amount: { currency: "USD", value: 0 },
         countryCode: "US",
         totalPriceStatus: "final",
         totalPriceLabel: void 0,
-        configuration: {
-            merchantName: "",
-            merchantId: "",
-        },
+        configuration: { merchantName: "", merchantId: "" },
         initiative: "web",
         lineItems: void 0,
         merchantCapabilities: ["supports3DS"],
@@ -10675,11 +8959,8 @@ var iZ = {
         function (e, t) {
             return iQ(iQ({}, e), {}, (0, w.A)({}, t, iZ));
         },
-        {
-            default: iZ,
-        },
+        { default: iZ },
     );
-
 function i0(e, t) {
     var n = c()(e);
     if (d()) {
@@ -10692,7 +8973,6 @@ function i0(e, t) {
     }
     return n;
 }
-
 function i1(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -10732,7 +9012,6 @@ var i2 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -10746,12 +9025,7 @@ var i2 = (function (e) {
                             {},
                             (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(
                                 this,
-                                i1(i1({}, e), {
-                                    visibility: {
-                                        deliveryAddress: "hidden",
-                                        companyDetails: "hidden",
-                                    },
-                                }),
+                                i1(i1({}, e), { visibility: { deliveryAddress: "hidden", companyDetails: "hidden" } }),
                             ),
                         ),
                         {},
@@ -10768,7 +9042,6 @@ var i2 = (function (e) {
         r
     );
 })();
-
 function i4(e) {
     var t = e.name,
         n = e.id,
@@ -10780,27 +9053,14 @@ function i4(e) {
         "button",
         {
             type: "button",
-            className: ep()("adyen-checkout__issuer-button", {
-                "adyen-checkout__issuer-button--selected": i,
-            }),
+            className: ep()("adyen-checkout__issuer-button", { "adyen-checkout__issuer-button--selected": i }),
             "aria-label": t,
             "aria-pressed": i,
             onClick: a,
             value: n,
         },
-        !!r &&
-            (0, el.h)(a5, {
-                className: "adyen-checkout__issuer-button-img",
-                alt: t,
-                src: r,
-            }),
-        (0, el.h)(
-            "span",
-            {
-                className: "adyen-checkout__issuer-button-text",
-            },
-            t,
-        ),
+        !!r && (0, el.h)(a5, { className: "adyen-checkout__issuer-button-img", alt: t, src: r }),
+        (0, el.h)("span", { className: "adyen-checkout__issuer-button-text" }, t),
     );
 }
 (0, w.A)(i2, "type", "atome");
@@ -10813,10 +9073,7 @@ var i8 = function (e) {
         i = t3(
             function (e) {
                 var t = e.currentTarget.value;
-                b()(e.target, "value", {
-                    value: t,
-                }),
-                    a(e);
+                b()(e.target, "value", { value: t }), a(e);
             },
             [a],
         );
@@ -10828,23 +9085,10 @@ var i8 = function (e) {
             "aria-label": o.get("idealIssuer.selectField.placeholder"),
         },
         J()(n).call(n, function (e) {
-            return (0, el.h)(
-                i4,
-                (0, er.A)(
-                    {
-                        key: e.id,
-                    },
-                    e,
-                    {
-                        selected: r === e.id,
-                        onClick: i,
-                    },
-                ),
-            );
+            return (0, el.h)(i4, (0, er.A)({ key: e.id }, e, { selected: r === e.id, onClick: i }));
         }),
     );
 };
-
 function i3(e) {
     var t,
         n = e.label,
@@ -10871,7 +9115,6 @@ var i6 = function (e) {
     }
     return (n && "http:" === t.protocol) || "https:" === t.protocol;
 };
-
 function i5(e) {
     var t = e.message,
         n = e.urls,
@@ -10882,9 +9125,7 @@ function i5(e) {
     return r && a
         ? (0, el.h)(
               "span",
-              {
-                  className: "adyen-checkout-disclaimer__label",
-              },
+              { className: "adyen-checkout-disclaimer__label" },
               tw(
                   t,
                   J()(n).call(n, function (e) {
@@ -10906,7 +9147,6 @@ function i5(e) {
         : null;
 }
 var i9 = ["items", "placeholder", "issuer", "highlightedIds"];
-
 function i7(e, t) {
     var n = c()(e);
     if (d()) {
@@ -10944,7 +9184,6 @@ var se = function (e, t) {
         },
     },
     sr = (((sA = sr || {})[(sA.ButtonGroup = 0)] = "ButtonGroup"), (sA[(sA.Dropdown = 1)] = "Dropdown"), sA);
-
 function sa(e) {
     var t,
         n,
@@ -10955,13 +9194,7 @@ function sa(e) {
         s = void 0 === i ? [] : i,
         l = (0, _.A)(e, i9),
         c = nc().i18n,
-        u = rj({
-            schema: st,
-            defaultData: {
-                issuer: o,
-            },
-            rules: sn,
-        }),
+        u = rj({ schema: st, defaultData: { issuer: o }, rules: sn }),
         d = u.handleChangeFor,
         p = u.triggerValidation,
         f = u.data,
@@ -10993,19 +9226,8 @@ function sa(e) {
     );
     t1(
         function () {
-            l.onChange({
-                data: f,
-                valid: y,
-                errors: g,
-                isValid: A,
-            });
-            var e =
-                null == D
-                    ? void 0
-                    : D({
-                          errors: g,
-                          isValidating: !0,
-                      });
+            l.onChange({ data: f, valid: y, errors: g, isValid: A });
+            var e = null == D ? void 0 : D({ errors: g, isValidating: !0 });
             (null == e ? void 0 : e.action) === rf && B && o0(".adyen-checkout__issuer-list", e.fieldToFocus);
         },
         [f, y, g, A],
@@ -11040,15 +9262,11 @@ function sa(e) {
                 e
             );
         },
-        {
-            highlightedItems: [],
-        },
+        { highlightedItems: [] },
     ).highlightedItems;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__issuer-list",
-        },
+        { className: "adyen-checkout__issuer-list" },
         !!V.length &&
             (0, el.h)(
                 el.FK,
@@ -11079,28 +9297,16 @@ function sa(e) {
         l.termsAndConditions &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__issuer-list__termsAndConditions",
-                },
-                (0, el.h)(i5, {
-                    message: c.get(l.termsAndConditions.translationKey),
-                    urls: l.termsAndConditions.urls,
-                }),
+                { className: "adyen-checkout__issuer-list__termsAndConditions" },
+                (0, el.h)(i5, { message: c.get(l.termsAndConditions.translationKey), urls: l.termsAndConditions.urls }),
             ),
         l.showPayButton &&
             l.payButton({
                 status: S,
-                label: se(
-                    {
-                        issuer: f.issuer,
-                        items: M()((n = [])).call(n, (0, H.A)(r), (0, H.A)(V)),
-                    },
-                    c,
-                ),
+                label: se({ issuer: f.issuer, items: M()((n = [])).call(n, (0, H.A)(r), (0, H.A)(V)) }, c),
             }),
     );
 }
-
 function so(e, t) {
     var n = c()(e);
     if (d()) {
@@ -11113,9 +9319,7 @@ function so(e, t) {
     }
     return n;
 }
-sa.defaultProps = {
-    onChange: function () {},
-};
+sa.defaultProps = { onChange: function () {} };
 var si = function (e, t, n) {
         return function (r) {
             return r
@@ -11136,19 +9340,12 @@ var si = function (e, t, n) {
                                       });
                           }
                           return e;
-                      })(
-                          {
-                              parentFolder: r ? "".concat(t, "/") : "",
-                              type: r || t,
-                          },
-                          e,
-                      ),
+                      })({ parentFolder: r ? "".concat(t, "/") : "", type: r || t }, e),
                   )(r)
                 : null;
         };
     },
     ss = ["label", "icon", "payButton", "onSubmit", "amount", "name"];
-
 function sl(e, t) {
     var n = c()(e);
     if (d()) {
@@ -11161,7 +9358,6 @@ function sl(e, t) {
     }
     return n;
 }
-
 function sc(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -11179,7 +9375,6 @@ function sc(e) {
     }
     return e;
 }
-
 function su(e) {
     var t,
         n,
@@ -11223,7 +9418,6 @@ function su(e) {
         )
     );
 }
-
 function sd(e, t) {
     var n = c()(e);
     if (d()) {
@@ -11236,7 +9430,6 @@ function sd(e, t) {
     }
     return n;
 }
-
 function sp(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -11276,28 +9469,15 @@ var sh = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t;
         if (((0, k.A)(this, r), (t = n.call(this, e)).props.showImage)) {
             var a,
-                o = si(
-                    {
-                        loadingContext: t.props.loadingContext,
-                    },
-                    t.constructor.type,
-                    function (e) {
-                        return t.resources.getImage(e);
-                    },
-                );
+                o = si({ loadingContext: t.props.loadingContext }, t.constructor.type, function (e) {
+                    return t.resources.getImage(e);
+                });
             t.props.issuers = J()((a = t.props.issuers)).call(a, function (e) {
-                return sp(
-                    sp({}, e),
-                    {},
-                    {
-                        icon: o(e.id),
-                    },
-                );
+                return sp(sp({}, e), {}, { icon: o(e.id) });
             });
         }
         return t;
@@ -11318,13 +9498,7 @@ var sh = (function (e) {
                                 ).items) ||
                             e.issuers ||
                             [];
-                    return sp(
-                        sp({}, e),
-                        {},
-                        {
-                            issuers: n,
-                        },
-                    );
+                    return sp(sp({}, e), {}, { issuers: n });
                 },
             },
             {
@@ -11352,10 +9526,7 @@ var sh = (function (e) {
                     var e;
                     return this.props.showPaymentMethodItemImages
                         ? J()((e = this.props.issuers)).call(e, function (e) {
-                              return {
-                                  icon: e.icon,
-                                  name: e.id,
-                              };
+                              return { icon: e.icon, name: e.id };
                           })
                         : [];
                 },
@@ -11366,17 +9537,11 @@ var sh = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.issuers.length > 0
                             ? (0, el.h)(
                                   is,
-                                  {
-                                      srPanel: this.props.modules.srPanel,
-                                  },
+                                  { srPanel: this.props.modules.srPanel },
                                   (0, el.h)(
                                       sa,
                                       (0, er.A)(
@@ -11402,19 +9567,13 @@ var sh = (function (e) {
                             : this.props.showPayButton &&
                                   (0, el.h)(
                                       su,
-                                      (0, er.A)(
-                                          {
-                                              name: this.props.name,
+                                      (0, er.A)({ name: this.props.name }, this.props, {
+                                          onSubmit: this.submit,
+                                          payButton: this.payButton,
+                                          ref: function (t) {
+                                              e.componentRef = t;
                                           },
-                                          this.props,
-                                          {
-                                              onSubmit: this.submit,
-                                              payButton: this.payButton,
-                                              ref: function (t) {
-                                                  e.componentRef = t;
-                                              },
-                                          },
-                                      ),
+                                      }),
                                   ),
                     );
                 },
@@ -11423,7 +9582,6 @@ var sh = (function (e) {
         r
     );
 })();
-
 function sf(e, t) {
     var n = c()(e);
     if (d()) {
@@ -11436,7 +9594,6 @@ function sf(e, t) {
     }
     return n;
 }
-
 function sm(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -11485,7 +9642,6 @@ var sy = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -11497,9 +9653,7 @@ var sy = (function (e) {
                     return sm(
                         sm({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -11507,7 +9661,6 @@ var sy = (function (e) {
         r
     );
 })();
-
 function sv(e, t) {
     var n = c()(e);
     if (d()) {
@@ -11520,7 +9673,6 @@ function sv(e, t) {
     }
     return n;
 }
-
 function sg(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -11561,7 +9713,6 @@ var sb = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -11573,10 +9724,7 @@ var sb = (function (e) {
                     return sg(
                         sg({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                            placeholder: "issuerList.wallet.placeholder",
-                        },
+                        { showImage: !1, placeholder: "issuerList.wallet.placeholder" },
                     );
                 },
             },
@@ -11656,7 +9804,6 @@ var sP =
         window.console &&
         window.console.warn &&
         F()((sw = window.console.warn)).call(sw, window.console);
-
 function sF(e) {
     this.config.cardGroupTypes = it((s = e.cardGroupTypes)) && s.length ? s : nY;
     var t = e.loadingContext;
@@ -11696,7 +9843,6 @@ function sF(e) {
     } else sR("WARNING Config :: no loadingContext has been specified!");
 }
 var sO = function () {};
-
 function sE() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (this.callbacks.onLoad = e.onLoad ? e.onLoad : sO),
@@ -11724,12 +9870,7 @@ var sI = function (e) {
     },
     sM = function (e, t, n, r, a) {
         if (!ng(e, "error")) return null;
-        var o = {
-                rootNode: r,
-                fieldType: e.fieldType,
-                error: null,
-                type: null,
-            },
+        var o = { rootNode: r, fieldType: e.fieldType, error: null, type: null },
             i = "" !== e.error;
         return i || t.hasError
             ? t.errorType === rd[rn]
@@ -11737,7 +9878,6 @@ var sI = function (e) {
                 : ((o.error = i ? e.error : ""), (o.type = n), (t.hasError = i), (t.errorType = o.error), a(o), o)
             : null;
     };
-
 function sT(e) {
     var t,
         n,
@@ -11778,11 +9918,7 @@ function sT(e) {
                 l.push(p);
             }
             return l;
-        })({
-            fieldType: o,
-            txVariant: this.state.type,
-            rootNode: this.props.rootNode,
-        })),
+        })({ fieldType: o, txVariant: this.state.type, rootNode: this.props.rootNode })),
             o === nL && (t[0].endDigits = "");
         for (var i = 0, s = t.length; i < s; i += 1)
             this.config.allowedDOMAccess &&
@@ -11801,12 +9937,10 @@ var sB = function (e, t, n) {
         t.postMessage(r, n);
     }
 };
-
 function sD(e, t) {
     var n;
     return (null == (n = e.securedFields[t]) ? void 0 : n.iframeContentWindow) || null;
 }
-
 function sL(e) {
     var t,
         n,
@@ -11834,10 +9968,7 @@ function sL(e) {
                 }
             })(a, this.state.type, this.props.rootNode),
         sM(
-            {
-                error: "",
-                fieldType: r,
-            },
+            { error: "", fieldType: r },
             this.state.securedFields[r],
             this.state.type,
             this.props.rootNode,
@@ -11857,23 +9988,11 @@ function sL(e) {
         for (t = 0; t < c.length; t += 1) {
             (a = (r = c[t]).encryptedFieldName), (n = M()((d = "".concat(s, "-encrypted-"))).call(d, a)), (o = r.blob);
             var d,
-                p = sI({
-                    fieldType: i,
-                    encryptedFieldName: a,
-                    uuid: n,
-                    isValid: !0,
-                    txVariant: s,
-                    rootNode: l,
-                });
+                p = sI({ fieldType: i, encryptedFieldName: a, uuid: n, isValid: !0, txVariant: s, rootNode: l });
             (p.blob = o), u.push(p);
         }
         return u;
-    })({
-        fieldType: r,
-        txVariant: this.state.type,
-        rootNode: this.props.rootNode,
-        encryptedObjArr: a,
-    });
+    })({ fieldType: r, txVariant: this.state.type, rootNode: this.props.rootNode, encryptedObjArr: a });
     for (
         r === nj &&
             ng(this.state.securedFields, nU) &&
@@ -11906,12 +10025,7 @@ sV.push({
     pattern: /^(5[1-5][0-9]{0,14}|2[2-7][0-9]{0,14})$/,
     securityCode: "CVC",
 }),
-    sV.push({
-        cardType: "visadankort",
-        startingRules: [4571],
-        permittedLengths: [16],
-        pattern: /^(4571)[0-9]{0,12}$/,
-    }),
+    sV.push({ cardType: "visadankort", startingRules: [4571], permittedLengths: [16], pattern: /^(4571)[0-9]{0,12}$/ }),
     sV.push({
         cardType: "visa",
         startingRules: [4],
@@ -11926,12 +10040,7 @@ sV.push({
         pattern: /^3[47][0-9]{0,13}$/,
         securityCode: "CID",
     }),
-    sV.push({
-        cardType: "diners",
-        startingRules: [36],
-        permittedLengths: [14],
-        pattern: /^(36)[0-9]{0,12}$/,
-    }),
+    sV.push({ cardType: "diners", startingRules: [36], permittedLengths: [14], pattern: /^(36)[0-9]{0,12}$/ }),
     sV.push({
         cardType: "maestrouk",
         startingRules: [6759],
@@ -11977,12 +10086,7 @@ sV.push({
         permittedLengths: [16],
         pattern: /^(5100081)[0-9]{0,9}$/,
     }),
-    sV.push({
-        cardType: "dankort",
-        startingRules: [5019],
-        permittedLengths: [16],
-        pattern: /^(5019)[0-9]{0,12}$/,
-    }),
+    sV.push({ cardType: "dankort", startingRules: [5019], permittedLengths: [16], pattern: /^(5019)[0-9]{0,12}$/ }),
     sV.push({
         cardType: "hipercard",
         startingRules: [606282],
@@ -12070,12 +10174,7 @@ sV.push({
         permittedLengths: [16, 17, 18, 19],
         pattern: /^(220)[0-9]{0,16}$/,
     }),
-    sV.push({
-        cardType: "codensa",
-        startingRules: [590712],
-        permittedLengths: [16],
-        pattern: /^(590712)[0-9]{0,10}$/,
-    }),
+    sV.push({ cardType: "codensa", startingRules: [590712], permittedLengths: [16], pattern: /^(590712)[0-9]{0,10}$/ }),
     sV.push({
         cardType: "naranja",
         startingRules: [377798, 377799, 402917, 402918, 527571, 527572, 589562],
@@ -12100,12 +10199,7 @@ sV.push({
         permittedLengths: [16, 17, 18, 19],
         pattern: /^(50)(1)\d*$/,
     }),
-    sV.push({
-        cardType: "troy",
-        startingRules: [9792],
-        permittedLengths: [16],
-        pattern: /^(97)(9)\d*$/,
-    }),
+    sV.push({ cardType: "troy", startingRules: [9792], permittedLengths: [16], pattern: /^(97)(9)\d*$/ }),
     sV.push({
         cardType: "forbrugsforeningen",
         startingRules: [600722],
@@ -12128,10 +10222,7 @@ sV.push({
         pattern:
             /^(100003|508(2|[5-9])|60(69|[7-8])|652(1[5-9]|[2-5][0-9]|8[5-9])|65300[3-4]|8172([0-1]|[3-5]|7|9)|817(3[3-8]|40[6-9]|410)|35380([0-2]|[5-6]|9))[0-9]{0,12}$/,
     }),
-    sV.push({
-        cardType: "ticket",
-        expiryDatePolicy: "hidden",
-    });
+    sV.push({ cardType: "ticket", expiryDatePolicy: "hidden" });
 var sj = function (e) {
         return P()(sV).call(sV, function (t) {
             return t.cardType === e;
@@ -12171,7 +10262,6 @@ var sj = function (e) {
             (0, w.A)(this, "onAutoCompleteCallback", void 0),
             (this.sfConfig = {});
     });
-
 function sK(e, t) {
     var n = c()(e);
     if (d()) {
@@ -12184,7 +10274,6 @@ function sK(e, t) {
     }
     return n;
 }
-
 function sH(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -12204,16 +10293,11 @@ function sH(e) {
 }
 var sz = function (e, t) {
     var n = "card" === e ? "nocard" : e || "nocard";
-    return t.getImage({
-        type: n,
-        extension: "svg",
-    })(n);
+    return t.getImage({ type: n, extension: "svg" })(n);
 };
-
 function sW(e) {
     return "object" === (0, A.A)(e) && null !== e && "[object Array]" === Object.prototype.toString.call(e);
 }
-
 function sG() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     var r = sW(t[0]) ? t[0] : t;
@@ -12234,7 +10318,6 @@ function sG() {
         },
     };
 }
-
 function s$() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     var r = sW(t[0]) ? t[0] : t;
@@ -12248,7 +10331,6 @@ function s$() {
         },
     };
 }
-
 function sY(e, t) {
     var n = c()(e);
     if (d()) {
@@ -12261,7 +10343,6 @@ function sY(e, t) {
     }
     return n;
 }
-
 function sQ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -12279,7 +10360,6 @@ function sQ(e) {
     }
     return e;
 }
-
 function sZ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -12292,7 +10372,6 @@ function sZ(e, t) {
     }
     return n;
 }
-
 function sJ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -12310,7 +10389,6 @@ function sJ(e) {
     }
     return e;
 }
-
 function sX(e, t) {
     var n = c()(e);
     if (d()) {
@@ -12323,7 +10401,6 @@ function sX(e, t) {
     }
     return n;
 }
-
 function s0(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -12363,19 +10440,12 @@ var s1 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e, t) {
         (0, k.A)(this, r), (a = n.call(this));
         var a,
             o = ["fieldType", "iframeSrc", "cvcPolicy", "expiryDatePolicy", "loadingContext", "holderEl"],
             i = s$(o).from(e);
-        a.sfConfig = s0(
-            s0(s0({}, a.sfConfig), i),
-            {},
-            {
-                iframeUIConfig: s0({}, i.iframeUIConfig),
-            },
-        );
+        a.sfConfig = s0(s0(s0({}, a.sfConfig), i), {}, { iframeUIConfig: s0({}, i.iframeUIConfig) });
         var s = sG(o).from(e);
         return (
             (a.fieldType = s.fieldType),
@@ -12434,23 +10504,8 @@ var s1 = (function (e) {
                             (s = e.get(M()((a = "".concat(i, "."))).call(a, n, ".aria.iframeTitle"))),
                             (l = e.get(M()((o = "".concat(i, "."))).call(o, n, ".aria.label"))),
                             (c = e.locale),
-                            (u = oW(
-                                {
-                                    iframeTitle: s,
-                                    label: l,
-                                },
-                                e,
-                            )),
-                            sQ(
-                                sQ(
-                                    {},
-                                    c && {
-                                        lang: c,
-                                    },
-                                ),
-                                {},
-                                (0, w.A)({}, n, u),
-                            ));
+                            (u = oW({ iframeTitle: s, label: l }, e)),
+                            sQ(sQ({}, c && { lang: c }), {}, (0, w.A)({}, n, u)));
                     this.sfConfig.iframeUIConfig.ariaConfig = x;
                     var P =
                         ((d = this.sfConfig),
@@ -12479,11 +10534,8 @@ var s1 = (function (e) {
                         ));
                     this.sfConfig.iframeUIConfig.placeholders = P;
                     var R =
-                        ((b = (g = {
-                            src: this.iframeSrc,
-                            title: x[this.fieldType].iframeTitle,
-                            policy: "origin",
-                        }).src),
+                        ((b = (g = { src: this.iframeSrc, title: x[this.fieldType].iframeTitle, policy: "origin" })
+                            .src),
                         (_ = void 0 === (A = g.title) ? "iframe element" : A),
                         (k = g.policy),
                         (C = g.styleStr),
@@ -12834,7 +10886,6 @@ var s1 = (function (e) {
         r
     );
 })();
-
 function s2() {
     this.encryptedAttrName = n3;
     var e = oY(this.props.rootNode, "[".concat(this.encryptedAttrName, "]"));
@@ -12845,11 +10896,9 @@ function s2() {
         e.length
     );
 }
-
 function s4(e) {
     return s8.apply(this, arguments);
 }
-
 function s8() {
     return (s8 = (0, o.A)(
         s().mark(function e(t) {
@@ -12886,11 +10935,9 @@ function s8() {
         }),
     )).apply(this, arguments);
 }
-
 function s3(e, t, n) {
     return s6.apply(this, arguments);
 }
-
 function s6() {
     return (s6 = (0, o.A)(
         s().mark(function e(t, n, r) {
@@ -12959,7 +11006,6 @@ function s6() {
         }),
     )).apply(this, arguments);
 }
-
 function s5(e, t, n) {
     var r = this;
     return new (B())(function (a, o) {
@@ -13015,15 +11061,9 @@ function s5(e, t, n) {
                         ))
                     );
                 (s.loadToConfigTimeout = eu()(function () {
-                    o({
-                        type: s.fieldType,
-                        failReason: "sf took too long to config",
-                    });
+                    o({ type: s.fieldType, failReason: "sf took too long to config" });
                 }, 6e3)),
-                    r.state.iframeCount === r.state.originalNumIframes &&
-                        r.callbacks.onLoad({
-                            iframesLoaded: !0,
-                        });
+                    r.state.iframeCount === r.state.originalNumIframes && r.callbacks.onLoad({ iframesLoaded: !0 });
             })
             .onConfig(function (e) {
                 r.handleIframeConfigFeedback(e),
@@ -13040,14 +11080,9 @@ function s5(e, t, n) {
             .onTouchstart(function (e) {
                 r.config.shouldDisableIOSArrowKeys &&
                     (r.hasGenuineTouchEvents || e.hasGenuineTouchEvents) &&
-                    r.callbacks.onTouchstartIOS({
-                        fieldType: e.fieldType,
-                    }),
+                    r.callbacks.onTouchstartIOS({ fieldType: e.fieldType }),
                     (e.hasGenuineTouchEvents || r.hasGenuineTouchEvents) &&
-                        r.postMessageToAllIframes({
-                            fieldType: e.fieldType,
-                            fieldClick: !0,
-                        });
+                        r.postMessageToAllIframes({ fieldType: e.fieldType, fieldClick: !0 });
             })
             .onShiftTab(function (e) {
                 r.handleSFShiftTab(e.fieldType);
@@ -13114,28 +11149,19 @@ var s9 = {
         }
         this.destroyTouchendListener(),
             (this.state.registerFieldForIos = !1),
-            this.postMessageToAllIframes({
-                fieldType: "webInternalElement",
-                fieldClick: !0,
-            });
+            this.postMessageToAllIframes({ fieldType: "webInternalElement", fieldClick: !0 });
     },
     le = function (e) {
         this.hasGenuineTouchEvents = !0;
         var t = e.target;
         if (t instanceof HTMLInputElement || t instanceof HTMLSpanElement) {
-            this.postMessageToAllIframes({
-                fieldType: "webInternalElement",
-                checkoutTouchEvent: !0,
-            });
+            this.postMessageToAllIframes({ fieldType: "webInternalElement", checkoutTouchEvent: !0 });
             var n,
                 r,
                 a,
                 o = null != (n = t.getAttribute("name")) ? n : t.getAttribute("data-id");
             null == (r = (a = this.callbacks).onTouchstartIOS) ||
-                r.call(a, {
-                    fieldType: "webInternalElement",
-                    name: o,
-                });
+                r.call(a, { fieldType: "webInternalElement", name: o });
         }
     },
     lt = function () {
@@ -13181,11 +11207,7 @@ var s9 = {
         switch (this.state.type) {
             case "ach":
                 var t;
-                e === nz && (t = nH),
-                    (n = {
-                        fieldToFocus: t,
-                        additionalField: void 0,
-                    });
+                e === nz && (t = nH), (n = { fieldToFocus: t, additionalField: void 0 });
                 break;
             case "giftcard":
                 n = (function (e, t) {
@@ -13197,10 +11219,7 @@ var s9 = {
                         case nq:
                             r = nL;
                     }
-                    return {
-                        fieldToFocus: r,
-                        additionalField: n,
-                    };
+                    return { fieldToFocus: r, additionalField: n };
                 })(e, this.props.rootNode);
                 break;
             default:
@@ -13225,10 +11244,7 @@ var s9 = {
                               case "encryptedPin":
                                   r = la(e, t);
                           }
-                          return {
-                              fieldToFocus: a,
-                              additionalField: r,
-                          };
+                          return { fieldToFocus: a, additionalField: r };
                       })(e, this.props.rootNode, this.state.hasSeparateDateFields)
                     : (function (e, t, n, r) {
                           var a, o;
@@ -13246,10 +11262,7 @@ var s9 = {
                               case nq:
                                   1 === r ? (a = la(nq, t)) : (o = n ? nU : nV);
                           }
-                          return {
-                              fieldToFocus: o,
-                              additionalField: a,
-                          };
+                          return { fieldToFocus: o, additionalField: a };
                       })(e, this.props.rootNode, this.state.hasSeparateDateFields, this.state.numIframes);
         }
         var n,
@@ -13261,7 +11274,6 @@ var s9 = {
     li = function (e) {
         (s9.__IS_FIREFOX || (s9.__IS_IE && s9.__IS_IE <= 11)) && this.handleShiftTab(e);
     };
-
 function ls(e, t) {
     var n = c()(e);
     if (d()) {
@@ -13274,7 +11286,6 @@ function ls(e, t) {
     }
     return n;
 }
-
 function ll(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -13292,52 +11303,29 @@ function ll(e) {
     }
     return e;
 }
-
 function lc(e) {
     ng(this.state.securedFields, nL) &&
         sB(
             ll(
-                ll(
-                    {
-                        txVariant: this.state.type,
-                    },
-                    e,
-                ),
+                ll({ txVariant: this.state.type }, e),
                 {},
-                {
-                    fieldType: nL,
-                    numKey: this.state.securedFields[nL].numKey,
-                },
+                { fieldType: nL, numKey: this.state.securedFields[nL].numKey },
             ),
             sD(this.state, nL),
             this.config.loadingContext,
         );
 }
-
 function lu(e) {
     var t = this,
         n = ng(this.state.securedFields, nj) && ng(this.state.securedFields, nU) ? [nj, nU] : [nV];
     N()(n).call(n, function (n) {
         sB(
-            ll(
-                ll(
-                    {
-                        txVariant: t.state.type,
-                    },
-                    e,
-                ),
-                {},
-                {
-                    fieldType: n,
-                    numKey: t.state.securedFields[n].numKey,
-                },
-            ),
+            ll(ll({ txVariant: t.state.type }, e), {}, { fieldType: n, numKey: t.state.securedFields[n].numKey }),
             sD(t.state, n),
             t.config.loadingContext,
         );
     });
 }
-
 function ld(e, t) {
     var n,
         r,
@@ -13345,22 +11333,8 @@ function ld(e, t) {
     if (!e || !c()(e).length)
         return (
             a
-                ? (this.sendBrandToCardSF({
-                      brand: "reset",
-                  }),
-                  this.sendExpiryDatePolicyToSF({
-                      expiryDatePolicy: n2,
-                  }))
-                : t &&
-                  this.processBrand(
-                      ll(
-                          ll({}, t),
-                          {},
-                          {
-                              fieldType: nL,
-                          },
-                      ),
-                  ),
+                ? (this.sendBrandToCardSF({ brand: "reset" }), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: n2 }))
+                : t && this.processBrand(ll(ll({}, t), {}, { fieldType: nL })),
             void (
                 "card" === this.state.type &&
                 ng(this.state.securedFields, nV) &&
@@ -13380,18 +11354,10 @@ function ld(e, t) {
         };
     if ((this.processBrand(l), a)) {
         var u = ll(
-            {
-                brand: i,
-                enableLuhnCheck: !1 !== e.supportedBrands[0].enableLuhnCheck,
-            },
-            (null == o ? void 0 : o.panLength) && {
-                panLength: null == o ? void 0 : o.panLength,
-            },
+            { brand: i, enableLuhnCheck: !1 !== e.supportedBrands[0].enableLuhnCheck },
+            (null == o ? void 0 : o.panLength) && { panLength: null == o ? void 0 : o.panLength },
         );
-        this.sendBrandToCardSF(u),
-            this.sendExpiryDatePolicyToSF({
-                expiryDatePolicy: s,
-            });
+        this.sendBrandToCardSF(u), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: s });
     }
     ng(this.state.securedFields, nq) && (this.state.securedFields[nq].cvcPolicy = o.cvcPolicy),
         ng(this.state.securedFields, nV)
@@ -13402,23 +11368,16 @@ function ld(e, t) {
               (this.state.securedFields[nU].expiryDatePolicy = s)),
         this.validateForm();
 }
-
 function lp(e, t, n) {
     var r = e.csfState,
         a = e.csfConfig;
     ng(r.securedFields, t) &&
         sB(
-            {
-                txVariant: r.type,
-                fieldType: t,
-                focus: !0,
-                numKey: r.securedFields[t].numKey,
-            },
+            { txVariant: r.type, fieldType: t, focus: !0, numKey: r.securedFields[t].numKey },
             sD(r, t),
             a.loadingContext,
         );
 }
-
 function lh(e, t) {
     var n = e.csfState,
         r = e.csfConfig,
@@ -13426,11 +11385,7 @@ function lh(e, t) {
     if (a.length) {
         var o = c()(n.securedFields);
         N()(o).call(o, function (e) {
-            var o = {
-                txVariant: n.type,
-                fieldType: e,
-                numKey: n.securedFields[e].numKey,
-            };
+            var o = { txVariant: n.type, fieldType: e, numKey: n.securedFields[e].numKey };
             N()(a).call(a, function (e) {
                 o[e] = t[e];
             }),
@@ -13438,7 +11393,6 @@ function lh(e, t) {
         });
     }
 }
-
 function lf(e, t) {
     var n = e.csfState,
         r = e.csfConfig,
@@ -13485,7 +11439,6 @@ function lf(e, t) {
     }
     return !1;
 }
-
 function lm(e, t) {
     var n = c()(e);
     if (d()) {
@@ -13498,7 +11451,6 @@ function lm(e, t) {
     }
     return n;
 }
-
 function ly(e, t) {
     var n = e.csfState,
         r = e.csfConfig,
@@ -13537,35 +11489,20 @@ function ly(e, t) {
         return (
             ng(n.securedFields, nV)
                 ? sB(
-                      {
-                          txVariant: n.type,
-                          fieldType: nV,
-                          autoComplete: d,
-                          numKey: n.securedFields[nV].numKey,
-                      },
+                      { txVariant: n.type, fieldType: nV, autoComplete: d, numKey: n.securedFields[nV].numKey },
                       sD(n, nV),
                       r.loadingContext,
                   )
                 : (ng(n.securedFields, nj) &&
                       sB(
-                          {
-                              txVariant: n.type,
-                              fieldType: nj,
-                              autoComplete: l,
-                              numKey: n.securedFields[nj].numKey,
-                          },
+                          { txVariant: n.type, fieldType: nj, autoComplete: l, numKey: n.securedFields[nj].numKey },
                           sD(n, nj),
                           r.loadingContext,
                       ),
                   ng(n.securedFields, nU) &&
                       eu()(function () {
                           sB(
-                              {
-                                  txVariant: n.type,
-                                  fieldType: nU,
-                                  autoComplete: u,
-                                  numKey: n.securedFields[nU].numKey,
-                              },
+                              { txVariant: n.type, fieldType: nU, autoComplete: u, numKey: n.securedFields[nU].numKey },
                               sD(n, nU),
                               r.loadingContext,
                           );
@@ -13574,7 +11511,6 @@ function ly(e, t) {
         );
     }
 }
-
 function lv(e, t) {
     var n = c()(e);
     if (d()) {
@@ -13587,7 +11523,6 @@ function lv(e, t) {
     }
     return n;
 }
-
 function lg(e, t) {
     var n = e.csfState,
         r = e.csfProps,
@@ -13618,7 +11553,6 @@ function lg(e, t) {
         (o.currentFocusObject = n.currentFocusObject),
         a.onFocus(o);
 }
-
 function lb(e, t, n) {
     var r = e.csfState,
         a = e.csfCallbacks;
@@ -13633,27 +11567,18 @@ function lb(e, t, n) {
             ),
         r.isConfigured)
     ) {
-        var o = {
-            additionalIframeConfigured: !0,
-            fieldType: n.fieldType,
-            type: r.type,
-        };
+        var o = { additionalIframeConfigured: !0, fieldType: n.fieldType, type: r.type };
         a.onAdditionalSFConfig(o);
     } else if (r.iframeConfigCount === r.originalNumIframes) return t(), !0;
     return !1;
 }
-
 function lA(e, t) {
     var n = e.csfState,
         r = e.csfConfig,
         a = e.csfProps,
         o = e.csfCallbacks;
     n.isConfigured = !0;
-    var i = {
-        iframesConfigured: !0,
-        type: n.type,
-        rootNode: a.rootNode,
-    };
+    var i = { iframesConfigured: !0, type: n.type, rootNode: a.rootNode };
     if ((o.onConfigSuccess(i), 1 === n.numIframes && r.isCreditCardType)) {
         if ("card" === n.type)
             return void sx(
@@ -13664,7 +11589,6 @@ function lA(e, t) {
         l && (null != (s = l.cvcPolicy) ? s : n2) !== n2 && t();
     }
 }
-
 function l_(e) {
     var t = e.csfState,
         n = e.csfProps,
@@ -13675,33 +11599,22 @@ function l_(e) {
         })(t.securedFields),
         o = a !== t.allValid;
     if (((t.allValid = a), a || o)) {
-        var i = {
-            allValid: a,
-            type: t.type,
-            rootNode: n.rootNode,
-        };
+        var i = { allValid: a, type: t.type, rootNode: n.rootNode };
         r.onAllValid(i);
     }
 }
-
 function lk(e, t) {
     var n = e.csfState,
         r = e.csfCallbacks,
         a = t.binValue,
         o = t.encryptedBin,
         i = t.uuid,
-        s = {
-            binValue: a,
-            type: n.type,
-        };
+        s = { binValue: a, type: n.type };
     o && ((s.encryptedBin = o), (s.uuid = i)), r.onBinValue(s);
 }
-
 function lC() {
     var e = this;
-    this.postMessageToAllIframes({
-        destroy: !0,
-    });
+    this.postMessageToAllIframes({ destroy: !0 });
     var t = c()(this.state.securedFields);
     N()(t).call(t, function (t) {
         var n = e.state.securedFields[t];
@@ -13741,21 +11654,14 @@ var lw = function () {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             (0, k.A)(this, r),
                 ((t = n.call(this, e)).state = {
                     type: t.props.type,
                     brand:
                         "card" !== t.props.type
-                            ? {
-                                  brand: t.props.type,
-                                  cvcPolicy: "required",
-                              }
-                            : {
-                                  brand: null,
-                                  cvcPolicy: "required",
-                              },
+                            ? { brand: t.props.type, cvcPolicy: "required" }
+                            : { brand: null, cvcPolicy: "required" },
                     allValid: void 0,
                     numIframes: 0,
                     originalNumIframes: 0,
@@ -13769,12 +11675,7 @@ var lw = function () {
                     isKCP: !1,
                 });
             var t,
-                a = {
-                    csfState: t.state,
-                    csfConfig: t.config,
-                    csfProps: t.props,
-                    csfCallbacks: t.callbacks,
-                };
+                a = { csfState: t.state, csfConfig: t.config, csfProps: t.props, csfCallbacks: t.callbacks };
             return (
                 (t.configHandler = sF),
                 (t.callbacksHandler = sE),
@@ -13830,9 +11731,7 @@ var lw = function () {
                         return {
                             updateStyles: function (t) {
                                 e.state.isConfigured
-                                    ? e.postMessageToAllIframes({
-                                          styleObject: t,
-                                      })
+                                    ? e.postMessageToAllIframes({ styleObject: t })
                                     : sR(
                                           "You cannot update the secured fields styling - they are not yet configured. Use the 'onConfigSuccess' callback to know when this has happened.",
                                       );
@@ -13900,11 +11799,7 @@ var lw = function () {
                                         delete e.state.securedFields[t],
                                         (e.state.numIframes -= 1),
                                         (e.state.iframeCount -= 1);
-                                    var n = {
-                                        additionalIframeRemoved: !0,
-                                        fieldType: t,
-                                        type: e.state.type,
-                                    };
+                                    var n = { additionalIframeRemoved: !0, fieldType: t, type: e.state.type };
                                     e.callbacks.onAdditionalSFRemoved(n);
                                 }
                             },
@@ -13921,7 +11816,6 @@ var lw = function () {
             r
         );
     })();
-
 function lN(e, t) {
     var n = c()(e);
     if (d()) {
@@ -13986,7 +11880,6 @@ var lx = function (e) {
         var t;
         return "object" === (0, A.A)(e) && (t = e), "string" != typeof e || (t = oQ(document, e)) ? t : null;
     };
-
 function lR(e, t) {
     var n = c()(e);
     if (d()) {
@@ -13999,7 +11892,6 @@ function lR(e, t) {
     }
     return n;
 }
-
 function lF(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -14017,7 +11909,6 @@ function lF(e) {
     }
     return e;
 }
-
 function lO(e, t, n, r) {
     return ((t !== n4 && t !== n8) || 0 !== n[e]) && r[e];
 }
@@ -14028,36 +11919,18 @@ var lE = function (e) {
         var t = this;
         return (
             !this.state.detectedUnsupportedBrands &&
-            (this.setState(
-                {
-                    isSfpValid: e.allValid,
-                },
-                function () {
-                    t.props.onChange(t.state, {
-                        event: "handleOnAllValid",
-                    }),
-                        t.props.onAllValid(e);
-                },
-            ),
+            (this.setState({ isSfpValid: e.allValid }, function () {
+                t.props.onChange(t.state, { event: "handleOnAllValid" }), t.props.onAllValid(e);
+            }),
             !0)
         );
     },
     lM = function (e) {
         var t = this;
-        this.setState(
-            {
-                autoCompleteName: e.value,
-            },
-            function () {
-                t.props.onChange(t.state, {
-                    event: "handleOnAutoComplete",
-                    fieldType: e.fieldType,
-                }),
-                    t.setState({
-                        autoCompleteName: null,
-                    });
-            },
-        ),
+        this.setState({ autoCompleteName: e.value }, function () {
+            t.props.onChange(t.state, { event: "handleOnAutoComplete", fieldType: e.fieldType }),
+                t.setState({ autoCompleteName: null });
+        }),
             this.props.onAutoComplete(e);
     },
     lT = function (e) {
@@ -14078,10 +11951,7 @@ var lE = function (e) {
                     };
                 },
                 function () {
-                    t.props.onChange(t.state, {
-                        event: "handleOnFieldValid",
-                        fieldType: e.fieldType,
-                    }),
+                    t.props.onChange(t.state, { event: "handleOnFieldValid", fieldType: e.fieldType }),
                         t.props.onFieldValid(e);
                 },
             ),
@@ -14095,9 +11965,7 @@ var lE = function (e) {
             this.props.onLoad(e),
             (this.csfConfigFailTimeout = eu()(function () {
                 "ready" !== t.state.status &&
-                    (t.setState({
-                        status: "csfConfigFailure",
-                    }),
+                    (t.setState({ status: "csfConfigFailure" }),
                     t.props.onError(new nv("ERROR", "secured fields have failed to configure")));
             }, this.csfConfigFailTimeoutMS));
     },
@@ -14105,14 +11973,9 @@ var lE = function (e) {
         var t = this;
         clearTimeout(this.csfConfigFailTimeout),
             (this.csfConfigFailTimeout = null),
-            this.setState(
-                {
-                    status: "ready",
-                },
-                function () {
-                    t.props.onConfigSuccess(e);
-                },
-            );
+            this.setState({ status: "ready" }, function () {
+                t.props.onConfigSuccess(e);
+            });
     },
     lL = function (e) {
         var t = this;
@@ -14139,24 +12002,14 @@ var lE = function (e) {
                 };
             },
             function () {
-                t.props.onChange(t.state, {
-                    event: "handleOnBrand",
-                });
+                t.props.onChange(t.state, { event: "handleOnBrand" });
                 var n,
                     r,
                     a =
                         null != (n = null == (r = t.props.brandsConfiguration[e.brand]) ? void 0 : r.icon)
                             ? n
                             : sz(e.brand, t.props.resources);
-                t.props.onBrand(
-                    lF(
-                        lF({}, e),
-                        {},
-                        {
-                            brandImageUrl: a,
-                        },
-                    ),
-                );
+                t.props.onBrand(lF(lF({}, e), {}, { brandImageUrl: a }));
             },
         );
     },
@@ -14170,27 +12023,16 @@ var lE = function (e) {
                     return lF(
                         lF(
                             lF(
-                                {
-                                    errors: lF(lF({}, t.errors), {}, (0, w.A)({}, e.fieldType, r || !1)),
-                                },
-                                n && {
-                                    data: lF(lF({}, t.data), {}, (0, w.A)({}, nL, void 0)),
-                                },
+                                { errors: lF(lF({}, t.errors), {}, (0, w.A)({}, e.fieldType, r || !1)) },
+                                n && { data: lF(lF({}, t.data), {}, (0, w.A)({}, nL, void 0)) },
                             ),
-                            n && {
-                                valid: lF(lF({}, t.valid), {}, (0, w.A)({}, nL, !1)),
-                            },
+                            n && { valid: lF(lF({}, t.valid), {}, (0, w.A)({}, nL, !1)) },
                         ),
-                        n && {
-                            isSfpValid: !1,
-                        },
+                        n && { isSfpValid: !1 },
                     );
                 },
                 function () {
-                    t.props.onChange(t.state, {
-                        event: "handleOnError",
-                        fieldType: e.fieldType,
-                    });
+                    t.props.onChange(t.state, { event: "handleOnError", fieldType: e.fieldType });
                 },
             ),
             !0
@@ -14198,22 +12040,14 @@ var lE = function (e) {
     },
     lj = function () {
         var e = this;
-        this.setState(
-            {
-                status: "ready",
-            },
-            function () {
-                return e.props.onChange({
-                    isSfpValid: !0,
-                });
-            },
-        );
+        this.setState({ status: "ready" }, function () {
+            return e.props.onChange({ isSfpValid: !0 });
+        });
     },
     lU = function (e) {
         var t, n;
         null == (t = (n = this.props).disableIOSArrowKeys) || t.call(n, e);
     };
-
 function lq(e, t) {
     var n = c()(e);
     if (d()) {
@@ -14226,7 +12060,6 @@ function lq(e, t) {
     }
     return n;
 }
-
 function lK(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -14266,7 +12099,6 @@ var lH = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a, o, i, s, l, c;
         return (
@@ -14349,9 +12181,7 @@ var lH = (function (e) {
                               )
                             : [],
                         a = $()(r).call(r, sS, {});
-                    this.setState({
-                        valid: a,
-                    }),
+                    this.setState({ valid: a }),
                         N()(r).call(r, function (e) {
                             n.numCharsInField[e] = 0;
                         }),
@@ -14389,9 +12219,7 @@ var lH = (function (e) {
                             loadingContext: n,
                             keypadFix: this.props.keypadFix,
                             showWarnings: this.props.showWarnings,
-                            iframeUIConfig: {
-                                sfStyles: this.props.styles,
-                            },
+                            iframeUIConfig: { sfStyles: this.props.styles },
                             i18n: this.props.i18n,
                             callbacks: {
                                 onLoad: this.handleOnLoad,
@@ -14418,9 +12246,7 @@ var lH = (function (e) {
                     (this.csf = lx(r)),
                         (this.csfLoadFailTimeout = eu()(function () {
                             "ready" !== t.state.status &&
-                                (t.setState({
-                                    status: "csfLoadFailure",
-                                }),
+                                (t.setState({ status: "csfLoadFailure" }),
                                 t.props.onError(new nv("ERROR", "secured field iframes have failed to load")));
                         }, this.csfLoadFailTimeoutMS));
                 },
@@ -14472,9 +12298,7 @@ var lH = (function (e) {
             {
                 key: "getChildContext",
                 value: function () {
-                    return {
-                        i18n: this.props.i18n,
-                    };
+                    return { i18n: this.props.i18n };
                 },
             },
             {
@@ -14482,10 +12306,7 @@ var lH = (function (e) {
                 value: function (e) {
                     var t = !!e.error;
                     return (
-                        t &&
-                            this.setState({
-                                detectedUnsupportedBrands: e.detectedBrands,
-                            }),
+                        t && this.setState({ detectedUnsupportedBrands: e.detectedBrands }),
                         (e.rootNode = this.rootNode),
                         this.handleOnError(e, t),
                         this.csf && this.csf.hasUnsupportedCard(nL, e.error),
@@ -14549,10 +12370,7 @@ var lH = (function (e) {
                                                 e
                                             );
                                         },
-                                        {
-                                            isFieldOfType: !1,
-                                            fieldIsValid: !1,
-                                        },
+                                        { isFieldOfType: !1, fieldIsValid: !1 },
                                     )).isFieldOfType),
                                     (l = i.fieldIsValid),
                                     (c = n === nq ? "cvcPolicy" : "expiryDatePolicy"),
@@ -14620,11 +12438,7 @@ var lH = (function (e) {
                             };
                         }),
                         this.csf && e) &&
-                        this.handleUnsupportedCard({
-                            type: "card",
-                            fieldType: "encryptedCardNumber",
-                            error: "",
-                        }),
+                        this.handleUnsupportedCard({ type: "card", fieldType: "encryptedCardNumber", error: "" }),
                         (this.issuingCountryCode =
                             null == e || null == (n = e.issuingCountryCode) ? void 0 : n.toLowerCase());
                     var a = (null == t ? void 0 : t.brand) && E()(n1).call(n1, t.brand);
@@ -14638,13 +12452,7 @@ var lH = (function (e) {
             {
                 key: "render",
                 value: function (e, t) {
-                    return e.render(
-                        {
-                            setRootNode: this.setRootNode,
-                            setFocusOn: this.setFocusOn,
-                        },
-                        t,
-                    );
+                    return e.render({ setRootNode: this.setRootNode, setFocusOn: this.setFocusOn }, t);
                 },
             },
         ]),
@@ -14695,10 +12503,7 @@ var lz = (((ph = {}).full = "full"), (ph.partial = "partial"), (ph.none = "none"
             "country",
         ],
         installmentOptions: {},
-        configuration: {
-            koreanAuthenticationRequired: !1,
-            socialSecurityNumberMode: "auto",
-        },
+        configuration: { koreanAuthenticationRequired: !1, socialSecurityNumberMode: "auto" },
         autoFocus: !0,
         isPayButtonPrimaryVariant: !0,
         disableIOSArrowKeys: !0,
@@ -14712,23 +12517,15 @@ var lz = (((ph = {}).full = "full"), (ph.partial = "partial"), (ph.none = "none"
         onBlur: function () {},
         onFocus: function () {},
         onChange: function () {},
-        data: {
-            billingAddress: {},
-        },
+        data: { billingAddress: {} },
         styles: {},
         placeholders: {},
     },
-    lG = {
-        base: {
-            caretColor: "#0075FF",
-        },
-    };
-
+    lG = { base: { caretColor: "#0075FF" } };
 function l$(e) {
     var t;
     return eP()((t = e.replace(/[^0-9]/g, ""))).call(t);
 }
-
 function lY() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
     if ("string" != typeof e) return "";
@@ -14750,13 +12547,10 @@ function lY() {
               .replace(/(\d{3})(?!$)/g, "$1.")
               .replace(/(.{11}).(\d{1,2})$/g, "$1-$2");
 }
-
 function lQ(e) {
     return /(^\d{3}\.\d{3}\.\d{3}-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$)/.test(e);
 }
-var lZ = {
-        socialSecurityNumber: lY,
-    },
+var lZ = { socialSecurityNumber: lY },
     lJ = {
         socialSecurityNumber: [
             {
@@ -14796,7 +12590,6 @@ var lZ = {
             },
         ],
     };
-
 function lX(e, t) {
     var n = c()(e);
     if (d()) {
@@ -14836,7 +12629,6 @@ var l0 = function (e) {
             r = l0(e);
         return r[0].brand !== t && r[0].brand !== n && te()(r).call(r), (r.length = 1), r;
     };
-
 function l2(e, t, n) {
     var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = e.type,
@@ -14856,10 +12648,7 @@ function l2(e, t, n) {
                 return (
                     l([]),
                     u(""),
-                    i.current.processBinLookupResponse(e, {
-                        brand: t && "card" !== a ? a : null,
-                        cvcPolicy: o,
-                    }),
+                    i.current.processBinLookupResponse(e, { brand: t && "card" !== a ? a : null, cvcPolicy: o }),
                     void (r.current = 0)
                 );
             if (null != (n = e.supportedBrands) && n.length) {
@@ -14880,14 +12669,8 @@ function l2(e, t, n) {
                         (h = s[1]),
                         {
                             dualBrandSelectElements: [
-                                {
-                                    id: d.brand,
-                                    brandObject: d,
-                                },
-                                {
-                                    id: h.brand,
-                                    brandObject: h,
-                                },
+                                { id: d.brand, brandObject: d },
+                                { id: h.brand, brandObject: h },
                             ],
                             selectedBrandValue: "",
                             leadBrand: d,
@@ -14925,11 +12708,7 @@ function l2(e, t, n) {
                     },
                     [],
                 )).length &&
-                (u(t),
-                i.current.processBinLookupResponse({
-                    issuingCountryCode: d,
-                    supportedBrands: r,
-                }));
+                (u(t), i.current.processBinLookupResponse({ issuingCountryCode: d, supportedBrands: r }));
         },
     };
 }
@@ -14946,10 +12725,7 @@ var l4 = "holderName",
     cr = M()(l6).call(l6, [l8]),
     ca = M()(l5).call(l5, [l8]),
     co = function (e, t) {
-        return t({
-            type: "card" === e ? "nocard" : e || "nocard",
-            extension: "svg",
-        })(e);
+        return t({ type: "card" === e ? "nocard" : e || "nocard", extension: "svg" })(e);
     },
     ci = function (e, t, n) {
         switch (e) {
@@ -14966,7 +12742,6 @@ var l4 = "holderName",
                 return null;
         }
     };
-
 function cs(e) {
     var t;
     return null != (t = n7[e]) ? t : e;
@@ -14987,28 +12762,11 @@ var cl = function (e) {
         );
     return (0, el.h)(
         "div",
-        {
-            style: {
-                position: "relative",
-            },
-        },
-        (0, el.h)(
-            "div",
-            {
-                className: o,
-            },
-            (0, el.h)(tK, null),
-        ),
-        (0, el.h)(
-            "div",
-            {
-                className: a,
-            },
-            n,
-        ),
+        { style: { position: "relative" } },
+        (0, el.h)("div", { className: o }, (0, el.h)(tK, null)),
+        (0, el.h)("div", { className: a }, n),
     );
 };
-
 function cc(e) {
     var t = e.frontCVC,
         n = void 0 !== t && t,
@@ -15020,9 +12778,7 @@ function cc(e) {
         });
     return (0, el.h)(
         "span",
-        {
-            className: a,
-        },
+        { className: a },
         (0, el.h)(
             "svg",
             {
@@ -15036,32 +12792,13 @@ function cc(e) {
                 "aria-describedby": "adyen-checkout__cvc__front-hint-img",
                 role: "img",
             },
-            (0, el.h)(
-                "title",
-                {
-                    id: "adyen-checkout__cvc__front-hint-img",
-                },
-                r,
-            ),
+            (0, el.h)("title", { id: "adyen-checkout__cvc__front-hint-img" }, r),
             (0, el.h)("path", {
                 d: "M0 3C0 1.34315 1.34315 0 3 0H24C25.6569 0 27 1.34315 27 3V15C27 16.6569 25.6569 18 24 18H3C1.34315 18 0 16.6569 0 15V3Z",
                 fill: "#E6E9EB",
             }),
-            (0, el.h)("rect", {
-                x: "4",
-                y: "12",
-                width: "19",
-                height: "2",
-                fill: "#B9C4C9",
-            }),
-            (0, el.h)("rect", {
-                x: "4",
-                y: "4",
-                width: "4",
-                height: "4",
-                rx: "1",
-                fill: "white",
-            }),
+            (0, el.h)("rect", { x: "4", y: "12", width: "19", height: "2", fill: "#B9C4C9" }),
+            (0, el.h)("rect", { x: "4", y: "4", width: "4", height: "4", rx: "1", fill: "white" }),
             (0, el.h)("rect", {
                 className: "adyen-checkout__card__cvc__hint__location",
                 x: "16.5",
@@ -15085,13 +12822,7 @@ function cc(e) {
                 "aria-describedby": "adyen-checkout__cvc__back-hint-img",
                 role: "img",
             },
-            (0, el.h)(
-                "title",
-                {
-                    id: "adyen-checkout__cvc__back-hint-img",
-                },
-                r,
-            ),
+            (0, el.h)("title", { id: "adyen-checkout__cvc__back-hint-img" }, r),
             (0, el.h)("path", {
                 d: "M27 4.00001V3.37501C27 2.4799 26.6444 1.62146 26.0115 0.988518C25.3786 0.355581 24.5201 0 23.625 0H3.375C2.47989 0 1.62145 0.355581 0.988514 0.988518C0.355579 1.62146 0 2.4799 0 3.37501V4.00001H27Z",
                 fill: "#E6E9EB",
@@ -15100,12 +12831,7 @@ function cc(e) {
                 d: "M0 6.99994V14.6666C0 15.5507 0.355579 16.3985 0.988514 17.0237C1.62145 17.6488 2.47989 18 3.375 18H23.625C24.5201 18 25.3786 17.6488 26.0115 17.0237C26.6444 16.3985 27 15.5507 27 14.6666V6.99994H0Z",
                 fill: "#E6E9EB",
             }),
-            (0, el.h)("rect", {
-                y: "4.00012",
-                width: "27",
-                height: "3.00001",
-                fill: "#687282",
-            }),
+            (0, el.h)("rect", { y: "4.00012", width: "27", height: "3.00001", fill: "#687282" }),
             (0, el.h)("path", {
                 d: "M4 11C4 10.4477 4.44772 10 5 10H21C22.1046 10 23 10.8954 23 12C23 13.1046 22.1046 14 21 14H5C4.44771 14 4 13.5523 4 13V11Z",
                 fill: "white",
@@ -15137,7 +12863,6 @@ var cu = {
         "CardInput-module_adyen-checkout__card__exp-cvc__exp-date__input--hidden__YC3VT",
     "revolving-plan-installments__disabled": "CardInput-module_revolving-plan-installments__disabled__VhNj2",
 };
-
 function cd(e) {
     var t,
         n =
@@ -15149,15 +12874,8 @@ function cd(e) {
     return (0, el.h)("span", n, e.children);
 }
 var cp = function (e, t) {
-    return (0, el.h)(
-        "div",
-        (0, er.A)({}, e, {
-            "aria-hidden": "true",
-        }),
-        t,
-    );
+    return (0, el.h)("div", (0, er.A)({}, e, { "aria-hidden": "true" }), t);
 };
-
 function ch(e) {
     var t,
         n,
@@ -15178,9 +12896,7 @@ function ch(e) {
         v = ep()(
             void 0 === l ? "" : l,
             ((0, w.A)(
-                (t = {
-                    "adyen-checkout__field__cvc": !0,
-                }),
+                (t = { "adyen-checkout__field__cvc": !0 }),
                 cu["adyen-checkout__card__cvc__input--hidden"],
                 m === n8,
             ),
@@ -15222,17 +12938,10 @@ function ch(e) {
             useLabelElement: !1,
             renderAlternativeToLabel: cp,
         },
-        (0, el.h)(cd, {
-            encryptedFieldType: nq,
-            className: g,
-        }),
-        (0, el.h)(cc, {
-            frontCVC: void 0 !== h && h,
-            fieldLabel: b,
-        }),
+        (0, el.h)(cd, { encryptedFieldType: nq, className: g }),
+        (0, el.h)(cc, { frontCVC: void 0 !== h && h, fieldLabel: b }),
     );
 }
-
 function cf(e) {
     var t,
         n,
@@ -15260,15 +12969,10 @@ function cf(e) {
         g = M()((r = "".concat(y))).call(r, v);
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__card__form adyen-checkout__card__form--oneClick",
-            "aria-label": g,
-        },
+        { className: "adyen-checkout__card__form adyen-checkout__card__form--oneClick", "aria-label": g },
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__card__exp-cvc adyen-checkout__field-wrapper",
-            },
+            { className: "adyen-checkout__card__exp-cvc adyen-checkout__field-wrapper" },
             h &&
                 f &&
                 (0, el.h)(
@@ -15303,20 +13007,13 @@ function cf(e) {
                             label: m.get("creditCard.cvcField.title"),
                             onFocusField: s,
                         },
-                        h &&
-                            f && {
-                                className: "adyen-checkout__field--50",
-                            },
-                        {
-                            classNameModifiers: ["storedCard"],
-                            frontCVC: "amex" === o,
-                        },
+                        h && f && { className: "adyen-checkout__field--50" },
+                        { classNameModifiers: ["storedCard"], frontCVC: "amex" === o },
                     ),
                 ),
         ),
     );
 }
-
 function cm(e, t) {
     var n = c()(e);
     if (d()) {
@@ -15329,7 +13026,6 @@ function cm(e, t) {
     }
     return n;
 }
-
 function cy(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -15347,7 +13043,6 @@ function cy(e) {
     }
     return e;
 }
-
 function cv(e) {
     var t,
         n,
@@ -15376,24 +13071,9 @@ function cv(e) {
             return (
                 "amount" === c
                     ? ((t = "installmentOption"),
-                      (n = {
-                          count: e,
-                          values: {
-                              times: e,
-                              partialValue: o.amount(i.value / e, i.currency),
-                          },
-                      }))
-                    : ((t = "installmentOptionMonths"),
-                      (n = {
-                          count: e,
-                          values: {
-                              times: e,
-                          },
-                      })),
-                {
-                    id: e,
-                    name: i.value ? o.get(t, n) : "".concat(e),
-                }
+                      (n = { count: e, values: { times: e, partialValue: o.amount(i.value / e, i.currency) } }))
+                    : ((t = "installmentOptionMonths"), (n = { count: e, values: { times: e } })),
+                { id: e, name: i.value ? o.get(t, n) : "".concat(e) }
             );
         };
     return (
@@ -15408,28 +13088,10 @@ function cv(e) {
         t1(
             function () {
                 var e = cy(
-                    cy(
-                        {
-                            value: h,
-                        },
-                        b &&
-                            "revolving" === v && {
-                                plan: v,
-                                value: 1,
-                            },
-                    ),
-                    b &&
-                        "onetime" === v && {
-                            value: 1,
-                        },
+                    cy({ value: h }, b && "revolving" === v && { plan: v, value: 1 }),
+                    b && "onetime" === v && { value: 1 },
                 );
-                l(
-                    u
-                        ? e
-                        : {
-                              value: null,
-                          },
-                );
+                l(u ? e : { value: null });
             },
             [h, u, v],
         ),
@@ -15438,30 +13100,16 @@ function cv(e) {
                 ? null
                 : (0, el.h)(
                       "div",
-                      {
-                          className: "adyen-checkout__installments",
-                      },
+                      { className: "adyen-checkout__installments" },
                       b
                           ? (0, el.h)(
                                 nT,
-                                {
-                                    classNameModifiers: ["revolving-plan"],
-                                    label: "",
-                                },
+                                { classNameModifiers: ["revolving-plan"], label: "" },
                                 (0, el.h)(r3, {
                                     items: [
-                                        {
-                                            id: "onetime",
-                                            name: "installments.oneTime",
-                                        },
-                                        {
-                                            id: "installments",
-                                            name: "installments.installments",
-                                        },
-                                        {
-                                            id: "revolving",
-                                            name: "installments.revolving",
-                                        },
+                                        { id: "onetime", name: "installments.oneTime" },
+                                        { id: "installments", name: "installments.installments" },
+                                        { id: "revolving", name: "installments.revolving" },
                                     ],
                                     onChange: function (e) {
                                         g(e.currentTarget.getAttribute("value"));
@@ -15513,11 +13161,7 @@ function cv(e) {
             : null
     );
 }
-cv.defaultProps = {
-    brand: "",
-    amount: {},
-    onChange: function () {},
-};
+cv.defaultProps = { brand: "", amount: {}, onChange: function () {} };
 var cg = function (e) {
     var t = e.sfpState,
         n = e.setFocusOn,
@@ -15535,9 +13179,7 @@ var cg = function (e) {
         f = e.disclaimerMessage;
     return (0, el.h)(
         cl,
-        {
-            status: t.status,
-        },
+        { status: t.status },
         (0, el.h)(cf, {
             errors: t.errors,
             brand: t.brand,
@@ -15559,13 +13201,9 @@ var cg = function (e) {
                 type: s ? "amount" : "months",
             }),
         f &&
-            (0, el.h)(i5, {
-                message: f.message.replace("%{linkText}", "%#".concat(f.linkText, "%#")),
-                urls: [f.link],
-            }),
+            (0, el.h)(i5, { message: f.message.replace("%{linkText}", "%#".concat(f.linkText, "%#")), urls: [f.link] }),
     );
 };
-
 function cb(e) {
     var t,
         n,
@@ -15614,7 +13252,6 @@ var cA = function (e) {
         "data-value": i,
     });
 };
-
 function c_(e) {
     var t,
         n = nc().i18n,
@@ -15665,12 +13302,7 @@ function c_(e) {
                     t),
                 ),
             },
-            e.showBrandIcon &&
-                !c &&
-                (0, el.h)(cb, {
-                    brandsConfiguration: e.brandsConfiguration,
-                    brand: e.brand,
-                }),
+            e.showBrandIcon && !c && (0, el.h)(cb, { brandsConfiguration: e.brandsConfiguration, brand: e.brand }),
         ),
         c &&
             !a &&
@@ -15679,9 +13311,7 @@ function c_(e) {
                 {
                     className: ep()([
                         "adyen-checkout__card__dual-branding__buttons",
-                        {
-                            "adyen-checkout__card__dual-branding__buttons--active": i,
-                        },
+                        { "adyen-checkout__card__dual-branding__buttons--active": i },
                     ]),
                 },
                 J()(c).call(c, function (t) {
@@ -15697,7 +13327,6 @@ function c_(e) {
             ),
     );
 }
-
 function ck(e) {
     var t,
         n,
@@ -15717,9 +13346,7 @@ function ck(e) {
         y = ep()(
             void 0 === s ? "" : s,
             ((0, w.A)(
-                (t = {
-                    "adyen-checkout__field__exp-date": !0,
-                }),
+                (t = { "adyen-checkout__field__exp-date": !0 }),
                 cu["adyen-checkout__card__exp-date__input--hidden"],
                 h === n8,
             ),
@@ -15767,15 +13394,11 @@ function ck(e) {
                 className: ep()(
                     "adyen-checkout__field__exp-date_hint_wrapper",
                     [cu["checkout__field__exp-date_hint_wrapper"]],
-                    {
-                        "adyen-checkout__field__exp-date_hint_wrapper--hidden": c || d,
-                    },
+                    { "adyen-checkout__field__exp-date_hint_wrapper--hidden": c || d },
                 ),
             },
             (0, el.h)("img", {
-                src: m({
-                    imageFolder: "components/",
-                })("expiry_date_hint"),
+                src: m({ imageFolder: "components/" })("expiry_date_hint"),
                 className: "adyen-checkout__field__exp-date_hint",
                 alt: v,
             }),
@@ -15798,20 +13421,13 @@ var cC = function (e) {
                       n = e.icon;
                   return (0, el.h)(
                       "span",
-                      {
-                          key: t,
-                          className: "adyen-checkout__card__brands__brand-wrapper",
-                      },
-                      (0, el.h)(a5, {
-                          src: n,
-                          alt: cs(t),
-                      }),
+                      { key: t, className: "adyen-checkout__card__brands__brand-wrapper" },
+                      (0, el.h)(a5, { src: n, alt: cs(t) }),
                   );
               }),
           )
         : null;
 };
-
 function cw(e) {
     var t = e.brand,
         n = e.brandsIcons,
@@ -15840,9 +13456,7 @@ function cw(e) {
                   });
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__card__form",
-        },
+        { className: "adyen-checkout__card__form" },
         (0, el.h)(c_, {
             brand: t,
             brandsConfiguration: r,
@@ -15857,11 +13471,7 @@ function cw(e) {
             dualBrandingChangeHandler: o,
             dualBrandingSelected: i,
         }),
-        f &&
-            (0, el.h)(cC, {
-                activeBrand: t,
-                brands: g,
-            }),
+        f && (0, el.h)(cC, { activeBrand: t, brands: g }),
         (0, el.h)(
             "div",
             {
@@ -15895,7 +13505,6 @@ function cw(e) {
         ),
     );
 }
-
 function cS(e) {
     var t,
         n = nc().i18n,
@@ -15910,9 +13519,7 @@ function cS(e) {
         );
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__card__kcp-authentication",
-        },
+        { className: "adyen-checkout__card__kcp-authentication" },
         (0, el.h)(
             rA,
             {
@@ -15956,10 +13563,7 @@ function cS(e) {
             (0, el.h)(cd, {
                 encryptedFieldType: "encryptedPassword",
                 className: ep()(
-                    ((t = {
-                        "adyen-checkout__input": !0,
-                        "adyen-checkout__input--large": !0,
-                    }),
+                    ((t = { "adyen-checkout__input": !0, "adyen-checkout__input--large": !0 }),
                     (0, w.A)(t, cu["adyen-checkout__input"], !0),
                     (0, w.A)(t, "adyen-checkout__input--error", e.encryptedPasswordState.errors),
                     (0, w.A)(t, "adyen-checkout__input--valid", e.encryptedPasswordState.valid),
@@ -15970,7 +13574,6 @@ function cS(e) {
         ),
     );
 }
-
 function cN(e) {
     var t = e.onBlur,
         n = e.onInput,
@@ -16004,7 +13607,6 @@ function cN(e) {
     );
 }
 var cx = ["storeDetails"];
-
 function cP(e) {
     var t = e.storeDetails,
         n = (0, _.A)(e, cx),
@@ -16022,9 +13624,7 @@ function cP(e) {
         ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__store-details",
-            },
+            { className: "adyen-checkout__store-details" },
             (0, el.h)(oC, {
                 onChange: function (e) {
                     s(e.target.checked);
@@ -16035,7 +13635,6 @@ function cP(e) {
         )
     );
 }
-
 function cR(e) {
     var t = e.onBlur,
         n = e.onInput,
@@ -16127,9 +13726,7 @@ var cF = function (e) {
         });
     return (0, el.h)(
         cl,
-        {
-            status: o.status,
-        },
+        { status: o.status },
         D && U && W,
         (0, el.h)(cw, {
             showBrandIcon: q,
@@ -16168,9 +13765,7 @@ var cF = function (e) {
         _ &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__card__socialSecurityNumber",
-                },
+                { className: "adyen-checkout__card__socialSecurityNumber" },
                 (0, el.h)(cN, {
                     onBlur: a("socialSecurityNumber", "blur"),
                     onInput: a("socialSecurityNumber", "input"),
@@ -16181,10 +13776,7 @@ var cF = function (e) {
                     disabled: H && "socialSecurityNumber" !== H,
                 }),
             ),
-        T &&
-            (0, el.h)(cP, {
-                onChange: C,
-            }),
+        T && (0, el.h)(cP, { onChange: C }),
         c &&
             (0, el.h)(cv, {
                 amount: R,
@@ -16207,13 +13799,9 @@ var cF = function (e) {
                 onAddressLookup: P,
             }),
         z &&
-            (0, el.h)(i5, {
-                message: z.message.replace("%{linkText}", "%#".concat(z.linkText, "%#")),
-                urls: [z.link],
-            }),
+            (0, el.h)(i5, { message: z.message.replace("%{linkText}", "%#".concat(z.linkText, "%#")), urls: [z.link] }),
     );
 };
-
 function cO(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -16230,7 +13818,6 @@ var cE = function (e, t) {
         }
     },
     cI = ["billingAddress"];
-
 function cM(e, t) {
     var n = c()(e);
     if (d()) {
@@ -16243,7 +13830,6 @@ function cM(e, t) {
     }
     return n;
 }
-
 function cT(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -16276,12 +13862,7 @@ var cB = function (e) {
         h = d.setSRMessagesFromStrings,
         f = d.clearSRPanel,
         m = d.shouldMoveFocusSR,
-        y =
-            null == p
-                ? void 0
-                : p({
-                      fieldTypeMappingFn: ci,
-                  }),
+        y = null == p ? void 0 : p({ fieldTypeMappingFn: ci }),
         v = t4(null),
         g = function (e) {
             v.current = e;
@@ -16305,25 +13886,11 @@ var cB = function (e) {
         O = (0, K.A)(F, 2),
         I = O[0],
         T = O[1],
-        D = tX(
-            cT(
-                {},
-                e.holderNameRequired && {
-                    holderName: !1,
-                },
-            ),
-        ),
+        D = tX(cT({}, e.holderNameRequired && { holderName: !1 })),
         L = (0, K.A)(D, 2),
         V = L[0],
         j = L[1],
-        U = tX(
-            cT(
-                {},
-                e.hasHolderName && {
-                    holderName: null != (a = e.data.holderName) ? a : "",
-                },
-            ),
-        ),
+        U = tX(cT({}, e.hasHolderName && { holderName: null != (a = e.data.holderName) ? a : "" })),
         q = (0, K.A)(U, 2),
         z = q[0],
         W = q[1],
@@ -16378,9 +13945,7 @@ var cB = function (e) {
         eQ = (0, K.A)(eY, 2),
         eZ = eQ[0],
         eX = eQ[1],
-        e1 = tX({
-            value: null,
-        }),
+        e1 = tX({ value: null }),
         e2 = (0, K.A)(e1, 2),
         e4 = e2[0],
         e8 = e2[1],
@@ -16388,12 +13953,7 @@ var cB = function (e) {
         e6 = (0, K.A)(e3, 2),
         e5 = e6[0],
         e9 = e6[1],
-        e7 = rj({
-            schema: [],
-            defaultData: e.data,
-            formatters: lZ,
-            rules: lJ,
-        }),
+        e7 = rj({ schema: [], defaultData: e.data, formatters: lZ, rules: lJ }),
         te = e7.handleChangeFor,
         tt = e7.triggerValidation,
         tr = e7.data,
@@ -16448,11 +14008,7 @@ var cB = function (e) {
                 return l;
             })(
                 cT(
-                    {
-                        props: e,
-                        showKCP: tf,
-                        showBrazilianSSN: tm,
-                    },
+                    { props: e, showKCP: tf, showBrazilianSSN: tm },
                     e.billingAddressRequired && {
                         countrySpecificSchemas: C.getAddressSchemaForCountry(null == eq ? void 0 : eq.country),
                         billingAddressRequiredFields: e.billingAddressRequiredFields,
@@ -16511,14 +14067,7 @@ var cB = function (e) {
                                             return {
                                                 s: a,
                                                 n: function () {
-                                                    return r >= e.length
-                                                        ? {
-                                                              done: !0,
-                                                          }
-                                                        : {
-                                                              done: !1,
-                                                              value: e[r++],
-                                                          };
+                                                    return r >= e.length ? { done: !0 } : { done: !1, value: e[r++] };
                                                 },
                                                 e: function (e) {
                                                     throw e;
@@ -16577,9 +14126,7 @@ var cB = function (e) {
             function () {
                 return l2(
                     e,
-                    {
-                        sfp: s,
-                    },
+                    { sfp: s },
                     {
                         dualBrandSelectElements: eN,
                         setDualBrandSelectElements: ex,
@@ -16630,16 +14177,7 @@ var cB = function (e) {
         ),
         t1(
             function () {
-                W(
-                    cT(
-                        cT({}, z),
-                        {},
-                        {
-                            holderName: null != (t = tr.holderName) ? t : "",
-                            taxNumber: tr.taxNumber,
-                        },
-                    ),
-                ),
+                W(cT(cT({}, z), {}, { holderName: null != (t = tr.holderName) ? t : "", taxNumber: tr.taxNumber })),
                     eX(tr.socialSecurityNumber),
                     eE && eK(cT({}, tr.billingAddress)),
                     j(
@@ -16763,9 +14301,7 @@ var cB = function (e) {
         (0, el.h)(
             lH,
             (0, er.A)(
-                {
-                    ref: s,
-                },
+                { ref: s },
                 {
                     allowedDOMAccess: e.allowedDOMAccess,
                     autoFocus: e.autoFocus,
@@ -16849,9 +14385,7 @@ var cB = function (e) {
                             {
                                 ref: o,
                                 className: ep()(
-                                    ((a = {
-                                        "adyen-checkout__card-input": !0,
-                                    }),
+                                    ((a = { "adyen-checkout__card-input": !0 }),
                                     (0, w.A)(a, cu["card-input__wrapper"], !0),
                                     (0, w.A)(
                                         a,
@@ -16933,13 +14467,10 @@ var cB = function (e) {
             e.payButton({
                 status: x,
                 variant: e.isPayButtonPrimaryVariant ? "primary" : "secondary",
-                icon: u({
-                    imageFolder: "components/",
-                })("lock"),
+                icon: u({ imageFolder: "components/" })("lock"),
             }),
     );
 };
-
 function cD(e, t) {
     var n = c()(e);
     if (d()) {
@@ -16986,11 +14517,7 @@ var cL = function (e) {
                                                   e
                                               );
                                           },
-                                          {
-                                              supportedBrands: [],
-                                              detectedBrands: [],
-                                              paymentMethodVariants: [],
-                                          },
+                                          { supportedBrands: [], detectedBrands: [], paymentMethodVariants: [] },
                                       );
                                   if (s.supportedBrands.length)
                                       return (
@@ -17017,9 +14544,7 @@ var cL = function (e) {
                                                       supportedBrands: s.supportedBrands,
                                                   },
                                                   r.showSocialSecurityNumber
-                                                      ? {
-                                                            showSocialSecurityNumber: r.showSocialSecurityNumber,
-                                                        }
+                                                      ? { showSocialSecurityNumber: r.showSocialSecurityNumber }
                                                       : {},
                                               ),
                                           ),
@@ -17064,24 +14589,13 @@ var cL = function (e) {
                                       e.processBinLookupResponse({}, !0);
                           else
                               (null != r && r.requestId) ||
-                                  e.props.onError(
-                                      r || {
-                                          errorType: "binLookup",
-                                          message: "unknownError",
-                                      },
-                                  );
+                                  e.props.onError(r || { errorType: "binLookup", message: "unknownError" });
                       }))
                     : t &&
                       (e.processBinLookupResponse(null, !0),
                       (t = null),
-                      e.handleUnsupportedCard({
-                          type: "card",
-                          fieldType: "encryptedCardNumber",
-                          error: "",
-                      }),
-                      e.onBinLookup({
-                          isReset: !0,
-                      }))),
+                      e.handleUnsupportedCard({ type: "card", fieldType: "encryptedCardNumber", error: "" }),
+                      e.onBinLookup({ isReset: !0 }))),
                 e.props.onBinValue && e.props.onBinValue(n);
         };
     },
@@ -17107,7 +14621,6 @@ var cL = function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e, t, a) {
             (0, k.A)(this, r),
                 (s = n.call(this)),
@@ -17159,7 +14672,6 @@ var cL = function (e) {
     })((0, eh.A)(Error)),
     cj = (function () {
         var e, t, n, r, a, i;
-
         function l(e, t) {
             if (
                 ((0, k.A)(this, l),
@@ -17376,9 +14888,7 @@ var cL = function (e) {
                                                     return (
                                                         (e.prev = 0),
                                                         (e.next = 3),
-                                                        this.schemeSdk.getSrcProfile({
-                                                            idTokens: t,
-                                                        })
+                                                        this.schemeSdk.getSrcProfile({ idTokens: t })
                                                     );
                                                 case 3:
                                                     return (n = e.sent), e.abrupt("return", n);
@@ -17407,7 +14917,6 @@ var cL = function (e) {
             l
         );
     })();
-
 function cU(e, t) {
     var n = c()(e);
     if (d()) {
@@ -17420,7 +14929,6 @@ function cU(e, t) {
     }
     return n;
 }
-
 function cq(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -17438,10 +14946,7 @@ function cq(e) {
     }
     return e;
 }
-var cK = {
-        email: "EMAIL",
-        telephoneNumber: "MOBILE_NUMBER",
-    },
+var cK = { email: "EMAIL", telephoneNumber: "MOBILE_NUMBER" },
     cH = (function (e) {
         (0, eo.A)(l, cj);
         var t,
@@ -17467,7 +14972,6 @@ var cK = {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function l(e, t) {
             var n, r;
             return (
@@ -17535,9 +15039,7 @@ var cK = {
                                                                 }),
                                                             ),
                                                             {},
-                                                            {
-                                                                srciTransactionId: n,
-                                                            },
+                                                            { srciTransactionId: n },
                                                         )),
                                                         (e.next = 3),
                                                         this.schemeSdk.init(r)
@@ -17571,10 +15073,7 @@ var cK = {
                                                         (n = t.identityValue),
                                                         (r = t.type),
                                                         (e.prev = 1),
-                                                        (a = {
-                                                            identityValue: n,
-                                                            type: cK[r],
-                                                        }),
+                                                        (a = { identityValue: n, type: cK[r] }),
                                                         (e.next = 5),
                                                         this.schemeSdk.identityLookup(a)
                                                     );
@@ -17644,7 +15143,6 @@ var cK = {
             l
         );
     })();
-
 function cz(e, t) {
     var n = c()(e);
     if (d()) {
@@ -17657,7 +15155,6 @@ function cz(e, t) {
     }
     return n;
 }
-
 function cW(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -17675,10 +15172,7 @@ function cW(e) {
     }
     return e;
 }
-var cG = {
-        email: "EMAIL_ADDRESS",
-        telephoneNumber: "MOBILE_PHONE_NUMBER",
-    },
+var cG = { email: "EMAIL_ADDRESS", telephoneNumber: "MOBILE_PHONE_NUMBER" },
     c$ = (function (e) {
         (0, eo.A)(l, cj);
         var t,
@@ -17704,7 +15198,6 @@ var cG = {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function l(e, t) {
             var n, r;
             return (
@@ -17777,9 +15270,7 @@ var cG = {
                                                                 }),
                                                             ),
                                                             {},
-                                                            {
-                                                                srciTransactionId: n,
-                                                            },
+                                                            { srciTransactionId: n },
                                                         )),
                                                         (e.next = 3),
                                                         this.schemeSdk.init(r)
@@ -17813,14 +15304,9 @@ var cG = {
                                                         (n = t.identityValue),
                                                         (r = t.type),
                                                         (e.prev = 1),
-                                                        (a = {
-                                                            identityValue: n,
-                                                            identityType: cG[r],
-                                                        }),
+                                                        (a = { identityValue: n, identityType: cG[r] }),
                                                         (e.next = 5),
-                                                        this.schemeSdk.identityLookup({
-                                                            consumerIdentity: a,
-                                                        })
+                                                        this.schemeSdk.identityLookup({ consumerIdentity: a })
                                                     );
                                                 case 5:
                                                     return (o = e.sent), e.abrupt("return", o);
@@ -17859,9 +15345,7 @@ var cG = {
                                                     return (
                                                         (e.prev = 0),
                                                         (e.next = 3),
-                                                        this.schemeSdk.completeIdentityValidation({
-                                                            validationData: t,
-                                                        })
+                                                        this.schemeSdk.completeIdentityValidation({ validationData: t })
                                                     );
                                                 case 3:
                                                     return (n = e.sent), e.abrupt("return", n);
@@ -17896,18 +15380,13 @@ var cG = {
     cQ = function (e) {
         return "rejected" === e.status;
     },
-    cZ = {
-        visa: cH,
-        mc: c$,
-        default: null,
-    },
+    cZ = { visa: cH, mc: c$, default: null },
     cJ = function (e, t, n) {
         var r = cZ[e] || cZ.default;
         return r ? new r(t, n) : null;
     },
     cX = (function () {
         var e;
-
         function t(e, n) {
             var r = n.dpaLocale,
                 a = n.dpaPresentationName;
@@ -17990,10 +15469,7 @@ var cG = {
             t
         );
     })(),
-    c0 = {
-        mc: "Mastercard",
-        visa: "Visa",
-    },
+    c0 = { mc: "Mastercard", visa: "Visa" },
     c1 = (function () {
         function e(t, n, r) {
             (0, k.A)(this, e),
@@ -18055,7 +15531,6 @@ var cG = {
         );
     })(),
     c2 = "ctpIframe";
-
 function c4(e, t) {
     var n,
         r = t.profiles,
@@ -18074,11 +15549,9 @@ function c4(e, t) {
         );
     return M()((n = [])).call(n, (0, H.A)(e), (0, H.A)(o));
 }
-
 function c8(e, t) {
     return new Date(t.dateOfCardLastUsed).getTime() - new Date(e.dateOfCardLastUsed).getTime();
 }
-
 function c3(e, t) {
     return t.isExpired ? e.expiredCards.push(t) : e.availableCards.push(t), e;
 }
@@ -18104,14 +15577,12 @@ var c6 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t;
         return (0, k.A)(this, r), ((t = n.call(this, e)).name = "TimeoutError"), t;
     }
     return (0, C.A)(r);
 })((0, eh.A)(Error));
-
 function c5(e, t) {
     var n = c()(e);
     if (d()) {
@@ -18124,7 +15595,6 @@ function c5(e, t) {
     }
     return n;
 }
-
 function c9(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -18151,7 +15621,6 @@ var c7 =
     (pf.Login = "Login"),
     (pf.NotAvailable = "NotAvailable"),
     pf);
-
 function ue(e, t, n) {
     var r = new (B())(function (e, r) {
         return eu()(function () {
@@ -18162,7 +15631,6 @@ function ue(e, t, n) {
 }
 var ut = (function () {
     var e, t, n, r, a, i, l, c, u;
-
     function d(e, t, n, r, a) {
         (0, k.A)(this, d),
             (0, w.A)(this, "sdkLoader", void 0),
@@ -18396,9 +15864,7 @@ var ut = (function () {
                                                                 srcDigitalCardId: t.srcDigitalCardId,
                                                                 srcCorrelationId: t.srcCorrelationId,
                                                             },
-                                                            t.isDcfPopupEmbedded && {
-                                                                windowRef: window.frames[c2],
-                                                            },
+                                                            t.isDcfPopupEmbedded && { windowRef: window.frames[c2] },
                                                         ),
                                                     )
                                                 );
@@ -18558,9 +16024,7 @@ var ut = (function () {
                                                                                 (r.setSdkForPerformingShopperIdentityValidation(
                                                                                     a,
                                                                                 ),
-                                                                                e({
-                                                                                    isEnrolled: !0,
-                                                                                }));
+                                                                                e({ isEnrolled: !0 }));
                                                                         })
                                                                         .catch(function (e) {
                                                                             t(e);
@@ -18571,9 +16035,7 @@ var ut = (function () {
                                                         B()
                                                             .allSettled(o)
                                                             .then(function () {
-                                                                e({
-                                                                    isEnrolled: !1,
-                                                                });
+                                                                e({ isEnrolled: !1 });
                                                             });
                                                     }),
                                                 )
@@ -18636,9 +16098,7 @@ var ut = (function () {
                                                                             c9(
                                                                                 c9({}, e.value),
                                                                                 {},
-                                                                                {
-                                                                                    scheme: n.sdks[t].schemeName,
-                                                                                },
+                                                                                { scheme: n.sdks[t].schemeName },
                                                                             )
                                                                         );
                                                                     })),
@@ -18711,9 +16171,7 @@ var ut = (function () {
                                                     B()
                                                         .allSettled(a)
                                                         .then(function () {
-                                                            return e({
-                                                                recognized: !1,
-                                                            });
+                                                            return e({ recognized: !1 });
                                                         });
                                                 }),
                                             );
@@ -18778,7 +16236,6 @@ var ut = (function () {
         d
     );
 })();
-
 function un(e, t) {
     var n = c()(e);
     if (d()) {
@@ -18791,7 +16248,6 @@ function un(e, t) {
     }
     return n;
 }
-
 function ur(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -18809,7 +16265,6 @@ function ur(e) {
     }
     return e;
 }
-
 function ua(e, t, n) {
     var r = ui(e);
     if (!r) return null;
@@ -18821,12 +16276,7 @@ function ua(e, t, n) {
     return new ut(r, o, n, a, null == t ? void 0 : t.onTimeout);
 }
 var uo = function (e, t) {
-        var n = ur(
-            {},
-            e && {
-                shopperEmail: e,
-            },
-        );
+        var n = ur({}, e && { shopperEmail: e });
         return c()(n).length > 0 ? n : null;
     },
     ui = function (e) {
@@ -18836,23 +16286,8 @@ var uo = function (e, t) {
             r = e.mcDpaId,
             a = e.mcSrcClientId,
             o = ur(
-                ur(
-                    {},
-                    r &&
-                        a && {
-                            mc: {
-                                srciDpaId: r,
-                                srcInitiatorId: a,
-                            },
-                        },
-                ),
-                t &&
-                    n && {
-                        visa: {
-                            srciDpaId: t,
-                            srcInitiatorId: n,
-                        },
-                    },
+                ur({}, r && a && { mc: { srciDpaId: r, srcInitiatorId: a } }),
+                t && n && { visa: { srciDpaId: t, srcInitiatorId: n } },
             );
         return 0 === c()(o).length ? null : o;
     },
@@ -19059,7 +16494,6 @@ var uo = function (e, t) {
             p,
         );
     };
-
 function uc() {
     return t6(us);
 }
@@ -19157,30 +16591,20 @@ var uu = {
         return h
             ? (0, el.h)(
                   "div",
-                  {
-                      className: "adyen-checkout-ctp__otp-resend-code--confirmation",
-                  },
+                  { className: "adyen-checkout-ctp__otp-resend-code--confirmation" },
                   m.get("ctp.otp.codeResent"),
-                  (0, el.h)(nD, {
-                      type: "checkmark",
-                      height: 14,
-                      width: 14,
-                  }),
+                  (0, el.h)(nD, { type: "checkmark", height: 14, width: 14 }),
               )
             : c > 0
               ? (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout-ctp__otp-resend-code--disabled",
-                    },
+                    { className: "adyen-checkout-ctp__otp-resend-code--disabled" },
                     m.get("ctp.otp.resendCode"),
                     " -",
                     " ",
                     (0, el.h)(
                         "span",
-                        {
-                            className: "adyen-checkout-ctp__otp-resend-code-counter",
-                        },
+                        { className: "adyen-checkout-ctp__otp-resend-code-counter" },
                         " ",
                         c > 0 && "".concat(c, "s"),
                         " ",
@@ -19206,10 +16630,7 @@ var uu = {
             a = (0, K.A)(r, 2),
             o = a[0],
             i = a[1],
-            s = rj({
-                schema: ["otp"],
-                rules: uu,
-            }),
+            s = rj({ schema: ["otp"], rules: uu }),
             l = s.handleChangeFor,
             c = s.data,
             u = s.triggerValidation,
@@ -19217,9 +16638,7 @@ var uu = {
             p = s.errors,
             h = s.isValid,
             f = s.setData,
-            m = t4({
-                validateInput: null,
-            }),
+            m = t4({ validateInput: null }),
             y = tX(null),
             v = (0, K.A)(y, 2),
             g = v[0],
@@ -19277,12 +16696,7 @@ var uu = {
         return (
             t1(
                 function () {
-                    e.onChange({
-                        data: c,
-                        valid: d,
-                        errors: p,
-                        isValid: h,
-                    });
+                    e.onChange({ data: c, valid: d, errors: p, isValid: h });
                 },
                 [c, d, p],
             ),
@@ -19293,11 +16707,7 @@ var uu = {
                     label: t.get("ctp.otp.fieldLabel"),
                     labelEndAdornment:
                         !e.hideResendOtpButton &&
-                        (0, el.h)(ud, {
-                            disabled: e.isValidatingOtp,
-                            onError: N,
-                            onResendCode: S,
-                        }),
+                        (0, el.h)(ud, { disabled: e.isValidatingOtp, onError: N, onResendCode: S }),
                     errorMessage: k ? o || e.errorMessage || !!p.otp : null,
                     classNameModifiers: ["otp"],
                 },
@@ -19322,9 +16732,7 @@ var uu = {
             r = nB(),
             a = uc().schemes,
             o = r()("ctp"),
-            i = r({
-                imageFolder: "components/",
-            })("pipe");
+            i = r({ imageFolder: "components/" })("pipe");
         return (0, el.h)(
             "div",
             {
@@ -19335,16 +16743,8 @@ var uu = {
                     }),
                 ),
             },
-            (0, el.h)(a5, {
-                className: "adyen_checkout-ctp__brand-logo",
-                src: o,
-                alt: "Logo of Click to Pay",
-            }),
-            (0, el.h)(a5, {
-                className: "adyen_checkout-ctp__brand-pipe",
-                src: i,
-                alt: "",
-            }),
+            (0, el.h)(a5, { className: "adyen_checkout-ctp__brand-logo", src: o, alt: "Logo of Click to Pay" }),
+            (0, el.h)(a5, { className: "adyen_checkout-ctp__brand-pipe", src: i, alt: "" }),
             J()(a).call(a, function (e) {
                 return (0, el.h)(a5, {
                     key: e,
@@ -19371,11 +16771,7 @@ var uu = {
             h = e.focusFirst,
             f = e.focusAfterClose,
             m = e.onClose;
-        (n = (t = {
-            rootElement: u,
-            shouldTrap: d,
-            focusFirst: h,
-        }).rootElement),
+        (n = (t = { rootElement: u, shouldTrap: d, focusFirst: h }).rootElement),
             (r = t.focusFirst),
             (o = void 0 === (a = t.shouldTrap) || a),
             (i = tX(r)),
@@ -19443,10 +16839,7 @@ var uu = {
                 },
                 [d, u, y],
             ),
-            {
-                closeModal: y,
-                handleClickOutside: v,
-            }
+            { closeModal: y, handleClickOutside: v }
         );
     },
     um = [
@@ -19492,9 +16885,7 @@ var uu = {
                         J()(r).call(r, function (e) {
                             return "adyen-checkout__modal-wrapper--".concat(e);
                         }),
-                        {
-                            "adyen-checkout__modal-wrapper--open": a,
-                        },
+                        { "adyen-checkout__modal-wrapper--open": a },
                     ),
                     role: "dialog",
                     "aria-labelledby": s,
@@ -19505,20 +16896,10 @@ var uu = {
                 },
                 d,
             ),
-            (0, el.h)(
-                "div",
-                {
-                    className: "adyen-checkout__modal",
-                    ref: p,
-                },
-                t({
-                    onCloseModal: f,
-                }),
-            ),
+            (0, el.h)("div", { className: "adyen-checkout__modal", ref: p }, t({ onCloseModal: f })),
         );
     },
     uv = eA()();
-
 function ug() {
     return "adyen-".concat((uv += 1));
 }
@@ -19549,31 +16930,20 @@ var ub = function (e) {
                     null,
                     (0, el.h)(a5, {
                         className: "adyen-checkout__ctp-modal-header-image",
-                        src: i({
-                            imageFolder: "components/",
-                        })("ctp_landscape"),
+                        src: i({ imageFolder: "components/" })("ctp_landscape"),
                         alt: "",
                     }),
                     (0, el.h)(
                         "h1",
-                        {
-                            id: s,
-                            className: "adyen-checkout__ctp-modal-title",
-                        },
+                        { id: s, className: "adyen-checkout__ctp-modal-title" },
                         o.get("ctp.infoPopup.title"),
                     ),
                     (0, el.h)(
                         "div",
-                        {
-                            id: l,
-                        },
+                        { id: l },
                         (0, el.h)(
                             "p",
-                            {
-                                tabIndex: -1,
-                                ref: a,
-                                className: "adyen-checkout__ctp-modal-text",
-                            },
+                            { tabIndex: -1, ref: a, className: "adyen-checkout__ctp-modal-text" },
                             o.get("ctp.infoPopup.subtitle"),
                         ),
                         (0, el.h)(
@@ -19586,14 +16956,9 @@ var ub = function (e) {
                             (0, el.h)("li", null, o.get("ctp.infoPopup.benefit2")),
                             (0, el.h)("li", null, o.get("ctp.infoPopup.benefit3")),
                         ),
-                        (0, el.h)(uh, {
-                            classNameModifiers: ["popup"],
-                        }),
+                        (0, el.h)(uh, { classNameModifiers: ["popup"] }),
                     ),
-                    (0, el.h)(nu, {
-                        onClick: t,
-                        label: o.get("close"),
-                    }),
+                    (0, el.h)(nu, { onClick: t, label: o.get("close") }),
                 );
             },
         );
@@ -19605,9 +16970,7 @@ var ub = function (e) {
             r = t[1],
             a = t4(),
             o = nc().i18n,
-            i = nB()({
-                imageFolder: "components/",
-            })("info"),
+            i = nB()({ imageFolder: "components/" })("info"),
             s = t3(function () {
                 r(!1);
             }, []),
@@ -19626,17 +16989,9 @@ var ub = function (e) {
                     "aria-label": o.get("ctp.aria.infoModalButton"),
                     type: "button",
                 },
-                (0, el.h)(a5, {
-                    height: "15",
-                    src: i,
-                    ariaHidden: !0,
-                }),
+                (0, el.h)(a5, { height: "15", src: i, ariaHidden: !0 }),
             ),
-            (0, el.h)(ub, {
-                isOpen: n,
-                onClose: s,
-                focusAfterClose: a.current,
-            }),
+            (0, el.h)(ub, { isOpen: n, onClose: s, focusAfterClose: a.current }),
         );
     },
     u_ = function () {
@@ -19678,16 +17033,10 @@ var ub = function (e) {
             n = uc().isStandaloneComponent;
         return (0, el.h)(
             "div",
-            {
-                className: ep()("adyen-checkout-ctp__section", {
-                    "adyen-checkout-ctp__section--standalone": n,
-                }),
-            },
+            { className: ep()("adyen-checkout-ctp__section", { "adyen-checkout-ctp__section--standalone": n }) },
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout-ctp__section-brand",
-                },
+                { className: "adyen-checkout-ctp__section-brand" },
                 (0, el.h)(uh, null),
                 (0, el.h)(u_, null),
             ),
@@ -19699,35 +17048,14 @@ var ub = function (e) {
         n = e.children;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout-ctp__section-header",
-        },
-        (0, el.h)(
-            "h1",
-            {
-                className: "adyen-checkout-ctp__section-header-title",
-            },
-            n,
-        ),
-        t &&
-            (0, el.h)(
-                "span",
-                {
-                    className: "adyen-checkout-ctp__section-header-adornment",
-                },
-                t,
-            ),
+        { className: "adyen-checkout-ctp__section-header" },
+        (0, el.h)("h1", { className: "adyen-checkout-ctp__section-header-title" }, n),
+        t && (0, el.h)("span", { className: "adyen-checkout-ctp__section-header-adornment" }, t),
     );
 }),
     (uk.Text = function (e) {
         var t = e.children;
-        return (0, el.h)(
-            "p",
-            {
-                className: "adyen-checkout-ctp__section-text",
-            },
-            t,
-        );
+        return (0, el.h)("p", { className: "adyen-checkout-ctp__section-text" }, t);
     });
 var uC = function (e) {
         var t = e.onDisplayCardComponent,
@@ -19815,13 +17143,7 @@ var uC = function (e) {
         return (0, el.h)(
             el.FK,
             null,
-            (0, el.h)(
-                uk.Title,
-                {
-                    endAdornment: (0, el.h)(uA, null),
-                },
-                n.get("ctp.otp.title"),
-            ),
+            (0, el.h)(uk.Title, { endAdornment: (0, el.h)(uA, null) }, n.get("ctp.otp.title")),
             (0, el.h)(
                 uk.Text,
                 null,
@@ -19830,13 +17152,7 @@ var uC = function (e) {
                 l,
                 " ",
                 L[1],
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout-ctp__otp-subtitle--highlighted",
-                    },
-                    i,
-                ),
+                (0, el.h)("span", { className: "adyen-checkout-ctp__otp-subtitle--highlighted" }, i),
                 L[2],
             ),
             (0, el.h)(up, {
@@ -19869,21 +17185,11 @@ var uC = function (e) {
             null,
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout-ctp__card-list-single-card",
-                },
-                (0, el.h)(a5, {
-                    src: o,
-                    height: 24,
-                    className: "adyen-checkout-ctp__card-image",
-                }),
+                { className: "adyen-checkout-ctp__card-list-single-card" },
+                (0, el.h)(a5, { src: o, height: 24, className: "adyen-checkout-ctp__card-image" }),
                 (0, el.h)(
                     "span",
-                    {
-                        className: ep()({
-                            "adyen-checkout-ctp__card-list-single-card-expired": t.isExpired,
-                        }),
-                    },
+                    { className: ep()({ "adyen-checkout-ctp__card-list-single-card-expired": t.isExpired }) },
                     t.title,
                     " ",
                     "•••• ".concat(t.panLastFour),
@@ -19891,20 +17197,11 @@ var uC = function (e) {
                 t.isExpired &&
                     (0, el.h)(
                         "span",
-                        {
-                            className: "adyen-checkout-ctp__expired-label",
-                        },
+                        { className: "adyen-checkout-ctp__expired-label" },
                         r.get("ctp.cards.expiredCard"),
                     ),
             ),
-            n &&
-                (0, el.h)(
-                    "div",
-                    {
-                        className: "adyen-checkout__error-text",
-                    },
-                    n,
-                ),
+            n && (0, el.h)("div", { className: "adyen-checkout__error-text" }, n),
         );
     },
     uS = function () {
@@ -19919,12 +17216,7 @@ var uC = function (e) {
             o = nc().i18n,
             i = nB(),
             s = uc().status,
-            l = rj({
-                schema: uN,
-                defaultData: {
-                    srcDigitalCardId: t.srcDigitalCardId,
-                },
-            }),
+            l = rj({ schema: uN, defaultData: { srcDigitalCardId: t.srcDigitalCardId } }),
             c = l.handleChangeFor,
             u = l.data,
             d = t8(
@@ -19956,10 +17248,7 @@ var uC = function (e) {
             ),
             (0, el.h)(
                 rA,
-                {
-                    name: "clickToPayCards",
-                    errorMessage: r,
-                },
+                { name: "clickToPayCards", errorMessage: r },
                 (0, el.h)(oc, {
                     items: d,
                     selectedValue: u.srcDigitalCardId,
@@ -19972,7 +17261,6 @@ var uC = function (e) {
             )
         );
     };
-
 function uP(e, t) {
     if (!e) return null;
     var n = t.get("ctp.errors.".concat(e));
@@ -20081,12 +17369,7 @@ var uR = function (e) {
         return (0, el.h)(
             el.FK,
             null,
-            (0, el.h)(nk, {
-                name: c2,
-                height: "380",
-                width: "100%",
-                classNameModifiers: [F ? "" : "hidden"],
-            }),
+            (0, el.h)(nk, { name: c2, height: "380", width: "100%", classNameModifiers: [F ? "" : "hidden"] }),
             ("loading" !== d || !F) &&
                 (0, el.h)(
                     el.FK,
@@ -20096,23 +17379,12 @@ var uR = function (e) {
                     0 === l.length &&
                         (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout-ctp__empty-cards",
-                            },
+                            { className: "adyen-checkout-ctp__empty-cards" },
                             n.get("ctp.emptyProfile.message"),
                         ),
-                    1 === l.length &&
-                        (0, el.h)(uw, {
-                            card: l[0],
-                            errorMessage: uP(_, n),
-                        }),
+                    1 === l.length && (0, el.h)(uw, { card: l[0], errorMessage: uP(_, n) }),
                     l.length > 1 &&
-                        (0, el.h)(ux, {
-                            cardSelected: v,
-                            cards: l,
-                            onChangeCard: R,
-                            errorMessage: uP(_, n),
-                        }),
+                        (0, el.h)(ux, { cardSelected: v, cards: l, onChangeCard: R, errorMessage: uP(_, n) }),
                     (0, el.h)(nm, {
                         disabled: C,
                         amount: i,
@@ -20128,11 +17400,7 @@ var uR = function (e) {
                             : n.get("payButton"),
                         status: d,
                         variant: u ? "primary" : "secondary",
-                        icon:
-                            0 !== l.length &&
-                            r({
-                                imageFolder: "components/",
-                            })(u ? "lock" : "lock_black"),
+                        icon: 0 !== l.length && r({ imageFolder: "components/" })(u ? "lock" : "lock_black"),
                         onClick: P,
                     }),
                 ),
@@ -20146,20 +17414,11 @@ var uR = function (e) {
             null,
             (0, el.h)(a5, {
                 className: "adyen-checkout-ctp__loading-image",
-                src: t({
-                    extension: "gif",
-                    imageFolder: "components/",
-                })("ctp_loader"),
+                src: t({ extension: "gif", imageFolder: "components/" })("ctp_loader"),
                 alt: "",
                 height: 120,
             }),
-            (0, el.h)(
-                "div",
-                {
-                    className: "adyen-checkout-ctp__loading-subtitle",
-                },
-                e.get("ctp.loading.intro"),
-            ),
+            (0, el.h)("div", { className: "adyen-checkout-ctp__loading-subtitle" }, e.get("ctp.loading.intro")),
         );
     },
     uO = {
@@ -20180,19 +17439,14 @@ var uR = function (e) {
     },
     uE = function (e) {
         var t = nc().i18n,
-            n = rj({
-                schema: ["shopperLogin"],
-                rules: uO,
-            }),
+            n = rj({ schema: ["shopperLogin"], rules: uO }),
             r = n.handleChangeFor,
             a = n.data,
             o = n.triggerValidation,
             i = n.valid,
             s = n.errors,
             l = n.isValid,
-            c = t4({
-                validateInput: null,
-            }),
+            c = t4({ validateInput: null }),
             u = tX(!1),
             d = (0, K.A)(u, 2),
             p = d[0],
@@ -20227,12 +17481,7 @@ var uR = function (e) {
         return (
             t1(
                 function () {
-                    e.onChange({
-                        data: a,
-                        valid: i,
-                        errors: s,
-                        isValid: l,
-                    });
+                    e.onChange({ data: a, valid: i, errors: s, isValid: l });
                 },
                 [a, i, s],
             ),
@@ -20308,14 +17557,7 @@ var uR = function (e) {
                                             }
                                             return N.validateInput(), e.abrupt("return");
                                         case 4:
-                                            return (
-                                                C(!0),
-                                                (e.prev = 5),
-                                                (e.next = 8),
-                                                a({
-                                                    shopperEmail: u,
-                                                })
-                                            );
+                                            return C(!0), (e.prev = 5), (e.next = 8), a({ shopperEmail: u });
                                         case 8:
                                             if (!e.sent.isEnrolled) {
                                                 e.next = 15;
@@ -20354,13 +17596,7 @@ var uR = function (e) {
         return (0, el.h)(
             el.FK,
             null,
-            (0, el.h)(
-                uk.Title,
-                {
-                    endAdornment: (0, el.h)(uA, null),
-                },
-                e.get("ctp.login.title"),
-            ),
+            (0, el.h)(uk.Title, { endAdornment: (0, el.h)(uA, null) }, e.get("ctp.login.title")),
             (0, el.h)(uk.Text, null, e.get("ctp.login.subtitle")),
             (0, el.h)(uE, {
                 onChange: R,
@@ -20447,14 +17683,8 @@ var uR = function (e) {
                       uk,
                       null,
                       E()((t = [c7.Loading, c7.ShopperIdentified])).call(t, a) && (0, el.h)(uF, null),
-                      a === c7.OneTimePassword &&
-                          (0, el.h)(uC, {
-                              onDisplayCardComponent: n,
-                          }),
-                      a === c7.Ready &&
-                          (0, el.h)(uR, {
-                              onDisplayCardComponent: n,
-                          }),
+                      a === c7.OneTimePassword && (0, el.h)(uC, { onDisplayCardComponent: n }),
+                      a === c7.Ready && (0, el.h)(uR, { onDisplayCardComponent: n }),
                       a === c7.Login && (0, el.h)(uI, null),
                   )
         );
@@ -20491,13 +17721,8 @@ var uR = function (e) {
               : (0, el.h)(
                     el.FK,
                     null,
-                    (0, el.h)(uM, {
-                        onDisplayCardComponent: h,
-                    }),
-                    (0, el.h)(i3, {
-                        classNames: ["adyen-checkout-ctp__separator"],
-                        label: n.get("ctp.separatorText"),
-                    }),
+                    (0, el.h)(uM, { onDisplayCardComponent: h }),
+                    (0, el.h)(i3, { classNames: ["adyen-checkout-ctp__separator"], label: n.get("ctp.separatorText") }),
                     o
                         ? t(!c)
                         : (0, el.h)(nu, {
@@ -20543,7 +17768,6 @@ var uR = function (e) {
             (0, el.h)(uT, null, c.children),
         );
     };
-
 function uL(e, t) {
     var n = c()(e);
     if (d()) {
@@ -20556,7 +17780,6 @@ function uL(e, t) {
     }
     return n;
 }
-
 function uV(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -20596,7 +17819,6 @@ var uj = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a;
         return (
@@ -20608,26 +17830,11 @@ var uj = (function (e) {
                 t.clickToPayRef = e;
             }),
             (0, w.A)((0, ea.A)(t), "onBrand", function (e) {
-                t.eventEmitter.emit(
-                    "brand",
-                    uV(
-                        uV({}, e),
-                        {},
-                        {
-                            brand: "card" === e.brand ? null : e.brand,
-                        },
-                    ),
-                ),
+                t.eventEmitter.emit("brand", uV(uV({}, e), {}, { brand: "card" === e.brand ? null : e.brand })),
                     t.props.onBrand && t.props.onBrand(e);
             }),
             (0, w.A)((0, ea.A)(t), "handleClickToPaySubmit", function (e) {
-                t.setState({
-                    data: uV({}, e),
-                    valid: {},
-                    errors: {},
-                    isValid: !0,
-                }),
-                    t.submit();
+                t.setState({ data: uV({}, e), valid: {}, errors: {}, isValid: !0 }), t.submit();
             }),
             (0, w.A)((0, ea.A)(t), "onBinValue", cL((0, ea.A)(t))),
             e._disableClickToPay ||
@@ -20737,47 +17944,29 @@ var uj = (function (e) {
                                             paymentMethod: uV(
                                                 uV(
                                                     uV(
-                                                        uV(
-                                                            {
-                                                                type: r.type,
-                                                            },
-                                                            this.state.data,
-                                                        ),
+                                                        uV({ type: r.type }, this.state.data),
                                                         this.props.storedPaymentMethodId && {
                                                             storedPaymentMethodId: this.props.storedPaymentMethodId,
                                                         },
                                                     ),
-                                                    t && {
-                                                        brand: t,
-                                                    },
+                                                    t && { brand: t },
                                                 ),
-                                                this.props.fundingSource && {
-                                                    fundingSource: this.props.fundingSource,
-                                                },
+                                                this.props.fundingSource && { fundingSource: this.props.fundingSource },
                                             ),
                                         },
-                                        this.state.billingAddress && {
-                                            billingAddress: this.state.billingAddress,
-                                        },
+                                        this.state.billingAddress && { billingAddress: this.state.billingAddress },
                                     ),
                                     this.state.socialSecurityNumber && {
                                         socialSecurityNumber: this.state.socialSecurityNumber,
                                     },
                                 ),
-                                n && {
-                                    storePaymentMethod: !!this.state.storePaymentMethod,
-                                },
+                                n && { storePaymentMethod: !!this.state.storePaymentMethod },
                             ),
                             ("revolving" === (null == (e = this.state.installments) ? void 0 : e.plan) ||
-                                (null == e ? void 0 : e.value) > 1) && {
-                                installments: this.state.installments,
-                            },
+                                (null == e ? void 0 : e.value) > 1) && { installments: this.state.installments },
                         ),
                         {},
-                        {
-                            browserInfo: this.browserInfo,
-                            origin: !!window && window.location.origin,
-                        },
+                        { browserInfo: this.browserInfo, origin: !!window && window.location.origin },
                     );
                 },
             },
@@ -20903,24 +18092,17 @@ var uj = (function (e) {
                     var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
                     return (0, el.h)(
                         cB,
-                        (0, er.A)(
-                            {
-                                setComponentRef: this.setComponentRef,
-                            },
-                            this.props,
-                            this.state,
-                            {
-                                onChange: this.setState,
-                                onSubmit: this.submit,
-                                payButton: this.payButton,
-                                onBrand: this.onBrand,
-                                onBinValue: this.onBinValue,
-                                brand: this.brand,
-                                brandsIcons: this.brands,
-                                isPayButtonPrimaryVariant: e,
-                                resources: this.resources,
-                            },
-                        ),
+                        (0, er.A)({ setComponentRef: this.setComponentRef }, this.props, this.state, {
+                            onChange: this.setState,
+                            onSubmit: this.submit,
+                            payButton: this.payButton,
+                            onBrand: this.onBrand,
+                            onBinValue: this.onBinValue,
+                            brand: this.brand,
+                            brandsIcons: this.brands,
+                            isPayButtonPrimaryVariant: e,
+                            resources: this.resources,
+                        }),
                     );
                 },
             },
@@ -20930,16 +18112,10 @@ var uj = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             is,
-                            {
-                                srPanel: this.props.modules.srPanel,
-                            },
+                            { srPanel: this.props.modules.srPanel },
                             (0, el.h)(
                                 uD,
                                 {
@@ -20977,7 +18153,6 @@ var uU =
     (pm.CustomerRequestDeclined = "CUSTOMER_REQUEST_DECLINED"),
     (pm.CustomerRequestFailed = "CUSTOMER_REQUEST_FAILED"),
     pm);
-
 function uq(e, t) {
     var n = c()(e);
     if (d()) {
@@ -20990,7 +18165,6 @@ function uq(e, t) {
     }
     return n;
 }
-
 function uK(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -21008,7 +18182,6 @@ function uK(e) {
     }
     return e;
 }
-
 function uH(e) {
     var t = e.enableStoreDetails,
         n = e.cashAppService,
@@ -21081,9 +18254,7 @@ function uH(e) {
                                                             uK(
                                                                 uK(
                                                                     {},
-                                                                    (null == r ? void 0 : r.id) && {
-                                                                        customerId: r.id,
-                                                                    },
+                                                                    (null == r ? void 0 : r.id) && { customerId: r.id },
                                                                 ),
                                                                 (null == r ? void 0 : r.cashtag) && {
                                                                     cashTag: r.cashtag,
@@ -21091,9 +18262,7 @@ function uH(e) {
                                                             ),
                                                             (null == a || null == (t = a.payment)
                                                                 ? void 0
-                                                                : t.grantId) && {
-                                                                grantId: a.payment.grantId,
-                                                            },
+                                                                : t.grantId) && { grantId: a.payment.grantId },
                                                         ),
                                                         (null == a || null == (n = a.onFile) ? void 0 : n.grantId) && {
                                                             onFileGrantId: a.onFile.grantId,
@@ -21150,25 +18319,13 @@ function uH(e) {
         ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__cashapp",
-            },
+            { className: "adyen-checkout__cashapp" },
             "loading" === p && (0, el.h)(tK, null),
-            "loading" !== p &&
-                t &&
-                (0, el.h)(cP, {
-                    storeDetails: v,
-                    onChange: g,
-                }),
-            (0, el.h)("div", {
-                onClick: r,
-                className: "adyen-checkout__cashapp-button",
-                ref: c,
-            }),
+            "loading" !== p && t && (0, el.h)(cP, { storeDetails: v, onChange: g }),
+            (0, el.h)("div", { onClick: r, className: "adyen-checkout__cashapp-button", ref: c }),
         )
     );
 }
-
 function uz(e, t) {
     var n = c()(e);
     if (d()) {
@@ -21181,7 +18338,6 @@ function uz(e, t) {
     }
     return n;
 }
-
 function uW(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -21201,7 +18357,6 @@ function uW(e) {
 }
 var uG = (function () {
         var e, t, n, r;
-
         function a(e, t) {
             (0, k.A)(this, a),
                 (0, w.A)(this, "sdkLoader", void 0),
@@ -21252,13 +18407,7 @@ var uG = (function () {
                                                         this.sdkLoader.load(n)
                                                     );
                                                 case 4:
-                                                    return (
-                                                        (a = e.sent),
-                                                        (e.next = 7),
-                                                        a.pay({
-                                                            clientId: r,
-                                                        })
-                                                    );
+                                                    return (a = e.sent), (e.next = 7), a.pay({ clientId: r });
                                                 case 7:
                                                     (this.pay = e.sent), (e.next = 13);
                                                     break;
@@ -21266,9 +18415,7 @@ var uG = (function () {
                                                     throw (
                                                         ((e.prev = 10),
                                                         (e.t0 = e.catch(0)),
-                                                        new nv("ERROR", "Error during initialization", {
-                                                            cause: e.t0,
-                                                        }))
+                                                        new nv("ERROR", "Error during initialization", { cause: e.t0 }))
                                                     );
                                                 case 13:
                                                 case "end":
@@ -21303,15 +18450,7 @@ var uG = (function () {
                                                         (e.next = 4),
                                                         this.pay.render(t, {
                                                             manage: !1,
-                                                            button:
-                                                                !!a &&
-                                                                uW(
-                                                                    {
-                                                                        width: "full",
-                                                                        shape: "semiround",
-                                                                    },
-                                                                    r,
-                                                                ),
+                                                            button: !!a && uW({ width: "full", shape: "semiround" }, r),
                                                         })
                                                     );
                                                 case 4:
@@ -21386,17 +18525,10 @@ var uG = (function () {
                                                                 uW(
                                                                     {},
                                                                     this.hasOneTimePayment && {
-                                                                        payment: {
-                                                                            amount: r,
-                                                                            scopeId: a,
-                                                                        },
+                                                                        payment: { amount: r, scopeId: a },
                                                                     },
                                                                 ),
-                                                                this.hasOnFilePayment && {
-                                                                    onFile: {
-                                                                        scopeId: a,
-                                                                    },
-                                                                },
+                                                                this.hasOnFilePayment && { onFile: { scopeId: a } },
                                                             ),
                                                         }),
                                                         (e.next = 5),
@@ -21412,9 +18544,7 @@ var uG = (function () {
                                                         new nv(
                                                             "ERROR",
                                                             "Something went wrong during customerRequest creation",
-                                                            {
-                                                                cause: e.t0,
-                                                            },
+                                                            { cause: e.t0 },
                                                         ))
                                                     );
                                                 case 10:
@@ -21463,7 +18593,6 @@ var uG = (function () {
     })(),
     u$ = (function () {
         var e;
-
         function t() {
             (0, k.A)(this, t);
         }
@@ -21516,7 +18645,6 @@ var uG = (function () {
             t
         );
     })();
-
 function uY(e, t) {
     var n = c()(e);
     if (d()) {
@@ -21529,7 +18657,6 @@ function uY(e, t) {
     }
     return n;
 }
-
 function uQ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -21569,7 +18696,6 @@ var uZ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a, o, i, s;
         return (
@@ -21584,10 +18710,7 @@ var uZ = (function (e) {
                 else {
                     var n = !1;
                     new (B())(function (e, n) {
-                        return t({
-                            resolve: e,
-                            reject: n,
-                        });
+                        return t({ resolve: e, reject: n });
                     })
                         .catch(function () {
                             throw ((n = !0), Error("onClick rejected"));
@@ -21604,25 +18727,12 @@ var uZ = (function (e) {
                 }
             }),
             (0, w.A)((0, ea.A)(s), "handleOnChangeStoreDetails", function (e) {
-                var t = uQ(
-                    uQ({}, s.state.data),
-                    {},
-                    {
-                        shopperWantsToStore: e,
-                    },
-                );
-                s.setState({
-                    data: t,
-                });
+                var t = uQ(uQ({}, s.state.data), {}, { shopperWantsToStore: e });
+                s.setState({ data: t });
             }),
             (0, w.A)((0, ea.A)(s), "handleAuthorize", function (e) {
                 var t = uQ(uQ({}, s.state.data), e);
-                s.setState({
-                    data: t,
-                    valid: {},
-                    errors: {},
-                    isValid: !0,
-                }),
+                s.setState({ data: t, valid: {}, errors: {}, isValid: !0 }),
                     (0, ey.A)(((i = (0, ea.A)(s)), (0, es.A)(r.prototype)), "submit", i).call(i);
             }),
             s.props.enableStoreDetails &&
@@ -21677,39 +18787,16 @@ var uZ = (function (e) {
                         l = s.storePaymentMethod,
                         c = s.storedPaymentMethodId,
                         u = this.props.enableStoreDetails || (!this.props.session && l);
-                    if (c)
-                        return {
-                            paymentMethod: {
-                                type: r.type,
-                                storedPaymentMethodId: c,
-                            },
-                        };
+                    if (c) return { paymentMethod: { type: r.type, storedPaymentMethodId: c } };
                     var d = a && o;
                     return uQ(
                         {
                             paymentMethod: uQ(
-                                uQ(
-                                    uQ(
-                                        {
-                                            type: r.type,
-                                        },
-                                        n && {
-                                            grantId: n,
-                                        },
-                                    ),
-                                    i && {
-                                        customerId: i,
-                                    },
-                                ),
-                                d && {
-                                    onFileGrantId: a,
-                                    cashtag: o,
-                                },
+                                uQ(uQ({ type: r.type }, n && { grantId: n }), i && { customerId: i }),
+                                d && { onFileGrantId: a, cashtag: o },
                             ),
                         },
-                        u && {
-                            storePaymentMethod: l || t,
-                        },
+                        u && { storePaymentMethod: l || t },
                     );
                 },
             },
@@ -21740,20 +18827,14 @@ var uZ = (function (e) {
                         t = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            resources: this.resources,
-                            loadingContext: this.props.loadingContext,
-                        },
+                        { i18n: this.props.i18n, resources: this.resources, loadingContext: this.props.loadingContext },
                         this.props.storedPaymentMethodId
                             ? (0, el.h)(su, {
                                   label: np(this.props.i18n, this.props.amount),
                                   icon:
                                       null == (e = this.resources)
                                           ? void 0
-                                          : e.getImage({
-                                                imageFolder: "components/",
-                                            })("lock"),
+                                          : e.getImage({ imageFolder: "components/" })("lock"),
                                   name: this.displayName,
                                   amount: this.props.amount,
                                   payButton: this.payButton,
@@ -21780,7 +18861,6 @@ var uZ = (function (e) {
         r
     );
 })();
-
 function uJ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -21793,7 +18873,6 @@ function uJ(e, t) {
     }
     return n;
 }
-
 function uX(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -21843,7 +18922,6 @@ var u0 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function a(e) {
         var t, n;
         return (
@@ -21852,13 +18930,7 @@ var u0 = (function (e) {
             (0, w.A)((0, ea.A)(n), "clickToPayService", void 0),
             (0, w.A)((0, ea.A)(n), "ctpConfiguration", void 0),
             (0, w.A)((0, ea.A)(n), "handleClickToPaySubmit", function (e) {
-                n.setState({
-                    data: uX({}, e),
-                    valid: {},
-                    errors: {},
-                    isValid: !0,
-                }),
-                    n.submit();
+                n.setState({ data: uX({}, e), valid: {}, errors: {}, isValid: !0 }), n.submit();
             }),
             (n.ctpConfiguration = {
                 shopperEmail: n.props.shopperEmail,
@@ -21871,11 +18943,7 @@ var u0 = (function (e) {
             (n.clickToPayService = ua(n.props.configuration, n.ctpConfiguration, n.props.environment)),
             null == (t = n.clickToPayService) ||
                 t.initialize().catch(function (e) {
-                    n.handleError(
-                        new nv("ERROR", e.toString(), {
-                            cause: e,
-                        }),
-                    );
+                    n.handleError(new nv("ERROR", e.toString(), { cause: e }));
                 }),
             n.clickToPayService ||
                 console.warn(
@@ -21912,30 +18980,12 @@ var u0 = (function (e) {
                         paymentMethod: uX(
                             uX(
                                 uX(
-                                    uX(
-                                        uX(
-                                            {
-                                                type: a.type,
-                                            },
-                                            n && {
-                                                srcScheme: n,
-                                            },
-                                        ),
-                                        r && {
-                                            srcCorrelationId: r,
-                                        },
-                                    ),
-                                    o && {
-                                        srcTokenReference: o,
-                                    },
+                                    uX(uX({ type: a.type }, n && { srcScheme: n }), r && { srcCorrelationId: r }),
+                                    o && { srcTokenReference: o },
                                 ),
-                                i && {
-                                    srcCheckoutPayload: i,
-                                },
+                                i && { srcCheckoutPayload: i },
                             ),
-                            s && {
-                                srcDigitalCardId: s,
-                            },
+                            s && { srcDigitalCardId: s },
                         ),
                         browserInfo: this.browserInfo,
                         origin: null == (e = window) || null == (e = e.location) ? void 0 : e.origin,
@@ -22028,11 +19078,7 @@ var u0 = (function (e) {
                 value: function () {
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             ul,
                             {
@@ -22054,7 +19100,6 @@ var u0 = (function (e) {
         a
     );
 })();
-
 function u1(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22067,7 +19112,6 @@ function u1(e, t) {
     }
     return n;
 }
-
 function u2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -22108,7 +19152,6 @@ var u4 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t;
         return (
@@ -22135,10 +19178,7 @@ var u4 = (function (e) {
                     return u2(
                         u2({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            type: "bcmc",
-                            cvcPolicy: n8,
-                        },
+                        { type: "bcmc", cvcPolicy: n8 },
                     );
                 },
             },
@@ -22146,7 +19186,6 @@ var u4 = (function (e) {
         r
     );
 })();
-
 function u8(e) {
     var t = e.description,
         n = void 0 === t ? "" : t,
@@ -22160,81 +19199,43 @@ function u8(e) {
         u = "linear-gradient(0, #000, #0003), url(".concat(c, ")");
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__campaign-container",
-        },
+        { className: "adyen-checkout__campaign-container" },
         (0, el.h)(a5, {
             className: "adyen-checkout__campaign-background-image",
-            style: {
-                backgroundImage: u,
-            },
+            style: { backgroundImage: u },
             backgroundUrl: c,
         }),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__campaign-content",
-            },
-            i &&
-                (0, el.h)("img", {
-                    src: i,
-                    className: "adyen-checkout__campaign-logo",
-                    alt: a,
-                }),
-            a &&
-                (0, el.h)(
-                    "div",
-                    {
-                        className: "adyen-checkout__campaign-title",
-                    },
-                    a,
-                ),
+            { className: "adyen-checkout__campaign-content" },
+            i && (0, el.h)("img", { src: i, className: "adyen-checkout__campaign-logo", alt: a }),
+            a && (0, el.h)("div", { className: "adyen-checkout__campaign-title" }, a),
             n &&
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__campaign-description",
-                    },
+                    { className: "adyen-checkout__campaign-description" },
                     n,
                     (void 0 === s ? "" : s) && " ›",
                 ),
         ),
     );
 }
-
 function u3(e) {
     var t = e.url;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__campaign",
-        },
+        { className: "adyen-checkout__campaign" },
         !t && (0, el.h)(u8, e),
         t &&
             (0, el.h)(
                 "a",
-                {
-                    href: t,
-                    className: "adyen-checkout__campaign-link",
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                },
+                { href: t, className: "adyen-checkout__campaign-link", target: "_blank", rel: "noopener noreferrer" },
                 (0, el.h)(u8, e),
             ),
     );
 }
 (0, w.A)(u4, "type", "bcmc"),
-    (0, w.A)(
-        u4,
-        "defaultProps",
-        u2(
-            u2({}, uj.defaultProps),
-            {},
-            {
-                brands: ["bcmc", "maestro", "visa"],
-            },
-        ),
-    );
+    (0, w.A)(u4, "defaultProps", u2(u2({}, uj.defaultProps), {}, { brands: ["bcmc", "maestro", "visa"] }));
 var u6 = function (e) {
     var t = e.options,
         n = void 0 === t ? [] : t,
@@ -22242,9 +19243,7 @@ var u6 = function (e) {
         a = e.onChange;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__button-group",
-        },
+        { className: "adyen-checkout__button-group" },
         J()(n).call(n, function (e, t) {
             var n,
                 o = e.label,
@@ -22269,18 +19268,11 @@ var u6 = function (e) {
                     onChange: a,
                     disabled: l,
                 }),
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout__button-text",
-                    },
-                    o,
-                ),
+                (0, el.h)("span", { className: "adyen-checkout__button-text" }, o),
             );
         }),
     );
 };
-
 function u5(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22293,7 +19285,6 @@ function u5(e, t) {
     }
     return n;
 }
-
 function u9(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -22311,7 +19302,6 @@ function u9(e) {
     }
     return e;
 }
-
 function u7(e) {
     var t,
         n = e.amounts,
@@ -22330,10 +19320,7 @@ function u7(e) {
         m = (0, K.A)(f, 2),
         y = m[0],
         v = m[1],
-        g = tX({
-            currency: c,
-            value: null,
-        }),
+        g = tX({ currency: c, value: null }),
         b = (0, K.A)(g, 2),
         A = b[0],
         _ = b[1];
@@ -22349,73 +19336,42 @@ function u7(e) {
     return (
         t1(
             function () {
-                e.onChange({
-                    data: {
-                        amount: A,
-                    },
-                    isValid: y,
-                });
+                e.onChange({ data: { amount: A }, isValid: y });
             },
             [A, y],
         ),
         "error" === p
             ? (0, el.h)(
                   "div",
-                  {
-                      className: "adyen-checkout__adyen-giving",
-                  },
+                  { className: "adyen-checkout__adyen-giving" },
                   (0, el.h)(a5, {
                       className: "adyen-checkout__status__icon adyen-checkout__status__icon--error",
-                      src: l({
-                          imageFolder: "components/",
-                      })("error"),
+                      src: l({ imageFolder: "components/" })("error"),
                       alt: s.get("error.message.unknown"),
                   }),
-                  (0, el.h)(
-                      "div",
-                      {
-                          className: "adyen-checkout__status__text",
-                      },
-                      s.get("error.message.unknown"),
-                  ),
+                  (0, el.h)("div", { className: "adyen-checkout__status__text" }, s.get("error.message.unknown")),
               )
             : "success" === p
               ? (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__adyen-giving",
-                    },
+                    { className: "adyen-checkout__adyen-giving" },
                     (0, el.h)(a5, {
                         className: "adyen-checkout__status__icon adyen-checkout__status__icon--success",
-                        src: l({
-                            imageFolder: "components/",
-                        })("heart"),
+                        src: l({ imageFolder: "components/" })("heart"),
                         alt: s.get("thanksForYourSupport"),
                     }),
-                    (0, el.h)(
-                        "div",
-                        {
-                            className: "adyen-checkout__status__text",
-                        },
-                        s.get("thanksForYourSupport"),
-                    ),
+                    (0, el.h)("div", { className: "adyen-checkout__status__text" }, s.get("thanksForYourSupport")),
                 )
               : (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__adyen-giving",
-                    },
+                    { className: "adyen-checkout__adyen-giving" },
                     (0, el.h)(u3, e),
                     (0, el.h)(
                         "div",
-                        {
-                            className: "adyen-checkout__adyen-giving-actions",
-                        },
+                        { className: "adyen-checkout__adyen-giving-actions" },
                         (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout__amounts",
-                            },
+                            { className: "adyen-checkout__amounts" },
                             (0, el.h)(u6, {
                                 options: J()((t = Q()(n))).call(t, function (e) {
                                     return {
@@ -22431,13 +19387,7 @@ function u7(e) {
                                         n = ee()(t.value, 10);
                                     v(!0),
                                         _(function (e) {
-                                            return u9(
-                                                u9({}, e),
-                                                {},
-                                                {
-                                                    value: n,
-                                                },
-                                            );
+                                            return u9(u9({}, e), {}, { value: n });
                                         });
                                 },
                             }),
@@ -22450,12 +19400,7 @@ function u7(e) {
                         (0, el.h)(nu, {
                             classNameModifiers: ["donate"],
                             onClick: function () {
-                                h("loading"),
-                                    a({
-                                        data: {
-                                            amount: A,
-                                        },
-                                    });
+                                h("loading"), a({ data: { amount: A } });
                             },
                             label: s.get("donateButton"),
                             disabled: !A.value,
@@ -22466,13 +19411,7 @@ function u7(e) {
                                 classNameModifiers: ["decline"],
                                 variant: "ghost",
                                 onClick: function () {
-                                    h("loading"),
-                                        r({
-                                            data: {
-                                                amount: A,
-                                            },
-                                            isValid: y,
-                                        });
+                                    h("loading"), r({ data: { amount: A }, isValid: y });
                                 },
                                 disabled: "loading" === p,
                                 label: "".concat(s.get("notNowButton"), " ›"),
@@ -22481,7 +19420,6 @@ function u7(e) {
                 )
     );
 }
-
 function de(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22494,7 +19432,6 @@ function de(e, t) {
     }
     return n;
 }
-
 function dt(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -22541,7 +19478,6 @@ var dn = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a;
         return (
@@ -22579,13 +19515,7 @@ var dn = (function (e) {
                 value: function () {
                     var e = this.data,
                         t = this.isValid;
-                    this.props.onDonate(
-                        {
-                            data: e,
-                            isValid: t,
-                        },
-                        this,
-                    );
+                    this.props.onDonate({ data: e, isValid: t }, this);
                 },
             },
             {
@@ -22593,11 +19523,7 @@ var dn = (function (e) {
                 value: function () {
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             u7,
                             (0, er.A)({}, this.props, {
@@ -22613,15 +19539,10 @@ var dn = (function (e) {
         r
     );
 })();
-(0, w.A)(dn, "type", "donation"),
-    (0, w.A)(dn, "defaultProps", {
-        onCancel: function () {},
-        onDonate: function () {},
-    });
+(0, w.A)(dn, "type", "donation"), (0, w.A)(dn, "defaultProps", { onCancel: function () {}, onDonate: function () {} });
 var dr = function () {
     return window.location !== window.parent.location;
 };
-
 function da(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22656,7 +19577,6 @@ var di = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -22690,15 +19610,8 @@ var di = (function (e) {
                                 }
                                 return e;
                             })(
-                                {
-                                    url: e.props.url,
-                                    method: e.props.method,
-                                },
-                                e.props.data
-                                    ? {
-                                          data: e.props.data,
-                                      }
-                                    : {},
+                                { url: e.props.url, method: e.props.method },
+                                e.props.data ? { data: e.props.data } : {},
                             ),
                         );
                     })
@@ -22729,25 +19642,15 @@ var di = (function (e) {
                                   {
                                       method: "post",
                                       action: r,
-                                      style: {
-                                          display: "none",
-                                      },
+                                      style: { display: "none" },
                                       ref: function (e) {
                                           n.postForm = e;
                                       },
                                   },
-                                  this.props.redirectFromTopWhenInIframe &&
-                                      dr() && {
-                                          target: "_top",
-                                      },
+                                  this.props.redirectFromTopWhenInIframe && dr() && { target: "_top" },
                               ),
                               J()((t = c()(i))).call(t, function (e) {
-                                  return (0, el.h)("input", {
-                                      type: "hidden",
-                                      name: e,
-                                      key: e,
-                                      value: i[e],
-                                  });
+                                  return (0, el.h)("input", { type: "hidden", name: e, key: e, value: i[e] });
                               }),
                           )
                         : null;
@@ -22757,7 +19660,6 @@ var di = (function (e) {
         r
     );
 })();
-
 function ds(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22770,7 +19672,6 @@ function ds(e, t) {
     }
     return n;
 }
-
 function dl(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -22816,7 +19717,6 @@ var dc = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -22825,23 +19725,13 @@ var dc = (function (e) {
             {
                 key: "formatProps",
                 value: function (e) {
-                    return dl(
-                        dl({}, e),
-                        {},
-                        {
-                            showButton: !!e.showPayButton,
-                        },
-                    );
+                    return dl(dl({}, e), {}, { showButton: !!e.showPayButton });
                 },
             },
             {
                 key: "formatData",
                 value: function () {
-                    return {
-                        paymentMethod: {
-                            type: this.props.type,
-                        },
-                    };
+                    return { paymentMethod: { type: this.props.type } };
                 },
             },
             {
@@ -22888,7 +19778,6 @@ var dc = (function (e) {
         r
     );
 })();
-
 function du(e, t) {
     var n = c()(e);
     if (d()) {
@@ -22901,7 +19790,6 @@ function du(e, t) {
     }
     return n;
 }
-
 function dd(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -22919,11 +19807,7 @@ function dd(e) {
     }
     return e;
 }
-(0, w.A)(dc, "type", "redirect"),
-    (0, w.A)(dc, "defaultProps", {
-        type: dc.type,
-        showPayButton: !0,
-    });
+(0, w.A)(dc, "type", "redirect"), (0, w.A)(dc, "defaultProps", { type: dc.type, showPayButton: !0 });
 var dp = (function (e) {
     (0, eo.A)(r, dc);
     var t,
@@ -22946,7 +19830,6 @@ var dp = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -22956,23 +19839,13 @@ var dp = (function (e) {
                 key: "formatProps",
                 value: function (e) {
                     var t;
-                    return dd(
-                        dd({}, e),
-                        {},
-                        {
-                            showPayButton: null != (t = e.showButton) ? t : e.showPayButton,
-                        },
-                    );
+                    return dd(dd({}, e), {}, { showPayButton: null != (t = e.showButton) ? t : e.showPayButton });
                 },
             },
             {
                 key: "formatData",
                 value: function () {
-                    return {
-                        paymentMethod: {
-                            type: r.type,
-                        },
-                    };
+                    return { paymentMethod: { type: r.type } };
                 },
             },
             {
@@ -23015,7 +19888,6 @@ var dp = (function (e) {
 (0, w.A)(dp, "type", "giropay");
 var dh = ["amount", "countryCode", "totalPriceStatus"],
     df = ["configuration"];
-
 function dm(e, t) {
     var n = c()(e);
     if (d()) {
@@ -23028,7 +19900,6 @@ function dm(e, t) {
     }
     return n;
 }
-
 function dy(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -23046,7 +19917,6 @@ function dy(e) {
     }
     return e;
 }
-
 function dv(e) {
     var t,
         n,
@@ -23075,31 +19945,17 @@ function dv(e) {
             )),
         merchantInfo: dy(
             dy(
-                {
-                    merchantId: i.merchantId,
-                    merchantName: i.merchantName,
-                },
-                i.merchantOrigin
-                    ? {
-                          merchantOrigin: i.merchantOrigin,
-                      }
-                    : {},
+                { merchantId: i.merchantId, merchantName: i.merchantName },
+                i.merchantOrigin ? { merchantOrigin: i.merchantOrigin } : {},
             ),
-            i.authJwt
-                ? {
-                      authJwt: i.authJwt,
-                  }
-                : {},
+            i.authJwt ? { authJwt: i.authJwt } : {},
         ),
         allowedPaymentMethods: [
             {
                 type: "CARD",
                 tokenizationSpecification: {
                     type: "PAYMENT_GATEWAY",
-                    parameters: {
-                        gateway: "adyen",
-                        gatewayMerchantId: i.gatewayMerchantId,
-                    },
+                    parameters: { gateway: "adyen", gatewayMerchantId: i.gatewayMerchantId },
                 },
                 parameters: {
                     allowedAuthMethods: s.allowedAuthMethods,
@@ -23155,7 +20011,6 @@ var dg = [
     ],
     db = (function () {
         var e;
-
         function t(e) {
             (0, k.A)(this, t), (0, w.A)(this, "paymentsClient", void 0);
             var n = (function () {
@@ -23288,7 +20143,6 @@ var dg = [
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -23354,7 +20208,6 @@ var dg = [
             r
         );
     })();
-
 function d_(e, t) {
     var n = c()(e);
     if (d()) {
@@ -23367,7 +20220,6 @@ function d_(e, t) {
     }
     return n;
 }
-
 function dk(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -23385,11 +20237,7 @@ function dk(e) {
     }
     return e;
 }
-(0, w.A)(dA, "defaultProps", {
-    buttonColor: "default",
-    buttonType: "long",
-    buttonSizeMode: "static",
-});
+(0, w.A)(dA, "defaultProps", { buttonColor: "default", buttonType: "long", buttonSizeMode: "static" });
 var dC = (function (e) {
     (0, eo.A)(r, n_);
     var t,
@@ -23412,7 +20260,6 @@ var dC = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t, a;
         (0, k.A)(this, r);
@@ -23441,16 +20288,8 @@ var dC = (function (e) {
                     })
                     .catch(function (e) {
                         "CANCELED" === e.statusCode
-                            ? a.handleError(
-                                  new nv("CANCEL", e.toString(), {
-                                      cause: e,
-                                  }),
-                              )
-                            : a.handleError(
-                                  new nv("ERROR", e.toString(), {
-                                      cause: e,
-                                  }),
-                              );
+                            ? a.handleError(new nv("CANCEL", e.toString(), { cause: e }))
+                            : a.handleError(new nv("ERROR", e.toString(), { cause: e }));
                     });
             }),
             (0, w.A)((0, ea.A)(a), "isAvailable", function () {
@@ -23528,12 +20367,7 @@ var dC = (function (e) {
                 value: function () {
                     var e;
                     return {
-                        paymentMethod: dk(
-                            {
-                                type: null != (e = this.props.type) ? e : r.type,
-                            },
-                            this.state,
-                        ),
+                        paymentMethod: dk({ type: null != (e = this.props.type) ? e : r.type }, this.state),
                         browserInfo: this.browserInfo,
                     };
                 },
@@ -23585,15 +20419,8 @@ var dC = (function (e) {
         buttonType: "long",
         buttonSizeMode: void 0,
         showPayButton: !0,
-        configuration: {
-            gatewayMerchantId: "",
-            merchantId: "",
-            merchantName: "",
-        },
-        amount: {
-            value: 0,
-            currency: "USD",
-        },
+        configuration: { gatewayMerchantId: "", merchantId: "", merchantName: "" },
+        amount: { value: 0, currency: "USD" },
         countryCode: "US",
         totalPriceStatus: "FINAL",
         onAuthorized: function (e) {
@@ -23638,7 +20465,6 @@ var dw = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -23664,7 +20490,6 @@ var dS = {
         ],
     },
     dN = ["personalDetailsRequired", "data", "onChange", "showPayButton", "payButton"];
-
 function dx(e) {
     var t,
         n = e.personalDetailsRequired,
@@ -23690,9 +20515,7 @@ function dx(e) {
     var v = r && l.showFormInstruction;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__econtext-input__field",
-        },
+        { className: "adyen-checkout__econtext-input__field" },
         v && (0, el.h)(o4, null),
         r &&
             (0, el.h)(ai, {
@@ -23705,14 +20528,9 @@ function dx(e) {
                 },
                 validationRules: dS,
             }),
-        i &&
-            s({
-                status: f,
-                label: d.get("confirmPurchase"),
-            }),
+        i && s({ status: f, label: d.get("confirmPurchase") }),
     );
 }
-
 function dP(e) {
     var t,
         n = (((t = document.createElement("textArea")).readOnly = !0), (t.value = e), document.body.appendChild(t), t);
@@ -23725,7 +20543,6 @@ function dP(e) {
     document.execCommand("copy"), document.body.removeChild(n);
 }
 var dR = ["voucherDetails", "className"];
-
 function dF(e) {
     var t,
         n = e.voucherDetails,
@@ -23745,20 +20562,14 @@ function dF(e) {
         },
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__voucher-result__top",
-            },
+            { className: "adyen-checkout__voucher-result__top" },
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__voucher-result__image",
-                },
+                { className: "adyen-checkout__voucher-result__image" },
                 !!o.imageUrl &&
                     (0, el.h)(
                         "span",
-                        {
-                            className: "adyen-checkout__voucher-result__image__wrapper",
-                        },
+                        { className: "adyen-checkout__voucher-result__image__wrapper" },
                         (0, el.h)("img", {
                             alt: o.paymentMethodType,
                             className: "adyen-checkout__voucher-result__image__brand",
@@ -23768,9 +20579,7 @@ function dF(e) {
                 !!o.issuerImageUrl &&
                     (0, el.h)(
                         "span",
-                        {
-                            className: "adyen-checkout__voucher-result__image__wrapper",
-                        },
+                        { className: "adyen-checkout__voucher-result__image__wrapper" },
                         (0, el.h)("img", {
                             alt: o.paymentMethodType,
                             className: "adyen-checkout__voucher-result__image__issuer",
@@ -23780,9 +20589,7 @@ function dF(e) {
             ),
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__voucher-result__introduction",
-                },
+                { className: "adyen-checkout__voucher-result__introduction" },
                 o.introduction,
                 " ",
                 o.instructionsUrl &&
@@ -23801,16 +20608,12 @@ function dF(e) {
             o.amount &&
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__voucher-result__amount",
-                    },
+                    { className: "adyen-checkout__voucher-result__amount" },
                     o.amount,
                     o.surcharge &&
                         (0, el.h)(
                             "span",
-                            {
-                                className: "adyen-checkout__voucher-result__surcharge",
-                            },
+                            { className: "adyen-checkout__voucher-result__surcharge" },
                             "(",
                             i.get("voucher.surcharge").replace("%@", o.surcharge),
                             ")",
@@ -23820,37 +20623,25 @@ function dF(e) {
         o.reference &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__voucher-result__separator",
-                },
-                (0, el.h)("div", {
-                    className: "adyen-checkout__voucher-result__separator__inner",
-                }),
+                { className: "adyen-checkout__voucher-result__separator" },
+                (0, el.h)("div", { className: "adyen-checkout__voucher-result__separator__inner" }),
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__voucher-result__code__label",
-                    },
+                    { className: "adyen-checkout__voucher-result__code__label" },
                     (0, el.h)(
                         "span",
-                        {
-                            className: "adyen-checkout__voucher-result__code__label__text",
-                        },
+                        { className: "adyen-checkout__voucher-result__code__label__text" },
                         i.get("voucher.paymentReferenceLabel"),
                     ),
                 ),
             ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__voucher-result__bottom",
-            },
+            { className: "adyen-checkout__voucher-result__bottom" },
             o.reference &&
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__voucher-result__code",
-                    },
+                    { className: "adyen-checkout__voucher-result__code" },
                     o.barcode &&
                         (0, el.h)("img", {
                             alt: i.get("voucher.paymentReferenceLabel"),
@@ -23862,15 +20653,11 @@ function dF(e) {
             (!!o.downloadUrl || !!o.copyBtn) &&
                 (0, el.h)(
                     "ul",
-                    {
-                        className: "adyen-checkout__voucher-result__actions",
-                    },
+                    { className: "adyen-checkout__voucher-result__actions" },
                     !!o.copyBtn &&
                         (0, el.h)(
                             "li",
-                            {
-                                className: "adyen-checkout__voucher-result__actions__item",
-                            },
+                            { className: "adyen-checkout__voucher-result__actions__item" },
                             (0, el.h)(nu, {
                                 inline: !0,
                                 variant: "action",
@@ -23878,25 +20665,19 @@ function dF(e) {
                                     var n = t.complete;
                                     dP(o.reference), n();
                                 },
-                                icon: s({
-                                    imageFolder: "components/",
-                                })("copy"),
+                                icon: s({ imageFolder: "components/" })("copy"),
                                 label: i.get("button.copy"),
                             }),
                         ),
                     !!o.downloadUrl &&
                         (0, el.h)(
                             "li",
-                            {
-                                className: "adyen-checkout__voucher-result__actions__item",
-                            },
+                            { className: "adyen-checkout__voucher-result__actions__item" },
                             (0, el.h)(nu, {
                                 inline: !0,
                                 variant: "action",
                                 href: o.downloadUrl,
-                                icon: s({
-                                    imageFolder: "components/",
-                                })("download"),
+                                icon: s({ imageFolder: "components/" })("download"),
                                 label: o.downloadButtonText || i.get("button.download"),
                                 target: "_blank",
                                 rel: "noopener noreferrer",
@@ -23905,9 +20686,7 @@ function dF(e) {
                 ),
             (0, el.h)(
                 "ul",
-                {
-                    className: "adyen-checkout__voucher-result__details",
-                },
+                { className: "adyen-checkout__voucher-result__details" },
                 J()(
                     (t = P()(r).call(r, function (e) {
                         var t = e.label,
@@ -23919,24 +20698,9 @@ function dF(e) {
                         r = e.value;
                     return (0, el.h)(
                         "li",
-                        {
-                            key: t,
-                            className: "adyen-checkout__voucher-result__details__item",
-                        },
-                        (0, el.h)(
-                            "span",
-                            {
-                                className: "adyen-checkout__voucher-result__details__label",
-                            },
-                            n,
-                        ),
-                        (0, el.h)(
-                            "span",
-                            {
-                                className: "adyen-checkout__voucher-result__details__value",
-                            },
-                            r,
-                        ),
+                        { key: t, className: "adyen-checkout__voucher-result__details__item" },
+                        (0, el.h)("span", { className: "adyen-checkout__voucher-result__details__label" }, n),
+                        (0, el.h)("span", { className: "adyen-checkout__voucher-result__details__value" }, r),
                     );
                 }),
             ),
@@ -23961,23 +20725,13 @@ var dO = function (e) {
         instructionsUrl: i,
         amount: n && l.amount(n.value, n.currency),
         voucherDetails: [
-            {
-                label: l.get("voucher.collectionInstitutionNumber"),
-                value: s,
-            },
-            {
-                label: l.get("voucher.expirationDate"),
-                value: l.date(r),
-            },
-            {
-                label: l.get("voucher.telephoneNumber"),
-                value: o,
-            },
+            { label: l.get("voucher.collectionInstitutionNumber"), value: s },
+            { label: l.get("voucher.expirationDate"), value: l.date(r) },
+            { label: l.get("voucher.telephoneNumber"), value: o },
         ],
         copyBtn: !0,
     });
 };
-
 function dE(e, t) {
     var n = c()(e);
     if (d()) {
@@ -23990,7 +20744,6 @@ function dE(e, t) {
     }
     return n;
 }
-
 function dI(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24030,7 +20783,6 @@ var dM = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24045,15 +20797,7 @@ var dM = (function (e) {
             {
                 key: "formatData",
                 value: function () {
-                    return dI(
-                        dI({}, this.state.data),
-                        {},
-                        {
-                            paymentMethod: {
-                                type: this.props.type || r.type,
-                            },
-                        },
-                    );
+                    return dI(dI({}, this.state.data), {}, { paymentMethod: { type: this.props.type || r.type } });
                 },
             },
             {
@@ -24068,11 +20812,7 @@ var dM = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.reference
                             ? (0, el.h)(
                                   dO,
@@ -24087,17 +20827,11 @@ var dM = (function (e) {
                               )
                             : (0, el.h)(
                                   dx,
-                                  (0, er.A)(
-                                      {
-                                          setComponentRef: this.setComponentRef,
-                                      },
-                                      this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                      },
-                                  ),
+                                  (0, er.A)({ setComponentRef: this.setComponentRef }, this.props, {
+                                      onChange: this.setState,
+                                      onSubmit: this.submit,
+                                      payButton: this.payButton,
+                                  }),
                               ),
                     );
                 },
@@ -24107,12 +20841,8 @@ var dM = (function (e) {
     );
 })();
 (0, w.A)(dM, "type", "econtext"),
-    (0, w.A)(dM, "defaultProps", {
-        personalDetailsRequired: !0,
-        showFormInstruction: !0,
-    });
+    (0, w.A)(dM, "defaultProps", { personalDetailsRequired: !0, showFormInstruction: !0 });
 var dT = ["ES", "FR"];
-
 function dB(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24125,7 +20855,6 @@ function dB(e, t) {
     }
     return n;
 }
-
 function dD(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24165,7 +20894,6 @@ var dL = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24177,9 +20905,7 @@ var dL = (function (e) {
                     return dD(
                         dD({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : dT,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : dT },
                     );
                 },
             },
@@ -24187,7 +20913,6 @@ var dL = (function (e) {
         r
     );
 })();
-
 function dV(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24200,7 +20925,6 @@ function dV(e, t) {
     }
     return n;
 }
-
 function dj(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24241,7 +20965,6 @@ var dU = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24253,9 +20976,7 @@ var dU = (function (e) {
                     return dj(
                         dj({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : dT,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : dT },
                     );
                 },
             },
@@ -24263,7 +20984,6 @@ var dU = (function (e) {
         r
     );
 })();
-
 function dq(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24276,7 +20996,6 @@ function dq(e, t) {
     }
     return n;
 }
-
 function dK(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24317,7 +21036,6 @@ var dH = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24329,9 +21047,7 @@ var dH = (function (e) {
                     return dK(
                         dK({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : dT,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : dT },
                     );
                 },
             },
@@ -24339,7 +21055,6 @@ var dH = (function (e) {
         r
     );
 })();
-
 function dz(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24352,7 +21067,6 @@ function dz(e, t) {
     }
     return n;
 }
-
 function dW(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24393,7 +21107,6 @@ var dG = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24405,9 +21118,7 @@ var dG = (function (e) {
                     return dW(
                         dW({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : dT,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : dT },
                     );
                 },
             },
@@ -24415,7 +21126,6 @@ var dG = (function (e) {
         r
     );
 })();
-
 function d$(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24428,7 +21138,6 @@ function d$(e, t) {
     }
     return n;
 }
-
 function dY(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24469,7 +21178,6 @@ var dQ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24481,9 +21189,7 @@ var dQ = (function (e) {
                     return dY(
                         dY({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : dT,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : dT },
                     );
                 },
             },
@@ -24514,7 +21220,6 @@ var dZ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -24548,7 +21253,6 @@ var dJ = ["black", "white"],
         "th_TH",
         "zh_TW",
     ];
-
 function d0(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24561,7 +21265,6 @@ function d0(e, t) {
     }
     return n;
 }
-
 function d1(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24616,35 +21319,12 @@ var d2 = function (e) {
             d1(
                 d1(
                     d1(
-                        d1(
-                            d1(
-                                d1(
-                                    {},
-                                    m && {
-                                        "merchant-id": m,
-                                    },
-                                ),
-                                d && {
-                                    locale: d,
-                                },
-                            ),
-                            r &&
-                                h && {
-                                    "buyer-country": r,
-                                },
-                        ),
-                        a &&
-                            h && {
-                                debug: a,
-                            },
+                        d1(d1(d1({}, m && { "merchant-id": m }), d && { locale: d }), r && h && { "buyer-country": r }),
+                        a && h && { debug: a },
                     ),
-                    p && {
-                        currency: p,
-                    },
+                    p && { currency: p },
                 ),
-                y && {
-                    intent: y,
-                },
+                y && { intent: y },
             ),
             {},
             {
@@ -24669,7 +21349,6 @@ var d2 = function (e) {
         "paypalRef",
         "style",
     ];
-
 function d3(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24682,7 +21361,6 @@ function d3(e, t) {
     }
     return n;
 }
-
 function d6(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24700,7 +21378,6 @@ function d6(e) {
     }
     return e;
 }
-
 function d5(e) {
     var t,
         n = e.onInit,
@@ -24723,32 +21400,11 @@ function d5(e) {
         b = function (e, t) {
             var c = d6(
                     d6(
-                        d6(
-                            d6(
-                                {},
-                                f && {
-                                    createBillingAgreement: l,
-                                },
-                            ),
-                            !f && {
-                                createOrder: l,
-                            },
-                        ),
-                        !f &&
-                            "venmo" !== e && {
-                                onShippingChange: s,
-                            },
+                        d6(d6({}, f && { createBillingAgreement: l }), !f && { createOrder: l }),
+                        !f && "venmo" !== e && { onShippingChange: s },
                     ),
                     {},
-                    {
-                        fundingSource: e,
-                        style: d2(e, d),
-                        onInit: n,
-                        onClick: a,
-                        onCancel: o,
-                        onError: i,
-                        onApprove: r,
-                    },
+                    { fundingSource: e, style: d2(e, d), onInit: n, onClick: a, onCancel: o, onError: i, onApprove: r },
                 ),
                 p = u.Buttons(c);
             p.isEligible() && p.render(t.current);
@@ -24767,11 +21423,7 @@ function d5(e) {
         }, []),
         (0, el.h)(
             "div",
-            {
-                className: ep()("adyen-checkout__paypal__buttons", {
-                    "adyen-checkout__paypal-processing": c,
-                }),
-            },
+            { className: ep()("adyen-checkout__paypal__buttons", { "adyen-checkout__paypal-processing": c }) },
             (0, el.h)("div", {
                 className: "adyen-checkout__paypal__button adyen-checkout__paypal__button--paypal",
                 ref: m,
@@ -24791,18 +21443,11 @@ function d5(e) {
             c &&
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__paypal",
-                    },
+                    { className: "adyen-checkout__paypal" },
                     (0, el.h)(
                         "div",
-                        {
-                            className: "adyen-checkout__paypal__status adyen-checkout__paypal__status--processing",
-                        },
-                        (0, el.h)(tK, {
-                            size: "medium",
-                            inline: !0,
-                        }),
+                        { className: "adyen-checkout__paypal__status adyen-checkout__paypal__status--processing" },
+                        (0, el.h)(tK, { size: "medium", inline: !0 }),
                         " ",
                         h.get("paypal.processingPayment"),
                     ),
@@ -24811,7 +21456,6 @@ function d5(e) {
     );
 }
 var d9 = ["onApprove", "onCancel", "onChange", "onError", "onSubmit"];
-
 function d7(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24824,7 +21468,6 @@ function d7(e, t) {
     }
     return n;
 }
-
 function pe(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24842,7 +21485,6 @@ function pe(e) {
     }
     return e;
 }
-
 function pt(e) {
     var t = e.onApprove,
         n = e.onCancel,
@@ -24882,18 +21524,8 @@ function pt(e) {
                     )),
                     M()((t = "".concat("https://www.paypal.com/sdk/js", "?"))).call(t, r)),
                     "body",
-                    pe(
-                        {},
-                        i.cspNonce && {
-                            nonce: i.cspNonce,
-                        },
-                    ),
-                    pe(
-                        {},
-                        i.cspNonce && {
-                            cspNonce: i.cspNonce,
-                        },
-                    ),
+                    pe({}, i.cspNonce && { nonce: i.cspNonce }),
+                    pe({}, i.cspNonce && { cspNonce: i.cspNonce }),
                 );
             return (
                 a.load().then(h),
@@ -24904,15 +21536,11 @@ function pt(e) {
         }, []),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__paypal",
-            },
+            { className: "adyen-checkout__paypal" },
             "pending" === u
                 ? (0, el.h)(
                       "div",
-                      {
-                          className: "adyen-checkout__paypal__status adyen-checkout__paypal__status--pending",
-                      },
+                      { className: "adyen-checkout__paypal__status adyen-checkout__paypal__status--pending" },
                       (0, el.h)(tK, null),
                   )
                 : (0, el.h)(
@@ -24931,7 +21559,6 @@ function pt(e) {
     );
 }
 var pn = "The instance of the PayPal component being used is not the same which started the payment";
-
 function pr(e, t) {
     var n = c()(e);
     if (d()) {
@@ -24944,7 +21571,6 @@ function pr(e, t) {
     }
     return n;
 }
-
 function pa(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -24974,32 +21600,15 @@ var po = function (e) {
         r = pa(
             pa(
                 pa(
-                    pa(
-                        pa(
-                            {},
-                            n && {
-                                street: n,
-                            },
-                        ),
-                        t.admin_area_1 && {
-                            stateOrProvince: t.admin_area_1,
-                        },
-                    ),
-                    t.admin_area_2 && {
-                        city: t.admin_area_2,
-                    },
+                    pa(pa({}, n && { street: n }), t.admin_area_1 && { stateOrProvince: t.admin_area_1 }),
+                    t.admin_area_2 && { city: t.admin_area_2 },
                 ),
-                t.postal_code && {
-                    postalCode: t.postal_code,
-                },
+                t.postal_code && { postalCode: t.postal_code },
             ),
-            t.country_code && {
-                country: t.country_code,
-            },
+            t.country_code && { country: t.country_code },
         );
     return c()(r).length > 0 ? r : null;
 };
-
 function pi(e, t) {
     var n = c()(e);
     if (d()) {
@@ -25012,7 +21621,6 @@ function pi(e, t) {
     }
     return n;
 }
-
 function ps(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -25052,7 +21660,6 @@ var pl = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a;
         return (
@@ -25084,12 +21691,7 @@ var pl = (function (e) {
             }),
             (0, w.A)((0, ea.A)(a), "handleOnApprove", function (e, t) {
                 var n = a.props.onShopperDetails,
-                    r = {
-                        data: {
-                            details: e,
-                            paymentData: a.paymentData,
-                        },
-                    };
+                    r = { data: { details: e, paymentData: a.paymentData } };
                 if (n)
                     return t.order
                         .get()
@@ -25142,43 +21744,23 @@ var pl = (function (e) {
                                                 pa(
                                                     pa(
                                                         pa(
-                                                            pa(
-                                                                {},
-                                                                u.firstName && {
-                                                                    shopperName: u,
-                                                                },
-                                                            ),
-                                                            d && {
-                                                                shopperEmail: d,
-                                                            },
+                                                            pa({}, u.firstName && { shopperName: u }),
+                                                            d && { shopperEmail: d },
                                                         ),
-                                                        f && {
-                                                            dateOfBirth: f,
-                                                        },
+                                                        f && { dateOfBirth: f },
                                                     ),
-                                                    h && {
-                                                        telephoneNumber: h,
-                                                    },
+                                                    h && { telephoneNumber: h },
                                                 ),
-                                                p && {
-                                                    countryCode: p,
-                                                },
+                                                p && { countryCode: p },
                                             ),
-                                            m && {
-                                                billingAddress: m,
-                                            },
+                                            m && { billingAddress: m },
                                         ),
-                                        y && {
-                                            shippingAddress: y,
-                                        },
+                                        y && { shippingAddress: y },
                                     );
                                 return c()(v).length > 0 ? v : null;
                             })(e);
                             return new (B())(function (r, a) {
-                                return n(t, e, {
-                                    resolve: r,
-                                    reject: a,
-                                });
+                                return n(t, e, { resolve: r, reject: a });
                             });
                         })
                         .then(function () {
@@ -25186,9 +21768,7 @@ var pl = (function (e) {
                         })
                         .catch(function (e) {
                             return a.handleError(
-                                new nv("ERROR", "Something went wrong while parsing PayPal Order", {
-                                    cause: e,
-                                }),
+                                new nv("ERROR", "Something went wrong while parsing PayPal Order", { cause: e }),
                             );
                         });
                 a.handleAdditionalDetails(r);
@@ -25208,29 +21788,14 @@ var pl = (function (e) {
                         a = n.intent,
                         o = 0 === (null == (t = e.amount) ? void 0 : t.value) ? "tokenize" : e.intent || a,
                         i = "tokenize" === o || e.vault;
-                    return ps(
-                        ps({}, e),
-                        {},
-                        {
-                            vault: i,
-                            configuration: {
-                                intent: o,
-                                merchantId: r,
-                            },
-                        },
-                    );
+                    return ps(ps({}, e), {}, { vault: i, configuration: { intent: o, merchantId: r } });
                 },
             },
             {
                 key: "formatData",
                 value: function () {
                     var e = this.props.isExpress;
-                    return {
-                        paymentMethod: {
-                            type: r.type,
-                            subtype: e ? "express" : r.subtype,
-                        },
-                    };
+                    return { paymentMethod: { type: r.type, subtype: e ? "express" : r.subtype } };
                 },
             },
             {
@@ -25291,11 +21856,7 @@ var pl = (function (e) {
                                           onChange: this.setState,
                                           onApprove: this.handleOnApprove,
                                           onError: function (t) {
-                                              e.handleError(
-                                                  new nv("ERROR", t.toString(), {
-                                                      cause: t,
-                                                  }),
-                                              );
+                                              e.handleError(new nv("ERROR", t.toString(), { cause: t }));
                                           },
                                           onSubmit: this.handleSubmit,
                                       },
@@ -25309,7 +21870,6 @@ var pl = (function (e) {
         r
     );
 })();
-
 function pc(e, t) {
     var n = c()(e);
     if (d()) {
@@ -25322,7 +21882,6 @@ function pc(e, t) {
     }
     return n;
 }
-
 function pu(e) {
     var t,
         n,
@@ -25350,14 +21909,7 @@ function pu(e) {
                             });
                 }
                 return e;
-            })(
-                {},
-                l
-                    ? {
-                          phonePrefix: e.selected,
-                      }
-                    : {},
-            ),
+            })({}, l ? { phonePrefix: e.selected } : {}),
             rules: {
                 phoneNumber: {
                     modes: ["blur"],
@@ -25377,12 +21929,7 @@ function pu(e) {
     return (
         t1(
             function () {
-                e.onChange({
-                    data: p,
-                    valid: f,
-                    errors: y,
-                    isValid: g,
-                });
+                e.onChange({ data: p, valid: f, errors: y, isValid: g });
             },
             [p, f, y, g],
         ),
@@ -25390,25 +21937,19 @@ function pu(e) {
         (this.setStatus = s),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__phone-input",
-            },
+            { className: "adyen-checkout__phone-input" },
             (0, el.h)(
                 rA,
                 {
                     errorMessage: !!y.phoneNumber,
                     label: r.get(e.phoneLabel),
-                    className: ep()({
-                        "adyen-checkout__input--phone-number": !0,
-                    }),
+                    className: ep()({ "adyen-checkout__input--phone-number": !0 }),
                     inputWrapperModifiers: ["phoneInput"],
                     name: "",
                 },
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__input-wrapper",
-                    },
+                    { className: "adyen-checkout__input-wrapper" },
                     (0, el.h)(
                         "div",
                         {
@@ -25420,10 +21961,7 @@ function pu(e) {
                         !!l &&
                             (0, el.h)(
                                 rA,
-                                {
-                                    inputWrapperModifiers: ["phoneInput"],
-                                    name: e.prefixName,
-                                },
+                                { inputWrapperModifiers: ["phoneInput"], name: e.prefixName },
                                 (0, el.h)(oc, {
                                     className: "adyen-checkout__dropdown--small adyen-checkout__countryFlag",
                                     filterable: !1,
@@ -25435,9 +21973,7 @@ function pu(e) {
                                 }),
                                 (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__phoneNumber",
-                                    },
+                                    { className: "adyen-checkout__phoneNumber" },
                                     (0, el.h)("div", null, p.phonePrefix),
                                     (0, el.h)("input", {
                                         type: "tel",
@@ -25454,14 +21990,10 @@ function pu(e) {
                     ),
                 ),
             ),
-            this.props.showPayButton &&
-                this.props.payButton({
-                    status: i,
-                }),
+            this.props.showPayButton && this.props.payButton({ status: i }),
         )
     );
 }
-
 function pd(e, t) {
     var n = c()(e);
     if (d()) {
@@ -25474,7 +22006,6 @@ function pd(e, t) {
     }
     return n;
 }
-
 function pp(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -25503,27 +22034,20 @@ function pp(e) {
         intent: null,
         commit: !0,
         vault: !1,
-        style: {
-            height: 48,
-        },
+        style: { height: 48 },
         blockPayPalCreditButton: !1,
         blockPayPalPayLaterButton: !1,
         enableMessages: !1,
         blockPayPalVenmoButton: !1,
         isExpress: !1,
-        configuration: {
-            merchantId: "",
-            intent: null,
-        },
+        configuration: { merchantId: "", intent: null },
         onInit: function () {},
         onClick: function () {},
         onCancel: function () {},
         onError: function () {},
         onShippingChange: function () {},
     }),
-    (pu.defaultProps = {
-        phoneLabel: "telephoneNumber",
-    });
+    (pu.defaultProps = { phoneLabel: "telephoneNumber" });
 var ph,
     pf,
     pm,
@@ -25538,133 +22062,32 @@ var ph,
         return !1;
     },
     pg = [
-        {
-            id: "+7",
-            name: "Russian Federation",
-            code: "RU",
-        },
-        {
-            id: "+9955",
-            name: "Georgia",
-            code: "GE",
-        },
-        {
-            id: "+507",
-            name: "Panama",
-            code: "PA",
-        },
-        {
-            id: "+44",
-            name: "United Kingdom",
-            code: "GB",
-        },
-        {
-            id: "+992",
-            name: "Tajikistan",
-            code: "TJ",
-        },
-        {
-            id: "+370",
-            name: "Lithuania",
-            code: "LT",
-        },
-        {
-            id: "+972",
-            name: "Israel",
-            code: "IL",
-        },
-        {
-            id: "+996",
-            name: "Kyrgyzstan",
-            code: "KG",
-        },
-        {
-            id: "+380",
-            name: "Ukraine",
-            code: "UA",
-        },
-        {
-            id: "+84",
-            name: "Viet Nam",
-            code: "VN",
-        },
-        {
-            id: "+90",
-            name: "Turkey",
-            code: "TR",
-        },
-        {
-            id: "+994",
-            name: "Azerbaijan",
-            code: "AZ",
-        },
-        {
-            id: "+374",
-            name: "Armenia",
-            code: "AM",
-        },
-        {
-            id: "+371",
-            name: "Latvia",
-            code: "LV",
-        },
-        {
-            id: "+91",
-            name: "India",
-            code: "IN",
-        },
-        {
-            id: "+66",
-            name: "Thailand",
-            code: "TH",
-        },
-        {
-            id: "+373",
-            name: "Moldova",
-            code: "MD",
-        },
-        {
-            id: "+1",
-            name: "United States",
-            code: "US",
-        },
-        {
-            id: "+81",
-            name: "Japan",
-            code: "JP",
-        },
-        {
-            id: "+998",
-            name: "Uzbekistan",
-            code: "UZ",
-        },
-        {
-            id: "+77",
-            name: "Kazakhstan",
-            code: "KZ",
-        },
-        {
-            id: "+375",
-            name: "Belarus",
-            code: "BY",
-        },
-        {
-            id: "+372",
-            name: "Estonia",
-            code: "EE",
-        },
-        {
-            id: "+40",
-            name: "Romania",
-            code: "RO",
-        },
-        {
-            id: "+82",
-            name: "Korea",
-            code: "KR",
-        },
+        { id: "+7", name: "Russian Federation", code: "RU" },
+        { id: "+9955", name: "Georgia", code: "GE" },
+        { id: "+507", name: "Panama", code: "PA" },
+        { id: "+44", name: "United Kingdom", code: "GB" },
+        { id: "+992", name: "Tajikistan", code: "TJ" },
+        { id: "+370", name: "Lithuania", code: "LT" },
+        { id: "+972", name: "Israel", code: "IL" },
+        { id: "+996", name: "Kyrgyzstan", code: "KG" },
+        { id: "+380", name: "Ukraine", code: "UA" },
+        { id: "+84", name: "Viet Nam", code: "VN" },
+        { id: "+90", name: "Turkey", code: "TR" },
+        { id: "+994", name: "Azerbaijan", code: "AZ" },
+        { id: "+374", name: "Armenia", code: "AM" },
+        { id: "+371", name: "Latvia", code: "LV" },
+        { id: "+91", name: "India", code: "IN" },
+        { id: "+66", name: "Thailand", code: "TH" },
+        { id: "+373", name: "Moldova", code: "MD" },
+        { id: "+1", name: "United States", code: "US" },
+        { id: "+81", name: "Japan", code: "JP" },
+        { id: "+998", name: "Uzbekistan", code: "UZ" },
+        { id: "+77", name: "Kazakhstan", code: "KZ" },
+        { id: "+375", name: "Belarus", code: "BY" },
+        { id: "+372", name: "Estonia", code: "EE" },
+        { id: "+40", name: "Romania", code: "RO" },
+        { id: "+82", name: "Korea", code: "KR" },
     ];
-
 function pb(e, t) {
     var n = c()(e);
     if (d()) {
@@ -25677,7 +22100,6 @@ function pb(e, t) {
     }
     return n;
 }
-
 function pA(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -25717,7 +22139,6 @@ var p_ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -25732,18 +22153,7 @@ var p_ = (function (e) {
             {
                 key: "formatProps",
                 value: function (e) {
-                    return pA(
-                        pA(
-                            {
-                                onValid: function () {},
-                            },
-                            e,
-                        ),
-                        {},
-                        {
-                            selected: pv(e.items, e.countryCode),
-                        },
-                    );
+                    return pA(pA({ onValid: function () {} }, e), {}, { selected: pv(e.items, e.countryCode) });
                 },
             },
             {
@@ -25764,11 +22174,7 @@ var p_ = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             pu,
                             (0, er.A)(
@@ -25794,7 +22200,6 @@ var p_ = (function (e) {
         r
     );
 })();
-
 function pk(e, t) {
     var n = c()(e);
     if (d()) {
@@ -25807,7 +22212,6 @@ function pk(e, t) {
     }
     return n;
 }
-
 function pC(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -25825,7 +22229,6 @@ function pC(e) {
     }
     return e;
 }
-
 function pw(e) {
     var t = this,
         n = t4(null),
@@ -25861,9 +22264,7 @@ function pw(e) {
             function () {
                 return l2(
                     e,
-                    {
-                        sfp: n,
-                    },
+                    { sfp: n },
                     {
                         dualBrandSelectElements: S,
                         setDualBrandSelectElements: N,
@@ -25894,35 +22295,20 @@ function pw(e) {
         t1(
             function () {
                 var t = n.current.mapErrorsToValidationRuleResult();
-                e.onChange({
-                    data: h,
-                    valid: c,
-                    errors: pC(pC({}, o), t),
-                    isValid: v,
-                    selectedBrandValue: R,
-                });
+                e.onChange({ data: h, valid: c, errors: pC(pC({}, o), t), isValid: v, selectedBrandValue: R });
             },
             [h, c, o, R],
         ),
         (0, el.h)(
             lH,
-            (0, er.A)(
-                {
-                    ref: n,
+            (0, er.A)({ ref: n }, pS(e), {
+                onChange: function (e) {
+                    f(pC(pC({}, h), e.data)), i(pC(pC({}, o), e.errors)), u(pC(pC({}, c), e.valid)), g(e.isSfpValid);
                 },
-                pS(e),
-                {
-                    onChange: function (e) {
-                        f(pC(pC({}, h), e.data)),
-                            i(pC(pC({}, o), e.errors)),
-                            u(pC(pC({}, c), e.valid)),
-                            g(e.isSfpValid);
-                    },
-                    render: function () {
-                        return null;
-                    },
+                render: function () {
+                    return null;
                 },
-            ),
+            }),
         )
     );
 }
@@ -25953,10 +22339,7 @@ function pw(e) {
         prefixName: "qiwiwallet.telephoneNumberPrefix",
         phoneName: "qiwiwallet.telephoneNumber",
     }),
-    (pw.defaultProps = {
-        onChange: function () {},
-        onError: function () {},
-    });
+    (pw.defaultProps = { onChange: function () {}, onError: function () {} });
 var pS = function (e) {
     return {
         allowedDOMAccess: e.allowedDOMAccess,
@@ -25989,7 +22372,6 @@ var pS = function (e) {
         resources: e.resources,
     };
 };
-
 function pN(e, t) {
     var n = c()(e);
     if (d()) {
@@ -26002,7 +22384,6 @@ function pN(e, t) {
     }
     return n;
 }
-
 function px(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -26042,7 +22423,6 @@ var pP = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -26061,9 +22441,7 @@ var pP = (function (e) {
                     return px(
                         px({}, e),
                         {},
-                        {
-                            type: "scheme" === e.type || "securedfields" === e.type ? "card" : e.type,
-                        },
+                        { type: "scheme" === e.type || "securedfields" === e.type ? "card" : e.type },
                     );
                 },
             },
@@ -26072,17 +22450,7 @@ var pP = (function (e) {
                 value: function () {
                     var e = this.state.selectedBrandValue || this.props.brand;
                     return {
-                        paymentMethod: px(
-                            px(
-                                {
-                                    type: r.type,
-                                },
-                                this.state.data,
-                            ),
-                            e && {
-                                brand: e,
-                            },
-                        ),
+                        paymentMethod: px(px({ type: r.type }, this.state.data), e && { brand: e }),
                         browserInfo: this.browserInfo,
                     };
                 },
@@ -26189,11 +22557,7 @@ var pP = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             pw,
                             (0, er.A)(
@@ -26220,7 +22584,6 @@ var pP = (function (e) {
         r
     );
 })();
-
 function pR(e, t) {
     var n = c()(e);
     if (d()) {
@@ -26235,10 +22598,7 @@ function pR(e, t) {
 }
 (0, w.A)(pP, "type", "scheme"),
     (0, w.A)(pP, "analyticsType", "custom-scheme"),
-    (0, w.A)(pP, "defaultProps", {
-        onBinLookup: function () {},
-        brandsConfiguration: {},
-    });
+    (0, w.A)(pP, "defaultProps", { onBinLookup: function () {}, brandsConfiguration: {} });
 var pF = (function (e) {
     (0, eo.A)(r, n_);
     var t,
@@ -26261,7 +22621,6 @@ var pF = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -26286,12 +22645,7 @@ var pF = (function (e) {
                                     });
                         }
                         return e;
-                    })(
-                        {
-                            holderName: !0,
-                        },
-                        e,
-                    );
+                    })({ holderName: !0 }, e);
                 },
             },
             {
@@ -26318,11 +22672,7 @@ var pF = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.showFormInstruction && (0, el.h)(o4, null),
                         (0, el.h)(
                             oK,
@@ -26333,11 +22683,7 @@ var pF = (function (e) {
                                     },
                                 },
                                 this.props,
-                                {
-                                    onChange: this.setState,
-                                    onSubmit: this.submit,
-                                    payButton: this.payButton,
-                                },
+                                { onChange: this.setState, onSubmit: this.submit, payButton: this.payButton },
                             ),
                         ),
                     );
@@ -26347,10 +22693,7 @@ var pF = (function (e) {
         r
     );
 })();
-(0, w.A)(pF, "type", "sepadirectdebit"),
-    (0, w.A)(pF, "defaultProps", {
-        showFormInstruction: !0,
-    });
+(0, w.A)(pF, "type", "sepadirectdebit"), (0, w.A)(pF, "defaultProps", { showFormInstruction: !0 });
 var pO = (function (e) {
         (0, eo.A)(r, el.uA);
         var t,
@@ -26373,7 +22716,6 @@ var pO = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -26411,14 +22753,9 @@ var pO = (function (e) {
                                 name: n,
                                 action: r,
                                 target: a,
-                                style: {
-                                    display: "none",
-                                },
+                                style: { display: "none" },
                             },
-                            (0, el.h)("input", {
-                                name: o,
-                                value: i,
-                            }),
+                            (0, el.h)("input", { name: o, value: i }),
                         );
                     },
                 },
@@ -26426,20 +22763,8 @@ var pO = (function (e) {
             r
         );
     })(),
-    pE = {
-        result: {
-            transStatus: "U",
-        },
-        type: "challengeResult",
-        errorCode: "timeout",
-    },
-    pI = {
-        result: {
-            threeDSCompInd: "N",
-        },
-        type: "fingerPrintResult",
-        errorCode: "timeout",
-    },
+    pE = { result: { transStatus: "U" }, type: "challengeResult", errorCode: "timeout" },
+    pI = { result: { threeDSCompInd: "N" }, type: "fingerPrintResult", errorCode: "timeout" },
     pM = {
         timeout: "ThreeDS2 timed out",
         wrongOrigin: "Result came in the right format but not from the expected origin",
@@ -26475,23 +22800,11 @@ var pO = (function (e) {
         var r;
         return {
             data:
-                ((r = {}),
-                (0, w.A)(
-                    r,
-                    e,
-                    pD({
-                        threeDSCompInd: t.threeDSCompInd,
-                    }),
-                ),
-                (0, w.A)(r, "paymentData", n),
-                r),
+                ((r = {}), (0, w.A)(r, e, pD({ threeDSCompInd: t.threeDSCompInd })), (0, w.A)(r, "paymentData", n), r),
         };
     },
     pj = function (e, t) {
-        return {
-            errorCode: e,
-            message: pM[e] || t || pM.unknownError,
-        };
+        return { errorCode: e, message: pM[e] || t || pM.unknownError };
     },
     pU = function (e) {
         var t = window.btoa(e).split("=")[0];
@@ -26522,16 +22835,13 @@ var pO = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             (0, k.A)(this, r),
                 (t = n.call(this, e)),
                 (0, w.A)((0, ea.A)(t), "processMessageHandler", void 0),
                 (0, w.A)((0, ea.A)(t), "challengePromise", void 0),
                 (0, w.A)((0, ea.A)(t), "iframeCallback", function () {
-                    t.setState({
-                        status: "iframeLoaded",
-                    }),
+                    t.setState({ status: "iframeLoaded" }),
                         t.props.onActionHandled({
                             componentType: "3DS2Challenge",
                             actionDescription: "challenge-iframe-loaded",
@@ -26539,12 +22849,7 @@ var pO = (function (e) {
                 });
             var t,
                 a = pU(j()(t.props.cReqData));
-            return (
-                (t.state = {
-                    base64URLencodedData: a,
-                }),
-                t
-            );
+            return (t.state = { base64URLencodedData: a }), t;
         }
         return (
             (0, C.A)(r, [
@@ -26601,12 +22906,7 @@ var pO = (function (e) {
                                 ]),
                             },
                             "iframeLoaded" !== i && (0, el.h)(tK, null),
-                            (0, el.h)(nk, {
-                                name: pH,
-                                width: l,
-                                height: c,
-                                callback: this.iframeCallback,
-                            }),
+                            (0, el.h)(nk, { name: pH, width: l, height: c, callback: this.iframeCallback }),
                             (0, el.h)(pO, {
                                 name: "cReqForm",
                                 action: n,
@@ -26643,7 +22943,6 @@ var pO = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t;
             if (((0, k.A)(this, r), (t = n.call(this, e)).props.token)) {
@@ -26658,10 +22957,7 @@ var pO = (function (e) {
                     p,
                     h,
                     f =
-                        ((o = (a = {
-                            token: t.props.token,
-                            size: t.props.challengeWindowSize || t.props.size,
-                        }).token),
+                        ((o = (a = { token: t.props.token, size: t.props.challengeWindowSize || t.props.size }).token),
                         (i = a.size),
                         (l = (s = pB(o)).acsTransID),
                         (c = s.acsURL),
@@ -26694,15 +22990,8 @@ var pO = (function (e) {
                         }),
                         (0, ei.A)(t)
                     );
-                t.state = {
-                    status: "retrievingChallengeToken",
-                    challengeData: f,
-                    errorInfo: null,
-                };
-            } else
-                t.setStatusError({
-                    errorInfo: "Missing challengeToken parameter",
-                });
+                t.state = { status: "retrievingChallengeToken", challengeData: f, errorInfo: null };
+            } else t.setStatusError({ errorInfo: "Missing challengeToken parameter" });
             return t;
         }
         return (
@@ -26711,53 +23000,37 @@ var pO = (function (e) {
                     key: "setStatusComplete",
                     value: function (e) {
                         var t = this;
-                        this.setState(
-                            {
-                                status: "complete",
-                            },
-                            function () {
-                                var n = (
-                                    t.props.useOriginalFlow
-                                        ? function (e, t, n) {
-                                              return {
-                                                  data: {
-                                                      details: {
-                                                          "threeds2.challengeResult": pD({
-                                                              transStatus: t,
-                                                          }),
-                                                      },
-                                                      paymentData: n,
-                                                  },
-                                              };
-                                          }
-                                        : function (e, t, n) {
-                                              return {
-                                                  data: {
-                                                      details: (0, w.A)(
-                                                          {},
-                                                          e,
-                                                          pD({
-                                                              transStatus: t,
-                                                              authorisationToken: n,
-                                                          }),
-                                                      ),
-                                                  },
-                                              };
-                                          }
-                                )(t.props.dataKey, e.transStatus, t.props.paymentData);
-                                t.props.onComplete(n);
-                            },
-                        );
+                        this.setState({ status: "complete" }, function () {
+                            var n = (
+                                t.props.useOriginalFlow
+                                    ? function (e, t, n) {
+                                          return {
+                                              data: {
+                                                  details: { "threeds2.challengeResult": pD({ transStatus: t }) },
+                                                  paymentData: n,
+                                              },
+                                          };
+                                      }
+                                    : function (e, t, n) {
+                                          return {
+                                              data: {
+                                                  details: (0, w.A)(
+                                                      {},
+                                                      e,
+                                                      pD({ transStatus: t, authorisationToken: n }),
+                                                  ),
+                                              },
+                                          };
+                                      }
+                            )(t.props.dataKey, e.transStatus, t.props.paymentData);
+                            t.props.onComplete(n);
+                        });
                     },
                 },
                 {
                     key: "setStatusError",
                     value: function (e) {
-                        this.setState({
-                            status: "error",
-                            errorInfo: e.errorInfo,
-                        }),
-                            this.props.onError(e);
+                        this.setState({ status: "error", errorInfo: e.errorInfo }), this.props.onError(e);
                     },
                 },
                 {
@@ -26787,29 +23060,21 @@ var pO = (function (e) {
                                           },
                                       },
                                       a,
-                                      {
-                                          onActionHandled: r,
-                                      },
+                                      { onActionHandled: r },
                                   ),
                               )
                             : "error" === this.state.status
                               ? (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__threeds2-challenge-error",
-                                    },
+                                    { className: "adyen-checkout__threeds2-challenge-error" },
                                     (0, el.h)(a5, {
                                         className: "adyen-checkout__status__icon adyen-checkout__status__icon--error",
-                                        src: o({
-                                            imageFolder: "components/",
-                                        })("error"),
+                                        src: o({ imageFolder: "components/" })("error"),
                                         alt: "",
                                     }),
                                     (0, el.h)(
                                         "div",
-                                        {
-                                            className: "adyen-checkout__status__text",
-                                        },
+                                        { className: "adyen-checkout__status__text" },
                                         this.state.errorInfo
                                             ? this.state.errorInfo
                                             : this.props.i18n.get("error.message.unknown"),
@@ -26822,11 +23087,7 @@ var pO = (function (e) {
             r
         );
     })();
-(0, w.A)(pW, "defaultProps", {
-    onComplete: function () {},
-    onError: function () {},
-    onActionHandled: function () {},
-});
+(0, w.A)(pW, "defaultProps", { onComplete: function () {}, onError: function () {}, onActionHandled: function () {} });
 var pG = (function (e) {
     (0, eo.A)(r, n_);
     var t,
@@ -26849,7 +23110,6 @@ var pG = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -26874,12 +23134,7 @@ var pG = (function (e) {
                             null
                         );
                     }
-                    return (0, el.h)(
-                        pW,
-                        (0, er.A)({}, this.props, {
-                            onComplete: this.onComplete,
-                        }),
-                    );
+                    return (0, el.h)(pW, (0, er.A)({}, this.props, { onComplete: this.onComplete }));
                 },
             },
         ]),
@@ -26887,11 +23142,7 @@ var pG = (function (e) {
     );
 })();
 (0, w.A)(pG, "type", "threeDS2Challenge"),
-    (0, w.A)(pG, "defaultProps", {
-        dataKey: "threeDSResult",
-        size: "02",
-        type: "ChallengeShopper",
-    });
+    (0, w.A)(pG, "defaultProps", { dataKey: "threeDSResult", size: "02", type: "ChallengeShopper" });
 var p$ = "threeDSMethodIframe",
     pY = (function (e) {
         (0, eo.A)(r, el.uA);
@@ -26915,7 +23166,6 @@ var p$ = "threeDSMethodIframe",
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             (0, k.A)(this, r),
                 (t = n.call(this, e)),
@@ -26927,12 +23177,7 @@ var p$ = "threeDSMethodIframe",
                 i = a.threeDSMethodNotificationURL;
             return (
                 (t.state = {
-                    base64URLencodedData: pU(
-                        j()({
-                            threeDSServerTransID: o,
-                            threeDSMethodNotificationURL: i,
-                        }),
-                    ),
+                    base64URLencodedData: pU(j()({ threeDSServerTransID: o, threeDSMethodNotificationURL: i })),
                 }),
                 t
             );
@@ -26980,17 +23225,11 @@ var p$ = "threeDSMethodIframe",
                             a = t.base64URLencodedData;
                         return (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout__3ds2-device-fingerprint",
-                            },
+                            { className: "adyen-checkout__3ds2-device-fingerprint" },
                             this.props.showSpinner && (0, el.h)(tK, null),
                             (0, el.h)(
                                 "div",
-                                {
-                                    style: {
-                                        display: "none",
-                                    },
-                                },
+                                { style: { display: "none" } },
                                 (0, el.h)(nk, {
                                     name: p$,
                                     callback: function () {
@@ -27015,9 +23254,7 @@ var p$ = "threeDSMethodIframe",
             r
         );
     })();
-(0, w.A)(pY, "defaultProps", {
-    showSpinner: !0,
-});
+(0, w.A)(pY, "defaultProps", { showSpinner: !0 });
 var pQ = (function (e) {
     (0, eo.A)(r, el.uA);
     var t,
@@ -27040,7 +23277,6 @@ var pQ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         (0, k.A)(this, r);
         var t,
@@ -27059,10 +23295,7 @@ var pQ = (function (e) {
                 ? (u.state = {
                       status: "init",
                       fingerPrintData:
-                          ((a = (t = {
-                              token: p,
-                              notificationURL: h,
-                          }).token),
+                          ((a = (t = { token: p, notificationURL: h }).token),
                           (o = t.notificationURL),
                           (s = (i = pB(a)).threeDSMethodNotificationURL),
                           (l = i.threeDSMethodUrl),
@@ -27074,13 +23307,8 @@ var pQ = (function (e) {
                               postMessageDomain: nP(c),
                           }),
                   })
-                : ((u.state = {
-                      status: "error",
-                  }),
-                  u.props.onError({
-                      errorCode: u.props.dataKey,
-                      message: "Missing fingerprintToken parameter",
-                  })),
+                : ((u.state = { status: "error" }),
+                  u.props.onError({ errorCode: u.props.dataKey, message: "Missing fingerprintToken parameter" })),
             u
         );
     }
@@ -27090,12 +23318,8 @@ var pQ = (function (e) {
                 key: "componentDidMount",
                 value: function () {
                     this.state.fingerPrintData && this.state.fingerPrintData.threeDSMethodURL
-                        ? this.setState({
-                              status: "retrievingFingerPrint",
-                          })
-                        : (this.setStatusComplete({
-                              threeDSCompInd: "U",
-                          }),
+                        ? this.setState({ status: "retrievingFingerPrint" })
+                        : (this.setStatusComplete({ threeDSCompInd: "U" }),
                           console.debug(
                               "### PrepareFingerprint3DS2::exiting:: no fingerPrintData or no threeDSMethodURL",
                           ));
@@ -27105,28 +23329,16 @@ var pQ = (function (e) {
                 key: "setStatusComplete",
                 value: function (e) {
                     var t = this;
-                    this.setState(
-                        {
-                            status: "complete",
-                        },
-                        function () {
-                            var n = (
-                                t.props.useOriginalFlow
-                                    ? function (e, t, n) {
-                                          return {
-                                              data: {
-                                                  details: {
-                                                      "threeds2.fingerprint": pD(t),
-                                                  },
-                                                  paymentData: n,
-                                              },
-                                          };
-                                      }
-                                    : pV
-                            )(t.props.dataKey, e, t.props.paymentData);
-                            t.props.onComplete(n);
-                        },
-                    );
+                    this.setState({ status: "complete" }, function () {
+                        var n = (
+                            t.props.useOriginalFlow
+                                ? function (e, t, n) {
+                                      return { data: { details: { "threeds2.fingerprint": pD(t) }, paymentData: n } };
+                                  }
+                                : pV
+                        )(t.props.dataKey, e, t.props.paymentData);
+                        t.props.onComplete(n);
+                    });
                 },
             },
             {
@@ -27154,9 +23366,7 @@ var pQ = (function (e) {
                                       showSpinner: r,
                                   },
                                   o,
-                                  {
-                                      onActionHandled: a,
-                                  },
+                                  { onActionHandled: a },
                               ),
                           )
                         : null;
@@ -27166,7 +23376,6 @@ var pQ = (function (e) {
         r
     );
 })();
-
 function pZ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -27179,7 +23388,6 @@ function pZ(e, t) {
     }
     return n;
 }
-
 function pJ(e) {
     var t = this,
         n = e.data;
@@ -27216,11 +23424,7 @@ function pJ(e) {
                 if (e.action || e.details) {
                     if ("completed" === e.type) {
                         var i = e.details;
-                        return t.onComplete({
-                            data: {
-                                details: i,
-                            },
-                        });
+                        return t.onComplete({ data: { details: i } });
                     }
                     return "threeDS2" === (null == (r = e.action) ? void 0 : r.type)
                         ? o.handleAction(e.action, sG("challengeWindowSize").from(t.props))
@@ -27265,7 +23469,6 @@ var pX = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -27308,10 +23511,7 @@ var pX = (function (e) {
     );
 })();
 (0, w.A)(pX, "type", "threeDS2Fingerprint"),
-    (0, w.A)(pX, "defaultProps", {
-        dataKey: "fingerprintResult",
-        type: "IdentifyShopper",
-    });
+    (0, w.A)(pX, "defaultProps", { dataKey: "fingerprintResult", type: "IdentifyShopper" });
 var p0 = function (e) {
         var t,
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
@@ -27347,11 +23547,7 @@ var p0 = function (e) {
                 (0, w.A)(this, "timeLeft", void 0);
             var n = t.srPanel,
                 r = t.i18n;
-            (this.srPanel = n),
-                (this.i18n = r),
-                this.srPanel.setAriaProps({
-                    "aria-relevant": "additions text",
-                });
+            (this.srPanel = n), (this.i18n = r), this.srPanel.setAriaProps({ "aria-relevant": "additions text" });
         }
         return (
             (0, C.A)(e, [
@@ -27363,10 +23559,7 @@ var p0 = function (e) {
                         if ("-" !== t && "-" !== n) {
                             var r = "string" == typeof t ? ee()(t, 10) : t,
                                 a = "string" == typeof n ? ee()(n, 10) : n;
-                            (this.timeLeft = {
-                                minutes: r,
-                                seconds: a,
-                            }),
+                            (this.timeLeft = { minutes: r, seconds: a }),
                                 r > 5 &&
                                     this.timeout !== this.LONG_TIMEOUT &&
                                     ((this.timeout = this.LONG_TIMEOUT), this.setInterval(this.timeout)),
@@ -27461,10 +23654,7 @@ var p0 = function (e) {
             r = t4(null);
         t1(function () {
             return (
-                (r.current = new p2({
-                    i18n: t,
-                    srPanel: n,
-                })),
+                (r.current = new p2({ i18n: t, srPanel: n })),
                 function () {
                     r.current.tearDown();
                 }
@@ -27484,12 +23674,8 @@ var p0 = function (e) {
     },
     p8 = function (e) {
         var t = new Date().getTime();
-        return {
-            startTime: new Date(t),
-            endTime: new Date(t + 6e4 * e),
-        };
+        return { startTime: new Date(t), endTime: new Date(t + 6e4 * e) };
     };
-
 function p3(e) {
     var t = e.minutesFromNow,
         n = e.onTick,
@@ -27499,10 +23685,7 @@ function p3(e) {
         i = t4(p8(t)).current,
         s = i.startTime,
         l = i.endTime,
-        c = tX({
-            minutes: "-",
-            seconds: "-",
-        }),
+        c = tX({ minutes: "-", seconds: "-" }),
         u = (0, K.A)(c, 2),
         d = u[0],
         p = u[1];
@@ -27516,11 +23699,7 @@ function p3(e) {
                     a = e.percentage;
                 if (e.completed) o();
                 else {
-                    var i = {
-                        minutes: t,
-                        seconds: n,
-                        percentage: a,
-                    };
+                    var i = { minutes: t, seconds: n, percentage: a };
                     p(i), r(i);
                 }
             }, 1e3);
@@ -27530,48 +23709,20 @@ function p3(e) {
         }, []),
         (0, el.h)(
             "span",
-            {
-                className: "adyen-checkout__countdown",
-                role: "timer",
-            },
-            (0, el.h)(
-                "span",
-                {
-                    className: "countdown__minutes",
-                },
-                d.minutes,
-            ),
-            (0, el.h)(
-                "span",
-                {
-                    className: "countdown__separator",
-                },
-                ":",
-            ),
-            (0, el.h)(
-                "span",
-                {
-                    className: "countdown__seconds",
-                },
-                d.seconds,
-            ),
+            { className: "adyen-checkout__countdown", role: "timer" },
+            (0, el.h)("span", { className: "countdown__minutes" }, d.minutes),
+            (0, el.h)("span", { className: "countdown__separator" }, ":"),
+            (0, el.h)("span", { className: "countdown__seconds" }, d.seconds),
         )
     );
 }
-
 function p6(e, t, n) {
     if (!e || !t) throw Error("Could not check the payment status");
     return a3(
-        {
-            loadingContext: n,
-            path: "services/PaymentInitiation/v1/status?clientKey=".concat(t),
-        },
-        {
-            paymentData: e,
-        },
+        { loadingContext: n, path: "services/PaymentInitiation/v1/status?clientKey=".concat(t) },
+        { paymentData: e },
     );
 }
-
 function p5(e, t) {
     var n = c()(e);
     if (d()) {
@@ -27584,7 +23735,6 @@ function p5(e, t) {
     }
     return n;
 }
-
 function p9(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -27607,74 +23757,36 @@ var p7 = function (e) {
             case "refused":
             case "error":
             case "cancelled":
-                return {
-                    type: "error",
-                    props: p9(
-                        p9({}, e),
-                        {},
-                        {
-                            message: "error.subtitle.refused",
-                        },
-                    ),
-                };
+                return { type: "error", props: p9(p9({}, e), {}, { message: "error.subtitle.refused" }) };
             case "unknown":
-                return {
-                    type: "error",
-                    props: p9(
-                        p9({}, e),
-                        {},
-                        {
-                            message: "error.message.unknown",
-                        },
-                    ),
-                };
+                return { type: "error", props: p9(p9({}, e), {}, { message: "error.message.unknown" }) };
             case "pending":
             case "received":
-                return {
-                    type: e.resultCode.toLowerCase(),
-                    props: e,
-                };
+                return { type: e.resultCode.toLowerCase(), props: e };
             default:
-                return {
-                    type: "success",
-                    props: e,
-                };
+                return { type: "success", props: e };
         }
     },
     he = function (e) {
         if (!e.type && e.resultCode) return p7(e);
-        if (!e.type)
-            return {
-                type: "error",
-                props: e,
-            };
+        if (!e.type) return { type: "error", props: e };
         switch (e.type.toLowerCase()) {
             case "pending":
-                return {
-                    type: "pending",
-                    props: e,
-                };
+                return { type: "pending", props: e };
             case "complete":
                 return p7(e);
             default:
-                return {
-                    type: "error",
-                    props: e,
-                };
+                return { type: "error", props: e };
         }
     },
     ht = function (e) {
         var t = t6(o$).srPanel;
         t1(function () {
             return (
-                t.setAriaProps({
-                    "aria-relevant": "additions text",
-                }),
+                t.setAriaProps({ "aria-relevant": "additions text" }),
                 function () {
                     t.setMessages(null),
-                        t.setAriaProps({
-                            "aria-relevant": t.constructor.defaultProps.ariaAttributes["aria-relevant"],
-                        });
+                        t.setAriaProps({ "aria-relevant": t.constructor.defaultProps.ariaAttributes["aria-relevant"] });
                 }
             );
         }, []),
@@ -27707,7 +23819,6 @@ var p7 = function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t;
             return (
@@ -27716,62 +23827,28 @@ var p7 = function (e) {
                 (0, w.A)((0, ea.A)(t), "interval", void 0),
                 (0, w.A)((0, ea.A)(t), "statusInterval", function () {
                     t.checkStatus(),
-                        t.setState({
-                            timePassed: t.state.timePassed + t.props.delay,
-                        }),
-                        t.state.timePassed >= t.props.throttleTime &&
-                            t.setState({
-                                delay: t.props.throttledInterval,
-                            });
+                        t.setState({ timePassed: t.state.timePassed + t.props.delay }),
+                        t.state.timePassed >= t.props.throttleTime && t.setState({ delay: t.props.throttledInterval });
                 }),
                 (0, w.A)((0, ea.A)(t), "redirectToApp", function (e) {
                     window.location.assign(e);
                 }),
                 (0, w.A)((0, ea.A)(t), "onTick", function (e) {
-                    t.setState({
-                        percentage: e.percentage,
-                    });
+                    t.setState({ percentage: e.percentage });
                 }),
                 (0, w.A)((0, ea.A)(t), "onTimeUp", function () {
-                    t.setState({
-                        expired: !0,
-                    }),
+                    t.setState({ expired: !0 }),
                         clearInterval(t.interval),
                         t.props.onError(new nv("ERROR", "Payment Expired"));
                 }),
                 (0, w.A)((0, ea.A)(t), "onComplete", function (e) {
-                    clearInterval(t.interval),
-                        t.setState({
-                            completed: !0,
-                            loading: !1,
-                        });
-                    var n = {
-                        data: {
-                            details: {
-                                payload: e.props.payload,
-                            },
-                            paymentData: t.props.paymentData,
-                        },
-                    };
+                    clearInterval(t.interval), t.setState({ completed: !0, loading: !1 });
+                    var n = { data: { details: { payload: e.props.payload }, paymentData: t.props.paymentData } };
                     t.props.onComplete(n, (0, ea.A)(t));
                 }),
                 (0, w.A)((0, ea.A)(t), "onError", function (e) {
-                    if (
-                        (clearInterval(t.interval),
-                        t.setState({
-                            expired: !0,
-                            loading: !1,
-                        }),
-                        e.props.payload)
-                    ) {
-                        var n = {
-                            data: {
-                                details: {
-                                    payload: e.props.payload,
-                                },
-                                paymentData: t.props.paymentData,
-                            },
-                        };
+                    if ((clearInterval(t.interval), t.setState({ expired: !0, loading: !1 }), e.props.payload)) {
+                        var n = { data: { details: { payload: e.props.payload }, paymentData: t.props.paymentData } };
                         t.props.onComplete(n, (0, ea.A)(t));
                     }
                     var r = new nv("ERROR", "error result with no payload in response");
@@ -27782,10 +23859,7 @@ var p7 = function (e) {
                     return p6(e.paymentData, e.clientKey, e.loadingContext)
                         .then(he)
                         .catch(function (e) {
-                            return {
-                                type: "network-error",
-                                props: e,
-                            };
+                            return { type: "network-error", props: e };
                         })
                         .then(function (e) {
                             switch (e.type) {
@@ -27796,9 +23870,7 @@ var p7 = function (e) {
                                     t.onError(e);
                                     break;
                                 default:
-                                    t.setState({
-                                        loading: !1,
-                                    });
+                                    t.setState({ loading: !1 });
                             }
                             return e;
                         });
@@ -27873,15 +23945,11 @@ var p7 = function (e) {
                                     ht(n),
                                     (0, el.h)(
                                         "div",
-                                        {
-                                            className: "adyen-checkout__qr-loader adyen-checkout__qr-loader--result",
-                                        },
+                                        { className: "adyen-checkout__qr-loader adyen-checkout__qr-loader--result" },
                                         (0, el.h)("img", {
                                             className:
                                                 "adyen-checkout__qr-loader__icon adyen-checkout__qr-loader__icon--result",
-                                            src: A({
-                                                imageFolder: "components/",
-                                            })(e),
+                                            src: A({ imageFolder: "components/" })(e),
                                             alt: n,
                                         }),
                                         (0, el.h)(
@@ -27900,9 +23968,7 @@ var p7 = function (e) {
                         if (y)
                             return (0, el.h)(
                                 "div",
-                                {
-                                    className: "adyen-checkout__qr-loader",
-                                },
+                                { className: "adyen-checkout__qr-loader" },
                                 c &&
                                     (0, el.h)("img", {
                                         alt: u,
@@ -27945,21 +24011,14 @@ var p7 = function (e) {
                                 }),
                             (0, el.h)(
                                 "div",
-                                {
-                                    ref: S,
-                                    tabIndex: 0,
-                                    className: "adyen-checkout__qr-loader__subtitle",
-                                },
+                                { ref: S, tabIndex: 0, className: "adyen-checkout__qr-loader__subtitle" },
                                 g.get(this.props.introduction),
                             ),
                             (0, el.h)("img", {
                                 src: _,
                                 alt: g.get("wechatpay.scanqrcode"),
                                 onLoad: function () {
-                                    h({
-                                        componentType: i.props.type,
-                                        actionDescription: "qr-code-loaded",
-                                    });
+                                    h({ componentType: i.props.type, actionDescription: "qr-code-loaded" });
                                 },
                             }),
                             s &&
@@ -27967,52 +24026,36 @@ var p7 = function (e) {
                                 s.currency &&
                                 (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__qr-loader__payment_amount",
-                                    },
+                                    { className: "adyen-checkout__qr-loader__payment_amount" },
                                     g.amount(s.value, s.currency),
                                 ),
                             (0, el.h)(
                                 "div",
-                                {
-                                    className: "adyen-checkout__qr-loader__progress",
-                                },
+                                { className: "adyen-checkout__qr-loader__progress" },
                                 (0, el.h)("span", {
                                     className: "adyen-checkout__qr-loader__percentage",
-                                    style: {
-                                        width: "".concat(this.state.percentage, "%"),
-                                    },
+                                    style: { width: "".concat(this.state.percentage, "%") },
                                 }),
                             ),
                             (0, el.h)(
                                 "div",
-                                {
-                                    className: "adyen-checkout__qr-loader__countdown",
-                                },
+                                { className: "adyen-checkout__qr-loader__countdown" },
                                 w[0],
                                 "\xa0",
-                                (0, el.h)(p3, {
-                                    minutesFromNow: d,
-                                    onTick: this.onTick,
-                                    onCompleted: this.onTimeUp,
-                                }),
+                                (0, el.h)(p3, { minutesFromNow: d, onTick: this.onTick, onCompleted: this.onTimeUp }),
                                 "\xa0",
                                 w[1],
                             ),
                             this.props.instructions &&
                                 (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__qr-loader__instructions",
-                                    },
+                                    { className: "adyen-checkout__qr-loader__instructions" },
                                     g.get(this.props.instructions),
                                 ),
                             this.props.copyBtn &&
                                 (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__qr-loader__actions",
-                                    },
+                                    { className: "adyen-checkout__qr-loader__actions" },
                                     (0, el.h)(nu, {
                                         inline: !0,
                                         variant: "action",
@@ -28020,18 +24063,14 @@ var p7 = function (e) {
                                             var n = t.complete;
                                             dP(i.props.qrCodeData), n();
                                         },
-                                        icon: A({
-                                            imageFolder: "components/",
-                                        })("copy"),
+                                        icon: A({ imageFolder: "components/" })("copy"),
                                         label: g.get("button.copy"),
                                     }),
                                 ),
                             l &&
                                 (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__qr-loader__app-link",
-                                    },
+                                    { className: "adyen-checkout__qr-loader__app-link" },
                                     (0, el.h)(i3, null),
                                     (0, el.h)(nu, {
                                         classNameModifiers: ["qr-loader"],
@@ -28048,7 +24087,6 @@ var p7 = function (e) {
             r
         );
     })();
-
 function hr(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28093,7 +24131,6 @@ var ha = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28119,12 +24156,7 @@ var ha = (function (e) {
                                         });
                             }
                             return e;
-                        })(
-                            {
-                                type: this.props.type || this.constructor.type,
-                            },
-                            this.state.data,
-                        ),
+                        })({ type: this.props.type || this.constructor.type }, this.state.data),
                     };
                 },
             },
@@ -28140,16 +24172,10 @@ var ha = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             is,
-                            {
-                                srPanel: this.props.modules.srPanel,
-                            },
+                            { srPanel: this.props.modules.srPanel },
                             (0, el.h)(
                                 hn,
                                 (0, er.A)(
@@ -28205,7 +24231,6 @@ var ha = (function (e) {
         r
     );
 })();
-
 function ho(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28248,7 +24273,6 @@ var hi = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28274,10 +24298,7 @@ var hi = (function (e) {
                         }
                         return e;
                     })(
-                        {
-                            delay: 2e3,
-                            countdownTime: 15,
-                        },
+                        { delay: 2e3, countdownTime: 15 },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -28286,7 +24307,6 @@ var hi = (function (e) {
         r
     );
 })();
-
 function hs(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28322,7 +24342,6 @@ var hl = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28348,10 +24367,7 @@ var hl = (function (e) {
                         }
                         return e;
                     })(
-                        {
-                            delay: 2e3,
-                            countdownTime: 3,
-                        },
+                        { delay: 2e3, countdownTime: 3 },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -28360,7 +24376,6 @@ var hl = (function (e) {
         r
     );
 })();
-
 function hc(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28396,7 +24411,6 @@ var hu = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28462,7 +24476,6 @@ var hd = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28491,7 +24504,6 @@ var hp = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28520,13 +24532,11 @@ var hh = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
     return (0, C.A)(r);
 })();
-
 function hf(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28539,7 +24549,6 @@ function hf(e, t) {
     }
     return n;
 }
-
 function hm(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -28557,7 +24566,6 @@ function hm(e) {
     }
     return e;
 }
-
 function hy(e) {
     var t,
         n,
@@ -28587,13 +24595,7 @@ function hy(e) {
         p = i.isValid,
         h = si({}, e.type, a),
         f = J()((n = e.items)).call(n, function (e) {
-            return hm(
-                hm({}, e),
-                {},
-                {
-                    icon: h(e.id && e.id.toLowerCase()),
-                },
-            );
+            return hm(hm({}, e), {}, { icon: h(e.id && e.id.toLowerCase()) });
         }),
         m = function (e) {
             return "dragonpay_otc_non_banking" === e
@@ -28602,12 +24604,7 @@ function hy(e) {
         };
     t1(
         function () {
-            e.onChange({
-                isValid: p,
-                data: c,
-                valid: u,
-                errors: d,
-            });
+            e.onChange({ isValid: p, data: c, valid: u, errors: d });
         },
         [p, c, u, d],
     );
@@ -28620,16 +24617,10 @@ function hy(e) {
         (this.showValidation = l),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__dragonpay-input__field",
-            },
+            { className: "adyen-checkout__dragonpay-input__field" },
             (0, el.h)(
                 rA,
-                {
-                    label: r.get("shopperEmail"),
-                    errorMessage: !!d.shopperEmail,
-                    name: "dragonpay-shopperEmail",
-                },
+                { label: r.get("shopperEmail"), errorMessage: !!d.shopperEmail, name: "dragonpay-shopperEmail" },
                 (0, el.h)(r5, {
                     name: "dragonpay-shopperEmail",
                     autoCorrect: "off",
@@ -28643,11 +24634,7 @@ function hy(e) {
             o() &&
                 (0, el.h)(
                     rA,
-                    {
-                        label: r.get(m(e.type)),
-                        errorMessage: !!d.issuer,
-                        name: "issuer",
-                    },
+                    { label: r.get(m(e.type)), errorMessage: !!d.issuer, name: "issuer" },
                     (0, el.h)(oc, {
                         items: f,
                         selectedValue: c.issuer,
@@ -28657,15 +24644,10 @@ function hy(e) {
                         onChange: s("issuer"),
                     }),
                 ),
-            e.showPayButton &&
-                e.payButton({
-                    status: g,
-                    label: r.get("confirmPurchase"),
-                }),
+            e.showPayButton && e.payButton({ status: g, label: r.get("confirmPurchase") }),
         )
     );
 }
-
 function hv(e) {
     var t = e.reference,
         n = e.totalAmount,
@@ -28689,19 +24671,12 @@ function hv(e) {
         amount: n && u.amount(n.value, n.currency),
         surcharge: r && u.amount(r.value, r.currency),
         voucherDetails: [
-            {
-                label: u.get("voucher.expirationDate"),
-                value: u.date(a),
-            },
-            {
-                label: u.get("voucher.alternativeReference"),
-                value: o,
-            },
+            { label: u.get("voucher.expirationDate"), value: u.date(a) },
+            { label: u.get("voucher.alternativeReference"), value: o },
         ],
         copyBtn: !0,
     });
 }
-
 function hg(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28714,7 +24689,6 @@ function hg(e, t) {
     }
     return n;
 }
-
 function hb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -28732,12 +24706,7 @@ function hb(e) {
     }
     return e;
 }
-(0, w.A)(hh, "type", "molpay_ebanking_VN"),
-    (hy.defaultProps = {
-        data: {},
-        items: [],
-        onChange: function () {},
-    });
+(0, w.A)(hh, "type", "molpay_ebanking_VN"), (hy.defaultProps = { data: {}, items: [], onChange: function () {} });
 var hA = (function (e) {
     (0, eo.A)(r, n_);
     var t,
@@ -28760,7 +24729,6 @@ var hA = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -28779,27 +24747,9 @@ var hA = (function (e) {
                         t = e.issuer,
                         n = e.shopperEmail;
                     return hb(
-                        hb(
-                            {},
-                            n && {
-                                shopperEmail: n,
-                            },
-                        ),
+                        hb({}, n && { shopperEmail: n }),
                         {},
-                        {
-                            paymentMethod: hb(
-                                hb(
-                                    {},
-                                    t && {
-                                        issuer: t,
-                                    },
-                                ),
-                                {},
-                                {
-                                    type: this.props.type || r.type,
-                                },
-                            ),
-                        },
+                        { paymentMethod: hb(hb({}, t && { issuer: t }), {}, { type: this.props.type || r.type }) },
                     );
                 },
             },
@@ -28833,11 +24783,7 @@ var hA = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.reference
                             ? (0, el.h)(
                                   hv,
@@ -28861,11 +24807,7 @@ var hA = (function (e) {
                                           items: this.props.issuers,
                                       },
                                       this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                      },
+                                      { onChange: this.setState, onSubmit: this.submit, payButton: this.payButton },
                                   ),
                               ),
                     );
@@ -28875,7 +24817,6 @@ var hA = (function (e) {
         r
     );
 })();
-
 function h_(e) {
     var t,
         n = t4(null),
@@ -28894,9 +24835,7 @@ function h_(e) {
         (l.current.setStatus = s),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__doku-input__field",
-            },
+            { className: "adyen-checkout__doku-input__field" },
             e.showFormInstruction && (0, el.h)(o4, null),
             (0, el.h)(ai, {
                 data: e.data,
@@ -28907,11 +24846,7 @@ function h_(e) {
                     n.current = e;
                 },
             }),
-            e.showPayButton &&
-                e.payButton({
-                    status: i,
-                    label: r.get("confirmPurchase"),
-                }),
+            e.showPayButton && e.payButton({ status: i, label: r.get("confirmPurchase") }),
         )
     );
 }
@@ -28934,23 +24869,13 @@ var hk = function (e) {
         instructionsUrl: r,
         amount: i && l.amount(i.value, i.currency),
         voucherDetails: [
-            {
-                label: l.get("voucher.expirationDate"),
-                value: l.date(n),
-            },
-            {
-                label: l.get("voucher.shopperName"),
-                value: a,
-            },
-            {
-                label: l.get("voucher.merchantName"),
-                value: o,
-            },
+            { label: l.get("voucher.expirationDate"), value: l.date(n) },
+            { label: l.get("voucher.shopperName"), value: a },
+            { label: l.get("voucher.merchantName"), value: o },
         ],
         copyBtn: !0,
     });
 };
-
 function hC(e, t) {
     var n = c()(e);
     if (d()) {
@@ -28963,7 +24888,6 @@ function hC(e, t) {
     }
     return n;
 }
-
 function hw(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -29003,7 +24927,6 @@ var hS = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -29018,15 +24941,7 @@ var hS = (function (e) {
             {
                 key: "formatData",
                 value: function () {
-                    return hw(
-                        hw({}, this.state.data),
-                        {},
-                        {
-                            paymentMethod: {
-                                type: this.props.type || r.type,
-                            },
-                        },
-                    );
+                    return hw(hw({}, this.state.data), {}, { paymentMethod: { type: this.props.type || r.type } });
                 },
             },
             {
@@ -29041,11 +24956,7 @@ var hS = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.reference
                             ? (0, el.h)(
                                   hk,
@@ -29060,17 +24971,11 @@ var hS = (function (e) {
                               )
                             : (0, el.h)(
                                   h_,
-                                  (0, er.A)(
-                                      {
-                                          setComponentRef: this.setComponentRef,
-                                      },
-                                      this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                      },
-                                  ),
+                                  (0, er.A)({ setComponentRef: this.setComponentRef }, this.props, {
+                                      onChange: this.setState,
+                                      onSubmit: this.submit,
+                                      payButton: this.payButton,
+                                  }),
                               ),
                     );
                 },
@@ -29079,16 +24984,9 @@ var hS = (function (e) {
         r
     );
 })();
-(0, w.A)(hS, "type", "doku"),
-    (0, w.A)(hS, "defaultProps", {
-        showFormInstruction: !0,
-    });
+(0, w.A)(hS, "type", "doku"), (0, w.A)(hS, "defaultProps", { showFormInstruction: !0 });
 var hN = {
-        socialSecurityNumber: {
-            validate: lQ,
-            errorMessage: "error.va.gen.02",
-            modes: ["blur"],
-        },
+        socialSecurityNumber: { validate: lQ, errorMessage: "error.va.gen.02", modes: ["blur"] },
         shopperEmail: r1.shopperEmail,
         default: {
             validate: function (e) {
@@ -29117,7 +25015,6 @@ var hN = {
             return lY(e);
         },
     };
-
 function hP(e) {
     var t = e.errors,
         n = e.value,
@@ -29130,9 +25027,7 @@ function hP(e) {
         c = s[1];
     return (0, el.h)(
         "div",
-        {
-            className: ep()("adyen-checkout__fieldset", "adyen-checkout__fieldset--sendCopyToEmail", e.classNames),
-        },
+        { className: ep()("adyen-checkout__fieldset", "adyen-checkout__fieldset--sendCopyToEmail", e.classNames) },
         (0, el.h)(
             rA,
             {
@@ -29169,7 +25064,6 @@ function hP(e) {
             ),
     );
 }
-
 function hR(e) {
     var t = e.i18n,
         n = e.data,
@@ -29185,18 +25079,10 @@ function hR(e) {
             className:
                 "adyen-checkout__fieldset adyen-checkout__fieldset--address adyen-checkout__fieldset--personalDetails",
         },
+        (0, el.h)("div", { className: "adyen-checkout__fieldset__title" }, t.get("personalDetails")),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__fieldset__title",
-            },
-            t.get("personalDetails"),
-        ),
-        (0, el.h)(
-            "div",
-            {
-                className: "adyen-checkout__fieldset__fields",
-            },
+            { className: "adyen-checkout__fieldset__fields" },
             (0, el.h)(
                 rA,
                 {
@@ -29241,7 +25127,6 @@ function hR(e) {
         ),
     );
 }
-
 function hF(e, t) {
     var n = c()(e);
     if (d()) {
@@ -29254,7 +25139,6 @@ function hF(e, t) {
     }
     return n;
 }
-
 function hO(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -29272,7 +25156,6 @@ function hO(e) {
     }
     return e;
 }
-
 function hE(e) {
     var t = nc().i18n,
         n = t4(null),
@@ -29324,12 +25207,7 @@ function hE(e) {
         t1(
             function () {
                 var t = !e.billingAddressRequired || !!p.billingAddress;
-                e.onChange({
-                    data: d,
-                    valid: p,
-                    errors: h,
-                    isValid: f && t,
-                });
+                e.onChange({ data: d, valid: p, errors: h, isValid: f && t });
             },
             [d, p, h],
         );
@@ -29337,29 +25215,14 @@ function hE(e) {
         N = e.showFormInstruction && (e.personalDetailsRequired || e.billingAddressRequired);
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__boleto-input__field",
-        },
+        { className: "adyen-checkout__boleto-input__field" },
         N && (0, el.h)(o4, null),
-        e.personalDetailsRequired &&
-            (0, el.h)(hR, {
-                i18n: t,
-                data: d,
-                handleChangeFor: a,
-                errors: h,
-                valid: p,
-            }),
+        e.personalDetailsRequired && (0, el.h)(hR, { i18n: t, data: d, handleChangeFor: a, errors: h, valid: p }),
         e.billingAddressRequired &&
             (0, el.h)(oA, {
                 allowedCountries: ["BR"],
                 label: "billingAddress",
-                data: hO(
-                    hO({}, e.data.billingAddress),
-                    {},
-                    {
-                        country: "BR",
-                    },
-                ),
+                data: hO(hO({}, e.data.billingAddress), {}, { country: "BR" }),
                 onChange: function (e) {
                     s("billingAddress", e.data), l("billingAddress", e.isValid), u("billingAddress", e.errors);
                 },
@@ -29378,12 +25241,7 @@ function hE(e) {
                 onInput: a("shopperEmail", "input"),
                 onBlur: a("shopperEmail", "blur"),
             }),
-        e.showPayButton &&
-            e.payButton({
-                status: k,
-                label: t.get("boletobancario.btnLabel"),
-                classNameModifiers: S,
-            }),
+        e.showPayButton && e.payButton({ status: k, label: t.get("boletobancario.btnLabel"), classNameModifiers: S }),
     );
 }
 hE.defaultProps = {
@@ -29413,17 +25271,11 @@ var hI = function (e) {
         introduction: r.get("voucher.introduction"),
         imageUrl: o()(c),
         amount: l && r.amount(l.value, l.currency),
-        voucherDetails: [
-            {
-                label: r.get("voucher.expirationDate"),
-                value: r.date(s),
-            },
-        ],
+        voucherDetails: [{ label: r.get("voucher.expirationDate"), value: r.date(s) }],
         downloadUrl: u,
         copyBtn: !0,
     });
 };
-
 function hM(e, t) {
     var n = c()(e);
     if (d()) {
@@ -29436,7 +25288,6 @@ function hM(e, t) {
     }
     return n;
 }
-
 function hT(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -29476,7 +25327,6 @@ var hB = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -29511,31 +25361,12 @@ var hB = (function (e) {
                     return hT(
                         hT(
                             hT(
-                                hT(
-                                    {
-                                        paymentMethod: {
-                                            type: this.props.type || r.type,
-                                        },
-                                    },
-                                    n && {
-                                        billingAddress: n,
-                                    },
-                                ),
-                                a && {
-                                    shopperEmail: a,
-                                },
+                                hT({ paymentMethod: { type: this.props.type || r.type } }, n && { billingAddress: n }),
+                                a && { shopperEmail: a },
                             ),
-                            o &&
-                                i && {
-                                    shopperName: {
-                                        firstName: o,
-                                        lastName: i,
-                                    },
-                                },
+                            o && i && { shopperName: { firstName: o, lastName: i } },
                         ),
-                        l && {
-                            socialSecurityNumber: l$(l),
-                        },
+                        l && { socialSecurityNumber: l$(l) },
                     );
                 },
             },
@@ -29544,35 +25375,16 @@ var hB = (function (e) {
                 value: function () {
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.reference
-                            ? (0, el.h)(
-                                  hI,
-                                  (0, er.A)(
-                                      {
-                                          ref: this.handleRef,
-                                          icon: this.icon,
-                                      },
-                                      this.props,
-                                  ),
-                              )
+                            ? (0, el.h)(hI, (0, er.A)({ ref: this.handleRef, icon: this.icon }, this.props))
                             : (0, el.h)(
                                   hE,
-                                  (0, er.A)(
-                                      {
-                                          setComponentRef: this.handleRef,
-                                      },
-                                      this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                      },
-                                  ),
+                                  (0, er.A)({ setComponentRef: this.handleRef }, this.props, {
+                                      onChange: this.setState,
+                                      onSubmit: this.submit,
+                                      payButton: this.payButton,
+                                  }),
                               ),
                     );
                 },
@@ -29599,36 +25411,9 @@ var hD = function (e) {
         f = M()((t = "".concat(o, "barcode.shtml?data="))).call(t, l, "&barcodeType=BT_Code128C&fileType=png"),
         m = M()((n = [])).call(
             n,
-            (0, H.A)(
-                c
-                    ? [
-                          {
-                              label: a.get("voucher.expirationDate"),
-                              value: a.date(c),
-                          },
-                      ]
-                    : [],
-            ),
-            (0, H.A)(
-                u
-                    ? [
-                          {
-                              label: a.get("voucher.shopperReference"),
-                              value: u,
-                          },
-                      ]
-                    : [],
-            ),
-            (0, H.A)(
-                s
-                    ? [
-                          {
-                              label: a.get("voucher.alternativeReference"),
-                              value: s,
-                          },
-                      ]
-                    : [],
-            ),
+            (0, H.A)(c ? [{ label: a.get("voucher.expirationDate"), value: a.date(c) }] : []),
+            (0, H.A)(u ? [{ label: a.get("voucher.shopperReference"), value: u }] : []),
+            (0, H.A)(s ? [{ label: a.get("voucher.alternativeReference"), value: s }] : []),
         );
     return (0, el.h)(dF, {
         amount: d && a.amount(d.value, d.currency),
@@ -29642,7 +25427,6 @@ var hD = function (e) {
         voucherDetails: m,
     });
 };
-
 function hL(e, t) {
     var n = c()(e);
     if (d()) {
@@ -29655,7 +25439,6 @@ function hL(e, t) {
     }
     return n;
 }
-
 function hV(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -29695,7 +25478,6 @@ var hj = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -29719,11 +25501,7 @@ var hj = (function (e) {
             {
                 key: "formatData",
                 value: function () {
-                    return {
-                        paymentMethod: {
-                            type: this.props.type || r.type,
-                        },
-                    };
+                    return { paymentMethod: { type: this.props.type || r.type } };
                 },
             },
             {
@@ -29732,21 +25510,9 @@ var hj = (function (e) {
                     var e;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.reference
-                            ? (0, el.h)(
-                                  hD,
-                                  (0, er.A)(
-                                      {
-                                          ref: this.handleRef,
-                                      },
-                                      this.props,
-                                  ),
-                              )
+                            ? (0, el.h)(hD, (0, er.A)({ ref: this.handleRef }, this.props))
                             : this.props.showPayButton &&
                                   this.payButton(
                                       hV(
@@ -29769,11 +25535,7 @@ var hj = (function (e) {
         r
     );
 })();
-(0, w.A)(hj, "type", "oxxo"),
-    (0, w.A)(hj, "defaultProps", {
-        showPayButton: !1,
-        name: "Oxxo",
-    });
+(0, w.A)(hj, "type", "oxxo"), (0, w.A)(hj, "defaultProps", { showPayButton: !1, name: "Oxxo" });
 var hU = function (e) {
     var t,
         n = nc().i18n,
@@ -29787,36 +25549,9 @@ var hU = function (e) {
         u = e.downloadUrl,
         d = M()((t = [])).call(
             t,
-            (0, H.A)(
-                a
-                    ? [
-                          {
-                              label: n.get("voucher.entity"),
-                              value: a,
-                          },
-                      ]
-                    : [],
-            ),
-            (0, H.A)(
-                i
-                    ? [
-                          {
-                              label: n.get("voucher.expirationDate"),
-                              value: n.date(i),
-                          },
-                      ]
-                    : [],
-            ),
-            (0, H.A)(
-                s
-                    ? [
-                          {
-                              label: n.get("voucher.shopperReference"),
-                              value: s,
-                          },
-                      ]
-                    : [],
-            ),
+            (0, H.A)(a ? [{ label: n.get("voucher.entity"), value: a }] : []),
+            (0, H.A)(i ? [{ label: n.get("voucher.expirationDate"), value: n.date(i) }] : []),
+            (0, H.A)(s ? [{ label: n.get("voucher.shopperReference"), value: s }] : []),
         );
     return (0, el.h)(dF, {
         amount: l && n.amount(l.value, l.currency),
@@ -29830,7 +25565,6 @@ var hU = function (e) {
         voucherDetails: d,
     });
 };
-
 function hq(e, t) {
     var n = c()(e);
     if (d()) {
@@ -29843,7 +25577,6 @@ function hq(e, t) {
     }
     return n;
 }
-
 function hK(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -29883,7 +25616,6 @@ var hH = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -29907,23 +25639,13 @@ var hH = (function (e) {
             {
                 key: "formatProps",
                 value: function (e) {
-                    return hK(
-                        hK({}, e),
-                        {},
-                        {
-                            name: e.name || "Multibanco",
-                        },
-                    );
+                    return hK(hK({}, e), {}, { name: e.name || "Multibanco" });
                 },
             },
             {
                 key: "formatData",
                 value: function () {
-                    return {
-                        paymentMethod: {
-                            type: this.props.type || r.type,
-                        },
-                    };
+                    return { paymentMethod: { type: this.props.type || r.type } };
                 },
             },
             {
@@ -29938,15 +25660,7 @@ var hH = (function (e) {
                                   loadingContext: this.props.loadingContext,
                                   resources: this.resources,
                               },
-                              (0, el.h)(
-                                  hU,
-                                  (0, er.A)(
-                                      {
-                                          ref: this.handleRef,
-                                      },
-                                      this.props,
-                                  ),
-                              ),
+                              (0, el.h)(hU, (0, er.A)({ ref: this.handleRef }, this.props)),
                           )
                         : this.props.showPayButton
                           ? (0, el.h)(
@@ -29973,10 +25687,7 @@ var hH = (function (e) {
         r
     );
 })();
-(0, w.A)(hH, "type", "multibanco"),
-    (0, w.A)(hH, "defaultProps", {
-        showPayButton: !0,
-    });
+(0, w.A)(hH, "type", "multibanco"), (0, w.A)(hH, "defaultProps", { showPayButton: !0 });
 var hz = (function (e) {
     (0, eo.A)(r, sh);
     var t,
@@ -29999,13 +25710,11 @@ var hz = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
     return (0, C.A)(r);
 })();
-
 function hW(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30018,7 +25727,6 @@ function hW(e, t) {
     }
     return n;
 }
-
 function hG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -30059,7 +25767,6 @@ var h$ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -30071,9 +25778,7 @@ var h$ = (function (e) {
                     return hG(
                         hG({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -30081,7 +25786,6 @@ var h$ = (function (e) {
         r
     );
 })();
-
 function hY(e) {
     var t = e.children,
         n = e.classNames,
@@ -30096,17 +25800,12 @@ function hY(e) {
                 void 0 === n ? [] : n,
             ),
         },
-        a &&
-            (0, el.h)(nD, {
-                className: "adyen-checkout__alert-message__icon",
-                type: a,
-            }),
+        a && (0, el.h)(nD, { className: "adyen-checkout__alert-message__icon", type: a }),
         t,
     );
 }
 (0, w.A)(h$, "type", "eps");
 var hQ = ["brand", "amount", "balance", "transactionLimit"];
-
 function hZ(e) {
     e.brand;
     var t = e.amount,
@@ -30118,24 +25817,16 @@ function hZ(e) {
         s = (null == n ? void 0 : n.value) - (null == i ? void 0 : i.value);
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__giftcard-result",
-        },
+        { className: "adyen-checkout__giftcard-result" },
         (0, el.h)(
             "ul",
-            {
-                className: "adyen-checkout__giftcard-result__balance",
-            },
+            { className: "adyen-checkout__giftcard-result__balance" },
             (0, el.h)(
                 "li",
-                {
-                    className: "adyen-checkout__giftcard-result__balance__item",
-                },
+                { className: "adyen-checkout__giftcard-result__balance__item" },
                 (0, el.h)(
                     "span",
-                    {
-                        className: "adyen-checkout__giftcard-result__balance__title",
-                    },
+                    { className: "adyen-checkout__giftcard-result__balance__title" },
                     o.get("giftcardBalance"),
                 ),
                 (0, el.h)(
@@ -30151,39 +25842,22 @@ function hZ(e) {
                 r.value &&
                 (0, el.h)(
                     "li",
-                    {
-                        className: "adyen-checkout__giftcard-result__balance__item",
-                    },
+                    { className: "adyen-checkout__giftcard-result__balance__item" },
                     (0, el.h)(
                         "span",
                         {
                             className:
                                 "adyen-checkout__giftcard-result__balance__title adyen-checkout__giftcard-result__balance__title--transactionLimit",
                         },
-                        o.get("giftcardTransactionLimit", {
-                            values: {
-                                amount: o.amount(r.value, r.currency),
-                            },
-                        }),
+                        o.get("giftcardTransactionLimit", { values: { amount: o.amount(r.value, r.currency) } }),
                     ),
                 ),
         ),
-        this.props.showPayButton &&
-            this.props.payButton({
-                amount: i,
-                status: a.status,
-                onClick: a.onSubmit,
-            }),
+        this.props.showPayButton && this.props.payButton({ amount: i, status: a.status, onClick: a.onSubmit }),
         (0, el.h)(
             "p",
-            {
-                className: "adyen-checkout__giftcard-result__remaining-balance",
-            },
-            o.get("partialPayment.remainingBalance", {
-                values: {
-                    amount: o.amount(s, n.currency),
-                },
-            }),
+            { className: "adyen-checkout__giftcard-result__remaining-balance" },
+            o.get("partialPayment.remainingBalance", { values: { amount: o.amount(s, n.currency) } }),
         ),
     );
 }
@@ -30280,7 +25954,6 @@ var hJ = function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -30297,27 +25970,19 @@ var hJ = function (e) {
                 }),
                 (0, w.A)((0, ea.A)(t), "sfp", void 0),
                 (0, w.A)((0, ea.A)(t), "onChange", function (e) {
-                    t.props.onChange({
-                        data: e.data,
-                        isValid: e.isSfpValid,
-                    });
+                    t.props.onChange({ data: e.data, isValid: e.isSfpValid });
                 }),
                 (0, w.A)((0, ea.A)(t), "showValidation", function () {
                     t.sfp.showValidation();
                 }),
                 (0, w.A)((0, ea.A)(t), "handleFocus", function (e) {
-                    t.setState({
-                        focusedElement: e.currentFocusObject,
-                    }),
+                    t.setState({ focusedElement: e.currentFocusObject }),
                         !0 === e.focus ? t.props.onFocus(e) : t.props.onBlur(e);
                 }),
                 (0, w.A)((0, ea.A)(t), "setBalance", function (e) {
                     var n = e.balance,
                         r = e.transactionLimit;
-                    t.setState({
-                        balance: n,
-                        transactionLimit: r,
-                    });
+                    t.setState({ balance: n, transactionLimit: r });
                 }),
                 t
             );
@@ -30327,9 +25992,7 @@ var hJ = function (e) {
                 {
                     key: "setStatus",
                     value: function (e) {
-                        this.setState({
-                            status: e,
-                        });
+                        this.setState({ status: e });
                     },
                 },
                 {
@@ -30346,14 +26009,7 @@ var hJ = function (e) {
                         if (l && c)
                             return (0, el.h)(
                                 hZ,
-                                (0, er.A)(
-                                    {
-                                        balance: o,
-                                        transactionLimit: i,
-                                        onSubmit: e.onSubmit,
-                                    },
-                                    e,
-                                ),
+                                (0, er.A)({ balance: o, transactionLimit: i, onSubmit: e.onSubmit }, e),
                             );
                         var u = function (e) {
                             if (e.errors.encryptedCardNumber) return s.get(e.errors.encryptedCardNumber);
@@ -30370,17 +26026,9 @@ var hJ = function (e) {
                         };
                         return (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout__giftcard",
-                            },
+                            { className: "adyen-checkout__giftcard" },
                             "error" === this.state.status &&
-                                (0, el.h)(
-                                    hY,
-                                    {
-                                        icon: "cross",
-                                    },
-                                    s.get("error.message.unknown"),
-                                ),
+                                (0, el.h)(hY, { icon: "cross" }, s.get("error.message.unknown")),
                             (0, el.h)(
                                 lH,
                                 (0, er.A)({}, this.props, {
@@ -30418,7 +26066,6 @@ var hJ = function (e) {
             r
         );
     })();
-
 function h1(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30431,7 +26078,6 @@ function h1(e, t) {
     }
     return n;
 }
-
 function h2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -30460,23 +26106,9 @@ function h2(e) {
             n = e.pinRequired;
         return (0, el.h)(
             "div",
-            {
-                ref: t,
-                className: "adyen-checkout__field-wrapper",
-            },
-            (0, el.h)(
-                hJ,
-                (0, er.A)({}, e, {
-                    classNameModifiers: n ? ["70"] : ["100"],
-                }),
-            ),
-            n &&
-                (0, el.h)(
-                    hX,
-                    (0, er.A)({}, e, {
-                        classNameModifiers: ["30"],
-                    }),
-                ),
+            { ref: t, className: "adyen-checkout__field-wrapper" },
+            (0, el.h)(hJ, (0, er.A)({}, e, { classNameModifiers: n ? ["70"] : ["100"] })),
+            n && (0, el.h)(hX, (0, er.A)({}, e, { classNameModifiers: ["30"] })),
         );
     },
 });
@@ -30502,7 +26134,6 @@ var h4 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -30529,12 +26160,7 @@ var h4 = (function (e) {
             }),
             (0, w.A)((0, ea.A)(t), "handleOrder", function (e) {
                 var n = e.order;
-                if (
-                    (t.updateParent({
-                        order: n,
-                    }),
-                    t.props.session && t.props.onOrderCreated)
-                )
+                if ((t.updateParent({ order: n }), t.props.session && t.props.onOrderCreated))
                     return t.props.onOrderCreated(n);
             }),
             (0, w.A)((0, ea.A)(t), "onBalanceCheck", function () {
@@ -30556,20 +26182,14 @@ var h4 = (function (e) {
                                       throw Error("currency-error");
                                   if ((null == r ? void 0 : r.value) <= 0) throw Error("no-balance");
                                   if (
-                                      (t.componentRef.setBalance({
-                                          balance: r,
-                                          transactionLimit: o,
-                                      }),
+                                      (t.componentRef.setBalance({ balance: r, transactionLimit: o }),
                                       t.props.amount.value > r.value || t.props.amount.value > o.value)
                                   )
                                       return t.props.order
                                           ? t.submit()
                                           : t.onOrderRequest(t.data).then(function (e) {
                                                 t.setState({
-                                                    order: {
-                                                        orderData: e.orderData,
-                                                        pspReference: e.pspReference,
-                                                    },
+                                                    order: { orderData: e.orderData, pspReference: e.pspReference },
                                                 }),
                                                     t.submit();
                                             });
@@ -30649,11 +26269,7 @@ var h4 = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             h0,
                             (0, er.A)(
@@ -30678,10 +26294,7 @@ var h4 = (function (e) {
         r
     );
 })();
-(0, w.A)(h4, "type", "giftcard"),
-    (0, w.A)(h4, "defaultProps", {
-        brandsConfiguration: {},
-    });
+(0, w.A)(h4, "type", "giftcard"), (0, w.A)(h4, "defaultProps", { brandsConfiguration: {} });
 var h8 = (function (e) {
     (0, eo.A)(r, dc);
     var t,
@@ -30704,13 +26317,11 @@ var h8 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
     return (0, C.A)(r);
 })();
-
 function h3(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30723,7 +26334,6 @@ function h3(e, t) {
     }
     return n;
 }
-
 function h6(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -30741,12 +26351,7 @@ function h6(e) {
     }
     return e;
 }
-(0, w.A)(h8, "type", "vipps"),
-    (0, w.A)(h8, "defaultProps", {
-        type: h8.type,
-        showPayButton: !0,
-        name: "Vipps",
-    });
+(0, w.A)(h8, "type", "vipps"), (0, w.A)(h8, "defaultProps", { type: h8.type, showPayButton: !0, name: "Vipps" });
 var h5 = (function (e) {
     (0, eo.A)(r, sh);
     var t,
@@ -30769,7 +26374,6 @@ var h5 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -30781,9 +26385,7 @@ var h5 = (function (e) {
                     return h6(
                         h6({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -30791,7 +26393,6 @@ var h5 = (function (e) {
         r
     );
 })();
-
 function h9(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30804,7 +26405,6 @@ function h9(e, t) {
     }
     return n;
 }
-
 function h7(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -30845,7 +26445,6 @@ var fe = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -30857,9 +26456,7 @@ var fe = (function (e) {
                     return h7(
                         h7({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -30869,7 +26466,6 @@ var fe = (function (e) {
 })();
 (0, w.A)(fe, "type", "payu_IN_nb");
 var ft = ["AT", "CH", "DE", "NL"];
-
 function fn(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30882,7 +26478,6 @@ function fn(e, t) {
     }
     return n;
 }
-
 function fr(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -30922,7 +26517,6 @@ var fa = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -30934,9 +26528,7 @@ var fa = (function (e) {
                     return fr(
                         fr({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : ft,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : ft },
                     );
                 },
             },
@@ -30944,7 +26536,6 @@ var fa = (function (e) {
         r
     );
 })();
-
 function fo(e, t) {
     var n = c()(e);
     if (d()) {
@@ -30980,7 +26571,6 @@ var fi = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -31006,11 +26596,7 @@ var fi = (function (e) {
                         }
                         return e;
                     })(
-                        {
-                            delay: 2e3,
-                            countdownTime: 3,
-                            instructions: "swish.pendingMessage",
-                        },
+                        { delay: 2e3, countdownTime: 3, instructions: "swish.pendingMessage" },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -31023,15 +26609,7 @@ var fi = (function (e) {
 var fs = function (e) {
         var t = e.paymentMethodComponent,
             n = e.isLoaded;
-        return t && n
-            ? (0, el.h)(
-                  "div",
-                  {
-                      className: "adyen-checkout__payment-method__details__content",
-                  },
-                  t,
-              )
-            : null;
+        return t && n ? (0, el.h)("div", { className: "adyen-checkout__payment-method__details__content" }, t) : null;
     },
     fl = {
         "adyen-checkout__payment-methods-list": "DropinComponent-module_adyen-checkout__payment-methods-list__mAjAm",
@@ -31087,15 +26665,11 @@ var fs = function (e) {
             },
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__payment-method__disable-confirmation__content",
-                },
+                { className: "adyen-checkout__payment-method__disable-confirmation__content" },
                 o.get("storedPaymentMethod.disable.confirmation"),
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__payment-method__disable-confirmation__buttons",
-                    },
+                    { className: "adyen-checkout__payment-method__disable-confirmation__buttons" },
                     (0, el.h)(
                         "button",
                         {
@@ -31140,26 +26714,11 @@ var fs = function (e) {
             o = r.leftBrandsAmount;
         return (0, el.h)(
             "span",
-            {
-                className: "adyen-checkout__payment-method__brands",
-            },
+            { className: "adyen-checkout__payment-method__brands" },
             J()(a).call(a, function (e) {
-                return (0, el.h)(fu, {
-                    key: e.name,
-                    altDescription: cs(e.name),
-                    type: e.name,
-                    src: e.icon,
-                });
+                return (0, el.h)(fu, { key: e.name, altDescription: cs(e.name), type: e.name, src: e.icon });
             }),
-            0 !== o &&
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout__payment-method__brand-number",
-                    },
-                    "+",
-                    o,
-                ),
+            0 !== o && (0, el.h)("span", { className: "adyen-checkout__payment-method__brand-number" }, "+", o),
         );
     },
     fh = function (e) {
@@ -31172,15 +26731,10 @@ var fs = function (e) {
                 return !(null != r && E()(r).call(r, e.name));
             });
         return void 0 === o || o
-            ? (0, el.h)(fp, {
-                  allowedBrands: i,
-                  isPaymentMethodSelected: a,
-              })
+            ? (0, el.h)(fp, { allowedBrands: i, isPaymentMethodSelected: a })
             : (0, el.h)(
                   "span",
-                  {
-                      className: "adyen-checkout__payment-method__brands",
-                  },
+                  { className: "adyen-checkout__payment-method__brands" },
                   J()(i).call(i, function (e) {
                       return (0, el.h)(fu, {
                           key: e.name,
@@ -31198,9 +26752,7 @@ var fs = function (e) {
             r = e.isSelected;
         return (0, el.h)(
             "span",
-            {
-                className: "adyen-checkout__payment-method__name_wrapper",
-            },
+            { className: "adyen-checkout__payment-method__name_wrapper" },
             (0, el.h)(
                 "span",
                 {
@@ -31245,17 +26797,13 @@ var fs = function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
             for (var a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
             return (
                 (t = n.call.apply(n, M()((e = [this])).call(e, o))),
-                (0, w.A)((0, ea.A)(t), "state", {
-                    showDisableStoredPaymentMethodConfirmation: !1,
-                    activeBrand: null,
-                }),
+                (0, w.A)((0, ea.A)(t), "state", { showDisableStoredPaymentMethodConfirmation: !1, activeBrand: null }),
                 (0, w.A)((0, ea.A)(t), "toggleDisableConfirmation", function () {
                     t.setState({
                         showDisableStoredPaymentMethodConfirmation: !t.state.showDisableStoredPaymentMethodConfirmation,
@@ -31278,9 +26826,7 @@ var fs = function (e) {
                     value: function () {
                         var e = this;
                         this.props.paymentMethod.eventEmitter.on("brand", function (t) {
-                            e.setState({
-                                activeBrand: t.brand,
-                            });
+                            e.setState({ activeBrand: t.brand });
                         });
                     },
                 },
@@ -31289,9 +26835,7 @@ var fs = function (e) {
                     value: function () {
                         var e = this;
                         this.props.paymentMethod.eventEmitter.off("brand", function (t) {
-                            e.setState({
-                                activeBrand: t.brand,
-                            });
+                            e.setState({ activeBrand: t.brand });
                         });
                     },
                 },
@@ -31311,9 +26855,7 @@ var fs = function (e) {
                         if (!a) return null;
                         var p = ep()(
                                 ((0, w.A)(
-                                    (r = {
-                                        "adyen-checkout__payment-method": !0,
-                                    }),
+                                    (r = { "adyen-checkout__payment-method": !0 }),
                                     fl["adyen-checkout__payment-method"],
                                     !0,
                                 ),
@@ -31347,16 +26889,10 @@ var fs = function (e) {
                             v = !a.props.oneClick && a.brands && a.brands.length > 0;
                         return (0, el.h)(
                             "li",
-                            {
-                                key: a._id,
-                                className: p,
-                                onClick: this.handleOnListItemClick,
-                            },
+                            { key: a._id, className: p, onClick: this.handleOnListItemClick },
                             (0, el.h)(
                                 "div",
-                                {
-                                    className: "adyen-checkout__payment-method__header",
-                                },
+                                { className: "adyen-checkout__payment-method__header" },
                                 (0, el.h)(
                                     "button",
                                     {
@@ -31375,16 +26911,10 @@ var fs = function (e) {
                                     }),
                                     (0, el.h)(
                                         fu,
-                                        (0, er.A)(
-                                            {},
-                                            a.props.oneClick && {
-                                                altDescription: a.props.name,
-                                            },
-                                            {
-                                                type: a.type,
-                                                src: a.icon,
-                                            },
-                                        ),
+                                        (0, er.A)({}, a.props.oneClick && { altDescription: a.props.name }, {
+                                            type: a.type,
+                                            src: a.icon,
+                                        }),
                                     ),
                                     (0, el.h)(ff, {
                                         displayName: a.displayName,
@@ -31430,10 +26960,7 @@ var fs = function (e) {
                                         onDisable: this.onDisableStoredPaymentMethod,
                                         onCancel: this.toggleDisableConfirmation,
                                     }),
-                                (0, el.h)(fs, {
-                                    paymentMethodComponent: a.render(),
-                                    isLoaded: s,
-                                }),
+                                (0, el.h)(fs, { paymentMethodComponent: a.render(), isLoaded: s }),
                             ),
                         );
                     },
@@ -31462,9 +26989,7 @@ var fy = function (e) {
         null,
         (0, el.h)(
             "ul",
-            {
-                className: "adyen-checkout__order-payment-methods-list",
-            },
+            { className: "adyen-checkout__order-payment-methods-list" },
             null == r || null == (t = r.paymentMethods)
                 ? void 0
                 : J()(t).call(t, function (e, t) {
@@ -31477,14 +27002,10 @@ var fy = function (e) {
                           },
                           (0, el.h)(
                               "div",
-                              {
-                                  className: "adyen-checkout__order-payment-method__header",
-                              },
+                              { className: "adyen-checkout__order-payment-method__header" },
                               (0, el.h)(
                                   "div",
-                                  {
-                                      className: "adyen-checkout__payment-method__header__title",
-                                  },
+                                  { className: "adyen-checkout__payment-method__header__title" },
                                   (0, el.h)(fu, {
                                       altDescription: e.name,
                                       type: e.type,
@@ -31501,9 +27022,7 @@ var fy = function (e) {
                                           className:
                                               "adyen-checkout__button adyen-checkout__button--inline adyen-checkout__button--link",
                                           onClick: function () {
-                                              a({
-                                                  order: n,
-                                              });
+                                              a({ order: n });
                                           },
                                       },
                                       i.get("storedPaymentMethod.disable.button"),
@@ -31511,26 +27030,18 @@ var fy = function (e) {
                           ),
                           (0, el.h)(
                               "div",
-                              {
-                                  className: "adyen-checkout__order-payment-method__details",
-                              },
+                              { className: "adyen-checkout__order-payment-method__details" },
                               (0, el.h)(
                                   "div",
-                                  {
-                                      className: "adyen-checkout__order-payment-method__deducted-amount",
-                                  },
+                                  { className: "adyen-checkout__order-payment-method__deducted-amount" },
                                   (0, el.h)(
                                       "div",
-                                      {
-                                          className: "adyen-checkout__order-payment-method__deducted-amount__label",
-                                      },
+                                      { className: "adyen-checkout__order-payment-method__deducted-amount__label" },
                                       i.get("deductedBalance"),
                                   ),
                                   (0, el.h)(
                                       "div",
-                                      {
-                                          className: "adyen-checkout__order-payment-method__deducted-amount__value",
-                                      },
+                                      { className: "adyen-checkout__order-payment-method__deducted-amount__value" },
                                       i.amount(e.amount.value, e.amount.currency),
                                   ),
                               ),
@@ -31541,16 +27052,13 @@ var fy = function (e) {
         r.remainingAmount &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__order-remaining-amount",
-                },
+                { className: "adyen-checkout__order-remaining-amount" },
                 i.get("partialPayment.warning"),
                 " ",
                 (0, el.h)("strong", null, i.amount(r.remainingAmount.value, r.remainingAmount.currency)),
             ),
     );
 };
-
 function fv(e) {
     var t = e.paymentMethods,
         n = nc().i18n;
@@ -31559,25 +27067,14 @@ function fv(e) {
         null,
         (0, el.h)(
             "ul",
-            {
-                className: "adyen-checkout__instant-payment-methods-list",
-            },
+            { className: "adyen-checkout__instant-payment-methods-list" },
             J()(t).call(t, function (e) {
-                return (0, el.h)(
-                    "li",
-                    {
-                        key: e.type,
-                    },
-                    e.render(),
-                );
+                return (0, el.h)("li", { key: e.type }, e.render());
             }),
         ),
-        (0, el.h)(i3, {
-            label: n.get("orPayWith"),
-        }),
+        (0, el.h)(i3, { label: n.get("orPayWith") }),
     );
 }
-
 function fg(e, t) {
     var n = c()(e);
     if (d()) {
@@ -31590,7 +27087,6 @@ function fg(e, t) {
     }
     return n;
 }
-
 function fb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -31630,7 +27126,6 @@ var fA = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -31701,10 +27196,7 @@ var fA = (function (e) {
                                 onOrderCancel: this.props.onOrderCancel,
                                 brandLogoConfiguration: m,
                             }),
-                        !!l.length &&
-                            (0, el.h)(fv, {
-                                paymentMethods: l,
-                            }),
+                        !!l.length && (0, el.h)(fv, { paymentMethods: l }),
                         (0, el.h)(
                             "ul",
                             {
@@ -31718,9 +27210,7 @@ var fA = (function (e) {
                                     a = e._id in u,
                                     o = c && n[t + 1] && c._id === n[t + 1]._id;
                                 return (0, el.h)(fm, {
-                                    className: ep()({
-                                        "adyen-checkout__payment-method--next-selected": o,
-                                    }),
+                                    className: ep()({ "adyen-checkout__payment-method--next-selected": o }),
                                     standalone: 1 === s.length,
                                     paymentMethod: e,
                                     isSelected: r,
@@ -31761,25 +27251,14 @@ var f_ = function (e) {
             ht(a),
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__status adyen-checkout__status--success",
-                },
+                { className: "adyen-checkout__status adyen-checkout__status--success" },
                 (0, el.h)(a5, {
                     height: "88",
                     className: "adyen-checkout__status__icon",
-                    src: r({
-                        extension: "gif",
-                        imageFolder: "components/",
-                    })("success"),
+                    src: r({ extension: "gif", imageFolder: "components/" })("success"),
                     alt: n.get(t || "creditCard.success"),
                 }),
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout__status__text",
-                    },
-                    a,
-                ),
+                (0, el.h)("span", { className: "adyen-checkout__status__text" }, a),
             )
         );
     },
@@ -31792,29 +27271,17 @@ var f_ = function (e) {
             ht(a),
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__status adyen-checkout__status--error",
-                },
+                { className: "adyen-checkout__status adyen-checkout__status--error" },
                 (0, el.h)(a5, {
                     className: "adyen-checkout__status__icon",
-                    src: r({
-                        extension: "gif",
-                        imageFolder: "components/",
-                    })("error"),
+                    src: r({ extension: "gif", imageFolder: "components/" })("error"),
                     alt: n.get(t || "error.message.unknown"),
                     height: "88",
                 }),
-                (0, el.h)(
-                    "span",
-                    {
-                        className: "adyen-checkout__status__text",
-                    },
-                    a,
-                ),
+                (0, el.h)("span", { className: "adyen-checkout__status__text" }, a),
             )
         );
     };
-
 function fC(e, t) {
     var n = c()(e);
     if (d()) {
@@ -31827,7 +27294,6 @@ function fC(e, t) {
     }
     return n;
 }
-
 function fw(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -31867,7 +27333,6 @@ var fS = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -31879,10 +27344,7 @@ var fS = (function (e) {
                     instantPaymentElements: [],
                     orderStatus: null,
                     isDisabling: !1,
-                    status: {
-                        type: "loading",
-                        props: void 0,
-                    },
+                    status: { type: "loading", props: void 0 },
                     activePaymentMethod: null,
                     cachedPaymentMethods: {},
                 }),
@@ -31898,18 +27360,13 @@ var fS = (function (e) {
                         c = s[1],
                         u = s[2],
                         d = r
-                            ? ((e = {
-                                  clientKey: a,
-                                  loadingContext: o,
-                              }),
+                            ? ((e = { clientKey: a, loadingContext: o }),
                               a3(
                                   {
                                       path: "v1/order/status?clientKey=".concat(e.clientKey),
                                       loadingContext: e.loadingContext,
                                   },
-                                  {
-                                      orderData: r.orderData,
-                                  },
+                                  { orderData: r.orderData },
                               ))
                             : null;
                     B()
@@ -31941,12 +27398,7 @@ var fS = (function (e) {
                 }),
                 (0, w.A)((0, ea.A)(t), "setStatus", function (e) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    t.setState({
-                        status: {
-                            type: e,
-                            props: n,
-                        },
-                    });
+                    t.setState({ status: { type: e, props: n } });
                 }),
                 (0, w.A)((0, ea.A)(t), "setActivePaymentMethod", function (e) {
                     t.setState(function (t) {
@@ -31961,9 +27413,7 @@ var fS = (function (e) {
                     t.setActivePaymentMethod(e), ((n && n._id !== e._id) || !n) && t.props.onSelect(e);
                 }),
                 (0, w.A)((0, ea.A)(t), "handleDisableStoredPaymentMethod", function (e) {
-                    t.setState({
-                        isDisabling: !0,
-                    }),
+                    t.setState({ isDisabling: !0 }),
                         new (B())(function (n, r) {
                             return t.props.onDisableStoredPaymentMethod(e.props.storedPaymentMethodId, n, r);
                         })
@@ -31976,14 +27426,10 @@ var fS = (function (e) {
                                         }),
                                     };
                                 }),
-                                    t.setState({
-                                        isDisabling: !1,
-                                    });
+                                    t.setState({ isDisabling: !1 });
                             })
                             .catch(function () {
-                                t.setState({
-                                    isDisabling: !1,
-                                });
+                                t.setState({ isDisabling: !1 });
                             });
                 }),
                 (0, w.A)((0, ea.A)(t), "getOnOrderCancel", function () {
@@ -31996,9 +27442,7 @@ var fS = (function (e) {
                                 return t.props.session
                                     .cancelOrder(e)
                                     .then(function () {
-                                        return t.props._parentInstance.update({
-                                            order: null,
-                                        });
+                                        return t.props._parentInstance.update({ order: null });
                                     })
                                     .catch(function (e) {
                                         return t.setStatus((null == e ? void 0 : e.message) || "error");
@@ -32033,9 +27477,7 @@ var fS = (function (e) {
                 {
                     key: "closeActivePaymentMethod",
                     value: function () {
-                        this.setState({
-                            activePaymentMethod: null,
-                        });
+                        this.setState({ activePaymentMethod: null });
                     },
                 },
                 {
@@ -32053,21 +27495,15 @@ var fS = (function (e) {
                             d = "redirect" === s.type;
                         switch (s.type) {
                             case "success":
-                                return (0, el.h)(f_, {
-                                    message: null == (n = s.props) ? void 0 : n.message,
-                                });
+                                return (0, el.h)(f_, { message: null == (n = s.props) ? void 0 : n.message });
                             case "error":
-                                return (0, el.h)(fk, {
-                                    message: null == (r = s.props) ? void 0 : r.message,
-                                });
+                                return (0, el.h)(fk, { message: null == (r = s.props) ? void 0 : r.message });
                             case "custom":
                                 return null == (a = s.props) || null == (a = a.component) ? void 0 : a.render();
                             default:
                                 return (0, el.h)(
                                     "div",
-                                    {
-                                        className: "adyen-checkout__dropin adyen-checkout__dropin--".concat(s.type),
-                                    },
+                                    { className: "adyen-checkout__dropin adyen-checkout__dropin--".concat(s.type) },
                                     d && s.props.component && s.props.component.render(),
                                     u && s.props && s.props.component && s.props.component.render(),
                                     o &&
@@ -32139,7 +27575,6 @@ var fS = (function (e) {
                 });
             });
     };
-
 function fO(e, t) {
     var n = c()(e);
     if (d()) {
@@ -32152,7 +27587,6 @@ function fO(e, t) {
     }
     return n;
 }
-
 function fE(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -32170,7 +27604,6 @@ function fE(e) {
     }
     return e;
 }
-
 function fI(e, t) {
     var n = c()(e);
     if (d()) {
@@ -32183,7 +27616,6 @@ function fI(e, t) {
     }
     return n;
 }
-
 function fM(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -32201,7 +27633,6 @@ function fM(e) {
     }
     return e;
 }
-
 function fT(e, t) {
     var n = c()(e);
     if (d()) {
@@ -32214,7 +27645,6 @@ function fT(e, t) {
     }
     return n;
 }
-
 function fB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -32255,7 +27685,6 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r(e) {
             var t, a, o;
             return (
@@ -32272,13 +27701,7 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                         i = t.showPaymentMethods,
                         s = t.instantPaymentMethods,
                         l = {
-                            beforeSubmit: (e = fB(
-                                fB({}, o.props),
-                                {},
-                                {
-                                    elementRef: o.elementRef,
-                                },
-                            )).beforeSubmit,
+                            beforeSubmit: (e = fB(fB({}, o.props), {}, { elementRef: o.elementRef })).beforeSubmit,
                             onSubmit: e.onSubmit,
                             elementRef: e.elementRef,
                             showPayButton: e.showPayButton,
@@ -32290,13 +27713,7 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                                   var e = arguments.length > 2 ? arguments[2] : void 0;
                                   return fF(
                                       arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                                      fE(
-                                          fE({}, arguments.length > 1 ? arguments[1] : void 0),
-                                          {},
-                                          {
-                                              oneClick: !0,
-                                          },
-                                      ),
+                                      fE(fE({}, arguments.length > 1 ? arguments[1] : void 0), {}, { oneClick: !0 }),
                                       e,
                                   );
                               })(r, l, o._parentInstance.create)
@@ -32307,27 +27724,14 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                                 t = arguments.length > 1 ? arguments[1] : void 0,
                                 n = arguments.length > 2 ? arguments[2] : void 0;
                             return e.length
-                                ? fF(
-                                      e,
-                                      fM(
-                                          fM({}, t),
-                                          {},
-                                          {
-                                              isInstantPayment: !0,
-                                              showPayButton: !0,
-                                          },
-                                      ),
-                                      n,
-                                  )
+                                ? fF(e, fM(fM({}, t), {}, { isInstantPayment: !0, showPayButton: !0 }), n)
                                 : [];
                         })(s, l, o._parentInstance.create),
                     ];
                 }),
                 (0, w.A)((0, ea.A)(o), "handleOrder", function (e) {
                     var t = e.order;
-                    o.updateParent({
-                        order: t,
-                    });
+                    o.updateParent({ order: t });
                 }),
                 (o.submit = F()((t = o.submit)).call(t, (0, ea.A)(o))),
                 (o.handleAction = F()((a = o.handleAction)).call(a, (0, ea.A)(o))),
@@ -32363,11 +27767,7 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                         return fB(
                             fB({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                             {},
-                            {
-                                instantPaymentTypes: a,
-                                instantPaymentMethods: o,
-                                paymentMethods: i,
-                            },
+                            { instantPaymentTypes: a, instantPaymentMethods: o, paymentMethods: i },
                         );
                     },
                 },
@@ -32454,9 +27854,7 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                             ),
                         );
                         return o
-                            ? (this.setStatus(o.props.statusType, {
-                                  component: o,
-                              }),
+                            ? (this.setStatus(o.props.statusType, { component: o }),
                               (this.componentFromAction = o),
                               this)
                             : null;
@@ -32481,9 +27879,7 @@ var fD = ["paywithgoogle", "googlepay", "applepay"],
                             },
                             (0, el.h)(
                                 is,
-                                {
-                                    srPanel: this.props.modules.srPanel,
-                                },
+                                { srPanel: this.props.modules.srPanel },
                                 (0, el.h)(
                                     fS,
                                     (0, er.A)({}, this.props, {
@@ -32561,10 +27957,7 @@ var fV = "AchInput-module_adyen-checkout__input__8WwCR",
                 encryptedFieldType: m,
                 "data-info": r,
                 className: ep()(
-                    ((t = {
-                        "adyen-checkout__input": !0,
-                        "adyen-checkout__input--large": !0,
-                    }),
+                    ((t = { "adyen-checkout__input": !0, "adyen-checkout__input--large": !0 }),
                     (0, w.A)(t, fV, !0),
                     (0, w.A)(t, "adyen-checkout__input--error", c.length),
                     (0, w.A)(t, "adyen-checkout__input--focus", i),
@@ -32582,9 +27975,7 @@ var fV = "AchInput-module_adyen-checkout__input__8WwCR",
             o = nc().i18n;
         return (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__ach-sf__form adyen-checkout__field-wrapper",
-            },
+            { className: "adyen-checkout__ach-sf__form adyen-checkout__field-wrapper" },
             (0, el.h)(fj, {
                 id: "bankAccountNumber",
                 focused: "encryptedBankAccountNumber" === t,
@@ -32611,12 +28002,7 @@ var fV = "AchInput-module_adyen-checkout__input__8WwCR",
             }),
         );
     },
-    fq = {
-        base: {
-            caretColor: "#0075FF",
-        },
-    };
-
+    fq = { base: { caretColor: "#0075FF" } };
 function fK(e, t) {
     var n = c()(e);
     if (d()) {
@@ -32629,7 +28015,6 @@ function fK(e, t) {
     }
     return n;
 }
-
 function fH(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -32647,14 +28032,12 @@ function fH(e) {
     }
     return e;
 }
-
 function fz(e) {
     return (
         !(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) ||
         (!!e && "string" == typeof e && eP()(e).call(e).length > 0)
     );
 }
-
 function fW(e) {
     var t,
         n = this,
@@ -32664,25 +28047,11 @@ function fW(e) {
         i = (0, K.A)(o, 2),
         s = i[0],
         l = i[1],
-        u = tX(
-            fH(
-                {},
-                e.holderNameRequired && {
-                    holderName: a,
-                },
-            ),
-        ),
+        u = tX(fH({}, e.holderNameRequired && { holderName: a })),
         d = (0, K.A)(u, 2),
         p = d[0],
         h = d[1],
-        f = tX(
-            fH(
-                {},
-                e.hasHolderName && {
-                    holderName: e.holderName || e.data.holderName,
-                },
-            ),
-        ),
+        f = tX(fH({}, e.hasHolderName && { holderName: e.holderName || e.data.holderName })),
         m = (0, K.A)(f, 2),
         y = m[0],
         v = m[1],
@@ -32703,46 +28072,13 @@ function fW(e) {
         E = O[0],
         I = O[1],
         M = function (e) {
-            _(fH(fH({}, A), e.data)),
-                h(
-                    fH(
-                        fH({}, p),
-                        {},
-                        {
-                            billingAddress: e.isValid,
-                        },
-                    ),
-                );
+            _(fH(fH({}, A), e.data)), h(fH(fH({}, p), {}, { billingAddress: e.isValid }));
         },
         T = function (t) {
             var n = t.target.value;
-            v(
-                fH(
-                    fH({}, y),
-                    {},
-                    {
-                        holderName: n,
-                    },
-                ),
-            ),
-                l(
-                    fH(
-                        fH({}, s),
-                        {},
-                        {
-                            holderName: !!e.holderNameRequired && !fz(n),
-                        },
-                    ),
-                ),
-                h(
-                    fH(
-                        fH({}, p),
-                        {},
-                        {
-                            holderName: !e.holderNameRequired || fz(n, e.holderNameRequired),
-                        },
-                    ),
-                );
+            v(fH(fH({}, y), {}, { holderName: n })),
+                l(fH(fH({}, s), {}, { holderName: !!e.holderNameRequired && !fz(n) })),
+                h(fH(fH({}, p), {}, { holderName: !e.holderNameRequired || fz(n, e.holderNameRequired) }));
         },
         B = t4(null),
         D = t4(null),
@@ -32758,17 +28094,7 @@ function fW(e) {
         c()(H.current).length || null == (t = e.setComponentRef) || t.call(e, H.current),
         (H.current.showValidation = function () {
             B.current.showValidation(),
-                e.holderNameRequired &&
-                    !p.holderName &&
-                    l(
-                        fH(
-                            fH({}, s),
-                            {},
-                            {
-                                holderName: !0,
-                            },
-                        ),
-                    ),
+                e.holderNameRequired && !p.holderName && l(fH(fH({}, s), {}, { holderName: !0 })),
                 D.current && D.current.showValidation();
         }),
         (H.current.setStatus = q),
@@ -32785,140 +28111,101 @@ function fW(e) {
             function () {
                 var t = fz(y.holderName, e.holderNameRequired),
                     n = !e.billingAddressRequired || !!p.billingAddress;
-                e.onChange({
-                    data: y,
-                    isValid: w && t && n,
-                    billingAddress: A,
-                    storePaymentMethod: E,
-                });
+                e.onChange({ data: y, isValid: w && t && n, billingAddress: A, storePaymentMethod: E });
             },
             [y, p, s, E],
         ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__ach",
-            },
+            { className: "adyen-checkout__ach" },
             e.showFormInstruction && (0, el.h)(o4, null),
             (0, el.h)(
                 lH,
-                (0, er.A)(
-                    {
-                        ref: B,
-                    },
-                    fG(e),
-                    {
-                        styles: fH(fH({}, fq), e.styles),
-                        onChange: function (t) {
-                            var n = t.autoCompleteName ? t.autoCompleteName : y.holderName;
-                            v(
+                (0, er.A)({ ref: B }, fG(e), {
+                    styles: fH(fH({}, fq), e.styles),
+                    onChange: function (t) {
+                        var n = t.autoCompleteName ? t.autoCompleteName : y.holderName;
+                        v(fH(fH(fH({}, y), t.data), {}, { holderName: n })),
+                            l(fH(fH({}, s), t.errors)),
+                            h(
                                 fH(
-                                    fH(fH({}, y), t.data),
+                                    fH(fH({}, p), t.valid),
                                     {},
-                                    {
-                                        holderName: n,
-                                    },
+                                    { holderName: !e.holderNameRequired || fz(n, e.holderNameRequired) },
                                 ),
                             ),
-                                l(fH(fH({}, s), t.errors)),
-                                h(
-                                    fH(
-                                        fH(fH({}, p), t.valid),
-                                        {},
-                                        {
-                                            holderName: !e.holderNameRequired || fz(n, e.holderNameRequired),
-                                        },
-                                    ),
+                            S(t.isSfpValid);
+                    },
+                    onFocus: function (t) {
+                        var n = !0 === t.focus;
+                        R(t.currentFocusObject), n ? e.onFocus(t) : e.onBlur(t);
+                    },
+                    render: function (t, n) {
+                        var a = t.setRootNode,
+                            o = t.setFocusOn;
+                        return (0, el.h)(
+                            "div",
+                            {
+                                ref: a,
+                                className: "adyen-checkout__ach-input ".concat(
+                                    "AchInput-module_sf-input__wrapper__lfdiv",
                                 ),
-                                S(t.isSfpValid);
-                        },
-                        onFocus: function (t) {
-                            var n = !0 === t.focus;
-                            R(t.currentFocusObject), n ? e.onFocus(t) : e.onBlur(t);
-                        },
-                        render: function (t, n) {
-                            var a = t.setRootNode,
-                                o = t.setFocusOn;
-                            return (0, el.h)(
-                                "div",
-                                {
-                                    ref: a,
-                                    className: "adyen-checkout__ach-input ".concat(
-                                        "AchInput-module_sf-input__wrapper__lfdiv",
-                                    ),
-                                },
+                            },
+                            (0, el.h)(
+                                cl,
+                                { status: n.status },
                                 (0, el.h)(
-                                    cl,
-                                    {
-                                        status: n.status,
-                                    },
+                                    "div",
+                                    { className: ep()(["adyen-checkout__fieldset", "adyen-checkout__fieldset--ach"]) },
                                     (0, el.h)(
                                         "div",
-                                        {
-                                            className: ep()([
-                                                "adyen-checkout__fieldset",
-                                                "adyen-checkout__fieldset--ach",
-                                            ]),
-                                        },
-                                        (0, el.h)(
-                                            "div",
-                                            {
-                                                className: "adyen-checkout__fieldset__title",
-                                            },
-                                            r.get("ach.bankAccount"),
-                                        ),
-                                        e.hasHolderName &&
-                                            (0, el.h)(
-                                                rA,
-                                                {
-                                                    label: r.get("ach.accountHolderNameField.title"),
-                                                    className: "adyen-checkout__pm__holderName",
-                                                    errorMessage:
-                                                        !!s.holderName && r.get("ach.accountHolderNameField.invalid"),
-                                                    isValid: !!p.holderName,
-                                                    name: "holderName",
-                                                },
-                                                (0, el.h)(rH, {
-                                                    className: "adyen-checkout__pm__holderName__input ".concat(fV),
-                                                    placeholder:
-                                                        e.placeholders.holderName ||
-                                                        r.get("ach.accountHolderNameField.placeholder"),
-                                                    value: y.holderName,
-                                                    required: e.holderNameRequired,
-                                                    onInput: T,
-                                                }),
-                                            ),
-                                        (0, el.h)(fU, {
-                                            focusedElement: P,
-                                            onFocusField: o,
-                                            errors: n.errors,
-                                            valid: n.valid,
-                                        }),
+                                        { className: "adyen-checkout__fieldset__title" },
+                                        r.get("ach.bankAccount"),
                                     ),
-                                    e.billingAddressRequired &&
-                                        (0, el.h)(oA, {
-                                            label: "billingAddress",
-                                            data: A,
-                                            onChange: M,
-                                            allowedCountries: e.billingAddressAllowedCountries,
-                                            requiredFields: e.billingAddressRequiredFields,
-                                            setComponentRef: L,
-                                        }),
-                                    e.enableStoreDetails &&
-                                        (0, el.h)(cP, {
-                                            onChange: I,
-                                        }),
+                                    e.hasHolderName &&
+                                        (0, el.h)(
+                                            rA,
+                                            {
+                                                label: r.get("ach.accountHolderNameField.title"),
+                                                className: "adyen-checkout__pm__holderName",
+                                                errorMessage:
+                                                    !!s.holderName && r.get("ach.accountHolderNameField.invalid"),
+                                                isValid: !!p.holderName,
+                                                name: "holderName",
+                                            },
+                                            (0, el.h)(rH, {
+                                                className: "adyen-checkout__pm__holderName__input ".concat(fV),
+                                                placeholder:
+                                                    e.placeholders.holderName ||
+                                                    r.get("ach.accountHolderNameField.placeholder"),
+                                                value: y.holderName,
+                                                required: e.holderNameRequired,
+                                                onInput: T,
+                                            }),
+                                        ),
+                                    (0, el.h)(fU, {
+                                        focusedElement: P,
+                                        onFocusField: o,
+                                        errors: n.errors,
+                                        valid: n.valid,
+                                    }),
                                 ),
-                            );
-                        },
+                                e.billingAddressRequired &&
+                                    (0, el.h)(oA, {
+                                        label: "billingAddress",
+                                        data: A,
+                                        onChange: M,
+                                        allowedCountries: e.billingAddressAllowedCountries,
+                                        requiredFields: e.billingAddressRequiredFields,
+                                        setComponentRef: L,
+                                    }),
+                                e.enableStoreDetails && (0, el.h)(cP, { onChange: I }),
+                            ),
+                        );
                     },
-                ),
-            ),
-            e.showPayButton &&
-                e.payButton({
-                    status: U,
-                    label: r.get("confirmPurchase"),
                 }),
+            ),
+            e.showPayButton && e.payButton({ status: U, label: r.get("confirmPurchase") }),
         )
     );
 }
@@ -32938,10 +28225,7 @@ fW.defaultProps = {
     onFocus: function () {},
     onChange: function () {},
     holderName: "",
-    data: {
-        holderName: "",
-        billingAddress: {},
-    },
+    data: { holderName: "", billingAddress: {} },
     styles: {},
     placeholders: {},
 };
@@ -32967,7 +28251,6 @@ var fG = function (e) {
         resources: e.resources,
     };
 };
-
 function f$(e, t) {
     var n = c()(e);
     if (d()) {
@@ -32980,7 +28263,6 @@ function f$(e, t) {
     }
     return n;
 }
-
 function fY(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -33020,7 +28302,6 @@ var fQ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -33033,9 +28314,7 @@ var fQ = (function (e) {
                     return fY(
                         fY({}, e),
                         {},
-                        {
-                            holderNameRequired: null != (t = e.hasHolderName) ? t : e.holderNameRequired,
-                        },
+                        { holderNameRequired: null != (t = e.hasHolderName) ? t : e.holderNameRequired },
                     );
                 },
             },
@@ -33045,34 +28324,19 @@ var fQ = (function (e) {
                     var e,
                         t = !!this.props.storedPaymentMethodId,
                         n = fY(
-                            fY(
-                                {
-                                    type: r.type,
-                                },
-                                this.state.data,
-                            ),
+                            fY({ type: r.type }, this.state.data),
                             {},
-                            {
-                                ownerName: null == (e = this.state.data) ? void 0 : e.holderName,
-                            },
-                            t && {
-                                storedPaymentMethodId: this.props.storedPaymentMethodId,
-                            },
+                            { ownerName: null == (e = this.state.data) ? void 0 : e.holderName },
+                            t && { storedPaymentMethodId: this.props.storedPaymentMethodId },
                         );
                     return (
                         delete n.holderName,
                         fY(
                             fY(
-                                {
-                                    paymentMethod: n,
-                                },
-                                this.state.billingAddress && {
-                                    billingAddress: this.state.billingAddress,
-                                },
+                                { paymentMethod: n },
+                                this.state.billingAddress && { billingAddress: this.state.billingAddress },
                             ),
-                            this.state.storePaymentMethod && {
-                                storePaymentMethod: this.state.storePaymentMethod,
-                            },
+                            this.state.storePaymentMethod && { storePaymentMethod: this.state.storePaymentMethod },
                         )
                     );
                 },
@@ -33118,11 +28382,7 @@ var fQ = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.storedPaymentMethodId
                             ? (0, el.h)(su, {
                                   name: this.displayName,
@@ -33135,18 +28395,12 @@ var fQ = (function (e) {
                               })
                             : (0, el.h)(
                                   fW,
-                                  (0, er.A)(
-                                      {
-                                          setComponentRef: this.setComponentRef,
-                                      },
-                                      this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                          resources: this.resources,
-                                      },
-                                  ),
+                                  (0, er.A)({ setComponentRef: this.setComponentRef }, this.props, {
+                                      onChange: this.setState,
+                                      onSubmit: this.submit,
+                                      payButton: this.payButton,
+                                      resources: this.resources,
+                                  }),
                               ),
                     );
                 },
@@ -33182,7 +28436,6 @@ var fZ = /\b(2\d{1}|(9(3|6|2|1)))\d{7}\b/,
             },
         },
     };
-
 function f1(e, t) {
     var n = c()(e);
     if (d()) {
@@ -33195,7 +28448,6 @@ function f1(e, t) {
     }
     return n;
 }
-
 function f2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -33213,7 +28465,6 @@ function f2(e) {
     }
     return e;
 }
-
 function f4(e) {
     var t,
         n,
@@ -33229,23 +28480,7 @@ function f4(e) {
             ]),
         c = E()(l).call(l, "phonePrefix") && !(null == e || null == (r = e.items) || !r.length),
         u = E()(l).call(l, "phoneNumber"),
-        d = rj(
-            f2(
-                f2(
-                    {
-                        i18n: s,
-                    },
-                    e,
-                ),
-                {},
-                {
-                    schema: l,
-                    defaultData: e.data,
-                    rules: fX,
-                    formatters: f0,
-                },
-            ),
-        ),
+        d = rj(f2(f2({ i18n: s }, e), {}, { schema: l, defaultData: e.data, rules: fX, formatters: f0 })),
         p = d.handleChangeFor,
         h = d.data,
         f = d.valid,
@@ -33267,12 +28502,7 @@ function f4(e) {
         ),
         t1(
             function () {
-                e.onChange({
-                    data: h,
-                    valid: f,
-                    errors: m,
-                    isValid: y,
-                });
+                e.onChange({ data: h, valid: f, errors: m, isValid: y });
             },
             [h, f, m, y],
         ),
@@ -33298,22 +28528,13 @@ function f4(e) {
         k = (m.phoneNumber || m.phonePrefix) && !0;
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout-phone-input--new",
-        },
+        { className: "adyen-checkout-phone-input--new" },
         (0, el.h)(
             "label",
-            {
-                htmlFor: b(),
-            },
+            { htmlFor: b() },
             (0, el.h)(
                 "span",
-                {
-                    className: ep()({
-                        "adyen-checkout__label__text": !0,
-                        "adyen-checkout__label__text--error": k,
-                    }),
-                },
+                { className: ep()({ "adyen-checkout__label__text": !0, "adyen-checkout__label__text--error": k }) },
                 e.phoneNumberKey ? s.get(e.phoneNumberKey) : s.get("telephoneNumber"),
             ),
         ),
@@ -33321,10 +28542,7 @@ function f4(e) {
             rA,
             {
                 name: "phoneNumber",
-                className: ep()({
-                    "adyen-checkout-field": !0,
-                    "adyen-checkout-field--phone-input": !0,
-                }),
+                className: ep()({ "adyen-checkout-field": !0, "adyen-checkout-field--phone-input": !0 }),
                 inputWrapperModifiers: ["phone-input"],
                 isValid: f.phoneNumber,
                 errorMessage: k,
@@ -33353,9 +28571,7 @@ function f4(e) {
                 u &&
                     (0, el.h)(
                         "div",
-                        {
-                            className: "adyen-checkout-phone-number",
-                        },
+                        { className: "adyen-checkout-phone-number" },
                         (0, el.h)("input", {
                             id: b(),
                             type: "tel",
@@ -33375,9 +28591,7 @@ function f4(e) {
         ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout-phone-input__error-holder",
-            },
+            { className: "adyen-checkout-phone-input__error-holder" },
             c &&
                 A("phonePrefix") &&
                 (0, el.h)(
@@ -33403,7 +28617,6 @@ function f4(e) {
         ),
     );
 }
-
 function f8(e) {
     var t,
         n,
@@ -33429,11 +28642,8 @@ function f8(e) {
         k = A[1];
     (this.setStatus = k), (this.showValidation = null == v || null == (h = v.current) ? void 0 : h.triggerValidation);
     var C =
-            ((n = (t = {
-                allowedCountries: void 0 === g ? [] : g,
-                loadingContext: y,
-                handleError: e.onError,
-            }).allowedCountries),
+            ((n = (t = { allowedCountries: void 0 === g ? [] : g, loadingContext: y, handleError: e.onError })
+                .allowedCountries),
             (r = t.loadingContext),
             (a = t.handleError),
             (o = tX("loading")),
@@ -33477,22 +28687,15 @@ function f8(e) {
                         p([]), l("ready"), null == a || a(new nv("ERROR", e));
                     });
             }, []),
-            {
-                phonePrefixes: d,
-                loadingStatus: s,
-            }),
+            { phonePrefixes: d, loadingStatus: s }),
         w = C.loadingStatus,
         S = C.phonePrefixes;
     return (0, el.h)(
         cl,
-        {
-            status: w,
-        },
+        { status: w },
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__mb-way",
-            },
+            { className: "adyen-checkout__mb-way" },
             (0, el.h)(
                 f4,
                 (0, er.A)({}, e, {
@@ -33503,34 +28706,22 @@ function f8(e) {
                             r = t.valid,
                             a = t.errors,
                             o = t.isValid;
-                        e.onChange({
-                            data: n,
-                            valid: r,
-                            errors: a,
-                            isValid: o,
-                        });
+                        e.onChange({ data: n, valid: r, errors: a, isValid: o });
                     },
                     data: e.data,
                 }),
             ),
-            e.showPayButton &&
-                e.payButton({
-                    status: _,
-                    label: m.get("confirmPurchase"),
-                }),
+            e.showPayButton && e.payButton({ status: _, label: m.get("confirmPurchase") }),
         ),
     );
 }
-(f4.defaultProps = {
-    phoneLabel: "telephoneNumber",
-}),
+(f4.defaultProps = { phoneLabel: "telephoneNumber" }),
     (f8.defaultProps = {
         onChange: function () {},
         phoneNumberKey: "mobileNumber",
         phoneNumberErrorKey: "mobileNumber.invalid",
     });
 var f3 = ["message"];
-
 function f6(e, t) {
     var n = c()(e);
     if (d()) {
@@ -33543,7 +28734,6 @@ function f6(e, t) {
     }
     return n;
 }
-
 function f5(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -33561,7 +28751,6 @@ function f5(e) {
     }
     return e;
 }
-
 function f9(e) {
     var t,
         n = this,
@@ -33608,29 +28797,13 @@ function f9(e) {
         z = function () {
             var t = e.paymentData,
                 r = e.clientKey;
-            k ||
-                (e.onActionHandled({
-                    componentType: e.type,
-                    actionDescription: "polling-started",
-                }),
-                C(!0)),
+            k || (e.onActionHandled({ componentType: e.type, actionDescription: "polling-started" }), C(!0)),
                 p6(t, r, o)
                     .then(he)
                     .catch(function (e) {
                         var t = e.message,
                             n = (0, _.A)(e, f3);
-                        return {
-                            type: "network-error",
-                            props: f5(
-                                f5(
-                                    {},
-                                    t && {
-                                        message: a.get(t),
-                                    },
-                                ),
-                                n,
-                            ),
-                        };
+                        return { type: "network-error", props: f5(f5({}, t && { message: a.get(t) }), n) };
                     })
                     .then(function (t) {
                         switch (t.type) {
@@ -33639,12 +28812,7 @@ function f9(e) {
                                     if (t.props.payload) {
                                         u(!0);
                                         var r = {
-                                            data: {
-                                                details: {
-                                                    payload: t.props.payload,
-                                                },
-                                                paymentData: e.paymentData,
-                                            },
+                                            data: { details: { payload: t.props.payload }, paymentData: e.paymentData },
                                         };
                                         return e.onComplete(r, n);
                                     }
@@ -33655,12 +28823,7 @@ function f9(e) {
                                 !(function (t) {
                                     if ((f(!0), t.props.payload)) {
                                         var r = {
-                                            data: {
-                                                details: {
-                                                    payload: t.props.payload,
-                                                },
-                                                paymentData: e.paymentData,
-                                            },
+                                            data: { details: { payload: t.props.payload }, paymentData: e.paymentData },
                                         };
                                         return e.onComplete(r, n);
                                     }
@@ -33697,21 +28860,15 @@ function f9(e) {
     var W = function (e, t) {
         return (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__await adyen-checkout__await--result",
-            },
+            { className: "adyen-checkout__await adyen-checkout__await--result" },
             (0, el.h)("img", {
                 className: "adyen-checkout__await__icon adyen-checkout__await__icon--result",
-                src: i({
-                    imageFolder: "components/",
-                })(e),
+                src: i({ imageFolder: "components/" })(e),
                 alt: a.get(t),
             }),
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__await__subtitle adyen-checkout__await__subtitle--result",
-                },
+                { className: "adyen-checkout__await__subtitle adyen-checkout__await__subtitle--result" },
                 a.get(t),
             ),
         );
@@ -33721,19 +28878,10 @@ function f9(e) {
     if (v)
         return (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__await",
-            },
+            { className: "adyen-checkout__await" },
             e.brandLogo &&
-                (0, el.h)("img", {
-                    src: e.brandLogo,
-                    alt: e.type,
-                    className: "adyen-checkout__await__brand-logo",
-                }),
-            (0, el.h)(tK, {
-                inline: !1,
-                size: "large",
-            }),
+                (0, el.h)("img", { src: e.brandLogo, alt: e.type, className: "adyen-checkout__await__brand-logo" }),
+            (0, el.h)(tK, { inline: !1, size: "large" }),
         );
     var G = a.get("wechatpay.timetopay").split("%@");
     return (0, el.h)(
@@ -33748,64 +28896,33 @@ function f9(e) {
             ),
         },
         e.brandLogo &&
-            (0, el.h)("img", {
-                src: e.brandLogo,
-                alt: e.type,
-                className: "adyen-checkout__await__brand-logo",
-            }),
+            (0, el.h)("img", { src: e.brandLogo, alt: e.type, className: "adyen-checkout__await__brand-logo" }),
+        (0, el.h)("div", { className: "adyen-checkout__await__subtitle" }, e.messageText),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__await__subtitle",
-            },
-            e.messageText,
-        ),
-        (0, el.h)(
-            "div",
-            {
-                className: "adyen-checkout__await__indicator-holder",
-            },
+            { className: "adyen-checkout__await__indicator-holder" },
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__await__indicator-spinner",
-                },
-                (0, el.h)(tK, {
-                    inline: !1,
-                    size: "medium",
-                }),
+                { className: "adyen-checkout__await__indicator-spinner" },
+                (0, el.h)(tK, { inline: !1, size: "medium" }),
             ),
-            (0, el.h)(
-                "div",
-                {
-                    className: "adyen-checkout__await__indicator-text",
-                },
-                e.awaitText,
-            ),
+            (0, el.h)("div", { className: "adyen-checkout__await__indicator-text" }, e.awaitText),
         ),
         e.showCountdownTimer &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__await__countdown-holder",
-                },
+                { className: "adyen-checkout__await__countdown-holder" },
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__await__progress",
-                    },
+                    { className: "adyen-checkout__await__progress" },
                     (0, el.h)("span", {
                         className: "adyen-checkout__await__percentage",
-                        style: {
-                            width: "".concat(F, "%"),
-                        },
+                        style: { width: "".concat(F, "%") },
                     }),
                 ),
                 (0, el.h)(
                     "div",
-                    {
-                        className: "adyen-checkout__await__countdown",
-                    },
+                    { className: "adyen-checkout__await__countdown" },
                     G[0],
                     "\xa0",
                     (0, el.h)(p3, {
@@ -33824,9 +28941,7 @@ function f9(e) {
         e.url &&
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__await__app-link",
-                },
+                { className: "adyen-checkout__await__app-link" },
                 (0, el.h)(i3, null),
                 (0, el.h)(nu, {
                     classNameModifiers: ["await"],
@@ -33839,7 +28954,6 @@ function f9(e) {
             ),
     );
 }
-
 function f7(e, t) {
     var n = c()(e);
     if (d()) {
@@ -33852,7 +28966,6 @@ function f7(e, t) {
     }
     return n;
 }
-
 function me(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -33904,7 +29017,6 @@ var mt = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -33925,9 +29037,7 @@ var mt = (function (e) {
                                 phoneNumber: n.telephoneNumber || n.phoneNumber,
                                 phonePrefix: n.phonePrefix || "+351",
                             },
-                            placeholders: {
-                                phoneNumber: a.telephoneNumber || a.phoneNumber || "932123456",
-                            },
+                            placeholders: { phoneNumber: a.telephoneNumber || a.phoneNumber || "932123456" },
                         },
                     );
                 },
@@ -33938,9 +29048,7 @@ var mt = (function (e) {
                     var e;
                     return {
                         paymentMethod: me(
-                            {
-                                type: r.type,
-                            },
+                            { type: r.type },
                             (null == (e = this.state.data) ? void 0 : e.phoneNumber) && {
                                 telephoneNumber: this.state.data.phonePrefix + this.state.data.phoneNumber,
                             },
@@ -33974,9 +29082,7 @@ var mt = (function (e) {
                               },
                               (0, el.h)(
                                   is,
-                                  {
-                                      srPanel: this.props.modules.srPanel,
-                                  },
+                                  { srPanel: this.props.modules.srPanel },
                                   (0, el.h)(f9, {
                                       ref: function (t) {
                                           e.componentRef = t;
@@ -34014,11 +29120,7 @@ var mt = (function (e) {
                                           },
                                       },
                                       this.props,
-                                      {
-                                          onChange: this.setState,
-                                          onSubmit: this.submit,
-                                          payButton: this.payButton,
-                                      },
+                                      { onChange: this.setState, onSubmit: this.submit, payButton: this.payButton },
                                   ),
                               ),
                           );
@@ -34032,7 +29134,6 @@ var mt = (function (e) {
 var mn = function (e) {
     return e.replace(/[^0-9]/g, "");
 };
-
 function mr(e) {
     var t = this,
         n = nc().i18n,
@@ -34048,9 +29149,7 @@ function mr(e) {
                     modes: ["blur"],
                 },
             },
-            formatters: {
-                blikCode: mn,
-            },
+            formatters: { blikCode: mn },
         }),
         o = a.handleChangeFor,
         i = a.triggerValidation,
@@ -34060,15 +29159,7 @@ function mr(e) {
         u = a.isValid;
     t1(
         function () {
-            e.onChange(
-                {
-                    data: s,
-                    errors: c,
-                    valid: l,
-                    isValid: u,
-                },
-                t,
-            );
+            e.onChange({ data: s, errors: c, valid: l, isValid: u }, t);
         },
         [s, l, c, u],
     );
@@ -34081,16 +29172,8 @@ function mr(e) {
         (this.showValidation = i),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__blik",
-            },
-            (0, el.h)(
-                "p",
-                {
-                    className: "adyen-checkout__blik__helper",
-                },
-                n.get("blik.help"),
-            ),
+            { className: "adyen-checkout__blik" },
+            (0, el.h)("p", { className: "adyen-checkout__blik__helper" }, n.get("blik.help")),
             (0, el.h)(
                 rA,
                 {
@@ -34115,17 +29198,10 @@ function mr(e) {
                     maxLength: 6,
                 }),
             ),
-            e.showPayButton &&
-                e.payButton({
-                    status: h,
-                    icon: r({
-                        imageFolder: "components/",
-                    })("lock"),
-                }),
+            e.showPayButton && e.payButton({ status: h, icon: r({ imageFolder: "components/" })("lock") }),
         )
     );
 }
-
 function ma(e, t) {
     var n = c()(e);
     if (d()) {
@@ -34138,7 +29214,6 @@ function ma(e, t) {
     }
     return n;
 }
-
 function mo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -34156,11 +29231,7 @@ function mo(e) {
     }
     return e;
 }
-mr.defaultProps = {
-    data: {
-        blikCode: "",
-    },
-};
+mr.defaultProps = { data: { blikCode: "" } };
 var mi = (function (e) {
     (0, eo.A)(r, n_);
     var t,
@@ -34183,7 +29254,6 @@ var mi = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -34197,16 +29267,12 @@ var mi = (function (e) {
                     return {
                         paymentMethod: mo(
                             mo(
-                                {
-                                    type: r.type,
-                                },
+                                { type: r.type },
                                 !t && {
                                     blikCode: null == (e = this.state) || null == (e = e.data) ? void 0 : e.blikCode,
                                 },
                             ),
-                            t && {
-                                storedPaymentMethodId: this.props.storedPaymentMethodId,
-                            },
+                            t && { storedPaymentMethodId: this.props.storedPaymentMethodId },
                         ),
                     };
                 },
@@ -34231,9 +29297,7 @@ var mi = (function (e) {
                               },
                               (0, el.h)(
                                   is,
-                                  {
-                                      srPanel: this.props.modules.srPanel,
-                                  },
+                                  { srPanel: this.props.modules.srPanel },
                                   (0, el.h)(f9, {
                                       ref: function (t) {
                                           e.componentRef = t;
@@ -34295,7 +29359,6 @@ var mi = (function (e) {
         r
     );
 })();
-
 function ms(e) {
     var t = e.reference,
         n = e.totalAmount,
@@ -34308,39 +29371,20 @@ function ms(e) {
         imageUrl: o()(r),
         amount: n && a.amount(n.value, n.currency),
         voucherDetails: [
-            {
-                label: a.get("bankTransfer.beneficiary"),
-                value: e.beneficiary,
-            },
-            {
-                label: a.get("bankTransfer.iban"),
-                value: e.iban,
-            },
-            {
-                label: a.get("bankTransfer.bic"),
-                value: e.bic,
-            },
-            {
-                label: a.get("bankTransfer.reference"),
-                value: t,
-            },
+            { label: a.get("bankTransfer.beneficiary"), value: e.beneficiary },
+            { label: a.get("bankTransfer.iban"), value: e.iban },
+            { label: a.get("bankTransfer.bic"), value: e.bic },
+            { label: a.get("bankTransfer.reference"), value: t },
         ],
     });
 }
-
 function ml(e) {
     var t = nc().i18n,
         n = tX(!1),
         r = (0, K.A)(n, 2),
         a = r[0],
         o = r[1],
-        i = rj({
-            schema: [],
-            defaultData: e.data,
-            rules: {
-                shopperEmail: r1.shopperEmail,
-            },
-        }),
+        i = rj({ schema: [], defaultData: e.data, rules: { shopperEmail: r1.shopperEmail } }),
         s = i.handleChangeFor,
         l = i.triggerValidation,
         c = i.data,
@@ -34358,25 +29402,16 @@ function ml(e) {
         (this.showValidation = l),
         t1(
             function () {
-                e.onChange({
-                    data: c,
-                    errors: d,
-                    valid: u,
-                    isValid: p,
-                });
+                e.onChange({ data: c, errors: d, valid: u, isValid: p });
             },
             [c, u, d, a, p],
         ),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__bankTransfer",
-            },
+            { className: "adyen-checkout__bankTransfer" },
             (0, el.h)(
                 "p",
-                {
-                    className: "adyen-checkout__bankTransfer__introduction",
-                },
+                { className: "adyen-checkout__bankTransfer__introduction" },
                 t.get("bankTransfer.introduction"),
             ),
             (0, el.h)(hP, {
@@ -34392,7 +29427,6 @@ function ml(e) {
         )
     );
 }
-
 function mc(e, t) {
     var n = c()(e);
     if (d()) {
@@ -34428,17 +29462,13 @@ var mu = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
         for (var a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
         return (
             (t = n.call.apply(n, M()((e = [this])).call(e, o))),
-            (0, w.A)((0, ea.A)(t), "state", {
-                isValid: !t.props.showEmailAddress,
-                data: {},
-            }),
+            (0, w.A)((0, ea.A)(t), "state", { isValid: !t.props.showEmailAddress, data: {} }),
             (0, w.A)((0, ea.A)(t), "handleRef", function (e) {
                 t.componentRef = e;
             }),
@@ -34473,16 +29503,7 @@ var mu = (function (e) {
                                     });
                         }
                         return e;
-                    })(
-                        {
-                            paymentMethod: {
-                                type: r.type,
-                            },
-                        },
-                        e && {
-                            shopperEmail: e,
-                        },
-                    );
+                    })({ paymentMethod: { type: r.type } }, e && { shopperEmail: e });
                 },
             },
             {
@@ -34496,15 +29517,7 @@ var mu = (function (e) {
                                   loadingContext: this.props.loadingContext,
                                   resources: this.resources,
                               },
-                              (0, el.h)(
-                                  ms,
-                                  (0, er.A)(
-                                      {
-                                          ref: this.handleRef,
-                                      },
-                                      this.props,
-                                  ),
-                              ),
+                              (0, el.h)(ms, (0, er.A)({ ref: this.handleRef }, this.props)),
                           )
                         : (0, el.h)(
                               o7,
@@ -34516,15 +29529,7 @@ var mu = (function (e) {
                               this.props.showEmailAddress &&
                                   (0, el.h)(
                                       ml,
-                                      (0, er.A)(
-                                          {
-                                              ref: this.handleRef,
-                                          },
-                                          this.props,
-                                          {
-                                              onChange: this.setState,
-                                          },
-                                      ),
+                                      (0, er.A)({ ref: this.handleRef }, this.props, { onChange: this.setState }),
                                   ),
                               this.props.showPayButton &&
                                   (0, el.h)(
@@ -34542,13 +29547,8 @@ var mu = (function (e) {
         r
     );
 })();
-(0, w.A)(mu, "type", "bankTransfer_IBAN"),
-    (0, w.A)(mu, "defaultProps", {
-        showPayButton: !0,
-        showEmailAddress: !0,
-    });
+(0, w.A)(mu, "type", "bankTransfer_IBAN"), (0, w.A)(mu, "defaultProps", { showPayButton: !0, showEmailAddress: !0 });
 var md = ["CA", "US"];
-
 function mp(e, t) {
     var n = c()(e);
     if (d()) {
@@ -34561,7 +29561,6 @@ function mp(e, t) {
     }
     return n;
 }
-
 function mh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -34601,7 +29600,6 @@ var mf = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -34626,11 +29624,7 @@ var mf = (function (e) {
 })();
 (0, w.A)(mf, "type", "affirm");
 var mm = {
-        socialSecurityNumber: {
-            validate: lQ,
-            errorMessage: "",
-            modes: ["blur"],
-        },
+        socialSecurityNumber: { validate: lQ, errorMessage: "", modes: ["blur"] },
         default: {
             validate: function (e) {
                 return !!e && e.length > 0;
@@ -34644,7 +29638,6 @@ var mm = {
             return lY(e);
         },
     };
-
 function mv(e) {
     var t,
         n = e.name,
@@ -34656,12 +29649,7 @@ function mv(e) {
         l = e.payButton,
         c = nc().i18n,
         u = ["firstName", "lastName", "socialSecurityNumber"],
-        d = rj({
-            schema: u,
-            defaultData: r,
-            rules: mm,
-            formatters: my,
-        }),
+        d = rj({ schema: u, defaultData: r, rules: mm, formatters: my }),
         p = d.handleChangeFor,
         h = d.triggerValidation,
         f = d.setSchema,
@@ -34686,44 +29674,18 @@ function mv(e) {
         }),
         t1(
             function () {
-                s({
-                    data: m,
-                    valid: y,
-                    errors: v,
-                    isValid: g,
-                });
+                s({ data: m, valid: y, errors: v, isValid: g });
             },
             [s, m, y, v],
         );
     var C = a ? [] : ["standalone"];
     return (0, el.h)(
         "div",
-        {
-            className: "adyen-checkout__pix-input__field",
-            style:
-                i || a
-                    ? null
-                    : {
-                          display: "none",
-                      },
-        },
-        a &&
-            (0, el.h)(hR, {
-                i18n: c,
-                data: m,
-                handleChangeFor: p,
-                errors: v,
-                valid: y,
-            }),
-        i &&
-            l({
-                status: _,
-                label: M()((t = "".concat(c.get("continueTo"), " "))).call(t, n),
-                classNameModifiers: C,
-            }),
+        { className: "adyen-checkout__pix-input__field", style: i || a ? null : { display: "none" } },
+        a && (0, el.h)(hR, { i18n: c, data: m, handleChangeFor: p, errors: v, valid: y }),
+        i && l({ status: _, label: M()((t = "".concat(c.get("continueTo"), " "))).call(t, n), classNameModifiers: C }),
     );
 }
-
 function mg(e, t) {
     var n = c()(e);
     if (d()) {
@@ -34736,7 +29698,6 @@ function mg(e, t) {
     }
     return n;
 }
-
 function mb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -34776,7 +29737,6 @@ var mA = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -34792,10 +29752,7 @@ var mA = (function (e) {
                 key: "formatProps",
                 value: function (e) {
                     return mb(
-                        {
-                            copyBtn: !0,
-                            introduction: "pix.instructions",
-                        },
+                        { copyBtn: !0, introduction: "pix.instructions" },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -34811,22 +29768,10 @@ var mA = (function (e) {
                         o = void 0 === a ? "" : a;
                     return mb(
                         mb(
-                            {
-                                paymentMethod: {
-                                    type: this.props.type || this.constructor.type,
-                                },
-                            },
-                            n &&
-                                r && {
-                                    shopperName: {
-                                        firstName: n,
-                                        lastName: r,
-                                    },
-                                },
+                            { paymentMethod: { type: this.props.type || this.constructor.type } },
+                            n && r && { shopperName: { firstName: n, lastName: r } },
                         ),
-                        o && {
-                            socialSecurityNumber: l$(o),
-                        },
+                        o && { socialSecurityNumber: l$(o) },
                     );
                 },
             },
@@ -34872,15 +29817,7 @@ var mA = (function (e) {
     (0, w.A)(
         mA,
         "defaultProps",
-        mb(
-            {
-                showPayButton: !1,
-                personalDetailsRequired: !1,
-                countdownTime: 15,
-                delay: 2e3,
-            },
-            ha.defaultProps,
-        ),
+        mb({ showPayButton: !1, personalDetailsRequired: !1, countdownTime: 15, delay: 2e3 }, ha.defaultProps),
     );
 var m_ = /^(\d){1,8}$/,
     mk = /^(\d){6}$/,
@@ -34925,13 +29862,9 @@ var m_ = /^(\d){1,8}$/,
             },
         },
     },
-    mw = {
-        bankAccountNumber: mn,
-        bankLocationId: mn,
-    },
+    mw = { bankAccountNumber: mn, bankLocationId: mn },
     mS = "enter-data",
     mN = "confirm-data";
-
 function mx(e) {
     var t,
         n,
@@ -34967,12 +29900,7 @@ function mx(e) {
         (this.showValidation = c),
         t1(
             function () {
-                e.onChange({
-                    data: u,
-                    valid: d,
-                    errors: p,
-                    isValid: h,
-                });
+                e.onChange({ data: u, valid: d, errors: p, isValid: h });
             },
             [u, d, p, h],
         ),
@@ -35035,9 +29963,7 @@ function mx(e) {
             ),
             (0, el.h)(
                 "div",
-                {
-                    className: "adyen-checkout__bacs__num-id adyen-checkout__field-wrapper",
-                },
+                { className: "adyen-checkout__bacs__num-id adyen-checkout__field-wrapper" },
                 (0, el.h)(
                     rA,
                     {
@@ -35155,9 +30081,7 @@ function mx(e) {
                                       ? o.amount(e.amount.value, e.amount.currency)
                                       : "",
                               ),
-                    icon: i({
-                        imageFolder: "components/",
-                    })("lock"),
+                    icon: i({ imageFolder: "components/" })("lock"),
                     onClick: function () {
                         return h ? (y === mS ? a.setStatus(mN) : y === mN ? e.onSubmit() : void 0) : a.showValidation();
                     },
@@ -35165,10 +30089,7 @@ function mx(e) {
         )
     );
 }
-mx.defaultProps = {
-    data: {},
-    placeholders: {},
-};
+mx.defaultProps = { data: {}, placeholders: {} };
 var mP = function (e) {
     var t = nc().i18n,
         n = nB(),
@@ -35182,7 +30103,6 @@ var mP = function (e) {
         downloadButtonText: t.get("download.pdf"),
     });
 };
-
 function mR(e, t) {
     var n = c()(e);
     if (d()) {
@@ -35195,7 +30115,6 @@ function mR(e, t) {
     }
     return n;
 }
-
 function mF(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -35235,7 +30154,6 @@ var mO = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -35243,16 +30161,7 @@ var mO = (function (e) {
         return (
             (t = n.call.apply(n, M()((e = [this])).call(e, o))),
             (0, w.A)((0, ea.A)(t), "payButton", function (e) {
-                return (0, el.h)(
-                    nm,
-                    (0, er.A)(
-                        {
-                            amount: t.props.amount,
-                            onClick: t.submit,
-                        },
-                        e,
-                    ),
-                );
+                return (0, el.h)(nm, (0, er.A)({ amount: t.props.amount, onClick: t.submit }, e));
             }),
             t
         );
@@ -35268,9 +30177,7 @@ var mO = (function (e) {
                             paymentMethod: mF(
                                 mF(
                                     mF(
-                                        {
-                                            type: r.type,
-                                        },
+                                        { type: r.type },
                                         (null == (e = this.state.data) ? void 0 : e.holderName) && {
                                             holderName: this.state.data.holderName,
                                         },
@@ -35302,11 +30209,7 @@ var mO = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         this.props.url
                             ? (0, el.h)(mP, {
                                   ref: function (t) {
@@ -35325,11 +30228,7 @@ var mO = (function (e) {
                                           },
                                       },
                                       this.props,
-                                      {
-                                          onChange: this.setState,
-                                          payButton: this.payButton,
-                                          onSubmit: this.submit,
-                                      },
+                                      { onChange: this.setState, payButton: this.payButton, onSubmit: this.submit },
                                   ),
                               ),
                     );
@@ -35339,10 +30238,7 @@ var mO = (function (e) {
         r
     );
 })();
-(0, w.A)(mO, "type", "directdebit_GB"),
-    (0, w.A)(mO, "defaultProps", {
-        showFormInstruction: !0,
-    });
+(0, w.A)(mO, "type", "directdebit_GB"), (0, w.A)(mO, "defaultProps", { showFormInstruction: !0 });
 var mE = (function (e) {
         (0, eo.A)(r, n_);
         var t,
@@ -35365,7 +30261,6 @@ var mE = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             return (0, k.A)(this, r), n.apply(this, arguments);
         }
@@ -35396,13 +30291,9 @@ var mE = (function (e) {
                             (0, el.h)(
                                 oA,
                                 (0, er.A)(
-                                    {
-                                        setComponentRef: this.setComponentRef,
-                                    },
+                                    { setComponentRef: this.setComponentRef },
                                     this.props,
-                                    {
-                                        onChange: this.setState,
-                                    },
+                                    { onChange: this.setState },
                                     !1,
                                 ),
                             ),
@@ -35435,7 +30326,6 @@ var mE = (function (e) {
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             return (0, k.A)(this, r), n.apply(this, arguments);
         }
@@ -35467,13 +30357,9 @@ var mE = (function (e) {
                             (0, el.h)(
                                 ai,
                                 (0, er.A)(
-                                    {
-                                        setComponentRef: this.setComponentRef,
-                                    },
+                                    { setComponentRef: this.setComponentRef },
                                     this.props,
-                                    {
-                                        onChange: this.setState,
-                                    },
+                                    { onChange: this.setState },
                                     !1,
                                 ),
                             ),
@@ -35484,11 +30370,8 @@ var mE = (function (e) {
             r
         );
     })();
-(0, w.A)(mI, "defaultProps", {
-    showFormInstruction: !0,
-});
+(0, w.A)(mI, "defaultProps", { showFormInstruction: !0 });
 var mM = ["sdkData", "paymentMethodType", "payButton"];
-
 function mT(e) {
     var t = e.sdkData;
     e.paymentMethodType;
@@ -35500,25 +30383,14 @@ function mT(e) {
         s = i[0],
         l = i[1],
         c = function () {
-            l("error"),
-                r.onComplete({
-                    data: {
-                        paymentData: r.paymentData,
-                        details: {},
-                    },
-                });
+            l("error"), r.onComplete({ data: { paymentData: r.paymentData, details: {} } });
         };
     return (
         t1(function () {
             window.klarnaAsyncCallback = function () {
-                window.Klarna.Payments.init({
-                    client_token: t.client_token,
-                }),
+                window.Klarna.Payments.init({ client_token: t.client_token }),
                     window.Klarna.Payments.load(
-                        {
-                            container: a.current,
-                            payment_method_category: t.payment_method_category,
-                        },
+                        { container: a.current, payment_method_category: t.payment_method_category },
                         function (e) {
                             !e.show_form || e.error ? c() : r.onLoaded();
                         },
@@ -35535,12 +30407,8 @@ function mT(e) {
         "error" !== s && "success" !== s
             ? (0, el.h)(
                   "div",
-                  {
-                      className: "adyen-checkout__klarna-widget",
-                  },
-                  (0, el.h)("div", {
-                      ref: a,
-                  }),
+                  { className: "adyen-checkout__klarna-widget" },
+                  (0, el.h)("div", { ref: a }),
                   n({
                       status: s,
                       disabled: "loading" === s,
@@ -35548,18 +30416,14 @@ function mT(e) {
                           l("loading");
                           try {
                               window.Klarna.Payments.authorize(
-                                  {
-                                      payment_method_category: t.payment_method_category,
-                                  },
+                                  { payment_method_category: t.payment_method_category },
                                   function (e) {
                                       !0 === e.approved && !0 === e.show_form
                                           ? (l("success"),
                                             r.onComplete({
                                                 data: {
                                                     paymentData: r.paymentData,
-                                                    details: {
-                                                        token: e.authorization_token,
-                                                    },
+                                                    details: { token: e.authorization_token },
                                                 },
                                             }))
                                           : e.approved || !0 !== e.show_form
@@ -35576,7 +30440,6 @@ function mT(e) {
             : null
     );
 }
-
 function mB(e, t) {
     var n = c()(e);
     if (d()) {
@@ -35589,7 +30452,6 @@ function mB(e, t) {
     }
     return n;
 }
-
 function mD(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -35607,14 +30469,9 @@ function mD(e) {
     }
     return e;
 }
-
 function mL(e) {
     var t,
-        n = tX({
-            sdkData: e.sdkData,
-            paymentMethodType: e.paymentMethodType,
-            paymentData: e.paymentData,
-        }),
+        n = tX({ sdkData: e.sdkData, paymentMethodType: e.paymentMethodType, paymentData: e.paymentData }),
         r = (0, K.A)(n, 2),
         a = r[0],
         o = r[1],
@@ -35651,7 +30508,6 @@ function mL(e) {
               : null
     );
 }
-
 function mV(e, t) {
     var n = c()(e);
     if (d()) {
@@ -35686,23 +30542,13 @@ var mj = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a, o, i, s;
         return (
             (0, k.A)(this, r),
             (s = n.call(this, e)),
             (0, w.A)((0, ea.A)(s), "payButton", function (e) {
-                return (0, el.h)(
-                    nm,
-                    (0, er.A)(
-                        {
-                            amount: s.props.amount,
-                            onClick: s.submit,
-                        },
-                        e,
-                    ),
-                );
+                return (0, el.h)(nm, (0, er.A)({ amount: s.props.amount, onClick: s.submit }, e));
             }),
             (s.onComplete = F()((t = s.onComplete)).call(t, (0, ea.A)(s))),
             (s.updateWithAction = F()((a = s.updateWithAction)).call(a, (0, ea.A)(s))),
@@ -35739,16 +30585,7 @@ var mj = (function (e) {
                                         });
                             }
                             return e;
-                        })(
-                            {
-                                type: this.type,
-                            },
-                            this.props.useKlarnaWidget
-                                ? {
-                                      subtype: "sdk",
-                                  }
-                                : {},
-                        ),
+                        })({ type: this.type }, this.props.useKlarnaWidget ? { subtype: "sdk" } : {}),
                     };
                 },
             },
@@ -35771,11 +30608,7 @@ var mj = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             mL,
                             (0, er.A)({}, this.props, {
@@ -35798,10 +30631,7 @@ var mj = (function (e) {
         r
     );
 })();
-(0, w.A)(mj, "type", "klarna"),
-    (0, w.A)(mj, "defaultProps", {
-        useKlarnaWidget: !1,
-    });
+(0, w.A)(mj, "type", "klarna"), (0, w.A)(mj, "defaultProps", { useKlarnaWidget: !1 });
 var mU = (function (e) {
     (0, eo.A)(r, dc);
     var t,
@@ -35824,7 +30654,6 @@ var mU = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         var e, t;
         (0, k.A)(this, r);
@@ -35832,13 +30661,7 @@ var mU = (function (e) {
         return (
             (t = n.call.apply(n, M()((e = [this])).call(e, o))),
             (0, w.A)((0, ea.A)(t), "payButton", function (e) {
-                return (0, el.h)(
-                    nm,
-                    (0, er.A)({}, e, {
-                        label: t.payButtonLabel(),
-                        onClick: t.submit,
-                    }),
-                );
+                return (0, el.h)(nm, (0, er.A)({}, e, { label: t.payButtonLabel(), onClick: t.submit }));
             }),
             t
         );
@@ -35873,11 +30696,7 @@ var mU = (function (e) {
         r
     );
 })();
-(0, w.A)(mU, "type", "twint"),
-    (0, w.A)(mU, "defaultProps", {
-        type: mU.type,
-        showPayButton: !0,
-    });
+(0, w.A)(mU, "type", "twint"), (0, w.A)(mU, "defaultProps", { type: mU.type, showPayButton: !0 });
 var mq = function (e) {
     var t = e.i18n,
         n = e.sfpState,
@@ -35913,7 +30732,6 @@ var mq = function (e) {
         }),
     );
 };
-
 function mK(e, t) {
     var n = c()(e);
     if (d()) {
@@ -35926,7 +30744,6 @@ function mK(e, t) {
     }
     return n;
 }
-
 function mH(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -35946,40 +30763,19 @@ function mH(e) {
 }
 var mz = function (e) {
     var t = e.setRootNode,
-        n = mH(
-            mH({}, e),
-            {},
-            {
-                label: e.i18n.get("creditCard.cvcField.title"),
-            },
-        );
+        n = mH(mH({}, e), {}, { label: e.i18n.get("creditCard.cvcField.title") });
     return (0, el.h)(
         "div",
-        {
-            ref: t,
-        },
-        (0, el.h)(
-            hJ,
-            (0, er.A)({}, e, {
-                classNameModifiers: ["100"],
-            }),
-        ),
+        { ref: t },
+        (0, el.h)(hJ, (0, er.A)({}, e, { classNameModifiers: ["100"] })),
         (0, el.h)(
             "div",
-            {
-                className: "adyen-checkout__field-wrapper",
-            },
+            { className: "adyen-checkout__field-wrapper" },
             (0, el.h)(mq, e),
-            (0, el.h)(
-                hX,
-                (0, er.A)({}, n, {
-                    classNameModifiers: ["50"],
-                }),
-            ),
+            (0, el.h)(hX, (0, er.A)({}, n, { classNameModifiers: ["50"] })),
         ),
     );
 };
-
 function mW(e, t) {
     var n = c()(e);
     if (d()) {
@@ -35992,7 +30788,6 @@ function mW(e, t) {
     }
     return n;
 }
-
 function mG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36032,22 +30827,10 @@ var m$ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         return (
             (0, k.A)(this, r),
-            n.call(
-                this,
-                mG(
-                    mG({}, e),
-                    {},
-                    {
-                        pinRequired: !0,
-                        expiryDateRequired: !0,
-                        fieldsLayoutComponent: mz,
-                    },
-                ),
-            )
+            n.call(this, mG(mG({}, e), {}, { pinRequired: !0, expiryDateRequired: !0, fieldsLayoutComponent: mz }))
         );
     }
     return (
@@ -36055,12 +30838,7 @@ var m$ = (function (e) {
             {
                 key: "formatProps",
                 value: function (e) {
-                    return mG(
-                        {
-                            brand: e.type,
-                        },
-                        e,
-                    );
+                    return mG({ brand: e.type }, e);
                 },
             },
             {
@@ -36083,7 +30861,6 @@ var m$ = (function (e) {
         r
     );
 })();
-
 function mY(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36096,7 +30873,6 @@ function mY(e, t) {
     }
     return n;
 }
-
 function mQ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36137,7 +30913,6 @@ var mZ = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -36149,9 +30924,7 @@ var mZ = (function (e) {
                     return mQ(
                         mQ({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -36161,9 +30934,7 @@ var mZ = (function (e) {
                     return mQ(
                         mQ({}, (0, ey.A)((0, es.A)(r.prototype), "formatData", this).call(this)),
                         {},
-                        {
-                            browserInfo: this.browserInfo,
-                        },
+                        { browserInfo: this.browserInfo },
                     );
                 },
             },
@@ -36177,7 +30948,6 @@ var mZ = (function (e) {
         r
     );
 })();
-
 function mJ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36190,7 +30960,6 @@ function mJ(e, t) {
     }
     return n;
 }
-
 function mX(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36231,25 +31000,11 @@ var m0 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
-        return (
-            (0, k.A)(this, r),
-            n.call(
-                this,
-                mX(
-                    mX({}, e),
-                    {},
-                    {
-                        termsAndConditions: r.termsAndConditions,
-                    },
-                ),
-            )
-        );
+        return (0, k.A)(this, r), n.call(this, mX(mX({}, e), {}, { termsAndConditions: r.termsAndConditions }));
     }
     return (0, C.A)(r);
 })();
-
 function m1(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36262,7 +31017,6 @@ function m1(e, t) {
     }
     return n;
 }
-
 function m2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36311,7 +31065,6 @@ var m4 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -36325,17 +31078,11 @@ var m4 = (function (e) {
                             {},
                             (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(
                                 this,
-                                m2(m2({}, e), {
-                                    visibility: {
-                                        bankAccount: "editable",
-                                    },
-                                }),
+                                m2(m2({}, e), { visibility: { bankAccount: "editable" } }),
                             ),
                         ),
                         {},
-                        {
-                            allowedCountries: e.countryCode ? [e.countryCode] : ft,
-                        },
+                        { allowedCountries: e.countryCode ? [e.countryCode] : ft },
                     );
                 },
             },
@@ -36361,20 +31108,14 @@ var m8 = {
         },
     },
     m3 = function (e) {
-        var t = rj({
-                schema: ["virtualPaymentAddress"],
-                defaultData: e.data,
-                rules: m8,
-            }),
+        var t = rj({ schema: ["virtualPaymentAddress"], defaultData: e.data, rules: m8 }),
             n = t.handleChangeFor,
             r = t.triggerValidation,
             a = t.data,
             o = t.valid,
             i = t.errors,
             s = t.isValid,
-            l = t4({
-                validateInput: null,
-            }),
+            l = t4({ validateInput: null }),
             c = t3(
                 function () {
                     r();
@@ -36390,12 +31131,7 @@ var m8 = {
             ),
             t1(
                 function () {
-                    e.onChange({
-                        data: a,
-                        valid: o,
-                        errors: i,
-                        isValid: s,
-                    });
+                    e.onChange({ data: a, valid: o, errors: i, isValid: s });
                 },
                 [a, o, i, s],
             ),
@@ -36419,7 +31155,6 @@ var m8 = {
             )
         );
     };
-
 function m6(e) {
     var t,
         n = e.classNameModifiers,
@@ -36437,9 +31172,7 @@ function m6(e) {
                       M()(
                           (t = [
                               "adyen-checkout__segmented-control",
-                              {
-                                  "adyen-checkout__segmented-control--disabled": o,
-                              },
+                              { "adyen-checkout__segmented-control--disabled": o },
                           ]),
                       ).call(
                           t,
@@ -36480,16 +31213,9 @@ function m6(e) {
 }
 var m5 = (((r = {}).Vpa = "vpa"), (r.QrCode = "qrCode"), r),
     m9 = {
-        ButtonId: {
-            VPA: "upi-button-".concat(m5.Vpa),
-            QR: "upi-button-".concat(m5.QrCode),
-        },
-        AreaId: {
-            VPA: "upi-area-".concat(m5.Vpa),
-            QR: "upi-area-".concat(m5.QrCode),
-        },
+        ButtonId: { VPA: "upi-button-".concat(m5.Vpa), QR: "upi-button-".concat(m5.QrCode) },
+        AreaId: { VPA: "upi-area-".concat(m5.Vpa), QR: "upi-area-".concat(m5.QrCode) },
     };
-
 function m7(e) {
     var t = e.defaultMode,
         n = e.onChange,
@@ -36528,13 +31254,7 @@ function m7(e) {
     return (0, el.h)(
         el.FK,
         null,
-        (0, el.h)(
-            "p",
-            {
-                className: "adyen-checkout_upi-mode-selection-text",
-            },
-            i.get("upi.modeSelection"),
-        ),
+        (0, el.h)("p", { className: "adyen-checkout_upi-mode-selection-text" }, i.get("upi.modeSelection")),
         (0, el.h)(m6, {
             onChange: _,
             selectedValue: g,
@@ -36544,61 +31264,29 @@ function m7(e) {
                 {
                     label: uS() ? "VPA" : "Virtual Payment Address",
                     value: m5.Vpa,
-                    htmlProps: {
-                        id: m9.ButtonId.VPA,
-                        "aria-expanded": g === m5.Vpa,
-                        "aria-controls": m9.AreaId.VPA,
-                    },
+                    htmlProps: { id: m9.ButtonId.VPA, "aria-expanded": g === m5.Vpa, "aria-controls": m9.AreaId.VPA },
                 },
                 {
                     label: "QR Code",
                     value: m5.QrCode,
-                    htmlProps: {
-                        id: m9.ButtonId.QR,
-                        "aria-expanded": g === m5.QrCode,
-                        "aria-controls": m9.AreaId.QR,
-                    },
+                    htmlProps: { id: m9.ButtonId.QR, "aria-expanded": g === m5.QrCode, "aria-controls": m9.AreaId.QR },
                 },
             ],
         }),
         g === m5.Vpa
             ? (0, el.h)(
                   "div",
-                  {
-                      id: m9.AreaId.VPA,
-                      "aria-labelledby": m9.ButtonId.VPA,
-                      role: "region",
-                  },
-                  (0, el.h)(m3, {
-                      disabled: "loading" === f,
-                      onChange: n,
-                      onSetInputHandlers: A,
-                  }),
-                  o &&
-                      a({
-                          label: i.get("continue"),
-                          status: f,
-                      }),
+                  { id: m9.AreaId.VPA, "aria-labelledby": m9.ButtonId.VPA, role: "region" },
+                  (0, el.h)(m3, { disabled: "loading" === f, onChange: n, onSetInputHandlers: A }),
+                  o && a({ label: i.get("continue"), status: f }),
               )
             : (0, el.h)(
                   "div",
-                  {
-                      id: m9.AreaId.QR,
-                      "aria-labelledby": m9.ButtonId.QR,
-                      role: "region",
-                  },
-                  o &&
-                      a({
-                          label: i.get("generateQRCode"),
-                          icon: s({
-                              imageFolder: "components/",
-                          })("qr"),
-                          status: f,
-                      }),
+                  { id: m9.AreaId.QR, "aria-labelledby": m9.ButtonId.QR, role: "region" },
+                  o && a({ label: i.get("generateQRCode"), icon: s({ imageFolder: "components/" })("qr"), status: f }),
               ),
     );
 }
-
 function ye(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36634,7 +31322,6 @@ var yt = (((a = yt || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
                     } else e = n.apply(this, arguments);
                     return (0, ei.A)(this, e);
                 });
-
         function r() {
             var e, t;
             (0, k.A)(this, r);
@@ -36644,13 +31331,7 @@ var yt = (((a = yt || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
                 (0, w.A)((0, ea.A)(t), "useQrCodeVariant", void 0),
                 (0, w.A)((0, ea.A)(t), "onUpdateMode", function (e) {
                     e === m5.QrCode
-                        ? ((t.useQrCodeVariant = !0),
-                          t.setState({
-                              data: {},
-                              valid: {},
-                              errors: {},
-                              isValid: !0,
-                          }))
+                        ? ((t.useQrCodeVariant = !0), t.setState({ data: {}, valid: {}, errors: {}, isValid: !0 }))
                         : (t.useQrCodeVariant = !1);
                 }),
                 t
@@ -36686,13 +31367,8 @@ var yt = (((a = yt || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
                                 }
                                 return e;
                             })(
-                                {
-                                    type: this.useQrCodeVariant ? yt.UpiQr : yt.UpiCollect,
-                                },
-                                e &&
-                                    !this.useQrCodeVariant && {
-                                        virtualPaymentAddress: e,
-                                    },
+                                { type: this.useQrCodeVariant ? yt.UpiQr : yt.UpiCollect },
+                                e && !this.useQrCodeVariant && { virtualPaymentAddress: e },
                             ),
                         };
                     },
@@ -36767,13 +31443,7 @@ var yt = (((a = yt || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
                                 loadingContext: this.props.loadingContext,
                                 resources: this.resources,
                             },
-                            (0, el.h)(
-                                is,
-                                {
-                                    srPanel: this.props.modules.srPanel,
-                                },
-                                this.renderContent(e),
-                            ),
+                            (0, el.h)(is, { srPanel: this.props.modules.srPanel }, this.renderContent(e)),
                         );
                     },
                 },
@@ -36781,7 +31451,6 @@ var yt = (((a = yt || {}).UpiCollect = "upi_collect"), (a.UpiQr = "upi_qr"), a),
             r
         );
     })();
-
 function yr(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36794,7 +31463,6 @@ function yr(e, t) {
     }
     return n;
 }
-
 function ya(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36812,10 +31480,7 @@ function ya(e) {
     }
     return e;
 }
-(0, w.A)(yn, "type", "upi"),
-    (0, w.A)(yn, "defaultProps", {
-        defaultMode: m5.Vpa,
-    });
+(0, w.A)(yn, "type", "upi"), (0, w.A)(yn, "defaultProps", { defaultMode: m5.Vpa });
 var yo = (function (e) {
     (0, eo.A)(r, sh);
     var t,
@@ -36838,7 +31503,6 @@ var yo = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -36850,9 +31514,7 @@ var yo = (function (e) {
                     return ya(
                         ya({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                        },
+                        { showImage: !1 },
                     );
                 },
             },
@@ -36862,9 +31524,7 @@ var yo = (function (e) {
                     return ya(
                         ya({}, (0, ey.A)((0, es.A)(r.prototype), "formatData", this).call(this)),
                         {},
-                        {
-                            browserInfo: this.browserInfo,
-                        },
+                        { browserInfo: this.browserInfo },
                     );
                 },
             },
@@ -36878,7 +31538,6 @@ var yo = (function (e) {
         r
     );
 })();
-
 function yi(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36891,7 +31550,6 @@ function yi(e, t) {
     }
     return n;
 }
-
 function ys(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -36932,7 +31590,6 @@ var yl = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -36944,10 +31601,7 @@ var yl = (function (e) {
                     return ys(
                         ys({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                            termsAndConditions: r.termsAndConditions,
-                        },
+                        { showImage: !1, termsAndConditions: r.termsAndConditions },
                     );
                 },
             },
@@ -36962,7 +31616,6 @@ var yl = (function (e) {
         r
     );
 })();
-
 function yc(e, t) {
     var n = c()(e);
     if (d()) {
@@ -36975,7 +31628,6 @@ function yc(e, t) {
     }
     return n;
 }
-
 function yu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -37020,7 +31672,6 @@ var yd = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -37032,10 +31683,7 @@ var yd = (function (e) {
                     return yu(
                         yu({}, (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e)),
                         {},
-                        {
-                            showImage: !1,
-                            termsAndConditions: r.termsAndConditions,
-                        },
+                        { showImage: !1, termsAndConditions: r.termsAndConditions },
                     );
                 },
             },
@@ -37050,7 +31698,6 @@ var yd = (function (e) {
         r
     );
 })();
-
 function yp(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37063,7 +31710,6 @@ function yp(e, t) {
     }
     return n;
 }
-
 function yh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -37108,25 +31754,11 @@ var yf = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
-        return (
-            (0, k.A)(this, r),
-            n.call(
-                this,
-                yh(
-                    yh({}, e),
-                    {},
-                    {
-                        showPaymentMethodItemImages: !0,
-                    },
-                ),
-            )
-        );
+        return (0, k.A)(this, r), n.call(this, yh(yh({}, e), {}, { showPaymentMethodItemImages: !0 }));
     }
     return (0, C.A)(r);
 })();
-
 function ym(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37162,7 +31794,6 @@ var yy = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -37188,10 +31819,7 @@ var yy = (function (e) {
                         }
                         return e;
                     })(
-                        {
-                            delay: 2e3,
-                            countdownTime: 1.5,
-                        },
+                        { delay: 2e3, countdownTime: 1.5 },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -37200,7 +31828,6 @@ var yy = (function (e) {
         r
     );
 })();
-
 function yv(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37236,7 +31863,6 @@ var yg = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -37262,10 +31888,7 @@ var yg = (function (e) {
                         }
                         return e;
                     })(
-                        {
-                            delay: 2e3,
-                            countdownTime: 1.5,
-                        },
+                        { delay: 2e3, countdownTime: 1.5 },
                         (0, ey.A)((0, es.A)(r.prototype), "formatProps", this).call(this, e),
                     );
                 },
@@ -37297,7 +31920,6 @@ var yb = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r() {
         return (0, k.A)(this, r), n.apply(this, arguments);
     }
@@ -37315,28 +31937,18 @@ var yb = (function (e) {
                     var e = this;
                     return (0, el.h)(
                         o7,
-                        {
-                            i18n: this.props.i18n,
-                            loadingContext: this.props.loadingContext,
-                            resources: this.resources,
-                        },
+                        { i18n: this.props.i18n, loadingContext: this.props.loadingContext, resources: this.resources },
                         (0, el.h)(
                             "div",
-                            {
-                                className: "adyen-checkout-trustly",
-                            },
+                            { className: "adyen-checkout-trustly" },
                             (0, el.h)(
                                 "p",
-                                {
-                                    className: "adyen-checkout-trustly__descriptor",
-                                },
+                                { className: "adyen-checkout-trustly__descriptor" },
                                 this.props.i18n.get("trustly.descriptor"),
                             ),
                             (0, el.h)(
                                 "ul",
-                                {
-                                    className: "adyen-checkout-trustly__description-list",
-                                },
+                                { className: "adyen-checkout-trustly__description-list" },
                                 (0, el.h)("li", null, this.props.i18n.get("trustly.description1")),
                                 (0, el.h)("li", null, this.props.i18n.get("trustly.description2")),
                             ),
@@ -37360,7 +31972,6 @@ var yb = (function (e) {
         r
     );
 })();
-
 function yA(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37373,7 +31984,6 @@ function yA(e, t) {
     }
     return n;
 }
-
 function y_(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -37515,17 +32125,7 @@ var yk = {
     yC = function (e, t) {
         var n,
             r = yk[e] || yk.default;
-        return r
-            ? new r(
-                  y_(
-                      y_({}, t),
-                      {},
-                      {
-                          id: M()((n = "".concat(e, "-"))).call(n, tM()),
-                      },
-                  ),
-              )
-            : null;
+        return r ? new r(y_(y_({}, t), {}, { id: M()((n = "".concat(e, "-"))).call(n, tM()) })) : null;
     },
     yw = function (e) {
         var t = e;
@@ -37535,25 +32135,20 @@ var yk = {
             (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})[t] || {}
         );
     };
-
 function yS(e) {
     return !this.length || W()(this).call(this, e.type) > -1;
 }
-
 function yN(e) {
     return !this.length || 0 > W()(this).call(this, e.type);
 }
-
 function yx(e) {
     var t;
     return !!e && !!e.supportedShopperInteractions && E()((t = e.supportedShopperInteractions)).call(t, "Ecommerce");
 }
 var yP = ["scheme", "blik", "twint", "ach", "cashapp"];
-
 function yR(e) {
     return !!e && !!e.type && E()(yP).call(yP, e.type);
 }
-
 function yF(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37566,7 +32161,6 @@ function yF(e, t) {
     }
     return n;
 }
-
 function yO(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -37585,13 +32179,7 @@ function yO(e) {
     return e;
 }
 var yE = function (e) {
-        return yO(
-            yO({}, e),
-            {},
-            {
-                storedPaymentMethodId: e.id,
-            },
-        );
+        return yO(yO({}, e), {}, { storedPaymentMethodId: e.id });
     },
     yI = (function () {
         function e(t) {
@@ -37678,7 +32266,6 @@ var yE = function (e) {
             e
         );
     })();
-
 function yM(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37691,7 +32278,6 @@ function yM(e, t) {
     }
     return n;
 }
-
 function yT(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -37713,30 +32299,13 @@ var yB = function (e) {
         return function (t, n) {
             return yC(
                 t.paymentMethodType,
-                yT(
-                    yT(yT({}, n), t),
-                    {},
-                    {
-                        onComplete: n.onAdditionalDetails,
-                        onError: n.onError,
-                        statusType: e,
-                    },
-                ),
+                yT(yT(yT({}, n), t), {}, { onComplete: n.onAdditionalDetails, onError: n.onError, statusType: e }),
             );
         };
     },
     yD = {
         redirect: function (e, t) {
-            return yC(
-                "redirect",
-                yT(
-                    yT(yT({}, t), e),
-                    {},
-                    {
-                        statusType: "redirect",
-                    },
-                ),
-            );
+            return yC("redirect", yT(yT(yT({}, t), e), {}, { statusType: "redirect" }));
         },
         threeDS2Fingerprint: function (e, t) {
             return yC(
@@ -37808,10 +32377,7 @@ var yB = function (e) {
                             var n = sG(t.elementRef ? pq : pK).from(t);
                             return (n.showSpinner = !t.isDropin), (n.statusType = "loading"), n;
                         }
-                        return {
-                            statusType: "custom",
-                            i18n: t.i18n,
-                        };
+                        return { statusType: "custom", i18n: t.i18n };
                     })(e.subtype, t),
                 ),
             );
@@ -37822,7 +32388,6 @@ var yB = function (e) {
         bankTransfer: yB("custom"),
         sdk: yB("custom"),
     };
-
 function yL(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37835,7 +32400,6 @@ function yL(e, t) {
     }
     return n;
 }
-
 function yV(e, t) {
     var n = c()(e);
     if (d()) {
@@ -37941,11 +32505,7 @@ var yj = (function () {
             n = e.loadingContext,
             r = e.clientKey,
             a = e.experiments,
-            o = {
-                errorLevel: "silent",
-                loadingContext: n,
-                path: "v2/analytics/id?clientKey=".concat(r),
-            };
+            o = { errorLevel: "silent", loadingContext: n, path: "v2/analytics/id?clientKey=".concat(r) };
         return function () {
             if (t) return t;
             if (!r) return B().reject();
@@ -37956,18 +32516,9 @@ var yj = (function () {
                 var t = eA()() - 9e5;
                 return e.timestamp > t;
             })(n)
-                ? (t = a3(o, {
-                      experiments: a,
-                  })
+                ? (t = a3(o, { experiments: a })
                       .then(function (t) {
-                          if (t.id)
-                              return (
-                                  e.set({
-                                      id: t.id,
-                                      timestamp: eA()(),
-                                  }),
-                                  t.id
-                              );
+                          if (t.id) return e.set({ id: t.id, timestamp: eA()() }), t.id;
                       })
                       .catch(function () {}))
                 : B().resolve(n.id);
@@ -37999,7 +32550,6 @@ var yj = (function () {
             e
         );
     })();
-
 function yH(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38012,7 +32562,6 @@ function yH(e, t) {
     }
     return n;
 }
-
 function yz(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -38048,10 +32597,7 @@ var yW = (function () {
             (0, w.A)(this, "collectId", void 0),
             (this.props = yz(yz({}, e.defaultProps), s)),
             (this.logEvent =
-                ((n = {
-                    loadingContext: a,
-                    locale: o,
-                }),
+                ((n = { loadingContext: a, locale: o }),
                 function (e) {
                     var t,
                         r,
@@ -38071,15 +32617,7 @@ var yW = (function () {
                                         });
                             }
                             return e;
-                        })(
-                            {
-                                version: "5.51.0",
-                                payload_version: 1,
-                                platform: "web",
-                                locale: n.locale,
-                            },
-                            e,
-                        ),
+                        })({ version: "5.51.0", payload_version: 1, platform: "web", locale: n.locale }, e),
                         o = J()((t = c()(a)))
                             .call(t, function (e) {
                                 var t;
@@ -38092,12 +32630,7 @@ var yW = (function () {
                     new Image().src = M()((r = "".concat(n.loadingContext, "images/analytics.png?"))).call(r, o);
                 })),
             (this.logTelemetry =
-                ((r = {
-                    loadingContext: a,
-                    locale: o,
-                    clientKey: i,
-                    amount: l,
-                }),
+                ((r = { loadingContext: a, locale: o, clientKey: i, amount: l }),
                 function (e) {
                     var t, n;
                     return r.clientKey
@@ -38142,11 +32675,7 @@ var yW = (function () {
                           )
                         : B().reject();
                 })),
-            (this.collectId = yq({
-                loadingContext: a,
-                clientKey: i,
-                experiments: this.props.experiments,
-            }));
+            (this.collectId = yq({ loadingContext: a, clientKey: i, experiments: this.props.experiments }));
         var u = this.props,
             d = u.telemetry,
             p = u.enabled;
@@ -38180,15 +32709,7 @@ var yW = (function () {
                         !0 === o &&
                             (this.queue.add(function (n) {
                                 return t
-                                    .logTelemetry(
-                                        yz(
-                                            yz(yz({}, e), a && yz({}, a)),
-                                            {},
-                                            {
-                                                checkoutAttemptId: n,
-                                            },
-                                        ),
-                                    )
+                                    .logTelemetry(yz(yz(yz({}, e), a && yz({}, a)), {}, { checkoutAttemptId: n }))
                                     .catch(function () {});
                             }),
                             this.checkoutAttemptId && this.queue.run(this.checkoutAttemptId)),
@@ -38199,7 +32720,6 @@ var yW = (function () {
         e
     );
 })();
-
 function yG(e) {
     var t;
     return $()((t = c()(e))).call(
@@ -38210,7 +32730,6 @@ function yG(e) {
         {},
     );
 }
-
 function y$(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38223,7 +32742,6 @@ function y$(e, t) {
     }
     return n;
 }
-
 function yY(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38236,7 +32754,6 @@ function yY(e, t) {
     }
     return n;
 }
-
 function yQ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38249,7 +32766,6 @@ function yQ(e, t) {
     }
     return n;
 }
-
 function yZ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38262,7 +32778,6 @@ function yZ(e, t) {
     }
     return n;
 }
-
 function yJ(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38275,7 +32790,6 @@ function yJ(e, t) {
     }
     return n;
 }
-
 function yX(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38288,12 +32802,7 @@ function yX(e, t) {
     }
     return n;
 }
-(0, w.A)(yW, "defaultProps", {
-    enabled: !0,
-    telemetry: !0,
-    checkoutAttemptId: null,
-    experiments: [],
-});
+(0, w.A)(yW, "defaultProps", { enabled: !0, telemetry: !0, checkoutAttemptId: null, experiments: [] });
 var y0 = (function () {
     function e(t, n, r) {
         (0, k.A)(this, e),
@@ -38320,16 +32829,7 @@ var y0 = (function () {
                             });
                 }
                 return e;
-            })(
-                {
-                    id: e.id,
-                },
-                e.sessionData
-                    ? {
-                          sessionData: e.sessionData,
-                      }
-                    : {},
-            );
+            })({ id: e.id }, e.sessionData ? { sessionData: e.sessionData } : {});
         })(t);
         if (!n) throw Error("No clientKey available");
         if (!r) throw Error("No loadingContext available");
@@ -38387,17 +32887,8 @@ var y0 = (function () {
                         }
                         return e;
                     })(
-                        {
-                            sessionData: this.data,
-                        },
-                        e.order
-                            ? {
-                                  order: {
-                                      orderData: e.order.orderData,
-                                      pspReference: e.order.pspReference,
-                                  },
-                              }
-                            : {},
+                        { sessionData: this.data },
+                        e.order ? { order: { orderData: e.order.orderData, pspReference: e.order.pspReference } } : {},
                     )),
                     a3(
                         {
@@ -38459,20 +32950,8 @@ var y0 = (function () {
                                     });
                         }
                         return e;
-                    })(
-                        {
-                            sessionData: this.data,
-                        },
-                        e,
-                    )),
-                    a3(
-                        {
-                            loadingContext: this.loadingContext,
-                            path: r,
-                            errorLevel: "fatal",
-                        },
-                        a,
-                    )).then(function (e) {
+                    })({ sessionData: this.data }, e)),
+                    a3({ loadingContext: this.loadingContext, path: r, errorLevel: "fatal" }, a)).then(function (e) {
                         return e.sessionData && o.updateSessionData(e.sessionData), e;
                     });
                 },
@@ -38504,20 +32983,8 @@ var y0 = (function () {
                                     });
                         }
                         return e;
-                    })(
-                        {
-                            sessionData: this.data,
-                        },
-                        e,
-                    )),
-                    a3(
-                        {
-                            loadingContext: this.loadingContext,
-                            path: r,
-                            errorLevel: "fatal",
-                        },
-                        a,
-                    )).then(function (e) {
+                    })({ sessionData: this.data }, e)),
+                    a3({ loadingContext: this.loadingContext, path: r, errorLevel: "fatal" }, a)).then(function (e) {
                         return e.sessionData && o.updateSessionData(e.sessionData), e;
                     });
                 },
@@ -38553,20 +33020,8 @@ var y0 = (function () {
                                     });
                         }
                         return e;
-                    })(
-                        {
-                            sessionData: this.data,
-                        },
-                        e,
-                    )),
-                    a3(
-                        {
-                            loadingContext: this.loadingContext,
-                            path: r,
-                            errorLevel: "fatal",
-                        },
-                        a,
-                    )).then(function (e) {
+                    })({ sessionData: this.data }, e)),
+                    a3({ loadingContext: this.loadingContext, path: r, errorLevel: "fatal" }, a)).then(function (e) {
                         return e.sessionData && o.updateSessionData(e.sessionData), e;
                     });
                 },
@@ -38582,17 +33037,8 @@ var y0 = (function () {
                     return ((n = M()(
                         (e = M()((t = "".concat("v1", "/sessions/"))).call(t, this.id, "/orders?clientKey=")),
                     ).call(e, this.clientKey)),
-                    (r = {
-                        sessionData: this.data,
-                    }),
-                    a3(
-                        {
-                            loadingContext: this.loadingContext,
-                            path: n,
-                            errorLevel: "fatal",
-                        },
-                        r,
-                    )).then(function (e) {
+                    (r = { sessionData: this.data }),
+                    a3({ loadingContext: this.loadingContext, path: n, errorLevel: "fatal" }, r)).then(function (e) {
                         return e.sessionData && a.updateSessionData(e.sessionData), e;
                     });
                 },
@@ -38610,18 +33056,8 @@ var y0 = (function () {
                     (a = M()(
                         (n = M()((r = "".concat("v1", "/sessions/"))).call(r, this.id, "/orders/cancel?clientKey=")),
                     ).call(n, this.clientKey)),
-                    (o = {
-                        sessionData: this.data,
-                        order: t,
-                    }),
-                    a3(
-                        {
-                            loadingContext: this.loadingContext,
-                            path: a,
-                            errorLevel: "fatal",
-                        },
-                        o,
-                    )).then(function (e) {
+                    (o = { sessionData: this.data, order: t }),
+                    a3({ loadingContext: this.loadingContext, path: a, errorLevel: "fatal" }, o)).then(function (e) {
                         return e.sessionData && i.updateSessionData(e.sessionData), e;
                     });
                 },
@@ -38636,10 +33072,7 @@ var y0 = (function () {
             {
                 key: "storeSession",
                 value: function () {
-                    this.storage.set({
-                        id: this.session.id,
-                        sessionData: this.session.sessionData,
-                    });
+                    this.storage.set({ id: this.session.id, sessionData: this.session.sessionData });
                 },
             },
             {
@@ -38652,7 +33085,6 @@ var y0 = (function () {
         e
     );
 })();
-
 function y1(e) {
     var t = e.setComponentRef,
         n = t4({});
@@ -38670,23 +33102,12 @@ function y1(e) {
                   el.FK,
                   null,
                   J()(o).call(o, function (e) {
-                      return (0, el.h)(
-                          "div",
-                          (0, er.A)(
-                              {
-                                  key: e,
-                                  className: "adyen-checkout-sr-panel__msg",
-                              },
-                              !1,
-                          ),
-                          e,
-                      );
+                      return (0, el.h)("div", (0, er.A)({ key: e, className: "adyen-checkout-sr-panel__msg" }, !1), e);
                   }),
               )
             : null
     );
 }
-
 function y2(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38699,7 +33120,6 @@ function y2(e, t) {
     }
     return n;
 }
-
 function y4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -38739,7 +33159,6 @@ var y8 = (function (e) {
                 } else e = n.apply(this, arguments);
                 return (0, ei.A)(this, e);
             });
-
     function r(e) {
         var t, a;
         if (
@@ -38808,9 +33227,7 @@ var y8 = (function (e) {
                     this.props = y4(
                         y4({}, this.props),
                         {},
-                        {
-                            ariaAttributes: y4(y4({}, this.props.ariaAttributes), e),
-                        },
+                        { ariaAttributes: y4(y4({}, this.props.ariaAttributes), e) },
                     );
                 },
             },
@@ -38830,9 +33247,7 @@ var y8 = (function (e) {
                                   this.props.ariaAttributes,
                                   !1,
                               ),
-                              (0, el.h)(y1, {
-                                  setComponentRef: this.setComponentRef,
-                              }),
+                              (0, el.h)(y1, { setComponentRef: this.setComponentRef }),
                           )
                         : null;
                 },
@@ -38847,14 +33262,9 @@ var y8 = (function (e) {
         node: "body",
         showPanel: !1,
         id: "ariaLiveSRPanel",
-        ariaAttributes: {
-            "aria-relevant": "all",
-            "aria-live": "polite",
-            "aria-atomic": "true",
-        },
+        ariaAttributes: { "aria-relevant": "all", "aria-live": "polite", "aria-atomic": "true" },
     });
 var y3 = ["amount", "shopperLocale", "paymentMethods"];
-
 function y6(e, t) {
     var n = c()(e);
     if (d()) {
@@ -38867,7 +33277,6 @@ function y6(e, t) {
     }
     return n;
 }
-
 function y5(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
@@ -39122,26 +33531,10 @@ var y9 = (function () {
                                 console.warn(
                                     "WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored.",
                                 ),
-                            this.handleCreate(
-                                yk[e],
-                                y5(
-                                    {
-                                        type: e,
-                                    },
-                                    t,
-                                ),
-                            )
+                            this.handleCreate(yk[e], y5({ type: e }, t))
                         );
                     if ("string" == typeof e && this.paymentMethodsResponse.has(e))
-                        return this.handleCreate(
-                            yk.redirect,
-                            y5(
-                                {
-                                    type: e,
-                                },
-                                t,
-                            ),
-                        );
+                        return this.handleCreate(yk.redirect, y5({ type: e }, t));
                     if ("object" === (0, A.A)(e) && "string" == typeof e.type) {
                         var s = yw(e.type, this.options.paymentMethodsConfiguration, !!e.storedPaymentMethodId);
                         return this.handleCreate(e.type, y5(y5(y5({}, e), t), s));
@@ -39181,15 +33574,7 @@ var y9 = (function () {
                 value: function () {
                     this.modules ||
                         (this.modules = q()({
-                            risk: new nM(
-                                y5(
-                                    y5({}, this.options),
-                                    {},
-                                    {
-                                        loadingContext: this.loadingContext,
-                                    },
-                                ),
-                            ),
+                            risk: new nM(y5(y5({}, this.options), {}, { loadingContext: this.loadingContext })),
                             analytics: new yW({
                                 loadingContext: this.loadingContext,
                                 clientKey: this.options.clientKey,
@@ -39207,11 +33592,9 @@ var y9 = (function () {
         e
     );
 })();
-
 function y7(e) {
     return ve.apply(this, arguments);
 }
-
 function ve() {
     return (ve = (0, o.A)(
         s().mark(function e(t) {

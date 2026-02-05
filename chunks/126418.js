@@ -1,3 +1,2 @@
-e.exports = {
-    d: "star_a54554",
-};
+"use strict";
+e.exports = { d: "star_a54554" };

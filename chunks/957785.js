@@ -1,72 +1,63 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => A });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(435371),
+    s = n(503698),
+    a = n.n(s),
+    r = n(435371),
     o = n(397927),
-    c = n(594832),
-    u = n(183555),
-    d = n(524380),
-    p = n(733557);
-let h = l.forwardRef(function (e, t) {
-    var n, l, i;
+    d = n(594832),
+    c = n(183555),
+    u = n(524380),
+    h = n(733557);
+let A = l.forwardRef(function (e, t) {
     let {
-            onCardClick: h,
-            tooltipConfig: f,
-            shouldScalePreview: g = !0,
-            renderPreview: m,
-            moreCount: b,
-            isSingleCard: A = !1,
-            wishlistId: y,
+            onCardClick: n,
+            tooltipConfig: l,
+            shouldScalePreview: s = !0,
+            renderPreview: A,
+            moreCount: g,
+            isSingleCard: m = !1,
+            wishlistId: p,
             wishlistItem: _,
-            cardSize: O = d.Y.MEDIUM,
+            cardSize: x = u.Y.MEDIUM,
         } = e,
-        { skuId: j, skuProductLine: v } = _,
-        { trackUserProfileWishlistAction: x } = (0, u.NJ)(),
-        E = g ? p.ho : p.C8,
-        C = A ? p.pr : p.Nr,
-        S = null != b && b > 0,
-        I = (0, r.jsxs)(o.DUT, {
+        { skuId: f, skuProductLine: E } = _,
+        { trackUserProfileWishlistAction: C } = (0, c.NJ)(),
+        I = s ? h.ho : h.C8,
+        S = m ? h.pr : h.Nr,
+        b = null != g && g > 0,
+        N = (0, i.jsxs)(o.DUT, {
             onClick: () => {
-                h(),
-                    x({
-                        action: S ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        skuId: S ? null : j,
-                        wishlistId: y,
-                        productLines: new Set([v]),
+                n(),
+                    C({
+                        action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        skuId: b ? null : f,
+                        wishlistId: p,
+                        productLines: new Set([E]),
                     });
             },
-            className: s()(C, {
-                [p.ax]: O === d.Y.SMALL,
-            }),
-            "aria-label": null != (n = f.title) ? n : "",
+            className: a()(S, { [h.ax]: x === u.Y.SMALL }),
+            "aria-label": l.title ?? "",
             innerRef: t,
             children: [
-                (0, r.jsx)("div", {
-                    className: E,
-                    children: m(),
-                }),
-                S &&
-                    (0, r.jsx)("div", {
-                        className: p.sv,
-                        children: (0, r.jsxs)(o.Text, {
+                (0, i.jsx)("div", { className: I, children: A() }),
+                b &&
+                    (0, i.jsx)("div", {
+                        className: h.sv,
+                        children: (0, i.jsxs)(o.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", b],
+                            children: ["+", g],
                         }),
                     }),
             ],
         });
-    return (0, r.jsx)(a.un, {
+    return (0, i.jsx)(r.un, {
         asContainer: !0,
-        asset: null == (i = f.renderIcon) ? void 0 : i.call(f, _),
-        assetSize: c.Q8,
-        title: f.title,
-        body: null != (l = f.body) ? l : "",
-        children: I,
+        asset: l.renderIcon?.(_),
+        assetSize: d.Q8,
+        title: l.title,
+        body: l.body ?? "",
+        children: N,
     });
 });

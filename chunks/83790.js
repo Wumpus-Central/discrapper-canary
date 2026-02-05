@@ -1,6 +1,5 @@
-n.d(t, {
-    w: () => r,
-});
+"use strict";
+n.d(t, { w: () => r });
 var r = (function (e) {
     return (
         (e.ANIMATED_EMOJIS = "animatedEmojis"),

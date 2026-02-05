@@ -1,13 +1,12 @@
-n.d(t, {
-    L: () => c,
-});
+"use strict";
+n.d(t, { L: () => u });
 var r = n(467276),
     i = n(65412),
     a = n(124651),
     s = n(82180),
     o = n(123789),
     l = n(716115);
-class c {
+class u {
     constructor(e) {
         this.info = e;
     }
@@ -39,22 +38,18 @@ class c {
                     );
                 continue;
             }
-            let c = l.localName;
+            let u = l.localName;
             if (l.oneof) {
                 if (i.includes(l.oneof))
                     throw Error(
                         `Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`,
                     );
-                i.push(l.oneof),
-                    (e = t[l.oneof] =
-                        {
-                            oneofKind: c,
-                        });
+                i.push(l.oneof), (e = t[l.oneof] = { oneofKind: u });
             } else e = t;
             if ("map" == l.kind) {
                 if (null === o) continue;
                 this.assert((0, r.O)(o), l.name, o);
-                let t = e[c];
+                let t = e[u];
                 for (let [e, r] of Object.entries(o)) {
                     let i;
                     switch ((this.assert(null !== r, l.name + " map value", null), l.V.kind)) {
@@ -75,7 +70,7 @@ class c {
             } else if (l.repeat) {
                 if (null === o) continue;
                 this.assert(Array.isArray(o), l.name, o);
-                let t = e[c];
+                let t = e[u];
                 for (let e of o) {
                     let r;
                     switch ((this.assert(null !== e, l.name, null), l.kind)) {
@@ -97,15 +92,15 @@ class c {
                             this.assert(void 0 === l.oneof, l.name + " (oneof member)", null);
                             continue;
                         }
-                        e[c] = l.T().internalJsonRead(o, n, e[c]);
+                        e[u] = l.T().internalJsonRead(o, n, e[u]);
                         break;
                     case "enum":
-                        let u = this.enum(l.T(), o, l.name, n.ignoreUnknownFields);
-                        if (!1 === u) continue;
-                        e[c] = u;
+                        let c = this.enum(l.T(), o, l.name, n.ignoreUnknownFields);
+                        if (!1 === c) continue;
+                        e[u] = c;
                         break;
                     case "scalar":
-                        e[c] = this.scalar(o, l.T, l.L, l.name);
+                        e[u] = this.scalar(o, l.T, l.L, l.name);
                 }
         }
     }
@@ -144,7 +139,7 @@ class c {
         (0, o.vA)(!1, `Unable to parse field ${this.info.typeName}#${n}, cannot parse enum value from ${typeof t}".`);
     }
     scalar(e, t, n, r) {
-        let c;
+        let u;
         try {
             switch (t) {
                 case a.LN.DOUBLE:
@@ -154,21 +149,21 @@ class c {
                     if ("Infinity" === e) return 1 / 0;
                     if ("-Infinity" === e) return -1 / 0;
                     if ("" === e) {
-                        c = "empty string";
+                        u = "empty string";
                         break;
                     }
                     if ("string" == typeof e && e.trim().length !== e.length) {
-                        c = "extra whitespace";
+                        u = "extra whitespace";
                         break;
                     }
                     if ("string" != typeof e && "number" != typeof e) break;
                     let r = Number(e);
                     if (Number.isNaN(r)) {
-                        c = "not a number";
+                        u = "not a number";
                         break;
                     }
                     if (!Number.isFinite(r)) {
-                        c = "too large or small";
+                        u = "too large or small";
                         break;
                     }
                     return t == a.LN.FLOAT && (0, o.wO)(r), r;
@@ -177,19 +172,19 @@ class c {
                 case a.LN.SFIXED32:
                 case a.LN.SINT32:
                 case a.LN.UINT32:
-                    let u;
+                    let c;
                     if (null === e) return 0;
                     if (
                         ("number" == typeof e
-                            ? (u = e)
+                            ? (c = e)
                             : "" === e
-                              ? (c = "empty string")
+                              ? (u = "empty string")
                               : "string" == typeof e &&
-                                (e.trim().length !== e.length ? (c = "extra whitespace") : (u = Number(e))),
-                        void 0 === u)
+                                (e.trim().length !== e.length ? (u = "extra whitespace") : (c = Number(e))),
+                        void 0 === c)
                     )
                         break;
-                    return t == a.LN.UINT32 ? (0, o.e1)(u) : (0, o.bn)(u), u;
+                    return t == a.LN.UINT32 ? (0, o.e1)(c) : (0, o.bn)(c), c;
                 case a.LN.INT64:
                 case a.LN.SFIXED64:
                 case a.LN.SINT64:
@@ -208,7 +203,7 @@ class c {
                 case a.LN.STRING:
                     if (null === e) return "";
                     if ("string" != typeof e) {
-                        c = "extra whitespace";
+                        u = "extra whitespace";
                         break;
                     }
                     try {
@@ -223,8 +218,8 @@ class c {
                     return (0, i.A)(e);
             }
         } catch (e) {
-            c = e.message;
+            u = e.message;
         }
-        this.assert(!1, r + (c ? " - " + c : ""), e);
+        this.assert(!1, r + (u ? " - " + u : ""), e);
     }
 }

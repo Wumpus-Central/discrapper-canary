@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(942381),
@@ -8,60 +7,38 @@ var i = n(942381),
     s = n(397927),
     o = n(571694),
     l = n(263063),
-    c = n(366811),
-    u = n(734057),
+    u = n(366811),
+    c = n(734057),
     d = n(71393),
-    f = n(287809),
-    p = n(486020),
-    _ = n(375812);
-
+    _ = n(287809),
+    f = n(486020),
+    p = n(375812);
 function h() {
-    let { guildId: e, channelId: t } = (0, c.A)((e) => {
+    let { guildId: e, channelId: t } = (0, u.A)((e) => {
             let { guildId: t, channelId: n } = e;
-            return {
-                guildId: t,
-                channelId: n,
-            };
+            return { guildId: t, channelId: n };
         }, i.x),
         n = (0, a.bG)([d.A], () => d.A.getGuild(e)),
-        h = (0, a.bG)([u.A], () => (null == n ? u.A.getChannel(t) : null)),
-        m = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
+        h = (0, a.bG)([c.A], () => (null == n ? c.A.getChannel(t) : null)),
+        m = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
         g = null != h ? (0, o.Y)(h) : null,
-        E = null != m ? m.getAvatarURL(e, 80) : p.vI["0"],
-        b = (0, r.jsx)(s.euF, {
-            src: E,
-            "aria-hidden": !0,
-            size: s._3J.SIZE_80,
-            className: _.HT,
-        }),
-        y = null;
+        E = null != m ? m.getAvatarURL(e, 80) : f.vI["0"],
+        A = (0, r.jsx)(s.euF, { src: E, "aria-hidden": !0, size: s._3J.SIZE_80, className: p.HT }),
+        I = null;
     return (
-        (y =
+        (I =
             null != n
-                ? (0, r.jsx)(l.A, {
-                      guild: n,
-                  })
+                ? (0, r.jsx)(l.A, { guild: n })
                 : null != g
-                  ? (0, r.jsx)(s.euF, {
-                        "aria-hidden": !0,
-                        src: g,
-                        size: s._3J.SIZE_80,
-                        className: _.HT,
-                    })
-                  : b),
+                  ? (0, r.jsx)(s.euF, { "aria-hidden": !0, src: g, size: s._3J.SIZE_80, className: p.HT })
+                  : A),
         (0, r.jsxs)("div", {
-            className: _.kL,
+            className: p.kL,
             children: [
-                (0, r.jsx)("div", {
-                    className: _.$H,
-                    children: b,
-                }),
-                (0, r.jsx)("div", {
-                    className: _.XN,
-                    children: y,
-                }),
+                (0, r.jsx)("div", { className: p.$H, children: A }),
+                (0, r.jsx)("div", { className: p.XN, children: I }),
                 (0, r.jsx)("svg", {
-                    className: _.bm,
+                    className: p.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -103,21 +80,9 @@ function h() {
                                 opacity: ".902",
                                 transform: "translate(78 32)",
                                 children: [
-                                    (0, r.jsx)("circle", {
-                                        cx: "2.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
-                                    (0, r.jsx)("circle", {
-                                        cx: "10.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
-                                    (0, r.jsx)("circle", {
-                                        cx: "18.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
+                                    (0, r.jsx)("circle", { cx: "2.5", cy: "2.5", r: "2.5" }),
+                                    (0, r.jsx)("circle", { cx: "10.5", cy: "2.5", r: "2.5" }),
+                                    (0, r.jsx)("circle", { cx: "18.5", cy: "2.5", r: "2.5" }),
                                 ],
                             }),
                             (0, r.jsx)("rect", {
@@ -140,21 +105,9 @@ function h() {
                                 opacity: ".902",
                                 transform: "translate(23 19)",
                                 children: [
-                                    (0, r.jsx)("circle", {
-                                        cx: "2.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
-                                    (0, r.jsx)("circle", {
-                                        cx: "10.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
-                                    (0, r.jsx)("circle", {
-                                        cx: "18.5",
-                                        cy: "2.5",
-                                        r: "2.5",
-                                    }),
+                                    (0, r.jsx)("circle", { cx: "2.5", cy: "2.5", r: "2.5" }),
+                                    (0, r.jsx)("circle", { cx: "10.5", cy: "2.5", r: "2.5" }),
+                                    (0, r.jsx)("circle", { cx: "18.5", cy: "2.5", r: "2.5" }),
                                 ],
                             }),
                         ],

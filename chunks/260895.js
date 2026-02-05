@@ -15,35 +15,15 @@ e.exports = function (e) {
                 begin: '"',
                 end: '"',
                 relevance: 0,
-                contains: [
-                    {
-                        className: "subst",
-                        begin: t,
-                        end: n,
-                    },
-                ],
+                contains: [{ className: "subst", begin: t, end: n }],
             },
-            {
-                className: "section",
-                begin: /^(Volume|Book|Part|Chapter|Section|Table)\b/,
-                end: "$",
-            },
+            { className: "section", begin: /^(Volume|Book|Part|Chapter|Section|Table)\b/, end: "$" },
             {
                 begin: /^(Check|Carry out|Report|Instead of|To|Rule|When|Before|After)\b/,
                 end: ":",
-                contains: [
-                    {
-                        begin: "\\(This",
-                        end: "\\)",
-                    },
-                ],
+                contains: [{ begin: "\\(This", end: "\\)" }],
             },
-            {
-                className: "comment",
-                begin: t,
-                end: n,
-                contains: ["self"],
-            },
+            { className: "comment", begin: t, end: n, contains: ["self"] },
         ],
     };
 };

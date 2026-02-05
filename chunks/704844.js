@@ -1,15 +1,7 @@
-n.d(t, {
-    A: () => i,
-});
+n.d(t, { A: () => l });
 var r = n(562465),
-    l = n(652215);
-let i = {
+    a = n(652215);
+let l = {
     updatePrivateChannelRecipientFlags: (e, t) =>
-        r.Bo.patch({
-            url: l.Rsh.CHANNEL_RECIPIENT_ME(e),
-            body: {
-                flags: t,
-            },
-            rejectWithError: !1,
-        }),
+        r.Bo.patch({ url: a.Rsh.CHANNEL_RECIPIENT_ME(e), body: { flags: t }, rejectWithError: !1 }),
 };

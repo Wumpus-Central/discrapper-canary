@@ -1,3 +1,2 @@
-e.exports = {
-    Xn: "calendarPicker_d27f17",
-};
+"use strict";
+e.exports = { Xn: "calendarPicker_d27f17" };

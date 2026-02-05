@@ -1,14 +1,11 @@
-r.d(t, {
-    A: () => i,
-});
+"use strict";
+r.d(t, { A: () => i });
 var a = r(25701);
-
 function n(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
-
 function s(e, t, r) {
     var a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
         s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1 / 0;
@@ -17,19 +14,13 @@ function s(e, t, r) {
         r && o.sort(!0 === r ? void 0 : r),
             (i = {
                 entries: (o = o.slice(a, s + 1)).map(function (e) {
-                    return {
-                        key: e,
-                        value: t[e],
-                    };
+                    return { key: e, value: t[e] };
                 }),
             });
     } else if ("Array" === e)
         i = {
             entries: t.slice(a, s + 1).map(function (e, t) {
-                return {
-                    key: t + a,
-                    value: e,
-                };
+                return { key: t + a, value: e };
             }),
         };
     else {
@@ -64,14 +55,7 @@ function s(e, t, r) {
                         return {
                             s: s,
                             n: function () {
-                                return a >= e.length
-                                    ? {
-                                          done: !0,
-                                      }
-                                    : {
-                                          done: !1,
-                                          value: e[a++],
-                                      };
+                                return a >= e.length ? { done: !0 } : { done: !1, value: e[a++] };
                             },
                             e: function (e) {
                                 throw e;
@@ -116,21 +100,9 @@ function s(e, t, r) {
                 a <= l &&
                     (f && Array.isArray(h)
                         ? "string" == typeof h[0] || "number" == typeof h[0]
-                            ? u.push({
-                                  key: h[0],
-                                  value: h[1],
-                              })
-                            : u.push({
-                                  key: "[entry ".concat(l, "]"),
-                                  value: {
-                                      "[key]": h[0],
-                                      "[value]": h[1],
-                                  },
-                              })
-                        : u.push({
-                              key: l,
-                              value: h,
-                          })),
+                            ? u.push({ key: h[0], value: h[1] })
+                            : u.push({ key: "[entry ".concat(l, "]"), value: { "[key]": h[0], "[value]": h[1] } })
+                        : u.push({ key: l, value: h })),
                     l++;
             }
         } catch (e) {
@@ -138,24 +110,15 @@ function s(e, t, r) {
         } finally {
             d.f();
         }
-        i = {
-            hasMore: !b,
-            entries: u,
-        };
+        i = { hasMore: !b, entries: u };
     }
     return i;
 }
-
 function o(e, t, r) {
     for (var a = []; t - e > r * r; ) r *= r;
-    for (var n = e; n <= t; n += r)
-        a.push({
-            from: n,
-            to: Math.min(t, n + r - 1),
-        });
+    for (var n = e; n <= t; n += r) a.push({ from: n, to: Math.min(t, n + r - 1) });
     return a;
 }
-
 function i(e, t, r, n) {
     var i,
         c = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,

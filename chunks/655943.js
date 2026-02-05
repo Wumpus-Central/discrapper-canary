@@ -1,94 +1,80 @@
-n.d(t, {
-    A: () => S,
-});
-var l,
-    r,
-    i = n(735438),
-    s = n.n(i),
-    a = n(311907),
-    o = n(73153),
-    c = n(591552),
+n.d(t, { A: () => E });
+var i = n(735438),
+    l = n.n(i),
+    s = n(311907),
+    r = n(73153),
+    a = n(591552),
     d = n(555337),
-    u = n(652215),
-    m = n(539916);
-let g = !1,
-    f = null,
-    h = [],
-    N = !1,
+    o = n(652215),
+    c = n(539916);
+let u = !1,
+    m = null,
+    N = [],
+    h = !1,
     I = [];
-
-function p() {
-    (g = !1),
-        (f = null),
+function g() {
+    (u = !1),
+        (m = null),
         (I = []),
-        (N = !1),
-        null != (f = d.A.getGuildId()) &&
-            d.A.getSection() === u.BEX.ONBOARDING &&
-            ((h = c.A.getOnboardingPrompts(f)), (N = c.A.isAdvancedMode(f)));
+        (h = !1),
+        null != (m = d.A.getGuildId()) &&
+            d.A.getSection() === o.BEX.ONBOARDING &&
+            ((N = a.A.getOnboardingPrompts(m)), (h = a.A.isAdvancedMode(m)));
 }
-class O extends (r = a.Ay.Store) {
+class A extends s.Ay.Store {
+    static displayName = "GuildSettingsOnboardingPromptsStore";
     initialize() {
-        this.waitFor(d.A, c.A);
+        this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        return null != f && !s().isEqual(c.A.getOnboardingPrompts(f), h);
+        return null != m && !l().isEqual(a.A.getOnboardingPrompts(m), N);
     }
     getChangedPrompts() {
-        if (null == f) return [];
-        let e = c.A.getOnboardingPrompts(f);
-        return h.filter((t) => {
+        if (null == m) return [];
+        let e = a.A.getOnboardingPrompts(m);
+        return N.filter((t) => {
             let n = e.find((e) => e.id === t.id);
-            return null == n || !s().isEqual(t, n);
+            return null == n || !l().isEqual(t, n);
         });
     }
     get guildId() {
-        return f;
+        return m;
     }
     get submitting() {
-        return g;
+        return u;
     }
     get errors() {
         return I;
     }
     get editedOnboardingPrompts() {
-        return h;
-    }
-    get advancedMode() {
         return N;
     }
+    get advancedMode() {
+        return h;
+    }
 }
-(l = "displayName") in O
-    ? Object.defineProperty(O, l, {
-          value: "GuildSettingsOnboardingPromptsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (O[l] = "GuildSettingsOnboardingPromptsStore");
-let S = new O(o.h, {
-    GUILD_SETTINGS_INIT: p,
-    GUILD_SETTINGS_SET_SECTION: p,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: p,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: p,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: p,
+let E = new A(r.h, {
+    GUILD_SETTINGS_INIT: g,
+    GUILD_SETTINGS_SET_SECTION: g,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: g,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: g,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: g,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
-        var t;
-        (I = null != (t = e.errors) ? t : []), (g = !1);
+        (I = e.errors ?? []), (u = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
-        h = t;
+        N = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (g = !0), (I = []);
+        (u = !0), (I = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
-        var t;
-        I = null != (t = e.errors) ? t : [];
+        I = e.errors ?? [];
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
         let { mode: t } = e;
-        N = t === m.SD.ONBOARDING_ADVANCED;
+        h = t === c.SD.ONBOARDING_ADVANCED;
     },
 });

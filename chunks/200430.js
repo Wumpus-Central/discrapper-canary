@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Yk: "closeButtonWrapper__00843",
     b: "closeButton__00843",

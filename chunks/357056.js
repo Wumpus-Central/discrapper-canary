@@ -1,6 +1,4 @@
-a.d(i, {
-    A: () => n,
-});
+a.d(i, { A: () => n });
 var t = {
     lastWeek: "eeee 'dernier \xe0' p",
     yesterday: "'hier \xe0' p",

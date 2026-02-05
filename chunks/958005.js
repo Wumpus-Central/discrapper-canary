@@ -1,8 +1,5 @@
-n.d(t, {
-    A: () => r,
-});
-var l = n(652215);
-
-function r(e, t) {
-    return "".concat(l.MLl.CALL_TILE_POPOUT, "_").concat(e, "_").concat(t);
+n.d(t, { A: () => l });
+var i = n(652215);
+function l(e, t) {
+    return `${i.MLl.CALL_TILE_POPOUT}_${e}_${t}`;
 }

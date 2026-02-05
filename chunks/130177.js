@@ -1,64 +1,26 @@
-r.d(t, {
-    A: () => i,
-}),
-    r(896048);
-var n = r(627968),
-    l = r(64700),
-    o = r(43105),
-    a = r(964486),
-    c = r(49999);
-
-function i(e) {
-    let { dismissibleContentType: t, targetElementRef: r, visibleContent: i, markAsDismissed: s, props: u } = e,
-        [f, b] = l.useState(!1),
-        y = l.useRef(null);
-    (0, a.Ay)(
+n.d(t, { A: () => s });
+var r = n(627968),
+    a = n(64700),
+    o = n(43105),
+    i = n(964486),
+    l = n(49999);
+function s(e) {
+    let { dismissibleContentType: t, targetElementRef: n, visibleContent: s, markAsDismissed: c, props: _ } = e,
+        [u, d] = a.useState(!1),
+        b = a.useRef(null);
+    (0, i.Ay)(
         () => (
-            (y.current = setTimeout(() => b(!0), 250)),
+            (b.current = setTimeout(() => d(!0), 250)),
             () => {
-                clearTimeout(y.current), s(c.i.AUTO_DISMISS);
+                clearTimeout(b.current), c(l.i.AUTO_DISMISS);
             }
         ),
     );
-    let d = l.useCallback(
+    let m = a.useCallback(
         (e) => {
-            s("user:explicit" === e ? c.i.USER_DISMISS : c.i.AUTO_DISMISS);
+            c("user:explicit" === e ? l.i.USER_DISMISS : l.i.AUTO_DISMISS);
         },
-        [s],
+        [c],
     );
-    return (0, n.jsx)(
-        o.h,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        }),
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = n);
-                    });
-            }
-            return e;
-        })(
-            {
-                targetElementRef: r,
-                shouldShow: f && i === t,
-                onRequestClose: d,
-            },
-            u,
-        ),
-    );
+    return (0, r.jsx)(o.h, { targetElementRef: n, shouldShow: u && s === t, onRequestClose: m, ..._ });
 }

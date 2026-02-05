@@ -1,14 +1,14 @@
-var t = {
-    isImage: function (e) {
-        return "image" === n(e)[0];
+"use strict";
+var e = {
+    isImage: function (t) {
+        return "image" === r(t)[0];
     },
-    isJpeg: function (e) {
-        var r = n(e);
-        return t.isImage(e) && ("jpeg" === r[1] || "pjpeg" === r[1]);
+    isJpeg: function (t) {
+        var n = r(t);
+        return e.isImage(t) && ("jpeg" === n[1] || "pjpeg" === n[1]);
     },
 };
-
-function n(e) {
-    return e.split("/");
+function r(t) {
+    return t.split("/");
 }
-e.exports = t;
+t.exports = e;

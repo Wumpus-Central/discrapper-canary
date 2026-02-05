@@ -1,184 +1,84 @@
-n.d(t, {
-    A: () => O,
-    n: () => l,
-});
-var r = n(741918);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function o(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-var l = (function (e) {
-    return (e.UPDATE_COLUMN_COUNTS = "UPDATE_COLUMN_COUNTS"), (e.SET_FOCUSED_POSITION = "SET_FOCUSED_POSITION"), e;
-})({});
-
-function c(e, t) {
+"use strict";
+n.d(t, { A: () => g, n: () => i });
+var r = n(741918),
+    i = (function (e) {
+        return (e.UPDATE_COLUMN_COUNTS = "UPDATE_COLUMN_COUNTS"), (e.SET_FOCUSED_POSITION = "SET_FOCUSED_POSITION"), e;
+    })({});
+function a(e, t) {
     return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t);
 }
-
-function u(e, t) {
+function s(e, t) {
     return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.min(e, t);
 }
-
-function d(e, t) {
+function o(e, t) {
     let { columnCounts: n } = t,
-        r = u(c(0, n.length - 1), e.focusedY);
-    return o(a({}, e), {
-        columnCounts: n,
-        focusedX: u(null == n[r] ? 0 : n[r] - 1, e.focusedX),
-        focusedY: r,
-    });
+        r = s(a(0, n.length - 1), e.focusedY);
+    return { ...e, columnCounts: n, focusedX: s(null == n[r] ? 0 : n[r] - 1, e.focusedX), focusedY: r };
 }
-
-function f(e, t) {
+function l(e, t) {
     let { x: n, y: r } = t,
-        i = c(0, u(r, e.columnCounts.length - 1));
-    return o(a({}, e), {
-        focusedX: c(0, u(n, e.columnCounts[i] - 1)),
-        focusedY: i,
-    });
+        i = a(0, s(r, e.columnCounts.length - 1));
+    return { ...e, focusedX: a(0, s(n, e.columnCounts[i] - 1)), focusedY: i };
 }
-
-function p(e, t) {
-    let n = c(0, e.focusedY - 1);
-    return o(a({}, e), {
-        focusedX: u(e.columnCounts[n] - 1, e.focusedX),
-        focusedY: n,
-    });
+function u(e, t) {
+    let n = a(0, e.focusedY - 1);
+    return { ...e, focusedX: s(e.columnCounts[n] - 1, e.focusedX), focusedY: n };
 }
-
-function _(e, t) {
-    let n = u(e.focusedY + 1, e.columnCounts.length - 1);
-    return o(a({}, e), {
-        focusedX: u(e.columnCounts[n] - 1, e.focusedX),
-        focusedY: n,
-    });
+function c(e, t) {
+    let n = s(e.focusedY + 1, e.columnCounts.length - 1);
+    return { ...e, focusedX: s(e.columnCounts[n] - 1, e.focusedX), focusedY: n };
 }
-
-function h(e, t) {
+function d(e, t) {
     let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
-        r = n ? 0 : u(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
+        r = n ? 0 : s(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
         i = n ? e.focusedY + 1 : e.focusedY;
-    return o(a({}, e), {
-        focusedX: r,
-        focusedY: i,
-    });
+    return { ...e, focusedX: r, focusedY: i };
 }
-
-function m(e, t) {
+function _(e, t) {
     let n = 0 !== e.focusedY && 0 === e.focusedX,
         r = n ? e.focusedY - 1 : e.focusedY,
-        i = n ? e.columnCounts[r] - 1 : c(0, e.focusedX - 1);
-    return o(a({}, e), {
-        focusedX: i,
-        focusedY: r,
-    });
+        i = n ? e.columnCounts[r] - 1 : a(0, e.focusedX - 1);
+    return { ...e, focusedX: i, focusedY: r };
 }
-
-function g(e, t) {
-    return o(a({}, e), {
-        focusedX: 0,
-    });
+function f(e, t) {
+    return { ...e, focusedX: 0 };
 }
-
-function E(e, t) {
-    return o(a({}, e), {
-        focusedX: e.columnCounts[e.focusedY] - 1,
-    });
+function p(e, t) {
+    return { ...e, focusedX: e.columnCounts[e.focusedY] - 1 };
 }
-
-function b(e, t) {
-    return o(a({}, e), {
-        focusedX: 0,
-        focusedY: 0,
-    });
+function h(e, t) {
+    return { ...e, focusedX: 0, focusedY: 0 };
 }
-
-function y(e, t) {
+function m(e, t) {
     let n = e.columnCounts.length - 1;
-    return o(a({}, e), {
-        focusedX: e.columnCounts[n] - 1,
-        focusedY: n,
-    });
+    return { ...e, focusedX: e.columnCounts[n] - 1, focusedY: n };
 }
-
-function O(e, t) {
+function g(e, t) {
     switch (t.type) {
         case r.X2.NAVIGATE_UP:
-            return p(e, t);
+            return u(e, t);
         case r.X2.NAVIGATE_DOWN:
-            return _(e, t);
+            return c(e, t);
         case r.X2.NAVIGATE_RIGHT:
-            return h(e, t);
-        case r.X2.NAVIGATE_LEFT:
-            return m(e, t);
-        case r.X2.NAVIGATE_INLINE_START:
-            return g(e, t);
-        case r.X2.NAVIGATE_INLINE_END:
-            return E(e, t);
-        case r.X2.NAVIGATE_START:
-            return b(e, t);
-        case r.X2.NAVIGATE_END:
-            return y(e, t);
-        case "UPDATE_COLUMN_COUNTS":
             return d(e, t);
-        case "SET_FOCUSED_POSITION":
+        case r.X2.NAVIGATE_LEFT:
+            return _(e, t);
+        case r.X2.NAVIGATE_INLINE_START:
             return f(e, t);
+        case r.X2.NAVIGATE_INLINE_END:
+            return p(e, t);
+        case r.X2.NAVIGATE_START:
+            return h(e, t);
+        case r.X2.NAVIGATE_END:
+            return m(e, t);
+        case "UPDATE_COLUMN_COUNTS":
+            return o(e, t);
+        case "SET_FOCUSED_POSITION":
+            return l(e, t);
         case r.X2.SELECT_FOCUSED_ITEM:
             break;
         default:
-            console.warn("Grid navigator was given an unhandled action ".concat(t.type));
+            console.warn(`Grid navigator was given an unhandled action ${t.type}`);
     }
     return e;
 }

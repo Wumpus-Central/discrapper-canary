@@ -1,50 +1,38 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(65821);
+"use strict";
+n.d(t, { A: () => p });
 var r = n(975975),
     i = n.n(r),
     a = n(762230),
     s = n(843472),
     o = n(596720),
     l = n(451909),
-    c = n(734057),
-    u = n(576705),
+    u = n(734057),
+    c = n(576705),
     d = n(513480),
-    f = n(381941);
-let p = {
+    _ = n(381941);
+let f = {
         async sendForward(e, t, n) {
-            let r = c.A.getChannel(t),
-                i = c.A.getChannel(e.channel_id),
-                p = (null == n ? void 0 : n.isICYMIGameContentForwarding) ? o.VL : null == i ? void 0 : i.guild_id;
-            if (null == i && null == p) throw Error("Unable to find original channel for message");
+            let r = u.A.getChannel(t),
+                i = u.A.getChannel(e.channel_id),
+                f = n?.isICYMIGameContentForwarding ? o.VL : i?.guild_id;
+            if (null == i && null == f) throw Error("Unable to find original channel for message");
             if (null == r) throw Error("Unable to find destination channel for message");
-            let _ = l.Ay.parse(r, ""),
+            let p = l.Ay.parse(r, ""),
                 h = {
-                    guild_id: p,
+                    guild_id: f,
                     channel_id: e.channel_id,
                     message_id: e.id,
                     type: a.S.FORWARD,
                     forward_only:
-                        (null == n ? void 0 : n.onlyAttachmentIds) != null ||
-                        (null == n ? void 0 : n.onlyEmbedIndices) != null
-                            ? {
-                                  attachment_ids: n.onlyAttachmentIds,
-                                  embed_indices: n.onlyEmbedIndices,
-                              }
+                        n?.onlyAttachmentIds != null || n?.onlyEmbedIndices != null
+                            ? { attachment_ids: n.onlyAttachmentIds, embed_indices: n.onlyEmbedIndices }
                             : void 0,
                 };
-            await s.A.sendMessage(r.id, _, !1, {
-                messageReference: h,
-                location: f.Hx.FORWARDING,
-                eagerDispatch: !1,
-            }),
-                (null == n ? void 0 : n.withMessage) == null ||
-                    (0, d.lP)(r, u.A) ||
-                    (await s.A.sendMessage(r.id, l.Ay.parse(r, n.withMessage), !1, {
-                        location: f.Hx.FORWARDING,
-                    }));
+            await s.A.sendMessage(r.id, p, !1, { messageReference: h, location: _.Hx.FORWARDING, eagerDispatch: !1 }),
+                n?.withMessage == null ||
+                    (0, d.lP)(r, c.A) ||
+                    (await s.A.sendMessage(r.id, l.Ay.parse(r, n.withMessage), !1, { location: _.Hx.FORWARDING }));
         },
-        sendForwards: (e, t, n) => i()(t.map((t) => p.sendForward(e, t, n))),
+        sendForwards: (e, t, n) => i()(t.map((t) => f.sendForward(e, t, n))),
     },
-    _ = p;
+    p = f;

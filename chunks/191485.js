@@ -1,25 +1,21 @@
-l.d(t, {
-    L: () => r,
-}),
-    l(896048);
+l.d(e, { L: () => r });
 var n = l(64700),
     a = l(930932),
     i = l(472715);
-
-function r(e) {
-    let { getOptions: t } = e,
+function r(t) {
+    let { getOptions: e } = t,
         l = n.useMemo(() => {
-            let e = t();
-            return (0, a.ed)(e, i.ZJ);
-        }, [t]),
+            let t = e();
+            return (0, a.ed)(t, i.ZJ);
+        }, [e]),
         [r, u] = n.useState(null),
         [s, d] = n.useState(""),
-        [b, O] = n.useState(!1),
-        o = n.useCallback((e) => {
-            O(!0), u(e);
+        [b, E] = n.useState(!1),
+        v = n.useCallback((t) => {
+            E(!0), u(t);
         }, []),
-        v = n.useCallback((e) => {
-            d(e);
+        O = n.useCallback((t) => {
+            d(t);
         }, []);
     return n.useMemo(
         () => ({
@@ -27,9 +23,9 @@ function r(e) {
             selectedOption: r,
             freeformText: s,
             isFreeformEnabled: b,
-            selectOption: o,
-            onFreeformTextChange: v,
+            selectOption: v,
+            onFreeformTextChange: O,
         }),
-        [l, r, s, b, o, v],
+        [l, r, s, b, v, O],
     );
 }

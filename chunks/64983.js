@@ -1,144 +1,91 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(735438),
-    a = n.n(l),
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    a = n(735438),
+    l = n.n(a),
     s = n(421380),
     o = n(397927),
-    c = n(58149),
-    u = n(954571),
-    d = n(83241),
-    p = n(926466),
-    f = n(652215),
-    h = n(985018),
-    A = n(978927);
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let m = a().debounce(c.Ay.trackWithMetadata, 500),
-    b = (e) => {
+    d = n(58149),
+    c = n(954571),
+    u = n(83241),
+    A = n(926466),
+    h = n(652215),
+    _ = n(985018),
+    m = n(978927);
+let p = l().debounce(d.Ay.trackWithMetadata, 500),
+    g = (e) => {
         let {
             guild: t,
             title: n,
-            message: l,
-            image: a,
-            type: d,
-            imageMarginX: p,
+            message: a,
+            image: l,
+            type: u,
+            imageMarginX: A,
             imageMarginTop: g,
-            trackingSource: b,
-            undismissable: _,
-            onDismissed: E,
-            onClick: O,
-            cta: y,
-            ctaColor: I,
+            trackingSource: E,
+            undismissable: f,
+            onDismissed: I,
+            onClick: C,
+            cta: N,
+            ctaColor: T,
         } = e;
-        i.useEffect(() => {
-            m(f.HAw.CHANNEL_NOTICE_VIEWED, {
-                notice_type: d,
-                guild_id: t.id,
-            });
-        }, [t.id, d]);
-        let v = null;
-        "function" == typeof y
-            ? (v = y())
-            : null != y &&
-              (v = (0, r.jsx)(s.$n, {
+        r.useEffect(() => {
+            p(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
+        }, [t.id, u]);
+        let S = null;
+        "function" == typeof N
+            ? (S = N())
+            : null != N &&
+              (S = (0, i.jsx)(s.$n, {
                   "data-migration-pending": !0,
-                  className: A.HM,
+                  className: m.HM,
                   size: s.$n.Sizes.SMALL,
                   onClick: () => {
-                      null != d &&
-                          u.default.track(f.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: b,
+                      null != u &&
+                          c.default.track(h.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
+                              source: E,
                               guild_id: t.id,
-                              notice_type: d,
+                              notice_type: u,
                           }),
-                          null == O || O();
+                          C?.();
                   },
                   fullWidth: !0,
-                  color: I,
-                  children: y,
+                  color: T,
+                  children: N,
               }));
-        let S = null != p ? "".concat(p, "px") : "16px";
-        return (0, r.jsxs)("div", {
-            className: A.kX,
+        let x = null != A ? `${A}px` : "16px";
+        return (0, i.jsxs)("div", {
+            className: m.kX,
             children: [
-                !0 === _
+                !0 === f
                     ? null
-                    : (0, r.jsx)(o.DUT, {
+                    : (0, i.jsx)(o.DUT, {
                           onClick: () => {
-                              c.Ay.trackWithMetadata(f.HAw.CHANNEL_NOTICE_CLOSED, {
-                                  notice_type: d,
-                              }),
-                                  null == E || E();
+                              d.Ay.trackWithMetadata(h.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: u }), I?.();
                           },
-                          className: A.VN,
-                          "aria-label": h.intl.string(h.t.WAI6xu),
-                          children: (0, r.jsx)(o.PGe, {
-                              size: "md",
-                              color: "currentColor",
-                              className: A.ut,
-                          }),
+                          className: m.VN,
+                          "aria-label": _.intl.string(_.t.WAI6xu),
+                          children: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: m.ut }),
                       }),
-                (0, r.jsx)("div", {
-                    className: A.ZS,
-                    style: {
-                        marginTop: "".concat(g, "px"),
-                        marginLeft: S,
-                        marginRight: S,
-                    },
-                    children: (0, r.jsx)("img", {
-                        className: A.Sl,
-                        src: a,
-                        alt: "",
-                    }),
+                (0, i.jsx)("div", {
+                    className: m.ZS,
+                    style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
+                    children: (0, i.jsx)("img", { className: m.Sl, src: l, alt: "" }),
                 }),
-                (0, r.jsxs)("div", {
-                    className: A.iU,
+                (0, i.jsxs)("div", {
+                    className: m.iU,
                     children: [
                         null != n
-                            ? (0, r.jsx)(o.Heading, {
-                                  variant: "heading-md/semibold",
-                                  className: A.DD,
-                                  children: n,
-                              })
+                            ? (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", className: m.DD, children: n })
                             : null,
-                        (0, r.jsx)(o.Text, {
-                            variant: "text-sm/normal",
-                            children: l,
-                        }),
-                        v,
+                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: a }),
+                        S,
                     ],
                 }),
             ],
         });
     },
-    _ = function (e) {
-        let { showRedesignedChannelNotice: t } = (0, d.P)(!0);
-        return t ? (0, r.jsx)(p.A, g({}, e)) : (0, r.jsx)(b, g({}, e));
+    E = function (e) {
+        let { showRedesignedChannelNotice: t } = (0, u.P)(!0);
+        return t ? (0, i.jsx)(A.A, { ...e }) : (0, i.jsx)(g, { ...e });
     };

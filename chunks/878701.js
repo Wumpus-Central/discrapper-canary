@@ -1,14 +1,12 @@
-n.d(t, {
-    l: () => d,
-    u: () => o,
-});
-var r = n(397927),
-    i = n(918160),
+"use strict";
+n.d(t, { l: () => c, u: () => d });
+var i = n(397927),
+    s = n(918160),
     l = n(627794),
-    s = n(53594),
+    r = n(53594),
     a = n(411335),
-    c = n(985018);
-let o = (e) => {
+    o = n(985018);
+let d = (e) => {
     switch (e) {
         case a.uh.KEYWORD:
         case a.uh.USER_PROFILE:
@@ -17,9 +15,7 @@ let o = (e) => {
             return !1;
     }
 };
-
-function d(e, t) {
-    var n, o, d, u, f, g;
+function c(e, t) {
     return null != e &&
         ((e) => {
             switch (e) {
@@ -35,70 +31,54 @@ function d(e, t) {
             }
         })(e)
         ? {
-              headerText:
-                  null !== (n = null != (g = null == t ? void 0 : t.name) ? g : s.i$[e].getDefaultRuleName()) &&
-                  void 0 !== n
-                      ? n
-                      : "",
+              headerText: t?.name ?? r.i$[e].getDefaultRuleName() ?? "",
               headerSubtext:
-                  null !=
-                  (o = ((e, t) => {
+                  ((e, t) => {
                       if ((0, l.wC)(t) && (0, l.KU)(t))
                           return t.triggerMetadata.regexPatterns.length > 0
-                              ? c.intl.formatToPlainString(c.t.xZUvxR, {
+                              ? o.intl.formatToPlainString(o.t.xZUvxR, {
                                     keywordCount: t.triggerMetadata.keywordFilter.length,
                                     regexPatternCount: t.triggerMetadata.regexPatterns.length,
                                 })
-                              : c.intl.formatToPlainString(c.t.dJN7Lk, {
+                              : o.intl.formatToPlainString(o.t.dJN7Lk, {
                                     keywordCount: t.triggerMetadata.keywordFilter.length,
                                 });
-                  })(0, t))
-                      ? o
-                      : "",
+                  })(0, t) ?? "",
               descriptionText:
-                  null !=
-                  (d = ((e) => {
+                  ((e) => {
                       switch (e) {
                           case a.uh.KEYWORD:
-                              return c.intl.string(c.t.TzvaeK);
+                              return o.intl.string(o.t.TzvaeK);
                           case a.uh.ML_SPAM:
-                              return c.intl.string(c.t.jBZSQl);
+                              return o.intl.string(o.t.jBZSQl);
                           case a.uh.DEFAULT_KEYWORD_LIST:
-                              return c.intl.string(c.t.Drc8ft);
+                              return o.intl.string(o.t.Drc8ft);
                           case a.uh.MENTION_SPAM:
-                              return c.intl.string(c.t.flhXO4);
+                              return o.intl.string(o.t.flhXO4);
                           case a.uh.USER_PROFILE:
-                              return c.intl.string(c.t.A35LyL);
+                              return o.intl.string(o.t.A35LyL);
                           default:
                               return null;
                       }
-                  })(e))
-                      ? d
-                      : "",
+                  })(e) ?? "",
               descriptionSubtext:
-                  null !=
-                  (u = ((e) => {
-                      if (e === a.uh.KEYWORD) return c.intl.formatToPlainString(c.t.yNec2m, {});
-                  })(e))
-                      ? u
-                      : "",
+                  ((e) => {
+                      if (e === a.uh.KEYWORD) return o.intl.formatToPlainString(o.t.yNec2m, {});
+                  })(e) ?? "",
               icon:
-                  null !=
-                  (f = ((e) => {
+                  ((e) => {
                       switch (e) {
                           case a.uh.MENTION_SPAM:
-                              return r.XxR;
+                              return i.XxR;
                           case a.uh.KEYWORD:
-                              return r.fdC;
+                              return i.fdC;
                           case a.uh.ML_SPAM:
                           case a.uh.USER_PROFILE:
-                              return (0, r.kHD)(i.A);
+                              return (0, i.kHD)(s.A);
                           case a.uh.DEFAULT_KEYWORD_LIST:
-                              return r.ZB$;
+                              return i.ZB$;
                       }
-                  })(e))
-                      ? f
-                      : r.qYV,
+                  })(e) ?? i.qYV,
           }
         : null;
 }

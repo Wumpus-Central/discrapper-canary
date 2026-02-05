@@ -1,4 +1,5 @@
-var r = n(494277);
-e.exports = function (e) {
-    return !!e && !!e.ownerDocument && r(e) && "BR" === e.nodeName;
+"use strict";
+var n = r(494277);
+t.exports = function (t) {
+    return !!t && !!t.ownerDocument && n(t) && "BR" === t.nodeName;
 };

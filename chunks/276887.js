@@ -1,30 +1,20 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(576705),
-    a = n(519222),
-    o = n(652215),
-    c = n(985018);
-
-function s(e, t) {
+var l = n(397927),
+    a = n(576705),
+    r = n(519222),
+    s = n(652215),
+    o = n(985018);
+function d(e, t) {
     let n = t.getGuildId();
-    return null != n &&
-        e.type === o.lAJ.USER_JOIN &&
-        l.A.canWithPartialContext(o.xBc.MANAGE_GUILD, {
-            guildId: n,
-        })
-        ? (0, r.jsx)(i.Drp, {
+    return null != n && e.type === s.lAJ.USER_JOIN && a.A.canWithPartialContext(s.xBc.MANAGE_GUILD, { guildId: n })
+        ? (0, i.jsx)(l.Drp, {
               id: "configure",
-              label: c.intl.string(c.t.NpHUi1),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: i.cBN,
-              },
-              icon: i.cBN,
-              action: () => (0, a.vc)(t),
+              label: o.intl.string(o.t.NpHUi1),
+              leadingAccessory: { type: "icon", icon: l.cBN },
+              icon: l.cBN,
+              action: () => (0, r.vc)(t),
           })
         : null;
 }

@@ -1,32 +1,21 @@
-n.d(t, {
-    ShopAssetsPreviewInstructionModal: () => d,
-    ShopPFXPreviewInstructionModal: () => u,
-    g: () => c,
-    k: () => o,
-});
+n.d(t, { ShopAssetsPreviewInstructionModal: () => c, ShopPFXPreviewInstructionModal: () => u, g: () => d, k: () => o });
 var a = n(627968);
 n(64700);
-var l = n(158954),
+var s = n(158954),
     i = n(397927),
-    r = n(559474),
-    s = n(273351);
+    l = n(559474),
+    r = n(273351);
 let o = "shop-assets-preview-instructions-modal",
-    c = "shop-pfx-preview-instructions-modal",
-    d = (e) => {
+    d = "shop-pfx-preview-instructions-modal",
+    c = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(l.Modal, {
+        return (0, a.jsx)(s.Modal, {
             transitionState: t,
             title: "Upload Instructions",
-            actions: [
-                {
-                    variant: "primary",
-                    text: "Okay",
-                    onClick: n,
-                },
-            ],
+            actions: [{ variant: "primary", text: "Okay", onClick: n }],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: s.j,
+                className: r.j,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: "text-md/bold",
@@ -40,36 +29,18 @@ let o = "shop-assets-preview-instructions-modal",
                         variant: "text-md/normal",
                         children: "These are only visible to you. Reloading the app will reset the state.",
                     }),
-                    (0, a.jsx)(i.Heading, {
-                        variant: "heading-md/bold",
-                        children: "Valid Upload Types",
-                    }),
+                    (0, a.jsx)(i.Heading, { variant: "heading-md/bold", children: "Valid Upload Types" }),
                     (0, a.jsxs)("ul", {
-                        className: s.S,
+                        className: r.S,
                         children: [
-                            (0, a.jsx)("li", {
-                                children: "One or more image or video files (jpg, png, webm)",
-                            }),
-                            (0, a.jsx)("li", {
-                                children: "A folder containing image or video files",
-                            }),
+                            (0, a.jsx)("li", { children: "One or more image or video files (jpg, png, webm)" }),
+                            (0, a.jsx)("li", { children: "A folder containing image or video files" }),
                         ],
                     }),
-                    (0, a.jsx)(i.Heading, {
-                        variant: "heading-md/bold",
-                        children: "Valid File Names",
-                    }),
+                    (0, a.jsx)(i.Heading, { variant: "heading-md/bold", children: "Valid File Names" }),
                     (0, a.jsx)("ul", {
-                        className: s.S,
-                        children: Array.from(r.Li).map((e) =>
-                            (0, a.jsx)(
-                                "li",
-                                {
-                                    children: e,
-                                },
-                                e,
-                            ),
-                        ),
+                        className: r.S,
+                        children: Array.from(l.Li).map((e) => (0, a.jsx)("li", { children: e }, e)),
                     }),
                 ],
             }),
@@ -77,19 +48,13 @@ let o = "shop-assets-preview-instructions-modal",
     },
     u = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(l.Modal, {
+        return (0, a.jsx)(s.Modal, {
             transitionState: t,
             title: "PFX Preview Instructions",
-            actions: [
-                {
-                    variant: "primary",
-                    text: "Okay",
-                    onClick: n,
-                },
-            ],
+            actions: [{ variant: "primary", text: "Okay", onClick: n }],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: s.j,
+                className: r.j,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",

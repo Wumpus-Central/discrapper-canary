@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     return null === t
         ? null === e
@@ -7,6 +8,4 @@ function r(e, t) {
             })
           : e === t;
 }
-n.d(t, {
-    k: () => r,
-});
+n.d(t, { k: () => r });

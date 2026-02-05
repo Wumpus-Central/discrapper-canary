@@ -1,81 +1,47 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968);
+n.d(t, { A: () => g });
+var i = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(73153),
+    s = n(73153),
     a = n(272355),
-    s = n(960736),
+    r = n(960736),
     o = n(954571),
-    c = n(972387),
-    u = n(539895),
-    d = n(652215);
-let f = "INVITE_MODAL_KEY";
-class p extends a.A {
+    d = n(972387),
+    c = n(539895),
+    u = n(652215);
+let h = "INVITE_MODAL_KEY";
+class A extends a.A {
     _initialize() {
-        i.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            i.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+        s.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            s.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        (0, l.OoC)(f),
-            i.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            i.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+        (0, l.OoC)(h),
+            s.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            s.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
-        u.A.isOpen() &&
-            !(0, l.kBI)(f) &&
+        c.A.isOpen() &&
+            !(0, l.kBI)(h) &&
             (0, l.mMO)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("83155"), n.e("57506")]).then(n.bind(n, 563038));
-                    return (t) =>
-                        (0, r.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, t),
-                        );
+                    return (t) => (0, i.jsx)(e, { ...t });
                 },
                 {
-                    modalKey: f,
+                    modalKey: h,
                     contextKey: (0, l.TId)(t),
                     onCloseRequest: () => {
-                        let e = (0, s.p9)(),
-                            t = (0, s.xD)();
-                        o.default.track(d.HAw.INVITE_ACCEPT_DISMISSED, {
-                            invite_code: e,
-                            guild_id: t,
-                        }),
-                            c.A.close();
+                        let e = (0, r.p9)(),
+                            t = (0, r.xD)();
+                        o.default.track(u.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }), d.A.close();
                     },
                 },
             );
     }
     handleCloseModal() {
-        (0, l.OoC)(f);
+        (0, l.OoC)(h);
     }
 }
-let h = new p();
+let g = new A();

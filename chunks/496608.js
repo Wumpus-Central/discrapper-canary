@@ -1,14 +1,10 @@
+"use strict";
 var r = n(834647),
     a = n(241091),
     o = n(280173),
     i = n(381568);
 r(
-    {
-        target: "Map",
-        proto: !0,
-        real: !0,
-        forced: !0,
-    },
+    { target: "Map", proto: !0, real: !0, forced: !0 },
     {
         find: function (e) {
             var t = o(this),
@@ -16,10 +12,7 @@ r(
                 r = i(
                     t,
                     function (e, r) {
-                        if (n(e, r, t))
-                            return {
-                                value: e,
-                            };
+                        if (n(e, r, t)) return { value: e };
                     },
                     !0,
                 );

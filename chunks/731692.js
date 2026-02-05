@@ -1,7 +1,6 @@
+"use strict";
 let r;
-n.d(t, {
-    B: () => s,
-});
+n.d(t, { B: () => s });
 let i = Symbol.for("react-aria.i18n.locale"),
     a = Symbol.for("react-aria.i18n.strings");
 class s {
@@ -20,13 +19,7 @@ class s {
         if (void 0 === r) {
             let e = window[a];
             if (!e) return null;
-            for (let n in ((r = {}), e))
-                r[n] = new s(
-                    {
-                        [t]: e[n],
-                    },
-                    t,
-                );
+            for (let n in ((r = {}), e)) r[n] = new s({ [t]: e[n] }, t);
         }
         let n = null == r ? void 0 : r[e];
         if (!n)
@@ -39,7 +32,6 @@ class s {
         (this.strings = Object.fromEntries(Object.entries(e).filter(([, e]) => e))), (this.defaultLocale = t);
     }
 }
-
 function o(e, t, n = "en-US") {
     if (t[e]) return t[e];
     let r = l(e);
@@ -47,7 +39,6 @@ function o(e, t, n = "en-US") {
     for (let e in t) if (e.startsWith(r + "-")) return t[e];
     return t[n];
 }
-
 function l(e) {
     return Intl.Locale ? new Intl.Locale(e).language : e.split("-")[0];
 }

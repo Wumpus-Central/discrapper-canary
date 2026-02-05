@@ -1,71 +1,59 @@
-s.d(a, {
-    default: () => _,
-});
-var c = s(627968);
-s(64700);
-var d = s(503698),
-    i = s.n(d),
-    t = s(158954),
-    b = s(397927),
-    f = s(915089),
-    n = s(225858),
-    l = s(895600),
-    r = s(985018),
-    x = s(167451);
-
-function _(e) {
-    let { transitionState: a, onClose: s, guildTemplate: d } = e,
-        { form: _, preview: o, handleSubmit: p } = (0, n.A)(d, !1),
-        h = (0, f.GV)();
-    return (0, c.jsxs)(t.dWK, {
+i.d(a, { default: () => h });
+var n = i(627968);
+i(64700);
+var c = i(503698),
+    t = i.n(c),
+    r = i(158954),
+    s = i(397927),
+    _ = i(915089),
+    l = i(225858),
+    d = i(895600),
+    o = i(985018),
+    x = i(167451);
+function h(e) {
+    let { transitionState: a, onClose: i, guildTemplate: c } = e,
+        { form: h, preview: f, handleSubmit: p } = (0, l.A)(c, !1),
+        C = (0, _.GV)();
+    return (0, n.jsxs)(r.dWK, {
         transitionState: a,
-        onClose: s,
+        onClose: i,
         size: "xxl",
-        "aria-labelledby": h,
+        "aria-labelledby": C,
         children: [
-            (0, c.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: x.jT,
                 children: [
-                    (0, c.jsx)("div", {
-                        className: i()(x.jx, x.Iz),
-                        children: (0, c.jsx)("div", {
+                    (0, n.jsx)("div", {
+                        className: t()(x.jx, x.Iz),
+                        children: (0, n.jsx)("div", {
                             className: x.OQ,
-                            children: (0, c.jsx)(l.A, {
-                                guildTemplate: d,
-                                headerId: h,
-                            }),
+                            children: (0, n.jsx)(d.A, { guildTemplate: c, headerId: C }),
                         }),
                     }),
-                    (0, c.jsx)("div", {
-                        className: i()(x.jx, x.gy),
-                        children: (0, c.jsxs)(b.HOs, {
+                    (0, n.jsx)("div", {
+                        className: t()(x.jx, x.gy),
+                        children: (0, n.jsxs)(s.HOs, {
                             className: x.KJ,
                             children: [
-                                (0, c.jsx)(b.Heading, {
+                                (0, n.jsx)(s.Heading, {
                                     variant: "heading-xl/semibold",
                                     className: x.wx,
-                                    children: r.intl.string(r.t.UNFvtM),
+                                    children: o.intl.string(o.t.UNFvtM),
                                 }),
-                                (0, c.jsxs)(b.nVY, {
-                                    children: [_, o],
-                                }),
+                                (0, n.jsxs)(s.nVY, { children: [h, f] }),
                             ],
                         }),
                     }),
                 ],
             }),
-            (0, c.jsx)(t.H7u, {
+            (0, n.jsx)(r.H7u, {
                 actions: [
-                    {
-                        variant: "secondary",
-                        text: r.intl.string(r.t.cpT0Cq),
-                        onClick: s,
-                    },
+                    { variant: "secondary", text: o.intl.string(o.t.cpT0Cq), onClick: i },
                     {
                         variant: "primary",
-                        text: r.intl.string(r.t.CumH4u),
+                        text: o.intl.string(o.t.CumH4u),
                         onClick: async () => {
-                            null != (await p()) && s();
+                            null != (await p()) && i();
                         },
                     },
                 ],

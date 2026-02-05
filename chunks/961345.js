@@ -1,121 +1,113 @@
-n.r(t),
-    n.d(t, {
-        default: () => y,
-    });
+"use strict";
+n.r(t), n.d(t, { default: () => A });
 var r = n(804552),
     i = n(128170),
     a = n(29583),
-    o = n(735394),
-    s = n(291048),
+    s = n(735394),
+    o = n(291048),
     l = n(84776),
-    c = n(368617),
-    u = n(998280),
+    u = n(368617),
+    c = n(998280),
     d = n(618027),
-    f = n(98430),
-    p = n(728898),
-    _ = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
+    _ = n(98430),
+    f = n(728898),
+    p = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     h = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
     m = /^'([^]*?)'?$/,
     g = /''/g,
     E = /[a-zA-Z]/;
-
-function y(e, t, n) {
+function A(e, t, n) {
     (0, d.A)(2, arguments);
     var m,
         g,
-        y,
-        O,
-        v,
         A,
-        I,
-        S,
         T,
+        y,
+        S,
+        v,
         C,
+        b,
         N,
-        w,
         R,
-        P,
+        O,
         D,
         L,
+        w,
         x,
+        P,
         M,
-        j = String(t),
-        k = (0, f.q)(),
-        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : k.locale) ? m : p.A,
-        G = (0, u.A)(
+        k = String(t),
+        U = (0, _.q)(),
+        G = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : U.locale) ? m : f.A,
+        V = (0, c.A)(
             null !=
-                (y =
+                (A =
                     null !=
-                    (O =
+                    (T =
                         null !=
-                        (v =
-                            null != (A = null == n ? void 0 : n.firstWeekContainsDate)
-                                ? A
-                                : null == n || null == (I = n.locale) || null == (S = I.options)
+                        (y =
+                            null != (S = null == n ? void 0 : n.firstWeekContainsDate)
+                                ? S
+                                : null == n || null == (v = n.locale) || null == (C = v.options)
                                   ? void 0
-                                  : S.firstWeekContainsDate)
-                            ? v
-                            : k.firstWeekContainsDate)
-                        ? O
-                        : null == (T = k.locale) || null == (C = T.options)
+                                  : C.firstWeekContainsDate)
+                            ? y
+                            : U.firstWeekContainsDate)
+                        ? T
+                        : null == (b = U.locale) || null == (N = b.options)
                           ? void 0
-                          : C.firstWeekContainsDate)
-                ? y
+                          : N.firstWeekContainsDate)
+                ? A
                 : 1,
         );
-    if (!(G >= 1 && G <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-    var F = (0, u.A)(
+    if (!(V >= 1 && V <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    var F = (0, c.A)(
         null !=
-            (N =
+            (R =
                 null !=
-                (w =
+                (O =
                     null !=
-                    (R =
-                        null != (P = null == n ? void 0 : n.weekStartsOn)
-                            ? P
-                            : null == n || null == (D = n.locale) || null == (L = D.options)
+                    (D =
+                        null != (L = null == n ? void 0 : n.weekStartsOn)
+                            ? L
+                            : null == n || null == (w = n.locale) || null == (x = w.options)
                               ? void 0
-                              : L.weekStartsOn)
-                        ? R
-                        : k.weekStartsOn)
-                    ? w
-                    : null == (x = k.locale) || null == (M = x.options)
+                              : x.weekStartsOn)
+                        ? D
+                        : U.weekStartsOn)
+                    ? O
+                    : null == (P = U.locale) || null == (M = P.options)
                       ? void 0
                       : M.weekStartsOn)
-            ? N
+            ? R
             : 0,
     );
     if (!(F >= 0 && F <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
-    if (!U.localize) throw RangeError("locale must contain localize property");
-    if (!U.formatLong) throw RangeError("locale must contain formatLong property");
-    var V = (0, a.default)(e);
-    if (!(0, r.default)(V)) throw RangeError("Invalid time value");
-    var B = (0, l.A)(V),
-        H = (0, i.A)(V, B),
-        Y = {
-            firstWeekContainsDate: G,
-            weekStartsOn: F,
-            locale: U,
-            _originalDate: V,
-        };
-    return j
+    if (!G.localize) throw RangeError("locale must contain localize property");
+    if (!G.formatLong) throw RangeError("locale must contain formatLong property");
+    var B = (0, a.default)(e);
+    if (!(0, r.default)(B)) throw RangeError("Invalid time value");
+    var j = (0, l.A)(B),
+        H = (0, i.A)(B, j),
+        Y = { firstWeekContainsDate: V, weekStartsOn: F, locale: G, _originalDate: B };
+    return k
         .match(h)
         .map(function (e) {
             var t = e[0];
-            return "p" === t || "P" === t ? (0, s.A[t])(e, U.formatLong) : e;
+            return "p" === t || "P" === t ? (0, o.A[t])(e, G.formatLong) : e;
         })
         .join("")
-        .match(_)
+        .match(p)
         .map(function (r) {
             if ("''" === r) return "'";
             var i = r[0];
-            if ("'" === i) return b(r);
-            var a = o.A[i];
+            if ("'" === i) return I(r);
+            var a = s.A[i];
             if (a)
                 return (
-                    !(null != n && n.useAdditionalWeekYearTokens) && (0, c.xM)(r) && (0, c.lJ)(r, t, String(e)),
-                    !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.ef)(r) && (0, c.lJ)(r, t, String(e)),
-                    a(H, r, U.localize, Y)
+                    !(null != n && n.useAdditionalWeekYearTokens) && (0, u.xM)(r) && (0, u.lJ)(r, t, String(e)),
+                    !(null != n && n.useAdditionalDayOfYearTokens) && (0, u.ef)(r) && (0, u.lJ)(r, t, String(e)),
+                    a(H, r, G.localize, Y)
                 );
             if (i.match(E))
                 throw RangeError("Format string contains an unescaped latin alphabet character `" + i + "`");
@@ -123,8 +115,7 @@ function y(e, t, n) {
         })
         .join("");
 }
-
-function b(e) {
+function I(e) {
     var t = e.match(m);
     return t ? t[1].replace(g, "'") : e;
 }

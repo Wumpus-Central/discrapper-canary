@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     2: "need dictionary",
     1: "stream end",

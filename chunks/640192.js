@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     gP: "statsOverlay__1219f",
     wx: "header__1219f",

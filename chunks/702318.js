@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => o,
-});
+"use strict";
+r.d(t, { A: () => o });
 var n = /^(?:0|[1-9]\d*)$/;
 let o = function (e, t) {
     var r = typeof e;

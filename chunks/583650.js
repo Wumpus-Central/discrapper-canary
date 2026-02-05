@@ -1,6 +1,5 @@
-n.d(t, {
-    V: () => l,
-});
+"use strict";
+n.d(t, { V: () => l });
 var r = n(627968),
     i = n(64700),
     a = n(900283),
@@ -10,42 +9,32 @@ let l = i.forwardRef(function (e, t) {
     let {
             query: n,
             onChange: l,
-            disabled: c = !1,
-            placeholder: u = o.intl.string(o.t["5h0QOP"]),
+            disabled: u = !1,
+            placeholder: c = o.intl.string(o.t["5h0QOP"]),
             "aria-label": d,
-            onInteraction: f,
+            onInteraction: _,
         } = e,
-        p = i.useRef(null);
+        f = i.useRef(null);
     i.useImperativeHandle(
         t,
-        () => ({
-            focus: () => {
-                var e;
-                return null == (e = p.current) ? void 0 : e.focus();
-            },
-            blur: () => {
-                var e;
-                return null == (e = p.current) ? void 0 : e.blur();
-            },
-            activate: () => !1,
-        }),
+        () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
         [],
     );
-    let _ = (e) => {
-            l(e), null == f || f(a.Q.SEARCH);
+    let p = (e) => {
+            l(e), _?.(a.Q.SEARCH);
         },
         h = () => {
-            l(""), null == f || f(a.Q.SEARCH);
+            l(""), _?.(a.Q.SEARCH);
         };
     return (0, r.jsx)(s.IWV, {
         size: "sm",
-        disabled: c,
-        onChange: _,
+        disabled: u,
+        onChange: p,
         onClear: h,
         query: n,
-        placeholder: u,
+        placeholder: c,
         autoFocus: !1,
         "aria-label": d,
-        ref: p,
+        ref: f,
     });
 });

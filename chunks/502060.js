@@ -1,43 +1,30 @@
-n.d(t, {
-    G: () => s,
-}),
-    n(228524);
-var r = n(627968);
+n.d(t, { G: () => a });
+var i = n(627968);
 n(64700);
-var i = n(397927);
+var s = n(397927);
 n(195043);
-var l = n(645022);
-
-function s(e) {
-    let { children: t, title: n, description: s } = e;
-    return (0, r.jsxs)("div", {
-        className: l.L1,
+var r = n(645022);
+function a(e) {
+    let { children: t, title: n, description: a } = e;
+    return (0, i.jsxs)("div", {
+        className: r.L1,
         children: [
-            (null != n || null != s) &&
-                (0, r.jsxs)("div", {
-                    className: l.Km,
+            (null != n || null != a) &&
+                (0, i.jsxs)("div", {
+                    className: r.Km,
                     children: [
                         null != n &&
-                            (0, r.jsx)(i.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 children: n,
                             }),
-                        null != s &&
-                            (0, r.jsx)(i.Text, {
-                                variant: "text-sm/normal",
-                                color: "text-default",
-                                children: s,
-                            }),
+                        null != a &&
+                            (0, i.jsx)(s.Text, { variant: "text-sm/normal", color: "text-default", children: a }),
                     ],
                 }),
-            (0, r.jsx)("div", {
-                className: l.Yq,
-                children: t,
-            }),
-            (0, r.jsx)(i.cGx, {
-                className: l.yj,
-            }),
+            (0, i.jsx)("div", { className: r.Yq, children: t }),
+            (0, i.jsx)(s.cGx, { className: r.yj }),
         ],
     });
 }

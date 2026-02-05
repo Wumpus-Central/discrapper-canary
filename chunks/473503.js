@@ -1,36 +1,24 @@
-n.d(t, {
-    OA: () => O,
-    kB: () => v,
-}),
-    n(896048);
+"use strict";
+n.d(t, { OA: () => I, kB: () => y });
 var r = n(735438),
     i = n.n(r),
     a = n(311907),
     s = n(562465),
     o = n(73153),
     l = n(734057),
-    c = n(661191),
-    u = n(207777),
+    u = n(661191),
+    c = n(207777),
     d = n(969043);
 n(246943);
-var f = n(652215);
-
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let _ = 10,
-    h = 5;
-class m {
+var _ = n(652215);
+let f = 10,
+    p = 5;
+class h {
+    _set;
+    _defaultValueFunc;
+    constructor(e) {
+        (this._set = {}), (this._defaultValueFunc = e);
+    }
     get(e) {
         return this._set.hasOwnProperty(e) || (this._set[e] = this._defaultValueFunc()), this._set[e];
     }
@@ -41,13 +29,14 @@ class m {
         return !i().isEmpty(this._set);
     }
     next() {
-        return c.default.keys(this._set)[0];
-    }
-    constructor(e) {
-        p(this, "_set", void 0), p(this, "_defaultValueFunc", void 0), (this._set = {}), (this._defaultValueFunc = e);
+        return u.default.keys(this._set)[0];
     }
 }
-class g {
+class m {
+    requested;
+    constructor() {
+        this.requested = new h(() => new Set());
+    }
     request(e, t) {
         this.requested.get(e).add(t);
     }
@@ -56,7 +45,7 @@ class g {
     }
     finishRequesting(e, t) {
         let n = this.requested.get(e);
-        t.forEach((e) => n.delete(e)), E.compact(e);
+        t.forEach((e) => n.delete(e)), g.compact(e);
     }
     getRequested(e) {
         return this.requested.get(e);
@@ -73,79 +62,54 @@ class g {
     compact(e) {
         0 === this.requested.get(e).size && this.requested.delete(e);
     }
-    constructor() {
-        p(this, "requested", void 0), (this.requested = new m(() => new Set()));
-    }
 }
-let E = new g(),
-    b = null;
-
-function y(e, t) {
+let g = new m(),
+    E = null;
+function A(e, t) {
     return !e && null == t;
 }
-
-function O(e) {
+function I(e) {
     let { loaded: t, firstMessage: n } = (0, a.cf)([d.A], () => d.A.getMessage(e.id)),
         r = (0, a.bG)([l.A], () => l.A.getChannel(e.parent_id));
-    return (
-        null != r && y(t, n) && S(r, e.id),
-        {
-            loaded: t,
-            firstMessage: n,
-        }
-    );
+    return null != r && A(t, n) && S(r, e.id), { loaded: t, firstMessage: n };
 }
-
-function A(e, t) {
+function T(e, t) {
     let n = !1;
     t.forEach((t) => {
         let { loaded: r, firstMessage: i } = d.A.getMessage(t);
-        y(r, i) && (E.request(e.id, t), (n = !0));
+        A(r, i) && (g.request(e.id, t), (n = !0));
     }),
-        n && null == b && (b = setTimeout(I, 0));
+        n && null == E && (E = setTimeout(v, 0));
 }
-
-function v(e) {
-    A(e, (0, u.S)(e.id).slice(0, _));
+function y(e) {
+    T(e, (0, c.S)(e.id).slice(0, f));
 }
-
 function S(e, t) {
-    if (E.hasRequested(e.id, t)) return;
-    let n = (0, u.S)(e.id),
+    if (g.hasRequested(e.id, t)) return;
+    let n = (0, c.S)(e.id),
         r = n.findIndex((e) => e === t),
-        i = n.slice(r, r + h).filter((t) => !E.hasRequested(e.id, t));
-    A(e, i);
+        i = n.slice(r, r + p).filter((t) => !g.hasRequested(e.id, t));
+    T(e, i);
 }
-async function I() {
+async function v() {
     try {
-        for (; E.hasNext(); ) await T(E.next());
+        for (; g.hasNext(); ) await C(g.next());
     } finally {
-        b = null;
+        E = null;
     }
 }
-async function T(e) {
-    let t = E.getNextBatch(e, _);
+async function C(e) {
+    let t = g.getNextBatch(e, f);
     try {
-        var n;
         if (0 === t.length) return;
-        let r = null == (n = l.A.getChannel(e)) ? void 0 : n.guild_id;
-        if (null == r) return;
+        let n = l.A.getChannel(e)?.guild_id;
+        if (null == n) return;
         let {
-            body: { threads: i },
-        } = await s.Bo.post({
-            url: f.Rsh.FORUM_POSTS(e),
-            body: {
-                thread_ids: t,
-            },
-            rejectWithError: !0,
-        });
-        o.h.dispatch({
-            type: "LOAD_FORUM_POSTS",
-            guildId: r,
-            threads: i,
-        });
+            body: { threads: r },
+        } = await s.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
+        o.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: r });
     } catch (e) {
     } finally {
-        E.finishRequesting(e, t);
+        g.finishRequesting(e, t);
     }
 }

@@ -1,15 +1,12 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(735438),
     i = n.n(r),
     a = n(954571),
     s = n(31408),
     o = n(652215);
 let l = 5e3;
-
-function c(e) {
+function u(e) {
     switch (e) {
         case s.uD.CHAT_INPUT:
             return "chat_input";
@@ -19,8 +16,7 @@ function c(e) {
             return "voice_user";
     }
 }
-
-function u(e) {
+function c(e) {
     switch (e) {
         case s.k.CHAT_INPUT:
             return "chat_input";
@@ -32,7 +28,6 @@ function u(e) {
             return "call_tile";
     }
 }
-
 function d(e, t) {
     return Object.entries(e)
         .filter((e) => {
@@ -44,7 +39,7 @@ function d(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let f = i().throttle((e) => {
+let _ = i().throttle((e) => {
     let {
         enabled: t,
         combosEnabled: n,
@@ -52,9 +47,9 @@ let f = i().throttle((e) => {
         screenshakeEnabled: i,
         shakeIntensity: s,
         screenshakeEnabledLocations: l,
-        confettiEnabled: f,
-        confettiSize: p,
-        confettiCount: _,
+        confettiEnabled: _,
+        confettiSize: f,
+        confettiCount: p,
         confettiEnabledLocations: h,
     } = e;
     a.default.track(o.HAw.POGGERMODE_SETTINGS_UPDATED, {
@@ -63,10 +58,10 @@ let f = i().throttle((e) => {
         combos_required_count: r,
         screenshake_enabled: i,
         shake_intensity: s,
-        screenshake_enabled_locations: d(l, c),
-        confetti_enabled: f,
-        confetti_size: p,
-        confetti_count: _,
-        confetti_enabled_locations: d(h, u),
+        screenshake_enabled_locations: d(l, u),
+        confetti_enabled: _,
+        confetti_size: f,
+        confetti_count: p,
+        confetti_enabled_locations: d(h, c),
     });
 }, l);

@@ -1,39 +1,29 @@
-e(321073),
-    e(896048),
-    e(638769),
-    self.addEventListener("message", (t) => {
+t(321073),
+    self.addEventListener("message", (e) => {
         let {
-                data: { rawBufferData: r, width: e, options: o, config: n, id: a },
-            } = t,
-            { normalizedData: i, normalizedVolumeMultipler: s } = ((t, r, e, o) => {
-                var n;
+                data: { rawBufferData: r, width: t, options: o, config: a, id: l },
+            } = e,
+            { normalizedData: s, normalizedVolumeMultipler: n } = ((e, r, t, o) => {
                 let a,
-                    { fineTuning: i, fineTuningResolution: s, duration: u } = e,
-                    l = Math.floor(r / o.waveformBlockWidth);
-                if (i >= 0) {
-                    let r = Math.floor((t.length * (i - (s * i) / u)) / u),
-                        e = Math.floor((t.length * (i + (s * (u - i)) / u)) / u);
-                    a = t.slice(r, e);
-                } else a = t;
-                let f = Math.floor(a.length / l),
-                    c = [];
-                for (let t = 0; t < l; t++) {
-                    let r = f * t,
-                        e = 0;
-                    for (let t = 0; t < f; t++) e += Math.abs(a[r + t]);
-                    c.push(e / f);
+                    { fineTuning: l, fineTuningResolution: s, duration: n } = t,
+                    i = Math.floor(r / o.waveformBlockWidth);
+                if (l >= 0) {
+                    let r = Math.floor((e.length * (l - (s * l) / n)) / n),
+                        t = Math.floor((e.length * (l + (s * (n - l)) / n)) / n);
+                    a = e.slice(r, t);
+                } else a = e;
+                let h = Math.floor(a.length / i),
+                    p = [];
+                for (let e = 0; e < i; e++) {
+                    let r = h * e,
+                        t = 0;
+                    for (let e = 0; e < h; e++) t += Math.abs(a[r + e]);
+                    p.push(t / h);
                 }
-                let p = Math.pow(Math.max(...c), -1),
-                    v = c.map((t) => t * p),
-                    h = [...c].sort()[Math.floor(0.95 * c.length)];
-                return {
-                    normalizedData: v,
-                    normalizedVolumeMultipler: Math.min((null != (n = o.loudnessThreshold) ? n : h) / h, 1),
-                };
-            })(r, e, o, n);
-        self.postMessage({
-            waveform: i,
-            id: a,
-            normalizedVolumeMultipler: s,
-        });
+                let f = Math.pow(Math.max(...p), -1),
+                    u = p.map((e) => e * f),
+                    d = [...p].sort()[Math.floor(0.95 * p.length)];
+                return { normalizedData: u, normalizedVolumeMultipler: Math.min((o.loudnessThreshold ?? d) / d, 1) };
+            })(r, t, o, a);
+        self.postMessage({ waveform: s, id: l, normalizedVolumeMultipler: n });
     });

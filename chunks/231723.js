@@ -1,10 +1,5 @@
-n.d(t, {
-    CP: () => l,
-    KX: () => o,
-    SY: () => s,
-    ip: () => i,
-    xt: () => a,
-});
+"use strict";
+n.d(t, { CP: () => l, KX: () => o, SY: () => s, ip: () => i, xt: () => a });
 var r = n(64700),
     i = (function (e) {
         return (
@@ -19,7 +14,4 @@ var r = n(64700),
 let a = 300,
     s = "default",
     o = "popout",
-    l = r.createContext({
-        headerId: void 0,
-        headerIdIsManaged: !1,
-    });
+    l = r.createContext({ headerId: void 0, headerIdIsManaged: !1 });

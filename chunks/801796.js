@@ -1,96 +1,75 @@
-n.d(t, {
-    BD: () => b,
-    US: () => g,
-    X8: () => y,
-    mH: () => m,
-});
-var r = n(757942),
-    i = n(455234),
-    a = n(366811),
-    s = n(95701),
-    o = n(734057),
-    l = n(222823),
+n.d(t, { BD: () => C, US: () => h, X8: () => x, mH: () => E });
+var i = n(757942),
+    s = n(455234),
+    r = n(366811),
+    a = n(95701),
+    l = n(734057),
+    o = n(222823),
     c = n(309010),
-    u = n(543465),
-    d = n(652215),
-    f = n(790782);
-let p = (e, t) => {
-        let n = o.A.getChannel(t);
+    d = n(543465),
+    u = n(652215),
+    _ = n(790782);
+let m = (e, t) => {
+        let n = l.A.getChannel(t);
         return (
             null != n &&
-            ((0, s.Gw)(n.type) || d.kvI.GUILD_VOCAL.has(n.type)
-                ? l.Ay.getMentionCount(t) > 0 || c.A.getVoiceChannelId() === t
-                : (!u.Ay.isChannelMuted(e, t) || l.Ay.getMentionCount(t) > 0) && (0, i.Y)(n))
+            ((0, a.Gw)(n.type) || u.kvI.GUILD_VOCAL.has(n.type)
+                ? o.Ay.getMentionCount(t) > 0 || c.A.getVoiceChannelId() === t
+                : (!d.Ay.isChannelMuted(e, t) || o.Ay.getMentionCount(t) > 0) && (0, s.Y)(n))
         );
     },
-    _ = (e, t) =>
-        t === f.P.GUILD_EVENT ? !u.Ay.isMuteScheduledEventsEnabled(e) && l.Ay.hasUnread(e, t) : l.Ay.hasUnread(e, t),
-    h = (e, t) => {
-        let n = o.A.getChannel(t);
+    A = (e, t) =>
+        t === _.P.GUILD_EVENT ? !d.Ay.isMuteScheduledEventsEnabled(e) && o.Ay.hasUnread(e, t) : o.Ay.hasUnread(e, t),
+    g = (e, t) => {
+        let n = l.A.getChannel(t);
         return (
             null != n &&
-            !!d.kvI.GUILD_VOCAL.has(n.type) &&
-            (l.Ay.getMentionCount(t) > 0 || (c.A.getVoiceChannelId() === t && l.Ay.getUnreadCount(t) > 0))
+            !!u.kvI.GUILD_VOCAL.has(n.type) &&
+            (o.Ay.getMentionCount(t) > 0 || (c.A.getVoiceChannelId() === t && o.Ay.getUnreadCount(t) > 0))
         );
     },
-    m = {
+    E = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
-            var e;
-            let t = null != (e = a.A.getState().guildId) ? e : d.ME;
+            let e = r.A.getState().guildId ?? u.ME;
             return (
-                (0, r.A)(1, {
-                    channelPredicate: p,
-                    guildPredicate: (e) => e === t || !u.Ay.isMuted(e),
-                    guildFeaturePredicate: _,
-                    ensureChatIsVisible: h,
+                (0, i.A)(1, {
+                    channelPredicate: m,
+                    guildPredicate: (t) => t === e || !d.Ay.isMuted(t),
+                    guildFeaturePredicate: A,
+                    ensureChatIsVisible: g,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    g = {
+    h = {
         binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {
-            var e;
-            let t = null != (e = a.A.getState().guildId) ? e : d.ME;
+            let e = r.A.getState().guildId ?? u.ME;
             return (
-                (0, r.A)(-1, {
-                    channelPredicate: p,
-                    guildPredicate: (e) => e === t || !u.Ay.isMuted(e),
-                    guildFeaturePredicate: _,
-                    ensureChatIsVisible: h,
+                (0, i.A)(-1, {
+                    channelPredicate: m,
+                    guildPredicate: (t) => t === e || !d.Ay.isMuted(t),
+                    guildFeaturePredicate: A,
+                    ensureChatIsVisible: g,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    E = (e, t) => l.Ay.getMentionCount(t) > 0,
-    b = {
+    p = (e, t) => o.Ay.getMentionCount(t) > 0,
+    C = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (
-            (0, r.A)(1, {
-                channelPredicate: E,
-                ensureChatIsVisible: h,
-                withVoiceChannels: !0,
-            }),
-            !1
-        ),
+        action: () => ((0, i.A)(1, { channelPredicate: p, ensureChatIsVisible: g, withVoiceChannels: !0 }), !1),
     },
-    y = {
+    x = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (
-            (0, r.A)(-1, {
-                channelPredicate: E,
-                ensureChatIsVisible: h,
-                withVoiceChannels: !0,
-            }),
-            !1
-        ),
+        action: () => ((0, i.A)(-1, { channelPredicate: p, ensureChatIsVisible: g, withVoiceChannels: !0 }), !1),
     };

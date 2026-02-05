@@ -1,7 +1,4 @@
-t.r(r),
-    t.d(r, {
-        default: () => a,
-    });
+t.r(r), t.d(r, { default: () => a });
 var a = {
     payButton: "Payer",
     "payButton.redirecting": "Redirection...",

@@ -1,19 +1,15 @@
-n.d(t, {
-    A: () => s,
-    o: () => a,
-});
-var r = n(311907),
-    i = n(71393),
+"use strict";
+n.d(t, { A: () => r, o: () => a });
+var i = n(311907),
+    s = n(71393),
     l = n(652215);
-
-function s(e) {
-    return (0, r.bG)([i.A], () => {
-        let t = i.A.getGuild(e);
+function r(e) {
+    return (0, i.bG)([s.A], () => {
+        let t = s.A.getGuild(e);
         return null != t && t.features.has(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
     });
 }
-
 function a(e) {
-    let t = i.A.getGuild(e);
+    let t = s.A.getGuild(e);
     return null != t && t.features.has(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
 }

@@ -1,366 +1,251 @@
-n.d(t, {
-    r: () => m,
-});
-var r = n(627968);
+n.d(t, { r: () => U });
+var i = n(627968);
 n(64700);
-var i = n(554146),
-    l = n(397927),
-    o = n(803306),
+var l = n(554146),
+    r = n(397927),
+    s = n(803306),
     a = n(573648),
-    s = n(793574),
-    c = n(882997),
-    u = n(662427),
-    E = n(532794),
+    o = n(793574),
+    E = n(882997),
+    c = n(662427),
+    _ = n(532794),
     d = n(819982),
-    _ = n(745299),
-    T = n(976860),
-    A = n(780964),
+    A = n(745299),
+    u = n(976860),
+    T = n(780964),
     I = n(840065),
-    O = n(879945),
-    N = n(954571),
-    p = n(379848),
-    R = n(49999),
-    S = n(652215),
+    N = n(879945),
+    R = n(954571),
+    S = n(379848),
+    O = n(49999),
+    C = n(652215),
     P = n(789622),
-    y = n(788868),
-    f = n(985018),
-    C = n(237082);
-
-function D(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let m = (e) => {
-    let { dismissibleContent: t, noticeType: m } = e;
-    return (0, r.jsx)(p.Ay, {
+    D = n(788868),
+    p = n(985018),
+    m = n(237082);
+let U = (e) => {
+    let { dismissibleContent: t, noticeType: U } = e;
+    return (0, i.jsx)(S.Ay, {
         contentTypes: [t],
-        groupName: R.m.NOTICE_BAR,
+        groupName: O.m.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: t, markAsDismissed: p } = e;
+            let { visibleContent: t, markAsDismissed: S } = e;
             switch (t) {
-                case i.M.NAGBAR_NOTICE_DOWNLOAD:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.DEFAULT,
+                case l.M.NAGBAR_NOTICE_DOWNLOAD:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.DEFAULT,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            f.intl.string(f.t["+xn1o5"]),
-                            (0, r.jsx)("i", {
-                                className: C.c9,
-                            }),
-                            (0, r.jsx)("i", {
-                                className: C.Vz,
-                            }),
-                            (0, r.jsx)("i", {
-                                className: C.p0,
-                            }),
-                            (0, r.jsx)(l.Z_L, {
-                                noticeType: m,
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            p.intl.string(p.t["+xn1o5"]),
+                            (0, i.jsx)("i", { className: m.c9 }),
+                            (0, i.jsx)("i", { className: m.Vz }),
+                            (0, i.jsx)("i", { className: m.p0 }),
+                            (0, i.jsx)(r.Z_L, {
+                                noticeType: U,
                                 onClick: () => {
-                                    (0, l.mMO)(async () => {
+                                    (0, r.mMO)(async () => {
                                         let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(
                                             n.bind(n, 987482),
                                         );
-                                        return (t) =>
-                                            (0, r.jsx)(
-                                                e,
-                                                D(
-                                                    {
-                                                        source: "Top Bar Nag",
-                                                    },
-                                                    t,
-                                                ),
-                                            );
+                                        return (t) => (0, i.jsx)(e, { source: "Top Bar Nag", ...t });
                                     });
                                 },
-                                children: f.intl.string(f.t["1WjMbC"]),
+                                children: p.intl.string(p.t["1WjMbC"]),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_CONNECT_SPOTIFY:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.SPOTIFY,
+                case l.M.NAGBAR_NOTICE_CONNECT_SPOTIFY:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.SPOTIFY,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            (0, r.jsx)(O.A, {
-                                className: C.tV,
-                            }),
-                            f.intl.string(f.t["5NUVHH"]),
-                            (0, r.jsx)(l.Z_L, {
-                                onClick: () =>
-                                    (0, c.A)({
-                                        platformType: S.fg2.SPOTIFY,
-                                        location: "Notice Bar",
-                                    }),
-                                noticeType: m,
-                                children: f.intl.string(f.t.S0W8Z5),
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            (0, i.jsx)(N.A, { className: m.tV }),
+                            p.intl.string(p.t["5NUVHH"]),
+                            (0, i.jsx)(r.Z_L, {
+                                onClick: () => (0, E.A)({ platformType: C.fg2.SPOTIFY, location: "Notice Bar" }),
+                                noticeType: U,
+                                children: p.intl.string(p.t.S0W8Z5),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.PLAYSTATION,
+                case l.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.PLAYSTATION,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                noticeType: m,
-                                onClick: () => p(R.i.UNKNOWN),
-                            }),
-                            (0, r.jsx)("img", {
+                            (0, i.jsx)(r.PMB, { noticeType: U, onClick: () => S(O.i.UNKNOWN) }),
+                            (0, i.jsx)("img", {
                                 alt: "",
-                                className: C.tV,
-                                src: a.A.get(S.fg2.PLAYSTATION).icon.whiteSVG,
+                                className: m.tV,
+                                src: a.A.get(C.fg2.PLAYSTATION).icon.whiteSVG,
                             }),
-                            f.intl.string(f.t.WHWgoY),
-                            (0, r.jsx)(l.zr9, {
-                                onClick: () =>
-                                    (0, c.A)({
-                                        platformType: S.fg2.PLAYSTATION,
-                                        location: "Notice Bar",
-                                    }),
-                                children: f.intl.string(f.t.S0W8Z5),
+                            p.intl.string(p.t.WHWgoY),
+                            (0, i.jsx)(r.zr9, {
+                                onClick: () => (0, E.A)({ platformType: C.fg2.PLAYSTATION, location: "Notice Bar" }),
+                                children: p.intl.string(p.t.S0W8Z5),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_PASSKEY_BACKUP:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.DEFAULT,
+                case l.M.NAGBAR_NOTICE_PASSKEY_BACKUP:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.DEFAULT,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.USER_DISMISS),
-                                noticeType: m,
-                            }),
-                            f.intl.string(f.t["3qKN/h"]),
-                            (0, r.jsx)(l.Z_L, {
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.USER_DISMISS), noticeType: U }),
+                            p.intl.string(p.t["3qKN/h"]),
+                            (0, i.jsx)(r.Z_L, {
                                 onClick: async () => {
-                                    p(R.i.TAKE_ACTION);
+                                    S(O.i.TAKE_ACTION);
                                     try {
                                         let { startRegisterWebAuthnCredential: e } = await Promise.resolve().then(
                                                 n.bind(n, 917136),
                                             ),
-                                            { ticket: t, challenge: i } = await e();
-                                        (0, l.mMO)(async () => {
+                                            { ticket: t, challenge: l } = await e();
+                                        (0, r.mMO)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
                                                 n.e("44667"),
-                                                n.e("65685"),
+                                                n.e("69694"),
                                             ]).then(n.bind(n, 359990));
-                                            return (n) => {
-                                                var l, o;
-                                                return (0, r.jsx)(
-                                                    e,
-                                                    ((l = D({}, n)),
-                                                    (o = {
-                                                        ticket: t,
-                                                        challenge: i,
-                                                        showAccountSettingsButton: !0,
-                                                    }),
-                                                    (o = null != o ? o : {}),
-                                                    Object.getOwnPropertyDescriptors
-                                                        ? Object.defineProperties(
-                                                              l,
-                                                              Object.getOwnPropertyDescriptors(o),
-                                                          )
-                                                        : (function (e, t) {
-                                                              var n = Object.keys(e);
-                                                              if (Object.getOwnPropertySymbols) {
-                                                                  var r = Object.getOwnPropertySymbols(e);
-                                                                  n.push.apply(n, r);
-                                                              }
-                                                              return n;
-                                                          })(Object(o)).forEach(function (e) {
-                                                              Object.defineProperty(
-                                                                  l,
-                                                                  e,
-                                                                  Object.getOwnPropertyDescriptor(o, e),
-                                                              );
-                                                          }),
-                                                    l),
-                                                );
-                                            };
+                                            return (n) =>
+                                                (0, i.jsx)(e, {
+                                                    ...n,
+                                                    ticket: t,
+                                                    challenge: l,
+                                                    showAccountSettingsButton: !0,
+                                                });
                                         });
                                     } catch (e) {
-                                        (0, l.showToast)(
-                                            (0, l.createToast)(f.intl.string(f.t.xSCvBf), l.ToastType.FAILURE),
+                                        (0, r.showToast)(
+                                            (0, r.createToast)(p.intl.string(p.t.xSCvBf), r.ToastType.FAILURE),
                                         );
                                     }
                                 },
-                                noticeType: m,
-                                children: f.intl.string(f.t["ff/XXy"]),
+                                noticeType: U,
+                                children: p.intl.string(p.t["ff/XXy"]),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_PREMIUM_PROMO:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.PREMIUM_TIER_2,
+                case l.M.NAGBAR_NOTICE_PREMIUM_PROMO:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)("span", {
-                                className: C.lK,
-                            }),
-                            (0, r.jsx)("span", {
-                                className: C.$t,
-                                children: f.intl.string(f.t["+urf75"]),
-                            }),
-                            (0, r.jsx)(l.Z_L, {
-                                className: C.CO,
-                                noticeType: m,
+                            (0, i.jsx)("span", { className: m.lK }),
+                            (0, i.jsx)("span", { className: m.$t, children: p.intl.string(p.t["+urf75"]) }),
+                            (0, i.jsx)(r.Z_L, {
+                                className: m.CO,
+                                noticeType: U,
                                 onClick: () => {
-                                    N.default.track(S.HAw.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: S.JJy.NOTIFICATION_BAR,
-                                        location_object: S.ZSU.BUTTON_CTA,
+                                    R.default.track(C.HAw.PREMIUM_PROMOTION_OPENED, {
+                                        location_section: C.JJy.NOTIFICATION_BAR,
+                                        location_object: C.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, I.openUserSettings)(A.X.NITRO_PANEL, {
-                                            section: S.nc_.PREMIUM,
-                                        });
+                                        (0, I.openUserSettings)(T.X.NITRO_PANEL, { section: C.nc_.PREMIUM });
                                 },
-                                children: f.intl.string(f.t["8JC5e/"]),
+                                children: p.intl.string(p.t["8JC5e/"]),
                             }),
-                            (0, r.jsx)(l.PMB, {
+                            (0, i.jsx)(r.PMB, {
                                 onClick: () => {
-                                    p(R.i.UNKNOWN), (0, o.lA)(S.nhx.PREMIUM_PROMO_DISMISSED, !0);
+                                    S(O.i.UNKNOWN), (0, s.lA)(C.nhx.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: m,
+                                noticeType: U,
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, r.jsx)(_.A, {
-                        dismissCurrentNotice: () => p(R.i.UNKNOWN),
-                        subscriptionTier: y.pe.TIER_2,
+                case l.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
+                    return (0, i.jsx)(A.A, {
+                        dismissCurrentNotice: () => S(O.i.UNKNOWN),
+                        subscriptionTier: D.pe.TIER_2,
                     });
-                case i.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, r.jsx)(_.A, {
-                        dismissCurrentNotice: () => p(R.i.UNKNOWN),
-                        subscriptionTier: y.pe.TIER_0,
+                case l.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
+                    return (0, i.jsx)(A.A, {
+                        dismissCurrentNotice: () => S(O.i.UNKNOWN),
+                        subscriptionTier: D.pe.TIER_0,
                     });
-                case i.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.PREMIUM_TIER_2,
+                case l.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                noticeType: m,
-                                onClick: () => p(R.i.UNKNOWN),
-                            }),
-                            f.intl.string(f.t["0KFB2B"]),
-                            (0, r.jsx)(l.Z_L, {
-                                noticeType: m,
+                            (0, i.jsx)(r.PMB, { noticeType: U, onClick: () => S(O.i.UNKNOWN) }),
+                            p.intl.string(p.t["0KFB2B"]),
+                            (0, i.jsx)(r.Z_L, {
+                                noticeType: U,
                                 onClick: () => {
-                                    p(R.i.UNKNOWN),
-                                        (0, I.openUserSettings)(A.X.NITRO_PANEL, {
-                                            section: S.nc_.PREMIUM,
-                                        });
+                                    S(O.i.UNKNOWN),
+                                        (0, I.openUserSettings)(T.X.NITRO_PANEL, { section: C.nc_.PREMIUM });
                                 },
-                                children: f.intl.string(f.t.pyYSiO),
+                                children: p.intl.string(p.t.pyYSiO),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_BOUNCED_EMAIL_NOTICE:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.DANGER,
+                case l.M.NAGBAR_BOUNCED_EMAIL_NOTICE:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.DANGER,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            f.intl.string(f.t["7490vQ"]),
-                            (0, r.jsx)(l.Z_L, {
-                                noticeType: m,
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            p.intl.string(p.t["7490vQ"]),
+                            (0, i.jsx)(r.Z_L, {
+                                noticeType: U,
                                 onClick: () => {
-                                    (0, T.pX)(S.BVt.SETTINGS("account"));
+                                    (0, u.pX)(C.BVt.SETTINGS("account"));
                                 },
-                                children: f.intl.string(f.t.Vm8akB),
+                                children: p.intl.string(p.t.Vm8akB),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-                    let g = u.A.getEligibleGuildsForNagActivate();
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.DEFAULT,
+                case l.M.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
+                    let M = c.A.getEligibleGuildsForNagActivate();
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.DEFAULT,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            f.intl.string(f.t.pJ4hJE),
-                            (0, r.jsx)(l.Z_L, {
-                                noticeType: m,
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            p.intl.string(p.t.pJ4hJE),
+                            (0, i.jsx)(r.Z_L, {
+                                noticeType: U,
                                 onClick: () => {
-                                    p(R.i.PRIMARY),
-                                        (0, T.pX)(
-                                            1 === g.length
-                                                ? S.BVt.GUILD_SETTINGS(g[0], "role-subscriptions")
-                                                : S.BVt.PICK_GUILD_SETTINGS(
+                                    S(O.i.PRIMARY),
+                                        (0, u.pX)(
+                                            1 === M.length
+                                                ? C.BVt.GUILD_SETTINGS(M[0], "role-subscriptions")
+                                                : C.BVt.PICK_GUILD_SETTINGS(
                                                       "role-subscriptions",
                                                       void 0,
                                                       "server-subscriptions-finish-setting-up",
                                                   ),
                                         );
                                 },
-                                children: f.intl.string(f.t["74s74F"]),
+                                children: p.intl.string(p.t["74s74F"]),
                             }),
                         ],
                     });
-                case i.M.NAGBAR_NOTICE_POMELO:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.WARNING,
+                case l.M.NAGBAR_NOTICE_POMELO:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.WARNING,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            f.intl.format(f.t.pdYZyg, {}),
-                            (0, r.jsx)(l.Z_L, {
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            p.intl.format(p.t.pdYZyg, {}),
+                            (0, i.jsx)(r.Z_L, {
                                 onClick: () => (0, d.A)(P.gg.NOTICE),
-                                noticeType: m,
-                                children: f.intl.string(f.t.LhlgY9),
+                                noticeType: U,
+                                children: p.intl.string(p.t.LhlgY9),
                             }),
                         ],
                     });
-                case i.M.CHECKOUT_RECOVERY_NAGBAR:
-                    return (0, r.jsxs)(l.$Td, {
-                        color: l.Hv$.PREMIUM_TIER_2,
+                case l.M.CHECKOUT_RECOVERY_NAGBAR:
+                    return (0, i.jsxs)(r.$Td, {
+                        color: r.Hv$.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)(l.PMB, {
-                                onClick: () => p(R.i.UNKNOWN),
-                                noticeType: m,
-                            }),
-                            f.intl.string(f.t["O9GI+k"]),
-                            (0, r.jsx)(l.Z_L, {
+                            (0, i.jsx)(r.PMB, { onClick: () => S(O.i.UNKNOWN), noticeType: U }),
+                            p.intl.string(p.t["O9GI+k"]),
+                            (0, i.jsx)(r.Z_L, {
                                 onClick: () => {
-                                    (0, E.A)({
-                                        subscriptionTier: y.pe.TIER_2,
-                                        analyticsLocations: [s.A.CHECKOUT_RECOVERY_NAGBAR],
-                                        analyticsLocation: S.ThZ.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => p(R.i.UNKNOWN),
+                                    (0, _.A)({
+                                        subscriptionTier: D.pe.TIER_2,
+                                        analyticsLocations: [o.A.CHECKOUT_RECOVERY_NAGBAR],
+                                        analyticsLocation: C.ThZ.CHECKOUT_RECOVERY_NAGBAR,
+                                        onClose: () => S(O.i.UNKNOWN),
                                     });
                                 },
-                                noticeType: m,
-                                children: f.intl.string(f.t.Zi69D4),
+                                noticeType: U,
+                                children: p.intl.string(p.t.Zi69D4),
                             }),
                         ],
                     });

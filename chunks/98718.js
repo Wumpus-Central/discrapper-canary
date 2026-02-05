@@ -1,9 +1,7 @@
-n.d(t, {
-    Q: () => g,
-});
+"use strict";
+n.d(t, { Q: () => g });
 var r = n(12543),
     i = n(384623);
-
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -16,11 +14,9 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-
 function s(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function o(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -30,50 +26,37 @@ function o(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-
 function l(e, t, n) {
     return t && o(e.prototype, t), n && o(e, n), e;
 }
-
-function c(e, t) {
-    if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            writable: !0,
-            configurable: !0,
-        },
-    })),
-        t && u(e, t);
-}
-
 function u(e, t) {
-    return (u =
+    if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
+    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
+        t && c(e, t);
+}
+function c(e, t) {
+    return (c =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-
 function d(e) {
-    var t = _();
+    var t = p();
     return function () {
         var n,
             r = h(e);
-        return (n = t ? Reflect.construct(r, arguments, h(this).constructor) : r.apply(this, arguments)), f(this, n);
+        return (n = t ? Reflect.construct(r, arguments, h(this).constructor) : r.apply(this, arguments)), _(this, n);
     };
 }
-
-function f(e, t) {
-    return t && ("object" === a(t) || "function" == typeof t) ? t : p(e);
+function _(e, t) {
+    return t && ("object" === a(t) || "function" == typeof t) ? t : f(e);
 }
-
-function p(e) {
+function f(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-
-function _() {
+function p() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -82,7 +65,6 @@ function _() {
         return !1;
     }
 }
-
 function h(e) {
     return (h = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -90,31 +72,22 @@ function h(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-
 function m(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
 var g = (function (e) {
-    c(n, e);
+    u(n, e);
     var t = d(n);
-
     function n() {
         var e;
         s(this, n);
         for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return (
-            m(p((e = t.call.apply(t, [this].concat(i)))), "priority", 130),
-            m(p(e), "incompatibleTokens", ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"]),
+            m(f((e = t.call.apply(t, [this].concat(i)))), "priority", 130),
+            m(f(e), "incompatibleTokens", ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"]),
             e
         );
     }

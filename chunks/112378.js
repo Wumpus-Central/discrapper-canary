@@ -1,12 +1,9 @@
-n.d(t, {
-    V: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { V: () => o });
 var r = n(627968),
     i = n(64700),
     a = n(298063),
     s = n(658122);
-
 function o(e) {
     let t = i.useRef(null),
         [n, o] = i.useState(null),
@@ -24,12 +21,7 @@ function o(e) {
               children: (0, r.jsx)("span", {
                   ref: t,
                   className: s.marqueeText,
-                  style:
-                      null != n
-                          ? {
-                                "--custom-marquee-overflow": "".concat(n, "px"),
-                            }
-                          : void 0,
+                  style: null != n ? { "--custom-marquee-overflow": `${n}px` } : void 0,
                   children: e.children,
               }),
           })

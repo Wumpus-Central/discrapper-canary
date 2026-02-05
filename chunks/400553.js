@@ -1,54 +1,48 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968);
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
-var i = n(417597),
-    a = n(435371),
-    s = n(397927),
-    o = n(695515),
-    l = n(923531),
+var s = n(417597),
+    r = n(435371),
+    a = n(397927),
+    l = n(695515),
+    o = n(923531),
     c = n(397808),
-    u = n(254847),
-    d = n(773349),
-    f = n(994987),
-    p = n(842130),
-    _ = n(985018),
-    h = n(721757);
-let m = () => {
-    let e = (0, i.bG)([o.A], () => o.A.getTopUserActivities()),
-        t = (0, i.bG)([o.A], () => o.A.getTopGuildActivities());
+    d = n(254847),
+    u = n(773349),
+    _ = n(994987),
+    m = n(842130),
+    A = n(985018),
+    g = n(721757);
+let E = () => {
+    let e = (0, s.bG)([l.A], () => l.A.getTopUserActivities()),
+        t = (0, s.bG)([l.A], () => l.A.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
         ? null
-        : (0, r.jsxs)("div", {
-              className: h.kL,
+        : (0, i.jsxs)("div", {
+              className: g.kL,
               children: [
                   e.length > 0 &&
-                      (0, r.jsxs)("div", {
-                          className: h.A2,
+                      (0, i.jsxs)("div", {
+                          className: g.A2,
                           children: [
-                              (0, r.jsx)(s.Heading, {
+                              (0, i.jsx)(a.Heading, {
                                   variant: "text-md/medium",
-                                  className: h.bV,
-                                  children: _.intl.string(p.default.BxbvS7),
+                                  className: g.bV,
+                                  children: A.intl.string(m.default.BxbvS7),
                               }),
-                              (0, r.jsx)("div", {
-                                  className: h.Ce,
+                              (0, i.jsx)("div", {
+                                  className: g.Ce,
                                   children:
                                       1 === e.length
-                                          ? (0, r.jsx)(d.A, {
+                                          ? (0, i.jsx)(u.A, {
                                                 userId: e[0].user_id,
-                                                subText: (0, l.fq)(e[0].dms_sent, e[0].call_count),
-                                                className: h.q3,
+                                                subText: (0, o.fq)(e[0].dms_sent, e[0].call_count),
+                                                className: g.q3,
                                             })
                                           : e.map((e) =>
-                                                (0, r.jsx)(
-                                                    f.A,
-                                                    {
-                                                        userId: e.user_id,
-                                                        dmsSent: e.dms_sent,
-                                                        callCount: e.call_count,
-                                                    },
+                                                (0, i.jsx)(
+                                                    _.A,
+                                                    { userId: e.user_id, dmsSent: e.dms_sent, callCount: e.call_count },
                                                     e.user_id,
                                                 ),
                                             ),
@@ -56,38 +50,32 @@ let m = () => {
                           ],
                       }),
                   t.length > 0 &&
-                      (0, r.jsxs)("div", {
-                          className: h.A2,
+                      (0, i.jsxs)("div", {
+                          className: g.A2,
                           children: [
-                              (0, r.jsx)(s.Heading, {
+                              (0, i.jsx)(a.Heading, {
                                   variant: "text-md/medium",
-                                  className: h.bV,
-                                  children: _.intl.string(p.default.Lq9Set),
+                                  className: g.bV,
+                                  children: A.intl.string(m.default.Lq9Set),
                               }),
                               1 === t.length
-                                  ? (0, r.jsx)(u.A, {
+                                  ? (0, i.jsx)(d.A, {
                                         guildId: t[0].guild_id,
-                                        customSubtext: (0, l.fq)(t[0].messages_sent, t[0].call_count),
-                                        className: h._S,
+                                        customSubtext: (0, o.fq)(t[0].messages_sent, t[0].call_count),
+                                        className: g._S,
                                     })
-                                  : (0, r.jsx)("div", {
-                                        className: h.Ce,
+                                  : (0, i.jsx)("div", {
+                                        className: g.Ce,
                                         children: t.map((e) => {
-                                            var t, n;
-                                            let i = o.A.getGuild(e.guild_id),
-                                                s = null != (t = null == i ? void 0 : i.name) ? t : "Unknown Server";
-                                            return (0, r.jsx)(
-                                                a.un,
+                                            let t = l.A.getGuild(e.guild_id),
+                                                n = t?.name ?? "Unknown Server";
+                                            return (0, i.jsx)(
+                                                r.un,
                                                 {
-                                                    title: s,
-                                                    body:
-                                                        null != (n = (0, l.fq)(e.messages_sent, e.call_count))
-                                                            ? n
-                                                            : null,
+                                                    title: n,
+                                                    body: (0, o.fq)(e.messages_sent, e.call_count) ?? null,
                                                     asContainer: !0,
-                                                    children: (0, r.jsx)(c.A, {
-                                                        guildId: null == e ? void 0 : e.guild_id,
-                                                    }),
+                                                    children: (0, i.jsx)(c.A, { guildId: e?.guild_id }),
                                                 },
                                                 e.guild_id,
                                             );

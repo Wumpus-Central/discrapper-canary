@@ -1,31 +1,15 @@
-n.d(t, {
-    T: () => a,
-});
-var r = n(945810),
-    i = n(916023);
-let l = (0, r.mj)({
+n.d(t, { T: () => l });
+var i = n(945810),
+    r = n(916023);
+let a = (0, i.mj)({
     name: "2025-12-social-layer-storefront-rtc-entrypoint-user-experiment",
     kind: "user",
-    defaultConfig: {
-        enabled: !1,
-    },
-    variations: {
-        0: {
-            enabled: !1,
-        },
-        1: {
-            enabled: !0,
-        },
-    },
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-
-function a(e) {
+function l(e) {
     let { location: t } = e,
-        n = (0, i.kt)({
-            location: t,
-        }),
-        r = l.useConfig({
-            location: t,
-        }).enabled;
-    return n && r;
+        n = (0, r.kt)({ location: t }),
+        i = a.useConfig({ location: t }).enabled;
+    return n && i;
 }

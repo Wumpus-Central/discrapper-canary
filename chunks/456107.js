@@ -1,3 +1,1 @@
-e.exports = {
-    i: "icymiMessageWrapper__7d14e",
-};
+e.exports = { i: "icymiMessageWrapper__7d14e" };

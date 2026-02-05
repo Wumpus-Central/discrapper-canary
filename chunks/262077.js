@@ -1,31 +1,27 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(638769);
-var r = n(64700),
-    i = n(311907),
-    a = n(961350),
-    s = n(166403),
-    o = n(818348);
-let l = function (e) {
+n.d(t, { A: () => o });
+var i = n(64700),
+    s = n(311907),
+    r = n(961350),
+    a = n(166403),
+    l = n(818348);
+let o = function (e) {
     let { subscriptionFilter: t } = e,
-        n = (0, i.bG)([s.A], () => s.A.getSubscriptions(!0)),
-        l = r.useMemo(
+        n = (0, s.bG)([a.A], () => a.A.getSubscriptions(!0)),
+        o = i.useMemo(
             () =>
                 null == n
                     ? []
                     : Object.values(n).filter(
-                          (e) => e.type === o.rz.PREMIUM && e.userId === a.default.getId() && (null == t || !!t(e)),
+                          (e) => e.type === l.rz.PREMIUM && e.userId === r.default.getId() && (null == t || !!t(e)),
                       ),
             [n, t],
         );
     return (
-        l.sort((e, t) => {
-            var n, r;
-            let i = null != (n = e.paymentGateway) ? n : 0,
-                a = null != (r = t.paymentGateway) ? r : 0;
-            return i < a ? -1 : +(i > a);
+        o.sort((e, t) => {
+            let n = e.paymentGateway ?? 0,
+                i = t.paymentGateway ?? 0;
+            return n < i ? -1 : +(n > i);
         }),
-        l
+        o
     );
 };

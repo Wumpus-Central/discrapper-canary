@@ -1,131 +1,101 @@
-n.d(t, {
-    A: () => k,
-}),
-    n(896048),
-    n(321073);
-var r,
-    i = n(989349),
-    a = n.n(i),
-    o = n(311907),
+"use strict";
+n.d(t, { A: () => M }), n(321073);
+var r = n(989349),
+    i = n.n(r),
+    a = n(311907),
     s = n(713402),
-    l = n(73153),
-    c = n(695870),
+    o = n(73153),
+    l = n(695870),
     u = n(380335),
-    d = n(157550),
-    f = n(493507),
-    p = n(95701),
-    _ = n(734057),
-    h = n(71393),
-    m = n(222823),
-    g = n(543465),
-    E = n(287809),
-    y = n(661191);
-
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let O = (e) => {
+    c = n(157550),
+    d = n(493507),
+    _ = n(95701),
+    f = n(734057),
+    p = n(71393),
+    h = n(222823),
+    m = n(543465),
+    g = n(287809),
+    E = n(661191);
+let A = (e) => {
         let { lastMessageId: t, nudgeTimestamp: n } = e;
-        return -Math.max(y.default.extractTimestamp(t), null != n ? n : 0);
+        return -Math.max(E.default.extractTimestamp(t), n ?? 0);
     },
-    v = (e) => {
+    I = (e) => {
         let { isRequest: t, isFavorite: n } = e;
         return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
     },
-    A = new s.J(v, O);
-
-function I() {
-    A.clear();
+    T = new s.J(I, A);
+function y() {
+    T.clear();
 }
-
 function S(e) {
-    var t, n;
-    let r = null != (t = null != (n = m.Ay.lastMessageId(e.id)) ? n : e.lastMessageId) ? t : e.id,
-        i = e.isMessageRequestTimestamp;
-    if (null != i) {
-        let e = a()(i).valueOf(),
-            t = y.default.fromTimestamp(e);
-        return y.default.compare(r, t) > 0 ? r : t;
+    let t = h.Ay.lastMessageId(e.id) ?? e.lastMessageId ?? e.id,
+        n = e.isMessageRequestTimestamp;
+    if (null != n) {
+        let e = i()(n).valueOf(),
+            r = E.default.fromTimestamp(e);
+        return E.default.compare(t, r) > 0 ? t : r;
     }
-    return r;
+    return t;
 }
-
-function T(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(e);
     return {
         channelId: e.id,
         lastMessageId: t,
         isFavorite: !1,
-        isRequest: u.A.isMessageRequest(e.id) || d.A.isSpam(e.id),
-        nudgeTimestamp: f.A.getNudgeTimestamp(e.id),
+        isRequest: u.A.isMessageRequest(e.id) || c.A.isSpam(e.id),
+        nudgeTimestamp: d.A.getNudgeTimestamp(e.id),
     };
 }
-
 function C() {
-    A.clear(),
-        Object.values(_.A.getMutablePrivateChannels()).forEach((e) => {
-            A.set(e.id, T(e));
+    T.clear(),
+        Object.values(f.A.getMutablePrivateChannels()).forEach((e) => {
+            T.set(e.id, v(e));
         });
 }
-
-function N(e) {
+function b(e) {
     let { channel: t } = e;
-    if (!(0, p.Gw)(t.type) || t.id === c.E) return !1;
-    A.set(t.id, T(t));
+    if (!(0, _.Gw)(t.type) || t.id === l.E) return !1;
+    T.set(t.id, v(t));
 }
-
-function w(e) {
+function N(e) {
     let { channels: t } = e;
     t.forEach((e) => {
-        ((0, p.Gw)(e.type) || A.has(e.id)) && A.set(e.id, T(e));
+        ((0, _.Gw)(e.type) || T.has(e.id)) && T.set(e.id, v(e));
     });
 }
-
 function R(e) {
     let { channel: t } = e;
-    return A.delete(t.id);
+    return T.delete(t.id);
 }
-
-function P(e) {
+function O(e) {
     let { channelId: t, message: n } = e;
-    if (!A.has(t)) return !1;
-    let r = _.A.getChannel(t);
-    return null != r && A.set(t, T(r, n.id));
+    if (!T.has(t)) return !1;
+    let r = f.A.getChannel(t);
+    return null != r && T.set(t, v(r, n.id));
 }
-
 function D(e) {
     let { channelId: t } = e;
-    if (!A.has(t)) return !1;
-    let n = _.A.getChannel(t);
-    return null != n && A.set(t, T(n));
+    if (!T.has(t)) return !1;
+    let n = f.A.getChannel(t);
+    return null != n && T.set(t, v(n));
 }
-
 function L(e) {
     let t = e.guild.id;
-    return A.delete(t);
+    return T.delete(t);
 }
-
-function x() {
-    let e = _.A.getMutablePrivateChannels();
-    for (let t in e) A.set(t, T(e[t]));
+function w() {
+    let e = f.A.getMutablePrivateChannels();
+    for (let t in e) T.set(t, v(e[t]));
 }
-let M = (() => {
+let x = (() => {
     let e = [],
         t = [],
         n = [];
     return () => {
-        let r = A.values("FAVORITE"),
-            i = A.values("DEFAULT");
+        let r = T.values("FAVORITE"),
+            i = T.values("DEFAULT");
         return (
             (e !== r || t !== i) &&
                 ((n = []),
@@ -143,20 +113,21 @@ let M = (() => {
         );
     };
 })();
-class j extends (r = o.Ay.Store) {
+class P extends a.Ay.Store {
+    static displayName = "PrivateChannelSortStore";
     initialize() {
-        this.waitFor(_.A, h.A, u.A, m.Ay, d.A, g.Ay, E.default, f.A), this.syncWith([g.Ay, u.A, f.A], C);
+        this.waitFor(f.A, p.A, u.A, h.Ay, c.A, m.Ay, g.default, d.A), this.syncWith([m.Ay, u.A, d.A], C);
     }
     getPrivateChannelIds() {
-        return M();
+        return x();
     }
     getSortedChannels() {
-        return [A.values("FAVORITE"), A.values("DEFAULT")];
+        return [T.values("FAVORITE"), T.values("DEFAULT")];
     }
     serializeForOverlay() {
         let e = {};
         return (
-            A.values().forEach((t) => {
+            T.values().forEach((t) => {
                 let { channelId: n, lastMessageId: r } = t;
                 e[n] = r;
             }),
@@ -164,18 +135,17 @@ class j extends (r = o.Ay.Store) {
         );
     }
 }
-b(j, "displayName", "PrivateChannelSortStore");
-let k = new j(l.h, {
+let M = new P(o.h, {
     CONNECTION_OPEN: C,
     CONNECTION_OPEN_SUPPLEMENTAL: C,
     OVERLAY_INITIALIZE: C,
-    CACHE_LOADED: x,
-    CACHE_LOADED_LAZY: x,
-    CHANNEL_UPDATES: w,
-    CHANNEL_CREATE: N,
+    CACHE_LOADED: w,
+    CACHE_LOADED_LAZY: w,
+    CHANNEL_UPDATES: N,
+    CHANNEL_CREATE: b,
     CHANNEL_DELETE: R,
-    MESSAGE_CREATE: P,
+    MESSAGE_CREATE: O,
     REPLY_NUDGE_SET: D,
     GUILD_CREATE: L,
-    LOGOUT: I,
+    LOGOUT: y,
 });

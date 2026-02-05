@@ -1,59 +1,26 @@
-n.d(t, {
-    default: () => i,
-});
-var r = n(627968);
-n(64700);
-var a = n(397927),
-    o = n(442433),
-    c = n(818348);
-let i = (e) =>
-    (0, r.jsx)(a.W1t, {
+a.d(t, { default: () => c });
+var n = a(627968);
+a(64700);
+var i = a(397927),
+    s = a(442433),
+    d = a(818348);
+let c = (e) =>
+    (0, n.jsx)(i.W1t, {
         "data-menu-migrated": !0,
-        onClose: o.Z_,
+        onClose: s.Z_,
         navId: "staff-only-entry-debug",
         "aria-label": "staff only content inventory debug",
-        onSelect: c.tE,
-        children: (0, r.jsx)(a.Drp, {
+        onSelect: d.tE,
+        children: (0, n.jsx)(i.Drp, {
             id: "test",
             label: "Debug (Staff-Only)",
             action: () => {
-                (0, a.mMO)(async () => {
-                    let { default: t } = await n.e("94022").then(n.bind(n, 924037));
-                    return (n) =>
-                        (0, r.jsx)(
-                            t,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, n, e),
-                        );
+                (0, i.mMO)(async () => {
+                    let { default: t } = await a.e("94022").then(a.bind(a, 924037));
+                    return (a) => (0, n.jsx)(t, { ...a, ...e });
                 });
             },
-            icon: a.PXj,
-            leadingAccessory: {
-                type: "icon",
-                icon: a.PXj,
-            },
+            icon: i.PXj,
+            leadingAccessory: { type: "icon", icon: i.PXj },
         }),
     });

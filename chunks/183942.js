@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(627968);
-
 function i(e) {
     let { className: t } = e;
     return (0, r.jsxs)("svg", {

@@ -1,35 +1,31 @@
-n.d(t, {
-    A: () => u,
-});
-var l = n(627968),
-    a = n(64700),
-    r = n(136722),
-    i = n(397927),
-    s = n(595738),
-    c = n(376092),
-    o = n(985018),
-    d = n(437504);
+a.d(t, { A: () => u });
+var n = a(627968),
+    i = a(64700),
+    s = a(136722),
+    l = a(397927),
+    r = a(595738),
+    o = a(376092),
+    c = a(985018),
+    d = a(437504);
 let u = function (e) {
-    var t;
-    let { application: n } = e,
-        u = a.useMemo(() => {
-            var e;
-            let t = null == n || null == (e = n.install_params) ? void 0 : e.permissions;
-            if (null != t) return c.Q.filter((e) => r.zy(r.iu(t), e));
-        }, [null == n || null == (t = n.install_params) ? void 0 : t.permissions]);
-    return null != u && u.length > 0
-        ? (0, l.jsxs)("div", {
+    let { application: t } = e,
+        a = i.useMemo(() => {
+            let e = t?.install_params?.permissions;
+            if (null != e) return o.Q.filter((t) => s.zy(s.iu(e), t));
+        }, [t?.install_params?.permissions]);
+    return null != a && a.length > 0
+        ? (0, n.jsxs)("div", {
               className: d.A,
               children: [
-                  (0, l.jsx)(i.Heading, {
+                  (0, n.jsx)(l.Heading, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
-                      children: o.intl.string(o.t.runNF8),
+                      children: c.intl.string(c.t.runNF8),
                   }),
-                  (0, l.jsx)(s.A, {
+                  (0, n.jsx)(r.A, {
                       className: d.h,
-                      grantedPermissions: u,
-                      grantedPermissionsHeader: o.intl.string(o.t.SLgiNH),
+                      grantedPermissions: a,
+                      grantedPermissionsHeader: c.intl.string(c.t.SLgiNH),
                   }),
               ],
           })

@@ -1,113 +1,74 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(638769);
-var r = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    i = n(401864),
-    o = n(124987),
-    c = n(397927),
-    u = n(954571),
-    d = n(440938),
-    g = n(365491),
-    p = n(938191),
-    m = n(758836),
-    f = n(652215),
-    b = n(985018),
-    h = n(785244);
-let _ = () => {
-    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.v)(),
-        s = (0, d.uM)(),
-        _ = (0, p.yB)("CollectiblesSortSelect"),
-        E = n(),
-        v = l.useMemo(() => m.QB.filter((e) => e.sortType !== o.$.RELEVANCE || E), [E]),
-        C = l.useCallback((e) => {
-            let { sortType: t, sortDirection: n } = e;
+"use strict";
+s.d(t, { A: () => E });
+var n = s(627968),
+    r = s(64700),
+    l = s(503698),
+    a = s.n(l),
+    i = s(401864),
+    o = s(124987),
+    c = s(397927),
+    d = s(954571),
+    u = s(440938),
+    g = s(365491),
+    m = s(938191),
+    _ = s(758836),
+    h = s(652215),
+    p = s(985018),
+    f = s(785244);
+let E = () => {
+    let { sort: e, onSetSort: t, hasRelevanceFilters: s } = (0, g.v)(),
+        l = (0, u.uM)(),
+        E = (0, m.yB)("CollectiblesSortSelect"),
+        C = s(),
+        b = r.useMemo(() => _.QB.filter((e) => e.sortType !== o.$.RELEVANCE || C), [C]),
+        A = r.useCallback((e) => {
+            let { sortType: t, sortDirection: s } = e;
             return t === o.$.RECENCY
-                ? {
-                      label: b.intl.string(b.t["51Bhiz"]),
-                      value: "recent",
-                      id: "recent",
-                  }
+                ? { label: p.intl.string(p.t["51Bhiz"]), value: "recent", id: "recent" }
                 : t === o.$.PRICE
-                  ? n === i.A.ASC
-                      ? {
-                            label: b.intl.string(b.t.m8RVU2),
-                            value: "price-asc",
-                            id: "price-asc",
-                        }
-                      : {
-                            label: b.intl.string(b.t.zBwQJO),
-                            value: "price-desc",
-                            id: "price-desc",
-                        }
+                  ? s === i.A.ASC
+                      ? { label: p.intl.string(p.t.m8RVU2), value: "price-asc", id: "price-asc" }
+                      : { label: p.intl.string(p.t.zBwQJO), value: "price-desc", id: "price-desc" }
                   : t === o.$.RELEVANCE
-                    ? {
-                          label: b.intl.string(b.t["XoeT/z"]),
-                          value: "relevance",
-                          id: "relevance",
-                      }
-                    : {
-                          label: b.intl.string(b.t.Y68e5p),
-                          value: "popularity",
-                          id: "popularity",
-                      };
+                    ? { label: p.intl.string(p.t["XoeT/z"]), value: "relevance", id: "relevance" }
+                    : { label: p.intl.string(p.t.Y68e5p), value: "popularity", id: "popularity" };
         }, []),
-        A = l.useCallback(
+        x = r.useCallback(
             (e) =>
                 ({
-                    recent: {
-                        sortType: o.$.RECENCY,
-                        sortDirection: i.A.DESC,
-                    },
-                    "price-asc": {
-                        sortType: o.$.PRICE,
-                        sortDirection: i.A.ASC,
-                    },
-                    "price-desc": {
-                        sortType: o.$.PRICE,
-                        sortDirection: i.A.DESC,
-                    },
-                    popularity: {
-                        sortType: o.$.POPULARITY,
-                        sortDirection: i.A.DESC,
-                    },
-                    relevance: {
-                        sortType: o.$.RELEVANCE,
-                        sortDirection: i.A.DESC,
-                    },
+                    recent: { sortType: o.$.RECENCY, sortDirection: i.A.DESC },
+                    "price-asc": { sortType: o.$.PRICE, sortDirection: i.A.ASC },
+                    "price-desc": { sortType: o.$.PRICE, sortDirection: i.A.DESC },
+                    popularity: { sortType: o.$.POPULARITY, sortDirection: i.A.DESC },
+                    relevance: { sortType: o.$.RELEVANCE, sortDirection: i.A.DESC },
                 })[e],
             [],
         ),
-        x = l.useCallback(
+        S = r.useCallback(
             (e) => {
-                let n = C(A(e));
-                u.default.track(f.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == s ? void 0 : s.sessionId,
-                    page_section: null == s ? void 0 : s.pageSection,
-                    page_category: null == s ? void 0 : s.pageCategory,
-                    page_index: null == s ? void 0 : s.pageIndex,
-                    page_size: null == s ? void 0 : s.pageSize,
-                    cta_name: "sort by ".concat(n.label.toLowerCase()),
+                let s = A(x(e));
+                d.default.track(h.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: l?.sessionId,
+                    page_section: l?.pageSection,
+                    page_category: l?.pageCategory,
+                    page_index: l?.pageIndex,
+                    page_size: l?.pageSize,
+                    cta_name: `sort by ${s.label.toLowerCase()}`,
                     page_type: "catalog",
                 }),
-                    t(A(e));
+                    t(x(e));
             },
-            [s, C, A, t],
+            [l, A, x, t],
         ),
-        S = C(e);
-    return (0, r.jsx)("div", {
-        className: a()(h.k, {
-            [p.jP]: _,
-        }),
-        children: (0, r.jsx)(c.l6P, {
-            label: b.intl.string(b.t.uaX705),
+        v = A(e);
+    return (0, n.jsx)("div", {
+        className: a()(f.k, { [m.jP]: E }),
+        children: (0, n.jsx)(c.l6P, {
+            label: p.intl.string(p.t.uaX705),
             hideLabel: !0,
-            options: v.map(C),
-            onSelectionChange: x,
-            value: S.value,
+            options: b.map(A),
+            onSelectionChange: S,
+            value: v.value,
             selectionMode: "single",
             fullWidth: !0,
         }),

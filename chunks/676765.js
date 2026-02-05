@@ -1,67 +1,56 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(64700),
     i = n(735438),
     a = n.n(i),
     s = n(155718),
     o = n(827785),
     l = n(264322),
-    c = n(842209),
-    u = n(768879),
+    u = n(842209),
+    c = n(768879),
     d = n(73510);
-
-function f(e) {
-    var t;
-    let { context: n } = e,
-        i = "channel" === n.type ? n.channel : void 0,
-        f = (0, l.ON)(null == i ? void 0 : i.guild_id, !0),
-        { commandsByActiveSection: p, loading: _ } = c.cu({
-            context: n,
-            filters: {
-                commandTypes: [s.kc.CHAT, s.kc.PRIMARY_ENTRY_POINT],
-            },
-            options: {
-                placeholderCount: 0,
-                limit: d.Hi,
-                includeFrecency: !0,
-            },
+function _(e) {
+    let { context: t } = e,
+        n = "channel" === t.type ? t.channel : void 0,
+        i = (0, l.ON)(n?.guild_id, !0),
+        { commandsByActiveSection: _, loading: f } = u.cu({
+            context: t,
+            filters: { commandTypes: [s.kc.CHAT, s.kc.PRIMARY_ENTRY_POINT] },
+            options: { placeholderCount: 0, limit: d.Hi, includeFrecency: !0 },
             allowFetch: !0,
         }),
-        h = r.useMemo(
+        p = r.useMemo(
             () =>
-                p.reduce((e, t) => {
+                _.reduce((e, t) => {
                     let { section: n, data: r } = t;
                     return r.length > 0 && e.add(n.id), e;
                 }, new Set()),
-            [p],
+            [_],
         ),
-        m = r.useMemo(() => {
-            var e, t;
-            return Object.values(null != (e = null == (t = f.result) ? void 0 : t.sections) ? e : {})
-                .map((e) => {
-                    let { descriptor: t } = e;
-                    return t;
-                })
-                .filter((e) => !(e.id in o.gZ) && h.has(e.id));
-        }, [null == (t = f.result) ? void 0 : t.sections, h]),
-        g = (0, u.I)(m);
+        h = r.useMemo(
+            () =>
+                Object.values(i.result?.sections ?? {})
+                    .map((e) => {
+                        let { descriptor: t } = e;
+                        return t;
+                    })
+                    .filter((e) => !(e.id in o.gZ) && p.has(e.id)),
+            [i.result?.sections, p],
+        ),
+        m = (0, c.I)(h);
     return {
         appsInThisServer: r.useMemo(
             () =>
                 a()
                     .compact(
-                        g.map((e) => {
+                        m.map((e) => {
                             let { application: t } = e;
                             return t;
                         }),
                     )
-                    .map((e) => ({
-                        application: e,
-                    })),
-            [g],
+                    .map((e) => ({ application: e })),
+            [m],
         ),
-        isLoading: f.fetchState.fetching || _,
+        isLoading: i.fetchState.fetching || f,
     };
 }

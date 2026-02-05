@@ -1,7 +1,6 @@
 function n(e) {
     return "[object Arguments]" == Object.prototype.toString.call(e);
 }
-
 function r(e) {
     return (
         (e &&

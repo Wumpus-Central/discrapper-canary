@@ -1,71 +1,54 @@
-l.d(t, {
-    A: () => b,
-});
-var r = l(64700),
-    n = l(512750),
-    i = l(311907),
-    s = l(71393),
-    o = l(186111),
-    a = l(645619),
-    u = l(840120),
-    d = l(363487),
-    c = l(998418),
-    f = l(162362),
-    p = l(220628),
-    m = l(867060),
-    v = l(568065),
-    A = l(652215),
-    g = l(333354),
-    x = l(985018);
-
-function b(e, t) {
-    var l, b, h, j;
-    let _ = (0, i.bG)([s.A], () => s.A.getGuild(e)),
-        E = (0, i.bG)([o.A], () => o.A.hasLayers()),
-        y = null != (l = (0, d.A)(e)) && l,
-        I = (0, u.j$)(e, t),
-        S = (0, i.bG)([a.A], () => a.A.getStateForGuild(e)),
-        w = null == S || null == (h = S.allPowerups) ? void 0 : h[n.FB],
-        N = (0, c.Ay)(e, w),
-        O = null == w ? void 0 : w.storeRemovalDate,
-        L = null == S || null == (j = S.allPowerups) ? void 0 : j[n.YG],
-        P = (0, i.bG)([s.A], () => {
-            var t;
-            return null == (t = s.A.getGuild(e)) ? void 0 : t.features;
-        }),
-        T = null != (b = null == P ? void 0 : P.has(A.GuildFeatures.PARTNERED)) && b,
-        { onActivate: k, error: C } = (0, p.A)(e, L);
-    (0, m.A)(C);
-    let G = !E && y && I && null != w && !T && N.type === v.b_.POWERUP_ACTIVATED && null != O && null != L && null != _,
-        R = r.useCallback(
+n.d(t, { A: () => h });
+var r = n(64700),
+    l = n(512750),
+    i = n(311907),
+    s = n(71393),
+    o = n(186111),
+    a = n(645619),
+    u = n(840120),
+    d = n(363487),
+    c = n(998418),
+    p = n(162362),
+    m = n(220628),
+    A = n(867060),
+    _ = n(568065),
+    g = n(652215),
+    f = n(333354),
+    x = n(985018);
+function h(e, t) {
+    let n = (0, i.bG)([s.A], () => s.A.getGuild(e)),
+        h = (0, i.bG)([o.A], () => o.A.hasLayers()),
+        v = (0, d.A)(e) ?? !1,
+        j = (0, u.j$)(e, t),
+        b = (0, i.bG)([a.A], () => a.A.getStateForGuild(e)),
+        E = b?.allPowerups?.[l.FB],
+        I = (0, c.Ay)(e, E),
+        S = E?.storeRemovalDate,
+        w = b?.allPowerups?.[l.YG],
+        C = (0, i.bG)([s.A], () => s.A.getGuild(e)?.features),
+        N = C?.has(g.GuildFeatures.PARTNERED) ?? !1,
+        { onActivate: L, error: y } = (0, m.A)(e, w);
+    (0, A.A)(y);
+    let T = !h && v && j && null != E && !N && I.type === _.b_.POWERUP_ACTIVATED && null != S && null != w && null != n,
+        k = r.useCallback(
             (e) => {
-                e.stopPropagation(), k();
+                e.stopPropagation(), L();
             },
-            [k],
+            [L],
         ),
-        D = r.useMemo(() => {
-            if (!G) return null;
-            let e = (0, f.A)(O),
-                t = _.premiumTier === A.TVA.TIER_2 ? x.intl.string(g.default["0uo/LD"]) : void 0;
+        G = r.useMemo(() => {
+            if (!T) return null;
+            let e = (0, p.A)(S),
+                t = n.premiumTier === g.TVA.TIER_2 ? x.intl.string(f.default["0uo/LD"]) : void 0;
             return {
-                firstHeader: w.title,
-                secondHeader: x.intl.formatToPlainString(g.default["8imxAq"], {
-                    dateString: e,
-                }),
-                firstBody: x.intl.formatToPlainString(g.default["/bW9tW"], {
-                    serverName: _.name,
-                }),
-                secondBody: x.intl.formatToPlainString(g.default.D09fdi, {
-                    dateString: e,
-                    boostCount: w.cost,
-                }),
-                thirdBody: x.intl.string(g.default["+zvKPr"]),
+                firstHeader: E.title,
+                secondHeader: x.intl.formatToPlainString(f.default["8imxAq"], { dateString: e }),
+                firstBody: x.intl.formatToPlainString(f.default["/bW9tW"], { serverName: n.name }),
+                secondBody: x.intl.formatToPlainString(f.default.D09fdi, { dateString: e, boostCount: E.cost }),
+                thirdBody: x.intl.string(f.default["+zvKPr"]),
                 primaryButtonText: t,
-                onPrimaryClick: null != t ? R : void 0,
+                onPrimaryClick: null != t ? k : void 0,
             };
-        }, [G, w, O, _, R]);
-    return {
-        shouldShow: G,
-        modalConfig: D,
-    };
+        }, [T, E, S, n, k]);
+    return { shouldShow: T, modalConfig: G };
 }

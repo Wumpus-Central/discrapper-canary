@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => r,
-});
+a.d(t, { A: () => r });
 var n = {
     lastWeek: "'지난' eeee p",
     yesterday: "'어제' p",

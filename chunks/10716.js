@@ -1,139 +1,91 @@
-n.d(t, {
-    $: () => p,
-    A: () => S,
-}),
-    n(938796);
-var r,
-    i = n(665260),
-    a = n(311907),
-    s = n(73153),
-    o = n(253932),
-    l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { $: () => c, A: () => T }), n(938796);
+var r = n(665260),
+    i = n(311907),
+    a = n(73153),
+    s = n(253932),
+    o = n(652215);
+function l() {
+    return { lastUsedObject: {}, useActivityUrlOverride: !1, activityUrlOverride: null, filter: "" };
 }
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d() {
-    return {
-        lastUsedObject: {},
-        useActivityUrlOverride: !1,
-        activityUrlOverride: null,
-        filter: "",
-    };
-}
-let f = d();
-var p = (function (e) {
+let u = l();
+var c = (function (e) {
     return (e.INITIALIZED = "INITIALIZED"), (e.LOADING = "LOADING"), (e.LOADED = "LOADED"), (e.ERROR = "ERROR"), e;
 })({});
-let _ = "INITIALIZED",
-    h = [];
-
-function m() {
-    (f = d()), (_ = "INITIALIZED"), (h = []);
+let d = "INITIALIZED",
+    _ = [];
+function f() {
+    (u = l()), (d = "INITIALIZED"), (_ = []);
 }
-
-function g() {
-    f.useActivityUrlOverride = !f.useActivityUrlOverride;
+function p() {
+    u.useActivityUrlOverride = !u.useActivityUrlOverride;
 }
-
-function E(e) {
+function h(e) {
     let { activityUrlOverride: t } = e;
-    f.activityUrlOverride = t;
+    u.activityUrlOverride = t;
 }
-
-function b(e) {
+function m(e) {
     let { applicationId: t, timestamp: n } = e;
-    if (null == h.find((e) => e.id === t)) return !1;
-    f.lastUsedObject[t] = n;
+    if (null == _.find((e) => e.id === t)) return !1;
+    u.lastUsedObject[t] = n;
 }
-
-function y(e) {
+function g(e) {
     let { applications: t } = e;
-    (_ = "LOADED"), (h = t.filter((e) => null != e.flags && (0, i.Lt)(e.flags, l.gfo.EMBEDDED)));
+    (d = "LOADED"), (_ = t.filter((e) => null != e.flags && (0, r.Lt)(e.flags, o.gfo.EMBEDDED)));
 }
-
-function O(e) {
+function E(e) {
     let { type: t } = e;
-    _ = "ERROR";
+    d = "ERROR";
 }
-
 function A(e) {
     let { filter: t } = e;
-    f.filter = t;
+    u.filter = t;
 }
-class v extends (r = a.Ay.PersistedStore) {
+class I extends i.Ay.PersistedStore {
+    static displayName = "DeveloperActivityShelfStore";
+    static persistKey = "DeveloperActivityShelfStore";
     initialize(e) {
-        f = u({}, d(), null != e ? e : {});
+        u = { ...l(), ...(e ?? {}) };
     }
+    static migrations = [(e) => (delete e.isEnabled, { ...e })];
     getState() {
-        return f;
+        return u;
     }
     getIsEnabled() {
-        return o.Q_.getSetting() && h.length > 0;
+        return s.Q_.getSetting() && _.length > 0;
     }
     getLastUsedObject() {
-        return f.lastUsedObject;
+        return u.lastUsedObject;
     }
     getUseActivityUrlOverride() {
-        return this.getIsEnabled() && f.useActivityUrlOverride;
+        return this.getIsEnabled() && u.useActivityUrlOverride;
     }
     getActivityUrlOverride() {
-        return this.getIsEnabled() ? f.activityUrlOverride : null;
+        return this.getIsEnabled() ? u.activityUrlOverride : null;
     }
     getFetchState() {
-        return _;
+        return d;
     }
     getFilter() {
-        return this.getIsEnabled() ? f.filter : "";
+        return this.getIsEnabled() ? u.filter : "";
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? h : [];
+        return this.getIsEnabled() ? _ : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != h.find((t) => t.id === e);
+        return this.getIsEnabled() && null != _.find((t) => t.id === e);
     }
 }
-c(v, "displayName", "DeveloperActivityShelfStore"),
-    c(v, "persistKey", "DeveloperActivityShelfStore"),
-    c(v, "migrations", [(e) => (delete e.isEnabled, u({}, e))]);
-let S = new v(s.h, {
-    LOGOUT: m,
-    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,
-    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: E,
-    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: b,
+let T = new I(a.h, {
+    LOGOUT: f,
+    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: p,
+    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: h,
+    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: m,
     DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-        _ = "LOADING";
+        d = "LOADING";
     },
-    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: y,
-    DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: O,
+    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: g,
+    DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: E,
     DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: A,
     USER_SETTINGS_PROTO_UPDATE() {},
 });

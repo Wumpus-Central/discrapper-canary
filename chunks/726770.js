@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     textButton: "textButton__7a01b",
     text: "text__7a01b",

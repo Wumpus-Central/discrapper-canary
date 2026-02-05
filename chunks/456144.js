@@ -1,3 +1,1 @@
-e.exports = {
-    v: "tabs__90767",
-};
+e.exports = { v: "tabs__90767" };

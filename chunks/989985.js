@@ -1,56 +1,36 @@
-n.d(t, {
-    _: () => s,
-});
-var r = n(627968);
+n.d(t, { _: () => r });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    a = n(36353);
-
-function s(e) {
+    a = n.n(l),
+    s = n(36353);
+function r(e) {
     let {
         bannerIcon: t,
         bannerHeader: n,
         bannerSubtext: l,
-        textStyles: s,
+        textStyles: r,
         headerStyles: o,
         containerStyles: c,
-        children: u,
+        children: d,
     } = e;
-    return (0, r.jsxs)("div", {
-        className: i()(a.Ew, c),
+    return (0, i.jsxs)("div", {
+        className: a()(s.Ew, c),
         children: [
-            (0, r.jsxs)("div", {
-                className: i()(a.lt, s),
+            (0, i.jsxs)("div", {
+                className: a()(s.lt, r),
                 children: [
-                    null != t &&
-                        ("string" == typeof t
-                            ? (0, r.jsx)("img", {
-                                  src: t,
-                                  alt: "",
-                                  className: a.q3,
-                              })
-                            : t),
-                    (0, r.jsxs)("div", {
-                        className: a._M,
+                    null != t && ("string" == typeof t ? (0, i.jsx)("img", { src: t, alt: "", className: s.q3 }) : t),
+                    (0, i.jsxs)("div", {
+                        className: s._M,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: i()(a.U_, o),
-                                children: n,
-                            }),
-                            null != l &&
-                                (0, r.jsx)("div", {
-                                    className: a.mi,
-                                    children: l,
-                                }),
+                            (0, i.jsx)("div", { className: a()(s.U_, o), children: n }),
+                            null != l && (0, i.jsx)("div", { className: s.mi, children: l }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: a.uu,
-                children: u,
-            }),
+            (0, i.jsx)("div", { className: s.uu, children: d }),
         ],
     });
 }

@@ -1,157 +1,86 @@
-t.r(r),
-    t.d(r, {
-        default: () => m,
-    }),
-    t(65821),
-    t(747238);
-var n = t(627968);
+t.r(e), t.d(e, { default: () => k });
+var a = t(627968);
 t(64700);
 var o = t(284009),
-    a = t.n(o),
+    n = t.n(o),
     l = t(492462),
-    c = t(674432),
-    i = t(333748),
-    u = t(13202),
-    s = t(77468),
-    p = t(269815),
-    d = t(114716),
-    b = t(370480),
-    y = t(626584),
-    f = t(123677),
-    O = t(200330),
-    h = t(321987),
-    w = t(998218),
-    v = t(652215),
-    A = t(231723);
-let P = new y.A("LinkAuthorize");
-async function g(e, r, t, n) {
-    var o, l, c, i, p;
-    let d = null;
+    i = t(674432),
+    c = t(333748),
+    s = t(13202),
+    u = t(77468),
+    d = t(269815),
+    h = t(114716),
+    p = t(370480),
+    A = t(626584),
+    w = t(123677),
+    _ = t(200330),
+    T = t(321987),
+    I = t(998218),
+    y = t(652215),
+    E = t(231723);
+let f = new A.A("LinkAuthorize");
+async function m(r, e, t, a) {
+    let o = null;
     try {
-        let { body: e } = await s.A.authorize(n, {
-            twoWayLinkType: u.I.WEB,
-        });
-        d = e.url;
-    } catch (e) {
-        throw Error(
-            "error at authorize with code ".concat(
-                null != (o = null == e || null == (l = e.body) ? void 0 : l.code) ? o : 0,
-            ),
-        );
+        let { body: r } = await u.A.authorize(a, { twoWayLinkType: s.I.WEB });
+        o = r.url;
+    } catch (r) {
+        throw Error(`error at authorize with code ${r?.body?.code ?? 0}`);
     }
-    let y = null;
+    let l = null;
     try {
-        a()(null != d, "No URL in authorize response");
-        let { state: e } = (0, b.vA)(d);
-        a()(null != e, "Authorize URL state query parameter must be present"), (y = e);
-    } catch (e) {
+        n()(null != o, "No URL in authorize response");
+        let { state: r } = (0, p.vA)(o);
+        n()(null != r, "Authorize URL state query parameter must be present"), (l = r);
+    } catch (r) {
         throw Error("error at authorize parsing callback params");
     }
     try {
-        let o = await s.A.completeTwoWayLink(n, e, r, y, t);
-        return null == o || null == (c = o.body) ? void 0 : c.redirect;
-    } catch (e) {
-        throw Error(
-            "error at callback with code ".concat(
-                null != (i = null == e || null == (p = e.body) ? void 0 : p.code) ? i : 0,
-            ),
-        );
+        let o = await u.A.completeTwoWayLink(a, r, e, l, t);
+        return o?.body?.redirect;
+    } catch (r) {
+        throw Error(`error at callback with code ${r?.body?.code ?? 0}`);
     }
 }
-
-function j(e) {
-    var r, t;
-    let { platformType: o } = e;
-    (0, p.A)();
-    let a = (0, f._)(window.location.search),
-        { code: i, token_redirect_uri: u } = l.parse(window.location.search),
-        s = async (e) => {
-            let { location: r } = e;
-            if (null == r) return;
-            let { error: t } = l.parse(r),
-                n = null;
-            if (null == t && null != i)
+function L(r) {
+    let { platformType: e } = r;
+    (0, d.A)();
+    let t = (0, w._)(window.location.search),
+        { code: o, token_redirect_uri: n } = l.parse(window.location.search),
+        c = async (r) => {
+            let { location: t } = r;
+            if (null == t) return;
+            let { error: a } = l.parse(t),
+                c = null;
+            if (null == a && null != o)
                 try {
-                    n = await g(r, i, u, o);
-                } catch (t) {
-                    var a;
-                    P.error("Error Creating Discord link", null == t ? void 0 : t.message);
-                    let e = w.A.toURLSafe(r);
-                    if (null == e) return;
-                    e.searchParams.delete("code"),
-                        e.searchParams.set("error", "two_way_link_error"),
-                        e.searchParams.set(
-                            "error_description",
-                            null != (a = null == t ? void 0 : t.message) ? a : "unknown_error",
-                        ),
-                        (r = e.toString());
+                    c = await m(t, o, n, e);
+                } catch (e) {
+                    f.error("Error Creating Discord link", e?.message);
+                    let r = I.A.toURLSafe(t);
+                    if (null == r) return;
+                    r.searchParams.delete("code"),
+                        r.searchParams.set("error", "two_way_link_error"),
+                        r.searchParams.set("error_description", e?.message ?? "unknown_error"),
+                        (t = r.toString());
                 }
-            window.location = null == n || n === c.U.OAUTH_REDIRECT ? r : n;
+            window.location = null == c || c === i.U.OAUTH_REDIRECT ? t : c;
         };
-    return (0, n.jsx)(h.$, {
+    return (0, a.jsx)(T.$, {
         removeChildWrapper: !0,
-        children: (0, n.jsx)(
-            O.OAuth2AuthorizeModal,
-            ((r = (function (e) {
-                for (var r = 1; r < arguments.length; r++) {
-                    var t = null != arguments[r] ? arguments[r] : {},
-                        n = Object.keys(t);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(t).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                            }),
-                        )),
-                        n.forEach(function (r) {
-                            var n;
-                            (n = t[r]),
-                                r in e
-                                    ? Object.defineProperty(e, r, {
-                                          value: n,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[r] = n);
-                        });
-                }
-                return e;
-            })(
-                {
-                    transitionState: A.ip.ENTERED,
-                },
-                a,
-            )),
-            (t = t =
-                {
-                    showLogout: !0,
-                    callback: s,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
-                : (function (e, r) {
-                      var t = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          t.push.apply(t, n);
-                      }
-                      return t;
-                  })(Object(t)).forEach(function (e) {
-                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(t, e));
-                  }),
-            r),
-        ),
+        children: (0, a.jsx)(_.OAuth2AuthorizeModal, {
+            transitionState: E.ip.ENTERED,
+            ...t,
+            showLogout: !0,
+            callback: c,
+        }),
     });
 }
-let m = (0, d.C)(function (e) {
-    let { match: r } = e,
-        t = r.params.type,
+let k = (0, h.C)(function (r) {
+    let { match: e } = r,
+        t = e.params.type,
         { client_id: o = "" } = l.parse(window.location.search),
-        a = t === v.fg2.PLAYSTATION && o === i.i.PLAYSTATION_APPLICATION_ID,
-        c = t === v.fg2.PLAYSTATION_STAGING && o === i.i.PLAYSTATION_STAGING_APPLICATION_ID;
-    return a || c
-        ? (0, n.jsx)(j, {
-              platformType: t,
-          })
-        : null;
+        n = t === y.fg2.PLAYSTATION && o === c.i.PLAYSTATION_APPLICATION_ID,
+        i = t === y.fg2.PLAYSTATION_STAGING && o === c.i.PLAYSTATION_STAGING_APPLICATION_ID;
+    return n || i ? (0, a.jsx)(L, { platformType: t }) : null;
 });

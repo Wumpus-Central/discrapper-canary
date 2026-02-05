@@ -1,3 +1,4 @@
+"use strict";
 var r = n(675879),
     a = /[^\0-\u007E]/,
     o = /[.\u3002\uFF0E\uFF61]/g,
@@ -42,12 +43,12 @@ var r = n(675879),
         var f = r.length,
             m = f;
         for (f && h(r, "-"); m < a; ) {
-            var y = 2147483647;
+            var y = 0x7fffffff;
             for (t = 0; t < e.length; t++) (n = e[t]) >= o && n < y && (y = n);
             var A = m + 1;
-            if (y - o > c((2147483647 - l) / A)) throw new s(i);
+            if (y - o > c((0x7fffffff - l) / A)) throw new s(i);
             for (l += (y - o) * A, o = y, t = 0; t < e.length; t++) {
-                if ((n = e[t]) < o && ++l > 2147483647) throw new s(i);
+                if ((n = e[t]) < o && ++l > 0x7fffffff) throw new s(i);
                 if (n === o) {
                     for (var _ = l, k = 36; ; ) {
                         var C = k <= d ? 1 : k >= d + 26 ? 26 : k - d;

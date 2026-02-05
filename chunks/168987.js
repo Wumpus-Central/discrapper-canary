@@ -1,137 +1,48 @@
-n.d(t, {
-    H: () => f,
-});
+"use strict";
+n.d(t, { H: () => s });
 var r = n(627968);
 n(64700);
 var i = n(996682),
     a = n(27989);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function u(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let f = (e) => {
-    var t, n;
-    let { size: s = "md", width: l, height: d } = e,
-        f = u(e, ["size", "width", "height"]),
-        p = (0, a.J)(s),
-        _ = null != (t = null == p ? void 0 : p.width) ? t : l,
-        h = null != (n = null == p ? void 0 : p.height) ? n : d;
-    return (0, r.jsxs)(
-        "svg",
-        c(o({}, (0, i.A)(f)), {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: _,
-            height: h,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, r.jsx)("path", {
-                    fill: "#fff",
-                    fillRule: "evenodd",
-                    d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
-                    clipRule: "evenodd",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#3C4043",
-                    d: "M11.4 14.52h-.66V9.38h1.75c.45 0 .82.14 1.13.44.32.3.48.66.48 1.08 0 .44-.16.8-.48 1.1-.3.29-.68.43-1.13.43H11.4v2.09Zm0-4.51v1.8h1.1c.27 0 .49-.1.66-.27a.87.87 0 0 0 0-1.26.86.86 0 0 0-.65-.27h-1.1ZM15.83 10.88c.49 0 .87.13 1.15.4.29.26.43.61.43 1.07v2.17h-.63v-.5h-.03c-.27.41-.64.61-1.1.61-.38 0-.7-.11-.97-.34a1.1 1.1 0 0 1-.39-.86c0-.37.14-.66.42-.87.27-.22.64-.32 1.1-.32.39 0 .71.07.96.21v-.15a.75.75 0 0 0-.27-.58.93.93 0 0 0-.64-.25 1 1 0 0 0-.87.47l-.58-.36c.32-.47.8-.7 1.42-.7Zm-.86 2.56c0 .17.08.31.22.43a.8.8 0 0 0 .52.17c.28 0 .52-.1.74-.31.22-.2.33-.45.33-.73-.2-.16-.5-.24-.86-.24-.27 0-.5.06-.67.2-.19.13-.28.29-.28.48ZM21 11l-2.2 5.06h-.68l.81-1.77-1.45-3.3h.72l1.05 2.53h.01L20.28 11H21Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#4285F4",
-                    d: "M8.77 12.01c0-.21-.02-.42-.05-.61H5.95v1.13h1.6c-.07.38-.28.7-.6.92v.73h.95c.56-.51.87-1.27.87-2.17Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#34A853",
-                    d: "M6.95 13.45c-.26.17-.6.28-1 .28-.77 0-1.42-.52-1.66-1.22h-.98v.76a2.95 2.95 0 0 0 2.64 1.63c.8 0 1.46-.27 1.95-.72l-.95-.73Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#FABB05",
-                    d: "M4.2 11.95c0-.2.03-.39.1-.57v-.76H3.3a2.93 2.93 0 0 0 0 2.65l.98-.76c-.06-.18-.09-.37-.09-.56Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#E94235",
-                    d: "M5.95 10.17c.43 0 .82.15 1.13.44l.84-.84a2.95 2.95 0 0 0-4.6.86l.97.75c.24-.7.89-1.21 1.66-1.21Z",
-                }),
-            ],
-        }),
-    );
+let s = (e) => {
+    let { size: t = "md", width: n, height: s, ...o } = e,
+        l = (0, a.J)(t),
+        u = l?.width ?? n,
+        c = l?.height ?? s;
+    return (0, r.jsxs)("svg", {
+        ...(0, i.A)(o),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: u,
+        height: c,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, r.jsx)("path", {
+                fill: "#fff",
+                fillRule: "evenodd",
+                d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
+                clipRule: "evenodd",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#3C4043",
+                d: "M11.4 14.52h-.66V9.38h1.75c.45 0 .82.14 1.13.44.32.3.48.66.48 1.08 0 .44-.16.8-.48 1.1-.3.29-.68.43-1.13.43H11.4v2.09Zm0-4.51v1.8h1.1c.27 0 .49-.1.66-.27a.87.87 0 0 0 0-1.26.86.86 0 0 0-.65-.27h-1.1ZM15.83 10.88c.49 0 .87.13 1.15.4.29.26.43.61.43 1.07v2.17h-.63v-.5h-.03c-.27.41-.64.61-1.1.61-.38 0-.7-.11-.97-.34a1.1 1.1 0 0 1-.39-.86c0-.37.14-.66.42-.87.27-.22.64-.32 1.1-.32.39 0 .71.07.96.21v-.15a.75.75 0 0 0-.27-.58.93.93 0 0 0-.64-.25 1 1 0 0 0-.87.47l-.58-.36c.32-.47.8-.7 1.42-.7Zm-.86 2.56c0 .17.08.31.22.43a.8.8 0 0 0 .52.17c.28 0 .52-.1.74-.31.22-.2.33-.45.33-.73-.2-.16-.5-.24-.86-.24-.27 0-.5.06-.67.2-.19.13-.28.29-.28.48ZM21 11l-2.2 5.06h-.68l.81-1.77-1.45-3.3h.72l1.05 2.53h.01L20.28 11H21Z",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#4285F4",
+                d: "M8.77 12.01c0-.21-.02-.42-.05-.61H5.95v1.13h1.6c-.07.38-.28.7-.6.92v.73h.95c.56-.51.87-1.27.87-2.17Z",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#34A853",
+                d: "M6.95 13.45c-.26.17-.6.28-1 .28-.77 0-1.42-.52-1.66-1.22h-.98v.76a2.95 2.95 0 0 0 2.64 1.63c.8 0 1.46-.27 1.95-.72l-.95-.73Z",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#FABB05",
+                d: "M4.2 11.95c0-.2.03-.39.1-.57v-.76H3.3a2.93 2.93 0 0 0 0 2.65l.98-.76c-.06-.18-.09-.37-.09-.56Z",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#E94235",
+                d: "M5.95 10.17c.43 0 .82.15 1.13.44l.84-.84a2.95 2.95 0 0 0-4.6.86l.97.75c.24-.7.89-1.21 1.66-1.21Z",
+            }),
+        ],
+    });
 };

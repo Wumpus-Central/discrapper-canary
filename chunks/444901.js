@@ -1,186 +1,152 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(321073),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => N }), n(321073);
+var i = n(627968),
+    l = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(397927),
-    c = n(544420),
-    u = n(572211),
-    d = n(354287),
-    f = n(769015),
-    p = n(763754),
-    _ = n(447215),
-    h = n(888675),
-    m = n(320501),
-    g = n(456060),
-    E = n(472590),
-    b = n(878831),
-    y = n(768349),
-    O = n(985018),
-    A = n(609653),
-    v = n(103467);
-
-function S(e) {
-    let { message: t, applicationName: n, iconSrc: i, channel: a, currentUserId: o, viewAction: c } = e,
-        u = (0, p.Ay)(t),
-        d = (0, _.P)({
-            user: t.author,
-            channelId: a.id,
-            guildId: a.guild_id,
-            messageId: t.id,
-        })(u);
-    return (0, r.jsx)(h.A, {
+    r = n.n(a),
+    s = n(311907),
+    o = n(397927),
+    d = n(544420),
+    c = n(572211),
+    u = n(354287),
+    m = n(769015),
+    _ = n(763754),
+    h = n(447215),
+    p = n(888675),
+    g = n(320501),
+    A = n(456060),
+    f = n(472590),
+    x = n(878831),
+    E = n(768349),
+    C = n(985018),
+    I = n(609653),
+    T = n(103467);
+function v(e) {
+    let { message: t, applicationName: n, iconSrc: l, channel: a, currentUserId: s, viewAction: d } = e,
+        c = (0, _.Ay)(t),
+        u = (0, h.P)({ user: t.author, channelId: a.id, guildId: a.guild_id, messageId: t.id })(c);
+    return (0, i.jsx)(p.A, {
         compact: !1,
-        children: O.intl.format(o === t.author.id ? O.t.anvg2q : O.t.AxVbYF, {
-            username: u.nick,
-            usernameHook: d,
+        children: C.intl.format(s === t.author.id ? C.t.anvg2q : C.t.AxVbYF, {
+            username: c.nick,
+            usernameHook: u,
             applicationHook: () => {
-                let e = null != c ? l.MzZ : "div";
-                return (0, r.jsxs)(e, {
-                    onClick: c,
-                    className: A.Lf,
+                let e = null != d ? o.MzZ : "div";
+                return (0, i.jsxs)(e, {
+                    onClick: d,
+                    className: I.Lf,
                     children: [
-                        (0, r.jsx)("img", {
-                            alt: O.intl.string(O.t["2B/phM"]),
-                            src: i,
-                            className: s()(v.Gt, f.M.XSMALL),
+                        (0, i.jsx)("img", {
+                            alt: C.intl.string(C.t["2B/phM"]),
+                            src: l,
+                            className: r()(T.Gt, m.M.XSMALL),
                         }),
-                        (0, r.jsx)(l.Text, {
-                            variant: "text-sm/semibold",
-                            color: "text-muted",
-                            children: n,
-                        }),
+                        (0, i.jsx)(o.Text, { variant: "text-sm/semibold", color: "text-muted", children: n }),
                     ],
                 });
             },
         }),
     });
 }
-
-function I(e) {
+function N(e) {
     let {
             message: t,
             application: n,
             applicationName: a,
-            channel: s,
-            header: f,
-            currentUserId: p,
-            launchableAppId: _,
-            isEmbeddedApplication: h,
-            tryWithGdnAction: v,
-            staticBannerSrc: I,
-            onClickContent: T,
-            iconSrc: C,
-            onView: N,
-            presenceActivity: R,
-            analyticsLocations: w,
-            showAuthButton: P,
-            startAuthorization: D,
-            accountLinkButtonRef: x,
-            renderAccountLinkUpsell: L,
+            channel: r,
+            header: m,
+            currentUserId: _,
+            launchableAppId: h,
+            isEmbeddedApplication: p,
+            tryWithGdnAction: T,
+            staticBannerSrc: N,
+            onClickContent: S,
+            iconSrc: b,
+            onView: y,
+            presenceActivity: j,
+            analyticsLocations: R,
+            showAuthButton: L,
+            startAuthorization: M,
+            accountLinkButtonRef: O,
+            renderAccountLinkUpsell: P,
         } = e,
-        j = (0, o.bG)([m.A], () => m.A.getMessages(s.id)),
-        { actions: M, hasAccountLinkButton: k } = i.useMemo(() => {
+        D = (0, s.bG)([g.A], () => g.A.getMessages(r.id)),
+        { actions: k, hasAccountLinkButton: U } = l.useMemo(() => {
             let e = [],
-                r = !0,
-                i = !1;
+                i = !0,
+                l = !1;
             if (
-                (null != _
+                (null != h
                     ? (e = [
                           {
-                              label: O.intl.string(O.t["s+J8Dl"]),
-                              trackingArea: d.kY.PLAY,
+                              label: C.intl.string(C.t["s+J8Dl"]),
+                              trackingArea: u.kY.PLAY,
                               isDeadEnd: !0,
                               onClick: () => {
-                                  c.A.launch({
-                                      applicationId: _,
-                                      embedded: h,
-                                  });
+                                  d.A.launch({ applicationId: h, embedded: p });
                               },
                           },
                       ])
-                    : null != v && ((e = [v]), (r = !1)),
+                    : null != T && ((e = [T]), (i = !1)),
                 e.length > 0)
             )
-                if (!(0, E.p)(t.id, j, n.id, R))
-                    return {
-                        actions: [],
-                        hasAccountLinkButton: !1,
-                    };
+                if (!(0, f.p)(t.id, D, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
                 else
-                    P &&
-                        r &&
+                    L &&
+                        i &&
                         (e.push({
-                            label: O.intl.string(O.t.lw71Nf),
-                            trackingArea: d.kY.CONNECT_ACCOUNT,
+                            label: C.intl.string(C.t.lw71Nf),
+                            trackingArea: u.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                D({
-                                    analyticsLocations: w,
-                                });
+                                M({ analyticsLocations: R });
                             },
-                            icon: l.A5T,
+                            icon: o.A5T,
                             iconButton: !0,
-                            buttonRef: x,
+                            buttonRef: O,
                         }),
-                        (i = !0));
-            return {
-                actions: e,
-                hasAccountLinkButton: i,
-            };
-        }, [h, _, v, j, R, n.id, t.id, P, D, w, x]),
-        U = M.some((e) => e.trackingArea === d.kY.CLOUD_PLAY);
-    (0, b.A)(U, w);
-    let G = M.length > 0,
-        V = i.useMemo(
+                        (l = !0));
+            return { actions: e, hasAccountLinkButton: l };
+        }, [p, h, T, D, j, n.id, t.id, L, M, R, O]),
+        w = k.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
+    (0, x.A)(w, R);
+    let G = k.length > 0,
+        B = l.useMemo(
             () =>
-                (0, r.jsx)(l.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    className: A.h_,
+                    className: I.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, g.BE)(t, a, s, p, G),
+                    children: (0, A.BE)(t, a, r, _, G),
                 }),
-            [t, a, s, p, G],
+            [t, a, r, _, G],
         );
-    return 0 === M.length
-        ? (0, r.jsx)(S, {
-              message: t,
-              applicationName: a,
-              iconSrc: C,
-              channel: s,
-              currentUserId: p,
-              viewAction: T,
-          })
-        : (0, r.jsxs)(r.Fragment, {
+    return 0 === k.length
+        ? (0, i.jsx)(v, { message: t, applicationName: a, iconSrc: b, channel: r, currentUserId: _, viewAction: S })
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(u.h, {
-                      header: f,
+                  (0, i.jsx)(c.h, {
+                      header: m,
                       title: a,
-                      staticBannerSrc: I,
-                      onClickBanner: T,
-                      bannerAspectRatio: u.u.ACTIVITY,
-                      iconSrc: null != C ? C : void 0,
-                      info: V,
-                      actions: M,
+                      staticBannerSrc: N,
+                      onClickBanner: S,
+                      bannerAspectRatio: c.u.ACTIVITY,
+                      iconSrc: b ?? void 0,
+                      info: B,
+                      actions: k,
                       primaryActionFirst: !0,
-                      onClickContent: T,
+                      onClickContent: S,
                       trackingConfig: {
                           id: n.id,
-                          linkType: y.J.RICH_PRESENCE_INVITE,
-                          onView: N,
+                          linkType: E.J.RICH_PRESENCE_INVITE,
+                          onView: y,
                           referrerId: t.author.id,
-                          guildId: s.guild_id,
+                          guildId: r.guild_id,
                           channelId: t.channel_id,
                           messageId: t.id,
                           isDeadEnd: !0,
                       },
                   }),
-                  k ? L() : null,
+                  U ? P() : null,
               ],
           });
 }

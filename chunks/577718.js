@@ -1,70 +1,9 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function o(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-n.d(t, {
-    G9: () => f,
-    Im: () => d,
-    ZQ: () => l,
-    sl: () => u,
-    wJ: () => c,
-    yZ: () => s,
-});
-var s = (function (e) {
+"use strict";
+n.d(t, { G9: () => l, Im: () => o, ZQ: () => i, sl: () => s, wJ: () => a, yZ: () => r });
+var r = (function (e) {
         return (e[(e.BACKGROUND = 0)] = "BACKGROUND"), e;
     })({}),
-    l = (function (e) {
+    i = (function (e) {
         return (
             (e[(e.OPTION_1 = 0)] = "OPTION_1"),
             (e[(e.OPTION_2 = 1)] = "OPTION_2"),
@@ -77,16 +16,7 @@ var s = (function (e) {
             e
         );
     })({});
-let c = [7, 8, 9, 10],
-    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce(
-        (e, t, n) =>
-            o(i({}, e), {
-                [t]: n,
-            }),
-        {},
-    ),
-    d = {
-        width: 1280,
-        height: 720,
-    },
-    f = 0xa00000;
+let a = [7, 8, 9, 10],
+    s = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
+    o = { width: 1280, height: 720 },
+    l = 0xa00000;

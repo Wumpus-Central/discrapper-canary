@@ -1,25 +1,18 @@
-n.d(t, {
-    Dt: () => u,
-    Fg: () => d,
-    HA: () => f,
-    Qz: () => h,
-    nQ: () => p,
-    p4: () => c,
-    ry: () => _,
-});
+"use strict";
+n.d(t, { Dt: () => c, Fg: () => d, HA: () => _, Qz: () => h, nQ: () => f, p4: () => u, ry: () => p });
 var r = n(58149),
     i = n(954571),
     a = n(842086),
     s = n(652215),
     o = n(698279),
     l = n(788868);
-let c = (e) => {
+let u = (e) => {
         let {
             containerWidth: t,
             favoriteStickers: n,
             frequentlyUsedStickers: i,
             guildStickers: l,
-            stickersTotal: c,
+            stickersTotal: u,
         } = e;
         r.Ay.trackWithMetadata(s.HAw.EXPRESSION_PICKER_OPENED, {
             width: t,
@@ -34,10 +27,10 @@ let c = (e) => {
             num_animated_expressions_frecent: i.filter((e) => (0, a.Tw)(e.format_type)).length,
             num_standard_expressions_frecent: i.filter((e) => !(0, a.zN)(e.type)).length,
             num_current_guild_expressions: l.length,
-            num_custom_expressions_total: c,
+            num_custom_expressions_total: u,
         });
     },
-    u = (e) => {
+    c = (e) => {
         let t,
             { sticker: n, location: i } = e;
         n.type === a.NL.GUILD && (t = n.guild_id),
@@ -52,11 +45,9 @@ let c = (e) => {
             });
     },
     d = () => {
-        i.default.track(s.HAw.SEARCH_STARTED, {
-            search_type: s.I4_.STICKER,
-        });
+        i.default.track(s.HAw.SEARCH_STARTED, { search_type: s.I4_.STICKER });
     },
-    f = (e, t, n) => {
+    _ = (e, t, n) => {
         r.Ay.trackWithMetadata(s.HAw.SEARCH_RESULT_VIEWED, {
             search_type: s.I4_.STICKER,
             total_results: t,
@@ -64,7 +55,7 @@ let c = (e) => {
             is_suggestion: n,
         });
     },
-    p = (e, t, n) => {
+    f = (e, t, n) => {
         let i,
             { sticker: o } = e;
         o.type === a.NL.GUILD && (i = o.guild_id),
@@ -78,7 +69,7 @@ let c = (e) => {
                 query: t,
             });
     },
-    _ = (e) => {
+    p = (e) => {
         let t,
             { sticker: n, category: i } = e;
         n.type === a.NL.GUILD && (t = n.guild_id),

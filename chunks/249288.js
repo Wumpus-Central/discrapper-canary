@@ -1,46 +1,27 @@
-n.d(t, {
-    A: () => u,
-});
-var r,
-    l = n(311907),
-    i = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = {
-        toastsEnabledForChannel: {},
-    },
-    o = s;
-class c extends (r = l.Ay.PersistedStore) {
+n.d(t, { A: () => o });
+var i = n(311907),
+    l = n(73153);
+let s = { toastsEnabledForChannel: {} },
+    a = s;
+class r extends i.Ay.PersistedStore {
+    static displayName = "CallChatToastsStore";
+    static persistKey = "CallChatToasts";
     initialize(e) {
-        o = null != e ? e : s;
+        a = e ?? s;
     }
     getToastsEnabled(e) {
-        var t;
-        return null == (t = o.toastsEnabledForChannel[e]) || t;
+        return a.toastsEnabledForChannel[e] ?? !0;
     }
     getState() {
-        return o;
+        return a;
     }
 }
-a(c, "displayName", "CallChatToastsStore"), a(c, "persistKey", "CallChatToasts");
-let u = new c(i.h, {
+let o = new r(l.h, {
     CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
         let { channelId: t, toastsEnabled: n } = e;
-        o.toastsEnabledForChannel[t] = n;
+        a.toastsEnabledForChannel[t] = n;
     },
     LOGOUT: function () {
-        o.toastsEnabledForChannel = {};
+        a.toastsEnabledForChannel = {};
     },
 });

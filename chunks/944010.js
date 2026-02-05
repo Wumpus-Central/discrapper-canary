@@ -1,6 +1,5 @@
-n.d(t, {
-    u: () => a,
-});
+"use strict";
+n.d(t, { u: () => a });
 var r = n(124651),
     i = n(241518);
 class a {
@@ -27,11 +26,7 @@ class a {
                     case "map":
                         e.push(r.localName);
                 }
-        this.data = {
-            req: e,
-            known: t,
-            oneofs: Object.values(n),
-        };
+        this.data = { req: e, known: t, oneofs: Object.values(n) };
     }
     is(e, t, n = !1) {
         if (t < 0) return !0;

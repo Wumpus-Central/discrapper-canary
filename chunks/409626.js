@@ -1,18 +1,10 @@
-n.d(t, {
-    HV: () => u,
-    K6: () => h,
-    Ob: () => c,
-    Tn: () => _,
-    V_: () => p,
-    Ws: () => l,
-    rw: () => f,
-    u9: () => d,
-});
+"use strict";
+n.d(t, { HV: () => c, K6: () => h, Ob: () => u, Tn: () => p, V_: () => f, Ws: () => l, rw: () => _, u9: () => d });
 var r = n(835245),
     i = n(99753),
     a = n(954571),
-    o = n(652215),
-    s = n(424994),
+    s = n(652215),
+    o = n(424994),
     l = (function (e) {
         return (
             (e[(e.FollowGame = 0)] = "FollowGame"),
@@ -33,7 +25,7 @@ var r = n(835245),
             e
         );
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (
             (e.ActivityCard = "activity_card"),
             (e.ActivityCardContextMenu = "activity_card_context_menu"),
@@ -56,66 +48,66 @@ var r = n(835245),
             e
         );
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (e.FullProfile = "full_profile"), (e.MiniProfile = "mini_profile"), e;
     })({});
 let d = () => (0, r.A)(),
-    f = (e) => {
-        let { viewId: t, source: n, gameName: r, applicationId: l, authorId: c, profileType: u } = e;
+    _ = (e) => {
+        let { viewId: t, source: n, gameName: r, applicationId: l, authorId: u, profileType: c } = e;
         return (
-            a.default.track(o.HAw.GAME_PROFILE_OPEN, {
+            a.default.track(s.HAw.GAME_PROFILE_OPEN, {
                 view_id: t,
                 source: n,
                 game_name: r,
                 application_id: l,
-                author_id: c,
-                request_id: i.A.getFeedRequestId(s.X1.GLOBAL_FEED),
-                profile_type: u,
+                author_id: u,
+                request_id: i.A.getFeedRequestId(o.X1.GLOBAL_FEED),
+                profile_type: c,
             }),
             t
         );
     },
-    p = (e) => {
+    f = (e) => {
         let {
             viewId: t,
             gameName: n,
             applicationId: r,
             playedFriendIds: l,
-            playedFriendsData: c,
-            similarGames: u,
+            playedFriendsData: u,
+            similarGames: c,
             officialGuildId: d,
         } = e;
-        a.default.track(o.HAw.GAME_PROFILE_CLOSE, {
+        a.default.track(s.HAw.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
             application_id: r,
             played_friend_ids: l,
-            played_friends_data: c,
-            similar_games: u,
-            request_id: i.A.getFeedRequestId(s.X1.GLOBAL_FEED),
+            played_friends_data: u,
+            similar_games: c,
+            request_id: i.A.getFeedRequestId(o.X1.GLOBAL_FEED),
             official_guild_id: d,
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let {
             gameName: t,
             applicationId: n,
             action: r,
             recipientUserId: i,
-            similarGameId: s,
+            similarGameId: o,
             viewId: l,
-            officialGuildId: c,
-            source: u,
+            officialGuildId: u,
+            source: c,
         } = e;
-        a.default.track(o.HAw.GAME_PROFILE_ACTION, {
+        a.default.track(s.HAw.GAME_PROFILE_ACTION, {
             game_name: t,
             application_id: n,
             action: r,
             recipient_user_id: i,
-            similar_game_id: s,
+            similar_game_id: o,
             view_id: l,
-            official_guild_id: c,
-            source: u,
+            official_guild_id: u,
+            source: c,
         });
     },
     h = (e) => {
@@ -124,15 +116,15 @@ let d = () => (0, r.A)(),
             applicationId: n,
             suggestedGameName: r,
             suggestedGameApplicationId: i,
-            feedback: s,
+            feedback: o,
             submitted: l,
         } = e;
-        return a.default.track(o.HAw.GAME_PROFILE_FEEDBACK, {
+        return a.default.track(s.HAw.GAME_PROFILE_FEEDBACK, {
             view_id: t,
             application_id: n,
             suggested_game_name: r,
             suggested_game_application_id: i,
-            feedback: s,
+            feedback: o,
             submitted: l,
         });
     };

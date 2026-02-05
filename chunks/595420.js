@@ -40,9 +40,6 @@
             y: "mwaka mmoja",
             yy: "miaka %d",
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

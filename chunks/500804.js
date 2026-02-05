@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     progress: "progress__67225",
     progressBar: "progressBar__67225",

@@ -1,20 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
-            className: "string",
-            begin: /"(""|[^/n])"C\b/,
-        },
-        r = {
-            className: "string",
-            begin: /"/,
-            end: /"/,
-            illegal: /\n/,
-            contains: [
-                {
-                    begin: /""/,
-                },
-            ],
-        },
+        n = { className: "string", begin: /"(""|[^/n])"C\b/ },
+        r = { className: "string", begin: /"/, end: /"/, illegal: /\n/, contains: [{ begin: /""/ }] },
         i = /\d{1,2}\/\d{1,2}\/\d{4}/,
         a = /\d{4}-\d{1,2}-\d{1,2}/,
         s = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
@@ -22,80 +9,38 @@ e.exports = function (e) {
         l = {
             className: "literal",
             variants: [
-                {
-                    begin: t.concat(/# */, t.either(a, i), / *#/),
-                },
-                {
-                    begin: t.concat(/# */, o, / *#/),
-                },
-                {
-                    begin: t.concat(/# */, s, / *#/),
-                },
-                {
-                    begin: t.concat(/# */, t.either(a, i), / +/, t.either(s, o), / *#/),
-                },
-            ],
-        },
-        c = {
-            className: "number",
-            relevance: 0,
-            variants: [
-                {
-                    begin: /\b\d[\d_]*((\.[\d_]+(E[+-]?[\d_]+)?)|(E[+-]?[\d_]+))[RFD@!#]?/,
-                },
-                {
-                    begin: /\b\d[\d_]*((U?[SIL])|[%&])?/,
-                },
-                {
-                    begin: /&H[\dA-F_]+((U?[SIL])|[%&])?/,
-                },
-                {
-                    begin: /&O[0-7_]+((U?[SIL])|[%&])?/,
-                },
-                {
-                    begin: /&B[01_]+((U?[SIL])|[%&])?/,
-                },
+                { begin: t.concat(/# */, t.either(a, i), / *#/) },
+                { begin: t.concat(/# */, o, / *#/) },
+                { begin: t.concat(/# */, s, / *#/) },
+                { begin: t.concat(/# */, t.either(a, i), / +/, t.either(s, o), / *#/) },
             ],
         },
         u = {
-            className: "label",
-            begin: /^\w+:/,
-        },
-        d = e.COMMENT(/'''/, /$/, {
-            contains: [
-                {
-                    className: "doctag",
-                    begin: /<\/?/,
-                    end: />/,
-                },
-            ],
-        }),
-        f = e.COMMENT(null, /$/, {
+            className: "number",
+            relevance: 0,
             variants: [
-                {
-                    begin: /'/,
-                },
-                {
-                    begin: /([\t ]|^)REM(?=\s)/,
-                },
+                { begin: /\b\d[\d_]*((\.[\d_]+(E[+-]?[\d_]+)?)|(E[+-]?[\d_]+))[RFD@!#]?/ },
+                { begin: /\b\d[\d_]*((U?[SIL])|[%&])?/ },
+                { begin: /&H[\dA-F_]+((U?[SIL])|[%&])?/ },
+                { begin: /&O[0-7_]+((U?[SIL])|[%&])?/ },
+                { begin: /&B[01_]+((U?[SIL])|[%&])?/ },
             ],
-        }),
-        p = {
+        },
+        c = { className: "label", begin: /^\w+:/ },
+        d = e.COMMENT(/'''/, /$/, { contains: [{ className: "doctag", begin: /<\/?/, end: />/ }] }),
+        _ = e.COMMENT(null, /$/, { variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }] }),
+        f = {
             className: "meta",
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
-            keywords: {
-                keyword: "const disable else elseif enable end externalsource if region then",
-            },
-            contains: [f],
+            keywords: { keyword: "const disable else elseif enable end externalsource if region then" },
+            contains: [_],
         };
     return {
         name: "Visual Basic .NET",
         aliases: ["vb"],
         case_insensitive: !0,
-        classNameAliases: {
-            label: "symbol",
-        },
+        classNameAliases: { label: "symbol" },
         keywords: {
             keyword:
                 "addhandler alias aggregate ansi as async assembly auto binary by byref byval call case catch class compare const continue custom declare default delegate dim distinct do each equals else elseif end enum erase error event exit explicit finally for friend from function get global goto group handles if implements imports in inherits interface into iterator join key let lib loop me mid module mustinherit mustoverride mybase myclass namespace narrowing new next notinheritable notoverridable of off on operator option optional order overloads overridable overrides paramarray partial preserve private property protected public raiseevent readonly redim removehandler resume return select set shadows shared skip static step stop structure strict sub synclock take text then throw to try unicode until using when where while widening with withevents writeonly yield",
@@ -105,6 +50,6 @@ e.exports = function (e) {
             literal: "true false nothing",
         },
         illegal: "//|\\{|\\}|endif|gosub|variant|wend|^\\$ ",
-        contains: [n, r, l, c, u, d, f, p],
+        contains: [n, r, l, u, c, d, _, f],
     };
 };

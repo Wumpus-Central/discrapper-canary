@@ -1,21 +1,16 @@
+"use strict";
 let r;
-n.d(t, {
-    R: () => c,
-    m: () => u,
-}),
-    n(896048),
-    n(65821);
+n.d(t, { R: () => u, m: () => c });
 var i = n(626584),
     a = n(837921),
     s = n(672396);
 let o = new i.A("OverlayModuleUtils"),
     l = null;
-
-function c() {
+function u() {
     function e(e) {
         for (let t of ["createHostProcess", "connectProcess", "disconnectProcess", "destroyHostProcess"])
             null == e[t] &&
-                (o.info("polyfilling OverlayModule.".concat(t, "(); Overlay module is probably out of date.")),
+                (o.info(`polyfilling OverlayModule.${t}(); Overlay module is probably out of date.`),
                 (e[t] = () => void 0));
         return e;
     }
@@ -34,8 +29,7 @@ function c() {
     }
     return null != r ? Promise.resolve(r) : (null == l && (l = t()), l);
 }
-
-function u() {
+function c() {
     if (null == r)
         try {
             r = a.Ay.requireModule("discord_overlay2");

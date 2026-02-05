@@ -1,9 +1,5 @@
-n.d(t, {
-    XJ: () => r,
-    dK: () => i,
-    td: () => s,
-    vq: () => a,
-});
+"use strict";
+n.d(t, { XJ: () => r, dK: () => i, td: () => s, vq: () => a });
 var r = function (e) {
         return e instanceof SVGElement && "getBBox" in e;
     },

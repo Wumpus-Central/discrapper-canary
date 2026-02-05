@@ -1,126 +1,98 @@
-l.d(n, {
-    default: () => j,
-}),
-    l(896048),
-    l(228524);
-var t = l(627968),
-    i = l(64700),
-    s = l(158954),
-    a = l(311907),
-    r = l(397927),
-    c = l(857071),
-    o = l(931991),
-    u = l(571909),
-    d = l(660110),
-    h = l(734057),
-    m = l(71393),
-    v = l(883931),
-    x = l(691012),
-    C = l(895202),
-    g = l(988794),
-    A = l(985018),
-    N = l(587880);
-
+t.d(n, { default: () => j });
+var l = t(627968),
+    i = t(64700),
+    s = t(158954),
+    a = t(311907),
+    r = t(397927),
+    c = t(857071),
+    o = t(931991),
+    d = t(571909),
+    u = t(660110),
+    h = t(734057),
+    m = t(71393),
+    x = t(883931),
+    v = t(691012),
+    C = t(895202),
+    A = t(988794),
+    N = t(985018),
+    g = t(587880);
 function j(e) {
-    var n;
-    let { transitionState: l, event: j, onSuccess: p, onClose: k } = e,
-        { guild_id: y, privacy_level: f } = j,
-        E = (0, a.bG)([h.A], () => h.A.getChannel(j.channel_id), [j]),
-        w = (0, a.bG)([m.A], () => m.A.getGuild(y), [y]),
-        { canManageGuildEvent: _ } = (0, o.nr)(null != E ? E : w),
-        T = _(j),
-        b = (0, a.bG)([c.A], () => c.A.isLurking(y), [y]),
-        I = j.entity_type === g.Ps.STAGE_INSTANCE,
-        [G, P] = i.useState(I),
-        [S, { loading: L, error: O }] = (0, v.A)();
-    if (!T) return null;
-    let U = f === g.dD.PUBLIC ? A.intl.string(A.t.HhlaLP) : A.intl.string(A.t.GI3xXd),
+    let { transitionState: n, event: t, onSuccess: j, onClose: k } = e,
+        { guild_id: p, privacy_level: E } = t,
+        y = (0, a.bG)([h.A], () => h.A.getChannel(t.channel_id), [t]),
+        _ = (0, a.bG)([m.A], () => m.A.getGuild(p), [p]),
+        { canManageGuildEvent: T } = (0, o.nr)(y ?? _),
+        f = T(t),
+        w = (0, a.bG)([c.A], () => c.A.isLurking(p), [p]),
+        I = t.entity_type === A.Ps.STAGE_INSTANCE,
+        [G, S] = i.useState(I),
+        [P, { loading: L, error: b }] = (0, x.A)();
+    if (!f) return null;
+    let U = E === A.dD.PUBLIC ? N.intl.string(N.t.HhlaLP) : N.intl.string(N.t.GI3xXd),
         M = () => {
-            null == p || p(), k(), (0, u.ek)(!1);
+            j?.(), k(), (0, d.ek)(!1);
         },
         B = async () => {
-            await S(j, G, {
-                onSuccess: M,
-            });
+            await P(t, G, { onSuccess: M });
         };
-    return (0, t.jsxs)(s.Modal, {
-        transitionState: l,
+    return (0, l.jsxs)(s.Modal, {
+        transitionState: n,
         onClose: k,
-        title: j.name,
-        subtitle: A.intl.format(A.t.UMajol, {
+        title: t.name,
+        subtitle: N.intl.format(N.t.UMajol, {
             privacyLevel: U,
             privacyLevelHook: (e, n) =>
-                f !== g.dD.PUBLIC
+                E !== A.dD.PUBLIC
                     ? null
-                    : (0, t.jsxs)(
+                    : (0, l.jsxs)(
                           "div",
                           {
-                              className: N.ro,
+                              className: g.ro,
                               children: [
-                                  (0, t.jsx)(r.L_e, {
-                                      size: "xs",
-                                      color: "currentColor",
-                                      className: N.HJ,
-                                  }),
-                                  (0, t.jsx)(r.Text, {
-                                      variant: "text-md/normal",
-                                      children: e,
-                                  }),
+                                  (0, l.jsx)(r.L_e, { size: "xs", color: "currentColor", className: g.HJ }),
+                                  (0, l.jsx)(r.Text, { variant: "text-md/normal", children: e }),
                               ],
                           },
                           n,
                       ),
         }),
         actionBarInput: I
-            ? (0, t.jsxs)(s.DUT, {
-                  onClick: () => P(!G),
-                  className: N.Qy,
+            ? (0, l.jsxs)(s.DUT, {
+                  onClick: () => S(!G),
+                  className: g.Qy,
                   children: [
-                      (0, t.jsx)(s.P7L, {
-                          checked: G,
-                      }),
-                      (0, t.jsx)(r.Text, {
+                      (0, l.jsx)(s.P7L, { checked: G }),
+                      (0, l.jsx)(r.Text, {
                           color: "text-default",
                           variant: "text-sm/normal",
-                          children: A.intl.string(A.t["Pe+Pwp"]),
+                          children: N.intl.string(N.t["Pe+Pwp"]),
                       }),
                   ],
               })
             : void 0,
-        actions: [
-            {
-                variant: "active",
-                text: A.intl.string(A.t.cK1GGY),
-                onClick: B,
-                loading: L,
-            },
-        ],
+        actions: [{ variant: "active", text: N.intl.string(N.t.cK1GGY), onClick: B, loading: L }],
         children: [
-            (0, t.jsx)(C.A, {
-                guild: w,
-                channel: E,
-                name: j.name,
-                description: null != (n = j.description) ? n : void 0,
-                imageSource: (0, x.A)(j),
+            (0, l.jsx)(C.A, {
+                guild: _,
+                channel: y,
+                name: t.name,
+                description: t.description ?? void 0,
+                imageSource: (0, v.A)(t),
                 isActive: !1,
-                isUserLurking: b,
+                isUserLurking: w,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: j,
+                guildEvent: t,
                 hideAgeVerificationNotice: !0,
             }),
-            g.Tn.has(j.entity_type) &&
-                (0, t.jsx)(d.A, {
-                    className: N.XI,
-                    channelId: j.channel_id,
-                }),
-            null != O && null != O.getAnyErrorMessage()
-                ? (0, t.jsx)(r.Text, {
+            A.Tn.has(t.entity_type) && (0, l.jsx)(u.A, { className: g.XI, channelId: t.channel_id }),
+            null != b && null != b.getAnyErrorMessage()
+                ? (0, l.jsx)(r.Text, {
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
-                      className: N.gJ,
-                      children: O.getAnyErrorMessage(),
+                      className: g.gJ,
+                      children: b.getAnyErrorMessage(),
                   })
                 : null,
         ],

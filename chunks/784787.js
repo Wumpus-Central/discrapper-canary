@@ -1,5 +1,1 @@
-t.exports = {
-    OK: "targetList_deebfa",
-    gt: "upperBodyText_deebfa",
-    hD: "targetItem_deebfa",
-};
+t.exports = { OK: "targetList_deebfa", gt: "upperBodyText_deebfa", hD: "targetItem_deebfa" };

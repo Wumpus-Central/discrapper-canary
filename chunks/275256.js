@@ -1,24 +1,19 @@
-s.r(e),
-    s.d(e, {
-        default: () => u,
-    });
-var l = s(627968);
+s.r(e), s.d(e, { default: () => c });
+var r = s(627968);
 s(64700);
-var r = s(366523),
-    n = s(706522);
-
-function u(a) {
-    var e;
-    let { imageUrl: s, backgroundImageUrl: u, altText: d, customClassNames: o } = a;
-    return null == s
+var n = s(366523),
+    u = s(706522);
+function c(a) {
+    let { imageUrl: e, backgroundImageUrl: s, altText: c, customClassNames: l } = a;
+    return null == e
         ? null
-        : (0, l.jsx)(r.A, {
-              cardImage: s,
-              cardBackgroundImage: u,
-              altText: d,
-              shape: null != o ? "custom" : "square",
-              containerClassName: null != (e = null == o ? void 0 : o.containerClassName) ? e : n.w,
-              backgroundImageClassName: null == o ? void 0 : o.backgroundImageClassName,
-              foregroundImageClassName: null == o ? void 0 : o.foregroundImageClassName,
+        : (0, r.jsx)(n.A, {
+              cardImage: e,
+              cardBackgroundImage: s,
+              altText: c,
+              shape: null != l ? "custom" : "square",
+              containerClassName: l?.containerClassName ?? u.w,
+              backgroundImageClassName: l?.backgroundImageClassName,
+              foregroundImageClassName: l?.foregroundImageClassName,
           });
 }

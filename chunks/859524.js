@@ -1,142 +1,120 @@
 n.d(t, {
-    $r: () => j,
-    GM: () => N,
-    Lg: () => x,
-    P0: () => L,
-    Rh: () => T,
-    Vq: () => O,
-    Wu: () => v,
-    YM: () => P,
-    _x: () => C,
+    $r: () => L,
+    GM: () => b,
+    Lg: () => O,
+    P0: () => j,
+    Rh: () => y,
+    Vq: () => C,
+    Wu: () => S,
+    YM: () => R,
+    _x: () => v,
     be: () => M,
-    kx: () => S,
-    n$: () => y,
-    px: () => D,
-    tI: () => w,
-    xj: () => I,
-    yx: () => R,
+    kx: () => x,
+    n$: () => N,
+    px: () => w,
+    tI: () => P,
+    xj: () => T,
+    yx: () => D,
 }),
-    n(321073),
-    n(864466),
-    n(443073),
-    n(896048);
-var r,
-    i = n(6161),
-    l = n(681154);
+    n(321073);
+var i,
+    r = n(6161),
+    a = n(681154);
 n(311907), n(256265);
-var a = n(698441),
+var l = n(698441),
     s = n(141468),
     o = n(95701),
-    c = n(383233),
-    u = n(734057),
-    d = n(71393);
+    d = n(383233),
+    c = n(734057),
+    u = n(71393);
 n(320501);
-var p = n(222823),
+var A = n(222823),
     h = n(661191),
-    g = n(4106),
-    f = n(335934),
-    m = n(800319),
-    A = n(883344),
-    _ = n(596720),
-    b = n(449e3),
-    E = n(652215);
-
-function O(e, t) {
-    return "hydration-".concat(e, "-").concat(t);
+    _ = n(4106),
+    m = n(335934),
+    p = n(800319),
+    g = n(883344),
+    E = n(596720),
+    f = n(449e3),
+    I = n(652215);
+function C(e, t) {
+    return `hydration-${e}-${t}`;
 }
 n(985018);
-var y =
-    (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
-    (r[(r.DEFAULT = 1)] = "DEFAULT"),
-    (r[(r.MORE = 2)] = "MORE"),
-    (r[(r.LESS = 3)] = "LESS"),
-    (r[(r.MUTED = 4)] = "MUTED"),
-    r);
-
-function I(e) {
-    return e.type === _.Mm.MESSAGE || e.type === _.Mm.GENERATED_CANDIDATE || e.type === _.Mm.GUILD_EVENT;
+var N =
+    (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
+    (i[(i.DEFAULT = 1)] = "DEFAULT"),
+    (i[(i.MORE = 2)] = "MORE"),
+    (i[(i.LESS = 3)] = "LESS"),
+    (i[(i.MUTED = 4)] = "MUTED"),
+    i);
+function T(e) {
+    return e.type === E.Mm.MESSAGE || e.type === E.Mm.GENERATED_CANDIDATE || e.type === E.Mm.GUILD_EVENT;
 }
-
-function v(e) {
+function S(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
-async function S(e, t, n) {
-    let r = A.A.getHydratedItems(),
-        i = e.slice(t, n);
-    if (0 === i.length) return;
-    g.A.loadHydratedAttempt(O(t, n));
-    let l = i.filter((e) => null == r[e.id]),
-        a = l
-            .filter((e) => e.type === _.Mm.MESSAGE)
-            .map((e) => ({
-                channel_id: e.data.channel_id,
-                message_id: e.data.message_id,
-            })),
-        s = l
+async function x(e, t, n) {
+    let i = g.A.getHydratedItems(),
+        r = e.slice(t, n);
+    if (0 === r.length) return;
+    _.A.loadHydratedAttempt(C(t, n));
+    let a = r.filter((e) => null == i[e.id]),
+        l = a
+            .filter((e) => e.type === E.Mm.MESSAGE)
+            .map((e) => ({ channel_id: e.data.channel_id, message_id: e.data.message_id })),
+        s = a
             .map((e) => {
-                if (e.type === _.Mm.MESSAGE) {
-                    var t, n, r;
-                    let i = [];
+                if (e.type === E.Mm.MESSAGE) {
+                    let t = [];
                     return (
-                        (null == (t = e.data.message_context) ? void 0 : t.reply_message_id) != null &&
-                            i.push({
+                        e.data.message_context?.reply_message_id != null &&
+                            t.push({
                                 channel_id: e.data.channel_id,
                                 message_id: e.data.message_context.reply_message_id,
                             }),
-                        (null == (n = e.data.message_context) ? void 0 : n.before_message_id) != null &&
-                            i.push({
+                        e.data.message_context?.before_message_id != null &&
+                            t.push({
                                 channel_id: e.data.channel_id,
                                 message_id: e.data.message_context.before_message_id,
                             }),
-                        (null == (r = e.data.message_context) ? void 0 : r.after_message_id) != null &&
-                            i.push({
+                        e.data.message_context?.after_message_id != null &&
+                            t.push({
                                 channel_id: e.data.channel_id,
                                 message_id: e.data.message_context.after_message_id,
                             }),
-                        i
+                        t
                     );
                 }
                 return [];
             })
             .flat()
             .filter(Boolean),
-        o = l
-            .filter((e) => e.type === _.Mm.ACTIVITY)
-            .map((e) => ({
-                user_id: e.data.user_id,
-                content_id: e.data.content_id,
-            })),
-        c = l
-            .filter((e) => e.type === _.Mm.GENERATED_CANDIDATE)
-            .map((e) => ({
-                content_id: e.data.content_id,
-                guild_id: e.data.guild_id,
-                channel_id: e.data.channel_id,
-            }));
-    await g.A.fetchHydrated(t, n, {
-        messageItems: [...a, ...s],
-        activityItems: o,
-        generatedCandidateItems: c,
-    });
+        o = a
+            .filter((e) => e.type === E.Mm.ACTIVITY)
+            .map((e) => ({ user_id: e.data.user_id, content_id: e.data.content_id })),
+        d = a
+            .filter((e) => e.type === E.Mm.GENERATED_CANDIDATE)
+            .map((e) => ({ content_id: e.data.content_id, guild_id: e.data.guild_id, channel_id: e.data.channel_id }));
+    await _.A.fetchHydrated(t, n, { messageItems: [...l, ...s], activityItems: o, generatedCandidateItems: d });
 }
-async function C() {
-    let e = A.A.getUnreadDisplayItems(),
-        t = A.A.getReadDisplayItems(),
-        n = A.A.getNextIndexToHydrate();
-    await S([...e, ...t], n, n + _.w5);
+async function v() {
+    let e = g.A.getUnreadDisplayItems(),
+        t = g.A.getReadDisplayItems(),
+        n = g.A.getNextIndexToHydrate();
+    await x([...e, ...t], n, n + E.w5);
 }
-
-function N(e) {
+function b(e) {
     let t = [];
     null != e.messages && (t = e.messages);
     let n = (function (e, t, n) {
-        let r = [];
+        let i = [];
         for (let t of e) {
             if (null == t.author) continue;
-            let e = t instanceof c.Ay ? t : (0, s.rh)(t);
-            r.push(e), t.author.id;
+            let e = t instanceof d.Ay ? t : (0, s.rh)(t);
+            i.push(e), t.author.id;
         }
-        return r;
+        return i;
     })(t);
     return {
         guild_id: e.guild_id,
@@ -153,80 +131,34 @@ function N(e) {
         messages: n,
     };
 }
-
-function T(e, t) {
-    var n, r;
-    return (
-        (n = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = r);
-                    });
-            }
-            return e;
-        })({}, t)),
-        (r = r =
-            {
-                message: (0, s.rh)(e.message),
-                threadChannel: null != e.thread_channel ? o.Lt.fromServer(e.thread_channel, e.guild_id) : void 0,
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-              }),
-        n
-    );
+function y(e, t) {
+    return {
+        ...t,
+        message: (0, s.rh)(e.message),
+        threadChannel: null != e.thread_channel ? o.Lt.fromServer(e.thread_channel, e.guild_id) : void 0,
+    };
 }
-
-function j(e, t) {
-    let n = p.Ay.getTrackedAckMessageId(e);
+function L(e, t) {
+    let n = A.Ay.getTrackedAckMessageId(e);
     return null == n || h.default.extractTimestamp(t) > h.default.extractTimestamp(n);
 }
-
-function x(e) {
-    return (0, f.HF)(e);
+function O(e) {
+    return (0, m.HF)(e);
 }
-
-function P(e) {
-    var t;
+function R(e) {
     return {
         id: e.id,
-        type: _.Mm.CUSTOM_STATUS,
+        type: E.Mm.CUSTOM_STATUS,
         activity: {
             id: e.id,
             author_id: e.data.user_id,
-            author_type: i.ContentInventoryAuthorType.USER,
+            author_type: r.ContentInventoryAuthorType.USER,
             traits: [],
             participants: [],
-            content_type: l.ContentInventoryEntryType.CUSTOM_STATUS,
+            content_type: a.ContentInventoryEntryType.CUSTOM_STATUS,
             extra: {
                 type: "custom_status_extra",
-                status: null != (t = e.data.text) ? t : "",
+                status: e.data.text ?? "",
                 emoji_id: e.data.emoji_id,
                 emoji_name: e.data.emoji_name,
                 emoji_animated: e.data.emoji_animated,
@@ -237,64 +169,50 @@ function P(e) {
         score_components: e.score_components,
     };
 }
-
-function w(e, t, n) {
-    let r = b.A.getReadTimestamp(e);
-    null == r && (r = null == n ? void 0 : n[e]);
-    let i = b.A.getReadTimestamp(t);
-    return (null == i && (i = null == n ? void 0 : n[t]), null == r && null == i)
-        ? 0
-        : null == r
-          ? -1
-          : null == i
-            ? 1
-            : i - r;
+function P(e, t, n) {
+    let i = f.A.getReadTimestamp(e);
+    null == i && (i = n?.[e]);
+    let r = f.A.getReadTimestamp(t);
+    return (null == r && (r = n?.[t]), null == i && null == r) ? 0 : null == i ? -1 : null == r ? 1 : r - i;
 }
-
-function L(e) {
-    let t = [...A.A.getUnreadDisplayItems(), ...A.A.getReadDisplayItems()],
+function j(e) {
+    let t = [...g.A.getUnreadDisplayItems(), ...g.A.getReadDisplayItems()],
         n = null;
     for (let t = e.length - 1; t >= 0; t--) {
-        let r = e[t];
-        if (null != r && !m.P.has(r.item.data.kind)) {
-            n = r.item.id;
+        let i = e[t];
+        if (null != i && !p.P.has(i.item.data.kind)) {
+            n = i.item.id;
             break;
         }
     }
     if (null == n) return [];
-    let r = t.findIndex((e) => e.id === n);
-    return r < 0 ? [] : t.slice(0, r + 1);
+    let i = t.findIndex((e) => e.id === n);
+    return i < 0 ? [] : t.slice(0, i + 1);
 }
-
-function R(e) {
-    var t, n;
-    let r, i;
+function D(e) {
+    let t, n;
     switch (e.data.kind) {
         case "message":
-            r = e.data.message.channel_id;
+            t = e.data.message.channel_id;
             break;
         case "generatedCandidate":
-            r = e.data.item.channel_id;
+            t = e.data.item.channel_id;
             break;
         case "forumThread":
-            r = e.data.threadChannel.id;
+            t = e.data.threadChannel.id;
             break;
         case "guildEvent":
-            i = null == (n = a.Ay.getGuildScheduledEvent(e.data.eventId)) ? void 0 : n.guild_id;
+            n = l.Ay.getGuildScheduledEvent(e.data.eventId)?.guild_id;
             break;
         default:
             return !1;
     }
-    let l = u.A.getChannel(r);
-    if (null == l ? void 0 : l.nsfw) return !0;
-    let s = null != (i = null != (t = null == l ? void 0 : l.guild_id) ? t : i) ? d.A.getGuild(i) : null;
-    return (
-        (null == s ? void 0 : s.nsfwLevel) === E.ftr.EXPLICIT ||
-        (null == s ? void 0 : s.nsfwLevel) === E.ftr.AGE_RESTRICTED
-    );
+    let i = c.A.getChannel(t);
+    if (i?.nsfw) return !0;
+    let r = null != (n = i?.guild_id ?? n) ? u.A.getGuild(n) : null;
+    return r?.nsfwLevel === I.ftr.EXPLICIT || r?.nsfwLevel === I.ftr.AGE_RESTRICTED;
 }
-
-function D(e) {
+function w(e) {
     switch (e.data.kind) {
         case "end":
             return "end";
@@ -303,15 +221,13 @@ function D(e) {
         case "bottomLoading":
             return "bottomLoading";
         case "message":
-            var t;
-            if (e.channelType === E.rbe.GUILD_ANNOUNCEMENT) return "announcement";
-            if ((null == (t = e.data.messageContext) ? void 0 : t.external_content_application_id) != null)
-                return "game_message";
+            if (e.channelType === I.rbe.GUILD_ANNOUNCEMENT) return "announcement";
+            if (e.data.messageContext?.external_content_application_id != null) return "game_message";
             return "message";
         case "guildEvent":
             return "guild_event";
         case "contentInventory":
-            if (e.data.content.content_type === l.ContentInventoryEntryType.CUSTOM_STATUS)
+            if (e.data.content.content_type === a.ContentInventoryEntryType.CUSTOM_STATUS)
                 return "hotwheels_custom_status";
             return "hotwheels_gaming_activity";
         case "recommendedGuilds":
@@ -328,28 +244,22 @@ function D(e) {
 }
 async function M(e) {
     let { ack: t } = await Promise.resolve().then(n.bind(n, 334738)),
-        { AnalyticsObjectTypes: r } = await Promise.resolve().then(n.bind(n, 652215));
-    A.A.getDehydratedItems().forEach((n) => {
-        n.type === _.Mm.MESSAGE &&
-            n.data.channel_type === E.rbe.GUILD_ANNOUNCEMENT &&
-            h.default.compare(p.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
+        { AnalyticsObjectTypes: i } = await Promise.resolve().then(n.bind(n, 652215));
+    g.A.getDehydratedItems().forEach((n) => {
+        n.type === E.Mm.MESSAGE &&
+            n.data.channel_type === I.rbe.GUILD_ANNOUNCEMENT &&
+            h.default.compare(A.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
             t(
                 n.data.channel_id,
-                {
-                    object: e,
-                    objectType: r.ACK_SEMI_AUTOMATIC,
-                },
+                { object: e, objectType: i.ACK_SEMI_AUTOMATIC },
                 !0,
                 !0,
                 h.default.atPreviousMillisecond(n.data.message_id),
             );
     }),
-        await g.A.clearReadStates(),
-        await g.A.fetchDehydrated({
-            isReloading: !0,
-            forceRefresh: !0,
-        }),
-        await g.A.reloadICYMITab(),
-        await g.A.getGuildChannelScores(),
-        g.A.getRecommendedGuilds();
+        await _.A.clearReadStates(),
+        await _.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
+        await _.A.reloadICYMITab(),
+        await _.A.getGuildChannelScores(),
+        _.A.getRecommendedGuilds();
 }

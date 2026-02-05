@@ -1,37 +1,23 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
 var l = n(311907),
-    i = n(397927),
+    s = n(397927),
     a = n(793943),
-    s = n(287809),
+    r = n(287809),
     o = n(927578),
-    c = n(350972),
-    u = n(677056),
-    d = n(526162),
-    f = n(635917);
-
-function p() {
-    let [e, t] = (0, l.yK)([s.default, d.A], () => [
-            d.A.getCurrentDesktopIcon(),
-            o.Ay.isPremium(s.default.getCurrentUser()),
+    d = n(350972),
+    c = n(677056),
+    u = n(526162),
+    h = n(635917);
+function A() {
+    let [e, t] = (0, l.yK)([r.default, u.A], () => [
+            u.A.getCurrentDesktopIcon(),
+            o.Ay.isPremium(r.default.getCurrentUser()),
         ]),
         n = (0, a.fy)().activePanel === a.HP.APP_ICON,
-        p = (0, f.gG)(e),
-        h = p.id !== c.LW.DEFAULT && (t || n),
-        b = (0, r.jsx)(i.pVd, {
-            size: "custom",
-            color: "currentColor",
-            width: 24,
-            height: 24,
-        });
-    return null != p && h
-        ? (0, r.jsx)(u.A, {
-              id: p.id,
-              width: 48,
-          })
-        : b;
+        A = (0, h.gG)(e),
+        g = A.id !== d.LW.DEFAULT && (t || n),
+        m = (0, i.jsx)(s.pVd, { size: "custom", color: "currentColor", width: 24, height: 24 });
+    return null != A && g ? (0, i.jsx)(c.A, { id: A.id, width: 48 }) : m;
 }

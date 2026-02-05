@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => o,
-});
+"use strict";
+r.d(t, { A: () => o });
 var n = Date.now;
 let o = function (e) {
     var t = 0,

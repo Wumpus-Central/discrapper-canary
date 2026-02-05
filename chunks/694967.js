@@ -1,17 +1,14 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(311907),
+n.d(t, { A: () => r });
+var i = n(311907),
     l = n(962173),
-    i = n(403362),
+    s = n(403362),
     a = n(652215);
-
-function s() {
-    return (0, r.yK)([l.A], () =>
+function r() {
+    return (0, i.yK)([l.A], () =>
         [
             l.A.getAccount(null, a.fg2.XBOX),
             l.A.getAccount(null, a.fg2.PLAYSTATION),
             l.A.getAccount(null, a.fg2.PLAYSTATION_STAGING),
-        ].filter(i.Vq),
+        ].filter(s.Vq),
     );
 }

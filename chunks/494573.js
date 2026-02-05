@@ -1,329 +1,231 @@
-l.d(t, {
-    A: () => y,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    i = l(3666),
-    o = l(397927),
-    c = l(770178),
-    u = l(955572),
-    d = l(775602),
-    f = l(742589),
-    b = l(421773),
-    g = l(397309),
-    p = l(190294),
-    m = l(758836),
-    h = l(985018),
-    E = l(78716),
-    v = l(525037);
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(l);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = l[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function x(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var l = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      l.push.apply(l, n);
-                  }
-                  return l;
-              })(Object(t)).forEach(function (l) {
-                  Object.defineProperty(e, l, Object.getOwnPropertyDescriptor(t, l));
-              }),
-        e
-    );
-}
-
-function S(e) {
-    let { tab: t, label: l, selected: r, handleTransition: s, hasSubmenu: i, showNewBadge: c } = e;
+"use strict";
+s.d(t, { A: () => v });
+var n = s(627968),
+    r = s(64700),
+    l = s(503698),
+    a = s.n(l),
+    i = s(3666),
+    o = s(397927),
+    c = s(770178),
+    d = s(955572),
+    u = s(775602),
+    g = s(742589),
+    m = s(421773),
+    _ = s(397309),
+    h = s(190294),
+    p = s(758836),
+    f = s(985018),
+    E = s(78716),
+    C = s(525037);
+function b(e) {
+    let { tab: t, label: s, selected: r, handleTransition: l, hasSubmenu: i, showNewBadge: c } = e;
     return i
-        ? (0, n.jsx)(C, {
-              tab: t,
-              label: l,
-              selected: r,
-              handleTransition: s,
-          })
-        : (0, n.jsxs)(f.A.Title, {
-              onClick: () => s(t),
-              wrapperClassName: v.Vn,
-              className: a()(v.Mf, {
-                  [v.wH]: r,
-              }),
-              children: [
-                  l,
-                  c &&
-                      (0, n.jsx)(o.LpS, {
-                          text: h.intl.string(h.t.y2b7CA),
-                          className: E.Ad,
-                      }),
-              ],
+        ? (0, n.jsx)(A, { tab: t, label: s, selected: r, handleTransition: l })
+        : (0, n.jsxs)(g.A.Title, {
+              onClick: () => l(t),
+              wrapperClassName: C.Vn,
+              className: a()(C.Mf, { [C.wH]: r }),
+              children: [s, c && (0, n.jsx)(o.LpS, { text: f.intl.string(f.t.y2b7CA), className: E.Ad })],
           });
 }
-
-function C(e) {
-    let { tab: t, label: l, selected: s, handleTransition: i } = e,
+function A(e) {
+    let { tab: t, label: s, selected: l, handleTransition: i } = e,
         c = r.useRef(null),
-        p = r.useRef(!1),
-        { isHovered: m, setIsHovered: h, onMouseEnter: E, onMouseLeave: S, cancelTimers: C } = (0, b.A)(100, 100),
-        O = (e) => {
+        h = r.useRef(!1),
+        { isHovered: p, setIsHovered: f, onMouseEnter: E, onMouseLeave: b, cancelTimers: A } = (0, m.A)(100, 100),
+        x = (e) => {
             ("Enter" === e.key || " " === e.key) &&
-                (e.preventDefault(), C(), h(!0), (p.current = d.A.keyboardModeEnabled));
+                (e.preventDefault(), A(), f(!0), (h.current = u.A.keyboardModeEnabled));
         },
-        _ = r.useCallback(() => {
-            (p.current = d.A.keyboardModeEnabled), E();
+        S = r.useCallback(() => {
+            (h.current = u.A.keyboardModeEnabled), E();
         }, [E]);
     return (0, n.jsx)("div", {
-        className: v.iV,
-        onMouseEnter: _,
-        onMouseLeave: S,
+        className: C.iV,
+        onMouseEnter: S,
+        onMouseLeave: b,
         children: (0, n.jsx)(o.YNO, {
             targetElementRef: c,
-            shouldShow: m,
+            shouldShow: p,
             position: "bottom",
             align: "left",
             onRequestOpen: () => {
-                C(), h(!0), (p.current = d.A.keyboardModeEnabled);
+                A(), f(!0), (h.current = u.A.keyboardModeEnabled);
             },
             onRequestClose: () => {
-                var e;
-                p.current && !d.A.keyboardModeEnabled && (0, u.uS)(), h(!1), null == (e = c.current) || e.focus();
+                h.current && !u.A.keyboardModeEnabled && (0, d.uS)(), f(!1), c.current?.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, n.jsx)("div", {
                     onMouseEnter: E,
-                    onMouseLeave: S,
-                    children: (0, n.jsx)(g.A, {
-                        handleTransition: i,
-                        onClose: t,
-                    }),
+                    onMouseLeave: b,
+                    children: (0, n.jsx)(_.A, { handleTransition: i, onClose: t }),
                 });
             },
             children: (e, r) => {
-                let { isShown: u } = r,
-                    d = u ? o.tN5 : o.abt;
-                return (0, n.jsx)(
-                    f.A.Title,
-                    x(A({}, e), {
-                        ref: c,
-                        onClick: () => i(t),
-                        onKeyDown: O,
-                        wrapperClassName: v.Vn,
-                        className: a()(v.Mf, {
-                            [v.wH]: s,
-                        }),
-                        children: (0, n.jsxs)("span", {
-                            className: v.hP,
-                            children: [
-                                l,
-                                (0, n.jsx)(d, {
-                                    size: "sm",
-                                    color: "currentColor",
-                                }),
-                            ],
-                        }),
+                let { isShown: d } = r,
+                    u = d ? o.tN5 : o.abt;
+                return (0, n.jsx)(g.A.Title, {
+                    ...e,
+                    ref: c,
+                    onClick: () => i(t),
+                    onKeyDown: x,
+                    wrapperClassName: C.Vn,
+                    className: a()(C.Mf, { [C.wH]: l }),
+                    children: (0, n.jsxs)("span", {
+                        className: C.hP,
+                        children: [s, (0, n.jsx)(u, { size: "sm", color: "currentColor" })],
                     }),
-                );
+                });
             },
         }),
     });
 }
-
-function O(e) {
-    let { onTabSelect: t, tabs: l, selectedTab: s, selected: i, showOrbRentalNewBadge: c } = e,
-        g = r.useRef(null),
-        m = r.useRef(!1),
-        { isHovered: E, setIsHovered: S, onMouseEnter: C, onMouseLeave: O, cancelTimers: _ } = (0, b.A)(100, 100),
-        y = (e) => {
+function x(e) {
+    let { onTabSelect: t, tabs: s, selectedTab: l, selected: i, showOrbRentalNewBadge: c } = e,
+        _ = r.useRef(null),
+        p = r.useRef(!1),
+        { isHovered: E, setIsHovered: b, onMouseEnter: A, onMouseLeave: x, cancelTimers: S } = (0, m.A)(100, 100),
+        v = (e) => {
             ("Enter" === e.key || " " === e.key) &&
-                (e.preventDefault(), _(), S(!0), (m.current = d.A.keyboardModeEnabled));
+                (e.preventDefault(), S(), b(!0), (p.current = u.A.keyboardModeEnabled));
         },
-        j = r.useCallback(() => {
-            (m.current = d.A.keyboardModeEnabled), C();
-        }, [C]);
+        L = r.useCallback(() => {
+            (p.current = u.A.keyboardModeEnabled), A();
+        }, [A]);
     return (0, n.jsx)("div", {
-        className: v.iV,
-        onMouseEnter: j,
-        onMouseLeave: O,
+        className: C.iV,
+        onMouseEnter: L,
+        onMouseLeave: x,
         children: (0, n.jsx)(o.YNO, {
-            targetElementRef: g,
+            targetElementRef: _,
             shouldShow: E,
             position: "bottom",
             align: "left",
             onRequestOpen: () => {
-                _(), S(!0), (m.current = d.A.keyboardModeEnabled);
+                S(), b(!0), (p.current = u.A.keyboardModeEnabled);
             },
             onRequestClose: () => {
-                var e;
-                m.current && !d.A.keyboardModeEnabled && (0, u.uS)(), S(!1), null == (e = g.current) || e.focus();
+                p.current && !u.A.keyboardModeEnabled && (0, d.uS)(), b(!1), _.current?.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: r } = e;
                 return (0, n.jsx)("div", {
-                    onMouseEnter: C,
-                    onMouseLeave: O,
-                    children: (0, n.jsx)(p.A, {
-                        selectedTab: s,
+                    onMouseEnter: A,
+                    onMouseLeave: x,
+                    children: (0, n.jsx)(h.A, {
+                        selectedTab: l,
                         onClose: r,
-                        tabs: l,
+                        tabs: s,
                         onTabSelect: t,
                         showOrbRentalNewBadge: c,
                     }),
                 });
             },
             children: (e, t) => {
-                let { isShown: l } = t,
-                    r = l ? o.tN5 : o.abt;
-                return (0, n.jsx)(
-                    f.A.Title,
-                    x(A({}, e), {
-                        ref: g,
-                        onKeyDown: y,
-                        wrapperClassName: v.Vn,
-                        className: a()(v.Mf, v.OS, {
-                            [v.wH]: i,
-                        }),
-                        "aria-label": h.intl.string(h.t["UKOtz+"]),
-                        children: (0, n.jsxs)("span", {
-                            className: v.hP,
-                            children: [
-                                h.intl.string(h.t["UKOtz+"]),
-                                (0, n.jsx)(r, {
-                                    size: "xs",
-                                }),
-                            ],
-                        }),
+                let { isShown: s } = t,
+                    r = s ? o.tN5 : o.abt;
+                return (0, n.jsx)(g.A.Title, {
+                    ...e,
+                    ref: _,
+                    onKeyDown: v,
+                    wrapperClassName: C.Vn,
+                    className: a()(C.Mf, C.OS, { [C.wH]: i }),
+                    "aria-label": f.intl.string(f.t["UKOtz+"]),
+                    children: (0, n.jsxs)("span", {
+                        className: C.hP,
+                        children: [f.intl.string(f.t["UKOtz+"]), (0, n.jsx)(r, { size: "xs" })],
                     }),
-                );
+                });
             },
         }),
     });
 }
-
-function _(e, t, l) {
-    var n;
-    return e === l || (null != (n = t.hasSubmenu) && n && (0, m.dF)(l) && e === m.G2.CATALOG);
+function S(e, t, s) {
+    return e === s || ((t.hasSubmenu ?? !1) && (0, p.dF)(s) && e === p.G2.CATALOG);
 }
-
-function y(e) {
-    let { className: t, selectedTab: l, tabs: s, onTabSelect: o, showOrbRentalNewBadge: u } = e,
-        [d, f] = r.useState(0),
-        b = r.useRef(d),
+function v(e) {
+    let { className: t, selectedTab: s, tabs: l, onTabSelect: o, showOrbRentalNewBadge: d } = e,
+        [u, g] = r.useState(0),
+        m = r.useRef(u),
         {
-            lastVisibleIndex: g,
-            onItemLayout: p,
-            overflowItemsRef: h,
-        } = (0, i.Wv)({
-            items: s,
-            itemGapPx: 24,
-            maxLines: 1,
-            containerWidth: d,
-        }),
-        E = r.useMemo(() => s.slice(0, g + 1), [g, s]),
-        A = r.useMemo(() => s.slice(g + 1), [g, s]),
-        x = r.useRef(null),
-        C = r.useCallback((e) => {
+            lastVisibleIndex: _,
+            onItemLayout: h,
+            overflowItemsRef: f,
+        } = (0, i.Wv)({ items: l, itemGapPx: 24, maxLines: 1, containerWidth: u }),
+        E = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
+        A = r.useMemo(() => l.slice(_ + 1), [_, l]),
+        v = r.useRef(null),
+        L = r.useCallback((e) => {
             let t = e.contentRect.width;
-            null != t && b.current !== t && (f(t), (b.current = t));
+            null != t && m.current !== t && (g(t), (m.current = t));
         }, []);
-    (0, c.g)(x, C);
-    let y = 0 !== d,
-        j = A.some((e) => _(e.tab, e, l));
+    (0, c.g)(v, L);
+    let T = 0 !== u,
+        I = A.some((e) => S(e.tab, e, s));
     return (0, n.jsxs)("div", {
-        className: a()(v.kL, t),
-        ref: x,
+        className: a()(C.kL, t),
+        ref: v,
         children: [
             (0, n.jsxs)("div", {
-                className: v.Kk,
+                className: C.Kk,
                 children: [
-                    s.map((e, t) => {
-                        var r;
-                        return (0, n.jsx)(
+                    l.map((e, t) =>
+                        (0, n.jsx)(
                             i.Ae,
                             {
                                 index: t,
-                                onItemLayout: p,
-                                children: (0, n.jsx)(S, {
+                                onItemLayout: h,
+                                children: (0, n.jsx)(b, {
                                     tab: e.tab,
                                     label: e.label,
-                                    selected: _(e.tab, e, l),
+                                    selected: S(e.tab, e, s),
                                     handleTransition: o,
-                                    hasSubmenu: null != (r = e.hasSubmenu) && r,
-                                    showNewBadge: e.tab === m.G2.ORBS && u,
+                                    hasSubmenu: e.hasSubmenu ?? !1,
+                                    showNewBadge: e.tab === p.G2.ORBS && d,
                                 }),
                             },
                             e.tab,
-                        );
-                    }),
+                        ),
+                    ),
                     (0, n.jsx)("div", {
-                        ref: h,
-                        children: (0, n.jsx)(O, {
+                        ref: f,
+                        children: (0, n.jsx)(x, {
                             tabs: A,
                             onTabSelect: o,
-                            selectedTab: l,
-                            selected: j,
-                            showOrbRentalNewBadge: u,
+                            selectedTab: s,
+                            selected: I,
+                            showOrbRentalNewBadge: d,
                         }),
                     }),
                 ],
             }),
-            y &&
+            T &&
                 (0, n.jsxs)("div", {
-                    className: v.vR,
+                    className: C.vR,
                     children: [
-                        E.map((e) => {
-                            var t;
-                            return (0, n.jsx)(
-                                S,
+                        E.map((e) =>
+                            (0, n.jsx)(
+                                b,
                                 {
                                     tab: e.tab,
                                     label: e.label,
-                                    selected: _(e.tab, e, l),
+                                    selected: S(e.tab, e, s),
                                     handleTransition: o,
-                                    hasSubmenu: null != (t = e.hasSubmenu) && t,
-                                    showNewBadge: e.tab === m.G2.ORBS && u,
+                                    hasSubmenu: e.hasSubmenu ?? !1,
+                                    showNewBadge: e.tab === p.G2.ORBS && d,
                                 },
                                 e.tab,
-                            );
-                        }),
+                            ),
+                        ),
                         0 !== A.length
-                            ? (0, n.jsx)(O, {
+                            ? (0, n.jsx)(x, {
                                   tabs: A,
                                   onTabSelect: o,
-                                  selectedTab: l,
-                                  selected: j,
-                                  showOrbRentalNewBadge: u,
+                                  selectedTab: s,
+                                  selected: I,
+                                  showOrbRentalNewBadge: d,
                               })
                             : null,
                     ],

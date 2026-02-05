@@ -1,3 +1,4 @@
+"use strict";
 e.exports = !n(503628)(function () {
     return (
         7 !==

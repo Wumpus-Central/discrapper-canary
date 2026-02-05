@@ -1,14 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(311907),
+n.d(t, { A: () => s });
+var i = n(311907),
     l = n(622543),
-    i = n(652215);
-
-function a(e) {
-    let t = (0, r.bG)([l.A], () => {
-        var t;
-        return null !== e ? (null == (t = l.A.getUserProfile(null != e ? e : i.dJq)) ? void 0 : t.application) : void 0;
-    });
-    return null != t ? t : void 0;
+    a = n(652215);
+function s(e) {
+    return (0, i.bG)([l.A], () => (null !== e ? l.A.getUserProfile(e ?? a.dJq)?.application : void 0)) ?? void 0;
 }

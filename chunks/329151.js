@@ -1,22 +1,13 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968);
-n(64700);
-var i = n(452626),
-    a = n(833349),
-    s = n(90644),
-    o = n(652215);
-
-function l(e) {
-    let { activity: t, user: n, source: l, onAction: c } = e;
-    return null != t && (0, a.A)(t, o.jUm.PLAY) && (0, s.A)(t)
-        ? (0, r.jsx)(i.A, {
-              fullWidth: !0,
-              activity: t,
-              user: n,
-              source: l,
-              onAction: c,
-          })
+i.d(t, { A: () => o });
+var n = i(627968);
+i(64700);
+var a = i(452626),
+    l = i(833349),
+    r = i(90644),
+    s = i(652215);
+function o(e) {
+    let { activity: t, user: i, source: o, onAction: d } = e;
+    return null != t && (0, l.A)(t, s.jUm.PLAY) && (0, r.A)(t)
+        ? (0, n.jsx)(a.A, { fullWidth: !0, activity: t, user: i, source: o, onAction: d })
         : null;
 }

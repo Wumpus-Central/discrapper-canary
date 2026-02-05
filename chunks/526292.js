@@ -1,77 +1,46 @@
-n.d(t, {
-    Bv: () => y,
-    ar: () => h,
-    f9: () => b,
-    g5: () => E,
-    k0: () => O,
-    k5: () => m,
-    nf: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Bv: () => I, ar: () => h, f9: () => A, g5: () => E, k0: () => T, k5: () => m, nf: () => g });
 var r = n(64700),
     i = n(989349),
     a = n.n(i),
     s = n(311907),
     o = n(155718),
     l = n(166403),
-    c = n(89366),
-    u = n(637073),
+    u = n(89366),
+    c = n(637073),
     d = n(694080),
-    f = n(422936),
-    p = n(234419),
-    _ = n(788868);
-
+    _ = n(422936),
+    f = n(234419),
+    p = n(788868);
 function h() {
-    let e = (0, p.V)(),
-        t = (0, c.QQ)(),
-        n = (0, f.O)(),
+    let e = (0, f.V)(),
+        t = (0, u.QQ)(),
+        n = (0, _.O)(),
         r = m();
     return null != e || t || null != n || r;
 }
 let m = () => {
-        var e;
-        let t = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
-            n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_expires_at;
-        return null != n && a()(Date.now()) <= a()(n);
+        let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+            t = e?.metadata?.active_discount_expires_at;
+        return null != t && a()(Date.now()) <= a()(t);
     },
     g = () => {
-        var e;
-        let t = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
-            n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id;
-        switch (n) {
-            case _.q:
-            case _.lj:
-                return {
-                    duration: 1,
-                    percentage: 30,
-                    discountId: n,
-                };
-            case _.EG:
-            case _.TU:
-            case _.KG:
-                return {
-                    duration: 3,
-                    percentage: 30,
-                    discountId: n,
-                };
-            case _.HF:
-                return {
-                    duration: 1,
-                    percentage: 40,
-                    discountId: n,
-                };
-            case _.BR:
-                return {
-                    duration: 1,
-                    percentage: 20,
-                    discountId: n,
-                };
-            case _.CW:
-                return {
-                    duration: 1,
-                    percentage: 25,
-                    discountId: n,
-                };
+        let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+            t = e?.metadata?.active_discount_id;
+        switch (t) {
+            case p.q:
+            case p.lj:
+                return { duration: 1, percentage: 30, discountId: t };
+            case p.EG:
+            case p.TU:
+            case p.KG:
+                return { duration: 3, percentage: 30, discountId: t };
+            case p.HF:
+                return { duration: 1, percentage: 40, discountId: t };
+            case p.BR:
+                return { duration: 1, percentage: 20, discountId: t };
+            case p.CW:
+                return { duration: 1, percentage: 25, discountId: t };
             default:
                 return;
         }
@@ -80,11 +49,7 @@ let m = () => {
         let [t, n] = r.useState(!1),
             [i, a] = r.useState(!1),
             [s, o] = r.useState(null);
-        if (e)
-            return {
-                churnUserDiscountOffer: s,
-                isFetchingChurnDiscountOffer: i,
-            };
+        if (e) return { churnUserDiscountOffer: s, isFetchingChurnDiscountOffer: i };
         let l = () => {
             n(!0), a(!1);
         };
@@ -99,38 +64,27 @@ let m = () => {
                     .catch((e) => {
                         l();
                     })),
-            {
-                churnUserDiscountOffer: s,
-                isFetchingChurnDiscountOffer: i,
-            }
+            { churnUserDiscountOffer: s, isFetchingChurnDiscountOffer: i }
         );
     },
-    b = () => {
+    A = () => {
         let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
-            r = !!(null == e ? void 0 : e.hasActiveTrial);
+            r = !!e?.hasActiveTrial;
         return n && !r && !t;
     },
-    y = (e) => {
+    I = (e) => {
         for (let t of e.invoiceItems) {
             let e = t.discounts.find((e) => e.type === o.iS.SUBSCRIPTION_PLAN);
             if (null != e)
                 switch (e.discount_id) {
-                    case _.q:
-                        return {
-                            duration: 1,
-                            percentage: e.percentage_amount,
-                            discountId: e.discount_id,
-                        };
-                    case _.EG:
-                        return {
-                            duration: 3,
-                            percentage: e.percentage_amount,
-                            discountId: e.discount_id,
-                        };
+                    case p.q:
+                        return { duration: 1, percentage: e.percentage_amount, discountId: e.discount_id };
+                    case p.EG:
+                        return { duration: 3, percentage: e.percentage_amount, discountId: e.discount_id };
                 }
         }
         return null;
     },
-    O = () => (0, u.d)();
+    T = () => (0, c.d)();

@@ -1,5 +1,5 @@
+"use strict";
 let r;
-
 function i(e, t) {
     var n = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (!n) {
@@ -10,14 +10,7 @@ function i(e, t) {
             return {
                 s: i,
                 n: function () {
-                    return r >= e.length
-                        ? {
-                              done: !0,
-                          }
-                        : {
-                              done: !1,
-                              value: e[r++],
-                          };
+                    return r >= e.length ? { done: !0 } : { done: !1, value: e[r++] };
                 },
                 e: function (e) {
                     throw e;
@@ -52,7 +45,6 @@ function i(e, t) {
         },
     };
 }
-
 function a(e, t) {
     if (e) {
         if ("string" == typeof e) return s(e, t);
@@ -62,7 +54,6 @@ function a(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return s(e, t);
     }
 }
-
 function s(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -75,15 +66,14 @@ function s(e, t) {
       : (r = self);
 let o = n(882630),
     l = n(232859),
-    c = n(591560),
-    u = n(191203),
+    u = n(591560),
+    c = n(191203),
     d = n(17101),
-    f = d.isObject,
-    p = d.mixin,
-    _ = d.hasOwn,
+    _ = d.isObject,
+    f = d.mixin,
+    p = d.hasOwn,
     h = n(531679),
     m = n(427879);
-
 function g() {}
 e.exports = function (e, n) {
     return "function" == typeof n
@@ -93,21 +83,19 @@ e.exports = function (e, n) {
           : new t.Request(e, n);
 };
 let E = (t = e.exports);
-(t.Request = T),
+(t.Request = b),
     (E.getXHR = () => {
         if (r.XMLHttpRequest) return new r.XMLHttpRequest();
         throw Error("Browser-only version of superagent could not find XHR");
     });
-let b = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
-
-function y(e) {
-    if (!f(e)) return e;
+let A = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
+function I(e) {
+    if (!_(e)) return e;
     let t = [];
-    for (let n in e) _(e, n) && O(t, n, e[n]);
+    for (let n in e) p(e, n) && T(t, n, e[n]);
     return t.join("&");
 }
-
-function O(e, t, n) {
+function T(e, t, n) {
     if (void 0 !== n) {
         if (null === n) return void e.push(encodeURI(t));
         if (Array.isArray(n)) {
@@ -116,19 +104,18 @@ function O(e, t, n) {
             try {
                 for (a.s(); !(r = a.n()).done; ) {
                     let n = r.value;
-                    O(e, t, n);
+                    T(e, t, n);
                 }
             } catch (e) {
                 a.e(e);
             } finally {
                 a.f();
             }
-        } else if (f(n)) for (let r in n) _(n, r) && O(e, `${t}[${r}]`, n[r]);
+        } else if (_(n)) for (let r in n) p(n, r) && T(e, `${t}[${r}]`, n[r]);
         else e.push(encodeURI(t) + "=" + encodeURIComponent(n));
     }
 }
-
-function A(e) {
+function y(e) {
     let t,
         n,
         r = {},
@@ -139,8 +126,7 @@ function A(e) {
             : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
-
-function v(e) {
+function S(e) {
     let t,
         n,
         r,
@@ -149,15 +135,13 @@ function v(e) {
         s = {};
     for (let e = 0, o = a.length; e < o; ++e)
         -1 !== (t = (n = a[e]).indexOf(":")) &&
-            ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (s[r] = i));
+            ((r = n.slice(0, t).toLowerCase()), (i = A(n.slice(t + 1))), (s[r] = i));
     return s;
 }
-
-function S(e) {
+function v(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
-
-function I(e) {
+function C(e) {
     (this.req = e),
         (this.xhr = this.req.xhr),
         (this.text =
@@ -169,7 +153,7 @@ function I(e) {
     let t = this.xhr.status;
     1223 === t && (t = 204),
         this._setStatusProperties(t),
-        (this.headers = v(this.xhr.getAllResponseHeaders())),
+        (this.headers = S(this.xhr.getAllResponseHeaders())),
         (this.header = this.headers),
         (this.header["content-type"] = this.xhr.getResponseHeader("content-type")),
         this._setHeaderProperties(this.header),
@@ -178,8 +162,7 @@ function I(e) {
             : (this.body =
                   "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
-
-function T(e, t) {
+function b(e, t) {
     let n = this;
     (this._query = this._query || []),
         (this.method = e),
@@ -191,7 +174,7 @@ function T(e, t) {
                 t = null,
                 r = null;
             try {
-                r = new I(n);
+                r = new C(n);
             } catch (e) {
                 return (
                     ((t = Error("Parser is unable to parse the response")).parse = !0),
@@ -215,8 +198,8 @@ function T(e, t) {
                 : n.callback(null, r);
         });
 }
-(E.serializeObject = y),
-    (E.parseString = A),
+(E.serializeObject = I),
+    (E.parseString = y),
     (E.types = {
         html: "text/html",
         json: "application/json",
@@ -225,45 +208,36 @@ function T(e, t) {
         form: "application/x-www-form-urlencoded",
         "form-data": "application/x-www-form-urlencoded",
     }),
-    (E.serialize = {
-        "application/x-www-form-urlencoded": c.stringify,
-        "application/json": l,
-    }),
-    (E.parse = {
-        "application/x-www-form-urlencoded": A,
-        "application/json": JSON.parse,
-    }),
-    p(I.prototype, h.prototype),
-    (I.prototype._parseBody = function (e) {
+    (E.serialize = { "application/x-www-form-urlencoded": u.stringify, "application/json": l }),
+    (E.parse = { "application/x-www-form-urlencoded": y, "application/json": JSON.parse }),
+    f(C.prototype, h.prototype),
+    (C.prototype._parseBody = function (e) {
         let t = E.parse[this.type];
         return this.req._parser
             ? this.req._parser(this, e)
-            : (!t && S(this.type) && (t = E.parse["application/json"]),
+            : (!t && v(this.type) && (t = E.parse["application/json"]),
               t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
-    (I.prototype.toError = function () {
+    (C.prototype.toError = function () {
         let e = this.req,
             t = e.method,
             n = e.url,
             r = Error(`cannot ${t} ${n} (${this.status})`);
         return (r.status = this.status), (r.method = t), (r.url = n), r;
     }),
-    (E.Response = I),
-    o(T.prototype),
-    p(T.prototype, u.prototype),
-    (T.prototype.type = function (e) {
+    (E.Response = C),
+    o(b.prototype),
+    f(b.prototype, c.prototype),
+    (b.prototype.type = function (e) {
         return this.set("Content-Type", E.types[e] || e), this;
     }),
-    (T.prototype.accept = function (e) {
+    (b.prototype.accept = function (e) {
         return this.set("Accept", E.types[e] || e), this;
     }),
-    (T.prototype.auth = function (e, t, n) {
+    (b.prototype.auth = function (e, t, n) {
         1 == arguments.length && (t = ""),
             "object" == typeof t && null !== t && ((n = t), (t = "")),
-            n ||
-                (n = {
-                    type: "function" == typeof btoa ? "basic" : "auto",
-                });
+            n || (n = { type: "function" == typeof btoa ? "basic" : "auto" });
         let r = n.encoder
             ? n.encoder
             : (e) => {
@@ -272,52 +246,52 @@ function T(e, t) {
               };
         return this._auth(e, t, n, r);
     }),
-    (T.prototype.query = function (e) {
-        return "string" != typeof e && (e = y(e)), e && this._query.push(e), this;
+    (b.prototype.query = function (e) {
+        return "string" != typeof e && (e = I(e)), e && this._query.push(e), this;
     }),
-    (T.prototype.attach = function (e, t, n) {
+    (b.prototype.attach = function (e, t, n) {
         if (t) {
             if (this._data) throw Error("superagent can't mix .send() and .attach()");
             this._getFormData().append(e, t, n || t.name);
         }
         return this;
     }),
-    (T.prototype._getFormData = function () {
+    (b.prototype._getFormData = function () {
         return this._formData || (this._formData = new r.FormData()), this._formData;
     }),
-    (T.prototype.callback = function (e, t) {
+    (b.prototype.callback = function (e, t) {
         if (this._shouldRetry(e, t)) return this._retry();
         let n = this._callback;
         this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit("error", e)), n(e, t);
     }),
-    (T.prototype.crossDomainError = function () {
+    (b.prototype.crossDomainError = function () {
         let e = Error(
             "Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.",
         );
         (e.crossDomain = !0), (e.status = this.status), (e.method = this.method), (e.url = this.url), this.callback(e);
     }),
-    (T.prototype.agent = function () {
+    (b.prototype.agent = function () {
         return console.warn("This is not supported in browser version of superagent"), this;
     }),
-    (T.prototype.ca = T.prototype.agent),
-    (T.prototype.buffer = T.prototype.ca),
-    (T.prototype.write = () => {
+    (b.prototype.ca = b.prototype.agent),
+    (b.prototype.buffer = b.prototype.ca),
+    (b.prototype.write = () => {
         throw Error("Streaming is not supported in browser version of superagent");
     }),
-    (T.prototype.pipe = T.prototype.write),
-    (T.prototype._isHost = function (e) {
+    (b.prototype.pipe = b.prototype.write),
+    (b.prototype._isHost = function (e) {
         return (
             e && "object" == typeof e && !Array.isArray(e) && "[object Object]" !== Object.prototype.toString.call(e)
         );
     }),
-    (T.prototype.end = function (e) {
+    (b.prototype.end = function (e) {
         this._endCalled && console.warn("Warning: .end() was called twice. This is not supported in superagent"),
             (this._endCalled = !0),
             (this._callback = e || g),
             this._finalizeQueryString(),
             this._end();
     }),
-    (T.prototype._setUploadTimeout = function () {
+    (b.prototype._setUploadTimeout = function () {
         let e = this;
         this._uploadTimeout &&
             !this._uploadTimeoutTimer &&
@@ -325,7 +299,7 @@ function T(e, t) {
                 e._timeoutError("Upload timeout of ", e._uploadTimeout, "ETIMEDOUT");
             }, this._uploadTimeout));
     }),
-    (T.prototype._end = function () {
+    (b.prototype._end = function () {
         if (this._aborted) return this.callback(Error("The request has been aborted even before .end() was called"));
         let e = this;
         this.xhr = E.getXHR();
@@ -377,24 +351,23 @@ function T(e, t) {
         ) {
             let e = this._header["content-type"],
                 t = this._serializer || E.serialize[e ? e.split(";")[0] : ""];
-            !t && S(e) && (t = E.serialize["application/json"]), t && (n = t(n));
+            !t && v(e) && (t = E.serialize["application/json"]), t && (n = t(n));
         }
         for (let e in this.header)
-            null !== this.header[e] && _(this.header, e) && t.setRequestHeader(e, this.header[e]);
+            null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType),
             this.emit("request", this),
             t.send(void 0 === n ? null : n);
     }),
     (E.agent = () => new m());
-for (var C = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; C < N.length; C++) {
-    let e = N[C];
+for (var N = 0, R = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; N < R.length; N++) {
+    let e = R[N];
     m.prototype[e.toLowerCase()] = function (t, n) {
         let r = new E.Request(e, t);
         return this._setDefaults(r), n && r.end(n), r;
     };
 }
-
-function R(e, t, n) {
+function O(e, t, n) {
     let r = E("DELETE", e);
     return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
 }
@@ -411,8 +384,8 @@ function R(e, t, n) {
         let r = E("OPTIONS", e);
         return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
     }),
-    (E.del = R),
-    (E.delete = R),
+    (E.del = O),
+    (E.delete = O),
     (E.patch = (e, t, n) => {
         let r = E("PATCH", e);
         return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;

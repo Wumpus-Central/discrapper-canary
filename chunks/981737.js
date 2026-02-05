@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     return function (t, n) {
         var r;
@@ -13,6 +14,4 @@ function r(e) {
         return r[e.argumentCallback ? e.argumentCallback(t) : t];
     };
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

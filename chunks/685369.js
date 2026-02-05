@@ -1,34 +1,15 @@
-n.d(t, {
-    K: () => o,
-});
+"use strict";
+n.d(t, { K: () => o });
 let r = new Map(),
     i = !1;
 try {
-    i =
-        "exceptZero" ===
-        new Intl.NumberFormat("de-DE", {
-            signDisplay: "exceptZero",
-        }).resolvedOptions().signDisplay;
+    i = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
 } catch {}
 let a = !1;
 try {
-    a =
-        "unit" ===
-        new Intl.NumberFormat("de-DE", {
-            style: "unit",
-            unit: "degree",
-        }).resolvedOptions().style;
+    a = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
 } catch {}
-let s = {
-    degree: {
-        narrow: {
-            default: "\xb0",
-            "ja-JP": " 度",
-            "zh-TW": "度",
-            "sl-SI": " \xb0",
-        },
-    },
-};
+let s = { degree: { narrow: { default: "\xb0", "ja-JP": " 度", "zh-TW": "度", "sl-SI": " \xb0" } } };
 class o {
     format(e) {
         let t = "";
@@ -36,7 +17,7 @@ class o {
             ((t =
                 i || null == this.options.signDisplay
                     ? this.numberFormatter.format(e)
-                    : c(this.numberFormatter, this.options.signDisplay, e)),
+                    : u(this.numberFormatter, this.options.signDisplay, e)),
             "unit" === this.options.style && !a)
         ) {
             var n;
@@ -62,38 +43,18 @@ class o {
         let n = this.numberFormatter.formatToParts(e),
             r = this.numberFormatter.formatToParts(t);
         return [
-            ...n.map((e) => ({
-                ...e,
-                source: "startRange",
-            })),
-            {
-                type: "literal",
-                value: " – ",
-                source: "shared",
-            },
-            ...r.map((e) => ({
-                ...e,
-                source: "endRange",
-            })),
+            ...n.map((e) => ({ ...e, source: "startRange" })),
+            { type: "literal", value: " – ", source: "shared" },
+            ...r.map((e) => ({ ...e, source: "endRange" })),
         ];
     }
     resolvedOptions() {
         let e = this.numberFormatter.resolvedOptions();
         return (
-            i ||
-                null == this.options.signDisplay ||
-                (e = {
-                    ...e,
-                    signDisplay: this.options.signDisplay,
-                }),
+            i || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
             a ||
                 "unit" !== this.options.style ||
-                (e = {
-                    ...e,
-                    style: "unit",
-                    unit: this.options.unit,
-                    unitDisplay: this.options.unitDisplay,
-                }),
+                (e = { ...e, style: "unit", unit: this.options.unit, unitDisplay: this.options.unitDisplay }),
             e
         );
     }
@@ -101,7 +62,6 @@ class o {
         (this.numberFormatter = l(e, t)), (this.options = t);
     }
 }
-
 function l(e, t = {}) {
     let { numberingSystem: n } = t;
     if ((n && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${n}`)), "unit" === t.style && !a)) {
@@ -109,10 +69,7 @@ function l(e, t = {}) {
         let { unit: e, unitDisplay: n = "short" } = t;
         if (!e) throw Error('unit option must be provided with style: "unit"');
         if (!(null == (i = s[e]) ? void 0 : i[n])) throw Error(`Unsupported unit ${e} with unitDisplay = ${n}`);
-        t = {
-            ...t,
-            style: "decimal",
-        };
+        t = { ...t, style: "decimal" };
     }
     let o =
         e +
@@ -122,11 +79,10 @@ function l(e, t = {}) {
                   .join()
             : "");
     if (r.has(o)) return r.get(o);
-    let c = new Intl.NumberFormat(e, t);
-    return r.set(o, c), c;
+    let u = new Intl.NumberFormat(e, t);
+    return r.set(o, u), u;
 }
-
-function c(e, t, n) {
+function u(e, t, n) {
     if ("auto" === t) return e.format(n);
     {
         if ("never" === t) return e.format(Math.abs(n));

@@ -1,122 +1,63 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
+n.d(t, { A: () => h });
+var i = n(627968),
     l = n(64700),
-    i = n(163126),
-    a = n(688810),
+    a = n(163126),
+    r = n(688810),
     s = n(114212),
     o = n(183555),
-    c = n(913453),
-    u = n(229187),
-    d = n(657331),
-    f = n(503062),
-    p = n(782505),
-    b = n(515054),
-    g = n(828151);
-
-function m(e) {
-    let { user: t, guildId: n, channelId: m, onClose: y } = e,
-        { analyticsLocations: O } = (0, a.Ay)(),
-        { context: j, trackUserProfileAction: x } = (0, o.NJ)(),
-        { mutualFriends: h, mutualFriendsCount: v } = (0, c.A)(t),
-        A = (0, i.A)();
+    d = n(913453),
+    c = n(229187),
+    u = n(657331),
+    g = n(503062),
+    m = n(782505),
+    x = n(515054),
+    f = n(828151);
+function h(e) {
+    let { user: t, guildId: n, channelId: h, onClose: p } = e,
+        { analyticsLocations: _ } = (0, r.Ay)(),
+        { context: A, trackUserProfileAction: I } = (0, o.NJ)(),
+        { mutualFriends: j, mutualFriendsCount: v } = (0, d.A)(t),
+        T = (0, a.A)();
     return (
         l.useEffect(() => {
-            (0, u.A)(t.id, A);
-        }, [t.id, A]),
-        (0, r.jsx)(b.K, {
-            className: g.XG,
+            (0, c.A)(t.id, T);
+        }, [t.id, T]),
+        (0, i.jsx)(x.K, {
+            className: f.XG,
             children:
-                null == h
-                    ? Array.from({
-                          length: null != v ? v : 10,
-                      }).map((e, t) =>
-                          (0, r.jsxs)(
+                null == j
+                    ? Array.from({ length: v ?? 10 }).map((e, t) =>
+                          (0, i.jsxs)(
                               "div",
                               {
-                                  className: g.D$,
+                                  className: f.D$,
                                   children: [
-                                      (0, r.jsx)(s.FQ, {
-                                          width: 40,
-                                          opacity: 0.08,
-                                      }),
-                                      (0, r.jsx)(s.FQ, {
-                                          width: 135,
-                                          opacity: 0.08,
-                                      }),
+                                      (0, i.jsx)(s.FQ, { width: 40, opacity: 0.08 }),
+                                      (0, i.jsx)(s.FQ, { width: 135, opacity: 0.08 }),
                                   ],
                               },
                               t,
                           ),
                       )
-                    : 0 === h.length
-                      ? (0, r.jsx)(p.IA, {})
-                      : h.map((e) => {
-                            let { key: t, user: l, status: i } = e;
-                            return (0, r.jsx)(
-                                f.A,
+                    : 0 === j.length
+                      ? (0, i.jsx)(m.IA, {})
+                      : j.map((e) => {
+                            let { key: t, user: l, status: a } = e;
+                            return (0, i.jsx)(
+                                g.A,
                                 {
                                     user: l,
-                                    status: i,
+                                    status: a,
                                     guildId: n,
-                                    channelId: m,
+                                    channelId: h,
                                     onSelect: () => {
-                                        var e, t;
-                                        null == y || y(),
-                                            x({
-                                                action: "PRESS_MUTUAL_FRIEND",
-                                            }),
-                                            (0, d.openUserProfileModal)(
-                                                ((e = (function (e) {
-                                                    for (var t = 1; t < arguments.length; t++) {
-                                                        var n = null != arguments[t] ? arguments[t] : {},
-                                                            r = Object.keys(n);
-                                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                                            (r = r.concat(
-                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e)
-                                                                        .enumerable;
-                                                                }),
-                                                            )),
-                                                            r.forEach(function (t) {
-                                                                var r;
-                                                                (r = n[t]),
-                                                                    t in e
-                                                                        ? Object.defineProperty(e, t, {
-                                                                              value: r,
-                                                                              enumerable: !0,
-                                                                              configurable: !0,
-                                                                              writable: !0,
-                                                                          })
-                                                                        : (e[t] = r);
-                                                            });
-                                                    }
-                                                    return e;
-                                                })({}, j)),
-                                                (t = t =
-                                                    {
-                                                        userId: l.id,
-                                                        sourceAnalyticsLocations: O,
-                                                    }),
-                                                Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                                                    : (function (e, t) {
-                                                          var n = Object.keys(e);
-                                                          if (Object.getOwnPropertySymbols) {
-                                                              var r = Object.getOwnPropertySymbols(e);
-                                                              n.push.apply(n, r);
-                                                          }
-                                                          return n;
-                                                      })(Object(t)).forEach(function (n) {
-                                                          Object.defineProperty(
-                                                              e,
-                                                              n,
-                                                              Object.getOwnPropertyDescriptor(t, n),
-                                                          );
-                                                      }),
-                                                e),
-                                            );
+                                        p?.(),
+                                            I({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            (0, u.openUserProfileModal)({
+                                                ...A,
+                                                userId: l.id,
+                                                sourceAnalyticsLocations: _,
+                                            });
                                     },
                                 },
                                 t,

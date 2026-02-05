@@ -1,29 +1,23 @@
-n.d(t, {
-    L: () => u,
-}),
-    n(734808),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { L: () => c });
 var r = n(852015),
     i = n(144367),
     a = n(428420),
     s = n(324281);
 class o extends s.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.CTAButton", [{ no: 1, name: "copy", kind: "scalar", T: 9 }]);
+    }
     create(e) {
-        let t = {
-            copy: "",
-        };
+        let t = { copy: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -31,9 +25,7 @@ class o extends s.G {
             else {
                 let s = n.readUnknownField;
                 if ("throw" === s)
-                    throw new globalThis.Error(
-                        "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                    );
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let o = e.skip(i);
                 !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -45,37 +37,28 @@ class o extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.premium_marketing.v1.CTAButton", [
-            {
-                no: 1,
-                name: "copy",
-                kind: "scalar",
-                T: 9,
-            },
-        ]);
-    }
 }
 let l = new o();
-class c extends s.G {
+class u extends s.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
+            { no: 1, name: "asset_url", kind: "scalar", T: 9 },
+            { no: 2, name: "header", kind: "scalar", T: 9 },
+            { no: 3, name: "body", kind: "scalar", T: 9 },
+            { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
+            { no: 5, name: "button", kind: "message", T: () => l },
+        ]);
+    }
     create(e) {
-        let t = {
-            assetUrl: "",
-            header: "",
-            body: "",
-            helpArticleId: "",
-        };
+        let t = { assetUrl: "", header: "", body: "", helpArticleId: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, {
-                enumerable: !1,
-                value: this,
-            }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
+        let a = i ?? this.create(),
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
@@ -98,9 +81,7 @@ class c extends s.G {
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
-                        throw new globalThis.Error(
-                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
-                        );
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
                     !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
             }
@@ -116,39 +97,5 @@ class c extends s.G {
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
-    constructor() {
-        super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
-            {
-                no: 1,
-                name: "asset_url",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 2,
-                name: "header",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 3,
-                name: "body",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 4,
-                name: "help_article_id",
-                kind: "scalar",
-                T: 9,
-            },
-            {
-                no: 5,
-                name: "button",
-                kind: "message",
-                T: () => l,
-            },
-        ]);
-    }
 }
-let u = new c();
+let c = new u();

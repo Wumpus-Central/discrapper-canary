@@ -1,54 +1,44 @@
-n.d(t, {
-    A: () => o,
-});
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(168186);
-n(827669);
-var s = n(985018),
-    c = n(380964);
-
-function o(e) {
+a.d(t, { A: () => c });
+var n = a(627968),
+    i = a(64700),
+    s = a(397927),
+    l = a(168186);
+a(827669);
+var r = a(985018),
+    o = a(380964);
+function c(e) {
     let { application: t } = e,
-        n = a.useMemo(() => {
-            var e;
-            let n = null == (e = t.directory_entry) ? void 0 : e.popular_application_commands;
-            return null != n
-                ? n.map((e) =>
-                      (0, i.Oe)({
-                          rootCommand: e,
-                          command: e,
-                          applicationId: e.application_id,
-                      }),
-                  )
+        a = i.useMemo(() => {
+            let e = t.directory_entry?.popular_application_commands;
+            return null != e
+                ? e.map((e) => (0, l.Oe)({ rootCommand: e, command: e, applicationId: e.application_id }))
                 : [];
         }, [t]);
-    return 0 === n.length
+    return 0 === a.length
         ? null
-        : (0, l.jsxs)("div", {
-              className: c.hd,
+        : (0, n.jsxs)("div", {
+              className: o.hd,
               children: [
-                  (0, l.jsx)(r.Heading, {
+                  (0, n.jsx)(s.Heading, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
-                      children: s.intl.string(s.t.swIgTL),
+                      children: r.intl.string(r.t.swIgTL),
                   }),
-                  (0, l.jsx)("div", {
-                      className: c.hQ,
-                      children: n.map((e) =>
-                          (0, l.jsxs)(
+                  (0, n.jsx)("div", {
+                      className: o.hQ,
+                      children: a.map((e) =>
+                          (0, n.jsxs)(
                               "div",
                               {
-                                  className: c.dO,
+                                  className: o.dO,
                                   children: [
-                                      (0, l.jsxs)(r.Text, {
-                                          className: c.p6,
+                                      (0, n.jsxs)(s.Text, {
+                                          className: o.p6,
                                           variant: "code",
                                           color: "text-strong",
                                           children: ["/", e.displayName],
                                       }),
-                                      (0, l.jsx)(r.Text, {
+                                      (0, n.jsx)(s.Text, {
                                           variant: "text-md/normal",
                                           color: "text-default",
                                           children: e.displayDescription,

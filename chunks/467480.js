@@ -1,116 +1,111 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => f });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(192308),
-    s = n(435371),
+    r = n(435371),
     o = n(397927),
-    c = n(964486),
-    u = n(544231),
-    d = n(338510),
-    f = n(151119),
-    p = n(278941),
-    h = n(665909),
-    b = n(186111),
-    g = n(58736),
-    m = n(327337),
-    A = n(985018);
-let y = l.memo(function (e) {
+    d = n(964486),
+    c = n(544231),
+    u = n(338510),
+    h = n(151119),
+    A = n(278941),
+    g = n(665909),
+    m = n(186111),
+    p = n(58736),
+    _ = n(327337),
+    x = n(985018);
+let f = l.memo(function (e) {
     let { channel: t } = e,
-        y = (0, d.u)(t.id),
-        O = (0, f.S)(t.id),
-        j = (0, p.e)(t.id),
-        v = (0, a.useHasAnyModalOpen)(),
-        x = (0, i.bG)([b.A], () => b.A.hasLayers()),
-        E = l.useCallback(
-            () => (O ? A.intl.string(A.t["16QyDv"]) : null != j ? A.intl.string(A.t.kCN9i0) : null),
-            [O, j],
+        f = (0, u.u)(t.id),
+        E = (0, h.S)(t.id),
+        C = (0, A.e)(t.id),
+        I = (0, a.useHasAnyModalOpen)(),
+        S = (0, s.bG)([m.A], () => m.A.hasLayers()),
+        b = l.useCallback(
+            () => (E ? x.intl.string(x.t["16QyDv"]) : null != C ? x.intl.string(x.t.kCN9i0) : null),
+            [E, C],
         ),
-        _ = l.useMemo(() => (O || null != j) && !v && !x, [O, j, v, x]),
-        [C, S] = l.useState(E());
+        N = l.useMemo(() => (E || null != C) && !I && !S, [E, C, I, S]),
+        [T, j] = l.useState(b());
     l.useEffect(() => {
-        null != j &&
-            null != y &&
-            (o.ORC.announce(A.intl.string(A.t.acsXuG)),
+        null != C &&
+            null != f &&
+            (o.ORC.announce(x.intl.string(x.t.acsXuG)),
             setTimeout(() => {
-                (0, u.xi)(t.id, [j.id]);
+                (0, c.xi)(t.id, [C.id]);
             }, 5e3),
-            (0, h.QF)({
+            (0, g.QF)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: j.id,
-                warningType: j.type,
-                isNudgeWarning: null != j,
-                viewName: h.gN.SAFETY_TOOLS_NUDGE_TOOLTIP,
+                warningId: C.id,
+                warningType: C.type,
+                isNudgeWarning: null != C,
+                viewName: g.gN.SAFETY_TOOLS_NUDGE_TOOLTIP,
             })),
-            O &&
-                (o.ORC.announce(A.intl.string(A.t["1dxCqG"])),
+            E &&
+                (o.ORC.announce(x.intl.string(x.t["1dxCqG"])),
                 setTimeout(() => {
-                    (0, u.bg)(t.id);
+                    (0, c.bg)(t.id);
                 }, 5e3));
-    }, [t, j, y, O]),
-        (0, c.Ay)(() => {
-            null != y &&
-                (0, h.QF)({
+    }, [t, C, f, E]),
+        (0, d.Ay)(() => {
+            null != f &&
+                (0, g.QF)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: y.id,
-                    warningType: y.type,
-                    isNudgeWarning: null != j,
-                    viewName: h.gN.SAFETY_TOOLS_BUTTON,
+                    warningId: f.id,
+                    warningType: f.type,
+                    isNudgeWarning: null != C,
+                    viewName: g.gN.SAFETY_TOOLS_BUTTON,
                 });
         }),
         l.useEffect(() => {
-            let e = E();
-            null != e && S(e);
-        }, [O, j, E]);
-    let I = l.useCallback(() => {
-        null != j && (0, u.xi)(t.id, [j.id]),
-            null != y &&
+            let e = b();
+            null != e && j(e);
+        }, [E, C, b]);
+    let v = l.useCallback(() => {
+        null != C && (0, c.xi)(t.id, [C.id]),
+            null != f &&
                 ((0, o.mMO)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("45033"), n.e("46717"), n.e("13693")]).then(
                             n.bind(n, 788099),
                         );
                         return (n) => {
-                            let { onClose: l, transitionState: i } = n;
-                            return (0, r.jsx)(e, {
+                            let { onClose: l, transitionState: s } = n;
+                            return (0, i.jsx)(e, {
                                 otherUserId: t.getRecipientId(),
                                 channelId: t.id,
-                                warningId: y.id,
-                                warningType: y.type,
+                                warningId: f.id,
+                                warningType: f.type,
                                 onClose: l,
-                                transitionState: i,
+                                transitionState: s,
                             });
                         };
                     },
-                    {
-                        modalKey: m.V,
-                    },
+                    { modalKey: _.V },
                 ),
-                (0, h._$)({
+                (0, g._$)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: y.id,
-                    warningType: y.type,
-                    cta: h.Wm.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != j,
+                    warningId: f.id,
+                    warningType: f.type,
+                    cta: g.Wm.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                    isNudgeWarning: null != C,
                 }));
-    }, [j, y, t]);
-    return null == y
+    }, [C, f, t]);
+    return null == f
         ? null
-        : (0, r.jsx)(s.m_, {
-              forceOpen: _,
-              text: C,
+        : (0, i.jsx)(r.m_, {
+              forceOpen: N,
+              text: T,
               position: "bottom",
-              children: (0, r.jsx)(g.Ay.Icon, {
+              children: (0, i.jsx)(p.Ay.Icon, {
                   icon: o.lmn,
-                  onClick: I,
-                  tooltip: A.intl.string(A.t.rpc2qv),
-                  tooltipDisabled: null != j,
+                  onClick: v,
+                  tooltip: x.intl.string(x.t.rpc2qv),
+                  tooltipDisabled: null != C,
               }),
           });
 });

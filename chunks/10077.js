@@ -1,21 +1,16 @@
-n.d(t, {
-    M: () => u,
-    c: () => c,
-}),
-    n(638769),
-    n(896048);
-var r,
-    i = n(64700),
-    l = n(311907),
-    s = n(253932),
-    a = n(71393),
+n.d(t, { M: () => u, c: () => c });
+var i,
+    s = n(64700),
+    r = n(311907),
+    a = n(253932),
+    l = n(71393),
     o = n(711014),
     c =
-        (((r = {}).SERVER_ORDER = "server-order"),
-        (r.RECENTLY_JOINED = "recently-joined"),
-        (r.ACTIVITY_SHARING_ON = "activity-sharing-on"),
-        (r.ACTIVITY_SHARING_OFF = "activity-sharing-off"),
-        r);
+        (((i = {}).SERVER_ORDER = "server-order"),
+        (i.RECENTLY_JOINED = "recently-joined"),
+        (i.ACTIVITY_SHARING_ON = "activity-sharing-on"),
+        (i.ACTIVITY_SHARING_OFF = "activity-sharing-off"),
+        i);
 let d = {
     "recently-joined": (e) =>
         e
@@ -31,57 +26,56 @@ let d = {
             ),
     "activity-sharing-on": (e, t) =>
         e.concat().sort((e, n) => {
-            let r = t.includes(e.id),
-                i = t.includes(n.id);
-            return !r && i ? -1 : r && !i ? 1 : 0;
+            let i = t.includes(e.id),
+                s = t.includes(n.id);
+            return !i && s ? -1 : i && !s ? 1 : 0;
         }),
     "activity-sharing-off": (e, t) =>
         e.concat().sort((e, n) => {
-            let r = t.includes(e.id),
-                i = t.includes(n.id);
-            return r && !i ? -1 : !r && i ? 1 : 0;
+            let i = t.includes(e.id),
+                s = t.includes(n.id);
+            return i && !s ? -1 : !i && s ? 1 : 0;
         }),
     "server-order": (e) => e,
 };
-
 function u() {
-    let [e, t] = (0, i.useState)(""),
-        [n, r] = (0, i.useState)("server-order"),
-        c = (0, l.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
-        u = (0, l.bG)([a.A], () => a.A.getGuilds()),
+    let [e, t] = (0, s.useState)(""),
+        [n, i] = (0, s.useState)("server-order"),
+        c = (0, r.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
+        u = (0, r.bG)([l.A], () => l.A.getGuilds()),
         _ = c.map((e) => u[e]),
-        p = s.Pw.useSetting(),
-        [m, g] = (0, i.useState)(p),
-        A = async (e) => {
+        m = a.Pw.useSetting(),
+        [A, g] = (0, s.useState)(m),
+        E = async (e) => {
             g(e);
             try {
-                await s.Pw.updateSetting(e);
+                await a.Pw.updateSetting(e);
             } catch (e) {
-                g(p);
+                g(m);
             }
         },
-        f = 0 !== m.length,
-        [h, b] = (0, i.useState)(() => d[n](_, p)),
-        E = h.map((e) => u[e.id]).filter(Boolean);
+        h = 0 !== A.length,
+        [p, C] = (0, s.useState)(() => d[n](_, m)),
+        x = p.map((e) => u[e.id]).filter(Boolean);
     return {
-        guilds: "" === e ? E : E.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
+        guilds: "" === e ? x : x.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            b(d[e](_, p)), r(e);
+            C(d[e](_, m)), i(e);
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: (e) => {
             let { checked: t, guildId: n } = e,
-                r = new Set(m);
-            t ? r.delete(n) : r.add(n), A([...r]);
+                i = new Set(A);
+            t ? i.delete(n) : i.add(n), E([...i]);
         },
-        isActivityRestricted: (e) => m.includes(e),
-        hasActivityRestrictedGuilds: f,
+        isActivityRestricted: (e) => A.includes(e),
+        hasActivityRestrictedGuilds: h,
         onToggleAllActivityRestrictedGuilds: () => {
-            f ? A([]) : A(c);
+            h ? E([]) : E(c);
         },
         numTotalGuilds: c.length,
-        numActivityRestrictedGuilds: m.length,
+        numActivityRestrictedGuilds: A.length,
     };
 }

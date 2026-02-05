@@ -1,19 +1,10 @@
-n.d(t, {
-    $: () => s,
-    L: () => a,
-});
-var r = n(73153),
-    i = n(154323);
-
-function a(e, t) {
-    let n = "boolean" == typeof t ? t : !i.A.get(e);
-    r.h.dispatch({
-        type: "DEV_TOOLS_DESIGN_TOGGLE_WEB_SET",
-        toggle: e,
-        value: n,
-    });
+n.d(t, { $: () => a, L: () => s });
+var i = n(73153),
+    l = n(154323);
+function s(e, t) {
+    let n = "boolean" == typeof t ? t : !l.A.get(e);
+    i.h.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_WEB_SET", toggle: e, value: n });
 }
-
-function s() {
-    for (let e in i.A.enabled()) a(e, !1);
+function a() {
+    for (let e in l.A.enabled()) s(e, !1);
 }

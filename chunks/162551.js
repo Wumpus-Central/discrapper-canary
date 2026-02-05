@@ -1,25 +1,14 @@
-r.d(t, {
-    b: () => a,
-});
+r.d(t, { b: () => a });
 var n = r(321733);
-
 function i(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
 var o = !1,
     a = (function () {
         var e;
-
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             i(this, "internalMonitor", void 0), i(this, "targetId", null), (this.internalMonitor = e.getMonitor());

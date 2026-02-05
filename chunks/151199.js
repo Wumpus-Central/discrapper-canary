@@ -1,24 +1,22 @@
-n.d(t, {
-    y: () => l,
-});
-var r = n(914430),
-    i = n(924985),
-    a = n(808728),
-    s = n(967198),
-    o = n(652215);
-let l = {
+n.d(t, { y: () => o });
+var i = n(914430),
+    s = n(924985),
+    r = n(808728),
+    a = n(967198),
+    l = n(652215);
+let o = {
     binds: ["mod+shift+a"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = s.A.getGuildId();
+        let e = a.A.getGuildId();
         return (
             null != e &&
-            (a.Ay.getChannels(e)[o.rbe.GUILD_CATEGORY].some((e) => {
+            (r.Ay.getChannels(e)[l.rbe.GUILD_CATEGORY].some((e) => {
                 let { channel: t } = e;
-                return "null" !== t.id && !i.A.isCollapsed(t.id);
+                return "null" !== t.id && !s.A.isCollapsed(t.id);
             })
-                ? (0, r.rZ)(e)
-                : (0, r.Al)(e),
+                ? (0, i.rZ)(e)
+                : (0, i.Al)(e),
             !1)
         );
     },

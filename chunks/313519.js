@@ -1,6 +1,5 @@
-n.d(t, {
-    J: () => l,
-});
+"use strict";
+n.d(t, { J: () => l });
 var r = n(64700),
     i = n(788413),
     a = n(212245),
@@ -11,17 +10,17 @@ let l = (e) => {
             columnCounts: t,
             stickersGrid: n,
             stickersListRef: l,
-            store: c,
-            gridNavigatorId: u,
+            store: u,
+            gridNavigatorId: c,
             setInspectedStickerPosition: d,
-            onGridItemSelect: f,
+            onGridItemSelect: _,
         } = e,
-        p = (0, a.p)(),
-        _ = r.useCallback(
+        f = (0, a.p)(),
+        p = r.useCallback(
             (e) => {
-                f(e, p);
+                _(e, f);
             },
-            [f, p],
+            [_, f],
         ),
         h = r.useCallback(
             (e, t) => {
@@ -33,41 +32,36 @@ let l = (e) => {
             gridDispatch: m,
             getItemProps: g,
             getRowProps: E,
-            gridContainerProps: b,
-            handleGridContainerKeyDown: y,
-            isUsingKeyboardNavigation: O,
+            gridContainerProps: A,
+            handleGridContainerKeyDown: I,
+            isUsingKeyboardNavigation: T,
         } = (0, o.Ff)({
             columnCounts: t,
-            gridNavigatorId: u,
+            gridNavigatorId: c,
             itemGrid: n,
             itemList: l,
-            onGridNavigatorItemSelect: _,
+            onGridNavigatorItemSelect: p,
             onGridNavigatorPositionChange: h,
         });
     return (
         r.useEffect(
             () =>
-                c.subscribe(
+                u.subscribe(
                     (e) => e.inspectedExpressionPosition,
                     (e) => {
                         if (null == e) return;
                         let { columnIndex: t, rowIndex: n, source: r } = e;
-                        r !== s.t.GRID_NAVIGATOR_EVENT &&
-                            m({
-                                type: i.n.SET_FOCUSED_POSITION,
-                                x: t,
-                                y: n,
-                            });
+                        r !== s.t.GRID_NAVIGATOR_EVENT && m({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
                     },
                 ),
-            [m, c],
+            [m, u],
         ),
         {
             getItemProps: g,
             getRowProps: E,
-            gridContainerProps: b,
-            handleGridContainerKeyDown: y,
-            isUsingKeyboardNavigation: O,
+            gridContainerProps: A,
+            handleGridContainerKeyDown: I,
+            isUsingKeyboardNavigation: T,
         }
     );
 };

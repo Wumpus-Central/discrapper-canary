@@ -1,198 +1,147 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(114821),
-    n(339614);
-var r = n(627968),
+n.d(t, { A: () => v });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
     o = n(435371),
-    c = n(397927),
-    u = n(933958),
-    d = n(104171),
-    f = n(297334),
-    p = n(47167),
-    h = n(392567),
-    b = n(21119),
-    g = n(907459),
-    m = n(616356),
-    A = n(994500),
-    y = n(543465),
-    O = n(287809),
-    j = n(607567),
-    v = n(985018),
-    x = n(653750);
-
-function E(e) {
+    d = n(397927),
+    c = n(933958),
+    u = n(104171),
+    h = n(297334),
+    A = n(47167),
+    g = n(392567),
+    m = n(21119),
+    p = n(907459),
+    _ = n(616356),
+    x = n(994500),
+    f = n(543465),
+    E = n(287809),
+    C = n(607567),
+    I = n(985018),
+    S = n(653750);
+function b(e) {
     let { icon: t, users: n } = e;
     return 0 === n.length
         ? null
-        : (0, r.jsxs)("div", {
-              className: x.nM,
+        : (0, i.jsxs)("div", {
+              className: S.nM,
               children: [
-                  (0, r.jsx)(t, {
-                      className: x.RI,
-                      color: "currentColor",
-                  }),
-                  (0, r.jsx)(d.Ay, {
-                      users: n,
-                      max: 6,
-                  }),
+                  (0, i.jsx)(t, { className: S.RI, color: "currentColor" }),
+                  (0, i.jsx)(u.Ay, { users: n, max: 6 }),
               ],
           });
 }
-
-function _(e) {
+function N(e) {
     let { muteConfig: t, className: n } = e;
-    return (null == t ? void 0 : t.end_time) == null
-        ? (0, r.jsx)(c.Text, {
+    return t?.end_time == null
+        ? (0, i.jsx)(d.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               className: n,
-              children: v.intl.string(v.t.fpKdS1),
+              children: I.intl.string(I.t.fpKdS1),
           })
-        : (0, r.jsx)(h.A, {
-              muteConfig: t,
-              className: n,
-          });
+        : (0, i.jsx)(g.A, { muteConfig: t, className: n });
 }
-
-function C(e) {
+function T(e) {
     let t,
         n,
-        i,
+        s,
         o,
-        d,
-        p,
-        h,
-        v,
-        C,
-        S,
+        u,
+        A,
+        g,
         I,
-        N,
         T,
-        { channel: P } = e,
-        w = P.id,
+        j,
+        v,
+        y,
+        R,
+        { channel: O } = e,
+        L = O.id,
         {
-            activityUsers: R,
-            streamUsers: D,
-            voiceUsers: M,
-        } = ((t = P.id),
-        (n = (0, s.yK)([A.A], () => A.A.getBlockedOrIgnoredIDs())),
-        (i = (0, s.bG)([b.A], () => b.A.getUserAffinitiesMap(), [])),
-        (o = (0, s.yK)(
-            [u.Ay, O.default],
+            activityUsers: D,
+            streamUsers: M,
+            voiceUsers: G,
+        } = ((t = O.id),
+        (n = (0, r.yK)([x.A], () => x.A.getBlockedOrIgnoredIDs())),
+        (s = (0, r.bG)([m.A], () => m.A.getUserAffinitiesMap(), [])),
+        (o = (0, r.yK)(
+            [c.Ay, E.default],
             () =>
-                u.Ay.getEmbeddedActivitiesForChannel(t)
+                c.Ay.getEmbeddedActivitiesForChannel(t)
                     .flatMap((e) => Array.from(e.userIds))
-                    .map((e) => O.default.getUser(e)),
+                    .map((e) => E.default.getUser(e)),
             [t],
         )),
-        (d = l.useMemo(() => (0, f.aw)(o, n), [o, n])),
-        (p = l.useMemo(() => (0, g.L)(d, i, "DirectMessageTooltip - activityUsers"), [d, i])),
-        (h = (0, s.yK)([m.A, O.default], () => {
-            let e = m.A.getAllApplicationStreamsForChannel(t)
+        (u = l.useMemo(() => (0, h.aw)(o, n), [o, n])),
+        (A = l.useMemo(() => (0, p.L)(u, s, "DirectMessageTooltip - activityUsers"), [u, s])),
+        (g = (0, r.yK)([_.A, E.default], () => {
+            let e = _.A.getAllApplicationStreamsForChannel(t)
                 .map((e) => e.ownerId)
-                .map((e) => O.default.getUser(e));
-            return (0, f.aw)(e, n);
+                .map((e) => E.default.getUser(e));
+            return (0, h.aw)(e, n);
         }, [t, n])),
-        (v = l.useMemo(() => (0, f.aw)(h, n), [h, n])),
-        (C = l.useMemo(() => (0, g.L)(v, i, "DirectMessageTooltip - activityUsers"), [v, i])),
-        (S = l.useMemo(() => C.filter((e) => !p.some((t) => t.id === e.id)), [C, p])),
-        (I = (0, s.yK)([j.Ay], () => {
-            let e = j.Ay.getVoiceStatesForChannel(P).map((e) => {
+        (I = l.useMemo(() => (0, h.aw)(g, n), [g, n])),
+        (T = l.useMemo(() => (0, p.L)(I, s, "DirectMessageTooltip - activityUsers"), [I, s])),
+        (j = l.useMemo(() => T.filter((e) => !A.some((t) => t.id === e.id)), [T, A])),
+        (v = (0, r.yK)([C.Ay], () => {
+            let e = C.Ay.getVoiceStatesForChannel(O).map((e) => {
                 let { user: t } = e;
                 return t;
             });
-            return (0, f.aw)(e, n);
-        }, [P, n])),
-        (N = l.useMemo(() => (0, f.aw)(I, n), [I, n])),
-        (T = l.useMemo(() => (0, g.L)(N, i, "DirectMessageTooltip - voiceUsers"), [N, i])),
+            return (0, h.aw)(e, n);
+        }, [O, n])),
+        (y = l.useMemo(() => (0, h.aw)(v, n), [v, n])),
+        (R = l.useMemo(() => (0, p.L)(y, s, "DirectMessageTooltip - voiceUsers"), [y, s])),
         {
             voiceUsers: l.useMemo(
-                () => T.filter((e) => !p.some((t) => t.id === e.id) && !C.some((t) => t.id === e.id)),
-                [T, p, C],
+                () => R.filter((e) => !A.some((t) => t.id === e.id) && !T.some((t) => t.id === e.id)),
+                [R, A, T],
             ),
-            streamUsers: S,
-            activityUsers: p,
+            streamUsers: j,
+            activityUsers: A,
         }),
-        L = (0, r.jsx)(E, {
-            icon: c.HKD,
-            users: M,
-        }),
-        G = (0, r.jsx)(E, {
-            icon: c.Fzq,
-            users: D,
-        }),
-        k = (0, r.jsx)(E, {
-            icon: c.bxf,
-            users: R,
-        }),
-        { isMuted: U, muteConfig: V } = (0, s.cf)(
-            [y.Ay],
-            () => ({
-                isMuted: y.Ay.isChannelMuted(null, w),
-                muteConfig: y.Ay.getChannelMuteConfig(null, w),
-            }),
-            [w],
+        U = (0, i.jsx)(b, { icon: d.HKD, users: G }),
+        P = (0, i.jsx)(b, { icon: d.Fzq, users: M }),
+        k = (0, i.jsx)(b, { icon: d.k9F, users: D }),
+        { isMuted: w, muteConfig: V } = (0, r.cf)(
+            [f.Ay],
+            () => ({ isMuted: f.Ay.isChannelMuted(null, L), muteConfig: f.Ay.getChannelMuteConfig(null, L) }),
+            [L],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            L,
-            G,
+            U,
+            P,
             k,
-            U
-                ? (0, r.jsx)(_, {
-                      muteConfig: V,
-                      className: a()(x.LM, {
-                          [x.Sx]: null != L || null != G,
-                      }),
-                  })
-                : null,
+            w ? (0, i.jsx)(N, { muteConfig: V, className: a()(S.LM, { [S.Sx]: null != U || null != P }) }) : null,
         ],
     });
 }
-
-function S(e) {
+function j(e) {
     let { channel: t } = e,
-        n = (0, p.Ay)(t);
-    return (0, r.jsxs)(r.Fragment, {
+        n = (0, A.Ay)(t);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("div", {
-                className: a()(x.nM, x.Dl),
-                children: (0, r.jsx)("span", {
-                    className: a()(x.cN, x.NT),
-                    children: n,
-                }),
+            (0, i.jsx)("div", {
+                className: a()(S.nM, S.Dl),
+                children: (0, i.jsx)("span", { className: a()(S.cN, S.NT), children: n }),
             }),
-            (0, r.jsx)(C, {
-                channel: t,
-            }),
+            (0, i.jsx)(T, { channel: t }),
         ],
     });
 }
-
-function I(e) {
+function v(e) {
     let { channel: t, children: n } = e,
-        i = (0, p.Ay)(t),
-        a = l.useMemo(
-            () =>
-                (0, r.jsx)("div", {
-                    className: x.A_,
-                    children: (0, r.jsx)(S, {
-                        channel: t,
-                    }),
-                }),
-            [t],
-        );
-    return (0, r.jsx)(o.m_, {
+        s = (0, A.Ay)(t),
+        a = l.useMemo(() => (0, i.jsx)("div", { className: S.A_, children: (0, i.jsx)(j, { channel: t }) }), [t]);
+    return (0, i.jsx)(o.m_, {
         __unsupportedReactNodeAsText: a,
         hideOnClick: !0,
         spacing: 12,
         position: "right",
-        "aria-label": null != i ? i : void 0,
+        "aria-label": s ?? void 0,
         asContainer: !0,
         children: n,
     });

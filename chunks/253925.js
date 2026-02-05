@@ -1,155 +1,71 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(747238),
-    n(812715);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(397927),
-    o = n(554375),
-    c = n(212245),
-    s = n(822123),
-    d = n(508675),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
+    r = n(397927),
+    s = n(554375),
+    o = n(212245),
+    d = n(822123),
+    c = n(508675),
     u = n(7584),
     g = n(60587),
-    p = n(631576),
-    f = n(891090),
-    y = n(256449),
-    b = n(679382),
-    A = n(378058),
-    m = n(652215),
-    O = n(985018);
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function j(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function h(e) {
+    A = n(631576),
+    p = n(891090),
+    m = n(256449),
+    f = n(679382),
+    y = n(378058),
+    h = n(652215),
+    E = n(985018);
+function S(e) {
     return u.Ay.getByName(e.replace(/(^:|:$)/g, ""));
 }
-
-function E(e) {
-    let { type: t, id: n, name: E, isInExpressionPicker: S = !1 } = e,
-        { location: _ } = (0, c.p)(),
-        D = i.useMemo(
-            () =>
-                j(v({}, _), {
-                    section: S ? m.JJy.EXPRESSION_PICKER : m.JJy.CONTEXT_MENU,
-                }),
-            [_, S],
-        ),
-        P = (0, y.ln)(),
-        T = (0, l.bG)([b.A], () => (t === g.g.STICKER && null != n ? b.A.getStickerById(n) : null)),
-        I = null != T && P.includes(T.id),
-        x = (0, l.bG)([d.Ay], () => {
+function _(e) {
+    let { type: t, id: n, name: _, isInExpressionPicker: b = !1 } = e,
+        { location: v } = (0, o.p)(),
+        I = l.useMemo(() => ({ ...v, section: b ? h.JJy.EXPRESSION_PICKER : h.JJy.CONTEXT_MENU }), [v, b]),
+        T = (0, m.ln)(),
+        x = (0, a.bG)([f.A], () => (t === g.g.STICKER && null != n ? f.A.getStickerById(n) : null)),
+        D = null != x && T.includes(x.id),
+        j = (0, a.bG)([c.Ay], () => {
             if (t === g.g.EMOJI) {
-                if (null != n) return d.Ay.getDisambiguatedEmojiContext().getById(n);
-                else if (null != E) {
-                    var e;
-                    return null != (e = h(E)) ? e : h(u.Ay.convertSurrogateToName(E));
-                }
+                if (null != n) return c.Ay.getDisambiguatedEmojiContext().getById(n);
+                else if (null != _) return S(_) ?? S(u.Ay.convertSurrogateToName(_));
             }
         }),
-        w = (0, s.O7)(null, x);
-    return null != T && t === g.g.STICKER
-        ? (0, A.Xw)(T) && !(0, A.Y4)(T)
+        M = (0, d.O7)(null, j);
+    return null != x && t === g.g.STICKER
+        ? (0, y.Xw)(x) && !(0, y.Y4)(x)
             ? null
-            : I
-              ? (0, r.jsx)(a.Drp, {
+            : D
+              ? (0, i.jsx)(r.Drp, {
                     id: "unfavorite",
-                    action: () => (0, p.vr)(T.id),
-                    label: O.intl.string(O.t.XhzKyF),
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: a.Gg5,
-                    },
+                    action: () => (0, A.vr)(x.id),
+                    label: E.intl.string(E.t.XhzKyF),
+                    leadingAccessory: { type: "icon", icon: r.yA2 },
                 })
-              : (0, r.jsx)(a.Drp, {
+              : (0, i.jsx)(r.Drp, {
                     id: "favorite",
                     action: () => {
-                        (0, f.Dt)({
-                            sticker: T,
-                            location: j(v({}, D), {
-                                object: m.ZSU.STICKER,
-                            }),
-                        }),
-                            (0, p.uK)(null == T ? void 0 : T.id);
+                        (0, p.Dt)({ sticker: x, location: { ...I, object: h.ZSU.STICKER } }), (0, A.uK)(x?.id);
                     },
-                    label: O.intl.string(O.t.kWmiPW),
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: a.Gg5,
-                    },
+                    label: E.intl.string(E.t.kWmiPW),
+                    leadingAccessory: { type: "icon", icon: r.Gg5 },
                 })
-        : null != x && t === g.g.EMOJI
-          ? w
-              ? (0, r.jsx)(a.Drp, {
+        : null != j && t === g.g.EMOJI
+          ? M
+              ? (0, i.jsx)(r.Drp, {
                     id: "unfavorite",
-                    action: () => (0, o.Sw)(x),
-                    label: O.intl.string(O.t.Ay49KA),
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: a.Gg5,
-                    },
+                    action: () => (0, s.Sw)(j),
+                    label: E.intl.string(E.t.Ay49KA),
+                    leadingAccessory: { type: "icon", icon: r.yA2 },
                 })
-              : (0, r.jsx)(a.Drp, {
+              : (0, i.jsx)(r.Drp, {
                     id: "favorite",
                     action: () => {
-                        (0, s.C5)({
-                            emoji: x,
-                            location: j(v({}, D), {
-                                object: m.ZSU.EMOJI,
-                            }),
-                        }),
-                            (0, o.V4)(x);
+                        (0, d.C5)({ emoji: j, location: { ...I, object: h.ZSU.EMOJI } }), (0, s.V4)(j);
                     },
-                    label: O.intl.string(O.t.nNsr67),
-                    leadingAccessory: {
-                        type: "icon",
-                        icon: a.Gg5,
-                    },
+                    label: E.intl.string(E.t.nNsr67),
+                    leadingAccessory: { type: "icon", icon: r.Gg5 },
                 })
           : void 0;
 }

@@ -1,8 +1,6 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(64700);
-
 function i() {
     let e = (0, r.useRef)(new Map()),
         t = (0, r.useCallback)((t, n, r, i) => {
@@ -11,13 +9,7 @@ function i() {
                       e.current.delete(r), r(...t);
                   }
                 : r;
-            e.current.set(r, {
-                type: n,
-                eventTarget: t,
-                fn: a,
-                options: i,
-            }),
-                t.addEventListener(n, a, i);
+            e.current.set(r, { type: n, eventTarget: t, fn: a, options: i }), t.addEventListener(n, a, i);
         }, []),
         n = (0, r.useCallback)((t, n, r, i) => {
             var a;
@@ -30,11 +22,6 @@ function i() {
             });
         }, [n]);
     return (
-        (0, r.useEffect)(() => i, [i]),
-        {
-            addGlobalListener: t,
-            removeGlobalListener: n,
-            removeAllGlobalListeners: i,
-        }
+        (0, r.useEffect)(() => i, [i]), { addGlobalListener: t, removeGlobalListener: n, removeAllGlobalListeners: i }
     );
 }

@@ -1,7 +1,4 @@
-t.r(n),
-    t.d(n, {
-        default: () => o,
-    });
+t.r(n), t.d(n, { default: () => o });
 var i = t(627968);
 t(64700);
 var l = t(284009),
@@ -12,7 +9,6 @@ var l = t(284009),
     p = t(923917),
     c = t(734057),
     h = t(566388);
-
 function o(e) {
     let { windowKey: n, channelId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getChannel(t));
@@ -24,10 +20,7 @@ function o(e) {
             title: l.name,
             children: (0, i.jsx)(d.A.Provider, {
                 value: l.guild_id,
-                children: (0, i.jsx)(h.A, {
-                    channel: l,
-                    popoutType: u.N.VOICE_UI,
-                }),
+                children: (0, i.jsx)(h.A, { channel: l, popoutType: u.N.VOICE_UI }),
             }),
         })
     );

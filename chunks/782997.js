@@ -1,12 +1,7 @@
-t.d(e, {
-    A: () => l,
-});
+t.d(a, { A: () => c });
 var n = t(954571),
-    c = t(652215);
-
-function l(a) {
-    let { rating: e = null } = a;
-    n.default.track(c.HAw.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, {
-        rating: e,
-    });
+    i = t(652215);
+function c(e) {
+    let { rating: a = null } = e;
+    n.default.track(i.HAw.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, { rating: a });
 }

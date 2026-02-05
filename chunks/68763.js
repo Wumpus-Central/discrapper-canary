@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     sW: "catalogBanner__3f82e",
     by: "riveBanner__3f82e",

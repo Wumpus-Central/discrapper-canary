@@ -1,6 +1,4 @@
-t.d(e, {
-    s: () => d,
-});
+t.d(e, { s: () => d });
 var n = t(627968);
 t(64700);
 var r = t(397927),
@@ -9,7 +7,6 @@ var r = t(397927),
     l = t(985018),
     c = t(689588),
     o = t(332633);
-
 function d(a) {
     let { onContinue: e, onClose: t, title: d, body: x } = a;
     return (0, n.jsxs)(i.A, {
@@ -20,23 +17,9 @@ function d(a) {
                 className: c.wx,
                 separator: !1,
                 children: [
-                    (0, n.jsx)("img", {
-                        src: o,
-                        className: c.bm,
-                        width: "254",
-                        height: "127",
-                        alt: "",
-                    }),
-                    (0, n.jsx)(r.Heading, {
-                        className: c.DD,
-                        variant: "heading-xl/extrabold",
-                        children: d,
-                    }),
-                    null != t &&
-                        (0, n.jsx)(r.s_y, {
-                            className: c.b,
-                            onClick: t,
-                        }),
+                    (0, n.jsx)("img", { src: o, className: c.bm, width: "254", height: "127", alt: "" }),
+                    (0, n.jsx)(r.Heading, { className: c.DD, variant: "heading-xl/extrabold", children: d }),
+                    null != t && (0, n.jsx)(r.s_y, { className: c.b, onClick: t }),
                 ],
             }),
             (0, n.jsx)(r.$mQ, {
@@ -57,11 +40,7 @@ function d(a) {
                     text: l.intl.format(l.t["4X7vPo"], {
                         popoutWindowIcon: {},
                         popoutWindowIconHook: () =>
-                            (0, n.jsx)(r.tfB, {
-                                color: "currentColor",
-                                className: c.LE,
-                                size: "xs",
-                            }),
+                            (0, n.jsx)(r.tfB, { color: "currentColor", className: c.LE, size: "xs" }),
                     }),
                     onClick: e,
                     fullWidth: !0,

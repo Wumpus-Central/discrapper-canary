@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     As: "modalOverrideBody__34eac",
     Bz: "modalOverrideSliderBody__34eac",

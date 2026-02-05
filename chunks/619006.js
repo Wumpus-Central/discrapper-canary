@@ -1,18 +1,10 @@
-n.d(t, {
-    XC: () => c,
-    os: () => s,
-    qK: () => o,
-});
+n.d(t, { XC: () => d, os: () => r, qK: () => o });
 var i = n(562465),
-    r = n(73153),
-    l = n(545868),
+    l = n(73153),
+    s = n(545868),
     a = n(652215);
-
-function s(e, t) {
-    i.Bo.get({
-        url: a.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-        rejectWithError: !0,
-    })
+function r(e, t) {
+    i.Bo.get({ url: a.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t), rejectWithError: !0 })
         .then((e) => {
             let n = [];
             e.body.length > 0 &&
@@ -25,7 +17,7 @@ function s(e, t) {
                         value: e.value,
                     })),
                 )),
-                r.h.dispatch({
+                l.h.dispatch({
                     type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
                     roleId: t,
                     roleConnectionConfigurations: n,
@@ -34,7 +26,7 @@ function s(e, t) {
         .catch(() => {});
 }
 async function o(e, t, n) {
-    let s = n.map((e) =>
+    let r = n.map((e) =>
             e.map((e) => ({
                 connection_type: e.connectionType,
                 connection_metadata_field: e.connectionMetadataField,
@@ -45,7 +37,7 @@ async function o(e, t, n) {
         ),
         o = await i.Bo.put({
             url: a.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-            body: 0 === s.length ? [] : s,
+            body: 0 === r.length ? [] : r,
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then((e) => {
@@ -64,25 +56,14 @@ async function o(e, t, n) {
                 t
             );
         }),
-        c = await (0, l.a)(e, t, !1);
-    null != c &&
-        r.h.dispatch({
-            type: "GUILD_ROLE_MEMBER_COUNT_UPDATE",
-            guildId: e,
-            roleId: t,
-            count: c,
-        }),
-        r.h.dispatch({
+        d = await (0, s.a)(e, t, !1);
+    null != d && l.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: e, roleId: t, count: d }),
+        l.h.dispatch({
             type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
             roleId: t,
             roleConnectionConfigurations: o,
         });
 }
-async function c() {
-    return (
-        await i.Bo.get({
-            url: a.Rsh.APPLICATION_USER_ROLE_CONNECTIONS,
-            rejectWithError: !1,
-        })
-    ).body;
+async function d() {
+    return (await i.Bo.get({ url: a.Rsh.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: !1 })).body;
 }

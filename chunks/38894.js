@@ -1,128 +1,64 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(533129),
+n.d(t, { A: () => p });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(533129),
     s = n(403362),
     o = n(670412),
-    c = n(351022),
-    u = n(965660),
-    d = n(383470),
-    p = n(166641),
-    f = n(324580);
-
-function h(e) {
-    let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
-        s = (0, l.bG)([c.A], () => {
-            var e;
-            return null !=
-                (e = c.A.getGuildIds({
-                    categoryId: f.Iq,
-                }))
-                ? e
-                : f.VX;
-        }),
-        u = (0, l.bG)([c.A], () => {
-            var e;
-            return (
-                null ==
-                    (e = c.A.getIsFetching({
-                        categoryId: f.Iq,
-                    })) || e
-            );
-        });
+    d = n(351022),
+    c = n(965660),
+    u = n(383470),
+    A = n(166641),
+    h = n(324580);
+function _(e) {
+    let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
+        s = (0, a.bG)([d.A], () => d.A.getGuildIds({ categoryId: h.Iq }) ?? h.VX),
+        c = (0, a.bG)([d.A], () => d.A.getIsFetching({ categoryId: h.Iq }) ?? !0);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             o.A.fetchFeaturedGuilds();
         }, []),
-        (0, r.jsx)(d.A, {
-            tab: f.o.FEATURED,
+        (0, i.jsx)(u.A, {
+            tab: h.o.FEATURED,
             guildIds: s,
-            loading: u,
+            loading: c,
             onScroll: t,
             onGuildCardSeen: n,
-            onGuildCardClick: a,
+            onGuildCardClick: l,
         })
     );
 }
-
-function A(e) {
-    let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
-        p = (0, u.Ub)(t),
-        h = (0, l.bG)([c.A], () => {
-            var e;
-            return null !=
-                (e = c.A.getGuildIds({
-                    categoryId: p,
-                }))
-                ? e
-                : f.VX;
-        }),
-        A = (0, l.bG)([c.A], () => {
-            var e;
-            return (
-                null ==
-                    (e = c.A.getIsFetching({
-                        categoryId: p,
-                    })) || e
-            );
-        });
+function m(e) {
+    let { tab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: s } = e,
+        A = (0, c.Ub)(t),
+        _ = (0, a.bG)([d.A], () => d.A.getGuildIds({ categoryId: A }) ?? h.VX),
+        m = (0, a.bG)([d.A], () => d.A.getIsFetching({ categoryId: A }) ?? !0);
     return (
-        i.useEffect(() => {
-            o.A.fetchCategoryFeaturedGuilds({
-                categoryId: p,
-            });
-        }, [p]),
-        (0, r.jsx)(d.A, {
-            tab: t,
-            guildIds: h,
-            loading: A,
-            onScroll: n,
-            onGuildCardSeen: a,
-            onGuildCardClick: s,
-        })
+        r.useEffect(() => {
+            o.A.fetchCategoryFeaturedGuilds({ categoryId: A });
+        }, [A]),
+        (0, i.jsx)(u.A, { tab: t, guildIds: _, loading: m, onScroll: n, onGuildCardSeen: l, onGuildCardClick: s })
     );
 }
-
-function g(e) {
-    let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
+function p(e) {
+    let { selectedTab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: o } = e;
     switch (
-        (i.useEffect(() => {
-            let e = (0, u.Ub)(t);
-            (0, a.np)({
-                selectedCategoryId: e,
-            });
+        (r.useEffect(() => {
+            let e = (0, c.Ub)(t);
+            (0, l.np)({ selectedCategoryId: e });
         }, [t]),
         t)
     ) {
-        case f.o.FEATURED:
-            return (0, r.jsx)(h, {
-                tab: t,
-                onScroll: n,
-                onGuildCardClick: o,
-                onGuildCardSeen: l,
-            });
-        case f.o.GAMING:
-        case f.o.MUSIC:
-        case f.o.ENTERTAINMENT:
-        case f.o.TECH:
-        case f.o.EDUCATION:
-            return (0, r.jsx)(
-                A,
-                {
-                    tab: t,
-                    onScroll: n,
-                    onGuildCardClick: o,
-                    onGuildCardSeen: l,
-                },
-                t,
-            );
-        case f.o.HUBS:
-            return (0, r.jsx)(p.A, {
-                onScroll: n,
-            });
+        case h.o.FEATURED:
+            return (0, i.jsx)(_, { tab: t, onScroll: n, onGuildCardClick: o, onGuildCardSeen: a });
+        case h.o.GAMING:
+        case h.o.MUSIC:
+        case h.o.ENTERTAINMENT:
+        case h.o.TECH:
+        case h.o.EDUCATION:
+            return (0, i.jsx)(m, { tab: t, onScroll: n, onGuildCardClick: o, onGuildCardSeen: a }, t);
+        case h.o.HUBS:
+            return (0, i.jsx)(A.A, { onScroll: n });
         default:
             (0, s.xb)(t);
     }

@@ -1,30 +1,13 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => m });
 var r = n(141931),
     i = n(205693),
     a = n(439372),
     s = n(961350),
     o = n(837921),
     l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 let u = new Set();
-
-function d() {
+function c() {
     for (let e of [
         r.du.HasRTCConnection,
         r.du.IsSendingVideo,
@@ -34,8 +17,7 @@ function d() {
     ])
         o.Ay.setCrashInformation(e, 0);
 }
-
-function f(e) {
+function d(e) {
     switch (e) {
         case i.x.DEFAULT:
             return r.du.VideoMediaSessionId;
@@ -43,25 +25,20 @@ function f(e) {
             return r.du.StreamMediaSessionId;
     }
 }
-
-function p(e) {
-    var t;
-    o.Ay.setCrashInformation(f(e.context), null != (t = e.mediaSessionId) ? t : null);
-}
-
 function _(e) {
-    var t;
-    let n = (null != (t = e.channelId) ? t : "unknown") + e.context;
+    o.Ay.setCrashInformation(d(e.context), e.mediaSessionId ?? null);
+}
+function f(e) {
+    let t = (e.channelId ?? "unknown") + e.context;
     switch (e.state) {
         case l.S7L.RTC_CONNECTED:
-            u.add(n), o.Ay.setCrashInformation(r.du.HasRTCConnection, 1);
+            u.add(t), o.Ay.setCrashInformation(r.du.HasRTCConnection, 1);
             break;
         case l.S7L.DISCONNECTED:
-            o.Ay.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d();
+            o.Ay.setCrashInformation(d(e.context), null), u.delete(t), 0 === u.size && c();
     }
 }
-
-function h(e) {
+function p(e) {
     let t = e.userId === s.default.getId(),
         n = null != e.streamId,
         a = null;
@@ -74,14 +51,7 @@ function h(e) {
     }
     o.Ay.setCrashInformation(a, +!!n);
 }
-class m extends a.A {
-    constructor(...e) {
-        super(...e),
-            c(this, "actions", {
-                RTC_CONNECTION_STATE: _,
-                RTC_CONNECTION_VIDEO: h,
-                MEDIA_SESSION_JOINED: p,
-            });
-    }
+class h extends a.A {
+    actions = { RTC_CONNECTION_STATE: f, RTC_CONNECTION_VIDEO: p, MEDIA_SESSION_JOINED: _ };
 }
-let g = new m();
+let m = new h();

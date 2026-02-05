@@ -1,7 +1,5 @@
-n.d(t, {
-    j: () => i,
-    y: () => r,
-});
+"use strict";
+n.d(t, { j: () => i, y: () => r });
 let r = "EMOJI_STUDIO_MODAL_KEY";
 var i = (function (e) {
     return (

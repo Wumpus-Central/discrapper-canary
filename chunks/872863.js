@@ -1,101 +1,78 @@
-n.d(t, {
-    OH: () => A,
-    vN: () => g,
-});
+"use strict";
+n.d(t, { OH: () => y, vN: () => g });
 var r = n(761799),
     i = n(643479),
     a = n(298003);
 let s = 0x66747970,
     o = 0x69707270,
     l = 0x6d657461,
-    c = 0x696c6f63,
-    u = 0x69696e66,
+    u = 0x696c6f63,
+    c = 0x69696e66,
     d = 0x696e6665,
-    f = 0x6970636f,
-    p = 0x636f6c72,
-    _ = 0x45786966,
+    _ = 0x6970636f,
+    f = 0x636f6c72,
+    p = 0x45786966,
     h = 0x6d696d65,
     m = 0x75726920;
-
 function g(e, t) {
     let n = 4,
         r = 8,
         i = 1,
-        { length: _, contentOffset: h } = E(e, t);
-    if (_ < r) return;
+        { length: p, contentOffset: h } = E(e, t);
+    if (p < r) return;
     let m = e.getUint32(t + n);
-    if (m === s) return P(e, h, _);
-    if (m === o) return D(e, t, h, _);
-    if (m === f) return x(e, t, h, _);
-    if (m === p) return L(e, h, _);
+    if (m === s) return L(e, h, p);
+    if (m === o) return w(e, t, h, p);
+    if (m === _) return x(e, t, h, p);
+    if (m === f) return P(e, h, p);
     let g = e.getUint8(h);
     return m === l
-        ? M(e, t, h + i, _)
-        : m === c
-          ? (0, a.N)(e, g, h + i, _)
-          : m === u
-            ? U(e, t, g, h + i, _)
+        ? k(e, t, h + i, p)
+        : m === u
+          ? (0, a.N)(e, g, h + i, p)
+          : m === c
+            ? G(e, t, g, h + i, p)
             : m === d
-              ? V(e, t, g, h + i, _)
-              : {
-                    type: void 0,
-                    length: _,
-                };
+              ? F(e, t, g, h + i, p)
+              : { type: void 0, length: p };
 }
-
 function E(e, t) {
     let n = 4,
         r = 4,
         i = 8,
         a = 12,
         s = e.getUint32(t);
-    return b(s)
-        ? {
-              length: e.byteLength - t,
-              contentOffset: t + n + r,
-          }
-        : y(s) && O(e, t)
-          ? {
-                length: e.getUint32(t + a),
-                contentOffset: t + n + r + i,
-            }
-          : {
-                length: s,
-                contentOffset: t + n + r,
-            };
+    return A(s)
+        ? { length: e.byteLength - t, contentOffset: t + n + r }
+        : I(s) && T(e, t)
+          ? { length: e.getUint32(t + a), contentOffset: t + n + r + i }
+          : { length: s, contentOffset: t + n + r };
 }
-
-function b(e) {
+function A(e) {
     return 0 === e;
 }
-
-function y(e) {
+function I(e) {
     return 1 === e;
 }
-
-function O(e, t) {
+function T(e, t) {
     let n = 8;
     return 0 === e.getUint32(t + n);
 }
-
-function A(e) {
+function y(e) {
     if (r.A.USE_EXIF || r.A.USE_XMP || r.A.USE_ICC) {
         let t = {},
-            n = v(e);
+            n = S(e);
         return n
-            ? (r.A.USE_EXIF && (t.tiffHeaderOffset = S(e, n)),
-              r.A.USE_XMP && (t.xmpChunks = N(n)),
-              r.A.USE_ICC && (t.iccChunks = w(n)),
+            ? (r.A.USE_EXIF && (t.tiffHeaderOffset = v(e, n)),
+              r.A.USE_XMP && (t.xmpChunks = R(n)),
+              r.A.USE_ICC && (t.iccChunks = D(n)),
               (t.hasAppMarkers = void 0 !== t.tiffHeaderOffset || void 0 !== t.xmpChunks || void 0 !== t.iccChunks),
               t)
-            : {
-                  hasAppMarkers: !1,
-              };
+            : { hasAppMarkers: !1 };
     }
     return {};
 }
-
-function v(e) {
+function S(e) {
     let t = 4,
         n = 4,
         r = 0;
@@ -106,53 +83,41 @@ function v(e) {
         r += t.length;
     }
 }
-
-function S(e, t) {
+function v(e, t) {
     try {
-        let n = I(t).itemId,
-            r = T(t, n),
+        let n = C(t).itemId,
+            r = b(t, n),
             i = r.baseOffset + r.extents[0].extentOffset;
-        return C(e, i);
+        return N(e, i);
     } catch (e) {
         return;
     }
 }
-
-function I(e) {
-    return e.subBoxes.find((e) => "iinf" === e.type).itemInfos.find((e) => e.itemType === _);
+function C(e) {
+    return e.subBoxes.find((e) => "iinf" === e.type).itemInfos.find((e) => e.itemType === p);
 }
-
-function T(e, t) {
+function b(e, t) {
     return e.subBoxes.find((e) => "iloc" === e.type).items.find((e) => e.itemId === t);
 }
-
-function C(e, t) {
+function N(e, t) {
     return t + 4 + e.getUint32(t);
 }
-
-function N(e) {
+function R(e) {
     try {
-        let t = R(e).itemId,
-            n = T(e, t),
-            r = T(e, t).extents[0];
-        return [
-            {
-                dataOffset: n.baseOffset + r.extentOffset,
-                length: r.extentLength,
-            },
-        ];
+        let t = O(e).itemId,
+            n = b(e, t),
+            r = b(e, t).extents[0];
+        return [{ dataOffset: n.baseOffset + r.extentOffset, length: r.extentLength }];
     } catch (e) {
         return;
     }
 }
-
-function R(e) {
+function O(e) {
     return e.subBoxes
         .find((e) => "iinf" === e.type)
         .itemInfos.find((e) => e.itemType === h && "application/rdf+xml" === e.contentType);
 }
-
-function w(e) {
+function D(e) {
     try {
         let t = e.subBoxes
             .find((e) => "iprp" === e.type)
@@ -161,62 +126,30 @@ function w(e) {
         if (t) return [t];
     } catch (e) {}
 }
-
-function P(e, t, n) {
-    let r = 4;
-    return {
-        type: "ftyp",
-        majorBrand: (0, i.hT)(e, t, r),
-        length: n,
-    };
-}
-
-function D(e, t, n, r) {
-    return {
-        type: "iprp",
-        subBoxes: k(e, n, r - (n - t)),
-        length: r,
-    };
-}
-
-function x(e, t, n, r) {
-    return {
-        type: "ipco",
-        properties: k(e, n, r - (n - t)),
-        length: r,
-    };
-}
-
 function L(e, t, n) {
-    return {
-        type: "colr",
-        icc: j(e, t),
-        length: n,
-    };
+    let r = 4;
+    return { type: "ftyp", majorBrand: (0, i.hT)(e, t, r), length: n };
 }
-
-function j(e, t) {
+function w(e, t, n, r) {
+    return { type: "iprp", subBoxes: U(e, n, r - (n - t)), length: r };
+}
+function x(e, t, n, r) {
+    return { type: "ipco", properties: U(e, n, r - (n - t)), length: r };
+}
+function P(e, t, n) {
+    return { type: "colr", icc: M(e, t), length: n };
+}
+function M(e, t) {
     let n = 4,
         r = (0, i.hT)(e, t, n);
     if ("prof" === r || "rICC" === r)
-        return {
-            offset: t + n,
-            length: e.getUint32(t + n),
-            chunkNumber: 1,
-            chunksTotal: 1,
-        };
+        return { offset: t + n, length: e.getUint32(t + n), chunkNumber: 1, chunksTotal: 1 };
 }
-
-function M(e, t, n, r) {
-    return {
-        type: "meta",
-        subBoxes: k(e, n + 3, r - (n + 3 - t)),
-        length: r,
-    };
+function k(e, t, n, r) {
+    return { type: "meta", subBoxes: U(e, n + 3, r - (n + 3 - t)), length: r };
 }
-
-function k(e, t, n) {
-    let r = [_, h],
+function U(e, t, n) {
+    let r = [p, h],
         i = [],
         a = t;
     for (; a < t + n; ) {
@@ -226,36 +159,20 @@ function k(e, t, n) {
     }
     return i;
 }
-
-function U(e, t, n, r, i) {
-    let { offsets: a } = G(n, r);
-    return {
-        type: "iinf",
-        itemInfos: k(e, a.itemInfos, i - (a.itemInfos - t)),
-        length: i,
-    };
+function G(e, t, n, r, i) {
+    let { offsets: a } = V(n, r);
+    return { type: "iinf", itemInfos: U(e, a.itemInfos, i - (a.itemInfos - t)), length: i };
 }
-
-function G(e, t) {
-    let n = {
-            entryCount: t + 3,
-        },
+function V(e, t) {
+    let n = { entryCount: t + 3 },
         r = {};
     return (
-        0 === e ? (r.entryCount = 2) : (r.entryCount = 4),
-        (n.itemInfos = n.entryCount + r.entryCount),
-        {
-            offsets: n,
-        }
+        0 === e ? (r.entryCount = 2) : (r.entryCount = 4), (n.itemInfos = n.entryCount + r.entryCount), { offsets: n }
     );
 }
-
-function V(e, t, n, r, a) {
+function F(e, t, n, r, a) {
     r += 3;
-    let s = {
-        type: "infe",
-        length: a,
-    };
+    let s = { type: "infe", length: a };
     return (
         (0 === n || 1 === n) &&
             ((s.itemId = e.getUint16(r)),

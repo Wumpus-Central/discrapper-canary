@@ -1,20 +1,10 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(427262),
-    i = n(622017),
-    a = n(113090);
-
-function s() {
-    var e;
-    let { useCachedData: t = !0, fetch: n = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { premiumGroupMembership: s } = (0, a.A)({
-            useCachedData: t,
-            fetch: n,
-        }),
-        { premiumGroupMembers: o } = (0, i.A)(null != (e = null == s ? void 0 : s.subscriptionId) ? e : null, {
-            useCachedData: t,
-            fetch: n,
-        });
-    return (null == o ? void 0 : o.primary) != null ? (0, r.$3)(null == o ? void 0 : o.primary) : null;
+n.d(t, { A: () => a });
+var i = n(427262),
+    s = n(622017),
+    r = n(113090);
+function a() {
+    let { useCachedData: e = !0, fetch: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        { premiumGroupMembership: n } = (0, r.A)({ useCachedData: e, fetch: t }),
+        { premiumGroupMembers: a } = (0, s.A)(n?.subscriptionId ?? null, { useCachedData: e, fetch: t });
+    return a?.primary != null ? (0, i.$3)(a?.primary) : null;
 }

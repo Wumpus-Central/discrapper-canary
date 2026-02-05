@@ -1,45 +1,22 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(228524);
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(233645);
-let l = (e) => {
-    let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: c, isHorizontal: u = !1 } = e;
-    return (0, r.jsxs)("div", {
-        className: a()(
-            o.Vs,
-            {
-                [o.ZQ]: u,
-            },
-            c,
-        ),
+var l = n(503698),
+    a = n.n(l),
+    r = n(397927),
+    s = n(233645);
+let o = (e) => {
+    let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: d, isHorizontal: c = !1 } = e;
+    return (0, i.jsxs)("div", {
+        className: a()(s.Vs, { [s.ZQ]: c }, d),
         children: [
-            (0, r.jsx)("div", {
-                className: a()(o.$_, {
-                    [o.rO]: u,
-                }),
-                children: null == l ? void 0 : l(),
-            }),
-            (0, r.jsxs)("div", {
-                className: o.h_,
+            (0, i.jsx)("div", { className: a()(s.$_, { [s.rO]: c }), children: o?.() }),
+            (0, i.jsxs)("div", {
+                className: s.h_,
                 children: [
-                    (0, r.jsx)(s.H, {
-                        className: o.DD,
-                        children: null == t ? void 0 : t(),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: o.dS,
-                        children: null == n ? void 0 : n(),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: o.o1,
-                        children: null == i ? void 0 : i(),
-                    }),
+                    (0, i.jsx)(r.H, { className: s.DD, children: t?.() }),
+                    (0, i.jsx)("div", { className: s.dS, children: n?.() }),
+                    (0, i.jsx)("div", { className: s.o1, children: l?.() }),
                 ],
             }),
         ],

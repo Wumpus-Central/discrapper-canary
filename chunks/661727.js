@@ -1,9 +1,7 @@
+"use strict";
 var a,
     l = t(828066);
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
-    (r.default = void 0);
+t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
 var o = l(t(442160)),
     s = l(t(733296)),
     n = l(t(768790)),

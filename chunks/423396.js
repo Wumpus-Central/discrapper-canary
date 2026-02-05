@@ -1,291 +1,160 @@
-n.d(t, {
-    Gu: () => N,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Gu: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(166532),
     o = n(231018),
     l = n(685944),
-    c = n(623020),
-    u = n(927578),
+    u = n(623020),
+    c = n(927578),
     d = n(412463),
-    f = n(492518),
-    p = n(689614),
-    _ = n(652215),
+    _ = n(492518),
+    f = n(689614),
+    p = n(652215),
     h = n(788868),
     m = n(985018),
     g = n(749226);
-
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let A = [
+let E = [
         {
             key: s.pn.REVIEW,
-            renderStep: (e) => (0, r.jsx)(c._M, b({}, e)),
-            options: {
-                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
-            },
+            renderStep: (e) => (0, r.jsx)(u._M, { ...e }),
+            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
         },
         {
             key: s.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) =>
-                (0, r.jsx)(
-                    d.eO,
-                    O(b({}, e), {
-                        originStep: s.pn.REVIEW,
-                        text: "Add Payment Steps Placeholder",
-                    }),
-                ),
-            options: {
-                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
-            },
+                (0, r.jsx)(d.eO, { ...e, originStep: s.pn.REVIEW, text: "Add Payment Steps Placeholder" }),
+            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
         },
         {
             key: s.pn.CONFIRM,
-            renderStep: (e) =>
-                (0, r.jsx)(
-                    d.eO,
-                    O(b({}, e), {
-                        originStep: s.pn.REVIEW,
-                        text: "Confirm Step Placeholder",
-                    }),
-                ),
-            options: {
-                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
-            },
+            renderStep: (e) => (0, r.jsx)(d.eO, { ...e, originStep: s.pn.REVIEW, text: "Confirm Step Placeholder" }),
+            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
         },
         {
             key: s.pn.PLAN_SELECT,
             renderStep: (e) =>
-                (0, r.jsx)(
-                    d.eO,
-                    O(b({}, e), {
-                        originStep: s.pn.REVIEW,
-                        text: "Plan Select Step Placeholder",
-                    }),
-                ),
-            options: {
-                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
-            },
+                (0, r.jsx)(d.eO, { ...e, originStep: s.pn.REVIEW, text: "Plan Select Step Placeholder" }),
+            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
         },
     ],
-    v = () =>
-        (0, r.jsx)(a.Text, {
-            variant: "text-sm/normal",
-            children: "Purchase button is disabled for this story",
-        }),
-    S = (e) => {
+    A = () => (0, r.jsx)(a.Text, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" }),
+    I = (e) => {
         let { skuId: t, isGift: n, hideErrors: i } = e,
             {
                 analyticsLocations: a,
                 loadId: s,
-                handleClose: c,
-                handleComplete: p,
+                handleClose: u,
+                handleComplete: f,
                 isFetching: h,
                 sku: m,
-            } = (0, d.ud)({
-                skuId: t,
-                isGift: n,
-                applicationId: _.FYj,
-            }),
-            E = (e, t, i) =>
+            } = (0, d.ud)({ skuId: t, isGift: n, applicationId: p.FYj }),
+            I = (e, t, i) =>
                 n
-                    ? (0, r.jsx)(o.A, {
-                          step: i,
-                          onClose: () => t(!1),
-                      })
-                    : (0, r.jsx)(l.A, {
-                          step: i,
-                          onClose: () => t(!1),
-                      }),
-            b = u.Ay.isPremiumSku(t);
-        return h || null == m || b
-            ? (0, r.jsx)(f.k, {})
+                    ? (0, r.jsx)(o.A, { step: i, onClose: () => t(!1) })
+                    : (0, r.jsx)(l.A, { step: i, onClose: () => t(!1) }),
+            T = c.Ay.isPremiumSku(t);
+        return h || null == m || T
+            ? (0, r.jsx)(_.k, {})
             : (0, r.jsxs)("div", {
                   className: g.Cd,
                   children: [
                       (0, r.jsx)(d.dL, {
-                          stepConfigs: A,
+                          stepConfigs: E,
                           analyticsLocations: a,
-                          applicationId: _.FYj,
+                          applicationId: p.FYj,
                           initialPlanId: void 0,
                           skuId: t,
                           isGift: n,
                           hideErrors: i,
                           loadId: s,
-                          purchaseType: _.VVm.ONE_TIME,
+                          purchaseType: p.VVm.ONE_TIME,
                           disablePurchases: !0,
                           excludeSubscriptionPlansBySKU: !0,
-                          renderHeader: E,
-                          onClose: c,
-                          onComplete: p,
+                          renderHeader: I,
+                          onClose: u,
+                          onComplete: f,
                       }),
-                      (0, r.jsx)(v, {}),
+                      (0, r.jsx)(A, {}),
                   ],
               });
     },
-    I = (e) => {
+    T = (e) => {
         let { skuId: t, isGift: n, hideErrors: a } = e,
             {
                 analyticsLocations: s,
                 loadId: o,
                 handleClose: l,
-                handleComplete: c,
-                isFetching: p,
+                handleComplete: u,
+                isFetching: f,
                 sku: m,
-            } = (0, d.ud)({
-                skuId: t,
-                isGift: n,
-                applicationId: h.tv,
-            }),
-            E = u.Ay.isPremiumSku(t),
-            b = E ? h.zE[t] : void 0,
-            [y, O] = i.useState(b),
-            S = i.useRef(!1);
+            } = (0, d.ud)({ skuId: t, isGift: n, applicationId: h.tv }),
+            I = c.Ay.isPremiumSku(t),
+            T = I ? h.zE[t] : void 0,
+            [y, S] = i.useState(T),
+            v = i.useRef(!1);
         i.useEffect(() => {
-            S.current || null == b || ((S.current = !0), O(b));
-        }, [b, y]);
-        let { isLoadedForPremiumSKUs: I, selectedPlan: T } = (0, d.n1)({
-            subscriptionPlanId: y,
-        });
-        return !p && null != m && I && E && null != T
+            v.current || null == T || ((v.current = !0), S(T));
+        }, [T, y]);
+        let { isLoadedForPremiumSKUs: C, selectedPlan: b } = (0, d.n1)({ subscriptionPlanId: y });
+        return !f && null != m && C && I && null != b
             ? (0, r.jsxs)("div", {
                   className: g.Cd,
                   children: [
                       (0, r.jsx)(d.dL, {
-                          stepConfigs: A,
+                          stepConfigs: E,
                           analyticsLocations: s,
                           applicationId: h.tv,
-                          initialPlanId: b,
+                          initialPlanId: T,
                           skuId: t,
                           isGift: n,
                           hideErrors: a,
                           loadId: o,
-                          purchaseType: _.VVm.SUBSCRIPTION,
+                          purchaseType: p.VVm.SUBSCRIPTION,
                           disablePurchases: !0,
                           onClose: l,
-                          onComplete: c,
-                          paymentContextOverrides: {
-                              selectedPlan: T,
-                              setSelectedPlanId: O,
-                          },
+                          onComplete: u,
+                          paymentContextOverrides: { selectedPlan: b, setSelectedPlanId: S },
                       }),
-                      (0, r.jsx)(v, {}),
+                      (0, r.jsx)(A, {}),
                   ],
               })
-            : (0, r.jsx)(f.k, {});
+            : (0, r.jsx)(_.k, {});
     },
-    T = {
-        isGift: {
-            label: "Is Gift",
-            type: "boolean",
-            defaultValue: !1,
-        },
-        hideErrors: {
-            label: "Hide Errors",
-            type: "boolean",
-            defaultValue: !0,
-        },
+    y = {
+        isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
+        hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
-    C = (0, p.R)(),
-    N = {
+    S = (0, f.R)(),
+    v = {
         title: "Checkout Review Step",
         stories: [
             {
                 name: "Collectibles Review Step",
                 id: "collectibles-checkout-review-step",
-                component: S,
-                controls: b(
-                    {
-                        skuId: {
-                            label: "SKU ID",
-                            type: "select",
-                            options: C.options,
-                            defaultValue: C.defaultValue,
-                        },
-                    },
-                    T,
-                ),
+                component: I,
+                controls: {
+                    skuId: { label: "SKU ID", type: "select", options: S.options, defaultValue: S.defaultValue },
+                    ...y,
+                },
             },
             {
                 name: "Premium Review Step",
                 id: "premium-checkout-review-step",
-                component: I,
-                controls: b(
-                    {
-                        skuId: {
-                            label: "SKU ID",
-                            type: "select",
-                            options: [
-                                {
-                                    value: h.pe.TIER_0,
-                                    label: "".concat(h.pe.TIER_0, " (Nitro Basic)"),
-                                },
-                                {
-                                    value: h.pe.TIER_2,
-                                    label: "".concat(h.pe.TIER_2, " (Nitro Standard)"),
-                                },
-                            ],
-                            defaultValue: h.pe.TIER_0,
-                        },
+                component: T,
+                controls: {
+                    skuId: {
+                        label: "SKU ID",
+                        type: "select",
+                        options: [
+                            { value: h.pe.TIER_0, label: `${h.pe.TIER_0} (Nitro Basic)` },
+                            { value: h.pe.TIER_2, label: `${h.pe.TIER_2} (Nitro Standard)` },
+                        ],
+                        defaultValue: h.pe.TIER_0,
                     },
-                    T,
-                ),
+                    ...y,
+                },
             },
         ],
     };

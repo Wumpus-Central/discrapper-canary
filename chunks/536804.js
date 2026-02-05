@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(64700);
 let i = Object.freeze({
     scrollTop: 0,
@@ -11,7 +10,6 @@ let i = Object.freeze({
     offsetWidth: 0,
     dirty: 0,
 });
-
 function a() {
     let e = (0, r.useRef)(null),
         t = (0, r.useCallback)(() => {
@@ -37,8 +35,5 @@ function a() {
             }
             return i;
         }, []);
-    return {
-        scrollerRef: e,
-        getScrollerState: t,
-    };
+    return { scrollerRef: e, getScrollerState: t };
 }

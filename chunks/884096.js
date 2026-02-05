@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     T7: "singleItemWrapper_ed6d69",
     Dk: "carousel_ed6d69",

@@ -1,178 +1,128 @@
-n.d(t, {
-    default: () => _,
-}),
-    n(896048);
+n.d(t, { default: () => m });
 var l = n(627968),
     i = n(64700),
     r = n(158954),
     u = n(311907),
     a = n(397927),
-    o = n(47167),
-    s = n(60868),
-    d = n(374084),
-    c = n(894328),
-    E = n(721592),
-    f = n(873878),
-    A = n(508654),
-    g = n(997509),
-    y = n(456874),
-    N = n(961350),
-    O = n(71393),
-    m = n(576705),
-    h = n(652215),
-    G = n(985018);
-let _ = (e) => {
-    let { channel: t, onClose: n, onConfirm: _, transitionState: C } = e,
-        v = (0, o.Ay)(t, !0),
-        I = t.id,
-        S = t.isForumPost(),
-        b = (0, u.bG)([O.A], () => O.A.getGuild(t.getGuildId())),
-        p = (0, A.ob)(I),
-        { isSubscriptionGated: D } = (0, E.A)(t.id),
-        T = (0, f.A)(b, t),
-        [w, U] = i.useState(),
-        B = (0, u.bG)([N.default], () => t.isOwner(N.default.getId()), [t]),
-        L = (0, u.bG)([m.A], () => m.A.can(t.isThread() ? h.xBc.MANAGE_THREADS : h.xBc.MANAGE_CHANNELS, t), [t]),
-        j = (0, u.bG)([y.A], () => {
-            var e;
-            return null != (e = y.A.getCount(t.id)) ? e : 0;
-        }, [t.id]),
-        x = S && (L || (B && j < 1)),
-        P = p.length > 0 && (t.type === h.rbe.GUILD_VOICE || t.type === h.rbe.GUILD_STAGE_VOICE);
+    s = n(47167),
+    d = n(60868),
+    o = n(374084),
+    E = n(894328),
+    c = n(721592),
+    A = n(873878),
+    f = n(508654),
+    N = n(997509),
+    g = n(456874),
+    G = n(961350),
+    _ = n(71393),
+    C = n(576705),
+    I = n(652215),
+    h = n(985018);
+let m = (e) => {
+    let { channel: t, onClose: n, onConfirm: m, transitionState: y } = e,
+        S = (0, s.Ay)(t, !0),
+        D = t.id,
+        T = t.isForumPost(),
+        v = (0, u.bG)([_.A], () => _.A.getGuild(t.getGuildId())),
+        O = (0, f.ob)(D),
+        { isSubscriptionGated: U } = (0, c.A)(t.id),
+        p = (0, A.A)(v, t),
+        [w, B] = i.useState(),
+        L = (0, u.bG)([G.default], () => t.isOwner(G.default.getId()), [t]),
+        b = (0, u.bG)([C.A], () => C.A.can(t.isThread() ? I.xBc.MANAGE_THREADS : I.xBc.MANAGE_CHANNELS, t), [t]),
+        x = (0, u.bG)([g.A], () => g.A.getCount(t.id) ?? 0, [t.id]),
+        M = T && (b || (L && x < 1)),
+        V = O.length > 0 && (t.type === I.rbe.GUILD_VOICE || t.type === I.rbe.GUILD_STAGE_VOICE);
     if (
         (i.useEffect(() => {
             (async () => {
-                if (!(await (0, s.F)(t.getGuildId(), I))) return U(d.K5.DEFAULT);
-                let e = await (0, c.D)(t.getGuildId(), I);
-                if (null != e) return U(e);
+                if (!(await (0, d.F)(t.getGuildId(), D))) return B(o.K5.DEFAULT);
+                let e = await (0, E.D)(t.getGuildId(), D);
+                if (null != e) return B(e);
             })();
-        }, [t, I]),
+        }, [t, D]),
         i.useEffect(() => {
-            null != b &&
-                b.features.has(h.GuildFeatures.COMMUNITY) &&
-                (b.rulesChannelId === I ? U(d.K5.RULES) : b.publicUpdatesChannelId === I && U(d.K5.UPDATES));
-        }, [b, I]),
-        null == b)
+            null != v &&
+                v.features.has(I.GuildFeatures.COMMUNITY) &&
+                (v.rulesChannelId === D ? B(o.K5.RULES) : v.publicUpdatesChannelId === D && B(o.K5.UPDATES));
+        }, [v, D]),
+        null == v)
     )
         return null;
     if (null != w) {
         let e,
             t = async () => {
-                await g.A.open(b.id, h.BEX.ONBOARDING), await n();
+                await N.A.open(v.id, I.BEX.ONBOARDING), await n();
             },
             i = async () => {
-                await g.A.open(b.id, h.BEX.COMMUNITY), await n();
+                await N.A.open(v.id, I.BEX.COMMUNITY), await n();
             };
         switch (w) {
-            case d.K5.DEFAULT:
-                e = G.intl.format(G.t.iWlB6h, {
-                    onClick: t,
-                });
+            case o.K5.DEFAULT:
+                e = h.intl.format(h.t.iWlB6h, { onClick: t });
                 break;
-            case d.K5.TODO:
-                e = G.intl.format(G.t["/rjozD"], {
-                    onClick: t,
-                });
+            case o.K5.TODO:
+                e = h.intl.format(h.t["/rjozD"], { onClick: t });
                 break;
-            case d.K5.RESOURCE:
-                e = G.intl.format(G.t.Nf5ptw, {
-                    onClick: t,
-                });
+            case o.K5.RESOURCE:
+                e = h.intl.format(h.t.Nf5ptw, { onClick: t });
                 break;
-            case d.K5.RULES:
-                e = G.intl.format(G.t["kB1f+3"], {
-                    reason: G.intl.string(G.t.yjrZPl),
-                    onClick: i,
-                });
+            case o.K5.RULES:
+                e = h.intl.format(h.t["kB1f+3"], { reason: h.intl.string(h.t.yjrZPl), onClick: i });
                 break;
-            case d.K5.UPDATES:
-                e = G.intl.format(G.t["kB1f+3"], {
-                    reason: G.intl.string(G.t["1B1/NB"]),
-                    onClick: i,
-                });
+            case o.K5.UPDATES:
+                e = h.intl.format(h.t["kB1f+3"], { reason: h.intl.string(h.t["1B1/NB"]), onClick: i });
         }
         return (0, l.jsx)(r.Modal, {
-            title: G.intl.string(G.t["TY/V+H"]),
+            title: h.intl.string(h.t["TY/V+H"]),
             onClose: n,
             subtitle: e,
-            transitionState: C,
-            actions: [
-                {
-                    text: G.intl.string(G.t.BddRzS),
-                    onClick: n,
-                    variant: "primary",
-                },
-            ],
+            transitionState: y,
+            actions: [{ text: h.intl.string(h.t.BddRzS), onClick: n, variant: "primary" }],
         });
     }
-    let { deleteText: M, deleteBody: V } =
-        t.type === h.rbe.GUILD_CATEGORY
-            ? {
-                  deleteText: G.intl.string(G.t.ifbXnL),
-                  deleteBody: G.intl.format(G.t.a6Gz9J, {
-                      channelName: v,
-                  }),
-              }
+    let { deleteText: R, deleteBody: k } =
+        t.type === I.rbe.GUILD_CATEGORY
+            ? { deleteText: h.intl.string(h.t.ifbXnL), deleteBody: h.intl.format(h.t.a6Gz9J, { channelName: S }) }
             : t.isForumPost()
               ? {
-                    deleteText: x ? G.intl.string(G.t.nEOg1N) : G.intl.string(G.t.xwMqD7),
+                    deleteText: M ? h.intl.string(h.t.nEOg1N) : h.intl.string(h.t.xwMqD7),
                     deleteBody:
-                        x && B && !L
-                            ? G.intl.format(G.t["6/pY2+"], {
-                                  postName: v,
-                              })
-                            : x
-                              ? G.intl.format(G.t.su3voL, {
-                                    postName: v,
-                                })
-                              : G.intl.string(G.t.RUHcyk),
+                        M && L && !b
+                            ? h.intl.format(h.t["6/pY2+"], { postName: S })
+                            : M
+                              ? h.intl.format(h.t.su3voL, { postName: S })
+                              : h.intl.string(h.t.RUHcyk),
                 }
               : t.isThread()
-                ? {
-                      deleteText: G.intl.string(G.t.H7vTe2),
-                      deleteBody: G.intl.format(G.t.a6Gz9J, {
-                          channelName: v,
-                      }),
-                  }
-                : D && T > 0
+                ? { deleteText: h.intl.string(h.t.H7vTe2), deleteBody: h.intl.format(h.t.a6Gz9J, { channelName: S }) }
+                : U && p > 0
                   ? {
-                        deleteText: G.intl.string(G.t["8D8Rsb"]),
-                        deleteBody: G.intl.format(G.t["+qkiT9"], {
-                            channelName: v,
-                            numGuildRoleSubscriptionMembers: T,
+                        deleteText: h.intl.string(h.t["8D8Rsb"]),
+                        deleteBody: h.intl.format(h.t["+qkiT9"], {
+                            channelName: S,
+                            numGuildRoleSubscriptionMembers: p,
                         }),
                     }
                   : {
-                        deleteText: G.intl.string(G.t["8D8Rsb"]),
-                        deleteBody: G.intl.format(G.t.a6Gz9J, {
-                            channelName: v,
-                        }),
+                        deleteText: h.intl.string(h.t["8D8Rsb"]),
+                        deleteBody: h.intl.format(h.t.a6Gz9J, { channelName: S }),
                     };
     return (0, l.jsx)(r.Modal, {
         size: "sm",
         onClose: n,
-        transitionState: C,
-        title: M,
-        subtitle: V,
+        transitionState: y,
+        title: R,
+        subtitle: k,
         actions: [
-            {
-                text: G.intl.string(G.t["ETE/oC"]),
-                onClick: n,
-                variant: "secondary",
-            },
-            {
-                text: M,
-                onClick: _,
-                variant: "critical-primary",
-            },
+            { text: h.intl.string(h.t["ETE/oC"]), onClick: n, variant: "secondary" },
+            { text: R, onClick: m, variant: "critical-primary" },
         ],
-        children: P
+        children: V
             ? (0, l.jsx)(a.Text, {
                   variant: "text-md/normal",
                   color: "text-default",
-                  children: G.intl.format(G.t.Ze005A, {
-                      count: p.length,
-                  }),
+                  children: h.intl.format(h.t.Ze005A, { count: O.length }),
               })
             : null,
     });

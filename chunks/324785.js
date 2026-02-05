@@ -1,193 +1,76 @@
-r.d(t, {
-    default: () => m,
-}),
-    r(896048);
-var n = r(627968),
-    l = r(64700),
-    o = r(158954),
-    i = r(311907),
-    a = r(397927),
-    c = r(686956),
-    s = r(504049),
-    u = r(734057),
-    p = r(427262),
-    f = r(226698),
-    b = r(652215),
-    O = r(641131),
-    d = r(985018),
-    y = r(544800);
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
-        e
-    );
-}
-
-function m(e) {
-    let { guildId: t, user: r, location: m, modReportId: j } = e,
-        v = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l,
-                o = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-                return o;
-            }
-            if (
-                ((o = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        o = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < o.length; n++)
-                        (r = o[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-            return o;
-        })(e, ["guildId", "user", "location", "modReportId"]),
-        [P, w] = l.useState(""),
-        [C, E] = l.useState(!1),
-        R = (0, s.$9)(t, {
-            location: m,
-            targetUserId: r.id,
+r.d(e, { default: () => T });
+var l = r(627968),
+    n = r(64700),
+    i = r(158954),
+    a = r(311907),
+    s = r(397927),
+    o = r(686956),
+    u = r(504049),
+    c = r(734057),
+    d = r(427262),
+    h = r(226698),
+    g = r(652215),
+    p = r(641131),
+    m = r(985018),
+    C = r(544800);
+function T(t) {
+    let { guildId: e, user: r, location: T, modReportId: f, ...x } = t,
+        [E, R] = n.useState(""),
+        [b, k] = n.useState(!1),
+        A = (0, u.$9)(e, { location: T, targetUserId: r.id }),
+        { isModReportClosed: v, isModReport: j } = (0, a.cf)([c.A], () => {
+            let t = c.A.getChannel(f);
+            return { isModReportClosed: t?.isArchivedThread(), isModReport: t?.isModeratorReportChannel() };
         }),
-        { isModReportClosed: x, isModReport: T } = (0, i.cf)([u.A], () => {
-            let e = u.A.getChannel(j);
-            return {
-                isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
-                isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
-            };
-        }),
-        k = l.useCallback(() => {
-            if (
-                (c.A.kickUser(t, r.id, P, j).then(() => {
-                    C && null != j && f.A.resolveFlag(j);
-                }),
-                R(s.Nj.KICK),
-                null != j)
-            ) {
-                var e;
-                null == (e = v.onClose) || e.call(v);
-            }
-        }, [t, r.id, P, R, j, C, v]),
-        A = l.useCallback((e) => {
-            w(e);
+        y = n.useCallback(() => {
+            o.A.kickUser(e, r.id, E, f).then(() => {
+                b && null != f && h.A.resolveFlag(f);
+            }),
+                A(u.Nj.KICK),
+                null != f && x.onClose?.();
+        }, [e, r.id, E, A, f, b, x]),
+        M = n.useCallback((t) => {
+            R(t);
         }, []);
-    return null != j && T
-        ? (0, n.jsx)(
-              o.Modal,
-              h(g({}, v), {
-                  title: d.intl.formatToPlainString(d.t["1Ie87p"], {
-                      user: r.username,
-                  }),
-                  subtitle: d.intl.format(d.t["/yH0UT"], {
-                      user: "@".concat(p.Ay.getName(r)),
-                  }),
-                  actions: [
-                      {
-                          text: d.intl.string(d.t["3glT6Z"]),
-                          onClick: k,
-                          size: "sm",
-                          variant: "critical-primary",
-                      },
-                  ],
-                  actionBarInput: x
-                      ? void 0
-                      : (0, n.jsx)(a.Checkbox, {
-                            checked: C,
-                            onChange: (e) => {
-                                E(e);
-                            },
-                            label: d.intl.string(O.default["8yIKem"]),
-                        }),
-                  children: (0, n.jsx)(a.fs1, {
-                      label: d.intl.string(null != j ? d.t.hmKy8E : d.t["+2QEPt"]),
-                      maxLength: b.hlA,
-                      onChange: A,
-                      value: P,
+    return null != f && j
+        ? (0, l.jsx)(i.Modal, {
+              ...x,
+              title: m.intl.formatToPlainString(m.t["1Ie87p"], { user: r.username }),
+              subtitle: m.intl.format(m.t["/yH0UT"], { user: `@${d.Ay.getName(r)}` }),
+              actions: [{ text: m.intl.string(m.t["3glT6Z"]), onClick: y, size: "sm", variant: "critical-primary" }],
+              actionBarInput: v
+                  ? void 0
+                  : (0, l.jsx)(s.Checkbox, {
+                        checked: b,
+                        onChange: (t) => {
+                            k(t);
+                        },
+                        label: m.intl.string(p.default["8yIKem"]),
+                    }),
+              children: (0, l.jsx)(s.fs1, {
+                  label: m.intl.string(null != f ? m.t.hmKy8E : m.t["+2QEPt"]),
+                  maxLength: g.hlA,
+                  onChange: M,
+                  value: E,
+                  rows: 2,
+              }),
+          })
+        : (0, l.jsx)(i.ConfirmModal, {
+              title: m.intl.formatToPlainString(m.t["1Ie87p"], { user: r.username }),
+              subtitle: m.intl.format(m.t["/yH0UT"], { user: `@${d.Ay.getName(r)}` }),
+              confirmText: m.intl.string(m.t["3glT6Z"]),
+              cancelText: m.intl.string(m.t["ETE/oC"]),
+              onConfirm: y,
+              ...x,
+              children: (0, l.jsx)("div", {
+                  className: C.Y,
+                  children: (0, l.jsx)(s.fs1, {
+                      label: m.intl.string(m.t["+2QEPt"]),
+                      maxLength: g.hlA,
+                      onChange: M,
+                      value: E,
                       rows: 2,
                   }),
               }),
-          )
-        : (0, n.jsx)(
-              o.ConfirmModal,
-              h(
-                  g(
-                      {
-                          title: d.intl.formatToPlainString(d.t["1Ie87p"], {
-                              user: r.username,
-                          }),
-                          subtitle: d.intl.format(d.t["/yH0UT"], {
-                              user: "@".concat(p.Ay.getName(r)),
-                          }),
-                          confirmText: d.intl.string(d.t["3glT6Z"]),
-                          cancelText: d.intl.string(d.t["ETE/oC"]),
-                          onConfirm: k,
-                      },
-                      v,
-                  ),
-                  {
-                      children: (0, n.jsx)("div", {
-                          className: y.Y,
-                          children: (0, n.jsx)(a.fs1, {
-                              label: d.intl.string(d.t["+2QEPt"]),
-                              maxLength: b.hlA,
-                              onChange: A,
-                              value: P,
-                              rows: 2,
-                          }),
-                      }),
-                  },
-              ),
-          );
+          });
 }

@@ -1,71 +1,57 @@
-e.d(t, {
-    default: () => x,
-});
-var l = e(627968),
-    n = e(64700),
+e.d(t, { default: () => h });
+var n = e(627968),
+    l = e(64700),
     r = e(158954),
     s = e(311907),
-    a = e(587895),
-    c = e(67480),
+    c = e(587895),
+    a = e(67480),
     o = e(733391),
     d = e(832163),
-    u = e(985018),
-    p = e(647933);
-
-function x(i) {
-    var t;
-    let { transitionState: e, onClose: x, onContinue: h, guildId: g, skuId: j } = i,
-        b = (0, s.bG)([d.A], () => d.A.getSKUEligibility(j)),
-        m = (0, s.bG)([c.A], () => c.A.get(j)),
-        f = (0, s.bG)([a.A], () => a.A.getApplication(null == m ? void 0 : m.applicationId));
+    p = e(985018),
+    x = e(647933);
+function h(i) {
+    let { transitionState: t, onClose: e, onContinue: h, guildId: u, skuId: g } = i,
+        j = (0, s.bG)([d.A], () => d.A.getSKUEligibility(g)),
+        b = (0, s.bG)([a.A], () => a.A.get(g)),
+        m = (0, s.bG)([c.A], () => c.A.getApplication(b?.applicationId));
     return (
-        n.useEffect(() => {
-            (0, o.iR)(g, j, "SocialLayerStorefrontEligibilityCheckModal");
-        }, [g, j]),
-        n.useEffect(() => {
-            null != b && "ineligible" !== b && "checking" !== b && h();
-        }, [b, h]),
-        (0, l.jsx)(r.dWK, {
-            transitionState: e,
-            onClose: x,
-            size: "ineligible" === b ? "md" : "sm",
+        l.useEffect(() => {
+            (0, o.iR)(u, g, "SocialLayerStorefrontEligibilityCheckModal");
+        }, [u, g]),
+        l.useEffect(() => {
+            null != j && "ineligible" !== j && "checking" !== j && h();
+        }, [j, h]),
+        (0, n.jsx)(r.dWK, {
+            transitionState: t,
+            onClose: e,
+            size: "ineligible" === j ? "md" : "sm",
             children:
-                "ineligible" === b
-                    ? (0, l.jsxs)(l.Fragment, {
+                "ineligible" === j
+                    ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, l.jsx)(r.rQ0, {
-                                  title: u.intl.string(u.t.cg0M2H),
-                              }),
-                              (0, l.jsx)(r.cwr, {
-                                  children: (0, l.jsx)(r.EYj, {
+                              (0, n.jsx)(r.rQ0, { title: p.intl.string(p.t.cg0M2H) }),
+                              (0, n.jsx)(r.cwr, {
+                                  children: (0, n.jsx)(r.EYj, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: u.intl.format(u.t.uLjkVR, {
-                                          applicationName: null != (t = null == f ? void 0 : f.name) ? t : "",
-                                      }),
+                                      children: p.intl.format(p.t.uLjkVR, { applicationName: m?.name ?? "" }),
                                   }),
                               }),
-                              (0, l.jsx)(r.H7u, {
+                              (0, n.jsx)(r.H7u, {
                                   actionsFullWidth: !0,
-                                  actions: [
-                                      {
-                                          variant: "primary",
-                                          text: u.intl.string(u.t.cpT0Cq),
-                                          onClick: x,
-                                      },
-                                  ],
+                                  actions: [{ variant: "primary", text: p.intl.string(p.t.cpT0Cq), onClick: e }],
                               }),
                           ],
                       })
-                    : (0, l.jsx)(r.cwr, {
-                          children: (0, l.jsxs)("div", {
-                              className: p.Q,
+                    : (0, n.jsx)(r.cwr, {
+                          children: (0, n.jsxs)("div", {
+                              className: x.Q,
                               children: [
-                                  (0, l.jsx)(r.y$y, {}),
-                                  (0, l.jsx)(r.EYj, {
+                                  (0, n.jsx)(r.y$y, {}),
+                                  (0, n.jsx)(r.EYj, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: u.intl.string(u.t.pWxiLd),
+                                      children: p.intl.string(p.t.pWxiLd),
                                   }),
                               ],
                           }),

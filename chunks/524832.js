@@ -1,5 +1,4 @@
-n.d(t, {
-    k: () => i,
-});
-var r,
-    i = (((r = {}).START = "start"), (r.PASSWORD = "password"), (r.SUCCESS = "success"), (r.FAILED = "failed"), r);
+"use strict";
+n.d(t, { k: () => s });
+var i,
+    s = (((i = {}).START = "start"), (i.PASSWORD = "password"), (i.SUCCESS = "success"), (i.FAILED = "failed"), i);

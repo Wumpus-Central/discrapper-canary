@@ -1,40 +1,22 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(506774),
     i = n(439372);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = "formGuidelinesStorageKey";
-class o extends i.A {
+let a = "formGuidelinesStorageKey";
+class s extends i.A {
+    seenForumGuidelines = new Set();
     _initialize() {
-        let e = r.w.get(s);
+        let e = r.w.get(a);
         null != e && (this.seenForumGuidelines = new Set(e));
     }
     _terminate() {
-        r.w.set(s, this.seenForumGuidelines);
+        r.w.set(a, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), r.w.set(s, this.seenForumGuidelines);
+        this.seenForumGuidelines.add(e), r.w.set(a, this.seenForumGuidelines);
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
-    constructor(...e) {
-        super(...e), a(this, "seenForumGuidelines", new Set());
-    }
 }
-let l = new o();
+let o = new s();

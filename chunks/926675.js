@@ -1,19 +1,7 @@
-n.d(t, {
-    Qi: () => i,
-    Y$: () => a,
-    Zk: () => s,
-    um: () => r,
-}),
-    n(896048);
-let r = {
-        favorite_games: 1,
-        current_games: 5,
-        want_to_play_games: 20,
-        played_games: 20,
-    },
-    i = 200,
-    a = 20,
-    s = new Set([
+"use strict";
+n.d(t, { Z: () => i, u: () => r });
+let r = { favorite_games: 1, current_games: 5, want_to_play_games: 20, played_games: 20 },
+    i = new Set([
         "484425151631589378",
         "1124351896166076496",
         "1124351975702679583",

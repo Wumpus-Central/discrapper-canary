@@ -1,9 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = !0,
     i = "Invariant failed";
-
 function a(e, t) {
     if (!e) {
         if (r) throw Error(i);

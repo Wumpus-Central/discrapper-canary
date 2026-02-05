@@ -1,75 +1,76 @@
-n.d(t, {
-    Ay: () => z,
-    W$: () => d,
-    zT: () => T,
-}),
-    n(896048),
-    n(65821),
-    n(457529),
-    n(747238),
-    n(812715),
-    n(591487),
-    n(727858),
-    n(321073);
+"use strict";
+n.d(t, { Ay: () => K, W$: () => c, zT: () => C }), n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(838677),
     s = n(690521),
     o = n(770335);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = null,
+let l = null,
     u = new WeakMap(),
-    d = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
-    f = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-    p = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-    _ = n(132565),
-    h =
+    c = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
+    d = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+    _ = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+    f = n(132565),
+    p =
         /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
-    m =
+    h =
         /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
-    g =
+    m =
         /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g,
     {
-        emojis: E,
-        emojisByCategory: b,
-        nameToEmoji: y,
-        surrogateToEmoji: O,
-        numDiversitySprites: A,
-        numNonDiversitySprites: v,
+        emojis: g,
+        emojisByCategory: E,
+        nameToEmoji: A,
+        surrogateToEmoji: I,
+        numDiversitySprites: T,
+        numNonDiversitySprites: y,
     } = n(13474);
-
 function S(e) {
-    let t = y[e];
-    return null == t ? null : E[t];
+    let t = A[e];
+    return null == t ? null : g[t];
 }
-
-function I(e) {
-    let t = O[e];
-    return null == t ? null : E[t];
+function v(e) {
+    let t = I[e];
+    return null == t ? null : g[t];
 }
-class T {
+class C {
+    emojiObject;
+    type;
+    uniqueName;
+    surrogates;
+    diversityChildren;
+    originalName;
+    id;
+    guildId;
+    index;
+    useSpriteSheet;
+    constructor(e) {
+        if (
+            ((this.emojiObject = e),
+            (this.type = o.i.UNICODE),
+            (this.uniqueName = e.names[0]),
+            (this.surrogates = e.surrogates),
+            (this.useSpriteSheet = null != e.spriteIndex),
+            (this.index = e.spriteIndex),
+            (this.diversityChildren = {}),
+            null != e.diversityChildren)
+        )
+            for (const t of e.diversityChildren) {
+                const e = g[t];
+                if (null != e.diversity) {
+                    const t = e.diversity.join("-");
+                    this.diversityChildren[t] = new C(e);
+                }
+            }
+    }
     get names() {
         return this.emojiObject.names;
     }
     get allNamesString() {
-        return this.names.length > 1 ? ":".concat(this.names.join(": :"), ":") : ":".concat(this.uniqueName, ":");
+        return this.names.length > 1 ? `:${this.names.join(": :")}:` : `:${this.uniqueName}:`;
     }
     get unicodeVersion() {
-        var e;
-        return null != (e = this.emojiObject.unicodeVersion) ? e : 0;
+        return this.emojiObject.unicodeVersion ?? 0;
     }
     get hasDiversity() {
         return this.emojiObject.hasDiversity;
@@ -90,8 +91,8 @@ class T {
         return !1;
     }
     get defaultDiversityChild() {
-        if (this.hasDiversity && null != c) {
-            let e = N(c);
+        if (this.hasDiversity && null != l) {
+            let e = N(l);
             return this.diversityChildren[e];
         }
         return null;
@@ -101,11 +102,7 @@ class T {
         return null != e ? s.Ay.getURL(e.surrogates) : s.Ay.getURL(this.surrogates);
     }
     get name() {
-        if (this.hasDiversity && null != c) {
-            var e;
-            return "".concat(this.uniqueName, "::").concat(null == (e = I(c)) ? void 0 : e.names[0]);
-        }
-        return this.uniqueName;
+        return this.hasDiversity && null != l ? `${this.uniqueName}::${v(l)?.names[0]}` : this.uniqueName;
     }
     get optionallyDiverseSequence() {
         let e = this.defaultDiversityChild;
@@ -117,206 +114,141 @@ class T {
     forEachName(e) {
         i().each(this.names, e);
     }
-    constructor(e) {
-        if (
-            (l(this, "emojiObject", void 0),
-            l(this, "type", void 0),
-            l(this, "uniqueName", void 0),
-            l(this, "surrogates", void 0),
-            l(this, "diversityChildren", void 0),
-            l(this, "originalName", void 0),
-            l(this, "id", void 0),
-            l(this, "guildId", void 0),
-            l(this, "index", void 0),
-            l(this, "useSpriteSheet", void 0),
-            (this.emojiObject = e),
-            (this.type = o.i.UNICODE),
-            (this.uniqueName = e.names[0]),
-            (this.surrogates = e.surrogates),
-            (this.useSpriteSheet = null != e.spriteIndex),
-            (this.index = e.spriteIndex),
-            (this.diversityChildren = {}),
-            null != e.diversityChildren)
-        )
-            for (const t of e.diversityChildren) {
-                const e = E[t];
-                if (null != e.diversity) {
-                    const t = e.diversity.join("-");
-                    this.diversityChildren[t] = new T(e);
-                }
-            }
-    }
 }
-
-function C(e) {
+function b(e) {
     let t = u.get(e);
     if (null != t) return t;
-    let n = new T(e);
+    let n = new C(e);
     return u.set(e, n), n;
 }
-
 function N(e) {
-    let t = a.A.convert.toCodePoint(e);
-    return null != t ? t : "";
+    return a.A.convert.toCodePoint(e) ?? "";
 }
-
 function R(e) {
-    c = null != e && "" !== e ? e : null;
+    l = null != e && "" !== e ? e : null;
 }
-
-function w() {
-    return c;
+function O() {
+    return l;
 }
-
-function P() {
-    return Object.keys(b);
+function D() {
+    return Object.keys(E);
 }
-
-function D(e) {
-    let t = S(e);
-    return null != t ? C(t) : null;
-}
-let x = new Map();
-
 function L(e) {
-    let t = x.get(e);
+    let t = S(e);
+    return null != t ? b(t) : null;
+}
+let w = new Map();
+function x(e) {
+    let t = w.get(e);
     if (null == t) {
-        let n = b[e];
-        (t = s.Ay.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), x.set(e, t);
+        let n = E[e];
+        (t = s.Ay.filterUnsupportedEmojis(g.slice(n[0], n[1])).map(b)), w.set(e, t);
     }
     return t;
 }
-
-function j(e) {
-    return m.test(e);
+function P(e) {
+    return h.test(e);
 }
-
 function M(e) {
-    return e.replace(p, (e, t) => Y(t, e));
+    return e.replace(_, (e, t) => H(t, e));
 }
-
 function k(e) {
-    var t;
-    let n = null == (t = I(e)) ? void 0 : t.names[0];
-    return null != n
-        ? {
-              type: "emoji",
-              surrogate: e,
-              emojiName: ":".concat(n, ":"),
-          }
-        : {
-              type: "text",
-              text: e,
-          };
+    let t = v(e)?.names[0];
+    return null != t ? { type: "emoji", surrogate: e, emojiName: `:${t}:` } : { type: "text", text: e };
 }
 let U = String.fromCodePoint(917631),
     G = String.fromCodePoint(127988),
-    V = RegExp("^[\\u{E0061}-\\u{E007A}]$", "u");
-
+    V = /^[\u{E0061}-\u{E007A}]$/u;
 function F(e, t) {
-    var n;
-    if (!0 !== t && !j(e))
-        return [
-            {
-                type: "text",
-                text: e,
-            },
-        ];
-    let r = "",
-        i = [],
-        a = null != (n = e.match(g)) ? n : [];
-    for (let e = 0; e < a.length; e++) {
-        let t = a[e];
-        if (null != r && "" !== r)
-            if (t === U) (t = r + t), (r = "");
+    if (!0 !== t && !P(e)) return [{ type: "text", text: e }];
+    let n = "",
+        r = [],
+        i = e.match(m) ?? [];
+    for (let e = 0; e < i.length; e++) {
+        let t = i[e];
+        if (null != n && "" !== n)
+            if (t === U) (t = n + t), (n = "");
             else if (V.test(t)) {
-                r += t;
+                n += t;
                 continue;
-            } else i.push(k(r)), (r = "");
+            } else r.push(k(n)), (n = "");
         else if (t === G) {
-            r = t;
+            n = t;
             continue;
         }
-        let n = k(t);
-        if (i.length > 0) {
-            let e = i[i.length - 1];
-            if ("text" === n.type && "text" === e.type) {
-                e.text += n.text;
+        let a = k(t);
+        if (r.length > 0) {
+            let e = r[r.length - 1];
+            if ("text" === a.type && "text" === e.type) {
+                e.text += a.text;
                 continue;
             }
         }
-        i.push(n);
+        r.push(a);
     }
-    return null != r && "" !== r && i.push(k(r)), i;
+    return null != n && "" !== n && r.push(k(n)), r;
 }
-
 function B(e) {
     return F(e)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
 }
-
-function H(e) {
-    if (!j(e)) return null;
+function j(e) {
+    if (!P(e)) return null;
     let t = F(e, !0)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
     return t === e ? null : t;
 }
-
+function H(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+    return S(e)?.surrogates ?? t;
+}
 function Y(e) {
-    var t, n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    return null != (t = null == (n = S(e)) ? void 0 : n.surrogates) ? t : r;
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
+        r = v(e)?.names[0] ?? n;
+    return t ? `:${r}:` : r;
 }
-
 function W(e) {
-    var t, n;
-    let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-        a = null != (t = null == (n = I(e)) ? void 0 : n.names[0]) ? t : i;
-    return r ? ":".concat(a, ":") : a;
-}
-
-function K(e) {
-    return D(
-        W(
-            d.reduce((e, t) => e.replace(t, ""), e),
+    return L(
+        Y(
+            c.reduce((e, t) => e.replace(t, ""), e),
             !1,
         ),
     );
 }
-let z = {
-    getDefaultDiversitySurrogate: w,
+let K = {
+    getDefaultDiversitySurrogate: O,
     setDefaultDiversitySurrogate: R,
-    getCategories: P,
-    getByName: D,
-    getByCategory: L,
-    contentHasUnicodeOrEmoji: j,
+    getCategories: D,
+    getByName: L,
+    getByCategory: x,
+    contentHasUnicodeOrEmoji: P,
     translateInlineEmojiToSurrogates: M,
-    maybeTranslateSurrogatesToInlineEmoji: H,
+    maybeTranslateSurrogatesToInlineEmoji: j,
     findInlineEmojisFromSurrogates: F,
     translateSurrogatesToInlineEmoji: B,
-    convertNameToSurrogate: Y,
-    convertSurrogateToName: W,
+    convertNameToSurrogate: H,
+    convertSurrogateToName: Y,
     convertShortcutToName: function e(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
             r = n;
-        return Object.prototype.hasOwnProperty.call(_, e) && (r = _[e]), t ? ":".concat(r, ":") : r;
+        return Object.prototype.hasOwnProperty.call(f, e) && (r = f[e]), t ? `:${r}:` : r;
     },
-    convertSurrogateToBase: K,
+    convertSurrogateToBase: W,
     forEach: (e) => {
-        for (let t of E) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
+        for (let t of g) t.hasDiversityParent || t.hasMultiDiversityParent || e(b(t));
     },
-    numDiversitySprites: A,
-    numNonDiversitySprites: v,
-    EMOJI_NAME_RE: f,
-    EMOJI_NAME_AND_DIVERSITY_RE: p,
-    EMOJI_SHORTCUT_RE: h,
+    numDiversitySprites: T,
+    numNonDiversitySprites: y,
+    EMOJI_NAME_RE: d,
+    EMOJI_NAME_AND_DIVERSITY_RE: _,
+    EMOJI_SHORTCUT_RE: p,
     hasSurrogates: function e(e) {
         return i()
             .toArray(e)
-            .some((e) => null != O[e]);
+            .some((e) => null != I[e]);
     },
 };

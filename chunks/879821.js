@@ -1,19 +1,10 @@
-n.d(t, {
-    BN: () => _,
-    ER: () => h,
-    Ej: () => g,
-    RK: () => E,
-    UU: () => m,
-    cY: () => p,
-    jD: () => b,
-    we: () => f,
-});
+"use strict";
+n.d(t, { BN: () => p, ER: () => h, Ej: () => g, RK: () => E, UU: () => m, cY: () => f, jD: () => A, we: () => _ });
 var r = n(193439),
     i = n(64700),
     a = n(340287),
     s = function () {},
     o = "u" > typeof document ? i.useLayoutEffect : s;
-
 function l(e, t) {
     let n, r, i;
     if (e === t) return !0;
@@ -35,16 +26,13 @@ function l(e, t) {
     }
     return e != e && t != t;
 }
-
-function c(e) {
+function u(e) {
     return "u" < typeof window ? 1 : (e.ownerDocument.defaultView || window).devicePixelRatio || 1;
 }
-
-function u(e, t) {
-    let n = c(e);
+function c(e, t) {
+    let n = u(e);
     return Math.round(t * n) / n;
 }
-
 function d(e) {
     let t = i.useRef(e);
     return (
@@ -54,167 +42,92 @@ function d(e) {
         t
     );
 }
-
-function f(e) {
+function _(e) {
     void 0 === e && (e = {});
     let {
             placement: t = "bottom",
             strategy: n = "absolute",
             middleware: s = [],
-            platform: f,
-            elements: { reference: p, floating: _ } = {},
+            platform: _,
+            elements: { reference: f, floating: p } = {},
             transform: h = !0,
             whileElementsMounted: m,
             open: g,
         } = e,
-        [E, b] = i.useState({
-            x: 0,
-            y: 0,
-            strategy: n,
-            placement: t,
-            middlewareData: {},
-            isPositioned: !1,
-        }),
-        [y, O] = i.useState(s);
-    l(y, s) || O(s);
-    let [A, v] = i.useState(null),
-        [S, I] = i.useState(null),
-        T = i.useCallback((e) => {
-            e !== w.current && ((w.current = e), v(e));
+        [E, A] = i.useState({ x: 0, y: 0, strategy: n, placement: t, middlewareData: {}, isPositioned: !1 }),
+        [I, T] = i.useState(s);
+    l(I, s) || T(s);
+    let [y, S] = i.useState(null),
+        [v, C] = i.useState(null),
+        b = i.useCallback((e) => {
+            e !== D.current && ((D.current = e), S(e));
         }, []),
-        C = i.useCallback((e) => {
-            e !== P.current && ((P.current = e), I(e));
+        N = i.useCallback((e) => {
+            e !== L.current && ((L.current = e), C(e));
         }, []),
-        N = p || A,
-        R = _ || S,
-        w = i.useRef(null),
-        P = i.useRef(null),
-        D = i.useRef(E),
+        R = f || y,
+        O = p || v,
+        D = i.useRef(null),
+        L = i.useRef(null),
+        w = i.useRef(E),
         x = null != m,
-        L = d(m),
-        j = d(f),
-        M = d(g),
-        k = i.useCallback(() => {
-            if (!w.current || !P.current) return;
-            let e = {
-                placement: t,
-                strategy: n,
-                middleware: y,
-            };
-            j.current && (e.platform = j.current),
-                (0, r.rD)(w.current, P.current, e).then((e) => {
-                    let t = {
-                        ...e,
-                        isPositioned: !1 !== M.current,
-                    };
-                    U.current &&
-                        !l(D.current, t) &&
-                        ((D.current = t),
+        P = d(m),
+        M = d(_),
+        k = d(g),
+        U = i.useCallback(() => {
+            if (!D.current || !L.current) return;
+            let e = { placement: t, strategy: n, middleware: I };
+            M.current && (e.platform = M.current),
+                (0, r.rD)(D.current, L.current, e).then((e) => {
+                    let t = { ...e, isPositioned: !1 !== k.current };
+                    G.current &&
+                        !l(w.current, t) &&
+                        ((w.current = t),
                         a.flushSync(() => {
-                            b(t);
+                            A(t);
                         }));
                 });
-        }, [y, t, n, j, M]);
+        }, [I, t, n, M, k]);
     o(() => {
-        !1 === g &&
-            D.current.isPositioned &&
-            ((D.current.isPositioned = !1),
-            b((e) => ({
-                ...e,
-                isPositioned: !1,
-            })));
+        !1 === g && w.current.isPositioned && ((w.current.isPositioned = !1), A((e) => ({ ...e, isPositioned: !1 })));
     }, [g]);
-    let U = i.useRef(!1);
+    let G = i.useRef(!1);
     o(
         () => (
-            (U.current = !0),
+            (G.current = !0),
             () => {
-                U.current = !1;
+                G.current = !1;
             }
         ),
         [],
     ),
         o(() => {
-            if ((N && (w.current = N), R && (P.current = R), N && R)) {
-                if (L.current) return L.current(N, R, k);
-                k();
+            if ((R && (D.current = R), O && (L.current = O), R && O)) {
+                if (P.current) return P.current(R, O, U);
+                U();
             }
-        }, [N, R, k, L, x]);
-    let G = i.useMemo(
-            () => ({
-                reference: w,
-                floating: P,
-                setReference: T,
-                setFloating: C,
-            }),
-            [T, C],
-        ),
-        V = i.useMemo(
-            () => ({
-                reference: N,
-                floating: R,
-            }),
-            [N, R],
-        ),
-        F = i.useMemo(() => {
-            let e = {
-                position: n,
-                left: 0,
-                top: 0,
-            };
-            if (!V.floating) return e;
-            let t = u(V.floating, E.x),
-                r = u(V.floating, E.y);
+        }, [R, O, U, P, x]);
+    let V = i.useMemo(() => ({ reference: D, floating: L, setReference: b, setFloating: N }), [b, N]),
+        F = i.useMemo(() => ({ reference: R, floating: O }), [R, O]),
+        B = i.useMemo(() => {
+            let e = { position: n, left: 0, top: 0 };
+            if (!F.floating) return e;
+            let t = c(F.floating, E.x),
+                r = c(F.floating, E.y);
             return h
                 ? {
                       ...e,
                       transform: "translate(" + t + "px, " + r + "px)",
-                      ...(c(V.floating) >= 1.5 && {
-                          willChange: "transform",
-                      }),
+                      ...(u(F.floating) >= 1.5 && { willChange: "transform" }),
                   }
-                : {
-                      position: n,
-                      left: t,
-                      top: r,
-                  };
-        }, [n, h, V.floating, E.x, E.y]);
-    return i.useMemo(
-        () => ({
-            ...E,
-            update: k,
-            refs: G,
-            elements: V,
-            floatingStyles: F,
-        }),
-        [E, k, G, V, F],
-    );
+                : { position: n, left: t, top: r };
+        }, [n, h, F.floating, E.x, E.y]);
+    return i.useMemo(() => ({ ...E, update: U, refs: V, elements: F, floatingStyles: B }), [E, U, V, F, B]);
 }
-let p = (e, t) => ({
-        ...(0, r.cY)(e),
-        options: [e, t],
-    }),
-    _ = (e, t) => ({
-        ...(0, r.BN)(e),
-        options: [e, t],
-    }),
-    h = (e, t) => ({
-        ...(0, r.ER)(e),
-        options: [e, t],
-    }),
-    m = (e, t) => ({
-        ...(0, r.UU)(e),
-        options: [e, t],
-    }),
-    g = (e, t) => ({
-        ...(0, r.Ej)(e),
-        options: [e, t],
-    }),
-    E = (e, t) => ({
-        ...(0, r.RK)(e),
-        options: [e, t],
-    }),
-    b = (e, t) => ({
-        ...(0, r.jD)(e),
-        options: [e, t],
-    });
+let f = (e, t) => ({ ...(0, r.cY)(e), options: [e, t] }),
+    p = (e, t) => ({ ...(0, r.BN)(e), options: [e, t] }),
+    h = (e, t) => ({ ...(0, r.ER)(e), options: [e, t] }),
+    m = (e, t) => ({ ...(0, r.UU)(e), options: [e, t] }),
+    g = (e, t) => ({ ...(0, r.Ej)(e), options: [e, t] }),
+    E = (e, t) => ({ ...(0, r.RK)(e), options: [e, t] }),
+    A = (e, t) => ({ ...(0, r.jD)(e), options: [e, t] });

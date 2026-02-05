@@ -1,43 +1,17 @@
-n.d(t, {
-    r: () => s,
-}),
-    n(65821),
-    n(896048),
-    n(321073),
-    n(638769);
+"use strict";
+n.d(t, { r: () => i }), n(321073);
 var r = n(731854);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function a(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
+class i {
+    pixelBudget;
+    ladder;
+    orderedLadder;
+    constructor(e = r.eQ) {
+        const { width: t, height: n } = e.videoBudget;
+        if (t <= 0 || n <= 0) throw Error("Invalid argument");
+        (this.pixelBudget = t * n),
+            (this.ladder = i.calculateLadder(this.pixelBudget)),
+            (this.orderedLadder = i.calculateOrderedLadder(this.ladder));
     }
-    return e;
-}
-class s {
     getMaxSinkValue(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (e < 0) throw Error("getMaxSinkValue: Requested " + e);
@@ -58,7 +32,7 @@ class s {
             if (e >= n.wantValue) t = n;
             else break;
         return {
-            width: (t = null != t ? t : this.orderedLadder[0]).width,
+            width: (t = t ?? this.orderedLadder[0]).width,
             height: t.height,
             budgetPortion: t.budgetPortion,
             mutedFramerate: t.mutedFramerate,
@@ -72,40 +46,28 @@ class s {
             let i = (16 * r) / 9;
             if (t.has(i % 16) && t.has(r % 16)) {
                 let t = i * r;
-                n.push({
-                    pixelCount: t,
-                    width: i,
-                    height: r,
-                    budgetPortion: t / e,
-                    wantValue: 0,
-                });
+                n.push({ pixelCount: t, width: i, height: r, budgetPortion: t / e, wantValue: 0 });
             }
         }
-        let i = {},
-            a = 0,
+        let a = {},
+            s = 0,
             o = 100;
         for (let t = 1; t <= 25; ++t) {
             let l = 0,
-                c = 0,
-                u = 0;
+                u = 0,
+                c = 0;
             for (let r of n) {
                 if (r.pixelCount * t > e) break;
-                (l = r.width), (c = r.height), (u = r.budgetPortion);
+                (l = r.width), (u = r.height), (c = r.budgetPortion);
             }
-            if (a !== l) {
-                let e = s.getMutedFramerate(o);
-                (i[o] = {
-                    width: l,
-                    height: c,
-                    budgetPortion: u,
-                    mutedFramerate: e,
-                    framerate: r.sG,
-                }),
+            if (s !== l) {
+                let e = i.getMutedFramerate(o);
+                (a[o] = { width: l, height: u, budgetPortion: c, mutedFramerate: e, framerate: r.sG }),
                     (o -= 10),
-                    (a = l);
+                    (s = l);
             }
         }
-        return i;
+        return a;
     }
     static getMutedFramerate(e) {
         return e <= 20 ? r.XA : r.kc;
@@ -117,24 +79,8 @@ class s {
             .sort((e, t) => e - t)) {
             if (0 === n) continue;
             let r = e[n];
-            t.push(
-                a(
-                    {
-                        pixelCount: r.width * r.height,
-                        wantValue: n,
-                    },
-                    r,
-                ),
-            );
+            t.push({ pixelCount: r.width * r.height, wantValue: n, ...r });
         }
         return t;
-    }
-    constructor(e = r.eQ) {
-        i(this, "pixelBudget", void 0), i(this, "ladder", void 0), i(this, "orderedLadder", void 0);
-        const { width: t, height: n } = e.videoBudget;
-        if (t <= 0 || n <= 0) throw Error("Invalid argument");
-        (this.pixelBudget = t * n),
-            (this.ladder = s.calculateLadder(this.pixelBudget)),
-            (this.orderedLadder = s.calculateOrderedLadder(this.ladder));
     }
 }

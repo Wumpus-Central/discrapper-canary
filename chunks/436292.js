@@ -1,3 +1,1 @@
-e.exports = {
-    $: "libraryHeader__5a895",
-};
+e.exports = { $: "libraryHeader__5a895" };

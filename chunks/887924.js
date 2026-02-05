@@ -1,13 +1,12 @@
+"use strict";
 var r;
-r = {
-    value: !0,
-};
+r = { value: !0 };
 let i = n(20816),
     a = n(978884),
     s = n(597084),
     o = () => {},
     l = new a.TimeoutError();
-class c extends i {
+class u extends i {
     constructor(e) {
         var t, n, r, i;
         if (
@@ -196,4 +195,4 @@ class c extends i {
         this._timeout = e;
     }
 }
-t.default = c;
+t.default = u;

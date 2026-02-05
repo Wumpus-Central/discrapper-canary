@@ -1,12 +1,10 @@
-t.d(r, {
-    l: () => a,
-});
-var n,
-    a =
-        (((n = {})[(n.DROP = 0)] = "DROP"),
-        (n[(n.INITIALIZE = 1)] = "INITIALIZE"),
-        (n[(n.VISIBILITY_CHANGE = 2)] = "VISIBILITY_CHANGE"),
-        (n[(n.STATE_CHANGE = 3)] = "STATE_CHANGE"),
-        (n[(n.FIRST_DRAW = 4)] = "FIRST_DRAW"),
-        (n[(n.ERROR = 5)] = "ERROR"),
-        n);
+t.d(i, { l: () => r });
+var s,
+    r =
+        (((s = {})[(s.DROP = 0)] = "DROP"),
+        (s[(s.INITIALIZE = 1)] = "INITIALIZE"),
+        (s[(s.VISIBILITY_CHANGE = 2)] = "VISIBILITY_CHANGE"),
+        (s[(s.STATE_CHANGE = 3)] = "STATE_CHANGE"),
+        (s[(s.FIRST_DRAW = 4)] = "FIRST_DRAW"),
+        (s[(s.ERROR = 5)] = "ERROR"),
+        s);

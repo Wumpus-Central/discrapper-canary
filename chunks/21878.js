@@ -1,48 +1,29 @@
-n.d(t, {
-    A: () => _,
-    M: () => f,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => h, M: () => m });
+var i = n(627968),
+    l = n(64700),
     a = n(284009),
-    s = n.n(a),
-    o = n(417597),
-    l = n(843472),
-    c = n(320501),
-    u = n(951727);
-let d = i.createContext(void 0);
-
-function f(e) {
-    var t;
-    let n = null != (t = i.useContext(d)) ? t : e;
-    return s()(null != n, "Using PollReferenceMessageContext without a provider (or a fallback)"), n;
+    r = n.n(a),
+    s = n(417597),
+    o = n(843472),
+    d = n(320501),
+    c = n(951727);
+let u = l.createContext(void 0);
+function m(e) {
+    let t = l.useContext(u) ?? e;
+    return r()(null != t, "Using PollReferenceMessageContext without a provider (or a fallback)"), t;
 }
-
-function p(e) {
+function _(e) {
     let { message: t, children: n } = e,
-        a = (0, o.bG)([c.A], () => c.A.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
-        s = null != a;
+        a = (0, s.bG)([d.A], () => d.A.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
+        r = null != a;
     return (
-        i.useEffect(() => {
-            s ||
-                l.A.focusMessage({
-                    channelId: t.channel_id,
-                    messageId: t.id,
-                });
-        }, [s, t.channel_id, t.id]),
-        (0, r.jsx)(d.Provider, {
-            value: null != a ? a : t,
-            children: n,
-        })
+        l.useEffect(() => {
+            r || o.A.focusMessage({ channelId: t.channel_id, messageId: t.id });
+        }, [r, t.channel_id, t.id]),
+        (0, i.jsx)(u.Provider, { value: a ?? t, children: n })
     );
 }
-
-function _(e) {
+function h(e) {
     let { message: t, children: n } = e;
-    return (0, u.Ls)(t)
-        ? n
-        : (0, r.jsx)(p, {
-              message: t,
-              children: n,
-          });
+    return (0, c.Ls)(t) ? n : (0, i.jsx)(_, { message: t, children: n });
 }

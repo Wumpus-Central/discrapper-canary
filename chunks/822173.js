@@ -1,6 +1,4 @@
-n.d(t, {
-    A: () => i,
-});
+n.d(t, { A: () => i });
 var a = n(303527);
 let i = {
     ordinalNumber: (0, n(722023).A)({
@@ -17,21 +15,13 @@ let i = {
             wide: /^(vor Christus|vor unserer Zeitrechnung|nach Christus|unserer Zeitrechnung)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^v/i, /^n/i],
-        },
+        parsePatterns: { any: [/^v/i, /^n/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, a.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^q[1234]/i,
-            wide: /^[1234](\.)? Quartal/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? Quartal/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -58,9 +48,7 @@ let i = {
             wide: /^(sonntag|montag|dienstag|mittwoch|donnerstag|freitag|samstag)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^so/i, /^mo/i, /^di/i, /^mi/i, /^do/i, /^f/i, /^sa/i],
-        },
+        parsePatterns: { any: [/^so/i, /^mo/i, /^di/i, /^mi/i, /^do/i, /^f/i, /^sa/i] },
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, a.A)({

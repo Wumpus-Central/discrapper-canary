@@ -1,99 +1,58 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(732955),
+n.d(t, { A: () => m });
+var i = n(627968),
+    l = n(732955),
     a = n(79545),
-    s = n(884392),
-    o = n(985018);
-
-function l(e) {
+    r = n(884392),
+    s = n(985018);
+function o(e) {
     let { taskType: t } = e;
-    return (0, r.jsx)(i.$nd, {
-        variant: "primary",
-        fullWidth: !0,
-        size: "sm",
-        text: o.intl.string(o.t.P84bAD),
-    });
+    return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: s.intl.string(s.t.P84bAD) });
 }
-
-function c(e) {
-    let { taskType: t } = e;
-    return (0, r.jsx)(l, {
-        taskType: t,
-    });
-}
-
-function u(e) {
-    let { taskType: t } = e;
-    return (0, r.jsx)(i.$nd, {
-        variant: "primary",
-        fullWidth: !0,
-        size: "sm",
-        text: o.intl.string(o.t.P84bAD),
-    });
-}
-
 function d(e) {
     let { taskType: t } = e;
-    return (0, r.jsx)(i.$nd, {
-        variant: "primary",
-        fullWidth: !0,
-        size: "sm",
-        text: o.intl.string(o.t.P84bAD),
-    });
+    return (0, i.jsx)(o, { taskType: t });
 }
-let f = function (e) {
+function c(e) {
+    let { taskType: t } = e;
+    return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: s.intl.string(s.t.P84bAD) });
+}
+function u(e) {
+    let { taskType: t } = e;
+    return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: s.intl.string(s.t.P84bAD) });
+}
+let m = function (e) {
     let {
             quest: t,
             preClickCallback: n,
-            analyticsCtxQuestContent: f,
-            analyticsCtxSourceQuestContent: p,
-            analyticsCtxQuestContentPosition: _,
-            size: h = "md",
+            analyticsCtxQuestContent: m,
+            analyticsCtxSourceQuestContent: _,
+            analyticsCtxQuestContentPosition: h,
+            size: p = "md",
         } = e,
-        m = (0, a.P)(t);
+        g = (0, a.P)(t);
     if (0 === Object.keys(t.config.taskConfigV2.tasks).length)
-        return (0, r.jsx)(i.$nd, {
-            variant: "primary",
-            fullWidth: !0,
-            size: "sm",
-            text: o.intl.string(o.t.P84bAD),
-        });
-    let g = Object.values(t.config.taskConfigV2.tasks)[0];
-    switch (m) {
+        return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: s.intl.string(s.t.P84bAD) });
+    let A = Object.values(t.config.taskConfigV2.tasks)[0];
+    switch (g) {
         case a.U.UNENROLLED:
-            return (0, r.jsx)(s.A, {
+            return (0, i.jsx)(r.A, {
                 quest: t,
-                taskType: g.type,
-                size: h,
+                taskType: A.type,
+                size: p,
                 preClickCallback: n,
-                analyticsCtxQuestContent: f,
-                analyticsCtxSourceQuestContent: p,
-                analyticsCtxQuestContentPosition: _,
+                analyticsCtxQuestContent: m,
+                analyticsCtxSourceQuestContent: _,
+                analyticsCtxQuestContentPosition: h,
             });
         case a.U.ENROLLED:
-            return (0, r.jsx)(l, {
-                taskType: g.type,
-            });
+            return (0, i.jsx)(o, { taskType: A.type });
         case a.U.INCOMPLETE:
-            return (0, r.jsx)(c, {
-                taskType: g.type,
-            });
+            return (0, i.jsx)(d, { taskType: A.type });
         case a.U.COMPLETED:
-            return (0, r.jsx)(u, {
-                taskType: g.type,
-            });
+            return (0, i.jsx)(c, { taskType: A.type });
         case a.U.CLAIMED:
-            return (0, r.jsx)(d, {
-                taskType: g.type,
-            });
+            return (0, i.jsx)(u, { taskType: A.type });
         default:
-            return (0, r.jsx)(i.$nd, {
-                variant: "primary",
-                fullWidth: !0,
-                size: h,
-                text: o.intl.string(o.t.P84bAD),
-            });
+            return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: p, text: s.intl.string(s.t.P84bAD) });
     }
 };

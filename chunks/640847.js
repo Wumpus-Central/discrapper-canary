@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function () {
     if ("function" != typeof Symbol || "function" != typeof Object.getOwnPropertySymbols) return !1;
     if ("symbol" == typeof Symbol.iterator) return !0;

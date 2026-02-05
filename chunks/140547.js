@@ -1,8 +1,5 @@
-n.d(t, {
-    $j: () => s,
-    Eh: () => a,
-    ko: () => o,
-});
+"use strict";
+n.d(t, { $j: () => s, Eh: () => a, ko: () => o });
 var r = n(600975),
     i = n(688151);
 let a = (0, r.C)({
@@ -64,29 +61,11 @@ let a = (0, r.C)({
         },
     ],
 });
-
 function s(e) {
     let { guildId: t, location: n } = e;
-    return a.useExperiment(
-        {
-            guildId: t,
-            location: n,
-        },
-        {
-            autoTrackExposure: !0,
-        },
-    );
+    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }
-
 function o(e) {
     let { guildId: t, location: n } = e;
-    return a.getCurrentConfig(
-        {
-            guildId: t,
-            location: n,
-        },
-        {
-            autoTrackExposure: !0,
-        },
-    );
+    return a.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }

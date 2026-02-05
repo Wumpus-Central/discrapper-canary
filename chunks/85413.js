@@ -1,59 +1,41 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(439372),
     i = n(15285),
     a = n(287809),
     s = n(977997),
     o = n(572164),
     l = n(399925),
-    c = n(450948);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class d extends r.A {
+    u = n(450948);
+class c extends r.A {
+    registrations = new Map();
+    activeHandlers = new Map();
+    initialized = !1;
+    actions = {
+        RUNNING_GAMES_CHANGE: () => this.updateActiveHandlers(),
+        CLIPS_SETTINGS_UPDATE: () => this.updateActiveHandlers(),
+        VOICE_CHANNEL_SELECT: () => this.updateActiveHandlers(),
+        VOICE_STATE_UPDATES: () => this.updateActiveHandlers(),
+    };
     ensureInitialized() {
         if (!this.initialized)
-            for (let e of ((this.initialized = !0), (0, c.O)()))
+            for (let e of ((this.initialized = !0), (0, u.O)()))
                 "voiceChannel" === e.type
                     ? this.registerVoiceChannel(e.name, e.importHandler, e.isEnabled)
                     : "application" === e.type &&
                       this.registerApplication(e.name, e.applicationId, e.importHandler, e.isEnabled);
     }
     registerApplication(e, t, n, r) {
-        this.registrations.set(e, {
-            type: "application",
-            name: e,
-            applicationId: t,
-            isEnabled: r,
-            importHandler: n,
-        });
+        this.registrations.set(e, { type: "application", name: e, applicationId: t, isEnabled: r, importHandler: n });
     }
     registerVoiceChannel(e, t, n) {
-        this.registrations.set(e, {
-            type: "voiceChannel",
-            name: e,
-            isEnabled: n,
-            importHandler: t,
-        });
+        this.registrations.set(e, { type: "voiceChannel", name: e, isEnabled: n, importHandler: t });
     }
     isUserInVoiceChannel() {
         let e = a.default.getCurrentUser();
         if (null == e) return !1;
         let t = s.A.getVoiceStateForUser(e.id);
-        return (null == t ? void 0 : t.channelId) != null;
+        return t?.channelId != null;
     }
     async updateActiveHandlers() {
         this.ensureInitialized();
@@ -75,11 +57,7 @@ class d extends r.A {
     }
     async startHandler(e, t) {
         let n = (0, (await t.importHandler()).default)(l.Ts);
-        n.start(),
-            this.activeHandlers.set(e, {
-                handler: n,
-                registration: t,
-            });
+        n.start(), this.activeHandlers.set(e, { handler: n, registration: t });
     }
     stopHandler(e) {
         let t = this.activeHandlers.get(e);
@@ -89,9 +67,8 @@ class d extends r.A {
         for (let e of Array.from(this.activeHandlers.keys())) this.stopHandler(e);
     }
     getHandlerState(e) {
-        var t, n;
-        let r = this.activeHandlers.get(e);
-        return null == r || null == (t = (n = r.handler).getState) ? void 0 : t.call(n);
+        let t = this.activeHandlers.get(e);
+        return t?.handler.getState?.();
     }
     _initialize() {
         this.ensureInitialized();
@@ -100,17 +77,5 @@ class d extends r.A {
         for (let [, e] of this.activeHandlers) e.handler.stop();
         this.activeHandlers.clear();
     }
-    constructor(...e) {
-        super(...e),
-            u(this, "registrations", new Map()),
-            u(this, "activeHandlers", new Map()),
-            u(this, "initialized", !1),
-            u(this, "actions", {
-                RUNNING_GAMES_CHANGE: () => this.updateActiveHandlers(),
-                CLIPS_SETTINGS_UPDATE: () => this.updateActiveHandlers(),
-                VOICE_CHANNEL_SELECT: () => this.updateActiveHandlers(),
-                VOICE_STATE_UPDATES: () => this.updateActiveHandlers(),
-            });
-    }
 }
-let f = new d();
+let d = new c();

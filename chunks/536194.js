@@ -1,40 +1,21 @@
-n.d(t, {
-    P: () => a,
-});
+"use strict";
+n.d(t, { P: () => i });
 var r = n(77729);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+class i {
+    static cached;
     static get() {
-        if (null == a.cached) {
-            var e, t;
-            let n =
-                null === r.A || void 0 === r.A || null == (t = r.A.processUtils) || null == (e = t.getMainArgvSync)
-                    ? void 0
-                    : e.call(t);
-            null != n && n.length > 1 && n.shift(), (a.cached = null != n ? n : []);
+        if (null == i.cached) {
+            let e = r.A?.processUtils?.getMainArgvSync?.();
+            null != e && e.length > 1 && e.shift(), (i.cached = e ?? []);
         }
-        return a.cached;
+        return i.cached;
     }
     static contains(e) {
-        return a.get().includes(e);
+        return i.get().includes(e);
     }
     static isEnvVariableTrue(e) {
-        var t, n;
         if (void 0 === r.A) return !1;
-        switch (null === r.A || void 0 === r.A || null == (n = r.A.process) || null == (t = n.env) ? void 0 : t[e]) {
+        switch (r.A?.process?.env?.[e]) {
             case "1":
             case "true":
                 return !0;
@@ -42,13 +23,12 @@ class a {
         return !1;
     }
     static isDisallowPopupsSet() {
-        return a.contains("--disallow-popups") || a.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS");
+        return i.contains("--disallow-popups") || i.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS");
     }
     static isDiscordTestSet() {
-        return a.isEnvVariableTrue("DISCORD_TEST");
+        return i.isEnvVariableTrue("DISCORD_TEST");
     }
     static isDiscordGatewayPlaintextSet() {
         return !1;
     }
 }
-i(a, "cached", void 0);

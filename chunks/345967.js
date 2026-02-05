@@ -85,14 +85,8 @@ e.exports = function (e) {
             e.COMMENT(/\/\*\*/, /\*\//, {
                 relevance: 0,
                 contains: [
-                    {
-                        begin: /\w+@/,
-                        relevance: 0,
-                    },
-                    {
-                        className: "doctag",
-                        begin: /@[A-Za-z]+/,
-                    },
+                    { begin: /\w+@/, relevance: 0 },
+                    { className: "doctag", begin: /@[A-Za-z]+/ },
                 ],
             }),
             e.C_LINE_COMMENT_MODE,
@@ -111,12 +105,7 @@ e.exports = function (e) {
                             "extends implements pertypewithin perthis pertarget percflowbelow percflow issingleton",
                     },
                     e.UNDERSCORE_TITLE_MODE,
-                    {
-                        begin: /\([^\)]*/,
-                        end: /[)]+/,
-                        keywords: n.concat(r),
-                        excludeEnd: !1,
-                    },
+                    { begin: /\([^\)]*/, end: /[)]+/, keywords: n.concat(r), excludeEnd: !1 },
                 ],
             },
             {
@@ -127,12 +116,7 @@ e.exports = function (e) {
                 relevance: 0,
                 keywords: "class interface",
                 illegal: /[:"\[\]]/,
-                contains: [
-                    {
-                        beginKeywords: "extends implements",
-                    },
-                    e.UNDERSCORE_TITLE_MODE,
-                ],
+                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
             },
             {
                 beginKeywords: "pointcut after before around throwing returning",
@@ -156,18 +140,11 @@ e.exports = function (e) {
                 keywords: n,
                 illegal: /["\[\]]/,
                 contains: [
-                    {
-                        begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
-                        keywords: n.concat(r),
-                        relevance: 0,
-                    },
+                    { begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/), keywords: n.concat(r), relevance: 0 },
                     e.QUOTE_STRING_MODE,
                 ],
             },
-            {
-                beginKeywords: "new throw",
-                relevance: 0,
-            },
+            { beginKeywords: "new throw", relevance: 0 },
             {
                 className: "function",
                 begin: /\w+ +\w+(\.\w+)?\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
@@ -195,10 +172,7 @@ e.exports = function (e) {
                 ],
             },
             e.C_NUMBER_MODE,
-            {
-                className: "meta",
-                begin: /@[A-Za-z]+/,
-            },
+            { className: "meta", begin: /@[A-Za-z]+/ },
         ],
     };
 };

@@ -1,20 +1,12 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n) {
         var r = " ";
         return (
             (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (r = " de "),
-            e +
-                r +
-                {
-                    ss: "secunde",
-                    mm: "minute",
-                    hh: "ore",
-                    dd: "zile",
-                    MM: "luni",
-                    yy: "ani",
-                }[n]
+            e + r + { ss: "secunde", mm: "minute", hh: "ore", dd: "zile", MM: "luni", yy: "ani" }[n]
         );
     }
     return e.defineLocale("ro", {
@@ -58,9 +50,6 @@
             y: "un an",
             yy: t,
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

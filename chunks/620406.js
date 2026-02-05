@@ -1,85 +1,81 @@
-n.d(t, {
-    $: () => v,
-    A: () => I,
-}),
-    n(896048);
+"use strict";
+n.d(t, { $: () => y, A: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(735438),
-    l = n.n(s),
-    c = n(158954),
-    u = n(311907),
+    s = n.n(a),
+    o = n(735438),
+    l = n.n(o),
+    u = n(158954),
+    c = n(311907),
     d = n(52133),
-    f = n(342952),
-    p = n(435371),
-    _ = n(242640),
+    _ = n(342952),
+    f = n(435371),
+    p = n(242640),
     h = n(287809),
     m = n(403362),
     g = n(235218),
     E = n(788868),
-    y = n(778712),
-    b = n(985018),
-    O = n(279357),
-    v = (function (e) {
+    A = n(778712),
+    I = n(985018),
+    T = n(279357),
+    y = (function (e) {
         return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), (e.NO_ICON = "no_icon"), e;
     })({});
-let A = 3;
-
-function I(e) {
+let S = 3;
+function v(e) {
     let {
             variant: t,
             wishlistItem: n,
             guildId: a,
-            channelId: s,
-            userIdsForGifting: v,
-            userIdsForRecommendation: I,
-            cardSize: S = _.Y.SMALL,
-            contextContainerClassName: T,
+            channelId: o,
+            userIdsForGifting: y,
+            userIdsForRecommendation: v,
+            cardSize: C = p.Y.SMALL,
+            contextContainerClassName: b,
         } = e,
-        [C, N] = i.useState(l().uniq(v)),
-        [w, R] = i.useState(l().uniq(I));
+        [N, R] = i.useState(l().uniq(y)),
+        [O, D] = i.useState(l().uniq(v));
     i.useEffect(() => {
-        R((e) => {
-            let t = l().uniq(I);
+        D((e) => {
+            let t = l().uniq(v);
             return (0, d.v)(e, t) ? e : t;
         });
-    }, [I]),
+    }, [v]),
         i.useEffect(() => {
-            N((e) => {
-                let t = l().uniq(v);
+            R((e) => {
+                let t = l().uniq(y);
                 return (0, d.v)(e, t) ? e : t;
             });
-        }, [v]);
-    let P = (0, u.bG)([h.default], () => (1 === C.length ? h.default.getUser(C[0]) : void 0), [C]),
-        D = (0, u.yK)([h.default], () => w.map((e) => h.default.getUser(e)).filter(m.Vq), [w]);
+        }, [y]);
+    let L = (0, c.bG)([h.default], () => (1 === N.length ? h.default.getUser(N[0]) : void 0), [N]),
+        w = (0, c.yK)([h.default], () => O.map((e) => h.default.getUser(e)).filter(m.Vq), [O]);
     return (0, r.jsxs)("div", {
-        className: O.kL,
+        className: T.kL,
         children: [
             "no_icon" === t
                 ? null
-                : (0, r.jsx)(p.m_, {
-                      text: "popular" === t ? b.intl.string(b.t["DP0o+u"]) : b.intl.string(b.t["OnWY3/"]),
+                : (0, r.jsx)(f.m_, {
+                      text: "popular" === t ? I.intl.string(I.t["DP0o+u"]) : I.intl.string(I.t["OnWY3/"]),
                       position: "top",
                       children: (0, r.jsx)("div", {
-                          className: o()(O.RL, T),
+                          className: s()(T.RL, b),
                           children:
-                              "popular" === t || 0 === D.length
+                              "popular" === t || 0 === w.length
                                   ? (0, r.jsx)("div", {
-                                        className: O.fd,
-                                        children: (0, r.jsx)(c.Y3C, {
+                                        className: T.fd,
+                                        children: (0, r.jsx)(u.Y3C, {
                                             size: "sm",
                                             color: "currentColor",
-                                            className: O.I$,
+                                            className: T.I$,
                                         }),
                                     })
-                                  : (0, r.jsx)(f.I, {
-                                        users: D,
-                                        guildId: null != a ? a : void 0,
-                                        channelId: null != s ? s : void 0,
-                                        maxUsers: A,
-                                        size: y._3.SIZE_20,
+                                  : (0, r.jsx)(_.I, {
+                                        users: w,
+                                        guildId: a ?? void 0,
+                                        channelId: o ?? void 0,
+                                        maxUsers: S,
+                                        size: A._3.SIZE_20,
                                     }),
                       }),
                   }),
@@ -87,14 +83,14 @@ function I(e) {
                 item: n,
                 wishlistId: null,
                 isOwner: !1,
-                cardSize: S,
+                cardSize: C,
                 showOverlayButton: !0,
                 hideButtonIcon: !0,
                 showPrice: !0,
                 showIcons: !1,
                 giftingOrigin: E.vQ.SHOP_PAGE,
-                profileOwner: P,
-                additionalUserIds: C.length > 1 ? C : void 0,
+                profileOwner: L,
+                additionalUserIds: N.length > 1 ? N : void 0,
             }),
         ],
     });

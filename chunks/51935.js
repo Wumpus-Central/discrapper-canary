@@ -1,38 +1,16 @@
-n.d(t, {
-    u: () => i,
-});
+"use strict";
+n.d(t, { u: () => i });
 let r = (0, n(600975).C)({
         id: "2025-04_fetch_quests_on_postconnectionopen",
         kind: "user",
         label: "Fetch Quests ON_POST_CONNECTION_OPEN",
-        defaultConfig: {
-            enabled: !1,
-        },
+        defaultConfig: { enabled: !1 },
         treatments: [
-            {
-                id: 0,
-                label: "Control",
-                config: {
-                    enabled: !1,
-                },
-            },
-            {
-                id: 1,
-                label: "Fetch quests during ON_POST_CONNECTION_OPEN",
-                config: {
-                    enabled: !0,
-                },
-            },
+            { id: 0, label: "Control", config: { enabled: !1 } },
+            { id: 1, label: "Fetch quests during ON_POST_CONNECTION_OPEN", config: { enabled: !0 } },
         ],
     }),
     i = (e) => {
         let { location: t, autoTrackExposure: n = !1 } = e;
-        return r.getCurrentConfig(
-            {
-                location: t,
-            },
-            {
-                autoTrackExposure: n,
-            },
-        ).enabled;
+        return r.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
     };

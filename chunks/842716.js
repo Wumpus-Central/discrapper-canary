@@ -1,67 +1,35 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(733351),
-    n(667532);
-var r,
-    i = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(768570);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => g }), n(667532);
+var r = n(311907),
+    i = n(506774),
+    a = n(73153),
+    s = n(768570);
+let o = s.nC,
+    l = "tokenized",
+    u = !1,
+    c = {};
+function d(e) {
+    let { id: t, query: n } = e;
+    if ("string" != typeof n || "" === (n = n.trim())) return;
+    let r = (c[t] = c[t] ?? []),
+        a = r.indexOf(n);
+    -1 !== a
+        ? (r.splice(a, 1), r.unshift(n))
+        : null != r[0] && "" !== r[0] && n.startsWith(r[0])
+          ? (r[0] = n)
+          : a < 0 && r.unshift(n),
+        r.length > 5 && r.splice(5, r.length),
+        i.w.set(s.nC, { history: c });
 }
-let c = o.nC,
-    u = "tokenized",
-    d = !1,
-    f = {};
-
-function p(e) {
-    var t;
-    let { id: n, query: r } = e;
-    if ("string" != typeof r || "" === (r = r.trim())) return;
-    let i = (f[n] = null != (t = f[n]) ? t : []),
-        s = i.indexOf(r);
-    -1 !== s
-        ? (i.splice(s, 1), i.unshift(r))
-        : null != i[0] && "" !== i[0] && r.startsWith(i[0])
-          ? (i[0] = r)
-          : s < 0 && i.unshift(r),
-        i.length > 5 && i.splice(5, i.length),
-        a.w.set(o.nC, {
-            history: f,
-        });
-}
-
 function _(e) {
     let { id: t } = e;
-    delete f[t],
-        a.w.set(o.nC, {
-            history: f,
-        });
+    delete c[t], i.w.set(s.nC, { history: c });
 }
-
-function h(e) {
+function f(e) {
     let { id: t, query: n } = e;
-    null != f[t] &&
-        ((f[t] = f[t].filter((e) => e !== n)),
-        a.w.set(o.nC, {
-            history: f,
-        }));
+    null != c[t] && ((c[t] = c[t].filter((e) => e !== n)), i.w.set(s.nC, { history: c }));
 }
-
-function m(e) {
+function p(e) {
     return (
         Object.keys(e).forEach((t) => {
             Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
@@ -70,26 +38,25 @@ function m(e) {
         e
     );
 }
-
-function g() {
-    a.w.remove(o.nC), (f = {});
+function h() {
+    i.w.remove(s.nC), (c = {});
 }
-class E extends (r = i.Ay.Store) {
+class m extends r.Ay.Store {
+    static displayName = s.yQ;
     initialize() {
-        let e = a.w.get(c);
-        (null == e ? void 0 : e.history) != null && (f = m(e.history)), (d = !!a.w.get(u));
+        let e = i.w.get(o);
+        e?.history != null && (c = p(e.history)), (u = !!i.w.get(l));
     }
     isTokenized() {
-        return d;
+        return u;
     }
     getHistory(e) {
-        return f[e];
+        return c[e];
     }
 }
-l(E, "displayName", o.yQ);
-let b = new E(s.h, {
+let g = new m(a.h, {
     SEARCH_HISTORY_WEB_CLEAR_ITEMS: _,
-    SEARCH_HISTORY_WEB_REMOVE_ITEM: h,
-    SEARCH_HISTORY_WEB_ADD_ITEM: p,
-    LOGOUT: g,
+    SEARCH_HISTORY_WEB_REMOVE_ITEM: f,
+    SEARCH_HISTORY_WEB_ADD_ITEM: d,
+    LOGOUT: h,
 });

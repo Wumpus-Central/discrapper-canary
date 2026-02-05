@@ -1,29 +1,25 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(694080),
-    s = n(422936),
-    o = n(234419),
-    l = n(727949),
-    c = n(600487),
-    u = n(166913),
-    d = n(788868);
-let f = (e) => {
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
+    r = n(694080),
+    a = n(422936),
+    l = n(234419),
+    o = n(421116),
+    c = n(727949),
+    d = n(166913),
+    u = n(788868);
+let _ = (e) => {
     let { entrypoint: t } = e,
-        n = (0, o.V)(),
-        f = (0, s.O)(),
-        p = (0, l.NF)({
-            trialOffer: n,
-        }),
-        _ = (0, l.Tp)();
-    return (i.useEffect(() => {
-        !0 === p && (0, l.QG)(), !0 === _ && (0, l.ne)(), (null != n || null != f) && (0, a.u1)(n, f);
-    }, [n, f, p, _]),
-    t === d.tU.UserSettings)
-        ? (0, r.jsx)(u.A, {})
-        : t === d.tU.ApplicationStoreHome
-          ? (0, r.jsx)(c.A, {})
+        n = (0, l.V)(),
+        _ = (0, a.O)(),
+        m = (0, c.NF)({ trialOffer: n }),
+        A = (0, c.Tp)();
+    return (s.useEffect(() => {
+        !0 === m && (0, c.QG)(), !0 === A && (0, c.ne)(), (null != n || null != _) && (0, r.u1)(n, _);
+    }, [n, _, m, A]),
+    t === u.Mf.UserSettings)
+        ? (0, i.jsx)(d.A, {})
+        : t === u.Mf.ApplicationStoreHome
+          ? (0, i.jsx)(o.A, {})
           : null;
 };

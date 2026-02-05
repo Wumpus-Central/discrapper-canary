@@ -1,159 +1,56 @@
-n.d(t, {
-    y: () => y,
-}),
-    n(896048);
+"use strict";
+n.d(t, { y: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(92674),
-    o = n(397927),
-    s = n(480504),
+    s = n(397927),
+    o = n(480504),
     l = n(652215),
-    c = n(613568);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = 200,
-    h = {
-        from: {
-            opacity: 1,
-        },
-        enter: {
-            opacity: 1,
-        },
-        leave: {
-            opacity: 0,
-        },
-        config: {
-            duration: 200,
-        },
-    },
-    m = p(d({}, h), {
-        config: {
-            duration: 50,
-        },
-    }),
-    g = p(d({}, h), {
-        config: (e, t) =>
-            t
-                ? {
-                      duration: 800,
-                  }
-                : {
-                      duration: 200,
-                  },
-    });
-
-function E(e) {
-    let { readyState: t, placeholderImg: n, placeholderStyle: s } = e,
-        u = t === l.Rv1.LOADING,
-        [f] = i.useState(() => Date.now()),
-        p = t === l.Rv1.READY && Date.now() - f < _,
-        g = (0, o.pnh)(u && null != n, p ? m : h);
+    u = n(613568);
+let c = 200,
+    d = { from: { opacity: 1 }, enter: { opacity: 1 }, leave: { opacity: 0 }, config: { duration: 200 } },
+    _ = { ...d, config: { duration: 50 } },
+    f = { ...d, config: (e, t) => (t ? { duration: 800 } : { duration: 200 }) };
+function p(e) {
+    let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
+        f = t === l.Rv1.LOADING,
+        [p] = i.useState(() => Date.now()),
+        h = t === l.Rv1.READY && Date.now() - p < c,
+        m = (0, s.pnh)(f && null != n, h ? _ : d);
     return (0, r.jsx)(r.Fragment, {
-        children: g(
-            (e, t) =>
-                t &&
-                (0, r.jsx)(a.animated.img, {
-                    style: d({}, s, e),
-                    className: c.bc,
-                    src: n,
-                    alt: "",
-                }),
+        children: m(
+            (e, t) => t && (0, r.jsx)(a.animated.img, { style: { ...o, ...e }, className: u.bc, src: n, alt: "" }),
         ),
     });
 }
-
-function y(e) {
-    let { readyState: t, aspectRatio: n, placeholder: u, placeholderVersion: d, placeholderStyle: f, children: p } = e,
-        _ = t === l.Rv1.LOADING,
-        [h] = i.useState(_),
-        [m, y] = i.useState(!1),
-        b = (0, s._)(u, d, h);
+function h(e) {
+    let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: _, children: h } = e,
+        m = t === l.Rv1.LOADING,
+        [g] = i.useState(m),
+        [E, A] = i.useState(!1),
+        I = (0, o._)(c, d, g);
     i.useEffect(() => {
         let e = setTimeout(() => {
-            y(!0);
+            A(!0);
         }, 2e3);
         return () => {
             clearTimeout(e);
         };
-    }, [h]);
-    let O = (0, o.pnh)(_ && m, g);
+    }, [g]);
+    let T = (0, s.pnh)(m && E, f);
     return (0, r.jsxs)("div", {
-        className: c.bX,
-        style: {
-            aspectRatio: n,
-        },
+        className: u.bX,
+        style: { aspectRatio: n },
         children: [
-            p,
-            null != b &&
-                (0, r.jsx)(E, {
-                    readyState: t,
-                    placeholderImg: b,
-                    placeholderStyle: f,
-                }),
-            O(
+            h,
+            null != I && (0, r.jsx)(p, { readyState: t, placeholderImg: I, placeholderStyle: _ }),
+            T(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(a.animated.div, {
                         style: e,
-                        className: c.oM,
-                        children: (0, r.jsx)(o.y$y, {
-                            type: o.tVU.SPINNING_CIRCLE_SIMPLE,
-                            className: c.Xd,
-                        }),
+                        className: u.oM,
+                        children: (0, r.jsx)(s.y$y, { type: s.tVU.SPINNING_CIRCLE_SIMPLE, className: u.Xd }),
                     }),
             ),
         ],

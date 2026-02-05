@@ -1,15 +1,16 @@
+"use strict";
 n.d(t, {
-    AQ: () => p,
+    AQ: () => f,
     In: () => i,
     KM: () => a,
     L7: () => d,
-    Mq: () => u,
+    Mq: () => c,
     RP: () => s,
     bk: () => o,
     d6: () => l,
-    dS: () => f,
-    jM: () => _,
-    pt: () => c,
+    dS: () => _,
+    jM: () => p,
+    pt: () => u,
 });
 var r = n(652215);
 let i = 300,
@@ -54,7 +55,7 @@ var s = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (
             (e.VIEW = "VIEW"),
             (e.SEND_MESSAGE = "SEND_MESSAGE"),
@@ -173,7 +174,7 @@ var s = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (
             (e.WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
             (e.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
@@ -184,20 +185,17 @@ var s = (function (e) {
             e
         );
     })({});
-
 function d(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n
-        ? "https://".concat(n, "/badge-icons/").concat(e, ".png")
-        : "".concat(location.protocol).concat(t).concat(r.Rsh.BADGE_ICON(e));
+    return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${r.Rsh.BADGE_ICON(e)}`;
 }
-var f = (function (e) {
+var _ = (function (e) {
         return (e.ACTIVITY = "ACTIVITY"), (e.AVATAR = "AVATAR"), (e.STATUS = "STATUS"), e;
     })({}),
-    p = (function (e) {
+    f = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (
             (e.WIDGET_ADDED = "WIDGET_ADDED"),
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),

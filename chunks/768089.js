@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.calculateChange = function (e, t, r, n) {
         var o = n.clientWidth,
             a = n.clientHeight,
@@ -11,23 +10,11 @@ Object.defineProperty(t, "__esModule", {
         if ("vertical" === t) {
             var c = void 0;
             if (((c = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), r.h !== c))
-                return {
-                    h: c,
-                    s: r.s,
-                    l: r.l,
-                    a: r.a,
-                    source: "hsl",
-                };
+                return { h: c, s: r.s, l: r.l, a: r.a, source: "hsl" };
         } else {
             var p = void 0;
             if (((p = s < 0 ? 0 : s > o ? 359 : (((100 * s) / o) * 360) / 100), r.h !== p))
-                return {
-                    h: p,
-                    s: r.s,
-                    l: r.l,
-                    a: r.a,
-                    source: "hsl",
-                };
+                return { h: p, s: r.s, l: r.l, a: r.a, source: "hsl" };
         }
         return null;
     });

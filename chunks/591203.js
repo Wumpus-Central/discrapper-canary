@@ -1,7 +1,4 @@
-i.d(t, {
-    L: () => L,
-}),
-    i(896048);
+i.d(e, { L: () => D });
 var n = i(627968),
     l = i(64700),
     s = i(311907),
@@ -11,130 +8,92 @@ var n = i(627968),
     o = i(687021),
     d = i(128450),
     T = i(419954),
-    c = i(796774),
-    A = i(209932),
-    S = i(536432),
-    _ = i(984813),
-    E = i(595953),
-    g = i(975571),
+    A = i(796774),
+    S = i(209932),
+    E = i(536432),
+    g = i(984813),
+    _ = i(595953),
+    c = i(975571),
     I = i(780964),
-    O = i(617617),
-    C = i(652215),
-    N = i(980504),
-    b = i(985018),
-    p = i(17786);
-
-function m(e) {
-    return (0, s.bG)([A.A], () => {
-        if (null == e) return null;
-        let { guildId: t, soundId: i } = e;
-        return A.A.getSound(t === N.XH ? N.mV : t, i);
+    N = i(617617),
+    C = i(652215);
+i(980504);
+var O = i(985018),
+    L = i(17786);
+function R(t) {
+    return (0, s.bG)([S.A], () => {
+        if (null == t) return null;
+        let { guildId: e, soundId: i } = t;
+        return S.A.getSound("0" === e ? "0" : e, i);
     });
 }
-
-function f(e) {
-    let { guildId: t } = e,
-        i = (0, s.bG)([O.A], () => {
-            var e, i, n;
-            return null == (n = O.A.settings.guilds) || null == (i = n.guilds) || null == (e = i[t])
-                ? void 0
-                : e.joinSound;
-        }),
-        l = m(i);
+function b(t) {
+    let { guildId: e } = t,
+        i = (0, s.bG)([N.A], () => N.A.settings.guilds?.guilds?.[e]?.joinSound),
+        l = R(i);
     if (null == i || null == l) return null;
     let { emojiId: u, emojiName: o } = l,
         d = null != u || null != o;
     return (0, n.jsxs)("div", {
-        className: p.Io,
+        className: L.Io,
         children: [
             d
-                ? (0, n.jsx)(a.A, {
-                      emojiId: u,
-                      emojiName: o,
-                      className: p.nW,
-                  })
-                : (0, n.jsx)(r.HKD, {
-                      size: "md",
-                      color: "currentColor",
-                      className: p.nW,
-                  }),
-            (0, n.jsx)(r.Text, {
-                className: p.dK,
-                variant: "text-xs/medium",
-                children: l.name,
-            }),
+                ? (0, n.jsx)(a.A, { emojiId: u, emojiName: o, className: L.nW })
+                : (0, n.jsx)(r.HKD, { size: "md", color: "currentColor", className: L.nW }),
+            (0, n.jsx)(r.Text, { className: L.dK, variant: "text-xs/medium", children: l.name }),
         ],
     });
 }
-let L = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
-    useSearchTerms: () => [b.intl.string(b.t.nzUc3B)],
+let D = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
+    useSearchTerms: () => [O.intl.string(O.t.nzUc3B)],
     Component: function () {
-        let { analyticsLocations: e } = (0, u.Ay)(),
-            [t, i] = l.useState(N.XH),
-            a = (0, _.mz)(t),
-            T = m(a),
-            I = (null == a ? void 0 : a.type) === _.PP.GLOBAL,
-            O = (0, s.bG)([A.A], () => A.A.hasFetchedAllSounds()) && null != a && null == T;
+        let { analyticsLocations: t } = (0, u.Ay)(),
+            [e, i] = l.useState("0"),
+            a = (0, g.mz)(e),
+            T = R(a),
+            I = a?.type === g.PP.GLOBAL,
+            N = (0, s.bG)([S.A], () => S.A.hasFetchedAllSounds()) && null != a && null == T;
         l.useEffect(() => {
-            O &&
-                (0, S.ND)({
-                    location: e,
-                });
-        }, [O, e]),
+            N && (0, E.ND)({ location: t });
+        }, [N, t]),
             l.useEffect(() => {
-                (0, c.E7)();
+                (0, A.E7)();
             }, []);
-        let L = l.useCallback((e, t) => {
-            let { inDropdown: i } = t;
-            return null == e
-                ? null
-                : i
-                  ? (0, n.jsx)(f, {
-                        guildId: e.value,
-                    })
-                  : null;
+        let D = l.useCallback((t, e) => {
+            let { inDropdown: i } = e;
+            return null == t ? null : i ? (0, n.jsx)(b, { guildId: t.value }) : null;
         }, []);
         return (0, n.jsxs)(r.nVY, {
-            label: b.intl.string(b.t.nzUc3B),
-            description: b.intl.format(b.t.u9RWmv, {
-                helpdeskArticle: g.A.getArticleURL(C.MVz.SOUNDBOARD),
-            }),
+            label: O.intl.string(O.t.nzUc3B),
+            description: O.intl.format(O.t.u9RWmv, { helpdeskArticle: c.A.getArticleURL(C.MVz.SOUNDBOARD) }),
             children: [
                 (0, n.jsx)(o.A, {
-                    guildId: t,
-                    className: p.Dt,
-                    globalOption: {
-                        label: b.intl.string(b.t["CpEUP/"]),
-                        value: N.XH,
+                    guildId: e,
+                    className: L.Dt,
+                    globalOption: { label: O.intl.string(O.t["CpEUP/"]), value: "0" },
+                    onChange: (t) => {
+                        i(null == t ? "0" : t.id);
                     },
-                    onChange: (e) => {
-                        i(null == e ? N.XH : e.id);
-                    },
-                    renderOptionSuffix: L,
+                    renderOptionSuffix: D,
                     hideDivider: !0,
                 }),
                 (0, n.jsxs)(d.A, {
-                    title: b.intl.format(b.t.I2TsYN, {
-                        nitroWheelHook: () =>
-                            (0, n.jsx)(r.tvc, {
-                                size: "md",
-                                color: "currentColor",
-                                className: p.ax,
-                            }),
+                    title: O.intl.format(O.t.I2TsYN, {
+                        nitroWheelHook: () => (0, n.jsx)(r.tvc, { size: "md", color: "currentColor", className: L.ax }),
                     }),
                     children: [
-                        (0, n.jsx)(E.A, {
+                        (0, n.jsx)(_.A, {
                             sound: T,
                             isGlobal: I,
                             onSelect: (i) => {
-                                null == i ? (0, S.Dv)(t, e) : (0, S.un)(t, i, e);
+                                null == i ? (0, E.Dv)(e, t) : (0, E.un)(e, i, t);
                             },
                         }),
-                        O &&
+                        N &&
                             (0, n.jsx)(r.po8, {
-                                className: p.lm,
+                                className: L.lm,
                                 messageType: r.YCn.WARNING,
-                                children: b.intl.string(b.t.WkPsFR),
+                                children: O.intl.string(O.t.WkPsFR),
                             }),
                     ],
                 }),

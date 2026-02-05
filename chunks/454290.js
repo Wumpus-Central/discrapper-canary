@@ -1,7 +1,5 @@
-n.d(t, {
-    Q: () => o,
-    f: () => a,
-});
+"use strict";
+n.d(t, { Q: () => s, f: () => a });
 var r = n(64700),
     i = n(92674);
 let a = (0, r.createContext)({
@@ -13,7 +11,6 @@ let a = (0, r.createContext)({
     zoomed: !1,
     setZoomed() {},
 });
-
-function o() {
+function s() {
     return (0, r.useContext)(a);
 }

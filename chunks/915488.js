@@ -1,16 +1,11 @@
-n.d(t, {
-    a: () => o,
-});
-var r = n(850992),
-    i = n(203982),
+n.d(t, { a: () => s });
+var i = n(850992),
+    l = n(203982),
     a = n(652215),
-    s = n(698279);
-
-function o(e) {
+    r = n(698279);
+function s(e) {
     let { stickerPack: t, stickerPickerCategories: n } = e;
-    i._.dispatchToLastSubscribed(a.jej.OPEN_EXPRESSION_PICKER, {
-        activeView: s.kx.STICKER,
-    });
-    let o = n.findIndex((e) => e.id === t.id);
-    -1 !== o && r.bM.setActiveCategoryIndex(o);
+    l._.dispatchToLastSubscribed(a.jej.OPEN_EXPRESSION_PICKER, { activeView: r.kx.STICKER });
+    let s = n.findIndex((e) => e.id === t.id);
+    -1 !== s && i.bM.setActiveCategoryIndex(s);
 }

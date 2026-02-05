@@ -1,8 +1,4 @@
-s.d(e, {
-    A: () => f,
-}),
-    s(321073),
-    s(896048);
+s.d(e, { A: () => I }), s(321073);
 var l = s(627968),
     a = s(64700),
     n = s(311907),
@@ -13,22 +9,10 @@ var l = s(627968),
     d = s(837921),
     u = s(985018),
     c = s(742898);
-
-function p(t, e, s) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: s,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = s),
-        t
-    );
-}
-let A = "select";
-class I extends a.PureComponent {
+let p = "select";
+class A extends a.PureComponent {
+    state = { newInstallationPath: null };
+    fetchedMetadataPaths = new Set();
     fetchAllDirectoryMetadata() {
         let { installationPaths: t } = this.props,
             e = t.map((t) => {
@@ -56,24 +40,11 @@ class I extends a.PureComponent {
             { newInstallationPath: e } = this.state,
             s = t.map((t) => {
                 let { path: e, label: s } = t;
-                return {
-                    id: e,
-                    value: e,
-                    label: this.renderLabel(e, s),
-                };
+                return { id: e, value: e, label: this.renderLabel(e, s) };
             });
         return (
-            null != e &&
-                s.push({
-                    id: e,
-                    value: e,
-                    label: this.renderLabel(e),
-                }),
-            s.push({
-                id: A,
-                value: A,
-                label: u.intl.string(u.t["cL/rrq"]),
-            }),
+            null != e && s.push({ id: e, value: e, label: this.renderLabel(e) }),
+            s.push({ id: p, value: p, label: u.intl.string(u.t["cL/rrq"]) }),
             s
         );
     }
@@ -87,19 +58,33 @@ class I extends a.PureComponent {
             l = null != e[t] && !1 === e[t].hasPermission;
         s(t, l || !this.hasEnoughDiskSpace(t));
     }
+    handleChange = (t) => {
+        t === p
+            ? d.Ay.showOpenDialog(["openDirectory"]).then((t) => {
+                  if (null != t && t.length > 0) {
+                      let e = t[0];
+                      this.setState({
+                          newInstallationPath:
+                              null !=
+                              this.props.installationPaths.find((t) => {
+                                  let { path: s } = t;
+                                  return s === e;
+                              })
+                                  ? null
+                                  : e,
+                      }),
+                          this.sendChange(e);
+                  }
+              })
+            : this.sendChange(t);
+    };
     renderError() {
         let { value: t, installationPathsMetadata: e } = this.props;
         return null != e[t] && !1 === e[t].hasPermission
-            ? (0, l.jsx)("div", {
-                  className: c.z,
-                  children: u.intl.string(u.t.cEUT8B),
-              })
+            ? (0, l.jsx)("div", { className: c.z, children: u.intl.string(u.t.cEUT8B) })
             : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, l.jsx)("div", {
-                    className: c.z,
-                    children: u.intl.string(u.t["duXbE/"]),
-                });
+              : (0, l.jsx)("div", { className: c.z, children: u.intl.string(u.t["duXbE/"]) });
     }
     renderLabel(t, e) {
         let { installationPathsMetadata: s } = this.props,
@@ -107,9 +92,7 @@ class I extends a.PureComponent {
         return null != s[t] && null != s[t].availableKB
             ? u.intl.formatToPlainString(u.t["Y+M3rp"], {
                   path: l,
-                  size: (0, o.Xq)(s[t].availableKB, {
-                      useKibibytes: !0,
-                  }),
+                  size: (0, o.Xq)(s[t].availableKB, { useKibibytes: !0 }),
               })
             : l;
     }
@@ -131,35 +114,8 @@ class I extends a.PureComponent {
             ],
         });
     }
-    constructor(...t) {
-        super(...t),
-            p(this, "state", {
-                newInstallationPath: null,
-            }),
-            p(this, "fetchedMetadataPaths", new Set()),
-            p(this, "handleChange", (t) => {
-                t === A
-                    ? d.Ay.showOpenDialog(["openDirectory"]).then((t) => {
-                          if (null != t && t.length > 0) {
-                              let e = t[0];
-                              this.setState({
-                                  newInstallationPath:
-                                      null !=
-                                      this.props.installationPaths.find((t) => {
-                                          let { path: s } = t;
-                                          return s === e;
-                                      })
-                                          ? null
-                                          : e,
-                              }),
-                                  this.sendChange(e);
-                          }
-                      })
-                    : this.sendChange(t);
-            });
-    }
 }
-let f = n.Ay.connectStores([h.A], () => ({
+let I = n.Ay.connectStores([h.A], () => ({
     installationPaths: h.A.installationPaths,
     installationPathsMetadata: h.A.installationPathsMetadata,
-}))(I);
+}))(A);

@@ -1,163 +1,143 @@
-l.d(t, {
-    A: () => R,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(575593),
-    a = l(417597),
-    i = l(582754),
-    o = l(397927),
-    c = l(736653),
-    u = l(287809),
-    d = l(954571),
-    f = l(440938),
-    b = l(590180),
-    g = l(511265),
-    p = l(206077),
-    m = l(100057),
-    h = l(392183),
-    E = l(751304),
-    v = l(561769),
-    A = l(998694),
-    x = l(758836),
-    S = l(652215),
-    C = l(985018),
-    O = l(157884),
-    _ = l(517700),
-    y = l(304009),
-    j = l(495482),
-    L = l(479512),
-    T = l(867341),
-    I = l(632728),
-    N = l(368146),
-    k = l(536003);
-
+"use strict";
+s.d(t, { A: () => R });
+var n = s(627968),
+    r = s(64700),
+    l = s(575593),
+    a = s(417597),
+    i = s(582754),
+    o = s(397927),
+    c = s(736653),
+    d = s(287809),
+    u = s(954571),
+    g = s(440938),
+    m = s(590180),
+    _ = s(511265),
+    h = s(206077),
+    p = s(100057),
+    f = s(392183),
+    E = s(751304),
+    C = s(561769),
+    b = s(998694),
+    A = s(758836),
+    x = s(652215),
+    S = s(985018),
+    v = s(157884),
+    L = s(517700),
+    T = s(304009),
+    I = s(495482),
+    O = s(479512),
+    y = s(867341),
+    j = s(632728),
+    N = s(368146),
+    k = s(536003);
 function R(e) {
-    var t;
-    let { isFetchingCategories: l, scrollerRef: R, tab: P } = e,
-        D = (0, f.uM)(),
-        w = null != (t = null == D ? void 0 : D.sessionId) ? t : "",
-        { noCache: B, includeUnpublished: M } = (0, A.A)(),
-        H = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-        G = (0, a.bG)([b.A], () => b.A.productsWithVariantsAsGroup),
-        [F, U] = r.useState(1),
-        z = (0, c.DP)(),
-        V = (0, i.qB)(z),
-        [K, W, Y] = r.useMemo(() => {
-            switch (P) {
-                case x.G2.AVATAR_DECORATIONS:
-                    return [C.intl.string(C.t.dRZYNE), V ? L.A : j.A, s.R.AVATAR_DECORATION];
-                case x.G2.PROFILE_EFFECTS:
-                    return [C.intl.string(C.t["1cNjtx"]), V ? k.A : N.A, s.R.PROFILE_EFFECT];
-                case x.G2.NAMEPLATES:
-                    return [C.intl.string(C.t.V68Fqz), V ? I.A : T.A, s.R.NAMEPLATE];
-                case x.G2.BUNDLES:
-                    return [C.intl.string(C.t.FYFpps), V ? y.A : _.A, s.R.BUNDLE];
+    let { isFetchingCategories: t, scrollerRef: s, tab: R } = e,
+        B = (0, g.uM)(),
+        P = B?.sessionId ?? "",
+        { noCache: M, includeUnpublished: D } = (0, b.A)(),
+        w = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        H = (0, a.bG)([m.A], () => m.A.productsWithVariantsAsGroup),
+        [G, U] = r.useState(1),
+        F = (0, c.DP)(),
+        V = (0, i.qB)(F),
+        [z, $, K] = r.useMemo(() => {
+            switch (R) {
+                case A.G2.AVATAR_DECORATIONS:
+                    return [S.intl.string(S.t.dRZYNE), V ? O.A : I.A, l.R.AVATAR_DECORATION];
+                case A.G2.PROFILE_EFFECTS:
+                    return [S.intl.string(S.t["1cNjtx"]), V ? k.A : N.A, l.R.PROFILE_EFFECT];
+                case A.G2.NAMEPLATES:
+                    return [S.intl.string(S.t.V68Fqz), V ? j.A : y.A, l.R.NAMEPLATE];
+                case A.G2.BUNDLES:
+                    return [S.intl.string(S.t.FYFpps), V ? T.A : L.A, l.R.BUNDLE];
             }
-        }, [P, V]),
-        q = (0, g.p)(),
-        Z = r.useMemo(
+        }, [R, V]),
+        W = (0, _.p)(),
+        Y = r.useMemo(
             () =>
-                q(
-                    G.filter((e) => {
-                        var t;
-                        return (
-                            (e.type === Y ||
-                                (e.type === s.R.VARIANTS_GROUP &&
-                                    (null == (t = e.variants) ? void 0 : t.some((e) => e.type === Y)) === !0)) &&
-                            !x.MS.some((t) => {
-                                let { categorySkuId: l } = t;
-                                return l === e.categorySkuId;
-                            })
-                        );
-                    }),
+                W(
+                    H.filter(
+                        (e) =>
+                            (e.type === K ||
+                                (e.type === l.R.VARIANTS_GROUP && e.variants?.some((e) => e.type === K) === !0)) &&
+                            !A.MS.some((t) => {
+                                let { categorySkuId: s } = t;
+                                return s === e.categorySkuId;
+                            }),
+                    ),
                 ),
-            [G, Y, q],
+            [H, K, W],
         ),
-        X = (0, p.X)(Z);
+        q = (0, h.X)(Y);
     return (r.useEffect(() => {
-        (0, m.z)({
-            sessionId: w,
-            checkpoint: m.t.SHOP_MOUNTED,
-            tab: P,
-            unpublishedCategoriesShown: M,
-            cacheDisabled: B,
+        (0, p.z)({
+            sessionId: P,
+            checkpoint: p.t.SHOP_MOUNTED,
+            tab: R,
+            unpublishedCategoriesShown: D,
+            cacheDisabled: M,
         });
     }, []),
     r.useEffect(() => {
-        l ||
-            (0, m.z)({
-                sessionId: w,
-                checkpoint: m.t.SHOP_RENDERED,
-                tab: P,
-                unpublishedCategoriesShown: M,
-                cacheDisabled: B,
+        t ||
+            (0, p.z)({
+                sessionId: P,
+                checkpoint: p.t.SHOP_RENDERED,
+                tab: R,
+                unpublishedCategoriesShown: D,
+                cacheDisabled: M,
             });
-    }, [w, M, B, l, P]),
-    l || null == H)
-        ? (0, n.jsx)(h.A, {})
+    }, [P, D, M, t, R]),
+    t || null == w)
+        ? (0, n.jsx)(f.A, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
-                      style: {
-                          backgroundImage: "url(".concat(W, ")"),
-                      },
-                      className: O.cI,
-                      children: (0, n.jsx)(o.Heading, {
-                          variant: "heading-xxl/extrabold",
-                          children: K,
-                      }),
+                      style: { backgroundImage: `url(${$})` },
+                      className: v.cI,
+                      children: (0, n.jsx)(o.Heading, { variant: "heading-xxl/extrabold", children: z }),
                   }),
                   (0, n.jsx)("div", {
-                      className: O.ZE,
-                      children: X.slice(40 * (F - 1), 40 * F).map((e, t) =>
-                          null == b.A.getCategory(e.categorySkuId)
-                              ? null
-                              : (0, n.jsx)(
-                                    f.R9,
-                                    {
-                                        newValue: {
-                                            tilePosition: t,
+                      className: v.ZE,
+                      children: q
+                          .slice(40 * (G - 1), 40 * G)
+                          .map((e, t) =>
+                              null == m.A.getCategory(e.categorySkuId)
+                                  ? null
+                                  : (0, n.jsx)(
+                                        g.R9,
+                                        {
+                                            newValue: { tilePosition: t },
+                                            children: (0, n.jsx)(
+                                                E.A,
+                                                { skuId: e.skuId, onClickAnalytics: (0, C.UU)(e, R, B) },
+                                                e.skuId,
+                                            ),
                                         },
-                                        children: (0, n.jsx)(
-                                            E.A,
-                                            {
-                                                skuId: e.skuId,
-                                                onClickAnalytics: (0, v.UU)(e, P, D),
-                                            },
-                                            e.skuId,
-                                        ),
-                                    },
-                                    e.skuId,
-                                ),
-                      ),
+                                        e.skuId,
+                                    ),
+                          ),
                   }),
-                  X.length > 40 &&
+                  q.length > 40 &&
                       (0, n.jsx)("div", {
-                          className: O.Ej,
+                          className: v.Ej,
                           children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(o.mgR, {
-                                  currentPage: F,
-                                  totalCount: X.length,
+                                  currentPage: G,
+                                  totalCount: q.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      var t;
-                                      d.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == D ? void 0 : D.sessionId,
-                                          page_section: null == D ? void 0 : D.pageSection,
-                                          page_category: null == D ? void 0 : D.pageCategory,
+                                      u.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: B?.sessionId,
+                                          page_section: B?.pageSection,
+                                          page_category: B?.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: "".concat(P, " page ").concat(e),
-                                          page_type: P,
+                                          cta_name: `${R} page ${e}`,
+                                          page_type: R,
                                       }),
                                           U(e),
-                                          null == R ||
-                                              null == (t = R.current) ||
-                                              t.scrollToTop({
-                                                  animate: !0,
-                                              });
+                                          s?.current?.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

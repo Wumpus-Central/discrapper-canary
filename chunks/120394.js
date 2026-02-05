@@ -1,3 +1,4 @@
+"use strict";
 var r = n(944024);
 e.exports = function (e) {
     var t = +e;

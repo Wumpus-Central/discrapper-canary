@@ -1,3 +1,4 @@
+"use strict";
 var r =
         Object.assign ||
         function (e) {
@@ -21,26 +22,18 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-
 function a(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function o(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
@@ -86,9 +79,7 @@ n(958554),
                     value: function () {
                         this._value.animate(
                             new this._animationClass(
-                                r({}, this._animationConfig, {
-                                    toValue: this._animationConfig.toValue.__getValue(),
-                                }),
+                                r({}, this._animationConfig, { toValue: this._animationConfig.toValue.__getValue() }),
                             ),
                             this._callback,
                         );

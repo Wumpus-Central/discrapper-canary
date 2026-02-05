@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     $4: "barBase__0f481",
     vC: "barButtonBase__0f481",

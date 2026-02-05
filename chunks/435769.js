@@ -1,122 +1,104 @@
-r.d(t, {
-    A: () => d,
-});
-var n = r(527758),
-    a = r(47312),
-    i = r(64700),
-    o = r(392852),
-    c = "hcaptcha-api-script-id",
+n.d(t, { A: () => h });
+var a = n(527758),
+    r = n(47312),
+    i = n(64700),
+    c = n(392852),
+    o = "hcaptcha-api-script-id",
     s = "hcaptchaOnLoad",
     p = [],
-    l = function (e) {
+    d = function (e) {
         void 0 === e && (e = {});
-        var t = (0, o.yO)(e.scriptLocation);
+        var t = (0, c.yO)(e.scriptLocation);
         delete e.scriptLocation;
-        var r = (0, o.CC)(t),
-            n = p.find(function (e) {
-                return e.scope === r.window;
+        var n = (0, c.CC)(t),
+            a = p.find(function (e) {
+                return e.scope === n.window;
             });
-        if (r.document.getElementById(c) && n) return n.promise;
-        var a = new Promise(function (n, a) {
-            r.window[s] = n;
+        if (n.document.getElementById(o) && a) return a.promise;
+        var r = new Promise(function (a, r) {
+            n.window[s] = a;
             var i = e.apihost || "https://js.hcaptcha.com";
             delete e.apihost;
-            var p = r.document.createElement("script");
-            (p.id = c),
+            var p = n.document.createElement("script");
+            (p.id = o),
                 (p.src = i + "/1/api.js?render=explicit&onload=" + s),
                 (p.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
                 (p.onerror = function (e) {
-                    return a("script-error");
+                    return r("script-error");
                 });
-            var l = (0, o.YK)(e);
-            (p.src += "" !== l ? "&" + l : ""), t.appendChild(p);
+            var d = (0, c.YK)(e);
+            (p.src += "" !== d ? "&" + d : ""), t.appendChild(p);
         });
-        return (
-            p.push({
-                promise: a,
-                scope: r.window,
-            }),
-            a
-        );
+        return p.push({ promise: r, scope: n.window }), r;
     };
-let d = (function (e) {
+let h = (function (e) {
     function t(t) {
-        var r;
+        var n;
         return (
-            ((r = e.call(this, t) || this)._hcaptcha = void 0),
-            (r.renderCaptcha = r.renderCaptcha.bind((0, n.A)(r))),
-            (r.resetCaptcha = r.resetCaptcha.bind((0, n.A)(r))),
-            (r.removeCaptcha = r.removeCaptcha.bind((0, n.A)(r))),
-            (r.isReady = r.isReady.bind((0, n.A)(r))),
-            (r.loadCaptcha = r.loadCaptcha.bind((0, n.A)(r))),
-            (r.handleOnLoad = r.handleOnLoad.bind((0, n.A)(r))),
-            (r.handleSubmit = r.handleSubmit.bind((0, n.A)(r))),
-            (r.handleExpire = r.handleExpire.bind((0, n.A)(r))),
-            (r.handleError = r.handleError.bind((0, n.A)(r))),
-            (r.handleOpen = r.handleOpen.bind((0, n.A)(r))),
-            (r.handleClose = r.handleClose.bind((0, n.A)(r))),
-            (r.handleChallengeExpired = r.handleChallengeExpired.bind((0, n.A)(r))),
-            (r.ref = i.createRef()),
-            (r.apiScriptRequested = !1),
-            (r.state = {
-                isApiReady: !1,
-                isRemoved: !1,
-                elementId: t.id,
-                captchaId: "",
-            }),
-            r
+            ((n = e.call(this, t) || this)._hcaptcha = void 0),
+            (n.renderCaptcha = n.renderCaptcha.bind((0, a.A)(n))),
+            (n.resetCaptcha = n.resetCaptcha.bind((0, a.A)(n))),
+            (n.removeCaptcha = n.removeCaptcha.bind((0, a.A)(n))),
+            (n.isReady = n.isReady.bind((0, a.A)(n))),
+            (n.loadCaptcha = n.loadCaptcha.bind((0, a.A)(n))),
+            (n.handleOnLoad = n.handleOnLoad.bind((0, a.A)(n))),
+            (n.handleSubmit = n.handleSubmit.bind((0, a.A)(n))),
+            (n.handleExpire = n.handleExpire.bind((0, a.A)(n))),
+            (n.handleError = n.handleError.bind((0, a.A)(n))),
+            (n.handleOpen = n.handleOpen.bind((0, a.A)(n))),
+            (n.handleClose = n.handleClose.bind((0, a.A)(n))),
+            (n.handleChallengeExpired = n.handleChallengeExpired.bind((0, a.A)(n))),
+            (n.ref = i.createRef()),
+            (n.apiScriptRequested = !1),
+            (n.state = { isApiReady: !1, isRemoved: !1, elementId: t.id, captchaId: "" }),
+            n
         );
     }
-    (0, a.A)(t, e);
-    var r = t.prototype;
+    (0, r.A)(t, e);
+    var n = t.prototype;
     return (
-        (r.componentDidMount = function () {
+        (n.componentDidMount = function () {
             var e = this,
-                t = (0, o.yO)(this.props.scriptLocation),
-                r = (0, o.CC)(t);
-            ((this._hcaptcha = r.window.hcaptcha || void 0), void 0 !== this._hcaptcha)
-                ? this.setState(
-                      {
-                          isApiReady: !0,
-                      },
-                      function () {
-                          e.renderCaptcha();
-                      },
-                  )
+                t = (0, c.yO)(this.props.scriptLocation),
+                n = (0, c.CC)(t);
+            ((this._hcaptcha = n.window.hcaptcha || void 0), void 0 !== this._hcaptcha)
+                ? this.setState({ isApiReady: !0 }, function () {
+                      e.renderCaptcha();
+                  })
                 : this.loadCaptcha();
         }),
-        (r.componentWillUnmount = function () {
+        (n.componentWillUnmount = function () {
             var e = this.state.captchaId,
                 t = this._hcaptcha;
             this.isReady() && (t.reset(e), t.remove(e));
         }),
-        (r.shouldComponentUpdate = function (e, t) {
+        (n.shouldComponentUpdate = function (e, t) {
             return this.state.isApiReady === t.isApiReady && this.state.isRemoved === t.isRemoved;
         }),
-        (r.componentDidUpdate = function (e) {
+        (n.componentDidUpdate = function (e) {
             var t = this;
-            ["sitekey", "size", "theme", "tabindex", "languageOverride", "endpoint"].every(function (r) {
-                return e[r] === t.props[r];
+            ["sitekey", "size", "theme", "tabindex", "languageOverride", "endpoint"].every(function (n) {
+                return e[n] === t.props[n];
             }) ||
                 this.removeCaptcha(function () {
                     t.renderCaptcha();
                 });
         }),
-        (r.loadCaptcha = function () {
+        (n.loadCaptcha = function () {
             if (!this.apiScriptRequested) {
                 var e = this.props,
                     t = e.apihost,
-                    r = e.assethost,
-                    n = e.endpoint,
-                    a = e.host,
+                    n = e.assethost,
+                    a = e.endpoint,
+                    r = e.host,
                     i = e.imghost;
-                l({
+                d({
                     apihost: t,
-                    assethost: r,
-                    endpoint: n,
+                    assethost: n,
+                    endpoint: a,
                     hl: e.languageOverride,
-                    host: a,
+                    host: r,
                     imghost: i,
                     recaptchacompat: !1 === e.reCaptchaCompat ? "off" : null,
                     reportapi: e.reportapi,
@@ -130,7 +112,7 @@ let d = (function (e) {
                     (this.apiScriptRequested = !0);
             }
         }),
-        (r.renderCaptcha = function (e) {
+        (n.renderCaptcha = function (e) {
             if (this.state.isApiReady) {
                 var t = Object.assign(
                         {
@@ -142,119 +124,97 @@ let d = (function (e) {
                             callback: this.handleSubmit,
                         },
                         this.props,
-                        {
-                            hl: this.props.hl || this.props.languageOverride,
-                            languageOverride: void 0,
-                        },
+                        { hl: this.props.hl || this.props.languageOverride, languageOverride: void 0 },
                     ),
-                    r = this._hcaptcha.render(this.ref.current, t);
-                this.setState(
-                    {
-                        isRemoved: !1,
-                        captchaId: r,
-                    },
-                    function () {
-                        e && e();
-                    },
-                );
+                    n = this._hcaptcha.render(this.ref.current, t);
+                this.setState({ isRemoved: !1, captchaId: n }, function () {
+                    e && e();
+                });
             }
         }),
-        (r.resetCaptcha = function () {
+        (n.resetCaptcha = function () {
             var e = this.state.captchaId,
                 t = this._hcaptcha;
             this.isReady() && t.reset(e);
         }),
-        (r.removeCaptcha = function (e) {
+        (n.removeCaptcha = function (e) {
             var t = this.state.captchaId,
-                r = this._hcaptcha;
+                n = this._hcaptcha;
             this.isReady() &&
-                this.setState(
-                    {
-                        isRemoved: !0,
-                    },
-                    function () {
-                        r.remove(t), e && e();
-                    },
-                );
+                this.setState({ isRemoved: !0 }, function () {
+                    n.remove(t), e && e();
+                });
         }),
-        (r.handleOnLoad = function () {
+        (n.handleOnLoad = function () {
             var e = this;
-            this.setState(
-                {
-                    isApiReady: !0,
-                },
-                function () {
-                    var t = (0, o.yO)(e.props.scriptLocation);
-                    (e._hcaptcha = (0, o.CC)(t).window.hcaptcha),
-                        e.renderCaptcha(function () {
-                            var t = e.props.onLoad;
-                            t && t();
-                        });
-                },
-            );
+            this.setState({ isApiReady: !0 }, function () {
+                var t = (0, c.yO)(e.props.scriptLocation);
+                (e._hcaptcha = (0, c.CC)(t).window.hcaptcha),
+                    e.renderCaptcha(function () {
+                        var t = e.props.onLoad;
+                        t && t();
+                    });
+            });
         }),
-        (r.handleSubmit = function (e) {
+        (n.handleSubmit = function (e) {
             var t = this.props.onVerify,
-                r = this.state,
-                n = r.isRemoved,
-                a = r.captchaId,
+                n = this.state,
+                a = n.isRemoved,
+                r = n.captchaId,
                 i = this._hcaptcha;
-            if (void 0 !== i && !n) {
-                var o = i.getResponse(a),
-                    c = i.getRespKey(a);
-                t && t(o, c);
+            if (void 0 !== i && !a) {
+                var c = i.getResponse(r),
+                    o = i.getRespKey(r);
+                t && t(c, o);
             }
         }),
-        (r.handleExpire = function () {
+        (n.handleExpire = function () {
             var e = this.props.onExpire,
                 t = this.state.captchaId,
-                r = this._hcaptcha;
-            this.isReady() && (r.reset(t), e && e());
-        }),
-        (r.handleError = function (e) {
-            var t = this.props.onError,
-                r = this.state.captchaId,
                 n = this._hcaptcha;
-            this.isReady() && n.reset(r), t && t(e);
+            this.isReady() && (n.reset(t), e && e());
         }),
-        (r.isReady = function () {
+        (n.handleError = function (e) {
+            var t = this.props.onError,
+                n = this.state.captchaId,
+                a = this._hcaptcha;
+            this.isReady() && a.reset(n), t && t(e);
+        }),
+        (n.isReady = function () {
             var e = this.state,
                 t = e.isApiReady,
-                r = e.isRemoved;
-            return t && !r;
+                n = e.isRemoved;
+            return t && !n;
         }),
-        (r.handleOpen = function () {
+        (n.handleOpen = function () {
             this.isReady() && this.props.onOpen && this.props.onOpen();
         }),
-        (r.handleClose = function () {
+        (n.handleClose = function () {
             this.isReady() && this.props.onClose && this.props.onClose();
         }),
-        (r.handleChallengeExpired = function () {
+        (n.handleChallengeExpired = function () {
             this.isReady() && this.props.onChalExpired && this.props.onChalExpired();
         }),
-        (r.execute = function (e) {
+        (n.execute = function (e) {
             void 0 === e && (e = null);
             var t = this.state.captchaId,
-                r = this._hcaptcha;
-            if (this.isReady()) return e && "object" != typeof e && (e = null), r.execute(t, e);
+                n = this._hcaptcha;
+            if (this.isReady()) return e && "object" != typeof e && (e = null), n.execute(t, e);
         }),
-        (r.setData = function (e) {
+        (n.setData = function (e) {
             var t = this.state.captchaId,
-                r = this._hcaptcha;
-            this.isReady() && (e && "object" != typeof e && (e = null), r.setData(t, e));
+                n = this._hcaptcha;
+            this.isReady() && (e && "object" != typeof e && (e = null), n.setData(t, e));
         }),
-        (r.getResponse = function () {
+        (n.getResponse = function () {
             return this._hcaptcha.getResponse(this.state.captchaId);
         }),
-        (r.getRespKey = function () {
+        (n.getRespKey = function () {
             return this._hcaptcha.getRespKey(this.state.captchaId);
         }),
-        (r.render = function () {
+        (n.render = function () {
             var e = this.state.elementId;
-            return i.createElement("div", {
-                ref: this.ref,
-                id: e,
-            });
+            return i.createElement("div", { ref: this.ref, id: e });
         }),
         t
     );

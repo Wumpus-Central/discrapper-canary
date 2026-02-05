@@ -1,3 +1,2 @@
-e.exports = {
-    r: "menuIcon__62974",
-};
+"use strict";
+e.exports = { r: "menuIcon__62974" };

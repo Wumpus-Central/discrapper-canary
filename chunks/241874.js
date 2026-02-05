@@ -1,94 +1,87 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
+n.d(t, { A: () => A });
+var i = n(627968),
     l = n(64700),
-    i = n(143413),
-    a = n(860227),
-    s = n(643204),
+    a = n(143413),
+    s = n(860227),
+    r = n(643204),
     o = n(449859),
     c = n(535421),
-    u = n(112758),
-    d = n(652215);
-let f = l.memo(function (e) {
+    d = n(112758),
+    u = n(652215);
+let h = l.memo(function (e) {
         let {
                 message: t,
                 channel: n,
-                compact: i = !1,
-                groupId: a,
+                compact: a = !1,
+                groupId: s,
                 isGroupStart: o,
-                usernameProfile: f,
-                avatarProfile: p,
-                setPopout: h,
-                author: b,
+                usernameProfile: h,
+                avatarProfile: m,
+                setPopout: A,
+                author: p,
                 repliedMessage: g,
-                roleIcon: m,
+                roleIcon: f,
             } = e,
-            A = (0, u.r4)(t.author.id, n.id),
-            y = (0, u.m)(t, n, f, h),
-            O = (0, u.Jo)(p, h),
-            j = l.useCallback(() => {
-                h({
-                    usernameProfile: !1,
-                    avatarProfile: !1,
-                    referencedUsernameProfile: !1,
-                });
-            }, [h]);
-        return (0, r.jsx)(s.Ay, {
+            _ = (0, d.r4)(t.author.id, n.id),
+            E = (0, d.m)(t, n, h, A),
+            C = (0, d.Jo)(m, A),
+            x = l.useCallback(() => {
+                A({ usernameProfile: !1, avatarProfile: !1, referencedUsernameProfile: !1 });
+            }, [A]);
+        return (0, i.jsx)(r.Ay, {
             guildId: n.guild_id,
             message: t,
             channel: n,
             repliedMessage: g,
-            author: b,
-            compact: i,
-            subscribeToGroupId: a,
-            showTimestampOnHover: !o && i && t.type !== d.lAJ.REPLY,
+            author: p,
+            compact: a,
+            subscribeToGroupId: s,
+            showTimestampOnHover: !o && a && t.type !== u.lAJ.REPLY,
             renderPopout: c.A,
-            showAvatarPopout: p,
-            showUsernamePopout: f,
-            onClickAvatar: O,
-            onClickUsername: y,
-            onContextMenu: A,
-            onPopoutRequestClose: j,
-            roleIcon: m,
+            showAvatarPopout: m,
+            showUsernamePopout: h,
+            onClickAvatar: C,
+            onClickUsername: E,
+            onContextMenu: _,
+            onPopoutRequestClose: x,
+            roleIcon: f,
         });
     }),
-    p = l.memo(o.A);
-
-function h(e) {
+    m = l.memo(o.A);
+function A(e) {
     let {
             messageProps: t,
             setPopout: n,
             messagePopouts: l,
-            replyReference: s,
+            replyReference: r,
             author: o,
             repliedMessage: c,
-            roleIcon: u,
+            roleIcon: d,
         } = e,
-        { message: d, compact: h, channel: b, groupId: g } = t,
-        { usernameProfile: m, avatarProfile: A } = l;
-    if ((0, i.A)(d)) return null;
-    let y = d.id === g;
-    return y || h || null != s
-        ? (0, r.jsx)(f, {
-              message: d,
-              channel: b,
-              compact: h,
+        { message: u, compact: A, channel: p, groupId: g } = t,
+        { usernameProfile: f, avatarProfile: _ } = l;
+    if ((0, a.A)(u)) return null;
+    let E = u.id === g;
+    return E || A || null != r
+        ? (0, i.jsx)(h, {
+              message: u,
+              channel: p,
+              compact: A,
               subscribeToGroupId: g,
-              isGroupStart: y,
+              isGroupStart: E,
               groupId: g,
               setPopout: n,
-              usernameProfile: m,
-              avatarProfile: A,
+              usernameProfile: f,
+              avatarProfile: _,
               author: o,
               repliedMessage: c,
-              roleIcon: u,
+              roleIcon: d,
           })
-        : (0, r.jsx)(p, {
+        : (0, i.jsx)(m, {
               compact: !0,
-              timestamp: d.timestamp,
+              timestamp: u.timestamp,
               isInline: !1,
-              id: (0, a.xl)(d),
+              id: (0, s.xl)(u),
               isVisibleOnlyOnHover: !0,
               cozyAlt: !0,
           });

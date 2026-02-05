@@ -1,11 +1,5 @@
-n.d(t, {
-    Dd: () => u,
-    PE: () => h,
-    Wn: () => _,
-    eI: () => p,
-    mr: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Dd: () => c, PE: () => h, Wn: () => p, eI: () => f, mr: () => d });
 var r = n(166532),
     i = n(71532),
     a = n(818348),
@@ -28,7 +22,7 @@ let o = new Set([
         ]),
     ]),
     l = new Set([]),
-    c = {
+    u = {
         [a.he.PAYPAL]: {
             paymentSourceType: a.he.PAYPAL,
             subtitleTranslationKey: s.t.Djzd7L,
@@ -91,14 +85,14 @@ let o = new Set([
             toStep: r.pn.EPS_INFORMATION,
         },
     },
-    u = (e) =>
+    c = (e) =>
         e.map((e) => ({
             id: e.custom_payment_method_id,
             options: {
                 type: "static",
                 subtitle:
-                    e.payment_source_type in c
-                        ? s.intl.string(c[e.payment_source_type].subtitleTranslationKey)
+                    e.payment_source_type in u
+                        ? s.intl.string(u[e.payment_source_type].subtitleTranslationKey)
                         : void 0,
             },
         })),
@@ -118,19 +112,13 @@ let o = new Set([
         [a.he.PRZELEWY24]: "p24",
         [a.he.EPS]: "eps",
     };
-
+function _(e) {
+    return e in u;
+}
 function f(e) {
-    return e in c;
+    return _(e) ? (u[e].toStep ?? null) : null;
 }
-
-function p(e) {
-    if (f(e)) {
-        var t;
-        return null != (t = c[e].toStep) ? t : null;
-    }
-    return null;
-}
-let _ = (e, t) =>
+let p = (e, t) =>
     "card" === e || "link_card_brand" === e
         ? a.he.CARD
         : "ideal" === e
@@ -142,7 +130,6 @@ let _ = (e, t) =>
               : e in t
                 ? t[e]
                 : null;
-
 function h(e) {
     return l.size > 0 && l.has(e) ? "test" === (0, i.ux)() : o.has(e);
 }

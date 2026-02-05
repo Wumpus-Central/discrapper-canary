@@ -1,3 +1,2 @@
-e.exports = {
-    X: "noBoxShadowMargin_d0aeea",
-};
+"use strict";
+e.exports = { X: "noBoxShadowMargin_d0aeea" };

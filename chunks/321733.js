@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     for (var n, r = arguments.length, i = Array(r > 2 ? r - 2 : 0), a = 2; a < r; a++) i[a - 2] = arguments[a];
     if (!e) {
@@ -16,6 +17,4 @@ function r(e, t) {
         throw ((n.framesToPop = 1), n);
     }
 }
-n.d(t, {
-    V: () => r,
-});
+n.d(t, { V: () => r });

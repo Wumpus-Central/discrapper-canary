@@ -1,53 +1,38 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(562465),
     i = n(73153),
     a = n(325909),
     s = n(734057),
     o = n(994500),
     l = n(287809),
-    c = n(954571),
-    u = n(157559),
+    u = n(954571),
+    c = n(157559),
     d = n(49229),
-    f = n(956793),
-    p = n(652215),
-    _ = n(985018);
+    _ = n(956793),
+    f = n(652215),
+    p = n(985018);
 let h = {
     call(e, t, n, i, a) {
         let s = (n) => {
-            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
+            _.default.selectVoiceChannel(e, t), n && this.ring(e), a?.(e);
         };
         if (null != i) {
             if (o.A.isBlocked(i)) return;
             let t = l.default.getUser(i);
-            r.Bo.get({
-                url: p.Rsh.CALL(e),
-                oldFormErrors: !0,
-                rejectWithError: !0,
-            }).then(
+            r.Bo.get({ url: f.Rsh.CALL(e), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
                     s(n && e.body.ringable);
                 },
                 () => {
-                    c.default.track(p.HAw.OPEN_POPOUT, {
-                        type: "Not Friend",
-                        source: "Call",
-                    }),
-                        u.A.show({
-                            title: _.intl.string(_.t.My50nf),
-                            body: _.intl.format(_.t.IdKo2z, {
-                                username: null != t ? t.username : "",
-                            }),
-                            confirmText: _.intl.string(_.t["PMsq/b"]),
-                            cancelText: _.intl.string(_.t.BddRzS),
+                    u.default.track(f.HAw.OPEN_POPOUT, { type: "Not Friend", source: "Call" }),
+                        c.A.show({
+                            title: p.intl.string(p.t.My50nf),
+                            body: p.intl.format(p.t.IdKo2z, { username: null != t ? t.username : "" }),
+                            confirmText: p.intl.string(p.t["PMsq/b"]),
+                            cancelText: p.intl.string(p.t.BddRzS),
                             onConfirm() {
-                                d.A.addRelationship({
-                                    userId: i,
-                                    context: {
-                                        location: "Call",
-                                    },
-                                });
+                                d.A.addRelationship({ userId: i, context: { location: "Call" } });
                             },
                         });
                 },
@@ -57,41 +42,22 @@ let h = {
     ring(e, t, n) {
         let o = s.A.getChannel(e);
         if (null == o) return;
-        let l = (0, a.p)(o),
-            c = p.kvI.CALLABLE.has(o.type);
+        let l = (0, a.pW)(o),
+            u = f.kvI.CALLABLE.has(o.type);
         if (l) {
             r.Bo.post({
-                url: p.Rsh.CALL_RING(e),
-                body: {
-                    recipients: t,
-                    analytics_location: n,
-                },
+                url: f.Rsh.CALL_RING(e),
+                body: { recipients: t, analytics_location: n },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
-                o.type === p.rbe.GUILD_VOICE &&
+                o.type === f.rbe.GUILD_VOICE &&
                     null != t &&
-                    i.h.dispatch({
-                        type: "GUILD_LOCAL_RING_START",
-                        ringing: t,
-                        guildId: o.guild_id,
-                    });
+                    i.h.dispatch({ type: "GUILD_LOCAL_RING_START", ringing: t, guildId: o.guild_id });
             return;
         }
-        c &&
-            i.h.dispatch({
-                type: "CALL_ENQUEUE_RING",
-                channelId: e,
-                recipients: t,
-            });
+        u && i.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });
     },
     stopRinging: (e, t) =>
-        r.Bo.post({
-            url: p.Rsh.CALL_STOP_RINGING(e),
-            body: {
-                recipients: t,
-            },
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        }),
+        r.Bo.post({ url: f.Rsh.CALL_STOP_RINGING(e), body: { recipients: t }, oldFormErrors: !0, rejectWithError: !0 }),
 };

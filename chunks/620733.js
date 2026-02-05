@@ -1,88 +1,32 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r,
-    i = n(311907),
+n.d(e, { A: () => c });
+var i = n(311907),
     s = n(73153);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+let a = [];
+function r() {
+    a = [];
 }
-let l = [];
-
-function c() {
-    l = [];
-}
-class o extends (r = i.Ay.Store) {
+class l extends i.Ay.Store {
+    static displayName = "AuthSessionsStore";
     getSessions() {
-        return l;
+        return a;
     }
 }
-a(o, "displayName", "AuthSessionsStore");
-let d = new o(s.h, {
-    LOGOUT: c,
-    LOGIN_SUCCESS: c,
-    FETCH_AUTH_SESSIONS_SUCCESS: function (e) {
-        let { sessions: t } = e;
-        l = t.map((e) => {
-            var t, n;
-            return (
-                (t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                a(e, t, n[t]);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (n = n =
-                    {
-                        approx_last_used_time: new Date(e.approx_last_used_time),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t
-            );
-        });
+let c = new l(s.h, {
+    LOGOUT: r,
+    LOGIN_SUCCESS: r,
+    FETCH_AUTH_SESSIONS_SUCCESS: function (t) {
+        let { sessions: e } = t;
+        a = e.map((t) => ({ ...t, approx_last_used_time: new Date(t.approx_last_used_time) }));
     },
-    LOGOUT_AUTH_SESSIONS_SUCCESS: function (e) {
-        let { sessionIdHashes: t } = e,
-            n = [...l],
-            r = !1;
-        for (let e of t) {
-            let t = n.findIndex((t) => t.id_hash === e);
-            t >= 0 && (n.splice(t, 1), (r = !0));
+    LOGOUT_AUTH_SESSIONS_SUCCESS: function (t) {
+        let { sessionIdHashes: e } = t,
+            n = [...a],
+            i = !1;
+        for (let t of e) {
+            let e = n.findIndex((e) => e.id_hash === t);
+            e >= 0 && (n.splice(e, 1), (i = !0));
         }
-        if (!r) return !1;
-        l = n;
+        if (!i) return !1;
+        a = n;
     },
 });

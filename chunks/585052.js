@@ -1,35 +1,26 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(158954),
-    s = n(975571),
-    o = n(809505),
-    l = n(253932),
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
+    r = n(158954),
+    a = n(975571),
+    l = n(809505),
+    o = n(253932),
     c = n(84373),
-    u = n(871930),
-    d = n(531525),
-    f = n(652215),
-    p = n(985018);
-
-function _() {
+    d = n(871930),
+    u = n(531525),
+    _ = n(652215),
+    m = n(985018);
+function A() {
     let e = (0, c.o)(),
-        t = i.useMemo(() => (0, o.YS)(), []);
-    return (0, r.jsxs)(u.h, {
-        setting: d.H.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
+        t = s.useMemo(() => (0, l.YS)(), []);
+    return (0, i.jsxs)(d.h, {
+        setting: u.H.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
-            (0, r.jsx)(u._, {
-                header: p.intl.string(p.t.tiCXaH),
-                description: p.intl.format(p.t.RvjRRI, {
-                    appealLink: s.A.getArticleURL(f.MVz.SAFE_DIRECT_MESSAGING),
-                }),
+            (0, i.jsx)(d._, {
+                header: m.intl.string(m.t.tiCXaH),
+                description: m.intl.format(m.t.RvjRRI, { appealLink: a.A.getArticleURL(_.MVz.SAFE_DIRECT_MESSAGING) }),
             }),
-            (0, r.jsx)(a.z6M, {
-                value: e,
-                options: t,
-                onChange: (e) => l.he.updateSetting(e),
-            }),
+            (0, i.jsx)(r.z6M, { value: e, options: t, onChange: (e) => o.he.updateSetting(e) }),
         ],
     });
 }

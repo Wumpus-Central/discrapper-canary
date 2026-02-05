@@ -1,92 +1,45 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968),
+    s = n(64700),
     l = n(372598),
-    s = n(53594),
+    r = n(53594),
     a = n(449585),
-    c = n(864557);
-
-function o(e) {
+    o = n(864557);
+function d(e) {
     let { rule: t, onChangeRule: n } = e,
-        o = i.useMemo(() => (0, s.J6)(t.triggerType), [t.triggerType]),
-        d = a.Bx(t.guildId),
-        u = i.useMemo(() => (0, l.XO)(), []),
-        f = (e, r) => {
-            var i, l;
-            if (null == r) return;
-            let s = t.actions.some((e) => e.type === r.type),
-                a = [...t.actions, r];
+        d = s.useMemo(() => (0, r.J6)(t.triggerType), [t.triggerType]),
+        c = a.Bx(t.guildId),
+        u = s.useMemo(() => (0, l.XO)(), []),
+        m = (e, i) => {
+            if (null == i) return;
+            let s = t.actions.some((e) => e.type === i.type),
+                l = [...t.actions, i];
             if (s) {
-                let n = t.actions.filter((e) => e.type !== r.type);
-                a = e ? [...n, r] : n;
+                let n = t.actions.filter((e) => e.type !== i.type);
+                l = e ? [...n, i] : n;
             }
-            n(
-                ((i = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, t)),
-                (l = l =
-                    {
-                        actions: a,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                      }),
-                i),
-            );
+            n({ ...t, actions: l });
         };
-    return (0, r.jsx)(r.Fragment, {
-        children: o.map((e) => {
+    return (0, i.jsx)(i.Fragment, {
+        children: d.map((e) => {
             let n = t.actions.find((t) => t.type === e);
-            return (0, r.jsx)(
-                c.A,
+            return (0, i.jsx)(
+                o.A,
                 {
                     guildId: t.guildId,
                     triggerType: t.triggerType,
-                    action: null != n ? n : u[e],
+                    action: n ?? u[e],
                     toggled: null != n,
                     onToggleAction: async (n) => {
-                        let r = t.actions.find((t) => t.type === e),
-                            i = null != r,
+                        let i = t.actions.find((t) => t.type === e),
+                            s = null != i,
                             l = u[e],
-                            s = n ? r : l;
-                        if (null != s && (!i || n)) {
-                            let n = d[e];
-                            null != n ? f(!0, await n(t, s)) : f(!0, s);
-                        } else f(!1, i ? r : l);
+                            r = n ? i : l;
+                        if (null != r && (!s || n)) {
+                            let n = c[e];
+                            null != n ? m(!0, await n(t, r)) : m(!0, r);
+                        } else m(!1, s ? i : l);
                     },
                 },
                 e,

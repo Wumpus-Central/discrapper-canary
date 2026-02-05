@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => s });
 var r = n(626584),
     i = n(723176);
 let a = new r.A("ChannelReader");
@@ -10,24 +8,20 @@ class s {
         let n = performance.now(),
             r = i.A.channels(e).getManySyncUnsafe(t),
             s = performance.now() - n;
-        return (
-            a.log("synchronously loaded in ".concat(s, "ms (guild: ").concat(t, ", channels: ").concat(r.length, ")")),
-            [r, s]
-        );
+        return a.log(`synchronously loaded in ${s}ms (guild: ${t}, channels: ${r.length})`), [r, s];
     }
     static async getAsync(e, t) {
         let n = performance.now(),
             r = await i.A.channels(e).getMany(t),
             s = performance.now() - n;
-        return a.verbose("loaded in ".concat(s, "ms (guild: ").concat(t, ", channels: ").concat(r.length, ")")), r;
+        return a.verbose(`loaded in ${s}ms (guild: ${t}, channels: ${r.length})`), r;
     }
     static async getGuildIds() {
         try {
-            var e;
-            let t = i.A.channels();
-            if (null == t) return new Set();
-            let n = (null != (e = await t.getGuildIds()) ? e : []).filter((e) => null !== e && "string" == typeof e);
-            return new Set(n);
+            let e = i.A.channels();
+            if (null == e) return new Set();
+            let t = ((await e.getGuildIds()) ?? []).filter((e) => null !== e && "string" == typeof e);
+            return new Set(t);
         } catch (e) {
             return a.warn("couldn't get guild ids", e), new Set();
         }

@@ -1,7 +1,5 @@
-n.d(t, {
-    Kk: () => r,
-    UO: () => i,
-});
+"use strict";
+n.d(t, { Kk: () => r, UO: () => i });
 var r = (function (e) {
     return (
         (e.CHILLING = "chilling"),

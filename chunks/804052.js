@@ -1,107 +1,74 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(397927),
     o = n(405269),
-    c = n(652215),
-    u = n(985018),
-    d = n(671818);
-let p = (e) => {
+    d = n(652215),
+    c = n(985018),
+    u = n(671818);
+let A = (e) => {
         let { IconComponent: t, className: n } = e;
-        return (0, r.jsx)("div", {
-            className: a()(d.kJ, n),
-            children: (0, r.jsx)(t, {
-                className: d.Kk,
-                color: "currentColor",
-            }),
+        return (0, i.jsx)("div", {
+            className: l()(u.kJ, n),
+            children: (0, i.jsx)(t, { className: u.Kk, color: "currentColor" }),
         });
     },
-    f = (e) => {
-        let { circle: t, smallHeader: n, text: i, className: l } = e;
-        return (0, r.jsxs)("div", {
-            className: a()(d.yX, l),
+    h = (e) => {
+        let { circle: t, smallHeader: n, text: r, className: a } = e;
+        return (0, i.jsxs)("div", {
+            className: l()(u.yX, a),
             children: [
                 t,
-                (0, r.jsxs)("div", {
-                    className: d.h_,
+                (0, i.jsxs)("div", {
+                    className: u.h_,
                     children: [
-                        null != n
-                            ? (0, r.jsx)("div", {
-                                  className: d.VA,
-                                  children: n,
-                              })
-                            : null,
-                        (0, r.jsx)("div", {
-                            className: d.Qq,
-                            children: i,
-                        }),
+                        null != n ? (0, i.jsx)("div", { className: u.VA, children: n }) : null,
+                        (0, i.jsx)("div", { className: u.Qq, children: r }),
                     ],
                 }),
             ],
         });
     };
-class h extends i.Component {
+class _ extends r.Component {
     render() {
         let { reason: e, className: t } = this.props;
-        if (e.type === c.g_B.RECENT_RELEASE_DATE)
-            return (0, r.jsx)(f, {
+        if (e.type === d.g_B.RECENT_RELEASE_DATE)
+            return (0, i.jsx)(h, {
                 className: t,
-                circle: (0, r.jsx)(p, {
-                    IconComponent: s.CTc,
-                }),
-                smallHeader: u.intl.string(u.t.u81aYY),
+                circle: (0, i.jsx)(A, { IconComponent: s.CTc }),
+                smallHeader: c.intl.string(c.t.u81aYY),
                 text: (0, o.i$)(e.releaseDate, "LL"),
             });
-        if (e.type === c.g_B.RELEASE_DATE)
-            return (0, r.jsx)(f, {
+        if (e.type === d.g_B.RELEASE_DATE)
+            return (0, i.jsx)(h, {
                 className: t,
-                circle: (0, r.jsx)(p, {
-                    IconComponent: s.CTc,
-                }),
-                smallHeader: u.intl.string(u.t.qpwaNY),
+                circle: (0, i.jsx)(A, { IconComponent: s.CTc }),
+                smallHeader: c.intl.string(c.t.qpwaNY),
                 text: (0, o.i$)(e.releaseDate, "LL"),
             });
-        if (e.type === c.g_B.EARLY_ACCESS)
+        if (e.type === d.g_B.EARLY_ACCESS)
             if (null != e.releaseDate)
-                return (0, r.jsx)(f, {
+                return (0, i.jsx)(h, {
                     className: t,
-                    circle: (0, r.jsx)(p, {
-                        IconComponent: s.wUM,
-                        className: d.gY,
-                    }),
-                    smallHeader: u.intl.string(u.t.HYys0s),
+                    circle: (0, i.jsx)(A, { IconComponent: s.wUM, className: u.gY }),
+                    smallHeader: c.intl.string(c.t.HYys0s),
                     text: (0, o.i$)(e.releaseDate, "LL"),
                 });
             else
-                return (0, r.jsx)(f, {
+                return (0, i.jsx)(h, {
                     className: t,
-                    circle: (0, r.jsx)(p, {
-                        IconComponent: s.wUM,
-                        className: d.gY,
-                    }),
-                    text: u.intl.string(u.t.HYys0s),
+                    circle: (0, i.jsx)(A, { IconComponent: s.wUM, className: u.gY }),
+                    text: c.intl.string(c.t.HYys0s),
                 });
-        return e.type === c.g_B.FLAVOR_TEXT
-            ? (0, r.jsx)(f, {
-                  circle: (0, r.jsx)(p, {
-                      IconComponent: s.A9s,
-                  }),
-                  text: e.flavorText,
-                  className: t,
-              })
-            : e.type === c.g_B.HAS_FREE_PREMIUM_CONTENT
-              ? (0, r.jsx)(f, {
+        return e.type === d.g_B.FLAVOR_TEXT
+            ? (0, i.jsx)(h, { circle: (0, i.jsx)(A, { IconComponent: s.A9s }), text: e.flavorText, className: t })
+            : e.type === d.g_B.HAS_FREE_PREMIUM_CONTENT
+              ? (0, i.jsx)(h, {
                     className: t,
-                    circle: (0, r.jsx)(p, {
-                        IconComponent: s.tvc,
-                        className: d.uf,
-                    }),
-                    text: u.intl.string(u.t.R9SwVl),
+                    circle: (0, i.jsx)(A, { IconComponent: s.tvc, className: u.uf }),
+                    text: c.intl.string(c.t.R9SwVl),
                 })
               : null;
     }

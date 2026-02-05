@@ -24,12 +24,7 @@ t.parse = function (e) {
             .forEach(function (e) {
                 var t = e[0],
                     i = e.slice(2);
-                "m" === t &&
-                    (n.push({
-                        rtp: [],
-                        fmtp: [],
-                    }),
-                    (r = n[n.length - 1]));
+                "m" === t && (n.push({ rtp: [], fmtp: [] }), (r = n[n.length - 1]));
                 for (var o = 0; o < (s[t] || []).length; o += 1) {
                     var l = s[t][o];
                     if (l.reg.test(i)) return a(l, r, i);
@@ -52,11 +47,7 @@ var l = function (e, t) {
     }),
     (t.parseRemoteCandidates = function (e) {
         for (var t = [], n = e.split(" ").map(r), i = 0; i < n.length; i += 3)
-            t.push({
-                component: n[i],
-                ip: n[i + 1],
-                port: n[i + 2],
-            });
+            t.push({ component: n[i], ip: n[i + 1], port: n[i + 2] });
         return t;
     }),
     (t.parseImageAttributes = function (e) {
@@ -73,11 +64,7 @@ var l = function (e, t) {
                 var t,
                     n = !1;
                 return (
-                    "~" !== e[0] ? (t = r(e)) : ((t = r(e.substring(1, e.length))), (n = !0)),
-                    {
-                        scid: t,
-                        paused: n,
-                    }
+                    "~" !== e[0] ? (t = r(e)) : ((t = r(e.substring(1, e.length))), (n = !0)), { scid: t, paused: n }
                 );
             });
         });

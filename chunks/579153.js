@@ -1,51 +1,47 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
+n.d(t, { A: () => g });
+var i = n(627968),
     l = n(64700),
-    i = n(397927),
+    s = n(397927),
     a = n(688810),
-    s = n(592982),
+    r = n(592982),
     o = n(384059),
-    c = n(480890),
-    u = n(246356),
-    d = n(709562),
-    f = n(806931),
-    p = n(985018);
-let h = (e) => {
+    d = n(480890),
+    c = n(246356),
+    u = n(709562),
+    h = n(806931),
+    A = n(985018);
+let g = (e) => {
     let { channel: t, remoteMode: n = !1 } = e,
-        { parentAnalyticsLocation: h } = (0, a.Ay)(),
-        b = l.useRef(null);
-    return (0, r.jsx)(i.YNO, {
-        targetElementRef: b,
+        { parentAnalyticsLocation: g } = (0, a.Ay)(),
+        m = l.useRef(null);
+    return (0, i.jsx)(s.YNO, {
+        targetElementRef: m,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, r.jsx)(u.A, {
-                children: (0, r.jsx)(s.A, {
+            return (0, i.jsx)(c.A, {
+                children: (0, i.jsx)(r.A, {
                     onClose: l,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, c.s)("MoreSettingsMenu", h, {
-                        entrypoint: f.GK.THREE_DOT,
-                    }),
+                    onInteraction: (0, d.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
                 }),
             });
         },
         align: "right",
         position: "top",
-        animation: i.YNO.Animation.FADE,
+        animation: s.YNO.Animation.FADE,
         spacing: 16,
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: l } = t;
-            return (0, r.jsx)(d.l, {
-                ref: b,
+            return (0, i.jsx)(u.l, {
+                ref: m,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    (0, o.X)(h, o.O.MORE), n(e);
+                    (0, o.X)(g, o.O.MORE), n(e);
                 },
-                label: p.intl.string(p.t.PdRCRg),
-                iconComponent: i.jNK,
+                label: A.intl.string(A.t.PdRCRg),
+                iconComponent: s.jNK,
                 color: "primaryDark",
                 isActive: l,
             });

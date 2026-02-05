@@ -1,8 +1,5 @@
 var i, r;
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
-    (e.ICalAlarmType = void 0);
+Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalAlarmType = void 0);
 let n = a(778090);
 ((r = i = e.ICalAlarmType || (e.ICalAlarmType = {})).display = "display"),
     (r.audio = "audio"),
@@ -72,28 +69,14 @@ let n = a(778090);
             if (void 0 === t) return this.data.attach;
             if (!t) return (this.data.attach = null), this;
             let e = null;
-            if ("string" == typeof t)
-                e = {
-                    uri: t,
-                    mime: null,
-                };
-            else if ("object" == typeof t)
-                e = {
-                    uri: t.uri,
-                    mime: t.mime || null,
-                };
+            if ("string" == typeof t) e = { uri: t, mime: null };
+            else if ("object" == typeof t) e = { uri: t.uri, mime: t.mime || null };
             else
                 throw Error(
                     "`attachment` needs to be a valid formed string or an object. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalalarm.html#attach",
                 );
             if (!e.uri) throw Error("`attach.uri` is empty!");
-            return (
-                (this.data.attach = {
-                    uri: e.uri,
-                    mime: e.mime,
-                }),
-                this
-            );
+            return (this.data.attach = { uri: e.uri, mime: e.mime }), this;
         }
         description(t) {
             return void 0 === t
@@ -109,10 +92,7 @@ let n = a(778090);
         }
         toJSON() {
             let t = this.trigger();
-            return Object.assign({}, this.data, {
-                trigger: "number" == typeof t ? t : (0, n.toJSON)(t),
-                x: this.x(),
-            });
+            return Object.assign({}, this.data, { trigger: "number" == typeof t ? t : (0, n.toJSON)(t), x: this.x() });
         }
         toString() {
             let t = "BEGIN:VALARM\r\n";

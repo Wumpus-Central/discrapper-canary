@@ -1,55 +1,32 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => p });
+var i = n(627968),
+    l = n(64700),
     a = n(397927),
-    s = n(341915),
-    o = n(890687),
-    l = n(710969),
-    c = n(814793),
-    u = n(338404),
-    d = n(127219),
-    f = n(636658),
-    p = n(438038),
-    _ = n(986588);
-
-function h(e) {
+    r = n(341915),
+    s = n(890687),
+    o = n(710969),
+    d = n(814793),
+    c = n(338404),
+    u = n(127219),
+    m = n(636658),
+    _ = n(438038),
+    h = n(986588);
+function p(e) {
     let { questId: t } = e,
         {
             quests: n,
-            excludedQuests: h,
-            isFetchingCurrentQuests: m,
-        } = (0, o.mL)({
-            fetchPolicy: "cache-or-network",
-            callerSource: "embed",
-        }),
-        g = i.useMemo(() => (0, l.vc)(t, n, h), [t, n, h]),
-        E = i.useMemo(() => h.find((e) => e.id === t), [t, h]);
-    return m
-        ? (0, r.jsx)(a.y$y, {
-              className: _.u,
-          })
-        : null == g
-          ? null != E
-              ? (0, r.jsx)(u.g, {
-                    questId: t,
-                })
-              : (0, r.jsx)(d.l, {
-                    questId: t,
-                    reason: d.o.NOT_FOUND,
-                })
-          : (0, c.E0)(g.config)
-            ? (0, r.jsx)(
-                  p.R,
-                  {
-                      quest: g,
-                      location: s.uF.QUESTS_EMBED,
-                      sourceQuestContent: s.uF.QUESTS_EMBED,
-                  },
-                  g.id,
-              )
-            : (0, r.jsx)(f.S, {
-                  questId: t,
-              });
+            excludedQuests: p,
+            isFetchingCurrentQuests: g,
+        } = (0, s.mL)({ fetchPolicy: "cache-or-network", callerSource: "embed" }),
+        A = l.useMemo(() => (0, o.vc)(t, n, p), [t, n, p]),
+        f = l.useMemo(() => p.find((e) => e.id === t), [t, p]);
+    return g
+        ? (0, i.jsx)(a.y$y, { className: h.u })
+        : null == A
+          ? null != f
+              ? (0, i.jsx)(c.g, { questId: t })
+              : (0, i.jsx)(u.l, { questId: t, reason: u.o.NOT_FOUND })
+          : (0, d.E0)(A.config)
+            ? (0, i.jsx)(_.R, { quest: A, location: r.uF.QUESTS_EMBED, sourceQuestContent: r.uF.QUESTS_EMBED }, A.id)
+            : (0, i.jsx)(m.S, { questId: t });
 }

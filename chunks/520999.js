@@ -1,154 +1,88 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var s = n(627968),
-    r = n(64700),
-    l = n(311907),
-    i = n(397927),
-    o = n(212245),
-    a = n(287809),
-    c = n(927578),
-    u = n(987384),
-    d = n(912630),
-    p = n(965162),
-    m = n(413339),
-    O = n(952572),
-    f = n(144830),
-    j = n(577718),
-    g = n(652215),
-    b = n(693591),
-    x = n(985018);
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            s = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (s = s.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            s.forEach(function (t) {
-                var s;
-                (s = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: s,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = s);
-            });
-    }
-    return e;
-}
-
-function A(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var s = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, s);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function h(e) {
+s.d(t, { A: () => _ });
+var n = s(627968),
+    l = s(64700),
+    i = s(311907),
+    a = s(397927),
+    o = s(212245),
+    r = s(287809),
+    c = s(927578),
+    d = s(987384),
+    u = s(912630),
+    m = s(965162),
+    x = s(413339),
+    p = s(952572),
+    A = s(144830),
+    g = s(577718),
+    f = s(652215),
+    j = s(693591),
+    N = s(985018);
+function _(e) {
     let {
             onLearnMore: t,
-            selectedBackgroundOption: h,
-            onSelectBackgroundOption: v,
-            currentDeviceId: N,
+            selectedBackgroundOption: _,
+            onSelectBackgroundOption: h,
+            currentDeviceId: O,
             className: E,
         } = e,
-        _ = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
-        [S, P] = r.useState(null),
-        D = (0, O.A)(),
-        I = c.Ay.canUseCustomBackgrounds(_);
-    r.useEffect(() => {
-        (0, u.HR)();
+        v = (0, i.bG)([r.default], () => r.default.getCurrentUser()),
+        [I, T] = l.useState(null),
+        C = (0, p.A)(),
+        S = c.Ay.canUseCustomBackgrounds(v);
+    l.useEffect(() => {
+        (0, d.HR)();
     }, []);
-    let T = (0, l.cf)([d.A], () => (I ? d.A.videoFilterAssets : {})),
-        k = r.useMemo(() => Object.values(T).filter((e) => e.type === j.yZ.BACKGROUND), [T]),
-        C = (0, o.p)(),
-        w = {
-            isVideoBackgroundSupported: D,
-            onSelectBackgroundOption: v,
-            selectedBackgroundOption: h,
-        },
-        U = r.useRef(w);
-    r.useEffect(() => {
-        U.current = w;
+    let k = (0, i.cf)([u.A], () => (S ? u.A.videoFilterAssets : {})),
+        b = l.useMemo(() => Object.values(k).filter((e) => e.type === g.yZ.BACKGROUND), [k]),
+        D = (0, o.p)(),
+        U = { isVideoBackgroundSupported: C, onSelectBackgroundOption: h, selectedBackgroundOption: _ },
+        y = l.useRef(U);
+    l.useEffect(() => {
+        y.current = U;
     }),
-        r.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = U.current;
-            e
-                ? (0, m.S1)(n, N, {
-                      track: !1,
-                  }).catch(() => t(null))
-                : null != n && t(null);
-        }, [N]);
+        l.useEffect(() => {
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
+            e ? (0, x.S1)(s, O, { track: !1 }).catch(() => t(null)) : null != s && t(null);
+        }, [O]);
     let B = (e) => {
-        v(e),
-            (0, m.S1)(e, N, {
-                location: C.location,
-            })
-                .then(() => P(null))
+        h(e),
+            (0, x.S1)(e, O, { location: D.location })
+                .then(() => T(null))
                 .catch(() => {
-                    P(x.intl.string(x.t.ejrSLe)),
-                        (0, m.S1)(null, N, {
-                            location: C.location,
-                        });
+                    T(N.intl.string(N.t.ejrSLe)), (0, x.S1)(null, O, { location: D.location });
                 });
     };
-    return D
-        ? (0, s.jsx)("div", {
+    return C
+        ? (0, n.jsx)("div", {
               className: E,
-              children: (0, s.jsx)(i.D0$, {
-                  label: x.intl.string(x.t.lZTUPs),
-                  errorMessage: S,
-                  children: (0, s.jsx)(f.A, {
-                      canUseCustomBackgrounds: I,
-                      customBackgroundOptions: k,
-                      selectedOption: h,
+              children: (0, n.jsx)(a.D0$, {
+                  label: N.intl.string(N.t.lZTUPs),
+                  errorMessage: I,
+                  children: (0, n.jsx)(A.A, {
+                      canUseCustomBackgrounds: S,
+                      customBackgroundOptions: b,
+                      selectedOption: _,
                       onSelectOption: B,
                       onUpsellClick: () => {
-                          (0, i.mMO)(async () => {
-                              let { default: e } = await n.e("95743").then(n.bind(n, 210402));
-                              return (n) =>
-                                  (0, s.jsx)(
-                                      e,
-                                      A(y({}, n), {
-                                          onLearnMore: t,
-                                          analyticsSource: A(y({}, C.location), {
-                                              object: g.ZSU.BUTTON_CTA,
-                                          }),
-                                      }),
-                                  );
+                          (0, a.mMO)(async () => {
+                              let { default: e } = await s.e("95743").then(s.bind(s, 210402));
+                              return (s) =>
+                                  (0, n.jsx)(e, {
+                                      ...s,
+                                      onLearnMore: t,
+                                      analyticsSource: { ...D.location, object: f.ZSU.BUTTON_CTA },
+                                  });
                           });
                       },
                       onAddBackgroundImage: function (e, t) {
-                          let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                          return new Promise(async (s) => {
+                          let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                          return new Promise(async (n) => {
                               try {
-                                  let s = await (0, u.F9)(e, j.yZ.BACKGROUND);
-                                  B(s), (0, p.D1)(s, t.type === b.a.MP4, n), P(null);
+                                  let n = await (0, d.F9)(e, g.yZ.BACKGROUND);
+                                  B(n), (0, m.D1)(n, t.type === j.a.MP4, s), T(null);
                               } catch (e) {
-                                  P(e.message);
+                                  T(e.message);
                               }
-                              s();
+                              n();
                           });
                       },
                   }),

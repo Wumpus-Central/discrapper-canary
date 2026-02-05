@@ -1,40 +1,34 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
-var i = n(414626),
+var s = n(414626),
     l = n(243056);
-let s = function (e) {
+let r = function (e) {
     let {
             formField: t,
             index: n,
-            isDragEnabled: s,
+            isDragEnabled: r,
             isDropHovered: a,
             onDrop: c,
-            onEdit: o,
-            onRemove: d,
+            onEdit: d,
+            onRemove: o,
             canRemove: u,
-            actionsLocation: f,
-            fieldStyle: g,
+            actionsLocation: x,
+            fieldStyle: m,
         } = e,
-        { label: b } = t;
-    return (0, r.jsx)(l.A, {
+        { label: h } = t;
+    return (0, i.jsx)(l.A, {
         field: t,
         index: n,
-        isDragEnabled: s,
+        isDragEnabled: r,
         isDropHovered: a,
         onDrop: c,
-        onEdit: o,
-        onRemove: d,
-        title: b,
+        onEdit: d,
+        onRemove: o,
+        title: h,
         canRemove: u,
-        actionsLocation: f,
-        fieldStyle: g,
-        children: (0, r.jsx)(i.mR, {
-            field: t,
-            value: void 0,
-            disabled: !1,
-        }),
+        actionsLocation: x,
+        fieldStyle: m,
+        children: (0, i.jsx)(s.mR, { field: t, value: void 0, disabled: !1 }),
     });
 };

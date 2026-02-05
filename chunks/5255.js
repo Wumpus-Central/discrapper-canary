@@ -1,225 +1,142 @@
-n.d(t, {
-    A: () => k,
-}),
-    n(896048),
-    n(65821);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(739508),
-    o = n(580630),
-    l = n(558519),
-    c = n(818348);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = l.vx.DISCONNECTED,
-    h = null,
-    m = new Map(),
-    g = new Set(),
-    E = new Set(),
-    b = null,
-    y = !1,
-    O = !1,
-    A = !1,
-    v = null;
-
-function S(e) {
+"use strict";
+n.d(t, { A: () => w });
+var r = n(311907),
+    i = n(73153),
+    a = n(739508),
+    s = n(580630),
+    o = n(558519),
+    l = n(818348);
+let u = o.vx.DISCONNECTED,
+    c = null,
+    d = new Map(),
+    _ = new Set(),
+    f = new Set(),
+    p = null,
+    h = !1,
+    m = !1,
+    g = !1,
+    E = null;
+function A(e) {
     let { connectionState: t } = e;
-    _ = t;
+    u = t;
 }
-
 function I(e) {
     let t = e.currencyCode.toLowerCase(),
         n = e.price / 100,
         r =
-            "BG" === v && t === c.Yr.EUR
-                ? (0, o.ze)(n, {
-                      convertToMajorUnits: !1,
-                  })
-                : (0, o.Gp)(n, t, {
-                      convertToMajorUnits: !1,
-                  });
-    return p(d({}, e), {
-        price: e.price,
-        currencyCode: t,
-        priceString: r,
-    });
+            "BG" === E && t === l.Yr.EUR
+                ? (0, s.ze)(n, { convertToMajorUnits: !1 })
+                : (0, s.Gp)(n, t, { convertToMajorUnits: !1 });
+    return { ...e, price: e.price, currencyCode: t, priceString: r };
 }
-
 function T() {
-    A = !0;
+    g = !0;
 }
-
-function C() {
-    A = !1;
+function y() {
+    g = !1;
 }
-
-function N() {
-    O = !0;
+function S() {
+    m = !0;
 }
-
-function R() {
-    O = !1;
+function v() {
+    m = !1;
 }
-
-function w(e) {
-    var t;
-    let { skus: n, skusType: r } = e;
-    n.forEach((e) => {
-        m.set(e.identifier, e);
+function C(e) {
+    let { skus: t, skusType: n } = e;
+    t.forEach((e) => {
+        d.set(e.identifier, e);
     }),
-        null == (h = null == (t = Array.from(m.values())) ? void 0 : t.filter((e) => null != e)) ||
-            h.forEach((e) => {
-                let t = null == e ? void 0 : e.offerIds;
-                null != t && t.forEach((e) => g.add(e));
-            });
+        (c = Array.from(d.values())?.filter((e) => null != e)),
+        c?.forEach((e) => {
+            let t = e?.offerIds;
+            null != t && t.forEach((e) => _.add(e));
+        });
     try {
-        h = null == h ? void 0 : h.map(I);
+        c = c?.map(I);
     } catch (e) {
-        (0, s.pM)(e);
+        (0, a.pM)(e);
     }
     switch (
-        (null == h ||
-            h.forEach((e) => {
-                m.set(e.identifier, e);
-            }),
-        r)
+        (c?.forEach((e) => {
+            d.set(e.identifier, e);
+        }),
+        n)
     ) {
-        case l.MA.IN_APP:
-            O = !1;
+        case o.MA.IN_APP:
+            m = !1;
             break;
-        case l.MA.SUBSCRIPTION:
-            A = !1;
+        case o.MA.SUBSCRIPTION:
+            g = !1;
     }
 }
-
-function P(e) {
+function b(e) {
     let { productId: t } = e;
-    E.add(t);
+    f.add(t);
 }
-
-function D(e) {
+function N(e) {
     let { productId: t } = e;
-    if (!E.has(t)) throw Error("Tried verifying product without initialization: ".concat(t));
-    E.delete(t);
+    if (!f.has(t)) throw Error(`Tried verifying product without initialization: ${t}`);
+    f.delete(t);
 }
-
-function x(e) {
+function R(e) {
     let { pendingDowngrade: t } = e;
-    b = t;
+    p = t;
 }
-
-function L(e) {
+function O(e) {
     let { isDowngrading: t } = e;
-    y = t;
+    h = t;
 }
-
-function j(e) {
+function D(e) {
     let { countryCode: t } = e;
-    v = t;
+    E = t;
 }
-class M extends (r = i.Ay.Store) {
+class L extends r.Ay.Store {
+    static displayName = "IAPStore";
     getProducts() {
-        return h;
+        return c;
     }
     getOfferIds() {
-        return g;
+        return _;
     }
     getProduct(e) {
-        var t;
-        return null != (t = m.get(e)) ? t : null;
+        return d.get(e) ?? null;
     }
     isBusy() {
-        return E.size > 0 || y;
+        return f.size > 0 || h;
     }
     isPurchasingProduct(e) {
-        return E.has(e);
+        return f.has(e);
     }
     isReady() {
-        return _ === l.vx.CONNECTED;
+        return u === o.vx.CONNECTED;
     }
     hasConnectionError() {
-        return _ === l.vx.ERROR;
+        return u === o.vx.ERROR;
     }
     getPendingDowngrade() {
-        return b;
+        return p;
     }
     isFetchingGoogleSkus() {
-        return A || O;
+        return g || m;
     }
     isFetchingProducts() {
-        return A || O;
+        return g || m;
     }
     getUserCountry() {
-        return v;
+        return E;
     }
 }
-u(M, "displayName", "IAPStore");
-let k = new M(a.h, {
-    GPLAY_UPDATE_CONNECTION_STATE: S,
+let w = new L(i.h, {
+    GPLAY_UPDATE_CONNECTION_STATE: A,
     GPLAY_FETCH_SUBSCRIPTION_SKUS_START: T,
-    GPLAY_SUBSCRIPTION_SKUS_LOADED: w,
-    GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED: C,
-    GPLAY_FETCH_IN_APP_SKUS_START: N,
-    GPLAY_IN_APP_SKUS_LOADED: w,
-    GPLAY_FETCH_IN_APP_SKUS_FAILED: R,
-    GPLAY_VERIFICATION_START: P,
-    GPLAY_VERIFICATION_END: D,
-    GPLAY_UPDATE_PENDING_DOWNGRADE: x,
-    GPLAY_UPDATE_IS_DOWNGRADING: L,
-    GPLAY_SET_USER_COUNTRY: j,
+    GPLAY_SUBSCRIPTION_SKUS_LOADED: C,
+    GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED: y,
+    GPLAY_FETCH_IN_APP_SKUS_START: S,
+    GPLAY_IN_APP_SKUS_LOADED: C,
+    GPLAY_FETCH_IN_APP_SKUS_FAILED: v,
+    GPLAY_VERIFICATION_START: b,
+    GPLAY_VERIFICATION_END: N,
+    GPLAY_UPDATE_PENDING_DOWNGRADE: R,
+    GPLAY_UPDATE_IS_DOWNGRADING: O,
+    GPLAY_SET_USER_COUNTRY: D,
 });

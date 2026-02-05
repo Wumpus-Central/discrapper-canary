@@ -1,3 +1,1 @@
-e.exports = {
-    m: "required__1cbbf",
-};
+e.exports = { m: "required__1cbbf" };

@@ -1,9 +1,6 @@
+"use strict";
 var r, i, a;
-n.d(t, {
-    Bw: () => i,
-    FF: () => r,
-    fF: () => a,
-}),
+n.d(t, { Bw: () => i, FF: () => r, fF: () => a }),
     (function (e) {
         (e[(e.AM = 0)] = "AM"), (e[(e.PM = 1)] = "PM");
     })(r || (r = {})),

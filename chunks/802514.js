@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     V3: "tabItem__9e06a",
     v_: "tabContainer__9e06a",

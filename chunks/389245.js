@@ -1,28 +1,21 @@
-n.d(e, {
-    A: () => s,
-});
-var r = n(627968),
-    i = n(397927),
-    o = n(754302),
-    l = n(985018);
-
-function s() {
-    return (0, r.jsxs)(o.q, {
+e.d(i, { A: () => a });
+var n = e(627968),
+    s = e(397927),
+    r = e(754302),
+    l = e(985018);
+function a() {
+    return (0, n.jsxs)(r.q, {
         children: [
-            (0, r.jsx)(o.B, {
+            (0, n.jsx)(r.B, {
                 title: l.intl.string(l.t.fjFJFV),
                 description: l.intl.string(l.t["8SIMPz"]),
-                icon: i.yr3,
+                icon: s.yr3,
             }),
-            (0, r.jsx)(o.B, {
-                title: l.intl.string(l.t.QCrmqS),
-                description: l.intl.string(l.t.TKDMoN),
-                icon: i.yr3,
-            }),
-            (0, r.jsx)(o.B, {
+            (0, n.jsx)(r.B, { title: l.intl.string(l.t.QCrmqS), description: l.intl.string(l.t.TKDMoN), icon: s.yr3 }),
+            (0, n.jsx)(r.B, {
                 title: l.intl.string(l.t["lkm/a8"]),
                 description: l.intl.string(l.t["8j3qaC"]),
-                icon: i.id,
+                icon: s.id,
             }),
         ],
     });

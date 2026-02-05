@@ -1,7 +1,5 @@
-n.d(t, {
-    Z: () => o,
-    x: () => l,
-});
+"use strict";
+n.d(t, { e: () => o, x: () => l });
 var r = n(398590),
     i = n(976860),
     a = n(780964),
@@ -9,11 +7,9 @@ var r = n(398590),
 let o = () => {
         {
             let { openUserSettings: e } = n(840065);
-            e(a.X.NITRO_PANEL, {
-                section: s.nc_.PREMIUM,
-            });
+            e(a.X.NITRO_PANEL, { section: s.nc_.PREMIUM });
         }
     },
     l = (e) => {
-        null == e || e(), (0, r.jH)(), (0, i.pX)(s.BVt.APPLICATION_STORE);
+        e?.(), (0, r.jH)(), (0, i.pX)(s.BVt.APPLICATION_STORE);
     };

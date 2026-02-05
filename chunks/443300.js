@@ -1,3 +1,1 @@
-e.exports = {
-    z: "iconContainer_a1f71e",
-};
+e.exports = { z: "iconContainer_a1f71e" };

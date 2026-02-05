@@ -1,61 +1,35 @@
-n.d(t, {
-    ZV: () => R,
-    c7: () => b,
-    j2: () => w,
-    kC: () => S,
-    p4: () => v,
-    so: () => N,
-    wT: () => T,
-    zv: () => y,
-}),
-    n(896048),
-    n(457529),
-    n(228524);
+"use strict";
+n.d(t, { ZV: () => D, c7: () => I, j2: () => O, kC: () => C, p4: () => y, so: () => R, wT: () => b, zv: () => A });
 var r = n(835245),
     i = n(317097),
     a = n(155718),
-    o = n(626584),
-    s = n(337591),
+    s = n(626584),
+    o = n(337591),
     l = n(731068),
-    c = n(486020),
-    u = n(403362),
+    u = n(486020),
+    c = n(403362),
     d = n(661191),
-    f = n(489414),
-    p = n(630446),
-    _ = n(532294),
+    _ = n(489414),
+    f = n(630446),
+    p = n(532294),
     h = n(985018);
-let m = new o.A("InteractionComponentUtils"),
+let m = new s.A("InteractionComponentUtils"),
     g = (e, t) => ({
         id: e.id,
         name: e.name,
         animated: e.animated,
-        src:
-            t && null != e.id
-                ? c.Ay.getEmojiURL({
-                      id: e.id,
-                      animated: e.animated || !1,
-                      size: 48,
-                  })
-                : void 0,
+        src: t && null != e.id ? u.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     }),
-    E = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? h.intl.string(h.t.fitPBS) : h.intl.string(h.t.VCsUJu)),
-    y = (e, t, n) => {
+    E = (e) => (e?.errorCode === 429 ? h.intl.string(h.t.fitPBS) : h.intl.string(h.t.VCsUJu)),
+    A = (e, t, n) => {
         let r =
-            (null == e ? void 0 : e.data.interactionType) === a.G4.MESSAGE_COMPONENT &&
-            (null == e ? void 0 : e.state) === s.m.FAILED
-                ? e.data.componentId
-                : null;
-        if (null != (null != r ? I(n, r) : null)) {
-            var i;
-            return null != (i = null == t ? void 0 : t.interactionError) ? i : E(e);
-        }
+            e?.data.interactionType === a.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
+        if (null != (null != r ? v(n, r) : null)) return t?.interactionError ?? E(e);
     };
-
-function b(e) {
-    var t;
-    return null != (t = e.placeholder) ? t : h.intl.string(h.t.Otr6W2);
+function I(e) {
+    return e.placeholder ?? h.intl.string(h.t.Otr6W2);
 }
-let O = (e) => {
+let T = (e) => {
     switch (e) {
         case a.I5.ACTION_ROW:
         case a.I5.BUTTON:
@@ -80,58 +54,52 @@ let O = (e) => {
         case a.I5.CHECKBOX:
             return !0;
         case a.I5.CONTENT_INVENTORY_ENTRY:
-            return (0, p.yC)("canShowComponent");
+            return (0, f.yC)("canShowComponent");
         case a.I5.UNKNOWN:
         default:
             return !1;
     }
 };
-
-function v(e) {
+function y(e) {
     let t = new Map();
-    for (let n of e) A(t, n);
+    for (let n of e) S(t, n);
     return t;
 }
-
-function A(e, t) {
+function S(e, t) {
     switch ((e.set(t.id, t), t.type)) {
         case a.I5.ACTION_ROW:
-            t.components.forEach((t) => A(e, t));
+            t.components.forEach((t) => S(e, t));
             break;
         case a.I5.SECTION:
-            t.components.forEach((t) => A(e, t)), A(e, t.accessory);
+            t.components.forEach((t) => S(e, t)), S(e, t.accessory);
             break;
         case a.I5.CONTAINER:
-            t.components.forEach((t) => A(e, t));
+            t.components.forEach((t) => S(e, t));
     }
 }
-
-function I(e, t) {
-    var n, r, i;
+function v(e, t) {
     switch (e.type) {
         case a.I5.ACTION_ROW:
-            return null != (n = e.components.find((e) => e.id === t)) ? n : null;
+            return e.components.find((e) => e.id === t) ?? null;
         case a.I5.SECTION:
             if (e.accessory.id === t) return e.accessory;
-            return null != (r = e.components.find((e) => e.id === t)) ? r : null;
+            return e.components.find((e) => e.id === t) ?? null;
         case a.I5.CONTAINER:
-            return null != (i = e.components.find((e) => e.id === t)) ? i : null;
+            return e.components.find((e) => e.id === t) ?? null;
     }
 }
-
-function S(e) {
-    let t = Array.from(v(e).values())
+function C(e) {
+    let t = Array.from(y(e).values())
         .filter((e) => e.type === a.I5.TEXT_DISPLAY)
         .map((e) => e.content)
         .join("\n");
     return "" !== t ? t : null;
 }
-
-function T(e, t) {
+function b(e, t) {
     function n(e) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         for (let i of e) {
-            let e = C(i);
+            let e = N(i);
             if (e.some((e) => e.id === t.id)) return [i, ...r];
             let a = n(e, [i, ...r]);
             if (null != a) return a;
@@ -140,8 +108,7 @@ function T(e, t) {
     }
     return n(e);
 }
-
-function C(e) {
+function N(e) {
     switch (e.type) {
         case a.I5.ACTION_ROW:
             return e.components;
@@ -174,58 +141,39 @@ function C(e) {
             return m.warn("getComponentChildren: Unknown component type", e.type), [];
     }
 }
-
-function N(e) {
-    var t, n, i;
-    return JSON.stringify({
-        type: "component-upload",
-        containerId: e,
-        uniqueId: null != (t = null == (n = (i = crypto).randomUUID) ? void 0 : n.call(i)) ? t : (0, r.A)(),
-    });
+function R(e) {
+    return JSON.stringify({ type: "component-upload", containerId: e, uniqueId: crypto.randomUUID?.() ?? (0, r.A)() });
 }
-
-function w(e) {
+function O(e) {
     try {
         let t = JSON.parse(e);
-        if (
-            (null == t ? void 0 : t.type) !== "component-upload" ||
-            "string" != typeof t.containerId ||
-            "string" != typeof t.uniqueId
-        )
+        if (t?.type !== "component-upload" || "string" != typeof t.containerId || "string" != typeof t.uniqueId)
             return null;
         return t;
-    } catch (e) {
+    } catch {
         return null;
     }
 }
-
-function R(e) {
-    return e.map((e, t) => P(e, [t])).filter((e) => null != e);
+function D(e) {
+    return e.map((e, t) => L(e, [t])).filter((e) => null != e);
 }
-
-function P(e, t) {
-    var n, r, o, s, c, d, p, _, h, E, y;
-    if (!O(e.type)) return null;
-
-    function b(e, n) {
-        let r = P(e, [...t, n]);
+function L(e, t) {
+    if (!T(e.type)) return null;
+    function n(e, n) {
+        let r = L(e, [...t, n]);
         return null == r ? null : r;
     }
-    let v = !1;
+    let r = !1;
     switch (e.type) {
         case a.I5.ACTION_ROW: {
-            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq);
-            return {
-                type: a.I5.ACTION_ROW,
-                id: D(t),
-                components: n,
-            };
+            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq);
+            return { type: a.I5.ACTION_ROW, id: w(t), components: r };
         }
         case a.I5.BUTTON: {
-            let n = null != e.emoji ? g(e.emoji, v) : void 0;
+            let n = null != e.emoji ? g(e.emoji, r) : void 0;
             return {
                 type: a.I5.BUTTON,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 style: e.style,
                 disabled: e.disabled,
@@ -238,17 +186,17 @@ function P(e, t) {
         case a.I5.STRING_SELECT:
             return {
                 type: a.I5.STRING_SELECT,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (n = e.required) && n,
+                required: e.required ?? !1,
                 options: e.options.map((e) => ({
-                    type: f.iw.STRING,
+                    type: _.iw.STRING,
                     label: e.label,
                     value: e.value,
                     default: e.default,
                     description: e.description,
-                    emoji: null != e.emoji ? g(e.emoji, v) : void 0,
+                    emoji: null != e.emoji ? g(e.emoji, r) : void 0,
                 })),
                 placeholder: e.placeholder,
                 minValues: e.min_values,
@@ -257,24 +205,24 @@ function P(e, t) {
         case a.I5.TEXT_INPUT:
             return {
                 type: e.type,
-                id: D(t),
+                id: w(t),
                 style: e.style,
                 customId: e.custom_id,
                 label: e.label,
                 value: e.value,
                 placeholder: e.placeholder,
                 disabled: e.disabled,
-                required: null != (r = e.required) && r,
+                required: e.required ?? !1,
                 minLength: e.min_length,
                 maxLength: e.max_length,
             };
         case a.I5.USER_SELECT:
             return {
                 type: a.I5.USER_SELECT,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (o = e.required) && o,
+                required: e.required ?? !1,
                 placeholder: e.placeholder,
                 minValues: e.min_values,
                 maxValues: e.max_values,
@@ -283,10 +231,10 @@ function P(e, t) {
         case a.I5.ROLE_SELECT:
             return {
                 type: a.I5.ROLE_SELECT,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (s = e.required) && s,
+                required: e.required ?? !1,
                 placeholder: e.placeholder,
                 minValues: e.min_values,
                 maxValues: e.max_values,
@@ -295,10 +243,10 @@ function P(e, t) {
         case a.I5.MENTIONABLE_SELECT:
             return {
                 type: a.I5.MENTIONABLE_SELECT,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (c = e.required) && c,
+                required: e.required ?? !1,
                 placeholder: e.placeholder,
                 minValues: e.min_values,
                 maxValues: e.max_values,
@@ -307,10 +255,10 @@ function P(e, t) {
         case a.I5.CHANNEL_SELECT:
             return {
                 type: a.I5.CHANNEL_SELECT,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (d = e.required) && d,
+                required: e.required ?? !1,
                 placeholder: e.placeholder,
                 minValues: e.min_values,
                 maxValues: e.max_values,
@@ -318,26 +266,17 @@ function P(e, t) {
                 defaultValues: e.default_values,
             };
         case a.I5.SECTION: {
-            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq),
-                r = b(e.accessory, n.length);
-            if (0 === n.length || null == r) return null;
-            return {
-                type: a.I5.SECTION,
-                id: D(t),
-                components: n,
-                accessory: r,
-            };
+            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq),
+                i = n(e.accessory, r.length);
+            if (0 === r.length || null == i) return null;
+            return { type: a.I5.SECTION, id: w(t), components: r, accessory: i };
         }
         case a.I5.TEXT_DISPLAY:
-            return {
-                type: a.I5.TEXT_DISPLAY,
-                id: D(t),
-                content: e.content,
-            };
+            return { type: a.I5.TEXT_DISPLAY, id: w(t), content: e.content };
         case a.I5.THUMBNAIL:
             return {
                 type: a.I5.THUMBNAIL,
-                id: D(t),
+                id: w(t),
                 media: (0, l.Uv)(e.media),
                 description: e.description,
                 spoiler: e.spoiler,
@@ -345,7 +284,7 @@ function P(e, t) {
         case a.I5.MEDIA_GALLERY:
             return {
                 type: a.I5.MEDIA_GALLERY,
-                id: D(t),
+                id: w(t),
                 items: e.items.map((e) => ({
                     media: (0, l.Uv)(e.media),
                     description: e.description,
@@ -355,135 +294,105 @@ function P(e, t) {
         case a.I5.FILE:
             return {
                 type: a.I5.FILE,
-                id: D(t),
+                id: w(t),
                 file: (0, l.Uv)(e.file),
                 name: e.name,
                 size: e.size,
                 spoiler: e.spoiler,
             };
         case a.I5.SEPARATOR:
-            return {
-                type: a.I5.SEPARATOR,
-                id: D(t),
-                divider: null == (p = e.divider) || p,
-                spacing: null != (_ = e.spacing) ? _ : a.C8.SMALL,
-            };
+            return { type: a.I5.SEPARATOR, id: w(t), divider: e.divider ?? !0, spacing: e.spacing ?? a.C8.SMALL };
         case a.I5.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
-            return {
-                type: a.I5.CONTENT_INVENTORY_ENTRY,
-                id: D(t),
-                contentInventoryEntry: e.content_inventory_entry,
-            };
+            return { type: a.I5.CONTENT_INVENTORY_ENTRY, id: w(t), contentInventoryEntry: e.content_inventory_entry };
         case a.I5.CONTAINER: {
-            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq);
+            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq);
             return {
                 type: a.I5.CONTAINER,
-                id: D(t),
+                id: w(t),
                 accentColor: null != e.accent_color ? (0, i.$k)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
-                components: n,
+                components: r,
             };
         }
         case a.I5.LABEL: {
-            let n = b(e.component, 0);
-            if (null == n) return null;
-            return {
-                type: a.I5.LABEL,
-                id: D(t),
-                label: e.label,
-                description: e.description,
-                component: n,
-            };
+            let r = n(e.component, 0);
+            if (null == r) return null;
+            return { type: a.I5.LABEL, id: w(t), label: e.label, description: e.description, component: r };
         }
         case a.I5.FILE_UPLOAD:
             return {
                 type: e.type,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (h = e.required) && h,
+                required: e.required ?? !1,
                 minValues: e.min_values,
                 maxValues: e.max_values,
             };
         case a.I5.CHECKPOINT_CARD:
-            return L(e, t);
+            return x(e, t);
         case a.I5.RADIO_GROUP:
-            return {
-                type: e.type,
-                id: D(t),
-                customId: e.custom_id,
-                options: e.options,
-                required: null != (E = e.required) && E,
-            };
+            return { type: e.type, id: w(t), customId: e.custom_id, options: e.options, required: e.required ?? !1 };
         case a.I5.CHECKBOX_GROUP:
             return {
                 type: e.type,
-                id: D(t),
+                id: w(t),
                 customId: e.custom_id,
                 options: e.options,
                 minValues: e.min_values,
                 maxValues: e.max_values,
-                required: null != (y = e.required) && y,
+                required: e.required ?? !1,
             };
         case a.I5.CHECKBOX:
-            return {
-                type: e.type,
-                id: D(t),
-                customId: e.custom_id,
-                default: e.default,
-            };
+            return { type: e.type, id: w(t), customId: e.custom_id, default: e.default };
         default:
             return m.warn("transformComponent: Unknown component type", e.type), null;
     }
 }
-
-function D(e) {
-    return (0, f.X1)(e.join(","));
+function w(e) {
+    return (0, _.X1)(e.join(","));
 }
-
-function L(e, t) {
+function x(e, t) {
     let n = e.checkpoint_data;
-    if (n.version === _.w.V2025) {
-        var r;
-        return {
-            type: e.type,
-            id: D(t),
-            checkpointData: {
-                version: n.version,
-                cardId: n.card_id,
-                powerLevel: n.power_level,
-                powerLevelPercentile: n.power_level_percentile,
-                numMessagesSent: n.num_messages_sent,
-                totalVoiceMinutes: n.total_voice_minutes,
-                numEmojisSent: n.num_emojis_sent,
-                topGuild:
-                    null != n.top_guild
-                        ? {
-                              guildId: n.top_guild.guild_id,
-                              guildName: n.top_guild.guild_name,
-                              guildIcon: n.top_guild.guild_icon,
-                          }
-                        : void 0,
-                topEmoji:
-                    null != n.top_emoji
-                        ? {
-                              emojiId: d.default.isProbablyAValidSnowflake(n.top_emoji.emoji_id)
-                                  ? n.top_emoji.emoji_id
-                                  : void 0,
-                              emojiName: null == (r = n.top_emoji) ? void 0 : r.emoji_name,
-                          }
-                        : void 0,
-                topGame:
-                    null != n.top_game
-                        ? {
-                              applicationId: n.top_game.application_id,
-                              applicationName: n.top_game.application_name,
-                              applicationImageId: n.top_game.application_image_id,
-                          }
-                        : void 0,
-            },
-        };
-    }
-    return null;
+    return n.version === p.w.V2025
+        ? {
+              type: e.type,
+              id: w(t),
+              checkpointData: {
+                  version: n.version,
+                  cardId: n.card_id,
+                  powerLevel: n.power_level,
+                  powerLevelPercentile: n.power_level_percentile,
+                  numMessagesSent: n.num_messages_sent,
+                  totalVoiceMinutes: n.total_voice_minutes,
+                  numEmojisSent: n.num_emojis_sent,
+                  topGuild:
+                      null != n.top_guild
+                          ? {
+                                guildId: n.top_guild.guild_id,
+                                guildName: n.top_guild.guild_name,
+                                guildIcon: n.top_guild.guild_icon,
+                            }
+                          : void 0,
+                  topEmoji:
+                      null != n.top_emoji
+                          ? {
+                                emojiId: d.default.isProbablyAValidSnowflake(n.top_emoji.emoji_id)
+                                    ? n.top_emoji.emoji_id
+                                    : void 0,
+                                emojiName: n.top_emoji?.emoji_name,
+                            }
+                          : void 0,
+                  topGame:
+                      null != n.top_game
+                          ? {
+                                applicationId: n.top_game.application_id,
+                                applicationName: n.top_game.application_name,
+                                applicationImageId: n.top_game.application_image_id,
+                            }
+                          : void 0,
+              },
+          }
+        : null;
 }

@@ -1,16 +1,10 @@
-n.d(t, {
-    A: () => i,
-});
-var r = n(73153);
-let i = {
+n.d(t, { A: () => r });
+var i = n(73153);
+let r = {
     closeSidebar() {
-        r.h.dispatch({
-            type: "MOBILE_WEB_SIDEBAR_CLOSE",
-        });
+        i.h.dispatch({ type: "MOBILE_WEB_SIDEBAR_CLOSE" });
     },
     openSidebar() {
-        r.h.dispatch({
-            type: "MOBILE_WEB_SIDEBAR_OPEN",
-        });
+        i.h.dispatch({ type: "MOBILE_WEB_SIDEBAR_OPEN" });
     },
 };

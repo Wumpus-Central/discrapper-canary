@@ -1,68 +1,56 @@
-n.d(t, {
-    A: () => f,
-});
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(860923),
-    c = n(816790);
-let u = 5500,
+    u = n(816790);
+let c = 5500,
     d = 150,
-    f = (e) => {
+    _ = (e) => {
         let {
                 id: t,
                 occupant: n,
                 x: a,
-                y: f,
-                assetKey: p,
-                onClick: _,
+                y: _,
+                assetKey: f,
+                onClick: p,
                 skipNewUserEducation: h = !1,
                 shadowPosition: m,
             } = e,
             g = (0, l.A)(),
-            E = i.useMemo(() => (null == g ? void 0 : g.seats[p]), [g, p]),
-            b = i.useMemo(() => (null == E ? void 0 : E.seat), [E]),
-            y = i.useMemo(() => (null == E ? void 0 : E.shadow), [E]);
+            E = i.useMemo(() => g?.seats[f], [g, f]),
+            A = i.useMemo(() => E?.seat, [E]),
+            I = i.useMemo(() => E?.shadow, [E]);
         return (0, r.jsx)(o.DUT, {
             "aria-label": "claim seat",
             onClick:
-                null != _
+                null != p
                     ? (e) => {
-                          e.preventDefault(), e.stopPropagation(), _(t);
+                          e.preventDefault(), e.stopPropagation(), p(t);
                       }
                     : void 0,
-            className: s()(c.am, {
-                [c.Sf]: null != n,
-            }),
-            style: {
-                transform: "translate(".concat(a, "px, ").concat(f, "px)"),
-            },
+            className: s()(u.am, { [u.Sf]: null != n }),
+            style: { transform: `translate(${a}px, ${_}px)` },
             children: (0, r.jsxs)("div", {
-                className: c.LU,
+                className: u.LU,
                 children: [
-                    null != y &&
+                    null != I &&
                         null != m &&
                         (0, r.jsx)("img", {
-                            className: s()(c.Sl, c.r7),
-                            style: {
-                                transform: "translate(".concat(m.x, "px, ").concat(m.y, "px)"),
-                            },
-                            src: null == E ? void 0 : E.shadow,
+                            className: s()(u.Sl, u.r7),
+                            style: { transform: `translate(${m.x}px, ${m.y}px)` },
+                            src: E?.shadow,
                             alt: "",
                         }),
-                    null != b &&
+                    null != A &&
                         (0, r.jsx)("img", {
                             onDragStart: (e) => e.preventDefault(),
-                            className: s()(c.Sl, {
-                                [c.Sf]: null != n,
-                                [c.cb]: h,
-                            }),
-                            style: {
-                                animationDelay: "".concat(u + d * t, "ms"),
-                            },
-                            src: null == E ? void 0 : E.seat,
+                            className: s()(u.Sl, { [u.Sf]: null != n, [u.cb]: h }),
+                            style: { animationDelay: `${c + d * t}ms` },
+                            src: E?.seat,
                             alt: "",
                         }),
                 ],

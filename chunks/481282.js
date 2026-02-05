@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => l,
-});
+"use strict";
+r.d(t, { A: () => l });
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -12,18 +11,9 @@ let l = function (e) {
         s = e.hex,
         u = (0, o.default)({
             default: {
-                fields: {
-                    paddingTop: "5px",
-                    paddingBottom: "9px",
-                    width: "80px",
-                    position: "relative",
-                },
-                divider: {
-                    height: "5px",
-                },
-                RGBwrap: {
-                    position: "relative",
-                },
+                fields: { paddingTop: "5px", paddingBottom: "9px", width: "80px", position: "relative" },
+                divider: { height: "5px" },
+                RGBwrap: { position: "relative" },
                 RGBinput: {
                     marginLeft: "40%",
                     width: "40%",
@@ -45,9 +35,7 @@ let l = function (e) {
                     lineHeight: "22px",
                     position: "absolute",
                 },
-                HEXwrap: {
-                    position: "relative",
-                },
+                HEXwrap: { position: "relative" },
                 HEXinput: {
                     marginLeft: "20%",
                     width: "80%",
@@ -68,157 +56,70 @@ let l = function (e) {
                     height: "18px",
                     lineHeight: "22px",
                 },
-                fieldSymbols: {
-                    position: "absolute",
-                    top: "5px",
-                    right: "-7px",
-                    fontSize: "13px",
-                },
-                symbol: {
-                    height: "20px",
-                    lineHeight: "22px",
-                    paddingBottom: "7px",
-                },
+                fieldSymbols: { position: "absolute", top: "5px", right: "-7px", fontSize: "13px" },
+                symbol: { height: "20px", lineHeight: "22px", paddingBottom: "7px" },
             },
         }),
         c = function (e, n) {
             e["#"]
-                ? a.qt(e["#"]) &&
-                  t(
-                      {
-                          hex: e["#"],
-                          source: "hex",
-                      },
-                      n,
-                  )
+                ? a.qt(e["#"]) && t({ hex: e["#"], source: "hex" }, n)
                 : e.r || e.g || e.b
-                  ? t(
-                        {
-                            r: e.r || r.r,
-                            g: e.g || r.g,
-                            b: e.b || r.b,
-                            source: "rgb",
-                        },
-                        n,
-                    )
-                  : (e.h || e.s || e.v) &&
-                    t(
-                        {
-                            h: e.h || l.h,
-                            s: e.s || l.s,
-                            v: e.v || l.v,
-                            source: "hsv",
-                        },
-                        n,
-                    );
+                  ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, source: "rgb" }, n)
+                  : (e.h || e.s || e.v) && t({ h: e.h || l.h, s: e.s || l.s, v: e.v || l.v, source: "hsv" }, n);
         };
     return n.createElement(
         "div",
-        {
-            style: u.fields,
-        },
+        { style: u.fields },
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "h",
             value: Math.round(l.h),
             onChange: c,
         }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "s",
             value: Math.round(100 * l.s),
             onChange: c,
         }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "v",
             value: Math.round(100 * l.v),
             onChange: c,
         }),
-        n.createElement("div", {
-            style: u.divider,
-        }),
+        n.createElement("div", { style: u.divider }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "r",
             value: r.r,
             onChange: c,
         }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "g",
             value: r.g,
             onChange: c,
         }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.RGBwrap,
-                input: u.RGBinput,
-                label: u.RGBlabel,
-            },
+            style: { wrap: u.RGBwrap, input: u.RGBinput, label: u.RGBlabel },
             label: "b",
             value: r.b,
             onChange: c,
         }),
-        n.createElement("div", {
-            style: u.divider,
-        }),
+        n.createElement("div", { style: u.divider }),
         n.createElement(i.jc, {
-            style: {
-                wrap: u.HEXwrap,
-                input: u.HEXinput,
-                label: u.HEXlabel,
-            },
+            style: { wrap: u.HEXwrap, input: u.HEXinput, label: u.HEXlabel },
             label: "#",
             value: s.replace("#", ""),
             onChange: c,
         }),
         n.createElement(
             "div",
-            {
-                style: u.fieldSymbols,
-            },
-            n.createElement(
-                "div",
-                {
-                    style: u.symbol,
-                },
-                "\xb0",
-            ),
-            n.createElement(
-                "div",
-                {
-                    style: u.symbol,
-                },
-                "%",
-            ),
-            n.createElement(
-                "div",
-                {
-                    style: u.symbol,
-                },
-                "%",
-            ),
+            { style: u.fieldSymbols },
+            n.createElement("div", { style: u.symbol }, "\xb0"),
+            n.createElement("div", { style: u.symbol }, "%"),
+            n.createElement("div", { style: u.symbol }, "%"),
         ),
     );
 };

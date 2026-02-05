@@ -1,26 +1,23 @@
-n.d(e, {
-    A: () => d,
-});
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(194871),
-    c = n(25171),
-    o = n(723702),
-    u = n(985018);
-
-function d(t, e) {
-    let n = t.getBranchedName(e),
-        d = (0, i.bG)([a.A], () => {
-            let e = a.A.getState(t.id, t.branchId);
-            return null == e ? void 0 : e.installPath;
+i.d(n, { A: () => s });
+var l = i(627968);
+i(64700);
+var a = i(311907),
+    e = i(397927),
+    r = i(194871),
+    d = i(25171),
+    c = i(723702),
+    A = i(985018);
+function s(t, n) {
+    let i = t.getBranchedName(n),
+        s = (0, a.bG)([r.A], () => {
+            let n = r.A.getState(t.id, t.branchId);
+            return n?.installPath;
         }, [t.branchId, t.id]);
-    return null != d && (0, o.isDesktop)()
-        ? (0, r.jsx)(l.Drp, {
+    return null != s && (0, c.isDesktop)()
+        ? (0, l.jsx)(e.Drp, {
               id: "create-shortcut",
-              label: u.intl.string(u.t.T4tecH),
-              action: () => c.A.createShortcuts(!0, !1, n, t.id, d),
+              label: A.intl.string(A.t.T4tecH),
+              action: () => d.A.createShortcuts(!0, !1, i, t.id, s),
           })
         : null;
 }

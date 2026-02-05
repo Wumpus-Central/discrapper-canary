@@ -1,46 +1,43 @@
-r.d(t, {
-    A: () => h,
-});
-var n = r(627968);
-r(64700);
-var i = r(417597),
-    o = r(397927),
-    l = r(775602),
-    s = r(289397),
-    c = r(500770),
-    a = r(253932),
-    d = r(580630),
-    u = r(218394),
-    p = r(319664),
-    f = r(634654),
-    b = r(652215),
-    C = r(985018),
-    j = r(721746);
-
-function O() {
-    let e = a.kt.useSetting(),
-        t = (0, u.j)(),
-        r = (0, i.bG)([l.A], () => l.A.useReducedMotion),
-        o =
-            t && e && !r
-                ? (0, s.n)("server_products/storefront/question-mark.gif")
-                : (0, s.n)("server_products/storefront/question-mark.png");
-    return (0, n.jsxs)("div", {
-        className: j.Xq,
+i.d(t, { A: () => m });
+var s = i(627968);
+i(64700);
+var r = i(417597),
+    n = i(397927),
+    l = i(775602),
+    d = i(289397),
+    a = i(500770),
+    o = i(253932),
+    c = i(580630),
+    C = i(218394),
+    u = i(319664),
+    x = i(634654),
+    h = i(652215),
+    _ = i(985018),
+    p = i(721746);
+function j() {
+    let e = o.kt.useSetting(),
+        t = (0, C.j)(),
+        i = (0, r.bG)([l.A], () => l.A.useReducedMotion),
+        n =
+            t && e && !i
+                ? (0, d.n)("server_products/storefront/question-mark.gif")
+                : (0, d.n)("server_products/storefront/question-mark.png");
+    return (0, s.jsxs)("div", {
+        className: p.Xq,
         children: [
-            (0, n.jsx)(c.A, {
+            (0, s.jsx)(a.A, {
                 role: void 0,
                 ctaComponent: null,
-                imageUrl: (0, s.n)("server_products/storefront/preview-thumbnail.png"),
-                name: C.intl.string(C.t.U2hvDo),
-                description: C.intl.string(C.t["w/TNGT"]),
-                formattedPrice: (0, d.$g)(0, b.Yri.USD, {
+                imageUrl: (0, d.n)("server_products/storefront/preview-thumbnail.png"),
+                name: _.intl.string(_.t.U2hvDo),
+                description: _.intl.string(_.t["w/TNGT"]),
+                formattedPrice: (0, c.$g)(0, h.Yri.USD, {
                     localeMatcher: "best fit",
                     style: "currency",
                     maximumSignificantDigits: 1,
                 }),
                 shouldShowFullDescriptionButton: !1,
-                productType: C.intl.string(C.t.ih4QMU),
+                productType: _.intl.string(_.t.ih4QMU),
                 onTapCard: () => null,
                 hideRoleTag: !0,
                 lineClamp: 3,
@@ -48,51 +45,33 @@ function O() {
                 cardWidth: 332,
                 descriptionTextVariant: "text-xs/normal",
             }),
-            (0, n.jsx)("img", {
-                className: j.kz,
-                alt: "",
-                src: o,
-            }),
+            (0, s.jsx)("img", { className: p.kz, alt: "", src: n }),
         ],
     });
 }
-
 function g() {
-    return (0, n.jsxs)("div", {
-        className: j.od,
+    return (0, s.jsxs)("div", {
+        className: p.od,
         children: [
-            (0, n.jsx)(o.mir, {
-                size: "md",
-                color: "currentColor",
-                className: j.ZC,
-            }),
-            (0, n.jsx)(o.Text, {
+            (0, s.jsx)(n.mir, { size: "md", color: "currentColor", className: p.ZC }),
+            (0, s.jsx)(n.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: C.intl.format(C.t.umfZ8q, {
-                    learnMoreLink: f.rv,
-                }),
+                children: _.intl.format(_.t.umfZ8q, { learnMoreLink: x.rv }),
             }),
         ],
     });
 }
-
-function h(e) {
+function m(e) {
     let { guildId: t } = e;
-    return (0, n.jsxs)("div", {
-        className: j.Bh,
+    return (0, s.jsxs)("div", {
+        className: p.Bh,
         children: [
-            (0, n.jsxs)("div", {
-                className: j.gp,
-                children: [
-                    (0, n.jsx)(O, {}),
-                    (0, n.jsx)(p.A, {
-                        guildId: t,
-                        showCTA: !0,
-                    }),
-                ],
+            (0, s.jsxs)("div", {
+                className: p.gp,
+                children: [(0, s.jsx)(j, {}), (0, s.jsx)(u.A, { guildId: t, showCTA: !0 })],
             }),
-            (0, n.jsx)(g, {}),
+            (0, s.jsx)(g, {}),
         ],
     });
 }

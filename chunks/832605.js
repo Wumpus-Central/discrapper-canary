@@ -7,67 +7,31 @@ e.exports = function (e) {
         s = "(\\p{S}|\\p{P})",
         o = "[(),;\\[\\]`|{}]",
         l = `(${a}|(?!(${o}|[_:"']))${s})`,
-        c = {
-            variants: [
-                e.COMMENT("--+", "$"),
-                e.COMMENT(/\{-/, /-\}/, {
-                    contains: ["self"],
-                }),
-            ],
-        },
-        u = {
-            className: "meta",
-            begin: /\{-#/,
-            end: /#-\}/,
-        },
-        d = {
-            className: "meta",
-            begin: "^#",
-            end: "$",
-        },
+        u = { variants: [e.COMMENT("--+", "$"), e.COMMENT(/\{-/, /-\}/, { contains: ["self"] })] },
+        c = { className: "meta", begin: /\{-#/, end: /#-\}/ },
+        d = { className: "meta", begin: "^#", end: "$" },
+        _ = { className: "type", begin: "\\b[A-Z][\\w']*", relevance: 0 },
         f = {
-            className: "type",
-            begin: "\\b[A-Z][\\w']*",
-            relevance: 0,
-        },
-        p = {
             begin: "\\(",
             end: "\\)",
             illegal: '"',
             contains: [
-                u,
-                d,
-                {
-                    className: "type",
-                    begin: "\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?",
-                },
-                e.inherit(e.TITLE_MODE, {
-                    begin: "[_a-z][\\w']*",
-                }),
                 c,
+                d,
+                { className: "type", begin: "\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?" },
+                e.inherit(e.TITLE_MODE, { begin: "[_a-z][\\w']*" }),
+                u,
             ],
         },
-        _ = {
-            begin: /\{/,
-            end: /\}/,
-            contains: p.contains,
-        },
+        p = { begin: /\{/, end: /\}/, contains: f.contains },
         h = {
             className: "number",
             relevance: 0,
             variants: [
-                {
-                    match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b`,
-                },
-                {
-                    match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b`,
-                },
-                {
-                    match: `\\b0[oO](${i})\\b`,
-                },
-                {
-                    match: `\\b0[bB](${r})\\b`,
-                },
+                { match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b` },
+                { match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b` },
+                { match: `\\b0[oO](${i})\\b` },
+                { match: `\\b0[bB](${r})\\b` },
             ],
         };
     return {
@@ -77,18 +41,12 @@ e.exports = function (e) {
             "let in if then else case of where do module import hiding qualified type data newtype deriving class instance as default infix infixl infixr foreign export ccall stdcall cplusplus jvm dotnet safe unsafe family forall mdo proc rec",
         unicodeRegex: !0,
         contains: [
-            {
-                beginKeywords: "module",
-                end: "where",
-                keywords: "module where",
-                contains: [p, c],
-                illegal: "\\W\\.|;",
-            },
+            { beginKeywords: "module", end: "where", keywords: "module where", contains: [f, u], illegal: "\\W\\.|;" },
             {
                 begin: "\\bimport\\b",
                 end: "$",
                 keywords: "import qualified as hiding",
-                contains: [p, c],
+                contains: [f, u],
                 illegal: "\\W\\.|;",
             },
             {
@@ -96,62 +54,34 @@ e.exports = function (e) {
                 begin: "^(\\s*)?(class|instance)\\b",
                 end: "where",
                 keywords: "class family instance where",
-                contains: [f, p, c],
+                contains: [_, f, u],
             },
             {
                 className: "class",
                 begin: "\\b(data|(new)?type)\\b",
                 end: "$",
                 keywords: "data family type newtype deriving",
-                contains: [u, f, p, _, c],
+                contains: [c, _, f, p, u],
             },
-            {
-                beginKeywords: "default",
-                end: "$",
-                contains: [f, p, c],
-            },
-            {
-                beginKeywords: "infix infixl infixr",
-                end: "$",
-                contains: [e.C_NUMBER_MODE, c],
-            },
+            { beginKeywords: "default", end: "$", contains: [_, f, u] },
+            { beginKeywords: "infix infixl infixr", end: "$", contains: [e.C_NUMBER_MODE, u] },
             {
                 begin: "\\bforeign\\b",
                 end: "$",
                 keywords: "foreign import export ccall stdcall cplusplus jvm dotnet safe unsafe",
-                contains: [f, e.QUOTE_STRING_MODE, c],
+                contains: [_, e.QUOTE_STRING_MODE, u],
             },
-            {
-                className: "meta",
-                begin: "#!\\/usr\\/bin\\/env runhaskell",
-                end: "$",
-            },
-            u,
+            { className: "meta", begin: "#!\\/usr\\/bin\\/env runhaskell", end: "$" },
+            c,
             d,
-            {
-                scope: "string",
-                begin: /'(?=\\?.')/,
-                end: /'/,
-                contains: [
-                    {
-                        scope: "char.escape",
-                        match: /\\./,
-                    },
-                ],
-            },
+            { scope: "string", begin: /'(?=\\?.')/, end: /'/, contains: [{ scope: "char.escape", match: /\\./ }] },
             e.QUOTE_STRING_MODE,
             h,
-            f,
-            e.inherit(e.TITLE_MODE, {
-                begin: "^[_a-z][\\w']*",
-            }),
-            {
-                begin: `(?!-)${l}--+|--+(?!-)${l}`,
-            },
-            c,
-            {
-                begin: "->|<-",
-            },
+            _,
+            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
+            { begin: `(?!-)${l}--+|--+(?!-)${l}` },
+            u,
+            { begin: "->|<-" },
         ],
     };
 };

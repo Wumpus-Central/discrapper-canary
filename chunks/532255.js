@@ -1,100 +1,81 @@
-t.a(e, async function (e, r) {
+t.a(e, async function (e, l) {
     try {
-        t.r(n),
-            t.d(n, {
-                default: () => w,
-            });
-        var l = t(627968),
-            c = t(64700),
-            a = t(223535),
+        t.r(n), t.d(n, { default: () => N });
+        var r = t(627968),
+            a = t(64700),
+            s = t(223535),
             i = t(484030),
-            s = t(397927),
-            o = t(791606),
+            c = t(397927),
+            d = t(791606),
             u = t(728458),
-            d = t(715764),
+            o = t(715764),
             h = t(614740),
             m = t(440801),
-            j = t(4837),
-            p = t(750854),
-            f = t(131765),
-            x = t(167507),
-            g = t(908347),
-            v = t(62849),
-            y = t(558447),
-            b = t(886609),
-            I = t(580019),
-            A = t(985018),
-            O = t(967615),
-            k = e([j, b, a]);
-        [j, b, a] = k.then ? (await k)() : k;
-        let N = {
-            text: d.EY,
-            paragraph: d.fz,
-            empty: d.Sv,
-            emoji: j.z,
-            link: x.N,
-            list: g.B,
-            listItem: g.c,
+            x = t(4837),
+            j = t(750854),
+            g = t(131765),
+            f = t(167507),
+            p = t(908347),
+            A = t(62849),
+            I = t(558447),
+            v = t(886609),
+            y = t(580019),
+            k = t(985018),
+            C = t(967615),
+            b = e([x, v, s]);
+        [x, v, s] = b.then ? (await b)() : b;
+        let $ = {
+            text: o.EY,
+            paragraph: o.fz,
+            empty: o.Sv,
+            emoji: x.z,
+            link: f.N,
+            list: p.B,
+            listItem: p.c,
             code: h.C,
             code_block: m.N,
-            quote: y.P,
-            bold: p.yN,
-            italic: p.J2,
-            underline: p.z2,
-            strikethrough: p.Gk,
-            mention: v.P,
-            heading: f.D,
-            small: f.O,
-            spoiler: b.d,
-            timestamp: I.D,
+            quote: I.P,
+            bold: j.yN,
+            italic: j.J2,
+            underline: j.z2,
+            strikethrough: j.Gk,
+            mention: A.P,
+            heading: g.D,
+            small: g.O,
+            spoiler: v.d,
+            timestamp: y.D,
         };
-
-        function w(e) {
+        function N(e) {
             let { content: n } = e;
-            return (0, l.jsx)(i.tH, {
+            return (0, r.jsx)(i.tH, {
                 fallbackRender: (e) => {
                     let { error: t } = e;
-                    return (0, l.jsx)(P, {
-                        content: n,
-                        error: t,
-                    });
+                    return (0, r.jsx)(w, { content: n, error: t });
                 },
-                children: (0, l.jsx)(a.Ay, {
-                    content: n,
-                    renderers: N,
-                }),
+                children: (0, r.jsx)(s.Ay, { content: n, renderers: $ }),
             });
         }
-
-        function P(e) {
+        function w(e) {
             let { content: n, error: t } = e;
             return (
-                c.useEffect(() => {
+                a.useEffect(() => {
                     u.A.captureException(t);
                 }, [t]),
-                (0, l.jsxs)(l.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, l.jsx)("span", {
-                            children: n,
-                        }),
-                        (0, l.jsxs)(s.Text, {
+                        (0, r.jsx)("span", { children: n }),
+                        (0, r.jsxs)(c.Text, {
                             variant: "text-md/normal",
                             color: "text-feedback-critical",
-                            className: O.g,
-                            children: [
-                                (0, l.jsx)(o.A, {
-                                    width: 16,
-                                    height: 16,
-                                }),
-                                A.intl.string(A.t.dpFK4M),
-                            ],
+                            className: C.g,
+                            children: [(0, r.jsx)(d.A, { width: 16, height: 16 }), k.intl.string(k.t.dpFK4M)],
                         }),
                     ],
                 })
             );
         }
-        r();
+        l();
     } catch (e) {
-        r(e);
+        l(e);
     }
 });

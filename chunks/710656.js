@@ -1,18 +1,16 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => c });
+var s = n(627968);
 n(64700);
-var s = n(333748),
-    i = n(59198),
-    o = n(652215),
+var r = n(333748),
+    o = n(59198),
+    i = n(652215),
     a = n(544105);
-
 function c(e) {
     let { authToken: t, onContinue: n, onError: c, onClose: l } = e;
-    return (0, r.jsx)(i.W, {
-        platformType: o.fg2.XBOX,
-        clientId: s.i.XBOX_APPLICATION_ID,
+    return (0, s.jsx)(o.W, {
+        platformType: i.fg2.XBOX,
+        clientId: r.i.XBOX_APPLICATION_ID,
         scopes: a.sS,
         authToken: t,
         onContinue: n,

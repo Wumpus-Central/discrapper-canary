@@ -1,31 +1,18 @@
-n.d(t, {
-    V: () => l,
-});
+"use strict";
+n.d(t, { V: () => l });
 var r = n(417597),
     i = n(816733),
     a = n(851746),
     s = n(378135),
     o = n(788868);
-
 function l(e) {
-    var t, n, l, c, u, d;
-    let f = (0, s.k)(o.k4),
-        p = (0, s.k)(o.pX),
-        _ = (0, s.k)(i.A.getAnyOfUserTrialOfferId([o.Hp, o.fY, o.bi, o.MX])),
-        h = (0, s.k)(o.J7),
-        m = (0, s.k)(o.Tt),
-        g = (0, s.k)(o.Dw),
-        E = (0, s.k)(o.yo),
-        b = (0, r.bG)([a.A], () => (void 0 === e ? null : a.A.getRelevantUserTrialOffer(e)));
-    return null !=
-        (t =
-            null !=
-            (n =
-                null != (l = null != (c = null != (u = null != (d = null != g ? g : b) ? d : E) ? u : f) ? c : p)
-                    ? l
-                    : _)
-                ? n
-                : h)
-        ? t
-        : m;
+    let t = (0, s.k)(o.k4),
+        n = (0, s.k)(o.pX),
+        l = (0, s.k)(i.A.getAnyOfUserTrialOfferId([o.Hp, o.fY, o.bi, o.MX])),
+        u = (0, s.k)(o.J7),
+        c = (0, s.k)(o.Tt),
+        d = (0, s.k)(o.Dw),
+        _ = (0, s.k)(o.yo),
+        f = (0, r.bG)([a.A], () => (void 0 === e ? null : a.A.getRelevantUserTrialOffer(e)));
+    return d ?? f ?? _ ?? t ?? n ?? l ?? u ?? c;
 }

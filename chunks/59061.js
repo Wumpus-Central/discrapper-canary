@@ -1,7 +1,7 @@
+"use strict";
 var n = r(387739),
     i = r(265930),
     o = r(797686);
-
 function a(t, e, r) {
     var a = e.getCharacterList(),
         s = r > 0 ? a.get(r - 1) : void 0,
@@ -22,12 +22,7 @@ function a(t, e, r) {
                             return t.getEntity() === l;
                         },
                         function (t, e) {
-                            t <= r &&
-                                e >= r &&
-                                (f = {
-                                    start: t,
-                                    end: e,
-                                });
+                            t <= r && e >= r && (f = { start: t, end: e });
                         },
                     ),
                     "object" != typeof f && o(!1),
@@ -56,9 +51,6 @@ t.exports = function (t, e) {
     o === l && (p = c);
     var h = a(n, p, f);
     return (h !== p && (i[l] = h), Object.keys(i).length)
-        ? t.merge({
-              blockMap: r.merge(i),
-              selectionAfter: e,
-          })
+        ? t.merge({ blockMap: r.merge(i), selectionAfter: e })
         : t.set("selectionAfter", e);
 };

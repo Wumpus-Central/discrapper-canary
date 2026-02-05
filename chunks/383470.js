@@ -1,70 +1,48 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(292455),
+n.d(t, { A: () => m }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(292455),
     s = n(701508),
     o = n(979590),
-    c = n(783531),
-    u = n(965660),
-    d = n(599907),
-    p = n(652215),
-    f = n(27740);
-let h = {
-    page: p.liQ.GUILD_DISCOVERY,
-    object: p.ZSU.CARD,
-    section: p.JJy.DISCOVER_POPULAR,
-};
-
-function A(e) {
-    let { tab: t, guildIds: n, loading: p, onScroll: A, onGuildCardClick: g, onGuildCardSeen: m } = e,
-        b = (0, u.kc)(t),
-        _ = (0, u.Ot)(t),
-        E = (0, u.UW)(t),
-        O = (0, u.Ub)(t),
-        y = i.useMemo(() => {
-            let e = p ? 30 : n.length,
+    d = n(783531),
+    c = n(965660),
+    u = n(599907),
+    A = n(652215),
+    h = n(27740);
+let _ = { page: A.liQ.GUILD_DISCOVERY, object: A.ZSU.CARD, section: A.JJy.DISCOVER_POPULAR };
+function m(e) {
+    let { tab: t, guildIds: n, loading: A, onScroll: m, onGuildCardClick: p, onGuildCardSeen: g } = e,
+        E = (0, c.kc)(t),
+        f = (0, c.Ot)(t),
+        I = (0, c.UW)(t),
+        C = (0, c.Ub)(t),
+        N = r.useMemo(() => {
+            let e = A ? 30 : n.length,
                 t = [];
-            for (let a = 0; a < e; a++) {
-                var i, l;
+            for (let r = 0; r < e; r++)
                 t.push(
-                    (0, r.jsx)(
-                        d.jO,
-                        {
-                            guildId: null != (i = n[a]) ? i : null,
-                            index: a,
-                            onClick: (e) => g(e, a, O, h),
-                            onView: (e) => m(e, O),
-                        },
-                        null != (l = n[a]) ? l : a,
+                    (0, i.jsx)(
+                        u.jO,
+                        { guildId: n[r] ?? null, index: r, onClick: (e) => p(e, r, C, _), onView: (e) => g(e, C) },
+                        n[r] ?? r,
                     ),
                 );
-            }
             return t;
-        }, [O, n, p, g, m]);
-    return (0, r.jsxs)(c.A, {
-        onScroll: A,
+        }, [C, n, A, p, g]);
+    return (0, i.jsxs)(d.A, {
+        onScroll: m,
         children: [
-            (0, r.jsx)(s.A, {
-                title: b,
-                description: _,
-                children: (0, r.jsx)(a.A, {}),
-            }),
-            (0, r.jsxs)(o.A, {
+            (0, i.jsx)(s.A, { title: E, description: f, children: (0, i.jsx)(l.A, {}) }),
+            (0, i.jsxs)(o.A, {
                 children: [
-                    (0, r.jsx)(l.Heading, {
-                        className: f.G,
+                    (0, i.jsx)(a.Heading, {
+                        className: h.G,
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: E,
+                        children: I,
                     }),
-                    (0, r.jsx)("div", {
-                        className: f.Q,
-                        children: y,
-                    }),
+                    (0, i.jsx)("div", { className: h.Q, children: N }),
                 ],
             }),
         ],

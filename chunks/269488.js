@@ -1,6 +1,5 @@
-n.d(t, {
-    J: () => c,
-});
+"use strict";
+n.d(t, { J: () => u });
 var r = n(647787),
     i = n(272750),
     a = n(225321),
@@ -10,7 +9,7 @@ var r = n(647787),
         for (var n = 0; n < e.length; n += 1) if (e[n].target === t) return n;
         return -1;
     },
-    c = (function () {
+    u = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
@@ -19,9 +18,9 @@ var r = n(647787),
             }),
             (e.observe = function (e, t, n) {
                 var a = o.get(e),
-                    c = 0 === a.observationTargets.length;
+                    u = 0 === a.observationTargets.length;
                 0 > l(a.observationTargets, t) &&
-                    (c && s.g.push(a), a.observationTargets.push(new i.V(t, n && n.box)), (0, r.L)(1), r.c.schedule());
+                    (u && s.g.push(a), a.observationTargets.push(new i.V(t, n && n.box)), (0, r.L)(1), r.c.schedule());
             }),
             (e.unobserve = function (e, t) {
                 var n = o.get(e),

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ii: "periodColumn__5d2ba",
     Fh: "amountColumn__5d2ba",

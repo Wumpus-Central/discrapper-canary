@@ -1,118 +1,103 @@
-n.d(t, {
-    A: () => h,
-    k: () => A,
-}),
-    n(896048);
-var s = n(627968),
-    r = n(64700),
-    l = n(311907),
-    i = n(451988),
-    o = n(397927),
-    a = n(827343),
-    c = n(688810),
-    u = n(625841),
-    d = n(74848),
-    p = n(253932),
-    m = n(520999),
-    O = n(430452),
-    f = n(954571),
-    j = n(204050),
-    g = n(652215),
-    b = n(731854),
-    x = n(985018),
-    y = n(602785);
-
-function A() {
-    let [e, t] = r.useState(!1),
-        n = (0, l.bG)([O.A], () => O.A.isMediaFilterSettingLoading());
-    return (r.useEffect(() => {
-        let e = new i.Ep();
+s.d(t, { A: () => O, k: () => h });
+var n = s(627968),
+    l = s(64700),
+    i = s(311907),
+    a = s(451988),
+    o = s(397927),
+    r = s(827343),
+    c = s(688810),
+    d = s(625841),
+    u = s(74848),
+    m = s(253932),
+    x = s(520999),
+    p = s(430452),
+    A = s(954571),
+    g = s(204050),
+    f = s(652215),
+    j = s(731854),
+    N = s(985018),
+    _ = s(602785);
+function h() {
+    let [e, t] = l.useState(!1),
+        s = (0, i.bG)([p.A], () => p.A.isMediaFilterSettingLoading());
+    return (l.useEffect(() => {
+        let e = new a.Ep();
         return (
-            n
+            s
                 ? e.start(150, () => {
                       t(!0);
                   })
                 : (e.stop(), t(!1)),
             () => e.stop()
         );
-    }, [n]),
+    }, [s]),
     e)
-        ? (0, s.jsx)("div", {
-              className: y.mB,
-              children: (0, s.jsx)(o.y$y, {}),
-          })
+        ? (0, n.jsx)("div", { className: _.mB, children: (0, n.jsx)(o.y$y, {}) })
         : null;
 }
-
-function h(e) {
+function O(e) {
     let {
             hideDeviceSelector: t = !1,
-            hideDeviceHeader: n = !1,
-            hideCameraSettingsLink: r = !1,
-            onLearnMore: i,
-            selectedBackgroundOption: A,
-            onSelectBackgroundOption: h,
-            renderCamera: v,
-            hidePreviewToggle: N = !1,
-            onCancelPreview: E,
+            hideDeviceHeader: s = !1,
+            hideCameraSettingsLink: l = !1,
+            onLearnMore: a,
+            selectedBackgroundOption: h,
+            onSelectBackgroundOption: O,
+            renderCamera: E,
+            hidePreviewToggle: v = !1,
+            onCancelPreview: I,
         } = e,
-        { analyticsLocations: _ } = (0, c.Ay)(),
-        { id: S } = (0, d.x5)(b.oh.VIDEO_INPUT),
-        P = (0, l.bG)([O.A], () => O.A.isVideoAvailable()),
-        D = p.bm.useSetting();
-    return (0, s.jsxs)(o.BJc, {
+        { analyticsLocations: T } = (0, c.Ay)(),
+        { id: C } = (0, u.x5)(j.oh.VIDEO_INPUT),
+        S = (0, i.bG)([p.A], () => p.A.isVideoAvailable()),
+        k = m.bm.useSetting();
+    return (0, n.jsxs)(o.BJc, {
         gap: 20,
         children: [
-            v(S),
-            O.A.isEnabled()
+            E(C),
+            p.A.isEnabled()
                 ? null
-                : (0, s.jsx)(o.Text, {
-                      className: y.u5,
+                : (0, n.jsx)(o.Text, {
+                      className: _.u5,
                       color: "interactive-text-default",
                       variant: "text-sm/normal",
-                      children: x.intl.format(x.t.stagfJ, {
-                          onEnableClick: () => a.A.enable(!0),
-                      }),
+                      children: N.intl.format(N.t.stagfJ, { onEnableClick: () => r.A.enable(!0) }),
                   }),
-            N
+            v
                 ? null
-                : (0, s.jsx)(o.dOG, {
-                      label: x.intl.string(x.t["3Ppr1h"]),
-                      description: x.intl.string(x.t.WNbX4O),
-                      checked: D,
+                : (0, n.jsx)(o.dOG, {
+                      label: N.intl.string(N.t["3Ppr1h"]),
+                      description: N.intl.string(N.t.WNbX4O),
+                      checked: k,
                       onChange: (e) => {
-                          p.bm.updateSetting(e),
-                              f.default.track(g.HAw.UPDATE_USER_SETTINGS_LOCAL, {
-                                  always_preview_video: e,
-                              });
+                          m.bm.updateSetting(e),
+                              A.default.track(f.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
                   }),
             !t &&
-                (0, s.jsx)(u.U, {
-                    label: n ? void 0 : x.intl.string(x.t.FsQ3OR),
+                (0, n.jsx)(d.U, {
+                    label: s ? void 0 : N.intl.string(N.t.FsQ3OR),
                     helperText:
-                        !r && (0, j.p)()
-                            ? x.intl.format(x.t.aJYgRt, {
+                        !l && (0, g.p)()
+                            ? N.intl.format(N.t.aJYgRt, {
                                   onCameraSettingsClick: () => {
-                                      null == E || E(),
-                                          window.open((0, j.i)(S)),
-                                          f.default.track(g.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, {
-                                              location_stack: _,
-                                          });
+                                      I?.(),
+                                          window.open((0, g.i)(C)),
+                                          A.default.track(f.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: T });
                                   },
                               })
                             : void 0,
-                    deviceType: b.oh.VIDEO_INPUT,
+                    deviceType: j.oh.VIDEO_INPUT,
                     location: "CameraSettings",
-                    isDisabled: !P,
+                    isDisabled: !S,
                     showAllDevices: !0,
                 }),
-            (0, s.jsx)(m.A, {
-                className: y.Jp,
-                onLearnMore: i,
-                selectedBackgroundOption: A,
-                onSelectBackgroundOption: h,
-                currentDeviceId: S,
+            (0, n.jsx)(x.A, {
+                className: _.Jp,
+                onLearnMore: a,
+                selectedBackgroundOption: h,
+                onSelectBackgroundOption: O,
+                currentDeviceId: C,
             }),
         ],
     });

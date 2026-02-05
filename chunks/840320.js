@@ -3,15 +3,15 @@ function n(e, t, n, r) {
         s = {},
         o = {},
         l = {};
-    return function c(u) {
-        (s[u] = !0), i.push(u), (l[u] = !0);
-        for (let t = 0; t < e[u].length; t++) {
-            let n = e[u][t];
+    return function u(c) {
+        (s[c] = !0), i.push(c), (l[c] = !0);
+        for (let t = 0; t < e[c].length; t++) {
+            let n = e[c][t];
             if (s[n]) {
                 if (l[n] && (i.push(n), !r)) throw new a(i);
-            } else c(n);
+            } else u(n);
         }
-        i.pop(), delete l[u], (t && 0 !== e[u].length) || o[u] || (n.push(u), (o[u] = !0));
+        i.pop(), delete l[c], (t && 0 !== e[c].length) || o[c] || (n.push(c), (o[c] = !0));
     };
 }
 var r,
@@ -127,11 +127,6 @@ var a = (r = function (e) {
     );
 });
 (a.prototype = Object.create(Error.prototype, {
-    constructor: {
-        value: Error,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0,
-    },
+    constructor: { value: Error, enumerable: !1, writable: !0, configurable: !0 },
 })),
     Object.setPrototypeOf(a, Error);

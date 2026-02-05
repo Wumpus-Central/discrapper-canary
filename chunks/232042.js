@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,8 +7,8 @@ var i = n(503698),
     s = n(397927),
     o = n(936755),
     l = n(985018),
-    c = n(800344);
-let u = function (e) {
+    u = n(800344);
+let c = function (e) {
     let { iconType: t, children: n } = e,
         i = null;
     switch (t) {
@@ -17,7 +16,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.HKD, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.BVZqJl),
             });
             break;
@@ -25,7 +24,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.XAi, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.aa0FYn),
             });
             break;
@@ -33,7 +32,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.qux, {
                 size: "lg",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.EErMzA),
             });
             break;
@@ -41,7 +40,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.XAi, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.pKZ4I8),
             });
             break;
@@ -49,7 +48,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.ysw, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t["7Xm5QI"]),
             });
             break;
@@ -57,7 +56,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.N$i, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.GK18KJ),
             });
             break;
@@ -65,7 +64,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.bSJ, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.GbryDd),
             });
             break;
@@ -73,7 +72,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.oyn, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.Y4REmB),
             });
             break;
@@ -82,7 +81,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.Zf8, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.VbpLyU),
             });
             break;
@@ -91,7 +90,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.kiI, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.et6wav),
             });
             break;
@@ -99,7 +98,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.oyn, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.BAB0yK),
             });
             break;
@@ -107,7 +106,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.XAi, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t["/YzI63"]),
             });
             break;
@@ -115,7 +114,7 @@ let u = function (e) {
             i = (0, r.jsx)(s.xfq, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.seKITE),
             });
             break;
@@ -123,24 +122,15 @@ let u = function (e) {
             i = (0, r.jsx)(s.qYV, {
                 size: "md",
                 color: "currentColor",
-                className: c.Kk,
+                className: u.Kk,
                 "aria-label": l.intl.string(l.t.ghtnss),
             });
     }
     return (0, r.jsxs)("span", {
-        className: a()("channelWithIcon", {
-            [c.bV]: "text" === t,
-        }),
+        className: a()("channelWithIcon", { [u.bV]: "text" === t }),
         children: [
-            (0, r.jsx)(o.A, {
-                children: i,
-            }),
-            null != n && "" !== n
-                ? (0, r.jsx)("span", {
-                      className: c.UU,
-                      children: n,
-                  })
-                : null,
+            (0, r.jsx)(o.A, { children: i }),
+            null != n && "" !== n ? (0, r.jsx)("span", { className: u.UU, children: n }) : null,
         ],
     });
 };

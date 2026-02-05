@@ -1,3 +1,1 @@
-e.exports = {
-    t: "emptySearchResultsContainer__9eabf",
-};
+e.exports = { t: "emptySearchResultsContainer__9eabf" };

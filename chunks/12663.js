@@ -1,22 +1,18 @@
-l.d(t, {
-    A: () => r,
-});
-
-function r(e, t, l) {
-    let r = l[e.pingUrl],
-        n = l[t.pingUrl];
-    return (null == r ? void 0 : r.rtt) != null && (null == n ? void 0 : n.rtt) != null
-        ? r.rtt - n.rtt
-        : (null == r ? void 0 : r.rtt) != null && (null == n ? void 0 : n.rtt) == null
+n.d(t, { A: () => l });
+function l(e, t, n) {
+    let l = n[e.pingUrl],
+        r = n[t.pingUrl];
+    return l?.rtt != null && r?.rtt != null
+        ? l.rtt - r.rtt
+        : l?.rtt != null && r?.rtt == null
           ? -1
-          : (null == r ? void 0 : r.rtt) == null && (null == n ? void 0 : n.rtt) != null
+          : l?.rtt == null && r?.rtt != null
             ? 1
-            : (null == r ? void 0 : r.loading) && !(null == n ? void 0 : n.loading)
+            : l?.loading && !r?.loading
               ? -1
-              : (!(null == r ? void 0 : r.loading) && (null == n ? void 0 : n.loading)) ||
-                  ((null == r ? void 0 : r.error) && !(null == n ? void 0 : n.error))
+              : (!l?.loading && r?.loading) || (l?.error && !r?.error)
                 ? 1
-                : !(null == r ? void 0 : r.error) && (null == n ? void 0 : n.error)
+                : !l?.error && r?.error
                   ? -1
                   : 0;
 }

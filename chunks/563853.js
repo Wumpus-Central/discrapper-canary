@@ -1,6 +1,4 @@
-a.d(t, {
-    T: () => s,
-});
+a.d(t, { T: () => s });
 let s = {
     ASSET_SOCIAL_TWITTER: a(412126),
     ASSET_SOCIAL_FACEBOOK: a(681713),

@@ -1,248 +1,125 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+n.d(t, { A: () => O });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     o = n(435371),
     c = n(421380),
     d = n(397927),
     u = n(793574),
     _ = n(688810),
-    p = n(854627),
-    m = n(427157),
+    m = n(854627),
+    A = n(427157),
     g = n(954571),
-    A = n(975571),
-    f = n(326084),
-    h = n(851746),
-    b = n(664654),
-    E = n(344904),
-    x = n(221688),
-    O = n(652215),
-    C = n(985018),
-    I = n(509117),
-    T = n(6336);
-
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let j = (e) => {
+    E = n(975571),
+    h = n(326084),
+    p = n(851746),
+    C = n(664654),
+    x = n(344904),
+    T = n(221688),
+    I = n(652215),
+    S = n(985018),
+    f = n(509117),
+    N = n(6336);
+let b = (e) => {
         let { userRecord: t, placement: n } = e,
-            { avatarSrc: i, eventHandlers: l } = (0, p.A)({
-                userId: null == t ? void 0 : t.id,
-                size: d._3J.SIZE_32,
-                animateOnHover: !0,
-            }),
-            s = null != t,
-            a = s
-                ? (0, r.jsx)(
-                      d.euF,
-                      S(
-                          {
-                              src: i,
-                              "aria-label": t.username,
-                              size: d._3J.SIZE_32,
-                          },
-                          l,
-                      ),
-                  )
-                : (0, r.jsx)(d.Heading, {
-                      variant: "heading-md/semibold",
-                      className: I.n5,
-                      children: n,
-                  });
-        return (0, r.jsx)(o.m_, {
-            text: C.intl.string(C.t.UnKHdo),
-            shouldShow: !s,
-            children: (0, r.jsx)("div", {
-                className: I.Lg,
-                children: a,
-            }),
+            { avatarSrc: s, eventHandlers: r } = (0, m.A)({ userId: t?.id, size: d._3J.SIZE_32, animateOnHover: !0 }),
+            a = null != t,
+            l = a
+                ? (0, i.jsx)(d.euF, { src: s, "aria-label": t.username, size: d._3J.SIZE_32, ...r })
+                : (0, i.jsx)(d.Heading, { variant: "heading-md/semibold", className: f.n5, children: n });
+        return (0, i.jsx)(o.m_, {
+            text: S.intl.string(S.t.UnKHdo),
+            shouldShow: !a,
+            children: (0, i.jsx)("div", { className: f.Lg, children: l }),
+        });
+    },
+    R = (e) => {
+        let { numSentReferrals: t, placement: n } = e;
+        return (0, i.jsxs)("div", {
+            className: f.Ip,
+            children: [
+                (0, i.jsx)("div", { className: f.Ej }),
+                (0, i.jsx)("div", { className: a()({ [f.ch]: t > n, [f.q_]: t === n }) }),
+            ],
         });
     },
     v = (e) => {
-        let { numSentReferrals: t, placement: n } = e;
-        return (0, r.jsxs)("div", {
-            className: I.Ip,
-            children: [
-                (0, r.jsx)("div", {
-                    className: I.Ej,
-                }),
-                (0, r.jsx)("div", {
-                    className: s()({
-                        [I.ch]: t > n,
-                        [I.q_]: t === n,
-                    }),
-                }),
-            ],
-        });
-    },
-    N = (e) => {
         let { userRecords: t } = e,
             n = t.length,
-            i = n < 1 ? null : t[0],
-            l = n < 2 ? null : t[1],
-            s = n < 3 ? null : t[2];
-        return (0, r.jsxs)("div", {
-            className: I.ZM,
+            s = n < 1 ? null : t[0],
+            r = n < 2 ? null : t[1],
+            a = n < 3 ? null : t[2];
+        return (0, i.jsxs)("div", {
+            className: f.ZM,
             children: [
-                (0, r.jsx)(j, {
-                    userRecord: i,
-                    placement: 1,
-                }),
-                (0, r.jsx)(v, {
-                    numSentReferrals: n,
-                    placement: 1,
-                }),
-                (0, r.jsx)(j, {
-                    userRecord: l,
-                    placement: 2,
-                }),
-                (0, r.jsx)(v, {
-                    numSentReferrals: n,
-                    placement: 2,
-                }),
-                (0, r.jsx)(j, {
-                    userRecord: s,
-                    placement: 3,
-                }),
+                (0, i.jsx)(b, { userRecord: s, placement: 1 }),
+                (0, i.jsx)(R, { numSentReferrals: n, placement: 1 }),
+                (0, i.jsx)(b, { userRecord: r, placement: 2 }),
+                (0, i.jsx)(R, { numSentReferrals: n, placement: 2 }),
+                (0, i.jsx)(b, { userRecord: a, placement: 3 }),
             ],
         });
     },
-    y = (e) => {
+    O = (e) => {
         let { isInSettings: t = !1 } = e,
-            l = (0, a.bG)([h.A], () => h.A.getRecipientStatus()),
-            { referralSentUsers: o } = (0, b.J)(),
-            p = i.useMemo(() => o.map((e) => new m.A(e)), [o]),
-            j = {
-                redeemed: 0,
-                converted: 0,
-                sent: l.size,
-            };
-        l.forEach((e) => {
-            e === f.aK.REDEEMED && j.redeemed++, e === f.aK.CONVERTED && (j.redeemed++, j.converted++);
+            r = (0, l.bG)([p.A], () => p.A.getRecipientStatus()),
+            { referralSentUsers: o } = (0, C.J)(),
+            m = s.useMemo(() => o.map((e) => new A.A(e)), [o]),
+            b = { redeemed: 0, converted: 0, sent: r.size };
+        r.forEach((e) => {
+            e === h.aK.REDEEMED && b.redeemed++, e === h.aK.CONVERTED && (b.redeemed++, b.converted++);
         });
-        let v = j.sent === b.Z,
-            y = A.A.getArticleURL(O.MVz.REFERRAL_PROGRAM),
-            { analyticsLocations: P } = (0, _.Ay)(u.A.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-            R = i.useRef(null),
-            D = (j.sent / b.Z) * 100,
-            w = (0, r.jsxs)("div", {
-                className: I.hE,
+        let R = b.sent === C.Z,
+            O = E.A.getArticleURL(I.MVz.REFERRAL_PROGRAM),
+            { analyticsLocations: j } = (0, _.Ay)(u.A.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+            P = s.useRef(null),
+            y = (b.sent / C.Z) * 100,
+            L = (0, i.jsxs)("div", {
+                className: f.hE,
                 children: [
-                    (0, r.jsx)(E.Ay, {
-                        percentage: D,
-                        progressCircleVariation: E.BN.NITRO_LOGO,
-                        iconClassName: s()({
-                            [I.VC]: !t,
-                            [I.ER]: t,
-                        }),
+                    (0, i.jsx)(x.Ay, {
+                        percentage: y,
+                        progressCircleVariation: x.BN.NITRO_LOGO,
+                        iconClassName: a()({ [f.VC]: !t, [f.ER]: t }),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: I.Ns,
+                    (0, i.jsxs)("div", {
+                        className: f.Ns,
                         children: [
-                            (0, r.jsx)(d.Heading, {
+                            (0, i.jsx)(d.Heading, {
                                 variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
-                                className: I.R0,
-                                children: (0, x.X8)({
-                                    hasSentAll: v,
-                                }),
+                                className: f.R0,
+                                children: (0, T.X8)({ hasSentAll: R }),
                             }),
-                            (0, r.jsx)(N, {
-                                userRecords: p,
-                            }),
-                            (0, r.jsx)(d.Text, {
+                            (0, i.jsx)(v, { userRecords: m }),
+                            (0, i.jsx)(d.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
-                                children: (0, x.dB)({
-                                    helpdeskArticle: y,
-                                    referralsStatuses: j,
-                                }),
+                                children: (0, T.dB)({ helpdeskArticle: O, referralsStatuses: b }),
                             }),
-                            (0, r.jsx)("div", {
-                                className: s()(I.Fb, {
-                                    [I.jv]: !t,
-                                }),
-                                children: (0, r.jsx)(d.wLn, {
+                            (0, i.jsx)("div", {
+                                className: a()(f.Fb, { [f.jv]: !t }),
+                                children: (0, i.jsx)(d.wLn, {
                                     "data-migration-pending": !0,
-                                    className: I.r$,
+                                    className: f.r$,
                                     color: c.XD.CUSTOM,
                                     onClick: () =>
                                         ((e) => {
                                             let { analyticsLocations: t } = e;
-                                            g.default.track(O.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                                            g.default.track(I.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                                                 location_stack: t,
                                             }),
                                                 (0, d.mMO)(async () => {
                                                     let { default: e } = await n.e("26489").then(n.bind(n, 477088));
-                                                    return (n) => {
-                                                        var i, l;
-                                                        return (0, r.jsx)(
-                                                            e,
-                                                            ((i = S({}, n)),
-                                                            (l = l =
-                                                                {
-                                                                    sourceAnalyticsLocations: t,
-                                                                }),
-                                                            Object.getOwnPropertyDescriptors
-                                                                ? Object.defineProperties(
-                                                                      i,
-                                                                      Object.getOwnPropertyDescriptors(l),
-                                                                  )
-                                                                : (function (e, t) {
-                                                                      var n = Object.keys(e);
-                                                                      if (Object.getOwnPropertySymbols) {
-                                                                          var r = Object.getOwnPropertySymbols(e);
-                                                                          n.push.apply(n, r);
-                                                                      }
-                                                                      return n;
-                                                                  })(Object(l)).forEach(function (e) {
-                                                                      Object.defineProperty(
-                                                                          i,
-                                                                          e,
-                                                                          Object.getOwnPropertyDescriptor(l, e),
-                                                                      );
-                                                                  }),
-                                                            i),
-                                                        );
-                                                    };
+                                                    return (n) => (0, i.jsx)(e, { ...n, sourceAnalyticsLocations: t });
                                                 });
-                                        })({
-                                            analyticsLocations: P,
-                                        }),
+                                        })({ analyticsLocations: j }),
                                     onlyShineOnHover: !0,
-                                    children: (0, r.jsxs)("div", {
-                                        className: I.Zn,
+                                    children: (0, i.jsxs)("div", {
+                                        className: f.Zn,
                                         children: [
-                                            (0, r.jsx)("img", {
-                                                src: T,
-                                                alt: "",
-                                                className: I.QH,
-                                            }),
-                                            v ? C.intl.string(C.t.SY9tyI) : C.intl.string(C.t.Lm2nFc),
+                                            (0, i.jsx)("img", { src: N, alt: "", className: f.QH }),
+                                            R ? S.intl.string(S.t.SY9tyI) : S.intl.string(S.t.Lm2nFc),
                                         ],
                                     }),
                                 }),
@@ -251,24 +128,15 @@ let j = (e) => {
                     }),
                 ],
             }),
-            L = j.redeemed === b.Z;
-        return (0, r.jsx)(_.f5, {
-            value: P,
-            children: (0, r.jsx)("div", {
-                className: s()({
-                    [I.f5]: L,
-                    [I.JY]: !L,
-                    [I.VX]: !t,
-                    [I.m$]: L && t,
-                }),
-                children: (0, r.jsx)("div", {
-                    ref: R,
-                    className: s()({
-                        [I.dn]: !t,
-                        [I.d_]: t,
-                        [I.kS]: L,
-                    }),
-                    children: w,
+            D = b.redeemed === C.Z;
+        return (0, i.jsx)(_.f5, {
+            value: j,
+            children: (0, i.jsx)("div", {
+                className: a()({ [f.f5]: D, [f.JY]: !D, [f.VX]: !t, [f.m$]: D && t }),
+                children: (0, i.jsx)("div", {
+                    ref: P,
+                    className: a()({ [f.dn]: !t, [f.d_]: t, [f.kS]: D }),
+                    children: L,
                 }),
             }),
         });

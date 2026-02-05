@@ -1,5 +1,3 @@
-n.d(t, {
-    F: () => a,
-});
-var r,
-    a = (((r = {}).MFA = "mfa"), (r.SMS = "sms"), (r.EMAIL = "email"), r);
+t.d(s, { F: () => a });
+var i,
+    a = (((i = {}).MFA = "mfa"), (i.SMS = "sms"), (i.EMAIL = "email"), i);

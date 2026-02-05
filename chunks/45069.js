@@ -1,9 +1,9 @@
+"use strict";
 var n = r(630678),
     i = r(116740),
     o = r(797686),
     a = (0, i.Map)(),
     s = 0;
-
 function u(t, e) {
     console.warn("WARNING: " + t + ' will be deprecated soon!\nPlease use "' + e + '" instead.');
 }
@@ -33,13 +33,7 @@ var c = {
         return "" + s;
     },
     __create: function (t, e, r) {
-        return c.__add(
-            new n({
-                type: t,
-                mutability: e,
-                data: r || {},
-            }),
-        );
+        return c.__add(new n({ type: t, mutability: e, data: r || {} }));
     },
     __add: function (t) {
         var e = "" + ++s;

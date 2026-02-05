@@ -1,97 +1,73 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(938796);
-var r = n(627968);
+n.d(t, { A: () => x }), n(938796);
+var l = n(627968);
 n(64700);
-var l = n(665260),
-    a = n(311907),
-    i = n(731068),
-    s = n(608214),
+var a = n(665260),
+    r = n(311907),
+    s = n(731068),
+    i = n(608214),
     o = n(269849),
-    c = n(294520),
-    u = n(448381),
-    d = n(718266),
+    d = n(294520),
+    c = n(448381),
+    u = n(718266),
     m = n(564107),
-    f = n(394839),
-    p = n(734057),
+    p = n(394839),
+    A = n(734057),
     h = n(644447),
-    b = n(207963),
-    g = n(652215);
-
+    C = n(207963),
+    E = n(652215);
 function x(e) {
-    let { message: t } = (0, b.jc)(),
-        n = (0, a.bG)([p.A], () => p.A.getChannel(null == t ? void 0 : t.channel_id)),
+    let { message: t } = (0, C.jc)(),
+        n = (0, r.bG)([A.A], () => A.A.getChannel(t?.channel_id)),
         {
             shouldHideMediaOptions: x,
-            enabledContentHarmTypeFlags: y,
-            gifAutoPlay: v,
-            getGifFavButton: j,
-            getOnMediaItemContextMenu: C,
+            enabledContentHarmTypeFlags: N,
+            gifAutoPlay: I,
+            getGifFavButton: _,
+            getOnMediaItemContextMenu: f,
         } = (0, m.X)();
     if (null == t || null == n) return null;
-    let _ = e.items.map((e) => (0, s.FX)(e.media, t)).filter((e) => "INVALID" !== e.type),
-        { srcToOnClickOverride: A, srcToHandlePreloadImage: O } =
-            _.length > 1
-                ? (0, o.o)(
-                      _,
-                      {
-                          shouldHideMediaOptions: x,
-                          enabledContentHarmTypeFlags: y,
-                      },
-                      "Media Mosaic",
-                  )
-                : {
-                      srcToOnClickOverride: {},
-                      srcToHandlePreloadImage: {},
-                  };
-
-    function E(e, n) {
-        var r;
+    let g = e.items.map((e) => (0, i.FX)(e.media, t)).filter((e) => "INVALID" !== e.type),
+        { srcToOnClickOverride: T, srcToHandlePreloadImage: v } =
+            g.length > 1
+                ? (0, o.o)(g, { shouldHideMediaOptions: x, enabledContentHarmTypeFlags: N }, "Media Mosaic")
+                : { srcToOnClickOverride: {}, srcToHandlePreloadImage: {} };
+    function j(e, n) {
         let l = e.originalItem;
-        return (0, c.tt)(l.media, n, l.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
+        return (0, d.tt)(l.media, n, l.spoiler, t?.author.bot ?? !1);
     }
     let S = e.items.map((e, n) => {
-        let r = e.media,
-            a = null == C ? void 0 : C(r),
-            s = {
+        let l = e.media,
+            r = f?.(l),
+            i = {
                 message: t,
                 item: {
-                    uniqueId: "".concat(r.proxyUrl, "--").concat(n),
+                    uniqueId: `${l.proxyUrl}--${n}`,
                     originalItem: e,
-                    type: (0, u.wz)(r),
-                    downloadUrl: r.url,
-                    height: r.height,
-                    width: r.width,
+                    type: (0, c.wz)(l),
+                    downloadUrl: l.url,
+                    height: l.height,
+                    width: l.width,
                     spoiler: e.spoiler,
-                    contentType: r.contentType,
-                    srcIsAnimated: (0, l.Lt)(r.flags, i.e5.IS_ANIMATED),
+                    contentType: l.contentType,
+                    srcIsAnimated: (0, a.Lt)(l.flags, s.e5.IS_ANIMATED),
                 },
-                onContextMenu: a,
-                autoPlayGif: v,
-                getObscureReason: E,
-                renderImageComponent: d.Bu,
-                renderVideoComponent: d.PI,
-                renderVisualPlaceholderComponent: d.oo,
-                renderAudioComponent: g.tEg,
-                renderPlaintextFilePreview: g.tEg,
-                renderGenericFileComponent: g.tEg,
-                renderMosaicItemFooter: g.tEg,
-                gifFavoriteButton: j(r),
+                onContextMenu: r,
+                autoPlayGif: I,
+                getObscureReason: j,
+                renderImageComponent: u.Bu,
+                renderVideoComponent: u.PI,
+                renderVisualPlaceholderComponent: u.oo,
+                renderAudioComponent: E.tEg,
+                renderPlaintextFilePreview: E.tEg,
+                renderGenericFileComponent: E.tEg,
+                renderMosaicItemFooter: E.tEg,
+                gifFavoriteButton: _(l),
                 onPlay: (e, t, n) => {},
                 canRemoveItem: !1,
-                onRemoveItem: g.tEg,
+                onRemoveItem: E.tEg,
             },
-            o = (0, h.E)({
-                proxyURL: r.proxyUrl,
-                url: r.url,
-            });
-        return o in A && ((s.onClick = A[o]), (s.handlePreloadImage = O[o])), s;
+            o = (0, h.E)({ proxyURL: l.proxyUrl, url: l.url });
+        return o in T && ((i.onClick = T[o]), (i.handlePreloadImage = v[o])), i;
     });
-    return (0, r.jsx)("div", {
-        children: (0, r.jsx)(f.A, {
-            items: S,
-            isInAppComponentsV2: !0,
-        }),
-    });
+    return (0, l.jsx)("div", { children: (0, l.jsx)(p.A, { items: S, isInAppComponentsV2: !0 }) });
 }

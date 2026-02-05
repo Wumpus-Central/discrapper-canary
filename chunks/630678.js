@@ -1,3 +1,4 @@
+"use strict";
 t.exports = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
@@ -16,10 +17,4 @@ t.exports = (function (t) {
         }),
         e
     );
-})(
-    (0, r(116740).Record)({
-        type: "TOKEN",
-        mutability: "IMMUTABLE",
-        data: Object,
-    }),
-);
+})((0, r(116740).Record)({ type: "TOKEN", mutability: "IMMUTABLE", data: Object }));

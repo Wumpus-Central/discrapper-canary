@@ -1,58 +1,47 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(417597),
-    s = n(397927),
+var s = n(417597),
+    r = n(397927),
     l = n(966327),
     a = n(287809),
     o = n(985018),
     c = n(36522);
-
-function u(e) {
+function d(e) {
     let { friendMemberIds: t } = e,
-        n = (0, i.yK)([a.default], () =>
+        n = (0, s.yK)([a.default], () =>
             t
                 .slice(0, 3)
                 .map((e) => a.default.getUser(e))
                 .filter((e) => null != e),
         );
     if (0 === n.length) return null;
-    let u = n[0],
-        d = {
+    let d = n[0],
+        u = {
             count: t.length - 1,
-            username: u.username,
+            username: d.username,
             username2: 2 === t.length && n.length >= 2 ? n[1].username : "",
         },
-        h = o.intl.format(o.t["5NHEPu"], d);
-    return (0, r.jsxs)("div", {
+        h = o.intl.format(o.t["5NHEPu"], u);
+    return (0, i.jsxs)("div", {
         className: c.kL,
         children: [
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: c.yA,
                 children: n.map((e, t) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         "div",
                         {
                             className: c.R3,
-                            style: {
-                                zIndex: n.length - t,
-                            },
-                            children: (0, r.jsx)(l.A, {
-                                user: e,
-                                size: s._3J.SIZE_16,
-                            }),
+                            style: { zIndex: n.length - t },
+                            children: (0, i.jsx)(l.A, { user: e, size: r._3J.SIZE_16 }),
                         },
                         e.id,
                     ),
                 ),
             }),
-            (0, r.jsx)(s.Text, {
-                variant: "text-sm/medium",
-                color: "text-subtle",
-                children: h,
-            }),
+            (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-subtle", children: h }),
         ],
     });
 }

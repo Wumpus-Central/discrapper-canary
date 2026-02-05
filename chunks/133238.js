@@ -1,150 +1,91 @@
-n.d(t, {
-    m: () => p,
-    y: () => h,
-}),
-    n(896048);
-var r = n(627968);
-n(64700);
-var i = n(735438),
-    l = n.n(i),
-    a = n(311907),
-    o = n(397927),
-    s = n(808728),
-    d = n(181079),
-    c = n(422258),
-    u = n(93055),
-    A = n(616075),
-    f = n(652215),
-    b = n(985018);
-
-function g(e, t) {
-    return e.type === f.rbe.GROUP_DM
-        ? t
-            ? b.intl.string(b.t["0BWmSM"])
-            : b.intl.string(b.t.uuVTOK)
-        : e.type === f.rbe.DM
-          ? t
-              ? b.intl.string(b.t["2wfKGo"])
-              : b.intl.string(b.t.wPbAse)
-          : t
-            ? b.intl.string(b.t.Bou7lT)
-            : b.intl.string(b.t["4wcdE/"]);
+t.d(e, { m: () => _, y: () => j });
+var i = t(627968);
+t(64700);
+var r = t(735438),
+    l = t.n(r),
+    a = t(311907),
+    d = t(397927),
+    s = t(808728),
+    u = t(181079),
+    c = t(422258),
+    o = t(93055),
+    A = t(616075),
+    h = t(652215),
+    f = t(985018);
+function g(n, e) {
+    return n.type === h.rbe.GROUP_DM
+        ? e
+            ? f.intl.string(f.t["0BWmSM"])
+            : f.intl.string(f.t.uuVTOK)
+        : n.type === h.rbe.DM
+          ? e
+              ? f.intl.string(f.t["2wfKGo"])
+              : f.intl.string(f.t.wPbAse)
+          : e
+            ? f.intl.string(f.t.Bou7lT)
+            : f.intl.string(f.t["4wcdE/"]);
 }
-
-function p(e) {
-    let t = (0, a.bG)([s.Ay], () => s.Ay.getChannels(f.YYv))[f.rbe.GUILD_CATEGORY],
-        { isFavoritesPerk: n } = (0, A.l)("58e21a_1"),
-        { notifyFavoriteAdded: i } = (0, u.CJ)();
-    if (!(0, u.pe)(e)) return null;
-    let [[d], b] = l().partition(t, (e) => "null" === e.channel.id);
-
-    function p(t) {
-        i(), (0, c.Jz)(e.id, t);
+function _(n) {
+    let e = (0, a.bG)([s.Ay], () => s.Ay.getChannels(h.YYv))[h.rbe.GUILD_CATEGORY],
+        { isFavoritesPerk: t } = (0, A.l)("58e21a_1"),
+        { notifyFavoriteAdded: r } = (0, o.CJ)();
+    if (!(0, o.pe)(n)) return null;
+    let [[u], f] = l().partition(e, (n) => "null" === n.channel.id);
+    function _(e) {
+        r(), (0, c.Jz)(n.id, e);
     }
-    return 0 === b.length
-        ? (0, r.jsx)(o.Drp, {
+    return 0 === f.length
+        ? (0, i.jsx)(d.Drp, { id: "favorite-channel", label: g(n, !1), action: () => _(null) })
+        : (0, i.jsxs)(d.Drp, {
               id: "favorite-channel",
-              label: g(e, !1),
-              action: () => p(null),
-          })
-        : (0, r.jsxs)(o.Drp, {
-              id: "favorite-channel",
-              label: g(e, !1),
-              action: () => p(null),
+              label: g(n, !1),
+              action: () => _(null),
               children: [
-                  n &&
-                      (0, r.jsx)(o.rXV, {
-                          children: (0, r.jsx)(
-                              o.Drp,
+                  t &&
+                      (0, i.jsx)(d.rXV, {
+                          children: (0, i.jsx)(
+                              d.Drp,
                               {
-                                  id: "favorite-".concat(d.channel.id),
-                                  label: d.channel.name,
-                                  action: () => p("null" === d.channel.id ? null : d.channel.id),
+                                  id: `favorite-${u.channel.id}`,
+                                  label: u.channel.name,
+                                  action: () => _("null" === u.channel.id ? null : u.channel.id),
                               },
-                              d.channel.id,
+                              u.channel.id,
                           ),
                       }),
-                  (0, r.jsx)(o.rXV, {
-                      children: b.map((e) =>
-                          (0, r.jsx)(
-                              o.Drp,
-                              {
-                                  id: "favorite-".concat(e.channel.id),
-                                  label: e.channel.name,
-                                  action: () => p(e.channel.id),
-                              },
-                              e.channel.id,
+                  (0, i.jsx)(d.rXV, {
+                      children: f.map((n) =>
+                          (0, i.jsx)(
+                              d.Drp,
+                              { id: `favorite-${n.channel.id}`, label: n.channel.name, action: () => _(n.channel.id) },
+                              n.channel.id,
                           ),
                       ),
                   }),
               ],
           });
 }
-
-function h(e) {
-    let t = (0, a.bG)([d.A], () => d.A.isFavorite(e.id));
-    return __OVERLAY__ || !t
+function j(n) {
+    let e = (0, a.bG)([u.A], () => u.A.isFavorite(n.id));
+    return __OVERLAY__ || !e
         ? null
-        : (0, r.jsx)(o.Drp, {
+        : (0, i.jsx)(d.Drp, {
               id: "favorite-channel",
-              label: g(e, !0),
+              label: g(n, !0),
               color: "danger",
               action: () =>
-                  e.type === f.rbe.GUILD_CATEGORY
-                      ? (0, o.mMO)(async () => {
-                            let { default: t } = await n.e("52210").then(n.bind(n, 862377));
-                            return (n) => {
-                                var i, l;
-                                return (0, r.jsx)(
-                                    t,
-                                    ((i = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, n)),
-                                    (l = l =
-                                        {
-                                            onConfirm: () => {
-                                                n.onClose(), (0, c.i_)(e.id);
-                                            },
-                                            channel: e,
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(l)).forEach(function (e) {
-                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                          }),
-                                    i),
-                                );
-                            };
+                  n.type === h.rbe.GUILD_CATEGORY
+                      ? (0, d.mMO)(async () => {
+                            let { default: e } = await t.e("52210").then(t.bind(t, 862377));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    ...t,
+                                    onConfirm: () => {
+                                        t.onClose(), (0, c.i_)(n.id);
+                                    },
+                                    channel: n,
+                                });
                         })
-                      : (0, c.i_)(e.id),
+                      : (0, c.i_)(n.id),
           });
 }

@@ -1,7 +1,4 @@
-i.d(e, {
-    default: () => h,
-}),
-    i(896048);
+i.d(e, { default: () => h });
 var n = i(627968),
     a = i(64700),
     l = i(158954),
@@ -13,7 +10,6 @@ var n = i(627968),
     u = i(652215),
     p = i(842130),
     f = i(985018);
-
 function h(t) {
     let { transitionState: e, onClose: i } = t,
         [h, x] = a.useState(!1),
@@ -36,37 +32,16 @@ function h(t) {
         onClose: i,
         title: f.intl.string(p.default.VGB30H),
         subtitle: f.intl.format(p.default["CrZZ+p"], {
-            openSettingsHook: (t, e) =>
-                (0, n.jsx)(
-                    r.MzZ,
-                    {
-                        onClick: g,
-                        children: t,
-                    },
-                    e,
-                ),
+            openSettingsHook: (t, e) => (0, n.jsx)(r.MzZ, { onClick: g, children: t }, e),
         }),
         actions: [
-            {
-                variant: "secondary",
-                text: f.intl.string(f.t["ETE/oC"]),
-                onClick: i,
-            },
-            {
-                text: f.intl.string(p.default.cSb7U0),
-                onClick: C,
-                loading: h,
-                variant: "critical-primary",
-            },
+            { variant: "secondary", text: f.intl.string(f.t["ETE/oC"]), onClick: i },
+            { text: f.intl.string(p.default.cSb7U0), onClick: C, loading: h, variant: "critical-primary" },
         ],
         children: (0, n.jsx)("div", {
             children:
                 null != k &&
-                (0, n.jsx)(r.Text, {
-                    variant: "text-xs/normal",
-                    color: "text-feedback-critical",
-                    children: k,
-                }),
+                (0, n.jsx)(r.Text, { variant: "text-xs/normal", color: "text-feedback-critical", children: k }),
         }),
     });
 }

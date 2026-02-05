@@ -1,108 +1,62 @@
-n.d(t, {
-    n: () => d,
-}),
-    n(747238),
-    n(896048);
+n.d(t, { n: () => c });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(397927),
-    r = n(147925),
-    s = n(159452);
-
+    l = n(147925),
+    r = n(159452);
 function o(e) {
     let { text: t } = e;
     return (0, a.jsx)("span", {
-        className: s.IR,
-        children: t.split("").map((e, t) =>
-            (0, a.jsx)(
-                "span",
-                {
-                    className: s.ZF,
-                    style: {
-                        "--custom-letter-index": t,
-                    },
-                    children: e,
-                },
-                t,
-            ),
-        ),
-    });
-}
-
-function c(e) {
-    let { text: t } = e;
-    return (0, a.jsx)("span", {
-        className: s.IR,
-        children: "⭐ "
-            .concat(t)
+        className: r.IR,
+        children: t
             .split("")
             .map((e, t) =>
-                (0, a.jsx)(
-                    "span",
-                    {
-                        className: s.EC,
-                        style: {
-                            "--custom-letter-index": t,
-                        },
-                        children: e,
-                    },
-                    t,
-                ),
+                (0, a.jsx)("span", { className: r.ZF, style: { "--custom-letter-index": t }, children: e }, t),
             ),
     });
 }
-
 function d(e) {
-    let { title: t, initExpanded: n, highlightMode: d = "none", children: u } = e,
-        [m, p] = l.useState(n),
-        h = l.useCallback(() => {
-            p(!m);
+    let { text: t } = e,
+        n = `⭐ ${t}`;
+    return (0, a.jsx)("span", {
+        className: r.IR,
+        children: n
+            .split("")
+            .map((e, t) =>
+                (0, a.jsx)("span", { className: r.EC, style: { "--custom-letter-index": t }, children: e }, t),
+            ),
+    });
+}
+function c(e) {
+    let { title: t, initExpanded: n, highlightMode: c = "none", children: u } = e,
+        [m, h] = s.useState(n),
+        x = s.useCallback(() => {
+            h(!m);
         }, [m]),
-        f = "root" === d ? "status-warning" : "status-positive",
-        x = (e) =>
-            "migrated" === d
-                ? (0, a.jsx)(i.Text, {
-                      variant: e,
-                      children: (0, a.jsx)(o, {
-                          text: t,
-                      }),
-                  })
-                : "migrated-root" === d
-                  ? (0, a.jsx)(i.Text, {
-                        variant: e,
-                        children: (0, a.jsx)(c, {
-                            text: t,
-                        }),
-                    })
-                  : (0, a.jsx)(i.Text, {
-                        variant: e,
-                        color: f,
-                        children: t,
-                    });
+        p = "root" === c ? "status-warning" : "status-positive",
+        g = (e) =>
+            "migrated" === c
+                ? (0, a.jsx)(i.Text, { variant: e, children: (0, a.jsx)(o, { text: t }) })
+                : "migrated-root" === c
+                  ? (0, a.jsx)(i.Text, { variant: e, children: (0, a.jsx)(d, { text: t }) })
+                  : (0, a.jsx)(i.Text, { variant: e, color: p, children: t });
     return null == u
-        ? (0, a.jsx)("div", {
-              className: s.NF,
-              children: x("text-md/normal"),
-          })
+        ? (0, a.jsx)("div", { className: r.NF, children: g("text-md/normal") })
         : (0, a.jsxs)("div", {
-              className: s.NF,
+              className: r.NF,
               children: [
                   (0, a.jsxs)(i.DUT, {
-                      className: s.jr,
-                      onClick: h,
+                      className: r.jr,
+                      onClick: x,
                       children: [
-                          x("text-md/bold"),
-                          (0, a.jsx)(r.A, {
-                              direction: m ? r.A.Directions.DOWN : r.A.Directions.RIGHT,
-                              className: s.D,
+                          g("text-md/bold"),
+                          (0, a.jsx)(l.A, {
+                              direction: m ? l.A.Directions.DOWN : l.A.Directions.RIGHT,
+                              className: r.D,
                           }),
                       ],
                   }),
-                  m &&
-                      (0, a.jsx)("div", {
-                          className: s.m4,
-                          children: u,
-                      }),
+                  m && (0, a.jsx)("div", { className: r.m4, children: u }),
               ],
           });
 }

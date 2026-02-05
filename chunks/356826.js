@@ -1,12 +1,7 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(872863);
-let i = {
-    isAvifFile: a,
-    findAvifOffsets: s,
-};
-
+let i = { isAvifFile: a, findAvifOffsets: s };
 function a(e) {
     if (!e) return !1;
     try {
@@ -16,7 +11,6 @@ function a(e) {
         return !1;
     }
 }
-
 function s(e) {
     return (0, r.OH)(e);
 }

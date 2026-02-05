@@ -6,10 +6,7 @@ e.exports = function (e) {
                 className: "meta.prompt",
                 begin: /^julia>/,
                 relevance: 10,
-                starts: {
-                    end: /^(?![ ]{6})/,
-                    subLanguage: "julia",
-                },
+                starts: { end: /^(?![ ]{6})/, subLanguage: "julia" },
             },
         ],
         aliases: ["jldoctest"],

@@ -1,117 +1,77 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => S });
+var i = n(627968),
+    s = n(64700),
     l = n(835245),
-    s = n(118751),
+    r = n(118751),
     a = n(311907),
-    c = n(562465),
-    o = n(397927),
-    d = n(974544),
+    o = n(562465),
+    d = n(397927),
+    c = n(974544),
     u = n(421838),
-    f = n(773669),
+    m = n(773669),
     g = n(498642),
-    b = n(71393),
-    m = n(351906),
-    p = n(954571),
-    x = n(555337),
-    h = n(855537),
-    j = n(907445),
-    O = n(11725),
-    y = n(652215),
-    v = n(897513),
-    A = n(985018),
-    E = n(381929);
-
-function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-let _ = function (e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            i = null;
+    x = n(71393),
+    h = n(351906),
+    _ = n(954571),
+    A = n(555337),
+    p = n(855537),
+    f = n(907445),
+    j = n(11725),
+    N = n(652215),
+    E = n(897513),
+    b = n(985018),
+    T = n(381929);
+let C = function (e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            s = null;
         return (
             null == t || Number.isNaN(t)
-                ? (null == t || Number.isNaN(t)) && null != e && (i = A.intl.string(A.t.xO2msf))
-                : (i = A.intl.formatToPlainString(A.t.nskeMw, {
-                      percentage: (0, s.s)(Math.abs(t), n),
-                  })),
+                ? (null == t || Number.isNaN(t)) && null != e && (s = b.intl.string(b.t.xO2msf))
+                : (s = b.intl.formatToPlainString(b.t.nskeMw, { percentage: (0, r.s)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? "".concat((0, s.s)(e, n)).concat(r ? "%" : "") : A.intl.string(A.t.jHpxwo),
-                subtext: i,
+                localizedNumber: null != e ? `${(0, r.s)(e, n)}${i ? "%" : ""}` : b.intl.string(b.t.jHpxwo),
+                subtext: s,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0,
             }
         );
     },
-    S = function (e) {
+    I = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === y.t02.NOT_ENOUGH_GUILD_MEMBERS
-            ? (0, r.jsx)("div", {
-                  className: E.NA,
-                  children: (0, r.jsx)(o.wx6, {
-                      type: "info",
-                      children: A.intl.string(A.t["FsgE/B"]),
-                  }),
+        return t || e === N.t02.NOT_ENOUGH_GUILD_MEMBERS
+            ? (0, i.jsx)("div", {
+                  className: T.NA,
+                  children: (0, i.jsx)(d.wx6, { type: "info", children: b.intl.string(b.t["FsgE/B"]) }),
               })
             : null == e
               ? null
-              : (0, r.jsx)(o.wx6, {
-                    type: "critical",
-                    children: A.intl.string(A.t.Iju63e),
-                });
+              : (0, i.jsx)(d.wx6, { type: "critical", children: b.intl.string(b.t.Iju63e) });
     },
-    T = () => {
-        let [e, t] = i.useState(!1),
-            n = (0, a.bG)([x.A], () => x.A.getGuildId());
-        return (0, r.jsx)("div", {
+    v = () => {
+        let [e, t] = s.useState(!1),
+            n = (0, a.bG)([A.A], () => A.A.getGuildId());
+        return (0, i.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
-            className: E.XU,
-            children: (0, r.jsx)(o.Button, {
+            className: T.XU,
+            children: (0, i.jsx)(d.Button, {
                 variant: "primary",
-                text: A.intl.string(A.t.Uskgxx),
+                text: b.intl.string(b.t.Uskgxx),
                 onClick: () => {
-                    let e, r;
+                    let e, i;
                     t(!0),
-                        (p.default.track(y.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
-                            guild_id: n,
-                        }),
-                        (e = null == n ? y.dSh.DEVELOPER_PORTAL : y.dSh.DEVELOPER_PORTAL_GUILD_ANALYTICS(n)),
-                        (r = (0, l.A)()),
-                        c.Bo.post({
-                            url: y.Rsh.HANDOFF,
-                            body: {
-                                key: r,
-                            },
+                        (_.default.track(N.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: n }),
+                        (e = null == n ? N.dSh.DEVELOPER_PORTAL : N.dSh.DEVELOPER_PORTAL_GUILD_ANALYTICS(n)),
+                        (i = (0, l.A)()),
+                        o.Bo.post({
+                            url: N.Rsh.HANDOFF,
+                            body: { key: i },
                             oldFormErrors: !0,
                             rejectWithError: !0,
                         }).then(
                             (t) => {
                                 let n = t.body.handoff_token;
-                                window.open(y.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(r, n, e));
+                                window.open(N.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(i, n, e));
                             },
                             () => {
                                 window.open(e);
@@ -124,111 +84,78 @@ let _ = function (e, t, n) {
             }),
         });
     },
-    I = () => {
-        let e = (0, a.bG)([x.A], () => x.A.getGuildId()),
+    S = () => {
+        let e = (0, a.bG)([A.A], () => A.A.getGuildId()),
             t = (0, a.bG)([g.A], () => g.A.getMemberCount(e)),
-            n = (0, a.bG)([b.A], () => b.A.getGuild(e)),
-            l = (0, a.bG)([f.default], () => f.default.locale),
-            { analytics: s, errorCode: c } = (0, a.cf)([j.A], () => ({
-                analytics: null != e ? j.A.getOverviewAnalytics(e) : null,
-                errorCode: j.A.getError(),
+            n = (0, a.bG)([x.A], () => x.A.getGuild(e)),
+            l = (0, a.bG)([m.default], () => m.default.locale),
+            { analytics: r, errorCode: o } = (0, a.cf)([f.A], () => ({
+                analytics: null != e ? f.A.getOverviewAnalytics(e) : null,
+                errorCode: f.A.getError(),
             })),
-            p = (0, a.bG)([m.A], () => m.A.getSettings().enabled),
-            I =
+            _ = (0, a.bG)([h.A], () => h.A.getSettings().enabled),
+            S =
                 null == t ||
                 null == n ||
                 (null != t &&
                     t < 500 &&
                     null != n &&
-                    !n.features.has(y.GuildFeatures.PARTNERED) &&
-                    !n.features.has(y.GuildFeatures.VERIFIED));
-        i.useEffect(() => {
-            null == e || I || ((0, h.p9)(e), (0, h.fe)(e), (0, h._z)(e));
-        }, [e, I]),
-            i.useEffect(() => {
-                (0, u.sF)(v._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+                    !n.features.has(N.GuildFeatures.PARTNERED) &&
+                    !n.features.has(N.GuildFeatures.VERIFIED));
+        s.useEffect(() => {
+            null == e || S || ((0, p.p9)(e), (0, p.fe)(e), (0, p._z)(e));
+        }, [e, S]),
+            s.useEffect(() => {
+                (0, u.sF)(E._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
             }, []);
-        let C =
-            null != s
-                ? (0, r.jsx)("div", {
-                      className: E.__invalid_guildAnalyticsOverviewWrapper,
-                      children: (0, r.jsxs)("div", {
-                          className: E.SJ,
+        let y =
+            null != r
+                ? (0, i.jsx)("div", {
+                      className: T.__invalid_guildAnalyticsOverviewWrapper,
+                      children: (0, i.jsxs)("div", {
+                          className: T.SJ,
                           children: [
-                              (0, r.jsx)(
-                                  O.A,
-                                  N(
-                                      {
-                                          title: A.intl.string(A.t.i0NorT),
-                                          tooltipText: A.intl.string(A.t.KiRbLJ),
-                                      },
-                                      _(s.visitors, s.visitorsChange, l),
-                                  ),
-                              ),
-                              (0, r.jsx)(
-                                  O.A,
-                                  N(
-                                      {
-                                          title: A.intl.string(A.t.DDAHdQ),
-                                          tooltipText: A.intl.string(A.t.HxWUkU),
-                                      },
-                                      _(s.communicators, s.communicatorsChange, l),
-                                  ),
-                              ),
-                              (0, r.jsx)(
-                                  O.A,
-                                  N(
-                                      {
-                                          title: A.intl.string(A.t.hYeOqC),
-                                      },
-                                      _(s.newMembers, s.newMembersChange, l),
-                                  ),
-                              ),
-                              (0, r.jsx)(
-                                  O.A,
-                                  N(
-                                      {
-                                          title: A.intl.string(A.t.jj7OPw),
-                                          tooltipText: A.intl.string(A.t.MQCslz),
-                                      },
-                                      _(s.pctRetained, s.pctRetainedChange, l, !0),
-                                  ),
-                              ),
+                              (0, i.jsx)(j.A, {
+                                  title: b.intl.string(b.t.i0NorT),
+                                  tooltipText: b.intl.string(b.t.KiRbLJ),
+                                  ...C(r.visitors, r.visitorsChange, l),
+                              }),
+                              (0, i.jsx)(j.A, {
+                                  title: b.intl.string(b.t.DDAHdQ),
+                                  tooltipText: b.intl.string(b.t.HxWUkU),
+                                  ...C(r.communicators, r.communicatorsChange, l),
+                              }),
+                              (0, i.jsx)(j.A, {
+                                  title: b.intl.string(b.t.hYeOqC),
+                                  ...C(r.newMembers, r.newMembersChange, l),
+                              }),
+                              (0, i.jsx)(j.A, {
+                                  title: b.intl.string(b.t.jj7OPw),
+                                  tooltipText: b.intl.string(b.t.MQCslz),
+                                  ...C(r.pctRetained, r.pctRetainedChange, l, !0),
+                              }),
                           ],
                       }),
                   })
                 : null;
-        return (0, r.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             children: [
-                (0, r.jsx)(o.Heading, {
-                    variant: "heading-lg/semibold",
-                    children: A.intl.string(A.t["0wWfUG"]),
-                }),
-                (0, r.jsx)(o.Text, {
-                    variant: "text-sm/normal",
-                    children: A.intl.format(A.t.NIZ60a, {}),
-                }),
-                S(c, I),
-                (0, r.jsxs)("div", {
-                    className: E.Pg,
+                (0, i.jsx)(d.Heading, { variant: "heading-lg/semibold", children: b.intl.string(b.t["0wWfUG"]) }),
+                (0, i.jsx)(d.Text, { variant: "text-sm/normal", children: b.intl.format(b.t.NIZ60a, {}) }),
+                I(o, S),
+                (0, i.jsxs)("div", {
+                    className: T.Pg,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: E.jM,
-                        }),
-                        (0, r.jsx)(o.Text, {
-                            className: E.WO,
+                        (0, i.jsx)("div", { className: T.jM }),
+                        (0, i.jsx)(d.Text, {
+                            className: T.WO,
                             variant: "text-sm/normal",
-                            children: A.intl.string(A.t.A5vswv),
+                            children: b.intl.string(b.t.A5vswv),
                         }),
-                        (0, r.jsx)(T, {}),
+                        (0, i.jsx)(v, {}),
                     ],
                 }),
-                p
-                    ? (0, r.jsx)("div", {
-                          className: E.Rc,
-                          children: (0, r.jsx)(d.A, {}),
-                      })
-                    : C,
+                _ ? (0, i.jsx)("div", { className: T.Rc, children: (0, i.jsx)(c.A, {}) }) : y,
             ],
         });
     };

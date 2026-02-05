@@ -1,257 +1,155 @@
-n.d(t, {
-    Ay: () => M,
-}),
-    n(733351),
-    n(638769),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { Ay: () => k });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(158954),
-    c = n(311907),
-    o = n(990078),
-    d = n(397927),
+    o = n(311907),
+    d = n(990078),
+    c = n(397927),
     u = n(442433),
-    f = n(181658),
+    m = n(181658),
     g = n(80682),
-    b = n(793574),
-    m = n(688810),
-    p = n(342296),
-    x = n(287809),
-    h = n(954571),
-    j = n(642133),
-    O = n(997509),
-    y = n(396816),
-    v = n(856644),
-    A = n(785312),
-    E = n(316506),
-    N = n(981634),
-    _ = n(927573),
-    S = n(652215),
-    T = n(985018),
-    I = n(727938),
-    C = n(261223);
-
-function P(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-async function R(e, t, n) {
-    let i = e.roles.filter((e) => e !== n);
+    x = n(793574),
+    h = n(688810),
+    _ = n(342296),
+    A = n(287809),
+    p = n(954571),
+    f = n(642133),
+    j = n(997509),
+    N = n(396816),
+    E = n(856644),
+    b = n(785312),
+    T = n(316506),
+    C = n(981634),
+    I = n(927573),
+    v = n(652215),
+    S = n(985018),
+    y = n(727938),
+    R = n(261223);
+async function O(e, t, n) {
+    let s = e.roles.filter((e) => e !== n);
     try {
-        await O.A.updateMemberRoles(t, e.id, i, [], [n]);
+        await j.A.updateMemberRoles(t, e.id, s, [], [n]);
     } catch (t) {
-        let e = new f.A(t);
-        (0, d.qfG)((t) =>
-            (0, r.jsx)(
-                a.Modal,
-                w(P({}, t), {
-                    title: T.intl.string(T.t.R0RpRX),
-                    actions: [
-                        {
-                            text: T.intl.string(T.t.BddRzS),
-                            variant: "primary",
-                            onClick: t.onClose,
-                        },
-                    ],
-                    children: (0, r.jsx)(d.Text, {
-                        color: "text-default",
-                        variant: "text-md/normal",
-                        children: e.getAnyErrorMessage(),
-                    }),
+        let e = new m.A(t);
+        (0, c.qfG)((t) =>
+            (0, i.jsx)(a.Modal, {
+                ...t,
+                title: S.intl.string(S.t.R0RpRX),
+                actions: [{ text: S.intl.string(S.t.BddRzS), variant: "primary", onClick: t.onClose }],
+                children: (0, i.jsx)(c.Text, {
+                    color: "text-default",
+                    variant: "text-md/normal",
+                    children: e.getAnyErrorMessage(),
                 }),
-            ),
+            }),
         );
     }
 }
-
-function D(e) {
-    let { member: t, guildId: l, roleId: c, locked: f } = e,
-        b = i.useRef(null),
-        m = i.useMemo(
-            () => ({
-                [l]: [t.id],
-            }),
-            [l, t.id],
-        );
-
-    function h(e) {
-        if ((e.stopPropagation(), !f)) {
+function G(e) {
+    let { member: t, guildId: l, roleId: o, locked: m } = e,
+        x = s.useRef(null),
+        h = s.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
+    function p(e) {
+        if ((e.stopPropagation(), !m)) {
             let n;
-            if (e.shiftKey) return void R(t, l, c);
-            (n = y.A.getRole(c)),
-                (0, d.qfG)((e) =>
-                    (0, r.jsx)(
-                        a.Modal,
-                        w(P({}, e), {
-                            title: T.intl.string(T.t["7sFNfW"]),
-                            subtitle: T.intl.format(T.t.scORUv, {
-                                username: t.name,
-                                roleName: null == n ? void 0 : n.name,
-                            }),
-                            actions: [
-                                {
-                                    text: T.intl.string(T.t["ETE/oC"]),
-                                    variant: "secondary",
-                                    onClick: e.onClose,
+            if (e.shiftKey) return void O(t, l, o);
+            (n = N.A.getRole(o)),
+                (0, c.qfG)((e) =>
+                    (0, i.jsx)(a.Modal, {
+                        ...e,
+                        title: S.intl.string(S.t["7sFNfW"]),
+                        subtitle: S.intl.format(S.t.scORUv, { username: t.name, roleName: n?.name }),
+                        actions: [
+                            { text: S.intl.string(S.t["ETE/oC"]), variant: "secondary", onClick: e.onClose },
+                            {
+                                text: S.intl.string(S.t.N86XcP),
+                                variant: "critical-primary",
+                                onClick: () => {
+                                    O(t, l, o), e.onClose();
                                 },
-                                {
-                                    text: T.intl.string(T.t.N86XcP),
-                                    variant: "critical-primary",
-                                    onClick: () => {
-                                        R(t, l, c), e.onClose();
-                                    },
-                                },
-                            ],
-                            children: (0, r.jsx)(d.Text, {
-                                className: I.Of,
-                                color: "text-muted",
-                                variant: "text-md/normal",
-                                children: T.intl.string(T.t.jxIxJL),
-                            }),
+                            },
+                        ],
+                        children: (0, i.jsx)(c.Text, {
+                            className: y.Of,
+                            color: "text-muted",
+                            variant: "text-md/normal",
+                            children: S.intl.string(S.t.jxIxJL),
                         }),
-                    ),
+                    }),
                 );
         }
     }
-
-    function j(e) {
-        let i = x.default.getUser(t.id);
-        null != i &&
+    function f(e) {
+        let s = A.default.getUser(t.id);
+        null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("23215")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("62841")]).then(
                     n.bind(n, 365689),
                 );
-                return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        w(P({}, t), {
-                            user: i,
-                            guildId: l,
-                            showChatItems: !1,
-                        }),
-                    );
+                return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });
             });
     }
     return (
-        (0, g.E)(m, "GuildSettingsRolesEditMembers"),
-        (0, r.jsx)("div", {
-            className: C.Q,
-            children: (0, r.jsx)(p.A, {
-                targetElementRef: b,
+        (0, g.E)(h, "GuildSettingsRolesEditMembers"),
+        (0, i.jsx)("div", {
+            className: R.Q,
+            children: (0, i.jsx)(_.A, {
+                targetElementRef: x,
                 userId: t.id,
                 guildId: l,
-                roleId: c,
+                roleId: o,
                 position: "left",
                 children: (e) =>
-                    (0, r.jsxs)(
-                        d.DUT,
-                        w(P({}, e), {
-                            innerRef: b,
-                            className: I.TL,
-                            onContextMenu: j,
-                            children: [
-                                (0, r.jsx)(N.A, {
-                                    className: I.bu,
-                                    avatarURL: t.avatarURL,
-                                    name: t.name,
-                                    bot: t.bot,
-                                    verifiedBot: t.verifiedBot,
-                                    userTag: t.userTag,
-                                }),
-                                (0, r.jsx)("div", {
-                                    className: I.O6,
-                                    children: (0, r.jsx)(o.m, {
-                                        text: f ? T.intl.string(T.t.wkrQaK) : T.intl.string(T.t["7sFNfW"]),
-                                        position: "top",
-                                        children: (0, r.jsx)(d.DUT, {
-                                            className: s()(I.DT, {
-                                                [I.li]: f,
-                                            }),
-                                            onClick: h,
-                                            children: (0, r.jsx)(d.aXh, {
-                                                size: "xs",
-                                                color: "currentColor",
-                                            }),
-                                        }),
+                    (0, i.jsxs)(c.DUT, {
+                        ...e,
+                        innerRef: x,
+                        className: y.TL,
+                        onContextMenu: f,
+                        children: [
+                            (0, i.jsx)(C.A, {
+                                className: y.bu,
+                                avatarURL: t.avatarURL,
+                                name: t.name,
+                                bot: t.bot,
+                                verifiedBot: t.verifiedBot,
+                                userTag: t.userTag,
+                            }),
+                            (0, i.jsx)("div", {
+                                className: y.O6,
+                                children: (0, i.jsx)(d.m, {
+                                    text: m ? S.intl.string(S.t.wkrQaK) : S.intl.string(S.t["7sFNfW"]),
+                                    position: "top",
+                                    children: (0, i.jsx)(c.DUT, {
+                                        className: r()(y.DT, { [y.li]: m }),
+                                        onClick: p,
+                                        children: (0, i.jsx)(c.aXh, { size: "xs", color: "currentColor" }),
                                     }),
                                 }),
-                            ],
-                        }),
-                    ),
+                            }),
+                        ],
+                    }),
             }),
         })
     );
 }
-
-function G(e) {
+function L(e) {
     let { handleAddClick: t, locked: n } = e;
-    return (0, r.jsx)("div", {
-        className: C.Q,
-        children: (0, r.jsxs)("div", {
-            className: s()(I.TL, I.xs),
+    return (0, i.jsx)("div", {
+        className: R.Q,
+        children: (0, i.jsxs)("div", {
+            className: r()(y.TL, y.xs),
             children: [
-                (0, r.jsx)(d.nFg, {
-                    size: "md",
-                    color: "currentColor",
-                }),
-                (0, r.jsx)(d.Text, {
-                    className: I.Tf,
+                (0, i.jsx)(c.nFg, { size: "md", color: "currentColor" }),
+                (0, i.jsx)(c.Text, {
+                    className: y.Tf,
                     variant: "text-sm/semibold",
                     color: "text-muted",
-                    children: T.intl.format(T.t.P9pZOW, {
-                        addMembersHook: function (e, i) {
-                            return n
-                                ? null
-                                : (0, r.jsx)(
-                                      d.MzZ,
-                                      {
-                                          onClick: t,
-                                          children: e,
-                                      },
-                                      i,
-                                  );
+                    children: S.intl.format(S.t.P9pZOW, {
+                        addMembersHook: function (e, s) {
+                            return n ? null : (0, i.jsx)(c.MzZ, { onClick: t, children: e }, s);
                         },
                     }),
                 }),
@@ -259,169 +157,120 @@ function G(e) {
         }),
     });
 }
-
-function L(e) {
+function D(e) {
     let {
             guildId: t,
             roleId: n,
             query: l,
-            headerHeight: s,
+            headerHeight: r,
             locked: a,
-            onScroll: c,
-            roleMembers: o,
+            onScroll: o,
+            roleMembers: d,
             handleAddClick: u,
         } = e,
-        { analyticsLocations: f } = (0, m.Ay)(b.A.MEMBER_LIST),
-        g = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, v.cG)(t, g);
-    let p = i.useMemo(() => o.filter((e) => (0, v.EF)(g, e)), [o, g]),
-        x = i.useMemo(() => p.sort((e, t) => e.name.localeCompare(t.name)), [p]);
-    return (0, r.jsx)(m.f5, {
-        value: f,
-        children: (0, r.jsx)(d.Eie, {
-            className: I.p_,
-            sections: [Math.max(p.length, 1)],
-            sectionHeight: s,
-            renderSection: () =>
-                (0, r.jsx)(
-                    "div",
-                    {
-                        style: {
-                            height: s,
-                        },
-                    },
-                    "section",
-                ),
-            style: {
-                scrollPaddingTop: s,
-            },
+        { analyticsLocations: m } = (0, h.Ay)(x.A.MEMBER_LIST),
+        g = s.useMemo(() => l.trim().toLowerCase(), [l]);
+    (0, E.cG)(t, g);
+    let _ = s.useMemo(() => d.filter((e) => (0, E.EF)(g, e)), [d, g]),
+        A = s.useMemo(() => _.sort((e, t) => e.name.localeCompare(t.name)), [_]);
+    return (0, i.jsx)(h.f5, {
+        value: m,
+        children: (0, i.jsx)(c.Eie, {
+            className: y.p_,
+            sections: [Math.max(_.length, 1)],
+            sectionHeight: r,
+            renderSection: () => (0, i.jsx)("div", { style: { height: r } }, "section"),
+            style: { scrollPaddingTop: r },
             rowHeight: 40,
             renderRow: function (e) {
-                let { row: i } = e;
-                if (0 === x.length)
-                    return (0, r.jsx)(
-                        G,
-                        {
-                            handleAddClick: u,
-                            locked: a,
-                        },
-                        "empty",
-                    );
-                let l = x[i];
-                return (0, r.jsx)(
-                    D,
-                    {
-                        member: l,
-                        guildId: t,
-                        roleId: n,
-                        locked: a,
-                    },
-                    l.id,
-                );
+                let { row: s } = e;
+                if (0 === A.length) return (0, i.jsx)(L, { handleAddClick: u, locked: a }, "empty");
+                let l = A[s];
+                return (0, i.jsx)(G, { member: l, guildId: t, roleId: n, locked: a }, l.id);
             },
-            onScroll: c,
+            onScroll: o,
         }),
     });
 }
-
-function k(e) {
-    let { query: t, setQuery: n, locked: i, handleAddClick: l } = e;
-    return (0, r.jsxs)("div", {
-        className: I.MT,
+function M(e) {
+    let { query: t, setQuery: n, locked: s, handleAddClick: l } = e;
+    return (0, i.jsxs)("div", {
+        className: y.MT,
         children: [
-            (0, r.jsx)(d.IWV, {
+            (0, i.jsx)(c.IWV, {
                 query: t,
                 onChange: n,
                 onClear: () => n(""),
-                placeholder: T.intl.string(T.t.pYHobK),
-                "aria-label": T.intl.string(T.t.pYHobK),
+                placeholder: S.intl.string(S.t.pYHobK),
+                "aria-label": S.intl.string(S.t.pYHobK),
             }),
-            (0, r.jsx)(d.Button, {
+            (0, i.jsx)(c.Button, {
                 onClick: l,
                 variant: "primary",
                 size: "sm",
-                disabled: i,
-                text: T.intl.string(T.t.cHszXg),
+                disabled: s,
+                text: S.intl.string(S.t.cHszXg),
             }),
         ],
     });
 }
-
-function M(e) {
-    let { guild: t, role: l, locked: a, setSelectedSection: o } = e,
-        [u, f] = i.useState(""),
-        { headerHeight: g, headerRef: b } = (0, A.A)(0),
-        { scrolledToTop: m, handleScroll: p } = (0, E.u)(),
-        x = l.managed || a,
-        O = (0, v.K5)(t.id, l.id),
-        y =
-            (0, c.bG)([j.A], () => {
-                var e, n;
-                return null != (e = null == (n = j.A.getRoleMemberCount(t.id)) ? void 0 : n[l.id]) ? e : 0;
-            }) > O.length,
-        N = () => {
-            h.default.track(S.HAw.OPEN_MODAL, {
+function k(e) {
+    let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
+        [u, m] = s.useState(""),
+        { headerHeight: g, headerRef: x } = (0, b.A)(0),
+        { scrolledToTop: h, handleScroll: _ } = (0, T.u)(),
+        A = l.managed || a,
+        j = (0, E.K5)(t.id, l.id),
+        N = (0, o.bG)([f.A], () => f.A.getRoleMemberCount(t.id)?.[l.id] ?? 0) > j.length,
+        C = () => {
+            p.default.track(v.HAw.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
                 location_section: "Members",
             }),
-                (0, d.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("72271"), n.e("51711")]).then(n.bind(n, 66655));
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            w(P({}, n), {
-                                roleId: l.id,
-                                guildId: t.id,
-                            }),
-                        );
+                (0, c.mMO)(async () => {
+                    let { default: e } = await n.e("78708").then(n.bind(n, 66655));
+                    return (n) => (0, i.jsx)(e, { ...n, roleId: l.id, guildId: t.id });
                 });
         };
-    return (0, r.jsxs)("div", {
-        className: I.kL,
+    return (0, i.jsxs)("div", {
+        className: y.kL,
         children: [
-            (0, r.jsx)("div", {
-                className: I.N1,
-                ref: b,
-                children: (0, r.jsx)("div", {
-                    className: C.Q,
-                    children: (0, r.jsxs)("div", {
-                        className: s()(C.wx, {
-                            [C.l6]: !m,
-                        }),
+            (0, i.jsx)("div", {
+                className: y.N1,
+                ref: x,
+                children: (0, i.jsx)("div", {
+                    className: R.Q,
+                    children: (0, i.jsxs)("div", {
+                        className: r()(R.wx, { [R.l6]: !h }),
                         children: [
-                            (0, r.jsx)(E.A, {
+                            (0, i.jsx)(T.A, {
                                 guild: t,
                                 role: l,
-                                selectedSection: _.T$.MEMBERS,
-                                setSelectedSection: o,
+                                selectedSection: I.T$.MEMBERS,
+                                setSelectedSection: d,
                             }),
-                            (0, r.jsx)(k, {
-                                query: u,
-                                setQuery: f,
-                                locked: x,
-                                handleAddClick: N,
-                            }),
-                            y
-                                ? (0, r.jsx)(d.po8, {
-                                      className: I.v6,
-                                      messageType: d.YCn.INFO,
-                                      children: T.intl.string(T.t.RQxHZ8),
+                            (0, i.jsx)(M, { query: u, setQuery: m, locked: A, handleAddClick: C }),
+                            N
+                                ? (0, i.jsx)(c.po8, {
+                                      className: y.v6,
+                                      messageType: c.YCn.INFO,
+                                      children: S.intl.string(S.t.RQxHZ8),
                                   })
                                 : null,
                         ],
                     }),
                 }),
             }),
-            (0, r.jsx)(L, {
+            (0, i.jsx)(D, {
                 headerHeight: g + 8,
                 query: u,
                 guildId: t.id,
                 roleId: l.id,
-                locked: x,
-                onScroll: p,
-                roleMembers: O,
-                handleAddClick: N,
+                locked: A,
+                onScroll: _,
+                roleMembers: j,
+                handleAddClick: C,
             }),
         ],
     });

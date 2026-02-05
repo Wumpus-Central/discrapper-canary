@@ -34,28 +34,18 @@ e.exports = function (e) {
                 "yield",
             ],
         },
-        r = {
-            $pattern: /[\w.\/]+/,
-            literal: ["true", "false", "undefined", "null"],
-        },
+        r = { $pattern: /[\w.\/]+/, literal: ["true", "false", "undefined", "null"] },
         i = /""|"[^"]+"/,
         a = /''|'[^']+'/,
         s = /\[\]|\[[^\]]+\]/,
         o = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
         l = /(\.|\/)/,
-        c = t.either(i, a, s, o),
-        u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
+        u = t.either(i, a, s, o),
+        c = t.concat(t.optional(/\.|\.\/|\//), u, t.anyNumberOfTimes(t.concat(l, u))),
         d = t.concat("(", s, "|", o, ")(?==)"),
-        f = {
-            begin: u,
-        },
-        p = e.inherit(f, {
-            keywords: r,
-        }),
-        _ = {
-            begin: /\(/,
-            end: /\)/,
-        },
+        _ = { begin: c },
+        f = e.inherit(_, { keywords: r }),
+        p = { begin: /\(/, end: /\)/ },
         h = {
             className: "attr",
             begin: d,
@@ -63,68 +53,23 @@ e.exports = function (e) {
             starts: {
                 begin: /=/,
                 end: /=/,
-                starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, p, _],
-                },
+                starts: { contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, f, p] },
             },
         },
-        m = {
-            begin: /as\s+\|/,
-            keywords: {
-                keyword: "as",
-            },
-            end: /\|/,
-            contains: [
-                {
-                    begin: /\w+/,
-                },
-            ],
-        },
-        g = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, p, _],
-            returnEnd: !0,
-        };
-    _.contains = [
-        e.inherit(f, {
-            className: "name",
-            keywords: n,
-            starts: e.inherit(g, {
-                end: /\)/,
-            }),
-        }),
-    ];
-    let E = e.inherit(f, {
-            keywords: n,
-            className: "name",
-            starts: e.inherit(g, {
-                end: /\}\}/,
-            }),
-        }),
-        b = e.inherit(f, {
-            keywords: n,
-            className: "name",
-        }),
-        y = e.inherit(f, {
-            className: "name",
-            keywords: n,
-            starts: e.inherit(g, {
-                end: /\}\}/,
-            }),
-        });
+        m = { begin: /as\s+\|/, keywords: { keyword: "as" }, end: /\|/, contains: [{ begin: /\w+/ }] },
+        g = { contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, f, p], returnEnd: !0 };
+    p.contains = [e.inherit(_, { className: "name", keywords: n, starts: e.inherit(g, { end: /\)/ }) })];
+    let E = e.inherit(_, { keywords: n, className: "name", starts: e.inherit(g, { end: /\}\}/ }) }),
+        A = e.inherit(_, { keywords: n, className: "name" }),
+        I = e.inherit(_, { className: "name", keywords: n, starts: e.inherit(g, { end: /\}\}/ }) });
     return {
         name: "Handlebars",
         aliases: ["hbs", "html.hbs", "html.handlebars", "htmlbars"],
         case_insensitive: !0,
         subLanguage: "xml",
         contains: [
-            {
-                begin: /\\\{\{/,
-                skip: !0,
-            },
-            {
-                begin: /\\\\(?=\{\{)/,
-                skip: !0,
-            },
+            { begin: /\\\{\{/, skip: !0 },
+            { begin: /\\\\(?=\{\{)/, skip: !0 },
             e.COMMENT(/\{\{!--/, /--\}\}/),
             e.COMMENT(/\{\{!/, /\}\}/),
             {
@@ -132,54 +77,15 @@ e.exports = function (e) {
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
                 contains: [E],
-                starts: {
-                    end: /\{\{\{\{\//,
-                    returnEnd: !0,
-                    subLanguage: "xml",
-                },
+                starts: { end: /\{\{\{\{\//, returnEnd: !0, subLanguage: "xml" },
             },
-            {
-                className: "template-tag",
-                begin: /\{\{\{\{\//,
-                end: /\}\}\}\}/,
-                contains: [b],
-            },
-            {
-                className: "template-tag",
-                begin: /\{\{#/,
-                end: /\}\}/,
-                contains: [E],
-            },
-            {
-                className: "template-tag",
-                begin: /\{\{(?=else\}\})/,
-                end: /\}\}/,
-                keywords: "else",
-            },
-            {
-                className: "template-tag",
-                begin: /\{\{(?=else if)/,
-                end: /\}\}/,
-                keywords: "else if",
-            },
-            {
-                className: "template-tag",
-                begin: /\{\{\//,
-                end: /\}\}/,
-                contains: [b],
-            },
-            {
-                className: "template-variable",
-                begin: /\{\{\{/,
-                end: /\}\}\}/,
-                contains: [y],
-            },
-            {
-                className: "template-variable",
-                begin: /\{\{/,
-                end: /\}\}/,
-                contains: [y],
-            },
+            { className: "template-tag", begin: /\{\{\{\{\//, end: /\}\}\}\}/, contains: [A] },
+            { className: "template-tag", begin: /\{\{#/, end: /\}\}/, contains: [E] },
+            { className: "template-tag", begin: /\{\{(?=else\}\})/, end: /\}\}/, keywords: "else" },
+            { className: "template-tag", begin: /\{\{(?=else if)/, end: /\}\}/, keywords: "else if" },
+            { className: "template-tag", begin: /\{\{\//, end: /\}\}/, contains: [A] },
+            { className: "template-variable", begin: /\{\{\{/, end: /\}\}\}/, contains: [I] },
+            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: [I] },
         ],
     };
 };

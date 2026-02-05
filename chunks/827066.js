@@ -1,8 +1,3 @@
-n.d(t, {
-    q: () => l,
-});
+n.d(t, { q: () => i });
 var r = n(575593);
-let l = (e, t) => {
-    var n;
-    return e.type === r.R.VARIANTS_GROUP ? (null != t ? (null == (n = e.variants) ? void 0 : n[t]) : void 0) : e;
-};
+let i = (e, t) => (e.type === r.R.VARIANTS_GROUP ? (null != t ? e.variants?.[t] : void 0) : e);

@@ -1,8 +1,8 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     var t = "pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
-
     function n(e) {
         var t = e;
         return -1 !== e.indexOf("jaj")
@@ -13,7 +13,6 @@
                 ? t.slice(0, -3) + "nem"
                 : t + " pIq";
     }
-
     function r(e) {
         var t = e;
         return -1 !== e.indexOf("jaj")
@@ -24,7 +23,6 @@
                 ? t.slice(0, -3) + "ben"
                 : t + " ret";
     }
-
     function i(e, t, n, r) {
         var i = a(e);
         switch (n) {
@@ -42,7 +40,6 @@
                 return i + " DIS";
         }
     }
-
     function a(e) {
         var n = Math.floor((e % 1e3) / 100),
             r = Math.floor((e % 100) / 10),
@@ -101,9 +98,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

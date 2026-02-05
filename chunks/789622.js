@@ -1,10 +1,5 @@
-n.d(t, {
-    RS: () => o,
-    SY: () => i,
-    gg: () => s,
-    iv: () => a,
-    uA: () => r,
-});
+"use strict";
+n.d(t, { RS: () => o, SY: () => i, gg: () => s, iv: () => a, uA: () => r });
 let r = /([^A-Za-z0-9_.]+)/g,
     i = /\.+/g;
 var a = (function (e) {

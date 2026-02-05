@@ -1,60 +1,37 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(362599),
-    a = n(342494),
+n.d(t, { A: () => h });
+var i = n(627968),
+    r = n(64700),
+    a = n(362599),
+    l = n(342494),
     s = n(397927),
     o = n(976860),
-    c = n(652215),
-    u = n(49999),
-    d = n(49370),
-    p = n(985018);
-
+    d = n(652215),
+    c = n(49999),
+    u = n(49370),
+    A = n(985018);
 function h(e) {
     let { targetElementRef: t, dismissPopover: n, children: h } = e,
-        g = i.useCallback(() => {
-            n(u.i.TAKE_ACTION), (0, o.pX)("".concat(c.BVt.NITRO_HOME, "?section=orbs"));
+        _ = r.useCallback(() => {
+            n(c.i.TAKE_ACTION), (0, o.pX)(`${d.BVt.NITRO_HOME}?section=orbs`);
         }, [n]),
-        f = (0, r.jsx)(a.AM, {
+        m = (0, i.jsx)(l.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(u.i.USER_DISMISS),
-            graphic: {
-                type: "rive",
-                rive: l.Z,
-            },
-            badge: {
-                type: "beta",
-                variant: "expressive",
-            },
+            onRequestClose: () => n(c.i.USER_DISMISS),
+            graphic: { type: "rive", rive: a.Z },
+            badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
-            caretConfig: {
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             size: "md",
-            title: p.intl.string(d.default["3BI7j6"]),
-            body: p.intl.string(d.default.XNHr3C),
-            actions: [
-                {
-                    text: p.intl.string(p.t.hvVgAZ),
-                    onClick: g,
-                },
-            ],
+            title: A.intl.string(u.default["3BI7j6"]),
+            body: A.intl.string(u.default.XNHr3C),
+            actions: [{ text: A.intl.string(A.t.hvVgAZ), onClick: _ }],
             gradientColor: {
                 type: "custom",
                 start: s.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_START,
                 end: s.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_END,
             },
         });
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)("div", {
-                children: h,
-            }),
-            f,
-        ],
-    });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: h }), m] });
 }

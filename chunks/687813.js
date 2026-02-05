@@ -1,7 +1,5 @@
-r.d(t, {
-    $1: () => Q,
-    he: () => J,
-});
+"use strict";
+r.d(t, { $1: () => Q, he: () => J });
 var a = {},
     n = function (e, t, r, n, s) {
         var o = new Worker(
@@ -12,9 +10,7 @@ var a = {},
                             e +
                                 ';addEventListener("error",function(e){e=e.error;postMessage({$e$:[e.message,e.code,e.stack]})})',
                         ],
-                        {
-                            type: "text/javascript",
-                        },
+                        { type: "text/javascript" },
                     ),
                 )),
         );
@@ -41,10 +37,7 @@ var a = {},
         for (var r = new o(31), a = 0; a < 31; ++a) r[a] = t += 1 << e[a - 1];
         for (var n = new i(r[30]), a = 1; a < 30; ++a)
             for (var s = r[a]; s < r[a + 1]; ++s) n[s] = ((s - r[a]) << 5) | a;
-        return {
-            b: r,
-            r: n,
-        };
+        return { b: r, r: n };
     },
     f = b(c, 2),
     d = f.b,
@@ -299,10 +292,7 @@ var k = A(w, 9, 1),
     N = function (e, t, r, a) {
         if (!B[r]) {
             for (var s = "", o = {}, i = e.length - 1, c = 0; c < i; ++c) s = F(e[c], s, o);
-            B[r] = {
-                c: F(e[i], s, o),
-                e: o,
-            };
+            B[r] = { c: F(e[i], s, o), e: o };
         }
         var l = T({}, B[r].e);
         return n(
@@ -320,12 +310,7 @@ var k = A(w, 9, 1),
         return postMessage(e, [e.buffer]);
     },
     U = function (e) {
-        return (
-            e && {
-                out: e.size && new s(e.size),
-                dictionary: e.dictionary,
-            }
-        );
+        return e && { out: e.size && new s(e.size), dictionary: e.dictionary };
     },
     z = function (e, t, r, a, n, s) {
         var o = N(r, a, n, function (e, t) {
@@ -347,32 +332,18 @@ var k = A(w, 9, 1),
     G = function (e, t) {
         return W(e, t) + 0x100000000 * W(e, t + 4);
     };
-
 function V(e, t) {
-    return D(
-        e,
-        {
-            i: 2,
-        },
-        t && t.out,
-        t && t.dictionary,
-    );
+    return D(e, { i: 2 }, t && t.out, t && t.dictionary);
 }
 var K = "u" > typeof TextDecoder && new TextDecoder();
 try {
-    K.decode(P, {
-        stream: !0,
-    });
+    K.decode(P, { stream: !0 });
 } catch (e) {}
 var Z = function (e) {
     for (var t = "", r = 0; ; ) {
         var a = e[r++],
             n = (a > 127) + (a > 223) + (a > 239);
-        if (r + n > e.length)
-            return {
-                s: t,
-                r: _(e, r - 1),
-            };
+        if (r + n > e.length) return { s: t, r: _(e, r - 1) };
         n
             ? 3 == n
                 ? (t += String.fromCharCode(
@@ -389,7 +360,6 @@ var Z = function (e) {
             : (t += String.fromCharCode(a));
     }
 };
-
 function J(e, t) {
     if (t) {
         for (var r = "", a = 0; a < e.length; a += 16384)
@@ -425,7 +395,6 @@ var H = function (e, t, r) {
               : function (e) {
                     e();
                 };
-
 function Q(e, t, r) {
     r || ((r = t), (t = {})), "function" != typeof r && S(7);
     var a = [],
@@ -466,15 +435,7 @@ function Q(e, t, r) {
                 var m = function (e, t) {
                     e ? (n(), i(e, null)) : (t && (o[p] = t), --l || i(null, o));
                 };
-                if (
-                    !h ||
-                    h({
-                        name: p,
-                        size: u,
-                        originalSize: d,
-                        compression: c,
-                    })
-                )
+                if (!h || h({ name: p, size: u, originalSize: d, compression: c }))
                     if (c)
                         if (8 == c) {
                             var A,
@@ -482,20 +443,13 @@ function Q(e, t, r) {
                                 O = e.subarray(v, v + u);
                             if (u < 32e4)
                                 try {
-                                    m(
-                                        null,
-                                        V(O, {
-                                            out: new s(d),
-                                        }),
-                                    );
+                                    m(null, V(O, { out: new s(d) }));
                                 } catch (e) {
                                     m(e, null);
                                 }
                             else
                                 a.push(
-                                    ((A = {
-                                        size: d,
-                                    }),
+                                    ((A = { size: d }),
                                     (w = m) || ((w = A), (A = {})),
                                     "function" != typeof w && S(7),
                                     z(

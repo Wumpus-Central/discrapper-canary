@@ -1,59 +1,48 @@
-l.d(t, {
-    A: () => p,
-});
-var r = l(627968);
-l(64700);
-var n = l(158954),
-    i = l(435371),
-    s = l(397927),
-    o = l(449859),
-    a = l(777347),
-    u = l(967144),
-    d = l(333354),
-    c = l(985018),
-    f = l(445735);
-
-function p(e) {
+n.d(t, { A: () => m });
+var r = n(627968);
+n(64700);
+var l = n(158954),
+    i = n(435371),
+    s = n(397927),
+    o = n(449859),
+    a = n(777347),
+    u = n(967144),
+    d = n(333354),
+    c = n(985018),
+    p = n(445735);
+function m(e) {
     let { boost: t } = e,
-        { timestamp: l, username: p, roleColor: m, roleColorStrings: v } = (0, a.U)(t),
-        A = (0, u.gn)(t.guildId, t.userId, null != v ? v : null);
+        { timestamp: n, username: m, roleColor: A, roleColorStrings: _ } = (0, a.U)(t),
+        g = (0, u.gn)(t.guildId, t.userId, _ ?? null);
     return (0, r.jsxs)("div", {
-        className: f.og,
+        className: p.og,
         children: [
-            (0, r.jsx)(s._Jp, {
-                className: f.Kk,
-                color: "currentColor",
-                size: "sm",
-            }),
+            (0, r.jsx)(s._Jp, { className: p.Kk, color: "currentColor", size: "sm" }),
             (0, r.jsx)("span", {
-                className: f.x$,
-                children: (0, r.jsxs)(n.EYj, {
+                className: p.x$,
+                children: (0, r.jsxs)(l.EYj, {
                     tag: "span",
                     variant: "text-md/medium",
                     lineClamp: 1,
                     children: [
                         (0, r.jsx)(i.m_, {
-                            text: p,
+                            text: m,
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
                             children: (0, r.jsx)(s.gyj, {
-                                className: f.IP,
+                                className: p.IP,
                                 variant: "text-md/semibold",
-                                name: p,
-                                colorString: null != m ? m : null,
-                                colorStrings: A,
+                                name: m,
+                                colorString: A ?? null,
+                                colorStrings: g,
                             }),
                         }),
                         c.intl.string(d.default.plwH8d),
                     ],
                 }),
             }),
-            (0, r.jsx)(o.A, {
-                timestamp: l,
-                timestampFormat: "L",
-                className: f.vE,
-            }),
+            (0, r.jsx)(o.A, { timestamp: n, timestampFormat: "L", className: p.vE }),
         ],
     });
 }

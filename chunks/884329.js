@@ -52,9 +52,6 @@
         ordinal: function (e) {
             return e + (1 === e || 8 === e || e >= 20 ? "ste" : "de");
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

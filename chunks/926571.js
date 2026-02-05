@@ -1,10 +1,8 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(954571),
     i = n(863922),
     a = n(652215);
-
 function s(e) {
     let {
         summary: t,
@@ -12,15 +10,15 @@ function s(e) {
         channelId: s,
         rating: o = null,
         problem: l = null,
-        feedback: c = "",
-        location: u,
+        feedback: u = "",
+        location: c,
     } = e;
     (0, i.C7)(t, o),
         r.default.track(a.HAw.SUMMARIES_REPORT_PROBLEM, {
             reason: l,
-            location: u,
+            location: c,
             rating: o,
-            feedback: c,
+            feedback: u,
             participant_count: t.people.length,
             message_count: t.count,
             start_message_id: t.startId,

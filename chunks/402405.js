@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(683570),
     o = n(780940),
@@ -7,11 +8,7 @@ var r = n(834647),
     c = a("Promise"),
     u = o && !s;
 r(
-    {
-        target: "Promise",
-        stat: !0,
-        forced: o || s,
-    },
+    { target: "Promise", stat: !0, forced: o || s },
     {
         resolve: function (e) {
             return l(u && this === c ? i : this, e);

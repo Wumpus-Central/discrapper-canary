@@ -1,6 +1,4 @@
-t.d(e, {
-    B: () => u,
-});
+t.d(e, { B: () => u });
 var n = t(627968),
     r = t(64700),
     s = t(311907),
@@ -11,7 +9,6 @@ var n = t(627968),
     d = t(370834),
     x = t(985018),
     m = t(689588);
-
 function u(a) {
     let {
             platformType: e,
@@ -24,9 +21,9 @@ function u(a) {
             learnMoreLink: C,
             valueProps: g,
         } = a,
-        v = (0, s.bG)([c.A], () => {
+        b = (0, s.bG)([c.A], () => {
             let a = c.A.getAccount(null, e);
-            return (null == a ? void 0 : a.twoWayLink) === !1;
+            return a?.twoWayLink === !1;
         });
     return (0, n.jsxs)(o.A, {
         children: [
@@ -36,31 +33,20 @@ function u(a) {
                 className: m.wx,
                 separator: !1,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: m.bm,
-                        children: [N, " "],
-                    }),
+                    (0, n.jsxs)("div", { className: m.bm, children: [N, " "] }),
                     (0, n.jsx)(i.Heading, {
                         className: m.DD,
                         variant: "heading-xl/extrabold",
-                        children: v && null != p ? p : h,
+                        children: b && null != p ? p : h,
                     }),
-                    (0, n.jsx)(i.s_y, {
-                        className: m.b,
-                        onClick: u,
-                    }),
+                    (0, n.jsx)(i.s_y, { className: m.b, onClick: u }),
                 ],
             }),
             (0, n.jsxs)(i.$mQ, {
                 "data-migration-pending": !0,
                 className: m.rf,
                 children: [
-                    (0, n.jsx)(i.Text, {
-                        tag: "p",
-                        variant: "text-md/normal",
-                        color: "text-default",
-                        children: j,
-                    }),
+                    (0, n.jsx)(i.Text, { tag: "p", variant: "text-md/normal", color: "text-default", children: j }),
                     (0, n.jsx)("div", {
                         className: m.Mh,
                         children: g.map((a, e) => {
@@ -69,19 +55,8 @@ function u(a) {
                                 r.Fragment,
                                 {
                                     children: [
-                                        (0, n.jsx)(
-                                            d.A,
-                                            {
-                                                label: t,
-                                                subLabel: s,
-                                                icon: i,
-                                            },
-                                            t,
-                                        ),
-                                        e !== g.length - 1 &&
-                                            (0, n.jsx)("div", {
-                                                className: m.Cs,
-                                            }),
+                                        (0, n.jsx)(d.A, { label: t, subLabel: s, icon: i }, t),
+                                        e !== g.length - 1 && (0, n.jsx)("div", { className: m.Cs }),
                                     ],
                                 },
                                 t,
@@ -93,9 +68,7 @@ function u(a) {
                               tag: "p",
                               variant: "text-sm/normal",
                               color: "text-default",
-                              children: x.intl.format(x.t["/l3n+1"], {
-                                  helpCenterLink: C,
-                              }),
+                              children: x.intl.format(x.t["/l3n+1"], { helpCenterLink: C }),
                           })
                         : null,
                 ],

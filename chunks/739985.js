@@ -1,10 +1,7 @@
-n.d(t, {
-    A: () => a,
-});
-var l = n(976860),
-    i = n(652215);
-
-function a() {
-    let e = (0, l.JK)();
-    e.length > 0 ? e.goBack() : (0, l.pX)(i.BVt.ME);
+n.d(e, { A: () => l });
+var i = n(976860),
+    a = n(652215);
+function l() {
+    let t = (0, i.JK)();
+    t.length > 0 ? t.goBack() : (0, i.pX)(a.BVt.ME);
 }

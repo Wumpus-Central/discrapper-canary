@@ -1,19 +1,13 @@
-n.d(t, {
-    b: () => f,
-    n: () => A,
-}),
-    n(896048),
-    n(733351);
-var i = n(64700),
-    r = n(311907),
-    l = n(870391),
-    a = n(379078),
-    s = n(704554),
-    o = n(461213),
-    u = n(403362),
-    c = n(185657);
-
-function d(e) {
+n.d(t, { b: () => I, n: () => m });
+var l = n(64700),
+    i = n(311907),
+    s = n(870391),
+    r = n(379078),
+    a = n(704554),
+    u = n(461213),
+    o = n(403362),
+    d = n(185657);
+function c(e) {
     return {
         user: e.user,
         activities: e.activities,
@@ -22,158 +16,98 @@ function d(e) {
         relationshipType: e.relationshipType,
     };
 }
-
 function h(e) {
-    return e.map(d);
+    return e.map(c);
 }
-
-function p(e, t) {
+function g(e, t) {
     let [, n] = e,
-        [, i] = t;
-    return n === i;
+        [, l] = t;
+    return n === l;
 }
-
-function f() {
-    let [e] = (0, r.bG)(
-        [c.A, l.A, o.A],
+function I() {
+    let [e] = (0, i.bG)(
+        [d.A, s.A, u.A],
         () => {
-            var e, t;
-            let n = l.A.getGroups(),
-                [i, r] = c.A.getRows(c.j.FRIEND_REQUESTS),
-                a = h(i),
-                s = h(c.A.getRows(c.j.SUGGESTIONS)[0]),
-                u = h(c.A.getRows(c.j.SAME_ACTIVITY)[0]),
-                d = h(c.A.getRows(c.j.ACTIVITIES)[0]),
-                p = h(c.A.getRows(c.j.IN_GAME)[0]),
-                f = h(c.A.getRows(c.j.ONLINE)[0]),
-                g = h(c.A.getRows(c.j.OFFLINE)[0]),
-                m = n.map((e) => {
-                    let [t] = c.A.getRows("GROUP:".concat(e.id));
-                    return {
-                        id: e.id,
-                        name: e.name,
-                        users: h(t),
-                    };
+            let e = s.A.getGroups(),
+                [t, n] = d.A.getRows(d.j.FRIEND_REQUESTS),
+                l = h(t),
+                i = h(d.A.getRows(d.j.SUGGESTIONS)[0]),
+                r = h(d.A.getRows(d.j.SAME_ACTIVITY)[0]),
+                a = h(d.A.getRows(d.j.ACTIVITIES)[0]),
+                o = h(d.A.getRows(d.j.IN_GAME)[0]),
+                c = h(d.A.getRows(d.j.ONLINE)[0]),
+                g = h(d.A.getRows(d.j.OFFLINE)[0]),
+                I = e.map((e) => {
+                    let [t] = d.A.getRows(`GROUP:${e.id}`);
+                    return { id: e.id, name: e.name, users: h(t) };
                 }),
-                y = null != (e = null == (t = o.A.getPrimaryActivity()) ? void 0 : t.name) ? e : "",
-                A = n.map((e) => "".concat(e.id, "\0").concat(e.name, "\0").concat(e.userIds.length)).join("|"),
-                v = "".concat(r, "\0").concat(A, "\0").concat(y);
+                E = u.A.getPrimaryActivity()?.name ?? "",
+                A = e.map((e) => `${e.id}\0${e.name}\0${e.userIds.length}`).join("|"),
+                f = `${n}\0${A}\0${E}`;
             return [
                 {
-                    groups: m,
-                    friendRequests: a,
-                    suggestions: s,
-                    inGame: p,
-                    activities: d,
-                    sameActivity: u,
-                    online: f,
+                    groups: I,
+                    friendRequests: l,
+                    suggestions: i,
+                    inGame: o,
+                    activities: a,
+                    sameActivity: r,
+                    online: c,
                     offline: g,
-                    currentActivityName: y,
+                    currentActivityName: E,
                 },
-                v,
+                f,
             ];
         },
         [],
-        p,
+        g,
     );
     return e;
 }
-
-function g(e) {
-    let { user: t, activities: n, nickname: i } = e;
-    return [t.username, t.globalName, i, ...n.map((e) => e.name)].filter(u.Vq);
+function E(e) {
+    let { user: t, activities: n, nickname: l } = e;
+    return [t.username, t.globalName, l, ...n.map((e) => e.name)].filter(o.Vq);
 }
-let m = {
-    searchType: a.n.FUZZY,
-    searchStringGenerator: g,
-    sortType: a.r.JARO_WINKLER,
-    throttleMs: 100,
-};
-
-function y(e, t) {
-    let [n, r] = i.useState(t),
-        l = i.useCallback(() => r(t), [t]);
-    return (0, s.RT)(e, t, r, m), [n, l];
+let A = { searchType: r.n.FUZZY, searchStringGenerator: E, sortType: r.r.JARO_WINKLER, throttleMs: 100 };
+function f(e, t) {
+    let [n, i] = l.useState(t),
+        s = l.useCallback(() => i(t), [t]);
+    return (0, a.RT)(e, t, i, A), [n, s];
 }
-
-function A(e) {
-    let [t, n] = i.useState(""),
-        [r, l] = y(t, e.friendRequests),
-        [a, s] = y(t, e.suggestions),
-        [o, u] = y(t, e.sameActivity),
-        [c, d] = y(t, e.activities),
-        [h, p] = y(t, e.inGame),
-        [f, m] = y(t, e.online),
-        [A, v] = y(t, e.offline),
-        b = i.useMemo(() => {
+function m(e) {
+    let [t, n] = l.useState(""),
+        [i, s] = f(t, e.friendRequests),
+        [r, a] = f(t, e.suggestions),
+        [u, o] = f(t, e.sameActivity),
+        [d, c] = f(t, e.activities),
+        [h, g] = f(t, e.inGame),
+        [I, A] = f(t, e.online),
+        [m, S] = f(t, e.offline),
+        p = l.useMemo(() => {
             if ("" === t.trim()) return e.groups;
             let n = t.toLowerCase();
             return e.groups
                 .map((e) => {
-                    var t, i;
-                    let r = e.users.filter((e) => g(e).some((e) => null != e && e.toLowerCase().includes(n)));
-                    return (
-                        (t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = i);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (i = i =
-                            {
-                                users: r,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                              }),
-                        t
-                    );
+                    let t = e.users.filter((e) => E(e).some((e) => null != e && e.toLowerCase().includes(n)));
+                    return { ...e, users: t };
                 })
                 .filter((e) => e.users.length > 0);
         }, [t, e.groups]),
-        E = i.useCallback(() => {
-            n(""), l(), s(), u(), d(), p(), m(), v();
-        }, [l, s, u, d, p, m, v]);
+        N = l.useCallback(() => {
+            n(""), s(), a(), o(), c(), g(), A(), S();
+        }, [s, a, o, c, g, A, S]);
     return {
-        groups: b,
-        friendRequests: r,
-        suggestions: a,
-        sameActivity: o,
+        groups: p,
+        friendRequests: i,
+        suggestions: r,
+        sameActivity: u,
         inGame: h,
-        activities: c,
-        online: f,
-        offline: A,
+        activities: d,
+        online: I,
+        offline: m,
         currentActivityName: e.currentActivityName,
         searchQuery: t,
         setSearchQuery: n,
-        clearSearch: E,
+        clearSearch: N,
     };
 }

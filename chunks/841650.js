@@ -1,51 +1,41 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(321073),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => C }), n(321073);
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(311907),
-    c = n(843282),
-    o = n(397927),
-    d = n(47167),
+    o = n(843282),
+    d = n(397927),
+    c = n(47167),
     u = n(713654),
-    f = n(95701),
+    m = n(95701),
     g = n(769765),
-    b = n(994500),
-    m = n(287809),
-    p = n(739455),
-    x = n(652215),
-    h = n(985018),
-    j = n(987772);
-
-function O(e) {
+    x = n(994500),
+    h = n(287809),
+    _ = n(739455),
+    A = n(652215),
+    p = n(985018),
+    f = n(987772);
+function j(e) {
     return String(e);
 }
-
-function y(e) {
-    let { icon: t, title: n, subtitle: i, className: l } = e;
-    return (0, r.jsxs)("div", {
-        className: s()(j.Pf, l),
+function N(e) {
+    let { icon: t, title: n, subtitle: s, className: l } = e;
+    return (0, i.jsxs)("div", {
+        className: r()(f.Pf, l),
         children: [
             t,
-            (0, r.jsxs)("div", {
-                className: j.QK,
+            (0, i.jsxs)("div", {
+                className: f.QK,
                 children: [
-                    (0, r.jsx)(o.Text, {
-                        variant: "text-md/normal",
-                        color: "none",
-                        className: j.DX,
-                        children: n,
-                    }),
-                    null != i && "" !== i
-                        ? (0, r.jsx)(o.Text, {
+                    (0, i.jsx)(d.Text, { variant: "text-md/normal", color: "none", className: f.DX, children: n }),
+                    null != s && "" !== s
+                        ? (0, i.jsx)(d.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              className: j.V2,
-                              children: i,
+                              className: f.V2,
+                              children: s,
                           })
                         : null,
                 ],
@@ -53,159 +43,72 @@ function y(e) {
         ],
     });
 }
-
-function v() {
-    return (0, r.jsx)(y, {
-        icon: (0, r.jsx)(o.j96, {
-            size: "md",
-            color: "currentColor",
-            className: j.IX,
-        }),
-        title: h.intl.string(h.t.d7YJMK),
-        className: j.fp,
+function E() {
+    return (0, i.jsx)(N, {
+        icon: (0, i.jsx)(d.j96, { size: "md", color: "currentColor", className: f.IX }),
+        title: p.intl.string(p.t.d7YJMK),
+        className: f.fp,
     });
 }
-
-function A(e) {
-    var t;
-    let { channelId: n } = e,
-        i = (0, p.fE)(n),
-        l = (0, p.fE)(null != (t = null == i ? void 0 : i.parent_id) ? t : x.dJq);
-    if (null == i) return null;
-    let s = (0, u.gU)(i),
-        a = (0, d.m1)(i, m.default, b.A),
-        c = null != l ? (0, d.m1)(l, m.default, b.A) : void 0;
-    return (0, r.jsx)(y, {
-        icon:
-            null != s &&
-            (0, r.jsx)(s, {
-                className: j.IX,
-            }),
-        title: a,
-        subtitle: c,
-    });
+function b(e) {
+    let { channelId: t } = e,
+        n = (0, _.fE)(t),
+        s = (0, _.fE)(n?.parent_id ?? A.dJq);
+    if (null == n) return null;
+    let l = (0, u.gU)(n),
+        r = (0, c.m1)(n, h.default, x.A),
+        a = null != s ? (0, c.m1)(s, h.default, x.A) : void 0;
+    return (0, i.jsx)(N, { icon: null != l && (0, i.jsx)(l, { className: f.IX }), title: r, subtitle: a });
 }
-
-function E(e) {
+function T(e) {
     let { value: t } = e;
-    return null != t
-        ? (0, r.jsx)(A, {
-              channelId: t,
-          })
-        : (0, r.jsx)(v, {});
+    return null != t ? (0, i.jsx)(b, { channelId: t }) : (0, i.jsx)(E, {});
 }
-
-function N(e) {
+function C(e) {
     let {
             label: t,
             guildId: l,
-            value: s,
+            value: r,
             initialChannelId: u,
-            omitChannelIds: j,
-            "aria-labelledby": y,
-            onChange: v,
+            omitChannelIds: f,
+            "aria-labelledby": N,
+            onChange: E,
         } = e,
-        A = h.intl.string(h.t.d7YJMK),
-        N = (0, a.bG)([g.A], () => g.A.getCategories(l), [l]),
-        _ = (0, p.fE)(null != s ? s : x.dJq),
-        S = i.useMemo(() => {
-            let e = [
-                    {
-                        value: null,
-                        label: A,
-                    },
-                ],
+        b = p.intl.string(p.t.d7YJMK),
+        C = (0, a.bG)([g.A], () => g.A.getCategories(l), [l]),
+        I = (0, _.fE)(r ?? A.dJq),
+        v = s.useMemo(() => {
+            let e = [{ value: null, label: b }],
                 t = !1;
-            for (let n of N._categories)
-                for (let { channel: r } of N[n.channel.id])
-                    ((0, f.tr)(r.type) || (0, f.ay)(r.type)) &&
-                        ((r.id !== s && (null == j ? void 0 : j.has(r.id)) && (r.id !== u || s === u)) ||
-                            (s === r.id && (t = !0),
-                            e.push({
-                                value: r.id,
-                                label: (0, d.m1)(r, m.default, b.A),
-                            })));
-            return (
-                null == s ||
-                    t ||
-                    null == _ ||
-                    e.push({
-                        value: s,
-                        label: _.name,
-                    }),
-                e
-            );
-        }, [A, s, _, N, j, u]);
-    return (0, r.jsx)(c.Pw, {
+            for (let n of C._categories)
+                for (let { channel: i } of C[n.channel.id])
+                    ((0, m.tr)(i.type) || (0, m.ay)(i.type)) &&
+                        ((i.id !== r && f?.has(i.id) && (i.id !== u || r === u)) ||
+                            (r === i.id && (t = !0), e.push({ value: i.id, label: (0, c.m1)(i, h.default, x.A) })));
+            return null == r || t || null == I || e.push({ value: r, label: I.name }), e;
+        }, [b, r, I, C, f, u]);
+    return (0, i.jsx)(o.Pw, {
         label: t,
-        placeholder: h.intl.string(h.t.r2ptsz),
-        options: S,
+        placeholder: p.intl.string(p.t.r2ptsz),
+        options: v,
         select: function (e) {
             null == e
-                ? (0, o.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("72271"), n.e("64233"), n.e("59195")]).then(
+                ? (0, d.mMO)(async () => {
+                      let { default: e } = await Promise.all([n.e("93142"), n.e("64233"), n.e("40294")]).then(
                           n.bind(n, 963765),
                       );
-                      return (t) => {
-                          var n, i;
-                          return (0, r.jsx)(
-                              e,
-                              ((n = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })({}, t)),
-                              (i = i =
-                                  {
-                                      guildId: l,
-                                      onSubmit: v,
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                                    }),
-                              n),
-                          );
-                      };
+                      return (t) => (0, i.jsx)(e, { ...t, guildId: l, onSubmit: E });
                   })
-                : v(e);
+                : E(e);
         },
-        isSelected: (e) => null != s && O(e) === O(s),
-        serialize: O,
-        renderOptionLabel: E,
+        isSelected: (e) => null != r && j(e) === j(r),
+        serialize: j,
+        renderOptionLabel: T,
         renderOptionValue: (e) => {
             let [t] = e;
-            return E(t);
+            return T(t);
         },
-        "aria-labelledby": y,
+        "aria-labelledby": N,
         "data-migration-pending": !0,
     });
 }

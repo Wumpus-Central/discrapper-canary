@@ -1,30 +1,23 @@
-n.d(t, {
-    lf: () => f,
-    pG: () => p,
-    yB: () => d,
-});
+"use strict";
+n.d(t, { lf: () => _, pG: () => f, yB: () => d });
 var r = n(99478);
 let i = 1723856,
     a = 1824665,
     s = 5500;
-
 function o(e, t, n, r) {
     return e + 365 * t + Math.floor(t / 4) + 30 * (n - 1) + r - 1;
 }
-
 function l(e, t) {
     let n = Math.floor((4 * (t - e)) / 1461),
         r = 1 + Math.floor((t - o(e, n, 1, 1)) / 30),
         i = t + 1 - o(e, n, r, 1);
     return [n, r, i];
 }
-
-function c(e) {
+function u(e) {
     return Math.floor((e % 4) / 3);
 }
-
-function u(e, t) {
-    return t % 13 != 0 ? 30 : c(e) + 5;
+function c(e, t) {
+    return t % 13 != 0 ? 30 : u(e) + 5;
 }
 class d {
     fromJulianDay(e) {
@@ -37,13 +30,13 @@ class d {
         return "AA" === e.era && (t -= s), o(i, t, e.month, e.day);
     }
     getDaysInMonth(e) {
-        return u(e.year, e.month);
+        return c(e.year, e.month);
     }
     getMonthsInYear() {
         return 13;
     }
     getDaysInYear(e) {
-        return 365 + c(e.year);
+        return 365 + u(e.year);
     }
     getYearsInEra(e) {
         return "AA" === e.era ? 9999 : 9991;
@@ -55,7 +48,7 @@ class d {
         this.identifier = "ethiopic";
     }
 }
-class f extends d {
+class _ extends d {
     fromJulianDay(e) {
         let [t, n, a] = l(i, e);
         return (t += s), new (0, r.ng)(this, "AA", t, n, a);
@@ -70,7 +63,7 @@ class f extends d {
         super(...e), (this.identifier = "ethioaa");
     }
 }
-class p extends d {
+class f extends d {
     fromJulianDay(e) {
         let [t, n, i] = l(a, e),
             s = "CE";
@@ -82,7 +75,7 @@ class p extends d {
     }
     getDaysInMonth(e) {
         let t = e.year;
-        return "BCE" === e.era && (t = 1 - t), u(t, e.month);
+        return "BCE" === e.era && (t = 1 - t), c(t, e.month);
     }
     isInverseEra(e) {
         return "BCE" === e.era;

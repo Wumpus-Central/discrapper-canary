@@ -1,125 +1,72 @@
-r.d(t, {
-    A: () => O,
-}),
-    r(638769),
-    r(896048),
-    r(264879);
-var i,
-    n = r(627968),
+r.d(t, { A: () => I });
+var i = r(627968),
     a = r(64700),
-    o = r(503698),
-    s = r.n(o),
-    l = r(397927),
-    c = r(652215),
-    d = r(452803);
-
-function u(e, t, r) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
-        e
-    );
-}
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                u(e, t, r[t]);
-            });
-    }
-    return e;
-}
-
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, i);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
-        e
-    );
-}
-let E = (e) =>
-    (0, n.jsx)("div", {
-        className: e.className,
-        children: e.children,
-    });
-class h extends (i = a.PureComponent) {
+    s = r(503698),
+    n = r.n(s),
+    o = r(397927),
+    l = r(652215),
+    c = r(452803);
+let _ = (e) => (0, i.jsx)("div", { className: e.className, children: e.children }),
+    d = (e) => (0, i.jsx)("div", { className: e.className, children: e.children }),
+    E = (e) => (0, i.jsx)("div", { className: e.className, children: e.children });
+class h extends a.PureComponent {
+    static SortDirection = l.tSW;
+    static defaultProps = {
+        initialSortDirection: l.tSW.ASCENDING,
+        rowHeaderComponent: _,
+        rowComponent: d,
+        cellComponent: E,
+        hasHeader: !0,
+        sortData: !0,
+        stickyHeader: !1,
+    };
     isSortable(e) {
         return null != e.sort && !1 !== e.sort;
     }
     getDefaultSort(e) {
         return (t, r) => {
             let i = t[e],
-                n = r[e];
-            return null != i && null != n ? (i === n ? 0 : i < n ? -1 : 1) : 0;
+                a = r[e];
+            return null != i && null != a ? (i === a ? 0 : i < a ? -1 : 1) : 0;
         };
     }
+    handleSort = (e) => {
+        let { sortKey: t, sortDirection: r, onSort: i } = this.props;
+        null != i && i(e, t === e && r === l.tSW.ASCENDING ? l.tSW.DESCENDING : l.tSW.ASCENDING);
+    };
     renderHeader() {
         let {
                 columns: e,
                 data: t,
                 sortDirection: r,
-                sortKey: i,
-                headerCellClassName: a,
-                headerClassName: o,
-                sortedHeaderCellClassName: u,
-                stickyHeader: _,
+                sortKey: a,
+                headerCellClassName: s,
+                headerClassName: d,
+                sortedHeaderCellClassName: E,
+                stickyHeader: h,
             } = this.props,
-            p = e.map((e) => {
-                let o = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
-                    _ = r === c.tSW.ASCENDING ? l.tN5 : l.abt;
-                return (0, n.jsx)(
-                    l.DUT,
+            I = e.map((e) => {
+                let _ = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
+                    d = r === l.tSW.ASCENDING ? o.tN5 : o.abt;
+                return (0, i.jsx)(
+                    o.DUT,
                     {
-                        className: s()(d.e4, a, e.headerCellClassName, e.cellClassName, i === e.key && u, {
-                            [d.vk]: this.isSortable(e),
+                        className: n()(c.e4, s, e.headerCellClassName, e.cellClassName, a === e.key && E, {
+                            [c.vk]: this.isSortable(e),
                         }),
                         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
-                        children: (0, n.jsxs)("div", {
-                            className: d.PZ,
+                        children: (0, i.jsxs)("div", {
+                            className: c.PZ,
                             children: [
-                                o,
-                                this.isSortable(e) && i === e.key
-                                    ? (0, n.jsx)(_, {
-                                          className: d.GM,
-                                      })
-                                    : null,
+                                _,
+                                this.isSortable(e) && a === e.key ? (0, i.jsx)(d, { className: c.GM }) : null,
                             ],
                         }),
                     },
                     e.key,
                 );
             });
-        return (0, n.jsx)(E, {
-            className: s()(o, d.nM, {
-                [d.ln]: _,
-            }),
-            children: p,
-        });
+        return (0, i.jsx)(_, { className: n()(d, c.nM, { [c.ln]: h }), children: I });
     }
     renderBody() {
         let {
@@ -127,15 +74,15 @@ class h extends (i = a.PureComponent) {
                 data: t,
                 sortData: r,
                 sortKey: i,
-                sortDirection: n,
+                sortDirection: s,
                 bodyCellClassName: o,
-                rowClassName: l,
-                cellProps: u,
+                rowClassName: _,
+                cellProps: d,
                 rowProps: E,
                 rowComponent: h,
-                cellComponent: O,
+                cellComponent: I,
             } = this.props,
-            I = t;
+            A = t;
         if (r) {
             let r =
                     null != i
@@ -145,67 +92,27 @@ class h extends (i = a.PureComponent) {
                           })
                         : null,
                 a = [...t],
-                o = null != r && r.sort,
-                s =
+                n = null != r && r.sort,
+                o =
                     null != r && null != i && this.isSortable(r)
-                        ? a.sort("function" == typeof o ? (e, t) => o(e, t, n) : this.getDefaultSort(i))
+                        ? a.sort("function" == typeof n ? (e, t) => n(e, t, s) : this.getDefaultSort(i))
                         : a;
-            I = null != r && n === c.tSW.DESCENDING ? s.reverse() : s;
+            A = null != r && s === l.tSW.DESCENDING ? o.reverse() : o;
         }
-        return I.map((t, r) => {
+        return A.map((t, r) => {
             let i = e.map((e) =>
                 (0, a.createElement)(
-                    O,
-                    p(_({}, u), {
-                        key: e.key,
-                        item: t,
-                        className: s()(o, e.bodyCellClassName, e.cellClassName),
-                    }),
-                    null != e.render ? e.render(t, u, r) : t[e.key],
+                    I,
+                    { ...d, key: e.key, item: t, className: n()(o, e.bodyCellClassName, e.cellClassName) },
+                    null != e.render ? e.render(t, d, r) : t[e.key],
                 ),
             );
-            return (0, a.createElement)(
-                h,
-                p(_({}, E), {
-                    key: t.key,
-                    item: t,
-                    className: s()(d.nM, l),
-                }),
-                i,
-            );
+            return (0, a.createElement)(h, { ...E, key: t.key, item: t, className: n()(c.nM, _) }, i);
         });
     }
     render() {
         let { className: e, hasHeader: t } = this.props;
-        return (0, n.jsxs)("div", {
-            className: e,
-            children: [t ? this.renderHeader() : null, this.renderBody()],
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            u(this, "handleSort", (e) => {
-                let { sortKey: t, sortDirection: r, onSort: i } = this.props;
-                null != i && i(e, t === e && r === c.tSW.ASCENDING ? c.tSW.DESCENDING : c.tSW.ASCENDING);
-            });
+        return (0, i.jsxs)("div", { className: e, children: [t ? this.renderHeader() : null, this.renderBody()] });
     }
 }
-u(h, "SortDirection", c.tSW),
-    u(h, "defaultProps", {
-        initialSortDirection: c.tSW.ASCENDING,
-        rowHeaderComponent: E,
-        rowComponent: (e) =>
-            (0, n.jsx)("div", {
-                className: e.className,
-                children: e.children,
-            }),
-        cellComponent: (e) =>
-            (0, n.jsx)("div", {
-                className: e.className,
-                children: e.children,
-            }),
-        hasHeader: !0,
-        sortData: !0,
-        stickyHeader: !1,
-    });
-let O = h;
+let I = h;

@@ -1,3 +1,4 @@
+"use strict";
 var n = r(414501),
     i = r(617179),
     o = r(116740),
@@ -27,13 +28,7 @@ var n = r(414501),
         return t.merge({
             blockMap: r.set(i, h),
             selectionBefore: e,
-            selectionAfter: e.merge({
-                anchorKey: i,
-                anchorOffset: f,
-                focusKey: i,
-                focusOffset: f,
-                isBackward: !1,
-            }),
+            selectionAfter: e.merge({ anchorKey: i, anchorOffset: f, focusKey: i, focusOffset: f, isBackward: !1 }),
         });
     },
     f = function (t, e, r) {
@@ -56,11 +51,7 @@ var n = r(414501),
             a = n.slice(e, o),
             s = i.slice(e, o),
             u = r.last();
-        return u.merge({
-            text: u.getText() + a,
-            characterList: u.getCharacterList().concat(s),
-            data: u.getData(),
-        });
+        return u.merge({ text: u.getText() + a, characterList: u.getCharacterList().concat(s), data: u.getData() });
     },
     h = function (t, e) {
         var r = t.getKey(),
@@ -124,13 +115,7 @@ var n = r(414501),
             t.merge({
                 blockMap: w,
                 selectionBefore: e,
-                selectionAfter: e.merge({
-                    anchorKey: b,
-                    anchorOffset: _,
-                    focusKey: b,
-                    focusOffset: _,
-                    isBackward: !1,
-                }),
+                selectionAfter: e.merge({ anchorKey: b, anchorOffset: _, focusKey: b, focusOffset: _, isBackward: !1 }),
             })
         );
     };

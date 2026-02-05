@@ -1,3 +1,4 @@
+"use strict";
 var n = r(68055),
     i = r(617179),
     o = r(430031),
@@ -18,12 +19,7 @@ t.exports = {
         return t.reduce(function (t, n, i) {
             n = l(n);
             var o = a(),
-                s = {
-                    key: o,
-                    type: r,
-                    text: n,
-                    characterList: f(p(e, n.length)),
-                };
+                s = { key: o, type: r, text: n, characterList: f(p(e, n.length)) };
             if (h && 0 !== i) {
                 var u = i - 1;
                 s = (function (t) {
@@ -52,11 +48,7 @@ t.exports = {
                             });
                     }
                     return t;
-                })({}, s, {
-                    prevSibling: (t[u] = t[u].merge({
-                        nextSibling: o,
-                    })).getKey(),
-                });
+                })({}, s, { prevSibling: (t[u] = t[u].merge({ nextSibling: o })).getKey() });
             }
             return t.push(new d(s)), t;
         }, []);

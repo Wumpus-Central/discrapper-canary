@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     U6: "pulse_e4f643",
     aE: "pulseAnimation_e4f643",

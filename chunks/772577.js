@@ -1,66 +1,48 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => h });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n(503698),
+    a = n.n(s),
+    r = n(397927),
     o = n(567305),
-    c = n(985018),
-    u = n(801985);
-
-function d(e) {
+    d = n(985018),
+    c = n(801985);
+function u(e) {
     let { text: t, hasScrolled: n } = e;
-    return (0, r.jsxs)("div", {
-        className: a()(u.kL, {
-            [u.sz]: n,
-        }),
+    return (0, i.jsxs)("div", {
+        className: a()(c.kL, { [c.sz]: n }),
         children: [
-            (0, r.jsx)("div", {
-                className: u.lm,
-                children: (0, r.jsx)(s.Text, {
-                    className: u.__invalid_label,
+            (0, i.jsx)("div", {
+                className: c.lm,
+                children: (0, i.jsx)(r.Text, {
+                    className: c.__invalid_label,
                     variant: "text-md/medium",
                     color: "text-strong",
                     children: t,
                 }),
             }),
-            (0, r.jsx)("div", {
-                className: u._p,
-            }),
+            (0, i.jsx)("div", { className: c._p }),
         ],
     });
 }
-
-function f(e) {
+function h(e) {
     let [t, n] = l.useState(),
-        [i, a] = l.useState(),
-        [s, u] = l.useState(!1),
-        [f, p] = l.useState(!1),
-        { enabled: h } = (0, o.DN)(e);
+        [s, a] = l.useState(),
+        [r, c] = l.useState(!1),
+        [h, A] = l.useState(!1),
+        { enabled: g } = (0, o.DN)(e);
     return (
         l.useEffect(() => {
-            h && null != t && null != i ? u(t < i) : u(!1);
-        }, [h, t, i]),
+            g && null != t && null != s ? c(t < s) : c(!1);
+        }, [g, t, s]),
         {
             horizontalScrollNotice: l.useMemo(
-                () =>
-                    s
-                        ? (0, r.jsx)(d, {
-                              text: c.intl.string(c.t.RfAAH9),
-                              hasScrolled: f,
-                          })
-                        : null,
-                [s, f],
+                () => (r ? (0, i.jsx)(u, { text: d.intl.string(d.t.RfAAH9), hasScrolled: h }) : null),
+                [r, h],
             ),
-            handleScroll: () => p(!0),
-            handleSetScrollerRef: (e) => {
-                var t;
-                return a(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);
-            },
-            handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth),
+            handleScroll: () => A(!0),
+            handleSetScrollerRef: (e) => a(e?.getScrollerState()?.scrollWidth),
+            handleSetContainerRef: (e) => n(e?.clientWidth),
         }
     );
 }

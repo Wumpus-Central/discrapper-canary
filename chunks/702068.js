@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -20,41 +19,16 @@ let a = function (e) {
                         cursor: "pointer",
                     },
                 },
-                first: {
-                    swatch: {
-                        borderRadius: "2px 0 0 2px",
-                    },
-                },
-                last: {
-                    swatch: {
-                        borderRadius: "0 2px 2px 0",
-                    },
-                },
-                active: {
-                    swatch: {
-                        transform: "scaleY(1.8)",
-                        borderRadius: "3.6px/2px",
-                    },
-                },
+                first: { swatch: { borderRadius: "2px 0 0 2px" } },
+                last: { swatch: { borderRadius: "0 2px 2px 0" } },
+                active: { swatch: { transform: "scaleY(1.8)", borderRadius: "3.6px/2px" } },
             },
-            {
-                active: l,
-                first: s,
-                last: u,
-            },
+            { active: l, first: s, last: u },
         );
     return n.createElement("div", {
         style: c.swatch,
         onClick: function (e) {
-            return i(
-                {
-                    h: t.h,
-                    s: 0.5,
-                    l: r,
-                    source: "hsl",
-                },
-                e,
-            );
+            return i({ h: t.h, s: 0.5, l: r, source: "hsl" }, e);
         },
     });
 };

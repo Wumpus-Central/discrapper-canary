@@ -1,3 +1,4 @@
+"use strict";
 var n = r(414501),
     i = r(387739),
     o = r(743595),
@@ -9,7 +10,6 @@ var n = r(414501),
     f = r(809206),
     p = r(4323),
     h = r(101813);
-
 function d(t, e, r) {
     var n = a.replaceWithFragment(t.getCurrentContent(), t.getSelection(), e);
     return u.push(t, n.set("entityMap", r), "insert-fragment");
@@ -81,10 +81,7 @@ t.exports = function (t, e) {
             t.setClipboard(null);
         }
         if (v.length) {
-            var D = i.create({
-                    style: b.getCurrentInlineStyle(),
-                    entity: l(b.getCurrentContent(), b.getSelection()),
-                }),
+            var D = i.create({ style: b.getCurrentInlineStyle(), entity: l(b.getCurrentContent(), b.getSelection()) }),
                 K = c.getCurrentBlockType(b),
                 T = s.processText(v, D, K),
                 M = n.createFromArray(T);

@@ -1,135 +1,91 @@
-n.d(t, {
-    A: () => g,
-    Y: () => m,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => g, Y: () => m });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(846293),
     o = n(415951),
     l = n(849841),
-    c = n(976860),
-    u = n(345942),
+    u = n(976860),
+    c = n(345942),
     d = n(449054),
-    f = n(348943),
-    p = n(461888),
-    _ = n(652215),
+    _ = n(348943),
+    f = n(461888),
+    p = n(652215),
     h = n(985018);
-
 function m(e) {
     let {
             guildId: t,
             ctaType: n,
             submitting: s,
             onGoToGuild: o,
-            onAcceptInvite: u,
-            onStartApplication: f,
+            onAcceptInvite: c,
+            onStartApplication: _,
             onComplete: m,
         } = e,
         [g, E] = i.useState(!1),
-        b = (0, l.A)(t),
-        y = i.useCallback(() => {
-            (0, c.pX)(_.BVt.GUILD_MEMBER_VERIFICATION(t));
+        A = (0, l.A)(t),
+        I = i.useCallback(() => {
+            (0, u.pX)(p.BVt.GUILD_MEMBER_VERIFICATION(t));
         }, [t]),
-        O = i.useCallback(async () => {
-            await (0, d.Z2)(t, {
-                object: _.ZSU.GUILD_PROFILE,
-            });
+        T = i.useCallback(async () => {
+            await (0, d.Z2)(t, { object: p.ZSU.GUILD_PROFILE });
         }, [t]),
-        { text: A, onClick: v } = i.useMemo(() => {
+        { text: y, onClick: S } = i.useMemo(() => {
             switch (n) {
-                case p.SP.IS_MEMBER:
-                    return {
-                        text: h.intl.string(h.t.IRoQXr),
-                        onClick: o,
-                    };
-                case p.SP.ADOPT_TAG:
-                    return {
-                        text: h.intl.string(h.t.cQDYRu),
-                        onClick: b,
-                    };
-                case p.SP.HAS_APPLICATION:
-                    return {
-                        text: h.intl.string(h.t["4yfIDk"]),
-                        onClick: y,
-                    };
-                case p.SP.APPLY_TO_JOIN:
-                    return {
-                        text: h.intl.string(h.t["7XdMW2"]),
-                        onClick: f,
-                    };
-                case p.SP.LURK_DISCOVERABLE:
-                    return {
-                        text: h.intl.string(h.t.VJlc0S),
-                        onClick: O,
-                    };
-                case p.SP.JOIN_VIA_INVITE:
-                    return {
-                        text: h.intl.string(h.t.VJlc0S),
-                        onClick: u,
-                    };
-                case p.SP.ACCEPT_ROLES:
-                    return {
-                        text: h.intl.string(h.t.MMlhsr),
-                        onClick: u,
-                    };
+                case f.SP.IS_MEMBER:
+                    return { text: h.intl.string(h.t.IRoQXr), onClick: o };
+                case f.SP.ADOPT_TAG:
+                    return { text: h.intl.string(h.t.cQDYRu), onClick: A };
+                case f.SP.HAS_APPLICATION:
+                    return { text: h.intl.string(h.t["4yfIDk"]), onClick: I };
+                case f.SP.APPLY_TO_JOIN:
+                    return { text: h.intl.string(h.t["7XdMW2"]), onClick: _ };
+                case f.SP.LURK_DISCOVERABLE:
+                    return { text: h.intl.string(h.t.VJlc0S), onClick: T };
+                case f.SP.JOIN_VIA_INVITE:
+                    return { text: h.intl.string(h.t.VJlc0S), onClick: c };
+                case f.SP.ACCEPT_ROLES:
+                    return { text: h.intl.string(h.t.MMlhsr), onClick: c };
                 default:
-                    return {
-                        text: null,
-                        onClick: null,
-                    };
+                    return { text: null, onClick: null };
             }
-        }, [n, y, O, u, o, f, b]),
-        S = i.useCallback(
+        }, [n, I, T, c, o, _, A]),
+        v = i.useCallback(
             async (e) => {
                 e.stopPropagation(), E(!0);
                 try {
-                    await (null == v ? void 0 : v());
-                } catch (e) {
+                    await S?.();
+                } catch {
                 } finally {
-                    null == m || m(), E(!1);
+                    m?.(), E(!1);
                 }
             },
-            [v, m],
+            [S, m],
         );
-    return null == A
+    return null == y
         ? null
-        : (0, r.jsx)(a.Button, {
-              variant: "active",
-              size: "sm",
-              text: A,
-              fullWidth: !0,
-              loading: g || s,
-              onClick: S,
-          });
+        : (0, r.jsx)(a.Button, { variant: "active", size: "sm", text: y, fullWidth: !0, loading: g || s, onClick: v });
 }
-
 function g(e) {
     let { profile: t, onComplete: n } = e,
-        { guildId: a, validInviteKey: l, ctaType: c } = (0, p.Ay)(t),
-        d = i.useCallback(() => (0, u.u)(a), [a]),
-        _ = i.useCallback(() => {
-            null != l &&
-                s.Ay.acceptInvite({
-                    inviteKey: l,
-                    context: {
-                        location: "guild_profile",
-                    },
-                });
+        { guildId: a, validInviteKey: l, ctaType: u } = (0, f.Ay)(t),
+        d = i.useCallback(() => (0, c.u)(a), [a]),
+        p = i.useCallback(() => {
+            null != l && s.Ay.acceptInvite({ inviteKey: l, context: { location: "guild_profile" } });
         }, [l]),
         h = i.useCallback(() => {
-            t.visibility !== f.n.PUBLIC_WITH_RECRUITMENT && null != l
-                ? _()
+            t.visibility !== _.n.PUBLIC_WITH_RECRUITMENT && null != l
+                ? p()
                 : o.A.openMemberVerificationModal(a, void 0, l);
-        }, [_, a, t.visibility, l]);
-    return null == c
+        }, [p, a, t.visibility, l]);
+    return null == u
         ? null
         : (0, r.jsx)(m, {
               guildId: a,
-              ctaType: c,
+              ctaType: u,
               onGoToGuild: d,
-              onAcceptInvite: _,
+              onAcceptInvite: p,
               onStartApplication: h,
               onComplete: n,
           });

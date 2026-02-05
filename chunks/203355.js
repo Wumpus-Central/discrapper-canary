@@ -1,190 +1,144 @@
-n.d(t, {
-    A: () => z,
-    D: () => W,
-});
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+n.d(t, { A: () => z, D: () => K });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
     o = n(435371),
     c = n(397927),
-    u = n(367513),
-    d = n(401843),
-    f = n(964486),
-    p = n(684339),
-    b = n(164617),
-    g = n(402216),
-    m = n(626584),
-    h = n(525505),
-    A = n(753727),
-    y = n(315606),
-    _ = n(638480),
-    E = n(607407),
-    v = n(872363),
-    O = n(901690),
-    x = n(351073),
-    S = n(919706),
-    N = n(616356),
-    C = n(961350),
-    j = n(734057),
-    T = n(430452),
-    I = n(531685),
-    w = n(200749),
-    R = n(70171),
-    P = n(566331),
-    D = n(768088),
-    k = n(256195),
-    L = (n(729365), n(399849)),
-    M = n(275731),
+    d = n(367513),
+    u = n(401843),
+    h = n(964486),
+    m = n(684339),
+    A = n(164617),
+    p = n(402216),
+    g = n(626584),
+    f = n(525505),
+    _ = n(753727),
+    E = n(315606),
+    C = n(638480),
+    x = n(607407),
+    S = n(872363),
+    T = n(901690),
+    I = n(351073),
+    N = n(919706),
+    v = n(616356),
+    y = n(961350),
+    b = n(734057),
+    R = n(430452),
+    j = n(531685),
+    M = n(200749),
+    D = n(70171),
+    O = n(566331),
+    L = n(768088),
+    P = n(256195),
+    w = (n(729365), n(399849)),
+    k = n(275731),
     U = n(345812),
-    V = n(652215),
+    G = n(652215),
     F = n(806931),
-    G = n(731854),
-    H = n(985018),
-    B = n(707511);
-let Y = new m.A("StreamTile");
-
-function W(e) {
-    let { participant: t, selected: n, focused: r, idle: i, width: a, premiumIndicator: o } = e,
-        c = (0, s.bG)([N.A], () => N.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, U.V)(a);
-    return (0, l.jsxs)(l.Fragment, {
+    H = n(731854),
+    B = n(985018),
+    V = n(707511);
+let W = new g.A("StreamTile");
+function K(e) {
+    let { participant: t, selected: n, focused: l, idle: a, width: s, premiumIndicator: o } = e,
+        c = (0, r.bG)([v.A], () => v.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        d = (0, U.V)(s);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            n || r
+            n || l ? null : (0, i.jsx)(k.A, { participant: t }),
+            l || null == c || c.state === G.XYD.ENDED || c.state === G.XYD.FAILED
                 ? null
-                : (0, l.jsx)(M.A, {
+                : (0, i.jsx)(S.A, {
+                      size: p.Ay.Sizes.SMALL,
+                      className: V.Ok,
                       participant: t,
-                  }),
-            r || null == c || c.state === V.XYD.ENDED || c.state === V.XYD.FAILED
-                ? null
-                : (0, l.jsx)(v.A, {
-                      size: g.Ay.Sizes.SMALL,
-                      className: B.Ok,
-                      participant: t,
-                      showQuality: !u && !i,
+                      showQuality: !d && !a,
                       isUpsellEnabled: !1,
                       premiumIndicator: o,
                   }),
         ],
     });
 }
-
 function z(e) {
     let {
             participant: t,
             selected: n,
-            onVideoResize: i,
-            fit: g,
-            popoutType: m,
-            width: v,
-            focused: M,
+            onVideoResize: a,
+            fit: p,
+            popoutType: g,
+            width: S,
+            focused: k,
             wrapperClassName: U,
-            paused: W = !1,
+            paused: K = !1,
             idle: z = !1,
-            controlsBottom: K,
+            controlsBottom: Y,
         } = e,
-        X = T.A.getVideoComponent(),
-        Z = (0, s.bG)([C.default], () => C.default.getId()),
-        J = (0, A.A)(),
-        { stream: q, user: Q, streamId: $ } = t,
-        ee = (0, s.bG)([j.A], () => j.A.getChannel(q.channelId)),
-        et = (0, s.bG)([N.A], () => N.A.getActiveStreamForUser(Q.id, q.guildId), [Q.id, q.guildId]),
-        { defaultWatchMultipleStreams: en } = (0, y.W)({
-            location: "StreamTile",
-        }),
-        el = (0, s.bG)([N.A], () => N.A.getAllActiveStreams().length > 0),
-        er = (0, s.bG)([I.A], () => I.A.isFocused()),
-        ei = (null == et ? void 0 : et.ownerId) === Z,
-        ea = ei && !er && m === b.N.NO_POPOUT,
-        es = null != et ? (0, _.A)(et, Q, Q.id === Z, ea) : null,
-        eo = v < 195;
-    (0, f.Ay)(() => {
-        !el &&
-            (null == ee ? void 0 : ee.isGuildStageVoice()) &&
-            !ei &&
-            ((0, d.A9)(q), u.A.updateStageStreamSize(q.channelId, !1));
+        q = R.A.getVideoComponent(),
+        J = (0, r.bG)([y.default], () => y.default.getId()),
+        $ = (0, _.A)(),
+        { stream: Z, user: X, streamId: Q } = t,
+        ee = (0, r.bG)([b.A], () => b.A.getChannel(Z.channelId)),
+        et = (0, r.bG)([v.A], () => v.A.getActiveStreamForUser(X.id, Z.guildId), [X.id, Z.guildId]),
+        { defaultWatchMultipleStreams: en } = (0, E.W)({ location: "StreamTile" }),
+        ei = (0, r.bG)([v.A], () => v.A.getAllActiveStreams().length > 0),
+        el = (0, r.bG)([j.A], () => j.A.isFocused()),
+        ea = et?.ownerId === J,
+        es = ea && !el && g === A.N.NO_POPOUT,
+        er = null != et ? (0, C.A)(et, X, X.id === J, es) : null,
+        eo = S < 195;
+    (0, h.Ay)(() => {
+        !ei && ee?.isGuildStageVoice() && !ea && ((0, u.A9)(Z), d.A.updateStageStreamSize(Z.channelId, !1));
     });
-    let ec = (0, h.u)(G.x.STREAM, t.user.id);
+    let ec = (0, f.u)(H.x.STREAM, t.user.id);
     if (
-        (r.useEffect(() => {
-            Y.info(
-                "Stream Tile State - activeStream: "
-                    .concat(null != et, " | selected: ")
-                    .concat(n, " | Video: ")
-                    .concat(null != X, " | MediaEngine: ")
-                    .concat(T.A.supports(G.O5.VIDEO)),
+        (l.useEffect(() => {
+            W.info(
+                `Stream Tile State - activeStream: ${null != et} | selected: ${n} | Video: ${null != q} | MediaEngine: ${R.A.supports(H.O5.VIDEO)}`,
             );
-        }, [X, et, n]),
-        J)
+        }, [q, et, n]),
+        $)
     )
-        return (0, l.jsx)(L.A, {
-            stream: t.stream,
-            isSmall: eo,
-            selected: n,
-            isSelfStream: Q.id === Z,
-        });
-    if ((null == et ? void 0 : et.state) === V.XYD.ENDED)
-        return (0, l.jsx)(P.A, {
-            selected: n,
-            stream: et,
-            width: v,
-        });
-    if (null != ec || (null == et ? void 0 : et.state) === V.XYD.FAILED)
-        return (0, l.jsx)(D.A, {
-            avError: null == ec ? void 0 : ec.type,
-            avErrorContext: ec,
-            selected: n,
-            stream: t.stream,
-            width: v,
-        });
-    if (t.type === F.lp.HIDDEN_STREAM)
-        return (0, l.jsx)(k.A, {
-            selected: n,
-            participant: t,
-            width: v,
-        });
-    if (!(null != et && !n && null != X && T.A.supports(G.O5.VIDEO)))
-        return (0, l.jsxs)("div", {
-            className: a()(B.Qs, B.Rh, {
-                [B.EX]: eo,
-            }),
+        return (0, i.jsx)(w.A, { stream: t.stream, isSmall: eo, selected: n, isSelfStream: X.id === J });
+    if (et?.state === G.XYD.ENDED) return (0, i.jsx)(O.A, { selected: n, stream: et, width: S });
+    if (null != ec || et?.state === G.XYD.FAILED)
+        return (0, i.jsx)(L.A, { avError: ec?.type, avErrorContext: ec, selected: n, stream: t.stream, width: S });
+    if (t.type === F.lp.HIDDEN_STREAM) return (0, i.jsx)(P.A, { selected: n, participant: t, width: S });
+    if (!(null != et && !n && null != q && R.A.supports(H.O5.VIDEO)))
+        return (0, i.jsxs)("div", {
+            className: s()(V.Qs, V.Rh, { [V.EX]: eo }),
             children: [
-                (0, l.jsx)(E.A, {
+                (0, i.jsx)(x.A, {
                     noImage: !0,
                     noText: !0,
-                    className: a()(B.HL, {
-                        [B.gH]: null == et,
-                    }),
+                    className: s()(V.HL, { [V.gH]: null == et }),
                     stream: t.stream,
                 }),
                 n
                     ? null
-                    : (0, l.jsxs)(l.Fragment, {
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, l.jsx)("div", {
-                                  className: B.lO,
-                                  children: (0, l.jsx)(c.Button, {
+                              (0, i.jsx)("div", {
+                                  className: V.lO,
+                                  children: (0, i.jsx)(c.Button, {
                                       variant: "secondary",
                                       size: eo ? "sm" : "md",
-                                      text: v < 175 ? H.intl.string(H.t.I6JG46) : H.intl.string(H.t["7Xq/nV"]),
+                                      text: S < 175 ? B.intl.string(B.t.I6JG46) : B.intl.string(B.t["7Xq/nV"]),
                                   }),
                               }),
-                              el && !en
-                                  ? (0, l.jsx)("div", {
-                                        className: a()(B.lO, B.EU),
-                                        children: (0, l.jsx)(o.m_, {
-                                            text: H.intl.string(H.t.wCrzut),
-                                            children: (0, l.jsx)(c.K0, {
+                              ei && !en
+                                  ? (0, i.jsx)("div", {
+                                        className: s()(V.lO, V.EU),
+                                        children: (0, i.jsx)(o.m_, {
+                                            text: B.intl.string(B.t.wCrzut),
+                                            children: (0, i.jsx)(c.K0, {
                                                 variant: "secondary",
                                                 size: eo ? "sm" : "md",
                                                 icon: c.vAm,
-                                                "aria-label": H.intl.string(H.t.wCrzut),
+                                                "aria-label": B.intl.string(B.t.wCrzut),
                                                 onClick: (e) => {
-                                                    e.stopPropagation(),
-                                                        (0, d.A9)(t.stream, {
-                                                            forceMultiple: !0,
-                                                        });
+                                                    e.stopPropagation(), (0, u.A9)(t.stream, { forceMultiple: !0 });
                                                 },
                                             }),
                                         }),
@@ -195,76 +149,39 @@ function z(e) {
             ],
         });
     else
-        return (0, l.jsxs)(l.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != ee
-                    ? (0, l.jsx)(x.A, {
-                          focused: M,
+                    ? (0, i.jsx)(I.A, {
+                          focused: k,
                           channelId: ee.id,
                           guildId: ee.guild_id,
-                          streamerId: Q.id,
-                          hasScreenMessage: null != es,
-                          stream: q,
+                          streamerId: X.id,
+                          hasScreenMessage: null != er,
+                          stream: Z,
                       })
                     : null,
-                (0, l.jsx)(
-                    O.A,
+                (0, i.jsx)(
+                    T.A,
                     {
-                        enableZoom: M,
-                        onResize: i,
-                        wrapperClassName: a()(m !== b.N.CALL_TILE ? B.tN : void 0, U),
-                        className: B.Qs,
-                        streamId: $,
-                        videoComponent: X,
-                        fit: g,
-                        paused: W || (null == et ? void 0 : et.state) === V.XYD.PAUSED || ea,
-                        videoSpinnerContext: ei ? p.u.SELF_STREAM : p.u.REMOTE_STREAM,
-                        userId: Q.id,
+                        enableZoom: k,
+                        onResize: a,
+                        wrapperClassName: s()(g !== A.N.CALL_TILE ? V.tN : void 0, U),
+                        className: V.Qs,
+                        streamId: Q,
+                        videoComponent: q,
+                        fit: p,
+                        paused: K || et?.state === G.XYD.PAUSED || es,
+                        videoSpinnerContext: ea ? m.u.SELF_STREAM : m.u.REMOTE_STREAM,
+                        userId: X.id,
                         streamKey: t.id,
-                        controlsBottom: K,
+                        controlsBottom: Y,
                         idle: z,
                     },
-                    $,
+                    Q,
                 ),
-                null != es
-                    ? (0, l.jsx)(
-                          S.A,
-                          (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      l = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (l = l.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      l.forEach(function (t) {
-                                          var l;
-                                          (l = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: l,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = l);
-                                      });
-                              }
-                              return e;
-                          })(
-                              {
-                                  size: (0, w.J)(v),
-                              },
-                              es,
-                          ),
-                      )
-                    : null,
-                (0, l.jsx)(R.A, {
-                    stream: q,
-                    popoutType: m,
-                }),
+                null != er ? (0, i.jsx)(N.A, { size: (0, M.J)(S), ...er }) : null,
+                (0, i.jsx)(D.A, { stream: Z, popoutType: g }),
             ],
         });
 }

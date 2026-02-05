@@ -1,53 +1,46 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
-    l = n(205693),
-    a = n(451988),
+n.d(t, { A: () => _ });
+var i = n(64700),
+    r = n(311907),
+    a = n(205693),
+    l = n(451988),
     s = n(430452),
     o = n(383501),
-    c = n(485296),
-    u = n(927813),
-    d = n(340913),
-    p = n(731854);
-let f = 3 * u.A.Millis.SECOND;
-
-function h() {
-    let { showPTTSpeakingIndicator: e } = d.A.useConfig({
-            location: "useSpeakingWhilePTT",
-        }),
-        [t, n] = r.useState(!1),
-        u = (0, i.bG)([s.A], () => s.A.getMode() === p.TB.PUSH_TO_TALK),
-        h = (0, i.bG)([o.A], () => o.A.getRTCConnectionId()),
-        A = r.useRef(new a.Ep());
+    d = n(485296),
+    c = n(927813),
+    u = n(340913),
+    A = n(731854);
+let h = 3 * c.A.Millis.SECOND;
+function _() {
+    let { showPTTSpeakingIndicator: e } = u.A.useConfig({ location: "useSpeakingWhilePTT" }),
+        [t, n] = i.useState(!1),
+        c = (0, r.bG)([s.A], () => s.A.getMode() === A.TB.PUSH_TO_TALK),
+        _ = (0, r.bG)([o.A], () => o.A.getRTCConnectionId()),
+        m = i.useRef(new l.Ep());
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             n(!1);
-        }, [h]),
-        r.useEffect(() => {
+        }, [_]),
+        i.useEffect(() => {
             let t = 0,
-                r = A.current;
-
-            function i(e, i) {
-                let l = (i & p.ME.VOICE) === p.ME.VOICE,
-                    a = c.A.isCurrentUserPTTActive();
-                l && !a
+                i = m.current;
+            function r(e, r) {
+                let a = (r & A.ME.VOICE) === A.ME.VOICE,
+                    l = d.A.isCurrentUserPTTActive();
+                a && !l
                     ? ++t >= 5 &&
                       (n(!0),
-                      r.start(f, () => {
+                      i.start(h, () => {
                           n(!1);
                       }))
                     : (t = 0);
             }
             return (
-                e && u && null != h && s.A.getMediaEngine().on(l.bg.VoiceActivity, i),
+                e && c && null != _ && s.A.getMediaEngine().on(a.bg.VoiceActivity, r),
                 () => {
-                    s.A.getMediaEngine().removeListener(l.bg.VoiceActivity, i), r.stop();
+                    s.A.getMediaEngine().removeListener(a.bg.VoiceActivity, r), i.stop();
                 }
             );
-        }, [e, u, h]),
+        }, [e, c, _]),
         t
     );
 }

@@ -1,36 +1,24 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(582754),
+var l = n(503698),
+    a = n.n(l),
+    r = n(582754),
     s = n(397927),
     o = n(736653),
-    c = n(985018),
-    u = n(541849);
-let d = function (e) {
-    let { className: t, color: n = "text-strong", textOpacity: i = 0.9 } = e,
-        d = (0, o.DP)(),
-        p = (0, a.Mw)(d);
-    return (0, r.jsxs)(s.Text, {
+    d = n(985018),
+    c = n(541849);
+let u = function (e) {
+    let { className: t, color: n = "text-strong", textOpacity: l = 0.9 } = e,
+        u = (0, o.DP)(),
+        m = (0, r.Mw)(u);
+    return (0, i.jsxs)(s.Text, {
         variant: "text-xxs/medium",
         color: n,
-        className: l()(u.P, t),
+        className: a()(c.P, t),
         children: [
-            (0, r.jsx)("span", {
-                className: u.r,
-                style: {
-                    backgroundColor: "rgba(0, 0, 0, ".concat(p ? 0.2 : 0.08, ")"),
-                },
-            }),
-            (0, r.jsx)("span", {
-                style: {
-                    opacity: i,
-                },
-                children: c.intl.string(c.t.o6FLcF),
-            }),
+            (0, i.jsx)("span", { className: c.r, style: { backgroundColor: `rgba(0, 0, 0, ${m ? 0.2 : 0.08})` } }),
+            (0, i.jsx)("span", { style: { opacity: l }, children: d.intl.string(d.t.o6FLcF) }),
         ],
     });
 };

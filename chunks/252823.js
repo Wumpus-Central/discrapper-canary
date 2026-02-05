@@ -1,3 +1,1 @@
-e.exports = {
-    _: "buttonWrapper_bf1984",
-};
+e.exports = { _: "buttonWrapper_bf1984" };

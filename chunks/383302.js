@@ -1,60 +1,47 @@
-n.d(t, {
-    N: () => u,
-}),
-    n(228524);
-var r = n(627968);
+"use strict";
+n.d(t, { N: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(573435),
+var s = n(397927),
+    r = n(573435),
     l = n(263063),
     a = n(860689),
     o = n(985018),
     c = n(936528);
-let u = (e) => {
+let d = (e) => {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
-    let u = a.DY(t),
-        { name: d, description: h } = u;
-    return (0, r.jsxs)("div", {
+    let d = a.DY(t),
+        { name: u, description: h } = d;
+    return (0, i.jsxs)("div", {
         children: [
-            (0, r.jsx)(i.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: "heading-md/normal",
                 color: "text-muted",
                 className: c.CT,
                 children: o.intl.string(o.t.Eabu1z),
             }),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: c.EB,
                 children: [
-                    (0, r.jsx)(s.Ay, {
-                        mask: s.Ay.Masks.SQUIRCLE,
+                    (0, i.jsx)(r.Ay, {
+                        mask: r.Ay.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, r.jsx)(l.A, {
-                            guild: u,
-                            size: l.A.Sizes.MEDIUM,
-                            active: !0,
-                        }),
+                        children: (0, i.jsx)(l.A, { guild: d, size: l.A.Sizes.MEDIUM, active: !0 }),
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: c.OA,
                         children: [
-                            (0, r.jsx)(i.Heading, {
-                                variant: "heading-sm/semibold",
-                                children: d,
-                            }),
-                            (0, r.jsxs)("div", {
+                            (0, i.jsx)(s.Heading, { variant: "heading-sm/semibold", children: u }),
+                            (0, i.jsxs)("div", {
                                 className: c.aH,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: c.Om,
-                                    }),
+                                    (0, i.jsx)("div", { className: c.Om }),
                                     null != n && n > 0
-                                        ? (0, r.jsx)(i.Text, {
+                                        ? (0, i.jsx)(s.Text, {
                                               variant: "text-sm/normal",
-                                              children: o.intl.format(o.t["LC+S+m"], {
-                                                  membersOnline: n,
-                                              }),
+                                              children: o.intl.format(o.t["LC+S+m"], { membersOnline: n }),
                                           })
                                         : null,
                                 ],
@@ -65,12 +52,7 @@ let u = (e) => {
             }),
             null != h &&
                 "" !== h &&
-                (0, r.jsx)(i.Text, {
-                    color: "text-default",
-                    className: c.CT,
-                    variant: "text-sm/normal",
-                    children: h,
-                }),
+                (0, i.jsx)(s.Text, { color: "text-default", className: c.CT, variant: "text-sm/normal", children: h }),
         ],
     });
 };

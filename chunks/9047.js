@@ -1,33 +1,21 @@
-n.d(t, {
-    A: () => o,
-    c: () => a,
-});
-var r = n(985018);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var a = (function (e) {
-    return (
-        (e[(e.GENERAL = 0)] = "GENERAL"),
-        (e[(e.NO_FILE = 1)] = "NO_FILE"),
-        (e[(e.PROGRESS = 2)] = "PROGRESS"),
-        (e[(e.UPLOAD = 3)] = "UPLOAD"),
-        (e[(e.READ = 4)] = "READ"),
-        e
-    );
-})({});
-class s {
+"use strict";
+n.d(t, { A: () => s, c: () => i });
+var r = n(985018),
+    i = (function (e) {
+        return (
+            (e[(e.GENERAL = 0)] = "GENERAL"),
+            (e[(e.NO_FILE = 1)] = "NO_FILE"),
+            (e[(e.PROGRESS = 2)] = "PROGRESS"),
+            (e[(e.UPLOAD = 3)] = "UPLOAD"),
+            (e[(e.READ = 4)] = "READ"),
+            e
+        );
+    })({});
+class a {
+    code;
+    constructor(e) {
+        this.code = e;
+    }
     get displayMessage() {
         switch (this.code) {
             case 1:
@@ -42,8 +30,5 @@ class s {
                 return r.intl.string(r.t.VzHcSm);
         }
     }
-    constructor(e) {
-        i(this, "code", void 0), (this.code = e);
-    }
 }
-let o = s;
+let s = a;

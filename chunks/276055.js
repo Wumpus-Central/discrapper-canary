@@ -1,93 +1,64 @@
-n.d(t, {
-    A: () => b,
-    l: () => g,
-});
+"use strict";
+n.d(t, { A: () => A, l: () => g });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(397927),
     o = n(442433),
     l = n(485947),
-    c = n(708197),
-    u = n(435738),
+    u = n(708197),
+    c = n(435738),
     d = n(38055),
-    f = n(495744),
-    p = n(652215),
-    _ = n(985018),
+    _ = n(495744),
+    f = n(652215),
+    p = n(985018),
     h = n(792039),
     m = n(701939);
-
 function g(e) {
-    return (null == e ? void 0 : e.id) === f.C;
+    return e?.id === _.C;
 }
-
 function E(e) {
-    let { title: t, onToggleExpand: f, expanded: g, expandedCount: E } = e,
-        b = (0, a.bG)([u.A], () => u.A.hidden),
-        y = i.useCallback((e) => {
+    let { title: t, onToggleExpand: _, expanded: g, expandedCount: E } = e,
+        A = (0, a.bG)([c.A], () => c.A.hidden),
+        I = i.useCallback((e) => {
             (0, o.L3)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 38055));
-                return () =>
-                    (0, r.jsx)(e, {
-                        closePopout: o.Z_,
-                    });
+                return () => (0, r.jsx)(e, { closePopout: o.Z_ });
             });
         }, []),
-        O = () => {
+        T = () => {
             let e;
-            return E <= 3 && !b
+            return E <= 3 && !A
                 ? null
-                : ((e = b
-                      ? (0, r.jsx)(s.tN5, {
-                            className: h.wT,
-                        })
+                : ((e = A
+                      ? (0, r.jsx)(s.tN5, { className: h.wT })
                       : g
-                        ? (0, r.jsx)(s.abt, {
-                              className: h.wT,
-                          })
-                        : (0, r.jsx)(s._BQ, {
-                              className: h.wT,
-                          })),
-                  (0, r.jsx)(s.vN3, {
-                      children: (0, r.jsx)("div", {
-                          tabIndex: 0,
-                          className: h.wT,
-                          children: e,
-                      }),
-                  }));
+                        ? (0, r.jsx)(s.abt, { className: h.wT })
+                        : (0, r.jsx)(s._BQ, { className: h.wT })),
+                  (0, r.jsx)(s.vN3, { children: (0, r.jsx)("div", { tabIndex: 0, className: h.wT, children: e }) }));
         };
     return (0, r.jsxs)(l.A, {
         className: m.lL,
         children: [
-            (0, r.jsx)(s.AC4, {
-                children: _.intl.format(_.t.Uaqbke, {
-                    title: t,
-                    count: E,
-                }),
-            }),
+            (0, r.jsx)(s.AC4, { children: p.intl.format(p.t.Uaqbke, { title: t, count: E }) }),
             (0, r.jsxs)(s.DUT, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                        return b ? (0, c.Il)() : E > 3 ? f() : (0, p.tEg)();
+                        return A ? (0, u.Il)() : E > 3 ? _() : (0, f.tEg)();
                 },
-                onContextMenu: y,
+                onContextMenu: I,
                 tag: "span",
                 "aria-hidden": !0,
                 className: h.N1,
                 children: [
                     (0, r.jsxs)("div", {
                         className: h.wx,
-                        children: [
-                            (0, r.jsxs)("span", {
-                                children: [t, " — ", E],
-                            }),
-                            (0, r.jsx)(d.A, {}),
-                        ],
+                        children: [(0, r.jsxs)("span", { children: [t, " — ", E] }), (0, r.jsx)(d.A, {})],
                     }),
-                    O(),
+                    T(),
                 ],
             }),
         ],
     });
 }
-let b = i.memo(E);
+let A = i.memo(E);

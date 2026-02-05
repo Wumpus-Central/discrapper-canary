@@ -1,102 +1,60 @@
-l.d(t, {
-    A: () => f,
-});
-var n = l(627968);
-l(64700);
-var r = l(172218),
-    s = l(397927),
-    a = l(854818),
-    i = l(212407),
-    o = l(815280),
-    c = l(985018),
-    u = l(922868);
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(l);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = l[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-let f = (e) => {
-    let { immersiveBannerBlock: t, onVisibilityChange: l } = e,
-        f = (0, r.K)(
+"use strict";
+s.d(t, { A: () => u });
+var n = s(627968);
+s(64700);
+var r = s(172218),
+    l = s(397927),
+    a = s(854818),
+    i = s(212407),
+    o = s(815280),
+    c = s(985018),
+    d = s(922868);
+let u = (e) => {
+    let { immersiveBannerBlock: t, onVisibilityChange: s } = e,
+        u = (0, r.K)(
             (e) => {
-                null == l || l(e);
+                s?.(e);
             },
             0.33,
-            null != l,
+            null != s,
         ),
-        { bannerUrl: b, bannerAnimatedUrl: g } = (0, i.qY)(t),
-        p =
-            null != t.textColor
-                ? {
-                      color: t.textColor,
-                  }
-                : void 0,
-        m = null != t.body && "" !== t.body,
-        h = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        { bannerUrl: g, bannerAnimatedUrl: m } = (0, i.qY)(t),
+        _ = null != t.textColor ? { color: t.textColor } : void 0,
+        h = null != t.body && "" !== t.body,
+        p = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, n.jsxs)("div", {
-        ref: f,
-        className: u.BX,
+        ref: u,
+        className: d.BX,
         children: [
             (0, n.jsx)("div", {
-                className: u.vK,
-                children:
-                    null != b &&
-                    (0, n.jsx)(o.A, {
-                        bannerStatic: b,
-                        bannerAnimated: g,
-                    }),
+                className: d.vK,
+                children: null != g && (0, n.jsx)(o.A, { bannerStatic: g, bannerAnimated: m }),
             }),
             (0, n.jsx)("div", {
-                className: u.HQ,
+                className: d.HQ,
                 children: (0, n.jsxs)("div", {
-                    className: u.Yn,
+                    className: d.Yn,
                     children: [
-                        null != t.endTime
-                            ? (0, n.jsx)(a.e, {
-                                  endDate: t.endTime,
-                                  size: "lg",
-                              })
-                            : null,
-                        (0, n.jsx)(s.Heading, {
+                        null != t.endTime ? (0, n.jsx)(a.e, { endDate: t.endTime, size: "lg" }) : null,
+                        (0, n.jsx)(l.Heading, {
                             variant: "heading-xxl/bold",
-                            className: u.DD,
+                            className: d.DD,
                             color: "text-strong",
-                            style: d({}, p),
+                            style: { ..._ },
                             children: t.title,
                         }),
-                        m || h
-                            ? (0, n.jsxs)(s.Text, {
+                        h || p
+                            ? (0, n.jsxs)(l.Text, {
                                   variant: "text-md/medium",
-                                  style: d({}, p),
+                                  style: { ..._ },
                                   children: [
-                                      m && t.body,
-                                      m && h && " ",
-                                      h &&
-                                          (0, n.jsx)(s.MzZ, {
+                                      h && t.body,
+                                      h && p && " ",
+                                      p &&
+                                          (0, n.jsx)(l.MzZ, {
                                               href: t.helpCenterUrl,
-                                              className: u.CU,
-                                              style: d({}, p),
+                                              className: d.CU,
+                                              style: { ..._ },
                                               children: c.intl.string(c.t.O7ADgv),
                                           }),
                                   ],

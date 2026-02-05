@@ -1,12 +1,9 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(64700),
     i = n(451988),
     a = n(507698);
 let s = 0x7fffffff;
-
 function o(e) {
     let [t, n] = r.useState(!1),
         o = r.useRef(null);
@@ -22,19 +19,10 @@ function o(e) {
                     e.start(Math.min(s, l), () => t()), (o.current = e);
                 }
             };
-            return (
-                t(),
-                () => {
-                    var e;
-                    return null == (e = o.current) ? void 0 : e.stop();
-                }
-            );
+            return t(), () => o.current?.stop();
         }, [e]),
         r.useEffect(() => {
-            if (t) {
-                var e;
-                null == (e = o.current) || e.stop();
-            }
+            t && o.current?.stop();
         }, [t]),
         t ? void 0 : e
     );

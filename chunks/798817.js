@@ -1,75 +1,45 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(342494),
+n.d(t, { A: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(342494),
     s = n(274372),
     o = n(372684),
-    c = n(399925),
-    u = n(665039),
-    d = n(985018);
-
-function p(e) {
-    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: p } = e,
-        f = (0, l.bG)([s.A], () => {
-            var e;
-            let t = null == (e = s.A.getLastClipsSession()) ? void 0 : e.newClipIds;
-            return null == t ? null : s.A.getClips().filter((e) => t.includes(e.id))[0];
+    d = n(399925),
+    c = n(665039),
+    u = n(985018);
+function A(e) {
+    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: A } = e,
+        h = (0, a.bG)([s.A], () => {
+            let e = s.A.getLastClipsSession()?.newClipIds;
+            return null == e ? null : s.A.getClips().filter((t) => e.includes(t.id))[0];
         }),
-        h = (0, u.j)(f),
-        A = i.useCallback(() => {
-            (0, c.jA)();
+        _ = (0, c.j)(h),
+        m = r.useCallback(() => {
+            (0, d.jA)();
         }, []);
-    return null == f
+    return null == h
         ? null
-        : f.type !== o.nQ.SCREENSHOT && f.type !== o.nQ.VOICE_CLIP && null != h
-          ? (0, r.jsx)(a.HZ, {
-                targetElementRef: {
-                    current: n,
-                },
+        : h.type !== o.nQ.SCREENSHOT && h.type !== o.nQ.VOICE_CLIP && null != _
+          ? (0, i.jsx)(l.HZ, {
+                targetElementRef: { current: n },
                 position: "bottom",
-                title: d.intl.string(d.t.JugHO7),
-                body: d.intl.format(d.t["+qxkzC"], {
-                    count: p.newClipIds.length,
-                }),
-                assetUrl: h,
+                title: u.intl.string(u.t.JugHO7),
+                body: u.intl.format(u.t["+qxkzC"], { count: A.newClipIds.length }),
+                assetUrl: _,
                 disableMediaViewer: !0,
-                caretConfig: {
-                    align: "center",
-                },
-                action: {
-                    text: d.intl.string(d.t.tQPBml),
-                    onClick: t,
-                },
-                onRequestClose: A,
+                caretConfig: { align: "center" },
+                action: { text: u.intl.string(u.t.tQPBml), onClick: t },
+                onRequestClose: m,
             })
-          : (0, r.jsx)(a.AM, {
-                targetElementRef: {
-                    current: n,
-                },
+          : (0, i.jsx)(l.AM, {
+                targetElementRef: { current: n },
                 position: "bottom",
-                title: d.intl.string(d.t.JugHO7),
-                body: d.intl.format(d.t["+qxkzC"], {
-                    count: p.newClipIds.length,
-                }),
-                graphic:
-                    null != f.thumbnail
-                        ? {
-                              type: "image",
-                              src: f.thumbnail,
-                          }
-                        : void 0,
-                caretConfig: {
-                    align: "center",
-                },
-                actions: [
-                    {
-                        text: d.intl.string(d.t.tQPBml),
-                        onClick: t,
-                    },
-                ],
-                onRequestClose: A,
+                title: u.intl.string(u.t.JugHO7),
+                body: u.intl.format(u.t["+qxkzC"], { count: A.newClipIds.length }),
+                graphic: null != h.thumbnail ? { type: "image", src: h.thumbnail } : void 0,
+                caretConfig: { align: "center" },
+                actions: [{ text: u.intl.string(u.t.tQPBml), onClick: t }],
+                onRequestClose: m,
             });
 }

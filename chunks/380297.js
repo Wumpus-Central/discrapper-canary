@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card__39ec2",
     wx: "header__39ec2",

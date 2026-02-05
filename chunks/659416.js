@@ -1,12 +1,10 @@
-n.d(t, {
-    Ob: () => l,
-});
-var r,
+n.d(t, { Ob: () => l });
+var i,
     l =
-        (((r = {})[(r.OFFERED = 0)] = "OFFERED"),
-        (r[(r.ACCEPTED = 1)] = "ACCEPTED"),
-        (r[(r.RUNNING = 2)] = "RUNNING"),
-        (r[(r.COMPLETED = 3)] = "COMPLETED"),
-        (r[(r.FAILED = 4)] = "FAILED"),
-        (r[(r.CANCELLED = 5)] = "CANCELLED"),
-        r);
+        (((i = {})[(i.OFFERED = 0)] = "OFFERED"),
+        (i[(i.ACCEPTED = 1)] = "ACCEPTED"),
+        (i[(i.RUNNING = 2)] = "RUNNING"),
+        (i[(i.COMPLETED = 3)] = "COMPLETED"),
+        (i[(i.FAILED = 4)] = "FAILED"),
+        (i[(i.CANCELLED = 5)] = "CANCELLED"),
+        i);

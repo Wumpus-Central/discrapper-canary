@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Qm: "iconLayout__0c4c4",
     zc: "iconContainer__0c4c4",

@@ -1,31 +1,11 @@
-r.d(t, {
-    d: () => d,
-}),
-    r(747238),
-    r(896048),
-    r(927092),
-    r(212978),
-    r(201528),
-    r(393431),
-    r(752391),
-    r(532706),
-    r(42231),
-    r(232424),
-    r(757074),
-    r(949626),
-    r(767709),
-    r(65162),
-    r(21862),
-    r(801460),
-    r(508300),
-    r(650828);
-var n = r(344390),
-    l = r(141931),
-    s = r(742459),
-    i = r(430452),
-    a = r(392128),
-    c = r(985018);
-let o = [
+s.d(t, { d: () => d }), s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
+var r = s(344390),
+    i = s(141931),
+    n = s(742459),
+    l = s(430452),
+    a = s(392128),
+    o = s(985018);
+let c = [
     "GQgGHISKZ5aYqYeYhX9isDUHGw",
     "bAgKFITWhoVvmHVRuokCdjVQaA",
     "XAgGDIJ/ipadd3iCiYUcWpCZBA",
@@ -40,105 +20,48 @@ let o = [
 ];
 async function d(e) {
     var t;
-    let r,
-        { width: d, height: f, types: u = [l.fS.CAMERA, l.fS.SCREEN, l.fS.WINDOW] } = e,
-        h = i.A.getVideoDevices(),
-        p = (0, s.A)(i.A.getMediaEngine(), u, {
-            width: d,
-            height: f,
-        }),
-        x = (0, a.e)(),
-        j = await x,
+    let s,
+        { width: d, height: u, types: f = [i.fS.CAMERA, i.fS.SCREEN, i.fS.WINDOW] } = e,
+        h = l.A.getVideoDevices(),
+        x = (0, n.A)(l.A.getMediaEngine(), f, { width: d, height: u }),
+        p = (0, a.e)(),
         m = await p,
-        g = m
-            .filter((e) => e.id.startsWith(l.fS.SCREEN))
-            .map((e) => {
-                var t, r;
-                let n = e.name;
-                return (
-                    "Entire screen" === n
-                        ? (n = c.intl.string(c.t.R4wpLN))
-                        : /^Screen \d+$/.test(n) &&
-                          (n = c.intl.formatToPlainString(c.t["y/R7n4"], {
-                              index: parseInt(n.split(" ")[1]),
-                          })),
-                    (t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                    }),
-                                )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    (n = r[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: n,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = n);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (r = r =
-                        {
-                            name: n,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var r = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
-                              }
-                              return r;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    t
-                );
-            }),
-        b =
-            ((t = m.filter((e) => e.id.startsWith(l.fS.WINDOW))),
-            (r = {}),
-            j.forEach((e) => {
-                r[e.id] = e;
+        _ = await x,
+        g = _.filter((e) => e.id.startsWith(i.fS.SCREEN)).map((e) => {
+            let t = e.name;
+            return (
+                "Entire screen" === t
+                    ? (t = o.intl.string(o.t.R4wpLN))
+                    : /^Screen \d+$/.test(t) &&
+                      (t = o.intl.formatToPlainString(o.t["y/R7n4"], { index: parseInt(t.split(" ")[1]) })),
+                { ...e, name: t }
+            );
+        }),
+        j =
+            ((t = _.filter((e) => e.id.startsWith(i.fS.WINDOW))),
+            (s = {}),
+            m.forEach((e) => {
+                s[e.id] = e;
             }),
             t.forEach((e) => {
-                r[e.id] = e;
+                s[e.id] = e;
             }),
-            Object.values(r)),
+            Object.values(s)),
         v = [];
     return (
-        u.includes(l.fS.CAMERA) &&
+        f.includes(i.fS.CAMERA) &&
             (v = Object.entries(h)
                 .filter((e) => {
-                    let [t, r] = e;
-                    return !r.disabled;
+                    let [t, s] = e;
+                    return !s.disabled;
                 })
                 .map((e, t) => {
-                    let [r, l] = e,
-                        s = o[t % o.length],
-                        i = Uint8Array.from(atob(s), (e) => e.charCodeAt(0)),
-                        a = (0, n.V1)(i);
-                    return {
-                        id: "camera:" + l.id,
-                        name: l.name,
-                        url: a,
-                    };
+                    let [s, i] = e,
+                        n = c[t % c.length],
+                        l = Uint8Array.from(atob(n), (e) => e.charCodeAt(0)),
+                        a = (0, r.V1)(l);
+                    return { id: "camera:" + i.id, name: i.name, url: a };
                 })),
-        {
-            windowSources: b,
-            screenSources: g,
-            cameraSources: v,
-        }
+        { windowSources: j, screenSources: g, cameraSources: v }
     );
 }

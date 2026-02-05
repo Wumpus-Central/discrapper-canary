@@ -1,8 +1,5 @@
-n.d(t, {
-    p: () => i,
-    z: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { p: () => i, z: () => a });
 var r = n(652215);
 let i = new Set([
         r.Auw.AUTO_MODERATION_MESSAGE,

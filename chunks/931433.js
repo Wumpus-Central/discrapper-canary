@@ -1,6 +1,5 @@
-n.d(t, {
-    V: () => c,
-});
+"use strict";
+n.d(t, { V: () => u });
 var r = n(627968),
     i = n(732955),
     a = n(652165),
@@ -10,7 +9,7 @@ let o = (e) => {
             skuId: e,
             onCheckoutSuccess: (e) => {
                 let { skuId: t, entitlements: n } = e;
-                console.log("Orb Checkout Success for SKU: ".concat(t, ". Entitlement(s): "), n, Date.now());
+                console.log(`Orb Checkout Success for SKU: ${t}. Entitlement(s): `, n, Date.now());
             },
             onCloseCallback: () => {
                 console.log("Orb Checkout Closed");
@@ -18,7 +17,7 @@ let o = (e) => {
         });
     },
     l = "1271174907081789524",
-    c = {
+    u = {
         title: "Orb Checkout",
         stories: [
             {
@@ -32,7 +31,7 @@ let o = (e) => {
                             onClick: () => {
                                 o(t);
                             },
-                            text: "Open Orb Checkout for Custom SKU: ".concat(t),
+                            text: `Open Orb Checkout for Custom SKU: ${t}`,
                         }),
                     });
                 },
@@ -41,28 +40,13 @@ let o = (e) => {
                         label: "SKU ID",
                         type: "select",
                         options: [
-                            {
-                                skuId: "1342211853484429445",
-                                skuName: "Orb Profile Badge",
-                            },
-                            {
-                                skuId: "1427463138634109026",
-                                skuName: "Magic Mists (Deco)",
-                            },
-                            {
-                                skuId: "1332505467980873728",
-                                skuName: "Pondering Portal (Deco)",
-                            },
-                            {
-                                skuId: l,
-                                skuName: "Oni's Curse (Deco)",
-                            },
+                            { skuId: "1342211853484429445", skuName: "Orb Profile Badge" },
+                            { skuId: "1427463138634109026", skuName: "Magic Mists (Deco)" },
+                            { skuId: "1332505467980873728", skuName: "Pondering Portal (Deco)" },
+                            { skuId: l, skuName: "Oni's Curse (Deco)" },
                         ].map((e) => {
                             let { skuId: t, skuName: n } = e;
-                            return {
-                                label: n,
-                                value: t,
-                            };
+                            return { label: n, value: t };
                         }),
                         defaultValue: l,
                     },

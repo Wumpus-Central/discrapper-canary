@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(360345),
     i = n(374372),
     a = n(355418);
@@ -16,7 +15,7 @@ let s = RegExp(
         `(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(${r.d2})(?=\\W|$)`,
         "i",
     );
-class c extends a.c {
+class u extends a.c {
     strictMode;
     constructor(e) {
         super(), (this.strictMode = e);

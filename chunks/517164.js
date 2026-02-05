@@ -1,164 +1,83 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(83971);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = new Map(),
-    f = new Set(),
-    p = null,
-    _ = !1,
-    h = !1;
-
-function m(e) {
+"use strict";
+n.d(t, { A: () => y });
+var r = n(311907),
+    i = n(73153),
+    a = n(83971);
+let s = new Map(),
+    o = new Set(),
+    l = null,
+    u = !1,
+    c = !1;
+function d(e) {
     let { userId: t } = e;
-    f.add(t);
+    o.add(t);
 }
-
-function g(e) {
+function _(e) {
     let { outbox: t, userId: n } = e;
-    d.set(
-        n,
-        u(l({}, t), {
-            lastFetched: Date.now(),
-        }),
-    ),
-        f.delete(n);
+    s.set(n, { ...t, lastFetched: Date.now() }), o.delete(n);
 }
-
-function E(e) {
+function f(e) {
     let { userId: t } = e;
-    f.delete(t);
+    o.delete(t);
 }
-
-function b() {
-    (p = null), (_ = !0);
+function p() {
+    (l = null), (u = !0);
 }
-
-function y(e) {
+function h(e) {
     let { entry: t, userId: n } = e;
-    p = null;
-    let r = d.get(n);
+    l = null;
+    let r = s.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
-    d.set(
-        n,
-        u(l({}, r), {
-            entries: i,
-        }),
-    ),
-        (_ = !1);
+    s.set(n, { ...r, entries: i }), (u = !1);
 }
-
-function O(e) {
+function m(e) {
     let { error: t } = e;
-    (p = t), (_ = !1);
+    (l = t), (u = !1);
 }
-
+function g() {
+    (l = null), (u = !1);
+}
+function E() {
+    (s = new Map()), (o = new Set()), (l = null), (u = !1);
+}
 function A() {
-    (p = null), (_ = !1);
+    E(), (c = !0);
 }
-
-function v() {
-    (d = new Map()), (f = new Set()), (p = null), (_ = !1);
-}
-
-function S() {
-    v(), (h = !0);
-}
-
 function I() {
-    v();
+    E();
 }
-class T extends (r = i.Ay.Store) {
+class T extends r.Ay.Store {
+    static displayName = "ContentInventoryOutboxStore";
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
-            r = d.get(n);
-        if (null != r && null != t) return (0, s.nU)(r.entries, t);
+            r = s.get(n);
+        if (null != r && null != t) return (0, a.nU)(r.entries, t);
     }
     getUserOutbox(e) {
-        return d.get(e);
+        return s.get(e);
     }
     isFetchingUserOutbox(e) {
-        return f.has(e);
+        return o.has(e);
     }
     get deleteOutboxEntryError() {
-        return p;
+        return l;
     }
     get isDeletingEntryHistory() {
-        return _;
+        return u;
     }
     get hasInitialized() {
-        return h;
+        return c;
     }
 }
-o(T, "displayName", "ContentInventoryOutboxStore");
-let C = new T(a.h, {
-    CONNECTION_OPEN: S,
+let y = new T(i.h, {
+    CONNECTION_OPEN: A,
     LOGOUT: I,
-    CONTENT_INVENTORY_FETCH_OUTBOX_START: m,
-    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: g,
-    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: E,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: b,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: y,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: O,
-    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: A,
+    CONTENT_INVENTORY_FETCH_OUTBOX_START: d,
+    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: _,
+    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: f,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: p,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: h,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: m,
+    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: g,
 });

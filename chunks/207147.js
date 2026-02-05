@@ -1,3 +1,4 @@
+"use strict";
 var t = {
     current: function (e, t) {
         if (!e.setNativeProps) return !1;

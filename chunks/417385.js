@@ -1,13 +1,11 @@
-n.d(t, {
-    p: () => l,
-});
-var r = n(627968);
+n.d(t, { p: () => o });
+var i = n(627968);
 n(64700);
-var i = n(419954),
-    a = n(780964),
-    s = n(373169),
-    o = n(985018);
-let l = (0, i.E2)(a.X.LANGUAGE_SELECT_SETTING, {
-    useSearchTerms: () => [o.intl.string(o.t.IHMsPn)],
-    Component: () => (0, r.jsx)(s.p, {}),
+var s = n(419954),
+    r = n(780964),
+    a = n(373169),
+    l = n(985018);
+let o = (0, s.E2)(r.X.LANGUAGE_SELECT_SETTING, {
+    useSearchTerms: () => [l.intl.string(l.t.IHMsPn)],
+    Component: () => (0, i.jsx)(a.p, {}),
 });

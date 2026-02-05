@@ -1,20 +1,15 @@
-n.d(t, {
-    J4: () => _,
-    JH: () => p,
-    dL: () => m,
-    et: () => h,
-    xy: () => f,
-});
+"use strict";
+n.d(t, { J4: () => p, JH: () => f, dL: () => m, et: () => h, xy: () => _ });
 var r = n(311907),
     i = n(734057),
     a = n(71393),
     s = n(576705),
     o = n(977997),
     l = n(170148),
-    c = n(360469),
-    u = n(652215),
+    u = n(360469),
+    c = n(652215),
     d = n(985018),
-    f = (function (e) {
+    _ = (function (e) {
         return (
             (e[(e.CAN_LAUNCH = 0)] = "CAN_LAUNCH"),
             (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
@@ -27,51 +22,34 @@ var r = n(311907),
             e
         );
     })({});
-
-function p(e) {
+function f(e) {
     let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: a } = e,
         s = n.getChannel(t);
     if (null == s) return 3;
-    if (!c.H5.includes(s.type)) return 7;
+    if (!u.H5.includes(s.type)) return 7;
     if (!(0, l.A)()) return 6;
     if (null != s && !s.isPrivate()) {
         let e = s.getGuildId();
         if (null == e) return 4;
         let n = r.getGuild(e);
-        if ((null == n ? void 0 : n.afkChannelId) === s.id) return 5;
-        let o = i.can(u.xBc.CONNECT, s);
-        if (!i.can(u.xBc.USE_EMBEDDED_ACTIVITIES, s)) return 1;
+        if (n?.afkChannelId === s.id) return 5;
+        let o = i.can(c.xBc.CONNECT, s);
+        if (!i.can(c.xBc.USE_EMBEDDED_ACTIVITIES, s)) return 1;
         let l = a.getCurrentClientVoiceChannelId(s.getGuildId()) === t;
         if (s.isVocal() && !l && !o) return 2;
     }
     return 0;
 }
-
-function _(e) {
-    return p({
-        channelId: e,
-        ChannelStore: i.A,
-        GuildStore: a.A,
-        PermissionStore: s.A,
-        VoiceStateStore: o.A,
-    });
+function p(e) {
+    return f({ channelId: e, ChannelStore: i.A, GuildStore: a.A, PermissionStore: s.A, VoiceStateStore: o.A });
 }
-
 function h(e) {
     return (0, r.bG)(
         [i.A, a.A, s.A, o.A],
-        () =>
-            p({
-                channelId: e,
-                ChannelStore: i.A,
-                GuildStore: a.A,
-                PermissionStore: s.A,
-                VoiceStateStore: o.A,
-            }),
+        () => f({ channelId: e, ChannelStore: i.A, GuildStore: a.A, PermissionStore: s.A, VoiceStateStore: o.A }),
         [e],
     );
 }
-
 function m(e) {
     switch (e) {
         case 0:

@@ -1,9 +1,6 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(311907),
-    i = n(695515);
-
-function a() {
-    return (0, r.bG)([i.A], () => i.A.getAgeGroup());
+n.d(t, { A: () => r });
+var i = n(311907),
+    s = n(695515);
+function r() {
+    return (0, i.bG)([s.A], () => s.A.getAgeGroup());
 }

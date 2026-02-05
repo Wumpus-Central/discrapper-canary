@@ -1,29 +1,26 @@
-n.d(t, {
-    A: () => A,
-});
+"use strict";
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var r = n(684013),
-    s = n(742984),
-    l = n(833551),
-    o = n(976860),
-    a = n(400492),
-    c = n(845618),
-    d = n(256415),
+var s = n(684013),
+    l = n(742984),
+    a = n(833551),
+    r = n(976860),
+    o = n(400492),
+    d = n(845618),
+    c = n(256415),
     u = n(723702),
     h = n(837921),
     p = n(9302),
-    f = n(684748),
-    b = n(652215),
+    A = n(684748),
+    f = n(652215),
     g = n(672396),
-    y = n(985018);
-
-function A(e, t, n, A) {
-    var m;
-    let { icon: O, title: v, body: E } = (0, s.TB)(e, t, n),
-        { trackView: x, trackClick: S } = (0, f.Y)(g.KS.TextChat, {
+    _ = n(985018);
+function m(e, t, n, m) {
+    let { icon: E, title: x, body: y } = (0, l.TB)(e, t, n),
+        { trackView: v, trackClick: S } = (0, A.Y)(g.KS.TextChat, {
             notif_type: g.KS.TextChat,
-            notif_user_id: null == (m = t.author) ? void 0 : m.id,
+            notif_user_id: t.author?.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -31,34 +28,27 @@ function A(e, t, n, A) {
             channel_type: e.type,
         });
     return {
-        icon: O,
-        title: v,
-        body: E,
+        icon: E,
+        title: x,
+        body: y,
         renderFooter: (e) =>
-            e
-                ? (0, i.jsx)("div", {
-                      style: {
-                          textAlign: "center",
-                      },
-                      children: y.intl.string(y.t["+MJm3w"]),
-                  })
-                : null,
+            e ? (0, i.jsx)("div", { style: { textAlign: "center" }, children: _.intl.string(_.t["+MJm3w"]) }) : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            A && (0, a.Ak)(c.cH, c.pD), x();
+            m && (0, o.Ak)(d.cH, d.pD), v();
         },
         onNotificationClick: () => {
-            if (l.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
+            if (a.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
                 let n = (0, p.getPID)();
-                d.default.isInstanceLocked()
-                    ? (S("unlock"), r.A.setInputLocked(!1, n))
+                c.default.isInstanceLocked()
+                    ? (S("unlock"), s.A.setInputLocked(!1, n))
                     : (S("jump"),
-                      (0, o.pX)(b.BVt.CHANNEL(e.guild_id, e.id, t.id)),
+                      (0, r.pX)(f.BVt.CHANNEL(e.guild_id, e.id, t.id)),
                       u.isPlatformEmbedded && h.Ay.focus());
             } else
-                (0, o.pX)(b.BVt.CHANNEL(e.guild_id, e.id)),
+                (0, r.pX)(f.BVt.CHANNEL(e.guild_id, e.id)),
                     S("jump"),
-                    d.default.isInstanceLocked() && r.A.setInstanceLocked(!1);
+                    c.default.isInstanceLocked() && s.A.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             S("dismiss");

@@ -1,69 +1,62 @@
-n.d(t, {
-    _: () => g,
-});
-var r = n(627968);
+n.d(t, { _: () => N });
+var i = n(627968);
 n(64700);
-var i = n(877624),
-    a = n(311907),
+var l = n(877624),
+    r = n(311907),
     s = n(554146),
-    o = n(397927),
-    l = n(688810),
-    c = n(532794),
-    u = n(412260),
-    d = n(357186),
-    f = n(379848),
-    p = n(49999),
-    _ = n(652215),
-    h = n(985018),
-    m = n(237082);
-let g = (e) => {
+    a = n(397927),
+    o = n(688810),
+    E = n(532794),
+    c = n(412260),
+    _ = n(357186),
+    d = n(379848),
+    A = n(49999),
+    u = n(652215),
+    T = n(985018),
+    I = n(237082);
+let N = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        { analyticsLocations: g } = (0, l.Ay)(),
-        E = (0, a.bG)([u.A], () => {
-            let e = u.A.getMarketingComponentByType(i.C.GIFT_REMINDER_NAGBAR);
+        { analyticsLocations: N } = (0, o.Ay)(),
+        R = (0, r.bG)([c.A], () => {
+            let e = c.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         });
-    return (0, r.jsx)(f.GY, {
+    return (0, i.jsx)(d.GY, {
         contentType: t,
-        latestVersion: (0, d.c)(t),
-        groupName: p.m.NOTICE_BAR,
+        latestVersion: (0, _.c)(t),
+        groupName: A.m.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: t, markAsDismissed: i } = e;
+            let { visibleContent: t, markAsDismissed: l } = e;
             if (t === s.M.GIFTING_PROMOTION_REMINDER)
-                return null == E
+                return null == R
                     ? null
-                    : (0, r.jsxs)(o.$Td, {
-                          color: o.Hv$.PREMIUM_TIER_2,
+                    : (0, i.jsxs)(a.$Td, {
+                          color: a.Hv$.PREMIUM_TIER_2,
                           children: [
-                              (0, r.jsx)(o.PMB, {
-                                  onClick: () => i(p.i.USER_DISMISS),
-                                  noticeType: n,
-                              }),
-                              (0, r.jsx)(o.okO, {
+                              (0, i.jsx)(a.PMB, { onClick: () => l(A.i.USER_DISMISS), noticeType: n }),
+                              (0, i.jsx)(a.okO, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  className: m.ez,
+                                  className: I.ez,
                               }),
-                              E.body,
-                              (0, r.jsx)(o.Z_L, {
+                              R.body,
+                              (0, i.jsx)(a.Z_L, {
                                   onClick: () => {
-                                      (0, c.A)({
+                                      (0, E.A)({
                                           isGift: !0,
                                           initialPlanId: null,
-                                          analyticsLocations: g,
-                                          analyticsLocation: _.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
-                                          analyticsObject: {
-                                              page: _.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION,
-                                          },
+                                          analyticsLocations: N,
+                                          analyticsLocation: u.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
+                                          analyticsObject: { page: u.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                                       });
                                   },
                                   noticeType: n,
-                                  children: h.intl.string(h.t.RzWDqY),
+                                  children: T.intl.string(T.t.RzWDqY),
                               }),
                           ],
                       });

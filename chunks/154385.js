@@ -1,10 +1,7 @@
-n.d(t, {
-    C: () => s,
-    h: () => a,
-});
+"use strict";
+n.d(t, { C: () => s, h: () => a });
 var r = n(64700),
     i = n(652215);
-
 function a() {
     return r.useContext(s);
 }

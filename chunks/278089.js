@@ -1,29 +1,30 @@
-var r = n(954055),
-    i = n(869639),
-    a = n(410475),
-    s = n(670200),
-    o = null;
-e.exports = {
-    cut: function (e) {
-        var t = e.getCurrentContent(),
-            n = e.getSelection(),
-            l = null;
-        if (n.isCollapsed()) {
-            var c = n.getAnchorKey(),
-                u = t.getBlockForKey(c).getLength();
-            if (u === n.getAnchorOffset()) {
-                var d = t.getKeyAfter(c);
-                if (null == d) return e;
-                l = n.set("focusKey", d).set("focusOffset", 0);
-            } else l = n.set("focusOffset", u);
-        } else l = n;
-        o = a(t, (l = s(l)));
-        var f = r.removeRange(t, l, "forward");
-        return f === t ? e : i.push(e, f, "remove-range");
+"use strict";
+var n = r(954055),
+    i = r(869639),
+    o = r(410475),
+    a = r(670200),
+    s = null;
+t.exports = {
+    cut: function (t) {
+        var e = t.getCurrentContent(),
+            r = t.getSelection(),
+            u = null;
+        if (r.isCollapsed()) {
+            var c = r.getAnchorKey(),
+                l = e.getBlockForKey(c).getLength();
+            if (l === r.getAnchorOffset()) {
+                var f = e.getKeyAfter(c);
+                if (null == f) return t;
+                u = r.set("focusKey", f).set("focusOffset", 0);
+            } else u = r.set("focusOffset", l);
+        } else u = r;
+        s = o(e, (u = a(u)));
+        var p = n.removeRange(e, u, "forward");
+        return p === e ? t : i.push(t, p, "remove-range");
     },
-    paste: function (e) {
-        if (!o) return e;
-        var t = r.replaceWithFragment(e.getCurrentContent(), e.getSelection(), o);
-        return i.push(e, t, "insert-fragment");
+    paste: function (t) {
+        if (!s) return t;
+        var e = n.replaceWithFragment(t.getCurrentContent(), t.getSelection(), s);
+        return i.push(t, e, "insert-fragment");
     },
 };

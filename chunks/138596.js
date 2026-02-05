@@ -1,3 +1,1 @@
-e.exports = {
-    rh: "fullbleedContent__49d5b",
-};
+e.exports = { rh: "fullbleedContent__49d5b" };

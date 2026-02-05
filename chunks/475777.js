@@ -1,14 +1,6 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(531335),
-    i = n(652215);
-
-function l(e, t, n) {
-    return (0, r.A)({
-        guild: t,
-        channel: e,
-        stageInstance: n,
-        source: i.PE1.CONTEXT_MENU,
-    });
+t.d(n, { A: () => l });
+var i = t(531335),
+    r = t(652215);
+function l(e, n, t) {
+    return (0, i.A)({ guild: n, channel: e, stageInstance: t, source: r.PE1.CONTEXT_MENU });
 }

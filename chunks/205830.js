@@ -1,21 +1,16 @@
-t.d(l, {
-    $: () => r,
-});
+t.d(l, { $: () => r });
 var n = t(627968);
 t(64700);
-var a = t(503698),
-    s = t.n(a),
+var s = t(503698),
+    a = t.n(s),
     i = t(183802),
     d = t(660592);
-
 function r(e) {
-    let { applicationId: l, skuIds: t, variant: a = i.s.SMALL, guildId: r, analyticsLocations: o } = e;
+    let { applicationId: l, skuIds: t, variant: s = i.s.SMALL, guildId: r, analyticsLocations: o } = e;
     return null == t || 0 === t.length
         ? null
         : (0, n.jsx)("div", {
-              className: s()(d.kL, d.$2, {
-                  [d.Wc]: a === i.s.MEDIUM,
-              }),
+              className: a()(d.kL, d.$2, { [d.Wc]: s === i.s.MEDIUM }),
               children: t.map((e, t) =>
                   (0, n.jsx)(
                       i.A,
@@ -23,11 +18,11 @@ function r(e) {
                           positionInSection: t,
                           applicationId: l,
                           skuId: e,
-                          variant: a,
+                          variant: s,
                           guildId: r,
                           analyticsLocations: o,
                       },
-                      "".concat(e, "-").concat(t),
+                      `${e}-${t}`,
                   ),
               ),
           });

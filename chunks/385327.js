@@ -1,17 +1,12 @@
-n.d(t, {
-    Es: () => a,
-    c7: () => s,
-});
-var r = n(554146),
-    i = n(826673),
-    l = n(398523);
-let a = () => {
-        (0, i.Dr)(r.M.RECURRING_3P_PROMOTION_POPOVER);
+n.d(t, { Es: () => l, c7: () => s });
+var i = n(554146),
+    r = n(826673),
+    a = n(398523);
+let l = () => {
+        (0, r.Dr)(i.M.RECURRING_3P_PROMOTION_POPOVER);
     },
     s = () => {
-        let e = l.A.useExperiment({
-                location: "useIsRecurring3PPopoverShowable",
-            }),
-            t = (0, i.k8)(r.M.RECURRING_3P_PROMOTION_POPOVER);
+        let e = a.A.useExperiment({ location: "useIsRecurring3PPopoverShowable" }),
+            t = (0, r.k8)(i.M.RECURRING_3P_PROMOTION_POPOVER);
         return e.enabled && !1 === t;
     };

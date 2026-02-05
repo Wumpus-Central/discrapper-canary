@@ -1,14 +1,15 @@
+"use strict";
 n.d(t, {
-    IL: () => f,
-    Jq: () => _,
+    IL: () => _,
+    Jq: () => p,
     L0: () => d,
     PN: () => g,
     XQ: () => m,
-    Zm: () => p,
+    Zm: () => f,
     ef: () => h,
-    ki: () => u,
+    ki: () => c,
     vf: () => E,
-    zd: () => b,
+    zd: () => A,
 });
 var r = n(554146);
 let i = [
@@ -57,44 +58,35 @@ let i = [
         r.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
         r.M.GUILD_TAG_AVAILABLE_COACHMARK_V2,
     ],
-    c = [];
-
-function u(e) {
+    u = [r.M.BOOST_TO_UNLOCK_COACHMARK];
+function c(e) {
     return a.includes(e);
 }
-
 function d(e) {
     return i.includes(e);
 }
-
-function f(e) {
+function _(e) {
     return s.includes(e);
 }
-
+function f(e) {
+    return c(e) || d(e) || _(e);
+}
 function p(e) {
-    return u(e) || d(e) || f(e);
+    return !f(e);
 }
-
-function _(e) {
-    return !p(e);
-}
-
 function h(e) {
     return l.includes(e);
 }
-
 function m(e) {
-    return c.includes(e);
+    return u.includes(e);
 }
-
 function g(e) {
     return o.includes(e);
 }
-
 function E(e) {
     return h(e) || m(e) || g(e);
 }
-let b = Object.keys(r.M)
+let A = Object.keys(r.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-b.filter(_);
+A.filter(p);

@@ -1,3 +1,4 @@
+"use strict";
 function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -14,12 +15,7 @@ function n(t) {
                     (i = e),
                     (o = r[e]),
                     i in n
-                        ? Object.defineProperty(n, i, {
-                              value: o,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
+                        ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
                         : (n[i] = o);
             });
     }
@@ -48,33 +44,14 @@ t.exports = {
             h = u.splitBlock(f, p),
             m = h.getSelectionAfter(),
             _ = u.setBlockType(h, m, "atomic"),
-            b = o.create({
-                entity: e,
-            }),
-            S = {
-                key: l(),
-                type: "atomic",
-                text: r,
-                characterList: y(v(b, r.length)),
-            },
-            w = {
-                key: l(),
-                type: "unstyled",
-            };
-        d &&
-            ((S = n({}, S, {
-                nextSibling: w.key,
-            })),
-            (w = n({}, w, {
-                prevSibling: S.key,
-            })));
+            b = o.create({ entity: e }),
+            S = { key: l(), type: "atomic", text: r, characterList: y(v(b, r.length)) },
+            w = { key: l(), type: "unstyled" };
+        d && ((S = n({}, S, { nextSibling: w.key })), (w = n({}, w, { prevSibling: S.key })));
         var k = [new g(S), new g(w)],
             x = i.createFromArray(k),
             C = u.replaceWithFragment(_, m, x),
-            E = C.merge({
-                selectionBefore: s,
-                selectionAfter: C.getSelectionAfter().set("hasFocus", !0),
-            });
+            E = C.merge({ selectionBefore: s, selectionAfter: C.getSelectionAfter().set("hasFocus", !0) });
         return c.push(t, E, "insert-fragment");
     },
     moveAtomicBlock: function (t, e, r, n) {
@@ -97,10 +74,7 @@ t.exports = {
                 i = h(d, e, y, "before");
             }
         }
-        var v = i.merge({
-            selectionBefore: a,
-            selectionAfter: i.getSelectionAfter().set("hasFocus", !0),
-        });
+        var v = i.merge({ selectionBefore: a, selectionAfter: i.getSelectionAfter().set("hasFocus", !0) });
         return c.push(t, v, "move-block");
     },
 };

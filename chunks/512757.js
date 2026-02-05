@@ -1,9 +1,6 @@
-t.d(r, {
-    A: () => i,
-    J: () => l,
-});
+"use strict";
+t.d(r, { A: () => i, J: () => l });
 var a = t(101603);
-
 function l(e) {
     var r;
     return null != (r = e.localName) ? r : e.tagName.toLowerCase();
@@ -67,7 +64,6 @@ var o = {
         subscript: new Set(["aria-label", "aria-labelledby"]),
         superscript: new Set(["aria-label", "aria-labelledby"]),
     };
-
 function n(e, r) {
     return [
         "aria-atomic",
@@ -93,7 +89,6 @@ function n(e, r) {
         return e.hasAttribute(t) && !(null != (a = s[r]) && a.has(t));
     });
 }
-
 function i(e) {
     var r = (function (e) {
         var r = e.getAttribute("role");

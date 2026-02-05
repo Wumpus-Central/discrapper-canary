@@ -1,3 +1,1 @@
-e.exports = {
-    x: "button_e18686",
-};
+e.exports = { x: "button_e18686" };

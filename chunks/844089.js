@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     lE: "formSplit__4ecd1",
     GI: "formSplitHalf__4ecd1",

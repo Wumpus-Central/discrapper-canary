@@ -1,22 +1,18 @@
-i.d(n, {
-    A: () => o,
-});
-var e = i(627968);
-i(64700);
-var r = i(397927),
-    l = i(867455),
-    a = i(406704),
-    d = i(652215),
-    s = i(985018);
-
+n.d(e, { A: () => o });
+var i = n(627968);
+n(64700);
+var r = n(397927),
+    l = n(867455),
+    a = n(406704),
+    s = n(652215),
+    d = n(985018);
 function o(t) {
-    var n, i;
-    if (!(0, a.H_)(t) || t.type !== d.rbe.PRIVATE_THREAD) return null;
-    let o = null == (n = null == (i = t.threadMetadata) ? void 0 : i.invitable) || n;
-    return (0, e.jsx)(r.sLh, {
+    if (!(0, a.H_)(t) || t.type !== s.rbe.PRIVATE_THREAD) return null;
+    let e = t.threadMetadata?.invitable ?? !0;
+    return (0, i.jsx)(r.sLh, {
         id: "toggle-thread-invitable",
-        label: s.intl.string(s.t.s2rpNf),
-        checked: o,
-        action: () => l.A.setInvitable(t, !o),
+        label: d.intl.string(d.t.s2rpNf),
+        checked: e,
+        action: () => l.A.setInvitable(t, !e),
     });
 }

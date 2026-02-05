@@ -1,13 +1,5 @@
-n.d(t, {
-    A8: () => l,
-    O_: () => a,
-    RM: () => u,
-    gX: () => o,
-    i4: () => d,
-    k$: () => s,
-    rY: () => c,
-}),
-    n(321073);
+"use strict";
+n.d(t, { A8: () => l, O_: () => a, RM: () => c, gX: () => o, i4: () => d, k$: () => s, rY: () => u }), n(321073);
 var r = n(179771),
     i = n(985018);
 let a = [
@@ -68,8 +60,7 @@ let a = [
     ],
     o = s.concat([r.F.WEBHOOK_INCOMING, r.F.BOT]),
     l = ["rpc.api"];
-
-function c(e, t) {
+function u(e, t) {
     switch (e) {
         case r.F.IDENTIFY:
             return [i.intl.string(i.t.DD9KQh)];
@@ -179,11 +170,9 @@ function c(e, t) {
             return [e];
     }
 }
-
-function u(e) {
+function c(e) {
     return e === r.F.SDK_SOCIAL_LAYER_PRESENCE || e === r.F.SDK_SOCIAL_LAYER;
 }
-
 function d(e) {
     return e.includes(r.F.DM_CHANNELS_MESSAGES_WRITE) || e.includes(r.F.SDK_SOCIAL_LAYER)
         ? i.intl.format(i.t.o0GMBD, {})

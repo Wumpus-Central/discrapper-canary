@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -26,28 +27,17 @@ var n = r(64700),
     b = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             var r = (function (e, t) {
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ("object" == typeof t || "function" == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (
-                (r.state = {
-                    currentColor: e.hex,
-                }),
-                r
-            );
+            return (r.state = { currentColor: e.hex }), r;
         }
         return (
             (t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0,
-                },
+                constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
             h(t, [
@@ -80,10 +70,7 @@ var n = r(64700),
                                                 color: "#4D4D4D",
                                                 textAlign: "center",
                                             },
-                                            body: {
-                                                padding: "15px 15px 0",
-                                                display: "flex",
-                                            },
+                                            body: { padding: "15px 15px 0", display: "flex" },
                                             saturation: {
                                                 width: "256px",
                                                 height: "256px",
@@ -100,20 +87,10 @@ var n = r(64700),
                                                 border: "2px solid #B3B3B3",
                                                 borderBottom: "2px solid #F0F0F0",
                                             },
-                                            controls: {
-                                                width: "180px",
-                                                marginLeft: "10px",
-                                            },
-                                            top: {
-                                                display: "flex",
-                                            },
-                                            previews: {
-                                                width: "60px",
-                                            },
-                                            actions: {
-                                                flex: "1",
-                                                marginLeft: "20px",
-                                            },
+                                            controls: { width: "180px", marginLeft: "10px" },
+                                            top: { display: "flex" },
+                                            previews: { width: "60px" },
+                                            actions: { flex: "1", marginLeft: "20px" },
                                         },
                                     },
                                     void 0 === t ? {} : t,
@@ -121,28 +98,14 @@ var n = r(64700),
                             );
                         return n.createElement(
                             "div",
-                            {
-                                style: o.picker,
-                                className: "photoshop-picker " + (void 0 === r ? "" : r),
-                            },
+                            { style: o.picker, className: "photoshop-picker " + (void 0 === r ? "" : r) },
+                            n.createElement("div", { style: o.head }, this.props.header),
                             n.createElement(
                                 "div",
-                                {
-                                    style: o.head,
-                                },
-                                this.props.header,
-                            ),
-                            n.createElement(
-                                "div",
-                                {
-                                    style: o.body,
-                                    className: "flexbox-fix",
-                                },
+                                { style: o.body, className: "flexbox-fix" },
                                 n.createElement(
                                     "div",
-                                    {
-                                        style: o.saturation,
-                                    },
+                                    { style: o.saturation },
                                     n.createElement(s.VI, {
                                         hsl: this.props.hsl,
                                         hsv: this.props.hsv,
@@ -152,9 +115,7 @@ var n = r(64700),
                                 ),
                                 n.createElement(
                                     "div",
-                                    {
-                                        style: o.hue,
-                                    },
+                                    { style: o.hue },
                                     n.createElement(s.RG, {
                                         direction: "vertical",
                                         hsl: this.props.hsl,
@@ -164,20 +125,13 @@ var n = r(64700),
                                 ),
                                 n.createElement(
                                     "div",
-                                    {
-                                        style: o.controls,
-                                    },
+                                    { style: o.controls },
                                     n.createElement(
                                         "div",
-                                        {
-                                            style: o.top,
-                                            className: "flexbox-fix",
-                                        },
+                                        { style: o.top, className: "flexbox-fix" },
                                         n.createElement(
                                             "div",
-                                            {
-                                                style: o.previews,
-                                            },
+                                            { style: o.previews },
                                             n.createElement(f.A, {
                                                 rgb: this.props.rgb,
                                                 currentColor: this.state.currentColor,
@@ -185,18 +139,13 @@ var n = r(64700),
                                         ),
                                         n.createElement(
                                             "div",
-                                            {
-                                                style: o.actions,
-                                            },
+                                            { style: o.actions },
                                             n.createElement(d.A, {
                                                 label: "OK",
                                                 onClick: this.props.onAccept,
                                                 active: !0,
                                             }),
-                                            n.createElement(d.A, {
-                                                label: "Cancel",
-                                                onClick: this.props.onCancel,
-                                            }),
+                                            n.createElement(d.A, { label: "Cancel", onClick: this.props.onCancel }),
                                             n.createElement(u.A, {
                                                 onChange: this.props.onChange,
                                                 rgb: this.props.rgb,
@@ -214,12 +163,6 @@ var n = r(64700),
             t
         );
     })(n.Component);
-(b.propTypes = {
-    header: a().string,
-    styles: a().object,
-}),
-    (b.defaultProps = {
-        header: "Color Picker",
-        styles: {},
-    }),
+(b.propTypes = { header: a().string, styles: a().object }),
+    (b.defaultProps = { header: "Color Picker", styles: {} }),
     (0, s.Q$)(b);

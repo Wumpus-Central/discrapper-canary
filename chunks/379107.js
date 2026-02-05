@@ -1,158 +1,80 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(228524),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    a = n(503698),
-    i = n.n(a),
-    s = n(284009),
-    o = n.n(s),
-    c = n(843282),
-    u = n(565645),
-    d = n(155718),
+n.d(t, { A: () => I });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    i = n(284009),
+    o = n.n(i),
+    d = n(843282),
+    c = n(565645),
+    u = n(155718),
     m = n(594808),
-    f = n(207963),
-    p = n(489414),
+    p = n(207963),
+    A = n(489414),
     h = n(814890),
-    b = n(979811);
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function x(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e) {
-    let { emoji: t, label: n, description: l, isDisabled: a, isOffset: s } = e,
-        o = i()(b._A, {
-            [b.r9]: a,
-            [b.cY]: null == t && s,
-        });
-    return (0, r.jsxs)("div", {
-        className: b.uK,
+    C = n(979811);
+function E(e) {
+    let { emoji: t, label: n, description: a, isDisabled: r, isOffset: i } = e,
+        o = s()(C._A, { [C.r9]: r, [C.cY]: null == t && i });
+    return (0, l.jsxs)("div", {
+        className: C.uK,
         children: [
             null != t
-                ? (0, r.jsx)(u.A, {
-                      className: b.Zg,
-                      emojiId: t.id,
-                      emojiName: t.name,
-                      animated: t.animated,
-                  })
+                ? (0, l.jsx)(c.A, { className: C.Zg, emojiId: t.id, emojiName: t.name, animated: t.animated })
                 : null,
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: o,
                 children: [
-                    (0, r.jsx)("strong", {
-                        className: b.Pf,
-                        children: n,
-                    }),
-                    null != l
-                        ? (0, r.jsx)("span", {
-                              className: b.h_,
-                              children: l,
-                          })
-                        : null,
+                    (0, l.jsx)("strong", { className: C.Pf, children: n }),
+                    null != a ? (0, l.jsx)("span", { className: C.h_, children: a }) : null,
                 ],
             }),
         ],
     });
 }
-
-function v(e) {
+function x(e) {
     let { emoji: t, label: n } = e;
-    return (0, r.jsx)("div", {
-        className: b.uK,
-        children: (0, r.jsxs)("div", {
-            className: i()(b.Uq, b.u9),
+    return (0, l.jsx)("div", {
+        className: C.uK,
+        children: (0, l.jsxs)("div", {
+            className: s()(C.Uq, C.u9),
             children: [
                 null != t
-                    ? (0, r.jsx)(u.A, {
-                          className: b.Zg,
+                    ? (0, l.jsx)(c.A, {
+                          className: C.Zg,
                           src: t.src,
                           emojiId: t.id,
                           emojiName: t.name,
                           animated: t.animated,
                       })
                     : null,
-                (0, r.jsx)("span", {
-                    className: b.oX,
-                    children: n,
-                }),
+                (0, l.jsx)("span", { className: C.oX, children: n }),
             ],
         }),
     });
 }
-
-function j(e) {
+function N(e) {
     let { options: t } = e;
-    return (0, r.jsx)("div", {
-        className: b.uK,
-        children: (0, r.jsx)("div", {
-            className: b.Uq,
+    return (0, l.jsx)("div", {
+        className: C.uK,
+        children: (0, l.jsx)("div", {
+            className: C.Uq,
             children: t.map((e, t) =>
-                (0, r.jsxs)(
+                (0, l.jsxs)(
                     "div",
                     {
-                        className: b.mK,
+                        className: C.mK,
                         children: [
                             null != e.emoji
-                                ? (0, r.jsx)(u.A, {
-                                      className: b.eh,
+                                ? (0, l.jsx)(c.A, {
+                                      className: C.eh,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
                                       emojiName: e.emoji.name,
                                       animated: e.emoji.animated,
                                   })
                                 : null,
-                            (0, r.jsx)(
-                                "span",
-                                {
-                                    className: b.Tc,
-                                    children: e.label,
-                                },
-                                e.value,
-                            ),
+                            (0, l.jsx)("span", { className: C.Tc, children: e.label }, e.value),
                         ],
                     },
                     t,
@@ -161,118 +83,67 @@ function j(e) {
         }),
     });
 }
-
-function C(e) {
-    let { type: t, options: n, id: a, maxValues: s, minValues: u, disabled: C } = e,
+function I(e) {
+    let { type: t, options: n, id: r, maxValues: i, minValues: c, disabled: I } = e,
         _ = (0, h.c7)(e),
-        A = l.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
-        O = (0, f.jc)();
-    o()(null != O, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
+        f = a.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
+        g = (0, p.jc)();
+    o()(null != g, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
     let {
-            state: E,
-            executeStateUpdate: S,
-            visualState: N,
-            isDisabled: I,
-            error: P,
-        } = O.useComponentState(
-            e,
-            A.length > 0
-                ? {
-                      type: t,
-                      values: A,
-                  }
-                : void 0,
-        ),
-        w = null != O.modal,
-        T = s > 1,
-        R = N === p.BB.LOADING,
-        [L, D] = l.useState(!1),
-        [k, M] = l.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [H, U] = l.useState(k),
-        F = l.useMemo(() => n.some((e) => null != e.emoji), [n]);
-    l.useEffect(() => {
-        if ((null == E ? void 0 : E.type) === d.I5.STRING_SELECT) {
-            let e = new Set(E.values);
-            M(e), U(e);
+            state: T,
+            executeStateUpdate: v,
+            visualState: j,
+            isDisabled: S,
+            error: O,
+        } = g.useComponentState(e, f.length > 0 ? { type: t, values: f } : void 0),
+        R = null != g.modal,
+        y = i > 1,
+        b = j === A.BB.LOADING,
+        [P, L] = a.useState(!1),
+        [D, U] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [k, w] = a.useState(D),
+        M = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
+    a.useEffect(() => {
+        if (T?.type === u.I5.STRING_SELECT) {
+            let e = new Set(T.values);
+            U(e), w(e);
         } else {
-            let e = new Set(A);
-            M(e), U(e);
+            let e = new Set(f);
+            U(e), w(e);
         }
-    }, [a, A, E]);
-    let G = l.useCallback(() => {
-        H !== k &&
-            S({
-                type: d.I5.STRING_SELECT,
-                values: Array.from(k),
-            }) &&
-            U(k);
-    }, [k, H, U, S]);
-    l.useEffect(() => {
-        L || (k.size === H.size && Array.from(H).every((e) => k.has(e))) || G();
-    }, [L, k, H, G]);
-    let V = c.lS;
-    T ? (V = c.M8) : 0 === u && (V = c.$l);
-    let B = (0, c.Ev)({
-        value: k,
-        onChange: (e) => M(e),
-        onSelectInteraction: V,
-    });
-    return (0, r.jsxs)(l.Fragment, {
+    }, [r, f, T]);
+    let H = a.useCallback(() => {
+        k !== D && v({ type: u.I5.STRING_SELECT, values: Array.from(D) }) && w(D);
+    }, [D, k, w, v]);
+    a.useEffect(() => {
+        P || (D.size === k.size && Array.from(k).every((e) => D.has(e))) || H();
+    }, [P, D, k, H]);
+    let K = d.lS;
+    y ? (K = d.M8) : 0 === c && (K = d.$l);
+    let F = (0, d.Ev)({ value: D, onChange: (e) => U(e), onSelectInteraction: K });
+    return (0, l.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)("div", {
-                className: b.kL,
-                children: (0, r.jsx)(
-                    c.Pw,
-                    x(
-                        g(
-                            {
-                                isProcessing: R,
-                                isDisabled: C || N === p.BB.DISABLED || I,
-                                className: i()(b.Lt, {
-                                    [b.zE]: w,
-                                }),
-                                options: n.map((e) =>
-                                    x(g({}, e), {
-                                        disabled: T && !k.has(e.value) && k.size === s,
-                                    }),
-                                ),
-                                placeholder: _,
-                                onClose: () => D(!1),
-                                onOpen: () => D(!0),
-                                maxVisibleItems: 5,
-                                closeOnSelect: !T,
-                                optionClassName: b.MT,
-                                renderOptionLabel: (e) =>
-                                    (0, r.jsx)(
-                                        y,
-                                        x(g({}, e), {
-                                            isDisabled: T && !k.has(e.value) && k.size === s,
-                                            isOffset: F,
-                                        }),
-                                    ),
-                                renderOptionValue: (e) =>
-                                    T
-                                        ? (0, r.jsx)(j, {
-                                              options: e,
-                                          })
-                                        : (0, r.jsx)(v, g({}, e[0])),
-                            },
-                            B,
-                        ),
-                        {
-                            "data-migration-pending": !0,
-                        },
-                    ),
-                ),
+            (0, l.jsx)("div", {
+                className: C.kL,
+                children: (0, l.jsx)(d.Pw, {
+                    isProcessing: b,
+                    isDisabled: I || j === A.BB.DISABLED || S,
+                    className: s()(C.Lt, { [C.zE]: R }),
+                    options: n.map((e) => ({ ...e, disabled: y && !D.has(e.value) && D.size === i })),
+                    placeholder: _,
+                    onClose: () => L(!1),
+                    onOpen: () => L(!0),
+                    maxVisibleItems: 5,
+                    closeOnSelect: !y,
+                    optionClassName: C.MT,
+                    renderOptionLabel: (e) =>
+                        (0, l.jsx)(E, { ...e, isDisabled: y && !D.has(e.value) && D.size === i, isOffset: M }),
+                    renderOptionValue: (e) => (y ? (0, l.jsx)(N, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
+                    ...F,
+                    "data-migration-pending": !0,
+                }),
             }),
-            null == P || w
-                ? null
-                : (0, r.jsx)(
-                      m.S0,
-                      x(g({}, (0, m.PS)(P)), {
-                          className: b.z3,
-                      }),
-                  ),
+            null == O || R ? null : (0, l.jsx)(m.S0, { ...(0, m.PS)(O), className: C.z3 }),
         ],
     });
 }

@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(414123),
     o = n(457990),
@@ -5,11 +6,7 @@ var r = n(834647),
     s = n(965746),
     l = n(287731);
 r(
-    {
-        target: "Object",
-        stat: !0,
-        sham: !a,
-    },
+    { target: "Object", stat: !0, sham: !a },
     {
         getOwnPropertyDescriptors: function (e) {
             for (var t, n, r = i(e), a = s.f, c = o(r), u = {}, d = 0; c.length > d; )

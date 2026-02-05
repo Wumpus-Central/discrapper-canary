@@ -1,102 +1,68 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048),
-    n(114821),
-    n(339614),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => g });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(92674),
     o = n(827734),
-    c = n(397927),
-    d = n(147925),
+    d = n(397927),
+    c = n(147925),
     u = n(276777);
-
-function g(e) {
+function m(e) {
     let { checked: t, children: n } = e;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: u.nM,
         children: [
-            (0, r.jsx)(c.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: "text-md/normal",
                 color: "interactive-text-active",
                 className: u.qg,
                 children: n,
             }),
             t
-                ? (0, r.jsx)(c.yr3, {
+                ? (0, i.jsx)(d.yr3, {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.A.unsafe_rawColors.WHITE.css,
-                      className: s()(u.aL, u.xp),
+                      className: r()(u.aL, u.xp),
                   })
-                : (0, r.jsx)("div", {
-                      className: s()(u.aL, u.VL),
-                  }),
+                : (0, i.jsx)("div", { className: r()(u.aL, u.VL) }),
         ],
     });
 }
-
-function m(e) {
-    let { title: t, children: n, buttonLabel: l, buttonCallback: s, disabled: o } = e,
-        [m, p] = i.useState(!1),
-        f = n.flatMap((e) => e.items.map((e) => e.completed)),
-        h = f.filter((e) => e).length / f.length,
-        b = (0, c.zhh)({
-            width: "".concat(100 * h, "%"),
-        });
-    return (0, r.jsxs)("div", {
+function g(e) {
+    let { title: t, children: n, buttonLabel: l, buttonCallback: r, disabled: o } = e,
+        [g, x] = s.useState(!1),
+        h = n.flatMap((e) => e.items.map((e) => e.completed)),
+        _ = h.filter((e) => e).length / h.length,
+        A = (0, d.zhh)({ width: `${100 * _}%` });
+    return (0, i.jsxs)("div", {
         className: u.kL,
         children: [
-            (0, r.jsxs)(c.DUT, {
+            (0, i.jsxs)(d.DUT, {
                 className: u.jr,
-                onClick: () => p((e) => !e),
+                onClick: () => x((e) => !e),
                 children: [
-                    (0, r.jsx)(c.Heading, {
-                        variant: "heading-md/semibold",
-                        className: u.TK,
-                        children: t,
-                    }),
-                    (0, r.jsx)(d.A, {
-                        direction: m ? d.A.Directions.DOWN : d.A.Directions.UP,
-                        className: u.D,
-                    }),
+                    (0, i.jsx)(d.Heading, { variant: "heading-md/semibold", className: u.TK, children: t }),
+                    (0, i.jsx)(c.A, { direction: g ? c.A.Directions.DOWN : c.A.Directions.UP, className: u.D }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: u.ux,
-                children: (0, r.jsx)(a.animated.div, {
-                    className: u.zZ,
-                    style: b,
-                }),
-            }),
-            !m &&
+            (0, i.jsx)("div", { className: u.ux, children: (0, i.jsx)(a.animated.div, { className: u.zZ, style: A }) }),
+            !g &&
                 n.map((e, t) => {
                     let { title: n, items: l } = e;
-                    return (0, r.jsxs)(
-                        i.Fragment,
+                    return (0, i.jsxs)(
+                        s.Fragment,
                         {
                             children: [
-                                t > 0 &&
-                                    (0, r.jsx)(c.cGx, {
-                                        className: u.yF,
-                                    }),
-                                (0, r.jsx)("div", {
+                                t > 0 && (0, i.jsx)(d.cGx, { className: u.yF }),
+                                (0, i.jsx)("div", {
                                     className: u.p8,
-                                    children: (0, r.jsx)(c.D0$, {
+                                    children: (0, i.jsx)(d.D0$, {
                                         label: n,
                                         children: l.map((e, t) =>
-                                            (0, r.jsx)(
-                                                g,
-                                                {
-                                                    children: e.description,
-                                                    checked: e.completed,
-                                                },
-                                                t,
-                                            ),
+                                            (0, i.jsx)(m, { children: e.description, checked: e.completed }, t),
                                         ),
                                     }),
                                 }),
@@ -107,21 +73,19 @@ function m(e) {
                 }),
             null !== l &&
                 "" !== l &&
-                null !== s &&
-                (0, r.jsxs)("div", {
+                null !== r &&
+                (0, i.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(c.cGx, {
-                            className: u.yF,
-                        }),
-                        (0, r.jsx)("div", {
+                        (0, i.jsx)(d.cGx, { className: u.yF }),
+                        (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: u.x6,
-                            children: (0, r.jsx)(c.Button, {
+                            children: (0, i.jsx)(d.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: l,
-                                onClick: s,
-                                disabled: 1 !== h || o,
+                                onClick: r,
+                                disabled: 1 !== _ || o,
                             }),
                         }),
                     ],

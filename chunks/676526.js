@@ -1,124 +1,94 @@
-n.d(t, {
-    h: () => x,
-});
-var r = n(627968);
+n.d(t, { h: () => I });
+var i = n(627968);
 n(64700);
 var l = n(503698),
-    i = n.n(l),
-    a = n(688807),
+    a = n.n(l),
+    r = n(688807),
     s = n(287809),
     o = n(735321),
-    c = n(451395),
-    u = n(823016),
-    d = n(788593),
-    f = n(858808),
-    p = n(685049),
-    b = n(973397),
-    g = n(617086),
-    m = n(985018),
-    y = n(461349),
-    O = n(616060);
-
-function j(e) {
-    let { index: t, widgetType: n, game: l, coverImageUrl: i, gameName: a, children: s } = e,
-        { manageFocusOnReorder: d } = (0, u.r)();
-    return (0, r.jsx)(c.mG, {
+    d = n(451395),
+    c = n(823016),
+    u = n(788593),
+    g = n(858808),
+    m = n(685049),
+    x = n(973397),
+    f = n(617086),
+    h = n(985018),
+    p = n(461349),
+    _ = n(616060);
+function A(e) {
+    let { index: t, widgetType: n, game: l, coverImageUrl: a, gameName: r, children: s } = e,
+        { manageFocusOnReorder: u } = (0, c.r)();
+    return (0, i.jsx)(d.mG, {
         index: t,
         itemId: l.applicationId,
         listType: n,
         itemType: "GAME_COVER",
-        itemPreviewProps: {
-            imageSrc: i,
-            gameName: a,
-        },
-        "aria-label": m.intl.formatToPlainString(m.t["0dR3gw"], {
-            positionNumber: t + 1,
-        }),
+        itemPreviewProps: { imageSrc: a, gameName: r },
+        "aria-label": h.intl.formatToPlainString(h.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, o.Un)(n, e, t),
-        onEnd: () => d(l.applicationId),
-        className: O.kL,
-        dropBeforeClassName: O.A,
-        dropAfterClassName: O.Ze,
-        draggingClassName: O.Id,
-        children: (0, r.jsx)("div", {
-            className: O.An,
-            children: s,
-        }),
+        onEnd: () => u(l.applicationId),
+        className: _.kL,
+        dropBeforeClassName: _.A,
+        dropAfterClassName: _.Ze,
+        draggingClassName: _.Id,
+        children: (0, i.jsx)("div", { className: _.An, children: s }),
     });
 }
-
-function x(e) {
+function I(e) {
     let {
             game: t,
             userId: n,
             widgetType: l,
             guildId: o,
-            channelId: m,
-            disableInteraction: x = !1,
-            index: h,
+            channelId: h,
+            disableInteraction: I = !1,
+            index: j,
             onRemoveGame: v,
-            coverRef: A,
+            coverRef: T,
         } = e,
-        { coverImageUrl: w, gameName: I, isLoading: P } = (0, b.A)(t.applicationId),
-        { registerDragHandleRef: E } = (0, u.r)(),
-        S = (0, g.A)(t.applicationId).length > 0,
-        T = s.default.getCurrentUser(),
-        _ = (null == T ? void 0 : T.id) === n,
-        N = !x && _,
-        { isDragging: D } = (0, a.V)((e) => ({
-            isDragging: e.isDragging(),
-        })),
-        R = () =>
-            (0, r.jsxs)(r.Fragment, {
+        { coverImageUrl: E, gameName: b, isLoading: y } = (0, x.A)(t.applicationId),
+        { registerDragHandleRef: C } = (0, c.r)(),
+        N = (0, f.A)(t.applicationId).length > 0,
+        S = s.default.getCurrentUser(),
+        w = S?.id === n,
+        k = !I && w,
+        { isDragging: R } = (0, r.V)((e) => ({ isDragging: e.isDragging() })),
+        O = () =>
+            (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(d.A, {
-                        imageSrc: w,
-                        gameName: I,
+                    (0, i.jsx)(u.A, {
+                        imageSrc: E,
+                        gameName: b,
                         applicationId: t.applicationId,
                         userId: n,
-                        disableInteraction: x,
-                        className: i()(S ? O.kO : void 0, null == w || x ? void 0 : y.iL),
-                        hideTooltip: D,
-                        coverRef: A,
+                        disableInteraction: I,
+                        className: a()(N ? _.kO : void 0, null == E || I ? void 0 : p.iL),
+                        hideTooltip: R,
+                        coverRef: T,
                     }),
-                    N &&
-                        (0, r.jsx)(c.jV, {
-                            buttonRef: E(t.applicationId),
-                            className: O.BU,
-                        }),
-                    !x &&
-                        (0, r.jsx)(p.d, {
+                    k && (0, i.jsx)(d.jV, { buttonRef: C(t.applicationId), className: _.BU }),
+                    !I &&
+                        (0, i.jsx)(m.d, {
                             userId: n,
                             applicationId: t.applicationId,
                             guildId: o,
-                            channelId: m,
-                            className: O.Ez,
+                            channelId: h,
+                            className: _.Ez,
                         }),
-                    N &&
-                        (0, r.jsx)(f.A, {
+                    k &&
+                        (0, i.jsx)(g.A, {
                             game: t,
                             widgetType: l,
-                            className: O.vS,
+                            className: _.vS,
                             iconSize: "xs",
-                            onRemove: () => (null == v ? void 0 : v(t.applicationId)),
+                            onRemove: () => v?.(t.applicationId),
                         }),
                 ],
             });
-    return P
-        ? (0, r.jsx)("div", {
-              className: y.mD,
-          })
-        : N
-          ? (0, r.jsx)(j, {
-                widgetType: l,
-                index: null != h ? h : 0,
-                game: t,
-                coverImageUrl: w,
-                gameName: I,
-                children: R(),
-            })
-          : (0, r.jsx)("div", {
-                className: O.kL,
-                children: R(),
-            });
+    return y
+        ? (0, i.jsx)("div", { className: p.mD })
+        : k
+          ? (0, i.jsx)(A, { widgetType: l, index: j ?? 0, game: t, coverImageUrl: E, gameName: b, children: O() })
+          : (0, i.jsx)("div", { className: _.kL, children: O() });
 }

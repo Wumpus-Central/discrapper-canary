@@ -1,49 +1,35 @@
-n.d(t, {
-    A: () => h,
-});
-var r,
-    l,
-    i = n(311907),
-    a = n(73153),
+n.d(t, { A: () => h });
+var i = n(311907),
+    l = n(73153),
     s = n(383501);
-let o = {},
-    c = !1,
-    u = null;
-
+let a = {},
+    r = !1,
+    o = null;
 function d(e) {
-    e in o && delete o[e];
+    e in a && delete a[e];
 }
-
-function f() {
-    if (!c && s.A.isConnected()) {
+function c() {
+    if (!r && s.A.isConnected()) {
         let e = s.A.getChannelId();
-        if (null != e) return d(e), (u = e), (c = !0), !0;
-    } else if (c && !s.A.isConnected() && null != u) return d(u), (u = null), (c = !1), !0;
+        if (null != e) return d(e), (o = e), (r = !0), !0;
+    } else if (r && !s.A.isConnected() && null != o) return d(o), (o = null), (r = !1), !0;
     return !1;
 }
-class p extends (l = i.Ay.Store) {
+class u extends i.Ay.Store {
+    static displayName = "VoiceInvitesuggestionsStore ";
     initialize() {
-        this.waitFor(s.A), this.syncWith([s.A], f);
+        this.waitFor(s.A), this.syncWith([s.A], c);
     }
     getIsPopoverDismissed(e) {
-        var t;
-        return null != e && null != (t = o[e]) && t;
+        return null != e && (a[e] ?? !1);
     }
     getShouldShowPopover(e) {
         return null != e && s.A.isConnected() && s.A.getChannelId() === e && !this.getIsPopoverDismissed(e);
     }
 }
-(r = "displayName") in p
-    ? Object.defineProperty(p, r, {
-          value: "VoiceInvitesuggestionsStore ",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (p[r] = "VoiceInvitesuggestionsStore ");
-let h = new p(a.h, {
+let h = new u(l.h, {
     VOICE_INVITE_SUGGESTIONS_DISMISS_POPOVER: function (e) {
         let { channelId: t } = e;
-        return !o[t] && ((o[t] = !0), !0);
+        return !a[t] && ((a[t] = !0), !0);
     },
 });

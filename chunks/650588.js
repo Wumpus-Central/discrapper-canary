@@ -1,53 +1,38 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(827734),
     l = n(397927),
-    c = n(170887),
-    u = n(807348),
+    u = n(170887),
+    c = n(807348),
     d = n(989799),
-    f = n(985018),
-    p = n(879254);
-let _ = [54, 8, 8, 8];
-
+    _ = n(985018),
+    f = n(879254);
+let p = [54, 8, 8, 8];
 function h(e) {
     let { onSelect: t, sound: n } = e,
         [a, h] = i.useState(!1),
         m = i.useRef(null),
-        g = (0, c.A)({
-            location: "GiftSoundboard",
-        }),
-        E = s()(p.Qq, g && p.Ow);
-
-    function b(e) {
-        h(!1), null == t || t(e);
+        g = (0, u.A)({ location: "GiftSoundboard" }),
+        E = s()(f.Qq, g && f.Ow);
+    function A(e) {
+        h(!1), t?.(e);
     }
-    let y = (e) =>
+    let I = (e) =>
         (0, r.jsxs)("div", {
-            className: p.Ry,
+            className: f.Ry,
             children: [
                 (0, r.jsxs)("div", {
-                    className: p.__invalid_customGiftHeaderText,
+                    className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, r.jsx)(l.Text, {
-                            variant: "text-md/bold",
-                            children: f.intl.string(f.t.aThJz8),
-                        }),
-                        (0, r.jsx)(l.Text, {
-                            variant: "text-sm/normal",
-                            children: f.intl.string(f.t.stGFA3),
-                        }),
+                        (0, r.jsx)(l.Text, { variant: "text-md/bold", children: _.intl.string(_.t.aThJz8) }),
+                        (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: _.intl.string(_.t.stGFA3) }),
                     ],
                 }),
-                (0, r.jsx)("div", {
-                    className: p.$H,
-                    children: e,
-                }),
+                (0, r.jsx)("div", { className: f.$H, children: e }),
             ],
         });
     return (0, r.jsx)(l.YNO, {
@@ -65,29 +50,29 @@ function h(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: b,
+                    onSelect: A,
                     analyticsSource: "gift soundboard",
-                    soundButtonOverlay: u.If.ADD,
-                    listPadding: _,
-                    renderHeader: y,
+                    soundButtonOverlay: c.If.ADD,
+                    listPadding: p,
+                    renderHeader: I,
                     defaultSoundsOnly: !0,
                 }),
             });
         },
         children: () =>
             (0, r.jsx)(l.DUT, {
-                className: s()(p.kL, g && p.Ow),
+                className: s()(f.kL, g && f.Ow),
                 onClick: () => h(!0),
                 innerRef: m,
                 children:
                     null == n
                         ? (0, r.jsxs)("div", {
-                              className: p.hQ,
+                              className: f.hQ,
                               children: [
                                   (0, r.jsx)(l.JMI, {
                                       size: "custom",
                                       color: g ? o.A.colors.ICON_STRONG : o.A.colors.WHITE,
-                                      className: p.tc,
+                                      className: f.tc,
                                       width: 14,
                                       height: 14,
                                   }),
@@ -95,12 +80,12 @@ function h(e) {
                                       className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: f.intl.string(f.t.aThJz8),
+                                      children: _.intl.string(_.t.aThJz8),
                                   }),
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: p.hQ,
+                              className: f.hQ,
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       className: E,

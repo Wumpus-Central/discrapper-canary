@@ -1,19 +1,17 @@
-n.d(t, {
-    E: () => h,
-}),
-    n(896048);
+"use strict";
+n.d(t, { E: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(158954),
     l = n(927578),
-    c = n(580630),
-    u = n(735164),
+    u = n(580630),
+    c = n(735164),
     d = n(692440),
-    f = n(916974),
-    p = n(985018),
-    _ = n(600834);
+    _ = n(916974),
+    f = n(985018),
+    p = n(600834);
 let h = () => {
     let {
             transitionState: e,
@@ -24,89 +22,60 @@ let h = () => {
             renewalInvoiceDetails: m,
             fullPrice: g,
             premiumSubscription: E,
-        } = (0, f.X)(),
-        [b, y] = i.useState(!1),
-        [O, A] = i.useState(!1);
+        } = (0, _.X)(),
+        [A, I] = i.useState(!1),
+        [T, y] = i.useState(!1);
     if (null == n) return null;
-    let v = async () => {
-            y(!0), A(!1);
+    let S = async () => {
+            I(!0), y(!1);
             try {
                 await h(), a();
             } catch (e) {
-                A(!0), y(!1);
+                y(!0), I(!1);
             }
         },
-        S = [
+        v = [
+            { text: f.intl.string(f.t.h9tkAK), onClick: () => a(), variant: "secondary" },
             {
-                text: p.intl.string(p.t.h9tkAK),
-                onClick: () => a(),
-                variant: "secondary",
-            },
-            {
-                text: "".concat(
-                    p.intl.format(p.t.yxFzdO, {
-                        planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)),
-                    }),
-                ),
-                onClick: v,
-                disabled: b,
+                text: `${f.intl.format(f.t.yxFzdO, { planPremiumType: l.Ay.getTierDisplayNameByPlanId(`${t}`) })}`,
+                onClick: S,
+                disabled: A,
                 variant: "critical-primary",
-                loading: b,
+                loading: A,
             },
         ];
     if (null == m) return null;
-    let { intervalType: I, intervalCount: T } = m,
-        C = (0, c.CE)("".concat(g), I, T);
+    let { intervalType: C, intervalCount: b } = m,
+        N = (0, u.CE)(`${g}`, C, b);
     return (0, r.jsxs)(o.Modal, {
         size: "md",
         transitionState: e,
-        title: "".concat(
-            p.intl.format(p.t.LZunzZ, {
-                planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)),
-            }),
-        ),
+        title: `${f.intl.format(f.t.LZunzZ, { planPremiumType: l.Ay.getTierDisplayNameByPlanId(`${t}`) })}`,
         subtitle:
             0 !== n.total
-                ? p.intl.format(p.t.ycyeBx, {
+                ? f.intl.format(f.t.ycyeBx, {
                       renewalDate: n.subscriptionPeriodStart,
-                      rate: (0, c.CE)((0, c.$g)(n.total, n.currency), I, T),
+                      rate: (0, u.CE)((0, u.$g)(n.total, n.currency), C, b),
                   })
-                : p.intl.format(p.t["+y0Tjy"], {
-                      renewalDate: n.subscriptionPeriodStart,
-                  }),
-        actions: S,
+                : f.intl.format(f.t["+y0Tjy"], { renewalDate: n.subscriptionPeriodStart }),
+        actions: v,
         onClose: async () => a(),
         children: [
-            (0, r.jsxs)(u.Yx, {
+            (0, r.jsxs)(c.Yx, {
                 isPremiumRebrand: !0,
-                className: s()({
-                    [_.JD]: O,
-                }),
+                className: s()({ [p.JD]: T }),
                 children: [
-                    (0, r.jsx)(u.Xd, {
-                        children: p.intl.string(p.t.iqhIp4),
+                    (0, r.jsx)(c.Xd, { children: f.intl.string(f.t.iqhIp4) }),
+                    (0, r.jsx)(c.oR, {
+                        label: f.intl.formatToPlainString(f.t.r3jVZq, { planName: l.Ay.getDisplayName(`${t}`) }),
+                        value: `${N}`,
+                        className: p.aD,
                     }),
-                    (0, r.jsx)(u.oR, {
-                        label: p.intl.formatToPlainString(p.t.r3jVZq, {
-                            planName: l.Ay.getDisplayName("".concat(t)),
-                        }),
-                        value: "".concat(C),
-                        className: _.aD,
-                    }),
-                    (0, r.jsx)(u.pK, {}),
-                    (0, r.jsx)(d.m0, {
-                        premiumSubscription: E,
-                        renewalInvoice: n,
-                        isUpdate: !0,
-                    }),
+                    (0, r.jsx)(c.pK, {}),
+                    (0, r.jsx)(d.m0, { premiumSubscription: E, renewalInvoice: n, isUpdate: !0 }),
                 ],
             }),
-            O
-                ? (0, r.jsx)(o.wx6, {
-                      type: "critical",
-                      children: p.intl.string(p.t["5mlOCW"]),
-                  })
-                : null,
+            T ? (0, r.jsx)(o.wx6, { type: "critical", children: f.intl.string(f.t["5mlOCW"]) }) : null,
         ],
     });
 };

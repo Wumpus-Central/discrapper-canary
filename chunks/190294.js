@@ -1,97 +1,70 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968),
-    l = n(64700),
-    s = n(641150),
-    a = n(397927),
-    i = n(365491),
-    o = n(758836),
-    c = n(985018);
-let u = [
-        {
-            tab: o.G2.AVATAR_DECORATIONS,
-            labelKey: c.t.dRZYNE,
-        },
-        {
-            tab: o.G2.PROFILE_EFFECTS,
-            labelKey: c.t["1cNjtx"],
-        },
-        {
-            tab: o.G2.NAMEPLATES,
-            labelKey: c.t.V68Fqz,
-        },
-        {
-            tab: o.G2.BUNDLES,
-            labelKey: c.t.FYFpps,
-        },
-        {
-            tab: o.G2.CATALOG,
-            labelKey: c.t.xFcotU,
-        },
+"use strict";
+s.d(t, { A: () => g });
+var n = s(627968),
+    r = s(64700),
+    l = s(641150),
+    a = s(397927),
+    i = s(365491),
+    o = s(758836),
+    c = s(985018);
+let d = [
+        { tab: o.G2.AVATAR_DECORATIONS, labelKey: c.t.dRZYNE },
+        { tab: o.G2.PROFILE_EFFECTS, labelKey: c.t["1cNjtx"] },
+        { tab: o.G2.NAMEPLATES, labelKey: c.t.V68Fqz },
+        { tab: o.G2.BUNDLES, labelKey: c.t.FYFpps },
+        { tab: o.G2.CATALOG, labelKey: c.t.xFcotU },
     ],
-    d = {
-        [s.q.ALL]: o.G2.CATALOG,
-        [s.q.AVATAR_DECORATION]: o.G2.AVATAR_DECORATIONS,
-        [s.q.PROFILE_EFFECT]: o.G2.PROFILE_EFFECTS,
-        [s.q.NAMEPLATE]: o.G2.NAMEPLATES,
-        [s.q.BUNDLE]: o.G2.BUNDLES,
+    u = {
+        [l.q.ALL]: o.G2.CATALOG,
+        [l.q.AVATAR_DECORATION]: o.G2.AVATAR_DECORATIONS,
+        [l.q.PROFILE_EFFECT]: o.G2.PROFILE_EFFECTS,
+        [l.q.NAMEPLATE]: o.G2.NAMEPLATES,
+        [l.q.BUNDLE]: o.G2.BUNDLES,
     };
-
 function g(e) {
-    let { tabs: t, selectedTab: n, onTabSelect: s, onClose: g, showOrbRentalNewBadge: f } = e,
-        { itemTypeFilters: m } = (0, i.v)(),
-        p = l.useMemo(() => {
-            if (n === o.G2.CATALOG && m.size > 0) {
-                let e = d[Array.from(m)[0]];
+    let { tabs: t, selectedTab: s, onTabSelect: l, onClose: g, showOrbRentalNewBadge: m } = e,
+        { itemTypeFilters: _ } = (0, i.v)(),
+        h = r.useMemo(() => {
+            if (s === o.G2.CATALOG && _.size > 0) {
+                let e = u[Array.from(_)[0]];
                 if (null != e) return e;
             }
-            return n;
-        }, [n, m]);
-    return (0, r.jsx)(a.W1t, {
+            return s;
+        }, [s, _]);
+    return (0, n.jsx)(a.W1t, {
         "data-menu-migrated-auto": !0,
         navId: "collectibles-shop-tabs-overflow-menu",
         "aria-label": c.intl.string(c.t["UKOtz+"]),
         hideScroller: !0,
         onClose: g,
         onSelect: g,
-        children: (0, r.jsx)(
+        children: (0, n.jsx)(
             a.rXV,
             {
                 children: t.map((e) => {
-                    let { tab: t, label: l, hasSubmenu: i } = e;
+                    let { tab: t, label: r, hasSubmenu: i } = e;
                     if (i && t === o.G2.CATALOG) {
-                        let e = t === n;
-                        return (0, r.jsx)(
+                        let e = t === s;
+                        return (0, n.jsx)(
                             a.Drp,
                             {
                                 id: t,
-                                label: l,
+                                label: r,
                                 icon: e ? a.yr3 : void 0,
-                                leadingAccessory: e
-                                    ? {
-                                          type: "icon",
-                                          icon: a.yr3,
-                                      }
-                                    : void 0,
+                                leadingAccessory: e ? { type: "icon", icon: a.yr3 } : void 0,
                                 hasSubmenu: !0,
-                                children: u.map((e) => {
-                                    let { tab: t, labelKey: n } = e,
-                                        l = t === p;
-                                    return (0, r.jsx)(
+                                children: d.map((e) => {
+                                    let { tab: t, labelKey: s } = e,
+                                        r = t === h;
+                                    return (0, n.jsx)(
                                         a.Drp,
                                         {
                                             id: t,
-                                            label: c.intl.string(n),
-                                            icon: l ? a.yr3 : void 0,
-                                            leadingAccessory: l
-                                                ? {
-                                                      type: "icon",
-                                                      icon: a.yr3,
-                                                  }
-                                                : void 0,
+                                            label: c.intl.string(s),
+                                            icon: r ? a.yr3 : void 0,
+                                            leadingAccessory: r ? { type: "icon", icon: a.yr3 } : void 0,
                                             action: () => {
-                                                s(t), g();
+                                                l(t), g();
                                             },
                                         },
                                         t,
@@ -101,22 +74,16 @@ function g(e) {
                             t,
                         );
                     }
-                    let d = t === o.G2.ORBS && f;
-                    return (0, r.jsx)(
+                    let u = t === o.G2.ORBS && m;
+                    return (0, n.jsx)(
                         a.Drp,
                         {
                             id: t,
-                            label: l,
-                            icon: t === n ? a.yr3 : void 0,
-                            leadingAccessory:
-                                t === n
-                                    ? {
-                                          type: "icon",
-                                          icon: a.yr3,
-                                      }
-                                    : void 0,
-                            badge: d ? "new" : void 0,
-                            action: () => s(t),
+                            label: r,
+                            icon: t === s ? a.yr3 : void 0,
+                            leadingAccessory: t === s ? { type: "icon", icon: a.yr3 } : void 0,
+                            badge: u ? "new" : void 0,
+                            action: () => l(t),
                         },
                         t,
                     );

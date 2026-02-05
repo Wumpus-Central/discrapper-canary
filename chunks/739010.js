@@ -1,12 +1,5 @@
-n.d(t, {
-    Il: () => l,
-    PN: () => s,
-    RH: () => o,
-    Wi: () => a,
-    Xo: () => r,
-    Z9: () => i,
-    nU: () => c,
-});
+"use strict";
+n.d(t, { Il: () => l, PN: () => s, RH: () => o, Wi: () => a, Xo: () => r, Z9: () => i, nU: () => u });
 var r = (function (e) {
         return (e.MESSAGE = "message"), e;
     })({}),
@@ -45,6 +38,6 @@ var r = (function (e) {
             (e[(e.WEBFORM = 0)] = "WEBFORM"), (e[(e.AGE_VERIFY = 1)] = "AGE_VERIFY"), (e[(e.IN_APP = 2)] = "IN_APP"), e
         );
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (e[(e.PENDING = 0)] = "PENDING"), (e[(e.SUCCESS = 1)] = "SUCCESS"), (e[(e.FAILED = 2)] = "FAILED"), e;
     })({});

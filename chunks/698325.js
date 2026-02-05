@@ -1,193 +1,135 @@
-l.d(t, {
-    default: () => g,
-}),
-    l(896048),
-    l(321073);
-var n = l(627968),
-    i = l(64700),
-    r = l(136722),
-    a = l(158954),
-    s = l(311907),
-    o = l(397927),
-    d = l(702805),
-    c = l(155718),
-    u = l(495273),
-    p = l(260509),
-    h = l(317525),
-    b = l(488926),
-    f = l(387255),
-    y = l(985018),
-    m = l(811221);
-
-function v(e) {
+i.d(t, { default: () => w }), i(321073);
+var l = i(627968),
+    a = i(64700),
+    n = i(136722),
+    r = i(158954),
+    s = i(311907),
+    o = i(397927),
+    d = i(702805),
+    c = i(155718),
+    u = i(495273),
+    h = i(260509),
+    p = i(317525),
+    x = i(488926),
+    m = i(387255),
+    y = i(985018),
+    g = i(811221);
+function f(e) {
     return (t) => null != t && !(0, u.N8)(e, t);
 }
-let x = (e) => {
+let k = (e) => {
         let { rolesRow: t } = e;
-        return (0, n.jsx)("div", {
-            "aria-hidden": !0,
-            className: m.Ni,
-            style: {
-                backgroundColor: null == t ? void 0 : t.colorString,
-            },
-        });
+        return (0, l.jsx)("div", { "aria-hidden": !0, className: g.Ni, style: { backgroundColor: t?.colorString } });
     },
-    g = (e) => {
+    w = (e) => {
         let t,
-            l,
-            { guild: g, channel: w, permission: j, onClose: k, transitionState: C, currentSelectedRoles: O = [] } = e,
-            { shouldEveryonePost: S, setShouldEveryonePost: N } = ((e, t, l) => {
-                let n = b.MJ(l, t),
-                    [r, a] = i.useState(n);
-                return {
-                    shouldEveryonePost: r,
-                    setShouldEveryonePost: a,
-                };
-            })(0, w, j),
-            E = ((t = (0, s.bG)([h.A], () => h.A.getSortedRoles(g.id))),
-            i.useMemo(() => (0, f.i)(t).filter((e) => v(g.id)(e.id)), [g, t])).map((e) => ({
+            i,
+            { guild: w, channel: C, permission: S, onClose: v, transitionState: b, currentSelectedRoles: j = [] } = e,
+            { shouldEveryonePost: N, setShouldEveryonePost: E } = ((e, t, i) => {
+                let l = x.MJ(i, t),
+                    [n, r] = a.useState(l);
+                return { shouldEveryonePost: n, setShouldEveryonePost: r };
+            })(0, C, S),
+            M = ((t = (0, s.bG)([p.A], () => p.A.getSortedRoles(w.id))),
+            a.useMemo(() => (0, m.i)(t).filter((e) => f(w.id)(e.id)), [w, t])).map((e) => ({
                 key: e.key,
                 id: e.id,
                 label: e.name,
                 value: e.id,
-                leading: (0, n.jsx)(x, {
-                    rolesRow: e,
-                }),
+                leading: (0, l.jsx)(k, { rolesRow: e }),
             })),
-            [M, P] = i.useState(O.map((e) => e.id).filter(v(g.id))),
-            [R, T] = i.useState(!1),
-            [A, _] = i.useState(!1),
-            F = M.length > 0 || S,
-            G =
-                ((l = (0, s.bG)([h.A], () => h.A.getSortedRoles(g.id))),
-                i.useCallback(
+            [R, T] = a.useState(j.map((e) => e.id).filter(f(w.id))),
+            [_, A] = a.useState(!1),
+            [O, F] = a.useState(!1),
+            G = R.length > 0 || N,
+            P =
+                ((i = (0, s.bG)([p.A], () => p.A.getSortedRoles(w.id))),
+                a.useCallback(
                     (e, t) => {
-                        let n = (0, f.i)(l),
-                            i = new Set(t),
-                            a = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var l = null != arguments[t] ? arguments[t] : {},
-                                        n = Object.keys(l);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (n = n.concat(
-                                            Object.getOwnPropertySymbols(l).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                                            }),
-                                        )),
-                                        n.forEach(function (t) {
-                                            var n;
-                                            (n = l[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: n,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = n);
-                                        });
-                                }
-                                return e;
-                            })({}, w.permissionOverwrites),
+                        let l = (0, m.i)(i),
+                            a = new Set(t),
+                            r = { ...C.permissionOverwrites },
                             s = [],
                             o = [];
                         return (
-                            n.forEach((t) => {
-                                var l, n, d, p, h, f, y, m, v, x;
-                                let w = t.id,
-                                    j = i.has(w);
-                                j
+                            l.forEach((t) => {
+                                let i = t.id,
+                                    l = a.has(i);
+                                l
                                     ? s.push({
-                                          id: w,
+                                          id: i,
                                           type: c.r2.ROLE,
-                                          allow: j
-                                              ? r.WQ(null != (l = null == (p = a[w]) ? void 0 : p.allow) ? l : b.x3, e)
-                                              : r.TF(null != (n = null == (h = a[w]) ? void 0 : h.allow) ? n : b.x3, e),
-                                          deny: r.TF(null != (d = null == (f = a[w]) ? void 0 : f.deny) ? d : b.x3, e),
+                                          allow: l ? n.WQ(r[i]?.allow ?? x.x3, e) : n.TF(r[i]?.allow ?? x.x3, e),
+                                          deny: n.TF(r[i]?.deny ?? x.x3, e),
                                       })
-                                    : (0, u.N8)(g.id, w)
+                                    : (0, u.N8)(w.id, i)
                                       ? s.push({
-                                            id: w,
+                                            id: i,
                                             type: c.r2.ROLE,
-                                            allow: r.TF(
-                                                null != (y = null == (v = a[w]) ? void 0 : v.allow) ? y : b.x3,
-                                                e,
-                                            ),
-                                            deny: r.WQ(
-                                                null != (m = null == (x = a[w]) ? void 0 : x.deny) ? m : b.x3,
-                                                e,
-                                            ),
+                                            allow: n.TF(r[i]?.allow ?? x.x3, e),
+                                            deny: n.WQ(r[i]?.deny ?? x.x3, e),
                                         })
-                                      : w in a && o.push(w);
+                                      : i in r && o.push(i);
                             }, []),
-                            (0, d.lS)(w.id, s, o)
+                            (0, d.lS)(C.id, s, o)
                         );
                     },
-                    [g, l, w],
+                    [w, i, C],
                 )),
             W = async () => {
-                if (!F) return;
-                T(!0), _(!1);
-                let e = [...M];
-                if (S) {
-                    let t = (0, p.af)(g);
+                if (!G) return;
+                A(!0), F(!1);
+                let e = [...R];
+                if (N) {
+                    let t = (0, h.af)(w);
                     e.push(t);
                 }
                 try {
-                    await G(j, e), k();
+                    await P(S, e), v();
                 } catch (e) {
-                    _(!0);
+                    F(!0);
                 } finally {
-                    T(!1);
+                    A(!1);
                 }
             };
-        return R
-            ? (0, n.jsx)(o.y$y, {})
-            : (0, n.jsxs)(a.Modal, {
+        return _
+            ? (0, l.jsx)(o.y$y, {})
+            : (0, l.jsxs)(r.Modal, {
                   title: y.intl.string(y.t.TFGnmk),
                   actions: [
-                      {
-                          variant: "secondary",
-                          text: y.intl.string(y.t["ETE/oC"]),
-                          onClick: k,
-                      },
-                      {
-                          variant: "primary",
-                          text: y.intl.string(y.t["R3BPH+"]),
-                          onClick: W,
-                          disabled: !F,
-                      },
+                      { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: v },
+                      { variant: "primary", text: y.intl.string(y.t["R3BPH+"]), onClick: W, disabled: !G },
                   ],
-                  onClose: k,
-                  transitionState: C,
+                  onClose: v,
+                  transitionState: b,
                   children: [
-                      (0, n.jsx)("div", {
-                          className: m.CI,
-                          children: (0, n.jsx)(o.ZiE, {
+                      (0, l.jsx)("div", {
+                          className: g.CI,
+                          children: (0, l.jsx)(o.ZiE, {
                               selectionMode: "multiple",
                               maxOptionsVisible: 5,
                               placeholder: y.intl.string(y.t["8kKqCW"]),
-                              value: M,
-                              options: E,
+                              value: R,
+                              options: M,
                               onSelectionChange: (e) => {
-                                  P(e);
+                                  T(e);
                               },
                           }),
                       }),
-                      (0, n.jsx)("div", {
-                          className: m.nM,
-                          children: (0, n.jsx)(o.dOG, {
+                      (0, l.jsx)("div", {
+                          className: g.nM,
+                          children: (0, l.jsx)(o.dOG, {
                               label: y.intl.string(y.t["kPwwA/"]),
                               description: y.intl.format(y.t.l7Ercq, {}),
-                              checked: S,
-                              onChange: N,
+                              checked: N,
+                              onChange: E,
                           }),
                       }),
-                      A
-                          ? (0, n.jsx)("div", {
-                                className: m.nM,
-                                children: (0, n.jsx)(o.Text, {
-                                    className: m.z3,
+                      O
+                          ? (0, l.jsx)("div", {
+                                className: g.nM,
+                                children: (0, l.jsx)(o.Text, {
+                                    className: g.z3,
                                     variant: "text-sm/normal",
                                     children: y.intl.string(y.t.mgZKZP),
                                 }),

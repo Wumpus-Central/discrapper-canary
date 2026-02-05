@@ -1,3 +1,4 @@
+"use strict";
 var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
@@ -12,7 +13,6 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }

@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(747238);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(492462);
 let i = () => {
     let { load_id: e } = (0, r.parse)(window.location.search);

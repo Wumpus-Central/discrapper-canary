@@ -1,77 +1,56 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(961350);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let u = Object.freeze([]),
-    d = {};
-
-function f(e) {
-    (d = {}),
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(961350);
+let l = Object.freeze([]),
+    u = {};
+function c(e) {
+    (u = {}),
         e.sessions.forEach((e) => {
-            d[e.sessionId] = e;
+            u[e.sessionId] = e;
         });
 }
-class p extends (r = s.Ay.Store) {
+class d extends a.Ay.Store {
+    static displayName = "SessionsStore";
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(o.default);
     }
     getSessions() {
-        return d;
+        return u;
     }
     getSession() {
-        let e = l.default.getSessionId();
+        let e = o.default.getSessionId();
         return null != e ? this.getSessionById(e) : null;
     }
     getRemoteActivities() {
-        let e = l.default.getSessionId(),
-            t = a().find(d, (t) => t.active && t.sessionId !== e);
-        return null != t ? t.activities : u;
+        let e = o.default.getSessionId(),
+            t = i().find(u, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : l;
     }
     getHiddenActivities() {
-        let e = l.default.getSessionId(),
-            t = a().find(d, (t) => t.active && t.sessionId !== e);
-        return null != t && null != t.hiddenActivities ? t.hiddenActivities : u;
+        let e = o.default.getSessionId(),
+            t = i().find(u, (t) => t.active && t.sessionId !== e);
+        return null != t && null != t.hiddenActivities ? t.hiddenActivities : l;
     }
     getSessionById(e) {
-        return d[e];
+        return u[e];
     }
     getActiveSession() {
-        return a().find(d, (e) => {
+        return i().find(u, (e) => {
             let { active: t } = e;
             return t;
         });
     }
     getRemoteApplicationActivity(e) {
-        var t;
         if (null == e) return null;
-        let n = l.default.getSessionId(),
-            r = a().find(d, (e) => e.active && e.sessionId !== n);
-        if (null == r) return null;
-        let i = r.activities.find((t) => t.application_id === e);
-        return null != i ? i : null == (t = r.hiddenActivities) ? void 0 : t.find((t) => t.application_id === e);
+        let t = o.default.getSessionId(),
+            n = i().find(u, (e) => e.active && e.sessionId !== t);
+        if (null == n) return null;
+        let r = n.activities.find((t) => t.application_id === e);
+        return null != r ? r : n.hiddenActivities?.find((t) => t.application_id === e);
     }
 }
-c(p, "displayName", "SessionsStore");
-let _ = new p(o.h, {
-    CONNECTION_OPEN: f,
-    SESSIONS_REPLACE: f,
-});
+let _ = new d(s.h, { CONNECTION_OPEN: c, SESSIONS_REPLACE: c });

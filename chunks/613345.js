@@ -1,3 +1,4 @@
+"use strict";
 function r() {
     return "u" > typeof globalThis
         ? globalThis
@@ -9,7 +10,4 @@ function r() {
               ? self
               : Object.create(null);
 }
-n.d(t, {
-    V: () => r,
-}),
-    n(734808);
+n.d(t, { V: () => r });

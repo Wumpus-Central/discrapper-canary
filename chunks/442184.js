@@ -1,22 +1,20 @@
-n.d(t, {
-    A: () => o,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(158954),
-    s = n(934337),
+var s = n(158954),
+    r = n(934337),
     l = n(985018),
     a = n(473169);
-
 function o() {
-    let { required: e, checked: t } = (0, s.mZ)();
+    let { required: e, checked: t } = (0, r.mZ)();
     return e
-        ? (0, r.jsx)("div", {
+        ? (0, i.jsx)("div", {
               className: a.Ot,
-              children: (0, r.jsx)(i.JuY, {
+              children: (0, i.jsx)(s.JuY, {
                   label: l.intl.string(l.t["0p3R0+"]),
                   checked: t,
-                  onChange: s.Bw,
+                  onChange: r.Bw,
                   labelType: "secondary",
               }),
           })

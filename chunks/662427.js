@@ -1,27 +1,16 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    i,
-    l = n(311907),
-    o = n(73153);
-let a = [];
-class s extends (i = l.Ay.Store) {
+n.d(t, { A: () => a });
+var i = n(311907),
+    l = n(73153);
+let r = [];
+class s extends i.Ay.Store {
+    static displayName = "CreatorMonetizationMarketingStore";
     getEligibleGuildsForNagActivate() {
-        return a;
+        return r;
     }
 }
-(r = "displayName") in s
-    ? Object.defineProperty(s, r, {
-          value: "CreatorMonetizationMarketingStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (s[r] = "CreatorMonetizationMarketingStore");
-let c = new s(o.h, {
+let a = new s(l.h, {
     CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
         let { eligibleGuilds: t } = e;
-        a = t;
+        r = t;
     },
 });

@@ -1,13 +1,5 @@
-n.d(t, {
-    Qo: () => s,
-    Tr: () => l,
-    WI: () => u,
-    bg: () => i.b,
-    gO: () => o,
-    hB: () => d,
-    x: () => a.x,
-    yq: () => r.y,
-});
+"use strict";
+n.d(t, { Qo: () => s, Tr: () => l, WI: () => c, bg: () => i.b, gO: () => o, hB: () => d, x: () => a.x, yq: () => r.y });
 var r = n(904986),
     i = n(651139),
     a = n(731854),
@@ -29,8 +21,7 @@ var r = n(904986),
             e
         );
     })({});
-
-function c(e) {
+function u(e) {
     switch (e) {
         case a.Ku.NATIVE:
             return n(531417).A;
@@ -41,12 +32,9 @@ function c(e) {
             return n(432351).A;
     }
 }
-
-function u() {
-    var e;
-    return null != (e = [a.Ku.NATIVE, a.Ku.WEBRTC].find((e) => c(e).supported())) ? e : a.Ku.DUMMY;
+function c() {
+    return [a.Ku.NATIVE, a.Ku.WEBRTC].find((e) => u(e).supported()) ?? a.Ku.DUMMY;
 }
-
 function d(e) {
-    return new (c(e))();
+    return new (u(e))();
 }

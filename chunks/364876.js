@@ -1,62 +1,50 @@
-t.d(n, {
-    _: () => g,
-});
-var l = t(627968);
+t.d(n, { _: () => E });
+var i = t(627968);
 t(64700);
-var r = t(877624),
-    i = t(311907),
+var l = t(877624),
+    r = t(311907),
     s = t(397927),
     a = t(937008),
     o = t(807098),
     u = t(412260),
-    c = t(810498),
-    d = t(298305),
+    d = t(810498),
+    c = t(298305),
     p = t(985018),
     m = t(686046);
-
-function g() {
-    var e;
-    let n = (0, i.bG)([u.A], () => {
-            let e = u.A.getMarketingComponentByType(r.C.GIFT_CUSTOMIZATION_BANNER);
+function E() {
+    let e = (0, r.bG)([u.A], () => {
+            let e = u.A.getMarketingComponentByType(l.C.GIFT_CUSTOMIZATION_BANNER);
             return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftCustomizationBanner;
         }),
-        { claimableRewards: t } = (0, a.Pv)(),
-        g = (0, o.T)(null == n ? void 0 : n.asset),
-        E = (0, o.T)(null == n ? void 0 : n.backgroundAsset),
-        f = null == n ? void 0 : n.gradient,
-        j =
-            null != f && null != f.colors && f.colors.length >= 2
-                ? (0, c.K5)(
-                      {
-                          gradient: f.colors,
-                          angle: null != (e = f.angle) ? e : void 0,
-                      },
-                      {
-                          colorStops: [0, 12, 100],
-                      },
-                  )
+        { claimableRewards: n } = (0, a.Pv)(),
+        t = (0, o.T)(e?.asset),
+        E = (0, o.T)(e?.backgroundAsset),
+        g = e?.gradient,
+        _ =
+            null != g && null != g.colors && g.colors.length >= 2
+                ? (0, d.K5)({ gradient: g.colors, angle: g.angle ?? void 0 }, { colorStops: [0, 12, 100] })
                 : void 0,
-        h = (0, c.gc)(null != E ? E : void 0);
-    null != h && ((h.backgroundSize = "cover, auto"), (h.backgroundPosition = "right center, 0% 0%"));
-    let x = (0, c.x)(h, j);
-    return null == n || null == t
+        x = (0, d.gc)(E ?? void 0);
+    null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
+    let T = (0, d.x)(x, _);
+    return null == e || null == n
         ? null
-        : (0, l.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: m.qD,
-              style: x,
+              style: T,
               children: [
-                  (0, l.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: m.my,
-                      children: (0, l.jsx)(d.A, {
-                          claimableRewards: t,
-                          maxRewardImageSrc: null != g ? g : "",
+                      children: (0, i.jsx)(c.A, {
+                          claimableRewards: n,
+                          maxRewardImageSrc: t ?? "",
                           size: s._3J.SIZE_40,
                           imageScaling: 1.25,
                       }),
                   }),
-                  (0, l.jsx)(s.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: "text-md/medium",
                       className: m._M,
                       color: "always-white",

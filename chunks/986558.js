@@ -1,3 +1,2 @@
-e.exports = {
-    w: "linkIcon_ebf183",
-};
+"use strict";
+e.exports = { w: "linkIcon_ebf183" };

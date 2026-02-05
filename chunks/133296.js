@@ -1,32 +1,13 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
-var r,
-    i = n(627968),
+n.d(t, { A: () => s });
+var i = n(627968),
     l = n(64700),
     a = n(451988);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o extends (r = l.Component) {
+class r extends l.Component {
+    timer = new a.IX();
+    state = { hovered: !1 };
+    static defaultProps = { disable: !1, pauseOnHover: !1 };
     static getDerivedStateFromProps(e) {
-        return e.disable
-            ? {
-                  hovered: !1,
-              }
-            : null;
+        return e.disable ? { hovered: !1 } : null;
     }
     componentDidMount() {
         let { pauseOnHover: e, disable: t } = this.props,
@@ -38,10 +19,10 @@ class o extends (r = l.Component) {
     }
     componentDidUpdate(e, t) {
         let { props: n } = this,
-            r = (e, t) => !e.disable && !(t.hovered && e.pauseOnHover),
-            i = r(n, this.state),
-            l = r(e, t);
-        (i && !l) || e.interval !== n.interval ? this.startTimer() : !i && l && this.stopTimer();
+            i = (e, t) => !e.disable && !(t.hovered && e.pauseOnHover),
+            l = i(n, this.state),
+            a = i(e, t);
+        (l && !a) || e.interval !== n.interval ? this.startTimer() : !l && a && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -53,10 +34,15 @@ class o extends (r = l.Component) {
     stopTimer() {
         this.timer.stop();
     }
+    handlePause = () => {
+        this.state.hovered || this.setState({ hovered: !0 });
+    };
+    handleResume = () => {
+        this.setState({ hovered: !1 });
+    };
     render() {
-        var e, t;
-        let { children: n, className: r, disable: l } = this.props,
-            a = l
+        let { children: e, className: t, disable: n } = this.props,
+            l = n
                 ? null
                 : {
                       onMouseEnter: this.handlePause,
@@ -64,65 +50,7 @@ class o extends (r = l.Component) {
                       onMouseLeave: this.handleResume,
                       onBlur: this.handleResume,
                   };
-        return (0, i.jsx)(
-            "div",
-            ((e = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            s(e, t, n[t]);
-                        });
-                }
-                return e;
-            })({}, a)),
-            (t = t =
-                {
-                    className: r,
-                    children: n,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(t)).forEach(function (n) {
-                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                  }),
-            e),
-        );
-    }
-    constructor(...e) {
-        super(...e),
-            s(this, "timer", new a.IX()),
-            s(this, "state", {
-                hovered: !1,
-            }),
-            s(this, "handlePause", () => {
-                this.state.hovered ||
-                    this.setState({
-                        hovered: !0,
-                    });
-            }),
-            s(this, "handleResume", () => {
-                this.setState({
-                    hovered: !1,
-                });
-            });
+        return (0, i.jsx)("div", { ...l, className: t, children: e });
     }
 }
-s(o, "defaultProps", {
-    disable: !1,
-    pauseOnHover: !1,
-});
-let c = o;
+let s = r;

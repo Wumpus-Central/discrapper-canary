@@ -1,19 +1,20 @@
-var r = n(668413),
-    i = n(869639),
-    a = n(181621),
-    s = n(418227);
-e.exports = function (e) {
-    var t = s(
-        e,
-        function (e) {
-            var t = e.getSelection(),
-                n = t.getStartOffset();
-            if (0 === n) return a(e, 1);
-            var i = t.getStartKey(),
-                s = e.getCurrentContent().getBlockForKey(i).getText().slice(0, n);
-            return a(e, r.getBackward(s).length || 1);
+"use strict";
+var n = r(668413),
+    i = r(869639),
+    o = r(181621),
+    a = r(418227);
+t.exports = function (t) {
+    var e = a(
+        t,
+        function (t) {
+            var e = t.getSelection(),
+                r = e.getStartOffset();
+            if (0 === r) return o(t, 1);
+            var i = e.getStartKey(),
+                a = t.getCurrentContent().getBlockForKey(i).getText().slice(0, r);
+            return o(t, n.getBackward(a).length || 1);
         },
         "backward",
     );
-    return t === e.getCurrentContent() ? e : i.push(e, t, "remove-range");
+    return e === t.getCurrentContent() ? t : i.push(t, e, "remove-range");
 };

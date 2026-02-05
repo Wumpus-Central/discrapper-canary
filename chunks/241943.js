@@ -1,32 +1,12 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    A: () => a,
-}),
-    n(321073);
-class i {
+"use strict";
+n.d(t, { A: () => i }), n(321073);
+class r {
+    queue = [];
     enqueue(e) {
         this.queue.push(e);
     }
     flush() {
-        for (; this.queue.length > 0; ) {
-            var e;
-            null == (e = this.queue.shift()) || e();
-        }
-    }
-    constructor() {
-        r(this, "queue", []);
+        for (; this.queue.length > 0; ) this.queue.shift()?.();
     }
 }
-let a = new i();
+let i = new r();

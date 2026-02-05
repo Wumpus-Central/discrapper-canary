@@ -1,39 +1,30 @@
-n.d(t, {
-    A: () => d,
-    k: () => u,
-});
+"use strict";
+n.d(t, { A: () => d, k: () => c });
 var r = n(311907),
     i = n(164956),
     a = n(961350),
     s = n(430452),
     o = n(576705),
     l = n(977997),
-    c = n(652215);
-
-function u(e) {
-    var t;
+    u = n(652215);
+function c(e) {
     let {
-            channel: n,
-            authenticationStore: r = a.default,
-            voiceStateStore: u = l.A,
-            mediaEngineStore: d = s.A,
-            permissionStore: f = o.A,
-            impersonateStore: p = i.A,
+            channel: t,
+            authenticationStore: n = a.default,
+            voiceStateStore: r = l.A,
+            mediaEngineStore: c = s.A,
+            permissionStore: d = o.A,
+            impersonateStore: _ = i.A,
         } = e,
-        _ = null != n ? u.getVoiceState(n.getGuildId(), r.getId()) : null,
-        h = d.isSelfMute() || d.isSelfMutedTemporarily(),
-        m = null == n ? void 0 : n.getGuildId(),
-        g = p.isViewingRoles(m) && !f.can(c.xBc.SPEAK, n);
-    return {
-        selfMute: h,
-        suppress: (null == _ ? void 0 : _.suppress) || g,
-        mute: null != (t = null == _ ? void 0 : _.mute) && t,
-    };
+        f = null != t ? r.getVoiceState(t.getGuildId(), n.getId()) : null,
+        p = c.isSelfMute() || c.isSelfMutedTemporarily(),
+        h = t?.getGuildId(),
+        m = _.isViewingRoles(h) && !d.can(u.xBc.SPEAK, t);
+    return { selfMute: p, suppress: f?.suppress || m, mute: f?.mute ?? !1 };
 }
-
 function d(e) {
     return (0, r.cf)([a.default, l.A, s.A, o.A, i.A], () =>
-        u({
+        c({
             channel: e,
             authenticationStore: a.default,
             voiceStateStore: l.A,

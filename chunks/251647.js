@@ -39,9 +39,6 @@
             y: "asgas",
             yy: "%d isgasn",
         },
-        week: {
-            dow: 6,
-            doy: 12,
-        },
+        week: { dow: 6, doy: 12 },
     });
 });

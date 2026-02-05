@@ -1,16 +1,13 @@
-n.d(t, {
-    A: () => d,
-    o: () => u,
-}),
-    n(228524);
+"use strict";
+n.d(t, { A: () => d, o: () => c });
 var r = n(627968),
     i = n(827734),
     a = n(990078),
     s = n(397927),
     o = n(123288),
     l = n(985018),
-    c = n(865211),
-    u = (function (e) {
+    u = n(865211),
+    c = (function (e) {
         return (
             (e[(e.TOO_BIG = 0)] = "TOO_BIG"),
             (e[(e.RATE_LIMIT = 1)] = "RATE_LIMIT"),
@@ -23,12 +20,12 @@ var r = n(627968),
     })({});
 let d = (e) => {
     let { error: t } = e,
-        { type: n, filename: u } = t,
+        { type: n, filename: c } = t,
         {
             icon: d,
-            description: f,
-            color: p,
-            tooltip: _,
+            description: _,
+            color: f,
+            tooltip: p,
         } = {
             0: {
                 icon: s.m_x,
@@ -68,37 +65,21 @@ let d = (e) => {
             },
         }[n];
     return (0, r.jsxs)("div", {
-        className: c._Z,
+        className: u._Z,
         children: [
-            (0, r.jsx)(d, {
-                className: c.Yg,
-                color: i.A.unsafe_rawColors.PRIMARY_300.css,
-            }),
+            (0, r.jsx)(d, { className: u.Yg, color: i.A.unsafe_rawColors.PRIMARY_300.css }),
             (0, r.jsxs)("div", {
-                className: c.XE,
+                className: u.XE,
                 children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-md/normal",
-                        className: c.Md,
-                        children: u,
-                    }),
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-sm/normal",
-                        color: "text-subtle",
-                        children: f,
-                    }),
+                    (0, r.jsx)(s.Text, { variant: "text-md/normal", className: u.Md, children: c }),
+                    (0, r.jsx)(s.Text, { variant: "text-sm/normal", color: "text-subtle", children: _ }),
                 ],
             }),
             (0, r.jsx)(a.m, {
                 asContainer: !0,
                 position: "right",
-                text: _,
-                children: (0, r.jsx)(s.EpV, {
-                    size: "custom",
-                    width: 20,
-                    height: 20,
-                    color: p,
-                }),
+                text: p,
+                children: (0, r.jsx)(s.EpV, { size: "custom", width: 20, height: 20, color: f }),
             }),
         ],
     });

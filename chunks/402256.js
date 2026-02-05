@@ -1,55 +1,23 @@
-n.d(t, {
-    A: () => i,
-});
+"use strict";
+n.d(t, { A: () => i });
 var r = n(723727);
 let i = {
     iptc: {
-        256: {
-            name: "Model Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        261: {
-            name: "Destination",
-            repeatable: !0,
-        },
-        276: {
-            name: "File Format",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        278: {
-            name: "File Format Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
+        256: { name: "Model Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
+        261: { name: "Destination", repeatable: !0 },
+        276: { name: "File Format", description: (e) => ((e[0] << 8) + e[1]).toString() },
+        278: { name: "File Format Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
         286: "Service Identifier",
         296: "Envelope Number",
         306: "Product ID",
         316: "Envelope Priority",
-        326: {
-            name: "Date Sent",
-            description: a,
-        },
-        336: {
-            name: "Time Sent",
-            description: s,
-        },
-        346: {
-            name: "Coded Character Set",
-            description: o,
-            encoding_name: o,
-        },
+        326: { name: "Date Sent", description: a },
+        336: { name: "Time Sent", description: s },
+        346: { name: "Coded Character Set", description: o, encoding_name: o },
         356: "UNO",
-        376: {
-            name: "ARM Identifier",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        378: {
-            name: "ARM Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        512: {
-            name: "Record Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
+        376: { name: "ARM Identifier", description: (e) => ((e[0] << 8) + e[1]).toString() },
+        378: { name: "ARM Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
+        512: { name: "Record Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
         515: "Object Type Reference",
         516: "Object Attribute Reference",
         517: "Object Name",
@@ -68,23 +36,11 @@ let i = {
             },
         },
         527: "Category",
-        532: {
-            name: "Supplemental Category",
-            repeatable: !0,
-        },
+        532: { name: "Supplemental Category", repeatable: !0 },
         534: "Fixture Identifier",
-        537: {
-            name: "Keywords",
-            repeatable: !0,
-        },
-        538: {
-            name: "Content Location Code",
-            repeatable: !0,
-        },
-        539: {
-            name: "Content Location Name",
-            repeatable: !0,
-        },
+        537: { name: "Keywords", repeatable: !0 },
+        538: { name: "Content Location Code", repeatable: !0 },
+        539: { name: "Content Location Name", repeatable: !0 },
         542: "Release Date",
         547: "Release Time",
         549: "Expiration Date",
@@ -105,34 +61,13 @@ let i = {
                           : "Unknown";
             },
         },
-        557: {
-            name: "Reference Service",
-            repeatable: !0,
-        },
-        559: {
-            name: "Reference Date",
-            repeatable: !0,
-        },
-        562: {
-            name: "Reference Number",
-            repeatable: !0,
-        },
-        567: {
-            name: "Date Created",
-            description: a,
-        },
-        572: {
-            name: "Time Created",
-            description: s,
-        },
-        574: {
-            name: "Digital Creation Date",
-            description: a,
-        },
-        575: {
-            name: "Digital Creation Time",
-            description: s,
-        },
+        557: { name: "Reference Service", repeatable: !0 },
+        559: { name: "Reference Date", repeatable: !0 },
+        562: { name: "Reference Number", repeatable: !0 },
+        567: { name: "Date Created", description: a },
+        572: { name: "Time Created", description: s },
+        574: { name: "Digital Creation Date", description: a },
+        575: { name: "Digital Creation Time", description: s },
         577: "Originating Program",
         582: "Program Version",
         587: {
@@ -142,14 +77,8 @@ let i = {
                 return "a" === t ? "morning" : "p" === t ? "evening" : "b" === t ? "both" : "Unknown";
             },
         },
-        592: {
-            name: "By-line",
-            repeatable: !0,
-        },
-        597: {
-            name: "By-line Title",
-            repeatable: !0,
-        },
+        592: { name: "By-line", repeatable: !0 },
+        597: { name: "By-line Title", repeatable: !0 },
         602: "City",
         604: "Sub-location",
         607: "Province/State",
@@ -160,19 +89,10 @@ let i = {
         622: "Credit",
         627: "Source",
         628: "Copyright Notice",
-        630: {
-            name: "Contact",
-            repeatable: !0,
-        },
+        630: { name: "Contact", repeatable: !0 },
         632: "Caption/Abstract",
-        634: {
-            name: "Writer/Editor",
-            repeatable: !0,
-        },
-        637: {
-            name: "Rasterized Caption",
-            description: (e) => e,
-        },
+        634: { name: "Writer/Editor", repeatable: !0 },
+        637: { name: "Rasterized Caption", description: (e) => e },
         642: "Image Type",
         643: {
             name: "Image Orientation",
@@ -210,10 +130,7 @@ let i = {
                     : t;
             },
         },
-        663: {
-            name: "Audio Sampling Rate",
-            description: (e) => parseInt((0, r.Jn)(e), 10) + " Hz",
-        },
+        663: { name: "Audio Sampling Rate", description: (e) => parseInt((0, r.Jn)(e), 10) + " Hz" },
         664: {
             name: "Audio Sampling Resolution",
             description: (e) => {
@@ -276,43 +193,16 @@ let i = {
             name: "ObjectData Preview File Format Version",
             description: (e, t) => {
                 let n = {
-                        "00": {
-                            "00": "1",
-                        },
-                        "01": {
-                            "01": "1",
-                            "02": "2",
-                            "03": "3",
-                            "04": "4",
-                        },
-                        "02": {
-                            "04": "4",
-                        },
-                        "03": {
-                            "01": "5.0",
-                            "02": "6.0",
-                        },
-                        "04": {
-                            "01": "1.40",
-                        },
-                        "05": {
-                            "01": "2",
-                        },
-                        "06": {
-                            "01": "1",
-                        },
-                        11: {
-                            "01": "1.02",
-                        },
-                        20: {
-                            "01": "3.1",
-                            "02": "4.0",
-                            "03": "5.0",
-                            "04": "5.5",
-                        },
-                        21: {
-                            "02": "2.0",
-                        },
+                        "00": { "00": "1" },
+                        "01": { "01": "1", "02": "2", "03": "3", "04": "4" },
+                        "02": { "04": "4" },
+                        "03": { "01": "5.0", "02": "6.0" },
+                        "04": { "01": "1.40" },
+                        "05": { "01": "2" },
+                        "06": { "01": "1" },
+                        11: { "01": "1.02" },
+                        20: { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" },
+                        21: { "02": "2.0" },
                     },
                     i = (0, r.Jn)(e);
                 if (t["ObjectData Preview File Format"]) {
@@ -323,10 +213,7 @@ let i = {
             },
         },
         714: "ObjectData Preview Data",
-        1802: {
-            name: "Size Mode",
-            description: (e) => e[0].toString(),
-        },
+        1802: { name: "Size Mode", description: (e) => e[0].toString() },
         1812: {
             name: "Max Subfile Size",
             description: (e) => {
@@ -353,12 +240,10 @@ let i = {
         },
     },
 };
-
 function a(e) {
     let t = (0, r.Jn)(e);
     return t.length >= 8 ? t.substr(0, 4) + "-" + t.substr(4, 2) + "-" + t.substr(6, 2) : t;
 }
-
 function s(e) {
     let t = (0, r.Jn)(e),
         n = t;
@@ -369,7 +254,6 @@ function s(e) {
         n
     );
 }
-
 function o(e) {
     let t = (0, r.Jn)(e);
     if ("\x1b%G" === t) return "UTF-8";

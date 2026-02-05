@@ -1,30 +1,27 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(896048);
-var r = n(64700);
-let i = function () {
+n.d(t, { A: () => s });
+var i = n(64700);
+let s = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-        [t, n] = r.useState(!1),
-        [i, a] = r.useState(0),
-        [s, o] = r.useState(!1),
-        [l, c] = r.useState(0);
+        [t, n] = i.useState(!1),
+        [s, r] = i.useState(0),
+        [a, l] = i.useState(!1),
+        [o, c] = i.useState(0);
     return (
-        r.useEffect(() => {
-            i >= e && (o(!0), c(Math.floor(i / e)));
+        i.useEffect(() => {
+            s >= e && (l(!0), c(Math.floor(s / e)));
             let t = setTimeout(() => {
-                a(0);
+                r(0);
             }, 1e3);
             return () => clearTimeout(t);
-        }, [i, e]),
-        r.useEffect(() => {
+        }, [s, e]),
+        i.useEffect(() => {
             if (!t) {
                 let e = setTimeout(() => {
-                    o(!1), c(0);
+                    l(!1), c(0);
                 }, 1e3);
                 return () => clearTimeout(e);
             }
-            a((e) => e + 1);
+            r((e) => e + 1);
         }, [t]),
         {
             onHover: () => {
@@ -33,8 +30,8 @@ let i = function () {
             onUnhover: () => {
                 n(!1);
             },
-            isEasterEggTriggered: s,
-            easterEggLevel: l,
+            isEasterEggTriggered: a,
+            easterEggLevel: o,
         }
     );
 };

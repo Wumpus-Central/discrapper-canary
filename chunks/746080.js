@@ -1,16 +1,5 @@
-n.d(t, {
-    Gr: () => s,
-    T4: () => d,
-    U9: () => u,
-    VV: () => r,
-    aQ: () => f,
-    jq: () => a,
-    lx: () => l,
-    mP: () => o,
-    qW: () => i,
-    s4: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Gr: () => s, T4: () => u, VV: () => r, aQ: () => c, jq: () => a, lx: () => l, mP: () => o, qW: () => i });
 var r = (function (e) {
     return (
         (e.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
@@ -30,39 +19,34 @@ var r = (function (e) {
     );
 })({});
 let i = new Set(Object.values(r));
-
 function a(e) {
     return i.has(e);
 }
-
 function s(e, t) {
-    return "".concat(e, "-").concat(t);
+    return `${e}-${t}`;
 }
-
 function o(e) {
-    return !!(null == e ? void 0 : e.includes("@home"));
+    return !!e?.includes("@home");
 }
 let l = Object.freeze({
-        GUILD_FEED_REMOVED: 1,
-        PINNED: 2,
-        ACTIVE_CHANNELS_REMOVED: 4,
-        REQUIRE_TAG: 16,
-        IS_SPAM: 32,
-        IS_GUILD_RESOURCE_CHANNEL: 128,
-        CLYDE_AI: 256,
-        IS_SCHEDULED_FOR_DELETION: 512,
-        IS_MEDIA_CHANNEL: 1024,
-        SUMMARIES_DISABLED: 2048,
-        IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL: 8192,
-        IS_BROADCASTING: 16384,
-        HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
-        IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536,
-        OBFUSCATED: 131072,
-        IS_MODERATOR_REPORT_CHANNEL: 524288,
-    }),
-    c = 1024,
-    u = 4096;
-var d = (function (e) {
+    GUILD_FEED_REMOVED: 1,
+    PINNED: 2,
+    ACTIVE_CHANNELS_REMOVED: 4,
+    REQUIRE_TAG: 16,
+    IS_SPAM: 32,
+    IS_GUILD_RESOURCE_CHANNEL: 128,
+    CLYDE_AI: 256,
+    IS_SCHEDULED_FOR_DELETION: 512,
+    IS_MEDIA_CHANNEL: 1024,
+    SUMMARIES_DISABLED: 2048,
+    IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL: 8192,
+    IS_BROADCASTING: 16384,
+    HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
+    IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536,
+    OBFUSCATED: 131072,
+    IS_MODERATOR_REPORT_CHANNEL: 524288,
+});
+var u = (function (e) {
     return (
         (e.GUILD_HOME = "home"),
         (e.SERVER_GUIDE = "guide"),
@@ -72,4 +56,4 @@ var d = (function (e) {
         e
     );
 })({});
-let f = new Set(Object.values(d));
+let c = new Set(Object.values(u));

@@ -1,156 +1,78 @@
-r.d(t, {
-    L: () => _,
-    T: () => v,
-}),
-    r(896048);
-var n = r(627968),
-    a = r(64700),
-    l = r(503698),
-    s = r.n(l),
-    c = r(397927),
-    i = r(328006),
-    o = r(334840),
-    d = r(48736),
-    u = r(610042),
-    b = r(29086),
-    f = r(203656),
-    p = r(525104),
-    m = r(176201),
-    j = r(178758),
-    x = r(652215),
-    g = r(743981),
-    h = r(985018),
-    O = r(273034),
-    y = r(191017);
-
-function v() {
-    var e;
-    let [t, r] = a.useState(() => {
-            let e = Math.floor(Math.random() * j.Oz.length);
-            return {
-                primary_color: j.Oz[e].start,
-                secondary_color: j.Oz[e].end,
-                tertiary_color: null,
-            };
+s.d(t, { L: () => v, T: () => C });
+var n = s(627968),
+    a = s(64700),
+    r = s(503698),
+    l = s.n(r),
+    i = s(397927),
+    o = s(328006),
+    d = s(334840),
+    c = s(48736),
+    u = s(610042),
+    m = s(29086),
+    _ = s(203656),
+    x = s(525104),
+    g = s(176201),
+    b = s(178758),
+    h = s(652215),
+    f = s(743981),
+    p = s(985018),
+    j = s(273034),
+    k = s(191017);
+function C() {
+    let [e, t] = a.useState(() => {
+            let e = Math.floor(Math.random() * b.Oz.length);
+            return { primary_color: b.Oz[e].start, secondary_color: b.Oz[e].end, tertiary_color: null };
         }),
-        { gradientStyle: l, gradientClassname: o } = (0, c.v5K)({
-            colorStrings: (0, m.K3)(t),
+        { gradientStyle: s, gradientClassname: r } = (0, i.v5K)({
+            colorStrings: (0, g.K3)(e),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
         });
     return (0, n.jsxs)("div", {
-        className: O.kL,
+        className: j.kL,
         children: [
             (0, n.jsx)("div", {
-                className: O.zC,
-                children: (0, n.jsx)(b.V, {
-                    avatar: i.A,
+                className: j.zC,
+                children: (0, n.jsx)(m.V, {
+                    avatar: o.A,
                     username: "Cherry",
-                    usernameStyle: l,
-                    usernameClassName: s()(o, y.q),
-                    message: h.intl.string(h.t["6OSasb"]),
+                    usernameStyle: s,
+                    usernameClassName: l()(r, k.q),
+                    message: p.intl.string(p.t["6OSasb"]),
                 }),
             }),
-            (0, n.jsx)(d.default, {
-                defaultColor: x.TGz,
-                colors: j.Oz,
-                value: t.primary_color,
-                secondaryValue: null != (e = t.secondary_color) ? e : void 0,
-                onChange: (e) => {
-                    var n, a;
-                    return r(
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        }),
-                                    )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: n,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = n);
-                                    });
-                            }
-                            return e;
-                        })({}, t)),
-                        (a = a =
-                            {
-                                primary_color: e,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                            : (function (e, t) {
-                                  var r = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      r.push.apply(r, n);
-                                  }
-                                  return r;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
-                              }),
-                        n),
-                    );
-                },
-                onChangeGradientColors: (e) =>
-                    r({
-                        primary_color: e[0],
-                        secondary_color: e[1],
-                        tertiary_color: null,
-                    }),
+            (0, n.jsx)(c.default, {
+                defaultColor: h.TGz,
+                colors: b.Oz,
+                value: e.primary_color,
+                secondaryValue: e.secondary_color ?? void 0,
+                onChange: (s) => t({ ...e, primary_color: s }),
+                onChangeGradientColors: (e) => t({ primary_color: e[0], secondary_color: e[1], tertiary_color: null }),
                 isGradient: !0,
             }),
         ],
     });
 }
-
-function _(e) {
+function v(e) {
     let { guildId: t } = e,
-        [r, l] = a.useState(g.bl.HEART),
-        s = (0, p.A)(),
-        c = a.useMemo(
-            () => ({
-                unlockedBadges: s.unlockedBadges.slice(0, 10),
-                lockedBadges: [],
-            }),
-            [s],
-        );
+        [s, r] = a.useState(f.bl.HEART),
+        l = (0, x.A)(),
+        i = a.useMemo(() => ({ unlockedBadges: l.unlockedBadges.slice(0, 10), lockedBadges: [] }), [l]);
     return (0, n.jsxs)("div", {
-        className: O.kL,
+        className: j.kL,
         children: [
             (0, n.jsx)("div", {
-                className: O.zC,
-                children: (0, n.jsx)(b.V, {
-                    avatar: o.A,
+                className: j.zC,
+                children: (0, n.jsx)(m.V, {
+                    avatar: d.A,
                     username: "Roka",
-                    usernameStyle: {
-                        color: "var(--brand-400)",
-                    },
-                    message: h.intl.string(h.t["6OSasb"]),
-                    decorations: (0, n.jsx)(f.M, {
-                        guildId: t,
-                        tag: "GGEZ",
-                        badge: r,
-                    }),
+                    usernameStyle: { color: "var(--brand-400)" },
+                    message: p.intl.string(p.t["6OSasb"]),
+                    decorations: (0, n.jsx)(_.M, { guildId: t, tag: "GGEZ", badge: s }),
                 }),
             }),
-            (0, n.jsx)(u.y, {
-                selectedBadge: r,
-                onBadgeClicked: l,
-                badgeCollection: c,
-            }),
+            (0, n.jsx)(u.y, { selectedBadge: s, onBadgeClicked: r, badgeCollection: i }),
         ],
     });
 }

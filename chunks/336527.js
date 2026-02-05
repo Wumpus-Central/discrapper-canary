@@ -1,7 +1,5 @@
-n.d(t, {
-    L: () => p,
-    c: () => f,
-});
+"use strict";
+n.d(t, { L: () => f, c: () => _ });
 var r = n(947399),
     i = n(687567),
     a = n(756055),
@@ -10,13 +8,8 @@ var r = n(947399),
         return !!s;
     },
     l = 12,
-    c = {
-        attributes: !0,
-        characterData: !0,
-        childList: !0,
-        subtree: !0,
-    },
-    u = [
+    u = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    c = [
         "resize",
         "load",
         "transitionend",
@@ -33,7 +26,7 @@ var r = n(947399),
         "focus",
     ],
     d = !1,
-    f = new ((function () {
+    _ = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -62,7 +55,7 @@ var r = n(947399),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, c);
+                        return e.observer && e.observer.observe(document.body, u);
                     };
                 document.body ? t() : i.S.addEventListener("DOMContentLoaded", t);
             }),
@@ -72,7 +65,7 @@ var r = n(947399),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    u.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.S.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -80,7 +73,7 @@ var r = n(947399),
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    u.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.S.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -88,6 +81,6 @@ var r = n(947399),
             e
         );
     })())(),
-    p = function (e) {
-        !s && e > 0 && f.start(), (s += e) || f.stop();
+    f = function (e) {
+        !s && e > 0 && _.start(), (s += e) || _.stop();
     };

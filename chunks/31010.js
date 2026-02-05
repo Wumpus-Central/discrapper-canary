@@ -1,3 +1,1 @@
-e.exports = {
-    T: "tag_c6d624",
-};
+e.exports = { T: "tag_c6d624" };

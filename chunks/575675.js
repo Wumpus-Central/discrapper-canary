@@ -1,59 +1,30 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { A: () => o });
 var r = n(627968),
     i = n(64700),
     a = n(52133),
     s = n(968441);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let c = function (e, t, n) {
-    return null != n && n.forwardRef ? d(e, t) : f(e, t);
+let o = function (e, t, n) {
+    return null != n && n.forwardRef ? u(e, t) : c(e, t);
 };
-
-function u(e) {
-    var t, n;
-    return null != (t = null != (n = e.displayName) ? n : e.name) ? t : "<Unknown>";
+function l(e) {
+    return e.displayName ?? e.name ?? "<Unknown>";
 }
-
-function d(e, t) {
+function u(e, t) {
     return (n) => {
-        var c;
-        let d = "FluxContainer(".concat(u(n), ")");
-        class f extends (c = i.Component) {
+        let o = `FluxContainer(${l(n)})`;
+        class u extends i.Component {
+            static displayName = o;
+            memoizedGetStateFromStores = d(t);
+            listener = new s.r(e, () => {
+                let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
+                (null != e &&
+                    (this.memoizedGetStateFromStores.clear(),
+                    (0, a.A)(this.memoizedGetStateFromStores(this.props.childProps), e))) ||
+                    this.forceUpdate();
+            });
             componentDidMount() {
-                this.listener.attach(d);
+                this.listener.attach(o);
             }
             componentWillUnmount() {
                 this.listener.detach(), this.memoizedGetStateFromStores.clear();
@@ -61,80 +32,41 @@ function d(e, t) {
             render() {
                 let { forwardedConnectStoresRef: e, childProps: t } = this.props,
                     i = this.memoizedGetStateFromStores(t);
-                return (0, r.jsx)(
-                    n,
-                    l(
-                        {
-                            ref: e,
-                        },
-                        t,
-                        i,
-                    ),
-                );
-            }
-            constructor(...n) {
-                super(...n),
-                    o(this, "memoizedGetStateFromStores", p(t)),
-                    o(
-                        this,
-                        "listener",
-                        new s.r(e, () => {
-                            let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
-                            (null != e &&
-                                (this.memoizedGetStateFromStores.clear(),
-                                (0, a.A)(this.memoizedGetStateFromStores(this.props.childProps), e))) ||
-                                this.forceUpdate();
-                        }),
-                    );
+                return (0, r.jsx)(n, { ref: e, ...t, ...i });
             }
         }
-        o(f, "displayName", d);
-        let _ = i.forwardRef((e, t) =>
-            (0, r.jsx)(f, {
-                childProps: e,
-                forwardedConnectStoresRef: t,
-            }),
-        );
-        return (_.displayName = "ForwardRef(".concat(d, ")")), _;
+        let c = i.forwardRef((e, t) => (0, r.jsx)(u, { childProps: e, forwardedConnectStoresRef: t }));
+        return (c.displayName = `ForwardRef(${o})`), c;
     };
 }
-
-function f(e, t) {
+function c(e, t) {
     return (n) => {
-        var c;
-        let d = "FluxContainer(".concat(u(n), ")");
-        class f extends (c = i.Component) {
+        let o = `FluxContainer(${l(n)})`;
+        class u extends i.Component {
+            static displayName = o;
+            memoizedGetStateFromStores = d(t);
+            listener = new s.r(e, () => {
+                let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
+                (null != e &&
+                    (this.memoizedGetStateFromStores.clear(),
+                    (0, a.A)(this.memoizedGetStateFromStores(this.props), e))) ||
+                    this.forceUpdate();
+            });
             componentDidMount() {
-                this.listener.attach(d);
+                this.listener.attach(o);
             }
             componentWillUnmount() {
                 this.listener.detach(), this.memoizedGetStateFromStores.clear();
             }
             render() {
                 let e = this.memoizedGetStateFromStores(this.props);
-                return (0, r.jsx)(n, l({}, this.props, e));
-            }
-            constructor(...n) {
-                super(...n),
-                    o(this, "memoizedGetStateFromStores", p(t)),
-                    o(
-                        this,
-                        "listener",
-                        new s.r(e, () => {
-                            let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
-                            (null != e &&
-                                (this.memoizedGetStateFromStores.clear(),
-                                (0, a.A)(this.memoizedGetStateFromStores(this.props), e))) ||
-                                this.forceUpdate();
-                        }),
-                    );
+                return (0, r.jsx)(n, { ...this.props, ...e });
             }
         }
-        return o(f, "displayName", d), f;
+        return u;
     };
 }
-
-function p(e) {
+function d(e) {
     let t = null,
         n = null,
         r = (e) =>

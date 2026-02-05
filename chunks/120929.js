@@ -1,31 +1,29 @@
-i.d(e, {
-    T0: () => I,
-});
+i.d(e, { T0: () => _ });
 var n = i(934551),
     l = i(419954),
     s = i(780964),
     r = i(358776),
-    u = i(513664),
-    a = i(540205),
+    a = i(513664),
+    u = i(540205),
     o = i(473564),
-    T = i(721879),
-    A = i(812402),
-    S = i(531525),
-    E = i(985018);
-let d = (0, l.t_)(s.X.ACTIVITY_PRIVACY_PANEL, {
-        useTitle: () => E.intl.string(E.t.Cq98yL),
-        StronglyDiscouragedCustomComponent: u.Ay,
+    d = i(721879),
+    T = i(812402),
+    A = i(531525),
+    S = i(985018);
+let E = (0, l.t_)(s.X.ACTIVITY_PRIVACY_PANEL, {
+        useTitle: () => S.intl.string(S.t.Cq98yL),
+        StronglyDiscouragedCustomComponent: a.Ay,
         buildLayout: () => [],
         usePredicate: () => !(0, r.dk)("ActivityPrivacyPanel"),
     }),
-    _ = (0, l.t_)(s.X.ACTIVITY_PRIVACY_PANEL, {
-        useTitle: () => E.intl.string(E.t.Cq98yL),
+    g = (0, l.t_)(s.X.ACTIVITY_PRIVACY_PANEL, {
+        useTitle: () => S.intl.string(S.t.Cq98yL),
         usePredicate: () => (0, r.dk)("ActivityPrivacyPanel"),
-        buildLayout: () => [a.o, o.L, T.b, A.w],
+        buildLayout: () => [u.o, o.L, d.b, T.w],
     }),
-    I = (0, l.i4)(s.X.ACTIVITY_PRIVACY_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(E.t.Cq98yL),
-        getLegacySearchKey: () => ((0, r.WJ)("ActivityPrivacyPanel") ? void 0 : S.H.ACTIVITY_PRIVACY),
+    _ = (0, l.i4)(s.X.ACTIVITY_PRIVACY_SIDEBAR_ITEM, {
+        useTitle: () => S.intl.string(S.t.Cq98yL),
+        getLegacySearchKey: () => ((0, r.WJ)("ActivityPrivacyPanel") ? void 0 : A.H.ACTIVITY_PRIVACY),
         icon: n.UserPlatformIcon,
-        buildLayout: () => ((0, r.WJ)("ActivityPrivacyPanel") ? [_] : [d]),
+        buildLayout: () => ((0, r.WJ)("ActivityPrivacyPanel") ? [g] : [E]),
     });

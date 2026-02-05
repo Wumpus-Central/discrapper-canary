@@ -1,64 +1,45 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
 var l = n(793574),
-    i = n(688810),
+    s = n(688810),
     a = n(915618),
-    s = n(857253),
+    r = n(857253),
     o = n(670470),
-    c = n(502633),
-    u = n(430452),
-    d = n(699022),
-    f = n(680949),
-    p = n(319610),
-    h = n(786515),
-    b = n(878559);
-
-function g(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
-        { analyticsLocations: m } = (0, i.Ay)(l.A.VOICE_CONTROL_TRAY),
-        A = (0, s.A)(),
-        { isSharedCanvasEnabled: y } = c.A.useExperiment({
-            guildId: null == t ? void 0 : t.guild_id,
-            location: "b7309a_1",
-        }),
-        { enableViewerClipping: O } = o.A.useExperiment(
-            {
-                location: "VoiceEffectsActionBar",
-            },
-            {
-                autoTrackExposure: !1,
-            },
+    d = n(502633),
+    c = n(430452),
+    u = n(699022),
+    h = n(680949),
+    A = n(319610),
+    g = n(786515),
+    m = n(878559);
+function p(e) {
+    let { channel: t, hasActiveStream: n, showRightDivider: p = !1 } = e,
+        { analyticsLocations: _ } = (0, s.Ay)(l.A.VOICE_CONTROL_TRAY),
+        x = (0, r.A)(),
+        { isSharedCanvasEnabled: f } = d.A.useExperiment({ guildId: t?.guild_id, location: "b7309a_1" }),
+        { enableViewerClipping: E } = o.A.useExperiment(
+            { location: "VoiceEffectsActionBar" },
+            { autoTrackExposure: !1 },
         ),
-        j = (0, a.A)(u.A);
-    if (null == t || null != A) return null;
-    let v = O && j,
-        x = y && n;
-    return v || x
-        ? (0, r.jsxs)(i.f5, {
-              value: m,
+        C = (0, a.A)(c.A);
+    if (null == t || null != x) return null;
+    let I = E && C,
+        S = f && n;
+    return I || S
+        ? (0, i.jsxs)(s.f5, {
+              value: _,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: b.w,
+                  (0, i.jsxs)("div", {
+                      className: m.w,
                       children: [
-                          v &&
-                              (0, r.jsx)(d.A, {
-                                  channel: t,
-                              }),
-                          x && (0, r.jsx)(f.A, {}),
-                          x &&
-                              (0, r.jsx)(p.A, {
-                                  channel: t,
-                              }),
-                          x && (0, r.jsx)(h.A, {}),
+                          I && (0, i.jsx)(u.A, { channel: t }),
+                          S && (0, i.jsx)(h.A, {}),
+                          S && (0, i.jsx)(A.A, { channel: t }),
+                          S && (0, i.jsx)(g.A, {}),
                       ],
                   }),
-                  g &&
-                      (0, r.jsx)("div", {
-                          className: b.y,
-                      }),
+                  p && (0, i.jsx)("div", { className: m.y }),
               ],
           })
         : null;

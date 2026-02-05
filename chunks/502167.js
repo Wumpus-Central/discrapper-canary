@@ -1,3 +1,2 @@
-e.exports = {
-    W: "errorPage__01b8d",
-};
+"use strict";
+e.exports = { W: "errorPage__01b8d" };

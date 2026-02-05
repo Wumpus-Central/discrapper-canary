@@ -1,44 +1,34 @@
-n.d(t, {
-    r: () => p,
-    u: () => g,
-}),
-    n(896048);
-var r = n(448761),
+n.d(t, { r: () => p, u: () => A });
+var i = n(448761),
     l = n(311907),
-    i = n(870136),
-    o = n(406704),
-    a = n(576705),
-    c = n(287809),
-    s = n(652215),
-    d = n(818348);
-
+    a = n(870136),
+    r = n(406704),
+    s = n(576705),
+    o = n(287809),
+    d = n(652215),
+    c = n(818348);
 function u(e, t, n) {
     return (
-        (e.isPrivate() ? !e.isSystemDM() : n.can(d.xB.SEND_MESSAGES, e) && n.can(d.xB.READ_MESSAGE_HISTORY, e)) &&
-        r.M.REPLYABLE.has(t.type)
+        (e.isPrivate() ? !e.isSystemDM() : n.can(c.xB.SEND_MESSAGES, e) && n.can(c.xB.READ_MESSAGE_HISTORY, e)) &&
+        i.M.REPLYABLE.has(t.type)
     );
 }
-
-function f(e, t, n, r, l) {
-    let i = t.hasFlag(s.pr7.EPHEMERAL),
-        o = t.state === s.cmJ.SENT,
-        a = !e.isArchivedThread() || l;
-    return n && o && !i && !r && a;
+function g(e, t, n, i, l) {
+    let a = t.hasFlag(d.pr7.EPHEMERAL),
+        r = t.state === d.cmJ.SENT,
+        s = !e.isArchivedThread() || l;
+    return n && r && !a && !i && s;
 }
-
-function g(e, t) {
-    var n;
-    let r = (0, o.lK)(e),
-        [, c] = (0, i.c)(null != (n = null == e ? void 0 : e.getGuildId()) ? n : void 0),
-        s = (0, l.bG)([a.A], () => null != e && null != t && u(e, t, a.A));
-    return null != e && null != t && f(e, t, s, c, r);
+function A(e, t) {
+    let n = (0, r.lK)(e),
+        [, i] = (0, a.c)(e?.getGuildId() ?? void 0),
+        o = (0, l.bG)([s.A], () => null != e && null != t && u(e, t, s.A));
+    return null != e && null != t && g(e, t, o, i, n);
 }
-
 function p(e, t) {
-    var n;
-    let r = (0, o.Et)(e),
-        l = u(e, t, a.A),
-        s = c.default.getCurrentUser(),
-        [, d] = (0, i.U0)(null == s ? void 0 : s.id, null != (n = e.getGuildId()) ? n : void 0);
-    return f(e, t, l, d, r);
+    let n = (0, r.Et)(e),
+        i = u(e, t, s.A),
+        l = o.default.getCurrentUser(),
+        [, d] = (0, a.U0)(l?.id, e.getGuildId() ?? void 0);
+    return g(e, t, i, d, n);
 }

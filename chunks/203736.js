@@ -1,30 +1,19 @@
-n.d(t, {
-    A: () => r,
-}),
-    n(896048);
-var l = n(64700);
-
-function r() {
+i.d(t, { A: () => a });
+var l = i(64700);
+function a() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     let [e, t] = l.useState(
         (function () {
-            var e, t;
             return (
                 arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                {
-                    width: null != (e = window.innerWidth) ? e : 1080,
-                    height: null != (t = window.innerHeight) ? t : 1080,
-                }
+                { width: window.innerWidth ?? 1080, height: window.innerHeight ?? 1080 }
             );
         })(),
     );
     return (
         l.useLayoutEffect(() => {
             function e() {
-                t({
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                });
+                t({ width: window.innerWidth, height: window.innerHeight });
             }
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),

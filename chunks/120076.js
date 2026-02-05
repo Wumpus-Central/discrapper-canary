@@ -1,117 +1,74 @@
-n.d(t, {
-    e: () => d,
-}),
-    n(896048);
-var l = n(627968),
-    r = n(64700);
+n.d(t, { e: () => c });
+var i = n(627968),
+    l = n(64700);
 n(503698);
-var i = n(92674),
-    s = n(397927),
+var s = n(92674),
+    r = n(397927),
     a = n(985018),
-    o = n(301450);
-
-function c(e) {
+    d = n(301450);
+function o(e) {
     let { testimonial: t, className: n } = e,
-        { message: r, profilePic: i, adminTitle: c, emphasisColor: d = "interactive-text-default" } = t;
-    return (0, l.jsxs)("div", {
+        { message: l, profilePic: s, adminTitle: o, emphasisColor: c = "interactive-text-default" } = t;
+    return (0, i.jsxs)("div", {
         className: n,
         children: [
-            (0, l.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: a.intl.format(r, {
+                children: a.intl.format(l, {
                     testimonialHook: (e, t) =>
-                        (0, l.jsx)(
-                            s.Text,
-                            {
-                                tag: "span",
-                                variant: "text-sm/bold",
-                                color: d,
-                                children: e,
-                            },
-                            t,
-                        ),
+                        (0, i.jsx)(r.Text, { tag: "span", variant: "text-sm/bold", color: c, children: e }, t),
                 }),
             }),
-            (0, l.jsxs)("div", {
-                className: o.f1,
+            (0, i.jsxs)("div", {
+                className: d.f1,
                 children: [
-                    (0, l.jsx)(s.euF, {
-                        src: i,
-                        size: s._3J.SIZE_16,
-                        "aria-hidden": !0,
-                    }),
-                    (0, l.jsx)(s.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-default",
-                        children: c,
-                    }),
+                    (0, i.jsx)(r.euF, { src: s, size: r._3J.SIZE_16, "aria-hidden": !0 }),
+                    (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-default", children: o }),
                 ],
             }),
         ],
     });
 }
-
-function d(e) {
+function c(e) {
     let { testimonials: t } = e,
-        [[n, i], c] = r.useState([0, "right"]),
-        d = r.useCallback(() => {
-            c((e) => {
+        [[n, s], o] = l.useState([0, "right"]),
+        c = l.useCallback(() => {
+            o((e) => {
                 let [n] = e;
                 return 0 === n ? [t.length - 1, "left"] : [n - 1, "left"];
             });
-        }, [c, t.length]),
-        m = r.useCallback(() => {
-            c((e) => {
+        }, [o, t.length]),
+        m = l.useCallback(() => {
+            o((e) => {
                 let [n] = e;
                 return [(n + 1) % t.length, "right"];
             });
-        }, [c, t.length]),
-        g = t[n],
-        f = r.useCallback(
-            (e, t, n, r) =>
-                (0, l.jsx)(
-                    u,
-                    {
-                        item: t,
-                        state: n,
-                        cleanup: r,
-                        direction: i,
-                    },
-                    e,
-                ),
-            [i],
-        );
-    return (0, l.jsxs)("div", {
-        className: o.FD,
+        }, [o, t.length]),
+        N = t[n],
+        h = l.useCallback((e, t, n, l) => (0, i.jsx)(u, { item: t, state: n, cleanup: l, direction: s }, e), [s]);
+    return (0, i.jsxs)("div", {
+        className: d.FD,
         children: [
-            (0, l.jsx)("div", {
-                className: o.nI,
-                children: (0, l.jsx)(s.Fai, {
-                    items: [g],
-                    renderItem: f,
-                    getItemKey: (e) => e.adminTitle,
-                }),
+            (0, i.jsx)("div", {
+                className: d.nI,
+                children: (0, i.jsx)(r.Fai, { items: [N], renderItem: h, getItemKey: (e) => e.adminTitle }),
             }),
-            (0, l.jsx)(s.Text, {
-                variant: "text-lg/bold",
-                className: o.wV,
-                children: "“",
-            }),
-            (0, l.jsxs)("div", {
-                className: o.Jv,
+            (0, i.jsx)(r.Text, { variant: "text-lg/bold", className: d.wV, children: "“" }),
+            (0, i.jsxs)("div", {
+                className: d.Jv,
                 children: [
-                    (0, l.jsx)(s.K0, {
+                    (0, i.jsx)(r.K0, {
                         size: "sm",
                         variant: "secondary",
-                        icon: s.rJJ,
-                        onClick: d,
+                        icon: r.rJJ,
+                        onClick: c,
                         "aria-label": a.intl.string(a.t["13/7kX"]),
                     }),
-                    (0, l.jsx)(s.K0, {
+                    (0, i.jsx)(r.K0, {
                         size: "sm",
                         variant: "secondary",
-                        icon: s.EdP,
+                        icon: r.EdP,
                         onClick: m,
                         "aria-label": a.intl.string(a.t.PDTjLN),
                     }),
@@ -120,30 +77,21 @@ function d(e) {
         ],
     });
 }
-
 function u(e) {
-    let { item: t, state: n, cleanup: r, direction: a } = e,
-        [d] = (0, s.zhh)(
+    let { item: t, state: n, cleanup: l, direction: a } = e,
+        [c] = (0, r.zhh)(
             () => {
                 switch (n) {
-                    case s.wLy.ENTERED:
+                    case r.wLy.ENTERED:
                         return {
-                            from: {
-                                transform: "right" === a ? "translateX(150%)" : "translate(-150%)",
-                            },
-                            to: {
-                                transform: "translateX(0%)",
-                            },
+                            from: { transform: "right" === a ? "translateX(150%)" : "translate(-150%)" },
+                            to: { transform: "translateX(0%)" },
                         };
-                    case s.wLy.YEETED:
+                    case r.wLy.YEETED:
                         return {
-                            from: {
-                                transform: "translateX(0%)",
-                            },
-                            to: {
-                                transform: "right" === a ? "translateX(-150%)" : "translate(150%)",
-                            },
-                            onRest: r,
+                            from: { transform: "translateX(0%)" },
+                            to: { transform: "right" === a ? "translateX(-150%)" : "translate(150%)" },
+                            onRest: l,
                         };
                     default:
                         return {};
@@ -152,11 +100,5 @@ function u(e) {
             "respect-motion-settings",
             [n],
         );
-    return (0, l.jsx)(i.animated.div, {
-        style: d,
-        children: (0, l.jsx)(c, {
-            className: o.EV,
-            testimonial: t,
-        }),
-    });
+    return (0, i.jsx)(s.animated.div, { style: c, children: (0, i.jsx)(o, { className: d.EV, testimonial: t }) });
 }

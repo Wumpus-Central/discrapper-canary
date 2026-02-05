@@ -1,3 +1,1 @@
-e.exports = {
-    U: "_7dfa5d8930324c60",
-};
+e.exports = { U: "fileUpload__8b203" };

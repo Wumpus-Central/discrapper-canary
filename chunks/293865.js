@@ -1,199 +1,107 @@
-l.d(n, {
-    A: () => N,
-});
-var t = l(627968),
-    a = l(64700),
-    r = l(503698),
-    i = l.n(r),
-    s = l(311907),
-    c = l(397927),
-    d = l(736653),
+l.d(n, { A: () => C });
+var a = l(627968),
+    s = l(64700),
+    t = l(503698),
+    i = l.n(t),
+    r = l(311907),
+    d = l(397927),
+    c = l(736653),
     o = l(263063),
     u = l(57991),
-    f = l(961973),
-    h = l(997509),
-    b = l(855687),
-    m = l(576705),
-    x = l(486020),
-    g = l(652215),
-    j = l(985018),
-    A = l(574885),
-    p = l(66087),
-    v = l(540725);
-
-function y(e) {
+    h = l(961973),
+    m = l(997509),
+    x = l(855687),
+    g = l(576705),
+    A = l(486020),
+    _ = l(652215),
+    f = l(985018),
+    j = l(574885),
+    b = l(66087),
+    I = l(540725);
+function N(e) {
     let { guild: n } = e,
         {
             variant: l,
-            icon: a,
-            text: r,
-        } = n.features.has(g.GuildFeatures.BANNER)
-            ? {
-                  variant: "overlay-secondary",
-                  icon: c.XGR,
-                  text: j.intl.string(j.t.b0y3DL),
-              }
-            : {
-                  variant: "expressive",
-                  icon: c._Jp,
-                  text: j.intl.string(j.t["+7XY31"]),
-              };
-    return (0, t.jsx)("div", {
-        className: A.SY,
-        children: (0, t.jsx)(c.Button, {
+            icon: s,
+            text: t,
+        } = n.features.has(_.GuildFeatures.BANNER)
+            ? { variant: "overlay-secondary", icon: d.XGR, text: f.intl.string(f.t.b0y3DL) }
+            : { variant: "expressive", icon: d._Jp, text: f.intl.string(f.t["+7XY31"]) };
+    return (0, a.jsx)("div", {
+        className: j.SY,
+        children: (0, a.jsx)(d.Button, {
             variant: l,
-            icon: a,
-            text: r,
+            icon: s,
+            text: t,
             onClick: () => {
-                h.A.open(n.id, g.BEX.ONBOARDING, void 0, g.nd0.SERVER_GUIDE);
+                m.A.open(n.id, _.BEX.ONBOARDING, void 0, _.nd0.SERVER_GUIDE);
             },
         }),
     });
 }
-let N = a.memo(function (e) {
+let C = s.memo(function (e) {
     let n,
-        { guild: r, titleClassName: h } = e,
-        { homeHeaderImage: N, isHomeHeaderImageSet: O } = {
-            homeHeaderImage: (n = a.useMemo(
-                () =>
-                    null == r
-                        ? null
-                        : x.Ay.getGuildHomeHeaderURL({
-                              id: r.id,
-                              homeHeader: r.homeHeader,
-                          }),
-                [r],
+        { guild: t, titleClassName: m } = e,
+        { homeHeaderImage: C, isHomeHeaderImageSet: p } = {
+            homeHeaderImage: (n = s.useMemo(
+                () => (null == t ? null : A.Ay.getGuildHomeHeaderURL({ id: t.id, homeHeader: t.homeHeader })),
+                [t],
             )),
             isHomeHeaderImageSet: null != n,
             homeHeaderScroll: 200 * (null != n),
         },
-        I = (0, f.A2)(r.id),
-        C = (0, s.bG)([m.A], () => (0, b.K)(m.A, r)),
-        _ = (0, d.Ay)();
-    return (0, t.jsxs)("div", {
-        className: A.wx,
+        v = (0, h.A2)(t.id),
+        E = (0, r.bG)([g.A], () => (0, x.K)(g.A, t)),
+        G = (0, c.Ay)();
+    return (0, a.jsxs)("div", {
+        className: j.wx,
         children: [
-            (0, t.jsxs)("div", {
-                className: A.w5,
+            (0, a.jsxs)("div", {
+                className: j.w5,
                 children: [
-                    (0, t.jsx)("div", {
-                        className: i()(A.NC, {
-                            [A.KN]: !O,
-                        }),
-                        style: {
-                            backgroundImage: "url(".concat(O ? N : "dark" === _ ? p : v, ")"),
-                        },
+                    (0, a.jsx)("div", {
+                        className: i()(j.NC, { [j.KN]: !p }),
+                        style: { backgroundImage: `url(${p ? C : "dark" === G ? b : I})` },
                     }),
-                    I &&
-                        (0, t.jsx)(y, {
-                            guild: r,
-                        }),
+                    v && (0, a.jsx)(N, { guild: t }),
                 ],
             }),
-            (0, t.jsx)("div", {
-                className: A.oB,
-                children: (0, t.jsxs)("div", {
-                    className: h,
+            (0, a.jsx)("div", {
+                className: j.oB,
+                children: (0, a.jsxs)("div", {
+                    className: m,
                     children: [
-                        (0, t.jsx)(o.A, {
-                            className: A.nr,
-                            guild: r,
-                            size: o.A.Sizes.XLARGE,
-                            active: !0,
-                        }),
-                        (0, t.jsx)(c.Fmo, {
-                            children: (0, t.jsxs)("div", {
-                                className: A.Bv,
+                        (0, a.jsx)(o.A, { className: j.nr, guild: t, size: o.A.Sizes.XLARGE, active: !0 }),
+                        (0, a.jsx)(d.Fmo, {
+                            children: (0, a.jsxs)("div", {
+                                className: j.Bv,
                                 children: [
-                                    (0, t.jsx)(c.Heading, {
-                                        className: A.Bv,
+                                    (0, a.jsx)(d.Heading, {
+                                        className: j.Bv,
                                         variant: "heading-xxl/bold",
-                                        children: r.name,
+                                        children: t.name,
                                     }),
-                                    (0, t.jsx)(u.A, {
+                                    (0, a.jsx)(u.A, {
                                         size: 24,
-                                        guild: r,
+                                        guild: t,
                                         tooltipPosition: "bottom",
-                                        tooltipColor: c.STz.Colors.PRIMARY,
+                                        tooltipColor: d.STz.Colors.PRIMARY,
                                     }),
-                                    C &&
-                                        (0, t.jsx)("div", {
+                                    E &&
+                                        (0, a.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
-                                            className: A.ak,
-                                            children: (0, t.jsx)(c.Button, {
+                                            className: j.ak,
+                                            children: (0, a.jsx)(d.Button, {
                                                 variant: "secondary",
-                                                text: j.intl.string(j.t.VINpSK),
+                                                text: f.intl.string(f.t.VINpSK),
                                                 onClick: () =>
-                                                    (0, c.mMO)(async () => {
+                                                    (0, d.mMO)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             l.e("43600"),
-                                                            l.e("65202"),
+                                                            l.e("42821"),
                                                         ]).then(l.bind(l, 234355));
-                                                        return (n) => {
-                                                            var l, a;
-                                                            return (0, t.jsx)(
-                                                                e,
-                                                                ((l = (function (e) {
-                                                                    for (var n = 1; n < arguments.length; n++) {
-                                                                        var l =
-                                                                                null != arguments[n]
-                                                                                    ? arguments[n]
-                                                                                    : {},
-                                                                            t = Object.keys(l);
-                                                                        "function" ==
-                                                                            typeof Object.getOwnPropertySymbols &&
-                                                                            (t = t.concat(
-                                                                                Object.getOwnPropertySymbols(l).filter(
-                                                                                    function (e) {
-                                                                                        return Object.getOwnPropertyDescriptor(
-                                                                                            l,
-                                                                                            e,
-                                                                                        ).enumerable;
-                                                                                    },
-                                                                                ),
-                                                                            )),
-                                                                            t.forEach(function (n) {
-                                                                                var t;
-                                                                                (t = l[n]),
-                                                                                    n in e
-                                                                                        ? Object.defineProperty(e, n, {
-                                                                                              value: t,
-                                                                                              enumerable: !0,
-                                                                                              configurable: !0,
-                                                                                              writable: !0,
-                                                                                          })
-                                                                                        : (e[n] = t);
-                                                                            });
-                                                                    }
-                                                                    return e;
-                                                                })({}, n)),
-                                                                (a = a =
-                                                                    {
-                                                                        guild: r,
-                                                                        source: g.PE1.GUILD_HOME,
-                                                                    }),
-                                                                Object.getOwnPropertyDescriptors
-                                                                    ? Object.defineProperties(
-                                                                          l,
-                                                                          Object.getOwnPropertyDescriptors(a),
-                                                                      )
-                                                                    : (function (e, n) {
-                                                                          var l = Object.keys(e);
-                                                                          if (Object.getOwnPropertySymbols) {
-                                                                              var t = Object.getOwnPropertySymbols(e);
-                                                                              l.push.apply(l, t);
-                                                                          }
-                                                                          return l;
-                                                                      })(Object(a)).forEach(function (e) {
-                                                                          Object.defineProperty(
-                                                                              l,
-                                                                              e,
-                                                                              Object.getOwnPropertyDescriptor(a, e),
-                                                                          );
-                                                                      }),
-                                                                l),
-                                                            );
-                                                        };
+                                                        return (n) =>
+                                                            (0, a.jsx)(e, { ...n, guild: t, source: _.PE1.GUILD_HOME });
                                                     }),
                                             }),
                                         }),

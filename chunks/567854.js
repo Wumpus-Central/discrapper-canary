@@ -1,38 +1,34 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048);
+n.d(t, { A: () => h });
 var l = n(64700),
-    r = n(686956),
-    i = n(956793),
-    a = n(198982),
+    i = n(686956),
+    a = n(956793),
+    r = n(198982),
     s = n(421838),
     c = n(272379),
-    o = n(849736),
-    u = n(446600),
-    d = n(897513);
-
-function x(e, t) {
+    d = n(849736),
+    o = n(446600),
+    u = n(897513);
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        [x, f] = l.useState(!1),
-        [j, g] = l.useState(null),
-        h = l.useMemo(() => u.A.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-        m = (0, c.Z)(e);
+        [h, g] = l.useState(!1),
+        [x, _] = l.useState(null),
+        m = l.useMemo(() => o.A.getStageInstanceByChannel(e?.id), [e?.id]),
+        A = (0, c.Z)(e);
     return {
-        loading: x,
-        error: j,
+        loading: h,
+        error: x,
         onSave: async (l) => {
-            let { topic: c, privacyLevel: u, sendStartNotification: x } = l;
-            if (null != e && "" !== c && null != u) {
-                f(!0), g(null), null != n && (r.A.selectGuild(n), i.default.selectVoiceChannel(e.id));
+            let { topic: c, privacyLevel: o, sendStartNotification: h } = l;
+            if (null != e && "" !== c && null != o) {
+                g(!0), _(null), null != n && (i.A.selectGuild(n), a.default.selectVoiceChannel(e.id));
                 try {
                     let n;
-                    null != h
-                        ? (n = await o.b3(e, c, u))
-                        : ((n = await o.Nx(e, c, u, null != x && x)), m && s.sF(d._.LIVE_STAGE_NOTIFICATION_BADGE)),
+                    null != m
+                        ? (n = await d.b3(e, c, o))
+                        : ((n = await d.Nx(e, c, o, h ?? !1)), A && s.sF(u._.LIVE_STAGE_NOTIFICATION_BADGE)),
                         t(n);
                 } catch (e) {
-                    g(new a.LG(e)), f(!1);
+                    _(new r.LG(e)), g(!1);
                 }
             }
         },

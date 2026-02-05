@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nz: "chipletContainerInner__10651",
     os: "chipletContainerInline__10651",

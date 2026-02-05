@@ -10,30 +10,16 @@ e.exports = function (e) {
             symbol: "_ __ %|0 %%|0",
         },
         contains: [
-            {
-                className: "comment",
-                begin: "/\\*",
-                end: "\\*/",
-                contains: ["self"],
-            },
+            { className: "comment", begin: "/\\*", end: "\\*/", contains: ["self"] },
             e.QUOTE_STRING_MODE,
             {
                 className: "number",
                 relevance: 0,
                 variants: [
-                    {
-                        begin: "\\b(\\d+|\\d+\\.|\\.\\d+|\\d+\\.\\d+)[Ee][-+]?\\d+\\b",
-                    },
-                    {
-                        begin: "\\b(\\d+|\\d+\\.|\\.\\d+|\\d+\\.\\d+)[Bb][-+]?\\d+\\b",
-                        relevance: 10,
-                    },
-                    {
-                        begin: "\\b(\\.\\d+|\\d+\\.\\d+)\\b",
-                    },
-                    {
-                        begin: "\\b(\\d+|0[0-9A-Za-z]+)\\.?\\b",
-                    },
+                    { begin: "\\b(\\d+|\\d+\\.|\\.\\d+|\\d+\\.\\d+)[Ee][-+]?\\d+\\b" },
+                    { begin: "\\b(\\d+|\\d+\\.|\\.\\d+|\\d+\\.\\d+)[Bb][-+]?\\d+\\b", relevance: 10 },
+                    { begin: "\\b(\\.\\d+|\\d+\\.\\d+)\\b" },
+                    { begin: "\\b(\\d+|0[0-9A-Za-z]+)\\.?\\b" },
                 ],
             },
         ],

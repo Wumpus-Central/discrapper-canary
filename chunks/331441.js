@@ -1,5 +1,3 @@
-n.d(t, {
-    R: () => i,
-});
-var r,
-    i = (((r = {}).HOME = "HOME"), (r.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), r);
+n.d(t, { R: () => s });
+var i,
+    s = (((i = {}).HOME = "HOME"), (i.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), i);

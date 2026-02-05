@@ -1,25 +1,14 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(172218);
-
-function a(e) {
-    let { wishlistId: t, onAction: n, productLines: a } = e,
-        [s, o] = (0, r.useState)(!1),
-        l = (0, r.useCallback)(
+n.d(t, { A: () => s });
+var i = n(64700),
+    l = n(172218);
+function s(e) {
+    let { wishlistId: t, onAction: n, productLines: s } = e,
+        [a, r] = (0, i.useState)(!1),
+        o = (0, i.useCallback)(
             (e) => {
-                e &&
-                    null != t &&
-                    (n({
-                        action: "VIEW_WISHLIST",
-                        wishlistId: t,
-                        productLines: null != a ? a : void 0,
-                    }),
-                    o(!0));
+                e && null != t && (n({ action: "VIEW_WISHLIST", wishlistId: t, productLines: s ?? void 0 }), r(!0));
             },
-            [t, n, a],
+            [t, n, s],
         );
-    return (0, i.K)(l, void 0, null != t && !s);
+    return (0, l.K)(o, void 0, null != t && !a);
 }

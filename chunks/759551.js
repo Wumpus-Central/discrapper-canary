@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => l,
-});
+"use strict";
+r.d(t, { A: () => l });
 var n = r(64700),
     o = r(205662),
     a = r(981735),
@@ -11,20 +10,11 @@ let l = function (e) {
         l = e.group,
         s = e.active,
         u = (0, o.default)({
-            default: {
-                group: {
-                    paddingBottom: "10px",
-                    width: "40px",
-                    float: "left",
-                    marginRight: "10px",
-                },
-            },
+            default: { group: { paddingBottom: "10px", width: "40px", float: "left", marginRight: "10px" } },
         });
     return n.createElement(
         "div",
-        {
-            style: u.group,
-        },
+        { style: u.group },
         (0, a.A)(l, function (e, o) {
             return n.createElement(i.A, {
                 key: e,

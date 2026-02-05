@@ -1,10 +1,8 @@
-n.d(t, {
-    N: () => r,
-});
-var l,
-    r =
-        (((l = {}).NO_POPOUT = "NO_POPOUT"),
-        (l.OVERLAY = "OVERLAY"),
-        (l.VOICE_UI = "VOICE_UI"),
-        (l.CALL_TILE = "CALL_TILE"),
-        l);
+n.d(t, { N: () => l });
+var i,
+    l =
+        (((i = {}).NO_POPOUT = "NO_POPOUT"),
+        (i.OVERLAY = "OVERLAY"),
+        (i.VOICE_UI = "VOICE_UI"),
+        (i.CALL_TILE = "CALL_TILE"),
+        i);

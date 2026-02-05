@@ -1,21 +1,17 @@
-n.d(t, {
-    A: () => b,
-}),
-    n(896048),
-    n(65821),
-    n(457529);
+"use strict";
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(484030),
     s = n(574381),
     o = n(311907),
     l = n(689194),
-    c = n(954571),
-    u = n(728458),
+    u = n(954571),
+    c = n(728458),
     d = n(858013),
-    f = n(156186),
-    p = n(602450),
-    _ = n(587093),
+    _ = n(156186),
+    f = n(602450),
+    p = n(587093),
     h = n(69369),
     m = n(557571),
     g = n(652215);
@@ -29,101 +25,99 @@ let E = () => {
                 connect: s,
                 installTimeout: E,
             } = (0, m.lV)(),
-            { status: b } = (0, o.bG)([l.A], () => l.A.state, []),
-            [y, O] = (0, i.useState)(0),
-            { installedDiscordPrivateBrowsingPerk: A } = (0, o.bG)([h.A], () => h.A.getState(), []),
-            [v, S] = (0, i.useState)(!1),
-            [I, T] = (0, i.useState)(null);
+            { status: A } = (0, o.bG)([l.A], () => l.A.state, []),
+            [I, T] = (0, i.useState)(0),
+            { installedDiscordPrivateBrowsingPerk: y } = (0, o.bG)([h.A], () => h.A.getState(), []),
+            [S, v] = (0, i.useState)(!1),
+            [C, b] = (0, i.useState)(null);
         return (
             (0, i.useEffect)(() => {
-                v ||
-                    (S(!0),
-                    e !== p.Lk.INSTALLING &&
+                S ||
+                    (v(!0),
+                    e !== f.Lk.INSTALLING &&
                         (0, d.t)().then((e) => {
-                            e === p.Lk.NOT_INSTALLED
-                                ? t(p.Lk.NOT_INSTALLED)
-                                : e === p.Lk.EXISTING_INSTALLATION && A
-                                  ? t(p.Lk.INSTALLING)
+                            e === f.Lk.NOT_INSTALLED
+                                ? t(f.Lk.NOT_INSTALLED)
+                                : e === f.Lk.EXISTING_INSTALLATION && y
+                                  ? t(f.Lk.INSTALLING)
                                   : t(e);
                         }));
-            }, [t, A, v, e]),
+            }, [t, y, S, e]),
             (0, i.useEffect)(() => {
-                A && e === p.Lk.NOT_INSTALLED && (0, _.K)(!1),
-                    A && e === p.Lk.EXISTING_INSTALLATION && t(p.Lk.INSTALLED);
-            }, [A, e, t]),
+                y && e === f.Lk.NOT_INSTALLED && (0, p.K)(!1),
+                    y && e === f.Lk.EXISTING_INSTALLATION && t(f.Lk.INSTALLED);
+            }, [y, e, t]),
             (0, i.useEffect)(() => {
-                if (![p.Lk.INSTALLED, p.Lk.WAITING_FOR_TERMS].includes(e)) return;
+                if (![f.Lk.INSTALLED, f.Lk.WAITING_FOR_TERMS].includes(e)) return;
                 let n = setInterval(async () => {
-                    (await a()) === p.Lk.NOT_INSTALLED && t(p.Lk.NOT_INSTALLED);
+                    (await a()) === f.Lk.NOT_INSTALLED && t(f.Lk.NOT_INSTALLED);
                 }, 1e3);
                 return () => clearInterval(n);
             }, [e, t, a]),
             (0, i.useEffect)(() => {
-                if (![p.Lk.INSTALLED, p.Lk.EXISTING_INSTALLATION].includes(e)) return void n(p.l7.DISCONNECTED);
-                switch (b) {
-                    case p.N2.CONNECTED:
-                        n(p.l7.CONNECTED);
+                if (![f.Lk.INSTALLED, f.Lk.EXISTING_INSTALLATION].includes(e)) return void n(f.l7.DISCONNECTED);
+                switch (A) {
+                    case f.N2.CONNECTED:
+                        n(f.l7.CONNECTED);
                         break;
-                    case p.N2.CONNECTING:
-                        n(p.l7.INITIALIZING);
+                    case f.N2.CONNECTING:
+                        n(f.l7.INITIALIZING);
                         break;
-                    case p.N2.DISCONNECTED:
-                        n(p.l7.DISCONNECTED);
+                    case f.N2.DISCONNECTED:
+                        n(f.l7.DISCONNECTED);
                         break;
-                    case p.N2.UNABLE:
-                        S(!1);
+                    case f.N2.UNABLE:
+                        v(!1);
                 }
-            }, [b, e, n]),
+            }, [A, e, n]),
             (0, i.useEffect)(() => {
-                y > 10 && (t(p.Lk.ERROR), O(0));
-            }, [y, t]),
+                I > 10 && (t(f.Lk.ERROR), T(0));
+            }, [I, t]),
             (0, i.useEffect)(() => {
-                e === p.Lk.READY_FOR_LICENSE &&
+                e === f.Lk.READY_FOR_LICENSE &&
                     r()
                         .then((e) => {
-                            e && t(p.Lk.INSTALLED), s();
+                            e && t(f.Lk.INSTALLED), s();
                         })
                         .catch((e) => {
-                            u.A.captureException(e, {
-                                tags: {
-                                    source: f.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP,
-                                },
+                            c.A.captureException(e, {
+                                tags: { source: _.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP },
                             }),
-                                c.default.track(g.HAw.PREMIUM_FEATURE_ERROR, {
+                                u.default.track(g.HAw.PREMIUM_FEATURE_ERROR, {
                                     error_message: e instanceof Error ? e.message : JSON.stringify(e),
-                                    error_source: f.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP,
+                                    error_source: _.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP,
                                 }),
-                                t(p.Lk.ERROR);
+                                t(f.Lk.ERROR);
                         });
             }, [e, t, r, s]),
             (0, i.useEffect)(() => {
-                if (![p.Lk.INSTALLING, p.Lk.WAITING_FOR_TERMS].includes(e)) return void T(null);
-                if ((null == I && T(Date.now()), null != I)) {
-                    let e = I + E - Date.now();
-                    if (e <= 0) return void t(p.Lk.INSTALLING_TIMEOUT);
+                if (![f.Lk.INSTALLING, f.Lk.WAITING_FOR_TERMS].includes(e)) return void b(null);
+                if ((null == C && b(Date.now()), null != C)) {
+                    let e = C + E - Date.now();
+                    if (e <= 0) return void t(f.Lk.INSTALLING_TIMEOUT);
                     let n = setTimeout(() => {
-                        t(p.Lk.INSTALLING_TIMEOUT);
+                        t(f.Lk.INSTALLING_TIMEOUT);
                     }, e);
                     return () => clearTimeout(n);
                 }
-            }, [e, I, T, t, E]),
+            }, [e, C, b, t, E]),
             (0, i.useEffect)(() => {
-                if (![p.Lk.INSTALLING, p.Lk.WAITING_FOR_TERMS, p.Lk.INSTALLING_TIMEOUT].includes(e)) return;
+                if (![f.Lk.INSTALLING, f.Lk.WAITING_FOR_TERMS, f.Lk.INSTALLING_TIMEOUT].includes(e)) return;
                 let n = setInterval(async () => {
                     let n = await a();
                     switch (n) {
-                        case p.Lk.ERROR:
-                            O((e) => e + 1);
+                        case f.Lk.ERROR:
+                            T((e) => e + 1);
                             return;
-                        case p.Lk.NOT_INSTALLED:
-                            [p.Lk.NOT_INSTALLED, p.Lk.INSTALLING].includes(e) || t(p.Lk.NOT_INSTALLED);
+                        case f.Lk.NOT_INSTALLED:
+                            [f.Lk.NOT_INSTALLED, f.Lk.INSTALLING].includes(e) || t(f.Lk.NOT_INSTALLED);
                             return;
-                        case p.Lk.EXISTING_INSTALLATION:
-                            t(p.Lk.READY_FOR_LICENSE);
+                        case f.Lk.EXISTING_INSTALLATION:
+                            t(f.Lk.READY_FOR_LICENSE);
                             return;
-                        case p.Lk.WAITING_FOR_TERMS:
-                        case p.Lk.INSTALLING:
-                            if (e === p.Lk.INSTALLING_TIMEOUT) return;
+                        case f.Lk.WAITING_FOR_TERMS:
+                        case f.Lk.INSTALLING:
+                            if (e === f.Lk.INSTALLING_TIMEOUT) return;
                             t(n);
                             break;
                         default:
@@ -137,10 +131,4 @@ let E = () => {
             null
         );
     },
-    b = () =>
-        (0, s.xl)()
-            ? (0, r.jsx)(a.tH, {
-                  fallback: null,
-                  children: (0, r.jsx)(E, {}),
-              })
-            : null;
+    A = () => ((0, s.xl)() ? (0, r.jsx)(a.tH, { fallback: null, children: (0, r.jsx)(E, {}) }) : null);

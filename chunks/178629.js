@@ -1,16 +1,13 @@
-n.d(t, {
-    G: () => r,
-});
-var l = n(64700),
-    a = n(664336);
-
-function r() {
-    let e = l.useRef(new a.A()),
-        t = l.useCallback((t) => {
+a.d(t, { G: () => s });
+var n = a(64700),
+    i = a(664336);
+function s() {
+    let e = n.useRef(new i.A()),
+        t = n.useCallback((t) => {
             e.current.handleScroll(t);
         }, []);
     return {
-        resetScrollPosition: l.useCallback(() => {
+        resetScrollPosition: n.useCallback(() => {
             e.current.scrollPosition.set(0);
         }, []),
         scrollPosition: e.current.scrollPosition,

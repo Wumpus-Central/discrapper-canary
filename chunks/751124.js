@@ -1,6 +1,5 @@
+"use strict";
 function r(e, t) {
     return new WebSocket(e, t);
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

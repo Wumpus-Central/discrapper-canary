@@ -1,16 +1,9 @@
-n.d(t, {
-    Ys: () => o,
-}),
-    n(747238);
-var r = n(64700),
-    i = n(311907),
-    a = n(508675);
-let s = /^<(a?):(\w+):(\d+)>/;
-
-function o(e) {
-    let t = r.useMemo(() => {
-        var t;
-        return null == (t = s.exec(e)) ? void 0 : t[3];
-    }, [e]);
-    return (0, i.bG)([a.Ay], () => (null == t ? null : a.Ay.getCustomEmojiById(t)));
+t.d(s, { Ys: () => r });
+var n = t(64700),
+    a = t(311907),
+    l = t(508675);
+let i = /^<(a?):(\w+):(\d+)>/;
+function r(e) {
+    let s = n.useMemo(() => i.exec(e)?.[3], [e]);
+    return (0, a.bG)([l.Ay], () => (null == s ? null : l.Ay.getCustomEmojiById(s)));
 }

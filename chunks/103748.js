@@ -1,398 +1,262 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(896048),
-    n(747238),
-    n(812715),
-    n(321073),
-    n(457529),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
+n.d(t, { A: () => N }), n(321073), n(323874), n(14289), n(35956);
 var a = n(627968),
-    l = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(854284),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(854284),
     o = n(311907),
-    c = n(397927),
-    d = n(900686),
+    d = n(397927),
+    c = n(900686),
     u = n(817363),
     m = n(287070),
-    p = n(287809),
-    h = n(43708),
-    x = n(14752),
+    h = n(287809),
+    x = n(43708),
+    p = n(14752),
     g = n(930442),
-    f = n(553622),
-    b = n(526565),
+    _ = n(553622),
+    f = n(526565),
     v = n(124733),
-    j = n(865524),
-    _ = n(154878);
-
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
-            });
-    }
-    return e;
-}
-
-function A(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let C = {
-        [x.qH.THUMBNAIL]: null,
-        [x.qH.STATIC]: null,
-        [x.qH.REDUCED_MOTION]: null,
-    },
-    S = "debug",
-    O = "reduced-motion-preview-modal",
+    b = n(865524),
+    j = n(154878);
+let A = { [p.qH.THUMBNAIL]: null, [p.qH.STATIC]: null, [p.qH.REDUCED_MOTION]: null },
+    C = "debug",
+    S = "reduced-motion-preview-modal",
     T = (e) => {
-        let { transitionState: t, onClose: n, frameSrc: l, placeholderSrc: r } = e;
-        return (0, a.jsx)(c.EOs, {
+        let { transitionState: t, onClose: n, frameSrc: s, placeholderSrc: i } = e;
+        return (0, a.jsx)(d.EOs, {
             transitionState: t,
-            size: c.rIJ.MEDIUM,
+            size: d.rIJ.MEDIUM,
             parentComponent: "ReducedMotionPreviewModal",
-            children: (0, a.jsxs)(c.$mQ, {
-                className: f.Xd,
+            children: (0, a.jsxs)(d.$mQ, {
+                className: _.Xd,
                 children: [
                     (0, a.jsx)("div", {
-                        className: f.y6,
-                        children: (0, a.jsx)(c.K0, {
+                        className: _.y6,
+                        children: (0, a.jsx)(d.K0, {
                             "aria-label": "Close",
                             onClick: n,
-                            icon: c.d$L,
+                            icon: d.d$L,
                             variant: "overlay-secondary",
                             size: "sm",
                         }),
                     }),
                     (0, a.jsxs)("div", {
-                        className: f.rU,
+                        className: _.rU,
                         children: [
-                            (0, a.jsx)("img", {
-                                src: r,
-                                alt: "",
-                                className: f.Vw,
-                                "aria-hidden": !0,
-                            }),
-                            null != l &&
-                                "" !== l &&
-                                (0, a.jsx)("img", {
-                                    src: l,
-                                    className: f.BS,
-                                    alt: "Reduced motion preview",
-                                }),
+                            (0, a.jsx)("img", { src: i, alt: "", className: _.Vw, "aria-hidden": !0 }),
+                            null != s &&
+                                "" !== s &&
+                                (0, a.jsx)("img", { src: s, className: _.BS, alt: "Reduced motion preview" }),
                         ],
                     }),
                 ],
             }),
         });
     },
-    E = (e) => {
-        let { type: t, frame: n, showDarkTheme: l, onClear: r } = e,
-            s = t === x.qH.REDUCED_MOTION,
-            o = s ? (l ? j : _) : l ? b : v,
-            d = (0, a.jsxs)(a.Fragment, {
+    y = (e) => {
+        let { type: t, frame: n, showDarkTheme: s, onClear: i } = e,
+            r = t === p.qH.REDUCED_MOTION,
+            o = r ? (s ? b : j) : s ? f : v,
+            c = (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)("img", {
-                        src: o,
-                        alt: "",
-                        className: f.XM,
-                        "aria-hidden": !0,
-                    }),
-                    (null == n ? void 0 : n.src) != null &&
-                        "" !== n.src &&
-                        (0, a.jsx)("img", {
-                            src: n.src,
-                            className: f.SD,
-                            alt: "",
-                        }),
+                    (0, a.jsx)("img", { src: o, alt: "", className: _.XM, "aria-hidden": !0 }),
+                    n?.src != null && "" !== n.src && (0, a.jsx)("img", { src: n.src, className: _.SD, alt: "" }),
                 ],
             });
         return (0, a.jsxs)("div", {
-            className: f.pK,
+            className: _.pK,
             children: [
-                (0, a.jsx)(c.Heading, {
-                    variant: "heading-sm/bold",
-                    children: t,
-                }),
-                s
-                    ? (0, a.jsx)(c.DUT, {
-                          className: i()(f.zd, f.eB),
+                (0, a.jsx)(d.Heading, { variant: "heading-sm/bold", children: t }),
+                r
+                    ? (0, a.jsx)(d.DUT, {
+                          className: l()(_.zd, _.eB),
                           onClick: () => {
-                              (0, c.kBI)(O)
-                                  ? (0, c.OoC)(O)
-                                  : (0, c.mMO)(
+                              (0, d.kBI)(S)
+                                  ? (0, d.OoC)(S)
+                                  : (0, d.mMO)(
                                         () =>
-                                            Promise.resolve((e) => {
-                                                var t;
-                                                return (0, a.jsx)(
-                                                    T,
-                                                    A(y({}, e), {
-                                                        frameSrc: null != (t = null == n ? void 0 : n.src) ? t : null,
-                                                        placeholderSrc: o,
-                                                    }),
-                                                );
-                                            }),
-                                        {
-                                            modalKey: O,
-                                            onCloseRequest: () => (0, c.OoC)(O),
-                                        },
+                                            Promise.resolve((e) =>
+                                                (0, a.jsx)(T, { ...e, frameSrc: n?.src ?? null, placeholderSrc: o }),
+                                            ),
+                                        { modalKey: S, onCloseRequest: () => (0, d.OoC)(S) },
                                     );
                           },
-                          children: d,
+                          children: c,
                       })
-                    : (0, a.jsx)("div", {
-                          className: f.zd,
-                          children: d,
-                      }),
+                    : (0, a.jsx)("div", { className: _.zd, children: c }),
                 null != n &&
-                    (0, a.jsx)(c.Button, {
-                        variant: "critical-secondary",
-                        size: "sm",
-                        text: "Clear",
-                        onClick: r,
-                    }),
+                    (0, a.jsx)(d.Button, { variant: "critical-secondary", size: "sm", text: "Clear", onClick: i }),
             ],
         });
     },
     N = (e) => {
         let { effect: t } = e,
-            { upsertConfig: n } = (0, h.wu)(),
-            r = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
-            [j, _] = l.useState(!0),
-            O = l.useRef({}),
-            [T, N] = l.useState(!1),
-            [w, I] = l.useState(!1),
-            [k, P] = l.useState([]),
-            [R, D] = l.useState(C),
-            M = l.useRef([]),
-            [L, U] = l.useState(t.name),
-            B = L.toLowerCase().replace(/\s+/g, "_"),
-            G = l.useMemo(
+            { upsertConfig: n } = (0, x.wu)(),
+            i = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+            [b, j] = s.useState(!0),
+            S = s.useRef({}),
+            [T, N] = s.useState(!1),
+            [E, I] = s.useState(!1),
+            [k, R] = s.useState([]),
+            [O, w] = s.useState(A),
+            D = s.useRef([]),
+            [M, P] = s.useState(t.name),
+            L = M.toLowerCase().replace(/\s+/g, "_"),
+            U = s.useMemo(
                 () => ({
-                    id: S,
-                    skuId: S,
-                    title: S,
-                    description: S,
-                    accessibilityLabel: S,
+                    id: C,
+                    skuId: C,
+                    title: C,
+                    description: C,
+                    accessibilityLabel: C,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
                     effects: k,
-                    animationType: s.l.ANIMATION_TYPE_UNSPECIFIED,
+                    animationType: r.l.ANIMATION_TYPE_UNSPECIFIED,
                 }),
                 [k],
             ),
-            F = (e) => {
+            B = (e) => {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            V = (e, t) => {
-                let n = F(t);
+            G = (e, t) => {
+                let n = B(t);
                 null != n &&
-                    (0, x.Mz)(n, (t) => {
-                        D((a) =>
-                            A(y({}, a), {
-                                [e]: (0, x.GT)(t, n),
-                            }),
-                        );
+                    (0, p.Mz)(n, (t) => {
+                        w((a) => ({ ...a, [e]: (0, p.GT)(t, n) }));
                     });
             };
-        l.useEffect(() => {
+        s.useEffect(() => {
             let e = t.config.effects;
-            e.length > 0 && P(e);
+            e.length > 0 && R(e);
         }, [t.config.effects]),
-            l.useEffect(() => {
+            s.useEffect(() => {
                 let e = t.config.stillFrames;
                 null != e &&
                     Object.entries(e).forEach((e) => {
                         let [t, n] = e;
                         if (null != n) {
                             if ("" !== n.src && null != n.src && ("" === n.base64 || null == n.base64))
-                                D((e) =>
-                                    A(y({}, e), {
-                                        [t]: n,
-                                    }),
-                                );
+                                w((e) => ({ ...e, [t]: n }));
                             else if ("" !== n.base64 && null != n.base64) {
-                                let e = (0, x.fB)(n.base64);
-                                (n.src = e),
-                                    M.current.push(e),
-                                    D((e) =>
-                                        A(y({}, e), {
-                                            [t]: n,
-                                        }),
-                                    );
+                                let e = (0, p.fB)(n.base64);
+                                (n.src = e), D.current.push(e), w((e) => ({ ...e, [t]: n }));
                             }
                         }
                     });
             }, [t.config.stillFrames]);
-        let W = {
-                effect: t,
-                upsertConfig: n,
-            },
-            H = l.useRef(W);
-        return (l.useEffect(() => {
-            H.current = W;
+        let F = { effect: t, upsertConfig: n },
+            V = s.useRef(F);
+        return (s.useEffect(() => {
+            V.current = F;
         }),
-        l.useEffect(() => {
-            let { effect: e, upsertConfig: t } = H.current;
-            e.readonly ||
-                t({
-                    skuId: e.skuId,
-                    name: L,
-                    config: {
-                        effects: k,
-                        stillFrames: R,
-                    },
-                });
-        }, [k, R, L]),
-        l.useEffect(
+        s.useEffect(() => {
+            let { effect: e, upsertConfig: t } = V.current;
+            e.readonly || t({ skuId: e.skuId, name: M, config: { effects: k, stillFrames: O } });
+        }, [k, O, M]),
+        s.useEffect(
             () => () => {
-                M.current.forEach((e) => {
+                D.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (M.current = []);
+                    (D.current = []);
             },
             [],
         ),
-        null == r)
+        null == i)
             ? (0, a.jsx)("div", {})
             : (0, a.jsxs)("div", {
-                  className: f.zr,
+                  className: _.zr,
                   children: [
                       (0, a.jsxs)("div", {
-                          style: {
-                              display: "none",
-                          },
+                          style: { display: "none" },
                           children: [
                               (0, a.jsx)(u.A, {
                                   ref: (e) => {
-                                      O.current.animated = e;
+                                      S.current.animated = e;
                                   },
                                   onChange: (e) => {
-                                      let t = F(e);
+                                      let t = B(e);
                                       null != t &&
-                                          (0, x.Mz)(t, async (e) => {
-                                              let n = await (0, x.Ay)(e, t, k.length);
-                                              P((e) => [...e, n]);
+                                          (0, p.Mz)(t, async (e) => {
+                                              let n = await (0, p.Ay)(e, t, k.length);
+                                              R((e) => [...e, n]);
                                           });
                                   },
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.A, {
                                   ref: (e) => {
-                                      O.current.thumbnail = e;
+                                      S.current.thumbnail = e;
                                   },
-                                  onChange: (e) => V(x.qH.THUMBNAIL, e),
+                                  onChange: (e) => G(p.qH.THUMBNAIL, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.A, {
                                   ref: (e) => {
-                                      O.current.static = e;
+                                      S.current.static = e;
                                   },
-                                  onChange: (e) => V(x.qH.STATIC, e),
+                                  onChange: (e) => G(p.qH.STATIC, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.A, {
                                   ref: (e) => {
-                                      O.current.reducedMotion = e;
+                                      S.current.reducedMotion = e;
                                   },
-                                  onChange: (e) => V(x.qH.REDUCED_MOTION, e),
+                                  onChange: (e) => G(p.qH.REDUCED_MOTION, e),
                                   multiple: !1,
                               }),
                           ],
                       }),
                       (0, a.jsxs)("div", {
-                          className: f.Vg,
+                          className: _.Vg,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: i()(f.nz, f.VH),
+                                  className: l()(_.nz, _.VH),
                                   children: [
-                                      (0, a.jsx)("img", {
-                                          src: T ? b : v,
-                                          alt: "",
-                                          width: 450,
-                                      }),
-                                      j &&
+                                      (0, a.jsx)("img", { src: T ? f : v, alt: "", width: 450 }),
+                                      b &&
                                           (0, a.jsx)("div", {
-                                              className: f.KJ,
-                                              children: (0, a.jsx)(g.A, {
-                                                  config: G,
-                                              }),
+                                              className: _.KJ,
+                                              children: (0, a.jsx)(g.A, { config: U }),
                                           }),
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: f.nz,
+                                  className: _.nz,
                                   children: [
                                       (0, a.jsxs)("div", {
-                                          className: i()(f.nz, f.uW),
+                                          className: l()(_.nz, _.uW),
                                           children: [
-                                              (0, a.jsx)(c.Text, {
+                                              (0, a.jsx)(d.Text, {
                                                   variant: "text-md/normal",
                                                   children: "Profile Effect Name",
                                               }),
                                               (0, a.jsx)("input", {
                                                   type: "text",
-                                                  value: L,
-                                                  className: f.hF,
+                                                  value: M,
+                                                  className: _.hF,
                                                   onChange: (e) => {
-                                                      U(e.target.value);
+                                                      P(e.target.value);
                                                   },
                                               }),
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: f.Vg,
+                                          className: _.Vg,
                                           children: [
                                               (0, a.jsxs)("div", {
-                                                  className: f.nM,
+                                                  className: _.nM,
                                                   children: [
-                                                      (0, a.jsx)(c.Text, {
+                                                      (0, a.jsx)(d.Text, {
                                                           variant: "text-md/normal",
                                                           children: "Dark Theme",
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
                                                           checked: T,
-                                                          className: f.OO,
+                                                          className: _.OO,
                                                           onChange: () => {
                                                               N(!T);
                                                           },
@@ -400,18 +264,18 @@ let C = {
                                                   ],
                                               }),
                                               (0, a.jsxs)("div", {
-                                                  className: f.nM,
+                                                  className: _.nM,
                                                   children: [
-                                                      (0, a.jsx)(c.Text, {
+                                                      (0, a.jsx)(d.Text, {
                                                           variant: "text-md/normal",
                                                           children: "Show User Profile",
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
-                                                          checked: w,
-                                                          className: f.OO,
+                                                          checked: E,
+                                                          className: _.OO,
                                                           onChange: () => {
-                                                              I(!w);
+                                                              I(!E);
                                                           },
                                                       }),
                                                   ],
@@ -419,112 +283,88 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: f.nM,
+                                          className: _.nM,
                                           children: [
-                                              (0, a.jsx)(c.Button, {
+                                              (0, a.jsx)(d.Button, {
                                                   variant: "active",
                                                   text: "Upload Animated Layer",
-                                                  onClick: () => {
-                                                      var e;
-                                                      return null == (e = O.current.animated)
-                                                          ? void 0
-                                                          : e.activateUploadDialogue();
-                                                  },
+                                                  onClick: () => S.current.animated?.activateUploadDialogue(),
                                               }),
-                                              (0, a.jsx)(c.Text, {
+                                              (0, a.jsx)(d.Text, {
                                                   variant: "text-sm/semibold",
                                                   children: "Make sure to upload the bottommost layer first!",
                                               }),
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: f.nM,
+                                          className: _.nM,
                                           children: [
-                                              (0, a.jsx)(c.Button, {
+                                              (0, a.jsx)(d.Button, {
                                                   variant: "active",
                                                   text: "Upload thumbnail.png",
-                                                  onClick: () => {
-                                                      var e;
-                                                      return null == (e = O.current.thumbnail)
-                                                          ? void 0
-                                                          : e.activateUploadDialogue();
-                                                  },
+                                                  onClick: () => S.current.thumbnail?.activateUploadDialogue(),
                                               }),
-                                              (0, a.jsx)(c.Button, {
+                                              (0, a.jsx)(d.Button, {
                                                   variant: "active",
                                                   text: "Upload static.png",
-                                                  onClick: () => {
-                                                      var e;
-                                                      return null == (e = O.current.static)
-                                                          ? void 0
-                                                          : e.activateUploadDialogue();
-                                                  },
+                                                  onClick: () => S.current.static?.activateUploadDialogue(),
                                               }),
-                                              (0, a.jsx)(c.Button, {
+                                              (0, a.jsx)(d.Button, {
                                                   variant: "active",
                                                   text: "Upload reduced_motion.png",
-                                                  onClick: () => {
-                                                      var e;
-                                                      return null == (e = O.current.reducedMotion)
-                                                          ? void 0
-                                                          : e.activateUploadDialogue();
-                                                  },
+                                                  onClick: () => S.current.reducedMotion?.activateUploadDialogue(),
                                               }),
                                           ],
                                       }),
                                       (0, a.jsx)("div", {
-                                          className: f.q6,
+                                          className: _.q6,
                                           children: (0, a.jsx)("div", {
-                                              className: f.nM,
-                                              children: (0, a.jsx)(c.Button, {
+                                              className: _.nM,
+                                              children: (0, a.jsx)(d.Button, {
                                                   variant: "primary",
                                                   text: "Replay Animation",
                                                   onClick: () => {
-                                                      _(!1), setTimeout(() => _(!0), 100);
+                                                      j(!1), setTimeout(() => j(!0), 100);
                                                   },
                                               }),
                                           }),
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: i()(f.q6, f.XA),
+                                          className: l()(_.q6, _.XA),
                                           children: [
-                                              (0, a.jsx)(c.Text, {
+                                              (0, a.jsx)(d.Text, {
                                                   variant: "text-sm/semibold",
                                                   children: "Please download both configs for the drop package!",
                                               }),
-                                              (0, a.jsx)(c.Text, {
+                                              (0, a.jsx)(d.Text, {
                                                   variant: "text-sm/bold",
                                                   color: "text-feedback-critical",
                                                   children: "WARNING: The full config is really big :0",
                                               }),
                                               (0, a.jsxs)("div", {
-                                                  className: f.nM,
+                                                  className: _.nM,
                                                   children: [
-                                                      (0, a.jsx)(d.A, {
-                                                          fileContents: () => (0, x.rs)(k),
+                                                      (0, a.jsx)(c.A, {
+                                                          fileContents: () => (0, p.rs)(k),
                                                           contentType: "text/plain",
-                                                          fileName: "".concat(B, "_timing_config.txt"),
-                                                          children: (0, a.jsx)(c.Button, {
+                                                          fileName: `${L}_timing_config.txt`,
+                                                          children: (0, a.jsx)(d.Button, {
                                                               variant: "primary",
                                                               size: "sm",
                                                               text: "Download Timing Config",
                                                           }),
                                                       }),
-                                                      (0, a.jsx)(d.A, {
+                                                      (0, a.jsx)(c.A, {
                                                           fileContents: () =>
-                                                              JSON.stringify(
-                                                                  A(y({}, t), {
-                                                                      name: L,
-                                                                      readonly: !1,
-                                                                      config: A(y({}, t.config), {
-                                                                          effects: k,
-                                                                          stillFrames: R,
-                                                                      }),
-                                                                  }),
-                                                              ),
+                                                              JSON.stringify({
+                                                                  ...t,
+                                                                  name: M,
+                                                                  readonly: !1,
+                                                                  config: { ...t.config, effects: k, stillFrames: O },
+                                                              }),
                                                           contentType: "text/plain",
-                                                          fileName: "".concat(B, "_config.txt"),
-                                                          children: (0, a.jsx)(c.Button, {
+                                                          fileName: `${L}_config.txt`,
+                                                          children: (0, a.jsx)(d.Button, {
                                                               variant: "primary",
                                                               size: "sm",
                                                               text: "Download Full Config",
@@ -535,28 +375,24 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: f.uW,
+                                          className: _.uW,
                                           children: [
-                                              (0, a.jsx)(c.Heading, {
+                                              (0, a.jsx)(d.Heading, {
                                                   variant: "heading-lg/bold",
                                                   children: "Still Frames",
                                               }),
                                               (0, a.jsx)("div", {
-                                                  className: f.mv,
-                                                  children: Object.entries(R).map((e) => {
+                                                  className: _.mv,
+                                                  children: Object.entries(O).map((e) => {
                                                       let [t, n] = e;
                                                       return (0, a.jsx)(
-                                                          E,
+                                                          y,
                                                           {
                                                               type: t,
                                                               frame: n,
                                                               showDarkTheme: T,
                                                               onClear: () => {
-                                                                  D((e) =>
-                                                                      A(y({}, e), {
-                                                                          [t]: null,
-                                                                      }),
-                                                                  );
+                                                                  w((e) => ({ ...e, [t]: null }));
                                                               },
                                                           },
                                                           t,
@@ -565,14 +401,11 @@ let C = {
                                               }),
                                           ],
                                       }),
-                                      k.some((e) => {
-                                          var t;
-                                          return (null != (t = e.randomizedSources) ? t : []).length > 0;
-                                      }) &&
+                                      k.some((e) => (e.randomizedSources ?? []).length > 0) &&
                                           (0, a.jsxs)("div", {
-                                              className: i()(f.uW, f.l7),
+                                              className: l()(_.uW, _.l7),
                                               children: [
-                                                  (0, a.jsx)(c.Text, {
+                                                  (0, a.jsx)(d.Text, {
                                                       variant: "text-md/bold",
                                                       children: "Rules of Randomized Effects",
                                                   }),
@@ -600,35 +433,33 @@ let C = {
                                           }),
                                       (0, a.jsx)("div", {
                                           children:
-                                              w &&
+                                              E &&
                                               (0, a.jsxs)("div", {
-                                                  className: i()(f.p6, f.VH),
+                                                  className: l()(_.p6, _.VH),
                                                   children: [
                                                       (0, a.jsx)(m.A, {
-                                                          user: r,
+                                                          user: i,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffect: null,
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOut: !0,
                                                       }),
-                                                      (0, a.jsx)(g.A, {
-                                                          config: G,
-                                                      }),
+                                                      (0, a.jsx)(g.A, { config: U }),
                                                   ],
                                               }),
                                       }),
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: i()(f.Vg, f.ZF),
+                                  className: l()(_.Vg, _.ZF),
                                   children: [
                                       (0, a.jsx)("div", {
-                                          className: f.cD,
-                                          children: (0, a.jsx)(c.Button, {
+                                          className: _.cD,
+                                          children: (0, a.jsx)(d.Button, {
                                               variant: "critical-secondary",
                                               text: "Clear Assets",
                                               onClick: () => {
-                                                  P([]), D(C);
+                                                  R([]), w(A);
                                               },
                                           }),
                                       }),
@@ -636,76 +467,73 @@ let C = {
                                           (0, a.jsxs)(
                                               "div",
                                               {
-                                                  className: f.ec,
+                                                  className: _.ec,
                                                   children: [
                                                       (0, a.jsxs)("div", {
-                                                          className: f.D1,
+                                                          className: _.D1,
                                                           children: [
-                                                              (0, a.jsx)(c.Heading, {
+                                                              (0, a.jsx)(d.Heading, {
                                                                   variant: "heading-md/bold",
                                                                   children: e.name,
                                                               }),
                                                               (0, a.jsx)("img", {
                                                                   src: e.src,
-                                                                  className: f.oq,
+                                                                  className: _.oq,
                                                                   alt: "",
                                                               }),
                                                               null != e.randomizedSources &&
                                                                   (0, a.jsxs)(a.Fragment, {
                                                                       children: [
-                                                                          (0, a.jsx)(c.Heading, {
+                                                                          (0, a.jsx)(d.Heading, {
                                                                               variant: "heading-md/bold",
                                                                               children: "Alternatives",
                                                                           }),
-                                                                          e.randomizedSources.map((e, t) => {
-                                                                              var n;
-                                                                              return (0, a.jsxs)(
+                                                                          e.randomizedSources.map((e, t) =>
+                                                                              (0, a.jsxs)(
                                                                                   "div",
                                                                                   {
                                                                                       children: [
                                                                                           null != e.filename &&
-                                                                                              (0, a.jsx)(c.Heading, {
+                                                                                              (0, a.jsx)(d.Heading, {
                                                                                                   variant:
                                                                                                       "heading-sm/semibold",
                                                                                                   children: e.filename,
                                                                                               }),
                                                                                           (0, a.jsx)("img", {
                                                                                               src: e.src,
-                                                                                              className: f.oq,
+                                                                                              className: _.oq,
                                                                                               alt: "",
                                                                                           }),
                                                                                       ],
                                                                                   },
-                                                                                  null != (n = e.filename)
-                                                                                      ? n
-                                                                                      : "randomized-".concat(t),
-                                                                              );
-                                                                          }),
+                                                                                  e.filename ?? `randomized-${t}`,
+                                                                              ),
+                                                                          ),
                                                                       ],
                                                                   }),
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(f.Vg, f.uW),
+                                                          className: l()(_.Vg, _.uW),
                                                           children: [
                                                               (0, a.jsxs)("div", {
-                                                                  className: f.nz,
+                                                                  className: _.nz,
                                                                   children: [
-                                                                      (0, a.jsx)(c.Text, {
+                                                                      (0, a.jsx)(d.Text, {
                                                                           variant: "text-md/bold",
                                                                           children: "Start",
                                                                       }),
                                                                       (0, a.jsx)("input", {
                                                                           type: "number",
                                                                           value: e.start,
-                                                                          className: f.hF,
+                                                                          className: _.hF,
                                                                           onChange: (e) => {
-                                                                              P((n) => {
+                                                                              R((n) => {
                                                                                   let a = [...n],
-                                                                                      l = n[t];
+                                                                                      s = n[t];
                                                                                   return (
-                                                                                      (l.start = +e.target.value),
-                                                                                      (a[t] = l),
+                                                                                      (s.start = +e.target.value),
+                                                                                      (a[t] = s),
                                                                                       a
                                                                                   );
                                                                               });
@@ -715,23 +543,23 @@ let C = {
                                                                   ],
                                                               }),
                                                               (0, a.jsxs)("div", {
-                                                                  className: f.nz,
+                                                                  className: _.nz,
                                                                   children: [
-                                                                      (0, a.jsx)(c.Text, {
+                                                                      (0, a.jsx)(d.Text, {
                                                                           variant: "text-md/bold",
                                                                           children: "Duration",
                                                                       }),
                                                                       (0, a.jsx)("input", {
                                                                           type: "number",
                                                                           value: e.duration,
-                                                                          className: f.hF,
+                                                                          className: _.hF,
                                                                           onChange: (e) => {
-                                                                              P((n) => {
+                                                                              R((n) => {
                                                                                   let a = [...n],
-                                                                                      l = n[t];
+                                                                                      s = n[t];
                                                                                   return (
-                                                                                      (l.duration = +e.target.value),
-                                                                                      (a[t] = l),
+                                                                                      (s.duration = +e.target.value),
+                                                                                      (a[t] = s),
                                                                                       a
                                                                                   );
                                                                               });
@@ -743,26 +571,26 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(f.Vg, f.uW),
+                                                          className: l()(_.Vg, _.uW),
                                                           children: [
                                                               (0, a.jsxs)("div", {
-                                                                  className: f.nz,
+                                                                  className: _.nz,
                                                                   children: [
-                                                                      (0, a.jsx)(c.Text, {
+                                                                      (0, a.jsx)(d.Text, {
                                                                           variant: "text-md/bold",
                                                                           children: "Loop",
                                                                       }),
                                                                       (0, a.jsx)("input", {
                                                                           type: "checkbox",
                                                                           checked: e.loop,
-                                                                          className: f.OO,
+                                                                          className: _.OO,
                                                                           onChange: (e) => {
-                                                                              P((n) => {
+                                                                              R((n) => {
                                                                                   let a = [...n],
-                                                                                      l = n[t];
+                                                                                      s = n[t];
                                                                                   return (
-                                                                                      (l.loop = e.target.checked),
-                                                                                      (a[t] = l),
+                                                                                      (s.loop = e.target.checked),
+                                                                                      (a[t] = s),
                                                                                       a
                                                                                   );
                                                                               });
@@ -771,27 +599,27 @@ let C = {
                                                                   ],
                                                               }),
                                                               (0, a.jsx)("div", {
-                                                                  className: f.nz,
+                                                                  className: _.nz,
                                                                   children:
                                                                       e.loop &&
                                                                       (0, a.jsxs)(a.Fragment, {
                                                                           children: [
-                                                                              (0, a.jsx)(c.Text, {
+                                                                              (0, a.jsx)(d.Text, {
                                                                                   variant: "text-md/bold",
                                                                                   children: "Loop Delay",
                                                                               }),
                                                                               (0, a.jsx)("input", {
                                                                                   type: "number",
                                                                                   value: e.loopDelay,
-                                                                                  className: f.hF,
+                                                                                  className: _.hF,
                                                                                   onChange: (e) => {
-                                                                                      P((n) => {
+                                                                                      R((n) => {
                                                                                           let a = [...n],
-                                                                                              l = n[t];
+                                                                                              s = n[t];
                                                                                           return (
-                                                                                              (l.loopDelay =
+                                                                                              (s.loopDelay =
                                                                                                   +e.target.value),
-                                                                                              (a[t] = l),
+                                                                                              (a[t] = s),
                                                                                               a
                                                                                           );
                                                                                       });
@@ -804,31 +632,29 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsx)("div", {
-                                                          style: {
-                                                              display: "none",
-                                                          },
+                                                          style: { display: "none" },
                                                           children: (0, a.jsx)(u.A, {
                                                               ref: (e) => {
-                                                                  O.current["randomized-".concat(t)] = e;
+                                                                  S.current[`randomized-${t}`] = e;
                                                               },
                                                               onChange: (e) => {
                                                                   let n;
-                                                                  null != (n = F(e)) &&
-                                                                      (0, x.Mz)(n, (e) => {
-                                                                          P((a) => {
-                                                                              let l = [...a],
-                                                                                  r = a[t];
-                                                                              if (null == r) return a;
-                                                                              let i = y({}, r);
+                                                                  null != (n = B(e)) &&
+                                                                      (0, p.Mz)(n, (e) => {
+                                                                          R((a) => {
+                                                                              let s = [...a],
+                                                                                  i = a[t];
+                                                                              if (null == i) return a;
+                                                                              let l = { ...i };
                                                                               return (
-                                                                                  null == i.randomizedSources &&
-                                                                                      (i.randomizedSources = []),
-                                                                                  i.randomizedSources.push({
+                                                                                  null == l.randomizedSources &&
+                                                                                      (l.randomizedSources = []),
+                                                                                  l.randomizedSources.push({
                                                                                       src: e,
                                                                                       filename: n.name,
                                                                                   }),
-                                                                                  (l[t] = i),
-                                                                                  l
+                                                                                  (s[t] = l),
+                                                                                  s
                                                                               );
                                                                           });
                                                                       });
@@ -837,24 +663,21 @@ let C = {
                                                           }),
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(f.nM, f._N),
+                                                          className: l()(_.nM, _._N),
                                                           children: [
-                                                              (0, a.jsx)(c.Button, {
+                                                              (0, a.jsx)(d.Button, {
                                                                   variant: "secondary",
                                                                   text: "Add Alternative",
-                                                                  onClick: () => {
-                                                                      var e;
-                                                                      return null ==
-                                                                          (e = O.current["randomized-".concat(t)])
-                                                                          ? void 0
-                                                                          : e.activateUploadDialogue();
-                                                                  },
+                                                                  onClick: () =>
+                                                                      S.current[
+                                                                          `randomized-${t}`
+                                                                      ]?.activateUploadDialogue(),
                                                               }),
-                                                              (0, a.jsx)(c.Button, {
+                                                              (0, a.jsx)(d.Button, {
                                                                   variant: "critical-secondary",
                                                                   text: "Remove Layer",
                                                                   onClick: () => {
-                                                                      P((t) => t.filter((t) => t !== e));
+                                                                      R((t) => t.filter((t) => t !== e));
                                                                   },
                                                               }),
                                                           ],

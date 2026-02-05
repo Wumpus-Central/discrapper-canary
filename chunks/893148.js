@@ -1,34 +1,27 @@
-n.d(t, {
-    A: () => s,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(198982),
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700),
+    s = n(198982),
     l = n(493540);
-
-function s(e) {
-    let [t, n] = r.useState(!0),
-        [s, a] = r.useState(),
-        [c, o] = r.useState(),
-        d = r.useCallback(async (e) => {
+function r(e) {
+    let [t, n] = i.useState(!0),
+        [r, a] = i.useState(),
+        [o, d] = i.useState(),
+        c = i.useCallback(async (e) => {
             n(!0), a(void 0);
             try {
                 let t = await l.P(e);
-                o(t);
+                d(t);
             } catch (e) {
-                a(new i.LG(e));
+                a(new s.LG(e));
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        r.useEffect(() => {
-            d(e);
-        }, [e, d]),
-        {
-            isLoading: t,
-            error: s,
-            creatorMonetizationOnboardingMarketing: c,
-        }
+        i.useEffect(() => {
+            c(e);
+        }, [e, c]),
+        { isLoading: t, error: r, creatorMonetizationOnboardingMarketing: o }
     );
 }

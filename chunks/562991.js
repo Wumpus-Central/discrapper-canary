@@ -1,74 +1,57 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968),
+n.d(t, { A: () => x });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
     o = n(3026),
-    c = n(397927),
-    u = n(532622),
-    d = n(309698),
-    f = n(46054),
-    p = n(954571),
-    h = n(652215),
-    b = n(985018),
-    g = n(499711),
-    m = n(206314);
-
-function A(e) {
-    let { channel: t, connected: n, hovered: i, subtitle: A, onClick: y, showEmptyChannelTopic: O } = e,
-        j = (0, s.bG)([d.A], () => d.A.getChannelStatus(t)),
-        v = null != j && j.length > 0,
-        x = (0, u.Ay)(t, !0),
-        E = null != A && A.length > 0;
+    d = n(397927),
+    c = n(532622),
+    u = n(309698),
+    h = n(46054),
+    A = n(954571),
+    g = n(652215),
+    m = n(985018),
+    p = n(499711),
+    _ = n(206314);
+function x(e) {
+    let { channel: t, connected: n, hovered: s, subtitle: x, onClick: f, showEmptyChannelTopic: E } = e,
+        C = (0, r.bG)([u.A], () => u.A.getChannelStatus(t)),
+        I = null != C && C.length > 0,
+        S = (0, c.Ay)(t, !0),
+        b = null != x && x.length > 0;
     if (
         (l.useEffect(() => {
-            v &&
-                p.default.track(h.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
-                    channel_id: t.id,
-                    guild_id: t.guild_id,
-                });
-        }, [v, t.id, t.guild_id]),
+            I && A.default.track(g.HAw.VOICE_CHANNEL_TOPIC_VIEWED, { channel_id: t.id, guild_id: t.guild_id });
+        }, [I, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
-    let _ = a()(g.Ui, n && x ? g.BI : null);
-    return v
-        ? (0, r.jsx)(c.DUT, {
-              className: _,
-              onClick: x ? y : void 0,
-              children: (0, r.jsx)(c.Text, {
+    let N = a()(p.Ui, n && S ? p.BI : null);
+    return I
+        ? (0, i.jsx)(d.DUT, {
+              className: N,
+              onClick: S ? f : void 0,
+              children: (0, i.jsx)(d.Text, {
                   variant: "text-xs/medium",
-                  className: a()(g.qS, m.PT),
-                  children: (0, r.jsx)(o.A, {
-                      children: f.A.parseVoiceChannelStatus(j, !0, {
-                          channelId: t.id,
-                      }),
-                  }),
+                  className: a()(p.qS, _.PT),
+                  children: (0, i.jsx)(o.A, { children: h.A.parseVoiceChannelStatus(C, !0, { channelId: t.id }) }),
               }),
           })
-        : n && x && (!E || i) && O
-          ? (0, r.jsxs)(c.DUT, {
-                className: _,
-                onClick: y,
+        : n && S && (!b || s) && E
+          ? (0, i.jsxs)(d.DUT, {
+                className: N,
+                onClick: f,
                 children: [
-                    (0, r.jsx)(c.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: "text-xs/medium",
-                        className: g.qS,
-                        children: b.intl.string(b.t.Mgpxiw),
+                        className: p.qS,
+                        children: m.intl.string(m.t.Mgpxiw),
                     }),
-                    (0, r.jsx)(c.R2l, {
-                        color: "currentColor",
-                        className: g.rD,
-                        size: "xxs",
-                    }),
+                    (0, i.jsx)(d.R2l, { color: "currentColor", className: p.rD, size: "xxs" }),
                 ],
             })
-          : E
-            ? (0, r.jsx)(o.A, {
-                  children: A,
-              })
+          : b
+            ? (0, i.jsx)(o.A, { children: x })
             : null;
 }

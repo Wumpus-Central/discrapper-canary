@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => a,
-});
+"use strict";
+n.d(t, { A: () => a });
 var r = n(619881),
     i = n(444746);
 let a = {
@@ -25,15 +24,8 @@ let a = {
     effect: function (e) {
         var t = e.state,
             n = {
-                popper: {
-                    position: t.options.strategy,
-                    left: "0",
-                    top: "0",
-                    margin: "0",
-                },
-                arrow: {
-                    position: "absolute",
-                },
+                popper: { position: t.options.strategy, left: "0", top: "0", margin: "0" },
+                arrow: { position: "absolute" },
                 reference: {},
             };
         return (

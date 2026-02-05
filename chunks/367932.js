@@ -1,8 +1,9 @@
-e.exports = {
-    stringify: function (e) {
-        return "_" + String(e);
+"use strict";
+t.exports = {
+    stringify: function (t) {
+        return "_" + String(t);
     },
-    unstringify: function (e) {
-        return e.slice(1);
+    unstringify: function (t) {
+        return t.slice(1);
     },
 };

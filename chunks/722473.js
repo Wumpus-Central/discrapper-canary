@@ -1,3 +1,4 @@
+"use strict";
 var r = n(715804),
     a = n(255003),
     o = String.prototype;

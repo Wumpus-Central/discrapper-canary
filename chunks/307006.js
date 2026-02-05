@@ -1,69 +1,48 @@
-n.d(t, {
-    A: () => g,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(160745);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = null,
-    c = !1,
-    u = null;
-
-function d(e) {
+"use strict";
+n.d(t, { A: () => h });
+var r = n(311907),
+    i = n(73153),
+    a = n(160745);
+let s = null,
+    o = !1,
+    l = null;
+function u(e) {
     let { connected: t } = e;
-    c = t;
+    o = t;
 }
-
-function f() {
-    c = !1;
+function c() {
+    o = !1;
 }
-
-function p() {
-    c = !1;
+function d() {
+    o = !1;
 }
-
 function _(e) {
     let { products: t, storeFront: n } = e;
-    (l = t), (u = n);
+    (s = t), (l = n);
 }
-
-function h(e) {
+function f(e) {
     let { storeFront: t } = e;
-    u = t;
+    l = t;
 }
-class m extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "GenericIAPStore";
     isGenericIapConnected() {
-        return c;
+        return o;
     }
     hasGenericSubscription() {
-        return null != l && l.some((e) => e.identifier === s.Yq.GENERIC_SUBSCRIPTION);
+        return null != s && s.some((e) => e.identifier === a.Yq.GENERIC_SUBSCRIPTION);
     }
     getProducts() {
-        return l;
+        return s;
     }
     getStoreFront() {
-        return u;
+        return l;
     }
 }
-o(m, "displayName", "GenericIAPStore");
-let g = new m(a.h, {
+let h = new p(i.h, {
     IAP_LOAD_GENERIC_PRODUCTS: _,
-    GENERIC_IAP_INIT_CONNECTION: d,
-    GENERIC_IAP_INIT_CONNECTION_FAILED: f,
-    GENERIC_IAP_END_CONNECTION: p,
-    GENERIC_IAP_SET_STORE_FRONT: h,
+    GENERIC_IAP_INIT_CONNECTION: u,
+    GENERIC_IAP_INIT_CONNECTION_FAILED: c,
+    GENERIC_IAP_END_CONNECTION: d,
+    GENERIC_IAP_SET_STORE_FRONT: f,
 });

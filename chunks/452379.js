@@ -1,60 +1,51 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(735438),
-    i = n.n(r),
-    l = n(73153),
-    a = n(510595),
+n.d(t, { A: () => A });
+var i = n(735438),
+    r = n.n(i),
+    a = n(73153),
+    l = n(510595),
     s = n(35177),
     o = n(405892),
-    c = n(594061),
-    u = n(617617),
-    d = n(355097);
-let p = {
+    d = n(594061),
+    c = n(617617),
+    u = n(355097);
+let A = {
     init() {
-        (o.A[d.oD.PRELOADED_USER_SETTINGS] = s.A),
-            (o.A[d.oD.FRECENCY_AND_FAVORITES_SETTINGS] = a.A),
-            l.h.subscribe("CONNECTION_OPEN", f),
-            l.h.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", h),
-            l.h.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", A),
-            l.h.subscribe("APP_STATE_UPDATE", g);
+        (o.A[u.oD.PRELOADED_USER_SETTINGS] = s.A),
+            (o.A[u.oD.FRECENCY_AND_FAVORITES_SETTINGS] = l.A),
+            a.h.subscribe("CONNECTION_OPEN", h),
+            a.h.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", _),
+            a.h.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", m),
+            a.h.subscribe("APP_STATE_UPDATE", p);
     },
 };
-
-function f() {
-    let e = u.A.getFullState(),
-        t = e[d.oD.PRELOADED_USER_SETTINGS];
-    t.editInfo.triggeredMigrations && c.wc.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
-        i().forEach(c.Df, (t, n) => {
-            let r = e[Number(n)];
-            null != r.editInfo.offlineEditDataVersion &&
-                null != r.editInfo.protoToSave &&
+function h() {
+    let e = c.A.getFullState(),
+        t = e[u.oD.PRELOADED_USER_SETTINGS];
+    t.editInfo.triggeredMigrations && d.wc.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
+        r().forEach(d.Df, (t, n) => {
+            let i = e[Number(n)];
+            null != i.editInfo.offlineEditDataVersion &&
+                null != i.editInfo.protoToSave &&
                 t.scheduleSaveFromOfflineEdit();
         });
 }
-
-function h(e) {
+function _(e) {
     let {
         settings: { proto: t, type: n },
-        delaySeconds: r,
-        jitter: i,
+        delaySeconds: i,
+        jitter: r,
     } = e;
-    c.Df[n].markDirty(t, {
-        delaySeconds: r,
-        jitter: i,
-    });
+    d.Df[n].markDirty(t, { delaySeconds: i, jitter: r });
 }
-
-function A(e) {
+function m(e) {
     let { settingsType: t } = e;
-    c.Df[t].loadIfNecessary();
+    d.Df[t].loadIfNecessary();
 }
-
-function g(e) {
+function p(e) {
     let { state: t } = e;
     ("inactive" === t || "background" === t) &&
-        i().forEach(c.Df, (e, t) => {
-            null != u.A.getFullState()[Number(t)].editInfo.timeout &&
+        r().forEach(d.Df, (e, t) => {
+            null != c.A.getFullState()[Number(t)].editInfo.timeout &&
                 (e.logger.log("Triggering persistChanges due to AppStateUpdate"), e.persistChanges());
         });
 }

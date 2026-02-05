@@ -1,9 +1,5 @@
-n.d(t, {
-    Py: () => u,
-    VP: () => c,
-    d9: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Py: () => c, VP: () => u, d9: () => l });
 var r = n(526218),
     i = n(562465),
     a = n(73153);
@@ -30,41 +26,22 @@ async function o(e, t) {
     return null;
 }
 async function l(e, t, n) {
-    let r = null != n ? n : void 0;
-    if (null == t || null != r)
-        return {
-            customId: r,
-        };
+    let r = n ?? void 0;
+    if (null == t || null != r) return { customId: r };
     try {
         let n = await o(e, t);
-        if (null == n)
-            return {
-                customId: r,
-            };
-        return {
-            customId: null != r ? r : n.custom_id,
-        };
-    } catch (e) {
-        return {
-            customId: r,
-        };
+        if (null == n) return { customId: r };
+        return { customId: r ?? n.custom_id };
+    } catch {
+        return { customId: r };
     }
 }
-
-function c(e) {
-    if (null != e)
-        return ""
-            .concat(location.protocol, "//")
-            .concat(window.GLOBAL_ENV.CDN_HOST, "/attachments-quick-links/")
-            .concat(e);
+function u(e) {
+    if (null != e) return `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/attachments-quick-links/${e}`;
 }
-async function u(e, t) {
+async function c(e, t) {
     if (null == e || null == t) return Promise.reject("appId or linkId null");
     let n = await o(e, t);
     if (null == n) return Promise.reject("fetchCustomActivityLink body is null");
-    a.h.dispatch({
-        type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS",
-        applicationId: e,
-        link: n,
-    });
+    a.h.dispatch({ type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS", applicationId: e, link: n });
 }

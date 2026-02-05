@@ -1,3 +1,4 @@
+"use strict";
 var n = e(486816);
 t.exports = function (t, r) {
     var e = [][t];

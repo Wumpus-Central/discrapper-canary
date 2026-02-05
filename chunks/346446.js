@@ -1,66 +1,38 @@
-n.d(t, {
-    A: () => h,
-    r: () => _,
-});
+"use strict";
+n.d(t, { A: () => h, r: () => p });
 var r = n(627968),
     i = n(397927),
     a = n(442433),
-    o = n(50268),
-    s = n(700210),
+    s = n(50268),
+    o = n(700210),
     l = n(253932),
-    c = n(967198),
-    u = n(211401),
+    u = n(967198),
+    c = n(211401),
     d = n(500049),
-    f = n(60809),
-    p = n(985018);
-
-function _(e) {
-    var t;
-    let { application: n } = e,
-        r = null != (t = c.A.getGuildId()) ? t : void 0,
-        a = () => {
-            (0, i.OoC)(f.gS), (0, u.k)(d.Se.DISMISSED);
+    _ = n(60809),
+    f = n(985018);
+function p(e) {
+    let { application: t } = e,
+        n = u.A.getGuildId() ?? void 0,
+        r = () => {
+            (0, i.OoC)(_.gS), (0, c.k)(d.Se.DISMISSED);
         };
-    return (0, s.A)({
-        application: n,
-        guildId: r,
-        onItemClick: a,
-    });
+    return (0, o.A)({ application: t, guildId: n, onItemClick: r });
 }
-
 function h(e) {
     let { application: t, onSelect: n } = e,
-        s = l.Q_.useSetting(),
-        c = (0, o.A)({
-            id: t.id,
-            label: p.intl.string(p.t["+NP/b2"]),
-        }),
-        u = _({
-            application: t,
-        });
+        o = l.Q_.useSetting(),
+        u = (0, s.A)({ id: t.id, label: f.intl.string(f.t["+NP/b2"]) }),
+        c = p({ application: t });
     return (0, r.jsxs)(i.W1t, {
         "data-menu-migrated-auto": !0,
         navId: "activity-shelf-item-context",
         onClose: a.Z_,
-        "aria-label": p.intl.string(p.t.WkcHT9),
+        "aria-label": f.intl.string(f.t.WkcHT9),
         onSelect: n,
         children: [
-            null != u &&
-                (0, r.jsx)(
-                    i.rXV,
-                    {
-                        children: u,
-                    },
-                    "manage-app-actions",
-                ),
-            s &&
-                (0, r.jsx)(
-                    i.rXV,
-                    {
-                        children: c,
-                    },
-                    "developer-actions",
-                ),
+            null != c && (0, r.jsx)(i.rXV, { children: c }, "manage-app-actions"),
+            o && (0, r.jsx)(i.rXV, { children: u }, "developer-actions"),
         ],
     });
 }

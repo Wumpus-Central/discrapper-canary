@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
@@ -11,24 +10,9 @@ t(697509)(r, "__esModule", {
         prohibitedProps: [],
         props: {},
         relatedConcepts: [
-            {
-                concept: {
-                    name: "frontmatter",
-                },
-                module: "DTB",
-            },
-            {
-                concept: {
-                    name: "level",
-                },
-                module: "DTB",
-            },
-            {
-                concept: {
-                    name: "level",
-                },
-                module: "SMIL",
-            },
+            { concept: { name: "frontmatter" }, module: "DTB" },
+            { concept: { name: "level" }, module: "DTB" },
+            { concept: { name: "level" }, module: "SMIL" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

@@ -1,68 +1,52 @@
-n.d(t, {
-    s: () => j,
-}),
-    n(228524),
-    n(896048),
-    n(667532);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { s: () => f }), n(667532);
+var i = n(627968),
+    s = n(64700),
     l = n(136722),
-    s = n(311907),
+    r = n(311907),
     a = n(397927),
-    c = n(47167),
-    o = n(808728),
-    d = n(576705),
+    o = n(47167),
+    d = n(808728),
+    c = n(576705),
     u = n(994500),
-    f = n(287809),
+    m = n(287809),
     g = n(997509),
-    b = n(875331),
-    m = n(652215),
-    p = n(985018);
-let x = "NO_CHANNEL",
-    h = l.kg(m.xBc.VIEW_CHANNEL, m.xBc.CREATE_INSTANT_INVITE);
-
-function j(e) {
-    let { label: t, description: n, guildId: l, widgetEnabled: m, widgetChannelId: j, enableLocalUpdate: O } = e,
-        y = (0, s.bG)([o.Ay], () => o.Ay.getChannels(l)),
-        v = i.useMemo(() => {
-            let e = [...y[o.I6], ...y[o.vM]]
+    x = n(875331),
+    h = n(652215),
+    _ = n(985018);
+let A = "NO_CHANNEL",
+    p = l.kg(h.xBc.VIEW_CHANNEL, h.xBc.CREATE_INSTANT_INVITE);
+function f(e) {
+    let { label: t, description: n, guildId: l, widgetEnabled: h, widgetChannelId: f, enableLocalUpdate: j } = e,
+        N = (0, r.bG)([d.Ay], () => d.Ay.getChannels(l)),
+        E = s.useMemo(() => {
+            let e = [...N[d.I6], ...N[d.vM]]
                 .filter((e) => {
                     let { channel: t } = e;
                     return t.guild_id === l;
                 })
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.id === j || d.A.can(h, t);
+                    return t.id === f || c.A.can(p, t);
                 })
                 .map((e) => {
                     let { channel: t } = e;
-                    return {
-                        id: t.id,
-                        value: t.id,
-                        label: (0, c.m1)(t, f.default, u.A, !0),
-                    };
+                    return { id: t.id, value: t.id, label: (0, o.m1)(t, m.default, u.A, !0) };
                 });
-            return (
-                e.unshift({
-                    id: "no-instant-invite",
-                    value: x,
-                    label: p.intl.string(p.t.u197b7),
-                }),
-                e
-            );
-        }, [y, l, j]),
-        A = i.useCallback(
+            return e.unshift({ id: "no-instant-invite", value: A, label: _.intl.string(_.t.u197b7) }), e;
+        }, [N, l, f]),
+        b = s.useCallback(
             (e) => {
-                O ? (0, b.E)(l, m, e !== x ? e : null) : g.A.updateEmbed(l, m, e !== x ? e : null);
+                j ? (0, x.E)(l, h, e !== A ? e : null) : g.A.updateEmbed(l, h, e !== A ? e : null);
             },
-            [l, m, O],
+            [l, h, j],
         );
-    return (0, r.jsx)(a.l6P, {
+    return (0, i.jsx)(a.l6P, {
         label: t,
         description: n,
-        options: v,
-        value: null != j ? j : void 0,
-        onSelectionChange: A,
+        options: E,
+        value: f ?? void 0,
+        onSelectionChange: b,
         selectionMode: "single",
         fullWidth: !0,
     });

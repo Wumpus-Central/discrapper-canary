@@ -1,152 +1,125 @@
-a.d(i, {
-    default: () => v,
-}),
-    a(896048);
-var t = a(627968),
-    s = a(64700),
-    l = a(397927),
-    n = a(444927),
-    r = a(915089),
-    d = a(937773),
-    c = a(770335),
-    o = a(405810),
-    u = a(808728),
-    m = a(486020),
-    p = a(515718),
-    b = a(307731),
-    f = a(985018),
-    x = a(510272),
-    h = a(230279);
-
-function g() {
-    return [
-        {
-            name: f.intl.string(f.t["Sp2NF+"]),
-            extensions: ["jpg", "jpeg", "png"],
-        },
-    ];
+a.d(t, { default: () => f });
+var i = a(627968),
+    n = a(64700),
+    s = a(397927),
+    l = a(444927),
+    d = a(915089),
+    r = a(937773),
+    o = a(770335),
+    c = a(405810),
+    p = a(808728),
+    u = a(486020),
+    m = a(515718),
+    x = a(307731),
+    h = a(985018),
+    g = a(510272),
+    j = a(230279);
+function C() {
+    return [{ name: h.intl.string(h.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];
 }
-async function j(e) {
-    let i = (0, m._O)({
-            id: e.id,
-            animated: !1,
-            size: 48,
-            forcePNG: !0,
-        }),
-        a = await fetch(i),
-        t = await a.blob();
-    return await (0, p.We)(t);
+async function b(e) {
+    let t = (0, u._O)({ id: e.id, animated: !1, size: 48, forcePNG: !0 }),
+        a = await fetch(t),
+        i = await a.blob();
+    return await (0, m.We)(i);
 }
-let v = function (e) {
-    let { guildId: i, onUploadIcon: a, onSelectUnicodeEmoji: m, onClose: p, transitionState: v } = e,
-        C = (0, r.GV)(),
-        N = u.Ay.getDefaultChannel(i),
-        [y, k] = s.useState("tab-id-role-icon-file-upload"),
-        [I, _] = s.useState(!1),
-        w = (0, n.A)(g);
+let f = function (e) {
+    let { guildId: t, onUploadIcon: a, onSelectUnicodeEmoji: u, onClose: m, transitionState: f } = e,
+        I = (0, d.GV)(),
+        N = p.Ay.getDefaultChannel(t),
+        [_, y] = n.useState("tab-id-role-icon-file-upload"),
+        [k, v] = n.useState(!1),
+        w = (0, l.A)(C);
     return (
-        s.useEffect(() => {
-            _(!1);
-        }, [y]),
-        (0, t.jsx)(l.EOs, {
-            transitionState: v,
-            "aria-labelledby": C,
-            size: l.rIJ.MEDIUM,
-            className: x.CR,
+        n.useEffect(() => {
+            v(!1);
+        }, [_]),
+        (0, i.jsx)(s.EOs, {
+            transitionState: f,
+            "aria-labelledby": I,
+            size: s.rIJ.MEDIUM,
+            className: g.CR,
             parentComponent: "CustomRoleIconUploadModal",
             "data-migration-pending": !0,
-            children: (0, t.jsxs)("div", {
-                className: x.FG,
+            children: (0, i.jsxs)("div", {
+                className: g.FG,
                 children: [
-                    (0, t.jsxs)(l.VQ0, {
-                        selectedItem: y,
-                        onItemSelect: k,
+                    (0, i.jsxs)(s.VQ0, {
+                        selectedItem: _,
+                        onItemSelect: y,
                         type: "top",
                         look: "grey",
                         "aria-label": "Expression Picker",
-                        className: x.C$,
+                        className: g.C$,
                         children: [
-                            (0, t.jsx)(l.VQ0.Item, {
+                            (0, i.jsx)(s.VQ0.Item, {
                                 id: "tab-id-role-icon-file-upload",
-                                children: f.intl.string(f.t.royWSB),
+                                children: h.intl.string(h.t.royWSB),
                             }),
-                            (0, t.jsx)(l.VQ0.Item, {
+                            (0, i.jsx)(s.VQ0.Item, {
                                 id: "tab-id-role-icon-emoji",
-                                children: f.intl.string(f.t["/Ny2wZ"]),
+                                children: h.intl.string(h.t["/Ny2wZ"]),
                             }),
                         ],
                     }),
-                    "tab-id-role-icon-file-upload" === y
-                        ? (0, t.jsx)(l.$mQ, {
+                    "tab-id-role-icon-file-upload" === _
+                        ? (0, i.jsx)(s.$mQ, {
                               "data-migration-pending": !0,
-                              children: (0, t.jsxs)("div", {
-                                  className: x.PO,
+                              children: (0, i.jsxs)("div", {
+                                  className: g.PO,
                                   children: [
-                                      (0, t.jsxs)("div", {
-                                          className: x.HK,
+                                      (0, i.jsxs)("div", {
+                                          className: g.HK,
                                           children: [
-                                              (0, t.jsx)("img", {
-                                                  src: h,
-                                                  alt: "sparkles",
-                                              }),
-                                              (0, t.jsx)("div", {
-                                                  className: x.sk,
-                                                  children: (0, t.jsx)(l.XGR, {
+                                              (0, i.jsx)("img", { src: j, alt: "sparkles" }),
+                                              (0, i.jsx)("div", {
+                                                  className: g.sk,
+                                                  children: (0, i.jsx)(s.XGR, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: x.T3,
+                                                      className: g.T3,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, t.jsx)("div", {
-                                          className: x.WG,
-                                          children: f.intl.string(f.t["mz++Qq"]),
-                                      }),
-                                      (0, t.jsx)(o.A, {
+                                      (0, i.jsx)("div", { className: g.WG, children: h.intl.string(h.t["mz++Qq"]) }),
+                                      (0, i.jsx)(c.A, {
                                           onChange: (e) => {
-                                              _(!1), a(e), p();
+                                              v(!1), a(e), m();
                                           },
                                           onFileSizeError: () => {
-                                              _(!0);
+                                              v(!0);
                                           },
                                           maxFileSizeBytes: 256e3,
                                           filters: w,
-                                          text: f.intl.string(f.t.sdCQY4),
+                                          text: h.intl.string(h.t.sdCQY4),
                                           size: "md",
                                           variant: "primary",
                                       }),
-                                      I
-                                          ? (0, t.jsx)(l.Text, {
-                                                className: x.Qw,
+                                      k
+                                          ? (0, i.jsx)(s.Text, {
+                                                className: g.Qw,
                                                 color: "text-feedback-critical",
                                                 variant: "text-sm/normal",
-                                                children: f.intl.string(f.t.HFyKsa),
+                                                children: h.intl.string(h.t.HFyKsa),
                                             })
                                           : null,
                                   ],
                               }),
                           })
                         : null,
-                    "tab-id-role-icon-emoji" === y
-                        ? (0, t.jsx)(d.A, {
+                    "tab-id-role-icon-emoji" === _
+                        ? (0, i.jsx)(r.A, {
                               hasTabWrapper: !0,
-                              closePopout: () => p(),
+                              closePopout: () => m(),
                               onSelectEmoji: async (e) => {
-                                  let { emoji: i } = e;
-                                  if ((null == i ? void 0 : i.id) != null)
-                                      (null == i ? void 0 : i.type) === c.i.GUILD && a(await j(i));
-                                  else if ((null == i ? void 0 : i.surrogates) != null) {
-                                      var t, s;
-                                      m(
-                                          null != (t = null == (s = i.defaultDiversityChild) ? void 0 : s.surrogates)
-                                              ? t
-                                              : i.surrogates,
-                                      );
-                                  }
-                                  p();
+                                  let { emoji: t } = e;
+                                  t?.id != null
+                                      ? t?.type === o.i.GUILD && a(await b(t))
+                                      : t?.surrogates != null && u(t.defaultDiversityChild?.surrogates ?? t.surrogates),
+                                      m();
                               },
-                              pickerIntention: b.b_.COMMUNITY_CONTENT,
+                              pickerIntention: x.b_.COMMUNITY_CONTENT,
                               channel: N,
                           })
                         : null,

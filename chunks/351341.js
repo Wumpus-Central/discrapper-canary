@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fq: "ripple_fc7141",
     ND: "emojiListRow_fc7141",

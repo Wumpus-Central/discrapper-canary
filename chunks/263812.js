@@ -1,13 +1,6 @@
 e.exports = function (e) {
     let t = "('|\\.')+",
-        n = {
-            relevance: 0,
-            contains: [
-                {
-                    begin: t,
-                },
-            ],
-        };
+        n = { relevance: 0, contains: [{ begin: t }] };
     return {
         name: "Matlab",
         keywords: {
@@ -27,60 +20,18 @@ e.exports = function (e) {
                     {
                         className: "params",
                         variants: [
-                            {
-                                begin: "\\(",
-                                end: "\\)",
-                            },
-                            {
-                                begin: "\\[",
-                                end: "\\]",
-                            },
+                            { begin: "\\(", end: "\\)" },
+                            { begin: "\\[", end: "\\]" },
                         ],
                     },
                 ],
             },
-            {
-                className: "built_in",
-                begin: /true|false/,
-                relevance: 0,
-                starts: n,
-            },
-            {
-                begin: "[a-zA-Z][a-zA-Z_0-9]*" + t,
-                relevance: 0,
-            },
-            {
-                className: "number",
-                begin: e.C_NUMBER_RE,
-                relevance: 0,
-                starts: n,
-            },
-            {
-                className: "string",
-                begin: "'",
-                end: "'",
-                contains: [
-                    {
-                        begin: "''",
-                    },
-                ],
-            },
-            {
-                begin: /\]|\}|\)/,
-                relevance: 0,
-                starts: n,
-            },
-            {
-                className: "string",
-                begin: '"',
-                end: '"',
-                contains: [
-                    {
-                        begin: '""',
-                    },
-                ],
-                starts: n,
-            },
+            { className: "built_in", begin: /true|false/, relevance: 0, starts: n },
+            { begin: "[a-zA-Z][a-zA-Z_0-9]*" + t, relevance: 0 },
+            { className: "number", begin: e.C_NUMBER_RE, relevance: 0, starts: n },
+            { className: "string", begin: "'", end: "'", contains: [{ begin: "''" }] },
+            { begin: /\]|\}|\)/, relevance: 0, starts: n },
+            { className: "string", begin: '"', end: '"', contains: [{ begin: '""' }], starts: n },
             e.COMMENT("^\\s*%\\{\\s*$", "^\\s*%\\}\\s*$"),
             e.COMMENT("%", "$"),
         ],

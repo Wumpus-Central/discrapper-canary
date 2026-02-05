@@ -1,18 +1,16 @@
-n.d(t, {
-    A: () => b,
-});
-var r = n(627968),
+n.d(t, { A: () => p });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
-    a = n(397927),
-    s = n(775602),
+    a = n(311907),
+    s = n(397927),
+    r = n(775602),
     o = n(406704),
     c = n(961350),
-    u = n(576705),
-    d = n(652215),
-    f = n(985018),
-    p = n(990014);
-let h = () =>
+    d = n(576705),
+    u = n(652215),
+    h = n(985018),
+    m = n(990014);
+let A = () =>
         n
             .e("15423")
             .then(n.t.bind(n, 155147, 19))
@@ -20,40 +18,34 @@ let h = () =>
                 let { default: t } = e;
                 return t;
             }),
-    b = l.memo(function (e) {
+    p = l.memo(function (e) {
         let { channel: t, isLastItem: n } = e,
-            l = (0, i.bG)([s.A], () => s.A.useReducedMotion),
-            b = (0, i.bG)([u.A], () => u.A.can(d.xBc.SEND_MESSAGES_IN_THREADS, t)),
+            l = (0, a.bG)([r.A], () => r.A.useReducedMotion),
+            p = (0, a.bG)([d.A], () => d.A.can(u.xBc.SEND_MESSAGES_IN_THREADS, t)),
             g = (0, o.s5)(t),
-            m = (0, i.bG)([c.default], () => c.default.getId());
+            f = (0, a.bG)([c.default], () => c.default.getId());
         return n
-            ? b && !g && t.ownerId !== m
-                ? (0, r.jsxs)("div", {
-                      className: p.aP,
+            ? p && !g && t.ownerId !== f
+                ? (0, i.jsxs)("div", {
+                      className: m.aP,
                       children: [
-                          (0, r.jsx)(a.akl, {
-                              importData: h,
-                              shouldAnimate: !l,
-                              className: p.lY,
-                          }),
-                          (0, r.jsxs)("div", {
-                              className: p.FS,
+                          (0, i.jsx)(s.akl, { importData: A, shouldAnimate: !l, className: m.lY }),
+                          (0, i.jsxs)("div", {
+                              className: m.FS,
                               children: [
-                                  (0, r.jsx)(a.Heading, {
+                                  (0, i.jsx)(s.Heading, {
                                       variant: "heading-md/semibold",
-                                      children: f.intl.string(f.t.OmBThA),
+                                      children: h.intl.string(h.t.OmBThA),
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: f.intl.string(f.t.zcs5ko),
+                                      children: h.intl.string(h.t.zcs5ko),
                                   }),
                               ],
                           }),
                       ],
                   })
                 : null
-            : (0, r.jsx)("div", {
-                  className: p.yF,
-              });
+            : (0, i.jsx)("div", { className: m.yF });
     });

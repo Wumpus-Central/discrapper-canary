@@ -1,17 +1,9 @@
-n.d(t, {
-    y: () => s,
-});
-var r = n(397927),
-    i = n(674272),
-    a = n(431804);
-let s = {
+n.d(t, { y: () => a });
+var i = n(397927),
+    s = n(674272),
+    r = n(431804);
+let a = {
     binds: ["mod+alt+shift+w"],
     comboKeysBindGlobal: !0,
-    action: () => (
-        (0, i.A)({
-            source: a.y.KEYBIND,
-            onClose: r.s7G,
-        }),
-        !1
-    ),
+    action: () => ((0, s.A)({ source: r.y.KEYBIND, onClose: i.s7G }), !1),
 };

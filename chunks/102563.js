@@ -1,22 +1,8 @@
-n(734808), n(896048);
+"use strict";
 var r = n(299141);
 n(308060);
 var i = n(214958),
     a = n.n(i);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 (window.platform = a()),
     null == window.ResizeObserver && (window.ResizeObserver = r.t),
     "object" != typeof globalThis && (window.globalThis = window),
@@ -28,6 +14,13 @@ function s(e, t, n) {
     });
 {
     class e {
+        x;
+        y;
+        z;
+        w;
+        constructor(e = 0, t = 0, n = 0, r = 1) {
+            (this.x = e), (this.y = t), (this.z = n), (this.w = r);
+        }
         static fromPoint(t) {
             return new e(t.x, t.y, void 0 !== t.z ? t.z : 0, void 0 !== t.w ? t.w : 1);
         }
@@ -42,28 +35,20 @@ function s(e, t, n) {
                   );
         }
         toJSON() {
-            return {
-                x: this.x,
-                y: this.y,
-                z: this.z,
-                w: this.w,
-            };
-        }
-        constructor(e = 0, t = 0, n = 0, r = 1) {
-            s(this, "x", void 0),
-                s(this, "y", void 0),
-                s(this, "z", void 0),
-                s(this, "w", void 0),
-                (this.x = e),
-                (this.y = t),
-                (this.z = n),
-                (this.w = r);
+            return { x: this.x, y: this.y, z: this.z, w: this.w };
         }
     }
     null == window.DOMPoint && (window.DOMPoint = e);
 }
 {
     class e {
+        x;
+        y;
+        width;
+        height;
+        constructor(e = 0, t = 0, n = 0, r = 0) {
+            (this.x = e), (this.y = t), (this.width = n), (this.height = r);
+        }
         static fromRect(t) {
             return new e(t.x, t.y, t.width, t.height);
         }
@@ -90,16 +75,6 @@ function s(e, t, n) {
                 right: this.right,
                 bottom: this.bottom,
             };
-        }
-        constructor(e = 0, t = 0, n = 0, r = 0) {
-            s(this, "x", void 0),
-                s(this, "y", void 0),
-                s(this, "width", void 0),
-                s(this, "height", void 0),
-                (this.x = e),
-                (this.y = t),
-                (this.width = n),
-                (this.height = r);
         }
     }
     null == window.DOMRect && (window.DOMRect = e);

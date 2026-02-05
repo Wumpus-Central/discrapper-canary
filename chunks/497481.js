@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     af: "categoryItem_b9ee0c",
     ZG: "categoryItemGuildCategory_b9ee0c categoryItem_b9ee0c",

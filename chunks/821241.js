@@ -1,84 +1,65 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(311907),
-    o = n(397927),
-    l = n(709066),
-    c = n(71393),
-    u = n(763754),
-    d = n(643204),
-    f = n(809115),
-    p = n(888675),
-    _ = n(705751),
-    h = n(985018),
-    m = n(234054);
-
-function g(e) {
-    var t;
-    let { message: n, compact: i, usernameHook: g, channel: E } = e,
-        b = (0, s.bG)([c.A], () => c.A.getGuild(E.guild_id)),
-        y = (0, u.Ay)(n),
-        O = g(y),
+var l = n(503698),
+    a = n.n(l),
+    r = n(311907),
+    s = n(397927),
+    o = n(709066),
+    d = n(71393),
+    c = n(763754),
+    u = n(643204),
+    m = n(809115),
+    _ = n(888675),
+    h = n(705751),
+    p = n(985018),
+    g = n(234054);
+function A(e) {
+    let { message: t, compact: n, usernameHook: l, channel: A } = e,
+        f = (0, r.bG)([d.A], () => d.A.getGuild(A.guild_id)),
+        x = (0, c.Ay)(t),
+        E = l(x),
         {
-            avatarSrc: A,
-            eventHandlers: { onMouseEnter: v, onMouseLeave: S },
-        } = (0, f.a)(!0);
-    return (0, r.jsx)("div", {
-        onMouseEnter: v,
-        onMouseLeave: S,
-        children: (0, r.jsx)(p.A, {
-            className: a()(m.rs, {
-                [m.oE]: i,
-            }),
-            iconNode: i
-                ? null
-                : (0, r.jsx)(f.l, {
-                      src: A,
-                  }),
-            iconContainerClassName: m.zc,
-            compact: i,
-            children: (0, r.jsxs)("div", {
-                className: a()(m.Qs, {
-                    [m.oE]: i,
-                }),
+            avatarSrc: C,
+            eventHandlers: { onMouseEnter: I, onMouseLeave: T },
+        } = (0, m.a)(!0);
+    return (0, i.jsx)("div", {
+        onMouseEnter: I,
+        onMouseLeave: T,
+        children: (0, i.jsx)(_.A, {
+            className: a()(g.rs, { [g.oE]: n }),
+            iconNode: n ? null : (0, i.jsx)(m.l, { src: C }),
+            iconContainerClassName: g.zc,
+            compact: n,
+            children: (0, i.jsxs)("div", {
+                className: a()(g.Qs, { [g.oE]: n }),
                 children: [
-                    (0, r.jsx)(d.ix, {
-                        message: n,
-                        messageClassname: m.he,
-                        className: a()(m.QV, m.he, {
-                            [m.oE]: i,
-                        }),
-                        username: (0, r.jsxs)("div", {
-                            className: m.he,
+                    (0, i.jsx)(u.ix, {
+                        message: t,
+                        messageClassname: g.he,
+                        className: a()(g.QV, g.he, { [g.oE]: n }),
+                        username: (0, i.jsxs)("div", {
+                            className: g.he,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
-                                    className: m.Xh,
-                                    children: h.intl.string(h.t.hG1StD),
+                                    className: g.Xh,
+                                    children: p.intl.string(p.t.hG1StD),
                                 }),
-                                (0, r.jsx)(l.A, {
-                                    type: _.nu.SYSTEM_DM,
-                                    className: m.Al,
-                                }),
+                                (0, i.jsx)(o.A, { type: h.nu.SYSTEM_DM, className: g.Al }),
                             ],
                         }),
-                        compact: i,
+                        compact: n,
                         showTimestamp: !0,
                     }),
-                    (0, r.jsx)("div", {
-                        className: a()(m.__invalid_messageContent, {
-                            [m.oE]: i,
-                        }),
-                        children: h.intl.format(h.t.W0UBI3, {
-                            username: y.nick,
-                            usernameHook: O,
-                            guildName: null != (t = null == b ? void 0 : b.name) ? t : "",
+                    (0, i.jsx)("div", {
+                        className: a()(g.__invalid_messageContent, { [g.oE]: n }),
+                        children: p.intl.format(p.t.W0UBI3, {
+                            username: x.nick,
+                            usernameHook: E,
+                            guildName: f?.name ?? "",
                         }),
                     }),
                 ],

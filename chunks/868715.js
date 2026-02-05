@@ -1,5 +1,5 @@
+"use strict";
 var n = r(724039);
-
 function i() {
     return (i =
         n ||
@@ -11,7 +11,6 @@ function i() {
             return t;
         }).apply(this, arguments);
 }
-
 function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -28,17 +27,9 @@ function o(t) {
     }
     return t;
 }
-
 function a(t, e, r) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = r),
+        e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r),
         t
     );
 }
@@ -84,54 +75,24 @@ var m = function (t, e) {
         r.splice(r.indexOf(n[0]), n.length + 1);
         var p = n.reverse(),
             h = p[0].key;
-        return (
-            r.push(
-                c.cloneElement(
-                    t,
-                    {
-                        key: "".concat(h, "-wrap"),
-                        "data-offset-key": u.encode(h, 0, 0),
-                    },
-                    p,
-                ),
-            ),
-            r
-        );
+        return r.push(c.cloneElement(t, { key: "".concat(h, "-wrap"), "data-offset-key": u.encode(h, 0, 0) }, p)), r;
     },
     S = function (t, e) {
         var r = e.get(t.getType()) || e.get("unstyled"),
             n = r.wrapper;
-        return {
-            Element: r.element || e.get("unstyled").element,
-            wrapperTemplate: n,
-        };
+        return { Element: r.element || e.get("unstyled").element, wrapperTemplate: n };
     },
     w = function (t, e) {
         var r = e(t);
-        return r
-            ? {
-                  CustomComponent: r.component,
-                  customProps: r.props,
-                  customEditable: r.editable,
-              }
-            : {};
+        return r ? { CustomComponent: r.component, customProps: r.props, customEditable: r.editable } : {};
     },
     k = function (t, e, r, n, i, a) {
-        var s = {
-                "data-block": !0,
-                "data-editor": e,
-                "data-offset-key": r,
-                key: t.getKey(),
-                ref: a,
-            },
+        var s = { "data-block": !0, "data-editor": e, "data-offset-key": r, key: t.getKey(), ref: a },
             u = n(t);
         return (
             u && (s.className = u),
             void 0 !== i.customEditable &&
-                (s = o({}, s, {
-                    contentEditable: i.customEditable,
-                    suppressContentEditableWarning: !0,
-                })),
+                (s = o({}, s, { contentEditable: i.customEditable, suppressContentEditableWarning: !0 })),
             s
         );
     };

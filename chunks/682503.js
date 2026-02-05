@@ -1,52 +1,41 @@
-n.d(t, {
-    default: () => N,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(747238);
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    r = n.n(s),
-    l = n(732955),
-    o = n(397927),
-    c = n(793574),
-    d = n(688810),
-    u = n(855057),
-    p = n(702211),
-    _ = n(699576),
-    A = n(954571),
-    m = n(504974),
-    f = n(439193),
-    g = n(652215),
-    h = n(339984),
-    x = n(985018),
-    b = n(392491);
-
-function N(e) {
-    let { transitionState: t, onClose: s, onComplete: N, uploadType: y, showUpsellHeader: j, analyticsPage: E } = e,
-        [v, R] = i.useState(!1),
-        L = (0, o.k34)(),
-        { analyticsLocations: I, newestAnalyticsLocation: w } = (0, d.Ay)(c.A.GIF_PICKER);
+a.d(t, { default: () => b }), a(323874), a(14289), a(35956);
+var n = a(627968),
+    i = a(64700),
+    s = a(503698),
+    l = a.n(s),
+    r = a(732955),
+    o = a(397927),
+    c = a(793574),
+    d = a(688810),
+    u = a(855057),
+    p = a(702211),
+    _ = a(699576),
+    A = a(954571),
+    m = a(504974),
+    h = a(439193),
+    g = a(652215),
+    f = a(339984),
+    x = a(985018),
+    N = a(392491);
+function b(e) {
+    let { transitionState: t, onClose: s, onComplete: b, uploadType: E, showUpsellHeader: R, analyticsPage: y } = e,
+        [I, L] = i.useState(!1),
+        j = (0, o.k34)(),
+        { analyticsLocations: w, newestAnalyticsLocation: v } = (0, d.Ay)(c.A.GIF_PICKER);
     async function P(e) {
         let t,
             { gifSrc: i } = e;
-        if (null == i || v) return;
-        R(!0);
-        let r = (0, f.s)(i),
-            l = await fetch(r),
-            c = await l.blob(),
+        if (null == i || I) return;
+        L(!0);
+        let l = (0, h.s)(i),
+            r = await fetch(l),
+            c = await r.blob(),
             d =
                 "" !== c.type
                     ? c.type
                     : (function (e) {
-                          var t;
-                          switch (null == (t = new URL(e).pathname.split(".").pop()) ? void 0 : t.toLowerCase()) {
+                          let t = new URL(e).pathname;
+                          switch (t.split(".").pop()?.toLowerCase()) {
                               case "gif":
                               default:
                                   return "image/gif";
@@ -58,115 +47,68 @@ function N(e) {
                               case "jpeg":
                                   return "image/jpeg";
                           }
-                      })(r),
-            u = "jpeg" === (t = d.split("/")[1]) ? ".jpg" : null != t && "" !== t ? ".".concat(t) : ".gif",
-            p = "selected".concat(u);
+                      })(l),
+            u = "jpeg" === (t = d.split("/")[1]) ? ".jpg" : null != t && "" !== t ? `.${t}` : ".gif",
+            p = `selected${u}`;
         s(),
             (0, o.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("35929"), n.e("74571"), n.e("67449")]).then(
-                        n.bind(n, 142630),
+                    let { default: e } = await Promise.all([a.e("35929"), a.e("74571"), a.e("67449")]).then(
+                        a.bind(a, 142630),
                     );
                     return (t) =>
-                        (0, a.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        a = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (a = a.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        a.forEach(function (t) {
-                                            var a;
-                                            (a = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: a,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = a);
-                                        });
-                                }
-                                return e;
-                            })(
-                                {
-                                    imageUri: r,
-                                    file: new File([c], p, {
-                                        type: d,
-                                    }),
-                                    onCrop: N,
-                                    uploadType: y,
-                                    showUpsellHeader: j,
-                                },
-                                t,
-                            ),
-                        );
+                        (0, n.jsx)(e, {
+                            imageUri: l,
+                            file: new File([c], p, { type: d }),
+                            onCrop: b,
+                            uploadType: E,
+                            showUpsellHeader: R,
+                            ...t,
+                        });
                 },
-                {
-                    contextKey: L,
-                },
+                { contextKey: j },
             );
     }
     i.useEffect(() => {
         A.default.track(g.HAw.OPEN_MODAL, {
             type: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: I,
-            location: {
-                page: E,
-            },
+            location_stack: w,
+            location: { page: y },
         });
-    }, [I, E]);
-    let S = y === h.HL.AVATAR || y === h.HL.BANNER,
-        U = (0, p.b)(!S);
-    return (0, a.jsx)(d.f5, {
-        value: I,
-        children: (0, a.jsxs)(l.dWK, {
+    }, [w, y]);
+    let S = E === f.HL.AVATAR || E === f.HL.BANNER,
+        $ = (0, p.b)(!S);
+    return (0, n.jsx)(d.f5, {
+        value: w,
+        children: (0, n.jsxs)(r.dWK, {
             onClose: s,
             transitionState: t,
             children: [
-                (0, a.jsx)(l.rQ0, {
-                    title: x.intl.string(x.t["xsC+/y"]),
-                }),
-                j &&
-                    !U &&
-                    (0, a.jsx)("div", {
-                        className: b.It,
-                        children: (0, a.jsx)(m.A, {
-                            type: y,
-                            analyticsPage: E,
+                (0, n.jsx)(r.rQ0, { title: x.intl.string(x.t["xsC+/y"]) }),
+                R &&
+                    !$ &&
+                    (0, n.jsx)("div", {
+                        className: N.It,
+                        children: (0, n.jsx)(m.A, {
+                            type: E,
+                            analyticsPage: y,
                             analyticsSection: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                             isGIF: !0,
                         }),
                     }),
-                (0, a.jsxs)("div", {
-                    className: b.SD,
+                (0, n.jsxs)("div", {
+                    className: N.SD,
                     children: [
-                        (0, a.jsx)(u.A, {
-                            className: r()(b.XC, {
-                                [b.bX]: v,
-                            }),
+                        (0, n.jsx)(u.A, {
+                            className: l()(N.XC, { [N.bX]: I }),
                             onSelectGIF: P,
                             headingColor: "text-subtle",
                             hideFavorites: !0,
                         }),
-                        v &&
-                            (0, a.jsx)(o.y$y, {
-                                className: b.u1,
-                            }),
-                        j &&
-                            U &&
-                            (0, a.jsx)(_.A, {
-                                uploadType: y,
-                                analyticsSource: w,
-                                showUpsell: !0,
-                                className: b.Kt,
-                            }),
+                        I && (0, n.jsx)(o.y$y, { className: N.u1 }),
+                        R &&
+                            $ &&
+                            (0, n.jsx)(_.A, { uploadType: E, analyticsSource: v, showUpsell: !0, className: N.Kt }),
                     ],
                 }),
             ],

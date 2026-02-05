@@ -1,354 +1,354 @@
+"use strict";
 n.d(t, {
-    $4X: () => eD,
+    $4X: () => ew,
     $8o: () => ei,
-    $OG: () => tR,
+    $OG: () => tD,
     $aF: () => ta,
-    $jw: () => nv,
-    $pd: () => eQ,
-    AD1: () => p.AD,
-    AKn: () => rC,
-    AMi: () => tq,
+    $jw: () => ny,
+    $pd: () => eZ,
+    AD1: () => f.AD,
+    AKn: () => rN,
+    AMi: () => t$,
     AO_: () => nE,
     AaC: () => nH,
     Ahp: () => td,
-    Ajs: () => rR,
-    An1: () => rv,
-    AnalyticsObjectTypes: () => tw,
+    Ajs: () => rD,
+    An1: () => ry,
+    AnalyticsObjectTypes: () => tO,
     Auw: () => i.A,
-    BBH: () => tO,
-    BEX: () => O,
-    BIo: () => ns,
-    BRT: () => nZ,
+    BBH: () => tT,
+    BEX: () => T,
+    BIo: () => no,
+    BRT: () => nq,
     BVt: () => d.BV,
-    BYE: () => tJ,
-    CS1: () => ew,
-    CT4: () => _.CT,
-    CUs: () => nw,
-    CmT: () => p.Cm,
-    D0I: () => ep,
-    D2K: () => nf,
-    DUB: () => np,
-    DYY: () => p.DY,
+    BYE: () => tX,
+    CS1: () => eO,
+    CT4: () => p.CT,
+    CUs: () => nO,
+    CmT: () => f.Cm,
+    D0I: () => ef,
+    D2K: () => n_,
+    DUB: () => nf,
+    DYY: () => f.DY,
     Dmq: () => ne,
     DpB: () => n1,
     DqD: () => e6,
-    EMb: () => ev,
+    EMb: () => ey,
     EZt: () => n9,
     EkJ: () => ea,
-    F05: () => ty,
+    F05: () => tA,
     FI6: () => t5,
-    FXj: () => p.FX,
+    FXj: () => f.FX,
     FYj: () => eh,
     F_X: () => nm,
-    Fz7: () => nS,
-    G2g: () => tj,
-    G6Q: () => $,
+    Fz7: () => nC,
+    G2g: () => tk,
+    G6Q: () => J,
     GD: () => n4,
-    GaG: () => nb,
-    Gg3: () => p.Gg,
-    GuildFeatures: () => x,
-    H2B: () => rf,
-    HAw: () => no,
+    GaG: () => nI,
+    Gg3: () => f.Gg,
+    GuildFeatures: () => P,
+    H2B: () => r_,
+    HAw: () => ns,
     Hf6: () => n0,
-    I4_: () => tb,
+    I4_: () => tI,
     IWg: () => g,
-    Ign: () => eP,
+    Ign: () => eL,
     IjB: () => e1,
-    ItT: () => tc,
-    J$u: () => nk,
-    JJy: () => tC,
-    Joy: () => p.Jo,
-    K3c: () => rS,
-    KE7: () => y,
+    ItT: () => tu,
+    J$u: () => nU,
+    JJy: () => tN,
+    Joy: () => f.Jo,
+    K3c: () => rC,
+    KE7: () => A,
     KIY: () => tY,
-    KL3: () => eR,
-    Kby: () => nI,
-    KcG: () => p.Kc,
-    Kf: () => p.Kf,
-    Ks6: () => nN,
-    LU7: () => rp,
-    LWr: () => t$,
-    L_o: () => p.L_,
-    Lti: () => p.Lt,
-    Lw6: () => p.Lw,
-    Ly6: () => ro,
+    KL3: () => eD,
+    Kby: () => nv,
+    KcG: () => f.Kc,
+    Kf: () => f.Kf,
+    Ks6: () => nR,
+    LU7: () => rf,
+    LWr: () => tJ,
+    L_o: () => f.L_,
+    Lti: () => f.Lt,
+    Lw6: () => f.Lw,
+    Ly6: () => rs,
     M2T: () => t4,
     ME: () => d.ME,
-    MLl: () => rc,
-    MRS: () => o.M,
-    MVz: () => nL,
-    MdR: () => ts,
-    Mmu: () => tT,
-    NA2: () => ej,
-    NH1: () => ry,
-    NJ8: () => p.NJ,
+    MLl: () => ru,
+    MRS: () => s.M,
+    MVz: () => nx,
+    MdR: () => to,
+    Mmu: () => tb,
+    NA2: () => ek,
+    NH1: () => rA,
+    NJ8: () => f.NJ,
     NKC: () => rm,
-    NOr: () => rA,
-    NcF: () => p.Nc,
+    NOr: () => rS,
+    NcF: () => f.Nc,
     O3O: () => tW,
-    OLI: () => p.OL,
-    OQC: () => nJ,
-    OSZ: () => X,
-    Oi0: () => rw,
+    OLI: () => f.OL,
+    OQC: () => nX,
+    OSZ: () => Q,
+    Oi0: () => rO,
     P0V: () => eK,
-    P6Q: () => rs,
-    PE$: () => nj,
-    PE1: () => tx,
-    Pq7: () => p.Pq,
+    P6Q: () => ro,
+    PE$: () => nk,
+    PE1: () => tP,
+    Pq7: () => f.Pq,
     Puh: () => n7,
     PvD: () => er,
-    Q4z: () => tD,
-    Q7O: () => p.Q7,
-    QCW: () => nQ,
+    Q4z: () => tw,
+    Q7O: () => f.Q7,
+    QCW: () => nZ,
     RCc: () => e9,
     RWi: () => ng,
     R_U: () => nF,
-    RoK: () => to,
+    RoK: () => ts,
     Rsh: () => eg,
-    Rv1: () => rP,
+    Rv1: () => rL,
     S3d: () => F,
-    S7L: () => j,
+    S7L: () => k,
     SH7: () => a.S,
-    SO9: () => n_,
+    SO9: () => np,
     T2E: () => tE,
-    T7x: () => ex,
-    TBI: () => R,
-    TGd: () => p.TG,
-    TGz: () => tZ,
+    T7x: () => eP,
+    TBI: () => D,
+    TGd: () => f.TG,
+    TGz: () => tq,
     TLS: () => t3,
     TVA: () => t6,
-    TZK: () => eq,
+    TZK: () => e$,
     T_y: () => tm,
-    TbF: () => eB,
-    ThZ: () => tA,
-    TpD: () => tQ,
-    U2_: () => p.U2,
-    UNo: () => eS,
-    UVF: () => Q,
-    Ue3: () => eI,
-    Umv: () => eu,
-    UqL: () => tI,
+    TbF: () => ej,
+    ThZ: () => tS,
+    TpD: () => tZ,
+    U2_: () => f.U2,
+    UNo: () => eC,
+    UVF: () => Z,
+    Ue3: () => ev,
+    Umv: () => ec,
+    UqL: () => tv,
     Ut1: () => ez,
     Uyk: () => nt,
     VFs: () => eW,
-    VVm: () => p.VV,
-    VX0: () => nG,
-    W6J: () => _.W6,
-    WA1: () => eG,
-    WMy: () => _.WM,
-    WTw: () => n$,
-    WxW: () => rT,
-    Wzo: () => p.Wz,
-    X30: () => rx,
-    X7G: () => tp,
+    VVm: () => f.VV,
+    VX0: () => nV,
+    W6J: () => p.W6,
+    WA1: () => eV,
+    WMy: () => p.WM,
+    WTw: () => nJ,
+    WxW: () => rb,
+    Wzo: () => f.Wz,
+    X30: () => rP,
+    X7G: () => tf,
     X8x: () => rt,
     XAf: () => e0,
     XL8: () => t9,
     XYD: () => rd,
-    XYq: () => _.XY,
-    XgB: () => eV,
-    XlF: () => p.Xl,
+    XYq: () => p.XY,
+    XgB: () => eB,
+    XlF: () => f.Xl,
     XlH: () => m,
-    Xlh: () => tu,
+    Xlh: () => tc,
     Xmn: () => na,
     YAq: () => nW,
-    YI$: () => p.YI,
+    YI$: () => f.YI,
     YYv: () => d.YY,
-    Yri: () => p.Yr,
-    YvQ: () => S,
-    Z86: () => nD,
-    ZE4: () => p.ZE,
+    Yri: () => f.Yr,
+    YvQ: () => C,
+    Z86: () => nw,
+    ZE4: () => f.ZE,
     ZGg: () => eY,
-    ZSU: () => tN,
-    ZzC: () => eX,
-    _4N: () => rO,
-    _Ak: () => p._A,
-    _Ee: () => e_,
-    _Of: () => eZ,
-    __0: () => p.__,
+    ZSU: () => tR,
+    ZzC: () => eQ,
+    _4N: () => rT,
+    _Ak: () => f._A,
+    _Ee: () => ep,
+    _Of: () => eq,
+    __0: () => f.__,
     _i_: () => tt,
-    _tK: () => tX,
-    a3B: () => nA,
+    _tK: () => tQ,
+    a3B: () => nS,
     aUe: () => h,
-    aVn: () => w,
+    aVn: () => O,
     ajI: () => en,
-    b7d: () => I,
-    bFR: () => k,
-    bNI: () => nx,
-    bb8: () => G,
+    b7d: () => v,
+    bFR: () => U,
+    bNI: () => nP,
+    bb8: () => V,
     c$g: () => d.c$,
     cSc: () => e8,
-    cZu: () => eO,
-    clD: () => p.cl,
-    cmJ: () => V,
+    cZu: () => eT,
+    clD: () => f.cl,
+    cmJ: () => B,
     d0r: () => eM,
-    d3x: () => nV,
-    d68: () => s.d,
-    d7Q: () => eA,
+    d3x: () => nB,
+    d68: () => o.d,
+    d7Q: () => eS,
     dD: () => ra,
     dJq: () => ed,
-    dL4: () => p.dL,
-    dSh: () => t_,
+    dL4: () => f.dL,
+    dSh: () => tp,
     da6: () => tl,
-    do8: () => p.do,
+    do8: () => f.do,
     ds3: () => n8,
     dzt: () => nK,
-    e$_: () => p.e$,
-    eA$: () => es,
-    eAD: () => eJ,
-    eGj: () => ef,
+    e$_: () => f.e$,
+    eA$: () => eo,
+    eAD: () => eX,
+    eGj: () => e_,
     eMA: () => n5,
-    eQT: () => e$,
-    elq: () => D,
+    eQT: () => eJ,
+    elq: () => w,
     ewM: () => tz,
-    f5z: () => q,
-    fAW: () => L,
-    fHV: () => eL,
-    fg2: () => tB,
-    fic: () => rD,
-    frM: () => p.fr,
+    f5z: () => $,
+    fAW: () => x,
+    fHV: () => ex,
+    fg2: () => tj,
+    fic: () => rw,
+    frM: () => f.fr,
     frR: () => el,
-    ftr: () => tU,
-    g0g: () => ny,
-    g6G: () => _.g6,
-    gG4: () => nB,
-    gGk: () => nO,
+    ftr: () => tG,
+    g0g: () => nA,
+    g6G: () => p.g6,
+    gG4: () => nj,
+    gGk: () => nT,
     gNP: () => d.gN,
-    gT8: () => tf,
+    gT8: () => t_,
     g_B: () => rr,
     geh: () => rn,
-    gfo: () => nc,
-    gfq: () => tk,
-    gh6: () => eo,
+    gfo: () => nu,
+    gfq: () => tU,
+    gh6: () => es,
     gkb: () => nd,
     gp3: () => e3,
-    guM: () => rN,
-    gxX: () => p.gx,
+    guM: () => rR,
+    gxX: () => f.gx,
     h3J: () => e5,
-    hCb: () => p.hC,
+    hCb: () => f.hC,
     hCu: () => E,
-    hE4: () => nC,
+    hE4: () => nN,
     hH7: () => ni,
-    hK1: () => ru,
-    hM6: () => nU,
-    hVb: () => p.hV,
+    hK1: () => rc,
+    hM6: () => nG,
+    hVb: () => f.hV,
     hcd: () => e2,
-    hes: () => p.he,
-    hlA: () => nT,
-    iMx: () => eC,
+    hes: () => f.he,
+    hlA: () => nb,
+    iMx: () => eN,
     iSj: () => K,
     iXc: () => ee,
-    ilC: () => p.il,
+    ilC: () => f.il,
     jUm: () => eE,
-    j_2: () => _.j_,
-    jej: () => tG,
-    js$: () => p.js,
-    kCE: () => N,
+    j_2: () => p.j_,
+    jej: () => tV,
+    js$: () => f.js,
+    kCE: () => R,
     kGV: () => et,
-    kM_: () => p.kM,
+    kM_: () => f.kM,
     kZU: () => tM,
-    kqX: () => P,
+    kqX: () => L,
     kvI: () => r.k,
     l2F: () => e4,
-    l6E: () => nX,
+    l6E: () => nQ,
     l90: () => tg,
-    lAJ: () => o.l,
+    lAJ: () => s.l,
     lLE: () => rE,
     lM6: () => re,
     lT7: () => nn,
-    liQ: () => tS,
+    liQ: () => tC,
     lid: () => t8,
-    m3P: () => T,
+    m3P: () => b,
     m_i: () => rl,
-    mdB: () => tL,
-    meB: () => p.me,
+    mdB: () => tx,
+    meB: () => f.me,
     mu: () => eH,
-    n5X: () => nu,
-    n83: () => nq,
-    nRU: () => C,
-    nc_: () => tP,
-    nd0: () => v,
+    n5X: () => nc,
+    n83: () => n$,
+    nRU: () => N,
+    nc_: () => tL,
+    nd0: () => y,
     ndy: () => nr,
-    nfo: () => p.nf,
+    nfo: () => f.nf,
     nhx: () => nl,
     nyz: () => tn,
     o$q: () => t1,
-    o1q: () => nR,
+    o1q: () => nD,
     oA2: () => t7,
     oIV: () => e7,
     oJQ: () => nY,
     ogj: () => M,
-    orn: () => ey,
+    orn: () => eA,
     p2C: () => te,
-    p_A: () => A,
-    p_j: () => nP,
+    p_A: () => S,
+    p_j: () => nL,
     pr7: () => H,
     pwA: () => z,
-    qF7: () => p.qF,
+    qF7: () => f.qF,
     qNw: () => W,
-    qlD: () => eb,
-    qmC: () => p.qm,
-    rLJ: () => eT,
+    qlD: () => eI,
+    qmC: () => f.qm,
+    rLJ: () => eb,
     rbe: () => r.r,
     rs7: () => th,
-    rzx: () => p.rz,
+    rzx: () => f.rz,
     sFm: () => ri,
-    sJq: () => p.sJ,
+    sJq: () => f.sJ,
     s_7: () => eF,
     sbO: () => Y,
-    sdF: () => eU,
-    sl8: () => B,
-    t02: () => tv,
-    tEg: () => p.tE,
-    tF5: () => p.tF,
+    sdF: () => eG,
+    sl8: () => j,
+    t02: () => ty,
+    tEg: () => f.tE,
+    tF5: () => f.tF,
     tSW: () => n2,
     txh: () => tK,
     uJ2: () => nM,
-    uJv: () => rL,
-    uPF: () => r_,
+    uJv: () => rx,
+    uPF: () => rp,
     uaN: () => tr,
-    ugG: () => tV,
+    ugG: () => tB,
     uje: () => n3,
     ump: () => t2,
-    uss: () => Z,
-    uvi: () => eN,
-    uw8: () => rI,
-    vkP: () => U,
-    w7I: () => p.w7,
+    uss: () => q,
+    uvi: () => eR,
+    uw8: () => rv,
+    vkP: () => G,
+    w7I: () => f.w7,
     wLU: () => ti,
-    wLn: () => rb,
+    wLn: () => rI,
     wY_: () => rh,
     wqg: () => rg,
-    x0t: () => p.x0,
+    x0t: () => f.x0,
     x2k: () => t0,
-    xBc: () => p.xB,
-    xEi: () => p.xE,
-    xL: () => ec,
-    xei: () => p.xe,
-    xfJ: () => p.xf,
-    yFH: () => J,
+    xBc: () => f.xB,
+    xEi: () => f.xE,
+    xL: () => eu,
+    xei: () => f.xe,
+    xfJ: () => f.xf,
+    yFH: () => X,
     yKI: () => nz,
     yTV: () => tH,
     zF_: () => n6,
     zOV: () => tF,
-    zWA: () => b,
+    zWA: () => I,
     zgK: () => nh,
-    zzC: () => ek,
+    zzC: () => eU,
 }),
-    n(896048),
     n(890245);
 var r = n(478437),
     i = n(508602),
     a = n(762230),
-    o = n(448761),
-    s = n(122817),
+    s = n(448761),
+    o = n(122817),
     l = n(317097),
-    c = n(323125),
-    u = n(927813),
+    u = n(323125),
+    c = n(927813),
     d = n(901123),
-    f = n(355097),
-    p = n(818348),
-    _ = n(100544),
+    _ = n(355097),
+    f = n(818348),
+    p = n(100544),
     h = (function (e) {
         return (
             (e.NONE = "NONE"),
@@ -465,10 +465,10 @@ var r = n(478437),
             e
         );
     })({}),
-    y = (function (e) {
+    A = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    b = (function (e) {
+    I = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -481,7 +481,7 @@ var r = n(478437),
             e
         );
     })({}),
-    O = (function (e) {
+    T = (function (e) {
         return (
             (e.LANDING = "LANDING"),
             (e.OVERVIEW = "OVERVIEW"),
@@ -544,7 +544,7 @@ var r = n(478437),
             e
         );
     })({}),
-    v = (function (e) {
+    y = (function (e) {
         return (
             (e.DISPLAY = "DISPLAY"),
             (e.INVITE = "INVITE"),
@@ -565,7 +565,7 @@ var r = n(478437),
             e
         );
     })({}),
-    A = (function (e) {
+    S = (function (e) {
         return (
             (e.OVERVIEW = "OVERVIEW"),
             (e.PERMISSIONS = "PERMISSIONS"),
@@ -589,10 +589,10 @@ var r = n(478437),
             e
         );
     })({}),
-    I = (function (e) {
+    v = (function (e) {
         return (e.TOPIC = "TOPIC"), e;
     })({}),
-    S = (function (e) {
+    C = (function (e) {
         return (
             (e.NONE = "NONE"),
             (e.MEMBERS = "MEMBERS"),
@@ -603,7 +603,7 @@ var r = n(478437),
             e
         );
     })({}),
-    T = (function (e) {
+    b = (function (e) {
         return (
             (e.ADD_FRIEND = "ADD_FRIEND"),
             (e.ALL = "ALL"),
@@ -615,19 +615,19 @@ var r = n(478437),
             e
         );
     })({}),
-    C = (function (e) {
+    N = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
-    N = (function (e) {
+    R = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    w = (function (e) {
+    O = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    R = (function (e) {
+    D = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
-    P = (function (e) {
+    L = (function (e) {
         return (
             (e.GENERIC = "GENERIC"),
             (e.LAUNCH_GAME_FAILURE = "LAUNCH_GAME_FAILURE"),
@@ -701,7 +701,7 @@ var r = n(478437),
             e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (
             (e.RESOLVING = "RESOLVING"),
             (e.RESOLVED = "RESOLVED"),
@@ -716,10 +716,10 @@ var r = n(478437),
             e
         );
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (
             (e.INVITE_SPLASH = "INVITE_SPLASH"),
             (e.VIP_REGIONS = "VIP_REGIONS"),
@@ -823,7 +823,7 @@ let M = Object.freeze({
     SUPPRESS_UGC_ADDED_NOTIFICATIONS: 256,
     SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512,
 });
-var j = (function (e) {
+var k = (function (e) {
         return (
             (e.DISCONNECTED = "DISCONNECTED"),
             (e.AWAITING_ENDPOINT = "AWAITING_ENDPOINT"),
@@ -838,13 +838,13 @@ var j = (function (e) {
             e
         );
     })({}),
-    k = (function (e) {
+    U = (function (e) {
         return (e.UNKNOWN = "unknown"), (e.BAD = "bad"), (e.AVERAGE = "average"), (e.FINE = "fine"), e;
     })({}),
-    U = (function (e) {
+    G = (function (e) {
         return (e.CONNECTED = "connected"), (e.CONNECTING = "connecting"), (e.ERROR = "error"), e;
     })({}),
-    G = (function (e) {
+    V = (function (e) {
         return (
             (e.MANUAL_ENABLED = "MANUAL_ENABLED"),
             (e.AUTO_PROBING = "AUTO_PROBING"),
@@ -876,10 +876,10 @@ var j = (function (e) {
             e
         );
     })({}),
-    V = (function (e) {
+    B = (function (e) {
         return (e.SENT = "SENT"), (e.SENDING = "SENDING"), (e.SEND_FAILED = "SEND_FAILED"), e;
     })({});
-let B = new Set([o.l.REPLY, o.l.THREAD_STARTER_MESSAGE, o.l.CONTEXT_MENU_COMMAND]);
+let j = new Set([s.l.REPLY, s.l.THREAD_STARTER_MESSAGE, s.l.CONTEXT_MENU_COMMAND]);
 var H = (function (e) {
         return (
             (e[(e.CROSSPOSTED = 1)] = "CROSSPOSTED"),
@@ -930,10 +930,10 @@ var H = (function (e) {
     z = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.NEVER = "NEVER"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    q = (function (e) {
+    $ = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    Z = (function (e) {
+    q = (function (e) {
         return (
             (e.GUILDS = "GUILDS"),
             (e.VOICE = "VOICE"),
@@ -952,7 +952,7 @@ var H = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    Z = (function (e) {
         return (
             (e.DEFAULT = "DEFAULT"),
             (e.PINNED = "PINNED"),
@@ -964,10 +964,10 @@ var H = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (e.LARGE = "large"), (e.SMALL = "small"), e;
     })({}),
-    J = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.ACTIVE = 0)] = "ACTIVE"),
             (e[(e.TIMED_OUT = 1)] = "TIMED_OUT"),
@@ -976,7 +976,7 @@ var H = (function (e) {
             e
         );
     })({}),
-    $ = (function (e) {
+    J = (function (e) {
         return (
             (e.TOP_LEFT = "topLeft"),
             (e.TOP_RIGHT = "topRight"),
@@ -1011,14 +1011,11 @@ var H = (function (e) {
             e
         );
     })({});
-let ei = Object.freeze({
-    ACCOUNT_AGE: 5,
-    MEMBER_AGE: 10,
-});
+let ei = Object.freeze({ ACCOUNT_AGE: 5, MEMBER_AGE: 10 });
 var ea = (function (e) {
         return (e[(e.NONE = 0)] = "NONE"), (e[(e.ELEVATED = 1)] = "ELEVATED"), e;
     })({}),
-    eo = (function (e) {
+    es = (function (e) {
         return (
             (e[(e.DISABLED = 0)] = "DISABLED"),
             (e[(e.MEMBERS_WITHOUT_ROLES = 1)] = "MEMBERS_WITHOUT_ROLES"),
@@ -1026,7 +1023,7 @@ var ea = (function (e) {
             e
         );
     })({}),
-    es = (function (e) {
+    eo = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.FRIEND = 1)] = "FRIEND"),
@@ -1041,7 +1038,7 @@ var ea = (function (e) {
     el = (function (e) {
         return (e.CONFIRM = "CONFIRM"), (e.SUCCESS = "SUCCESS"), (e.ERROR = "ERROR"), (e.OPEN = "OPEN"), e;
     })({}),
-    ec = (function (e) {
+    eu = (function (e) {
         return (
             (e[(e.JOIN = 1)] = "JOIN"),
             (e[(e.LISTEN = 3)] = "LISTEN"),
@@ -1051,7 +1048,7 @@ var ea = (function (e) {
             e
         );
     })({}),
-    eu = (function (e) {
+    ec = (function (e) {
         return (
             (e[(e.RTC = 1)] = "RTC"),
             (e[(e.IOS_APP = 2)] = "IOS_APP"),
@@ -1061,42 +1058,38 @@ var ea = (function (e) {
         );
     })({});
 let ed = "",
-    ef = "null",
-    ep = "0",
     e_ = "null",
+    ef = "0",
+    ep = "null",
     eh = "1096190356233670716",
     em = Object.freeze({
-        USER: (e) => "/users/".concat(e),
+        USER: (e) => `/users/${e}`,
         USER_RELATIONSHIPS: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.ME;
-            return "/users/".concat(e, "/relationships");
+            return `/users/${e}/relationships`;
         },
-        USER_RELATIONSHIP: (e) => "/users/@me/relationships/".concat(e),
+        USER_RELATIONSHIP: (e) => `/users/@me/relationships/${e}`,
         USER_BULK_RELATIONSHIPS: "/users/@me/relationships/bulk",
-        USER_GAME_RELATIONSHIP: (e, t) => "/users/@me/game-relationships/".concat(e, "/").concat(t),
-        USER_PROFILE: (e) => "/users/".concat(e, "/profile"),
+        USER_GAME_RELATIONSHIP: (e, t) => `/users/@me/game-relationships/${e}/${t}`,
+        USER_PROFILE: (e) => `/users/${e}/profile`,
         USER_PROFILE_WIDGETS: "/users/@me/widgets",
         USER_PROFILE_SUGGESTED_GAMES: "/users/@me/widgets/suggested-games",
         USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS: "/users/@me/widgets/application-widget-application-ids",
-        USER_GUILD_PROFILE: (e, t) => "/guilds/".concat(e, "/profile/").concat(t),
+        USER_GUILD_PROFILE: (e, t) => `/guilds/${e}/profile/${t}`,
         USER_CHANNELS: "/users/@me/channels",
         USER_WARP_LICENSE: "/users/@me/warp/license",
-        USER_WISHLIST: (e) => "/wishlists/".concat(e),
-        USER_WISHLIST_PATCH: (e) => "/users/@me/wishlists/".concat(e),
+        USER_WISHLIST: (e) => `/wishlists/${e}`,
+        USER_WISHLIST_PATCH: (e) => `/users/@me/wishlists/${e}`,
         USER_WISHLIST_ITEMS: "/users/@me/wishlist/items",
-        USER_WISHLIST_ITEM: (e, t) => "/users/@me/wishlists/".concat(e, "/items/").concat(t),
-        USER_APPLICATION_IDENTITIES: (e) => "/users/".concat(e, "/application-identities"),
-        DM_CHANNEL: (e) => "/users/@me/dms/".concat(e),
-        USER_SETTINGS_PROTO: (e) => "/users/@me/settings-proto/".concat(e),
-        USER_ACTIVITY_METADATA: (e, t, n) =>
-            "/users/"
-                .concat(e, "/sessions/")
-                .concat(t, "/activities/")
-                .concat(null != n ? n : 0, "/metadata"),
-        USER_ACTIVITY_JOIN: (e, t, n) => "/users/".concat(e, "/sessions/").concat(t, "/activities/").concat(n, "/", 1),
+        USER_WISHLIST_ITEM: (e, t) => `/users/@me/wishlists/${e}/items/${t}`,
+        USER_APPLICATION_IDENTITIES: (e) => `/users/${e}/application-identities`,
+        DM_CHANNEL: (e) => `/users/@me/dms/${e}`,
+        USER_SETTINGS_PROTO: (e) => `/users/@me/settings-proto/${e}`,
+        USER_ACTIVITY_METADATA: (e, t, n) => `/users/${e}/sessions/${t}/activities/${n ?? 0}/metadata`,
+        USER_ACTIVITY_JOIN: (e, t, n) => `/users/${e}/sessions/${t}/activities/${n}/1`,
         USER_ACTIVITY_STATISTICS: "/users/@me/activities/statistics/applications",
         USER_ACTIVITY_SUBSCRIBE: "/users/@me/activities/subscribe",
-        APPLICATION_ACTIVITY_STATISTICS: (e) => "/activities/statistics/applications/".concat(e),
+        APPLICATION_ACTIVITY_STATISTICS: (e) => `/activities/statistics/applications/${e}`,
         ACTIVITIES: "/activities",
         NETWORKING_TOKEN: "/networking/token",
         USER_GAMES_NOTIFICATIONS: "/users/@me/settings/game-notifications",
@@ -1105,131 +1098,127 @@ let ed = "",
         UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
         PLATFORM_APPLICATION: "/platform-application",
         ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
-        GUILD_FEATURE_ACK: (e, t, n) => "/guilds/".concat(e, "/ack/").concat(n, "/").concat(t),
-        USER_NON_CHANNEL_ACK: (e, t) => "/users/@me/".concat(t, "/").concat(e, "/ack"),
+        GUILD_FEATURE_ACK: (e, t, n) => `/guilds/${e}/ack/${n}/${t}`,
+        USER_NON_CHANNEL_ACK: (e, t) => `/users/@me/${t}/${e}/ack`,
         BULK_ACK: "/read-states/ack-bulk",
-        DM_SETTINGS_UPSELL_ACK: (e) => "/users/@me/guilds/".concat(e, "/member/ack-dm-upsell-settings"),
-        GUILD_CHANNELS: (e) => "/guilds/".concat(e, "/channels"),
-        GUILD_MEMBERS: (e) => "/guilds/".concat(e, "/members"),
-        GUILD_MEMBER: (e, t) => "/guilds/".concat(e, "/members/").concat(t),
-        GUILD_MEMBER_NICK: (e, t) => "/guilds/".concat(e, "/members/").concat(t, "/nick"),
-        GUILD_MEMBER_AVATAR: (e, t, n, r) =>
-            "/guilds/".concat(e, "/users/").concat(t, "/avatars/").concat(n, ".").concat(r),
-        SET_GUILD_MEMBER: (e) => "/guilds/".concat(e, "/members/@me"),
+        DM_SETTINGS_UPSELL_ACK: (e) => `/users/@me/guilds/${e}/member/ack-dm-upsell-settings`,
+        GUILD_CHANNELS: (e) => `/guilds/${e}/channels`,
+        GUILD_MEMBERS: (e) => `/guilds/${e}/members`,
+        GUILD_MEMBER: (e, t) => `/guilds/${e}/members/${t}`,
+        GUILD_MEMBER_NICK: (e, t) => `/guilds/${e}/members/${t}/nick`,
+        GUILD_MEMBER_AVATAR: (e, t, n, r) => `/guilds/${e}/users/${t}/avatars/${n}.${r}`,
+        SET_GUILD_MEMBER: (e) => `/guilds/${e}/members/@me`,
         GAME_NOTIFICATION_SETTINGS: "/users/@me/notification-settings/muted-games",
-        GAME_NOTIFICATION_SETTING_UPDATE: (e) => "/users/@me/notification-settings/muted-games/".concat(e),
-        GUILD_JOIN: (e) => "/guilds/".concat(e, "/members/@me"),
-        GUILD_LEAVE: (e) => "/users/@me/guilds/".concat(e),
-        GUILD_INTEGRATIONS: (e) => "/guilds/".concat(e, "/integrations"),
-        GUILD_INTEGRATION: (e, t) => "/guilds/".concat(e, "/integrations/").concat(t),
-        GUILD_INTEGRATION_SYNC: (e, t) => "/guilds/".concat(e, "/integrations/").concat(t, "/sync"),
-        GUILD_MIGRATE_COMMAND_SCOPE: (e) => "/guilds/".concat(e, "/migrate-command-scope"),
-        GUILD_BANS_SEARCH: (e) => "/guilds/".concat(e, "/bans/search"),
-        GUILD_BANS: (e) => "/guilds/".concat(e, "/bans"),
-        GUILD_BAN: (e, t) => "/guilds/".concat(e, "/bans/").concat(t),
-        GUILD_ROLES: (e) => "/guilds/".concat(e, "/roles"),
-        GUILD_ROLE_MEMBER_COUNTS: (e) => "/guilds/".concat(e, "/roles/member-counts"),
-        GUILD_ROLE_CONNECTIONS_CONFIGURATIONS: (e) => "/guilds/".concat(e, "/roles/connections-configurations"),
-        GUILD_ROLE_MEMBER_IDS: (e, t) => "/guilds/".concat(e, "/roles/").concat(t, "/member-ids"),
-        GUILD_ROLE: (e, t) => "/guilds/".concat(e, "/roles/").concat(t),
-        GUILD_ROLE_MEMBERS: (e, t) => "/guilds/".concat(e, "/roles/").concat(t, "/members"),
-        GUILD_ROLE_CONNECTIONS_ELIGIBILITY: (e, t) =>
-            "/guilds/".concat(e, "/roles/").concat(t, "/connections/eligibility"),
-        GUILD_ROLE_CONNECTIONS_ASSIGN: (e, t) => "/guilds/".concat(e, "/roles/").concat(t, "/connections/assign"),
-        GUILD_ROLE_CONNECTIONS_UNASSIGN: (e, t) => "/guilds/".concat(e, "/roles/").concat(t, "/connections/unassign"),
-        GUILD_ONBOARDING: (e) => "/guilds/".concat(e, "/onboarding"),
-        GUILD_ONBOARDING_ALLOWED_APPLICATIONS: (e) => "/guilds/".concat(e, "/onboarding/allowed-applications"),
-        GUILD_ONBOARDING_PROMPT: (e, t) => "/guilds/".concat(e, "/onboarding-prompts/").concat(t),
-        GUILD_ONBOARDING_RESPONSES: (e) => "/guilds/".concat(e, "/onboarding-responses"),
-        ROLE_ICON: (e, t) => "/roles/".concat(e, "/icons/").concat(t, ".png"),
-        GUILD_INSTANT_INVITES: (e) => "/guilds/".concat(e, "/invites"),
-        GUILD_WIDGET: (e) => "/guilds/".concat(e, "/widget"),
-        GUILD_VANITY_URL: (e) => "/guilds/".concat(e, "/vanity-url"),
-        GUILD_MFA: (e) => "/guilds/".concat(e, "/mfa"),
-        GUILD_PRUNE: (e) => "/guilds/".concat(e, "/prune"),
-        GUILD_PRUNE_V2: (e) => "/guilds/".concat(e, "/prune/v2"),
+        GAME_NOTIFICATION_SETTING_UPDATE: (e) => `/users/@me/notification-settings/muted-games/${e}`,
+        GUILD_JOIN: (e) => `/guilds/${e}/members/@me`,
+        GUILD_LEAVE: (e) => `/users/@me/guilds/${e}`,
+        GUILD_INTEGRATIONS: (e) => `/guilds/${e}/integrations`,
+        GUILD_INTEGRATION: (e, t) => `/guilds/${e}/integrations/${t}`,
+        GUILD_INTEGRATION_SYNC: (e, t) => `/guilds/${e}/integrations/${t}/sync`,
+        GUILD_MIGRATE_COMMAND_SCOPE: (e) => `/guilds/${e}/migrate-command-scope`,
+        GUILD_BANS_SEARCH: (e) => `/guilds/${e}/bans/search`,
+        GUILD_BANS: (e) => `/guilds/${e}/bans`,
+        GUILD_BAN: (e, t) => `/guilds/${e}/bans/${t}`,
+        GUILD_ROLES: (e) => `/guilds/${e}/roles`,
+        GUILD_ROLE_MEMBER_COUNTS: (e) => `/guilds/${e}/roles/member-counts`,
+        GUILD_ROLE_CONNECTIONS_CONFIGURATIONS: (e) => `/guilds/${e}/roles/connections-configurations`,
+        GUILD_ROLE_MEMBER_IDS: (e, t) => `/guilds/${e}/roles/${t}/member-ids`,
+        GUILD_ROLE: (e, t) => `/guilds/${e}/roles/${t}`,
+        GUILD_ROLE_MEMBERS: (e, t) => `/guilds/${e}/roles/${t}/members`,
+        GUILD_ROLE_CONNECTIONS_ELIGIBILITY: (e, t) => `/guilds/${e}/roles/${t}/connections/eligibility`,
+        GUILD_ROLE_CONNECTIONS_ASSIGN: (e, t) => `/guilds/${e}/roles/${t}/connections/assign`,
+        GUILD_ROLE_CONNECTIONS_UNASSIGN: (e, t) => `/guilds/${e}/roles/${t}/connections/unassign`,
+        GUILD_ONBOARDING: (e) => `/guilds/${e}/onboarding`,
+        GUILD_ONBOARDING_ALLOWED_APPLICATIONS: (e) => `/guilds/${e}/onboarding/allowed-applications`,
+        GUILD_ONBOARDING_PROMPT: (e, t) => `/guilds/${e}/onboarding-prompts/${t}`,
+        GUILD_ONBOARDING_RESPONSES: (e) => `/guilds/${e}/onboarding-responses`,
+        ROLE_ICON: (e, t) => `/roles/${e}/icons/${t}.png`,
+        GUILD_INSTANT_INVITES: (e) => `/guilds/${e}/invites`,
+        GUILD_WIDGET: (e) => `/guilds/${e}/widget`,
+        GUILD_VANITY_URL: (e) => `/guilds/${e}/vanity-url`,
+        GUILD_MFA: (e) => `/guilds/${e}/mfa`,
+        GUILD_PRUNE: (e) => `/guilds/${e}/prune`,
+        GUILD_PRUNE_V2: (e) => `/guilds/${e}/prune/v2`,
         GUILD_ICON: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
-            return "/guilds/".concat(e, "/icons/").concat(t, ".").concat(n);
+            return `/guilds/${e}/icons/${t}.${n}`;
         },
         GUILD_TEMPLATE_ICON: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
-            return "/templates/".concat(e, "/icons/").concat(t, ".").concat(n);
+            return `/templates/${e}/icons/${t}.${n}`;
         },
-        GUILD_DISCOVERY_CHECKLIST: (e) => "/guilds/".concat(e, "/discovery-checklist"),
-        GUILD_DISCOVERY_REQUIREMENTS: (e) => "/guilds/".concat(e, "/discovery-requirements"),
-        GUILD_EMOJIS: (e) => "/guilds/".concat(e, "/emojis"),
-        GUILD_EMOJI: (e, t) => "/guilds/".concat(e, "/emojis/").concat(t),
-        GUILD_AUDIT_LOG: (e) => "/guilds/".concat(e, "/audit-logs"),
-        GUILD_ANALYTICS_OVERVIEW: (e) => "/guilds/".concat(e, "/analytics/overview"),
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW: (e) => "/guilds/".concat(e, "/analytics/engagement/overview"),
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW: (e) =>
-            "/guilds/".concat(e, "/analytics/growth-activation/overview"),
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION: (e) =>
-            "/guilds/".concat(e, "/analytics/growth-activation/retention"),
-        GUILD_TOP_GAMES: (e) => "/guilds/".concat(e, "/top-games"),
-        GUILD_TOP_READ_CHANNELS: (e) => "/guilds/".concat(e, "/top-read-channels"),
-        EMOJI: (e, t) => "/emojis/".concat(e, ".").concat(t),
-        EMOJI_GUILD_DATA: (e) => "/emojis/".concat(e, "/guild"),
-        EMOJI_SOURCE_DATA: (e) => "/emojis/".concat(e, "/source"),
-        TOP_EMOJIS_FOR_GUILD: (e) => "/guilds/".concat(e, "/top-emojis"),
-        GUILD_SPLASH: (e, t) => "/guilds/".concat(e, "/splashes/").concat(t, ".jpg"),
-        GUILD_DISCOVERY_SPLASH: (e, t) => "/guilds/".concat(e, "/discovery-splashes/").concat(t, ".jpg"),
-        GUILD_BANNER: (e, t, n) => "/guilds/".concat(e, "/banners/").concat(t, ".").concat(n),
-        GUILD_HOME_SETTINGS: (e) => "/guilds/".concat(e, "/new-member-welcome"),
-        RESOURCE_CHANNEL: (e, t) => "/guilds/".concat(e, "/resource-channels/").concat(t),
-        NEW_MEMBER_ACTION: (e, t) => "/guilds/".concat(e, "/new-member-actions/").concat(t),
+        GUILD_DISCOVERY_CHECKLIST: (e) => `/guilds/${e}/discovery-checklist`,
+        GUILD_DISCOVERY_REQUIREMENTS: (e) => `/guilds/${e}/discovery-requirements`,
+        GUILD_EMOJIS: (e) => `/guilds/${e}/emojis`,
+        GUILD_EMOJI: (e, t) => `/guilds/${e}/emojis/${t}`,
+        GUILD_AUDIT_LOG: (e) => `/guilds/${e}/audit-logs`,
+        GUILD_ANALYTICS_OVERVIEW: (e) => `/guilds/${e}/analytics/overview`,
+        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW: (e) => `/guilds/${e}/analytics/engagement/overview`,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW: (e) => `/guilds/${e}/analytics/growth-activation/overview`,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION: (e) => `/guilds/${e}/analytics/growth-activation/retention`,
+        GUILD_TOP_GAMES: (e) => `/guilds/${e}/top-games`,
+        GUILD_TOP_READ_CHANNELS: (e) => `/guilds/${e}/top-read-channels`,
+        EMOJI: (e, t) => `/emojis/${e}.${t}`,
+        EMOJI_GUILD_DATA: (e) => `/emojis/${e}/guild`,
+        EMOJI_SOURCE_DATA: (e) => `/emojis/${e}/source`,
+        TOP_EMOJIS_FOR_GUILD: (e) => `/guilds/${e}/top-emojis`,
+        GUILD_SPLASH: (e, t) => `/guilds/${e}/splashes/${t}.jpg`,
+        GUILD_DISCOVERY_SPLASH: (e, t) => `/guilds/${e}/discovery-splashes/${t}.jpg`,
+        GUILD_BANNER: (e, t, n) => `/guilds/${e}/banners/${t}.${n}`,
+        GUILD_HOME_SETTINGS: (e) => `/guilds/${e}/new-member-welcome`,
+        RESOURCE_CHANNEL: (e, t) => `/guilds/${e}/resource-channels/${t}`,
+        NEW_MEMBER_ACTION: (e, t) => `/guilds/${e}/new-member-actions/${t}`,
         GUILD_RESOURCE_CHANNELS_ICON: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
-            return "/guilds/".concat(e, "/avatars/").concat(t, ".").concat(n);
+            return `/guilds/${e}/avatars/${t}.${n}`;
         },
         GUILD_NEW_MEMBER_ACTIONS_ICON: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
-            return "/guilds/".concat(e, "/avatars/").concat(t, ".").concat(n);
+            return `/guilds/${e}/avatars/${t}.${n}`;
         },
-        GUILD_MEMBER_ACTIONS: (e) => "/guilds/".concat(e, "/new-member-actions"),
-        GUILD_MEMBER_ACTION_UPDATE: (e, t) => "/guilds/".concat(e, "/new-member-action/").concat(t),
-        GUILD_HOME_HEADER: (e, t) => "/guilds/".concat(e, "/home-headers/").concat(t, ".jpg"),
-        GUILD_WELCOME_SCREEN: (e) => "/guilds/".concat(e, "/welcome-screen"),
-        GUILD_MEMBER_VERIFICATION: (e) => "/guilds/".concat(e, "/member-verification"),
-        GUILD_JOIN_REQUEST_BY_ID: (e) => "/join-requests/".concat(e),
-        GUILD_JOIN_REQUESTS: (e) => "/guilds/".concat(e, "/requests"),
+        GUILD_MEMBER_ACTIONS: (e) => `/guilds/${e}/new-member-actions`,
+        GUILD_MEMBER_ACTION_UPDATE: (e, t) => `/guilds/${e}/new-member-action/${t}`,
+        GUILD_HOME_HEADER: (e, t) => `/guilds/${e}/home-headers/${t}.jpg`,
+        GUILD_WELCOME_SCREEN: (e) => `/guilds/${e}/welcome-screen`,
+        GUILD_MEMBER_VERIFICATION: (e) => `/guilds/${e}/member-verification`,
+        GUILD_JOIN_REQUEST_BY_ID: (e) => `/join-requests/${e}`,
+        GUILD_JOIN_REQUESTS: (e) => `/guilds/${e}/requests`,
         USER_JOIN_REQUEST_GUILDS: "/users/@me/join-request-guilds",
-        GUILD_MEMBER_REQUEST_TO_JOIN: (e) => "/guilds/".concat(e, "/requests/@me"),
-        GUILD_MEMBER_JOIN_REQUEST_COOLDOWN: (e) => "/guilds/".concat(e, "/requests/@me/cooldown"),
-        GUILD_JOIN_REQUEST: (e, t) => "/guilds/".concat(e, "/requests/").concat(t),
-        GUILD_JOIN_REQUEST_ID: (e, t) => "/guilds/".concat(e, "/requests/id/").concat(t),
-        GUILD_JOIN_REQUEST_ACK: (e, t) => "/guilds/".concat(e, "/requests/").concat(t, "/ack"),
-        GUILD_JOIN_REQUEST_INTERVIEW: (e) => "/join-requests/".concat(e, "/interview"),
+        GUILD_MEMBER_REQUEST_TO_JOIN: (e) => `/guilds/${e}/requests/@me`,
+        GUILD_MEMBER_JOIN_REQUEST_COOLDOWN: (e) => `/guilds/${e}/requests/@me/cooldown`,
+        GUILD_JOIN_REQUEST: (e, t) => `/guilds/${e}/requests/${t}`,
+        GUILD_JOIN_REQUEST_ID: (e, t) => `/guilds/${e}/requests/id/${t}`,
+        GUILD_JOIN_REQUEST_ACK: (e, t) => `/guilds/${e}/requests/${t}/ack`,
+        GUILD_JOIN_REQUEST_INTERVIEW: (e) => `/join-requests/${e}/interview`,
         GUILDS: "/guilds",
-        GUILD: (e) => "/guilds/".concat(e),
-        GUILD_BASIC: (e) => "/guilds/".concat(e, "/basic"),
-        GUILD_PINCODE: (e) => "/guilds/".concat(e, "/pincode"),
-        GUILD_DELETE: (e) => "/guilds/".concat(e, "/delete"),
+        GUILD: (e) => `/guilds/${e}`,
+        GUILD_BASIC: (e) => `/guilds/${e}/basic`,
+        GUILD_PINCODE: (e) => `/guilds/${e}/pincode`,
+        GUILD_DELETE: (e) => `/guilds/${e}/delete`,
         CHANNELS: "/channels",
-        CHANNEL: (e) => "/channels/".concat(e),
+        CHANNEL: (e) => `/channels/${e}`,
         THREAD_MEMBER: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.ME;
-            return "/channels/".concat(e, "/thread-members/").concat(t);
+            return `/channels/${e}/thread-members/${t}`;
         },
-        THREAD_MEMBER_SETTINGS: (e) => "/channels/".concat(e, "/thread-members/@me/settings"),
-        ALL_ARCHIVED_THREADS: (e, t) => "/channels/".concat(e, "/threads/archived/").concat(t),
-        MY_ARCHIVED_THREADS: (e) => "/channels/".concat(e, "/users/@me/threads/archived/private"),
-        THREAD_SEARCH: (e) => "/channels/".concat(e, "/threads/search"),
-        FORUM_POSTS: (e) => "/channels/".concat(e, "/post-data"),
-        PARTNER_REQUIREMENTS: (e) => "/partners/".concat(e, "/requirements"),
+        THREAD_MEMBER_SETTINGS: (e) => `/channels/${e}/thread-members/@me/settings`,
+        ALL_ARCHIVED_THREADS: (e, t) => `/channels/${e}/threads/archived/${t}`,
+        MY_ARCHIVED_THREADS: (e) => `/channels/${e}/users/@me/threads/archived/private`,
+        THREAD_SEARCH: (e) => `/channels/${e}/threads/search`,
+        FORUM_POSTS: (e) => `/channels/${e}/post-data`,
+        PARTNER_REQUIREMENTS: (e) => `/partners/${e}/requirements`,
         AVATAR: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
-            return "/users/".concat(e, "/avatars/").concat(t, ".").concat(n);
+            return `/users/${e}/avatars/${t}.${n}`;
         },
         ARCHIVED_AVATAR: function (e, t, n) {
             let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "jpg";
-            return "/avatars/".concat(e, "/archived/").concat(t, "/").concat(n, ".").concat(r);
+            return `/avatars/${e}/archived/${t}/${n}.${r}`;
         },
-        USER_BANNER: (e, t, n) => "/users/".concat(e, "/banners/").concat(t, ".").concat(n),
+        USER_BANNER: (e, t, n) => `/users/${e}/banners/${t}.${n}`,
         AVATAR_DECORATION_PRESETS: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "png";
-            return "/avatar-decoration-presets/".concat(e, ".").concat(t);
+            return `/avatar-decoration-presets/${e}.${t}`;
         },
         COLLECTIBLES_CATEGORIES: "/collectibles-categories",
         COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
@@ -1237,67 +1226,67 @@ let ed = "",
         COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
         COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
         COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
-        COLLECTIBLES_PRODUCTS: (e) => "/collectibles-products/".concat(e),
+        COLLECTIBLES_PRODUCTS: (e) => `/collectibles-products/${e}`,
         COLLECTIBLES_VALID_GIFT_RECIPIENT: "/users/@me/valid-collectibles-gift-recipient",
         COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
         COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
         COLLECTIBLES_SHOP: "/collectibles-shop",
         GUILD_MEMBER_BANNER: function (e, t, n) {
             let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
-            return "/guilds/".concat(e, "/users/").concat(t, "/banners/").concat(n, ".").concat(r);
+            return `/guilds/${e}/users/${t}/banners/${n}.${r}`;
         },
-        MESSAGES: (e) => "/channels/".concat(e, "/messages"),
-        MESSAGES_GREET: (e) => "/channels/".concat(e, "/greet"),
-        MESSAGES_ANNOUNCEMENT: (e) => "/channels/".concat(e, "/messages/announcement"),
-        MESSAGE: (e, t) => "/channels/".concat(e, "/messages/").concat(t),
-        MESSAGE_ACK: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/ack"),
-        MESSAGE_CREATE_ATTACHMENT_UPLOAD: (e) => "/channels/".concat(e, "/attachments"),
-        UPDATE_VOICE_CHANNEL_STATUS: (e) => "/channels/".concat(e, "/voice-status"),
-        MESSAGE_DELETE_UPLOAD: (e) => "/attachments/".concat(e),
-        MESSAGE_CROSSPOST: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/crosspost"),
+        MESSAGES: (e) => `/channels/${e}/messages`,
+        MESSAGES_GREET: (e) => `/channels/${e}/greet`,
+        MESSAGES_ANNOUNCEMENT: (e) => `/channels/${e}/messages/announcement`,
+        MESSAGE: (e, t) => `/channels/${e}/messages/${t}`,
+        MESSAGE_ACK: (e, t) => `/channels/${e}/messages/${t}/ack`,
+        MESSAGE_CREATE_ATTACHMENT_UPLOAD: (e) => `/channels/${e}/attachments`,
+        UPDATE_VOICE_CHANNEL_STATUS: (e) => `/channels/${e}/voice-status`,
+        MESSAGE_DELETE_UPLOAD: (e) => `/attachments/${e}`,
+        MESSAGE_CROSSPOST: (e, t) => `/channels/${e}/messages/${t}/crosspost`,
         AI_TITLE: "/ai/title",
         AI_TRANSLATE: "/ai/translate",
         AI_FIX_GRAMMAR: "/ai/fix-grammar",
-        AI_SUMMARIZE_THREAD: (e) => "/ai/summarize-thread/".concat(e),
+        AI_SUMMARIZE_THREAD: (e) => `/ai/summarize-thread/${e}`,
         MESSAGE_LOG_PRIVATE_CHANNELS: "/messages-log/private-channels/get",
         MESSAGE_LOG_GUILD_CHANNELS: "/messages-log/guild-channels/get",
         BACKGROUND_SYNC: "/users/@me/background-sync",
         MESSAGE_PREVIEWS: "/channels/preload-messages",
-        GUILD_FEED_MESSAGE_REMOVE: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/hide-guild-feed"),
-        GUILD_FEED_MESSAGE_SET_PREFERENCE: (e) => "/guilds/".concat(e, "/guild-feed/preference"),
-        GUILD_FEED_FEATURE_ITEM: (e) => "/guilds/".concat(e, "/guild-feed/feature"),
-        GUILD_FEED_MARK_SEEN: (e) => "/guilds/".concat(e, "/guild-feed/mark-seen"),
-        PINS_ACK: (e) => "/channels/".concat(e, "/pins/ack"),
-        PINS: (e) => "/channels/".concat(e, "/messages/pins"),
-        PIN: (e, t) => "/channels/".concat(e, "/messages/pins/").concat(t),
-        INSTANT_INVITES: (e) => "/channels/".concat(e, "/invites"),
-        TYPING: (e) => "/channels/".concat(e, "/typing"),
-        CHANNEL_PERMISSIONS_OVERWRITE: (e, t) => "/channels/".concat(e, "/permissions/").concat(t),
-        CHANNEL_RECIPIENTS: (e) => "/channels/".concat(e, "/recipients"),
-        CHANNEL_RECIPIENT: (e, t) => "/channels/".concat(e, "/recipients/").concat(t),
-        CHANNEL_RECIPIENT_ME: (e) => "/channels/".concat(e, "/recipients/@me"),
+        GUILD_FEED_MESSAGE_REMOVE: (e, t) => `/channels/${e}/messages/${t}/hide-guild-feed`,
+        GUILD_FEED_MESSAGE_SET_PREFERENCE: (e) => `/guilds/${e}/guild-feed/preference`,
+        GUILD_FEED_FEATURE_ITEM: (e) => `/guilds/${e}/guild-feed/feature`,
+        GUILD_FEED_MARK_SEEN: (e) => `/guilds/${e}/guild-feed/mark-seen`,
+        PINS_ACK: (e) => `/channels/${e}/pins/ack`,
+        PINS: (e) => `/channels/${e}/messages/pins`,
+        PIN: (e, t) => `/channels/${e}/messages/pins/${t}`,
+        INSTANT_INVITES: (e) => `/channels/${e}/invites`,
+        TYPING: (e) => `/channels/${e}/typing`,
+        CHANNEL_PERMISSIONS_OVERWRITE: (e, t) => `/channels/${e}/permissions/${t}`,
+        CHANNEL_RECIPIENTS: (e) => `/channels/${e}/recipients`,
+        CHANNEL_RECIPIENT: (e, t) => `/channels/${e}/recipients/${t}`,
+        CHANNEL_RECIPIENT_ME: (e) => `/channels/${e}/recipients/@me`,
         CHANNEL_RECIPIENT_REJECT_BATCH: () => "/channels/recipients/@me/batch-reject",
-        CHANNEL_ICON: (e, t) => "/channels/".concat(e, "/icons/").concat(t, ".jpg"),
-        CHANNEL_CONVERT: (e) => "/channels/".concat(e, "/convert"),
-        CHANNEL_ACK: (e) => "/channels/".concat(e, "/messages/ack"),
-        CHANNEL_STORE_LISTING: (e) => "/channels/".concat(e, "/store-listing"),
-        CHANNEL_STORE_LISTING_SKU: (e, t) => "/channels/".concat(e, "/store-listings/").concat(t),
-        CHANNEL_ENTITLEMENT_GRANT: (e) => "/channels/".concat(e, "/store-listing/entitlement-grant"),
-        CHANNEL_FOLLOWERS: (e) => "/channels/".concat(e, "/followers"),
-        CHANNEL_FOLLOWER_STATS: (e) => "/channels/".concat(e, "/follower-stats"),
-        CHANNEL_FOLLOWER_MESSAGE_STATS: (e) => "/channels/".concat(e, "/follower-message-stats"),
-        CHANNEL_INTEGRATIONS: (e) => "/channels/".concat(e, "/integrations"),
-        CHANNEL_INTEGRATION: (e, t) => "/channels/".concat(e, "/integrations/").concat(t),
-        CHANNEL_SAFETY_WARNINGS_ACK: (e) => "/channels/".concat(e, "/safety-warnings/ack"),
-        CHANNEL_BLOCKED_USER_WARNING_ACK: (e) => "/channels/".concat(e, "/blocked-user-warning-dismissal"),
-        FORUM_TAGS: (e) => "/channels/".concat(e, "/tags"),
-        FORUM_TAG: (e, t) => "/channels/".concat(e, "/tags/").concat(t),
+        CHANNEL_ICON: (e, t) => `/channels/${e}/icons/${t}.jpg`,
+        CHANNEL_CONVERT: (e) => `/channels/${e}/convert`,
+        CHANNEL_ACK: (e) => `/channels/${e}/messages/ack`,
+        CHANNEL_STORE_LISTING: (e) => `/channels/${e}/store-listing`,
+        CHANNEL_STORE_LISTING_SKU: (e, t) => `/channels/${e}/store-listings/${t}`,
+        CHANNEL_ENTITLEMENT_GRANT: (e) => `/channels/${e}/store-listing/entitlement-grant`,
+        CHANNEL_FOLLOWERS: (e) => `/channels/${e}/followers`,
+        CHANNEL_FOLLOWER_STATS: (e) => `/channels/${e}/follower-stats`,
+        CHANNEL_FOLLOWER_MESSAGE_STATS: (e) => `/channels/${e}/follower-message-stats`,
+        CHANNEL_INTEGRATIONS: (e) => `/channels/${e}/integrations`,
+        CHANNEL_INTEGRATION: (e, t) => `/channels/${e}/integrations/${t}`,
+        CHANNEL_SAFETY_WARNINGS_ACK: (e) => `/channels/${e}/safety-warnings/ack`,
+        CHANNEL_BLOCKED_USER_WARNING_ACK: (e) => `/channels/${e}/blocked-user-warning-dismissal`,
+        FORUM_TAGS: (e) => `/channels/${e}/tags`,
+        FORUM_TAG: (e, t) => `/channels/${e}/tags/${t}`,
         FRIEND_FINDER: "/friend-finder/find-friends",
         FRIEND_SUGGESTIONS: "/friend-suggestions",
-        FRIEND_SUGGESTION: (e) => "/friend-suggestions/".concat(e),
+        FRIEND_SUGGESTION: (e) => `/friend-suggestions/${e}`,
         TUTORIAL_INDICATORS: "/tutorial/indicators",
         TUTORIAL_INDICATORS_SUPPRESS: "/tutorial/indicators/suppress",
-        TUTORIAL_INDICATOR: (e) => "/tutorial/indicators/".concat(e),
+        TUTORIAL_INDICATOR: (e) => `/tutorial/indicators/${e}`,
         USERS: "/users",
         ME: "/users/@me",
         GRAVITY_ATTACHMENTS: "/users/@me/gravity-attachments",
@@ -1330,22 +1319,22 @@ let ed = "",
         VERIFY_PHONE_FOR_TICKET: "/phone-verifications/validate-support-ticket",
         RESEND_PHONE: "/phone-verifications/resend",
         RECENT_AVATARS: "/users/@me/avatars",
-        RECENT_AVATARS_DELETE: (e) => "/users/@me/avatars/".concat(e),
+        RECENT_AVATARS_DELETE: (e) => `/users/@me/avatars/${e}`,
         USERS_ME_CUSTOM_THEMES: "/users/@me/custom-themes",
         CONNECTIONS: "/users/@me/connections",
-        CONNECTIONS_AUTHORIZE: (e) => "/connections/".concat(e, "/authorize"),
-        CONNECTIONS_SESSION_HANDOFF: (e) => "/connections/".concat(e, "/callback/session-handoff"),
-        CONNECTIONS_CALLBACK: (e) => "/connections/".concat(e, "/callback"),
-        CONNECTION: (e, t) => "/users/@me/connections/".concat(e, "/").concat(escape(t)),
-        CONNECTION_REFRESH: (e, t) => "/users/@me/connections/".concat(e, "/").concat(escape(t), "/refresh"),
+        CONNECTIONS_AUTHORIZE: (e) => `/connections/${e}/authorize`,
+        CONNECTIONS_SESSION_HANDOFF: (e) => `/connections/${e}/callback/session-handoff`,
+        CONNECTIONS_CALLBACK: (e) => `/connections/${e}/callback`,
+        CONNECTION: (e, t) => `/users/@me/connections/${e}/${escape(t)}`,
+        CONNECTION_REFRESH: (e, t) => `/users/@me/connections/${e}/${escape(t)}/refresh`,
         CONNECTION_SYNC_CONTACTS: "/users/@me/connections/contacts/@me/external-friend-list-entries",
-        CONNECTION_ACCESS_TOKEN: (e, t) => "/users/@me/connections/".concat(e, "/").concat(escape(t), "/access-token"),
-        CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK: (e) => "/connections/".concat(e, "/link-dispatch-auth-callback"),
+        CONNECTION_ACCESS_TOKEN: (e, t) => `/users/@me/connections/${e}/${escape(t)}/access-token`,
+        CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK: (e) => `/connections/${e}/link-dispatch-auth-callback`,
         XBOX_HANDOFF: "/consoles/xbox-handoff",
         NOTES: "/users/@me/notes",
-        NOTE: (e) => "/users/@me/notes/".concat(e),
+        NOTE: (e) => `/users/@me/notes/${e}`,
         MENTIONS: "/users/@me/mentions",
-        MENTIONS_MESSAGE_ID: (e) => "/users/@me/mentions/".concat(e),
+        MENTIONS_MESSAGE_ID: (e) => `/users/@me/mentions/${e}`,
         CAPTCHA: "/users/@me/captcha/verify",
         CAPTCHA_TEST: "/captcha/decider",
         AGE_ASSURANCE_TEST: "/age-verification/test",
@@ -1353,10 +1342,10 @@ let ed = "",
         AGE_VERIFICATION_METHODS: "/age-verification/methods",
         EXPERIMENTS: "/experiments",
         LOGIN: "/auth/login",
-        LOGIN_GENERATED_USER: (e) => "/auth/login/generated-user/".concat(e),
+        LOGIN_GENERATED_USER: (e) => `/auth/login/generated-user/${e}`,
         GENERATED_POOLS_FOR_CURRENT_USER: "/generated-pools/@me",
-        GENERATED_POOL_BY_ID: (e) => "/generated-pools/".concat(e),
-        LOGIN_MFA: (e) => "/auth/mfa/".concat(e),
+        GENERATED_POOL_BY_ID: (e) => `/generated-pools/${e}`,
+        LOGIN_MFA: (e) => `/auth/mfa/${e}`,
         LOGIN_SMS_SEND: "/auth/mfa/sms/send",
         ONE_TIME_LOGIN: "/auth/one-time-login",
         REMOTE_AUTH_INITIALIZE: "/users/@me/remote-auth",
@@ -1371,12 +1360,12 @@ let ed = "",
         WEBAUTHN_CONDITIONAL_UI_CHALLENGE: "/auth/conditional/start",
         WEBAUTHN_CONDITIONAL_UI_LOGIN: "/auth/conditional/finish",
         WEBAUTHN_PASSWORDLESS_CHALLENGE: "/auth/passwordless/start",
-        MFA_WEBAUTHN_CREDENTIAL: (e) => "/users/@me/mfa/webauthn/credentials/".concat(e),
-        INVITE: (e) => "/invites/".concat(e),
-        INVITE_FRIEND_MEMBERS: (e) => "/invites/".concat(e, "/friend-members"),
-        UNRESOLVED_GUILD_TEMPLATE: (e) => "/guilds/templates/".concat(e),
-        GUILD_TEMPLATES: (e) => "/guilds/".concat(e, "/templates"),
-        GUILD_TEMPLATE: (e, t) => "/guilds/".concat(e, "/templates/").concat(t),
+        MFA_WEBAUTHN_CREDENTIAL: (e) => `/users/@me/mfa/webauthn/credentials/${e}`,
+        INVITE: (e) => `/invites/${e}`,
+        INVITE_FRIEND_MEMBERS: (e) => `/invites/${e}/friend-members`,
+        UNRESOLVED_GUILD_TEMPLATE: (e) => `/guilds/templates/${e}`,
+        GUILD_TEMPLATES: (e) => `/guilds/${e}/templates`,
+        GUILD_TEMPLATE: (e, t) => `/guilds/${e}/templates/${t}`,
         TRACK: "/science",
         METRICS: "/metrics",
         METRICS_V2: "/metrics/v2",
@@ -1388,34 +1377,34 @@ let ed = "",
         VERIFY_RESEND: "/auth/verify/resend",
         FORGOT_PASSWORD: "/auth/forgot",
         RESET_PASSWORD: "/auth/reset",
-        REGIONS: (e) => (null != e ? "/guilds/".concat(e, "/regions") : "/voice/regions"),
-        DEBUG_LOG: (e, t) => "/debug-logs/".concat(e, "/").concat(t),
-        DEBUG_LOGS: (e) => "/debug-logs/multi/".concat(e),
+        REGIONS: (e) => (null != e ? `/guilds/${e}/regions` : "/voice/regions"),
+        DEBUG_LOG: (e, t) => `/debug-logs/${e}/${t}`,
+        DEBUG_LOGS: (e) => `/debug-logs/multi/${e}`,
         REPORT_V2: "/reports",
-        STAGE_REPORT: (e, t) => "/reports/channels/".concat(e, "/messages/").concat(t),
+        STAGE_REPORT: (e, t) => `/reports/channels/${e}/messages/${t}`,
         REPORT_OPTIONS: "/report/options",
         INTEGRATIONS: "/integrations",
-        INTEGRATION_JOIN: (e) => "/integrations/".concat(e, "/join"),
-        INTEGRATION_SEARCH: (e) => "/integrations/".concat(e, "/search"),
+        INTEGRATION_JOIN: (e) => `/integrations/${e}/join`,
+        INTEGRATION_SEARCH: (e) => `/integrations/${e}/search`,
         INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: "/users/@me/guilds/integration-application-ids",
         USER_GUILD_SETTINGS_BULK: "/users/@me/guilds/settings",
-        USER_GUILD_SETTINGS: (e) => "/users/@me/guilds/".concat(e, "/settings"),
+        USER_GUILD_SETTINGS: (e) => `/users/@me/guilds/${e}/settings`,
         GAMES_DETECTABLE: "/games/detectable",
         GAMES_BLOCKLIST: "/games/detectable/exclusions",
         NON_GAMES_DETECTABLE: "/applications/non-games/detectable",
         APPLICATIONS_GAMES_SUPPLEMENTAL: "/applications/games-supplemental",
-        APPLICATION_ICON: (e, t) => "/applications/".concat(e, "/app-icons/").concat(t, ".png"),
-        APPLICATION_RPC: (e) => "/oauth2/applications/".concat(e, "/rpc"),
-        APPLICATION_ASSETS: (e) => "/oauth2/applications/".concat(e, "/assets"),
-        APPLICATION_EXTERNAL_ASSETS: (e) => "/applications/".concat(e, "/external-assets"),
-        OWNED_APPLICATION_BRANCHES: (e) => "/applications/".concat(e, "/branches"),
+        APPLICATION_ICON: (e, t) => `/applications/${e}/app-icons/${t}.png`,
+        APPLICATION_RPC: (e) => `/oauth2/applications/${e}/rpc`,
+        APPLICATION_ASSETS: (e) => `/oauth2/applications/${e}/assets`,
+        APPLICATION_EXTERNAL_ASSETS: (e) => `/applications/${e}/external-assets`,
+        OWNED_APPLICATION_BRANCHES: (e) => `/applications/${e}/branches`,
         OAUTH2_AUTHORIZE: "/oauth2/authorize",
         OAUTH2_AUTHORIZE_SAMSUNG: "/oauth2/samsung/authorize",
         OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK: "/oauth2/samsung/authorize/callback",
         OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS: "/oauth2/authorize/webhook-channels",
         OAUTH2_CURRENT_AUTH: "/oauth2/@me",
         OAUTH2_TOKENS: "/oauth2/tokens",
-        OAUTH2_TOKEN: (e) => "/oauth2/tokens/".concat(e),
+        OAUTH2_TOKEN: (e) => `/oauth2/tokens/${e}`,
         OAUTH2_WHITELIST_ACCEPT: "/oauth2/allowlist/accept",
         OAUTH2_DEVICE_VERIFY: "/oauth2/device/verify",
         OAUTH2_DEVICE_FINISH: "/oauth2/device/finish",
@@ -1427,103 +1416,89 @@ let ed = "",
         MFA_SMS_DISABLE: "/users/@me/mfa/sms/disable",
         MFA_CODES_VERIFICATION: "/users/@me/mfa/codes-verification",
         MFA_SEND_VERIFICATION_KEY: "/auth/verify/view-backup-codes-challenge",
-        CALL: (e) => "/channels/".concat(e, "/call"),
-        CALL_RING: (e) => "/channels/".concat(e, "/call/ring"),
-        CALL_STOP_RINGING: (e) => "/channels/".concat(e, "/call/stop-ringing"),
+        CALL: (e) => `/channels/${e}/call`,
+        CALL_RING: (e) => `/channels/${e}/call/ring`,
+        CALL_STOP_RINGING: (e) => `/channels/${e}/call/stop-ringing`,
         DISABLE_EMAIL_NOTIFICATIONS: "/users/disable-email-notifications",
         DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS: "/users/disable-server-highlight-notifications",
-        CHANNEL_WEBHOOKS: (e) => "/channels/".concat(e, "/webhooks"),
-        GUILD_WEBHOOKS: (e) => "/guilds/".concat(e, "/webhooks"),
-        WEBHOOK: (e) => "/webhooks/".concat(e),
-        WEBHOOK_INTEGRATION: (e, t) => "/webhooks/".concat(e, "/").concat(t),
-        REACTIONS: (e, t, n) => "/channels/".concat(e, "/messages/").concat(t, "/reactions/").concat(n),
-        REMOVE_REACTIONS: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/reactions"),
-        REMOVE_EMOJI_REACTIONS: (e, t, n) => "/channels/".concat(e, "/messages/").concat(t, "/reactions/").concat(n),
-        REACTION: (e, t, n, r) =>
-            "/channels/".concat(e, "/messages/").concat(t, "/reactions/").concat(n, "/").concat(r),
-        REACTION_WITH_TYPE: (e, t, n, r, i) =>
-            "/channels/".concat(e, "/messages/").concat(t, "/reactions/").concat(n, "/").concat(i, "/").concat(r),
-        SEARCH_GUILD: (e) => "/guilds/".concat(e, "/messages/search"),
+        CHANNEL_WEBHOOKS: (e) => `/channels/${e}/webhooks`,
+        GUILD_WEBHOOKS: (e) => `/guilds/${e}/webhooks`,
+        WEBHOOK: (e) => `/webhooks/${e}`,
+        WEBHOOK_INTEGRATION: (e, t) => `/webhooks/${e}/${t}`,
+        REACTIONS: (e, t, n) => `/channels/${e}/messages/${t}/reactions/${n}`,
+        REMOVE_REACTIONS: (e, t) => `/channels/${e}/messages/${t}/reactions`,
+        REMOVE_EMOJI_REACTIONS: (e, t, n) => `/channels/${e}/messages/${t}/reactions/${n}`,
+        REACTION: (e, t, n, r) => `/channels/${e}/messages/${t}/reactions/${n}/${r}`,
+        REACTION_WITH_TYPE: (e, t, n, r, i) => `/channels/${e}/messages/${t}/reactions/${n}/${i}/${r}`,
+        SEARCH_GUILD: (e) => `/guilds/${e}/messages/search`,
         SEARCH_FAVORITES: "/search/favorites",
-        SEARCH_TABS_GUILD: (e) => "/guilds/".concat(e, "/messages/search/tabs"),
+        SEARCH_TABS_GUILD: (e) => `/guilds/${e}/messages/search/tabs`,
         SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
         CHANGELOG_MESSAGES: "/changelogs/@me/messages",
-        GUILD_APPLICATIONS: (e) => "/guilds/".concat(e, "/applications"),
-        APPLIED_GUILD_BOOSTS_FOR_GUILD: (e) => "/guilds/".concat(e, "/premium/subscriptions"),
-        APPLIED_GUILD_BOOST: (e, t) => "/guilds/".concat(e, "/premium/subscriptions/").concat(t),
+        GUILD_APPLICATIONS: (e) => `/guilds/${e}/applications`,
+        APPLIED_GUILD_BOOSTS_FOR_GUILD: (e) => `/guilds/${e}/premium/subscriptions`,
+        APPLIED_GUILD_BOOST: (e, t) => `/guilds/${e}/premium/subscriptions/${t}`,
         APPLIED_GUILD_BOOST_COOLDOWN: "/users/@me/guilds/premium/subscriptions/cooldown",
         USER_APPLIED_GUILD_BOOSTS: "/users/@me/guilds/premium/subscriptions",
         USER_GUILD_BOOST_SLOTS: "/users/@me/guilds/premium/subscription-slots",
-        USER_GUILD_BOOST_SLOT_CANCEL: (e) => "/users/@me/guilds/premium/subscription-slots/".concat(e, "/cancel"),
-        USER_GUILD_BOOST_SLOT_UNCANCEL: (e) => "/users/@me/guilds/premium/subscription-slots/".concat(e, "/uncancel"),
-        GUILD_POWERUPS: (e) => "/guilds/".concat(e, "/powerups"),
-        GUILD_POWERUP_TOGGLE: (e, t) => "/guilds/".concat(e, "/skus/").concat(t),
-        GUILD_POWERUP_UPDATE: (e, t) => "/guilds/".concat(e, "/entitlements/").concat(t),
-        GAME_SERVERS: (e) => "/guilds/".concat(e, "/game-servers"),
-        GAME_SERVER_REGIONS: (e) => "/guilds/".concat(e, "/game-server-regions"),
-        GAME_SERVER_WAKE: (e, t) => "/guilds/".concat(e, "/game-servers/").concat(t, "/wake"),
-        SEARCH_CHANNEL: (e) => "/channels/".concat(e, "/messages/search"),
-        SEARCH_TABS_CHANNEL: (e) => "/channels/".concat(e, "/messages/search/tabs"),
+        USER_GUILD_BOOST_SLOT_CANCEL: (e) => `/users/@me/guilds/premium/subscription-slots/${e}/cancel`,
+        USER_GUILD_BOOST_SLOT_UNCANCEL: (e) => `/users/@me/guilds/premium/subscription-slots/${e}/uncancel`,
+        GUILD_POWERUPS: (e) => `/guilds/${e}/powerups`,
+        GUILD_POWERUP_TOGGLE: (e, t) => `/guilds/${e}/skus/${t}`,
+        GUILD_POWERUP_UPDATE: (e, t) => `/guilds/${e}/entitlements/${t}`,
+        GAME_SERVERS: (e) => `/guilds/${e}/game-servers`,
+        GAME_SERVER_REGIONS: (e) => `/guilds/${e}/game-server-regions`,
+        GAME_SERVER_WAKE: (e, t) => `/guilds/${e}/game-servers/${t}/wake`,
+        SEARCH_CHANNEL: (e) => `/channels/${e}/messages/search`,
+        SEARCH_TABS_CHANNEL: (e) => `/channels/${e}/messages/search/tabs`,
         BILLING_STRIPE_SETUP_INTENT_SECRET: "/users/@me/billing/stripe/setup-intents",
         BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS:
             "/users/@me/billing/stripe/payment-elements/setup-intents",
         BILLING_ADYEN_PAYMENT_METHODS: "/users/@me/billing/adyen/payment-methods",
         BILLING_PAYMENT_SOURCES: "/users/@me/billing/payment-sources",
         BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS: "/users/@me/billing/payment-sources/validate-billing-address",
-        BILLING_PAYMENT_SOURCE: (e) => "/users/@me/billing/payment-sources/".concat(e),
+        BILLING_PAYMENT_SOURCE: (e) => `/users/@me/billing/payment-sources/${e}`,
         BILLING_PAYMENTS: "/users/@me/billing/payments",
-        BILLING_PAYMENT: (e) => "/users/@me/billing/payments/".concat(e),
-        BILLING_PAYMENTS_VOID: (e) => "/users/@me/billing/payments/".concat(e, "/void"),
+        BILLING_PAYMENT: (e) => `/users/@me/billing/payments/${e}`,
+        BILLING_PAYMENTS_VOID: (e) => `/users/@me/billing/payments/${e}/void`,
         BILLING_INVOICE_PDF: "/users/@me/billing/invoice",
         BILLING_INVOICE_BREAKDOWN: "/users/@me/billing/invoice/breakdown",
-        BILLING_STRIPE_PAYMENT_INTENTS: (e) => "/users/@me/billing/stripe/payment-intents/payments/".concat(e),
-        BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID: (e) => "/users/@me/billing/stripe/payment-intents/".concat(e),
+        BILLING_STRIPE_PAYMENT_INTENTS: (e) => `/users/@me/billing/stripe/payment-intents/payments/${e}`,
+        BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID: (e) => `/users/@me/billing/stripe/payment-intents/${e}`,
         BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF: (e, t, n) =>
-            ""
-                .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/billing/premium/subscribe/login-handoff?handoff_key=")
-                .concat(e, "&handoff_token=")
-                .concat(t, "&destination=")
-                .concat(n),
+            `${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/billing/premium/subscribe/login-handoff?handoff_key=${e}&handoff_token=${t}&destination=${n}`,
         BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS: "/users/@me/billing/paypal/billing-agreement-tokens",
-        BILLING_POPUP_BRIDGE: (e) => "/billing/popup-bridge/".concat(e),
-        BILLING_POPUP_BRIDGE_CALLBACK: (e) => "/billing/popup-bridge/".concat(e, "/callback"),
+        BILLING_POPUP_BRIDGE: (e) => `/billing/popup-bridge/${e}`,
+        BILLING_POPUP_BRIDGE_CALLBACK: (e) => `/billing/popup-bridge/${e}/callback`,
         BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX: (e, t, n) =>
-            "/billing/popup-bridge/"
-                .concat(e, "/callback/")
-                .concat(t, "/")
-                .concat(null != n ? n : ""),
+            `/billing/popup-bridge/${e}/callback/${t}/${n ?? ""}`,
         BILLING_SUBSCRIPTIONS: "/users/@me/billing/subscriptions",
         BILLING_PERKS_RELEVANCE: "/users/@me/billing/perks-relevance",
         BILLING_NITRO_AFFINITY: "/users/@me/billing/nitro-affinity",
         BILLING_SUBSCRIPTIONS_PREVIEW: "/users/@me/billing/subscriptions/preview",
         BILLING_APPLY_APPLE_RECEIPT: "/billing/apple/apply-receipt",
-        BILLING_APPLE_SUBSCRIPTION: (e) => "/billing/apple/subscriptions/".concat(e),
+        BILLING_APPLE_SUBSCRIPTION: (e) => `/billing/apple/subscriptions/${e}`,
         BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE: "/users/@me/billing/apple/trial-offer-signature",
         BILLING_CREATE_APPLE_IAP_JWT_TOKEN: "/billing/apple/jwt-token",
         BILLING_ACOM_SUBSCRIPTION_MIGRATION: "/billing/apple/acom-subscriptions/migrate",
-        BILLING_SUBSCRIPTION: (e) => "/users/@me/billing/subscriptions/".concat(e),
-        BILLING_SUBSCRIPTION_PREVIEW: (e) => "/users/@me/billing/subscriptions/".concat(e, "/preview"),
-        BILLING_SUBSCRIPTION_INVOICE: (e) => "/users/@me/billing/subscriptions/".concat(e, "/invoices"),
-        BILLING_INVOICE_MANUAL_PAYMENT: (e, t) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/invoices/").concat(t, "/pay"),
-        BILLING_SUBSCRIPTION_REWARDS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/rewards"),
-        BILLING_SUBSCRIPTION_PROMOTION_REWARD: (e) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/promotion-reward"),
-        Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (e) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/reward-eligibility"),
-        BILLING_SUBSCRIPTION_ELIGIBLE_USERS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/eligible-users"),
-        BILLING_SUBSCRIPTION_INVITES: (e) => "/users/@me/billing/subscriptions/".concat(e, "/invites"),
-        BILLING_SUBSCRIPTION_INVITE: (e, t) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/members/").concat(t, "/invite"),
-        BILLING_SUBSCRIPTION_REMOVE_USER: (e, t) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/members/").concat(t),
-        BILLING_SUBSCRIPTION_MEMBERS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/members"),
+        BILLING_SUBSCRIPTION: (e) => `/users/@me/billing/subscriptions/${e}`,
+        BILLING_SUBSCRIPTION_PREVIEW: (e) => `/users/@me/billing/subscriptions/${e}/preview`,
+        BILLING_SUBSCRIPTION_INVOICE: (e) => `/users/@me/billing/subscriptions/${e}/invoices`,
+        BILLING_INVOICE_MANUAL_PAYMENT: (e, t) => `/users/@me/billing/subscriptions/${e}/invoices/${t}/pay`,
+        BILLING_SUBSCRIPTION_REWARDS: (e) => `/users/@me/billing/subscriptions/${e}/rewards`,
+        BILLING_SUBSCRIPTION_PROMOTION_REWARD: (e) => `/users/@me/billing/subscriptions/${e}/promotion-reward`,
+        Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (e) => `/users/@me/billing/subscriptions/${e}/reward-eligibility`,
+        BILLING_SUBSCRIPTION_ELIGIBLE_USERS: (e) => `/users/@me/billing/subscriptions/${e}/eligible-users`,
+        BILLING_SUBSCRIPTION_INVITES: (e) => `/users/@me/billing/subscriptions/${e}/invites`,
+        BILLING_SUBSCRIPTION_INVITE: (e, t) => `/users/@me/billing/subscriptions/${e}/members/${t}/invite`,
+        BILLING_SUBSCRIPTION_REMOVE_USER: (e, t) => `/users/@me/billing/subscriptions/${e}/members/${t}`,
+        BILLING_SUBSCRIPTION_MEMBERS: (e) => `/users/@me/billing/subscriptions/${e}/members`,
         BILLING_COUNTRY_CODE: "/users/@me/billing/country-code",
         BILLING_LOCATION: "/users/@me/billing/location-info",
         BILLING_LOCALIZED_PROMO: "/users/@me/billing/localized-pricing-promo",
         PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
         PREMIUM_GROUP_INVITES: "/users/@me/premium-group/invites",
-        PREMIUM_GROUP_INVITE: (e) => "/users/@me/premium-group/invites/".concat(e),
+        PREMIUM_GROUP_INVITE: (e) => `/users/@me/premium-group/invites/${e}`,
         PROGRAM_REWARDS: "/users/@me/program-rewards",
         VERIFY_PURCHASE: "/google-play/verify-purchase-token",
         DOWNGRADE_SUBSCRIPTION: "/google-play/downgrade-subscription",
@@ -1532,194 +1507,177 @@ let ed = "",
         HANDOFF: "/auth/handoff",
         HANDOFF_EXCHANGE: "/auth/handoff/exchange",
         LIBRARY: "/users/@me/library",
-        LIBRARY_APPLICATION_BRANCH: (e, t) => "/users/@me/library/".concat(e, "/").concat(t),
-        LIBRARY_APPLICATION_DELETE: (e) => "/users/@me/library/".concat(e),
+        LIBRARY_APPLICATION_BRANCH: (e, t) => `/users/@me/library/${e}/${t}`,
+        LIBRARY_APPLICATION_DELETE: (e) => `/users/@me/library/${e}`,
         AUTH_LOCATION_METADATA: "/auth/location-metadata",
         USER_HARVEST: "/users/@me/harvest",
-        APPLICATION_LIVE_BUILD: (e, t) => "/applications/".concat(e, "/branches/").concat(t, "/builds/live"),
-        APPLICATION_BUILD_SIZE: (e, t, n) =>
-            "/applications/".concat(e, "/branches/").concat(t, "/builds/").concat(n, "/size"),
+        APPLICATION_LIVE_BUILD: (e, t) => `/applications/${e}/branches/${t}/builds/live`,
+        APPLICATION_BUILD_SIZE: (e, t, n) => `/applications/${e}/branches/${t}/builds/${n}/size`,
         APPLICATION_BRANCHES: "/branches",
-        APPLICATION_PUBLIC: (e) => "/applications/".concat(e, "/public"),
+        APPLICATION_PUBLIC: (e) => `/applications/${e}/public`,
         APPLICATIONS_PUBLIC: "/applications/public",
         APPLICATIONS_TRENDING: "/applications/trending/global",
-        APPLICATION_BRANCH_LIST: (e) => "/applications/".concat(e, "/branches"),
-        LIBRARY_APPLICATION_INSTALLED: (e, t) => "/users/@me/library/".concat(e, "/").concat(t, "/installed"),
-        STOREFRONT_PREMIUM_BUTTON: (e) => "/applications/storefront/interactions/premium-button/".concat(e),
-        COLLECTION_PUBLISHED_LISTINGS_SKU: (e) => "/storefront/collections/".concat(e),
-        PRODUCT_FOR_SKU: (e) => "/storefront/products/sku/".concat(e),
-        STORE_DIRECTORY_LAYOUT: (e) => "/store/directory-layouts/".concat(e),
-        STORE_DIRECTORY: (e) => "/store/directory/".concat(e),
+        APPLICATION_BRANCH_LIST: (e) => `/applications/${e}/branches`,
+        LIBRARY_APPLICATION_INSTALLED: (e, t) => `/users/@me/library/${e}/${t}/installed`,
+        STOREFRONT_PREMIUM_BUTTON: (e) => `/applications/storefront/interactions/premium-button/${e}`,
+        COLLECTION_PUBLISHED_LISTINGS_SKU: (e) => `/storefront/collections/${e}`,
+        PRODUCT_FOR_SKU: (e) => `/storefront/products/sku/${e}`,
+        STORE_DIRECTORY_LAYOUT: (e) => `/store/directory-layouts/${e}`,
+        STORE_DIRECTORY: (e) => `/store/directory/${e}`,
         STORE_EMAIL_RESEND_PAYMENT_VERIFICATION: "/store/email/resend-payment-verification",
         STORE_PUBLISHED_LISTINGS_APPLICATIONS: "/store/published-listings/applications",
-        STORE_PUBLISHED_LISTINGS_APPLICATION: (e) => "/store/published-listings/applications/".concat(e),
+        STORE_PUBLISHED_LISTINGS_APPLICATION: (e) => `/store/published-listings/applications/${e}`,
         STORE_PUBLISHED_LISTINGS_SKUS: "/store/published-listings/skus",
-        STORE_PUBLISHED_LISTINGS_SKU: (e) => "/store/published-listings/skus/".concat(e),
-        STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD: (e) => "/store/published-listings/skus/".concat(e, "/guild/join"),
-        STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS: (e) =>
-            "/store/published-listings/skus/".concat(e, "/subscription-plans"),
-        STORE_SKU: (e) => "/store/skus/".concat(e),
-        STORE_SKU_PURCHASE: (e) => "/store/skus/".concat(e, "/purchase"),
-        STORE_LISTING: (e) => "/store/listings/".concat(e),
-        STORE_LISTINGS_SKU: (e) => "/store/skus/".concat(e, "/listings"),
-        SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => "/partner-sdk/guilds/".concat(e, "/application-storefront"),
-        SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS: (e) =>
-            "/partner-sdk/applications/".concat(e, "/skus/recommendations"),
-        SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) =>
-            "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t),
+        STORE_PUBLISHED_LISTINGS_SKU: (e) => `/store/published-listings/skus/${e}`,
+        STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD: (e) => `/store/published-listings/skus/${e}/guild/join`,
+        STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS: (e) => `/store/published-listings/skus/${e}/subscription-plans`,
+        STORE_SKU: (e) => `/store/skus/${e}`,
+        STORE_SKU_PURCHASE: (e) => `/store/skus/${e}/purchase`,
+        STORE_LISTING: (e) => `/store/listings/${e}`,
+        STORE_LISTINGS_SKU: (e) => `/store/skus/${e}/listings`,
+        SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => `/partner-sdk/guilds/${e}/application-storefront`,
+        SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS: (e) => `/partner-sdk/applications/${e}/skus/recommendations`,
+        SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) => `/partner-sdk/guilds/${e}/application-storefront/skus/${t}`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY: (e, t) =>
-            "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t, "/eligibility"),
-        SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT: (e) =>
-            "/partner-sdk/guilds/".concat(e, "/application-storefront/announcement"),
-        ORDER_GET: (e) => "/billing/orders/".concat(e),
+            `/partner-sdk/guilds/${e}/application-storefront/skus/${t}/eligibility`,
+        SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT: (e) => `/partner-sdk/guilds/${e}/application-storefront/announcement`,
+        ORDER_GET: (e) => `/billing/orders/${e}`,
         ORDER_CREATE: "/billing/orders",
         ORDER_LIST: "/billing/orders",
-        ORDER_PATCH_LINE_ITEM: (e, t) => "/billing/orders/".concat(e, "/line-items/").concat(t),
-        ORDER_UPDATE: (e) => "/billing/orders/".concat(e),
-        ORDER_SIGN: (e) => "/billing/orders/".concat(e, "/sign"),
-        ORDER_DISCARD: (e) => "/billing/orders/".concat(e, "/discard"),
-        APPLICATION_SKUS: (e) => "/applications/".concat(e, "/skus"),
-        APPLICATION_MANAGED_ACTIVITY_LINK: (e, t) => "/applications/".concat(e, "/managed-links/").concat(t),
-        APPLICATION_QUICK_ACTIVITY_LINK: (e, t) => "/applications/".concat(e, "/quick-links/").concat(t),
-        STORE_EULA: (e) => "/store/eulas/".concat(e),
-        ENTITLEMENTS_FOR_APPLICATION: (e) => "/users/@me/applications/".concat(e, "/entitlements"),
+        ORDER_PATCH_LINE_ITEM: (e, t) => `/billing/orders/${e}/line-items/${t}`,
+        ORDER_UPDATE: (e) => `/billing/orders/${e}`,
+        ORDER_SIGN: (e) => `/billing/orders/${e}/sign`,
+        ORDER_DISCARD: (e) => `/billing/orders/${e}/discard`,
+        APPLICATION_SKUS: (e) => `/applications/${e}/skus`,
+        APPLICATION_MANAGED_ACTIVITY_LINK: (e, t) => `/applications/${e}/managed-links/${t}`,
+        APPLICATION_QUICK_ACTIVITY_LINK: (e, t) => `/applications/${e}/quick-links/${t}`,
+        STORE_EULA: (e) => `/store/eulas/${e}`,
+        ENTITLEMENTS_FOR_APPLICATION: (e) => `/users/@me/applications/${e}/entitlements`,
         ENTITLEMENTS_FOR_USER: "/users/@me/entitlements",
         USER_MEANINGFULLY_ONLINE: "/users/@me/meaningfully-online",
-        ENTITLEMENT_TICKET: (e) => "/users/@me/applications/".concat(e, "/entitlement-ticket"),
-        APPLICATION_TICKET: (e) => "/users/@me/applications/".concat(e, "/ticket"),
+        ENTITLEMENT_TICKET: (e) => `/users/@me/applications/${e}/entitlement-ticket`,
+        APPLICATION_TICKET: (e) => `/users/@me/applications/${e}/ticket`,
         ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
-        STORE_ASSET: (e, t, n) => "/store/applications/".concat(e, "/assets/").concat(t, ".").concat(n),
-        APPLICATION_ASSET: (e, t, n) => "/applications/".concat(e, "/app-assets/").concat(t, ".").concat(n),
-        APPLICATION_STORAGE: (e, t) => "/applications/".concat(e, "/branches/").concat(t, "/storage"),
-        APPLICATION_DISCLOSURES: (e) => "/applications/".concat(e, "/disclosures"),
+        STORE_ASSET: (e, t, n) => `/store/applications/${e}/assets/${t}.${n}`,
+        APPLICATION_ASSET: (e, t, n) => `/applications/${e}/app-assets/${t}.${n}`,
+        APPLICATION_STORAGE: (e, t) => `/applications/${e}/branches/${t}/storage`,
+        APPLICATION_DISCLOSURES: (e) => `/applications/${e}/disclosures`,
         GIFS_SEARCH: "/gifs/search",
         GIFS_TRENDING: "/gifs/trending",
         GIFS_TRENDING_GIFS: "/gifs/trending-gifs",
         GIFS_SELECT: "/gifs/select",
         GIFS_SUGGEST: "/gifs/suggest",
         GIFS_TRENDING_SEARCH: "/gifs/trending-search",
-        GIFT_CODE_RESOLVE: (e) => "/entitlements/gift-codes/".concat(e),
-        GIFT_CODE_REDEEM: (e) => "/entitlements/gift-codes/".concat(e, "/redeem"),
-        PARTNER_PROMOTIONS: (e) => "/entitlements/partner-promotions/".concat(e),
+        GIFT_CODE_RESOLVE: (e) => `/entitlements/gift-codes/${e}`,
+        GIFT_CODE_REDEEM: (e) => `/entitlements/gift-codes/${e}/redeem`,
+        PARTNER_PROMOTIONS: (e) => `/entitlements/partner-promotions/${e}`,
         USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
-        USER_GIFT_CODE_REVOKE: (e) => "/users/@me/entitlements/gift-codes/".concat(e),
+        USER_GIFT_CODE_REVOKE: (e) => `/users/@me/entitlements/gift-codes/${e}`,
         USER_GIFT_CODES: "/users/@me/entitlements/gift-codes",
         USER_TRIAL_OFFER: "/users/@me/billing/user-trial-offer",
-        USER_TRIAL_OFFER_ACKNOWLEDGED: (e) => "/users/@me/billing/user-trial-offer/".concat(e, "/ack"),
+        USER_TRIAL_OFFER_ACKNOWLEDGED: (e) => `/users/@me/billing/user-trial-offer/${e}/ack`,
         USER_OFFER: "/users/@me/billing/user-offer",
         USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
         CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
         USER_OFFER_REDEEM: "/users/@me/billing/user-offer/redeem",
-        REACTIVATION_OFFER_REDEEM: (e, t) =>
-            "/users/@me/billing/subscriptions/".concat(e, "/reactivation-offers/").concat(t, "/redeem"),
+        REACTIVATION_OFFER_REDEEM: (e, t) => `/users/@me/billing/subscriptions/${e}/reactivation-offers/${t}/redeem`,
         USER_PERKS_DEMOS: "/users/@me/perks-demos",
-        USER_PERKS_DEMOS_ACTIVATE: (e) => "/users/@me/activate-perk-demo/".concat(e),
+        USER_PERKS_DEMOS_ACTIVATE: (e) => `/users/@me/activate-perk-demo/${e}`,
         GUILD_DISCOVERY: "/discoverable-guilds",
         GUILD_DISCOVERY_SEARCH: "/discoverable-guilds/search",
         GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
-        GUILD_DISCOVERY_SLUG: (e) => "/discovery/".concat(e),
-        GUILD_DISCOVERY_METADATA: (e) => "/guilds/".concat(e, "/discovery-metadata"),
-        GUILD_DISCOVERY_UPDATE_CATEGORY: (e, t) => "/guilds/".concat(e, "/discovery-categories/").concat(t),
-        STREAM_PREVIEW: (e) => "/streams/".concat(e, "/preview"),
-        STREAM_NOTIFY: (e) => "/streams/".concat(e, "/notify"),
-        STREAM: (e) => "/streams/".concat(e, "/stream"),
-        GUILD_PREVIEW: (e) => "/guilds/".concat(e, "/preview"),
+        GUILD_DISCOVERY_SLUG: (e) => `/discovery/${e}`,
+        GUILD_DISCOVERY_METADATA: (e) => `/guilds/${e}/discovery-metadata`,
+        GUILD_DISCOVERY_UPDATE_CATEGORY: (e, t) => `/guilds/${e}/discovery-categories/${t}`,
+        STREAM_PREVIEW: (e) => `/streams/${e}/preview`,
+        STREAM_NOTIFY: (e) => `/streams/${e}/notify`,
+        STREAM: (e) => `/streams/${e}/stream`,
+        GUILD_PREVIEW: (e) => `/guilds/${e}/preview`,
         USER_AFFINITIES: "/users/@me/affinities/users",
         USER_AFFINITIES_V2: "/users/@me/affinities/v2/users",
         GUILD_AFFINITIES: "/users/@me/affinities/guilds",
         CHANNEL_AFFINITIES: "/users/@me/affinities/channels",
         PARTNERS_CONNECTIONS: "/partners/connections",
         PARTNERS_APPLY: "/partners/apply",
-        STICKER_PACK: (e) => "/sticker-packs/".concat(e),
-        STORE_DIRECTORY_LAYOUT_STICKER_PACKS: (e) => "/sticker-packs/directory-v2/".concat(e),
-        STICKER_ASSET: (e, t) => "/stickers/".concat(e, ".").concat(t),
-        STICKER: (e) => "/stickers/".concat(e),
+        STICKER_PACK: (e) => `/sticker-packs/${e}`,
+        STORE_DIRECTORY_LAYOUT_STICKER_PACKS: (e) => `/sticker-packs/directory-v2/${e}`,
+        STICKER_ASSET: (e, t) => `/stickers/${e}.${t}`,
+        STICKER: (e) => `/stickers/${e}`,
         STICKER_PACKS: "/sticker-packs",
-        GUILD_STICKER_PACKS: (e) => "/guilds/".concat(e, "/stickers"),
-        GUILD_STICKER: (e, t) => "/guilds/".concat(e, "/stickers/").concat(t),
-        STICKER_GUILD_DATA: (e) => "/stickers/".concat(e, "/guild"),
+        GUILD_STICKER_PACKS: (e) => `/guilds/${e}/stickers`,
+        GUILD_STICKER: (e, t) => `/guilds/${e}/stickers/${t}`,
+        STICKER_GUILD_DATA: (e) => `/stickers/${e}/guild`,
         INTERACTIONS: "/interactions",
-        MESSAGE_INTERACTION_DATA: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/interaction-data"),
+        MESSAGE_INTERACTION_DATA: (e, t) => `/channels/${e}/messages/${t}/interaction-data`,
         ACTIVITY_SHELF: "/activities/shelf",
-        ACTIVITY_CHANNEL_LAUNCH: (e, t) => "/activities/".concat(e, "/").concat(t),
-        ACTIVITY_JOIN_INSTANCE: (e, t) =>
-            "/activities/applications/".concat(e, "/activity-instances/").concat(t, "/join"),
-        ACTIVITY_TEST_MODE: (e) => "/activities/".concat(e, "/test-mode"),
-        ACTIVITY_LEAVE: (e, t, n) =>
-            "/applications/".concat(e, "/activities/").concat(t, "/instances/").concat(n, "/leave"),
-        ACTIVITIES_DISCORD_CONFIG: (e) => "/activities/discord-config/".concat(e),
-        ACTIVITIES_TRUSTED_LINKS: (e) => "/applications/".concat(e, "/trusted-links/check"),
-        APPLICATION_UPLOAD_ATTACHMENT: (e) => "/applications/".concat(e, "/attachment"),
-        APPLICATION_PROXY_TICKET: (e) => "/applications/".concat(e, "/proxy-tickets"),
-        CHANNEL_THREADS: (e) => "/channels/".concat(e, "/threads"),
-        CHANNEL_MESSAGE_THREADS: (e, t) => "/channels/".concat(e, "/messages/").concat(t, "/threads"),
-        CHANNEL_LINKED_LOBBY: (e) => "/channels/".concat(e, "/linked-lobby"),
+        ACTIVITY_CHANNEL_LAUNCH: (e, t) => `/activities/${e}/${t}`,
+        ACTIVITY_JOIN_INSTANCE: (e, t) => `/activities/applications/${e}/activity-instances/${t}/join`,
+        ACTIVITY_TEST_MODE: (e) => `/activities/${e}/test-mode`,
+        ACTIVITY_LEAVE: (e, t, n) => `/applications/${e}/activities/${t}/instances/${n}/leave`,
+        ACTIVITIES_DISCORD_CONFIG: (e) => `/activities/discord-config/${e}`,
+        ACTIVITIES_TRUSTED_LINKS: (e) => `/applications/${e}/trusted-links/check`,
+        APPLICATION_UPLOAD_ATTACHMENT: (e) => `/applications/${e}/attachment`,
+        APPLICATION_PROXY_TICKET: (e) => `/applications/${e}/proxy-tickets`,
+        CHANNEL_THREADS: (e) => `/channels/${e}/threads`,
+        CHANNEL_MESSAGE_THREADS: (e, t) => `/channels/${e}/messages/${t}/threads`,
+        CHANNEL_LINKED_LOBBY: (e) => `/channels/${e}/linked-lobby`,
         APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS: (e, t, n) =>
-            "/applications/".concat(e, "/guilds/").concat(t, "/commands/").concat(n, "/permissions"),
+            `/applications/${e}/guilds/${t}/commands/${n}/permissions`,
         UPDATE_VOICE_STATE: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "@me";
-            return "/guilds/".concat(e, "/voice-states/").concat(t);
+            return `/guilds/${e}/voice-states/${t}`;
         },
-        GET_REPORT_MENU: (e) => "/reporting/menu/".concat(e),
-        GET_UNAUTHENTICATED_REPORT_MENU: (e) => "/reporting/unauthenticated/menu/".concat(e),
-        SUBMIT_REPORT_MENU: (e) => "/reporting/".concat(e),
-        SUBMIT_UNAUTHENTICATED_REPORT_MENU: (e) => "/reporting/unauthenticated/".concat(e),
-        SEND_UNAUTHENTICATED_REPORT_PINCODE: (e) => "/reporting/unauthenticated/".concat(e, "/code"),
-        VERIFY_UNAUTHENTICATED_REPORT: (e) => "/reporting/unauthenticated/".concat(e, "/verify"),
-        SUBMIT_MODERATOR_MESSAGE_REPORT: (e, t) => "/channels/".concat(e, "/").concat(t, "/mod-report"),
-        MODERATOR_REPORT_CLOSE: (e) => "/mod-report/".concat(e, "/close"),
-        REPORT_TO_MOD_REOPEN: (e) => "/mod-report/".concat(e, "/reopen"),
+        GET_REPORT_MENU: (e) => `/reporting/menu/${e}`,
+        GET_UNAUTHENTICATED_REPORT_MENU: (e) => `/reporting/unauthenticated/menu/${e}`,
+        SUBMIT_REPORT_MENU: (e) => `/reporting/${e}`,
+        SUBMIT_UNAUTHENTICATED_REPORT_MENU: (e) => `/reporting/unauthenticated/${e}`,
+        SEND_UNAUTHENTICATED_REPORT_PINCODE: (e) => `/reporting/unauthenticated/${e}/code`,
+        VERIFY_UNAUTHENTICATED_REPORT: (e) => `/reporting/unauthenticated/${e}/verify`,
+        SUBMIT_MODERATOR_MESSAGE_REPORT: (e, t) => `/channels/${e}/${t}/mod-report`,
+        MODERATOR_REPORT_CLOSE: (e) => `/mod-report/${e}/close`,
+        REPORT_TO_MOD_REOPEN: (e) => `/mod-report/${e}/reopen`,
         DSA_EXPERIMENT_UNAUTHENTICATED: "/reporting/unauthenticated/experiment",
         DSA_CAPABILITIES: "/reporting/unauthenticated/capabilities",
         SUBMIT_REPORT_SECOND_LOOK: "/reporting/review",
         STAGE_INSTANCES: "/stage-instances",
         STAGE_INSTANCES_EXTRA: "/stage-instances/extra",
-        STAGE_INSTANCE: (e) => "/stage-instances/".concat(e),
+        STAGE_INSTANCE: (e) => `/stage-instances/${e}`,
         USER_SURVEY: "/users/@me/survey",
-        EMBEDDED_SURVEY: (e) => "/users/@me/embedded-survey/".concat(e),
-        EMBEDDED_SURVEY_RESPONSE: (e) => "/users/@me/embedded-surveys/".concat(e, "/responses"),
+        EMBEDDED_SURVEY: (e) => `/users/@me/embedded-survey/${e}`,
+        EMBEDDED_SURVEY_RESPONSE: (e) => `/users/@me/embedded-surveys/${e}/responses`,
         EMBEDDED_SURVEY_ACTION: "/users/@me/embedded-survey/action",
-        USER_SURVEY_SEEN: (e) => "/users/@me/survey/".concat(e, "/seen"),
+        USER_SURVEY_SEEN: (e) => `/users/@me/survey/${e}/seen`,
         GUILD_EVENTS: "/guild-events",
-        GUILD_EVENT: (e, t) => "/guilds/".concat(e, "/scheduled-events/").concat(t),
-        GUILD_EVENT_IMAGE: (e, t, n) => "/guild-events/".concat(e, "/images/").concat(t, ".").concat(n),
-        GUILD_EVENTS_FOR_GUILD: (e) => "/guilds/".concat(e, "/scheduled-events"),
-        GUILD_EVENT_USER_COUNTS: (e, t) => "/guilds/".concat(e, "/scheduled-events/").concat(t, "/users/counts"),
-        GUILD_EVENT_USERS: (e, t, n) =>
-            "/guilds/"
-                .concat(e, "/scheduled-events/")
-                .concat(t)
-                .concat(null != n ? "/".concat(n) : "", "/users"),
-        USER_GUILD_EVENT: (e, t, n) =>
-            "/guilds/"
-                .concat(e, "/scheduled-events/")
-                .concat(t)
-                .concat(null != n ? "/".concat(n) : "", "/users/@me"),
+        GUILD_EVENT: (e, t) => `/guilds/${e}/scheduled-events/${t}`,
+        GUILD_EVENT_IMAGE: (e, t, n) => `/guild-events/${e}/images/${t}.${n}`,
+        GUILD_EVENTS_FOR_GUILD: (e) => `/guilds/${e}/scheduled-events`,
+        GUILD_EVENT_USER_COUNTS: (e, t) => `/guilds/${e}/scheduled-events/${t}/users/counts`,
+        GUILD_EVENT_USERS: (e, t, n) => `/guilds/${e}/scheduled-events/${t}${null != n ? `/${n}` : ""}/users`,
+        USER_GUILD_EVENT: (e, t, n) => `/guilds/${e}/scheduled-events/${t}${null != n ? `/${n}` : ""}/users/@me`,
         USER_GUILD_EVENTS: "/users/@me/scheduled-events",
-        GUILD_EVENT_EXCEPTIONS: (e, t) => "/guilds/".concat(e, "/scheduled-events/").concat(t, "/exceptions"),
-        GUILD_EVENT_EXCEPTION: (e, t, n) =>
-            "/guilds/".concat(e, "/scheduled-events/").concat(t, "/exceptions/").concat(n),
-        MEMBER_SAFETY_SUPPLEMENTAL: (e) => "/guilds/".concat(e, "/members/supplemental"),
-        GUILD_MEMBER_SEARCH: (e) => "/guilds/".concat(e, "/members-search"),
-        GUILD_AUTOMOD_RULES: (e) => "/guilds/".concat(e, "/auto-moderation/rules"),
-        GUILD_AUTOMOD_RULE: (e, t) => "/guilds/".concat(e, "/auto-moderation/rules/").concat(t),
-        GUILD_AUTOMOD_VALIDATE_RULE: (e) => "/guilds/".concat(e, "/auto-moderation/rules/validate"),
-        GUILD_AUTOMOD_CLEAR_MENTION_RAID: (e) => "/guilds/".concat(e, "/auto-moderation/clear-mention-raid"),
-        GUILD_AUTOMOD_ALERT_ACTION: (e) => "/guilds/".concat(e, "/auto-moderation/alert-action"),
-        GUILD_INCIDENT_ACTIONS: (e) => "/guilds/".concat(e, "/incident-actions"),
-        GUILD_INCIDENT_REPORT_FALSE_ALARM: (e) => "/guilds/".concat(e, "/auto-moderation/false-alarm"),
-        GUILD_INCIDENT_REPORT_RAID: (e) => "/guilds/".concat(e, "/auto-moderation/report-raid"),
-        DIRECTORY_CHANNEL_ENTRIES: (e) => "/channels/".concat(e, "/directory-entries"),
-        DIRECTORY_CHANNEL_ENTRY: (e, t) => "/channels/".concat(e, "/directory-entry/").concat(t),
-        DIRECTORY_ENTRIES_SEARCH: (e) => "/channels/".concat(e, "/directory-entries/search"),
-        DIRECTORY_CHANNEL_CATEGORY_COUNTS: (e) => "/channels/".concat(e, "/directory-entries/counts"),
-        DIRECTORY_CHANNEL_LIST_BY_ID: (e) => "/channels/".concat(e, "/directory-entries/list"),
-        DIRECTORY_ENTRIES_BROADCAST_INFO: (e) => "/guilds/".concat(e, "/directory-entries/broadcast"),
+        GUILD_EVENT_EXCEPTIONS: (e, t) => `/guilds/${e}/scheduled-events/${t}/exceptions`,
+        GUILD_EVENT_EXCEPTION: (e, t, n) => `/guilds/${e}/scheduled-events/${t}/exceptions/${n}`,
+        MEMBER_SAFETY_SUPPLEMENTAL: (e) => `/guilds/${e}/members/supplemental`,
+        GUILD_MEMBER_SEARCH: (e) => `/guilds/${e}/members-search`,
+        GUILD_AUTOMOD_RULES: (e) => `/guilds/${e}/auto-moderation/rules`,
+        GUILD_AUTOMOD_RULE: (e, t) => `/guilds/${e}/auto-moderation/rules/${t}`,
+        GUILD_AUTOMOD_VALIDATE_RULE: (e) => `/guilds/${e}/auto-moderation/rules/validate`,
+        GUILD_AUTOMOD_CLEAR_MENTION_RAID: (e) => `/guilds/${e}/auto-moderation/clear-mention-raid`,
+        GUILD_AUTOMOD_ALERT_ACTION: (e) => `/guilds/${e}/auto-moderation/alert-action`,
+        GUILD_INCIDENT_ACTIONS: (e) => `/guilds/${e}/incident-actions`,
+        GUILD_INCIDENT_REPORT_FALSE_ALARM: (e) => `/guilds/${e}/auto-moderation/false-alarm`,
+        GUILD_INCIDENT_REPORT_RAID: (e) => `/guilds/${e}/auto-moderation/report-raid`,
+        DIRECTORY_CHANNEL_ENTRIES: (e) => `/channels/${e}/directory-entries`,
+        DIRECTORY_CHANNEL_ENTRY: (e, t) => `/channels/${e}/directory-entry/${t}`,
+        DIRECTORY_ENTRIES_SEARCH: (e) => `/channels/${e}/directory-entries/search`,
+        DIRECTORY_CHANNEL_CATEGORY_COUNTS: (e) => `/channels/${e}/directory-entries/counts`,
+        DIRECTORY_CHANNEL_LIST_BY_ID: (e) => `/channels/${e}/directory-entries/list`,
+        DIRECTORY_ENTRIES_BROADCAST_INFO: (e) => `/guilds/${e}/directory-entries/broadcast`,
         PRICE_TIERS: "/store/price-tiers",
         TEAMS: "/teams",
         APPLICATIONS: "/applications",
         APPLICATIONS_WITH_ASSETS: "/applications-with-assets",
-        APPLICATION_OWNER_TRANSFER: (e) => "/applications/".concat(e, "/transfer"),
+        APPLICATION_OWNER_TRANSFER: (e) => `/applications/${e}/transfer`,
         HUB_WAITLIST_SIGNUP: "/hub-waitlist/signup",
         HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
         HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
@@ -1727,61 +1685,48 @@ let ed = "",
         PROMOTIONS: "/promotions",
         BOGO_PROMOTIONS: "/bogo-promotions",
         CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
-        CLAIM_OUTBOUND_PROMOTION_CODE: (e) => "/outbound-promotions/".concat(e, "/claim"),
+        CLAIM_OUTBOUND_PROMOTION_CODE: (e) => `/outbound-promotions/${e}/claim`,
         HUB_EMAIL_VERIFY_SEND: "/guilds/automations/email-domain-lookup",
-        GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD: (e) => "/guilds/".concat(e, "/products/attachments"),
-        GUILD_ROLE_SUBSCRIPTIONS_SETTINGS: (e) => "/guilds/".concat(e, "/role-subscriptions/settings"),
+        GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD: (e) => `/guilds/${e}/products/attachments`,
+        GUILD_ROLE_SUBSCRIPTIONS_SETTINGS: (e) => `/guilds/${e}/role-subscriptions/settings`,
         GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS: (e, t) =>
-            "/guilds/".concat(e, "/role-subscriptions/group-listings").concat(null != t ? "/".concat(t) : ""),
+            `/guilds/${e}/role-subscriptions/group-listings${null != t ? `/${t}` : ""}`,
         GUILD_ROLE_SUBSCRIPTION_LISTINGS: (e, t, n) =>
-            "/guilds/"
-                .concat(e, "/role-subscriptions/group-listings/")
-                .concat(t, "/subscription-listings")
-                .concat(null != n ? "/".concat(n) : ""),
+            `/guilds/${e}/role-subscriptions/group-listings/${t}/subscription-listings${null != n ? `/${n}` : ""}`,
         GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE: (e, t, n) =>
-            "/guilds/"
-                .concat(e, "/role-subscriptions/group-listings/")
-                .concat(t, "/subscription-listings/")
-                .concat(n, "/archive"),
-        GUILD_ROLE_SUBSCRIPTION_TRIALS: (e) => "/guilds/".concat(e, "/role-subscriptions/trials"),
+            `/guilds/${e}/role-subscriptions/group-listings/${t}/subscription-listings/${n}/archive`,
+        GUILD_ROLE_SUBSCRIPTION_TRIALS: (e) => `/guilds/${e}/role-subscriptions/trials`,
         GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL: (e, t) =>
-            "/guilds/".concat(e, "/role-subscriptions/subscription-listings/").concat(t, "/trial"),
-        GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES: (e) => "/guilds/".concat(e, "/role-subscriptions/templates"),
-        CREATOR_MONETIZATION_ENABLE_REQUESTS: (e) => "/guilds/".concat(e, "/creator-monetization/enable-requests"),
-        CREATOR_MONETIZATION_ELIGIBILITY: (e) => "/guilds/".concat(e, "/creator-monetization/requirements"),
+            `/guilds/${e}/role-subscriptions/subscription-listings/${t}/trial`,
+        GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES: (e) => `/guilds/${e}/role-subscriptions/templates`,
+        CREATOR_MONETIZATION_ENABLE_REQUESTS: (e) => `/guilds/${e}/creator-monetization/enable-requests`,
+        CREATOR_MONETIZATION_ELIGIBILITY: (e) => `/guilds/${e}/creator-monetization/requirements`,
         CREATOR_MONETIZATION_ACCEPT_TERMS: (e, t) =>
-            "/guilds/".concat(e, "/creator-monetization/enable-requests/").concat(t, "/accept-terms"),
-        CREATOR_MONETIZATION_ACCEPT_TERMS_V2: (e) => "/guilds/".concat(e, "/creator-monetization/accept-terms"),
-        CREATOR_MONETIZATION_RESTRICTIONS: (e) => "/guilds/".concat(e, "/creator-monetization/restrictions"),
+            `/guilds/${e}/creator-monetization/enable-requests/${t}/accept-terms`,
+        CREATOR_MONETIZATION_ACCEPT_TERMS_V2: (e) => `/guilds/${e}/creator-monetization/accept-terms`,
+        CREATOR_MONETIZATION_RESTRICTIONS: (e) => `/guilds/${e}/creator-monetization/restrictions`,
         GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY: (e, t, n) =>
-            "/guilds/"
-                .concat(e, "/role-subscriptions/subscription-listings/")
-                .concat(t, "/trial/")
-                .concat(n, "/eligibility"),
-        CREATOR_MONETIZATION_MARKETING_ONBOARDING: (e) =>
-            "/guilds/".concat(e, "/creator-monetization/marketing/onboarding"),
+            `/guilds/${e}/role-subscriptions/subscription-listings/${t}/trial/${n}/eligibility`,
+        CREATOR_MONETIZATION_MARKETING_ONBOARDING: (e) => `/guilds/${e}/creator-monetization/marketing/onboarding`,
         CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY: "/creator-monetization/marketing/nag-activate/eligibility",
         CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD: (e) =>
-            "/guilds/".concat(e, "/creator-monetization/ownership-transfer/onboarding"),
-        CREATOR_MONETIZATION_ACCEPT_NEW_TERMS: (e) => "/guilds/".concat(e, "/creator-monetization/accept-new-terms"),
+            `/guilds/${e}/creator-monetization/ownership-transfer/onboarding`,
+        CREATOR_MONETIZATION_ACCEPT_NEW_TERMS: (e) => `/guilds/${e}/creator-monetization/accept-new-terms`,
         CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED: (e) =>
-            "/guilds/".concat(e, "/creator-monetization/accept-new-terms-demonetized"),
-        CREATOR_MONETIZATION_REMOVE_MONETIZATION: (e) =>
-            "/guilds/".concat(e, "/creator-monetization/remove-monetization"),
-        SUBSCRIPTION_PLAN_GROUP_LISTING: (e) => "/subscription-plans/".concat(e, "/subscription-group-listing"),
+            `/guilds/${e}/creator-monetization/accept-new-terms-demonetized`,
+        CREATOR_MONETIZATION_REMOVE_MONETIZATION: (e) => `/guilds/${e}/creator-monetization/remove-monetization`,
+        SUBSCRIPTION_PLAN_GROUP_LISTING: (e) => `/subscription-plans/${e}/subscription-group-listing`,
         SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING: (e) =>
-            "/subscription-plans/".concat(e, "/guild-role-subscription-group-listing"),
-        MEDIA_POST_RESHARE_GET_PREVIEW: (e) => "/channels/".concat(e, "/media-post-preview"),
+            `/subscription-plans/${e}/guild-role-subscription-group-listing`,
+        MEDIA_POST_RESHARE_GET_PREVIEW: (e) => `/channels/${e}/media-post-preview`,
         UNFURL_EMBED_URLS: "/unfurler/embed-urls",
         BUG_REPORTS: "/private/bug-reports",
-        PAYMENT_PAYOUT_GROUPS: (e) => "/applications/".concat(e, "/payment-payout-groups"),
-        GUILD_PRODUCTS: (e) => "/guilds/".concat(e, "/products"),
-        GUILD_PRODUCT_LISTINGS: (e, t) =>
-            "/guilds/".concat(e, "/products/listings").concat(null != t ? "/".concat(t) : ""),
-        GUILD_PRODUCT_ATTACHMENT_DOWNLOAD: (e, t, n) =>
-            "/guilds/".concat(e, "/products/listings/").concat(t, "/attachments/").concat(n, "/download"),
-        GUILD_PROFILE: (e) => "/guilds/".concat(e, "/profile"),
-        GUILD_PROFILE_VISIBILITY: (e) => "/guilds/".concat(e, "/profile/visibility"),
+        PAYMENT_PAYOUT_GROUPS: (e) => `/applications/${e}/payment-payout-groups`,
+        GUILD_PRODUCTS: (e) => `/guilds/${e}/products`,
+        GUILD_PRODUCT_LISTINGS: (e, t) => `/guilds/${e}/products/listings${null != t ? `/${t}` : ""}`,
+        GUILD_PRODUCT_ATTACHMENT_DOWNLOAD: (e, t, n) => `/guilds/${e}/products/listings/${t}/attachments/${n}/download`,
+        GUILD_PROFILE: (e) => `/guilds/${e}/profile`,
+        GUILD_PROFILE_VISIBILITY: (e) => `/guilds/${e}/profile/visibility`,
         USER_SET_GUILD_IDENTITY: "/users/@me/clan",
         TENOR_ASSET_PATH: "/tenor",
         GIPHY_ASSET_PATH: "/giphy",
@@ -1789,189 +1734,178 @@ let ed = "",
         EMAIL_SETTINGS: "/users/@me/email-settings",
         ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
         VIDEO_FILTER_ASSETS: "/users/@me/video-filters/assets",
-        VIDEO_FILTER_ASSET: (e) => "/users/@me/video-filters/assets/".concat(e),
-        VIDEO_FILTER_ASSET_LAST_USED: (e) => "/users/@me/video-filters/assets/".concat(e, "/last-used"),
-        VIDEO_FILTER_ASSET_STORAGE: (e, t, n, r) =>
-            "/users/".concat(e, "/video-filter-assets/").concat(t, "/").concat(n, ".").concat(r),
-        GUILD_SOUNDBOARD_SOUNDS: (e) => "/guilds/".concat(e, "/soundboard-sounds"),
-        GUILD_SOUNDBOARD_SOUND: (e, t) => "/guilds/".concat(e, "/soundboard-sounds/").concat(t),
-        SOUNDBOARD_SOUND: (e) => "/soundboard-sounds/".concat(e),
-        SOUNDBOARD_SOUND_GUILD_DATA: (e, t) => "/soundboard-sounds/".concat(e, "/guild/").concat(t),
+        VIDEO_FILTER_ASSET: (e) => `/users/@me/video-filters/assets/${e}`,
+        VIDEO_FILTER_ASSET_LAST_USED: (e) => `/users/@me/video-filters/assets/${e}/last-used`,
+        VIDEO_FILTER_ASSET_STORAGE: (e, t, n, r) => `/users/${e}/video-filter-assets/${t}/${n}.${r}`,
+        GUILD_SOUNDBOARD_SOUNDS: (e) => `/guilds/${e}/soundboard-sounds`,
+        GUILD_SOUNDBOARD_SOUND: (e, t) => `/guilds/${e}/soundboard-sounds/${t}`,
+        SOUNDBOARD_SOUND: (e) => `/soundboard-sounds/${e}`,
+        SOUNDBOARD_SOUND_GUILD_DATA: (e, t) => `/soundboard-sounds/${e}/guild/${t}`,
         SOUNDBOARD_DEFAULT_SOUNDS: "/soundboard-default-sounds",
-        TOP_SOUNDS_FOR_GUILDS: "/users/@me/top-sounds-for-guilds",
-        SEND_SOUNDBOARD_SOUND: (e) => "/channels/".concat(e, "/send-soundboard-sound"),
-        APPLICATION_COMMANDS_SEARCH: (e) => "/channels/".concat(e, "/application-commands/search"),
-        APPLICATION_COMMAND_INDEX_CHANNEL: (e) => "/channels/".concat(e, "/application-command-index"),
-        APPLICATION_COMMAND_INDEX_GUILD: (e) => "/guilds/".concat(e, "/application-command-index"),
+        SEND_SOUNDBOARD_SOUND: (e) => `/channels/${e}/send-soundboard-sound`,
+        APPLICATION_COMMANDS_SEARCH: (e) => `/channels/${e}/application-commands/search`,
+        APPLICATION_COMMAND_INDEX_CHANNEL: (e) => `/channels/${e}/application-command-index`,
+        APPLICATION_COMMAND_INDEX_GUILD: (e) => `/guilds/${e}/application-command-index`,
         APPLICATION_COMMAND_INDEX_USER: "/users/@me/application-command-index",
-        APPLICATION_COMMAND_INDEX_APPLICATION: (e) => "/applications/".concat(e, "/application-command-index"),
-        GUILD_COMMANDS_FOR_APPLICATION: (e, t) => "/guilds/".concat(e, "/application-commands/").concat(t),
-        APPLICATION_DIRECTORY_APPLICATION: (e) => "/application-directory-static/applications/".concat(e),
-        APPLICATION_DIRECTORY_EMBED_APPLICATION: (e) => "/application-directory/applications/".concat(e, "/embed"),
+        APPLICATION_COMMAND_INDEX_APPLICATION: (e) => `/applications/${e}/application-command-index`,
+        GUILD_COMMANDS_FOR_APPLICATION: (e, t) => `/guilds/${e}/application-commands/${t}`,
+        APPLICATION_DIRECTORY_APPLICATION: (e) => `/application-directory-static/applications/${e}`,
+        APPLICATION_DIRECTORY_EMBED_APPLICATION: (e) => `/application-directory/applications/${e}/embed`,
         APPLICATION_DIRECTORY_CATEGORIES: "/application-directory-static/categories",
-        APPLICATION_DIRECTORY_SIMILAR: (e) => "/application-directory-static/applications/".concat(e, "/similar"),
+        APPLICATION_DIRECTORY_SIMILAR: (e) => `/application-directory-static/applications/${e}/similar`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory-static/search",
         APPLICATION_DIRECTORY_COLLECTIONS: "/application-directory-static/collections",
         APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE: (e, t, n) =>
-            "/application-directory/collection-items/".concat(e, "/").concat(t, ".").concat(n),
+            `/application-directory/collection-items/${e}/${t}.${n}`,
         APP_RECOMMENDATIONS: "/app-recommendations",
-        GUILD_FEED: (e) => "/guilds/".concat(e, "/guild-feed"),
+        GUILD_FEED: (e) => `/guilds/${e}/guild-feed`,
         USER_EMAIL: "/users/@me/email",
         USER_EMAIL_VERIFY_CODE: "/users/@me/email/verify-code",
         PREMIUM_USAGE: "/users/@me/premium-usage",
-        ACTIVE_CHANNELS: (e) => "/guilds/".concat(e, "/active-channels"),
-        NOTIF_CENTER_ITEMS: (e) => "/users/@me/notification-center/items".concat(null != e ? "/".concat(e) : ""),
-        NOTIF_CENTER_ITEMS_ACK: (e) => "/users/@me/notification-center/items/".concat(e, "/ack"),
+        ACTIVE_CHANNELS: (e) => `/guilds/${e}/active-channels`,
+        NOTIF_CENTER_ITEMS: (e) => `/users/@me/notification-center/items${null != e ? `/${e}` : ""}`,
+        NOTIF_CENTER_ITEMS_ACK: (e) => `/users/@me/notification-center/items/${e}/ack`,
         NOTIF_CENTER_ITEMS_BULK_ACK: "/users/@me/notification-center/items/bulk-ack",
         NOTIFICATION_SNAPSHOTS: "/users/@me/notification-settings/snapshots",
-        NOTIFICATION_SNAPSHOT: (e) => "/users/@me/notification-settings/snapshots/".concat(e),
-        RESTORE_NOTIFICATION_SNAPSHOT: (e) =>
-            "/users/@me/notification-settings/snapshots/".concat(e, "/restore-guilds"),
-        GUILD_ADMIN_SERVER_ELIGIBILITY: (e) => "/guilds/".concat(e, "/admin-server-eligibility"),
-        JOIN_ADMIN_SERVER: (e) => "/guilds/".concat(e, "/join-admin-server"),
+        NOTIFICATION_SNAPSHOT: (e) => `/users/@me/notification-settings/snapshots/${e}`,
+        RESTORE_NOTIFICATION_SNAPSHOT: (e) => `/users/@me/notification-settings/snapshots/${e}/restore-guilds`,
+        GUILD_ADMIN_SERVER_ELIGIBILITY: (e) => `/guilds/${e}/admin-server-eligibility`,
+        JOIN_ADMIN_SERVER: (e) => `/guilds/${e}/join-admin-server`,
         AUTH_SESSIONS: "/auth/sessions",
         AUTH_SESSION_NOTIFICATIONS_DEBUG: "/auth/sessions/debug/notifications",
         AUTH_SESSIONS_LOGOUT: "/auth/sessions/logout",
-        CUSTOM_CALL_SOUNDS: (e) => "/channels/".concat(e, "/custom-call-sounds"),
-        VOICE_CHANNEL_EFFECTS: (e) => "/channels/".concat(e, "/voice-channel-effects"),
-        APPLICATION_SUBSCRIPTION_GROUP_LISTING: (e, t) =>
-            "/applications/".concat(e, "/subscription-group-listings/").concat(t),
-        GUILD_ENTITLEMENTS: (e) => "/guilds/".concat(e, "/entitlements"),
-        GUILD_ROLE_CONNECTIONS_CONFIGURATION: (e, t) =>
-            "/guilds/".concat(e, "/roles/").concat(t, "/connections/configuration"),
+        CUSTOM_CALL_SOUNDS: (e) => `/channels/${e}/custom-call-sounds`,
+        VOICE_CHANNEL_EFFECTS: (e) => `/channels/${e}/voice-channel-effects`,
+        APPLICATION_SUBSCRIPTION_GROUP_LISTING: (e, t) => `/applications/${e}/subscription-group-listings/${t}`,
+        GUILD_ENTITLEMENTS: (e) => `/guilds/${e}/entitlements`,
+        GUILD_ROLE_CONNECTIONS_CONFIGURATION: (e, t) => `/guilds/${e}/roles/${t}/connections/configuration`,
         MESSAGE_REQUESTS_SUPPLEMENTAL_DATA: "/users/@me/message-requests/supplemental-data",
         CONNECT_REQUEST_CREATE: "/consoles/connect-request",
-        CONNECT_REQUEST: (e) => "/consoles/connect-request/".concat(e),
-        CONSOLES_DEVICES: (e) => "/consoles/".concat(e, "/devices"),
-        CONSOLES_DEVICES_COMMANDS: (e, t) => "/consoles/".concat(e, "/devices/").concat(t, "/commands"),
-        CONSOLES_DEVICES_COMMAND: (e, t, n) => "/consoles/".concat(e, "/devices/").concat(t, "/commands/").concat(n),
+        CONNECT_REQUEST: (e) => `/consoles/connect-request/${e}`,
+        CONSOLES_DEVICES: (e) => `/consoles/${e}/devices`,
+        CONSOLES_DEVICES_COMMANDS: (e, t) => `/consoles/${e}/devices/${t}/commands`,
+        CONSOLES_DEVICES_COMMAND: (e, t, n) => `/consoles/${e}/devices/${t}/commands/${n}`,
         ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS: "/users/@me/billing/eligible-application-subscription-guilds",
         APPLICATION_USER_ROLE_CONNECTIONS: "/users/@me/applications/role-connections",
-        SHARED_CANVAS_LINES: (e, t) => "/channels/".concat(e, "/").concat(t, "/shared-canvas/lines"),
-        SHARED_CANVAS_EMOJI_HOSES: (e, t) => "/channels/".concat(e, "/").concat(t, "/shared-canvas/emoji-hose"),
-        SHARED_CANVAS_EMOJI_HOSE: (e, t, n) =>
-            "/channels/".concat(e, "/").concat(t, "/shared-canvas/emoji-hose/").concat(n),
+        SHARED_CANVAS_LINES: (e, t) => `/channels/${e}/${t}/shared-canvas/lines`,
+        SHARED_CANVAS_EMOJI_HOSES: (e, t) => `/channels/${e}/${t}/shared-canvas/emoji-hose`,
+        SHARED_CANVAS_EMOJI_HOSE: (e, t, n) => `/channels/${e}/${t}/shared-canvas/emoji-hose/${n}`,
         BURST_CREDIT_BALANCE: "/users/@me/burst-credits",
         GET_SAVED_MESSAGES: "/users/@me/saved-messages",
-        PUT_SAVED_MESSAGE: (e, t) => "/users/@me/saved-messages/".concat(e, "/").concat(t),
-        DELETE_SAVED_MESSAGE: (e, t) => "/users/@me/saved-messages/".concat(e, "/").concat(t),
+        PUT_SAVED_MESSAGE: (e, t) => `/users/@me/saved-messages/${e}/${t}`,
+        DELETE_SAVED_MESSAGE: (e, t) => `/users/@me/saved-messages/${e}/${t}`,
         GET_REFERRALS_REMAINING: "/users/@me/referrals/eligibility",
         GET_REFERRAL_ELIGIBLE_USERS: "/users/@me/referrals/eligible-users",
-        CREATE_REFERRAL: (e) => "/users/@me/referrals/".concat(e),
-        FAMILY_CENTER_TEEN_ACTIVITY: (e) => "/family-center/".concat(e, "/activity"),
+        CREATE_REFERRAL: (e) => `/users/@me/referrals/${e}`,
+        FAMILY_CENTER_TEEN_ACTIVITY: (e) => `/family-center/${e}/activity`,
         FAMILY_CENTER_TEEN_ACTIVITY_ME: "/family-center/@me",
-        FAMILY_CENTER_TEEN_ACTIVITY_MORE: (e, t, n, r) =>
-            "/family-center/more-activity/".concat(e, "/").concat(t, "/").concat(n, "/").concat(r),
+        FAMILY_CENTER_TEEN_ACTIVITY_MORE: (e, t, n, r) => `/family-center/more-activity/${e}/${t}/${n}/${r}`,
         FAMILY_CENTER_LINKED_USERS: "/users/@me/linked-users",
         FAMILY_CENTER_LINK_CODE: "/family-center/@me/link-code",
-        FAMILY_CENTER_FETCH_TEEN_USER: (e) => "/family-center/teen-user/".concat(e),
-        FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS: (e) => "/family-center/".concat(e, "/settings-and-consents"),
-        FAMILY_CENTER_TEEN_SETTINGS: (e) => "/family-center/".concat(e, "/settings-proto"),
-        FAMILY_CENTER_TEEN_CONSENTS: (e) => "/family-center/".concat(e, "/consents"),
+        FAMILY_CENTER_FETCH_TEEN_USER: (e) => `/family-center/teen-user/${e}`,
+        FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS: (e) => `/family-center/${e}/settings-and-consents`,
+        FAMILY_CENTER_TEEN_SETTINGS: (e) => `/family-center/${e}/settings-proto`,
+        FAMILY_CENTER_TEEN_CONSENTS: (e) => `/family-center/${e}/consents`,
         FAMILY_CENTER_SHARE_IAR_WITH_PARENTS: "/family-center/share-iar-with-parents",
-        REFERRAL_OFFER_ID_RESOLVE: (e) => "/referrals/".concat(e),
+        REFERRAL_OFFER_ID_RESOLVE: (e) => `/referrals/${e}`,
         APPLICATIONS_SHELF: "/applications/shelf",
-        BADGE_ICON: (e) => "/badge-icons/".concat(e, ".png"),
+        BADGE_ICON: (e) => `/badge-icons/${e}.png`,
         FINISH_MFA_CHECK: "/mfa/finish",
         CREATE_REVERSE_TRIAL: "/user-offers/reverse-trial",
-        CREATE_USER_OFFER: (e, t) => "/user-offers/create/".concat(t, "/").concat(e),
-        UPDATE_USER_OFFER: (e, t) => "/user-offers/".concat(t, "/").concat(e),
+        CREATE_USER_OFFER: (e, t) => `/user-offers/create/${t}/${e}`,
+        UPDATE_USER_OFFER: (e, t) => `/user-offers/${t}/${e}`,
         USER_OFFERS: "/user-offers",
         USER_OFFER_IDS: "/user-offer-ids",
-        GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY: (e) => "/guilds/".concat(e, "/members/unusual-dm-activity"),
+        GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY: (e) => `/guilds/${e}/members/unusual-dm-activity`,
         EMOJI_CAPTIONS_GET: "/users/@me/emoji-captions",
         SAFETY_HUB: "/safety-hub/@me",
-        SAFETY_HUB_REQUEST_REVIEW: (e) => "/safety-hub/request-review/".concat(e),
-        SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW: (e) => "/safety-hub/suspended/request-review/".concat(e),
+        SAFETY_HUB_REQUEST_REVIEW: (e) => `/safety-hub/request-review/${e}`,
+        SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW: (e) => `/safety-hub/suspended/request-review/${e}`,
         SAFETY_HUB_SUSPENDED: "/safety-hub/suspended/@me",
         SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/request-verification",
         SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/check-verification",
         SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS: "/age-verification/suspended/methods",
         INITIATE_CHANNEL_PROMPTS: "/initiate-prompts",
-        FORCE_SEND_PROMPT: (e) => "/".concat(e, "/force-send-prompt"),
+        FORCE_SEND_PROMPT: (e) => `/${e}/force-send-prompt`,
         EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE: "/attachments/report-false-positive",
         EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
-        BULK_GUILD_BAN: (e) => "/guilds/".concat(e, "/bulk-ban"),
-        EXPLICIT_MEDIA_SCAN_MESSAGES: (e) => "/channels/".concat(e, "/explicit-media"),
+        BULK_GUILD_BAN: (e) => `/guilds/${e}/bulk-ban`,
+        EXPLICIT_MEDIA_SCAN_MESSAGES: (e) => `/channels/${e}/explicit-media`,
         EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES: "/messages/explicit-media",
-        POLL_ANSWERS: (e, t) => "/channels/".concat(e, "/polls/").concat(t, "/answers/@me"),
-        POLL_EXPIRE: (e, t) => "/channels/".concat(e, "/polls/").concat(t, "/expire"),
-        POLL_ANSWER_VOTERS: (e, t, n) => "/channels/".concat(e, "/polls/").concat(t, "/answers/").concat(n),
+        POLL_ANSWERS: (e, t) => `/channels/${e}/polls/${t}/answers/@me`,
+        POLL_EXPIRE: (e, t) => `/channels/${e}/polls/${t}/expire`,
+        POLL_ANSWER_VOTERS: (e, t, n) => `/channels/${e}/polls/${t}/answers/${n}`,
         PREMIUM_MARKETING: "/premium-marketing",
-        MARKETING_CAMPAIGN_ELIGIBILITY: (e) => "/premium-marketing/@me/campaigns/".concat(e, "/eligibility"),
+        MARKETING_CAMPAIGN_ELIGIBILITY: (e) => `/premium-marketing/@me/campaigns/${e}/eligibility`,
         QUESTS_CURRENT_QUESTS: "/quests/@me",
         QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
-        QUEST: (e) => "/quests/".concat(e),
-        QUEST_PREVIEW: (e) => "/quests/".concat(e, "/preview"),
-        QUESTS_ENROLL: (e) => "/quests/".concat(e, "/enroll"),
-        QUEST_ON_CONSOLE_START: (e) => "/quests/".concat(e, "/console/start"),
-        QUEST_ON_CONSOLE_STOP: (e) => "/quests/".concat(e, "/console/stop"),
-        QUESTS_HEARTBEAT: (e) => "/quests/".concat(e, "/heartbeat"),
-        QUESTS_VIDEO_PROGRESS: (e) => "/quests/".concat(e, "/video-progress"),
-        QUESTS_REWARD_CODE: (e) => "/quests/".concat(e, "/reward-code"),
-        QUESTS_CLAIM_REWARD: (e) => "/quests/".concat(e, "/claim-reward"),
-        QUESTS_DISMISS_CONTENT: (e, t) => "/quests/".concat(e, "/dismissible-content/").concat(t, "/dismiss"),
-        QUESTS_PREVIEW_STATUS: (e) => "/quests/".concat(e, "/preview/status"),
-        QUESTS_PREVIEW_DISMISSIBILITY: (e) => "/quests/".concat(e, "/preview/dismissibility"),
-        QUESTS_PREVIEW_COMPLETE: (e) => "/quests/".concat(e, "/preview/complete"),
+        QUEST: (e) => `/quests/${e}`,
+        QUEST_PREVIEW: (e) => `/quests/${e}/preview`,
+        QUESTS_ENROLL: (e) => `/quests/${e}/enroll`,
+        QUEST_ON_CONSOLE_START: (e) => `/quests/${e}/console/start`,
+        QUEST_ON_CONSOLE_STOP: (e) => `/quests/${e}/console/stop`,
+        QUESTS_HEARTBEAT: (e) => `/quests/${e}/heartbeat`,
+        QUESTS_VIDEO_PROGRESS: (e) => `/quests/${e}/video-progress`,
+        QUESTS_REWARD_CODE: (e) => `/quests/${e}/reward-code`,
+        QUESTS_CLAIM_REWARD: (e) => `/quests/${e}/claim-reward`,
+        QUESTS_DISMISS_CONTENT: (e, t) => `/quests/${e}/dismissible-content/${t}/dismiss`,
+        QUESTS_PREVIEW_STATUS: (e) => `/quests/${e}/preview/status`,
+        QUESTS_PREVIEW_DISMISSIBILITY: (e) => `/quests/${e}/preview/dismissibility`,
+        QUESTS_PREVIEW_COMPLETE: (e) => `/quests/${e}/preview/complete`,
         QUESTS_RESET_RECENT_QUEST_COMPLETIONS: "/quests/reset-recent-quest-completions",
         QUEST_FETCH_QUEST_TO_DELIVER: "/quests/decision",
         QUEST_EARNED_DECISION: (e, t, n) =>
-            "/quests/earned-decision?quest_ids="
-                .concat(e, "&content=")
-                .concat(t)
-                .concat(null != n ? "&client_heartbeat_session_id=".concat(n) : ""),
+            `/quests/earned-decision?quest_ids=${e}&content=${t}${null != n ? `&client_heartbeat_session_id=${n}` : ""}`,
         ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls",
-        GAME_INVITE: (e) => "/game-invite/@me/".concat(e),
+        GAME_INVITE: (e) => `/game-invite/@me/${e}`,
         GAME_INVITES: "/game-invite/@me",
-        ADD_SAFETY_WARNING: (e) => "/channels/".concat(e, "/add-safety-warning"),
-        DELETE_SAFETY_WARNINGS: (e) => "/channels/".concat(e, "/safety-warnings"),
-        SAFETY_WARNING_FALSE_POSITIVE: (e) => "/channels/".concat(e, "/safety-warning/report-false-positive"),
-        MY_CONTENT_INVENTORY: (e) =>
-            "/content-inventory/users/@me".concat(null != e ? "?refresh_token=".concat(e) : ""),
-        CONTENT_INVENTORY_OUTBOX: (e) => "/content-inventory/users/".concat(e, "/outbox"),
+        ADD_SAFETY_WARNING: (e) => `/channels/${e}/add-safety-warning`,
+        DELETE_SAFETY_WARNINGS: (e) => `/channels/${e}/safety-warnings`,
+        SAFETY_WARNING_FALSE_POSITIVE: (e) => `/channels/${e}/safety-warning/report-false-positive`,
+        MY_CONTENT_INVENTORY: (e) => `/content-inventory/users/@me${null != e ? `?refresh_token=${e}` : ""}`,
+        CONTENT_INVENTORY_OUTBOX: (e) => `/content-inventory/users/${e}/outbox`,
         DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY: (e) =>
-            "/content-inventory/users/@me/outbox/entries/id/".concat(e, "/history"),
+            `/content-inventory/users/@me/outbox/entries/id/${e}/history`,
         MY_SPOTIFY_CONTENT_INVENTORY: "/content-inventory/users/@me/spotify",
-        MY_CONTENT_INVENTORY_APPLICATION: (e) => "/content-inventory/users/@me/applications/".concat(e),
+        MY_CONTENT_INVENTORY_APPLICATION: (e) => `/content-inventory/users/@me/applications/${e}`,
         TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
-        STORE_LAYOUT: (e) => "/applications/".concat(e, "/store-layout"),
+        STORE_LAYOUT: (e) => `/applications/${e}/store-layout`,
         CHECKOUT_RECOVERY: "/users/@me/billing/checkout-recovery",
         CAMPAIGN_CONTEXT: "/users/@me/billing/campaign-context",
-        SIMILAR_GAMES: (e) => "/content-inventory/users/@me/similar-games/".concat(e),
+        SIMILAR_GAMES: (e) => `/content-inventory/users/@me/similar-games/${e}`,
         VOICE_PUBLIC_KEYS: () => "/voice/public-keys",
-        VOICE_MATCH_PUBLIC_KEY: (e) => "/voice/".concat(e, "/match-public-key"),
+        VOICE_MATCH_PUBLIC_KEY: (e) => `/voice/${e}/match-public-key`,
         ACCOUNT_REVERT: "/auth/revert",
-        VIRTUAL_CURRENCY_SKU_REDEEM: (e) => "/virtual-currency/skus/".concat(e, "/redeem"),
+        VIRTUAL_CURRENCY_SKU_REDEEM: (e) => `/virtual-currency/skus/${e}/redeem`,
         VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
-        IGNORE_USER: (e) => "/users/@me/relationships/".concat(e, "/ignore"),
+        IGNORE_USER: (e) => `/users/@me/relationships/${e}/ignore`,
         SCHEDULED_MESSAGES: "/users/@me/scheduled-messages",
-        SCHEDULED_MESSAGE: (e) => "/users/@me/scheduled-messages/".concat(e),
+        SCHEDULED_MESSAGE: (e) => `/users/@me/scheduled-messages/${e}`,
         HOLIDAY_REDEEM_PRIZE: "/holidays/redeem-prize",
         APPLIED_BOOST_MODIFY_END_DATE: "/debug/applied-boosts/ends-at",
-        SEND_POWERUPS_SYSTEM_MESSAGE: (e) => "/guilds/".concat(e, "/powerups-system-message"),
+        SEND_POWERUPS_SYSTEM_MESSAGE: (e) => `/guilds/${e}/powerups-system-message`,
         SAFETY_FLOWS_TASK: "/safety-flows/task",
         SAFETY_FLOWS_RESEND_VERIFICATION_CODE: "/safety-flows/resend/email/reverification/pincode",
         VOICE_FILTERS_CATALOG: "/voice-filters/catalog",
         APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
         APEX_EXPERIMENTS: "/apex/experiments",
         CONFERENCE_MODE_GUILDS: "/conference-mode/guilds",
-        CONFERENCE_MODE_VOICE_CHANNELS: (e) => "/conference-mode/".concat(e, "/channels"),
-        CONFERENCE_MODE_VOICE_CHANNEL: (e) => "/conference-mode/channels/".concat(e),
-        CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => "/conference-mode/channels/".concat(e, "/users"),
+        CONFERENCE_MODE_VOICE_CHANNELS: (e) => `/conference-mode/${e}/channels`,
+        CONFERENCE_MODE_VOICE_CHANNEL: (e) => `/conference-mode/channels/${e}`,
+        CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => `/conference-mode/channels/${e}/users`,
         CONFERENCE_MODE_EVENTS: "/conference-mode/events",
         CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
-        GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
-        GET_APPLICATION_TOKENS: (e) => "/oauth2/applications/".concat(e, "/tokens"),
-        GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-bypass-slowmode-permission"),
+        GUILD_MIGRATE_PIN_PERMISSION: (e) => `/guilds/${e}/migrate-pin-permission`,
+        GET_APPLICATION_TOKENS: (e) => `/oauth2/applications/${e}/tokens`,
+        GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => `/guilds/${e}/migrate-bypass-slowmode-permission`,
         QUEST_PLACEMENT: "/quests/placement-alpha",
-        GAME_UPDATE: (e, t) => "/games/".concat(e, "/updates/").concat(t),
-        HAVEN_CONNECT: (e) => "/haven/".concat(e, "/connect"),
-        HAVEN_DISCONNECT: (e) => "/haven/".concat(e, "/disconnect"),
-        HAVEN_UPDATE: (e) => "/haven/".concat(e, "/update"),
+        GAME_UPDATE: (e, t) => `/games/${e}/updates/${t}`,
+        HAVEN_CONNECT: (e) => `/haven/${e}/connect`,
+        HAVEN_DISCONNECT: (e) => `/haven/${e}/disconnect`,
+        HAVEN_UPDATE: (e) => `/haven/${e}/update`,
         HAVEN_GET_ASSETS: "/haven/assets",
     }),
-    eg = (0, c.dN)(em);
+    eg = (0, u.dN)(em);
 var eE = (function (e) {
         return (
             (e[(e.INSTANCE = 1)] = "INSTANCE"),
@@ -1986,7 +1920,7 @@ var eE = (function (e) {
             e
         );
     })({}),
-    ey = (function (e) {
+    eA = (function (e) {
         return (
             (e[(e.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
             (e[(e.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
@@ -1995,50 +1929,50 @@ var eE = (function (e) {
             e
         );
     })({});
-let eb = 100,
-    eO = 200,
-    ev = 50,
-    eA = 50,
-    eI = 25,
-    eS = 200,
-    eT = 100,
-    eC = 250,
-    eN = 2e3,
-    ew = 4e3,
-    eR = 250,
-    eP = 100,
-    eD = 1e3,
+let eI = 100,
+    eT = 200,
+    ey = 30,
+    eS = 30,
+    ev = 25,
+    eC = 120,
+    eb = 60,
+    eN = 150,
+    eR = 2e3,
+    eO = 4e3,
+    eD = 250,
     eL = 100,
-    ex = 256,
+    ew = 1e3,
+    ex = 100,
+    eP = 256,
     eM = 32,
-    ej = 190,
-    ek = 32,
-    eU = 6e5,
-    eG = 6 * u.A.Seconds.HOUR,
+    ek = 190,
+    eU = 32,
+    eG = 6e5,
+    eV = 6 * c.A.Seconds.HOUR,
     eF = [
         0,
         5,
         10,
         15,
         30,
-        u.A.Seconds.MINUTE,
-        2 * u.A.Seconds.MINUTE,
-        5 * u.A.Seconds.MINUTE,
-        10 * u.A.Seconds.MINUTE,
-        15 * u.A.Seconds.MINUTE,
-        30 * u.A.Seconds.MINUTE,
-        +u.A.Seconds.HOUR,
-        2 * u.A.Seconds.HOUR,
-        eG,
+        c.A.Seconds.MINUTE,
+        2 * c.A.Seconds.MINUTE,
+        5 * c.A.Seconds.MINUTE,
+        10 * c.A.Seconds.MINUTE,
+        15 * c.A.Seconds.MINUTE,
+        30 * c.A.Seconds.MINUTE,
+        +c.A.Seconds.HOUR,
+        2 * c.A.Seconds.HOUR,
+        eV,
     ],
-    eV = 10,
-    eB = 0xa00000,
+    eB = 10,
+    ej = 0xa00000,
     eH = 524288e3,
-    eY = (e) => "||".concat(e, "||"),
+    eY = (e) => `||${e}||`,
     eW = /^\|\|([\s\S]+?)\|\|/,
     eK = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     ez = /^\d{17,19}$/;
-var eq = (function (e) {
+var e$ = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -2055,10 +1989,10 @@ var eq = (function (e) {
             e
         );
     })({}),
-    eZ = (function (e) {
+    eq = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    eQ = (function (e) {
+    eZ = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -2070,13 +2004,13 @@ var eq = (function (e) {
             e
         );
     })({}),
-    eX = (function (e) {
+    eQ = (function (e) {
         return (e.GAME = "game"), (e.USER = "user"), (e.GROUP = "group"), e;
     })({}),
-    eJ = (function (e) {
+    eX = (function (e) {
         return (e.LOADING = "LOADING"), (e.COMPLETE = "COMPLETE"), (e.FAILED = "FAILED"), e;
     })({});
-let e$ = 128,
+let eJ = 128,
     e0 = 1024,
     e1 = 2e3,
     e2 = 8e3,
@@ -2093,80 +2027,66 @@ let e$ = 128,
     tr = 300,
     ti = 10,
     ta = 25,
-    to = "#0000",
-    ts = 240,
+    ts = "#0000",
+    to = 240,
     tl = 480,
-    tc = 650,
-    tu = "DEVICE_TOKEN",
+    tu = 650,
+    tc = "DEVICE_TOKEN",
     td = "DEVICE_VOIP_TOKEN",
-    tf = "first_run_date_key",
-    tp = Object.freeze({
-        API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
-        API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
-            window.GLOBAL_ENV.MARKETING_ENDPOINT,
-            "/developers/docs/game-and-server-management/alpha-and-beta-testing",
-        ),
+    t_ = "first_run_date_key",
+    tf = Object.freeze({
+        API_DOCS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/docs/intro`,
+        API_DOCS_GAME_AND_SERVER_MANAGEMENT: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/docs/game-and-server-management/alpha-and-beta-testing`,
         API_DOCS_APPLICATION_SKUS_INDEX: (e) =>
-            "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/applications/").concat(e, "/skus"),
-        API_DOCS_NEWS_CHANNELS: "".concat(
-            window.GLOBAL_ENV.MARKETING_ENDPOINT,
-            "/developers/docs/game-and-server-management/special-channels#news-channels",
-        ),
-        API_DOCS_WEBHOOKS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/resources/webhook"),
-        DEVELOPER_PORTAL: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers"),
-        DEVELOPER_PORTAL_TEAMS: "".concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/developers/teams"),
+            `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/applications/${e}/skus`,
+        API_DOCS_NEWS_CHANNELS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/docs/game-and-server-management/special-channels#news-channels`,
+        API_DOCS_WEBHOOKS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/docs/resources/webhook`,
+        DEVELOPER_PORTAL: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers`,
+        DEVELOPER_PORTAL_TEAMS: `${window.GLOBAL_ENV.DEVELOPERS_ENDPOINT}/developers/teams`,
         DEVELOPER_PORTAL_PAYOUT_SETTINGS: (e) =>
-            "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/teams/").concat(e, "/payout-settings"),
-        DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) =>
-            "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/servers/").concat(e),
+            `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/teams/${e}/payout-settings`,
+        DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/servers/${e}`,
         DEVELOPER_PORTAL_LOGIN_HANDOFF: (e, t, n) =>
-            ""
-                .concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/developers/handoff#handoff_key=")
-                .concat(e, "&handoff_token=")
-                .concat(t, "&redirect_to=")
-                .concat(encodeURIComponent(n)),
+            `${window.GLOBAL_ENV.DEVELOPERS_ENDPOINT}/developers/handoff#handoff_key=${e}&handoff_token=${t}&redirect_to=${encodeURIComponent(n)}`,
         DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION: (e) =>
-            ""
-                .concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/servers/")
-                .concat(e, "/analytics/premium-membership"),
-        COMPANY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/company"),
-        PARTNERS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/partners"),
-        TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms"),
-        TERMS_SUMMARY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safety/important-policy-updates"),
-        PAID_TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms/paid-services-terms"),
-        PAID_TERMS_VIRTUAL_GOODS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms/paid-services-terms#6"),
-        PAID_TERMS_ORBS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms/paid-services-terms#13"),
-        PRIVACY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/privacy"),
-        GUIDELINES: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/guidelines"),
-        ACKNOWLEDGEMENTS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/acknowledgements"),
-        DOWNLOAD: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/download"),
+            `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/servers/${e}/analytics/premium-membership`,
+        COMPANY: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/company`,
+        PARTNERS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/partners`,
+        TERMS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms`,
+        TERMS_SUMMARY: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/safety/important-policy-updates`,
+        PAID_TERMS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms`,
+        PAID_TERMS_VIRTUAL_GOODS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms#6`,
+        PAID_TERMS_ORBS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms#13`,
+        PRIVACY: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/privacy`,
+        GUIDELINES: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/guidelines`,
+        ACKNOWLEDGEMENTS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/acknowledgements`,
+        DOWNLOAD: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/download`,
         CONTACT: "http://dis.gd/contact",
         KRISP: "https://api.krisp.ai/v2/resource/link/discord",
-        STREAMKIT: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/streamkit"),
-        STAGES: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/stages"),
-        SNOWSGIVING: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/snowsgiving"),
+        STREAMKIT: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/streamkit`,
+        STAGES: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/stages`,
+        SNOWSGIVING: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/snowsgiving`,
         TOS_UPDATE_FEB_2022: "http://dis.gd/importantupdates",
         HARMFUL_LINKS: "https://dis.gd/phish",
         SLASH_COMMANDS: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps",
         GUILD_ONBOARDING_EXAMPLES: "https://support.discord.com/hc/en-us/articles/10394859532823",
-        ROLE_SUBSCRIPTION_STORE_PAGE: (e) =>
-            "https:".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/servers/").concat(e),
+        ROLE_SUBSCRIPTION_STORE_PAGE: (e) => `https:${window.GLOBAL_ENV.MARKETING_ENDPOINT}/servers/${e}`,
         INVITES_HELP: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
-        SAFETY_CENTER: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safetycenter"),
+        SAFETY_CENTER: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/safetycenter`,
         VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
-    t_ = Object.freeze({
+    tp = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
-        DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => "/developers/servers/".concat(e),
+        DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => `/developers/servers/${e}`,
         DEVELOPER_PORTAL_TEAMS: "/developers/teams",
-        DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => "/developers/teams/".concat(e, "/payout-settings"),
+        DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => `/developers/teams/${e}/payout-settings`,
     }),
     th = 10,
     tm = 25,
     tg = /^FILTER_/,
     tE = /^ANSWER_/,
-    ty = 32;
-var tb = (function (e) {
+    tA = 32;
+var tI = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2189,10 +2109,10 @@ var tb = (function (e) {
             e
         );
     })({}),
-    tO = (function (e) {
+    tT = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
-    tv = (function (e) {
+    ty = (function (e) {
         return (
             (e[(e.UNKNOWN_ACCOUNT = 10001)] = "UNKNOWN_ACCOUNT"),
             (e[(e.UNKNOWN_APPLICATION = 10002)] = "UNKNOWN_APPLICATION"),
@@ -2391,7 +2311,7 @@ var tb = (function (e) {
             e
         );
     })({}),
-    tA = (function (e) {
+    tS = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2474,7 +2394,7 @@ var tb = (function (e) {
             e
         );
     })({}),
-    tI = (function (e) {
+    tv = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -2484,7 +2404,7 @@ var tb = (function (e) {
             e
         );
     })({}),
-    tS = (function (e) {
+    tC = (function (e) {
         return (
             (e.AUTH = "Auth"),
             (e.STORE_LISTING = "Store Listing"),
@@ -2572,8 +2492,8 @@ var tb = (function (e) {
             e
         );
     })({});
-let tT = "help_center_cta";
-var tC = (function (e) {
+let tb = "help_center_cta";
+var tN = (function (e) {
         return (
             (e.HERO = "Hero"),
             (e.BODY = "Body"),
@@ -2963,7 +2883,7 @@ var tC = (function (e) {
             e
         );
     })({}),
-    tN = (function (e) {
+    tR = (function (e) {
         return (
             (e.TOOLTIP = "Tooltip"),
             (e.CARD = "Card"),
@@ -3115,7 +3035,7 @@ var tC = (function (e) {
             e
         );
     })({}),
-    tw = (function (e) {
+    tO = (function (e) {
         return (
             (e.GIFT = "gift"),
             (e.BUY = "buy"),
@@ -3141,11 +3061,8 @@ var tC = (function (e) {
             e
         );
     })({});
-let tR = {
-        page: "Direct",
-        object: "Web URL",
-    },
-    tP = Object.freeze({
+let tD = { page: "Direct", object: "Web URL" },
+    tL = Object.freeze({
         TEXT_PLAYGROUND: "Text Playground",
         DESIGN_SYSTEMS: "Design System",
         DESIGN_SYSTEMS_COLORS: "Design System",
@@ -3205,7 +3122,7 @@ let tR = {
         GUILD_ROLE_SUBSCRIPTIONS_CANCEL: "Guild Role Subscription Cancel",
         GUILD_BOOSTING: "Nitro Server Boost",
         WEBAUTHN_VIEW: "View Security Keys",
-        [f.nR]: "Guild Role Subscription",
+        [_.nR]: "Guild Role Subscription",
         BILLING: "Billing",
         EXPERIMENTS: "Experiments",
         DEVELOPER_OPTIONS: "Developer Options",
@@ -3261,7 +3178,7 @@ let tR = {
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
         PRIVATE_BROWSING: "WARP+",
     });
-var tD = (function (e) {
+var tw = (function (e) {
         return (
             (e.APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),
             (e.CHAT_INPUT_BLOCKER = "Chat Input Blocker - Lurker Mode"),
@@ -3276,7 +3193,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tL = (function (e) {
+    tx = (function (e) {
         return (
             (e.QR_CODE = "QR Code Login"),
             (e.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
@@ -3286,7 +3203,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tx = (function (e) {
+    tP = (function (e) {
         return (
             (e.INVITE_NOTICE = "Invite Notice"),
             (e.SETTINGS_INVITE = "Settings Invite"),
@@ -3346,7 +3263,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tk = (function (e) {
         return (
             (e.APPLICATION = "Application"),
             (e.SERVER_INVITE = "Server Invite"),
@@ -3357,10 +3274,10 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tU = (function (e) {
         return (e.DIRECT_MESSAGE = "Direct Message"), (e.SMS = "SMS"), (e.EMAIL = "Email"), e;
     })({}),
-    tU = (function (e) {
+    tG = (function (e) {
         return (
             (e[(e.DEFAULT = 0)] = "DEFAULT"),
             (e[(e.EXPLICIT = 1)] = "EXPLICIT"),
@@ -3369,7 +3286,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tG = (function (e) {
+    tV = (function (e) {
         return (
             (e.IFRAME_MOUNT = "IFRAME_MOUNT"),
             (e.IFRAME_UNMOUNT = "IFRAME_UNMOUNT"),
@@ -3452,6 +3369,7 @@ var tD = (function (e) {
             (e.VOICE_PANEL_OPEN = "VOICE_PANEL_OPEN"),
             (e.VOICE_PANEL_CLOSE = "VOICE_PANEL_CLOSE"),
             (e.VOICE_PANEL_TIV_CLOSE = "VOICE_PANEL_TIV_CLOSE"),
+            (e.VOICE_PANEL_OPEN_CHAT_TAB = "VOICE_PANEL_OPEN_CHAT_TAB"),
             (e.VOICE_PANEL_PIP_CONTENT_READY = "VOICE_PANEL_PIP_CONTENT_READY"),
             (e.MANUAL_IFRAME_RESIZING = "MANUAL_IFRAME_RESIZING"),
             (e.NAVIGATOR_READY = "NAVIGATOR_READY"),
@@ -3484,8 +3402,8 @@ var tD = (function (e) {
             e
         );
     })({});
-let tV = 50;
-var tB = (function (e) {
+let tB = 50;
+var tj = (function (e) {
         return (
             (e.TWITCH = "twitch"),
             (e.YOUTUBE = "youtube"),
@@ -3539,23 +3457,21 @@ var tB = (function (e) {
     tY = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let tW = Object.freeze({
-        GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
-    }),
+let tW = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
     tK = new Set(["facebook", "contacts"]),
     tz = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
-    tq = Object.freeze({
-        DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
+    t$ = Object.freeze({
+        DESKTOP: `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}/download`,
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    tZ = 0x99aab5,
-    tQ = (0, l.Hl)(tZ),
-    tX = [
+    tq = 0x99aab5,
+    tZ = (0, l.Hl)(tq),
+    tQ = [
         1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 0xad1457, 0xc27c0e, 0xa84300, 0x992d22, 9936031, 5533306,
     ];
-var tJ = (function (e) {
+var tX = (function (e) {
         return (
             (e.VOICE_LEGACY_SUBSYSTEM = "voice_legacy_subsystem"),
             (e.DEBUG_LOGGING = "debug_logging"),
@@ -3567,7 +3483,7 @@ var tJ = (function (e) {
             e
         );
     })({}),
-    t$ = (function (e) {
+    tJ = (function (e) {
         return (
             (e.FILTER_FROM = "FILTER_FROM"),
             (e.FILTER_MENTIONS = "FILTER_MENTIONS"),
@@ -3611,12 +3527,7 @@ var t6 = (function (e) {
         e
     );
 })({});
-let t4 = Object.freeze({
-        0: 0,
-        1: 2,
-        2: 7,
-        3: 14,
-    }),
+let t4 = Object.freeze({ 0: 0, 1: 2, 2: 7, 3: 14 }),
     t5 = 7,
     t7 = 0;
 var t8 = (function (e) {
@@ -3633,12 +3544,7 @@ var t8 = (function (e) {
     );
 })({});
 let t9 = Object.freeze({
-    fonts: [
-        {
-            src: "url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)",
-            family: "gg sans",
-        },
-    ],
+    fonts: [{ src: "url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)", family: "gg sans" }],
 });
 var ne = (function (e) {
     return (
@@ -3654,11 +3560,7 @@ var ne = (function (e) {
         e
     );
 })({});
-let nt = {
-    ALL_PAUSE: new Set([9, 8]),
-    ALL_PAUSEABLE: new Set([1, 8]),
-    INACTIVE: new Set([0, 4, 6, 7]),
-};
+let nt = { ALL_PAUSE: new Set([9, 8]), ALL_PAUSEABLE: new Set([1, 8]), INACTIVE: new Set([0, 4, 6, 7]) };
 var nn = (function (e) {
         return (
             (e[(e.OPEN = 1)] = "OPEN"),
@@ -3705,7 +3607,7 @@ var na = (function (e) {
             e
         );
     })({}),
-    no = (function (e) {
+    ns = (function (e) {
         return (
             (e.APP_OPENED = "app_opened"),
             (e.APP_CRASHED = "app_crashed"),
@@ -3773,6 +3675,7 @@ var na = (function (e) {
             (e.INVITE_SERVER_CLICKED = "invite_server_clicked"),
             (e.INVITE_EMBED_ACTIONED = "invite_embed_actioned"),
             (e.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED = "voice_invite_suggestions_entrypoint_closed"),
+            (e.INVITE_CTA_CLICKED = "invite_cta_clicked"),
             (e.NATIVE_SHARE_SHEET_APP_CLICKED = "native_share_sheet_app_clicked"),
             (e.CHANNEL_LINK_PREVIEW_JOINED = "channel_link_preview_joined"),
             (e.CLIENT_HEARTBEAT = "client_heartbeat"),
@@ -4979,6 +4882,7 @@ var na = (function (e) {
             (e.DCF_CAP_EXCEEDED = "dcf_cap_exceeded"),
             (e.ACK_COMMUNITY_MESSAGES = "ack_community_messages"),
             (e.VOICE_PANEL_TAB_OPENED = "voice_panel_tab_opened"),
+            (e.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED = "voice_panel_screenshare_button_tapped"),
             (e.ANNOUNCEMENT_MESSAGE_LINK_CLICKED = "announcement_message_link_clicked"),
             (e.ANNOUNCEMENT_MESSAGE_VIEWED = "announcement_message_viewed"),
             (e.REDESIGN_NAV_BAR_CLICKED = "redesign_nav_bar_clicked"),
@@ -5282,7 +5186,7 @@ var na = (function (e) {
             e
         );
     })({}),
-    ns = (function (e) {
+    no = (function (e) {
         return (e.CANARY = "canary"), (e.PTB = "ptb"), (e.STABLE = "stable"), e;
     })({}),
     nl = (function (e) {
@@ -5312,7 +5216,7 @@ var na = (function (e) {
             e
         );
     })({}),
-    nc = (function (e) {
+    nu = (function (e) {
         return (
             (e[(e.EMBEDDED_RELEASED = 2)] = "EMBEDDED_RELEASED"),
             (e[(e.EMBEDDED_IAP = 8)] = "EMBEDDED_IAP"),
@@ -5339,7 +5243,7 @@ var na = (function (e) {
             e
         );
     })({}),
-    nu = (function (e) {
+    nc = (function (e) {
         return (
             (e.MFA_WARNING = "MFA_WARNING"),
             (e.INVITE = "INVITE"),
@@ -5368,19 +5272,15 @@ var na = (function (e) {
         );
     })({});
 let nd = Object.freeze({
-        STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
-        INSTALL_DIR: (e) => "".concat(e, "/content"),
+        STORAGE_MANIFEST: (e, t) => `${e}/storage/${t}/MANIFEST`,
+        INSTALL_DIR: (e) => `${e}/content`,
         ROOT_PATTERN: ["**/*"],
-        ROOT_STORAGE_PATH: (e, t) => "".concat(e, "/storage/").concat(t, "/content"),
+        ROOT_STORAGE_PATH: (e, t) => `${e}/storage/${t}/content`,
         ROOT_ID: "sdk",
-        ROOT_PLATFORMS: {
-            macos: "macos",
-            windows: "windows",
-            linux: "linux",
-        },
+        ROOT_PLATFORMS: { macos: "macos", windows: "windows", linux: "linux" },
     }),
-    nf = 864e5;
-var np = (function (e) {
+    n_ = 864e5;
+var nf = (function (e) {
         return (
             (e.NORMAL = "normal"),
             (e.MINIMUM = "minimum"),
@@ -5390,7 +5290,7 @@ var np = (function (e) {
             e
         );
     })({}),
-    n_ = (function (e) {
+    np = (function (e) {
         return (
             (e.THEATRE = "theatre"),
             (e.FULL_SCREEN = "full-screen"),
@@ -5500,10 +5400,10 @@ var ng = (function (e) {
     nE = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    ny = (function (e) {
+    nA = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    nb = (function (e) {
+    nI = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5534,7 +5434,7 @@ var ng = (function (e) {
             e
         );
     })({}),
-    nO = (function (e) {
+    nT = (function (e) {
         return (
             (e.NAME = "name"),
             (e.DESCRIPTION = "description"),
@@ -5675,8 +5575,8 @@ var ng = (function (e) {
             e
         );
     })({});
-let nv = 50;
-var nA = (function (e) {
+let ny = 50;
+var nS = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5692,10 +5592,10 @@ var nA = (function (e) {
             e
         );
     })({}),
-    nI = (function (e) {
+    nv = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
-    nS = (function (e) {
+    nC = (function (e) {
         return (
             (e.CAPTCHA = "captcha"),
             (e.EMAIL_OR_PHONE = "email_or_phone"),
@@ -5706,8 +5606,8 @@ var nA = (function (e) {
             e
         );
     })({});
-let nT = 512;
-var nC = (function (e) {
+let nb = 512;
+var nN = (function (e) {
         return (
             (e[(e.PRIMARY = 0)] = "PRIMARY"),
             (e[(e.SECONDARY = 2)] = "SECONDARY"),
@@ -5717,7 +5617,7 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nN = (function (e) {
+    nR = (function (e) {
         return (
             (e[(e.BACKSPACE = 8)] = "BACKSPACE"),
             (e[(e.TAB = 9)] = "TAB"),
@@ -5756,7 +5656,7 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nw = (function (e) {
+    nO = (function (e) {
         return (
             (e.TOP_LEFT = "top-left"),
             (e.TOP_RIGHT = "top-right"),
@@ -5765,27 +5665,17 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nR = (function (e) {
+    nD = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.ACTIVITY = "ACTIVITY"), (e.FRAME = "FRAME"), (e.HAVEN = "HAVEN"), e;
     })({}),
-    nP = (function (e) {
+    nL = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;
     })({});
-let nD = Object.freeze({
-    GIF: {
-        type: "GIF",
-        command: "gif",
-        title: "Gif",
-        commandId: "-16",
-    },
-    TENOR: {
-        type: "GIF",
-        command: "tenor",
-        title: "Tenor",
-        commandId: "-9",
-    },
+let nw = Object.freeze({
+    GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
+    TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
 });
-var nL = (function (e) {
+var nx = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = "204392448"),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
@@ -5980,13 +5870,13 @@ var nL = (function (e) {
             e
         );
     })({}),
-    nx = (function (e) {
+    nP = (function (e) {
         return (e.INVALID_BILLING_ADDRESS = "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618"), e;
     })({});
-let nM = (e) => "https://www.youtube.com/embed/".concat(e),
-    nj = (e) => "https://img.youtube.com/vi/".concat(e, "/maxresdefault.jpg"),
-    nk = "https://discordapp.com/mweb-handoff";
-var nU = (function (e) {
+let nM = (e) => `https://www.youtube.com/embed/${e}`,
+    nk = (e) => `https://img.youtube.com/vi/${e}/maxresdefault.jpg`,
+    nU = "https://discordapp.com/mweb-handoff";
+var nG = (function (e) {
         return (
             (e[(e.HIDDEN = 1)] = "HIDDEN"),
             (e[(e.PRIVATE = 2)] = "PRIVATE"),
@@ -5997,7 +5887,7 @@ var nU = (function (e) {
             e
         );
     })({}),
-    nG = (function (e) {
+    nV = (function (e) {
         return (
             (e.DONE = "DONE"),
             (e.PLANNING = "PLANNING"),
@@ -6012,7 +5902,7 @@ var nU = (function (e) {
     nF = (function (e) {
         return (e.PULL = "PULL"), (e.PUSH = "PUSH"), (e.CONFLICT = "CONFLICT"), (e.NONE = "NONE"), e;
     })({}),
-    nV = (function (e) {
+    nB = (function (e) {
         return (
             (e.DISCORD = "discord"),
             (e.STEAM = "steam"),
@@ -6027,7 +5917,7 @@ var nU = (function (e) {
             e
         );
     })({});
-let nB = Object.freeze({
+let nj = Object.freeze({
         discord: "Discord",
         steam: "Steam",
         uplay: "Uplay",
@@ -6053,17 +5943,17 @@ var nW = (function (e) {
         );
     })({});
 let nz = 14,
-    nq = 30;
-var nZ = (function (e) {
+    n$ = 30;
+var nq = (function (e) {
     return (
         (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
     );
 })({});
-let nQ = __OVERLAY__ ? "OVERLAY" : "APP";
-var nX = (function (e) {
+let nZ = __OVERLAY__ ? "OVERLAY" : "APP";
+var nQ = (function (e) {
         return (e.COMPLETE = "complete"), (e.TRANSITION = "transition"), e;
     })({}),
-    nJ = (function (e) {
+    nX = (function (e) {
         return (
             (e.QUEUED = "queued"),
             (e.PLANNING = "planning"),
@@ -6078,7 +5968,7 @@ var nX = (function (e) {
             e
         );
     })({}),
-    n$ = (function (e) {
+    nJ = (function (e) {
         return (
             (e.INSTALL_REQUIRED = "install_required"),
             (e.INSTALLING = "installing"),
@@ -6222,12 +6112,12 @@ var nX = (function (e) {
             e
         );
     })({});
-let ro = new Set([p.Yr.USD, p.Yr.CAD, p.Yr.EUR, p.Yr.AUD, p.Yr.GBP, p.Yr.PHP, p.Yr.MYR, p.Yr.VND, p.Yr.KRW, p.Yr.IDR]);
-var rs = (function (e) {
+let rs = new Set([f.Yr.USD, f.Yr.CAD, f.Yr.EUR, f.Yr.AUD, f.Yr.GBP, f.Yr.PHP, f.Yr.MYR, f.Yr.VND, f.Yr.KRW, f.Yr.IDR]);
+var ro = (function (e) {
     return (e.ALWAYS = "ALWAYS"), (e.ON_CLICK = "ON_CLICK"), (e.IF_MODERATOR = "IF_MODERATOR"), e;
 })({});
 let rl = [];
-var rc = (function (e) {
+var ru = (function (e) {
         return (
             (e.CHANNEL_CALL_POPOUT = "DISCORD_CHANNEL_CALL_POPOUT"),
             (e.CALL_TILE_POPOUT = "DISCORD_CALL_TILE_POPOUT"),
@@ -6240,7 +6130,7 @@ var rc = (function (e) {
             e
         );
     })({}),
-    ru = (function (e) {
+    rc = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
     rd = (function (e) {
@@ -6254,7 +6144,7 @@ var rc = (function (e) {
             e
         );
     })({}),
-    rf = (function (e) {
+    r_ = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6263,10 +6153,10 @@ var rc = (function (e) {
             e
         );
     })({}),
-    rp = (function (e) {
+    rf = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    r_ = (function (e) {
+    rp = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rh = (function (e) {
@@ -6297,10 +6187,10 @@ let rg = "discodoEasterEgg";
 var rE = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    ry = (function (e) {
+    rA = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rb = (function (e) {
+    rI = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),
@@ -6312,22 +6202,22 @@ var rE = (function (e) {
             e
         );
     })({});
-let rO = 2500,
-    rv = 0,
-    rA = 2592e6;
-var rI = (function (e) {
+let rT = 2500,
+    ry = 0,
+    rS = 2592e6;
+var rv = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
-    rS = (function (e) {
+    rC = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
-let rT = 100,
-    rC = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var rN = (function (e) {
+let rb = 100,
+    rN = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var rR = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});
-let rw = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
-var rR = (function (e) {
+let rO = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+var rD = (function (e) {
         return (
             (e[(e.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
             (e[(e.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
@@ -6335,24 +6225,23 @@ var rR = (function (e) {
             e
         );
     })({}),
-    rP = (function (e) {
+    rL = (function (e) {
         return (e.LOADING = "LOADING"), (e.ERROR = "ERROR"), (e.READY = "READY"), e;
     })({});
-let rD = Object.freeze({
-        APPLICATIONS: (e) => (null != e ? "applications/".concat(e) : null),
-        APP_PREMIUM_BUTTON: (e) => (null != e ? "premium-button/".concat(e) : null),
-        CUSTOM_ACTIVITY_LINK: (e, t) =>
-            null != e && null != t ? "custom-activity-links/".concat(e, "/").concat(t) : null,
-        SKU: (e) => (null != e ? "sku/".concat(e) : null),
-        STORE_LISTING: (e) => (null != e ? "store-listing/".concat(e) : null),
-        SUBSCRIPTION_PLANS: (e) => (null != e ? "subscription-plans/".concat(e) : null),
-        SUBSCRIPTION_PLAN: (e) => (null != e ? "subscription-plan/".concat(e) : null),
+let rw = Object.freeze({
+        APPLICATIONS: (e) => (null != e ? `applications/${e}` : null),
+        APP_PREMIUM_BUTTON: (e) => (null != e ? `premium-button/${e}` : null),
+        CUSTOM_ACTIVITY_LINK: (e, t) => (null != e && null != t ? `custom-activity-links/${e}/${t}` : null),
+        SKU: (e) => (null != e ? `sku/${e}` : null),
+        STORE_LISTING: (e) => (null != e ? `store-listing/${e}` : null),
+        SUBSCRIPTION_PLANS: (e) => (null != e ? `subscription-plans/${e}` : null),
+        SUBSCRIPTION_PLAN: (e) => (null != e ? `subscription-plan/${e}` : null),
         USER_COUNTRY_CODE: () => "location-metadata",
         APPLICATION_WIDGET_APPLICATION_CONFIGS: () => "application-widget-application-configs",
-        USER_APPLICATION_IDENTITIES: (e) => "user-application-identities/".concat(e),
-        ACTIVITIES_DISCORD_CONFIG: (e) => "activities-discord-config/".concat(e),
-        GAME_UPDATE: (e, t) => (null != t ? "games/".concat(e, "/updates/").concat(t) : null),
-        __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? "useParentSkuData/".concat(e) : null),
+        USER_APPLICATION_IDENTITIES: (e) => `user-application-identities/${e}`,
+        ACTIVITIES_DISCORD_CONFIG: (e) => `activities-discord-config/${e}`,
+        GAME_UPDATE: (e, t) => (null != t ? `games/${e}/updates/${t}` : null),
+        __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),
-    rL = 4096,
-    rx = 17718768e5;
+    rx = 4096,
+    rP = 17718768e5;

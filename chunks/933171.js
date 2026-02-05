@@ -1,126 +1,97 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(228524);
-var l = n(627968);
-n(64700);
-var a = n(503698),
-    r = n.n(a),
-    i = n(397927),
-    s = n(736653),
-    c = n(573435),
-    o = n(263063),
-    d = n(714991),
-    u = n(776231),
-    p = n(486020),
-    h = n(860689),
-    m = n(652215),
-    b = n(985018),
-    f = n(906987),
-    g = n(937495),
-    x = n(517061);
-
-function v(e) {
-    let { guild: t, className: n, onClick: a } = e,
-        v = (0, s.Ay)(),
-        j = (0, h.dangerouslyConstructGuildRecordFromUntypedObject)({
-            name: t.name,
-            icon: t.icon,
-        }),
-        A = p.Ay.getGuildDiscoverySplashURL({
-            id: t.id,
-            splash: t.discovery_splash,
-            size: 192 * (0, u.mZ)(),
-        }),
-        _ =
-            null != A
-                ? A
+a.d(t, { A: () => C });
+var n = a(627968);
+a(64700);
+var i = a(503698),
+    s = a.n(i),
+    l = a(397927),
+    r = a(736653),
+    o = a(573435),
+    c = a(263063),
+    d = a(714991),
+    u = a(776231),
+    h = a(486020),
+    m = a(860689),
+    p = a(652215),
+    _ = a(985018),
+    g = a(906987),
+    x = a(937495),
+    A = a(517061);
+function C(e) {
+    let { guild: t, className: a, onClick: i } = e,
+        C = (0, r.Ay)(),
+        b = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
+        v = h.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, u.mZ)() }),
+        f =
+            null != v
+                ? v
                 : (function (e) {
                       switch (e) {
-                          case m.NJ8.DARK:
-                              return g;
-                          case m.NJ8.LIGHT:
+                          case p.NJ8.DARK:
                               return x;
+                          case p.NJ8.LIGHT:
+                              return A;
                       }
-                  })(v),
-        y = p.Ay.getGuildIconURL({
-            id: t.id,
-            icon: t.icon,
-            size: 50,
-        });
-    return (0, l.jsxs)(i.DUT, {
-        className: r()(f.Nr, n),
-        onClick: a,
-        "aria-label": b.intl.string(b.t.RB4L2x),
+                  })(C),
+        j = h.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 50 });
+    return (0, n.jsxs)(l.DUT, {
+        className: s()(g.Nr, a),
+        onClick: i,
+        "aria-label": _.intl.string(_.t.RB4L2x),
         children: [
-            (0, l.jsxs)("div", {
-                className: f.MY,
+            (0, n.jsxs)("div", {
+                className: g.MY,
                 children: [
-                    (0, l.jsx)("img", {
-                        src: _,
-                        alt: "",
-                        className: f.j0,
-                    }),
-                    (0, l.jsx)("div", {
-                        className: f.$f,
-                        children: (0, l.jsx)(c.Ay, {
-                            mask: c.Ay.Masks.AVATAR_DEFAULT,
+                    (0, n.jsx)("img", { src: f, alt: "", className: g.j0 }),
+                    (0, n.jsx)("div", {
+                        className: g.$f,
+                        children: (0, n.jsx)(o.Ay, {
+                            mask: o.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
-                            children: (0, l.jsx)("div", {
-                                className: f.SA,
-                                children: (0, l.jsx)(o.A, {
-                                    className: f.__invalid_icon,
-                                    iconSrc: y,
-                                    guild: j,
-                                    size: o.A.Sizes.LARGE,
+                            children: (0, n.jsx)("div", {
+                                className: g.SA,
+                                children: (0, n.jsx)(c.A, {
+                                    className: g.__invalid_icon,
+                                    iconSrc: j,
+                                    guild: b,
+                                    size: c.A.Sizes.LARGE,
                                 }),
                             }),
                         }),
                     }),
                 ],
             }),
-            (0, l.jsxs)("div", {
-                className: f.RN,
+            (0, n.jsxs)("div", {
+                className: g.RN,
                 children: [
-                    (0, l.jsxs)("div", {
-                        className: f.Y_,
+                    (0, n.jsxs)("div", {
+                        className: g.Y_,
                         children: [
-                            (0, l.jsx)(d.A, {
-                                className: f.n2,
-                                guild: t,
-                                tooltipColor: i.STz.Colors.PRIMARY,
-                            }),
-                            (0, l.jsx)(i.Heading, {
+                            (0, n.jsx)(d.A, { className: g.n2, guild: t, tooltipColor: l.STz.Colors.PRIMARY }),
+                            (0, n.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
-                                className: f.J5,
+                                className: g.J5,
                                 children: t.name,
                             }),
                         ],
                     }),
-                    (0, l.jsx)(i.Text, {
-                        className: f.eF,
+                    (0, n.jsx)(l.Text, {
+                        className: g.eF,
                         variant: "text-sm/normal",
                         color: "text-default",
                         lineClamp: 2,
                         children: t.description,
                     }),
-                    (0, l.jsx)("div", {
-                        className: f.Fj,
-                        children: (0, l.jsxs)("div", {
-                            className: f.FG,
+                    (0, n.jsx)("div", {
+                        className: g.Fj,
+                        children: (0, n.jsxs)("div", {
+                            className: g.FG,
                             children: [
-                                (0, l.jsx)(i.nys, {
-                                    color: "currentColor",
-                                    className: f.NP,
-                                    size: "xs",
-                                }),
-                                (0, l.jsx)(i.Text, {
+                                (0, n.jsx)(l.nys, { color: "currentColor", className: g.NP, size: "xs" }),
+                                (0, n.jsx)(l.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: b.intl.format(b.t.zRl6XR, {
-                                        count: t.approximate_member_count,
-                                    }),
+                                    children: _.intl.format(_.t.zRl6XR, { count: t.approximate_member_count }),
                                 }),
                             ],
                         }),

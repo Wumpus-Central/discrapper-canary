@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__5b927",
     YV: "containerMinimized__5b927",

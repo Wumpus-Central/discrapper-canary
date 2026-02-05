@@ -1,198 +1,80 @@
+"use strict";
 n.d(t, {
-    AF: () => E,
-    JQ: () => _,
-    Mn: () => y,
-    Ud: () => f,
-    XW: () => b,
-    YS: () => p,
-    c6: () => m,
-    fR: () => h,
-    startRegisterWebAuthnCredential: () => g,
+    AF: () => p,
+    JQ: () => c,
+    Mn: () => h,
+    Ud: () => l,
+    XW: () => m,
+    YS: () => u,
+    c6: () => _,
+    fR: () => d,
+    startRegisterWebAuthnCredential: () => f,
 });
 var r = n(239947),
     i = n(562465),
     a = n(73153),
     s = n(499785),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-async function f() {
+async function l() {
     let { challenge: e, ticket: t } = (
         await i.Bo.post({
             url: o.Rsh.WEBAUTHN_CONDITIONAL_UI_CHALLENGE,
-            headers: {
-                authorization: "",
-            },
+            headers: { authorization: "" },
             rejectWithError: !1,
         })
     ).body;
-    return {
-        challenge: e,
-        ticket: t,
-    };
+    return { challenge: e, ticket: t };
 }
-async function p() {
+async function u() {
     let { challenge: e, ticket: t } = (
-        await i.Bo.post({
-            url: o.Rsh.WEBAUTHN_PASSWORDLESS_CHALLENGE,
-            rejectWithError: !1,
-        })
+        await i.Bo.post({ url: o.Rsh.WEBAUTHN_PASSWORDLESS_CHALLENGE, rejectWithError: !1 })
     ).body;
-    return {
-        challenge: e,
-        ticket: t,
-    };
+    return { challenge: e, ticket: t };
 }
-
-function _() {
-    i.Bo.get({
-        url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS,
-        rejectWithError: !0,
-    }).then((e) => {
+function c() {
+    i.Bo.get({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: !0 }).then((e) => {
         if (null != e.body) {
             let t = e.body.map((e) => {
                 let t = null == e.last_used ? null : new Date(e.last_used);
-                return d(c({}, e), {
-                    last_used: t,
-                });
+                return { ...e, last_used: t };
             });
-            a.h.dispatch({
-                type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
-                credentials: t,
-            });
+            a.h.dispatch({ type: "MFA_WEBAUTHN_CREDENTIALS_LOADED", credentials: t });
         }
     });
 }
-
-function h(e) {
-    i.Bo.del({
-        url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e.id),
-        rejectWithError: !0,
-    }).then(() => {
-        a.h.dispatch({
-            type: "AUTHENTICATOR_DELETE",
-            credential: e,
-        });
+function d(e) {
+    i.Bo.del({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e.id), rejectWithError: !0 }).then(() => {
+        a.h.dispatch({ type: "AUTHENTICATOR_DELETE", credential: e });
     });
 }
-async function m(e, t) {
-    let n = await i.Bo.patch({
-        url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e),
-        body: {
-            name: t,
-        },
-        rejectWithError: !1,
-    });
+async function _(e, t) {
+    let n = await i.Bo.patch({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e), body: { name: t }, rejectWithError: !1 });
     if (null != n.body) {
         let e = n.body,
             t = null == e.last_used ? null : new Date(e.last_used),
-            r = d(c({}, e), {
-                last_used: t,
-            });
-        a.h.dispatch({
-            type: "AUTHENTICATOR_UPDATE",
-            credential: r,
-        });
+            r = { ...e, last_used: t };
+        a.h.dispatch({ type: "AUTHENTICATOR_UPDATE", credential: r });
     }
 }
-async function g() {
+async function f() {
     let {
         body: { ticket: e, challenge: t },
-    } = await i.Bo.post({
-        url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS,
-        body: {},
-        rejectWithError: !1,
-    });
-    return {
-        ticket: e,
-        challenge: t,
-    };
+    } = await i.Bo.post({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS, body: {}, rejectWithError: !1 });
+    return { ticket: e, challenge: t };
 }
-async function E(e, t, n) {
+async function p(e, t, n) {
     let i = await s.A.post({
         url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS,
-        body: {
-            name: e,
-            ticket: t,
-            credential: n,
-        },
-        trackedActionData: {
-            event: r.D.WEBAUTHN_REGISTER,
-        },
+        body: { name: e, ticket: t, credential: n },
+        trackedActionData: { event: r.D.WEBAUTHN_REGISTER },
         rejectWithError: !1,
     });
-    a.h.dispatch({
-        type: "AUTHENTICATOR_CREATE",
-        credential: i.body,
-    }),
-        a.h.dispatch({
-            type: "MFA_ENABLE_SUCCESS",
-            codes: i.body.backup_codes,
-        });
+    a.h.dispatch({ type: "AUTHENTICATOR_CREATE", credential: i.body }),
+        a.h.dispatch({ type: "MFA_ENABLE_SUCCESS", codes: i.body.backup_codes });
 }
-
-function y() {
-    a.h.dispatch({
-        type: "WEBAUTHN_TRIGGER_REGISTER",
-    });
+function h() {
+    a.h.dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
 }
-
-function b() {
-    a.h.dispatch({
-        type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER",
-    });
+function m() {
+    a.h.dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
 }

@@ -1,13 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
-
-function r(e) {
-    var t;
-    return null != e
-        ? {
-              id: e.id,
-              name: null != (t = e.name) ? t : "",
-          }
-        : null;
+i.d(t, { A: () => n });
+function n(e) {
+    return null != e ? { id: e.id, name: e.name ?? "" } : null;
 }

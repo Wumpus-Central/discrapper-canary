@@ -1,8 +1,4 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => r });
 var r = {};
-r = {
-    removeButtonLabel: "Rimuovi",
-    removeDescription: "Premi Elimina per rimuovere il tag.",
-};
+r = { removeButtonLabel: "Rimuovi", removeDescription: "Premi Elimina per rimuovere il tag." };

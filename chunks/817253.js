@@ -1,26 +1,15 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(638075),
+var l = n(638075),
     a = n(763754),
-    s = n(888675),
-    o = n(985018);
-
-function l(e) {
-    let { message: t, usernameHook: l, compact: c } = e,
-        u = (0, a.Ay)(t),
-        d = l(u),
-        f = i.A.getSystemMessageUserJoin(t.id),
-        p = o.intl.format(f, {
-            username: u.nick,
-            usernameHook: d,
-        });
-    return (0, r.jsx)(s.A, {
-        icon: n(394803),
-        timestamp: t.timestamp,
-        compact: c,
-        children: p,
-    });
+    r = n(888675),
+    s = n(985018);
+function o(e) {
+    let { message: t, usernameHook: o, compact: d } = e,
+        c = (0, a.Ay)(t),
+        u = o(c),
+        m = l.A.getSystemMessageUserJoin(t.id),
+        _ = s.intl.format(m, { username: c.nick, usernameHook: u });
+    return (0, i.jsx)(r.A, { icon: n(394803), timestamp: t.timestamp, compact: d, children: _ });
 }

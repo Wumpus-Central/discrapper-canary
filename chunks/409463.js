@@ -1,51 +1,35 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(321073);
+n.d(t, { A: () => c }), n(321073);
 var i = n(627968),
-    r = n(64700),
-    l = n(280513),
-    s = n(397927),
+    l = n(64700),
+    s = n(280513),
+    r = n(397927),
     a = n(837011),
     o = n(90084),
-    u = n(975571),
-    c = n(652215),
-    h = n(985018);
-
-function d(e) {
-    let { guildId: t, channelType: n, className: d } = e,
-        { guildProfile: p, fetchGuildProfile: g, fetchStatus: b } = (0, o.u)(t),
-        m = b !== a.X.FETCHED,
-        f = null != p && l.i.VISIBLE.has(p.visibility);
-    r.useEffect(() => {
-        g();
-    }, [t, g]);
-    let O = [];
+    d = n(975571),
+    h = n(652215),
+    u = n(985018);
+function c(e) {
+    let { guildId: t, channelType: n, className: c } = e,
+        { guildProfile: g, fetchGuildProfile: p, fetchStatus: m } = (0, o.u)(t),
+        A = m !== a.X.FETCHED,
+        C = null != g && s.i.VISIBLE.has(g.visibility);
+    l.useEffect(() => {
+        p();
+    }, [t, p]);
+    let E = [];
     if (
-        n === c.rbe.GUILD_ANNOUNCEMENT &&
-        (O.push(
-            h.intl.format(h.t.tI7KNX, {
-                documentationLink: u.A.getArticleURL(c.MVz.ANNOUNCEMENT_CHANNELS),
-            }),
-        ),
-        !m && !f)
+        n === h.rbe.GUILD_ANNOUNCEMENT &&
+        (E.push(u.intl.format(u.t.tI7KNX, { documentationLink: d.A.getArticleURL(h.MVz.ANNOUNCEMENT_CHANNELS) })),
+        !A && !C)
     ) {
-        let e = h.intl.string(h.t["2Ab4Id"]);
-        O.push(e);
+        let e = u.intl.string(u.t["2Ab4Id"]);
+        E.push(e);
     }
-    return 0 === O.length
+    return 0 === E.length
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: O.map((e, t) =>
-                  (0, i.jsx)(
-                      s.Text,
-                      {
-                          className: d,
-                          variant: "text-sm/normal",
-                          children: e,
-                      },
-                      "description-".concat(t),
-                  ),
+              children: E.map((e, t) =>
+                  (0, i.jsx)(r.Text, { className: c, variant: "text-sm/normal", children: e }, `description-${t}`),
               ),
           });
 }

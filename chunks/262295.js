@@ -1,59 +1,39 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(948651);
+    s = n.n(a),
+    o = n(948651);
 let l = i.forwardRef((e, t) => {
     let {
         muted: n = !1,
         highlighted: i = !1,
         avatar: a,
         decorators: l,
-        name: c,
-        subText: u,
+        name: u,
+        subText: c,
         avatarClassName: d,
-        innerClassName: f,
-        withDisplayNameStyles: p = !1,
+        innerClassName: _,
+        withDisplayNameStyles: f = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
-        className: o()(s.Zp, f, {
-            [s.SU]: n,
-            [s.mr]: i,
-        }),
+        className: s()(o.Zp, _, { [o.SU]: n, [o.mr]: i }),
         children: [
-            (0, r.jsx)("div", {
-                className: o()(s.my, d),
-                children: a,
-            }),
+            (0, r.jsx)("div", { className: s()(o.my, d), children: a }),
             (0, r.jsxs)("div", {
-                className: o()(s.Qs, {
-                    [s.e8]: p,
-                }),
+                className: s()(o.Qs, { [o.e8]: f }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s.BG,
-                        children: [
-                            (0, r.jsx)("div", {
-                                className: s.UU,
-                                children: c,
-                            }),
-                            l,
-                        ],
+                        className: o.BG,
+                        children: [(0, r.jsx)("div", { className: o.UU, children: u }), l],
                     }),
-                    null != u
-                        ? (0, r.jsx)("div", {
-                              className: s.Sv,
-                              children: u,
-                          })
-                        : null,
+                    null != c ? (0, r.jsx)("div", { className: o.Sv, children: c }) : null,
                 ],
             }),
         ],
     });
 });
 l.displayName = "AvatarWithText";
-let c = l;
+let u = l;

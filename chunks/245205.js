@@ -1,81 +1,37 @@
-n.d(t, {
-    BZ: () => f,
-    R7: () => b,
-    S3: () => p,
-    VP: () => m,
-    ni: () => h,
-});
-var r = n(110259),
+n.d(t, { BZ: () => h, R7: () => m, S3: () => A, VP: () => _, ni: () => g });
+var i = n(110259),
     l = n(562465),
-    i = n(933681),
+    s = n(933681),
     a = n(73153),
-    s = n(253932),
+    r = n(253932),
     o = n(499785),
-    c = n(252431),
-    u = n(995273),
-    d = n(652215);
-
-function f(e) {
-    a.h.dispatch({
-        type: "NOTIFICATION_CENTER_SET_ACTIVE",
-        active: e,
-    });
+    d = n(252431),
+    c = n(995273),
+    u = n(652215);
+function h(e) {
+    a.h.dispatch({ type: "NOTIFICATION_CENTER_SET_ACTIVE", active: e });
 }
-
-function p() {
-    a.h.dispatch({
-        type: "RESET_NOTIFICATION_CENTER",
-    });
+function A() {
+    a.h.dispatch({ type: "RESET_NOTIFICATION_CENTER" });
 }
-async function h(e, t) {
-    if (c.A.loading) return;
-    await a.h.dispatch({
-        type: "LOAD_NOTIFICATION_CENTER_ITEMS",
-    });
-    let n = Math.ceil(c.A.items.length / e.limit);
+async function g(e, t) {
+    if (d.A.loading) return;
+    await a.h.dispatch({ type: "LOAD_NOTIFICATION_CENTER_ITEMS" });
+    let n = Math.ceil(d.A.items.length / e.limit);
     try {
         let l = await o.A.get({
-            url: d.Rsh.NOTIF_CENTER_ITEMS(),
+            url: u.Rsh.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
-                event: r.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
+                event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
-                    var t;
-                    let r = ((null == (t = e.body) ? void 0 : t.items) || []).map((e) => e.type);
-                    return (0, i.e0)({
-                        page: n,
-                        items: r,
-                        item_count: r.length,
-                    });
+                    let t = (e.body?.items || []).map((e) => e.type);
+                    return (0, s.e0)({ page: n, items: t, item_count: t.length });
                 },
             },
-            query: (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })({}, e),
+            query: { ...e },
             rejectWithError: !0,
         });
-        null == t || t(),
+        t?.(),
             await a.h.dispatch({
                 type: "LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS",
                 items: l.body.items,
@@ -83,77 +39,39 @@ async function h(e, t) {
                 hasMore: l.body.has_more,
             });
     } catch (e) {
-        null == t || t(),
-            await a.h.dispatch({
-                type: "LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE",
-            });
+        t?.(), await a.h.dispatch({ type: "LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE" });
     }
 }
-
-function b(e) {
+function m(e) {
     var t, n;
     null != e.local_id
-        ? ((t = [e.local_id]),
-          a.h.dispatch({
-              type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK",
-              localIds: t,
-          }))
-        : (0, u.gk)(e)
-          ? ((n = e.id),
-            a.h.dispatch({
-                type: "NOTIFICATION_CENTER_ITEMS_ACK",
-                optimistic: !0,
-                ids: [n],
-            }))
-          : g(e.id);
+        ? ((t = [e.local_id]), a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: t }))
+        : (0, c.gk)(e)
+          ? ((n = e.id), a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: !0, ids: [n] }))
+          : p(e.id);
 }
-async function g(e) {
+async function p(e) {
     try {
-        a.h.dispatch({
-            type: "NOTIFICATION_CENTER_ITEMS_ACK",
-            optimistic: !0,
-            ids: [e],
-        }),
-            await l.Bo.post({
-                url: d.Rsh.NOTIF_CENTER_ITEMS_ACK(e),
-                rejectWithError: !0,
-            });
+        a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: !0, ids: [e] }),
+            await l.Bo.post({ url: u.Rsh.NOTIF_CENTER_ITEMS_ACK(e), rejectWithError: !0 });
     } catch (t) {
-        a.h.dispatch({
-            type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE",
-            ids: [e],
-        });
+        a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE", ids: [e] });
     }
 }
-async function m(e) {
-    let t = s.ns.getSetting();
+async function _(e) {
+    let t = r.ns.getSetting();
     try {
-        a.h.dispatch({
-            type: "NOTIFICATION_CENTER_ITEM_DELETE",
-            id: e.id,
-        }),
+        a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id }),
             await o.A.delete({
-                url: d.Rsh.NOTIF_CENTER_ITEMS(e.id),
-                body: {
-                    item_type: (0, u.gk)(e) ? "mention" : "regular",
-                },
+                url: u.Rsh.NOTIF_CENTER_ITEMS(e.id),
+                body: { item_type: (0, c.gk)(e) ? "mention" : "regular" },
                 trackedActionData: {
-                    event: r.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
-                    properties: {
-                        notification_center_id: e.id,
-                        acked: (0, u.NW)(e, t),
-                        item_type: e.type,
-                    },
+                    event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
+                    properties: { notification_center_id: e.id, acked: (0, c.NW)(e, t), item_type: e.type },
                 },
                 rejectWithError: !1,
             });
     } catch (t) {
-        throw (
-            (a.h.dispatch({
-                type: "NOTIFICATION_CENTER_ITEM_DELETE_FAILURE",
-                item: e,
-            }),
-            t)
-        );
+        throw (a.h.dispatch({ type: "NOTIFICATION_CENTER_ITEM_DELETE_FAILURE", item: e }), t);
     }
 }

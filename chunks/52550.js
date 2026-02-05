@@ -1,5 +1,5 @@
+"use strict";
 var n = r(724039);
-
 function i() {
     return (i =
         n ||
@@ -11,7 +11,6 @@ function i() {
             return t;
         }).apply(this, arguments);
 }
-
 function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -28,26 +27,16 @@ function o(t) {
     }
     return t;
 }
-
 function a(t) {
     if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t;
 }
-
 function s(t, e, r) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = r),
+        e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r),
         t
     );
 }
-
 function u(t, e) {
     (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
 }
@@ -75,13 +64,7 @@ var c = r(611668),
     T = r(670200),
     M = w.isBrowser("IE"),
     A = !M,
-    I = {
-        edit: d,
-        composite: f,
-        drag: h,
-        cut: null,
-        render: null,
-    },
+    I = { edit: d, composite: f, drag: h, cut: null, render: null },
     B = !1,
     L = (function (t) {
         function e() {
@@ -184,22 +167,15 @@ var c = r(611668),
                     n && (s.onPaste = n),
                         i && (s.onCut = i),
                         a && (s.onCopy = a),
-                        (r._handler = o({}, I, {
-                            edit: s,
-                        })[t]);
+                        (r._handler = o({}, I, { edit: s })[t]);
                 }),
                 s(a(r), "exitCurrentMode", function () {
                     r.setMode("edit");
                 }),
                 s(a(r), "restoreEditorDOM", function (t) {
-                    r.setState(
-                        {
-                            contentsKey: r.state.contentsKey + 1,
-                        },
-                        function () {
-                            r.focus(t);
-                        },
-                    );
+                    r.setState({ contentsKey: r.state.contentsKey + 1 }, function () {
+                        r.focus(t);
+                    });
                 }),
                 s(a(r), "setClipboard", function (t) {
                     r._clipboard = t;
@@ -247,9 +223,7 @@ var c = r(611668),
                 (r.getEditorKey = function () {
                     return r._editorKey;
                 }),
-                (r.state = {
-                    contentsKey: 0,
-                }),
+                (r.state = { contentsKey: 0 }),
                 r
             );
         }
@@ -322,16 +296,11 @@ var c = r(611668),
                     };
                 return _.createElement(
                     "div",
-                    {
-                        className: g,
-                    },
+                    { className: g },
                     this._renderPlaceholder(),
                     _.createElement(
                         "div",
-                        {
-                            className: k("DraftEditor/editorContainer"),
-                            ref: this._handleEditorContainerRef,
-                        },
+                        { className: k("DraftEditor/editorContainer"), ref: this._handleEditorContainerRef },
                         _.createElement(
                             "div",
                             {
@@ -347,10 +316,7 @@ var c = r(611668),
                                 autoCapitalize: this.props.autoCapitalize,
                                 autoComplete: this.props.autoComplete,
                                 autoCorrect: this.props.autoCorrect,
-                                className: k({
-                                    notranslate: !f,
-                                    "public/DraftEditor/content": !0,
-                                }),
+                                className: k({ notranslate: !f, "public/DraftEditor/content": !0 }),
                                 contentEditable: !f,
                                 "data-testid": this.props.webDriverTestID,
                                 onBeforeInput: this._onBeforeInput,
@@ -386,16 +352,8 @@ var c = r(611668),
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex,
                             },
-                            _.createElement(L, {
-                                editor: this,
-                                editorState: u,
-                            }),
-                            _.createElement(
-                                p,
-                                i({}, m, {
-                                    key: "contents" + this.state.contentsKey,
-                                }),
-                            ),
+                            _.createElement(L, { editor: this, editorState: u }),
+                            _.createElement(p, i({}, m, { key: "contents" + this.state.contentsKey })),
                         ),
                     ),
                 );

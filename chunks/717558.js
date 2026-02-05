@@ -1,41 +1,35 @@
-n.d(t, {
-    A: () => c,
-    R: () => u,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => u, R: () => c });
 var r = n(311907),
     i = n(209932),
     a = n(309010),
     s = n(485296),
     o = n(977997);
-
 function l(e, t, n) {
     return e || t || n;
 }
-
-function c(e) {
-    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: c = !0, checkIsMuted: u = !1, context: d } = e,
-        f = (0, r.bG)([o.A, a.A], () => {
+function u(e) {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: u = !0, checkIsMuted: c = !1, context: d } = e,
+        _ = (0, r.bG)([o.A, a.A], () => {
             let e = a.A.getVoiceChannelId();
             return null != e ? o.A.getVoiceStateForChannel(e, t) : null;
         }),
-        p = u && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        _ = (0, r.bG)([s.A], () => s.A.isSpeaking(t, d) && !p),
+        f = c && (_?.mute || _?.selfMute),
+        p = (0, r.bG)([s.A], () => s.A.isSpeaking(t, d) && !f),
         h = (0, r.bG)([s.A], () => s.A.isSoundSharing(t) && n);
     return l(
-        _,
-        (0, r.bG)([i.A], () => i.A.isUserPlayingSounds(t) && c),
+        p,
+        (0, r.bG)([i.A], () => i.A.isUserPlayingSounds(t) && u),
         h,
     );
 }
-
-function u(e) {
-    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: c = !1, context: u } = e,
-        [d, f, p, _] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.A, a.A, s.A, i.A],
-        h = f.getVoiceChannelId(),
+function c(e) {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: u = !1, context: c } = e,
+        [d, _, f, p] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.A, a.A, s.A, i.A],
+        h = _.getVoiceChannelId(),
         m = null != h ? d.getVoiceStateForChannel(h, t) : null,
-        g = c && ((null == m ? void 0 : m.mute) || (null == m ? void 0 : m.selfMute)),
-        E = p.isSpeaking(t, u) && !g,
-        b = p.isSoundSharing(t) && n;
-    return l(E, _.isUserPlayingSounds(t) && r, b);
+        g = u && (m?.mute || m?.selfMute),
+        E = f.isSpeaking(t, c) && !g,
+        A = f.isSoundSharing(t) && n;
+    return l(E, p.isUserPlayingSounds(t) && r, A);
 }

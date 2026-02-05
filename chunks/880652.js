@@ -1,7 +1,5 @@
-n.d(t, {
-    BO: () => i,
-    SQ: () => r,
-});
+"use strict";
+n.d(t, { BO: () => i, SQ: () => r });
 var r = (function (e) {
         return (e.MULTIPLE_CHOICE = "MC"), (e.TEXT_ENTRY = "TE"), (e.DESCRIPTIVE_BLOCK = "DB"), e;
     })({}),

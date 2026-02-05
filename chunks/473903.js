@@ -1,56 +1,53 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(77729);
 let i = new (n(626584).A)("IntentsBindings");
-
 function a() {
-    var e;
-    return null != (e = null === r.A || void 0 === r.A ? void 0 : r.A.features.supports("intents")) && e;
+    return r.A?.features.supports("intents") ?? !1;
 }
 let s = {
     hasSearch: () => a(),
     hasUserActivity: () => a(),
     clearSearchIndex() {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_SEARCH_CLEAR_INDEX");
+            r.A?.ipc.invoke("DISCORD_SEARCH_CLEAR_INDEX");
         } catch (e) {
-            i.warn("clearSearchIndex: ".concat(e));
+            i.warn(`clearSearchIndex: ${e}`);
         }
     },
     deleteSearchDomains(e) {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_SEARCH_DELETE_DOMAINS", e);
+            r.A?.ipc.invoke("DISCORD_SEARCH_DELETE_DOMAINS", e);
         } catch (e) {
-            i.warn("deleteSearchDomains: ".concat(e));
+            i.warn(`deleteSearchDomains: ${e}`);
         }
     },
     deleteSearchItems(e) {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_SEARCH_DELETE_ITEMS", e);
+            r.A?.ipc.invoke("DISCORD_SEARCH_DELETE_ITEMS", e);
         } catch (e) {
-            i.warn("deleteSearchItems: ".concat(e));
+            i.warn(`deleteSearchItems: ${e}`);
         }
     },
     indexDomains(e) {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_SEARCH_INDEX_DOMAINS", e);
+            r.A?.ipc.invoke("DISCORD_SEARCH_INDEX_DOMAINS", e);
         } catch (e) {
-            i.warn("indexDomains: ".concat(e));
+            i.warn(`indexDomains: ${e}`);
         }
     },
     resignActivity() {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_INTENTS_RESIGN_ACTIVITY");
+            r.A?.ipc.invoke("DISCORD_INTENTS_RESIGN_ACTIVITY");
         } catch (e) {
-            i.warn("resignActivity: ".concat(e));
+            i.warn(`resignActivity: ${e}`);
         }
     },
     setActivity(e) {
         try {
-            null === r.A || void 0 === r.A || r.A.ipc.invoke("DISCORD_INTENTS_SET_ACTIVITY", e);
+            r.A?.ipc.invoke("DISCORD_INTENTS_SET_ACTIVITY", e);
         } catch (e) {
-            i.warn("setActivity: ".concat(e));
+            i.warn(`setActivity: ${e}`);
         }
     },
 };

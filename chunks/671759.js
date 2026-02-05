@@ -1,108 +1,27 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(938796);
+"use strict";
+n.d(t, { A: () => s }), n(938796);
 var r = n(989349),
     i = n.n(r),
     a = n(315069);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-class u extends a.A {
-    static createFromServer(e) {
-        var t;
-        return new u(
-            c(o({}, e), {
-                maxUses: e.max_uses,
-                maxAge: e.max_age,
-                createdAt: i()(null != (t = e.created_at) ? t : void 0),
-                targetType: e.target_type,
-                targetUser: e.target_user,
-                targetApplication: e.target_application,
-            }),
-        );
-    }
-    isExpired() {
-        let e = this.maxAge;
-        return !!(e > 0 && i()(this.createdAt).add(e, "seconds").isBefore(Date.now())) || !1;
-    }
-    getExpiresAt() {
-        return this.maxAge > 0 ? i()(this.createdAt).add(this.maxAge, "seconds").toDate() : 1 / 0;
-    }
-    toString() {
-        return this.code;
-    }
+class s extends a.A {
+    code;
+    temporary;
+    revoked;
+    uses;
+    maxUses;
+    maxAge;
+    createdAt;
+    channel;
+    guild;
+    inviter;
+    targetType;
+    targetUser;
+    targetApplication;
+    type;
+    flags;
+    roles;
     constructor(e) {
         super(),
-            s(this, "code", void 0),
-            s(this, "temporary", void 0),
-            s(this, "revoked", void 0),
-            s(this, "uses", void 0),
-            s(this, "maxUses", void 0),
-            s(this, "maxAge", void 0),
-            s(this, "createdAt", void 0),
-            s(this, "channel", void 0),
-            s(this, "guild", void 0),
-            s(this, "inviter", void 0),
-            s(this, "targetType", void 0),
-            s(this, "targetUser", void 0),
-            s(this, "targetApplication", void 0),
-            s(this, "type", void 0),
-            s(this, "flags", void 0),
-            s(this, "roles", void 0),
             (this.code = e.code || ""),
             (this.temporary = e.temporary || !1),
             (this.revoked = e.revoked || !1),
@@ -119,5 +38,26 @@ class u extends a.A {
             (this.type = e.type || null),
             (this.flags = e.flags || 0),
             (this.roles = e.roles || []);
+    }
+    static createFromServer(e) {
+        return new s({
+            ...e,
+            maxUses: e.max_uses,
+            maxAge: e.max_age,
+            createdAt: i()(e.created_at ?? void 0),
+            targetType: e.target_type,
+            targetUser: e.target_user,
+            targetApplication: e.target_application,
+        });
+    }
+    isExpired() {
+        let e = this.maxAge;
+        return !!(e > 0 && i()(this.createdAt).add(e, "seconds").isBefore(Date.now())) || !1;
+    }
+    getExpiresAt() {
+        return this.maxAge > 0 ? i()(this.createdAt).add(this.maxAge, "seconds").toDate() : 1 / 0;
+    }
+    toString() {
+        return this.code;
     }
 }

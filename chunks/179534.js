@@ -1,144 +1,126 @@
-n.d(t, {
-    A: () => w,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => G });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(417597),
-    c = n(397927),
-    o = n(793574),
-    d = n(688810),
+    o = n(397927),
+    d = n(793574),
+    c = n(688810),
     u = n(985925),
-    f = n(547015),
+    m = n(547015),
     g = n(997509),
-    b = n(138298),
-    m = n(657331),
-    p = n(761640),
-    x = n(71393),
-    h = n(266047),
-    j = n(221950),
-    O = n(735937),
-    y = n(104685),
-    v = n(856768),
-    A = n(189552),
-    E = n(508160),
-    N = n(749060),
-    _ = n(374963),
-    S = n(636670),
-    T = n(652215),
-    I = n(985018),
-    C = n(503377),
-    P = n(63135);
-
-function w(e) {
+    x = n(138298),
+    h = n(657331),
+    _ = n(761640),
+    A = n(71393),
+    p = n(266047),
+    f = n(221950),
+    j = n(735937),
+    N = n(104685),
+    E = n(856768),
+    b = n(189552),
+    T = n(508160),
+    C = n(749060),
+    I = n(374963),
+    v = n(636670),
+    S = n(652215),
+    y = n(985018),
+    R = n(503377),
+    O = n(63135);
+function G(e) {
     let { guildId: t } = e,
-        n = (0, a.bG)([x.A], () => x.A.getGuild(t)),
-        { analyticsLocations: l } = (0, d.Ay)(o.A.GUILD_SETTINGS_MEMBERS_PAGE),
-        w = (0, u.q)(t),
-        R = (0, a.bG)([p.Ay], () => p.Ay.getGuildSidebarState(t), [t]),
-        D = i.useCallback(() => {
-            b.A.closeGuildSidebar(t);
+        n = (0, a.bG)([A.A], () => A.A.getGuild(t)),
+        { analyticsLocations: l } = (0, c.Ay)(d.A.GUILD_SETTINGS_MEMBERS_PAGE),
+        G = (0, u.q)(t),
+        L = (0, a.bG)([_.Ay], () => _.Ay.getGuildSidebarState(t), [t]),
+        D = s.useCallback(() => {
+            x.A.closeGuildSidebar(t);
         }, [t]),
-        G =
-            !1 ==
-            !!(null == n ? void 0 : n.features.has(T.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        L = (0, a.bG)([h.A], () => h.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        k = i.useCallback(
+        M = !1 == !!n?.features.has(S.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        k = (0, a.bG)([p.A], () => p.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        U = s.useCallback(
             (e) => {
                 null != e &&
-                    (0, m.openUserProfileModal)({
-                        userId: e.userId,
-                        guildId: e.guildId,
-                        sourceAnalyticsLocations: l,
-                    });
+                    (0, h.openUserProfileModal)({ userId: e.userId, guildId: e.guildId, sourceAnalyticsLocations: l });
             },
             [l],
         ),
-        M = i.useRef(null),
-        U = i.useCallback(() => {
-            var e;
-            null == (e = M.current) || e.resetSearchText();
+        P = s.useRef(null),
+        w = s.useCallback(() => {
+            P.current?.resetSearchText();
         }, []);
     if (null == n) return null;
-    let F = (0, A.ii)(!1, !1, L);
-    return (0, r.jsxs)(d.f5, {
+    let B = (0, b.ii)(!1, !1, k);
+    return (0, i.jsxs)(c.f5, {
         value: l,
         children: [
-            (0, r.jsx)("div", {
-                className: s()(P.customColumn, C.$Z, C.ed),
-                children: (0, r.jsx)("div", {
-                    className: P.customContainer,
-                    children: (0, r.jsx)(c.ArX, {
-                        className: s()(P.customScroller, C.cj),
+            (0, i.jsx)("div", {
+                className: r()(O.customColumn, R.$Z, R.ed),
+                children: (0, i.jsx)("div", {
+                    className: O.customContainer,
+                    children: (0, i.jsx)(o.ArX, {
+                        className: r()(O.customScroller, R.cj),
                         orientation: "auto",
-                        children: (0, r.jsx)(c.ArX, {
-                            className: C.mh,
+                        children: (0, i.jsx)(o.ArX, {
+                            className: R.mh,
                             orientation: "auto",
-                            children: (0, r.jsxs)("main", {
-                                className: s()(P.customColumn, P.contentColumnDefault, C.$Z, C.ed, C.z1),
+                            children: (0, i.jsxs)("main", {
+                                className: r()(O.customColumn, O.contentColumnDefault, R.$Z, R.ed, R.z1),
                                 children: [
-                                    (0, r.jsx)(
+                                    (0, i.jsx)(
                                         "div",
                                         {
-                                            className: C.wx,
-                                            children: (0, r.jsx)(c.Heading, {
+                                            className: R.wx,
+                                            children: (0, i.jsx)(o.Heading, {
                                                 variant: "heading-lg/semibold",
-                                                children: I.intl.string(I.t.S40K66),
+                                                children: y.intl.string(y.t.S40K66),
                                             }),
                                         },
                                         "header",
                                     ),
-                                    (0, r.jsx)(
+                                    (0, i.jsx)(
                                         "div",
                                         {
-                                            children: (0, r.jsxs)("div", {
-                                                className: C.CZ,
+                                            children: (0, i.jsxs)("div", {
+                                                className: R.CZ,
                                                 children: [
-                                                    (0, r.jsx)(y.A, {
-                                                        guild: n,
-                                                    }),
-                                                    (0, r.jsx)(O.A, {
-                                                        guild: n,
-                                                    }),
-                                                    G
-                                                        ? (0, r.jsxs)("div", {
-                                                              className: C.FV,
+                                                    (0, i.jsx)(N.A, { guild: n }),
+                                                    (0, i.jsx)(j.A, { guild: n }),
+                                                    M
+                                                        ? (0, i.jsxs)("div", {
+                                                              className: R.FV,
                                                               children: [
-                                                                  (0, r.jsx)(_.A, {
+                                                                  (0, i.jsx)(I.A, { guild: n, ref: P }),
+                                                                  (0, i.jsx)(T.A, {
                                                                       guild: n,
-                                                                      ref: M,
-                                                                  }),
-                                                                  (0, r.jsx)(E.A, {
-                                                                      guild: n,
-                                                                      searchState: F,
+                                                                      searchState: B,
                                                                       compact: !0,
-                                                                      onSelectRow: k,
-                                                                      onResetForNewMembers: U,
+                                                                      onSelectRow: U,
+                                                                      onResetForNewMembers: w,
                                                                   }),
-                                                                  F !== A.IY.SUCCESS_STILL_INDEXING &&
-                                                                      (0, r.jsx)(N.A, {
-                                                                          guildId: n.id,
-                                                                      }),
+                                                                  B !== b.IY.SUCCESS_STILL_INDEXING &&
+                                                                      (0, i.jsx)(C.A, { guildId: n.id }),
                                                               ],
                                                           })
-                                                        : (0, r.jsx)("div", {
-                                                              className: C.qQ,
-                                                              children: (0, r.jsxs)("div", {
-                                                                  className: C.pb,
+                                                        : (0, i.jsx)("div", {
+                                                              className: R.qQ,
+                                                              children: (0, i.jsxs)("div", {
+                                                                  className: R.pb,
                                                                   children: [
-                                                                      (0, r.jsx)("div", {
-                                                                          children: (0, r.jsx)(S.A, {}),
+                                                                      (0, i.jsx)("div", {
+                                                                          children: (0, i.jsx)(v.A, {}),
                                                                       }),
-                                                                      (0, r.jsx)(c.Text, {
+                                                                      (0, i.jsx)(o.Text, {
                                                                           variant: "text-md/normal",
                                                                           color: "text-muted",
-                                                                          children: I.intl.format(I.t.Bf6yxB, {
+                                                                          children: y.intl.format(y.t.Bf6yxB, {
                                                                               onClick: (e) => {
                                                                                   null != n &&
                                                                                       (e.preventDefault(),
                                                                                       g.A.close(),
-                                                                                      (0, j.aZ)(n.id));
+                                                                                      (0, f.aZ)(n.id));
                                                                               },
                                                                           }),
                                                                       }),
@@ -150,31 +132,24 @@ function w(e) {
                                         },
                                         "body",
                                     ),
-                                    (0, r.jsx)(v.A, {
-                                        guildId: n.id,
-                                    }),
+                                    (0, i.jsx)(E.A, { guildId: n.id }),
                                 ],
                             }),
                         }),
                     }),
                 }),
             }),
-            w &&
-                null != R &&
-                (0, r.jsxs)(r.Fragment, {
+            G &&
+                null != L &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(c.pkL, {
-                            isVisible: !0,
-                            onClick: D,
-                        }),
-                        (0, r.jsx)("div", {
-                            className: C.zd,
-                            style: {
-                                width: T.da6,
-                            },
-                            children: (0, r.jsx)(f.A, {
-                                userId: R.details.userId,
-                                guildId: R.details.guildId,
+                        (0, i.jsx)(o.pkL, { isVisible: !0, onClick: D }),
+                        (0, i.jsx)("div", {
+                            className: R.zd,
+                            style: { width: S.da6 },
+                            children: (0, i.jsx)(m.A, {
+                                userId: L.details.userId,
+                                guildId: L.details.guildId,
                                 onClose: D,
                             }),
                         }),

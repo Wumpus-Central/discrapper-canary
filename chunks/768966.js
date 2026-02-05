@@ -1,3 +1,4 @@
+"use strict";
 var n = e(673162).forEach;
 t.exports = e(242291)("forEach")
     ? [].forEach

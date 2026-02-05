@@ -1,129 +1,54 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968);
-n(64700);
-var l = n(33851),
-    i = n.n(l),
-    o = n(989349),
-    a = n.n(o),
-    s = n(417597),
-    c = n(266047),
-    d = n(221950),
-    u = n(487518),
-    C = n(985018);
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
+l.d(t, { A: () => m });
+var n = l(627968);
+l(64700);
+var i = l(33851),
+    s = l.n(i),
+    a = l(989349),
+    r = l.n(a),
+    o = l(417597),
+    C = l(266047),
+    d = l(221950),
+    c = l(487518),
+    u = l(985018);
 function m(e) {
-    let { guildId: t, onClose: n } = e,
-        l = (0, s.bG)([c.A], () => c.A.getSearchStateByGuildId(t), [t], i()),
-        { selectedAccountAgeOption: o } = l,
-        { afterDate: m, beforeDate: p, optionId: j } = o,
-        g = j === u.H_.CUSTOM,
-        h = g && null != m ? a()(m).format(u.Ti) : null,
-        x = g && null != p ? a()(p).format(u.Ti) : null;
-    return (0, r.jsx)(u.Ay, {
-        startDateLabel: h,
-        endDateLabel: x,
+    let { guildId: t, onClose: l } = e,
+        i = (0, o.bG)([C.A], () => C.A.getSearchStateByGuildId(t), [t], s()),
+        { selectedAccountAgeOption: a } = i,
+        { afterDate: m, beforeDate: x, optionId: h } = a,
+        g = h === c.H_.CUSTOM,
+        _ = g && null != m ? r()(m).format(c.Ti) : null,
+        H = g && null != x ? r()(x).format(c.Ti) : null;
+    return (0, n.jsx)(c.Ay, {
+        startDateLabel: _,
+        endDateLabel: H,
         afterDate: m,
-        beforeDate: p,
-        selectedOption: j,
+        beforeDate: x,
+        selectedOption: h,
         isCustomDateRange: g,
         menuName: "account-age",
-        accessibilityLabel: C.intl.string(C.t["D++Tgf"]),
-        onClose: n,
-        onSelectDateOption: function (e, n) {
-            let r = null != n ? a()().subtract(n.input, n.unit).valueOf() : null;
-            (0, d.Ld)(
-                t,
-                b(f({}, l), {
-                    selectedAccountAgeOption: {
-                        optionId: e,
-                        afterDate: r,
-                        beforeDate: null,
-                    },
-                }),
-            );
+        accessibilityLabel: u.intl.string(u.t["D++Tgf"]),
+        onClose: l,
+        onSelectDateOption: function (e, l) {
+            let n = null != l ? r()().subtract(l.input, l.unit).valueOf() : null;
+            (0, d.Ld)(t, { ...i, selectedAccountAgeOption: { optionId: e, afterDate: n, beforeDate: null } });
         },
         onToggleCustomDateRange: function () {
-            (0, d.Ld)(
-                t,
-                b(f({}, l), {
-                    selectedAccountAgeOption: {
-                        optionId: u.H_.CUSTOM,
-                        afterDate: g ? m : null,
-                        beforeDate: g ? p : null,
-                    },
-                }),
-            );
+            (0, d.Ld)(t, {
+                ...i,
+                selectedAccountAgeOption: { optionId: c.H_.CUSTOM, afterDate: g ? m : null, beforeDate: g ? x : null },
+            });
         },
         onSelectStartDate: function (e) {
-            (0, d.Ld)(
-                t,
-                b(f({}, l), {
-                    selectedAccountAgeOption: {
-                        optionId: u.H_.CUSTOM,
-                        afterDate: e.valueOf(),
-                        beforeDate: p,
-                    },
-                }),
-            );
+            (0, d.Ld)(t, {
+                ...i,
+                selectedAccountAgeOption: { optionId: c.H_.CUSTOM, afterDate: e.valueOf(), beforeDate: x },
+            });
         },
         onSelectEndDate: function (e) {
-            (0, d.Ld)(
-                t,
-                b(f({}, l), {
-                    selectedAccountAgeOption: {
-                        optionId: u.H_.CUSTOM,
-                        afterDate: m,
-                        beforeDate: e.valueOf(),
-                    },
-                }),
-            );
+            (0, d.Ld)(t, {
+                ...i,
+                selectedAccountAgeOption: { optionId: c.H_.CUSTOM, afterDate: m, beforeDate: e.valueOf() },
+            });
         },
     });
 }

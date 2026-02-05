@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => f,
-});
+"use strict";
+r.d(t, { A: () => f });
 var a = r(1139),
     n = r(106526),
     s = r(64700),
@@ -8,7 +7,6 @@ var a = r(1139),
     i = r.n(o),
     c = r(431384),
     l = ["data"];
-
 function u(e) {
     var t = Object.getOwnPropertyNames(e).length;
     return "".concat(t, " ").concat(1 !== t ? "keys" : "key");
@@ -27,8 +25,5 @@ var b = function (e) {
         }),
     );
 };
-b.propTypes = {
-    data: i().object,
-    nodeType: i().string.isRequired,
-};
+b.propTypes = { data: i().object, nodeType: i().string.isRequired };
 let f = b;

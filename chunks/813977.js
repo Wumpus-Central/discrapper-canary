@@ -1,36 +1,30 @@
-n.d(t, {
-    A: () => d,
-});
-var l = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var r = n(311907),
-    i = n(397927),
-    a = n(827343),
-    s = n(430452),
+var l = n(311907),
+    a = n(397927),
+    s = n(827343),
+    r = n(430452),
     o = n(723702),
     c = n(652215),
-    u = n(985018);
-
-function d(e) {
+    d = n(985018);
+function u(e) {
     let t = !o.isPlatformEmbedded,
-        n = (0, r.bG)([s.A], () => s.A.getMode()),
-        d = (t, r) =>
-            (0, l.jsx)(
-                i.iDA,
+        n = (0, l.bG)([r.A], () => r.A.getMode()),
+        u = (t, l) =>
+            (0, i.jsx)(
+                a.iDA,
                 {
                     id: t,
                     group: "input-modes",
-                    label: r,
+                    label: l,
                     checked: n === t,
-                    action: () =>
-                        a.A.setMode(t, void 0, void 0, {
-                            analyticsLocations: e,
-                        }),
+                    action: () => s.A.setMode(t, void 0, void 0, { analyticsLocations: e }),
                 },
                 t,
             );
     return [
-        d(c.TBI.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOJ)),
-        d(c.TBI.PUSH_TO_TALK, t ? u.intl.string(u.t["1AINrB"]) : u.intl.string(u.t.Q8gkVL)),
+        u(c.TBI.VOICE_ACTIVITY, d.intl.string(d.t.cHCEOJ)),
+        u(c.TBI.PUSH_TO_TALK, t ? d.intl.string(d.t["1AINrB"]) : d.intl.string(d.t.Q8gkVL)),
     ];
 }

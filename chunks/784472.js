@@ -1,24 +1,22 @@
+"use strict";
 function r(e, t) {
-    var n, r, l, c, u;
-    let d,
-        f = null != (n = t.limit) ? n : 1 / 0,
-        p = i(e, null != (r = t.filterPredicates) ? r : []);
+    let n,
+        r = t.limit ?? 1 / 0,
+        l = i(e, t.filterPredicates ?? []);
     return o(
-        (d =
+        (n =
             null != t.bucketPredicates && t.bucketPredicates.length > 0
-                ? f >= p.length
-                    ? s(p, null != (c = t.bucketPredicates) ? c : [])
-                    : a(p, null != (u = t.bucketPredicates) ? u : [], f)
-                : [p]),
-        null != (l = t.sortComparers) ? l : [],
-        f,
-    ).slice(0, f);
+                ? r >= l.length
+                    ? s(l, t.bucketPredicates ?? [])
+                    : a(l, t.bucketPredicates ?? [], r)
+                : [l]),
+        t.sortComparers ?? [],
+        r,
+    ).slice(0, r);
 }
-
 function i(e, t) {
     return e.filter((e) => t.every((t) => t(e)));
 }
-
 function a(e, t, n) {
     let r = [],
         i = e;
@@ -30,7 +28,6 @@ function a(e, t, n) {
     }
     return r;
 }
-
 function s(e, t) {
     let n = Array(t.length)
         .fill(null)
@@ -43,7 +40,6 @@ function s(e, t) {
             }
     return n;
 }
-
 function o(e, t, n) {
     let r = [];
     for (let i of e) {
@@ -52,7 +48,6 @@ function o(e, t, n) {
     }
     return r;
 }
-
 function l(e, t) {
     return e.sort((e, n) => {
         for (let r of t) {
@@ -62,9 +57,4 @@ function l(e, t) {
         return 0;
     });
 }
-n.d(t, {
-    V: () => r,
-}),
-    n(321073),
-    n(896048),
-    n(638769);
+n.d(t, { V: () => r }), n(321073);

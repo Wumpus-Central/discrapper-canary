@@ -41,39 +41,21 @@ e.exports = function (e) {
         r = ["true", "false"],
         i = {
             variants: [
-                {
-                    match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE],
-                },
-                {
-                    match: [/extends/, /\s*\(/, e.IDENT_RE, /\s*\)/],
-                },
+                { match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE] },
+                { match: [/extends/, /\s*\(/, e.IDENT_RE, /\s*\)/] },
             ],
-            scope: {
-                1: "keyword",
-                3: "title.class",
-            },
+            scope: { 1: "keyword", 3: "title.class" },
         };
     return {
         name: "Cap’n Proto",
         aliases: ["capnp"],
-        keywords: {
-            keyword: t,
-            type: n,
-            literal: r,
-        },
+        keywords: { keyword: t, type: n, literal: r },
         contains: [
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE,
             e.HASH_COMMENT_MODE,
-            {
-                className: "meta",
-                begin: /@0x[\w\d]{16};/,
-                illegal: /\n/,
-            },
-            {
-                className: "symbol",
-                begin: /@\d+\b/,
-            },
+            { className: "meta", begin: /@0x[\w\d]{16};/, illegal: /\n/ },
+            { className: "symbol", begin: /@\d+\b/ },
             i,
         ],
     };

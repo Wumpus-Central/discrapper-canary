@@ -1,173 +1,156 @@
-n.d(t, {
-    A: () => I,
-    V: () => y.V,
-}),
-    n(228524),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(735438),
-    o = n.n(s),
-    c = n(311907),
-    u = n(205693),
-    d = n(451988),
-    p = n(990078),
-    f = n(397927),
-    m = n(827343),
-    g = n(765671),
-    y = n(123902),
-    _ = n(430452),
-    b = n(383501),
-    A = n(954571),
-    h = n(652215),
-    v = n(985018),
-    O = n(265891);
-
-function j(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class S extends i.PureComponent {
+i.d(t, { A: () => I, V: () => g.V });
+var n = i(627968),
+    s = i(64700),
+    l = i(503698),
+    a = i.n(l),
+    r = i(735438),
+    o = i.n(r),
+    c = i(311907),
+    u = i(205693),
+    d = i(451988),
+    h = i(990078),
+    m = i(397927),
+    p = i(827343),
+    v = i(765671),
+    g = i(123902),
+    f = i(430452),
+    x = i(383501),
+    _ = i(954571),
+    A = i(652215),
+    T = i(985018),
+    C = i(265891);
+class D extends s.PureComponent {
+    _initTimeout = new d.Ep();
+    _silenceTimeout = new d.Ep();
+    _messageTimeout = new d.Ep();
+    _micTestStartTime;
+    state = { volume: -100, isMicTesting: !1, isDetectingInput: !0, didDeafenUser: !1 };
     componentDidMount() {
         this._initTimeout.start(1e3, this.setupVoiceActivity);
     }
+    setupVoiceActivity = () => {
+        f.A.getMediaEngine().on(u.bg.VoiceActivity, this.handleVoiceActivity);
+    };
     componentWillUnmount() {
         this._initTimeout.stop(),
             this._silenceTimeout.stop(),
             this._micTestStop(),
-            _.A.getMediaEngine().removeListener(u.bg.VoiceActivity, this.handleVoiceActivity);
+            f.A.getMediaEngine().removeListener(u.bg.VoiceActivity, this.handleVoiceActivity);
     }
+    handleVoiceActivity = (e) => {
+        let { isMicTesting: t } = this.state;
+        if (t && e <= -100) {
+            this._silenceTimeout.isStarted() ||
+                this._silenceTimeout.start(2e3, () => {
+                    this.setState({ isDetectingInput: !1 });
+                }),
+                this.setState({ volume: -100 });
+            return;
+        }
+        this._silenceTimeout.stop(), this.setState({ volume: e, isDetectingInput: !0 });
+    };
     _micTestStart() {
         let {
                 isVoiceConnected: e,
                 inputDeviceName: t,
-                inputVolume: n,
-                outputDeviceName: r,
-                outputVolume: i,
+                inputVolume: i,
+                outputDeviceName: n,
+                outputVolume: s,
                 inputMode: l,
                 vadAutoThreshold: a,
-                vadThreshold: s,
+                vadThreshold: r,
                 location: o,
                 isDeafened: c,
             } = this.props,
             u = !1;
-        e && !c && (m.A.toggleSelfDeaf(), (u = !0)),
-            m.A.setLoopback("mic_test", !0),
+        e && !c && (p.A.toggleSelfDeaf(), (u = !0)),
+            p.A.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
-            this.setState({
-                isMicTesting: !0,
-                isDetectingInput: !0,
-                didDeafenUser: u,
-            }),
-            A.default.track(h.HAw.MIC_TESTING_STARTED, {
+            this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: u }),
+            _.default.track(A.HAw.MIC_TESTING_STARTED, {
                 input_device_name: t,
-                input_device_volume: n,
-                output_device_name: r,
-                output_device_volume: i,
+                input_device_volume: i,
+                output_device_name: n,
+                output_device_volume: s,
                 input_mode: l,
                 input_sensitivity_is_automatic: a,
-                input_sensitivity_threshold: Math.round(s),
+                input_sensitivity_threshold: Math.round(r),
                 location: o,
             });
     }
     _micTestStop() {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
-            { isVoiceConnected: n, isDeafened: r } = this.props;
+            { isVoiceConnected: i, isDeafened: n } = this.props;
         t &&
-            (n && r && e && m.A.toggleSelfDeaf(),
-            m.A.setLoopback("mic_test", !1),
-            this.setState({
-                isMicTesting: !1,
-                didDeafenUser: !1,
-            }),
+            (i && n && e && p.A.toggleSelfDeaf(),
+            p.A.setLoopback("mic_test", !1),
+            this.setState({ isMicTesting: !1, didDeafenUser: !1 }),
             null != this._micTestStartTime &&
-                A.default.track(h.HAw.MIC_TESTING_STOPPED, {
+                _.default.track(A.HAw.MIC_TESTING_STOPPED, {
                     testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3),
                 }));
     }
+    handleToggleMicTest = () => {
+        this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
+    };
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
-            { isMicTesting: n, isDetectingInput: i } = this.state;
-        return (0, r.jsx)(f.Text, {
+            { isMicTesting: i, isDetectingInput: s } = this.state;
+        return (0, n.jsx)(m.Text, {
             variant: "text-xs/normal",
             color: "text-subtle",
-            className: O.Qe,
-            children: n ? (i ? e : t) : null,
+            className: C.Qe,
+            children: i ? (s ? e : t) : null,
         });
     }
     render() {
         let {
                 isVoiceConnected: e,
                 title: t,
-                description: n,
-                notchBackground: i,
+                description: i,
+                notchBackground: s,
                 buttonTest: l = "",
-                buttonStop: s = "",
+                buttonStop: r = "",
                 buttonVariant: o = "secondary",
                 isDeafened: c,
                 buttonMinWidth: u,
                 measureButtonRef: d,
-                meterOnly: m = !1,
-                containerClassName: g,
+                meterOnly: p = !1,
+                containerClassName: v,
             } = this.props,
-            { isMicTesting: _, volume: b } = this.state,
-            A = e && !_ ? v.intl.string(v.t["9viE2A"]) : null;
-        _ && e && !c && this._micTestStop();
-        let h = s.length >= l.length ? s : l;
-        return (0, r.jsx)("div", {
-            className: a()(O.kL, g),
-            children: (0, r.jsx)(f.D0$, {
-                label: null != t ? t : void 0,
-                hideLabel: m,
-                description: m ? null : n,
-                children: (0, r.jsxs)("div", {
-                    className: O.ak,
+            { isMicTesting: f, volume: x } = this.state,
+            _ = e && !f ? T.intl.string(T.t["9viE2A"]) : null;
+        f && e && !c && this._micTestStop();
+        let A = r.length >= l.length ? r : l;
+        return (0, n.jsx)("div", {
+            className: a()(C.kL, v),
+            children: (0, n.jsx)(m.D0$, {
+                label: t ?? void 0,
+                hideLabel: p,
+                description: p ? null : i,
+                children: (0, n.jsxs)("div", {
+                    className: C.ak,
                     children: [
-                        !m &&
-                            (0, r.jsxs)(r.Fragment, {
+                        !p &&
+                            (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, r.jsxs)("div", {
-                                        className: O.km,
+                                    (0, n.jsxs)("div", {
+                                        className: C.km,
                                         "aria-hidden": !0,
                                         children: [
-                                            (0, r.jsx)(f.Button, {
-                                                buttonRef: d,
-                                                size: "sm",
-                                                variant: o,
-                                                text: h,
-                                            }),
-                                            (0, r.jsx)("div", {
-                                                className: O.qB,
-                                            }),
+                                            (0, n.jsx)(m.Button, { buttonRef: d, size: "sm", variant: o, text: A }),
+                                            (0, n.jsx)("div", { className: C.qB }),
                                         ],
                                     }),
-                                    (0, r.jsx)(p.m, {
-                                        text: A,
-                                        children: (0, r.jsx)("div", {
-                                            className: O._o,
-                                            style:
-                                                null != u
-                                                    ? {
-                                                          minWidth: u,
-                                                      }
-                                                    : {
-                                                          visibility: "hidden",
-                                                      },
-                                            children: (0, r.jsx)(f.Button, {
+                                    (0, n.jsx)(h.m, {
+                                        text: _,
+                                        children: (0, n.jsx)("div", {
+                                            className: C._o,
+                                            style: null != u ? { minWidth: u } : { visibility: "hidden" },
+                                            children: (0, n.jsx)(m.Button, {
                                                 size: "sm",
                                                 variant: o,
-                                                text: _ ? s : l,
+                                                text: f ? r : l,
                                                 onClick: this.handleToggleMicTest,
                                                 fullWidth: !0,
                                             }),
@@ -175,9 +158,9 @@ class S extends i.PureComponent {
                                     }),
                                 ],
                             }),
-                        (0, r.jsx)(y.A, {
-                            progress: _ || m ? b + 100 : 0,
-                            notchBackground: i,
+                        (0, n.jsx)(g.A, {
+                            progress: f || p ? x + 100 : 0,
+                            notchBackground: s,
                             notchClassName: this.props.notchClassName,
                             children: this.renderCaption(),
                         }),
@@ -186,119 +169,58 @@ class S extends i.PureComponent {
             }),
         });
     }
-    constructor(...e) {
-        super(...e),
-            j(this, "_initTimeout", new d.Ep()),
-            j(this, "_silenceTimeout", new d.Ep()),
-            j(this, "_messageTimeout", new d.Ep()),
-            j(this, "_micTestStartTime", void 0),
-            j(this, "state", {
-                volume: -100,
-                isMicTesting: !1,
-                isDetectingInput: !0,
-                didDeafenUser: !1,
-            }),
-            j(this, "setupVoiceActivity", () => {
-                _.A.getMediaEngine().on(u.bg.VoiceActivity, this.handleVoiceActivity);
-            }),
-            j(this, "handleVoiceActivity", (e) => {
-                let { isMicTesting: t } = this.state;
-                if (t && e <= -100) {
-                    this._silenceTimeout.isStarted() ||
-                        this._silenceTimeout.start(2e3, () => {
-                            this.setState({
-                                isDetectingInput: !1,
-                            });
-                        }),
-                        this.setState({
-                            volume: -100,
-                        });
-                    return;
-                }
-                this._silenceTimeout.stop(),
-                    this.setState({
-                        volume: e,
-                        isDetectingInput: !0,
-                    });
-            }),
-            j(this, "handleToggleMicTest", () => {
-                this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
-            });
-    }
 }
-
 function I(e) {
-    var t, n;
     let {
-            inputDevice: i,
-            outputDevice: l,
-            threshold: a,
-            autoThreshold: s,
-            inputVolume: u,
-            outputVolume: d,
-            inputMode: p,
-            isDeafened: f,
-        } = (0, c.cf)([_.A], () => {
-            let e = _.A.getInputDeviceId(),
-                t = _.A.getInputDevices(),
-                n = o().find(t, (t) => {
-                    let { id: n } = t;
-                    return n === e;
+            inputDevice: t,
+            outputDevice: i,
+            threshold: s,
+            autoThreshold: l,
+            inputVolume: a,
+            outputVolume: r,
+            inputMode: u,
+            isDeafened: d,
+        } = (0, c.cf)([f.A], () => {
+            let e = f.A.getInputDeviceId(),
+                t = f.A.getInputDevices(),
+                i = o().find(t, (t) => {
+                    let { id: i } = t;
+                    return i === e;
                 }),
-                r = _.A.getOutputDeviceId(),
-                i = _.A.getOutputDevices(),
-                l = o().find(i, (e) => {
+                n = f.A.getOutputDeviceId(),
+                s = f.A.getOutputDevices(),
+                l = o().find(s, (e) => {
                     let { id: t } = e;
-                    return t === r;
+                    return t === n;
                 }),
-                { threshold: a, autoThreshold: s } = _.A.getModeOptions(),
-                c = _.A.getInputVolume(),
-                u = _.A.getOutputVolume();
+                { threshold: a, autoThreshold: r } = f.A.getModeOptions(),
+                c = f.A.getInputVolume(),
+                u = f.A.getOutputVolume();
             return {
-                inputDevice: n,
+                inputDevice: i,
                 outputDevice: l,
                 threshold: a,
-                autoThreshold: s,
+                autoThreshold: r,
                 inputVolume: c,
                 outputVolume: u,
-                inputMode: _.A.getMode(),
-                isDeafened: _.A.isSelfDeaf(),
+                inputMode: f.A.getMode(),
+                isDeafened: f.A.isSelfDeaf(),
             };
         }),
-        m = (0, c.bG)([b.A], () => b.A.isConnected()),
-        { ref: y, width: A } = (0, g.Ay)();
-    return (0, r.jsx)(
-        S,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (t) {
-                        j(e, t, n[t]);
-                    });
-            }
-            return e;
-        })(
-            {
-                isVoiceConnected: m,
-                inputVolume: u,
-                outputVolume: d,
-                inputMode: p,
-                isDeafened: f,
-                vadThreshold: a,
-                vadAutoThreshold: s,
-                inputDeviceName: null != (t = null == i ? void 0 : i.name) ? t : "",
-                outputDeviceName: null != (n = null == l ? void 0 : l.name) ? n : "",
-                measureButtonRef: y,
-                buttonMinWidth: A,
-            },
-            e,
-        ),
-    );
+        h = (0, c.bG)([x.A], () => x.A.isConnected()),
+        { ref: m, width: p } = (0, v.Ay)();
+    return (0, n.jsx)(D, {
+        isVoiceConnected: h,
+        inputVolume: a,
+        outputVolume: r,
+        inputMode: u,
+        isDeafened: d,
+        vadThreshold: s,
+        vadAutoThreshold: l,
+        inputDeviceName: t?.name ?? "",
+        outputDeviceName: i?.name ?? "",
+        measureButtonRef: m,
+        buttonMinWidth: p,
+        ...e,
+    });
 }

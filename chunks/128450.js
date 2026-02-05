@@ -1,25 +1,19 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(747238),
-    n(812715),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(397927),
+n.d(t, { A: () => m });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(397927),
     o = n(453771),
     c = n(450232),
     d = n(212168),
     u = n(317448);
-
 function _(e) {
     let { errors: t } = e;
-    return (0, r.jsx)(r.Fragment, {
+    return (0, i.jsx)(i.Fragment, {
         children: t.map((e, t) =>
-            (0, r.jsx)(
-                a.Text,
+            (0, i.jsx)(
+                l.Text,
                 {
                     variant: "text-xs/normal",
                     color: "text-feedback-critical",
@@ -34,57 +28,49 @@ function _(e) {
         ),
     });
 }
-let p = i.forwardRef(function (e, t) {
+let m = s.forwardRef(function (e, t) {
     let {
         title: n,
-        titleIcon: i,
-        titleId: l,
+        titleIcon: s,
+        titleId: r,
         description: o,
-        children: p,
-        className: m,
+        children: m,
+        className: A,
         errors: g,
-        disabled: A = !1,
-        hideDivider: f = !1,
-        showBorder: h = !1,
-        borderType: b,
-        hasBackground: E = !1,
-        forcedDivider: x = !1,
-        showPremiumIcon: O = !1,
+        disabled: E = !1,
+        hideDivider: h = !1,
+        showBorder: p = !1,
+        borderType: C,
+        hasBackground: x = !1,
+        forcedDivider: T = !1,
+        showPremiumIcon: I = !1,
     } = e;
-    return (0, r.jsx)("div", {
-        className: s()(u.fz, m, {
-            [u.r9]: A,
-            [u.Ai]: f,
-            [u.Ac]: h,
-            [u.Cx]: x,
-        }),
+    return (0, i.jsx)("div", {
+        className: a()(u.fz, A, { [u.r9]: E, [u.Ai]: h, [u.Ac]: p, [u.Cx]: T }),
         ref: t,
-        children: (0, r.jsxs)(d.A, {
+        children: (0, i.jsxs)(d.A, {
             className: u.D6,
             backgroundClassName: u.fr,
-            isShown: h,
-            type: b,
-            hasBackground: E,
+            isShown: p,
+            type: C,
+            hasBackground: x,
             children: [
-                (0, r.jsxs)(a.zEo, {
+                (0, i.jsxs)(l.zEo, {
                     className: u.DD,
-                    id: l,
+                    id: r,
                     "data-migration-pending": !0,
-                    children: [n, O && (0, r.jsx)(c.A, {}), i],
+                    children: [n, I && (0, i.jsx)(c.A, {}), s],
                 }),
                 null != o
-                    ? (0, r.jsx)(a.ayl, {
-                          type: a.ayl.Types.DESCRIPTION,
+                    ? (0, i.jsx)(l.ayl, {
+                          type: l.ayl.Types.DESCRIPTION,
                           className: u.yV,
                           "data-migration-pending": !0,
                           children: o,
                       })
                     : null,
-                p,
-                null != g &&
-                    (0, r.jsx)(_, {
-                        errors: g,
-                    }),
+                m,
+                null != g && (0, i.jsx)(_, { errors: g }),
             ],
         }),
     });

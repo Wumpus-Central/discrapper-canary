@@ -1,19 +1,10 @@
-r.d(t, {
-    C: () => u,
-});
+"use strict";
+r.d(t, { C: () => u });
 var n = r(321733),
     o = r(201672);
-
 function i(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
@@ -21,7 +12,6 @@ var a = ["canDrag", "beginDrag", "isDragging", "endDrag"],
     s = ["beginDrag"],
     c = (function () {
         var e;
-
         function t(e, r, n) {
             var o = this;
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
@@ -81,7 +71,6 @@ var a = ["canDrag", "beginDrag", "isDragging", "endDrag"],
             t
         );
     })();
-
 function u(e) {
     return (
         Object.keys(e).forEach(function (t) {

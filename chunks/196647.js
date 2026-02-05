@@ -1,3 +1,2 @@
-e.exports = {
-    M: "guildFeatureAvailabilityIndicator_a10064",
-};
+"use strict";
+e.exports = { M: "guildFeatureAvailabilityIndicator_a10064" };

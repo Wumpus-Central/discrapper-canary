@@ -1,21 +1,18 @@
-n.d(t, {
-    A: () => c,
-});
+n.d(t, { A: () => u });
 var i = n(544420),
-    r = n(684013),
-    l = n(742984),
-    a = n(592598),
-    s = n(581730),
+    l = n(684013),
+    a = n(742984),
+    s = n(592598),
+    r = n(581730),
     o = n(672396),
-    u = n(985018);
-
-function c(e, t, n, c, d) {
-    if (a.A.isNotificationDisabled(o.KS.ActivityInvite) || null == t.activity) return null;
+    d = n(985018);
+function u(e, t, n, u, c) {
+    if (s.A.isNotificationDisabled(o.KS.ActivityInvite) || null == t.activity) return null;
     let h = t.activity.type,
-        p = c.session_id;
-    if (null == p) return null;
-    let { icon: f, title: g, body: m } = (0, l.TB)(e, t, n),
-        { trackView: y, trackClick: A } = (0, s.Y9)(o.KS.ActivityInvite, {
+        A = u.session_id;
+    if (null == A) return null;
+    let { icon: m, title: g, body: p } = (0, a.TB)(e, t, n),
+        { trackView: f, trackClick: _ } = (0, r.Y9)(o.KS.ActivityInvite, {
             notif_type: o.KS.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
@@ -24,29 +21,23 @@ function c(e, t, n, c, d) {
             channel_id: e.id,
             channel_type: e.type,
             activity_type: h,
-            activity_name: c.name,
+            activity_name: u.name,
         });
     return {
-        icon: f,
+        icon: m,
         title: g,
-        body: m,
+        body: p,
         onNotificationShow: () => {
-            y();
+            f();
         },
-        confirmText: u.intl.string(u.t.VJlc0S),
-        onConfirmClick: (l, a) => {
-            i.A.join({
-                userId: n.id,
-                sessionId: p,
-                applicationId: d,
-                channelId: e.id,
-                messageId: t.id,
-            }),
-                r.A.updateNotificationStatus(a),
-                A("join");
+        confirmText: d.intl.string(d.t.VJlc0S),
+        onConfirmClick: (a, s) => {
+            i.A.join({ userId: n.id, sessionId: A, applicationId: c, channelId: e.id, messageId: t.id }),
+                l.A.updateNotificationStatus(s),
+                _("join");
         },
         onDismissClick: () => {
-            A("dismiss");
+            _("dismiss");
         },
     };
 }

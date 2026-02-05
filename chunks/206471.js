@@ -1,6 +1,5 @@
-n.d(t, {
-    O: () => r,
-});
+"use strict";
+n.d(t, { O: () => r });
 let r = [
     "heading-sm/normal",
     "heading-sm/medium",

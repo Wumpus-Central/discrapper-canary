@@ -1,48 +1,39 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(417597),
-    l = n(397927),
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(417597),
+    o = n(397927),
     c = n(287809),
-    u = n(427262),
-    d = n(283900),
-    f = n(975977);
-let p = i.memo((e) => {
-    let { userId: t, subText: n, className: i } = e,
-        a = (0, o.bG)([c.default], () => c.default.getUser(t));
-    return void 0 === a
+    d = n(427262),
+    u = n(283900),
+    _ = n(975977);
+let m = s.memo((e) => {
+    let { userId: t, subText: n, className: s } = e,
+        r = (0, l.bG)([c.default], () => c.default.getUser(t));
+    return void 0 === r
         ? null
-        : (0, r.jsxs)("div", {
-              className: s()(f.k, i),
+        : (0, i.jsxs)("div", {
+              className: a()(_.k, s),
               children: [
-                  (0, r.jsx)(d.H, {
-                      user: a,
-                      avatarSize: l._3J.SIZE_40,
-                  }),
-                  (0, r.jsx)("div", {
-                      children: (0, r.jsxs)("div", {
-                          className: f.$,
+                  (0, i.jsx)(u.H, { user: r, avatarSize: o._3J.SIZE_40 }),
+                  (0, i.jsx)("div", {
+                      children: (0, i.jsxs)("div", {
+                          className: _.$,
                           children: [
-                              (0, r.jsx)(l.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-md/semibold",
                                   color: "interactive-text-active",
-                                  children: u.Ay.getName(a),
+                                  children: d.Ay.getName(r),
                               }),
                               null != n &&
-                                  (0, r.jsx)(l.Text, {
-                                      variant: "text-sm/medium",
-                                      color: "text-subtle",
-                                      children: n,
-                                  }),
+                                  (0, i.jsx)(o.Text, { variant: "text-sm/medium", color: "text-subtle", children: n }),
                           ],
                       }),
                   }),
               ],
           });
 });
-p.displayName = "FamilyCenterActivityUserRow";
-let _ = p;
+m.displayName = "FamilyCenterActivityUserRow";
+let A = m;

@@ -1,115 +1,84 @@
-n.d(t, {
-    w: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { w: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(389544),
     s = n(647307),
     o = n(941861),
     l = n(844222),
-    c = n(460890),
-    u = n(605752),
+    u = n(460890),
+    c = n(605752),
     d = n(270597);
-
-function f(e) {
-    var t, n, a;
+function _(e) {
     let {
-            buffer: f,
-            autoplay: p = !0,
-            className: _,
-            fit: h,
-            alignment: m,
-            style: g,
-            eventTargetRef: E,
-            artboard: y,
-            withReducedMotion: b = "halt",
-            ref: O,
-            artboardProperties: v,
-            dataBinding: A,
-            onDataBindingChange: I,
-            touchScrollEnabled: S = !0,
-            dynamicDataBinding: T,
-            listenOnDocumentBody: C,
-            eventCapture: N,
-            assetLoader: w,
-            onLoad: R,
-            stateMachine: P,
+            buffer: t,
+            autoplay: n = !0,
+            className: a,
+            fit: _,
+            alignment: f,
+            style: p,
+            eventTargetRef: h,
+            artboard: m,
+            withReducedMotion: g = "halt",
+            ref: E,
+            artboardProperties: A,
+            dataBinding: I,
+            onDataBindingChange: T,
+            touchScrollEnabled: y = !0,
+            dynamicDataBinding: S,
+            listenOnDocumentBody: v,
+            eventCapture: C,
+            assetLoader: b,
+            onLoad: N,
+            stateMachine: R,
         } = e,
-        D = i.useContext(l.C),
-        x = (0, o.R)(),
-        L = null != (t = null == (n = (a = (0, c.G9)()).isWindowFocused) ? void 0 : n.call(a)) ? t : x,
-        [j, M] = i.useState(void 0),
-        k = i.useRef(null),
-        { rive: U, RiveComponent: G } = (0, s.useRive)({
-            eventTarget: null == E ? void 0 : E.current,
-            buffer: f,
-            autoplay: p,
-            stateMachines: null != P ? [P] : j,
-            artboard: y,
+        O = i.useContext(l.C),
+        D = (0, o.R)(),
+        L = (0, u.G9)().isWindowFocused?.() ?? D,
+        [w, x] = i.useState(void 0),
+        P = i.useRef(null),
+        { rive: M, RiveComponent: k } = (0, s.useRive)({
+            eventTarget: h?.current,
+            buffer: t,
+            autoplay: n,
+            stateMachines: null != R ? [R] : w,
+            artboard: m,
             useOffscreenRenderer: !0,
             layout: new s.Layout({
-                fit: null != h ? u.i[h] : s.Fit.Cover,
-                alignment: null != m ? u.y[m] : s.Alignment.Center,
+                fit: null != _ ? c.i[_] : s.Fit.Cover,
+                alignment: null != f ? c.y[f] : s.Alignment.Center,
             }),
-            isTouchScrollEnabled: S,
-            listenOnDocumentBody: C,
-            eventCapture: N,
-            assetLoader: w,
-            onLoad: R,
+            isTouchScrollEnabled: y,
+            listenOnDocumentBody: v,
+            eventCapture: C,
+            assetLoader: b,
+            onLoad: N,
         });
     i.useImperativeHandle(
-        O,
+        E,
         () => ({
-            play: () => (null == U ? void 0 : U.play()),
-            pause: () => (null == U ? void 0 : U.pause()),
-            stop: () => (null == U ? void 0 : U.stop()),
-            getProperties: () => {
-                var e, t;
-                return null !=
-                    (e =
-                        null == U || null == (t = U.viewModelInstance)
-                            ? void 0
-                            : t.properties.reduce((e, t) => {
-                                  var n, r, i, a, s;
-                                  return (
-                                      "viewModel" === t.type &&
-                                          (null == U ||
-                                              null == (s = U.viewModelInstance) ||
-                                              null == (a = s.viewModel(t.name)) ||
-                                              a.properties.forEach((n) => {
-                                                  var r, i, a;
-                                                  e[t.name + "/" + n.name] = {
-                                                      type: n.type,
-                                                      value:
-                                                          null == U ||
-                                                          null == (a = U.viewModelInstance) ||
-                                                          null == (i = a[n.type]) ||
-                                                          null == (r = i.call(a, "".concat(t.name, "/").concat(n.name)))
-                                                              ? void 0
-                                                              : r.value,
-                                                  };
-                                              })),
-                                      (e[t.name] = {
-                                          type: t.type,
-                                          value:
-                                              null == U ||
-                                              null == (i = U.viewModelInstance) ||
-                                              null == (r = i[t.type]) ||
-                                              null == (n = r.call(i, t.name))
-                                                  ? void 0
-                                                  : n.value,
-                                      }),
-                                      e
-                                  );
-                              }, {}))
-                    ? e
-                    : {};
-            },
+            play: () => M?.play(),
+            pause: () => M?.pause(),
+            stop: () => M?.stop(),
+            getProperties: () =>
+                M?.viewModelInstance?.properties.reduce(
+                    (e, t) => (
+                        "viewModel" === t.type &&
+                            M?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
+                                e[t.name + "/" + n.name] = {
+                                    type: n.type,
+                                    value: M?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
+                                };
+                            }),
+                        (e[t.name] = { type: t.type, value: M?.viewModelInstance?.[t.type]?.(t.name)?.value }),
+                        e
+                    ),
+                    {},
+                ) ?? {},
             getArtboards: () => {
-                if (null == U) return [];
+                if (null == M) return [];
                 let e = new Set(),
-                    t = U.riveFile.getInstance();
+                    t = M.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let r = t.artboardByIndex(n);
                     e.add(r.name);
@@ -117,95 +86,87 @@ function f(e) {
                 return Array.from(e);
             },
         }),
-        [U],
+        [M],
     ),
         (0, d.J)({
-            rive: U,
-            artboard: y,
-            artboardProperties: v,
-            dataBinding: A,
-            dynamicDataBinding: T,
-            onDataBindingChange: I,
+            rive: M,
+            artboard: m,
+            artboardProperties: A,
+            dataBinding: I,
+            dynamicDataBinding: S,
+            onDataBindingChange: T,
         }),
         i.useEffect(() => {
-            if (null != U && "short-loop" === b && D.reducedMotion.enabled) {
+            if (null != M && "short-loop" === g && O.reducedMotion.enabled) {
                 let e = () => {
-                        U.isPlaying &&
-                            (k.current = setTimeout(() => {
-                                U.pause();
+                        M.isPlaying &&
+                            (P.current = setTimeout(() => {
+                                M.pause();
                             }, 5e3));
                     },
                     t = () => {
-                        clearTimeout(k.current);
+                        clearTimeout(P.current);
                     };
                 return (
-                    U.on(s.EventType.Play, e),
-                    U.on(s.EventType.Pause, t),
-                    U.on(s.EventType.Stop, t),
+                    M.on(s.EventType.Play, e),
+                    M.on(s.EventType.Pause, t),
+                    M.on(s.EventType.Stop, t),
                     () => {
-                        U.off(s.EventType.Play, e), U.off(s.EventType.Pause, t), U.off(s.EventType.Stop, t);
+                        M.off(s.EventType.Play, e), M.off(s.EventType.Pause, t), M.off(s.EventType.Stop, t);
                     }
                 );
             }
-        }, [U, b, D.reducedMotion.enabled]),
+        }, [M, g, O.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
-            if (null != U && "layout" === h) {
-                U.resizeDrawingSurfaceToCanvas();
+            if (null != M && "layout" === _) {
+                M.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != U.canvas && U.resizeDrawingSurfaceToCanvas();
+                    null != M.canvas && M.resizeDrawingSurfaceToCanvas();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [U, h]),
+        }, [M, _]),
         i.useEffect(() => {
-            null != U &&
-                null == j &&
-                null == P &&
-                (M(U.stateMachineNames),
-                U.reset({
-                    stateMachines: U.stateMachineNames,
-                    autoplay: p,
-                    artboard: y,
-                    autoBind: !0,
-                }),
-                U.setupRiveListeners());
-        }, [U, p, j, y, P]);
-    let V = i.useRef(0);
+            null != M &&
+                null == w &&
+                null == R &&
+                (x(M.stateMachineNames),
+                M.reset({ stateMachines: M.stateMachineNames, autoplay: n, artboard: m, autoBind: !0 }),
+                M.setupRiveListeners());
+        }, [M, n, w, m, R]);
+    let U = i.useRef(0);
     i.useEffect(() => {
-        if (null == U) return;
+        if (null == M) return;
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((V.current = t.data),
+                ((U.current = t.data),
                 t.data > 0 &&
-                    ("halt" === b && D.reducedMotion.enabled && U.isPlaying && U.pause(),
-                    U.off(s.EventType.Advance, e)));
+                    ("halt" === g && O.reducedMotion.enabled && M.isPlaying && M.pause(),
+                    M.off(s.EventType.Advance, e)));
         };
         return (
-            U.on(s.EventType.Advance, e),
-            p && U.play(),
+            M.on(s.EventType.Advance, e),
+            n && M.play(),
             () => {
-                U.off(s.EventType.Advance, e);
+                M.off(s.EventType.Advance, e);
             }
         );
-    }, [U, D.reducedMotion.enabled, b, p]);
-    let F = i.useRef(!1);
+    }, [M, O.reducedMotion.enabled, g, n]);
+    let G = i.useRef(!1);
     return (
         i.useEffect(() => {
-            if (null != U)
+            if (null != M)
                 return (
-                    !L && F.current && U.isPlaying && V.current > 0
-                        ? U.pause()
-                        : L && !U.isPlaying && F.current && U.play(),
+                    !L && G.current && M.isPlaying && U.current > 0
+                        ? M.pause()
+                        : L && !M.isPlaying && G.current && M.play(),
                     () => {
-                        null != U && L && (F.current = null != U.frameRequestId);
+                        null != M && L && (G.current = null != M.frameRequestId);
                     }
                 );
-        }, [U, L]),
-        (0, r.jsx)(G, {
-            className: _,
-            style: g,
-        })
+        }, [M, L]),
+        (0, r.jsx)(k, { className: a, style: p })
     );
 }
 s.RuntimeLoader.setWasmUrl(a);

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     td: "shopViewWrapper__6db1d",
     RK: "visible__6db1d",

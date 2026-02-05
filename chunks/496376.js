@@ -1,24 +1,16 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => c });
+var i = n(627968),
+    l = n(64700),
     a = n(311907),
-    s = n(397927),
-    o = n(974875),
-    l = n(900819),
-    c = n(985018);
-
-function u(e) {
+    r = n(397927),
+    s = n(974875),
+    o = n(900819),
+    d = n(985018);
+function c(e) {
     let { messageId: t, channelId: n } = e,
-        u = (0, a.bG)([l.A], () => l.A.canSubmitFpReport(t)),
-        d = i.useCallback(() => {
-            (0, o.Q)(n, t);
+        c = (0, a.bG)([o.A], () => o.A.canSubmitFpReport(t)),
+        u = l.useCallback(() => {
+            (0, s.Q)(n, t);
         }, [n, t]);
-    return (0, r.jsx)(s.Button, {
-        variant: "secondary",
-        text: c.intl.string(c.t["4q1Elf"]),
-        onClick: d,
-        disabled: !u,
-    });
+    return (0, i.jsx)(r.Button, { variant: "secondary", text: d.intl.string(d.t["4q1Elf"]), onClick: u, disabled: !c });
 }

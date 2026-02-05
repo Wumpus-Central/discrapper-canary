@@ -1,132 +1,94 @@
-n.d(t, {
-    A: () => P,
-}),
-    n(896048);
+n.d(t, { A: () => w });
 var a = n(627968),
-    l = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(735438),
-    o = n.n(s),
-    c = n(681154),
-    d = n(306264),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(735438),
+    o = n.n(r),
+    d = n(681154),
+    c = n(306264),
     u = n(311907),
     m = n(506774),
-    p = n(397927),
-    h = n(73153),
-    x = n(587895),
+    h = n(397927),
+    x = n(73153),
+    p = n(587895),
     g = n(429913),
-    f = n(303054),
-    b = n(409626),
+    _ = n(303054),
+    f = n(409626),
     v = n(692969),
-    j = n(760751),
-    _ = n(403362),
-    y = n(603047),
-    A = n(435738),
-    C = n(99753),
-    S = n(868068),
-    O = n(476398),
-    T = n(405311),
+    b = n(760751),
+    j = n(403362),
+    A = n(603047),
+    C = n(435738),
+    S = n(99753),
+    T = n(868068),
+    y = n(476398),
+    N = n(405311),
     E = n(424994),
-    N = n(750100),
-    w = n(661251);
-let I = [
+    I = n(750100),
+    k = n(661251);
+let R = [
     {
         key: "type",
-        cellClassName: i()(N.Hn, N.T$),
+        cellClassName: l()(I.Hn, I.T$),
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(p.Text, {
-                variant: "text-md/semibold",
-                children: c.ContentInventoryEntryType[t],
-            });
+            return (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: d.ContentInventoryEntryType[t] });
         },
     },
     {
         key: "count",
-        cellClassName: i()(N.Hn, N.MX),
+        cellClassName: l()(I.Hn, I.MX),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
-                children: (0, a.jsx)(p.Text, {
-                    variant: "text-md/normal",
-                    children: t.length,
-                }),
+                children: (0, a.jsx)(h.Text, { variant: "text-md/normal", children: t.length }),
             });
         },
     },
     {
         key: "only?",
-        cellClassName: N.Hn,
+        cellClassName: I.Hn,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(k, {
-                type: t,
-            });
+            return (0, a.jsx)(O, { type: t });
         },
     },
 ];
-
-function k(e) {
-    var t, n;
-    let { type: l } = e,
-        r = (0, u.bG)([C.A], () => C.A.getFilters()),
-        i = null != (t = null == r || null == (n = r.types) ? void 0 : n.has(l)) && t;
-    return (0, a.jsx)(p.dOG, {
-        checked: i,
+function O(e) {
+    let { type: t } = e,
+        n = (0, u.bG)([S.A], () => S.A.getFilters()),
+        s = n?.types?.has(t) ?? !1;
+    return (0, a.jsx)(h.dOG, {
+        checked: s,
         onChange: function () {
-            i
-                ? h.h.dispatch({
-                      type: "CONTENT_INVENTORY_SET_FILTERS",
-                      filters: void 0,
-                  })
-                : h.h.dispatch({
-                      type: "CONTENT_INVENTORY_SET_FILTERS",
-                      filters: {
-                          types: new Set([l]),
-                      },
-                  });
+            s
+                ? x.h.dispatch({ type: "CONTENT_INVENTORY_SET_FILTERS", filters: void 0 })
+                : x.h.dispatch({ type: "CONTENT_INVENTORY_SET_FILTERS", filters: { types: new Set([t]) } });
         },
     });
 }
-
-function P() {
-    var e, t, n;
-    let r,
-        i = (0, u.bG)([C.A], () => C.A.getFeed(E.X1.GLOBAL_FEED)),
-        s = (0, u.bG)([C.A], () => C.A.getDebugImpressionCappingDisabled()),
-        c = (0, u.bG)([A.A], () => A.A.getDebugFastImpressionCappingEnabled()),
-        k =
-            ((n = null == i || null == (t = i.entries) ? void 0 : t.map((e) => e.content)),
-            Object.keys((r = o().groupBy(n, (e) => e.content_type))).map((e) => {
-                let t = r[e];
-                return {
-                    key: "".concat(e),
-                    type: t[0].content_type,
-                    entries: t,
-                };
+function w() {
+    var e;
+    let t,
+        n = (0, u.bG)([S.A], () => S.A.getFeed(E.X1.GLOBAL_FEED)),
+        i = (0, u.bG)([S.A], () => S.A.getDebugImpressionCappingDisabled()),
+        l = (0, u.bG)([C.A], () => C.A.getDebugFastImpressionCappingEnabled()),
+        r =
+            ((e = n?.entries?.map((e) => e.content)),
+            Object.keys((t = o().groupBy(e, (e) => e.content_type))).map((e) => {
+                let n = t[e];
+                return { key: `${e}`, type: n[0].content_type, entries: n };
             })),
-        P = (0, u.bG)([C.A], () => {
-            var e;
-            return (null == (e = C.A.getFeedState(E.X1.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
-        }),
-        [D, M] = l.useState(""),
-        L = (0, u.bG)([j.A, x.A], () => {
-            var e, t, n;
-            return parseInt(D) > 0
-                ? D
-                : null != (e = null == (t = j.A.getGameByName(D)) ? void 0 : t.id)
-                  ? e
-                  : null == (n = x.A.getApplicationByName(D))
-                    ? void 0
-                    : n.id;
-        }, [D]),
-        U = (0, v.A)({
-            applicationId: L,
-            location: "DevToolsContentInventory",
-            source: b.Ob.DevTools,
-        }),
-        B = Object.entries(null != (e = m.w.get("GameProfileModal")) ? e : {})
+        d = (0, u.bG)([S.A], () => S.A.getFeedState(E.X1.GLOBAL_FEED)?.loading === !0),
+        [O, w] = s.useState(""),
+        M = (0, u.bG)(
+            [b.A, p.A],
+            () => (parseInt(O) > 0 ? O : (b.A.getGameByName(O)?.id ?? p.A.getApplicationByName(O)?.id)),
+            [O],
+        ),
+        P = (0, v.A)({ applicationId: M, location: "DevToolsContentInventory", source: f.Ob.DevTools }),
+        L = Object.entries(m.w.get("GameProfileModal") ?? {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -135,147 +97,109 @@ function P() {
                 let [t] = e;
                 return t;
             }),
-        G = (0, g.A)(B).filter(_.Vq),
-        F = (0, u.bG)([y.A], () => y.A.getFakeGameToShow());
+        U = (0, g.A)(L).filter(j.Vq),
+        B = (0, u.bG)([A.A], () => A.A.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: w.nd,
-        children: (0, a.jsxs)(p.IpV, {
-            className: N.Qs,
+        className: k.nd,
+        children: (0, a.jsxs)(h.IpV, {
+            className: I.Qs,
             children: [
-                (0, a.jsxs)(p.BJc, {
+                (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(p.Text, {
-                            variant: "text-md/semibold",
-                            children: "Inventory",
-                        }),
-                        k.length > 0 &&
-                            (0, a.jsx)(f.A, {
-                                columns: I,
-                                data: k,
-                            }),
-                        (0, a.jsx)(T.A, {}),
-                        (0, a.jsx)(p.Button, {
+                        (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Inventory" }),
+                        r.length > 0 && (0, a.jsx)(_.A, { columns: R, data: r }),
+                        (0, a.jsx)(N.A, {}),
+                        (0, a.jsx)(h.Button, {
                             variant: "primary",
                             text: "Refresh Now",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({
+                                x.h.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
                                     feedId: E.X1.GLOBAL_FEED,
-                                    feature: d.M.INBOX,
+                                    feature: c.M.INBOX,
                                 });
                             },
-                            loading: P,
+                            loading: d,
                         }),
                     ],
                 }),
-                (0, a.jsxs)(p.BJc, {
+                (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(p.Text, {
-                            variant: "text-md/semibold",
-                            children: "Impression Capping",
-                        }),
-                        (0, a.jsx)(p.Button, {
+                        (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Impression Capping" }),
+                        (0, a.jsx)(h.Button, {
                             variant: "primary",
                             text: "Clear Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({
-                                    type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS",
-                                });
+                                x.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS" });
                             },
                         }),
-                        (0, a.jsx)(p.Button, {
+                        (0, a.jsx)(h.Button, {
                             variant: "primary",
                             text: "Log Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({
-                                    type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS",
-                                });
+                                x.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS" });
                             },
                         }),
-                        (0, a.jsx)(p.Button, {
+                        (0, a.jsx)(h.Button, {
                             variant: "primary",
-                            text: s ? "Enable Impression Capping" : "Disable Impression Capping",
+                            text: i ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({
-                                    type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING",
-                                });
+                                x.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
                             },
                         }),
-                        (0, a.jsx)(p.Button, {
+                        (0, a.jsx)(h.Button, {
                             variant: "primary",
-                            text: c ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
+                            text: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({
-                                    type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING",
-                                });
+                                x.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
                             },
                         }),
                     ],
                 }),
                 !1,
-                (0, a.jsx)(O.A, {}),
-                (0, a.jsxs)(p.BJc, {
+                (0, a.jsx)(y.A, {}),
+                (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(p.Text, {
-                            variant: "text-md/semibold",
-                            children: "Game Profile",
-                        }),
-                        (0, a.jsx)(p.ksK, {
+                        (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Game Profile" }),
+                        (0, a.jsx)(h.ksK, {
                             placeholder: "App ID or full name",
-                            onChange: (e) => (0 === e.length || e.length >= 18) && M(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && w(e),
                             onKeyDown: (e) => {
-                                "Enter" === e.key &&
-                                    (D === e.currentTarget.value ? null == U || U(e) : M(e.currentTarget.value));
+                                "Enter" === e.key && (O === e.currentTarget.value ? P?.(e) : w(e.currentTarget.value));
                             },
                             error:
-                                D.length > 0 && null == U
-                                    ? "No game profile for ".concat(null != L ? L : D + " - try by id", ".")
-                                    : void 0,
-                            helperText: null != U ? "Game profile found" : void 0,
+                                O.length > 0 && null == P ? `No game profile for ${M ?? O + " - try by id"}.` : void 0,
+                            helperText: null != P ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
-                            children: G.map((e) =>
+                            children: U.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    {
-                                        children: (0, a.jsx)(R, {
-                                            application: e,
-                                        }),
-                                    },
-                                    "follow-game-".concat(e.id),
+                                    { children: (0, a.jsx)(D, { application: e }) },
+                                    `follow-game-${e.id}`,
                                 ),
                             ),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(p.BJc, {
+                (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(p.Text, {
-                            variant: "text-md/semibold",
-                            children: "Activity Sharing",
-                        }),
-                        (0, a.jsx)(p.l6P, {
+                        (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Activity Sharing" }),
+                        (0, a.jsx)(h.l6P, {
                             label: "Force show game",
-                            options: S.K.map((e) => ({
-                                label: e,
-                                value: e,
-                                id: e,
-                            })),
-                            value: F,
+                            options: T.K.map((e) => ({ label: e, value: e, id: e })),
+                            value: B,
                             onSelectionChange: function (e) {
-                                h.h.dispatch({
-                                    type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",
-                                    gameToShow: e,
-                                });
+                                x.h.dispatch({ type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING", gameToShow: e });
                             },
                             selectionMode: "single",
                             fullWidth: !0,
@@ -286,19 +210,11 @@ function P() {
         }),
     });
 }
-let R = (e) => {
+let D = (e) => {
     let { application: t } = e,
-        n = (0, v.A)({
-            applicationId: t.id,
-            location: "DevToolsContentInventory",
-            source: b.Ob.DevTools,
-        });
-    return (0, a.jsx)(p.DUT, {
+        n = (0, v.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: f.Ob.DevTools });
+    return (0, a.jsx)(h.DUT, {
         onClick: n,
-        children: (0, a.jsx)(p.Text, {
-            variant: "text-xs/normal",
-            color: "text-muted",
-            children: t.name,
-        }),
+        children: (0, a.jsx)(h.Text, { variant: "text-xs/normal", color: "text-muted", children: t.name }),
     });
 };

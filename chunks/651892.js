@@ -1,112 +1,92 @@
+"use strict";
 n.d(t, {
     JM: () => d,
-    Js: () => p,
+    Js: () => f,
     Jx: () => g,
     Xm: () => E,
-    YT: () => u,
+    YT: () => c,
     fx: () => h,
-    oK: () => y,
-    up: () => _,
-    wr: () => f,
-    xv: () => b,
-}),
-    n(65821);
+    oK: () => I,
+    up: () => p,
+    wr: () => _,
+    xv: () => A,
+});
 var r = n(957565),
     i = n(723702),
-    a = n(216456),
-    s = n(341915),
+    a = n(341915),
+    s = n(561844),
     o = n(261331),
     l = n(654487),
-    c = n(985018);
-
-function u(e) {
-    var t, n;
-    let { quest: r, taskDetails: i, thirdPartyTaskDetails: a } = e;
-    if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return c.intl.string(c.t.BzFeTF);
-    if ((null == (n = r.userStatus) ? void 0 : n.enrolledAt) != null) {
-        let { percentComplete: e } = i,
-            t = null != a ? a.percentComplete : e;
+    u = n(985018);
+function c(e) {
+    let { quest: t, taskDetails: n, thirdPartyTaskDetails: r } = e;
+    if (t.userStatus?.completedAt != null) return u.intl.string(u.t.BzFeTF);
+    if (t.userStatus?.enrolledAt != null) {
+        let { percentComplete: e } = n,
+            t = null != r ? r.percentComplete : e;
         return t >= 0.75
-            ? c.intl.string(c.t.gvCR4H)
+            ? u.intl.string(u.t.gvCR4H)
             : t >= 0.45 && t <= 0.55
-              ? c.intl.string(c.t.JNx8sG)
+              ? u.intl.string(u.t.JNx8sG)
               : t > 0
-                ? c.intl.string(c.t.JMbfnc)
-                : c.intl.string(c.t["7e5k7L"]);
+                ? u.intl.string(u.t.JMbfnc)
+                : u.intl.string(u.t["7e5k7L"]);
     }
-    return c.intl.formatToPlainString(c.t.EQa7os, {
-        questName: r.config.messages.questName,
-    });
+    return u.intl.formatToPlainString(u.t.EQa7os, { questName: t.config.messages.questName });
 }
-
 function d(e) {
     let { isTargetedDisclosure: t, isVideoQuest: n, gamePublisher: r, gameTitle: i, cosponsorName: a } = e;
     return t
         ? null == a
-            ? c.intl.formatToPlainString(c.t.Piihy1, {
-                  gamePublisher: r,
-              })
-            : c.intl.formatToPlainString(c.t.DV47Gy, {
-                  gamePublisher: r,
-                  cosponsorName: a,
-              })
-        : n && "en-US" === c.intl.currentLocale
-          ? c.intl.formatToPlainString(c.t.zDHY3s, {
-                gamePublisher: r,
-            })
-          : c.intl.formatToPlainString(c.t.euizJY, {
-                gamePublisher: r,
-                gameTitle: i,
-            });
+            ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: r })
+            : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: r, cosponsorName: a })
+        : n && "en-US" === u.intl.currentLocale
+          ? u.intl.formatToPlainString(u.t.zDHY3s, { gamePublisher: r })
+          : u.intl.formatToPlainString(u.t.euizJY, { gamePublisher: r, gameTitle: i });
 }
-
-function f(e) {
+function _(e) {
     return e.config.ctaConfig.buttonLabel;
 }
-
-function p(e) {
+function f(e) {
     switch (e) {
         case l.kL.SUGGESTED:
-            return c.intl.string(c.t.gBfXPZ);
+            return u.intl.string(u.t.gBfXPZ);
         case l.kL.MOST_RECENT:
-            return c.intl.string(c.t.K6oEu2);
+            return u.intl.string(u.t.K6oEu2);
         case l.kL.EXPIRING_SOON:
-            return c.intl.string(c.t.IB22n3);
+            return u.intl.string(u.t.IB22n3);
         case l.kL.RECENTLY_ENROLLED:
-            return c.intl.string(c.t["BB+2tX"]);
+            return u.intl.string(u.t["BB+2tX"]);
     }
 }
-
-function _(e) {
+function p(e) {
     switch (e) {
         case l.BQ.VIRTUAL_CURRENCY:
-            return c.intl.string(c.t.ElYQFS);
+            return u.intl.string(u.t.ElYQFS);
         case l.BQ.COLLECTIBLE:
-            return c.intl.string(c.t.Jg17Ut);
+            return u.intl.string(u.t.Jg17Ut);
         case l.BQ.IN_GAME:
-            return c.intl.string(c.t["O/J2kr"]);
+            return u.intl.string(u.t["O/J2kr"]);
         case l.Pc.VIDEO:
-            return c.intl.string(c.t.e0iISA);
+            return u.intl.string(u.t.e0iISA);
         case l.Pc.PLAY:
-            return c.intl.string(c.t["1nJR4p"]);
+            return u.intl.string(u.t["1nJR4p"]);
     }
 }
-
 function h(e) {
     switch (e) {
         case "reward":
-            return c.intl.string(c.t.vjLqAU);
+            return u.intl.string(u.t.vjLqAU);
         case "task":
-            return c.intl.string(c.t.Hufmss);
+            return u.intl.string(u.t.Hufmss);
     }
 }
-let m = (e) => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
-
+let m = (e) => `${location.protocol}//${location.host}/quests/${e}`;
 function g(e) {
     return e.ctaConfig.link;
 }
 let E = (e, t) => {
-    (0, a.Y5)({
+    (0, s.Y5)({
         questId: e,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -116,18 +96,17 @@ let E = (e, t) => {
     }),
         (0, r.C)(m(e));
 };
-
-function b(e) {
-    if (0 === e.rewardsConfig.rewards.length) throw Error("Quest ".concat(e.id, " has no rewards configured"));
+function A(e) {
+    if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }
-let y = (e) => {
+let I = (e) => {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t
-        ? n === o.Q6.PAUSED && r === s.Yg.LOST_FOCUS
-            ? c.intl.string(c.t["U7Xrb+"])
+        ? n === o.Q6.PAUSED && r === a.Yg.LOST_FOCUS
+            ? u.intl.string(u.t["U7Xrb+"])
             : null
         : (0, i.isWeb)()
-          ? c.intl.string(c.t["E1du/q"])
-          : c.intl.string(c.t["rStN/7"]);
+          ? u.intl.string(u.t["E1du/q"])
+          : u.intl.string(u.t["rStN/7"]);
 };

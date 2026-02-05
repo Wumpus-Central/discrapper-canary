@@ -1,6 +1,5 @@
-n.d(t, {
-    F: () => s,
-});
+"use strict";
+n.d(t, { F: () => o });
 var r = n(945810),
     i = n(128319);
 let a = {
@@ -14,64 +13,21 @@ let a = {
         max_output_noise_level_dbfs: -50,
         fixed_gain_db: 0,
     },
-    o = (0, r.mj)({
+    s = (0, r.mj)({
         kind: "user",
         name: "2025-09-agc2-v2",
-        defaultConfig: {
-            noiseCancellationDuringProcessing: !1,
-            noiseCancellationConfig: {
-                useAGC2: !1,
-            },
-        },
+        defaultConfig: { noiseCancellationDuringProcessing: !1, noiseCancellationConfig: { useAGC2: !1 } },
         variations: {
-            1: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: {
-                    useAGC2: !1,
-                },
-            },
-            2: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: a,
-                vadKrispActivationThreshold: 0.5,
-            },
-            3: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: a,
-                vadKrispActivationThreshold: 0.7,
-            },
-            4: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: a,
-                vadKrispActivationThreshold: 0.8,
-            },
-            5: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: a,
-                vadKrispActivationThreshold: 0.9,
-            },
-            6: {
-                noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: a,
-                vadKrispActivationThreshold: 0.95,
-            },
+            1: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: { useAGC2: !1 } },
+            2: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.5 },
+            3: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.7 },
+            4: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.8 },
+            5: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.9 },
+            6: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.95 },
         },
     });
-
-function s(e) {
+function o(e) {
     let { location: t, disable: n = !1 } = e,
-        { isInHoldout: r } = i.p.getCurrentConfig(
-            {
-                location: t,
-            },
-            {
-                disable: n,
-                autoTrackExposure: !0,
-            },
-        );
-    return r || n
-        ? o.definition.defaultConfig
-        : o.getConfig({
-              location: t,
-          });
+        { isInHoldout: r } = i.p.getCurrentConfig({ location: t }, { disable: n, autoTrackExposure: !0 });
+    return r || n ? s.definition.defaultConfig : s.getConfig({ location: t });
 }

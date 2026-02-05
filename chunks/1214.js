@@ -1,29 +1,27 @@
-var r = n(954055),
-    i = n(869639),
-    a = n(410475);
-e.exports = function (e) {
-    var t,
-        n,
-        s = e.getSelection();
-    if (!s.isCollapsed()) return e;
-    var o = s.getAnchorOffset();
-    if (0 === o) return e;
-    var l = s.getAnchorKey(),
-        c = e.getCurrentContent(),
-        u = c.getBlockForKey(l).getLength();
-    if (u <= 1) return e;
-    o === u
-        ? ((t = s.set("anchorOffset", o - 1)), (n = s))
-        : (n = (t = s.set("focusOffset", o + 1)).set("anchorOffset", o + 1));
-    var d = a(c, t),
-        f = r.removeRange(c, t, "backward"),
-        p = f.getSelectionAfter(),
-        _ = p.getAnchorOffset() - 1,
-        h = p.merge({
-            anchorOffset: _,
-            focusOffset: _,
-        }),
-        m = r.replaceWithFragment(f, h, d),
-        g = i.push(e, m, "insert-fragment");
-    return i.acceptSelection(g, n);
+"use strict";
+var n = r(954055),
+    i = r(869639),
+    o = r(410475);
+t.exports = function (t) {
+    var e,
+        r,
+        a = t.getSelection();
+    if (!a.isCollapsed()) return t;
+    var s = a.getAnchorOffset();
+    if (0 === s) return t;
+    var u = a.getAnchorKey(),
+        c = t.getCurrentContent(),
+        l = c.getBlockForKey(u).getLength();
+    if (l <= 1) return t;
+    s === l
+        ? ((e = a.set("anchorOffset", s - 1)), (r = a))
+        : (r = (e = a.set("focusOffset", s + 1)).set("anchorOffset", s + 1));
+    var f = o(c, e),
+        p = n.removeRange(c, e, "backward"),
+        h = p.getSelectionAfter(),
+        d = h.getAnchorOffset() - 1,
+        g = h.merge({ anchorOffset: d, focusOffset: d }),
+        y = n.replaceWithFragment(p, g, f),
+        v = i.push(t, y, "insert-fragment");
+    return i.acceptSelection(v, r);
 };

@@ -1,21 +1,9 @@
-n.d(t, {
-    $7: () => l,
-    $r: () => u,
-    OX: () => a,
-    __: () => c,
-    bX: () => d,
-    is: () => s,
-    lQ: () => i,
-    n4: () => o,
-});
+"use strict";
+n.d(t, { $7: () => l, $r: () => c, OX: () => a, __: () => u, bX: () => d, is: () => s, lQ: () => i, n4: () => o });
 var r = n(476575),
     i = function () {},
     a = function (e, t, n) {
-        return Object.defineProperty(e, t, {
-            value: n,
-            writable: !0,
-            configurable: !0,
-        });
+        return Object.defineProperty(e, t, { value: n, writable: !0, configurable: !0 });
     },
     s = {
         arr: Array.isArray,
@@ -35,7 +23,6 @@ var r = n(476575),
             return void 0 === e;
         },
     };
-
 function o(e, t) {
     if (s.arr(e)) {
         if (!s.arr(t) || e.length !== t.length) return !1;
@@ -47,20 +34,19 @@ function o(e, t) {
 var l = function (e) {
         return s.str(e) && ("#" == e[0] || /\d/.test(e) || !!(r.colorNames && r.colorNames[e]));
     },
-    c = function (e, t, n) {
+    u = function (e, t, n) {
         s.fun(e.forEach)
             ? e.forEach(t, n)
             : Object.keys(e).forEach(function (r) {
                   return t.call(n, e[r], r);
               });
     },
-    u = function (e) {
+    c = function (e) {
         return s.und(e) ? [] : s.arr(e) ? e : [e];
     };
-
 function d(e, t) {
     if (e.size) {
         var n = Array.from(e);
-        e.clear(), c(n, t);
+        e.clear(), u(n, t);
     }
 }

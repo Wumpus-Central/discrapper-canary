@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     let n = t.style;
     if (!n) return;
@@ -15,12 +16,10 @@ function r(e, t) {
                   n.setProperty(i, a, r.getPropertyPriority(i));
           });
 }
-
 function i(e, t) {
     isInstanceOfElement(e, HTMLTextAreaElement) && (t.innerHTML = e.value),
         isInstanceOfElement(e, HTMLInputElement) && t.setAttribute("value", e.value);
 }
-
 function a(e, t) {
     if (isInstanceOfElement(e, HTMLSelectElement)) {
         let n = Array.from(t.children).find((t) => e.value === t.getAttribute("value"));

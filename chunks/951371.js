@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -20,61 +19,14 @@ t(697509)(r, "__esModule", {
         },
         relatedConcepts: [
             {
-                concept: {
-                    attributes: [
-                        {
-                            constraints: [">1"],
-                            name: "size",
-                        },
-                        {
-                            name: "multiple",
-                        },
-                    ],
-                    name: "select",
-                },
+                concept: { attributes: [{ constraints: [">1"], name: "size" }, { name: "multiple" }], name: "select" },
                 module: "HTML",
             },
-            {
-                concept: {
-                    attributes: [
-                        {
-                            constraints: [">1"],
-                            name: "size",
-                        },
-                    ],
-                    name: "select",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "multiple",
-                        },
-                    ],
-                    name: "select",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    name: "datalist",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    name: "list",
-                },
-                module: "ARIA",
-            },
-            {
-                concept: {
-                    name: "select",
-                },
-                module: "XForms",
-            },
+            { concept: { attributes: [{ constraints: [">1"], name: "size" }], name: "select" }, module: "HTML" },
+            { concept: { attributes: [{ name: "multiple" }], name: "select" }, module: "HTML" },
+            { concept: { name: "datalist" }, module: "HTML" },
+            { concept: { name: "list" }, module: "ARIA" },
+            { concept: { name: "select" }, module: "XForms" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

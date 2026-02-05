@@ -1,15 +1,12 @@
-n.d(t, {
-    A: () => s,
-});
+n.d(t, { A: () => s });
 var l = n(627968),
     r = n(64700),
     a = n(397927),
     i = n(876989);
-
 function s(e) {
-    let { onPageChange: t, offset: n, totalCount: s, pageSize: o, renderPageWrapper: c } = e,
+    let { onPageChange: t, offset: n, totalCount: s, pageSize: o, renderPageWrapper: E } = e,
         u = Math.floor(n / o) + 1,
-        E = r.useCallback(
+        c = r.useCallback(
             (e) => {
                 t(e - 1);
             },
@@ -21,9 +18,9 @@ function s(e) {
             currentPage: u,
             totalCount: s,
             pageSize: o,
-            onPageChange: E,
+            onPageChange: c,
             maxVisiblePages: 5,
-            renderPageWrapper: c,
+            renderPageWrapper: E,
         }),
     });
 }

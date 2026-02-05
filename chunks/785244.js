@@ -1,3 +1,2 @@
-e.exports = {
-    k: "ca8fe7627fbda2da",
-};
+"use strict";
+e.exports = { k: "container_c8c710" };

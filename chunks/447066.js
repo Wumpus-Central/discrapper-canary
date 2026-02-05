@@ -1,142 +1,103 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(228524);
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    l = n.n(r),
+var l = n(503698),
+    s = n.n(l),
     a = n(990078),
-    s = n(397927),
+    r = n(397927),
     o = n(985018),
-    c = n(571316);
-
-function d(e) {
+    d = n(571316);
+function c(e) {
     let {
         name: t,
         description: n,
-        icon: r,
-        imageSrc: d,
+        icon: l,
+        imageSrc: c,
         iconBackgroundColor: u,
-        iconClassName: b,
-        iconWrapperClassName: f,
-        details: p,
-        detailsClassName: m,
-        isHeader: g,
-        isPremium: h,
-        children: x,
+        iconClassName: m,
+        iconWrapperClassName: g,
+        details: x,
+        detailsClassName: h,
+        isHeader: p,
+        isPremium: A,
+        children: b,
     } = e;
-    return (0, i.jsxs)(s.BJc, {
+    return (0, i.jsxs)(r.BJc, {
         direction: "horizontal",
         fullWidth: !0,
         gap: 16,
         children: [
-            null != r || null != d
-                ? (function (e, t, n, r, a) {
-                      if (null != t)
-                          return (0, i.jsx)("img", {
-                              alt: "",
-                              src: t,
-                              className: l()(c.P0, r),
-                          });
-                      let s = null;
+            null != l || null != c
+                ? (function (e, t, n, l, a) {
+                      if (null != t) return (0, i.jsx)("img", { alt: "", src: t, className: s()(d.P0, l) });
+                      let r = null;
                       return (
                           null != e &&
-                              (s =
+                              (r =
                                   "string" == typeof e
-                                      ? (0, i.jsx)("img", {
-                                            alt: "",
-                                            src: e,
-                                            className: l()(c.Kk, r),
-                                        })
-                                      : (0, i.jsx)(e, {
-                                            className: l()(c.Kk, r),
-                                            color: "currentColor",
-                                        })),
-                          (0, i.jsx)("div", {
-                              style: {
-                                  backgroundColor: n,
-                              },
-                              className: l()(c.P0, a),
-                              children: s,
-                          })
+                                      ? (0, i.jsx)("img", { alt: "", src: e, className: s()(d.Kk, l) })
+                                      : (0, i.jsx)(e, { className: s()(d.Kk, l), color: "currentColor" })),
+                          (0, i.jsx)("div", { style: { backgroundColor: n }, className: s()(d.P0, a), children: r })
                       );
-                  })(r, d, u, b, f)
+                  })(l, c, u, m, g)
                 : null,
-            (0, i.jsxs)(s.BJc, {
+            (0, i.jsxs)(r.BJc, {
                 justify: "center",
                 children: [
                     (function (e) {
-                        let { name: t, description: n, details: r, detailsClassName: d, isHeader: u, isPremium: b } = e,
-                            f =
-                                null == r
-                                    ? void 0
-                                    : r.map((e, t) => {
-                                          let { icon: n, text: r } = e;
-                                          return (0, i.jsxs)(
-                                              "div",
-                                              {
-                                                  className: l()(c.yM, u ? c.Vw : null),
-                                                  children: [
-                                                      null != n
-                                                          ? (0, i.jsx)(n, {
-                                                                size: "xs",
-                                                                color: "currentColor",
-                                                                className: c.Ul,
-                                                            })
-                                                          : null,
-                                                      (0, i.jsx)(s.Text, {
-                                                          variant: "text-xs/normal",
-                                                          color: "text-default",
-                                                          className: d,
-                                                          children: r,
-                                                      }),
-                                                  ],
-                                              },
-                                              t,
-                                          );
-                                      });
-                        return (0, i.jsxs)(s.BJc, {
+                        let { name: t, description: n, details: l, detailsClassName: c, isHeader: u, isPremium: m } = e,
+                            g = l?.map((e, t) => {
+                                let { icon: n, text: l } = e;
+                                return (0, i.jsxs)(
+                                    "div",
+                                    {
+                                        className: s()(d.yM, u ? d.Vw : null),
+                                        children: [
+                                            null != n
+                                                ? (0, i.jsx)(n, { size: "xs", color: "currentColor", className: d.Ul })
+                                                : null,
+                                            (0, i.jsx)(r.Text, {
+                                                variant: "text-xs/normal",
+                                                color: "text-default",
+                                                className: c,
+                                                children: l,
+                                            }),
+                                        ],
+                                    },
+                                    t,
+                                );
+                            });
+                        return (0, i.jsxs)(r.BJc, {
                             gap: 0,
                             children: [
-                                (0, i.jsxs)(s.Heading, {
+                                (0, i.jsxs)(r.Heading, {
                                     variant: u ? "heading-xl/semibold" : "heading-md/medium",
-                                    className: u ? c.wx : c.K8,
+                                    className: u ? d.wx : d.K8,
                                     children: [
                                         t,
-                                        b &&
+                                        m &&
                                             (0, i.jsx)(a.m, {
                                                 text: o.intl.string(o.t.VFuFum),
-                                                children: (0, i.jsx)(s.qyI, {
+                                                children: (0, i.jsx)(r.qyI, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: c.PC,
+                                                    className: d.PC,
                                                 }),
                                             }),
                                     ],
                                 }),
                                 null != n
-                                    ? (0, i.jsx)(s.Text, {
+                                    ? (0, i.jsx)(r.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-default",
                                           children: n,
                                       })
                                     : null,
-                                (0, i.jsx)(s.BJc, {
-                                    direction: "horizontal",
-                                    children: f,
-                                }),
+                                (0, i.jsx)(r.BJc, { direction: "horizontal", children: g }),
                             ],
                         });
-                    })({
-                        name: t,
-                        description: n,
-                        details: p,
-                        detailsClassName: m,
-                        isHeader: g,
-                        isPremium: h,
-                    }),
-                    x,
+                    })({ name: t, description: n, details: x, detailsClassName: h, isHeader: p, isPremium: A }),
+                    b,
                 ],
             }),
         ],

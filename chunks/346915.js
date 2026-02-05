@@ -1,15 +1,13 @@
-r.d(t, {
-    N: () => o,
-});
-async function o({
+t.d(r, { N: () => a });
+async function a({
     gif: e,
-    x: t,
-    y: o,
-    width: a,
-    height: n,
-    imageRotation: i = 0,
+    x: r,
+    y: a,
+    width: o,
+    height: i,
+    imageRotation: n = 0,
     resizeWidth: l = null,
-    resizeHeight: c = null,
+    resizeHeight: s = null,
 }) {
-    return (await r.e("47580").then(r.bind(r, 844183))).crop_and_rotate_gif(e, t, o, a, n, i, l, c);
+    return (await t.e("47580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, a, o, i, n, l, s);
 }

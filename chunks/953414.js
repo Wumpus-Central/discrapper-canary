@@ -1,32 +1,26 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048),
-    n(638769);
+n.d(t, { A: () => j });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(311907),
+    l = n.n(i),
+    r = n(311907),
     o = n(397927),
-    c = n(58736),
-    d = n(231545),
+    d = n(58736),
+    c = n(231545),
     u = n(260880),
     m = n(303054),
-    p = n(231643),
-    h = n(661251),
-    f = n(166812);
-
-function x(e, t) {
+    h = n(231643),
+    x = n(661251),
+    p = n(166812);
+function g(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-
-function b(e) {
+function _(e) {
     let { store: t, dataGetter: n } = e,
-        [i, r] = l.useState(n(t));
+        [i, l] = s.useState(n(t));
     return (
-        l.useEffect(() => {
-            let e = () => r(n(t));
+        s.useEffect(() => {
+            let e = () => l(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -35,18 +29,13 @@ function b(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(o.IpV, {
-            className: f.Dx,
-            children: (0, a.jsx)(d.A, {
-                data: i,
-            }),
-        })
+        (0, a.jsx)(o.IpV, { className: p.Dx, children: (0, a.jsx)(c.A, { data: i }) })
     );
 }
-let g = [
+let f = [
         {
             key: "name",
-            cellClassName: f.__invalid_eventColumn,
+            cellClassName: p.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -57,102 +46,71 @@ let g = [
         {
             id: "local",
             name: "Local Variables",
-            group: p.fu.NONE,
+            group: h.fu.NONE,
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, a.jsxs)("div", {
-                          className: f.Dx,
+                          className: p.Dx,
                           children: [
                               "Store is missing ",
-                              (0, a.jsx)("code", {
-                                  children: "__getLocalVars",
-                              }),
+                              (0, a.jsx)("code", { children: "__getLocalVars" }),
                               " method.",
                           ],
                       })
-                    : (0, a.jsx)(b, {
-                          store: t,
-                          dataGetter: (e) => e.__getLocalVars(),
-                      });
+                    : (0, a.jsx)(_, { store: t, dataGetter: (e) => e.__getLocalVars() });
             },
         },
         {
             id: "instance",
             name: "Store Instance",
-            group: p.fu.NONE,
+            group: h.fu.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(b, {
-                    store: t,
-                    dataGetter: (e) => e,
-                });
+                return (0, a.jsx)(_, { store: t, dataGetter: (e) => e });
             },
         },
     ];
-
-function j(e) {
+function b(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: l, renderSelectedTab: i } = (0, p.Ay)(
-            {
-                tabs: v,
-            },
-            [],
-        );
+        { TabBar: s, renderSelectedTab: i } = (0, h.Ay)({ tabs: v }, []);
     return (0, a.jsxs)(u.A, {
-        className: f.rf,
+        className: p.rf,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(l, {}),
-            (0, a.jsxs)(c.Ay, {
-                className: r()(h.jr, f.nZ),
+            (0, a.jsx)(s, {}),
+            (0, a.jsxs)(d.Ay, {
+                className: l()(x.jr, p.nZ),
                 children: [
-                    (0, a.jsx)(c.Ay.Icon, {
-                        icon: o.gqV,
-                        tooltip: t.getName(),
-                    }),
-                    (0, a.jsx)(c.Ay.Title, {
-                        children: t.getName(),
-                    }),
+                    (0, a.jsx)(d.Ay.Icon, { icon: o.gqV, tooltip: t.getName() }),
+                    (0, a.jsx)(d.Ay.Title, { children: t.getName() }),
                 ],
             }),
-            i({
-                store: t,
-            }),
+            i({ store: t }),
         ],
     });
 }
-
-function y() {
-    let e = l.useRef(null),
-        [t, n] = l.useState(""),
-        i = s.il.getAll(),
-        c = l
-            .useMemo(
-                () =>
-                    i
-                        .map((e) => ({
-                            key: e._dispatchToken,
-                            store: e,
-                        }))
-                        .sort(x),
-                [i],
-            )
+function j() {
+    let e = s.useRef(null),
+        [t, n] = s.useState(""),
+        i = r.il.getAll(),
+        d = s
+            .useMemo(() => i.map((e) => ({ key: e._dispatchToken, store: e })).sort(g), [i])
             .filter((e) =>
                 (function (e, t) {
                     let { store: n } = e;
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t),
             ),
-        [d, u] = l.useState(),
-        p = i.find((e) => e._dispatchToken === d);
+        [c, u] = s.useState(),
+        h = i.find((e) => e._dispatchToken === c);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: r()(h.nd, f.nd),
+        className: l()(x.nd, p.nd),
         children: [
             (0, a.jsx)("div", {
-                className: f.KE,
+                className: p.KE,
                 children: (0, a.jsx)(o.IWV, {
                     size: "sm",
                     query: t,
@@ -162,17 +120,9 @@ function y() {
                     "aria-label": "Search stores",
                 }),
             }),
-            (0, a.jsx)(m.A, {
-                columns: g,
-                data: c,
-                selectedRowKey: d,
-                onClickRow: (e) => u(e.key),
-            }),
-            null != p &&
-                (0, a.jsx)(j, {
-                    store: p,
-                    initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-                }),
+            (0, a.jsx)(m.A, { columns: f, data: d, selectedRowKey: c, onClickRow: (e) => u(e.key) }),
+            null != h &&
+                (0, a.jsx)(b, { store: h, initialHeight: null != e.current ? e.current.clientHeight / 2 : 300 }),
         ],
     });
 }

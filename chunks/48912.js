@@ -1,4 +1,1 @@
-_.exports = {
-    k: "container_bfcda3",
-    s: "waveformCanvas_bfcda3",
-};
+_.exports = { k: "container_bfcda3", s: "waveformCanvas_bfcda3" };

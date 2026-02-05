@@ -1,30 +1,17 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(65821),
-    n(896048);
+"use strict";
+n.d(t, { A: () => c });
 var r = n(143236),
     i = n(277738),
     a = n(256398),
     s = n(201327),
     o = n(731854),
     l = n(818348);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 let u = new a.A();
-class d extends r.EventEmitter {
+class c extends r.EventEmitter {
+    stream = new MediaStream();
+    sourceId = o.qe;
+    streamId = null;
+    destroyed = !1;
     destroy() {
         null != this.stream && (u.release(this.stream), (this.stream = null)),
             null != this.streamId && (0, s.it)(this.streamId),
@@ -38,15 +25,10 @@ class d extends r.EventEmitter {
         (this.sourceId = e), null != this.stream && (u.release(this.stream), (this.stream = null));
         let t = await (0, i.DT)();
         if (this.sourceId === o.qe) return this.setStream(new MediaStream());
-        let n = {
-            width: 1280,
-        };
+        let n = { width: 1280 };
         t.some((e) => e.id === this.sourceId) && (n.deviceId = this.sourceId);
         try {
-            let e = await u.acquire({
-                audio: !1,
-                video: n,
-            });
+            let e = await u.acquire({ audio: !1, video: n });
             if (this.destroyed) throw (u.release(e), Error("VideoInput: Already destroyed"));
             return this.emit("permission", !0), this.setStream(e);
         } catch (e) {
@@ -76,12 +58,5 @@ class d extends r.EventEmitter {
             this.emit("video", this.getStreamId()),
             e
         );
-    }
-    constructor(...e) {
-        super(...e),
-            c(this, "stream", new MediaStream()),
-            c(this, "sourceId", o.qe),
-            c(this, "streamId", null),
-            c(this, "destroyed", !1);
     }
 }

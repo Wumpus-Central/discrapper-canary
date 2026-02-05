@@ -1,10 +1,6 @@
-l.d(t, {
-    A: () => s,
-}),
-    l(896048);
-var r = l(390544);
-let n = new Set([r.M.SLEEPING, r.M.OFFLINE, r.M.ONLINE]);
-
-function s(e) {
-    return null == e || (null != e.status && n.has(e.status));
+n.d(t, { A: () => i });
+var l = n(390544);
+let r = new Set([l.M.SLEEPING, l.M.OFFLINE, l.M.ONLINE]);
+function i(e) {
+    return null == e || (null != e.status && r.has(e.status));
 }

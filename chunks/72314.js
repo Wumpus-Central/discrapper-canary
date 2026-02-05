@@ -1,104 +1,70 @@
-n.d(t, {
-    A: () => E,
-});
-var r,
-    i = n(311907),
-    a = n(52133),
-    s = n(73153);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => m });
+var r = n(311907),
+    i = n(52133),
+    a = n(73153);
+let s = {},
+    o = {},
+    l = { scrollTop: 0 };
+function u(e) {
+    return { guildId: e, scrollTop: null, scrollTo: null };
 }
-let l = {},
-    c = {},
-    u = {
-        scrollTop: 0,
-    };
-
-function d(e) {
-    return {
-        guildId: e,
-        scrollTop: null,
-        scrollTo: null,
-    };
-}
-
-function f(e) {
-    let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
-        s = l[t];
-    if (null == n || null == r || null == i) {
-        if (null == s) return !1;
-        delete l[t];
+function c(e) {
+    let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: a } = e,
+        o = s[t];
+    if (null == n || null == r || null == a) {
+        if (null == o) return !1;
+        delete s[t];
     } else {
-        let e = {
-            channelId: t,
-            scrollTop: n,
-            scrollHeight: r,
-            offsetHeight: i,
-        };
-        if (null != s && (0, a.A)(s, e)) return !1;
-        l[t] = e;
+        let e = { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: a };
+        if (null != o && (0, i.A)(o, e)) return !1;
+        s[t] = e;
     }
 }
-
-function p(e) {
+function d(e) {
     let { scrollTop: t } = e;
-    u.scrollTop = t;
+    l.scrollTop = t;
 }
-
 function _(e) {
     let { channelId: t } = e;
-    h(t) && delete l[t];
+    f(t) && delete s[t];
 }
-
-function h(e) {
-    if (null == l[e]) return;
-    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = l[e];
+function f(e) {
+    if (null == s[e]) return;
+    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = s[e];
     return t === n - r;
 }
-
-function m(e) {
+function p(e) {
     let { guildId: t, scrollTop: n, scrollTo: r } = e;
-    null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n);
+    null == o[t] && (o[t] = u(t)), void 0 !== n && (o[t].scrollTop = n);
     let i = !1;
-    return void 0 !== r && ((i = c[t].scrollTo !== r), (c[t].scrollTo = r)), null != r || i;
+    return void 0 !== r && ((i = o[t].scrollTo !== r), (o[t].scrollTo = r)), null != r || i;
 }
-class g extends (r = i.Ay.Store) {
+class h extends r.Ay.Store {
+    static displayName = "DimensionStore";
     percentageScrolled(e) {
-        if (null != l[e]) {
-            let { scrollTop: t, scrollHeight: n } = l[e];
+        if (null != s[e]) {
+            let { scrollTop: t, scrollHeight: n } = s[e];
             return t / n;
         }
         return 1;
     }
     getChannelDimensions(e) {
-        return l[e];
+        return s[e];
     }
     getGuildDimensions(e) {
-        var t;
-        return null != (t = c[e]) ? t : d(e);
+        return o[e] ?? u(e);
     }
     getGuildListDimensions() {
-        return u;
+        return l;
     }
     isAtBottom(e) {
-        return h(e);
+        return f(e);
     }
 }
-o(g, "displayName", "DimensionStore");
-let E = new g(s.h, {
-    UPDATE_CHANNEL_DIMENSIONS: f,
-    UPDATE_CHANNEL_LIST_DIMENSIONS: m,
-    UPDATE_GUILD_LIST_DIMENSIONS: p,
+let m = new h(a.h, {
+    UPDATE_CHANNEL_DIMENSIONS: c,
+    UPDATE_CHANNEL_LIST_DIMENSIONS: p,
+    UPDATE_GUILD_LIST_DIMENSIONS: d,
     CALL_CREATE: _,
 });

@@ -1,17 +1,18 @@
-function t(e) {
+"use strict";
+function e(t) {
     return function () {
-        return e;
+        return t;
     };
 }
-var n = function () {};
-(n.thatReturns = t),
-    (n.thatReturnsFalse = t(!1)),
-    (n.thatReturnsTrue = t(!0)),
-    (n.thatReturnsNull = t(null)),
-    (n.thatReturnsThis = function () {
+var r = function () {};
+(r.thatReturns = e),
+    (r.thatReturnsFalse = e(!1)),
+    (r.thatReturnsTrue = e(!0)),
+    (r.thatReturnsNull = e(null)),
+    (r.thatReturnsThis = function () {
         return this;
     }),
-    (n.thatReturnsArgument = function (e) {
-        return e;
+    (r.thatReturnsArgument = function (t) {
+        return t;
     }),
-    (e.exports = n);
+    (t.exports = r);

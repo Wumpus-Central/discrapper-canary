@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     N1: "headerContainer__2dea3",
     G3: "closeContainer__2dea3",

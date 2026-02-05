@@ -4,7 +4,4 @@ IntlMessageFormat.__addLocaleData({
         return t ? "other" : 1 == e ? "one" : "other";
     },
 }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "tr-CY",
-        parentLocale: "tr",
-    });
+    IntlMessageFormat.__addLocaleData({ locale: "tr-CY", parentLocale: "tr" });

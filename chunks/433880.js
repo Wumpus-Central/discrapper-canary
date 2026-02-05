@@ -1,21 +1,17 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { A: () => m }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(397927),
     o = n(429913),
     l = n(769015),
-    c = n(994500),
-    u = n(287809),
+    u = n(994500),
+    c = n(287809),
     d = n(652215),
-    f = n(379066);
-let p = [];
-
-function _(e, t) {
+    _ = n(379066);
+let f = [];
+function p(e, t) {
     let n = (0, o.A)(e, t);
     return i.useMemo(() => {
         let e = new Map();
@@ -27,84 +23,59 @@ function _(e, t) {
         );
     }, [n]);
 }
-
 function h(e) {
     let { application: t } = e;
     return (0, r.jsxs)("div", {
-        className: f.W,
-        children: [
-            (0, r.jsx)(l.A, {
-                game: t,
-                size: l.M.XXSMALL,
-            }),
-            (0, r.jsx)("span", {
-                children: t.name,
-            }),
-        ],
+        className: _.W,
+        children: [(0, r.jsx)(l.A, { game: t, size: l.M.XXSMALL }), (0, r.jsx)("span", { children: t.name })],
     });
 }
-
 function m(e) {
-    let { menuItemId: t, user: n, label: o, gameRelationships: f, onClick: m, color: g } = e,
-        { id: E, bot: y } = n,
-        b =
-            (0, a.bG)([u.default], () => {
-                var e;
-                return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
-            }) || y,
-        O = b ? p : f,
-        [v, A] = i.useState(!1),
-        I = i.useCallback(() => A(!0), []),
-        S = i.useMemo(
+    let { menuItemId: t, user: n, label: o, gameRelationships: _, onClick: m, color: g } = e,
+        { id: E, bot: A } = n,
+        I = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.id === E) || A,
+        T = I ? f : _,
+        [y, S] = i.useState(!1),
+        v = i.useCallback(() => S(!0), []),
+        C = i.useMemo(
             () =>
-                O.map((e) => {
+                T.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [O],
+            [T],
         ),
-        T = (0, a.bG)([c.A], () => c.A.getRelationshipType(E), [E]),
-        C = _(S, v || 1 === O.length);
-    if (b || 0 === O.length || T === d.eA$.FRIEND) return null;
-    if (1 === O.length) {
-        let { applicationId: e } = O[0],
-            n = C.get(e);
+        b = (0, a.bG)([u.A], () => u.A.getRelationshipType(E), [E]),
+        N = p(C, y || 1 === T.length);
+    if (I || 0 === T.length || b === d.eA$.FRIEND) return null;
+    if (1 === T.length) {
+        let { applicationId: e } = T[0],
+            n = N.get(e);
         return null == n
             ? null
             : (0, r.jsx)(s.Drp, {
                   color: g,
                   id: t,
                   label: o,
-                  subtext: (0, r.jsx)(h, {
-                      application: n,
-                  }),
-                  onFocus: I,
+                  subtext: (0, r.jsx)(h, { application: n }),
+                  onFocus: v,
                   action: () => m(n),
               });
     }
-    let N = [];
-    return (O.forEach((e) => {
+    let R = [];
+    return (T.forEach((e) => {
         let { applicationId: t } = e,
-            n = C.get(t);
+            n = N.get(t);
         if (null != n) {
             let e = n.getIconURL(16);
-            N.push(
+            R.push(
                 (0, r.jsx)(
                     s.Drp,
                     {
                         id: t,
                         label: n.name,
-                        icon: (0, r.jsx)(l.A, {
-                            game: n,
-                            size: l.M.XXSMALL,
-                        }),
-                        leadingAccessory:
-                            null != e
-                                ? {
-                                      type: "image",
-                                      src: e,
-                                  }
-                                : void 0,
+                        icon: (0, r.jsx)(l.A, { game: n, size: l.M.XXSMALL }),
+                        leadingAccessory: null != e ? { type: "image", src: e } : void 0,
                         action: () => m(n),
                     },
                     t,
@@ -112,13 +83,7 @@ function m(e) {
             );
         }
     }),
-    0 === N.length)
+    0 === R.length)
         ? null
-        : (0, r.jsx)(s.Drp, {
-              color: g,
-              id: t,
-              label: o,
-              onFocus: I,
-              children: N,
-          });
+        : (0, r.jsx)(s.Drp, { color: g, id: t, label: o, onFocus: v, children: R });
 }

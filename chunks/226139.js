@@ -1,8 +1,5 @@
-n.d(t, {
-    D3: () => o,
-    J9: () => s,
-    oL: () => a,
-});
+"use strict";
+n.d(t, { D3: () => o, J9: () => s, oL: () => a });
 var r = n(842086),
     i = n(985018);
 let a = () => [i.intl.string(i.t.b6wEe6), i.intl.string(i.t.i8o9hX)],
@@ -20,18 +17,8 @@ let a = () => [i.intl.string(i.t.b6wEe6), i.intl.string(i.t.i8o9hX)],
             description: "Cheerful Choco preens against window",
             name: "Affection",
         },
-        {
-            id: "781323769960202280",
-            format_type: r.TG.APNG,
-            description: "Cheerful Choco sparkles",
-            name: "OMG",
-        },
-        {
-            id: "781324722394103808",
-            format_type: r.TG.APNG,
-            description: "Cheerful Choco cheers",
-            name: "Cheer",
-        },
+        { id: "781323769960202280", format_type: r.TG.APNG, description: "Cheerful Choco sparkles", name: "OMG" },
+        { id: "781324722394103808", format_type: r.TG.APNG, description: "Cheerful Choco cheers", name: "Cheer" },
         {
             id: "813951723822645278",
             format_type: r.TG.APNG,

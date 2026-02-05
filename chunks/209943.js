@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Pl: "errorNotificationContainer_e13eda",
     fl: "errorNotificationWrapper_e13eda",

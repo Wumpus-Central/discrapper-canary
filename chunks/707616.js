@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     JW: "svg__4f569",
     Tp: "background__4f569",

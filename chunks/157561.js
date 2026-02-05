@@ -1,50 +1,30 @@
-n.d(t, {
-    v: () => d,
-});
-var l = n(64700),
-    a = n(416730),
-    r = n(620140),
-    i = n(412461),
-    s = n(310419),
-    c = n(656106),
-    o = n(652215);
-
+a.d(t, { v: () => d });
+var n = a(64700),
+    i = a(416730),
+    s = a(620140),
+    l = a(412461),
+    r = a(310419),
+    o = a(656106),
+    c = a(652215);
 function d(e) {
     let { initialQuery: t = "" } = e,
-        n = a.A.useField("query");
-    l.useEffect(
-        () =>
-            a.A.setState({
-                query: t,
-            }),
-        [t],
-    );
-    let d = l.useCallback((e) => {
-            a.A.setState({
-                query: e,
-            });
+        a = i.A.useField("query");
+    n.useEffect(() => i.A.setState({ query: t }), [t]);
+    let d = n.useCallback((e) => {
+            i.A.setState({ query: e });
         }, []),
-        u = l.useCallback(() => {
-            a.A.setState({
-                query: "",
-            });
+        u = n.useCallback(() => {
+            i.A.setState({ query: "" });
         }, []),
-        p = l.useCallback(() => {
-            let e = (0, r.A)();
-            (0, i.TR)(o.HAw.APP_DIRECTORY_SEARCH_STARTED, {
-                search_term: n,
+        h = n.useCallback(() => {
+            let e = (0, s.A)();
+            (0, l.TR)(c.HAw.APP_DIRECTORY_SEARCH_STARTED, {
+                search_term: a,
                 category: e.name,
-                current_page: s.ev.HOME,
+                current_page: r.ev.HOME,
                 category_id: e.id,
             }),
-                (0, c.JX)({
-                    query: n,
-                });
-        }, [n]);
-    return {
-        searchQuery: n,
-        onSearchTextChange: d,
-        onClearSearch: u,
-        onSearchSubmit: p,
-    };
+                (0, o.JX)({ query: a });
+        }, [a]);
+    return { searchQuery: a, onSearchTextChange: d, onClearSearch: u, onSearchSubmit: h };
 }

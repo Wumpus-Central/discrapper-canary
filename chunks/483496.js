@@ -1,3 +1,1 @@
-e.exports = {
-    T: "markdownContainer__48344",
-};
+e.exports = { T: "markdownContainer__48344" };

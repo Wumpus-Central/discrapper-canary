@@ -1,3 +1,4 @@
+"use strict";
 var r = n(854970),
     i = n(795734),
     a = n(906046)("String.prototype.replace"),

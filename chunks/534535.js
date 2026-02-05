@@ -1,4 +1,5 @@
 !(function (r, n) {
+    "use strict";
     var i = "function",
         o = "undefined",
         a = "object",
@@ -394,18 +395,7 @@
                 ],
                 [c, [p, "TCL"], [f, v]],
                 [/(itel) ((\w+))/i],
-                [
-                    [p, W],
-                    c,
-                    [
-                        f,
-                        J,
-                        {
-                            tablet: ["p10001l", "w7001"],
-                            "*": "mobile",
-                        },
-                    ],
-                ],
+                [[p, W], c, [f, J, { tablet: ["p10001l", "w7001"], "*": "mobile" }]],
                 [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
                 [c, [p, "Acer"], [f, v]],
                 [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],

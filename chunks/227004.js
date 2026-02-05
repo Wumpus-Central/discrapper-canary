@@ -1,60 +1,43 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968),
+n.d(t, { A: () => x });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(554146),
-    s = n(397927),
+    r = n(397927),
     o = n(533550),
-    c = n(624458),
-    u = n(844944),
-    d = n(513461),
-    f = n(663997),
-    p = n(652793),
-    h = n(576705),
-    b = n(221950),
-    g = n(652215),
-    m = n(985018);
-
-function A(e) {
+    d = n(624458),
+    c = n(844944),
+    u = n(513461),
+    h = n(663997),
+    A = n(652793),
+    g = n(576705),
+    m = n(221950),
+    p = n(652215),
+    _ = n(985018);
+function x(e) {
     let { guild: t, selected: n } = e,
-        A = (0, i.bG)([h.A], () => h.A.can(g.xBc.KICK_MEMBERS, t)),
-        y = (0, i.bG)([u.A], () => u.A.getSubmittedGuildJoinRequestTotal(t.id)),
-        O = A && null != y ? y : 0;
+        x = (0, s.bG)([g.A], () => g.A.can(p.xBc.KICK_MEMBERS, t)),
+        f = (0, s.bG)([c.A], () => c.A.getSubmittedGuildJoinRequestTotal(t.id)),
+        E = x ? (f ?? 0) : 0;
     l.useEffect(() => {
-        A &&
-            t.features.has(g.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
-            t.features.has(g.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-            c.A.fetchGuildJoinRequests({
-                guildId: t.id,
-                status: d.B5.SUBMITTED,
-                limit: f.L,
-            });
-    }, [A, t]);
-    let j = l.useCallback(() => {
-            (0, b.aZ)(t.id);
+        x &&
+            t.features.has(p.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+            t.features.has(p.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+            d.A.fetchGuildJoinRequests({ guildId: t.id, status: u.B5.SUBMITTED, limit: h.L });
+    }, [x, t]);
+    let C = l.useCallback(() => {
+            (0, m.aZ)(t.id);
         }, [t.id]),
-        v = (0, o.q8)(t.id, a.M.MEMBERS_LAUNCH_UPSELL);
-    return (0, r.jsx)("div", {
-        ref: v,
-        children: (0, r.jsx)(p.G, {
-            id: "members-".concat(t.id),
-            renderIcon: (e) =>
-                (0, r.jsx)(s.nFg, {
-                    size: "md",
-                    color: "currentColor",
-                    className: e,
-                }),
-            text: m.intl.string(m.t.oclz3Z),
+        I = (0, o.q8)(t.id, a.M.MEMBERS_LAUNCH_UPSELL);
+    return (0, i.jsx)("div", {
+        ref: I,
+        children: (0, i.jsx)(A.G, {
+            id: `members-${t.id}`,
+            renderIcon: (e) => (0, i.jsx)(r.nFg, { size: "md", color: "currentColor", className: e }),
+            text: _.intl.string(_.t.oclz3Z),
             selected: n,
-            onClick: j,
-            trailing:
-                O > 0
-                    ? (0, r.jsx)(s.hVq, {
-                          count: O,
-                      })
-                    : null,
+            onClick: C,
+            trailing: E > 0 ? (0, i.jsx)(r.hVq, { count: E }) : null,
         }),
     });
 }

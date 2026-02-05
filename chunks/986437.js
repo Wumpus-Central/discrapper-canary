@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var n = r(64700),
     o = r(205662),
     a = (function () {
@@ -22,7 +21,6 @@ var n = r(64700),
 let s = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
@@ -31,11 +29,7 @@ let s = (function (e) {
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             (r.handleBlur = function () {
-                r.state.blurValue &&
-                    r.setState({
-                        value: r.state.blurValue,
-                        blurValue: null,
-                    });
+                r.state.blurValue && r.setState({ value: r.state.blurValue, blurValue: null });
             }),
             (r.handleChange = function (e) {
                 r.setUpdatedValue(e.target.value, e);
@@ -72,22 +66,14 @@ let s = (function (e) {
                 window.removeEventListener("mousemove", r.handleDrag),
                     window.removeEventListener("mouseup", r.handleMouseUp);
             }),
-            (r.state = {
-                value: String(e.value).toUpperCase(),
-                blurValue: String(e.value).toUpperCase(),
-            }),
+            (r.state = { value: String(e.value).toUpperCase(), blurValue: String(e.value).toUpperCase() }),
             (r.inputId = "rc-editable-input-" + l++),
             r
         );
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
-            constructor: {
-                value: t,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-            },
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         a(t, [
@@ -97,9 +83,7 @@ let s = (function (e) {
                     this.props.value !== this.state.value &&
                         (e.value !== this.props.value || t.value !== this.state.value) &&
                         (this.input === document.activeElement
-                            ? this.setState({
-                                  blurValue: String(this.props.value).toUpperCase(),
-                              })
+                            ? this.setState({ blurValue: String(this.props.value).toUpperCase() })
                             : this.setState({
                                   value: String(this.props.value).toUpperCase(),
                                   blurValue: !this.state.blurValue && String(this.props.value).toUpperCase(),
@@ -120,12 +104,7 @@ let s = (function (e) {
                         (t = {}),
                         (r = this.props.label),
                         r in t
-                            ? Object.defineProperty(t, r, {
-                                  value: e,
-                                  enumerable: !0,
-                                  configurable: !0,
-                                  writable: !0,
-                              })
+                            ? Object.defineProperty(t, r, { value: e, enumerable: !0, configurable: !0, writable: !0 })
                             : (t[r] = e),
                         t
                     );
@@ -141,10 +120,7 @@ let s = (function (e) {
                 key: "setUpdatedValue",
                 value: function (e, t) {
                     var r = this.props.label ? this.getValueObjectWithLabel(e) : e;
-                    this.props.onChange && this.props.onChange(r, t),
-                        this.setState({
-                            value: e,
-                        });
+                    this.props.onChange && this.props.onChange(r, t), this.setState({ value: e });
                 },
             },
             {
@@ -153,32 +129,20 @@ let s = (function (e) {
                     var e = this,
                         t = (0, o.default)(
                             {
-                                default: {
-                                    wrap: {
-                                        position: "relative",
-                                    },
-                                },
+                                default: { wrap: { position: "relative" } },
                                 "user-override": {
                                     wrap: this.props.style && this.props.style.wrap ? this.props.style.wrap : {},
                                     input: this.props.style && this.props.style.input ? this.props.style.input : {},
                                     label: this.props.style && this.props.style.label ? this.props.style.label : {},
                                 },
-                                "dragLabel-true": {
-                                    label: {
-                                        cursor: "ew-resize",
-                                    },
-                                },
+                                "dragLabel-true": { label: { cursor: "ew-resize" } },
                             },
-                            {
-                                "user-override": !0,
-                            },
+                            { "user-override": !0 },
                             this.props,
                         );
                     return n.createElement(
                         "div",
-                        {
-                            style: t.wrap,
-                        },
+                        { style: t.wrap },
                         n.createElement("input", {
                             id: this.inputId,
                             style: t.input,
@@ -195,11 +159,7 @@ let s = (function (e) {
                         this.props.label && !this.props.hideLabel
                             ? n.createElement(
                                   "label",
-                                  {
-                                      htmlFor: this.inputId,
-                                      style: t.label,
-                                      onMouseDown: this.handleMouseDown,
-                                  },
+                                  { htmlFor: this.inputId, style: t.label, onMouseDown: this.handleMouseDown },
                                   this.props.label,
                               )
                             : null,

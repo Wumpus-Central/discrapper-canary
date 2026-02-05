@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     j1: "settingCard__1a4ef",
     vu: "active__1a4ef",

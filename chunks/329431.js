@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     p3: "topPerksCard__3add8",
     sc: "animatedTopPerksCard__3add8",

@@ -1,43 +1,34 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968);
+n.d(t, { A: () => _ });
+var l = n(627968);
 n(64700);
-var l = n(311907),
-    i = n(397927),
-    a = n(845625),
-    o = n(785823),
-    u = n(137207),
-    c = n(734057),
+var i = n(311907),
+    a = n(397927),
+    r = n(845625),
+    d = n(785823),
+    o = n(137207),
+    u = n(734057),
     s = n(320501),
-    d = n(576705),
+    c = n(576705),
     A = n(652215),
-    b = n(985018);
-
-function f(e, t) {
-    let n = (0, l.bG)(
-            [d.A],
-            () =>
-                null != e &&
-                d.A.canWithPartialContext(A.xBc.MANAGE_MESSAGES, {
-                    channelId: e,
-                }),
-            [e],
-        ),
-        f = (0, l.bG)([c.A], () => c.A.getChannel(e), [e]),
-        O = (0, l.bG)([s.A], () => (null != e && null != t ? s.A.getMessage(e, t) : null)),
-        g = (0, o.kZ)(null != O ? O : null);
-    if (null == f || null == O) return null;
-    let y = null != g && g.actions.hasOwnProperty(a.G.SET_COMPLETED) ? a.G.UNSET_COMPLETED : a.G.SET_COMPLETED,
-        p = y === a.G.SET_COMPLETED ? b.intl.string(b.t.VWNyUu) : b.intl.string(b.t.l9GqxI);
+    E = n(985018);
+function _(e, t) {
+    let n = (0, i.bG)([c.A], () => null != e && c.A.canWithPartialContext(A.xBc.MANAGE_MESSAGES, { channelId: e }), [
+            e,
+        ]),
+        _ = (0, i.bG)([u.A], () => u.A.getChannel(e), [e]),
+        g = (0, i.bG)([s.A], () => (null != e && null != t ? s.A.getMessage(e, t) : null)),
+        M = (0, d.kZ)(null != g ? g : null);
+    if (null == _ || null == g) return null;
+    let O = null != M && M.actions.hasOwnProperty(r.G.SET_COMPLETED) ? r.G.UNSET_COMPLETED : r.G.SET_COMPLETED,
+        I = O === r.G.SET_COMPLETED ? E.intl.string(E.t.VWNyUu) : E.intl.string(E.t.l9GqxI);
     return n && null != t
-        ? (0, r.jsx)(
-              i.Drp,
+        ? (0, l.jsx)(
+              a.Drp,
               {
                   id: "mark-automod-alert-completed",
-                  label: p,
+                  label: I,
                   action: () => {
-                      (0, u.E5)(t, f, y);
+                      (0, o.E5)(t, _, O);
                   },
               },
               "mark-automod-alert-completed",

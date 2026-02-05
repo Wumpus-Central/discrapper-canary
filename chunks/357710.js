@@ -1,37 +1,28 @@
-n.d(t, {
-    D: () => c,
-    e: () => u,
-});
+"use strict";
+n.d(t, { D: () => u, e: () => c });
 var r = n(825913),
     i = n(340287),
     a = n(64700),
     s = n(3388),
     o = n(533715);
 let l = (0, a.createContext)(null);
-
-function c(e) {
+function u(e) {
     let t = (0, a.useRef)({});
-    return a.createElement(
-        l.Provider,
-        {
-            value: t,
-        },
-        e.children,
-    );
+    return a.createElement(l.Provider, { value: t }, e.children);
 }
-let u = (0, a.forwardRef)(function (e, t) {
-    let { name: n, isVisible: c = !0, children: u, className: d, style: f, ...p } = e,
-        [_, h] = (0, a.useState)(c ? "visible" : "hidden"),
+let c = (0, a.forwardRef)(function (e, t) {
+    let { name: n, isVisible: u = !0, children: c, className: d, style: _, ...f } = e,
+        [p, h] = (0, a.useState)(u ? "visible" : "hidden"),
         m = (0, a.useContext)(l);
     if (!m) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
-    c && "hidden" === _ && h("visible"),
+    u && "hidden" === p && h("visible"),
         (t = (0, o.U)(t)),
         (0, s.N)(() => {
             let e = t.current,
                 r = m.current,
                 a = r[n],
                 s = null;
-            if (e && c && a) {
+            if (e && u && a) {
                 h("visible");
                 let t = e.getAnimations(),
                     i = a.style.map(([t, n]) => {
@@ -51,13 +42,13 @@ let u = (0, a.forwardRef)(function (e, t) {
                 })),
                     delete r[n];
             } else
-                e && c && !a
+                e && u && !a
                     ? (queueMicrotask(() => (0, i.flushSync)(() => h("entering"))),
                       (s = requestAnimationFrame(() => {
                           (s = null), h("visible");
                       })))
                     : e &&
-                      !c &&
+                      !u &&
                       queueMicrotask(() => {
                           r[n]
                               ? (delete r[n],
@@ -72,30 +63,24 @@ let u = (0, a.forwardRef)(function (e, t) {
                     let t = window.getComputedStyle(e);
                     if ("none" !== t.transitionProperty) {
                         let i = t.transitionProperty.split(/\s*,\s*/);
-                        r[n] = {
-                            rect: e.getBoundingClientRect(),
-                            style: i.map((e) => [e, t[e]]),
-                        };
+                        r[n] = { rect: e.getBoundingClientRect(), style: i.map((e) => [e, t[e]]) };
                     }
                 }
             };
-        }, [t, m, n, c]);
+        }, [t, m, n, u]);
     let g = (0, r.Sl)({
-        children: u,
+        children: c,
         className: d,
-        style: f,
-        values: {
-            isEntering: "entering" === _,
-            isExiting: "exiting" === _,
-        },
+        style: _,
+        values: { isEntering: "entering" === p, isExiting: "exiting" === p },
     });
-    return "hidden" === _
+    return "hidden" === p
         ? null
         : a.createElement("div", {
-              ...p,
+              ...f,
               ...g,
               ref: t,
-              "data-entering": "entering" === _ || void 0,
-              "data-exiting": "exiting" === _ || void 0,
+              "data-entering": "entering" === p || void 0,
+              "data-exiting": "exiting" === p || void 0,
           });
 });

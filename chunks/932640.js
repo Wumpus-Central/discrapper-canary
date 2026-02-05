@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(355418),
     i = n(725198);
 let a = RegExp("(?:星期|禮拜|週)(?<weekday>" + Object.keys(i.tS).join("|") + ")");

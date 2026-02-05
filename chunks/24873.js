@@ -1,9 +1,5 @@
-n.d(t, {
-    N9: () => o,
-    jL: () => c,
-    jU: () => l,
-}),
-    n(801541);
+"use strict";
+n.d(t, { N9: () => o, jL: () => u, jU: () => l }), n(801541);
 var r = n(889137),
     i = n(652215),
     a = n(790782),
@@ -17,7 +13,6 @@ var r = n(889137),
             e
         );
     })({});
-
 function l(e, t) {
     return (0, r.YW)([t, e])
         .with([i.orn.ALL_MESSAGES, a.e.ALL_MESSAGES], () => "all_messages")
@@ -27,8 +22,7 @@ function l(e, t) {
         .with([i.orn.NO_MESSAGES, a.e.ONLY_MENTIONS], () => "nothing")
         .otherwise(() => "custom");
 }
-
-function c(e) {
+function u(e) {
     return (0, r.YW)(e)
         .with("all_messages", () => s.intl.string(s.t.hZrr6k))
         .with("mentions", () => s.intl.string(s.t.y59NJm))

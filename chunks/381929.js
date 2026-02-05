@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Pg: "developerPortalCtaWrapper__540ed",
     XU: "developerPortalCta__540ed",

@@ -1,6 +1,5 @@
-n.d(t, {
-    x: () => o,
-});
+"use strict";
+n.d(t, { x: () => o });
 let r = (e) => Symbol.iterator in e,
     i = (e) => "entries" in e,
     a = (e, t) => {
@@ -21,7 +20,6 @@ let r = (e) => Symbol.iterator in e,
         }
         return !!i.done && !!a.done;
     };
-
 function o(e, t) {
     return (
         !!Object.is(e, t) ||
@@ -34,13 +32,6 @@ function o(e, t) {
                 ? i(e) && i(t)
                     ? a(e, t)
                     : s(e, t)
-                : a(
-                      {
-                          entries: () => Object.entries(e),
-                      },
-                      {
-                          entries: () => Object.entries(t),
-                      },
-                  )))
+                : a({ entries: () => Object.entries(e) }, { entries: () => Object.entries(t) })))
     );
 }

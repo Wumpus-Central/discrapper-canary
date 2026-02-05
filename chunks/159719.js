@@ -1,125 +1,57 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
-    i = n(311907),
+"use strict";
+n.d(t, { A: () => g });
+var i = n(627968),
+    s = n(311907),
     l = n(397927),
-    s = n(885617),
+    r = n(885617),
     a = n(314737),
-    c = n(405810),
-    o = n(11351),
-    d = n(557300),
+    o = n(405810),
+    d = n(11351),
+    c = n(557300),
     u = n(534875),
-    f = n(985018);
-
+    m = n(985018);
 function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function m(e) {
     let { guild: t } = e,
-        m = (0, i.bG)([s.A], () => s.A.isUploadingEmoji()),
-        p = (0, u.A)(t.id),
-        x = (0, d.A)(t) - p.length,
-        h = (0, o.gN)();
-    return (0, r.jsxs)(l.D0$, {
-        label: f.intl.string(f.t["LDT0Q/"]),
-        disabled: h,
-        description: f.intl.format(f.t.H9Jxp6, {
-            maxSlots: (0, d.A)(t),
-        }),
+        g = (0, s.bG)([r.A], () => r.A.isUploadingEmoji()),
+        x = (0, u.A)(t.id),
+        h = (0, c.A)(t) - x.length,
+        _ = (0, d.gN)();
+    return (0, i.jsxs)(l.D0$, {
+        label: m.intl.string(m.t["LDT0Q/"]),
+        disabled: _,
+        description: m.intl.format(m.t.H9Jxp6, { maxSlots: (0, c.A)(t) }),
         children: [
-            (0, r.jsx)(l.hKd, {
-                size: 16,
-            }),
-            (0, r.jsx)(c.A, {
-                onChange: (e, i) => {
+            (0, i.jsx)(l.hKd, { size: 16 }),
+            (0, i.jsx)(o.A, {
+                onChange: (e, s) => {
                     null != e &&
-                        null != i &&
+                        null != s &&
                         (0, l.mMO)(async () => {
                             let { CreateEmojiWithRolesModal: l } = await n.e("15224").then(n.bind(n, 429131));
-                            return (n) =>
-                                (0, r.jsx)(
-                                    l,
-                                    b(g({}, n), {
-                                        data: e,
-                                        file: i,
-                                        guildId: t.id,
-                                    }),
-                                );
+                            return (n) => (0, i.jsx)(l, { ...n, data: e, file: s, guildId: t.id });
                         });
                 },
-                disabled: h || m || 0 === x,
+                disabled: _ || g || 0 === h,
                 size: "md",
                 variant: "primary",
-                text: f.intl.string(f.t.AuPtov),
-                loading: m,
+                text: m.intl.string(m.t.AuPtov),
+                loading: g,
             }),
-            (0, r.jsx)(l.hKd, {
-                size: 24,
-            }),
-            (0, r.jsx)(a.Bt, {
-                title: f.intl.string(f.t.lu1ZQ2),
-                maxSlots: (0, d.A)(t),
-                emojiCount: p.length,
-                children: (0, r.jsx)(a.zI, {
+            (0, i.jsx)(l.hKd, { size: 24 }),
+            (0, i.jsx)(a.Bt, {
+                title: m.intl.string(m.t.lu1ZQ2),
+                maxSlots: (0, c.A)(t),
+                emojiCount: x.length,
+                children: (0, i.jsx)(a.zI, {
                     guild: t,
-                    emojis: p,
+                    emojis: x,
                     onEdit: (e, t) => {
                         (0, l.mMO)(async () => {
-                            let { UpdateEmojiRolesModal: i } = await n.e("15224").then(n.bind(n, 429131));
-                            return (n) =>
-                                (0, r.jsx)(
-                                    i,
-                                    b(g({}, n), {
-                                        emoji: e,
-                                        guildId: t,
-                                    }),
-                                );
+                            let { UpdateEmojiRolesModal: s } = await n.e("15224").then(n.bind(n, 429131));
+                            return (n) => (0, i.jsx)(s, { ...n, emoji: e, guildId: t });
                         });
                     },
-                    editingDisabled: h,
+                    editingDisabled: _,
                 }),
             }),
         ],

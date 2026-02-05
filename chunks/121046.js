@@ -1,24 +1,21 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(311907),
+n.d(t, { A: () => d });
+var i = n(311907),
     l = n(827343),
-    i = n(961350),
-    o = n(430452),
-    a = n(652215),
-    c = n(731854);
-
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.x.DEFAULT,
-        n = (0, r.bG)([i.default], () => i.default.getId()),
-        s = (0, r.bG)([o.A], () => o.A.supports(c.O5.DISABLE_VIDEO)),
-        d = (0, r.bG)([o.A], () => o.A.isLocalVideoDisabled(n, t), [n, t]);
+    s = n(961350),
+    a = n(430452),
+    r = n(652215),
+    o = n(731854);
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.x.DEFAULT,
+        n = (0, i.bG)([s.default], () => s.default.getId()),
+        d = (0, i.bG)([a.A], () => a.A.supports(o.O5.DISABLE_VIDEO)),
+        c = (0, i.bG)([a.A], () => a.A.isLocalVideoDisabled(n, t), [n, t]);
     return [
-        (null == e || e === n) && s,
-        d,
+        (null == e || e === n) && d,
+        c,
         (e) => {
-            let r = e ? a.bb8.DISABLED : a.bb8.MANUAL_ENABLED;
-            l.A.setDisableLocalVideo(n, r, t);
+            let i = e ? r.bb8.DISABLED : r.bb8.MANUAL_ENABLED;
+            l.A.setDisableLocalVideo(n, i, t);
         },
     ];
 }

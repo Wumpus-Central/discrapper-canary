@@ -1,146 +1,84 @@
-n.d(t, {
-    A: () => P,
-}),
-    n(896048),
-    n(638769);
+"use strict";
+n.d(t, { A: () => D });
 var r = n(181370),
     i = n.n(r),
     a = n(311907),
     s = n(73153),
     o = n(439372),
     l = n(560542),
-    c = n(626584),
-    u = n(508675),
+    u = n(626584),
+    c = n(508675),
     d = n(679382),
-    f = n(734057),
-    p = n(317525),
-    _ = n(71393),
+    _ = n(734057),
+    f = n(317525),
+    p = n(71393),
     h = n(661191),
     m = n(142120);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let E = 2e3,
-    b = new c.A("EntityVersionsManager");
-class y extends o.A {
+let g = 2e3,
+    E = new u.A("EntityVersionsManager");
+class A extends o.A {
+    actions = { GUILD_CREATE: y, DELETED_ENTITY_IDS: I };
     _initialize() {
-        s.h.subscribe("CONNECTION_OPEN", A);
+        s.h.subscribe("CONNECTION_OPEN", T);
     }
     _terminate() {
-        s.h.unsubscribe("CONNECTION_OPEN", A);
-    }
-    constructor(...e) {
-        super(...e),
-            g(this, "actions", {
-                GUILD_CREATE: v,
-                DELETED_ENTITY_IDS: O,
-            });
+        s.h.unsubscribe("CONNECTION_OPEN", T);
     }
 }
-
-function O(e) {
-    var t;
-    let n = null == (t = _.A.getGuild(e.guild_id)) ? void 0 : t.name;
-    b.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")),
+function I(e) {
+    let t = p.A.getGuild(e.guild_id)?.name;
+    E.fileOnly(`received deleted guild entities (id: ${e.guild_id}, name: ${t})`),
         a.Ay.Emitter.batched(() => {
-            null != e.channels && C(e.guild_id, new Set(e.channels)),
+            null != e.channels && b(e.guild_id, new Set(e.channels)),
                 null != e.roles && N(e.guild_id, new Set(e.roles)),
                 null != e.emojis && R(e.guild_id, new Set(e.emojis)),
-                null != e.stickers && w(e.guild_id, new Set(e.stickers));
+                null != e.stickers && O(e.guild_id, new Set(e.stickers));
         });
 }
-
-function A() {
+function T() {
     l.A.getAll().then((e) => {
         e.forEach((e) => S(e));
     });
 }
-
-function v(e) {
+function y(e) {
     let { guild: t } = e;
     t.unableToSyncDeletes && S(t.id);
 }
-
 function S(e) {
-    setTimeout(() => I(e), Math.ceil(Math.random() * E));
+    setTimeout(() => v(e), Math.ceil(Math.random() * g));
 }
-
-function I(e) {
-    var t, n, r;
-    let i = null == (n = _.A.getGuild(e)) ? void 0 : n.name;
-    b.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(i, ")"));
-    let a = T(Object.keys(f.A.getMutableBasicGuildChannelsForGuild(e))),
-        s = T(p.A.getSortedRoles(e).map((e) => e.id)),
-        o = T(u.Ay.getGuildEmoji(e).map((e) => e.id)),
-        l = T(null != (t = null == (r = d.A.getStickersByGuildId(e)) ? void 0 : r.map((e) => e.id)) ? t : []);
-    m.A.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
+function v(e) {
+    let t = p.A.getGuild(e)?.name;
+    E.fileOnly(`requesting deleted guild entities (id: ${e}, name: ${t})`);
+    let n = C(Object.keys(_.A.getMutableBasicGuildChannelsForGuild(e))),
+        r = C(f.A.getSortedRoles(e).map((e) => e.id)),
+        i = C(c.Ay.getGuildEmoji(e).map((e) => e.id)),
+        a = C(d.A.getStickersByGuildId(e)?.map((e) => e.id) ?? []);
+    m.A.getSocket().getDeletedEntityIdsNotMatchingHash(e, n, r, i, a);
 }
-
-function T(e) {
+function C(e) {
     return i().v3(e.sort().join(",")).toString();
 }
-
-function C(e, t) {
-    let n = h.default.keys(f.A.getMutableBasicGuildChannelsForGuild(e));
-    b.fileOnly("syncChannels", {
-        channelIdsInMemory: n,
-        channelIdsFromServer: t,
-    }),
+function b(e, t) {
+    let n = h.default.keys(_.A.getMutableBasicGuildChannelsForGuild(e));
+    E.fileOnly("syncChannels", { channelIdsInMemory: n, channelIdsFromServer: t }),
         n.forEach((n) => {
-            t.has(n) ||
-                s.h.dispatch({
-                    type: "CHANNEL_DELETE",
-                    channel: {
-                        guild_id: e,
-                        id: n,
-                        parent_id: void 0,
-                    },
-                });
+            t.has(n) || s.h.dispatch({ type: "CHANNEL_DELETE", channel: { guild_id: e, id: n, parent_id: void 0 } });
         });
 }
-
 function N(e, t) {
-    h.default.keys(p.A.getUnsafeMutableRoles(e)).forEach((n) => {
-        t.has(n) ||
-            s.h.dispatch({
-                type: "GUILD_ROLE_DELETE",
-                guildId: e,
-                roleId: n,
-            });
+    h.default.keys(f.A.getUnsafeMutableRoles(e)).forEach((n) => {
+        t.has(n) || s.h.dispatch({ type: "GUILD_ROLE_DELETE", guildId: e, roleId: n });
     });
 }
-
 function R(e, t) {
-    let n = u.Ay.getGuildEmoji(e),
+    let n = c.Ay.getGuildEmoji(e),
         r = n.filter((e) => t.has(e.id));
-    n.length !== r.length &&
-        s.h.dispatch({
-            type: "GUILD_EMOJIS_UPDATE",
-            guildId: e,
-            emojis: r,
-        });
+    n.length !== r.length && s.h.dispatch({ type: "GUILD_EMOJIS_UPDATE", guildId: e, emojis: r });
 }
-
-function w(e, t) {
-    var n;
-    let r = null != (n = d.A.getStickersByGuildId(e)) ? n : [],
-        i = r.filter((e) => t.has(e.id));
-    r.length !== i.length &&
-        s.h.dispatch({
-            type: "GUILD_STICKERS_UPDATE",
-            guildId: e,
-            stickers: i,
-        });
+function O(e, t) {
+    let n = d.A.getStickersByGuildId(e) ?? [],
+        r = n.filter((e) => t.has(e.id));
+    n.length !== r.length && s.h.dispatch({ type: "GUILD_STICKERS_UPDATE", guildId: e, stickers: r });
 }
-let P = new y();
+let D = new A();

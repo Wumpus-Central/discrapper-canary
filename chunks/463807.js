@@ -1,3 +1,2 @@
-e.exports = {
-    G: "fieldWrapper_ce6bbd",
-};
+"use strict";
+e.exports = { G: "fieldWrapper_ce6bbd" };

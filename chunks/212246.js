@@ -8,7 +8,6 @@ function n(e, t, r) {
         },
     ];
 }
-
 function i(e, t, r) {
     var n = r.getRegistry(),
         i = n.addSource(e, t);
@@ -19,7 +18,4 @@ function i(e, t, r) {
         },
     ];
 }
-r.d(t, {
-    V: () => i,
-    l: () => n,
-});
+r.d(t, { V: () => i, l: () => n });

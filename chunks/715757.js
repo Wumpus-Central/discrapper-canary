@@ -1,57 +1,37 @@
-n.d(e, {
-    Qo: () => g,
-    V: () => _,
-    W1: () => A,
-    ml: () => S,
-    vb: () => f,
-});
-var i = n(64700),
-    r = n(311907),
-    l = n(843472),
-    a = n(803306),
-    s = n(71393),
+"use strict";
+n.d(t, { Qo: () => _, V: () => p, W1: () => f, ml: () => g, vb: () => h });
+var r = n(64700),
+    a = n(311907),
+    s = n(843472),
+    i = n(803306),
+    l = n(71393),
     o = n(320501),
-    d = n(376708),
-    u = n(272720),
-    c = n(56595);
-
-function g(t) {
-    return (0, r.bG)([s.A], () => {
-        if (null == t) return !1;
-        let e = s.A.getGuild(t);
-        return null != e && (0, c.A)(e) && null != (0, u.A)(e);
+    c = n(376708),
+    d = n(272720),
+    u = n(56595);
+function _(e) {
+    return (0, a.bG)([l.A], () => {
+        if (null == e) return !1;
+        let t = l.A.getGuild(e);
+        return null != t && (0, u.A)(t) && null != (0, d.A)(t);
     });
 }
-
-function _(t) {
-    return (0, d.uW)(t);
+function p(e) {
+    return (0, c.uW)(e);
 }
-
-function A(t) {
-    return (0, d.xJ)(t);
+function f(e) {
+    return (0, c.xJ)(e);
 }
-
-function S(t) {
-    let { messageReference: e } = t,
-        n = (0, r.bG)([o.A], () => (null != e ? o.A.getMessage(e.channel_id, e.message_id) : null));
-    (0, i.useEffect)(() => {
+function g(e) {
+    let { messageReference: t } = e,
+        n = (0, a.bG)([o.A], () => (null != t ? o.A.getMessage(t.channel_id, t.message_id) : null));
+    (0, r.useEffect)(() => {
         null == n &&
-            null != e &&
-            l.A.fetchMessages({
-                channelId: e.channel_id,
-                jump: {
-                    messageId: e.message_id,
-                },
-                limit: 10,
-            });
-    }, [n, e]);
+            null != t &&
+            s.A.fetchMessages({ channelId: t.channel_id, jump: { messageId: t.message_id }, limit: 10 });
+    }, [n, t]);
 }
-
-function f(t) {
-    var e, n;
-    let i =
-        null == t || null == (n = t.messageSnapshots[0]) || null == (e = n.moderatorReport)
-            ? void 0
-            : e.reported_user_id;
-    null != i && (0, a.wz)(i);
+function h(e) {
+    let t = e?.messageSnapshots[0]?.moderatorReport?.reported_user_id;
+    null != t && (0, i.wz)(t);
 }

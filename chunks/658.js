@@ -1,8 +1,6 @@
-r.d(t, {
-    A: () => s,
-});
+"use strict";
+r.d(t, { A: () => s });
 var a = r(684401);
-
 function n(e, t) {
     for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -12,14 +10,6 @@ function n(e, t) {
             Object.defineProperty(e, (0, a.A)(n.key), n);
     }
 }
-
 function s(e, t, r) {
-    return (
-        t && n(e.prototype, t),
-        r && n(e, r),
-        Object.defineProperty(e, "prototype", {
-            writable: !1,
-        }),
-        e
-    );
+    return t && n(e.prototype, t), r && n(e, r), Object.defineProperty(e, "prototype", { writable: !1 }), e;
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header__514d8",
     YB: "columns__514d8",

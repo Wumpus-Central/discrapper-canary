@@ -1,24 +1,14 @@
-l.d(t, {
-    HL: () => a,
-    Jh: () => n,
-    Ux: () => r,
-    VM: () => i,
-}),
-    l(457529),
-    l(896048);
-let n = {
+l.d(t, { HL: () => n, Jh: () => a, Ux: () => s, VM: () => i });
+let a = {
         waveformBlockWidth: 2,
         waveformBarWidth: 0.5,
         fineTuningDelay: 500,
         fineTuningScale: 10,
         loudnessThreshold: 0.3,
     },
-    a = (e, t) => {
-        let l = ""
-            .concat(e[0], "-")
-            .concat(e[e.length - 1], "-")
-            .concat(e.byteLength);
-        return "".concat(l, "-").concat(JSON.stringify(t));
+    n = (e, t) => {
+        let l = `${e[0]}-${e[e.length - 1]}-${e.byteLength}`;
+        return `${l}-${JSON.stringify(t)}`;
     },
-    r = (e) => "".concat(e.name, "-").concat(e.size, "-").concat(e.lastModified),
+    s = (e) => `${e.name}-${e.size}-${e.lastModified}`,
     i = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"]);

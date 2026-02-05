@@ -1,58 +1,55 @@
-n.d(t, {
-    A: () => E,
-});
-var r = n(627968);
+n.d(t, { A: () => I });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(311907),
+var r = n(503698),
+    a = n.n(r),
+    l = n(311907),
     s = n(554146),
     o = n(397927),
-    c = n(820284),
-    u = n(793574),
-    d = n(688810),
-    p = n(915089),
-    f = n(379848),
-    h = n(193699),
-    A = n(153488),
-    g = n(426389),
-    m = n(652215),
-    b = n(985018),
-    _ = n(181485);
-
-function E() {
-    let { analyticsLocations: e } = (0, d.Ay)(u.A.ACTIVE_NOW_COLUMN),
-        t = (0, a.bG)([A.A], () => A.A.hasConsented(m.YAq.PERSONALIZATION)) ? [] : [s.M.NOW_PLAYING_CONSENT_CARD],
-        n = (0, p.GV)();
-    return (0, r.jsx)(d.f5, {
+    d = n(820284),
+    c = n(793574),
+    u = n(688810),
+    A = n(915089),
+    h = n(379848),
+    _ = n(193699),
+    m = n(153488),
+    p = n(426389),
+    g = n(652215),
+    E = n(985018),
+    f = n(181485);
+function I() {
+    let { analyticsLocations: e } = (0, u.Ay)(c.A.ACTIVE_NOW_COLUMN),
+        t = (0, l.bG)([m.A], () => m.A.hasConsented(g.YAq.PERSONALIZATION)) ? [] : [s.M.NOW_PLAYING_CONSENT_CARD],
+        n = (0, A.GV)();
+    return (0, i.jsx)(u.f5, {
         value: e,
-        children: (0, r.jsx)(c.A, {
-            section: m.JJy.ACTIVE_NOW_COLUMN,
-            children: (0, r.jsx)("aside", {
-                className: l()(_.kL, "refresh-active-now"),
+        children: (0, i.jsx)(d.A, {
+            section: g.JJy.ACTIVE_NOW_COLUMN,
+            children: (0, i.jsx)("aside", {
+                className: a()(f.kL, "refresh-active-now"),
                 "aria-labelledby": n,
-                children: (0, r.jsx)(o.HOs, {
-                    className: _.XG,
-                    children: (0, r.jsxs)("div", {
+                children: (0, i.jsx)(o.HOs, {
+                    className: f.XG,
+                    children: (0, i.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(o.Heading, {
+                            (0, i.jsx)(o.Heading, {
                                 variant: "heading-lg/semibold",
-                                className: _.wx,
+                                className: f.wx,
                                 id: n,
-                                children: b.intl.string(b.t.F4Zggw),
+                                children: E.intl.string(E.t.F4Zggw),
                             }),
-                            (0, r.jsx)(f.Ay, {
+                            (0, i.jsx)(h.Ay, {
                                 contentTypes: t,
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
                                     if (t === s.M.NOW_PLAYING_CONSENT_CARD)
-                                        return (0, r.jsx)(h.A, {
-                                            className: _.__invalid_consentCard,
+                                        return (0, i.jsx)(_.A, {
+                                            className: f.__invalid_consentCard,
                                             markAsDismissed: n,
                                         });
                                 },
                             }),
-                            (0, r.jsx)(g.A, {}),
+                            (0, i.jsx)(p.A, {}),
                         ],
                     }),
                 }),

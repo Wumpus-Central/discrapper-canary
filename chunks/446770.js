@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yC: "profileEffects__01370",
     yo: "hovered__01370",

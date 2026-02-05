@@ -1,68 +1,58 @@
-n.d(t, {
-    A: () => d,
-});
-var l = n(627968);
-n(64700);
-var a = n(503698),
-    i = n.n(a),
-    c = n(397927),
-    r = n(985018),
-    s = n(928103);
-
-function d(e) {
-    let { guild: t, speakers: n, speakerCount: a, className: d } = e,
-        u = n.slice(0, 5),
-        o = u.map((e) => {
-            var n, a;
-            return (0, l.jsxs)(
+t.d(n, { A: () => c });
+var a = t(627968);
+t(64700);
+var i = t(503698),
+    r = t.n(i),
+    o = t(397927),
+    s = t(985018),
+    l = t(928103);
+function c(e) {
+    let { guild: n, speakers: t, speakerCount: i, className: c } = e,
+        _ = t.slice(0, 5),
+        d = _.map((e) =>
+            (0, a.jsxs)(
                 "div",
                 {
-                    className: s.dq,
+                    className: l.dq,
                     children: [
-                        (0, l.jsx)(c.euF, {
-                            src: null == e || null == (n = e.user) ? void 0 : n.getAvatarURL(t.id, 20),
-                            size: c._3J.SIZE_20,
-                            className: s.my,
-                            "aria-label": "".concat(null == e ? void 0 : e.userNick, "-avatar"),
+                        (0, a.jsx)(o.euF, {
+                            src: e?.user?.getAvatarURL(n.id, 20),
+                            size: o._3J.SIZE_20,
+                            className: l.my,
+                            "aria-label": `${e?.userNick}-avatar`,
                         }),
-                        (0, l.jsx)("div", {
-                            className: s.CU,
-                            children: (0, l.jsx)(c.Text, {
+                        (0, a.jsx)("div", {
+                            className: l.CU,
+                            children: (0, a.jsx)(o.Text, {
                                 color: "text-default",
                                 variant: "text-sm/normal",
-                                className: s.br,
-                                children: null == e ? void 0 : e.userNick,
+                                className: l.br,
+                                children: e?.userNick,
                             }),
                         }),
                     ],
                 },
-                null == e || null == (a = e.user) ? void 0 : a.id,
-            );
-        }),
-        f = a - u.length;
-    return (0, l.jsxs)("div", {
-        className: i()(s.Vg, d),
+                e?.user?.id,
+            ),
+        ),
+        u = i - _.length;
+    return (0, a.jsxs)("div", {
+        className: r()(l.Vg, c),
         children: [
-            o,
-            f > 0 &&
-                (0, l.jsxs)("div", {
-                    className: s.dq,
+            d,
+            u > 0 &&
+                (0, a.jsxs)("div", {
+                    className: l.dq,
                     children: [
-                        (0, l.jsx)("div", {
-                            className: s.Ko,
-                            children: (0, l.jsx)(c.cNw, {
-                                size: "custom",
-                                color: "currentColor",
-                                height: 12,
-                            }),
+                        (0, a.jsx)("div", {
+                            className: l.Ko,
+                            children: (0, a.jsx)(o.cNw, { size: "custom", color: "currentColor", height: 12 }),
                         }),
-                        (0, l.jsx)(c.Text, {
+                        (0, a.jsx)(o.Text, {
                             color: "text-default",
                             variant: "text-sm/normal",
-                            className: s.br,
-                            children: r.intl.format(r.t["185ggO"], {
-                                count: f,
-                            }),
+                            className: l.br,
+                            children: s.intl.format(s.t["185ggO"], { count: u }),
                         }),
                     ],
                 }),

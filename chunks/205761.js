@@ -1,83 +1,22 @@
-n.d(t, {
-    A: () => P,
-    D: () => A,
-}),
-    n(747238),
-    n(321073);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
-    o = n(73153),
-    l = n(283047),
-    c = n(617617),
+"use strict";
+n.d(t, { A: () => b, D: () => g }), n(321073);
+var r = n(735438),
+    i = n.n(r),
+    a = n(311907),
+    s = n(73153),
+    o = n(283047),
+    l = n(617617),
     u = n(734057),
-    d = n(71393),
-    f = n(309010),
-    p = n(967198),
-    _ = n(652215),
-    h = n(355097);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let y = 10,
-    O = 100,
-    A = 100,
-    v = new l.A({
-        computeBonus: () => O,
+    c = n(71393),
+    d = n(309010),
+    _ = n(967198),
+    f = n(652215),
+    p = n(355097);
+let h = 10,
+    m = 100,
+    g = 100,
+    E = new o.A({
+        computeBonus: () => m,
         computeWeight: (e) => {
             let t = 1;
             return (
@@ -93,107 +32,78 @@ let y = 10,
                 t
             );
         },
-        lookupKey: (e) => {
-            var t, n;
-            return null != (t = null != (n = d.A.getGuild(e)) ? n : u.A.getChannel(e))
-                ? t
-                : u.A.getChannel(u.A.getDMFromUserId(e));
-        },
+        lookupKey: (e) => c.A.getGuild(e) ?? u.A.getChannel(e) ?? u.A.getChannel(u.A.getDMFromUserId(e)),
         afterCompute: () => {},
-        numFrequentlyItems: A,
-        maxSamples: y,
+        numFrequentlyItems: g,
+        maxSamples: h,
     }),
-    S = null,
+    A = null,
     I = null;
-
 function T(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
-        n !== S &&
-            ((S = null != n ? n : null),
+        n !== A &&
+            ((A = n ?? null),
             null != n &&
-                _.Ut1.test(n) &&
-                ((r = !0),
-                v.track(n),
-                R.pendingUsages.push({
-                    key: n,
-                    timestamp: Date.now(),
-                }))),
+                f.Ut1.test(n) &&
+                ((r = !0), E.track(n), v.pendingUsages.push({ key: n, timestamp: Date.now() }))),
         t !== I &&
-            ((I = null != t ? t : null),
+            ((I = t ?? null),
             null != t &&
-                _.Ut1.test(t) &&
-                ((r = !0),
-                v.track(t),
-                R.pendingUsages.push({
-                    key: t,
-                    timestamp: Date.now(),
-                }))),
+                f.Ut1.test(t) &&
+                ((r = !0), E.track(t), v.pendingUsages.push({ key: t, timestamp: Date.now() }))),
         r
     );
 }
-
-function C(e) {
+function y(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    return t === h.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((R.pendingUsages = []), !0);
+    return t === p.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((v.pendingUsages = []), !0);
 }
-
-function N() {
-    var e;
-    let t = null == (e = c.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency) ? void 0 : e.guildAndChannels;
-    if (null == t) return !1;
-    v.overwriteHistory(
-        a().mapValues(t, (e) =>
-            b(g({}, e), {
-                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
-            }),
-        ),
-        R.pendingUsages,
+function S() {
+    let e = l.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency?.guildAndChannels;
+    if (null == e) return !1;
+    E.overwriteHistory(
+        i().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        v.pendingUsages,
     );
 }
-let R = {
-    pendingUsages: [],
-};
-class w extends (r = s.Ay.PersistedStore) {
+let v = { pendingUsages: [] };
+class C extends a.Ay.PersistedStore {
+    static displayName = "FrecencyStore";
+    static persistKey = "FrecencyStore";
     initialize(e) {
-        this.waitFor(u.A, d.A, f.A, p.A, c.A),
-            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && _.Ut1.test(e.key))), (R = e)),
-            this.syncWith([c.A], N);
+        this.waitFor(u.A, c.A, d.A, _.A, l.A),
+            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && f.Ut1.test(e.key))), (v = e)),
+            this.syncWith([l.A], S);
     }
     getState() {
-        return R;
-    }
-    hasPendingUsage() {
-        return R.pendingUsages.length > 0;
-    }
-    get frecencyWithoutFetchingLatest() {
         return v;
     }
+    hasPendingUsage() {
+        return v.pendingUsages.length > 0;
+    }
+    get frecencyWithoutFetchingLatest() {
+        return E;
+    }
     getFrequentlyWithoutFetchingLatest() {
-        return v.frequently;
+        return E.frequently;
     }
     getScoreWithoutFetchingLatest(e) {
-        var t;
-        return null != (t = v.getFrecency(e)) ? t : 0;
+        return E.getFrecency(e) ?? 0;
     }
     getScoreForDMWithoutFetchingLatest(e) {
         let t = u.A.getDMFromUserId(e);
         return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
     }
     getMaxScore() {
-        return A * y;
+        return g * h;
     }
     getBonusScore() {
-        return O;
+        return m;
     }
 }
-m(w, "displayName", "FrecencyStore"), m(w, "persistKey", "FrecencyStore");
-let P = new w(o.h, {
-    CHANNEL_SELECT: T,
-    VOICE_CHANNEL_SELECT: T,
-    USER_SETTINGS_PROTO_UPDATE: C,
-});
+let b = new C(s.h, { CHANNEL_SELECT: T, VOICE_CHANNEL_SELECT: T, USER_SETTINGS_PROTO_UPDATE: y });

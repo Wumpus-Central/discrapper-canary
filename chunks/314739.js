@@ -1,11 +1,9 @@
-n.d(t, {
-    D: () => d,
-});
+"use strict";
+n.d(t, { D: () => d });
 var r = n(909144),
     i = n(64700),
     a = n(341221);
 let s = Symbol.for("react-aria.i18n.locale");
-
 function o() {
     let e =
         ("u" > typeof window && window[s]) ||
@@ -16,35 +14,27 @@ function o() {
     } catch {
         e = "en-US";
     }
-    return {
-        locale: e,
-        direction: (0, r.V)(e) ? "rtl" : "ltr",
-    };
+    return { locale: e, direction: (0, r.V)(e) ? "rtl" : "ltr" };
 }
 let l = o(),
-    c = new Set();
-
-function u() {
-    for (let e of ((l = o()), c)) e(l);
+    u = new Set();
+function c() {
+    for (let e of ((l = o()), u)) e(l);
 }
-
 function d() {
     let e = (0, a.wR)(),
         [t, n] = (0, i.useState)(l);
     return ((0, i.useEffect)(
         () => (
-            0 === c.size && window.addEventListener("languagechange", u),
-            c.add(n),
+            0 === u.size && window.addEventListener("languagechange", c),
+            u.add(n),
             () => {
-                c.delete(n), 0 === c.size && window.removeEventListener("languagechange", u);
+                u.delete(n), 0 === u.size && window.removeEventListener("languagechange", c);
             }
         ),
         [],
     ),
     e)
-        ? {
-              locale: "en-US",
-              direction: "ltr",
-          }
+        ? { locale: "en-US", direction: "ltr" }
         : t;
 }

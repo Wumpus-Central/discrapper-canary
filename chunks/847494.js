@@ -1,31 +1,13 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(435328),
-    l = n(342088),
-    c = n(206314);
-
-function u(e) {
-    let { description: t, className: n, guildId: a, truncate: u = !0 } = e,
-        d = i.useMemo(
-            () =>
-                (0, o.l)(t, !0, {
-                    guildId: a,
-                    allowLinks: !0,
-                    allowHeading: !0,
-                    allowList: !0,
-                }),
-            [t, a],
-        );
-    return (0, r.jsx)("div", {
-        className: s()(l.i, n, c.PT, {
-            [l.x]: u,
-        }),
-        children: d,
-    });
+l.d(t, { A: () => d });
+var n = l(627968),
+    s = l(64700),
+    i = l(503698),
+    a = l.n(i),
+    r = l(435328),
+    c = l(342088),
+    u = l(206314);
+function d(e) {
+    let { description: t, className: l, guildId: i, truncate: d = !0 } = e,
+        o = s.useMemo(() => (0, r.l)(t, !0, { guildId: i, allowLinks: !0, allowHeading: !0, allowList: !0 }), [t, i]);
+    return (0, n.jsx)("div", { className: a()(c.i, l, u.PT, { [c.x]: d }), children: o });
 }

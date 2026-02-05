@@ -1,77 +1,66 @@
-n.d(t, {
-    A: () => g,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(827734),
+var s = n(503698),
+    l = n.n(s),
+    r = n(827734),
     a = n(397927),
     c = n(147925),
-    o = n(273926),
-    d = n(243056),
+    d = n(273926),
+    o = n(243056),
     u = n(985018),
-    f = n(592454);
-let g = function (e) {
+    x = n(592454);
+let m = function (e) {
     let {
             channelId: t,
             formField: n,
-            index: i,
-            isDragEnabled: g,
-            isDropHovered: b,
-            onDrop: m,
-            onEdit: p,
-            onRemove: x,
-            canRemove: h,
-            title: j,
-            actionsLocation: O,
-            fieldStyle: y,
+            index: s,
+            isDragEnabled: m,
+            isDropHovered: h,
+            onDrop: v,
+            onEdit: j,
+            onRemove: f,
+            canRemove: g,
+            title: p,
+            actionsLocation: A,
+            fieldStyle: T,
         } = e,
-        v = n.values,
-        A = v.slice(0, 1),
-        E = v.length - A.length;
-    return (0, r.jsxs)(d.A, {
+        C = n.values,
+        E = C.slice(0, 1),
+        w = C.length - E.length;
+    return (0, i.jsxs)(o.A, {
         field: n,
-        index: i,
-        isDragEnabled: g,
-        isDropHovered: b,
-        onDrop: m,
-        onEdit: p,
-        onRemove: x,
-        title: j,
-        canRemove: h,
-        actionsLocation: O,
-        fieldStyle: y,
+        index: s,
+        isDragEnabled: m,
+        isDropHovered: h,
+        onDrop: v,
+        onEdit: j,
+        onRemove: f,
+        title: p,
+        canRemove: g,
+        actionsLocation: A,
+        fieldStyle: T,
         children: [
-            (0, r.jsx)(o.IJ, {
-                terms: A,
-                channelId: t,
-            }),
-            0 !== E &&
-                (0, r.jsxs)(a.DUT, {
-                    className: l()(f.vs, f.vk),
-                    onClick: p,
+            (0, i.jsx)(d.IJ, { terms: E, channelId: t }),
+            0 !== w &&
+                (0, i.jsxs)(a.DUT, {
+                    className: l()(x.vs, x.vk),
+                    onClick: j,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            className: f.vk,
-                            children: u.intl.format(u.t.jnhD0S, {
-                                count: E,
-                            }),
+                            className: x.vk,
+                            children: u.intl.format(u.t.jnhD0S, { count: w }),
                         }),
-                        (0, r.jsx)(c.A, {
-                            className: f.IC,
+                        (0, i.jsx)(c.A, {
+                            className: x.IC,
                             height: 14,
                             width: 14,
-                            color: s.A.unsafe_rawColors.WHITE.css,
+                            color: r.A.unsafe_rawColors.WHITE.css,
                         }),
                     ],
                 }),
-            (0, r.jsx)(o.xs, {
-                disabled: !0,
-                checked: !1,
-            }),
+            (0, i.jsx)(d.xs, { disabled: !0, checked: !1 }),
         ],
     });
 };

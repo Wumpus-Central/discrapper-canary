@@ -13,18 +13,7 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                className: "literal",
-                variants: [
-                    {
-                        begin: "#\\s+",
-                        relevance: 0,
-                    },
-                    {
-                        begin: "#[a-zA-Z .]+",
-                    },
-                ],
-            },
+            { className: "literal", variants: [{ begin: "#\\s+", relevance: 0 }, { begin: "#[a-zA-Z .]+" }] },
         ],
     };
 };

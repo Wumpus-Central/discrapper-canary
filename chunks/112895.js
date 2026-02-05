@@ -1,43 +1,36 @@
-a.d(t, {
-    A: () => A,
-});
+a.d(t, { A: () => A });
 var s = a(627968),
     l = a(64700),
-    r = a(134402),
-    n = a(877227),
-    i = a(137540),
+    i = a(134402),
+    r = a(877227),
+    n = a(137540),
     o = a(980302),
     c = a(818348),
     d = a(563853),
-    u = a(138649);
+    _ = a(138649);
 let N = c.sE.MAIN_NAVIGATION_MENU;
-
 function A(e) {
-    let { TrackClick: t, title: a, links: A, onClose: p, onOpen: h, isOpen: b = !1, isMobile: f, avoidRouter: k } = e,
-        I = (0, n.dI)({
-            history: (0, r.W6)(),
-        }),
-        O = l.useId(),
-        m = () => p(),
-        g = () => h(a),
-        _ = () => (b ? p() : h(a)),
-        T =
-            f && b
+    let { TrackClick: t, title: a, links: A, onClose: u, onOpen: I, isOpen: k = !1, isMobile: h, avoidRouter: p } = e,
+        m = (0, r.dI)({ history: (0, i.W6)() }),
+        g = l.useId(),
+        T = () => u(),
+        O = () => I(a),
+        C = () => (k ? u() : I(a)),
+        v =
+            h && k
                 ? (0, s.jsx)("ul", {
-                      className: u.Er,
-                      id: O,
+                      className: _.Er,
+                      id: g,
                       children: A.map((e) =>
                           e.external
                               ? (0, s.jsx)(
                                     "li",
                                     {
-                                        className: u.ni,
+                                        className: _.ni,
                                         children: (0, s.jsx)(t, {
                                             eventName: N,
-                                            className: u.qz,
-                                            data: {
-                                                linkClicked: "mobile-".concat(e.linkClicked),
-                                            },
+                                            className: _.qz,
+                                            data: { linkClicked: `mobile-${e.linkClicked}` },
                                             rel: "me",
                                             href: e.route,
                                             children: e.title,
@@ -48,18 +41,16 @@ function A(e) {
                               : (0, s.jsx)(
                                     "li",
                                     {
-                                        className: I(e.route) ? u.wL : u.ni,
-                                        children: (0, s.jsx)(i.A, {
-                                            avoidRouter: k,
+                                        className: m(e.route) ? _.wL : _.ni,
+                                        children: (0, s.jsx)(n.A, {
+                                            avoidRouter: p,
                                             to: e.route,
                                             from: c.sE.MAIN_NAVIGATION_MENU,
                                             children: (0, s.jsx)(t, {
-                                                className: u.qz,
+                                                className: _.qz,
                                                 tag: "span",
                                                 eventName: N,
-                                                data: {
-                                                    linkClicked: "mobile-".concat(e.linkClicked),
-                                                },
+                                                data: { linkClicked: `mobile-${e.linkClicked}` },
                                                 children: e.title,
                                             }),
                                         }),
@@ -69,84 +60,76 @@ function A(e) {
                       ),
                   })
                 : null;
-    return f
+    return h
         ? (0, s.jsxs)(
               "li",
               {
-                  className: u.__invalid_subListHeading,
+                  className: _.__invalid_subListHeading,
                   tabIndex: -1,
-                  onClick: _,
+                  onClick: C,
                   onKeyDown: (e) => {
-                      ("Enter" === e.key || " " === e.key) && (e.preventDefault(), _());
+                      ("Enter" === e.key || " " === e.key) && (e.preventDefault(), C());
                   },
                   children: [
                       (0, s.jsxs)(
                           "span",
                           {
-                              className: u.DC,
-                              "aria-label": "Open ".concat(a, " Nav"),
-                              "aria-expanded": b,
-                              "aria-controls": O,
+                              className: _.DC,
+                              "aria-label": `Open ${a} Nav`,
+                              "aria-expanded": k,
+                              "aria-controls": g,
                               "aria-haspopup": "true",
                               role: "menuitem",
                               tabIndex: 0,
                               children: [
                                   a,
-                                  (0, s.jsx)("img", {
-                                      src: d.T.ICON_ARROW_DOWN,
-                                      className: u.fr,
-                                      alt: "Open Nav",
-                                  }),
+                                  (0, s.jsx)("img", { src: d.T.ICON_ARROW_DOWN, className: _.fr, alt: "Open Nav" }),
                               ],
                           },
                           "more",
                       ),
-                      T,
+                      v,
                   ],
               },
-              "dropdown_".concat(a),
+              `dropdown_${a}`,
           )
         : (0, s.jsxs)(
               "li",
               {
                   role: "none",
                   tabIndex: -1,
-                  onFocus: g,
-                  onBlur: m,
-                  onMouseEnter: g,
-                  onMouseLeave: m,
-                  className: u.pX,
+                  onFocus: O,
+                  onBlur: T,
+                  onMouseEnter: O,
+                  onMouseLeave: T,
+                  className: _.pX,
                   children: [
                       (0, s.jsxs)(
                           "span",
                           {
-                              className: u.Bc,
+                              className: _.Bc,
                               role: "menuitem",
                               tabIndex: 0,
                               "aria-haspopup": "true",
-                              "aria-expanded": b,
-                              "aria-controls": O,
+                              "aria-expanded": k,
+                              "aria-controls": g,
                               children: [
                                   a,
-                                  (0, s.jsx)("img", {
-                                      src: d.T.ICON_ARROW_DOWN,
-                                      className: u.fr,
-                                      alt: "Open Nav",
-                                  }),
+                                  (0, s.jsx)("img", { src: d.T.ICON_ARROW_DOWN, className: _.fr, alt: "Open Nav" }),
                               ],
                           },
                           "more",
                       ),
                       (0, s.jsx)(o.r, {
-                          id: O,
-                          avoidRouter: k,
+                          id: g,
+                          avoidRouter: p,
                           TrackClick: t,
-                          isOpen: b,
+                          isOpen: k,
                           dropdownLinks: A,
                           "aria-label": a,
                       }),
                   ],
               },
-              "dropdown_".concat(a),
+              `dropdown_${a}`,
           );
 }

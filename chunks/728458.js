@@ -1,157 +1,61 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(668279),
     i = n(761296),
     a = n(723702),
     s = n(837921);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function d() {
-    var e, t, n, r, i, o;
-    let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+function o() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     a.isPlatformEmbedded &&
         s.Ay.updateCrashReporter({
-            user_id: null != (e = l.id) ? e : "",
-            username: null != (t = l.username) ? t : "",
-            email: null != (n = l.email) ? n : "",
-            sentry: {
-                user: {
-                    id: null != (r = l.id) ? r : "",
-                    username: null != (i = l.username) ? i : "",
-                    email: null != (o = l.email) ? o : "",
-                },
-            },
+            user_id: e.id ?? "",
+            username: e.username ?? "",
+            email: e.email ?? "",
+            sentry: { user: { id: e.id ?? "", username: e.username ?? "", email: e.email ?? "" } },
         });
 }
-let f = {
+let l = {
     setUser(e, t, n, r) {
-        var i;
-        let a = {
-            id: e,
-            username: t,
-            email: n,
-            staff: r,
-        };
-        null == (i = window.DiscordSentry) || i.getCurrentScope().setUser(a), d(a);
+        let i = { id: e, username: t, email: n, staff: r };
+        window.DiscordSentry?.getCurrentScope().setUser(i), o(i);
     },
     clearUser() {
-        var e;
-        null == (e = window.DiscordSentry) || e.getCurrentScope().setUser(null), d();
+        window.DiscordSentry?.getCurrentScope().setUser(null), o();
     },
     setTags(e) {
-        var t;
-        null == (t = window.DiscordSentry) || t.getCurrentScope().setTags(e);
+        window.DiscordSentry?.getCurrentScope().setTags(e);
     },
     setExtra(e) {
-        var t;
-        null == (t = window.DiscordSentry) || t.getCurrentScope().setExtras(e);
+        window.DiscordSentry?.getCurrentScope().setExtras(e);
     },
     captureException(e, t) {
-        var n;
-        let r = (0, i.Q)(t);
-        null == (n = window.DiscordSentry) ||
-            n.withScope((t) => {
-                var n;
-                null != r.tags && t.setTags(r.tags),
-                    t.setExtras(r.extra),
-                    null == (n = window.DiscordSentry) || n.captureException(e);
-            });
+        let n = (0, i.Q)(t);
+        window.DiscordSentry?.withScope((t) => {
+            null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureException(e);
+        });
     },
     captureCrash(e, t) {
-        var n;
-        let r,
-            a = (0, i.Q)(t);
+        let n,
+            r = (0, i.Q)(t);
         return (
-            null == (n = window.DiscordSentry) ||
-                n.withScope((t) => {
-                    var n;
-                    t.setExtras(a.extra),
-                        t.setTag("crash", "true"),
-                        t.setLevel("fatal"),
-                        t.addEventProcessor((e) => {
-                            var t, n;
-                            let r = null == (n = e.exception) || null == (t = n.values) ? void 0 : t[0];
-                            return (
-                                null != r &&
-                                    (r.mechanism = u(l({}, r.mechanism), {
-                                        handled: !1,
-                                    })),
-                                e
-                            );
-                        }),
-                        (r = null == (n = window.DiscordSentry) ? void 0 : n.captureException(e));
-                }),
-            r
+            window.DiscordSentry?.withScope((t) => {
+                t.setExtras(r.extra),
+                    t.setTag("crash", "true"),
+                    t.setLevel("fatal"),
+                    t.addEventProcessor((e) => {
+                        let t = e.exception?.values?.[0];
+                        return null != t && (t.mechanism = { ...t.mechanism, handled: !1 }), e;
+                    }),
+                    (n = window.DiscordSentry?.captureException(e));
+            }),
+            n
         );
     },
     captureMessage(e, t) {
-        var n;
-        let r = (0, i.Q)(t);
-        null == (n = window.DiscordSentry) ||
-            n.withScope((t) => {
-                var n;
-                null != r.tags && t.setTags(r.tags),
-                    t.setExtras(r.extra),
-                    null == (n = window.DiscordSentry) || n.captureMessage(e);
-            });
+        let n = (0, i.Q)(t);
+        window.DiscordSentry?.withScope((t) => {
+            null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureMessage(e);
+        });
     },
     addBreadcrumb(e) {
         (0, r.A)(e);

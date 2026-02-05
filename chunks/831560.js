@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -9,23 +8,9 @@ t(697509)(r, "__esModule", {
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: {
-            "aria-multiselectable": null,
-            "aria-readonly": null,
-        },
+        props: { "aria-multiselectable": null, "aria-readonly": null },
         relatedConcepts: [
-            {
-                concept: {
-                    attributes: [
-                        {
-                            name: "role",
-                            value: "grid",
-                        },
-                    ],
-                    name: "table",
-                },
-                module: "HTML",
-            },
+            { concept: { attributes: [{ name: "role", value: "grid" }], name: "table" }, module: "HTML" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

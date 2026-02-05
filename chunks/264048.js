@@ -1,3 +1,4 @@
+"use strict";
 var r = n(691262),
     i = (function () {
         try {
@@ -18,7 +19,6 @@ var a = i
         Object.create ||
         function (e, t) {
             var n, i;
-
             function s() {}
             for (i in ((s.prototype = e), (n = new s()), t)) r.hop.call(t, i) && a(n, i, t[i]);
             return n;

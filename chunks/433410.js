@@ -1,28 +1,25 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(95035),
-    s = n(819982),
-    o = n(789622),
-    l = n(985018),
+var s = n(397927),
+    r = n(95035),
+    a = n(819982),
+    l = n(789622),
+    o = n(985018),
     c = n(139674);
-
-function u() {
-    return (0, r.jsx)(i.wx6, {
+function d() {
+    return (0, i.jsx)(s.wx6, {
         type: "warning",
-        children: (0, r.jsxs)(i.Text, {
+        children: (0, i.jsxs)(s.Text, {
             variant: "text-sm/normal",
             children: [
-                l.intl.format(l.t.pdYZyg, {}),
+                o.intl.format(o.t.pdYZyg, {}),
                 " ",
                 "",
-                (0, r.jsx)(a.A, {
+                (0, i.jsx)(r.A, {
                     className: c.s6,
-                    onClick: () => (0, s.A)(o.gg.USER_SETTINGS),
-                    children: l.intl.string(l.t.LhlgY9),
+                    onClick: () => (0, a.A)(l.gg.USER_SETTINGS),
+                    children: o.intl.string(o.t.LhlgY9),
                 }),
             ],
         }),

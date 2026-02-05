@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Su: "gameImage_a3ec8a",
     gP: "gameUnknownImage_a3ec8a",

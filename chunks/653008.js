@@ -1,138 +1,94 @@
-n.d(t, {
-    A: () => h,
-});
-var r = n(627968),
+n.d(t, { A: () => A });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
-    a = n(155718),
-    s = n(168186),
+    a = n(311907),
+    s = n(155718),
+    r = n(168186),
     o = n(9842),
     c = n(994500),
-    u = n(301960),
-    d = n(112758),
-    f = n(162792);
-let p = l.memo(function (e) {
-    var t, n;
+    d = n(301960),
+    u = n(112758),
+    h = n(162792);
+let m = l.memo(function (e) {
     let {
-            message: p,
-            channel: h,
-            compact: b = !1,
-            interactionUsernameProfile: g,
-            interactionAvatarProfile: m,
-            interactionData: A,
-            referencedUsernameProfile: y,
-            referencedAvatarProfile: O,
-            setPopout: j,
+            message: t,
+            channel: n,
+            compact: m = !1,
+            interactionUsernameProfile: A,
+            interactionAvatarProfile: p,
+            interactionData: g,
+            referencedUsernameProfile: f,
+            referencedAvatarProfile: _,
+            setPopout: E,
         } = e,
-        { isInteractionUserBlocked: v, isInteractionUserIgnored: x } = (0, i.cf)(
+        { isInteractionUserBlocked: C, isInteractionUserIgnored: x } = (0, a.cf)(
             [c.A],
             () => ({
-                isInteractionUserBlocked: c.A.isBlockedForMessage(p),
-                isInteractionUserIgnored: c.A.isIgnoredForMessage(p),
+                isInteractionUserBlocked: c.A.isBlockedForMessage(t),
+                isInteractionUserIgnored: c.A.isIgnoredForMessage(t),
             }),
-            [p],
+            [t],
         ),
-        E = (0, i.bG)([o.A], () => o.A.getMessageByReference(null == p ? void 0 : p.messageReference)),
-        _ = (0, d.r4)(null == (t = p.interaction) ? void 0 : t.user.id, h.id),
-        C = (0, d.T0)(p.interaction, h, g, j),
-        S = (0, d.Yq)(m, j),
-        I = (0, s.Am)(p),
-        N =
-            (null == I ? void 0 : I.type) === a.G4.APPLICATION_COMMAND
-                ? null == (n = I.target_user)
-                    ? void 0
-                    : n.id
-                : void 0,
-        T = (0, d.r4)(N, h.id),
-        P = (0, d.I)(N, h, y, j),
-        w = (0, d.Ge)(O, j),
-        R = (0, d.U_)(A, j),
+        S = (0, a.bG)([o.A], () => o.A.getMessageByReference(t?.messageReference)),
+        T = (0, u.r4)(t.interaction?.user.id, n.id),
+        I = (0, u.T0)(t.interaction, n, A, E),
+        N = (0, u.Yq)(p, E),
+        v = (0, r.Am)(t),
+        y = v?.type === s.G4.APPLICATION_COMMAND ? v.target_user?.id : void 0,
+        b = (0, u.r4)(y, n.id),
+        R = (0, u.I)(y, n, f, E),
+        j = (0, u.Ge)(_, E),
+        M = (0, u.U_)(g, E),
         D = l.useCallback(() => {
-            j({
+            E({
                 interactionUsernameProfile: !1,
                 interactionAvatarProfile: !1,
                 interactionData: !1,
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
-        }, [j]),
-        M = l.useCallback(
+        }, [E]),
+        O = l.useCallback(
             () =>
-                (0, f.A)({
-                    message: p,
-                    channel: h,
-                    compact: b,
-                    setPopout: j,
-                    referencedAvatarProfile: O,
-                    referencedUsernameProfile: y,
-                    replyReference: p.messageReference,
-                    replyMessage: E,
+                (0, h.A)({
+                    message: t,
+                    channel: n,
+                    compact: m,
+                    setPopout: E,
+                    referencedAvatarProfile: _,
+                    referencedUsernameProfile: f,
+                    replyReference: t.messageReference,
+                    replyMessage: S,
                     isReplySpineClickable: !1,
                     showReplySpine: !1,
                 }),
-            [h, b, p, O, E, y, j],
+            [n, m, t, _, S, f, E],
         );
-    return (0, r.jsx)(u.A, {
-        message: p,
-        channel: h,
-        compact: b,
-        isInteractionUserBlocked: v,
+    return (0, i.jsx)(d.A, {
+        message: t,
+        channel: n,
+        compact: m,
+        isInteractionUserBlocked: C,
         isInteractionUserIgnored: x,
-        showAvatarPopout: m,
-        showUsernamePopout: g,
-        showDataPopout: A,
-        showTargetAvatarPopout: O,
-        showTargetUsernamePopout: y,
-        onClickAvatar: S,
-        onClickUsername: C,
-        onClickCommand: R,
-        onUserContextMenu: _,
-        onClickTargetAvatar: w,
-        onClickTargetUsername: P,
-        onTargetUserContextMenu: T,
+        showAvatarPopout: p,
+        showUsernamePopout: A,
+        showDataPopout: g,
+        showTargetAvatarPopout: _,
+        showTargetUsernamePopout: f,
+        onClickAvatar: N,
+        onClickUsername: I,
+        onClickCommand: M,
+        onUserContextMenu: T,
+        onClickTargetAvatar: j,
+        onClickTargetUsername: R,
+        onTargetUserContextMenu: b,
         onPopoutRequestClose: D,
-        renderTargetMessage: M,
+        renderTargetMessage: O,
     });
 });
-
-function h(e, t, n) {
-    let { message: l, channel: i, compact: a } = e;
+function A(e, t, n) {
+    let { message: l, channel: a, compact: s } = e;
     return null != l.interaction && "" !== l.interaction.displayName
-        ? (0, r.jsx)(
-              p,
-              (function (e) {
-                  for (var t = 1; t < arguments.length; t++) {
-                      var n = null != arguments[t] ? arguments[t] : {},
-                          r = Object.keys(n);
-                      "function" == typeof Object.getOwnPropertySymbols &&
-                          (r = r.concat(
-                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                              }),
-                          )),
-                          r.forEach(function (t) {
-                              var r;
-                              (r = n[t]),
-                                  t in e
-                                      ? Object.defineProperty(e, t, {
-                                            value: r,
-                                            enumerable: !0,
-                                            configurable: !0,
-                                            writable: !0,
-                                        })
-                                      : (e[t] = r);
-                          });
-                  }
-                  return e;
-              })(
-                  {
-                      message: l,
-                      channel: i,
-                      compact: a,
-                      setPopout: t,
-                  },
-                  n,
-              ),
-          )
+        ? (0, i.jsx)(m, { message: l, channel: a, compact: s, setPopout: t, ...n })
         : null;
 }

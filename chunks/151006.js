@@ -1,6 +1,4 @@
-n.d(t, {
-    default: () => d,
-});
+n.d(t, { default: () => d });
 var i = n(627968),
     a = n(64700),
     l = n(397927),
@@ -9,17 +7,12 @@ var i = n(627968),
     s = n(253932),
     r = n(957565),
     u = n(985018);
-
 function d(e) {
     let { imageUrl: t, onSelect: n } = e,
         d = s.Q_.useSetting(),
         { tidaWebformEnabled: p } = o.A.useExperiment(
-            {
-                location: "GuildEventImageContextMenu",
-            },
-            {
-                autoTrackExposure: !1,
-            },
+            { location: "GuildEventImageContextMenu" },
+            { autoTrackExposure: !1 },
         ),
         g = a.useCallback(() => {
             (0, r.C)(t);
@@ -37,10 +30,7 @@ function d(e) {
                       label: u.intl.string(u.t["8xHmxo"]),
                       action: g,
                       icon: l.qYV,
-                      leadingAccessory: {
-                          type: "icon",
-                          icon: l.qYV,
-                      },
+                      leadingAccessory: { type: "icon", icon: l.qYV },
                   }),
               }),
           })

@@ -1,33 +1,20 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => a });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(391526);
-let s = (e) => {
-    let { label: t, onClick: n, submitting: s } = e;
-    return (0, r.jsx)(i.DUT, {
-        onClick: s ? void 0 : n,
-        className: a.x6,
-        children: (0, r.jsxs)("div", {
-            className: a.hQ,
+var s = n(397927),
+    r = n(391526);
+let a = (e) => {
+    let { label: t, onClick: n, submitting: a } = e;
+    return (0, i.jsx)(s.DUT, {
+        onClick: a ? void 0 : n,
+        className: r.x6,
+        children: (0, i.jsxs)("div", {
+            className: r.hQ,
             children: [
-                s
-                    ? (0, r.jsx)(i.y$y, {
-                          type: i.y$y.Type.PULSING_ELLIPSIS,
-                          className: a.__invalid_spinner,
-                      })
-                    : (0, r.jsx)(i.Text, {
-                          variant: "text-md/medium",
-                          className: a.Pf,
-                          children: t,
-                      }),
-                (0, r.jsx)(i.abt, {
-                    size: "md",
-                    color: "currentColor",
-                    className: a.UE,
-                }),
+                a
+                    ? (0, i.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS, className: r.__invalid_spinner })
+                    : (0, i.jsx)(s.Text, { variant: "text-md/medium", className: r.Pf, children: t }),
+                (0, i.jsx)(s.abt, { size: "md", color: "currentColor", className: r.UE }),
             ],
         }),
     });

@@ -1,69 +1,55 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(114821),
-    n(339614),
-    n(321073);
-var r = n(627968);
+n.d(t, { A: () => u }), n(321073);
+var i = n(627968);
 n(64700);
 var l = n(735438),
-    i = n.n(l),
+    s = n.n(l),
     a = n(813516),
-    s = n(5658),
+    r = n(5658),
     o = n(712209),
-    c = n(985018),
-    u = n(48355);
-
-function d(e, t, n) {
-    let { markChannelRead: l, markGuildRead: d, deleteChannel: f, toggle: p, getNumUnreadChannels: h } = t,
-        b = null;
-    return i().flatMap(e, (e) => {
-        let t = e.sortOrder !== b;
-        b = e.sortOrder;
-        let i = [];
+    d = n(985018),
+    c = n(48355);
+function u(e, t, n) {
+    let { markChannelRead: l, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: g } = t,
+        m = null;
+    return s().flatMap(e, (e) => {
+        let t = e.sortOrder !== m;
+        m = e.sortOrder;
+        let s = [];
         return (
             t &&
                 (e.hasLoadedAnything && e.sortOrder === o.xB.ReallyOldChannel
-                    ? i.push(
-                          (0, r.jsx)(
+                    ? s.push(
+                          (0, i.jsx)(
                               a.A,
-                              {
-                                  className: u.y,
-                                  contentClassName: u.$,
-                                  children: c.intl.string(c.t.roBMzj),
-                              },
+                              { className: c.y, contentClassName: c.$, children: d.intl.string(d.t.roBMzj) },
                               "old-divider",
                           ),
                       )
                     : e.hasLoadedAnything &&
                       e.sortOrder === o.xB.NoNotifications &&
-                      i.push(
-                          (0, r.jsx)(
+                      s.push(
+                          (0, i.jsx)(
                               a.A,
-                              {
-                                  className: u.y,
-                                  contentClassName: u.$,
-                                  children: c.intl.string(c.t["2Ys7nu"]),
-                              },
+                              { className: c.y, contentClassName: c.$, children: d.intl.string(d.t["2Ys7nu"]) },
                               "disabled-divider",
                           ),
                       )),
-            i.push(
-                (0, r.jsx)(
-                    s.A,
+            s.push(
+                (0, i.jsx)(
+                    r.A,
                     {
                         channel: e,
                         markChannelRead: l,
-                        markGuildRead: d,
-                        toggle: p,
-                        deleteChannel: f,
+                        markGuildRead: u,
+                        toggle: A,
+                        deleteChannel: h,
                         onJump: n,
-                        getNumUnreadChannels: h,
+                        getNumUnreadChannels: g,
                     },
                     e.channelId,
                 ),
             ),
-            i
+            s
         );
     });
 }

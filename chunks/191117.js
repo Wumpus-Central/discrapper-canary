@@ -1,138 +1,85 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => j });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(417597),
-    c = n(397927),
-    o = n(157559),
-    d = n(599119),
+    o = n(397927),
+    d = n(157559),
+    c = n(599119),
     u = n(219504),
-    f = n(71393),
+    m = n(71393),
     g = n(107795),
-    b = n(655943),
-    m = n(726862),
-    p = n(539916),
-    x = n(985018),
-    h = n(42483);
-
-function j(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e) {
+    x = n(655943),
+    h = n(726862),
+    _ = n(539916),
+    A = n(985018),
+    p = n(42483);
+function f(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
-        o = (0, a.bG)([b.A], () => b.A.editedOnboardingPrompts),
-        u = o.filter((e) => e.inOnboarding),
-        f = u.length,
+        d = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),
+        u = d.filter((e) => e.inOnboarding),
+        m = u.length,
         {
-            drag: m,
-            drop: j,
-            dragSourcePosition: O,
-            setIsDraggable: y,
-        } = (0, d.A)({
+            drag: h,
+            drop: f,
+            dragSourcePosition: j,
+            setIsDraggable: N,
+        } = (0, c.A)({
             type: "ONBOARDING_PROMPT_CARD",
-            index: f,
+            index: m,
             optionId: "separator",
             onDragStart: () => {},
             onDragComplete: () => {},
             onDragReset: () => {},
         }),
-        v = i.useRef(null);
+        E = s.useRef(null);
     return (
-        i.useEffect(() => {
-            y(!1);
-        }, [y]),
-        i.useEffect(() => {
-            m(j(v));
-        }, [m, j, v]),
-        (0, r.jsxs)("div", {
-            ref: v,
-            className: s()(h.fY, {
-                [h.A]: null != O && f < O,
-                [h.Ze]: null != O && f > O,
-            }),
+        s.useEffect(() => {
+            N(!1);
+        }, [N]),
+        s.useEffect(() => {
+            h(f(E));
+        }, [h, f, E]),
+        (0, i.jsxs)("div", {
+            ref: E,
+            className: r()(p.fY, { [p.A]: null != j && m < j, [p.Ze]: null != j && m > j }),
             children: [
-                !l && u.length < p.D1
-                    ? (0, r.jsxs)(c.DUT, {
-                          className: h.Wz,
-                          onClick: () => (0, g.WC)(t, [...o, (0, p.a5)(!0)], !1),
+                !l && u.length < _.D1
+                    ? (0, i.jsxs)(o.DUT, {
+                          className: p.Wz,
+                          onClick: () => (0, g.WC)(t, [...d, (0, _.a5)(!0)], !1),
                           children: [
-                              (0, r.jsx)(c.U1e, {
+                              (0, i.jsx)(o.U1e, {
                                   size: "custom",
                                   color: "currentColor",
-                                  className: h.WW,
+                                  className: p.WW,
                                   width: 20,
                                   height: 20,
                               }),
-                              (0, r.jsx)(c.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-md/medium",
                                   color: "text-brand",
-                                  children: x.intl.string(x.t.ujFquz),
+                                  children: A.intl.string(A.t.ujFquz),
                               }),
                           ],
                       })
                     : null,
                 n
                     ? null
-                    : (0, r.jsxs)(r.Fragment, {
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)("div", {
-                                  className: h.yF,
-                              }),
-                              (0, r.jsx)(c.Heading, {
+                              (0, i.jsx)("div", { className: p.yF }),
+                              (0, i.jsx)(o.Heading, {
                                   variant: "heading-md/bold",
-                                  children: x.intl.string(x.t.tjrGcb),
+                                  children: A.intl.string(A.t.tjrGcb),
                               }),
-                              (0, r.jsx)(c.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  className: h.VA,
-                                  children: x.intl.string(x.t.XFa6Q8),
+                                  className: p.VA,
+                                  children: A.intl.string(A.t.XFa6Q8),
                               }),
                           ],
                       }),
@@ -140,137 +87,112 @@ function y(e) {
         })
     );
 }
-
-function v(e) {
-    let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: s } = e,
-        d = (0, a.bG)([f.A], () => f.A.getGuild(t)),
-        v = (0, a.bG)([b.A], () => b.A.editedOnboardingPrompts),
-        A = v.filter((e) => e.inOnboarding),
-        E = v.filter((e) => !0 !== e.inOnboarding),
-        N = [
-            ...A.map((e) => ({
-                id: e.id,
-                data: e,
-            })),
-            {
-                id: "separator",
-                data: (0, p.Mc)(),
-            },
-            ...E.map((e) => ({
-                id: e.id,
-                data: e,
-            })),
+function j(e) {
+    let { guildId: t, prejoinOnly: n, postjoinOnly: s, includeCount: l, singleColumn: r } = e,
+        c = (0, a.bG)([m.A], () => m.A.getGuild(t)),
+        j = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),
+        N = j.filter((e) => e.inOnboarding),
+        E = j.filter((e) => !0 !== e.inOnboarding),
+        b = [
+            ...N.map((e) => ({ id: e.id, data: e })),
+            { id: "separator", data: (0, _.Mc)() },
+            ...E.map((e) => ({ id: e.id, data: e })),
         ],
         {
-            handleDragStart: _,
-            handleDragReset: S,
-            handleDragComplete: T,
-        } = (0, u.A)(N, (e) => {
+            handleDragStart: T,
+            handleDragReset: C,
+            handleDragComplete: I,
+        } = (0, u.A)(b, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
-                n = e.slice(0, t).map((e) =>
-                    O(j({}, e.data), {
-                        inOnboarding: !0,
-                    }),
-                ),
-                r = e.slice(t + 1).map((e) =>
-                    O(j({}, e.data), {
-                        inOnboarding: !1,
-                        required: !1,
-                    }),
-                );
-            n.length > p.D1
-                ? o.A.show({
-                      title: x.intl.string(x.t.Cxtq5x),
-                      body: x.intl.formatToPlainString(x.t["pkbZ+U"], {
-                          numQuestions: p.D1,
-                      }),
+                n = e.slice(0, t).map((e) => ({ ...e.data, inOnboarding: !0 })),
+                i = e.slice(t + 1).map((e) => ({ ...e.data, inOnboarding: !1, required: !1 }));
+            n.length > _.D1
+                ? d.A.show({
+                      title: A.intl.string(A.t.Cxtq5x),
+                      body: A.intl.formatToPlainString(A.t["pkbZ+U"], { numQuestions: _.D1 }),
                   })
-                : (0, g.WC)(d, [...n, ...r]);
+                : (0, g.WC)(c, [...n, ...i]);
         });
-    return null == d
+    return null == c
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  i
+                  s
                       ? null
-                      : (0, r.jsxs)(r.Fragment, {
+                      : (0, i.jsxs)(i.Fragment, {
                             children: [
                                 n
                                     ? null
-                                    : (0, r.jsxs)("div", {
+                                    : (0, i.jsxs)("div", {
                                           children: [
-                                              (0, r.jsx)(c.Heading, {
+                                              (0, i.jsx)(o.Heading, {
                                                   variant: "heading-md/bold",
-                                                  children: x.intl.string(x.t["24Qm4M"]),
+                                                  children: A.intl.string(A.t["24Qm4M"]),
                                               }),
-                                              (0, r.jsx)(c.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-default",
-                                                  className: h.VA,
-                                                  children: x.intl.string(x.t.QvCcYe),
+                                                  className: p.VA,
+                                                  children: A.intl.string(A.t.QvCcYe),
                                               }),
                                           ],
                                       }),
-                                A.map((e, t) =>
-                                    (0, r.jsx)(
-                                        m.A,
+                                N.map((e, t) =>
+                                    (0, i.jsx)(
+                                        h.A,
                                         {
-                                            guild: d,
+                                            guild: c,
                                             prompt: e,
                                             disableAutofocus: n,
                                             includeCount: l,
-                                            singleColumn: s,
+                                            singleColumn: r,
                                             promptIndex: t,
                                             dragIndex: t,
-                                            onPromptDragStart: _,
-                                            onPromptDragReset: S,
-                                            onPromptDragComplete: T,
+                                            onPromptDragStart: T,
+                                            onPromptDragReset: C,
+                                            onPromptDragComplete: I,
                                         },
                                         e.id,
                                     ),
                                 ),
                             ],
                         }),
-                  (0, r.jsx)(y, {
-                      guild: d,
-                      prejoinOnly: n,
-                      postjoinOnly: i,
-                  }),
+                  (0, i.jsx)(f, { guild: c, prejoinOnly: n, postjoinOnly: s }),
                   n
                       ? null
-                      : (0, r.jsxs)(r.Fragment, {
+                      : (0, i.jsxs)(i.Fragment, {
                             children: [
                                 E.map((e, t) =>
-                                    (0, r.jsx)(
-                                        m.A,
+                                    (0, i.jsx)(
+                                        h.A,
                                         {
-                                            guild: d,
+                                            guild: c,
                                             prompt: e,
-                                            promptIndex: t + A.length,
-                                            dragIndex: t + A.length + 1,
-                                            onPromptDragStart: _,
-                                            onPromptDragReset: S,
-                                            onPromptDragComplete: T,
+                                            promptIndex: t + N.length,
+                                            dragIndex: t + N.length + 1,
+                                            onPromptDragStart: T,
+                                            onPromptDragReset: C,
+                                            onPromptDragComplete: I,
                                         },
                                         e.id,
                                     ),
                                 ),
-                                v.length < p.iD
-                                    ? (0, r.jsxs)(c.DUT, {
-                                          className: h.Wz,
-                                          onClick: () => (0, g.WC)(d, [...v, (0, p.a5)(!1)], !1),
+                                j.length < _.iD
+                                    ? (0, i.jsxs)(o.DUT, {
+                                          className: p.Wz,
+                                          onClick: () => (0, g.WC)(c, [...j, (0, _.a5)(!1)], !1),
                                           children: [
-                                              (0, r.jsx)(c.U1e, {
+                                              (0, i.jsx)(o.U1e, {
                                                   size: "custom",
                                                   color: "currentColor",
-                                                  className: h.WW,
+                                                  className: p.WW,
                                                   width: 20,
                                                   height: 20,
                                               }),
-                                              (0, r.jsx)(c.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: "text-md/medium",
                                                   color: "text-brand",
-                                                  children: x.intl.string(x.t.ujFquz),
+                                                  children: A.intl.string(A.t.ujFquz),
                                               }),
                                           ],
                                       })

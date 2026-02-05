@@ -1,82 +1,57 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048),
-    n(321073);
-var r,
-    l,
-    i = n(311907),
-    a = n(451988),
-    s = n(73153),
-    o = n(308368),
-    c = n(290863),
-    u = n(360469);
-
-function d(e, t) {
-    return "".concat(e, ":").concat(t);
-}
-let f = {},
-    p = {},
-    h = new a.J_(3e3, function () {
+n.d(t, { A: () => p }), n(321073);
+var i = n(311907),
+    l = n(451988),
+    a = n(73153),
+    s = n(308368),
+    r = n(290863),
+    o = n(360469);
+let c = {},
+    d = {},
+    u = new l.J_(3e3, function () {
         let e = [];
-        for (let [t, n] of Object.entries(p)) e.push(n), (f[t] = n), delete p[t];
-        0 !== e.length && o.A.subscribeActivities(e);
+        for (let [t, n] of Object.entries(d)) e.push(n), (c[t] = n), delete d[t];
+        0 !== e.length && s.A.subscribeActivities(e);
     });
-
-function b(e) {
-    let t = d(e.applicationId, e.partyId);
-    return t in f || t in p;
+function h(e) {
+    var t, n;
+    let i = ((t = e.applicationId), (n = e.partyId), `${t}:${n}`);
+    return i in c || i in d;
 }
-
-function g() {
-    (f = {}), (p = {});
+function m() {
+    (c = {}), (d = {});
 }
-class m extends (r = i.Ay.Store) {
+class A extends i.Ay.Store {
+    static displayName = "PresenceSubscriptionsStore";
     initialize() {
-        this.waitFor(c.A);
+        this.waitFor(r.A);
     }
     isSubscribed(e) {
-        return b(e);
+        return h(e);
     }
 }
-(l = "displayName") in m
-    ? Object.defineProperty(m, l, {
-          value: "PresenceSubscriptionsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (m[l] = "PresenceSubscriptionsStore");
-let A = new m(s.h, {
+let p = new A(a.h, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
                 let e = !1,
                     t = Date.now();
-                for (let [n, r] of Object.entries(f)) r.expiresAt < t && (delete f[n], (e = !0));
-                for (let [n, r] of Object.entries(p)) r.expiresAt < t && (delete p[n], (e = !0));
+                for (let [n, i] of Object.entries(c)) i.expiresAt < t && (delete c[n], (e = !0));
+                for (let [n, i] of Object.entries(d)) i.expiresAt < t && (delete d[n], (e = !0));
                 return e;
             })(),
-            { userId: r, applicationId: l, partyId: i, messageId: a, channelId: s, inviteTime: o } = t;
-        if (b(t) || o + u.dm < Date.now()) return n;
-        let c = d(l, i),
-            g = u.dm + Date.now();
+            { userId: i, applicationId: l, partyId: a, messageId: s, channelId: r, inviteTime: m } = t;
+        if (h(t) || m + o.dm < Date.now()) return n;
+        let A = `${l}:${a}`,
+            p = o.dm + Date.now();
         return (
-            (p[c] = {
-                userId: r,
-                applicationId: l,
-                partyId: i,
-                messageId: a,
-                channelId: s,
-                expiresAt: g,
-            }),
-            h.delay(),
+            (d[A] = { userId: i, applicationId: l, partyId: a, messageId: s, channelId: r, expiresAt: p }),
+            u.delay(),
             !0
         );
     },
-    CONNECTION_OPEN: g,
-    CONNECTION_RESUMED: g,
+    CONNECTION_OPEN: m,
+    CONNECTION_RESUMED: m,
     LOGOUT: function () {
-        (f = {}), (p = {});
+        (c = {}), (d = {});
     },
 });

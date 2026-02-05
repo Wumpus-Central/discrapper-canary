@@ -130,84 +130,39 @@ e.exports = function (e) {
         ],
         n = [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\{/, /\}/, {
-                relevance: 0,
-            }),
-            e.COMMENT(/\(\*/, /\*\)/, {
-                relevance: 10,
-            }),
+            e.COMMENT(/\{/, /\}/, { relevance: 0 }),
+            e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
         ],
         r = {
             className: "meta",
             variants: [
-                {
-                    begin: /\{\$/,
-                    end: /\}/,
-                },
-                {
-                    begin: /\(\*\$/,
-                    end: /\*\)/,
-                },
+                { begin: /\{\$/, end: /\}/ },
+                { begin: /\(\*\$/, end: /\*\)/ },
             ],
         },
-        i = {
-            className: "string",
-            begin: /'/,
-            end: /'/,
-            contains: [
-                {
-                    begin: /''/,
-                },
-            ],
-        },
+        i = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
         a = {
             className: "number",
             relevance: 0,
             variants: [
-                {
-                    match: /\b\d[\d_]*(\.\d[\d_]*)?/,
-                },
-                {
-                    match: /\$[\dA-Fa-f_]+/,
-                },
-                {
-                    match: /\$/,
-                    relevance: 0,
-                },
-                {
-                    match: /&[0-7][0-7_]*/,
-                },
-                {
-                    match: /%[01_]+/,
-                },
-                {
-                    match: /%/,
-                    relevance: 0,
-                },
+                { match: /\b\d[\d_]*(\.\d[\d_]*)?/ },
+                { match: /\$[\dA-Fa-f_]+/ },
+                { match: /\$/, relevance: 0 },
+                { match: /&[0-7][0-7_]*/ },
+                { match: /%[01_]+/ },
+                { match: /%/, relevance: 0 },
             ],
         },
         s = {
             className: "string",
             variants: [
-                {
-                    match: /#\d[\d_]*/,
-                },
-                {
-                    match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/,
-                },
-                {
-                    match: /#&[0-7][0-7_]*/,
-                },
-                {
-                    match: /#%[01][01_]*/,
-                },
+                { match: /#\d[\d_]*/ },
+                { match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/ },
+                { match: /#&[0-7][0-7_]*/ },
+                { match: /#%[01][01_]*/ },
             ],
         },
-        o = {
-            begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(",
-            returnBegin: !0,
-            contains: [e.TITLE_MODE],
-        },
+        o = { begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(", returnBegin: !0, contains: [e.TITLE_MODE] },
         l = {
             className: "function",
             beginKeywords: "function constructor destructor procedure",
@@ -215,13 +170,7 @@ e.exports = function (e) {
             keywords: "function constructor|10 destructor|10 procedure|10",
             contains: [
                 e.TITLE_MODE,
-                {
-                    className: "params",
-                    begin: /\(/,
-                    end: /\)/,
-                    keywords: t,
-                    contains: [i, s, r].concat(n),
-                },
+                { className: "params", begin: /\(/, end: /\)/, keywords: t, contains: [i, s, r].concat(n) },
                 r,
             ].concat(n),
         };

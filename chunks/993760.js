@@ -1,60 +1,47 @@
-n.d(t, {
-    m: () => c,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(65821),
-    n(457529);
+"use strict";
+n.d(t, { m: () => l }), n(323874), n(14289), n(35956);
 var r = n(972347),
     i = n(118356),
     a = n(205693),
     s = n(206607),
     o = n(264572).Buffer;
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c extends r.A {
+class l extends r.A {
+    logger;
+    dave;
+    transientKeys;
+    mlsSession;
+    encryptionWorker;
+    userId;
+    currentEncryptorProtocolVersion = 0;
+    recognizedUserIds = new Set();
+    secureFramesTransitions = new Map();
+    latestPreparedTransitionVersion = 0;
+    lastSecureFramesStateUpdate = null;
+    constructor(e, t, n) {
+        super(),
+            (this.logger = new i.Vy("DaveSessionManager")),
+            (this.dave = e),
+            (this.transientKeys = t),
+            (this.userId = n);
+        const r = "",
+            s = "";
+        (this.mlsSession = new e.Session(r, s, (e, t) => {
+            this.emit(a.yq.MLSFailure, e, t);
+        })),
+            (this.encryptionWorker = this.setupEncryptionWorker());
+    }
     createUser(e) {
         this.recognizedUserIds.add(e),
             this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, s.jU.DECRYPT);
     }
     destroyUser(e) {
-        this.recognizedUserIds.delete(e),
-            this.encryptionWorker.postMessage({
-                type: s.lA.DESTROY_USER,
-                userId: e,
-            });
+        this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: s.lA.DESTROY_USER, userId: e });
     }
     updateLocalUserCodecs(e, t) {
-        this.encryptionWorker.postMessage({
-            type: s.lA.UPDATE_CODECS,
-            audioCodec: e,
-            videoCodec: t,
-        });
+        this.encryptionWorker.postMessage({ type: s.lA.UPDATE_CODECS, audioCodec: e, videoCodec: t });
     }
     updateSsrcs(e, t, n) {
-        this.encryptionWorker.postMessage({
-            type: s.lA.UPDATE_SSRC,
-            userId: e,
-            audioSsrc: t,
-            videoSsrcs: n,
-        });
+        this.encryptionWorker.postMessage({ type: s.lA.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
     }
     setupEncodedTransformsForTransceiver(e) {
         this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver);
@@ -104,15 +91,7 @@ class c extends r.A {
     setupEncryptionWorker() {
         let e = new Worker(
             new URL("/assets/" + n.u("52584"), n.b),
-            Object.assign(
-                {},
-                {
-                    name: "encryption-worker",
-                },
-                {
-                    type: void 0,
-                },
-            ),
+            Object.assign({}, { name: "encryption-worker" }, { type: void 0 }),
         );
         return (
             (e.onmessage = (e) => {
@@ -127,9 +106,7 @@ class c extends r.A {
             (e.onmessageerror = (e) => {
                 this.logger.error("Encryption worker message error", e);
             }),
-            e.postMessage({
-                type: s.lA.INITIALIZE,
-            }),
+            e.postMessage({ type: s.lA.INITIALIZE }),
             e
         );
     }
@@ -143,14 +120,7 @@ class c extends r.A {
         if ("transform" in e) e.transform = new RTCRtpScriptTransform(this.encryptionWorker, {});
         else if ("createEncodedStreams" in e) {
             let { readable: t, writable: n } = e.createEncodedStreams();
-            this.encryptionWorker.postMessage(
-                {
-                    type: s.lA.RTC_TRANSFORM,
-                    readable: t,
-                    writable: n,
-                },
-                [t, n],
-            );
+            this.encryptionWorker.postMessage({ type: s.lA.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
         } else throw Error("Encoded transforms not supported");
     }
     setupKeyRatchetForUser(e, t, n) {
@@ -171,44 +141,16 @@ class c extends r.A {
             (this.latestPreparedTransitionVersion = t);
     }
     onSecureFramesStateChanged() {
-        var e;
-        let t = {
-            version: null != (e = this.currentEncryptorProtocolVersion) ? e : this.dave.kDisabledVersion,
-            epochAuthenticator: "",
-        };
-        if (t.version !== this.dave.kDisabledVersion) {
-            let e = this.mlsSession.GetLastEpochAuthenticator();
-            t.epochAuthenticator = o.from(e).toString("base64");
+        let e = { version: this.currentEncryptorProtocolVersion ?? this.dave.kDisabledVersion, epochAuthenticator: "" };
+        if (e.version !== this.dave.kDisabledVersion) {
+            let t = this.mlsSession.GetLastEpochAuthenticator();
+            e.epochAuthenticator = o.from(t).toString("base64");
         }
         (null == this.lastSecureFramesStateUpdate ||
-            this.lastSecureFramesStateUpdate.version !== t.version ||
-            this.lastSecureFramesStateUpdate.epochAuthenticator !== t.epochAuthenticator) &&
-            (this.logger.info("DAVE protocol state update: ".concat(JSON.stringify(t))),
-            this.emit(a.yq.SecureFramesUpdate, t),
-            (this.lastSecureFramesStateUpdate = t));
-    }
-    constructor(e, t, n) {
-        super(),
-            l(this, "logger", void 0),
-            l(this, "dave", void 0),
-            l(this, "transientKeys", void 0),
-            l(this, "mlsSession", void 0),
-            l(this, "encryptionWorker", void 0),
-            l(this, "userId", void 0),
-            l(this, "currentEncryptorProtocolVersion", 0),
-            l(this, "recognizedUserIds", new Set()),
-            l(this, "secureFramesTransitions", new Map()),
-            l(this, "latestPreparedTransitionVersion", 0),
-            l(this, "lastSecureFramesStateUpdate", null),
-            (this.logger = new i.Vy("DaveSessionManager")),
-            (this.dave = e),
-            (this.transientKeys = t),
-            (this.userId = n);
-        const r = "",
-            s = "";
-        (this.mlsSession = new e.Session(r, s, (e, t) => {
-            this.emit(a.yq.MLSFailure, e, t);
-        })),
-            (this.encryptionWorker = this.setupEncryptionWorker());
+            this.lastSecureFramesStateUpdate.version !== e.version ||
+            this.lastSecureFramesStateUpdate.epochAuthenticator !== e.epochAuthenticator) &&
+            (this.logger.info(`DAVE protocol state update: ${JSON.stringify(e)}`),
+            this.emit(a.yq.SecureFramesUpdate, e),
+            (this.lastSecureFramesStateUpdate = e));
     }
 }

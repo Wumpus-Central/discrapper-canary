@@ -48,9 +48,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}a/,
         ordinal: "%da",
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

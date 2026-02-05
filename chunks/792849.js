@@ -1,12 +1,11 @@
-n.d(t, {
-    g: () => l,
-});
+"use strict";
+n.d(t, { g: () => l });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(261225),
-    o = n(970488);
-let s = (e) => {
+    s = n(970488);
+let o = (e) => {
         let { color: t, children: n } = e;
         return (0, r.jsx)("div", {
             style: {
@@ -41,19 +40,15 @@ let s = (e) => {
                         children: "GridItem is (optionally) used to set the size of a grid itme in the grid.",
                     }),
                     (0, r.jsx)("div", {
-                        style: {
-                            marginTop: 24,
-                        },
+                        style: { marginTop: 24 },
                         children: (0, r.jsxs)(a.A, {
                             columns: t,
                             children: [
-                                (0, r.jsx)(s, {
-                                    color: "red",
-                                }),
-                                (0, r.jsx)(o.A, {
+                                (0, r.jsx)(o, { color: "red" }),
+                                (0, r.jsx)(s.A, {
                                     columns: n,
                                     rows: l,
-                                    children: (0, r.jsx)(s, {
+                                    children: (0, r.jsx)(o, {
                                         color: "orange",
                                         children: (0, r.jsx)(i.Text, {
                                             variant: "text-lg/semibold",
@@ -61,72 +56,28 @@ let s = (e) => {
                                         }),
                                     }),
                                 }),
-                                (0, r.jsx)(s, {
-                                    color: "yellow",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "green",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "blue",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "violet",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "red",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "orange",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "yellow",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "green",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "blue",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "violet",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "red",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "orange",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "yellow",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "green",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "blue",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "violet",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "red",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "orange",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "yellow",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "green",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "blue",
-                                }),
-                                (0, r.jsx)(s, {
-                                    color: "violet",
-                                }),
+                                (0, r.jsx)(o, { color: "yellow" }),
+                                (0, r.jsx)(o, { color: "green" }),
+                                (0, r.jsx)(o, { color: "blue" }),
+                                (0, r.jsx)(o, { color: "violet" }),
+                                (0, r.jsx)(o, { color: "red" }),
+                                (0, r.jsx)(o, { color: "orange" }),
+                                (0, r.jsx)(o, { color: "yellow" }),
+                                (0, r.jsx)(o, { color: "green" }),
+                                (0, r.jsx)(o, { color: "blue" }),
+                                (0, r.jsx)(o, { color: "violet" }),
+                                (0, r.jsx)(o, { color: "red" }),
+                                (0, r.jsx)(o, { color: "orange" }),
+                                (0, r.jsx)(o, { color: "yellow" }),
+                                (0, r.jsx)(o, { color: "green" }),
+                                (0, r.jsx)(o, { color: "blue" }),
+                                (0, r.jsx)(o, { color: "violet" }),
+                                (0, r.jsx)(o, { color: "red" }),
+                                (0, r.jsx)(o, { color: "orange" }),
+                                (0, r.jsx)(o, { color: "yellow" }),
+                                (0, r.jsx)(o, { color: "green" }),
+                                (0, r.jsx)(o, { color: "blue" }),
+                                (0, r.jsx)(o, { color: "violet" }),
                             ],
                         }),
                     }),
@@ -134,20 +85,8 @@ let s = (e) => {
             });
         },
         controls: {
-            columns: {
-                label: "Columns",
-                type: "number",
-                defaultValue: 3,
-            },
-            gridItemColumns: {
-                label: "Grid Item Columns",
-                type: "number",
-                defaultValue: 1,
-            },
-            gridItemRows: {
-                label: "Grid Item Rows",
-                type: "number",
-                defaultValue: 1,
-            },
+            columns: { label: "Columns", type: "number", defaultValue: 3 },
+            gridItemColumns: { label: "Grid Item Columns", type: "number", defaultValue: 1 },
+            gridItemRows: { label: "Grid Item Rows", type: "number", defaultValue: 1 },
         },
     };

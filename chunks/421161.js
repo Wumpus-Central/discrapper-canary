@@ -1,24 +1,22 @@
-n.d(t, {
-    j: () => c,
-});
+"use strict";
+n.d(t, { j: () => u });
 var r = n(64700),
     i = n(311907),
     a = n(627363),
     s = n(587895),
     o = n(71393),
     l = n(871123);
-
-function c(e) {
+function u(e) {
     let { shouldFetchIfMissing: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = (0, l.bF)(e),
-        c = null == e ? void 0 : e.applicationId,
-        u = (0, i.bG)([s.A], () => (null != c ? s.A.getApplication(c) : null), [c]),
-        d = null == u ? void 0 : u.guildId,
-        f = (0, i.bG)([o.A], () => (null != d ? o.A.getGuild(d) : null), [d]);
+        u = e?.applicationId,
+        c = (0, i.bG)([s.A], () => (null != u ? s.A.getApplication(u) : null), [u]),
+        d = c?.guildId,
+        _ = (0, i.bG)([o.A], () => (null != d ? o.A.getGuild(d) : null), [d]);
     return (
         r.useEffect(() => {
-            n && t && null == f && null != e && a.Ay.fetchApplication(e.applicationId, !0);
-        }, [f, e, t, n]),
-        n ? f : null
+            n && t && null == _ && null != e && a.Ay.fetchApplication(e.applicationId, !0);
+        }, [_, e, t, n]),
+        n ? _ : null
     );
 }

@@ -1,16 +1,17 @@
-function r(e, t) {
-    var n = i.get(e, t);
-    return "auto" === n || "scroll" === n;
+"use strict";
+function n(t, e) {
+    var r = i.get(t, e);
+    return "auto" === r || "scroll" === r;
 }
 var i = {
-    get: n(907116),
-    getScrollParent: function (e) {
-        if (!e) return null;
-        for (var t = e.ownerDocument; e && e !== t.body; ) {
-            if (r(e, "overflow") || r(e, "overflowY") || r(e, "overflowX")) return e;
-            e = e.parentNode;
+    get: r(907116),
+    getScrollParent: function (t) {
+        if (!t) return null;
+        for (var e = t.ownerDocument; t && t !== e.body; ) {
+            if (n(t, "overflow") || n(t, "overflowY") || n(t, "overflowX")) return t;
+            t = t.parentNode;
         }
-        return t.defaultView || t.parentWindow;
+        return e.defaultView || e.parentWindow;
     },
 };
-e.exports = i;
+t.exports = i;

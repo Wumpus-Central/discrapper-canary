@@ -1,86 +1,73 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(228524),
-    n(896048);
+n.d(t, { A: () => b });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(397927),
+    a = n(64700),
+    i = n(311907),
+    r = n(397927),
     s = n(964486),
-    o = n(58149),
-    c = n(632738),
-    d = n(780964),
-    u = n(840065),
+    d = n(58149),
+    o = n(632738),
+    u = n(780964),
+    c = n(840065),
     m = n(734057),
-    b = n(319582),
-    p = n(369053),
-    x = n(652215),
-    g = n(985018),
-    f = n(71561);
-
-function v(e) {
-    let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: i } = e,
-        [o, d] = r.useState(!1);
+    _ = n(319582),
+    x = n(369053),
+    g = n(652215),
+    h = n(985018),
+    p = n(71561);
+function A(e) {
+    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: r } = e,
+        [d, u] = a.useState(!1);
     return (
         (0, s.Ay)(() => {
-            i(p.lJ.SETTINGS_UPSELLS_VIEWED);
+            r(x.lJ.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, l.jsx)(c.PQ, {
+        (0, l.jsx)(o.PQ, {
             title: t,
             description: n,
-            buttonText: o ? g.intl.string(g.t["h+WsPb"]) : g.intl.string(g.t.A8t4Nf),
-            buttonDisabled: o,
+            buttonText: d ? h.intl.string(h.t["h+WsPb"]) : h.intl.string(h.t.A8t4Nf),
+            buttonDisabled: d,
             onButtonPress: () => {
-                a(), d(!0), i(p.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
+                i(), u(!0), r(x.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
             },
         })
     );
 }
-
-function h(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: r, reportId: s, reportType: c, reportSubType: h } = e,
-        j = (0, a.bG)([m.A], () => m.A.getChannel(n)),
-        _ = (0, b.MR)(t, null == j ? void 0 : j.type),
-        A = (0, p.Mw)(c, h, s);
-    return 0 === _.length
+function b(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: o, reportSubType: b } = e,
+        v = (0, i.bG)([m.A], () => m.A.getChannel(n)),
+        f = (0, _.MR)(t, v?.type),
+        j = (0, x.Mw)(o, b, s);
+    return 0 === f.length
         ? null
         : (0, l.jsxs)("div", {
-              className: f.kL,
+              className: p.kL,
               children: [
-                  (0, l.jsx)(i.Heading, {
+                  (0, l.jsx)(r.Heading, {
                       variant: "text-sm/semibold",
-                      className: f.wx,
-                      children: g.intl.string(g.t["1yxTIJ"]),
+                      className: p.wx,
+                      children: h.intl.string(h.t["1yxTIJ"]),
                   }),
                   (0, l.jsx)("div", {
-                      className: f.uk,
-                      children: _.map((e, n) => {
-                          let { getTitle: r, getDescription: a, onApply: i } = e;
+                      className: p.uk,
+                      children: f.map((e, n) => {
+                          let { getTitle: a, getDescription: i, onApply: r } = e;
                           return (0, l.jsx)(
-                              v,
-                              {
-                                  title: r(),
-                                  description: a(),
-                                  onButtonClick: i,
-                                  trackSettingsUpsellsAction: A(t[n]),
-                              },
+                              A,
+                              { title: a(), description: i(), onButtonClick: r, trackSettingsUpsellsAction: j(t[n]) },
                               n,
                           );
                       }),
                   }),
-                  (0, l.jsx)(i.QWc, {
-                      text: g.intl.string(g.t.olebGx),
+                  (0, l.jsx)(r.QWc, {
+                      text: h.intl.string(h.t.olebGx),
                       onClick: () => {
-                          (0, u.openUserSettings)(d.X.CONTENT_AND_SOCIAL_PANEL, {
-                              section: x.nc_.CONTENT_AND_SOCIAL,
-                          }),
-                              r(),
-                              o.Ay.trackWithMetadata(x.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
+                          (0, c.openUserSettings)(u.X.CONTENT_AND_SOCIAL_PANEL, { section: g.nc_.CONTENT_AND_SOCIAL }),
+                              a(),
+                              d.Ay.trackWithMetadata(g.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,
-                                  report_type: c.name,
-                                  report_subtype: h,
-                                  action: p.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+                                  report_type: o.name,
+                                  report_subtype: b,
+                                  action: x.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
                               });
                       },
                   }),

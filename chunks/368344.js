@@ -1,79 +1,62 @@
-n.d(t, {
-    DT: () => u,
-    P5: () => o,
-    _e: () => l,
-    tS: () => c,
-}),
-    n(747238),
-    n(812715),
-    n(667532);
+"use strict";
+n.d(t, { DT: () => c, P5: () => o, _e: () => l, tS: () => u }), n(667532);
 var r = n(214958),
     i = n.n(r),
     a = n(823598),
     s = n(713754);
-
 function o(e, t) {
-    var n;
-    let r = !1,
-        a = t.map((t, n) => {
+    let n = !1,
+        r = t.map((t, r) => {
             let {
                 guid: i,
                 guid: a,
                 name: o,
                 name: l,
-                index: c,
-                facing: u,
+                index: u,
+                facing: c,
                 hardwareId: d,
-                containerId: f,
-                effects: p,
+                containerId: _,
+                effects: f,
             } = t;
             return (
                 /^default/.test(o)
-                    ? ((r = !0), (i = s.dx), (o = o.replace("default", "Default")))
+                    ? ((n = !0), (i = s.dx), (o = o.replace("default", "Default")))
                     : (i = null != i && "" !== i ? i : o),
-                null != c && (n = c),
+                null != u && (r = u),
                 {
                     id: i,
                     type: e,
-                    index: n,
+                    index: r,
                     name: o,
                     originalName: l,
                     originalId: a,
-                    facing: u,
+                    facing: c,
                     hardwareId: d,
-                    containerId: f,
-                    effects: p,
+                    containerId: _,
+                    effects: f,
                 }
             );
         });
     return (
         e !== s.oh.VIDEO_INPUT &&
-            !r &&
-            (null === i() || void 0 === i() || null == (n = i().os) ? void 0 : n.family) != null &&
+            !n &&
+            i()?.os?.family != null &&
             /^win/i.test(i().os.family) &&
-            a.unshift({
-                id: s.dx,
-                type: e,
-                index: -1,
-                name: "Default",
-            }),
-        a
+            r.unshift({ id: s.dx, type: e, index: -1, name: "Default" }),
+        r
     );
 }
-
 function l() {
     return new Promise((e) => {
         (0, a.lE)().getInputDevices((t) => e(o(s.oh.AUDIO_INPUT, t)));
     });
 }
-
-function c() {
+function u() {
     return new Promise((e) => {
         (0, a.lE)().getOutputDevices((t) => e(o(s.oh.AUDIO_OUTPUT, t)));
     });
 }
-
-function u() {
+function c() {
     return new Promise((e) => {
         (0, a.lE)().getVideoInputDevices((t) => e(o(s.oh.VIDEO_INPUT, t)));
     });

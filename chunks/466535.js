@@ -64,7 +64,7 @@ e.exports = function (e) {
             "yield",
         ],
         l = ["true", "false", "Some", "None", "Ok", "Err"],
-        c = [
+        u = [
             "drop ",
             "Copy",
             "Send",
@@ -129,7 +129,7 @@ e.exports = function (e) {
             "assert_ne!",
             "debug_assert_ne!",
         ],
-        u = [
+        c = [
             "i8",
             "i16",
             "i32",
@@ -156,125 +156,50 @@ e.exports = function (e) {
     return {
         name: "Rust",
         aliases: ["rs"],
-        keywords: {
-            $pattern: e.IDENT_RE + "!?",
-            type: u,
-            keyword: o,
-            literal: l,
-            built_in: c,
-        },
+        keywords: { $pattern: e.IDENT_RE + "!?", type: c, keyword: o, literal: l, built_in: u },
         illegal: "</",
         contains: [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT("/\\*", "\\*/", {
-                contains: ["self"],
-            }),
-            e.inherit(e.QUOTE_STRING_MODE, {
-                begin: /b?"/,
-                illegal: null,
-            }),
-            {
-                className: "symbol",
-                begin: /'[a-zA-Z_][a-zA-Z0-9_]*(?!')/,
-            },
+            e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
+            e.inherit(e.QUOTE_STRING_MODE, { begin: /b?"/, illegal: null }),
+            { className: "symbol", begin: /'[a-zA-Z_][a-zA-Z0-9_]*(?!')/ },
             {
                 scope: "string",
                 variants: [
-                    {
-                        begin: /b?r(#*)"(.|\n)*?"\1(?!#)/,
-                    },
+                    { begin: /b?r(#*)"(.|\n)*?"\1(?!#)/ },
                     {
                         begin: /b?'/,
                         end: /'/,
-                        contains: [
-                            {
-                                scope: "char.escape",
-                                match: /\\('|\w|x\w{2}|u\w{4}|U\w{8})/,
-                            },
-                        ],
+                        contains: [{ scope: "char.escape", match: /\\('|\w|x\w{2}|u\w{4}|U\w{8})/ }],
                     },
                 ],
             },
             {
                 className: "number",
                 variants: [
-                    {
-                        begin: "\\b0b([01_]+)" + s,
-                    },
-                    {
-                        begin: "\\b0o([0-7_]+)" + s,
-                    },
-                    {
-                        begin: "\\b0x([A-Fa-f0-9_]+)" + s,
-                    },
-                    {
-                        begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + s,
-                    },
+                    { begin: "\\b0b([01_]+)" + s },
+                    { begin: "\\b0o([0-7_]+)" + s },
+                    { begin: "\\b0x([A-Fa-f0-9_]+)" + s },
+                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + s },
                 ],
                 relevance: 0,
             },
-            {
-                begin: [/fn/, /\s+/, r],
-                className: {
-                    1: "keyword",
-                    3: "title.function",
-                },
-            },
+            { begin: [/fn/, /\s+/, r], className: { 1: "keyword", 3: "title.function" } },
             {
                 className: "meta",
                 begin: "#!?\\[",
                 end: "\\]",
-                contains: [
-                    {
-                        className: "string",
-                        begin: /"/,
-                        end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE],
-                    },
-                ],
+                contains: [{ className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE] }],
             },
-            {
-                begin: [/let/, /\s+/, /(?:mut\s+)?/, r],
-                className: {
-                    1: "keyword",
-                    3: "keyword",
-                    4: "variable",
-                },
-            },
-            {
-                begin: [/for/, /\s+/, r, /\s+/, /in/],
-                className: {
-                    1: "keyword",
-                    3: "variable",
-                    5: "keyword",
-                },
-            },
-            {
-                begin: [/type/, /\s+/, r],
-                className: {
-                    1: "keyword",
-                    3: "title.class",
-                },
-            },
+            { begin: [/let/, /\s+/, /(?:mut\s+)?/, r], className: { 1: "keyword", 3: "keyword", 4: "variable" } },
+            { begin: [/for/, /\s+/, r, /\s+/, /in/], className: { 1: "keyword", 3: "variable", 5: "keyword" } },
+            { begin: [/type/, /\s+/, r], className: { 1: "keyword", 3: "title.class" } },
             {
                 begin: [/(?:trait|enum|struct|union|impl|for)/, /\s+/, r],
-                className: {
-                    1: "keyword",
-                    3: "title.class",
-                },
+                className: { 1: "keyword", 3: "title.class" },
             },
-            {
-                begin: e.IDENT_RE + "::",
-                keywords: {
-                    keyword: "Self",
-                    built_in: c,
-                    type: u,
-                },
-            },
-            {
-                className: "punctuation",
-                begin: "->",
-            },
+            { begin: e.IDENT_RE + "::", keywords: { keyword: "Self", built_in: u, type: c } },
+            { className: "punctuation", begin: "->" },
             a,
         ],
     };

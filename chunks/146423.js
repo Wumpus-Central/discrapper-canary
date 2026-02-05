@@ -1,58 +1,46 @@
-n.d(t, {
-    A: () => d,
-});
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968),
-    l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    a = n(158954),
-    o = n(713517),
-    c = n(607123),
-    u = n(72939);
-
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(158954),
+    l = n(713517),
+    u = n(607123),
+    c = n(72939);
 function d(e) {
     let {
             sku: t,
             user: n,
-            children: i,
+            children: a,
             cardStyle: d,
-            skuPreviewStyle: p,
-            disableHoverOrFocus: h,
-            onHoverOrFocusChange: g,
-            onClick: f,
+            skuPreviewStyle: _,
+            disableHoverOrFocus: f,
+            onHoverOrFocusChange: p,
+            onClick: h,
             options: m,
         } = e,
-        b = l.useRef(null),
-        { isHoveringOrFocusing: A } = (0, o.A)(b),
-        y = l.useRef(g);
+        g = i.useRef(null),
+        { isHoveringOrFocusing: E } = (0, l.A)(g),
+        A = i.useRef(p);
     return (
-        l.useEffect(() => {
-            y.current = g;
-        }, [g]),
-        l.useEffect(() => {
-            var e;
-            null == (e = y.current) || e.call(y, A);
-        }, [A]),
-        (0, r.jsxs)(a.DUT, {
-            innerRef: b,
-            className: s()(u.N, d),
-            onClick: f,
+        i.useEffect(() => {
+            A.current = p;
+        }, [p]),
+        i.useEffect(() => {
+            A.current?.(E);
+        }, [E]),
+        (0, r.jsxs)(o.DUT, {
+            innerRef: g,
+            className: s()(c.N, d),
+            onClick: h,
             children: [
-                (0, r.jsx)(a.AC4, {
-                    children: (0, r.jsx)(a.H, {
-                        children: t.name,
-                    }),
-                }),
+                (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: t.name }) }),
                 (0, r.jsx)("div", {
-                    className: s()(u.e, p),
-                    children: (0, r.jsx)(c.Ay, {
-                        sku: t,
-                        isFocused: !h && A,
-                        user: n,
-                        options: m,
-                    }),
+                    className: s()(c.e, _),
+                    children: (0, r.jsx)(u.Ay, { sku: t, isFocused: !f && E, user: n, options: m }),
                 }),
-                i,
+                a,
             ],
         })
     );

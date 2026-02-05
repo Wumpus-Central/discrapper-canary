@@ -1,32 +1,28 @@
+"use strict";
 let r;
-n.d(t, {
-    Bi: () => u,
-    Tw: () => d,
-    X1: () => f,
-});
+n.d(t, { Bi: () => c, Tw: () => d, X1: () => _ });
 var i = n(3388),
     a = n(538047),
     s = n(64700),
     o = n(341221);
 let l = !!("u" > typeof window && window.document && window.document.createElement),
-    c = new Map();
-
-function u(e) {
+    u = new Map();
+function c(e) {
     let [t, n] = (0, s.useState)(e),
         a = (0, s.useRef)(null),
-        u = (0, o.Cc)(t),
+        c = (0, o.Cc)(t),
         d = (0, s.useRef)(null);
-    if ((r && r.register(d, u), l)) {
-        let e = c.get(u);
-        e && !e.includes(a) ? e.push(a) : c.set(u, [a]);
+    if ((r && r.register(d, c), l)) {
+        let e = u.get(c);
+        e && !e.includes(a) ? e.push(a) : u.set(c, [a]);
     }
     return (
         (0, i.N)(() => {
-            let e = u;
+            let e = c;
             return () => {
-                r && r.unregister(d), c.delete(e);
+                r && r.unregister(d), u.delete(e);
             };
-        }, [u]),
+        }, [c]),
         (0, s.useEffect)(() => {
             let e = a.current;
             return (
@@ -36,20 +32,18 @@ function u(e) {
                 }
             );
         }),
-        u
+        c
     );
 }
-
 function d(e, t) {
     if (e === t) return e;
-    let n = c.get(e);
+    let n = u.get(e);
     if (n) return n.forEach((e) => (e.current = t)), t;
-    let r = c.get(t);
+    let r = u.get(t);
     return r ? (r.forEach((t) => (t.current = e)), e) : t;
 }
-
-function f(e = []) {
-    let t = u(),
+function _(e = []) {
+    let t = c(),
         [n, r] = (0, a.y)(t),
         o = (0, s.useCallback)(() => {
             r(function* () {
@@ -60,5 +54,5 @@ function f(e = []) {
 }
 "u" > typeof FinalizationRegistry &&
     (r = new FinalizationRegistry((e) => {
-        c.delete(e);
+        u.delete(e);
     }));

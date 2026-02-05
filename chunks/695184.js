@@ -1,22 +1,16 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => h,
-}),
-    n(321073),
-    n(896048);
+n.d(t, { A: () => h }), n(321073);
 var i = n(635377),
     a = n.n(i),
     s = n(686956),
     o = n(71393),
     l = n(287809),
-    c = n(927813),
-    u = n(427262),
+    u = n(927813),
+    c = n(427262),
     d = n(985018);
-let f = new (a())({
-    maxAge: +c.A.Millis.MINUTE,
-});
-
-function p(e, t, n) {
+let _ = new (a())({ maxAge: +u.A.Millis.MINUTE });
+function f(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
             let r = [],
@@ -36,22 +30,19 @@ function p(e, t, n) {
             r.length > 0 && s.A.requestMembers(r, t.toLocaleLowerCase(), n);
         }, 200));
 }
-
-function _(e, t) {
-    let n = "".concat(null != e ? e : "", ":").concat(t),
-        r = f.get(n);
+function p(e, t) {
+    let n = `${e ?? ""}:${t}`,
+        r = _.get(n);
     if (null != r) return r;
-    f.set(n, !0);
+    _.set(n, !0);
 }
 let h = {
     getGuildNameSuggestion: function (e) {
         let t = l.default.getCurrentUser(),
-            n = u.mG(t);
+            n = c.mG(t);
         return null == n || 0 === n.length
             ? ""
-            : d.intl.formatToPlainString(d.t.Y6Qfju, {
-                  username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n,
-              });
+            : d.intl.formatToPlainString(d.t.Y6Qfju, { username: e?.truncateUsername ? n.slice(0, 20) : n });
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
@@ -60,9 +51,9 @@ let h = {
             a = !1;
         r
             ? e.forEach((e) => {
-                  null == _(e, t) && i.push(e);
+                  null == p(e, t) && i.push(e);
               })
-            : null == _(e, t) && (a = !0),
-            i.length > 0 && r ? p(i, t, n) : a && p(e, t, n);
+            : null == p(e, t) && (a = !0),
+            i.length > 0 && r ? f(i, t, n) : a && f(e, t, n);
     },
 };

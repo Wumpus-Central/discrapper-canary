@@ -1,44 +1,24 @@
-n.d(t, {
-    As: () => u,
-    IU: () => l,
-    z8: () => s,
-}),
-    n(321073),
-    n(65821),
-    n(457529),
-    n(896048),
-    n(264879);
+"use strict";
+n.d(t, { As: () => c, IU: () => l, z8: () => o }), n(321073);
 var r = n(677623),
     i = n.n(r);
 let a = 5e3,
-    o = new (i())(a);
-
-function s(e) {
+    s = new (i())(a);
+function o(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-    let i = c(n);
+    let i = u(n);
     for (
         "string" == typeof e
-            ? o.push({
-                  time: Date.now(),
-                  category: e,
-                  message: i,
-              })
-            : o.push({
-                  time: Date.now(),
-                  category: e.name,
-                  timing: e.timing,
-                  message: i,
-              });
-        o.length > a;
+            ? s.push({ time: Date.now(), category: e, message: i })
+            : s.push({ time: Date.now(), category: e.name, timing: e.timing, message: i });
+        s.length > a;
     )
-        o.shift();
+        s.shift();
 }
-
 function l() {
-    o.clear();
+    s.clear();
 }
-
-function c(e) {
+function u(e) {
     let t = "";
     for (let n of e) {
         let e = typeof n;
@@ -50,9 +30,8 @@ function c(e) {
     }
     return t;
 }
-
-function u(e) {
-    return o
+function c(e) {
+    return s
         .toArray()
         .filter((t) => null == e || e.includes(t.category))
         .map((e) => {

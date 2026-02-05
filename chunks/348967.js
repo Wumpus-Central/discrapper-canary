@@ -1,5 +1,5 @@
+"use strict";
 var r = n(64700);
-
 function i(e) {
     var t = "https://react.dev/errors/" + e;
     if (1 < arguments.length) {
@@ -14,7 +14,6 @@ function i(e) {
         " for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
     );
 }
-
 function a() {}
 var s = {
         d: {
@@ -34,20 +33,12 @@ var s = {
         findDOMNode: null,
     },
     o = Symbol.for("react.portal");
-
 function l(e, t, n) {
     var r = 3 < arguments.length && void 0 !== arguments[3] ? arguments[3] : null;
-    return {
-        $$typeof: o,
-        key: null == r ? null : "" + r,
-        children: e,
-        containerInfo: t,
-        implementation: n,
-    };
+    return { $$typeof: o, key: null == r ? null : "" + r, children: e, containerInfo: t, implementation: n };
 }
-var c = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
-
-function u(e, t) {
+var u = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+function c(e, t) {
     return "font" === e ? "" : "string" == typeof t ? ("use-credentials" === t ? t : "") : void 0;
 }
 (t.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = s),
@@ -57,12 +48,12 @@ function u(e, t) {
         return l(e, t, null, n);
     }),
     (t.flushSync = function (e) {
-        var t = c.T,
+        var t = u.T,
             n = s.p;
         try {
-            if (((c.T = null), (s.p = 2), e)) return e();
+            if (((u.T = null), (s.p = 2), e)) return e();
         } finally {
-            (c.T = t), (s.p = n), s.d.f();
+            (u.T = t), (s.p = n), s.d.f();
         }
     }),
     (t.preconnect = function (e, t) {
@@ -76,7 +67,7 @@ function u(e, t) {
     (t.preinit = function (e, t) {
         if ("string" == typeof e && t && "string" == typeof t.as) {
             var n = t.as,
-                r = u(n, t.crossOrigin),
+                r = c(n, t.crossOrigin),
                 i = "string" == typeof t.integrity ? t.integrity : void 0,
                 a = "string" == typeof t.fetchPriority ? t.fetchPriority : void 0;
             "style" === n
@@ -98,7 +89,7 @@ function u(e, t) {
         if ("string" == typeof e)
             if ("object" == typeof t && null !== t) {
                 if (null == t.as || "script" === t.as) {
-                    var n = u(t.as, t.crossOrigin);
+                    var n = c(t.as, t.crossOrigin);
                     s.d.M(e, {
                         crossOrigin: n,
                         integrity: "string" == typeof t.integrity ? t.integrity : void 0,
@@ -110,7 +101,7 @@ function u(e, t) {
     (t.preload = function (e, t) {
         if ("string" == typeof e && "object" == typeof t && null !== t && "string" == typeof t.as) {
             var n = t.as,
-                r = u(n, t.crossOrigin);
+                r = c(n, t.crossOrigin);
             s.d.L(e, n, {
                 crossOrigin: r,
                 integrity: "string" == typeof t.integrity ? t.integrity : void 0,
@@ -127,7 +118,7 @@ function u(e, t) {
     (t.preloadModule = function (e, t) {
         if ("string" == typeof e)
             if (t) {
-                var n = u(t.as, t.crossOrigin);
+                var n = c(t.as, t.crossOrigin);
                 s.d.m(e, {
                     as: "string" == typeof t.as && "script" !== t.as ? t.as : void 0,
                     crossOrigin: n,
@@ -142,9 +133,9 @@ function u(e, t) {
         return e(t);
     }),
     (t.useFormState = function (e, t, n) {
-        return c.H.useFormState(e, t, n);
+        return u.H.useFormState(e, t, n);
     }),
     (t.useFormStatus = function () {
-        return c.H.useHostTransitionStatus();
+        return u.H.useHostTransitionStatus();
     }),
     (t.version = "19.1.0");

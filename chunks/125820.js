@@ -1,127 +1,90 @@
-a.r(s),
-    a.d(s, {
-        default: () => k,
-    }),
-    a(896048),
-    a(747238);
-var t = a(627968),
-    l = a(64700),
-    r = a(607399),
-    c = a(311907),
-    n = a(397927),
-    i = a(416298),
-    d = a(854378),
-    u = a(197111),
-    h = a(10088),
-    m = a(976860),
-    x = a(829219),
-    N = a(216456),
-    f = a(341915),
-    o = a(545986),
-    E = a(654487),
-    _ = a(652215),
-    g = a(613057),
-    j = a(985018),
-    p = a(667426),
-    b = a(604880),
-    v = a(318808);
-c.Ay.initialize();
-let A = r.Fr || r.v1;
-
-function k(e) {
+t.r(s), t.d(s, { default: () => f });
+var a = t(627968),
+    r = t(64700),
+    l = t(607399),
+    i = t(311907),
+    n = t(397927),
+    c = t(416298),
+    d = t(854378),
+    _ = t(197111),
+    u = t(10088),
+    h = t(976860),
+    m = t(829219),
+    g = t(341915),
+    x = t(561844),
+    o = t(545986),
+    N = t(654487),
+    p = t(652215),
+    E = t(613057),
+    j = t(985018),
+    A = t(667426),
+    v = t(604880),
+    k = t(318808);
+i.Ay.initialize();
+let T = l.Fr || l.v1;
+function f(e) {
     let { match: s } = e,
-        a = (0, c.bG)([h.A], () => h.A.getState("quests")),
-        r = s.params.questId,
-        k = (function (e) {
-            let [s, a] = l.useState(null);
+        t = (0, i.bG)([u.A], () => u.A.getState("quests")),
+        l = s.params.questId,
+        f = (function (e) {
+            let [s, t] = r.useState(null);
             return (
-                l.useEffect(() => {
-                    (0, x.xB)(e)
-                        .then((e) =>
-                            a({
-                                status: "ok",
-                                value: e,
-                            }),
-                        )
-                        .catch(() =>
-                            a({
-                                status: "error",
-                            }),
-                        );
-                }, [a, e]),
+                r.useEffect(() => {
+                    (0, m.xB)(e)
+                        .then((e) => t({ status: "ok", value: e }))
+                        .catch(() => t({ status: "error" }));
+                }, [t, e]),
                 s
             );
-        })(r);
-    l.useEffect(() => {
-        A ||
-            (null == a
-                ? ((0, N.av)({
-                      questId: r,
-                      event: _.HAw.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
+        })(l);
+    r.useEffect(() => {
+        T ||
+            (null == t
+                ? ((0, x.av)({
+                      questId: l,
+                      event: p.HAw.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
                       properties: {},
-                      sourceQuestContent: f.uF.QUEST_HOME_DESKTOP,
+                      sourceQuestContent: g.uF.QUEST_HOME_DESKTOP,
                   }),
-                  u.A.openNativeAppModal("quests", _.e$_.DEEP_LINK, {
-                      type: g.XK.QUEST_HOME,
-                      params: {
-                          questId: r,
-                      },
-                  }))
-                : a === _.fAW.OPEN_FAIL &&
-                  (0, m.bG)({
-                      pathname: _.BVt.QUEST_HOME,
-                      hash: r,
-                  }));
-    }, [a, r]);
-    let C = l.useCallback(() => (0, o.QA)(r), [r]);
-    if (A)
-        return (0, t.jsxs)("div", {
-            className: p.MY,
+                  _.A.openNativeAppModal("quests", p.e$_.DEEP_LINK, { type: E.XK.QUEST_HOME, params: { questId: l } }))
+                : t === p.fAW.OPEN_FAIL && (0, h.bG)({ pathname: p.BVt.QUEST_HOME, hash: l }));
+    }, [t, l]);
+    let C = r.useCallback(() => (0, o.QA)(l), [l]);
+    if (T)
+        return (0, a.jsxs)("div", {
+            className: A.MY,
             children: [
-                (0, t.jsx)("img", {
-                    className: p.Bg,
-                    src: v.Ay,
-                    alt: "",
-                }),
-                (0, t.jsx)("div", {
-                    className: p.r$,
-                    children: (0, t.jsx)("img", {
-                        src: b,
-                        alt: "",
-                    }),
-                }),
-                null != k &&
-                    (0, t.jsxs)("div", {
-                        className: p.Nr,
+                (0, a.jsx)("img", { className: A.Bg, src: k.Ay, alt: "" }),
+                (0, a.jsx)("div", { className: A.r$, children: (0, a.jsx)("img", { src: v, alt: "" }) }),
+                null != f &&
+                    (0, a.jsxs)("div", {
+                        className: A.Nr,
                         children: [
-                            "ok" === k.status &&
-                                (0, t.jsxs)(t.Fragment, {
+                            "ok" === f.status &&
+                                (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, t.jsx)("div", {
-                                            className: p.rC,
-                                            children: (0, t.jsx)("img", {
-                                                src: ""
-                                                    .concat(E.CI)
-                                                    .concat(r, "/dark/")
-                                                    .concat(k.value.assets.gameTile),
+                                        (0, a.jsx)("div", {
+                                            className: A.rC,
+                                            children: (0, a.jsx)("img", {
+                                                src: `${N.CI}${l}/dark/${f.value.assets.gameTile}`,
                                                 alt: "",
-                                                className: p.o4,
+                                                className: A.o4,
                                             }),
                                         }),
-                                        (0, t.jsx)(n.Heading, {
+                                        (0, a.jsx)(n.Heading, {
                                             variant: "heading-lg/semibold",
                                             color: "text-default",
-                                            className: p.ky,
-                                            children: k.value.messages.questName,
+                                            className: A.ky,
+                                            children: f.value.messages.questName,
                                         }),
                                     ],
                                 }),
-                            (0, t.jsx)(n.Text, {
+                            (0, a.jsx)(n.Text, {
                                 variant: "text-md/normal",
-                                className: p.G3,
+                                className: A.G3,
                                 children: j.intl.string(j.t.NweJI8),
                             }),
-                            (0, t.jsx)(n.Button, {
+                            (0, a.jsx)(n.Button, {
                                 variant: "primary",
                                 text: j.intl.string(j.t.UQvCf7),
                                 fullWidth: !0,
@@ -131,34 +94,24 @@ function k(e) {
                     }),
             ],
         });
-    let I = null == a || a === _.fAW.OPENING || a === _.fAW.OPEN_FAIL;
-    return (0, t.jsxs)(t.Fragment, {
+    let I = null == t || t === p.fAW.OPENING || t === p.fAW.OPEN_FAIL;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, t.jsx)(i.A, {
-                className: p.Lq,
-                preserveAspectRatio: "xMinYMin slice",
-            }),
-            (0, t.jsx)("div", {
-                className: p.kL,
-                children: (0, t.jsx)(d.Ay, {
+            (0, a.jsx)(c.A, { className: A.Lq, preserveAspectRatio: "xMinYMin slice" }),
+            (0, a.jsx)("div", {
+                className: A.kL,
+                children: (0, a.jsx)(d.Ay, {
                     children: I
-                        ? (0, t.jsxs)(t.Fragment, {
+                        ? (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, t.jsx)(d.hE, {
-                                      children: j.intl.string(j.t["Z+hCVU"]),
-                                  }),
-                                  (0, t.jsx)(d.CK, {}),
+                                  (0, a.jsx)(d.hE, { children: j.intl.string(j.t["Z+hCVU"]) }),
+                                  (0, a.jsx)(d.CK, {}),
                               ],
                           })
-                        : (0, t.jsxs)(t.Fragment, {
+                        : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, t.jsx)(d.hE, {
-                                      className: p.Ns,
-                                      children: j.intl.string(j.t.csrAMJ),
-                                  }),
-                                  (0, t.jsx)(d.tK, {
-                                      children: j.intl.string(j.t.ghBJz9),
-                                  }),
+                                  (0, a.jsx)(d.hE, { className: A.Ns, children: j.intl.string(j.t.csrAMJ) }),
+                                  (0, a.jsx)(d.tK, { children: j.intl.string(j.t.ghBJz9) }),
                               ],
                           }),
                 }),

@@ -1,69 +1,56 @@
-n.d(t, {
-    B: () => a,
-});
-var r = n(627968);
+n.d(t, { B: () => r });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(314582);
-
-function a(e) {
+var l = n(397927),
+    a = n(314582);
+function r(e) {
     let {
             choiceId: t,
             choice: n,
-            isSelected: a,
+            isSelected: r,
             onSelectionChange: s,
             inputType: o,
-            textInputValue: c,
-            onTextInputChange: u,
+            textInputValue: d,
+            onTextInputChange: c,
         } = e,
-        d = "true" === n.TextEntry,
-        p = "choice-label-".concat(t);
-    return (0, r.jsxs)("div", {
-        className: l.NV,
+        u = "true" === n.TextEntry,
+        m = `choice-label-${t}`;
+    return (0, i.jsxs)("div", {
+        className: a.NV,
         children: [
-            (0, r.jsxs)(i.DUT, {
-                className: l.d,
+            (0, i.jsxs)(l.DUT, {
+                className: a.d,
                 onClick: () => {
                     s(t);
                 },
                 role: o,
-                "aria-checked": a,
-                "aria-labelledby": p,
+                "aria-checked": r,
+                "aria-labelledby": m,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: l.jl,
+                    (0, i.jsx)("div", {
+                        className: a.jl,
                         children:
                             "radio" === o
-                                ? (0, r.jsx)(i.TN6, {
-                                      disabled: !1,
-                                      checked: a,
-                                  })
-                                : (0, r.jsx)(i.P7L, {
-                                      disabled: !1,
-                                      checked: a,
-                                  }),
+                                ? (0, i.jsx)(l.TN6, { disabled: !1, checked: r })
+                                : (0, i.jsx)(l.P7L, { disabled: !1, checked: r }),
                     }),
-                    (0, r.jsx)(i.Text, {
-                        id: p,
+                    (0, i.jsx)(l.Text, {
+                        id: m,
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        children: (0, r.jsx)("div", {
-                            dangerouslySetInnerHTML: {
-                                __html: n.Display,
-                            },
-                        }),
+                        children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
                     }),
                 ],
             }),
-            d &&
-                (0, r.jsx)("div", {
-                    className: l.Vi,
-                    children: (0, r.jsx)(i.ksK, {
-                        value: null != c ? c : "",
+            u &&
+                (0, i.jsx)("div", {
+                    className: a.Vi,
+                    children: (0, i.jsx)(l.ksK, {
+                        value: d ?? "",
                         onChange: (e) => {
-                            a || s(t), null == u || u(t, e);
+                            r || s(t), c?.(t, e);
                         },
-                        disabled: !a,
+                        disabled: !r,
                     }),
                 }),
         ],

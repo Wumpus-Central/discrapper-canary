@@ -1,30 +1,17 @@
-n.d(t, {
-    v: () => u,
-}),
-    n(321073),
-    n(896048),
-    n(65821);
+"use strict";
+n.d(t, { v: () => u }), n(321073);
 var r = n(118356),
     i = n(689234),
     a = n(72290);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = 1e6,
-    l = "1" === a.env.KV_STORAGE_LOGGING,
-    c = new r.Vy("Runtime");
+let s = 1e6,
+    o = "1" === a.env.KV_STORAGE_LOGGING,
+    l = new r.Vy("Runtime");
 class u {
+    static counter = 0;
+    static pending = new Map();
+    static initialized = !1;
+    static dbStateCallbacks = [];
+    static completionCallbacks = [];
     static nextId() {
         return ++this.counter;
     }
@@ -33,14 +20,7 @@ class u {
             this.initialize(),
             new Promise((n, r) => {
                 let i = this.nextId();
-                t(i),
-                    this.pending.set(i, {
-                        id: i,
-                        tag: e,
-                        started: performance.now(),
-                        resolve: n,
-                        reject: r,
-                    });
+                t(i), this.pending.set(i, { id: i, tag: e, started: performance.now(), resolve: n, reject: r });
             })
         );
     }
@@ -61,7 +41,7 @@ class u {
             r = this.pending.get(e.id);
         null != r &&
             (this.pending.delete(e.id),
-            (e.timings.materializationTimeNanoseconds = null != t ? t : 0),
+            (e.timings.materializationTimeNanoseconds = t ?? 0),
             this.completeOperation(r, e, n),
             this.resolveOperation(r, e));
     }
@@ -79,10 +59,10 @@ class u {
                 ok: t.ok,
                 value: t.data,
                 timings: {
-                    queue: t.timings.queueTimeNanoseconds / o,
-                    execution: t.timings.executionTimeNanoseconds / o,
-                    materialization: t.timings.materializationTimeNanoseconds / o,
-                    ccTotal: t.timings.totalTimeNanoseconds / o,
+                    queue: t.timings.queueTimeNanoseconds / s,
+                    execution: t.timings.executionTimeNanoseconds / s,
+                    materialization: t.timings.materializationTimeNanoseconds / s,
+                    ccTotal: t.timings.totalTimeNanoseconds / s,
                     jsTotal: n - e.started,
                 },
             };
@@ -91,34 +71,14 @@ class u {
     }
     static initialize() {
         this.initialized ||
-            (i.T.setCallbacks({
-                status: (e) => this.onStatus(e),
-                response: (e, t) => this.onResponse(e, t),
-            }),
-            l &&
+            (i.T.setCallbacks({ status: (e) => this.onStatus(e), response: (e, t) => this.onResponse(e, t) }),
+            o &&
                 (this.addCompletionCallback((e) => {
                     let t = e.ok ? "completed" : "failed",
-                        n = [
-                            "".concat(e.timings.execution.toFixed(3), "ms execution"),
-                            "".concat(e.timings.materialization.toFixed(3), "ms js materialization"),
-                            "".concat(e.timings.ccTotal.toFixed(3), "ms cc completion"),
-                            "".concat(e.timings.jsTotal.toFixed(3), "ms js reception"),
-                        ].join(", ");
-                    c.info(
-                        ""
-                            .concat(e.tag, " (#")
-                            .concat(e.id, ") ")
-                            .concat(t, " in ")
-                            .concat(e.timings.ccTotal.toFixed(3), "ms (")
-                            .concat(n, ")."),
-                    );
+                        n = `${e.timings.execution.toFixed(3)}ms execution, ${e.timings.materialization.toFixed(3)}ms js materialization, ${e.timings.ccTotal.toFixed(3)}ms cc completion, ${e.timings.jsTotal.toFixed(3)}ms js reception`;
+                    l.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
                 }),
-                this.addDatabaseStateCallback((e, t) => c.info("".concat(e, " (state: ").concat(t, ")")))),
+                this.addDatabaseStateCallback((e, t) => l.info(`${e} (state: ${t})`))),
             (this.initialized = !0));
     }
 }
-s(u, "counter", 0),
-    s(u, "pending", new Map()),
-    s(u, "initialized", !1),
-    s(u, "dbStateCallbacks", []),
-    s(u, "completionCallbacks", []);

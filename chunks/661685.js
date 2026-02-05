@@ -1,72 +1,53 @@
-r.d(t, {
-    A: () => p,
-});
-var n = r(64700),
-    a = r(512750),
-    l = r(311907),
-    o = r(386784),
-    s = r(498642),
-    i = r(317525),
-    c = r(71393),
-    u = r(840120),
-    d = r(333354),
-    f = r(985018);
-
-function p(e, t) {
-    let r = (0, l.bG)([s.A], () => s.A.getMemberCount(e)),
-        p = (0, o.A)(e),
-        m = (0, l.bG)([c.A], () => {
-            var t;
-            return (null == (t = c.A.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
-        }),
-        b = (0, u.M5)(e, "Powerup Deactivate Modal"),
-        k = (0, l.bG)(
-            [i.A],
+a.d(t, { A: () => f });
+var n = a(64700),
+    r = a(512750),
+    s = a(311907),
+    i = a(386784),
+    l = a(498642),
+    o = a(317525),
+    c = a(71393),
+    d = a(840120),
+    u = a(333354),
+    m = a(985018);
+function f(e, t) {
+    let a = (0, s.bG)([l.A], () => l.A.getMemberCount(e)),
+        f = (0, i.A)(e),
+        b = (0, s.bG)([c.A], () => c.A.getGuild(e)?.vanityURLCode != null),
+        k = (0, d.M5)(e, "Powerup Deactivate Modal"),
+        p = (0, s.bG)(
+            [o.A],
             () =>
-                t.skuId !== a.aN || null == p
+                t.skuId !== r.aN || null == f
                     ? 0
-                    : i.A.getSortedRoles(e).reduce((e, t) => {
-                          var r, n;
-                          return (null == (n = t.colorStrings) ? void 0 : n.secondaryColor) == null
-                              ? e
-                              : e + (null != (r = p[t.id]) ? r : 0);
-                      }, 0),
-            [e, t.skuId, p],
+                    : o.A.getSortedRoles(e).reduce(
+                          (e, t) => (t.colorStrings?.secondaryColor == null ? e : e + (f[t.id] ?? 0)),
+                          0,
+                      ),
+            [e, t.skuId, f],
         );
     return n.useMemo(() => {
         let e;
         switch (t.skuId) {
-            case a.aN:
+            case r.aN:
                 e =
-                    k > 0
-                        ? f.intl.formatToPlainString(d.default["4jSvr1"], {
-                              perk: t.title,
-                              memberCount: k,
-                          })
-                        : f.intl.formatToPlainString(d.default.cavtEo, {
-                              perk: t.title,
-                          });
+                    p > 0
+                        ? m.intl.formatToPlainString(u.default["4jSvr1"], { perk: t.title, memberCount: p })
+                        : m.intl.formatToPlainString(u.default.cavtEo, { perk: t.title });
                 break;
-            case a.FB:
-                e = m ? f.intl.string(d.default.hN75yb) : f.intl.string(d.default.Du91Rb);
+            case r.FB:
+                e = b ? m.intl.string(u.default.hN75yb) : m.intl.string(u.default.Du91Rb);
                 break;
-            case a.OJ:
-            case a.jF:
-                e = f.intl.string(d.default.Vf2ZcR);
+            case r.OJ:
+            case r.jF:
+                e = m.intl.string(u.default.Vf2ZcR);
                 break;
             default:
-                e = f.intl.formatToPlainString(d.default["4jSvr1"], {
-                    perk: t.title,
-                    memberCount: null != r ? r : 0,
-                });
+                e = m.intl.formatToPlainString(u.default["4jSvr1"], { perk: t.title, memberCount: a ?? 0 });
         }
         let n = null;
         return (
-            m && t.skuId === a.YG && (n = b ? f.intl.string(d.default.TkNA7b) : f.intl.string(d.default.M4XL5n)),
-            {
-                warningText: e,
-                vanityUrlWarning: n,
-            }
+            b && t.skuId === r.YG && (n = k ? m.intl.string(u.default.TkNA7b) : m.intl.string(u.default.M4XL5n)),
+            { warningText: e, vanityUrlWarning: n }
         );
-    }, [t, k, r, m, b]);
+    }, [t, p, a, b, k]);
 }

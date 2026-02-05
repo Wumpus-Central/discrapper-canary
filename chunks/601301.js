@@ -1,3 +1,4 @@
+"use strict";
 var n = e(34714).charAt,
     o = e(57284),
     s = e(605944),
@@ -10,11 +11,7 @@ i(
     String,
     "String",
     function (t) {
-        a(this, {
-            type: c,
-            string: o(t),
-            index: 0,
-        });
+        a(this, { type: c, string: o(t), index: 0 });
     },
     function () {
         var t,

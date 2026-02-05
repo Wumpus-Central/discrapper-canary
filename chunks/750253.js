@@ -1,3 +1,4 @@
+"use strict";
 var n = r(438495);
 t.exports = function t(e, r) {
     if (!e || !r) return !1;

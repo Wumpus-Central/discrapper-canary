@@ -1,21 +1,18 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(397927),
     i = n(976860),
     a = n(240233),
     s = n(573879),
     o = n(652215),
     l = n(985018);
-let c = new a.A({
+let u = new a.A({
     onSwitchSuccess(e, t) {
         setTimeout(() => {
             t && (0, i.pX)(o.BVt.ME),
                 (0, r.showToast)(
                     (0, r.createToast)(
-                        l.intl.formatToPlainString(l.t.wx7O3L, {
-                            username: e.username,
-                        }),
+                        l.intl.formatToPlainString(l.t.wx7O3L, { username: e.username }),
                         r.ToastType.SUCCESS,
                     ),
                 );

@@ -6,17 +6,7 @@ e.exports = function (e) {
         i = "true false yes no nothing nil null",
         a =
             "traffic-flow traffic-generator firewall scheduler aaa accounting address-list address align area bandwidth-server bfd bgp bridge client clock community config connection console customer default dhcp-client dhcp-server discovery dns e-mail ethernet filter firmware gps graphing group hardware health hotspot identity igmp-proxy incoming instance interface ip ipsec ipv6 irq l2tp-server lcd ldp logging mac-server mac-winbox mangle manual mirror mme mpls nat nd neighbor network note ntp ospf ospf-v3 ovpn-server page peer pim ping policy pool port ppp pppoe-client pptp-server prefix profile proposal proxy queue radius resource rip ripng route routing screen script security-profiles server service service-port settings shares smb sms sniffer snmp snooper socks sstp-server system tool tracking type upgrade upnp user-manager users user vlan secret vrrp watchdog web-access wireless pptp pppoe lan wan layer7-protocol lease simple raw",
-        s = {
-            className: "variable",
-            variants: [
-                {
-                    begin: /\$[\w\d#@][\w\d_]*/,
-                },
-                {
-                    begin: /\$\{(.*?)\}/,
-                },
-            ],
-        },
+        s = { className: "variable", variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
         o = {
             className: "string",
             begin: /"/,
@@ -24,19 +14,10 @@ e.exports = function (e) {
             contains: [
                 e.BACKSLASH_ESCAPE,
                 s,
-                {
-                    className: "variable",
-                    begin: /\$\(/,
-                    end: /\)/,
-                    contains: [e.BACKSLASH_ESCAPE],
-                },
+                { className: "variable", begin: /\$\(/, end: /\)/, contains: [e.BACKSLASH_ESCAPE] },
             ],
         },
-        l = {
-            className: "string",
-            begin: /'/,
-            end: /'/,
-        };
+        l = { className: "string", begin: /'/, end: /'/ };
     return {
         name: "MikroTik RouterOS script",
         aliases: ["mikrotik"],
@@ -49,18 +30,9 @@ e.exports = function (e) {
         contains: [
             {
                 variants: [
-                    {
-                        begin: /\/\*/,
-                        end: /\*\//,
-                    },
-                    {
-                        begin: /\/\//,
-                        end: /$/,
-                    },
-                    {
-                        begin: /<\//,
-                        end: />/,
-                    },
+                    { begin: /\/\*/, end: /\*\// },
+                    { begin: /\/\//, end: /$/ },
+                    { begin: /<\//, end: />/ },
                 ],
                 illegal: /./,
             },
@@ -73,10 +45,7 @@ e.exports = function (e) {
                 relevance: 0,
                 returnBegin: !0,
                 contains: [
-                    {
-                        className: "attribute",
-                        begin: /[^=]+/,
-                    },
+                    { className: "attribute", begin: /[^=]+/ },
                     {
                         begin: /=/,
                         endsWithParent: !0,
@@ -85,41 +54,23 @@ e.exports = function (e) {
                             o,
                             l,
                             s,
-                            {
-                                className: "literal",
-                                begin: "\\b(" + i.split(" ").join("|") + ")\\b",
-                            },
-                            {
-                                begin: /("[^"]*"|[^\s{}[\]]+)/,
-                            },
+                            { className: "literal", begin: "\\b(" + i.split(" ").join("|") + ")\\b" },
+                            { begin: /("[^"]*"|[^\s{}[\]]+)/ },
                         ],
                     },
                 ],
             },
-            {
-                className: "number",
-                begin: /\*[0-9a-fA-F]+/,
-            },
+            { className: "number", begin: /\*[0-9a-fA-F]+/ },
             {
                 begin: "\\b(" + r.split(" ").join("|") + ")([\\s[(\\]|])",
                 returnBegin: !0,
-                contains: [
-                    {
-                        className: "built_in",
-                        begin: /\w+/,
-                    },
-                ],
+                contains: [{ className: "built_in", begin: /\w+/ }],
             },
             {
                 className: "built_in",
                 variants: [
-                    {
-                        begin: "(\\.\\./|/|\\s)((" + a.split(" ").join("|") + ");?\\s)+",
-                    },
-                    {
-                        begin: /\.\./,
-                        relevance: 0,
-                    },
+                    { begin: "(\\.\\./|/|\\s)((" + a.split(" ").join("|") + ");?\\s)+" },
+                    { begin: /\.\./, relevance: 0 },
                 ],
             },
         ],

@@ -7,25 +7,17 @@ e.exports = function (e) {
         s = "[A-Za-z](_?[A-Za-z0-9.])*",
         o = "[]\\{\\}%#'\"",
         l = e.COMMENT("--", "$"),
-        c = {
+        u = {
             begin: "\\s+:\\s+",
             end: "\\s*(:=|;|\\)|=>|$)",
             illegal: o,
             contains: [
-                {
-                    beginKeywords: "loop for declare others",
-                    endsParent: !0,
-                },
+                { beginKeywords: "loop for declare others", endsParent: !0 },
                 {
                     className: "keyword",
                     beginKeywords: "not null constant access function procedure in out aliased exception",
                 },
-                {
-                    className: "type",
-                    begin: s,
-                    endsParent: !0,
-                    relevance: 0,
-                },
+                { className: "type", begin: s, endsParent: !0, relevance: 0 },
             ],
         };
     return {
@@ -109,30 +101,10 @@ e.exports = function (e) {
         },
         contains: [
             l,
-            {
-                className: "string",
-                begin: /"/,
-                end: /"/,
-                contains: [
-                    {
-                        begin: /""/,
-                        relevance: 0,
-                    },
-                ],
-            },
-            {
-                className: "string",
-                begin: /'.'/,
-            },
-            {
-                className: "number",
-                begin: a,
-                relevance: 0,
-            },
-            {
-                className: "symbol",
-                begin: "'" + s,
-            },
+            { className: "string", begin: /"/, end: /"/, contains: [{ begin: /""/, relevance: 0 }] },
+            { className: "string", begin: /'.'/ },
+            { className: "number", begin: a, relevance: 0 },
+            { className: "symbol", begin: "'" + s },
             {
                 className: "title",
                 begin: "(\\bwith\\s+)?(\\bprivate\\s+)?\\bpackage\\s+(\\bbody\\s+)?",
@@ -157,7 +129,7 @@ e.exports = function (e) {
                         excludeEnd: !0,
                         illegal: o,
                     },
-                    c,
+                    u,
                     {
                         className: "type",
                         begin: "\\breturn\\s+",
@@ -178,7 +150,7 @@ e.exports = function (e) {
                 excludeBegin: !0,
                 illegal: o,
             },
-            c,
+            u,
         ],
     };
 };

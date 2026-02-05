@@ -1,82 +1,66 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(228524);
-var r = n(627968);
+n.d(t, { A: () => h });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(421380),
-    a = n(927578),
+var s = n(503698),
+    r = n.n(s),
+    a = n(421380),
+    l = n(927578),
     o = n(545334),
     c = n(422936),
     d = n(234419),
     u = n(396375),
     _ = n(543233),
-    p = n(76707),
-    m = n(788868),
+    m = n(76707),
+    A = n(788868),
     g = n(985018),
-    A = n(296388);
-let f = (e) => {
-    var t;
+    E = n(296388);
+let h = (e) => {
     let {
-            title: n,
-            titleClassName: i,
-            buttonClassName: f,
-            subtitle: b,
-            description: h,
-            descriptionCta: E,
-            isPremiumGetCta: O,
-            onCtaClick: C,
-            cardVariant: x,
+            title: t,
+            titleClassName: n,
+            buttonClassName: s,
+            subtitle: h,
+            description: p,
+            descriptionCta: C,
+            isPremiumGetCta: x,
+            onCtaClick: T,
+            cardVariant: I,
         } = e,
         S = (0, d.V)(),
-        T = null == S ? void 0 : S.subscription_trial,
-        I = (0, c.O)(),
-        y = (0, a.FY)({
-            intervalType: null == T ? void 0 : T.interval,
-            intervalCount: null == T ? void 0 : T.interval_count,
-        }),
-        N = (0, o.G)({
+        f = S?.subscription_trial,
+        N = (0, c.O)(),
+        b = (0, l.FY)({ intervalType: f?.interval, intervalCount: f?.interval_count }),
+        R = (0, o.G)({
             defaultResponse: g.intl.string(g.t["8x0jKT"]),
             onNonTier2Subscriber: g.intl.string(g.t.IJI7yk),
-            onTier2TrialOffer: y,
-            onTier0TrialOffer: y,
-            onDiscountOffer: g.intl.formatToPlainString(g.t.bkQ4bH, {
-                percent: null == I ? void 0 : I.discount.amount,
-            }),
+            onTier2TrialOffer: b,
+            onTier0TrialOffer: b,
+            onDiscountOffer: g.intl.formatToPlainString(g.t.bkQ4bH, { percent: N?.discount.amount }),
         }),
-        j = (0, _.Q)(x);
-    return (0, r.jsxs)("div", {
-        className: l()(A.L_, null == j || null == (t = j.overlayContainer) ? void 0 : t.className),
+        v = (0, _.Q)(I);
+    return (0, i.jsxs)("div", {
+        className: r()(E.L_, v?.overlayContainer?.className),
         children: [
-            (0, r.jsx)(p.A, {
-                title: n,
-                cardVariantStyleInfo: j,
-                titleClassName: i,
-                subtitle: b,
-                description: h,
+            (0, i.jsx)(m.A, {
+                title: t,
+                cardVariantStyleInfo: v,
+                titleClassName: n,
+                subtitle: h,
+                description: p,
                 isOverlay: !0,
             }),
-            O &&
-                (0, r.jsx)(u.A, {
-                    className: f,
-                    look: s.$n.Looks.BLANK,
-                    color: s.$n.Colors.CUSTOM,
-                    subscriptionTier: m.pe.TIER_2,
-                    textOptions: {
-                        textOverride: N,
-                    },
+            x &&
+                (0, i.jsx)(u.A, {
+                    className: s,
+                    look: a.$n.Looks.BLANK,
+                    color: a.$n.Colors.CUSTOM,
+                    subscriptionTier: A.pe.TIER_2,
+                    textOptions: { textOverride: R },
                     showGradient: !0,
                 }),
-            null != E &&
-                null != C &&
-                (0, r.jsx)(s.$n, {
-                    "data-migration-pending": !0,
-                    className: f,
-                    onClick: C,
-                    children: E,
-                }),
+            null != C &&
+                null != T &&
+                (0, i.jsx)(a.$n, { "data-migration-pending": !0, className: s, onClick: T, children: C }),
         ],
     });
 };

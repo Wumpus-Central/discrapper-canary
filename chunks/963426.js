@@ -126,17 +126,10 @@ e.exports = function (e) {
         },
         r = {
             variants: [
-                {
-                    match: [/(class|interface)\s+/, t, /\s+(extends|implements)\s+/, t],
-                },
-                {
-                    match: [/class\s+/, t],
-                },
+                { match: [/(class|interface)\s+/, t, /\s+(extends|implements)\s+/, t] },
+                { match: [/class\s+/, t] },
             ],
-            scope: {
-                2: "title.class",
-                4: "title.class.inherited",
-            },
+            scope: { 2: "title.class", 4: "title.class.inherited" },
             keywords: n,
         };
     return {
@@ -149,11 +142,7 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            {
-                className: "meta",
-                begin: "#",
-                end: "$",
-            },
+            { className: "meta", begin: "#", end: "$" },
             r,
         ],
     };

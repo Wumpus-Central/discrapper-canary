@@ -1,3 +1,2 @@
-e.exports = {
-    a: "slider__4e371",
-};
+"use strict";
+e.exports = { a: "slider__4e371" };

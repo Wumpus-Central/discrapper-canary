@@ -1,9 +1,11 @@
 e.exports = (function () {
     var e = [
             function (e, t, r) {
+                "use strict";
                 e.exports = r(1);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         Object.assign ||
                         function (e) {
@@ -146,7 +148,6 @@ e.exports = (function () {
                                                     "Super expression must either be null or a function, not " +
                                                         typeof e,
                                                 );
-
                                             function t() {
                                                 if (!(this instanceof t))
                                                     throw TypeError("Cannot call a class as a function");
@@ -166,9 +167,7 @@ e.exports = (function () {
                                                     l.base && n(a, f),
                                                     (a._type = l.name),
                                                     l.language &&
-                                                        ((a._settings = a._settings || {
-                                                            language: {},
-                                                        }),
+                                                        ((a._settings = a._settings || { language: {} }),
                                                         (a._settings.language = o.applyToDefaults(
                                                             a._settings.language,
                                                             ((r = {}),
@@ -225,14 +224,7 @@ e.exports = (function () {
                                                     e = n.value;
                                                 }
                                                 var o = l.coerce.call(this, e, t, r);
-                                                return o instanceof a.Err
-                                                    ? {
-                                                          value: e,
-                                                          errors: o,
-                                                      }
-                                                    : {
-                                                          value: o,
-                                                      };
+                                                return o instanceof a.Err ? { value: e, errors: o } : { value: o };
                                             }),
                                         l.pre &&
                                             (h.prototype._base = function (e, t, r) {
@@ -242,14 +234,7 @@ e.exports = (function () {
                                                     e = n.value;
                                                 }
                                                 var o = l.pre.call(this, e, t, r);
-                                                return o instanceof a.Err
-                                                    ? {
-                                                          value: e,
-                                                          errors: o,
-                                                      }
-                                                    : {
-                                                          value: o,
-                                                      };
+                                                return o instanceof a.Err ? { value: e, errors: o } : { value: o };
                                             }),
                                         l.rules)
                                     )
@@ -286,10 +271,7 @@ e.exports = (function () {
                                                                   function (e, r, n) {
                                                                       return t.validate.call(this, i, e, r, n);
                                                                   },
-                                                                  {
-                                                                      description: t.description,
-                                                                      hasRef: o,
-                                                                  },
+                                                                  { description: t.description, hasRef: o },
                                                               )
                                                             : this.clone()),
                                                         t.setup && t.setup.call(a, i),
@@ -343,6 +325,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e, n) {
+                    "use strict";
                     var o =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -482,9 +465,7 @@ e.exports = (function () {
                             return t.merge(i, r, !1, !1), u.restore(i, r, s), i;
                         }),
                         (t.deepEqual = function (r, n, i, s) {
-                            i = i || {
-                                prototype: !0,
-                            };
+                            i = i || { prototype: !0 };
                             var a = void 0 === r ? "undefined" : o(r);
                             if (a !== (void 0 === n ? "undefined" : o(n))) return !1;
                             if ("object" !== a || null === r || null === n)
@@ -579,10 +560,7 @@ e.exports = (function () {
                                 s = t.deepEqual;
                                 var c = n.hasOwnProperty("only"),
                                     u = n.hasOwnProperty("part");
-                                a = {
-                                    prototype: c ? n.only : !!u && !n.part,
-                                    part: c ? !n.only : !u || n.part,
-                                };
+                                a = { prototype: c ? n.only : !!u && !n.part, part: c ? !n.only : !u || n.part };
                             } else
                                 s = function (e, t) {
                                     return e === t;
@@ -627,10 +605,7 @@ e.exports = (function () {
                         }),
                         (t.reach = function (e, r, n) {
                             if (!1 === r || null == r) return e;
-                            "string" == typeof (n = n || {}) &&
-                                (n = {
-                                    separator: n,
-                                });
+                            "string" == typeof (n = n || {}) && (n = { separator: n });
                             for (var i = r.split(n.separator || "."), s = e, a = 0; a < i.length; ++a) {
                                 var c = i[a];
                                 if (
@@ -855,14 +830,13 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var n = r(4),
                         o = r(5),
                         i = r(6);
-
                     function s() {
                         return c.TYPED_ARRAY_SUPPORT ? 0x7fffffff : 0x3fffffff;
                     }
-
                     function a(e, t) {
                         if (s() < t) throw RangeError("Invalid typed array length");
                         return (
@@ -872,7 +846,6 @@ e.exports = (function () {
                             e
                         );
                     }
-
                     function c(e, t, r) {
                         if (!c.TYPED_ARRAY_SUPPORT && !(this instanceof c)) return new c(e, t, r);
                         if ("number" == typeof e) {
@@ -882,7 +855,6 @@ e.exports = (function () {
                         }
                         return u(this, e, t, r);
                     }
-
                     function u(e, t, r, n) {
                         if ("number" == typeof t) throw TypeError('"value" argument must not be a number');
                         return "u" > typeof ArrayBuffer && t instanceof ArrayBuffer
@@ -931,25 +903,21 @@ e.exports = (function () {
                                     );
                                 })(e, t);
                     }
-
                     function l(e) {
                         if ("number" != typeof e) throw TypeError('"size" argument must be a number');
                         if (e < 0) throw RangeError('"size" argument must not be negative');
                     }
-
                     function f(e, t) {
                         if ((l(t), (e = a(e, t < 0 ? 0 : 0 | h(t))), !c.TYPED_ARRAY_SUPPORT))
                             for (var r = 0; r < t; ++r) e[r] = 0;
                         return e;
                     }
-
                     function p(e, t) {
                         var r = t.length < 0 ? 0 : 0 | h(t.length);
                         e = a(e, r);
                         for (var n = 0; n < r; n += 1) e[n] = 255 & t[n];
                         return e;
                     }
-
                     function h(e) {
                         if (e >= s())
                             throw RangeError(
@@ -957,7 +925,6 @@ e.exports = (function () {
                             );
                         return 0 | e;
                     }
-
                     function d(e, t) {
                         if (c.isBuffer(e)) return e.length;
                         if (
@@ -993,7 +960,6 @@ e.exports = (function () {
                                     (t = ("" + t).toLowerCase()), (n = !0);
                             }
                     }
-
                     function g(e, t, r) {
                         var o,
                             i,
@@ -1057,12 +1023,10 @@ e.exports = (function () {
                                     (e = (e + "").toLowerCase()), (a = !0);
                             }
                     }
-
                     function y(e, t, r) {
                         var n = e[t];
                         (e[t] = e[r]), (e[r] = n);
                     }
-
                     function v(e, t, r, n, o) {
                         if (0 === e.length) return -1;
                         if (
@@ -1092,7 +1056,6 @@ e.exports = (function () {
                         }
                         throw TypeError("val must be string, number or Buffer");
                     }
-
                     function m(e, t, r, n, o) {
                         var i,
                             s = 1,
@@ -1108,7 +1071,6 @@ e.exports = (function () {
                             if (e.length < 2 || t.length < 2) return -1;
                             (s = 2), (a /= 2), (c /= 2), (r /= 2);
                         }
-
                         function u(e, t) {
                             return 1 === s ? e[t] : e.readUInt16BE(t * s);
                         }
@@ -1169,10 +1131,7 @@ e.exports = (function () {
                             "u" > typeof Symbol &&
                                 Symbol.species &&
                                 c[Symbol.species] === c &&
-                                Object.defineProperty(c, Symbol.species, {
-                                    value: null,
-                                    configurable: !0,
-                                })),
+                                Object.defineProperty(c, Symbol.species, { value: null, configurable: !0 })),
                         (c.alloc = function (e, t, r) {
                             return (l(e), e <= 0)
                                 ? a(null, e)
@@ -1311,7 +1270,6 @@ e.exports = (function () {
                         (c.prototype.lastIndexOf = function (e, t, r) {
                             return v(this, e, t, r, !1);
                         });
-
                     function b(e, t, r) {
                         r = Math.min(e.length, r);
                         for (var n = [], o = t; o < r; ) {
@@ -1367,34 +1325,28 @@ e.exports = (function () {
                             d += String.fromCharCode.apply(String, p.slice(g, (g += 4096)));
                         return d;
                     }
-
                     function _(e, t, r) {
                         if (e % 1 != 0 || e < 0) throw RangeError("offset is not uint");
                         if (e + t > r) throw RangeError("Trying to access beyond buffer length");
                     }
-
                     function w(e, t, r, n, o, i) {
                         if (!c.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
                         if (t > o || t < i) throw RangeError('"value" argument is out of bounds');
                         if (r + n > e.length) throw RangeError("Index out of range");
                     }
-
                     function E(e, t, r, n) {
                         t < 0 && (t = 65535 + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 2); o < i; ++o)
                             e[r + o] = (t & (255 << (8 * (n ? o : 1 - o)))) >>> ((n ? o : 1 - o) * 8);
                     }
-
                     function x(e, t, r, n) {
                         t < 0 && (t = 0xffffffff + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 4); o < i; ++o)
                             e[r + o] = (t >>> ((n ? o : 3 - o) * 8)) & 255;
                     }
-
                     function j(e, t, r, n, o, i) {
                         if (r + n > e.length || r < 0) throw RangeError("Index out of range");
                     }
-
                     function O(e, t, r, n, i) {
                         return (
                             i || j(e, t, r, 4, 34028234663852886e22, -34028234663852886e22),
@@ -1402,7 +1354,6 @@ e.exports = (function () {
                             r + 4
                         );
                     }
-
                     function k(e, t, r, n, i) {
                         return (
                             i || j(e, t, r, 8, 17976931348623157e292, -17976931348623157e292),
@@ -1481,10 +1432,7 @@ e.exports = (function () {
                             }
                     }),
                         (c.prototype.toJSON = function () {
-                            return {
-                                type: "Buffer",
-                                data: Array.prototype.slice.call(this._arr || this, 0),
-                            };
+                            return { type: "Buffer", data: Array.prototype.slice.call(this._arr || this, 0) };
                         }),
                         (c.prototype.slice = function (e, t) {
                             var r,
@@ -1816,7 +1764,6 @@ e.exports = (function () {
                             return this;
                         });
                     var S = /[^+\/0-9A-Za-z-_]/g;
-
                     function A(e, t) {
                         t = t || 1 / 0;
                         for (var r, n = e.length, o = null, i = [], s = 0; s < n; ++s) {
@@ -1851,12 +1798,10 @@ e.exports = (function () {
                         }
                         return i;
                     }
-
                     function T(e) {
                         for (var t = [], r = 0; r < e.length; ++r) t.push(255 & e.charCodeAt(r));
                         return t;
                     }
-
                     function P(e) {
                         return n.toByteArray(
                             (function (e) {
@@ -1871,7 +1816,6 @@ e.exports = (function () {
                             })(e),
                         );
                     }
-
                     function R(e, t, r, n) {
                         for (var o = 0; o < n && !(o + r >= t.length) && !(o >= e.length); ++o) t[o + r] = e[o];
                         return o;
@@ -1884,6 +1828,7 @@ e.exports = (function () {
                 );
             },
             function (e, t) {
+                "use strict";
                 (t.byteLength = function (e) {
                     return (3 * e.length) / 4 - c(e);
                 }),
@@ -1954,7 +1899,6 @@ e.exports = (function () {
                     ++s
                 )
                     (r[s] = i[s]), (n[i.charCodeAt(s)] = s);
-
                 function c(e) {
                     var t = e.length;
                     if (t % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
@@ -2029,11 +1973,9 @@ e.exports = (function () {
                     n,
                     o,
                     i = (e.exports = {});
-
                 function s() {
                     throw Error("setTimeout has not been defined");
                 }
-
                 function a() {
                     throw Error("clearTimeout has not been defined");
                 }
@@ -2047,7 +1989,6 @@ e.exports = (function () {
                 } catch (e) {
                     n = a;
                 }
-
                 function c(e) {
                     if (r === setTimeout) return setTimeout(e, 0);
                     if ((r === s || !r) && setTimeout) return (r = setTimeout), setTimeout(e, 0);
@@ -2064,11 +2005,9 @@ e.exports = (function () {
                 var u = [],
                     l = !1,
                     f = -1;
-
                 function p() {
                     l && o && ((l = !1), o.length ? (u = o.concat(u)) : (f = -1), u.length && h());
                 }
-
                 function h() {
                     if (!l) {
                         var e = c(p);
@@ -2094,11 +2033,9 @@ e.exports = (function () {
                             })(e);
                     }
                 }
-
                 function d(e, t) {
                     (this.fun = e), (this.array = t);
                 }
-
                 function g() {}
                 (i.nextTick = function (e) {
                     var t = Array(arguments.length - 1);
@@ -2153,7 +2090,6 @@ e.exports = (function () {
                         o = function (e) {
                             return n.exec(e).slice(1);
                         };
-
                     function i(e, t) {
                         if (e.filter) return e.filter(t);
                         for (var r = [], n = 0; n < e.length; n++) t(e[n], n, e) && r.push(e[n]);
@@ -2305,12 +2241,8 @@ e.exports = (function () {
                             };
                         });
                     var s = {};
-
                     function a(e, r) {
-                        var n = {
-                            seen: [],
-                            stylize: u,
-                        };
+                        var n = { seen: [], stylize: u };
                         return (
                             arguments.length >= 3 && (n.depth = arguments[2]),
                             arguments.length >= 4 && (n.colors = arguments[3]),
@@ -2323,16 +2255,13 @@ e.exports = (function () {
                             l(n, e, n.depth)
                         );
                     }
-
                     function c(e, t) {
                         var r = a.styles[t];
                         return r ? "\x1b[" + a.colors[r][0] + "m" + e + "\x1b[" + a.colors[r][1] + "m" : e;
                     }
-
                     function u(e, t) {
                         return e;
                     }
-
                     function l(e, r, n) {
                         if (
                             e.customInspect &&
@@ -2434,17 +2363,13 @@ e.exports = (function () {
                                 : s[0] + i + " " + o.join(", ") + " " + s[1]
                         );
                     }
-
                     function f(e) {
                         return "[" + Error.prototype.toString.call(e) + "]";
                     }
-
                     function p(e, t, r, n, o, i) {
                         var s, a, c;
                         if (
-                            ((c = Object.getOwnPropertyDescriptor(t, o) || {
-                                value: t[o],
-                            }).get
+                            ((c = Object.getOwnPropertyDescriptor(t, o) || { value: t[o] }).get
                                 ? (a = c.set
                                       ? e.stylize("[Getter/Setter]", "special")
                                       : e.stylize("[Getter]", "special"))
@@ -2482,55 +2407,42 @@ e.exports = (function () {
                         }
                         return s + ": " + a;
                     }
-
                     function h(e) {
                         return Array.isArray(e);
                     }
-
                     function d(e) {
                         return "boolean" == typeof e;
                     }
-
                     function g(e) {
                         return null === e;
                     }
-
                     function y(e) {
                         return "number" == typeof e;
                     }
-
                     function v(e) {
                         return "string" == typeof e;
                     }
-
                     function m(e) {
                         return void 0 === e;
                     }
-
                     function b(e) {
                         return _(e) && "[object RegExp]" === j(e);
                     }
-
                     function _(e) {
                         return "object" == typeof e && null !== e;
                     }
-
                     function w(e) {
                         return _(e) && "[object Date]" === j(e);
                     }
-
                     function E(e) {
                         return _(e) && ("[object Error]" === j(e) || e instanceof Error);
                     }
-
                     function x(e) {
                         return "function" == typeof e;
                     }
-
                     function j(e) {
                         return Object.prototype.toString.call(e);
                     }
-
                     function O(e) {
                         return e < 10 ? "0" + e.toString(10) : e.toString(10);
                     }
@@ -2600,7 +2512,6 @@ e.exports = (function () {
                         }),
                         (t.isBuffer = r(11));
                     var k = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
                     function S(e, t) {
                         return Object.prototype.hasOwnProperty.call(e, t);
                     }
@@ -2643,12 +2554,7 @@ e.exports = (function () {
                     ? (e.exports = function (e, t) {
                           (e.super_ = t),
                               (e.prototype = Object.create(t.prototype, {
-                                  constructor: {
-                                      value: e,
-                                      enumerable: !1,
-                                      writable: !0,
-                                      configurable: !0,
-                                  },
+                                  constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                               }));
                       })
                     : (e.exports = function (e, t) {
@@ -2659,6 +2565,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var r = {};
                     (t.escapeJavaScript = function (e) {
                         if (!e) return "";
@@ -2724,6 +2631,7 @@ e.exports = (function () {
                 }).call(t, r(3).Buffer);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         Object.assign ||
                         function (e) {
@@ -2751,9 +2659,7 @@ e.exports = (function () {
                     a = r(16),
                     c = null,
                     u = null,
-                    l = {
-                        Set: r(18),
-                    };
+                    l = { Set: r(18) };
                 (l.defaults = {
                     abortEarly: !0,
                     convert: !0,
@@ -2895,15 +2801,7 @@ e.exports = (function () {
                                 }),
                                 (e.prototype._test = function (e, t, r, n) {
                                     var o = this.clone();
-                                    return (
-                                        o._tests.push({
-                                            func: r,
-                                            name: e,
-                                            arg: t,
-                                            options: n,
-                                        }),
-                                        o
-                                    );
+                                    return o._tests.push({ func: r, name: e, arg: t, options: n }), o;
                                 }),
                                 (e.prototype.options = function (e) {
                                     i.assert(!e.context, "Cannot override context"), this.checkOptions(e);
@@ -3013,16 +2911,10 @@ e.exports = (function () {
                                         );
                                     var n = t.hasOwnProperty("then") ? this.concat(u.schema(t.then)) : void 0,
                                         s = t.hasOwnProperty("otherwise") ? this.concat(u.schema(t.otherwise)) : void 0,
-                                        a = (c = c || r(28)).when(e, {
-                                            is: t.is,
-                                            then: n,
-                                            otherwise: s,
-                                        });
+                                        a = (c = c || r(28)).when(e, { is: t.is, then: n, otherwise: s });
                                     return (
                                         (a._flags.presence = "ignore"),
-                                        (a._settings = l.concatSettings(a._settings, {
-                                            baseType: this,
-                                        })),
+                                        (a._settings = l.concatSettings(a._settings, { baseType: this })),
                                         a
                                     );
                                 }),
@@ -3070,12 +2962,7 @@ e.exports = (function () {
                                 (e.prototype._validate = function (e, t, r, n) {
                                     var o = this,
                                         c = e;
-                                    (t = t || {
-                                        key: "",
-                                        path: "",
-                                        parent: null,
-                                        reference: n,
-                                    }),
+                                    (t = t || { key: "", path: "", parent: null, reference: n }),
                                         this._settings && (r = l.concatSettings(r, this._settings));
                                     var u = [],
                                         f = function () {
@@ -3098,10 +2985,7 @@ e.exports = (function () {
                                                     (n = f.value),
                                                         f.error && u.push(o.createError("any.default", f.error, t, r));
                                                 }
-                                            return {
-                                                value: n,
-                                                errors: u.length ? u : null,
-                                            };
+                                            return { value: n, errors: u.length ? u : null };
                                         };
                                     if (this._coerce) {
                                         var p = this._coerce.call(this, e, t, r);
@@ -3163,11 +3047,7 @@ e.exports = (function () {
                                         (u.push(
                                             this.createError(
                                                 "any.allowOnly",
-                                                {
-                                                    valids: this._valids.values({
-                                                        stripUndefined: !0,
-                                                    }),
-                                                },
+                                                { valids: this._valids.values({ stripUndefined: !0 }) },
                                                 t,
                                                 r,
                                             ),
@@ -3188,12 +3068,7 @@ e.exports = (function () {
                                     var n = l.concatSettings(l.defaults, t),
                                         o = this._validate(e, null, n),
                                         i = a.process(o.errors, e);
-                                    return r
-                                        ? r(i, o.value)
-                                        : {
-                                              error: i,
-                                              value: o.value,
-                                          };
+                                    return r ? r(i, o.value) : { error: i, value: o.value };
                                 }),
                                 (e.prototype.validate = function (e, t, r) {
                                     return "function" == typeof t
@@ -3202,9 +3077,7 @@ e.exports = (function () {
                                 }),
                                 (e.prototype.describe = function () {
                                     var e = this,
-                                        t = {
-                                            type: this._type,
-                                        },
+                                        t = { type: this._type },
                                         r = Object.keys(this._flags);
                                     if (r.length)
                                         if (
@@ -3245,9 +3118,7 @@ e.exports = (function () {
                                         (t.rules = []);
                                     for (var c = 0; c < this._tests.length; ++c) {
                                         var u = this._tests[c],
-                                            l = {
-                                                name: u.name,
-                                            };
+                                            l = { name: u.name };
                                         void 0 !== u.arg && (l.arg = s.isRef(u.arg) ? u.arg.toString() : u.arg);
                                         var f = u.options;
                                         if (f) {
@@ -3293,10 +3164,7 @@ e.exports = (function () {
                         } catch (e) {
                             r = e;
                         }
-                        return {
-                            value: n,
-                            error: r,
-                        };
+                        return { value: n, error: r };
                     }),
                     (l.concatSettings = function (e, t) {
                         if (!e && !t) return null;
@@ -3312,6 +3180,7 @@ e.exports = (function () {
                     });
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(2);
                 (t.create = function (e, t) {
                     n.assert("string" == typeof e, "Invalid reference key:", e);
@@ -3340,6 +3209,7 @@ e.exports = (function () {
                     });
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -3540,12 +3410,11 @@ e.exports = (function () {
                     });
             },
             function (e, t) {
+                "use strict";
                 t.errors = {
                     root: "value",
                     key: '"{{!key}}" ',
-                    messages: {
-                        wrapArrays: !0,
-                    },
+                    messages: { wrapArrays: !0 },
                     any: {
                         unknown: "is not allowed",
                         invalid: "contains an invalid value",
@@ -3554,9 +3423,7 @@ e.exports = (function () {
                         allowOnly: "must be one of {{valids}}",
                         default: "threw an error when running default method",
                     },
-                    alternatives: {
-                        base: "not matching any of the allowed alternatives",
-                    },
+                    alternatives: { base: "not matching any of the allowed alternatives" },
                     array: {
                         base: "must be an array",
                         includes: "at position {{pos}} does not match any of the allowed types",
@@ -3577,9 +3444,7 @@ e.exports = (function () {
                         sparse: "must not be a sparse array",
                         unique: "position {{pos}} contains a duplicate value",
                     },
-                    boolean: {
-                        base: "must be a boolean",
-                    },
+                    boolean: { base: "must be a boolean" },
                     binary: {
                         base: "must be a buffer or a string",
                         min: "must be at least {{limit}} bytes",
@@ -3685,6 +3550,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -3771,6 +3637,7 @@ e.exports = (function () {
                 }).call(t, r(3).Buffer);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -3824,6 +3691,7 @@ e.exports = (function () {
                     });
             },
             function (e, t, r) {
+                "use strict";
                 var n,
                     o = r(14),
                     i = r(15),
@@ -3839,7 +3707,6 @@ e.exports = (function () {
                     (a.Date = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -3851,12 +3718,7 @@ e.exports = (function () {
                         }
                         return (
                             (t.prototype = Object.create(e && e.prototype, {
-                                constructor: {
-                                    value: t,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0,
-                                },
+                                constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                             })),
                             e &&
                                 (Object.setPrototypeOf
@@ -3940,26 +3802,12 @@ e.exports = (function () {
                                     if (n) u = Date.now();
                                     else if (o) {
                                         if (!(u = a.Date.toDate(r(s.reference || s.parent, c))))
-                                            return this.createError(
-                                                "date.ref",
-                                                {
-                                                    ref: r.key,
-                                                },
-                                                s,
-                                                c,
-                                            );
+                                            return this.createError("date.ref", { ref: r.key }, s, c);
                                         u = u.getTime();
                                     } else u = r.getTime();
                                     return t(i.getTime(), u)
                                         ? i
-                                        : this.createError(
-                                              "date." + e,
-                                              {
-                                                  limit: new Date(u),
-                                              },
-                                              s,
-                                              c,
-                                          );
+                                        : this.createError("date." + e, { limit: new Date(u) }, s, c);
                                 })
                             );
                         };
@@ -3974,6 +3822,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -4002,7 +3851,6 @@ e.exports = (function () {
                     (p.String = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -4014,12 +3862,7 @@ e.exports = (function () {
                         }
                         return (
                             (t.prototype = Object.create(e && e.prototype, {
-                                constructor: {
-                                    value: t,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0,
-                                },
+                                constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                             })),
                             e &&
                                 (Object.setPrototypeOf
@@ -4060,14 +3903,7 @@ e.exports = (function () {
                                     errors:
                                         "string" == typeof e
                                             ? null
-                                            : this.createError(
-                                                  "string.base",
-                                                  {
-                                                      value: e,
-                                                  },
-                                                  t,
-                                                  r,
-                                              ),
+                                            : this.createError("string.base", { value: e }, t, r),
                                 };
                             }),
                             (t.prototype.insensitive = function () {
@@ -4082,21 +3918,12 @@ e.exports = (function () {
                                     }
                                     return o % 10 == 0 && o > 0
                                         ? e
-                                        : this.createError(
-                                              "string.creditCard",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                        : this.createError("string.creditCard", { value: e }, t, r);
                                 });
                             }),
                             (t.prototype.regex = function (e, t) {
                                 i.assert(e instanceof RegExp, "pattern must be a RegExp");
-                                var r = {
-                                    pattern: new RegExp(e.source, e.ignoreCase ? "i" : void 0),
-                                };
+                                var r = { pattern: new RegExp(e.source, e.ignoreCase ? "i" : void 0) };
                                 "string" == typeof t
                                     ? (r.name = t)
                                     : (void 0 === t ? "undefined" : n(t)) === "object" &&
@@ -4105,44 +3932,19 @@ e.exports = (function () {
                                 return this._test("regex", r, function (e, t, n) {
                                     return r.pattern.test(e) ^ r.invert
                                         ? e
-                                        : this.createError(
-                                              o,
-                                              {
-                                                  name: r.name,
-                                                  pattern: r.pattern,
-                                                  value: e,
-                                              },
-                                              t,
-                                              n,
-                                          );
+                                        : this.createError(o, { name: r.name, pattern: r.pattern, value: e }, t, n);
                                 });
                             }),
                             (t.prototype.alphanum = function () {
                                 return this._test("alphanum", void 0, function (e, t, r) {
                                     return /^[a-zA-Z0-9]+$/.test(e)
                                         ? e
-                                        : this.createError(
-                                              "string.alphanum",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                        : this.createError("string.alphanum", { value: e }, t, r);
                                 });
                             }),
                             (t.prototype.token = function () {
                                 return this._test("token", void 0, function (e, t, r) {
-                                    return /^\w+$/.test(e)
-                                        ? e
-                                        : this.createError(
-                                              "string.token",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                    return /^\w+$/.test(e) ? e : this.createError("string.token", { value: e }, t, r);
                                 });
                             }),
                             (t.prototype.email = function (e) {
@@ -4173,14 +3975,7 @@ e.exports = (function () {
                                             var o = s.validate(t, e);
                                             if (!0 === o || 0 === o) return t;
                                         } catch (e) {}
-                                        return this.createError(
-                                            "string.email",
-                                            {
-                                                value: t,
-                                            },
-                                            r,
-                                            n,
-                                        );
+                                        return this.createError("string.email", { value: t }, r, n);
                                     })
                                 );
                             }),
@@ -4234,23 +4029,11 @@ e.exports = (function () {
                                         : r
                                           ? this.createError(
                                                 "string.ipVersion",
-                                                {
-                                                    value: n,
-                                                    cidr: e.cidr,
-                                                    version: r,
-                                                },
+                                                { value: n, cidr: e.cidr, version: r },
                                                 o,
                                                 i,
                                             )
-                                          : this.createError(
-                                                "string.ip",
-                                                {
-                                                    value: n,
-                                                    cidr: e.cidr,
-                                                },
-                                                o,
-                                                i,
-                                            );
+                                          : this.createError("string.ip", { value: n, cidr: e.cidr }, o, i);
                                 });
                             }),
                             (t.prototype.uri = function (e) {
@@ -4301,63 +4084,26 @@ e.exports = (function () {
                                         return s.test(e)
                                             ? e
                                             : o
-                                              ? this.createError(
-                                                    "string.uriRelativeOnly",
-                                                    {
-                                                        value: e,
-                                                    },
-                                                    r,
-                                                    n,
-                                                )
+                                              ? this.createError("string.uriRelativeOnly", { value: e }, r, n)
                                               : t
                                                 ? this.createError(
                                                       "string.uriCustomScheme",
-                                                      {
-                                                          scheme: t,
-                                                          value: e,
-                                                      },
+                                                      { scheme: t, value: e },
                                                       r,
                                                       n,
                                                   )
-                                                : this.createError(
-                                                      "string.uri",
-                                                      {
-                                                          value: e,
-                                                      },
-                                                      r,
-                                                      n,
-                                                  );
+                                                : this.createError("string.uri", { value: e }, r, n);
                                     })
                                 );
                             }),
                             (t.prototype.isoDate = function () {
                                 return this._test("isoDate", void 0, function (e, t, r) {
-                                    return u._isIsoDate(e)
-                                        ? e
-                                        : this.createError(
-                                              "string.isoDate",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                    return u._isIsoDate(e) ? e : this.createError("string.isoDate", { value: e }, t, r);
                                 });
                             }),
                             (t.prototype.guid = function (e) {
-                                var t = {
-                                        "{": "}",
-                                        "[": "]",
-                                        "(": ")",
-                                        "": "",
-                                    },
-                                    r = {
-                                        uuidv1: "1",
-                                        uuidv2: "2",
-                                        uuidv3: "3",
-                                        uuidv4: "4",
-                                        uuidv5: "5",
-                                    },
+                                var t = { "{": "}", "[": "]", "(": ")", "": "" },
+                                    r = { uuidv1: "1", uuidv2: "2", uuidv3: "3", uuidv4: "4", uuidv5: "5" },
                                     n = [];
                                 if (e && e.version) {
                                     Array.isArray(e.version) || (e.version = [e.version]),
@@ -4401,44 +4147,19 @@ e.exports = (function () {
                                             }) &&
                                                 /[89AB]/i.test(s[8][0])))
                                         ? e
-                                        : this.createError(
-                                              "string.guid",
-                                              {
-                                                  value: e,
-                                              },
-                                              o,
-                                              i,
-                                          );
+                                        : this.createError("string.guid", { value: e }, o, i);
                                 });
                             }),
                             (t.prototype.hex = function () {
                                 var e = /^[a-f0-9]+$/i;
                                 return this._test("hex", e, function (t, r, n) {
-                                    return e.test(t)
-                                        ? t
-                                        : this.createError(
-                                              "string.hex",
-                                              {
-                                                  value: t,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                    return e.test(t) ? t : this.createError("string.hex", { value: t }, r, n);
                                 });
                             }),
                             (t.prototype.base64 = function () {
                                 var e = /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/;
                                 return this._test("base64", e, function (t, r, n) {
-                                    return e.test(t)
-                                        ? t
-                                        : this.createError(
-                                              "string.base64",
-                                              {
-                                                  value: t,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                    return e.test(t) ? t : this.createError("string.base64", { value: t }, r, n);
                                 });
                             }),
                             (t.prototype.hostname = function () {
@@ -4447,28 +4168,14 @@ e.exports = (function () {
                                 return this._test("hostname", void 0, function (t, r, n) {
                                     return (t.length <= 255 && e.test(t)) || o.isIPv6(t)
                                         ? t
-                                        : this.createError(
-                                              "string.hostname",
-                                              {
-                                                  value: t,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                        : this.createError("string.hostname", { value: t }, r, n);
                                 });
                             }),
                             (t.prototype.lowercase = function () {
                                 var e = this._test("lowercase", void 0, function (e, t, r) {
                                     return r.convert || e === e.toLocaleLowerCase()
                                         ? e
-                                        : this.createError(
-                                              "string.lowercase",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                        : this.createError("string.lowercase", { value: e }, t, r);
                                 });
                                 return (e._flags.case = "lower"), e;
                             }),
@@ -4476,14 +4183,7 @@ e.exports = (function () {
                                 var e = this._test("uppercase", void 0, function (e, t, r) {
                                     return r.convert || e === e.toLocaleUpperCase()
                                         ? e
-                                        : this.createError(
-                                              "string.uppercase",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                        : this.createError("string.uppercase", { value: e }, t, r);
                                 });
                                 return (e._flags.case = "upper"), e;
                             }),
@@ -4491,14 +4191,7 @@ e.exports = (function () {
                                 var e = this._test("trim", void 0, function (e, t, r) {
                                     return r.convert || e === e.trim()
                                         ? e
-                                        : this.createError(
-                                              "string.trim",
-                                              {
-                                                  value: e,
-                                              },
-                                              t,
-                                              r,
-                                          );
+                                        : this.createError("string.trim", { value: e }, t, r);
                                 });
                                 return (e._flags.trim = !0), e;
                             }),
@@ -4509,10 +4202,7 @@ e.exports = (function () {
                                 var r = this.clone();
                                 return (
                                     r._inner.replacements || (r._inner.replacements = []),
-                                    r._inner.replacements.push({
-                                        pattern: e,
-                                        replacement: t,
-                                    }),
+                                    r._inner.replacements.push({ pattern: e, replacement: t }),
                                     r
                                 );
                             }),
@@ -4536,24 +4226,13 @@ e.exports = (function () {
                                         var u = void 0;
                                         if (s) {
                                             if (((u = n(a.reference || a.parent, c)), !i.isInteger(u)))
-                                                return this.createError(
-                                                    "string.ref",
-                                                    {
-                                                        ref: n.key,
-                                                    },
-                                                    a,
-                                                    c,
-                                                );
+                                                return this.createError("string.ref", { ref: n.key }, a, c);
                                         } else u = n;
                                         return r(t, u, o)
                                             ? t
                                             : this.createError(
                                                   "string." + e,
-                                                  {
-                                                      limit: u,
-                                                      value: t,
-                                                      encoding: o,
-                                                  },
+                                                  { limit: u, value: t, encoding: o },
                                                   a,
                                                   c,
                                               );
@@ -4576,6 +4255,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -4743,10 +4423,7 @@ e.exports = (function () {
                                             stack: [i.components.localpart],
                                         },
                                         p = "",
-                                        h = {
-                                            local: "",
-                                            domain: "",
-                                        },
+                                        h = { local: "", domain: "" },
                                         d = [""],
                                         g = [""],
                                         y = 0,
@@ -5207,6 +4884,7 @@ e.exports = (function () {
                 }).call(t, r(7));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(24);
                 e.exports = {
                     createUriRegex: function (e, t, r) {
@@ -5223,9 +4901,8 @@ e.exports = (function () {
                 };
             },
             function (e, t) {
-                var r = {
-                    rfc3986: {},
-                };
+                "use strict";
+                var r = { rfc3986: {} };
                 (r.generate = function () {
                     var e = "[0-9]",
                         t = "a-zA-Z";
@@ -5300,6 +4977,7 @@ e.exports = (function () {
                     (e.exports = r.rfc3986);
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(24),
                     o = {
                         Ip: {
@@ -5308,11 +4986,7 @@ e.exports = (function () {
                                 optional: "(?:\\/(?:" + n.cidr + "))?",
                                 forbidden: "",
                             },
-                            versions: {
-                                ipv4: n.IPv4address,
-                                ipv6: n.IPv6address,
-                                ipvfuture: n.IPvFuture,
-                            },
+                            versions: { ipv4: n.IPv4address, ipv6: n.IPv6address, ipvfuture: n.IPvFuture },
                         },
                     };
                 (o.Ip.createIpRegex = function (e, t) {
@@ -5325,16 +4999,14 @@ e.exports = (function () {
                     (e.exports = o.Ip);
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(15),
                     i = r(2),
-                    s = {
-                        precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/,
-                    };
+                    s = { precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/ };
                 (s.Number = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5345,12 +5017,7 @@ e.exports = (function () {
                     }
                     return (
                         (t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0,
-                            },
+                            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                         })),
                         e &&
                             (Object.setPrototypeOf
@@ -5363,10 +5030,7 @@ e.exports = (function () {
                                       }
                                   })(t, e)),
                         (t.prototype._base = function (e, t, r) {
-                            var n = {
-                                errors: null,
-                                value: e,
-                            };
+                            var n = { errors: null, value: e };
                             if ("string" == typeof e && r.convert) {
                                 var o = parseFloat(e);
                                 n.value = isNaN(o) || !isFinite(e) ? NaN : o;
@@ -5387,68 +5051,26 @@ e.exports = (function () {
                                 this._test("multiple", e, function (r, n, o) {
                                     var i = t ? e(n.reference || n.parent, o) : e;
                                     return t && ("number" != typeof i || !isFinite(i))
-                                        ? this.createError(
-                                              "number.ref",
-                                              {
-                                                  ref: e.key,
-                                              },
-                                              n,
-                                              o,
-                                          )
+                                        ? this.createError("number.ref", { ref: e.key }, n, o)
                                         : r % i == 0
                                           ? r
-                                          : this.createError(
-                                                "number.multiple",
-                                                {
-                                                    multiple: e,
-                                                    value: r,
-                                                },
-                                                n,
-                                                o,
-                                            );
+                                          : this.createError("number.multiple", { multiple: e, value: r }, n, o);
                                 })
                             );
                         }),
                         (t.prototype.integer = function () {
                             return this._test("integer", void 0, function (e, t, r) {
-                                return i.isInteger(e)
-                                    ? e
-                                    : this.createError(
-                                          "number.integer",
-                                          {
-                                              value: e,
-                                          },
-                                          t,
-                                          r,
-                                      );
+                                return i.isInteger(e) ? e : this.createError("number.integer", { value: e }, t, r);
                             });
                         }),
                         (t.prototype.negative = function () {
                             return this._test("negative", void 0, function (e, t, r) {
-                                return e < 0
-                                    ? e
-                                    : this.createError(
-                                          "number.negative",
-                                          {
-                                              value: e,
-                                          },
-                                          t,
-                                          r,
-                                      );
+                                return e < 0 ? e : this.createError("number.negative", { value: e }, t, r);
                             });
                         }),
                         (t.prototype.positive = function () {
                             return this._test("positive", void 0, function (e, t, r) {
-                                return e > 0
-                                    ? e
-                                    : this.createError(
-                                          "number.positive",
-                                          {
-                                              value: e,
-                                          },
-                                          t,
-                                          r,
-                                      );
+                                return e > 0 ? e : this.createError("number.positive", { value: e }, t, r);
                             });
                         }),
                         (t.prototype.precision = function (e) {
@@ -5458,15 +5080,7 @@ e.exports = (function () {
                                 var o = t.toString().match(s.precisionRx);
                                 return Math.max((o[1] ? o[1].length : 0) - (o[2] ? parseInt(o[2], 10) : 0), 0) <= e
                                     ? t
-                                    : this.createError(
-                                          "number.precision",
-                                          {
-                                              limit: e,
-                                              value: t,
-                                          },
-                                          r,
-                                          n,
-                                      );
+                                    : this.createError("number.precision", { limit: e, value: t }, r, n);
                             });
                             return (t._flags.precision = e), t;
                         }),
@@ -5483,26 +5097,9 @@ e.exports = (function () {
                                     var a = void 0;
                                     if (n) {
                                         if (!("number" == typeof (a = r(i.reference || i.parent, s)) && !isNaN(a)))
-                                            return this.createError(
-                                                "number.ref",
-                                                {
-                                                    ref: r.key,
-                                                },
-                                                i,
-                                                s,
-                                            );
+                                            return this.createError("number.ref", { ref: r.key }, i, s);
                                     } else a = r;
-                                    return t(o, a)
-                                        ? o
-                                        : this.createError(
-                                              "number." + e,
-                                              {
-                                                  limit: a,
-                                                  value: o,
-                                              },
-                                              i,
-                                              s,
-                                          );
+                                    return t(o, a) ? o : this.createError("number." + e, { limit: a, value: o }, i, s);
                                 })
                             );
                         };
@@ -5522,15 +5119,13 @@ e.exports = (function () {
                     (e.exports = new s.Number());
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(2),
-                    i = {
-                        Set: r(18),
-                    };
+                    i = { Set: r(18) };
                 (i.Boolean = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5547,12 +5142,7 @@ e.exports = (function () {
                     }
                     return (
                         (t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0,
-                            },
+                            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                         })),
                         e &&
                             (Object.setPrototypeOf
@@ -5565,9 +5155,7 @@ e.exports = (function () {
                                       }
                                   })(t, e)),
                         (t.prototype._base = function (e, t, r) {
-                            var n = {
-                                value: e,
-                            };
+                            var n = { value: e };
                             return (
                                 (n.value =
                                     !!this._inner.truthySet.has(e, null, null, this._flags.insensitive) ||
@@ -5621,6 +5209,7 @@ e.exports = (function () {
                     (e.exports = new i.Boolean());
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -5642,7 +5231,6 @@ e.exports = (function () {
                 (c.Alternatives = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5653,12 +5241,7 @@ e.exports = (function () {
                     }
                     return (
                         (t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0,
-                            },
+                            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                         })),
                         e &&
                             (Object.setPrototypeOf
@@ -5692,9 +5275,7 @@ e.exports = (function () {
                                 if (!u.errors) return u;
                                 n = n.concat(u.errors);
                             }
-                            return {
-                                errors: n.length ? n : this.createError("alternatives.base", null, t, r),
-                            };
+                            return { errors: n.length ? n : this.createError("alternatives.base", null, t, r) };
                         }),
                         (t.prototype.try = function () {
                             var e = o.flatten(Array.prototype.slice.call(arguments));
@@ -5702,9 +5283,7 @@ e.exports = (function () {
                             for (var t = this.clone(), r = 0; r < e.length; ++r) {
                                 var n = s.schema(e[r]);
                                 n._refs.length && (t._refs = t._refs.concat(n._refs)),
-                                    t._inner.matches.push({
-                                        schema: n,
-                                    });
+                                    t._inner.matches.push({ schema: n });
                             }
                             return t;
                         }),
@@ -5748,10 +5327,7 @@ e.exports = (function () {
                                 var n = this._inner.matches[r];
                                 if (n.schema) t.push(n.schema.describe());
                                 else {
-                                    var o = {
-                                        ref: n.ref.toString(),
-                                        is: n.is.describe(),
-                                    };
+                                    var o = { ref: n.ref.toString(), is: n.is.describe() };
                                     n.then && (o.then = n.then.describe()),
                                         n.otherwise && (o.otherwise = n.otherwise.describe()),
                                         t.push(o);
@@ -5765,6 +5341,7 @@ e.exports = (function () {
                     (e.exports = new c.Alternatives());
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -5788,7 +5365,6 @@ e.exports = (function () {
                 (l.Object = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5806,12 +5382,7 @@ e.exports = (function () {
                     }
                     return (
                         (t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0,
-                            },
+                            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                         })),
                         e &&
                             (Object.setPrototypeOf
@@ -5827,10 +5398,7 @@ e.exports = (function () {
                             var i = e,
                                 s = [],
                                 c = function () {
-                                    return {
-                                        value: i,
-                                        errors: s.length ? s : null,
-                                    };
+                                    return { value: i, errors: s.length ? s : null };
                                 };
                             "string" == typeof e && r.convert && (e = l.safeParse(e));
                             var u = this._flags.func ? "function" : "object";
@@ -5860,10 +5428,7 @@ e.exports = (function () {
                                             (s.push(
                                                 this.createError(
                                                     "object.rename.multiple",
-                                                    {
-                                                        from: g.from,
-                                                        to: g.to,
-                                                    },
+                                                    { from: g.from, to: g.to },
                                                     t,
                                                     r,
                                                 ),
@@ -5875,10 +5440,7 @@ e.exports = (function () {
                                             (s.push(
                                                 this.createError(
                                                     "object.rename.override",
-                                                    {
-                                                        from: g.from,
-                                                        to: g.to,
-                                                    },
+                                                    { from: g.from, to: g.to },
                                                     t,
                                                     r,
                                                 ),
@@ -5916,11 +5478,7 @@ e.exports = (function () {
                                         (s.push(
                                             this.createError(
                                                 "object.child",
-                                                {
-                                                    key: b,
-                                                    child: m.schema._getLabel(b),
-                                                    reason: E.errors,
-                                                },
+                                                { key: b, child: m.schema._getLabel(b), reason: E.errors },
                                                 w,
                                                 r,
                                             ),
@@ -5957,11 +5515,7 @@ e.exports = (function () {
                                                 (s.push(
                                                     this.createError(
                                                         "object.child",
-                                                        {
-                                                            key: O,
-                                                            child: T.rule._getLabel(O),
-                                                            reason: P.errors,
-                                                        },
+                                                        { key: O, child: T.rule._getLabel(O), reason: P.errors },
                                                         k,
                                                         r,
                                                     ),
@@ -5996,13 +5550,8 @@ e.exports = (function () {
                                         s.push(
                                             this.createError(
                                                 "object.allowUnknown",
-                                                {
-                                                    child: L,
-                                                },
-                                                {
-                                                    key: L,
-                                                    path: t.path + (t.path ? "." : "") + L,
-                                                },
+                                                { child: L },
+                                                { key: L, path: t.path + (t.path ? "." : "") + L },
                                                 r,
                                             ),
                                         );
@@ -6015,10 +5564,7 @@ e.exports = (function () {
                                         null !== N.key && i[N.key],
                                         N.peers,
                                         i,
-                                        {
-                                            key: N.key,
-                                            path: (t.path || "") + (N.key ? "." + N.key : ""),
-                                        },
+                                        { key: N.key, path: (t.path || "") + (N.key ? "." + N.key : "") },
                                         r,
                                     );
                                 if (U instanceof a.Err && (s.push(U), r.abortEarly)) break;
@@ -6043,27 +5589,14 @@ e.exports = (function () {
                             if (t._inner.children)
                                 for (var u = 0; u < t._inner.children.length; ++u) {
                                     var l = t._inner.children[u];
-                                    -1 === r.indexOf(l.key) &&
-                                        a.add(l, {
-                                            after: l._refs,
-                                            group: l.key,
-                                        });
+                                    -1 === r.indexOf(l.key) && a.add(l, { after: l._refs, group: l.key });
                                 }
                             for (var f = 0; f < r.length; ++f) {
                                 var p = r[f],
                                     h = e[p];
                                 try {
                                     var d = c.schema(h);
-                                    a.add(
-                                        {
-                                            key: p,
-                                            schema: d,
-                                        },
-                                        {
-                                            after: d._refs,
-                                            group: p,
-                                        },
-                                    );
+                                    a.add({ key: p, schema: d }, { after: d._refs, group: p });
                                 } catch (e) {
                                     throw (e.hasOwnProperty("path") ? (e.path = p + "." + e.path) : (e.path = p), e);
                                 }
@@ -6080,14 +5613,7 @@ e.exports = (function () {
                                 this._test("length", e, function (t, r, n) {
                                     return Object.keys(t).length === e
                                         ? t
-                                        : this.createError(
-                                              "object.length",
-                                              {
-                                                  limit: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                        : this.createError("object.length", { limit: e }, r, n);
                                 })
                             );
                         }),
@@ -6095,16 +5621,7 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e >= 0, "n must be a positive integer"),
                                 this._test("arity", e, function (t, r, n) {
-                                    return t.length === e
-                                        ? t
-                                        : this.createError(
-                                              "function.arity",
-                                              {
-                                                  n: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                    return t.length === e ? t : this.createError("function.arity", { n: e }, r, n);
                                 })
                             );
                         }),
@@ -6112,16 +5629,7 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e > 0, "n must be a strict positive integer"),
                                 this._test("minArity", e, function (t, r, n) {
-                                    return t.length >= e
-                                        ? t
-                                        : this.createError(
-                                              "function.minArity",
-                                              {
-                                                  n: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                    return t.length >= e ? t : this.createError("function.minArity", { n: e }, r, n);
                                 })
                             );
                         }),
@@ -6129,16 +5637,7 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e >= 0, "n must be a positive integer"),
                                 this._test("maxArity", e, function (t, r, n) {
-                                    return t.length <= e
-                                        ? t
-                                        : this.createError(
-                                              "function.maxArity",
-                                              {
-                                                  n: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                    return t.length <= e ? t : this.createError("function.maxArity", { n: e }, r, n);
                                 })
                             );
                         }),
@@ -6148,14 +5647,7 @@ e.exports = (function () {
                                 this._test("min", e, function (t, r, n) {
                                     return Object.keys(t).length >= e
                                         ? t
-                                        : this.createError(
-                                              "object.min",
-                                              {
-                                                  limit: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                        : this.createError("object.min", { limit: e }, r, n);
                                 })
                             );
                         }),
@@ -6165,14 +5657,7 @@ e.exports = (function () {
                                 this._test("max", e, function (t, r, n) {
                                     return Object.keys(t).length <= e
                                         ? t
-                                        : this.createError(
-                                              "object.max",
-                                              {
-                                                  limit: e,
-                                              },
-                                              r,
-                                              n,
-                                          );
+                                        : this.createError("object.max", { limit: e }, r, n);
                                 })
                             );
                         }),
@@ -6186,13 +5671,7 @@ e.exports = (function () {
                                 throw (e.hasOwnProperty("path") && (e.message = e.message + "(" + e.path + ")"), e);
                             }
                             var r = this.clone();
-                            return (
-                                r._inner.patterns.push({
-                                    regex: e,
-                                    rule: t,
-                                }),
-                                r
-                            );
+                            return r._inner.patterns.push({ regex: e, rule: t }), r;
                         }),
                         (t.prototype.schema = function () {
                             return this._test("schema", null, function (e, t, r) {
@@ -6281,14 +5760,7 @@ e.exports = (function () {
                             for (var n = 0; n < r.length; ++n)
                                 o.assert("string" == typeof r[n], e, "peers must be a string or array of strings");
                             var i = this.clone();
-                            return (
-                                i._inner.dependencies.push({
-                                    type: e,
-                                    key: t,
-                                    peers: r,
-                                }),
-                                i
-                            );
+                            return i._inner.dependencies.push({ type: e, key: t, peers: r }), i;
                         }),
                         (t.prototype.describe = function (e) {
                             var t = s.prototype.describe.call(this);
@@ -6299,10 +5771,7 @@ e.exports = (function () {
                                         "object" === n(i.arg) &&
                                         i.arg.schema &&
                                         i.arg.ref &&
-                                        (i.arg = {
-                                            schema: i.arg.schema.describe(),
-                                            ref: i.arg.ref.toString(),
-                                        });
+                                        (i.arg = { schema: i.arg.schema.describe(), ref: i.arg.ref.toString() });
                                 }
                             if (this._inner.children && !e) {
                                 t.children = {};
@@ -6319,10 +5788,7 @@ e.exports = (function () {
                                 t.patterns = [];
                                 for (var u = 0; u < this._inner.patterns.length; ++u) {
                                     var l = this._inner.patterns[u];
-                                    t.patterns.push({
-                                        regex: l.regex.toString(),
-                                        rule: l.rule.describe(),
-                                    });
+                                    t.patterns.push({ regex: l.regex.toString(), rule: l.rule.describe() });
                                 }
                             }
                             return this._inner.renames.length > 0 && (t.renames = o.clone(this._inner.renames)), t;
@@ -6341,48 +5807,21 @@ e.exports = (function () {
                             }
                             var n = e.path[e.path.length - 1],
                                 i = e.path.join(".");
-                            return this._test(
-                                "assert",
-                                {
-                                    schema: t,
-                                    ref: e,
-                                },
-                                function (s, a, c) {
-                                    if (!t._validate(e(s), null, c, s).errors) return s;
-                                    var u = o.merge({}, a);
-                                    return (
-                                        (u.key = n),
-                                        (u.path = i),
-                                        this.createError(
-                                            "object.assert",
-                                            {
-                                                ref: u.path,
-                                                message: r,
-                                            },
-                                            u,
-                                            c,
-                                        )
-                                    );
-                                },
-                            );
+                            return this._test("assert", { schema: t, ref: e }, function (s, a, c) {
+                                if (!t._validate(e(s), null, c, s).errors) return s;
+                                var u = o.merge({}, a);
+                                return (
+                                    (u.key = n),
+                                    (u.path = i),
+                                    this.createError("object.assert", { ref: u.path, message: r }, u, c)
+                                );
+                            });
                         }),
                         (t.prototype.type = function (e, t) {
                             o.assert("function" == typeof e, "type must be a constructor function");
-                            var r = {
-                                name: t || e.name,
-                                ctor: e,
-                            };
+                            var r = { name: t || e.name, ctor: e };
                             return this._test("type", r, function (t, n, o) {
-                                return t instanceof e
-                                    ? t
-                                    : this.createError(
-                                          "object.type",
-                                          {
-                                              type: r.name,
-                                          },
-                                          n,
-                                          o,
-                                      );
+                                return t instanceof e ? t : this.createError("object.type", { type: r.name }, n, o);
                             });
                         }),
                         (t.prototype.ref = function () {
@@ -6399,11 +5838,7 @@ e.exports = (function () {
                         } catch (e) {}
                         return e;
                     }),
-                    (l.renameDefaults = {
-                        alias: !1,
-                        multiple: !1,
-                        override: !1,
-                    }),
+                    (l.renameDefaults = { alias: !1, multiple: !1, override: !1 }),
                     (l.groupChildren = function (e) {
                         e.sort();
                         for (var t = {}, r = 0; r < e.length; ++r) {
@@ -6419,14 +5854,7 @@ e.exports = (function () {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (!Object.prototype.hasOwnProperty.call(r, s) || void 0 === r[s])
-                                return this.createError(
-                                    "object.with",
-                                    {
-                                        peer: s,
-                                    },
-                                    n,
-                                    o,
-                                );
+                                return this.createError("object.with", { peer: s }, n, o);
                         }
                         return e;
                     }),
@@ -6435,14 +5863,7 @@ e.exports = (function () {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (Object.prototype.hasOwnProperty.call(r, s) && void 0 !== r[s])
-                                return this.createError(
-                                    "object.without",
-                                    {
-                                        peer: s,
-                                    },
-                                    n,
-                                    o,
-                                );
+                                return this.createError("object.without", { peer: s }, n, o);
                         }
                         return e;
                     }),
@@ -6454,36 +5875,15 @@ e.exports = (function () {
                         return 1 === i.length
                             ? e
                             : 0 === i.length
-                              ? this.createError(
-                                    "object.missing",
-                                    {
-                                        peers: t,
-                                    },
-                                    n,
-                                    o,
-                                )
-                              : this.createError(
-                                    "object.xor",
-                                    {
-                                        peers: t,
-                                    },
-                                    n,
-                                    o,
-                                );
+                              ? this.createError("object.missing", { peers: t }, n, o)
+                              : this.createError("object.xor", { peers: t }, n, o);
                     }),
                     (l.or = function (e, t, r, n, o) {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (Object.prototype.hasOwnProperty.call(r, s) && void 0 !== r[s]) return e;
                         }
-                        return this.createError(
-                            "object.missing",
-                            {
-                                peers: t,
-                            },
-                            n,
-                            o,
-                        );
+                        return this.createError("object.missing", { peers: t }, n, o);
                     }),
                     (l.and = function (e, t, r, n, o) {
                         for (var i = [], s = [], a = t.length, c = 0; c < a; ++c) {
@@ -6492,15 +5892,7 @@ e.exports = (function () {
                         }
                         return i.length === a || s.length === a
                             ? null
-                            : this.createError(
-                                  "object.and",
-                                  {
-                                      present: s,
-                                      missing: i,
-                                  },
-                                  n,
-                                  o,
-                              );
+                            : this.createError("object.and", { present: s, missing: i }, n, o);
                     }),
                     (l.nand = function (e, t, r, n, i) {
                         for (var s = [], a = 0; a < t.length; ++a) {
@@ -6510,20 +5902,13 @@ e.exports = (function () {
                         var u = o.clone(t),
                             l = u.splice(0, 1)[0];
                         return s.length === t.length
-                            ? this.createError(
-                                  "object.nand",
-                                  {
-                                      main: l,
-                                      peers: u,
-                                  },
-                                  n,
-                                  i,
-                              )
+                            ? this.createError("object.nand", { main: l, peers: u }, n, i)
                             : null;
                     }),
                     (e.exports = new l.Object());
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(2),
                     o = {};
                 (e.exports = o.Topo =
@@ -6541,14 +5926,7 @@ e.exports = (function () {
                             n.assert(-1 === i.indexOf(s), "Item cannot come after itself:", s),
                             n.assert(-1 === i.indexOf("?"), "Item cannot come after unassociated items"),
                             [].concat(e).forEach(function (e, t) {
-                                var n = {
-                                    seq: r._items.length,
-                                    sort: a,
-                                    before: o,
-                                    after: i,
-                                    group: s,
-                                    node: e,
-                                };
+                                var n = { seq: r._items.length, sort: a, before: o, after: i, group: s, node: e };
                                 r._items.push(n);
                             });
                         var c = this._sort();
@@ -6647,6 +6025,7 @@ e.exports = (function () {
                     });
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(1);
                 t.options = n
                     .object({
@@ -6656,12 +6035,7 @@ e.exports = (function () {
                         skipFunctions: n.boolean(),
                         stripUnknown: [
                             n.boolean(),
-                            n
-                                .object({
-                                    arrays: n.boolean(),
-                                    objects: n.boolean(),
-                                })
-                                .or("arrays", "objects"),
+                            n.object({ arrays: n.boolean(), objects: n.boolean() }).or("arrays", "objects"),
                         ],
                         language: n.object(),
                         presence: n.string().only("required", "optional", "forbidden", "ignore"),
@@ -6673,13 +6047,13 @@ e.exports = (function () {
                     .strict();
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(2),
                     i = {};
                 (i.Lazy = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -6690,12 +6064,7 @@ e.exports = (function () {
                     }
                     return (
                         (t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0,
-                            },
+                            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                         })),
                         e &&
                             (Object.setPrototypeOf
@@ -6708,9 +6077,7 @@ e.exports = (function () {
                                       }
                                   })(t, e)),
                         (t.prototype._base = function (e, t, r) {
-                            var o = {
-                                    value: e,
-                                },
+                            var o = { value: e },
                                 i = this._flags.lazy;
                             if (!i) return (o.errors = this.createError("lazy.base", null, t, r)), o;
                             var s = i();
@@ -6729,6 +6096,7 @@ e.exports = (function () {
                     (e.exports = new i.Lazy());
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -6753,7 +6121,6 @@ e.exports = (function () {
                     (a.Array = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -6774,12 +6141,7 @@ e.exports = (function () {
                         }
                         return (
                             (t.prototype = Object.create(e && e.prototype, {
-                                constructor: {
-                                    value: t,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0,
-                                },
+                                constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                             })),
                             e &&
                                 (Object.setPrototypeOf
@@ -6792,9 +6154,7 @@ e.exports = (function () {
                                           }
                                       })(t, e)),
                             (t.prototype._base = function (e, t, r) {
-                                var n = {
-                                    value: e,
-                                };
+                                var n = { value: e };
                                 "string" == typeof e && r.convert && a.safeParse(e, n);
                                 var o = Array.isArray(n.value),
                                     i = o;
@@ -6845,11 +6205,7 @@ e.exports = (function () {
                                                 this.createError(
                                                     "array.sparse",
                                                     null,
-                                                    {
-                                                        key: r.key,
-                                                        path: d.path,
-                                                        pos: f,
-                                                    },
+                                                    { key: r.key, path: d.path, pos: f },
                                                     n,
                                                 ),
                                             ),
@@ -6864,14 +6220,8 @@ e.exports = (function () {
                                                 (o.push(
                                                     this.createError(
                                                         t ? "array.excludes" : "array.excludesSingle",
-                                                        {
-                                                            pos: f,
-                                                            value: p,
-                                                        },
-                                                        {
-                                                            key: r.key,
-                                                            path: d.path,
-                                                        },
+                                                        { pos: f, value: p },
+                                                        { key: r.key, path: d.path },
                                                         n,
                                                     ),
                                                 ),
@@ -6890,15 +6240,8 @@ e.exports = (function () {
                                                         (o.push(
                                                             this.createError(
                                                                 "array.ordered",
-                                                                {
-                                                                    pos: f,
-                                                                    reason: g.errors,
-                                                                    value: p,
-                                                                },
-                                                                {
-                                                                    key: r.key,
-                                                                    path: d.path,
-                                                                },
+                                                                { pos: f, reason: g.errors, value: p },
+                                                                { key: r.key, path: d.path },
                                                                 n,
                                                             ),
                                                         ),
@@ -6912,11 +6255,7 @@ e.exports = (function () {
                                                         this.createError(
                                                             "array.sparse",
                                                             null,
-                                                            {
-                                                                key: r.key,
-                                                                path: d.path,
-                                                                pos: f,
-                                                            },
+                                                            { key: r.key, path: d.path, pos: f },
                                                             n,
                                                         ),
                                                     ),
@@ -6929,14 +6268,8 @@ e.exports = (function () {
                                                     (o.push(
                                                         this.createError(
                                                             "array.orderedLength",
-                                                            {
-                                                                pos: f,
-                                                                limit: this._inner.ordereds.length,
-                                                            },
-                                                            {
-                                                                key: r.key,
-                                                                path: d.path,
-                                                            },
+                                                            { pos: f, limit: this._inner.ordereds.length },
+                                                            { key: r.key, path: d.path },
                                                             n,
                                                         ),
                                                     ),
@@ -6960,11 +6293,7 @@ e.exports = (function () {
                                                             this.createError(
                                                                 "array.sparse",
                                                                 null,
-                                                                {
-                                                                    key: r.key,
-                                                                    path: d.path,
-                                                                    pos: f,
-                                                                },
+                                                                { key: r.key, path: d.path, pos: f },
                                                                 n,
                                                             ),
                                                         ),
@@ -6990,11 +6319,7 @@ e.exports = (function () {
                                                                 this.createError(
                                                                     "array.sparse",
                                                                     null,
-                                                                    {
-                                                                        key: r.key,
-                                                                        path: d.path,
-                                                                        pos: f,
-                                                                    },
+                                                                    { key: r.key, path: d.path, pos: f },
                                                                     n,
                                                                 ),
                                                             ),
@@ -7011,15 +6336,8 @@ e.exports = (function () {
                                                         (o.push(
                                                             this.createError(
                                                                 t ? "array.includesOne" : "array.includesOneSingle",
-                                                                {
-                                                                    pos: f,
-                                                                    reason: g.errors,
-                                                                    value: p,
-                                                                },
-                                                                {
-                                                                    key: r.key,
-                                                                    path: d.path,
-                                                                },
+                                                                { pos: f, reason: g.errors, value: p },
+                                                                { key: r.key, path: d.path },
                                                                 n,
                                                             ),
                                                         ),
@@ -7039,14 +6357,8 @@ e.exports = (function () {
                                                     (o.push(
                                                         this.createError(
                                                             t ? "array.includes" : "array.includesSingle",
-                                                            {
-                                                                pos: f,
-                                                                value: p,
-                                                            },
-                                                            {
-                                                                key: r.key,
-                                                                path: d.path,
-                                                            },
+                                                            { pos: f, value: p },
+                                                            { key: r.key, path: d.path },
                                                             n,
                                                         ),
                                                     ),
@@ -7124,15 +6436,7 @@ e.exports = (function () {
                                     this._test("min", e, function (t, r, n) {
                                         return t.length >= e
                                             ? t
-                                            : this.createError(
-                                                  "array.min",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("array.min", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7142,15 +6446,7 @@ e.exports = (function () {
                                     this._test("max", e, function (t, r, n) {
                                         return t.length <= e
                                             ? t
-                                            : this.createError(
-                                                  "array.max",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("array.max", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7160,15 +6456,7 @@ e.exports = (function () {
                                     this._test("length", e, function (t, r, n) {
                                         return t.length === e
                                             ? t
-                                            : this.createError(
-                                                  "array.length",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("array.length", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7201,10 +6489,7 @@ e.exports = (function () {
                                                         if (e(l[f], c))
                                                             return this.createError(
                                                                 "array.unique",
-                                                                {
-                                                                    pos: a,
-                                                                    value: c,
-                                                                },
+                                                                { pos: a, value: c },
                                                                 o,
                                                                 i,
                                                             );
@@ -7213,10 +6498,7 @@ e.exports = (function () {
                                                     if (l[c])
                                                         return this.createError(
                                                             "array.unique",
-                                                            {
-                                                                pos: a,
-                                                                value: c,
-                                                            },
+                                                            { pos: a, value: c },
                                                             o,
                                                             i,
                                                         );
@@ -7245,40 +6527,24 @@ e.exports = (function () {
                                         ? e.push(
                                               this.createError(
                                                   "array.includesRequiredBoth",
-                                                  {
-                                                      knownMisses: o,
-                                                      unknownMisses: i,
-                                                  },
-                                                  {
-                                                      key: r.key,
-                                                      path: r.path,
-                                                  },
+                                                  { knownMisses: o, unknownMisses: i },
+                                                  { key: r.key, path: r.path },
                                                   n,
                                               ),
                                           )
                                         : e.push(
                                               this.createError(
                                                   "array.includesRequiredKnowns",
-                                                  {
-                                                      knownMisses: o,
-                                                  },
-                                                  {
-                                                      key: r.key,
-                                                      path: r.path,
-                                                  },
+                                                  { knownMisses: o },
+                                                  { key: r.key, path: r.path },
                                                   n,
                                               ),
                                           )
                                     : e.push(
                                           this.createError(
                                               "array.includesRequiredUnknowns",
-                                              {
-                                                  unknownMisses: i,
-                                              },
-                                              {
-                                                  key: r.key,
-                                                  path: r.path,
-                                              },
+                                              { unknownMisses: i },
+                                              { key: r.key, path: r.path },
                                               n,
                                           ),
                                       );
@@ -7301,13 +6567,13 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n = r(14),
                         o = r(2),
                         i = {};
                     (i.Binary = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-
                         function r() {
                             if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
                             var t = (function (e, t) {
@@ -7319,12 +6585,7 @@ e.exports = (function () {
                         }
                         return (
                             (r.prototype = Object.create(e && e.prototype, {
-                                constructor: {
-                                    value: r,
-                                    enumerable: !1,
-                                    writable: !0,
-                                    configurable: !0,
-                                },
+                                constructor: { value: r, enumerable: !1, writable: !0, configurable: !0 },
                             })),
                             e &&
                                 (Object.setPrototypeOf
@@ -7337,9 +6598,7 @@ e.exports = (function () {
                                           }
                                       })(r, e)),
                             (r.prototype._base = function (e, r, n) {
-                                var o = {
-                                    value: e,
-                                };
+                                var o = { value: e };
                                 if ("string" == typeof e && n.convert)
                                     try {
                                         o.value = new t(e, this._flags.encoding);
@@ -7362,15 +6621,7 @@ e.exports = (function () {
                                     this._test("min", e, function (t, r, n) {
                                         return t.length >= e
                                             ? t
-                                            : this.createError(
-                                                  "binary.min",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("binary.min", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7380,15 +6631,7 @@ e.exports = (function () {
                                     this._test("max", e, function (t, r, n) {
                                         return t.length <= e
                                             ? t
-                                            : this.createError(
-                                                  "binary.max",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("binary.max", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7398,15 +6641,7 @@ e.exports = (function () {
                                     this._test("length", e, function (t, r, n) {
                                         return t.length === e
                                             ? t
-                                            : this.createError(
-                                                  "binary.length",
-                                                  {
-                                                      limit: e,
-                                                      value: t,
-                                                  },
-                                                  r,
-                                                  n,
-                                              );
+                                            : this.createError("binary.length", { limit: e, value: t }, r, n);
                                     })
                                 );
                             }),
@@ -7441,10 +6676,7 @@ e.exports = (function () {
                         host: "packages-12-west.internal.npmjs.com",
                         tmp: "tmp/joi-10.0.5.tgz_1480956525182_0.0934728232678026",
                     },
-                    _npmUser: {
-                        name: "marsup",
-                        email: "nicolas@morel.io",
-                    },
+                    _npmUser: { name: "marsup", email: "nicolas@morel.io" },
                     _npmVersion: "3.10.10",
                     _phantomChildren: {},
                     _requested: {
@@ -7462,51 +6694,29 @@ e.exports = (function () {
                     _shrinkwrap: null,
                     _spec: "joi@10.0.5",
                     _where: "/Users/jeff/projects/joi-browser",
-                    bugs: {
-                        url: "https://github.com/hapijs/joi/issues",
-                    },
-                    dependencies: {
-                        hoek: "4.x.x",
-                        isemail: "2.x.x",
-                        items: "2.x.x",
-                        topo: "2.x.x",
-                    },
+                    bugs: { url: "https://github.com/hapijs/joi/issues" },
+                    dependencies: { hoek: "4.x.x", isemail: "2.x.x", items: "2.x.x", topo: "2.x.x" },
                     description: "Object schema validation",
-                    devDependencies: {
-                        code: "4.x.x",
-                        lab: "11.x.x",
-                        "markdown-toc": "0.13.x",
-                    },
+                    devDependencies: { code: "4.x.x", lab: "11.x.x", "markdown-toc": "0.13.x" },
                     directories: {},
                     dist: {
                         shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a",
                         tarball: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz",
                     },
-                    engines: {
-                        node: ">=4.0.0",
-                    },
+                    engines: { node: ">=4.0.0" },
                     gitHead: "abfe727885af779a676e6a205ee15cdc8b435691",
                     homepage: "https://github.com/hapijs/joi",
                     keywords: ["hapi", "schema", "validation"],
                     license: "BSD-3-Clause",
                     main: "lib/index.js",
                     maintainers: [
-                        {
-                            name: "hueniverse",
-                            email: "eran@hueniverse.com",
-                        },
-                        {
-                            name: "marsup",
-                            email: "marsup@gmail.com",
-                        },
+                        { name: "hueniverse", email: "eran@hueniverse.com" },
+                        { name: "marsup", email: "marsup@gmail.com" },
                     ],
                     name: "joi",
                     optionalDependencies: {},
                     readme: "ERROR: No README data found!",
-                    repository: {
-                        type: "git",
-                        url: "git://github.com/hapijs/joi.git",
-                    },
+                    repository: { type: "git", url: "git://github.com/hapijs/joi.git" },
                     scripts: {
                         test: "lab -t 100 -a code -L",
                         "test-cov-html": "lab -r html -o coverage.html -a code",
@@ -7519,14 +6729,9 @@ e.exports = (function () {
             },
         ],
         t = {};
-
     function r(n) {
         if (t[n]) return t[n].exports;
-        var o = (t[n] = {
-            exports: {},
-            id: n,
-            loaded: !1,
-        });
+        var o = (t[n] = { exports: {}, id: n, loaded: !1 });
         return e[n].call(o.exports, o, o.exports, r), (o.loaded = !0), o.exports;
     }
     return (r.m = e), (r.c = t), (r.p = ""), r(0);

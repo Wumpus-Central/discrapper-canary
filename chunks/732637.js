@@ -1,76 +1,64 @@
-n.d(t, {
-    A: () => h,
-});
-var l = n(627968),
-    r = n(64700),
-    i = n(311907),
-    a = n(73153),
-    s = n(31728),
+n.d(t, { A: () => f });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
+    s = n(73153),
+    r = n(31728),
     o = n(869146),
     c = n(203982),
-    u = n(933958),
-    d = n(969151),
-    f = n(108959),
-    p = n(902439),
-    b = n(5867),
-    g = n(652215);
-let m = (e, t) => {
-    a.h.wait(() => {
-        (0, s.I_)(e, t);
+    d = n(933958),
+    u = n(969151),
+    h = n(108959),
+    m = n(902439),
+    A = n(5867),
+    p = n(652215);
+let g = (e, t) => {
+    s.h.wait(() => {
+        (0, r.I_)(e, t);
     });
 };
-
-function h(e) {
+function f(e) {
     let t,
-        { embedId: n, className: a, style: s } = e,
-        h = (0, i.bG)([o.A], () => o.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
-        A = (0, p.A)(),
-        y = (0, i.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
-    if (null == A || (0, f.A)((0, d.H)(A.location)) || y !== b.Gd.PANEL) {
-        var _;
-        t = null != (_ = null == h ? void 0 : h.window) ? _ : window;
-    } else t = window;
-    let E = r.useRef(null),
-        v = r.useMemo(() => {
+        { embedId: n, className: s, style: r } = e,
+        f = (0, a.bG)([o.A], () => o.A.getWindow(p.MLl.CHANNEL_CALL_POPOUT)),
+        _ = (0, m.A)(),
+        E = (0, a.bG)([d.Ay], () => d.Ay.getActivityPanelMode());
+    t = null == _ || (0, h.A)((0, u.H)(_.location)) || E !== A.Gd.PANEL ? (f?.window ?? window) : window;
+    let C = l.useRef(null),
+        x = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        var t, l;
-                        m(n, null != (t = null == (l = E.current) ? void 0 : l.getBoundingClientRect()) ? t : null),
-                            (e = null);
+                        g(n, C.current?.getBoundingClientRect() ?? null), (e = null);
                     }));
             };
         }, [n, t]);
     return (
-        r.useEffect(
+        l.useEffect(
             () => (
-                t.addEventListener("resize", v),
-                c._.subscribe(g.jej.REMEASURE_TARGET, v),
+                t.addEventListener("resize", x),
+                c._.subscribe(p.jej.REMEASURE_TARGET, x),
                 () => {
-                    t.removeEventListener("resize", v), c._.unsubscribe(g.jej.REMEASURE_TARGET, v);
+                    t.removeEventListener("resize", x), c._.unsubscribe(p.jej.REMEASURE_TARGET, x);
                 }
             ),
-            [v, t],
+            [x, t],
         ),
-        r.useLayoutEffect(() => {
-            let e = E.current;
+        l.useLayoutEffect(() => {
+            let e = C.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            v();
-            let l = new t.ResizeObserver(v);
+            x();
+            let i = new t.ResizeObserver(x);
             return (
-                l.observe(e),
+                i.observe(e),
                 () => {
-                    l.disconnect(), m(n, null);
+                    i.disconnect(), g(n, null);
                 }
             );
-        }, [n, v]),
-        (0, l.jsx)("div", {
-            ref: E,
-            style: s,
-            className: a,
-        })
+        }, [n, x]),
+        (0, i.jsx)("div", { ref: C, style: r, className: s })
     );
 }

@@ -1,235 +1,140 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
-var r = n(627968);
+n.d(t, { A: () => g }), n(323874), n(14289), n(35956);
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(851907),
-    a = n(587895),
+var r = n(397927),
+    a = n(851907),
+    l = n(587895),
     s = n(200330),
     o = n(321987),
-    c = n(595244),
-    u = n(723702),
-    d = n(837921),
-    p = n(636401),
-    f = n(990007),
-    h = n(546983),
-    A = n(652215),
-    g = n(985018);
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = (0, f.A)(
+    d = n(595244),
+    c = n(723702),
+    u = n(837921),
+    A = n(636401),
+    h = n(990007),
+    _ = n(546983),
+    m = n(652215),
+    p = n(985018);
+let g = (0, h.A)(
     (e) => {
-        var t;
         let {
-                clientId: n,
-                authorizations: u,
-                scopes: d,
-                parsedPermissions: f,
-                responseType: _,
-                redirectUri: E,
-                codeChallenge: O,
-                codeChallengeMethod: y,
+                clientId: t,
+                authorizations: n,
+                scopes: c,
+                parsedPermissions: u,
+                responseType: h,
+                redirectUri: g,
+                codeChallenge: E,
+                codeChallengeMethod: f,
                 state: I,
-                guildId: v,
-                channelId: S,
-                prompt: C,
-                disableGuildSelect: N,
-                disclosures: T,
-                integrationType: j,
-                pid: x,
-                signal: P,
+                guildId: C,
+                channelId: N,
+                prompt: T,
+                disableGuildSelect: S,
+                disclosures: x,
+                integrationType: v,
+                pid: b,
+                signal: y,
             } = e,
-            w = "OAuth2Authorize_".concat(n, "_").concat(v, "_").concat(S),
-            L = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
-            R = null != (t = null == L ? void 0 : L.application) ? t : a.A.getApplication(n);
-        return new Promise((e, t) => {
-            let a = (0, h.d5)(x),
-                L = i.SYi;
-            null != R &&
-            null !=
-                (0, l.Ay)({
-                    application: R,
-                    channelId: S,
-                })
-                ? (L = i.KX8)
-                : a.context === A.BRT.POPOUT && (L = i.KX8);
-            let D = !1,
-                M = (l) => {
-                    let { clientId: s, location: o } = l;
-                    if (null == s || s === n) {
-                        if (((D = !0), null == o)) {
-                            t(
-                                new p.A(
-                                    {
-                                        errorCode: A.Lw6.OAUTH2_ERROR,
-                                    },
-                                    "OAuth2 Error: No location provided",
-                                ),
-                            ),
-                                a.lock();
+            L = `OAuth2Authorize_${t}_${C}_${N}`,
+            O = null != v ? n?.get(v) : void 0,
+            R = O?.application ?? l.A.getApplication(t);
+        return new Promise((e, l) => {
+            let O = (0, _.d5)(b),
+                P = r.SYi;
+            null != R && null != (0, a.Ay)({ application: R, channelId: N })
+                ? (P = r.KX8)
+                : O.context === m.BRT.POPOUT && (P = r.KX8);
+            let j = !1,
+                D = (n) => {
+                    let { clientId: a, location: s } = n;
+                    if (null == a || a === t) {
+                        if (((j = !0), null == s)) {
+                            l(new A.A({ errorCode: m.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                                O.lock();
                             return;
                         }
-                        (e(o), null == E || null == R)
-                            ? a.lock()
-                            : null == new URL(o).searchParams.get("error")
-                              ? (0, i.qfG)(
-                                    (e) =>
-                                        (0, r.jsx)(
-                                            c.Sm,
-                                            m(
-                                                {
-                                                    application: R,
-                                                },
-                                                e,
-                                            ),
-                                        ),
+                        (e(s), null == g || null == R)
+                            ? O.lock()
+                            : null == new URL(s).searchParams.get("error")
+                              ? (0, r.qfG)(
+                                    (e) => (0, i.jsx)(d.Sm, { application: R, ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            a.lock();
+                                            O.lock();
                                         },
                                     },
-                                    L,
+                                    P,
                                 )
-                              : (0, i.qfG)(
-                                    (e) => (0, r.jsx)(c.xb, m({}, e)),
+                              : (0, r.qfG)(
+                                    (e) => (0, i.jsx)(d.xb, { ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            a.lock();
+                                            O.lock();
                                         },
                                     },
-                                    L,
+                                    P,
                                 );
                     }
                 },
-                { cleanup: k } = (function (e, t) {
+                { cleanup: w } = (function (e, t) {
                     function n() {
-                        (0, i.OoC)(e) &&
-                            (0, i.qfG)((e) =>
-                                (0, r.jsx)(
-                                    o.f,
-                                    b(m({}, e), {
-                                        title: g.intl.string(g.t.j2d6Km),
-                                        subtitle: g.intl.string(g.t["4LKmN5"]),
-                                        actions: [
-                                            {
-                                                text: g.intl.string(g.t.cpT0Cq),
-                                                onClick: e.onClose,
-                                            },
-                                        ],
-                                    }),
-                                ),
+                        (0, r.OoC)(e) &&
+                            (0, r.qfG)((e) =>
+                                (0, i.jsx)(o.f, {
+                                    ...e,
+                                    title: p.intl.string(p.t.j2d6Km),
+                                    subtitle: p.intl.string(p.t["4LKmN5"]),
+                                    actions: [{ text: p.intl.string(p.t.cpT0Cq), onClick: e.onClose }],
+                                }),
                             );
                     }
                     return (
-                        null == t || t.addEventListener("abort", n),
+                        t?.addEventListener("abort", n),
                         {
                             cleanup: function () {
-                                null == t || t.removeEventListener("abort", n);
+                                t?.removeEventListener("abort", n);
                             },
                         }
                     );
-                })(w, P);
-            (0, i.qfG)(
+                })(L, y);
+            (0, r.qfG)(
                 (e) =>
-                    (0, r.jsx)(
-                        s.OAuth2AuthorizeModal,
-                        b(m({}, e), {
-                            authorizations: u,
-                            clientId: n,
-                            scopes: null != d ? d : [],
-                            disclosures: null != T ? T : [],
-                            callback: M,
-                            responseType: _,
-                            redirectUri: E,
-                            codeChallenge: O,
-                            codeChallengeMethod: y,
-                            state: I,
-                            permissions: f,
-                            guildId: v,
-                            channelId: S,
-                            prompt: C,
-                            disableGuildSelect: "boolean" == typeof N ? N : "true" === N,
-                            integrationType: j,
-                            cancelCompletesFlow: !0,
-                        }),
-                    ),
+                    (0, i.jsx)(s.OAuth2AuthorizeModal, {
+                        ...e,
+                        authorizations: n,
+                        clientId: t,
+                        scopes: c ?? [],
+                        disclosures: x ?? [],
+                        callback: D,
+                        responseType: h,
+                        redirectUri: g,
+                        codeChallenge: E,
+                        codeChallengeMethod: f,
+                        state: I,
+                        permissions: u,
+                        guildId: C,
+                        channelId: N,
+                        prompt: T,
+                        disableGuildSelect: "boolean" == typeof S ? S : "true" === S,
+                        integrationType: v,
+                        cancelCompletesFlow: !0,
+                    }),
                 {
-                    modalKey: w,
+                    modalKey: L,
                     onCloseCallback: () => {
-                        k(),
-                            D ||
-                                (t(
-                                    new p.A(
-                                        {
-                                            errorCode: A.Lw6.OAUTH2_ERROR,
-                                        },
-                                        "User cancelled authorization",
-                                    ),
-                                ),
-                                a.lock());
+                        w(),
+                            j ||
+                                (l(new A.A({ errorCode: m.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
+                                O.lock());
                     },
                 },
-                L,
+                P,
             );
         });
     },
     function (e, t, n) {
-        if ((0, h.kS)(n) || !u.isPlatformEmbedded) return;
-        let r = (0, l.Ay)({
-            application: e,
-            channelId: t,
-        });
-        (0, u.isWindows)() ? d.Ay.minimize(r) : d.Ay.restore(r), d.Ay.focus(r);
+        if ((0, _.kS)(n) || !c.isPlatformEmbedded) return;
+        let i = (0, a.Ay)({ application: e, channelId: t });
+        (0, c.isWindows)() ? u.Ay.minimize(i) : u.Ay.restore(i), u.Ay.focus(i);
     },
 );

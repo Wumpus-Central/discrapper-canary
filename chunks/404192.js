@@ -1,54 +1,43 @@
-n.d(t, {
-    A: () => m,
-});
+n.d(t, { A: () => m });
 var l = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    i = n(397927),
+var a = n(503698),
+    i = n.n(a),
+    r = n(397927),
     s = n(975807),
-    o = n(985018),
-    c = n(212335),
-    d = n(606566);
-let u = (e) => {
+    d = n(985018),
+    o = n(212335),
+    u = n(606566);
+let c = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: r, is_localized: o },
+        data: { url: t, link_text: n, link_description: a, is_localized: d },
     } = e;
-    return o
-        ? (0, l.jsxs)(i.DUT, {
+    return d
+        ? (0, l.jsxs)(r.DUT, {
               role: "link",
-              className: a()(d.$J, c.lD),
+              className: i()(u.$J, o.lD),
               onClick: () => {
                   (0, s.A)(t);
               },
               children: [
                   (0, l.jsxs)("div", {
-                      className: d.xU,
+                      className: u.xU,
                       children: [
-                          (0, l.jsx)(i.Text, {
-                              className: d.__invalid_linkText,
+                          (0, l.jsx)(r.Text, {
+                              className: u.__invalid_linkText,
                               variant: "text-md/semibold",
                               children: n,
                           }),
-                          null != r &&
-                              "" !== r &&
-                              (0, l.jsx)(i.Text, {
-                                  variant: "text-md/normal",
-                                  color: "text-muted",
-                                  children: r,
-                              }),
+                          null != a &&
+                              "" !== a &&
+                              (0, l.jsx)(r.Text, { variant: "text-md/normal", color: "text-muted", children: a }),
                       ],
                   }),
-                  (0, l.jsx)(i.I9m, {
-                      size: "sm",
-                      color: "currentColor",
-                      className: d.wP,
-                  }),
+                  (0, l.jsx)(r.I9m, { size: "sm", color: "currentColor", className: u.wP }),
               ],
           })
         : null;
 };
-
 function m(e) {
     let { elements: t } = e;
     if (
@@ -63,27 +52,21 @@ function m(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, l.jsx)(
-                u,
-                {
-                    data: n,
-                },
-                "external-link+".concat(t),
-            );
+            return (0, l.jsx)(c, { data: n }, `external-link+${t}`);
         }),
-        r = t.some((e) => {
+        a = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
     return (0, l.jsxs)("div", {
-        className: a()(d.nV, c.E8),
+        className: i()(u.nV, o.E8),
         children: [
-            !r &&
-                (0, l.jsx)(i.Heading, {
+            !a &&
+                (0, l.jsx)(r.Heading, {
                     variant: "heading-sm/semibold",
                     color: "text-default",
-                    className: d.wx,
-                    children: o.intl.string(o.t.hvVgAZ),
+                    className: u.wx,
+                    children: d.intl.string(d.t.hvVgAZ),
                 }),
             n,
         ],

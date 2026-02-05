@@ -1,155 +1,82 @@
-n.d(t, {
-    default: () => h,
-});
-var r = n(627968),
+n.d(t, { default: () => A });
+var i = n(627968),
     l = n(64700),
-    i = n(314116),
-    s = n(397927),
-    a = n(442433),
+    s = n(314116),
+    a = n(397927),
+    r = n(442433),
     o = n(50268),
-    c = n(928658),
-    u = n(208882),
-    d = n(352123),
-    p = n(985018);
-
-function h(e) {
-    let { entry: t, onSelect: h, closePopout: f, hideEditButton: g = !1 } = e,
-        { isEntryAdmin: m, canEdit: b, canRemove: A } = (0, d.A)(t),
-        y = (0, o.A)({
-            id: t.guildId,
-            label: p.intl.string(p.t["94lLD7"]),
-            onSuccess: f,
-        });
+    d = n(928658),
+    c = n(208882),
+    u = n(352123),
+    h = n(985018);
+function A(e) {
+    let { entry: t, onSelect: A, closePopout: g, hideEditButton: m = !1 } = e,
+        { isEntryAdmin: p, canEdit: _, canRemove: x } = (0, u.A)(t),
+        f = (0, o.A)({ id: t.guildId, label: h.intl.string(h.t["94lLD7"]), onSuccess: g });
     l.useEffect(() => {
-        b || A || null != y || (0, a.Z_)();
+        _ || x || null != f || (0, r.Z_)();
     });
-    let _ = () => {
-        u.ZM(t.channelId, t.guildId);
+    let E = () => {
+        c.ZM(t.channelId, t.guildId);
     };
-
-    function O() {
-        (0, a.Z_)(), null == f || f();
+    function C() {
+        (0, r.Z_)(), g?.();
     }
-    return (0, r.jsxs)(s.W1t, {
+    return (0, i.jsxs)(a.W1t, {
         "data-menu-migrated": !0,
         navId: "guild-entry-context",
-        onClose: O,
-        "aria-label": p.intl.string(p.t.HpQykc),
-        onSelect: h,
+        onClose: C,
+        "aria-label": h.intl.string(h.t.HpQykc),
+        onSelect: A,
         children: [
-            (0, r.jsxs)(s.rXV, {
+            (0, i.jsxs)(a.rXV, {
                 children: [
-                    b && !g
-                        ? (0, r.jsx)(s.Drp, {
+                    _ && !m
+                        ? (0, i.jsx)(a.Drp, {
                               id: "update-entry",
-                              label: p.intl.string(p.t.XnuOvN),
+                              label: h.intl.string(h.t.XnuOvN),
                               action: function () {
-                                  (0, s.mMO)(async () => {
+                                  (0, a.mMO)(async () => {
                                       let { default: e } = await n.e("88869").then(n.bind(n, 201700));
-                                      return (n) => {
-                                          var l, i;
-                                          return (0, r.jsx)(
-                                              e,
-                                              ((l = (function (e) {
-                                                  for (var t = 1; t < arguments.length; t++) {
-                                                      var n = null != arguments[t] ? arguments[t] : {},
-                                                          r = Object.keys(n);
-                                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                                          (r = r.concat(
-                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                  return Object.getOwnPropertyDescriptor(n, e)
-                                                                      .enumerable;
-                                                              }),
-                                                          )),
-                                                          r.forEach(function (t) {
-                                                              var r;
-                                                              (r = n[t]),
-                                                                  t in e
-                                                                      ? Object.defineProperty(e, t, {
-                                                                            value: r,
-                                                                            enumerable: !0,
-                                                                            configurable: !0,
-                                                                            writable: !0,
-                                                                        })
-                                                                      : (e[t] = r);
-                                                          });
-                                                  }
-                                                  return e;
-                                              })({}, n)),
-                                              (i = i =
-                                                  {
-                                                      entry: t,
-                                                  }),
-                                              Object.getOwnPropertyDescriptors
-                                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                                                  : (function (e, t) {
-                                                        var n = Object.keys(e);
-                                                        if (Object.getOwnPropertySymbols) {
-                                                            var r = Object.getOwnPropertySymbols(e);
-                                                            n.push.apply(n, r);
-                                                        }
-                                                        return n;
-                                                    })(Object(i)).forEach(function (e) {
-                                                        Object.defineProperty(
-                                                            l,
-                                                            e,
-                                                            Object.getOwnPropertyDescriptor(i, e),
-                                                        );
-                                                    }),
-                                              l),
-                                          );
-                                      };
+                                      return (n) => (0, i.jsx)(e, { ...n, entry: t });
                                   }),
-                                      O();
+                                      C();
                               },
-                              leadingAccessory: {
-                                  type: "icon",
-                                  icon: s.R2l,
-                              },
+                              leadingAccessory: { type: "icon", icon: a.R2l },
                           })
                         : null,
-                    A
-                        ? (0, r.jsx)(s.Drp, {
+                    x
+                        ? (0, i.jsx)(a.Drp, {
                               id: "remove-from-hub",
-                              label: p.intl.string(p.t.KUxYWH),
+                              label: h.intl.string(h.t.KUxYWH),
                               action: function () {
-                                  (0, i.A)({
-                                      title: p.intl.string(p.t.KUxYWH),
-                                      subtitle: p.intl.format(p.t["/5y0uV"], {
-                                          guildName: t.name,
-                                      }),
-                                      confirmText: p.intl.string(p.t.N86XcP),
-                                      onConfirm: _,
+                                  (0, s.A)({
+                                      title: h.intl.string(h.t.KUxYWH),
+                                      subtitle: h.intl.format(h.t["/5y0uV"], { guildName: t.name }),
+                                      confirmText: h.intl.string(h.t.N86XcP),
+                                      onConfirm: E,
                                   }),
-                                      O();
+                                      C();
                               },
                               color: "danger",
-                              leadingAccessory: {
-                                  type: "icon",
-                                  icon: s.ucK,
-                              },
+                              leadingAccessory: { type: "icon", icon: a.ucK },
                           })
                         : null,
-                    m
+                    p
                         ? null
-                        : (0, r.jsx)(s.Drp, {
+                        : (0, i.jsx)(a.Drp, {
                               id: "report-server-listing",
-                              label: p.intl.string(p.t.Aen9eh),
+                              label: h.intl.string(h.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, c.sJ)(t), O());
+                                  null != t && ((0, d.sJ)(t), C());
                               },
-                              icon: s.iFK,
-                              leadingAccessory: {
-                                  type: "icon",
-                                  icon: s.iFK,
-                              },
+                              icon: a.iFK,
+                              leadingAccessory: { type: "icon", icon: a.iFK },
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(s.rXV, {
-                children: y,
-            }),
+            (0, i.jsx)(a.rXV, { children: f }),
         ],
     });
 }

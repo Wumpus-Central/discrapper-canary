@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__8bf38 " + n(829681).KK,
     v_: "rightSplit__8bf38",

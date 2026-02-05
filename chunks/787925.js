@@ -1,7 +1,5 @@
-n.d(t, {
-    C: () => i,
-}),
-    n(896048);
+"use strict";
+n.d(t, { C: () => i });
 var r = n(554146);
 let i = new Set([
     r.M.APPLICATION_COMMAND_TOOLTIP,

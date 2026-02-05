@@ -1,16 +1,14 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(64700);
+n.d(t, { A: () => l });
+var i = n(64700);
 let l = () => {
-    let e = r.useRef(!0);
+    let e = i.useRef(!0);
     return (
-        r.useEffect(
+        i.useEffect(
             () => () => {
                 e.current = !1;
             },
             [],
         ),
-        r.useCallback(() => e.current, [])
+        i.useCallback(() => e.current, [])
     );
 };

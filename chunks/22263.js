@@ -11,10 +11,7 @@ e.exports = function (e) {
             e.NUMBER_MODE,
             {
                 beginKeywords: "run cmd entrypoint volume add copy workdir label healthcheck shell",
-                starts: {
-                    end: /[^\\]$/,
-                    subLanguage: "bash",
-                },
+                starts: { end: /[^\\]$/, subLanguage: "bash" },
             },
         ],
         illegal: "</",

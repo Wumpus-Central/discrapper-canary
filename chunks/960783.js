@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-});
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 });
 var r = {},
     n = (t.render = function (e, t, r, n) {
         if ("u" < typeof document && !n) return null;

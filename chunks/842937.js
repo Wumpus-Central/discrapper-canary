@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     return e
         .replace(/[\s-~]+/g, "-")
@@ -5,8 +6,4 @@ function r(e) {
         .replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "")
         .toLowerCase();
 }
-n.d(t, {
-    A: () => r,
-}),
-    n(747238),
-    n(812715);
+n.d(t, { A: () => r });

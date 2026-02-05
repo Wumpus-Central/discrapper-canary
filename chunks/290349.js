@@ -1,5 +1,4 @@
-n.d(t, {
-    D: () => i,
-});
-var r,
-    i = (((r = {}).ADMIN = "admin"), (r.DEVELOPER = "developer"), (r.READ_ONLY = "read_only"), r);
+"use strict";
+n.d(t, { D: () => s });
+var i,
+    s = (((i = {}).ADMIN = "admin"), (i.DEVELOPER = "developer"), (i.READ_ONLY = "read_only"), i);

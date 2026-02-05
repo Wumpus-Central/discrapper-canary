@@ -1,113 +1,87 @@
-l.d(t, {
-    $x: () => g,
-    Qg: () => v,
-    dy: () => p,
-    he: () => C,
-    x$: () => j,
-}),
-    l(896048),
-    l(492834),
-    l(733351),
-    l(228524);
-var n,
-    r = l(64700),
-    s = l(311907),
-    i = l(555337),
-    a = l(306846),
-    o = l(894222),
-    c = l(71393),
-    d = l(860689),
-    u = l(408213),
-    f = l(60175),
-    m = l(513461),
-    x = l(709977),
-    b = l(890620),
-    h = l(985018),
-    v =
-        (((n = {})[(n.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
-        (n[(n.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
-        (n[(n.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
-        n);
-
-function g(e, t, l) {
-    let [n, i] = r.useState(!1),
-        c = (0, s.bG)([f.A], () => f.A.get(e)),
-        d = (0, s.bG)([a.A], () => a.A.pendingState);
-    r.useEffect(() => {
-        t || u.Ay.fetchVerificationForm(e, l).finally(() => i(!0));
-    }, [e, l, t]);
-    let x = r.useMemo(() => {
-        var e, l;
-        let n;
-        if (!t || null == d) return null;
-        if (d.joinType === o.J.APPLY)
-            n = null != d.pendingVerificationFields ? [...d.pendingVerificationFields] : void 0;
-        else if (null != d.termRules) {
-            let e = d.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
-            n = [
-                {
-                    field_type: m.rX.TERMS,
-                    label: h.intl.string(h.t["9suSIA"]),
-                    values: e,
-                    required: !0,
-                },
-            ];
-        }
-        return null == n
-            ? null
-            : {
-                  version: null != (e = null == c ? void 0 : c.version) ? e : "",
-                  description: null != (l = null == c ? void 0 : c.description) ? l : "",
-                  formFields: n,
-                  guild: null == c ? void 0 : c.guild,
-              };
-    }, [t, d, c]);
-    return {
-        hasFetched: n,
-        verificationForm: null != x ? x : c,
-    };
-}
-
-function j(e, t, l) {
-    let n = (0, s.bG)([c.A], () => c.A.getGuild(e)),
-        a = (0, s.bG)([i.A], () => i.A.getGuild());
-    return r.useMemo(
-        () => (l && (null == a ? void 0 : a.id) === e ? a : null != n ? n : null != t ? (0, d.Yh)(t) : null),
-        [l, a, e, n, t],
-    );
-}
-
-function p(e) {
-    let t = !(null == e ? void 0 : e.isClaimed()),
-        l = null == e ? void 0 : e.verified,
-        [n, s] = r.useState(2 * !t);
+n.d(t, { $x: () => j, Qg: () => _, dy: () => v, he: () => b, x$: () => p });
+var r,
+    s = n(64700),
+    l = n(311907),
+    i = n(555337),
+    a = n(306846),
+    o = n(894222),
+    d = n(71393),
+    c = n(860689),
+    u = n(408213),
+    m = n(60175),
+    h = n(513461),
+    x = n(709977),
+    f = n(890620),
+    g = n(985018),
+    _ =
+        (((r = {})[(r.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
+        (r[(r.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
+        (r[(r.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
+        r);
+function j(e, t, n) {
+    let [r, i] = s.useState(!1),
+        d = (0, l.bG)([m.A], () => m.A.get(e)),
+        c = (0, l.bG)([a.A], () => a.A.pendingState);
     return (
-        r.useEffect(() => {
-            null != e && e.isClaimed() && s(2);
-        }, [e]),
-        r.useEffect(() => {
-            1 === n && l && s(2);
-        }, [n, l]),
+        s.useEffect(() => {
+            t || u.Ay.fetchVerificationForm(e, n).finally(() => i(!0));
+        }, [e, n, t]),
         {
-            currentStep: n,
-            setCurrentStep: s,
+            hasFetched: r,
+            verificationForm:
+                s.useMemo(() => {
+                    let e;
+                    if (!t || null == c) return null;
+                    if (c.joinType === o.J.APPLY)
+                        e = null != c.pendingVerificationFields ? [...c.pendingVerificationFields] : void 0;
+                    else if (null != c.termRules) {
+                        let t = c.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
+                        e = [{ field_type: h.rX.TERMS, label: g.intl.string(g.t["9suSIA"]), values: t, required: !0 }];
+                    }
+                    return null == e
+                        ? null
+                        : {
+                              version: d?.version ?? "",
+                              description: d?.description ?? "",
+                              formFields: e,
+                              guild: d?.guild,
+                          };
+                }, [t, c, d]) ?? d,
         }
     );
 }
-
-function C(e) {
-    let t = (0, b.YN)((e) => e.hasUnsubmittedChanges);
-    r.useEffect(
+function p(e, t, n) {
+    let r = (0, l.bG)([d.A], () => d.A.getGuild(e)),
+        a = (0, l.bG)([i.A], () => i.A.getGuild());
+    return s.useMemo(() => (n && a?.id === e ? a : null != r ? r : null != t ? (0, c.Yh)(t) : null), [n, a, e, r, t]);
+}
+function v(e) {
+    let t = !e?.isClaimed(),
+        n = e?.verified,
+        [r, l] = s.useState(2 * !t);
+    return (
+        s.useEffect(() => {
+            null != e && e.isClaimed() && l(2);
+        }, [e]),
+        s.useEffect(() => {
+            1 === r && n && l(2);
+        }, [r, n]),
+        { currentStep: r, setCurrentStep: l }
+    );
+}
+function b(e) {
+    let t = (0, f.YN)((e) => e.hasUnsubmittedChanges);
+    s.useEffect(
         () => (
-            (0, b.Yb)(!1),
+            (0, f.Yb)(!1),
             () => {
-                (0, b.Yb)(!1);
+                (0, f.Yb)(!1);
             }
         ),
         [],
     ),
-        r.useEffect(() => {
-            let l = e.some((e) => e.field_type !== m.rX.TERMS && (0, x.Ge)(e));
-            l && !t ? (0, b.Yb)(!0) : !l && t && (0, b.Yb)(!1);
+        s.useEffect(() => {
+            let n = e.some((e) => e.field_type !== h.rX.TERMS && (0, x.Ge)(e));
+            n && !t ? (0, f.Yb)(!0) : !n && t && (0, f.Yb)(!1);
         }, [e, t]);
 }

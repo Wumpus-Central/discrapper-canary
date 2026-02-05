@@ -1,14 +1,5 @@
-n.d(t, {
-    $H: () => u,
-    B7: () => d,
-    Q_: () => f,
-    nC: () => s,
-    oi: () => a,
-    su: () => c,
-    us: () => l,
-    yQ: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { $H: () => c, B7: () => d, Q_: () => _, nC: () => s, oi: () => a, su: () => u, us: () => l, yQ: () => o });
 var r = n(461012),
     i = n(652215),
     a = (function (e) {
@@ -16,26 +7,9 @@ var r = n(461012),
     })({});
 let s = "SearchStore",
     o = "SearchHistoryStore_Web",
-    l = {
-        sort_by: "timestamp",
-        sort_order: "desc",
-    },
-    c = {
-        1: {
-            has: ["image", "video"],
-        },
-        3: {
-            has: ["file"],
-        },
-        0: {},
-        2: {
-            has: ["link"],
-        },
-        4: {
-            pinned: !0,
-        },
-    };
-var u = (function (e) {
+    l = { sort_by: "timestamp", sort_order: "desc" },
+    u = { 1: { has: ["image", "video"] }, 3: { has: ["file"] }, 0: {}, 2: { has: ["link"] }, 4: { pinned: !0 } };
+var c = (function (e) {
     return (
         (e.RECENT = "recent"),
         (e.MEMBERS = "members"),
@@ -50,14 +24,7 @@ var u = (function (e) {
         e
     );
 })({});
-let d = {
-    recent: 1,
-    media: 1,
-    pins: 4,
-    messages: 0,
-    links: 2,
-    files: 3,
-};
+let d = { recent: 1, media: 1, pins: 4, messages: 0, links: 2, files: 3 };
 i.I4_.THREAD,
     i.I4_.CHANNEL,
     i.I4_.GUILD_CHANNEL,
@@ -71,7 +38,7 @@ i.I4_.THREAD,
     i.I4_.DMS,
     i.I4_.FAVORITES,
     r.b.COZY;
-var f = (function (e) {
+var _ = (function (e) {
     return (
         (e.SEARCH_TEXT_INPUT = "search_text_input"),
         (e.SEARCH_POPOUT = "search_popout"),

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_cf09d8",
     _X: "wrapperAudio_cf09d8 wrapper_cf09d8",

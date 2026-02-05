@@ -1,6 +1,5 @@
-n.d(t, {
-    v: () => c,
-});
+"use strict";
+n.d(t, { v: () => u });
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -32,13 +31,8 @@ let l = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
-
-function c(e) {
+function u(e) {
     let { text: t, variant: n = "grayLight" } = e,
         i = l[n];
-    return (0, r.jsx)(s.E, {
-        variant: "eyebrow",
-        className: a()(o.chip, o[i]),
-        children: t,
-    });
+    return (0, r.jsx)(s.E, { variant: "eyebrow", className: a()(o.chip, o[i]), children: t });
 }

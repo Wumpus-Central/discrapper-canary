@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     hQ: "contentContainer__58471",
     s: "assetContainer__58471",
@@ -7,5 +8,6 @@ e.exports = {
     y$: "rewardsContainer__58471",
     E2: "balanceContainer__58471",
     yG: "videoBackground__58471",
+    j: "videoContainer__58471",
     Qs: "content__58471",
 };

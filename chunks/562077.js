@@ -1,40 +1,14 @@
 e.exports = function (e) {
-    let t = {
-            variants: [
-                e.COMMENT("--", "$"),
-                e.COMMENT(/\{-/, /-\}/, {
-                    contains: ["self"],
-                }),
-            ],
-        },
-        n = {
-            className: "type",
-            begin: "\\b[A-Z][\\w']*",
-            relevance: 0,
-        },
+    let t = { variants: [e.COMMENT("--", "$"), e.COMMENT(/\{-/, /-\}/, { contains: ["self"] })] },
+        n = { className: "type", begin: "\\b[A-Z][\\w']*", relevance: 0 },
         r = {
             begin: "\\(",
             end: "\\)",
             illegal: '"',
-            contains: [
-                {
-                    className: "type",
-                    begin: "\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?",
-                },
-                t,
-            ],
+            contains: [{ className: "type", begin: "\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?" }, t],
         },
-        i = {
-            begin: /\{/,
-            end: /\}/,
-            contains: r.contains,
-        },
-        a = {
-            className: "string",
-            begin: "'\\\\?.",
-            end: "'",
-            illegal: ".",
-        };
+        i = { begin: /\{/, end: /\}/, contains: r.contains },
+        a = { className: "string", begin: "'\\\\?.", end: "'", illegal: "." };
     return {
         name: "Elm",
         keywords: [
@@ -68,41 +42,17 @@ e.exports = function (e) {
                 contains: [r, t],
                 illegal: "\\W\\.|;",
             },
-            {
-                begin: "import",
-                end: "$",
-                keywords: "import as exposing",
-                contains: [r, t],
-                illegal: "\\W\\.|;",
-            },
-            {
-                begin: "type",
-                end: "$",
-                keywords: "type alias",
-                contains: [n, r, i, t],
-            },
-            {
-                beginKeywords: "infix infixl infixr",
-                end: "$",
-                contains: [e.C_NUMBER_MODE, t],
-            },
-            {
-                begin: "port",
-                end: "$",
-                keywords: "port",
-                contains: [t],
-            },
+            { begin: "import", end: "$", keywords: "import as exposing", contains: [r, t], illegal: "\\W\\.|;" },
+            { begin: "type", end: "$", keywords: "type alias", contains: [n, r, i, t] },
+            { beginKeywords: "infix infixl infixr", end: "$", contains: [e.C_NUMBER_MODE, t] },
+            { begin: "port", end: "$", keywords: "port", contains: [t] },
             a,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             n,
-            e.inherit(e.TITLE_MODE, {
-                begin: "^[_a-z][\\w']*",
-            }),
+            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             t,
-            {
-                begin: "->|<-",
-            },
+            { begin: "->|<-" },
         ],
         illegal: /;/,
     };

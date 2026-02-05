@@ -1,28 +1,18 @@
-n.d(t, {
-    L: () => s,
-});
+"use strict";
+n.d(t, { L: () => a });
 var r = n(860407),
     i = n(180944);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s {
+class a {
+    originalPrefix;
+    table;
     get prefix() {
         return this.table.prefix;
     }
+    constructor(e, t, n, r = !0) {
+        (this.originalPrefix = e), (this.table = new i.X([e], t, n, r));
+    }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -47,23 +37,16 @@ class s {
     }
     put(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.hh.Replace;
-        return this.table.put(
-            {
-                key: [e],
-                data: t,
-                generation: null,
-            },
-            n,
-        );
+        return this.table.put({ key: [e], data: t, generation: null }, n);
     }
     delete(e) {
         return 0 == arguments.length ? this.table.delete() : this.table.delete([e]);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+        return this.table.transaction((t) => e(new s(t)), t);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
+        return new s(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -71,32 +54,20 @@ class s {
     getMapEntriesSyncUnsafe() {
         return this.table.getMapEntriesSyncUnsafe();
     }
-    constructor(e, t, n, r = !0) {
-        a(this, "originalPrefix", void 0),
-            a(this, "table", void 0),
-            (this.originalPrefix = e),
-            (this.table = new i.X([e], t, n, r));
-    }
 }
-class o {
+class s {
+    transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new o(new i.l(e, t, n));
+        return new s(new i.l(e, t, n));
+    }
+    constructor(e) {
+        this.transaction = e;
     }
     put(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.hh.Replace;
-        this.transaction.put(
-            {
-                key: [e],
-                data: t,
-                generation: null,
-            },
-            n,
-        );
+        this.transaction.put({ key: [e], data: t, generation: null }, n);
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
-    }
-    constructor(e) {
-        a(this, "transaction", void 0), (this.transaction = e);
     }
 }

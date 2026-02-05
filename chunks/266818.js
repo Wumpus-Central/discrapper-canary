@@ -1,3 +1,4 @@
+"use strict";
 t.exports = function (t, r) {
     return 1 === r
         ? function (r, e) {

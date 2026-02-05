@@ -1,134 +1,92 @@
-n.d(t, {
-    A: () => b,
-    e: () => l,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(927813);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => g, e: () => s });
+var r = n(311907),
+    i = n(73153),
+    a = n(927813),
+    s = (function (e) {
+        return (
+            (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+            (e[(e.FETCHING = 1)] = "FETCHING"),
+            (e[(e.FETCHED = 2)] = "FETCHED"),
+            (e[(e.ERROR = 3)] = "ERROR"),
+            e
+        );
+    })({});
+let o = { applicationIdToGuildIds: {}, lastFetchTimeMs: null, nextFetchRetryTimeMs: null, fetchState: 0 };
+function l() {
+    (o.applicationIdToGuildIds = {}), (o.lastFetchTimeMs = null), (o.nextFetchRetryTimeMs = null), (o.fetchState = 0);
 }
-var l = (function (e) {
-    return (
-        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-        (e[(e.FETCHING = 1)] = "FETCHING"),
-        (e[(e.FETCHED = 2)] = "FETCHED"),
-        (e[(e.ERROR = 3)] = "ERROR"),
-        e
-    );
-})({});
-let c = {
-    applicationIdToGuildIds: {},
-    lastFetchTimeMs: null,
-    nextFetchRetryTimeMs: null,
-    fetchState: 0,
-};
-
 function u() {
-    (c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0);
+    o.fetchState = 1;
 }
-
-function d() {
-    c.fetchState = 1;
-}
-
-function f(e) {
+function c(e) {
     let { applicationId: t, guildId: n } = e;
-    null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()),
-        c.applicationIdToGuildIds[t].add(n),
-        (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
+    null == o.applicationIdToGuildIds[t] && (o.applicationIdToGuildIds[t] = new Set()),
+        o.applicationIdToGuildIds[t].add(n),
+        (o.applicationIdToGuildIds[t] = new Set(o.applicationIdToGuildIds[t]));
 }
-
-function p(e) {
+function d(e) {
     let { applicationId: t, guildId: n } = e;
-    null != c.applicationIdToGuildIds[t] &&
-        (c.applicationIdToGuildIds[t].delete(n),
-        (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t])));
+    null != o.applicationIdToGuildIds[t] &&
+        (o.applicationIdToGuildIds[t].delete(n),
+        (o.applicationIdToGuildIds[t] = new Set(o.applicationIdToGuildIds[t])));
 }
-
 function _(e) {
     let { guildIdToApplicationIds: t } = e;
-    for (let e in ((c.fetchState = 2),
-    (c.lastFetchTimeMs = Date.now()),
-    (c.applicationIdToGuildIds = {}),
-    (c.nextFetchRetryTimeMs = null),
+    for (let e in ((o.fetchState = 2),
+    (o.lastFetchTimeMs = Date.now()),
+    (o.applicationIdToGuildIds = {}),
+    (o.nextFetchRetryTimeMs = null),
     t))
-        for (let n of t[e])
-            f({
-                applicationId: n,
-                guildId: e,
-            });
+        for (let n of t[e]) c({ applicationId: n, guildId: e });
 }
-
-function h(e) {
+function f(e) {
     let { retryAfterSeconds: t } = e;
-    if (((c.fetchState = 3), null != t)) {
-        let e = t * s.A.Millis.SECOND;
-        c.nextFetchRetryTimeMs = Date.now() + e;
+    if (((o.fetchState = 3), null != t)) {
+        let e = t * a.A.Millis.SECOND;
+        o.nextFetchRetryTimeMs = Date.now() + e;
     }
 }
-
-function m(e) {
+function p(e) {
     let { application: t, guildId: n } = e;
-    null != t &&
-        f({
-            applicationId: t.id,
-            guildId: n,
-        });
+    null != t && c({ applicationId: t.id, guildId: n });
 }
-
-function g(e) {
+function h(e) {
     let { applicationId: t, guildId: n } = e;
-    null != t &&
-        p({
-            applicationId: t,
-            guildId: n,
-        });
+    null != t && d({ applicationId: t, guildId: n });
 }
-class E extends (r = i.Ay.PersistedStore) {
+class m extends r.Ay.PersistedStore {
+    static displayName = "MyGuildApplicationsStore";
+    static persistKey = "MyGuildApplicationsStore";
     initialize(e) {
         if (null != e)
-            for (let t in ((c.lastFetchTimeMs = e.lastFetchTimeMs),
-            (c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs),
-            (c.fetchState = e.fetchState),
+            for (let t in ((o.lastFetchTimeMs = e.lastFetchTimeMs),
+            (o.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs),
+            (o.fetchState = e.fetchState),
             e.applicationIdToGuildIds))
-                c.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
+                o.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
     }
     getState() {
-        return c;
+        return o;
     }
     getGuildIdsForApplication(e) {
-        if (null != e) return c.applicationIdToGuildIds[e];
+        if (null != e) return o.applicationIdToGuildIds[e];
     }
     getLastFetchTimeMs() {
-        return c.lastFetchTimeMs;
+        return o.lastFetchTimeMs;
     }
     getNextFetchRetryTimeMs() {
-        return c.nextFetchRetryTimeMs;
+        return o.nextFetchRetryTimeMs;
     }
     getFetchState() {
-        return c.fetchState;
+        return o.fetchState;
     }
 }
-o(E, "displayName", "MyGuildApplicationsStore"), o(E, "persistKey", "MyGuildApplicationsStore");
-let b = new E(a.h, {
-    LOGOUT: u,
-    FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: d,
+let g = new m(i.h, {
+    LOGOUT: l,
+    FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: u,
     FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: _,
-    FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: h,
-    INTEGRATION_CREATE: m,
-    INTEGRATION_DELETE: g,
+    FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: f,
+    INTEGRATION_CREATE: p,
+    INTEGRATION_DELETE: h,
 });

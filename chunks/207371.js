@@ -1,32 +1,24 @@
-n.d(t, {
-    e: () => d,
-    x: () => u,
-}),
-    n(938796);
+"use strict";
+n.d(t, { e: () => d, x: () => c }), n(938796);
 var r = n(64700),
     i = n(665260),
     a = n(735991),
     s = n(216238),
     o = n(652215);
-
 function l(e) {
-    var t;
     if (!(0, a.$B)(e)) return !1;
-    let n = null != (t = e.flags) ? t : 0,
-        r = (0, i.Lt)(n, o.gfo.EMBEDDED),
-        s = (0, i.Lt)(n, o.gfo.CONTEXTLESS_ACTIVITY);
-    return r && s;
+    let t = e.flags ?? 0,
+        n = (0, i.Lt)(t, o.gfo.EMBEDDED),
+        r = (0, i.Lt)(t, o.gfo.CONTEXTLESS_ACTIVITY);
+    return n && r;
 }
-
-function c(e, t) {
+function u(e, t) {
     return null != e && !!l(e);
 }
-
-function u(e) {
-    return c(e, (0, s.oj)("canLaunchFrame"));
+function c(e) {
+    return u(e, (0, s.oj)("canLaunchFrame"));
 }
-
 function d(e) {
     let t = (0, s.$N)("canLaunchFrame");
-    return r.useMemo(() => c(e, t), [e, t]);
+    return r.useMemo(() => u(e, t), [e, t]);
 }

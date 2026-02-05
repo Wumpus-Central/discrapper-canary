@@ -1,8 +1,5 @@
-n.d(t, {
-    EZ: () => l,
-    Rc: () => o,
-    ao: () => s,
-});
+"use strict";
+n.d(t, { EZ: () => l, Rc: () => o, ao: () => s });
 var r = n(635358);
 n(205693), n(289397);
 var i = n(531260);
@@ -27,16 +24,10 @@ let s = (e, t) => {
         );
     },
     o = (e) => {
-        if (null != e) return "".concat(e, "?width=100&height=195");
+        if (null != e) return `${e}?width=100&height=195`;
     },
     l = () => {
-        let e = (0, i.A)({
-                forceFetch: !0,
-            }),
+        let e = (0, i.A)({ forceFetch: !0 }),
             t = (0, a.i$)(e.endsAt, "L");
-        return {
-            isLoading: !e.fetched,
-            isFractionalPremiumActive: e.isFractionalPremiumActive,
-            expiresAt: t,
-        };
+        return { isLoading: !e.fetched, isFractionalPremiumActive: e.isFractionalPremiumActive, expiresAt: t };
     };

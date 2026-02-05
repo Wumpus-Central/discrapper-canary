@@ -1,27 +1,23 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(681154),
-    a = n(311907),
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    a = n(681154),
+    l = n(311907),
     s = n(713654),
     o = n(263063),
-    c = n(698441),
-    u = n(995273),
-    d = n(734057),
-    p = n(71393),
+    d = n(698441),
+    c = n(995273),
+    u = n(734057),
+    A = n(71393),
     h = n(287809),
-    g = n(661191),
-    f = n(652215),
-    m = n(985018),
-    A = n(310633);
-
-function _(e) {
-    var t;
-    let { item: n } = e,
-        _ = i.useMemo(() => {
-            switch (n.data.kind) {
+    _ = n(661191),
+    m = n(652215),
+    p = n(985018),
+    g = n(310633);
+function E(e) {
+    let { item: t } = e,
+        n = r.useMemo(() => {
+            switch (t.data.kind) {
                 case "message":
                 case "guildEvent":
                 case "forumThread":
@@ -32,55 +28,55 @@ function _(e) {
                 default:
                     return "unknown";
             }
-        }, [n]),
-        b = i.useMemo(() => {
-            switch (n.data.kind) {
+        }, [t]),
+        E = r.useMemo(() => {
+            switch (t.data.kind) {
                 case "message":
-                    return n.data.message.channel_id;
+                    return t.data.message.channel_id;
                 case "generatedCandidate":
-                    return n.data.item.channel_id;
+                    return t.data.item.channel_id;
                 case "forumThread":
-                    return n.data.threadChannel.id;
+                    return t.data.threadChannel.id;
                 default:
                     return;
             }
-        }, [n]),
-        E = i.useMemo(() => {
-            if ("guildEvent" === n.data.kind) {
-                let e = c.Ay.getGuildScheduledEvent(n.data.eventId);
-                return null == e ? void 0 : e.guild_id;
+        }, [t]),
+        f = r.useMemo(() => {
+            if ("guildEvent" === t.data.kind) {
+                let e = d.Ay.getGuildScheduledEvent(t.data.eventId);
+                return e?.guild_id;
             }
-        }, [n]),
-        O = i.useMemo(() => {
-            if ("contentInventory" === n.data.kind) return n.data.content.author_id;
-        }, [n]),
-        y = i.useMemo(() => {
-            switch (n.data.kind) {
+        }, [t]),
+        I = r.useMemo(() => {
+            if ("contentInventory" === t.data.kind) return t.data.content.author_id;
+        }, [t]),
+        C = r.useMemo(() => {
+            switch (t.data.kind) {
                 case "message":
                 case "forumThread":
-                    return g.default.extractTimestamp(n.data.message.id);
+                    return _.default.extractTimestamp(t.data.message.id);
                 case "guildEvent":
-                    return g.default.extractTimestamp(n.data.eventId);
+                    return _.default.extractTimestamp(t.data.eventId);
                 case "generatedCandidate":
-                    return g.default.extractTimestamp(n.data.item.content_id);
+                    return _.default.extractTimestamp(t.data.item.content_id);
                 default:
-                    return n.timestamp;
+                    return t.timestamp;
             }
-        }, [n]),
-        I = (0, a.bG)([d.A], () => d.A.getChannel(b), [b]),
-        v = null != (t = null == I ? void 0 : I.guild_id) ? t : E,
-        S = (0, a.bG)([p.A], () => (null != v ? p.A.getGuild(v) : null), [v]),
-        C = (0, a.bG)([h.default], () => (null != O ? h.default.getUser(O) : null), [O]);
-    return "unknown" === _
+        }, [t]),
+        N = (0, l.bG)([u.A], () => u.A.getChannel(E), [E]),
+        T = N?.guild_id ?? f,
+        S = (0, l.bG)([A.A], () => (null != T ? A.A.getGuild(T) : null), [T]),
+        x = (0, l.bG)([h.default], () => (null != I ? h.default.getUser(I) : null), [I]);
+    return "unknown" === n
         ? null
-        : (0, r.jsx)("div", {
-              className: A.kL,
-              children: (0, r.jsxs)("div", {
-                  className: A.wx,
+        : (0, i.jsx)("div", {
+              className: g.kL,
+              children: (0, i.jsxs)("div", {
+                  className: g.wx,
                   children: [
                       (() => {
-                          if ("guild" === _ && null != S)
-                              return (0, r.jsx)(o.A, {
+                          if ("guild" === n && null != S)
+                              return (0, i.jsx)(o.A, {
                                   guild: S,
                                   size: "Medium",
                                   active: !1,
@@ -90,113 +86,91 @@ function _(e) {
                                   tooltipPosition: "top",
                                   animate: !1,
                               });
-                          if ("user" === _ && null != C) {
-                              let e = C.getAvatarURL(void 0, 50);
-                              return (0, r.jsx)("img", {
-                                  src: e,
-                                  alt: C.username,
-                                  className: A.my,
-                              });
+                          if ("user" === n && null != x) {
+                              let e = x.getAvatarURL(void 0, 50);
+                              return (0, i.jsx)("img", { src: e, alt: x.username, className: g.my });
                           }
                           return null;
                       })(),
-                      (0, r.jsxs)("div", {
-                          className: A.Se,
+                      (0, i.jsxs)("div", {
+                          className: g.Se,
                           children: [
-                              (0, r.jsx)("div", {
-                                  className: A.$,
-                                  children: (0, r.jsxs)("div", {
-                                      className: A.gH,
+                              (0, i.jsx)("div", {
+                                  className: g.$,
+                                  children: (0, i.jsxs)("div", {
+                                      className: g.gH,
                                       children: [
-                                          "guild" === _ && null != S
-                                              ? (0, r.jsx)("div", {
-                                                    className: A.DD,
-                                                    children: S.name,
-                                                })
-                                              : "user" === _ && null != C
-                                                ? (0, r.jsx)("div", {
-                                                      className: A.DD,
-                                                      children: C.username,
-                                                  })
+                                          "guild" === n && null != S
+                                              ? (0, i.jsx)("div", { className: g.DD, children: S.name })
+                                              : "user" === n && null != x
+                                                ? (0, i.jsx)("div", { className: g.DD, children: x.username })
                                                 : null,
-                                          (0, r.jsx)("div", {
-                                              className: A.vE,
-                                              children: (0, u.jb)(y),
-                                          }),
+                                          (0, i.jsx)("div", { className: g.vE, children: (0, c.jb)(C) }),
                                       ],
                                   }),
                               }),
                               (() => {
                                   let e = (() => {
-                                      switch (n.data.kind) {
+                                      switch (t.data.kind) {
                                           case "message":
-                                              if (n.channelType === f.rbe.GUILD_ANNOUNCEMENT)
-                                                  return m.intl.string(m.t["8P08G9"]);
-                                              return m.intl.string(m.t.hMFMY9);
+                                              if (t.channelType === m.rbe.GUILD_ANNOUNCEMENT)
+                                                  return p.intl.string(p.t["8P08G9"]);
+                                              return p.intl.string(p.t.hMFMY9);
                                           case "generatedCandidate":
-                                              return m.intl.string(m.t.ljgIO9);
+                                              return p.intl.string(p.t.ljgIO9);
                                           case "guildEvent":
-                                              return m.intl.string(m.t["6pFsLQ"]);
+                                              return p.intl.string(p.t["6pFsLQ"]);
                                           case "forumThread":
-                                              return m.intl.string(m.t.bYNuVx);
+                                              return p.intl.string(p.t.bYNuVx);
                                           case "contentInventory":
-                                              switch (n.data.content.content_type) {
-                                                  case l.ContentInventoryEntryType.CUSTOM_STATUS:
-                                                      return m.intl.string(m.t.fxOLPR);
-                                                  case l.ContentInventoryEntryType.TOP_GAME:
-                                                  case l.ContentInventoryEntryType.PLAYED_GAME:
-                                                      return m.intl.string(m.t.ktOTRQ);
+                                              switch (t.data.content.content_type) {
+                                                  case a.ContentInventoryEntryType.CUSTOM_STATUS:
+                                                      return p.intl.string(p.t.fxOLPR);
+                                                  case a.ContentInventoryEntryType.TOP_GAME:
+                                                  case a.ContentInventoryEntryType.PLAYED_GAME:
+                                                      return p.intl.string(p.t.ktOTRQ);
                                                   default:
-                                                      return "".concat(n.data.content.content_type);
+                                                      return `${t.data.content.content_type}`;
                                               }
                                           default:
                                               return "";
                                       }
                                   })();
-                                  if ("user" === _)
-                                      return (0, r.jsx)("div", {
-                                          className: A.VA,
-                                          children: (0, r.jsx)("span", {
-                                              className: A.o4,
-                                              children: e,
-                                          }),
+                                  if ("user" === n)
+                                      return (0, i.jsx)("div", {
+                                          className: g.VA,
+                                          children: (0, i.jsx)("span", { className: g.o4, children: e }),
                                       });
-                                  if (null != I && null != e) {
-                                      let t = (0, s.gU)(I, S);
-                                      return (0, r.jsxs)("div", {
-                                          className: A.VA,
+                                  if (null != N && null != e) {
+                                      let t = (0, s.gU)(N, S);
+                                      return (0, i.jsxs)("div", {
+                                          className: g.VA,
                                           children: [
-                                              (0, r.jsx)("span", {
-                                                  className: A.o4,
-                                                  children: e,
+                                              (0, i.jsx)("span", { className: g.o4, children: e }),
+                                              (0, i.jsx)("span", {
+                                                  className: g.o4,
+                                                  children: p.intl.string(p.t.CHUAYk),
                                               }),
-                                              (0, r.jsx)("span", {
-                                                  className: A.o4,
-                                                  children: m.intl.string(m.t.CHUAYk),
-                                              }),
-                                              (0, r.jsxs)("span", {
-                                                  className: A.o4,
+                                              (0, i.jsxs)("span", {
+                                                  className: g.o4,
                                                   children: [
                                                       null != t &&
-                                                          (0, r.jsx)(t, {
+                                                          (0, i.jsx)(t, {
                                                               size: "custom",
                                                               width: 16,
                                                               height: 16,
-                                                              className: A.p,
+                                                              className: g.p,
                                                           }),
-                                                      I.name,
+                                                      N.name,
                                                   ],
                                               }),
                                           ],
                                       });
                                   }
                                   return null != e
-                                      ? (0, r.jsx)("div", {
-                                            className: A.VA,
-                                            children: (0, r.jsx)("span", {
-                                                className: A.o4,
-                                                children: e,
-                                            }),
+                                      ? (0, i.jsx)("div", {
+                                            className: g.VA,
+                                            children: (0, i.jsx)("span", { className: g.o4, children: e }),
                                         })
                                       : null;
                               })(),

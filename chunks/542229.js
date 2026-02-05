@@ -1,130 +1,96 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(896048),
-    n(492834);
-var r = n(627968),
-    l = n(64700),
-    i = n(533925),
-    s = n(562465),
+n.d(t, { A: () => u });
+var l = n(627968),
+    s = n(64700),
+    r = n(533925),
+    i = n(562465),
     a = n(397927),
     o = n(398450),
     d = n(652215),
     c = n(985018);
-
 function u(e) {
-    let { mfaChallenge: t, finish: n, setSlide: u, onClose: f, isSlideReady: h, headerAlignStart: g } = e,
-        [p, m] = l.useState(!1),
-        [b, j] = l.useState(null),
-        [y, S] = l.useState(!1),
-        [x, v] = l.useState(null),
-        [A, C] = l.useState(""),
-        O = l.useRef(null);
-    l.useEffect(() => {
-        m(!0),
-            s.Bo.post({
-                url: d.Rsh.LOGIN_SMS_SEND,
-                body: {
-                    ticket: t.ticket,
-                },
-                oldFormErrors: !0,
-                rejectWithError: !1,
-            })
+    let { mfaChallenge: t, finish: n, setSlide: u, onClose: h, isSlideReady: g, headerAlignStart: m } = e,
+        [f, x] = s.useState(!1),
+        [S, p] = s.useState(null),
+        [j, b] = s.useState(!1),
+        [A, y] = s.useState(null),
+        [C, k] = s.useState(""),
+        v = s.useRef(null);
+    s.useEffect(() => {
+        x(!0),
+            i.Bo.post({ url: d.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
                 .then((e) => {
-                    j(e.body.phone);
+                    p(e.body.phone);
                 })
                 .catch((e) => {
-                    var t, n;
-                    v(null != (t = null == (n = e.body) ? void 0 : n.message) ? t : e.message);
+                    y(e.body?.message ?? e.message);
                 })
                 .finally(() => {
-                    m(!1);
+                    x(!1);
                 });
     }, [t.ticket]),
-        l.useEffect(() => {
-            if (h) {
-                var e;
-                null == (e = O.current) || e.focus();
-            }
-        }, [h]);
-    let w =
-        null == b
-            ? c.intl.string(c.t.LQdCQE)
-            : c.intl.formatToPlainString(c.t["8r6h7+"], {
-                  phoneNumber: b,
-              });
-    return (0, r.jsxs)("form", {
+        s.useEffect(() => {
+            g && v.current?.focus();
+        }, [g]);
+    let w = null == S ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t["8r6h7+"], { phoneNumber: S });
+    return (0, l.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                S(!0),
-                n({
-                    mfaType: "sms",
-                    data: A,
-                })
+                b(!0),
+                n({ mfaType: "sms", data: C })
                     .catch((e) => {
-                        var t, n;
-                        v(null != (t = e.message) ? t : null == (n = e.body) ? void 0 : n.message);
+                        y(e.message ?? e.body?.message);
                     })
                     .finally(() => {
-                        S(!1);
+                        b(!1);
                     });
         },
         children: [
-            (0, r.jsx)(o.A.SlideHeader, {
-                subtitle: w,
-                onClose: f,
-                headerAlignStart: g,
-            }),
-            (0, r.jsxs)(o.A.SlideContent, {
+            (0, l.jsx)(o.A.SlideHeader, { subtitle: w, onClose: h, headerAlignStart: m }),
+            (0, l.jsxs)(o.A.SlideContent, {
                 children: [
-                    (0, r.jsxs)(a.M_l, {
+                    (0, l.jsxs)(a.M_l, {
                         children: [
-                            (0, r.jsx)(a.ksK, {
+                            (0, l.jsx)(a.ksK, {
                                 label: c.intl.string(c.t.HZPBOd),
-                                inputRef: O,
-                                onChange: C,
+                                inputRef: v,
+                                onChange: k,
                                 placeholder: c.intl.string(c.t.tARzgo),
                                 maxLength: 10,
-                                value: A,
+                                value: C,
                                 autoComplete: "one-time-code",
                                 spellCheck: "false",
-                                disabled: y,
+                                disabled: j,
                             }),
-                            (0, r.jsx)(a.Button, {
+                            (0, l.jsx)(a.Button, {
                                 variant: "secondary",
                                 text: c.intl.string(c.t.ZF29L6),
-                                loading: p,
+                                loading: f,
                                 onClick: () => {
-                                    s.Bo.post({
+                                    i.Bo.post({
                                         url: d.Rsh.LOGIN_SMS_SEND,
-                                        body: {
-                                            ticket: t.ticket,
-                                        },
+                                        body: { ticket: t.ticket },
                                         oldFormErrors: !0,
                                         rejectWithError: !1,
                                     })
                                         .then((e) => {
-                                            j(e.body.phone);
+                                            p(e.body.phone);
                                         })
                                         .catch((e) => {
-                                            var t;
-                                            v(e.message || (null == (t = e.body) ? void 0 : t.message));
+                                            y(e.message || e.body?.message);
                                         });
                                 },
                             }),
                         ],
                     }),
-                    (0, r.jsx)(o.A.SlideError, {
-                        error: x,
-                    }),
+                    (0, l.jsx)(o.A.SlideError, { error: A }),
                 ],
             }),
-            (0, r.jsx)(o.A.SlideFooter, {
+            (0, l.jsx)(o.A.SlideFooter, {
                 mfaChallenge: t,
                 setSlide: u,
                 showConfirm: !0,
-                disabled: A.length !== i.$A,
-                submitting: y,
+                disabled: C.length !== r.$A,
+                submitting: j,
             }),
         ],
     });

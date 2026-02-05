@@ -1,33 +1,19 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(835245),
     i = n(439372),
     a = n(815706),
     s = n(41984),
     o = n(291869),
     l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 let u = new Map();
-class d extends i.A {
+class c extends i.A {
+    actions = {
+        OVERLAY_TRACK_STATE_CHANGED: this.handleTrackStateChanged,
+        RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
+    };
     handleTrackStateChanged(e) {
-        o.A.getConfig({
-            location: "tracking-manager",
-        }).enabled &&
+        o.A.getConfig({ location: "tracking-manager" }).enabled &&
             (e.newState === s.AR.INITIALIZING && u.set(e.pid, (0, r.A)()),
             (0, a.z)(l.HAw.OVERLAY_STATE_CHANGED, {
                 new_state: e.newState,
@@ -45,12 +31,5 @@ class d extends i.A {
     handleRunningGamesChange(e) {
         for (let t of e.removed) u.delete(t.pid);
     }
-    constructor(...e) {
-        super(...e),
-            c(this, "actions", {
-                OVERLAY_TRACK_STATE_CHANGED: this.handleTrackStateChanged,
-                RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
-            });
-    }
 }
-let f = new d();
+let d = new c();

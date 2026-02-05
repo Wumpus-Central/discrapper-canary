@@ -1,10 +1,8 @@
-n.d(t, {
-    P: () => l,
-});
-var r,
+n.d(t, { P: () => l });
+var i,
     l =
-        (((r = {}).ACTIVITY = "ACTIVITY"),
-        (r.SOUNDBOARD = "SOUNDBOARD"),
-        (r.EMOJI = "EMOJI"),
-        (r.GIFTING = "GIFTING"),
-        r);
+        (((i = {}).ACTIVITY = "ACTIVITY"),
+        (i.SOUNDBOARD = "SOUNDBOARD"),
+        (i.EMOJI = "EMOJI"),
+        (i.GIFTING = "GIFTING"),
+        i);

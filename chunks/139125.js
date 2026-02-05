@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(675879),
     o = n(999843),
@@ -47,11 +48,7 @@ var r = n(834647),
                     default:
                         n = 2;
                 }
-                for (r = 0; r < 47; r++)
-                    v.push({
-                        k: t + r,
-                        v: n,
-                    });
+                for (r = 0; r < 47; r++) v.push({ k: t + r, v: n });
             }
             for (
                 v.sort(function (e, t) {
@@ -66,11 +63,7 @@ var r = n(834647),
         }
     });
 r(
-    {
-        target: "Array",
-        proto: !0,
-        forced: A || !_ || !k || !C,
-    },
+    { target: "Array", proto: !0, forced: A || !_ || !k || !C },
     {
         sort: function (e) {
             void 0 !== e && o(e);

@@ -1,83 +1,43 @@
-r.d(t, {
-    A: () => d,
-});
-var n = r(627968),
-    i = r(64700),
-    l = r(311907),
-    a = r(397927),
-    s = r(854627),
-    o = r(560138),
-    c = r(985018),
-    u = r(521512);
-
-function d() {
-    let e = (0, l.bG)([o.A], () => o.A.affinities.slice(0, 3)),
+i.d(t, { A: () => m });
+var r = i(627968),
+    n = i(64700),
+    s = i(311907),
+    a = i(397927),
+    l = i(854627),
+    o = i(560138),
+    c = i(985018),
+    d = i(521512);
+function m() {
+    let e = (0, s.bG)([o.A], () => o.A.affinities.slice(0, 3)),
         t = e[0],
-        { avatarSrc: r, eventHandlers: d } = (0, s.A)({
-            userId: null == t ? void 0 : t.id,
-            size: a._3J.SIZE_24,
-            animateOnHover: !0,
-        }),
-        m = (e) => (null != e.globalName ? e.globalName : e.username),
-        p = i.useMemo(
+        { avatarSrc: i, eventHandlers: m } = (0, l.A)({ userId: t?.id, size: a._3J.SIZE_24, animateOnHover: !0 }),
+        u = (e) => (null != e.globalName ? e.globalName : e.username),
+        x = n.useMemo(
             () =>
                 e.length >= 2
-                    ? c.intl.formatToPlainString(c.t.c7ETJH, {
-                          username: m(e[0]),
-                      })
+                    ? c.intl.formatToPlainString(c.t.c7ETJH, { username: u(e[0]) })
                     : 1 === e.length
-                      ? c.intl.formatToPlainString(c.t.dpjXPL, {
-                            username: m(e[0]),
-                        })
+                      ? c.intl.formatToPlainString(c.t.dpjXPL, { username: u(e[0]) })
                       : "",
             [e],
         );
     return 0 === e.length
         ? null
-        : (0, n.jsxs)("div", {
-              className: u.kL,
+        : (0, r.jsxs)("div", {
+              className: d.kL,
               children: [
-                  (0, n.jsx)(
-                      a.euF,
-                      (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      }),
-                                  )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = r[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: n,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = n);
-                                  });
-                          }
-                          return e;
-                      })(
-                          {
-                              className: u.__invalid_icon,
-                              src: r,
-                              "aria-label": t.username,
-                              size: a._3J.SIZE_24,
-                          },
-                          d,
-                      ),
-                  ),
-                  (0, n.jsx)(a.Text, {
-                      className: u.Qq,
+                  (0, r.jsx)(a.euF, {
+                      className: d.__invalid_icon,
+                      src: i,
+                      "aria-label": t.username,
+                      size: a._3J.SIZE_24,
+                      ...m,
+                  }),
+                  (0, r.jsx)(a.Text, {
+                      className: d.Qq,
                       variant: "text-sm/normal",
                       color: "always-white",
-                      children: p,
+                      children: x,
                   }),
               ],
           });

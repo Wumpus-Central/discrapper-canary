@@ -1,139 +1,63 @@
-n.d(t, {
-    A: () => y,
-    e: () => d,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(611010);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-var d = (function (e) {
-    return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
-})({});
-let f = {},
-    p = {},
-    _ = new Set(),
-    h = {};
-
-function m(e) {
+"use strict";
+n.d(t, { A: () => h, e: () => s });
+var r = n(311907),
+    i = n(73153),
+    a = n(611010),
+    s = (function (e) {
+        return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
+    })({});
+let o = {},
+    l = {},
+    u = new Set(),
+    c = {};
+function d(e) {
     let { applicationId: t } = e;
-    p = u(l({}, p), {
-        [t]: 0,
-    });
+    l = { ...l, [t]: 0 };
 }
-
-function g(e) {
+function _(e) {
     let { application: t } = e;
-    (f = u(l({}, f), {
-        [t.id]: t,
-    })),
-        (p = u(l({}, p), {
-            [t.id]: 1,
-        }));
+    (o = { ...o, [t.id]: t }), (l = { ...l, [t.id]: 1 });
     let n = Date.now();
-    (h = u(l({}, h), {
-        [t.id]: n,
-    })),
-        _.has(t.id) && (_.delete(t.id), (_ = new Set(_)));
+    (c = { ...c, [t.id]: n }), u.has(t.id) && (u.delete(t.id), (u = new Set(u)));
 }
-
-function E(e) {
+function f(e) {
     let { applicationId: t, isInvalidApplication: n } = e;
-    (p = u(l({}, p), {
-        [t]: 2,
-    })),
-        n && (_.add(t), (_ = new Set(_)));
+    (l = { ...l, [t]: 2 }), n && (u.add(t), (u = new Set(u)));
 }
-class b extends (r = i.Ay.Store) {
+class p extends r.Ay.Store {
+    static displayName = "ApplicationDirectoryApplicationsStore";
     getApplication(e) {
-        if (null != e) return f[e];
+        if (null != e) return o[e];
     }
     getApplicationRecord(e) {
         if (null == e) return;
-        let t = f[e];
-        if (null != t) return s.Ay.createFromServer(t);
+        let t = o[e];
+        if (null != t) return a.Ay.createFromServer(t);
     }
     getApplications() {
-        return f;
+        return o;
     }
     getApplicationFetchState(e) {
-        if (null != e) return p[e];
+        if (null != e) return l[e];
     }
     getApplicationFetchStates() {
-        return p;
+        return l;
     }
     isInvalidApplication(e) {
-        return null != e && _.has(e);
+        return null != e && u.has(e);
     }
     getInvalidApplicationIds() {
-        return _;
+        return u;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
     }
     getApplicationLastFetchTime(e) {
-        if (null != e) return h[e];
+        if (null != e) return c[e];
     }
 }
-o(b, "displayName", "ApplicationDirectoryApplicationsStore");
-let y = new b(a.h, {
-    APPLICATION_DIRECTORY_FETCH_APPLICATION: m,
-    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: g,
-    APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: E,
+let h = new p(i.h, {
+    APPLICATION_DIRECTORY_FETCH_APPLICATION: d,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: _,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: f,
 });

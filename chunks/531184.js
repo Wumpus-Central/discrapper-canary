@@ -1,37 +1,21 @@
-n.d(t, {
-    M: () => c,
-}),
-    n(321073);
+"use strict";
+n.d(t, { M: () => l }), n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(499979),
     s = n(156482),
     o = n(652215);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class c {
+class l {
+    current = null;
+    history = [];
+    constructor(e) {
+        null != e && this.update(e);
+    }
     reset(e) {
         (this.current = null), (this.history = []), null != e && this.update(e);
     }
     update(e) {
-        this.current !== e &&
-            ((this.current = e),
-            this.history.push({
-                state: e,
-                startTime: (0, a.tB)(),
-            }));
+        this.current !== e && ((this.current = e), this.history.push({ state: e, startTime: (0, a.tB)() }));
     }
     getVoiceConnectionSuccessStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.tB)(),
@@ -50,20 +34,11 @@ class c {
     }
     getStateDurations(e) {
         if (0 === this.history.length) return [];
-        let t = (0, s.A)(this.history, (e, t) => ({
-                state: e.state,
-                durationMs: t.startTime - e.startTime,
-            })),
+        let t = (0, s.A)(this.history, (e, t) => ({ state: e.state, durationMs: t.startTime - e.startTime })),
             n = () => {
                 let t = i().last(this.history);
-                return {
-                    state: t.state,
-                    durationMs: e - t.startTime,
-                };
+                return { state: t.state, durationMs: e - t.startTime };
             };
         return t.push(n()), t;
-    }
-    constructor(e) {
-        l(this, "current", null), l(this, "history", []), null != e && this.update(e);
     }
 }

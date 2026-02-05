@@ -1,11 +1,7 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { A: () => a }), n(321073);
 var r = n(711371);
 let i = "applicationCommand";
-
 function a(e, t) {
     if (r.VW.areStylesDisabled(e)) return [];
     let [n, a] = t,
@@ -16,14 +12,8 @@ function a(e, t) {
         r.AS.isType(o, i) &&
             n === o.children[0] &&
             s.push({
-                anchor: {
-                    path: a,
-                    offset: 0,
-                },
-                focus: {
-                    path: a,
-                    offset: 0 + o.command.displayName.length + 1,
-                },
+                anchor: { path: a, offset: 0 },
+                focus: { path: a, offset: 0 + o.command.displayName.length + 1 },
                 commandName: !0,
             }),
         s

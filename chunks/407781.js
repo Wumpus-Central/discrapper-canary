@@ -1,24 +1,20 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(457529);
+"use strict";
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(735438),
     s = n(883885),
     o = n.n(s),
     l = n(667050),
-    c = n(194486),
-    u = n(196305);
+    u = n(194486),
+    c = n(196305);
 let d = async (e) => {
-    var t;
-    let { animationType: n, animationId: r, url: i, shouldResize: s } = e,
-        o = null != (t = l.Bf[n]) ? t : l.Bf[c.B.BASIC],
-        u = JSON.parse(JSON.stringify(null != r && r < o.length ? o[r] : (0, a.sample)(o)));
-    return (u.assets[0].p = s ? await (0, l.tm)(i) : i), u;
+    let { animationType: t, animationId: n, url: r, shouldResize: i } = e,
+        s = l.Bf[t] ?? l.Bf[u.B.BASIC],
+        o = JSON.parse(JSON.stringify(null != n && n < s.length ? s[n] : (0, a.sample)(s)));
+    return (o.assets[0].p = i ? await (0, l.tm)(r) : r), o;
 };
-
-function f(e) {
+function _(e) {
     let { containerDimensions: t, effect: n, onComplete: a } = e,
         s = i.useRef(null);
     return (
@@ -34,26 +30,17 @@ function f(e) {
                             loop: !1,
                             autoplay: !0,
                             animationData: t,
-                            rendererSettings: {
-                                preserveAspectRatio: "xMidYMax slice",
-                            },
+                            rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
                         })),
-                            n.animationType === c.B.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener("complete", () => (null == a ? void 0 : a(n.id)));
+                            n.animationType === u.B.PREMIUM && e.setSpeed(0.8),
+                            e.addEventListener("complete", () => a?.(n.id));
                     }
                 })(),
                 () => {
-                    null == e || e.destroy();
+                    e?.destroy();
                 }
             );
         }, [a, n]),
-        (0, r.jsx)("div", {
-            className: u.Q,
-            style: {
-                height: t.height,
-                width: t.width,
-            },
-            ref: s,
-        })
+        (0, r.jsx)("div", { className: c.Q, style: { height: t.height, width: t.width }, ref: s })
     );
 }

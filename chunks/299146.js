@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     if (null == e) return {};
     var n = {};
@@ -8,6 +9,4 @@ function r(e, t) {
         }
     return n;
 }
-n.d(t, {
-    A: () => r,
-});
+n.d(t, { A: () => r });

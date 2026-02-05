@@ -7,16 +7,9 @@ e.exports = function (e) {
                 "some all not if then else true fail false try catch catch_any semidet_true semidet_false semidet_fail impure_true impure semipure",
         },
         n = e.COMMENT("%", "$"),
-        r = {
-            className: "number",
-            begin: "0'.\\|0[box][0-9a-fA-F]*",
-        },
-        i = e.inherit(e.APOS_STRING_MODE, {
-            relevance: 0,
-        }),
-        a = e.inherit(e.QUOTE_STRING_MODE, {
-            relevance: 0,
-        }),
+        r = { className: "number", begin: "0'.\\|0[box][0-9a-fA-F]*" },
+        i = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
+        a = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
         s = {
             className: "subst",
             begin: "\\\\[abfnrtv]\\|\\\\x[0-9a-fA-F]*\\\\\\|%[-+# *.0-9]*[dioxXucsfeEgGp]",
@@ -33,49 +26,22 @@ e.exports = function (e) {
                 {
                     className: "built_in",
                     variants: [
-                        {
-                            begin: "<=>",
-                        },
-                        {
-                            begin: "<=",
-                            relevance: 0,
-                        },
-                        {
-                            begin: "=>",
-                            relevance: 0,
-                        },
-                        {
-                            begin: "/\\\\",
-                        },
-                        {
-                            begin: "\\\\/",
-                        },
+                        { begin: "<=>" },
+                        { begin: "<=", relevance: 0 },
+                        { begin: "=>", relevance: 0 },
+                        { begin: "/\\\\" },
+                        { begin: "\\\\/" },
                     ],
                 },
-                {
-                    className: "built_in",
-                    variants: [
-                        {
-                            begin: ":-\\|--\x3e",
-                        },
-                        {
-                            begin: "=",
-                            relevance: 0,
-                        },
-                    ],
-                },
+                { className: "built_in", variants: [{ begin: ":-\\|--\x3e" }, { begin: "=", relevance: 0 }] },
                 n,
                 e.C_BLOCK_COMMENT_MODE,
                 r,
                 e.NUMBER_MODE,
                 i,
                 a,
-                {
-                    begin: /:-/,
-                },
-                {
-                    begin: /\.$/,
-                },
+                { begin: /:-/ },
+                { begin: /\.$/ },
             ],
         }
     );

@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -25,22 +24,9 @@ let a = function (e) {
                         cursor: "pointer",
                     },
                 },
-                active: {
-                    button: {
-                        boxShadow: "0 0 0 1px #878787",
-                    },
-                },
+                active: { button: { boxShadow: "0 0 0 1px #878787" } },
             },
-            {
-                active: i,
-            },
+            { active: i },
         );
-    return n.createElement(
-        "div",
-        {
-            style: l.button,
-            onClick: t,
-        },
-        r || a,
-    );
+    return n.createElement("div", { style: l.button, onClick: t }, r || a);
 };

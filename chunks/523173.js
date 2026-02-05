@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => A,
-});
+"use strict";
+n.d(t, { A: () => y });
 var r = n(627968);
 n(64700);
 var i = n(73153),
@@ -8,59 +7,36 @@ var i = n(73153),
     s = n(861382),
     o = n(392054),
     l = n(580424),
-    c = n(361670),
-    u = n(631576),
+    u = n(361670),
+    c = n(631576),
     d = n(679382),
-    f = n(842086),
-    p = n(148355),
-    _ = n(248465),
+    _ = n(842086),
+    f = n(148355),
+    p = n(248465),
     h = n(634788),
     m = n(374803),
     g = n(652215),
     E = n(985018);
-let b = 8,
-    y = {
-        results: {
-            command: null,
-            stickers: [],
-        },
-    };
-
-function O(e, t) {
-    return (0, r.jsx)(p.A, {
-        sticker: e,
-        isInteracting: t,
-        size: 40,
-    });
+let A = 8,
+    I = { results: { command: null, stickers: [] } };
+function T(e, t) {
+    return (0, r.jsx)(f.A, { sticker: e, isInteracting: t, size: 40 });
 }
-let A = {
+let y = {
     stores: [d.A],
-    matches(e, t, n, r, i) {
-        var a;
-        return (
-            i.commands !== m.Ze.DISABLED &&
-            i.commands !== m.Ze.OLD_BUILT_INS &&
-            (null == (a = s.A.getActiveCommand(e.id)) ? void 0 : a.integrationType) === g.p_j.STICKER &&
-            s.A.getOptionStates(e.id).query.hasValue
-        );
-    },
+    matches: (e, t, n, r, i) =>
+        i.commands !== m.Ze.DISABLED &&
+        i.commands !== m.Ze.OLD_BUILT_INS &&
+        s.A.getActiveCommand(e.id)?.integrationType === g.p_j.STICKER &&
+        s.A.getOptionStates(e.id).query.hasValue,
     queryResults(e, t, n, r) {
-        var i;
-        let a = null == (i = s.A.getActiveCommand(e.id)) ? void 0 : i.untranslatedName;
-        if (null == a) return y;
-        let o = [];
-        (0, u.YB)();
-        let l = _.Ay.queryStickers([n], !0, [e, (e, t) => t === c.Ux.SENDABLE]),
-            d = Math.max(b);
-        return {
-            results: {
-                command: a,
-                stickers: (o = l.slice(0, d)),
-            },
-            metadata: {
-                numStickerResults: o.length,
-            },
-        };
+        let i = s.A.getActiveCommand(e.id)?.untranslatedName;
+        if (null == i) return I;
+        let a = [];
+        (0, c.YB)();
+        let o = p.Ay.queryStickers([n], !0, [e, (e, t) => t === u.Ux.SENDABLE]),
+            l = Math.max(A);
+        return { results: { command: i, stickers: (a = o.slice(0, l)) }, metadata: { numStickerResults: a.length } };
     },
     renderResults(e) {
         let {
@@ -83,7 +59,7 @@ let A = {
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
                     return {
-                        renderSticker: O,
+                        renderSticker: T,
                         queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                         sticker: n,
                         key: n.id,
@@ -99,53 +75,41 @@ let A = {
             {
                 results: { command: n, stickers: r },
                 index: l,
-                options: c,
-                channel: u,
+                options: u,
+                channel: c,
                 guild: d,
-                queryText: p,
+                queryText: f,
             } = e;
-        if (null == n || l >= r.length)
-            return {
-                type: null,
-            };
-        let _ = s.A.getActiveCommand(u.id);
-        (null == _ ? void 0 : _.inputType) === o.y$.BUILT_IN_INTEGRATION &&
+        if (null == n || l >= r.length) return { type: null };
+        let p = s.A.getActiveCommand(c.id);
+        p?.inputType === o.y$.BUILT_IN_INTEGRATION &&
             (i.h.dispatch({
                 type: "APPLICATION_COMMAND_USED",
-                context: {
-                    channel: u,
-                    guild: d,
-                },
-                command: _,
+                context: { channel: c, guild: d },
+                command: p,
                 commandOrigin: o.iw.CHAT,
             }),
             a.Ay.trackWithMetadata(g.HAw.APPLICATION_COMMAND_USED, {
-                command_id: _.id,
-                application_id: _.applicationId,
-                command_type: _.type,
-                source: s.A.getSource(u.id),
+                command_id: p.id,
+                application_id: p.applicationId,
+                command_type: p.type,
+                source: s.A.getSource(c.id),
             }));
         let h = r[l];
         return (
-            c.sendSticker(h.sticker, f.D6.BUILT_IN_INTEGRATION),
-            h.sticker.type === f.NL.GUILD && (t = h.sticker.guild_id),
+            u.sendSticker(h.sticker, _.D6.BUILT_IN_INTEGRATION),
+            h.sticker.type === _.NL.GUILD && (t = h.sticker.guild_id),
             a.Ay.trackWithMetadata(g.HAw.SEARCH_RESULT_SELECTED, {
                 load_id: h.sticker.id,
                 search_type: g.I4_.STICKER,
-                source_object: "/".concat(n),
+                source_object: `/${n}`,
                 total_results: r.length,
                 index_num: l,
                 expression_guild_id: t,
                 sticker_id: h.sticker.id,
-                query: p,
+                query: f,
             }),
-            {
-                type: m.kc.STICKER,
-                metadata: {
-                    numStickerResults: r.length,
-                    stickerId: h.sticker.id,
-                },
-            }
+            { type: m.kc.STICKER, metadata: { numStickerResults: r.length, stickerId: h.sticker.id } }
         );
     },
 };

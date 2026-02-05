@@ -1,103 +1,83 @@
-n.d(t, {
-    A: () => E,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(417597),
-    o = n(421380),
-    l = n(397927),
+var s = n(503698),
+    r = n.n(s),
+    a = n(417597),
+    l = n(421380),
+    o = n(397927),
     c = n(263063),
-    u = n(509536),
-    d = n(721923),
-    f = n(864310),
-    p = n(71393),
-    _ = n(473145),
-    h = n(652215),
-    m = n(985018),
-    g = n(246930);
-let E = function (e) {
-    let { className: t, guildId: n, boostingVariant: i } = e,
-        E = (0, s.bG)([p.A], () => p.A.getGuild(n), [n]),
-        b = (0, f.A)(null == E ? void 0 : E.id).total;
-    return null == E
-        ? (0, r.jsx)("div", {
-              className: a()(t, g.bo),
-              children: (0, r.jsx)("div", {
-                  className: g.$g,
-                  children: (0, r.jsx)(l.Text, {
-                      variant: "text-lg/bold",
-                      children: m.intl.string(m.t["6Kwwuo"]),
-                  }),
+    d = n(509536),
+    u = n(721923),
+    _ = n(864310),
+    m = n(71393),
+    A = n(473145),
+    g = n(652215),
+    E = n(985018),
+    h = n(246930);
+let p = function (e) {
+    let { className: t, guildId: n, boostingVariant: s } = e,
+        p = (0, a.bG)([m.A], () => m.A.getGuild(n), [n]),
+        C = (0, _.A)(p?.id).total;
+    return null == p
+        ? (0, i.jsx)("div", {
+              className: r()(t, h.bo),
+              children: (0, i.jsx)("div", {
+                  className: h.$g,
+                  children: (0, i.jsx)(o.Text, { variant: "text-lg/bold", children: E.intl.string(E.t["6Kwwuo"]) }),
               }),
           })
-        : (0, r.jsxs)("div", {
-              className: a()(t, g.bo),
+        : (0, i.jsxs)("div", {
+              className: r()(t, h.bo),
               children: [
-                  (0, r.jsx)(c.A, {
-                      className: g.__invalid_guildIcon,
-                      guild: E,
-                      size: c.A.Sizes.LARGER,
-                  }),
-                  (0, r.jsxs)("div", {
-                      className: g.$g,
+                  (0, i.jsx)(c.A, { className: h.__invalid_guildIcon, guild: p, size: c.A.Sizes.LARGER }),
+                  (0, i.jsxs)("div", {
+                      className: h.$g,
                       children: [
-                          (0, r.jsx)(l.Text, {
-                              variant: "text-lg/bold",
-                              children: E.name,
-                          }),
-                          (0, r.jsxs)("div", {
-                              className: g.TZ,
+                          (0, i.jsx)(o.Text, { variant: "text-lg/bold", children: p.name }),
+                          (0, i.jsxs)("div", {
+                              className: h.TZ,
                               children: [
-                                  (0, r.jsx)(l._Jp, {
-                                      color: l.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                      className: g.Me,
+                                  (0, i.jsx)(o._Jp, {
+                                      color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                      className: h.Me,
                                   }),
-                                  (0, r.jsx)(l.Text, {
+                                  (0, i.jsx)(o.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: m.intl.format(m.t["pob/cL"], {
-                                          subscriptions: b,
-                                      }),
+                                      children: E.intl.format(E.t["pob/cL"], { subscriptions: C }),
                                   }),
-                                  (0, r.jsx)("div", {
-                                      className: g.me,
-                                  }),
-                                  (0, r.jsx)(l.Text, {
+                                  (0, i.jsx)("div", { className: h.me }),
+                                  (0, i.jsx)(o.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: (0, _.gb)(E.premiumTier, {
-                                          useLevels: !1,
-                                      }),
+                                      children: (0, A.gb)(p.premiumTier, { useLevels: !1 }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  i
-                      ? (0, r.jsx)(d.A, {
-                            guild: E,
+                  s
+                      ? (0, i.jsx)(u.A, {
+                            guild: p,
                             analyticsLocation: {
-                                page: h.liQ.GUILD_BOOSTING_USER_SETTINGS,
-                                section: h.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                                object: h.ZSU.BUTTON_CTA,
-                                objectType: h.AnalyticsObjectTypes.BUY,
+                                page: g.liQ.GUILD_BOOSTING_USER_SETTINGS,
+                                section: g.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                                object: g.ZSU.BUTTON_CTA,
+                                objectType: g.AnalyticsObjectTypes.BUY,
                             },
                             pauseAnimation: !0,
-                            size: o.$n.Sizes.MEDIUM,
-                            color: o.$n.Colors.PRIMARY,
-                            buttonText: m.intl.string(m.t.aBHecF),
+                            size: l.$n.Sizes.MEDIUM,
+                            color: l.$n.Colors.PRIMARY,
+                            buttonText: E.intl.string(E.t.aBHecF),
                         })
-                      : (0, r.jsx)(l.Button, {
+                      : (0, i.jsx)(o.Button, {
                             variant: "secondary",
-                            text: m.intl.string(m.t.KLOhbO),
+                            text: E.intl.string(E.t.KLOhbO),
                             onClick: () => {
-                                (0, u.K)({
-                                    guildId: E.id,
-                                    location: {
-                                        section: h.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA,
-                                    },
+                                (0, d.K)({
+                                    guildId: p.id,
+                                    location: { section: g.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
                                 });
                             },
                         }),

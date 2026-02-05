@@ -1,317 +1,169 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => B,
-}),
-    n(65821),
-    n(896048);
-var i,
-    a = n(311907),
-    o = n(73153),
+n.d(t, { A: () => U });
+var i = n(311907),
+    a = n(73153),
     s = n(773669),
-    l = n(961350);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function p(e) {
+    o = n(961350);
+function l(e) {
     if (0 === e.length) throw Error("No user IDs provided");
     return e.length > 1 ? [...e].join(",") : e[0];
 }
-let _ = {},
-    h = {},
-    m = {},
-    g = {},
-    E = {},
-    y = {};
-
-function b() {
-    (m = {}), (E = {}), (y = {});
+let u = {},
+    c = {},
+    d = {},
+    _ = {},
+    f = {},
+    p = {};
+function h() {
+    (d = {}), (f = {}), (p = {});
 }
-
-function O(e) {
+function m(e) {
     let { skuId: t } = e;
-    E = f(u({}, E), {
-        [t]: "checking",
-    });
+    f = { ...f, [t]: "checking" };
 }
-
-function v(e) {
+function g(e) {
     let { skuId: t, interactionId: n } = e;
-    if ("checking" !== E[t]) return !1;
-    y[n] = t;
+    if ("checking" !== f[t]) return !1;
+    p[n] = t;
 }
-
-function A(e) {
+function E(e) {
     let { skuId: t } = e;
-    E = f(u({}, E), {
-        [t]: "error",
-    });
+    f = { ...f, [t]: "error" };
 }
-
-function I(e) {
+function A(e) {
     let { skuId: t, recipientId: n, eligible: r } = e;
-    if (l.default.getId() !== n) return !1;
-    E = f(u({}, E), {
-        [t]: r ? "eligible" : "ineligible",
-    });
+    if (o.default.getId() !== n) return !1;
+    f = { ...f, [t]: r ? "eligible" : "ineligible" };
 }
-
-function S(e) {
+function I(e) {
     let { entitlement: t } = e;
-    if (null == E[t.sku_id]) return !1;
-    (E = u({}, E)), delete E[t.sku_id];
+    if (null == f[t.sku_id]) return !1;
+    (f = { ...f }), delete f[t.sku_id];
 }
-
 function T(e) {
     let { interactionId: t } = e;
-    if (null == y[t]) return !1;
-    delete y[t];
+    if (null == p[t]) return !1;
+    delete p[t];
 }
-
-function C(e) {
+function y(e) {
     let { interactionId: t } = e;
     if (null == t) return !1;
-    let n = y[t];
+    let n = p[t];
     if (null == n) return !1;
-    (E = f(u({}, E), {
-        [n]: "error",
-    })),
-        delete y[t];
+    (f = { ...f, [n]: "error" }), delete p[t];
 }
-
-function N() {
-    (E = {}), (y = {});
+function S() {
+    (f = {}), (p = {});
 }
-
-function w(e) {
-    var t;
-    let { applicationId: n, userIds: r } = e;
-    m = f(u({}, m), {
-        [n]: f(u({}, null != (t = m[n]) ? t : {}), {
-            [p(r)]: {
-                state: "loading",
-            },
-        }),
-    });
+function v(e) {
+    let { applicationId: t, userIds: n } = e;
+    d = { ...d, [t]: { ...(d[t] ?? {}), [l(n)]: { state: "loading" } } };
 }
-
-function R(e) {
-    var t;
-    let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: o } = e;
-    m = f(u({}, m), {
-        [a.id]: f(u({}, null != (t = m[a.id]) ? t : {}), {
-            [p(i)]: {
-                state: "success",
-                data: {
-                    skus: n,
-                    skusToRecommendationReasons: r,
-                    numItemsRequested: o,
-                },
-            },
-        }),
-    });
+function C(e) {
+    let { skus: t, skusToRecommendationReasons: n, userIds: r, application: i, numItemsRequested: a } = e;
+    d = {
+        ...d,
+        [i.id]: {
+            ...(d[i.id] ?? {}),
+            [l(r)]: { state: "success", data: { skus: t, skusToRecommendationReasons: n, numItemsRequested: a } },
+        },
+    };
 }
-
-function P(e) {
-    var t;
-    let { applicationId: n, userIds: r } = e,
-        i = p(r);
-    if (null != m[n] && null != m[n][i] && "success" === m[n][i].state) return !1;
-    m = f(u({}, m), {
-        [n]: f(u({}, null != (t = m[n]) ? t : {}), {
-            [i]: {
-                state: "error",
-            },
-        }),
-    });
+function b(e) {
+    let { applicationId: t, userIds: n } = e,
+        r = l(n);
+    if (null != d[t] && null != d[t][r] && "success" === d[t][r].state) return !1;
+    d = { ...d, [t]: { ...(d[t] ?? {}), [r]: { state: "error" } } };
 }
-
-function D(e) {
+function N(e) {
     let { guildId: t } = e,
-        n = h[t];
-    (h[t] = f(u({}, n), {
-        state: "loading",
-    })),
-        (h = u({}, h));
+        n = c[t];
+    (c[t] = { ...n, state: "loading" }), (c = { ...c });
 }
-
-function L(e) {
+function R(e) {
     let { guildId: t, storefront: n } = e;
-    (h[t] = {
-        storefront: n,
-        state: "fetched",
-        fetchedAt: Date.now(),
-    }),
-        (h = u({}, h));
+    (c[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }), (c = { ...c });
 }
-
-function x(e) {
+function O(e) {
     let { guildId: t, storefront: n } = e,
-        r = h[t];
-    (null == r ? void 0 : r.storefront) != null
-        ? (h[t] = f(u({}, r), {
-              storefront: f(u({}, r.storefront), {
-                  assets: u({}, r.storefront.assets, n.assets),
-              }),
-          }))
-        : (h[t] = {
-              storefront: n,
-              state: "partially-fetched",
-              fetchedAt: null,
-          }),
-        (h = u({}, h));
+        r = c[t];
+    r?.storefront != null
+        ? (c[t] = { ...r, storefront: { ...r.storefront, assets: { ...r.storefront.assets, ...n.assets } } })
+        : (c[t] = { storefront: n, state: "partially-fetched", fetchedAt: null }),
+        (c = { ...c });
 }
-
-function M(e) {
+function D(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
-        let e = h[t];
-        (null == e ? void 0 : e.state) === "loading" && (null == e ? void 0 : e.storefront) != null
-            ? (h[t] = f(u({}, e), {
-                  state: "fetched",
-              }))
-            : delete h[t];
-    } else
-        h[t] = {
-            storefront: null,
-            state: "error",
-            fetchedAt: Date.now(),
-        };
-    h = u({}, h);
+        let e = c[t];
+        e?.state === "loading" && e?.storefront != null ? (c[t] = { ...e, state: "fetched" }) : delete c[t];
+    } else c[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
+    c = { ...c };
 }
-
-function j(e) {
+function L(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
-    (_[t] = {
-        activePage: n,
-        activeSkuId: r,
-    }),
-        (_ = u({}, _));
+    (u[t] = { activePage: n, activeSkuId: r }), (u = { ...u });
 }
-
-function k(e) {
+function w(e) {
     let { guildId: t, announcement: n } = e;
-    (g = u({}, g))[t] = {
-        state: "success",
-        announcement: n,
-    };
+    (_ = { ..._ })[t] = { state: "success", announcement: n };
 }
-
-function U(e) {
+function x(e) {
     let { guildId: t } = e;
-    (g = u({}, g))[t] = {
-        state: "error",
-    };
+    (_ = { ..._ })[t] = { state: "error" };
 }
-
-function G(e) {
+function P(e) {
     let { guildId: t } = e;
-    (g = u({}, g))[t] = {
-        state: "loading",
-    };
+    (_ = { ..._ })[t] = { state: "loading" };
 }
-
-function V() {
+function M() {
     if (r === s.default.locale) return !1;
-    (r = s.default.locale), (_ = {}), (h = {}), (m = {});
+    (r = s.default.locale), (u = {}), (c = {}), (d = {});
 }
-class F extends (i = a.Ay.Store) {
+class k extends i.Ay.Store {
+    static displayName = "SocialLayerStorefrontStore";
     initialize() {
-        this.waitFor(l.default, s.default), this.syncWith([s.default], V), (r = s.default.locale);
+        this.waitFor(o.default, s.default), this.syncWith([s.default], M), (r = s.default.locale);
     }
     getStorefrontData(e) {
-        return h[e];
+        return c[e];
     }
     getStorefrontState(e) {
-        return _[e];
+        return u[e];
     }
     recommendationsByApplicationsAndUsers(e, t) {
-        var n;
-        if (null != t && 0 !== t.length) return null == (n = m[e]) ? void 0 : n[p(t)];
+        if (null != t && 0 !== t.length) return d[e]?.[l(t)];
     }
     getAnnouncement(e) {
-        return g[e];
+        return _[e];
     }
     getSKUEligibility(e) {
-        return E[e];
+        return f[e];
     }
     getNormalizedSKUEligibility(e) {
-        return "ineligible" !== E[e];
+        return "ineligible" !== f[e];
     }
 }
-c(F, "displayName", "SocialLayerStorefrontStore");
-let B = new F(o.h, {
-    LOGOUT: b,
-    POST_CONNECTION_OPEN: N,
-    ENTITLEMENT_CREATE: S,
-    INTERACTION_FAILURE: C,
+let U = new k(a.h, {
+    LOGOUT: h,
+    POST_CONNECTION_OPEN: S,
+    ENTITLEMENT_CREATE: I,
+    INTERACTION_FAILURE: y,
     INTERACTION_SUCCESS: T,
-    SOCIAL_LAYER_STOREFRONT_LOAD: D,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: L,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: x,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: M,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: j,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: R,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: P,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: w,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: G,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: k,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: U,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: O,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: v,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: A,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: I,
+    SOCIAL_LAYER_STOREFRONT_LOAD: N,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: R,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: O,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: D,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: L,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: C,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: b,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: v,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: P,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: w,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: x,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: m,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: g,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: E,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: A,
 });

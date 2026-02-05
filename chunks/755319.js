@@ -1,6 +1,4 @@
-i.d(e, {
-    default: () => u,
-});
+i.d(e, { default: () => u });
 var t = i(627968),
     a = i(64700),
     l = i(397927),
@@ -9,17 +7,12 @@ var t = i(627968),
     c = i(253932),
     r = i(957565),
     d = i(985018);
-
 function u(n) {
     let { splashUrl: e, onSelect: i } = n,
         u = c.Q_.useSetting(),
         { tidaWebformEnabled: p } = s.A.useExperiment(
-            {
-                location: "GuildOnboardingSplashContextMenu",
-            },
-            {
-                autoTrackExposure: !1,
-            },
+            { location: "GuildOnboardingSplashContextMenu" },
+            { autoTrackExposure: !1 },
         ),
         g = a.useCallback(() => {
             (0, r.C)(e);
@@ -37,10 +30,7 @@ function u(n) {
                       label: d.intl.string(d.t["8xHmxo"]),
                       action: g,
                       icon: l.qYV,
-                      leadingAccessory: {
-                          type: "icon",
-                          icon: l.qYV,
-                      },
+                      leadingAccessory: { type: "icon", icon: l.qYV },
                   }),
               }),
           })

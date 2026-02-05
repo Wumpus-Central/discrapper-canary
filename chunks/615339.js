@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, {
     CV: () => a,
-    E9: () => y,
-    EB: () => u,
-    Pl: () => b,
+    E9: () => I,
+    EB: () => c,
+    Pl: () => A,
     Wp: () => s,
     eB: () => o,
     fp: () => h,
-    k8: () => _,
-    lT: () => p,
+    k8: () => p,
+    lT: () => f,
     zL: () => m,
 });
 var r = n(476858),
@@ -86,7 +87,7 @@ let a = {
         undici: 11,
         dodici: 12,
     },
-    c = {
+    u = {
         primo: 1,
         secondo: 2,
         terzo: 3,
@@ -119,7 +120,7 @@ let a = {
         trentesimo: 30,
         trentunesimo: 31,
     },
-    u = {
+    c = {
         sec: "second",
         secondo: "second",
         secondi: "second",
@@ -142,8 +143,7 @@ let a = {
         anno: "year",
     },
     d = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}un?)?|un?\\b(?:\\s{0,2}qualcuno)?|qualcuno|molti|a?\\s{0,2}alcuni\\s{0,2}(?:of)?)`;
-
-function f(e) {
+function _(e) {
     let t = e.toLowerCase();
     if (void 0 !== l[t]) return l[t];
     if ("un" === t || "una" === t) return 1;
@@ -153,16 +153,14 @@ function f(e) {
     else if (t.match(/molti/)) return 7;
     return parseFloat(t);
 }
-let p = `(?:${(0, r.uJ)(c)}|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)`;
-
-function _(e) {
+let f = `(?:${(0, r.uJ)(u)}|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)`;
+function p(e) {
     let t = e.toLowerCase();
-    return void 0 !== c[t]
-        ? c[t]
+    return void 0 !== u[t]
+        ? u[t]
         : parseInt((t = t.replace(/(?:imo|ndo|rzo|rto|nto|sto|tavo|nono|cimo|timo|esimo)$/i, "")));
 }
 let h = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])";
-
 function m(e) {
     if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
     if (/BCE?/i.test(e)) return -parseInt((e = e.replace(/BCE?/i, "")));
@@ -170,19 +168,17 @@ function m(e) {
     let t = parseInt(e);
     return (0, i.D)(t);
 }
-let g = `(${d})\\s{0,3}(${(0, r.uJ)(u)})`,
+let g = `(${d})\\s{0,3}(${(0, r.uJ)(c)})`,
     E = RegExp(g, "i"),
-    b = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", g);
-
-function y(e) {
+    A = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", g);
+function I(e) {
     let t = {},
         n = e,
         r = E.exec(n);
-    for (; r; ) O(t, r), (n = n.substring(r[0].length).trim()), (r = E.exec(n));
+    for (; r; ) T(t, r), (n = n.substring(r[0].length).trim()), (r = E.exec(n));
     return t;
 }
-
-function O(e, t) {
-    let n = f(t[1]);
-    e[u[t[2].toLowerCase()]] = n;
+function T(e, t) {
+    let n = _(t[1]);
+    e[c[t[2].toLowerCase()]] = n;
 }

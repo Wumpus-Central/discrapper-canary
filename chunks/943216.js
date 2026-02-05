@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__5b98e",
     R_: "heading__5b98e",

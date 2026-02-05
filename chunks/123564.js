@@ -1,4 +1,2 @@
-e.exports = {
-    k: "container__7bdb0",
-    Z: "appIcon__7bdb0",
-};
+"use strict";
+e.exports = { k: "container__7bdb0", Z: "appIcon__7bdb0" };

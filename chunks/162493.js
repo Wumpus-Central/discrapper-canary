@@ -1,295 +1,216 @@
-n.d(t, {
-    A: () => R,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    a = n(503698),
-    i = n.n(a),
-    s = n(284009),
-    o = n.n(s),
-    c = n(311907),
-    u = n(397927),
-    d = n(608299),
+n.d(t, { A: () => L });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    i = n(284009),
+    o = n.n(i),
+    d = n(311907),
+    c = n(397927),
+    u = n(608299),
     m = n(817363),
-    f = n(23658),
-    p = n(565150),
+    p = n(23658),
+    A = n(565150),
     h = n(851023),
-    b = n(349688),
-    g = n(914905),
+    C = n(349688),
+    E = n(914905),
     x = n(101555),
-    y = n(734057),
-    v = n(31717),
-    j = n(255438),
-    C = n(453771),
-    _ = n(518960),
-    A = n(382287),
-    O = n(207963),
-    E = n(814890),
+    N = n(734057),
+    I = n(31717),
+    _ = n(255438),
+    f = n(453771),
+    g = n(518960),
+    T = n(382287),
+    v = n(207963),
+    j = n(814890),
     S = n(414062),
-    N = n(985018),
-    I = n(784505);
-
-function P(e) {
-    let { dropping: t, fileInputRef: n, minValues: l, maxValues: a, guildId: s } = e,
-        o = (0, C.o2)(s),
-        c = (0, j.Xq)(o / j.XF, {
-            useKibibytes: !0,
-            useSpace: !0,
-        });
-    return (0, r.jsxs)("div", {
-        className: I.pp,
+    O = n(985018),
+    R = n(784505);
+function y(e) {
+    let { dropping: t, fileInputRef: n, minValues: a, maxValues: r, guildId: i } = e,
+        o = (0, f.o2)(i),
+        d = (0, _.Xq)(o / _.XF, { useKibibytes: !0, useSpace: !0 });
+    return (0, l.jsxs)("div", {
+        className: R.pp,
         children: [
-            (0, r.jsxs)("div", {
-                className: i()(I.e8, {
-                    [I.R]: t,
-                }),
+            (0, l.jsxs)("div", {
+                className: s()(R.e8, { [R.R]: t }),
                 children: [
-                    (0, r.jsx)(u.H8$, {
-                        color: u.LU0.colors.ICON_STRONG,
-                        size: "refresh_sm",
-                    }),
-                    (0, r.jsx)(u.Text, {
+                    (0, l.jsx)(c.H8$, { color: c.LU0.colors.ICON_STRONG, size: "refresh_sm" }),
+                    (0, l.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
-                        children: N.intl.format(N.t.y68I8P, {
-                            onClick: () => {
-                                var e;
-                                return null == (e = n.current) ? void 0 : e.activateUploadDialogue();
-                            },
-                            maxValues: a,
+                        children: O.intl.format(O.t.y68I8P, {
+                            onClick: () => n.current?.activateUploadDialogue(),
+                            maxValues: r,
                         }),
                     }),
-                    (0, r.jsx)(u.Text, {
+                    (0, l.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children:
-                            l > 1
-                                ? l === a
-                                    ? N.intl.format(N.t.SAr31z, {
-                                          minValues: l,
-                                          maxSize: c,
-                                      })
-                                    : N.intl.format(N.t["ZG+3Ck"], {
-                                          minValues: l,
-                                          maxValues: a,
-                                          maxSize: c,
-                                      })
-                                : N.intl.format(N.t.tyxwW1, {
-                                      maxValues: a,
-                                      maxSize: c,
-                                  }),
+                            a > 1
+                                ? a === r
+                                    ? O.intl.format(O.t.SAr31z, { minValues: a, maxSize: d })
+                                    : O.intl.format(O.t["ZG+3Ck"], { minValues: a, maxValues: r, maxSize: d })
+                                : O.intl.format(O.t.tyxwW1, { maxValues: r, maxSize: d }),
                     }),
                 ],
             }),
             t &&
-                (0, r.jsxs)("div", {
-                    className: i()(I.e8, I.r$),
+                (0, l.jsxs)("div", {
+                    className: s()(R.e8, R.r$),
                     children: [
-                        (0, r.jsx)(u.H8$, {
-                            color: u.LU0.colors.ICON_STRONG,
-                            size: "refresh_sm",
-                        }),
-                        (0, r.jsx)(u.Text, {
+                        (0, l.jsx)(c.H8$, { color: c.LU0.colors.ICON_STRONG, size: "refresh_sm" }),
+                        (0, l.jsx)(c.Text, {
                             variant: "text-md/normal",
                             color: "text-strong",
-                            children: N.intl.string(N.t["8OJlsH"]),
+                            children: O.intl.string(O.t["8OJlsH"]),
                         }),
                     ],
                 }),
         ],
     });
 }
-
-function w() {
-    return (0, r.jsxs)("div", {
-        className: i()(I.pp, I.e8),
+function b() {
+    return (0, l.jsxs)("div", {
+        className: s()(R.pp, R.e8),
         children: [
-            (0, r.jsx)(u.yr3, {
-                color: u.LU0.colors.ICON_STRONG,
-                size: "refresh_sm",
-            }),
-            (0, r.jsx)(u.Text, {
+            (0, l.jsx)(c.yr3, { color: c.LU0.colors.ICON_STRONG, size: "refresh_sm" }),
+            (0, l.jsx)(c.Text, {
                 variant: "text-md/normal",
                 color: "text-strong",
-                children: N.intl.string(N.t["0PhgpK"]),
+                children: O.intl.string(O.t["0PhgpK"]),
             }),
-            (0, r.jsx)(u.Text, {
-                variant: "text-xs/normal",
-                color: "text-muted",
-                children: N.intl.string(N.t.HYg2Hn),
-            }),
+            (0, l.jsx)(c.Text, { variant: "text-xs/normal", color: "text-muted", children: O.intl.string(O.t.HYg2Hn) }),
         ],
     });
 }
-
-function T(e) {
-    var t;
-    let { upload: n, handleRemoveFile: l, singleFileInput: a } = e;
-    return (0, r.jsxs)(
+function P(e) {
+    let { upload: t, handleRemoveFile: n, singleFileInput: a } = e;
+    return (0, l.jsxs)(
         "div",
         {
-            className: i()(I.NJ, {
-                [I.j1]: a,
-            }),
+            className: s()(R.NJ, { [R.j1]: a }),
             children: [
-                (0, r.jsx)(g.J, {
-                    upload: n,
-                    size: a ? b.L.XSMALL : b.L.XXSMALL,
+                (0, l.jsx)(E.J, { upload: t, size: a ? C.L.XSMALL : C.L.XXSMALL }),
+                (0, l.jsx)(c.Text, {
+                    variant: `text-${a ? "md" : "xs"}/medium`,
+                    className: R.iW,
+                    children: t.filename ?? O.intl.string(O.t.ZMirp0),
                 }),
-                (0, r.jsx)(u.Text, {
-                    variant: "text-".concat(a ? "md" : "xs", "/medium"),
-                    className: I.iW,
-                    children: null != (t = n.filename) ? t : N.intl.string(N.t.ZMirp0),
-                }),
-                (0, r.jsx)(x.Ay, {
-                    className: I.BX,
-                    children: (0, r.jsx)(h.A, {
-                        className: I.XI,
-                        tooltip: N.intl.string(N.t.N86XcP),
-                        onClick: () => l(n.id),
+                (0, l.jsx)(x.Ay, {
+                    className: R.BX,
+                    children: (0, l.jsx)(h.A, {
+                        className: R.XI,
+                        tooltip: O.intl.string(O.t.N86XcP),
+                        onClick: () => n(t.id),
                         dangerous: !0,
-                        children: (0, r.jsx)(u.ucK, {
-                            size: "xs",
-                            color: "currentColor",
-                            className: I.gE,
-                        }),
+                        children: (0, l.jsx)(c.ucK, { size: "xs", color: "currentColor", className: R.gE }),
                     }),
                 }),
             ],
         },
-        n.id,
+        t.id,
     );
 }
-
-function R(e) {
-    var t;
-    let { minValues: n, maxValues: a } = e,
-        s = l.useRef(null),
-        u = l.useRef(null),
-        [h, b] = l.useState(!1),
-        g = (0, O.jc)();
-    o()(null != g, "FileUploadActionComponent must be used within a ComponentStateContextProvider");
-    let x = g.channelId;
-    o()(null != x, "FileUploadActionComponent must be used inside a channel");
-    let j = null == (t = g.modal) ? void 0 : t.customId;
-    o()(null != j, "FileUploadActionComponent requires modalCustomId from context");
-    let { uploadIds: C, setUploadIds: R, currentUploads: L, error: D } = (0, S.j)(e),
-        k = (0, c.bG)([y.A], () => y.A.getBasicChannel(x));
-    o()(null != k, "FileUploadActionComponent requires a valid channel");
-    let M = l.useCallback((e) => {
-            var t;
-            e.preventDefault(), (null == (t = e.dataTransfer) ? void 0 : t.types.includes("Files")) && b(!0);
+function L(e) {
+    let { minValues: t, maxValues: n } = e,
+        r = a.useRef(null),
+        i = a.useRef(null),
+        [c, h] = a.useState(!1),
+        C = (0, v.jc)();
+    o()(null != C, "FileUploadActionComponent must be used within a ComponentStateContextProvider");
+    let E = C.channelId;
+    o()(null != E, "FileUploadActionComponent must be used inside a channel");
+    let x = C.modal?.customId;
+    o()(null != x, "FileUploadActionComponent requires modalCustomId from context");
+    let { uploadIds: _, setUploadIds: f, currentUploads: L, error: D } = (0, S.j)(e),
+        U = (0, d.bG)([N.A], () => N.A.getBasicChannel(E));
+    o()(null != U, "FileUploadActionComponent requires a valid channel");
+    let k = a.useCallback((e) => {
+            e.preventDefault(), e.dataTransfer?.types.includes("Files") && h(!0);
         }, []),
-        H = l.useCallback((e) => {
-            var t;
-            (null != (t = u.current) && t.contains(e.relatedTarget)) || b(!1);
+        w = a.useCallback((e) => {
+            i.current?.contains(e.relatedTarget) || h(!1);
         }, []),
-        U = l.useCallback(
+        M = a.useCallback(
             (e, t) => {
                 if (0 === e.length) return;
-                if (C.length + e.length > a)
-                    return (0, f.openUploadError)({
-                        title: N.intl.string(N.t.wOr6hB),
-                        help: N.intl.formatToPlainString(N.t.dy6viJ, {
-                            maxValues: a,
-                        }),
+                if (_.length + e.length > n)
+                    return (0, p.openUploadError)({
+                        title: O.intl.string(O.t.wOr6hB),
+                        help: O.intl.formatToPlainString(O.t.dy6viJ, { maxValues: n }),
                     });
-                if ((0, A.fJ)(e, k.guild_id)) return (0, _.V)(k, e);
-                let n = e.map((e) => {
-                    let n = (0, E.so)(j),
-                        r = {
-                            id: n,
-                            file: e,
-                            platform: p.xz.WEB,
-                            origin: t,
-                        };
+                if ((0, T.fJ)(e, U.guild_id)) return (0, g.V)(U, e);
+                let l = e.map((e) => {
+                    let n = (0, j.so)(x),
+                        l = { id: n, file: e, platform: A.xz.WEB, origin: t };
                     return (
-                        d.A.setFile({
-                            channelId: x,
+                        u.A.setFile({
+                            channelId: E,
                             id: n,
-                            file: r,
-                            draftType: v.C.InteractionModal,
+                            file: l,
+                            draftType: I.C.InteractionModal,
                             allowOptimization: !1,
                         }),
                         n
                     );
                 });
-                R(C.concat(n));
+                f(_.concat(l));
             },
-            [C, a, k, R, j, x],
+            [_, n, U, f, x, E],
         ),
-        F = l.useCallback(
+        H = a.useCallback(
             (e) => {
-                var t, n;
-                e.preventDefault(),
-                    b(!1),
-                    U(Array.from(null != (t = null == (n = e.dataTransfer) ? void 0 : n.files) ? t : []), "drag_drop");
+                e.preventDefault(), h(!1), M(Array.from(e.dataTransfer?.files ?? []), "drag_drop");
             },
-            [U],
+            [M],
         ),
-        G = (e) => {
-            d.A.remove(x, e, v.C.InteractionModal), R(C.filter((t) => t !== e));
+        K = (e) => {
+            u.A.remove(E, e, I.C.InteractionModal), f(_.filter((t) => t !== e));
         };
-    return (l.useEffect(() => {
-        let e = u.current;
+    return (a.useEffect(() => {
+        let e = i.current;
         return (
-            null == e || e.addEventListener("dragover", M),
-            null == e || e.addEventListener("dragleave", H),
-            null == e || e.addEventListener("drop", F),
+            e?.addEventListener("dragover", k),
+            e?.addEventListener("dragleave", w),
+            e?.addEventListener("drop", H),
             () => {
-                null == e || e.removeEventListener("dragover", M),
-                    null == e || e.removeEventListener("dragleave", H),
-                    null == e || e.removeEventListener("drop", F);
+                e?.removeEventListener("dragover", k),
+                    e?.removeEventListener("dragleave", w),
+                    e?.removeEventListener("drop", H);
             }
         );
-    }, [M, H, F]),
-    1 === a && 1 === L.length)
-        ? (0, r.jsx)(T, {
-              upload: L[0],
-              handleRemoveFile: G,
-              singleFileInput: !0,
-          })
-        : (0, r.jsxs)("div", {
-              ref: u,
-              className: i()(I.kL, {
-                  [I.Ke]: h,
-                  [I.z3]: null != D,
-              }),
+    }, [k, w, H]),
+    1 === n && 1 === L.length)
+        ? (0, l.jsx)(P, { upload: L[0], handleRemoveFile: K, singleFileInput: !0 })
+        : (0, l.jsxs)("div", {
+              ref: i,
+              className: s()(R.kL, { [R.Ke]: c, [R.z3]: null != D }),
               children: [
-                  C.length >= a
-                      ? (0, r.jsx)(w, {})
-                      : (0, r.jsx)(P, {
-                            dropping: h,
-                            fileInputRef: s,
-                            minValues: n,
-                            maxValues: a,
-                            guildId: k.guild_id,
+                  _.length >= n
+                      ? (0, l.jsx)(b, {})
+                      : (0, l.jsx)(y, {
+                            dropping: c,
+                            fileInputRef: r,
+                            minValues: t,
+                            maxValues: n,
+                            guildId: U.guild_id,
                         }),
                   L.length > 0 &&
-                      (0, r.jsx)("div", {
-                          className: I.aq,
-                          children: L.map((e) =>
-                              (0, r.jsx)(
-                                  T,
-                                  {
-                                      upload: e,
-                                      handleRemoveFile: G,
-                                  },
-                                  e.id,
-                              ),
-                          ),
+                      (0, l.jsx)("div", {
+                          className: R.aq,
+                          children: L.map((e) => (0, l.jsx)(P, { upload: e, handleRemoveFile: K }, e.id)),
                       }),
-                  (0, r.jsx)(m.A, {
-                      ref: s,
+                  (0, l.jsx)(m.A, {
+                      ref: r,
                       onChange: (e) => {
-                          var t;
-                          U(Array.from(null != (t = e.currentTarget.files) ? t : []), "file_picker"),
-                              (e.currentTarget.value = "");
+                          M(Array.from(e.currentTarget.files ?? []), "file_picker"), (e.currentTarget.value = "");
                       },
-                      multiple: a > 1,
+                      multiple: n > 1,
                       tabIndex: -1,
-                      className: I.Fg,
+                      className: R.Fg,
                   }),
               ],
           });

@@ -1,77 +1,41 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(397927),
-    c = n(311907),
-    o = n(585958),
-    d = n(760751),
+    o = n(311907),
+    d = n(585958),
+    c = n(760751),
     u = n(677230);
-
-function f(e) {
-    let { applicationId: t, selected: n, onClick: l, disabled: f } = e,
-        { isFetching: g, coverImageUrl: b } = (0, o.n)(t, {
-            coverImageSize: 256,
-        }),
-        m = (0, c.bG)([d.A], () => {
-            var e, n;
-            return null != (e = null == (n = d.A.getDetectableGame(t)) ? void 0 : n.name) ? e : "";
-        }),
-        p = i.useCallback(() => {
-            null == l || l(t);
+function m(e) {
+    let { applicationId: t, selected: n, onClick: l, disabled: m } = e,
+        { isFetching: g, coverImageUrl: x } = (0, d.n)(t, { coverImageSize: 256 }),
+        h = (0, o.bG)([c.A], () => c.A.getDetectableGame(t)?.name ?? ""),
+        _ = s.useCallback(() => {
+            l?.(t);
         }, [t, l]),
-        x = i.useMemo(
+        A = s.useMemo(
             () =>
                 g
                     ? null
-                    : null == b
-                      ? (0, r.jsx)("div", {
-                            className: u.gP,
-                            children: (0, r.jsx)(a._7Z, {
-                                size: "lg",
-                            }),
-                        })
-                      : (0, r.jsx)("img", {
-                            className: u.Su,
-                            alt: m,
-                            src: b,
-                        }),
-            [b, g, m],
+                    : null == x
+                      ? (0, i.jsx)("div", { className: u.gP, children: (0, i.jsx)(a._7Z, { size: "lg" }) })
+                      : (0, i.jsx)("img", { className: u.Su, alt: h, src: x }),
+            [x, g, h],
         );
-    return (0, r.jsxs)("div", {
-        className: s()(u.id, {
-            [u.rX]: !n,
-            [u.r9]: f,
-        }),
+    return (0, i.jsxs)("div", {
+        className: r()(u.id, { [u.rX]: !n, [u.r9]: m }),
         children: [
-            (0, r.jsxs)(a.DUT, {
-                "aria-disabled": f,
-                tabIndex: f ? -1 : 0,
-                onClick: f ? void 0 : p,
-                className: s()(u.a8, {
-                    [u.AL]: g,
-                    [u.r9]: f,
-                }),
-                children: [
-                    n &&
-                        (0, r.jsx)("div", {
-                            className: u.jK,
-                            children: (0, r.jsx)(a.P7L, {
-                                checked: n,
-                            }),
-                        }),
-                    x,
-                ],
+            (0, i.jsxs)(a.DUT, {
+                "aria-disabled": m,
+                tabIndex: m ? -1 : 0,
+                onClick: m ? void 0 : _,
+                className: r()(u.a8, { [u.AL]: g, [u.r9]: m }),
+                children: [n && (0, i.jsx)("div", { className: u.jK, children: (0, i.jsx)(a.P7L, { checked: n }) }), A],
             }),
-            (0, r.jsx)(a.Text, {
-                className: u.mO,
-                variant: "text-xs/medium",
-                color: "text-strong",
-                children: m,
-            }),
+            (0, i.jsx)(a.Text, { className: u.mO, variant: "text-xs/medium", color: "text-strong", children: h }),
         ],
     });
 }

@@ -1,9 +1,7 @@
-n.d(t, {
-    F: () => a,
-});
+"use strict";
+n.d(t, { F: () => a });
 var r = n(959462),
     i = n(64700);
-
 function a(e, t, n) {
     let a = (0, r.J)(() => {
         n && n(t);

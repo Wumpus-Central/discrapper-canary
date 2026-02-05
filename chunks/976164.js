@@ -1,3 +1,1 @@
-t.exports = {
-    d: "teamSetup__28362",
-};
+t.exports = { d: "teamSetup__28362" };

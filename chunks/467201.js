@@ -1,56 +1,42 @@
-n.d(t, {
-    A: () => O,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => C });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(804052),
-    c = n(783592),
-    u = n(351906),
-    d = n(287809),
-    p = n(609276),
-    f = n(67480),
-    h = n(328968),
-    A = n(371794),
-    g = n(681613),
-    m = n(110434),
-    b = n(985018),
-    _ = n(589757);
-class E extends i.Component {
+    d = n(783592),
+    c = n(351906),
+    u = n(287809),
+    A = n(609276),
+    h = n(67480),
+    _ = n(328968),
+    m = n(371794),
+    p = n(681613),
+    g = n(110434),
+    E = n(985018),
+    f = n(589757);
+class I extends r.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
             ? null
-            : (0, r.jsx)("div", {
-                  className: _.uW,
-                  children: (0, r.jsxs)("div", {
-                      className: _.f5,
+            : (0, i.jsx)("div", {
+                  className: f.uW,
+                  children: (0, i.jsxs)("div", {
+                      className: f.f5,
                       children: [
                           e.map((e) =>
-                              (0, r.jsx)(
+                              (0, i.jsx)(
                                   "div",
                                   {
-                                      className: _.zA,
-                                      children: (0, r.jsx)(g.A, {
-                                          reason: e,
-                                          hidePersonalInformation: n,
-                                      }),
+                                      className: f.zA,
+                                      children: (0, i.jsx)(p.A, { reason: e, hidePersonalInformation: n }),
                                   },
                                   e.type,
                               ),
                           ),
                           t.map((e) =>
-                              (0, r.jsx)(
-                                  "div",
-                                  {
-                                      className: _.zA,
-                                      children: (0, r.jsx)(o.A, {
-                                          reason: e,
-                                      }),
-                                  },
-                                  e.type,
-                              ),
+                              (0, i.jsx)("div", { className: f.zA, children: (0, i.jsx)(o.A, { reason: e }) }, e.type),
                           ),
                       ],
                   }),
@@ -58,46 +44,33 @@ class E extends i.Component {
     }
     getReviewToRender() {
         let { storeListing: e } = this.props;
-        return null != e.staffNotes
-            ? {
-                  type: m.A.Types.STAFF_NOTES,
-                  staffNotes: e.staffNotes,
-              }
-            : null;
+        return null != e.staffNotes ? { type: g.A.Types.STAFF_NOTES, staffNotes: e.staffNotes } : null;
     }
     render() {
         let {
             socialReasons: e,
             nonSocialReasons: t,
             storeListing: n,
-            hidePersonalInformation: i,
-            className: l,
+            hidePersonalInformation: r,
+            className: a,
         } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
         let s = this.getReviewToRender();
-        return (0, r.jsxs)("div", {
-            className: a()(_.zr, l),
+        return (0, i.jsxs)("div", {
+            className: l()(f.zr, a),
             children: [
-                (0, r.jsx)("div", {
-                    className: _.wx,
-                    children: b.intl.string(b.t.qABFpX),
-                }),
-                this.renderReasons(e, t, i),
-                null != s
-                    ? (0, r.jsx)(m.A, {
-                          data: s,
-                          className: _.NQ,
-                      })
-                    : null,
+                (0, i.jsx)("div", { className: f.wx, children: E.intl.string(E.t.qABFpX) }),
+                this.renderReasons(e, t, r),
+                null != s ? (0, i.jsx)(g.A, { data: s, className: f.NQ }) : null,
             ],
         });
     }
 }
-let O = s.Ay.connectStores([f.A, d.default, h.A, c.A, p.A, u.A], (e) => {
+let C = s.Ay.connectStores([h.A, u.default, _.A, d.A, A.A, c.A], (e) => {
     let { sku: t } = e;
     return {
-        socialReasons: (0, A.my)(t.id, f.A, d.default, c.A, p.A),
-        nonSocialReasons: (0, A.ZH)(t.id, f.A, h.A),
-        hidePersonalInformation: u.A.hidePersonalInformation,
+        socialReasons: (0, m.my)(t.id, h.A, u.default, d.A, A.A),
+        nonSocialReasons: (0, m.ZH)(t.id, h.A, _.A),
+        hidePersonalInformation: c.A.hidePersonalInformation,
     };
-})(E);
+})(I);

@@ -1,16 +1,12 @@
-n.d(t, {
-    A: () => c,
-    q: () => o,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(397927),
-    a = n(915089),
+n.d(t, { A: () => d, q: () => o });
+var i = n(627968),
+    r = n(64700),
+    a = n(397927),
+    l = n(915089),
     s = n(850474);
-
 function o(e) {
     let { children: t, id: n } = e;
-    return (0, r.jsx)(l.Text, {
+    return (0, i.jsx)(a.Text, {
         className: s.g,
         color: "text-subtle",
         id: n,
@@ -18,21 +14,16 @@ function o(e) {
         children: t,
     });
 }
-let c = function (e) {
+let d = function (e) {
     let { children: t, renderPopout: n } = e,
-        o = (0, a.GV)(),
-        c = i.useRef(null);
-    return (0, r.jsx)(l.YNO, {
+        o = (0, l.GV)(),
+        d = r.useRef(null);
+    return (0, i.jsx)(a.YNO, {
         align: "right",
         position: "bottom",
-        renderPopout: (e) =>
-            (0, r.jsx)(l.lGe, {
-                className: s.S,
-                "aria-labelledby": o,
-                children: n(e, o),
-            }),
+        renderPopout: (e) => (0, i.jsx)(a.lGe, { className: s.S, "aria-labelledby": o, children: n(e, o) }),
         scrollBehavior: "close",
-        targetElementRef: c,
-        children: (e) => t(e, c),
+        targetElementRef: d,
+        children: (e) => t(e, d),
     });
 };

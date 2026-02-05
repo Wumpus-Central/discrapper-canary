@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     jr: "headerBar__80679",
     vi: "headerBarInner__80679",

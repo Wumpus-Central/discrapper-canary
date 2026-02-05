@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     cardIcon: "cardIcon__29abc",
     visa: "visa__29abc",

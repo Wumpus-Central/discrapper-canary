@@ -1,81 +1,60 @@
-c.d(e, {
-    A: () => s,
-});
-var a = c(627968);
-c(64700);
-var t = c(653812);
-let s = (r) => {
+a.d(e, { A: () => c });
+var s = a(627968);
+a(64700);
+var t = a(653812);
+let c = (r) => {
     let {
             innerRingPercent: e,
-            outerRingColor: c = "currentColor",
-            innerRingColor: s = "currentColor",
-            strokeWidth: o = 4,
-            children: l,
-            backgroundCircleColor: n,
-            backgroundCircleBlurAmount: i = 0,
+            outerRingColor: a = "currentColor",
+            innerRingColor: c = "currentColor",
+            strokeWidth: l = 4,
+            children: o,
+            backgroundCircleColor: i,
+            backgroundCircleBlurAmount: n = 0,
         } = r,
         d = Math.min(Math.max(e, 0), 100),
-        h = (100 - o) / 2,
-        u = h * Math.PI * 2,
-        x = (100 - o) / 2,
-        k = x * Math.PI * 2;
-    return (0, a.jsxs)("div", {
+        u = (100 - l) / 2,
+        h = u * Math.PI * 2,
+        v = (100 - l) / 2,
+        x = v * Math.PI * 2;
+    return (0, s.jsxs)("div", {
         className: t.kL,
         children: [
-            (0, a.jsx)("svg", {
-                viewBox: "0 0 ".concat(100, " ").concat(100),
+            (0, s.jsx)("svg", {
+                viewBox: "0 0 100 100",
                 className: t.DT,
-                style:
-                    null != i
-                        ? {
-                              "--custom-backdrop-blur-amount": "".concat(i, "px"),
-                          }
-                        : void 0,
-                children: (0, a.jsx)("circle", {
-                    cx: 50,
-                    cy: 50,
-                    r: 50,
-                    fill: n,
-                }),
+                style: null != n ? { "--custom-backdrop-blur-amount": `${n}px` } : void 0,
+                children: (0, s.jsx)("circle", { cx: 50, cy: 50, r: 50, fill: i }),
             }),
-            (0, a.jsxs)("svg", {
-                viewBox: "0 0 ".concat(100, " ").concat(100),
+            (0, s.jsxs)("svg", {
+                viewBox: "0 0 100 100",
                 className: t.JW,
                 children: [
-                    (0, a.jsx)("circle", {
+                    (0, s.jsx)("circle", {
                         cx: 50,
                         cy: 50,
-                        r: h,
-                        strokeWidth: o,
+                        r: u,
+                        strokeWidth: l,
+                        stroke: a,
+                        fill: "none",
+                        strokeLinecap: "round",
+                        transform: "rotate(-90 50 50)",
+                        style: { strokeDasharray: h },
+                    }),
+                    (0, s.jsx)("circle", {
+                        cx: 50,
+                        cy: 50,
+                        r: v,
+                        strokeWidth: l,
                         stroke: c,
                         fill: "none",
                         strokeLinecap: "round",
-                        transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),
-                        style: {
-                            strokeDasharray: u,
-                        },
-                    }),
-                    (0, a.jsx)("circle", {
-                        cx: 50,
-                        cy: 50,
-                        r: x,
-                        strokeWidth: o,
-                        stroke: s,
-                        fill: "none",
-                        strokeLinecap: "round",
-                        transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),
-                        style: {
-                            strokeDasharray: k,
-                            strokeDashoffset: (1 - d / 100) * k,
-                        },
+                        transform: "rotate(-90 50 50)",
+                        style: { strokeDasharray: x, strokeDashoffset: (1 - d / 100) * x },
                     }),
                 ],
             }),
-            null != l &&
-                (0, a.jsx)("div", {
-                    className: t.Lw,
-                    children: l,
-                }),
+            null != o && (0, s.jsx)("div", { className: t.Lw, children: o }),
         ],
     });
 };

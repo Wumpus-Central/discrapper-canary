@@ -1,3 +1,4 @@
+"use strict";
 var n = r(378555),
     i = r(954055),
     o = r(595042),
@@ -37,9 +38,7 @@ var n = r(378555),
             if (!d) {
                 var e = p(g).stopAndFlushMutations();
                 (g = null), (h = !0);
-                var r = a.set(t._latestEditorState, {
-                    inCompositionMode: !1,
-                });
+                var r = a.set(t._latestEditorState, { inCompositionMode: !1 });
                 if ((t.exitCurrentMode(), !e.size)) return void t.update(r);
                 var n = r.getCurrentContent();
                 e.forEach(function (t, e) {
@@ -50,19 +49,12 @@ var n = r(378555),
                         p = r.getBlockTree(u).getIn([c, "leaves", l]),
                         h = p.start,
                         d = p.end,
-                        g = r.getSelection().merge({
-                            anchorKey: u,
-                            focusKey: u,
-                            anchorOffset: h,
-                            focusOffset: d,
-                            isBackward: !1,
-                        }),
+                        g = r
+                            .getSelection()
+                            .merge({ anchorKey: u, focusKey: u, anchorOffset: h, focusOffset: d, isBackward: !1 }),
                         y = f(n, g),
                         v = n.getBlockForKey(u).getInlineStyleAt(h);
-                    (n = i.replaceText(n, g, t, v, y)),
-                        (r = a.set(r, {
-                            currentContent: n,
-                        }));
+                    (n = i.replaceText(n, g, t, v, y)), (r = a.set(r, { currentContent: n }));
                 });
                 var s = l(r, c(t)).selectionState;
                 t.restoreEditorDOM();

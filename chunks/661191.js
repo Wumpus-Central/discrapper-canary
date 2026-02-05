@@ -1,13 +1,8 @@
-n.r(t),
-    n.d(t, {
-        DISCORD_EPOCH: () => a.ZY,
-        SnowflakeSequence: () => a.gg,
-        default: () => o,
-    });
+"use strict";
+n.r(t), n.d(t, { DISCORD_EPOCH: () => a.ZY, SnowflakeSequence: () => a.gg, default: () => o });
 var r = n(735438),
     i = n.n(r),
     a = n(363270);
-
 function s(e) {
     return e;
 }

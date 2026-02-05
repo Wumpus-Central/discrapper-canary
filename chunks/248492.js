@@ -1,79 +1,62 @@
-n.d(t, {
-    A: () => f,
-});
+n.d(t, { A: () => p });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(692617),
+    a = n(64700),
+    i = n(311907),
+    r = n(692617),
     s = n(397927),
-    o = n(824552),
-    c = n(573435),
-    d = n(973172),
-    u = n(186272),
+    d = n(824552),
+    o = n(573435),
+    u = n(973172),
+    c = n(186272),
     m = n(546183),
-    b = n(661191),
-    p = n(985018),
-    x = n(449154),
-    g = n(532406);
-let f = (e) => {
-    var t, n;
-    let { entry: f } = e,
-        { name: v } = f,
-        h = (0, a.bG)([m.default], () => m.default.getNewestTokenForApplication(f.id)),
-        j = null != (t = f.getIconURL(40)) ? t : g,
-        _ = (0, d.A)({
-            application: f,
-        }),
-        A = r.useRef(!1);
-    r.useEffect(() => {
-        A.current || (o.A.fetch(), (A.current = !0));
+    _ = n(661191),
+    x = n(985018),
+    g = n(449154),
+    h = n(532406);
+let p = (e) => {
+    let { entry: t } = e,
+        { name: n } = t,
+        p = (0, i.bG)([m.default], () => m.default.getNewestTokenForApplication(t.id)),
+        A = t.getIconURL(40) ?? h,
+        b = (0, u.A)({ application: t }),
+        v = a.useRef(!1);
+    a.useEffect(() => {
+        v.current || (d.A.fetch(), (v.current = !0));
     }, []);
-    let y = null != h ? b.default.extractTimestamp(h.id) : void 0;
+    let f = null != p ? _.default.extractTimestamp(p.id) : void 0;
     return (0, l.jsxs)("div", {
-        className: x.kL,
+        className: g.kL,
         children: [
             (0, l.jsx)(s.Heading, {
-                className: x.wx,
+                className: g.wx,
                 variant: "heading-sm/semibold",
-                children: p.intl.string(p.t["aYfK/w"]),
+                children: x.intl.string(x.t["aYfK/w"]),
             }),
             (0, l.jsx)("div", {
-                className: x.vU,
+                className: g.vU,
                 children: (0, l.jsxs)("div", {
-                    className: x.qi,
+                    className: g.qi,
                     children: [
-                        (0, l.jsx)(c.Ay, {
-                            mask: c.Ay.Masks.AVATAR_DEFAULT,
+                        (0, l.jsx)(o.Ay, {
+                            mask: o.Ay.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: x.VE,
-                            children: (0, l.jsx)("img", {
-                                src: j,
-                                alt: "",
-                                className: x.Z2,
-                            }),
+                            className: g.VE,
+                            children: (0, l.jsx)("img", { src: A, alt: "", className: g.Z2 }),
                         }),
                         (0, l.jsxs)("div", {
-                            className: x.FS,
+                            className: g.FS,
                             children: [
-                                (0, l.jsx)(s.Text, {
-                                    color: "text-strong",
-                                    variant: "text-md/medium",
-                                    children: v,
-                                }),
-                                _.length > 0
+                                (0, l.jsx)(s.Text, { color: "text-strong", variant: "text-md/medium", children: n }),
+                                b.length > 0
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: (0, u.A)(_.length),
+                                                  children: (0, c.A)(b.length),
                                               }),
-                                              (0, l.jsx)(i.A, {
-                                                  className: x.uM,
-                                                  guilds: _,
-                                                  maxGuilds: 6,
-                                              }),
+                                              (0, l.jsx)(r.A, { className: g.uM, guilds: b, maxGuilds: 6 }),
                                           ],
                                       })
                                     : (0, l.jsxs)(l.Fragment, {
@@ -81,14 +64,14 @@ let f = (e) => {
                                               (0, l.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: null == (n = f.bot) ? void 0 : n.tag,
+                                                  children: t.bot?.tag,
                                               }),
-                                              null != y &&
+                                              null != f &&
                                                   (0, l.jsx)(s.Text, {
                                                       color: "text-default",
                                                       variant: "text-md/normal",
-                                                      children: p.intl.formatToPlainString(p.t.C9rUO8, {
-                                                          authorizedAt: y,
+                                                      children: x.intl.formatToPlainString(x.t.C9rUO8, {
+                                                          authorizedAt: f,
                                                       }),
                                                   }),
                                           ],

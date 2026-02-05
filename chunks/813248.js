@@ -1,205 +1,159 @@
-l.d(t, {
-    default: () => N,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    i = l(311907),
-    s = l(397927),
-    a = l(793574),
-    c = l(688810),
-    o = l(979286),
-    u = l(993408),
-    d = l(821701),
-    m = l(841702),
-    p = l(571827),
-    x = l(465794),
-    g = l(919395),
-    b = l(696451),
-    A = l(287809),
-    h = l(954571),
-    f = l(927578),
-    j = l(35950),
-    y = l(272104),
-    v = l(652215),
-    _ = l(788868),
-    O = l(985018),
-    E = l(106866);
-
-function C(e) {
-    var t, l, c, m, A;
+n.d(t, { default: () => f });
+var l = n(627968),
+    i = n(64700),
+    s = n(311907),
+    r = n(397927),
+    a = n(793574),
+    c = n(688810),
+    o = n(979286),
+    u = n(993408),
+    d = n(821701),
+    m = n(841702),
+    p = n(571827),
+    x = n(465794),
+    A = n(919395),
+    g = n(696451),
+    h = n(287809),
+    _ = n(954571),
+    j = n(927578),
+    y = n(35950),
+    C = n(272104),
+    E = n(652215),
+    v = n(788868),
+    b = n(985018),
+    T = n(106866);
+function I(e) {
     let {
-            currentUser: h,
-            categories: v,
-            purchases: C,
-            analyticsLocations: N,
-            onClose: P,
-            guildId: I,
-            initialSelectedNameplate: w,
+            currentUser: t,
+            categories: n,
+            purchases: c,
+            analyticsLocations: m,
+            onClose: h,
+            guildId: _,
+            initialSelectedNameplate: E,
         } = e,
-        T = (0, i.bG)([b.Ay], () => (null != I && null != h ? b.Ay.getMember(I, h.id) : null)),
-        k =
-            null != T
-                ? null == (l = T.collectibles)
-                    ? void 0
-                    : l.nameplate
-                : null == (c = h.collectibles)
-                  ? void 0
-                  : c.nameplate,
-        { pendingNameplate: S } = (0, g.rv)(h, I),
-        [U, L] = (0, r.useState)(() => {
-            var e;
-            return null != w
-                ? w
-                : void 0 !== S
-                  ? S
-                  : null == k
+        I = (0, s.bG)([g.Ay], () => (null != _ && null != t ? g.Ay.getMember(_, t.id) : null)),
+        f = null != I ? I.collectibles?.nameplate : t.collectibles?.nameplate,
+        { pendingNameplate: N } = (0, A.rv)(t, _),
+        [k, w] = (0, i.useState)(() =>
+            null != E
+                ? E
+                : void 0 !== N
+                  ? N
+                  : null == f
                     ? null
-                    : null !=
-                        (e = (0, u.zd)(C, v).find((e) => {
-                            let { skuId: t } = e;
-                            return t === k.skuId;
-                        }))
-                      ? e
-                      : null;
+                    : ((0, u.zd)(c, n).find((e) => {
+                          let { skuId: t } = e;
+                          return t === f.skuId;
+                      }) ?? null),
+        ),
+        P = (0, A.lw)({
+            pendingValue: k,
+            userValue: t?.collectibles?.nameplate,
+            guildValue: I?.collectibles?.nameplate,
+            guildId: _,
         }),
-        M = (0, g.lw)({
-            pendingValue: U,
-            userValue: null == h || null == (m = h.collectibles) ? void 0 : m.nameplate,
-            guildValue: null == T || null == (A = T.collectibles) ? void 0 : A.nameplate,
-            guildId: I,
-        }),
-        { product: R, purchase: D } = (0, d.A)(null == U ? void 0 : U.skuId),
-        H = null != D ? (0, u.gA)(D) : (0, u.G0)(R),
-        G = f.Ay.canUseCollectibles(h),
-        z =
-            void 0 === S
-                ? (null == U ? void 0 : U.skuId) === (null == k ? void 0 : k.skuId)
-                : (null == U ? void 0 : U.skuId) === (null == S ? void 0 : S.skuId),
-        F = (0, r.useCallback)(
+        { product: U, purchase: L } = (0, d.A)(k?.skuId),
+        O = null != L ? (0, u.gA)(L) : (0, u.G0)(U),
+        S = j.Ay.canUseCollectibles(t),
+        M = void 0 === N ? k?.skuId === f?.skuId : k?.skuId === N?.skuId,
+        R = (0, i.useCallback)(
             (e) => {
-                P(),
+                h(),
                     (0, o.Cz)({
-                        analyticsLocations: N,
+                        analyticsLocations: m,
                         analyticsSource: a.A.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [N, P],
+            [m, h],
         );
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, n.jsxs)(s.rQ0, {
+            (0, l.jsxs)(r.rQ0, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: E.wx,
+                className: T.wx,
                 children: [
-                    (0, n.jsx)(s.Heading, {
-                        variant: "heading-lg/semibold",
-                        children: O.intl.string(O.t.BwdeM1),
-                    }),
-                    (0, n.jsx)(s.s_y, {
-                        "data-migration-pending": !0,
-                        className: E.b,
-                        onClick: P,
-                    }),
+                    (0, l.jsx)(r.Heading, { variant: "heading-lg/semibold", children: b.intl.string(b.t.BwdeM1) }),
+                    (0, l.jsx)(r.s_y, { "data-migration-pending": !0, className: T.b, onClick: h }),
                 ],
             }),
-            (0, n.jsxs)(s.$mQ, {
+            (0, l.jsxs)(r.$mQ, {
                 "data-migration-pending": !0,
-                className: E.Qs,
+                className: T.Qs,
                 scrollbarType: "none",
                 children: [
-                    (0, n.jsx)(y.A, {
-                        currentUser: h,
-                        selectedNameplate: U,
-                        guildId: I,
-                        onSelect: L,
-                        onOpenShop: F,
-                    }),
-                    (0, n.jsx)(j.A, {
-                        user: h,
-                        guildId: I,
-                        nameplate: M,
-                    }),
+                    (0, l.jsx)(C.A, { currentUser: t, selectedNameplate: k, guildId: _, onSelect: w, onOpenShop: R }),
+                    (0, l.jsx)(y.A, { user: t, guildId: _, nameplate: P }),
                 ],
             }),
-            (0, n.jsxs)(s.jlY, {
+            (0, l.jsxs)(r.jlY, {
                 "data-migration-pending": !0,
-                className: E.Hx,
+                className: T.Hx,
                 children: [
-                    (null != D && (!H || G)) || null === U
-                        ? (0, n.jsx)(s.Button, {
+                    (null != L && (!O || S)) || null === k
+                        ? (0, l.jsx)(r.Button, {
                               variant: "primary",
-                              text: O.intl.string(O.t.Jh8fJz),
+                              text: b.intl.string(b.t.Jh8fJz),
                               onClick: () => {
-                                  (0, g.pX)(U, I), P();
+                                  (0, A.pX)(k, _), h();
                               },
-                              disabled: z,
+                              disabled: M,
                           })
-                        : null == D && (G || !H)
-                          ? (0, n.jsx)(s.Button, {
+                        : null == L && (S || !O)
+                          ? (0, l.jsx)(r.Button, {
                                 variant: "primary",
-                                onClick: () => F(null == R ? void 0 : R.skuId),
-                                text: O.intl.string(O.t.fYfGgK),
+                                onClick: () => R(U?.skuId),
+                                text: b.intl.string(b.t.fYfGgK),
                             })
-                          : (0, n.jsx)(x.A, {
-                                subscriptionTier: _.pe.TIER_2,
-                                showGradient: !G,
+                          : (0, l.jsx)(x.A, {
+                                subscriptionTier: v.pe.TIER_2,
+                                showGradient: !S,
                                 textOptions: {
-                                    textOverride: f.Ay.isPremium(h)
-                                        ? O.intl.string(O.t.KXLX7l)
-                                        : G
-                                          ? O.intl.string(O.t.mr4K7D)
-                                          : O.intl.string(O.t.pj0XBN),
+                                    textOverride: j.Ay.isPremium(t)
+                                        ? b.intl.string(b.t.KXLX7l)
+                                        : S
+                                          ? b.intl.string(b.t.mr4K7D)
+                                          : b.intl.string(b.t.pj0XBN),
                                 },
                             }),
-                    !G && H
-                        ? (0, n.jsx)(p.A, {
-                              itemType: null != (t = null == D ? void 0 : D.type) ? t : null == R ? void 0 : R.type,
-                              onClose: P,
-                          })
-                        : (0, n.jsx)(s.Button, {
+                    !S && O
+                        ? (0, l.jsx)(p.A, { itemType: L?.type ?? U?.type, onClose: h })
+                        : (0, l.jsx)(r.Button, {
                               variant: "secondary",
-                              text: O.intl.string(O.t["ETE/oC"]),
-                              onClick: P,
+                              text: b.intl.string(b.t["ETE/oC"]),
+                              onClick: h,
                           }),
                 ],
             }),
         ],
     });
 }
-
-function N(e) {
-    let { transitionState: t, analyticsLocations: l, onClose: o, guildId: u, initialSelectedNameplate: d } = e,
-        p = (0, i.bG)([A.default], () => A.default.getCurrentUser()),
-        { analyticsLocations: x } = (0, c.Ay)(l, a.A.EDIT_NAMEPLATE_MODAL),
-        { categories: g, purchases: b, isFetchingCategories: f, isFetchingPurchases: j } = (0, m.Ay)(),
-        y = f || (j && 0 === b.size);
-    return ((0, r.useEffect)(() => {
-        h.default.track(v.HAw.OPEN_MODAL, {
-            type: v.JJy.NAMEPLATE_CUSTOMIZATION,
-            location_stack: x,
-        });
+function f(e) {
+    let { transitionState: t, analyticsLocations: n, onClose: o, guildId: u, initialSelectedNameplate: d } = e,
+        p = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
+        { analyticsLocations: x } = (0, c.Ay)(n, a.A.EDIT_NAMEPLATE_MODAL),
+        { categories: A, purchases: g, isFetchingCategories: j, isFetchingPurchases: y } = (0, m.Ay)(),
+        C = j || (y && 0 === g.size);
+    return ((0, i.useEffect)(() => {
+        _.default.track(E.HAw.OPEN_MODAL, { type: E.JJy.NAMEPLATE_CUSTOMIZATION, location_stack: x });
     }, [x]),
     null == p)
         ? null
-        : (0, n.jsx)(c.f5, {
+        : (0, l.jsx)(c.f5, {
               value: x,
-              children: (0, n.jsx)(s.EOs, {
+              children: (0, l.jsx)(r.EOs, {
                   transitionState: t,
-                  size: y ? s.rIJ.DYNAMIC : s.rIJ.MEDIUM,
+                  size: C ? r.rIJ.DYNAMIC : r.rIJ.MEDIUM,
                   parentComponent: "NameplateModal",
                   "data-migration-pending": !0,
-                  children: y
-                      ? (0, n.jsx)(s.y$y, {
-                            className: E.u1,
-                            type: s.y$y.Type.SPINNING_CIRCLE,
-                        })
-                      : (0, n.jsx)(C, {
+                  children: C
+                      ? (0, l.jsx)(r.y$y, { className: T.u1, type: r.y$y.Type.SPINNING_CIRCLE })
+                      : (0, l.jsx)(I, {
                             currentUser: p,
-                            categories: g,
-                            purchases: b,
+                            categories: A,
+                            purchases: g,
                             analyticsLocations: x,
                             guildId: u,
                             initialSelectedNameplate: d,

@@ -1,30 +1,19 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    i,
-    l = n(311907),
-    a = n(73153);
-let s = {};
-class o extends (i = l.Ay.Store) {
+n.d(t, { A: () => s });
+var i = n(311907),
+    r = n(73153);
+let a = {};
+class l extends i.Ay.Store {
+    static displayName = "ChannelSKUStore";
     getSkuIdForChannel(e) {
-        return s[e];
+        return a[e];
     }
 }
-(r = "displayName") in o
-    ? Object.defineProperty(o, r, {
-          value: "ChannelSKUStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (o[r] = "ChannelSKUStore");
-let c = new o(a.h, {
+let s = new l(r.h, {
     CONNECTION_OPEN: function () {
-        s = {};
+        a = {};
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { channelId: t, storeListing: n } = e;
-        null != t && (s[t] = n.sku.id);
+        null != t && (a[t] = n.sku.id);
     },
 });

@@ -1,214 +1,159 @@
-r.d(t, {
-    A: () => T,
-}),
-    r(747238),
-    r(321073),
-    r(896048),
-    r(638769),
-    r(839272);
-var n = r(627968),
-    i = r(64700),
-    l = r(503698),
-    s = r.n(l),
-    a = r(311907),
-    o = r(342952),
-    c = r(397927),
-    d = r(629357),
-    u = r(280157),
-    f = r(174768),
-    h = r(146793),
-    p = r(95701),
-    x = r(260509),
-    m = r(734057),
-    j = r(205761),
-    g = r(808728),
-    _ = r(71393),
-    v = r(576705),
-    b = r(967198),
-    y = r(287809),
-    S = r(607567),
-    O = r(403362),
-    A = r(279250),
-    w = r(652215),
-    C = r(191850),
-    E = r(985018),
-    I = r(374166);
-
-function N(e) {
-    let { result: t, onSelectChannel: r } = e,
-        i = (0, a.bG)([_.A], () => _.A.getGuild(t.record.guild_id)),
-        l = (0, a.yK)([S.Ay, y.default], () =>
-            S.Ay.getVoiceStatesForChannel(t.record)
-                .map((e) => y.default.getUser(e.user.id))
-                .filter(O.Vq),
+s.d(t, { A: () => T }), s(321073), s(839272);
+var r = s(627968),
+    i = s(64700),
+    n = s(503698),
+    l = s.n(n),
+    a = s(311907),
+    o = s(342952),
+    c = s(397927),
+    d = s(629357),
+    u = s(280157),
+    f = s(174768),
+    h = s(146793),
+    x = s(95701),
+    p = s(260509),
+    m = s(734057),
+    _ = s(205761),
+    g = s(808728),
+    j = s(71393),
+    v = s(576705),
+    A = s(967198),
+    S = s(287809),
+    C = s(607567),
+    y = s(403362),
+    b = s(279250),
+    w = s(652215),
+    I = s(191850),
+    E = s(985018),
+    N = s(374166);
+function O(e) {
+    let { result: t, onSelectChannel: s } = e,
+        i = (0, a.bG)([j.A], () => j.A.getGuild(t.record.guild_id)),
+        n = (0, a.yK)([C.Ay, S.default], () =>
+            C.Ay.getVoiceStatesForChannel(t.record)
+                .map((e) => S.default.getUser(e.user.id))
+                .filter(y.Vq),
         );
-    return (0, n.jsxs)(c.DUT, {
-        className: I.p8,
-        onClick: () => r(t.record.id),
+    return (0, r.jsxs)(c.DUT, {
+        className: N.p8,
+        onClick: () => s(t.record.id),
         children: [
-            (0, n.jsxs)("div", {
-                className: I.nN,
+            (0, r.jsxs)("div", {
+                className: N.nN,
                 children: [
-                    (0, n.jsx)("img", {
-                        alt: "",
-                        src: null != i ? (0, x.Iv)(i, 32) : void 0,
-                        className: I.$f,
-                    }),
-                    (0, n.jsxs)("div", {
+                    (0, r.jsx)("img", { alt: "", src: null != i ? (0, p.Iv)(i, 32) : void 0, className: N.$f }),
+                    (0, r.jsxs)("div", {
                         children: [
-                            (0, n.jsxs)(c.Text, {
-                                className: I.HA,
+                            (0, r.jsxs)(c.Text, {
+                                className: N.HA,
                                 variant: "text-md/medium",
                                 color: "interactive-text-default",
                                 children: [
-                                    (0, n.jsx)(c.HKD, {
-                                        size: "xs",
-                                        color: "currentColor",
-                                    }),
+                                    (0, r.jsx)(c.HKD, { size: "xs", color: "currentColor" }),
                                     " ",
                                     t.record.name,
                                 ],
                             }),
-                            (0, n.jsx)(c.Text, {
-                                variant: "text-xs/medium",
-                                color: "text-muted",
-                                children: null == i ? void 0 : i.name,
-                            }),
+                            (0, r.jsx)(c.Text, { variant: "text-xs/medium", color: "text-muted", children: i?.name }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(o.A, {
-                users: l,
-                maxUsers: 3,
-                hideOverflowCount: !0,
-            }),
+            (0, r.jsx)(o.A, { users: n, maxUsers: 3, hideOverflowCount: !0 }),
         ],
     });
 }
-
 function T(e) {
-    let { onSelectChannel: t, className: r } = e,
-        {
-            search: l,
-            query: o,
-            results: x,
-        } = (0, h.A)({
-            searchOptions: {
-                frecencyBoosters: !0,
-            },
-        }),
-        y = (0, a.yK)([b.A, g.Ay, m.A, _.A, v.A], () => {
+    let { onSelectChannel: t, className: s } = e,
+        { search: n, query: o, results: p } = (0, h.A)({ searchOptions: { frecencyBoosters: !0 } }),
+        S = (0, a.yK)([A.A, g.Ay, m.A, j.A, v.A], () => {
             let e = [],
-                t = b.A.getGuildId();
+                t = A.A.getGuildId();
             if (null == t) return e;
-            for (let r of g.Ay.getVocalChannelIds(t)) {
-                let t = m.A.getChannel(r);
-                null != t && (0, A.vz)(t, _.A, v.A) && e.push(t);
+            for (let s of g.Ay.getVocalChannelIds(t)) {
+                let t = m.A.getChannel(s);
+                null != t && (0, b.vz)(t, j.A, v.A) && e.push(t);
             }
             return e;
         }),
-        S = (0, a.yK)([f.A, m.A, j.A, _.A, v.A], () => {
+        C = (0, a.yK)([f.A, m.A, _.A, j.A, v.A], () => {
             let e = [],
                 t = new Set();
-            for (let r of f.A.getChannelHistory()) {
-                let n = m.A.getChannel(r);
-                (null == n ? void 0 : n.type) === w.rbe.GUILD_VOICE &&
-                    (0, A.vz)(n, _.A, v.A) &&
-                    (t.add(n.id), e.push(n));
+            for (let s of f.A.getChannelHistory()) {
+                let r = m.A.getChannel(s);
+                r?.type === w.rbe.GUILD_VOICE && (0, b.vz)(r, j.A, v.A) && (t.add(r.id), e.push(r));
             }
-            for (let r of j.A.getFrequentlyWithoutFetchingLatest())
-                r instanceof p.YB &&
-                    r.type === w.rbe.GUILD_VOICE &&
-                    !t.has(r.id) &&
-                    (0, A.vz)(r, _.A, v.A) &&
-                    (t.add(r.id), e.push(r));
+            for (let s of _.A.getFrequentlyWithoutFetchingLatest())
+                s instanceof x.YB &&
+                    s.type === w.rbe.GUILD_VOICE &&
+                    !t.has(s.id) &&
+                    (0, b.vz)(s, j.A, v.A) &&
+                    (t.add(s.id), e.push(s));
             return e;
         }),
         T = i.useMemo(() => {
-            let e = new Set(S.map((e) => e.id)),
-                t = new Set(y.map((e) => e.id));
+            let e = new Set(C.map((e) => e.id)),
+                t = new Set(S.map((e) => e.id));
             return [
-                ...y
-                    .toSorted((t, r) => (e.has(t.id) && !e.has(r.id) ? -1 : e.has(r.id) && !e.has(t.id) ? 1 : 0))
+                ...S.toSorted((t, s) => (e.has(t.id) && !e.has(s.id) ? -1 : e.has(s.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, u.A)(e.id))
-                    .filter(O.Vq),
-                ...S.filter((e) => !t.has(e.id))
+                    .filter(y.Vq),
+                ...C.filter((e) => !t.has(e.id))
                     .map((e) => (0, u.A)(e.id))
-                    .filter(O.Vq),
+                    .filter(y.Vq),
             ];
-        }, [S, y]),
-        P = "" !== o ? x : T;
-    return (0, n.jsxs)("div", {
-        className: s()(I.zr, r),
+        }, [C, S]),
+        M = "" !== o ? p : T;
+    return (0, r.jsxs)("div", {
+        className: l()(N.zr, s),
         children: [
-            (0, n.jsx)("div", {
-                className: I.ON,
-                children: (0, n.jsx)(c.IWV, {
+            (0, r.jsx)("div", {
+                className: N.ON,
+                children: (0, r.jsx)(c.IWV, {
                     placeholder: E.intl.string(E.t["3jvv+6"]),
                     query: o,
-                    onChange: (e) =>
-                        l({
-                            query: e,
-                            resultTypes: [d.rD.VOICE_CHANNEL],
-                        }),
-                    onClear: () =>
-                        l({
-                            query: "",
-                            resultTypes: [d.rD.VOICE_CHANNEL],
-                        }),
+                    onChange: (e) => n({ query: e, resultTypes: [d.rD.VOICE_CHANNEL] }),
+                    onClear: () => n({ query: "", resultTypes: [d.rD.VOICE_CHANNEL] }),
                     autoFocus: !0,
                 }),
             }),
-            P.length > 0
-                ? (0, n.jsx)(c.B8B, {
+            M.length > 0
+                ? (0, r.jsx)(c.B8B, {
                       renderListHeader: function () {
-                          return (0, n.jsx)(c.Text, {
+                          return (0, r.jsx)(c.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: E.intl.string(C.default.FZ9Fl7),
+                              children: E.intl.string(I.default.FZ9Fl7),
                           });
                       },
-                      sections: [P.length],
+                      sections: [M.length],
                       sectionHeight: 0,
                       rowHeight: 48,
                       renderRow: function (e) {
-                          let { rowIndex: r } = e,
-                              i = P[r];
-                          return (0, n.jsx)(
-                              N,
-                              {
-                                  result: i,
-                                  onSelectChannel: t,
-                              },
-                              i.record.id,
-                          );
+                          let { rowIndex: s } = e,
+                              i = M[s];
+                          return (0, r.jsx)(O, { result: i, onSelectChannel: t }, i.record.id);
                       },
                   })
-                : (0, n.jsx)(R, {}),
+                : (0, r.jsx)(R, {}),
         ],
     });
 }
-
 function R() {
-    return (0, n.jsxs)("div", {
-        className: I.p$,
+    return (0, r.jsxs)("div", {
+        className: N.p$,
         children: [
-            (0, n.jsx)(c.$p$, {
-                className: I.Dw,
-                size: "md",
-                color: c.LU0.colors.ICON_MUTED,
-            }),
-            (0, n.jsx)(c.Text, {
-                className: I.jU,
+            (0, r.jsx)(c.$p$, { className: N.Dw, size: "md", color: c.LU0.colors.ICON_MUTED }),
+            (0, r.jsx)(c.Text, {
+                className: N.jU,
                 variant: "text-lg/medium",
                 color: "text-strong",
-                children: E.intl.string(C.default.sWGfr9),
+                children: E.intl.string(I.default.sWGfr9),
             }),
-            (0, n.jsx)(c.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                children: E.intl.string(C.default["nBRtt/"]),
+                children: E.intl.string(I.default["nBRtt/"]),
             }),
         ],
     });

@@ -1,28 +1,25 @@
-n.d(t, {
-    a: () => v,
-}),
-    n(457529);
+"use strict";
+n.d(t, { a: () => S });
 var r = n(562465),
     i = n(306173),
     a = n(198982),
     s = n(790107),
-    o = n(487329),
+    o = n(709710),
     l = n(146503),
-    c = n(734057),
-    u = n(53943),
+    u = n(734057),
+    c = n(53943),
     d = n(626584),
-    f = n(551602),
-    p = n(642506),
-    _ = n(576798),
+    _ = n(551602),
+    f = n(642506),
+    p = n(576798),
     h = n(731843),
     m = n(652215);
 let g = 9437184,
     E = 0xe00000,
-    b = new d.A("DebugUploadManager"),
-    y = null,
-    O = null;
-
-function A(e) {
+    A = new d.A("DebugUploadManager"),
+    I = null,
+    T = null;
+function y(e) {
     switch (e.code) {
         case a.ct.GENERAL:
             return o.B6.UploadErrorGeneral;
@@ -38,77 +35,84 @@ function A(e) {
             return;
     }
 }
-async function v(e, t) {
+async function S(e, t) {
     try {
-        await S(e), await (0, s.c)(E, t);
+        await v(e), await (0, s.c)(E, t);
     } catch (t) {
         let e;
         throw (
-            (t instanceof a._ && (e = A(t)),
-            (0, o.QW)({
-                type: o.iy.DEBUG_LOG_UPLOAD_FAILED,
-                underlyingError: e,
-                errorMessage: t.message,
-            }),
+            (t instanceof a._ && (e = y(t)),
+            (0, o.QW)({ type: o.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
             t)
         );
     }
 }
-async function S(e) {
+async function v(e) {
     try {
-        let n, a, s, o;
+        let t, n, a, s;
         try {
-            n = u.As();
+            t = c.As();
         } catch (e) {
-            n = "Logs failed: ".concat(e);
+            t = `Logs failed: ${e}`;
         }
         try {
-            a = (null == y ? void 0 : y.getSystemLog) != null ? await new Promise((e) => y.getSystemLog(e)) : "";
+            n = I?.getSystemLog != null ? await new Promise((e) => I.getSystemLog(e)) : "";
         } catch (e) {
-            a = "System Logs failed ".concat(e);
+            n = `System Logs failed ${e}`;
         }
         try {
-            s = await (0, p.A)().then((e) => (0, h.A)(e, !0));
+            a = await (0, f.A)().then((e) => (0, h.A)(e, !0));
         } catch (e) {
-            s = "Push logs failed: ".concat(e);
+            a = `Push logs failed: ${e}`;
         }
         try {
-            var t;
-            o = null != (t = (0, i.G1)()) ? t : "";
+            s = (0, i.G1)() ?? "";
         } catch (e) {
-            o = "LibDiscore logs failed: ".concat(e);
+            s = `LibDiscore logs failed: ${e}`;
         }
-        let d = n.length + a.length + s.length + o.length;
-        if (d > g) {
-            let e = 1 - g / d;
-            (n = n.slice(n.length - Math.floor(n.length * e))),
+        let o = t.length + n.length + a.length + s.length;
+        if (o > g) {
+            let e = 1 - g / o;
+            (t = t.slice(t.length - Math.floor(t.length * e))),
+                (n = n.slice(n.length - Math.floor(n.length * e))),
                 (a = a.slice(a.length - Math.floor(a.length * e))),
-                (s = s.slice(s.length - Math.floor(s.length * e))),
-                (o = o.slice(o.length - Math.floor(o.length * e)));
+                (s = s.slice(s.length - Math.floor(s.length * e)));
         }
-        let E = (null == O ? void 0 : O.AppOpenedTimestamp) != null ? O.AppOpenedTimestamp : null,
-            b = "\n    "
-                .concat((0, _.A)(E), "\n\n    ")
-                .concat((0, l.CI)(), "\n\n    Metadata:\n    ")
-                .concat(JSON.stringify((0, f.A)(), void 0, 2), "\n\n    ChannelStore:\n    ")
-                .concat(JSON.stringify(c.A.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ")
-                .concat(n, "\n\n    System logs:\n    ")
-                .concat(a, "\n\n    LibDiscore logs:\n    ")
-                .concat(o, "\n\n    Push Notifications:\n    ")
-                .concat(s, "\n    ");
-        u.IU();
+        let d = T?.AppOpenedTimestamp != null ? T.AppOpenedTimestamp : null,
+            E = `
+    ${(0, p.A)(d)}
+
+    ${(0, l.CI)()}
+
+    Metadata:
+    ${JSON.stringify((0, _.A)(), void 0, 2)}
+
+    ChannelStore:
+    ${JSON.stringify(u.A.getDebugInfo(), void 0, 2)}
+
+    Logs:
+    ${t}
+
+    System logs:
+    ${n}
+
+    LibDiscore logs:
+    ${s}
+
+    Push Notifications:
+    ${a}
+    `;
+        c.IU();
         let A = m.Rsh.DEBUG_LOG(e, "discord_app_logs");
         await r.Bo.post({
             url: A,
-            body: b,
+            body: E,
             retries: 3,
-            headers: {
-                "Content-Type": "text/plain",
-            },
+            headers: { "Content-Type": "text/plain" },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
     } catch (e) {
-        b.error("uploadAppLogFiles: upload app log files error ".concat(e.message));
+        A.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }
 }

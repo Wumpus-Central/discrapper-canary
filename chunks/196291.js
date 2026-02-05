@@ -1,251 +1,174 @@
-n.d(t, {
-    A: () => M,
-}),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    s = n(397927),
-    a = n(631670),
+n.d(t, { A: () => G });
+var i = n(627968),
+    s = n(64700),
+    r = n(311907),
+    a = n(397927),
+    l = n(631670),
     o = n(793574),
     c = n(688810),
     d = n(422936),
     u = n(234419),
-    p = n(10368),
-    _ = n(535646),
-    m = n(511484),
+    _ = n(10368),
+    m = n(535646),
+    A = n(511484),
     g = n(202639),
-    f = n(811611),
-    b = n(407217),
-    h = n(101058),
-    A = n(207803),
-    E = n(836602),
-    x = n(193658),
-    O = n(954571),
-    C = n(927578),
-    y = n(884546),
-    j = n(230084),
-    T = n(180020),
-    v = n(212168),
-    S = n(730588),
-    I = n(63675),
-    N = n(253604),
+    E = n(811611),
+    h = n(407217),
+    p = n(101058),
+    C = n(207803),
+    x = n(836602),
+    T = n(193658),
+    I = n(954571),
+    S = n(927578),
+    f = n(884546),
+    N = n(230084),
+    b = n(180020),
+    R = n(212168),
+    v = n(730588),
+    O = n(63675),
+    j = n(253604),
     P = n(652215),
-    R = n(788868),
-    D = n(355097),
-    w = n(985018),
-    L = n(567567);
-
-function M(e) {
-    var t, n;
-    let { user: M, isVisible: G, shouldShow: U } = e,
-        k = C.Ay.isPremium(M),
-        H = C.Ay.canUseAnimatedAvatar(M),
+    y = n(788868),
+    L = n(355097),
+    D = n(985018),
+    M = n(567567);
+function G(e) {
+    let { user: t, isVisible: n, shouldShow: G } = e,
+        U = S.Ay.isPremium(t),
+        k = S.Ay.canUseAnimatedAvatar(t),
         {
             pendingAvatar: B,
-            pendingThemeColors: V,
-            tryItOutThemeColors: F,
-            tryItOutAvatar: Y,
-            tryItOutBanner: W,
-        } = (0, l.cf)([E.A], () => {
-            var e, t;
-            let n = E.A.getPendingChanges(),
-                r = E.A.getErrors();
-            return (
-                (e = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, n, E.A.getTryItOutChanges())),
-                (t = t =
-                    {
-                        errors: r,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(t)).forEach(function (n) {
-                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                      }),
-                e
-            );
+            pendingThemeColors: w,
+            tryItOutThemeColors: H,
+            tryItOutAvatar: V,
+            tryItOutBanner: F,
+        } = (0, r.cf)([x.A], () => {
+            let e = x.A.getPendingChanges(),
+                t = x.A.getErrors(),
+                n = x.A.getTryItOutChanges();
+            return { ...e, ...n, errors: t };
         }),
-        { preset: K, onShuffle: z } = (0, p.A)(),
-        Z = i.useRef(null);
-    (0, x.A)(Z, D._F.TRY_IT_OUT);
+        { preset: Y, onShuffle: W } = (0, _.A)(),
+        z = s.useRef(null);
+    (0, T.A)(z, L._F.TRY_IT_OUT);
     let {
-            analyticsLocations: q,
-            newestAnalyticsLocation: X,
-            sourceAnalyticsLocations: J,
+            analyticsLocations: K,
+            newestAnalyticsLocation: Z,
+            sourceAnalyticsLocations: X,
         } = (0, c.Ay)(o.A.USER_SETTINGS_TRY_OUT_PREMIUM),
-        Q = (e) => {
+        q = (e) => {
             e &&
-                ((0, a.zq)(Y),
-                (0, A.Zz)(F),
-                (0, A.Dv)(W),
-                O.default.track(P.HAw.TRY_IT_OUT_PRESET_SELECTED, {
-                    preset: K,
-                }));
+                ((0, l.zq)(V),
+                (0, C.Zz)(H),
+                (0, C.Dv)(F),
+                I.default.track(P.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: Y }));
         };
-    i.useEffect(() => {
-        G &&
-            O.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: R.e.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: {
-                    page: P.liQ.USER_SETTINGS,
-                },
-                location_stack: J,
+    s.useEffect(() => {
+        n &&
+            I.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: y.e.PREMIUM_PROFILE_TRY_IT_OUT,
+                location: { page: P.liQ.USER_SETTINGS },
+                location_stack: X,
             });
-    }, [J, M, G]);
-    let $ = (null == (n = (0, u.V)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === R.pe.TIER_2,
-        ee = (0, d.O)(),
-        et = (0, m.U9)(ee, R.pe.TIER_2);
-    return U
-        ? (0, r.jsx)(c.f5, {
-              value: q,
-              children: (0, r.jsxs)(v.A, {
-                  ref: Z,
-                  className: L.MT,
-                  type: v.i.PREMIUM,
+    }, [X, t, n]);
+    let J = (0, u.V)()?.subscription_trial?.sku_id === y.pe.TIER_2,
+        Q = (0, d.O)(),
+        $ = (0, A.U9)(Q, y.pe.TIER_2);
+    return G
+        ? (0, i.jsx)(c.f5, {
+              value: K,
+              children: (0, i.jsxs)(R.A, {
+                  ref: z,
+                  className: M.MT,
+                  type: R.i.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
-                      (0, r.jsx)(y.A, {
-                          layoutClassName: L.th,
-                          profilePreviewTitle: (0, r.jsxs)(r.Fragment, {
+                      (0, i.jsx)(f.A, {
+                          layoutClassName: M.th,
+                          profilePreviewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(s.tvc, {
-                                      size: "md",
-                                      color: "currentColor",
-                                      className: L.PC,
-                                  }),
-                                  w.intl.string(w.t.gMlDNd),
+                                  (0, i.jsx)(a.tvc, { size: "md", color: "currentColor", className: M.PC }),
+                                  D.intl.string(D.t.gMlDNd),
                               ],
                           }),
-                          profilePreview: (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  (0, r.jsx)(_.A, {
-                                      preset: K,
-                                      onShuffle: z,
-                                  }),
-                                  (0, r.jsx)(N.A, {
-                                      user: M,
-                                  }),
-                              ],
+                          profilePreview: (0, i.jsxs)(i.Fragment, {
+                              children: [(0, i.jsx)(m.A, { preset: Y, onShuffle: W }), (0, i.jsx)(j.A, { user: t })],
                           }),
-                          children: (0, r.jsxs)("div", {
-                              className: L.EN,
+                          children: (0, i.jsxs)("div", {
+                              className: M.EN,
                               children: [
-                                  (0, r.jsxs)("div", {
+                                  (0, i.jsxs)("div", {
                                       children: [
-                                          (0, r.jsx)(s.Heading, {
+                                          (0, i.jsx)(a.Heading, {
                                               variant: "heading-xl/extrabold",
-                                              children: w.intl.string(w.t["2zGdAW"]),
+                                              children: D.intl.string(D.t["2zGdAW"]),
                                           }),
-                                          (0, r.jsx)(s.Text, {
-                                              className: L.h_,
+                                          (0, i.jsx)(a.Text, {
+                                              className: M.h_,
                                               variant: "text-sm/normal",
-                                              children: w.intl.string(w.t.xeEC20),
+                                              children: D.intl.string(D.t.xeEC20),
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(I.A, {
-                                      className: L.fz,
-                                      user: M,
-                                      pendingAvatarSrc: (0, h.V7)({
-                                          userId: M.id,
-                                          image: null != Y ? Y : B,
-                                      }),
-                                      pendingColors: null != F ? F : V,
-                                      onThemeColorsChange: A.a,
+                                  (0, i.jsx)(O.A, {
+                                      className: M.fz,
+                                      user: t,
+                                      pendingAvatarSrc: (0, p.V7)({ userId: t.id, image: V ?? B }),
+                                      pendingColors: H ?? w,
+                                      onThemeColorsChange: C.a,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0,
                                   }),
-                                  (0, r.jsx)(S.A, {
-                                      className: L.fz,
+                                  (0, i.jsx)(v.A, {
+                                      className: M.fz,
                                       isTryItOut: !0,
-                                      showRemoveBannerButton: null != W,
-                                      onBannerChange: A.xe,
+                                      showRemoveBannerButton: null != F,
+                                      onBannerChange: C.xe,
                                       showPremiumIcon: !1,
                                   }),
-                                  !H &&
-                                      (0, r.jsx)(j.A, {
-                                          className: L.fz,
+                                  !k &&
+                                      (0, i.jsx)(N.A, {
+                                          className: M.fz,
                                           isTryItOut: !0,
-                                          onAvatarChange: A.e$,
+                                          onAvatarChange: C.e$,
                                           showRemoveAvatarButton: !1,
-                                          changeAvatarButtonText: w.intl.string(w.t["7z0D1c"]),
-                                          sectionTitle: w.intl.string(w.t.vtFfPX),
+                                          changeAvatarButtonText: D.intl.string(D.t["7z0D1c"]),
+                                          sectionTitle: D.intl.string(D.t.vtFfPX),
                                       }),
-                                  (0, r.jsx)(T.A, {
-                                      user: M,
-                                      className: L.fz,
-                                  }),
-                                  !$ &&
-                                      (0, r.jsx)(s.Text, {
+                                  (0, i.jsx)(b.A, { user: t, className: M.fz }),
+                                  !J &&
+                                      (0, i.jsx)(a.Text, {
                                           variant: "text-sm/normal",
-                                          children: w.intl.string(w.t["smo74/"]),
+                                          children: D.intl.string(D.t["smo74/"]),
                                       }),
                               ],
                           }),
                       }),
-                      !$ &&
-                          (0, r.jsx)(g.d, {
-                              onSubscribeModalClose: Q,
-                              className: L.Kv,
+                      !J &&
+                          (0, i.jsx)(g.d, {
+                              onSubscribeModalClose: q,
+                              className: M.Kv,
                               showUpsell: !0,
-                              text: w.intl.format(w.t.TmfgI2, {
+                              text: D.intl.format(D.t.TmfgI2, {
                                   onClick: () => {
-                                      (0, b.K)({
-                                          analyticsSource: X,
-                                          onSubscribeFinish: Q,
-                                      });
+                                      (0, h.K)({ analyticsSource: Z, onSubscribeFinish: q });
                                   },
                               }),
-                              button: k
-                                  ? w.intl.string(w.t.AfRWI8)
-                                  : et
-                                    ? w.intl.formatToPlainString(w.t.bkQ4bH, {
-                                          percent: null == ee ? void 0 : ee.discount.amount,
-                                      })
-                                    : w.intl.string(w.t.pj0XBN),
+                              button: U
+                                  ? D.intl.string(D.t.AfRWI8)
+                                  : $
+                                    ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: Q?.discount.amount })
+                                    : D.intl.string(D.t.pj0XBN),
                               position: "inline",
                           }),
-                      $ &&
-                          (0, r.jsxs)("div", {
+                      J &&
+                          (0, i.jsxs)("div", {
                               children: [
-                                  (0, r.jsx)("div", {
-                                      className: L.BU,
-                                  }),
-                                  (0, r.jsx)(f.Ay, {
-                                      type: R.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: R.pe.TIER_2,
+                                  (0, i.jsx)("div", { className: M.BU }),
+                                  (0, i.jsx)(E.Ay, {
+                                      type: y.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                      subscriptionTier: y.pe.TIER_2,
                                   }),
                               ],
                           }),

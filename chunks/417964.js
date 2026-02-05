@@ -1,31 +1,21 @@
-n.d(t, {
-    El: () => p,
-    Fd: () => c,
-    nK: () => m,
-    sJ: () => u,
-}),
-    n(591487),
-    n(727858),
-    n(747238),
-    n(812715);
+"use strict";
+n.d(t, { El: () => f, Fd: () => u, nK: () => m, sJ: () => c });
 var r = n(998218);
-let i = RegExp("\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n]|[^\\P{Zs} ]", "gu"),
-    a = RegExp("\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n\\t]|[^\\P{Zs} ]", "gu"),
+let i = /\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu,
+    a = /\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n\t]|[^\P{Zs} ]/gu,
     s = ["͏", "឴", "឵", "ᅠ", "ㅤ", "ﾠ"],
-    o = RegExp("".concat(i.source, "|").concat(s.join("|")), "gu"),
-    l = RegExp("".concat(a.source, "|").concat(s.join("|")), "gu");
-
-function c(e) {
+    o = RegExp(`${i.source}|${s.join("|")}`, "gu"),
+    l = RegExp(`${a.source}|${s.join("|")}`, "gu");
+function u(e) {
     return e.replace(o, "");
 }
-
-function u(e) {
+function c(e) {
     return e.replace(l, "");
 }
 let d = [
     {
         character: "h",
-        matcher: f([
+        matcher: _([
             "H",
             "һ",
             "հ",
@@ -48,7 +38,7 @@ let d = [
     },
     {
         character: "t",
-        matcher: f([
+        matcher: _([
             "T",
             "\uD835\uDC2D",
             "\uD835\uDC61",
@@ -67,7 +57,7 @@ let d = [
     },
     {
         character: "p",
-        matcher: f([
+        matcher: _([
             "P",
             "ρ",
             "ϱ",
@@ -103,7 +93,7 @@ let d = [
     },
     {
         character: "s",
-        matcher: f([
+        matcher: _([
             "S",
             "ƽ",
             "ѕ",
@@ -129,19 +119,17 @@ let d = [
     },
     {
         character: ":",
-        matcher: f(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"]),
+        matcher: _(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"]),
     },
     {
         character: "/",
-        matcher: f(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"]),
+        matcher: _(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"]),
     },
 ];
-
-function f(e) {
+function _(e) {
     return RegExp(e.join("|"), "gu");
 }
-
-function p(e) {
+function f(e) {
     let t = e;
     return (
         d.forEach((e) => {
@@ -150,16 +138,15 @@ function p(e) {
         t
     );
 }
-let _ = [
+let p = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0,
 ];
-
 function h(e) {
     return e >= 0 && e < 128
-        ? 1 === _[e]
+        ? 1 === p[e]
         : !(
               8206 === e ||
               8207 === e ||
@@ -237,12 +224,10 @@ function h(e) {
               (e >= 917504 && e <= 921599)
           );
 }
-
 function m(e) {
     let t = E(e);
     return (t += g(e.pathname)), (t += g(e.search)), (t += g(e.hash));
 }
-
 function g(e) {
     let t = r.A.safeDecodeURIComponent(e);
     if (null == t) return e;
@@ -264,11 +249,10 @@ function g(e) {
     }
     return n;
 }
-
 function E(e) {
     if ("null" === e.origin && e.pathname.startsWith("//")) return e.protocol;
     let t = "";
     "" !== e.username && (t += e.username), "" !== e.password && (t += ":" + e.password), "" !== t && (t += "@");
     let n = "//" === e.href.substr(e.protocol.length, 2) ? "//" : "";
-    return "".concat(e.protocol).concat(n).concat(t).concat(e.host);
+    return `${e.protocol}${n}${t}${e.host}`;
 }

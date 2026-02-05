@@ -1,82 +1,28 @@
-n.d(t, {
-    A: () => c,
-});
+n.d(t, { A: () => o });
 var l = n(627968),
-    r = n(64700),
-    a = n(397927),
-    i = n(46054),
+    a = n(64700),
+    i = n(397927),
+    r = n(46054),
     s = n(861662),
-    o = n(232409);
-
-function c(e) {
+    d = n(232409);
+function o(e) {
     let {
             element: {
-                data: { header: t, body: n, is_localized: c },
+                data: { header: t, body: n, is_localized: o },
             },
         } = e,
-        d = r.useMemo(() => {
-            var e, t;
-            return i.A.reactParserFor(
-                ((e = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (l = l.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            l.forEach(function (t) {
-                                var l;
-                                (l = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: l,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = l);
-                            });
-                    }
-                    return e;
-                })({}, i.A.defaultRules)),
-                (t = t =
-                    {
-                        link: s.B,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
-                          }
-                          return n;
-                      })(Object(t)).forEach(function (n) {
-                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                      }),
-                e),
-            );
-        }, []);
-    return c && (null != t || null != n)
+        u = a.useMemo(() => r.A.reactParserFor({ ...r.A.defaultRules, link: s.B }), []);
+    return o && (null != t || null != n)
         ? (0, l.jsxs)("div", {
               children: [
                   null != t &&
-                      (0, l.jsx)(a.Heading, {
+                      (0, l.jsx)(i.Heading, {
                           variant: "heading-sm/semibold",
                           color: "text-default",
-                          className: o.w,
+                          className: d.w,
                           children: t,
                       }),
-                  null != n &&
-                      (0, l.jsx)(a.Text, {
-                          variant: "text-sm/normal",
-                          className: o.r,
-                          children: d(n),
-                      }),
+                  null != n && (0, l.jsx)(i.Text, { variant: "text-sm/normal", className: d.r, children: u(n) }),
               ],
           })
         : null;

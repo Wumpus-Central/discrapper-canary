@@ -1,72 +1,53 @@
-r.d(t, {
-    default: () => f,
-}),
-    r(896048);
+r.d(t, { default: () => m });
 var n = r(627968),
-    l = r(64700),
-    o = r(284009),
-    c = r.n(o),
-    s = r(397927),
-    a = r(10005),
-    i = r(438732),
-    d = r(208993),
+    s = r(64700),
+    l = r(284009),
+    a = r.n(l),
+    i = r(397927),
+    c = r(10005),
+    d = r(438732),
+    o = r(208993),
     u = r(842130),
-    p = r(985018),
-    b = r(528427);
-let f = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: o, onClose: f } = e,
-        [y, j] = l.useState(!1),
-        O = l.useCallback(() => {
-            j(!0);
+    x = r(985018),
+    h = r(528427);
+let m = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: l, onClose: m } = e,
+        [j, _] = s.useState(!1),
+        b = s.useCallback(() => {
+            _(!0);
         }, []),
-        h = l.useCallback(() => {
-            f();
-        }, [f]),
-        m = (0, i.A)(),
-        { cancelLinkRequest: x, isCancelLoading: g } = (0, a.A)({
-            onError: O,
-            onSuccess: h,
-        });
+        g = s.useCallback(() => {
+            m();
+        }, [m]),
+        p = (0, d.A)(),
+        { cancelLinkRequest: C, isCancelLoading: f } = (0, c.A)({ onError: b, onSuccess: g });
     return (
-        c()(m, "FamilyCenterCancelLinkModal should only be rendered for parents."),
-        (0, n.jsxs)(s.dWK, {
-            transitionState: o,
-            onClose: f,
+        a()(p, "FamilyCenterCancelLinkModal should only be rendered for parents."),
+        (0, n.jsxs)(i.dWK, {
+            transitionState: l,
+            onClose: m,
             children: [
-                y &&
-                    (0, n.jsx)(s.wx6, {
-                        type: "critical",
-                        children: p.intl.string(u.default["6gyAQZ"]),
-                    }),
-                (0, n.jsx)(s.cwr, {
-                    children: (0, n.jsx)(d.A.Header, {
+                j && (0, n.jsx)(i.wx6, { type: "critical", children: x.intl.string(u.default["6gyAQZ"]) }),
+                (0, n.jsx)(i.cwr, {
+                    children: (0, n.jsx)(o.A.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: p.intl.string(u.default.HynllX),
-                        icon: (0, n.jsx)(s.PGe, {
-                            size: "md",
-                            color: "currentColor",
-                            className: b.u,
-                        }),
+                        header: x.intl.string(u.default.HynllX),
+                        icon: (0, n.jsx)(i.PGe, { size: "md", color: "currentColor", className: h.u }),
                     }),
                 }),
-                (0, n.jsx)(s.H7u, {
+                (0, n.jsx)(i.H7u, {
                     actionsFullWidth: !0,
                     actions: [
-                        {
-                            variant: "secondary",
-                            text: p.intl.string(u.default.czincX),
-                            onClick: f,
-                            disabled: g,
-                        },
+                        { variant: "secondary", text: x.intl.string(u.default.czincX), onClick: m, disabled: f },
                         {
                             variant: "critical-primary",
-                            text: p.intl.string(u.default.mK40bk),
+                            text: x.intl.string(u.default.mK40bk),
                             onClick: () => {
-                                j(!1), x(r.id);
+                                _(!1), C(r.id);
                             },
-                            disabled: g || y,
-                            loading: g,
+                            disabled: f || j,
+                            loading: f,
                         },
                     ],
                 }),

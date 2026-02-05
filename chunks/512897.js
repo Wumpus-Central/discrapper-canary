@@ -1,3 +1,1 @@
-e.exports = {
-    a: "f3b476799479182f",
-};
+e.exports = { a: "betaBadge__62691" };

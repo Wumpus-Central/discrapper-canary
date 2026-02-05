@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => l,
-});
+"use strict";
+r.d(t, { A: () => l });
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -14,21 +13,10 @@ let l = function (e) {
         c = (0, o.default)(
             {
                 default: {
-                    fields: {
-                        display: "flex",
-                        paddingTop: "4px",
-                    },
-                    single: {
-                        flex: "1",
-                        paddingLeft: "6px",
-                    },
-                    alpha: {
-                        flex: "1",
-                        paddingLeft: "6px",
-                    },
-                    double: {
-                        flex: "2",
-                    },
+                    fields: { display: "flex", paddingTop: "4px" },
+                    single: { flex: "1", paddingLeft: "6px" },
+                    alpha: { flex: "1", paddingLeft: "6px" },
+                    double: { flex: "2" },
                     input: {
                         width: "80%",
                         padding: "4px 10% 3px",
@@ -46,67 +34,28 @@ let l = function (e) {
                         textTransform: "capitalize",
                     },
                 },
-                disableAlpha: {
-                    alpha: {
-                        display: "none",
-                    },
-                },
+                disableAlpha: { alpha: { display: "none" } },
             },
-            {
-                disableAlpha: u,
-            },
+            { disableAlpha: u },
         ),
         p = function (e, n) {
             e.hex
-                ? a.qt(e.hex) &&
-                  t(
-                      {
-                          hex: e.hex,
-                          source: "hex",
-                      },
-                      n,
-                  )
+                ? a.qt(e.hex) && t({ hex: e.hex, source: "hex" }, n)
                 : e.r || e.g || e.b
-                  ? t(
-                        {
-                            r: e.r || r.r,
-                            g: e.g || r.g,
-                            b: e.b || r.b,
-                            a: r.a,
-                            source: "rgb",
-                        },
-                        n,
-                    )
+                  ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, a: r.a, source: "rgb" }, n)
                   : e.a &&
                     (e.a < 0 ? (e.a = 0) : e.a > 100 && (e.a = 100),
                     (e.a /= 100),
-                    t(
-                        {
-                            h: l.h,
-                            s: l.s,
-                            l: l.l,
-                            a: e.a,
-                            source: "rgb",
-                        },
-                        n,
-                    ));
+                    t({ h: l.h, s: l.s, l: l.l, a: e.a, source: "rgb" }, n));
         };
     return n.createElement(
         "div",
-        {
-            style: c.fields,
-            className: "flexbox-fix",
-        },
+        { style: c.fields, className: "flexbox-fix" },
         n.createElement(
             "div",
-            {
-                style: c.double,
-            },
+            { style: c.double },
             n.createElement(i.jc, {
-                style: {
-                    input: c.input,
-                    label: c.label,
-                },
+                style: { input: c.input, label: c.label },
                 label: "hex",
                 value: s.replace("#", ""),
                 onChange: p,
@@ -114,14 +63,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            {
-                style: c.single,
-            },
+            { style: c.single },
             n.createElement(i.jc, {
-                style: {
-                    input: c.input,
-                    label: c.label,
-                },
+                style: { input: c.input, label: c.label },
                 label: "r",
                 value: r.r,
                 onChange: p,
@@ -131,14 +75,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            {
-                style: c.single,
-            },
+            { style: c.single },
             n.createElement(i.jc, {
-                style: {
-                    input: c.input,
-                    label: c.label,
-                },
+                style: { input: c.input, label: c.label },
                 label: "g",
                 value: r.g,
                 onChange: p,
@@ -148,14 +87,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            {
-                style: c.single,
-            },
+            { style: c.single },
             n.createElement(i.jc, {
-                style: {
-                    input: c.input,
-                    label: c.label,
-                },
+                style: { input: c.input, label: c.label },
                 label: "b",
                 value: r.b,
                 onChange: p,
@@ -165,14 +99,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            {
-                style: c.alpha,
-            },
+            { style: c.alpha },
             n.createElement(i.jc, {
-                style: {
-                    input: c.input,
-                    label: c.label,
-                },
+                style: { input: c.input, label: c.label },
                 label: "a",
                 value: Math.round(100 * r.a),
                 onChange: p,

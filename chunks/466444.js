@@ -1,38 +1,28 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r = n(179771),
-    i = n(827343),
-    l = n(140175),
-    a = n(430452),
+n.d(t, { A: () => _ });
+var i = n(179771),
+    r = n(827343),
+    a = n(140175),
+    l = n(430452),
     s = n(350535),
     o = n(636401),
-    c = n(629471),
-    u = n(613057),
-    d = n(652215),
-    p = n(731854);
-
-function f(e) {
+    d = n(629471),
+    c = n(613057),
+    u = n(652215),
+    A = n(731854);
+function h(e) {
     let t = e.application.id;
-    if (null == t)
-        throw new o.A(
-            {
-                errorCode: d.Lw6.INVALID_COMMAND,
-            },
-            "No application.",
-        );
+    if (null == t) throw new o.A({ errorCode: u.Lw6.INVALID_COMMAND }, "No application.");
     return t;
 }
-let h = {
-    [d.e$_.SET_VOICE_SETTINGS_2]: {
-        scope: u.hj,
+let _ = {
+    [u.e$_.SET_VOICE_SETTINGS_2]: {
+        scope: c.hj,
         validation: (e) =>
-            (0, c.A)(e)
+            (0, d.A)(e)
                 .required()
                 .keys({
-                    input_mode: (0, c.A)(e).keys({
-                        type: e.string().valid(Object.keys(d.TBI)),
+                    input_mode: (0, d.A)(e).keys({
+                        type: e.string().valid(Object.keys(u.TBI)),
                         shortcut: e.string().required(),
                     }),
                     self_mute: e.boolean(),
@@ -41,62 +31,38 @@ let h = {
         handler(e) {
             let {
                     socket: t,
-                    args: { input_mode: n, self_mute: r, self_deaf: l },
+                    args: { input_mode: n, self_mute: i, self_deaf: a },
                 } = e,
-                o = f(t);
-            null != n &&
-                i.A.setMode(
-                    n.type,
-                    {
-                        shortcut: (0, s.OH)(n.shortcut),
-                    },
-                    o,
-                ),
-                null != r &&
-                    r !== a.A.isSelfMute(o) &&
-                    i.A.toggleSelfMute({
-                        context: o,
-                    }),
-                null != l &&
-                    l !== a.A.isSelfDeaf(o) &&
-                    i.A.toggleSelfDeaf({
-                        context: o,
-                    });
+                o = h(t);
+            null != n && r.A.setMode(n.type, { shortcut: (0, s.OH)(n.shortcut) }, o),
+                null != i && i !== l.A.isSelfMute(o) && r.A.toggleSelfMute({ context: o }),
+                null != a && a !== l.A.isSelfDeaf(o) && r.A.toggleSelfDeaf({ context: o });
         },
     },
-    [d.e$_.SET_USER_VOICE_SETTINGS_2]: {
-        scope: u.hj,
+    [u.e$_.SET_USER_VOICE_SETTINGS_2]: {
+        scope: c.hj,
         validation: (e) =>
-            (0, c.A)(e)
+            (0, d.A)(e)
                 .required()
-                .keys({
-                    user_id: e.string().required(),
-                    volume: e.number().min(0).max(200),
-                    mute: e.boolean(),
-                }),
+                .keys({ user_id: e.string().required(), volume: e.number().min(0).max(200), mute: e.boolean() }),
         handler(e) {
             let {
                     socket: t,
-                    args: { user_id: n, mute: r, volume: l },
+                    args: { user_id: n, mute: i, volume: a },
                 } = e,
-                s = f(t);
-            null != r && r !== a.A.isLocalMute(n, s) && i.A.toggleLocalMute(n, s),
-                null != l && i.A.setLocalVolume(n, l, s);
+                s = h(t);
+            null != i && i !== l.A.isLocalMute(n, s) && r.A.toggleLocalMute(n, s),
+                null != a && r.A.setLocalVolume(n, a, s);
         },
     },
-    [d.e$_.PUSH_TO_TALK]: {
-        scope: {
-            [u.sm.ALL]: [r.F.RPC, r.F.RPC_VOICE_WRITE],
-        },
-        validation: (e) =>
-            (0, c.A)(e).required().keys({
-                active: e.boolean(),
-            }),
+    [u.e$_.PUSH_TO_TALK]: {
+        scope: { [c.sm.ALL]: [i.F.RPC, i.F.RPC_VOICE_WRITE] },
+        validation: (e) => (0, d.A)(e).required().keys({ active: e.boolean() }),
         handler(e) {
             let {
                 args: { active: t },
             } = e;
-            a.A.getMode(p.x.DEFAULT) === d.TBI.PUSH_TO_TALK && (0, l.N)(t);
+            l.A.getMode(A.x.DEFAULT) === u.TBI.PUSH_TO_TALK && (0, a.N)(t);
         },
     },
 };

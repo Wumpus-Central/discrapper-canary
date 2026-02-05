@@ -1,24 +1,19 @@
-n.d(t, {
-    d: () => s,
-}),
-    n(896048);
-var r = n(681154),
-    i = n(155718);
+n.d(t, { d: () => r });
+var i = n(681154),
+    l = n(155718);
 let a = new Set([
-    r.ContentInventoryEntryType.TOP_ARTIST,
-    r.ContentInventoryEntryType.TOP_GAME,
-    r.ContentInventoryEntryType.PLAYED_GAME,
-    r.ContentInventoryEntryType.WATCHED_MEDIA,
-    r.ContentInventoryEntryType.LISTENED_SESSION,
-    r.ContentInventoryEntryType.LAUNCHED_ACTIVITY,
+    i.ContentInventoryEntryType.TOP_ARTIST,
+    i.ContentInventoryEntryType.TOP_GAME,
+    i.ContentInventoryEntryType.PLAYED_GAME,
+    i.ContentInventoryEntryType.WATCHED_MEDIA,
+    i.ContentInventoryEntryType.LISTENED_SESSION,
+    i.ContentInventoryEntryType.LAUNCHED_ACTIVITY,
 ]);
-
-function s(e) {
-    var t;
-    let n = (null != (t = e.components) ? t : []).filter((e) => e.type === i.I5.CONTENT_INVENTORY_ENTRY);
+function r(e) {
+    let t = (e.components ?? []).filter((e) => e.type === l.I5.CONTENT_INVENTORY_ENTRY);
     return (
-        0 === n.length ||
-        n.some((e) => {
+        0 === t.length ||
+        t.some((e) => {
             let { contentInventoryEntry: t } = e;
             return !a.has(t.content_type);
         })

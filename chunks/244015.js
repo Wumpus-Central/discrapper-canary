@@ -1,7 +1,5 @@
 var i, r, n, s, o, d;
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0);
 let l = a(778090);
 ((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = "CHAIR"),

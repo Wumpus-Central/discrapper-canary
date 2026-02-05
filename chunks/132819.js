@@ -1,3 +1,4 @@
+"use strict";
 var r = n(834647),
     a = n(683570),
     o = n(421236),
@@ -19,12 +20,7 @@ var r = n(834647),
     }),
     v = m || y;
 r(
-    {
-        target: "Reflect",
-        stat: !0,
-        forced: v,
-        sham: v,
-    },
+    { target: "Reflect", stat: !0, forced: v, sham: v },
     {
         construct: function (e, t) {
             s(e), l(t);

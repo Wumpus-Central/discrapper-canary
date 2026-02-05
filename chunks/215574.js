@@ -1,59 +1,41 @@
-let t, a, o;
-n(896048),
-    n(321073),
-    n(65821),
-    n(927092),
-    n(212978),
-    n(201528),
-    n(393431),
-    n(752391),
-    n(532706),
-    n(42231),
-    n(232424),
-    n(757074),
-    n(949626),
-    n(767709),
-    n(65162);
-var i = n(118356),
-    l = n(206607),
-    s = n(267411);
+let n, a, o;
+t(321073), t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162);
+var i = t(118356),
+    l = t(206607),
+    s = t(267411);
 let u = new i.Vy("EncryptionWorker");
 (0, i.$o)(i.gZ);
 let d = "uninitialized",
     f = new Map(),
     c = new Map(),
-    g = [];
+    p = [];
 (self.onmessage = (e) => {
-    h(e);
+    g(e);
 }),
     (self.onrtctransform = (e) => {
-        m({
-            type: l.lA.RTC_TRANSFORM,
-            readable: e.transformer.readable,
-            writable: e.transformer.writable,
-        });
+        h({ type: l.lA.RTC_TRANSFORM, readable: e.transformer.readable, writable: e.transformer.writable });
     });
-let h = (e) => {
+let g = (e) => {
         let { data: r } = e;
-        if ("initialized" !== d && r.type !== l.lA.INITIALIZE) return void g.push(e);
+        if ("initialized" !== d && r.type !== l.lA.INITIALIZE) return void p.push(e);
         switch (r.type) {
             case l.lA.INITIALIZE:
                 y();
                 break;
             case l.lA.RTC_TRANSFORM:
-                m(r);
+                h(r);
                 break;
             case l.lA.SET_KEY_RATCHET:
-                p(r);
+                m(r);
                 break;
             case l.lA.UPDATE_SSRC:
-                b(r);
+                v(r);
                 break;
             case l.lA.UPDATE_CODECS:
                 E(r);
                 break;
             case l.lA.DESTROY_USER:
-                v(r);
+                b(r);
                 break;
             default:
                 throw (u.error("DAVE worker unknown message type"), Error("Unsupported message type"));
@@ -61,82 +43,65 @@ let h = (e) => {
     },
     y = async () => {
         if ("uninitialized" === d)
-            for (let e of ((d = "initializing"), (t = await (0, s.zs)()), (d = "initialized"), g)) h(e);
+            for (let e of ((d = "initializing"), (n = await (0, s.zs)()), (d = "initialized"), p)) g(e);
+    },
+    h = (e) => {
+        let { readable: r, writable: t } = e,
+            n = new TransformStream({ transform: C });
+        r.pipeThrough(n).pipeTo(t);
     },
     m = (e) => {
-        let { readable: r, writable: n } = e,
-            t = new TransformStream({
-                transform: S,
-            });
-        r.pipeThrough(t).pipeTo(n);
-    },
-    p = (e) => {
-        let { userId: r, operation: n, protocolVersion: a, keyRatchet: o } = e,
+        let { userId: r, operation: t, protocolVersion: a, keyRatchet: o } = e,
             i = c.get(r);
-        null == i &&
-            ((i = {
-                audioSSRC: 0,
-                videoSSRCs: [],
-                cryptor: null,
-            }),
-            c.set(r, i));
+        null == i && ((i = { audioSSRC: 0, videoSSRCs: [], cryptor: null }), c.set(r, i));
         let s = i.cryptor;
         if (null == s) {
-            if (n === l.jU.ENCRYPT) {
-                let e = new t.Encryptor();
+            if (t === l.jU.ENCRYPT) {
+                let e = new n.Encryptor();
                 e.SetProtocolVersionChangedCallback(() => {
                     A(e.GetProtocolVersion());
                 }),
                     A(e.GetProtocolVersion()),
                     (s = e);
-            } else s = new t.Decryptor();
+            } else s = new n.Decryptor();
             i.cryptor = s;
         }
-        if (n === l.jU.ENCRYPT) {
+        if (t === l.jU.ENCRYPT) {
             let e = s;
-            e.SetPassthroughMode(!o && a === t.kDisabledVersion), e.SetKeyRatchet(o);
+            e.SetPassthroughMode(!o && a === n.kDisabledVersion), e.SetKeyRatchet(o);
         } else {
             let e = s;
-            e.TransitionToPassthroughMode(!o && a === t.kDisabledVersion), e.TransitionToKeyRatchet(o);
+            e.TransitionToPassthroughMode(!o && a === n.kDisabledVersion), e.TransitionToKeyRatchet(o);
         }
     },
-    b = (e) => {
-        let { userId: r, audioSsrc: n, videoSsrcs: t } = e,
-            a = [n, ...t],
+    v = (e) => {
+        let { userId: r, audioSsrc: t, videoSsrcs: n } = e,
+            a = [t, ...n],
             o = c.get(r);
-        for (let e of (null == o &&
-            ((o = {
-                audioSSRC: n,
-                videoSSRCs: t,
-                cryptor: null,
-            }),
-            c.set(r, o)),
+        for (let e of (null == o && ((o = { audioSSRC: t, videoSSRCs: n, cryptor: null }), c.set(r, o)),
         [o.audioSSRC, ...o.videoSSRCs]))
             a.includes(e) || f.get(e) !== r || f.delete(e);
         for (let e of a) e > 0 && f.set(e, r);
-        (o.audioSSRC = n), (o.videoSSRCs = t);
+        (o.audioSSRC = t), (o.videoSSRCs = n);
     },
     E = (e) => {
-        let { audioCodec: r, videoCodec: n } = e;
-        (a = R(r)), (o = R(n));
+        let { audioCodec: r, videoCodec: t } = e;
+        (a = R(r)), (o = R(t));
     },
-    v = (e) => {
+    b = (e) => {
         let { userId: r } = e,
-            n = c.get(r);
-        if (null == n) return;
+            t = c.get(r);
+        if (null == t) return;
         c.delete(r);
-        let { audioSSRC: t, videoSSRCs: a } = n;
-        for (let e of [t, ...a]) f.get(e) === r && f.delete(e);
+        let { audioSSRC: n, videoSSRCs: a } = t;
+        for (let e of [n, ...a]) f.get(e) === r && f.delete(e);
     },
     A = (e) => {
-        postMessage({
-            type: l.h5.PROTOCOL_VERSION_CHANGED,
-            protocolVersion: e,
-        });
+        postMessage({ type: l.h5.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
     },
-    S = (e, r) => {
+    C = (e, r) => {
         try {
-            let n,
+            let t,
                 a = e.getMetadata().synchronizationSource;
             if (null == a) return void u.warn("no ssrc found in frame metadata");
             let o = f.get(a);
@@ -148,70 +113,69 @@ let h = (e) => {
                 1 !== c.size && u.warn("no cryptor found for userId", o);
                 return;
             }
-            if (l instanceof t.Encryptor) n = C(e, a, l);
+            if (l instanceof n.Encryptor) t = T(e, a, l);
             else {
-                if (!(l instanceof t.Decryptor)) return void u.warn("unsupported cryptor type", l);
-                n = T(e, l);
+                if (!(l instanceof n.Decryptor)) return void u.warn("unsupported cryptor type", l);
+                t = S(e, l);
             }
-            if (null == n) return;
-            r.enqueue(n);
+            if (null == t) return;
+            r.enqueue(t);
         } catch (e) {
             u.warn("error transforming frame", e);
         }
     },
-    C = (e, r, n) => {
+    T = (e, r, t) => {
         if (0 === e.data.byteLength) return e;
-        let i = e instanceof RTCEncodedAudioFrame ? t.MediaType.Audio : t.MediaType.Video,
-            l = i === t.MediaType.Audio ? a : o;
-        n.AssignSsrcToCodec(r, l);
-        let s = n.GetMaxCiphertextByteSize(i, e.data.byteLength),
-            u = t._malloc(s);
+        let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
+            l = i === n.MediaType.Audio ? a : o;
+        t.AssignSsrcToCodec(r, l);
+        let s = t.GetMaxCiphertextByteSize(i, e.data.byteLength),
+            u = n._malloc(s);
         try {
             let a = new Uint8Array(e.data);
-            t.HEAPU8.set(a, u);
-            let o = n.Encrypt(i, r, u, e.data.byteLength, s);
+            n.HEAPU8.set(a, u);
+            let o = t.Encrypt(i, r, u, e.data.byteLength, s);
             if (0 === o) return null;
-            let l = t.HEAPU8.subarray(u, u + o),
+            let l = n.HEAPU8.subarray(u, u + o),
                 d = new Uint8Array(o);
             d.set(l), (e.data = d.buffer);
         } finally {
-            t._free(u);
+            n._free(u);
         }
         return e;
     },
-    T = (e, r) => {
+    S = (e, r) => {
         if (0 === e.data.byteLength) return e;
-        let n = e instanceof RTCEncodedAudioFrame ? t.MediaType.Audio : t.MediaType.Video,
-            a = r.GetMaxPlaintextByteSize(n, e.data.byteLength),
-            o = t._malloc(a);
+        let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
+            a = r.GetMaxPlaintextByteSize(t, e.data.byteLength),
+            o = n._malloc(a);
         try {
             let i = new Uint8Array(e.data);
-            t.HEAPU8.set(i, o);
-            let l = r.Decrypt(n, o, e.data.byteLength, a);
+            n.HEAPU8.set(i, o);
+            let l = r.Decrypt(t, o, e.data.byteLength, a);
             if (0 === l) return null;
-            let s = t.HEAPU8.subarray(o, o + l),
+            let s = n.HEAPU8.subarray(o, o + l),
                 u = new Uint8Array(l);
             return u.set(s), (e.data = u.buffer), e;
         } finally {
-            t._free(o);
+            n._free(o);
         }
     };
-
 function R(e) {
     switch (e) {
         case "opus":
-            return t.Codec.Opus;
+            return n.Codec.Opus;
         case "VP8":
-            return t.Codec.VP8;
+            return n.Codec.VP8;
         case "VP9":
-            return t.Codec.VP9;
+            return n.Codec.VP9;
         case "H264":
-            return t.Codec.H264;
+            return n.Codec.H264;
         case "H265":
-            return t.Codec.H265;
+            return n.Codec.H265;
         case "AV1":
-            return t.Codec.AV1;
+            return n.Codec.AV1;
         default:
-            return t.Codec.Unknown;
+            return n.Codec.Unknown;
     }
 }

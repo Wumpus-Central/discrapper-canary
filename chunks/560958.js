@@ -1,25 +1,13 @@
-a.d(t, {
-    A: () => o,
-}),
-    a(896048);
+a.d(t, { A: () => n });
 var s = a(627968),
     l = a(64700),
-    r = a(134402);
-
-function n(e, t, a) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: a,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = a),
-        e
-    );
-}
-class i extends l.Component {
+    i = a(134402);
+class r extends l.Component {
+    scrollRef = l.createRef();
+    scrollTo = (e) => {
+        null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
+    };
+    getScrollTop = () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop);
     componentDidUpdate(e) {
         let {
             props: { location: t, shouldScrollToTop: a },
@@ -29,19 +17,7 @@ class i extends l.Component {
     }
     render() {
         let { className: e, render: t } = this.props;
-        return (0, s.jsx)("div", {
-            ref: this.scrollRef,
-            className: e,
-            children: t(this.scrollTo, this.getScrollTop),
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            n(this, "scrollRef", l.createRef()),
-            n(this, "scrollTo", (e) => {
-                null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
-            }),
-            n(this, "getScrollTop", () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
+        return (0, s.jsx)("div", { ref: this.scrollRef, className: e, children: t(this.scrollTo, this.getScrollTop) });
     }
 }
-let o = (0, r.y)(i);
+let n = (0, i.y)(r);

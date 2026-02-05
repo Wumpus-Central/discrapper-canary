@@ -1,10 +1,8 @@
-r.d(t, {
-    A: () => l,
-});
+"use strict";
+r.d(t, { A: () => l });
 var n = r(403396),
     o = r(607959),
     a = r(442676);
-
 function i(e) {
     var t = -1,
         r = null == e ? 0 : e.length;

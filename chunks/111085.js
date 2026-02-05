@@ -1,66 +1,44 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153);
+let a = { sentGifts: {} };
+function s(e, t) {
+    return `${e}:${t}`;
 }
-let o = {
-    sentGifts: {},
-};
-
-function l(e, t) {
-    return "".concat(e, ":").concat(t);
-}
-class c extends (r = i.Ay.PersistedStore) {
+class o extends r.Ay.PersistedStore {
+    static displayName = "SentGiftsStore";
+    static persistKey = "SentGiftsStore";
     initialize(e) {
-        null != e && ((o = e), this.cleanupExpiredGifts());
+        null != e && ((a = e), this.cleanupExpiredGifts());
     }
     getState() {
-        return o;
+        return a;
     }
     hasSentGift(e, t) {
-        let n = l(e, t),
-            r = o.sentGifts[n];
+        let n = s(e, t),
+            r = a.sentGifts[n];
         return !(null == r || new Date(r.expiresAt) < new Date());
     }
     getSentGift(e, t) {
-        let n = l(e, t),
-            r = o.sentGifts[n];
+        let n = s(e, t),
+            r = a.sentGifts[n];
         return null == r || new Date(r.expiresAt) < new Date() ? null : r;
     }
     cleanupExpiredGifts() {
         let e = new Date();
-        for (let [t, n] of Object.entries(o.sentGifts)) new Date(n.expiresAt) < e && delete o.sentGifts[t];
+        for (let [t, n] of Object.entries(a.sentGifts)) new Date(n.expiresAt) < e && delete a.sentGifts[t];
     }
 }
-
-function u(e) {
-    let t = l(e.skuId, e.recipientId),
+function l(e) {
+    let t = s(e.skuId, e.recipientId),
         n = new Date(),
         r = new Date(n.getTime() + 1728e5);
-    o.sentGifts[t] = {
+    a.sentGifts[t] = {
         skuId: e.skuId,
         recipientId: e.recipientId,
         sentAt: n.toISOString(),
         expiresAt: r.toISOString(),
     };
 }
-s(c, "displayName", "SentGiftsStore"), s(c, "persistKey", "SentGiftsStore");
-let d = new c(a.h, {
-    WISHLIST_GIFT_SENT: u,
-});
+let u = new o(i.h, { WISHLIST_GIFT_SENT: l });

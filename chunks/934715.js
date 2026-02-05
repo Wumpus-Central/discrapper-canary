@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     B_: "applicationDetails__94ab2",
     pN: "noPadding__94ab2",

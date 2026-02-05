@@ -1,10 +1,5 @@
-n.d(t, {
-    OJ: () => s,
-    Pt: () => r,
-    Wk: () => c,
-    _B: () => o,
-    ru: () => i,
-});
+"use strict";
+n.d(t, { OJ: () => s, Pt: () => r, Wk: () => u, _B: () => o, ru: () => i });
 class r {
     get childNodes() {
         throw Error("childNodes is not supported");
@@ -57,7 +52,7 @@ class r {
 }
 class i extends r {
     filter(e, t, n) {
-        let [r, i] = u(e, t, this.firstChildKey, n),
+        let [r, i] = c(e, t, this.firstChildKey, n),
             a = this.clone();
         return (a.firstChildKey = r), (a.lastChildKey = i), a;
     }
@@ -87,7 +82,7 @@ class l extends i {
     }
 }
 l.type = "section";
-class c {
+class u {
     get size() {
         return this.itemCount;
     }
@@ -174,7 +169,7 @@ class c {
     }
     filter(e) {
         let t = new this.constructor(),
-            [n, r] = u(this, t, this.firstKey, e);
+            [n, r] = c(this, t, this.firstKey, e);
         return null == t || t.commit(n, r), t;
     }
     constructor() {
@@ -185,8 +180,7 @@ class c {
             (this.itemCount = 0);
     }
 }
-
-function u(e, t, n, r) {
+function c(e, t, n, r) {
     var i, a;
     if (null == n) return [null, null];
     let s = null,

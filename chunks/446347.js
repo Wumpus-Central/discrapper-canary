@@ -1,81 +1,61 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048),
-    n(321073);
+"use strict";
+n.d(t, { A: () => N }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(284009),
     l = n.n(o),
-    c = n(397927),
-    u = n(579872),
+    u = n(397927),
+    c = n(579872),
     d = n(383501),
-    f = n(710067),
-    p = n(957565),
-    _ = n(975571),
+    _ = n(710067),
+    f = n(957565),
+    p = n(975571),
     h = n(723702),
     m = n(938463),
     g = n(652215),
     E = n(985018),
-    b = n(596475);
-
-function y(e, t) {
+    A = n(596475);
+function I(e, t) {
     return null != t && null != t.discord_web && e.id === t.discord_web.id && e.type === t.discord_web.type;
 }
-
-function O(e) {
+function T(e) {
     let { url: t } = e,
         [n, a] = i.useState(!1),
         o = i.useRef(void 0),
         l = i.useCallback(() => {
             n ||
-                (0, p.C)(t, () => {
+                (0, f.C)(t, () => {
                     a(!0), (o.current = setTimeout(() => a(!1), 2e3));
                 });
         }, [t, n]);
     return (
         i.useEffect(() => () => clearTimeout(o.current), []),
-        p.p5
-            ? (0, r.jsxs)(c.DUT, {
-                  className: s()(b.S, n ? b.pG : null),
+        f.p5
+            ? (0, r.jsxs)(u.DUT, {
+                  className: s()(A.S, n ? A.pG : null),
                   onClick: l,
                   children: [
-                      (0, r.jsx)(c.qYV, {
-                          size: "md",
-                          color: "currentColor",
-                          className: b.n7,
-                      }),
+                      (0, r.jsx)(u.qYV, { size: "md", color: "currentColor", className: A.n7 }),
                       n ? E.intl.string(E.t.GmrIJY) : E.intl.string(E.t.iVzBOh),
                   ],
               })
             : null
     );
 }
-
-function A() {
+function y() {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: b.NT,
-                children: [
-                    (0, r.jsx)("div", {
-                        className: s()(b.Pz, b.w9),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: b.Pz,
-                    }),
-                ],
+                className: A.NT,
+                children: [(0, r.jsx)("div", { className: s()(A.Pz, A.w9) }), (0, r.jsx)("div", { className: A.Pz })],
             }),
-            (0, r.jsx)("div", {
-                className: b.MM,
-            }),
+            (0, r.jsx)("div", { className: A.MM }),
         ],
     });
 }
-
-function v(e) {
+function S(e) {
     let {
         subHead: t,
         buildDetails: n,
@@ -83,58 +63,43 @@ function v(e) {
         buttonClick: s,
         buttonText: o,
         disabled: l = !1,
-        submitting: u = !1,
+        submitting: c = !1,
     } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: b.NT,
+                className: A.NT,
                 children: [
-                    (0, r.jsx)(c.Text, {
-                        variant: "text-sm/medium",
-                        className: b.V$,
-                        children: t,
-                    }),
-                    (0, r.jsx)("div", {
-                        className: b.Jb,
-                        children: n,
-                    }),
+                    (0, r.jsx)(u.Text, { variant: "text-sm/medium", className: A.V$, children: t }),
+                    (0, r.jsx)("div", { className: A.Jb, children: n }),
                 ],
             }),
-            (0, r.jsx)(c.Button, {
-                text: o,
-                loading: u,
-                variant: a,
-                onClick: s,
-                fullWidth: !0,
-                disabled: l,
-            }),
+            (0, r.jsx)(u.Button, { text: o, loading: c, variant: a, onClick: s, fullWidth: !0, disabled: l }),
         ],
     });
 }
-
-function S(e) {
+function v(e) {
     let t,
         n,
         r,
-        { currentOverrides: i, linkMeta: a, applyBuildOverride: s, clearBuildOverride: o, submitting: c } = e,
-        f = ["discord_web"];
-    h.isPlatformEmbedded || f.push("discord_marketing", "discord_developers");
-    let p = (0, m.A)(a, f);
-    if (!p.valid) return I(p.reason);
+        { currentOverrides: i, linkMeta: a, applyBuildOverride: s, clearBuildOverride: o, submitting: u } = e,
+        _ = ["discord_web"];
+    h.isPlatformEmbedded || _.push("discord_marketing", "discord_developers");
+    let f = (0, m.A)(a, _);
+    if (!f.valid) return C(f.reason);
     l()(null != a, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
-    let { discord_web: _, discord_developers: g } = a.targetBuildOverride,
-        b = null != _ ? _ : g;
+    let { discord_web: p, discord_developers: g } = a.targetBuildOverride,
+        A = p ?? g;
     l()(
-        null != b,
+        null != A,
         "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
     ),
-        y(b, i)
+        I(A, i)
             ? ((n = E.intl.string(E.t.tX4xrt)), (t = o), (r = "critical-primary"))
             : ((n = E.intl.string(E.t.nOunHC)), (t = s), (r = "primary"));
-    let O = () => {
+    let T = () => {
         d.A.isConnected()
-            ? u.A.show({
+            ? c.A.show({
                   title: E.intl.string(E.t.tiu1ly),
                   body: E.intl.string(E.t["zK+lqW"]),
                   onConfirm: t,
@@ -144,18 +109,17 @@ function S(e) {
               })
             : t();
     };
-    return v({
+    return S({
         subHead: E.intl.string(E.t.RCYGot),
-        buildDetails: b.id,
-        buttonClick: O,
+        buildDetails: A.id,
+        buttonClick: T,
         buttonText: n,
         variant: r,
-        submitting: c,
+        submitting: u,
     });
 }
-
-function I(e) {
-    return v({
+function C(e) {
+    return S({
         subHead: E.intl.string(E.t.ODXApH),
         variant: "secondary",
         buttonText: "Invalid",
@@ -163,66 +127,53 @@ function I(e) {
         disabled: !0,
     });
 }
-
-function T(e, t, n) {
-    return (0, r.jsxs)(c.Text, {
+function b(e, t, n) {
+    return (0, r.jsxs)(u.Text, {
         variant: "text-xs/normal",
-        className: b.lS,
+        className: A.lS,
         children: [
             (0, r.jsx)("strong", {
-                className: b.DD,
+                className: A.DD,
                 children:
                     null != e && null != e.releaseChannel
-                        ? E.intl.formatToPlainString(E.t.bFj63b, {
-                              releaseChannel: e.releaseChannel,
-                          })
+                        ? E.intl.formatToPlainString(E.t.bFj63b, { releaseChannel: e.releaseChannel })
                         : E.intl.string(E.t.Wj3LW4),
             }),
-            (0, r.jsx)(c.MzZ, {
-                className: b.Pl,
-                href: _.A.getArticleURL(g.MVz.BUILD_OVERRIDE_EMBED),
+            (0, r.jsx)(u.MzZ, {
+                className: A.Pl,
+                href: p.A.getArticleURL(g.MVz.BUILD_OVERRIDE_EMBED),
                 target: "_blank",
-                children: (0, r.jsx)(c.mir, {
-                    size: "xs",
-                    color: "currentColor",
-                    className: b.G,
-                }),
+                children: (0, r.jsx)(u.mir, { size: "xs", color: "currentColor", className: A.G }),
             }),
-            n
-                ? null
-                : (0, r.jsx)(O, {
-                      url: t,
-                  }),
+            n ? null : (0, r.jsx)(T, { url: t }),
         ],
     });
 }
-let C = (e) => {
+let N = (e) => {
     let { loading: t = !1, currentOverrides: n, linkMeta: a, url: s, applyBuildOverride: o, clearBuildOverride: l } = e,
-        [c, u] = i.useState(!1),
+        [u, c] = i.useState(!1),
         d = i.useCallback(() => {
-            c || (u(!0), o().catch(() => u(!1)));
-        }, [o, c]),
-        p = i.useCallback(() => {
-            c || (u(!0), l().catch(() => u(!1)));
-        }, [l, c]);
+            u || (c(!0), o().catch(() => c(!1)));
+        }, [o, u]),
+        f = i.useCallback(() => {
+            u || (c(!0), l().catch(() => c(!1)));
+        }, [l, u]);
     return (0, r.jsxs)("div", {
-        className: b.iE,
+        className: A.iE,
         children: [
-            T(a, s, t),
+            b(a, s, t),
             (0, r.jsxs)("div", {
-                className: b.Qs,
+                className: A.Qs,
                 children: [
-                    (0, r.jsx)(f.A, {
-                        className: b.Kk,
-                    }),
+                    (0, r.jsx)(_.A, { className: A.Kk }),
                     t
-                        ? A()
-                        : S({
+                        ? y()
+                        : v({
                               currentOverrides: n,
                               linkMeta: a,
                               applyBuildOverride: d,
-                              clearBuildOverride: p,
-                              submitting: c,
+                              clearBuildOverride: f,
+                              submitting: u,
                           }),
                 ],
             }),

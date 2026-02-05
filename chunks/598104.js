@@ -1,59 +1,35 @@
-r.d(t, {
-    A: () => o,
-});
-var n = r(627968),
-    l = r(64700),
-    s = r(397927),
-    a = r(571694),
-    i = r(954376);
-let o = l.memo(function (e) {
-    let { channel: t, size: r, facepileSizeOverride: l, isTyping: o, status: c, className: u, animated: d = !1 } = e,
-        h = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l,
-                s = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-                return s;
-            }
-            if (
-                ((s = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        s = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < s.length; n++)
-                        (r = s[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
-            return s;
-        })(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);
+l.d(t, { A: () => A });
+var a = l(627968),
+    n = l(64700),
+    s = l(397927),
+    i = l(571694),
+    r = l(954376);
+let A = n.memo(function (e) {
+    let {
+        channel: t,
+        size: l,
+        facepileSizeOverride: n,
+        isTyping: A,
+        status: c,
+        className: u,
+        animated: d = !1,
+        ...o
+    } = e;
     return t.recipients.length >= 2 && null == t.icon
-        ? (0, n.jsx)(i.A, {
-              "aria-label": h["aria-label"],
-              "aria-hidden": h["aria-hidden"],
+        ? (0, a.jsx)(r.A, {
+              "aria-label": o["aria-label"],
+              "aria-hidden": o["aria-hidden"],
               className: u,
               recipients: t.recipients,
-              size: null != l ? l : r,
-              isTyping: o,
+              size: n ?? l,
+              isTyping: A,
               status: c,
           })
-        : (0, n.jsx)(s.euF, {
-              "aria-hidden": h["aria-hidden"],
-              "aria-label": h["aria-label"],
+        : (0, a.jsx)(s.euF, {
+              "aria-hidden": o["aria-hidden"],
+              "aria-label": o["aria-label"],
               className: u,
-              size: r,
-              src: (0, a.Y)(t, 80, d),
+              size: l,
+              src: (0, i.Y)(t, 80, d),
           });
 });

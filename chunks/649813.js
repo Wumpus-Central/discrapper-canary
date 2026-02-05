@@ -1,45 +1,34 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => f });
 var r = n(73153),
     i = n(956793),
     a = n(439372),
     s = n(976860),
     o = n(345942),
     l = n(430452),
-    c = n(309010),
-    u = n(967198),
+    u = n(309010),
+    c = n(967198),
     d = n(652215);
-
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class p extends a.A {
+class _ extends a.A {
+    actions = {
+        GUILD_CREATE: this.handleGuildCreate,
+        CHANNEL_CREATE: this.handleChannelCreate,
+        LOGOUT: this.handleLogout,
+    };
     handleGuildCreate(e) {
         let { guild: t } = e,
-            n = c.A.getChannelId(d.ME),
-            r = c.A.getVoiceChannelId();
+            n = u.A.getChannelId(d.ME),
+            r = u.A.getVoiceChannelId();
         t.id === n && (0, o.u)(t.id),
-            t.id === r && !1 !== t.unavailable && null == r && i.default.selectVoiceChannel((0, c.c)(t.id));
+            t.id === r && !1 !== t.unavailable && null == r && i.default.selectVoiceChannel((0, u.c)(t.id));
     }
     handleChannelCreate(e) {
         let { channel: t } = e;
         if (t.type !== d.rbe.GROUP_DM) return;
         let n = t.originChannelId,
-            r = c.A.getChannelId(d.eGj);
-        null == u.A.getGuildId() && null != n && n === r && (0, s.pX)(d.BVt.CHANNEL(d.ME, t.id)),
-            null != n && n === c.A.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.A.isVideoEnabled());
+            r = u.A.getChannelId(d.eGj);
+        null == c.A.getGuildId() && null != n && n === r && (0, s.pX)(d.BVt.CHANNEL(d.ME, t.id)),
+            null != n && n === u.A.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.A.isVideoEnabled());
     }
     handleLogout() {
         r.h.dispatch({
@@ -51,13 +40,5 @@ class p extends a.A {
             joinVoiceId: null,
         });
     }
-    constructor(...e) {
-        super(...e),
-            f(this, "actions", {
-                GUILD_CREATE: this.handleGuildCreate,
-                CHANNEL_CREATE: this.handleChannelCreate,
-                LOGOUT: this.handleLogout,
-            });
-    }
 }
-let _ = new p();
+let f = new _();

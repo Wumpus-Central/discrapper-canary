@@ -1,4 +1,5 @@
-e.exports = {
+"use strict";
+t.exports = {
     logBlockedSelectionEvent: function () {
         return null;
     },

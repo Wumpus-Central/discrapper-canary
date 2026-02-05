@@ -1,3 +1,4 @@
+"use strict";
 function r(e) {
     if (!e) return;
     let t = !0;
@@ -19,6 +20,4 @@ function r(e) {
             t && n.stopPropagation();
     };
 }
-n.d(t, {
-    T: () => r,
-});
+n.d(t, { T: () => r });

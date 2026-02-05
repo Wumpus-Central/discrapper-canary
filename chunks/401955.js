@@ -1,9 +1,7 @@
-n.d(t, {
-    A: () => r,
-});
+"use strict";
+n.d(t, { A: () => s });
 var i = n(672396);
-
-function r(e) {
+function s(e) {
     switch (e) {
         case i.Li.BOTTOM:
             return i.Kv.LOW;

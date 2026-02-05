@@ -1,3 +1,4 @@
+"use strict";
 var r =
         Object.assign ||
         function (e) {
@@ -21,32 +22,24 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-
 function a(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function o(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var l = n(313319),
-    c = n(698380),
-    u = n(337627),
+    u = n(698380),
+    c = n(337627),
     d = n(646709);
 e.exports = (function (e) {
     function t(e) {
@@ -55,9 +48,7 @@ e.exports = (function (e) {
         return (
             !(e = d.current(e) || {}).transform ||
                 e.transform instanceof l ||
-                (e = r({}, e, {
-                    transform: new u(e.transform),
-                })),
+                (e = r({}, e, { transform: new c(e.transform) })),
             (n._style = e),
             n
         );
@@ -108,4 +99,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(c);
+})(u);

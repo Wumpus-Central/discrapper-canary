@@ -1,15 +1,8 @@
-n.d(t, {
-    $: () => l,
-});
-var r = n(636401),
-    i = n(652215);
-let l = {
+n.d(t, { $: () => a });
+var i = n(636401),
+    r = n(652215);
+let a = {
     handler(e) {
-        throw new r.A(
-            {
-                errorCode: i.Lw6.INVALID_COMMAND,
-            },
-            "Deprecated command: ".concat(e.cmd),
-        );
+        throw new i.A({ errorCode: r.Lw6.INVALID_COMMAND }, `Deprecated command: ${e.cmd}`);
     },
 };

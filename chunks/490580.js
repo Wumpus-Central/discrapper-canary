@@ -1,26 +1,16 @@
-r.d(t, {
-    i: () => c,
-});
+"use strict";
+r.d(t, { i: () => c });
 var n = r(321733),
     o = r(201672);
-
 function i(e, t, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
 var a = ["canDrop", "hover", "drop"],
     s = (function () {
         var e;
-
         function t(e, r, n) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             i(this, "props", null),
@@ -76,7 +66,6 @@ var a = ["canDrop", "hover", "drop"],
             t
         );
     })();
-
 function c(e) {
     return (
         Object.keys(e).forEach(function (t) {

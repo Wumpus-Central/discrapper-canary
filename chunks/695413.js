@@ -1,63 +1,56 @@
-l.d(t, {
-    A: () => A,
-}),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(311907),
-    a = l(408238),
-    i = l(440938),
-    o = l(590180),
-    c = l(4227),
-    u = l(511265),
-    d = l(313276),
-    f = l(206077),
-    b = l(751304),
-    g = l(561769),
-    p = l(484469),
-    m = l(661623),
-    h = l(940622),
-    E = l(357704),
-    v = l(758836);
-let A = (e) => {
+"use strict";
+s.d(t, { A: () => b });
+var n = s(627968),
+    r = s(64700),
+    l = s(311907),
+    a = s(720462),
+    i = s(440938),
+    o = s(590180),
+    c = s(4227),
+    d = s(511265),
+    u = s(313276),
+    g = s(206077),
+    m = s(751304),
+    _ = s(561769),
+    h = s(484469),
+    p = s(661623),
+    f = s(940622),
+    E = s(357704),
+    C = s(758836);
+let b = (e) => {
     let t,
-        l,
+        s,
+        b,
         A,
-        x,
-        { isBlockLoading: S = !1, heroBlock: C, tab: O } = e,
-        _ = (0, i.uM)(),
-        y = r.useMemo(() => o.A.getCategoryForProduct(C.rewardSkuId), [C.rewardSkuId]),
-        j = (0, s.bG)([c.A], () => c.A.getPurchase(C.rewardSkuId)),
-        { products: L } =
-            ((t = (0, d.A)()),
-            (l = r.useMemo(
-                () => (S ? [] : t(C.rankedSkuIds).filter((e) => e.skuId !== C.rewardSkuId || null != j)),
-                [S, t, C.rankedSkuIds, j, C.rewardSkuId],
+        { isBlockLoading: x = !1, heroBlock: S, tab: v } = e,
+        L = (0, i.uM)(),
+        T = r.useMemo(() => o.A.getCategoryForProduct(S.rewardSkuId), [S.rewardSkuId]),
+        I = (0, l.bG)([c.A], () => c.A.getPurchase(S.rewardSkuId)),
+        { products: O } =
+            ((t = (0, u.A)()),
+            (s = r.useMemo(
+                () => (x ? [] : t(S.rankedSkuIds).filter((e) => e.skuId !== S.rewardSkuId || null != I)),
+                [x, t, S.rankedSkuIds, I, S.rewardSkuId],
             )),
-            (A = (0, u.p)()(l)),
-            (x = (0, f.X)(A)),
-            {
-                products: (0, h.od)(x),
-            }),
-        T = r.useMemo(
+            (b = (0, d.p)()(s)),
+            (A = (0, g.X)(b)),
+            { products: (0, f.od)(A) }),
+        y = r.useMemo(
             () =>
-                !S &&
-                0 !== C.rankedSkuIds.length &&
-                !(L.length > 0) &&
-                C.rankedSkuIds.every((e) => {
-                    var t;
-                    return (null == (t = o.A.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
-                }),
-            [S, C.rankedSkuIds, L.length],
+                !x &&
+                0 !== S.rankedSkuIds.length &&
+                !(O.length > 0) &&
+                S.rankedSkuIds.every((e) => o.A.getProduct(e)?.variantGroupStoreListingId != null),
+            [x, S.rankedSkuIds, O.length],
         ),
-        I = S || T,
-        { readyToClaim: N } = (0, E.K)(y, C.rewardSkuId),
-        k = null == j && null != C.rewardSkuId && null != y;
+        j = x || y,
+        { readyToClaim: N } = (0, E.K)(T, S.rewardSkuId),
+        k = null == I && null != S.rewardSkuId && null != T;
     return (0, n.jsx)(a.A, {
         gap: "xl",
-        children: I
+        children: j
             ? (0, n.jsx)(n.Fragment, {
-                  children: [void 0, void 0, void 0, void 0, void 0].map((e, t) => (0, n.jsx)(p.A, {}, t)),
+                  children: [void 0, void 0, void 0, void 0, void 0].map((e, t) => (0, n.jsx)(h.A, {}, t)),
               })
             : (0, n.jsxs)(n.Fragment, {
                   children: [
@@ -66,41 +59,30 @@ let A = (e) => {
                           (0, n.jsx)(
                               i.R9,
                               {
-                                  newValue: {
-                                      tilePosition: 0,
-                                      pageSection: "top 4",
-                                      categoryPosition: 0,
-                                  },
-                                  children: (0, n.jsx)(m.A, {
-                                      category: y,
-                                      rewardSkuId: C.rewardSkuId,
-                                  }),
+                                  newValue: { tilePosition: 0, pageSection: "top 4", categoryPosition: 0 },
+                                  children: (0, n.jsx)(p.A, { category: T, rewardSkuId: S.rewardSkuId }),
                               },
-                              C.rewardSkuId,
+                              S.rewardSkuId,
                           ),
-                      L.map((e, t) => {
-                          let l = o.A.getCategoryForProduct(e.skuId);
-                          return null == e || null == l
+                      O.map((e, t) => {
+                          let s = o.A.getCategoryForProduct(e.skuId);
+                          return null == e || null == s
                               ? null
                               : (0, n.jsx)(
                                     i.R9,
                                     {
-                                        newValue: {
-                                            tilePosition: t,
-                                            pageSection: "top 4",
-                                            categoryPosition: 0,
-                                        },
+                                        newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
                                         children: (0, n.jsx)(
-                                            b.A,
+                                            m.A,
                                             {
-                                                skuId: null == e ? void 0 : e.skuId,
-                                                prioritizedCurrency: O === v.G2.ORBS ? g.Hi.ORBS : void 0,
-                                                onClickAnalytics: (0, g.UU)(e, O, _),
+                                                skuId: e?.skuId,
+                                                prioritizedCurrency: v === C.G2.ORBS ? _.Hi.ORBS : void 0,
+                                                onClickAnalytics: (0, _.UU)(e, v, L),
                                             },
                                             e.skuId,
                                         ),
                                     },
-                                    null == e ? void 0 : e.skuId,
+                                    e?.skuId,
                                 );
                       }),
                   ],

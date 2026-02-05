@@ -1,28 +1,17 @@
-n.d(t, {
-    Bn: () => _,
-    R4: () => h,
-    ev: () => u,
-    h: () => p,
-    sW: () => f,
-    tS: () => d,
-}),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
+"use strict";
+n.d(t, { Bn: () => p, R4: () => h, ev: () => c, h: () => f, sW: () => _, tS: () => d }), n(323874), n(14289), n(35956);
 var r = n(960488),
     i = n(839214),
     a = n(976860),
     s = n(212534),
     o = n(767599),
     l = n(435220),
-    c = n(652215),
-    u = (function (e) {
+    u = n(652215),
+    c = (function (e) {
         return (e.HOME = "home"), (e.SEARCH = "search"), (e.APPLICATION = "application"), (e.CATEGORY = "category"), e;
     })({});
 let d = (0, i.D)(() => ({}));
-var f = (function (e) {
+var _ = (function (e) {
     return (
         (e.EXTERNAL = "External"),
         (e.KEYBOARD_SHORTCUT = "Keyboard Shortcut"),
@@ -39,80 +28,47 @@ var f = (function (e) {
         e
     );
 })({});
-let p = (0, i.D)(() => ({
-    sessionId: null,
-    guildId: null,
-    entrypoint: null,
-    trackedOpenedFromExternalEntrypoint: !1,
-}));
-
-function _() {
+let f = (0, i.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
+function p() {
     let {
         location: { state: e },
     } = (0, a.JK)();
-    return null == e ? void 0 : e.previousView;
+    return e?.previousView;
 }
-
 function h() {
-    var e, t, n;
     let {
-        location: { pathname: i, search: u },
+        location: { pathname: e, search: t },
     } = (0, a.JK)();
-    if (
-        null !=
-        (0, r.B6)(i, {
-            path: c.BVt.GLOBAL_DISCOVERY_APPS,
-            exact: !0,
-        })
-    )
-        return {
-            type: "home",
-        };
-    if (
-        null !=
-        (0, r.B6)(i, {
-            path: c.BVt.GLOBAL_DISCOVERY_APPS_SEARCH,
-            exact: !0,
-        })
-    ) {
-        let e = new URLSearchParams(u),
-            t = {
-                type: "search",
-            },
-            n = e.get("q");
-        null != n && "" !== n && (t.query = n);
-        let r = Number(e.get("category_id"));
-        Number.isInteger(r) && r !== o.lj && (t.categoryId = r.toString());
-        let i = Number(e.get("page"));
-        return null != i && i > 1 && (t.page = i), t;
+    if (null != (0, r.B6)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS, exact: !0 })) return { type: "home" };
+    if (null != (0, r.B6)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, exact: !0 })) {
+        let e = new URLSearchParams(t),
+            n = { type: "search" },
+            r = e.get("q");
+        null != r && "" !== r && (n.query = r);
+        let i = Number(e.get("category_id"));
+        Number.isInteger(i) && i !== o.lj && (n.categoryId = i.toString());
+        let a = Number(e.get("page"));
+        return null != a && a > 1 && (n.page = a), n;
     }
-    let d = (0, r.B6)(i, {
-            path: [c.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")],
-            exact: !0,
-        }),
-        { categoryId: f } = null != (e = null == d ? void 0 : d.params) ? e : {};
-    if (null != d && null != f)
-        return {
-            type: "category",
-            categoryId: f,
-        };
-    let p = (0, r.B6)(i, {
+    let n = (0, r.B6)(e, { path: [u.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
+        { categoryId: i } = n?.params ?? {};
+    if (null != n && null != i) return { type: "category", categoryId: i };
+    let c = (0, r.B6)(e, {
             path: [
-                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
-                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),
-                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
+                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
+                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),
+                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
             ],
             exact: !0,
         }),
-        { applicationId: _, section: h, skuId: m } = null != (t = null == p ? void 0 : p.params) ? t : {};
-    if (null != p && null != _) {
-        let e = null == (n = s.A.getApplication(_)) ? void 0 : n.name;
+        { applicationId: d, section: _, skuId: f } = c?.params ?? {};
+    if (null != c && null != d) {
+        let e = s.A.getApplication(d)?.name;
         return {
             type: "application",
-            applicationId: _,
+            applicationId: d,
             applicationName: e,
-            section:
-                null != h ? h : null != m ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT,
+            section: _ ?? (null != f ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT),
         };
     }
 }

@@ -1,6 +1,4 @@
-i.d(t, {
-    A: () => a,
-});
+i.d(t, { A: () => a });
 var n = i(303527);
 let a = {
     ordinalNumber: (0, i(722023).A)({
@@ -17,21 +15,13 @@ let a = {
             wide: /^(ก่อนคริสตกาล|คริสต์ศักราช|คริสตกาล)/i,
         },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i],
-        },
+        parsePatterns: { any: [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i] },
         defaultParseWidth: "any",
     }),
     quarter: (0, n.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^q[1234]/i,
-            wide: /^ไตรมาส(ที่)? ?[1234]/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^ไตรมาส(ที่)? ?[1234]/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/(1|แรก|หนึ่ง)/i, /(2|สอง)/i, /(3|สาม)/i, /(4|สี่)/i],
-        },
+        parsePatterns: { any: [/(1|แรก|หนึ่ง)/i, /(2|สอง)/i, /(3|สาม)/i, /(4|สี่)/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -79,9 +69,7 @@ let a = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, n.A)({
-        matchPatterns: {
-            any: /^(ก่อนเที่ยง|หลังเที่ยง|เที่ยงคืน|เที่ยง|(ตอน.*?)?.*(เที่ยง|เช้า|บ่าย|เย็น|กลางคืน))/i,
-        },
+        matchPatterns: { any: /^(ก่อนเที่ยง|หลังเที่ยง|เที่ยงคืน|เที่ยง|(ตอน.*?)?.*(เที่ยง|เช้า|บ่าย|เย็น|กลางคืน))/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

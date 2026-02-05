@@ -1,103 +1,60 @@
-r.d(t, {
-    A: () => h,
-}),
-    r(638769),
-    r(321073),
-    r(896048),
-    r(735438);
-var i,
-    n,
-    a = r(311907),
-    o = r(73153),
+r.d(t, { A: () => h }), r(321073), r(735438);
+var i = r(311907),
+    a = r(73153),
     s = r(403362),
-    l = r(324580),
-    c = r(985018);
-let d = null,
-    u = [],
+    n = r(324580),
+    o = r(985018);
+let l = null,
+    c = [],
     _ = [],
-    p = {};
-class E extends (i = a.Ay.Store) {
+    d = {};
+class E extends i.Ay.Store {
+    static displayName = "GuildDiscoveryCategoryStore";
     getPrimaryCategories() {
-        return u;
+        return c;
     }
     getDiscoveryCategories() {
-        let e = l.FZ.map((e) => _.find((t) => t.categoryId === e)).filter(s.Vq);
-        return [
-            {
-                categoryId: l.Iq,
-                name: c.intl.string(c.t.Ym2Ri6),
-            },
-            ...e,
-        ];
+        let e = n.FZ.map((e) => _.find((t) => t.categoryId === e)).filter(s.Vq);
+        return [{ categoryId: n.Iq, name: o.intl.string(o.t.Ym2Ri6) }, ...e];
     }
     getClanDiscoveryCategories() {
-        let e = l.FZ.map((e) => _.find((t) => t.categoryId === e)).filter(s.Vq);
-        return [
-            {
-                categoryId: l.Iq,
-                name: c.intl.string(c.t.QToH29),
-            },
-            ...e,
-        ];
+        let e = n.FZ.map((e) => _.find((t) => t.categoryId === e)).filter(s.Vq);
+        return [{ categoryId: n.Iq, name: o.intl.string(o.t.QToH29) }, ...e];
     }
     getAllCategories() {
         return _;
     }
     getFetchedLocale() {
-        return d;
+        return l;
     }
     getCategoryName(e) {
-        return e === l.Iq ? c.intl.string(c.t.Ym2Ri6) : p[e];
+        return e === n.Iq ? o.intl.string(o.t.Ym2Ri6) : d[e];
     }
 }
-(n = "displayName") in E
-    ? Object.defineProperty(E, n, {
-          value: "GuildDiscoveryCategoryStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (E[n] = "GuildDiscoveryCategoryStore");
-let h = new E(o.h, {
+let h = new E(a.h, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
         let t,
             { categories: r, locale: i } = e,
-            n = [],
-            a = [];
+            a = [],
+            s = [];
         if (
             (r
                 .sort((e, t) => (e.name < t.name ? -1 : 1))
                 .forEach((e) => {
                     let { id: r, name: i, is_primary: o } = e;
-                    if (r !== l.ig) {
-                        if (r === l.v) {
-                            t = {
-                                categoryId: r,
-                                name: i,
-                            };
+                    if (r !== n.ig) {
+                        if (r === n.v) {
+                            t = { categoryId: r, name: i };
                             return;
                         }
-                        !0 === o &&
-                            n.push({
-                                categoryId: r,
-                                name: i,
-                            }),
-                            a.push({
-                                categoryId: r,
-                                name: i,
-                            }),
-                            (p[r] = i);
+                        !0 === o && a.push({ categoryId: r, name: i }), s.push({ categoryId: r, name: i }), (d[r] = i);
                     }
                 }),
             null != t)
         ) {
             let { categoryId: e, name: r } = t;
-            n.push({
-                categoryId: e,
-                name: r,
-            }),
-                (p[e] = r);
+            a.push({ categoryId: e, name: r }), (d[e] = r);
         }
-        (d = i), (u = n), (_ = a);
+        (l = i), (c = a), (_ = s);
     },
 });

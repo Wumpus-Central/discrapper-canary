@@ -1,3 +1,4 @@
+"use strict";
 var n = r(387739),
     i = r(265930),
     o = r(116740),
@@ -7,25 +8,16 @@ var n = r(387739),
     c = o.Record,
     l = o.Repeat,
     f = u(),
-    p = c({
-        key: "",
-        type: "unstyled",
-        text: "",
-        characterList: a(),
-        depth: 0,
-        data: s(),
-    }),
+    p = c({ key: "", type: "unstyled", text: "", characterList: a(), depth: 0, data: s() }),
     h = function (t) {
         if (!t) return t;
         var e = t.characterList,
             r = t.text;
         return r && !e && (t.characterList = a(l(n.EMPTY, r.length))), t;
     };
-
 function d(t, e) {
     return t.getStyle() === e.getStyle();
 }
-
 function g(t, e) {
     return t.getEntity() === e.getEntity();
 }

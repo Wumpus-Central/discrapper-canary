@@ -1,9 +1,6 @@
-r.d(t, {
-    b: () => s,
-});
-var n = r(753070),
-    l = r(985018);
-
-function s(e) {
-    return e === n.on.RESOLUTION_SOURCE ? l.intl.string(l.t.XjXqzh) : "".concat(e, "p");
+s.d(t, { b: () => n });
+var r = s(753070),
+    i = s(985018);
+function n(e) {
+    return e === r.on.RESOLUTION_SOURCE ? i.intl.string(i.t.XjXqzh) : `${e}p`;
 }

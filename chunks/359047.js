@@ -1,85 +1,30 @@
-r.d(t, {
-    A: () => a,
-});
-var n = r(627968);
-r(64700);
-var i = r(397927),
-    o = r(770666),
-    c = r(823508),
-    l = r(985018);
-
-function a(e) {
+i.d(t, { A: () => d });
+var n = i(627968);
+i(64700);
+var l = i(397927),
+    s = i(770666),
+    r = i(823508),
+    a = i(985018);
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        a = (0, o.A)(e),
-        u = (0, c.A)();
-    return a
-        ? (0, n.jsx)(i.Drp, {
+        d = (0, s.A)(e),
+        o = (0, r.A)();
+    return d
+        ? (0, n.jsx)(l.Drp, {
               id: "create-event",
-              label: l.intl.string(l.t["60lJ0C"]),
-              icon: t ? i.UC$ : void 0,
-              leadingAccessory: t
-                  ? {
-                        type: "icon",
-                        icon: i.UC$,
-                    }
-                  : void 0,
+              label: a.intl.string(a.t["60lJ0C"]),
+              icon: t ? l.UC$ : void 0,
+              leadingAccessory: t ? { type: "icon", icon: l.UC$ } : void 0,
               action: () => {
-                  (0, i.mMO)(async () => {
+                  (0, l.mMO)(async () => {
                       let { default: t } = await Promise.all([
-                          r.e("68587"),
-                          r.e("51354"),
-                          r.e("342"),
-                          r.e("62106"),
-                      ]).then(r.bind(r, 21653));
-                      return (r) => {
-                          var i, o;
-                          return (0, n.jsx)(
-                              t,
-                              ((i = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var r = null != arguments[t] ? arguments[t] : {},
-                                          n = Object.keys(r);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (n = n.concat(
-                                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                              }),
-                                          )),
-                                          n.forEach(function (t) {
-                                              var n;
-                                              (n = r[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: n,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = n);
-                                          });
-                                  }
-                                  return e;
-                              })({}, r)),
-                              (o = o =
-                                  {
-                                      guildId: e,
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
-                                  : (function (e, t) {
-                                        var r = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var n = Object.getOwnPropertySymbols(e);
-                                            r.push.apply(r, n);
-                                        }
-                                        return r;
-                                    })(Object(o)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
-                                    }),
-                              i),
-                          );
-                      };
-                  }, u);
+                          i.e("68587"),
+                          i.e("51354"),
+                          i.e("342"),
+                          i.e("62106"),
+                      ]).then(i.bind(i, 21653));
+                      return (i) => (0, n.jsx)(t, { ...i, guildId: e });
+                  }, o);
               },
           })
         : null;

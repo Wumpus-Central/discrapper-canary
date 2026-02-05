@@ -1,3 +1,2 @@
-e.exports = {
-    C: "newMemberBadge_f80704",
-};
+"use strict";
+e.exports = { C: "newMemberBadge_f80704" };

@@ -1,7 +1,5 @@
-n.d(t, {
-    d: () => a,
-    w: () => s,
-});
+"use strict";
+n.d(t, { d: () => a, w: () => s });
 var r = n(355418),
     i = n(147426);
 class a extends r.c {

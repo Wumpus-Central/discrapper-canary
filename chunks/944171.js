@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     $P: "upsellHeader_d9161f",
     tU: "islands_d9161f",

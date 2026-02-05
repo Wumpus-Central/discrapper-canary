@@ -1,33 +1,20 @@
-n.d(t, {
-    A: () => d,
-});
-var r,
-    i,
-    l = n(635377),
-    a = n.n(l),
-    s = n(311907),
-    o = n(73153);
-let c = new (a())({
-    max: 500,
-});
-class u extends (i = s.Ay.Store) {
+n.d(t, { A: () => d });
+var i = n(635377),
+    l = n.n(i),
+    a = n(311907),
+    r = n(73153);
+let s = new (l())({ max: 500 });
+class o extends a.Ay.Store {
+    static displayName = "MessageActivityInviteCoverImageStore";
     getCoverImageURL(e) {
         let { messageId: t } = e;
-        return c.get(t);
+        return s.get(t);
     }
 }
-(r = "displayName") in u
-    ? Object.defineProperty(u, r, {
-          value: "MessageActivityInviteCoverImageStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (u[r] = "MessageActivityInviteCoverImageStore");
-let d = new u(o.h, {
+let d = new o(r.h, {
     SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: function (e) {
         let { messageId: t, coverImageURL: n } = e;
-        if (c.get(t) === n) return !1;
-        c.set(t, n);
+        if (s.get(t) === n) return !1;
+        s.set(t, n);
     },
 });

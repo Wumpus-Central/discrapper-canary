@@ -1,40 +1,30 @@
-n.d(t, {
-    $: () => u,
-});
-var r = n(627968),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(573435),
-    l = n(260509),
+n.d(t, { $: () => d });
+var i = n(627968),
+    s = n(503698),
+    r = n.n(s),
+    a = n(397927),
+    l = n(573435),
+    o = n(260509),
     c = n(369752);
-
-function u(e) {
+function d(e) {
     let { guild: t, size: n } = e,
-        i = (0, l.Iv)(t, n, !1, !0),
-        u = (0, l.Rb)(t);
-    return (0, r.jsx)(o.Ay, {
+        s = (0, o.Iv)(t, n, !1, !0),
+        d = (0, o.Rb)(t);
+    return (0, i.jsx)(l.Ay, {
         className: c.zc,
-        mask: o.Ay.Masks.SQUIRCLE,
+        mask: l.Ay.Masks.SQUIRCLE,
         width: n,
         height: n,
         children:
-            null != i
-                ? (0, r.jsx)("img", {
-                      src: i,
-                      alt: t.name,
-                      height: n,
-                      width: n,
-                  })
-                : (0, r.jsx)("div", {
+            null != s
+                ? (0, i.jsx)("img", { src: s, alt: t.name, height: n, width: n })
+                : (0, i.jsx)("div", {
                       className: c.FS,
-                      children: (0, r.jsx)(s.Text, {
-                          className: a()({
-                              [c.ri]: 20 === n,
-                          }),
+                      children: (0, i.jsx)(a.Text, {
+                          className: r()({ [c.ri]: 20 === n }),
                           color: "text-subtle",
                           variant: "text-md/semibold",
-                          children: u,
+                          children: d,
                       }),
                   }),
     });

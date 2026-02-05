@@ -1,3 +1,4 @@
+"use strict";
 var n = e(958498),
     o = e(798325),
     s = e(794779),
@@ -14,7 +15,4 @@ var n = e(958498),
             return !t && -1;
         };
     };
-t.exports = {
-    includes: i(!0),
-    indexOf: i(!1),
-};
+t.exports = { includes: i(!0), indexOf: i(!1) };

@@ -1,44 +1,44 @@
-i.d(e, {
-    default: () => m,
-}),
-    i(228524),
-    i(896048);
+i.d(e, { default: () => A });
 var s = i(627968),
-    n = i(64700),
-    a = i(158954),
+    a = i(64700),
+    n = i(158954),
     r = i(397927),
     l = i(384904),
     c = i(954571),
-    o = i(580630),
-    h = i(71532),
+    h = i(580630),
+    o = i(71532),
     u = i(652215),
     p = i(985018),
     d = i(847392);
-
-function g(t, e, i) {
-    return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (t[e] = i),
-        t
-    );
-}
-class A extends n.Component {
+class g extends a.Component {
+    state = { step: 0, isAwaitingAuthentication: !1 };
     componentDidMount() {
-        c.default.track(u.HAw.OPEN_MODAL, {
-            type: u.JJy.PAYMENT_AUTHENTICATION_MODAL,
-        });
+        c.default.track(u.HAw.OPEN_MODAL, { type: u.JJy.PAYMENT_AUTHENTICATION_MODAL });
     }
     componentWillUnmount() {
-        c.default.track(u.HAw.MODAL_DISMISSED, {
-            type: u.JJy.PAYMENT_AUTHENTICATION_MODAL,
-        });
+        c.default.track(u.HAw.MODAL_DISMISSED, { type: u.JJy.PAYMENT_AUTHENTICATION_MODAL });
     }
+    close = async () => {
+        let { step: t } = this.state,
+            { onClose: e, pendingPayment: i } = this.props;
+        0 === t && (await (0, l.N)(i.id)), e();
+    };
+    cancelPayment = async () => {
+        let { pendingPayment: t } = this.props;
+        try {
+            await (0, l.N)(t.id);
+        } catch (t) {
+            throw (this.setState({ step: 3 }), t);
+        }
+        this.setState({ step: 3 });
+    };
+    handleAuthenticate = async () => {
+        let { pendingPayment: t } = this.props;
+        this.setState({ isAwaitingAuthentication: !0 });
+        let { error: e } = await (0, o.ap)(t.id);
+        this.setState({ isAwaitingAuthentication: !1 }),
+            null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 });
+    };
     getTitle() {
         let { step: t } = this.state;
         switch (t) {
@@ -68,16 +68,11 @@ class A extends n.Component {
             { pendingPayment: e } = this.props;
         switch (t) {
             case 0:
-                return p.intl.format(p.t.RoxWET, {
-                    price: (0, o.$g)(e.amount, e.currency),
-                    item: e.description,
-                });
+                return p.intl.format(p.t.RoxWET, { price: (0, h.$g)(e.amount, e.currency), item: e.description });
             case 2:
                 return p.intl.string(p.t.PZskfs);
             case 3:
-                return p.intl.format(p.t["j0tI/b"], {
-                    item: e.description,
-                });
+                return p.intl.format(p.t["j0tI/b"], { item: e.description });
             default:
                 return p.intl.string(p.t.BAr3rB);
         }
@@ -86,89 +81,24 @@ class A extends n.Component {
         let { step: t, isAwaitingAuthentication: e } = this.state;
         return 0 === t
             ? [
-                  {
-                      text: p.intl.string(p.t["2NeVoY"]),
-                      onClick: this.cancelPayment,
-                      variant: "secondary",
-                  },
-                  {
-                      text: p.intl.string(p.t.VAqBoE),
-                      onClick: this.handleAuthenticate,
-                      variant: "primary",
-                      loading: e,
-                  },
+                  { text: p.intl.string(p.t["2NeVoY"]), onClick: this.cancelPayment, variant: "secondary" },
+                  { text: p.intl.string(p.t.VAqBoE), onClick: this.handleAuthenticate, variant: "primary", loading: e },
               ]
-            : [
-                  {
-                      text: p.intl.string(p.t.cpT0Cq),
-                      onClick: this.close,
-                      variant: "primary",
-                  },
-              ];
+            : [{ text: p.intl.string(p.t.cpT0Cq), onClick: this.close, variant: "primary" }];
     }
     render() {
         let { transitionState: t } = this.props;
-        return (0, s.jsxs)(a.Modal, {
+        return (0, s.jsxs)(n.Modal, {
             transitionState: t,
             "aria-label": this.getTitle(),
             title: this.getTitle(),
             onClose: this.close,
             actions: this.renderButtons(),
             children: [
-                (0, s.jsx)("div", {
-                    className: this.getImageStyle(),
-                }),
-                (0, s.jsx)(r.Text, {
-                    variant: "text-md/normal",
-                    children: this.getMessage(),
-                }),
+                (0, s.jsx)("div", { className: this.getImageStyle() }),
+                (0, s.jsx)(r.Text, { variant: "text-md/normal", children: this.getMessage() }),
             ],
         });
     }
-    constructor(...t) {
-        super(...t),
-            g(this, "state", {
-                step: 0,
-                isAwaitingAuthentication: !1,
-            }),
-            g(this, "close", async () => {
-                let { step: t } = this.state,
-                    { onClose: e, pendingPayment: i } = this.props;
-                0 === t && (await (0, l.N)(i.id)), e();
-            }),
-            g(this, "cancelPayment", async () => {
-                let { pendingPayment: t } = this.props;
-                try {
-                    await (0, l.N)(t.id);
-                } catch (t) {
-                    throw (
-                        (this.setState({
-                            step: 3,
-                        }),
-                        t)
-                    );
-                }
-                this.setState({
-                    step: 3,
-                });
-            }),
-            g(this, "handleAuthenticate", async () => {
-                let { pendingPayment: t } = this.props;
-                this.setState({
-                    isAwaitingAuthentication: !0,
-                });
-                let { error: e } = await (0, h.ap)(t.id);
-                this.setState({
-                    isAwaitingAuthentication: !1,
-                }),
-                    null != e
-                        ? this.setState({
-                              step: 1,
-                          })
-                        : this.setState({
-                              step: 2,
-                          });
-            });
-    }
 }
-let m = A;
+let A = g;

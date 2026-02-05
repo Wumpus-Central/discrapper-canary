@@ -1,18 +1,15 @@
-n.d(t, {
-    t: () => l,
-});
+"use strict";
+n.d(t, { t: () => l });
 var r = n(469993),
     i = n(836039),
     a = n(567305),
     s = n(555325),
     o = n(287809);
-
 function l(e) {
-    var t;
-    let n = e.ownerId === (null == (t = o.default.getCurrentUser()) ? void 0 : t.id);
+    let t = e.ownerId === o.default.getCurrentUser()?.id;
     return (0, s.V9)({
         guild: e,
-        isOwner: n,
+        isOwner: t,
         canManageGuildRoleSubscriptions: (0, s.X9)(e),
         isMonetizationWaitlistEnabledForGuild: (0, r.Kw)(e.id),
         isGuildEligibleForRoleSubscriptions: (0, a.OV)(e.id),

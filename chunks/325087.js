@@ -1,45 +1,31 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(342494),
-    a = n(976860),
+n.d(t, { A: () => c });
+var i = n(627968),
+    r = n(64700),
+    a = n(342494),
+    l = n(976860),
     s = n(652215),
     o = n(985018),
-    c = n(78701);
-
-function u(e) {
-    let { onNavigateToQuestHome: t, onRender: n, onRequestClose: u, targetElementRef: d } = e,
-        p = i.useCallback(() => {
-            t(), (0, a.pX)(s.BVt.QUEST_HOME_V2);
+    d = n(78701);
+function c(e) {
+    let { onNavigateToQuestHome: t, onRender: n, onRequestClose: c, targetElementRef: u } = e,
+        A = r.useCallback(() => {
+            t(), (0, l.pX)(s.BVt.QUEST_HOME_V2);
         }, [t]);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             n();
         }, [n]),
-        (0, r.jsx)(l.AM, {
-            actions: [
-                {
-                    text: o.intl.string(o.t.facYnD),
-                    variant: "primary",
-                    onClick: p,
-                },
-            ],
+        (0, i.jsx)(a.AM, {
+            actions: [{ text: o.intl.string(o.t.facYnD), variant: "primary", onClick: A }],
             align: "top",
             body: o.intl.string(o.t.o4NGXc),
-            caretConfig: {
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: {
-                type: "image",
-                src: c.A,
-            },
-            onRequestClose: u,
+            graphic: { type: "image", src: d.A },
+            onRequestClose: c,
             position: "right",
             size: "lg",
-            targetElementRef: d,
+            targetElementRef: u,
             title: o.intl.string(o.t.EDDchq),
         })
     );

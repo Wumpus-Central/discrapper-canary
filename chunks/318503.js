@@ -1,3 +1,4 @@
+"use strict";
 function r() {
     let e = "function" == typeof WeakSet,
         t = e ? new WeakSet() : [];
@@ -18,6 +19,4 @@ function r() {
         },
     ];
 }
-n.d(t, {
-    s: () => r,
-});
+n.d(t, { s: () => r });

@@ -1,62 +1,30 @@
-n.d(e, {
-    A: () => r,
-});
-var i = n(954571),
-    l = n(652215);
-
-function r(t) {
+i.d(n, { A: () => a });
+var l = i(954571),
+    e = i(652215);
+function a(t) {
     let {
-        problem: e,
-        stream: n,
-        feedback: r,
-        streamApplication: a,
-        analyticsData: s,
-        location: o,
-        rating: u = null,
-        category: c,
-        variant: d,
+        problem: n,
+        stream: i,
+        feedback: a,
+        streamApplication: s,
+        analyticsData: r,
+        location: d,
+        rating: o = null,
+        category: u,
+        variant: p,
     } = t;
-    i.default.track(
-        l.HAw.STREAM_REPORT_PROBLEM,
-        (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var n = null != arguments[e] ? arguments[e] : {},
-                    i = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                        }),
-                    )),
-                    i.forEach(function (e) {
-                        var i;
-                        (i = n[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (t[e] = i);
-                    });
-            }
-            return t;
-        })(
-            {
-                reason: e,
-                category: c,
-                reason_variant: d,
-                streamer_user_id: n.ownerId,
-                stream_channel_id: n.channelId,
-                guild_id: n.guildId,
-                application_id: null != a ? a.id : null,
-                application_name: null != a ? a.name : null,
-                location: o,
-                rating: u,
-                feedback: r,
-            },
-            s,
-        ),
-    );
+    l.default.track(e.HAw.STREAM_REPORT_PROBLEM, {
+        reason: n,
+        category: u,
+        reason_variant: p,
+        streamer_user_id: i.ownerId,
+        stream_channel_id: i.channelId,
+        guild_id: i.guildId,
+        application_id: null != s ? s.id : null,
+        application_name: null != s ? s.name : null,
+        location: d,
+        rating: o,
+        feedback: a,
+        ...r,
+    });
 }

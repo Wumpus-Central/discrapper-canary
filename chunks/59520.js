@@ -1,8 +1,5 @@
-n.d(t, {
-    I: () => o,
-    J: () => s,
-}),
-    n(896048);
+"use strict";
+n.d(t, { I: () => o, J: () => s });
 var r = n(64700),
     i = n(735438);
 let a = (e) => e,
@@ -27,8 +24,7 @@ let a = (e) => e,
                 () => (
                     (s.current = (0, i.throttle)(e, t, a)),
                     () => {
-                        var e;
-                        null == (e = s.current) || e.cancel();
+                        s.current?.cancel();
                     }
                 ),
                 [e, t, a, ...n],

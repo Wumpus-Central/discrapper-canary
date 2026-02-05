@@ -1,3 +1,4 @@
+"use strict";
 var o =
         Object.assign ||
         function (t) {
@@ -13,13 +14,8 @@ var o =
     u = r(64700),
     s = f(u),
     l = f(r(480218));
-
 function f(t) {
-    return t && t.__esModule
-        ? t
-        : {
-              default: t,
-          };
+    return t && t.__esModule ? t : { default: t };
 }
 var h = {
         bgColor: a.default.oneOfType([a.default.object, a.default.string]),
@@ -73,10 +69,5 @@ var h = {
     });
 (g.displayName = "QRCode"),
     (g.propTypes = h),
-    (g.defaultProps = {
-        bgColor: "#FFFFFF",
-        fgColor: "#000000",
-        level: "L",
-        size: 256,
-    }),
+    (g.defaultProps = { bgColor: "#FFFFFF", fgColor: "#000000", level: "L", size: 256 }),
     (e.default = g);

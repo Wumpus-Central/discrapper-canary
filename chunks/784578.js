@@ -1,55 +1,37 @@
-n.d(t, {
-    default: () => p,
-});
-var r = n(627968);
+n.d(t, { default: () => A });
+var i = n(627968);
 n(64700);
-var i = n(110259),
-    l = n(158954),
-    a = n(976860),
+var r = n(110259),
+    a = n(158954),
+    l = n(976860),
     s = n(975571),
     o = n(612200),
-    c = n(652215),
-    u = n(985018);
-
-function d() {
-    return (
-        (0, o.IO)(),
-        (0, a.pX)(c.BVt.LOGIN, {
-            source: "existing_user_age_gate_underage",
-        }),
-        Promise.resolve()
-    );
+    d = n(652215),
+    c = n(985018);
+function u() {
+    return (0, o.IO)(), (0, l.pX)(d.BVt.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
 }
-
-function p(e) {
+function A(e) {
     let { underageMessage: t, transitionState: n } = e;
-    return (0, r.jsx)(l.Modal, {
+    return (0, i.jsx)(a.Modal, {
         transitionState: n,
-        onClose: d,
-        title: u.intl.string(u.t["NR/zrG"]),
-        subtitle: u.intl.format(u.t.ukclM1, {
-            underageMessage: null != t ? t : u.intl.string(u.t.WqEH4D),
-            days: 30,
-        }),
+        onClose: u,
+        title: c.intl.string(c.t["NR/zrG"]),
+        subtitle: c.intl.format(c.t.ukclM1, { underageMessage: t ?? c.intl.string(c.t.WqEH4D), days: 30 }),
         actions: [
             {
-                text: u.intl.string(u.t.hvVgAZ),
+                text: c.intl.string(c.t.hvVgAZ),
                 onClick: () => {
-                    window.open(s.A.getArticleURL(c.MVz.AGE_GATE), "_blank");
+                    window.open(s.A.getArticleURL(d.MVz.AGE_GATE), "_blank");
                 },
                 variant: "secondary",
             },
-            {
-                text: u.intl.string(u.t.szzQ6H),
-                onClick: d,
-            },
+            { text: c.intl.string(c.t.szzQ6H), onClick: u },
         ],
         trackingProps: {
             impression: {
-                impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
-                impressionProperties: {
-                    existing_user: !0,
-                },
+                impressionName: r.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+                impressionProperties: { existing_user: !0 },
             },
         },
     });

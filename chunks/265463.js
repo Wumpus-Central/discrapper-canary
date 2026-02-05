@@ -1,39 +1,23 @@
-n.d(t, {
-    fo: () => s,
-    uW: () => i,
-    vr: () => o,
-    z0: () => c,
-}),
-    n(733351);
+"use strict";
+n.d(t, { fo: () => r, uW: () => a, vr: () => d, z0: () => o });
 var l = n(753738),
-    r = n(985018);
-
-function a(e, t) {
-    return {
-        type: e,
-        message: null != t ? t : null,
-    };
+    i = n(985018);
+function s(e, t) {
+    return { type: e, message: t ?? null };
 }
-
-function i() {
-    return a(0, r.intl.string(r.t["71wuR0"]));
+function a() {
+    return s(0, i.intl.string(i.t["71wuR0"]));
 }
-
-function s() {
-    return a(0, r.intl.string(r.t["w/BT3G"]));
+function r() {
+    return s(0, i.intl.string(i.t["w/BT3G"]));
 }
-
-function c(e, t) {
-    return a(1, (0, l.cw)(e, null == t ? void 0 : t.id));
-}
-
 function o(e, t) {
-    var n;
+    return s(1, (0, l.cw)(e, t?.id));
+}
+function d(e, t) {
     return null == e ||
         (0 === e.type && null != t.content && t.content.trim().length > 0) ||
         (2 === e.type && null != t.tags && t.tags.length > 0)
         ? null
-        : null != (n = e.message)
-          ? n
-          : null;
+        : (e.message ?? null);
 }

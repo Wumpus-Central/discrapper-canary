@@ -1,9 +1,7 @@
-n.d(t, {
-    Q: () => a,
-});
+"use strict";
+n.d(t, { Q: () => a });
 var r = n(853590);
 let i = new Map();
-
 function a(e) {
     let { locale: t } = (0, r.Y)(),
         n =

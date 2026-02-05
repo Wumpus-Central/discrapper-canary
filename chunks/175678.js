@@ -1,77 +1,71 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(896048),
-    n(747238);
-var r = n(944181),
-    a = n(597807),
-    l = n(763424),
-    o = n(292177);
-let i = {
+r.d(t, { A: () => o });
+var n = r(944181),
+    a = r(597807),
+    l = r(763424),
+    i = r(292177);
+let o = {
     id: "aria-attribute-valid-value",
-    selector: o.vN,
+    selector: i.vN,
     tags: [],
-    metadata: {
-        description: "ARIA attributes must use valid values",
-        help: "",
-    },
+    metadata: { description: "ARIA attributes must use valid values", help: "" },
     check: function (e) {
         let t = (function (e) {
-            for (let k of o.ye)
-                if (e.hasAttribute(k)) {
-                    let o = e.getAttribute(k),
-                        I = r.aria.get(k);
-                    switch (I.type) {
+            for (let y of i.ye)
+                if (e.hasAttribute(y)) {
+                    let i = e.getAttribute(y),
+                        $ = n.aria.get(y);
+                    switch ($.type) {
                         case "string":
                             return l.o;
                         case "id":
                             return (
-                                (i = k),
-                                (u = o),
-                                null == document.getElementById(u)
-                                    ? "".concat(i, " references #").concat(u, " which does not exist")
-                                    : l.o
+                                (t = y),
+                                (r = i),
+                                null == document.getElementById(r) ? `${t} references #${r} which does not exist` : l.o
                             );
                         case "idlist":
-                            var t = k,
-                                n = o,
-                                a = e;
+                            var t,
+                                r,
+                                a,
+                                o,
+                                u,
+                                s,
+                                c,
+                                d,
+                                f,
+                                h = y,
+                                b = i,
+                                m = e;
                             if (
-                                ("aria-controls" === t &&
-                                    ("false" === a.getAttribute("aria-expanded") ||
-                                        "false" === a.getAttribute("aria-selected"))) ||
-                                ("aria-owns" === t && "false" === a.getAttribute("aria-expanded"))
+                                ("aria-controls" === h &&
+                                    ("false" === m.getAttribute("aria-expanded") ||
+                                        "false" === m.getAttribute("aria-selected"))) ||
+                                ("aria-owns" === h && "false" === m.getAttribute("aria-expanded"))
                             )
                                 return l.o;
-                            for (let e of n.split(" "))
+                            for (let e of b.split(" "))
                                 if (null == document.getElementById(e))
-                                    return "".concat(t, " references #").concat(n, " which does not exist");
+                                    return `${h} references #${b} which does not exist`;
                             return l.o;
                         case "integer":
                             return (
-                                (c = k),
-                                String(parseInt((s = o), 10)) !== s
-                                    ? "".concat(c, " requires an integer but got ").concat(s)
-                                    : l.o
+                                (a = y),
+                                String(parseInt((o = i), 10)) !== o ? `${a} requires an integer but got ${o}` : l.o
                             );
                         case "number":
-                            return (
-                                (d = k),
-                                isFinite((f = o)) ? l.o : "".concat(d, " requires a numeric value but got ").concat(f)
-                            );
+                            return (u = y), isFinite((s = i)) ? l.o : `${u} requires a numeric value but got ${s}`;
                         case "boolean":
                             return (
-                                (h = k),
-                                (b = o),
-                                (m = I),
-                                "true" === b || "false" === b || ("" === b && !0 === m.allowundefined)
+                                (c = y),
+                                (d = i),
+                                (f = $),
+                                "true" === d || "false" === d || ("" === d && !0 === f.allowundefined)
                                     ? l.o
-                                    : "".concat(h, ' must be either "true" or "false"')
+                                    : `${c} must be either "true" or "false"`
                             );
                         case "token":
-                            return (function (e, t, n) {
-                                var r, a;
-                                let o = (function (e) {
+                            return (function (e, t, r) {
+                                let n = (function (e) {
                                     switch (e) {
                                         case "true":
                                             return !0;
@@ -81,51 +75,33 @@ let i = {
                                             return e;
                                     }
                                 })(t);
-                                return (null == (r = n.values) ? void 0 : r.includes(o))
+                                return r.values?.includes(n)
                                     ? l.o
-                                    : ""
-                                          .concat(e, " was ")
-                                          .concat(t, " but must be: ")
-                                          .concat(null == (a = n.values) ? void 0 : a.join(", "));
-                            })(k, o, I);
+                                    : `${e} was ${t} but must be: ${r.values?.join(", ")}`;
+                            })(y, i, $);
                         case "tokenlist":
-                            var i,
-                                u,
-                                c,
-                                s,
-                                d,
-                                f,
-                                h,
-                                b,
-                                m,
-                                g,
-                                p,
-                                v = k,
-                                A = o,
-                                w = I;
-                            for (let e of A.split(" ")) {
-                                if (null == (g = w.values) || !g.includes(e))
-                                    return ""
-                                        .concat(v, " included ")
-                                        .concat(A, " but is restricted to: ")
-                                        .concat(null == (p = w.values) ? void 0 : p.join(", "));
-                            }
+                            var g = y,
+                                p = i,
+                                v = $;
+                            for (let e of p.split(" "))
+                                if (!v.values?.includes(e))
+                                    return `${g} included ${p} but is restricted to: ${v.values?.join(", ")}`;
                             return l.o;
                         case "tristate":
-                            var y = k,
-                                x = o;
-                            switch (x) {
+                            var A = y,
+                                w = i;
+                            switch (w) {
                                 case "true":
                                 case "false":
                                 case "mixed":
                                     return l.o;
                                 default:
-                                    return "".concat(y, ' must be "true", "false", or "mixed" not ').concat(x);
+                                    return `${A} must be "true", "false", or "mixed" not ${w}`;
                             }
                     }
                 }
             return l.o;
         })(e);
-        return t !== l.o && ((0, o.i6)(e) || !(0, a.z)(e)) ? l.o : t;
+        return t !== l.o && ((0, i.i6)(e) || !(0, a.z)(e)) ? l.o : t;
     },
 };

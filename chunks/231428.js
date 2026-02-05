@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Z_NO_FLUSH: 0,
     Z_PARTIAL_FLUSH: 1,

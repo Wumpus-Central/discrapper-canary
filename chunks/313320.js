@@ -1,33 +1,14 @@
-r.d(t, {
-    d: () => p,
-}),
-    r(896048),
-    r(65821),
-    r(321073);
-var i = r(73153),
-    n = r(626584),
-    s = r(723702),
-    a = r(290805),
-    o = r(381505),
-    l = r(622397);
-
-function m(e, t, r) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
-        e
-    );
-}
-let d = new n.A("MeticulousActionTracker"),
-    c = "meticulous-start",
-    u = "meticulous-end",
-    h = new Set([
+i.d(t, { d: () => u }), i(321073);
+var r = i(73153),
+    s = i(626584),
+    n = i(723702),
+    a = i(290805),
+    o = i(381505),
+    l = i(622397);
+let m = new s.A("MeticulousActionTracker"),
+    d = "meticulous-start",
+    h = "meticulous-end",
+    c = new Set([
         "APP_STATE_UPDATE",
         "CONNECTION_CLOSED",
         "CONNECTION_OPEN",
@@ -49,7 +30,16 @@ let d = new n.A("MeticulousActionTracker"),
         "PUSH_NOTIFICATION_CLICK",
         "UPLOAD_FAIL",
     ]);
-class p {
+class u {
+    mode = null;
+    observer = null;
+    collectedEntries = [];
+    flushIntervalId = null;
+    sessionStartTime = 0;
+    interceptorAdded = !1;
+    actionHandlers = new Map();
+    dispatchCounter = 0;
+    pendingDispatches = new Map();
     start(e, t) {
         (this.mode = e),
             (this.sessionStartTime = t),
@@ -61,7 +51,7 @@ class p {
         null != this.flushIntervalId && (clearInterval(this.flushIntervalId), (this.flushIntervalId = null)),
             null != this.observer && (this.observer.disconnect(), (this.observer = null)),
             this.actionHandlers.forEach((e, t) => {
-                i.h.unsubscribe(t, e);
+                r.h.unsubscribe(t, e);
             }),
             this.actionHandlers.clear(),
             this.pendingDispatches.clear(),
@@ -81,16 +71,12 @@ class p {
     getTags() {
         if (null == this.mode) throw Error("Cannot get tags without mode");
         let e = this.mode.performanceNow() - this.sessionStartTime;
-        return {
-            platform: (0, s.getNativePlatform)(),
-            release_channel: null !== a.y && void 0 !== a.y ? a.y : "unknown",
-            uptime_bucket: (0, l.X)(e),
-        };
+        return { platform: (0, n.getNativePlatform)(), release_channel: a.y ?? "unknown", uptime_bucket: (0, l.X)(e) };
     }
     buildReport(e) {
         if (null == this.mode) throw Error("Cannot build report without mode");
         let t = this.mode.getMemory(),
-            r = this.mode.baselineUsedMemory;
+            i = this.mode.baselineUsedMemory;
         return {
             type: "heap_snapshot_action",
             session_id: this.mode.sessionId,
@@ -98,18 +84,15 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "492190",
-            built_at: "1770061493534",
-            release_channel: null !== a.y && void 0 !== a.y ? a.y : "unknown",
+            build_number: "493560",
+            built_at: "1770252554499",
+            release_channel: a.y ?? "unknown",
             tags: this.getTags(),
             metrics: {
                 report_time_memory: null != t ? (0, o.c)(t) : void 0,
-                delta_from_baseline:
-                    null != r && (null == t ? void 0 : t.usedJSHeapSize) != null ? t.usedJSHeapSize - r : void 0,
-                baseline_memory: r,
-                timing: {
-                    collected_at: this.mode.performanceNow(),
-                },
+                delta_from_baseline: null != i && t?.usedJSHeapSize != null ? t.usedJSHeapSize - i : void 0,
+                baseline_memory: i,
+                timing: { collected_at: this.mode.performanceNow() },
                 entries: e,
             },
         };
@@ -122,46 +105,33 @@ class p {
     setupDispatcherSubscription() {
         null != this.mode &&
             (this.interceptorAdded ||
-                (i.h.addInterceptor((e) => {
-                    if (null != this.mode && h.has(e.type)) {
-                        var t;
-                        let r = ++this.dispatchCounter,
+                (r.h.addInterceptor((e) => {
+                    if (null != this.mode && c.has(e.type)) {
+                        let t = ++this.dispatchCounter,
                             i = this.mode.getMemory(),
-                            n = null != (t = this.pendingDispatches.get(e.type)) ? t : [];
-                        n.push(r),
-                            this.pendingDispatches.set(e.type, n),
-                            this.mode.mark("".concat(c, "-").concat(e.type, "-").concat(r), {
-                                detail: {
-                                    memory: i,
-                                },
-                            });
+                            r = this.pendingDispatches.get(e.type) ?? [];
+                        r.push(t),
+                            this.pendingDispatches.set(e.type, r),
+                            this.mode.mark(`${d}-${e.type}-${t}`, { detail: { memory: i } });
                     }
                     return !1;
                 }),
                 (this.interceptorAdded = !0)),
-            h.forEach((e) => {
+            c.forEach((e) => {
                 if (this.actionHandlers.has(e)) return;
                 let t = () => {
                     let t = this.pendingDispatches.get(e),
-                        r = null == t ? void 0 : t.shift();
-                    if (null == r) return void d.warn("No pending dispatch ID for action: ".concat(e));
-                    let i = () => {
-                        var t, i;
-                        let n = null == (t = this.mode) ? void 0 : t.getMemory();
-                        null == (i = this.mode) ||
-                            i.mark("".concat(u, "-").concat(e, "-").concat(r), {
-                                detail: {
-                                    memory: n,
-                                    actionType: e,
-                                    dispatchId: r,
-                                },
-                            });
+                        i = t?.shift();
+                    if (null == i) return void m.warn(`No pending dispatch ID for action: ${e}`);
+                    let r = () => {
+                        let t = this.mode?.getMemory();
+                        this.mode?.mark(`${h}-${e}-${i}`, { detail: { memory: t, actionType: e, dispatchId: i } });
                     };
                     requestAnimationFrame(() => {
-                        requestAnimationFrame(i);
+                        requestAnimationFrame(r);
                     });
                 };
-                i.h.subscribe(e, t), this.actionHandlers.set(e, t);
+                r.h.subscribe(e, t), this.actionHandlers.set(e, t);
             }));
     }
     setupPerformanceObserver() {
@@ -169,62 +139,47 @@ class p {
             try {
                 (this.observer = new this.mode.PerformanceObserver((e) => {
                     for (let t of e.getEntries())
-                        "mark" === t.entryType && -1 !== t.name.indexOf(u) && this.collectEntry(t);
+                        "mark" === t.entryType && -1 !== t.name.indexOf(h) && this.collectEntry(t);
                     this.collectedEntries.length >= 100 && this.flush();
                 })),
-                    this.observer.observe({
-                        type: "mark",
-                        buffered: !0,
-                    });
+                    this.observer.observe({ type: "mark", buffered: !0 });
             } catch (e) {
-                d.warn("Failed to set up PerformanceObserver:", e);
+                m.warn("Failed to set up PerformanceObserver:", e);
             }
     }
     collectEntry(e) {
         try {
-            var t, r, i, n, s;
-            let a = null == (t = e.detail) ? void 0 : t.actionType,
-                l = null == (r = e.detail) ? void 0 : r.dispatchId;
-            if (null == a || null == l) {
-                d.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name);
+            let t = e.detail?.actionType,
+                i = e.detail?.dispatchId;
+            if (null == t || null == i) {
+                m.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name);
                 return;
             }
-            let m = "".concat(c, "-").concat(a, "-").concat(l),
-                u = performance.getEntriesByName(m);
-            if (0 === u.length) {
-                d.warn("Missing start mark for action: ".concat(m)), performance.clearMarks(e.name);
+            let r = `${d}-${t}-${i}`,
+                s = performance.getEntriesByName(r);
+            if (0 === s.length) {
+                m.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name);
                 return;
             }
-            let h = u[0],
-                p = null == (i = h.detail) ? void 0 : i.memory,
-                f = null == (n = e.detail) ? void 0 : n.memory,
-                S = null == (s = this.mode) ? void 0 : s.baselineUsedMemory,
-                y = (null == f ? void 0 : f.usedJSHeapSize) != null && null != S ? f.usedJSHeapSize - S : void 0,
-                v = null != this.mode ? this.mode.performanceNow() : 0;
+            let n = s[0],
+                a = n.detail?.memory,
+                l = e.detail?.memory,
+                h = this.mode?.baselineUsedMemory,
+                c = l?.usedJSHeapSize != null && null != h ? l.usedJSHeapSize - h : void 0,
+                u = null != this.mode ? this.mode.performanceNow() : 0;
             this.collectedEntries.push({
-                name: a,
-                start_time: h.startTime,
+                name: t,
+                start_time: n.startTime,
                 end_time: e.startTime,
-                collected_at: v,
-                start_memory: null != p ? (0, o.c)(p) : void 0,
-                end_memory: null != f ? (0, o.c)(f) : void 0,
-                memory_delta_from_baseline: y,
+                collected_at: u,
+                start_memory: null != a ? (0, o.c)(a) : void 0,
+                end_memory: null != l ? (0, o.c)(l) : void 0,
+                memory_delta_from_baseline: c,
             }),
-                performance.clearMarks(m),
+                performance.clearMarks(r),
                 performance.clearMarks(e.name);
         } catch (e) {
-            d.warn("Failed to collect performance entry information:", e);
+            m.warn("Failed to collect performance entry information:", e);
         }
-    }
-    constructor() {
-        m(this, "mode", null),
-            m(this, "observer", null),
-            m(this, "collectedEntries", []),
-            m(this, "flushIntervalId", null),
-            m(this, "sessionStartTime", 0),
-            m(this, "interceptorAdded", !1),
-            m(this, "actionHandlers", new Map()),
-            m(this, "dispatchCounter", 0),
-            m(this, "pendingDispatches", new Map());
     }
 }

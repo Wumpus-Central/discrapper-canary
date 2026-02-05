@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     WE: "shinyButton__6a443",
     Qr: "buttonShine__6a443",

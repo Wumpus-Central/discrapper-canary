@@ -76,45 +76,21 @@ e.exports = function (e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            {
-                className: "string",
-                variants: [
-                    e.QUOTE_STRING_MODE,
-                    e.APOS_STRING_MODE,
-                    {
-                        begin: "`",
-                        end: "`",
-                    },
-                ],
-            },
+            { className: "string", variants: [e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, { begin: "`", end: "`" }] },
             {
                 className: "number",
                 variants: [
-                    {
-                        match: /-?\b0[xX]\.[a-fA-F0-9](_?[a-fA-F0-9])*[pP][+-]?\d(_?\d)*i?/,
-                        relevance: 0,
-                    },
+                    { match: /-?\b0[xX]\.[a-fA-F0-9](_?[a-fA-F0-9])*[pP][+-]?\d(_?\d)*i?/, relevance: 0 },
                     {
                         match: /-?\b0[xX](_?[a-fA-F0-9])+((\.([a-fA-F0-9](_?[a-fA-F0-9])*)?)?[pP][+-]?\d(_?\d)*)?i?/,
                         relevance: 0,
                     },
-                    {
-                        match: /-?\b0[oO](_?[0-7])*i?/,
-                        relevance: 0,
-                    },
-                    {
-                        match: /-?\.\d(_?\d)*([eE][+-]?\d(_?\d)*)?i?/,
-                        relevance: 0,
-                    },
-                    {
-                        match: /-?\b\d(_?\d)*(\.(\d(_?\d)*)?)?([eE][+-]?\d(_?\d)*)?i?/,
-                        relevance: 0,
-                    },
+                    { match: /-?\b0[oO](_?[0-7])*i?/, relevance: 0 },
+                    { match: /-?\.\d(_?\d)*([eE][+-]?\d(_?\d)*)?i?/, relevance: 0 },
+                    { match: /-?\b\d(_?\d)*(\.(\d(_?\d)*)?)?([eE][+-]?\d(_?\d)*)?i?/, relevance: 0 },
                 ],
             },
-            {
-                begin: /:=/,
-            },
+            { begin: /:=/ },
             {
                 className: "function",
                 beginKeywords: "func",
@@ -122,14 +98,7 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 contains: [
                     e.TITLE_MODE,
-                    {
-                        className: "params",
-                        begin: /\(/,
-                        end: /\)/,
-                        endsParent: !0,
-                        keywords: t,
-                        illegal: /["']/,
-                    },
+                    { className: "params", begin: /\(/, end: /\)/, endsParent: !0, keywords: t, illegal: /["']/ },
                 ],
             },
         ],

@@ -1,33 +1,24 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(735438),
     s = n(262),
     o = n(916858),
     l = n(542535),
-    c = n(996988);
-let u = {
-    [c.d.POPOUT]: 12,
-    [c.d.MODAL]: 26,
-    [c.d.MODAL_V2]: 16,
-    [c.d.SIDEBAR]: 13,
-    [c.d.VIDEO_TILE_BACKGROUND]: 12,
-};
-
+    u = n(996988);
+let c = { [u.d.POPOUT]: 12, [u.d.MODAL]: 26, [u.d.MODAL_V2]: 16, [u.d.SIDEBAR]: 13, [u.d.VIDEO_TILE_BACKGROUND]: 12 };
 function d(e) {
     let {
             displayProfile: t,
             themeType: n,
-            pendingLegacyUsernameDisabled: c,
+            pendingLegacyUsernameDisabled: u,
             pendingBadges: d,
-            onClose: f,
-            shouldOpenBadgeTooltip: p,
-            shouldGlowTenureBadge: _,
+            onClose: _,
+            shouldOpenBadgeTooltip: f,
+            shouldGlowTenureBadge: p,
         } = e,
-        h = (0, s.A)(t, c),
+        h = (0, s.A)(t, u),
         m = i.useMemo(() => {
             if (null == d) return (0, o.b)(h);
             let e = new Set(h.map((e) => e.id)),
@@ -37,16 +28,10 @@ function d(e) {
     return 0 === m.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: (0, a.chunk)(m, u[n]).map((e) =>
+              children: (0, a.chunk)(m, c[n]).map((e) =>
                   (0, r.jsx)(
                       l.A,
-                      {
-                          badges: e,
-                          displayProfile: t,
-                          onClose: f,
-                          shouldOpenBadgeTooltip: p,
-                          shouldGlowTenureBadge: _,
-                      },
+                      { badges: e, displayProfile: t, onClose: _, shouldOpenBadgeTooltip: f, shouldGlowTenureBadge: p },
                       e[0].id,
                   ),
               ),

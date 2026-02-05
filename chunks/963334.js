@@ -1,10 +1,9 @@
-n.d(t, {
-    q: () => i,
-});
-var r,
-    i =
-        (((r = {}).AVAILABLE = "AVAILABLE"),
-        (r.ERROR = "ERROR"),
-        (r.RATE_LIMIT = "RATE_LIMIT"),
-        (r.INTERNAL_ERROR = "INTERNAL_ERROR"),
-        r);
+"use strict";
+n.d(t, { q: () => s });
+var i,
+    s =
+        (((i = {}).AVAILABLE = "AVAILABLE"),
+        (i.ERROR = "ERROR"),
+        (i.RATE_LIMIT = "RATE_LIMIT"),
+        (i.INTERNAL_ERROR = "INTERNAL_ERROR"),
+        i);

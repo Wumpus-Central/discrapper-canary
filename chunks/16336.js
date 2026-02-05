@@ -1,7 +1,6 @@
+"use strict";
 var n;
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (function (e) {
         (e.Unidentified = "Unidentified"),
             (e.Alt = "Alt"),

@@ -1,30 +1,28 @@
-n.d(i, {
-    e: () => x,
-});
-var t = n(64700),
-    a = n(311907),
-    s = n(954571),
-    l = n(207913),
-    r = n(335891),
-    d = n(985481),
-    c = n(239093),
-    o = n(652215);
+i.d(t, { e: () => x });
+var n = i(64700),
+    a = i(311907),
+    s = i(954571),
+    l = i(207913),
+    r = i(335891),
+    d = i(985481),
+    c = i(239093),
+    o = i(652215);
 let x = () => {
     let e = (0, a.bG)([l.A], () => l.A.getAppealClassificationId()),
-        i = (0, d.LJ)(null != e ? e : o.dJq),
-        n = (0, r.K)(),
+        t = (0, d.LJ)(e ?? o.dJq),
+        i = (0, r.K)(),
         x = (0, a.bG)([l.A], () => l.A.getIsDsaEligible());
-    return t.useCallback(
-        (t) => {
+    return n.useCallback(
+        (n) => {
             s.default.track(o.HAw.SAFETY_HUB_ACTION, {
-                action: t,
-                account_standing: n.state,
+                action: n,
+                account_standing: i.state,
                 classification_ids: null != e ? [Number(e)] : null,
                 source: c.XN.AppealIngestion,
                 is_dsa_eligible: x,
-                violation_type: i.violationType,
+                violation_type: t.violationType,
             });
         },
-        [n.state, e, i, x],
+        [i.state, e, t, x],
     );
 };

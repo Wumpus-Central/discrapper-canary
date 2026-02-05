@@ -4,7 +4,6 @@ var r = n(642273),
     a = i && e && !e.nodeType && e,
     s = a && a.exports === i ? r.Buffer : void 0,
     o = s ? s.allocUnsafe : void 0;
-
 function l(e, t) {
     if (t) return e.slice();
     var n = e.length,

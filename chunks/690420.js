@@ -1,65 +1,57 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968),
+    s = n(64700),
     l = n(627794),
-    s = n(904813),
+    r = n(904813),
     a = n(268749),
-    c = n(264349),
-    o = n(713072),
-    d = n(419707),
+    o = n(264349),
+    d = n(713072),
+    c = n(419707),
     u = n(645105);
-let f = i.memo(function (e) {
-    let { rule: t, persistEdit: n = !1, initWithEdit: f = !1 } = e,
-        { hasChanges: g, editingRule: b, createNewEditingRule: m, setEditingRule: p } = (0, a.U)(),
-        { isLoading: x } = (0, a.S)(),
-        [h] = i.useState(() => !(0, l.wC)(t)),
-        j = (null == b ? void 0 : b.id) === t.id || n,
-        O = (0, s.R)(null == t ? void 0 : t.id),
-        y = j && null != b ? b : t,
-        v = i.useMemo(() => (0, c.cT)(t.name), [null == t ? void 0 : t.name]),
-        A = i.useCallback(() => {
-            m(t.guildId, t.triggerType);
-        }, [t.guildId, t.triggerType, m]),
-        E = i.useCallback(
+let m = s.memo(function (e) {
+    let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
+        { hasChanges: g, editingRule: x, createNewEditingRule: h, setEditingRule: _ } = (0, a.U)(),
+        { isLoading: A } = (0, a.S)(),
+        [p] = s.useState(() => !(0, l.wC)(t)),
+        f = x?.id === t.id || n,
+        j = (0, r.R)(t?.id),
+        N = f && null != x ? x : t,
+        E = s.useMemo(() => (0, o.cT)(t.name), [t?.name]),
+        b = s.useCallback(() => {
+            h(t.guildId, t.triggerType);
+        }, [t.guildId, t.triggerType, h]),
+        T = s.useCallback(
             (e) => {
-                x || p(e, !0);
+                A || _(e, !0);
             },
-            [x, p],
+            [A, _],
         );
-    i.useEffect(() => {
-        f && p(t, !0);
-    }, [f, t, p]);
-    let N = i.useCallback(() => {
-        j
-            ? g || p(null)
+    s.useEffect(() => {
+        m && _(t, !0);
+    }, [m, t, _]);
+    let C = s.useCallback(() => {
+        f
+            ? g || _(null)
             : g
-              ? v(() => {
-                    p(t);
+              ? E(() => {
+                    _(t);
                 })
-              : p(t);
-    }, [j, g, v, t, p]);
-    return (0, r.jsx)(d.A, {
-        renderHeader: (0, r.jsx)(u.A, {
-            rule: y,
-            forceSetup: h && !j && !O,
+              : _(t);
+    }, [f, g, E, t, _]);
+    return (0, i.jsx)(c.A, {
+        renderHeader: (0, i.jsx)(u.A, {
+            rule: N,
+            forceSetup: p && !f && !j,
             triggerType: t.triggerType,
-            isEditMode: j,
-            isDefaultRule: O,
-            onChangeRule: E,
-            onSetupRule: A,
+            isEditMode: f,
+            isDefaultRule: j,
+            onChangeRule: T,
+            onSetupRule: b,
         }),
-        isStuck: j && g,
-        isExpanded: j,
-        onExpand: N,
-        children:
-            j &&
-            (0, r.jsx)(o.A, {
-                rule: y,
-                isLoading: x,
-                onChangeRule: E,
-            }),
+        isStuck: f && g,
+        isExpanded: f,
+        onExpand: C,
+        children: f && (0, i.jsx)(d.A, { rule: N, isLoading: A, onChangeRule: T }),
     });
 });

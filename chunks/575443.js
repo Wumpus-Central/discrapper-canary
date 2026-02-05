@@ -1,6 +1,5 @@
-t.d(i, {
-    Mk: () => l,
-});
-var n = t(927813);
-let l = 7 * n.A.Millis.DAY;
-n.A.Millis.HOUR;
+"use strict";
+n.d(t, { Mk: () => i });
+var r = n(927813);
+let i = 7 * r.A.Millis.DAY;
+r.A.Millis.HOUR;

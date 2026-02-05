@@ -1,7 +1,7 @@
+"use strict";
 var t = "%[a-f0-9]{2}",
     n = RegExp("(" + t + ")|([^%]+?)", "gi"),
     r = RegExp("(" + t + ")+", "gi");
-
 function i(e, t) {
     try {
         return [decodeURIComponent(e.join(""))];
@@ -12,7 +12,6 @@ function i(e, t) {
         r = e.slice(t);
     return Array.prototype.concat.call([], i(n), i(r));
 }
-
 function a(e) {
     try {
         return decodeURIComponent(e);
@@ -21,16 +20,8 @@ function a(e) {
         return e;
     }
 }
-
 function s(e) {
-    for (
-        var t = {
-                "%FE%FF": "��",
-                "%FF%FE": "��",
-            },
-            n = r.exec(e);
-        n;
-    ) {
+    for (var t = { "%FE%FF": "��", "%FF%FE": "��" }, n = r.exec(e); n; ) {
         try {
             t[n[0]] = decodeURIComponent(n[0]);
         } catch (e) {

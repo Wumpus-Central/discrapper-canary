@@ -1,124 +1,89 @@
-let r, i, a, s, o, l, c, u, d, f, p, _;
-n.d(t, {
-    A: () => H,
-});
-var h,
-    m = n(575593),
-    g = n(311907),
-    E = n(73153),
-    b = n(652215);
-
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let O = b.XlH.CLOSED,
-    A = {};
-
-function v(e) {
-    (p = e.guild), (O = b.XlH.OPEN), (A = {}), (_ = e.source);
-}
-
-function S() {
-    (O = b.XlH.CLOSED), (A = {}), (_ = void 0);
-}
-
-function I() {
-    (O = b.XlH.SUBMITTING), (A = {});
-}
-
+"use strict";
+let r, i, a, s, o, l, u, c, d, _, f, p;
+n.d(t, { A: () => B });
+var h = n(575593),
+    m = n(311907),
+    g = n(73153),
+    E = n(652215);
+let A = E.XlH.CLOSED,
+    I = {};
 function T(e) {
-    (p = e.guild), (A = {});
+    (f = e.guild), (A = E.XlH.OPEN), (I = {}), (p = e.source);
 }
-
+function y() {
+    (A = E.XlH.CLOSED), (I = {}), (p = void 0);
+}
+function S() {
+    (A = E.XlH.SUBMITTING), (I = {});
+}
+function v(e) {
+    (f = e.guild), (I = {});
+}
 function C(e) {
-    var t;
-    if (O !== b.XlH.SUBMITTING) return !1;
-    (O = b.XlH.OPEN), (A = null != (t = e.errors) ? t : {});
+    if (A !== E.XlH.SUBMITTING) return !1;
+    (A = E.XlH.OPEN), (I = e.errors ?? {});
 }
-
+function b(e) {
+    (A = E.XlH.OPEN), (I = e.errors);
+}
 function N(e) {
-    (O = b.XlH.OPEN), (A = e.errors);
-}
-
-function R(e) {
     let { avatar: t } = e;
     r = t;
 }
-
-function w(e) {
+function R(e) {
     let { item: t } = e;
-    t.type === m.R.AVATAR_DECORATION
+    t.type === h.R.AVATAR_DECORATION
         ? (i = t.value)
-        : t.type === m.R.PROFILE_EFFECT
+        : t.type === h.R.PROFILE_EFFECT
           ? (s = t.value)
-          : t.type === m.R.NAMEPLATE && (a = t.value);
+          : t.type === h.R.NAMEPLATE && (a = t.value);
 }
-
-function P(e) {
+function O(e) {
     let { banner: t } = e;
     o = t;
 }
-
 function D(e) {
     let { bio: t } = e;
     l = t;
 }
-
-function x(e) {
-    let { pronouns: t } = e;
-    c = t;
-}
-
 function L(e) {
-    let { nickname: t } = e;
+    let { pronouns: t } = e;
     u = t;
 }
-
-function j(e) {
+function w(e) {
+    let { nickname: t } = e;
+    c = t;
+}
+function x(e) {
     let { themeColors: t } = e;
     d = t;
 }
-
-function M(e) {
+function P(e) {
     let { displayNameStyles: t } = e;
-    f = t;
+    _ = t;
 }
-
+function M() {
+    k(), U(), (I = {}), (A = E.XlH.OPEN);
+}
 function k() {
-    U(), G(), (A = {}), (O = b.XlH.OPEN);
+    (r = void 0), (c = void 0), (i = void 0), (a = void 0), (_ = void 0);
 }
-
 function U() {
-    (r = void 0), (u = void 0), (i = void 0), (a = void 0), (f = void 0);
+    (o = void 0), (l = void 0), (u = void 0), (d = void 0), (s = void 0);
 }
-
 function G() {
-    (o = void 0), (l = void 0), (c = void 0), (d = void 0), (s = void 0);
+    I = {};
 }
-
 function V() {
-    A = {};
+    M(), y();
 }
-
-function F() {
-    k(), S();
-}
-class B extends (h = g.Ay.Store) {
+class F extends m.Ay.Store {
+    static displayName = "GuildIdentitySettingsStore";
     getFormState() {
-        return O;
+        return A;
     }
     getErrors() {
-        return A;
+        return I;
     }
     showNotice() {
         return (
@@ -127,15 +92,15 @@ class B extends (h = g.Ay.Store) {
             void 0 !== s ||
             void 0 !== o ||
             void 0 !== l ||
-            void 0 !== c ||
             void 0 !== u ||
+            void 0 !== c ||
             void 0 !== d ||
             void 0 !== a ||
-            void 0 !== f
+            void 0 !== _
         );
     }
     getIsSubmitDisabled() {
-        return void 0 !== l && l.length > b.NA2;
+        return void 0 !== l && l.length > E.NA2;
     }
     getPendingAvatar() {
         return r;
@@ -153,13 +118,13 @@ class B extends (h = g.Ay.Store) {
         return l;
     }
     getPendingNickname() {
-        return u;
-    }
-    getPendingPronouns() {
         return c;
     }
-    getPendingAccentColor() {
+    getPendingPronouns() {
         return u;
+    }
+    getPendingAccentColor() {
+        return c;
     }
     getPendingThemeColors() {
         return d;
@@ -168,7 +133,7 @@ class B extends (h = g.Ay.Store) {
         return a;
     }
     getPendingDisplayNameStyles() {
-        return f;
+        return _;
     }
     getAllPending() {
         return {
@@ -177,39 +142,38 @@ class B extends (h = g.Ay.Store) {
             pendingProfileEffect: s,
             pendingBanner: o,
             pendingBio: l,
-            pendingPronouns: c,
-            pendingNickname: u,
+            pendingPronouns: u,
+            pendingNickname: c,
             pendingThemeColors: d,
             pendingNameplate: a,
-            pendingDisplayNameStyles: f,
+            pendingDisplayNameStyles: _,
         };
     }
     getGuild() {
-        return p;
+        return f;
     }
     getSource() {
-        return _;
+        return p;
     }
 }
-y(B, "displayName", "GuildIdentitySettingsStore");
-let H = new B(E.h, {
-    GUILD_IDENTITY_SETTINGS_INIT: v,
-    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: F,
-    GUILD_IDENTITY_SETTINGS_SET_GUILD: T,
-    GUILD_IDENTITY_SETTINGS_SUBMIT: I,
+let B = new F(g.h, {
+    GUILD_IDENTITY_SETTINGS_INIT: T,
+    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: V,
+    GUILD_IDENTITY_SETTINGS_SET_GUILD: v,
+    GUILD_IDENTITY_SETTINGS_SUBMIT: S,
     GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: C,
-    USER_PROFILE_UPDATE_FAILURE: N,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: R,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM: w,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: M,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: P,
+    USER_PROFILE_UPDATE_FAILURE: b,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: N,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM: R,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: P,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: O,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: j,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: U,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: G,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
-    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: V,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: k,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: M,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: M,
+    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G,
 });

@@ -1,9 +1,5 @@
-n.d(t, {
-    Oc: () => r,
-    _K: () => i,
-    tY: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Oc: () => r, _K: () => i, tY: () => a });
 var r = (function (e) {
     return (
         (e.SPOILER = "spoiler"),

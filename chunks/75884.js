@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -14,55 +15,19 @@ var n = r(64700),
             c = e.className,
             p = (0, i.default)(
                 (0, l.A)(
-                    {
-                        default: {
-                            hue: {
-                                height: "12px",
-                                position: "relative",
-                            },
-                            Hue: {
-                                radius: "2px",
-                            },
-                        },
-                    },
+                    { default: { hue: { height: "12px", position: "relative" }, Hue: { radius: "2px" } } },
                     void 0 === a ? {} : a,
                 ),
             );
         return n.createElement(
             "div",
-            {
-                style: p.wrap || {},
-                className: "slider-picker " + (void 0 === c ? "" : c),
-            },
+            { style: p.wrap || {}, className: "slider-picker " + (void 0 === c ? "" : c) },
             n.createElement(
                 "div",
-                {
-                    style: p.hue,
-                },
-                n.createElement(s.RG, {
-                    style: p.Hue,
-                    hsl: t,
-                    pointer: o,
-                    onChange: r,
-                }),
+                { style: p.hue },
+                n.createElement(s.RG, { style: p.Hue, hsl: t, pointer: o, onChange: r }),
             ),
-            n.createElement(
-                "div",
-                {
-                    style: p.swatches,
-                },
-                n.createElement(u.A, {
-                    hsl: t,
-                    onClick: r,
-                }),
-            ),
+            n.createElement("div", { style: p.swatches }, n.createElement(u.A, { hsl: t, onClick: r })),
         );
     };
-(p.propTypes = {
-    styles: a().object,
-}),
-    (p.defaultProps = {
-        pointer: c.A,
-        styles: {},
-    }),
-    (0, s.Q$)(p);
+(p.propTypes = { styles: a().object }), (p.defaultProps = { pointer: c.A, styles: {} }), (0, s.Q$)(p);

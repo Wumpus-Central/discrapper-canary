@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,22 +7,22 @@ var r = n(627968),
 n(216160);
 var o = n(675100),
     l = n(182592),
-    c = n(347064),
-    u = n(306499);
+    u = n(347064),
+    c = n(306499);
 let d = (e) => {
     let {
             skuId: t,
             isHighlighted: n,
             removeSetHeight: a = !1,
             withScaleAnimation: d = !1,
-            delayProfileEffectIntro: f = !1,
+            delayProfileEffectIntro: _ = !1,
         } = e,
-        [p, _] = i.useState(!0);
+        [f, p] = i.useState(!0);
     return (i.useEffect(() => {
-        if (!0 !== d) _(!1);
+        if (!0 !== d) p(!1);
         else {
             let e = setTimeout(() => {
-                _(!1);
+                p(!1);
             }, 500);
             return () => {
                 clearTimeout(e);
@@ -34,19 +32,10 @@ let d = (e) => {
     null == t)
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(c.i1, {
-                  [c.qy]: d,
-                  [c.pE]: !a,
-              }),
+              className: s()(u.i1, { [u.qy]: d, [u.pE]: !a }),
               children: [
-                  (0, r.jsx)("img", {
-                      src: u,
-                      alt: "",
-                      className: c.VH,
-                      "aria-hidden": !0,
-                      draggable: !1,
-                  }),
-                  !p &&
+                  (0, r.jsx)("img", { src: c, alt: "", className: u.VH, "aria-hidden": !0, draggable: !1 }),
+                  !f &&
                       (0, r.jsx)(l.A, {
                           skuId: t,
                           useThumbnail: !0,
@@ -55,7 +44,7 @@ let d = (e) => {
                           resetOnHover: !0,
                           isHovering: n,
                           useOpacityOnHover: !1,
-                          delayIntro: f,
+                          delayIntro: _,
                           shopPreview: !0,
                       }),
               ],

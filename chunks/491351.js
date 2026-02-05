@@ -1,6 +1,7 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e, t, n, r) {
         var i = {
             s: ["thodde secondanim", "thodde second"],
@@ -63,10 +64,7 @@
         ordinal: function (e, t) {
             return "D" === t ? e + "er" : e;
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
         meridiemParse: /rati|sokalli|donparam|sanje/,
         meridiemHour: function (e, t) {
             return (12 === e && (e = 0), "rati" === t)

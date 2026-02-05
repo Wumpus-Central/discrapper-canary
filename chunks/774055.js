@@ -1,35 +1,11 @@
 e.exports = function (e) {
-    let t = {
-            className: "variable",
-            begin: /\b_+[a-zA-Z]\w*/,
-        },
-        n = {
-            className: "title",
-            begin: /[a-zA-Z][a-zA-Z_0-9]*_fnc_[a-zA-Z_0-9]+/,
-        },
+    let t = { className: "variable", begin: /\b_+[a-zA-Z]\w*/ },
+        n = { className: "title", begin: /[a-zA-Z][a-zA-Z_0-9]*_fnc_[a-zA-Z_0-9]+/ },
         r = {
             className: "string",
             variants: [
-                {
-                    begin: '"',
-                    end: '"',
-                    contains: [
-                        {
-                            begin: '""',
-                            relevance: 0,
-                        },
-                    ],
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                    contains: [
-                        {
-                            begin: "''",
-                            relevance: 0,
-                        },
-                    ],
-                },
+                { begin: '"', end: '"', contains: [{ begin: '""', relevance: 0 }] },
+                { begin: "'", end: "'", contains: [{ begin: "''", relevance: 0 }] },
             ],
         },
         i = [
@@ -2558,18 +2534,9 @@ e.exports = function (e) {
             end: /$/,
             keywords: "define undef ifdef ifndef else endif include if",
             contains: [
-                {
-                    begin: /\\\n/,
-                    relevance: 0,
-                },
-                e.inherit(r, {
-                    className: "string",
-                }),
-                {
-                    begin: /<[^\n>]*>/,
-                    end: /$/,
-                    illegal: "\\n",
-                },
+                { begin: /\\\n/, relevance: 0 },
+                e.inherit(r, { className: "string" }),
+                { begin: /<[^\n>]*>/, end: /$/, illegal: "\\n" },
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
             ],
@@ -2577,11 +2544,7 @@ e.exports = function (e) {
     return {
         name: "SQF",
         case_insensitive: !0,
-        keywords: {
-            keyword: i,
-            built_in: s,
-            literal: a,
-        },
+        keywords: { keyword: i, built_in: s, literal: a },
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, r, o],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/],
     };

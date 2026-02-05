@@ -1,300 +1,255 @@
-n.d(t, {
-    h: () => x,
-    u: () => y,
-}),
-    n(896048),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956);
-var r,
-    i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+n.d(t, { h: () => I, u: () => E }), n(323874), n(14289), n(35956);
+var i,
+    l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
     o = n(299619),
-    c = n(172218),
-    u = n(158954),
-    d = n(311907),
-    p = n(435371),
-    m = n(775602),
-    f = n(176563),
-    g = n(961350),
-    h = n(354287),
-    _ = n(768349),
-    b = n(838541),
-    A = n(112247),
-    y = (((r = {})[(r.BOT = 0)] = "BOT"), (r[(r.ACTIVITY = 1)] = "ACTIVITY"), r);
-
-function v(e) {
-    let { onClick: t, children: n, className: r } = e;
+    d = n(172218),
+    c = n(158954),
+    u = n(311907),
+    m = n(435371),
+    _ = n(775602),
+    h = n(176563),
+    p = n(961350),
+    g = n(354287),
+    A = n(768349),
+    f = n(838541),
+    x = n(112247),
+    E = (((i = {})[(i.BOT = 0)] = "BOT"), (i[(i.ACTIVITY = 1)] = "ACTIVITY"), i);
+function C(e) {
+    let { onClick: t, children: n, className: i } = e;
     return null != t
-        ? (0, i.jsx)(u.DUT, {
-              onClick: t,
-              className: s()(
-                  {
-                      [A.or]: null != t,
-                  },
-                  r,
-              ),
-              children: n,
-          })
-        : (0, i.jsx)("div", {
-              className: r,
-              children: n,
-          });
+        ? (0, l.jsx)(c.DUT, { onClick: t, className: s()({ [x.or]: null != t }, i), children: n })
+        : (0, l.jsx)("div", { className: i, children: n });
 }
-
-function x(e) {
-    var t, n, r, a, y;
+function I(e) {
+    var t;
     let {
-        title: x,
-        header: O,
-        footer: E,
-        info: j,
-        staticBannerSrc: C,
-        videoBannerSrc: I,
-        bannerAspectRatio: S = 0,
-        iconSrc: T,
-        actions: N = [],
-        primaryActionFirst: P = !1,
-        trackingConfig: w,
-        onClickContent: R,
-        onClickBanner: D,
+        title: n,
+        header: i,
+        footer: r,
+        info: E,
+        staticBannerSrc: I,
+        videoBannerSrc: T,
+        bannerAspectRatio: v = 0,
+        iconSrc: N,
+        actions: S = [],
+        primaryActionFirst: b = !1,
+        trackingConfig: y,
+        onClickContent: j,
+        onClickBanner: R,
     } = e;
-    w = {
-        id: null != (n = null == (t = w) ? void 0 : t.id) ? n : "0",
-        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.J.UNKNOWN,
-        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : g.default.getId(),
-        activityCustomId: null == t ? void 0 : t.activityCustomId,
-        onView: null == t ? void 0 : t.onView,
-        onLinkCopied: null == t ? void 0 : t.onLinkCopied,
-        guildId: null == t ? void 0 : t.guildId,
-        channelId: null == t ? void 0 : t.channelId,
-        messageId: null == t ? void 0 : t.messageId,
-        isDeadEnd: null != (y = null == t ? void 0 : t.isDeadEnd) && y,
-    };
-    let { primaryColor: L, secondaryColor: M } = (0, f.A)(null != T ? T : C),
-        k = "linear-gradient(45deg, ".concat(L, ", ").concat(M, ")"),
-        U = (0, d.bG)([m.A], () => m.A.useReducedMotion),
-        G = l.useRef(!1),
-        B = (0, c.K)(
+    (t = y),
+        (y = {
+            id: t?.id ?? "0",
+            linkType: t?.linkType ?? A.J.UNKNOWN,
+            referrerId: t?.referrerId ?? p.default.getId(),
+            activityCustomId: t?.activityCustomId,
+            onView: t?.onView,
+            onLinkCopied: t?.onLinkCopied,
+            guildId: t?.guildId,
+            channelId: t?.channelId,
+            messageId: t?.messageId,
+            isDeadEnd: t?.isDeadEnd ?? !1,
+        });
+    let { primaryColor: L, secondaryColor: M } = (0, h.A)(N ?? I),
+        O = `linear-gradient(45deg, ${L}, ${M})`,
+        P = (0, u.bG)([_.A], () => _.A.useReducedMotion),
+        D = a.useRef(!1),
+        k = (0, d.K)(
             (e) => {
-                if (!1 === G.current && e) {
-                    var t;
-                    null == w || null == (t = w.onView) || t.call(w),
-                        (0, h.wV)({
-                            appId: w.id,
-                            linkType: w.linkType,
-                            referrerId: w.referrerId,
-                            customId: w.activityCustomId,
-                            guildId: w.guildId,
-                            channelId: w.channelId,
-                            messageId: w.messageId,
-                        }),
-                        (G.current = !0);
-                }
+                !1 === D.current &&
+                    e &&
+                    (y?.onView?.(),
+                    (0, g.wV)({
+                        appId: y.id,
+                        linkType: y.linkType,
+                        referrerId: y.referrerId,
+                        customId: y.activityCustomId,
+                        guildId: y.guildId,
+                        channelId: y.channelId,
+                        messageId: y.messageId,
+                    }),
+                    (D.current = !0));
             },
             void 0,
         ),
-        F = null != C,
-        H = null != I && !1 === U,
-        V = F || H,
-        z = 0 === S ? A.pv : A.$g,
-        W = l.useRef(null),
-        K = l.useCallback(() => {
-            let e = W.current;
+        U = null != I,
+        w = null != T && !1 === P,
+        G = U || w,
+        B = 0 === v ? x.pv : x.$g,
+        F = a.useRef(null),
+        H = a.useCallback(() => {
+            let e = F.current;
             null == e || ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        Y = l.useMemo(() => !!H && new URL(I).pathname.endsWith(".gif"), [H, I]),
-        q = l.useMemo(() => {
+        V = a.useMemo(() => !!w && new URL(T).pathname.endsWith(".gif"), [w, T]),
+        z = a.useMemo(() => {
+            if (null != j)
+                return (e) => {
+                    j(e),
+                        (0, g.gx)({
+                            applicationId: y.id,
+                            linkType: y.linkType,
+                            area: g.kY.CONTENT,
+                            referrerId: y.referrerId,
+                            customId: y.activityCustomId,
+                            isDeadEnd: y.isDeadEnd,
+                        });
+                };
+        }, [j, y]),
+        W = a.useMemo(() => {
             if (null != R)
                 return (e) => {
                     R(e),
-                        (0, h.gx)({
-                            applicationId: w.id,
-                            linkType: w.linkType,
-                            area: h.kY.CONTENT,
-                            referrerId: w.referrerId,
-                            customId: w.activityCustomId,
-                            isDeadEnd: w.isDeadEnd,
+                        (0, g.gx)({
+                            applicationId: y.id,
+                            linkType: y.linkType,
+                            area: g.kY.BANNER,
+                            referrerId: y.referrerId,
+                            customId: y.activityCustomId,
+                            isDeadEnd: y.isDeadEnd,
                         });
                 };
-        }, [R, w]),
-        J = l.useMemo(() => {
-            if (null != D)
-                return (e) => {
-                    D(e),
-                        (0, h.gx)({
-                            applicationId: w.id,
-                            linkType: w.linkType,
-                            area: h.kY.BANNER,
-                            referrerId: w.referrerId,
-                            customId: w.activityCustomId,
-                            isDeadEnd: w.isDeadEnd,
-                        });
-                };
-        }, [D, w]);
-    return (0, i.jsxs)("div", {
-        ref: B,
-        className: A.E6,
+        }, [R, y]);
+    return (0, l.jsxs)("div", {
+        ref: k,
+        className: x.E6,
         children: [
-            V &&
-                (0, i.jsxs)(v, {
-                    onClick: J,
-                    className: s()(A.cy, z, {
-                        [A.wk]: H,
-                    }),
+            G &&
+                (0, l.jsxs)(C, {
+                    onClick: W,
+                    className: s()(x.cy, B, { [x.wk]: w }),
                     children: [
-                        H &&
-                            (Y
-                                ? (0, i.jsx)("div", {
-                                      className: A.O9,
-                                      style: {
-                                          backgroundImage: "url(".concat(I, ")"),
-                                      },
-                                  })
-                                : (0, i.jsx)(o.A, {
-                                      ref: W,
-                                      src: I,
-                                      mediaLayoutType: b.dG.MOSAIC,
+                        w &&
+                            (V
+                                ? (0, l.jsx)("div", { className: x.O9, style: { backgroundImage: `url(${T})` } })
+                                : (0, l.jsx)(o.A, {
+                                      ref: F,
+                                      src: T,
+                                      mediaLayoutType: f.dG.MOSAIC,
                                       loop: !0,
                                       muted: !0,
-                                      className: A.O9,
+                                      className: x.O9,
                                   })),
-                        F &&
-                            (0, i.jsx)("div", {
-                                className: A.LR,
-                                style: {
-                                    backgroundImage: "url(".concat(C, ")"),
-                                },
-                                onTransitionEnd: K,
+                        U &&
+                            (0, l.jsx)("div", {
+                                className: x.LR,
+                                style: { backgroundImage: `url(${I})` },
+                                onTransitionEnd: H,
                             }),
                     ],
                 }),
-            (0, i.jsxs)("div", {
-                style: {
-                    background: k,
-                },
+            (0, l.jsxs)("div", {
+                style: { background: O },
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: A.hQ,
+                    (0, l.jsxs)("div", {
+                        className: x.hQ,
                         children: [
-                            null != O &&
-                                (0, i.jsx)(u.EYj, {
+                            null != i &&
+                                (0, l.jsx)(c.EYj, {
                                     variant: "text-sm/semibold",
                                     color: "none",
-                                    className: A.wx,
-                                    children: O,
+                                    className: x.wx,
+                                    children: i,
                                 }),
-                            (0, i.jsxs)(v, {
-                                onClick: q,
-                                className: s()(A.FG, {
-                                    [A.ry]: null != q,
-                                }),
+                            (0, l.jsxs)(C, {
+                                onClick: z,
+                                className: s()(x.FG, { [x.ry]: null != z }),
                                 children: [
-                                    null != T &&
-                                        (0, i.jsx)("div", {
-                                            className: A._8,
-                                            style: {
-                                                backgroundImage: "url(".concat(T, ")"),
-                                            },
-                                        }),
-                                    (0, i.jsxs)("div", {
-                                        className: A.Qs,
+                                    null != N &&
+                                        (0, l.jsx)("div", { className: x._8, style: { backgroundImage: `url(${N})` } }),
+                                    (0, l.jsxs)("div", {
+                                        className: x.Qs,
                                         children: [
-                                            (0, i.jsx)(u.EYj, {
+                                            (0, l.jsx)(c.EYj, {
                                                 variant: "text-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
-                                                className: A.eu,
-                                                children: x,
+                                                className: x.eu,
+                                                children: n,
                                             }),
-                                            (0, i.jsx)("div", {
-                                                className: A.rj,
-                                                children: j,
-                                            }),
+                                            (0, l.jsx)("div", { className: x.rj, children: E }),
                                         ],
                                     }),
                                 ],
                             }),
-                            N.length > 0 &&
-                                (0, i.jsx)("div", {
-                                    className: s()(A.AC, P ? A.ad : null),
-                                    children: N.map((e, t) => {
+                            S.length > 0 &&
+                                (0, l.jsx)("div", {
+                                    className: s()(x.AC, b ? x.ad : null),
+                                    children: S.map((e, t) => {
                                         let {
                                                 label: n,
-                                                icon: r,
-                                                onClick: l,
-                                                disabled: a,
+                                                icon: i,
+                                                onClick: a,
+                                                disabled: r,
                                                 disabledReason: s,
                                                 submitting: o,
-                                                trackingArea: c,
-                                                isDeadEnd: d,
-                                                iconButton: m,
-                                                buttonRef: f,
+                                                trackingArea: d,
+                                                isDeadEnd: u,
+                                                iconButton: _,
+                                                buttonRef: h,
                                             } = e,
-                                            g = 0 === t;
-                                        return m
-                                            ? (0, i.jsx)(
-                                                  p.m_,
+                                            p = 0 === t;
+                                        return _
+                                            ? (0, l.jsx)(
+                                                  m.m_,
                                                   {
                                                       text: n,
-                                                      targetElementRef: f,
-                                                      children: (0, i.jsx)(u.K0, {
-                                                          variant: g ? "overlay-primary" : "overlay-secondary",
-                                                          disabled: a || null != s,
+                                                      targetElementRef: h,
+                                                      children: (0, l.jsx)(c.K0, {
+                                                          variant: p ? "overlay-primary" : "overlay-secondary",
+                                                          disabled: r || null != s,
                                                           loading: o,
-                                                          icon: r,
+                                                          icon: i,
                                                           "aria-label": n,
-                                                          buttonRef: f,
+                                                          buttonRef: h,
                                                           onClick: (e) => {
-                                                              l(e),
-                                                                  (0, h.gx)({
-                                                                      applicationId: w.id,
-                                                                      linkType: w.linkType,
-                                                                      area: c,
-                                                                      referrerId: w.referrerId,
-                                                                      customId: w.activityCustomId,
-                                                                      isDeadEnd: d,
+                                                              a(e),
+                                                                  (0, g.gx)({
+                                                                      applicationId: y.id,
+                                                                      linkType: y.linkType,
+                                                                      area: d,
+                                                                      referrerId: y.referrerId,
+                                                                      customId: y.activityCustomId,
+                                                                      isDeadEnd: u,
                                                                   });
                                                           },
                                                       }),
                                                   },
                                                   n,
                                               )
-                                            : (0, i.jsxs)(
+                                            : (0, l.jsxs)(
                                                   "div",
                                                   {
-                                                      className: A.uc,
+                                                      className: x.uc,
                                                       children: [
-                                                          (0, i.jsx)(u.$nd, {
-                                                              variant: g ? "overlay-primary" : "overlay-secondary",
-                                                              disabled: a || null != s,
+                                                          (0, l.jsx)(c.$nd, {
+                                                              variant: p ? "overlay-primary" : "overlay-secondary",
+                                                              disabled: r || null != s,
                                                               loading: o,
-                                                              icon: r,
+                                                              icon: i,
                                                               text: n,
-                                                              buttonRef: f,
+                                                              buttonRef: h,
                                                               onClick: (e) => {
-                                                                  l(e),
-                                                                      (0, h.gx)({
-                                                                          applicationId: w.id,
-                                                                          linkType: w.linkType,
-                                                                          area: c,
-                                                                          referrerId: w.referrerId,
-                                                                          customId: w.activityCustomId,
-                                                                          isDeadEnd: d,
+                                                                  a(e),
+                                                                      (0, g.gx)({
+                                                                          applicationId: y.id,
+                                                                          linkType: y.linkType,
+                                                                          area: d,
+                                                                          referrerId: y.referrerId,
+                                                                          customId: y.activityCustomId,
+                                                                          isDeadEnd: u,
                                                                       });
                                                               },
                                                               fullWidth: !0,
                                                           }),
                                                           null != s &&
-                                                              (0, i.jsx)(u.EYj, {
+                                                              (0, l.jsx)(c.EYj, {
                                                                   variant: "text-xs/medium",
                                                                   color: "none",
-                                                                  className: A.H$,
+                                                                  className: x.H$,
                                                                   children: s,
                                                               }),
                                                       ],
@@ -305,7 +260,7 @@ function x(e) {
                                 }),
                         ],
                     }),
-                    null != E && E,
+                    null != r && r,
                 ],
             }),
         ],

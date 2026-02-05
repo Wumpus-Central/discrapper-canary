@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(642991);
 n(
@@ -9,7 +10,5 @@ n(
             return t;
         }),
     },
-    {
-        isSubsetOf: o,
-    },
+    { isSubsetOf: o },
 );

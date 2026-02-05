@@ -1,7 +1,5 @@
-n.d(t, {
-    A: () => c,
-    O: () => o,
-});
+"use strict";
+n.d(t, { A: () => u, O: () => o });
 var r = n(627968);
 n(64700);
 var i = n(449859),
@@ -10,12 +8,10 @@ var i = n(449859),
     o = (function (e) {
         return (e[(e.WITH_CONTENT = 0)] = "WITH_CONTENT"), (e[(e.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), e;
     })({});
-
 function l(e, t) {
     return t || (null != e.content && 0 !== e.content.length) ? 0 : 1;
 }
-
-function c(e) {
+function u(e) {
     let { message: t, compact: n, location: o } = e;
     return t.isEdited() && null != t.editedTimestamp && o === l(t, n)
         ? (0, r.jsxs)(r.Fragment, {

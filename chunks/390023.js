@@ -1,167 +1,62 @@
-n.d(t, {
-    $: () => f,
-});
+"use strict";
+n.d(t, { $: () => s });
 var r = n(627968);
 n(64700);
 var i = n(996682),
     a = n(27989);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function u(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let f = (e) => {
-    var t, n;
-    let { size: s = "md", width: l, height: d } = e,
-        f = u(e, ["size", "width", "height"]),
-        p = (0, a.J)(s),
-        _ = null != (t = null == p ? void 0 : p.width) ? t : l,
-        h = null != (n = null == p ? void 0 : p.height) ? n : d;
-    return (0, r.jsxs)(
-        "svg",
-        c(o({}, (0, i.A)(f)), {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: _,
-            height: h,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, r.jsx)("path", {
-                    fill: "#F3F3F4",
-                    fillRule: "evenodd",
-                    d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
-                    clipRule: "evenodd",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "#1E3764",
-                    d: "M4 17v-2.34h.72c.52 0 .86.2.86.6 0 .23-.1.4-.26.49.22.1.35.3.35.55 0 .47-.35.7-.88.7H4Zm.46-1.37h.35c.2 0 .3-.1.3-.3 0-.2-.17-.26-.39-.26h-.26v.56Zm0 .96h.29c.28 0 .44-.07.44-.3 0-.2-.14-.3-.4-.3h-.33v.6Zm2.1.44c-.45 0-.68-.22-.68-.52 0-.33.27-.52.67-.53l.3.03v-.08c0-.2-.12-.3-.34-.3-.15 0-.3.03-.44.08l-.09-.36c.15-.06.38-.1.58-.1.49 0 .73.26.73.71v.93c-.13.07-.39.14-.72.14Zm.29-.37v-.36a1.12 1.12 0 0 0-.24-.03c-.15 0-.27.06-.27.22 0 .14.1.21.27.21.08 0 .16 0 .24-.04Zm.77.33v-1.6c.24-.09.5-.14.75-.14.49 0 .77.24.77.68V17h-.46v-1.02c0-.23-.1-.34-.31-.34a.7.7 0 0 0-.3.06V17h-.45Zm3.13-1.64-.1.36a1.01 1.01 0 0 0-.37-.08c-.27 0-.41.2-.41.5 0 .35.15.52.44.52.12 0 .25-.03.37-.08l.07.37c-.15.07-.32.1-.48.1-.55 0-.87-.35-.87-.9 0-.53.31-.89.84-.89.18 0 .35.03.5.1Zm.99 1.68c-.51 0-.83-.35-.83-.89 0-.53.32-.89.83-.89.52 0 .83.36.83.9 0 .53-.31.88-.83.88Zm0-.38c.24 0 .36-.2.36-.5 0-.32-.12-.52-.36-.52-.23 0-.36.2-.36.51 0 .32.13.51.36.51Zm1.1.34v-1.6c.24-.09.5-.14.75-.14.49 0 .77.24.77.68V17h-.46v-1.02c0-.23-.11-.34-.31-.34a.7.7 0 0 0-.3.06V17h-.45Zm2.55.04c-.4 0-.6-.21-.6-.65v-.72h-.22v-.37h.22v-.37l.46-.02v.4h.38v.36h-.38v.71c0 .2.08.28.23.28.06 0 .12 0 .18-.02l.03.37c-.1.03-.2.04-.3.03Zm1.17 0c-.46 0-.69-.22-.69-.52 0-.33.27-.52.67-.53l.3.03v-.08c0-.2-.12-.3-.34-.3-.15 0-.3.03-.44.08l-.09-.36c.15-.06.38-.1.58-.1.49 0 .73.26.73.71v.93c-.13.07-.39.14-.72.14Zm.28-.37v-.36a1.12 1.12 0 0 0-.24-.03c-.15 0-.27.06-.27.22 0 .14.1.21.27.21.08 0 .16 0 .24-.04Zm2.02-1.3-.09.35a1.01 1.01 0 0 0-.38-.08c-.27 0-.41.2-.41.5 0 .35.15.52.44.52.13 0 .25-.03.37-.08l.07.37c-.15.07-.31.1-.48.1-.55 0-.87-.35-.87-.9 0-.53.31-.89.84-.89.18 0 .35.03.5.1Zm1.01 1.67c-.4 0-.6-.21-.6-.65v-.72h-.23v-.37h.23v-.37l.46-.02v.4h.37v.36h-.37v.71c0 .2.08.28.23.28.06 0 .12 0 .18-.02l.02.37c-.1.03-.2.04-.29.03Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "url(#a)",
-                    d: "M7.21 13.5c2.43 0 3.65-1.63 4.87-3.25H4v3.24h3.21Z",
-                }),
-                (0, r.jsx)("path", {
-                    fill: "url(#b)",
-                    d: "M16.95 7c-2.44 0-3.65 1.62-4.87 3.25h8.08V7h-3.21Z",
-                }),
-                (0, r.jsxs)("defs", {
-                    children: [
-                        (0, r.jsxs)("linearGradient", {
-                            id: "a",
-                            x1: "5.63",
-                            x2: "11.55",
-                            y1: "12.02",
-                            y2: "9.82",
-                            gradientUnits: "userSpaceOnUse",
-                            children: [
-                                (0, r.jsx)("stop", {
-                                    stopColor: "#005AB9",
-                                }),
-                                (0, r.jsx)("stop", {
-                                    offset: "1",
-                                    stopColor: "#1E3764",
-                                }),
-                            ],
-                        }),
-                        (0, r.jsxs)("linearGradient", {
-                            id: "b",
-                            x1: "12.57",
-                            x2: "18.84",
-                            y1: "10.53",
-                            y2: "8.39",
-                            gradientUnits: "userSpaceOnUse",
-                            children: [
-                                (0, r.jsx)("stop", {
-                                    stopColor: "#FBA900",
-                                }),
-                                (0, r.jsx)("stop", {
-                                    offset: "1",
-                                    stopColor: "#FFD800",
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            ],
-        }),
-    );
+let s = (e) => {
+    let { size: t = "md", width: n, height: s, ...o } = e,
+        l = (0, a.J)(t),
+        u = l?.width ?? n,
+        c = l?.height ?? s;
+    return (0, r.jsxs)("svg", {
+        ...(0, i.A)(o),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: u,
+        height: c,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, r.jsx)("path", {
+                fill: "#F3F3F4",
+                fillRule: "evenodd",
+                d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
+                clipRule: "evenodd",
+            }),
+            (0, r.jsx)("path", {
+                fill: "#1E3764",
+                d: "M4 17v-2.34h.72c.52 0 .86.2.86.6 0 .23-.1.4-.26.49.22.1.35.3.35.55 0 .47-.35.7-.88.7H4Zm.46-1.37h.35c.2 0 .3-.1.3-.3 0-.2-.17-.26-.39-.26h-.26v.56Zm0 .96h.29c.28 0 .44-.07.44-.3 0-.2-.14-.3-.4-.3h-.33v.6Zm2.1.44c-.45 0-.68-.22-.68-.52 0-.33.27-.52.67-.53l.3.03v-.08c0-.2-.12-.3-.34-.3-.15 0-.3.03-.44.08l-.09-.36c.15-.06.38-.1.58-.1.49 0 .73.26.73.71v.93c-.13.07-.39.14-.72.14Zm.29-.37v-.36a1.12 1.12 0 0 0-.24-.03c-.15 0-.27.06-.27.22 0 .14.1.21.27.21.08 0 .16 0 .24-.04Zm.77.33v-1.6c.24-.09.5-.14.75-.14.49 0 .77.24.77.68V17h-.46v-1.02c0-.23-.1-.34-.31-.34a.7.7 0 0 0-.3.06V17h-.45Zm3.13-1.64-.1.36a1.01 1.01 0 0 0-.37-.08c-.27 0-.41.2-.41.5 0 .35.15.52.44.52.12 0 .25-.03.37-.08l.07.37c-.15.07-.32.1-.48.1-.55 0-.87-.35-.87-.9 0-.53.31-.89.84-.89.18 0 .35.03.5.1Zm.99 1.68c-.51 0-.83-.35-.83-.89 0-.53.32-.89.83-.89.52 0 .83.36.83.9 0 .53-.31.88-.83.88Zm0-.38c.24 0 .36-.2.36-.5 0-.32-.12-.52-.36-.52-.23 0-.36.2-.36.51 0 .32.13.51.36.51Zm1.1.34v-1.6c.24-.09.5-.14.75-.14.49 0 .77.24.77.68V17h-.46v-1.02c0-.23-.11-.34-.31-.34a.7.7 0 0 0-.3.06V17h-.45Zm2.55.04c-.4 0-.6-.21-.6-.65v-.72h-.22v-.37h.22v-.37l.46-.02v.4h.38v.36h-.38v.71c0 .2.08.28.23.28.06 0 .12 0 .18-.02l.03.37c-.1.03-.2.04-.3.03Zm1.17 0c-.46 0-.69-.22-.69-.52 0-.33.27-.52.67-.53l.3.03v-.08c0-.2-.12-.3-.34-.3-.15 0-.3.03-.44.08l-.09-.36c.15-.06.38-.1.58-.1.49 0 .73.26.73.71v.93c-.13.07-.39.14-.72.14Zm.28-.37v-.36a1.12 1.12 0 0 0-.24-.03c-.15 0-.27.06-.27.22 0 .14.1.21.27.21.08 0 .16 0 .24-.04Zm2.02-1.3-.09.35a1.01 1.01 0 0 0-.38-.08c-.27 0-.41.2-.41.5 0 .35.15.52.44.52.13 0 .25-.03.37-.08l.07.37c-.15.07-.31.1-.48.1-.55 0-.87-.35-.87-.9 0-.53.31-.89.84-.89.18 0 .35.03.5.1Zm1.01 1.67c-.4 0-.6-.21-.6-.65v-.72h-.23v-.37h.23v-.37l.46-.02v.4h.37v.36h-.37v.71c0 .2.08.28.23.28.06 0 .12 0 .18-.02l.02.37c-.1.03-.2.04-.29.03Z",
+            }),
+            (0, r.jsx)("path", { fill: "url(#a)", d: "M7.21 13.5c2.43 0 3.65-1.63 4.87-3.25H4v3.24h3.21Z" }),
+            (0, r.jsx)("path", { fill: "url(#b)", d: "M16.95 7c-2.44 0-3.65 1.62-4.87 3.25h8.08V7h-3.21Z" }),
+            (0, r.jsxs)("defs", {
+                children: [
+                    (0, r.jsxs)("linearGradient", {
+                        id: "a",
+                        x1: "5.63",
+                        x2: "11.55",
+                        y1: "12.02",
+                        y2: "9.82",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                            (0, r.jsx)("stop", { stopColor: "#005AB9" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#1E3764" }),
+                        ],
+                    }),
+                    (0, r.jsxs)("linearGradient", {
+                        id: "b",
+                        x1: "12.57",
+                        x2: "18.84",
+                        y1: "10.53",
+                        y2: "8.39",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                            (0, r.jsx)("stop", { stopColor: "#FBA900" }),
+                            (0, r.jsx)("stop", { offset: "1", stopColor: "#FFD800" }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
 };

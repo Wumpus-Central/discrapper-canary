@@ -1,201 +1,141 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(896048),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(747238);
-var l = n(627968),
-    a = n(64700),
-    r = n(311907),
-    i = n(123791),
-    s = n(979590),
-    c = n(45758),
-    o = n(783531),
-    d = n(354138),
-    u = n(212534),
-    p = n(82293),
-    h = n(412461),
-    m = n(867333),
-    b = n(111737),
-    f = n(310419),
-    g = n(656106),
-    x = n(241837),
-    v = n(116219),
-    j = n(475356),
-    A = n(489253),
-    _ = n(247165),
-    y = n(435220),
-    O = n(652215),
-    S = n(985018),
-    C = n(312222);
-let E = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: E, initialTab: I, onButtonsVisibilityChange: P } = e,
-        N = a.useRef(null),
-        R = (0, r.bG)([u.A], () => u.A.getApplication(t)),
-        T = (0, r.bG)([u.A], () => u.A.getApplicationFetchState(t));
-    a.useEffect(() => {
-        if (null != t && null == R) {
+a.d(t, { A: () => N }), a(323874), a(14289), a(35956);
+var n = a(627968),
+    i = a(64700),
+    s = a(311907),
+    l = a(123791),
+    r = a(979590),
+    o = a(45758),
+    c = a(783531),
+    d = a(354138),
+    u = a(212534),
+    h = a(82293),
+    m = a(412461),
+    p = a(867333),
+    _ = a(111737),
+    g = a(310419),
+    x = a(656106),
+    A = a(241837),
+    C = a(116219),
+    b = a(475356),
+    v = a(489253),
+    f = a(247165),
+    j = a(435220),
+    I = a(652215),
+    E = a(985018),
+    S = a(312222);
+let N = function (e) {
+    let { applicationId: t, onSelectApplication: a, onScroll: N, initialTab: y, onButtonsVisibilityChange: T } = e,
+        R = i.useRef(null),
+        L = (0, s.bG)([u.A], () => u.A.getApplication(t)),
+        P = (0, s.bG)([u.A], () => u.A.getApplicationFetchState(t));
+    i.useEffect(() => {
+        if (null != t && null == L) {
             let e = "true" === new URLSearchParams(location.search).get("preview") || void 0;
-            d.Di(t, {
-                noCache: e,
-            });
+            d.Di(t, { noCache: e });
         }
-    }, [t, R]),
-        a.useEffect(() => {
-            d.xZ({
-                applicationId: t,
-            });
+    }, [t, L]),
+        i.useEffect(() => {
+            d.xZ({ applicationId: t });
         }, [t]),
-        a.useEffect(() => () => P(!0), [P]);
-    let L = null == R ? void 0 : R.storefront_available,
-        [D, w] = a.useState(null != I ? I : y.GlobalDiscoveryAppsSections.ABOUT),
-        k = a.useCallback(
+        i.useEffect(() => () => T(!0), [T]);
+    let D = L?.storefront_available,
+        [O, k] = i.useState(y ?? j.GlobalDiscoveryAppsSections.ABOUT),
+        M = i.useCallback(
             (e) => {
-                var t;
-                null == (t = N.current) ||
-                    t.scrollTo({
-                        to: 0,
-                    }),
-                    w(y.GlobalDiscoveryAppsSections.ABOUT),
-                    n(e);
+                R.current?.scrollTo({ to: 0 }), k(j.GlobalDiscoveryAppsSections.ABOUT), a(e);
             },
-            [n],
+            [a],
         );
-    a.useEffect(() => {
-        (null == R ? void 0 : R.storefront_available) && null != t && (0, i.F)(t);
-    }, [null == R ? void 0 : R.storefront_available, t]);
-    let M = (0, f.Bn)(),
-        U = (0, r.bG)([p.A], () =>
-            p.A.getFetchState({
-                applicationId: null == R ? void 0 : R.id,
-            }),
-        ),
-        G = (0, r.bG)([p.A], () =>
-            p.A.getSimilarApplications({
-                applicationId: null == R ? void 0 : R.id,
-            }),
-        ),
-        V = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
-        H = {
-            displayedSimilarApplications: V,
-            previousView: M,
-        },
-        F = a.useRef(H);
-    a.useEffect(() => {
-        F.current = H;
+    i.useEffect(() => {
+        L?.storefront_available && null != t && (0, l.F)(t);
+    }, [L?.storefront_available, t]);
+    let G = (0, g.Bn)(),
+        U = (0, s.bG)([h.A], () => h.A.getFetchState({ applicationId: L?.id })),
+        w = (0, s.bG)([h.A], () => h.A.getSimilarApplications({ applicationId: L?.id })),
+        V = i.useMemo(() => w?.applications.slice(0, 3), [w]),
+        H = { displayedSimilarApplications: V, previousView: G },
+        B = i.useRef(H);
+    i.useEffect(() => {
+        B.current = H;
     }),
-        a.useEffect(() => {
-            let { displayedSimilarApplications: e, previousView: t } = F.current;
-            (null == R ? void 0 : R.id) != null &&
-                U !== p.e.FETCHING &&
-                (0, h.TR)(O.HAw.APP_DIRECTORY_PAGE_VIEWED, {
-                    current_page: f.ev.APPLICATION,
-                    previous_page: null == t ? void 0 : t.type,
-                    application_id: R.id,
+        i.useEffect(() => {
+            let { displayedSimilarApplications: e, previousView: t } = B.current;
+            L?.id != null &&
+                U !== h.e.FETCHING &&
+                (0, m.TR)(I.HAw.APP_DIRECTORY_PAGE_VIEWED, {
+                    current_page: g.ev.APPLICATION,
+                    previous_page: t?.type,
+                    application_id: L.id,
                     referrer: document.referrer,
-                    suggested_application_ids: null == e ? void 0 : e.map((e) => e.id),
+                    suggested_application_ids: e?.map((e) => e.id),
                 });
-        }, [null == R ? void 0 : R.id, U]);
-    let B = a.useMemo(
+        }, [L?.id, U]);
+    let F = i.useMemo(
             () => [
-                {
-                    id: y.GlobalDiscoveryAppsSections.ABOUT,
-                    label: S.intl.string(S.t.DkyHMK),
-                },
-                {
-                    id: y.GlobalDiscoveryAppsSections.STORE,
-                    label: S.intl.string(S.t.jgEXGB),
-                },
+                { id: j.GlobalDiscoveryAppsSections.ABOUT, label: E.intl.string(E.t.DkyHMK) },
+                { id: j.GlobalDiscoveryAppsSections.STORE, label: E.intl.string(E.t.jgEXGB) },
             ],
             [],
         ),
-        Y = a.useMemo(() => {
-            if (null == R) return null;
-            switch (D) {
-                case y.GlobalDiscoveryAppsSections.ABOUT:
-                    return (0, l.jsx)(x.A, {
-                        application: R,
-                    });
-                case y.GlobalDiscoveryAppsSections.STORE:
-                    return (0, l.jsx)(_.A, {
-                        application: R,
-                    });
+        Y = i.useMemo(() => {
+            if (null == L) return null;
+            switch (O) {
+                case j.GlobalDiscoveryAppsSections.ABOUT:
+                    return (0, n.jsx)(A.A, { application: L });
+                case j.GlobalDiscoveryAppsSections.STORE:
+                    return (0, n.jsx)(f.A, { application: L });
             }
-        }, [D, R]),
-        z = a.useCallback(
+        }, [O, L]),
+        z = i.useCallback(
             (e) => {
-                (0, h.TR)(O.HAw.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
-                    application_id: t,
-                    tab_name: e,
-                }),
-                    w(e),
-                    e === y.GlobalDiscoveryAppsSections.ABOUT
-                        ? (0, g.Fr)(O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t))
-                        : (0, g.Fr)(O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                (0, m.TR)(I.HAw.APP_DIRECTORY_PROFILE_TAB_CLICKED, { application_id: t, tab_name: e }),
+                    k(e),
+                    e === j.GlobalDiscoveryAppsSections.ABOUT
+                        ? (0, x.Fr)(I.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t))
+                        : (0, x.Fr)(I.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t],
         ),
-        X = D === y.GlobalDiscoveryAppsSections.ABOUT;
-    return (0, l.jsx)(o.A, {
-        onScroll: E,
-        ref: N,
-        children: (0, l.jsx)(s.A, {
+        X = O === j.GlobalDiscoveryAppsSections.ABOUT;
+    return (0, n.jsx)(c.A, {
+        onScroll: N,
+        ref: R,
+        children: (0, n.jsx)(r.A, {
             children:
-                null == R
-                    ? null == T || T === u.e.FETCHING
-                        ? (0, l.jsx)("div", {
-                              className: C.Dg,
-                              children: (0, l.jsx)(m.A, {
-                                  loading: !0,
-                              }),
-                          })
-                        : (0, l.jsx)("div", {
-                              className: C.Dg,
-                              children: (0, l.jsx)(b.A, {
-                                  className: C.z3,
-                              }),
-                          })
-                    : (0, l.jsxs)("div", {
-                          className: C.nM,
+                null == L
+                    ? null == P || P === u.e.FETCHING
+                        ? (0, n.jsx)("div", { className: S.Dg, children: (0, n.jsx)(p.A, { loading: !0 }) })
+                        : (0, n.jsx)("div", { className: S.Dg, children: (0, n.jsx)(_.A, { className: S.z3 }) })
+                    : (0, n.jsxs)("div", {
+                          className: S.nM,
                           children: [
-                              (0, l.jsx)(v.A, {
-                                  application: R,
-                                  onButtonsVisibilityChange: P,
-                              }),
-                              (0, l.jsxs)("div", {
-                                  className: C.hQ,
+                              (0, n.jsx)(C.A, { application: L, onButtonsVisibilityChange: T }),
+                              (0, n.jsxs)("div", {
+                                  className: S.hQ,
                                   children: [
-                                      (0, l.jsxs)("div", {
-                                          className: C.Ne,
+                                      (0, n.jsxs)("div", {
+                                          className: S.Ne,
                                           children: [
-                                              L &&
-                                                  (0, l.jsx)("div", {
-                                                      className: C.OF,
-                                                      children: (0, l.jsx)(c.A, {
-                                                          tabs: B,
+                                              D &&
+                                                  (0, n.jsx)("div", {
+                                                      className: S.OF,
+                                                      children: (0, n.jsx)(o.A, {
+                                                          tabs: F,
                                                           onTabSelect: z,
-                                                          selectedTab: D,
+                                                          selectedTab: O,
                                                       }),
                                                   }),
                                               Y,
-                                              (0, l.jsx)(A.A, {
+                                              (0, n.jsx)(v.A, {
                                                   applicationId: t,
                                                   fetchState: U,
                                                   similarApplications: V,
-                                                  onSelectApplication: k,
-                                                  similarLoadId: null == G ? void 0 : G.loadId,
+                                                  onSelectApplication: M,
+                                                  similarLoadId: w?.loadId,
                                               }),
                                           ],
                                       }),
-                                      X &&
-                                          (0, l.jsx)(j.A, {
-                                              className: C.pz,
-                                              application: R,
-                                              view: "side",
-                                          }),
+                                      X && (0, n.jsx)(b.A, { className: S.pz, application: L, view: "side" }),
                                   ],
                               }),
                           ],

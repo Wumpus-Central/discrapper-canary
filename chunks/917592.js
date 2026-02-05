@@ -1,50 +1,44 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(747238);
-var l = n(652215),
-    r = n(985018);
-let i = {
+n.d(t, { A: () => a });
+var i = n(652215),
+    l = n(985018);
+let a = {
     getStatus: function (e) {
         let t,
             n,
-            i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
-            case l.S7L.CONNECTING:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t.MzW9sN));
+            case i.S7L.CONNECTING:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.MzW9sN));
                 break;
-            case l.S7L.AUTHENTICATING:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t.GxXwE2));
+            case i.S7L.AUTHENTICATING:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.GxXwE2));
                 break;
-            case l.S7L.AWAITING_ENDPOINT:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t.xEbu0Q));
+            case i.S7L.AWAITING_ENDPOINT:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.xEbu0Q));
                 break;
-            case l.S7L.RTC_CONNECTED:
-                (t = l.vkP.CONNECTED), (n = i ? r.intl.string(r.t.HtVOdd) : r.intl.string(r.t.daXg45));
+            case i.S7L.RTC_CONNECTED:
+                (t = i.vkP.CONNECTED), (n = a ? l.intl.string(l.t.HtVOdd) : l.intl.string(l.t.daXg45));
                 break;
-            case l.S7L.RTC_CONNECTING:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t.Gp51dl));
+            case i.S7L.RTC_CONNECTING:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.Gp51dl));
                 break;
-            case l.S7L.ICE_CHECKING:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t["rdCyA/"]));
+            case i.S7L.ICE_CHECKING:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t["rdCyA/"]));
                 break;
-            case l.S7L.DTLS_CONNECTING:
-                (t = l.vkP.CONNECTING), (n = r.intl.string(r.t.UvB3gV));
+            case i.S7L.DTLS_CONNECTING:
+                (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.UvB3gV));
                 break;
-            case l.S7L.NO_ROUTE:
-                (t = l.vkP.ERROR), (n = r.intl.string(r.t.mGhOIi));
+            case i.S7L.NO_ROUTE:
+                (t = i.vkP.ERROR), (n = l.intl.string(l.t.mGhOIi));
                 break;
-            case l.S7L.RTC_DISCONNECTED:
-                (t = l.vkP.ERROR), (n = r.intl.string(r.t.M7LDmE));
+            case i.S7L.RTC_DISCONNECTED:
+                (t = i.vkP.ERROR), (n = l.intl.string(l.t.M7LDmE));
                 break;
-            case l.S7L.DISCONNECTED:
+            case i.S7L.DISCONNECTED:
             default:
-                (t = l.vkP.ERROR), (n = r.intl.string(r.t.NLKQbx));
+                (t = i.vkP.ERROR), (n = l.intl.string(l.t.NLKQbx));
         }
-        return {
-            connectionStatus: t,
-            connectionStatusText: n,
-        };
+        return { connectionStatus: t, connectionStatusText: n };
     },
     getShortHostname: function (e) {
         return null == e ? "" : e.split(".")[0];

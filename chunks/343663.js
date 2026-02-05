@@ -1,32 +1,29 @@
+"use strict";
 var r = n(64700),
     i = n(524519);
-
 function a(e, t) {
     return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }
 var s = "function" == typeof Object.is ? Object.is : a,
     o = i.useSyncExternalStore,
     l = r.useRef,
-    c = r.useEffect,
-    u = r.useMemo,
+    u = r.useEffect,
+    c = r.useMemo,
     d = r.useDebugValue;
 t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
     var a = l(null);
     if (null === a.current) {
-        var f = {
-            hasValue: !1,
-            value: null,
-        };
-        a.current = f;
-    } else f = a.current;
-    var p = o(
+        var _ = { hasValue: !1, value: null };
+        a.current = _;
+    } else _ = a.current;
+    var f = o(
         e,
-        (a = u(
+        (a = c(
             function () {
                 function e(e) {
                     if (!l) {
-                        if (((l = !0), (a = e), (e = r(e)), void 0 !== i && f.hasValue)) {
-                            var t = f.value;
+                        if (((l = !0), (a = e), (e = r(e)), void 0 !== i && _.hasValue)) {
+                            var t = _.value;
                             if (i(t, e)) return (o = t);
                         }
                         return (o = e);
@@ -38,15 +35,15 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
                 var a,
                     o,
                     l = !1,
-                    c = void 0 === n ? null : n;
+                    u = void 0 === n ? null : n;
                 return [
                     function () {
                         return e(t());
                     },
-                    null === c
+                    null === u
                         ? void 0
                         : function () {
-                              return e(c());
+                              return e(u());
                           },
                 ];
             },
@@ -55,13 +52,13 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
         a[1],
     );
     return (
-        c(
+        u(
             function () {
-                (f.hasValue = !0), (f.value = p);
+                (_.hasValue = !0), (_.value = f);
             },
-            [p],
+            [f],
         ),
-        d(p),
-        p
+        d(f),
+        f
     );
 };

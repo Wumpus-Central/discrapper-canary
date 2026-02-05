@@ -1,161 +1,131 @@
-a.d(e, {
-    default: () => x,
-}),
-    a(896048);
+a.d(e, { default: () => b });
 var n = a(627968),
-    l = a(64700),
-    i = a(158954),
-    r = a(311907),
-    s = a(499979),
+    i = a(64700),
+    r = a(158954),
+    s = a(311907),
+    l = a(499979),
     o = a(397927),
     d = a(964486),
-    u = a(77729),
-    c = a(15285),
+    c = a(77729),
+    u = a(15285),
     m = a(760751),
     _ = a(954571),
     h = a(41984),
-    v = a(833551),
-    y = a(652215),
-    g = a(985018),
-    p = a(521797);
-
-function x(t) {
-    let { onClose: e, transitionState: a, clientSettingType: x, gameId: b } = t,
-        [f, k] = l.useState("unreported"),
-        [w, A] = l.useState(""),
-        [C, S] = l.useState(!1),
-        [j, M] = l.useState(!1),
-        [N, P] = l.useState(!1),
-        [R, z] = l.useState(!1),
-        D = (0, r.bG)([m.A, c.Ay], () => {
-            var t;
-            let e = null != b ? b : null == (t = c.Ay.getCurrentGameForAnalytics()) ? void 0 : t.id;
-            return null == e ? null : m.A.getDetectableGame(e);
+    y = a(833551),
+    g = a(652215),
+    p = a(985018),
+    x = a(521797);
+function b(t) {
+    let { onClose: e, transitionState: a, clientSettingType: b, gameId: v } = t,
+        [k, f] = i.useState("unreported"),
+        [w, C] = i.useState(""),
+        [A, S] = i.useState(!1),
+        [j, M] = i.useState(!1),
+        [H, N] = i.useState(!1),
+        [P, R] = i.useState(!1),
+        z = (0, s.bG)([m.A, u.Ay], () => {
+            let t = v ?? u.Ay.getCurrentGameForAnalytics()?.id;
+            return null == t ? null : m.A.getDetectableGame(t);
         }),
-        E = (0, r.bG)([v.default], () => {
-            var t;
-            let e =
-                null !=
-                (t = null === v.default || void 0 === v.default ? void 0 : v.default.getMostRecentOverlayRenderMethod())
-                    ? t
-                    : void 0;
-            return null != e ? h.Ue[e] : void 0;
+        D = (0, s.bG)([y.default], () => {
+            let t = y.default?.getMostRecentOverlayRenderMethod() ?? void 0;
+            return null != t ? h.Ue[t] : void 0;
         }),
-        F = l.useMemo(() => {
+        E = i.useMemo(() => {
             let t = {
-                not_working: g.t.CHXHFX,
-                not_useful: g.t.a95skc,
-                game_crashes_occurred: g.t.IFZ0Sa,
-                poor_performance: g.t.exRczv,
-                too_many_notifications: g.t.XuBFBM,
-                multiple_monitors: g.t.p8Ekyz,
-                in_the_way_of_game: g.t.YP7Pin,
-                other: g.t["YP/Ttl"],
+                not_working: p.t.CHXHFX,
+                not_useful: p.t.a95skc,
+                game_crashes_occurred: p.t.IFZ0Sa,
+                poor_performance: p.t.exRczv,
+                too_many_notifications: p.t.XuBFBM,
+                multiple_monitors: p.t.p8Ekyz,
+                in_the_way_of_game: p.t.YP7Pin,
+                other: p.t["YP/Ttl"],
             };
-            return Object.keys(t).map((e) => ({
-                name: g.intl.string(t[e]),
-                value: e,
-            }));
+            return Object.keys(t).map((e) => ({ name: p.intl.string(t[e]), value: e }));
         }, []),
-        L = l.useCallback(async () => {
-            var t, a, n;
-            if ("unreported" === f && 0 === w.length) {
-                P(!0), await (0, s.yy)(100), P(!1), z(!0);
+        F = i.useCallback(async () => {
+            if ("unreported" === k && 0 === w.length) {
+                N(!0), await (0, l.yy)(100), N(!1), R(!0);
                 return;
             }
             S(!0),
-                await _.default.track(y.HAw.OVERLAY_DISABLED_SURVEY, {
-                    reason: f,
+                await _.default.track(g.HAw.OVERLAY_DISABLED_SURVEY, {
+                    reason: k,
                     comment: w,
-                    client_setting_type: x,
-                    application_id: null == D ? void 0 : D.id,
-                    application_name: null == D ? void 0 : D.name,
-                    most_recent_overlay_render_method: E,
-                    hardware_display_count:
-                        null !=
-                        (t = await (null === u.A ||
-                        void 0 === u.A ||
-                        null == (n = u.A.hardware) ||
-                        null == (a = n.getDisplayCount)
-                            ? void 0
-                            : a.call(n)))
-                            ? t
-                            : null,
+                    client_setting_type: b,
+                    application_id: z?.id,
+                    application_name: z?.name,
+                    most_recent_overlay_render_method: D,
+                    hardware_display_count: (await c.A?.hardware?.getDisplayCount?.()) ?? null,
                 }),
-                await (0, s.yy)(1e3),
+                await (0, l.yy)(1e3),
                 S(!1),
                 M(!0),
-                await (0, s.yy)(1500),
+                await (0, l.yy)(1500),
                 e();
-        }, [f, w, x, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
+        }, [k, w, b, z?.id, z?.name, D, e]);
     (0, d.Ay)(() => {
-        _.default.track(y.HAw.OPEN_MODAL, {
-            type: "overlay_disabled_questionnaire_modal",
-        });
+        _.default.track(g.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
-    let O = l.useMemo(
+    let L = i.useMemo(
         () => [
+            { variant: "secondary", text: p.intl.string(p.t["5Wxrcd"]), onClick: e, disabled: A },
             {
-                variant: "secondary",
-                text: g.intl.string(g.t["5Wxrcd"]),
-                onClick: e,
-                disabled: C,
-            },
-            {
-                variant: N ? "secondary" : "primary",
-                text: j ? g.intl.string(g.t.bxiZU6) : g.intl.string(g.t.geKm7t),
-                onClick: L,
-                disabled: C || j,
-                loading: C,
+                variant: H ? "secondary" : "primary",
+                text: j ? p.intl.string(p.t.bxiZU6) : p.intl.string(p.t.geKm7t),
+                onClick: F,
+                disabled: A || j,
+                loading: A,
                 autoFocus: !1,
             },
         ],
-        [e, C, j, L, N],
+        [e, A, j, F, H],
     );
-    return (0, n.jsxs)(i.Modal, {
+    return (0, n.jsxs)(r.Modal, {
         onClose: e,
         transitionState: a,
-        title: g.intl.string(g.t["9JKzxe"]),
-        subtitle: g.intl.string(g.t["2yjnmb"]),
-        actions: O,
+        title: p.intl.string(p.t["9JKzxe"]),
+        subtitle: p.intl.string(p.t["2yjnmb"]),
+        actions: L,
         children: [
             (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsx)(o.bfh, {
-                        isShaking: N,
+                        isShaking: H,
                         intensity: 1,
-                        className: p.lm,
+                        className: x.lm,
                         children: (0, n.jsx)(o.Text, {
                             variant: "text-sm/semibold",
-                            color: R ? "text-feedback-critical" : "text-muted",
-                            children: g.intl.string(g.t.yhUvdd),
+                            color: P ? "text-feedback-critical" : "text-muted",
+                            children: p.intl.string(p.t.yhUvdd),
                         }),
                     }),
                     (0, n.jsx)(o.z6M, {
-                        value: f,
-                        options: F,
+                        value: k,
+                        options: E,
                         onChange: (t) => {
-                            k(t), z(!1), P(!1);
+                            f(t), R(!1), N(!1);
                         },
                     }),
                 ],
             }),
             (0, n.jsxs)("div", {
-                className: p.xi,
+                className: x.xi,
                 children: [
                     (0, n.jsx)(o.Text, {
                         variant: "text-sm/semibold",
                         color: "text-muted",
-                        className: p.NP,
-                        children: g.intl.string(g.t.LYnrhc),
+                        className: x.NP,
+                        children: p.intl.string(p.t.LYnrhc),
                     }),
                     (0, n.jsx)(o.fs1, {
                         autosize: !0,
                         value: w,
                         maxLength: 1e3,
                         showRemainingCharacterCount: !1,
-                        placeholder: g.intl.string(g.t["gU+bVJ"]),
-                        onChange: A,
+                        placeholder: p.intl.string(p.t["gU+bVJ"]),
+                        onChange: C,
                     }),
                 ],
             }),

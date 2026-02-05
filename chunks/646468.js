@@ -1,72 +1,57 @@
-n.d(t, {
-    Ay: () => A,
-    xc: () => O,
-}),
-    n(896048),
-    n(638769);
-var r = n(627968),
+n.d(t, { Ay: () => x, xc: () => E });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(435371),
-    s = n(397927),
+    r = n(397927),
     o = n(252431),
-    c = n(322387),
-    u = n(995273),
-    d = n(325326),
-    f = n(208667),
-    p = n(253932),
-    h = n(954571),
-    b = n(661191),
-    g = n(652215),
-    m = n(985018);
-
-function A() {
-    let { initialized: e, items: t, loading: n, loadMore: l } = (0, d.LF)(),
-        a = y(
+    d = n(322387),
+    c = n(995273),
+    u = n(325326),
+    h = n(208667),
+    A = n(253932),
+    g = n(954571),
+    m = n(661191),
+    p = n(652215),
+    _ = n(985018);
+function x() {
+    let { initialized: e, items: t, loading: n, loadMore: l } = (0, u.LF)(),
+        a = f(
             t,
-            (0, i.bG)([o.A], () => o.A.localItems),
+            (0, s.bG)([o.A], () => o.A.localItems),
         );
-    return (0, r.jsx)(f.A, {
-        initialized: e,
-        items: a,
-        loading: n,
-        loadMore: l,
-    });
+    return (0, i.jsx)(h.A, { initialized: e, items: a, loading: n, loadMore: l });
 }
-
-function y(e, t) {
-    return l.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [e, t]);
+function f(e, t) {
+    return l.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [e, t]);
 }
-
-function O() {
-    let { items: e } = (0, d.LF)(),
+function E() {
+    let { items: e } = (0, u.LF)(),
         t = e.length > 0 ? e[0] : null,
-        n = y(
+        n = f(
             e,
-            (0, i.bG)([o.A], () => o.A.localItems),
+            (0, s.bG)([o.A], () => o.A.localItems),
         ),
-        f = p.ns.useSetting();
+        h = A.ns.useSetting();
     return l.useMemo(() => {
-        if (null != t && 0 >= b.default.compare(t.id, f)) return !1;
+        if (null != t && 0 >= m.default.compare(t.id, h)) return !1;
         for (let e of n) {
-            if (0 >= b.default.compare(e.id, f)) break;
-            if (!(0, u.NW)(e, f)) return !0;
+            if (0 >= m.default.compare(e.id, h)) break;
+            if (!(0, c.NW)(e, h)) return !0;
         }
         return !1;
-    }, [t, f, n])
-        ? (0, r.jsx)(a.m_, {
-              text: m.intl.string(m.t["8k+6QY"]),
-              children: (0, r.jsx)(s.K0, {
-                  "aria-label": m.intl.string(m.t["8k+6QY"]),
-                  icon: s.iA$,
+    }, [t, h, n])
+        ? (0, i.jsx)(a.m_, {
+              text: _.intl.string(_.t["8k+6QY"]),
+              children: (0, i.jsx)(r.K0, {
+                  "aria-label": _.intl.string(_.t["8k+6QY"]),
+                  icon: r.iA$,
                   variant: "secondary",
                   size: "sm",
                   onClick: () => {
                       null != t &&
-                          (p.ns.updateSetting(t.id),
-                          h.default.track(g.HAw.NOTIFICATION_CENTER_ACTION, {
-                              action_type: c.e1.MARK_ALL_READ,
-                          }));
+                          (A.ns.updateSetting(t.id),
+                          g.default.track(p.HAw.NOTIFICATION_CENTER_ACTION, { action_type: d.e1.MARK_ALL_READ }));
                   },
               }),
           })

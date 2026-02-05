@@ -1,14 +1,5 @@
-n.d(t, {
-    $z: () => l,
-    EH: () => f,
-    WA: () => d,
-    kx: () => o,
-    l9: () => u,
-    tf: () => p,
-}),
-    n(591487),
-    n(727858),
-    n(747238);
+"use strict";
+n.d(t, { $z: () => l, EH: () => _, WA: () => d, kx: () => o, l9: () => c, tf: () => f });
 var r = n(989349),
     i = n.n(r),
     a = n(405269),
@@ -37,39 +28,24 @@ let o = {
                 i().relativeTimeThreshold("s", t),
                 i().relativeTimeThreshold("ss", n),
                 i().relativeTimeThreshold("m", r),
-                null != a ? a : i()(e.toDate()).fromNow()
+                a ?? i()(e.toDate()).fromNow()
             );
         },
     },
     l = "f";
 Object.setPrototypeOf(o, null);
-let c = Object.keys(o).join("|"),
-    u = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(c, "))?>"));
-
+let u = Object.keys(o).join("|"),
+    c = RegExp(`^<t:(-?\\d{1,17})(?::(${u}))?>`);
 function d(e) {
     let { timestamp: t, format: n } = e,
         r = i()(Number(t) * s.A.Millis.SECOND);
     if (!r.isValid()) return null;
     let a = null != n ? o[n] : void 0;
-    return (
-        null == a && (a = o[l]),
-        {
-            timestamp: t,
-            format: n,
-            parsed: r,
-            full: o.F(r),
-            formatted: a(r),
-        }
-    );
+    return null == a && (a = o[l]), { timestamp: t, format: n, parsed: r, full: o.F(r), formatted: a(r) };
 }
-
+function _(e, t) {
+    return d({ timestamp: e, format: t });
+}
 function f(e, t) {
-    return d({
-        timestamp: e,
-        format: t,
-    });
-}
-
-function p(e, t) {
-    return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">");
+    return null != t ? `<t:${e}:${t}>` : `<t:${e}>`;
 }

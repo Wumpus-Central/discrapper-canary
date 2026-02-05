@@ -1,91 +1,66 @@
-n.d(t, {
-    A: () => b,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(263063),
-    c = n(496885),
-    u = n(313375),
-    d = n(61780),
-    f = n(473145),
-    p = n(942975),
-    _ = n(645619),
-    h = n(434564),
-    m = n(92707);
-class g extends i.PureComponent {
+l.d(e, { A: () => v });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    r = l.n(s),
+    a = l(311907),
+    o = l(263063),
+    d = l(496885),
+    u = l(313375),
+    c = l(61780),
+    x = l(473145),
+    m = l(942975),
+    h = l(645619),
+    C = l(434564),
+    g = l(92707);
+class j extends i.PureComponent {
     render() {
-        let { tier: e } = this.props;
-        return (0, r.jsxs)("div", {
-            className: m._v,
+        let { tier: t } = this.props;
+        return (0, n.jsxs)("div", {
+            className: g._v,
             children: [
-                (0, r.jsx)(c.A, {
-                    className: m.U2,
-                    children: (0, r.jsx)(u.A, {
-                        tier: e,
-                        color: "currentColor",
-                        className: m.Zw,
-                    }),
+                (0, n.jsx)(d.A, {
+                    className: g.U2,
+                    children: (0, n.jsx)(u.A, { tier: t, color: "currentColor", className: g.Zw }),
                 }),
-                (0, f.gb)(e),
+                (0, x.gb)(t),
             ],
         });
     }
 }
-let E = (e) => {
-    let { subscriptionChange: t, guild: n } = e,
-        i = (0, h.A)(n.id);
-    if (0 === t) return null;
-    let a = (0, f.P7)(n.id),
-        s = (0, f.kN)(i + t),
-        o = s - a;
-    return 0 === o
+let p = (t) => {
+    let { subscriptionChange: e, guild: l } = t,
+        i = (0, C.A)(l.id);
+    if (0 === e) return null;
+    let s = (0, x.P7)(l.id),
+        r = (0, x.kN)(i + e),
+        a = r - s;
+    return 0 === a
         ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsx)(d.A, {
-                      className: o > 0 ? m.$P : m.q0,
-                  }),
-                  (0, r.jsx)(g, {
-                      tier: s,
-                  }),
-              ],
+        : (0, n.jsxs)(n.Fragment, {
+              children: [(0, n.jsx)(c.A, { className: a > 0 ? g.$P : g.q0 }), (0, n.jsx)(j, { tier: r })],
           });
 };
-
-function b(e) {
-    let { guild: t, className: n, subscriptionChange: a } = e,
-        c = (0, o.bG)([_.A], () => null != _.A.getStateForGuild(t.id));
+function v(t) {
+    let { guild: e, className: l, subscriptionChange: s } = t,
+        d = (0, a.bG)([h.A], () => null != h.A.getStateForGuild(e.id));
     return (
         i.useEffect(() => {
-            c || (0, p.Xd)(t.id);
-        }, [c, t.id]),
-        (0, r.jsxs)("div", {
-            className: s()(m.gP, n),
+            d || (0, m.Xd)(e.id);
+        }, [d, e.id]),
+        (0, n.jsxs)("div", {
+            className: r()(g.gP, l),
             children: [
-                (0, r.jsx)(l.A, {
-                    guild: t,
-                    size: l.A.Sizes.LARGE,
-                }),
-                (0, r.jsxs)("div", {
-                    className: m.EF,
+                (0, n.jsx)(o.A, { guild: e, size: o.A.Sizes.LARGE }),
+                (0, n.jsxs)("div", {
+                    className: g.EF,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: m.J5,
-                            children: t.name,
-                        }),
-                        (0, r.jsxs)("div", {
-                            className: m.jp,
+                        (0, n.jsx)("div", { className: g.J5, children: e.name }),
+                        (0, n.jsxs)("div", {
+                            className: g.jp,
                             children: [
-                                (0, r.jsx)(g, {
-                                    tier: t.premiumTier,
-                                }),
-                                (0, r.jsx)(E, {
-                                    guild: t,
-                                    subscriptionChange: null != a ? a : 0,
-                                }),
+                                (0, n.jsx)(j, { tier: e.premiumTier }),
+                                (0, n.jsx)(p, { guild: e, subscriptionChange: null != s ? s : 0 }),
                             ],
                         }),
                     ],

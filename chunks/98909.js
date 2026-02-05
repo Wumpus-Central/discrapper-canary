@@ -1,8 +1,6 @@
-n.d(t, {
-    w: () => i,
-});
+"use strict";
+n.d(t, { w: () => i });
 var r = n(64700);
-
 function i(e, t) {
     let n = (0, r.useRef)(!0),
         i = (0, r.useRef)(null);

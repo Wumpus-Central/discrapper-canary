@@ -1,22 +1,19 @@
-n.d(t, {
-    A: () => r,
-}),
-    n(896048);
+n.d(t, { A: () => l });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(397927);
-let r = function (e) {
-    let { assetKey: t, initialValue: n, onMessageChange: r, title: s } = e,
-        [o, c] = l.useState("");
+let l = function (e) {
+    let { assetKey: t, initialValue: n, onMessageChange: l, title: r } = e,
+        [o, d] = s.useState("");
     return (
-        l.useEffect(() => {
-            c(null != n ? n : "");
+        s.useEffect(() => {
+            d(n ?? "");
         }, [n]),
         (0, a.jsx)(i.ksK, {
-            label: s,
+            label: r,
             value: o,
             onChange: function (e) {
-                c(e), r(t, e);
+                d(e), l(t, e);
             },
         })
     );

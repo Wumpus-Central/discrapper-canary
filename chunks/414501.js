@@ -1,9 +1,10 @@
-var r = n(116740).OrderedMap;
-e.exports = {
-    createFromArray: function (e) {
-        return r(
-            e.map(function (e) {
-                return [e.getKey(), e];
+"use strict";
+var n = r(116740).OrderedMap;
+t.exports = {
+    createFromArray: function (t) {
+        return n(
+            t.map(function (t) {
+                return [t.getKey(), t];
             }),
         );
     },

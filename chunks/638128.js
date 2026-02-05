@@ -1,60 +1,39 @@
-n.d(t, {
-    A: () => h,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(11057),
-    l = n(454235);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => f });
+var r = n(311907),
+    i = n(506774),
+    a = n(73153),
+    s = n(11057),
+    o = n(454235);
+let l = "SpellcheckStore",
+    u = !0,
+    c = new Set();
+function d() {
+    i.w.set(l, { enabled: u, learnedWords: c });
 }
-let u = "SpellcheckStore",
-    d = !0,
-    f = new Set();
-
-function p() {
-    a.w.set(u, {
-        enabled: d,
-        learnedWords: f,
-    });
-}
-class _ extends (r = i.Ay.Store) {
+class _ extends r.Ay.Store {
+    static displayName = "SpellcheckStore";
     initialize() {
-        let e = a.w.get(u);
-        null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, l.kv)(d), (0, l.d1)(f)), (0, o.I)(l.Av);
+        let e = i.w.get(l);
+        null != e && ((u = e.enabled), (c = new Set(e.learnedWords)), (0, o.kv)(u), (0, o.d1)(c)), (0, s.I)(o.Av);
     }
     isEnabled() {
-        return d;
+        return u;
     }
     hasLearnedWord(e) {
-        return f.has(e.toLocaleLowerCase());
+        return c.has(e.toLocaleLowerCase());
     }
 }
-c(_, "displayName", "SpellcheckStore");
-let h = new _(s.h, {
+let f = new _(a.h, {
     SPELLCHECK_TOGGLE() {
-        (d = !d), (0, l.kv)(d), p();
+        (u = !u), (0, o.kv)(u), d();
     },
     SPELLCHECK_LEARN_WORD(e) {
         let { word: t } = e;
-        f.add(t.toLocaleLowerCase()), (0, l.d1)(f), p();
+        c.add(t.toLocaleLowerCase()), (0, o.d1)(c), d();
     },
     SPELLCHECK_UNLEARN_WORD(e) {
         let { word: t } = e;
-        f.delete(t.toLocaleLowerCase()), (0, l.d1)(f), p();
+        c.delete(t.toLocaleLowerCase()), (0, o.d1)(c), d();
     },
 });

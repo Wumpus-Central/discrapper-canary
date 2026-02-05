@@ -1,10 +1,5 @@
-n.d(t, {
-    GE: () => u,
-    RK: () => s,
-    U5: () => a,
-    X8: () => c,
-    yF: () => o,
-});
+"use strict";
+n.d(t, { GE: () => c, RK: () => s, U5: () => a, X8: () => u, yF: () => o });
 var r = n(600975),
     i = n(428835),
     a = (function (e) {
@@ -25,29 +20,17 @@ let l = (0, r.C)({
         kind: "user",
         id: "2025-04_desktop_notification_center",
         label: "New Notification Center (Desktop)",
-        defaultConfig: {
-            notificationCenterVariant: null,
-            entrypoint: null,
-            filterStyle: null,
-        },
+        defaultConfig: { notificationCenterVariant: null, entrypoint: null, filterStyle: null },
         treatments: [
             {
                 id: 1,
                 label: "Server Rail Entrypoint + Legacy Inbox",
-                config: {
-                    notificationCenterVariant: "legacy",
-                    entrypoint: "server-rail-top",
-                    filterStyle: null,
-                },
+                config: { notificationCenterVariant: "legacy", entrypoint: "server-rail-top", filterStyle: null },
             },
             {
                 id: 2,
                 label: "Title Bar Entrypoint + Popout",
-                config: {
-                    notificationCenterVariant: "popout",
-                    entrypoint: "title-bar-left",
-                    filterStyle: "dropdown",
-                },
+                config: { notificationCenterVariant: "popout", entrypoint: "title-bar-left", filterStyle: "dropdown" },
             },
             {
                 id: 3,
@@ -61,13 +44,9 @@ let l = (0, r.C)({
             {
                 id: 4,
                 label: "Server Rail Entrypoint + Popout",
-                config: {
-                    notificationCenterVariant: "popout",
-                    entrypoint: "server-rail-top",
-                    filterStyle: "dropdown",
-                },
+                config: { notificationCenterVariant: "popout", entrypoint: "server-rail-top", filterStyle: "dropdown" },
             },
         ],
     }),
-    c = (e) => (0, i.u5)(l, e),
-    u = (e) => (0, i.P2)(l, e);
+    u = (e) => (0, i.u5)(l, e),
+    c = (e) => (0, i.P2)(l, e);

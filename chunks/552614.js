@@ -1,3 +1,4 @@
+"use strict";
 var n = e(414123),
     o = e(675879),
     s = e(664886),
@@ -17,22 +18,15 @@ t.exports =
             n &&
             1 !==
                 l(
-                    {
-                        b: 1,
-                    },
+                    { b: 1 },
                     l(
                         v({}, "a", {
                             enumerable: !0,
                             get: function () {
-                                v(this, "b", {
-                                    value: 3,
-                                    enumerable: !1,
-                                });
+                                v(this, "b", { value: 3, enumerable: !1 });
                             },
                         }),
-                        {
-                            b: 2,
-                        },
+                        { b: 2 },
                     ),
                 ).b
         )

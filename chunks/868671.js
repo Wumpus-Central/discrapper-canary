@@ -1,3 +1,4 @@
+"use strict";
 var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
@@ -12,34 +13,26 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var o = n(698380);
 n(313319);
 var l = n(958554),
-    c = n(82322),
-    u = n(731841);
+    u = n(82322),
+    c = n(731841);
 e.exports = (function (e) {
     function t(e, n) {
         i(this, t);
@@ -67,18 +60,12 @@ e.exports = (function (e) {
                     !this._aListener &&
                         this._a.addListener &&
                         (this._aListener = this._a.addListener(function () {
-                            for (var e in t._listeners)
-                                t._listeners[e]({
-                                    value: t.__getValue(),
-                                });
+                            for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
                         })),
                         !this._bListener &&
                             this._b.addListener &&
                             (this._bListener = this._b.addListener(function () {
-                                for (var e in t._listeners)
-                                    t._listeners[e]({
-                                        value: t.__getValue(),
-                                    });
+                                for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
                             }));
                     var n = guid();
                     return (this._listeners[n] = e), n;
@@ -93,7 +80,7 @@ e.exports = (function (e) {
             {
                 key: "interpolate",
                 value: function (e) {
-                    return new u(this, c.create(e));
+                    return new c(this, u.create(e));
                 },
             },
             {

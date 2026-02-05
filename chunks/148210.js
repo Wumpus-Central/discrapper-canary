@@ -1,14 +1,10 @@
-i.d(n, {
-    default: () => c,
-}),
-    i(896048);
+i.d(n, { default: () => c });
 var e = i(627968),
     s = i(64700),
     a = i(158954),
     l = i(397927),
     r = i(411335),
     o = i(985018);
-
 function c(t) {
     let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
         [d, h] = s.useState(n);
@@ -32,11 +28,6 @@ function c(t) {
                 },
             },
         ],
-        children: (0, e.jsx)(l.fs1, {
-            placeholder: o.intl.string(o.t.gDZw7A),
-            value: d,
-            onChange: h,
-            maxLength: r.TZ,
-        }),
+        children: (0, e.jsx)(l.fs1, { placeholder: o.intl.string(o.t.gDZw7A), value: d, onChange: h, maxLength: r.TZ }),
     });
 }

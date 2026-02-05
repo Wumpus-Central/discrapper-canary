@@ -1,39 +1,36 @@
-n.d(t, {
-    y: () => u,
-});
+"use strict";
+n.d(t, { y: () => c });
 var r = n(956817),
     i = n(217512),
     a = n(64700),
     s = n(959462),
     o = n(114099),
     l = n(47276);
-
-function c(e) {
+function u(e) {
     return e && e.__esModule ? e.default : e;
 }
-
-function u(e) {
+function c(e) {
     let t = (0, a.useRef)(void 0),
         {
             value: n,
-            textValue: u,
+            textValue: c,
             minValue: d,
-            maxValue: f,
-            isDisabled: p,
-            isReadOnly: _,
+            maxValue: _,
+            isDisabled: f,
+            isReadOnly: p,
             isRequired: h,
             onIncrement: m,
             onIncrementPage: g,
             onDecrement: E,
-            onDecrementPage: b,
-            onDecrementToMin: y,
-            onIncrementToMax: O,
+            onDecrementPage: A,
+            onDecrementToMin: I,
+            onIncrementToMax: T,
         } = e,
-        A = (0, l.o)(c(r.A), "@react-aria/spinbutton"),
-        v = () => clearTimeout(t.current);
-    (0, a.useEffect)(() => () => v(), []);
-    let S = (e) => {
-            if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey && !_ && !e.nativeEvent.isComposing)
+        y = (0, l.o)(u(r.A), "@react-aria/spinbutton"),
+        S = () => clearTimeout(t.current);
+    (0, a.useEffect)(() => () => S(), []);
+    let v = (e) => {
+            if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey && !p && !e.nativeEvent.isComposing)
                 switch (e.key) {
                     case "PageUp":
                         if (g) {
@@ -45,8 +42,8 @@ function u(e) {
                         m && (e.preventDefault(), null == m || m());
                         break;
                     case "PageDown":
-                        if (b) {
-                            e.preventDefault(), null == b || b();
+                        if (A) {
+                            e.preventDefault(), null == A || A();
                             break;
                         }
                     case "ArrowDown":
@@ -54,74 +51,74 @@ function u(e) {
                         E && (e.preventDefault(), null == E || E());
                         break;
                     case "Home":
-                        y && (e.preventDefault(), null == y || y());
+                        I && (e.preventDefault(), null == I || I());
                         break;
                     case "End":
-                        O && (e.preventDefault(), null == O || O());
+                        T && (e.preventDefault(), null == T || T());
                 }
         },
-        I = (0, a.useRef)(!1),
-        T = () => {
-            I.current = !0;
+        C = (0, a.useRef)(!1),
+        b = () => {
+            C.current = !0;
         },
-        C = () => {
-            I.current = !1;
+        N = () => {
+            C.current = !1;
         },
-        N = "" === u ? A.format("Empty") : (u || `${n}`).replace("-", "−");
+        R = "" === c ? y.format("Empty") : (c || `${n}`).replace("-", "−");
     (0, a.useEffect)(() => {
-        I.current && ((0, i.pA)("assertive"), (0, i.iP)(N, "assertive"));
-    }, [N]);
-    let R = (0, s.J)((e) => {
-            v(),
+        C.current && ((0, i.pA)("assertive"), (0, i.iP)(R, "assertive"));
+    }, [R]);
+    let O = (0, s.J)((e) => {
+            S(),
                 null == m || m(),
                 (t.current = window.setTimeout(() => {
-                    (void 0 === f || isNaN(f) || void 0 === n || isNaN(n) || n < f) && R(60);
+                    (void 0 === _ || isNaN(_) || void 0 === n || isNaN(n) || n < _) && O(60);
                 }, e));
         }),
-        w = (0, s.J)((e) => {
-            v(),
+        D = (0, s.J)((e) => {
+            S(),
                 null == E || E(),
                 (t.current = window.setTimeout(() => {
-                    (void 0 === d || isNaN(d) || void 0 === n || isNaN(n) || n > d) && w(60);
+                    (void 0 === d || isNaN(d) || void 0 === n || isNaN(n) || n > d) && D(60);
                 }, e));
         }),
-        P = (e) => {
+        L = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: D, removeAllGlobalListeners: x } = (0, o.A)();
+        { addGlobalListener: w, removeAllGlobalListeners: x } = (0, o.A)();
     return {
         spinButtonProps: {
             role: "spinbutton",
             "aria-valuenow": void 0 === n || isNaN(n) ? void 0 : n,
-            "aria-valuetext": N,
+            "aria-valuetext": R,
             "aria-valuemin": d,
-            "aria-valuemax": f,
-            "aria-disabled": p || void 0,
-            "aria-readonly": _ || void 0,
+            "aria-valuemax": _,
+            "aria-disabled": f || void 0,
+            "aria-readonly": p || void 0,
             "aria-required": h || void 0,
-            onKeyDown: S,
-            onFocus: T,
-            onBlur: C,
+            onKeyDown: v,
+            onFocus: b,
+            onBlur: N,
         },
         incrementButtonProps: {
             onPressStart: () => {
-                R(400), D(window, "contextmenu", P);
+                O(400), w(window, "contextmenu", L);
             },
             onPressEnd: () => {
-                v(), x();
+                S(), x();
             },
-            onFocus: T,
-            onBlur: C,
+            onFocus: b,
+            onBlur: N,
         },
         decrementButtonProps: {
             onPressStart: () => {
-                w(400), D(window, "contextmenu", P);
+                D(400), w(window, "contextmenu", L);
             },
             onPressEnd: () => {
-                v(), x();
+                S(), x();
             },
-            onFocus: T,
-            onBlur: C,
+            onFocus: b,
+            onBlur: N,
         },
     };
 }

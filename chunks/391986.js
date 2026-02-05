@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     106: "*",
     107: "+",

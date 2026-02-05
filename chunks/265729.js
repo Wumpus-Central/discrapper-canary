@@ -1,346 +1,246 @@
-n.d(t, {
-    A: () => M,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(735438),
-    o = n.n(a),
+n.d(t, { A: () => G });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    l = n(735438),
+    o = n.n(l),
     c = n(311907),
     d = n(397927),
     u = n(73153),
     _ = n(339048),
-    p = n(736653),
-    m = n(46054),
+    m = n(736653),
+    A = n(46054),
     g = n(728364),
-    A = n(807055),
-    f = n(264779),
-    h = n(35587),
-    b = n(982311),
-    E = n(465794),
-    x = n(212168),
-    O = n(976860),
-    C = n(287809),
-    I = n(469778),
-    T = n(45938),
-    S = n(927578),
-    j = n(780964),
+    E = n(807055),
+    h = n(264779),
+    p = n(35587),
+    C = n(982311),
+    x = n(465794),
+    T = n(212168),
+    I = n(976860),
+    S = n(287809),
+    f = n(469778),
+    N = n(45938),
+    b = n(927578),
+    R = n(780964),
     v = n(411121),
-    N = n(12901),
-    y = n(840065),
+    O = n(12901),
+    j = n(840065),
     P = n(652215),
-    R = n(788868),
-    D = n(985018),
-    w = n(492489);
-
-function L(e) {
+    y = n(788868),
+    L = n(985018),
+    D = n(492489);
+function M(e) {
     let t,
-        { outboundPromotion: n, code: l, addClaimedOutboundPromotionCode: a, disabled: o } = e,
-        [c, u] = i.useState(!1),
-        [_, g] = i.useState(!1),
-        h = () => u((e) => !e),
-        E = (0, p.Ay)(),
-        x = (0, f.WD)(n.id, E),
-        O = null != l,
-        C = (0, A.A)(n, O);
-    O && c
-        ? (t = D.intl.format(D.t.pkxVx6, {
-              endDate: C,
-              onClickDetails: h,
-          }))
-        : O && !c
-          ? (t = D.intl.format(D.t["4sFeob"], {
-                endDate: C,
-                onClickDetails: h,
-            }))
-          : !O && c
-            ? (t = D.intl.format(D.t["RBnE+l"], {
-                  endDate: C,
-                  onClickDetails: h,
-              }))
-            : O ||
-              c ||
-              (t = D.intl.format(D.t["57+7Qn"], {
-                  endDate: C,
-                  onClickDetails: h,
-              }));
-    let I = O ? D.intl.string(D.t["2cHUti"]) : D.intl.string(D.t.O13yhz),
-        T = i.useCallback(() => g(!1), []),
-        { outboundTitle: S, outboundTermsAndConditions: j } = n;
-    return (0, r.jsxs)(r.Fragment, {
+        { outboundPromotion: n, code: r, addClaimedOutboundPromotionCode: l, disabled: o } = e,
+        [c, u] = s.useState(!1),
+        [_, g] = s.useState(!1),
+        p = () => u((e) => !e),
+        x = (0, m.Ay)(),
+        T = (0, h.WD)(n.id, x),
+        I = null != r,
+        S = (0, E.A)(n, I);
+    I && c
+        ? (t = L.intl.format(L.t.pkxVx6, { endDate: S, onClickDetails: p }))
+        : I && !c
+          ? (t = L.intl.format(L.t["4sFeob"], { endDate: S, onClickDetails: p }))
+          : !I && c
+            ? (t = L.intl.format(L.t["RBnE+l"], { endDate: S, onClickDetails: p }))
+            : I || c || (t = L.intl.format(L.t["57+7Qn"], { endDate: S, onClickDetails: p }));
+    let f = I ? L.intl.string(L.t["2cHUti"]) : L.intl.string(L.t.O13yhz),
+        N = s.useCallback(() => g(!1), []),
+        { outboundTitle: b, outboundTermsAndConditions: R } = n;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)("div", {
-                className: s()(w.uI, w.AX),
+            (0, i.jsxs)("div", {
+                className: a()(D.uI, D.AX),
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: w.gE,
+                    (0, i.jsxs)("div", {
+                        className: D.gE,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: w.At,
+                            (0, i.jsxs)("div", {
+                                className: D.At,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: w.$G,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: x,
-                                            className: w.IJ,
-                                        }),
+                                    (0, i.jsx)("div", {
+                                        className: D.$G,
+                                        children: (0, i.jsx)("img", { alt: "", src: T, className: D.IJ }),
                                     }),
-                                    (0, r.jsxs)("div", {
+                                    (0, i.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(d.Heading, {
-                                                variant: "heading-md/semibold",
-                                                children: S,
-                                            }),
-                                            (0, r.jsx)(d.Text, {
+                                            (0, i.jsx)(d.Heading, { variant: "heading-md/semibold", children: b }),
+                                            (0, i.jsx)(d.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-default",
-                                                className: w.__invalid_promotionText,
+                                                className: D.__invalid_promotionText,
                                                 children: t,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            !o &&
-                                (0, r.jsx)(d.Button, {
-                                    text: I,
-                                    onClick: () => g(!0),
-                                    disabled: o,
-                                    size: "sm",
-                                }),
+                            !o && (0, i.jsx)(d.Button, { text: f, onClick: () => g(!0), disabled: o, size: "sm" }),
                         ],
                     }),
                     c &&
-                        (0, r.jsx)(d.Text, {
-                            className: w.GL,
+                        (0, i.jsx)(d.Text, {
+                            className: D.GL,
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: m.A.parse(j, !1, {
-                                allowLinks: !0,
-                            }),
+                            children: A.A.parse(R, !1, { allowLinks: !0 }),
                         }),
                 ],
             }),
             _ &&
-                (0, r.jsx)(d.aFV, {
-                    renderModal: (e) => {
-                        var t, i;
-                        return (0, r.jsx)(
-                            b.A,
-                            ((t = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({}, e)),
-                            (i = i =
-                                {
-                                    onClose: T,
-                                    onClaim: a,
-                                    code: l,
-                                    outboundPromotion: n,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                                  }),
-                            t),
-                        );
-                    },
-                    onCloseRequest: T,
+                (0, i.jsx)(d.aFV, {
+                    renderModal: (e) =>
+                        (0, i.jsx)(C.A, { ...e, onClose: N, onClaim: l, code: r, outboundPromotion: n }),
+                    onCloseRequest: N,
                 }),
         ],
     });
 }
-let M = function (e) {
+let G = function (e) {
     let { inOldSettings: t = !1 } = e,
-        n = (0, c.yK)([I.A], () => I.A.getGiftable()),
-        [l, a] = o().partition(n, (e) => {
+        n = (0, c.yK)([f.A], () => f.A.getGiftable()),
+        [r, l] = o().partition(n, (e) => {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        p = (0, c.bG)([C.default], () => S.Ay.isPremiumExactly(C.default.getCurrentUser(), R.PremiumTypes.TIER_2)),
-        m = o().groupBy(l, (e) => (0, T.Kx)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [A, f] = i.useState(!1);
-    i.useEffect(() => {
+        m = (0, c.bG)([S.default], () => b.Ay.isPremiumExactly(S.default.getCurrentUser(), y.PremiumTypes.TIER_2)),
+        A = o().groupBy(r, (e) => (0, N.Kx)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        [E, h] = s.useState(!1);
+    s.useEffect(() => {
         u.h.wait(() => {
-            (0, _.XJ)().then(() => f(!0));
+            (0, _.XJ)().then(() => h(!0));
         });
     }, []);
     let {
-            promotionsLoaded: b,
-            activeOutboundPromotions: M,
+            promotionsLoaded: C,
+            activeOutboundPromotions: G,
             claimedEndedOutboundPromotions: U,
-            claimedOutboundPromotionCodeMap: G,
-            addClaimedOutboundPromotionCode: k,
-        } = (0, h.y7)(),
-        V = M.length + U.length > 0,
-        H =
-            g.m.useExperiment(
-                {
-                    location: "EntitlementGifts",
-                },
-                {
-                    autoTrackExposure: !1,
-                    disable: p,
-                },
-            ).enabled && V;
-    return A && b
-        ? (0, r.jsxs)(r.Fragment, {
+            claimedOutboundPromotionCodeMap: k,
+            addClaimedOutboundPromotionCode: B,
+        } = (0, p.y7)(),
+        w = G.length + U.length > 0,
+        H = g.m.useExperiment({ location: "EntitlementGifts" }, { autoTrackExposure: !1, disable: m }).enabled && w;
+    return E && C
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (function () {
-                      var e;
-                      let n = a.find((e) => e.giftCodeBatchId === R.FB && !e.consumed),
-                          i = null != (e = a.filter((e) => e.giftCodeBatchId === R.Bu && !e.consumed)) ? e : [],
-                          [l, c] = o().partition(i, (e) => {
+                      let e = l.find((e) => e.giftCodeBatchId === y.FB && !e.consumed),
+                          n = l.filter((e) => e.giftCodeBatchId === y.Bu && !e.consumed) ?? [],
+                          [s, r] = o().partition(n, (e) => {
                               let { subscriptionPlanId: t } = e;
-                              return t === R.gD.PREMIUM_YEAR_TIER_2;
+                              return t === y.gD.PREMIUM_YEAR_TIER_2;
                           }),
-                          u = (0, r.jsx)(d.Heading, {
+                          c = (0, i.jsx)(d.Heading, {
                               variant: "heading-md/semibold",
-                              children: V ? D.intl.string(D.t.wFsj3B) : void 0,
+                              children: w ? L.intl.string(L.t.wFsj3B) : void 0,
                           }),
-                          _ = H
-                              ? (0, r.jsxs)("div", {
-                                    className: w.uo,
+                          u = H
+                              ? (0, i.jsxs)("div", {
+                                    className: D.uo,
                                     children: [
-                                        (0, r.jsx)(d.tvc, {
+                                        (0, i.jsx)(d.tvc, {
                                             size: "md",
                                             color: d.LU0.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2,
-                                            className: w.PC,
+                                            className: D.PC,
                                         }),
-                                        (0, r.jsx)(d.Text, {
+                                        (0, i.jsx)(d.Text, {
                                             variant: "text-md/normal",
-                                            className: w.Qw,
-                                            children: D.intl.format(D.t.G4fwxK, {
+                                            className: D.Qw,
+                                            children: L.intl.format(L.t.G4fwxK, {
                                                 onClick: () => {
-                                                    (0, N.default)(), (0, O.pX)(P.BVt.APPLICATION_STORE);
+                                                    (0, O.default)(), (0, I.pX)(P.BVt.APPLICATION_STORE);
                                                 },
                                             }),
                                         }),
-                                        (0, r.jsx)(E.A, {
+                                        (0, i.jsx)(x.A, {
                                             showGradient: !0,
-                                            className: w.aA,
-                                            subscriptionTier: R.pe.TIER_2,
-                                            textOptions: {
-                                                textOverride: D.intl.string(D.t.mr4K7D),
-                                            },
+                                            className: D.aA,
+                                            subscriptionTier: y.pe.TIER_2,
+                                            textOptions: { textOverride: L.intl.string(L.t.mr4K7D) },
                                         }),
                                     ],
                                 })
                               : null;
-                      return (0, r.jsxs)("div", {
-                          className: t ? w.sW : void 0,
+                      return (0, i.jsxs)("div", {
+                          className: t ? D.sW : void 0,
                           children: [
-                              u,
-                              V
-                                  ? (0, r.jsx)(d.cGx, {
-                                        className: w.yF,
-                                    })
-                                  : null,
-                              (0, r.jsx)(x.A, {
-                                  className: w.Yj,
+                              c,
+                              w ? (0, i.jsx)(d.cGx, { className: D.yF }) : null,
+                              (0, i.jsx)(T.A, {
+                                  className: D.Yj,
                                   isShown: H,
-                                  type: x.i.PREMIUM,
+                                  type: T.i.PREMIUM,
                                   hasBackground: !0,
-                                  children: (0, r.jsxs)("div", {
-                                      className: s()({
-                                          [w.sW]: !H,
-                                      }),
+                                  children: (0, i.jsxs)("div", {
+                                      className: a()({ [D.sW]: !H }),
                                       children: [
-                                          _,
+                                          u,
                                           U.map((e) => {
                                               let { code: t, promotion: n } = e;
-                                              return (0, r.jsx)(
-                                                  L,
+                                              return (0, i.jsx)(
+                                                  M,
                                                   {
                                                       outboundPromotion: n,
                                                       code: t,
-                                                      addClaimedOutboundPromotionCode: k,
-                                                      disabled: !p,
+                                                      addClaimedOutboundPromotionCode: B,
+                                                      disabled: !m,
                                                   },
                                                   n.id,
                                               );
                                           }),
-                                          M.map((e) =>
-                                              (0, r.jsx)(
-                                                  L,
+                                          G.map((e) =>
+                                              (0, i.jsx)(
+                                                  M,
                                                   {
                                                       outboundPromotion: e,
-                                                      code: G[e.id],
-                                                      addClaimedOutboundPromotionCode: k,
-                                                      disabled: !p,
+                                                      code: k[e.id],
+                                                      addClaimedOutboundPromotionCode: B,
+                                                      disabled: !m,
                                                   },
                                                   e.id,
                                               ),
                                           ),
-                                          null != n
-                                              ? (0, r.jsx)(
+                                          null != e
+                                              ? (0, i.jsx)(
                                                     v.A,
                                                     {
-                                                        className: w.uI,
-                                                        skuId: n.skuId,
-                                                        subscriptionPlanId: n.subscriptionPlanId,
-                                                        entitlements: [n],
-                                                        giftCodeBatchId: R.FB,
+                                                        className: D.uI,
+                                                        skuId: e.skuId,
+                                                        subscriptionPlanId: e.subscriptionPlanId,
+                                                        entitlements: [e],
+                                                        giftCodeBatchId: y.FB,
                                                     },
-                                                    (0, T.Kx)(n.skuId, n.subscriptionPlanId),
+                                                    (0, N.Kx)(e.skuId, e.subscriptionPlanId),
                                                 )
                                               : null,
-                                          l.length > 0
-                                              ? (0, r.jsx)(
+                                          s.length > 0
+                                              ? (0, i.jsx)(
                                                     v.A,
                                                     {
-                                                        className: w.uI,
-                                                        skuId: l[0].skuId,
-                                                        subscriptionPlanId: l[0].subscriptionPlanId,
-                                                        entitlements: l,
-                                                        giftCodeBatchId: R.Bu,
+                                                        className: D.uI,
+                                                        skuId: s[0].skuId,
+                                                        subscriptionPlanId: s[0].subscriptionPlanId,
+                                                        entitlements: s,
+                                                        giftCodeBatchId: y.Bu,
                                                     },
-                                                    (0, T.Kx)(l[0].skuId, l[0].subscriptionPlanId),
+                                                    (0, N.Kx)(s[0].skuId, s[0].subscriptionPlanId),
                                                 )
                                               : null,
-                                          c.length > 0
-                                              ? (0, r.jsx)(
+                                          r.length > 0
+                                              ? (0, i.jsx)(
                                                     v.A,
                                                     {
-                                                        className: w.uI,
-                                                        skuId: c[0].skuId,
-                                                        subscriptionPlanId: c[0].subscriptionPlanId,
-                                                        entitlements: c,
-                                                        giftCodeBatchId: R.Bu,
+                                                        className: D.uI,
+                                                        skuId: r[0].skuId,
+                                                        subscriptionPlanId: r[0].subscriptionPlanId,
+                                                        entitlements: r,
+                                                        giftCodeBatchId: y.Bu,
                                                     },
-                                                    (0, T.Kx)(c[0].skuId, c[0].subscriptionPlanId),
+                                                    (0, N.Kx)(r[0].skuId, r[0].subscriptionPlanId),
                                                 )
                                               : null,
                                       ],
@@ -349,33 +249,26 @@ let M = function (e) {
                           ],
                       });
                   })(),
-                  (0, r.jsx)("div", {
-                      className: w.sW,
-                      children: (0, r.jsxs)(d.Fmo, {
-                          component: (0, r.jsx)(d.Heading, {
+                  (0, i.jsx)("div", {
+                      className: D.sW,
+                      children: (0, i.jsxs)(d.Fmo, {
+                          component: (0, i.jsx)(d.Heading, {
                               variant: "heading-md/semibold",
-                              children: D.intl.string(D.t["9KeUbY"]),
+                              children: L.intl.string(L.t["9KeUbY"]),
                           }),
                           children: [
-                              (0, r.jsx)(d.cGx, {
-                                  className: w.yF,
-                              }),
-                              0 === Object.keys(m).length
-                                  ? (0, r.jsxs)("div", {
-                                        className: w.p$,
+                              (0, i.jsx)(d.cGx, { className: D.yF }),
+                              0 === Object.keys(A).length
+                                  ? (0, i.jsxs)("div", {
+                                        className: D.p$,
                                         children: [
-                                            (0, r.jsx)("div", {
-                                                className: w.QT,
-                                            }),
-                                            (0, r.jsx)(d.H, {
-                                                className: w.ks,
-                                                children: D.intl.string(D.t.B1qgZn),
-                                            }),
-                                            (0, r.jsx)("p", {
-                                                className: w.WO,
-                                                children: D.intl.format(D.t.HezvJ8, {
+                                            (0, i.jsx)("div", { className: D.QT }),
+                                            (0, i.jsx)(d.H, { className: D.ks, children: L.intl.string(L.t.B1qgZn) }),
+                                            (0, i.jsx)("p", {
+                                                className: D.WO,
+                                                children: L.intl.format(L.t.HezvJ8, {
                                                     onClick: function () {
-                                                        (0, y.openUserSettings)(j.X.NITRO_PANEL, {
+                                                        (0, j.openUserSettings)(R.X.NITRO_PANEL, {
                                                             section: P.nc_.PREMIUM,
                                                         });
                                                     },
@@ -384,17 +277,17 @@ let M = function (e) {
                                         ],
                                     })
                                   : o()
-                                        .keys(m)
+                                        .keys(A)
                                         .map((e) => {
-                                            let { skuId: t, subscriptionPlanId: n, giftStyle: i } = (0, T.X6)(e);
-                                            return (0, r.jsx)(
+                                            let { skuId: t, subscriptionPlanId: n, giftStyle: s } = (0, N.X6)(e);
+                                            return (0, i.jsx)(
                                                 v.A,
                                                 {
-                                                    className: w.uI,
+                                                    className: D.uI,
                                                     skuId: t,
                                                     subscriptionPlanId: n,
-                                                    entitlements: m[e],
-                                                    giftStyle: i,
+                                                    entitlements: A[e],
+                                                    giftStyle: s,
                                                 },
                                                 e,
                                             );
@@ -404,7 +297,5 @@ let M = function (e) {
                   }),
               ],
           })
-        : (0, r.jsx)(d.y$y, {
-              className: w.Lq,
-          });
+        : (0, i.jsx)(d.y$y, { className: D.Lq });
 };

@@ -1,68 +1,49 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(321073);
-var r,
-    i = n(311907),
-    l = n(73153),
+n.d(t, { A: () => o }), n(321073);
+var i = n(311907),
+    r = n(73153),
     a = n(988794);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = {
-    hiddenEventsAndStages: [],
-};
-class c extends (r = i.Ay.PersistedStore) {
+let l = { hiddenEventsAndStages: [] };
+class s extends i.Ay.PersistedStore {
+    static displayName = "LiveChannelNoticesStore";
+    static persistKey = "liveChannelNotices_v2";
     initialize(e) {
-        null != e && null != e.hiddenEventsAndStages && (o = e);
+        null != e && null != e.hiddenEventsAndStages && (l = e);
     }
     isLiveChannelNoticeHidden(e) {
         let { eventId: t, stageId: n } = e;
         return (
-            !!(null != n && o.hiddenEventsAndStages.includes("stage-".concat(n))) ||
-            (null != t && o.hiddenEventsAndStages.includes("event-".concat(t)))
+            !!(null != n && l.hiddenEventsAndStages.includes(`stage-${n}`)) ||
+            (null != t && l.hiddenEventsAndStages.includes(`event-${t}`))
         );
     }
     getState() {
-        return o;
+        return l;
     }
 }
-s(c, "displayName", "LiveChannelNoticesStore"), s(c, "persistKey", "liveChannelNotices_v2");
-let u = new c(l.h, {
+let o = new s(r.h, {
     LIVE_CHANNEL_NOTICE_HIDE: function (e) {
         let { eventId: t, stageId: n } = e;
         null != t
-            ? o.hiddenEventsAndStages.push("event-".concat(t))
-            : null != n && o.hiddenEventsAndStages.push("stage-".concat(n));
+            ? l.hiddenEventsAndStages.push(`event-${t}`)
+            : null != n && l.hiddenEventsAndStages.push(`stage-${n}`);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e,
-            n = "event-".concat(t.id);
-        o.hiddenEventsAndStages.includes(n) &&
+            n = `event-${t.id}`;
+        l.hiddenEventsAndStages.includes(n) &&
             (t.status === a.XG.CANCELED || t.status === a.XG.COMPLETED) &&
-            (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+            (l.hiddenEventsAndStages = l.hiddenEventsAndStages.filter((e) => e !== n));
     },
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: t } = e,
-            n = "event-".concat(t.id);
-        o.hiddenEventsAndStages.includes(n) &&
-            (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+            n = `event-${t.id}`;
+        l.hiddenEventsAndStages.includes(n) &&
+            (l.hiddenEventsAndStages = l.hiddenEventsAndStages.filter((e) => e !== n));
     },
     STAGE_INSTANCE_DELETE: function (e) {
         let { instance: t } = e,
-            n = "stage-".concat(t.id);
-        o.hiddenEventsAndStages.includes(n) &&
-            (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+            n = `stage-${t.id}`;
+        l.hiddenEventsAndStages.includes(n) &&
+            (l.hiddenEventsAndStages = l.hiddenEventsAndStages.filter((e) => e !== n));
     },
 });

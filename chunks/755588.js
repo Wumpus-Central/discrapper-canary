@@ -1,231 +1,167 @@
-n.d(t, {
-    b: () => P,
-}),
-    n(896048);
-var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(311907),
-    o = n(397927),
-    u = n(730134),
-    c = n(566903),
-    d = n(47167),
+n.d(t, { b: () => O });
+var l = n(627968),
+    i = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(311907),
+    u = n(397927),
+    o = n(730134),
+    d = n(566903),
+    c = n(47167),
     h = n(410540),
-    p = n(302223),
-    f = n(609425),
-    g = n(922301),
-    m = n(750112),
-    y = n(853390),
-    A = n(253932),
-    v = n(734057),
-    b = n(290863),
-    E = n(383501),
-    O = n(309010),
-    x = n(486020),
-    _ = n(914853),
-    S = n(545807),
-    I = n(652215),
-    j = n(985018),
-    T = n(742466);
-let C = r.memo(function (e) {
+    g = n(302223),
+    I = n(609425),
+    E = n(922301),
+    A = n(750112),
+    f = n(853390),
+    m = n(253932),
+    S = n(734057),
+    p = n(290863),
+    N = n(383501),
+    T = n(309010),
+    _ = n(486020),
+    y = n(914853),
+    C = n(545807),
+    x = n(652215),
+    v = n(985018),
+    M = n(742466);
+let D = i.memo(function (e) {
     let { startTimestampMs: t } = e,
-        n = (0, S.A)(),
-        [i, l] = r.useState(() => Date.now());
-    r.useEffect(() => {
-        let e = n.setInterval(() => l(Date.now()), 1e3);
+        n = (0, C.A)(),
+        [l, s] = i.useState(() => Date.now());
+    i.useEffect(() => {
+        let e = n.setInterval(() => s(Date.now()), 1e3);
         return () => n.clearInterval(e);
     }, [n]);
-    let a = Math.max(0, (i - t) / 1e3);
-    return (0, y.f)(a);
+    let r = Math.max(0, (l - t) / 1e3);
+    return (0, f.f)(r);
 });
-C.displayName = "OverlayElapsedTime";
-let N = r.memo(function () {
-    var e;
-    let t = (0, S.A)(),
-        [n, i] = r.useState(() => Date.now());
-    r.useEffect(() => {
-        let e = t.setInterval(() => i(Date.now()), 1e3);
-        return () => t.clearInterval(e);
-    }, [t]);
-    let l =
-        null !=
-        (e = (0, s.bG)([E.A], () => {
-            var e;
-            return null != (e = E.A.getDuration()) ? e : 0;
-        }, [n]))
-            ? e
-            : 0;
-    return (0, y.f)(l / 1e3);
+D.displayName = "OverlayElapsedTime";
+let R = i.memo(function () {
+    let e = (0, C.A)(),
+        [t, n] = i.useState(() => Date.now());
+    i.useEffect(() => {
+        let t = e.setInterval(() => n(Date.now()), 1e3);
+        return () => e.clearInterval(t);
+    }, [e]);
+    let l = (0, a.bG)([N.A], () => N.A.getDuration() ?? 0, [t]) ?? 0;
+    return (0, f.f)(l / 1e3);
 });
-
-function w(e) {
-    var t, n, l, a, y, E, _;
-    let S,
-        { currentUser: w, activity: P, currentGameName: D } = e,
-        R = null != (t = null == w ? void 0 : w.id) ? t : null,
-        k = (0, f.A)({
-            userId: R,
-            guildId: null,
-        }),
-        { isMobileOnline: M, status: L } = (0, s.cf)(
-            [b.A],
+function U(e) {
+    var t;
+    let n,
+        { currentUser: s, activity: r, currentGameName: f } = e,
+        N = s?.id ?? null,
+        y = (0, I.A)({ userId: N, guildId: null }),
+        { isMobileOnline: C, status: U } = (0, a.cf)(
+            [p.A],
             () =>
-                null == R
-                    ? {
-                          isMobileOnline: void 0,
-                          status: void 0,
-                      }
-                    : {
-                          isMobileOnline: b.A.isMobileOnline(R),
-                          status: b.A.getStatus(R),
-                      },
-            [R],
+                null == N
+                    ? { isMobileOnline: void 0, status: void 0 }
+                    : { isMobileOnline: p.A.isMobileOnline(N), status: p.A.getStatus(N) },
+            [N],
         ),
-        U = (0, s.bG)([O.A], () => O.A.getVoiceChannelId()),
-        G = (0, s.bG)([v.A], () => (null != U ? v.A.getChannel(U) : null), [U]),
-        V = (0, d.Ay)(G),
-        z = null != (n = (0, h.A)(null != R ? R : "0")) ? n : null,
-        F = null != R ? z : null,
-        H =
-            null == (S = null != (y = (0, c.A)(P, !0).text) ? y : D)
+        O = (0, a.bG)([T.A], () => T.A.getVoiceChannelId()),
+        G = (0, a.bG)([S.A], () => (null != O ? S.A.getChannel(O) : null), [O]),
+        b = (0, c.Ay)(G),
+        w = (0, h.A)(N ?? "0") ?? null,
+        L = null != N ? w : null,
+        k =
+            null == (n = (0, d.A)(r, !0).text ?? f)
                 ? null
-                : (null == P ? void 0 : P.type) === I.$pd.PLAYING || null == P
-                  ? j.intl.formatToPlainString(j.t.lFApmz, {
-                        game: S,
-                    })
-                  : S,
-        Y =
-            (null == P || null == (a = P.timestamps) ? void 0 : a.start) != null
-                ? (E = P.timestamps.start) < 1e12
-                    ? 1e3 * E
-                    : E
-                : null,
-        K = r.useMemo(
+                : r?.type === x.$pd.PLAYING || null == r
+                  ? v.intl.formatToPlainString(v.t.lFApmz, { game: n })
+                  : n,
+        F = r?.timestamps?.start != null ? ((t = r.timestamps.start) < 1e12 ? 1e3 * t : t) : null,
+        P = i.useMemo(
             () =>
                 (function (e) {
                     let {
                         activityLabel: t,
                         activityStartTimestampMs: n,
-                        voiceCallName: i,
-                        customStatusActivity: r,
+                        voiceCallName: l,
+                        customStatusActivity: i,
                     } = e;
                     return null != t
-                        ? {
-                              type: "activity",
-                              label: t,
-                              startTimestampMs: n,
-                          }
-                        : null != i
-                          ? {
-                                type: "voice_call",
-                                label: i,
-                            }
-                          : null != r
-                            ? {
-                                  type: "custom_status",
-                                  customStatusActivity: r,
-                              }
-                            : {
-                                  type: "none",
-                              };
-                })({
-                    activityLabel: H,
-                    activityStartTimestampMs: Y,
-                    voiceCallName: V,
-                    customStatusActivity: F,
-                }),
-            [H, Y, V, F],
+                        ? { type: "activity", label: t, startTimestampMs: n }
+                        : null != l
+                          ? { type: "voice_call", label: l }
+                          : null != i
+                            ? { type: "custom_status", customStatusActivity: i }
+                            : { type: "none" };
+                })({ activityLabel: k, activityStartTimestampMs: F, voiceCallName: b, customStatusActivity: L }),
+            [k, F, b, L],
         );
-    if (null == w) return null;
-    let W =
-            null == w.banner
+    if (null == s) return null;
+    let j =
+            null == s.banner
                 ? null
-                : null !=
-                    (_ = (0, x.z)({
-                        id: w.id,
-                        banner: w.banner,
-                        canAnimate: A.kt.getSetting(),
-                        size: 600,
-                    }))
-                  ? _
-                  : null,
-        B = null != (l = w.globalName) ? l : w.username;
-    return (0, i.jsxs)("div", {
-        className: T.cI,
+                : ((0, _.z)({ id: s.id, banner: s.banner, canAnimate: m.kt.getSetting(), size: 600 }) ?? null),
+        V = s.globalName ?? s.username;
+    return (0, l.jsxs)("div", {
+        className: M.cI,
         children: [
-            (0, i.jsx)("div", {
-                className: T.CK,
-                style: {
-                    backgroundImage: null != W ? "url(".concat(W, ")") : void 0,
-                },
-            }),
-            (0, i.jsxs)("div", {
-                className: T.vK,
+            (0, l.jsx)("div", { className: M.CK, style: { backgroundImage: null != j ? `url(${j})` : void 0 } }),
+            (0, l.jsxs)("div", {
+                className: M.vK,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: T.iy,
+                    (0, l.jsxs)("div", {
+                        className: M.iy,
                         children: [
-                            (0, i.jsx)(u.A, {
-                                user: w,
-                                isMobile: M,
-                                status: L,
-                                className: T.my,
-                                size: o._3J.SIZE_40,
-                            }),
-                            (0, i.jsxs)("div", {
-                                className: T.ic,
+                            (0, l.jsx)(o.A, { user: s, isMobile: C, status: U, className: M.my, size: u._3J.SIZE_40 }),
+                            (0, l.jsxs)("div", {
+                                className: M.ic,
                                 children: [
-                                    (0, i.jsx)(m.A, {
-                                        userName: B,
-                                        textClassName: T.Xh,
-                                        displayNameStyles: k,
-                                        effectDisplayType: g.G.ANIMATED,
+                                    (0, l.jsx)(A.A, {
+                                        userName: V,
+                                        textClassName: M.Xh,
+                                        displayNameStyles: y,
+                                        effectDisplayType: E.G.ANIMATED,
                                     }),
                                     (() => {
-                                        switch (K.type) {
+                                        switch (P.type) {
                                             case "activity":
-                                                return (0, i.jsxs)("div", {
-                                                    className: T.nU,
+                                                return (0, l.jsxs)("div", {
+                                                    className: M.nU,
                                                     children: [
-                                                        (0, i.jsx)(o._xR, {
+                                                        (0, l.jsx)(u._xR, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: T.Wo,
+                                                            className: M.Wo,
                                                         }),
-                                                        (0, i.jsx)(o.Text, {
-                                                            className: T.Yg,
+                                                        (0, l.jsx)(u.Text, {
+                                                            className: M.Yg,
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
-                                                            children: K.label,
+                                                            children: P.label,
                                                         }),
                                                     ],
                                                 });
                                             case "voice_call":
-                                                return (0, i.jsxs)("div", {
-                                                    className: T.nU,
+                                                return (0, l.jsxs)("div", {
+                                                    className: M.nU,
                                                     children: [
-                                                        (0, i.jsx)(o.HKD, {
+                                                        (0, l.jsx)(u.HKD, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: T.Wo,
+                                                            className: M.Wo,
                                                         }),
-                                                        (0, i.jsx)(o.Text, {
-                                                            className: T.Yg,
+                                                        (0, l.jsx)(u.Text, {
+                                                            className: M.Yg,
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
-                                                            children: K.label,
+                                                            children: P.label,
                                                         }),
                                                     ],
                                                 });
                                             case "custom_status":
-                                                return (0, i.jsx)("div", {
-                                                    className: T.nU,
-                                                    children: (0, i.jsx)(p.A, {
-                                                        activity: K.customStatusActivity,
-                                                        className: T.tR,
-                                                        emojiClassName: T.qp,
-                                                        textClassName: T.Yg,
+                                                return (0, l.jsx)("div", {
+                                                    className: M.nU,
+                                                    children: (0, l.jsx)(g.A, {
+                                                        activity: P.customStatusActivity,
+                                                        className: M.tR,
+                                                        emojiClassName: M.qp,
+                                                        textClassName: M.Yg,
                                                         hideTooltip: !0,
                                                     }),
                                                 });
@@ -237,25 +173,23 @@ function w(e) {
                             }),
                         ],
                     }),
-                    "activity" === K.type
-                        ? null == K.startTimestampMs
+                    "activity" === P.type
+                        ? null == P.startTimestampMs
                             ? null
-                            : (0, i.jsx)(o.Text, {
-                                  className: T.p0,
+                            : (0, l.jsx)(u.Text, {
+                                  className: M.p0,
                                   variant: "code",
                                   tag: "div",
-                                  children: (0, i.jsx)(C, {
-                                      startTimestampMs: K.startTimestampMs,
-                                  }),
+                                  children: (0, l.jsx)(D, { startTimestampMs: P.startTimestampMs }),
                               })
-                        : "voice_call" === K.type
-                          ? null == U
+                        : "voice_call" === P.type
+                          ? null == O
                               ? null
-                              : (0, i.jsx)(o.Text, {
-                                    className: T.p0,
+                              : (0, l.jsx)(u.Text, {
+                                    className: M.p0,
                                     variant: "code",
                                     tag: "div",
-                                    children: (0, i.jsx)(N, {}),
+                                    children: (0, l.jsx)(R, {}),
                                 })
                           : null,
                 ],
@@ -263,44 +197,25 @@ function w(e) {
         ],
     });
 }
-
-function P(e) {
-    let { currentUser: t, activity: n, currentGameName: r, activeTab: l, onTabChange: a } = e;
-    return (0, i.jsxs)("div", {
-        className: T.kL,
+function O(e) {
+    let { currentUser: t, activity: n, currentGameName: i, activeTab: s, onTabChange: r } = e;
+    return (0, l.jsxs)("div", {
+        className: M.kL,
         children: [
-            (0, i.jsx)(w, {
-                currentUser: t,
-                activity: n,
-                currentGameName: r,
-            }),
-            (0, i.jsx)("div", {
-                className: T.vR,
+            (0, l.jsx)(U, { currentUser: t, activity: n, currentGameName: i }),
+            (0, l.jsx)("div", {
+                className: M.vR,
                 role: "tablist",
-                "aria-label": j.intl.string(j.t.TdEu5X),
+                "aria-label": v.intl.string(v.t.TdEu5X),
                 children: [
-                    {
-                        id: _.x.FRIENDS,
-                        label: j.t.TdEu5X,
-                    },
-                    {
-                        id: _.x.MESSAGES,
-                        label: j.t.OIgYlQ,
-                    },
-                    {
-                        id: _.x.VOICE,
-                        label: j.t.K3lovD,
-                    },
+                    { id: y.x.FRIENDS, label: v.t.TdEu5X },
+                    { id: y.x.MESSAGES, label: v.t.OIgYlQ },
+                    { id: y.x.VOICE, label: v.t.K3lovD },
                 ].map((e) => {
                     let { id: t, label: n } = e;
-                    return (0, i.jsx)(
-                        D,
-                        {
-                            tab: t,
-                            label: j.intl.formatToPlainString(n, {}),
-                            selected: l === t,
-                            onSelect: a,
-                        },
+                    return (0, l.jsx)(
+                        G,
+                        { tab: t, label: v.intl.formatToPlainString(n, {}), selected: s === t, onSelect: r },
                         t,
                     );
                 }),
@@ -308,19 +223,14 @@ function P(e) {
         ],
     });
 }
-
-function D(e) {
-    let { tab: t, label: n, selected: r, onSelect: l, className: s } = e;
-    return (0, i.jsx)(o.DUT, {
+function G(e) {
+    let { tab: t, label: n, selected: i, onSelect: s, className: a } = e;
+    return (0, l.jsx)(u.DUT, {
         role: "tab",
-        "aria-selected": r,
-        className: a()(T.Mf, r && T.jP, s),
-        onClick: () => l(t),
-        children: (0, i.jsx)(o.Text, {
-            variant: "text-sm/medium",
-            color: "currentColor",
-            children: n,
-        }),
+        "aria-selected": i,
+        className: r()(M.Mf, i && M.jP, a),
+        onClick: () => s(t),
+        children: (0, l.jsx)(u.Text, { variant: "text-sm/medium", color: "currentColor", children: n }),
     });
 }
-N.displayName = "OverlayVoiceCallElapsedTime";
+R.displayName = "OverlayVoiceCallElapsedTime";

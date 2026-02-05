@@ -1,3 +1,1 @@
-e.exports = {
-    O: "fixClipping_efbae7",
-};
+e.exports = { O: "fixClipping_efbae7" };

@@ -1,34 +1,31 @@
-r.d(t, {
-    A: () => c,
-});
+r.d(t, { A: () => c });
 var i = r(627968);
 r(64700);
-var n = r(503698),
-    a = r.n(n),
-    o = r(397927),
-    s = r(376092),
+var a = r(503698),
+    s = r.n(a),
+    n = r(397927),
+    o = r(376092),
     l = r(565928);
-
 function c(e) {
     let {
         grantedPermissions: t,
         disabledPermissions: r,
-        grantedPermissionsHeader: n,
+        grantedPermissionsHeader: a,
         disabledPermissionsHeader: c,
-        className: d,
+        className: _,
     } = e;
     return (0, i.jsxs)("div", {
-        className: a()(l.p_, d),
+        className: s()(l.p_, _),
         children: [
             null != t && t.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != n
-                              ? (0, i.jsx)(o.Heading, {
+                          null != a
+                              ? (0, i.jsx)(n.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: l.wx,
-                                    children: n,
+                                    children: a,
                                 })
                               : null,
                           (0, i.jsx)("div", {
@@ -39,15 +36,8 @@ function c(e) {
                                       {
                                           className: l.EK,
                                           children: [
-                                              (0, i.jsx)(o.A9s, {
-                                                  size: "xs",
-                                                  color: "currentColor",
-                                                  className: l.z6,
-                                              }),
-                                              (0, i.jsx)(o.Text, {
-                                                  variant: "text-sm/normal",
-                                                  children: (0, s.hx)(e),
-                                              }),
+                                              (0, i.jsx)(n.A9s, { size: "xs", color: "currentColor", className: l.z6 }),
+                                              (0, i.jsx)(n.Text, { variant: "text-sm/normal", children: (0, o.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),
@@ -61,7 +51,7 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, i.jsx)(o.Heading, {
+                              ? (0, i.jsx)(n.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: l.wx,
@@ -76,15 +66,8 @@ function c(e) {
                                       {
                                           className: l.EK,
                                           children: [
-                                              (0, i.jsx)(o.PGe, {
-                                                  size: "xs",
-                                                  color: "currentColor",
-                                                  className: l.$A,
-                                              }),
-                                              (0, i.jsx)(o.Text, {
-                                                  variant: "text-sm/normal",
-                                                  children: (0, s.hx)(e),
-                                              }),
+                                              (0, i.jsx)(n.PGe, { size: "xs", color: "currentColor", className: l.$A }),
+                                              (0, i.jsx)(n.Text, { variant: "text-sm/normal", children: (0, o.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),

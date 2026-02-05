@@ -1,7 +1,5 @@
-n.d(t, {
-    u: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { u: () => r });
 var r = (function (e) {
     return (
         (e[(e.GIFT_INVENTORY_SETTINGS_BADGE = 0)] = "GIFT_INVENTORY_SETTINGS_BADGE"),

@@ -1,30 +1,16 @@
+"use strict";
 let r;
-n.d(t, {
-    oP: () => j,
-    vN: () => G,
-    xp: () => M,
-});
+n.d(t, { oP: () => M, vN: () => V, xp: () => k });
 var i,
     a = n(64700),
     s = n(627968),
     o = Object.defineProperty,
-    l = (e, t, n) =>
-        t in e
-            ? o(e, t, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: n,
-              })
-            : (e[t] = n),
-    c = (e, t, n) => (l(e, "symbol" != typeof t ? t + "" : t, n), n),
-    u = {
-        exports: {},
-    };
+    l = (e, t, n) => (t in e ? o(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : (e[t] = n)),
+    u = (e, t, n) => (l(e, "symbol" != typeof t ? t + "" : t, n), n),
+    c = { exports: {} };
 !(function (e) {
     !(function () {
         var t = {}.hasOwnProperty;
-
         function n() {
             for (var e = [], r = 0; r < arguments.length; r++) {
                 var i = arguments[r];
@@ -52,9 +38,9 @@ var i,
         }
         e.exports ? ((n.default = n), (e.exports = n)) : (window.classNames = n);
     })();
-})(u);
-let d = u.exports;
-var f = function (e, t, n, r, i, a, s, o) {
+})(c);
+let d = c.exports;
+var _ = function (e, t, n, r, i, a, s, o) {
     if (!e) {
         var l;
         if (void 0 === t)
@@ -62,19 +48,18 @@ var f = function (e, t, n, r, i, a, s, o) {
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var c = [n, r, i, a, s, o],
-                u = 0;
+            var u = [n, r, i, a, s, o],
+                c = 0;
             (l = Error(
                 t.replace(/%s/g, function () {
-                    return c[u++];
+                    return u[c++];
                 }),
             )).name = "Invariant Violation";
         }
         throw ((l.framesToPop = 1), l);
     }
 };
-
-function p(e, t, n) {
+function f(e, t, n) {
     if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
     if ("h" === e[n]) {
         if (/turn$/.test(t)) return 360 * parseFloat(t);
@@ -82,8 +67,7 @@ function p(e, t, n) {
     }
     return parseFloat(t);
 }
-
-function _({ hue: e, saturation: t, lightness: n, alpha: r }) {
+function p({ hue: e, saturation: t, lightness: n, alpha: r }) {
     let i,
         a = (1 - Math.abs(2 * (n /= 255) - 1)) * (t /= 255),
         s = a * (1 - Math.abs(((e / 60) % 2) - 1)),
@@ -100,47 +84,30 @@ function _({ hue: e, saturation: t, lightness: n, alpha: r }) {
                       : e < 300
                         ? [s, 0, a]
                         : [a, 0, s]).map((e) => Math.round((e + o) * 255));
-    return {
-        red: l[0],
-        green: l[1],
-        blue: l[2],
-        alpha: r,
-    };
+    return { red: l[0], green: l[1], blue: l[2], alpha: r };
 }
-
 function h({ red: e, green: t, blue: n, alpha: r }) {
     let i = e / 255,
         a = t / 255,
         s = n / 255,
         o = Math.max(i, a, s),
         l = Math.min(i, a, s),
-        c = o - l,
-        u = (o + l) / 2,
-        d = c > 0 ? c / (1 - Math.abs(2 * u - 1)) : 0;
-    if (0 === c)
-        return {
-            hue: 0,
-            saturation: d,
-            lightness: u,
-            alpha: r,
-        };
-    let f = 0;
+        u = o - l,
+        c = (o + l) / 2,
+        d = u > 0 ? u / (1 - Math.abs(2 * c - 1)) : 0;
+    if (0 === u) return { hue: 0, saturation: d, lightness: c, alpha: r };
+    let _ = 0;
     switch (o) {
         case i:
-            f = ((a - s) / c) % 6;
+            _ = ((a - s) / u) % 6;
             break;
         case a:
-            f = (s - i) / c + 2;
+            _ = (s - i) / u + 2;
             break;
         case s:
-            f = (a - s) / c + 4;
+            _ = (a - s) / u + 4;
     }
-    return {
-        hue: 60 * f,
-        saturation: d,
-        lightness: u,
-        alpha: r,
-    };
+    return { hue: 60 * _, saturation: d, lightness: c, alpha: r };
 }
 let m = /^#[0-9a-f]{3,8}$/i,
     g = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
@@ -185,25 +152,15 @@ class E {
             .split(/\s*[,/\s]\s*/)
             .map((e) => e.replace(",", "").trim())
             .filter((e) => "" !== e)
-            .map((e, t) => p(n, e, t));
+            .map((e, t) => f(n, e, t));
         if ("hsl" === n.substr(0, 3)) {
-            let e = _({
-                hue: i[0],
-                saturation: i[1],
-                lightness: i[2],
-                alpha: i[3],
-            });
+            let e = p({ hue: i[0], saturation: i[1], lightness: i[2], alpha: i[3] });
             return new E(e.red, e.green, e.blue, e.alpha);
         }
         return new E(i[0], i[1], i[2], "number" == typeof i[3] ? i[3] : 1);
     }
     toHSL() {
-        return h({
-            red: this.red,
-            green: this.green,
-            blue: this.blue,
-            alpha: this.alpha,
-        });
+        return h({ red: this.red, green: this.green, blue: this.blue, alpha: this.alpha });
     }
     getRelativeLuminance() {
         let e = this.red / 255,
@@ -216,8 +173,7 @@ class E {
         );
     }
 }
-
-function b(e, t) {
+function A(e, t) {
     let n = e.alpha;
     return new E(
         (1 - n) * t.red + n * e.red,
@@ -226,8 +182,7 @@ function b(e, t) {
         e.alpha + t.alpha * (1 - e.alpha),
     );
 }
-
-function y(e, t) {
+function I(e, t) {
     if (null == e) return "var(--focus-primary)";
     let { saturation: n } = e.toHSL(),
         r = e.getRelativeLuminance();
@@ -239,8 +194,7 @@ function y(e, t) {
               : "var(--focus-dark, rgba(0, 0, 0, 0.85))"
           : "rgba(255,255,255,0.7)";
 }
-
-function O(e) {
+function T(e) {
     let t = [];
     for (let n of e.styles.slice(1)) {
         let e = E.parseString(n.backgroundColor);
@@ -249,29 +203,27 @@ function O(e) {
             t.push(e);
         }
     }
-    return t.push(new E(255, 255, 255, 1)), t.reduce(b);
+    return t.push(new E(255, 255, 255, 1)), t.reduce(A);
 }
-let A = "--__adaptive-focus-ring-color",
-    v = "--__adaptive-focus-ring-radius";
-
-function S(e) {
+let y = "--__adaptive-focus-ring-color",
+    S = "--__adaptive-focus-ring-radius";
+function v(e) {
     e !== r && (null == r || r.hide(), (r = e));
 }
-
-function I(e) {
+function C(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
-class T {
+class b {
     constructor() {
-        c(this, "targetElement"),
-            c(this, "targetAncestry"),
-            c(this, "boundingBox"),
-            c(this, "className"),
-            c(this, "offset", 0),
-            c(this, "zIndex"),
-            c(this, "container", null),
-            c(this, "themeOptions"),
-            c(this, "invalidate", () => null);
+        u(this, "targetElement"),
+            u(this, "targetAncestry"),
+            u(this, "boundingBox"),
+            u(this, "className"),
+            u(this, "offset", 0),
+            u(this, "zIndex"),
+            u(this, "container", null),
+            u(this, "themeOptions"),
+            u(this, "invalidate", () => null);
     }
     setContainer(e) {
         this.container = e;
@@ -287,7 +239,7 @@ class T {
             (this.className = t.className),
             (this.offset = null != (n = t.offset) ? n : 0),
             (this.zIndex = t.zIndex),
-            S(this),
+            v(this),
             this.invalidate();
     }
     hide() {
@@ -303,19 +255,12 @@ class T {
         return null != this.targetElement || null != this.boundingBox;
     }
     getElementAncestors(e) {
-        if (null == e)
-            return {
-                elements: [],
-                styles: [],
-            };
+        if (null == e) return { elements: [], styles: [] };
         let t = [],
             n = [],
             r = e;
         for (; null != r; ) t.push(r), "u" > typeof window && n.push(window.getComputedStyle(r)), (r = r.parentElement);
-        return {
-            elements: t,
-            styles: n,
-        };
+        return { elements: t, styles: n };
     }
     getNextZIndexForAncestry(e) {
         for (let t = 0; t < e.elements.length; t++) {
@@ -327,11 +272,11 @@ class T {
     }
     getBorderRadius(e) {
         var t, n, r, i, a, s, o, l;
-        let c = null != (n = I(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : "0",
-            u = null != (i = I(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : "0",
-            d = null != (s = I(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : "0",
-            f = null != (l = I(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : "0";
-        if ("0" !== c || "0" !== u || "0" !== d || "0" !== f) return `${c} ${u} ${d} ${f}`;
+        let u = null != (n = C(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : "0",
+            c = null != (i = C(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : "0",
+            d = null != (s = C(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : "0",
+            _ = null != (l = C(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : "0";
+        if ("0" !== u || "0" !== c || "0" !== d || "0" !== _) return `${u} ${c} ${d} ${_}`;
     }
     makePositionFromDOMRect(e) {
         var t, n, r, i;
@@ -339,20 +284,20 @@ class T {
         let a = this.container.getBoundingClientRect(),
             { scrollTop: s, scrollLeft: o } = this.container,
             l = 0,
-            c = 0,
             u = 0,
+            c = 0,
             d = 0;
         return (
             "number" == typeof this.offset
-                ? ((l = this.offset), (c = this.offset), (u = this.offset), (d = this.offset))
+                ? ((l = this.offset), (u = this.offset), (c = this.offset), (d = this.offset))
                 : ((l = null != (t = this.offset.top) ? t : 0),
-                  (c = null != (n = this.offset.right) ? n : 0),
-                  (u = null != (r = this.offset.bottom) ? r : 0),
+                  (u = null != (n = this.offset.right) ? n : 0),
+                  (c = null != (r = this.offset.bottom) ? r : 0),
                   (d = null != (i = this.offset.left) ? i : 0)),
             {
                 top: s + e.top - a.top + l,
-                width: e.width - (c + d),
-                height: e.height - (u + l),
+                width: e.width - (u + d),
+                height: e.height - (c + l),
                 left: o + e.left - a.left + d,
             }
         );
@@ -362,27 +307,24 @@ class T {
         let t = {};
         if (
             (null != this.boundingBox &&
-                (t = {
-                    ...this.makePositionFromDOMRect(this.boundingBox),
-                    zIndex: this.zIndex,
-                }),
+                (t = { ...this.makePositionFromDOMRect(this.boundingBox), zIndex: this.zIndex }),
             null != this.targetElement && null != this.targetAncestry)
         ) {
-            let n = O(this.targetAncestry);
+            let n = T(this.targetAncestry);
             t = {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
                 zIndex: null != (e = this.zIndex) ? e : this.getNextZIndexForAncestry(this.targetAncestry),
-                [A]: y(n, this.themeOptions),
-                [v]: this.getBorderRadius(this.targetAncestry),
+                [y]: I(n, this.themeOptions),
+                [S]: this.getBorderRadius(this.targetAncestry),
             };
         }
         return t;
     }
 }
-let C = new T();
-"u" > typeof window && C.setContainer(document.body);
-let N = a.createContext(C);
-var R = function (e, t, n, r) {
+let N = new b();
+"u" > typeof window && N.setContainer(document.body);
+let R = a.createContext(N);
+var O = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -391,56 +333,50 @@ var R = function (e, t, n, r) {
         s = Object.keys(t);
     if (a.length !== s.length) return !1;
     for (var o = Object.prototype.hasOwnProperty.bind(t), l = 0; l < a.length; l++) {
-        var c = a[l];
-        if (!o(c)) return !1;
-        var u = e[c],
-            d = t[c];
-        if (!1 === (i = n ? n.call(r, u, d, c) : void 0) || (void 0 === i && u !== d)) return !1;
+        var u = a[l];
+        if (!o(u)) return !1;
+        var c = e[u],
+            d = t[u];
+        if (!1 === (i = n ? n.call(r, c, d, u) : void 0) || (void 0 === i && c !== d)) return !1;
     }
     return !0;
 };
-let w = !1,
-    P,
-    D = {};
-
+let D = !1,
+    L,
+    w = {};
 function x() {
-    if (!w) return;
+    if (!D) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || R(e, D) ? null != P && cancelAnimationFrame(P) : ((D = e), null == r || r.invalidate()),
-        (P = requestAnimationFrame(x));
+    null == e || O(e, w) ? null != L && cancelAnimationFrame(L) : ((w = e), null == r || r.invalidate()),
+        (L = requestAnimationFrame(x));
 }
-let L = !1,
-    j = {
+let P = !1,
+    M = {
         get ringsEnabled() {
-            return L;
+            return P;
         },
         setRingsEnabled(e) {
-            (L = e), null == r || r.invalidate();
+            (P = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (w = !0), (P = requestAnimationFrame(x));
+            (D = !0), (L = requestAnimationFrame(x));
         },
         disableAnimationTracking() {
-            (w = !1), null != P && cancelAnimationFrame(P);
+            (D = !1), null != L && cancelAnimationFrame(L);
         },
     };
-
-function M(e) {
+function k(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
-        i = a.useRef(new T());
+        i = a.useRef(new b());
     return (
         a.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        (0, s.jsxs)(N.Provider, {
-            value: i.current,
-            children: [n, (0, s.jsx)(k, {})],
-        })
+        (0, s.jsxs)(R.Provider, { value: i.current, children: [n, (0, s.jsx)(U, {})] })
     );
 }
-
-function k() {
-    let e = a.useContext(N),
+function U() {
+    let e = a.useContext(R),
         [, t] = a.useState({});
     return (
         a.useEffect(
@@ -452,20 +388,16 @@ function k() {
             ),
             [e],
         ),
-        j.ringsEnabled && e.visible
-            ? (0, s.jsx)("div", {
-                  className: d("focus-rings-ring", e.className),
-                  style: e.getStyle(),
-              })
+        M.ringsEnabled && e.visible
+            ? (0, s.jsx)("div", { className: d("focus-rings-ring", e.className), style: e.getStyle() })
             : null
     );
 }
-let U =
+let G =
     "u" > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null
         ? a.useLayoutEffect
         : a.useEffect;
-
-function G(e) {
+function V(e) {
     let {
         within: t = !1,
         enabled: n = !0,
@@ -474,33 +406,27 @@ function G(e) {
         focusTarget: s,
         ringTarget: o,
         ringClassName: l,
-        focusClassName: c,
-        focusWithinClassName: u,
-        children: p,
+        focusClassName: u,
+        focusWithinClassName: c,
+        children: f,
     } = e;
     null != s &&
-        f(
+        _(
             null != o,
             "FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.",
         ),
         null != r &&
-            f(
+            _(
                 null != o,
                 "FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.",
             );
-    let _ = a.useRef(!1),
+    let p = a.useRef(!1),
         [h, m] = a.useState(!1),
-        g = a.useContext(N),
-        E = a.Children.only(p),
-        { onBlur: b, onFocus: y, ...O } = E.props,
-        A = a.useMemo(
-            () => ({
-                className: l,
-                offset: i,
-            }),
-            [l, i],
-        );
-    U(() => {
+        g = a.useContext(R),
+        E = a.Children.only(f),
+        { onBlur: A, onFocus: I, ...T } = E.props,
+        y = a.useMemo(() => ({ className: l, offset: i }), [l, i]);
+    G(() => {
         n && g.invalidate();
     }),
         a.useEffect(() => {
@@ -508,15 +434,15 @@ function G(e) {
         }, [n, g]),
         a.useEffect(
             () => () => {
-                _.current && g.hide();
+                p.current && g.hide();
             },
             [g],
         ),
         a.useEffect(() => {
             let e = null == o ? void 0 : o.current;
-            null == r || null == e || ((_.current = r), r ? g.showElement(e, A) : !1 === r && g.hide());
-        }, [r, A, g, o]),
-        U(() => {
+            null == r || null == e || ((p.current = r), r ? g.showElement(e, y) : !1 === r && g.hide());
+        }, [r, y, g, o]),
+        G(() => {
             if (null != r) return;
             let e = null == s ? void 0 : s.current,
                 n = null == o ? void 0 : o.current;
@@ -528,43 +454,41 @@ function G(e) {
                         e.removeEventListener("focusin", i, !0), e.removeEventListener("focusout", a, !0);
                     }
                 );
-
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (_.current = !0), g.showElement(n, A);
+                        (p.current = !0), g.showElement(n, y);
                         return;
                     }
-                    m(!0), t && g.showElement(n, A);
+                    m(!0), t && g.showElement(n, y);
                 }
             }
-
             function a() {
-                g.hide(), (_.current = !1), m(!1);
+                g.hide(), (p.current = !1), m(!1);
             }
-        }, [t, A, r, g, s, o]);
-    let v = a.useCallback(
+        }, [t, y, r, g, s, o]);
+    let S = a.useCallback(
             (e) => {
-                g.hide(), (_.current = !1), m(!1), null == b || b(e);
+                g.hide(), (p.current = !1), m(!1), null == A || A(e);
             },
-            [b, g],
+            [A, g],
         ),
-        S = a.useCallback(
+        v = a.useCallback(
             (e) => {
                 let n = null == o ? void 0 : o.current;
                 e.currentTarget === e.target
-                    ? ((_.current = !0), g.showElement(null != n ? n : e.currentTarget, A))
-                    : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, A)),
-                    null == y || y(e);
+                    ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, y))
+                    : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, y)),
+                    null == I || I(e);
             },
-            [o, t, y, g, A],
+            [o, t, I, g, y],
         );
     return n && null == s && null == r
         ? a.cloneElement(E, {
-              ...O,
-              className: d(O.className, _.current ? c : void 0, h ? u : void 0),
-              onBlur: v,
-              onFocus: S,
+              ...T,
+              className: d(T.className, p.current ? u : void 0, h ? c : void 0),
+              onBlur: S,
+              onFocus: v,
           })
         : E;
 }

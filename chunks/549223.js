@@ -1,115 +1,65 @@
-r.d(t, {
-    default: () => j,
-}),
-    r(228524),
-    r(896048);
-var o = r(627968);
-r(64700);
-var n = r(158954),
-    i = r(397927),
-    c = r(923531),
-    l = r(294433),
-    s = r(945276),
-    a = r(121733),
-    u = r(191627),
-    d = r(842130),
-    p = r(985018),
-    h = r(468707);
-let f = {
-        [u.NV.USER_INTERACTION]: (0, o.jsx)(a.A, {
-            width: 18,
-            height: 18,
-        }),
-        [u.NV.USER_CALLED]: (0, o.jsx)(i._jp, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [u.NV.USER_ADD]: (0, o.jsx)(i.$yI, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [u.NV.GUILD_ADD]: (0, o.jsx)(i.Bxc, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [u.NV.GUILD_INTERACTION]: (0, o.jsx)(i.N$i, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [u.NV.TOTAL_VOICE_MINUTES]: (0, o.jsx)(n.O4, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [u.NV.PURCHASES]: (0, o.jsx)(n.BFk, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
+i.d(e, { default: () => j });
+var r = i(627968);
+i(64700);
+var o = i(158954),
+    s = i(397927),
+    l = i(923531),
+    c = i(294433),
+    n = i(438732),
+    h = i(121733),
+    d = i(191627),
+    a = i(842130),
+    C = i(985018),
+    u = i(468707);
+let x = {
+        [d.NV.USER_INTERACTION]: (0, r.jsx)(h.A, { width: 18, height: 18 }),
+        [d.NV.USER_CALLED]: (0, r.jsx)(s._jp, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [d.NV.USER_ADD]: (0, r.jsx)(s.$yI, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [d.NV.GUILD_ADD]: (0, r.jsx)(s.Bxc, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [d.NV.GUILD_INTERACTION]: (0, r.jsx)(s.N$i, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [d.NV.TOTAL_VOICE_MINUTES]: (0, r.jsx)(o.O4, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [d.NV.PURCHASES]: (0, r.jsx)(o.BFk, { size: "custom", color: "currentColor", width: 22, height: 22 }),
     },
-    b = (e) => {
-        let { header: t, description: r, icon: c } = e;
-        return (0, o.jsxs)(n.BJc, {
+    p = (t) => {
+        let { header: e, description: i, icon: l } = t;
+        return (0, r.jsxs)(o.BJc, {
             direction: "horizontal",
-            className: h.nM,
+            className: u.nM,
             padding: 16,
             align: "center",
             gap: 16,
             fullWidth: !1,
             children: [
-                (0, o.jsx)("div", {
-                    className: h.zc,
-                    children: c,
-                }),
-                (0, o.jsxs)("div", {
-                    className: h.u4,
+                (0, r.jsx)("div", { className: u.zc, children: l }),
+                (0, r.jsxs)("div", {
+                    className: u.u4,
                     children: [
-                        (0, o.jsx)(i.Text, {
-                            variant: "text-sm/bold",
-                            children: t,
-                        }),
-                        (0, o.jsx)(i.Text, {
-                            variant: "text-xs/medium",
-                            children: r,
-                        }),
+                        (0, r.jsx)(s.Text, { variant: "text-sm/bold", children: e }),
+                        (0, r.jsx)(s.Text, { variant: "text-xs/medium", children: i }),
                     ],
                 }),
             ],
         });
     },
-    j = (e) => {
-        let { transitionState: t, onClose: r } = e,
-            i = (0, l.y)(p.intl.string(d.default.q3IRal), p.intl.string(d.default.JNLpDZ)),
-            a = (0, s.A)(),
-            u = (0, c.Mo)();
-        return (0, o.jsx)(n.Modal, {
-            transitionState: t,
-            onClose: r,
+    j = (t) => {
+        let { transitionState: e, onClose: i } = t,
+            s = (0, c.y)(C.intl.string(a.default.q3IRal), C.intl.string(a.default.JNLpDZ)),
+            h = (0, n.A)(),
+            d = (0, l.Mo)();
+        return (0, r.jsx)(o.Modal, {
+            transitionState: e,
+            onClose: i,
             actions: [],
-            title: i,
-            children: (0, o.jsx)(n.BJc, {
+            title: s,
+            children: (0, r.jsx)(o.BJc, {
                 gap: 8,
                 fullWidth: !1,
-                children: u.map((e) => {
-                    let [t, r] = e;
-                    return (0, o.jsx)(
-                        b,
-                        {
-                            icon: f[t],
-                            header: r.tooltipHeader(),
-                            description: r.tooltipDescription(null != a ? a : void 0),
-                        },
-                        t,
+                children: d.map((t) => {
+                    let [e, i] = t;
+                    return (0, r.jsx)(
+                        p,
+                        { icon: x[e], header: i.tooltipHeader(), description: i.tooltipDescription(h ?? void 0) },
+                        e,
                     );
                 }),
             }),

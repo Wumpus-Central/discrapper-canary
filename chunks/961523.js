@@ -1,8 +1,6 @@
-n.d(t, {
-    w: () => s,
-});
+n.d(t, { w: () => l });
 var i,
-    s =
+    l =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (i[(i.PENDING = 1)] = "PENDING"),
         (i[(i.ACCEPTED = 2)] = "ACCEPTED"),

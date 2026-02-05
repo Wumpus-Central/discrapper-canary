@@ -495,41 +495,14 @@ e.exports = function (e) {
                 scope: "number",
                 contains: [e.BACKSLASH_ESCAPE],
                 variants: [
-                    {
-                        begin: /\b((\d+'([bhodBHOD]))[0-9xzXZa-fA-F_]+)/,
-                    },
-                    {
-                        begin: /\B(('([bhodBHOD]))[0-9xzXZa-fA-F_]+)/,
-                    },
-                    {
-                        begin: /\b[0-9][0-9_]*/,
-                        relevance: 0,
-                    },
+                    { begin: /\b((\d+'([bhodBHOD]))[0-9xzXZa-fA-F_]+)/ },
+                    { begin: /\B(('([bhodBHOD]))[0-9xzXZa-fA-F_]+)/ },
+                    { begin: /\b[0-9][0-9_]*/, relevance: 0 },
                 ],
             },
-            {
-                scope: "variable",
-                variants: [
-                    {
-                        begin: "#\\((?!parameter).+\\)",
-                    },
-                    {
-                        begin: "\\.\\w+",
-                        relevance: 0,
-                    },
-                ],
-            },
-            {
-                scope: "variable.constant",
-                match: t.concat(/`/, t.either(...n)),
-            },
-            {
-                scope: "meta",
-                begin: t.concat(/`/, t.either(...r)),
-                end: /$|\/\/|\/\*/,
-                returnEnd: !0,
-                keywords: r,
-            },
+            { scope: "variable", variants: [{ begin: "#\\((?!parameter).+\\)" }, { begin: "\\.\\w+", relevance: 0 }] },
+            { scope: "variable.constant", match: t.concat(/`/, t.either(...n)) },
+            { scope: "meta", begin: t.concat(/`/, t.either(...r)), end: /$|\/\/|\/\*/, returnEnd: !0, keywords: r },
         ],
     };
 };

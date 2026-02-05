@@ -1,38 +1,28 @@
-n.d(t, {
-    l: () => o,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { l: () => d });
+var i = n(627968),
+    s = n(64700),
     l = n(397927),
-    s = n(997509),
+    r = n(997509),
     a = n(652215),
-    c = n(985018);
-
-function o(e) {
-    let { isInventoryFeedEnabled: t, canManageGuild: n, features: o } = e,
-        d = i.useCallback(
+    o = n(985018);
+function d(e) {
+    let { isInventoryFeedEnabled: t, canManageGuild: n, features: d } = e,
+        c = s.useCallback(
             (e) => {
-                let t = new Set(o);
+                let t = new Set(d);
                 e
                     ? (t.add(a.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER),
                       t.delete(a.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER))
                     : (t.add(a.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER),
                       t.delete(a.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER)),
-                    s.A.updateGuild({
-                        features: t,
-                    });
+                    r.A.updateGuild({ features: t });
             },
-            [o],
+            [d],
         );
-    return (0, r.jsx)(l.nVY, {
-        label: c.intl.string(c.t["oQ/7Bc"]),
-        description: c.intl.string(c.t.fZ0qZU),
-        children: (0, r.jsx)(l.dOG, {
-            label: c.intl.string(c.t.WompT5),
-            checked: t,
-            onChange: d,
-            disabled: !n,
-        }),
+    return (0, i.jsx)(l.nVY, {
+        label: o.intl.string(o.t["oQ/7Bc"]),
+        description: o.intl.string(o.t.fZ0qZU),
+        children: (0, i.jsx)(l.dOG, { label: o.intl.string(o.t.WompT5), checked: t, onChange: c, disabled: !n }),
     });
 }

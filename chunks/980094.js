@@ -1,6 +1,5 @@
-n.d(t, {
-    Q: () => l,
-});
+"use strict";
+n.d(t, { Q: () => l });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,15 +13,8 @@ let o = 20,
             : (0, r.jsxs)("div", {
                   className: s.k,
                   children: [
-                      (0, r.jsx)(a.W, {
-                          application: t,
-                          iconSize: n,
-                      }),
-                      (0, r.jsx)(i.Text, {
-                          variant: "text-sm/medium",
-                          color: "text-muted",
-                          children: t.name,
-                      }),
+                      (0, r.jsx)(a.W, { application: t, iconSize: n }),
+                      (0, r.jsx)(i.Text, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
                   ],
               });
     };

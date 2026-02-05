@@ -1,109 +1,72 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var a,
-    l = n(627968),
-    i = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    o = n(607399),
-    c = n(397927),
+n.d(t, { A: () => _ });
+var a = n(627968),
+    s = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    r = n(607399),
+    o = n(397927),
     d = n(354949),
-    u = n(975571),
-    m = n(446868),
-    p = n(652215),
+    c = n(975571),
+    u = n(446868),
+    m = n(652215),
     h = n(985018),
-    f = n(441609);
-
-function x(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let b = u.A.getArticleURL(p.MVz.VERIFICATION_FAQ);
-class g extends (a = i.PureComponent) {
+    x = n(441609);
+let p = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
+class g extends s.PureComponent {
+    static defaultProps = { types: [m.Fz7.CAPTCHA], onCaptchaVerify: m.tEg, onLogout: m.tEg };
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
-        return (0, l.jsx)(l.Fragment, {
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: s } = this.props;
+        return (0, a.jsx)(a.Fragment, {
             children: e.map((e) =>
-                e === p.Fz7.CAPTCHA
-                    ? (0, l.jsx)(
-                          d.A,
-                          {
-                              onVerify: a,
-                              theme: n,
-                          },
-                          t,
-                      )
-                    : (0, l.jsx)(
-                          c.Button,
-                          {
-                              onClick: () => this.handleClick(e),
-                              text: m.A.getButtonTitle(e),
-                          },
-                          e,
-                      ),
+                e === m.Fz7.CAPTCHA
+                    ? (0, a.jsx)(d.A, { onVerify: s, theme: n }, t)
+                    : (0, a.jsx)(o.Button, { onClick: () => this.handleClick(e), text: u.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, l.jsxs)(c.BJc, {
+        return (0, a.jsxs)(o.BJc, {
             gap: 16,
-            className: f.Ot,
+            className: x.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, l.jsxs)(c.BJc, {
+                (0, a.jsxs)(o.BJc, {
                     gap: 16,
                     fullWidth: !1,
-                    className: s()(f.kL, {
-                        [f.Fr]: o.Fr,
-                    }),
+                    className: l()(x.kL, { [x.Fr]: r.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsxs)(c.BJc, {
+                        (0, a.jsxs)(o.BJc, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, l.jsx)("div", {
-                                    className: f.Sl,
-                                }),
-                                (0, l.jsxs)(c.BJc, {
-                                    className: f.FS,
+                                (0, a.jsx)("div", { className: x.Sl }),
+                                (0, a.jsxs)(o.BJc, {
+                                    className: x.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(c.Heading, {
+                                        (0, a.jsx)(o.Heading, {
                                             variant: "heading-xl/normal",
                                             children: h.intl.string(h.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(c.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], {
-                                                helpCenterURL: b,
-                                            }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: p }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, l.jsx)(c.BJc, {
+                        (0, a.jsx)(o.BJc, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -112,40 +75,33 @@ class g extends (a = i.PureComponent) {
                         }),
                     ],
                 }),
-                (0, l.jsxs)(c.BJc, {
+                (0, a.jsxs)(o.BJc, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(c.Text, {
+                        (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
-                            className: f.qr,
+                            className: x.qr,
                             children: h.intl.string(h.t.qqYun3),
                         }),
-                        (0, l.jsxs)(c.BJc, {
+                        (0, a.jsxs)(o.BJc, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(c.Text, {
+                                (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: f.qr,
-                                    children: h.intl.format(h.t.WL51ZR, {
-                                        supportURL: u.A.getSubmitRequestURL(),
-                                    }),
+                                    className: x.qr,
+                                    children: h.intl.format(h.t.WL51ZR, { supportURL: c.A.getSubmitRequestURL() }),
                                 }),
-                                (0, l.jsx)("div", {
-                                    className: s()(f.qr, f.mf),
-                                    children: "•",
-                                }),
-                                (0, l.jsx)(c.Text, {
+                                (0, a.jsx)("div", { className: l()(x.qr, x.mf), children: "•" }),
+                                (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: f.qr,
-                                    children: h.intl.format(h.t.Hv7ztc, {
-                                        logoutOnClick: this.props.onLogout,
-                                    }),
+                                    className: x.qr,
+                                    children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -154,17 +110,9 @@ class g extends (a = i.PureComponent) {
             ],
         });
     }
-    constructor(...e) {
-        super(...e),
-            x(this, "handleClick", (e) => {
-                let { onClick: t } = this.props;
-                null == t || t(e);
-            });
-    }
+    handleClick = (e) => {
+        let { onClick: t } = this.props;
+        t?.(e);
+    };
 }
-x(g, "defaultProps", {
-    types: [p.Fz7.CAPTCHA],
-    onCaptchaVerify: p.tEg,
-    onLogout: p.tEg,
-});
-let v = g;
+let _ = g;

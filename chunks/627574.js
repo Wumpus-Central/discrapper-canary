@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Hc: "modalHeader_c28af8",
     PV: "closeBtn_c28af8",

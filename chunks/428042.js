@@ -1,3 +1,2 @@
-e.exports = {
-    F: "fileInput__46231",
-};
+"use strict";
+e.exports = { F: "fileInput__46231" };

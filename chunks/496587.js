@@ -1,27 +1,19 @@
-n.d(t, {
-    A: () => l,
-});
-var r = n(627968),
-    a = n(376463);
-
-function l(e) {
+n.d(t, { A: () => s });
+var a = n(627968),
+    i = n(376463);
+function s(e) {
     let { children: t, actions: n } = e;
-    return (0, r.jsx)("div", {
-        className: a.Nr,
-        children: (0, r.jsxs)("div", {
-            className: a.FG,
+    return (0, a.jsx)("div", {
+        className: i.Nr,
+        children: (0, a.jsxs)("div", {
+            className: i.FG,
             children: [
                 t,
                 null != n &&
-                    (0, r.jsxs)(r.Fragment, {
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, r.jsx)("div", {
-                                className: a.yF,
-                            }),
-                            (0, r.jsx)("div", {
-                                className: a.fH,
-                                children: n,
-                            }),
+                            (0, a.jsx)("div", { className: i.yF }),
+                            (0, a.jsx)("div", { className: i.fH, children: n }),
                         ],
                     }),
             ],

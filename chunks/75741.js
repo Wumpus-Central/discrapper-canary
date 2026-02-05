@@ -8,34 +8,11 @@ e.exports = function (e) {
             literal: "this false true",
         },
         contains: [
-            {
-                className: "type",
-                begin: "\\b_?[A-Z][\\w]*",
-                relevance: 0,
-            },
-            {
-                className: "string",
-                begin: '"""',
-                end: '"""',
-                relevance: 10,
-            },
-            {
-                className: "string",
-                begin: '"',
-                end: '"',
-                contains: [e.BACKSLASH_ESCAPE],
-            },
-            {
-                className: "string",
-                begin: "'",
-                end: "'",
-                contains: [e.BACKSLASH_ESCAPE],
-                relevance: 0,
-            },
-            {
-                begin: e.IDENT_RE + "'",
-                relevance: 0,
-            },
+            { className: "type", begin: "\\b_?[A-Z][\\w]*", relevance: 0 },
+            { className: "string", begin: '"""', end: '"""', relevance: 10 },
+            { className: "string", begin: '"', end: '"', contains: [e.BACKSLASH_ESCAPE] },
+            { className: "string", begin: "'", end: "'", contains: [e.BACKSLASH_ESCAPE], relevance: 0 },
+            { begin: e.IDENT_RE + "'", relevance: 0 },
             {
                 className: "number",
                 begin: "(-?)(\\b0[xX][a-fA-F0-9]+|\\b0[bB][01]+|(\\b\\d+(_\\d+)?(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",

@@ -1,3 +1,1 @@
-e.exports = {
-    u: "da567dbfda77285c",
-};
+e.exports = { u: "closeIcon__3decc" };

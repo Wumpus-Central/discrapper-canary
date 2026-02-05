@@ -1,50 +1,47 @@
-n.d(t, {
-    A: () => f,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(195043),
-    o = n(193658),
-    l = n(355097),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
+    r = n(397927),
+    a = n(195043),
+    l = n(193658),
+    o = n(355097),
     c = n(531525),
-    u = n(985018),
-    d = n(943626);
-
-function f(e) {
-    let { currentUser: t, disabled: n, handleDisableAccount: f, handleDeleteAccount: p } = e,
-        _ = t.isClaimed(),
-        h = i.useRef(null);
+    d = n(985018),
+    u = n(943626);
+function _(e) {
+    let { currentUser: t, disabled: n, handleDisableAccount: _, handleDeleteAccount: m } = e,
+        A = t.isClaimed(),
+        g = s.useRef(null);
     return (
-        (0, o.A)(h, l.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
-        (0, r.jsx)(s.x, {
+        (0, l.A)(g, o.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
+        (0, i.jsx)(a.x, {
             setting: c.H.ACCOUNT_DISABLE_ACCOUNT,
-            children: (0, r.jsx)("div", {
-                ref: h,
-                children: (0, r.jsx)(a.D0$, {
-                    label: u.intl.string(u.t.ZKsIks),
-                    description: _ ? u.intl.string(u.t.TIh3Yj) : u.intl.string(u.t.czsGA8),
-                    children: (0, r.jsxs)(a.ButtonGroup, {
+            children: (0, i.jsx)("div", {
+                ref: g,
+                children: (0, i.jsx)(r.D0$, {
+                    label: d.intl.string(d.t.ZKsIks),
+                    description: A ? d.intl.string(d.t.TIh3Yj) : d.intl.string(d.t.czsGA8),
+                    children: (0, i.jsxs)(r.ButtonGroup, {
                         size: "sm",
-                        className: d.U,
+                        className: u.U,
                         children: [
-                            _
-                                ? (0, r.jsx)(a.Button, {
+                            A
+                                ? (0, i.jsx)(r.Button, {
                                       variant: "critical-primary",
                                       size: "sm",
-                                      text: u.intl.string(u.t.jf5GGb),
+                                      text: d.intl.string(d.t.jf5GGb),
                                       disabled: n,
-                                      onClick: f,
+                                      onClick: _,
                                   })
                                 : null,
-                            (0, r.jsx)(s.x, {
+                            (0, i.jsx)(a.x, {
                                 setting: c.H.ACCOUNT_DELETE_ACCOUNT,
-                                children: (0, r.jsx)(a.Button, {
+                                children: (0, i.jsx)(r.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
-                                    text: u.intl.string(u.t["8lQ2rR"]),
+                                    text: d.intl.string(d.t["8lQ2rR"]),
                                     disabled: n,
-                                    onClick: p,
+                                    onClick: m,
                                 }),
                             }),
                         ],

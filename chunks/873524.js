@@ -1,77 +1,29 @@
 e.exports = function (e) {
-    let t = {
-            className: "subst",
-            variants: [
-                {
-                    begin: "\\$[A-Za-z0-9_]+",
-                },
-            ],
-        },
+    let t = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }] },
         n = {
             className: "subst",
-            variants: [
-                {
-                    begin: /\$\{/,
-                    end: /\}/,
-                },
-            ],
+            variants: [{ begin: /\$\{/, end: /\}/ }],
             keywords: "true false null this is new super",
         },
         r = {
             className: "number",
             relevance: 0,
             variants: [
-                {
-                    match: /\b[0-9][0-9_]*(\.[0-9][0-9_]*)?([eE][+-]?[0-9][0-9_]*)?\b/,
-                },
-                {
-                    match: /\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\b/,
-                },
+                { match: /\b[0-9][0-9_]*(\.[0-9][0-9_]*)?([eE][+-]?[0-9][0-9_]*)?\b/ },
+                { match: /\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\b/ },
             ],
         },
         i = {
             className: "string",
             variants: [
-                {
-                    begin: "r'''",
-                    end: "'''",
-                },
-                {
-                    begin: 'r"""',
-                    end: '"""',
-                },
-                {
-                    begin: "r'",
-                    end: "'",
-                    illegal: "\\n",
-                },
-                {
-                    begin: 'r"',
-                    end: '"',
-                    illegal: "\\n",
-                },
-                {
-                    begin: "'''",
-                    end: "'''",
-                    contains: [e.BACKSLASH_ESCAPE, t, n],
-                },
-                {
-                    begin: '"""',
-                    end: '"""',
-                    contains: [e.BACKSLASH_ESCAPE, t, n],
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                    illegal: "\\n",
-                    contains: [e.BACKSLASH_ESCAPE, t, n],
-                },
-                {
-                    begin: '"',
-                    end: '"',
-                    illegal: "\\n",
-                    contains: [e.BACKSLASH_ESCAPE, t, n],
-                },
+                { begin: "r'''", end: "'''" },
+                { begin: 'r"""', end: '"""' },
+                { begin: "r'", end: "'", illegal: "\\n" },
+                { begin: 'r"', end: '"', illegal: "\\n" },
+                { begin: "'''", end: "'''", contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: '"""', end: '"""', contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: "'", end: "'", illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, n] },
             ],
         };
     n.contains = [r, i];
@@ -191,20 +143,8 @@ e.exports = function (e) {
         },
         contains: [
             i,
-            e.COMMENT(/\/\*\*(?!\/)/, /\*\//, {
-                subLanguage: "markdown",
-                relevance: 0,
-            }),
-            e.COMMENT(/\/{3,} ?/, /$/, {
-                contains: [
-                    {
-                        subLanguage: "markdown",
-                        begin: ".",
-                        end: "$",
-                        relevance: 0,
-                    },
-                ],
-            }),
+            e.COMMENT(/\/\*\*(?!\/)/, /\*\//, { subLanguage: "markdown", relevance: 0 }),
+            e.COMMENT(/\/{3,} ?/, /$/, { contains: [{ subLanguage: "markdown", begin: ".", end: "$", relevance: 0 }] }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             {
@@ -212,21 +152,11 @@ e.exports = function (e) {
                 beginKeywords: "class interface",
                 end: /\{/,
                 excludeEnd: !0,
-                contains: [
-                    {
-                        beginKeywords: "extends implements",
-                    },
-                    e.UNDERSCORE_TITLE_MODE,
-                ],
+                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
             },
             r,
-            {
-                className: "meta",
-                begin: "@[A-Za-z]+",
-            },
-            {
-                begin: "=>",
-            },
+            { className: "meta", begin: "@[A-Za-z]+" },
+            { begin: "=>" },
         ],
     };
 };

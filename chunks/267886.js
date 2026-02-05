@@ -1,12 +1,12 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
+    "use strict";
     function t(e) {
         if (e % 100 == 11);
         else if (e % 10 == 1) return !1;
         return !0;
     }
-
     function n(e, n, r, i) {
         var a = e + " ";
         switch (r) {
@@ -96,9 +96,6 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

@@ -1,279 +1,177 @@
-n.d(t, {
-    A: () => Y,
-}),
-    n(896048);
+n.d(t, { A: () => G });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(311907),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
     o = n(990078),
-    u = n(397927),
-    c = n(387755),
-    d = n(945830),
+    d = n(397927),
+    u = n(387755),
+    c = n(945830),
     h = n(47167),
-    p = n(713654),
-    f = n(461678),
+    A = n(713654),
+    m = n(461678),
     g = n(95550),
-    m = n(95701),
-    y = n(734057),
-    A = n(383501),
-    v = n(994500),
-    b = n(543465),
-    E = n(287809),
-    O = n(810412),
-    x = n(914853),
-    _ = n(589051),
-    S = n(129537),
-    I = n(578093),
-    j = n(145567),
-    T = n(922611),
-    C = n(201479),
-    N = n(691761),
+    p = n(95701),
+    f = n(734057),
+    _ = n(383501),
+    E = n(994500),
+    x = n(543465),
+    S = n(287809),
+    I = n(810412),
+    T = n(914853),
+    C = n(589051),
+    v = n(129537),
+    y = n(578093),
+    N = n(145567),
+    O = n(922611),
+    b = n(201479),
+    j = n(691761),
     w = n(34307),
-    P = n(652215),
-    D = n(895867),
-    R = n(985018),
-    k = n(532165);
-
-function M(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-
-function L(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function U(e, t) {
-    if (null == e) return {};
-    var n,
-        i,
-        r,
-        l = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-            (i = n[r]), !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (l[i] = e[i]);
-        return l;
-    }
-    if (
-        ((l = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = {},
-                l = Object.getOwnPropertyNames(e);
-            for (i = 0; i < l.length; i++)
-                (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-            return r;
-        })(e, t)),
-        Object.getOwnPropertySymbols)
-    )
-        for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-            (i = n[r]), !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (l[i] = e[i]);
-    return l;
-}
-
-function G(e) {
+    L = n(652215),
+    R = n(895867),
+    D = n(985018),
+    M = n(532165);
+function k(e) {
     return null != e && (e.isDM() || e.isMultiUserDM());
 }
-
-function V(e) {
-    let { channel: t, pinsOpen: n, onTogglePinsPopout: l, onRequestClosePinsPopout: a } = e,
-        s = r.useRef(null);
-    return (null == t ? void 0 : t.id) == null
+function z(e) {
+    let { channel: t, pinsOpen: n, onTogglePinsPopout: a, onRequestClosePinsPopout: s } = e,
+        r = l.useRef(null);
+    return t?.id == null
         ? null
-        : (0, i.jsx)(u.YNO, {
-              targetElementRef: s,
+        : (0, i.jsx)(d.YNO, {
+              targetElementRef: r,
               shouldShow: n,
-              animation: u.YNO.Animation.NONE,
+              animation: d.YNO.Animation.NONE,
               position: "bottom",
               align: "right",
               autoInvert: !1,
               ignoreModalClicks: !0,
-              onRequestClose: a,
-              renderPopout: (e) =>
-                  (0, i.jsx)(
-                      d.A,
-                      L(M({}, e), {
-                          channel: t,
-                          onJump: () => {},
-                      }),
-                  ),
+              onRequestClose: s,
+              renderPopout: (e) => (0, i.jsx)(c.A, { ...e, channel: t, onJump: () => {} }),
               clickTrap: !0,
               children: (e) => {
-                  let { onClick: t } = e,
-                      n = U(e, ["onClick"]);
+                  let { onClick: t, ...n } = e;
                   return (0, i.jsx)("div", {
-                      ref: s,
+                      ref: r,
                       children: (0, i.jsx)(o.m, {
-                          text: R.intl.string(R.t["mp1N/2"]),
-                          "aria-label": R.intl.string(R.t["mp1N/2"]),
-                          children: (0, i.jsx)(
-                              u.K0,
-                              L(M({}, n), {
-                                  icon: u.tsw,
-                                  "aria-label": R.intl.string(R.t["mp1N/2"]),
-                                  size: "sm",
-                                  variant: "icon-only",
-                                  onClick: l,
-                              }),
-                          ),
+                          text: D.intl.string(D.t["mp1N/2"]),
+                          "aria-label": D.intl.string(D.t["mp1N/2"]),
+                          children: (0, i.jsx)(d.K0, {
+                              ...n,
+                              icon: d.tsw,
+                              "aria-label": D.intl.string(D.t["mp1N/2"]),
+                              size: "sm",
+                              variant: "icon-only",
+                              onClick: a,
+                          }),
                       }),
                   });
               },
           });
 }
-
-function z(e) {
-    var t;
-    let { channel: n } = e,
-        l = r.useRef(null),
-        a = null != (t = null == n ? void 0 : n.id) ? t : null,
-        c = (null == n ? void 0 : n.guild_id) != null,
-        [d, h] = (0, s.yK)(
-            [b.Ay],
+function V(e) {
+    let { channel: t } = e,
+        n = l.useRef(null),
+        a = t?.id ?? null,
+        s = t?.guild_id != null,
+        [u, c] = (0, r.yK)(
+            [x.Ay],
             () =>
-                c && null != a && null != n
-                    ? [b.Ay.isChannelMuted(n.getGuildId(), n.id), b.Ay.resolvedMessageNotifications(n)]
-                    : [!1, P.orn.ALL_MESSAGES],
-            [n, a, c],
+                s && null != a && null != t
+                    ? [x.Ay.isChannelMuted(t.getGuildId(), t.id), x.Ay.resolvedMessageNotifications(t)]
+                    : [!1, L.orn.ALL_MESSAGES],
+            [t, a, s],
         ),
-        [p, g] = r.useState(!1),
-        m = r.useCallback(() => {
-            g((e) => !e);
+        [h, A] = l.useState(!1),
+        g = l.useCallback(() => {
+            A((e) => !e);
         }, []),
-        y = R.intl.string(R.t.h850Ss),
-        A = d || h !== P.orn.ALL_MESSAGES ? u.a_I : u.XFE;
-    return c && null != n
-        ? (0, i.jsx)(u.YNO, {
-              targetElementRef: l,
-              shouldShow: p,
-              animation: u.YNO.Animation.NONE,
+        p = D.intl.string(D.t.h850Ss),
+        f = u || c !== L.orn.ALL_MESSAGES ? d.a_I : d.XFE;
+    return s && null != t
+        ? (0, i.jsx)(d.YNO, {
+              targetElementRef: n,
+              shouldShow: h,
+              animation: d.YNO.Animation.NONE,
               position: "bottom",
               align: "right",
               autoInvert: !1,
-              onRequestClose: () => g(!1),
+              onRequestClose: () => A(!1),
               renderPopout: (e) =>
-                  (0, i.jsx)(
-                      f.A,
-                      L(M({}, e), {
-                          channel: n,
-                          navId: "overlay-channel-context",
-                          label: R.intl.string(R.t.Xm41aV),
-                      }),
-                  ),
+                  (0, i.jsx)(m.A, {
+                      ...e,
+                      channel: t,
+                      navId: "overlay-channel-context",
+                      label: D.intl.string(D.t.Xm41aV),
+                  }),
               clickTrap: !0,
               children: (e) => {
-                  let { onClick: t } = e,
-                      n = U(e, ["onClick"]);
+                  let { onClick: t, ...l } = e;
                   return (0, i.jsx)("div", {
-                      ref: l,
+                      ref: n,
                       children: (0, i.jsx)(o.m, {
-                          text: y,
-                          "aria-label": y,
-                          children: (0, i.jsx)(
-                              u.K0,
-                              L(M({}, n), {
-                                  icon: A,
-                                  "aria-label": y,
-                                  size: "sm",
-                                  variant: "icon-only",
-                                  onClick: m,
-                              }),
-                          ),
+                          text: p,
+                          "aria-label": p,
+                          children: (0, i.jsx)(d.K0, {
+                              ...l,
+                              icon: f,
+                              "aria-label": p,
+                              size: "sm",
+                              variant: "icon-only",
+                              onClick: g,
+                          }),
                       }),
                   });
               },
           })
         : null;
 }
-
-function F(e) {
-    let { channel: t, onStartPrivateCall: n, pinsOpen: r, onTogglePinsPopout: l, onRequestClosePinsPopout: a } = e;
-    return G(t)
+function U(e) {
+    let { channel: t, onStartPrivateCall: n, pinsOpen: l, onTogglePinsPopout: a, onRequestClosePinsPopout: s } = e;
+    return k(t)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.m, {
-                      text: R.intl.string(R.t.JJogjm),
-                      "aria-label": R.intl.string(R.t.JJogjm),
-                      children: (0, i.jsx)(u.K0, {
-                          icon: u._jp,
-                          "aria-label": R.intl.string(R.t.JJogjm),
+                      text: D.intl.string(D.t.JJogjm),
+                      "aria-label": D.intl.string(D.t.JJogjm),
+                      children: (0, i.jsx)(d.K0, {
+                          icon: d._jp,
+                          "aria-label": D.intl.string(D.t.JJogjm),
                           size: "sm",
                           variant: "icon-only",
                           onClick: () => n(!1),
                       }),
                   }),
-                  (0, i.jsx)(V, {
-                      channel: t,
-                      pinsOpen: r,
-                      onTogglePinsPopout: l,
-                      onRequestClosePinsPopout: a,
-                  }),
+                  (0, i.jsx)(z, { channel: t, pinsOpen: l, onTogglePinsPopout: a, onRequestClosePinsPopout: s }),
                   t.isMultiUserDM()
                       ? (0, i.jsx)(o.m, {
-                            text: R.intl.string(R.t["LR+Ptf"]),
-                            "aria-label": R.intl.string(R.t["LR+Ptf"]),
-                            children: (0, i.jsx)(u.K0, {
-                                icon: u.DpX,
-                                "aria-label": R.intl.string(R.t["LR+Ptf"]),
+                            text: D.intl.string(D.t["LR+Ptf"]),
+                            "aria-label": D.intl.string(D.t["LR+Ptf"]),
+                            children: (0, i.jsx)(d.K0, {
+                                icon: d.DpX,
+                                "aria-label": D.intl.string(D.t["LR+Ptf"]),
                                 size: "sm",
                                 variant: "icon-only",
                                 onClick: () => {
-                                    (0, O.YX)(P.uss.TEXT_CHAT_V3, {
-                                        type: O.Z5.INVITE,
-                                        value: O.IP.PANEL_OPENED,
+                                    (0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                                        type: I.Z5.INVITE,
+                                        value: I.IP.PANEL_OPENED,
                                         secondaryValue: "add_members",
                                     }),
                                         (0, g.Jz)({
                                             channel: t,
                                             onComplete: (e) => {
-                                                (0, j.D$)({
+                                                (0, N.D$)({
                                                     target: {
-                                                        kind: j.bB.CHANNEL,
+                                                        kind: N.bB.CHANNEL,
                                                         channelId: e,
                                                         guildId: null,
                                                         messageId: null,
                                                     },
                                                     source: w.B.MANUAL,
-                                                    widgetType: P.uss.TEXT_CHAT_V3,
+                                                    widgetType: L.uss.TEXT_CHAT_V3,
                                                 });
                                             },
                                         });
@@ -285,188 +183,143 @@ function F(e) {
           })
         : null;
 }
-
-function H(e) {
-    let { channel: t, pinsOpen: n, onTogglePinsPopout: r, onRequestClosePinsPopout: l } = e;
+function P(e) {
+    let { channel: t, pinsOpen: n, onTogglePinsPopout: l, onRequestClosePinsPopout: a } = e;
     return null == t || t.isPrivate()
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(z, {
-                      channel: t,
-                  }),
-                  (0, i.jsx)(V, {
-                      channel: t,
-                      pinsOpen: n,
-                      onTogglePinsPopout: r,
-                      onRequestClosePinsPopout: l,
-                  }),
+                  (0, i.jsx)(V, { channel: t }),
+                  (0, i.jsx)(z, { channel: t, pinsOpen: n, onTogglePinsPopout: l, onRequestClosePinsPopout: a }),
               ],
           });
 }
-
-function Y(e) {
-    var t;
-    let { channel: n, user: l, guild: d, title: f, dragStart: g, dragging: b } = e,
-        { hasFriendList: M } = (0, _.M8)("TextChatHeader"),
-        [L, U] = r.useState(!1),
-        V = (0, s.bG)([A.A], () => A.A.getChannelId(), []),
-        z = (null == n ? void 0 : n.isDM()) && null != (t = null == l ? void 0 : l.id) ? t : null,
-        Y = (0, N.p)(z),
-        W = V === (null == n ? void 0 : n.id),
-        K = R.intl.string(D.default.tYPfF2),
-        B = (0, s.bG)(
-            [y.A],
-            () => ((null == n ? void 0 : n.isThread()) && null != n.parent_id ? y.A.getChannel(n.parent_id) : null),
-            [n],
-        ),
-        Z = (0, s.bG)([E.default, v.A], () => (null != B ? (0, h.m1)(B, E.default, v.A) : null), [B]),
-        X = (0, s.bG)([], () => {
-            var e, t;
+function G(e) {
+    let { channel: t, user: n, guild: a, title: c, dragStart: m, dragging: g } = e,
+        { hasFriendList: x } = (0, C.M8)("TextChatHeader"),
+        [z, V] = l.useState(!1),
+        G = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
+        H = t?.isDM() ? (n?.id ?? null) : null,
+        Y = (0, j.p)(H),
+        F = G === t?.id,
+        W = D.intl.string(R.default.tYPfF2),
+        K = (0, r.bG)([f.A], () => (t?.isThread() && null != t.parent_id ? f.A.getChannel(t.parent_id) : null), [t]),
+        Z = (0, r.bG)([S.default, E.A], () => (null != K ? (0, h.m1)(K, S.default, E.A) : null), [K]),
+        B = (0, r.bG)([], () => {
+            var e, i;
             return (
-                (e = n),
-                (t = l),
+                (e = t),
+                (i = n),
                 null == e
                     ? null
-                    : e.isDM() && null != t
-                      ? v.A.isFriend(t.id)
-                          ? {
-                                tab: x.x.FRIENDS,
-                                targetId: t.id,
-                            }
+                    : e.isDM() && null != i
+                      ? E.A.isFriend(i.id)
+                          ? { tab: T.x.FRIENDS, targetId: i.id }
                           : null
-                      : (0, m.ke)(e.type)
-                        ? {
-                              tab: x.x.MESSAGES,
-                              targetId: e.id,
-                          }
-                        : (0, m.ay)(e.type)
-                          ? {
-                                tab: x.x.VOICE,
-                                targetId: e.id,
-                            }
+                      : (0, p.ke)(e.type)
+                        ? { tab: T.x.MESSAGES, targetId: e.id }
+                        : (0, p.ay)(e.type)
+                          ? { tab: T.x.VOICE, targetId: e.id }
                           : null
             );
-        }, [n, l]),
-        J = r.useCallback(
+        }, [t, n]),
+        X = l.useCallback(
             (e) => {
-                G(n) &&
-                    ((0, O.YX)(P.uss.TEXT_CHAT_V3, {
-                        type: O.Z5.CALL_BUTTON,
-                        value: O.IP.ENABLED,
+                k(t) &&
+                    ((0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                        type: I.Z5.CALL_BUTTON,
+                        value: I.IP.ENABLED,
                         secondaryValue: e ? "video" : "voice",
                     }),
-                    c.A.call(n.id, e, !0, n.isDM() ? n.getRecipientId() : null));
+                    u.A.call(t.id, e, !0, t.isDM() ? t.getRecipientId() : null));
             },
-            [n],
+            [t],
         ),
-        Q = r.useCallback(() => {
-            (null == n ? void 0 : n.id) != null &&
-                U((e) => {
+        J = l.useCallback(() => {
+            t?.id != null &&
+                V((e) => {
                     let t = !e;
                     return (
                         t &&
-                            (0, O.YX)(P.uss.TEXT_CHAT_V3, {
-                                type: O.Z5.TEXT_CHAT,
-                                value: O.IP.PANEL_OPENED,
+                            (0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                                type: I.Z5.TEXT_CHAT,
+                                value: I.IP.PANEL_OPENED,
                                 secondaryValue: "pins",
                             }),
                         t
                     );
                 });
-        }, [null == n ? void 0 : n.id]);
+        }, [t?.id]);
     return (0, i.jsxs)("div", {
-        className: a()(k.XV, b && k.cB),
+        className: s()(M.XV, g && M.cB),
         onMouseDown: (e) => {
-            0 === e.button && g(S.P.MOVE, e.clientX, e.clientY);
+            0 === e.button && m(v.P.MOVE, e.clientX, e.clientY);
         },
         children: [
             (0, i.jsxs)("div", {
-                className: k.LD,
+                className: M.LD,
                 children: [
                     (0, i.jsx)("div", {
-                        className: k.gr,
-                        children: (0, i.jsx)(C.J, {
+                        className: M.gr,
+                        children: (0, i.jsx)(b.J, {
                             application: Y,
-                            fallback: (0, i.jsx)(T.g, {
-                                channel: null,
-                                user: l,
-                                guild: d,
-                                size: T.c.SIZE_24,
-                            }),
+                            fallback: (0, i.jsx)(O.g, { channel: null, user: n, guild: a, size: O.c.SIZE_24 }),
                         }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: k.G1,
+                        className: M.G1,
                         children: [
                             (() => {
-                                if (null != z) return null;
-                                let e = (0, p.gU)(n, d);
-                                return null != e
-                                    ? (0, i.jsx)(e, {
-                                          className: k.gr,
-                                          size: "xs",
-                                      })
-                                    : null;
+                                if (null != H) return null;
+                                let e = (0, A.gU)(t, a);
+                                return null != e ? (0, i.jsx)(e, { className: M.gr, size: "xs" }) : null;
                             })(),
-                            null != B && null != Z
+                            null != K && null != Z
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(u.DUT, {
-                                              className: k.oH,
+                                          (0, i.jsx)(d.DUT, {
+                                              className: M.oH,
                                               onMouseDown: (e) => e.stopPropagation(),
                                               onClick: (e) => {
-                                                  var t, n, i;
                                                   e.stopPropagation(),
-                                                      (0, j.D$)({
+                                                      (0, N.D$)({
                                                           target: {
-                                                              kind: j.bB.CHANNEL,
-                                                              channelId: B.id,
-                                                              guildId:
-                                                                  null !=
-                                                                  (t =
-                                                                      null !=
-                                                                      (n =
-                                                                          null == (i = B.getGuildId)
-                                                                              ? void 0
-                                                                              : i.call(B))
-                                                                          ? n
-                                                                          : B.guild_id)
-                                                                      ? t
-                                                                      : null,
+                                                              kind: N.bB.CHANNEL,
+                                                              channelId: K.id,
+                                                              guildId: K.getGuildId?.() ?? K.guild_id ?? null,
                                                               messageId: null,
                                                           },
                                                           source: w.B.MANUAL,
-                                                          widgetType: P.uss.TEXT_CHAT_V3,
+                                                          widgetType: L.uss.TEXT_CHAT_V3,
                                                       });
                                               },
-                                              children: (0, i.jsx)(u.Text, {
+                                              children: (0, i.jsx)(d.Text, {
                                                   variant: "text-sm/medium",
                                                   color: "text-muted",
                                                   children: Z,
                                               }),
                                           }),
-                                          (0, i.jsx)(u._BQ, {
-                                              className: k.ln,
+                                          (0, i.jsx)(d._BQ, {
+                                              className: M.ln,
                                               size: "xs",
-                                              color: u.LU0.colors.TEXT_MUTED,
+                                              color: d.LU0.colors.TEXT_MUTED,
                                           }),
                                       ],
                                   })
                                 : null,
-                            (0, i.jsxs)(u.Text, {
-                                className: k.DD,
+                            (0, i.jsxs)(d.Text, {
+                                className: M.DD,
                                 variant: "text-sm/medium",
                                 color: "text-strong",
                                 children: [
-                                    f,
-                                    (null == Y ? void 0 : Y.name) != null && "" !== Y.name
-                                        ? (0, i.jsx)(u.Text, {
+                                    c,
+                                    Y?.name != null && "" !== Y.name
+                                        ? (0, i.jsx)(d.Text, {
                                               tag: "span",
-                                              className: k.X7,
+                                              className: M.X7,
                                               variant: "text-xs/medium",
                                               color: "text-muted",
-                                              children: R.intl.formatToPlainString(D.default.x1k3cO, {
+                                              children: D.intl.formatToPlainString(R.default.x1k3cO, {
                                                   gameName: Y.name,
                                               }),
                                           })
@@ -478,56 +331,54 @@ function Y(e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: k.IE,
+                className: M.IE,
                 onMouseDown: (e) => {
                     e.stopPropagation();
                 },
                 children: [
-                    (0, i.jsx)(F, {
-                        channel: n,
-                        onStartPrivateCall: J,
-                        pinsOpen: L,
-                        onTogglePinsPopout: Q,
-                        onRequestClosePinsPopout: () => U(!1),
+                    (0, i.jsx)(U, {
+                        channel: t,
+                        onStartPrivateCall: X,
+                        pinsOpen: z,
+                        onTogglePinsPopout: J,
+                        onRequestClosePinsPopout: () => V(!1),
                     }),
-                    (0, i.jsx)(H, {
-                        channel: n,
-                        pinsOpen: L,
-                        onTogglePinsPopout: Q,
-                        onRequestClosePinsPopout: () => U(!1),
+                    (0, i.jsx)(P, {
+                        channel: t,
+                        pinsOpen: z,
+                        onTogglePinsPopout: J,
+                        onRequestClosePinsPopout: () => V(!1),
                     }),
-                    M &&
-                        null != X &&
-                        (0, i.jsx)(I.j, {
-                            tab: X.tab,
-                            targetId: X.targetId,
-                            widgetType: P.uss.TEXT_CHAT_V3,
+                    x &&
+                        null != B &&
+                        (0, i.jsx)(y.j, {
+                            tab: B.tab,
+                            targetId: B.targetId,
+                            widgetType: L.uss.TEXT_CHAT_V3,
                             shouldStopPropagation: !1,
                         }),
-                    (null == n ? void 0 : n.id) != null &&
+                    t?.id != null &&
                         (0, i.jsx)(o.m, {
-                            text: W ? K : R.intl.string(D.default.ERApc4),
-                            "aria-label": W ? K : R.intl.string(D.default.ERApc4),
-                            children: (0, i.jsx)(u.K0, {
-                                icon: W ? u.gR : u.PGe,
-                                "aria-label": W ? K : R.intl.string(D.default.ERApc4),
+                            text: F ? W : D.intl.string(R.default.ERApc4),
+                            "aria-label": F ? W : D.intl.string(R.default.ERApc4),
+                            children: (0, i.jsx)(d.K0, {
+                                icon: F ? d.gR : d.PGe,
+                                "aria-label": F ? W : D.intl.string(R.default.ERApc4),
                                 size: "sm",
                                 variant: "icon-only",
                                 onClick: () => {
-                                    if (W) {
-                                        (0, O.YX)(P.uss.TEXT_CHAT_V3, {
-                                            type: O.Z5.TEXT_CHAT,
-                                            value: O.IP.CLOSED_TEXT_CHAT,
+                                    if (F) {
+                                        (0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                                            type: I.Z5.TEXT_CHAT,
+                                            value: I.IP.CLOSED_TEXT_CHAT,
                                             secondaryValue: "minimize_voice",
                                         }),
-                                            (0, j.S$)({
-                                                minimized: !0,
-                                            });
+                                            (0, N.S$)({ minimized: !0 });
                                         return;
                                     }
-                                    (0, j.lu)({
-                                        channelId: n.id,
-                                        widgetType: P.uss.TEXT_CHAT_V3,
+                                    (0, N.lu)({
+                                        channelId: t.id,
+                                        widgetType: L.uss.TEXT_CHAT_V3,
                                         secondaryValue: "close_button",
                                     });
                                 },

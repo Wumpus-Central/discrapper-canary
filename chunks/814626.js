@@ -1,57 +1,33 @@
-n.d(t, {
-    A: () => h,
-    k: () => o,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => f, k: () => a });
+var r = n(311907),
+    i = n(73153),
+    a = (function (e) {
+        return (e[(e.UNKNOWN = 0)] = "UNKNOWN"), (e[(e.PENDING = 1)] = "PENDING"), (e[(e.DONE = 2)] = "DONE"), e;
+    })({});
+let s = 0,
+    o = null,
+    l = null,
+    u = null;
+function c(e) {
+    (s = 1), (o = e.loadId);
 }
-var o = (function (e) {
-    return (e[(e.UNKNOWN = 0)] = "UNKNOWN"), (e[(e.PENDING = 1)] = "PENDING"), (e[(e.DONE = 2)] = "DONE"), e;
-})({});
-let l = 0,
-    c = null,
-    u = null,
-    d = null;
-
-function f(e) {
-    (l = 1), (c = e.loadId);
+function d(e) {
+    o === e.loadId && ((l = e.skuId ?? null), (u = e.skuSubscriptionPlanId ?? null), (s = 2));
 }
-
-function p(e) {
-    var t, n;
-    c === e.loadId &&
-        ((u = null != (t = e.skuId) ? t : null), (d = null != (n = e.skuSubscriptionPlanId) ? n : null), (l = 2));
-}
-class _ extends (r = i.Ay.Store) {
+class _ extends r.Ay.Store {
+    static displayName = "BrowserCheckoutStateStore";
     get browserCheckoutState() {
-        return l;
+        return s;
     }
     get loadId() {
-        return c;
+        return o;
     }
     get skuId() {
-        return u;
+        return l;
     }
     get planId() {
-        return d;
+        return u;
     }
 }
-s(_, "displayName", "BrowserCheckoutStateStore");
-let h = new _(a.h, {
-    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: f,
-    USER_PAYMENT_BROWSER_CHECKOUT_DONE: p,
-});
+let f = new _(i.h, { USER_PAYMENT_BROWSER_CHECKOUT_STARTED: c, USER_PAYMENT_BROWSER_CHECKOUT_DONE: d });

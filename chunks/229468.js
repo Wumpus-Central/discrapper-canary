@@ -1,3 +1,1 @@
-e.exports = {
-    ut: "closeIcon_ec3eb0",
-};
+e.exports = { ut: "closeIcon_ec3eb0" };

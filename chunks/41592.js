@@ -1,6 +1,5 @@
-r.d(t, {
-    Z: () => n,
-});
+"use strict";
+r.d(t, { Z: () => n });
 var n = function (e, t, r, n, o) {
     var a = o.clientWidth,
         i = o.clientHeight,
@@ -11,23 +10,11 @@ var n = function (e, t, r, n, o) {
     if ("vertical" === r) {
         var p = void 0;
         if (((p = c < 0 ? 0 : c > i ? 1 : Math.round((100 * c) / i) / 100), t.a !== p))
-            return {
-                h: t.h,
-                s: t.s,
-                l: t.l,
-                a: p,
-                source: "rgb",
-            };
+            return { h: t.h, s: t.s, l: t.l, a: p, source: "rgb" };
     } else {
         var d = void 0;
         if (n !== (d = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
-            return {
-                h: t.h,
-                s: t.s,
-                l: t.l,
-                a: d,
-                source: "rgb",
-            };
+            return { h: t.h, s: t.s, l: t.l, a: d, source: "rgb" };
     }
     return null;
 };

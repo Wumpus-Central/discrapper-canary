@@ -1,11 +1,5 @@
-n.d(t, {
-    B5: () => a,
-    Vf: () => l,
-    _e: () => i,
-    i7: () => s,
-    j5: () => o,
-    rX: () => r,
-});
+"use strict";
+n.d(t, { B5: () => a, Vf: () => l, _e: () => i, i7: () => s, j5: () => o, rX: () => r });
 var r = (function (e) {
         return (
             (e.TERMS = "TERMS"),
@@ -28,11 +22,9 @@ var r = (function (e) {
             e
         );
     })({});
-
 function s(e) {
     return null != e && "TERMS" === e.field_type;
 }
-
 function o(e) {
     return null != e && e.some((e) => !s(e));
 }

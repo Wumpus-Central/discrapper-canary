@@ -1,107 +1,77 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => y });
 var r = n(627968),
     i = n(64700),
     a = n(353640),
     s = n(110259),
     o = n(554146),
     l = n(342494),
-    c = n(397927),
-    u = n(359549),
+    u = n(397927),
+    c = n(359549),
     d = n(793574),
-    f = n(688810),
-    p = n(139286),
-    _ = n(627363),
+    _ = n(688810),
+    f = n(139286),
+    p = n(627363),
     h = n(826673),
     m = n(379848),
     g = n(49999),
     E = n(985018),
-    b = n(529071);
-let y = (0, a.v)((e) => ({
-        activeEntryId: null,
-        setActiveEntryId: (t) =>
-            e({
-                activeEntryId: t,
-            }),
-    })),
-    O = (e) => {
+    A = n(529071);
+let I = (0, a.v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) })),
+    T = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: a } = e,
-            { data: O } = (0, _.YY)(t.extra.application_id),
-            { analyticsLocations: A } = (0, f.Ay)(d.A.CLOUD_PLAY_POPOVER),
-            v = (0, u.A)({
-                application: O,
-                analyticsLocations: A,
-            }),
-            S = (0, h.JZ)(o.M.CLOUD_PLAY_NEW_BADGE),
-            I = null != v && !S && n,
-            { activeEntryId: T, setActiveEntryId: C } = y(),
-            N = T === t.id,
-            R = I && N ? [o.M.CLOUD_PLAY_POPOVER] : [],
-            [w, P] = (0, m.kn)(R),
-            D = w === o.M.CLOUD_PLAY_POPOVER;
+            { data: T } = (0, p.YY)(t.extra.application_id),
+            { analyticsLocations: y } = (0, _.Ay)(d.A.CLOUD_PLAY_POPOVER),
+            S = (0, c.A)({ application: T, analyticsLocations: y }),
+            v = (0, h.JZ)(o.M.CLOUD_PLAY_NEW_BADGE),
+            C = null != S && !v && n,
+            { activeEntryId: b, setActiveEntryId: N } = I(),
+            R = b === t.id,
+            O = C && R ? [o.M.CLOUD_PLAY_POPOVER] : [],
+            [D, L] = (0, m.kn)(O),
+            w = D === o.M.CLOUD_PLAY_POPOVER;
         i.useEffect(() => {
-            I && null === T && C(t.id);
-        }, [T, I, t.id, C]);
+            C && null === b && N(t.id);
+        }, [b, C, t.id, N]);
         let x = () => {
-            null == v || v();
+            S?.();
         };
         i.useEffect(
             () => () => {
-                D && (P(g.i.USER_DISMISS), C(null));
+                w && (L(g.i.USER_DISMISS), N(null));
             },
-            [D, P, C],
+            [w, L, N],
         );
-        let [L, j] = i.useState(!1);
+        let [P, M] = i.useState(!1);
         i.useEffect(() => {
-            D && !L && j(!0);
-        }, [D, L]),
-            (0, p.A)(
+            w && !P && M(!0);
+        }, [w, P]),
+            (0, f.A)(
                 {
                     name: s.ImpressionNames.CLOUD_PLAY_CTA,
                     type: s.ImpressionTypes.VIEW,
-                    properties: {
-                        location_stack: A,
-                    },
+                    properties: { location_stack: y },
                 },
-                {
-                    disableTrack: !L,
-                },
-                [L],
+                { disableTrack: !P },
+                [P],
             );
-        let M = () => {
-            P(g.i.USER_DISMISS), C(null);
+        let k = () => {
+            L(g.i.USER_DISMISS), N(null);
         };
         return (0, r.jsx)(l.AM, {
             title: E.intl.string(E.t["+WNDtV"]),
             body: E.intl.string(E.t["5QKxGI"]),
             targetElementRef: a,
-            shouldShow: D,
+            shouldShow: w,
             position: "left",
-            caretConfig: {
-                align: "center",
-            },
+            caretConfig: { align: "center" },
             gradientColor: "pink",
-            graphic: {
-                type: "image",
-                src: b.A,
-            },
-            actions: [
-                {
-                    icon: c.hpF,
-                    text: E.intl.string(E.t["jaYS/h"]),
-                    onClick: x,
-                },
-            ],
-            onRequestClose: M,
+            graphic: { type: "image", src: A.A },
+            actions: [{ icon: u.hpF, text: E.intl.string(E.t["jaYS/h"]), onClick: x }],
+            onRequestClose: k,
         });
     },
-    A = (e) => {
+    y = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: i } = e;
-        return (0, r.jsx)(O, {
-            entry: t,
-            targetElementRef: i,
-            isFirstApplicationOccurrence: n,
-        });
+        return (0, r.jsx)(T, { entry: t, targetElementRef: i, isFirstApplicationOccurrence: n });
     };

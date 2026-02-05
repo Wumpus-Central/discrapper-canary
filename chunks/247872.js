@@ -1,23 +1,8 @@
-n.d(t, {
-    A: () => a,
-}),
-    n(65821);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(340619);
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class a {
+class i {
+    pool = {};
     async acquire(e, t) {
         let n = await r.A.get(e, t, this);
         return (this.pool[n.id] = n), n;
@@ -29,8 +14,5 @@ class a {
     release(e) {
         if (e.pool !== this) throw Error("DesktopInputPool: Input not from this pool");
         this.pool[e.id] = e;
-    }
-    constructor() {
-        i(this, "pool", {});
     }
 }

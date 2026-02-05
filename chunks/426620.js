@@ -1,50 +1,27 @@
-n.d(t, {
-    A: () => f,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => c });
+var r = n(311907),
+    i = n(73153);
+let a = null;
+function s() {
+    (a = null), u.persist();
 }
-let o = null;
-
-function l() {
-    (o = null), d.persist();
-}
-
-function c(e) {
+function o(e) {
     let { newUserType: t } = e;
-    (o = t), d.persist();
+    (a = t), u.persist();
 }
-class u extends (r = i.Ay.PersistedStore) {
+class l extends r.Ay.PersistedStore {
+    static displayName = "NewUserStore";
+    static persistKey = "nuf";
     initialize(e) {
-        var t;
-        o = null != (t = null == e ? void 0 : e.type) ? t : null;
+        a = e?.type ?? null;
     }
     getType() {
-        return o;
+        return a;
     }
     getState() {
-        return {
-            type: o,
-        };
+        return { type: a };
     }
 }
-s(u, "displayName", "NewUserStore"), s(u, "persistKey", "nuf");
-let d = new u(a.h, {
-        NUF_NEW_USER: c,
-        NUF_COMPLETE: l,
-    }),
-    f = d;
+let u = new l(i.h, { NUF_NEW_USER: o, NUF_COMPLETE: s }),
+    c = u;

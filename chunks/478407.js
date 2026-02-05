@@ -1,56 +1,38 @@
-n.d(t, {
-    A: () => u,
-}),
-    n(638769),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    s = n(397927),
-    a = n(166403),
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
+    r = n(311907),
+    a = n(397927),
+    l = n(166403),
     o = n(510898),
     c = n(985018),
     d = n(104579);
-
 function u(e) {
     let { onGoBack: t } = e,
-        n = (0, l.yK)([a.A], () => {
-            var e, t;
-            return null !=
-                (e =
-                    null == (t = a.A.getActiveApplicationSubscriptions())
-                        ? void 0
-                        : t.slice().sort((e, t) => {
-                              var n, r, i, l;
-                              return (
-                                  (null != (n = null == (i = e.createdAt) ? void 0 : i.getTime())
-                                      ? n
-                                      : e.currentPeriodStart.getTime()) -
-                                  (null != (r = null == (l = t.createdAt) ? void 0 : l.getTime())
-                                      ? r
-                                      : t.currentPeriodStart.getTime())
-                              );
-                          }))
-                ? e
-                : [];
-        }),
-        [s, u] = i.useState();
+        n = (0, r.yK)(
+            [l.A],
+            () =>
+                l.A.getActiveApplicationSubscriptions()
+                    ?.slice()
+                    .sort(
+                        (e, t) =>
+                            (e.createdAt?.getTime() ?? e.currentPeriodStart.getTime()) -
+                            (t.createdAt?.getTime() ?? t.currentPeriodStart.getTime()),
+                    ) ?? [],
+        ),
+        [a, u] = s.useState();
     return (
-        null == s &&
-            (s = (0, r.jsx)(_, {
-                onBack: t,
-                title: c.intl.string(c.t["DB/m9a"]),
-            })),
-        (0, r.jsxs)("div", {
+        null == a && (a = (0, i.jsx)(_, { onBack: t, title: c.intl.string(c.t["DB/m9a"]) })),
+        (0, i.jsxs)("div", {
             children: [
-                s,
-                (0, r.jsx)("div", {
+                a,
+                (0, i.jsx)("div", {
                     className: d.A,
-                    children: (0, r.jsx)(o.A, {
+                    children: (0, i.jsx)(o.A, {
                         subscriptions: n,
                         updateHeader: (e, t) => {
                             u(
-                                (0, r.jsx)(_, {
+                                (0, i.jsx)(_, {
                                     title: e,
                                     onBack: () => {
                                         t(), u(void 0);
@@ -64,25 +46,18 @@ function u(e) {
         })
     );
 }
-
 function _(e) {
     let { onBack: t, title: n } = e;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: d.D,
         children: [
-            (0, r.jsx)(s.K0, {
+            (0, i.jsx)(a.K0, {
                 "aria-label": c.intl.string(c.t["13/7kX"]),
-                icon: () =>
-                    (0, r.jsx)(s.Zge, {
-                        size: "sm",
-                    }),
+                icon: () => (0, i.jsx)(a.Zge, { size: "sm" }),
                 onClick: t,
                 variant: "icon-only",
             }),
-            (0, r.jsx)(s.Heading, {
-                variant: "heading-lg/semibold",
-                children: n,
-            }),
+            (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", children: n }),
         ],
     });
 }

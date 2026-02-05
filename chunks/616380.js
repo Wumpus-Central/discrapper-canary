@@ -1,3 +1,4 @@
+"use strict";
 var r = n(439619),
     i = n(142896),
     a = i(r("String.prototype.indexOf"));

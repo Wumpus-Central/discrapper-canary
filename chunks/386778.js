@@ -41,9 +41,6 @@
         },
         dayOfMonthOrdinalParse: /ọjọ́\s\d{1,2}/,
         ordinal: "ọjọ́ %d",
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

@@ -1,9 +1,5 @@
-n.d(t, {
-    BM: () => c,
-    Re: () => l,
-    r$: () => u,
-}),
-    n(65821);
+"use strict";
+n.d(t, { BM: () => u, Re: () => l, r$: () => c });
 var r = n(562465);
 n(73153);
 var i = n(626584),
@@ -20,7 +16,7 @@ var l = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.ONE_TIME = 1)] = "ONE_TIME"),
@@ -28,30 +24,13 @@ var l = (function (e) {
             e
         );
     })({});
-async function u(e) {
+async function c(e) {
     try {
-        return (
-            (
-                await r.Bo.get({
-                    url: s.Rsh.ORDER_GET(e),
-                    rejectWithError: !0,
-                })
-            ).body || null
-        );
+        return (await r.Bo.get({ url: s.Rsh.ORDER_GET(e), rejectWithError: !0 })).body || null;
     } catch (t) {
         return (
-            o.error("failed to fetch order", {
-                error: t,
-                orderId: e,
-            }),
-            (0, a.pM)(t, {
-                tags: {
-                    source: "OrderActionCreators_getOrder",
-                },
-                extra: {
-                    orderId: e,
-                },
-            }),
+            o.error("failed to fetch order", { error: t, orderId: e }),
+            (0, a.pM)(t, { tags: { source: "OrderActionCreators_getOrder" }, extra: { orderId: e } }),
             null
         );
     }

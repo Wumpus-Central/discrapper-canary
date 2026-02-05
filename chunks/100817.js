@@ -1,17 +1,11 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => a });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(985018);
-
-function s() {
-    return (0, r.jsx)(i.D0$, {
-        label: a.intl.string(a.t.EPVq00),
-        children: (0, r.jsx)(i.po8, {
-            messageType: i.YCn.WARNING,
-            children: a.intl.string(a.t.uggF7o),
-        }),
+var s = n(397927),
+    r = n(985018);
+function a() {
+    return (0, i.jsx)(s.D0$, {
+        label: r.intl.string(r.t.EPVq00),
+        children: (0, i.jsx)(s.po8, { messageType: s.YCn.WARNING, children: r.intl.string(r.t.uggF7o) }),
     });
 }

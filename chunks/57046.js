@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     _A: "tags__3f6df",
     JE: "addTags__3f6df",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rf: "body__89307",
     DD: "title__89307",

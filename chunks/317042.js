@@ -1,68 +1,28 @@
-n.d(t, {
-    P: () => T,
-    default: () => C,
-}),
-    n(896048);
+"use strict";
+n.d(t, { P: () => v, default: () => C });
 var r = n(627968),
     i = n(64700),
     a = n(793574),
     s = n(688810),
     o = n(429913),
     l = n(937008),
-    c = n(156312),
-    u = n(166532),
+    u = n(156312),
+    c = n(166532),
     d = n(491057),
-    f = n(546042),
-    p = n(721252),
-    _ = n(67480),
+    _ = n(546042),
+    f = n(721252),
+    p = n(67480),
     h = n(328968),
     m = n(733391),
     g = n(11054),
     E = n(639149),
-    b = n(941673),
-    y = n(818348);
-
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                O(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let v = function () {
+    A = n(941673),
+    I = n(818348);
+let T = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return (t, n, i) =>
-        (0, r.jsx)(E.A, {
-            step: i,
-            onClose: () => n(!1),
-            isGift: e,
-        });
+    return (t, n, i) => (0, r.jsx)(E.A, { step: i, onClose: () => n(!1), isGift: e });
 };
-
-function S(e) {
+function y(e) {
     let {
             onClose: t,
             onComplete: n,
@@ -70,76 +30,69 @@ function S(e) {
             applicationId: a,
             analyticsLocationObject: o,
             skuId: l,
-            isGift: u,
+            isGift: c,
         } = e,
-        {} = (0, c.P5)(),
+        {} = (0, u.P5)(),
         { analyticsLocations: d } = (0, s.Ay)();
-    return (0, r.jsx)(f.PaymentModal, {
+    return (0, r.jsx)(_.PaymentModal, {
         onClose: t,
         onComplete: n,
         applicationId: a,
         skuId: l,
-        renderHeader: v(u),
+        renderHeader: T(c),
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
         transitionState: i,
     });
 }
-
-function I() {
+function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
-        p.kJ,
-        ...(e ? [b.gj] : []),
-        p.zK,
-        ...p.hh,
-        p.r2,
-        {
-            key: u.pn.CONFIRM,
-            renderStep: (e) => (0, r.jsx)(g.M, A({}, e)),
-        },
+        f.kJ,
+        ...(e ? [A.gj] : []),
+        f.zK,
+        ...f.hh,
+        f.r2,
+        { key: c.pn.CONFIRM, renderStep: (e) => (0, r.jsx)(g.M, { ...e }) },
     ];
 }
-let T = (e) => {
+let v = (e) => {
     let { applicationId: t, skuId: n, analyticsLocations: r } = e,
         { analyticsLocations: l } = (0, s.Ay)(r, a.A.SLAYER_STOREFRONT_PAYMENT_MODAL),
-        c = (0, o.h)(t);
+        u = (0, o.h)(t);
     return (
         i.useEffect(() => {
-            null == c ||
-                null == c.guildId ||
+            null == u ||
+                null == u.guildId ||
                 null == n ||
                 h.A.isFetchingForSKU(n) ||
-                null != _.A.get(n) ||
-                (0, m.qf)(c.guildId, n);
-        }, [c, n]),
-        {
-            analyticsLocations: l,
-        }
+                null != p.A.get(n) ||
+                (0, m.qf)(u.guildId, n);
+        }, [u, n]),
+        { analyticsLocations: l }
     );
 };
-
 function C(e) {
-    let { loadId: t, applicationId: n, isGift: i = !1, giftRecipient: a, giftingOrigin: o, additionalUserIds: u } = e,
-        { analyticsLocations: f } = T(e);
+    let { loadId: t, applicationId: n, isGift: i = !1, giftRecipient: a, giftingOrigin: o, additionalUserIds: c } = e,
+        { analyticsLocations: _ } = v(e);
     return (0, r.jsx)(s.f5, {
-        value: f,
-        children: (0, r.jsx)(c.PaymentContextProvider, {
+        value: _,
+        children: (0, r.jsx)(u.PaymentContextProvider, {
             loadId: t,
-            stepConfigs: I(i),
+            stepConfigs: S(i),
             applicationId: n,
             skuIDs: [e.skuId],
             activeSubscription: null,
-            purchaseType: y.VV.ONE_TIME,
+            purchaseType: I.VV.ONE_TIME,
             isGift: i,
             children: (0, r.jsx)(d.Qt, {
                 children: (0, r.jsx)(l.dX, {
                     isGift: i,
                     giftRecipient: a,
                     giftingOrigin: o,
-                    additionalUserIds: u,
-                    children: (0, r.jsx)(S, A({}, e)),
+                    additionalUserIds: c,
+                    children: (0, r.jsx)(y, { ...e }),
                 }),
             }),
         }),

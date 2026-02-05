@@ -1,59 +1,20 @@
-r.d(t, {
-    A: () => c,
-});
-var n = r(627968);
-r(64700);
-var o = r(397927),
-    u = r(827343),
-    i = r(579872),
-    l = r(48686),
-    a = r(985018);
-
-function c(e, t, c) {
-    t && (0, l.t)()
-        ? (0, o.mMO)(async () => {
-              let { default: e } = await r.e("9586").then(r.bind(r, 742089));
-              return (t) =>
-                  (0, n.jsx)(
-                      e,
-                      (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      }),
-                                  )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = r[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: n,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = n);
-                                  });
-                          }
-                          return e;
-                      })({}, t),
-                  );
+n.d(t, { A: () => o });
+var r = n(627968);
+n(64700);
+var a = n(397927),
+    l = n(827343),
+    i = n(579872),
+    u = n(48686),
+    s = n(985018);
+function o(e, t, o) {
+    t && (0, u.t)()
+        ? (0, a.mMO)(async () => {
+              let { default: e } = await n.e("9586").then(n.bind(n, 742089));
+              return (t) => (0, r.jsx)(e, { ...t });
           })
         : t
-          ? i.A.show({
-                title: a.intl.string(a.t.FJSZVM),
-                body: a.intl.string(a.t.etJjgW),
-            })
+          ? i.A.show({ title: s.intl.string(s.t.FJSZVM), body: s.intl.string(s.t.etJjgW) })
           : e
-            ? i.A.show({
-                  title: a.intl.string(a.t["+JQCa/"]),
-                  body: a.intl.string(a.t.hsNm7d),
-              })
-            : u.A.toggleSelfMute({
-                  location: c,
-              });
+            ? i.A.show({ title: s.intl.string(s.t["+JQCa/"]), body: s.intl.string(s.t.hsNm7d) })
+            : l.A.toggleSelfMute({ location: o });
 }

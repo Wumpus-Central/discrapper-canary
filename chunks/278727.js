@@ -1,10 +1,4 @@
-n.d(t, {
-    q: () => r,
-});
+t.d(l, { q: () => r });
 let r = Object.freeze({
-    EMBED: (e, t, n) =>
-        "https://embed.music.apple.com/"
-            .concat(e, "?theme=")
-            .concat(t, "&i=")
-            .concat(null != n ? encodeURIComponent(n) : ""),
+    EMBED: (e, l, t) => `https://embed.music.apple.com/${e}?theme=${l}&i=${null != t ? encodeURIComponent(t) : ""}`,
 });

@@ -1,14 +1,6 @@
-n.d(t, {
-    d: () => a,
-}),
-    n(896048);
-var l = n(654107);
-
-function a(e) {
-    let [t, n, a] = (0, l.rh)(e, "transparent"),
-        r = (0, l.D1)(e);
-    return {
-        backgroundGradient: "linear-gradient(45deg, ".concat(t, ", ").concat(null != a ? a : n, ")"),
-        hasFetchedColors: r,
-    };
+a.d(t, { d: () => i });
+var n = a(654107);
+function i(e) {
+    let [t, a, i] = (0, n.rh)(e, "transparent");
+    return { backgroundGradient: `linear-gradient(45deg, ${t}, ${i ?? a})`, hasFetchedColors: (0, n.D1)(e) };
 }

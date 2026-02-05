@@ -1,11 +1,8 @@
-n.d(t, {
-    A: () => a,
-});
-var r = n(64700),
-    i = n(216623);
-
-function a() {
-    r.useEffect(() => {
-        (0, i.AX)();
+r.d(t, { A: () => l });
+var s = r(64700),
+    n = r(216623);
+function l() {
+    s.useEffect(() => {
+        (0, n.AX)();
     }, []);
 }

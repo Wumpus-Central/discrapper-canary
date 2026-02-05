@@ -1,92 +1,56 @@
-n.d(t, {
-    R: () => _,
-    W: () => p,
-}),
-    n(896048);
+"use strict";
+n.d(t, { R: () => _, W: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(990078),
     l = n(36075),
-    c = n(707616);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function f(e) {
-    var t;
-    let { color: n, colors: a, className: o, background: u = !0, hoverOverride: d } = e,
-        [f, p] = i.useState(!1),
-        _ = null != (t = null == a ? void 0 : a.primaryColor) ? t : n,
+    u = n(707616);
+function c(e) {
+    let { color: t, colors: n, className: a, background: o = !0, hoverOverride: c } = e,
+        [d, _] = i.useState(!1),
+        f = n?.primaryColor ?? t,
         {
-            hasGradient: h,
-            stops: m,
-            gradientId: g,
-            animatedGradientId: E,
-        } = (0, l.RM)(_, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor);
-    return null == _
+            hasGradient: p,
+            stops: h,
+            gradientId: m,
+            animatedGradientId: g,
+        } = (0, l.RM)(f, n?.secondaryColor, n?.tertiaryColor);
+    return null == f
         ? null
         : (0, r.jsxs)("svg", {
-              className: s()(c.JW, o),
+              className: s()(u.JW, a),
               viewBox: "0 0 20 20",
               fill: "none",
               onMouseEnter: () => {
-                  p(!0);
+                  _(!0);
               },
               onMouseLeave: () => {
-                  p(!1);
+                  _(!1);
               },
               children: [
-                  h &&
+                  p &&
                       (0, r.jsxs)("defs", {
                           children: [
                               (0, r.jsx)("linearGradient", {
+                                  id: m,
+                                  x1: "0%",
+                                  y1: "0%",
+                                  x2: "100%",
+                                  y2: "0%",
+                                  spreadMethod: "reflect",
+                                  children: h,
+                              }),
+                              (0, r.jsxs)("linearGradient", {
                                   id: g,
                                   x1: "0%",
                                   y1: "0%",
                                   x2: "100%",
                                   y2: "0%",
                                   spreadMethod: "reflect",
-                                  children: m,
-                              }),
-                              (0, r.jsxs)("linearGradient", {
-                                  id: E,
-                                  x1: "0%",
-                                  y1: "0%",
-                                  x2: "100%",
-                                  y2: "0%",
-                                  spreadMethod: "reflect",
                                   children: [
-                                      m,
+                                      h,
                                       (0, r.jsx)("animate", {
                                           attributeName: "x1",
                                           from: "0%",
@@ -105,70 +69,39 @@ function f(e) {
                               }),
                           ],
                       }),
-                  u &&
+                  o &&
                       (0, r.jsx)("path", {
-                          className: c.Tp,
+                          className: u.Tp,
                           d: "M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z",
                       }),
+                  (0, r.jsx)("circle", { className: u.tH, cx: "10", cy: "10", r: "6" }),
+                  (0, r.jsx)("circle", { className: u.NA, cx: "10", cy: "10", r: "6", fill: p ? `url(#${m})` : f }),
                   (0, r.jsx)("circle", {
-                      className: c.tH,
-                      cx: "10",
-                      cy: "10",
-                      r: "6",
-                  }),
-                  (0, r.jsx)("circle", {
-                      className: c.NA,
-                      cx: "10",
-                      cy: "10",
-                      r: "6",
-                      fill: h ? "url(#".concat(g, ")") : _,
-                  }),
-                  (0, r.jsx)("circle", {
-                      className: c.Om,
+                      className: u.Om,
                       cx: "10",
                       cy: "10",
                       r: "5",
-                      fill: h ? "url(#".concat(d || f ? E : g, ")") : _,
+                      fill: p ? `url(#${c || d ? g : m})` : f,
                   }),
               ],
           });
 }
-
-function p(e) {
+function d(e) {
     let { color: t, colors: n, name: i, tooltip: a = !0 } = e;
     return null == t && null == n
         ? null
         : a
           ? (0, r.jsx)(o.m, {
                 __unsupportedReactNodeAsText: i,
-                children: (0, r.jsx)("span", {
-                    "aria-hidden": !0,
-                    children: (0, r.jsx)(f, d({}, e)),
-                }),
+                children: (0, r.jsx)("span", { "aria-hidden": !0, children: (0, r.jsx)(c, { ...e }) }),
             })
-          : (0, r.jsx)(f, d({}, e));
+          : (0, r.jsx)(c, { ...e });
 }
-
 function _(e) {
     let { color: t, colors: n, className: i } = e,
-        { gradientStyle: a, gradientClassname: o } = (0, l.v5)({
-            colorStrings: n,
-            roleStyle: "dot",
-        });
+        { gradientStyle: a, gradientClassname: o } = (0, l.v5)({ colorStrings: n, roleStyle: "dot" });
     if (null == t && null == n) return null;
-    let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d(
-            {},
-            u
-                ? a
-                : {
-                      backgroundColor: null != t ? t : void 0,
-                  },
-        );
-    return (0, r.jsx)("span", {
-        className: s()(c.Ni, i, {
-            [o]: u,
-        }),
-        style: f,
-    });
+    let c = null != n && null != n.primaryColor && null != n.secondaryColor,
+        d = { ...(c ? a : { backgroundColor: t ?? void 0 }) };
+    return (0, r.jsx)("span", { className: s()(u.Ni, i, { [o]: c }), style: d });
 }

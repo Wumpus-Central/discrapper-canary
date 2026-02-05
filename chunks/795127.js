@@ -1,6 +1,5 @@
-n.d(t, {
-    g: () => r,
-});
+"use strict";
+n.d(t, { g: () => r });
 let r = (e) => {
     switch (e) {
         case "top":

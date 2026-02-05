@@ -1,99 +1,90 @@
-var r = n(387739),
-    i = n(283369),
-    a = n(728309),
-    s = n(561627),
-    o = n(410475),
-    l = n(116740),
-    c = n(505932),
-    u = n(976427),
-    d = n(797686),
-    f = n(728601),
-    p = n(59061),
-    _ = n(436346),
-    h = n(451865),
-    m = l.OrderedSet,
-    g = {
-        replaceText: function (e, t, n, i, a) {
-            var s = _(p(e, t), t),
-                o = r.create({
-                    style: i || m(),
-                    entity: a || null,
-                });
-            return u(s, s.getSelectionAfter(), n, o);
+"use strict";
+var n = r(387739),
+    i = r(283369),
+    o = r(728309),
+    a = r(561627),
+    s = r(410475),
+    u = r(116740),
+    c = r(505932),
+    l = r(976427),
+    f = r(797686),
+    p = r(728601),
+    h = r(59061),
+    d = r(436346),
+    g = r(451865),
+    y = u.OrderedSet,
+    v = {
+        replaceText: function (t, e, r, i, o) {
+            var a = d(h(t, e), e),
+                s = n.create({ style: i || y(), entity: o || null });
+            return l(a, a.getSelectionAfter(), r, s);
         },
-        insertText: function (e, t, n, r, i) {
-            return t.isCollapsed() || d(!1), g.replaceText(e, t, n, r, i);
+        insertText: function (t, e, r, n, i) {
+            return e.isCollapsed() || f(!1), v.replaceText(t, e, r, n, i);
         },
-        moveText: function (e, t, n) {
-            var r = o(e, t),
-                i = g.removeRange(e, t, "backward");
-            return g.replaceWithFragment(i, n, r);
+        moveText: function (t, e, r) {
+            var n = s(t, e),
+                i = v.removeRange(t, e, "backward");
+            return v.replaceWithFragment(i, r, n);
         },
-        replaceWithFragment: function (e, t, n) {
-            var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA",
-                i = _(p(e, t), t);
-            return c(i, i.getSelectionAfter(), n, r);
+        replaceWithFragment: function (t, e, r) {
+            var n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA",
+                i = d(h(t, e), e);
+            return c(i, i.getSelectionAfter(), r, n);
         },
-        removeRange: function (e, t, n) {
-            t.getIsBackward() &&
-                (t = t.merge({
-                    anchorKey: t.getFocusKey(),
-                    anchorOffset: t.getFocusOffset(),
-                    focusKey: t.getAnchorKey(),
-                    focusOffset: t.getAnchorOffset(),
+        removeRange: function (t, e, r) {
+            e.getIsBackward() &&
+                (e = e.merge({
+                    anchorKey: e.getFocusKey(),
+                    anchorOffset: e.getFocusOffset(),
+                    focusKey: e.getAnchorKey(),
+                    focusOffset: e.getAnchorOffset(),
                     isBackward: !1,
                 })),
-                (r = t.getAnchorKey()),
-                (i = t.getFocusKey()),
-                (a = e.getBlockForKey(r));
-            var r,
+                (n = e.getAnchorKey()),
+                (i = e.getFocusKey()),
+                (o = t.getBlockForKey(n));
+            var n,
                 i,
-                a,
-                o = e.getBlockForKey(i),
-                l = t.getStartOffset(),
-                c = t.getEndOffset(),
-                u = a.getEntityAt(l),
-                d = o.getEntityAt(c - 1);
-            if (r === i && u && u === d) {
-                var f = s(e.getEntityMap(), a, o, t, n);
-                return _(e, f);
+                o,
+                s = t.getBlockForKey(i),
+                u = e.getStartOffset(),
+                c = e.getEndOffset(),
+                l = o.getEntityAt(u),
+                f = s.getEntityAt(c - 1);
+            if (n === i && l && l === f) {
+                var p = a(t.getEntityMap(), o, s, e, r);
+                return d(t, p);
             }
-            return _(p(e, t), t);
+            return d(h(t, e), e);
         },
-        splitBlock: function (e, t) {
-            var n = _(p(e, t), t);
-            return h(n, n.getSelectionAfter());
+        splitBlock: function (t, e) {
+            var r = d(h(t, e), e);
+            return g(r, r.getSelectionAfter());
         },
-        applyInlineStyle: function (e, t, n) {
-            return i.add(e, t, n);
+        applyInlineStyle: function (t, e, r) {
+            return i.add(t, e, r);
         },
-        removeInlineStyle: function (e, t, n) {
-            return i.remove(e, t, n);
+        removeInlineStyle: function (t, e, r) {
+            return i.remove(t, e, r);
         },
-        setBlockType: function (e, t, n) {
-            return f(e, t, function (e) {
-                return e.merge({
-                    type: n,
-                    depth: 0,
-                });
+        setBlockType: function (t, e, r) {
+            return p(t, e, function (t) {
+                return t.merge({ type: r, depth: 0 });
             });
         },
-        setBlockData: function (e, t, n) {
-            return f(e, t, function (e) {
-                return e.merge({
-                    data: n,
-                });
+        setBlockData: function (t, e, r) {
+            return p(t, e, function (t) {
+                return t.merge({ data: r });
             });
         },
-        mergeBlockData: function (e, t, n) {
-            return f(e, t, function (e) {
-                return e.merge({
-                    data: e.getData().merge(n),
-                });
+        mergeBlockData: function (t, e, r) {
+            return p(t, e, function (t) {
+                return t.merge({ data: t.getData().merge(r) });
             });
         },
-        applyEntity: function (e, t, n) {
-            return a(p(e, t), t, n);
+        applyEntity: function (t, e, r) {
+            return o(h(t, e), e, r);
         },
     };
-e.exports = g;
+t.exports = v;

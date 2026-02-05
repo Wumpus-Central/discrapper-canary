@@ -1,13 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
+"use strict";
+n.d(t, { A: () => u });
 var r = n(147426),
     i = n(364242),
     a = n(476858),
     s = n(972409);
 let o = 2,
     l = 3;
-class c extends s.d {
+class u extends s.d {
     innerPatternString(e) {
         return `((?:в|у)\\s*)?(${(0, a.uJ)(r.eB)})\\s*(?:[,-]?\\s*(${r.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`;
     }

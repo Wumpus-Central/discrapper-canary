@@ -1,193 +1,67 @@
-r.d(t, {
-    default: () => j,
-}),
-    r(896048),
-    r(492834);
-var n = r(627968),
-    l = r(64700),
-    i = r(158954),
-    o = r(311907),
-    a = r(846293),
-    c = r(299091),
-    s = r(509099),
-    u = r(197654),
-    p = r(365940),
-    y = r(531461),
-    f = r(71441),
-    O = r(760322),
-    b = r(330936),
-    d = r(634580);
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = n);
-            });
-    }
-    return e;
-}
-
-function j(e) {
-    let { inviteCode: t } = e,
-        r = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l,
-                i = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                return i;
-            }
-            if (
-                ((i = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        i = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < i.length; n++)
-                        (r = i[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            return i;
-        })(e, ["inviteCode"]);
-    l.useEffect(() => {
-        s.A.hideHubUpsell();
+i.d(e, { default: () => g });
+var l = i(627968),
+    n = i(64700),
+    a = i(158954),
+    r = i(311907),
+    s = i(846293),
+    o = i(299091),
+    d = i(509099),
+    c = i(197654),
+    u = i(365940),
+    I = i(531461),
+    E = i(71441),
+    A = i(760322),
+    _ = i(330936),
+    h = i(634580);
+function g(t) {
+    let { inviteCode: e, ...i } = t;
+    n.useEffect(() => {
+        d.A.hideHubUpsell();
     }, []);
-    let [j, m] = l.useState(null != t);
-    l.useEffect(() => {
-        null != t && a.Ay.resolveInvite(t, "Hub").finally(() => m(!1));
-    }, [t]);
-    let h = (0, o.bG)([c.A], () => (null != t ? c.A.getInvite(t) : null)),
-        [E, v] = l.useState([b.Di.VERIFY_EMAIL]),
-        [I, S] = l.useState(""),
-        [w, P] = l.useState(""),
-        [A, _] = l.useState(void 0),
-        [x, L] = l.useState([]),
-        R = (e) => {
-            v(E.concat(e).slice(-4));
+    let [g, m] = n.useState(null != e);
+    n.useEffect(() => {
+        null != e && s.Ay.resolveInvite(e, "Hub").finally(() => m(!1));
+    }, [e]);
+    let S = (0, r.bG)([o.A], () => (null != e ? o.A.getInvite(e) : null)),
+        [y, L] = n.useState([_.Di.VERIFY_EMAIL]),
+        [x, p] = n.useState(""),
+        [C, T] = n.useState(""),
+        [f, v] = n.useState(void 0),
+        [M, R] = n.useState([]),
+        N = (t) => {
+            L(y.concat(t).slice(-4));
         },
-        C = E[E.length - 1];
-    if (j) {
-        var D, T;
-        return (0, n.jsx)(
-            i.dWK,
-            ((D = g({}, r)),
-            (T = T =
-                {
-                    children: (0, n.jsx)(i.y$y, {
-                        className: d.u,
-                    }),
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(D, Object.getOwnPropertyDescriptors(T))
-                : (function (e, t) {
-                      var r = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
-                      }
-                      return r;
-                  })(Object(T)).forEach(function (e) {
-                      Object.defineProperty(D, e, Object.getOwnPropertyDescriptor(T, e));
-                  }),
-            D),
-        );
-    }
-    switch (C) {
-        case b.Di.VERIFY_EMAIL:
-            return (0, n.jsx)(
-                u.A,
-                g(
-                    {
-                        setGuildsInfo: L,
-                        setStep: R,
-                        email: I,
-                        setEmail: S,
-                        setGuildId: _,
-                        invite: h,
-                    },
-                    r,
-                ),
-            );
-        case b.Di.SELECT_SCHOOL:
-            return (0, n.jsx)(
-                p.A,
-                g(
-                    {
-                        guildsInfo: x,
-                        setStep: R,
-                        email: I,
-                        setGuildId: _,
-                    },
-                    r,
-                ),
-            );
-        case b.Di.SUBMIT_SCHOOL:
-            return (0, n.jsx)(
-                y.A,
-                g(
-                    {
-                        onBack: () => {
-                            E.length > 1 && v(E.slice(0, -1).slice(-4));
-                        },
-                        setStep: R,
-                        email: I,
-                        school: w,
-                        setSchool: P,
-                    },
-                    r,
-                ),
-            );
-        case b.Di.VERIFY_PIN:
-            return (0, n.jsx)(
-                f.A,
-                g(
-                    {
-                        email: I,
-                        guildId: A,
-                    },
-                    r,
-                ),
-            );
-        case b.Di.EMAIL_WAITLIST:
-            return (0, n.jsx)(
-                O.A,
-                g(
-                    {
-                        setStep: R,
-                        school: w,
-                    },
-                    r,
-                ),
-            );
+        j = y[y.length - 1];
+    if (g) return (0, l.jsx)(a.dWK, { ...i, children: (0, l.jsx)(a.y$y, { className: h.u }) });
+    switch (j) {
+        case _.Di.VERIFY_EMAIL:
+            return (0, l.jsx)(c.A, {
+                setGuildsInfo: R,
+                setStep: N,
+                email: x,
+                setEmail: p,
+                setGuildId: v,
+                invite: S,
+                ...i,
+            });
+        case _.Di.SELECT_SCHOOL:
+            return (0, l.jsx)(u.A, { guildsInfo: M, setStep: N, email: x, setGuildId: v, ...i });
+        case _.Di.SUBMIT_SCHOOL:
+            return (0, l.jsx)(I.A, {
+                onBack: () => {
+                    y.length > 1 && L(y.slice(0, -1).slice(-4));
+                },
+                setStep: N,
+                email: x,
+                school: C,
+                setSchool: T,
+                ...i,
+            });
+        case _.Di.VERIFY_PIN:
+            return (0, l.jsx)(E.A, { email: x, guildId: f, ...i });
+        case _.Di.EMAIL_WAITLIST:
+            return (0, l.jsx)(A.A, { setStep: N, school: C, ...i });
         default:
-            return r.onClose(), null;
+            return i.onClose(), null;
     }
 }

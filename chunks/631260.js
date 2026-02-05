@@ -1,3 +1,4 @@
+"use strict";
 var r =
     (this && this.__awaiter) ||
     function (e, t, n, r) {
@@ -16,7 +17,6 @@ var r =
                     a(e);
                 }
             }
-
             function o(e) {
                 try {
                     l(r.throw(e));
@@ -24,20 +24,17 @@ var r =
                     a(e);
                 }
             }
-
             function l(e) {
                 e.done ? n(e.value) : i(e.value).then(s, o);
             }
             l((r = r.apply(e, t || [])).next());
         });
     };
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.MessageLoader = void 0),
     (t.loadAllMessagesInLocale = o),
     (t.waitForAllDefaultIntlMessagesLoaded = l),
-    (t.createLoader = c);
+    (t.createLoader = u);
 let i = n(921034);
 class a {
     constructor(e, t) {
@@ -112,15 +109,9 @@ class a {
                     );
             let a = this.localeImportMap[e](),
                 s = null != (i = null == (r = this._localeLoadingPromises[e]) ? void 0 : r.initialized) && i;
-            (this._localeLoadingPromises[e] = {
-                initialized: s,
-                current: a,
-            }),
+            (this._localeLoadingPromises[e] = { initialized: s, current: a }),
                 (this.messages[e] = (yield a).default),
-                (this._localeLoadingPromises[e] = {
-                    initialized: !0,
-                    current: void 0,
-                }),
+                (this._localeLoadingPromises[e] = { initialized: !0, current: void 0 }),
                 this.emitChange();
         });
     }
@@ -153,20 +144,17 @@ class a {
 }
 t.MessageLoader = a;
 let s = [];
-
 function o(e) {
     return r(this, void 0, void 0, function* () {
         yield Promise.all(s.map((t) => t._loadLocale(e)));
     });
 }
-
 function l() {
     return r(this, void 0, void 0, function* () {
         yield Promise.all(s.map((e) => e.waitForDefaultLocale()));
     });
 }
-
-function c(e, t) {
+function u(e, t) {
     let n = new a(e, t);
     return s.push(n), n;
 }

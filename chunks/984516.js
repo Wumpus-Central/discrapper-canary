@@ -1,37 +1,31 @@
-n.d(t, {
-    A: () => p,
-});
+"use strict";
+n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(975807),
     o = n(975571),
     l = n(500049),
-    c = n(902527),
-    u = n(652215),
+    u = n(902527),
+    c = n(652215),
     d = n(985018),
-    f = n(615074);
-
-function p(e) {
+    _ = n(615074);
+function f(e) {
     let { padding: t = !1 } = e,
         n = i.useCallback(() => {
-            (0, s.A)(o.A.getAppsSupportURL(u.MVz.APPS_LEARN_MORE));
+            (0, s.A)(o.A.getAppsSupportURL(c.MVz.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: p } = (0, c.A)({
-            sectionName: l.yK.NEW_TO_APPS,
-            numItems: 1,
-            numVisibleItems: 1,
-        });
+        { trackSectionImpressionRef: f } = (0, u.A)({ sectionName: l.yK.NEW_TO_APPS, numItems: 1, numVisibleItems: 1 });
     return (0, r.jsx)("div", {
-        className: t ? f.pK : void 0,
+        className: t ? _.pK : void 0,
         children: (0, r.jsxs)("div", {
             ref: (e) => {
-                p.current = e;
+                f.current = e;
             },
-            className: f.kL,
+            className: _.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.rf,
+                    className: _.rf,
                     children: [
                         (0, r.jsx)(a.Heading, {
                             variant: "heading-lg/bold",

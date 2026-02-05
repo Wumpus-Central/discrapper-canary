@@ -3,7 +3,6 @@ var o = r(90860),
     i = r(771068),
     a = r(378261),
     u = r(71255);
-
 function s(t, e) {
     (this.typeNumber = t),
         (this.errorCorrectLevel = e),

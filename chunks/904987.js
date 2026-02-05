@@ -1,57 +1,45 @@
-n.d(t, {
-    A: () => d,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => d });
 var r = n(719442),
     i = n(374803),
     a = n(968011),
     s = n(399777),
     o = n(253932),
     l = n(711371);
-let c = "line",
-    u = [];
-
+let u = "line",
+    c = [];
 function d(e, t, n, d) {
-    var f;
-    let { enabled: p, highlightDesign: _ } = (0, a.sA)("decorateMentionSuggestion", {
-            autoTrackExposure: !1,
-        }),
-        h = e.selection,
-        { currentAutocompleteType: m } = d,
-        g = null !== m && m !== i.DB.MENTION_SUGGESTIONS;
+    let { enabled: _, highlightDesign: f } = (0, a.sA)("decorateMentionSuggestion", { autoTrackExposure: !1 }),
+        p = e.selection,
+        { currentAutocompleteType: h } = d,
+        m = null !== h && h !== i.DB.MENTION_SUGGESTIONS;
     if (
-        !p ||
+        !_ ||
         n.isDM() ||
-        g ||
+        m ||
         l.VW.areStylesDisabled(e) ||
-        !(null == (f = e.chatInputType.autocomplete) ? void 0 : f.mentionSuggestions) ||
+        !e.chatInputType.autocomplete?.mentionSuggestions ||
         !o.ng.getSetting() ||
-        null == h ||
-        l.ZF.isExpanded(h)
+        null == p ||
+        l.ZF.isExpanded(p)
     )
-        return u;
-    let [E, b] = t;
-    if (!l.l5.isText(E)) return u;
-    let [y] = l.VW.node(e, l.PW.parent(b));
-    if (!l.AS.isType(y, c) || !r.Q6.includes(l.VW.range(e, b), h.anchor)) return u;
-    let O = h.anchor.offset,
+        return c;
+    let [g, E] = t;
+    if (!l.l5.isText(g)) return c;
+    let [A] = l.VW.node(e, l.PW.parent(E));
+    if (!l.AS.isType(A, u) || !r.Q6.includes(l.VW.range(e, E), p.anchor)) return c;
+    let I = p.anchor.offset,
         {
-            results: { suggestions: A, queryInfo: v },
-        } = (0, s.W)(n, E.text, O, d);
-    return 0 === A.length
-        ? u
+            results: { suggestions: T, queryInfo: y },
+        } = (0, s.W)(n, g.text, I, d);
+    return 0 === T.length
+        ? c
         : [
               {
-                  anchor: {
-                      path: b,
-                      offset: v.startIndex,
-                  },
-                  focus: {
-                      path: b,
-                      offset: v.startIndex + v.query.length,
-                  },
+                  anchor: { path: E, offset: y.startIndex },
+                  focus: { path: E, offset: y.startIndex + y.query.length },
                   mentionSuggestion: !0,
-                  mentionSuggestionSimpleColorVariant: "simple" === _,
+                  mentionSuggestionSimpleColorVariant: "simple" === f,
               },
           ];
 }

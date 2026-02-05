@@ -1,3 +1,4 @@
+"use strict";
 var r =
         Object.assign ||
         function (e) {
@@ -22,45 +23,36 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-
 function s(e, t) {
     var n = {};
     for (var r in e) !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
     return n;
 }
-
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
-
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-
-function c(e, t) {
+function u(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0,
-        },
+        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var u = n(64700),
+var c = n(64700),
     d = n(267017),
-    f = n(207147);
+    _ = n(207147);
 e.exports = function (e) {
     var t = (function (t) {
         function n() {
             return o(this, n), l(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments));
         }
         return (
-            c(n, t),
+            u(n, t),
             a(n, [
                 {
                     key: "componentWillUnmount",
@@ -71,7 +63,7 @@ e.exports = function (e) {
                 {
                     key: "setNativeProps",
                     value: function (e) {
-                        !1 === f.current(this.componentRef, e, this) && this.forceUpdate();
+                        !1 === _.current(this.componentRef, e, this) && this.forceUpdate();
                     },
                 },
                 {
@@ -86,7 +78,7 @@ e.exports = function (e) {
                         var t = this,
                             n = this._propsAnimated,
                             r = function () {
-                                !1 === f.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) &&
+                                !1 === _.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) &&
                                     t.forceUpdate();
                             };
                         (this._propsAnimated = new d(e, r)), n && n.__detach();
@@ -105,17 +97,14 @@ e.exports = function (e) {
                             n = this._propsAnimated.__getValue(),
                             a = n.style,
                             o = s(n, ["style"]);
-                        return u.createElement(
+                        return c.createElement(
                             e,
                             r({}, o, {
-                                style: f.transformStyles(a),
+                                style: _.transformStyles(a),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },
-                                __source: {
-                                    fileName: i,
-                                    lineNumber: 75,
-                                },
+                                __source: { fileName: i, lineNumber: 75 },
                             }),
                         );
                     },
@@ -129,7 +118,7 @@ e.exports = function (e) {
             ]),
             n
         );
-    })(u.Component);
+    })(c.Component);
     return (
         (t.propTypes = {
             style: function (t, n, r) {

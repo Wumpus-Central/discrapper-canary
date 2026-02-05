@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     caret: "caret__5bc6a",
     "caret--bottom": "caret--bottom__5bc6a",

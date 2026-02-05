@@ -1,20 +1,11 @@
-n.d(t, {
-    l: () => o,
-});
+"use strict";
+n.d(t, { l: () => o });
 var r,
     i = n(41010),
     a = n(653587);
-
 function s(e, t, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }

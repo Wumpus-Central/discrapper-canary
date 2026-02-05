@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     y3: "stepBodyV1_bb5449",
     GG: "topSpacer_bb5449",

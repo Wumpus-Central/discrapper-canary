@@ -1,114 +1,77 @@
-n.d(t, {
-    $: () => y,
-    A: () => T,
-}),
-    n(896048);
-var r,
-    i = n(735438),
-    a = n.n(i),
-    s = n(6161),
-    o = n(681154),
-    l = n(311907),
-    c = n(73153),
+"use strict";
+n.d(t, { $: () => g, A: () => v });
+var r = n(735438),
+    i = n.n(r),
+    a = n(6161),
+    s = n(681154),
+    o = n(311907),
+    l = n(73153),
     u = n(290863),
-    d = n(99753),
-    f = n(20805),
-    p = n(83971),
-    _ = n(583846),
-    h = n(652215);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+    c = n(99753),
+    d = n(20805),
+    _ = n(83971),
+    f = n(583846),
+    p = n(652215);
+let h = new Set([s.ContentInventoryEntryType.LISTENED_SESSION]),
+    m = new Map();
+function g(e) {
+    return `${e.author_id}:${e.id}`;
 }
-let g = new Set([o.ContentInventoryEntryType.LISTENED_SESSION]),
-    E = new Map();
-
-function y(e) {
-    return "".concat(e.author_id, ":").concat(e.id);
-}
-
-function b(e) {
-    return (0, _.I5)(e)
+function E(e) {
+    return (0, f.I5)(e)
         ? null
-        : (0, _.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
+        : (0, f.JM)(e) && e.author_type === a.ContentInventoryAuthorType.USER
           ? u.A.getActivities(e.author_id).find((t) =>
-                t.type === h.$pd.PLAYING && (0, f.P)(e)
-                    ? (0, p.fp)(e, t)
-                    : !!(t.type === h.$pd.LISTENING && (0, f.Tq)(e)) && (0, p.qb)(e, t),
+                t.type === p.$pd.PLAYING && (0, d.P)(e)
+                    ? (0, _.fp)(e, t)
+                    : !!(t.type === p.$pd.LISTENING && (0, d.Tq)(e)) && (0, _.qb)(e, t),
             )
           : void 0;
 }
-
-function O(e) {
+function A(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
-        let e = b(r.content);
+        let e = E(r.content);
         if (void 0 !== e) {
-            let i = y(r.content);
-            n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e));
+            let i = g(r.content);
+            n.add(i), e !== m.get(i) && (t.add(i), m.set(i, e));
         }
     }
-    return {
-        updatedKeys: t,
-        matchedKeys: n,
-    };
+    return { updatedKeys: t, matchedKeys: n };
 }
-
-function v(e) {
+function I(e) {
     let { feed: t } = e,
-        { updatedKeys: n } = O(t.entries);
+        { updatedKeys: n } = A(t.entries);
     return n.size > 0;
 }
-
-function A() {
-    E.clear();
+function T() {
+    m.clear();
 }
-
-function I() {
+function y() {
     let e = !1,
-        t = Array.from(E.keys()),
+        t = Array.from(m.keys()),
         n = new Set(),
         r = new Set();
-    for (let t of d.A.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: a } = O(
-            n.size > 0 ? t.entries.filter((e) => !n.has(y(e.content))) : t.entries,
+    for (let t of c.A.getFeeds().values()) {
+        let { updatedKeys: i, matchedKeys: a } = A(
+            n.size > 0 ? t.entries.filter((e) => !n.has(g(e.content))) : t.entries,
         );
         for (let e of i) n.add(e);
         for (let e of a) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
+    for (let n of i().difference(t, [...r])) m.delete(n), (e = !0);
     return e;
 }
-class S extends (r = l.Ay.Store) {
+class S extends o.Ay.Store {
+    static displayName = "ContentInventoryActivityStore";
     initialize() {
-        this.waitFor(d.A, u.A), this.syncWith([u.A], I);
+        this.waitFor(c.A, u.A), this.syncWith([u.A], y);
     }
+    canRenderContent = (e) => !(0, f.I5)(e) && (!h.has(e.content_type) || null != this.getMatchingActivity(e));
     getMatchingActivity(e) {
-        return (0, _.I5)(e) ? null : E.get(y(e));
-    }
-    constructor(...e) {
-        super(...e),
-            m(
-                this,
-                "canRenderContent",
-                (e) => !(0, _.I5)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)),
-            );
+        return (0, f.I5)(e) ? null : m.get(g(e));
     }
 }
-m(S, "displayName", "ContentInventoryActivityStore");
-let T = new S(c.h, {
-    CONNECTION_OPEN: A,
-    CONTENT_INVENTORY_SET_FEED: v,
-});
+let v = new S(l.h, { CONNECTION_OPEN: T, CONTENT_INVENTORY_SET_FEED: I });

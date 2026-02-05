@@ -1,145 +1,55 @@
-n.r(t),
-    n.d(t, {
-        default: () => eI,
-    }),
-    n(896048),
-    n(65821);
-var r,
-    i = n(311907),
-    a = n(506774),
-    s = n(73153),
-    o = n(350723),
-    l = n(996308),
-    c = n(211753),
+"use strict";
+n.r(t), n.d(t, { default: () => eE });
+var r = n(311907),
+    i = n(506774),
+    a = n(73153),
+    s = n(350723),
+    o = n(996308),
+    l = n(211753),
     u = n(850524),
-    d = n(761821),
-    f = n(95701),
-    p = n(961350),
-    _ = n(734057),
-    h = n(808728),
-    m = n(555528),
-    g = n(967198),
-    E = n(9302),
-    b = n(531685),
-    y = n(652215),
-    O = n(672396);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function S(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function T(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = C(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function C(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let N = Object.freeze({
+    c = n(761821),
+    d = n(95701),
+    _ = n(961350),
+    f = n(734057),
+    p = n(808728),
+    h = n(555528),
+    m = n(967198),
+    g = n(9302),
+    E = n(531685),
+    A = n(652215),
+    I = n(672396);
+let T = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: y.f5z.ALWAYS,
-        displayNameMode: y.pwA.ALWAYS,
-        avatarSizeMode: y.OSZ.LARGE,
-        notificationPositionMode: y.G6Q.TOP_LEFT,
-        textChatNotifications: y.iXc.ENABLED,
+        displayUserMode: A.f5z.ALWAYS,
+        displayNameMode: A.pwA.ALWAYS,
+        avatarSizeMode: A.OSZ.LARGE,
+        notificationPositionMode: A.G6Q.TOP_LEFT,
+        textChatNotifications: A.iXc.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
         disableClickableRegions: !1,
-        textWidgetOpacity: O.Li.LOWER,
+        textWidgetOpacity: I.Li.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
-    R = null,
-    w = {},
-    P = null,
-    D = new Set(),
-    x = !1,
-    L = !1,
-    j = !1,
-    M = new Set(),
-    k = !1;
-
-function U(e) {
-    let t = w[e];
-    return null == t && (t = w[e] = v({}, N)), t;
+    y = null,
+    S = {},
+    v = null,
+    C = new Set(),
+    b = !1,
+    N = !1,
+    R = !1,
+    O = new Set(),
+    D = !1;
+function L(e) {
+    let t = S[e];
+    return null == t && (t = S[e] = { ...T }), t;
 }
-__OVERLAY__ && (0, u.u)((0, E.getRPCAuthToken)());
-let G = v({}, N),
-    V = new Set([
+__OVERLAY__ && (0, u.u)((0, g.getRPCAuthToken)());
+let w = { ...T },
+    x = new Set([
         "AUDIO_SET_INPUT_DEVICE",
         "AUDIO_SET_INPUT_VOLUME",
         "AUDIO_SET_LOCAL_VIDEO_DISABLED",
@@ -216,8 +126,8 @@ let G = v({}, N),
         "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
         "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
     ]),
-    F = new Set([
-        ...V.values(),
+    P = new Set([
+        ...x.values(),
         "ACTIVITY_INVITE_MODAL_CLOSE",
         "CALL_DELETE",
         "CHANNEL_COLLAPSE",
@@ -233,471 +143,379 @@ let G = v({}, N),
         "SOUNDBOARD_SET_OVERLAY_ENABLED",
         "STREAM_STOP",
     ]);
-
-function B(e) {
+function M(e) {
     return (
-        (null == e.version && 1 === E.OVERLAY_VERSION) ||
-        e.version === E.OVERLAY_VERSION ||
-        (s.h.dispatch({
-            type: "OVERLAY_INCOMPATIBLE_APP",
-        }),
-        (0, l.Zf)(),
-        !1)
+        (null == e.version && 1 === g.OVERLAY_VERSION) ||
+        e.version === g.OVERLAY_VERSION ||
+        (a.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, o.Zf)(), !1)
     );
 }
-
-function H(e) {
-    if (("OVERLAY_INITIALIZE" === e.type && B(e) && (j = !0), j)) {
-        var t, n;
+function k(e) {
+    if (("OVERLAY_INITIALIZE" === e.type && M(e) && (R = !0), R))
         switch (e.type) {
             case "CHANNEL_CREATE":
             case "THREAD_CREATE":
             case "THREAD_UPDATE":
             case "CHANNEL_DELETE":
             case "THREAD_DELETE":
-                let r = (0, f.createChannelRecord)(e.channel);
-                if (!f.A_.has(r.type)) break;
-                s.h.dispatch({
-                    type: e.type,
-                    channel: r,
-                });
+                let t = (0, d.createChannelRecord)(e.channel);
+                if (!d.A_.has(t.type)) break;
+                a.h.dispatch({ type: e.type, channel: t });
                 break;
             case "CHANNEL_UPDATES":
-                s.h.dispatch({
-                    type: e.type,
-                    channels: e.channels.map((e) => (0, f.createChannelRecord)(e)),
-                });
+                a.h.dispatch({ type: e.type, channels: e.channels.map((e) => (0, d.createChannelRecord)(e)) });
                 break;
             case "CONNECTION_OPEN_SUPPLEMENTAL":
-                (e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) =>
-                    (0, f.createChannelRecord)(e),
-                )),
-                    s.h.dispatch(e);
+                (e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) => (0, d.createChannelRecord)(e))),
+                    a.h.dispatch(e);
                 break;
             case "THREAD_LIST_SYNC":
-                s.h.dispatch(
-                    I(v({}, e), {
-                        threads: e.threads.map((e) => (0, f.createChannelRecord)(e)),
-                    }),
-                );
+                a.h.dispatch({ ...e, threads: e.threads.map((e) => (0, d.createChannelRecord)(e)) });
                 break;
             case "GUILD_CREATE":
-                let i = (e) => (0, f.createChannelRecord)(e),
-                    a = e.guild;
-                switch (((a.threads = null == (n = a.threads) ? void 0 : n.map(i)), a.channels.op)) {
+                let n = (e) => (0, d.createChannelRecord)(e),
+                    r = e.guild;
+                switch (((r.threads = r.threads?.map(n)), r.channels.op)) {
                     case "full_sync":
-                        a.channels.items = a.channels.items.map(i);
+                        r.channels.items = r.channels.items.map(n);
                         break;
                     case "update":
-                        a.channels.writes = a.channels.writes.map(i);
+                        r.channels.writes = r.channels.writes.map(n);
                         break;
                     default:
-                        a.channels;
+                        r.channels;
                 }
-                s.h.dispatch({
-                    type: "GUILD_CREATE",
-                    guild: a,
-                });
+                a.h.dispatch({ type: "GUILD_CREATE", guild: r });
                 break;
             case "USER_SETTINGS_PROTO_UPDATE":
-                s.h.dispatch(
-                    I(v({}, e), {
-                        settings: {
-                            proto: (0, d.Y5)(e.settings.type, e.settings.proto),
-                            type: e.settings.type,
-                        },
-                    }),
-                );
+                a.h.dispatch({
+                    ...e,
+                    settings: { proto: (0, c.Y5)(e.settings.type, e.settings.proto), type: e.settings.type },
+                });
                 break;
             default:
-                s.h.dispatch(e);
+                a.h.dispatch(e);
         }
-    }
 }
-
-function Y(e) {
-    e.isSwitchingAccount || (w = {});
+function U(e) {
+    e.isSwitchingAccount || (S = {});
 }
-
-function W(e) {
-    e.userId in w && delete w[e.userId];
+function G(e) {
+    e.userId in S && delete S[e.userId];
 }
-
-function K() {
-    D.clear();
+function V() {
+    C.clear();
 }
-
-function z(e) {
+function F(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
-    (R = t),
+    (y = t),
         __OVERLAY__ &&
             (n.forEach((e) => {
-                ey.set(e.pid, e);
+                ef.set(e.pid, e);
             }),
-            c.x.update({
-                legacyEnabled: r.legacyEnabled,
-                oopEnabled: r.oopEnabled,
-            }));
+            l.x.update({ legacyEnabled: r.legacyEnabled, oopEnabled: r.oopEnabled }));
 }
-
-function q() {
-    let e = G.selectedGuildId,
-        t = G.selectedChannelId;
+function B() {
+    let e = w.selectedGuildId,
+        t = w.selectedChannelId;
     if (
         (null == e ||
-            (h.Ay.hasChannels(e) && (null == t || h.Ay.hasSelectableChannel(e, t))) ||
+            (p.Ay.hasChannels(e) && (null == t || p.Ay.hasSelectableChannel(e, t))) ||
             ((e = null), (t = null)),
-        null != t && null == _.A.getChannel(t) && ((e = null), (t = null)),
-        null == e && null == t && (e = g.A.getGuildId()),
+        null != t && null == f.A.getChannel(t) && ((e = null), (t = null)),
+        null == e && null == t && (e = m.A.getGuildId()),
         null != e && null == t)
     ) {
-        let n = h.Ay.getDefaultChannel(e);
+        let n = p.Ay.getDefaultChannel(e);
         null != n && (t = n.id);
     }
-    (G.selectedGuildId = e), (G.selectedChannelId = t);
+    (w.selectedGuildId = e), (w.selectedChannelId = t);
 }
-
-function X() {
+function j() {
     if (!__OVERLAY__) return !1;
-    let e = R === (0, E.getPID)(),
-        t = D.has((0, E.getPID)()) || M.size > 0;
-    e && t ? (0, o.XC)(window, !0) : (0, o.XC)(window, !1);
+    let e = y === (0, g.getPID)(),
+        t = C.has((0, g.getPID)()) || O.size > 0;
+    e && t ? (0, s.XC)(window, !0) : (0, s.XC)(window, !1);
 }
-
-function Z() {}
-
-function Q(e) {
+function H() {}
+function Y(e) {
     let { locked: t, pid: n } = e;
-    t ? D.delete(n) : D.add(n), J(), X(), (k = !1);
+    t ? C.delete(n) : C.add(n), K(), j(), (D = !1);
 }
-
-function $(e) {
+function W(e) {
     let { region: t } = e;
-    if (R !== (0, E.getPID)() || M.has(t)) return !1;
-    M.add(t);
+    if (y !== (0, g.getPID)() || O.has(t)) return !1;
+    O.add(t);
 }
-
-function J() {
-    if (R !== (0, E.getPID)()) return !1;
-    M.clear();
+function K() {
+    if (y !== (0, g.getPID)()) return !1;
+    O.clear();
 }
-
-function ee(e) {
+function z(e) {
     let { pid: t } = e;
-    (R = t), X();
+    (y = t), j();
 }
-
-function et(e) {
+function $(e) {
     let { guildId: t, channelId: n } = e;
-    (G.selectedGuildId = t), (G.selectedChannelId = n);
+    (w.selectedGuildId = t), (w.selectedChannelId = n);
 }
-
-function en(e) {
+function q(e) {
     let { callId: t } = e;
-    P = t;
+    v = t;
 }
-
-function er() {
-    P = null;
+function Z() {
+    v = null;
 }
-
-function ei() {
+function Q() {
     if (__OVERLAY__) {
-        let e = b.A.windowSize();
-        (0, E.validResolution)(e) || (k = !1);
+        let e = E.A.windowSize();
+        (0, g.validResolution)(e) || (D = !1);
     }
 }
-
-function ea(e) {
-    k = e.isPreviewingInGame;
+function X(e) {
+    D = e.isPreviewingInGame;
 }
-
-function es(e) {
+function J(e) {
     let { mode: t } = e;
-    G.displayNameMode = t;
+    w.displayNameMode = t;
 }
-
-function eo(e) {
+function ee(e) {
     let { mode: t } = e;
-    G.displayUserMode = t;
+    w.displayUserMode = t;
 }
-
-function el(e) {
+function et(e) {
     let { mode: t } = e;
-    G.avatarSizeMode = t;
+    w.avatarSizeMode = t;
 }
-
-function ec(e) {
+function en(e) {
     let { mode: t } = e;
-    G.notificationPositionMode = t;
+    w.notificationPositionMode = t;
 }
-
-function eu(e) {
+function er(e) {
     let { disable: t } = e;
-    G.disableClickableRegions = t;
+    w.disableClickableRegions = t;
 }
-
-function ed(e) {
+function ei(e) {
     let { shouldShow: t } = e;
-    G.showKeybindIndicators = t;
+    w.showKeybindIndicators = t;
 }
-
-function ef(e) {
+function ea(e) {
     let { message: t } = e,
-        n = G.customInviteMessage !== t;
-    return (G.customInviteMessage = t), n;
+        n = w.customInviteMessage !== t;
+    return (w.customInviteMessage = t), n;
 }
-
-function ep(e) {
+function es(e) {
     let { opacity: t } = e,
-        n = G.textWidgetOpacity !== t;
-    return (G.textWidgetOpacity = t), n;
+        n = w.textWidgetOpacity !== t;
+    return (w.textWidgetOpacity = t), n;
 }
-
-function e_(e) {
+function eo(e) {
     let { shouldShow: t } = e,
-        n = G.showGameInviteNotification !== t;
-    return (G.showGameInviteNotification = t), n;
+        n = w.showGameInviteNotification !== t;
+    return (w.showGameInviteNotification = t), n;
 }
-
-function eh() {
-    G.disableExternalLinkAlert = !0;
+function el() {
+    w.disableExternalLinkAlert = !0;
 }
-
-function em() {
-    x = !0;
+function eu() {
+    b = !0;
 }
-
-function eg() {
-    s.h.addInterceptor((e) => {
-        if (L || !F.has(e.type)) return !1;
+function ec() {
+    a.h.addInterceptor((e) => {
+        if (N || !P.has(e.type)) return !1;
         if ("CHANNEL_SELECT" === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
                 null != n &&
-                ((0, l.tN)({
-                    type: y.kGV.DISPATCH,
-                    pid: (0, E.getPID)(),
-                    token: (0, E.getRPCAuthToken)(),
+                ((0, o.tN)({
+                    type: A.kGV.DISPATCH,
+                    pid: (0, g.getPID)(),
+                    token: (0, g.getRPCAuthToken)(),
                     payloads: [
-                        {
-                            type: "CHANNEL_PRELOAD",
-                            guildId: t === y.ME ? null : t,
-                            channelId: n,
-                            context: y.QCW,
-                        },
-                        {
-                            type: "OVERLAY_SELECT_CHANNEL",
-                            guildId: t,
-                            channelId: n,
-                        },
+                        { type: "CHANNEL_PRELOAD", guildId: t === A.ME ? null : t, channelId: n, context: A.QCW },
+                        { type: "OVERLAY_SELECT_CHANNEL", guildId: t, channelId: n },
                     ],
                 }),
                 !1)
             );
         }
         return (
-            (0, l.tN)({
-                type: y.kGV.DISPATCH,
-                pid: (0, E.getPID)(),
-                token: (0, E.getRPCAuthToken)(),
-                payloads: [e],
-            }),
-            !V.has(e.type)
+            (0, o.tN)({ type: A.kGV.DISPATCH, pid: (0, g.getPID)(), token: (0, g.getRPCAuthToken)(), payloads: [e] }),
+            !x.has(e.type)
         );
     });
 }
-
-function eE(e) {
-    let t = (0, E.getPID)();
+function ed(e) {
+    let t = (0, g.getPID)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case y.kGV.STORAGE_SYNC:
-                i.Ay.PersistedStore.initializeAll(e.states);
+            case A.kGV.STORAGE_SYNC:
+                r.Ay.PersistedStore.initializeAll(e.states);
                 break;
-            case y.kGV.DISPATCH:
-                null != e.payloads && ((L = !0), e.payloads.forEach((e) => H(e)), (L = !1));
+            case A.kGV.DISPATCH:
+                null != e.payloads && ((N = !0), e.payloads.forEach((e) => k(e)), (N = !1));
         }
 }
-
-function eb() {
-    eg(),
-        (0, l.QZ)(eE, (0, E.getRPCAuthToken)()),
-        (0, l.Ng)(),
-        (0, l.tN)({
-            type: y.kGV.CONNECT,
-            pid: (0, E.getPID)(),
-            token: (0, E.getRPCAuthToken)(),
-        });
+function e_() {
+    ec(),
+        (0, o.QZ)(ed, (0, g.getRPCAuthToken)()),
+        (0, o.Ng)(),
+        (0, o.tN)({ type: A.kGV.CONNECT, pid: (0, g.getPID)(), token: (0, g.getRPCAuthToken)() });
 }
-let ey = new Map();
-
-function eO(e) {
-    __OVERLAY__ && (null != e.trackedGame ? ey.set(e.pid, e.trackedGame) : ey.delete(e.pid));
+let ef = new Map();
+function ep(e) {
+    __OVERLAY__ && (null != e.trackedGame ? ef.set(e.pid, e.trackedGame) : ef.delete(e.pid));
 }
-
-function eA(e) {
-    __OVERLAY__ &&
-        c.x.update({
-            legacyEnabled: e.legacyEnabled,
-            oopEnabled: e.oopEnabled,
-        });
+function eh(e) {
+    __OVERLAY__ && l.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
 }
-
-function ev(e) {
-    D.delete(e.previousAssociatedGamePID);
+function em(e) {
+    C.delete(e.previousAssociatedGamePID);
 }
-class eS extends (r = i.Ay.PersistedStore) {
+class eg extends r.Ay.PersistedStore {
+    static displayName = "OverlayStore";
+    static persistKey = "OverlayStoreV2";
+    static migrations = [
+        () => {
+            let { pinnedWidgets: e, positions: t, sizes: n, v: r, ...a } = { ...i.w.get("OverlayStore") };
+            return { ...T, ...(5 === r ? a : null) };
+        },
+        (e) => {
+            let t = _.default.getId();
+            return null == e || null == t ? {} : { [t]: { ...e } };
+        },
+    ];
     initialize(e) {
         if (
-            (this.waitFor(p.default, _.A, h.Ay, m.A, g.A, b.A),
-            this.syncWith([p.default], () => {
-                let e = p.default.getId();
-                G = null != e ? U(e) : v({}, N);
+            (this.waitFor(_.default, f.A, p.Ay, h.A, m.A, E.A),
+            this.syncWith([_.default], () => {
+                let e = _.default.getId();
+                w = null != e ? L(e) : { ...T };
             }),
-            __OVERLAY__ && D.delete((0, E.getPID)()),
+            __OVERLAY__ && C.delete((0, g.getPID)()),
             null != e)
         ) {
-            w = e;
-            let t = p.default.getId();
+            S = e;
+            let t = _.default.getId();
             null != t &&
-                (null == (G = U(t)).textChatNotifications && (G.textChatNotifications = N.textChatNotifications),
-                null == G.textWidgetOpacity && (G.textWidgetOpacity = N.textWidgetOpacity),
-                null == G.disableClickableRegions && (G.disableClickableRegions = N.disableClickableRegions));
+                (null == (w = L(t)).textChatNotifications && (w.textChatNotifications = T.textChatNotifications),
+                null == w.textWidgetOpacity && (w.textWidgetOpacity = T.textWidgetOpacity),
+                null == w.disableClickableRegions && (w.disableClickableRegions = T.disableClickableRegions));
         }
     }
     getState() {
-        return w;
+        return S;
     }
     isLocked(e) {
-        return !D.has(e);
+        return !C.has(e);
     }
     isInstanceLocked() {
-        return !D.has((0, E.getPID)());
+        return !C.has((0, g.getPID)());
     }
     isInstanceFocused() {
-        return R === (0, E.getPID)();
+        return y === (0, g.getPID)();
     }
     isFocused(e) {
-        return R === e;
+        return y === e;
     }
     isPinned(e) {
-        let t = m.A.getLayout(E.OVERLAY_LAYOUT_ID);
+        let t = h.A.getLayout(g.OVERLAY_LAYOUT_ID);
         return (
             null != t &&
             null !=
                 t.widgets.find((t) => {
-                    let n = m.A.getWidget(t);
+                    let n = h.A.getWidget(t);
                     return null != n && n.type === e && !!n.pinned;
                 })
         );
     }
     getSelectedGuildId() {
-        return G.selectedGuildId;
+        return w.selectedGuildId;
     }
     getSelectedChannelId() {
-        return G.selectedChannelId;
+        return w.selectedChannelId;
     }
     getSelectedCallId() {
-        return P;
+        return v;
     }
     getDisplayUserMode() {
-        return G.displayUserMode;
+        return w.displayUserMode;
     }
     getDisplayNameMode() {
-        return G.displayNameMode;
+        return w.displayNameMode;
     }
     getAvatarSizeMode() {
-        return G.avatarSizeMode;
+        return w.avatarSizeMode;
     }
     getNotificationPositionMode() {
-        return G.notificationPositionMode;
+        return w.notificationPositionMode;
     }
     get showKeybindIndicators() {
-        return null == G.showKeybindIndicators || G.showKeybindIndicators;
+        return null == w.showKeybindIndicators || w.showKeybindIndicators;
     }
     get showInviteNotification() {
-        return null == G.showGameInviteNotification || G.showGameInviteNotification;
+        return null == w.showGameInviteNotification || w.showGameInviteNotification;
     }
     get disableClickableRegions() {
-        return null != G.disableClickableRegions && G.disableClickableRegions;
+        return null != w.disableClickableRegions && w.disableClickableRegions;
     }
     get customInviteMessage() {
-        return G.customInviteMessage;
+        return w.customInviteMessage;
     }
     getDisableExternalLinkAlert() {
-        return G.disableExternalLinkAlert;
+        return w.disableExternalLinkAlert;
     }
     getFocusedPID() {
-        return R;
+        return y;
     }
     get initialized() {
-        return j;
+        return R;
     }
     get incompatibleApp() {
-        return x;
+        return b;
     }
     getActiveRegions() {
-        return M;
+        return O;
     }
     getTextWidgetOpacity() {
-        return G.textWidgetOpacity;
+        return w.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return k;
+        return D;
     }
     getTrackedGame(e) {
-        var t;
-        return null != (t = ey.get(e)) ? t : null;
+        return ef.get(e) ?? null;
     }
 }
-A(eS, "displayName", "OverlayStore"),
-    A(eS, "persistKey", "OverlayStoreV2"),
-    A(eS, "migrations", [
-        () => {
-            let e = v({}, a.w.get("OverlayStore")),
-                { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
-                s = T(e, ["pinnedWidgets", "positions", "sizes", "v"]);
-            return v({}, N, 5 === i ? s : null);
-        },
-        (e) => {
-            let t = p.default.getId();
-            return null == e || null == t
-                ? {}
-                : {
-                      [t]: v({}, e),
-                  };
-        },
-    ]);
-let eI = new eS(s.h, {
-    LOGOUT: Y,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: W,
-    CONNECTION_CLOSED: K,
-    OVERLAY_START_SESSION: eb,
-    OVERLAY_INITIALIZE: z,
-    OVERLAY_READY: q,
-    OVERLAY_FOCUSED: ee,
-    OVERLAY_SELECT_CHANNEL: et,
-    OVERLAY_SELECT_CALL: en,
-    CALL_DELETE: er,
-    LAYOUT_CREATE: Z,
-    OVERLAY_SET_ENABLED: eA,
-    OVERLAY_SET_DISPLAY_NAME_MODE: es,
-    OVERLAY_SET_DISPLAY_USER_MODE: eo,
-    OVERLAY_SET_AVATAR_SIZE_MODE: el,
-    OVERLAY_SET_NOTIFICATION_POSITION_MODE: ec,
-    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: eu,
-    OVERLAY_SET_SHOW_KEYBIND_INDICATORS: ed,
-    OVERLAY_SET_INVITE_MESSAGE: ef,
-    OVERLAY_SET_GAME_INVITE_NOTIFICATION: e_,
-    OVERLAY_SET_TEXT_WIDGET_OPACITY: ep,
-    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: eh,
-    OVERLAY_INCOMPATIBLE_APP: em,
-    OVERLAY_SET_INPUT_LOCKED: Q,
-    OVERLAY_ACTIVATE_REGION: $,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: J,
-    OVERLAY_SET_PREVIEW_IN_GAME_MODE: ea,
-    WINDOW_RESIZED: ei,
-    OVERLAY_SET_ASSOCIATED_GAME: ev,
-    OVERLAY_TRACKED_GAME_UPDATE: eO,
+let eE = new eg(a.h, {
+    LOGOUT: U,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: G,
+    CONNECTION_CLOSED: V,
+    OVERLAY_START_SESSION: e_,
+    OVERLAY_INITIALIZE: F,
+    OVERLAY_READY: B,
+    OVERLAY_FOCUSED: z,
+    OVERLAY_SELECT_CHANNEL: $,
+    OVERLAY_SELECT_CALL: q,
+    CALL_DELETE: Z,
+    LAYOUT_CREATE: H,
+    OVERLAY_SET_ENABLED: eh,
+    OVERLAY_SET_DISPLAY_NAME_MODE: J,
+    OVERLAY_SET_DISPLAY_USER_MODE: ee,
+    OVERLAY_SET_AVATAR_SIZE_MODE: et,
+    OVERLAY_SET_NOTIFICATION_POSITION_MODE: en,
+    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: er,
+    OVERLAY_SET_SHOW_KEYBIND_INDICATORS: ei,
+    OVERLAY_SET_INVITE_MESSAGE: ea,
+    OVERLAY_SET_GAME_INVITE_NOTIFICATION: eo,
+    OVERLAY_SET_TEXT_WIDGET_OPACITY: es,
+    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: el,
+    OVERLAY_INCOMPATIBLE_APP: eu,
+    OVERLAY_SET_INPUT_LOCKED: Y,
+    OVERLAY_ACTIVATE_REGION: W,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: K,
+    OVERLAY_SET_PREVIEW_IN_GAME_MODE: X,
+    WINDOW_RESIZED: Q,
+    OVERLAY_SET_ASSOCIATED_GAME: em,
+    OVERLAY_TRACKED_GAME_UPDATE: ep,
 });

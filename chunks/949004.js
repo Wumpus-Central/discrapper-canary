@@ -1,95 +1,56 @@
-t.d(a, {
-    default: () => g,
-});
-var d = t(627968),
-    f = t(64700),
-    n = t(397927),
-    r = t(444927),
-    l = t(379848),
-    c = t(612479),
-    b = t(954571),
-    i = t(34550),
-    o = t(14594),
-    u = t(652215),
-    s = t(294589),
-    p = t(985018);
-
-function g(e) {
-    let { onClose: a, transitionState: g, dismissibleContent: O } = e;
-    (0, l.kn)([O]);
-    let _ = (0, r.A)((0, o.ay)(O)),
-        k = f.useMemo(() => _.map((e) => e.value), [_]);
-    f.useEffect(() => {
-        b.default.track(u.HAw.OPEN_MODAL, {
-            type: "Age Verification User Feedback",
-        });
+r.d(t, { default: () => E });
+var n = r(627968),
+    o = r(64700),
+    i = r(397927),
+    a = r(444927),
+    _ = r(379848),
+    l = r(612479),
+    s = r(954571),
+    c = r(34550),
+    u = r(14594),
+    d = r(652215),
+    b = r(294589),
+    m = r(985018);
+function E(e) {
+    let { onClose: t, transitionState: E, dismissibleContent: g } = e;
+    (0, _.kn)([g]);
+    let f = (0, a.A)((0, u.ay)(g)),
+        A = o.useMemo(() => f.map((e) => e.value), [f]);
+    o.useEffect(() => {
+        s.default.track(d.HAw.OPEN_MODAL, { type: "Age Verification User Feedback" });
     }, []);
-    let m = f.useCallback(
+    let S = o.useCallback(
         (e) => {
-            var a;
-            let { rating: f, problem: r, feedback: l } = e,
-                c = null == f,
-                b = (0, i.JO)(O);
-            (0, i.dN)(f, "" !== l ? l : null, null != (a = null == r ? void 0 : r.value) ? a : null, c, b),
-                c ||
-                    (0, n.mMO)(async () => {
-                        let { default: e } = await t.e("37836").then(t.bind(t, 845671));
-                        return (a) =>
-                            (0, d.jsx)(
-                                e,
-                                (function (e) {
-                                    for (var a = 1; a < arguments.length; a++) {
-                                        var t = null != arguments[a] ? arguments[a] : {},
-                                            d = Object.keys(t);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (d = d.concat(
-                                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                                                }),
-                                            )),
-                                            d.forEach(function (a) {
-                                                var d;
-                                                (d = t[a]),
-                                                    a in e
-                                                        ? Object.defineProperty(e, a, {
-                                                              value: d,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[a] = d);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        body: p.intl.string(s.default["4djgO/"]),
-                                    },
-                                    a,
-                                ),
-                            );
+            let { rating: t, problem: o, feedback: a } = e,
+                _ = null == t,
+                l = (0, c.JO)(g);
+            (0, c.dN)(t, "" !== a ? a : null, o?.value ?? null, _, l),
+                _ ||
+                    (0, i.mMO)(async () => {
+                        let { default: e } = await r.e("37836").then(r.bind(r, 845671));
+                        return (t) => (0, n.jsx)(e, { body: m.intl.string(b.default["4djgO/"]), ...t });
                     });
         },
-        [O],
+        [g],
     );
-    return (0, d.jsx)(c.A, {
+    return (0, n.jsx)(l.A, {
         modalType: "age_verification",
-        header: p.intl.string(s.default.RqoA4v),
-        body: p.intl.string(s.default.RPb8Zk),
-        problemTitle: p.intl.string(s.default.KZw6kn),
-        problems: _,
-        freeformNeededProblems: k,
-        onSubmit: m,
-        onClose: a,
-        transitionState: g,
-        otherKey: o.VY.SOMETHING_ELSE,
+        header: m.intl.string(b.default.RqoA4v),
+        body: m.intl.string(b.default.RPb8Zk),
+        problemTitle: m.intl.string(b.default.KZw6kn),
+        problems: f,
+        freeformNeededProblems: A,
+        onSubmit: S,
+        onClose: t,
+        transitionState: E,
+        otherKey: u.VY.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
         freeformDescription: (e) =>
             null == e
                 ? null
-                : e.value === o.VY.SOMETHING_ELSE
-                  ? p.intl.string(s.default.Q5cQ46)
-                  : p.intl.string(s.default.zApKaR),
+                : e.value === u.VY.SOMETHING_ELSE
+                  ? m.intl.string(b.default.Q5cQ46)
+                  : m.intl.string(b.default.zApKaR),
     });
 }

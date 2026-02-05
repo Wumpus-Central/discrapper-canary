@@ -1,17 +1,11 @@
+"use strict";
 n(186659), n(340818), n(626782);
 let r = null;
 async function i(e) {
     let t = r[e];
     if (null != t) return t;
     let n = await fetch(e);
-    return (
-        (t = {
-            url: e,
-            cssText: await n.text(),
-        }),
-        (r[e] = t),
-        t
-    );
+    return (t = { url: e, cssText: await n.text() }), (r[e] = t), t;
 }
 async function a(e, t) {
     let n = e.cssText,
@@ -26,7 +20,6 @@ async function a(e, t) {
         }),
     ).then(() => n);
 }
-
 function s(e) {
     if (null == e) return [];
     let t = [],
@@ -64,8 +57,8 @@ async function o(e, t) {
                     toArray(n.cssRules || []).forEach((e, o) => {
                         if (e.type === CSSRule.IMPORT_RULE) {
                             let l = o + 1,
-                                c = e.href,
-                                u = i(c)
+                                u = e.href,
+                                c = i(u)
                                     .then((e) => a(e, t))
                                     .then((e) =>
                                         s(e).forEach((e) => {
@@ -82,7 +75,7 @@ async function o(e, t) {
                                     .catch((e) => {
                                         console.error("Error loading remote css", e.toString());
                                     });
-                            r.push(u);
+                            r.push(c);
                         }
                     });
                 } catch (l) {
@@ -120,13 +113,12 @@ async function o(e, t) {
         )
     );
 }
-
 function l(e) {
     return e
         .filter((e) => e.type === CSSRule.FONT_FACE_RULE)
         .filter((e) => shouldEmbed(e.style.getPropertyValue("src")));
 }
-async function c(e, t) {
+async function u(e, t) {
     if (null == e.ownerDocument) throw Error("Provided element is not within a Document");
     let n = toArray(e.ownerDocument.styleSheets);
     return l(await o(n, t));

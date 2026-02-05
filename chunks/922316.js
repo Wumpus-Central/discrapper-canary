@@ -1,37 +1,24 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048);
+n.d(t, { A: () => p });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(158954),
+    l = n.n(i),
+    r = n(158954),
     o = n(397927),
-    c = n(234560),
-    d = n(613912),
+    d = n(234560),
+    c = n(613912),
     u = n(661251),
     m = n(288198);
-let p = [
-        {
-            id: "virtual-currency",
-            name: "Virtual Current (Orb) Components",
-        },
-        {
-            id: "nitro",
-            name: "Nitro Components",
-        },
+let h = [
+        { id: "virtual-currency", name: "Virtual Current (Orb) Components" },
+        { id: "nitro", name: "Nitro Components" },
     ],
-    h = {
-        "virtual-currency": d.B,
-        nitro: c.$,
-    };
-
-function f() {
-    let [e, t] = l.useState("virtual-currency"),
-        n = l.useMemo(() => h[e], [e]);
+    x = { "virtual-currency": c.B, nitro: d.$ };
+function p() {
+    let [e, t] = s.useState("virtual-currency"),
+        n = s.useMemo(() => x[e], [e]);
     return (0, a.jsxs)("div", {
-        className: r()(u.nd, m.kL),
+        className: l()(u.nd, m.kL),
         children: [
             (0, a.jsx)(o.VQ0, {
                 className: m.$H,
@@ -40,23 +27,9 @@ function f() {
                 look: "brand",
                 type: "top",
                 orientation: "horizontal",
-                children: p.map((e) =>
-                    (0, a.jsx)(
-                        o.VQ0.Item,
-                        {
-                            id: e.id,
-                            children: e.name,
-                        },
-                        e.id,
-                    ),
-                ),
+                children: h.map((e) => (0, a.jsx)(o.VQ0.Item, { id: e.id, children: e.name }, e.id)),
             }),
-            (0, a.jsx)(s.ArX, {
-                children: (0, a.jsx)("div", {
-                    className: m.Qs,
-                    children: (0, a.jsx)(n, {}),
-                }),
-            }),
+            (0, a.jsx)(r.ArX, { children: (0, a.jsx)("div", { className: m.Qs, children: (0, a.jsx)(n, {}) }) }),
         ],
     });
 }

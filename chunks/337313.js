@@ -1,34 +1,29 @@
-i.d(e, {
-    S: () => E,
-    T: () => d,
-});
+i.d(e, { S: () => S, T: () => E });
 var n = i(311907),
     l = i(233545),
     s = i(419954),
     r = i(430452),
-    u = i(412780),
-    a = i(287809),
+    a = i(412780),
+    u = i(287809),
     o = i(837921),
-    T = i(780964),
-    A = i(731854),
-    S = i(985018);
-
-function E() {
-    return (0, n.bG)([a.default, r.A], () => {
-        var t;
-        let e = a.default.getCurrentUser(),
-            i = null != (t = null == e ? void 0 : e.isStaff()) && t,
-            n = "canary" === o.Ay.releaseChannel || "development" === o.Ay.releaseChannel,
-            l = r.A.supports(A.O5.CONNECTION_REPLAY);
-        return i && n && l;
+    d = i(780964),
+    T = i(731854),
+    A = i(985018);
+function S() {
+    return (0, n.bG)([u.default, r.A], () => {
+        let t = u.default.getCurrentUser(),
+            e = t?.isStaff() ?? !1,
+            i = "canary" === o.Ay.releaseChannel || "development" === o.Ay.releaseChannel,
+            n = r.A.supports(T.O5.CONNECTION_REPLAY);
+        return e && i && n;
     });
 }
-let d = (0, s.zD)(T.X.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
-    useTitle: () => S.intl.string(S.t.U4FgFK),
-    useSubtitle: () => S.intl.string(S.t.Lm72RU),
+let E = (0, s.zD)(d.X.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
+    useTitle: () => A.intl.string(A.t.U4FgFK),
+    useSubtitle: () => A.intl.string(A.t.Lm72RU),
     useValue: function () {
-        return (0, n.bG)([u.Ay], () => u.Ay.shouldRecordNextConnection());
+        return (0, n.bG)([a.Ay], () => a.Ay.shouldRecordNextConnection());
     },
     setValue: l.Et,
-    usePredicate: E,
+    usePredicate: S,
 });

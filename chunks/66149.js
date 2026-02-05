@@ -1,88 +1,50 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(801541),
-    n(896048);
-var l = n(627968),
-    r = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(889137),
+n.d(t, { A: () => E }), n(801541);
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(889137),
     o = n(397927),
     c = n(375901),
-    u = n(491182),
-    d = n(371741),
+    d = n(491182),
+    u = n(371741),
     h = n(922529),
-    p = n(888675),
-    f = n(652215),
-    m = n(985018),
+    m = n(888675),
+    A = n(652215),
+    p = n(985018),
     g = n(410132),
-    A = n(119907);
-
-function b(e) {
-    let { expanded: t, onClick: n, count: r, compact: i, collapsedReason: a, canUncollapse: c = !0 } = e,
-        d = (0, s.YW)({
-            collapsedReason: a,
-        })
-            .with(
-                {
-                    collapsedReason: m.t["VFWjc+"],
-                },
-                () =>
-                    (0, l.jsx)(o.G3N, {
-                        size: "md",
-                        color: "currentColor",
-                        className: g.Q6,
-                    }),
+    f = n(119907);
+function _(e) {
+    let { expanded: t, onClick: n, count: l, compact: a, collapsedReason: s, canUncollapse: c = !0 } = e,
+        u = (0, r.YW)({ collapsedReason: s })
+            .with({ collapsedReason: p.t["VFWjc+"] }, () =>
+                (0, i.jsx)(o.G3N, { size: "md", color: "currentColor", className: g.Q6 }),
             )
-            .with(
-                {
-                    collapsedReason: m.t["+FcYM/"],
-                },
-                () =>
-                    (0, l.jsx)(o.KTN, {
-                        size: "md",
-                        color: "currentColor",
-                        className: g.Q6,
-                    }),
+            .with({ collapsedReason: p.t["+FcYM/"] }, () =>
+                (0, i.jsx)(o.KTN, { size: "md", color: "currentColor", className: g.Q6 }),
             )
-            .otherwise(() =>
-                (0, l.jsx)(o.PGe, {
-                    size: "md",
-                    color: "currentColor",
-                    className: g.Q6,
-                }),
-            ),
-        h = c
-            ? d
-            : (0, l.jsx)(o.DUT, {
-                  tag: "span",
-                  onClick: n,
-                  className: g.Y4,
-                  children: d,
-              });
-    return (0, l.jsx)(u.A, {
-        compact: i,
+            .otherwise(() => (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: g.Q6 })),
+        h = c ? u : (0, i.jsx)(o.DUT, { tag: "span", onClick: n, className: g.Y4, children: u });
+    return (0, i.jsx)(d.A, {
+        compact: a,
         role: "group",
-        childrenMessageContent: (0, l.jsx)(p.A, {
-            compact: i,
+        childrenMessageContent: (0, i.jsx)(m.A, {
+            compact: a,
             className: g.L9,
             iconNode: h,
-            children: (0, l.jsxs)("div", {
+            children: (0, i.jsxs)("div", {
                 className: g.Fo,
                 children: [
-                    m.intl.format(a, {
-                        count: r,
-                    }),
+                    p.intl.format(s, { count: l }),
                     c &&
-                        (0, l.jsxs)(l.Fragment, {
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
                                 " — ",
-                                (0, l.jsx)(o.DUT, {
+                                (0, i.jsx)(o.DUT, {
                                     tag: "span",
                                     onClick: n,
                                     className: g.rB,
-                                    children: t ? m.intl.string(m.t.fgq1gs) : m.intl.string(m.t.XJuakA),
+                                    children: t ? p.intl.string(p.t.fgq1gs) : p.intl.string(p.t.XJuakA),
                                 }),
                             ],
                         }),
@@ -91,75 +53,48 @@ function b(e) {
         }),
     });
 }
-let _ = r.memo(function (e) {
-    var t;
-    let { messages: n, channel: i, compact: s = !1, unreadId: o, collapsedReason: u, canUncollapse: p = !0 } = e,
-        { hasJumpTarget: m = !1 } = n,
-        [_, y] = r.useState(m && p),
-        [v, E] = r.useState(!1),
-        O = r.useCallback(() => {
-            p ? y((e) => !e) : E(!0);
-        }, [p]);
+let E = l.memo(function (e) {
+    let { messages: t, channel: n, compact: a = !1, unreadId: r, collapsedReason: o, canUncollapse: d = !0 } = e,
+        { hasJumpTarget: m = !1 } = t,
+        [p, E] = l.useState(m && d),
+        [C, x] = l.useState(!1),
+        S = l.useCallback(() => {
+            d ? E((e) => !e) : x(!0);
+        }, [d]);
     if (
-        (r.useEffect(() => {
-            m && p && y(!0);
-        }, [m, p]),
-        v)
+        (l.useEffect(() => {
+            m && d && E(!0);
+        }, [m, d]),
+        C)
     )
         return null;
-    let C = n.hasUnread ? n.content.length - 1 : n.content.length;
-    return (0, l.jsxs)("div", {
-        className: a()({
-            [A._A]: !0,
-            [g.sz]: _,
-        }),
+    let T = t.hasUnread ? t.content.length - 1 : t.content.length;
+    return (0, i.jsxs)("div", {
+        className: s()({ [f._A]: !0, [g.sz]: p }),
         children: [
-            n.hasUnread && (!_ || (null == (t = n.content[0]) ? void 0 : t.type) === f.TZK.DIVIDER)
-                ? (0, l.jsx)(
-                      h.A,
-                      {
-                          isUnread: !0,
-                          id: o,
-                      },
-                      "divider",
-                  )
+            t.hasUnread && (!p || t.content[0]?.type === A.TZK.DIVIDER)
+                ? (0, i.jsx)(h.A, { isUnread: !0, id: r }, "divider")
                 : null,
-            (0, l.jsx)(
-                b,
-                {
-                    count: C,
-                    compact: s,
-                    expanded: _,
-                    onClick: O,
-                    collapsedReason: u,
-                    canUncollapse: p,
-                },
+            (0, i.jsx)(
+                _,
+                { count: T, compact: a, expanded: p, onClick: S, collapsedReason: o, canUncollapse: d },
                 "collapsed-message-item",
             ),
-            _
-                ? n.content.map((e, t) => {
-                      if (e.type === f.TZK.DIVIDER && t > 0) {
-                          var r, a;
-                          let e = null != (r = null == (a = n.content[t + 1]) ? void 0 : a.isGroupStart) && r;
-                          return (0, l.jsx)(
-                              h.A,
-                              {
-                                  isUnread: !0,
-                                  isBeforeGroup: e,
-                                  id: o,
-                              },
-                              "divider",
-                          );
+            p
+                ? t.content.map((e, l) => {
+                      if (e.type === A.TZK.DIVIDER && l > 0) {
+                          let e = t.content[l + 1]?.isGroupStart ?? !1;
+                          return (0, i.jsx)(h.A, { isUnread: !0, isBeforeGroup: e, id: r }, "divider");
                       }
-                      if (e.type === f.TZK.MESSAGE || e.type === f.TZK.THREAD_STARTER_MESSAGE) {
-                          let t = e.type === f.TZK.THREAD_STARTER_MESSAGE ? d.VO : d.Ay;
-                          return (0, l.jsx)(
+                      if (e.type === A.TZK.MESSAGE || e.type === A.TZK.THREAD_STARTER_MESSAGE) {
+                          let t = e.type === A.TZK.THREAD_STARTER_MESSAGE ? u.VO : u.Ay;
+                          return (0, i.jsx)(
                               t,
                               {
-                                  id: (0, c.j)(i.id, e.content.id),
+                                  id: (0, c.j)(n.id, e.content.id),
                                   className: g.__invalid_blocked,
-                                  compact: s,
-                                  channel: i,
+                                  compact: a,
+                                  channel: n,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,

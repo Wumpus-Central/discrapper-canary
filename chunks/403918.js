@@ -1,21 +1,9 @@
-n.d(t, {
-    P2: () => c,
-    SX: () => o,
-    W_: () => l,
-    hp: () => a,
-    yt: () => s,
-}),
-    n(427262);
+"use strict";
+n.d(t, { P2: () => u, SX: () => o, W_: () => l, hp: () => a, yt: () => s }), n(427262);
 var r = n(818348),
     i = n(985018);
 let a = 128,
-    s = Object.freeze({
-        MINUTES_30: 18e5,
-        HOURS_1: 36e5,
-        HOURS_4: 144e5,
-        TODAY: "TODAY",
-        DONT_CLEAR: "DONT_CLEAR",
-    });
+    s = Object.freeze({ MINUTES_30: 18e5, HOURS_1: 36e5, HOURS_4: 144e5, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });
 r.cl.ONLINE, r.cl.IDLE, r.cl.DND, r.cl.INVISIBLE;
 let o = [s.TODAY, s.HOURS_4, s.HOURS_1, s.MINUTES_30, s.DONT_CLEAR];
 var l = (function (e) {
@@ -56,137 +44,38 @@ var l = (function (e) {
         e
     );
 })({});
-let c = [
-    {
-        value: "PLAYING",
-        label: () => i.intl.string(i.t.r5TNmx),
-    },
-    {
-        value: "LISTENING_TO",
-        label: () => i.intl.string(i.t["ylzor/"]),
-    },
-    {
-        value: "WATCHING",
-        label: () => i.intl.string(i.t.pzz9iP),
-    },
-    {
-        value: "CURRENT_OBSESSION",
-        label: () => i.intl.string(i.t.xaCthD),
-    },
-    {
-        value: "SHOWER_THOUGHT",
-        label: () => i.intl.string(i.t.Wf8fxL),
-    },
-    {
-        value: "TODAY_I_LEARNED",
-        label: () => i.intl.string(i.t.pycKiy),
-    },
-    {
-        value: "HOT_TAKE",
-        label: () => i.intl.string(i.t.l3pZci),
-    },
-    {
-        value: "DAD_JOKE",
-        label: () => i.intl.string(i.t["3XVZ0v"]),
-    },
-    {
-        value: "EMOJI_DAY",
-        label: () => i.intl.string(i.t["4U+EJP"]),
-    },
-    {
-        value: "USELESS_TALENT",
-        label: () => i.intl.string(i.t["Z3Vn/X"]),
-    },
-    {
-        value: "VIDEO_GAME_ITEM",
-        label: () => i.intl.string(i.t.PiepBk),
-    },
-    {
-        value: "READING",
-        label: () => i.intl.string(i.t.pYQRnN),
-    },
-    {
-        value: "SONG_STUCK",
-        label: () => i.intl.string(i.t.S7UJ0u),
-    },
-    {
-        value: "MOST_USED_EMOJI",
-        label: () => i.intl.string(i.t["1TlHwx"]),
-    },
-    {
-        value: "BEST_FOOD",
-        label: () => i.intl.string(i.t.ZPjuez),
-    },
-    {
-        value: "FICTIONAL_WORLD",
-        label: () => i.intl.string(i.t.lyOeXL),
-    },
-    {
-        value: "USERNAME_ORIGIN",
-        label: () => i.intl.string(i.t.l6Yb3T),
-    },
-    {
-        value: "THEME_SONG",
-        label: () => i.intl.string(i.t.Vok4QU),
-    },
-    {
-        value: "FAVORITE_COLLECTIBLE",
-        label: () => i.intl.string(i.t.T24umy),
-    },
-    {
-        value: "GAME_MECHANIC",
-        label: () => i.intl.string(i.t.kzToEh),
-    },
-    {
-        value: "NPC_COMPANION",
-        label: () => i.intl.string(i.t["/Zm5VV"]),
-    },
-    {
-        value: "FOOD_CRAVING",
-        label: () => i.intl.string(i.t.ujnXus),
-    },
-    {
-        value: "MYTHICAL_PET",
-        label: () => i.intl.string(i.t["45r7ue"]),
-    },
-    {
-        value: "LATEST_HOBBY",
-        label: () => i.intl.string(i.t.SluNa8),
-    },
-    {
-        value: "FAVORITE_ANIME",
-        label: () => i.intl.string(i.t.R1f9RT),
-    },
-    {
-        value: "RANKED_UP",
-        label: () => i.intl.string(i.t.nXJgjn),
-    },
-    {
-        value: "CHARACTER_CLASS",
-        label: () => i.intl.string(i.t.SWVxPM),
-    },
-    {
-        value: "HIGH_SCORE",
-        label: () => i.intl.string(i.t.gbUeX7),
-    },
-    {
-        value: "FINISHED_PLAYING",
-        label: () => i.intl.string(i.t.bIrdLj),
-    },
-    {
-        value: "FINISHED_READING",
-        label: () => i.intl.string(i.t["tcQn+J"]),
-    },
-    {
-        value: "CANT_WAIT",
-        label: () => i.intl.string(i.t["40gTjw"]),
-    },
-    {
-        value: "ADD_STATUS",
-        label: () => i.intl.string(i.t.Vq4UmS),
-    },
-    {
-        value: "WHATS_ON_YOUR_MIND",
-        label: () => i.intl.string(i.t.xod367),
-    },
+let u = [
+    { value: "PLAYING", label: () => i.intl.string(i.t.r5TNmx) },
+    { value: "LISTENING_TO", label: () => i.intl.string(i.t["ylzor/"]) },
+    { value: "WATCHING", label: () => i.intl.string(i.t.pzz9iP) },
+    { value: "CURRENT_OBSESSION", label: () => i.intl.string(i.t.xaCthD) },
+    { value: "SHOWER_THOUGHT", label: () => i.intl.string(i.t.Wf8fxL) },
+    { value: "TODAY_I_LEARNED", label: () => i.intl.string(i.t.pycKiy) },
+    { value: "HOT_TAKE", label: () => i.intl.string(i.t.l3pZci) },
+    { value: "DAD_JOKE", label: () => i.intl.string(i.t["3XVZ0v"]) },
+    { value: "EMOJI_DAY", label: () => i.intl.string(i.t["4U+EJP"]) },
+    { value: "USELESS_TALENT", label: () => i.intl.string(i.t["Z3Vn/X"]) },
+    { value: "VIDEO_GAME_ITEM", label: () => i.intl.string(i.t.PiepBk) },
+    { value: "READING", label: () => i.intl.string(i.t.pYQRnN) },
+    { value: "SONG_STUCK", label: () => i.intl.string(i.t.S7UJ0u) },
+    { value: "MOST_USED_EMOJI", label: () => i.intl.string(i.t["1TlHwx"]) },
+    { value: "BEST_FOOD", label: () => i.intl.string(i.t.ZPjuez) },
+    { value: "FICTIONAL_WORLD", label: () => i.intl.string(i.t.lyOeXL) },
+    { value: "USERNAME_ORIGIN", label: () => i.intl.string(i.t.l6Yb3T) },
+    { value: "THEME_SONG", label: () => i.intl.string(i.t.Vok4QU) },
+    { value: "FAVORITE_COLLECTIBLE", label: () => i.intl.string(i.t.T24umy) },
+    { value: "GAME_MECHANIC", label: () => i.intl.string(i.t.kzToEh) },
+    { value: "NPC_COMPANION", label: () => i.intl.string(i.t["/Zm5VV"]) },
+    { value: "FOOD_CRAVING", label: () => i.intl.string(i.t.ujnXus) },
+    { value: "MYTHICAL_PET", label: () => i.intl.string(i.t["45r7ue"]) },
+    { value: "LATEST_HOBBY", label: () => i.intl.string(i.t.SluNa8) },
+    { value: "FAVORITE_ANIME", label: () => i.intl.string(i.t.R1f9RT) },
+    { value: "RANKED_UP", label: () => i.intl.string(i.t.nXJgjn) },
+    { value: "CHARACTER_CLASS", label: () => i.intl.string(i.t.SWVxPM) },
+    { value: "HIGH_SCORE", label: () => i.intl.string(i.t.gbUeX7) },
+    { value: "FINISHED_PLAYING", label: () => i.intl.string(i.t.bIrdLj) },
+    { value: "FINISHED_READING", label: () => i.intl.string(i.t["tcQn+J"]) },
+    { value: "CANT_WAIT", label: () => i.intl.string(i.t["40gTjw"]) },
+    { value: "ADD_STATUS", label: () => i.intl.string(i.t.Vq4UmS) },
+    { value: "WHATS_ON_YOUR_MIND", label: () => i.intl.string(i.t.xod367) },
 ];

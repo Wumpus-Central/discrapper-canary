@@ -1,33 +1,31 @@
-n.d(t, {
-    s: () => o,
-});
+"use strict";
+n.d(t, { s: () => o });
 var r = n(803082),
     i = n(290424),
     a = n(8321),
     s = n(946020);
-
 function o(e, t) {
     let n,
         {
             elementType: o = "button",
             isDisabled: l,
-            onPress: c,
-            onPressStart: u,
+            onPress: u,
+            onPressStart: c,
             onPressEnd: d,
-            onPressUp: f,
-            onPressChange: p,
-            preventFocusOnPress: _,
+            onPressUp: _,
+            onPressChange: f,
+            preventFocusOnPress: p,
             allowFocusWhenDisabled: h,
             onClick: m,
             href: g,
             target: E,
-            rel: b,
-            type: y = "button",
+            rel: A,
+            type: I = "button",
         } = e;
     n =
         "button" === o
             ? {
-                  type: y,
+                  type: I,
                   disabled: l,
                   form: e.form,
                   formAction: e.formAction,
@@ -42,34 +40,28 @@ function o(e, t) {
                   role: "button",
                   href: "a" !== o || l ? void 0 : g,
                   target: "a" === o ? E : void 0,
-                  type: "input" === o ? y : void 0,
+                  type: "input" === o ? I : void 0,
                   disabled: "input" === o ? l : void 0,
                   "aria-disabled": l && "input" !== o ? l : void 0,
-                  rel: "a" === o ? b : void 0,
+                  rel: "a" === o ? A : void 0,
               };
-    let { pressProps: O, isPressed: A } = (0, a.d)({
-            onPressStart: u,
+    let { pressProps: T, isPressed: y } = (0, a.d)({
+            onPressStart: c,
             onPressEnd: d,
-            onPressChange: p,
-            onPress: c,
-            onPressUp: f,
+            onPressChange: f,
+            onPress: u,
+            onPressUp: _,
             onClick: m,
             isDisabled: l,
-            preventFocusOnPress: _,
+            preventFocusOnPress: p,
             ref: t,
         }),
-        { focusableProps: v } = (0, s.Wc)(e, t);
-    h && (v.tabIndex = l ? -1 : v.tabIndex);
-    let S = (0, r.v)(
-        v,
-        O,
-        (0, i.$)(e, {
-            labelable: !0,
-        }),
-    );
+        { focusableProps: S } = (0, s.Wc)(e, t);
+    h && (S.tabIndex = l ? -1 : S.tabIndex);
+    let v = (0, r.v)(S, T, (0, i.$)(e, { labelable: !0 }));
     return {
-        isPressed: A,
-        buttonProps: (0, r.v)(n, S, {
+        isPressed: y,
+        buttonProps: (0, r.v)(n, v, {
             "aria-haspopup": e["aria-haspopup"],
             "aria-expanded": e["aria-expanded"],
             "aria-controls": e["aria-controls"],

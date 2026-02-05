@@ -1,3 +1,1 @@
-e.exports = {
-    F: "displayNameStylesSection_e60bc0",
-};
+e.exports = { F: "displayNameStylesSection_e60bc0" };

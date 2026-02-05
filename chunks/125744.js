@@ -1,9 +1,6 @@
-n.d(t, {
-    s: () => r,
-}),
-    n(896048);
+n.d(t, { s: () => l });
 var i,
-    r =
+    l =
         (((i = {}).DISCORD = "discord"),
         (i.TWITCH = "twitch"),
         (i.YOUTUBE = "youtube"),

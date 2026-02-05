@@ -1,3 +1,4 @@
+"use strict";
 e.exports = function (e) {
     if (void 0 === e) return e;
     var t = {};

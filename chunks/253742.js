@@ -1,234 +1,118 @@
-n.d(t, {
-    A: () => L,
-}),
-    n(896048),
-    n(321073);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => R }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(990078),
-    c = n(397927),
-    u = n(442433),
-    d = n(717558),
-    p = n(770178),
-    f = n(765548),
-    h = n(793574),
-    A = n(688810),
-    g = n(659974),
-    m = n(384059),
-    b = n(480890),
-    _ = n(551826),
-    E = n(342296),
-    O = n(961350),
-    y = n(430452),
-    I = n(485296),
-    v = n(427262),
-    S = n(31408),
-    C = n(985018),
-    N = n(603108);
-
-function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function j(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let x = {
-        offset: 2,
-    },
-    P = {
-        serverDeaf: {
-            icon: c.TJE,
-            colorize: !0,
-            getStatus: () => C.intl.string(C.t.btxSdB),
-        },
-        serverMute: {
-            icon: c.O1p,
-            colorize: !0,
-            getStatus: () => C.intl.string(C.t.uLddbQ),
-        },
-        deaf: {
-            icon: c.cQT,
-            colorize: !1,
-            getStatus: () => C.intl.string(C.t.NjmiOL),
-        },
-        mute: {
-            icon: c.z0P,
-            colorize: !1,
-            getStatus: () => C.intl.string(C.t.tjtv3P),
-        },
-        localMute: {
-            icon: c.O1p,
-            colorize: !1,
-            getStatus: () => C.intl.string(C.t["9F+xJU"]),
-        },
+    d = n(397927),
+    c = n(442433),
+    u = n(717558),
+    A = n(770178),
+    h = n(765548),
+    _ = n(793574),
+    m = n(688810),
+    p = n(659974),
+    g = n(384059),
+    E = n(480890),
+    f = n(551826),
+    I = n(342296),
+    C = n(961350),
+    N = n(430452),
+    T = n(485296),
+    S = n(427262),
+    x = n(31408),
+    v = n(985018),
+    b = n(603108);
+let y = { offset: 2 },
+    L = {
+        serverDeaf: { icon: d.TJE, colorize: !0, getStatus: () => v.intl.string(v.t.btxSdB) },
+        serverMute: { icon: d.O1p, colorize: !0, getStatus: () => v.intl.string(v.t.uLddbQ) },
+        deaf: { icon: d.cQT, colorize: !1, getStatus: () => v.intl.string(v.t.NjmiOL) },
+        mute: { icon: d.z0P, colorize: !1, getStatus: () => v.intl.string(v.t.tjtv3P) },
+        localMute: { icon: d.O1p, colorize: !1, getStatus: () => v.intl.string(v.t["9F+xJU"]) },
     };
-
-function w(e) {
-    var t, l;
-    let p = i.useRef(null),
-        { parentAnalyticsLocation: f } = (0, A.Ay)(),
-        { channel: O, user: w, nick: L, mute: R, deaf: D, serverMute: M, serverDeaf: k } = e,
-        U = (0, s.bG)([y.A], () => y.A.isLocalMute(w.id)),
-        G = (0, d.A)({
-            userId: w.id,
-            checkSoundSharing: !0,
-        }),
-        V = null != (t = O.getGuildId()) ? t : void 0,
-        B = w.getAvatarURL(O.guild_id, 24),
-        H = null != L ? L : v.Ay.getName(w),
+function O(e) {
+    let t = r.useRef(null),
+        { parentAnalyticsLocation: a } = (0, m.Ay)(),
+        { channel: A, user: h, nick: C, mute: O, deaf: R, serverMute: P, serverDeaf: j } = e,
+        D = (0, s.bG)([N.A], () => N.A.isLocalMute(h.id)),
+        w = (0, u.A)({ userId: h.id, checkSoundSharing: !0 }),
+        M = A.getGuildId() ?? void 0,
+        U = h.getAvatarURL(A.guild_id, 24),
+        G = C ?? S.Ay.getName(h),
         {
-            icon: F,
-            colorize: Y,
-            getStatus: K,
-        } = null !=
-        (l = (function (e) {
-            let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
-            if (t) return P.serverDeaf;
-            if (n) return P.deaf;
-            if (r) return P.serverMute;
-            if (l) return P.localMute;
-            if (i) return P.mute;
-        })({
-            serverDeaf: k,
-            deaf: D,
-            serverMute: M,
-            mute: R,
-            localMute: U,
-        }))
-            ? l
-            : {},
-        z =
-            null != K
-                ? C.intl.formatToPlainString(C.t["1+MVBP"], {
-                      userName: H,
-                      status: K(),
-                  })
-                : H;
-
-    function W(e) {
-        null != V
-            ? (0, u.L3)(e, async () => {
-                  let { default: e } = await Promise.all([
-                      n.e("97262"),
-                      n.e("29534"),
-                      n.e("55296"),
-                      n.e("84841"),
-                      n.e("91609"),
-                  ]).then(n.bind(n, 107632));
+            icon: k,
+            colorize: V,
+            getStatus: B,
+        } = (function (e) {
+            let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: a } = e;
+            if (t) return L.serverDeaf;
+            if (n) return L.deaf;
+            if (i) return L.serverMute;
+            if (a) return L.localMute;
+            if (r) return L.mute;
+        })({ serverDeaf: j, deaf: R, serverMute: P, mute: O, localMute: D }) ?? {},
+        H = null != B ? v.intl.formatToPlainString(v.t["1+MVBP"], { userName: G, status: B() }) : G;
+    function F(e) {
+        null != M
+            ? (0, c.L3)(e, async () => {
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("31885")]).then(
+                      n.bind(n, 107632),
+                  );
                   return (t) =>
-                      (0, r.jsx)(
-                          e,
-                          j(T({}, t), {
-                              user: w,
-                              guildId: V,
-                              channel: O,
-                              showMediaItems: !0,
-                              onInteraction: (0, b.s)("GuildChannelUserContextMenu", h.A.RTC_PANEL, {
-                                  targetUserId: w.id,
-                              }),
-                          }),
-                      );
+                      (0, i.jsx)(e, {
+                          ...t,
+                          user: h,
+                          guildId: M,
+                          channel: A,
+                          showMediaItems: !0,
+                          onInteraction: (0, E.s)("GuildChannelUserContextMenu", _.A.RTC_PANEL, { targetUserId: h.id }),
+                      });
               })
-            : (0, u.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("99871")]).then(
+            : (0, c.L3)(e, async () => {
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22252")]).then(
                       n.bind(n, 668569),
                   );
                   return (t) =>
-                      (0, r.jsx)(
-                          e,
-                          j(T({}, t), {
-                              user: w,
-                              showMediaItems: !0,
-                              onInteraction: (0, b.s)("UserGenericContextMenu", h.A.RTC_PANEL, {
-                                  targetUserId: w.id,
-                              }),
-                          }),
-                      );
+                      (0, i.jsx)(e, {
+                          ...t,
+                          user: h,
+                          showMediaItems: !0,
+                          onInteraction: (0, E.s)("UserGenericContextMenu", _.A.RTC_PANEL, { targetUserId: h.id }),
+                      });
               });
     }
-    let q = (0, s.bG)([I.A], () => I.A.getVoiceVolume(w.id)),
-        Q = (0, g.v)({
-            isSpeaking: G,
-            voiceDb: q,
-            spreadDirection: g.O.INSET_ONLY,
-            maxInnerSpreadRadius: 3,
-        });
-    return (0, r.jsx)(E.A, {
-        targetElementRef: p,
-        user: w,
-        guildId: V,
-        channelId: O.id,
+    let Y = (0, s.bG)([T.A], () => T.A.getVoiceVolume(h.id)),
+        W = (0, p.v)({ isSpeaking: w, voiceDb: Y, spreadDirection: p.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
+    return (0, i.jsx)(I.A, {
+        targetElementRef: t,
+        user: h,
+        guildId: M,
+        channelId: A.id,
         position: "top",
         clickTrap: !0,
         children: (e) =>
-            (0, r.jsx)(o.m, {
-                text: z,
-                children: (0, r.jsx)(c.DUT, {
-                    innerRef: p,
+            (0, i.jsx)(o.m, {
+                text: H,
+                children: (0, i.jsx)(d.DUT, {
+                    innerRef: t,
                     onClick: (t) => {
-                        e.onClick(t), (0, m.X)(f, m.O.VOICE_USER);
+                        e.onClick(t), (0, g.X)(a, g.O.VOICE_USER);
                     },
-                    className: N.H,
-                    onContextMenu: W,
-                    focusProps: x,
-                    children: (0, r.jsx)(_.A, {
-                        shakeLocation: S.uD.VOICE_USER,
-                        isShaking: G,
-                        children: (0, r.jsx)("div", {
-                            className: N.my,
-                            style: T(
-                                {
-                                    backgroundImage: "url(".concat(B, ")"),
-                                },
-                                Q,
-                            ),
+                    className: b.H,
+                    onContextMenu: F,
+                    focusProps: y,
+                    children: (0, i.jsx)(f.A, {
+                        shakeLocation: x.uD.VOICE_USER,
+                        isShaking: w,
+                        children: (0, i.jsx)("div", {
+                            className: b.my,
+                            style: { backgroundImage: `url(${U})`, ...W },
                             children:
-                                null != F
-                                    ? (0, r.jsx)(F, {
-                                          className: a()(N.tr, {
-                                              [N.qE]: Y,
-                                          }),
+                                null != k
+                                    ? (0, i.jsx)(k, {
+                                          className: l()(b.tr, { [b.qE]: V }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -239,85 +123,75 @@ function w(e) {
             }),
     });
 }
-
-function L(e) {
-    let { voiceStates: t, channel: n, className: l } = e,
-        [u, d] = i.useState(!1),
-        h = (0, s.bG)([O.default], () => O.default.getId()),
-        { containerRef: A, maxVisibleAvatars: g } = (function (e) {
-            let [t, n] = i.useState(7),
-                r = (0, f.A)(() => {
-                    let t = null == l ? void 0 : l.current;
+function R(e) {
+    let { voiceStates: t, channel: n, className: a } = e,
+        [c, u] = r.useState(!1),
+        _ = (0, s.bG)([C.default], () => C.default.getId()),
+        { containerRef: m, maxVisibleAvatars: p } = (function (e) {
+            let [t, n] = r.useState(7),
+                i = (0, h.A)(() => {
+                    let t = a?.current;
                     if (null == t) return;
-                    let r = Math.floor((t.offsetWidth + 4) / 28);
-                    n(Math.max(1, e > r ? r - 1 : r));
+                    let i = Math.floor((t.offsetWidth + 4) / 28);
+                    n(Math.max(1, e > i ? i - 1 : i));
                 }),
-                l = (0, p.w)(r, [e], {
-                    fireOnMount: !0,
-                    fireOnDepsChange: !0,
-                });
-            return {
-                containerRef: l,
-                maxVisibleAvatars: t,
-            };
+                a = (0, A.w)(i, [e], { fireOnMount: !0, fireOnDepsChange: !0 });
+            return { containerRef: a, maxVisibleAvatars: t };
         })(t.length - 1),
-        [m, b] = (function (e, t, n) {
-            let r = [];
-            for (let i of e)
-                if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
-                    if (r.length >= n) return [r, !0];
-                    r.push(i);
+        [g, E] = (function (e, t, n) {
+            let i = [];
+            for (let r of e)
+                if (r.user.id !== t && !i.some((e) => e.user.id === r.user.id)) {
+                    if (i.length >= n) return [i, !0];
+                    i.push(r);
                 }
-            return [r, !1];
-        })(t, h, g),
-        _ = u ? c.QGg : c.j96,
-        E = u ? C.intl.string(C.t["Z/Tya5"]) : C.intl.string(C.t.XR5BAc),
-        y = (0, r.jsx)(o.m, {
-            text: E,
+            return [i, !1];
+        })(t, _, p),
+        f = c ? d.QGg : d.j96,
+        I = c ? v.intl.string(v.t["Z/Tya5"]) : v.intl.string(v.t.XR5BAc),
+        N = (0, i.jsx)(o.m, {
+            text: I,
             ariaHidden: !0,
-            children: (0, r.jsx)(c.K0, {
-                "aria-label": E,
-                onClick: () => d(!u),
-                icon: () =>
-                    (0, r.jsx)(_, {
-                        size: "md",
-                    }),
+            children: (0, i.jsx)(d.K0, {
+                "aria-label": I,
+                onClick: () => u(!c),
+                icon: () => (0, i.jsx)(f, { size: "md" }),
                 variant: "icon-only",
                 size: "sm",
             }),
         }),
-        I = b && u ? t : m;
-    return I.length <= 0
+        T = E && c ? t : g;
+    return T.length <= 0
         ? null
-        : (0, r.jsx)(c.IpV, {
-              className: a()(N.XG, l),
+        : (0, i.jsx)(d.IpV, {
+              className: l()(b.XG, a),
               fade: !0,
-              children: (0, r.jsxs)("div", {
-                  ref: A,
-                  className: a()(N.Xk, !u && N.yZ),
+              children: (0, i.jsxs)("div", {
+                  ref: m,
+                  className: l()(b.Xk, !c && b.yZ),
                   role: "group",
-                  "aria-label": C.intl.string(C.t["/ZgaVU"]),
+                  "aria-label": v.intl.string(v.t["/ZgaVU"]),
                   children: [
-                      I.map((e) => {
-                          let { user: t, nick: i, voiceState: l } = e;
-                          return t.id !== h
-                              ? (0, r.jsx)(
-                                    w,
+                      T.map((e) => {
+                          let { user: t, nick: r, voiceState: a } = e;
+                          return t.id !== _
+                              ? (0, i.jsx)(
+                                    O,
                                     {
                                         channel: n,
                                         user: t,
-                                        nick: i,
-                                        mute: l.isVoiceMuted(),
-                                        deaf: l.isVoiceDeafened(),
-                                        video: l.selfVideo,
-                                        serverMute: l.mute,
-                                        serverDeaf: l.deaf,
+                                        nick: r,
+                                        mute: a.isVoiceMuted(),
+                                        deaf: a.isVoiceDeafened(),
+                                        video: a.selfVideo,
+                                        serverMute: a.mute,
+                                        serverDeaf: a.deaf,
                                     },
                                     t.id,
                                 )
                               : null;
                       }),
-                      b ? y : null,
+                      E ? N : null,
                   ],
               }),
           });

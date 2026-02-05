@@ -1,144 +1,95 @@
-n.d(t, {
-    M: () => _,
-    a: () => p,
-});
+"use strict";
+n.d(t, { M: () => _, a: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(862482),
+    s = n.n(a),
+    o = n(862482),
     l = n(725570),
-    c = n(397927),
-    u = n(818284);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function p(e) {
+    u = n(397927),
+    c = n(818284);
+function d(e) {
     let t,
         n,
         {
             header: a,
             children: d,
-            confirmText: f,
-            cancelText: p,
-            className: _,
+            confirmText: _,
+            cancelText: f,
+            className: p,
             onConfirm: h,
             onCancel: m,
             onClose: g,
             onCloseCallback: E,
-            bodyClassName: y,
-            transitionState: b,
-            loading: O = !1,
-            confirmButtonColor: v = s.$n.Colors.RED,
-            focusCancel: A = !1,
-            impression: I,
+            bodyClassName: A,
+            transitionState: I,
+            loading: T = !1,
+            confirmButtonColor: y = o.$n.Colors.RED,
+            focusCancel: S = !1,
+            impression: v,
         } = e,
-        S = i.useRef(null);
+        C = i.useRef(null);
     return (
         i.useEffect(() => {
-            A ||
-                setTimeout(() => {
-                    var e;
-                    return null == (e = S.current) ? void 0 : e.focus();
-                }, 0);
-        }, [A]),
-        i.useLayoutEffect(() => () => (null == E ? void 0 : E())),
-        null != p &&
-            (t = (0, r.jsx)(s.$n, {
+            S || setTimeout(() => C.current?.focus(), 0);
+        }, [S]),
+        i.useLayoutEffect(() => () => E?.()),
+        null != f &&
+            (t = (0, r.jsx)(o.$n, {
                 "data-migration-pending": !0,
                 type: "button",
-                look: s.$n.Looks.FILLED,
-                color: s.$n.Colors.PRIMARY,
-                className: u.x,
-                size: s.$n.Sizes.MEDIUM,
-                disabled: O,
+                look: o.$n.Looks.FILLED,
+                color: o.$n.Colors.PRIMARY,
+                className: c.x,
+                size: o.$n.Sizes.MEDIUM,
+                disabled: T,
                 onClick: () => {
-                    null == m || m(), g();
+                    m?.(), g();
                 },
-                autoFocus: A,
-                children: p,
+                autoFocus: S,
+                children: f,
             })),
-        null != f &&
-            (n = (0, r.jsx)(s.$n, {
+        null != _ &&
+            (n = (0, r.jsx)(o.$n, {
                 "data-migration-pending": !0,
-                buttonRef: S,
+                buttonRef: C,
                 type: "submit",
-                size: s.$n.Sizes.MEDIUM,
-                color: v,
-                submitting: O,
+                size: o.$n.Sizes.MEDIUM,
+                color: y,
+                submitting: T,
                 onClick: async () => {
                     try {
-                        await (null == h ? void 0 : h()), g();
+                        await h?.(), g();
                     } catch (e) {
                         throw e;
                     }
                 },
-                autoFocus: !A,
-                children: f,
+                autoFocus: !S,
+                children: _,
             })),
         (0, r.jsxs)(l.EO, {
             "data-migration-pending": !0,
-            className: _,
-            transitionState: b,
-            impression: I,
+            className: p,
+            transitionState: I,
+            impression: v,
             parentComponent: "ConfirmModal",
             children: [
                 null != a
                     ? (0, r.jsx)(l.rQ, {
                           "data-migration-pending": !0,
                           separator: !1,
-                          children: (0, r.jsx)(c.Heading, {
-                              variant: "heading-lg/semibold",
-                              children: a,
-                          }),
+                          children: (0, r.jsx)(u.Heading, { variant: "heading-lg/semibold", children: a }),
                       })
                     : null,
-                (0, r.jsx)(l.$m, {
-                    "data-migration-pending": !0,
-                    className: o()(u.Q, y),
-                    children: d,
-                }),
-                (0, r.jsxs)(l.jl, {
-                    "data-migration-pending": !0,
-                    children: [n, t],
-                }),
+                (0, r.jsx)(l.$m, { "data-migration-pending": !0, className: s()(c.Q, A), children: d }),
+                (0, r.jsxs)(l.jl, { "data-migration-pending": !0, children: [n, t] }),
             ],
         })
     );
 }
-
 function _(e) {
     return (0, r.jsx)(l.aF, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (t) => (0, r.jsx)(p, f({}, t, e)),
+        renderModal: (t) => (0, r.jsx)(d, { ...t, ...e }),
     });
 }

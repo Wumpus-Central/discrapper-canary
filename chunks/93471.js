@@ -1,24 +1,12 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968);
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(641324),
-    a = n(669550),
-    s = n(790174),
-    o = n(23901),
-    l = n(985018);
-
-function c() {
-    let { node: e } = (0, a.Ay)(o.F, "");
-    return (0, r.jsx)(s.A, {
-        title: l.intl.string(l.t.KyFVyi),
-        children: (0, r.jsx)(
-            i.A,
-            {
-                node: e,
-            },
-            e.key,
-        ),
-    });
+var l = n(641324),
+    s = n(669550),
+    a = n(790174),
+    r = n(23901),
+    o = n(985018);
+function d() {
+    let { node: e } = (0, s.Ay)(r.F, "");
+    return (0, i.jsx)(a.A, { title: o.intl.string(o.t.KyFVyi), children: (0, i.jsx)(l.A, { node: e }, e.key) });
 }

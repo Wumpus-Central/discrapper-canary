@@ -1,70 +1,56 @@
-n.d(t, {
-    A: () => I,
-}),
-    n(896048),
-    n(638769);
-var l,
-    r,
-    i = n(735438),
-    s = n.n(i),
-    a = n(311907),
-    o = n(73153),
-    c = n(591552),
+n.d(t, { A: () => I });
+var i = n(735438),
+    l = n.n(i),
+    s = n(311907),
+    r = n(73153),
+    a = n(591552),
     d = n(555337),
-    u = n(652215);
-let m = !1,
-    g = null,
-    f = new Set();
-
-function h() {
-    (m = !1),
-        (g = null),
-        null != (g = d.A.getGuildId()) &&
-            d.A.getSection() === u.BEX.ONBOARDING &&
-            (f = new Set(c.A.getDefaultChannelIds(g)));
+    o = n(652215);
+let c = !1,
+    u = null,
+    m = new Set();
+function N() {
+    (c = !1),
+        (u = null),
+        null != (u = d.A.getGuildId()) &&
+            d.A.getSection() === o.BEX.ONBOARDING &&
+            (m = new Set(a.A.getDefaultChannelIds(u)));
 }
-class N extends (l = a.Ay.Store) {
+class h extends s.Ay.Store {
+    static displayName = "GuildSettingsDefaultChannelsStore";
     initialize() {
-        this.waitFor(d.A, c.A);
+        this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        if (null == g) return !1;
-        let e = c.A.getDefaultChannelIds(g).sort(),
-            t = Array.from(f).sort();
-        return !s().isEqual(e, t);
+        if (null == u) return !1;
+        let e = a.A.getDefaultChannelIds(u).sort(),
+            t = Array.from(m).sort();
+        return !l().isEqual(e, t);
     }
     get guildId() {
-        return g;
+        return u;
     }
     get submitting() {
-        return m;
+        return c;
     }
     get editedDefaultChannelIds() {
-        return f;
+        return m;
     }
 }
-(r = "displayName") in N
-    ? Object.defineProperty(N, r, {
-          value: "GuildSettingsDefaultChannelsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (N[r] = "GuildSettingsDefaultChannelsStore");
-let I = new N(o.h, {
-    GUILD_SETTINGS_INIT: h,
-    GUILD_SETTINGS_SET_SECTION: h,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: h,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: h,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: h,
+let I = new h(r.h, {
+    GUILD_SETTINGS_INIT: N,
+    GUILD_SETTINGS_SET_SECTION: N,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: N,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: N,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function () {
-        m = !1;
+        c = !1;
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
         let { channelId: t } = e;
-        (f = new Set(f)).has(t) ? f.delete(t) : f.add(t);
+        (m = new Set(m)).has(t) ? m.delete(t) : m.add(t);
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
-        m = !0;
+        c = !0;
     },
 });

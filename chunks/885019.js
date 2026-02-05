@@ -1,3 +1,4 @@
+"use strict";
 var n = r(1140),
     i = r(265930),
     o = function (t, e) {
@@ -31,11 +32,7 @@ t.exports = function (t) {
                         a,
                         function (e, i) {
                             var o = t.getText();
-                            s.push({
-                                offset: n.strlen(o.slice(0, e)),
-                                length: n.strlen(o.slice(e, i)),
-                                style: r,
-                            });
+                            s.push({ offset: n.strlen(o.slice(0, e)), length: n.strlen(o.slice(e, i)), style: r });
                         },
                     ),
                     s

@@ -1,108 +1,16 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function o(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = l(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function l(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function c(e) {
-    let { sound_id: t, rank: n } = e;
-    return {
-        soundId: t,
-        rank: n,
-    };
-}
+"use strict";
 n.d(t, {
-    A2: () => h,
-    Cx: () => m,
-    FH: () => p,
-    If: () => u,
-    N0: () => _,
-    Vr: () => f,
-    Zm: () => E,
-    ib: () => d,
-    pJ: () => c,
-    uq: () => g,
-}),
-    n(896048);
-var u = (function (e) {
+    A2: () => l,
+    Cx: () => u,
+    FH: () => s,
+    If: () => r,
+    N0: () => o,
+    Vr: () => a,
+    Zm: () => d,
+    ib: () => i,
+    uq: () => c,
+});
+var r = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PLAY = 1)] = "PLAY"),
@@ -111,42 +19,24 @@ var u = (function (e) {
             e
         );
     })({}),
-    d = (function (e) {
+    i = (function (e) {
         return (e.ENTRY = "entry_sound"), (e.EXIT = "exit_sound"), (e.DEFAULT = "default"), e;
     })({}),
-    f = (function (e) {
+    a = (function (e) {
         return (e.ADDED = "added"), (e.UPDATED = "updated"), (e.REMOVED = "removed"), e;
     })({}),
-    p = (function (e) {
+    s = (function (e) {
         return (e.DEFAULT = "default"), (e.CUSTOM = "custom"), e;
     })({});
-
-function _(e, t) {
-    let [n, ...r] = [e, t],
-        { sound_id: a, emoji_id: l, emoji_name: c, user_id: u, available: d } = n,
-        f = o(n, ["sound_id", "emoji_id", "emoji_name", "user_id", "available"]),
-        [p] = r;
-    return s(i({}, f), {
-        soundId: a,
-        guildId: p,
-        emojiId: l,
-        emojiName: c,
-        userId: u,
-        available: null == d || d,
-    });
+function o(e, t) {
+    let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: s, ...o } = e;
+    return { ...o, soundId: n, guildId: t, emojiId: r, emojiName: i, userId: a, available: s ?? !0 };
 }
-
-function h(e) {
-    let { soundId: t, guildId: n, emojiId: r, emojiName: a, userId: l } = e;
-    return s(i({}, o(e, ["soundId", "guildId", "emojiId", "emojiName", "userId"])), {
-        sound_id: t,
-        guild_id: n,
-        emoji_id: r,
-        emoji_name: a,
-        user_id: l,
-    });
+function l(e) {
+    let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...s } = e;
+    return { ...s, sound_id: t, guild_id: n, emoji_id: r, emoji_name: i, user_id: a };
 }
-var m = (function (e) {
+var u = (function (e) {
         return (
             (e[(e.FAVORITES = 0)] = "FAVORITES"),
             (e[(e.RECENTLY_HEARD = 1)] = "RECENTLY_HEARD"),
@@ -157,10 +47,10 @@ var m = (function (e) {
             e
         );
     })({}),
-    g = (function (e) {
+    c = (function (e) {
         return (e[(e.SOUND = 0)] = "SOUND"), (e[(e.ADD_SOUND = 1)] = "ADD_SOUND"), e;
     })({}),
-    E = (function (e) {
+    d = (function (e) {
         return (
             (e[(e.GIFT_CODE = 0)] = "GIFT_CODE"),
             (e[(e.SOUNDBOARD = 1)] = "SOUNDBOARD"),

@@ -1,154 +1,114 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048),
-    n(667532),
-    n(733351);
-var r = n(627968),
-    i = n(64700),
-    l = n(311907),
-    a = n(397927),
+n.d(t, { A: () => g }), n(667532);
+var i = n(627968),
+    r = n(64700),
+    a = n(311907),
+    l = n(397927),
     s = n(416052),
     o = n(240248),
-    c = n(829219),
-    u = n(859703),
-    d = n(890687),
-    p = n(45498),
-    f = n(767521),
-    h = n(818348),
-    A = n(985018),
-    g = n(883088);
-let m = function (e) {
-    var t, n, m;
-    let { questId: b, setQuestId: _, quest: E, refreshQuest: O } = e,
-        [y, I] = i.useState(!1),
-        [v, S] = i.useState(!1),
-        C = i.useRef(null),
-        N = (0, d.pT)(),
-        T = (0, l.bG)([u.A], () => (null != b ? u.A.getFetchQuestPreviewError(b) : null), [b]),
-        j = (0, l.bG)([u.A], () => null != b && u.A.isFetchingQuestPreview(b), [b]),
-        x = i.useMemo(() => {
-            let e = N.map((e) => {
-                var t, n, r;
-                return {
-                    id: e.id,
-                    label: ""
-                        .concat(
-                            null != (t = null == (r = e.config) || null == (n = r.messages) ? void 0 : n.questName)
-                                ? t
-                                : e.id,
-                            " (",
-                        )
-                        .concat(e.id, ")"),
-                    value: e.id,
-                };
-            });
-            return (
-                null == b ||
-                    e.some((e) => e.value === b) ||
-                    e.unshift({
-                        id: b,
-                        label: b,
-                        value: b,
-                    }),
-                e
-            );
-        }, [N, b]),
-        P = i.useCallback(async () => {
-            if (null != b) {
+    d = n(829219),
+    c = n(859703),
+    u = n(890687),
+    A = n(45498),
+    h = n(767521),
+    _ = n(818348),
+    m = n(985018),
+    p = n(883088);
+let g = function (e) {
+    let { questId: t, setQuestId: n, quest: g, refreshQuest: E } = e,
+        [f, I] = r.useState(!1),
+        [C, N] = r.useState(!1),
+        T = r.useRef(null),
+        S = (0, u.pT)(),
+        x = (0, a.bG)([c.A], () => (null != t ? c.A.getFetchQuestPreviewError(t) : null), [t]),
+        v = (0, a.bG)([c.A], () => null != t && c.A.isFetchingQuestPreview(t), [t]),
+        b = r.useMemo(() => {
+            let e = S.map((e) => ({
+                id: e.id,
+                label: `${e.config?.messages?.questName ?? e.id} (${e.id})`,
+                value: e.id,
+            }));
+            return null == t || e.some((e) => e.value === t) || e.unshift({ id: t, label: t, value: t }), e;
+        }, [S, t]),
+        y = r.useCallback(async () => {
+            if (null != t) {
                 I(!0);
                 try {
-                    await (0, c.Yb)(b, 1);
+                    await (0, d.Yb)(t, 1);
                 } finally {
                     I(!1);
                 }
             }
-        }, [b, I]),
-        w = i.useCallback(async () => {
-            if (null != b) {
+        }, [t, I]),
+        L = r.useCallback(async () => {
+            if (null != t) {
                 I(!0);
                 try {
-                    await (0, c.UZ)(b);
+                    await (0, d.UZ)(t);
                 } finally {
                     I(!1);
                 }
             }
-        }, [b, I]),
-        L = i.useCallback(async () => {
-            if (null != b) {
+        }, [t, I]),
+        O = r.useCallback(async () => {
+            if (null != t) {
                 I(!0);
                 try {
                     let e = Math.random();
-                    await (0, c.Yb)(b, e);
+                    await (0, d.Yb)(t, e);
                 } finally {
                     I(!1);
                 }
             }
-        }, [b, I]),
-        R = i.useCallback(
+        }, [t, I]),
+        R = r.useCallback(
             (e) => {
-                (0, o.uJ)(e) || null == _ || _(e);
+                (0, o.uJ)(e) || null == n || n(e);
             },
-            [_],
+            [n],
         );
-    return (0, r.jsxs)("div", {
-        className: g.Fr,
+    return (0, i.jsxs)("div", {
+        className: p.Fr,
         children: [
-            (0, r.jsx)("div", {
-                children: (0, r.jsx)("div", {
-                    className: g.Br,
-                    children: (0, r.jsxs)("div", {
-                        className: g.bo,
+            (0, i.jsx)("div", {
+                children: (0, i.jsx)("div", {
+                    className: p.Br,
+                    children: (0, i.jsxs)("div", {
+                        className: p.bo,
                         children: [
-                            (0, r.jsx)(f.A, {}),
-                            (0, r.jsxs)("div", {
-                                className: g.b8,
+                            (0, i.jsx)(h.A, {}),
+                            (0, i.jsxs)("div", {
+                                className: p.b8,
                                 children: [
-                                    (0, r.jsx)(
-                                        a.ZiE,
+                                    (0, i.jsx)(
+                                        l.ZiE,
                                         {
                                             selectionMode: "single",
                                             label: "Quest ID",
                                             hideLabel: !0,
-                                            options: x,
-                                            value: b,
+                                            options: b,
+                                            value: t,
                                             onSelectionChange: R,
-                                            placeholder: A.intl.string(A.t.Zw8jxn),
+                                            placeholder: m.intl.string(m.t.Zw8jxn),
                                             clearable: !0,
                                             customMatchSorter: (e, t) => {
-                                                if ((0, o.uJ)(null == t ? void 0 : t.trim())) return e;
+                                                if ((0, o.uJ)(t?.trim())) return e;
                                                 let n = e.filter(
                                                     (e) =>
                                                         e.label.toLowerCase().includes(t.toLowerCase()) ||
                                                         e.value.toLowerCase().includes(t.toLowerCase()),
                                                 );
                                                 return 0 === n.length && "" !== t.trim()
-                                                    ? [
-                                                          {
-                                                              label: t.trim(),
-                                                              value: t.trim(),
-                                                          },
-                                                      ]
+                                                    ? [{ label: t.trim(), value: t.trim() }]
                                                     : n;
                                             },
                                         },
-                                        ""
-                                            .concat(b, "-")
-                                            .concat(
-                                                null !=
-                                                    (t =
-                                                        null == E || null == (m = E.config) || null == (n = m.messages)
-                                                            ? void 0
-                                                            : n.questName)
-                                                    ? t
-                                                    : "",
-                                            ),
+                                        `${t}-${g?.config?.messages?.questName ?? ""}`,
                                     ),
-                                    (0, r.jsx)(a.K0, {
-                                        onClick: O,
-                                        "aria-label": A.intl.string(A.t.wzzjk9),
-                                        icon: a.fNY,
-                                        loading: j,
+                                    (0, i.jsx)(l.K0, {
+                                        onClick: E,
+                                        "aria-label": m.intl.string(m.t.wzzjk9),
+                                        icon: l.fNY,
+                                        loading: v,
                                     }),
                                 ],
                             }),
@@ -156,69 +116,65 @@ let m = function (e) {
                     }),
                 }),
             }),
-            null != b &&
-                null != E &&
-                (0, r.jsx)("div", {
-                    className: g.in,
-                    children: (0, r.jsxs)(a.ButtonGroup, {
-                        className: g.xv,
+            null != t &&
+                null != g &&
+                (0, i.jsx)("div", {
+                    className: p.in,
+                    children: (0, i.jsxs)(l.ButtonGroup, {
+                        className: p.xv,
                         children: [
-                            (0, r.jsx)(a.Button, {
-                                onClick: P,
-                                disabled: y,
-                                loading: y,
+                            (0, i.jsx)(l.Button, {
+                                onClick: y,
+                                disabled: f,
+                                loading: f,
                                 variant: "secondary",
-                                text: A.intl.string(A.t.jQEfRT),
+                                text: m.intl.string(m.t.jQEfRT),
                             }),
-                            (0, r.jsx)(a.Button, {
-                                onClick: w,
-                                disabled: y,
-                                loading: y,
-                                variant: "secondary",
-                                text: A.intl.string(A.t.taqkwK),
-                            }),
-                            (0, r.jsx)(a.Button, {
+                            (0, i.jsx)(l.Button, {
                                 onClick: L,
-                                disabled: y,
-                                loading: y,
+                                disabled: f,
+                                loading: f,
                                 variant: "secondary",
-                                text: A.intl.string(A.t.cKSLr4),
+                                text: m.intl.string(m.t.taqkwK),
                             }),
-                            (0, r.jsx)(a.YNO, {
-                                targetElementRef: C,
-                                shouldShow: v,
-                                onRequestClose: () => S(!1),
+                            (0, i.jsx)(l.Button, {
+                                onClick: O,
+                                disabled: f,
+                                loading: f,
+                                variant: "secondary",
+                                text: m.intl.string(m.t.cKSLr4),
+                            }),
+                            (0, i.jsx)(l.YNO, {
+                                targetElementRef: T,
+                                shouldShow: C,
+                                onRequestClose: () => N(!1),
                                 position: "bottom",
                                 align: "center",
                                 renderPopout: () =>
-                                    (0, r.jsx)("div", {
-                                        className: g.PP,
-                                        children: (0, r.jsx)("div", {
-                                            className: g.sH,
-                                            children: (0, r.jsx)(s.A, {
-                                                value: h.Sb.QUEST_PREVIEW_TOOL_2(b),
-                                                text: A.intl.string(A.t.WqhZss),
+                                    (0, i.jsx)("div", {
+                                        className: p.PP,
+                                        children: (0, i.jsx)("div", {
+                                            className: p.sH,
+                                            children: (0, i.jsx)(s.A, {
+                                                value: _.Sb.QUEST_PREVIEW_TOOL_2(t),
+                                                text: m.intl.string(m.t.WqhZss),
                                             }),
                                         }),
                                     }),
                                 children: () =>
-                                    (0, r.jsx)(a.K0, {
-                                        buttonRef: C,
-                                        onClick: () => S(!v),
-                                        "aria-label": A.intl.string(A.t.rNGQfD),
-                                        icon: a.TdU,
+                                    (0, i.jsx)(l.K0, {
+                                        buttonRef: T,
+                                        onClick: () => N(!C),
+                                        "aria-label": m.intl.string(m.t.rNGQfD),
+                                        icon: l.TdU,
                                         variant: "secondary",
                                     }),
                             }),
                         ],
                     }),
                 }),
-            null != T
-                ? (0, r.jsx)(p.P, {
-                      error: T,
-                  })
-                : null,
-            j ? (0, r.jsx)(a.y$y, {}) : null,
+            null != x ? (0, i.jsx)(A.P, { error: x }) : null,
+            v ? (0, i.jsx)(l.y$y, {}) : null,
         ],
     });
 };

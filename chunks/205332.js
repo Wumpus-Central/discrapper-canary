@@ -28,33 +28,11 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE,
-            {
-                scope: "punctuation",
-                match: /[.]{3}/,
-                relevance: 0,
-            },
-            {
-                scope: "punctuation",
-                begin: /[\!\(\)\:\=\[\]\{\|\}]{1}/,
-                relevance: 0,
-            },
-            {
-                scope: "variable",
-                begin: /\$/,
-                end: /\W/,
-                excludeEnd: !0,
-                relevance: 0,
-            },
-            {
-                scope: "meta",
-                match: /@\w+/,
-                excludeEnd: !0,
-            },
-            {
-                scope: "symbol",
-                begin: t.concat(n, t.lookahead(/\s*:/)),
-                relevance: 0,
-            },
+            { scope: "punctuation", match: /[.]{3}/, relevance: 0 },
+            { scope: "punctuation", begin: /[\!\(\)\:\=\[\]\{\|\}]{1}/, relevance: 0 },
+            { scope: "variable", begin: /\$/, end: /\W/, excludeEnd: !0, relevance: 0 },
+            { scope: "meta", match: /@\w+/, excludeEnd: !0 },
+            { scope: "symbol", begin: t.concat(n, t.lookahead(/\s*:/)), relevance: 0 },
         ],
         illegal: [/[;<']/, /BEGIN/],
     };

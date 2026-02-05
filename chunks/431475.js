@@ -1,11 +1,9 @@
-i.d(e, {
-    C: () => u,
-});
+i.d(e, { C: () => a });
 var n = i(454292),
     l = i(419954),
     s = i(780964),
     r = i(985018);
-let u = (0, l.E2)(s.X.POGGERMODE_SETTING, {
+let a = (0, l.E2)(s.X.POGGERMODE_SETTING, {
     Component: n.A,
     useSearchTerms: () => [
         r.intl.string(r.t.AtCukI),

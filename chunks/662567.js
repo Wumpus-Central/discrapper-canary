@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     M4: "nameplatePreview_e144e0",
     as: "large_e144e0",

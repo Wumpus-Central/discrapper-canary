@@ -1,73 +1,57 @@
-n.d(t, {
-    A: () => m,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(731738),
-    a = n(397927),
+n.d(t, { A: () => g });
+var i = n(627968),
+    r = n(64700),
+    a = n(731738),
+    l = n(397927),
     s = n(831062),
     o = n(378570),
-    c = n(138298),
-    u = n(761640),
-    d = n(336590),
-    p = n(471271),
-    f = n(629199),
-    h = n(772659),
-    A = n(985018),
-    g = n(360830);
-
-function m(e) {
-    let { active: t, user: n, channel: m } = e,
-        b = (0, d.r)(),
-        _ = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(A.intl.string(A.t.pIQ3h4), a.ToastType.FAILURE)),
-                s.A.increment({
-                    name: l.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW,
-                });
+    d = n(138298),
+    c = n(761640),
+    u = n(336590),
+    A = n(471271),
+    h = n(629199),
+    _ = n(772659),
+    m = n(985018),
+    p = n(360830);
+function g(e) {
+    let { active: t, user: n, channel: g } = e,
+        E = (0, u.r)(),
+        f = r.useCallback(() => {
+            (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.pIQ3h4), l.ToastType.FAILURE)),
+                s.A.increment({ name: a.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        E = i.useCallback(() => {
-            c.A.closeChannelSidebar(u.fe);
+        I = r.useCallback(() => {
+            d.A.closeChannelSidebar(c.fe);
         }, []),
-        O = i.useCallback(() => {
-            c.A.closeChannelSidebar(u.fe), b && (0, o.iN)(m.id);
-        }, [m.id, b]),
+        C = r.useCallback(() => {
+            d.A.closeChannelSidebar(c.fe), E && (0, o.iN)(g.id);
+        }, [g.id, E]),
         {
-            acceptMessageRequest: y,
-            isAcceptLoading: I,
-            isUserProfileLoading: v,
-            isOptimisticAccepted: S,
-        } = (0, p.t)({
-            user: n,
-            onAcceptSuccess: O,
-            onRejectSuccess: E,
-            onError: _,
-        }),
-        C = I || v,
-        N = C || S;
-    return (0, r.jsxs)("div", {
-        className: g.kL,
+            acceptMessageRequest: N,
+            isAcceptLoading: T,
+            isUserProfileLoading: S,
+            isOptimisticAccepted: x,
+        } = (0, A.t)({ user: n, onAcceptSuccess: C, onRejectSuccess: I, onError: f }),
+        v = T || S,
+        b = v || x;
+    return (0, i.jsxs)("div", {
+        className: p.kL,
         children: [
-            (0, r.jsx)(f.A, {
-                otherUser: n,
-                channel: m,
-                active: t,
-            }),
-            (0, r.jsxs)("div", {
-                className: g.o1,
+            (0, i.jsx)(h.A, { otherUser: n, channel: g, active: t }),
+            (0, i.jsxs)("div", {
+                className: p.o1,
                 children: [
-                    (0, r.jsx)(a.Button, {
+                    (0, i.jsx)(l.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: A.intl.string(A.t.vicfl6),
+                        text: m.intl.string(m.t.vicfl6),
                         onClick: (e) => {
-                            y(m.id), e.stopPropagation();
+                            N(g.id), e.stopPropagation();
                         },
-                        disabled: N,
-                        loading: C,
+                        disabled: b,
+                        loading: v,
                     }),
-                    (0, r.jsx)(h.A, {
-                        channel: m,
-                    }),
+                    (0, i.jsx)(_.A, { channel: g }),
                 ],
             }),
         ],

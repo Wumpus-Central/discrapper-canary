@@ -58,9 +58,6 @@
         ordinal: function (e) {
             return e;
         },
-        week: {
-            dow: 1,
-            doy: 4,
-        },
+        week: { dow: 1, doy: 4 },
     });
 });

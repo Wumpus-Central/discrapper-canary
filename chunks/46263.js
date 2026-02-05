@@ -1,21 +1,10 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    J: () => i,
-}),
-    n(896048);
-class i {
+"use strict";
+n.d(t, { J: () => r });
+class r {
+    inboundVideoBitrate = {};
+    inboundDecodeFps = {};
+    outboundVideoBitrate = {};
+    outboundEncodeFps = {};
     update(e) {
         for (let t in e.rtp.inbound)
             for (let n of e.rtp.inbound[t])
@@ -34,28 +23,22 @@ class i {
     static getCalculatorOrCreate(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
             a = e[t.ssrc];
-        return null == a && ((a = new o(n, r, i)), (e[t.ssrc] = a)), a;
+        return null == a && ((a = new s(n, r, i)), (e[t.ssrc] = a)), a;
     }
     getInboundBytesRecevierCalculator(e) {
-        return i.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
+        return r.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
     }
     getInboundFrameDecodeRateCalculator(e) {
-        return i.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5);
+        return r.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5);
     }
     getOutboundBytesSentCalculator(e) {
-        return i.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3);
+        return r.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3);
     }
     getOutboundEncodeRateCalculator(e) {
-        return i.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5);
-    }
-    constructor() {
-        r(this, "inboundVideoBitrate", {}),
-            r(this, "inboundDecodeFps", {}),
-            r(this, "outboundVideoBitrate", {}),
-            r(this, "outboundEncodeFps", {});
+        return r.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5);
     }
 }
-var a = (function (e) {
+var i = (function (e) {
     return (
         (e[(e.NONE = 0)] = "NONE"),
         (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = "MILLISECONDS_FROM_SECONDS"),
@@ -63,22 +46,25 @@ var a = (function (e) {
         (e[(e.ROUND = 4)] = "ROUND"),
         e
     );
-})(a || {});
-let s = {
-    0: {
-        multiplier: 1,
-    },
-    1: {
-        postfix: "_in_ms",
-        multiplier: 1e3,
-    },
-    2: {
-        bitrate: !0,
-        postfix: "",
-        multiplier: 8,
-    },
+})(i || {});
+let a = {
+    0: { multiplier: 1 },
+    1: { postfix: "_in_ms", multiplier: 1e3 },
+    2: { bitrate: !0, postfix: "", multiplier: 8 },
 };
-class o {
+class s {
+    accumulativeMetricKey;
+    samplesMetricKey;
+    previous;
+    multiplier = 1;
+    round = !1;
+    constructor(e, t, n = 0) {
+        for (const r in ((this.accumulativeMetricKey = e), (this.samplesMetricKey = t), i)) {
+            const e = Number(r);
+            !isNaN(e) && (n & e) != 0 && r in a && (this.multiplier *= a[r]?.multiplier ?? 1);
+        }
+        this.round = (4 & n) != 0;
+    }
     calculate(e) {
         let t = this.previous;
         if (((this.previous = e), null == t)) return;
@@ -92,25 +78,5 @@ class o {
         if ("number" != typeof a || "number" != typeof s) return;
         let o = ((i - r) / (s - a)) * this.multiplier;
         return this.round ? Math.round(o) : o;
-    }
-    constructor(e, t, n = 0) {
-        for (const l in (r(this, "accumulativeMetricKey", void 0),
-        r(this, "samplesMetricKey", void 0),
-        r(this, "previous", void 0),
-        r(this, "multiplier", void 0),
-        r(this, "round", void 0),
-        (this.accumulativeMetricKey = e),
-        (this.samplesMetricKey = t),
-        (this.multiplier = 1),
-        (this.round = !1),
-        a)) {
-            var i, o;
-            const e = Number(l);
-            !isNaN(e) &&
-                (n & e) != 0 &&
-                l in s &&
-                (this.multiplier *= null != (i = null == (o = s[l]) ? void 0 : o.multiplier) ? i : 1);
-        }
-        this.round = (4 & n) != 0;
     }
 }

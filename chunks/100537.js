@@ -1,89 +1,67 @@
-n.d(t, {
-    A: () => L,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => j });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(827734),
-    c = n(421380),
-    u = n(397927),
-    d = n(942857),
-    p = n(795816),
-    f = n(216418),
-    h = n(47294),
-    A = n(16961),
-    g = n(58149),
-    m = n(429913),
-    b = n(313961),
-    _ = n(964404),
-    E = n(709562),
-    O = n(520006),
-    y = n(128286),
-    I = n(309010),
-    v = n(625180),
-    S = n(898879),
-    C = n(293495),
-    N = n(165610),
-    T = n(652215),
-    j = n(5867),
-    x = n(985018),
-    P = n(598449);
-let w = {
-    [j.E8.NO_CHAT]: P.Oo,
-    [j.E8.RESIZABLE]: P.Ig,
-};
-
-function L(e) {
+    d = n(421380),
+    c = n(397927),
+    u = n(942857),
+    A = n(795816),
+    h = n(216418),
+    _ = n(47294),
+    m = n(16961),
+    p = n(58149),
+    g = n(429913),
+    E = n(313961),
+    f = n(964404),
+    I = n(709562),
+    C = n(520006),
+    N = n(128286),
+    T = n(309010),
+    S = n(625180),
+    x = n(898879),
+    v = n(293495),
+    b = n(165610),
+    y = n(652215),
+    L = n(5867),
+    O = n(985018),
+    R = n(598449);
+let P = { [L.E8.NO_CHAT]: R.Oo, [L.E8.RESIZABLE]: R.Ig };
+function j(e) {
     let { frame: t } = e,
-        n = (0, m.h)(t.applicationId),
-        l = (0, d.A)(),
-        { selectedChannelId: L, selectedVoiceChannelId: R } = (0, s.cf)([I.A], () => ({
-            selectedChannelId: I.A.getChannelId(),
-            selectedVoiceChannelId: I.A.getVoiceChannelId(),
+        n = (0, g.h)(t.applicationId),
+        a = (0, u.A)(),
+        { selectedChannelId: j, selectedVoiceChannelId: D } = (0, s.cf)([T.A], () => ({
+            selectedChannelId: T.A.getChannelId(),
+            selectedVoiceChannelId: T.A.getVoiceChannelId(),
         })),
-        D = (0, s.bG)([b.A], () => null != R && L === R && b.A.getChatOpen(R), [L, R]),
-        M = (0, s.bG)([_.Ay], () => _.Ay.callChatSidebarWidth),
-        k = (0, u.rdh)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        U = i.useRef(null),
-        G = i.useRef(null),
-        [V, B] = i.useState({
-            width: 0,
-            height: 0,
-        }),
-        H = i.useCallback(() => {
-            v.A.updateFrameLayoutMode({
-                applicationId: t.applicationId,
-                layoutMode: N.y.PIP,
-            });
+        w = (0, s.bG)([E.A], () => null != D && j === D && E.A.getChatOpen(D), [j, D]),
+        M = (0, s.bG)([f.Ay], () => f.Ay.callChatSidebarWidth),
+        U = (0, c.rdh)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        G = r.useRef(null),
+        k = r.useRef(null),
+        [V, B] = r.useState({ width: 0, height: 0 }),
+        H = r.useCallback(() => {
+            S.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: b.y.PIP });
         }, [t.applicationId]),
-        F = i.useCallback(() => {
-            v.A.stopFrame({
-                applicationId: t.applicationId,
-            });
+        F = r.useCallback(() => {
+            S.A.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
-    i.useLayoutEffect(() => {
-        if (null == G.current) return;
+    r.useLayoutEffect(() => {
+        if (null == k.current) return;
         let e = new ResizeObserver(() => {
-            var e, t, n, r;
-            B({
-                width: null != (e = null == (n = G.current) ? void 0 : n.clientWidth) ? e : 0,
-                height: null != (t = null == (r = G.current) ? void 0 : r.clientHeight) ? t : 0,
-            });
+            B({ width: k.current?.clientWidth ?? 0, height: k.current?.clientHeight ?? 0 });
         });
-        return e.observe(G.current), () => e.disconnect();
+        return e.observe(k.current), () => e.disconnect();
     }, []),
-        i.useEffect(() => {
+        r.useEffect(() => {
             let e = (e) => {
-                null == U.current ||
-                    U.current.contains(e.target) ||
-                    l ||
-                    v.A.updateFrameLayoutMode({
-                        applicationId: t.applicationId,
-                        layoutMode: N.y.PIP,
-                    });
+                null == G.current ||
+                    G.current.contains(e.target) ||
+                    a ||
+                    S.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: b.y.PIP });
             };
             return (
                 document.addEventListener("mousedown", e),
@@ -91,101 +69,87 @@ function L(e) {
                     document.removeEventListener("mousedown", e);
                 }
             );
-        }, [t.applicationId, l]);
-    let Y = V.width / Math.max(V.height, 1) < j.B5,
-        K = 0,
-        z = 0,
-        W = (0, f.A)(null == n ? void 0 : n.id);
-    if (!W) {
+        }, [t.applicationId, a]);
+    let Y = V.width / Math.max(V.height, 1) < L.B5,
+        W = 0,
+        q = 0,
+        z = (0, h.A)(n?.id);
+    if (!z) {
         let e = V.width,
             t = V.height;
         Y
-            ? ((t = V.width / j.B5) > V.height && (e = (t = V.height) * j.B5), (z = (V.height - t) / 2))
-            : ((e = Math.min(V.height * j.B5, V.width)) > V.width && (t = (e = V.width) / j.B5),
-              (K = (V.width - e) / 2));
+            ? ((t = V.width / L.B5) > V.height && (e = (t = V.height) * L.B5), (q = (V.height - t) / 2))
+            : ((e = Math.min(V.height * L.B5, V.width)) > V.width && (t = (e = V.width) / L.B5),
+              (W = (V.width - e) / 2));
     }
-    let q = j.E8.NO_CHAT,
-        Q = (0, A.G)();
+    let K = L.E8.NO_CHAT,
+        $ = (0, m.G)();
     if (null == n) return null;
-    let X = (null != M ? M : T.da6) + k,
-        Z = (0, C.YY)(t);
-    return (0, r.jsx)(u.NPJ, {
-        theme: T.NJ8.DARK,
+    let Q = (M ?? y.da6) + U,
+        X = (0, v.YY)(t);
+    return (0, i.jsx)(c.NPJ, {
+        theme: y.NJ8.DARK,
         children: (e) =>
-            (0, r.jsxs)("div", {
-                className: a()(P.iE, w[q], e),
-                ref: U,
-                style: {
-                    right: D && !Number.isNaN(X) ? X : 0,
-                },
+            (0, i.jsxs)("div", {
+                className: l()(R.iE, P[K], e),
+                ref: G,
+                style: { right: w && !Number.isNaN(Q) ? Q : 0 },
                 children: [
-                    (0, r.jsx)("div", {
-                        className: P.lq,
-                        children: (0, r.jsx)("div", {
-                            className: a()(P.ht, {
-                                [P.kK]: W,
-                            }),
-                            style: {
-                                paddingLeft: K,
-                                paddingRight: K,
-                                paddingTop: z,
-                                paddingBottom: z,
-                            },
-                            ref: G,
-                            children: (0, r.jsx)(S.A, {
-                                className: P.pU,
-                                embedId: Z,
-                            }),
+                    (0, i.jsx)("div", {
+                        className: R.lq,
+                        children: (0, i.jsx)("div", {
+                            className: l()(R.ht, { [R.kK]: z }),
+                            style: { paddingLeft: W, paddingRight: W, paddingTop: q, paddingBottom: q },
+                            ref: k,
+                            children: (0, i.jsx)(x.A, { className: R.pU, embedId: X }),
                         }),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: P.qr,
+                    (0, i.jsxs)("div", {
+                        className: R.qr,
                         children: [
-                            (0, r.jsx)(O.A, {
-                                appContext: T.BRT.APP,
+                            (0, i.jsx)(C.A, {
+                                appContext: y.BRT.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,
                                 isRichPresenceInvite: !0,
-                                iconClassName: P.NS,
-                                size: c.$n.Sizes.MEDIUM,
-                                look: c.$n.Looks.FILLED,
-                                buttonText: x.intl.string(x.t["6F9ivu"]),
-                                color: c.$n.Colors.TRANSPARENT,
+                                iconClassName: R.NS,
+                                size: d.$n.Sizes.MEDIUM,
+                                look: d.$n.Looks.FILLED,
+                                buttonText: O.intl.string(O.t["6F9ivu"]),
+                                color: d.$n.Colors.TRANSPARENT,
                             }),
-                            (0, r.jsxs)("div", {
-                                className: P.Hq,
+                            (0, i.jsxs)("div", {
+                                className: R.Hq,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: P.qi,
-                                        children: (0, r.jsx)(E.l, {
+                                    (0, i.jsx)("div", {
+                                        className: R.qi,
+                                        children: (0, i.jsx)(I.l, {
                                             isTrayButton: !0,
-                                            label: x.intl.string(x.t.brPQ5U),
+                                            label: O.intl.string(O.t.brPQ5U),
                                             onClick: H,
-                                            iconComponent: u.gR,
+                                            iconComponent: c.gR,
                                             themeable: !0,
                                         }),
                                     }),
-                                    (0, r.jsx)(E.l, {
+                                    (0, i.jsx)(I.l, {
                                         isTrayButton: !1,
-                                        label: x.intl.string(x.t["R/FK4A"]),
+                                        label: O.intl.string(O.t["R/FK4A"]),
                                         onClick: F,
-                                        iconComponent: u.oLl,
+                                        iconComponent: c.oLl,
                                         color: "disconnect",
                                     }),
                                 ],
                             }),
-                            Q
-                                ? (0, r.jsx)(y.A, {
+                            $
+                                ? (0, i.jsx)(N.A, {
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
-                                          (0, g.zV)(T.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
-                                              (0, h.A)({
+                                          (0, p.zV)(y.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                              (0, _.A)({
                                                   onConfirm: async () => {
-                                                      (null == n ? void 0 : n.id) != null &&
-                                                          (await v.A.refreshProxyTicket({
-                                                              applicationId: n.id,
-                                                          })),
-                                                          (0, p.jp)();
+                                                      n?.id != null &&
+                                                          (await S.A.refreshProxyTicket({ applicationId: n.id })),
+                                                          (0, A.jp)();
                                                   },
                                               });
                                       },

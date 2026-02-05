@@ -1,40 +1,19 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048),
-    n(65821),
-    n(457529);
-var r,
-    i = n(574381),
-    a = n(311907),
-    s = n(73153),
-    o = n(156186),
-    l = n(967370),
-    c = n(954571),
+"use strict";
+n.d(t, { A: () => E });
+var r = n(574381),
+    i = n(311907),
+    a = n(73153),
+    s = n(156186),
+    o = n(967370),
+    l = n(954571),
     u = n(728458),
-    d = n(837921),
-    f = n(410109),
-    p = n(652215);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let h = 10,
-    m = {
-        status: "",
-    },
-    g = [],
-    E = [
+    c = n(837921),
+    d = n(410109),
+    _ = n(652215);
+let f = 10,
+    p = { status: "" },
+    h = [],
+    m = [
         "discord.com",
         "discordapp.com",
         "discordapp.net",
@@ -43,78 +22,53 @@ let h = 10,
         "discord.gg",
         "discord.media",
     ];
-class b extends (r = a.Ay.Store) {
+class g extends i.Ay.Store {
+    static displayName = "WarpClientStore";
     initialize() {
         this.updateState(), this.addListener();
     }
     logEvent(e) {
-        "status" in e && "string" == typeof e.status && (m = e),
-            (g = [...g.slice(g.length < h ? 0 : 1, h), e]),
+        "status" in e && "string" == typeof e.status && (p = e),
+            (h = [...h.slice(h.length < f ? 0 : 1, f), e]),
             this.emitChange();
     }
     async updateState() {
         try {
-            var e, t, n;
-            this.logEvent(
-                await (null === d.Ay ||
-                void 0 === d.Ay ||
-                null == (n = d.Ay.getDiscordUtils) ||
-                null == (t = n.call(d.Ay)) ||
-                null == (e = t.runWarpCommand)
-                    ? void 0
-                    : e.call(t, "status")),
-            );
-        } catch (e) {}
+            this.logEvent(await c.Ay?.getDiscordUtils?.()?.runWarpCommand?.("status"));
+        } catch {}
     }
     addListener() {
         try {
-            var e, t, n;
-            null === d.Ay ||
-                void 0 === d.Ay ||
-                null == (n = d.Ay.getDiscordUtils) ||
-                null == (t = n.call(d.Ay)) ||
-                null == (e = t.onWarpEvent) ||
-                e.call(t, (e) => this.logEvent(e));
-        } catch (e) {}
+            c.Ay?.getDiscordUtils?.()?.onWarpEvent?.((e) => this.logEvent(e));
+        } catch {}
     }
     async runCommand(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         try {
-            return await d.Ay.getDiscordUtils().runWarpCommand(e, ...n);
+            return await c.Ay.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
-            throw (
-                (this.logEvent({
-                    commandError: e.message,
-                }),
-                e)
-            );
+            throw (this.logEvent({ commandError: e.message }), e);
         }
     }
     async configureLicense(e) {
         let { ignoreAPIError: t } = e,
             n = await this.runCommand("registration", "show");
-        if ((null == n ? void 0 : n.code) === "MissingRegistration")
-            throw Error("MissingRegistration when configuring license");
+        if (n?.code === "MissingRegistration") throw Error("MissingRegistration when configuring license");
         try {
-            if ((0, l.lM)("configureLicense")) {
+            if ((0, o.lM)("configureLicense")) {
                 let e = n,
-                    i = await (0, f.R)(null == e ? void 0 : e.id, t);
-                if (null != i && "" !== i) {
-                    var r;
-                    if (i === (null == e || null == (r = e.account) ? void 0 : r.license)) return;
-                    await this.runCommand("registration", "license", i);
+                    r = await (0, d.R)(e?.id, t);
+                if (null != r && "" !== r) {
+                    if (r === e?.account?.license) return;
+                    await this.runCommand("registration", "license", r);
                 } else throw Error("No license key returned from API when configuring license");
             }
         } catch (e) {
             if (
-                (u.A.captureException(e, {
-                    tags: {
-                        source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE",
-                    },
-                }),
-                c.default.track(p.HAw.PREMIUM_FEATURE_ERROR, {
+                (u.A.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE" } }),
+                l.default.track(_.HAw.PREMIUM_FEATURE_ERROR, {
                     error_message: e instanceof Error ? e.message : JSON.stringify(e),
-                    error_source: o.q.PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE,
+                    error_source: s.q.PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE,
                 }),
                 !t)
             )
@@ -123,55 +77,45 @@ class b extends (r = a.Ay.Store) {
     }
     async configureExceptions() {
         try {
-            let t = await this.runCommand("tunnel", "host", "list");
-            if ((null == t ? void 0 : t.mode) === "exclude")
-                for (let n of E) {
-                    var e;
-                    (null == t || null == (e = t.hosts) ? void 0 : e.indexOf(n)) === -1 &&
-                        (await this.runCommand("tunnel", "host", "add", n));
-                }
-        } catch (e) {}
+            let e = await this.runCommand("tunnel", "host", "list");
+            if (e?.mode === "exclude")
+                for (let t of m) e?.hosts?.indexOf(t) === -1 && (await this.runCommand("tunnel", "host", "add", t));
+        } catch {}
     }
     async configureMode() {
         try {
             await this.runCommand("mode", "warp+doh");
-        } catch (e) {}
+        } catch {}
     }
     get state() {
-        return m;
+        return p;
     }
     get log() {
-        return g;
+        return h;
     }
     get clientEnabled() {
-        return (0, i.xl)() && (0, l.lM)("WarpClientStore");
+        return (0, r.xl)() && (0, o.lM)("WarpClientStore");
     }
     get enabled() {
-        return "Connected" === m.status || this.connecting;
+        return "Connected" === p.status || this.connecting;
     }
     get connecting() {
         return (
-            "Configuring" === m.status ||
-            "Connecting" === m.status ||
-            "ConnectCommandSent" === m.status ||
-            "Installing" === m.status ||
-            "Installed" === m.status
+            "Configuring" === p.status ||
+            "Connecting" === p.status ||
+            "ConnectCommandSent" === p.status ||
+            "Installing" === p.status ||
+            "Installed" === p.status
         );
     }
     async connect() {
         return (
             this.clientEnabled &&
-                (this.logEvent({
-                    status: "Configuring",
-                }),
-                this.configureLicense({
-                    ignoreAPIError: !0,
-                }).catch(() => {}),
+                (this.logEvent({ status: "Configuring" }),
+                this.configureLicense({ ignoreAPIError: !0 }).catch(() => {}),
                 await this.configureExceptions(),
                 await this.configureMode(),
-                this.logEvent({
-                    status: "ConnectCommandSent",
-                }),
+                this.logEvent({ status: "ConnectCommandSent" }),
                 await this.runCommand("connect")),
             this.clientEnabled
         );
@@ -179,12 +123,7 @@ class b extends (r = a.Ay.Store) {
     async disconnect() {
         if (this.clientEnabled) {
             let e = this.runCommand("disconnect");
-            return (
-                (m = {
-                    status: "DisconnectCommandSent",
-                }),
-                await e
-            );
+            return (p = { status: "DisconnectCommandSent" }), await e;
         }
         return this.clientEnabled;
     }
@@ -192,13 +131,10 @@ class b extends (r = a.Ay.Store) {
         return (
             await this.configureExceptions(),
             await this.configureMode(),
-            await this.configureLicense({
-                ignoreAPIError: !0,
-            }),
+            await this.configureLicense({ ignoreAPIError: !0 }),
             await this.updateState(),
             !0
         );
     }
 }
-_(b, "displayName", "WarpClientStore");
-let y = new b(s.h, {});
+let E = new g(a.h, {});

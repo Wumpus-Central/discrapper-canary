@@ -1,6 +1,5 @@
-n.d(t, {
-    $: () => c,
-});
+"use strict";
+n.d(t, { $: () => u });
 let r = new Set(["id"]),
     i = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),
     a = new Set(["href", "hrefLang", "target", "rel", "download", "ping", "referrerPolicy"]),
@@ -42,20 +41,19 @@ let r = new Set(["id"]),
         "onTransitionStart",
     ]),
     l = /^(data-.*)$/;
-
-function c(e, t = {}) {
-    let { labelable: n, isLink: u, global: d, events: f = d, propNames: p } = t,
-        _ = {};
+function u(e, t = {}) {
+    let { labelable: n, isLink: c, global: d, events: _ = d, propNames: f } = t,
+        p = {};
     for (let t in e)
         Object.prototype.hasOwnProperty.call(e, t) &&
             (r.has(t) ||
                 (n && i.has(t)) ||
-                (u && a.has(t)) ||
+                (c && a.has(t)) ||
                 (d && s.has(t)) ||
-                (f && o.has(t)) ||
+                (_ && o.has(t)) ||
                 (t.endsWith("Capture") && o.has(t.slice(0, -7))) ||
-                (null == p ? void 0 : p.has(t)) ||
+                (null == f ? void 0 : f.has(t)) ||
                 l.test(t)) &&
-            (_[t] = e[t]);
-    return _;
+            (p[t] = e[t]);
+    return p;
 }

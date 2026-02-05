@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_b1fb0b",
     S3: "partyMembers_b1fb0b",

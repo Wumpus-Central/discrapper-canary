@@ -1,53 +1,30 @@
-r.d(t, {
-    Jq: () => d,
-    mP: () => s,
-    mw: () => u,
-});
+r.d(t, { Jq: () => d, mP: () => u, mw: () => o });
 var n = r(627968);
 r(64700);
-var c = r(503698),
-    l = r.n(c),
-    a = r(573648),
-    o = r(652215),
-    i = r(955964);
-
-function u(e) {
-    return null != e && Object.values(o.fg2).includes(e) ? e : null;
+var l = r(503698),
+    a = r.n(l),
+    i = r(573648),
+    c = r(652215),
+    s = r(955964);
+function o(e) {
+    return null != e && Object.values(c.fg2).includes(e) ? e : null;
 }
-
-function s(e) {
+function u(e) {
     let { children: t, platformType: r } = e,
-        c = a.A.get(r);
+        l = i.A.get(r);
     return (0, n.jsx)("div", {
-        className: i.uX,
-        children: (0, n.jsxs)("div", {
-            children: [
-                (0, n.jsx)(d, {
-                    platform: c,
-                }),
-                t,
-            ],
-        }),
+        className: s.uX,
+        children: (0, n.jsxs)("div", { children: [(0, n.jsx)(d, { platform: l }), t] }),
     });
 }
-
 function d(e) {
     let { platform: t, className: r } = e;
     return (0, n.jsxs)("div", {
-        className: l()(i.ry, r),
+        className: a()(s.ry, r),
         children: [
-            (0, n.jsx)("div", {
-                className: l()(i.wm, i.Sn),
-            }),
-            (0, n.jsx)("div", {
-                className: i.mM,
-            }),
-            (0, n.jsx)("div", {
-                className: i.wm,
-                style: {
-                    backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")'),
-                },
-            }),
+            (0, n.jsx)("div", { className: a()(s.wm, s.Sn) }),
+            (0, n.jsx)("div", { className: s.mM }),
+            (0, n.jsx)("div", { className: s.wm, style: { backgroundImage: `url("${t.icon.whiteSVG}")` } }),
         ],
     });
 }

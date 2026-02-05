@@ -1,3 +1,4 @@
+"use strict";
 var n = e(834647),
     o = e(146160);
 n(
@@ -9,7 +10,5 @@ n(
             return !t;
         }),
     },
-    {
-        isDisjointFrom: o,
-    },
+    { isDisjointFrom: o },
 );

@@ -1,119 +1,47 @@
-n.d(t, {
-    A: () => b,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(384231),
     l = n(903369),
-    c = n(491182),
-    u = n(538355),
+    u = n(491182),
+    c = n(538355),
     d = n(715628),
-    f = n(752636),
-    p = n(119907);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function E(e) {
-    var t;
+    _ = n(752636),
+    f = n(119907);
+function p(e) {
     let {
-            message: n,
-            channel: a,
-            compact: _,
-            className: m,
-            isGroupStart: E,
-            hideSimpleEmbedContent: b = !0,
-            disableInteraction: y,
-            previewGuildId: O,
+            message: t,
+            channel: n,
+            compact: a,
+            className: p,
+            isGroupStart: h,
+            hideSimpleEmbedContent: m = !0,
+            disableInteraction: g,
+            previewGuildId: E,
             preview: A,
-            author: v,
+            author: I,
         } = e,
-        S = null != O ? O : (0, l.U)(n),
-        I = (0, o.S)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: T } = (0, u.A)(n, {
-            hideSimpleEmbedContent: b,
-            allowList: I,
-            allowHeading: I,
+        T = E ?? (0, l.U)(t),
+        y = (0, o.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        { content: S } = (0, c.A)(t, {
+            hideSimpleEmbedContent: m,
+            allowList: y,
+            allowHeading: y,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        C = i.useMemo(
-            () =>
-                (0, f.A)(
-                    g(h({}, e), {
-                        channel: a,
-                        guildId: S,
-                    }),
-                ),
-            [e, a, S],
-        );
-    return (0, r.jsx)(c.A, {
-        compact: _,
-        className: s()(m, {
-            [p.iU]: !0,
-            [p.HJ]: !_,
-            [p._A]: E,
-        }),
-        childrenHeader: C,
-        childrenMessageContent: (0, d.A)(e, T),
-        disableInteraction: y,
-        author: v,
+        v = i.useMemo(() => (0, _.A)({ ...e, channel: n, guildId: T }), [e, n, T]);
+    return (0, r.jsx)(u.A, {
+        compact: a,
+        className: s()(p, { [f.iU]: !0, [f.HJ]: !a, [f._A]: h }),
+        childrenHeader: v,
+        childrenMessageContent: (0, d.A)(e, S),
+        disableInteraction: g,
+        author: I,
         preview: A,
     });
 }
-let b = i.memo(E);
+let h = i.memo(p);

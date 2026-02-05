@@ -1,74 +1,61 @@
-n.d(t, {
-    D: () => p,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { D: () => _ });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(158954),
-    c = n(311907),
-    o = n(397927),
-    d = n(241499),
+    o = n(311907),
+    d = n(397927),
+    c = n(241499),
     u = n(555337),
-    f = n(564864),
+    m = n(564864),
     g = n(501381),
-    b = n(985018),
-    m = n(82196);
-
-function p(e) {
+    x = n(985018),
+    h = n(82196);
+function _(e) {
     let { requireTerms: t, rules: n } = e,
-        l = (0, c.bG)([u.A], () => u.A.getProps().guild),
-        p = null == l ? void 0 : l.id,
-        x = i.useCallback(
+        l = (0, o.bG)([u.A], () => u.A.getProps().guild),
+        _ = l?.id,
+        A = s.useCallback(
             (e) => {
-                if (null == p || null == n) return null;
-                f.A.setPendingInviteRules(p, e, [...n]);
+                if (null == _ || null == n) return null;
+                m.A.setPendingInviteRules(_, e, [...n]);
             },
-            [p, n],
+            [_, n],
         ),
-        h = i.useCallback(
+        p = s.useCallback(
             (e) => {
-                if (null == p) return null;
-                f.A.setPendingInviteRules(p, t, e);
+                if (null == _) return null;
+                m.A.setPendingInviteRules(_, t, e);
             },
-            [p, t],
+            [_, t],
         );
     return null == l
         ? null
         : null == n
-          ? (0, r.jsx)(o.y$y, {})
-          : (0, r.jsxs)(r.Fragment, {
+          ? (0, i.jsx)(d.y$y, {})
+          : (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(o.dOG, {
-                        label: b.intl.string(b.t.d21uOr),
-                        description: b.intl.string(b.t.SzpUBF),
-                        onChange: x,
+                    (0, i.jsx)(d.dOG, {
+                        label: x.intl.string(x.t.d21uOr),
+                        description: x.intl.string(x.t.SzpUBF),
+                        onChange: A,
                         checked: t,
                     }),
-                    t &&
-                        (0, r.jsx)(g.o, {
-                            guildId: l.id,
-                        }),
-                    (0, r.jsx)("div", {
-                        className: s()(m.aO, {
-                            [m.r9]: !t,
-                        }),
-                        children: (0, r.jsxs)("div", {
+                    t && (0, i.jsx)(g.o, { guildId: l.id }),
+                    (0, i.jsx)("div", {
+                        className: r()(h.aO, { [h.r9]: !t }),
+                        children: (0, i.jsxs)("div", {
                             inert: t ? void 0 : "",
                             children: [
-                                (0, r.jsx)(a.DZT, {
+                                (0, i.jsx)(a.DZT, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: m.lo,
-                                    children: b.intl.string(b.t.XcAzbo),
+                                    className: h.lo,
+                                    children: x.intl.string(x.t.XcAzbo),
                                 }),
-                                (0, r.jsx)(d._, {
-                                    guild: l,
-                                    rules: n,
-                                    setRules: h,
-                                    disabled: !t,
-                                }),
+                                (0, i.jsx)(c._, { guild: l, rules: n, setRules: p, disabled: !t }),
                             ],
                         }),
                     }),

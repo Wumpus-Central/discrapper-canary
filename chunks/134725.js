@@ -1,27 +1,24 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(914430),
-    c = n(924985),
-    o = n(734057),
-    s = n(652215),
-    u = n(985018);
-
-function d(e) {
-    return (0, i.bG)([c.A, o.A], () => {
-        let t = Object.values(o.A.getMutableBasicGuildChannelsForGuild(e.guild_id)).filter(
-            (e) => e.type === s.rbe.GUILD_CATEGORY,
+e.d(t, { A: () => A });
+var i = e(627968);
+e(64700);
+var r = e(311907),
+    l = e(397927),
+    a = e(914430),
+    s = e(924985),
+    d = e(734057),
+    c = e(652215),
+    o = e(985018);
+function A(n) {
+    return (0, r.bG)([s.A, d.A], () => {
+        let t = Object.values(d.A.getMutableBasicGuildChannelsForGuild(n.guild_id)).filter(
+            (n) => n.type === c.rbe.GUILD_CATEGORY,
         );
-        return 0 === t.length || t.every((e) => c.A.isCollapsed(e.id));
+        return 0 === t.length || t.every((n) => s.A.isCollapsed(n.id));
     })
         ? null
-        : (0, r.jsx)(l.Drp, {
+        : (0, i.jsx)(l.Drp, {
               id: "collapse-all-categories",
-              label: u.intl.string(u.t["9dqzUr"]),
-              action: () => (0, a.rZ)(e.guild_id),
+              label: o.intl.string(o.t["9dqzUr"]),
+              action: () => (0, a.rZ)(n.guild_id),
           });
 }

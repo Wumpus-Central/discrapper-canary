@@ -1,284 +1,197 @@
-n.d(t, {
-    A: () => F,
-}),
-    n(65821),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(713402),
-    s = n(73153),
-    o = n(141468),
-    l = n(287809),
-    c = n(756377);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let f = 1e13;
-
-function p(e) {
-    if (null == e) return f;
+"use strict";
+n.d(t, { A: () => G });
+var r = n(311907),
+    i = n(713402),
+    a = n(73153),
+    s = n(141468),
+    o = n(287809),
+    l = n(756377);
+let u = 1e13;
+function c(e) {
+    if (null == e) return u;
     try {
         return new Date(e).getTime();
     } catch (t) {
-        throw Error("Invalid date given (".concat(e, ")"));
+        throw Error(`Invalid date given (${e})`);
     }
 }
-
-function _(e) {
-    return null != e.dueAt ? p(e.dueAt) : f - p(e.savedAt);
+function d(e) {
+    return null != e.dueAt ? c(e.dueAt) : u - c(e.savedAt);
 }
-let h = new a.J(
+let _ = new i.J(
         (e) => {
             let { saveData: t } = e;
-            return [c.Yf.ALL, null != t.dueAt ? c.Yf.REMINDER : c.Yf.BOOKMARK];
+            return [l.Yf.ALL, null != t.dueAt ? l.Yf.REMINDER : l.Yf.BOOKMARK];
         },
         (e) => {
             let { saveData: t } = e;
-            return _(t);
+            return d(t);
         },
     ),
-    m = !0,
-    g = 0,
-    E = new Set(),
-    b = new Set(),
-    y = new Map();
-
-function O(e) {
-    let t = y.get(e);
+    f = !0,
+    p = 0,
+    h = new Set(),
+    m = new Set(),
+    g = new Map();
+function E(e) {
+    let t = g.get(e);
     return null != t && t.size > 0;
 }
-
 function A(e) {
     let { channelId: t, messageId: n } = e;
-    return "".concat(t, "-").concat(n);
+    return `${t}-${n}`;
 }
-
+function I(e) {
+    let t = A(e.saveData);
+    null == _.get(t) && (p = Date.now()), _.set(t, e);
+    let n = e.saveData.messageId,
+        r = e.saveData.channelId,
+        i = g.get(r) ?? new Set();
+    i.add(n),
+        g.set(r, i),
+        null == e.message && m.add(n),
+        null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? h.add(n) : h.delete(n);
+}
+function T(e) {
+    let t = A(e),
+        n = _.get(t);
+    if (null == n) return !1;
+    _.delete(t);
+    let r = e.messageId;
+    g.get(n.saveData.channelId)?.delete(r), m.delete(r), h.delete(r), (p = Date.now());
+}
+function y() {
+    f = !0;
+}
+function S() {
+    (f = !0), _.clear(), g.clear(), m.clear();
+}
 function v(e) {
-    var t;
-    let n = A(e.saveData);
-    null == h.get(n) && (g = Date.now()), h.set(n, e);
-    let r = e.saveData.messageId,
-        i = e.saveData.channelId,
-        a = null != (t = y.get(i)) ? t : new Set();
-    a.add(r),
-        y.set(i, a),
-        null == e.message && b.add(r),
-        null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
-}
-
-function S(e) {
-    var t;
-    let n = A(e),
-        r = h.get(n);
-    if (null == r) return !1;
-    h.delete(n);
-    let i = e.messageId;
-    null == (t = y.get(r.saveData.channelId)) || t.delete(i), b.delete(i), E.delete(i), (g = Date.now());
-}
-
-function I() {
-    m = !0;
-}
-
-function T() {
-    (m = !0), h.clear(), y.clear(), b.clear();
-}
-
-function C(e) {
     let { savedMessages: t } = e;
-    for (let e of ((m = !1), h.clear(), y.clear(), b.clear(), t)) v(e);
+    for (let e of ((f = !1), _.clear(), g.clear(), m.clear(), t)) I(e);
 }
-
-function N(e) {
+function C(e) {
     let { savedMessage: t } = e;
-    v(t);
+    I(t);
 }
-
-function R(e) {
+function b(e) {
     let { savedMessageData: t } = e;
-    return S(t);
+    return T(t);
 }
-
-function w(e) {
+function N(e) {
     let { messageId: t, channelId: n } = e,
-        r = A({
-            messageId: t,
-            channelId: n,
-        }),
-        i = h.get(r);
-    if ((null == i ? void 0 : i.message) == null) return !1;
-    let a = d({}, i);
-    return (a.message = null), h.set(r, a), !0;
+        r = A({ messageId: t, channelId: n }),
+        i = _.get(r);
+    if (i?.message == null) return !1;
+    let a = { ...i };
+    return (a.message = null), _.set(r, a), !0;
 }
-
-function P(e) {
+function R(e) {
     let { id: t, channelId: n } = e;
-    return w({
-        messageId: t,
-        channelId: n,
-    });
+    return N({ messageId: t, channelId: n });
 }
-
-function D(e) {
+function O(e) {
     let { ids: t, channelId: n } = e;
-    for (let e of t)
-        w({
-            messageId: e,
-            channelId: n,
-        });
+    for (let e of t) N({ messageId: e, channelId: n });
 }
-
-function x(e) {
+function D(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
-    let n = A({
-            messageId: t.id,
-            channelId: t.channel_id,
-        }),
-        r = h.get(n);
-    if ((null == r ? void 0 : r.message) == null) return !1;
-    let i = d({}, r);
-    (i.message = (0, o.IU)(r.message, t)), h.set(n, i);
+    let n = A({ messageId: t.id, channelId: t.channel_id }),
+        r = _.get(n);
+    if (r?.message == null) return !1;
+    let i = { ...r };
+    (i.message = (0, s.IU)(r.message, t)), _.set(n, i);
 }
-
 function L() {
-    if (0 === b.size || m) return !1;
-    m = !0;
+    if (0 === m.size || f) return !1;
+    f = !0;
 }
-
-function j(e) {
+function w(e) {
     let { channel: t } = e;
-    if (0 === b.size || m || !O(t.id)) return !1;
-    m = !0;
+    if (0 === m.size || f || !E(t.id)) return !1;
+    f = !0;
 }
-
-function M(e) {
+function x(e) {
     let { channels: t } = e;
-    if (0 === b.size || m) return !1;
+    if (0 === m.size || f) return !1;
     let n = !1;
-    for (let e of t) O(e.id) && ((m = !0), (n = !0));
+    for (let e of t) E(e.id) && ((f = !0), (n = !0));
     return n;
 }
-
-function k(e) {
+function P(e) {
     let { channel: t } = e;
-    if (0 === b.size || m || !O(t.id)) return !1;
-    m = !0;
+    if (0 === m.size || f || !E(t.id)) return !1;
+    f = !0;
 }
-
-function U(e) {
-    var t;
-    let { user: n } = e;
-    if (0 === b.size || m || n.id !== (null == (t = l.default.getCurrentUser()) ? void 0 : t.id)) return !1;
-    m = !0;
+function M(e) {
+    let { user: t } = e;
+    if (0 === m.size || f || t.id !== o.default.getCurrentUser()?.id) return !1;
+    f = !0;
 }
-
-function G(e) {
+function k(e) {
     let { savedMessage: t } = e;
-    E.add(t.saveData.messageId);
+    h.add(t.saveData.messageId);
 }
-class V extends (r = i.Ay.Store) {
+class U extends r.Ay.Store {
+    static displayName = "SavedMessagesStore";
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(o.default);
     }
     getSavedMessages() {
-        return h.values(c.Yf.ALL);
+        return _.values(l.Yf.ALL);
     }
     getSavedMessage(e, t) {
-        return h.get(
-            A({
-                channelId: e,
-                messageId: t,
-            }),
-        );
+        return _.get(A({ channelId: e, messageId: t }));
     }
     getMessageBookmarks() {
-        return h.values(c.Yf.BOOKMARK);
+        return _.values(l.Yf.BOOKMARK);
     }
     getMessageReminders() {
-        return h.values(c.Yf.REMINDER);
+        return _.values(l.Yf.REMINDER);
     }
     getOverdueMessageReminderCount() {
-        return E.size;
+        return h.size;
     }
     hasOverdueReminder() {
-        return E.size > 0;
+        return h.size > 0;
     }
     getSavedMessageCount() {
-        return h.size();
+        return _.size();
     }
     getIsStale() {
-        return m;
+        return f;
     }
     getLastChanged() {
-        return g;
+        return p;
     }
     isMessageBookmarked(e, t) {
-        let n = h.get(
-            A({
-                channelId: e,
-                messageId: t,
-            }),
-        );
+        let n = _.get(A({ channelId: e, messageId: t }));
         return null != n && null == n.saveData.dueAt;
     }
     isMessageReminder(e, t) {
-        let n = h.get(
-            A({
-                channelId: e,
-                messageId: t,
-            }),
-        );
+        let n = _.get(A({ channelId: e, messageId: t }));
         return null != n && null != n.saveData.dueAt;
     }
 }
-u(V, "displayName", "SavedMessagesStore");
-let F = new V(s.h, {
-    POST_CONNECTION_OPEN: I,
-    LOGOUT: T,
-    SAVED_MESSAGES_UPDATE: C,
-    SAVED_MESSAGE_CREATE: N,
-    SAVED_MESSAGE_DELETE: R,
-    MESSAGE_DELETE: P,
-    MESSAGE_DELETE_BULK: D,
-    MESSAGE_UPDATE: x,
+let G = new U(a.h, {
+    POST_CONNECTION_OPEN: y,
+    LOGOUT: S,
+    SAVED_MESSAGES_UPDATE: v,
+    SAVED_MESSAGE_CREATE: C,
+    SAVED_MESSAGE_DELETE: b,
+    MESSAGE_DELETE: R,
+    MESSAGE_DELETE_BULK: O,
+    MESSAGE_UPDATE: D,
     GUILD_CREATE: L,
     GUILD_UPDATE: L,
     GUILD_DELETE: L,
-    CHANNEL_CREATE: j,
-    CHANNEL_UPDATES: M,
-    CHANNEL_DELETE: k,
-    GUILD_MEMBER_UPDATE: U,
+    CHANNEL_CREATE: w,
+    CHANNEL_UPDATES: x,
+    CHANNEL_DELETE: P,
+    GUILD_MEMBER_UPDATE: M,
     GUILD_ROLE_CREATE: L,
     GUILD_ROLE_UPDATE: L,
     GUILD_ROLE_DELETE: L,
-    MESSAGE_REMINDER_DUE: G,
+    MESSAGE_REMINDER_DUE: k,
 });

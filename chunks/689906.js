@@ -1,18 +1,15 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(64700),
+n.d(t, { A: () => d });
+var i = n(64700),
     l = n(512750),
-    i = n(397927),
+    s = n(397927),
     a = n(997509),
-    s = n(568065),
+    r = n(568065),
     o = n(652215);
-
-function c(e, t) {
-    let n = r.useCallback(
+function d(e, t) {
+    let n = i.useCallback(
         (n) => {
-            if ((n.stopPropagation(), t.type !== s.o9.LEVEL))
-                switch (((0, i.OoC)(s.Fq), t.skuId)) {
+            if ((n.stopPropagation(), t.type !== r.o9.LEVEL))
+                switch (((0, s.OoC)(r.Fq), t.skuId)) {
                     case l.SL:
                         a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
@@ -29,7 +26,7 @@ function c(e, t) {
                         return;
                     case l.jF:
                     case l.OJ:
-                        (0, i.s7G)(), a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                        (0, s.s7G)(), a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:
                         return;
@@ -37,5 +34,5 @@ function c(e, t) {
         },
         [e, t],
     );
-    return t.type === s.o9.PERK ? n : void 0;
+    return t.type === r.o9.PERK ? n : void 0;
 }

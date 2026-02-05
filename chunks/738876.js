@@ -1,69 +1,61 @@
-n.d(t, {
-    A: () => j,
-}),
-    n(896048);
-var r = n(627968),
+n.d(t, { A: () => C });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(323073),
-    s = n(861382),
+    r = n(861382),
     o = n(47167),
-    c = n(31717),
-    u = n(834942),
-    d = n(186111),
-    f = n(576705),
-    p = n(994500),
-    h = n(287809),
-    b = n(203982),
-    g = n(518960),
-    m = n(65593),
-    A = n(698638),
-    y = n(652215),
-    O = n(985018);
-let j = function (e) {
-    let { className: t, style: n, channel: j, draftType: v } = e,
-        [x, E] = l.useState(!0),
-        _ = (0, i.bG)([d.A], () => d.A.hasLayers()),
-        C = (0, i.bG)([f.A], () => null != j && f.A.can(y.xBc.ATTACH_FILES, j), [j]),
-        S = null != (0, i.bG)([s.A], () => s.A.getActiveCommand(j.id)),
-        I = j.getGuildId(),
-        N = v === c.C.FirstThreadMessage,
-        T = (0, a.vL)(j),
-        P = l.useMemo(
-            () => !_ && ((j.isPrivate() && !j.isManaged()) || (null != I && !T && C && u.A.canChatInGuild(I))),
-            [C, T, j, I, _],
+    d = n(31717),
+    c = n(834942),
+    u = n(186111),
+    h = n(576705),
+    A = n(994500),
+    g = n(287809),
+    m = n(203982),
+    p = n(518960),
+    _ = n(65593),
+    x = n(698638),
+    f = n(652215),
+    E = n(985018);
+let C = function (e) {
+    let { className: t, style: n, channel: C, draftType: I } = e,
+        [S, b] = l.useState(!0),
+        N = (0, s.bG)([u.A], () => u.A.hasLayers()),
+        T = (0, s.bG)([h.A], () => null != C && h.A.can(f.xBc.ATTACH_FILES, C), [C]),
+        j = null != (0, s.bG)([r.A], () => r.A.getActiveCommand(C.id)),
+        v = C.getGuildId(),
+        y = I === d.C.FirstThreadMessage,
+        R = (0, a.vL)(C),
+        O = l.useMemo(
+            () => !N && ((C.isPrivate() && !C.isManaged()) || (null != v && !R && T && c.A.canChatInGuild(v))),
+            [T, R, C, v, N],
         ),
-        w = N
-            ? y.kvI.GUILD_THREADS_ONLY.has(j.type)
-                ? O.intl.string(O.t.RBBLhL)
-                : O.intl.string(O.t.gUx4eu)
-            : x
-              ? O.intl.format(O.t.dYP2Fc, {
-                    destination: (0, o.m1)(j, h.default, p.A, !0),
-                })
-              : O.intl.string(O.t.h76ulG);
-    return S || !P
+        L = y
+            ? f.kvI.GUILD_THREADS_ONLY.has(C.type)
+                ? E.intl.string(E.t.RBBLhL)
+                : E.intl.string(E.t.gUx4eu)
+            : S
+              ? E.intl.format(E.t.dYP2Fc, { destination: (0, o.m1)(C, g.default, A.A, !0) })
+              : E.intl.string(E.t.h76ulG);
+    return j || !O
         ? null
-        : (0, r.jsx)(m.A, {
+        : (0, i.jsx)(_.A, {
               className: t,
               style: n,
-              title: w,
-              description: N ? O.intl.string(O.t.lpgkzq) : O.intl.string(O.t.usQh4J),
-              icons: A.ir,
+              title: L,
+              description: y ? E.intl.string(E.t.lpgkzq) : E.intl.string(E.t.usQh4J),
+              icons: x.ir,
               onDrop: (e) => {
-                  if (S) return !1;
-                  P &&
-                      null != j &&
-                      ((0, g.R)(e, j, v, {
-                          requireConfirm: x,
-                          origin: "drag_drop",
-                      }),
-                      b._.dispatchToLastSubscribed(y.jej.TEXTAREA_FOCUS));
+                  if (j) return !1;
+                  O &&
+                      null != C &&
+                      ((0, p.R)(e, C, I, { requireConfirm: S, origin: "drag_drop" }),
+                      m._.dispatchToLastSubscribed(f.jej.TEXTAREA_FOCUS));
               },
-              onDragClear: () => E(!0),
+              onDragClear: () => b(!0),
               onDragOver: (e) => {
-                  if (S) return !1;
-                  N || e.shiftKey !== x || E(!e.shiftKey);
+                  if (j) return !1;
+                  y || e.shiftKey !== S || b(!e.shiftKey);
               },
           });
 };

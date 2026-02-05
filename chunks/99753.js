@@ -1,100 +1,75 @@
+"use strict";
 let r;
-n.d(t, {
-    A: () => O,
-}),
-    n(896048);
-var i,
-    a = n(311907),
-    s = n(73153),
-    o = n(83971);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = new Map(),
+n.d(t, { A: () => A });
+var i = n(311907),
+    a = n(73153),
+    s = n(83971);
+let o = new Map(),
+    l = new Map(),
     u = new Map(),
-    d = new Map(),
-    f = !1;
-
-function p(e) {
-    e(c), (c = new Map(c));
+    c = !1;
+function d(e) {
+    e(o), (o = new Map(o));
 }
-
 function _(e) {
     let { feedId: t, feed: n } = e;
-    p((e) => e.set(t, n)), d.set(t, new Date());
+    d((e) => e.set(t, n)), u.set(t, new Date());
 }
-
-function h(e) {
+function f(e) {
     let { feedId: t, state: n } = e;
-    u.set(t, n);
+    l.set(t, n);
 }
-
-function m() {
-    c = new Map();
+function p() {
+    o = new Map();
 }
-
-function g(e) {
+function h(e) {
     let { feedId: t } = e;
-    if (!c.has(t)) return !1;
-    p((e) => e.delete(t));
+    if (!o.has(t)) return !1;
+    d((e) => e.delete(t));
 }
-
-function E(e) {
+function m(e) {
     let { filters: t } = e;
     r = t;
 }
-
-function b() {
-    f = !f;
+function g() {
+    c = !c;
 }
-class y extends (i = a.Ay.Store) {
+class E extends i.Ay.Store {
+    static displayName = "ContentInventoryStore";
     getFeeds() {
-        return c;
+        return o;
     }
     getFeed(e) {
-        return c.get(e);
+        return o.get(e);
     }
     getFeedState(e) {
-        return u.get(e);
+        return l.get(e);
     }
     getLastFeedFetchDate(e) {
-        return d.get(e);
+        return u.get(e);
     }
     getFilters() {
         return r;
     }
     getFeedRequestId(e) {
-        var t;
-        return null == (t = this.getFeed(e)) ? void 0 : t.request_id;
+        return this.getFeed(e)?.request_id;
     }
     getDebugImpressionCappingDisabled() {
-        return f;
+        return c;
     }
     getMatchingInboxEntry(e) {
         let { activity: t, userId: n, feedId: r } = e,
             i = this.getFeed(r);
         if (null == i || null == t) return;
         let a = i.entries.reduce((e, t) => (t.content.author_id === n ? [...e, t.content] : [...e]), []);
-        return (0, o.nU)(a, t);
+        return (0, s.nU)(a, t);
     }
 }
-l(y, "displayName", "ContentInventoryStore");
-let O = new y(s.h, {
-    CONNECTION_OPEN: m,
+let A = new E(a.h, {
+    CONNECTION_OPEN: p,
     CONTENT_INVENTORY_SET_FEED: _,
-    CONTENT_INVENTORY_SET_FEED_STATE: h,
-    CONTENT_INVENTORY_SET_FILTERS: E,
-    CONTENT_INVENTORY_CLEAR_FEED: g,
-    CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: b,
+    CONTENT_INVENTORY_SET_FEED_STATE: f,
+    CONTENT_INVENTORY_SET_FILTERS: m,
+    CONTENT_INVENTORY_CLEAR_FEED: h,
+    CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: g,
 });

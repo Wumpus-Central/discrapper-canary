@@ -1,69 +1,51 @@
-n.d(t, {
-    A: () => l,
-});
+"use strict";
+n.d(t, { A: () => l });
 var r = n(64700),
     i = n(884362),
     a = n(741918),
     s = n(267102),
     o = n(374803);
-
 function l(e) {
-    var t, n, l;
-    let { navId: c, scrollerRef: u, state: d, onFocus: f } = e,
-        { renderWindow: p } = r.useContext(s.Ay),
-        _ = (e, t) => {
-            let n = p.document.querySelector(e);
-            if (null != n) {
-                var r;
-                null == (r = u.current) ||
-                    r.scrollIntoViewNode({
-                        node: n,
-                    });
-            }
-            null == f || f(+t);
+    let { navId: t, scrollerRef: n, state: l, onFocus: u } = e,
+        { renderWindow: c } = r.useContext(s.Ay),
+        d = (e, t) => {
+            let r = c.document.querySelector(e);
+            null != r && n.current?.scrollIntoViewNode({ node: r }), u?.(+t);
         },
-        h = (e, t, n) => {
-            var r;
-            if ((null == (r = u.current) || r.scrollToTop(), e && null != d.query)) {
-                let e = d.query.typeInfo.focusMode,
-                    r = e !== o.e.MANUAL && (e !== o.e.AUTO_WHEN_FILTERED || 0 !== d.query.queryText.length);
-                d.isVisible && (!0 !== t || !1 !== r) && !0 !== n
-                    ? (g.setFocus("0"), null == f || f(0))
-                    : (g.setFocus(null), null == f || f(null));
+        _ = (e, t, r) => {
+            if ((n.current?.scrollToTop(), e && null != l.query)) {
+                let e = l.query.typeInfo.focusMode,
+                    n = e !== o.e.MANUAL && (e !== o.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
+                l.isVisible && (!0 !== t || !1 !== n) && !0 !== r
+                    ? (p.setFocus("0"), u?.(0))
+                    : (p.setFocus(null), u?.(null));
             }
         },
-        m = (e) => {
-            var t;
-            if ((null == (t = u.current) || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
-                let e = d.query.resultCount - 1;
-                g.setFocus(e.toString()), null == f || f(e);
+        f = (e) => {
+            if ((n.current?.scrollToBottom(), e && null != l.query && l.query.resultCount > 0)) {
+                let e = l.query.resultCount - 1;
+                p.setFocus(e.toString()), u?.(e);
             }
         },
-        g = (0, i.Ay)({
-            id: c,
-            isEnabled: d.isVisible,
+        p = (0, i.Ay)({
+            id: t,
+            isEnabled: l.isVisible,
             orientation: a.Gl.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: _,
-            onNavigateNextAtEnd: () => h(!0),
-            onNavigatePreviousAtStart: () => m(!0),
-            scrollToStart: () => (h(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (m(!1), Promise.resolve()),
+            setFocus: d,
+            onNavigateNextAtEnd: () => _(!0),
+            onNavigatePreviousAtStart: () => f(!0),
+            scrollToStart: () => (_(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (f(!1), Promise.resolve()),
         }),
-        E = r.useRef(h);
+        h = r.useRef(_);
     return (
         r.useEffect(() => {
-            E.current = h;
+            h.current = _;
         }),
         r.useEffect(() => {
-            E.current(!0, !0, d.isInitialAfterError);
-        }, [
-            null == (t = d.query) ? void 0 : t.type,
-            null == (n = d.query) ? void 0 : n.queryText,
-            null == (l = d.query) ? void 0 : l.isLoading,
-            d.isVisible,
-            d.isInitialAfterError,
-        ]),
-        g
+            h.current(!0, !0, l.isInitialAfterError);
+        }, [l.query?.type, l.query?.queryText, l.query?.isLoading, l.isVisible, l.isInitialAfterError]),
+        p
     );
 }

@@ -1,12 +1,9 @@
-n.d(e, {
-    default: () => o,
-});
+n.d(e, { default: () => o });
 var i = n(627968);
 n(64700);
 var r = n(397927),
     l = n(442433),
     a = n(985018);
-
 function o(t) {
     let { roleId: e, onLeaveRole: n, onSelect: o } = t;
     return (0, i.jsx)(

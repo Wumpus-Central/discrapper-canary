@@ -1,50 +1,31 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = null,
-    l = null;
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153);
+let a = null,
+    s = null;
+function o(e) {
     let { client: t } = e;
-    o = t;
+    a = t;
 }
-
-function u() {
-    o = null;
+function l() {
+    a = null;
 }
-
-function d(e) {
+function u(e) {
     let { component: t } = e;
-    l = t;
+    s = t;
 }
-class f extends (r = i.Ay.Store) {
+class c extends r.Ay.Store {
+    static displayName = "AdyenStore";
     get client() {
-        return o;
+        return a;
     }
     get cashAppPayComponent() {
-        return l;
+        return s;
     }
 }
-s(f, "displayName", "AdyenStore");
-let p = new f(a.h, {
-    ADYEN_CREATE_CLIENT_SUCCESS: c,
-    ADYEN_TEARDOWN_CLIENT: u,
-    ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: d,
+let d = new c(i.h, {
+    ADYEN_CREATE_CLIENT_SUCCESS: o,
+    ADYEN_TEARDOWN_CLIENT: l,
+    ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: u,
 });

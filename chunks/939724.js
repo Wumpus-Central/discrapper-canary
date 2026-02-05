@@ -1,83 +1,68 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    s = n(989349),
-    a = n.n(s),
+var s = n(503698),
+    r = n.n(s),
+    a = n(989349),
+    l = n.n(a),
     o = n(397927),
     c = n(496431),
     d = n(985018),
     u = n(338422);
 let _ = (e) => {
     let { expiresAt: t, className: n } = e,
-        i = (0, c.A)(a()(t).toDate(), 1e3);
-    if (null == i) return null;
-    let { days: s, hours: _, minutes: p, seconds: m } = i,
+        s = (0, c.A)(l()(t).toDate(), 1e3);
+    if (null == s) return null;
+    let { days: a, hours: _, minutes: m, seconds: A } = s,
         g = [
-            {
-                unitValue: s,
-                unitType: "days",
-            },
-            {
-                unitValue: _,
-                unitType: "hours",
-            },
-            {
-                unitValue: p,
-                unitType: "minutes",
-            },
-            {
-                unitValue: m,
-                unitType: "seconds",
-            },
+            { unitValue: a, unitType: "days" },
+            { unitValue: _, unitType: "hours" },
+            { unitValue: m, unitType: "minutes" },
+            { unitValue: A, unitType: "seconds" },
         ];
-    return (0, r.jsxs)("div", {
-        className: l()(u.Xl, n),
+    return (0, i.jsxs)("div", {
+        className: r()(u.Xl, n),
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: "text-sm/semibold",
                 color: "always-white",
                 children: d.intl.string(d.t["/ARFVE"]),
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: u.$R,
                 children: g.map((e, t) =>
                     (function (e, t) {
                         let n,
-                            [i, l] = 1 === (n = e.unitValue.toString()).length ? ["0", n[0]] : [n[0], n[1]];
-                        return (0, r.jsxs)(r.Fragment, {
+                            [s, r] = 1 === (n = e.unitValue.toString()).length ? ["0", n[0]] : [n[0], n[1]];
+                        return (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsxs)(
+                                (0, i.jsxs)(
                                     "div",
                                     {
                                         className: u.bh,
                                         children: [
-                                            (0, r.jsxs)("div", {
+                                            (0, i.jsxs)("div", {
                                                 className: u.kB,
                                                 children: [
-                                                    (0, r.jsx)("div", {
+                                                    (0, i.jsx)("div", {
                                                         className: u.B2,
-                                                        children: (0, r.jsx)(o.Text, {
+                                                        children: (0, i.jsx)(o.Text, {
                                                             variant: "text-md/medium",
                                                             color: "always-white",
-                                                            children: i,
+                                                            children: s,
                                                         }),
                                                     }),
-                                                    (0, r.jsx)("div", {
+                                                    (0, i.jsx)("div", {
                                                         className: u.B2,
-                                                        children: (0, r.jsx)(o.Text, {
+                                                        children: (0, i.jsx)(o.Text, {
                                                             variant: "text-md/medium",
                                                             color: "always-white",
-                                                            children: l,
+                                                            children: r,
                                                         }),
                                                     }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, i.jsx)(o.Text, {
                                                 variant: "text-xs/semibold",
                                                 color: "always-white",
                                                 children: (function (e) {
@@ -100,7 +85,7 @@ let _ = (e) => {
                                     e.unitType,
                                 ),
                                 !t &&
-                                    (0, r.jsx)(o.Text, {
+                                    (0, i.jsx)(o.Text, {
                                         className: u.cV,
                                         variant: "text-lg/normal",
                                         color: "always-white",

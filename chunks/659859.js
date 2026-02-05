@@ -1,169 +1,127 @@
-n.d(t, {
-    HN: () => O,
-    _W: () => v,
-    _x: () => A,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(934551),
-    l = n(990078),
-    c = n(397927),
-    u = n(565645),
-    d = n(763754),
-    f = n(930101),
-    p = n(888675),
-    _ = n(649963),
-    h = n(486020),
-    m = n(203982),
-    g = n(395031),
-    E = n(652215),
-    b = n(985018),
-    y = n(696007);
-
-function O(e) {
-    let { message: t, rendered: n } = e;
-    return null == (0, g.Ys)(t.content)
-        ? b.intl.format(b.t.k6Jc9Y, {
-              username: null,
-              usernameHook: () => null,
-          })
-        : b.intl.format(b.t.IihHB0, {
-              emojiPreview: n,
-              emojiName: null,
-              username: null,
-              usernameHook: () => null,
-          });
+t.d(s, { HN: () => E, _W: () => _, _x: () => I });
+var n = t(627968),
+    a = t(64700),
+    l = t(503698),
+    i = t.n(l),
+    r = t(934551),
+    o = t(990078),
+    c = t(397927),
+    m = t(565645),
+    u = t(763754),
+    d = t(930101),
+    h = t(888675),
+    g = t(649963),
+    A = t(486020),
+    x = t(203982),
+    N = t(395031),
+    C = t(652215),
+    p = t(985018),
+    j = t(696007);
+function E(e) {
+    let { message: s, rendered: t } = e;
+    return null == (0, N.Ys)(s.content)
+        ? p.intl.format(p.t.k6Jc9Y, { username: null, usernameHook: () => null })
+        : p.intl.format(p.t.IihHB0, { emojiPreview: t, emojiName: null, username: null, usernameHook: () => null });
 }
-
-function A(e) {
-    let { message: t, className: n } = e,
-        [a, o] = i.useState(!1),
-        d = t.getChannelId(),
-        f = (0, g.Ys)(t.content),
-        p = i.useCallback(() => {
-            null != f &&
-                (0, _.BB)(
-                    d,
-                    t.id,
-                    {
-                        id: f.id,
-                        name: f.name,
-                    },
-                    _.qN.MESSAGE,
-                );
-        }, [d, f, t.id]);
-    return null == f
+function I(e) {
+    let { message: s, className: t } = e,
+        [l, r] = a.useState(!1),
+        u = s.getChannelId(),
+        d = (0, N.Ys)(s.content),
+        h = a.useCallback(() => {
+            null != d && (0, g.BB)(u, s.id, { id: d.id, name: d.name }, g.qN.MESSAGE);
+        }, [u, d, s.id]);
+    return null == d
         ? null
-        : (0, r.jsx)(l.m, {
+        : (0, n.jsx)(o.m, {
               asContainer: !0,
               "aria-label": !1,
-              __unsupportedReactNodeAsText: (0, r.jsx)(u.A, {
-                  emojiName: f.name,
+              __unsupportedReactNodeAsText: (0, n.jsx)(m.A, {
+                  emojiName: d.name,
                   size: "jumbo",
-                  emojiId: f.id,
-                  animated: f.animated,
+                  emojiId: d.id,
+                  animated: d.animated,
                   isInteracting: !0,
-                  channelId: d,
-                  messageId: t.id,
+                  channelId: u,
+                  messageId: s.id,
               }),
-              children: (0, r.jsx)(c.DUT, {
-                  className: s()(n, y.qx),
-                  onClick: p,
+              children: (0, n.jsx)(c.DUT, {
+                  className: i()(t, j.qx),
+                  onClick: h,
                   onMouseEnter: () => {
-                      o(!0);
+                      r(!0);
                   },
                   onMouseLeave: () => {
-                      o(!1);
+                      r(!1);
                   },
-                  children: (0, r.jsx)(c.Text, {
+                  children: (0, n.jsx)(c.Text, {
                       variant: "text-sm/semibold",
                       color: "text-subtle",
-                      className: y.Ic,
-                      children: b.intl.format(b.t.z5Rnl8, {
-                          renderedEmoji: (0, r.jsx)(u.A, {
-                              emojiName: f.name,
+                      className: j.Ic,
+                      children: p.intl.format(p.t.z5Rnl8, {
+                          renderedEmoji: (0, n.jsx)(m.A, {
+                              emojiName: d.name,
                               size: "default",
-                              emojiId: f.id,
-                              animated: f.animated,
-                              isInteracting: a,
-                              channelId: d,
-                              messageId: t.id,
-                              className: y.ti,
+                              emojiId: d.id,
+                              animated: d.animated,
+                              isInteracting: l,
+                              channelId: u,
+                              messageId: s.id,
+                              className: j.ti,
                           }),
                       }),
                   }),
               }),
           });
 }
-
-function v(e) {
-    let { message: t, compact: n, usernameHook: a } = e,
-        s = t.content,
-        [l, u] = i.useState(!1),
-        _ = (0, d.Ay)(t),
-        O = a(_),
-        A = (0, g.Ys)(s),
-        v = i.useCallback(() => {
-            null != A &&
-                m._.dispatchToLastSubscribed(E.jej.INSERT_TEXT, {
-                    plainText: ":".concat(A.name, ":"),
-                    rawText: s,
-                    addSpace: !0,
-                });
-        }, [A, s]),
-        S = i.useMemo(
+function _(e) {
+    let { message: s, compact: t, usernameHook: l } = e,
+        i = s.content,
+        [o, m] = a.useState(!1),
+        g = (0, u.Ay)(s),
+        E = l(g),
+        I = (0, N.Ys)(i),
+        _ = a.useCallback(() => {
+            null != I &&
+                x._.dispatchToLastSubscribed(C.jej.INSERT_TEXT, { plainText: `:${I.name}:`, rawText: i, addSpace: !0 });
+        }, [I, i]),
+        M = a.useMemo(
             () =>
-                null == A
+                null == I
                     ? null
                     : {
-                          src: h.Ay.getEmojiURL({
-                              id: A.id,
-                              animated: A.animated,
-                              size: 48,
-                          }),
-                          emojiId: A.id,
-                          name: ":".concat(A.name, ":"),
-                          animated: A.animated,
+                          src: A.Ay.getEmojiURL({ id: I.id, animated: I.animated, size: 48 }),
+                          emojiId: I.id,
+                          name: `:${I.name}:`,
+                          animated: I.animated,
                       },
-            [A],
+            [I],
         );
-    return (0, r.jsx)(p.A, {
-        iconNode: (0, r.jsx)(o.ReactionIcon, {
-            size: "refresh_sm",
-            color: "currentColor",
-        }),
-        iconContainerClassName: y.zc,
-        timestamp: t.timestamp,
-        compact: n,
-        contentClassName: y.Qs,
-        children: (0, r.jsx)("span", {
+    return (0, n.jsx)(h.A, {
+        iconNode: (0, n.jsx)(r.ReactionIcon, { size: "refresh_sm", color: "currentColor" }),
+        iconContainerClassName: j.zc,
+        timestamp: s.timestamp,
+        compact: t,
+        contentClassName: j.Qs,
+        children: (0, n.jsx)("span", {
             children:
-                null == A || null == S
-                    ? b.intl.format(b.t.k6Jc9Y, {
-                          username: _.nick,
-                          usernameHook: O,
-                      })
-                    : b.intl.format(b.t.IihHB0, {
-                          username: _.nick,
-                          usernameHook: O,
-                          emojiPreview: (0, r.jsx)(f.X, {
-                              node: S,
-                              isInteracting: l,
-                          }),
-                          emojiName: (0, r.jsx)(c.DUT, {
-                              className: y.hX,
+                null == I || null == M
+                    ? p.intl.format(p.t.k6Jc9Y, { username: g.nick, usernameHook: E })
+                    : p.intl.format(p.t.IihHB0, {
+                          username: g.nick,
+                          usernameHook: E,
+                          emojiPreview: (0, n.jsx)(d.X, { node: M, isInteracting: o }),
+                          emojiName: (0, n.jsx)(c.DUT, {
+                              className: j.hX,
                               tag: "span",
-                              onClick: v,
-                              onMouseEnter: () => u(!0),
-                              onMouseLeave: () => u(!1),
-                              children: (0, r.jsx)(c.Text, {
+                              onClick: _,
+                              onMouseEnter: () => m(!0),
+                              onMouseLeave: () => m(!1),
+                              children: (0, n.jsx)(c.Text, {
                                   tag: "span",
                                   variant: "text-md/medium",
                                   color: "text-strong",
-                                  children: ":".concat(A.name, ":"),
+                                  children: `:${I.name}:`,
                               }),
                           }),
                       }),

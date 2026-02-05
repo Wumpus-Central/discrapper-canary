@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rV: "getXboxApp__7ba5f",
     bF: "getXboxAppBody__7ba5f",

@@ -1,257 +1,242 @@
-n.d(t, {
-    A: () => L,
-});
-var r = n(627968);
+n.d(t, { A: () => M });
+var i = n(627968);
 n(64700);
-var i = n(284009),
-    l = n.n(i),
-    s = n(311907),
-    a = n(990078),
+var s = n(284009),
+    r = n.n(s),
+    a = n(311907),
+    l = n(990078),
     o = n(397927),
     c = n(81400),
     d = n(757036),
     u = n(919395),
     _ = n(124064),
-    p = n(200790),
-    m = n(230084),
+    m = n(200790),
+    A = n(230084),
     g = n(180020),
-    A = n(431982),
-    f = n(730588),
-    h = n(164599),
-    b = n(63675),
-    E = n(546849),
-    x = n(101058),
-    O = n(622543),
-    C = n(696451),
-    I = n(287809),
-    T = n(927578),
-    S = n(427262),
-    j = n(159001),
+    E = n(431982),
+    h = n(730588),
+    p = n(164599),
+    C = n(63675),
+    x = n(546849),
+    T = n(101058),
+    I = n(622543),
+    S = n(696451),
+    f = n(287809),
+    N = n(927578),
+    b = n(427262),
+    R = n(159001),
     v = n(833336),
-    N = n(684732),
-    y = n(168917),
+    O = n(684732),
+    j = n(168917),
     P = n(746706),
-    R = n(788868),
-    D = n(985018),
-    w = n(453814);
-
-function L(e) {
-    var t, n, i, L;
-    let { guild: M } = e,
-        U = (0, s.bG)([I.default], () => {
-            let e = I.default.getCurrentUser();
-            return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
+    y = n(788868),
+    L = n(985018),
+    D = n(453814);
+function M(e) {
+    let { guild: t } = e,
+        n = (0, a.bG)([f.default], () => {
+            let e = f.default.getCurrentUser();
+            return r()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        G = (0, d.L)(R.PremiumTypes.TIER_2),
+        s = (0, d.L)(y.PremiumTypes.TIER_2),
         {
-            pendingAvatar: k,
-            pendingNickname: V,
-            pendingBanner: H,
-            pendingBio: B,
-            pendingPronouns: F,
-            pendingThemeColors: Y,
-            errors: W,
-            guild: z,
-        } = (0, s.cf)([v.A], () => {
+            pendingAvatar: M,
+            pendingNickname: G,
+            pendingBanner: U,
+            pendingBio: k,
+            pendingPronouns: B,
+            pendingThemeColors: w,
+            errors: H,
+            guild: V,
+        } = (0, a.cf)([v.A], () => {
             let {
                 pendingAvatar: e,
                 pendingNickname: t,
                 pendingBio: n,
-                pendingPronouns: r,
-                pendingBanner: i,
-                pendingThemeColors: l,
+                pendingPronouns: i,
+                pendingBanner: s,
+                pendingThemeColors: r,
             } = v.A.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
-                pendingBanner: i,
+                pendingBanner: s,
                 pendingBio: n,
-                pendingPronouns: r,
-                pendingThemeColors: l,
+                pendingPronouns: i,
+                pendingThemeColors: r,
                 errors: v.A.getErrors(),
                 guild: v.A.getGuild(),
             };
         }),
-        K = (0, x.V7)({
-            userId: U.id,
-            image: k,
-        }),
-        Z = null != M ? M : z;
-    l()(null != Z, "guild should not be null");
-    let X = (0, c.EC)(Z.id),
-        q = (0, s.bG)([C.Ay], () => (null == Z.id ? null : C.Ay.getMember(Z.id, U.id))),
-        J = (0, s.bG)([O.A], () => O.A.getGuildMemberProfile(U.id, Z.id)),
-        Q = T.Ay.canUsePremiumProfileCustomization(U),
-        $ = (0, u.z5)(k, null == q ? void 0 : q.avatar),
-        ee = (0, u.Ac)(H, null == J ? void 0 : J.banner),
-        et = (0, N.lS)(Y, null == J ? void 0 : J.themeColors),
-        en = null != (t = null == J ? void 0 : J.bio) ? t : "",
-        er = null != (n = null == J ? void 0 : J.pronouns) ? n : "",
-        ei = (e, t, n) => {
-            n(null != e ? e : null != t ? null : void 0);
+        F = (0, T.V7)({ userId: n.id, image: M }),
+        Y = t ?? V;
+    r()(null != Y, "guild should not be null");
+    let W = (0, c.EC)(Y.id),
+        z = (0, a.bG)([S.Ay], () => (null == Y.id ? null : S.Ay.getMember(Y.id, n.id))),
+        K = (0, a.bG)([I.A], () => I.A.getGuildMemberProfile(n.id, Y.id)),
+        Z = N.Ay.canUsePremiumProfileCustomization(n),
+        X = (0, u.z5)(M, z?.avatar),
+        q = (0, u.Ac)(U, K?.banner),
+        J = (0, O.lS)(w, K?.themeColors),
+        Q = K?.bio ?? "",
+        $ = K?.pronouns ?? "",
+        ee = (e, t, n) => {
+            n(e ?? (null != t ? null : void 0));
         };
-    return (0, r.jsxs)("div", {
-        className: w.Q,
+    return (0, i.jsxs)("div", {
+        className: D.Q,
         children: [
-            (0, r.jsx)(
-                y.A,
+            (0, i.jsx)(
+                j.A,
                 {
-                    errors: null != (i = null == W ? void 0 : W.nick) ? i : null == X ? void 0 : X.nick,
-                    username: S.Ay.getName(U),
-                    pendingNick: V,
-                    currentNick: null == q ? void 0 : q.nick,
-                    user: U,
-                    guild: Z,
+                    errors: H?.nick ?? W?.nick,
+                    username: b.Ay.getName(n),
+                    pendingNick: G,
+                    currentNick: z?.nick,
+                    user: n,
+                    guild: Y,
                 },
                 "nick",
             ),
-            (0, r.jsx)(
-                E.A,
+            (0, i.jsx)(
+                x.A,
                 {
-                    sectionTitle: D.intl.string(D.t["+T3RI/"]),
-                    errors: null == W ? void 0 : W.pronouns,
+                    sectionTitle: L.intl.string(L.t["+T3RI/"]),
+                    errors: H?.pronouns,
                     onPronounsChange: (e) => {
-                        (0, N.d7)(e, er);
+                        (0, O.d7)(e, $);
                     },
-                    pendingPronouns: F,
-                    currentPronouns: er,
+                    pendingPronouns: B,
+                    currentPronouns: $,
                 },
                 "pronouns",
             ),
-            (0, r.jsxs)(P.A, {
-                user: U,
-                showOverlay: !Q,
+            (0, i.jsxs)(P.A, {
+                user: n,
+                showOverlay: !Z,
                 children: [
-                    (0, r.jsx)(
-                        m.A,
+                    (0, i.jsx)(
+                        A.A,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    D.intl.string(D.t.lqaIxI),
-                                    (0, r.jsx)(a.m, {
-                                        text: D.intl.string(D.t["5AFxuK"]),
-                                        children: (0, r.jsx)(o.tvc, {
+                                    L.intl.string(L.t.lqaIxI),
+                                    (0, i.jsx)(l.m, {
+                                        text: L.intl.string(L.t["5AFxuK"]),
+                                        children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: w.a,
+                                            className: D.a,
                                         }),
                                     }),
                                 ],
                             }),
-                            showRemoveAvatarButton: $,
-                            onAvatarChange: (e) => ei(e, null == q ? void 0 : q.avatar, j.zq),
-                            errors: null == W ? void 0 : W.avatar,
-                            guildId: Z.id,
-                            disabled: !Q,
+                            showRemoveAvatarButton: X,
+                            onAvatarChange: (e) => ee(e, z?.avatar, R.zq),
+                            errors: H?.avatar,
+                            guildId: Y.id,
+                            disabled: !Z,
                         },
                         "avatar",
                     ),
-                    (0, r.jsx)(
-                        p.A,
+                    (0, i.jsx)(
+                        m.A,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    D.intl.string(D.t["7v0T9P"]),
-                                    (0, r.jsx)(a.m, {
-                                        text: D.intl.string(D.t["5AFxuK"]),
-                                        children: (0, r.jsx)(o.tvc, {
+                                    L.intl.string(L.t["7v0T9P"]),
+                                    (0, i.jsx)(l.m, {
+                                        text: L.intl.string(L.t["5AFxuK"]),
+                                        children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: w.a,
+                                            className: D.a,
                                         }),
                                     }),
                                 ],
                             }),
-                            user: U,
-                            guild: Z,
+                            user: n,
+                            guild: Y,
                         },
                         "decoration",
                     ),
-                    !G &&
-                        (0, r.jsx)(g.A, {
-                            user: U,
-                            guildId: Z.id,
-                        }),
-                    (0, r.jsx)(
-                        A.A,
+                    !s && (0, i.jsx)(g.A, { user: n, guildId: Y.id }),
+                    (0, i.jsx)(
+                        E.A,
                         {
-                            user: U,
-                            guild: Z,
-                            titleIcon: (0, r.jsx)(a.m, {
-                                text: D.intl.string(D.t["5AFxuK"]),
-                                children: (0, r.jsx)(o.tvc, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: w.a,
-                                }),
+                            user: n,
+                            guild: Y,
+                            titleIcon: (0, i.jsx)(l.m, {
+                                text: L.intl.string(L.t["5AFxuK"]),
+                                children: (0, i.jsx)(o.tvc, { size: "md", color: "currentColor", className: D.a }),
                             }),
                         },
                         "nameplate",
                     ),
-                    (0, r.jsx)(
-                        h.A,
+                    (0, i.jsx)(
+                        p.A,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    D.intl.string(D.t.wR5wOo),
-                                    (0, r.jsx)(a.m, {
-                                        text: D.intl.string(D.t["5AFxuK"]),
-                                        children: (0, r.jsx)(o.tvc, {
+                                    L.intl.string(L.t.wR5wOo),
+                                    (0, i.jsx)(l.m, {
+                                        text: L.intl.string(L.t["5AFxuK"]),
+                                        children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: w.a,
+                                            className: D.a,
                                         }),
                                     }),
                                 ],
                             }),
-                            user: U,
-                            guild: Z,
+                            user: n,
+                            guild: Y,
                         },
                         "effect",
                     ),
-                    (0, r.jsx)(
-                        f.A,
+                    (0, i.jsx)(
+                        h.A,
                         {
-                            showRemoveBannerButton: ee,
-                            errors: null == W ? void 0 : W.banner,
-                            onBannerChange: (e) => ei(e, null == J ? void 0 : J.banner, j.Iz),
-                            guildId: null == Z ? void 0 : Z.id,
-                            disabled: !Q,
+                            showRemoveBannerButton: q,
+                            errors: H?.banner,
+                            onBannerChange: (e) => ee(e, K?.banner, R.Iz),
+                            guildId: Y?.id,
+                            disabled: !Z,
                         },
                         "banner",
                     ),
-                    (0, r.jsx)(b.A, {
-                        user: U,
-                        pendingAvatarSrc: K,
-                        pendingColors: Y,
+                    (0, i.jsx)(C.A, {
+                        user: n,
+                        pendingAvatarSrc: F,
+                        pendingColors: w,
                         onThemeColorsChange: (e) => {
-                            (0, N.wx)(e, null == J ? void 0 : J.themeColors);
+                            (0, O.wx)(e, K?.themeColors);
                         },
-                        guildId: null == Z ? void 0 : Z.id,
-                        showResetThemeButton: et,
+                        guildId: Y?.id,
+                        showResetThemeButton: J,
                     }),
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         _.A,
                         {
-                            placeholder: D.intl.string(D.t["/7NKgv"]),
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            placeholder: L.intl.string(L.t["/7NKgv"]),
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    D.intl.string(D.t.jGoPJT),
-                                    (0, r.jsx)(a.m, {
-                                        text: D.intl.string(D.t["5AFxuK"]),
-                                        children: (0, r.jsx)(o.tvc, {
+                                    L.intl.string(L.t.jGoPJT),
+                                    (0, i.jsx)(l.m, {
+                                        text: L.intl.string(L.t["5AFxuK"]),
+                                        children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: w.a,
+                                            className: D.a,
                                         }),
                                     }),
                                 ],
                             }),
-                            onBioChange: (e) => (0, N.Rn)(e, en),
-                            errors: null != (L = null == W ? void 0 : W.bio) ? L : null == X ? void 0 : X.bio,
-                            pendingBio: B,
-                            currentBio: en,
-                            disabled: !Q,
+                            onBioChange: (e) => (0, O.Rn)(e, Q),
+                            errors: H?.bio ?? W?.bio,
+                            pendingBio: k,
+                            currentBio: Q,
+                            disabled: !Z,
                         },
                         "about",
                     ),

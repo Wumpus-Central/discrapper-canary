@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Kv: "focusTarget__9a337",
     X: "obscuredTagContainer__9a337",

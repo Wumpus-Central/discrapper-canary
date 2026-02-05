@@ -1,240 +1,129 @@
-n.d(e, {
-    default: () => R,
-}),
-    n(321073),
-    n(228524),
-    n(896048);
-var i = n(627968),
-    l = n(64700),
-    s = n(136722),
-    r = n(311907),
-    o = n(827734),
-    a = n(397927),
-    c = n(47167),
-    u = n(997509),
-    d = n(555337),
-    p = n(636042),
-    g = n(376092),
-    f = n(808728),
-    x = n(317525),
-    S = n(994500),
-    j = n(287809),
-    m = n(954571),
-    b = n(975571),
-    h = n(488926),
-    E = n(455207),
-    y = n(124759),
-    v = n(652215),
-    O = n(985018),
-    C = n(513804),
-    I = n(796343);
-
-function P() {
-    return (P =
-        Object.assign ||
-        function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var n = arguments[e];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (t[i] = n[i]);
-            }
-            return t;
-        }).apply(this, arguments);
-}
-
-function A(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                }),
-            )),
-            i.forEach(function (e) {
-                var i;
-                (i = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = i);
-            });
-    }
-    return t;
-}
-
-function N(t, e) {
+i.d(e, { default: () => G }), i(321073);
+var n = i(627968),
+    s = i(64700),
+    l = i(136722),
+    r = i(311907),
+    a = i(827734),
+    o = i(397927),
+    d = i(47167),
+    c = i(997509),
+    u = i(555337),
+    p = i(636042),
+    x = i(376092),
+    g = i(808728),
+    S = i(317525),
+    m = i(994500),
+    f = i(287809),
+    h = i(954571),
+    j = i(975571),
+    E = i(488926),
+    C = i(455207),
+    I = i(124759),
+    b = i(652215),
+    A = i(985018),
+    N = i(513804),
+    v = i(796343);
+function y(t) {
+    let { guild: e, verificationLevelMet: i, contentFilterMet: l } = t;
     return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
-              }),
-        t
-    );
-}
-
-function M(t) {
-    let { guild: e, verificationLevelMet: n, contentFilterMet: s } = t;
-    return (
-        l.useEffect(() => {
-            (0, E.sx)({
-                fromStep: y.pj.INTRO,
-                toStep: y.pj.SAFETY_CHECK,
-                guildId: e.id,
-            });
+        s.useEffect(() => {
+            (0, C.sx)({ fromStep: I.pj.INTRO, toStep: I.pj.SAFETY_CHECK, guildId: e.id });
         }, [e.id]),
-        (0, i.jsxs)(a.BJc, {
+        (0, n.jsxs)(o.BJc, {
             gap: 12,
             children: [
-                !n &&
-                    (0, i.jsx)(L, {
-                        title: O.intl.string(O.t["rkA56+"]),
-                        description: O.intl.string(O.t.fHiGA0),
-                    }),
-                !s &&
-                    (0, i.jsx)(L, {
-                        title: O.intl.string(O.t.COu4bk),
-                        description: O.intl.string(O.t.b0MaDV),
-                    }),
+                !i && (0, n.jsx)(M, { title: A.intl.string(A.t["rkA56+"]), description: A.intl.string(A.t.fHiGA0) }),
+                !l && (0, n.jsx)(M, { title: A.intl.string(A.t.COu4bk), description: A.intl.string(A.t.b0MaDV) }),
             ],
         })
     );
 }
-
-function w(t) {
+function P(t) {
     let {
         guild: e,
-        rulesChannelId: n,
-        publicUpdatesChannelId: s,
-        onRulesChannelChange: o,
-        onPublicUpdatesChannelChange: u,
+        rulesChannelId: i,
+        publicUpdatesChannelId: l,
+        onRulesChannelChange: a,
+        onPublicUpdatesChannelChange: c,
     } = t;
-    l.useEffect(() => {
-        (0, E.sx)({
-            fromStep: y.pj.SAFETY_CHECK,
-            toStep: y.pj.BASICS,
-            guildId: e.id,
-        });
+    s.useEffect(() => {
+        (0, C.sx)({ fromStep: I.pj.SAFETY_CHECK, toStep: I.pj.BASICS, guildId: e.id });
     }, [e.id]);
-    let d = (0, r.bG)([f.Ay], () => (null != e ? f.Ay.getChannels(e.id) : null)),
-        p = l.useCallback(
-            (t) => ({
-                id: t.value,
-                value: t.value,
-                label: t.label,
-            }),
-            [],
-        ),
-        g = [
-            {
-                value: y.SP,
-                label: O.intl.string(O.t.Cla0re),
-            },
-        ];
+    let u = (0, r.bG)([g.Ay], () => (null != e ? g.Ay.getChannels(e.id) : null)),
+        p = s.useCallback((t) => ({ id: t.value, value: t.value, label: t.label }), []),
+        x = [{ value: I.SP, label: A.intl.string(A.t.Cla0re) }];
     return (
-        d[f.I6].forEach((t) => {
+        u[g.I6].forEach((t) => {
             let { channel: e } = t;
-            e.type === v.rbe.GUILD_TEXT &&
-                g.push({
-                    value: e.id,
-                    label: (0, c.m1)(e, j.default, S.A, !0),
-                });
+            e.type === b.rbe.GUILD_TEXT && x.push({ value: e.id, label: (0, d.m1)(e, f.default, m.A, !0) });
         }),
-        (0, i.jsxs)(a.BJc, {
+        (0, n.jsxs)(o.BJc, {
             gap: 16,
             children: [
-                (0, i.jsx)(a.ZiE, {
-                    label: O.intl.string(O.t.dYrhCO),
-                    description: O.intl.string(O.t["+Af+Vw"]),
-                    options: g,
+                (0, n.jsx)(o.ZiE, {
+                    label: A.intl.string(A.t.dYrhCO),
+                    description: A.intl.string(A.t["+Af+Vw"]),
+                    options: x,
                     formatOption: p,
-                    onSelectionChange: (t) => o(null != t ? t : y.SP),
+                    onSelectionChange: (t) => a(t ?? I.SP),
                     selectionMode: "single",
-                    value: n,
+                    value: i,
                 }),
-                (0, i.jsx)(a.ZiE, {
-                    label: O.intl.string(O.t.vAyDGU),
-                    description: O.intl.string(O.t.ZFeonu),
-                    options: g,
+                (0, n.jsx)(o.ZiE, {
+                    label: A.intl.string(A.t.vAyDGU),
+                    description: A.intl.string(A.t.ZFeonu),
+                    options: x,
                     formatOption: p,
-                    onSelectionChange: (t) => u(null != t ? t : y.SP),
+                    onSelectionChange: (t) => c(t ?? I.SP),
                     selectionMode: "single",
-                    value: s,
+                    value: l,
                 }),
             ],
         })
     );
 }
-
-function L(t) {
-    let { title: e, description: n } = t;
-    return (0, i.jsxs)(a.BJc, {
+function M(t) {
+    let { title: e, description: i } = t;
+    return (0, n.jsxs)(o.BJc, {
         direction: "horizontal",
         gap: 8,
         align: "start",
         children: [
-            (0, i.jsx)(a.yr3, {
-                size: "sm",
-                className: C.aV,
-                color: o.A.colors.ICON_FEEDBACK_POSITIVE,
-            }),
-            (0, i.jsxs)(a.BJc, {
+            (0, n.jsx)(o.yr3, { size: "sm", className: N.aV, color: a.A.colors.ICON_FEEDBACK_POSITIVE }),
+            (0, n.jsxs)(o.BJc, {
                 gap: 4,
                 children: [
-                    (0, i.jsx)(a.Text, {
-                        variant: "text-md/normal",
-                        children: e,
-                    }),
-                    (0, i.jsx)(a.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-subtle",
-                        children: n,
-                    }),
+                    (0, n.jsx)(o.Text, { variant: "text-md/normal", children: e }),
+                    (0, n.jsx)(o.Text, { variant: "text-xs/normal", color: "text-subtle", children: i }),
                 ],
             }),
         ],
     });
 }
-
-function T(t) {
-    let { enabledPermissions: e, onGetPermisisonName: n } = t;
-    return (0, i.jsxs)("div", {
-        className: C.CZ,
+function L(t) {
+    let { enabledPermissions: e, onGetPermisisonName: i } = t;
+    return (0, n.jsxs)("div", {
+        className: N.CZ,
         children: [
-            (0, i.jsx)(a.Text, {
-                className: C.qd,
+            (0, n.jsx)(o.Text, {
+                className: N.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: O.intl.string(O.t.xU8RDk),
+                children: A.intl.string(A.t.xU8RDk),
             }),
-            (0, i.jsx)("div", {
-                className: C.lM,
+            (0, n.jsx)("div", {
+                className: N.lM,
                 children: e.map((t, e) =>
-                    (0, i.jsxs)(
+                    (0, n.jsxs)(
                         "div",
                         {
-                            className: C.ce,
+                            className: N.ce,
                             children: [
-                                (0, i.jsx)("div", {
-                                    className: C.dT,
-                                }),
-                                (0, i.jsx)(a.Text, {
+                                (0, n.jsx)("div", { className: N.dT }),
+                                (0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: n(t),
+                                    children: i(t),
                                 }),
                             ],
                         },
@@ -245,36 +134,28 @@ function T(t) {
         ],
     });
 }
-
-function _(t) {
-    let { disabledPermissions: e, onGetPermisisonName: n } = t,
-        l = O.intl.string(O.t.Yo5qlq);
+function O(t) {
+    let { disabledPermissions: e, onGetPermisisonName: i } = t,
+        s = A.intl.string(A.t.Yo5qlq);
     return (
-        e.length === y.dR.length && (l = O.intl.string(O.t.FgMS6i)),
-        (0, i.jsxs)("div", {
-            className: C.CZ,
+        e.length === I.dR.length && (s = A.intl.string(A.t.FgMS6i)),
+        (0, n.jsxs)("div", {
+            className: N.CZ,
             children: [
-                (0, i.jsx)(a.Text, {
-                    className: C.qd,
-                    variant: "text-xs/semibold",
-                    color: "text-muted",
-                    children: l,
-                }),
-                (0, i.jsx)("div", {
-                    className: C.lM,
+                (0, n.jsx)(o.Text, { className: N.qd, variant: "text-xs/semibold", color: "text-muted", children: s }),
+                (0, n.jsx)("div", {
+                    className: N.lM,
                     children: e.map((t, e) =>
-                        (0, i.jsxs)(
+                        (0, n.jsxs)(
                             "div",
                             {
-                                className: C.ce,
+                                className: N.ce,
                                 children: [
-                                    (0, i.jsx)("div", {
-                                        className: C.xE,
-                                    }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, n.jsx)("div", { className: N.xE }),
+                                    (0, n.jsx)(o.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        children: n(t),
+                                        children: i(t),
                                     }),
                                 ],
                             },
@@ -286,265 +167,170 @@ function _(t) {
         })
     );
 }
-
-function D(t) {
+function T(t) {
     let { permissions: e } = t,
-        n = (t) => {
+        i = (t) => {
             switch (t.toString()) {
-                case v.xBc.MENTION_EVERYONE.toString():
-                    return O.intl.string(O.t.yCpsQw);
-                case v.xBc.CREATE_GUILD_EXPRESSIONS.toString():
-                    return O.intl.string(O.t.vo2LdY);
-                case v.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
-                    return O.intl.string(O.t.cmp2W6);
+                case b.xBc.MENTION_EVERYONE.toString():
+                    return A.intl.string(A.t.yCpsQw);
+                case b.xBc.CREATE_GUILD_EXPRESSIONS.toString():
+                    return A.intl.string(A.t.vo2LdY);
+                case b.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
+                    return A.intl.string(A.t.cmp2W6);
                 default:
-                    return (0, g.hx)(t);
+                    return (0, x.hx)(t);
             }
         },
-        { enabledPermissions: l, disabledPermissions: s } = e;
-    return (0, i.jsxs)("div", {
-        className: C.tp,
+        { enabledPermissions: s, disabledPermissions: l } = e;
+    return (0, n.jsxs)("div", {
+        className: N.tp,
         children: [
-            0 !== l.length
-                ? (0, i.jsx)(T, {
-                      enabledPermissions: l,
-                      onGetPermisisonName: n,
-                  })
-                : null,
-            (0, i.jsx)(_, {
-                disabledPermissions: s,
-                onGetPermisisonName: n,
-            }),
+            0 !== s.length ? (0, n.jsx)(L, { enabledPermissions: s, onGetPermisisonName: i }) : null,
+            (0, n.jsx)(O, { disabledPermissions: l, onGetPermisisonName: i }),
         ],
     });
 }
-
-function B(t) {
-    let { guild: e, defaultNotificationSettingsMet: n, everyonePermissionsMet: s } = t;
-    l.useEffect(() => {
-        (0, E.sx)({
-            fromStep: y.pj.BASICS,
-            toStep: y.pj.FINISH,
-            guildId: e.id,
-        });
+function _(t) {
+    let { guild: e, defaultNotificationSettingsMet: i, everyonePermissionsMet: l } = t;
+    s.useEffect(() => {
+        (0, C.sx)({ fromStep: I.pj.BASICS, toStep: I.pj.FINISH, guildId: e.id });
     }, [e.id]);
-    let r = l.useMemo(() => {
+    let r = s.useMemo(() => {
         let t = [],
-            n = [];
+            i = [];
         return (
-            y.dR.map((i) => {
-                h.Ib(i, e) ? t.push(i) : n.push(i);
+            I.dR.map((n) => {
+                E.Ib(n, e) ? t.push(n) : i.push(n);
             }),
-            {
-                enabledPermissions: t,
-                disabledPermissions: n,
-            }
+            { enabledPermissions: t, disabledPermissions: i }
         );
     }, [e]);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, i.jsxs)(a.BJc, {
+            (0, n.jsxs)(o.BJc, {
                 gap: 12,
                 children: [
-                    !n &&
-                        (0, i.jsx)(L, {
-                            title: O.intl.string(O.t.uPYswy),
-                            description: O.intl.string(O.t.pf6ptp),
-                        }),
-                    !s &&
-                        (0, i.jsx)(L, {
-                            title: O.intl.format(O.t.IYQeOA, {}),
-                            description: O.intl.string(O.t["+Iyaif"]),
+                    !i && (0, n.jsx)(M, { title: A.intl.string(A.t.uPYswy), description: A.intl.string(A.t.pf6ptp) }),
+                    !l &&
+                        (0, n.jsx)(M, {
+                            title: A.intl.format(A.t.IYQeOA, {}),
+                            description: A.intl.string(A.t["+Iyaif"]),
                         }),
                 ],
             }),
-            !s &&
-                (0, i.jsx)(D, {
-                    permissions: r,
-                }),
+            !l && (0, n.jsx)(T, { permissions: r }),
         ],
     });
 }
-
-function G(t) {
-    let { guild: e, policyAccepted: n, onPolicyAcceptedChange: s } = t;
+function B(t) {
+    let { guild: e, policyAccepted: i, onPolicyAcceptedChange: l } = t;
     return (
-        l.useEffect(() => {
-            (0, E.sx)({
-                fromStep: y.pj.BASICS,
-                toStep: y.pj.RULES,
-                guildId: e.id,
-            });
+        s.useEffect(() => {
+            (0, C.sx)({ fromStep: I.pj.BASICS, toStep: I.pj.RULES, guildId: e.id });
         }, [e.id]),
-        (0, i.jsx)(a.D0$, {
-            label: O.intl.string(O.t["k+b2Cf"]),
-            description: O.intl.format(O.t["BwbW/Q"], {
-                communityGuidelines: b.A.getArticleURL(v.MVz.PUBLIC_GUILD_GUILDLINES),
-                typesOfGuilds: b.A.getArticleURL(v.MVz.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+        (0, n.jsx)(o.D0$, {
+            label: A.intl.string(A.t["k+b2Cf"]),
+            description: A.intl.format(A.t["BwbW/Q"], {
+                communityGuidelines: j.A.getArticleURL(b.MVz.PUBLIC_GUILD_GUILDLINES),
+                typesOfGuilds: j.A.getArticleURL(b.MVz.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
             }),
-            children: (0, i.jsx)(a.Checkbox, {
-                label: O.intl.string(O.t["9AG3wI"]),
-                checked: n,
-                onChange: s,
-            }),
+            children: (0, n.jsx)(o.Checkbox, { label: A.intl.string(A.t["9AG3wI"]), checked: i, onChange: l }),
         })
     );
 }
-
-function R(t) {
-    let {} = t,
-        e = P({}, t);
-    l.useEffect(() => {
-        m.default.track(v.HAw.OPEN_MODAL, {
-            type: y.bK,
-        });
+function G(t) {
+    let { ...e } = t;
+    s.useEffect(() => {
+        h.default.track(b.HAw.OPEN_MODAL, { type: I.bK });
     }, []);
-    let { guild: n } = (0, r.cf)([d.A], () => d.A.getProps()),
-        [o, c] = l.useState("intro"),
-        [g] = l.useState(() => (null == n ? void 0 : n.verificationLevel)),
-        [f] = l.useState(() => (null == n ? void 0 : n.explicitContentFilter)),
-        S = null != g && g > v.PvD.NONE,
-        j = f === v.gh6.ALL_MEMBERS,
-        b = !(S && j),
-        [C, L] = l.useState(y.SP),
-        [T, _] = l.useState(y.SP),
-        [D] = l.useState(() => !y.dR.some((t) => h.Ib(t, n))),
-        [R] = l.useState(() => (null == n ? void 0 : n.defaultMessageNotifications)),
-        Y = R === v.orn.ONLY_MENTIONS,
-        F = !Y || !D,
-        K = (0, r.bG)([x.A], () => (null != n ? x.A.getEveryoneRole(n) : void 0)),
-        [U, k] = l.useState(!1);
-    if (null == n) return null;
-    let H = async () => {
-            if (null == K || !U) return;
-            let t = D ? null : s.TF(K.permissions, y.e$);
-            if (null != t && t !== K.permissions) {
-                let e = N(A({}, K), {
-                    permissions: t,
-                });
-                await (0, p.JY)(n.id, [e], void 0, void 0, void 0, {
-                    throwErr: !0,
-                });
+    let { guild: i } = (0, r.cf)([u.A], () => u.A.getProps()),
+        [a, d] = s.useState("intro"),
+        [x] = s.useState(() => i?.verificationLevel),
+        [g] = s.useState(() => i?.explicitContentFilter),
+        m = null != x && x > b.PvD.NONE,
+        f = g === b.gh6.ALL_MEMBERS,
+        j = !(m && f),
+        [N, M] = s.useState(I.SP),
+        [L, O] = s.useState(I.SP),
+        [T] = s.useState(() => !I.dR.some((t) => E.Ib(t, i))),
+        [G] = s.useState(() => i?.defaultMessageNotifications),
+        R = G === b.orn.ONLY_MENTIONS,
+        Y = !R || !T,
+        D = (0, r.bG)([S.A], () => (null != i ? S.A.getEveryoneRole(i) : void 0)),
+        [F, w] = s.useState(!1);
+    if (null == i) return null;
+    let K = async () => {
+            if (null == D || !F) return;
+            let t = T ? null : l.TF(D.permissions, I.e$);
+            if (null != t && t !== D.permissions) {
+                let e = { ...D, permissions: t };
+                await (0, p.JY)(i.id, [e], void 0, void 0, void 0, { throwErr: !0 });
             }
-            let e = A(
-                {
-                    features: new Set([...n.features, v.GuildFeatures.COMMUNITY]),
-                    rulesChannelId: C,
-                    publicUpdatesChannelId: T,
-                },
-                !S && {
-                    verificationLevel: v.PvD.LOW,
-                },
-                !j && {
-                    explicitContentFilter: v.gh6.ALL_MEMBERS,
-                },
-                !Y && {
-                    defaultMessageNotifications: v.orn.ONLY_MENTIONS,
-                },
-            );
-            u.A.updateGuild(e),
-                await u.A.saveGuild(n.id, e, {
-                    throwErr: !0,
-                });
+            let e = {
+                features: new Set([...i.features, b.GuildFeatures.COMMUNITY]),
+                rulesChannelId: N,
+                publicUpdatesChannelId: L,
+                ...(!m && { verificationLevel: b.PvD.LOW }),
+                ...(!f && { explicitContentFilter: b.gh6.ALL_MEMBERS }),
+                ...(!R && { defaultMessageNotifications: b.orn.ONLY_MENTIONS }),
+            };
+            c.A.updateGuild(e), await c.A.saveGuild(i.id, e, { throwErr: !0 });
         },
-        J = async () => {
-            m.default.track(v.HAw.MODAL_DISMISSED, {
-                type: y.bK,
-            }),
-                await e.onClose();
+        U = async () => {
+            h.default.track(b.HAw.MODAL_DISMISSED, { type: I.bK }), await e.onClose();
         },
-        V = [
+        k = [
             {
-                stepKey: y.pj.INTRO,
+                stepKey: I.pj.INTRO,
                 modalProps: {
-                    title: O.intl.string(O.t.ElKTeb),
-                    subtitle: O.intl.string(O.t["CwC/ll"]),
-                    graphic: {
-                        src: I.A,
-                        type: "image",
-                    },
+                    title: A.intl.string(A.t.ElKTeb),
+                    subtitle: A.intl.string(A.t["CwC/ll"]),
+                    graphic: { src: v.A, type: "image" },
                     gradientColor: "blue",
                 },
-                nextButtonProps: {
-                    text: O.intl.string(O.t.LhlgY9),
-                },
+                nextButtonProps: { text: A.intl.string(A.t.LhlgY9) },
             },
             {
-                stepKey: y.pj.SAFETY_CHECK,
-                modalProps: {
-                    title: O.intl.string(O.t.QrjLYl),
-                    subtitle: O.intl.string(O.t.i1STwu),
-                },
-                body: (0, i.jsx)(M, {
-                    guild: n,
-                    verificationLevelMet: S,
-                    contentFilterMet: j,
-                }),
-                nextButtonProps: {
-                    text: O.intl.string(O.t.JFfins),
-                },
+                stepKey: I.pj.SAFETY_CHECK,
+                modalProps: { title: A.intl.string(A.t.QrjLYl), subtitle: A.intl.string(A.t.i1STwu) },
+                body: (0, n.jsx)(y, { guild: i, verificationLevelMet: m, contentFilterMet: f }),
+                nextButtonProps: { text: A.intl.string(A.t.JFfins) },
             },
             {
-                stepKey: y.pj.BASICS,
-                modalProps: {
-                    title: O.intl.string(O.t.YtXpEh),
-                    subtitle: O.intl.string(O.t["J/fYR8"]),
-                },
-                body: (0, i.jsx)(w, {
-                    guild: n,
-                    rulesChannelId: C,
-                    publicUpdatesChannelId: T,
-                    onRulesChannelChange: L,
-                    onPublicUpdatesChannelChange: _,
+                stepKey: I.pj.BASICS,
+                modalProps: { title: A.intl.string(A.t.YtXpEh), subtitle: A.intl.string(A.t["J/fYR8"]) },
+                body: (0, n.jsx)(P, {
+                    guild: i,
+                    rulesChannelId: N,
+                    publicUpdatesChannelId: L,
+                    onRulesChannelChange: M,
+                    onPublicUpdatesChannelChange: O,
                 }),
             },
             {
-                stepKey: y.pj.FINISH,
-                modalProps: {
-                    title: O.intl.string(O.t.EzGuSr),
-                },
-                body: (0, i.jsx)(B, {
-                    guild: n,
-                    defaultNotificationSettingsMet: Y,
-                    everyonePermissionsMet: D,
-                }),
-                nextButtonProps: {
-                    text: O.intl.string(O.t.JFfins),
-                },
+                stepKey: I.pj.FINISH,
+                modalProps: { title: A.intl.string(A.t.EzGuSr) },
+                body: (0, n.jsx)(_, { guild: i, defaultNotificationSettingsMet: R, everyonePermissionsMet: T }),
+                nextButtonProps: { text: A.intl.string(A.t.JFfins) },
             },
             {
-                stepKey: y.pj.RULES,
-                modalProps: {
-                    title: O.intl.string(O.t["Pj/s/a"]),
-                },
-                nextButtonProps: {
-                    text: O.intl.string(O.t.XGl4ba),
-                },
-                body: (0, i.jsx)(G, {
-                    guild: n,
-                    policyAccepted: U,
-                    onPolicyAcceptedChange: k,
-                }),
-                nextEnabled: U,
+                stepKey: I.pj.RULES,
+                modalProps: { title: A.intl.string(A.t["Pj/s/a"]) },
+                nextButtonProps: { text: A.intl.string(A.t.XGl4ba) },
+                body: (0, n.jsx)(B, { guild: i, policyAccepted: F, onPolicyAcceptedChange: w }),
+                nextEnabled: F,
             },
-        ].filter((t) => (t.stepKey !== y.pj.SAFETY_CHECK || !!b) && (t.stepKey !== y.pj.FINISH || !!F)),
-        z = V.slice(1).map((t) => t.stepKey);
-    return (0, i.jsx)(
-        a.t04,
-        N(A({}, e), {
-            steps: V,
-            numberedSteps: z,
-            currentStepKey: o,
-            onClose: J,
-            onStepChange: (t, e) => {
-                (0, E.sx)({
-                    fromStep: e,
-                    toStep: t,
-                    guildId: n.id,
-                }),
-                    c(t);
-            },
-            onComplete: H,
-        }),
-    );
+        ].filter((t) => (t.stepKey !== I.pj.SAFETY_CHECK || !!j) && (t.stepKey !== I.pj.FINISH || !!Y)),
+        H = k.slice(1).map((t) => t.stepKey);
+    return (0, n.jsx)(o.t04, {
+        ...e,
+        steps: k,
+        numberedSteps: H,
+        currentStepKey: a,
+        onClose: U,
+        onStepChange: (t, e) => {
+            (0, C.sx)({ fromStep: e, toStep: t, guildId: i.id }), d(t);
+        },
+        onComplete: K,
+    });
 }

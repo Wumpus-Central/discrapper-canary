@@ -1,3 +1,4 @@
+"use strict";
 var r =
         Object.assign ||
         function (e) {
@@ -12,13 +13,13 @@ var r =
     s = n(958554),
     o = n(410641),
     l = n(868671),
-    c = n(120685),
-    u = n(543881),
+    u = n(120685),
+    c = n(543881),
     d = n(197557),
-    f = n(505562),
-    p = n(757927);
+    _ = n(505562),
+    f = n(757927);
 n(336258);
-var _ = n(253120),
+var p = n(253120),
     h = n(905386),
     m = n(362001),
     g = function (e, t, n) {
@@ -27,13 +28,11 @@ var _ = n(253120),
                 a = r({}, t);
             for (var s in t) {
                 var l = t[s],
-                    c = l.x,
-                    u = l.y;
-                void 0 !== c && void 0 !== u && ((i[s] = c), (a[s] = u));
+                    u = l.x,
+                    c = l.y;
+                void 0 !== u && void 0 !== c && ((i[s] = u), (a[s] = c));
             }
-            return y([n(e.x, i), n(e.y, a)], {
-                stopTogether: !1,
-            });
+            return I([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
         }
         return null;
     },
@@ -44,7 +43,7 @@ var _ = n(253120),
                     var r = t,
                         i = n;
                     r.stopTracking(),
-                        n.toValue instanceof a ? r.track(new f(r, n.toValue, _, i, e)) : r.animate(new _(i), e);
+                        n.toValue instanceof a ? r.track(new _(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -52,7 +51,7 @@ var _ = n(253120),
             }
         );
     },
-    b = function (e) {
+    A = function (e) {
         var t = 0;
         return {
             start: function (n) {
@@ -63,29 +62,21 @@ var _ = n(253120),
                     }
                     e[t].start(r);
                 };
-                0 === e.length
-                    ? n &&
-                      n({
-                          finished: !0,
-                      })
-                    : e[t].start(r);
+                0 === e.length ? n && n({ finished: !0 }) : e[t].start(r);
             },
             stop: function () {
                 t < e.length && e[t].stop();
             },
         };
     },
-    y = function (e, t) {
+    I = function (e, t) {
         var n = 0,
             r = {},
             i = !(t && !1 === t.stopTogether),
             a = {
                 start: function (t) {
                     if (n === e.length) {
-                        t &&
-                            t({
-                                finished: !0,
-                            });
+                        t && t({ finished: !0 });
                         return;
                     }
                     e.forEach(function (s, o) {
@@ -96,11 +87,7 @@ var _ = n(253120),
                             }
                             !s.finished && i && a.stop();
                         };
-                        s
-                            ? s.start(l)
-                            : l({
-                                  finished: !0,
-                              });
+                        s ? s.start(l) : l({ finished: !0 });
                     });
                 },
                 stop: function () {
@@ -111,21 +98,17 @@ var _ = n(253120),
             };
         return a;
     },
-    O = function (e) {
-        return E(new s(0), {
-            toValue: 0,
-            delay: e,
-            duration: 0,
-        });
+    T = function (e) {
+        return E(new s(0), { toValue: 0, delay: e, duration: 0 });
     },
-    A = function (e, t) {
-        return y(
+    y = function (e, t) {
+        return I(
             t.map(function (t, n) {
-                return b([O(e * n), t]);
+                return A([T(e * n), t]);
             }),
         );
     },
-    v = function (e, t) {
+    S = function (e, t) {
         return function () {
             for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
             var o = function e(t, n, r) {
@@ -173,7 +156,7 @@ e.exports = {
                     var r = t,
                         i = n;
                     r.stopTracking(),
-                        n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                        n.toValue instanceof a ? r.track(new _(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -185,21 +168,21 @@ e.exports = {
         return new l(e, t);
     },
     multiply: function (e, t) {
-        return new c(e, t);
+        return new u(e, t);
     },
     modulo: function (e, t) {
-        return new u(e, t);
+        return new c(e, t);
     },
     template: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: O,
-    sequence: b,
-    parallel: y,
-    stagger: A,
-    event: v,
-    isAnimated: p,
+    delay: T,
+    sequence: A,
+    parallel: I,
+    stagger: y,
+    event: S,
+    isAnimated: f,
     createAnimatedComponent: n(587452),
     inject: {
         ApplyAnimatedValues: n(207147).inject,

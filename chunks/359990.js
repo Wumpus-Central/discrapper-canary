@@ -1,238 +1,171 @@
-n.d(e, {
-    A: () => N,
-    RegisterWebAuthnCredentialModal: () => E,
-}),
-    n(896048),
-    n(492834);
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    c = n(442433),
-    o = n(754333),
-    l = n(915089),
-    u = n(46054),
-    d = n(780964),
-    p = n(179690),
-    b = n(840065),
+n.d(e, { A: () => T, RegisterWebAuthnCredentialModal: () => y });
+var i = n(627968),
+    s = n(64700),
+    a = n(311907),
+    r = n(397927),
+    l = n(442433),
+    c = n(754333),
+    o = n(915089),
+    d = n(46054),
+    u = n(780964),
+    h = n(179690),
+    x = n(840065),
     g = n(464477),
-    f = n(723702),
-    j = n(728458),
-    h = n(837921),
-    O = n(917136),
-    y = n(976910),
-    m = n(293731),
-    x = n(31758),
-    S = n(652215),
-    v = n(985018),
-    C = n(754388);
-
-function w(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                }),
-            )),
-            r.forEach(function (e) {
-                var r;
-                (r = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = r);
-            });
-    }
-    return t;
-}
-
-function P(t, e) {
-    return (
-        (e = null != e ? e : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
-              }),
-        t
-    );
-}
-
-function E(t) {
+    p = n(723702),
+    m = n(728458),
+    C = n(837921),
+    S = n(917136),
+    j = n(976910),
+    f = n(293731),
+    v = n(31758),
+    A = n(652215),
+    N = n(985018),
+    b = n(754388);
+function y(t) {
     let {
             transitionState: e,
-            onClose: s,
-            ticket: c,
-            challenge: o,
+            onClose: a,
+            ticket: l,
+            challenge: c,
             showAccountSettingsButton: g = !1,
-            initialSlide: y = x.C.INIT,
+            initialSlide: j = v.C.INIT,
         } = t,
-        w = (0, l.GV)(),
-        [P, E] = i.useState(v.intl.string(v.t["I/sJtJ"])),
-        [A, N] = i.useState(!1),
-        [T, I] = i.useState(y),
-        [D, _] = i.useState(""),
-        [k, R] = i.useState(null),
-        U = async () => {
+        y = (0, o.GV)(),
+        [E, T] = s.useState(N.intl.string(N.t["I/sJtJ"])),
+        [I, w] = s.useState(!1),
+        [_, O] = s.useState(j),
+        [R, U] = s.useState(""),
+        [k, D] = s.useState(null),
+        K = async () => {
             let t;
-            I(x.C.REGISTER);
+            O(v.C.REGISTER);
             let e =
-                f.isPlatformEmbedded && h.Ay.supportsFeature(S.BYE.WEBAUTHN) ? h.Ay.webAuthnRegister(o) : (0, m.v)(o);
+                p.isPlatformEmbedded && C.Ay.supportsFeature(A.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(c) : (0, f.v)(c);
             try {
                 t = await e;
             } catch (t) {
-                j.A.captureException(t), R(v.intl.string(v.t.xSCvBf)), I(x.C.INIT);
+                m.A.captureException(t), D(N.intl.string(N.t.xSCvBf)), O(v.C.INIT);
                 return;
             }
-            _(t), I(x.C.NAME);
+            U(t), O(v.C.NAME);
         };
-    return (0, r.jsxs)(a.EOs, {
+    return (0, i.jsxs)(r.EOs, {
         transitionState: e,
-        "aria-labelledby": w,
+        "aria-labelledby": y,
         parentComponent: "UserSettingsWebAuthn",
         children: [
-            (0, r.jsxs)(a.rQ0, {
-                className: C.wx,
+            (0, i.jsxs)(r.rQ0, {
+                className: b.wx,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)(a.Heading, {
-                        id: w,
+                    (0, i.jsxs)(r.Heading, {
+                        id: y,
                         variant: "heading-lg/semibold",
                         children: [
-                            T === x.C.INIT && v.intl.string(v.t.vrOCCk),
-                            T === x.C.REGISTER && v.intl.string(v.t.wePEBF),
-                            T === x.C.NAME && v.intl.string(v.t["cY/IOu"]),
-                            T === x.C.SUCCESS && u.A.parse(v.intl.string(v.t.FXC7ZC)),
+                            _ === v.C.INIT && N.intl.string(N.t.vrOCCk),
+                            _ === v.C.REGISTER && N.intl.string(N.t.wePEBF),
+                            _ === v.C.NAME && N.intl.string(N.t["cY/IOu"]),
+                            _ === v.C.SUCCESS && d.A.parse(N.intl.string(N.t.FXC7ZC)),
                         ],
                     }),
-                    (0, r.jsx)(a.s_y, {
-                        onClick: s,
-                        className: C.iT,
-                    }),
+                    (0, i.jsx)(r.s_y, { onClick: a, className: b.iT }),
                 ],
             }),
-            (0, r.jsxs)(a.tN_, {
-                activeSlide: T,
+            (0, i.jsxs)(r.tN_, {
+                activeSlide: _,
                 width: 440,
                 children: [
-                    (0, r.jsxs)(a.q7S, {
-                        id: x.C.INIT,
+                    (0, i.jsxs)(r.q7S, {
+                        id: v.C.INIT,
                         children: [
-                            (0, r.jsxs)(a.$mQ, {
-                                className: C.Qs,
+                            (0, i.jsxs)(r.$mQ, {
+                                className: b.Qs,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: C.Kk,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: n(142668),
-                                        }),
+                                    (0, i.jsx)("div", {
+                                        className: b.Kk,
+                                        children: (0, i.jsx)("img", { alt: "", src: n(142668) }),
                                     }),
-                                    (0, r.jsx)("div", {
+                                    (0, i.jsx)("div", {
                                         children:
                                             null != k &&
-                                            (0, r.jsx)(a.Text, {
+                                            (0, i.jsx)(r.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-feedback-critical",
                                                 children: k,
                                             }),
                                     }),
-                                    (0, r.jsx)("div", {
-                                        children: (0, r.jsx)(a.Text, {
+                                    (0, i.jsx)("div", {
+                                        children: (0, i.jsx)(r.Text, {
                                             variant: "text-md/normal",
-                                            children: v.intl.string(v.t.Lh5vTW),
+                                            children: N.intl.string(N.t.Lh5vTW),
                                         }),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(a.jlY, {
-                                children: (0, r.jsx)(a.Button, {
+                            (0, i.jsx)(r.jlY, {
+                                children: (0, i.jsx)(r.Button, {
                                     variant: "primary",
-                                    text: v.intl.string(v.t.oibaQa),
-                                    onClick: U,
+                                    text: N.intl.string(N.t.oibaQa),
+                                    onClick: K,
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(a.q7S, {
-                        id: x.C.REGISTER,
+                    (0, i.jsxs)(r.q7S, {
+                        id: v.C.REGISTER,
                         children: [
-                            (0, r.jsxs)(a.$mQ, {
-                                className: C.Qs,
+                            (0, i.jsxs)(r.$mQ, {
+                                className: b.Qs,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: C.Kk,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: n(142668),
-                                        }),
+                                    (0, i.jsx)("div", {
+                                        className: b.Kk,
+                                        children: (0, i.jsx)("img", { alt: "", src: n(142668) }),
                                     }),
-                                    (0, r.jsx)("div", {
-                                        children: (0, r.jsx)(a.Text, {
+                                    (0, i.jsx)("div", {
+                                        children: (0, i.jsx)(r.Text, {
                                             variant: "text-md/normal",
-                                            children: v.intl.string(v.t.aVMiX3),
+                                            children: N.intl.string(N.t.aVMiX3),
                                         }),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(a.jlY, {
-                                children: (0, r.jsx)(a.Button, {
-                                    variant: "primary",
-                                    text: "",
-                                    loading: !0,
-                                }),
+                            (0, i.jsx)(r.jlY, {
+                                children: (0, i.jsx)(r.Button, { variant: "primary", text: "", loading: !0 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(a.q7S, {
-                        id: x.C.NAME,
-                        children: (0, r.jsxs)("form", {
+                    (0, i.jsx)(r.q7S, {
+                        id: v.C.NAME,
+                        children: (0, i.jsxs)("form", {
                             onSubmit: (t) => {
                                 t.preventDefault(),
-                                    O.AF(P, c, D)
+                                    S.AF(E, l, R)
                                         .then(async () => {
-                                            g ? I(x.C.SUCCESS) : (await (0, p.sy)(!1), s());
+                                            g ? O(v.C.SUCCESS) : (await (0, h.sy)(!1), a());
                                         })
                                         .catch(() => {
-                                            R(v.intl.string(v.t.fEptJP)), I(x.C.INIT);
+                                            D(N.intl.string(N.t.fEptJP)), O(v.C.INIT);
                                         });
                             },
                             children: [
-                                (0, r.jsxs)(a.$mQ, {
-                                    className: C.Qs,
+                                (0, i.jsxs)(r.$mQ, {
+                                    className: b.Qs,
                                     children: [
-                                        (0, r.jsx)("div", {
-                                            className: C.Kk,
-                                            children: (0, r.jsx)("img", {
-                                                alt: "",
-                                                src: n(179644),
-                                            }),
+                                        (0, i.jsx)("div", {
+                                            className: b.Kk,
+                                            children: (0, i.jsx)("img", { alt: "", src: n(179644) }),
                                         }),
-                                        (0, r.jsxs)(a.BJc, {
+                                        (0, i.jsxs)(r.BJc, {
                                             gap: 8,
                                             children: [
-                                                (0, r.jsx)(a.Text, {
+                                                (0, i.jsx)(r.Text, {
                                                     variant: "text-md/normal",
-                                                    children: v.intl.string(v.t["Jzd+z/"]),
+                                                    children: N.intl.string(N.t["Jzd+z/"]),
                                                 }),
-                                                (0, r.jsx)(a.ksK, {
-                                                    value: P,
+                                                (0, i.jsx)(r.ksK, {
+                                                    value: E,
                                                     onChange: (t) => {
-                                                        E(t), N(0 === t.length);
+                                                        T(t), w(0 === t.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1,
@@ -241,22 +174,22 @@ function E(t) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(a.jlY, {
-                                    className: C.qr,
-                                    children: (0, r.jsxs)(a.ButtonGroup, {
+                                (0, i.jsx)(r.jlY, {
+                                    className: b.qr,
+                                    children: (0, i.jsxs)(r.ButtonGroup, {
                                         direction: "horizontal-reverse",
                                         children: [
-                                            (0, r.jsx)(a.Button, {
+                                            (0, i.jsx)(r.Button, {
                                                 variant: "primary",
-                                                text: v.intl.string(v.t["5dyZ1S"]),
+                                                text: N.intl.string(N.t["5dyZ1S"]),
                                                 type: "submit",
-                                                disabled: A,
+                                                disabled: I,
                                             }),
-                                            (0, r.jsx)(a.Button, {
+                                            (0, i.jsx)(r.Button, {
                                                 variant: "secondary",
-                                                text: v.intl.string(v.t["13/7kX"]),
+                                                text: N.intl.string(N.t["13/7kX"]),
                                                 onClick: () => {
-                                                    I(x.C.INIT);
+                                                    O(v.C.INIT);
                                                 },
                                             }),
                                         ],
@@ -265,46 +198,43 @@ function E(t) {
                             ],
                         }),
                     }),
-                    (0, r.jsxs)(a.q7S, {
-                        id: x.C.SUCCESS,
+                    (0, i.jsxs)(r.q7S, {
+                        id: v.C.SUCCESS,
                         children: [
-                            (0, r.jsxs)(a.$mQ, {
-                                className: C.Qs,
+                            (0, i.jsxs)(r.$mQ, {
+                                className: b.Qs,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: C.Kk,
-                                        children: (0, r.jsx)("img", {
-                                            alt: "",
-                                            src: n(179644),
-                                        }),
+                                    (0, i.jsx)("div", {
+                                        className: b.Kk,
+                                        children: (0, i.jsx)("img", { alt: "", src: n(179644) }),
                                     }),
-                                    (0, r.jsx)("div", {
-                                        children: (0, r.jsx)(a.Text, {
+                                    (0, i.jsx)("div", {
+                                        children: (0, i.jsx)(r.Text, {
                                             variant: "text-md/normal",
-                                            children: v.intl.string(v.t.e1qv6i),
+                                            children: N.intl.string(N.t.e1qv6i),
                                         }),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(a.jlY, {
-                                className: C.qr,
-                                children: (0, r.jsxs)(a.ButtonGroup, {
+                            (0, i.jsx)(r.jlY, {
+                                className: b.qr,
+                                children: (0, i.jsxs)(r.ButtonGroup, {
                                     direction: "horizontal-reverse",
                                     children: [
-                                        (0, r.jsx)(a.Button, {
+                                        (0, i.jsx)(r.Button, {
                                             variant: "primary",
-                                            text: v.intl.string(v.t.MubYG8),
+                                            text: N.intl.string(N.t.MubYG8),
                                             onClick: () => {
-                                                s(),
-                                                    (0, b.openUserSettings)(d.X.ACCOUNT_PANEL, {
-                                                        section: S.nc_.ACCOUNT,
+                                                a(),
+                                                    (0, x.openUserSettings)(u.X.ACCOUNT_PANEL, {
+                                                        section: A.nc_.ACCOUNT,
                                                     });
                                             },
                                         }),
-                                        (0, r.jsx)(a.Button, {
+                                        (0, i.jsx)(r.Button, {
                                             variant: "secondary",
-                                            text: v.intl.string(v.t.i4jeWR),
-                                            onClick: s,
+                                            text: N.intl.string(N.t.i4jeWR),
+                                            onClick: a,
                                         }),
                                     ],
                                 }),
@@ -316,109 +246,86 @@ function E(t) {
         ],
     });
 }
-
-function A(t) {
-    let { onSelect: e, credential: i } = t;
-    return (0, r.jsxs)(a.W1t, {
+function E(t) {
+    let { onSelect: e, credential: s } = t;
+    return (0, i.jsxs)(r.W1t, {
         "data-menu-migrated": !0,
         navId: "webauthn-credential-actions",
-        onClose: c.Z_,
-        "aria-label": v.intl.string(v.t["+nrTbK"]),
+        onClose: l.Z_,
+        "aria-label": N.intl.string(N.t["+nrTbK"]),
         onSelect: e,
         children: [
-            (0, r.jsx)(a.Drp, {
-                id: "webauthn-edit-credential-".concat(i.id),
-                label: v.intl.string(v.t.bt75uw),
+            (0, i.jsx)(r.Drp, {
+                id: `webauthn-edit-credential-${s.id}`,
+                label: N.intl.string(N.t.bt75uw),
                 action: () => {
-                    (0, a.mMO)(async () => {
+                    (0, r.mMO)(async () => {
                         let { default: t } = await n.e("50267").then(n.bind(n, 428726));
-                        return (e) =>
-                            (0, r.jsx)(
-                                t,
-                                w(
-                                    {
-                                        credential: i,
-                                    },
-                                    e,
-                                ),
-                            );
+                        return (e) => (0, i.jsx)(t, { credential: s, ...e });
                     });
                 },
             }),
-            (0, r.jsx)(a.Drp, {
-                id: "webauthn-delete-credential-".concat(i.id),
-                label: v.intl.string(v.t["+xgS+L"]),
+            (0, i.jsx)(r.Drp, {
+                id: `webauthn-delete-credential-${s.id}`,
+                label: N.intl.string(N.t["+xgS+L"]),
                 color: "danger",
                 action: () => {
-                    O.fR(i);
+                    S.fR(s);
                 },
             }),
         ],
     });
 }
-
-function N() {
+function T() {
     let {
         credentials: t,
         hasFetchedCredentials: e,
         hasPendingRegisterTrigger: n,
-    } = (0, s.cf)([y.A], () => ({
-        hasFetchedCredentials: y.A.hasFetchedCredentials(),
-        credentials: y.A.getCredentials(),
-        hasPendingRegisterTrigger: y.A.hasPendingRegisterTrigger(),
+    } = (0, a.cf)([j.A], () => ({
+        hasFetchedCredentials: j.A.hasFetchedCredentials(),
+        credentials: j.A.getCredentials(),
+        hasPendingRegisterTrigger: j.A.hasPendingRegisterTrigger(),
     }));
-    i.useEffect(() => {
-        e || O.JQ();
+    s.useEffect(() => {
+        e || S.JQ();
     }, [e]),
-        i.useEffect(
+        s.useEffect(
             () => () => {
-                y.A.hasPendingRegisterTrigger() && O.XW();
+                j.A.hasPendingRegisterTrigger() && S.XW();
             },
             [],
         );
-    let [c, o] = i.useState(!1),
-        l = i.useCallback(() => {
-            o(!0),
-                O.startRegisterWebAuthnCredential()
+    let [l, c] = s.useState(!1),
+        o = s.useCallback(() => {
+            c(!0),
+                S.startRegisterWebAuthnCredential()
                     .then((t) => {
                         let { ticket: e, challenge: n } = t;
-                        (0, a.qfG)((t) =>
-                            (0, r.jsx)(
-                                E,
-                                P(w({}, t), {
-                                    ticket: e,
-                                    challenge: n,
-                                }),
-                            ),
-                        );
+                        (0, r.qfG)((t) => (0, i.jsx)(y, { ...t, ticket: e, challenge: n }));
                     })
                     .catch((t) => {
-                        t.message !== v.intl.string(v.t.N2yb9a) && j.A.captureException(t);
+                        t.message !== N.intl.string(N.t.N2yb9a) && m.A.captureException(t);
                     })
                     .finally(() => {
-                        o(!1);
+                        c(!1);
                     });
         }, []);
     return (
-        i.useEffect(() => {
-            n && !c && (O.XW(), l());
-        }, [n, c, l]),
-        (0, r.jsxs)(a.D0$, {
-            label: v.intl.string(v.t.y7SXYX),
-            description: v.intl.string(v.t.TMukAN),
+        s.useEffect(() => {
+            n && !l && (S.XW(), o());
+        }, [n, l, o]),
+        (0, i.jsxs)(r.D0$, {
+            label: N.intl.string(N.t.y7SXYX),
+            description: N.intl.string(N.t.TMukAN),
             children: [
-                t.length > 0 &&
-                    (0, r.jsx)("div", {
-                        className: C.KY,
-                        children: t.map(T),
-                    }),
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(a.Button, {
+                t.length > 0 && (0, i.jsx)("div", { className: b.KY, children: t.map(I) }),
+                (0, i.jsx)("div", {
+                    children: (0, i.jsx)(r.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: v.intl.string(v.t.vrOCCk),
-                        onClick: l,
-                        loading: c,
+                        text: N.intl.string(N.t.vrOCCk),
+                        onClick: o,
+                        loading: l,
                         disabled: !g.d4,
                     }),
                 }),
@@ -426,42 +333,26 @@ function N() {
         })
     );
 }
-
-function T(t) {
-    return (0, r.jsxs)(
+function I(t) {
+    return (0, i.jsxs)(
         "div",
         {
-            className: C.De,
+            className: b.De,
             children: [
-                (0, r.jsx)(a.Text, {
-                    variant: "text-md/semibold",
-                    children: t.name,
-                }),
+                (0, i.jsx)(r.Text, { variant: "text-md/semibold", children: t.name }),
                 (function (t) {
                     if (null !== t.last_used)
-                        return (0, r.jsx)(a.Text, {
+                        return (0, i.jsx)(r.Text, {
                             variant: "text-sm/normal",
-                            children: v.intl.format(v.t["7JgxF5"], {
-                                lastUsed: (0, o.Y)(t.last_used),
-                            }),
+                            children: N.intl.format(N.t["7JgxF5"], { lastUsed: (0, c.Y)(t.last_used) }),
                         });
                 })(t),
-                (0, r.jsx)(a.K0, {
-                    icon: {
-                        type: "icon",
-                        asset: a.FHP,
-                    },
+                (0, i.jsx)(r.K0, {
+                    icon: { type: "icon", asset: r.FHP },
                     onClick: (e) => {
-                        (0, c.jA)(e, (e) =>
-                            (0, r.jsx)(
-                                A,
-                                P(w({}, e), {
-                                    credential: t,
-                                }),
-                            ),
-                        );
+                        (0, l.jA)(e, (e) => (0, i.jsx)(E, { ...e, credential: t }));
                     },
-                    "aria-label": v.intl.string(v.t["+nrTbK"]),
+                    "aria-label": N.intl.string(N.t["+nrTbK"]),
                     size: "sm",
                     variant: "icon-only",
                 }),

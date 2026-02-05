@@ -1,69 +1,46 @@
-n.d(t, {
-    A: () => y,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    o = n(735438),
-    a = n(311907),
-    c = n(888288),
-    d = n(256415),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(735438),
+    o = n(311907),
+    d = n(888288),
+    c = n(256415),
     u = n(941023),
     h = n(714983),
     p = n(592598),
-    f = n(672396),
-    b = n(652215),
+    A = n(672396),
+    f = n(652215),
     g = n(283446);
-
-function y(e) {
+function _(e) {
     let { locked: t, keybind: n } = e,
-        s = r.useRef(null),
-        h = (0, a.yK)([c.A], () => c.A.getNotifications()),
-        y = (0, a.bG)([d.default], () => d.default.getNotificationPositionMode());
-    if ((0, a.bG)([p.A], () => p.A.isNotificationDisabled(f.KS.TextChat)) || y === b.G6Q.DISABLED) return null;
-    let m = h.filter((e) => !t || e.status !== b.yFH.TIMED_OUT),
-        O = (0, o.groupBy)(m, (e) => e.type);
+        l = s.useRef(null),
+        h = (0, o.yK)([d.A], () => d.A.getNotifications()),
+        _ = (0, o.bG)([c.default], () => c.default.getNotificationPositionMode());
+    if ((0, o.bG)([p.A], () => p.A.isNotificationDisabled(A.KS.TextChat)) || _ === f.G6Q.DISABLED) return null;
+    let E = h.filter((e) => !t || e.status !== f.yFH.TIMED_OUT),
+        x = (0, r.groupBy)(E, (e) => e.type);
     return (0, i.jsx)(u.A, {
-        contentDomRef: s,
+        contentDomRef: l,
         observeInterval: 200,
         children: (0, i.jsx)("div", {
-            ref: s,
-            className: l()(g.container, g[y]),
-            children: Object.entries(O).map((e) => {
-                let [r, s] = e;
-                return 0 === s.length
+            ref: l,
+            className: a()(g.container, g[_]),
+            children: Object.entries(x).map((e) => {
+                let [s, l] = e;
+                return 0 === l.length
                     ? null
-                    : (0, i.jsx)(
-                          A,
-                          {
-                              locked: t,
-                              keybind: n,
-                              position: y,
-                              notification: s[0],
-                          },
-                          r,
-                      );
+                    : (0, i.jsx)(m, { locked: t, keybind: n, position: _, notification: l[0] }, s);
             }),
         }),
     });
 }
-
-function A(e) {
-    let { notification: t, position: n, keybind: r, locked: s } = e;
+function m(e) {
+    let { notification: t, position: n, keybind: s, locked: l } = e;
     return (0, i.jsx)("div", {
         className: g.notificationGroup,
-        children: (0, i.jsx)(
-            h.A,
-            {
-                zIndex: 100,
-                position: n,
-                notification: t,
-                keybind: r,
-                locked: s,
-            },
-            t.id,
-        ),
+        children: (0, i.jsx)(h.A, { zIndex: 100, position: n, notification: t, keybind: s, locked: l }, t.id),
     });
 }

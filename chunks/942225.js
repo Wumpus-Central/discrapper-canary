@@ -1,80 +1,55 @@
-r.d(t, {
-    A: () => O,
-});
+r.d(t, { A: () => f });
 var n = r(627968),
-    l = r(64700),
+    s = r(64700),
     i = r(503698),
     a = r.n(i),
-    s = r(735438),
-    c = r(311907),
-    o = r(397927),
-    u = r(993408),
-    d = r(821701),
-    m = r(764999),
-    p = r(702211),
-    x = r(773669),
-    g = r(290863),
-    b = r(405269),
-    A = r(927578),
-    h = r(291661),
-    f = r(985018),
-    v = r(455509);
+    l = r(735438),
+    o = r(311907),
+    c = r(397927),
+    d = r(993408),
+    u = r(821701),
+    m = r(645178),
+    x = r(702211),
+    A = r(773669),
+    h = r(290863),
+    g = r(405269),
+    p = r(927578),
+    _ = r(291661),
+    v = r(985018),
+    j = r(455509);
 let y = [
-        {
-            avatarSize: o._3J.SIZE_40,
-            showStatus: !1,
-        },
-        {
-            avatarSize: o._3J.SIZE_32,
-            showStatus: !1,
-        },
-        {
-            avatarSize: o._3J.SIZE_40,
-            showStatus: !0,
-        },
-        {
-            avatarSize: o._3J.SIZE_32,
-            showStatus: !0,
-        },
+        { avatarSize: c._3J.SIZE_40, showStatus: !1 },
+        { avatarSize: c._3J.SIZE_32, showStatus: !1 },
+        { avatarSize: c._3J.SIZE_40, showStatus: !0 },
+        { avatarSize: c._3J.SIZE_32, showStatus: !0 },
     ],
-    j = (e) => {
+    I = (e) => {
         let { purchase: t } = e,
-            r = (0, c.bG)([x.default], () => x.default.locale),
-            l = (0, u.gA)(t),
-            i = null != t.expiresAt ? (0, b.Tf)(Date.now(), t.expiresAt) : null,
+            r = (0, o.bG)([A.default], () => A.default.locale),
+            s = (0, d.gA)(t),
+            i = null != t.expiresAt ? (0, g.Tf)(Date.now(), t.expiresAt) : null,
             a = (0, m.Tk)(t),
-            s = t.purchasedAt.toLocaleDateString(r, {
-                month: "long",
-                year: "numeric",
-            });
+            l = t.purchasedAt.toLocaleDateString(r, { month: "long", year: "numeric" });
         return (0, n.jsxs)("div", {
-            className: v.c6,
+            className: j.c6,
             children: [
-                (0, n.jsx)(o.Text, {
-                    variant: "text-sm/semibold",
-                    color: "text-strong",
-                    children: a,
-                }),
+                (0, n.jsx)(c.Text, { variant: "text-sm/semibold", color: "text-strong", children: a }),
                 null != i &&
-                    (0, n.jsx)(o.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: f.intl.format(f.t.Io7ozn, {
-                            days: i.days.toString(),
-                        }),
+                        children: v.intl.format(v.t.Io7ozn, { days: i.days.toString() }),
                     }),
-                (0, n.jsxs)(o.Text, {
+                (0, n.jsxs)(c.Text, {
                     variant: "text-xxs/normal",
                     color: "text-muted",
                     children: [
-                        f.intl.format(f.t.gW9R4B, {
-                            date: s,
-                        }),
+                        v.intl.format(v.t.gW9R4B, { date: l }),
                         null != t.expiresAt &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)("br", {}),
-                                    f.intl.format(f.t.eZSTa5, {
+                                    v.intl.format(v.t.eZSTa5, {
                                         date: t.expiresAt.toLocaleDateString(r, {
                                             minute: "numeric",
                                             hour: "numeric",
@@ -87,106 +62,89 @@ let y = [
                             }),
                     ],
                 }),
-                l &&
-                    (0, n.jsx)(o.Text, {
+                s &&
+                    (0, n.jsx)(c.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: f.intl.string(f.t.nKdAlO),
+                        children: v.intl.string(v.t.nKdAlO),
                     }),
             ],
         });
     },
-    O = (e) => {
-        let { user: t, guildId: r, avatarDecoration: i, className: x } = e,
-            b = (0, c.bG)([g.A], () => g.A.getStatus(t.id)),
-            { product: O, purchase: _ } = (0, d.A)(null == i ? void 0 : i.skuId),
-            S = A.Ay.canUseCollectibles(t),
-            E = null != _ ? (0, u.gA)(_) : (0, u.G0)(O),
-            I = !S && (0, u.gA)(_),
-            k = (0, p.b)(!E || S),
-            T = (0, m.Tk)(_),
-            P = (0, m.o7)(O),
-            C = l.useMemo(
+    f = (e) => {
+        let { user: t, guildId: r, avatarDecoration: i, className: A } = e,
+            g = (0, o.bG)([h.A], () => h.A.getStatus(t.id)),
+            { product: f, purchase: C } = (0, u.A)(i?.skuId),
+            T = p.Ay.canUseCollectibles(t),
+            E = null != C ? (0, d.gA)(C) : (0, d.G0)(f),
+            S = !T && (0, d.gA)(C),
+            k = (0, x.b)(!E || T),
+            N = (0, m.Tk)(C),
+            O = (0, m.o7)(f),
+            P = s.useMemo(
                 () =>
-                    I
-                        ? f.intl.string(f.t["7vkeu5"])
-                        : E && S && !k
-                          ? f.intl.string(f.t.hmyYK8)
-                          : E && !S && k
-                            ? f.intl.string(f.t.q0PlFn)
-                            : !E || S || k
-                              ? f.intl.string(f.t.fEGjVQ)
-                              : f.intl.string(f.t["0xs2sA"]),
-                [I, E, S, k],
+                    S
+                        ? v.intl.string(v.t["7vkeu5"])
+                        : E && T && !k
+                          ? v.intl.string(v.t.hmyYK8)
+                          : E && !T && k
+                            ? v.intl.string(v.t.q0PlFn)
+                            : !E || T || k
+                              ? v.intl.string(v.t.fEGjVQ)
+                              : v.intl.string(v.t["0xs2sA"]),
+                [S, E, T, k],
             );
-        return null != i && (null == _ || I)
+        return null != i && (null == C || S)
             ? (0, n.jsxs)("div", {
-                  className: a()(v.kk, v.O7, x),
+                  className: a()(j.kk, j.O7, A),
                   children: [
                       (0, n.jsx)("div", {
-                          className: v.Bo,
-                          children: (0, n.jsx)(h.A, {
-                              user: t,
-                              guildId: r,
-                              avatarDecorationOverride: i,
-                          }),
+                          className: j.Bo,
+                          children: (0, n.jsx)(_.A, { user: t, guildId: r, avatarDecorationOverride: i }),
                       }),
                       (0, n.jsxs)("div", {
-                          className: v.hx,
+                          className: j.hx,
                           children: [
-                              (0, n.jsx)(o.Text, {
-                                  variant: "text-sm/semibold",
-                                  children: (0, s.isEmpty)(T) ? P : T,
-                              }),
-                              (0, n.jsx)(o.Text, {
-                                  variant: "text-sm/normal",
-                                  children: C,
-                              }),
+                              (0, n.jsx)(c.Text, { variant: "text-sm/semibold", children: (0, l.isEmpty)(N) ? O : N }),
+                              (0, n.jsx)(c.Text, { variant: "text-sm/normal", children: P }),
                           ],
                       }),
                   ],
               })
             : (0, n.jsxs)("div", {
-                  className: a()(v.kk, x),
+                  className: a()(j.kk, A),
                   children: [
                       (0, n.jsxs)("div", {
-                          className: v.$M,
+                          className: j.$M,
                           children: [
                               (0, n.jsx)("div", {
-                                  className: v.TB,
-                                  children: (0, n.jsx)(h.A, {
-                                      user: t,
-                                      guildId: r,
-                                      avatarDecorationOverride: i,
-                                  }),
+                                  className: j.TB,
+                                  children: (0, n.jsx)(_.A, { user: t, guildId: r, avatarDecorationOverride: i }),
                               }),
                               (0, n.jsx)("div", {
-                                  className: v.Kh,
+                                  className: j.Kh,
                                   children: y.map((e) => {
-                                      let { avatarSize: l, showStatus: a } = e;
+                                      let { avatarSize: s, showStatus: a } = e;
                                       return (0, n.jsx)(
                                           "div",
                                           {
-                                              className: v.CX,
-                                              children: (0, n.jsx)(h.A, {
+                                              className: j.CX,
+                                              children: (0, n.jsx)(_.A, {
                                                   user: t,
                                                   guildId: r,
-                                                  avatarSize: l,
+                                                  avatarSize: s,
                                                   avatarDecorationOverride: i,
-                                                  status: a ? b : void 0,
+                                                  status: a ? g : void 0,
                                                   "aria-hidden": !0,
                                               }),
                                           },
-                                          "".concat(l).concat(a),
+                                          `${s}${a}`,
                                       );
                                   }),
                               }),
                           ],
                       }),
-                      null != _ &&
-                          (0, n.jsx)(j, {
-                              purchase: _,
-                          }),
+                      null != C && (0, n.jsx)(I, { purchase: C }),
                   ],
               });
     };

@@ -1,92 +1,87 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(264879);
+n.d(t, { A: () => p });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(311907),
-    r = n(554146),
-    s = n(397927),
+    l = n(554146),
+    r = n(397927),
     o = n(541689),
-    c = n(199773),
-    d = n(963763),
+    d = n(199773),
+    c = n(963763),
     u = n(64343),
     m = n(821052),
-    p = n(594061),
-    h = n(304932);
-
-function f() {
+    h = n(594061),
+    x = n(304932);
+function p() {
     let {
             dailyCapReached: e,
             dailyCapOverridden: t,
             newUserMinAgeRequiredOverridden: n,
-        } = (0, i.cf)([c.A], () => ({
-            dailyCapReached: c.A.hasUserHitDCCap(),
-            dailyCapOverridden: c.A.dailyCapOverridden,
-            newUserMinAgeRequiredOverridden: c.A.newUserMinAgeRequiredOverridden,
+        } = (0, i.cf)([d.A], () => ({
+            dailyCapReached: d.A.hasUserHitDCCap(),
+            dailyCapOverridden: d.A.dailyCapOverridden,
+            newUserMinAgeRequiredOverridden: d.A.newUserMinAgeRequiredOverridden,
         })),
-        [f, x] = l.useState(""),
-        [b, g] = l.useState(20),
-        v = l.useMemo(
+        [p, g] = s.useState(""),
+        [_, f] = s.useState(20),
+        v = s.useMemo(
             () =>
-                Object.keys(r.M)
-                    .filter((e) => e.toLowerCase().includes(f.toLowerCase()))
+                Object.keys(l.M)
+                    .filter((e) => e.toLowerCase().includes(p.toLowerCase()))
                     .reverse(),
-            [f],
+            [p],
         ),
-        j = l.useCallback(
+        b = s.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && b < v.length && g((e) => e + 100);
+                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && _ < v.length && f((e) => e + 100);
             },
-            [b, v.length],
+            [_, v.length],
         );
-    return (0, a.jsx)(s.ChK, {
-        onScroll: j,
+    return (0, a.jsx)(r.ChK, {
+        onScroll: b,
         children: (0, a.jsxs)("div", {
-            className: h.KE,
+            className: x.KE,
             children: [
-                (0, a.jsxs)(s.nVY, {
+                (0, a.jsxs)(r.nVY, {
                     label: "Dismissible Content Overrides",
                     children: [
-                        (0, a.jsxs)(s.BJc, {
+                        (0, a.jsxs)(r.BJc, {
                             gap: 4,
                             children: [
-                                (0, a.jsxs)(s.BJc, {
+                                (0, a.jsxs)(r.BJc, {
                                     gap: 4,
                                     direction: "horizontal",
                                     children: [
-                                        (0, a.jsx)(s.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             variant: "primary",
                                             text: "Reset Daily Cap",
                                             onClick: () => (0, o.Ab)(),
                                         }),
-                                        (0, a.jsx)(s.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             variant: "primary",
                                             text: "Clear All",
-                                            onClick: () => (0, p.nT)(),
+                                            onClick: () => (0, h.nT)(),
                                         }),
-                                        (0, a.jsx)(s.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             variant: "primary",
                                             text: "Check All",
-                                            onClick: () => (0, p.D1)(),
+                                            onClick: () => (0, h.D1)(),
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)(s.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
-                                    children: "Daily Cap Reached: ".concat(e ? "Yes" : "No"),
+                                    children: `Daily Cap Reached: ${e ? "Yes" : "No"}`,
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(s.dOG, {
+                        (0, a.jsx)(r.dOG, {
                             label: "Override Dismissible Content Daily Cap",
                             checked: t,
                             onChange: o.SE,
                         }),
-                        (0, a.jsx)(s.dOG, {
+                        (0, a.jsx)(r.dOG, {
                             label: "Override Minimum User Account Age Requirement",
                             checked: n,
                             onChange: o.U$,
@@ -95,17 +90,11 @@ function f() {
                 }),
                 (0, a.jsx)(m.A, {}),
                 (0, a.jsx)(u.A, {}),
-                (0, a.jsxs)(s.nVY, {
+                (0, a.jsxs)(r.nVY, {
                     label: "All Dismissible Contents",
                     children: [
-                        (0, a.jsx)(s.IWV, {
-                            query: f,
-                            onChange: x,
-                            onClear: () => x(""),
-                        }),
-                        (0, a.jsx)(d.A, {
-                            items: v.slice(0, b),
-                        }),
+                        (0, a.jsx)(r.IWV, { query: p, onChange: g, onClear: () => g("") }),
+                        (0, a.jsx)(c.A, { items: v.slice(0, _) }),
                     ],
                 }),
             ],

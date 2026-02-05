@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(501459),
     i = n(1673);
 let a = RegExp("(?:\\(|\\（)(?<weekday>" + Object.keys(r.tS).join("|") + ")(?:\\)|\\）)", "i");

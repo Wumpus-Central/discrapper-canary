@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     uE: "tierCards_be48d0",
     $Y: "tierCard_be48d0",

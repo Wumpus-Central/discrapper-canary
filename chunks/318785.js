@@ -1,20 +1,12 @@
-n.d(t, {
-    b: () => o,
-});
-var r = n(311907),
-    i = n(696451),
-    a = n(71393),
-    s = n(685073);
-
-function o() {
-    return (0, r.yK)([a.A, i.Ay], () =>
-        a.A.getGuildsArray().filter((e) => {
-            var t, n;
-            return (
-                (0, s.Rg)(e) &&
-                (null == (t = i.Ay.getSelfMember(e.id)) ? void 0 : t.joinedAt) != null &&
-                (null == (n = e.profile) ? void 0 : n.tag) != null
-            );
-        }),
+n.d(t, { b: () => l });
+var i = n(311907),
+    s = n(696451),
+    r = n(71393),
+    a = n(685073);
+function l() {
+    return (0, i.yK)([r.A, s.Ay], () =>
+        r.A.getGuildsArray().filter(
+            (e) => (0, a.Rg)(e) && s.Ay.getSelfMember(e.id)?.joinedAt != null && e.profile?.tag != null,
+        ),
     );
 }

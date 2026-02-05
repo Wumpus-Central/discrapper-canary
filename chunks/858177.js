@@ -1,36 +1,22 @@
-n.d(t, {
-    O: () => m,
-}),
-    n(321073),
-    n(896048);
+"use strict";
+n.d(t, { O: () => h }), n(321073);
 var r = n(64700),
     i = n(735438),
     a = n.n(i),
     s = n(311907),
     o = n(451988),
     l = n(627363),
-    c = n(587895);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = 20,
-    f = 6e4;
-class p {
+    u = n(587895);
+let c = 20,
+    d = 6e4;
+class _ {
+    _lastFetchedAttempted = new Map();
+    _pending = new Set();
+    _flushHandler = new o.J_(32, () => this._flush());
     request(e) {
         if (this._pending.has(e)) return;
         let t = this._lastFetchedAttempted.get(e);
-        (null != t && Date.now() - t < f) || (this._pending.add(e), this._flushHandler.delay(!1));
+        (null != t && Date.now() - t < d) || (this._pending.add(e), this._flushHandler.delay(!1));
     }
     _flush() {
         let e = [];
@@ -41,35 +27,28 @@ class p {
         let t = [],
             n = [];
         e.forEach((e) => {
-            c.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
+            u.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
         }),
             t.length > 0 &&
                 a()
-                    .chunk(t, d)
+                    .chunk(t, c)
                     .forEach((e) => {
                         l.Ay.fetchApplications(e, !1);
                     }),
             n.length > 0 &&
                 a()
-                    .chunk(n, d)
+                    .chunk(n, c)
                     .forEach((e) => {
                         l.Ay.fetchApplications(e, !0);
                     });
     }
-    constructor() {
-        u(this, "_lastFetchedAttempted", new Map()),
-            u(this, "_pending", new Set()),
-            u(this, "_flushHandler", new o.J_(32, () => this._flush()));
-    }
 }
-let _ = new p();
-
-function h(e) {
+let f = new _();
+function p(e) {
     r.useEffect(() => {
-        null != e && "" !== e && _.request(e);
+        null != e && "" !== e && f.request(e);
     }, [e]);
 }
-
-function m(e) {
-    return h(e), (0, s.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e]);
+function h(e) {
+    return p(e), (0, s.bG)([u.A], () => (null != e && "" !== e ? u.A.getApplication(e) : null), [e]);
 }

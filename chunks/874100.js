@@ -1,61 +1,39 @@
-n.d(t, {
-    A: () => c,
-});
-var r = n(627968),
+n.d(t, { A: () => d });
+var i = n(627968),
     l = n(64700),
-    i = n(342494),
-    s = n(985018),
-    a = n(996150),
+    s = n(342494),
+    a = n(985018),
+    r = n(996150),
     o = n(393007);
-
-function c(e) {
+function d(e) {
     let {
         targetElementRef: t,
         onRender: n,
-        onRequestClose: c,
-        onActionClick: u,
-        onActionMouseDown: d,
-        position: p = "right",
-        align: h = "top",
-        caretConfig: g = {
-            align: "start",
-        },
+        onRequestClose: d,
+        onActionClick: c,
+        onActionMouseDown: u,
+        position: h = "right",
+        align: A = "top",
+        caretConfig: g = { align: "start" },
     } = e;
     l.useEffect(() => {
-        null == n || n();
+        n?.();
     }, [n]);
-    let f = {
-        type: "image",
-        src: o.A,
-        aspectRatio: "6/4",
-    };
-    return (0, r.jsx)(i.AM, {
+    let m = { type: "image", src: o.A, aspectRatio: "6/4" };
+    return (0, i.jsx)(s.AM, {
         size: "lg",
         shouldShow: !0,
-        position: p,
+        position: h,
         caretConfig: g,
         gradientColor: "purple",
         alignmentStrategy: "edge",
-        align: h,
-        badge: {
-            type: "new",
-            variant: "default",
-        },
-        onRequestClose: c,
-        actions: [
-            {
-                text: s.intl.string(s.t.RzWDqY),
-                variant: "primary",
-                onClick: u,
-                onMouseDown: d,
-            },
-        ],
+        align: A,
+        badge: { type: "new", variant: "default" },
+        onRequestClose: d,
+        actions: [{ text: a.intl.string(a.t.RzWDqY), variant: "primary", onClick: c, onMouseDown: u }],
         targetElementRef: t,
-        title: (0, r.jsx)("span", {
-            className: a.V,
-            children: s.intl.format(s.t.tSDb6p, {}),
-        }),
-        body: s.intl.string(s.t.wLwMmO),
-        graphic: f,
+        title: (0, i.jsx)("span", { className: r.V, children: a.intl.format(a.t.tSDb6p, {}) }),
+        body: a.intl.string(a.t.wLwMmO),
+        graphic: m,
     });
 }

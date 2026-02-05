@@ -1,284 +1,158 @@
-n.d(t, {
-    A: () => N,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => C });
+var i = n(627968);
 n(64700);
-var i = n(582754),
+var s = n(582754),
     l = n(397927),
-    s = n(736653),
+    r = n(736653),
     a = n(2242),
-    c = n(985018),
-    o = n(200313),
-    d = n(159670),
+    o = n(985018),
+    d = n(200313),
+    c = n(159670),
     u = n(245062),
-    f = n(107844),
+    m = n(107844),
     g = n(359013),
-    b = n(397914),
-    m = n(480975),
-    p = n(507910),
-    x = n(763859),
-    h = n(394854);
-
-function j(e) {
-    return (0, i.Mw)(e) ? o.c8 : o.kK;
+    x = n(397914),
+    h = n(480975),
+    _ = n(507910),
+    A = n(763859),
+    p = n(394854);
+function f(e) {
+    return (0, s.Mw)(e) ? d.c8 : d.kK;
 }
-
-function O() {
-    let e = (0, s.Ay)(),
-        t = {
-            backgroundColor: (0, i.Mw)(e) ? "#2e3638" : "var(--background-base-low)",
-        };
-    return (0, r.jsxs)("div", {
-        className: o.fr,
+function j() {
+    let e = (0, r.Ay)(),
+        t = { backgroundColor: (0, s.Mw)(e) ? "#2e3638" : "var(--background-base-low)" };
+    return (0, i.jsxs)("div", {
+        className: d.fr,
         style: t,
         children: [
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: c.intl.string(c.t.TXPK7B),
+                        children: o.intl.string(o.t.TXPK7B),
                     }),
-                    (0, r.jsx)(l.hKd, {
-                        size: 8,
-                    }),
-                    (0, r.jsx)(l.Heading, {
+                    (0, i.jsx)(l.hKd, { size: 8 }),
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-md/bold",
-                        className: j(e),
-                        children: c.intl.string(c.t.LdjJG5),
+                        className: f(e),
+                        children: o.intl.string(o.t.LdjJG5),
                     }),
                 ],
             }),
-            (0, r.jsx)("img", {
-                className: o.qj,
-                src: m,
-                alt: c.intl.string(c.t.NgjpTL),
-            }),
+            (0, i.jsx)("img", { className: d.qj, src: h, alt: o.intl.string(o.t.NgjpTL) }),
         ],
     });
 }
-
-function y() {
-    let e = (0, s.Ay)();
-
+function N() {
+    let e = (0, r.Ay)();
     function t(e) {
-        var t, n;
-        let { length: i, horizontal: l } = e;
-        return (0, r.jsx)("div", {
-            className: l ? o.iI : o.a7,
-            style:
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })(
-                    {},
-                    l
-                        ? {
-                              width: i,
-                          }
-                        : {
-                              height: i,
-                          },
-                )),
-                (n = n =
-                    {
-                        border: "1px solid #49494933",
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
+        let { length: t, horizontal: n } = e;
+        return (0, i.jsx)("div", {
+            className: n ? d.iI : d.a7,
+            style: { ...(n ? { width: t } : { height: t }), border: "1px solid #49494933" },
         });
     }
-    return (0, r.jsxs)("div", {
-        className: o.ZL,
-        "aria-label": c.intl.string(c.t["P2B/0W"]),
+    return (0, i.jsxs)("div", {
+        className: d.ZL,
+        "aria-label": o.intl.string(o.t["P2B/0W"]),
         children: [
-            (0, r.jsxs)("div", {
-                className: o.g0,
+            (0, i.jsxs)("div", {
+                className: d.g0,
                 children: [
-                    (0, r.jsx)(t, {
-                        length: 24,
-                    }),
-                    (0, r.jsx)("img", {
-                        className: o.qj,
-                        src: (0, i.Mw)(e) ? d : u,
-                        alt: "",
-                    }),
-                    (0, r.jsx)(t, {
-                        horizontal: !0,
-                        length: 12,
-                    }),
+                    (0, i.jsx)(t, { length: 24 }),
+                    (0, i.jsx)("img", { className: d.qj, src: (0, s.Mw)(e) ? c : u, alt: "" }),
+                    (0, i.jsx)(t, { horizontal: !0, length: 12 }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: o.g0,
+            (0, i.jsxs)("div", {
+                className: d.g0,
+                children: [(0, i.jsx)(t, { length: 24 }), (0, i.jsx)("img", { className: d.qj, src: m, alt: "" })],
+            }),
+            (0, i.jsxs)("div", {
+                className: d.g0,
                 children: [
-                    (0, r.jsx)(t, {
-                        length: 24,
-                    }),
-                    (0, r.jsx)("img", {
-                        className: o.qj,
-                        src: f,
-                        alt: "",
-                    }),
+                    (0, i.jsx)(t, { length: 12 }),
+                    (0, i.jsx)("img", { className: d.qj, src: g, alt: "" }),
+                    (0, i.jsx)(t, { horizontal: !0, length: 12 }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: o.g0,
-                children: [
-                    (0, r.jsx)(t, {
-                        length: 12,
-                    }),
-                    (0, r.jsx)("img", {
-                        className: o.qj,
-                        src: g,
-                        alt: "",
-                    }),
-                    (0, r.jsx)(t, {
-                        horizontal: !0,
-                        length: 12,
-                    }),
-                ],
-            }),
-            (0, r.jsxs)("div", {
-                className: o.g0,
-                children: [
-                    (0, r.jsx)(t, {
-                        length: 12,
-                    }),
-                    (0, r.jsx)("img", {
-                        className: o.qj,
-                        src: b,
-                        alt: "",
-                    }),
-                ],
+            (0, i.jsxs)("div", {
+                className: d.g0,
+                children: [(0, i.jsx)(t, { length: 12 }), (0, i.jsx)("img", { className: d.qj, src: x, alt: "" })],
             }),
         ],
     });
 }
-
-function v() {
-    return (0, r.jsxs)("div", {
-        className: o.w2,
-        children: [
-            (0, r.jsx)(l.Text, {
-                variant: "text-md/normal",
-                color: "text-default",
-                children: c.intl.string(c.t["9CdmS8"]),
-            }),
-            (0, r.jsx)(l.hKd, {
-                size: 32,
-            }),
-            (0, r.jsx)(O, {}),
-            (0, r.jsx)(l.hKd, {
-                size: 24,
-            }),
-            (0, r.jsx)(y, {}),
-        ],
-    });
-}
-
-function A() {
-    return (0, r.jsxs)("div", {
-        className: o.Og,
-        children: [
-            (0, r.jsx)(l.Text, {
-                className: o.Zc,
-                variant: "text-md/normal",
-                color: "text-default",
-                children: c.intl.string(c.t.qsKRUQ),
-            }),
-            (0, r.jsx)("img", {
-                className: o.Zf,
-                src: h,
-                alt: c.intl.string(c.t.yTPprb),
-            }),
-            (0, r.jsx)("img", {
-                className: o.tj,
-                src: x,
-                alt: c.intl.string(c.t["+gd9QQ"]),
-            }),
-        ],
-    });
-}
-
 function E() {
-    let e = (0, s.Ay)();
-    return (0, r.jsxs)("div", {
-        className: o.FN,
+    return (0, i.jsxs)("div", {
+        className: d.w2,
         children: [
-            (0, r.jsxs)("div", {
+            (0, i.jsx)(l.Text, {
+                variant: "text-md/normal",
+                color: "text-default",
+                children: o.intl.string(o.t["9CdmS8"]),
+            }),
+            (0, i.jsx)(l.hKd, { size: 32 }),
+            (0, i.jsx)(j, {}),
+            (0, i.jsx)(l.hKd, { size: 24 }),
+            (0, i.jsx)(N, {}),
+        ],
+    });
+}
+function b() {
+    return (0, i.jsxs)("div", {
+        className: d.Og,
+        children: [
+            (0, i.jsx)(l.Text, {
+                className: d.Zc,
+                variant: "text-md/normal",
+                color: "text-default",
+                children: o.intl.string(o.t.qsKRUQ),
+            }),
+            (0, i.jsx)("img", { className: d.Zf, src: p, alt: o.intl.string(o.t.yTPprb) }),
+            (0, i.jsx)("img", { className: d.tj, src: A, alt: o.intl.string(o.t["+gd9QQ"]) }),
+        ],
+    });
+}
+function T() {
+    let e = (0, r.Ay)();
+    return (0, i.jsxs)("div", {
+        className: d.FN,
+        children: [
+            (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsxs)(l.Heading, {
-                        className: j(e),
-                        style: {
-                            fontSize: "50px",
-                            lineHeight: "52px",
-                        },
+                    (0, i.jsxs)(l.Heading, {
+                        className: f(e),
+                        style: { fontSize: "50px", lineHeight: "52px" },
                         variant: "heading-xxl/extrabold",
                         children: [a.Xn, "%"],
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: c.intl.string(c.t.AewsXD),
+                        children: o.intl.string(o.t.AewsXD),
                     }),
                 ],
             }),
-            (0, r.jsx)("img", {
-                className: o.U2,
-                src: p,
-                alt: c.intl.string(c.t.fD9Wv1),
-            }),
+            (0, i.jsx)("img", { className: d.U2, src: _, alt: o.intl.string(o.t.fD9Wv1) }),
         ],
     });
 }
-
-function N() {
-    return (0, r.jsxs)("div", {
+function C() {
+    return (0, i.jsxs)("div", {
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                children: c.intl.string(c.t["1QHJaW"]),
+                children: o.intl.string(o.t["1QHJaW"]),
             }),
-            (0, r.jsx)(l.hKd, {
-                size: 24,
-            }),
-            (0, r.jsxs)("div", {
-                className: o._$,
-                children: [(0, r.jsx)(v, {}), (0, r.jsx)(A, {}), (0, r.jsx)(E, {})],
+            (0, i.jsx)(l.hKd, { size: 24 }),
+            (0, i.jsxs)("div", {
+                className: d._$,
+                children: [(0, i.jsx)(E, {}), (0, i.jsx)(b, {}), (0, i.jsx)(T, {})],
             }),
         ],
     });

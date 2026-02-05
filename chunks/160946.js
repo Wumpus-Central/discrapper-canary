@@ -1,8 +1,5 @@
-n.d(t, {
-    B: () => d,
-    Y: () => u,
-}),
-    n(896048);
+"use strict";
+n.d(t, { B: () => d, Y: () => c });
 var r = n(311907),
     i = n(626584),
     a = n(295405),
@@ -10,26 +7,22 @@ var r = n(311907),
     o = n(166403),
     l = n(788868);
 new i.A("useSubscriptionPlansLoaded");
-let c = (e) => {};
-
-function u() {
+let u = (e) => {};
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...l.oz];
     return (0, r.bG)([a.A, s.A, o.A], () => d(e, [a.A, s.A, o.A]), [e]);
 }
-
 function d() {
-    var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...l.oz],
-        [n, r, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.A, s.A, o.A],
-        u = n.paymentSourceIds,
-        d = n.defaultPaymentSourceId,
-        f = r.isLoadedForSKUs(t),
-        p = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
-    if (null != p && !r.hasPaymentSourceForSKUIds(p, t))
-        return c("subscription payment source ".concat(p, " not loaded for ").concat(t)), !1;
-    if (null != d && !r.hasPaymentSourceForSKUIds(d, t))
-        return c("default payment source ".concat(d, " not loaded for ").concat(t)), !1;
-    for (let e of u)
-        if (!r.hasPaymentSourceForSKUIds(e, t)) return c("payment source ".concat(e, " not loaded for ").concat(t)), !1;
-    return f;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...l.oz],
+        [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.A, s.A, o.A],
+        i = t.paymentSourceIds,
+        c = t.defaultPaymentSourceId,
+        d = n.isLoadedForSKUs(e),
+        _ = r.getPremiumTypeSubscription()?.paymentSourceId;
+    if (null != _ && !n.hasPaymentSourceForSKUIds(_, e))
+        return u(`subscription payment source ${_} not loaded for ${e}`), !1;
+    if (null != c && !n.hasPaymentSourceForSKUIds(c, e))
+        return u(`default payment source ${c} not loaded for ${e}`), !1;
+    for (let t of i) if (!n.hasPaymentSourceForSKUIds(t, e)) return u(`payment source ${t} not loaded for ${e}`), !1;
+    return d;
 }

@@ -1,27 +1,9 @@
-n.d(t, {
-    Ay: () => m,
-    Wd: () => _,
-    tG: () => o,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Ay: () => h, Wd: () => f, tG: () => s });
 var r = n(562465),
     i = n(178253),
-    a = n(985018);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var o = (function (e) {
+    a = n(985018),
+    s = (function (e) {
         return (
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.UNKNOWN_BILLING_PROFILE = 100001)] = "UNKNOWN_BILLING_PROFILE"),
@@ -63,7 +45,7 @@ var o = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    o = (function (e) {
         return (
             (e.CARD_NUMBER = "cardNumber"),
             (e.CARD_CVC = "cvc"),
@@ -78,8 +60,8 @@ var o = (function (e) {
             (e.ADDRESS_COUNTRY = "country"),
             e
         );
-    })(l || {});
-let c = Object.freeze({
+    })(o || {});
+let l = Object.freeze({
         address_line1: "line1",
         address_line2: "line2",
         address_city: "city",
@@ -91,47 +73,34 @@ let c = Object.freeze({
         exp_month: "expirationDate",
         exp_year: "expirationDate",
     }),
-    u = Object.freeze({
-        line_1: "line1",
-        line_2: "line2",
-        postal_code: "postalCode",
-    });
-var d = (function (e) {
+    u = Object.freeze({ line_1: "line1", line_2: "line2", postal_code: "postalCode" });
+var c = (function (e) {
     return (e.CARD = "card"), (e.ADDRESS = "address"), e;
-})(d || {});
-let f = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
-    p = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
-
-function _(e) {
-    var t, n, i, a, s;
-    if ("string" != typeof e && (null == e || null == (t = e.body) ? void 0 : t.code) === r.bG) {
-        if (
-            !Array.isArray(null == e || null == (n = e.body) ? void 0 : n.errors) &&
-            (null == e || null == (a = e.body) || null == (i = a.errors) ? void 0 : i.billing_address) != null
-        ) {
+})(c || {});
+let d = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
+    _ = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
+function f(e) {
+    if ("string" != typeof e && e?.body?.code === r.bG) {
+        if (!Array.isArray(e?.body?.errors) && e?.body?.errors?.billing_address != null) {
             for (let t in e.body.errors.billing_address) {
                 let n = e.body.errors.billing_address[t];
                 delete e.body.errors.billing_address[t], (e.body.errors[t] = n);
             }
             delete e.body.errors.billing_address;
         }
-        (null == (s = e.body) ? void 0 : s.errors) != null && (e.body = (0, r.ni)(e.body.errors));
+        e.body?.errors != null && (e.body = (0, r.ni)(e.body.errors));
     }
-    return new h(e);
+    return new p(e);
 }
-class h extends i.A {
-    _isInFieldSet(e) {
-        for (let t in this.fields) if (e.has(t)) return !0;
-    }
-    hasCardError() {
-        return this._isInFieldSet(f);
-    }
-    hasAddressError() {
-        return this._isInFieldSet(p);
-    }
+class p extends i.A {
+    paymentId = null;
+    static ErrorCodes = s;
+    static Fields = o;
+    static Sections = c;
+    static CARD_ERRORS = d;
+    static ADDRESS_ERRORS = _;
     constructor(e, t) {
         for (const n in (super(e, t),
-        s(this, "paymentId", null),
         100027 === this.code
             ? (this.message = a.intl.string(a.t["+4Empk"]))
             : 50048 === this.code
@@ -160,7 +129,7 @@ class h extends i.A {
                                     null != this.fields.captcha_key &&
                                     (this.message = a.intl.string(a.t["3s/vDN"])),
         this.fields)) {
-            const e = c[n] || u[n];
+            const e = l[n] || u[n];
             if (null != e) {
                 const t = this.fields[n];
                 delete this.fields[n], (this.fields[e] = t);
@@ -168,6 +137,14 @@ class h extends i.A {
         }
         null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
     }
+    _isInFieldSet(e) {
+        for (let t in this.fields) if (e.has(t)) return !0;
+    }
+    hasCardError() {
+        return this._isInFieldSet(d);
+    }
+    hasAddressError() {
+        return this._isInFieldSet(_);
+    }
 }
-s(h, "ErrorCodes", o), s(h, "Fields", l), s(h, "Sections", d), s(h, "CARD_ERRORS", f), s(h, "ADDRESS_ERRORS", p);
-let m = h;
+let h = p;

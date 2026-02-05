@@ -1,14 +1,6 @@
-n.d(t, {
-    Gw: () => i,
-    ks: () => r,
-    x4: () => a,
-});
-let r = {
-    day: 0,
-    second: 0,
-    millisecond: 0,
-};
-
+"use strict";
+n.d(t, { Gw: () => i, ks: () => r, x4: () => a });
+let r = { day: 0, second: 0, millisecond: 0 };
 function i(e, t) {
     let n = new Date(e);
     if (
@@ -74,7 +66,6 @@ function i(e, t) {
     }
     return n;
 }
-
 function a(e) {
     let t = {};
     for (let n in e) t[n] = -e[n];

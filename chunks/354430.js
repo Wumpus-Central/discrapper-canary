@@ -1,59 +1,35 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(73153);
+let a = { topEmojisByGuildId: {} },
+    s = a,
+    o = {};
+function l() {
+    (s = a), (o = {});
 }
-let o = {
-        topEmojisByGuildId: {},
-    },
-    l = o,
-    c = {};
-
-function u() {
-    (l = o), (c = {});
-}
-
-function d(e) {
+function u(e) {
     let { guildId: t } = e;
-    c[t] = !0;
+    o[t] = !0;
 }
-
-function f(e) {
+function c(e) {
     let { guildId: t, topEmojisMetadata: n } = e;
-    (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (c[t] = !1);
+    (s.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (o[t] = !1);
 }
-class p extends (r = i.Ay.PersistedStore) {
+class d extends r.Ay.PersistedStore {
+    static displayName = "TopEmojiStore";
+    static persistKey = "TopEmojiStore";
     initialize(e) {
-        l = null != e ? e : o;
+        s = e ?? a;
     }
     getState() {
-        return l;
+        return s;
     }
     getTopEmojiIdsByGuildId(e) {
-        return l.topEmojisByGuildId[e];
+        return s.topEmojisByGuildId[e];
     }
     getIsFetching(e) {
-        return c[e];
+        return o[e];
     }
 }
-s(p, "displayName", "TopEmojiStore"), s(p, "persistKey", "TopEmojiStore");
-let _ = new p(a.h, {
-    LOGOUT: u,
-    TOP_EMOJIS_FETCH: d,
-    TOP_EMOJIS_FETCH_SUCCESS: f,
-});
+let _ = new d(i.h, { LOGOUT: l, TOP_EMOJIS_FETCH: u, TOP_EMOJIS_FETCH_SUCCESS: c });

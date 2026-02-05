@@ -1,62 +1,36 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048),
-    n(321073);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(141468);
-
-function o(e, t, n) {
+"use strict";
+n.d(t, { A: () => _ }), n(321073);
+var r = n(311907),
+    i = n(73153),
+    a = n(141468);
+let s = 15,
+    o = new Map();
+function l(e) {
+    let { guildId: t, data: n } = e;
+    if (null == t) return !1;
+    let r = !1,
+        i = [...(o.get(t) ?? [])],
+        l = new Set(i);
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = 15,
-    c = new Map();
-
-function u(e) {
-    var t;
-    let { guildId: n, data: r } = e;
-    if (null == n) return !1;
-    let i = !1,
-        a = [...(null != (t = c.get(n)) ? t : [])],
-        o = new Set(a);
-    return (
-        r.forEach((e) => {
+        n.forEach((e) => {
             e.messages.forEach((e) => {
                 let [t] = e,
-                    n = (0, s.rh)(t);
-                !o.has(n.author.id) && o.size < l && (o.add(n.author.id), a.push(n.author.id), (i = !0));
+                    n = (0, a.rh)(t);
+                !l.has(n.author.id) && l.size < s && (l.add(n.author.id), i.push(n.author.id), (r = !0));
             });
         }),
-        i && c.set(n, a),
-        i
+        r && o.set(t, i),
+        r
     );
 }
-
-function d() {
-    c = new Map();
+function u() {
+    o = new Map();
 }
-let f = [];
-class p extends (r = i.Ay.Store) {
+let c = [];
+class d extends r.Ay.Store {
+    static displayName = "SearchRecentMessageStore";
     getRecentMessageAuthorIds(e) {
-        var t;
-        return null != (t = c.get(e)) ? t : f;
+        return o.get(e) ?? c;
     }
 }
-o(p, "displayName", "SearchRecentMessageStore");
-let _ = new p(a.h, {
-    SEARCH_MESSAGES_SUCCESS: u,
-    SEARCH_RECENT_MESSAGES_CLEAR: d,
-    CONNECTION_OPEN: d,
-});
+let _ = new d(i.h, { SEARCH_MESSAGES_SUCCESS: l, SEARCH_RECENT_MESSAGES_CLEAR: u, CONNECTION_OPEN: u });

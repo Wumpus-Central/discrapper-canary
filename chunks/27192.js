@@ -1,186 +1,111 @@
-n.d(t, {
-    DO: () => b,
-    Kj: () => O,
-    Lc: () => v,
-    Or: () => g,
-    zI: () => E,
-}),
-    n(264879);
+"use strict";
+n.d(t, { DO: () => g, Kj: () => A, Lc: () => T, Or: () => h, zI: () => m });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(284009),
     l = n.n(o),
-    c = n(317097),
-    u = n(827734),
+    u = n(317097),
+    c = n(827734),
     d = n(426333),
-    f = n(934551),
-    p = n(818348),
-    _ = n(127650);
-
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-var g = (function (e) {
+    _ = n(934551),
+    f = n(818348),
+    p = n(127650),
+    h = (function (e) {
         return (e.DEFAULT = "default"), (e.INVERTED = "inverted"), (e.GHOST = "ghost"), (e.ROW = "row"), e;
-    })(g || {}),
-    E = (function (e) {
+    })(h || {}),
+    m = (function (e) {
         return (e.TOP = "top"), (e.CENTER = "center"), e;
-    })(E || {});
-let b = {
-        BOX: _.aP,
-        ROUND: _.LI,
-        SMALL_BOX: _.tk,
-    },
-    y = {
-        top: _.t8,
-        center: _.Hu,
-    },
-    O = (e) => {
+    })(m || {});
+let g = { BOX: p.aP, ROUND: p.LI, SMALL_BOX: p.tk },
+    E = { top: p.t8, center: p.Hu },
+    A = (e) => {
         let {
                 disabled: t = !1,
                 readOnly: n = !1,
                 displayOnly: a = !1,
                 value: o = !1,
                 size: l = 24,
-                type: c = "default",
-                align: u = "center",
-                onChange: f = p.tE,
+                type: u = "default",
+                align: c = "center",
+                onChange: _ = f.tE,
                 onClick: h,
                 className: m,
-                innerClassName: g,
-                children: E,
-                reverse: O = !1,
-                shape: A = b.BOX,
-                checkboxColor: S,
+                innerClassName: A,
+                children: I,
+                reverse: y = !1,
+                shape: S = g.BOX,
+                checkboxColor: v,
             } = e,
-            I = i.useCallback(
+            C = i.useCallback(
                 (e) => {
-                    null == f || f(e, e.currentTarget.checked);
+                    _?.(e, e.currentTarget.checked);
                 },
-                [f],
+                [_],
             ),
-            T =
-                null != E
+            b =
+                null != I
                     ? (0, r.jsx)("div", {
-                          className: s()(_.Pf, t ? _.fR : _.ru, O ? _.dT : _.a5),
-                          style: {
-                              lineHeight: "".concat(l, "px"),
-                          },
-                          children: E,
+                          className: s()(p.Pf, t ? p.fR : p.ru, y ? p.dT : p.a5),
+                          style: { lineHeight: `${l}px` },
+                          children: I,
                       })
                     : null,
-            C = a ? "span" : "label",
-            N = t ? _.pR : n ? _.bB : _.qw;
-        return (0, r.jsxs)(C, {
+            N = a ? "span" : "label",
+            R = t ? p.pR : n ? p.bB : p.qw;
+        return (0, r.jsxs)(N, {
             "data-toggleable-component": "checkbox",
-            className: s()(t ? _.Tc : _.TQ, y[u], m, {
-                [_.nM]: "row" === c,
-                [_.KD]: o,
-            }),
+            className: s()(t ? p.Tc : p.TQ, E[c], m, { [p.nM]: "row" === u, [p.KD]: o }),
             children: [
-                O ? T : null,
+                y ? b : null,
                 !a &&
                     (0, r.jsx)(d.vN, {
                         children: (0, r.jsx)("input", {
-                            className: s()(g, N),
+                            className: s()(A, R),
                             type: "checkbox",
                             onClick: h,
-                            onChange: t || n ? p.tE : I,
+                            onChange: t || n ? f.tE : C,
                             checked: o,
-                            style: {
-                                width: l,
-                                height: l,
-                            },
+                            style: { width: l, height: l },
                         }),
                     }),
-                (0, r.jsx)(v, {
-                    value: o,
-                    size: l,
-                    shape: A,
-                    checkboxColor: S,
-                    disabled: t,
-                }),
-                O ? null : T,
+                (0, r.jsx)(T, { value: o, size: l, shape: S, checkboxColor: v, disabled: t }),
+                y ? null : b,
             ],
         });
     };
-
-function A(e) {
-    var t;
-    let { value: n, type: r, color: i } = e,
-        a = null != (t = e.style) ? t : {};
-    if (!1 === n) return a;
-    if (((a = m({}, a)), null != i))
-        switch (r) {
+function I(e) {
+    let { value: t, type: n, color: r } = e,
+        i = e.style ?? {};
+    if (!1 === t) return i;
+    if (((i = { ...i }), null != r))
+        switch (n) {
             case "default":
-                a.borderColor = i;
+                i.borderColor = r;
                 break;
             case "ghost":
-                if (i.startsWith("var(--")) {
-                    let e = "".concat(i.slice(0, -1), "-hsl)");
-                    (a.borderColor = "rgba(".concat(e, ", 0.15)")), (a.backgroundColor = "rgba(".concat(e, ", 0.15)"));
+                if (r.startsWith("var(--")) {
+                    let e = `${r.slice(0, -1)}-hsl)`;
+                    (i.borderColor = `rgba(${e}, 0.15)`), (i.backgroundColor = `rgba(${e}, 0.15)`);
                 } else
-                    l()((0, c.qt)(i), "Checkbox: ".concat(i, " is not a valid hex color")),
-                        (a.borderColor = (0, c.xp)(i, 0.15)),
-                        (a.backgroundColor = (0, c.xp)(i, 0.15));
+                    l()((0, u.qt)(r), `Checkbox: ${r} is not a valid hex color`),
+                        (i.borderColor = (0, u.xp)(r, 0.15)),
+                        (i.backgroundColor = (0, u.xp)(r, 0.15));
                 break;
             case "row":
             case "inverted":
-                (a.backgroundColor = i), (a.borderColor = i);
+                (i.backgroundColor = r), (i.borderColor = r);
         }
-    return a;
+    return i;
 }
-
-function v(e) {
-    let { indicatorClassName: t, value: n, size: a, shape: o, checkboxColor: l, disabled: c } = e,
-        d = A(e),
-        p = i.useMemo(() => (n ? u.A.colors.WHITE.css : u.A.unsafe_rawColors.TRANSPARENT.css), [n]);
+function T(e) {
+    let { indicatorClassName: t, value: n, size: a, shape: o, checkboxColor: l, disabled: u } = e,
+        d = I(e),
+        f = i.useMemo(() => (n ? c.A.colors.WHITE.css : c.A.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, r.jsx)("div", {
-        className: s()(_.kv, o, t, {
-            [_.KD]: n,
-            [_.Ab]: c,
-        }),
-        style: m(
-            {
-                width: a,
-                height: a,
-                borderColor: l,
-            },
-            d,
-        ),
-        children: (0, r.jsx)(f.CheckmarkSmallBoldIcon, {
-            size: "sm",
-            color: p,
-            "aria-hidden": !0,
-        }),
+        className: s()(p.kv, o, t, { [p.KD]: n, [p.Ab]: u }),
+        style: { width: a, height: a, borderColor: l, ...d },
+        children: (0, r.jsx)(_.CheckmarkSmallBoldIcon, { size: "sm", color: f, "aria-hidden": !0 }),
     });
 }

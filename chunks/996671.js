@@ -1,3 +1,4 @@
+"use strict";
 var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator,
     i = n(476744),
     a = n(696219),
@@ -14,7 +15,7 @@ var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator,
         for (s = 0; s < o.length; ++s) if (a((n = e[o[s]])) && i((r = n.call(e)))) return r;
         throw TypeError("No default value");
     },
-    c = function (e, t) {
+    u = function (e, t) {
         var n = e[t];
         if (null != n) {
             if (!a(n))
@@ -28,7 +29,7 @@ e.exports = function (e) {
         n = "default";
     if (
         (arguments.length > 1 && (arguments[1] === String ? (n = "string") : arguments[1] === Number && (n = "number")),
-        r && (Symbol.toPrimitive ? (t = c(e, Symbol.toPrimitive)) : o(e) && (t = Symbol.prototype.valueOf)),
+        r && (Symbol.toPrimitive ? (t = u(e, Symbol.toPrimitive)) : o(e) && (t = Symbol.prototype.valueOf)),
         void 0 !== t)
     ) {
         var a = t.call(e, n);

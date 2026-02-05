@@ -1,9 +1,7 @@
-n.d(t, {
-    h: () => a,
-});
+"use strict";
+n.d(t, { h: () => a });
 var r = n(322811),
     i = n(658809);
-
 function a(e, t) {
     let n = e.clone();
     if (((n.start = s(e.start, t.start)), null != e.end || null != t.end)) {
@@ -16,7 +14,6 @@ function a(e, t) {
     }
     return n;
 }
-
 function s(e, t) {
     let n = e.clone();
     return (

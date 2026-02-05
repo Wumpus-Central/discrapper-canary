@@ -1,23 +1,14 @@
-n.d(t, {
-    A: () => o,
-});
-var l = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var r = n(487329),
-    i = n(958713),
-    a = n(93067),
-    s = n(985018);
-
+var l = n(709710),
+    a = n(958713),
+    s = n(93067),
+    r = n(985018);
 function o(e) {
     let { userId: t, className: n } = e,
-        o = (0, i.A)(t);
+        o = (0, a.A)(t);
     if (null == o) return null;
-    let c = o === r.iy.CAMERA_SEND_LOW_FPS ? s.intl.string(s.t["1NyoVt"]) : void 0;
-    return null != c
-        ? (0, l.jsx)(a.A, {
-              className: n,
-              errorMessage: c,
-              avError: o,
-          })
-        : null;
+    let c = o === l.iy.CAMERA_SEND_LOW_FPS ? r.intl.string(r.t["1NyoVt"]) : void 0;
+    return null != c ? (0, i.jsx)(s.A, { className: n, errorMessage: c, avError: o }) : null;
 }

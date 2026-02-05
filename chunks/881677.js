@@ -1,58 +1,51 @@
-n.d(t, {
-    B: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { B: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(417597),
     s = n(459793),
     o = n(590180),
     l = n(937008),
-    c = n(156312),
-    u = n(166532),
+    u = n(156312),
+    c = n(166532),
     d = n(49420),
-    f = n(534479),
-    p = n(652215);
-
-function _(e) {
+    _ = n(534479),
+    f = n(652215);
+function p(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
-            blockedPayments: _,
+            blockedPayments: p,
             hasFetchedSkus: h,
             paymentSources: m,
             hasFetchedPaymentSources: g,
             application: E,
-            skusById: b,
-            selectedSkuId: y,
-        } = (0, c.P5)(),
-        { isGift: O } = (0, l.Pv)(),
-        [A, v] = i.useState(!0),
-        [S, I] = (0, a.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
+            skusById: A,
+            selectedSkuId: I,
+        } = (0, u.P5)(),
+        { isGift: T } = (0, l.Pv)(),
+        [y, S] = i.useState(!0),
+        [v, C] = (0, a.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        h && g && e && v(S);
-    }, [h, g, E, S]),
+        h && g && e && S(v);
+    }, [h, g, E, v]),
     i.useEffect(() => {
-        if (A || _ || null == y) return;
-        let e = b[y];
-        O &&
-        ((null == e ? void 0 : e.productLine) === p.EZt.COLLECTIBLES ||
-            (null == e ? void 0 : e.productLine) === p.EZt.APPLICATION ||
-            (null == e ? void 0 : e.productLine) === p.EZt.SOCIAL_LAYER_GAME_ITEM)
-            ? t(u.pn.GIFT_CUSTOMIZATION)
+        if (y || p || null == I) return;
+        let e = A[I];
+        T &&
+        (e?.productLine === f.EZt.COLLECTIBLES ||
+            e?.productLine === f.EZt.APPLICATION ||
+            e?.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM)
+            ? t(c.pn.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(m).length
-              ? t(u.pn.ADD_PAYMENT_STEPS)
-              : t(u.pn.REVIEW);
-    }, [A, _, t, m, O, b, y]),
-    A)
-        ? (0, r.jsx)(f.A, {})
-        : _
-          ? (0, r.jsx)(s.oO, {
-                onClose: n,
-            })
-          : null != I
-            ? (0, r.jsx)(d.A, {
-                  onClose: n,
-              })
+              ? t(c.pn.ADD_PAYMENT_STEPS)
+              : t(c.pn.REVIEW);
+    }, [y, p, t, m, T, A, I]),
+    y)
+        ? (0, r.jsx)(_.A, {})
+        : p
+          ? (0, r.jsx)(s.oO, { onClose: n })
+          : null != C
+            ? (0, r.jsx)(d.A, { onClose: n })
             : null;
 }

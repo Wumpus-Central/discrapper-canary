@@ -1,25 +1,21 @@
-n.d(t, {
-    _1: () => a,
-    a9: () => s,
-});
+"use strict";
+n.d(t, { _1: () => a, a9: () => s });
 var r = n(788868);
-
 function i(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        n = Object.keys(r.hd).find((n) => {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+    return (
+        Object.keys(r.hd).find((n) => {
             let i = r.hd[n];
             return null != i && i.skuId === r.pe.NONE && i.interval === e && i.intervalCount === t;
-        });
-    return null != n ? n : r.gD.NONE_MONTH;
+        }) ?? r.gD.NONE_MONTH
+    );
 }
-
 function a(e) {
     return e.find((e) => {
         let t = r.hd[e.planId];
         return null != t && null != t.premiumType;
     });
 }
-
 function s(e, t, n) {
     let s = a(e);
     if (null == s) {

@@ -1,76 +1,54 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
+n.d(t, { A: () => c });
+var i = n(627968),
     l = n(64700),
-    i = n(342494),
+    s = n(342494),
     a = n(486318),
-    s = n(985018),
+    r = n(985018),
     o = n(549724),
-    c = n(585048);
-
-function u(e) {
+    d = n(585048);
+function c(e) {
     let {
         targetElementRef: t,
         onRender: n,
-        onRequestClose: u,
-        onActionClick: d,
-        onActionMouseDown: f,
-        position: p = "right",
-        align: h = "top",
-        caretConfig: b = {
-            align: "start",
-        },
-        skuImageDetails: g,
-        title: m,
-        body: A,
+        onRequestClose: c,
+        onActionClick: u,
+        onActionMouseDown: h,
+        position: A = "right",
+        align: g = "top",
+        caretConfig: m = { align: "start" },
+        skuImageDetails: p,
+        title: _,
+        body: x,
     } = e;
     l.useEffect(() => {
-        null == n || n();
+        n?.();
     }, [n]);
-    let y = l.useMemo(
+    let f = l.useMemo(
         () =>
-            (null == g ? void 0 : g.imageUrl) == null
-                ? {
-                      type: "image",
-                      src: c.A,
-                      aspectRatio: "6/4",
-                  }
+            p?.imageUrl == null
+                ? { type: "image", src: d.A, aspectRatio: "6/4" }
                 : (0, a.e)({
-                      imageUrl: null == g ? void 0 : g.imageUrl,
-                      backgroundImageUrl: null == g ? void 0 : g.backgroundImageUrl,
-                      altText: s.intl.string(s.t["ulQB+t"]),
-                      customClassNames: {
-                          containerClassName: o.z,
-                          foregroundImageClassName: o._,
-                      },
+                      imageUrl: p?.imageUrl,
+                      backgroundImageUrl: p?.backgroundImageUrl,
+                      altText: r.intl.string(r.t["ulQB+t"]),
+                      customClassNames: { containerClassName: o.z, foregroundImageClassName: o._ },
                   }),
-        [null == g ? void 0 : g.imageUrl, null == g ? void 0 : g.backgroundImageUrl],
+        [p?.imageUrl, p?.backgroundImageUrl],
     );
-    return (0, r.jsx)(i.AM, {
+    return (0, i.jsx)(s.AM, {
         size: "lg",
         shouldShow: !0,
-        position: p,
-        caretConfig: b,
+        position: A,
+        caretConfig: m,
         gradientColor: "purple",
         alignmentStrategy: "edge",
-        align: h,
-        badge: {
-            type: "new",
-            variant: "default",
-        },
-        onRequestClose: u,
-        actions: [
-            {
-                text: s.intl.string(s.t.RzWDqY),
-                variant: "primary",
-                onClick: d,
-                onMouseDown: f,
-            },
-        ],
+        align: g,
+        badge: { type: "new", variant: "default" },
+        onRequestClose: c,
+        actions: [{ text: r.intl.string(r.t.RzWDqY), variant: "primary", onClick: u, onMouseDown: h }],
         targetElementRef: t,
-        title: null != m ? m : s.intl.string(s.t.Ylu2JM),
-        body: null != A ? A : s.intl.string(s.t.vgylLQ),
-        graphic: y,
+        title: _ ?? r.intl.string(r.t.Ylu2JM),
+        body: x ?? r.intl.string(r.t.vgylLQ),
+        graphic: f,
     });
 }

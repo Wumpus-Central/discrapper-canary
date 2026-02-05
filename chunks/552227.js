@@ -1,41 +1,33 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(627968);
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(985018),
-    a = n(270920);
-let s = (e) => {
-    let { guild: t, onClose: s } = e;
-    return (0, r.jsxs)("div", {
-        className: a.kL,
+    a = n(985018),
+    s = n(270920);
+let r = (e) => {
+    let { guild: t, onClose: r } = e;
+    return (0, i.jsxs)("div", {
+        className: s.kL,
         children: [
-            (0, r.jsx)("img", {
-                alt: "",
-                className: a.Sl,
-                src: n(960416),
-            }),
-            (0, r.jsxs)("div", {
-                className: a.Qs,
+            (0, i.jsx)("img", { alt: "", className: s.Sl, src: n(960416) }),
+            (0, i.jsxs)("div", {
+                className: s.Qs,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
-                        children: i.intl.format(i.t.THgVCC, {
-                            guild: t.name,
-                        }),
+                        children: a.intl.format(a.t.THgVCC, { guild: t.name }),
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, i.jsx)(l.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: i.intl.string(i.t["1yq3nO"]),
+                        children: a.intl.string(a.t["1yq3nO"]),
                     }),
-                    (0, r.jsx)("div", {
-                        className: a.UD,
-                        children: (0, r.jsx)(l.Button, {
+                    (0, i.jsx)("div", {
+                        className: s.UD,
+                        children: (0, i.jsx)(l.Button, {
                             variant: "primary",
-                            text: i.intl.string(i.t.hLw0wc),
-                            onClick: s,
+                            text: a.intl.string(a.t.hLw0wc),
+                            onClick: r,
                         }),
                     }),
                 ],

@@ -1,14 +1,9 @@
-n.d(t, {
-    U: () => a,
-});
+"use strict";
+n.d(t, { U: () => a });
 var r = n(74172),
     i = n(64700);
-
 function a(e) {
-    let t = (0, r.Q)({
-            usage: "search",
-            ...e,
-        }),
+    let t = (0, r.Q)({ usage: "search", ...e }),
         n = (0, i.useCallback)(
             (e, n) =>
                 0 === n.length ||
@@ -35,12 +30,5 @@ function a(e) {
             },
             [t],
         );
-    return (0, i.useMemo)(
-        () => ({
-            startsWith: n,
-            endsWith: a,
-            contains: s,
-        }),
-        [n, a, s],
-    );
+    return (0, i.useMemo)(() => ({ startsWith: n, endsWith: a, contains: s }), [n, a, s]);
 }

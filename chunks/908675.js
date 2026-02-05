@@ -1,61 +1,51 @@
-n.d(t, {
-    A: () => m,
-}),
-    n(896048);
+n.d(t, { A: () => m });
 var l = n(627968),
-    r = n(64700),
-    a = n(503698),
-    i = n.n(a),
+    a = n(64700),
+    i = n(503698),
+    r = n.n(i),
     s = n(397927),
-    o = n(46054),
-    c = n(957565),
-    d = n(985018),
-    u = n(38776);
-
+    d = n(46054),
+    o = n(957565),
+    u = n(985018),
+    c = n(38776);
 function m(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: a, is_localized: m },
+                data: { title: t, body: n, sms: i, is_localized: m },
             },
         } = e,
-        [b, p] = r.useState(!1),
-        x = r.useRef(o.A.reactParserFor(o.A.defaultRules));
+        [_, x] = a.useState(!1),
+        g = a.useRef(d.A.reactParserFor(d.A.defaultRules));
     return m
         ? (0, l.jsxs)("div", {
-              className: u.kL,
+              className: c.kL,
               children: [
                   (0, l.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
                       color: "text-default",
-                      className: u.wx,
+                      className: c.wx,
                       children: t,
                   }),
-                  (0, l.jsx)(s.Text, {
-                      variant: "text-sm/normal",
-                      className: u.G3,
-                      children: x.current(n),
-                  }),
+                  (0, l.jsx)(s.Text, { variant: "text-sm/normal", className: c.G3, children: g.current(n) }),
                   (0, l.jsx)("div", {
                       children: (0, l.jsxs)("div", {
-                          className: i()(u.GH, {
-                              [u.pG]: b,
-                          }),
+                          className: r()(c.GH, { [c.pG]: _ }),
                           children: [
                               (0, l.jsx)(s.Text, {
                                   variant: "text-md/normal",
                                   selectable: !0,
-                                  className: u.Kk,
-                                  children: a,
+                                  className: c.Kk,
+                                  children: i,
                               }),
                               (0, l.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: u.__invalid_trailingButton,
+                                  className: c.__invalid_trailingButton,
                                   children: (0, l.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: b ? d.intl.string(d.t.t5VZ88) : d.intl.string(d.t.OpuAlK),
+                                      text: _ ? u.intl.string(u.t.t5VZ88) : u.intl.string(u.t.OpuAlK),
                                       onClick: () => {
-                                          (0, c.C)(a, () => p(!0));
+                                          (0, o.C)(i, () => x(!0));
                                       },
                                   }),
                               }),

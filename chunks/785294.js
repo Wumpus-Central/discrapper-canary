@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     slider: "slider_a562c8",
     mini: "mini_a562c8",

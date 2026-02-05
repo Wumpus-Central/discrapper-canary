@@ -1,3 +1,1 @@
-t.exports = {
-    _: "tags__0b5a5",
-};
+t.exports = { _: "tags__0b5a5" };

@@ -1,168 +1,102 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968);
+n.d(t, { A: () => E });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(311907),
+var l = n(503698),
+    a = n.n(l),
+    r = n(311907),
     s = n(397927),
     o = n(442433),
-    c = n(143413),
-    u = n(734057),
-    d = n(661191),
-    p = n(321045),
-    m = n(456874),
-    f = n(707539),
-    g = n(519397),
-    h = n(747926),
-    _ = n(652215),
-    b = n(985018),
-    A = n(868320);
-
-function y(e) {
+    d = n(143413),
+    c = n(734057),
+    u = n(661191),
+    m = n(321045),
+    _ = n(456874),
+    h = n(707539),
+    p = n(519397),
+    g = n(747926),
+    A = n(652215),
+    f = n(985018),
+    x = n(868320);
+function E(e) {
     let { message: t, compact: n } = e,
-        i = (0, a.bG)([u.A], () => u.A.getChannel(d.default.castMessageIdAsChannelId(t.id)));
-    return null == i
-        ? null
-        : (0, r.jsx)(v, {
-              channel: i,
-              compact: n,
-              isSystemMessage: (0, c.A)(t),
-          });
+        l = (0, r.bG)([c.A], () => c.A.getChannel(u.default.castMessageIdAsChannelId(t.id)));
+    return null == l ? null : (0, i.jsx)(C, { channel: l, compact: n, isSystemMessage: (0, d.A)(t) });
 }
-
-function v(e) {
-    var t, i;
-    let c,
-        u,
+function C(e) {
+    var t;
+    let l,
         d,
-        { channel: y, compact: v, isSystemMessage: x } = e,
-        O = (0, a.bG)([m.A], () => m.A.getCount(y.id)),
-        E =
-            ((t = y),
-            (c = (0, a.bG)([m.A], () => m.A.getMostRecentMessage(t.id))),
-            (u = (0, a.bG)([m.A], () => m.A.getCount(t.id))),
-            (d = (0, f.JO)(t)),
-            (null == (i = t.threadMetadata) ? void 0 : i.archived)
-                ? b.intl.string(b.t.ZTo4HS)
-                : null == u || 0 === u
-                  ? b.intl.string(b.t.HYtNyE)
-                  : null == c
-                    ? (0, r.jsxs)(r.Fragment, {
+        c,
+        { channel: u, compact: E, isSystemMessage: C } = e,
+        I = (0, r.bG)([_.A], () => _.A.getCount(u.id)),
+        T =
+            ((t = u),
+            (l = (0, r.bG)([_.A], () => _.A.getMostRecentMessage(t.id))),
+            (d = (0, r.bG)([_.A], () => _.A.getCount(t.id))),
+            (c = (0, h.JO)(t)),
+            t.threadMetadata?.archived
+                ? f.intl.string(f.t.ZTo4HS)
+                : null == d || 0 === d
+                  ? f.intl.string(f.t.HYtNyE)
+                  : null == l
+                    ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)("span", {
-                                  children: b.intl.string(b.t.ZTo4HS),
-                              }),
-                              (0, r.jsx)("span", {
-                                  className: A.vE,
-                                  children: (0, f.aK)(d),
-                              }),
+                              (0, i.jsx)("span", { children: f.intl.string(f.t.ZTo4HS) }),
+                              (0, i.jsx)("span", { className: x.vE, children: (0, h.aK)(c) }),
                           ],
                       })
-                    : (0, r.jsxs)(r.Fragment, {
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(g.A, {
-                                  message: c,
-                                  channel: t,
-                              }),
-                              (0, r.jsx)("span", {
-                                  className: A.vE,
-                                  children: (0, f.aK)(d),
-                              }),
+                              (0, i.jsx)(p.A, { message: l, channel: t }),
+                              (0, i.jsx)("span", { className: x.vE, children: (0, h.aK)(c) }),
                           ],
                       })),
-        j = null != O && O > 0;
-    return (0, r.jsxs)(r.Fragment, {
+        v = null != I && I > 0;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("div", {
-                className: l()(A.GI, {
-                    [A.E]: !v,
-                    [A.E_]: x,
-                }),
-            }),
-            (0, r.jsx)(s.DUT, {
+            (0, i.jsx)("div", { className: a()(x.GI, { [x.E]: !E, [x.E_]: C }) }),
+            (0, i.jsx)(s.DUT, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, h.JA)(y, e.shiftKey);
+                    e.stopPropagation(), (0, g.JA)(u, e.shiftKey);
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let t = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         n = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === _.Ks6.SPACE || e.which === _.Ks6.ENTER) &&
-                        (e.preventDefault(), (t || n) && (0, h.JA)(y, n));
+                    (e.which === A.Ks6.SPACE || e.which === A.Ks6.ENTER) &&
+                        (e.preventDefault(), (t || n) && (0, g.JA)(u, n));
                 },
                 onContextMenu: function (e) {
                     (0, o.L3)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("86901")]).then(
+                        let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("55266")]).then(
                             n.bind(n, 44536),
                         );
-                        return (t) =>
-                            (0, r.jsx)(
-                                e,
-                                (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        channel: y,
-                                    },
-                                    t,
-                                ),
-                            );
+                        return (t) => (0, i.jsx)(e, { channel: u, ...t });
                     });
                 },
-                "aria-roledescription": b.intl.string(b.t["8ipxiY"]),
-                className: l()(A.kL, {
-                    [A.og]: x,
-                }),
-                children: (0, r.jsxs)(s.RDc, {
+                "aria-roledescription": f.intl.string(f.t["8ipxiY"]),
+                className: a()(x.kL, { [x.og]: C }),
+                children: (0, i.jsxs)(s.RDc, {
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: A.kq,
+                        (0, i.jsxs)("div", {
+                            className: x.kq,
                             children: [
-                                (0, r.jsx)(s.AC4, {
-                                    children: b.intl.string(b.t["7Xm5QI"]),
-                                }),
-                                (0, r.jsx)("span", {
-                                    className: A.UU,
-                                    children: y.name,
-                                }),
-                                (0, r.jsx)("span", {
-                                    className: A.lO,
-                                    "aria-hidden": !j,
-                                    children: (0, p.ub)(O, y.id),
+                                (0, i.jsx)(s.AC4, { children: f.intl.string(f.t["7Xm5QI"]) }),
+                                (0, i.jsx)("span", { className: x.UU, children: u.name }),
+                                (0, i.jsx)("span", {
+                                    className: x.lO,
+                                    "aria-hidden": !v,
+                                    children: (0, m.ub)(I, u.id),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             "aria-hidden": !0,
                             lineClamp: 1,
                             color: "text-default",
-                            className: A.sb,
-                            children: E,
+                            className: x.sb,
+                            children: T,
                         }),
                     ],
                 }),

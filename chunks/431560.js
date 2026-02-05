@@ -1,20 +1,13 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    Z: () => i,
-});
-class i {
+"use strict";
+n.d(t, { Z: () => r });
+class r {
+    value = null;
+    fetchState = "idle";
+    fetchedAt = null;
+    ttlMs;
+    constructor(e = {}) {
+        this.ttlMs = e.ttlMs ?? null;
+    }
     setTtl(e) {
         this.ttlMs = e;
     }
@@ -70,28 +63,12 @@ class i {
         }
     }
     getValueWithStatus() {
-        return {
-            value: this.value,
-            status: this.getStatus(),
-        };
+        return { value: this.value, status: this.getStatus() };
     }
     serialize() {
-        return null == this.value || null == this.fetchedAt
-            ? null
-            : {
-                  value: this.value,
-                  fetchedAt: this.fetchedAt,
-              };
+        return null == this.value || null == this.fetchedAt ? null : { value: this.value, fetchedAt: this.fetchedAt };
     }
     restore(e) {
         null != e && ((this.value = e.value), (this.fetchedAt = e.fetchedAt), (this.fetchState = "success"));
-    }
-    constructor(e = {}) {
-        var t;
-        r(this, "value", null),
-            r(this, "fetchState", "idle"),
-            r(this, "fetchedAt", null),
-            r(this, "ttlMs", void 0),
-            (this.ttlMs = null != (t = e.ttlMs) ? t : null);
     }
 }

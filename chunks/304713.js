@@ -1,3 +1,1 @@
-e.exports = {
-    s: "sharedCanvas_c4eba0",
-};
+e.exports = { s: "sharedCanvas_c4eba0" };

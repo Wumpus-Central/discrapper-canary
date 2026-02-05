@@ -1,6 +1,4 @@
-a.d(t, {
-    A: () => r,
-});
+a.d(t, { A: () => r });
 var n = a(981737);
 let r = {
     ordinalNumber: function (e, t) {
@@ -16,11 +14,7 @@ let r = {
         }
     },
     era: (0, n.A)({
-        values: {
-            narrow: ["BC", "AD"],
-            abbreviated: ["BC", "AD"],
-            wide: ["기원전", "서기"],
-        },
+        values: { narrow: ["BC", "AD"], abbreviated: ["BC", "AD"], wide: ["기원전", "서기"] },
         defaultWidth: "wide",
     }),
     quarter: (0, n.A)({

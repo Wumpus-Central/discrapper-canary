@@ -1,162 +1,127 @@
-n.d(t, {
-    a: () => m,
-}),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { a: () => h });
+var i = n(627968),
+    s = n(64700),
     l = n(158954),
-    s = n(513461),
+    r = n(513461),
     a = n(786180),
-    c = n(892921),
-    o = n(596484),
-    d = n(322388),
+    o = n(892921),
+    d = n(596484),
+    c = n(322388),
     u = n(564864),
-    f = n(260197),
+    m = n(260197),
     g = n(985018),
-    b = n(35407);
-
-function m(e) {
-    var t;
-    let { guild: n, formFields: o } = e,
-        [m, x] = i.useState(o);
-    i.useEffect(() => x(o), [o]);
-    let h =
-            null !=
-            (t = (0, a.H)({
-                guildId: n.id,
-            }))
-                ? t
-                : 0,
-        [j, O] = i.useState(null),
-        y = i.useMemo(() => (null == m ? void 0 : m.some((e) => (0, s.i7)(e))), [m]),
-        v = i.useMemo(() => m.length === f.OK, [m]),
-        A = i.useCallback(
+    x = n(35407);
+function h(e) {
+    let { guild: t, formFields: n } = e,
+        [d, h] = s.useState(n);
+    s.useEffect(() => h(n), [n]);
+    let A = (0, a.H)({ guildId: t.id }) ?? 0,
+        [p, f] = s.useState(null),
+        j = s.useMemo(() => d?.some((e) => (0, r.i7)(e)), [d]),
+        N = s.useMemo(() => d.length === m.OK, [d]),
+        E = s.useCallback(
             (e) => {
-                u.A.setPendingMemberVerificationRules(n.id, e), x(e), null != j && O(null);
+                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != p && f(null);
             },
-            [j, n.id],
+            [p, t.id],
         ),
-        E = i.useCallback(
+        b = s.useCallback(
             (e) => {
-                A([...m, e]);
+                E([...d, e]);
             },
-            [m, A],
+            [d, E],
         ),
-        N = i.useCallback(
+        T = s.useCallback(
             (e) => {
-                A([...m.slice(0, e), ...m.slice(e + 1)]);
+                E([...d.slice(0, e), ...d.slice(e + 1)]);
             },
-            [m, A],
+            [d, E],
         ),
-        _ = i.useCallback(
+        C = s.useCallback(
             (e, t) => {
-                if (m[e] === t) return;
-                let n = [...m];
-                (n[e] = t), A(n);
+                if (d[e] === t) return;
+                let n = [...d];
+                (n[e] = t), E(n);
             },
-            [m, A],
+            [d, E],
         ),
-        S = i.useCallback(
+        I = s.useCallback(
             (e, t, n) => {
-                let r = m.indexOf(e),
-                    i = [...m];
-                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)),
-                    n ? (A(i), null !== j && O(null)) : j !== t && O(t);
+                let i = d.indexOf(e),
+                    s = [...d];
+                null != t && t !== i && (s.splice(i, 1), s.splice(t, 0, e), h(s)),
+                    n ? (E(s), null !== p && f(null)) : p !== t && f(t);
             },
-            [j, m, A],
+            [p, d, E],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(l.DZT, {
+            (0, i.jsx)(l.DZT, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: b.DD,
-                children: g.intl.format(g.t["sm+75n"], {
-                    currentCount: m.length,
-                    maxCount: f.OK,
-                }),
+                className: x.DD,
+                children: g.intl.format(g.t["sm+75n"], { currentCount: d.length, maxCount: m.OK }),
             }),
-            m.map((e) =>
-                (0, d.Td)({
-                    dropHoveredIndex: j,
+            d.map((e) =>
+                (0, c.Td)({
+                    dropHoveredIndex: p,
                     formField: e,
-                    guild: n,
-                    index: m.indexOf(e),
-                    isDragEnabled: m.length > 1,
-                    submittedGuildJoinRequestsCount: h,
-                    removeFormField: N,
-                    updateFormField: _,
-                    updateFormFieldOrder: S,
-                    canRemove: m.length > 1,
+                    guild: t,
+                    index: d.indexOf(e),
+                    isDragEnabled: d.length > 1,
+                    submittedGuildJoinRequestsCount: A,
+                    removeFormField: T,
+                    updateFormField: C,
+                    updateFormFieldOrder: I,
+                    canRemove: d.length > 1,
                     actionsLocation: "side",
-                    fieldStyle: s.Vf.COMPACT,
+                    fieldStyle: r.Vf.COMPACT,
                 }),
             ),
-            !v &&
-                (0, r.jsx)("div", {
-                    className: b.At,
-                    children: (0, r.jsx)(c.A, {
-                        addFormField: E,
-                        guild: n,
-                        allowTerms: !y,
-                    }),
+            !N &&
+                (0, i.jsx)("div", {
+                    className: x.At,
+                    children: (0, i.jsx)(o.A, { addFormField: b, guild: t, allowTerms: !j }),
                 }),
-            !v &&
-                (0, r.jsx)(p, {
-                    addFormField: E,
-                }),
+            !N && (0, i.jsx)(_, { addFormField: b }),
         ],
     });
 }
-
-function p(e) {
+function _(e) {
     let { addFormField: t } = e,
-        n = i.useMemo(
+        n = s.useMemo(
             () => [
                 {
                     text: g.intl.string(g.t.EOwiEk),
                     onClick: () => {
-                        t({
-                            field_type: s.rX.TEXT_INPUT,
-                            label: g.intl.string(g.t.EOwiEk),
-                            required: !0,
-                        });
+                        t({ field_type: r.rX.TEXT_INPUT, label: g.intl.string(g.t.EOwiEk), required: !0 });
                     },
                 },
                 {
                     text: g.intl.string(g.t.jqrNDh),
                     onClick: () => {
-                        t({
-                            field_type: s.rX.TEXT_INPUT,
-                            label: g.intl.string(g.t.jqrNDh),
-                            required: !0,
-                        });
+                        t({ field_type: r.rX.TEXT_INPUT, label: g.intl.string(g.t.jqrNDh), required: !0 });
                     },
                 },
                 {
                     text: g.intl.string(g.t.I5q8vp),
                     onClick: () => {
-                        t({
-                            field_type: s.rX.TEXT_INPUT,
-                            label: g.intl.string(g.t.I5q8vp),
-                            required: !0,
-                        });
+                        t({ field_type: r.rX.TEXT_INPUT, label: g.intl.string(g.t.I5q8vp), required: !0 });
                     },
                 },
             ],
             [t],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(l.DZT, {
+            (0, i.jsx)(l.DZT, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: b.hD,
+                className: x.hD,
                 children: g.intl.string(g.t.ID04cA),
             }),
-            (0, r.jsx)(o.z, {
-                pills: n,
-            }),
+            (0, i.jsx)(d.z, { pills: n }),
         ],
     });
 }

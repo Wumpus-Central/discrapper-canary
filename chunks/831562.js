@@ -1,11 +1,9 @@
-i.d(e, {
-    l: () => u,
-});
+i.d(e, { l: () => a });
 var n = i(419954),
     l = i(780964),
     s = i(75698),
     r = i(985018);
-let u = (0, n.E2)(l.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
+let a = (0, n.E2)(l.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
     Component: s.u,
     useSearchTerms: () => [
         r.intl.string(r.t.ZeDrUf),

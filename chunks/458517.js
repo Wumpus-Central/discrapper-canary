@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => h,
-});
+"use strict";
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,75 +7,65 @@ var i = n(503698),
     s = n(311907),
     o = n(342952),
     l = n(397927),
-    c = n(429913),
-    u = n(287809),
+    u = n(429913),
+    c = n(287809),
     d = n(405269),
-    f = n(403362),
-    p = n(985018),
-    _ = n(102373);
+    _ = n(403362),
+    f = n(985018),
+    p = n(102373);
 let h = function (e) {
     let { createdAt: t, participantIds: n, applicationId: i, title: h, guildId: m, className: g } = e,
-        E = (0, c.h)(i),
-        b = (0, s.yK)([u.default], () => {
-            var e;
-            return null != (e = n.map((e) => u.default.getUser(e)).filter(f.Vq)) ? e : [];
-        }),
-        y = null == E ? void 0 : E.name,
-        O = null != t ? (0, d.Fe)(new Date(t)) : null,
-        A = null == E ? void 0 : E.getIconURL(32);
+        E = (0, u.h)(i),
+        A = (0, s.yK)([c.default], () => n.map((e) => c.default.getUser(e)).filter(_.Vq) ?? []),
+        I = E?.name,
+        T = null != t ? (0, d.Fe)(new Date(t)) : null,
+        y = E?.getIconURL(32);
     if (null == t) return null;
-    let v = null == h || "" === h;
+    let S = null == h || "" === h;
     return (0, r.jsxs)("div", {
-        className: a()(g, _.kL),
+        className: a()(g, p.kL),
         children: [
             (0, r.jsx)("div", {
-                className: _.gS,
+                className: p.gS,
                 "aria-hidden": "true",
                 children:
-                    null != A
-                        ? (0, r.jsx)("img", {
-                              src: A,
-                              alt: "",
-                              className: _.NH,
-                          })
-                        : (0, r.jsx)(l.kN9, {
-                              size: "sm",
-                              color: "currentColor",
-                          }),
+                    null != y
+                        ? (0, r.jsx)("img", { src: y, alt: "", className: p.NH })
+                        : (0, r.jsx)(l.kN9, { size: "sm", color: "currentColor" }),
             }),
             (0, r.jsxs)("div", {
-                className: _.i0,
+                className: p.i0,
                 children: [
                     (0, r.jsx)(l.Text, {
-                        className: _.NV,
+                        className: p.NV,
                         variant: "text-md/normal",
-                        color: v ? "text-subtle" : "text-default",
-                        children: v ? p.intl.string(p.t.Cyxddp) : h,
+                        color: S ? "text-subtle" : "text-default",
+                        children: S ? f.intl.string(f.t.Cyxddp) : h,
                     }),
-                    null != y &&
-                        "" !== y &&
+                    null != I &&
+                        "" !== I &&
                         (0, r.jsx)(l.Text, {
-                            className: _.xD,
+                            className: p.xD,
                             color: "text-subtle",
                             variant: "text-sm/medium",
-                            children: y,
+                            children: I,
                         }),
                     (0, r.jsx)(l.Text, {
-                        className: _.xD,
+                        className: p.xD,
                         color: "text-subtle",
                         variant: "text-sm/normal",
-                        children: O,
+                        children: T,
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: _.jW,
+                className: p.jW,
                 children: (0, r.jsx)(o.A, {
                     maxUsers: 4,
-                    users: b,
+                    users: A,
                     guildId: m,
                     size: l._3J.SIZE_24,
-                    "aria-label": p.intl.string(p.t.WTozwe),
+                    "aria-label": f.intl.string(f.t.WTozwe),
                 }),
             }),
         ],

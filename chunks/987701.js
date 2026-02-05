@@ -1,7 +1,7 @@
+"use strict";
 function r(e) {
     return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
 }
-
 function i(e, t) {
     if (e === t) return !0;
     if (null == e || null == t) return !1;
@@ -24,7 +24,5 @@ function i(e, t) {
     }
     return !1;
 }
-n.d(t, {
-    A: () => a,
-});
+n.d(t, { A: () => a });
 let a = i;

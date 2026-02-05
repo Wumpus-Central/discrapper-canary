@@ -1,46 +1,27 @@
-n.d(t, {
-    A: () => E,
-});
-var r = n(627968);
+n.d(t, { A: () => I });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    a = n(652215),
+var r = n(503698),
+    a = n.n(r),
+    l = n(652215),
     s = n(252153);
 let o = "1",
-    c = "2",
-    u = "3",
-    d = "4",
-    p = "5",
-    f = "6",
-    h = "1",
-    A = "2",
-    g = "3",
-    m = "4",
-    b = "5",
-    _ = {
-        [a.eMA.ESRB]: {
-            [o]: s._,
-            [c]: s.Zp,
-            [u]: s.N8,
-            [d]: s.L3,
-            [p]: s.Pu,
-            [f]: s.Jd,
-        },
-        [a.eMA.PEGI]: {
-            [h]: s.k8,
-            [A]: s.Do,
-            [g]: s.$w,
-            [m]: s.yx,
-            [b]: s.pr,
-        },
+    d = "2",
+    c = "3",
+    u = "4",
+    A = "5",
+    h = "6",
+    _ = "1",
+    m = "2",
+    p = "3",
+    g = "4",
+    E = "5",
+    f = {
+        [l.eMA.ESRB]: { [o]: s._, [d]: s.Zp, [c]: s.N8, [u]: s.L3, [A]: s.Pu, [h]: s.Jd },
+        [l.eMA.PEGI]: { [_]: s.k8, [m]: s.Do, [p]: s.$w, [g]: s.yx, [E]: s.pr },
     },
-    E = (e) => {
-        let { agency: t, rating: n, className: i } = e,
-            a = _[t][n];
-        return null == a
-            ? null
-            : (0, r.jsx)("div", {
-                  className: l()(s.ZL, a, i),
-              });
+    I = (e) => {
+        let { agency: t, rating: n, className: r } = e,
+            l = f[t][n];
+        return null == l ? null : (0, i.jsx)("div", { className: a()(s.ZL, l, r) });
     };

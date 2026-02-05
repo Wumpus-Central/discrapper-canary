@@ -1,170 +1,91 @@
-r.d(t, {
-    default: () => S,
-}),
-    r(896048),
-    r(142703);
-var n = r(627968),
-    l = r(64700),
-    o = r(340287),
-    a = r(397927),
-    c = r(830215),
-    i = r(964486),
-    s = r(883662),
-    u = r(628965),
-    f = r(203982),
-    b = r(115063),
-    y = r(152056),
-    d = r(780964),
-    p = r(162396),
-    g = r(12901),
-    O = r(921854),
-    j = r(840065),
-    h = r(652215),
-    m = r(985018),
-    v = r(249316);
-
-function x(e) {
-    let { destinationPanel: t, originPanel: r } = e;
-    (0, b.iY)({
+n.d(t, { default: () => v }), n(142703);
+var r = n(627968),
+    a = n(64700),
+    o = n(340287),
+    i = n(397927),
+    l = n(830215),
+    s = n(964486),
+    c = n(883662),
+    _ = n(628965),
+    u = n(203982),
+    d = n(115063),
+    b = n(152056),
+    m = n(780964),
+    g = n(162396),
+    p = n(12901),
+    f = n(921854),
+    x = n(840065),
+    h = n(652215),
+    y = n(985018),
+    C = n(249316);
+function S(e) {
+    let { destinationPanel: t, originPanel: n } = e;
+    (0, d.iY)({
         destinationPane: t,
-        originPane: r,
-        subsection: u.A.getSubsection(),
-        source: u.A.getAnalyticsLocation(),
-        locationStack: u.A.getAnalyticsLocations(),
+        originPane: n,
+        subsection: _.A.getSubsection(),
+        source: _.A.getAnalyticsLocation(),
+        locationStack: _.A.getAnalyticsLocations(),
     });
 }
-
-function S(e) {
-    let { target: t } = e,
-        r = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l,
-                o = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-                return o;
-            }
-            if (
-                ((o = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        o = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < o.length; n++)
-                        (r = o[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                    return l;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-            return o;
-        })(e, ["target"]),
-        a = y.A.useField("query"),
-        b = l.useRef(null);
-    (0, i.Ay)(() => {
-        let e = u.A.getSection();
-        null != e &&
-            (x({
-                destinationPanel: e,
-                originPanel: null,
-            }),
-            (b.current = e));
+function v(e) {
+    let { target: t, ...n } = e,
+        i = b.A.useField("query"),
+        d = a.useRef(null);
+    (0, s.Ay)(() => {
+        let e = _.A.getSection();
+        null != e && (S({ destinationPanel: e, originPanel: null }), (d.current = e));
     });
-    let m = l.useCallback((e) => {
-            y.A.setState({
-                query: e,
-            });
+    let y = a.useCallback((e) => {
+            b.A.setState({ query: e });
         }, []),
-        [v, S] = l.useState(!1);
-    return (l.useEffect(() => {
+        [C, v] = a.useState(!1);
+    return (a.useEffect(() => {
         let e = () => {
             (0, o.flushSync)(() => {
-                S(!0), (0, g.default)();
+                v(!0), (0, p.default)();
             }),
                 setImmediate(() => {
-                    c.A.logout("settings");
+                    l.A.logout("settings");
                 });
         };
         return (
-            f._.subscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e),
+            u._.subscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e),
             () => {
-                f._.unsubscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e);
+                u._.unsubscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e);
             }
         );
     }, []),
-    v)
+    C)
         ? null
-        : (0, n.jsx)(
-              s.A,
-              (function (e) {
-                  for (var t = 1; t < arguments.length; t++) {
-                      var r = null != arguments[t] ? arguments[t] : {},
-                          n = Object.keys(r);
-                      "function" == typeof Object.getOwnPropertySymbols &&
-                          (n = n.concat(
-                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                              }),
-                          )),
-                          n.forEach(function (t) {
-                              var n;
-                              (n = r[t]),
-                                  t in e
-                                      ? Object.defineProperty(e, t, {
-                                            value: n,
-                                            enumerable: !0,
-                                            configurable: !0,
-                                            writable: !0,
-                                        })
-                                      : (e[t] = n);
-                          });
-                  }
-                  return e;
-              })(
-                  {
-                      partialRoot: O.D,
-                      emptyState: P,
-                      sidebarFooter: p.A,
-                      onPanelChange: (e) => {
-                          let t = (0, j.getUserSettingsSectionsByWebUserSettings)().get(e);
-                          null != t &&
-                              (x({
-                                  destinationPanel: t,
-                                  originPanel: b.current,
-                              }),
-                              (b.current = t));
-                      },
-                      target: t,
-                      defaultTarget: d.X.ACCOUNT_PANEL,
-                      searchQuery: a,
-                      onSearchChange: m,
-                  },
-                  r,
-              ),
-          );
+        : (0, r.jsx)(c.A, {
+              partialRoot: f.D,
+              emptyState: j,
+              sidebarFooter: g.A,
+              onPanelChange: (e) => {
+                  let t = (0, x.getUserSettingsSectionsByWebUserSettings)().get(e);
+                  null != t && (S({ destinationPanel: t, originPanel: d.current }), (d.current = t));
+              },
+              target: t,
+              defaultTarget: m.X.ACCOUNT_PANEL,
+              searchQuery: i,
+              onSearchChange: y,
+              ...n,
+          });
 }
-
-function P() {
-    return (0, n.jsxs)("div", {
-        className: v.t,
+function j() {
+    return (0, r.jsxs)("div", {
+        className: C.t,
         children: [
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: m.intl.string(m.t.zihbmv),
+                children: y.intl.string(y.t.zihbmv),
             }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: m.intl.string(m.t.XclvsB),
+                children: y.intl.string(y.t.XclvsB),
             }),
         ],
     });

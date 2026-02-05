@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     C$: "nav_b2eddf",
     vi: "navPrev_b2eddf nav_b2eddf",

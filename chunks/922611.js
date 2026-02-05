@@ -1,80 +1,59 @@
-n.d(t, {
-    c: () => h,
-    g: () => f,
-}),
-    n(65821);
+n.d(t, { c: () => h, g: () => m });
 var i,
-    r = n(627968),
-    l = n(64700),
-    a = n(311907),
-    s = n(397927),
+    l = n(627968),
+    a = n(64700),
+    s = n(311907),
+    r = n(397927),
     o = n(263063),
-    u = n(290863),
-    c = n(102983),
-    d = n(912156),
+    d = n(290863),
+    u = n(102983),
+    c = n(912156),
     h = (((i = {})[(i.SIZE_24 = 24)] = "SIZE_24"), (i[(i.SIZE_40 = 40)] = "SIZE_40"), i);
-
-function p(e, t) {
+function A(e, t) {
     switch (t) {
         case "user":
         case "groupDm":
-            return 24 === e ? s._3J.SIZE_24 : s._3J.SIZE_40;
+            return 24 === e ? r._3J.SIZE_24 : r._3J.SIZE_40;
         case "guild":
             return 24 === e ? o.A.Sizes.SMALLER : o.A.Sizes.MEDIUM;
         case "default":
             return 24 === e ? "sm" : "md";
         default:
-            throw Error("Unhandled icon type: ".concat(String(t)));
+            throw Error(`Unhandled icon type: ${String(t)}`);
     }
 }
-let f = l.memo(function (e) {
-    var t, n;
+let m = a.memo(function (e) {
     let {
-            channel: i,
-            user: l,
-            guild: h,
-            isSelected: f = !1,
-            size: g = 24,
+            channel: t,
+            user: n,
+            guild: i,
+            isSelected: a = !1,
+            size: h = 24,
             isTyping: m = !1,
-            mentionCount: y = 0,
-            isMentionLowImportance: A = !1,
+            mentionCount: g = 0,
+            isMentionLowImportance: p = !1,
         } = e,
-        v = null != (t = null == i ? void 0 : i.isPrivate()) && t,
-        b = null != (n = null == i ? void 0 : i.isMultiUserDM()) && n,
-        E = null == l ? void 0 : l.id,
-        O = (0, a.bG)([u.A], () => (null != E ? u.A.getStatus(E) : null), [E]),
-        x = (0, a.bG)([u.A], () => null != E && u.A.isMobileOnline(E), [E]);
-    if (v || b)
-        return (0, r.jsx)(c.h, {
-            channel: null != i ? i : null,
-            user: l,
+        f = t?.isPrivate() ?? !1,
+        _ = t?.isMultiUserDM() ?? !1,
+        E = n?.id,
+        x = (0, s.bG)([d.A], () => (null != E ? d.A.getStatus(E) : null), [E]),
+        S = (0, s.bG)([d.A], () => null != E && d.A.isMobileOnline(E), [E]);
+    if (f || _)
+        return (0, l.jsx)(u.h, {
+            channel: t ?? null,
+            user: n,
             "aria-hidden": !0,
-            size: p(g, "user"),
-            status: O,
-            isMobile: x,
+            size: A(h, "user"),
+            status: x,
+            isMobile: S,
             isTyping: m,
-            mentionCount: y,
-            isMentionLowImportance: A,
+            mentionCount: g,
+            isMentionLowImportance: p,
         });
-    if (null == h)
-        return (0, r.jsx)(s.oyn, {
-            size: p(g, "default"),
-            color: s.LU0.colors.INTERACTIVE_ICON_DEFAULT,
-        });
+    if (null == i) return (0, l.jsx)(r.oyn, { size: A(h, "default"), color: r.LU0.colors.INTERACTIVE_ICON_DEFAULT });
     {
-        if (null == i)
-            return (0, r.jsx)(o.A, {
-                guild: h,
-                size: p(g, "guild"),
-                active: !0,
-                showTooltip: !1,
-            });
-        let e = 40 === g ? d.Q.MEDIUM_40 : d.Q.TINY_24;
-        return (0, r.jsx)(d.A, {
-            channel: i,
-            guild: h,
-            size: e,
-            isTyping: m,
-        });
+        if (null == t) return (0, l.jsx)(o.A, { guild: i, size: A(h, "guild"), active: !0, showTooltip: !1 });
+        let e = 40 === h ? c.Q.MEDIUM_40 : c.Q.TINY_24;
+        return (0, l.jsx)(c.A, { channel: t, guild: i, size: e, isTyping: m });
     }
 });

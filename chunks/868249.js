@@ -1,3 +1,2 @@
-e.exports = {
-    q: "layer__95d7b",
-};
+"use strict";
+e.exports = { q: "layer__95d7b" };

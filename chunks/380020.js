@@ -1,31 +1,12 @@
-n.d(t, {
-    A: () => c,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => l });
 var r = n(73153),
     i = n(439372),
     a = n(461213);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+class s extends i.A {
+    stores = new Map().set(a.A, o);
 }
-class o extends i.A {
-    constructor(...e) {
-        super(...e), s(this, "stores", new Map().set(a.A, l));
-    }
-}
-
-function l() {
+function o() {
     r.h.dispatch({
         type: "SELF_PRESENCE_STORE_UPDATE",
         status: a.A.getStatus(),
@@ -33,4 +14,4 @@ function l() {
         hiddenActivities: a.A.getHiddenActivities(),
     });
 }
-let c = new o();
+let l = new s();

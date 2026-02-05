@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     "spinner-wandering-cubes": "spinner-wandering-cubes__46696",
     "spinner-chasing-dots-rotate": "spinner-chasing-dots-rotate__46696",

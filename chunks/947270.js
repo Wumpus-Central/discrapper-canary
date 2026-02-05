@@ -1,29 +1,15 @@
-n.d(t, {
-    A: () => i,
-});
-var r = n(627968);
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
-let i = (e) => {
-    let { id: t, startColor: n, stopColor: i, color: l, stop: a } = e;
-    return (0, r.jsxs)("linearGradient", {
+let r = (e) => {
+    let { id: t, startColor: n, stopColor: r, color: a, stop: l } = e;
+    return (0, i.jsxs)("linearGradient", {
         id: t,
         children: [
-            (0, r.jsx)("stop", {
-                offset: "0",
-                stopColor: n,
-            }),
-            (0, r.jsx)("stop", {
-                offset: a,
-                stopColor: i,
-            }),
-            (0, r.jsx)("stop", {
-                offset: a,
-                stopColor: l,
-            }),
-            (0, r.jsx)("stop", {
-                offset: "1",
-                stopColor: l,
-            }),
+            (0, i.jsx)("stop", { offset: "0", stopColor: n }),
+            (0, i.jsx)("stop", { offset: l, stopColor: r }),
+            (0, i.jsx)("stop", { offset: l, stopColor: a }),
+            (0, i.jsx)("stop", { offset: "1", stopColor: a }),
         ],
     });
 };

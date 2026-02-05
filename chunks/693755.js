@@ -1,3 +1,4 @@
+"use strict";
 var n = e(421212),
     o = TypeError;
 t.exports = function (t) {

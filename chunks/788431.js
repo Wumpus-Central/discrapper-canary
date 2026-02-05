@@ -28,17 +28,8 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            {
-                className: "string",
-                begin: "'",
-                end: "'",
-            },
-            {
-                className: "attribute",
-                begin: "^Content",
-                end: ":",
-                excludeEnd: !0,
-            },
+            { className: "string", begin: "'", end: "'" },
+            { className: "attribute", begin: "^Content", end: ":", excludeEnd: !0 },
         ],
     };
 };

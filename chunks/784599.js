@@ -1,46 +1,54 @@
-n.d(t, {
-    U: () => v,
-}),
-    n(321073);
-var r,
-    i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    o = n.n(s),
-    l = n(835245),
-    c = n(158954),
+"use strict";
+n.d(t, { U: () => T }), n(321073);
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(835245),
+    l = n(158954),
     u = n(504345),
-    d = n(571356),
-    f = n(826745),
-    p = n(985018),
-    _ = n(648359),
-    h = n(713545),
-    m = n(829681);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let E = (0, l.A)(),
-    b = (0, l.A)(),
-    y = (0, l.A)(),
-    O = 10,
-    A = 7.23;
-class v extends (r = a.Component) {
+    c = n(571356),
+    d = n(826745),
+    _ = n(985018),
+    f = n(648359),
+    p = n(713545),
+    h = n(829681);
+let m = (0, o.A)(),
+    g = (0, o.A)(),
+    E = (0, o.A)(),
+    A = 10,
+    I = 7.23;
+class T extends i.Component {
+    static contextType = u.cK;
+    static defaultProps = {
+        name: "",
+        disabled: !1,
+        placeholder: "",
+        autoFocus: !1,
+        resizeable: !1,
+        flex: !1,
+        autosize: !1,
+        rows: 3,
+        allowOverflow: !1,
+    };
+    constructor(e) {
+        super(e), (this.state = { dirty: e.defaultDirty ?? !1 });
+    }
+    getAriaDescribedBy = () => {
+        let { maxLength: e, minLength: t, error: n } = this.props,
+            r = [],
+            i = this.context?.errorId;
+        return (
+            null != i && r.push(i),
+            null != n ? r.push(m) : (null != e && r.push(E), null != t && r.push(g)),
+            r.length > 0 ? r.join(" ") : void 0
+        );
+    };
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
-        if (null == e) return O;
-        let n = "".concat(e).length;
-        return t && (n += "".concat(e, " / ").length), A * n + O;
+        if (null == e) return A;
+        let n = `${e}`.length;
+        return t && (n += `${e} / `.length), I * n + A;
     }
     getCharsLeftLength() {
         let { maxLength: e, value: t } = this.props;
@@ -56,14 +64,11 @@ class v extends (r = a.Component) {
     }
     renderCharacterCount() {
         if (this.props.showCharacterCount) {
-            var e;
-            let { value: t, maxLength: n } = this.props;
-            return (0, i.jsxs)("div", {
-                className: o()(_.Ru, {
-                    [_.hz]: this.hasError(),
-                }),
+            let { value: e, maxLength: t } = this.props;
+            return (0, r.jsxs)("div", {
+                className: s()(f.Ru, { [f.hz]: this.hasError() }),
                 "aria-hidden": "true",
-                children: [null != (e = null == t ? void 0 : t.length) ? e : 0, " ", null != n && "/ ".concat(n)],
+                children: [e?.length ?? 0, " ", null != t && `/ ${t}`],
             });
         }
         return null;
@@ -73,13 +78,7 @@ class v extends (r = a.Component) {
         let e = this.getCharsLeftLength();
         return null == e
             ? null
-            : (0, i.jsx)("div", {
-                  className: o()(_.Ru, {
-                      [_.hz]: e < 0,
-                  }),
-                  "aria-hidden": "true",
-                  children: e,
-              });
+            : (0, r.jsx)("div", { className: s()(f.Ru, { [f.hz]: e < 0 }), "aria-hidden": "true", children: e });
     }
     hasError() {
         return (
@@ -90,119 +89,88 @@ class v extends (r = a.Component) {
     }
     getErrorMessage() {
         let { error: e, maxLength: t, minLength: n } = this.props,
-            r = this.getIsOverflowing()
-                ? p.intl.formatToPlainString(p.t.ICT5S6, {
-                      maxLength: t,
-                  })
-                : null,
-            i = this.getIsUnderflowing()
-                ? p.intl.formatToPlainString(p.t["62rk1K"], {
-                      minLength: n,
-                  })
-                : null;
+            r = this.getIsOverflowing() ? _.intl.formatToPlainString(_.t.ICT5S6, { maxLength: t }) : null,
+            i = this.getIsUnderflowing() ? _.intl.formatToPlainString(_.t["62rk1K"], { minLength: n }) : null;
         return (null != e && "" === e) || null === e
             ? null
             : void 0 !== e
               ? e
               : !1 === this.state.dirty
                 ? null
-                : null != r
-                  ? r
-                  : i;
+                : (r ?? i);
     }
     renderErrorMessage() {
         let e = this.getErrorMessage();
         return null == e
             ? null
-            : (0, i.jsx)(d.E, {
-                  id: E,
+            : (0, r.jsx)(c.E, {
+                  id: m,
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
-                  className: _.gJ,
+                  className: f.gJ,
                   children: e,
               });
     }
     render() {
-        var e, t;
         let {
-                disabled: n,
-                value: r,
-                placeholder: a,
-                autoFocus: s,
-                minLength: l,
-                maxLength: u,
-                allowOverflow: d,
-                spellCheck: g,
-                resizeable: E,
-                className: O,
-                id: A,
-                rows: v,
-                flex: S,
-                autosize: I,
-                required: T,
+                disabled: e,
+                value: t,
+                placeholder: n,
+                autoFocus: i,
+                minLength: a,
+                maxLength: o,
+                allowOverflow: u,
+                spellCheck: c,
+                resizeable: m,
+                className: A,
+                id: I,
+                rows: T,
+                flex: y,
+                autosize: S,
+                required: v,
                 onInvalid: C,
-                inputRef: N,
+                inputRef: b,
             } = this.props,
-            R = I ? f.y : "textarea",
-            w = this.hasError(),
-            P = null != (e = this.props["aria-labelledby"]) ? e : null == (t = this.context) ? void 0 : t.titleId,
+            N = S ? d.y : "textarea",
+            R = this.hasError(),
+            O = this.props["aria-labelledby"] ?? this.context?.titleId,
             D = this.getAriaDescribedBy();
-        return (0, i.jsxs)("div", {
-            className: o()(h.I6, {
-                [_.Uu]: S,
-            }),
+        return (0, r.jsxs)("div", {
+            className: s()(p.I6, { [f.Uu]: y }),
             children: [
-                (0, i.jsxs)("div", {
-                    className: o()(_.b4, {
-                        [_.Uu]: S,
-                    }),
+                (0, r.jsxs)("div", {
+                    className: s()(f.b4, { [f.Uu]: y }),
                     children: [
-                        (0, i.jsx)(c.vN3, {
-                            children: (0, i.jsx)(R, {
+                        (0, r.jsx)(l.vN3, {
+                            children: (0, r.jsx)(N, {
                                 type: "text",
-                                className: o()(h.hF, _.Tg, m.qD, O, {
-                                    [h.z3]: w,
-                                    [h.r9]: n,
-                                    [_.Xl]: E,
-                                }),
-                                "aria-labelledby": P,
+                                className: s()(p.hF, f.Tg, h.qD, A, { [p.z3]: R, [p.r9]: e, [f.Xl]: m }),
+                                "aria-labelledby": O,
                                 "aria-describedby": D,
-                                "aria-invalid": w,
-                                style: {
-                                    paddingRight: this.getPaddingRight(),
-                                },
-                                id: A,
-                                disabled: n,
-                                placeholder: a,
-                                value: r,
-                                autoFocus: s,
-                                minLength: l,
-                                maxLength: d ? void 0 : u,
-                                spellCheck: g,
-                                required: T,
+                                "aria-invalid": R,
+                                style: { paddingRight: this.getPaddingRight() },
+                                id: I,
+                                disabled: e,
+                                placeholder: n,
+                                value: t,
+                                autoFocus: i,
+                                minLength: a,
+                                maxLength: u ? void 0 : o,
+                                spellCheck: c,
+                                required: v,
                                 onChange: this.onChange,
                                 onBlur: this.onBlur,
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: C,
-                                rows: v,
-                                ref: N,
+                                rows: T,
+                                ref: b,
                             }),
                         }),
-                        null != l &&
-                            (0, i.jsx)(c.AC4, {
-                                id: b,
-                                children: p.intl.format(p.t["bmQU//"], {
-                                    minLength: l,
-                                }),
-                            }),
-                        null != u &&
-                            (0, i.jsx)(c.AC4, {
-                                id: y,
-                                children: p.intl.format(p.t["+DFxLc"], {
-                                    maxLength: u,
-                                }),
-                            }),
+                        null != a &&
+                            (0, r.jsx)(l.AC4, { id: g, children: _.intl.format(_.t["bmQU//"], { minLength: a }) }),
+                        null != o &&
+                            (0, r.jsx)(l.AC4, { id: E, children: _.intl.format(_.t["+DFxLc"], { maxLength: o }) }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),
                     ],
@@ -211,53 +179,20 @@ class v extends (r = a.Component) {
             ],
         });
     }
-    constructor(e) {
-        var t;
-        super(e),
-            g(this, "getAriaDescribedBy", () => {
-                var e;
-                let { maxLength: t, minLength: n, error: r } = this.props,
-                    i = [],
-                    a = null == (e = this.context) ? void 0 : e.errorId;
-                return (
-                    null != a && i.push(a),
-                    null != r ? i.push(E) : (null != t && i.push(y), null != n && i.push(b)),
-                    i.length > 0 ? i.join(" ") : void 0
-                );
-            }),
-            g(this, "onChange", (e) => {
-                let { onChange: t, name: n } = this.props;
-                null == t || t(e.currentTarget.value, n),
-                    this.setState({
-                        dirty: !0,
-                    });
-            }),
-            g(this, "onFocus", (e) => {
-                let { onFocus: t, name: n } = this.props;
-                null == t || t(e, n);
-            }),
-            g(this, "onBlur", (e) => {
-                let { onBlur: t, name: n } = this.props;
-                null == t || t(e, n);
-            }),
-            g(this, "onKeyDown", (e) => {
-                let { onKeyDown: t } = this.props;
-                null == t || t(e);
-            }),
-            (this.state = {
-                dirty: null != (t = e.defaultDirty) && t,
-            });
-    }
+    onChange = (e) => {
+        let { onChange: t, name: n } = this.props;
+        t?.(e.currentTarget.value, n), this.setState({ dirty: !0 });
+    };
+    onFocus = (e) => {
+        let { onFocus: t, name: n } = this.props;
+        t?.(e, n);
+    };
+    onBlur = (e) => {
+        let { onBlur: t, name: n } = this.props;
+        t?.(e, n);
+    };
+    onKeyDown = (e) => {
+        let { onKeyDown: t } = this.props;
+        t?.(e);
+    };
 }
-g(v, "contextType", u.cK),
-    g(v, "defaultProps", {
-        name: "",
-        disabled: !1,
-        placeholder: "",
-        autoFocus: !1,
-        resizeable: !1,
-        flex: !1,
-        autosize: !1,
-        rows: 3,
-        allowOverflow: !1,
-    });

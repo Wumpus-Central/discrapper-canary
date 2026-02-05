@@ -12,98 +12,53 @@ e.exports = function (e) {
         o =
             "AltState Application CallType ComponentTokens CreatedJobs CreatedNotices ControlState DialogResult Dialogs EDocuments EDocumentVersionSource Folders GlobalIDs Job Jobs InputValue LookUpReference LookUpRequisiteNames LookUpSearch Object ParentComponent Processes References Requisite ReportName Reports Result Scripts Searches SelectedAttachments SelectedItems SelectMode Sender ServerEvents ServiceFactory ShiftState SubTask SystemDialogs Tasks Wizard Wizards Work ВызовСпособ ИмяОтчета РеквЗнач ",
         l = "null true false nil ",
+        u = { className: "number", begin: e.NUMBER_RE, relevance: 0 },
         c = {
-            className: "number",
-            begin: e.NUMBER_RE,
-            relevance: 0,
-        },
-        u = {
             className: "string",
             variants: [
-                {
-                    begin: '"',
-                    end: '"',
-                },
-                {
-                    begin: "'",
-                    end: "'",
-                },
+                { begin: '"', end: '"' },
+                { begin: "'", end: "'" },
             ],
         },
-        d = {
-            className: "doctag",
-            begin: "\\b(?:TODO|DONE|BEGIN|END|STUB|CHG|FIXME|NOTE|BUG|XXX)\\b",
-            relevance: 0,
-        },
-        f = {
-            variants: [
-                {
-                    className: "comment",
-                    begin: "//",
-                    end: "$",
-                    relevance: 0,
-                    contains: [e.PHRASAL_WORDS_MODE, d],
-                },
-                {
-                    className: "comment",
-                    begin: "/\\*",
-                    end: "\\*/",
-                    relevance: 0,
-                    contains: [e.PHRASAL_WORDS_MODE, d],
-                },
-            ],
-        },
-        p = {
-            $pattern: t,
-            keyword: r,
-            built_in: s,
-            class: o,
-            literal: l,
-        },
+        d = { className: "doctag", begin: "\\b(?:TODO|DONE|BEGIN|END|STUB|CHG|FIXME|NOTE|BUG|XXX)\\b", relevance: 0 },
         _ = {
-            begin: "\\.\\s*" + e.UNDERSCORE_IDENT_RE,
-            keywords: p,
-            relevance: 0,
+            variants: [
+                { className: "comment", begin: "//", end: "$", relevance: 0, contains: [e.PHRASAL_WORDS_MODE, d] },
+                { className: "comment", begin: "/\\*", end: "\\*/", relevance: 0, contains: [e.PHRASAL_WORDS_MODE, d] },
+            ],
         },
+        f = { $pattern: t, keyword: r, built_in: s, class: o, literal: l },
+        p = { begin: "\\.\\s*" + e.UNDERSCORE_IDENT_RE, keywords: f, relevance: 0 },
         h = {
             className: "type",
             begin: ":[ \\t]*(" + a.trim().replace(/\s/g, "|") + ")",
             end: "[ \\t]*=",
             excludeEnd: !0,
         },
-        m = {
-            className: "variable",
-            keywords: p,
-            begin: t,
-            relevance: 0,
-            contains: [h, _],
-        },
+        m = { className: "variable", keywords: f, begin: t, relevance: 0, contains: [h, p] },
         g = n + "\\(",
         E = {
             className: "title",
-            keywords: {
-                $pattern: t,
-                built_in: i,
-            },
+            keywords: { $pattern: t, built_in: i },
             begin: g,
             end: "\\(",
             returnBegin: !0,
             excludeEnd: !0,
         },
-        b = {
+        A = {
             className: "function",
             begin: g,
             end: "\\)$",
             returnBegin: !0,
-            keywords: p,
+            keywords: f,
             illegal: "[\\[\\]\\|\\$\\?%,~#@]",
-            contains: [E, _, m, u, c, f],
+            contains: [E, p, m, c, u, _],
         };
     return {
         name: "ISBL",
         case_insensitive: !0,
-        keywords: p,
+        keywords: f,
         illegal: "\\$|\\?|%|,|;$|~|#|@|</",
-        contains: [b, h, _, m, u, c, f],
+        contains: [A, h, p, m, c, u, _],
     };
 };

@@ -1,145 +1,112 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(321073),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(713402),
-    s = n(73153),
-    o = n(994500),
-    l = n(652215);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => b }), n(321073);
+var r = n(311907),
+    i = n(713402),
+    a = n(73153),
+    s = n(994500),
+    o = n(652215);
+function l(e) {
+    return { id: e.id, applicationId: e.application_id, type: e.type, since: e.since, dmAccessType: e.dm_access_type };
 }
-
-function u(e) {
-    return {
-        id: e.id,
-        applicationId: e.application_id,
-        type: e.type,
-        since: e.since,
-        dmAccessType: e.dm_access_type,
-    };
-}
-let d = (e, t) => "".concat(t, "-").concat(e),
-    f = (e) => "application-id-".concat(e),
-    p = (e) => "user-id-".concat(e),
-    _ = (e) => "relationship-type-".concat(e);
-
-function h(e) {
+let u = (e, t) => `${t}-${e}`,
+    c = (e) => `application-id-${e}`,
+    d = (e) => `user-id-${e}`,
+    _ = (e) => `relationship-type-${e}`;
+function f(e) {
     let t = [];
-    return t.push(f(e.applicationId)), t.push(p(e.id)), t.push(_(e.type)), t;
+    return t.push(c(e.applicationId)), t.push(d(e.id)), t.push(_(e.type)), t;
 }
-let m = new a.J(h, (e) => "".concat(e.since)),
-    g = 0,
-    E = 0,
-    b = 0;
-
-function y() {
+let p = new i.J(f, (e) => `${e.since}`),
+    h = 0,
+    m = 0,
+    g = 0;
+function E() {
     let e = 0,
         t = 0,
         n = 0;
-    m.values().forEach((r) => {
+    p.values().forEach((r) => {
         let { type: i, id: a } = r;
-        if (i === l.eA$.FRIEND) n += 1;
-        else if (i === l.eA$.PENDING_OUTGOING) t += 1;
-        else if (i === l.eA$.PENDING_INCOMING) {
-            if (o.A.isSpam(a) || o.A.isIgnored(a)) return;
+        if (i === o.eA$.FRIEND) n += 1;
+        else if (i === o.eA$.PENDING_OUTGOING) t += 1;
+        else if (i === o.eA$.PENDING_INCOMING) {
+            if (s.A.isSpam(a) || s.A.isIgnored(a)) return;
             e += 1;
         }
     }),
-        (g = e),
-        (E = t),
-        (b = n);
+        (h = e),
+        (m = t),
+        (g = n);
 }
-
-function O(e) {
-    m.set(d(e.id, e.applicationId), e);
+function A(e) {
+    p.set(u(e.id, e.applicationId), e);
 }
-
-function A(e, t) {
-    m.delete(d(e, t));
+function I(e, t) {
+    p.delete(u(e, t));
 }
-
-function v(e) {
+function T(e) {
     let { unknownApplicationIds: t } = e;
     if (null != t) {
         for (let e of t)
-            for (let t of m.values(f(e)))
-                (t.type === l.eA$.PENDING_INCOMING || t.type === l.eA$.PENDING_OUTGOING) && A(t.id, e);
-        y();
+            for (let t of p.values(c(e)))
+                (t.type === o.eA$.PENDING_INCOMING || t.type === o.eA$.PENDING_OUTGOING) && I(t.id, e);
+        E();
     }
 }
-
-function S(e) {
-    m.clear(),
+function y(e) {
+    p.clear(),
         e.gameRelationships.forEach((e) => {
-            O(u(e));
+            A(l(e));
         }),
-        y();
+        E();
 }
-
-function I(e) {
-    O(e.gameRelationship), y();
+function S(e) {
+    A(e.gameRelationship), E();
 }
-
-function T(e) {
-    A(e.userId, e.applicationId), y();
+function v(e) {
+    I(e.userId, e.applicationId), E();
 }
-class C extends (r = i.Ay.Store) {
+class C extends r.Ay.Store {
+    static displayName = "GameRelationshipStore";
     initialize() {
-        this.waitFor(o.A);
+        this.waitFor(s.A);
     }
     getPendingIncomingCount() {
-        return g;
+        return h;
     }
     getPendingOutgoingCount() {
-        return E;
+        return m;
     }
     getGameFriendCount() {
-        return b;
+        return g;
     }
     getGameFriendsForApplication(e) {
-        return m.values(f(e), !0).filter((e) => e.type === l.eA$.FRIEND);
+        return p.values(c(e), !0).filter((e) => e.type === o.eA$.FRIEND);
     }
     getGameRelationshipsForUser(e) {
-        return m.values(p(e), !0);
+        return p.values(d(e), !0);
     }
     getGameRelationshipsForUserByType(e, t) {
         return this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
     }
     getGameFriendsForUser(e) {
-        return this.getGameRelationshipsForUserByType(e, l.eA$.FRIEND);
+        return this.getGameRelationshipsForUserByType(e, o.eA$.FRIEND);
     }
     getGameRelationshipCount() {
-        return m.size();
+        return p.size();
     }
     getGameRelationships() {
-        return m;
+        return p;
     }
     getGameRelationshipsByType(e) {
-        return m.values(_(e), !0);
+        return p.values(_(e), !0);
     }
     getGameRelationshipsVersion() {
-        return m.version;
+        return p.version;
     }
 }
-c(C, "displayName", "GameRelationshipStore");
-let N = new C(s.h, {
-    CONNECTION_OPEN: S,
-    GAME_RELATIONSHIP_ADD: I,
-    GAME_RELATIONSHIP_REMOVE: T,
-    APPLICATIONS_FETCH_SUCCESS: v,
+let b = new C(a.h, {
+    CONNECTION_OPEN: y,
+    GAME_RELATIONSHIP_ADD: S,
+    GAME_RELATIONSHIP_REMOVE: v,
+    APPLICATIONS_FETCH_SUCCESS: T,
 });

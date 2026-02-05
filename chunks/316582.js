@@ -1,3 +1,1 @@
-e.exports = {
-    O: "messageInput__8ff3e",
-};
+e.exports = { O: "messageInput__8ff3e" };

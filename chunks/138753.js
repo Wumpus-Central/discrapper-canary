@@ -1,6 +1,5 @@
-t(697509)(r, "__esModule", {
-    value: !0,
-}),
+"use strict";
+t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
@@ -29,24 +28,9 @@ t(697509)(r, "__esModule", {
             "aria-roledescription": null,
         },
         relatedConcepts: [
-            {
-                concept: {
-                    name: "rel",
-                },
-                module: "HTML",
-            },
-            {
-                concept: {
-                    name: "role",
-                },
-                module: "XHTML",
-            },
-            {
-                concept: {
-                    name: "type",
-                },
-                module: "Dublin Core",
-            },
+            { concept: { name: "rel" }, module: "HTML" },
+            { concept: { name: "role" }, module: "XHTML" },
+            { concept: { name: "type" }, module: "Dublin Core" },
         ],
         requireContextRole: [],
         requiredContextRole: [],

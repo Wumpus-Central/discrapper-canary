@@ -12,15 +12,8 @@ e.exports = function (e) {
             e.C_BLOCK_COMMENT_MODE,
             e.QUOTE_STRING_MODE,
             e.APOS_STRING_MODE,
-            {
-                className: "string",
-                begin: /\{"/,
-                end: /"\}/,
-                contains: [e.BACKSLASH_ESCAPE],
-            },
-            e.COMMENT(";", "$", {
-                relevance: 0,
-            }),
+            { className: "string", begin: /\{"/, end: /"\}/, contains: [e.BACKSLASH_ESCAPE] },
+            e.COMMENT(";", "$", { relevance: 0 }),
             {
                 className: "meta",
                 begin: "#",
@@ -30,19 +23,14 @@ e.exports = function (e) {
                         "addion cfunc cmd cmpopt comfunc const defcfunc deffunc define else endif enum epack func global if ifdef ifndef include modcfunc modfunc modinit modterm module pack packopt regcmd runtime undef usecom uselib",
                 },
                 contains: [
-                    e.inherit(e.QUOTE_STRING_MODE, {
-                        className: "string",
-                    }),
+                    e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
                     e.NUMBER_MODE,
                     e.C_NUMBER_MODE,
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                 ],
             },
-            {
-                className: "symbol",
-                begin: "^\\*(\\w+|@)",
-            },
+            { className: "symbol", begin: "^\\*(\\w+|@)" },
             e.NUMBER_MODE,
             e.C_NUMBER_MODE,
         ],

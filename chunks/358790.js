@@ -1,3 +1,2 @@
-e.exports = {
-    U: "warningContainer__98bed",
-};
+"use strict";
+e.exports = { U: "warningContainer__98bed" };

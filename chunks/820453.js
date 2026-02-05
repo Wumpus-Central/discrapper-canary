@@ -1,102 +1,60 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(896048);
-var r = n(627968),
-    l = n(64700),
-    a = n(503698),
-    i = n.n(a),
+n.d(t, { A: () => _ });
+var l = n(627968),
+    a = n(64700),
+    i = n(503698),
+    r = n.n(i),
     o = n(311907),
-    c = n(397927),
-    s = n(565645),
+    s = n(397927),
+    c = n(565645),
     u = n(937773),
-    f = n(770335),
+    m = n(770335),
     d = n(734057),
-    m = n(723702),
-    b = n(969632),
-    p = n(287618),
-    g = n(412136),
-    O = n(307731),
-    j = n(698279),
-    y = n(985018),
-    h = n(270465);
-
-function v(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        l,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-            (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (
-        ((a = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                l = {},
-                a = Object.getOwnPropertyNames(e);
-            for (r = 0; r < a.length; r++)
-                (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
-            return l;
-        })(e, t)),
-        Object.getOwnPropertySymbols)
-    )
-        for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-            (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function w(e) {
+    f = n(723702),
+    g = n(969632),
+    b = n(287618),
+    p = n(412136),
+    h = n(307731),
+    A = n(698279),
+    C = n(985018),
+    R = n(270465);
+function j(e) {
     let {
         hasUpload: t,
         mediaUrl: n,
-        mediaFilename: l,
-        imageClassName: a,
-        emoji: i,
+        mediaFilename: a,
+        imageClassName: i,
+        emoji: r,
         emojiClassName: o,
-        fallback: c,
+        fallback: s,
     } = e;
     return t
-        ? (0, r.jsx)("img", {
-              src: n,
-              alt: l,
-              className: a,
-          })
-        : null != i
-          ? (0, r.jsx)(s.A, {
+        ? (0, l.jsx)("img", { src: n, alt: a, className: i })
+        : null != r
+          ? (0, l.jsx)(c.A, {
                 className: o,
-                emojiId: i.id,
-                emojiName: i.type === f.i.UNICODE ? i.optionallyDiverseSequence : i.name,
-                animated: i.animated,
+                emojiId: r.id,
+                emojiName: r.type === m.i.UNICODE ? r.optionallyDiverseSequence : r.name,
+                animated: r.animated,
             })
-          : c;
+          : s;
 }
-
-function P(e) {
-    let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: a } = e;
-    return (0, r.jsx)("div", {
-        className: h.li,
-        children: (0, r.jsx)(c.W1t, {
+function k(e) {
+    let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: i } = e;
+    return (0, l.jsx)("div", {
+        className: R.li,
+        children: (0, l.jsx)(s.W1t, {
             "data-menu-migrated-auto": !0,
             navId: "poll-media-edit-menu",
-            onClose: a,
-            "aria-label": y.intl.string(y.t["cV+h7B"]),
+            onClose: i,
+            "aria-label": C.intl.string(C.t["cV+h7B"]),
             onSelect: t,
-            children: (0, r.jsxs)(c.rXV, {
+            children: (0, l.jsxs)(s.rXV, {
                 children: [
-                    (0, r.jsx)(c.Drp, {
-                        id: "poll-media-replace",
-                        label: y.intl.string(y.t.CZeRhU),
-                        action: n,
-                    }),
-                    (0, r.jsx)(c.Drp, {
+                    (0, l.jsx)(s.Drp, { id: "poll-media-replace", label: C.intl.string(C.t.CZeRhU), action: n }),
+                    (0, l.jsx)(s.Drp, {
                         id: "poll-media-delete",
-                        label: y.intl.string(y.t.IhMxgu),
-                        action: l,
+                        label: C.intl.string(C.t.IhMxgu),
+                        action: a,
                         color: "danger",
                     }),
                 ],
@@ -104,291 +62,195 @@ function P(e) {
         }),
     });
 }
-
-function A(e) {
+function x(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
-            buttonImage: a,
-            onEmojiSelect: s,
-            onEmojiRemove: f,
-            answerIndex: m,
-            shouldShowEmojiPicker: g,
-            toggleEmojiPicker: A,
-            containerRef: C,
+            buttonImage: i,
+            onEmojiSelect: c,
+            onEmojiRemove: m,
+            answerIndex: f,
+            shouldShowEmojiPicker: p,
+            toggleEmojiPicker: x,
+            containerRef: _,
         } = e,
-        k = l.useRef(null),
-        R = (0, o.bG)([d.A], () => d.A.getChannel(t)),
+        w = a.useRef(null),
+        E = (0, o.bG)([d.A], () => d.A.getChannel(t)),
         {
-            emoji: x,
-            isLoadingMedia: E,
-            hasUpload: _,
+            emoji: P,
+            isLoadingMedia: N,
+            hasUpload: I,
             mediaUrl: S,
-            mediaFilename: D,
-        } = (0, p.A)({
-            channelId: t,
-            localCreationAnswerId: n,
-            image: a,
-        }),
-        I = _ || null != x,
-        N = l.useCallback(() => {
-            f(m);
-        }, [f, m]),
-        T = l.useMemo(
+            mediaFilename: v,
+        } = (0, b.A)({ channelId: t, localCreationAnswerId: n, image: i }),
+        D = I || null != P,
+        O = a.useCallback(() => {
+            m(f);
+        }, [m, f]),
+        y = a.useMemo(
             () =>
-                _
-                    ? y.intl.formatToPlainString(y.t.vcC7Qn, {
-                          imageName: (0, b.Kj)(D),
-                          answerNumber: m + 1,
-                      })
-                    : null != x
-                      ? y.intl.formatToPlainString(y.t.ncOAha, {
-                            emojiName: x.name,
-                            answerNumber: m + 1,
-                        })
-                      : y.intl.formatToPlainString(y.t.emdpNo, {
-                            answerNumber: m + 1,
-                        }),
-            [_, x, m, D],
+                I
+                    ? C.intl.formatToPlainString(C.t.vcC7Qn, { imageName: (0, g.Kj)(v), answerNumber: f + 1 })
+                    : null != P
+                      ? C.intl.formatToPlainString(C.t.ncOAha, { emojiName: P.name, answerNumber: f + 1 })
+                      : C.intl.formatToPlainString(C.t.emdpNo, { answerNumber: f + 1 }),
+            [I, P, f, v],
         ),
-        U = l.useCallback(
+        T = a.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)("div", {
-                    className: h.Fb,
-                    children: (0, r.jsx)(u.A, {
-                        channel: R,
-                        pickerIntention: O.b_.POLLS,
+                return (0, l.jsx)("div", {
+                    className: R.Fb,
+                    children: (0, l.jsx)(u.A, {
+                        channel: E,
+                        pickerIntention: h.b_.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
-                            let { emoji: n, willClose: r } = e;
-                            null != n && s(n, m), r && t();
+                            let { emoji: n, willClose: l } = e;
+                            null != n && c(n, f), l && t();
                         },
                     }),
                 });
             },
-            [R, s, m],
+            [E, c, f],
         ),
-        L = l.useCallback(
+        U = a.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(P, {
-                    onSelect: t,
-                    onEditMedia: A,
-                    onDeleteMedia: N,
-                    closePopout: t,
-                });
+                return (0, l.jsx)(k, { onSelect: t, onEditMedia: x, onDeleteMedia: O, closePopout: t });
             },
-            [N, A],
+            [O, x],
         ),
-        K = E
-            ? (0, r.jsx)(c.y$y, {
-                  className: h.EC,
-              })
-            : (0, r.jsx)(w, {
-                  hasUpload: _,
+        L = N
+            ? (0, l.jsx)(s.y$y, { className: R.EC })
+            : (0, l.jsx)(j, {
+                  hasUpload: I,
                   mediaUrl: S,
-                  mediaFilename: D,
-                  imageClassName: i()(h.$_, h.qX),
-                  emoji: x,
-                  emojiClassName: i()(h.$_, h.qZ),
-                  fallback: (0, r.jsx)(c.nm2, {
-                      size: "sm",
-                      color: "currentColor",
-                      className: h.vr,
-                  }),
+                  mediaFilename: v,
+                  imageClassName: r()(R.$_, R.qX),
+                  emoji: P,
+                  emojiClassName: r()(R.$_, R.qZ),
+                  fallback: (0, l.jsx)(s.nm2, { size: "sm", color: "currentColor", className: R.vr }),
               }),
-        Y = i()(j.VQ, h.GB, {
-            [h.ZV]: I,
-        });
-    return (0, r.jsx)(c.YNO, {
-        targetElementRef: C,
-        renderPopout: U,
-        shouldShow: g,
-        onRequestClose: A,
-        animation: c.YNO.Animation.NONE,
+        K = r()(A.VQ, R.GB, { [R.ZV]: D });
+    return (0, l.jsx)(s.YNO, {
+        targetElementRef: _,
+        renderPopout: T,
+        shouldShow: p,
+        onRequestClose: x,
+        animation: s.YNO.Animation.NONE,
         position: "bottom",
         spacing: 2,
         children: (e) => {
-            let { "aria-controls": t, "aria-expanded": n } = e;
-            return (
-                v(e, ["aria-controls", "aria-expanded"]),
-                (0, r.jsx)(c.YNO, {
-                    targetElementRef: k,
-                    animation: c.YNO.Animation.NONE,
-                    position: "bottom",
-                    renderPopout: L,
-                    children: (e) => {
-                        var l, a;
-                        let { onClick: i, "aria-controls": o, "aria-expanded": s } = e,
-                            u = v(e, ["onClick", "aria-controls", "aria-expanded"]);
-                        return (0, r.jsxs)(
-                            c.DUT,
-                            ((l = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })(
-                                {
-                                    innerRef: k,
-                                },
-                                u,
-                            )),
-                            (a = a =
-                                {
-                                    className: Y,
-                                    onClick: I && !g ? i : A,
-                                    "aria-label": T,
-                                    "aria-controls": null != t ? t : o,
-                                    "aria-expanded": n || s,
-                                    children: [
-                                        K,
-                                        I &&
-                                            (0, r.jsx)(c.R2l, {
-                                                size: "md",
-                                                color: "currentColor",
-                                                className: h.IZ,
-                                                "aria-hidden": !0,
-                                            }),
-                                    ],
+            let { "aria-controls": t, "aria-expanded": n, ...a } = e;
+            return (0, l.jsx)(s.YNO, {
+                targetElementRef: w,
+                animation: s.YNO.Animation.NONE,
+                position: "bottom",
+                renderPopout: U,
+                children: (e) => {
+                    let { onClick: a, "aria-controls": i, "aria-expanded": r, ...o } = e;
+                    return (0, l.jsxs)(s.DUT, {
+                        innerRef: w,
+                        ...o,
+                        className: K,
+                        onClick: D && !p ? a : x,
+                        "aria-label": y,
+                        "aria-controls": t ?? i,
+                        "aria-expanded": n || r,
+                        children: [
+                            L,
+                            D &&
+                                (0, l.jsx)(s.R2l, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: R.IZ,
+                                    "aria-hidden": !0,
                                 }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            l),
-                        );
-                    },
-                })
-            );
+                        ],
+                    });
+                },
+            });
         },
     });
 }
-
-function C(e) {
+function _(e) {
     let {
             channelId: t,
             answer: n,
-            index: a,
-            isLastAnswer: i,
+            index: i,
+            isLastAnswer: r,
             onAnswerTextChange: o,
-            onEmojiSelect: s,
+            onEmojiSelect: c,
             onEmojiRemove: u,
-            canRemoveAnswer: f,
+            canRemoveAnswer: m,
             onRemoveAnswer: d,
-            addAnswer: p,
-            submitPoll: O,
-            error: j,
-            ref: h,
-            answerRowRefs: v,
+            addAnswer: b,
+            submitPoll: h,
+            error: A,
+            ref: R,
+            answerRowRefs: j,
         } = e,
-        w = l.useRef(null),
-        P = l.useRef(null),
-        C = l.useRef(null);
-    l.useImperativeHandle(h, () => ({
-        focusDeleteButton: () => {
-            var e;
-            return null == (e = P.current) ? void 0 : e.focus();
-        },
-        focusInput: () => {
-            var e;
-            return null == (e = C.current) ? void 0 : e.focus();
-        },
+        k = a.useRef(null),
+        _ = a.useRef(null),
+        w = a.useRef(null);
+    a.useImperativeHandle(R, () => ({
+        focusDeleteButton: () => _.current?.focus(),
+        focusInput: () => w.current?.focus(),
     }));
-    let [k, R] = l.useState(!1),
-        x = l.useCallback(() => {
-            R((e) => !e);
+    let [E, P] = a.useState(!1),
+        N = a.useCallback(() => {
+            P((e) => !e);
         }, []),
-        E = l.useCallback(
+        I = a.useCallback(
             (e) => {
                 let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
-                    r = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
+                    l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
                 switch (e.key.toLowerCase()) {
                     case "enter":
-                        var l;
-                        i &&
+                        r &&
                             (e.preventDefault(),
-                            ((0, b.ND)(n) || "macos" !== (0, m.getOS)() ? t : r) ? (e.stopPropagation(), O()) : p()),
-                            null == (l = v.current[a + 1]) || l.focusInput();
+                            ((0, g.ND)(n) || "macos" !== (0, f.getOS)() ? t : l) ? (e.stopPropagation(), h()) : b()),
+                            j.current[i + 1]?.focusInput();
                         break;
                     case "e":
-                        ("macos" === (0, m.getOS)() ? r : t) && (e.preventDefault(), e.stopPropagation(), x());
+                        ("macos" === (0, f.getOS)() ? l : t) && (e.preventDefault(), e.stopPropagation(), N());
                 }
             },
-            [p, n, v, a, i, O, x],
+            [b, n, j, i, r, h, N],
         ),
-        _ = (0, r.jsx)(A, {
-            containerRef: w,
+        S = (0, l.jsx)(x, {
+            containerRef: k,
             channelId: t,
             buttonImage: n.image,
-            onEmojiSelect: s,
+            onEmojiSelect: c,
             onEmojiRemove: u,
             localCreationAnswerId: n.localCreationAnswerId,
-            answerIndex: a,
-            shouldShowEmojiPicker: k,
-            toggleEmojiPicker: x,
+            answerIndex: i,
+            shouldShowEmojiPicker: E,
+            toggleEmojiPicker: N,
         });
-    return (0, r.jsx)("div", {
-        ref: w,
-        children: (0, r.jsx)(c.ksK, {
-            error: j,
-            leading: {
-                type: "emoji",
-                button: _,
-            },
-            trailing: f
+    return (0, l.jsx)("div", {
+        ref: k,
+        children: (0, l.jsx)(s.ksK, {
+            error: A,
+            leading: { type: "emoji", button: S },
+            trailing: m
                 ? {
-                      "aria-label": y.intl.formatToPlainString(y.t["22fjEc"], {
-                          answerNumber: a + 1,
-                      }),
-                      icon: c.ucK,
-                      onClick: () => d(a),
-                      buttonRef: P,
+                      "aria-label": C.intl.formatToPlainString(C.t["22fjEc"], { answerNumber: i + 1 }),
+                      icon: s.ucK,
+                      onClick: () => d(i),
+                      buttonRef: _,
                   }
                 : void 0,
-            "aria-label": y.intl.formatToPlainString(y.t["3+V8G9"], {
-                answerNumber: a + 1,
-            }),
-            placeholder: y.intl.string(y.t.NNHVlv),
+            "aria-label": C.intl.formatToPlainString(C.t["3+V8G9"], { answerNumber: i + 1 }),
+            placeholder: C.intl.string(C.t.NNHVlv),
             value: n.text,
-            onChange: (e) =>
-                o({
-                    text: e,
-                    index: a,
-                    localCreationAnswerId: n.localCreationAnswerId,
-                }),
-            onKeyDown: E,
-            maxLength: g.dv,
-            inputRef: C,
+            onChange: (e) => o({ text: e, index: i, localCreationAnswerId: n.localCreationAnswerId }),
+            onKeyDown: I,
+            maxLength: p.dv,
+            inputRef: w,
         }),
     });
 }

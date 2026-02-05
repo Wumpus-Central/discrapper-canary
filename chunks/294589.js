@@ -1,8 +1,5 @@
-n.r(t),
-    n.d(t, {
-        default: () => s,
-        messagesLoader: () => i,
-    });
+"use strict";
+n.r(t), n.d(t, { default: () => s, messagesLoader: () => i });
 let { createLoader: r } = n(932433),
     i = r(
         {

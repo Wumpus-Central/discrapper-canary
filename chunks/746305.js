@@ -1,3 +1,1 @@
-e.exports = {
-    y: "checkboxRow_d1f0f0",
-};
+e.exports = { y: "checkboxRow_d1f0f0" };

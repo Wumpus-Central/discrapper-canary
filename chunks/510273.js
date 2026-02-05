@@ -1,214 +1,96 @@
-r.r(t),
-    r.d(t, {
-        default: () => _,
-    }),
-    r(896048);
-var i = r(627968),
-    s = r(64700),
-    n = r(92674),
-    a = r(575593),
-    l = r(334279),
+r.r(e), r.d(e, { default: () => R });
+var s = r(627968),
+    i = r(64700),
+    a = r(92674),
+    l = r(575593),
+    n = r(334279),
     c = r(417597),
-    o = r(397927),
-    u = r(550111),
-    d = r(170887),
-    f = r(331402),
-    p = r(287809),
+    d = r(397927),
+    o = r(550111),
+    u = r(170887),
+    h = r(331402),
+    f = r(287809),
     g = r(846957),
-    h = r(929283),
-    y = r(245068),
-    m = r(158216),
+    m = r(929283),
+    p = r(245068),
+    x = r(158216),
     j = r(985018),
-    b = r(243821),
-    O = r(743102),
+    y = r(243821),
+    _ = r(743102),
     v = r(497451),
-    x = r(241988);
-
-function P(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(r);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
+    E = r(241988);
+let A = (t) => {
+        let { product: e, itemConsumed: r, forCollectedModal: i } = t,
+            a = (0, u.A)({ location: "CollectiblesProductPreview" }),
+            x = (0, c.bG)([f.default], () => f.default.getCurrentUser());
+        if (null == x) return null;
+        let [A] = e.items;
+        if (e.type === l.R.PROFILE_EFFECT)
+            return (0, s.jsx)("div", {
+                className: y.NM,
+                children: (0, s.jsx)(h.A, { skuId: A.skuId, delayProfileEffectIntro: i, withScaleAnimation: i }),
             });
-    }
-    return e;
-}
-let w = (e) => {
-        let { product: t, itemConsumed: r, forCollectedModal: s } = e,
-            n = (0, d.A)({
-                location: "CollectiblesProductPreview",
-            }),
-            m = (0, c.bG)([p.default], () => p.default.getCurrentUser());
-        if (null == m) return null;
-        let [P] = t.items;
-        if (t.type === a.R.PROFILE_EFFECT)
-            return (0, i.jsx)("div", {
-                className: b.NM,
-                children: (0, i.jsx)(f.A, {
-                    skuId: P.skuId,
-                    delayProfileEffectIntro: s,
-                    withScaleAnimation: s,
-                }),
+        if (e.type === l.R.AVATAR_DECORATION)
+            return (0, s.jsx)(m.i, { item: A, user: x, avatarSize: d._3J.SIZE_120, isHighlighted: !0 });
+        if (e.type === l.R.NAMEPLATE)
+            return (0, s.jsx)("div", {
+                className: y.qF,
+                children: (0, s.jsx)(o.A, { nameplate: A, user: x, nameplatePreviewSize: "large", isHighlighted: !0 }),
             });
-        if (t.type === a.R.AVATAR_DECORATION)
-            return (0, i.jsx)(h.i, {
-                item: P,
-                user: m,
-                avatarSize: o._3J.SIZE_120,
-                isHighlighted: !0,
+        if (e.type === l.R.BUNDLE)
+            return (0, s.jsx)("div", {
+                className: y.hT,
+                children: (0, s.jsx)(p.X, { product: e, user: x, isHighlighted: !0, forCollectedModal: i }),
             });
-        if (t.type === a.R.NAMEPLATE)
-            return (0, i.jsx)("div", {
-                className: b.qF,
-                children: (0, i.jsx)(u.A, {
-                    nameplate: P,
-                    user: m,
-                    nameplatePreviewSize: "large",
-                    isHighlighted: !0,
-                }),
-            });
-        if (t.type === a.R.BUNDLE)
-            return (0, i.jsx)("div", {
-                className: b.hT,
-                children: (0, i.jsx)(y.X, {
-                    product: t,
-                    user: m,
-                    isHighlighted: !0,
-                    forCollectedModal: s,
-                }),
-            });
-        if (t.type === a.R.EXTERNAL_SKU) {
-            if (Object.values(l.j).includes(t.skuId))
+        if (e.type === l.R.EXTERNAL_SKU) {
+            if (Object.values(n.j).includes(e.skuId))
                 if (r)
-                    return (0, i.jsx)("img", {
-                        src: n ? x : v,
+                    return (0, s.jsx)("img", {
+                        src: a ? E : v,
                         alt: j.intl.string(j.t.t0xkSB),
-                        style: {
-                            width: "100%",
-                        },
+                        style: { width: "100%" },
                     });
-                else
-                    return (0, i.jsx)("img", {
-                        src: O,
-                        alt: j.intl.string(j.t.g5W1g8),
-                    });
-            return (0, i.jsx)(g.B, {
-                product: t,
-            });
+                else return (0, s.jsx)("img", { src: _, alt: j.intl.string(j.t.g5W1g8) });
+            return (0, s.jsx)(g.B, { product: e });
         }
         return null;
     },
-    E = (e) => {
-        let { reducedMotion: t, displayOptions: r } = e,
-            [a, l] = s.useState(!1),
-            c = (0, o.zhh)({
-                from: {
-                    transform: "translateX(100%)",
-                    right: "-100%",
-                },
-                to: {
-                    transform: "translateX(50%)",
-                    right: "50%",
-                },
-                config: {
-                    duration: 1550,
-                },
-                onRest: () => setTimeout(() => l(!0), 100),
+    N = (t) => {
+        let { reducedMotion: e, displayOptions: r } = t,
+            [l, n] = i.useState(!1),
+            c = (0, d.zhh)({
+                from: { transform: "translateX(100%)", right: "-100%" },
+                to: { transform: "translateX(50%)", right: "50%" },
+                config: { duration: 1550 },
+                onRest: () => setTimeout(() => n(!0), 100),
             }),
-            u = (0, o.zhh)({
-                from: {
-                    transform: "translateX(100%)",
-                    right: "-100%",
-                },
-                to: {
-                    transform: "translateX(50%)",
-                    right: "50%",
-                },
-                config: {
-                    duration: 1550,
-                },
-                reverse: a,
+            o = (0, d.zhh)({
+                from: { transform: "translateX(100%)", right: "-100%" },
+                to: { transform: "translateX(50%)", right: "50%" },
+                config: { duration: 1550 },
+                reverse: l,
             }),
-            d = (0, o.zhh)(
+            u = (0, d.zhh)(
                 {
-                    from: {
-                        transform: "translateX(50%)",
-                        right: "50%",
-                        opacity: 1,
-                    },
-                    to: {
-                        transform: "translateX(50%)",
-                        right: "50%",
-                        opacity: 0,
-                    },
-                    config: {
-                        duration: 300,
-                    },
+                    from: { transform: "translateX(50%)", right: "50%", opacity: 1 },
+                    to: { transform: "translateX(50%)", right: "50%", opacity: 0 },
+                    config: { duration: 300 },
                     delay: 600,
                 },
                 "animate-always",
             );
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsx)(n.animated.div, {
-                    className: b.VH,
-                    style: c,
-                    children: (0, i.jsx)(w, P({}, e)),
-                }),
-                (0, i.jsx)(n.animated.div, {
-                    className: b.VH,
-                    style: t ? d : u,
-                    children: (0, i.jsx)("img", {
-                        src: r.getSrc(),
-                        style: r.style,
-                        alt: "",
-                        "aria-hidden": "true",
-                    }),
+                (0, s.jsx)(a.animated.div, { className: y.VH, style: c, children: (0, s.jsx)(A, { ...t }) }),
+                (0, s.jsx)(a.animated.div, {
+                    className: y.VH,
+                    style: e ? u : o,
+                    children: (0, s.jsx)("img", { src: r.getSrc(), style: r.style, alt: "", "aria-hidden": "true" }),
                 }),
             ],
         });
     };
-
-function _(e) {
-    var t, r;
-    let s = (0, m.K9)(e.product.categorySkuId);
-    return null != s
-        ? (0, i.jsx)(
-              E,
-              ((t = P({}, e)),
-              (r = r =
-                  {
-                      displayOptions: s,
-                  }),
-              Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                  : (function (e, t) {
-                        var r = Object.keys(e);
-                        if (Object.getOwnPropertySymbols) {
-                            var i = Object.getOwnPropertySymbols(e);
-                            r.push.apply(r, i);
-                        }
-                        return r;
-                    })(Object(r)).forEach(function (e) {
-                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                    }),
-              t),
-          )
-        : (0, i.jsx)(w, P({}, e));
+function R(t) {
+    let e = (0, x.K9)(t.product.categorySkuId);
+    return null != e ? (0, s.jsx)(N, { ...t, displayOptions: e }) : (0, s.jsx)(A, { ...t });
 }

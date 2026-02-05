@@ -1,14 +1,4 @@
-n.d(t, {
-    B: () => l,
-});
-
-function l(e) {
-    return e.map((e, t) => {
-        var n, l;
-        return {
-            file: e.file,
-            name: null != (n = e.id) ? n : "attachment_".concat(t),
-            filename: null == (l = e.file) ? void 0 : l.name,
-        };
-    });
+i.d(t, { B: () => n });
+function n(e) {
+    return e.map((e, t) => ({ file: e.file, name: e.id ?? `attachment_${t}`, filename: e.file?.name }));
 }

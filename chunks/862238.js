@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     B2: "groupListings__15926",
     l2: "createTierButton__15926",

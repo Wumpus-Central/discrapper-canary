@@ -1,11 +1,12 @@
+"use strict";
 var r = n(860511),
     i = n(985848),
     a = n(339626),
     s = n(676528),
     o = n(65978),
     l = n(192819),
-    c = n(627),
-    u = r.Function,
+    u = n(627),
+    c = r.Function,
     d =
         /MSIE .\./.test(o) ||
         ("BUN" === s &&
@@ -17,15 +18,15 @@ e.exports = function (e, t) {
     var n = t ? 2 : 1;
     return d
         ? function (r, s) {
-              var o = c(arguments.length, 1) > n,
-                  d = a(r) ? r : u(r),
-                  f = o ? l(arguments, n) : [],
-                  p = o
+              var o = u(arguments.length, 1) > n,
+                  d = a(r) ? r : c(r),
+                  _ = o ? l(arguments, n) : [],
+                  f = o
                       ? function () {
-                            i(d, this, f);
+                            i(d, this, _);
                         }
                       : d;
-              return t ? e(p, s) : e(p);
+              return t ? e(f, s) : e(f);
           }
         : e;
 };

@@ -1,15 +1,12 @@
-n.d(t, {
-    D: () => o,
-    I: () => l,
-}),
-    n(896048);
+"use strict";
+n.d(t, { D: () => o, I: () => l });
 var r = n(954571),
     i = n(99066),
     a = n(424994),
     s = n(652215);
 let o = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) n[a - 1] = arguments[a];
-        let { trackingEnabled: s } = (0, i.Lj)("trackSampledContentEntryAnalytics:".concat(e));
+        let { trackingEnabled: s } = (0, i.Lj)(`trackSampledContentEntryAnalytics:${e}`);
         return s ? r.default.track(e, ...n) : Promise.resolve();
     },
     l = (e, t) => {

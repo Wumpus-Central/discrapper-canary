@@ -1,4 +1,1 @@
-e.exports = {
-    k: "container__06199",
-    L: "asset__06199",
-};
+e.exports = { k: "container__06199", L: "asset__06199" };

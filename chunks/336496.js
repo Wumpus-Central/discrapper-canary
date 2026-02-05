@@ -1,90 +1,60 @@
-n.d(t, {
-    default: () => b,
-}),
-    n(896048);
+n.d(t, { default: () => m });
 var i = n(627968),
-    r = n(64700),
-    l = n(158954),
+    l = n(64700),
+    s = n(158954),
     a = n(397927),
-    s = n(58149),
+    r = n(58149),
     o = n(615550),
-    c = n(652215),
-    d = n(985018),
+    d = n(652215),
+    c = n(985018),
     u = n(48854);
-
-function b(e) {
-    let { guildId: t, transitionState: n, onClose: b } = e,
-        [f, p] = r.useState([]),
-        [m, g] = r.useState(),
-        h = [
-            {
-                label: d.intl.string(d.t["//3pvi"]),
-                value: o.n7.DM_SPAM,
-            },
-            {
-                label: d.intl.string(d.t.SdVsip),
-                value: o.n7.MENTION_SPAM,
-            },
-            {
-                label: d.intl.string(d.t.uTiSVL),
-                value: o.n7.CHANNEL_SPAM,
-            },
-            {
-                label: d.intl.string(d.t.GQczU8),
-                value: o.n7.SUS_NEW_MEMBERS,
-            },
-            {
-                label: d.intl.string(d.t.AAgqy3),
-                value: o.n7.CHANGING_SETTINGS,
-            },
-            {
-                label: d.intl.string(d.t.ryPKb7),
-                value: o.n7.OTHER,
-            },
+function m(e) {
+    let { guildId: t, transitionState: n, onClose: m } = e,
+        [g, x] = l.useState([]),
+        [h, p] = l.useState(),
+        A = [
+            { label: c.intl.string(c.t["//3pvi"]), value: o.n7.DM_SPAM },
+            { label: c.intl.string(c.t.SdVsip), value: o.n7.MENTION_SPAM },
+            { label: c.intl.string(c.t.uTiSVL), value: o.n7.CHANNEL_SPAM },
+            { label: c.intl.string(c.t.GQczU8), value: o.n7.SUS_NEW_MEMBERS },
+            { label: c.intl.string(c.t.AAgqy3), value: o.n7.CHANGING_SETTINGS },
+            { label: c.intl.string(c.t.ryPKb7), value: o.n7.OTHER },
         ],
-        x = r.useCallback((e) => {
-            p(e);
+        b = l.useCallback((e) => {
+            x(e);
         }, []);
     return null == t
-        ? (b(), null)
-        : (0, i.jsx)(l.Modal, {
+        ? (m(), null)
+        : (0, i.jsx)(s.Modal, {
               transitionState: n,
-              title: d.intl.string(d.t.f5hd9P),
+              title: c.intl.string(c.t.f5hd9P),
               actions: [
+                  { text: c.intl.string(c.t["ETE/oC"]), onClick: m, variant: "secondary" },
                   {
-                      text: d.intl.string(d.t["ETE/oC"]),
-                      onClick: b,
-                      variant: "secondary",
-                  },
-                  {
-                      text: d.intl.string(d.t.nAt0rE),
+                      text: c.intl.string(c.t.nAt0rE),
                       onClick: function () {
-                          (0, s.zV)(c.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                              raid_lockdown_feedback_type: f,
-                              raid_lockdown_feedback_other_reason: m,
+                          (0, r.zV)(d.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                              raid_lockdown_feedback_type: g,
+                              raid_lockdown_feedback_other_reason: h,
                               guild_id: t,
                           }),
-                              b();
+                              m();
                       },
-                      disabled: 0 === f.length,
+                      disabled: 0 === g.length,
                   },
               ],
-              onClose: b,
+              onClose: m,
               children: (0, i.jsxs)(a.BJc, {
                   gap: 8,
                   children: [
-                      (0, i.jsx)(a.$QX, {
-                          selectedValues: f,
-                          onChange: x,
-                          options: h,
-                      }),
-                      f.includes(o.n7.OTHER) &&
+                      (0, i.jsx)(a.$QX, { selectedValues: g, onChange: b, options: A }),
+                      g.includes(o.n7.OTHER) &&
                           (0, i.jsx)("div", {
                               className: u.Q8,
                               children: (0, i.jsx)(a.fs1, {
-                                  placeholder: d.intl.string(d.t["PAM+JR"]),
-                                  onChange: g,
-                                  value: m,
+                                  placeholder: c.intl.string(c.t["PAM+JR"]),
+                                  onChange: p,
+                                  value: h,
                                   autoFocus: !0,
                               }),
                           }),

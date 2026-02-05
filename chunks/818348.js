@@ -1,79 +1,79 @@
+"use strict";
 n.d(t, {
-    AD: () => S,
-    Cm: () => C,
-    DY: () => T,
-    FX: () => G,
-    Gg: () => y,
+    AD: () => C,
+    Cm: () => N,
+    DY: () => b,
+    FX: () => V,
+    Gg: () => A,
     Jo: () => et,
-    Kc: () => v,
+    Kc: () => y,
     Kf: () => eh,
     L_: () => em,
-    Lt: () => B,
-    Lw: () => Z,
+    Lt: () => j,
+    Lw: () => q,
     NJ: () => r.NJ,
-    Nc: () => N,
-    OL: () => I,
+    Nc: () => R,
+    OL: () => v,
     Pq: () => er,
-    Q7: () => D,
-    Sb: () => eo,
+    Q7: () => w,
+    Sb: () => es,
     TG: () => eE,
-    Tk: () => es,
+    Tk: () => eo,
     U2: () => l,
-    VV: () => x,
-    Wz: () => ep,
-    Xl: () => c,
-    YI: () => Q,
-    Yr: () => ef,
-    ZE: () => q,
+    VV: () => P,
+    Wz: () => ef,
+    Xl: () => u,
+    YI: () => Z,
+    Yr: () => e_,
+    ZE: () => $,
     _A: () => h,
-    __: () => R,
-    bZ: () => eu,
-    cl: () => p,
+    __: () => D,
+    bZ: () => ec,
+    cl: () => f,
     dL: () => H,
-    do: () => b,
+    do: () => I,
     e$: () => z,
     fr: () => M,
-    gx: () => ey,
-    hC: () => u,
-    hV: () => j,
-    he: () => O,
-    il: () => J,
+    gx: () => eA,
+    hC: () => c,
+    hV: () => k,
+    he: () => T,
+    il: () => X,
     js: () => F,
     kM: () => m,
-    kv: () => A,
+    kv: () => S,
     mX: () => ed,
     me: () => K,
-    nf: () => V,
+    nf: () => B,
     ps: () => g,
     qF: () => en,
     qm: () => E,
     rE: () => r.rE,
-    rI: () => w,
-    rz: () => P,
-    sE: () => ec,
+    rI: () => O,
+    rz: () => L,
+    sE: () => eu,
     sJ: () => W,
-    sh: () => X,
-    tE: () => U,
-    tF: () => L,
+    sh: () => Q,
+    tE: () => G,
+    tF: () => x,
     w7: () => el,
-    x0: () => e_,
-    xB: () => k,
+    x0: () => ep,
+    xB: () => U,
     xE: () => Y,
     xe: () => eg,
-    xf: () => _,
-    zy: () => $,
-}),
-    n(896048);
+    xf: () => p,
+    zy: () => J,
+});
 var r = n(812743),
     i = n(136722),
     a = n(323125);
-let o = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
-    s = location.protocol + "//discord.gg",
+let s = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
+    o = location.protocol + "//discord.gg",
     l = "discord.com",
-    c = "support.discord.com",
-    u = "support-dev.discord.com",
+    u = "support.discord.com",
+    c = "support-dev.discord.com",
     d = "discord.com",
-    f = "feedback.discord.com";
+    _ = "feedback.discord.com";
 Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -98,7 +98,7 @@ Object.freeze({
     GREY7: "#1c242b",
     GREY9: "#202226",
 });
-var p = (function (e) {
+var f = (function (e) {
         return (
             (e.ONLINE = "online"),
             (e.OFFLINE = "offline"),
@@ -110,7 +110,7 @@ var p = (function (e) {
             e
         );
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (
             (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.VR = "vr"), (e.UNKNOWN = "unknown"), e
         );
@@ -142,24 +142,15 @@ let E = Object.freeze({
         8: "Virtual Currency",
         9: "Apple ACOM",
     }),
-    y = Object.freeze({
-        BRAINTREE: {
-            KEY: window.GLOBAL_ENV.BRAINTREE_KEY,
-            PAYMENT_GATEWAY: "braintree",
-        },
-        STRIPE: {
-            KEY: window.GLOBAL_ENV.STRIPE_KEY,
-            PAYMENT_GATEWAY: "stripe",
-        },
-        ADYEN: {
-            KEY: window.GLOBAL_ENV.ADYEN_KEY,
-            PAYMENT_GATEWAY: "adyen",
-        },
+    A = Object.freeze({
+        BRAINTREE: { KEY: window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
+        STRIPE: { KEY: window.GLOBAL_ENV.STRIPE_KEY, PAYMENT_GATEWAY: "stripe" },
+        ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     });
-var b = (function (e) {
+var I = (function (e) {
         return (e.GOOGLE_PAY = "google_pay"), (e.APPLE_PAY = "apple_pay"), e;
     })({}),
-    O = (function (e) {
+    T = (function (e) {
         return (
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.CARD = 1)] = "CARD"),
@@ -185,7 +176,7 @@ var b = (function (e) {
             e
         );
     })({});
-let v = new Map([
+let y = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -194,20 +185,20 @@ let v = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    A = new Map([
+    S = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
     ]),
-    I = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    S = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    T = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
-    C = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
-    N = new Set([6]);
-var w = (function (e) {
+    v = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    C = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    b = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
+    N = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    R = new Set([6]);
+var O = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
     })({}),
-    R = (function (e) {
+    D = (function (e) {
         return (
             (e[(e.PENDING = 0)] = "PENDING"),
             (e[(e.COMPLETED = 1)] = "COMPLETED"),
@@ -218,12 +209,12 @@ var w = (function (e) {
             e
         );
     })({}),
-    P = (function (e) {
+    L = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
@@ -232,21 +223,15 @@ var w = (function (e) {
             e
         );
     })({});
-Object.freeze({
-    CONSTANT: 1,
-    APPLE_STICKER: 2,
-});
-var L = (function (e) {
+Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
+var x = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let M = Object.freeze({
-    0: "subscription",
-    1: "sku",
-});
-var j = (function (e) {
+let M = Object.freeze({ 0: "subscription", 1: "sku" });
+var k = (function (e) {
     return (
         (e[(e.VIEW_CHANNEL = 1024)] = "VIEW_CHANNEL"),
         (e[(e.READ_MESSAGE_HISTORY = 65536)] = "READ_MESSAGE_HISTORY"),
@@ -254,7 +239,7 @@ var j = (function (e) {
         e
     );
 })({});
-let k = Object.freeze({
+let U = Object.freeze({
         CREATE_INSTANT_INVITE: i.jB(0),
         KICK_MEMBERS: i.jB(1),
         BAN_MEMBERS: i.jB(2),
@@ -308,23 +293,23 @@ let k = Object.freeze({
         MANAGE_EVENTS: i.jB(33),
         CREATE_EVENTS: i.jB(44),
     }),
-    U = function () {
+    G = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    G = () => null,
+    V = () => null,
     F = () => Promise.resolve(),
-    V = [
-        k.KICK_MEMBERS,
-        k.BAN_MEMBERS,
-        k.ADMINISTRATOR,
-        k.MANAGE_CHANNELS,
-        k.MANAGE_GUILD,
-        k.MANAGE_ROLES,
-        k.MANAGE_MESSAGES,
-        k.MANAGE_THREADS,
-        k.MODERATE_MEMBERS,
+    B = [
+        U.KICK_MEMBERS,
+        U.BAN_MEMBERS,
+        U.ADMINISTRATOR,
+        U.MANAGE_CHANNELS,
+        U.MANAGE_GUILD,
+        U.MANAGE_ROLES,
+        U.MANAGE_MESSAGES,
+        U.MANAGE_THREADS,
+        U.MODERATE_MEMBERS,
     ],
-    B = i.kg(...V),
+    j = i.kg(...B),
     H = 1,
     Y = 6463,
     W = 10,
@@ -417,7 +402,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    $ = (function (e) {
         return (
             (e.CURRENT_USER_UPDATE = "CURRENT_USER_UPDATE"),
             (e.CURRENT_GUILD_MEMBER_UPDATE = "CURRENT_GUILD_MEMBER_UPDATE"),
@@ -466,7 +451,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    q = (function (e) {
         return (
             (e[(e.UNKNOWN_ERROR = 1e3)] = "UNKNOWN_ERROR"),
             (e[(e.SERVICE_UNAVAILABLE = 1001)] = "SERVICE_UNAVAILABLE"),
@@ -505,7 +490,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    Z = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -519,34 +504,34 @@ var z = (function (e) {
             e
         );
     })({});
-let X = 250,
-    J = "token",
-    $ = "tokens",
+let Q = 250,
+    X = "token",
+    J = "tokens",
     ee = "status.discord.com",
-    et = "https://".concat(ee),
+    et = `https://${ee}`,
     en = {
         PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
         REBRAND_PRESSKIT:
             "https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0",
         STATUS: "https://discordstatus.com",
-        HELP_AND_SUPPORT: "//".concat(c, "/hc/en-us"),
-        HELP_ARTICLE_ORBS_FAQ: "https://".concat(c, "/hc/en-us/articles/30593690165783"),
-        FEEDBACK: "//".concat(f),
-        EMAIL_SUPPORT: "mailto:support@".concat(d),
-        EMAIL_LAW_ENFORCEMENT: "mailto:lawenforcement@".concat(d),
-        EMAIL_HYPESQUAD: "mailto:hypesquad@".concat(d),
-        EMAIL_JOBS: "mailto:jobs@".concat(d),
+        HELP_AND_SUPPORT: `//${u}/hc/en-us`,
+        HELP_ARTICLE_ORBS_FAQ: `https://${u}/hc/en-us/articles/30593690165783`,
+        FEEDBACK: `//${_}`,
+        EMAIL_SUPPORT: `mailto:support@${d}`,
+        EMAIL_LAW_ENFORCEMENT: `mailto:lawenforcement@${d}`,
+        EMAIL_HYPESQUAD: `mailto:hypesquad@${d}`,
+        EMAIL_JOBS: `mailto:jobs@${d}`,
         DEV_PERKS_FORM: "https://goo.gl/forms/oZfKBStV3sR8GHdU2",
         VERIFICATION_REQUIREMENTS: "https://dis.gd/vfqual",
-        BASE_URL: "https://".concat(l),
-        PRESS_INQUIRIES: "mailto:press@".concat(d),
+        BASE_URL: `https://${l}`,
+        PRESS_INQUIRIES: `mailto:press@${d}`,
         CONTACT_US: "https://dis.gd/contact",
         DEV_LANDING: "/build",
         DEV_PORTAL: "/developers",
         DEV_PORTAL_APPLICATIONS: "/developers/applications",
         DEV_PORTAL_DOCUMENTATION: "/developers/docs",
         DEV_PORTAL_SELF_SERVE_MODAL: "/developers/?store_signup=true",
-        PARTNER_CODE_OF_CONDUCT: "https://".concat(c, "/hc/en-us/articles/360024871991"),
+        PARTNER_CODE_OF_CONDUCT: `https://${u}/hc/en-us/articles/360024871991`,
         SUBMIT_TNS_REPORT: "https://dis.gd/request",
         MERCH_STORE: "https://discordmerch.com",
         MOD_ACADEMY_EXAM: "https://dis.gd/exam",
@@ -559,38 +544,27 @@ let X = 250,
             "/terms/paid-services-terms#:~:text=one%2Dtime%20purchases.-,VIRTUAL%20GOODS,-You%20may%20be",
     },
     er = Object.freeze({
-        TWITTER: Object.freeze({
-            default: "https://twitter.com/discord",
-            ja: "https://twitter.com/discord_jp",
-        }),
+        TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }),
     ei = Object.freeze({
-        WELCOME: "".concat(o, "/welcome/"),
-        ME: "".concat(o, "/channels/@me"),
-        SETTINGS: (e, t) =>
-            ""
-                .concat(o, "/settings/")
-                .concat(e)
-                .concat(t ? "/".concat(t) : ""),
-        CONNECTION: (e) => "".concat(o, "/connections/").concat(e),
-        CHANGELOGS: "".concat(o, "/settings/changelogs"),
-        LOGIN: "".concat(o, "/login"),
-        LOGIN_WITH_REDIRECT: (e) => "".concat(o, "/login?redirect_to=").concat(e),
-        REGISTER: "".concat(o, "/register"),
-        REGISTER_WITH_REDIRECT: (e) => "".concat(o, "/register?redirect_to=").concat(e),
-        CREATE_GUILD: "".concat(o, "/guilds/create"),
-        VANITY_INVITE: (e) => "".concat(s, "/").concat(e),
-        HYPESQUAD_ONLINE: "".concat(o, "/settings/hypesquad-online"),
-        BROWSE_NITRO_TITLES: "".concat(o, "/store/browse?type=nitro"),
-        SKU_DETAILS: (e, t) =>
-            ""
-                .concat(o, "/store/skus/")
-                .concat(e)
-                .concat(null != t ? "?store_listing_id=".concat(t) : ""),
-        MESSAGE: (e, t, n) => "/channels/".concat(e, "/").concat(t, "/").concat(n),
-        CHANNEL: (e, t) => "/channels/".concat(e, "/").concat(t),
-        REPORT: "".concat(o, "/report"),
-        QUEST_PREVIEW_TOOL_2: (e) => "".concat(o, "/quest-preview/").concat(e),
+        WELCOME: `${s}/welcome/`,
+        ME: `${s}/channels/@me`,
+        SETTINGS: (e, t) => `${s}/settings/${e}${t ? `/${t}` : ""}`,
+        CONNECTION: (e) => `${s}/connections/${e}`,
+        CHANGELOGS: `${s}/settings/changelogs`,
+        LOGIN: `${s}/login`,
+        LOGIN_WITH_REDIRECT: (e) => `${s}/login?redirect_to=${e}`,
+        REGISTER: `${s}/register`,
+        REGISTER_WITH_REDIRECT: (e) => `${s}/register?redirect_to=${e}`,
+        CREATE_GUILD: `${s}/guilds/create`,
+        VANITY_INVITE: (e) => `${o}/${e}`,
+        HYPESQUAD_ONLINE: `${s}/settings/hypesquad-online`,
+        BROWSE_NITRO_TITLES: `${s}/store/browse?type=nitro`,
+        SKU_DETAILS: (e, t) => `${s}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+        MESSAGE: (e, t, n) => `/channels/${e}/${t}/${n}`,
+        CHANNEL: (e, t) => `/channels/${e}/${t}`,
+        REPORT: `${s}/report`,
+        QUEST_PREVIEW_TOOL_2: (e) => `${s}/quest-preview/${e}`,
     });
 var ea = (function (e) {
     return (
@@ -684,15 +658,15 @@ var ea = (function (e) {
         e
     );
 })(ea || {});
-let eo = (0, a.dN)(ei),
-    es = (0, a.dN)(ea),
+let es = (0, a.dN)(ei),
+    eo = (0, a.dN)(ea),
     el = Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     });
-var ec = (function (e) {
+var eu = (function (e) {
         return (
             (e.EXPERIMENT_USER_TRIGGERED = "experiment_user_triggered"),
             (e.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
@@ -724,13 +698,13 @@ var ec = (function (e) {
             e
         );
     })({}),
-    eu = (function (e) {
+    ec = (function (e) {
         return (e.CLIENT_TELEMETRY = "client_telemetry"), e;
     })({}),
     ed = (function (e) {
         return (e.CLIENT_TELEMETRY = "/beaker"), e;
     })({}),
-    ef = (function (e) {
+    e_ = (function (e) {
         return (
             (e.AED = "aed"),
             (e.AFN = "afn"),
@@ -918,8 +892,8 @@ var ec = (function (e) {
             e
         );
     })({});
-let ep = "US";
-var e_ = (function (e) {
+let ef = "US";
+var ep = (function (e) {
         return (
             (e[(e.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
             (e[(e.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
@@ -1029,6 +1003,6 @@ var e_ = (function (e) {
     eE = (function (e) {
         return (e.SWIPE = "SWIPE"), (e.BROWSER = "BROWSER"), (e.KEYBIND = "KEYBIND"), e;
     })({}),
-    ey = (function (e) {
+    eA = (function (e) {
         return (e[(e.IN_PROMPT = 1)] = "IN_PROMPT"), e;
     })({});

@@ -1,55 +1,39 @@
-n.d(t, {
-    A: () => o,
-});
-var a = n(627968);
-n(64700);
-var l = n(503698),
-    i = n.n(l),
-    r = n(51183),
-    s = n(802455);
-
-function o(e) {
+r.d(t, { A: () => u });
+var n = r(627968);
+r(64700);
+var a = r(503698),
+    c = r.n(a),
+    l = r(51183),
+    s = r(802455);
+function u(e) {
     let {
         activity: t,
-        className: n,
-        emojiClassName: l,
-        textClassName: o,
-        placeholderText: c,
-        soloEmojiClassName: d,
-        animate: u = !0,
+        className: r,
+        emojiClassName: a,
+        textClassName: u,
+        placeholderText: i,
+        soloEmojiClassName: o,
+        animate: d = !0,
         hideTooltip: m = !1,
-        hideEmoji: p = !1,
-        children: h,
+        hideEmoji: f = !1,
+        children: x,
     } = e;
     if (null == t) return null;
-    let { emoji: f } = t,
-        x = null != t.state && "" !== t.state ? t.state : c;
-    return (0, a.jsxs)("div", {
-        className: i()(s.__invalid_container, n),
+    let { emoji: h } = t,
+        g = null != t.state && "" !== t.state ? t.state : i;
+    return (0, n.jsxs)("div", {
+        className: c()(s.__invalid_container, r),
         children: [
-            p || null == f
+            f || null == h
                 ? null
-                : (0, a.jsx)(r.A, {
-                      emoji: f,
-                      className: i()(
-                          s.Z,
-                          l,
-                          null != d
-                              ? {
-                                    [d]: null == x || "" === x,
-                                }
-                              : null,
-                      ),
-                      animate: u,
+                : (0, n.jsx)(l.A, {
+                      emoji: h,
+                      className: c()(s.Z, a, null != o ? { [o]: null == g || "" === g } : null),
+                      animate: d,
                       hideTooltip: m,
                   }),
-            null != x && x.length > 0
-                ? (0, a.jsx)("span", {
-                      className: o,
-                      children: x,
-                  })
-                : null,
-            h,
+            null != g && g.length > 0 ? (0, n.jsx)("span", { className: u, children: g }) : null,
+            x,
         ],
     });
 }

@@ -1,37 +1,35 @@
-n.d(t, {
-    I: () => d,
-});
+"use strict";
+n.d(t, { I: () => d });
 var r = n(625557),
     i = n(723906),
     a = n(290424),
     s = n(803082),
     o = n(406985),
     l = n(227510),
-    c = n(510281),
-    u = n(869125);
-
+    u = n(510281),
+    c = n(869125);
 function d(e, t, n) {
     let {
         isVirtualized: d,
-        keyboardDelegate: f,
-        layoutDelegate: p,
-        onAction: _,
+        keyboardDelegate: _,
+        layoutDelegate: f,
+        onAction: p,
         disallowTypeAhead: h,
         linkBehavior: m = "action",
         keyboardNavigationBehavior: g = "arrow",
         escapeKeyBehavior: E = "clearSelection",
-        shouldSelectOnPressUp: b,
+        shouldSelectOnPressUp: A,
     } = e;
     e["aria-label"] ||
         e["aria-labelledby"] ||
         console.warn("An aria-label or aria-labelledby prop is required for accessibility.");
-    let { listProps: y } = (0, u.y)({
+    let { listProps: I } = (0, c.y)({
             selectionManager: t.selectionManager,
             collection: t.collection,
             disabledKeys: t.disabledKeys,
             ref: n,
-            keyboardDelegate: f,
-            layoutDelegate: p,
+            keyboardDelegate: _,
+            layoutDelegate: f,
             isVirtualized: d,
             selectOnFocus: "replace" === t.selectionManager.selectionBehavior,
             shouldFocusWrap: e.shouldFocusWrap,
@@ -40,43 +38,20 @@ function d(e, t, n) {
             autoFocus: e.autoFocus,
             escapeKeyBehavior: E,
         }),
-        O = (0, i.Bi)(e.id);
-    r.nV.set(t, {
-        id: O,
-        onAction: _,
-        linkBehavior: m,
-        keyboardNavigationBehavior: g,
-        shouldSelectOnPressUp: b,
-    });
-    let A = (0, o.m)({
-            selectionManager: t.selectionManager,
-            hasItemActions: !!_,
-        }),
-        v = (0, c.$)(n, {
-            isDisabled: 0 !== t.collection.size,
-        }),
-        S = (0, a.$)(e, {
-            labelable: !0,
-        }),
-        I = (0, s.v)(
-            S,
+        T = (0, i.Bi)(e.id);
+    r.nV.set(t, { id: T, onAction: p, linkBehavior: m, keyboardNavigationBehavior: g, shouldSelectOnPressUp: A });
+    let y = (0, o.m)({ selectionManager: t.selectionManager, hasItemActions: !!p }),
+        S = (0, u.$)(n, { isDisabled: 0 !== t.collection.size }),
+        v = (0, a.$)(e, { labelable: !0 }),
+        C = (0, s.v)(
+            v,
             {
                 role: "grid",
-                id: O,
+                id: T,
                 "aria-multiselectable": "multiple" === t.selectionManager.selectionMode ? "true" : void 0,
             },
-            0 === t.collection.size
-                ? {
-                      tabIndex: v ? -1 : 0,
-                  }
-                : y,
-            A,
+            0 === t.collection.size ? { tabIndex: S ? -1 : 0 } : I,
+            y,
         );
-    return (
-        d && ((I["aria-rowcount"] = t.collection.size), (I["aria-colcount"] = 1)),
-        (0, l.H)({}, t),
-        {
-            gridProps: I,
-        }
-    );
+    return d && ((C["aria-rowcount"] = t.collection.size), (C["aria-colcount"] = 1)), (0, l.H)({}, t), { gridProps: C };
 }

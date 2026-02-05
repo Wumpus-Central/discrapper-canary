@@ -1,7 +1,4 @@
-t.r(a),
-    t.d(a, {
-        default: () => o,
-    });
+t.r(a), t.d(a, { default: () => o });
 var o = {
     payButton: "Zaplatit",
     "payButton.redirecting": "Přesměrov\xe1n\xed...",

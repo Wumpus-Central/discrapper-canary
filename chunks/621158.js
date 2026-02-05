@@ -1,6 +1,5 @@
-n.d(t, {
-    H: () => s,
-});
+"use strict";
+n.d(t, { H: () => s });
 var r = n(241827),
     i = n(790637);
 class a {
@@ -16,14 +15,10 @@ class a {
         for (this._currentNode = e; n && n !== this.root; )
             if (n.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
                 let e = n,
-                    r = this._doc.createTreeWalker(e, this.whatToShow, {
-                        acceptNode: this._acceptNode,
-                    });
+                    r = this._doc.createTreeWalker(e, this.whatToShow, { acceptNode: this._acceptNode });
                 t.push(r), (r.currentNode = i), this._currentSetFor.add(r), (n = i = e.host);
             } else n = n.parentNode;
-        let a = this._doc.createTreeWalker(this.root, this.whatToShow, {
-            acceptNode: this._acceptNode,
-        });
+        let a = this._doc.createTreeWalker(this.root, this.whatToShow, { acceptNode: this._acceptNode });
         t.push(a), (a.currentNode = i), this._currentSetFor.add(a), (this._walkerStack = t);
     }
     get doc() {
@@ -114,9 +109,7 @@ class a {
                     var t;
                     let n = e.shadowRoot;
                     if (n) {
-                        let e = this._doc.createTreeWalker(n, this.whatToShow, {
-                            acceptNode: this._acceptNode,
-                        });
+                        let e = this._doc.createTreeWalker(n, this.whatToShow, { acceptNode: this._acceptNode });
                         return this._walkerStack.unshift(e), NodeFilter.FILTER_ACCEPT;
                     }
                     if ("function" == typeof this.filter) return this.filter(e);
@@ -133,14 +126,11 @@ class a {
             this._walkerStack.unshift(e.createTreeWalker(t, n, this._acceptNode));
         const i = t.shadowRoot;
         if (i) {
-            const e = this._doc.createTreeWalker(i, this.whatToShow, {
-                acceptNode: this._acceptNode,
-            });
+            const e = this._doc.createTreeWalker(i, this.whatToShow, { acceptNode: this._acceptNode });
             this._walkerStack.unshift(e);
         }
     }
 }
-
 function s(e, t, n, r) {
     return (0, i.Nf)() ? new a(e, t, n, r) : e.createTreeWalker(t, n, r);
 }

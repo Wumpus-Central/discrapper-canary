@@ -1,23 +1,13 @@
-n.d(t, {
-    A: () => i,
-}),
-    n(228524);
+"use strict";
+n.d(t, { A: () => i });
 var r = n(73153);
 let i = {
     popFirstFile(e) {
-        r.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_POP_FILE",
-            channelId: e,
-        });
+        r.h.dispatch({ type: "UPLOAD_ATTACHMENT_POP_FILE", channelId: e });
     },
     addFiles(e) {
         let { files: t, channelId: n, draftType: i } = e;
-        r.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_ADD_FILES",
-            channelId: n,
-            files: t,
-            draftType: i,
-        });
+        r.h.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: n, files: t, draftType: i });
     },
     addFile(e) {
         let { file: t, channelId: n, draftType: i, allowOptimization: a } = e;
@@ -30,27 +20,13 @@ let i = {
         });
     },
     remove(e, t, n) {
-        r.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_REMOVE_FILE",
-            channelId: e,
-            id: t,
-            draftType: n,
-        });
+        r.h.dispatch({ type: "UPLOAD_ATTACHMENT_REMOVE_FILE", channelId: e, id: t, draftType: n });
     },
     removeFiles(e, t, n) {
-        r.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_REMOVE_FILES",
-            channelId: e,
-            attachmentIds: t,
-            draftType: n,
-        });
+        r.h.dispatch({ type: "UPLOAD_ATTACHMENT_REMOVE_FILES", channelId: e, attachmentIds: t, draftType: n });
     },
     clearAll(e, t) {
-        r.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_CLEAR_ALL_FILES",
-            channelId: e,
-            draftType: t,
-        });
+        r.h.dispatch({ type: "UPLOAD_ATTACHMENT_CLEAR_ALL_FILES", channelId: e, draftType: t });
     },
     update(e, t, n, i) {
         let { description: a, filename: s, spoiler: o, thumbnail: l } = i;

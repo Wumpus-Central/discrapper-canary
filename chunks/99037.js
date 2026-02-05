@@ -1,6 +1,5 @@
-r.d(t, {
-    A: () => a,
-});
+"use strict";
+r.d(t, { A: () => a });
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -24,41 +23,19 @@ let a = function (e) {
                     background: r,
                     boxShadow: "inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 -1px 0 #000",
                 },
-                label: {
-                    fontSize: "14px",
-                    color: "#000",
-                    textAlign: "center",
-                },
+                label: { fontSize: "14px", color: "#000", textAlign: "center" },
             },
         });
     return n.createElement(
         "div",
         null,
+        n.createElement("div", { style: a.label }, "new"),
         n.createElement(
             "div",
-            {
-                style: a.label,
-            },
-            "new",
+            { style: a.swatches },
+            n.createElement("div", { style: a.new }),
+            n.createElement("div", { style: a.current }),
         ),
-        n.createElement(
-            "div",
-            {
-                style: a.swatches,
-            },
-            n.createElement("div", {
-                style: a.new,
-            }),
-            n.createElement("div", {
-                style: a.current,
-            }),
-        ),
-        n.createElement(
-            "div",
-            {
-                style: a.label,
-            },
-            "current",
-        ),
+        n.createElement("div", { style: a.label }, "current"),
     );
 };

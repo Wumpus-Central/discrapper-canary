@@ -1,7 +1,5 @@
-n.d(t, {
-    q: () => r,
-    z: () => i,
-});
+"use strict";
+n.d(t, { q: () => r, z: () => i });
 var r = (function (e) {
         return (
             (e.CHANNEL_ADD_FLOW = "channel_add_flow"),

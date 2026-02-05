@@ -1,3 +1,4 @@
+"use strict";
 var n = e(308227),
     o = e(309270),
     s = n.WeakMap;

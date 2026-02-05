@@ -1,13 +1,9 @@
-n.d(t, {
-    G9: () => l,
-    GE: () => u,
-    VO: () => s,
-    y6: () => c,
-});
+"use strict";
+n.d(t, { G9: () => l, GE: () => c, VO: () => o, y6: () => u });
 var r = n(627968),
     i = n(64700),
     a = n(853590);
-let o = {
+let s = {
         i18n: {
             CANCEL: "Cancel",
             BACK: "Back",
@@ -25,7 +21,7 @@ let o = {
             BILLING_TRIAL_FREE_TRIAL_TEXT: "Free Trial",
             MODAL_DONT_SHOW_AGAIN: "Don't show again",
             LISTBOX_EMPTY_STATE: "No items to show",
-            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => "No results for ‘".concat(e, "’"),
+            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => `No results for ‘${e}’`,
             KEY_CTRL_A11Y_LABEL: "Ctrl",
             KEY_CMD_A11Y_LABEL: "Cmd",
             KEY_ALT_A11Y_LABEL: "Alt",
@@ -51,11 +47,11 @@ let o = {
             CALENDAR_PREVIOUS_MONTH_LABEL: "Previous month",
             CALENDAR_NEXT_MONTH_LABEL: "Next month",
             INLINE_NOTICE_GENERIC_ERROR: "Something went wrong. Please try again later.",
-            STEP_INDICATOR: (e, t) => "Step ".concat(e, " of ").concat(t),
+            STEP_INDICATOR: (e, t) => `Step ${e} of ${t}`,
             SELECT_PLACEHOLDER: "Select...",
             CLEAR_SELECTION: "Clear",
             SELECTED_TAGS_HEADING: "Selected",
-            PERCENT_COMPLETE: (e) => "".concat(e, " percent complete"),
+            PERCENT_COMPLETE: (e) => `${e} percent complete`,
         },
         theme: "light",
         locale: "en-US",
@@ -65,27 +61,16 @@ let o = {
         isWindowFocused: void 0,
         dynamicGraphicComponents: void 0,
     },
-    s = i.createContext(o);
-
+    o = i.createContext(s);
 function l() {
-    let e = i.useContext(s);
-    return e === o && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
+    let e = i.useContext(o);
+    return e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
-
-function c(e) {
-    var t, n;
-    return (null != (t = null == (n = l().experiments) ? void 0 : n.enabledExperiments) ? t : []).includes(
-        "mana-toggle-inputs",
-    );
-}
-
 function u(e) {
+    let t = l();
+    return (t.experiments?.enabledExperiments ?? []).includes("mana-toggle-inputs");
+}
+function c(e) {
     let { children: t, value: n } = e;
-    return (0, r.jsx)(s.Provider, {
-        value: n,
-        children: (0, r.jsx)(a.C, {
-            locale: n.locale,
-            children: t,
-        }),
-    });
+    return (0, r.jsx)(o.Provider, { value: n, children: (0, r.jsx)(a.C, { locale: n.locale, children: t }) });
 }

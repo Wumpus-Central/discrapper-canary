@@ -1,7 +1,4 @@
-n.d(t, {
-    U: () => r,
-}),
-    n(896048);
+n.d(t, { U: () => r });
 var l,
     r =
         (((l = {}).MESSAGE = "message"),

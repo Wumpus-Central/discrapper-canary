@@ -1,9 +1,5 @@
-n.d(t, {
-    z: () => o,
-}),
-    n(896048),
-    n(228524),
-    n(446912);
+"use strict";
+n.d(t, { z: () => o });
 var r = n(412703);
 n(861855);
 var i = n(668824),
@@ -25,23 +21,11 @@ let s = (e) => {
                     messages: (0, a.Tl)(e.messages),
                 };
             case r.n.PLAY_ON_DESKTOP:
-                return {
-                    type: r.n.PLAY_ON_DESKTOP,
-                    target: e.target,
-                    applications: e.applications,
-                };
+                return { type: r.n.PLAY_ON_DESKTOP, target: e.target, applications: e.applications };
             case r.n.STREAM_ON_DESKTOP:
-                return {
-                    type: r.n.STREAM_ON_DESKTOP,
-                    target: e.target,
-                    applications: e.applications,
-                };
+                return { type: r.n.STREAM_ON_DESKTOP, target: e.target, applications: e.applications };
             case r.n.PLAY_ACTIVITY:
-                return {
-                    type: r.n.PLAY_ACTIVITY,
-                    target: e.target,
-                    applications: e.applications,
-                };
+                return { type: r.n.PLAY_ACTIVITY, target: e.target, applications: e.applications };
             case r.n.PLAY_ON_XBOX:
                 return {
                     type: r.n.PLAY_ON_XBOX,
@@ -61,10 +45,7 @@ let s = (e) => {
                     type: r.n.ACHIEVEMENT_IN_GAME,
                     target: e.target,
                     eventName: e.event_name,
-                    messages: {
-                        taskTitle: e.messages.task_title,
-                        taskDescription: e.messages.task_description,
-                    },
+                    messages: { taskTitle: e.messages.task_title, taskDescription: e.messages.task_description },
                     applications: e.applications,
                 };
             case r.n.ACHIEVEMENT_IN_ACTIVITY:
@@ -72,10 +53,7 @@ let s = (e) => {
                     type: r.n.ACHIEVEMENT_IN_ACTIVITY,
                     target: e.target,
                     eventName: e.event_name,
-                    messages: {
-                        taskTitle: e.messages.task_title,
-                        taskDescription: e.messages.task_description,
-                    },
+                    messages: { taskTitle: e.messages.task_title, taskDescription: e.messages.task_description },
                     applications: e.applications,
                 };
             default:
@@ -93,14 +71,8 @@ let s = (e) => {
                     let [t, n] = e;
                     return null !== n;
                 });
-            return {
-                tasks: Object.fromEntries(t),
-                joinOperator: e.join_operator,
-            };
+            return { tasks: Object.fromEntries(t), joinOperator: e.join_operator };
         } catch (e) {
-            return {
-                tasks: {},
-                joinOperator: i.K.OR,
-            };
+            return { tasks: {}, joinOperator: i.K.OR };
         }
     };

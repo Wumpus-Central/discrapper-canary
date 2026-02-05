@@ -1,11 +1,9 @@
-n.d(t, {
-    W: () => o,
-});
+"use strict";
+n.d(t, { W: () => o });
 var r = n(64700),
     i = n(311907),
     a = n(786953),
     s = n(505274);
-
 function o() {
     let {
         balance: e,
@@ -20,10 +18,6 @@ function o() {
         (0, r.useEffect)(() => {
             null !== e || null !== n || t || (0, a.Bf)();
         }, [e, n, t]),
-        {
-            balance: e,
-            isFetching: t,
-            error: n,
-        }
+        { balance: e, isFetching: t, error: n }
     );
 }

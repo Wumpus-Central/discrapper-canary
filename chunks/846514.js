@@ -1,15 +1,11 @@
+"use strict";
 var n = r(116740).List;
 t.exports = (function () {
     function t(t) {
         var e, r;
         (r = void 0),
             (e = "_decorators") in this
-                ? Object.defineProperty(this, e, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
+                ? Object.defineProperty(this, e, { value: r, enumerable: !0, configurable: !0, writable: !0 })
                 : (this[e] = r),
             (this._decorators = t.slice());
     }

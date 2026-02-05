@@ -1,19 +1,13 @@
-n.d(t, {
-    ef: () => a,
-    lJ: () => o,
-    xM: () => s,
-});
+"use strict";
+n.d(t, { ef: () => a, lJ: () => o, xM: () => s });
 var r = ["D", "DD"],
     i = ["YY", "YYYY"];
-
 function a(e) {
     return -1 !== r.indexOf(e);
 }
-
 function s(e) {
     return -1 !== i.indexOf(e);
 }
-
 function o(e, t, n) {
     if ("YYYY" === e)
         throw RangeError(

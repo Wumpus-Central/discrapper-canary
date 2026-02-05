@@ -1,3 +1,4 @@
+"use strict";
 function r() {
     if ("u" > typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" == typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE)
         try {

@@ -1,6 +1,5 @@
-Object.defineProperty(t, "__esModule", {
-    value: !0,
-}),
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringSimilarity = void 0),
     (t.stringSimilarity = function (e, t, n, r) {
         if (
@@ -15,9 +14,9 @@ Object.defineProperty(t, "__esModule", {
             i.set(s, i.has(s) ? i.get(s) + 1 : 1);
         }
         for (var o = 0, l = 0; l < t.length - (n - 1); l++) {
-            var c = t.substr(l, n),
-                u = i.has(c) ? i.get(c) : 0;
-            u > 0 && (i.set(c, u - 1), o++);
+            var u = t.substr(l, n),
+                c = i.has(u) ? i.get(u) : 0;
+            c > 0 && (i.set(u, c - 1), o++);
         }
         return (2 * o) / (e.length + t.length - (n - 1) * 2);
     }),

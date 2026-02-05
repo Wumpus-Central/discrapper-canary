@@ -1,3 +1,1 @@
-e.exports = {
-    y: "categorySubGroup__65726",
-};
+e.exports = { y: "categorySubGroup__65726" };

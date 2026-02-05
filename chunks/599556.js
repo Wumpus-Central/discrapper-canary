@@ -1,3 +1,4 @@
+"use strict";
 var r = {
     progressContainer: "progressContainer__9258b",
     blue: "blue__9258b",

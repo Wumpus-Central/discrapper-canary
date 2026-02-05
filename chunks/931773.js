@@ -1,15 +1,9 @@
 var i =
     (this && this.__importDefault) ||
     function (t) {
-        return t && t.__esModule
-            ? t
-            : {
-                  default: t,
-              };
+        return t && t.__esModule ? t : { default: t };
     };
-Object.defineProperty(e, "__esModule", {
-    value: !0,
-}),
+Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.foldLines =
         e.escape =
         e.formatDateTZ =
@@ -31,7 +25,6 @@ Object.defineProperty(e, "__esModule", {
         e.ICalAlarm =
             void 0);
 let r = i(a(399207));
-
 function n(t) {
     return new r.default(t);
 }
@@ -94,7 +87,7 @@ Object.defineProperty(e, "ICalCategory", {
         return i(l).default;
     },
 });
-var u = a(594597);
+var u = a(816978);
 Object.defineProperty(e, "ICalEvent", {
     enumerable: !0,
     get: function () {

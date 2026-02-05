@@ -1,12 +1,7 @@
-n.d(t, {
-    A: () => u,
-});
+"use strict";
+n.d(t, { A: () => c });
 var r = n(981737),
-    i = {
-        narrow: ["B", "A"],
-        abbreviated: ["BC", "AD"],
-        wide: ["Before Christ", "Anno Domini"],
-    },
+    i = { narrow: ["B", "A"], abbreviated: ["BC", "AD"], wide: ["Before Christ", "Anno Domini"] },
     a = {
         narrow: ["1", "2", "3", "4"],
         abbreviated: ["Q1", "Q2", "Q3", "Q4"],
@@ -68,7 +63,7 @@ var r = n(981737),
             night: "night",
         },
     },
-    c = {
+    u = {
         narrow: {
             am: "a",
             pm: "p",
@@ -100,7 +95,7 @@ var r = n(981737),
             night: "at night",
         },
     };
-let u = {
+let c = {
     ordinalNumber: function (e, t) {
         var n = Number(e),
             r = n % 100;
@@ -115,10 +110,7 @@ let u = {
             }
         return n + "th";
     },
-    era: (0, r.A)({
-        values: i,
-        defaultWidth: "wide",
-    }),
+    era: (0, r.A)({ values: i, defaultWidth: "wide" }),
     quarter: (0, r.A)({
         values: a,
         defaultWidth: "wide",
@@ -126,18 +118,7 @@ let u = {
             return e - 1;
         },
     }),
-    month: (0, r.A)({
-        values: s,
-        defaultWidth: "wide",
-    }),
-    day: (0, r.A)({
-        values: o,
-        defaultWidth: "wide",
-    }),
-    dayPeriod: (0, r.A)({
-        values: l,
-        defaultWidth: "wide",
-        formattingValues: c,
-        defaultFormattingWidth: "wide",
-    }),
+    month: (0, r.A)({ values: s, defaultWidth: "wide" }),
+    day: (0, r.A)({ values: o, defaultWidth: "wide" }),
+    dayPeriod: (0, r.A)({ values: l, defaultWidth: "wide", formattingValues: u, defaultFormattingWidth: "wide" }),
 };

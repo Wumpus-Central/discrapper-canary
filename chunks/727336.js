@@ -1,3 +1,4 @@
+"use strict";
 var n = r(64700),
     o = r(205662),
     a = r(920385),
@@ -14,15 +15,8 @@ var n = r(64700),
             (0, a.A)(
                 {
                     default: {
-                        material: {
-                            width: "98px",
-                            height: "98px",
-                            padding: "16px",
-                            fontFamily: "Roboto",
-                        },
-                        HEXwrap: {
-                            position: "relative",
-                        },
+                        material: { width: "98px", height: "98px", padding: "16px", fontFamily: "Roboto" },
+                        HEXwrap: { position: "relative" },
                         HEXinput: {
                             width: "100%",
                             marginTop: "12px",
@@ -42,12 +36,8 @@ var n = r(64700),
                             color: "#999999",
                             textTransform: "capitalize",
                         },
-                        Hex: {
-                            style: {},
-                        },
-                        RGBwrap: {
-                            position: "relative",
-                        },
+                        Hex: { style: {} },
+                        RGBwrap: { position: "relative" },
                         RGBinput: {
                             width: "100%",
                             marginTop: "12px",
@@ -67,15 +57,8 @@ var n = r(64700),
                             color: "#999999",
                             textTransform: "capitalize",
                         },
-                        split: {
-                            display: "flex",
-                            marginRight: "-10px",
-                            paddingTop: "11px",
-                        },
-                        third: {
-                            flex: "1",
-                            paddingRight: "10px",
-                        },
+                        split: { display: "flex", marginRight: "-10px", paddingTop: "11px" },
+                        third: { flex: "1", paddingRight: "10px" },
                     },
                 },
                 c,
@@ -83,63 +66,29 @@ var n = r(64700),
         ),
         f = function (e, r) {
             e.hex
-                ? i.qt(e.hex) &&
-                  t(
-                      {
-                          hex: e.hex,
-                          source: "hex",
-                      },
-                      r,
-                  )
-                : (e.r || e.g || e.b) &&
-                  t(
-                      {
-                          r: e.r || s.r,
-                          g: e.g || s.g,
-                          b: e.b || s.b,
-                          source: "rgb",
-                      },
-                      r,
-                  );
+                ? i.qt(e.hex) && t({ hex: e.hex, source: "hex" }, r)
+                : (e.r || e.g || e.b) && t({ r: e.r || s.r, g: e.g || s.g, b: e.b || s.b, source: "rgb" }, r);
         };
     return n.createElement(
         l.H1,
-        {
-            styles: c,
-        },
+        { styles: c },
         n.createElement(
             "div",
-            {
-                style: d.material,
-                className: "material-picker " + (void 0 === p ? "" : p),
-            },
+            { style: d.material, className: "material-picker " + (void 0 === p ? "" : p) },
             n.createElement(l.jc, {
-                style: {
-                    wrap: d.HEXwrap,
-                    input: d.HEXinput,
-                    label: d.HEXlabel,
-                },
+                style: { wrap: d.HEXwrap, input: d.HEXinput, label: d.HEXlabel },
                 label: "hex",
                 value: r,
                 onChange: f,
             }),
             n.createElement(
                 "div",
-                {
-                    style: d.split,
-                    className: "flexbox-fix",
-                },
+                { style: d.split, className: "flexbox-fix" },
                 n.createElement(
                     "div",
-                    {
-                        style: d.third,
-                    },
+                    { style: d.third },
                     n.createElement(l.jc, {
-                        style: {
-                            wrap: d.RGBwrap,
-                            input: d.RGBinput,
-                            label: d.RGBlabel,
-                        },
+                        style: { wrap: d.RGBwrap, input: d.RGBinput, label: d.RGBlabel },
                         label: "r",
                         value: s.r,
                         onChange: f,
@@ -147,15 +96,9 @@ var n = r(64700),
                 ),
                 n.createElement(
                     "div",
-                    {
-                        style: d.third,
-                    },
+                    { style: d.third },
                     n.createElement(l.jc, {
-                        style: {
-                            wrap: d.RGBwrap,
-                            input: d.RGBinput,
-                            label: d.RGBlabel,
-                        },
+                        style: { wrap: d.RGBwrap, input: d.RGBinput, label: d.RGBlabel },
                         label: "g",
                         value: s.g,
                         onChange: f,
@@ -163,15 +106,9 @@ var n = r(64700),
                 ),
                 n.createElement(
                     "div",
-                    {
-                        style: d.third,
-                    },
+                    { style: d.third },
                     n.createElement(l.jc, {
-                        style: {
-                            wrap: d.RGBwrap,
-                            input: d.RGBinput,
-                            label: d.RGBlabel,
-                        },
+                        style: { wrap: d.RGBwrap, input: d.RGBinput, label: d.RGBlabel },
                         label: "b",
                         value: s.b,
                         onChange: f,

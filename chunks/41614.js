@@ -1,6 +1,4 @@
-n.d(a, {
-    default: () => o,
-});
+n.d(a, { default: () => o });
 var e = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,7 +7,6 @@ var i = n(397927),
     d = n(957565),
     l = n(746080),
     c = n(985018);
-
 function o(t) {
     let { guild: a, onSelect: n } = t;
     return (0, e.jsx)(i.W1t, {

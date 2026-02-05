@@ -1,7 +1,4 @@
-i.d(t, {
-    c: () => r,
-});
-
+i.d(t, { c: () => r });
 function r(e) {
     return {
         js_heap_size_limit: e.jsHeapSizeLimit,

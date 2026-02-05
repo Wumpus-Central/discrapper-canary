@@ -1,45 +1,37 @@
-e.d(n, {
-    default: () => u,
-}),
-    e(896048);
-var i = e(627968),
-    a = e(64700),
-    o = e(158954),
-    r = e(397927),
-    l = e(422258),
-    s = e(985018);
-
-function u(t) {
-    let { onClose: n, transitionState: e } = t,
-        [u, c] = a.useState("");
+n.d(e, { default: () => c });
+var i = n(627968),
+    a = n(64700),
+    o = n(158954),
+    r = n(397927),
+    s = n(422258),
+    l = n(985018);
+function c(t) {
+    let { onClose: e, transitionState: n } = t,
+        [c, f] = a.useState("");
     return (0, i.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(), (0, l.od)(u), n();
+            t.preventDefault(), (0, s.od)(c), e();
         },
         children: (0, i.jsx)(o.Modal, {
-            title: s.intl.string(s.t["ISN+NM"]),
+            title: l.intl.string(l.t["ISN+NM"]),
             actions: [
+                { text: l.intl.string(l.t["ETE/oC"]), onClick: e, variant: "secondary" },
                 {
-                    text: s.intl.string(s.t["ETE/oC"]),
-                    onClick: n,
-                    variant: "secondary",
-                },
-                {
-                    text: s.intl.string(s.t["ISN+NM"]),
+                    text: l.intl.string(l.t["ISN+NM"]),
                     variant: "primary",
                     type: "submit",
                     autoFocus: !1,
-                    disabled: "" === u,
+                    disabled: "" === c,
                 },
             ],
-            transitionState: e,
-            onClose: n,
+            transitionState: n,
+            onClose: e,
             children: (0, i.jsx)(r.ksK, {
-                label: s.intl.string(s.t.OCAkGP),
-                value: u,
-                onChange: c,
+                label: l.intl.string(l.t.OCAkGP),
+                value: c,
+                onChange: f,
                 maxLength: 100,
-                placeholder: s.intl.string(s.t.eTVbtx),
+                placeholder: l.intl.string(l.t.eTVbtx),
                 autoFocus: !0,
             }),
         }),

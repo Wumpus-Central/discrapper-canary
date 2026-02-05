@@ -1,17 +1,14 @@
-n.d(t, {
-    A: () => a,
-});
+n.d(t, { A: () => r });
 var l = n(627968),
-    r = n(536246),
-    i = n(398866),
+    i = n(536246),
+    a = n(398866),
     o = n(416367);
-
-function a(e) {
-    let { application: t, queryParams: n, url: a } = e;
-    return (0, l.jsx)(i.o, {
-        allowPopups: (0, r.b)(t),
+function r(e) {
+    let { application: t, queryParams: n, url: r } = e;
+    return (0, l.jsx)(a.o, {
+        allowPopups: (0, i.b)(t),
         referrerPolicy: "origin",
-        url: a,
+        url: r,
         queryParams: n,
         className: o.p,
         shouldRefocus: !1,

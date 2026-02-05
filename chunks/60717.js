@@ -1,29 +1,37 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(938796),
-    n(228524);
+"use strict";
+n.d(t, { A: () => s }), n(938796);
 var r = n(315069),
     i = n(948014),
     a = n(427157);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class o extends r.A {
+class s extends r.A {
+    id;
+    applicationId;
+    skuId;
+    skuFlags;
+    summary;
+    tagline;
+    flavorText;
+    description;
+    carouselItems;
+    childSkuIds;
+    alternativeSkuIds;
+    assets;
+    staffNotes;
+    guild;
+    thumbnail;
+    boxArt;
+    previewVideo;
+    headerBackground;
+    headerLogoDarkTheme;
+    headerLogoLightTheme;
+    heroBackground;
+    heroVideo;
+    entitlementBranchId;
+    benefits;
+    published;
     static createFromServer(e) {
         let t = e.staff_notes;
-        return new o({
+        return new s({
             id: e.id,
             applicationId: e.sku.application_id,
             skuId: e.sku.id,
@@ -36,19 +44,10 @@ class o extends r.A {
             alternativeSkuIds: null != e.alternative_skus ? e.alternative_skus.map((e) => e.id) : null,
             carouselItems:
                 null != e.carousel_items
-                    ? e.carousel_items.map((e) => ({
-                          assetId: e.asset_id,
-                          youtubeVideoId: e.youtube_video_id,
-                      }))
+                    ? e.carousel_items.map((e) => ({ assetId: e.asset_id, youtubeVideoId: e.youtube_video_id }))
                     : null,
             assets: null != e.assets ? e.assets.map(i.L) : null,
-            staffNotes:
-                null != t
-                    ? {
-                          content: t.content,
-                          user: null != t.user ? new a.A(t.user) : null,
-                      }
-                    : null,
+            staffNotes: null != t ? { content: t.content, user: null != t.user ? new a.A(t.user) : null } : null,
             guild:
                 null != e.guild
                     ? {
@@ -72,37 +71,8 @@ class o extends r.A {
             published: e.published,
         });
     }
-    isSlimDirectoryVersion() {
-        return null == this.description;
-    }
     constructor(e) {
-        var t, n, r, i, a, o, l, c, u, d, f, p, _;
         super(),
-            s(this, "id", void 0),
-            s(this, "applicationId", void 0),
-            s(this, "skuId", void 0),
-            s(this, "skuFlags", void 0),
-            s(this, "summary", void 0),
-            s(this, "tagline", void 0),
-            s(this, "flavorText", void 0),
-            s(this, "description", void 0),
-            s(this, "carouselItems", void 0),
-            s(this, "childSkuIds", void 0),
-            s(this, "alternativeSkuIds", void 0),
-            s(this, "assets", void 0),
-            s(this, "staffNotes", void 0),
-            s(this, "guild", void 0),
-            s(this, "thumbnail", void 0),
-            s(this, "boxArt", void 0),
-            s(this, "previewVideo", void 0),
-            s(this, "headerBackground", void 0),
-            s(this, "headerLogoDarkTheme", void 0),
-            s(this, "headerLogoLightTheme", void 0),
-            s(this, "heroBackground", void 0),
-            s(this, "heroVideo", void 0),
-            s(this, "entitlementBranchId", void 0),
-            s(this, "benefits", void 0),
-            s(this, "published", void 0),
             (this.id = e.id),
             (this.applicationId = e.applicationId),
             (this.skuId = e.skuId),
@@ -111,22 +81,25 @@ class o extends r.A {
             (this.tagline = e.tagline),
             (this.flavorText = e.flavorText),
             (this.description = e.description),
-            (this.carouselItems = null != (t = e.carouselItems) ? t : []),
-            (this.childSkuIds = null != (n = e.childSkuIds) ? n : []),
-            (this.alternativeSkuIds = null != (r = e.alternativeSkuIds) ? r : []),
-            (this.assets = null != (i = e.assets) ? i : []),
+            (this.carouselItems = e.carouselItems ?? []),
+            (this.childSkuIds = e.childSkuIds ?? []),
+            (this.alternativeSkuIds = e.alternativeSkuIds ?? []),
+            (this.assets = e.assets ?? []),
             (this.staffNotes = e.staffNotes),
             (this.guild = e.guild),
-            (this.thumbnail = null != (a = e.thumbnail) ? a : null),
-            (this.boxArt = null != (o = e.boxArt) ? o : null),
-            (this.previewVideo = null != (l = e.previewVideo) ? l : null),
-            (this.headerBackground = null != (c = e.headerBackground) ? c : null),
-            (this.headerLogoDarkTheme = null != (u = e.headerLogoDarkTheme) ? u : null),
-            (this.headerLogoLightTheme = null != (d = e.headerLogoLightTheme) ? d : null),
-            (this.heroBackground = null != (f = e.heroBackground) ? f : null),
-            (this.heroVideo = null != (p = e.heroVideo) ? p : null),
-            (this.entitlementBranchId = null != (_ = e.entitlementBranchId) ? _ : null),
+            (this.thumbnail = e.thumbnail ?? null),
+            (this.boxArt = e.boxArt ?? null),
+            (this.previewVideo = e.previewVideo ?? null),
+            (this.headerBackground = e.headerBackground ?? null),
+            (this.headerLogoDarkTheme = e.headerLogoDarkTheme ?? null),
+            (this.headerLogoLightTheme = e.headerLogoLightTheme ?? null),
+            (this.heroBackground = e.heroBackground ?? null),
+            (this.heroVideo = e.heroVideo ?? null),
+            (this.entitlementBranchId = e.entitlementBranchId ?? null),
             (this.benefits = e.benefits),
             (this.published = !!e.published);
+    }
+    isSlimDirectoryVersion() {
+        return null == this.description;
     }
 }

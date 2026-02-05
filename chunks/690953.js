@@ -1,151 +1,81 @@
-n.d(t, {
-    A: () => A,
-});
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
 var l = n(417597),
-    i = n(397927),
-    s = n(882997),
-    a = n(731474),
+    s = n(397927),
+    a = n(882997),
+    r = n(731474),
     o = n(383501),
-    c = n(977997),
-    u = n(458829),
-    d = n(857253),
+    d = n(977997),
+    c = n(458829),
+    u = n(857253),
     h = n(694967),
-    p = n(431516),
+    A = n(431516),
     g = n(652215),
-    f = n(985018);
-
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function A(e) {
+    m = n(985018);
+function p(e) {
     let t = (0, l.bG)([o.A], () => o.A.getChannelId() === e.id),
-        A = (0, d.A)(),
-        y = (null == A ? void 0 : A.channelId) === e.id,
-        O = (0, a.J)(e) && !e.isPrivate(),
-        _ = (0, a.A)(e),
-        j = (!(0, l.bG)([c.A], () => c.A.isInChannel(e.id)) && _) || O,
-        x = (0, h.A)();
-    if (!y && 0 === x.length) return null;
-    let v = (0, p.A)(void 0);
-    return y
-        ? (0, r.jsx)(i.Drp, {
-              label: f.intl.string(f.t.PlwgdU),
+        p = (0, u.A)(),
+        _ = p?.channelId === e.id,
+        x = (0, r.J)(e) && !e.isPrivate(),
+        f = (0, r.A)(e),
+        E = (!(0, l.bG)([d.A], () => d.A.isInChannel(e.id)) && f) || x,
+        C = (0, h.A)();
+    if (!_ && 0 === C.length) return null;
+    let I = (0, A.A)(void 0);
+    return _
+        ? (0, i.jsx)(s.Drp, {
+              label: m.intl.string(m.t.PlwgdU),
               id: "handoff",
               action: () => {
-                  (0, u.x)(A);
+                  (0, c.x)(p);
               },
-              icon: v,
-              leadingAccessory: {
-                  type: "icon",
-                  icon: v,
-              },
-              disabled: j,
+              icon: I,
+              leadingAccessory: { type: "icon", icon: I },
+              disabled: E,
           })
-        : x.map((l) => {
-              var a, o;
-              let c = (0, p.A)(l.type);
-              return (0, r.jsx)(
-                  i.Drp,
+        : C.map((l) => {
+              var r, o;
+              let d = (0, A.A)(l.type);
+              return (0, i.jsx)(
+                  s.Drp,
                   {
-                      id: "transfer-".concat(l.type, "-").concat(l.id),
+                      id: `transfer-${l.type}-${l.id}`,
                       label:
-                          ((a = l.type),
+                          ((r = l.type),
                           (o = t),
-                          a === g.fg2.XBOX
+                          r === g.fg2.XBOX
                               ? o
-                                  ? f.intl.string(f.t["qVE/VF"])
-                                  : f.intl.string(f.t.E8euSk)
-                              : a === g.fg2.PLAYSTATION
+                                  ? m.intl.string(m.t["qVE/VF"])
+                                  : m.intl.string(m.t.E8euSk)
+                              : r === g.fg2.PLAYSTATION
                                 ? o
-                                    ? f.intl.string(f.t.vzfxmY)
-                                    : f.intl.string(f.t.QxEYDj)
-                                : a === g.fg2.PLAYSTATION_STAGING
+                                    ? m.intl.string(m.t.vzfxmY)
+                                    : m.intl.string(m.t.QxEYDj)
+                                : r === g.fg2.PLAYSTATION_STAGING
                                   ? o
-                                      ? f.intl.string(f.t.BDiXtV)
-                                      : f.intl.string(f.t["bhdB9+"])
+                                      ? m.intl.string(m.t.BDiXtV)
+                                      : m.intl.string(m.t["bhdB9+"])
                                   : void 0),
                       action: () => {
                           !l.twoWayLink || l.revoked
-                              ? (0, s.A)({
-                                    platformType: l.type,
-                                    location: "Console Transfer Item",
-                                })
+                              ? (0, a.A)({ platformType: l.type, location: "Console Transfer Item" })
                               : l.type === g.fg2.XBOX
-                                ? (0, i.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("83393"), n.e("67670")]).then(
+                                ? (0, s.mMO)(async () => {
+                                      let { default: t } = await Promise.all([n.e("50906"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
-                                      return (n) =>
-                                          (0, r.jsx)(
-                                              t,
-                                              b(m({}, n), {
-                                                  channel: e,
-                                              }),
-                                          );
+                                      return (n) => (0, i.jsx)(t, { ...n, channel: e });
                                   })
                                 : (l.type === g.fg2.PLAYSTATION || l.type === g.fg2.PLAYSTATION_STAGING) &&
-                                  (0, i.mMO)(async () => {
+                                  (0, s.mMO)(async () => {
                                       let { default: t } = await n.e("71282").then(n.bind(n, 315337));
-                                      return (n) =>
-                                          (0, r.jsx)(
-                                              t,
-                                              b(m({}, n), {
-                                                  platform: l.type,
-                                                  channel: e,
-                                              }),
-                                          );
+                                      return (n) => (0, i.jsx)(t, { ...n, platform: l.type, channel: e });
                                   });
                       },
-                      icon: c,
-                      leadingAccessory: {
-                          type: "icon",
-                          icon: c,
-                      },
-                      disabled: j,
+                      icon: d,
+                      leadingAccessory: { type: "icon", icon: d },
+                      disabled: E,
                   },
                   l.id,
               );

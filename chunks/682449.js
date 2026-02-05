@@ -1,60 +1,36 @@
-n.d(t, {
-    UU: () => p,
-    uy: () => g,
-}),
-    n(65821);
+"use strict";
+n.d(t, { UU: () => f, uy: () => g });
 var r = n(562465),
     i = n(73153),
     a = n(384904),
     s = n(887555),
     o = n(501280),
     l = n(739508),
-    c = n(490581),
-    u = n(652215),
+    u = n(490581),
+    c = n(652215),
     d = n(985018);
-async function f() {
-    return await r.Bo.get({
-        url: u.Rsh.BILLING_ADYEN_PAYMENT_METHODS,
-        oldFormErrors: !0,
-        rejectWithError: !1,
-    });
+async function _() {
+    return await r.Bo.get({ url: c.Rsh.BILLING_ADYEN_PAYMENT_METHODS, oldFormErrors: !0, rejectWithError: !1 });
 }
-async function p() {
+async function f() {
     try {
-        let { enabledPaymentTypes: e } = s.Ay.getCurrentConfig(
-            {
-                location: "40c266_2",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        );
-        if (!e.includes(u.hes.CASH_APP)) return;
-        let t = await f(),
+        let { enabledPaymentTypes: e } = s.Ay.getCurrentConfig({ location: "40c266_2" }, { autoTrackExposure: !1 });
+        if (!e.includes(c.hes.CASH_APP)) return;
+        let t = await _(),
             { default: r } = await Promise.all([n.e("94678"), n.e("35511")]).then(n.bind(n, 847722)),
             a = await r({
-                environment: u.Gg3.ADYEN.KEY.startsWith("live_") ? "live" : "test",
-                clientKey: u.Gg3.ADYEN.KEY,
-                analytics: {
-                    enabled: !1,
-                },
+                environment: c.Gg3.ADYEN.KEY.startsWith("live_") ? "live" : "test",
+                clientKey: c.Gg3.ADYEN.KEY,
+                analytics: { enabled: !1 },
                 paymentMethodsResponse: t.body,
             });
-        i.h.dispatch({
-            type: "ADYEN_CREATE_CLIENT_SUCCESS",
-            client: a,
-        }),
-            _(a);
+        i.h.dispatch({ type: "ADYEN_CREATE_CLIENT_SUCCESS", client: a }), p(a);
     } catch (e) {
-        (0, l.pM)(e),
-            i.h.dispatch({
-                type: "ADYEN_CREATE_CLIENT_FAIL",
-            });
+        (0, l.pM)(e), i.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" });
     }
 }
-
-function _(e) {
-    if (null != c.A.cashAppPayComponent) {
+function p(e) {
+    if (null != u.A.cashAppPayComponent) {
         m(), h();
         return;
     }
@@ -66,11 +42,7 @@ function _(e) {
             setStatusAutomatically: !1,
             onSubmit: (e) => {
                 let { data: t, isValid: n } = e;
-                if (n)
-                    i.h.dispatch({
-                        type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS",
-                        data: t,
-                    });
+                if (n) i.h.dispatch({ type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS", data: t });
                 else throw (0, a.i0)("Cash App Pay setup attempt is not valid.");
             },
             onError: (e) => {
@@ -88,26 +60,18 @@ function _(e) {
                 }
             },
         })
-        .mount("#".concat(o.h));
-    i.h.dispatch({
-        type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS",
-        component: t,
-    });
+        .mount(`#${o.h}`);
+    i.h.dispatch({ type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS", component: t });
 }
-
 function h() {
-    var e;
-    if (null == c.A.cashAppPayComponent) throw Error("Adyen CashAppPay component must be created before mounting.");
-    null == (e = c.A.cashAppPayComponent) || e.mount("#".concat(o.h));
+    if (null == u.A.cashAppPayComponent) throw Error("Adyen CashAppPay component must be created before mounting.");
+    u.A.cashAppPayComponent?.mount(`#${o.h}`);
 }
-
 function m() {
-    var e;
-    null == (e = c.A.cashAppPayComponent) || e.unmount();
+    u.A.cashAppPayComponent?.unmount();
 }
-
 function g() {
-    let e = c.A.cashAppPayComponent;
+    let e = u.A.cashAppPayComponent;
     if (null == e) throw Error("Adyen CashAppPay component must be created before submitting.");
     e.submit();
 }

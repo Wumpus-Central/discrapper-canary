@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ie: "discordLogo__921c5",
     sL: "authBox__921c5",

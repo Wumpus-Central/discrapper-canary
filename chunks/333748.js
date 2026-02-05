@@ -1,8 +1,5 @@
-n.d(t, {
-    N: () => i,
-    i: () => r,
-}),
-    n(896048);
+"use strict";
+n.d(t, { N: () => i, i: () => r });
 var r = (function (e) {
     return (
         (e.XBOX_APPLICATION_ID = "622174530214821906"),

@@ -1,50 +1,26 @@
-n.d(t, {
-    Je: () => s,
-    OH: () => l,
-    fx: () => o,
-    zf: () => c,
-});
+"use strict";
+n.d(t, { Je: () => s, OH: () => l, fx: () => o, zf: () => u });
 var r = n(562465),
     i = n(73153),
     a = n(652215);
-
 function s(e) {
-    return r.Bo.get({
-        url: a.Rsh.GUILD_VANITY_URL(e),
-        oldFormErrors: !0,
-        rejectWithError: !0,
-    }).then((e) => {
+    return r.Bo.get({ url: a.Rsh.GUILD_VANITY_URL(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
         let {
             body: { code: t, uses: n, error: r },
         } = e;
-        i.h.dispatch({
-            type: "GUILD_SETTINGS_SET_VANITY_URL",
-            code: t,
-            uses: n,
-            error: r,
-        });
+        i.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: n, error: r });
     });
 }
-
 function o() {
-    i.h.dispatch({
-        type: "GUILD_SETTINGS_VANITY_URL_RESET",
-    });
+    i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 }
-
 function l(e) {
-    i.h.dispatch({
-        type: "GUILD_SETTINGS_VANITY_URL_SET",
-        code: e,
-    });
+    i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code: e });
 }
-
-function c(e, t, n) {
+function u(e, t, n) {
     return r.Bo.patch({
         url: a.Rsh.GUILD_VANITY_URL(e),
-        body: {
-            code: t,
-        },
+        body: { code: t },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(
@@ -52,21 +28,10 @@ function c(e, t, n) {
             let {
                 body: { code: t, uses: n },
             } = e;
-            i.h.dispatch({
-                type: "GUILD_SETTINGS_SET_VANITY_URL",
-                code: t,
-                uses: n,
-            });
+            i.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: n });
         },
         (e) => {
-            if (
-                (i.h.dispatch({
-                    type: "GUILD_SETTINGS_VANITY_URL_ERROR",
-                    error: e.body,
-                }),
-                null == n ? void 0 : n.throwErr)
-            )
-                throw e;
+            if ((i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: e.body }), n?.throwErr)) throw e;
             return e;
         },
     );

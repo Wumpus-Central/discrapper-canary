@@ -1,29 +1,26 @@
-n.d(t, {
-    A: () => h,
-});
+n.d(t, { A: () => N });
 var l = n(627968),
     r = n(64700),
     a = n(417597),
     i = n(397927),
     s = n(854378),
     o = n(221950),
-    c = n(836731),
+    E = n(836731),
     u = n(589935),
-    E = n(71393),
-    d = n(309010),
-    _ = n(706752),
+    c = n(71393),
+    _ = n(309010),
+    d = n(706752),
     g = n(829887),
     A = n(652215),
     T = n(985018),
-    f = n(438536);
-
-function h(e) {
+    I = n(438536);
+function N(e) {
     let { member: t } = e,
-        n = (0, a.bG)([E.A], () => E.A.getGuild(t.guildId), [t.guildId]),
-        h = (0, c.GT)(t.userId, t.guildId),
-        I = (0, c.Wi)(t.userId, t.guildId),
-        O = (0, c.t)(t.userId),
-        N = (0, c.ff)(t.userId, t.guildId);
+        n = (0, a.bG)([c.A], () => c.A.getGuild(t.guildId), [t.guildId]),
+        N = (0, E.GT)(t.userId, t.guildId),
+        h = (0, E.Wi)(t.userId, t.guildId),
+        m = (0, E.t)(t.userId),
+        S = (0, E.ff)(t.userId, t.guildId);
     return (r.useEffect(() => {
         (0, o.uO)(t.guildId);
     }, [t.guildId]),
@@ -34,17 +31,13 @@ function h(e) {
               children: (0, l.jsxs)(g.SQ, {
                   children: [
                       (0, l.jsx)(g.RU, {
-                          icon: (0, l.jsx)(i.iTF, {
-                              size: "custom",
-                              width: g.mb,
-                              height: g.mb,
-                          }),
+                          icon: (0, l.jsx)(i.iTF, { size: "custom", width: g.mb, height: g.mb }),
                           name: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
                               children: T.intl.string(T.t.nzGai4),
                           }),
-                          description: h
+                          description: N
                               ? (0, l.jsx)(i.rOg, {
                                     size: "custom",
                                     width: g.mb,
@@ -58,20 +51,16 @@ function h(e) {
                                     color: i.LU0.colors.ICON_FEEDBACK_CRITICAL,
                                 }),
                       }),
-                      I !== c.bM.NO_GATE &&
+                      h !== E.bM.NO_GATE &&
                           (0, l.jsx)(g.RU, {
-                              icon: (0, l.jsx)(i.B8Q, {
-                                  size: "custom",
-                                  width: g.mb,
-                                  height: g.mb,
-                              }),
+                              icon: (0, l.jsx)(i.B8Q, { size: "custom", width: g.mb, height: g.mb }),
                               name: (0, l.jsx)(i.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
                                   children: T.intl.string(T.t["93hqln"]),
                               }),
                               description:
-                                  I === c.bM.AGREED
+                                  h === E.bM.AGREED
                                       ? (0, l.jsx)(i.rOg, {
                                             size: "custom",
                                             width: g.mb,
@@ -86,12 +75,7 @@ function h(e) {
                                         }),
                           }),
                       (0, l.jsx)(g.RU, {
-                          icon: (0, l.jsx)(i.pVd, {
-                              size: "custom",
-                              color: "currentColor",
-                              width: g.mb,
-                              height: g.mb,
-                          }),
+                          icon: (0, l.jsx)(i.pVd, { size: "custom", color: "currentColor", width: g.mb, height: g.mb }),
                           name: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
@@ -100,16 +84,11 @@ function h(e) {
                           description: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: O,
+                              children: m,
                           }),
                       }),
                       (0, l.jsx)(g.RU, {
-                          icon: (0, l.jsx)(s.$v, {
-                              guild: n,
-                              size: s.$v.Sizes.SMOL,
-                              animate: !1,
-                              className: f.$f,
-                          }),
+                          icon: (0, l.jsx)(s.$v, { guild: n, size: s.$v.Sizes.SMOL, animate: !1, className: I.$f }),
                           name: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
@@ -118,15 +97,11 @@ function h(e) {
                           description: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: N,
+                              children: S,
                           }),
                       }),
                       (0, l.jsx)(g.RU, {
-                          icon: (0, l.jsx)(i.DpX, {
-                              size: "custom",
-                              width: g.mb,
-                              height: g.mb,
-                          }),
+                          icon: (0, l.jsx)(i.DpX, { size: "custom", width: g.mb, height: g.mb }),
                           name: (0, l.jsx)(i.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
@@ -140,8 +115,8 @@ function h(e) {
                                   guildId: t.guildId,
                                   showJoinMethodContextAsFooter: !0,
                                   onClickInviter: (e) => {
-                                      let n = d.A.getChannelId();
-                                      (0, _.z)(t.guildId, e.id, null != n ? n : A.dJq);
+                                      let n = _.A.getChannelId();
+                                      (0, d.z)(t.guildId, e.id, n ?? A.dJq);
                                   },
                               }),
                           }),

@@ -1,98 +1,34 @@
-n.d(t, {
-    A: () => w,
-});
+"use strict";
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
     a = n(621466),
     s = n(192308),
     o = n(397927),
     l = n(315246),
-    c = n(750506),
-    u = n(267102),
+    u = n(750506),
+    c = n(267102),
     d = n(712687),
-    f = n(203982),
-    p = n(211401),
-    _ = n(500049),
+    _ = n(203982),
+    f = n(211401),
+    p = n(500049),
     h = n(7691),
     m = n(699803),
     g = n(60809),
     E = n(652215),
-    b = n(732139),
-    y = n(985018),
-    O = n(775269);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function S(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = I(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function I(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let T = {
-    height: g.$V,
-};
-
-function C(e) {
-    let { positionTargetRef: t, align: n } = e,
-        i = S(e, ["positionTargetRef", "align"]);
+    A = n(732139),
+    I = n(985018),
+    T = n(775269);
+let y = { height: g.$V };
+function S(e) {
+    let { positionTargetRef: t, align: n, ...i } = e;
     return (0, r.jsx)("span", {
         style: g.sK,
-        children: (0, r.jsx)(c.nE, {
-            className: O.T,
+        children: (0, r.jsx)(u.nE, {
+            className: T.T,
             targetRef: t,
             position: "top",
-            align: null != n ? n : "right",
+            align: n ?? "right",
             spacing: 24,
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
@@ -100,73 +36,62 @@ function C(e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, r.jsx)("section", {
-                    className: O.V,
+                    className: T.V,
                     role: "dialog",
-                    style: T,
-                    "aria-label": y.intl.string(y.t["3CNGLK"]),
-                    children: t && (0, r.jsx)(R, v({}, i)),
+                    style: y,
+                    "aria-label": I.intl.string(I.t["3CNGLK"]),
+                    children: t && (0, r.jsx)(C, { ...i }),
                 });
             },
         }),
     });
 }
-
-function N() {
-    p.k(_.Se.DISMISSED);
+function v() {
+    f.k(p.Se.DISMISSED);
 }
-
-function R(e) {
-    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
-        p = i.useRef(null),
-        { renderWindow: y, windowDispatch: O } = i.useContext(u.Ay),
-        A = null != c,
-        v = (0, s.useIsModalAtTop)(null != c ? c : ""),
-        S = i.useCallback(
+function C(e) {
+    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
+        f = i.useRef(null),
+        { renderWindow: I, windowDispatch: T } = i.useContext(c.Ay),
+        y = null != u,
+        S = (0, s.useIsModalAtTop)(u ?? ""),
+        C = i.useCallback(
             (e) => {
-                var t;
-                if ((!A && (0, s.hasAnyModalOpen)()) || (A && !(v && n)) || d.A.isOpen() || e.defaultPrevented) return;
-                let { target: r } = e;
-                if ((0, a.vq)(r) && null != r.closest("." + g.Wx)) return;
-                for (; (0, a.vq)(r); ) {
-                    if (r === p.current) return;
-                    if (r.classList.contains(g.KG) || r.classList.contains(g.Gu)) return void e.preventDefault();
-                    if (r.classList.contains(g.qp)) return;
-                    let t = [b.Do, l.n];
-                    if (r.classList.contains(g.TY) || t.includes(r.id)) return;
-                    r = r.parentNode;
+                if ((!y && (0, s.hasAnyModalOpen)()) || (y && !(S && n)) || d.A.isOpen() || e.defaultPrevented) return;
+                let { target: t } = e;
+                if ((0, a.vq)(t) && null != t.closest("." + g.Wx)) return;
+                for (; (0, a.vq)(t); ) {
+                    if (t === f.current) return;
+                    if (t.classList.contains(g.KG) || t.classList.contains(g.Gu)) return void e.preventDefault();
+                    if (t.classList.contains(g.qp)) return;
+                    let n = [A.Do, l.n];
+                    if (t.classList.contains(g.TY) || n.includes(t.id)) return;
+                    t = t.parentNode;
                 }
-                N();
-                let i = null == (t = (0, a.BF)(e)) ? void 0 : t.activeElement;
-                (null == i || "BODY" === i.tagName) && f._.dispatchToLastSubscribed(E.jej.TEXTAREA_FOCUS);
+                v();
+                let r = (0, a.BF)(e)?.activeElement;
+                (null == r || "BODY" === r.tagName) && _._.dispatchToLastSubscribed(E.jej.TEXTAREA_FOCUS);
             },
-            [n, v, A],
+            [n, S, y],
         );
     i.useLayoutEffect(
         () => (
-            y.addEventListener("mousedown", S),
-            y.addEventListener("contextmenu", S),
-            O.subscribe(E.jej.POPOUT_CLOSE, N),
+            I.addEventListener("mousedown", C),
+            I.addEventListener("contextmenu", C),
+            T.subscribe(E.jej.POPOUT_CLOSE, v),
             () => {
-                y.removeEventListener("mousedown", S),
-                    y.removeEventListener("contextmenu", S),
-                    O.unsubscribe(E.jej.POPOUT_CLOSE, N);
+                I.removeEventListener("mousedown", C),
+                    I.removeEventListener("contextmenu", C),
+                    T.unsubscribe(E.jej.POPOUT_CLOSE, v);
             }
         ),
-        [S, y, O],
+        [C, I, T],
     ),
-        (0, o.tjt)(p),
+        (0, o.tjt)(f),
         i.useEffect(() => {
-            ((!A && (0, s.hasAnyModalOpen)()) || (A && !v)) && N();
-        }, [v, A]);
-    let I = (0, m.A)();
-    return (0, r.jsx)(h.A, {
-        ref: p,
-        context: {
-            channel: t,
-            type: "channel",
-        },
-        entrypoint: _.s4.TEXT,
-        initHistory: I,
-    });
+            ((!y && (0, s.hasAnyModalOpen)()) || (y && !S)) && v();
+        }, [S, y]);
+    let b = (0, m.A)();
+    return (0, r.jsx)(h.A, { ref: f, context: { channel: t, type: "channel" }, entrypoint: p.s4.TEXT, initHistory: b });
 }
-let w = i.memo(C);
+let b = i.memo(S);

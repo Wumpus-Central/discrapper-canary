@@ -1,30 +1,24 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(843472),
-    o = n(406704),
-    c = n(961350),
-    s = n(697470),
-    d = n(985018);
-
+var l = n(311907),
+    a = n(397927),
+    r = n(843472),
+    s = n(406704),
+    o = n(961350),
+    d = n(697470),
+    c = n(985018);
 function u(e, t) {
-    let n = (0, i.bG)([c.default], () => c.default.getId()),
-        u = (0, o.Id)(t),
-        g = (0, o.s5)(t);
-    return (0, s.A)(e, n) && u && !g
-        ? (0, r.jsx)(l.Drp, {
+    let n = (0, l.bG)([o.default], () => o.default.getId()),
+        u = (0, s.Id)(t),
+        g = (0, s.s5)(t);
+    return (0, d.A)(e, n) && u && !g
+        ? (0, i.jsx)(a.Drp, {
               id: "edit",
-              label: d.intl.string(d.t.fsBWmS),
-              action: () => a.A.startEditMessageRecord(t.id, e),
-              leadingAccessory: {
-                  type: "icon",
-                  icon: l.R2l,
-              },
-              icon: l.R2l,
+              label: c.intl.string(c.t.fsBWmS),
+              action: () => r.A.startEditMessageRecord(t.id, e),
+              leadingAccessory: { type: "icon", icon: a.R2l },
+              icon: a.R2l,
           })
         : null;
 }

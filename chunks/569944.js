@@ -1,29 +1,11 @@
-n.d(t, {
-    c: () => s,
-});
-var l = n(260509),
-    r = n(488926),
-    i = n(652215);
-
-function s(e, t) {
+n.d(t, { c: () => r });
+var i = n(260509),
+    l = n(488926),
+    s = n(652215);
+function r(e, t) {
     return (
-        !!(
-            (0, l.bM)(e, t) ||
-            r.$3({
-                permission: i.xBc.ADMINISTRATOR,
-                context: e,
-                user: t,
-            })
-        ) ||
-        (r.$3({
-            permission: i.xBc.MANAGE_GUILD,
-            context: e,
-            user: t,
-        }) &&
-            r.$3({
-                permission: i.xBc.MANAGE_ROLES,
-                context: e,
-                user: t,
-            }))
+        !!((0, i.bM)(e, t) || l.$3({ permission: s.xBc.ADMINISTRATOR, context: e, user: t })) ||
+        (l.$3({ permission: s.xBc.MANAGE_GUILD, context: e, user: t }) &&
+            l.$3({ permission: s.xBc.MANAGE_ROLES, context: e, user: t }))
     );
 }

@@ -1,12 +1,10 @@
-n.d(t, {
-    t: () => l,
-});
-var r,
+n.d(t, { t: () => l });
+var i,
     l =
-        (((r = {}).ACCENT = "accent"),
-        (r.GREEN = "statusGreen"),
-        (r.YELLOW = "statusYellow"),
-        (r.ORANGE = "statusOrange"),
-        (r.RED = "statusRed"),
-        (r.NONE = "transparent"),
-        r);
+        (((i = {}).ACCENT = "accent"),
+        (i.GREEN = "statusGreen"),
+        (i.YELLOW = "statusYellow"),
+        (i.ORANGE = "statusOrange"),
+        (i.RED = "statusRed"),
+        (i.NONE = "transparent"),
+        i);

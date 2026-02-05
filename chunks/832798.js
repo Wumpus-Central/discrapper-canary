@@ -1,10 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
         n = /[a-zA-Z_][a-zA-Z0-9_]*/,
-        r = {
-            className: "number",
-            variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE],
-        };
+        r = { className: "number", variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE] };
     return {
         name: "Tcl",
         aliases: ["tk"],
@@ -148,24 +145,14 @@ e.exports = function (e) {
             {
                 className: "variable",
                 variants: [
-                    {
-                        begin: t.concat(/\$/, t.optional(/::/), n, "(::", n, ")*"),
-                    },
-                    {
-                        begin: "\\$\\{(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*",
-                        end: "\\}",
-                        contains: [r],
-                    },
+                    { begin: t.concat(/\$/, t.optional(/::/), n, "(::", n, ")*") },
+                    { begin: "\\$\\{(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*", end: "\\}", contains: [r] },
                 ],
             },
             {
                 className: "string",
                 contains: [e.BACKSLASH_ESCAPE],
-                variants: [
-                    e.inherit(e.QUOTE_STRING_MODE, {
-                        illegal: null,
-                    }),
-                ],
+                variants: [e.inherit(e.QUOTE_STRING_MODE, { illegal: null })],
             },
             r,
         ],

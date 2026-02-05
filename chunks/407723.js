@@ -1,3 +1,2 @@
-e.exports = {
-    i: "wishlistButton__7b466",
-};
+"use strict";
+e.exports = { i: "wishlistButton__7b466" };

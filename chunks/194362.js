@@ -1,14 +1,13 @@
-n.d(t, {
-    a: () => l,
-});
-var r = n(104798),
-    i = n(652215);
+"use strict";
+n.d(t, { a: () => l });
+var i = n(104798),
+    s = n(652215);
 async function l(e) {
-    let t = r.A.generateNonce();
+    let t = i.A.generateNonce();
     try {
-        let n = await r.A.createHandoffToken(t);
-        return i.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, e);
-    } catch (t) {
-        return "//".concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/").concat(e);
+        let n = await i.A.createHandoffToken(t);
+        return s.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, e);
+    } catch {
+        return `//${window.GLOBAL_ENV.DEVELOPERS_ENDPOINT}/${e}`;
     }
 }

@@ -1,49 +1,26 @@
-n.d(t, {
-    A: () => _,
-});
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(31717);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = {},
-    c = {};
-
-function u(e) {
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(73153),
+    a = n(31717);
+let s = {},
+    o = {};
+function l(e) {
     let { channelId: t, sticker: n, draftType: r } = e;
-    (r === s.C.FirstThreadMessage ? c : l)[t] = [n];
+    (r === a.C.FirstThreadMessage ? o : s)[t] = [n];
 }
-
-function d(e) {
+function u(e) {
     let { channelId: t, draftType: n } = e,
-        r = n === s.C.FirstThreadMessage ? c : l;
+        r = n === a.C.FirstThreadMessage ? o : s;
     null != r[t] && delete r[t];
 }
-
-function f() {
-    (l = {}), (c = {});
+function c() {
+    (s = {}), (o = {});
 }
-class p extends (r = i.Ay.Store) {
+class d extends r.Ay.Store {
+    static displayName = "StickerMessagePreviewStore";
     getStickerPreview(e, t) {
-        return (t === s.C.FirstThreadMessage ? c : l)[e];
+        return (t === a.C.FirstThreadMessage ? o : s)[e];
     }
 }
-o(p, "displayName", "StickerMessagePreviewStore");
-let _ = new p(a.h, {
-    ADD_STICKER_PREVIEW: u,
-    CLEAR_STICKER_PREVIEW: d,
-    LOGOUT: f,
-});
+let _ = new d(i.h, { ADD_STICKER_PREVIEW: l, CLEAR_STICKER_PREVIEW: u, LOGOUT: c });

@@ -1,70 +1,45 @@
 let i;
-r.d(t, {
-    A: () => _,
-}),
-    r(896048),
-    r(321073);
-var n,
-    a = r(311907),
-    o = r(73153);
-
-function s(e, t, r) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = r),
-        e
-    );
-}
-let l = {
-        guildNoticeDismissed: [],
-    },
-    c = new Map(),
-    d = new Set();
-class u extends (n = a.Ay.PersistedStore) {
+r.d(t, { A: () => _ }), r(321073);
+var a = r(311907),
+    s = r(73153);
+let n = { guildNoticeDismissed: [] },
+    o = new Map(),
+    l = new Set();
+class c extends a.Ay.PersistedStore {
+    static displayName = "CommandsMigrationStore";
+    static persistKey = "CommandsMigrationStore";
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : n;
         i = e;
     }
     getState() {
         return i;
     }
     shouldShowChannelNotice(e) {
-        var t, r;
-        return (
-            !i.guildNoticeDismissed.includes(e) && (null != (t = null == (r = c.get(e)) ? void 0 : r.size) ? t : 0) > 0
-        );
+        return !i.guildNoticeDismissed.includes(e) && (o.get(e)?.size ?? 0) > 0;
     }
     canShowOverviewTooltip(e, t) {
-        var r;
-        return (null == (r = c.get(e)) ? void 0 : r.has(t)) === !0;
+        return o.get(e)?.has(t) === !0;
     }
     canShowToggleTooltip(e) {
-        return d.has(e);
+        return l.has(e);
     }
 }
-s(u, "displayName", "CommandsMigrationStore"), s(u, "persistKey", "CommandsMigrationStore");
-let _ = new u(o.h, {
+let _ = new c(s.h, {
     COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
         let { guildId: t, integrationIdsWithAppCommands: r } = e;
-        return c.set(t, new Set(r)), !0;
+        return o.set(t, new Set(r)), !0;
     },
     COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
         let { guildId: t } = e;
         i.guildNoticeDismissed.push(t);
     },
     COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
-        var t;
-        let { guildId: r, integrationId: i } = e;
-        null == (t = c.get(r)) || t.clear(), d.add(i);
+        let { guildId: t, integrationId: r } = e;
+        o.get(t)?.clear(), l.add(r);
     },
     COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
         let { integrationId: t } = e;
-        d.delete(t);
+        l.delete(t);
     },
 });

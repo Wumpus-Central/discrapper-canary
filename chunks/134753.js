@@ -1,8 +1,5 @@
-n.d(t, {
-    B: () => a,
-    Z: () => i,
-});
-var l,
-    r,
-    i = (((l = {}).LINE = "line"), (l.EMOJI_HOSE = "emoji_hose"), l),
-    a = (((r = {}).START = "START"), (r.STOP = "STOP"), r);
+n.d(t, { B: () => s, Z: () => a });
+var i,
+    l,
+    a = (((i = {}).LINE = "line"), (i.EMOJI_HOSE = "emoji_hose"), i),
+    s = (((l = {}).START = "START"), (l.STOP = "STOP"), l);

@@ -1,50 +1,36 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(321073);
+"use strict";
+n.d(t, { A: () => _ }), n(321073);
 var r = n(652215);
 let i = [],
     a = !1;
-
 function s() {
     let e = window.navigator.connection;
     return null == e
-        ? {
-              type: r.wY_.UNKNOWN,
-              effectiveSpeed: r.NKC.UNKNOWN,
-          }
-        : {
-              type: null != e.type ? e.type : r.wY_.UNKNOWN,
-              effectiveSpeed: e.effectiveType,
-          };
+        ? { type: r.wY_.UNKNOWN, effectiveSpeed: r.NKC.UNKNOWN }
+        : { type: null != e.type ? e.type : r.wY_.UNKNOWN, effectiveSpeed: e.effectiveType };
 }
-
 function o() {
     if (!0 === a) return;
     let e = window.navigator.connection;
-    null != e && ((a = !0), e.addEventListener("change", c));
+    null != e && ((a = !0), e.addEventListener("change", u));
 }
-
 function l() {
     if (!1 === a) return;
     let e = window.navigator.connection;
-    null != e && 0 === i.length && null != e && (e.removeEventListener("change", c), (a = !1));
+    null != e && 0 === i.length && null != e && (e.removeEventListener("change", u), (a = !1));
 }
-
-function c() {
+function u() {
     let e = s();
     i.forEach((t) => t(e));
 }
-
-function u(e) {
+function c(e) {
     i.push(e), o();
 }
-
 function d(e) {
     let t = i.indexOf(e);
     -1 !== t && (i.splice(t, 1), l());
 }
-let f = {
+let _ = {
     addOnlineCallback(e) {
         window.addEventListener("online", e);
     },
@@ -58,7 +44,7 @@ let f = {
         window.removeEventListener("offline", e);
     },
     addChangeCallback(e) {
-        u(e);
+        c(e);
     },
     removeChangeCallback(e) {
         d(e);

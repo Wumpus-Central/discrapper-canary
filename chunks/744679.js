@@ -1,3 +1,4 @@
+"use strict";
 var r = n(999843),
     a = n(529030),
     o = n(556598),
@@ -24,7 +25,4 @@ var r = n(999843),
             return u;
         };
     };
-e.exports = {
-    left: c(!1),
-    right: c(!0),
-};
+e.exports = { left: c(!1), right: c(!0) };

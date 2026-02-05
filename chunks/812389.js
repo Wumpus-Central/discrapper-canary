@@ -1,3 +1,4 @@
+"use strict";
 var r,
     a,
     o,
@@ -77,10 +78,7 @@ var r,
         var r, a;
         H
             ? (((r = j.createEvent("Event")).promise = t), (r.reason = n), r.initEvent(e, !1, !0), u.dispatchEvent(r))
-            : (r = {
-                  promise: t,
-                  reason: n,
-              }),
+            : (r = { promise: t, reason: n }),
             !E && (a = u["on" + e]) ? a(r) : e === z && C("Unhandled promise rejection", n);
     },
     Q = function (e) {
@@ -124,9 +122,7 @@ var r,
                 var r = W(t);
                 r
                     ? k(function () {
-                          var n = {
-                              done: !1,
-                          };
+                          var n = { done: !1 };
                           try {
                               d(r, t, X(et, n, e), X(ee, n, e));
                           } catch (t) {
@@ -135,13 +131,7 @@ var r,
                       })
                     : ((e.value = t), (e.state = 1), $(e, !1));
             } catch (t) {
-                ee(
-                    {
-                        done: !1,
-                    },
-                    t,
-                    e,
-                );
+                ee({ done: !1 }, t, e);
             }
         }
     };
@@ -205,25 +195,11 @@ if (
                         d(i, n, e, t);
                     }).then(e, t);
                 },
-                {
-                    unsafe: !0,
-                },
+                { unsafe: !0 },
             );
     try {
         delete B.constructor;
     } catch (e) {}
     h && h(B, L);
 }
-s(
-    {
-        global: !0,
-        constructor: !0,
-        wrap: !0,
-        forced: O,
-    },
-    {
-        Promise: D,
-    },
-),
-    f(D, F, !1, !0),
-    m(F);
+s({ global: !0, constructor: !0, wrap: !0, forced: O }, { Promise: D }), f(D, F, !1, !0), m(F);

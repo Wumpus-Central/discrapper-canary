@@ -1,8 +1,5 @@
-n.d(t, {
-    w: () => l,
-});
-var r = n(753070);
-
+n.d(t, { w: () => l });
+var i = n(753070);
 function l(e, t) {
-    return e === r.on.RESOLUTION_720 && t !== r.kn.FPS_60;
+    return e === i.on.RESOLUTION_720 && t !== i.kn.FPS_60;
 }

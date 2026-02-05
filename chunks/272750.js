@@ -1,6 +1,5 @@
-n.d(t, {
-    V: () => o,
-});
+"use strict";
+n.d(t, { V: () => o });
 var r = n(254033),
     i = n(943019),
     a = n(63514),
@@ -11,10 +10,7 @@ var r = n(254033),
         function e(e, t) {
             (this.target = e),
                 (this.observedBox = t || r.U.CONTENT_BOX),
-                (this.lastReportedSize = {
-                    inlineSize: 0,
-                    blockSize: 0,
-                });
+                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
         }
         return (
             (e.prototype.isActive = function () {

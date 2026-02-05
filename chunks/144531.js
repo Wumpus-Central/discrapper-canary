@@ -1,3 +1,4 @@
+"use strict";
 function n(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -14,12 +15,7 @@ function n(t) {
                     (i = e),
                     (o = r[e]),
                     i in n
-                        ? Object.defineProperty(n, i, {
-                              value: o,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
+                        ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
                         : (n[i] = o);
             });
     }
@@ -43,11 +39,7 @@ var i = r(279998),
     u = function (t) {
         Array.isArray(t.children) &&
             (t.children = t.children.map(function (e) {
-                return e.type === t.type
-                    ? n({}, e, {
-                          depth: (t.depth || 0) + 1,
-                      })
-                    : e;
+                return e.type === t.type ? n({}, e, { depth: (t.depth || 0) + 1 }) : e;
             }));
     };
 t.exports = {
@@ -61,9 +53,7 @@ t.exports = {
                       (delete e.children, r.push(e));
               }),
               (t.blocks = r),
-              n({}, t, {
-                  blocks: r,
-              }))
+              n({}, t, { blocks: r }))
             : t;
     },
     fromRawStateToRawTreeState: function (t) {
@@ -73,9 +63,7 @@ t.exports = {
             t.blocks.forEach(function (t) {
                 var o = s(t),
                     a = t.depth || 0,
-                    u = n({}, t, {
-                        children: [],
-                    });
+                    u = n({}, t, { children: [] });
                 if (!o) return void e.push(u);
                 var c = r[0];
                 if (null == c && 0 === a) e.push(u);
@@ -96,9 +84,7 @@ t.exports = {
                     a > 0 ? c.children.push(u) : e.push(u);
                 }
             }),
-            n({}, t, {
-                blocks: e,
-            })
+            n({}, t, { blocks: e })
         );
     },
 };

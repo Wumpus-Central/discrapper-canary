@@ -1,55 +1,45 @@
-n.d(t, {
-    A: () => v,
-});
-var r = n(627968),
-    l = n(64700),
-    i = n(311907),
-    a = n(397927),
-    o = n(73153),
-    u = n(706752),
-    c = n(985925),
+n.d(t, { A: () => y });
+var l = n(627968),
+    i = n(64700),
+    a = n(311907),
+    r = n(397927),
+    d = n(73153),
+    o = n(706752),
+    u = n(985925),
     s = n(267102),
-    d = n(474397),
+    c = n(474397),
     A = n(378570),
-    b = n(761640),
-    f = n(734057),
-    O = n(696451),
-    g = n(309010),
-    y = n(954571),
-    p = n(652215),
-    E = n(746080),
-    j = n(486974),
-    m = n(985018);
-
-function v(e) {
-    let { userId: t, guildId: n, channelId: v, location: _, onAction: h, appContext: S } = e,
-        M = l.useContext(y.AnalyticsContext),
-        P = (0, s.aL)(),
-        C = (0, i.bG)([g.A], () => (null != v ? v : g.A.getChannelId(n, !0)), [v, n]),
-        I = (0, i.bG)([O.Ay], () => (null == n ? null : O.Ay.getMember(n, t)), [n, t]),
-        D = (0, c.q)(n);
-    return null != n && null != I && D
-        ? (0, r.jsx)(a.Drp, {
+    E = n(761640),
+    _ = n(734057),
+    g = n(696451),
+    M = n(309010),
+    O = n(954571),
+    I = n(652215),
+    S = n(746080),
+    m = n(486974),
+    T = n(985018);
+function y(e) {
+    let { userId: t, guildId: n, channelId: y, location: N, onAction: C, appContext: f } = e,
+        p = i.useContext(O.AnalyticsContext),
+        b = (0, s.aL)(),
+        D = (0, a.bG)([M.A], () => y ?? M.A.getChannelId(n, !0), [y, n]),
+        R = (0, a.bG)([g.Ay], () => (null == n ? null : g.Ay.getMember(n, t)), [n, t]),
+        h = (0, u.q)(n);
+    return null != n && null != R && h
+        ? (0, l.jsx)(r.Drp, {
               id: "mod-view",
-              label: m.intl.string(m.t.kj3tz2),
+              label: T.intl.string(T.t.kj3tz2),
               action: () => {
-                  null == h || h(), (0, d.A)(S), P.dispatch(p.jej.POPOUT_CLOSE);
-                  let e = f.A.getChannel(C),
-                      r = {
-                          modViewPanel: j.g.INFO,
-                          sourceLocation: null != _ ? _ : M.location,
-                      };
-                  if ((null == e ? void 0 : e.isThread()) && null != e.parent_id) {
-                      b.Ay.getCurrentSidebarChannelId(e.parent_id) === e.id &&
-                          (o.h.dispatch({
-                              type: "SIDEBAR_CLOSE",
-                              baseChannelId: e.parent_id,
-                          }),
-                          (0, A.iN)(e.id)),
-                          (0, u.z)(n, t, e.parent_id, r);
+                  C?.(), (0, c.A)(f), b.dispatch(I.jej.POPOUT_CLOSE);
+                  let e = _.A.getChannel(D),
+                      l = { modViewPanel: m.g.INFO, sourceLocation: N ?? p.location };
+                  if (e?.isThread() && null != e.parent_id) {
+                      E.Ay.getCurrentSidebarChannelId(e.parent_id) === e.id &&
+                          (d.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }), (0, A.iN)(e.id)),
+                          (0, o.z)(n, t, e.parent_id, l);
                       return;
                   }
-                  (0, u.z)(n, t, null != C ? C : E.VV.MEMBER_SAFETY, r);
+                  (0, o.z)(n, t, D ?? S.VV.MEMBER_SAFETY, l);
               },
           })
         : null;

@@ -10,10 +10,7 @@ function n(e) {
                       : typeof e;
               })(e);
 }
-
 function i(e) {
     return null !== e && "object" === n(e) && Object.prototype.hasOwnProperty.call(e, "current");
 }
-r.d(t, {
-    i: () => i,
-});
+r.d(t, { i: () => i });

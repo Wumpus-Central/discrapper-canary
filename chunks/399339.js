@@ -1,24 +1,21 @@
-n.d(t, {
-    e: () => o,
-}),
-    n(938796);
+"use strict";
+n.d(t, { e: () => o }), n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(38021),
     s = n(818348);
-
 function o(e) {
     let {
             children: t,
             theme: n = s.NJ.DARK,
             primaryColor: o = null,
             secondaryColor: l = null,
-            gradient: c = null,
-            flags: u = 0,
+            gradient: u = null,
+            flags: c = 0,
             contrast: d = 1,
-            saturation: f = 1,
-            density: p = "compact",
-            disableAdaptiveTheme: _ = !1,
+            saturation: _ = 1,
+            density: f = "compact",
+            disableAdaptiveTheme: p = !1,
             reduceAdaptiveTheme: h = !1,
         } = e,
         m = i.useMemo(
@@ -27,18 +24,15 @@ function o(e) {
                     theme: n,
                     primaryColor: o,
                     secondaryColor: l,
-                    gradient: c,
-                    flags: u,
+                    gradient: u,
+                    flags: c,
                     contrast: d,
-                    saturation: f,
-                    density: p,
-                    disableAdaptiveTheme: _,
+                    saturation: _,
+                    density: f,
+                    disableAdaptiveTheme: p,
                     reduceAdaptiveTheme: h,
                 }),
-            [n, o, l, c, u, d, f, p, _, h],
+            [n, o, l, u, c, d, _, f, p, h],
         );
-    return (0, r.jsx)(a.Dx.Provider, {
-        value: m,
-        children: t,
-    });
+    return (0, r.jsx)(a.Dx.Provider, { value: m, children: t });
 }

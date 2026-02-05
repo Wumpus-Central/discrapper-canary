@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(397927),
     i = n(323484),
     a = n(835002);
@@ -30,6 +29,6 @@ let s = {
         (0, r.showToast)((0, r.createToast)((0, i.$)(e), r.ToastType.SUCCESS));
     },
     showFailedToast(e) {
-        (0, r.showToast)((0, r.createToast)((0, i.$)(null != e ? e : a.OB.GENERIC_ERROR), r.ToastType.FAILURE));
+        (0, r.showToast)((0, r.createToast)((0, i.$)(e ?? a.OB.GENERIC_ERROR), r.ToastType.FAILURE));
     },
 };

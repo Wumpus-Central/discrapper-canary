@@ -1,7 +1,4 @@
-i.r(a),
-    i.d(a, {
-        default: () => o,
-    });
+i.r(a), i.d(a, { default: () => o });
 var o = {
     payButton: "Paga",
     "payButton.redirecting": "Reindirizzamento...",

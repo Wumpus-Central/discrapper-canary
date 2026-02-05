@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nE: "debugToolsPanel__50163",
     wx: "header__50163",

@@ -1,65 +1,54 @@
-n.d(t, {
-    A: () => C,
-}),
-    n(321073),
-    n(896048),
-    n(492834);
+n.d(t, { A: () => S }), n(321073);
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(311907),
-    r = n(342494),
-    s = n(688810),
+    l = n(342494),
+    r = n(688810),
     o = n(704824),
-    c = n(362490),
-    d = n(395332),
+    d = n(362490),
+    c = n(395332),
     u = n(429913),
     m = n(379848),
-    p = n(183555),
-    h = n(633075),
-    f = n(735321),
-    x = n(667049),
-    b = n(657331),
-    g = n(384377),
+    h = n(183555),
+    x = n(633075),
+    p = n(735321),
+    g = n(667049),
+    _ = n(657331),
+    f = n(384377),
     v = n(961350),
-    j = n(403362),
-    y = n(49999),
-    _ = n(518477),
-    A = n(985018);
-
-function C(e) {
+    b = n(403362),
+    j = n(49999),
+    A = n(518477),
+    C = n(985018);
+function S(e) {
     let { targetElementRef: t, onClose: n } = e,
-        [C, S] = l.useState(!1),
-        { trackUserProfileEditAction: O } = (0, p.NJ)(),
-        E = (0, i.bG)([v.default], () => v.default.getId()),
-        N = (function () {
+        [S, T] = s.useState(!1),
+        { trackUserProfileEditAction: y } = (0, h.NJ)(),
+        N = (0, i.bG)([v.default], () => v.default.getId()),
+        E = (function () {
             let e,
                 t,
                 n = (0, i.bG)([v.default], () => v.default.getId()),
-                a = (0, x.A)(n),
-                r = l.useMemo(() => a.filter((e) => e instanceof h.R), [a]),
-                s =
-                    ((e = (0, d.ul)({
-                        location: "UserProfileAccountPopoutApplicationWidgetCoachmark",
-                    })),
-                    l.useMemo(() => (null == e ? void 0 : e.filter((e) => e.isEligibleForEditProfileUpsell())), [e])),
-                m = l.useMemo(() => {
-                    var e;
-                    return null != (e = null == s ? void 0 : s.map((e) => e.applicationId)) ? e : [];
-                }, [s]),
-                p = ((t = (0, u.A)(m)), l.useMemo(() => t.filter(j.Vq), [t])),
-                { tokens: f, fetched: b } = (0, o.j)(m),
-                g = (0, c.U9)(p);
-            return l.useMemo(() => {
-                if (null == s || null == f || !b) return null;
+                a = (0, g.A)(n),
+                l = s.useMemo(() => a.filter((e) => e instanceof x.R), [a]),
+                r =
+                    ((e = (0, c.ul)({ location: "UserProfileAccountPopoutApplicationWidgetCoachmark" })),
+                    s.useMemo(() => e?.filter((e) => e.isEligibleForEditProfileUpsell()), [e])),
+                m = s.useMemo(() => r?.map((e) => e.applicationId) ?? [], [r]),
+                h = ((t = (0, u.A)(m)), s.useMemo(() => t.filter(b.Vq), [t])),
+                { tokens: p, fetched: _ } = (0, o.j)(m),
+                f = (0, d.U9)(h);
+            return s.useMemo(() => {
+                if (null == r || null == p || !_) return null;
                 let e = [],
                     t = [];
-                for (let n of s) {
-                    let a = f.find((e) => e.application.id === n.applicationId),
-                        l = r.find((e) => e.applicationId === n.applicationId),
-                        i = p.find((e) => e.id === n.applicationId),
-                        s = g.find((e) => e.context.application.id === n.applicationId);
+                for (let n of r) {
+                    let a = p.find((e) => e.application.id === n.applicationId),
+                        s = l.find((e) => e.applicationId === n.applicationId),
+                        i = h.find((e) => e.id === n.applicationId),
+                        r = f.find((e) => e.context.application.id === n.applicationId);
                     if (null == i) return null;
-                    null != a && null == l
+                    null != a && null == s
                         ? e.push({
                               type: "linked",
                               config: n,
@@ -67,120 +56,77 @@ function C(e) {
                               dismissibleContent: n.editProfileLinkedDc,
                           })
                         : null == a &&
-                          (null == s ? void 0 : s.preferredFlow) != null &&
+                          r?.preferredFlow != null &&
                           t.push({
                               type: "unlinked",
                               config: n,
                               application: i,
                               dismissibleContent: n.editProfileUnlinkedDc,
-                              authFlow: s.preferredFlow,
+                              authFlow: r.preferredFlow,
                           });
                 }
                 return [...e, ...t];
-            }, [s, f, b, r, p, g]);
+            }, [r, p, _, l, h, f]);
         })(),
-        { analyticsLocations: T } = (0, s.Ay)();
-    return null == N || 0 === N.length
+        { analyticsLocations: I } = (0, r.Ay)();
+    return null == E || 0 === E.length
         ? null
         : (0, a.jsx)(m.Ay, {
-              contentTypes: N.map((e) => e.dismissibleContent),
+              contentTypes: E.map((e) => e.dismissibleContent),
               children: (e) => {
-                  let { visibleContent: l, markAsDismissed: i } = e,
-                      s = N.find((e) => e.dismissibleContent === l);
-                  if (null == s) return null;
-                  let o = "linked" === s.type,
-                      c = () =>
-                          (0, b.openUserProfileModal)({
-                              userId: E,
-                              tabSection: _.RP.WIDGETS,
-                          }).then(() => {
-                              i(y.i.TAKE_ACTION), n();
+                  let { visibleContent: s, markAsDismissed: i } = e,
+                      r = E.find((e) => e.dismissibleContent === s);
+                  if (null == r) return null;
+                  let o = "linked" === r.type,
+                      d = () =>
+                          (0, _.openUserProfileModal)({ userId: N, tabSection: A.RP.WIDGETS }).then(() => {
+                              i(j.i.TAKE_ACTION), n();
                           });
-                  return (0, a.jsx)(r.AM, {
+                  return (0, a.jsx)(l.AM, {
                       targetElementRef: t,
                       position: "right",
                       gradientColor: "blue",
                       graphic:
-                          null != s.config.editProfileUpsellImage
-                              ? {
-                                    type: "image",
-                                    src: s.config.editProfileUpsellImage,
-                                }
+                          null != r.config.editProfileUpsellImage
+                              ? { type: "image", src: r.config.editProfileUpsellImage }
                               : void 0,
-                      title: A.intl.format(A.t.TXDztH, {
-                          applicationName: s.application.name,
-                      }),
-                      body: o ? A.intl.string(A.t["63Kso0"]) : A.intl.string(A.t.HwXoeC),
-                      onRequestClose: () => i(y.i.USER_DISMISS),
+                      title: C.intl.format(C.t.TXDztH, { applicationName: r.application.name }),
+                      body: o ? C.intl.string(C.t["63Kso0"]) : C.intl.string(C.t.HwXoeC),
+                      onRequestClose: () => i(j.i.USER_DISMISS),
                       actions: [
                           o
                               ? {
-                                    text: A.intl.string(A.t.VSLDly),
+                                    text: C.intl.string(C.t.VSLDly),
                                     onClick: () => {
-                                        S(!0),
-                                            c()
+                                        T(!0),
+                                            d()
                                                 .then(() => {
                                                     let e;
                                                     return (
-                                                        (e = new h.R({
-                                                            applicationId: s.application.id,
-                                                        })),
-                                                        void ((0, f.Y5)(e),
-                                                        O(
-                                                            (function (e) {
-                                                                for (var t = 1; t < arguments.length; t++) {
-                                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                                        a = Object.keys(n);
-                                                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                                                        (a = a.concat(
-                                                                            Object.getOwnPropertySymbols(n).filter(
-                                                                                function (e) {
-                                                                                    return Object.getOwnPropertyDescriptor(
-                                                                                        n,
-                                                                                        e,
-                                                                                    ).enumerable;
-                                                                                },
-                                                                            ),
-                                                                        )),
-                                                                        a.forEach(function (t) {
-                                                                            var a;
-                                                                            (a = n[t]),
-                                                                                t in e
-                                                                                    ? Object.defineProperty(e, t, {
-                                                                                          value: a,
-                                                                                          enumerable: !0,
-                                                                                          configurable: !0,
-                                                                                          writable: !0,
-                                                                                      })
-                                                                                    : (e[t] = a);
-                                                                        });
-                                                                }
-                                                                return e;
-                                                            })(
-                                                                {
-                                                                    action: "WIDGET_ADDED",
-                                                                },
-                                                                e.getProfileEditAnalyticsOptions(),
-                                                            ),
-                                                        ),
-                                                        (0, g.XA)(_.jM.WIDGET_ADDED))
+                                                        (e = new x.R({ applicationId: r.application.id })),
+                                                        void ((0, p.Y5)(e),
+                                                        y({
+                                                            action: "WIDGET_ADDED",
+                                                            ...e.getProfileEditAnalyticsOptions(),
+                                                        }),
+                                                        (0, f.XA)(A.jM.WIDGET_ADDED))
                                                     );
                                                 })
-                                                .finally(() => S(!1));
+                                                .finally(() => T(!1));
                                     },
-                                    loading: C,
+                                    loading: S,
                                 }
                               : {
-                                    text: A.intl.string(A.t["DSJi3+"]),
+                                    text: C.intl.string(C.t["DSJi3+"]),
                                     onClick: () => {
-                                        s.authFlow.initiate({
+                                        r.authFlow.initiate({
                                             onConfirm: () => {
-                                                S(!0), c().finally(() => S(!1));
+                                                T(!0), d().finally(() => T(!1));
                                             },
-                                            analyticsLocations: T,
+                                            analyticsLocations: I,
                                         });
                                     },
-                                    loading: C,
+                                    loading: S,
                                 },
                       ],
                   });

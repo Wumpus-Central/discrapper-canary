@@ -1,60 +1,10 @@
-n.d(t, {
-    M: () => l,
-});
-var i = n(627968);
+n.d(i, { M: () => a });
+var t = n(627968);
 n(64700);
-var r = n(397927);
-
-function l(e) {
-    (0, r.mMO)(async () => {
-        let { default: t } = await n.e("4075").then(n.bind(n, 59430));
-        return (n) => {
-            var r, l;
-            return (0, i.jsx)(
-                t,
-                ((r = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = i);
-                            });
-                    }
-                    return e;
-                })({}, n)),
-                (l = l =
-                    {
-                        guildId: e,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
-                      }),
-                r),
-            );
-        };
+var l = n(397927);
+function a(e) {
+    (0, l.mMO)(async () => {
+        let { default: i } = await n.e("4075").then(n.bind(n, 59430));
+        return (n) => (0, t.jsx)(i, { ...n, guildId: e });
     });
 }

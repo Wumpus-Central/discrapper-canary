@@ -1,17 +1,11 @@
-n.d(a, {
-    A: () => r,
-});
+n.d(a, { A: () => r });
 var t = n(981737);
 let r = {
     ordinalNumber: function (e, a) {
         return Number(e) + "e";
     },
     era: (0, t.A)({
-        values: {
-            narrow: ["v.C.", "n.C."],
-            abbreviated: ["v.Chr.", "n.Chr."],
-            wide: ["voor Christus", "na Christus"],
-        },
+        values: { narrow: ["v.C.", "n.C."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["voor Christus", "na Christus"] },
         defaultWidth: "wide",
     }),
     quarter: (0, t.A)({

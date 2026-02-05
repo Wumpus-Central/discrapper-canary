@@ -1,76 +1,61 @@
-n.d(t, {
-    A: () => b,
-});
-var l = n(627968),
-    a = n(64700),
-    r = n(158954),
-    i = n(311907),
-    s = n(852860),
-    c = n(644576),
-    o = n(256905),
-    d = n(531685),
-    u = n(652215),
-    p = n(985018),
-    h = n(504724),
-    m = n(500226);
-
-function b(e) {
-    let { application: t, carouselItems: n } = e,
-        b = (0, i.bG)([d.A], () => d.A.isFocused()),
-        f = (0, l.jsxs)(l.Fragment, {
+a.d(t, { A: () => _ });
+var n = a(627968),
+    i = a(64700),
+    s = a(158954),
+    l = a(311907),
+    r = a(852860),
+    o = a(644576),
+    c = a(256905),
+    d = a(531685),
+    u = a(652215),
+    h = a(985018),
+    m = a(504724),
+    p = a(500226);
+function _(e) {
+    let { application: t, carouselItems: a } = e,
+        _ = (0, l.bG)([d.A], () => d.A.isFocused()),
+        g = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, l.jsx)("img", {
-                    className: h.M,
-                    src: m,
-                    "aria-hidden": !0,
-                    alt: "",
-                }),
-                (0, l.jsx)(r.DZT, {
-                    variant: "heading-xl/semibold",
-                    children: p.intl.string(p.t.UvDfMz),
-                }),
+                (0, n.jsx)("img", { className: m.M, src: p, "aria-hidden": !0, alt: "" }),
+                (0, n.jsx)(s.DZT, { variant: "heading-xl/semibold", children: h.intl.string(h.t.UvDfMz) }),
             ],
         });
-    n.forEach((e, l) => {
-        e.alt = p.intl.formatToPlainString(p.t.sSEhHb, {
-            index: l + 1,
-            totalImages: n.length,
-            name: t.name,
-        });
+    a.forEach((e, n) => {
+        e.alt = h.intl.formatToPlainString(h.t.sSEhHb, { index: n + 1, totalImages: a.length, name: t.name });
     });
-    let g = a.useCallback(
+    let x = i.useCallback(
         (e, t) => {
             if (e.type === u.geh.IMG) {
-                let t = n.filter((e) => e.type === u.geh.IMG),
-                    l = t.findIndex((t) => t === e);
-                if (l < 0) return;
-                let a = t.map((e) => ({
-                    url: (0, s.o)(e.src),
+                let t = a.filter((e) => e.type === u.geh.IMG),
+                    n = t.findIndex((t) => t === e);
+                if (n < 0) return;
+                let i = t.map((e) => ({
+                    url: (0, r.o)(e.src),
                     original: e.src,
                     width: e.width,
                     height: e.height,
                     type: "IMAGE",
                 }));
-                (0, o.R)({
-                    items: a,
-                    startingIndex: l,
+                (0, c.R)({
+                    items: i,
+                    startingIndex: n,
                     shouldHideMediaOptions: !0,
                     location: "GlobalDiscoveryAppsDetailCarousel",
                 });
             }
         },
-        [n],
+        [a],
     );
-    return 0 === n.length
+    return 0 === a.length
         ? null
-        : (0, l.jsx)(c.A, {
-              className: h.D,
+        : (0, n.jsx)(o.A, {
+              className: m.D,
               themedPagination: !0,
-              items: n,
+              items: a,
               autoplayInterval: 8e3,
-              paused: !b,
+              paused: !_,
               videoAutoPlay: !0,
-              onCurrentItemClick: g,
-              errorComponent: f,
+              onCurrentItemClick: x,
+              errorComponent: g,
           });
 }

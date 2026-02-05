@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     cW: "labelSpacing__5f877",
     Ut: "applyChangesButton__5f877",

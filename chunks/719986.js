@@ -1,22 +1,18 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    M: () => i,
-});
-class i {
+"use strict";
+n.d(t, { M: () => r });
+class r {
+    desktopMaxHeight;
+    mobileMaxHeight;
+    responsive;
+    backgroundStyle;
+    constructor(e) {
+        (this.desktopMaxHeight = e.desktop_max_height),
+            (this.mobileMaxHeight = e.mobile_max_height),
+            (this.responsive = e.responsive),
+            (this.backgroundStyle = e.background_style);
+    }
     static fromServer(e) {
-        return new i(e);
+        return new r(e);
     }
     toDesktopStyles() {
         let e = {};
@@ -33,15 +29,5 @@ class i {
             null != this.backgroundStyle && (e.background = this.backgroundStyle),
             Object.keys(e).length > 0 ? e : void 0
         );
-    }
-    constructor(e) {
-        r(this, "desktopMaxHeight", void 0),
-            r(this, "mobileMaxHeight", void 0),
-            r(this, "responsive", void 0),
-            r(this, "backgroundStyle", void 0),
-            (this.desktopMaxHeight = e.desktop_max_height),
-            (this.mobileMaxHeight = e.mobile_max_height),
-            (this.responsive = e.responsive),
-            (this.backgroundStyle = e.background_style);
     }
 }

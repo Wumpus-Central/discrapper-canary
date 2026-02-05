@@ -1,3 +1,1 @@
-t.exports = {
-    u: "linkCalloutContainer__7d76d",
-};
+t.exports = { u: "linkCalloutContainer__7d76d" };

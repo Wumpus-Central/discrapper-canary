@@ -1,36 +1,27 @@
-n.d(t, {
-    A: () => p,
-}),
-    n(896048);
+n.d(t, { A: () => h });
 var a = n(627968),
-    l = n(64700),
+    s = n(64700),
     i = n(503698),
-    r = n.n(i),
-    s = n(311907),
+    l = n.n(i),
+    r = n(311907),
     o = n(397927),
-    c = n(73153),
-    d = n(236899),
+    d = n(73153),
+    c = n(236899),
     u = n(661251),
     m = n(665646);
-
-function p() {
-    let [e, t] = l.useState(""),
-        n = (0, s.bG)(
-            [d.A],
+function h() {
+    let [e, t] = s.useState(""),
+        n = (0, r.bG)(
+            [c.A],
             () =>
-                d.A.getAllWordsSorted().map((e, t) => {
+                c.A.getAllWordsSorted().map((e, t) => {
                     let [n, a] = e;
-                    return {
-                        word: n,
-                        count: a,
-                        value: a,
-                        idx: t,
-                    };
+                    return { word: n, count: a, value: a, idx: t };
                 }),
             [],
-            s.My,
+            r.My,
         ),
-        i = l.useMemo(
+        i = s.useMemo(
             () =>
                 0 === e.length
                     ? n
@@ -40,13 +31,11 @@ function p() {
                       }),
             [n, e],
         ),
-        p = l.useCallback(() => {
-            c.h.dispatch({
-                type: "DEV_TOOLS_WORD_FREQUENCY_RESET",
-            });
+        h = s.useCallback(() => {
+            d.h.dispatch({ type: "DEV_TOOLS_WORD_FREQUENCY_RESET" });
         }, []);
     return (0, a.jsxs)("div", {
-        className: r()(u.nd, m.nd),
+        className: l()(u.nd, m.nd),
         children: [
             n.length > 0 &&
                 (0, a.jsxs)(a.Fragment, {
@@ -75,7 +64,7 @@ function p() {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Clear Statistics",
-                                    onClick: p,
+                                    onClick: h,
                                 }),
                             ],
                         }),
@@ -87,34 +76,25 @@ function p() {
                                     className: m.r6,
                                     children: [
                                         (0, a.jsxs)("div", {
-                                            className: r()(u.ZR, m.qd),
+                                            className: l()(u.ZR, m.qd),
                                             children: [
-                                                (0, a.jsx)("div", {
-                                                    className: m.Xd,
-                                                    children: "Index",
-                                                }),
-                                                (0, a.jsx)("div", {
-                                                    className: m.hH,
-                                                    children: "Word",
-                                                }),
-                                                (0, a.jsx)("div", {
-                                                    className: m.gR,
-                                                    children: "Count",
-                                                }),
+                                                (0, a.jsx)("div", { className: m.Xd, children: "Index" }),
+                                                (0, a.jsx)("div", { className: m.hH, children: "Word" }),
+                                                (0, a.jsx)("div", { className: m.gR, children: "Count" }),
                                             ],
                                         }),
                                         i.map((e) => {
-                                            let { word: t, value: n, idx: l } = e;
+                                            let { word: t, value: n, idx: s } = e;
                                             return (0, a.jsxs)(
                                                 "div",
                                                 {
-                                                    className: r()(u.jD, m.jD),
+                                                    className: l()(u.jD, m.jD),
                                                     children: [
                                                         (0, a.jsx)("div", {
                                                             className: m.Xd,
                                                             children: (0, a.jsx)(o.Text, {
                                                                 variant: "text-sm/normal",
-                                                                children: l + 1,
+                                                                children: s + 1,
                                                             }),
                                                         }),
                                                         (0, a.jsx)("div", {
@@ -133,7 +113,7 @@ function p() {
                                                         }),
                                                     ],
                                                 },
-                                                "".concat(t, "-").concat(l),
+                                                `${t}-${s}`,
                                             );
                                         }),
                                     ],

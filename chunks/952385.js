@@ -1,16 +1,13 @@
-n.d(t, {
-    v: () => d,
-}),
-    n(896048);
-var r = n(64700),
-    i = n(735438),
-    l = n.n(i),
-    s = n(311907),
+"use strict";
+n.d(t, { v: () => c });
+var i = n(64700),
+    s = n(735438),
+    l = n.n(s),
+    r = n(311907),
     a = n(492494),
-    c = n(885617),
-    o = n(473145);
-
-function d(e) {
+    o = n(885617),
+    d = n(473145);
+function c(e) {
     let { guild: t } = e;
     if (null == t)
         return {
@@ -21,19 +18,19 @@ function d(e) {
             animatedEmoji: [],
             totalAnimatedEmoji: 0,
         };
-    let n = (0, o.sN)(t),
-        i = (0, s.bG)([c.A], () => c.A.getEmojis(t.id)),
-        [d, u] = r.useMemo(() => {
-            let e = null == i ? void 0 : i.filter((e) => !(0, a.Eg)(e, t.id)),
-                [n, r] = l().partition(e, (e) => !e.animated);
-            return [n, r];
-        }, [i, t]),
-        f = Math.max(n - d.length, n - u.length);
+    let n = (0, d.sN)(t),
+        s = (0, r.bG)([o.A], () => o.A.getEmojis(t.id)),
+        [c, u] = i.useMemo(() => {
+            let e = s?.filter((e) => !(0, a.Eg)(e, t.id)),
+                [n, i] = l().partition(e, (e) => !e.animated);
+            return [n, i];
+        }, [s, t]),
+        m = Math.max(n - c.length, n - u.length);
     return {
         maxEmojiSlots: n,
-        availableEmojiSlots: f,
-        staticEmoji: d,
-        totalStaticEmoji: d.length,
+        availableEmojiSlots: m,
+        staticEmoji: c,
+        totalStaticEmoji: c.length,
         animatedEmoji: u,
         totalAnimatedEmoji: u.length,
     };

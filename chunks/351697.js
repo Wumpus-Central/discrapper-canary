@@ -1,35 +1,23 @@
-n.d(t, {
-    A: () => l,
-}),
-    n(896048),
-    n(747238),
-    n(812715),
-    n(321073),
-    n(866193);
+"use strict";
+n.d(t, { A: () => o }), n(321073);
 var r = n(626584),
     i = n(723176);
-
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = new r.A("GuildStickers");
-class o {
+let a = new r.A("GuildStickers");
+class s {
     async getAsync(e) {
         let t = performance.now(),
             n = await i.A.stickers(e).getMapEntries(),
             r = performance.now();
-        return s.log("asynchronously loaded in ".concat(r - t, "ms (guilds: ").concat(n.length, ")")), n;
+        return a.log(`asynchronously loaded in ${r - t}ms (guilds: ${n.length})`), n;
     }
+    actions = {
+        BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
+        CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+        GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
+        GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
+        GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
+        GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
+    };
     handleConnectionOpen(e, t) {
         for (let n of e.guilds) this.handleOneGuildCreate(n, t);
     }
@@ -51,14 +39,11 @@ class o {
                 e.stickers.map((e) => {
                     if ("unavailable" === e.dataMode) return Promise.resolve();
                     "full" === e.dataMode
-                        ? (s.verbose("Replacing ".concat(e.entities.length, " stickers for ").concat(e.guildId)),
+                        ? (a.verbose(`Replacing ${e.entities.length} stickers for ${e.guildId}`),
                           this.replace(e.guildId, e.entities, t))
                         : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) &&
-                          (s.verbose(
-                              "Updating "
-                                  .concat(e.updatedEntities.length, " and deleting ")
-                                  .concat(e.deletedEntityIds.length, " stickers for ")
-                                  .concat(e.guildId),
+                          (a.verbose(
+                              `Updating ${e.updatedEntities.length} and deleting ${e.deletedEntityIds.length} stickers for ${e.guildId}`,
                           ),
                           this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
                 }),
@@ -86,15 +71,5 @@ class o {
         let a = i.A.stickersTransaction(r);
         for (let r of (a.putAll(e, t), n)) a.delete(e, r);
     }
-    constructor() {
-        a(this, "actions", {
-            BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-            GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-            GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
-            GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
-            GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
-        });
-    }
 }
-let l = new o();
+let o = new s();

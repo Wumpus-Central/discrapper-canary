@@ -1,23 +1,19 @@
-n.d(t, {
-    MW: () => a,
-    zw: () => s,
-});
-var r,
-    i = n(723702),
-    l = n(655087),
-    a =
-        (((r = {})[(r.UNHANDLED = -1)] = "UNHANDLED"),
-        (r[(r.NOMINAL = 0)] = "NOMINAL"),
-        (r[(r.FAIR = 1)] = "FAIR"),
-        (r[(r.SERIOUS = 2)] = "SERIOUS"),
-        (r[(r.CRITICAL = 3)] = "CRITICAL"),
-        r);
-
+n.d(t, { MW: () => l, zw: () => s });
+var i,
+    r = n(723702),
+    a = n(655087),
+    l =
+        (((i = {})[(i.UNHANDLED = -1)] = "UNHANDLED"),
+        (i[(i.NOMINAL = 0)] = "NOMINAL"),
+        (i[(i.FAIR = 1)] = "FAIR"),
+        (i[(i.SERIOUS = 2)] = "SERIOUS"),
+        (i[(i.CRITICAL = 3)] = "CRITICAL"),
+        i);
 function s() {
-    var e = l.A.getRawThermalState();
+    var e = a.A.getRawThermalState();
     if (null == e) return -1;
-    if ((0, i.isIOS)()) return e;
-    if (!(0, i.isAndroid)()) return -1;
+    if ((0, r.isIOS)()) return e;
+    if (!(0, r.isAndroid)()) return -1;
     switch (e) {
         case 0:
             return 0;

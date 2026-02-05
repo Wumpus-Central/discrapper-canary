@@ -1,14 +1,9 @@
-n.d(t, {
-    d: () => o,
-});
+"use strict";
+n.d(t, { d: () => o });
 var r = n(82180),
     i = n(679314),
     a = n(123789);
-let s = {
-    writeUnknownFields: !0,
-    writerFactory: () => new l(),
-};
-
+let s = { writeUnknownFields: !0, writerFactory: () => new l() };
 function o(e) {
     return e ? Object.assign(Object.assign({}, s), e) : s;
 }
@@ -26,15 +21,7 @@ class l {
         return (this.chunks = []), t;
     }
     fork() {
-        return (
-            this.stack.push({
-                chunks: this.chunks,
-                buf: this.buf,
-            }),
-            (this.chunks = []),
-            (this.buf = []),
-            this
-        );
+        return this.stack.push({ chunks: this.chunks, buf: this.buf }), (this.chunks = []), (this.buf = []), this;
     }
     join() {
         let e = this.finish(),

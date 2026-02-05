@@ -1,72 +1,66 @@
-n.d(t, {
-    A: () => s,
-});
-var r = n(403362),
-    i = n(743981),
+"use strict";
+n.d(t, { A: () => r });
+var i = n(403362),
+    s = n(743981),
     l = n(985018);
-
-function s(e, t) {
-    return l.intl.formatToPlainString(l.t.g79C8T, {
-        primaryColor: a(e),
-        secondaryColor: a(t),
-    });
+function r(e, t) {
+    return l.intl.formatToPlainString(l.t.g79C8T, { primaryColor: a(e), secondaryColor: a(t) });
 }
-
 function a(e) {
     switch (e) {
-        case i.xj.HOT_PINK:
+        case s.xj.HOT_PINK:
             return l.intl.string(l.t.DfOkjB);
-        case i.xj.LIGHT_PINK:
+        case s.xj.LIGHT_PINK:
             return l.intl.string(l.t["833OIT"]);
-        case i.xj.ORANGE:
+        case s.xj.ORANGE:
             return l.intl.string(l.t.i7TMkd);
-        case i.xj.PEACH:
+        case s.xj.PEACH:
             return l.intl.string(l.t["uHgff/"]);
-        case i.xj.GOLD:
+        case s.xj.GOLD:
             return l.intl.string(l.t.EpIKg1);
-        case i.xj.LIGHT_YELLOW:
+        case s.xj.LIGHT_YELLOW:
             return l.intl.string(l.t["i9+g+g"]);
-        case i.xj.TEAL:
+        case s.xj.TEAL:
             return l.intl.string(l.t["m82c+Z"]);
-        case i.xj.MINT_GREEN:
+        case s.xj.MINT_GREEN:
             return l.intl.string(l.t.xcoOBS);
-        case i.xj.BLUE_TEAL:
+        case s.xj.BLUE_TEAL:
             return l.intl.string(l.t["5QmjOP"]);
-        case i.xj.LIGHT_BLUE:
+        case s.xj.LIGHT_BLUE:
             return l.intl.string(l.t["/MyjZS"]);
-        case i.xj.PURPLE:
+        case s.xj.PURPLE:
             return l.intl.string(l.t["jp+PMl"]);
-        case i.xj.LAVENDER:
+        case s.xj.LAVENDER:
             return l.intl.string(l.t.aQjtas);
-        case i.xj.VIOLET:
+        case s.xj.VIOLET:
             return l.intl.string(l.t.WSnCYH);
-        case i.xj.MAUVE:
+        case s.xj.MAUVE:
             return l.intl.string(l.t.wh9c5W);
-        case i.xj.DEEP_PURPLE:
+        case s.xj.DEEP_PURPLE:
             return l.intl.string(l.t.TP5bJs);
-        case i.xj.ORCHID:
+        case s.xj.ORCHID:
             return l.intl.string(l.t.jFf82F);
-        case i.xj.RED:
+        case s.xj.RED:
             return l.intl.string(l.t.yUcPH5);
-        case i.xj.SALMON:
+        case s.xj.SALMON:
             return l.intl.string(l.t["+HA2GW"]);
-        case i.xj.BROWN:
+        case s.xj.BROWN:
             return l.intl.string(l.t.PI13GO);
-        case i.xj.TAN:
+        case s.xj.TAN:
             return l.intl.string(l.t.hZU6aR);
-        case i.xj.OLIVE:
+        case s.xj.OLIVE:
             return l.intl.string(l.t["1lKfMQ"]);
-        case i.xj.GRAY:
+        case s.xj.GRAY:
             return l.intl.string(l.t["6Gh+v1"]);
-        case i.xj.BURGUNDY:
+        case s.xj.BURGUNDY:
             return l.intl.string(l.t.pvqjJg);
-        case i.xj.ROSE:
+        case s.xj.ROSE:
             return l.intl.string(l.t.RMfRP9);
-        case i.xj.DARK_GRAY:
+        case s.xj.DARK_GRAY:
             return l.intl.string(l.t.Ts4j0M);
-        case i.xj.LIGHT_GRAY:
+        case s.xj.LIGHT_GRAY:
             return l.intl.string(l.t.ZBQ1JR);
         default:
-            (0, r.xb)(e);
+            (0, i.xb)(e);
     }
 }

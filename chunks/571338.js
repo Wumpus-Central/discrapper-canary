@@ -1,248 +1,120 @@
-n.d(t, {
-    A: () => v,
-}),
-    n(896048);
-var l = n(627968),
-    a = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(3666),
-    c = n(397927),
-    o = n(770178),
-    d = n(742589),
-    u = n(124589),
-    p = n(488995),
-    h = n(985018),
-    m = n(402664);
-
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = l);
-            });
-    }
-    return e;
+a.d(t, { A: () => x });
+var n = a(627968),
+    i = a(64700),
+    s = a(503698),
+    l = a.n(s),
+    r = a(3666),
+    o = a(397927),
+    c = a(770178),
+    d = a(742589),
+    u = a(124589),
+    h = a(488995),
+    m = a(985018),
+    p = a(402664);
+function _(e) {
+    let { id: t, label: a, selected: i, handleTransition: s, ...r } = e;
+    return (0, n.jsx)(d.A.Title, {
+        ...r,
+        onClick: () => s(t),
+        wrapperClassName: p.Vn,
+        className: l()(p.Mf, { [p.wH]: i }),
+        children: a,
+    });
 }
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
 function g(e) {
-    let { id: t, label: n, selected: a, handleTransition: r } = e,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                l,
-                a,
-                r = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (a = 0, n = Reflect.ownKeys(e); a < n.length; a++)
-                    (l = n[a]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
-                return r;
-            }
-            if (
-                ((r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        l,
-                        a = {},
-                        r = Object.getOwnPropertyNames(e);
-                    for (l = 0; l < r.length; l++)
-                        (n = r[l]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
-                    return a;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (a = 0, n = Object.getOwnPropertySymbols(e); a < n.length; a++)
-                    (l = n[a]),
-                        !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
-            return r;
-        })(e, ["id", "label", "selected", "handleTransition"]);
-    return (0, l.jsx)(
-        d.A.Title,
-        f(b({}, s), {
-            onClick: () => r(t),
-            wrapperClassName: m.Vn,
-            className: i()(m.Mf, {
-                [m.wH]: a,
-            }),
-            children: n,
-        }),
-    );
-}
-
-function x(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: r, selected: s } = e,
-        o = a.useRef(null);
-    return (0, l.jsx)(c.YNO, {
-        targetElementRef: o,
+    let { onTabSelect: t, tabs: a, selectedTab: s, selected: r } = e,
+        c = i.useRef(null);
+    return (0, n.jsx)(o.YNO, {
+        targetElementRef: c,
         renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, l.jsx)(u.A, {
-                selectedTab: r,
-                onClose: a,
-                tabs: n,
-                onTabSelect: t,
-            });
+            let { closePopout: i } = e;
+            return (0, n.jsx)(u.A, { selectedTab: s, onClose: i, tabs: a, onTabSelect: t });
         },
         position: "bottom",
         align: "left",
         children: (e, t) => {
-            let { isShown: n } = t;
-            return (0, l.jsxs)(
-                d.A.Title,
-                f(b({}, e), {
-                    ref: o,
-                    wrapperClassName: m.Vn,
-                    className: i()(m.Mf, m.OS, {
-                        [m.wH]: s,
-                    }),
-                    id: p.GlobalDiscoverySharedTabId.MORE,
-                    "aria-label": h.intl.string(h.t["UKOtz+"]),
-                    children: [
-                        h.intl.string(h.t["UKOtz+"]),
-                        n
-                            ? (0, l.jsx)(c.tN5, {
-                                  size: "xs",
-                              })
-                            : (0, l.jsx)(c.abt, {
-                                  size: "xs",
-                              }),
-                    ],
-                }),
-            );
+            let { isShown: a } = t;
+            return (0, n.jsxs)(d.A.Title, {
+                ...e,
+                ref: c,
+                wrapperClassName: p.Vn,
+                className: l()(p.Mf, p.OS, { [p.wH]: r }),
+                id: h.GlobalDiscoverySharedTabId.MORE,
+                "aria-label": m.intl.string(m.t["UKOtz+"]),
+                children: [
+                    m.intl.string(m.t["UKOtz+"]),
+                    a ? (0, n.jsx)(o.tN5, { size: "xs" }) : (0, n.jsx)(o.abt, { size: "xs" }),
+                ],
+            });
         },
     });
 }
-
-function v(e) {
-    let { className: t, selectedTab: n, tabs: r, onTabSelect: c, onAvailableWidthChange: d } = e,
-        [u, p] = a.useState(0),
-        h = a.useRef(u),
+function x(e) {
+    let { className: t, selectedTab: a, tabs: s, onTabSelect: o, onAvailableWidthChange: d } = e,
+        [u, h] = i.useState(0),
+        m = i.useRef(u),
         {
-            lastVisibleIndex: b,
-            onItemLayout: f,
-            overflowItemsRef: v,
-            itemWidthsRef: j,
-        } = (0, s.Wv)({
-            items: r,
-            itemGapPx: 24,
-            maxLines: 1,
-            containerWidth: u,
-        }),
-        A = a.useMemo(() => r.slice(0, b + 1), [b, r]),
-        _ = a.useMemo(() => r.slice(b + 1), [b, r]),
-        y = a.useRef(null),
-        O = a.useCallback(
+            lastVisibleIndex: x,
+            onItemLayout: A,
+            overflowItemsRef: C,
+            itemWidthsRef: b,
+        } = (0, r.Wv)({ items: s, itemGapPx: 24, maxLines: 1, containerWidth: u }),
+        v = i.useMemo(() => s.slice(0, x + 1), [x, s]),
+        f = i.useMemo(() => s.slice(x + 1), [x, s]),
+        j = i.useRef(null),
+        I = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
-                if (null == t || h.current === t) return;
-                p(t), (h.current = t);
-                let n = j.current.reduce((e, t, n) => e + t + 24 * (0 !== n));
-                null == d || d(t - n);
+                if (null == t || m.current === t) return;
+                h(t), (m.current = t);
+                let a = t - b.current.reduce((e, t, a) => e + t + 24 * (0 !== a));
+                d?.(a);
             },
-            [j, d],
+            [b, d],
         );
-    (0, o.g)(y, O);
-    let S = 0 !== u,
-        C = _.some((e) => e.id === n);
-    return (0, l.jsxs)("div", {
-        className: i()(m.kL, t),
-        ref: y,
+    (0, c.g)(j, I);
+    let E = 0 !== u,
+        S = f.some((e) => e.id === a);
+    return (0, n.jsxs)("div", {
+        className: l()(p.kL, t),
+        ref: j,
         children: [
-            (0, l.jsxs)("div", {
-                className: m.Kk,
+            (0, n.jsxs)("div", {
+                className: p.Kk,
                 children: [
-                    r.map((e, t) =>
-                        (0, l.jsx)(
-                            s.Ae,
+                    s.map((e, t) =>
+                        (0, n.jsx)(
+                            r.Ae,
                             {
                                 index: t,
-                                onItemLayout: f,
-                                children: (0, l.jsx)(
-                                    g,
-                                    {
-                                        id: e.id,
-                                        label: e.label,
-                                        selected: n === e.id,
-                                        handleTransition: c,
-                                    },
+                                onItemLayout: A,
+                                children: (0, n.jsx)(
+                                    _,
+                                    { id: e.id, label: e.label, selected: a === e.id, handleTransition: o },
                                     e.id,
                                 ),
                             },
                             e.id,
                         ),
                     ),
-                    (0, l.jsx)("div", {
-                        ref: v,
-                        children: (0, l.jsx)(x, {
-                            tabs: _,
-                            onTabSelect: c,
-                            selectedTab: n,
-                            selected: C,
-                        }),
+                    (0, n.jsx)("div", {
+                        ref: C,
+                        children: (0, n.jsx)(g, { tabs: f, onTabSelect: o, selectedTab: a, selected: S }),
                     }),
                 ],
             }),
-            S &&
-                (0, l.jsxs)("div", {
-                    className: m.vR,
+            E &&
+                (0, n.jsxs)("div", {
+                    className: p.vR,
                     children: [
-                        A.map((e) =>
-                            (0, l.jsx)(
-                                g,
-                                {
-                                    id: e.id,
-                                    label: e.label,
-                                    selected: n === e.id,
-                                    handleTransition: c,
-                                },
+                        v.map((e) =>
+                            (0, n.jsx)(
+                                _,
+                                { id: e.id, label: e.label, selected: a === e.id, handleTransition: o },
                                 e.id,
                             ),
                         ),
-                        0 !== _.length
-                            ? (0, l.jsx)(x, {
-                                  tabs: _,
-                                  onTabSelect: c,
-                                  selectedTab: n,
-                                  selected: C,
-                              })
-                            : null,
+                        0 !== f.length ? (0, n.jsx)(g, { tabs: f, onTabSelect: o, selectedTab: a, selected: S }) : null,
                     ],
                 }),
         ],

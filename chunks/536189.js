@@ -1,50 +1,39 @@
-n.d(t, {
-    A: () => u,
-});
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => c });
+var i = n(627968),
+    l = n(64700),
     a = n(172710),
-    s = n(456060),
-    o = n(659051),
-    l = n(798899),
-    c = n(829963);
-
-function u(e) {
-    var t;
+    r = n(456060),
+    s = n(659051),
+    o = n(798899),
+    d = n(829963);
+function c(e) {
     let {
-            application: n,
-            currentUserPresenceActivity: u,
-            hideParty: d,
-            message: f,
-            onView: p,
+            application: t,
+            currentUserPresenceActivity: n,
+            hideParty: c,
+            message: u,
+            onView: m,
             partyStatusElement: _,
             presenceActivity: h,
-            guildId: m,
+            guildId: p,
         } = e,
-        g = !(0, o.A)(h, f, n.id),
-        E = (0, s.n$)(n.name, null == (t = f.activity) ? void 0 : t.type, g),
-        b = i.useMemo(() => {
+        g = !(0, s.A)(h, u, t.id),
+        A = (0, r.n$)(t.name, u.activity?.type, g),
+        f = l.useMemo(() => {
             if (null != h) return () => (0, a.Mp)(h);
         }, [h]);
     return g
-        ? (0, r.jsx)(l.A, {
-              application: n,
-              message: f,
-              header: E,
-              onClickContent: b,
-              onView: p,
-              guildId: m,
-          })
-        : (0, r.jsx)(c.A, {
-              application: n,
-              message: f,
-              header: E,
+        ? (0, i.jsx)(o.A, { application: t, message: u, header: A, onClickContent: f, onView: m, guildId: p })
+        : (0, i.jsx)(d.A, {
+              application: t,
+              message: u,
+              header: A,
               presenceActivity: h,
-              hideParty: d,
+              hideParty: c,
               partyStatusElement: _,
-              currentUserPresenceActivity: u,
-              onClickContent: b,
-              onView: p,
-              guildId: m,
+              currentUserPresenceActivity: n,
+              onClickContent: f,
+              onView: m,
+              guildId: p,
           });
 }

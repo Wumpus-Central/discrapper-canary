@@ -1,6 +1,4 @@
-i.d(n, {
-    default: () => c,
-});
+i.d(n, { default: () => c });
 var r = i(627968);
 i(64700);
 var s = i(397927),
@@ -8,7 +6,6 @@ var s = i(397927),
     a = i(894069),
     l = i(964853),
     o = i(985018);
-
 function c(t) {
     let { guild: n, onSelect: i } = t,
         c = (0, l.A)(n),
@@ -19,8 +16,6 @@ function c(t) {
         "aria-label": o.intl.string(o.t.g3KvYF),
         onClose: e.Z_,
         onSelect: i,
-        children: (0, r.jsxs)(s.rXV, {
-            children: [c, d],
-        }),
+        children: (0, r.jsxs)(s.rXV, { children: [c, d] }),
     });
 }

@@ -1,30 +1,25 @@
-n.d(t, {
-    A: () => p,
-});
-var r = n(627968),
-    i = n(64700),
-    l = n(780964),
-    a = n(840065),
+n.d(t, { A: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(780964),
+    l = n(840065),
     s = n(64983),
     o = n(652215),
-    c = n(985018),
-    u = n(72692);
-class d extends i.PureComponent {
+    d = n(985018),
+    c = n(72692);
+class u extends r.PureComponent {
     render() {
-        return (0, r.jsx)(s.A, {
+        return (0, i.jsx)(s.A, {
             guild: this.props.guild,
-            onClick: () =>
-                (0, a.openUserSettings)(l.X.ACCOUNT_PANEL, {
-                    section: o.nc_.ACCOUNT,
-                }),
-            message: c.intl.format(c.t["oCd+at"], {}),
-            cta: c.intl.string(c.t["8dCrV9"]),
+            onClick: () => (0, l.openUserSettings)(a.X.ACCOUNT_PANEL, { section: o.nc_.ACCOUNT }),
+            message: d.intl.format(d.t["oCd+at"], {}),
+            cta: d.intl.string(d.t["8dCrV9"]),
             trackingSource: o.kZU.GUILD_MFA_WARNING,
             type: o.n5X.MFA_WARNING,
-            image: u,
+            image: c,
             imageMarginX: 54,
             undismissable: !0,
         });
     }
 }
-let p = d;
+let A = u;

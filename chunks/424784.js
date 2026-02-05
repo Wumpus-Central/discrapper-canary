@@ -1,3 +1,4 @@
+"use strict";
 var n = e(675879),
     o = e(496133),
     s = e(57284),
@@ -19,7 +20,4 @@ var n = e(675879),
                 : ((p = c(h, f((i = v - y) / h.length))).length > i && (p = a(p, 0, i)), t ? l + p : p + l);
         };
     };
-t.exports = {
-    start: p(!1),
-    end: p(!0),
-};
+t.exports = { start: p(!1), end: p(!0) };

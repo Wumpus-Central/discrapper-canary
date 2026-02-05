@@ -1,33 +1,22 @@
-n.d(t, {
-    A: () => c,
-});
-var l = n(627968);
-n(64700);
-var a = n(503698),
-    r = n.n(a),
-    i = n(397927),
-    s = n(1305);
-
-function c(e) {
-    let { loading: t, children: n } = e;
-    return (0, l.jsxs)("div", {
-        className: s.kL,
+a.d(t, { A: () => o });
+var n = a(627968);
+a(64700);
+var i = a(503698),
+    s = a.n(i),
+    l = a(397927),
+    r = a(1305);
+function o(e) {
+    let { loading: t, children: a } = e;
+    return (0, n.jsxs)("div", {
+        className: r.kL,
         children: [
             t
-                ? (0, l.jsx)("div", {
-                      className: s.dc,
-                      children: (0, l.jsx)(i.y$y, {
-                          className: s.u1,
-                          type: i.y$y.Type.SPINNING_CIRCLE,
-                      }),
+                ? (0, n.jsx)("div", {
+                      className: r.dc,
+                      children: (0, n.jsx)(l.y$y, { className: r.u1, type: l.y$y.Type.SPINNING_CIRCLE }),
                   })
                 : null,
-            (0, l.jsx)("div", {
-                className: r()({
-                    [s.Lq]: t,
-                }),
-                children: n,
-            }),
+            (0, n.jsx)("div", { className: s()({ [r.Lq]: t }), children: a }),
         ],
     });
 }

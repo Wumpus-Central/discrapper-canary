@@ -1,20 +1,19 @@
-n.d(t, {
-    A: () => s,
-});
-var a = n(627968);
+"use strict";
+n.d(t, { A: () => o });
+var r = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(561769),
-    r = n(764999);
-let s = (e) => {
+var i = n(397927),
+    a = n(645178),
+    s = n(561769);
+let o = (e) => {
     let { skuId: t, className: n } = e,
-        s = (0, i.Vm)(t),
-        o = (0, r.dH)(s);
-    return (0, a.jsx)(l.Heading, {
+        o = (0, s.Vm)(t),
+        l = (0, a.dH)(o);
+    return (0, r.jsx)(i.Heading, {
         variant: "heading-md/medium",
         color: "text-strong",
         className: n,
         lineClamp: 1,
-        children: o,
+        children: l,
     });
 };

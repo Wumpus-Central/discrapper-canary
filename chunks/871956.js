@@ -1,11 +1,8 @@
-r.d(t, {
-    e: () => u,
-});
+r.d(t, { e: () => u });
 var n = r(64700),
     i = r(541163),
     o = r(190334),
     a = r(218436);
-
 function u(e, t) {
     var r = (0, o.u)(),
         u = (0, n.useMemo)(

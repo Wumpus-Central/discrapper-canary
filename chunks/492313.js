@@ -1,8 +1,6 @@
-n.d(t, {
-    P: () => i,
-});
+"use strict";
+n.d(t, { P: () => i });
 var r = n(64700);
-
 function i(e, t, n) {
     let [i, a] = (0, r.useState)(e || t),
         s = (0, r.useRef)(void 0 !== e),
@@ -11,7 +9,7 @@ function i(e, t, n) {
         s.current, (s.current = o);
     }, [o]);
     let l = o ? e : i,
-        c = (0, r.useCallback)(
+        u = (0, r.useCallback)(
             (e, ...t) => {
                 let r = (e, ...t) => {
                     n && !Object.is(l, e) && n(e, ...t), o || (l = e);
@@ -25,5 +23,5 @@ function i(e, t, n) {
             },
             [o, l, n],
         );
-    return [l, c];
+    return [l, u];
 }

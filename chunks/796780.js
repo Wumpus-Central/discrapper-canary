@@ -1,247 +1,161 @@
-n.d(t, {
-    A: () => K,
-}),
-    n(228524),
-    n(896048),
-    n(264879);
+"use strict";
+n.d(t, { A: () => j });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    o = n.n(a),
-    s = n(92674),
+    s = n.n(a),
+    o = n(92674),
     l = n(172218),
-    c = n(158954),
-    u = n(311907),
+    u = n(158954),
+    c = n(311907),
     d = n(990078),
-    f = n(397927),
-    p = n(793574),
-    _ = n(688810),
+    _ = n(397927),
+    f = n(793574),
+    p = n(688810),
     h = n(987144),
     m = n(12711),
     g = n(71393),
     E = n(287809),
-    y = n(975571),
-    b = n(942975),
-    O = n(645619),
-    v = n(990208),
-    A = n(363487),
-    I = n(263215),
-    S = n(998418),
-    T = n(828162),
-    C = n(800007),
-    N = n(88001),
-    w = n(568065),
-    R = n(652215),
-    P = n(519412),
-    D = n(333354),
-    L = n(985018),
-    x = n(213378),
+    A = n(975571),
+    I = n(942975),
+    T = n(645619),
+    y = n(990208),
+    S = n(363487),
+    v = n(263215),
+    C = n(998418),
+    b = n(828162),
+    N = n(800007),
+    R = n(88001),
+    O = n(568065),
+    D = n(652215),
+    L = n(519412),
+    w = n(333354),
+    x = n(985018),
+    P = n(213378),
     M = n(329431);
-
-function j(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
 function k(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                j(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function U(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function G(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : U(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function V(e) {
     let {
             guildId: t,
             activeStatus: n,
             title: a,
-            description: y,
-            cost: b,
-            costDecorator: O,
-            imageUrl: v,
-            skuId: I,
-            isNew: S,
-            onClose: j,
+            description: A,
+            cost: I,
+            costDecorator: T,
+            imageUrl: y,
+            skuId: v,
+            isNew: C,
+            onClose: k,
             onHover: U,
         } = e,
-        { analyticsLocations: V } = (0, _.Ay)(),
-        F = n !== w.b_.INACTIVE,
-        B = (0, A.A)(t),
-        H = (0, u.bG)([E.default], () => E.default.getCurrentUser()),
-        Y = i.useRef(null),
+        { analyticsLocations: G } = (0, p.Ay)(),
+        V = n !== O.b_.INACTIVE,
+        F = (0, S.A)(t),
+        B = (0, c.bG)([E.default], () => E.default.getCurrentUser()),
+        j = i.useRef(null),
+        [H, Y] = i.useState(!1),
         [W, K] = i.useState(!1),
-        [z, q] = i.useState(!1),
-        Z = z,
-        Q = i.useCallback(() => {
+        z = W,
+        $ = i.useCallback(() => {
             let e = g.A.getGuild(t);
             null != e &&
                 (0, h.g)({
                     analyticsLocation: {
-                        page: R.liQ.GUILD_POWERUPS_MARKETING,
-                        section: R.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                        page: D.liQ.GUILD_POWERUPS_MARKETING,
+                        section: D.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: V,
+                    analyticsLocations: G,
                     guild: e,
                 });
-        }, [t, V]),
-        X = i.useCallback(() => {
-            j(), (0, T.A)(t, p.A.GUILD_POWERUPS_MARKETING, I);
-        }, [t, I, j]),
-        J = {
-            tension: 400,
-            friction: 30,
-        },
-        $ = (0, f.zhh)({
-            transform: Z
+        }, [t, G]),
+        q = i.useCallback(() => {
+            k(), (0, b.A)(t, f.A.GUILD_POWERUPS_MARKETING, v);
+        }, [t, v, k]),
+        Z = { tension: 400, friction: 30 },
+        Q = (0, _.zhh)({
+            transform: z
                 ? "translateX(-50%) translateY(16px) scale(1)"
                 : "translateX(-50%) translateY(24px) scale(1.40)",
             borderRadius: "0px",
             transformOrigin: "center 0%",
-            config: J,
+            config: Z,
         }),
-        ee = (0, f.zhh)({
-            transform: Z ? "translateX(0%) translateY(16px) scale(0.9)" : "translateX(0%) translateY(24px) scale(1.2)",
+        X = (0, _.zhh)({
+            transform: z ? "translateX(0%) translateY(16px) scale(0.9)" : "translateX(0%) translateY(24px) scale(1.2)",
             borderRadius: "0px",
             transformOrigin: "center 0%",
-            config: J,
+            config: Z,
         }),
-        et = (0, f.zhh)({
-            y: Z ? -25 : 0,
-            config: J,
-        }),
-        en = (0, f.zhh)({
-            opacity: +!!Z,
-            transform: Z ? "translateY(-10px)" : "translateY(20px)",
-            config: J,
-        }),
-        er = i.useCallback((e) => {
-            e && K(!0);
+        J = (0, _.zhh)({ y: z ? -25 : 0, config: Z }),
+        ee = (0, _.zhh)({ opacity: +!!z, transform: z ? "translateY(-10px)" : "translateY(20px)", config: Z }),
+        et = i.useCallback((e) => {
+            e && Y(!0);
         }, []),
-        ei = (0, l.K)(er),
-        ea = I === C.W5;
+        en = (0, l.K)(et),
+        er = v === N.W5;
     return (0, r.jsxs)("div", {
-        ref: Y,
-        className: o()(M.p3, M.sc, x.zL, {
-            [M.i0]: W,
-        }),
+        ref: j,
+        className: s()(M.p3, M.sc, P.zL, { [M.i0]: H }),
         onMouseEnter: () => {
-            q(!0), null == U || U(!0);
+            K(!0), U?.(!0);
         },
         onMouseLeave: () => {
-            q(!1), null == U || U(!1);
+            K(!1), U?.(!1);
         },
         children: [
-            (0, r.jsx)("div", {
-                className: M.sL,
-                ref: ei,
-            }),
+            (0, r.jsx)("div", { className: M.sL, ref: en }),
             (0, r.jsx)("div", {
                 className: M.BL,
-                children: ea
-                    ? (0, r.jsx)(s.animated.div, {
-                          className: o()(M.e_, x.Sl, x.$b),
-                          style: ee,
-                          children: (0, r.jsx)(c.E_w, {
+                children: er
+                    ? (0, r.jsx)(o.animated.div, {
+                          className: s()(M.e_, P.Sl, P.$b),
+                          style: X,
+                          children: (0, r.jsx)(u.E_w, {
                               withReducedMotion: "halt",
-                              eventTargetRef: Y,
+                              eventTargetRef: j,
                               fit: "contain",
                               stateMachine: "SM_Main_Int",
                           }),
                       })
-                    : (0, r.jsx)(s.animated.img, {
-                          className: o()(M.e_, x.Sl),
-                          src: v,
-                          alt: "",
-                          style: $,
-                      }),
+                    : (0, r.jsx)(o.animated.img, { className: s()(M.e_, P.Sl), src: y, alt: "", style: Q }),
             }),
-            (0, r.jsxs)(s.animated.div, {
-                style: G(k({}, et), {
-                    transform: et.y.to((e) => "translateY(".concat(e, "px)")),
-                }),
-                className: o()(M.hQ, x.hQ),
+            (0, r.jsxs)(o.animated.div, {
+                style: { ...J, transform: J.y.to((e) => `translateY(${e}px)`) },
+                className: s()(M.hQ, P.hQ),
                 children: [
                     (0, r.jsx)(m.xp, {
                         heading: a,
-                        description: y,
-                        label: L.intl.formatToPlainString(D.default.QOacIS, {
-                            quantity: b,
-                            decorator: null != O ? O : "",
-                        }),
-                        isEnabled: F,
+                        description: A,
+                        label: x.intl.formatToPlainString(w.default.QOacIS, { quantity: I, decorator: T ?? "" }),
+                        isEnabled: V,
                     }),
-                    (0, r.jsxs)(s.animated.div, {
-                        style: en,
+                    (0, r.jsxs)(o.animated.div, {
+                        style: ee,
                         className: M.NC,
                         children: [
                             (0, r.jsx)(d.m, {
-                                text: L.intl.formatToPlainString(P.default["5xN/C1"], {
-                                    premiumGroupProductName: (0, N.DP)(),
+                                text: x.intl.formatToPlainString(L.default["5xN/C1"], {
+                                    premiumGroupProductName: (0, R.DP)(),
                                 }),
-                                shouldShow: (null == H ? void 0 : H.isPremiumGroupMember()) === !0,
+                                shouldShow: B?.isPremiumGroupMember() === !0,
                                 children: (0, r.jsx)("div", {
                                     className: M.x6,
-                                    children: (0, r.jsx)(f.Button, {
+                                    children: (0, r.jsx)(_.Button, {
                                         variant: "primary",
-                                        text: L.intl.string(L.t.oPAx73),
-                                        onClick: Q,
-                                        disabled: null == H ? void 0 : H.isPremiumGroupMember(),
+                                        text: x.intl.string(x.t.oPAx73),
+                                        onClick: $,
+                                        disabled: B?.isPremiumGroupMember(),
                                         fullWidth: !0,
                                     }),
                                 }),
                             }),
-                            B &&
+                            F &&
                                 (0, r.jsx)("div", {
                                     className: M.x6,
-                                    children: (0, r.jsx)(f.Button, {
+                                    children: (0, r.jsx)(_.Button, {
                                         variant: "secondary",
-                                        text: L.intl.string(L.t.GoCQxU),
-                                        onClick: X,
+                                        text: x.intl.string(x.t.GoCQxU),
+                                        onClick: q,
                                         fullWidth: !0,
                                     }),
                                 }),
@@ -249,85 +163,76 @@ function V(e) {
                     }),
                 ],
             }),
-            S &&
-                (0, r.jsx)(f.LpS, {
-                    className: M.zG,
-                    text: L.intl.string(L.t.y2b7CA),
-                }),
-            W &&
-                (0, r.jsx)("div", {
-                    className: M.Q4,
-                }),
+            C && (0, r.jsx)(_.LpS, { className: M.zG, text: x.intl.string(x.t.y2b7CA) }),
+            H && (0, r.jsx)("div", { className: M.Q4 }),
         ],
     });
 }
-
-function F(e) {
-    let { guildId: t, powerup: n, costDecorator: a, isNew: o, onClose: s } = e,
-        [l, c] = i.useState(!1),
-        u = (0, S.Ay)(t, n).type,
-        d = (0, v.A)(n, l);
-    return (0, r.jsx)(V, {
+function U(e) {
+    let { guildId: t, powerup: n, costDecorator: a, isNew: s, onClose: o } = e,
+        [l, u] = i.useState(!1),
+        c = (0, C.Ay)(t, n).type,
+        d = (0, y.A)(n, l);
+    return (0, r.jsx)(k, {
         guildId: t,
-        activeStatus: u,
+        activeStatus: c,
         title: n.title,
         description: n.description,
         cost: n.cost,
         imageUrl: d,
         skuId: n.skuId,
         costDecorator: a,
-        isNew: o,
-        onClose: s,
-        onHover: (e) => c(e),
+        isNew: s,
+        onClose: o,
+        onHover: (e) => u(e),
     });
 }
-let B = 3,
-    H = new Set([C.W5]),
-    Y = new Map([[C.W5, "+"]]),
-    W = i.forwardRef((e, t) => {
+let G = 3,
+    V = new Set([N.W5]),
+    F = new Map([[N.W5, "+"]]),
+    B = i.forwardRef((e, t) => {
         let { guild: n, onClose: a } = e;
         i.useEffect(() => {
-            O.A.shouldFetchCatalogForGuild(n.id) && (0, b.AK)(n.id),
-                O.A.shouldFetchPowerupsForGuild(n.id) && (0, b.Xd)(n.id);
+            T.A.shouldFetchCatalogForGuild(n.id) && (0, I.AK)(n.id),
+                T.A.shouldFetchPowerupsForGuild(n.id) && (0, I.Xd)(n.id);
         }, [n.id]);
-        let o = (0, I.A)(n.id),
-            s = Array.from(null != o ? o : [])
-                .reverse()
-                .slice(0, B);
+        let s = Array.from((0, v.A)(n.id) ?? [])
+            .reverse()
+            .slice(0, G);
         return 0 === s.length
             ? null
             : (0, r.jsxs)("div", {
                   ref: t,
-                  className: x.kL,
+                  className: P.kL,
                   children: [
-                      (0, r.jsx)(c.DZT, {
+                      (0, r.jsx)(u.DZT, {
                           variant: "heading-xxl/extrabold",
-                          children: L.intl.string(D.default.wjI18Q),
+                          children: x.intl.string(w.default.wjI18Q),
                       }),
-                      (0, r.jsx)(c.EYj, {
+                      (0, r.jsx)(u.EYj, {
                           variant: "text-lg/medium",
-                          children: L.intl.format(D.default.OdCzjA, {
-                              helpDeskArticle: y.A.getArticleURL(R.MVz.GUILD_BOOSTING_FAQ),
+                          children: x.intl.format(w.default.OdCzjA, {
+                              helpDeskArticle: A.A.getArticleURL(D.MVz.GUILD_BOOSTING_FAQ),
                           }),
                       }),
                       (0, r.jsx)("div", {
-                          className: x.DO,
+                          className: P.DO,
                           children: s.map((e) =>
                               (0, r.jsx)(
-                                  F,
+                                  U,
                                   {
                                       guildId: n.id,
                                       powerup: e,
-                                      costDecorator: Y.get(e.skuId),
-                                      isNew: H.has(e.skuId),
+                                      costDecorator: F.get(e.skuId),
+                                      isNew: V.has(e.skuId),
                                       onClose: a,
                                   },
-                                  "guild-powerup-marketing-".concat(e.skuId),
+                                  `guild-powerup-marketing-${e.skuId}`,
                               ),
                           ),
                       }),
                   ],
               });
     });
-W.displayName = "GuildPowerupsMarketingPowerupCards";
-let K = W;
+B.displayName = "GuildPowerupsMarketingPowerupCards";
+let j = B;

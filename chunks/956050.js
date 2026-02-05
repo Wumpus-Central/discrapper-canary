@@ -1,10 +1,6 @@
-n.d(t, {
-    m: () => a,
-    n: () => i,
-}),
-    n(65821);
+"use strict";
+n.d(t, { m: () => a, n: () => i });
 var r = n(696016);
-
 function i(e) {
     let t = document.createElement("canvas");
     (t.width = e.width), (t.height = e.height);

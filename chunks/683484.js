@@ -1,255 +1,159 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => C });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    o = n(311907),
-    a = n(397927),
-    c = n(684013),
-    d = n(956793),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(311907),
+    o = n(397927),
+    d = n(684013),
+    c = n(956793),
     u = n(47167),
     h = n(742589),
     p = n(353428),
-    f = n(95701),
-    b = n(470710),
+    A = n(95701),
+    f = n(470710),
     g = n(734057),
-    y = n(71393),
-    A = n(994500),
-    m = n(309010),
-    O = n(745891),
-    v = n(855790),
-    E = n(985018),
-    x = n(803946);
-
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class j extends r.Component {
+    _ = n(71393),
+    m = n(994500),
+    E = n(309010),
+    x = n(745891),
+    y = n(855790),
+    v = n(985018),
+    S = n(803946);
+class I extends s.Component {
+    state = { showOpacitySlider: !1 };
     componentDidUpdate() {
-        this.props.locked &&
-            this.state.showOpacitySlider &&
-            this.setState({
-                showOpacitySlider: !1,
-            });
+        this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
+    handleClickCall = (e) => {
+        let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
+        if (i) n ? c.default.selectVoiceChannel(null) : d.A.callPrivateChannel(t.id, !1);
+        else {
+            let n = !i && !e.shiftKey;
+            d.A.callPrivateChannel(t.id, n);
+        }
+    };
+    handleOpenOpacitySettings = () => {
+        let { pinned: e } = this.props;
+        this.setState({ showOpacitySlider: !0 }), e && d.A.setPreviewInGameMode(!0);
+    };
+    handleCloseOpacitySettings = () => {
+        let { pinned: e } = this.props;
+        this.setState({ showOpacitySlider: !1 }), e && d.A.setPreviewInGameMode(!1);
+    };
+    handleMouseDown = (e) => {
+        let { onMouseDown: t } = this.props;
+        null != t && t(e);
+    };
     renderCallButton() {
         let e,
-            { channel: t, channelHasActiveCall: n, userIsInChannelCall: r, isBlocked: s } = this.props;
-        if (!(0, f.Gw)(t.type)) return null;
-        let l = a._jp,
-            o = !1;
+            { channel: t, channelHasActiveCall: n, userIsInChannelCall: s, isBlocked: l } = this.props;
+        if (!(0, A.Gw)(t.type)) return null;
+        let a = o._jp,
+            r = !1;
         return (
             n
-                ? r
-                    ? ((e = E.intl.string(E.t["4ry6yi"])), (l = a.zWQ))
-                    : (e = E.intl.string(E.t["0D/6Rz"]))
-                : s
-                  ? ((e = E.intl.string(E.t.PHzjvX)), (o = !0))
-                  : (e = E.intl.string(E.t.focH1t)),
-            (0, i.jsx)(h.A.Icon, {
-                icon: l,
-                tooltip: e,
-                onClick: this.handleClickCall,
-                disabled: o,
-            })
+                ? s
+                    ? ((e = v.intl.string(v.t["4ry6yi"])), (a = o.zWQ))
+                    : (e = v.intl.string(v.t["0D/6Rz"]))
+                : l
+                  ? ((e = v.intl.string(v.t.PHzjvX)), (r = !0))
+                  : (e = v.intl.string(v.t.focH1t)),
+            (0, i.jsx)(h.A.Icon, { icon: a, tooltip: e, onClick: this.handleClickCall, disabled: r })
         );
     }
+    renderWidgetButtons = () => {
+        let { locked: e, handlePin: t, pinned: n } = this.props,
+            l = n ? v.intl.string(v.t.cSu80j) : v.intl.string(v.t.cM8Vnm);
+        return e
+            ? null
+            : (0, i.jsxs)(s.Fragment, {
+                  children: [
+                      this.renderCallButton(),
+                      n
+                          ? (0, i.jsx)(h.A.Icon, {
+                                icon: o.OHS,
+                                tooltip: v.intl.string(v.t.OVovCb),
+                                onClick: this.handleOpenOpacitySettings,
+                            })
+                          : null,
+                      (0, i.jsx)(h.A.Icon, { icon: n ? o.hl9 : o.qgw, tooltip: l, selected: n, onClick: t }),
+                  ],
+              });
+    };
     render() {
         let {
                 className: e,
                 draggableClassName: t,
                 locked: n,
-                channel: r,
-                channelName: s,
-                guild: o,
-                onMouseDown: c,
-                onContextMenu: d,
+                channel: s,
+                channelName: l,
+                guild: r,
+                onMouseDown: d,
+                onContextMenu: c,
                 isPreviewingInGame: u,
-                disableDragIndicator: f,
+                disableDragIndicator: A,
             } = this.props,
-            { showOpacitySlider: b } = this.state;
-        return b && !n
-            ? (0, i.jsxs)(v.Ay.Bar, {
-                  className: x.dl,
+            { showOpacitySlider: f } = this.state;
+        return f && !n
+            ? (0, i.jsxs)(y.Ay.Bar, {
+                  className: S.dl,
                   children: [
-                      (0, i.jsx)(O.A, {}),
+                      (0, i.jsx)(x.A, {}),
                       (0, i.jsx)(h.A.Icon, {
-                          icon: a.PGe,
+                          icon: o.PGe,
                           onClick: this.handleCloseOpacitySettings,
-                          tooltip: E.intl.string(E.t.cpT0Cq),
+                          tooltip: v.intl.string(v.t.cpT0Cq),
                       }),
                   ],
               })
-            : (0, i.jsx)(v.Ay.Background, {
+            : (0, i.jsx)(y.Ay.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)("div", {
-                      className: l()(e, t, x.N1),
-                      onMouseDown: c,
-                      onContextMenu: d,
+                      className: a()(e, t, S.N1),
+                      onMouseDown: d,
+                      onContextMenu: c,
                       children: (0, i.jsxs)(h.A, {
-                          guildId: r.guild_id,
-                          channelId: r.id,
+                          guildId: s.guild_id,
+                          channelId: s.id,
                           toolbar: this.renderWidgetButtons(),
                           transparent: !0,
                           children: [
-                              u || n || f
+                              u || n || A
                                   ? null
-                                  : (0, i.jsx)(a.WP0, {
+                                  : (0, i.jsx)(o.WP0, {
                                         size: "custom",
                                         color: "currentColor",
-                                        className: l()(x.co, t),
+                                        className: a()(S.co, t),
                                         width: 20,
                                         height: 20,
                                     }),
-                              (0, p.zF)({
-                                  channel: r,
-                                  channelName: s,
-                              }),
-                              n ? null : (0, p.EP)(r, o),
+                              (0, p.zF)({ channel: s, channelName: l }),
+                              n ? null : (0, p.EP)(s, r),
                           ],
                       }),
                   }),
               });
     }
-    constructor(...e) {
-        super(...e),
-            S(this, "state", {
-                showOpacitySlider: !1,
-            }),
-            S(this, "handleClickCall", (e) => {
-                let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
-                if (i) n ? d.default.selectVoiceChannel(null) : c.A.callPrivateChannel(t.id, !1);
-                else {
-                    let n = !i && !e.shiftKey;
-                    c.A.callPrivateChannel(t.id, n);
-                }
-            }),
-            S(this, "handleOpenOpacitySettings", () => {
-                let { pinned: e } = this.props;
-                this.setState({
-                    showOpacitySlider: !0,
-                }),
-                    e && c.A.setPreviewInGameMode(!0);
-            }),
-            S(this, "handleCloseOpacitySettings", () => {
-                let { pinned: e } = this.props;
-                this.setState({
-                    showOpacitySlider: !1,
-                }),
-                    e && c.A.setPreviewInGameMode(!1);
-            }),
-            S(this, "handleMouseDown", (e) => {
-                let { onMouseDown: t } = this.props;
-                null != t && t(e);
-            }),
-            S(this, "renderWidgetButtons", () => {
-                let { locked: e, handlePin: t, pinned: n } = this.props,
-                    s = n ? E.intl.string(E.t.cSu80j) : E.intl.string(E.t.cM8Vnm);
-                return e
-                    ? null
-                    : (0, i.jsxs)(r.Fragment, {
-                          children: [
-                              this.renderCallButton(),
-                              n
-                                  ? (0, i.jsx)(h.A.Icon, {
-                                        icon: a.OHS,
-                                        tooltip: E.intl.string(E.t.OVovCb),
-                                        onClick: this.handleOpenOpacitySettings,
-                                    })
-                                  : null,
-                              (0, i.jsx)(h.A.Icon, {
-                                  icon: n ? a.hl9 : a.qgw,
-                                  tooltip: s,
-                                  selected: n,
-                                  onClick: t,
-                              }),
-                          ],
-                      });
-            });
-    }
 }
-
-function _(e) {
-    let { channel: t } = e,
-        n = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r,
-                s = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (r = 0, n = Reflect.ownKeys(e); r < n.length; r++)
-                    (i = n[r]),
-                        !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (s[i] = e[i]);
-                return s;
-            }
-            if (
-                ((s = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.getOwnPropertyNames(e);
-                    for (i = 0; i < s.length; i++)
-                        (n = s[i]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-                    return r;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (r = 0, n = Object.getOwnPropertySymbols(e); r < n.length; r++)
-                    (i = n[r]),
-                        !(t.indexOf(i) >= 0) && Object.prototype.propertyIsEnumerable.call(e, i) && (s[i] = e[i]);
-            return s;
-        })(e, ["channel"]),
-        r = (0, o.bG)([m.A, g.A], () => {
-            let e = m.A.getVoiceChannelId();
+function C(e) {
+    let { channel: t, ...n } = e,
+        s = (0, r.bG)([E.A, g.A], () => {
+            let e = E.A.getVoiceChannelId();
             return g.A.getChannel(e);
         }),
-        s = (0, o.bG)([y.A], () => y.A.getGuild(t.guild_id)),
-        l = (0, o.bG)([b.A], () => b.A.isCallActive(t.id)),
-        a = (0, u.Ay)(t),
-        c = (0, o.bG)([A.A], () => !!t.isDM() && null != t.getRecipientId() && A.A.isBlocked(t.getRecipientId()));
-    return (0, i.jsx)(
-        j,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    i.forEach(function (t) {
-                        S(e, t, n[t]);
-                    });
-            }
-            return e;
-        })(
-            {
-                channel: t,
-                channelName: a,
-                guild: s,
-                channelHasActiveCall: l,
-                userIsInChannelCall: null != r && r.id === t.id,
-                isBlocked: c,
-            },
-            n,
-        ),
-    );
+        l = (0, r.bG)([_.A], () => _.A.getGuild(t.guild_id)),
+        a = (0, r.bG)([f.A], () => f.A.isCallActive(t.id)),
+        o = (0, u.Ay)(t),
+        d = (0, r.bG)([m.A], () => !!t.isDM() && null != t.getRecipientId() && m.A.isBlocked(t.getRecipientId()));
+    return (0, i.jsx)(I, {
+        channel: t,
+        channelName: o,
+        guild: l,
+        channelHasActiveCall: a,
+        userIsInChannelCall: null != s && s.id === t.id,
+        isBlocked: d,
+        ...n,
+    });
 }

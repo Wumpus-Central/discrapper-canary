@@ -1,45 +1,40 @@
-n.d(t, {
-    A: () => p,
-});
+n.d(t, { A: () => f });
 var r = n(627968),
-    l = n(64700),
-    o = n(435371),
-    i = n(397927),
-    s = n(216456),
-    a = n(906822),
-    c = n(341915),
-    u = n(651892),
+    s = n(64700),
+    i = n(435371),
+    l = n(397927),
+    a = n(341915),
+    o = n(590202),
+    u = n(971649),
+    c = n(651892),
     d = n(814793),
-    f = n(717415),
-    m = n(985018);
-
-function p(e) {
+    m = n(717415),
+    E = n(985018);
+function f(e) {
     let { floatRight: t } = e,
-        { quest: n, sourceQuestContent: p } = l.useContext(f.VideoQuestModalContext),
-        v = (0, a.go)(),
-        E = (0, d.E0)(n.config),
-        g = l.useCallback(() => {
-            E &&
-                ((0, u.Xm)(n.id, {
-                    content: c.uF.VIDEO_MODAL,
-                    ctaContent: s.Cy.COPY_QUEST_URL,
-                    impressionId: v,
-                    sourceQuestContent: p,
+        { quest: n, sourceQuestContent: f } = s.useContext(m.VideoQuestModalContext),
+        p = (0, u.go)(),
+        v = (0, d.E0)(n.config),
+        h = s.useCallback(() => {
+            v &&
+                ((0, c.Xm)(n.id, {
+                    content: a.uF.VIDEO_MODAL,
+                    ctaContent: o.Cy.COPY_QUEST_URL,
+                    impressionId: p,
+                    sourceQuestContent: f,
                 }),
-                (0, i.showToast)((0, i.createToast)(m.intl.string(m.t["+5kSoW"]), i.ToastType.SUCCESS)));
-        }, [v, E, n.id, p]);
-    return E
+                (0, l.showToast)((0, l.createToast)(E.intl.string(E.t["+5kSoW"]), l.ToastType.SUCCESS)));
+        }, [p, v, n.id, f]);
+    return v
         ? (0, r.jsx)("div", {
-              style: {
-                  marginLeft: t ? "auto" : void 0,
-              },
-              children: (0, r.jsx)(o.m_, {
-                  text: m.intl.string(m.t.WmfZHZ),
-                  children: (0, r.jsx)(i.K0, {
+              style: { marginLeft: t ? "auto" : void 0 },
+              children: (0, r.jsx)(i.m_, {
+                  text: E.intl.string(E.t.WmfZHZ),
+                  children: (0, r.jsx)(l.K0, {
                       variant: "overlay-secondary",
-                      icon: i.qYV,
-                      "aria-label": m.intl.string(m.t.RDE0Sc),
-                      onClick: g,
+                      icon: l.qYV,
+                      "aria-label": E.intl.string(E.t.RDE0Sc),
+                      onClick: h,
                   }),
               }),
           })

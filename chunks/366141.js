@@ -1,104 +1,83 @@
-s.d(e, {
-    A: () => j,
-}),
-    s(896048),
-    s(228524);
+s.d(e, { A: () => N });
 var i = s(627968),
-    n = s(64700),
-    a = s(735438),
-    l = s(311907),
+    a = s(64700),
+    l = s(735438),
+    n = s(311907),
     r = s(827734),
     c = s(397927),
-    o = s(287809),
-    d = s(739010),
-    u = s(335891),
-    m = s(645376),
-    x = s(239093),
-    h = s(985018),
+    d = s(287809),
+    o = s(739010),
+    m = s(335891),
+    x = s(645376),
+    h = s(239093),
+    u = s(985018),
     g = s(941708);
-
-function j() {
-    let t = (0, u.K)(),
-        e = (0, l.bG)([o.default], () => o.default.getCurrentUser()),
-        [s, j] = n.useState(36),
-        v = n.useRef({
-            [d.PN.ALL_GOOD]: null,
-            [d.PN.LIMITED]: null,
-            [d.PN.VERY_LIMITED]: null,
-            [d.PN.AT_RISK]: null,
-            [d.PN.SUSPENDED]: null,
+function N() {
+    let t = (0, m.K)(),
+        e = (0, n.bG)([d.default], () => d.default.getCurrentUser()),
+        [s, N] = a.useState(36),
+        j = a.useRef({
+            [o.PN.ALL_GOOD]: null,
+            [o.PN.LIMITED]: null,
+            [o.PN.VERY_LIMITED]: null,
+            [o.PN.AT_RISK]: null,
+            [o.PN.SUSPENDED]: null,
         }),
-        N = n.useCallback(() => {
-            j(
-                Math.max(
-                    Math.max(
-                        ...Object.values(v.current).map((t) => {
-                            var e;
-                            return null != (e = null == t ? void 0 : t.getBoundingClientRect().height) ? e : 36;
-                        }),
-                    ),
-                    36,
-                ),
-            );
+        v = a.useCallback(() => {
+            N(Math.max(Math.max(...Object.values(j.current).map((t) => t?.getBoundingClientRect().height ?? 36)), 36));
         }, []);
-    n.useEffect(() => {
-        N();
-        let t = (0, a.debounce)(N, 100);
+    a.useEffect(() => {
+        v();
+        let t = (0, l.debounce)(v, 100);
         return window.addEventListener("resize", t), () => window.removeEventListener("resize", t);
-    }, [N]);
+    }, [v]);
     let f = {
-            [d.PN.ALL_GOOD]: {
-                title: h.t.uaKrRi,
-                description: h.intl.format(h.t.pEdBD4, {
-                    termsOfService: x.d$.TOS_LINK,
-                    communityGuidelines: x.d$.COMMUNITY_GUIDELINES,
+            [o.PN.ALL_GOOD]: {
+                title: u.t.uaKrRi,
+                description: u.intl.format(u.t.pEdBD4, {
+                    termsOfService: h.d$.TOS_LINK,
+                    communityGuidelines: h.d$.COMMUNITY_GUIDELINES,
                 }),
-                status: h.t["/Idfao"],
+                status: u.t["/Idfao"],
                 Icon: c.yr3,
                 color: r.A.colors.STATUS_POSITIVE,
             },
-            [d.PN.LIMITED]: {
-                title: h.t.epkcmS,
-                description: h.intl.string(h.t["774juc"]),
-                status: h.t.umleq4,
+            [o.PN.LIMITED]: {
+                title: u.t.epkcmS,
+                description: u.intl.string(u.t["774juc"]),
+                status: u.t.umleq4,
                 Icon: c.EpV,
                 color: r.A.colors.STATUS_WARNING,
             },
-            [d.PN.VERY_LIMITED]: {
-                title: h.t.crzE2X,
-                description: h.intl.string(h.t["T/Ufh9"]),
-                status: h.t.WBtMHf,
+            [o.PN.VERY_LIMITED]: {
+                title: u.t.crzE2X,
+                description: u.intl.string(u.t["T/Ufh9"]),
+                status: u.t.WBtMHf,
                 Icon: c.EpV,
                 color: r.A.unsafe_rawColors.ORANGE_345,
             },
-            [d.PN.AT_RISK]: {
-                title: h.t.XRNVzO,
-                description: h.intl.string(h.t["hbH+9S"]),
-                status: h.t["7f+4Lg"],
+            [o.PN.AT_RISK]: {
+                title: u.t.XRNVzO,
+                description: u.intl.string(u.t["hbH+9S"]),
+                status: u.t["7f+4Lg"],
                 Icon: c.EpV,
                 color: r.A.colors.ICON_FEEDBACK_CRITICAL,
             },
-            [d.PN.SUSPENDED]: {
-                title: h.t.MExFkz,
-                description: h.intl.string(h.t["2liUvt"]),
-                status: h.t["0OONGB"],
+            [o.PN.SUSPENDED]: {
+                title: u.t.MExFkz,
+                description: u.intl.string(u.t["2liUvt"]),
+                status: u.t["0OONGB"],
                 Icon: c.aXh,
                 color: r.A.colors.ICON_MUTED,
             },
         },
-        { title: p, description: E, color: b, Icon: O } = f[t.state],
-        T = Object.keys(f).length;
+        { title: E, description: T, color: p, Icon: A } = f[t.state],
+        _ = Object.keys(f).length;
     return (0, i.jsxs)(c.ZpM, {
         className: g.kL,
         outline: !1,
         children: [
-            (0, i.jsx)("div", {
-                className: g.ME,
-                children: (0, i.jsx)(m.A, {
-                    user: e,
-                    size: c._3J.SIZE_80,
-                }),
-            }),
+            (0, i.jsx)("div", { className: g.ME, children: (0, i.jsx)(x.A, { user: e, size: c._3J.SIZE_80 }) }),
             (0, i.jsxs)("div", {
                 className: g.h5,
                 children: [
@@ -108,61 +87,46 @@ function j() {
                             (0, i.jsx)(c.Heading, {
                                 color: "text-strong",
                                 variant: "heading-lg/normal",
-                                children: h.intl.format(p, {
+                                children: u.intl.format(E, {
                                     hook: (t) =>
                                         (0, i.jsx)(c.Text, {
-                                            style: {
-                                                color: b.css,
-                                            },
+                                            style: { color: p.css },
                                             variant: "heading-lg/bold",
                                             tag: "span",
                                             children: t,
                                         }),
                                 }),
                             }),
-                            (0, i.jsx)(c.Text, {
-                                color: "text-default",
-                                variant: "text-sm/normal",
-                                children: E,
-                            }),
+                            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-sm/normal", children: T }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
                         className: g.vK,
-                        style: {
-                            height: s,
-                        },
+                        style: { height: s },
                         children: [
-                            (0, i.jsx)("div", {
-                                className: g.n8,
-                            }),
+                            (0, i.jsx)("div", { className: g.n8 }),
                             Object.entries(f).map((e, s) => {
-                                let [n, a] = e,
-                                    l = parseInt(n) === t.state;
+                                let [a, l] = e,
+                                    n = parseInt(a) === t.state;
                                 return (0, i.jsxs)(
                                     "div",
                                     {
                                         className: g.Kx,
                                         ref: (t) => {
-                                            v.current[parseInt(n)] = t;
+                                            j.current[parseInt(a)] = t;
                                         },
                                         children: [
-                                            l
-                                                ? (0, i.jsx)(O, {
-                                                      className: g.xL,
-                                                      color: a.color,
-                                                  })
+                                            n
+                                                ? (0, i.jsx)(A, { className: g.xL, color: l.color })
                                                 : (0, i.jsx)("div", {
                                                       className: g.xL,
                                                       style: {
                                                           marginLeft: 0 === s ? -6 : 0,
-                                                          marginRight: s === T - 1 ? -6 : 0,
+                                                          marginRight: s === _ - 1 ? -6 : 0,
                                                       },
-                                                      children: (0, i.jsx)("div", {
-                                                          className: g.Ie,
-                                                      }),
+                                                      children: (0, i.jsx)("div", { className: g.Ie }),
                                                   }),
-                                            h.intl.format(a.status, {
+                                            u.intl.format(l.status, {
                                                 hook: (t) =>
                                                     (0, i.jsx)(c.Text, {
                                                         color: "text-default",

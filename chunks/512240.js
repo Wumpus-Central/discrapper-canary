@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     RJ: "formNotice_f43ba5",
     $G: "formNoticeTitle_f43ba5",

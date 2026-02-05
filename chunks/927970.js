@@ -1,17 +1,11 @@
-t.d(e, {
-    A: () => n,
-});
+t.d(e, { A: () => n });
 var i = t(981737);
 let n = {
     ordinalNumber: function (a, e) {
         return Number(a) + ".";
     },
     era: (0, i.A)({
-        values: {
-            narrow: ["M\xd6", "MS"],
-            abbreviated: ["M\xd6", "MS"],
-            wide: ["Milattan \xd6nce", "Milattan Sonra"],
-        },
+        values: { narrow: ["M\xd6", "MS"], abbreviated: ["M\xd6", "MS"], wide: ["Milattan \xd6nce", "Milattan Sonra"] },
         defaultWidth: "wide",
     }),
     quarter: (0, i.A)({

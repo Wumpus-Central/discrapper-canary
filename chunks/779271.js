@@ -1,71 +1,49 @@
-n.d(t, {
-    A: () => d,
-});
-var r = n(627968),
+n.d(t, { A: () => u });
+var i = n(627968),
     l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n(503698),
+    a = n.n(s),
+    r = n(397927),
     o = n(402216),
-    c = n(667992),
-    u = n(920660);
-let d = l.memo(function (e) {
+    d = n(667992),
+    c = n(920660);
+let u = l.memo(function (e) {
     let {
         label: t,
         participantCount: n,
         onClick: l,
-        className: i,
-        collapsed: d,
-        speakers: f,
-        channel: p,
-        isStreamLive: h,
+        className: s,
+        collapsed: u,
+        speakers: h,
+        channel: A,
+        isStreamLive: g,
     } = e;
-    return (0, r.jsxs)(s.DUT, {
+    return (0, i.jsxs)(r.DUT, {
         onClick: l,
-        className: a()(u.kL, i),
+        className: a()(c.kL, s),
         children: [
-            null == f
-                ? (0, r.jsx)(s.nFg, {
-                      size: "custom",
-                      color: "currentColor",
-                      width: 20,
-                      height: 20,
-                      className: u.Vo,
-                  })
-                : (0, r.jsx)(s.cNw, {
-                      size: "custom",
-                      color: "currentColor",
-                      width: 20,
-                      height: 20,
-                      className: u.Vo,
-                  }),
-            (0, r.jsxs)(s.Text, {
+            null == h
+                ? (0, i.jsx)(r.nFg, { size: "custom", color: "currentColor", width: 20, height: 20, className: c.Vo })
+                : (0, i.jsx)(r.cNw, { size: "custom", color: "currentColor", width: 20, height: 20, className: c.Vo }),
+            (0, i.jsxs)(r.Text, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: u.Qq,
+                className: c.Qq,
                 children: [t, " — ", n],
             }),
-            d &&
-                null != p &&
-                null != f &&
-                f.length > 0 &&
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(c.A, {
-                            channel: p,
-                            speakers: f,
-                        }),
-                        h && (0, r.jsx)(o.Ay, {}),
-                    ],
+            u &&
+                null != A &&
+                null != h &&
+                h.length > 0 &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(d.A, { channel: A, speakers: h }), g && (0, i.jsx)(o.Ay, {})],
                 }),
-            (0, r.jsx)(s.abt, {
+            (0, i.jsx)(r.abt, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(u.mw, {
-                    [u.VU]: d,
-                }),
+                className: a()(c.mw, { [c.VU]: u }),
             }),
         ],
     });

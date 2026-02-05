@@ -1,21 +1,17 @@
+"use strict";
 n.d(t, {
-    Kv: () => v,
-    M9: () => y,
-    MC: () => O,
-    Ot: () => g,
-    UW: () => E,
-    Ub: () => b,
-    Wl: () => S,
-    YP: () => I,
-    jR: () => h,
-    kc: () => m,
-    uk: () => A,
-}),
-    n(65821),
-    n(228524),
-    n(896048),
-    n(747238),
-    n(812715);
+    Kv: () => A,
+    M9: () => m,
+    MC: () => g,
+    Ot: () => f,
+    UW: () => p,
+    Ub: () => h,
+    Wl: () => I,
+    YP: () => T,
+    jR: () => d,
+    kc: () => _,
+    uk: () => E,
+});
 var r = n(835245),
     i = n(773669),
     a = n(954571),
@@ -23,146 +19,85 @@ var r = n(835245),
     o = n(449054);
 n(670412), n(351022);
 var l = n(324580),
-    c = n(652215),
-    u = n(985018);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+    u = n(652215),
+    c = n(985018);
+function d(e) {
+    switch (e) {
+        case l.o.FEATURED:
+            return c.intl.string(c.t["RU+DCe"]);
+        case l.o.GAMING:
+            return c.intl.string(c.t["CD/USA"]);
+        case l.o.MUSIC:
+            return c.intl.string(c.t["nt9PL+"]);
+        case l.o.ENTERTAINMENT:
+            return c.intl.string(c.t.gSbmdt);
+        case l.o.TECH:
+            return c.intl.string(c.t["0A0By5"]);
+        case l.o.EDUCATION:
+            return c.intl.string(c.t.Gy9woq);
+        case l.o.HUBS:
+            return c.intl.string(c.t["q469/Z"]);
+    }
 }
-
+function _(e) {
+    switch (e) {
+        case l.o.FEATURED:
+            return c.intl.string(c.t.OlDfzP);
+        case l.o.GAMING:
+            return c.intl.string(c.t["CD/USA"]);
+        case l.o.MUSIC:
+            return c.intl.string(c.t["nt9PL+"]);
+        case l.o.ENTERTAINMENT:
+            return c.intl.string(c.t.gSbmdt);
+        case l.o.TECH:
+            return c.intl.string(c.t["0A0By5"]);
+        case l.o.EDUCATION:
+            return c.intl.string(c.t.Gy9woq);
+        case l.o.HUBS:
+            return c.intl.string(c.t.X5xPlb);
+        default:
+            throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
+    }
+}
 function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function h(e) {
     switch (e) {
         case l.o.FEATURED:
-            return u.intl.string(u.t["RU+DCe"]);
+            return c.intl.string(c.t.SdMhrk);
         case l.o.GAMING:
-            return u.intl.string(u.t["CD/USA"]);
+            return c.intl.string(c.t.AAJ5ov);
         case l.o.MUSIC:
-            return u.intl.string(u.t["nt9PL+"]);
+            return c.intl.string(c.t["SOio+D"]);
         case l.o.ENTERTAINMENT:
-            return u.intl.string(u.t.gSbmdt);
+            return c.intl.string(c.t.R09vf0);
         case l.o.TECH:
-            return u.intl.string(u.t["0A0By5"]);
+            return c.intl.string(c.t.Ew4d56);
         case l.o.EDUCATION:
-            return u.intl.string(u.t.Gy9woq);
+            return c.intl.string(c.t.sasIWU);
         case l.o.HUBS:
-            return u.intl.string(u.t["q469/Z"]);
-    }
-}
-
-function m(e) {
-    switch (e) {
-        case l.o.FEATURED:
-            return u.intl.string(u.t.OlDfzP);
-        case l.o.GAMING:
-            return u.intl.string(u.t["CD/USA"]);
-        case l.o.MUSIC:
-            return u.intl.string(u.t["nt9PL+"]);
-        case l.o.ENTERTAINMENT:
-            return u.intl.string(u.t.gSbmdt);
-        case l.o.TECH:
-            return u.intl.string(u.t["0A0By5"]);
-        case l.o.EDUCATION:
-            return u.intl.string(u.t.Gy9woq);
-        case l.o.HUBS:
-            return u.intl.string(u.t.X5xPlb);
+            return c.intl.string(c.t["F/IQCI"]);
         default:
-            throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
+            throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
     }
 }
-
-function g(e) {
+function p(e) {
     switch (e) {
         case l.o.FEATURED:
-            return u.intl.string(u.t.SdMhrk);
+            return c.intl.string(c.t.crt84X);
         case l.o.GAMING:
-            return u.intl.string(u.t.AAJ5ov);
+            return c.intl.string(c.t.fWbIpf);
         case l.o.MUSIC:
-            return u.intl.string(u.t["SOio+D"]);
+            return c.intl.string(c.t.nfgDzz);
         case l.o.ENTERTAINMENT:
-            return u.intl.string(u.t.R09vf0);
+            return c.intl.string(c.t.k1CYxv);
         case l.o.TECH:
-            return u.intl.string(u.t.Ew4d56);
+            return c.intl.string(c.t["4dawps"]);
         case l.o.EDUCATION:
-            return u.intl.string(u.t.sasIWU);
-        case l.o.HUBS:
-            return u.intl.string(u.t["F/IQCI"]);
-        default:
-            throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
-    }
-}
-
-function E(e) {
-    switch (e) {
-        case l.o.FEATURED:
-            return u.intl.string(u.t.crt84X);
-        case l.o.GAMING:
-            return u.intl.string(u.t.fWbIpf);
-        case l.o.MUSIC:
-            return u.intl.string(u.t.nfgDzz);
-        case l.o.ENTERTAINMENT:
-            return u.intl.string(u.t.k1CYxv);
-        case l.o.TECH:
-            return u.intl.string(u.t["4dawps"]);
-        case l.o.EDUCATION:
-            return u.intl.string(u.t.uexPgT);
+            return c.intl.string(c.t.uexPgT);
         default:
             return null;
     }
 }
-
-function b(e) {
+function h(e) {
     switch (e) {
         case l.o.FEATURED:
             return l.Iq;
@@ -182,12 +117,10 @@ function b(e) {
             (0, s.xb)(e);
     }
 }
-
-function y(e) {
+function m(e) {
     return null == e || Date.now() - e > l.WV;
 }
-
-function O(e) {
+function g(e) {
     return {
         id: e.id,
         name: e.name,
@@ -205,8 +138,7 @@ function O(e) {
         emojiCount: e.emoji_count,
     };
 }
-
-function A(e) {
+function E(e) {
     return {
         id: e.id,
         name: e.name,
@@ -223,21 +155,17 @@ function A(e) {
         emojis: [],
     };
 }
-
-function v() {
-    var e;
-    let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
-        n = (0, l.tO)(),
-        r = t.locale;
-    return (null != (e = n.find((e) => e.code === r)) ? e : n[0]).code;
+function A() {
+    let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
+        t = (0, l.tO)(),
+        n = e.locale;
+    return (t.find((e) => e.code === n) ?? t[0]).code;
 }
-async function S(e) {
+async function I(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: s, options: l } = e,
-        u = _(f({}, l), {
-            loadId: t,
-        });
-    await o.Z2(n, s, u),
-        a.default.track(c.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
+        c = { ...l, loadId: t };
+    await o.Z2(n, s, c),
+        a.default.track(u.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: r,
@@ -245,7 +173,6 @@ async function S(e) {
             location: s,
         });
 }
-
-function I() {
+function T() {
     return (0, r.A)().replace(/-/g, "");
 }

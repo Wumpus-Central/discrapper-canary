@@ -1,95 +1,61 @@
-n.d(t, {
-    A: () => g,
-});
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => g });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
+var s = n(503698),
+    r = n.n(s),
     l = n(397927),
     a = n(854378),
     o = n(813516),
     c = n(524832),
-    u = n(652215),
-    d = n(985018),
+    d = n(652215),
+    u = n(985018),
     h = n(497039),
-    f = n(473169);
-
+    _ = n(473169);
 function p(e) {
     let { children: t } = e;
-    return (0, r.jsx)("li", {
+    return (0, i.jsx)("li", {
         className: h.Aw,
-        children: (0, r.jsx)(l.Text, {
-            variant: "text-sm/medium",
-            color: "text-default",
-            children: t,
-        }),
+        children: (0, i.jsx)(l.Text, { variant: "text-sm/medium", color: "text-default", children: t }),
     });
 }
-
 function g(e) {
-    let { setSlide: t, transitionTo: i } = e;
-    return (0, r.jsxs)("div", {
+    let { setSlide: t, transitionTo: s } = e;
+    return (0, i.jsxs)("div", {
         children: [
-            (0, r.jsx)(a._V, {
-                src: n(79418),
-                className: s()(f.SX, f.Ot),
-            }),
-            (0, r.jsx)(a.hE, {
-                className: f.QB,
-                children: d.intl.string(d.t["8UcxI6"]),
-            }),
-            (0, r.jsx)(l.Text, {
-                variant: "text-md/normal",
-                children: d.intl.string(d.t.O37hMl),
-            }),
-            (0, r.jsxs)(a.eB, {
-                className: s()(f.SX, f.QX),
+            (0, i.jsx)(a._V, { src: n(79418), className: r()(_.SX, _.Ot) }),
+            (0, i.jsx)(a.hE, { className: _.QB, children: u.intl.string(u.t["8UcxI6"]) }),
+            (0, i.jsx)(l.Text, { variant: "text-md/normal", children: u.intl.string(u.t.O37hMl) }),
+            (0, i.jsxs)(a.eB, {
+                className: r()(_.SX, _.QX),
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        variant: "text-sm/normal",
-                    }),
-                    (0, r.jsxs)("ul", {
+                    (0, i.jsx)(l.Text, { variant: "text-sm/normal" }),
+                    (0, i.jsxs)("ul", {
                         className: h.qI,
                         children: [
-                            (0, r.jsx)(p, {
-                                children: d.intl.string(d.t.Gj1Zry),
-                            }),
-                            (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, {
-                                children: d.intl.string(d.t["8C6t3B"]),
-                            }),
-                            (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, {
-                                children: d.intl.string(d.t.mToZMA),
-                            }),
-                            (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, {
-                                children: d.intl.string(d.t.TPEvkc),
-                            }),
-                            (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, {
-                                children: d.intl.string(d.t.H8Y1Ln),
-                            }),
+                            (0, i.jsx)(p, { children: u.intl.string(u.t.Gj1Zry) }),
+                            (0, i.jsx)(o.A, {}),
+                            (0, i.jsx)(p, { children: u.intl.string(u.t["8C6t3B"]) }),
+                            (0, i.jsx)(o.A, {}),
+                            (0, i.jsx)(p, { children: u.intl.string(u.t.mToZMA) }),
+                            (0, i.jsx)(o.A, {}),
+                            (0, i.jsx)(p, { children: u.intl.string(u.t.TPEvkc) }),
+                            (0, i.jsx)(o.A, {}),
+                            (0, i.jsx)(p, { children: u.intl.string(u.t.H8Y1Ln) }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)(l.ButtonGroup, {
+            (0, i.jsxs)(l.ButtonGroup, {
                 direction: "vertical",
                 fullWidth: !0,
                 className: h.UD,
                 children: [
-                    (0, r.jsx)(l.Button, {
-                        text: d.intl.string(d.t.GgCRqR),
-                        onClick: () => t(c.k.PASSWORD),
-                    }),
-                    (0, r.jsx)(l.Button, {
-                        text: d.intl.string(d.t["B/yHcQ"]),
+                    (0, i.jsx)(l.Button, { text: u.intl.string(u.t.GgCRqR), onClick: () => t(c.k.PASSWORD) }),
+                    (0, i.jsx)(l.Button, {
+                        text: u.intl.string(u.t["B/yHcQ"]),
                         variant: "secondary",
-                        onClick: () =>
-                            i(u.BVt.LOGIN, {
-                                source: "account_revert",
-                            }),
+                        onClick: () => s(d.BVt.LOGIN, { source: "account_revert" }),
                     }),
                 ],
             }),

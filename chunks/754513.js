@@ -1,128 +1,96 @@
-n.d(t, {
-    A: () => x,
-}),
-    n(896048),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    r = n.n(l),
     a = n(397927),
-    c = n(975571),
-    o = n(546457),
-    d = n(897295),
+    o = n(975571),
+    d = n(546457),
+    c = n(897295),
     u = n(411335),
-    f = n(652215),
+    m = n(652215),
     g = n(985018),
-    b = n(256893);
-let m = c.A.getArticleURL(f.MVz.GUILD_AUTOMOD_REGEX);
-
-function p(e) {
-    let { hasErrors: t, text: n, errorText: i } = e;
+    x = n(256893);
+let h = o.A.getArticleURL(m.MVz.GUILD_AUTOMOD_REGEX);
+function _(e) {
+    let { hasErrors: t, text: n, errorText: s } = e;
     return t
-        ? (0, r.jsx)("div", {
-              className: b.W$,
-              children: (0, r.jsx)(a.Text, {
-                  className: b.F,
+        ? (0, i.jsx)("div", {
+              className: x.W$,
+              children: (0, i.jsx)(a.Text, {
+                  className: x.F,
                   variant: "text-xs/medium",
                   color: "text-feedback-critical",
-                  children:
-                      null != i
-                          ? i
-                          : g.intl.format(g.t.jKYAPu, {
-                                helpArticle: m,
-                            }),
+                  children: s ?? g.intl.format(g.t.jKYAPu, { helpArticle: h }),
               }),
           })
-        : (0, r.jsx)(a.Text, {
-              className: b.W$,
-              variant: "text-xs/medium",
-              color: "text-muted",
-              children: n,
-          });
+        : (0, i.jsx)(a.Text, { className: x.W$, variant: "text-xs/medium", color: "text-muted", children: n });
 }
-
-function x(e) {
-    var t, n;
-    let { rule: l, onChangeText: a, className: c } = e,
+function A(e) {
+    let { rule: t, onChangeText: n, className: l } = e,
         {
-            patterns: f,
-            valueError: x,
-            errors: h,
-            validatePatternsChanged: j,
-            validateEditingValueChanged: O,
-        } = (0, d.A)(l, a),
-        [y] = i.useState(() => ({
-            tags: f,
-            value: "",
-            selections: [],
-            isSelecting: !1,
-        })),
-        v = i.useMemo(
+            patterns: a,
+            valueError: o,
+            errors: m,
+            validatePatternsChanged: A,
+            validateEditingValueChanged: p,
+        } = (0, c.A)(t, n),
+        [f] = s.useState(() => ({ tags: a, value: "", selections: [], isSelecting: !1 })),
+        j = s.useMemo(
             () =>
-                h.reduce((e, t) => {
+                m.reduce((e, t) => {
                     let {
                         pattern: n,
-                        message: r,
-                        description: i,
+                        message: i,
+                        description: s,
                         erroringCharacterLength: l = n.length,
-                        erroringCharacterOffset: s = 0,
+                        erroringCharacterOffset: r = 0,
                     } = t;
                     return (
-                        null == f.find((e) => e === n) ||
+                        null == a.find((e) => e === n) ||
                             (e[n] = {
                                 value: n,
-                                message: null != i ? i : r,
+                                message: s ?? i,
                                 erroringCharacterLength: l,
-                                erroringCharacterOffset: s,
+                                erroringCharacterOffset: r,
                             }),
                         e
                     );
                 }, {}),
-            [h, f],
+            [m, a],
         ),
-        A = i.useCallback(
+        N = s.useCallback(
             (e) => {
-                j(e, f);
+                A(e, a);
             },
-            [j, f],
+            [A, a],
         ),
-        E = i.useCallback(
+        E = s.useCallback(
             (e) => {
-                O(e);
+                p(e);
             },
-            [O],
+            [p],
         );
-    return (0, r.jsxs)("div", {
-        className: s()(b.Qn, c),
+    return (0, i.jsxs)("div", {
+        className: r()(x.Qn, l),
         children: [
-            (0, r.jsx)(o.A, {
+            (0, i.jsx)(d.A, {
                 placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-                initialValue: y,
-                onChangeTags: A,
+                initialValue: f,
+                onChangeTags: N,
                 onChangeNewTagValue: E,
-                tagErrors: v,
+                tagErrors: j,
                 maxTags: u.qm,
             }),
-            (0, r.jsx)(p, {
-                text: g.intl.format(g.t["PGC/AJ"], {
-                    helpArticle: m,
-                }),
-                hasErrors: h.length > 0 || null != x,
+            (0, i.jsx)(_, {
+                text: g.intl.format(g.t["PGC/AJ"], { helpArticle: h }),
+                hasErrors: m.length > 0 || null != o,
                 errorText:
-                    null !=
-                    (t =
-                        null ==
-                        (n = h.find((e) => {
-                            let { pattern: t } = e;
-                            return t === d.B;
-                        }))
-                            ? void 0
-                            : n.message)
-                        ? t
-                        : null == x
-                          ? void 0
-                          : x.message,
+                    m.find((e) => {
+                        let { pattern: t } = e;
+                        return t === c.B;
+                    })?.message ?? o?.message,
             }),
         ],
     });

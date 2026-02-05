@@ -1,10 +1,5 @@
-n.d(t, {
-    Jl: () => o,
-    Wf: () => l,
-    rA: () => s,
-    re: () => a,
-}),
-    n(896048);
+"use strict";
+n.d(t, { Jl: () => o, Wf: () => l, rA: () => s, re: () => a });
 var r = n(508425),
     i = n(559949);
 let a = [r.z.SOLID, r.z.GRADIENT, r.z.NEON, r.z.TOON, r.z.POP],
@@ -32,9 +27,5 @@ let a = [r.z.SOLID, r.z.GRADIENT, r.z.NEON, r.z.TOON, r.z.POP],
         [0xe4541e, 6674404],
     ].map((e) => {
         let [t, n] = e;
-        return {
-            start: t,
-            end: n,
-            name: "",
-        };
+        return { start: t, end: n, name: "" };
     });

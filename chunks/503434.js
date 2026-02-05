@@ -1,9 +1,11 @@
+"use strict";
 e.exports = {
     cs: "outgoing-call-pulse_f910d0",
     It: "incoming-call-pulse_f910d0",
     vk: "clickable_f910d0",
     iE: "wrapper_f910d0",
     tb: "ringingOutgoing_f910d0",
+    EX: "small_f910d0",
     hs: "ringingIncoming_f910d0",
     II: "statusContainer_f910d0",
     h5: "status_f910d0",

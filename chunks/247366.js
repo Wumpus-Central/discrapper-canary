@@ -1,3 +1,4 @@
+"use strict";
 r(368810), r(896132), r(340470);
 var n = r(470132);
 Object.defineProperty(t, "Hue", {
@@ -8,13 +9,8 @@ Object.defineProperty(t, "Hue", {
 }),
     r(601428);
 var o = r(402075);
-
 function a(e) {
-    return e && e.__esModule
-        ? e
-        : {
-              default: e,
-          };
+    return e && e.__esModule ? e : { default: e };
 }
 Object.defineProperty(t, "Saturation", {
     enumerable: !0,

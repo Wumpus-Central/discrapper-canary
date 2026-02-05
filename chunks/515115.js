@@ -1,21 +1,15 @@
-n.d(t, {
-    L: () => s,
-});
-var r = n(397927),
-    i = n(713654),
-    a = n(9448);
-
-function s(e, t) {
-    let n, s;
+l.d(t, { L: () => a });
+var n = l(397927),
+    s = l(713654),
+    i = l(9448);
+function a(e, t) {
+    let l, a;
     if (null == e) return null;
-    let o = (0, a.oF)(e);
-    if (null != o) (n = r.BT6), (s = o);
+    let r = (0, i.oF)(e);
+    if (null != r) (l = n.BT6), (a = r);
     else {
         if (null == t) return null;
-        (n = (0, i._U)(t.type)), (s = t.name);
+        (l = (0, s._U)(t.type)), (a = t.name);
     }
-    return {
-        IconComponent: n,
-        locationName: s,
-    };
+    return { IconComponent: l, locationName: a };
 }

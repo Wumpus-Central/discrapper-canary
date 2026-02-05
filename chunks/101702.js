@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header__6e500",
     ol: "members__6e500",

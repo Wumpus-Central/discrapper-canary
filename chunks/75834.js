@@ -1,7 +1,4 @@
-n.d(e, {
-    default: () => f,
-}),
-    n(896048);
+n.d(e, { default: () => f });
 var i = n(627968),
     l = n(64700),
     a = n(158954),
@@ -12,10 +9,9 @@ var i = n(627968),
     c = n(980406),
     u = n(130771),
     m = n(652215),
-    h = n(269927),
-    p = n(985018),
+    p = n(269927),
+    h = n(985018),
     x = n(976164);
-
 function g(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: l } = t;
     return (0, i.jsx)("div", {
@@ -27,60 +23,41 @@ function g(t) {
                 options: l,
                 formatOption: (t) => {
                     let { value: e, label: n } = t;
-                    return {
-                        id: e,
-                        label: n,
-                        value: e,
-                    };
+                    return { id: e, label: n, value: e };
                 },
-                placeholder: p.intl.string(p.t.QXf93A),
+                placeholder: h.intl.string(h.t.QXf93A),
                 value: e,
                 onSelectionChange: n,
-                label: p.intl.string(p.t.QXf93A),
+                label: h.intl.string(h.t.QXf93A),
                 hideLabel: !0,
             }),
     });
 }
-
 function f(t) {
     let { guildId: e, requireTeamSetup: n, onClose: x, transitionState: f } = t,
         [j, v] = l.useState(),
         [C, E] = l.useState(!1),
         { teams: b } = (0, u.A)(),
-        T = b.filter((t) => t.payout_account_status === h.y.ACTIVE),
-        y = l.useMemo(
-            () =>
-                T.map((t) => ({
-                    label: t.name,
-                    value: t.id,
-                })),
-            [T],
-        ),
-        S = () => {
+        S = b.filter((t) => t.payout_account_status === p.y.ACTIVE),
+        T = l.useMemo(() => S.map((t) => ({ label: t.name, value: t.id })), [S]),
+        y = () => {
             E((t) => !t);
         },
-        k = () => {
+        _ = () => {
             x(), (0, d.im)(e, j);
         },
-        A = l.useCallback(() => {
+        k = l.useCallback(() => {
             (0, o.A)(m.X7G.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
         return (0, i.jsx)(a.Modal, {
-            title: p.intl.string(p.t.GfObDE),
-            actions: [
-                {
-                    variant: "primary",
-                    text: p.intl.string(p.t.geKm7t),
-                    onClick: k,
-                    disabled: !C,
-                },
-            ],
+            title: h.intl.string(h.t.GfObDE),
+            actions: [{ variant: "primary", text: h.intl.string(h.t.geKm7t), onClick: _, disabled: !C }],
             onClose: x,
             transitionState: f,
             size: "md",
             children: (0, i.jsx)(s.Kj, {
-                onChange: S,
+                onChange: y,
                 size: 20,
                 type: s.Xo.INVERTED,
                 value: C,
@@ -92,29 +69,24 @@ function f(t) {
             }),
         });
     {
-        let t = 0 === y.length;
+        let t = 0 === T.length;
         return (0, i.jsxs)(a.Modal, {
-            title: p.intl.string(p.t.inJKQv),
-            subtitle: t ? p.intl.format(p.t.Jyy4pV, {}) : p.intl.string(p.t.U1Vz24),
+            title: h.intl.string(h.t.inJKQv),
+            subtitle: t ? h.intl.format(h.t.Jyy4pV, {}) : h.intl.string(h.t.U1Vz24),
             actions: [
                 {
                     variant: "primary",
-                    text: t ? p.intl.string(p.t.JddVgE) : p.intl.string(p.t.geKm7t),
-                    onClick: t ? A : k,
+                    text: t ? h.intl.string(h.t.JddVgE) : h.intl.string(h.t.geKm7t),
+                    onClick: t ? k : _,
                 },
             ],
             onClose: x,
             transitionState: f,
             size: "md",
             children: [
-                !t &&
-                    (0, i.jsx)(g, {
-                        selectedTeamId: j,
-                        onSetSelectedTeamId: v,
-                        teamOptions: y,
-                    }),
+                !t && (0, i.jsx)(g, { selectedTeamId: j, onSetSelectedTeamId: v, teamOptions: T }),
                 (0, i.jsx)(s.Kj, {
-                    onChange: S,
+                    onChange: y,
                     size: 20,
                     type: s.Xo.INVERTED,
                     value: C,

@@ -1,6 +1,5 @@
-n.d(t, {
-    A: () => s,
-});
+"use strict";
+n.d(t, { A: () => s });
 var r = n(559949),
     i = n(927961);
 let a = {
@@ -13,8 +12,6 @@ let a = {
     [r.x.SINISTRE]: i.default.jV9DN4,
     [r.x.ZILLA_SLAB]: i.default.KMR8rT,
 };
-
 function s(e) {
-    var t;
-    return null != (t = a[e]) ? t : i.default.ZEL6mz;
+    return a[e] ?? i.default.ZEL6mz;
 }

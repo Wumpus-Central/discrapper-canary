@@ -1,51 +1,46 @@
-n.d(t, {
-    Y: () => u,
-    s: () => c,
-});
+"use strict";
+n.d(t, { Y: () => c, s: () => u });
 var r = n(961350),
     i = n(734057),
     a = n(383501),
     s = n(954571),
     o = n(806931),
     l = n(652215);
-
-function c(e, t) {
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { targetUserId: r, tileType: i, entrypoint: a } = n;
     return (n) =>
-        u({
+        c({
             menuItemProps: n,
             menuName: e,
             location: t,
-            entrypoint: null != a ? a : o.GK.CONTEXT_MENU,
+            entrypoint: a ?? o.GK.CONTEXT_MENU,
             targetUserId: r,
             tileType: i,
         });
 }
-
-function u(e) {
-    var t;
+function c(e) {
     let {
-            menuItemProps: { type: n },
-            menuName: o,
-            location: c,
+            menuItemProps: { type: t },
+            menuName: n,
+            location: o,
             entrypoint: u,
-            targetUserId: d,
-            tileType: f,
+            targetUserId: c,
+            tileType: d,
         } = e,
-        p = a.A.getChannelId(),
-        _ = a.A.getGuildId(),
-        h = null == (t = i.A.getChannel(p)) ? void 0 : t.type,
-        m = r.default.getId();
+        _ = a.A.getChannelId(),
+        f = a.A.getGuildId(),
+        p = i.A.getChannel(_)?.type,
+        h = r.default.getId();
     s.default.track(l.HAw.CALL_MENU_ITEM_INTERACTED, {
-        location: c,
-        menu_name: o,
-        menu_item_type: n,
+        location: o,
+        menu_name: n,
+        menu_item_type: t,
         entrypoint: u,
-        targets_self: null == d ? void 0 : d === m,
-        guild_id: _,
-        channel_id: p,
-        channel_type: h,
-        tile_type: f,
+        targets_self: null == c ? void 0 : c === h,
+        guild_id: f,
+        channel_id: _,
+        channel_type: p,
+        tile_type: d,
     });
 }

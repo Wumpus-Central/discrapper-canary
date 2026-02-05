@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ug: "pageControlContainer_c15210",
     DU: "pageControl_c15210",

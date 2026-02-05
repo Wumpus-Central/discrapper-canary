@@ -1,44 +1,18 @@
-n.d(t, {
-    A: () => f,
-});
-var r,
-    i,
-    l = n(627968),
-    a = n(64700),
-    s = n(503698),
-    o = n.n(s),
-    c = n(397927),
-    u = n(262633);
-let d = {
-        UP: "up",
-        RIGHT: "right",
-        DOWN: "down",
-        LEFT: "left",
-    },
-    p = {
-        [d.UP]: "",
-        [d.RIGHT]: u.pG,
-        [d.DOWN]: u.TR,
-        [d.LEFT]: u.kb,
-    };
-class m extends (i = a.PureComponent) {
+"use strict";
+n.d(t, { A: () => u });
+var s = n(627968),
+    i = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    a = n(397927),
+    o = n(262633);
+let d = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
+    h = { [d.UP]: "", [d.RIGHT]: o.pG, [d.DOWN]: o.TR, [d.LEFT]: o.kb };
+class c extends i.PureComponent {
+    static Directions = d;
     render() {
         let { direction: e, className: t } = this.props;
-        return (0, l.jsx)(c.z$m, {
-            size: "md",
-            color: "currentColor",
-            className: o()(t, {
-                [p[e]]: !0,
-            }),
-        });
+        return (0, s.jsx)(a.z$m, { size: "md", color: "currentColor", className: l()(t, { [h[e]]: !0 }) });
     }
 }
-(r = "Directions") in m
-    ? Object.defineProperty(m, r, {
-          value: d,
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (m[r] = d);
-let f = m;
+let u = c;

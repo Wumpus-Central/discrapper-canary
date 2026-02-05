@@ -1,165 +1,101 @@
-n.d(t, {
-    A: () => l,
-    h: () => A,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+"use strict";
+n.d(t, { A: () => a, h: () => A });
+var r = n(311907),
+    i = n(73153);
+let a = { enabled: !1 },
+    s = [],
+    o = {},
+    l = new Set(),
+    u = {};
+function c(e) {
+    let t = o[e]?.newMemberActions;
+    return null == t ? null : ((u[e] = t), u[e]);
 }
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let l = {
-        enabled: !1,
-    },
-    c = [],
-    u = {},
-    d = new Set(),
-    f = {};
-
-function p(e) {
-    var t;
-    let n = null == (t = u[e]) ? void 0 : t.newMemberActions;
-    return null == n ? null : ((f[e] = n), f[e]);
-}
-
-function _(e) {
+function d(e) {
     let { homeSettings: t, guildId: n } = e;
-    null != n && (null == t && (u[n] = l), (u[n] = t), p(n), d.delete(n));
+    null != n && (null == t && (o[n] = a), (o[n] = t), c(n), l.delete(n));
 }
-
-function h(e) {
+function _(e) {
     let { guildId: t } = e;
-    d.add(t);
+    l.add(t);
 }
-
-function m(e) {
+function f(e) {
     let { guildId: t } = e;
-    d.delete(t);
+    l.delete(t);
 }
-
-function g(e) {
+function p(e) {
     let { guildId: t, enabled: n } = e,
-        r = u[t];
+        r = o[t];
     if (null == r) return !1;
     r.enabled = n;
 }
-
-function E(e) {
+function h(e) {
     let { guild: t } = e;
-    if (null == u[t.id]) return !1;
-    delete u[t.id], delete f[t.id];
+    if (null == o[t.id]) return !1;
+    delete o[t.id], delete u[t.id];
 }
-
-function b(e) {
-    var t;
-    let { guildId: n, resourceChannel: r } = e,
-        i = u[n];
-    if (null == i) return !1;
-    i.resourceChannels = null != (t = i.resourceChannels) ? t : [];
-    let a = i.resourceChannels.findIndex((e) => e.channelId === r.channelId);
-    return -1 !== a && ((i.resourceChannels[a] = o({}, r)), !0);
+function m(e) {
+    let { guildId: t, resourceChannel: n } = e,
+        r = o[t];
+    if (null == r) return !1;
+    r.resourceChannels = r.resourceChannels ?? [];
+    let i = r.resourceChannels.findIndex((e) => e.channelId === n.channelId);
+    return -1 !== i && ((r.resourceChannels[i] = { ...n }), !0);
 }
-
-function y(e) {
-    var t;
-    let { guildId: n, action: r } = e,
-        i = u[n];
-    if (null == i) return !1;
-    i.newMemberActions = null != (t = i.newMemberActions) ? t : [];
-    let a = i.newMemberActions.findIndex((e) => e.channelId === r.channelId);
-    return -1 !== a && ((i.newMemberActions[a] = o({}, r)), !0);
+function g(e) {
+    let { guildId: t, action: n } = e,
+        r = o[t];
+    if (null == r) return !1;
+    r.newMemberActions = r.newMemberActions ?? [];
+    let i = r.newMemberActions.findIndex((e) => e.channelId === n.channelId);
+    return -1 !== i && ((r.newMemberActions[i] = { ...n }), !0);
 }
-class O extends (r = i.Ay.Store) {
+class E extends r.Ay.Store {
+    static displayName = "GuildOnboardingHomeSettingsStore";
     getSettings(e) {
-        var t;
-        return null == e ? null : null != (t = u[e]) ? t : l;
+        return null == e ? null : (o[e] ?? a);
     }
     getNewMemberActions(e) {
-        var t;
-        return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null
-            ? null
-            : null == f[e]
-              ? p(e)
-              : f[e];
+        return null == e || this.getSettings(e)?.newMemberActions == null ? null : null == u[e] ? c(e) : u[e];
     }
     getActionForChannel(e, t) {
-        var n;
-        let r = this.getSettings(e);
-        return null == r ? null : (null != (n = r.newMemberActions) ? n : []).find((e) => e.channelId === t);
+        let n = this.getSettings(e);
+        return null == n ? null : (n.newMemberActions ?? []).find((e) => e.channelId === t);
     }
     hasMemberAction(e, t) {
         return null != this.getActionForChannel(e, t);
     }
     getResourceChannels(e) {
-        var t, n;
-        return null != (t = null == (n = u[e]) ? void 0 : n.resourceChannels) ? t : c;
+        return o[e]?.resourceChannels ?? s;
     }
     getResourceForChannel(e, t) {
         if (null == e) return null;
         let n = this.getResourceChannels(e);
-        return n === c ? null : n.find((e) => e.channelId === t);
+        return n === s ? null : n.find((e) => e.channelId === t);
     }
     getIsLoading(e) {
-        return null != e && d.has(e);
+        return null != e && l.has(e);
     }
     getWelcomeMessage(e) {
-        var t;
-        if (null != e) return null == (t = u[e]) ? void 0 : t.welcomeMessage;
+        if (null != e) return o[e]?.welcomeMessage;
     }
     hasSettings(e) {
-        return null != e && null != u[e];
+        return null != e && null != o[e];
     }
     getEnabled(e) {
-        var t, n;
-        return null != e && null != (t = null == (n = u[e]) ? void 0 : n.enabled) && t;
+        return null != e && (o[e]?.enabled ?? !1);
     }
     getNewMemberAction(e, t) {
-        var n, r, i;
-        return null == e || null == t
-            ? null
-            : null !=
-                (n = null == (i = u[e]) || null == (r = i.newMemberActions) ? void 0 : r.find((e) => e.channelId === t))
-              ? n
-              : null;
+        return null == e || null == t ? null : (o[e]?.newMemberActions?.find((e) => e.channelId === t) ?? null);
     }
 }
-s(O, "displayName", "GuildOnboardingHomeSettingsStore");
-let A = new O(a.h, {
-    GUILD_HOME_SETTINGS_FETCH_START: h,
-    GUILD_HOME_SETTINGS_FETCH_SUCCESS: _,
-    GUILD_HOME_SETTINGS_FETCH_FAIL: m,
-    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: _,
-    GUILD_HOME_SETTINGS_TOGGLE_ENABLED: g,
-    GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: b,
-    GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: y,
-    GUILD_DELETE: E,
+let A = new E(i.h, {
+    GUILD_HOME_SETTINGS_FETCH_START: _,
+    GUILD_HOME_SETTINGS_FETCH_SUCCESS: d,
+    GUILD_HOME_SETTINGS_FETCH_FAIL: f,
+    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: d,
+    GUILD_HOME_SETTINGS_TOGGLE_ENABLED: p,
+    GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: m,
+    GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: g,
+    GUILD_DELETE: h,
 });

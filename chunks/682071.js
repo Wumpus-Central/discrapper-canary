@@ -1,3 +1,4 @@
+"use strict";
 var n = e(958498),
     o = e(299632),
     s = e(158610),
@@ -14,12 +15,7 @@ t.exports = c(
     Array,
     "Array",
     function (t, r) {
-        v(this, {
-            type: l,
-            target: n(t),
-            index: 0,
-            kind: r,
-        });
+        v(this, { type: l, target: n(t), index: 0, kind: r });
     },
     function () {
         var t = y(this),
@@ -39,7 +35,5 @@ t.exports = c(
 var h = (s.Arguments = s.Array);
 if ((o("keys"), o("values"), o("entries"), !f && p && "values" !== h.name))
     try {
-        u(h, "name", {
-            value: "values",
-        });
+        u(h, "name", { value: "values" });
     } catch (t) {}

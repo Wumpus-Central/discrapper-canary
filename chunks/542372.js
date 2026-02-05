@@ -1,157 +1,104 @@
-n.d(t, {
-    A: () => O,
-});
-var r = n(627968),
+n.d(t, { A: () => E });
+var i = n(627968),
     l = n(64700),
-    i = n(311907),
+    s = n(311907),
     a = n(73153),
-    s = n(367513),
+    r = n(367513),
     o = n(58149),
-    c = n(688810),
-    u = n(313961),
-    d = n(384059),
-    f = n(574172),
-    p = n(423562),
-    h = n(309010),
-    b = n(954571),
-    g = n(203982),
-    m = n(723702),
-    A = n(475815),
-    y = n(652215);
-
-function O(e) {
-    let { channel: t, appContext: n, popoutOpen: O, popoutWindow: j, currentWindow: v } = e,
-        { parentAnalyticsLocation: x } = (0, c.Ay)(),
-        E = n === y.BRT.POPOUT,
-        _ = l.useRef(null),
-        { currentLayout: C, mode: S } = (0, i.cf)([u.A], () => {
-            let e = u.A.getMode(t.id),
-                r = n === y.BRT.POPOUT;
-            r && (e = y._Of.VIDEO);
-            let l = e === y._Of.VIDEO ? u.A.getLayout(t.id, n) : y.DUB.MINIMUM;
-            return (
-                r && l !== y.DUB.FULL_SCREEN && (l = y.DUB.NO_CHAT),
-                {
-                    currentLayout: l,
-                    mode: e,
-                }
-            );
+    d = n(688810),
+    c = n(313961),
+    u = n(384059),
+    h = n(574172),
+    A = n(423562),
+    g = n(309010),
+    m = n(954571),
+    p = n(203982),
+    _ = n(723702),
+    x = n(475815),
+    f = n(652215);
+function E(e) {
+    let { channel: t, appContext: n, popoutOpen: E, popoutWindow: C, currentWindow: I } = e,
+        { parentAnalyticsLocation: S } = (0, d.Ay)(),
+        b = n === f.BRT.POPOUT,
+        N = l.useRef(null),
+        { currentLayout: T, mode: j } = (0, s.cf)([c.A], () => {
+            let e = c.A.getMode(t.id),
+                i = n === f.BRT.POPOUT;
+            i && (e = f._Of.VIDEO);
+            let l = e === f._Of.VIDEO ? c.A.getLayout(t.id, n) : f.DUB.MINIMUM;
+            return i && l !== f.DUB.FULL_SCREEN && (l = f.DUB.NO_CHAT), { currentLayout: l, mode: e };
         }, [t, n]),
-        I = (0, i.bG)([h.A], () => h.A.getVoiceChannelId() === t.id, [t.id]);
+        v = (0, s.bG)([g.A], () => g.A.getVoiceChannelId() === t.id, [t.id]);
     l.useEffect(() => {
-        _.current = S;
+        N.current = j;
     });
-    let N = l.useRef(C),
-        { currentDocument: T, rootNode: P } = l.useMemo(() => {
-            let e = null != j && E ? j.document : document,
-                t = v.document.getElementById("app-mount");
-            return {
-                currentWindow: v,
-                currentDocument: e,
-                rootNode: t,
-            };
-        }, [j, E, v]),
-        w = O && !E,
-        R = S === y._Of.VIDEO && I && !w,
-        D = l.useCallback(
-            (e, r) => {
-                r !== e &&
-                    (s.A.updateLayout(t.id, r, n),
-                    r === y.DUB.FULL_SCREEN && t.isPrivate() && g._.dispatch(y.jej.TEXTAREA_BLUR));
+    let y = l.useRef(T),
+        { currentDocument: R, rootNode: O } = l.useMemo(() => {
+            let e = null != C && b ? C.document : document,
+                t = I.document.getElementById("app-mount");
+            return { currentWindow: I, currentDocument: e, rootNode: t };
+        }, [C, b, I]),
+        L = E && !b,
+        D = j === f._Of.VIDEO && v && !L,
+        M = l.useCallback(
+            (e, i) => {
+                i !== e &&
+                    (r.A.updateLayout(t.id, i, n),
+                    i === f.DUB.FULL_SCREEN && t.isPrivate() && p._.dispatch(f.jej.TEXTAREA_BLUR));
             },
             [n, t],
         ),
-        M = l.useCallback(
+        G = l.useCallback(
             (e) => {
-                null == P ||
-                    (e === y.DUB.FULL_SCREEN &&
-                        (D(e, N.current),
-                        (0, A.sP)((e) => {
-                            N.current = e;
-                        }, T)));
+                null == O ||
+                    (e === f.DUB.FULL_SCREEN &&
+                        (M(e, y.current),
+                        (0, x.sP)((e) => {
+                            y.current = e;
+                        }, R)));
             },
-            [T, D, P],
+            [R, M, O],
         ),
-        L = l.useCallback(
+        U = l.useCallback(
             (e) => () => {
-                null != P &&
-                    ((0, d.X)(x, d.O.FULL_SCREEN, e !== y.DUB.FULL_SCREEN),
-                    e !== y.DUB.FULL_SCREEN ? ((N.current = e), D(e, y.DUB.FULL_SCREEN), (0, A.tl)(P)) : M(e));
+                null != O &&
+                    ((0, u.X)(S, u.O.FULL_SCREEN, e !== f.DUB.FULL_SCREEN),
+                    e !== f.DUB.FULL_SCREEN ? ((y.current = e), M(e, f.DUB.FULL_SCREEN), (0, x.tl)(O)) : G(e));
             },
-            [D, M, P, x],
+            [M, G, O, S],
         );
     l.useEffect(() => {
         let e = () => {
-            null != P && ((0, A._U)(P, T) || C !== y.DUB.FULL_SCREEN || L(C)());
+            null != O && ((0, x._U)(O, R) || T !== f.DUB.FULL_SCREEN || U(T)());
         };
         return (
-            T.addEventListener(A.Wb, e),
+            R.addEventListener(x.Wb, e),
             () => {
-                T.removeEventListener(A.Wb, e);
+                R.removeEventListener(x.Wb, e);
             }
         );
-    }, [T, C, L, P]);
-    let G = {
-            channel: t,
-            maybeLeaveFullScreen: M,
-        },
-        k = l.useRef(G);
+    }, [R, T, U, O]);
+    let P = { channel: t, maybeLeaveFullScreen: G },
+        k = l.useRef(P);
     return (l.useEffect(() => {
-        k.current = G;
+        k.current = P;
     }),
     l.useEffect(() => {
         let { channel: e, maybeLeaveFullScreen: t } = k.current;
         return (
-            b.default.track(
-                y.HAw.VIDEO_LAYOUT_TOGGLED,
-                (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        video_layout: E ? "popout" : C,
-                    },
-                    (0, o.QS)(e.id),
-                ),
-            ),
+            m.default.track(f.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: b ? "popout" : T, ...(0, o.QS)(e.id) }),
             () => {
-                (E && (0, m.isMac)()) || t(C);
+                (b && (0, _.isMac)()) || t(T);
             }
         );
-    }, [C, E]),
+    }, [T, b]),
     l.useEffect(() => {
-        null != P && _.current === y._Of.VIDEO && S === y._Of.VOICE && (0, A.sP)(P, T);
-    }, [T, S, _, P]),
+        null != O && N.current === f._Of.VIDEO && j === f._Of.VOICE && (0, x.sP)(O, R);
+    }, [R, j, N, O]),
     l.useEffect(() => {
-        !I && E && a.h.wait(() => f.close(y.MLl.CHANNEL_CALL_POPOUT));
-    }, [I, E]),
-    R)
-        ? (0, r.jsx)(p.A, {
-              themeable: !1,
-              node: P,
-              guestWindow: j,
-              onClick: L(C),
-          })
+        !v && b && a.h.wait(() => h.close(f.MLl.CHANNEL_CALL_POPOUT));
+    }, [v, b]),
+    D)
+        ? (0, i.jsx)(A.A, { themeable: !1, node: O, guestWindow: C, onClick: U(T) })
         : null;
 }

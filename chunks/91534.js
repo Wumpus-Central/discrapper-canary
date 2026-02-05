@@ -1,177 +1,129 @@
-n.d(t, {
-    A: () => N,
-});
-var r = n(627968),
-    i = n(311907),
+"use strict";
+n.d(t, { A: () => C });
+var i = n(627968),
+    s = n(311907),
     l = n(397927),
-    s = n(793574),
+    r = n(793574),
     a = n(688810),
-    c = n(509536),
-    o = n(945086),
-    d = n(212637),
+    o = n(509536),
+    d = n(945086),
+    c = n(212637),
     u = n(864310),
-    f = n(679382),
+    m = n(679382),
     g = n(577092),
-    b = n(255438),
-    m = n(473145),
-    p = n(975571),
-    x = n(555337),
-    h = n(652215);
+    x = n(255438),
+    h = n(473145),
+    _ = n(975571),
+    A = n(555337),
+    p = n(652215);
 n(823894);
-var j = n(985018),
-    O = n(729168);
-let y = {
-        page: h.liQ.GUILD_SETTINGS,
-        section: h.JJy.GUILD_SETTINGS_STICKERS,
-        object: h.ZSU.BOOSTING_BANNER,
-    },
-    v = (e) => {
+var f = n(985018),
+    j = n(729168);
+let N = { page: p.liQ.GUILD_SETTINGS, section: p.JJy.GUILD_SETTINGS_STICKERS, object: p.ZSU.BOOSTING_BANNER },
+    E = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, a.Ay)(),
-            i = (0, u.A)(t.id).available,
-            s = h.M2T[h.TVA.TIER_1] - i;
-        return (0, r.jsxs)("div", {
-            className: O.Zj,
+            s = (0, u.A)(t.id).available,
+            r = p.M2T[p.TVA.TIER_1] - s;
+        return (0, i.jsxs)("div", {
+            className: j.Zj,
             children: [
-                (0, r.jsx)(l.Heading, {
-                    className: O.$P,
+                (0, i.jsx)(l.Heading, {
+                    className: j.$P,
                     variant: "heading-xl/semibold",
-                    children: j.intl.string(j.t.hzCkyg),
+                    children: f.intl.string(f.t.hzCkyg),
                 }),
-                (0, r.jsx)(l.Text, {
-                    className: O.GR,
-                    variant: "text-md/normal",
-                    children: j.intl.string(j.t.jcesAE),
-                }),
-                (0, r.jsxs)(l.ButtonGroup, {
-                    className: O.JO,
+                (0, i.jsx)(l.Text, { className: j.GR, variant: "text-md/normal", children: f.intl.string(f.t.jcesAE) }),
+                (0, i.jsxs)(l.ButtonGroup, {
+                    className: j.JO,
                     children: [
-                        (0, r.jsx)(l.Button, {
+                        (0, i.jsx)(l.Button, {
                             variant: "overlay-primary",
-                            text: j.intl.string(j.t.Q5dbTi),
+                            text: f.intl.string(f.t.Q5dbTi),
                             onClick: () =>
-                                (0, d.A)({
+                                (0, c.A)({
                                     analyticsLocations: n,
-                                    analyticsLocation: y,
+                                    analyticsLocation: N,
                                     guildId: t.id,
-                                    totalNumberOfSlotsToAssign: s,
+                                    totalNumberOfSlotsToAssign: r,
                                 }),
                         }),
-                        (0, r.jsx)(l.Button, {
+                        (0, i.jsx)(l.Button, {
                             variant: "overlay-primary",
-                            text: j.intl.string(j.t.hvVgAZ),
+                            text: f.intl.string(f.t.hvVgAZ),
                             onClick: () =>
-                                (0, c.K)({
-                                    guildId: t.id,
-                                    location: {
-                                        section: h.JJy.GUILD_SETTINGS_STICKERS,
-                                    },
-                                }),
+                                (0, o.K)({ guildId: t.id, location: { section: p.JJy.GUILD_SETTINGS_STICKERS } }),
                         }),
                     ],
                 }),
             ],
         });
     },
-    A = () =>
-        (0, r.jsxs)(l.BJc, {
+    b = () =>
+        (0, i.jsxs)(l.BJc, {
             gap: 8,
             children: [
-                (0, r.jsx)(l.Text, {
-                    variant: "text-md/medium",
-                    children: j.intl.string(j.t["9N2OWD"]),
-                }),
-                (0, r.jsx)(l.Text, {
+                (0, i.jsx)(l.Text, { variant: "text-md/medium", children: f.intl.string(f.t["9N2OWD"]) }),
+                (0, i.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: j.intl.format(j.t.hxLviw, {
-                        fileSize: (0, b.up)(524288, {
-                            useKibibytes: !0,
-                        }),
-                    }),
+                    children: f.intl.format(f.t.hxLviw, { fileSize: (0, x.up)(524288, { useKibibytes: !0 }) }),
                 }),
-                (0, r.jsx)(l.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: j.intl.format(j.t.UBj0aX, {
-                        articleUrl: p.A.getArticleURL(h.MVz.STICKERS_UPLOAD),
-                    }),
+                    children: f.intl.format(f.t.UBj0aX, { articleUrl: _.A.getArticleURL(p.MVz.STICKERS_UPLOAD) }),
                 }),
             ],
         }),
-    E = (e) => {
+    T = (e) => {
         let t,
             n,
-            i,
-            { guild: l, guildStickers: s } = e,
+            s,
+            { guild: l, guildStickers: r } = e,
             a = l.premiumTier,
-            c = (0, m.yA)(s, a),
-            d = (0, m.ax)(a),
-            u = (0, m.aG)(a),
-            f = s.length;
-        return null == d || a === h.TVA.TIER_3 || c > 0
+            o = (0, h.yA)(r, a),
+            c = (0, h.ax)(a),
+            u = (0, h.aG)(a),
+            m = r.length;
+        return null == c || a === p.TVA.TIER_3 || o > 0
             ? null
-            : (f > u
-                  ? ((t = j.intl.formatToPlainString(j.t.ZtAY1f, {
-                        level: d,
-                    })),
-                    (n = j.intl.formatToPlainString(j.t["13hOWm"], {
-                        level: d,
-                    })),
-                    (i = h.ZSU.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = j.intl.string(j.t.zT9SxY)),
-                    (n = j.intl.formatToPlainString(j.t.YaW9wI, {
-                        level: d,
-                        numAdditional: (0, m.Cp)(d),
-                    })),
-                    (i = h.ZSU.BOOST_UPSELL_BANNER_SLOTS_FULL)),
-              (0, r.jsx)(o.A, {
+            : (m > u
+                  ? ((t = f.intl.formatToPlainString(f.t.ZtAY1f, { level: c })),
+                    (n = f.intl.formatToPlainString(f.t["13hOWm"], { level: c })),
+                    (s = p.ZSU.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = f.intl.string(f.t.zT9SxY)),
+                    (n = f.intl.formatToPlainString(f.t.YaW9wI, { level: c, numAdditional: (0, h.Cp)(c) })),
+                    (s = p.ZSU.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+              (0, i.jsx)(d.A, {
                   header: t,
                   text: n,
                   guild: l,
                   analyticsLocation: {
-                      page: h.liQ.GUILD_SETTINGS,
-                      section: h.JJy.GUILD_SETTINGS_STICKERS,
-                      object: i,
-                      objectType: (0, m.k1)(d),
+                      page: p.liQ.GUILD_SETTINGS,
+                      section: p.JJy.GUILD_SETTINGS_STICKERS,
+                      object: s,
+                      objectType: (0, h.k1)(c),
                   },
               }));
     },
-    N = () => {
-        let e = (0, i.bG)([x.A], () => x.A.getGuild()),
-            t = (0, i.bG)([f.A], () => {
-                var t;
-                return null != e && null != (t = f.A.getStickersByGuildId(e.id)) ? t : [];
-            }, [e]),
-            { analyticsLocations: n } = (0, a.Ay)(s.A.STICKERS);
+    C = () => {
+        let e = (0, s.bG)([A.A], () => A.A.getGuild()),
+            t = (0, s.bG)([m.A], () => (null != e ? (m.A.getStickersByGuildId(e.id) ?? []) : []), [e]),
+            { analyticsLocations: n } = (0, a.Ay)(r.A.STICKERS);
         if (null == e) return null;
-        let c = e.premiumTier !== h.TVA.NONE || t.length > 0;
-        return (0, r.jsx)(a.f5, {
+        let o = e.premiumTier !== p.TVA.NONE || t.length > 0;
+        return (0, i.jsx)(a.f5, {
             value: n,
-            children: (0, r.jsxs)(l.BJc, {
+            children: (0, i.jsxs)(l.BJc, {
                 gap: 16,
                 children: [
-                    (0, r.jsx)(l.Heading, {
-                        variant: "heading-lg/semibold",
-                        children: j.intl.string(j.t.R5nQkS),
-                    }),
-                    c
-                        ? (0, r.jsxs)("div", {
-                              children: [
-                                  (0, r.jsx)(E, {
-                                      guild: e,
-                                      guildStickers: t,
-                                  }),
-                                  (0, r.jsx)(A, {}),
-                              ],
+                    (0, i.jsx)(l.Heading, { variant: "heading-lg/semibold", children: f.intl.string(f.t.R5nQkS) }),
+                    o
+                        ? (0, i.jsxs)("div", {
+                              children: [(0, i.jsx)(T, { guild: e, guildStickers: t }), (0, i.jsx)(b, {})],
                           })
-                        : (0, r.jsx)(v, {
-                              guild: e,
-                          }),
-                    (0, r.jsx)(l.cGx, {
-                        className: O.yF,
-                    }),
-                    (0, r.jsx)(g.A, {
-                        guild: e,
-                    }),
+                        : (0, i.jsx)(E, { guild: e }),
+                    (0, i.jsx)(l.cGx, { className: j.yF }),
+                    (0, i.jsx)(g.A, { guild: e }),
                 ],
             }),
         });

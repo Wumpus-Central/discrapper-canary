@@ -63,9 +63,6 @@
             else if (7 === t || 8 === t) return e + "-ми";
             else return e + "-ти";
         },
-        week: {
-            dow: 1,
-            doy: 7,
-        },
+        week: { dow: 1, doy: 7 },
     });
 });

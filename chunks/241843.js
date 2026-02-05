@@ -1,3 +1,4 @@
+"use strict";
 function r(e, t) {
     return {
         id: e.id,
@@ -12,7 +13,4 @@ function r(e, t) {
         type: e.type,
     };
 }
-n.d(t, {
-    Ur: () => r,
-}),
-    n(896048);
+n.d(t, { Ur: () => r });

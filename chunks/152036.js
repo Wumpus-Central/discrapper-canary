@@ -1,21 +1,24 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-n.d(t, {
-    E: () => i,
-}),
-    n(896048);
-class i {
+"use strict";
+n.d(t, { E: () => r });
+class r {
+    listeners = new Set();
+    add = (e) => {
+        this.listeners.add(e);
+    };
+    remove = (e) => {
+        this.listeners.delete(e);
+    };
+    addConditional = (() => {
+        var e = this;
+        return function (t) {
+            let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+            if (n && !1 === t()) return;
+            let r = () => {
+                !1 === t() && e.remove(r);
+            };
+            e.add(r);
+        };
+    })();
     has(e) {
         return this.listeners.has(e);
     }
@@ -24,23 +27,5 @@ class i {
     }
     invokeAll() {
         this.listeners.forEach((e) => e());
-    }
-    constructor() {
-        var e = this;
-        r(this, "listeners", new Set()),
-            r(this, "add", (e) => {
-                this.listeners.add(e);
-            }),
-            r(this, "remove", (e) => {
-                this.listeners.delete(e);
-            }),
-            r(this, "addConditional", function (t) {
-                let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                if (n && !1 === t()) return;
-                let r = () => {
-                    !1 === t() && e.remove(r);
-                };
-                e.add(r);
-            });
     }
 }

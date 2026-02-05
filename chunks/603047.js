@@ -1,31 +1,20 @@
-n.d(t, {
-    A: () => c,
-});
-var r,
-    l,
-    i = n(311907),
+n.d(t, { A: () => o });
+var l = n(311907),
     s = n(73153),
     a = n(868068);
-let o = "None";
-class u extends (l = i.Ay.Store) {
+let i = "None";
+class r extends l.Ay.Store {
+    static displayName = "ContentInventoryDevToolsStore";
     getFakeGameToShow() {
-        return o;
+        return i;
     }
     getFakeGameData() {
-        return a.O[o];
+        return a.O[i];
     }
 }
-(r = "displayName") in u
-    ? Object.defineProperty(u, r, {
-          value: "ContentInventoryDevToolsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (u[r] = "ContentInventoryDevToolsStore");
-let c = new u(s.h, {
+let o = new r(s.h, {
     CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING: function (e) {
         let { gameToShow: t } = e;
-        o = t;
+        i = t;
     },
 });

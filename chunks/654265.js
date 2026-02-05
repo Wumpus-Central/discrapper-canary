@@ -1,53 +1,34 @@
-n.d(t, {
-    A: () => f,
-}),
-    n(896048),
-    n(492834);
-var r = n(64700),
-    i = n(311907),
+n.d(t, { A: () => m });
+var i = n(64700),
+    l = n(311907),
     a = n(71393),
-    s = n(576705),
-    o = n(661191),
-    l = n(624458),
-    c = n(844944),
-    u = n(212455),
-    d = n(652215);
-
-function f(e) {
-    let [t, n] = r.useState(!1),
-        [f, p] = r.useState(!1),
-        _ = o.default.cast(e),
-        { joinRequest: h, guild: m } = (0, i.cf)([c.A, u.A, a.A, s.A], () => {
-            var e;
-            let t = c.A.getRequest(_);
-            if (null == t)
-                return {
-                    joinRequest: null,
-                    isModmin: !1,
-                    guild: null,
-                };
-            let n = null != (e = a.A.getGuild(t.guildId)) ? e : u.A.getJoinRequestGuild(t.guildId);
-            return {
-                joinRequest: t,
-                isModmin: null != n && s.A.can(d.xBc.KICK_MEMBERS, n),
-                guild: n,
-            };
+    r = n(576705),
+    s = n(661191),
+    o = n(624458),
+    d = n(844944),
+    c = n(212455),
+    u = n(652215);
+function m(e) {
+    let [t, n] = i.useState(!1),
+        [m, _] = i.useState(!1),
+        h = s.default.cast(e),
+        { joinRequest: p, guild: g } = (0, l.cf)([d.A, c.A, a.A, r.A], () => {
+            let e = d.A.getRequest(h);
+            if (null == e) return { joinRequest: null, isModmin: !1, guild: null };
+            let t = a.A.getGuild(e.guildId) ?? c.A.getJoinRequestGuild(e.guildId);
+            return { joinRequest: e, isModmin: null != t && r.A.can(u.xBc.KICK_MEMBERS, t), guild: t };
         });
     return (
-        r.useEffect(() => {
-            null != m || f || (p(!0), l.A.fetchRequestToJoinGuilds());
-        }, [m, f]),
-        r.useEffect(() => {
-            null == h &&
+        i.useEffect(() => {
+            null != g || m || (_(!0), o.A.fetchRequestToJoinGuilds());
+        }, [g, m]),
+        i.useEffect(() => {
+            null == p &&
                 (n(!0),
-                l.A.fetchGuildJoinRequest(_).finally(() => {
+                o.A.fetchGuildJoinRequest(h).finally(() => {
                     n(!1);
                 }));
-        }, [h, _]),
-        {
-            loading: t,
-            joinRequest: h,
-            joinRequestGuild: m,
-        }
+        }, [p, h]),
+        { loading: t, joinRequest: p, joinRequestGuild: g }
     );
 }

@@ -1,15 +1,13 @@
 var r = n(658261),
     i = n(436167);
-
 function a(e, t) {
     var n;
-
     function s(n, i, a, o) {
         try {
             var l = e[n](i),
-                c = l.value;
-            return c instanceof r
-                ? t.resolve(c.v).then(
+                u = l.value;
+            return u instanceof r
+                ? t.resolve(u.v).then(
                       function (e) {
                           s("next", e, a, o);
                       },
@@ -17,7 +15,7 @@ function a(e, t) {
                           s("throw", e, a, o);
                       },
                   )
-                : t.resolve(c).then(
+                : t.resolve(u).then(
                       function (e) {
                           (l.value = e), a(l);
                       },

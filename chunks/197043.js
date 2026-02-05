@@ -1,83 +1,60 @@
-n.d(t, {
-    A: () => A,
-}),
-    n(896048);
+n.d(t, { A: () => f });
 var i = n(627968),
-    r = n(64700),
-    l = n(311907),
-    a = n(843472),
-    o = n(698718),
-    s = n(355622),
-    u = n(734057),
-    c = n(71393),
-    d = n(320501),
+    l = n(64700),
+    a = n(311907),
+    s = n(843472),
+    r = n(698718),
+    o = n(355622),
+    d = n(734057),
+    u = n(71393),
+    c = n(320501),
     h = n(576705),
-    p = n(203982),
-    f = n(545807),
+    A = n(203982),
+    m = n(545807),
     g = n(652215),
-    m = n(128727);
-
-function A(e) {
-    var t, n;
-    let A,
-        y,
-        O,
-        v,
-        b,
+    p = n(128727);
+function f(e) {
+    let t,
+        n,
+        f,
+        _,
         E,
-        { selectedChannelId: _ } = e,
-        S = (0, l.bG)([u.A], () => u.A.getChannel(_), [_]),
-        x = (0, f.A)(),
-        I = (0, l.bG)(
-            [c.A],
+        x,
+        { selectedChannelId: S } = e,
+        I = (0, a.bG)([d.A], () => d.A.getChannel(S), [S]),
+        T = (0, m.A)(),
+        C = (0, a.bG)(
+            [u.A],
             () =>
                 (function (e, t) {
-                    var n;
                     if (null == e) return null;
-                    let i = e.getGuildId();
-                    return null == i ? null : null != (n = t.getGuild(i)) ? n : null;
-                })(S, c.A),
-            [S],
+                    let n = e.getGuildId();
+                    return null == n ? null : (t.getGuild(n) ?? null);
+                })(I, u.A),
+            [I],
         );
-    return ((A = null != (t = null == S ? void 0 : S.id) ? t : null),
-    (y = r.useRef(new Set())),
-    (O = (0, l.bG)([d.A], () => (null != A ? d.A.getMessages(A) : null), [A])),
-    (v = (0, l.bG)([h.A], () => h.A.can(g.xBc.READ_MESSAGE_HISTORY, S), [S])),
-    (b = null != (n = null == O ? void 0 : O.first()) ? n : null),
-    (E = null != S && null == b && null != O && !O.loadingMore && !O.ready && !O.hasFetched && v),
-    r.useEffect(() => {
-        null == A ||
-            (!y.current.has(A) &&
-                E &&
-                (y.current.add(A),
-                a.A.fetchMessages({
-                    channelId: A,
-                    limit: 50,
-                })));
-    }, [A, E]),
-    r.useEffect(() => {
-        if (null == _) return;
-        let e = x.requestAnimationFrame(() => {
-            p._.dispatchToLastSubscribed(g.jej.TEXTAREA_FOCUS, {
-                channelId: _,
-            });
+    return ((t = I?.id ?? null),
+    (n = l.useRef(new Set())),
+    (f = (0, a.bG)([c.A], () => (null != t ? c.A.getMessages(t) : null), [t])),
+    (_ = (0, a.bG)([h.A], () => h.A.can(g.xBc.READ_MESSAGE_HISTORY, I), [I])),
+    (E = f?.first() ?? null),
+    (x = null != I && null == E && null != f && !f.loadingMore && !f.ready && !f.hasFetched && _),
+    l.useEffect(() => {
+        null == t || (!n.current.has(t) && x && (n.current.add(t), s.A.fetchMessages({ channelId: t, limit: 50 })));
+    }, [t, x]),
+    l.useEffect(() => {
+        if (null == S) return;
+        let e = T.requestAnimationFrame(() => {
+            A._.dispatchToLastSubscribed(g.jej.TEXTAREA_FOCUS, { channelId: S });
         });
-        return () => x.cancelAnimationFrame(e);
-    }, [_, x]),
-    null != S)
+        return () => T.cancelAnimationFrame(e);
+    }, [S, T]),
+    null != I)
         ? (0, i.jsx)("div", {
-              className: m.Q,
+              className: p.Q,
               children: (0, i.jsx)("div", {
-                  className: m.T,
-                  children: (0, i.jsx)(
-                      o.A,
-                      {
-                          channel: S,
-                          guild: I,
-                          chatInputType: s.oU.OVERLAY,
-                      },
-                      S.id,
-                  ),
+                  className: p.T,
+                  children: (0, i.jsx)(r.A, { channel: I, guild: C, chatInputType: o.oU.OVERLAY }, I.id),
               }),
           })
         : null;

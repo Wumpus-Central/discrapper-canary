@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__2fba1",
     qr: "footer__2fba1",

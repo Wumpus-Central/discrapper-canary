@@ -1,10 +1,5 @@
 var t = (e.exports = {
-    v: [
-        {
-            name: "version",
-            reg: /^(\d*)$/,
-        },
-    ],
+    v: [{ name: "version", reg: /^(\d*)$/ }],
     o: [
         {
             name: "origin",
@@ -13,65 +8,16 @@ var t = (e.exports = {
             format: "%s %s %d %s IP%d %s",
         },
     ],
-    s: [
-        {
-            name: "name",
-        },
-    ],
-    i: [
-        {
-            name: "description",
-        },
-    ],
-    u: [
-        {
-            name: "uri",
-        },
-    ],
-    e: [
-        {
-            name: "email",
-        },
-    ],
-    p: [
-        {
-            name: "phone",
-        },
-    ],
-    z: [
-        {
-            name: "timezones",
-        },
-    ],
-    r: [
-        {
-            name: "repeats",
-        },
-    ],
-    t: [
-        {
-            name: "timing",
-            reg: /^(\d*) (\d*)/,
-            names: ["start", "stop"],
-            format: "%d %d",
-        },
-    ],
-    c: [
-        {
-            name: "connection",
-            reg: /^IN IP(\d) (\S*)/,
-            names: ["version", "ip"],
-            format: "IN IP%d %s",
-        },
-    ],
-    b: [
-        {
-            push: "bandwidth",
-            reg: /^(TIAS|AS|CT|RR|RS):(\d*)/,
-            names: ["type", "limit"],
-            format: "%s:%s",
-        },
-    ],
+    s: [{ name: "name" }],
+    i: [{ name: "description" }],
+    u: [{ name: "uri" }],
+    e: [{ name: "email" }],
+    p: [{ name: "phone" }],
+    z: [{ name: "timezones" }],
+    r: [{ name: "repeats" }],
+    t: [{ name: "timing", reg: /^(\d*) (\d*)/, names: ["start", "stop"], format: "%d %d" }],
+    c: [{ name: "connection", reg: /^IN IP(\d) (\S*)/, names: ["version", "ip"], format: "IN IP%d %s" }],
+    b: [{ push: "bandwidth", reg: /^(TIAS|AS|CT|RR|RS):(\d*)/, names: ["type", "limit"], format: "%s:%s" }],
     m: [
         {
             reg: /^(\w*) (\d*) ([\w/]*)(?: (.*))?/,
@@ -88,17 +34,8 @@ var t = (e.exports = {
                 return e.encoding ? "rtpmap:%d %s/%s/%s" : e.rate ? "rtpmap:%d %s/%s" : "rtpmap:%d %s";
             },
         },
-        {
-            push: "fmtp",
-            reg: /^fmtp:(\d*) ([\S| ]*)/,
-            names: ["payload", "config"],
-            format: "fmtp:%d %s",
-        },
-        {
-            name: "control",
-            reg: /^control:(.*)/,
-            format: "control:%s",
-        },
+        { push: "fmtp", reg: /^fmtp:(\d*) ([\S| ]*)/, names: ["payload", "config"], format: "fmtp:%d %s" },
+        { name: "control", reg: /^control:(.*)/, format: "control:%s" },
         {
             name: "rtcp",
             reg: /^rtcp:(\d*)(?: (\S*) IP(\d) (\S*))?/,
@@ -135,10 +72,7 @@ var t = (e.exports = {
                 );
             },
         },
-        {
-            name: "extmapAllowMixed",
-            reg: /^(extmap-allow-mixed)/,
-        },
+        { name: "extmapAllowMixed", reg: /^(extmap-allow-mixed)/ },
         {
             push: "crypto",
             reg: /^crypto:(\d*) ([\w_]*) (\S*)(?: (\S*))?/,
@@ -147,60 +81,17 @@ var t = (e.exports = {
                 return null != e.sessionConfig ? "crypto:%d %s %s %s" : "crypto:%d %s %s";
             },
         },
-        {
-            name: "setup",
-            reg: /^setup:(\w*)/,
-            format: "setup:%s",
-        },
-        {
-            name: "connectionType",
-            reg: /^connection:(new|existing)/,
-            format: "connection:%s",
-        },
-        {
-            name: "mid",
-            reg: /^mid:([^\s]*)/,
-            format: "mid:%s",
-        },
-        {
-            name: "msid",
-            reg: /^msid:(.*)/,
-            format: "msid:%s",
-        },
-        {
-            name: "ptime",
-            reg: /^ptime:(\d*(?:\.\d*)*)/,
-            format: "ptime:%d",
-        },
-        {
-            name: "maxptime",
-            reg: /^maxptime:(\d*(?:\.\d*)*)/,
-            format: "maxptime:%d",
-        },
-        {
-            name: "direction",
-            reg: /^(sendrecv|recvonly|sendonly|inactive)/,
-        },
-        {
-            name: "icelite",
-            reg: /^(ice-lite)/,
-        },
-        {
-            name: "iceUfrag",
-            reg: /^ice-ufrag:(\S*)/,
-            format: "ice-ufrag:%s",
-        },
-        {
-            name: "icePwd",
-            reg: /^ice-pwd:(\S*)/,
-            format: "ice-pwd:%s",
-        },
-        {
-            name: "fingerprint",
-            reg: /^fingerprint:(\S*) (\S*)/,
-            names: ["type", "hash"],
-            format: "fingerprint:%s %s",
-        },
+        { name: "setup", reg: /^setup:(\w*)/, format: "setup:%s" },
+        { name: "connectionType", reg: /^connection:(new|existing)/, format: "connection:%s" },
+        { name: "mid", reg: /^mid:([^\s]*)/, format: "mid:%s" },
+        { name: "msid", reg: /^msid:(.*)/, format: "msid:%s" },
+        { name: "ptime", reg: /^ptime:(\d*(?:\.\d*)*)/, format: "ptime:%d" },
+        { name: "maxptime", reg: /^maxptime:(\d*(?:\.\d*)*)/, format: "maxptime:%d" },
+        { name: "direction", reg: /^(sendrecv|recvonly|sendonly|inactive)/ },
+        { name: "icelite", reg: /^(ice-lite)/ },
+        { name: "iceUfrag", reg: /^ice-ufrag:(\S*)/, format: "ice-ufrag:%s" },
+        { name: "icePwd", reg: /^ice-pwd:(\S*)/, format: "ice-pwd:%s" },
+        { name: "fingerprint", reg: /^fingerprint:(\S*) (\S*)/, names: ["type", "hash"], format: "fingerprint:%s %s" },
         {
             push: "candidates",
             reg: /^candidate:(\S*) (\d*) (\S*) (\d*) (\S*) (\d*) typ (\S*)(?: raddr (\S*) rport (\d*))?(?: tcptype (\S*))?(?: generation (\d*))?(?: network-id (\d*))?(?: network-cost (\d*))?/,
@@ -231,20 +122,9 @@ var t = (e.exports = {
                 );
             },
         },
-        {
-            name: "endOfCandidates",
-            reg: /^(end-of-candidates)/,
-        },
-        {
-            name: "remoteCandidates",
-            reg: /^remote-candidates:(.*)/,
-            format: "remote-candidates:%s",
-        },
-        {
-            name: "iceOptions",
-            reg: /^ice-options:(\S*)/,
-            format: "ice-options:%s",
-        },
+        { name: "endOfCandidates", reg: /^(end-of-candidates)/ },
+        { name: "remoteCandidates", reg: /^remote-candidates:(.*)/, format: "remote-candidates:%s" },
+        { name: "iceOptions", reg: /^ice-options:(\S*)/, format: "ice-options:%s" },
         {
             push: "ssrcs",
             reg: /^ssrc:(\d*) ([\w_-]*)(?::(.*))?/,
@@ -266,20 +146,9 @@ var t = (e.exports = {
             names: ["semantic", "token"],
             format: "msid-semantic: %s %s",
         },
-        {
-            push: "groups",
-            reg: /^group:(\w*) (.*)/,
-            names: ["type", "mids"],
-            format: "group:%s %s",
-        },
-        {
-            name: "rtcpMux",
-            reg: /^(rtcp-mux)/,
-        },
-        {
-            name: "rtcpRsize",
-            reg: /^(rtcp-rsize)/,
-        },
+        { push: "groups", reg: /^group:(\w*) (.*)/, names: ["type", "mids"], format: "group:%s %s" },
+        { name: "rtcpMux", reg: /^(rtcp-mux)/ },
+        { name: "rtcpRsize", reg: /^(rtcp-rsize)/ },
         {
             name: "sctpmap",
             reg: /^sctpmap:([\w_/]*) (\S*)(?: (\S*))?/,
@@ -288,11 +157,7 @@ var t = (e.exports = {
                 return null != e.maxMessageSize ? "sctpmap:%s %s %s" : "sctpmap:%s %s";
             },
         },
-        {
-            name: "xGoogleFlag",
-            reg: /^x-google-flag:([^\s]*)/,
-            format: "x-google-flag:%s",
-        },
+        { name: "xGoogleFlag", reg: /^x-google-flag:([^\s]*)/, format: "x-google-flag:%s" },
         {
             push: "rids",
             reg: /^rid:([\d\w]+) (\w+)(?: ([\S| ]*))?/,
@@ -319,42 +184,18 @@ var t = (e.exports = {
                 return "simulcast:%s %s" + (e.dir2 ? " %s %s" : "");
             },
         },
-        {
-            name: "simulcast_03",
-            reg: /^simulcast:[\s\t]+([\S+\s\t]+)$/,
-            names: ["value"],
-            format: "simulcast: %s",
-        },
-        {
-            name: "framerate",
-            reg: /^framerate:(\d+(?:$|\.\d+))/,
-            format: "framerate:%s",
-        },
+        { name: "simulcast_03", reg: /^simulcast:[\s\t]+([\S+\s\t]+)$/, names: ["value"], format: "simulcast: %s" },
+        { name: "framerate", reg: /^framerate:(\d+(?:$|\.\d+))/, format: "framerate:%s" },
         {
             name: "sourceFilter",
             reg: /^source-filter: *(excl|incl) (\S*) (IP4|IP6|\*) (\S*) (.*)/,
             names: ["filterMode", "netType", "addressTypes", "destAddress", "srcList"],
             format: "source-filter: %s %s %s %s %s",
         },
-        {
-            name: "bundleOnly",
-            reg: /^(bundle-only)/,
-        },
-        {
-            name: "label",
-            reg: /^label:(.+)/,
-            format: "label:%s",
-        },
-        {
-            name: "sctpPort",
-            reg: /^sctp-port:(\d+)$/,
-            format: "sctp-port:%s",
-        },
-        {
-            name: "maxMessageSize",
-            reg: /^max-message-size:(\d+)$/,
-            format: "max-message-size:%s",
-        },
+        { name: "bundleOnly", reg: /^(bundle-only)/ },
+        { name: "label", reg: /^label:(.+)/, format: "label:%s" },
+        { name: "sctpPort", reg: /^sctp-port:(\d+)$/, format: "sctp-port:%s" },
+        { name: "maxMessageSize", reg: /^max-message-size:(\d+)$/, format: "max-message-size:%s" },
         {
             push: "tsRefClocks",
             reg: /^ts-refclk:([^\s=]*)(?:=(\S*))?/,
@@ -378,41 +219,18 @@ var t = (e.exports = {
                 );
             },
         },
-        {
-            name: "keywords",
-            reg: /^keywds:(.+)$/,
-            format: "keywds:%s",
-        },
-        {
-            name: "content",
-            reg: /^content:(.+)/,
-            format: "content:%s",
-        },
-        {
-            name: "bfcpFloorCtrl",
-            reg: /^floorctrl:(c-only|s-only|c-s)/,
-            format: "floorctrl:%s",
-        },
-        {
-            name: "bfcpConfId",
-            reg: /^confid:(\d+)/,
-            format: "confid:%s",
-        },
-        {
-            name: "bfcpUserId",
-            reg: /^userid:(\d+)/,
-            format: "userid:%s",
-        },
+        { name: "keywords", reg: /^keywds:(.+)$/, format: "keywds:%s" },
+        { name: "content", reg: /^content:(.+)/, format: "content:%s" },
+        { name: "bfcpFloorCtrl", reg: /^floorctrl:(c-only|s-only|c-s)/, format: "floorctrl:%s" },
+        { name: "bfcpConfId", reg: /^confid:(\d+)/, format: "confid:%s" },
+        { name: "bfcpUserId", reg: /^userid:(\d+)/, format: "userid:%s" },
         {
             name: "bfcpFloorId",
             reg: /^floorid:(.+) (?:m-stream|mstrm):(.+)/,
             names: ["id", "mStream"],
             format: "floorid:%s mstrm:%s",
         },
-        {
-            push: "invalid",
-            names: ["value"],
-        },
+        { push: "invalid", names: ["value"] },
     ],
 });
 Object.keys(t).forEach(function (e) {

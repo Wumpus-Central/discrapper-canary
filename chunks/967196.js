@@ -1,47 +1,40 @@
-n.d(t, {
-    A: () => _,
-});
-var r = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(311907),
-    o = n(732955),
-    l = n(775602),
+var s = n(503698),
+    r = n.n(s),
+    a = n(311907),
+    l = n(732955),
+    o = n(775602),
     c = n(371476),
-    u = n(103733),
-    d = n(982237),
-    f = n(985018),
-    p = n(764694);
-let _ = (e) => {
+    d = n(103733),
+    u = n(982237),
+    _ = n(985018),
+    m = n(764694);
+let A = (e) => {
     let { className: t, onBackClick: n } = e,
-        i = (0, s.bG)([l.A], () => l.A.useReducedMotion),
-        { visibilityPercentageRef: _, visibilityPercentage: h } = (0, u.U)(!i);
-    return (0, r.jsxs)("div", {
-        className: a()(p.kL, t),
+        s = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        { visibilityPercentageRef: A, visibilityPercentage: g } = (0, d.U)(!s);
+    return (0, i.jsxs)("div", {
+        className: r()(m.kL, t),
         "data-testid": "all-perks-hero-header",
-        ref: _,
+        ref: A,
         children: [
-            (0, r.jsx)("div", {
-                className: p.FY,
-                children: (0, r.jsx)(o.$nd, {
+            (0, i.jsx)("div", {
+                className: m.FY,
+                children: (0, i.jsx)(l.$nd, {
                     onClick: n,
-                    text: f.intl.string(f.t["13/7kX"]),
+                    text: _.intl.string(_.t["13/7kX"]),
                     variant: "overlay-secondary",
                 }),
             }),
-            (0, r.jsx)("div", {
-                className: p.Qs,
-                children: (0, r.jsxs)("div", {
-                    className: p.N1,
+            (0, i.jsx)("div", {
+                className: m.Qs,
+                children: (0, i.jsxs)("div", {
+                    className: m.N1,
                     children: [
-                        (0, r.jsx)(d.A, {
-                            containerVisibilityPercentage: h,
-                            isMotionReduced: i,
-                        }),
-                        (0, r.jsx)(c.A, {
-                            children: f.intl.string(f.t["hqjDX/"]),
-                        }),
+                        (0, i.jsx)(u.A, { containerVisibilityPercentage: g, isMotionReduced: s }),
+                        (0, i.jsx)(c.A, { children: _.intl.string(_.t["hqjDX/"]) }),
                     ],
                 }),
             }),

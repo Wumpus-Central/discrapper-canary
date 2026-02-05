@@ -1,252 +1,169 @@
-n.d(t, {
-    A: () => Z,
-}),
-    n(896048);
+"use strict";
+n.d(t, { A: () => W });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(453903),
     o = n(990078),
     l = n(582754),
-    c = n(397927),
-    u = n(544420),
+    u = n(397927),
+    c = n(544420),
     d = n(775602),
-    f = n(587895),
-    p = n(429913),
-    _ = n(524799),
+    _ = n(587895),
+    f = n(429913),
+    p = n(524799),
     h = n(409626),
     m = n(611656),
     g = n(459746),
     E = n(544028),
-    y = n(760751),
-    b = n(954571),
-    O = n(486020),
-    v = n(341915),
-    A = n(579473),
-    I = n(18437),
-    S = n(590202),
-    T = n(73473),
-    C = n(811500),
-    N = n(654487),
-    w = n(652215),
-    R = n(985018),
-    P = n(72011);
-
-function D(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function x(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                D(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function L(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function j(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let M = 10,
-    k = 20,
-    U = 15,
-    G = 4,
-    V = 5,
-    F = 8,
-    B = 10;
-
-function H(e) {
-    var t;
-    let n = {
-            [N.Li.PACKAGE_ACTION_ADVENTURE]: R.t.PYFVdf,
-            [N.Li.PACKAGE_RPG_MMO]: R.t.rFQo2F,
-            [N.Li.PACKAGE_RACING_SPORTS]: R.t.zDRa6g,
-            [N.Li.PACKAGE_SANDBOX_CREATIVE]: R.t.vz9U2Q,
-            [N.Li.PACKAGE_FAMILY_FRIENDLY]: R.t.IOiAE0,
-            [N.Li.PACKAGE_HOLIDAY_SEASON]: R.t.cJPqvD,
-            [N.Li.PACKAGE_NEW_YEARS]: R.t.S0w2mv,
+    A = n(760751),
+    I = n(954571),
+    T = n(486020),
+    y = n(341915),
+    S = n(579473),
+    v = n(18437),
+    C = n(590202),
+    b = n(73473),
+    N = n(811500),
+    R = n(654487),
+    O = n(652215),
+    D = n(985018),
+    L = n(72011);
+let w = 10,
+    x = 20,
+    P = 15,
+    M = 4,
+    k = 5,
+    U = 8,
+    G = 10;
+function V(e) {
+    let t = {
+            [R.Li.PACKAGE_ACTION_ADVENTURE]: D.t.PYFVdf,
+            [R.Li.PACKAGE_RPG_MMO]: D.t.rFQo2F,
+            [R.Li.PACKAGE_RACING_SPORTS]: D.t.zDRa6g,
+            [R.Li.PACKAGE_SANDBOX_CREATIVE]: D.t.vz9U2Q,
+            [R.Li.PACKAGE_FAMILY_FRIENDLY]: D.t.IOiAE0,
+            [R.Li.PACKAGE_HOLIDAY_SEASON]: D.t.cJPqvD,
+            [R.Li.PACKAGE_NEW_YEARS]: D.t.S0w2mv,
         },
-        r = e.config.features.find((e) => e in n),
-        i = null != (t = null != r ? n[r] : null) ? t : R.t["D+DkEH"];
-    return R.intl.string(i);
+        n = e.config.features.find((e) => e in t),
+        r = (null != n ? t[n] : null) ?? D.t["D+DkEH"];
+    return D.intl.string(r);
 }
-let Y = (e) => {
+let F = (e) => {
         let { quest: t, onClose: n } = e,
             i = (0, a.bG)([E.A], () => E.A.getState().theme),
-            s = (0, l.Mw)(i) ? w.NJ8.DARK : w.NJ8.LIGHT;
+            s = (0, l.Mw)(i) ? O.NJ8.DARK : O.NJ8.LIGHT;
         return (0, r.jsxs)("div", {
-            className: P.N1,
+            className: L.N1,
             children: [
                 (0, r.jsxs)("div", {
-                    className: P.VW,
+                    className: L.VW,
                     children: [
                         (0, r.jsx)("img", {
-                            className: P.rC,
+                            className: L.rC,
                             alt: t.config.messages.gameTitle,
-                            src: (0, A.tW)(t, A.fY.GAME_TILE, s).url,
+                            src: (0, S.tW)(t, S.fY.GAME_TILE, s).url,
                         }),
                         (0, r.jsxs)("div", {
-                            className: P.if,
+                            className: L.if,
                             children: [
-                                (0, r.jsx)(c.Text, {
+                                (0, r.jsx)(u.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-strong",
-                                    children: H(t),
+                                    children: V(t),
                                 }),
-                                (0, r.jsx)(c.Text, {
+                                (0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: R.intl.string(R.t.VgN1Bn),
+                                    children: D.intl.string(D.t.VgN1Bn),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsx)(c.DUT, {
-                    className: P.b,
-                    "aria-label": R.intl.string(R.t.cpT0Cq),
+                (0, r.jsx)(u.DUT, {
+                    className: L.b,
+                    "aria-label": D.intl.string(D.t.cpT0Cq),
                     onClick: n,
-                    children: (0, r.jsx)(c.PGe, {
-                        size: "md",
-                        color: "currentColor",
-                    }),
+                    children: (0, r.jsx)(u.PGe, { size: "md", color: "currentColor" }),
                 }),
             ],
         });
     },
-    W = (e) => {
-        let { quest: t, game: s, sourceQuestContent: l, onGameProfileModalOpen: u, onGameProfileModalClose: p } = e,
-            _ = (0, I.Ut)(),
-            m = (0, a.bG)([f.A], () => f.A.getApplication(s.applicationId)),
+    B = (e) => {
+        let { quest: t, game: s, sourceQuestContent: l, onGameProfileModalOpen: c, onGameProfileModalClose: f } = e,
+            p = (0, v.Ut)(),
+            m = (0, a.bG)([_.A], () => _.A.getApplication(s.applicationId)),
             E = (0, a.bG)([d.A], () => d.A.useReducedMotion),
-            y = i.useRef(null),
-            b = null != s.supplementalData,
-            O = () => {
-                _({
+            A = i.useRef(null),
+            I = null != s.supplementalData,
+            T = () => {
+                p({
                     questId: t.id,
-                    questContent: v.uF.SPONSORED_QUEST_SHEET,
-                    questContentCTA: S.Cy.GAME_STORE_OPEN_GAME_LINK,
+                    questContent: y.uF.SPONSORED_QUEST_SHEET,
+                    questContentCTA: C.Cy.GAME_STORE_OPEN_GAME_LINK,
                     sourceQuestContent: l,
                 });
             },
-            A = async () => {
-                b &&
-                    (_({
+            S = async () => {
+                I &&
+                    (p({
                         questId: t.id,
-                        questContent: v.uF.SPONSORED_QUEST_SHEET,
-                        questContentCTA: S.Cy.GAME_PROFILE_OPEN,
+                        questContent: y.uF.SPONSORED_QUEST_SHEET,
+                        questContentCTA: C.Cy.GAME_PROFILE_OPEN,
                         sourceQuestContent: l,
                     }),
-                    await (0, c.mMO)(
+                    await (0, u.mMO)(
                         async () => {
                             let { default: e } = await n.e("13530").then(n.bind(n, 225732));
                             return (t) =>
-                                (0, r.jsx)(
-                                    e,
-                                    x(
-                                        {
-                                            applicationId: s.applicationId,
-                                            source: h.Ob.GameSheet,
-                                            trackExternalAction: O,
-                                        },
-                                        t,
-                                    ),
-                                );
+                                (0, r.jsx)(e, {
+                                    applicationId: s.applicationId,
+                                    source: h.Ob.GameSheet,
+                                    trackExternalAction: T,
+                                    ...t,
+                                });
                         },
-                        {
-                            onCloseCallback: p,
-                        },
+                        { onCloseCallback: f },
                     ),
-                    u());
+                    c());
             },
-            T = i.useCallback(
+            b = i.useCallback(
                 (e) => {
-                    if (null == y.current || E) return;
-                    let t = y.current.getBoundingClientRect(),
+                    if (null == A.current || E) return;
+                    let t = A.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         r = e.clientY - t.top,
                         i = t.width / 2,
                         a = t.height / 2,
-                        s = -(((r - a) / a) * U),
-                        o = ((n - i) / i) * U;
-                    y.current.style.transform = "rotateX(".concat(s, "deg) rotateY(").concat(o, "deg)");
+                        s = -(((r - a) / a) * P),
+                        o = ((n - i) / i) * P;
+                    A.current.style.transform = `rotateX(${s}deg) rotateY(${o}deg)`;
                 },
                 [E],
             ),
-            C = i.useCallback(() => {
-                null == y.current || E || (y.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            N = i.useCallback(() => {
+                null == A.current || E || (A.current.style.transform = "rotateX(0deg) rotateY(0deg)");
             }, [E]),
-            N = () =>
+            R = () =>
                 null != s.supplementalData
-                    ? (0, r.jsx)(g.A, {
-                          game: s.supplementalData,
-                          application: m,
-                          className: P.xe,
-                          size: g.w.SMALL,
-                      })
+                    ? (0, r.jsx)(g.A, { game: s.supplementalData, application: m, className: L.xe, size: g.w.SMALL })
                     : null != s.fallbackCoverImageUrl
-                      ? (0, r.jsx)("img", {
-                            src: s.fallbackCoverImageUrl,
-                            alt: s.name,
-                            className: P.xe,
-                        })
+                      ? (0, r.jsx)("img", { src: s.fallbackCoverImageUrl, alt: s.name, className: L.xe })
                       : null;
         return (0, r.jsx)(o.m, {
             text: s.name,
-            children: (0, r.jsx)(c.DUT, {
-                className: P.zR,
-                onClick: A,
-                onMouseMove: T,
-                onMouseLeave: C,
-                children: (0, r.jsx)("div", {
-                    ref: y,
-                    className: P._M,
-                    children: N(),
-                }),
+            children: (0, r.jsx)(u.DUT, {
+                className: L.zR,
+                onClick: S,
+                onMouseMove: b,
+                onMouseLeave: N,
+                children: (0, r.jsx)("div", { ref: A, className: L._M, children: R() }),
             }),
         });
     },
-    K = () =>
+    j = () =>
         (0, r.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "75",
@@ -278,234 +195,198 @@ let Y = (e) => {
                 }),
             ],
         });
-
-function z(e) {
+function H(e) {
     let {
         quest: t,
         applications: s,
         onClose: o,
         sourceQuestContent: l,
         impressionRef: d,
-        onGameProfileModalOpen: f,
+        onGameProfileModalOpen: _,
         onGameProfileModalClose: h,
     } = e;
-    (0, p.A)(s),
+    (0, f.A)(s),
         i.useEffect(() => {
-            s.length > 1 && u.A.getDetectableGamesSupplemental(s);
+            s.length > 1 && c.A.getDetectableGamesSupplemental(s);
         }, [s]);
-    let g = (0, a.bG)([_.A], () => s.some((e) => _.A.isFetching(e))),
-        E = (0, a.bG)([_.A], () => s.some((e) => _.A.didFetchingFail(e))),
-        v = (0, a.yK)([_.A], () =>
+    let g = (0, a.bG)([p.A], () => s.some((e) => p.A.isFetching(e))),
+        E = (0, a.bG)([p.A], () => s.some((e) => p.A.didFetchingFail(e))),
+        y = (0, a.yK)([p.A], () =>
             s
-                .map((e) => _.A.getGame(e))
+                .map((e) => p.A.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, m.oS)(e.applicationId))
-                .slice(0, M),
+                .slice(0, w),
         ),
-        A = (0, a.bG)([y.A, _.A], () => {
-            let e = new Set(v.map((e) => e.applicationId));
+        S = (0, a.bG)([A.A, p.A], () => {
+            let e = new Set(y.map((e) => e.applicationId));
             return s
                 .filter((t) => !e.has(t))
-                .filter((e) => null == _.A.getGame(e))
+                .filter((e) => null == p.A.getGame(e))
                 .map((e) => {
-                    let t = y.A.getDetectableGame(e);
-                    if ((null == t ? void 0 : t.cover_image_hash) == null) return null;
-                    let n = O.Ay.getApplicationIconURL({
+                    let t = A.A.getDetectableGame(e);
+                    if (t?.cover_image_hash == null) return null;
+                    let n = T.Ay.getApplicationIconURL({
                         id: e,
                         icon: t.cover_image_hash,
                         size: 256,
                         keepAspectRatio: !0,
                     });
-                    return null == n
-                        ? null
-                        : {
-                              applicationId: e,
-                              name: t.name,
-                              coverImageUrl: n,
-                          };
+                    return null == n ? null : { applicationId: e, name: t.name, coverImageUrl: n };
                 })
                 .filter((e) => null != e)
-                .slice(0, M);
+                .slice(0, w);
         }),
-        I = i.useMemo(
+        v = i.useMemo(
             () =>
                 [
-                    ...v.map((e) => ({
+                    ...y.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
                         supplementalData: e,
                         fallbackCoverImageUrl: null,
                     })),
-                    ...A.map((e) => ({
+                    ...S.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
                         supplementalData: null,
                         fallbackCoverImageUrl: e.coverImageUrl,
                     })),
-                ].slice(0, M),
-            [v, A],
+                ].slice(0, w),
+            [y, S],
         ),
-        S = i.useMemo(() => {
-            let e = I.length;
-            return e <= G ? G - e : e === V ? 0 : e <= F ? F - e : B - e;
-        }, [I.length]),
-        T = !g && 0 === I.length,
-        N = E || T;
+        C = i.useMemo(() => {
+            let e = v.length;
+            return e <= M ? M - e : e === k ? 0 : e <= U ? U - e : G - e;
+        }, [v.length]),
+        b = !g && 0 === v.length,
+        R = E || b;
     if (
         (i.useEffect(() => {
-            if (N) {
-                let e = E ? C.W.FETCH_FAILED : C.W.NO_GAMES_AVAILABLE;
-                b.default.track(w.HAw.QUEST_GAME_SHEET_ERROR, {
-                    quest_id: t.id,
-                    error_type: e,
-                }),
+            if (R) {
+                let e = E ? N.W.FETCH_FAILED : N.W.NO_GAMES_AVAILABLE;
+                I.default.track(O.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     o(),
-                    (0, c.mMO)(async () => {
+                    (0, u.mMO)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
-                        return (t) => (0, r.jsx)(e, x({}, t));
+                        return (t) => (0, r.jsx)(e, { ...t });
                     });
             }
-        }, [N, E, t.id, o]),
-        g && !N)
+        }, [R, E, t.id, o]),
+        g && !R)
     ) {
-        let e = Math.min(s.length, M);
+        let e = Math.min(s.length, w);
         return (0, r.jsxs)("div", {
-            className: P.kL,
+            className: L.kL,
             children: [
-                (0, r.jsx)(Y, {
-                    quest: t,
-                    onClose: o,
-                }),
+                (0, r.jsx)(F, { quest: t, onClose: o }),
                 (0, r.jsx)("div", {
-                    className: P.LA,
-                    children: s.slice(0, e).map((e) =>
-                        (0, r.jsx)(
-                            "div",
-                            {
-                                className: P.Vj,
-                            },
-                            e,
-                        ),
-                    ),
+                    className: L.LA,
+                    children: s.slice(0, e).map((e) => (0, r.jsx)("div", { className: L.Vj }, e)),
                 }),
             ],
         });
     }
-    return N
+    return R
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
                   d.current = e;
               },
-              className: P.kL,
+              className: L.kL,
               children: [
-                  (0, r.jsx)(Y, {
-                      quest: t,
-                      onClose: o,
-                  }),
+                  (0, r.jsx)(F, { quest: t, onClose: o }),
                   (0, r.jsxs)("div", {
-                      className: P.LA,
+                      className: L.LA,
                       children: [
-                          I.map((e) =>
+                          v.map((e) =>
                               (0, r.jsx)(
-                                  W,
+                                  B,
                                   {
                                       quest: t,
                                       game: e,
                                       sourceQuestContent: l,
-                                      onGameProfileModalOpen: f,
+                                      onGameProfileModalOpen: _,
                                       onGameProfileModalClose: h,
                                   },
                                   e.applicationId,
                               ),
                           ),
-                          Array.from(
-                              {
-                                  length: S,
-                              },
-                              (e, t) => (0, r.jsx)(K, {}, "placeholder-".concat(t)),
-                          ),
+                          Array.from({ length: C }, (e, t) => (0, r.jsx)(j, {}, `placeholder-${t}`)),
                       ],
                   }),
               ],
           });
 }
-
-function q(e) {
+function Y(e) {
     let {
             targetElementRef: t,
             applications: n,
             children: a,
             onGameSheetOpened: o,
             onGameSheetClosed: l,
-            quest: u,
+            quest: c,
             sourceQuestContent: d,
-            impressionRef: f,
+            impressionRef: _,
         } = e,
-        [p, _] = i.useState(!1),
-        h = (0, I.Ut)(),
+        [f, p] = i.useState(!1),
+        h = (0, v.Ut)(),
         m = i.useRef(null),
-        g = (null == t ? void 0 : t.current) != null,
+        g = t?.current != null,
         E = g ? t : m,
-        y = g ? "right" : "top",
-        b = g ? "bottom" : void 0,
-        O = () => {
-            null == o || o(),
+        A = g ? "right" : "top",
+        I = g ? "bottom" : void 0,
+        T = () => {
+            o?.(),
                 h({
-                    questId: u.id,
+                    questId: c.id,
                     questContent: d,
-                    questContentCTA: S.Cy.SPONSORED_QUEST_SHEET,
+                    questContentCTA: C.Cy.SPONSORED_QUEST_SHEET,
                     sourceQuestContent: d,
                 });
         },
-        v = () => {
-            if (p) return s.o;
-            null == l || l();
+        y = () => {
+            if (f) return s.o;
+            l?.();
         },
-        A = () => {
-            _(!0);
+        S = () => {
+            p(!0);
         },
-        T = () => {
-            _(!1);
+        b = () => {
+            p(!1);
         };
-    return (0, r.jsx)(c.YNO, {
+    return (0, r.jsx)(u.YNO, {
         targetElementRef: E,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(z, {
-                quest: u,
+            return (0, r.jsx)(H, {
+                quest: c,
                 applications: n,
                 onClose: t,
                 sourceQuestContent: d,
-                impressionRef: f,
-                onGameProfileModalOpen: A,
-                onGameProfileModalClose: T,
+                impressionRef: _,
+                onGameProfileModalOpen: S,
+                onGameProfileModalClose: b,
             });
         },
-        onRequestOpen: O,
-        onRequestClose: v,
-        position: y,
-        align: b,
-        spacing: k,
+        onRequestOpen: T,
+        onRequestClose: y,
+        position: A,
+        align: I,
+        spacing: x,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
         children: (e) => a(e, m),
     });
 }
-let Z = function (e) {
+let W = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(T.R, {
+        : (0, r.jsx)(b.R, {
               questOrQuests: e.quest,
-              questContent: v.uF.SPONSORED_QUEST_SHEET,
+              questContent: y.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) =>
-                  (0, r.jsx)(
-                      q,
-                      j(x({}, e), {
-                          impressionRef: t,
-                      }),
-                  ),
+              children: (t) => (0, r.jsx)(Y, { ...e, impressionRef: t }),
           });
 };

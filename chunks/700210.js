@@ -1,102 +1,73 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(321073);
+"use strict";
+n.d(t, { A: () => E }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
     s = n(397927),
     o = n(282956),
     l = n(264322),
-    c = n(997509),
-    u = n(780964),
+    u = n(997509),
+    c = n(780964),
     d = n(891912),
-    f = n(840065),
-    p = n(546183),
-    _ = n(71393),
+    _ = n(840065),
+    f = n(546183),
+    p = n(71393),
     h = n(576705),
     m = n(652215),
     g = n(985018);
-
 function E(e) {
-    var t;
-    let { user: E, application: b, guildId: y, context: O, onItemClick: A } = e,
-        v = null != (t = null == b ? void 0 : b.id) ? t : null == E ? void 0 : E.id,
-        S = _.A.getGuild(y),
-        I = (0, a.bG)([h.A], () => (null != S ? h.A.can(m.xBc.MANAGE_GUILD, S) : null)),
-        T = !0,
+    let { user: t, application: E, guildId: A, context: I, onItemClick: T } = e,
+        y = E?.id ?? t?.id,
+        S = p.A.getGuild(A),
+        v = (0, a.bG)([h.A], () => (null != S ? h.A.can(m.xBc.MANAGE_GUILD, S) : null)),
         C = !0,
-        N = (0, l.ON)(y, C),
-        R = (0, l.A4)(T, C),
-        w = (0, a.bG)([p.default], () => null != p.default.getNewestTokenForApplication(v)),
-        { isUserApp: P, isGuildApp: D } = i.useMemo(() => {
-            var e, t, n, r;
-            if (null == v)
-                return {
-                    isGuildApp: !1,
-                    isUserApp: !1,
-                };
-            let i = Object.values(null != (e = null == (n = N.result) ? void 0 : n.sections) ? e : {}),
-                a = Object.values(null != (t = null == (r = R.result) ? void 0 : r.sections) ? t : {});
+        b = !0,
+        N = (0, l.ON)(A, b),
+        R = (0, l.A4)(C, b),
+        O = (0, a.bG)([f.default], () => null != f.default.getNewestTokenForApplication(y)),
+        { isUserApp: D, isGuildApp: L } = i.useMemo(() => {
+            if (null == y) return { isGuildApp: !1, isUserApp: !1 };
+            let e = Object.values(N.result?.sections ?? {}),
+                t = Object.values(R.result?.sections ?? {});
             return {
-                isGuildApp: i.some((e) => {
-                    var t;
-                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
-                }),
-                isUserApp: a.some((e) => {
-                    var t;
-                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
-                }),
+                isGuildApp: e.some((e) => e.descriptor.application?.id === y),
+                isUserApp: t.some((e) => e.descriptor.application?.id === y),
             };
-        }, [N, R, v]);
+        }, [N, R, y]);
     i.useEffect(() => {
         n(53656);
     }, []);
-    let x = i.useCallback(() => {
-            (null == S ? void 0 : S.id) != null &&
-                (c.A.open(S.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, v), null == A || A());
-        }, [v, null == S ? void 0 : S.id, A]),
-        L = i.useCallback(() => {
-            (0, f.openUserSettings)(u.X.AUTHORIZED_APPS_PANEL, {
-                section: m.nc_.AUTHORIZED_APPS,
-            });
+    let w = i.useCallback(() => {
+            S?.id != null && (u.A.open(S.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, y), T?.());
+        }, [y, S?.id, T]),
+        x = i.useCallback(() => {
+            (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL, { section: m.nc_.AUTHORIZED_APPS });
             let e = "";
-            null != b ? (e = b.name) : null != E && (e = E.username),
-                "" !== e &&
-                    d.iU.setState({
-                        searchQuery: e,
-                    }),
-                null == A || A();
-        }, [b, A, E]);
-    if (O === m.BRT.POPOUT) return null;
-    let j = [];
+            null != E ? (e = E.name) : null != t && (e = t.username),
+                "" !== e && d.iU.setState({ searchQuery: e }),
+                T?.();
+        }, [E, T, t]);
+    if (I === m.BRT.POPOUT) return null;
+    let P = [];
     return (
-        D &&
-            I &&
-            j.push(
+        L &&
+            v &&
+            P.push(
                 (0, r.jsx)(
                     s.Drp,
-                    {
-                        id: "manage-server-integration",
-                        label: g.intl.string(g.t.IuSJT8),
-                        action: x,
-                    },
+                    { id: "manage-server-integration", label: g.intl.string(g.t.IuSJT8), action: w },
                     "manage-server-integration",
                 ),
             ),
-        P &&
-            w &&
-            j.push(
+        D &&
+            O &&
+            P.push(
                 (0, r.jsx)(
                     s.Drp,
-                    {
-                        id: "manage-authorized-app",
-                        label: g.intl.string(g.t.V8ruvz),
-                        action: L,
-                    },
+                    { id: "manage-authorized-app", label: g.intl.string(g.t.V8ruvz), action: x },
                     "manage-authorized-app",
                 ),
             ),
-        j
+        P
     );
 }

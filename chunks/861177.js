@@ -1,109 +1,39 @@
-r.d(t, {
-    default: () => O,
-});
-var n = r(627968);
-r(64700);
-var o = r(311907),
-    c = r(385612),
-    l = r(287809),
-    a = r(927578),
-    i = r(87719),
-    u = r(244975),
-    s = r(788868),
-    f = r(652215),
-    p = r(339984),
-    y = r(985018),
-    b = r(626072);
-
-function O(e) {
-    let { onClose: t, source: r } = e,
-        O = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o,
-                c = {};
-            if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (o = 0, r = Reflect.ownKeys(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
-                return c;
-            }
-            if (
-                ((c = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        c = Object.getOwnPropertyNames(e);
-                    for (n = 0; n < c.length; n++)
-                        (r = c[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-                    return o;
-                })(e, t)),
-                Object.getOwnPropertySymbols)
-            )
-                for (o = 0, r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-                    (n = r[o]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
-            return c;
-        })(e, ["onClose", "source"]),
-        d = (0, o.bG)([l.default], () => l.default.getCurrentUser()),
-        g = a.Ay.isPremium(d) ? y.t.E0sNsc : y.t.UBcuto,
-        m = y.intl.format(g, {
+a.d(e, { default: () => U });
+var c = a(627968);
+a(64700);
+var n = a(311907),
+    s = a(385612),
+    o = a(287809),
+    i = a(927578),
+    r = a(87719),
+    d = a(244975),
+    l = a(788868),
+    p = a(652215),
+    u = a(339984),
+    f = a(985018),
+    y = a(626072);
+function U(t) {
+    let { onClose: e, source: a, ...U } = t,
+        b = (0, n.bG)([o.default], () => o.default.getCurrentUser()),
+        A = i.Ay.isPremium(b) ? f.t.E0sNsc : f.t.UBcuto,
+        C = f.intl.format(A, {
             onLearnMore: function () {
-                t(), (0, i.Z)();
+                e(), (0, r.e)();
             },
         });
-    return (0, n.jsx)(
-        u.A,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        }),
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0,
-                                  })
-                                : (e[t] = n);
-                    });
-            }
-            return e;
-        })(
-            {
-                artURL: b.A,
-                type: s.e.CUSTOM_PROFILE_UPSELL,
-                title: y.intl.string(y.t.BbsMm4),
-                body: m,
-                glowUp: m,
-                onSecondaryClick: () => {
-                    t(),
-                        (0, c.XD)({
-                            uploadType: p.HL.BANNER,
-                            analyticsSource: r,
-                        });
-                },
-                secondaryCTA: y.intl.string(y.t.SpAQib),
-                analyticsSource: r,
-                analyticsLocation: {
-                    section: f.JJy.USER_PROFILE,
-                    object: f.ZSU.BUTTON_CTA,
-                },
-                onClose: t,
-            },
-            O,
-        ),
-    );
+    return (0, c.jsx)(d.A, {
+        artURL: y.A,
+        type: l.e.CUSTOM_PROFILE_UPSELL,
+        title: f.intl.string(f.t.BbsMm4),
+        body: C,
+        glowUp: C,
+        onSecondaryClick: () => {
+            e(), (0, s.XD)({ uploadType: u.HL.BANNER, analyticsSource: a });
+        },
+        secondaryCTA: f.intl.string(f.t.SpAQib),
+        analyticsSource: a,
+        analyticsLocation: { section: p.JJy.USER_PROFILE, object: p.ZSU.BUTTON_CTA },
+        onClose: e,
+        ...U,
+    });
 }

@@ -1,101 +1,33 @@
-n.d(t, {
-    A: () => S,
-}),
-    n(896048),
-    n(775443);
+"use strict";
+n.d(t, { A: () => I }), n(775443);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(793574),
     o = n(58149),
     l = n(688810),
-    c = n(989837),
-    u = n(485878),
+    u = n(989837),
+    c = n(485878),
     d = n(602814),
-    f = n(779309),
-    p = n(198016),
-    _ = n(60809),
+    _ = n(779309),
+    f = n(198016),
+    p = n(60809),
     h = n(652215),
     m = n(732679);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let O = {
-        width: 500,
-        height: _.$V,
-    },
-    A = {
-        height: _.$V,
-    };
-
-function v(e, t) {
-    let { context: n, entrypoint: a, initHistory: u } = e,
+let g = { width: 500, height: p.$V },
+    E = { height: p.$V };
+function A(e, t) {
+    let { context: n, entrypoint: a, initHistory: c } = e,
         { analyticsLocations: d } = (0, l.Ay)(s.A.APP_LAUNCHER);
     return (
         i.useEffect(() => {
-            (0, o.zV)(h.HAw.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-                source: a,
-                location: "app_launcher",
-            });
+            (0, o.zV)(h.HAw.APPLICATION_COMMAND_TOP_OF_FUNNEL, { source: a, location: "app_launcher" });
         }, [a]),
         i.useEffect(() => {
             let e = Date.now();
             return () => {
                 (0, o.zV)(h.HAw.APP_LAUNCHER_CLOSED, {
-                    reason: c.A.closeReason(),
+                    reason: u.A.closeReason(),
                     time_spent: Date.now() - e,
                     source: a,
                 });
@@ -104,101 +36,73 @@ function v(e, t) {
         (0, r.jsx)("div", {
             className: m.jP,
             ref: t,
-            style: O,
+            style: g,
             children: (0, r.jsx)("div", {
                 className: m.FG,
                 children: (0, r.jsx)(l.f5, {
                     value: d,
-                    children: (0, r.jsx)(I, {
-                        initHistory: u,
-                        children: (0, r.jsx)(T, {
-                            context: n,
-                            entrypoint: a,
-                        }),
-                    }),
+                    children: (0, r.jsx)(T, { initHistory: c, children: (0, r.jsx)(y, { context: n, entrypoint: a }) }),
                 }),
             }),
         })
     );
 }
-let S = i.memo(i.forwardRef(v));
-
-function I(e) {
+let I = i.memo(i.forwardRef(A));
+function T(e) {
     let { initHistory: t, children: n } = e,
-        [a, s] = i.useState(
-            null != t
-                ? t
-                : [
-                      {
-                          type: u.Wy.HOME,
-                      },
-                  ],
-        ),
+        [a, s] = i.useState(t ?? [{ type: c.Wy.HOME }]),
         [o, l] = i.useState({}),
-        c = a[a.length - 1],
-        [d, f] = i.useState(!1),
-        p = i.useCallback((e) => {
+        u = a[a.length - 1],
+        [d, _] = i.useState(!1),
+        f = i.useCallback((e) => {
             s((t) => [...t, e]);
         }, []),
-        _ = i.useCallback(() => {
+        p = i.useCallback(() => {
             let e = null;
             s((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                l((t) =>
-                    null == e
-                        ? t
-                        : y(E({}, t), {
-                              [e.type]: e,
-                          }),
-                );
+                l((t) => (null == e ? t : { ...t, [e.type]: e }));
         }, []),
-        h = i.useCallback(
-            (e) => {
-                var t;
-                return null != (t = a.findLast((t) => t.type === e)) ? t : o[e];
-            },
-            [a, o],
-        );
-    return (0, r.jsx)(u.L8.Provider, {
+        h = i.useCallback((e) => a.findLast((t) => t.type === e) ?? o[e], [a, o]);
+    return (0, r.jsx)(c.L8.Provider, {
         value: {
             history: a,
             discard: o,
-            currentView: c,
-            pushHistory: p,
-            goBack: _,
+            currentView: u,
+            pushHistory: f,
+            goBack: p,
             getMostRecentHistoryItemByType: h,
             isSlideReady: d,
-            setSlideReady: f,
+            setSlideReady: _,
         },
         children: n,
     });
 }
-
-function T(e) {
+function y(e) {
     let { context: t, entrypoint: n } = e,
         [s, o] = i.useState(""),
-        { setScroller: l, isCloseToBottom: c } = C(s),
-        { currentView: _, getMostRecentHistoryItemByType: h, setSlideReady: g } = (0, u.uM)();
+        { setScroller: l, isCloseToBottom: u } = S(s),
+        { currentView: p, getMostRecentHistoryItemByType: h, setSlideReady: g } = (0, c.uM)();
     i.useEffect(() => {
         g(!1);
-    }, [null == _ ? void 0 : _.type, g]);
-    let E = i.useCallback(() => {
+    }, [p?.type, g]);
+    let A = i.useCallback(() => {
         g(!0);
     }, [g]);
-    if (null == _) return null;
-    let b = h(u.Wy.LIST),
-        y = h(u.Wy.APPLICATION);
+    if (null == p) return null;
+    let I = h(c.Wy.LIST),
+        T = h(c.Wy.APPLICATION);
     return (0, r.jsxs)(a.tN_, {
-        activeSlide: _.type,
+        activeSlide: p.type,
         width: 500,
-        onSlideReady: E,
+        onSlideReady: A,
         children: [
             (0, r.jsx)(a.q7S, {
-                id: u.Wy.HOME,
+                id: c.Wy.HOME,
                 children: (0, r.jsx)("div", {
                     className: m.xD,
-                    style: A,
-                    children: (0, r.jsx)(f.A, {
-                        isScrollCloseToBottom: c,
+                    style: E,
+                    children: (0, r.jsx)(_.A, {
+                        isScrollCloseToBottom: u,
                         setScroller: l,
                         context: t,
                         entrypoint: n,
@@ -208,48 +112,43 @@ function T(e) {
                 }),
             }),
             (0, r.jsx)(a.q7S, {
-                id: u.Wy.LIST,
+                id: c.Wy.LIST,
                 children: (0, r.jsx)("div", {
                     className: m.xD,
-                    style: A,
+                    style: E,
                     children:
-                        null != b &&
-                        (0, r.jsx)(p.A, {
+                        null != I &&
+                        (0, r.jsx)(f.A, {
                             context: t,
                             entrypoint: n,
-                            title: b.title,
-                            look: b.look,
-                            items: b.items,
-                            sectionName: b.sectionName,
-                            sectionOverallPosition: b.sectionOverallPosition,
+                            title: I.title,
+                            look: I.look,
+                            items: I.items,
+                            sectionName: I.sectionName,
+                            sectionOverallPosition: I.sectionOverallPosition,
                         }),
                 }),
             }),
             (0, r.jsx)(a.q7S, {
-                id: u.Wy.APPLICATION,
+                id: c.Wy.APPLICATION,
                 children: (0, r.jsx)("div", {
                     className: m.xD,
-                    style: A,
+                    style: E,
                     children:
-                        null != y &&
-                        (0, r.jsx)(d.A, {
-                            context: t,
-                            application: y.application,
-                            sectionName: y.sectionName,
-                        }),
+                        null != T &&
+                        (0, r.jsx)(d.A, { context: t, application: T.application, sectionName: T.sectionName }),
                 }),
             }),
         ],
     });
 }
-
-function C(e) {
+function S(e) {
     let [t, n] = i.useState(null),
         [r, a] = i.useState(!1),
         s = i.useRef(0);
     return (
         i.useEffect(() => {
-            null == t || t.scrollTo(0, 0);
+            t?.scrollTo(0, 0);
         }, [t, e]),
         i.useEffect(() => {
             if (null != t)
@@ -260,14 +159,10 @@ function C(e) {
                         t.removeEventListener("scroll", e, !1);
                     }
                 );
-
             function e() {
                 null == t || ((s.current = t.scrollTop), a(t.scrollHeight - (t.scrollTop + t.clientHeight) < 340));
             }
         }, [t]),
-        {
-            setScroller: n,
-            isCloseToBottom: r,
-        }
+        { setScroller: n, isCloseToBottom: r }
     );
 }

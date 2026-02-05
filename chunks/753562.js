@@ -1,6 +1,4 @@
-n.d(a, {
-    A: () => r,
-});
+n.d(a, { A: () => r });
 var t = n(303527);
 let r = {
     ordinalNumber: (0, n(722023).A)({
@@ -11,27 +9,15 @@ let r = {
         },
     }),
     era: (0, t.A)({
-        matchPatterns: {
-            narrow: /^([vn]\.? ?C\.?)/,
-            abbreviated: /^([vn]\. ?Chr\.?)/,
-            wide: /^((voor|na) Christus)/,
-        },
+        matchPatterns: { narrow: /^([vn]\.? ?C\.?)/, abbreviated: /^([vn]\. ?Chr\.?)/, wide: /^((voor|na) Christus)/ },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/^v/, /^n/],
-        },
+        parsePatterns: { any: [/^v/, /^n/] },
         defaultParseWidth: "any",
     }),
     quarter: (0, t.A)({
-        matchPatterns: {
-            narrow: /^[1234]/i,
-            abbreviated: /^K[1234]/i,
-            wide: /^[1234]e kwartaal/i,
-        },
+        matchPatterns: { narrow: /^[1234]/i, abbreviated: /^K[1234]/i, wide: /^[1234]e kwartaal/i },
         defaultMatchWidth: "wide",
-        parsePatterns: {
-            any: [/1/i, /2/i, /3/i, /4/i],
-        },
+        parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
         defaultParseWidth: "any",
         valueCallback: function (e) {
             return e + 1;
@@ -78,9 +64,7 @@ let r = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, t.A)({
-        matchPatterns: {
-            any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i,
-        },
+        matchPatterns: { any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

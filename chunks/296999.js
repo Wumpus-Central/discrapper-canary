@@ -9,25 +9,14 @@ e.exports = function (e) {
         },
         n = e.COMMENT("#", "$"),
         r = "([A-Za-z_]|::)(\\w|::)*",
-        i = e.inherit(e.TITLE_MODE, {
-            begin: r,
-        }),
-        a = {
-            className: "variable",
-            begin: "\\$" + r,
-        },
+        i = e.inherit(e.TITLE_MODE, { begin: r }),
+        a = { className: "variable", begin: "\\$" + r },
         s = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, a],
             variants: [
-                {
-                    begin: /'/,
-                    end: /'/,
-                },
-                {
-                    begin: /"/,
-                    end: /"/,
-                },
+                { begin: /'/, end: /'/ },
+                { begin: /"/, end: /"/ },
             ],
         };
     return {
@@ -37,33 +26,18 @@ e.exports = function (e) {
             n,
             a,
             s,
-            {
-                beginKeywords: "class",
-                end: "\\{|;",
-                illegal: /=/,
-                contains: [i, n],
-            },
+            { beginKeywords: "class", end: "\\{|;", illegal: /=/, contains: [i, n] },
             {
                 beginKeywords: "define",
                 end: /\{/,
-                contains: [
-                    {
-                        className: "section",
-                        begin: e.IDENT_RE,
-                        endsParent: !0,
-                    },
-                ],
+                contains: [{ className: "section", begin: e.IDENT_RE, endsParent: !0 }],
             },
             {
                 begin: e.IDENT_RE + "\\s+\\{",
                 returnBegin: !0,
                 end: /\S/,
                 contains: [
-                    {
-                        className: "keyword",
-                        begin: e.IDENT_RE,
-                        relevance: 0.2,
-                    },
+                    { className: "keyword", begin: e.IDENT_RE, relevance: 0.2 },
                     {
                         begin: /\{/,
                         end: /\}/,
@@ -76,12 +50,7 @@ e.exports = function (e) {
                                 begin: "[a-zA-Z_]+\\s*=>",
                                 returnBegin: !0,
                                 end: "=>",
-                                contains: [
-                                    {
-                                        className: "attr",
-                                        begin: e.IDENT_RE,
-                                    },
-                                ],
+                                contains: [{ className: "attr", begin: e.IDENT_RE }],
                             },
                             {
                                 className: "number",

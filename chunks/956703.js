@@ -1,89 +1,59 @@
-n.d(t, {
-    A: () => E,
-}),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(857071),
-    o = n(649963),
-    l = n(427157),
-    c = n(734057),
+"use strict";
+n.d(t, { A: () => m });
+var r = n(311907),
+    i = n(73153),
+    a = n(857071),
+    s = n(649963),
+    o = n(427157),
+    l = n(734057),
     u = n(287809);
-
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let f = {};
-class p {
+let c = {};
+class d {
+    users;
+    fetched;
     static ensure(e, t, n) {
-        var r, i;
-        let a = ""
-            .concat(e, ":")
-            .concat(t.name, ":")
-            .concat(null != (r = t.id) ? r : "", ":")
-            .concat(n);
-        return (f[a] = null != (i = f[a]) ? i : new p());
+        let r = `${e}:${t.name}:${t.id ?? ""}:${n}`;
+        return (c[r] = c[r] ?? new d());
     }
     constructor() {
-        d(this, "users", void 0), d(this, "fetched", void 0), (this.fetched = !1), (this.users = new Map());
+        (this.fetched = !1), (this.users = new Map());
     }
 }
-
 function _() {
-    f = {};
+    c = {};
 }
-
-function h(e) {
+function f(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
-        s = p.ensure(n, i, a);
+        s = d.ensure(n, i, a);
     if ("MESSAGE_REACTION_ADD" === t) {
         let e = u.default.getUser(r);
         null != e && s.users.set(r, e);
     } else s.users.delete(r);
 }
-
-function m(e) {
+function p(e) {
     let { messageId: t, users: n, emoji: r, reactionType: i } = e,
-        a = p.ensure(t, r, i);
-    n.forEach((e) => a.users.set(e.id, new l.A(e)));
+        a = d.ensure(t, r, i);
+    n.forEach((e) => a.users.set(e.id, new o.A(e)));
 }
-class g extends (r = i.Ay.Store) {
+class h extends r.Ay.Store {
     initialize() {
-        this.waitFor(c.A, s.A, u.default);
+        this.waitFor(l.A, a.A, u.default);
     }
+    static displayName = "MessageReactionsStore";
     getReactions(e, t, n, r, i) {
-        let a = p.ensure(t, n, i);
-        if (!a.fetched) {
-            let l = c.A.getChannel(e),
-                u = null != l ? l.getGuildId() : null;
-            if (null != u && s.A.isLurking(u)) return;
-            o.ao({
-                channelId: e,
-                messageId: t,
-                emoji: n,
-                limit: r,
-                type: i,
-            }),
-                (a.fetched = !0);
+        let o = d.ensure(t, n, i);
+        if (!o.fetched) {
+            let u = l.A.getChannel(e),
+                c = null != u ? u.getGuildId() : null;
+            if (null != c && a.A.isLurking(c)) return;
+            s.ao({ channelId: e, messageId: t, emoji: n, limit: r, type: i }), (o.fetched = !0);
         }
-        return a.users;
+        return o.users;
     }
 }
-d(g, "displayName", "MessageReactionsStore");
-let E = new g(a.h, {
+let m = new h(i.h, {
     CONNECTION_OPEN: _,
-    MESSAGE_REACTION_ADD: h,
-    MESSAGE_REACTION_REMOVE: h,
-    MESSAGE_REACTION_ADD_USERS: m,
+    MESSAGE_REACTION_ADD: f,
+    MESSAGE_REACTION_REMOVE: f,
+    MESSAGE_REACTION_ADD_USERS: p,
 });

@@ -1,49 +1,34 @@
-n.d(t, {
-    A: () => o,
-}),
-    n(114821),
-    n(339614),
-    n(896048),
-    n(321073),
-    n(693327),
-    n(554719),
-    n(680155),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(228524);
+"use strict";
+n.d(t, { A: () => d }), n(321073), n(323874), n(14289), n(35956);
 var l = n(64700),
-    r = n(417597),
-    a = n(355622),
-    i = n(522602),
-    s = n(304162),
-    c = n(835134);
-
-function o(e, t) {
-    var n, o;
-    let { mediaAttachments: d, hasThumbnail: u } = (function (e) {
+    i = n(417597),
+    s = n(355622),
+    a = n(522602),
+    r = n(304162),
+    o = n(835134);
+function d(e, t) {
+    let { mediaAttachments: n, hasThumbnail: d } = (function (e) {
             let [t, n] = l.useState(null),
-                c = (0, r.yK)([i.A], () => {
-                    let t = i.A.getUploads(e.id, a.oU.CREATE_FORUM_POST.drafts.type),
+                o = (0, i.yK)([a.A], () => {
+                    let t = a.A.getUploads(e.id, s.oU.CREATE_FORUM_POST.drafts.type),
                         n = t.find((e) => e.isThumbnail);
                     return null != n ? [n] : t.filter((e) => e.isVideo || e.isImage);
                 }),
-                o = l.useMemo(() => c.some((e) => e.isThumbnail), [c]);
+                d = l.useMemo(() => o.some((e) => e.isThumbnail), [o]);
             return (
                 l.useEffect(() => {
                     let e = [];
                     return (
                         n(
-                            c.slice(0, s.A8).flatMap((t) => {
-                                var n;
-                                let l = null == t || null == (n = t.item) ? void 0 : n.file;
-                                if (null == l) return [];
-                                let r = URL.createObjectURL(l);
+                            o.slice(0, r.A8).flatMap((t) => {
+                                let n = t?.item?.file;
+                                if (null == n) return [];
+                                let l = URL.createObjectURL(n);
                                 return (
-                                    e.push(r),
+                                    e.push(l),
                                     {
                                         id: t.id,
-                                        src: r,
+                                        src: l,
                                         spoiler: t.spoiler,
                                         alt: t.description,
                                         isThumbnail: t.isThumbnail,
@@ -57,32 +42,20 @@ function o(e, t) {
                             n(null), e.forEach((e) => URL.revokeObjectURL(e));
                         }
                     );
-                }, [c]),
-                {
-                    mediaAttachments: t,
-                    hasThumbnail: o,
-                }
+                }, [o]),
+                { mediaAttachments: t, hasThumbnail: d }
             );
         })(e),
-        m = Math.max(s.A8 - (null != (n = null == d ? void 0 : d.length) ? n : 0), 0),
-        { embeds: h } = (0, c.w)(u, m, t),
-        f = l.useMemo(
+        c = Math.max(r.A8 - (n?.length ?? 0), 0),
+        { embeds: u } = (0, o.w)(d, c, t),
+        m = l.useMemo(
             () =>
-                null == h
-                    ? void 0
-                    : h.flatMap((e) => {
-                          let t = (0, s.m3)(e);
-                          return null == t
-                              ? []
-                              : {
-                                    id: t,
-                                    src: t,
-                                    spoiler: !1,
-                                    alt: e.title,
-                                };
-                      }),
-            [h],
+                u?.flatMap((e) => {
+                    let t = (0, r.m3)(e);
+                    return null == t ? [] : { id: t, src: t, spoiler: !1, alt: e.title };
+                }),
+            [u],
         ),
-        g = [...(null != d ? d : [])];
-    return !u && m > 0 && g.push(...(null != (o = null == f ? void 0 : f.slice(0, m)) ? o : [])), g;
+        h = [...(n ?? [])];
+    return !d && c > 0 && h.push(...(m?.slice(0, c) ?? [])), h;
 }

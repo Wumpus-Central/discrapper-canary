@@ -1,4 +1,2 @@
-e.exports = {
-    K: "icon_bd6d20",
-    q: "placeholder_bd6d20",
-};
+"use strict";
+e.exports = { K: "icon_bd6d20", q: "placeholder_bd6d20" };

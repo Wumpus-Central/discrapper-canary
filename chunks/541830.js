@@ -1,65 +1,19 @@
-n.d(t, {
-    du: () => p,
-    qt: () => f,
-    zJ: () => h,
-}),
-    n(747238),
-    n(812715),
-    n(896048);
+"use strict";
+n.d(t, { du: () => _, qt: () => d, zJ: () => p });
 var r = n(989349),
     i = n.n(r),
     a = n(960488);
 n(723702), n(371794);
 var s = n(652215),
     o = n(985018);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = {},
+let l = {},
     u = {},
-    d = Object.freeze(
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        }),
-                    )),
-                    r.forEach(function (t) {
-                        l(e, t, n[t]);
-                    });
-            }
-            return e;
-        })(
-            {
-                ALL: -1,
-            },
-            s.Kf,
-        ),
-    );
-
-function f(e) {
-    let t = (0, a.B6)(e, {
-        path: s.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
-    });
+    c = Object.freeze({ ALL: -1, ...s.Kf });
+function d(e) {
+    let t = (0, a.B6)(e, { path: s.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
     return null != t ? t.params.skuId : null;
 }
-
-function p(e) {
+function _(e) {
     switch (e) {
         case s.Kf.ACTION:
             return o.intl.string(o.t["1o2/IM"]);
@@ -203,25 +157,24 @@ function p(e) {
             return o.intl.string(o.t["9b4eUr"]);
     }
 }
-Object.keys(d).forEach((e) => {
+Object.keys(c).forEach((e) => {
     let t = e.toLowerCase().replace(/_/g, "-"),
-        n = d[e];
-    (c[t] = n), (u[n] = t);
+        n = c[e];
+    (l[t] = n), (u[n] = t);
 });
-let _ = [
+let f = [
     ["YYYY-MM-DD", "MMMM DD, Y"],
     ["YYYY-MM", "MMMM Y"],
     ["MM-DD", "MMMM DD"],
     ["MM", "MMMM"],
     ["YYYY", "Y"],
 ];
-
-function h(e) {
+function p(e) {
     let { preorderReleaseAt: t, preorderApproximateReleaseDate: n } = e;
     if (null != t) return t.format("MMMM DD");
     if (null == n) return null;
-    for (let e = 0; e < _.length; e++) {
-        let [t, r] = _[e],
+    for (let e = 0; e < f.length; e++) {
+        let [t, r] = f[e],
             a = i()(n, t, !0);
         if (a.isValid()) return a.format(r);
     }

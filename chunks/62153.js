@@ -1,8 +1,3 @@
-n.d(t, {
-    a: () => l,
-});
+n.d(t, { a: () => s });
 var a = n(747656);
-let l = {
-    refresh_app: n(120238).A,
-    age_verification: a.A,
-};
+let s = { refresh_app: n(120238).A, age_verification: a.A };

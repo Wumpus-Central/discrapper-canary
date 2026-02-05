@@ -1,38 +1,31 @@
-n.d(t, {
-    Ot: () => c,
-    do: () => s,
-    hc: () => u,
-    jC: () => _,
-    ju: () => d,
-});
-var r,
-    l,
-    i,
-    o,
+n.d(t, { Ot: () => d, do: () => o, hc: () => c, jC: () => u, ju: () => A });
+var i,
+    r,
     a,
-    s =
-        (((r = {}).UNKNOWN = "unknown"),
-        (r.ANY = "any"),
-        (r.INVITE = "invite"),
-        (r.ORGANIC = "organic_registration"),
-        (r.ORGANIC_MARKETING = "organic_marketing"),
-        (r.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
-        (r.CREATE_GUILD = "create_guild"),
-        r),
-    c = (((l = {}).AGE_GATE = "age_gate"), (l.AGE_GATE_UNDERAGE = "age_gate_underage"), l),
-    u = (((i = {}).CLAIM_ACCOUNT = "claim_account"), (i.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), i),
-    _ =
-        (((o = {}).GUILD_TEMPLATES = "guild_templates"),
-        (o.GUILD_CREATE = "guild_create"),
-        (o.CREATION_INTENT = "creation_intent"),
-        (o.CHANNEL_PROMPT = "channel_prompt"),
-        (o.JOIN_GUILD = "join_guild"),
-        (o.SUCCESS = "create_success"),
-        o),
-    d = /^(2155|7706)2$/.test(n.j)
-        ? (((a = {}).NUF_STARTED = "nuf_started"),
-          (a.AGE_GATE = "age_gate"),
-          (a.NUF_COMPLETE = "nuf_complete"),
-          (a.HUB_CONNECTION = "hub_connection"),
-          a)
-        : null;
+    l,
+    s,
+    o =
+        (((i = {}).UNKNOWN = "unknown"),
+        (i.ANY = "any"),
+        (i.INVITE = "invite"),
+        (i.ORGANIC = "organic_registration"),
+        (i.ORGANIC_MARKETING = "organic_marketing"),
+        (i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
+        (i.CREATE_GUILD = "create_guild"),
+        i),
+    d = (((r = {}).AGE_GATE = "age_gate"), (r.AGE_GATE_UNDERAGE = "age_gate_underage"), r),
+    c = (((a = {}).CLAIM_ACCOUNT = "claim_account"), (a.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), a),
+    u =
+        (((l = {}).GUILD_TEMPLATES = "guild_templates"),
+        (l.GUILD_CREATE = "guild_create"),
+        (l.CREATION_INTENT = "creation_intent"),
+        (l.CHANNEL_PROMPT = "channel_prompt"),
+        (l.JOIN_GUILD = "join_guild"),
+        (l.SUCCESS = "create_success"),
+        l),
+    A =
+        (((s = {}).NUF_STARTED = "nuf_started"),
+        (s.AGE_GATE = "age_gate"),
+        (s.NUF_COMPLETE = "nuf_complete"),
+        (s.HUB_CONNECTION = "hub_connection"),
+        s);

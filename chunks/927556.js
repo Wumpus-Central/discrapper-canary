@@ -1,3 +1,2 @@
-e.exports = {
-    t: "stack_dbd263",
-};
+"use strict";
+e.exports = { t: "stack_dbd263" };

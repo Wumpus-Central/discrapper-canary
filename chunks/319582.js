@@ -1,58 +1,51 @@
-n.d(t, {
-    MR: () => u,
-    fY: () => d,
-}),
-    n(896048),
-    n(321073);
+n.d(t, { MR: () => c, fY: () => u }), n(321073);
 var l = n(64700),
-    r = n(403362),
-    a = n(129443),
-    i = n(83140),
+    a = n(403362),
+    i = n(129443),
+    r = n(83140),
     s = n(843540),
-    o = n(17372);
-let c = {
-    [o.Wb.SAFETY_DM_SPAM_FILTER]: a.A,
-    [o.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.A,
-    [o.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: i.A,
+    d = n(17372);
+let o = {
+    [d.Wb.SAFETY_DM_SPAM_FILTER]: i.A,
+    [d.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.A,
+    [d.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: r.A,
 };
-
-function d(e) {
+function u(e) {
     return l.useMemo(() => {
         var t;
         let n;
         return null != e
             ? ((t = e),
               (n = []),
-              Object.entries(c).forEach((e) => {
-                  let [l, r] = e;
-                  (null == r.eligibleReportSubtypes || r.eligibleReportSubtypes.includes(t)) && n.push(l);
+              Object.entries(o).forEach((e) => {
+                  let [l, a] = e;
+                  (null == a.eligibleReportSubtypes || a.eligibleReportSubtypes.includes(t)) && n.push(l);
               }),
               0 === n.length ? null : n)
             : null;
     }, [e]);
 }
-
-function u(e, t) {
+function c(e, t) {
     return l.useMemo(
         () =>
             e
                 .map((e) => {
                     var n, l;
-                    let r;
+                    let a;
                     return (
                         (n = e),
                         (l = t),
                         !(function (e, t) {
                             let { predicate: n, eligibleChannelTypes: l } = e,
-                                r = null == n || (null == n ? void 0 : n()) === !0,
-                                a = null == t || null == l || l.includes(t);
-                            return r && a;
-                        })((r = c[n]), l)
+                                a = null == n || n?.() === !0,
+                                i = null == t || null == l || l.includes(t);
+                            return a && i;
+                        })((a = o[n]), l)
                             ? null
-                            : r
+                            : a
                     );
                 })
-                .filter(r.Vq),
+                .filter(a.Vq),
         [e, t],
     );
 }

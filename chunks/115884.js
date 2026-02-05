@@ -1,208 +1,111 @@
-n.d(t, {
-    A: () => N,
-}),
-    n(896048),
-    n(733351),
-    n(747238);
-var r = n(627968),
-    i = n(64700),
-    l = n(503698),
-    a = n.n(l),
+n.d(t, { A: () => x });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(284009),
     o = n.n(s),
-    c = n(421380),
-    u = n(397927),
-    d = n(49229),
-    p = n(915089),
-    f = n(395422),
-    h = n(652215),
-    A = n(650583),
-    g = n(985018),
-    m = n(680982),
-    b = n(473169);
-
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let O = n(892799),
-    y = {
-        canSend: !1,
-        hint: null,
-        success: null,
-        error: null,
-    },
-    I = (0, p.Ld)(),
-    v = "".concat(I, "-decription"),
-    S = "".concat(I, "-error");
-
-function C(e, t) {
+    d = n(421380),
+    c = n(397927),
+    u = n(49229),
+    A = n(915089),
+    h = n(395422),
+    _ = n(652215),
+    m = n(650583),
+    p = n(985018),
+    g = n(680982),
+    E = n(473169);
+let f = n(892799),
+    I = { canSend: !1, hint: null, success: null, error: null },
+    C = (0, A.Ld)(),
+    N = `${C}-decription`,
+    T = `${C}-error`;
+function S(e, t) {
     switch (t.type) {
         case "RESET":
-            return y;
+            return I;
         case "SUCCESS":
-            return E(_({}, y), {
-                success: t.text,
-            });
+            return { ...I, success: t.text };
         case "HINT":
-            return E(_({}, y), {
-                canSend: !0,
-                hint: t.text,
-            });
+            return { ...I, canSend: !0, hint: t.text };
         case "ERROR":
-            return E(_({}, e), {
-                canSend: !0,
-                error: t.text,
-            });
+            return { ...e, canSend: !0, error: t.text };
     }
 }
-
-function N(e) {
-    let { placeholder: t = g.intl.string(g.t["Rn/sLl"]) } = e,
-        n = i.useRef(null),
-        l = i.useRef(null),
-        [s, p] = i.useReducer(C, y),
-        { canSend: _, hint: E, error: N, success: T } = s;
+function x(e) {
+    let { placeholder: t = p.intl.string(p.t["Rn/sLl"]) } = e,
+        n = r.useRef(null),
+        a = r.useRef(null),
+        [s, A] = r.useReducer(S, I),
+        { canSend: x, hint: v, error: b, success: y } = s;
     return (
-        i.useEffect(() => {
-            null != T &&
+        r.useEffect(() => {
+            null != y &&
                 (o()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [T, n]),
-        (0, r.jsxs)("form", {
+        }, [y, n]),
+        (0, i.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), o()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
-                let r = (0, f.Ty)(t);
-                null != r
-                    ? p({
-                          type: "ERROR",
-                          text: r,
-                      })
-                    : d.A.sendRequest({
-                          discordTag: t,
-                          context: {
-                              location: "Add Friend",
-                          },
-                      }).then(
-                          () =>
-                              p({
-                                  type: "SUCCESS",
-                                  text: g.intl.format(g.t.Rtl1Ep, {
-                                      discordTag: t,
-                                  }),
-                              }),
-                          (e) => {
-                              var n;
-                              return p({
-                                  type: "ERROR",
-                                  text: (0, f.vU)(null == (n = e.body) ? void 0 : n.code, t),
-                              });
-                          },
+                let i = (0, h.Ty)(t);
+                null != i
+                    ? A({ type: "ERROR", text: i })
+                    : u.A.sendRequest({ discordTag: t, context: { location: "Add Friend" } }).then(
+                          () => A({ type: "SUCCESS", text: p.intl.format(p.t.Rtl1Ep, { discordTag: t }) }),
+                          (e) => A({ type: "ERROR", text: (0, h.vU)(e.body?.code, t) }),
                       );
             },
             autoComplete: "off",
             children: [
-                (0, r.jsxs)("div", {
-                    className: m.QR,
+                (0, i.jsxs)("div", {
+                    className: g.QR,
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, i.jsx)(c.Text, {
                             tag: "div",
                             variant: "heading-md/normal",
-                            children: g.intl.string(g.t["Rn/sLl"]),
+                            children: p.intl.string(p.t["Rn/sLl"]),
                         }),
-                        (0, r.jsx)("img", {
-                            src: O,
-                            alt: "Wumpus Waving",
-                        }),
+                        (0, i.jsx)("img", { src: f, alt: "Wumpus Waving" }),
                     ],
                 }),
-                (0, r.jsx)(u.vN3, {
+                (0, i.jsx)(c.vN3, {
                     focusTarget: n,
-                    ringTarget: l,
-                    ringClassName: m.hN,
-                    children: (0, r.jsxs)("div", {
-                        ref: l,
-                        className: a()(m.fc, {
-                            [m.kX]: T,
-                            [m.z3]: N,
-                        }),
+                    ringTarget: a,
+                    ringClassName: g.hN,
+                    children: (0, i.jsxs)("div", {
+                        ref: a,
+                        className: l()(g.fc, { [g.kX]: y, [g.z3]: b }),
                         children: [
-                            (0, r.jsx)(c.ob, {
-                                id: I,
+                            (0, i.jsx)(d.ob, {
+                                id: C,
                                 inputRef: n,
-                                className: m.QP,
-                                inputClassName: m.hF,
+                                className: g.QP,
+                                inputClassName: g.hF,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== A.N$.Enter && t.includes("#")) {
+                                    if (e.key !== m.N$.Enter && t.includes("#")) {
                                         o()(null != n.current, "Input is handling keypress when not mounted");
-                                        let r = t.indexOf("#"),
-                                            i = n.current.selectionStart,
-                                            l =
-                                                e.key === A.N$.Backspace ||
-                                                e.key === A.N$.ArrowRight ||
-                                                e.key === A.N$.ArrowLeft,
-                                            a = e.which >= 48 && e.which <= 57;
-                                        null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
+                                        let i = t.indexOf("#"),
+                                            r = n.current.selectionStart,
+                                            a =
+                                                e.key === m.N$.Backspace ||
+                                                e.key === m.N$.ArrowRight ||
+                                                e.key === m.N$.ArrowLeft,
+                                            l = e.which >= 48 && e.which <= 57;
+                                        null != r && r > i && /^(.+?#\d{4})$/.test(t) && !a
                                             ? e.preventDefault()
-                                            : null == i || !(i > r) || a || l || e.preventDefault();
+                                            : null == r || !(r > i) || l || a || e.preventDefault();
                                     }
                                 },
                                 onChange: (e) => {
-                                    if (e.length <= 0)
-                                        return void p({
-                                            type: "RESET",
-                                        });
+                                    if (e.length <= 0) return void A({ type: "RESET" });
                                     let t = "",
                                         [, n] = e.split("#");
-                                    null != n && (t = e + h.RoK.slice(null != n ? n.length + 1 : 0)),
-                                        p({
-                                            type: "HINT",
-                                            text: t,
-                                        });
+                                    null != n && (t = e + _.RoK.slice(null != n ? n.length + 1 : 0)),
+                                        A({ type: "HINT", text: t });
                                 },
                                 maxLength: 37,
                                 autoFocus: !0,
@@ -213,44 +116,39 @@ function N(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != N || void 0,
-                                "aria-describedby": null != N ? S : v,
+                                "aria-invalid": null != b || void 0,
+                                "aria-describedby": null != b ? T : N,
                             }),
-                            null != E &&
-                                (0, r.jsx)("div", {
-                                    className: m.dQ,
-                                    "aria-hidden": !0,
-                                    children: E,
-                                }),
-                            (0, r.jsx)(u.Button, {
+                            null != v && (0, i.jsx)("div", { className: g.dQ, "aria-hidden": !0, children: v }),
+                            (0, i.jsx)(c.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: g.intl.string(g.t["PMsq/b"]),
-                                disabled: !_,
+                                text: p.intl.string(p.t["PMsq/b"]),
+                                disabled: !x,
                                 type: "submit",
                             }),
                         ],
                     }),
                 }),
-                null != N &&
-                    (0, r.jsx)("div", {
+                null != b &&
+                    (0, i.jsx)("div", {
                         role: "alert",
-                        children: (0, r.jsx)(u.Text, {
-                            id: S,
+                        children: (0, i.jsx)(c.Text, {
+                            id: T,
                             variant: "text-sm/normal",
-                            className: b.Ot,
+                            className: E.Ot,
                             color: "text-feedback-critical",
-                            children: N,
+                            children: b,
                         }),
                     }),
-                null != T &&
-                    (0, r.jsx)("div", {
+                null != y &&
+                    (0, i.jsx)("div", {
                         role: "status",
-                        children: (0, r.jsx)(u.Text, {
+                        children: (0, i.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            className: b.Ot,
+                            className: E.Ot,
                             color: "text-feedback-positive",
-                            children: T,
+                            children: y,
                         }),
                     }),
             ],

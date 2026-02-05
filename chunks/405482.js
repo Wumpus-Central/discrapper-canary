@@ -1,6 +1,4 @@
-t.d(n, {
-    A: () => a,
-});
+t.d(n, { A: () => a });
 var r = ["neděli", "ponděl\xed", "\xfater\xfd", "středu", "čtvrtek", "p\xe1tek", "sobotu"],
     o = {
         lastWeek: "'posledn\xed' eeee 've' p",

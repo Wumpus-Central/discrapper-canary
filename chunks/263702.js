@@ -1,49 +1,35 @@
-n.d(t, {
-    default: () => p,
-});
-var r = n(627968);
+n.d(t, { default: () => p });
+var i = n(627968);
 n(64700);
-var i = n(397927),
+var r = n(397927),
     l = n(442433),
-    a = n(820284),
-    c = n(358367),
-    o = n(793574),
-    s = n(50268),
+    s = n(820284),
+    a = n(358367),
+    d = n(793574),
+    c = n(50268),
     u = n(301541),
-    d = n(243949),
-    b = n(652215),
-    f = n(985018);
-let p = (0, c.A)(
+    o = n(243949),
+    A = n(652215),
+    h = n(985018);
+let p = (0, a.A)(
     function (e) {
-        let { user: t, analyticsContext: n, onSelect: c } = e,
-            o = (0, d.A)({
-                userId: t.id,
-            }),
-            p = (0, s.A)({
-                id: t.id,
-                label: f.intl.string(f.t["/AXYnE"]),
-            }),
-            A = (0, u.A)(t.id),
-            O = t.isNonUserBot();
-        return (0, r.jsx)(a.A, {
+        let { user: t, analyticsContext: n, onSelect: a } = e,
+            d = (0, o.A)({ userId: t.id }),
+            p = (0, c.A)({ id: t.id, label: h.intl.string(h.t["/AXYnE"]) }),
+            j = (0, u.A)(t.id),
+            v = t.isNonUserBot();
+        return (0, i.jsx)(s.A, {
             context: n,
-            object: b.ZSU.CONTEXT_MENU,
-            children: (0, r.jsxs)(i.W1t, {
+            object: A.ZSU.CONTEXT_MENU,
+            children: (0, i.jsxs)(r.W1t, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: l.Z_,
-                "aria-label": f.intl.string(f.t.liqwPJ),
-                onSelect: c,
-                children: [
-                    (0, r.jsxs)(i.rXV, {
-                        children: [!O && o, !O && A],
-                    }),
-                    (0, r.jsx)(i.rXV, {
-                        children: p,
-                    }),
-                ],
+                "aria-label": h.intl.string(h.t.liqwPJ),
+                onSelect: a,
+                children: [(0, i.jsxs)(r.rXV, { children: [!v && d, !v && j] }), (0, i.jsx)(r.rXV, { children: p })],
             }),
         });
     },
-    [o.A.CONTEXT_MENU, o.A.BANNED_USER_MENU],
+    [d.A.CONTEXT_MENU, d.A.BANNED_USER_MENU],
 );

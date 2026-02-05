@@ -1,47 +1,40 @@
-r.d(t, {
-    e: () => l,
-}),
-    r(896048);
-var a = r(64700),
-    n = r(716965),
-    s = r(533553),
-    i = r(985018);
-
-function l(e, t, r) {
-    let [l, c] = a.useState(!1),
-        [o, d] = a.useState(null),
-        u = a.useCallback(async () => {
+"use strict";
+a.d(t, { e: () => l });
+var s = a(64700),
+    r = a(716965),
+    n = a(533553),
+    i = a(985018);
+function l(e, t, a) {
+    let [l, o] = s.useState(!1),
+        [c, d] = s.useState(null),
+        u = s.useCallback(async () => {
             try {
-                c(!0);
-                let r = await (0, n.cG)(e);
-                c(!1),
+                o(!0);
+                let a = await (0, r.cG)(e);
+                o(!1),
                     t({
                         userCode: e,
-                        clientId: r.body.client_id,
-                        scopes: r.body.scopes,
-                        twoWayLinkCode: r.body.two_way_link_code,
+                        clientId: a.body.client_id,
+                        scopes: a.body.scopes,
+                        twoWayLinkCode: a.body.two_way_link_code,
                     });
             } catch (e) {
-                var a;
+                var s;
                 d(
-                    429 === (a = null == e ? void 0 : e.status)
+                    429 === (s = e?.status)
                         ? i.intl.string(i.t.BPmZvj)
-                        : 404 === a || 400 === a
+                        : 404 === s || 400 === s
                           ? i.intl.string(i.t.aWa1Pw)
                           : i.intl.string(i.t.JNQRU4),
                 ),
-                    c(!1),
-                    (null == e ? void 0 : e.status) === 401 && r();
+                    o(!1),
+                    e?.status === 401 && a();
             }
-        }, [e, t, r]);
+        }, [e, t, a]);
     return (
-        a.useEffect(() => {
-            e.length === s.D.USER_CODE_LENGTH ? u() : d(null);
+        s.useEffect(() => {
+            e.length === n.D.USER_CODE_LENGTH ? u() : d(null);
         }, [e, u]),
-        {
-            manualSubmit: u,
-            error: o,
-            submitting: l,
-        }
+        { manualSubmit: u, error: c, submitting: l }
     );
 }

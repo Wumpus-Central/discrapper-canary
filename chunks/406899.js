@@ -1,7 +1,4 @@
-a.r(r),
-    a.d(r, {
-        default: () => t,
-    });
+a.r(r), a.d(r, { default: () => t });
 var t = {
     payButton: "Πληρωμή",
     "payButton.redirecting": "Ανακατεύθυνση...",

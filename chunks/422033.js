@@ -1,53 +1,30 @@
-n.d(t, {
-    A: () => p,
-});
-var r,
-    i = n(311907),
-    a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = null,
-    l = !1;
-
-function c(e) {
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153);
+let a = null,
+    s = !1;
+function o(e) {
     let { progress: t, total: n, name: r } = e;
-    o = {
-        progress: t,
-        total: n,
-        name: r,
-    };
+    a = { progress: t, total: n, name: r };
 }
-
+function l() {
+    (a = null), (s = !1);
+}
 function u() {
-    (o = null), (l = !1);
+    s = !0;
 }
-
-function d() {
-    l = !0;
-}
-class f extends (r = i.Ay.Store) {
+class c extends r.Ay.Store {
+    static displayName = "DispatchApplicationLaunchSetupStore";
     getLastProgress() {
-        return o;
+        return a;
     }
     isRunning() {
-        return l;
+        return s;
     }
 }
-s(f, "displayName", "DispatchApplicationLaunchSetupStore");
-let p = new f(a.h, {
-    DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
-    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
-    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u,
+let d = new c(i.h, {
+    DISPATCH_APPLICATION_LAUNCH_SETUP_START: u,
+    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: o,
+    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: l,
 });

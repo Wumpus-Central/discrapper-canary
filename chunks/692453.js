@@ -1,245 +1,140 @@
-n.d(t, {
-    A: () => j,
-    R: () => O,
-});
-var r = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => p, R: () => f });
+var i = n(627968),
+    s = n(64700),
     l = n(311907),
-    s = n(36525),
+    r = n(36525),
     a = n(397927),
-    c = n(219504),
-    o = n(975571),
-    d = n(555337),
+    o = n(219504),
+    d = n(975571),
+    c = n(555337),
     u = n(923121),
-    f = n(352821),
+    m = n(352821),
     g = n(250006),
-    b = n(652215),
-    m = n(539916),
-    p = n(985018),
-    x = n(902973);
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-
-function j(e) {
+    x = n(652215),
+    h = n(539916),
+    _ = n(985018),
+    A = n(902973);
+function p(e) {
     let { saveOnClose: t } = e,
-        s = (0, l.bG)([d.A], () => d.A.getGuildId()),
-        j = (0, l.bG)([f.A], () => f.A.getEditedConnections()),
-        O = (0, l.bG)([f.A], () => f.A.isSubmitting()),
-        y = i.useRef(s);
-    i.useEffect(() => {
-        y.current = s;
-    }, [s]),
-        i.useEffect(() => {
-            let { current: e } = y;
+        r = (0, l.bG)([c.A], () => c.A.getGuildId()),
+        p = (0, l.bG)([m.A], () => m.A.getEditedConnections()),
+        f = (0, l.bG)([m.A], () => m.A.isSubmitting()),
+        j = s.useRef(r);
+    s.useEffect(() => {
+        j.current = r;
+    }, [r]),
+        s.useEffect(() => {
+            let { current: e } = j;
             return () => {
                 t && null != e && (0, u.fH)(e);
             };
-        }, [t, s]);
-    let v = i.useCallback(() => {
-            null != s &&
+        }, [t, r]);
+    let N = s.useCallback(() => {
+            null != r &&
                 (0, a.mMO)(async () => {
                     let { default: e } = await n.e("90194").then(n.bind(n, 566857));
-                    return (t) => (0, r.jsx)(e, h({}, t));
+                    return (t) => (0, i.jsx)(e, { ...t });
                 });
-        }, [s]),
-        A = i.useMemo(
-            () =>
-                j.map((e) => {
-                    var t, n;
-                    return (
-                        (t = h({}, e)),
-                        (n = n =
-                            {
-                                id: (0, m.Sq)(e),
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t
-                    );
-                }),
-            [j],
-        ),
-        E = i.useCallback((e) => {
+        }, [r]),
+        E = s.useMemo(() => p.map((e) => ({ ...e, id: (0, h.Sq)(e) })), [p]),
+        b = s.useCallback((e) => {
             let t = e.map((e) => {
-                let { id: t } = e;
-                return (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i,
-                        l = {};
-                    if ("u" > typeof Reflect && Reflect.ownKeys) {
-                        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-                            (r = n[i]),
-                                !(t.indexOf(r) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                    (l[r] = e[r]);
-                        return l;
-                    }
-                    if (
-                        ((l = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                i = {},
-                                l = Object.getOwnPropertyNames(e);
-                            for (r = 0; r < l.length; r++)
-                                (n = l[r]),
-                                    !(t.indexOf(n) >= 0) &&
-                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                        (i[n] = e[n]);
-                            return i;
-                        })(e, t)),
-                        Object.getOwnPropertySymbols)
-                    )
-                        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-                            (r = n[i]),
-                                !(t.indexOf(r) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                    (l[r] = e[r]);
-                    return l;
-                })(e, ["id"]);
+                let { id: t, ...n } = e;
+                return n;
             });
             (0, u.Bq)(t);
         }, []),
-        { handleDragStart: N, handleDragReset: _, handleDragComplete: S, draggingId: T } = (0, c.A)(A, E);
-    if (null == s) return null;
-    let I = j.length < m.pA;
-    return (0, r.jsx)("div", {
-        className: x.kL,
-        children: (0, r.jsxs)("div", {
-            className: x.jx,
+        { handleDragStart: T, handleDragReset: C, handleDragComplete: I, draggingId: v } = (0, o.A)(E, b);
+    if (null == r) return null;
+    let S = p.length < h.pA;
+    return (0, i.jsx)("div", {
+        className: A.kL,
+        children: (0, i.jsxs)("div", {
+            className: A.jx,
             children: [
-                (0, r.jsxs)("div", {
-                    className: x.G6,
+                (0, i.jsxs)("div", {
+                    className: A.G6,
                     children: [
-                        (0, r.jsx)(a.Heading, {
-                            variant: "heading-lg/bold",
-                            children: p.intl.string(p.t.Cl8F8H),
-                        }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(a.Heading, { variant: "heading-lg/bold", children: _.intl.string(_.t.Cl8F8H) }),
+                        (0, i.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-strong",
-                            children: p.intl.format(p.t.vqgyJR, {
-                                linkedRolesUrl: o.A.getArticleURL(b.MVz.CONNECTION_DETAILS_ADMIN),
+                            children: _.intl.format(_.t.vqgyJR, {
+                                linkedRolesUrl: d.A.getArticleURL(x.MVz.CONNECTION_DETAILS_ADMIN),
                             }),
                         }),
                     ],
                 }),
-                j.length > 0 &&
-                    (0, r.jsx)("div", {
-                        className: x.eF,
-                        children: A.map((e, t) =>
-                            (0, r.jsx)(
+                p.length > 0 &&
+                    (0, i.jsx)("div", {
+                        className: A.eF,
+                        children: E.map((e, t) =>
+                            (0, i.jsx)(
                                 g.A,
                                 {
                                     connection: e,
                                     index: t,
-                                    onDragStart: N,
-                                    onDragReset: _,
-                                    onDragComplete: S,
-                                    draggingId: T,
+                                    onDragStart: T,
+                                    onDragReset: C,
+                                    onDragComplete: I,
+                                    draggingId: v,
                                 },
                                 e.id,
                             ),
                         ),
                     }),
-                (0, r.jsxs)("button", {
-                    className: x.qG,
-                    onClick: v,
-                    disabled: !I || O,
+                (0, i.jsxs)("button", {
+                    className: A.qG,
+                    onClick: N,
+                    disabled: !S || f,
                     type: "button",
                     children: [
-                        (0, r.jsx)(a.U1e, {
-                            size: "custom",
-                            width: 20,
-                            height: 20,
-                            color: "currentColor",
-                        }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(a.U1e, { size: "custom", width: 20, height: 20, color: "currentColor" }),
+                        (0, i.jsx)(a.Text, {
                             variant: "text-md/semibold",
                             color: "text-brand",
-                            children: p.intl.string(p.t["03EqaC"]),
+                            children: _.intl.string(_.t["03EqaC"]),
                         }),
                     ],
                 }),
-                !I &&
-                    (0, r.jsx)(a.Text, {
+                !S &&
+                    (0, i.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: p.intl.format(p.t.Nc7guW, {
-                            max: m.pA,
-                        }),
+                        children: _.intl.format(_.t.Nc7guW, { max: h.pA }),
                     }),
             ],
         }),
     });
 }
-
-function O() {
-    let e = (0, l.bG)([d.A], () => d.A.getGuildId()),
-        t = (0, l.bG)([f.A], () => f.A.isSubmitting()),
-        n = (0, l.bG)([f.A], () => f.A.getErrors());
+function f() {
+    let e = (0, l.bG)([c.A], () => c.A.getGuildId()),
+        t = (0, l.bG)([m.A], () => m.A.isSubmitting()),
+        n = (0, l.bG)([m.A], () => m.A.getErrors());
     if (null == e) return null;
-    let i = n.length > 0;
-    return (0, r.jsx)(s.A, {
+    let s = n.length > 0;
+    return (0, i.jsx)(r.A, {
         onSave: () => {
-            i || (0, u.q3)(e);
+            s || (0, u.q3)(e);
         },
         onReset: u.p2,
         submitting: t,
-        onSaveText: p.intl.string(p.t["R3BPH+"]),
-        disabled: i,
-        errorMessage: i
-            ? (0, r.jsx)("div", {
-                  className: x.Tt,
-                  children: (0, r.jsx)("ul", {
-                      className: x.qr,
+        onSaveText: _.intl.string(_.t["R3BPH+"]),
+        disabled: s,
+        errorMessage: s
+            ? (0, i.jsx)("div", {
+                  className: A.Tt,
+                  children: (0, i.jsx)("ul", {
+                      className: A.qr,
                       children: n.map((e, t) =>
-                          (0, r.jsxs)(
+                          (0, i.jsxs)(
                               "li",
                               {
-                                  className: x.Ff,
+                                  className: A.Ff,
                                   children: [
-                                      (0, r.jsx)(a.EpV, {
-                                          size: "sm",
-                                          color: "currentColor",
-                                      }),
-                                      (0, r.jsx)(a.Text, {
+                                      (0, i.jsx)(a.EpV, { size: "sm", color: "currentColor" }),
+                                      (0, i.jsx)(a.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-feedback-critical",
                                           children: e,

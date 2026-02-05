@@ -1,20 +1,17 @@
-n.d(t, {
-    pq: () => l,
-    vF: () => u,
-});
+"use strict";
+n.d(t, { pq: () => l, vF: () => c });
 var r = n(919015),
     i = n(588522);
 let a = "Sentry Logger ",
-    o = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-    s = {};
-
+    s = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+    o = {};
 function l(e) {
     if (!("console" in i.O)) return e();
     let t = i.O.console,
         n = {},
-        r = Object.keys(s);
+        r = Object.keys(o);
     r.forEach((e) => {
-        let r = s[e];
+        let r = o[e];
         (n[e] = t[e]), (t[e] = r);
     });
     try {
@@ -25,8 +22,7 @@ function l(e) {
         });
     }
 }
-
-function c() {
+function u() {
     let e = !1,
         t = {
             enable: () => {
@@ -39,7 +35,7 @@ function c() {
         };
     return (
         r.T
-            ? o.forEach((n) => {
+            ? s.forEach((n) => {
                   t[n] = (...t) => {
                       e &&
                           l(() => {
@@ -47,10 +43,10 @@ function c() {
                           });
                   };
               })
-            : o.forEach((e) => {
+            : s.forEach((e) => {
                   t[e] = () => void 0;
               }),
         t
     );
 }
-let u = (0, i.B)("logger", c);
+let c = (0, i.B)("logger", u);

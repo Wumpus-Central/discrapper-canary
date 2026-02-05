@@ -1,61 +1,48 @@
-n.d(t, {
-    A: () => y,
-});
-var r = n(627968),
-    i = n(64700),
-    a = n(731738),
-    s = n(397927),
-    o = n(964486),
-    l = n(831062),
-    c = n(954571),
-    u = n(308645),
-    d = n(335891),
-    f = n(929770),
-    p = n(259960),
-    _ = n(257110),
-    h = n(366141),
-    m = n(224010),
-    g = n(652215),
-    E = n(985018),
-    b = n(589896);
-
-function y() {
-    let e = (0, _.A)(),
-        t = (0, p.v)(),
-        n = (0, d.K)(),
-        y = (0, f.b)();
-    (0, o.Ay)(() => {
-        u.Yn();
+s.d(e, { A: () => E });
+var i = s(627968),
+    a = s(64700),
+    l = s(731738),
+    n = s(397927),
+    r = s(964486),
+    c = s(831062),
+    d = s(954571),
+    o = s(308645),
+    m = s(335891),
+    x = s(929770),
+    h = s(259960),
+    u = s(257110),
+    g = s(366141),
+    N = s(224010),
+    j = s(652215),
+    v = s(985018),
+    f = s(589896);
+function E() {
+    let t = (0, u.A)(),
+        e = (0, h.v)(),
+        s = (0, m.K)(),
+        E = (0, x.b)();
+    (0, r.Ay)(() => {
+        o.Yn();
     });
-    let O = i.useRef(n);
-    return (i.useEffect(() => {
-        O.current = n;
+    let T = a.useRef(s);
+    return (a.useEffect(() => {
+        T.current = s;
     }),
-    i.useEffect(() => {
-        t &&
-            (c.default.track(g.HAw.SAFETY_HUB_VIEWED, {
-                account_standing: O.current.state,
-            }),
-            l.A.increment({
-                name: a.K.SAFETY_HUB_VIEW,
-            }));
-    }, [t]),
-    e)
-        ? (0, r.jsx)(s.y$y, {})
-        : null != y
-          ? (0, r.jsxs)(s.$Td, {
-                color: s.Hv$.DANGER,
-                className: b.aL,
+    a.useEffect(() => {
+        e &&
+            (d.default.track(j.HAw.SAFETY_HUB_VIEWED, { account_standing: T.current.state }),
+            c.A.increment({ name: l.K.SAFETY_HUB_VIEW }));
+    }, [e]),
+    t)
+        ? (0, i.jsx)(n.y$y, {})
+        : null != E
+          ? (0, i.jsxs)(n.$Td, {
+                color: n.Hv$.DANGER,
+                className: f.aL,
                 children: [
-                    E.intl.string(E.t.TDRvqs),
-                    (0, r.jsx)(s.zr9, {
-                        onClick: () => u.Yn(),
-                        children: E.intl.string(E.t.R1AN4F),
-                    }),
+                    v.intl.string(v.t.TDRvqs),
+                    (0, i.jsx)(n.zr9, { onClick: () => o.Yn(), children: v.intl.string(v.t.R1AN4F) }),
                 ],
             })
-          : (0, r.jsxs)("div", {
-                className: b.kL,
-                children: [(0, r.jsx)(h.A, {}), (0, r.jsx)(m.q, {})],
-            });
+          : (0, i.jsxs)("div", { className: f.kL, children: [(0, i.jsx)(g.A, {}), (0, i.jsx)(N.q, {})] });
 }

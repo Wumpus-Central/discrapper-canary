@@ -1,41 +1,34 @@
-n.d(t, {
-    default: () => _,
-});
-var l = n(627968);
-n(64700);
-var r = n(397927),
-    o = n(442433),
-    i = n(847767),
-    c = n(358367),
-    u = n(793574),
-    a = n(688810),
-    d = n(180798),
-    s = n(652215),
-    A = n(985018);
-let _ = (0, c.A)(
-    (0, i.A)(
+t.d(l, { default: () => _ });
+var n = t(627968);
+t(64700);
+var i = t(397927),
+    r = t(442433),
+    o = t(847767),
+    a = t(358367),
+    c = t(793574),
+    u = t(688810),
+    d = t(180798),
+    s = t(652215),
+    A = t(985018);
+let _ = (0, a.A)(
+    (0, o.A)(
         function (e) {
-            var t;
-            let { user: n, guildId: i, onSelect: c, analyticsLocations: s, onCloseContextMenu: _, isViewOnly: b } = e,
-                { analyticsLocations: f } = (0, a.Ay)(u.A.CONTEXT_MENU),
-                E = null != (t = null == s ? void 0 : s[0]) ? t : f[0],
-                g = (0, d.A)(n.id, i, !0, E, b);
-            return (0, l.jsx)(r.W1t, {
+            let { user: l, guildId: t, onSelect: o, analyticsLocations: a, onCloseContextMenu: s, isViewOnly: _ } = e,
+                { analyticsLocations: E } = (0, u.Ay)(c.A.CONTEXT_MENU),
+                g = a?.[0] ?? E[0],
+                M = (0, d.A)(l.id, t, !0, g, _);
+            return (0, n.jsx)(i.W1t, {
                 "data-menu-migrated": !0,
                 navId: "guild-moderation-roles",
                 onClose: () => {
-                    (0, o.Z_)(), null == _ || _();
+                    (0, r.Z_)(), s?.();
                 },
                 "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: c,
-                children: (0, l.jsx)(r.rXV, {
-                    children: g,
-                }),
+                onSelect: o,
+                children: (0, n.jsx)(i.rXV, { children: M }),
             });
         },
-        {
-            object: s.ZSU.CONTEXT_MENU,
-        },
+        { object: s.ZSU.CONTEXT_MENU },
     ),
-    [u.A.CONTEXT_MENU, u.A.GUILD_MODERATION_USER_MENU],
+    [c.A.CONTEXT_MENU, c.A.GUILD_MODERATION_USER_MENU],
 );
